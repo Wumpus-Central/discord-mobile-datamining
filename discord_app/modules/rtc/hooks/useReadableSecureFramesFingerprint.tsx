@@ -14,7 +14,11 @@ export const useReadableSecureFramesFingerprint = function useReadableSecureFram
       if ("" !== tmp) {
         const obj = chunkSize(desiredLength[1]);
         const toByteArrayResult = chunkSize(desiredLength[1]).toByteArray(tmp);
-        const str5 = fingerprintBase64(desiredLength[2]).generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
+        const str5 = fingerprintBase64(desiredLength[2]).generateDisplayableCode(
+          toByteArrayResult,
+          desiredLength,
+          chunkSize,
+        );
         if (null == str5) {
           return null;
         } else {

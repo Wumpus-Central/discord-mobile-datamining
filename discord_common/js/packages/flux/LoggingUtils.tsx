@@ -109,7 +109,7 @@ prototype["getSlowestActions"] = function getSlowestActions(arg0) {
       let tmp5 = traces;
       let tmp6 = traces;
       for (const item10021 of traces) {
-        let items1 = [item10021.name, , ];
+        let items1 = [item10021.name, ,];
         let tmp7 = nextResult;
         items1[1] = tmp2.name;
         items1[2] = item10021.time;
@@ -183,7 +183,7 @@ prototype["getLastActionMetrics"] = function getLastActionMetrics(arg0) {
     let tmp3 = traces;
     let tmp4 = traces;
     for (const item10016 of traces) {
-      let items = [item10016.name, , ];
+      let items = [item10016.name, ,];
       let tmp5 = item10009;
       items[1] = tmp2.name;
       items[2] = item10016.time;
@@ -248,7 +248,7 @@ Object.defineProperty(prototype2, "name", {
   get: function name() {
     return this.action.type;
   },
-  set: undefined
+  set: undefined,
 });
 prototype2["toJSON"] = function toJSON() {
   const self = this;

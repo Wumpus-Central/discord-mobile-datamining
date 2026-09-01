@@ -9,7 +9,15 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { wrapper: null, header: null, headerCenterContainer: null, headerTitleContainer: null, closeButton: null, spacerView: null, botTag: null };
+createCacheKey = {
+  wrapper: null,
+  header: null,
+  headerCenterContainer: null,
+  headerTitleContainer: null,
+  closeButton: null,
+  spacerView: null,
+  botTag: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", padding: 16, justifyContent: "space-between", alignItems: "center" };
@@ -49,7 +57,21 @@ export default function InteractionIframeModal(children) {
   importDefault(callback[11])(callback1);
   let tmp11 = null;
   if (!tmp5[0]) {
-    obj = { onActivityCrash: null, applicationId: null, channelId: null, guildId: null, activityUrl: null, activitySessionId: null, queryParams: null, onLoadError: null, allowPopups: null, referrerPolicy: "origin", isPipOrGridMode: false, webViewKey: "PX_16", ignoreSilentHardwareSwitch: "kj\u00F8nnsn\u00F8ytral" };
+    obj = {
+      onActivityCrash: null,
+      applicationId: null,
+      channelId: null,
+      guildId: null,
+      activityUrl: null,
+      activitySessionId: null,
+      queryParams: null,
+      onLoadError: null,
+      allowPopups: null,
+      referrerPolicy: "origin",
+      isPipOrGridMode: false,
+      webViewKey: "PX_16",
+      ignoreSilentHardwareSwitch: "kj\u00F8nnsn\u00F8ytral",
+    };
     obj[0] = function onActivityCrash() {
       callback(true);
       const timerId = setTimeout(() => callback(false), 0);
@@ -81,10 +103,16 @@ export default function InteractionIframeModal(children) {
   obj2[2] = callback;
   obj2[3] = tmp.closeButton;
   obj2[4] = callback2(id(callback[17]).XLargeIcon, {});
-  const items3 = [callback2(id(callback[16]).PressableOpacity, obj2), , ];
+  const items3 = [callback2(id(callback[16]).PressableOpacity, obj2), ,];
   const obj3 = { style: tmp.headerCenterContainer, children: null };
   const obj4 = { style: tmp.headerTitleContainer, children: null };
-  const items4 = [callback2(id(callback[18]).Text, { variant: "heading-sm/bold", color: "mobile-text-heading-primary", children: application.name }), ];
+  const items4 = [
+    callback2(id(callback[18]).Text, {
+      variant: "heading-sm/bold",
+      color: "mobile-text-heading-primary",
+      children: application.name,
+    }),
+  ];
   const obj6 = { type: BotTagTypes.BOT, verified: null, style: null };
   const bot = application.bot;
   let verified;
@@ -96,7 +124,14 @@ export default function InteractionIframeModal(children) {
   obj6[2] = tmp.botTag;
   items4[1] = callback2(tmp6Result, obj6);
   obj4[1] = items4;
-  const items5 = [closure_8(View, obj4), callback2(id(callback[18]).Text, { variant: "text-xs/medium", color: "interactive-text-default", children: children.title })];
+  const items5 = [
+    closure_8(View, obj4),
+    callback2(id(callback[18]).Text, {
+      variant: "text-xs/medium",
+      color: "interactive-text-default",
+      children: children.title,
+    }),
+  ];
   obj3[1] = items5;
   items3[1] = closure_8(View, obj3);
   items3[2] = callback2(View, { style: tmp.spacerView });
@@ -104,4 +139,4 @@ export default function InteractionIframeModal(children) {
   const items6 = [closure_8(View, obj1), tmp11];
   obj[1] = items6;
   return closure_8(View, obj);
-};
+}

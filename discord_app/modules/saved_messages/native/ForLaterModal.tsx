@@ -12,7 +12,12 @@ const require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { modal: null, headerLeftContainer: null, headerRightContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  borderBottomWidth: 0,
+  shadowColor: "transparent",
+  height: "100%",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingLeft: ThemesDefault.space.PX_16 };
 const obj1 = { paddingLeft: ThemesDefault.space.PX_16 };
@@ -41,7 +46,7 @@ export default function ForLaterModal(type) {
     headerStatusBarHeight: null,
     headerLeft: null,
     headerLeftContainerStyle: null,
-    headerRightContainerStyle: null
+    headerRightContainerStyle: null,
   };
   let tmp4Result = tmp4(500);
   let num = 0;
@@ -52,9 +57,9 @@ export default function ForLaterModal(type) {
   tmp4Result = tmp4(5495);
   obj[4] = tmp4Result.getHeaderCloseButton(_modDef4723.pop);
   ({ headerLeftContainer: obj2[5], headerRightContainer: obj2[6] } = tmp);
-  const items = [closure_4(require("../../../../_runtime/05502_Background.js").Header, obj), ];
+  const items = [closure_4(require("../../../../_runtime/05502_Background.js").Header, obj)];
   obj = { type, onClose: _modDef4723.pop };
   items[1] = closure_4(keyExtractorDefault, obj, type);
   obj[1] = items;
   return closure_5(View, obj);
-};
+}

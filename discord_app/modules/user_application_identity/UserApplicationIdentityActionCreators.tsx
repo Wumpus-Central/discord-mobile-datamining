@@ -11,7 +11,7 @@ let obj = {
   fetchUserApplicationIdentitiesWithProfiles(arg0) {
     closure_0 = arg0;
     closure_1 = arg1;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -100,7 +100,7 @@ let obj = {
     closure_0 = application_id;
     closure_1 = provider_issued_user_id;
     closure_2 = arg2;
-    return callback(function*() {
+    return callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -155,7 +155,7 @@ let obj = {
         }
       }
     })();
-  }
+  },
 };
 obj = {
   getQueryId: ME.QueryIds.USER_APPLICATION_IDENTITIES,
@@ -164,10 +164,12 @@ obj = {
   },
   load(arg0) {
     return obj.fetchUserApplicationIdentitiesWithProfiles(arg0);
-  }
+  },
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult, obj);
-const result = require("set").fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityActionCreators.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_application_identity/UserApplicationIdentityActionCreators.tsx",
+);
 
 export default obj;
 export const useUserApplicationIdentities = fetchStore;

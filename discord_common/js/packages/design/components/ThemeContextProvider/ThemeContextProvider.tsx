@@ -3,7 +3,9 @@ import closure_2 from "../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx",
+);
 
 export const ThemeContextProvider = function ThemeContextProvider(children) {
   let theme = children.theme;
@@ -20,8 +22,20 @@ export const ThemeContextProvider = function ThemeContextProvider(children) {
   let context;
   context = secondaryColor.useContext(theme(primaryColor[2]).ThemeContext);
   const FALLBACK_THEME_CONTEXT_VALUE = theme(primaryColor[2]).FALLBACK_THEME_CONTEXT_VALUE;
-  const items = [theme, , , , , , , , , , , , , , , , , , , , , ];
-  ({ theme: arr[1], primaryColor: arr[2], secondaryColor: arr[3], gradient: arr[4], flags: arr[5], contrast: arr[6], saturation: arr[7], enabledExperiments: arr[8], density: arr[9], disableAdaptiveTheme: arr[10], reduceAdaptiveTheme: arr[11] } = context);
+  const items = [theme, , , , , , , , , , , , , , , , , , , , ,];
+  ({
+    theme: arr[1],
+    primaryColor: arr[2],
+    secondaryColor: arr[3],
+    gradient: arr[4],
+    flags: arr[5],
+    contrast: arr[6],
+    saturation: arr[7],
+    enabledExperiments: arr[8],
+    density: arr[9],
+    disableAdaptiveTheme: arr[10],
+    reduceAdaptiveTheme: arr[11],
+  } = context);
   items[12] = primaryColor;
   items[13] = secondaryColor;
   items[14] = gradient;
@@ -37,7 +51,19 @@ export const ThemeContextProvider = function ThemeContextProvider(children) {
     if (theme == null) {
       theme = context.theme;
     }
-    obj = { theme, primaryColor: null, secondaryColor: null, gradient: null, flags: null, contrast: null, saturation: null, enabledExperiments: null, density: null, disableAdaptiveTheme: null, reduceAdaptiveTheme: null };
+    obj = {
+      theme,
+      primaryColor: null,
+      secondaryColor: null,
+      gradient: null,
+      flags: null,
+      contrast: null,
+      saturation: null,
+      enabledExperiments: null,
+      density: null,
+      disableAdaptiveTheme: null,
+      reduceAdaptiveTheme: null,
+    };
     if (primaryColor == null) {
       primaryColor = context.primaryColor;
     }

@@ -29,7 +29,7 @@ class OptInChannelBanner {
     items1 = [];
     items1[0] = channel;
     tmp5 = View;
-    items2 = [, ];
+    items2 = [,];
     items2[0] = tmp.optInChannelBannerContainer;
     topBorder = null;
     callback = closure_3.useCallback(() => {
@@ -54,7 +54,7 @@ class OptInChannelBanner {
     obj = { lineClamp: 2, style: tmp.optInChannelBannerText, variant: "text-sm/semibold", children: null };
     intl = require("getSystemLocale").intl;
     obj[3] = intl.string(require("getSystemLocale").t.iOWmmB);
-    items3 = [, ];
+    items3 = [,];
     items3[0] = jsx(require("Text").Text, obj);
     obj1 = { style: tmp.optInChannelBannerButtonContainer, children: null };
     obj2 = {};
@@ -85,7 +85,13 @@ function ArchivedLockedThreadChatBanner(channel) {
   let obj = channel(6116);
   let canUnarchiveThread = obj.useCanUnarchiveThread(channel);
   obj = { style: tmp.threadBannerContainer, children: null };
-  obj = { lineClamp: 4, style: tmp.threadBannerTitle, variant: "text-sm/medium", color: "text-default", children: null };
+  obj = {
+    lineClamp: 4,
+    style: tmp.threadBannerTitle,
+    variant: "text-sm/medium",
+    color: "text-default",
+    children: null,
+  };
   const intl = channel(1236).intl;
   const string = intl.string;
   const t = channel(1236).t;
@@ -95,7 +101,7 @@ function ArchivedLockedThreadChatBanner(channel) {
     stringResult = string(t.rEeodK);
   }
   obj[4] = stringResult;
-  const items1 = [closure_12(channel(4474).Text, obj), ];
+  const items1 = [closure_12(channel(4474).Text, obj)];
   if (canUnarchiveThread) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.threadBannerButton;
@@ -137,7 +143,13 @@ function LockedThreadChatBanner(channel) {
   let obj = channel(6116);
   let isThreadModerator = obj.useIsThreadModerator(channel);
   obj = { style: tmp.threadBannerContainer, children: null };
-  obj = { lineClamp: 4, style: tmp.threadBannerTitle, variant: "text-sm/medium", color: "text-default", children: null };
+  obj = {
+    lineClamp: 4,
+    style: tmp.threadBannerTitle,
+    variant: "text-sm/medium",
+    color: "text-default",
+    children: null,
+  };
   const intl = channel(1236).intl;
   const string = intl.string;
   const t = channel(1236).t;
@@ -147,7 +159,7 @@ function LockedThreadChatBanner(channel) {
     stringResult = string(t["V/JF2N"]);
   }
   obj[4] = stringResult;
-  const items1 = [closure_12(channel(4474).Text, obj), ];
+  const items1 = [closure_12(channel(4474).Text, obj)];
   if (isThreadModerator) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.threadBannerButton;
@@ -200,16 +212,26 @@ function NewMessagesChatBar(channel) {
       obj1[1] = channel.oldestUnreadTimestamp;
       obj[2] = intl.format(estimated.isEstimated(channel.id) ? t.wvtbbG : t["BctFH/"], obj1);
       obj[3] = callback(XSmallBoldIcon(4474).Text, obj);
-      const items1 = [callback(XSmallBoldIcon(5068).PressableOpacity, obj), ];
+      const items1 = [callback(XSmallBoldIcon(5068).PressableOpacity, obj)];
       handleScrollToNewMessages = XSmallBoldIcon(5068).PressableOpacity;
-      const obj2 = { style: null, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
+      const obj2 = {
+        style: null,
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        onPress: null,
+        children: null,
+      };
       obj2[0] = stringResult.newMessageBarCloseButton;
       const intl2 = XSmallBoldIcon(1236).intl;
       stringResult = intl2.string(XSmallBoldIcon(1236).t.e6RscS);
       obj2[2] = stringResult;
       obj2[3] = function onPress() {
         let obj = channel(closure_1_2[22]);
-        obj = { section: closure_1_11.NEW_MESSAGES_BANNER, object: closure_1_9.MARK_CHANNEL_AS_READ_BUTTON, objectType: closure_1_8.ACK_MANUAL };
+        obj = {
+          section: closure_1_11.NEW_MESSAGES_BANNER,
+          object: closure_1_9.MARK_CHANNEL_AS_READ_BUTTON,
+          objectType: closure_1_8.ACK_MANUAL,
+        };
         return obj.ack(channel.id, obj);
       };
       XSmallBoldIcon = XSmallBoldIcon(7882).XSmallBoldIcon;
@@ -226,19 +248,85 @@ function NewMessagesChatBar(channel) {
   return tmp2;
 }
 ({ StyleSheet, View: c4 } = get_ActivityIndicator);
-({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: c9, AnalyticEvents: c10, AnalyticsSections: unpackModuleId } = ME);
+({
+  AnalyticsObjectTypes: closure_8,
+  AnalyticsObjects: c9,
+  AnalyticEvents: c10,
+  AnalyticsSections: unpackModuleId,
+} = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { threadBannerContainer: null, threadBannerTitle: null, threadBannerButton: null, newMessageBar: null, newMessageBarTextContainer: null, newMessageBarCloseButton: null, optInChannelBannerContainer: null, topBorder: null, optInChannelBannerText: null, optInChannelBannerButtonContainer: null };
-createCacheKey = { alignSelf: "stretch", minHeight: 60, flexDirection: "row", paddingHorizontal: 16, paddingVertical: 12, alignItems: "center", flexGrow: 0, zIndex: 100, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = {
+  threadBannerContainer: null,
+  threadBannerTitle: null,
+  threadBannerButton: null,
+  newMessageBar: null,
+  newMessageBarTextContainer: null,
+  newMessageBarCloseButton: null,
+  optInChannelBannerContainer: null,
+  topBorder: null,
+  optInChannelBannerText: null,
+  optInChannelBannerButtonContainer: null,
+};
+createCacheKey = {
+  alignSelf: "stretch",
+  minHeight: 60,
+  flexDirection: "row",
+  paddingHorizontal: 16,
+  paddingVertical: 12,
+  alignItems: "center",
+  flexGrow: 0,
+  zIndex: 100,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, lineHeight: 18 };
 createCacheKey[2] = { flexGrow: 0, paddingVertical: 7, paddingHorizontal: 16, marginLeft: 16 };
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, flexDirection: "row", justifyContent: "center", alignItems: "center", overflow: "hidden", zIndex: 100, minHeight: 45 };
+createCacheKey[3] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+  zIndex: 100,
+  minHeight: 45,
+};
 createCacheKey[4] = { flex: 1, paddingLeft: 16, paddingVertical: 10 };
 createCacheKey[5] = { paddingHorizontal: 12 };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, flexDirection: "row", justifyContent: "center", alignItems: "center", overflow: "hidden", zIndex: 100, minHeight: 45 };
-createCacheKey[6] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", overflow: "hidden", padding: 8, paddingLeft: 16, paddingRight: 16, zIndex: 100, backgroundColor: ThemesDefault.colors.CHAT_BANNER_BG, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: ThemesDefault.colors.CHAT_BORDER };
-let obj2 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", overflow: "hidden", padding: 8, paddingLeft: 16, paddingRight: 16, zIndex: 100, backgroundColor: ThemesDefault.colors.CHAT_BANNER_BG, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: ThemesDefault.colors.CHAT_BORDER };
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+  zIndex: 100,
+  minHeight: 45,
+};
+createCacheKey[6] = {
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  overflow: "hidden",
+  padding: 8,
+  paddingLeft: 16,
+  paddingRight: 16,
+  zIndex: 100,
+  backgroundColor: ThemesDefault.colors.CHAT_BANNER_BG,
+  borderBottomWidth: StyleSheet.hairlineWidth,
+  borderBottomColor: ThemesDefault.colors.CHAT_BORDER,
+};
+let obj2 = {
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  overflow: "hidden",
+  padding: 8,
+  paddingLeft: 16,
+  paddingRight: 16,
+  zIndex: 100,
+  backgroundColor: ThemesDefault.colors.CHAT_BANNER_BG,
+  borderBottomWidth: StyleSheet.hairlineWidth,
+  borderBottomColor: ThemesDefault.colors.CHAT_BORDER,
+};
 createCacheKey[7] = { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: ThemesDefault.colors.CHAT_BORDER };
 createCacheKey[8] = { flex: 1 };
 createCacheKey[9] = { flexShrink: 0, marginLeft: 8 };
@@ -252,16 +340,20 @@ export default function ChatBanner(channel) {
   obj1 = channel(589);
   const items = [closure_6];
   const items1 = [channel.id];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => {
-    let oldestUnreadTimestamp = closure_1_6.getOldestUnreadTimestamp(channel.id);
-    const obj = { unreadCount: closure_1_6.getUnreadCount(channel.id), oldestUnreadTimestamp: null };
-    if (0 === oldestUnreadTimestamp) {
-      oldestUnreadTimestamp = closure_1_1(closure_1_2[12]).extractTimestamp(channel.id);
-      const obj2 = closure_1_1(closure_1_2[12]);
-    }
-    obj[1] = oldestUnreadTimestamp;
-    return obj;
-  }, items1);
+  const stateFromStoresObject = obj1.useStateFromStoresObject(
+    items,
+    () => {
+      let oldestUnreadTimestamp = closure_1_6.getOldestUnreadTimestamp(channel.id);
+      const obj = { unreadCount: closure_1_6.getUnreadCount(channel.id), oldestUnreadTimestamp: null };
+      if (0 === oldestUnreadTimestamp) {
+        oldestUnreadTimestamp = closure_1_1(closure_1_2[12]).extractTimestamp(channel.id);
+        const obj2 = closure_1_1(closure_1_2[12]);
+      }
+      obj[1] = oldestUnreadTimestamp;
+      return obj;
+    },
+    items1,
+  );
   ({ unreadCount, oldestUnreadTimestamp } = stateFromStoresObject);
   if (channel.isArchivedLockedThread()) {
     obj = { channel: null };
@@ -293,5 +385,5 @@ export default function ChatBanner(channel) {
     }
   }
   return tmp4;
-};
+}
 export { OptInChannelBanner };

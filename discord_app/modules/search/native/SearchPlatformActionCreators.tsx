@@ -25,7 +25,14 @@ export default {
     ({ searchContext, searchQueryString, guildId, channelId, threadId } = arg0);
     const searchContextId = SearchTokenTypes.getSearchContextId(searchContext);
     const obj = SearchTokenTypes;
-    dispatcherDefault.dispatch({ type: "SEARCH_GUILD_MEMBER_TAB_SEARCH", id: searchContextId, searchQueryString, guildId, channelId, threadId });
+    dispatcherDefault.dispatch({
+      type: "SEARCH_GUILD_MEMBER_TAB_SEARCH",
+      id: searchContextId,
+      searchQueryString,
+      guildId,
+      channelId,
+      threadId,
+    });
   },
   cleanupGuildMemberTab(closure_0) {
     const searchContextId = SearchTokenTypes.getSearchContextId(closure_0);
@@ -36,7 +43,12 @@ export default {
     ({ searchContext, searchQueryString, guildId } = arg0);
     const searchContextId = SearchTokenTypes.getSearchContextId(searchContext);
     const obj = SearchTokenTypes;
-    dispatcherDefault.dispatch({ type: "SEARCH_GUILD_CHANNEL_TAB_SEARCH", id: searchContextId, searchQueryString, guildId });
+    dispatcherDefault.dispatch({
+      type: "SEARCH_GUILD_CHANNEL_TAB_SEARCH",
+      id: searchContextId,
+      searchQueryString,
+      guildId,
+    });
   },
   cleanupGuildChannelTab(closure_0) {
     const searchContextId = SearchTokenTypes.getSearchContextId(closure_0);
@@ -81,5 +93,5 @@ export default {
     const searchContextId = obj.getSearchContextId(channelDetailsSearchContext);
     obj = { type: "SEARCH_QUERY_NATIVE_INITIALIZE", id: searchContextId, searchContext: channelDetailsSearchContext };
     dispatcherDefault.dispatch(obj);
-  }
+  },
 };

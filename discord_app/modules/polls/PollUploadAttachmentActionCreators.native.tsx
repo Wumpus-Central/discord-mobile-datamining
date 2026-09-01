@@ -13,7 +13,7 @@ function _handlePollGifAttachmentAdd() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -124,7 +124,17 @@ function _handlePollGifAttachmentAdd() {
             return obj6;
           } else {
             styles = arg1;
-            obj7 = { id: null, origin: null, uri: null, originalUri: null, filename: null, mimeType: "image/gif", width: null, height: null, platform: null };
+            obj7 = {
+              id: null,
+              origin: null,
+              uri: null,
+              originalUri: null,
+              filename: null,
+              mimeType: "image/gif",
+              width: null,
+              height: null,
+              platform: null,
+            };
             obj7[0] = callback2;
             obj7[1] = callback(5073).UploadOrigin.IMAGE_PICKER;
             obj7[2] = closure_5;
@@ -183,7 +193,7 @@ function _removePollUploadAttachment() {
     c4 = 0;
     c3 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       c6 = 1;
       callback2(8163).remove(callback, callback2, Poll.Poll);
       const obj5 = callback2(8163);
@@ -218,7 +228,7 @@ function _removeAllPollUploadAttachments() {
     c2 = 0;
     c1 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       let Poll = 1;
       obj1 = v0(8163);
       obj1.clearAll(callback, Poll.Poll);
@@ -247,7 +257,11 @@ function _removeAllPollUploadAttachments() {
 }
 const result = require("set").fileFinishedImporting("modules/polls/PollUploadAttachmentActionCreators.native.tsx");
 
-export const handlePollGifAttachmentAdd = function handlePollGifAttachmentAdd(closure_0, localCreationAnswerId, closure_2) {
+export const handlePollGifAttachmentAdd = function handlePollGifAttachmentAdd(
+  closure_0,
+  localCreationAnswerId,
+  closure_2,
+) {
   const self = this;
   const apply = _handlePollGifAttachmentAdd.apply;
   if (typeof apply === "unknown") {
@@ -257,10 +271,12 @@ export const handlePollGifAttachmentAdd = function handlePollGifAttachmentAdd(cl
   }
   return applyArgumentsResult;
 };
-export function handlePollMediaAttachmentAdd(arg0, localCreationAnswerId, arg2) {
-
-}
-export const removePollUploadAttachment = function removePollUploadAttachment(arg0, localCreationAnswerId, fileNameFromGifUrl) {
+export function handlePollMediaAttachmentAdd(arg0, localCreationAnswerId, arg2) {}
+export const removePollUploadAttachment = function removePollUploadAttachment(
+  arg0,
+  localCreationAnswerId,
+  fileNameFromGifUrl,
+) {
   const self = this;
   const apply = _removePollUploadAttachment.apply;
   if (typeof apply === "unknown") {

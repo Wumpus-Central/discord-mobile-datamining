@@ -14,8 +14,7 @@ function handleAddUser(id) {
 }
 let closure_1 = { pools: null, users: null };
 const PersistedStore = initializeDefault.PersistedStore;
-class GeneratedTestUsersStore extends PersistedStore {
-}
+class GeneratedTestUsersStore extends PersistedStore {}
 const prototype = GeneratedTestUsersStore.prototype;
 prototype["initialize"] = function initialize(pools) {
   if (null != pools) {
@@ -141,7 +140,7 @@ const generatedTestUsersStore = new GeneratedTestUsersStore(dispatcherDefault, {
       }
     }
     tmp = closure_1;
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/generated_test_users/GeneratedTestUsersStore.tsx");
 

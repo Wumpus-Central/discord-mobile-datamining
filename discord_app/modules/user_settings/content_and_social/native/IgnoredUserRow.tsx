@@ -8,9 +8,23 @@ function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
   analyticsLocations = analyticsLocations(5953)().analyticsLocations;
-  let obj = { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
+  let obj = {
+    icon: null,
+    label: null,
+    subLabel: null,
+    labelLineClamp: 1,
+    subLabelLineClamp: 1,
+    accessibilityRole: "button",
+    accessibilityActions: null,
+    onAccessibilityAction: null,
+    onPress: null,
+    trailing: null,
+  };
   obj = { source: userRecord.getAvatarSource(undefined), size: userRecord(1297).AvatarSizes.REFRESH_MEDIUM_32 };
-  obj[0] = jsx(userRecord(1297).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1297).AvatarSizes.REFRESH_MEDIUM_32 });
+  obj[0] = jsx(userRecord(1297).Avatar, {
+    source: userRecord.getAvatarSource(undefined),
+    size: userRecord(1297).AvatarSizes.REFRESH_MEDIUM_32,
+  });
   let tmp4 = null != userRecord;
   if (tmp4) {
     let username = userRecord.globalName;
@@ -56,7 +70,9 @@ function IgnoredUserRow(userRecord) {
   return jsx(userRecord(5599).TableRow, { name: "unignore", label: null });
 }
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUserRow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/content_and_social/native/IgnoredUserRow.tsx",
+);
 
 export default function ConnectedIgnoredUserRow(userId) {
   userId = userId.userId;
@@ -70,4 +86,4 @@ export default function ConnectedIgnoredUserRow(userId) {
     tmp2 = <IgnoredUserRow userRecord={null} />;
   }
   return tmp2;
-};
+}

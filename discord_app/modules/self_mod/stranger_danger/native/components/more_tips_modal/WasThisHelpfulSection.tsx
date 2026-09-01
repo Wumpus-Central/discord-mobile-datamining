@@ -10,24 +10,60 @@ import createCacheKey from "../../../../../../design/components/Styles/native/cr
 
 const require = arg1;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
-({ DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8, TOAST_SHIELD_ICON_COLOR: c9, UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: c10, FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR } = LOCATION_CONTEXT_MOBILE);
+({
+  DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8,
+  TOAST_SHIELD_ICON_COLOR: c9,
+  UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: c10,
+  FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR,
+} = LOCATION_CONTEXT_MOBILE);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: { flexDirection: "column", alignItems: "center" }, buttonsContainer: null, buttonsBackground: null, buttonsBackgroundInactive: null, buttonsBackgroundActive: null, buttonIconInactive: null, buttonIconActive: null, toastContainer: null };
+createCacheKey = {
+  container: { flexDirection: "column", alignItems: "center" },
+  buttonsContainer: null,
+  buttonsBackground: null,
+  buttonsBackgroundInactive: null,
+  buttonsBackgroundActive: null,
+  buttonIconInactive: null,
+  buttonIconActive: null,
+  toastContainer: null,
+};
 createCacheKey = { flexDirection: "row", marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
-let obj1 = { width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
+createCacheKey[2] = {
+  width: ThemesDefault.space.PX_32,
+  height: ThemesDefault.space.PX_32,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+};
+let obj1 = {
+  width: ThemesDefault.space.PX_32,
+  height: ThemesDefault.space.PX_32,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[4] = { borderWidth: 1, borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT, backgroundColor: FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR };
-let obj3 = { borderWidth: 1, borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT, backgroundColor: FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR };
+createCacheKey[4] = {
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT,
+  backgroundColor: FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR,
+};
+let obj3 = {
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT,
+  backgroundColor: FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR,
+};
 createCacheKey[5] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let obj4 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[6] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 createCacheKey[7] = { paddingHorizontal: 8, paddingVertical: 12 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj5 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-let result = require("set").fileFinishedImporting("modules/self_mod/stranger_danger/native/components/more_tips_modal/WasThisHelpfulSection.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/self_mod/stranger_danger/native/components/more_tips_modal/WasThisHelpfulSection.tsx",
+);
 
 export default function WasThisHelpfulSection(channelId) {
   channelId = channelId.channelId;
@@ -61,7 +97,15 @@ export default function WasThisHelpfulSection(channelId) {
   closure_5 = React.useCallback((feedbackType) => {
     let obj = channelId(senderId[8]);
     const result = obj.setChannelSafetyWarningFeedback(channelId, warningId, feedbackType);
-    obj = { key: feedbackType === closure_1_7.UPVOTE ? closure_1_10 : closure_1_8, content: null, icon: null, IconComponent: null, iconColor: null, containerStyle: null, recolorLegacyIcon: true };
+    obj = {
+      key: feedbackType === closure_1_7.UPVOTE ? closure_1_10 : closure_1_8,
+      content: null,
+      icon: null,
+      IconComponent: null,
+      iconColor: null,
+      containerStyle: null,
+      recolorLegacyIcon: true,
+    };
     const intl = tmp(tmp2[10]).intl;
     obj[1] = intl.string(channelId(senderId[10]).t["gd/Yqs"]);
     obj[2] = warningId(senderId[11]);
@@ -86,9 +130,9 @@ export default function WasThisHelpfulSection(channelId) {
   obj = { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: null };
   let intl = channelId(senderId[10]).intl;
   obj[2] = intl.string(channelId(senderId[10]).t.L84yVm);
-  const items4 = [callback(channelId(senderId[14]).Text, obj), ];
+  const items4 = [callback(channelId(senderId[14]).Text, obj)];
   obj1 = { style: tmp.buttonsContainer, children: null };
-  const items5 = [tmp.buttonsBackground, ];
+  const items5 = [tmp.buttonsBackground];
   let obj2 = {
     style: items5,
     disabled: memo,
@@ -96,7 +140,7 @@ export default function WasThisHelpfulSection(channelId) {
       return callback(closure_1_7.UPVOTE, channelId(senderId[13]).CtaEventTypes.FEEDBACK_UPVOTE);
     },
     accessibilityLabel: null,
-    children: null
+    children: null,
   };
   items5[1] = memo ? tmp.buttonsBackgroundActive : tmp.buttonsBackgroundInactive;
   const intl2 = tmp2(tmp3[10]).intl;
@@ -109,8 +153,8 @@ export default function WasThisHelpfulSection(channelId) {
   }
   obj3[2] = color;
   obj2[4] = callback(channelId(senderId[15]).Icon, obj3);
-  const items6 = [callback(stateFromStores, obj2), ];
-  const items7 = [tmp.buttonsBackground, ];
+  const items6 = [callback(stateFromStores, obj2)];
+  const items7 = [tmp.buttonsBackground];
   const obj4 = {
     style: items7,
     disabled: memo1,
@@ -118,7 +162,7 @@ export default function WasThisHelpfulSection(channelId) {
       return callback(closure_1_7.DOWNVOTE, channelId(senderId[13]).CtaEventTypes.FEEDBACK_DOWNVOTE);
     },
     accessibilityLabel: null,
-    children: null
+    children: null,
   };
   items7[1] = memo1 ? tmp.buttonsBackgroundActive : tmp.buttonsBackgroundInactive;
   const intl3 = tmp2(tmp3[10]).intl;
@@ -136,4 +180,4 @@ export default function WasThisHelpfulSection(channelId) {
   items4[1] = closure_12(closure_5, obj1);
   obj[1] = items4;
   return closure_12(closure_5, obj);
-};
+}

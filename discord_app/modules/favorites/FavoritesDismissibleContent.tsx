@@ -11,13 +11,23 @@ import closure_4 from "../../../_runtime/00019_noop.js";
 import { ContentDismissActionType } from "../dismissible_content/DismissibleContentConstants.tsx";
 
 require = arg1;
-let items = [require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, require("DismissibleContent").DismissibleContent.FAVORITES_GUILD_NEW_BADGE, require("DismissibleContent").DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
-const items1 = [require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+let items = [
+  require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO,
+  require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
+  require("DismissibleContent").DismissibleContent.FAVORITES_GUILD_NEW_BADGE,
+  require("DismissibleContent").DismissibleContent.FAVORITES_GUILD_SUGGESTIONS,
+];
+const items1 = [
+  require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO,
+  require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
+];
 const items2 = [require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
 const result = require("set").fileFinishedImporting("modules/favorites/FavoritesDismissibleContent.tsx");
 
 export const FAVORITES_GUILD_DISMISSIBLE_CONTENT = items;
-export const useFavoritesMenuItemPopoverDismissibleContent = function useFavoritesMenuItemPopoverDismissibleContent(set) {
+export const useFavoritesMenuItemPopoverDismissibleContent = function useFavoritesMenuItemPopoverDismissibleContent(
+  set,
+) {
   let obj = useFavoritesGuildConfig;
   const isFavoritesGuildSelected = useFavoritesAccess.useIsFavoritesGuildSelected();
   const obj2 = useFavoritesAccess;
@@ -46,7 +56,9 @@ export const useFavoritesMenuItemPopoverDismissibleContent = function useFavorit
   items = [];
 };
 export const useShouldRenderFavoritesMenuItemPopover = function useShouldRenderFavoritesMenuItemPopover() {
-  const tmp3 = callback(canShowTimeRecurringContent.useDangerouslyPeekDismissibleContents(items2), 1)[0] === DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+  const tmp3 =
+    callback(canShowTimeRecurringContent.useDangerouslyPeekDismissibleContents(items2), 1)[0] ===
+    DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
   const tmp4 = callback(React.useState(tmp3), 2);
   const first = tmp4[0];
   let tmp6 = tmp3;

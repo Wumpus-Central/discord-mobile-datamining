@@ -35,9 +35,13 @@ export default function useDiscoverableApplicationStream(arg0) {
   const _require = arg0;
   let items = [closure_2, closure_3];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const items = [closure_1_2, closure_1_3];
-    return closure_1_5(closure_0, items);
-  }, items1);
-};
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const items = [closure_1_2, closure_1_3];
+      return closure_1_5(closure_0, items);
+    },
+    items1,
+  );
+}
 export { getDiscoverableApplicationStream };

@@ -5,9 +5,7 @@ import dispatcherDefault from "../../../Dispatcher.tsx";
 let array = new Array();
 let c1;
 const QuickSwitcher = "QuickSwitcher";
-function setContent(arg0) {
-
-}
+function setContent(arg0) {}
 const Store = initializeDefault.Store;
 class ActionSheetStore extends Store {
   constructor() {
@@ -38,9 +36,7 @@ class ActionSheetStore extends Store {
   }
 }
 const prototype = ActionSheetStore.prototype;
-prototype["initialize"] = function initialize() {
-
-};
+prototype["initialize"] = function initialize() {};
 Object.defineProperty(prototype, "impressionName", {
   get: function impressionName() {
     const atResult = array.at(-1);
@@ -50,7 +46,7 @@ Object.defineProperty(prototype, "impressionName", {
     }
     return impressionName;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "impressionProperties", {
   get: function impressionProperties() {
@@ -61,7 +57,7 @@ Object.defineProperty(prototype, "impressionProperties", {
     }
     return impressionProperties;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "backdropKind", {
   get: function backdropKind() {
@@ -72,7 +68,7 @@ Object.defineProperty(prototype, "backdropKind", {
     }
     return backdropKind;
   },
-  set: undefined
+  set: undefined,
 });
 ActionSheetStore.displayName = "ActionSheetStore";
 const actionSheetStore = new ActionSheetStore(dispatcherDefault, {
@@ -162,7 +158,7 @@ const actionSheetStore = new ActionSheetStore(dispatcherDefault, {
     if (found.length === found.length) {
       return false;
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/action_sheet/native/ActionSheetStore.tsx");
 

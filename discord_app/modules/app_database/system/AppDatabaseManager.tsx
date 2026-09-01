@@ -28,7 +28,9 @@ class AppDatabaseManager {
     items = [...actions.keys()];
     handleAction = obj.handleAction;
     registerResult1 = AppDatabaseManager.register(global, items, arg1, handleAction.bind(obj));
-    verboseResult = closure_5.verbose("" + global + " created with " + importDefault.length + " modules, " + obj.actions.size + " distinct actions.");
+    verboseResult = closure_5.verbose(
+      "" + global + " created with " + importDefault.length + " modules, " + obj.actions.size + " distinct actions.",
+    );
     return obj;
   }
 }
@@ -45,7 +47,15 @@ prototype["resetModules"] = function resetModules(type, databaseResult) {
   const self = this;
   if (databaseResult !== this.lastDatabase) {
     const _HermesInternal = HermesInternal;
-    closure_5.verbose("database has changed (was: " + self.lastDatabase + ", now: " + databaseResult + ", action: " + type.type + "). resetting modules.");
+    closure_5.verbose(
+      "database has changed (was: " +
+        self.lastDatabase +
+        ", now: " +
+        databaseResult +
+        ", action: " +
+        type.type +
+        "). resetting modules.",
+    );
     const entries = self.entries;
     for (const item10004 of entries) {
       let resetResult = item10004.reset();
@@ -67,7 +77,9 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
   if (null != value) {
     if (0 !== value.length) {
       if (null != databaseResult) {
-        if (stateResult === require("../../../../discord_common/js/packages/kv-storage/js/index.tsx").DatabaseState.Open) {
+        if (
+          stateResult === require("../../../../discord_common/js/packages/kv-storage/js/index.tsx").DatabaseState.Open
+        ) {
           let combined = null;
           if (!set.has(type.type)) {
             const _HermesInternal2 = HermesInternal;
@@ -84,7 +96,15 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
         }
       }
       const _HermesInternal = HermesInternal;
-      closure_5.verbose("no usable database; skipping action (type: " + type + ", database: " + databaseResult + ", state: " + stateResult + ")");
+      closure_5.verbose(
+        "no usable database; skipping action (type: " +
+          type +
+          ", database: " +
+          databaseResult +
+          ", state: " +
+          stateResult +
+          ")",
+      );
     }
   }
 };
@@ -129,22 +149,27 @@ AppDatabaseManager["computeEntries"] = function computeEntries(MobileAppDatabase
 AppDatabaseManager["register"] = function register(arg0, arr) {
   const _require = arg3;
   const obj = dispatcherDefault;
-  const registerResult = obj.register(arg0, Object.fromEntries(arr.map((arg0) => {
-    const items = [arg0, closure_0];
-    return items;
-  })), () => {
-
-  }, require("../../../Dispatcher.tsx").DispatchBand.Database);
-  const fromEntriesResult = Object.fromEntries(arr.map((arg0) => {
-    const items = [arg0, closure_0];
-    return items;
-  }));
+  const registerResult = obj.register(
+    arg0,
+    Object.fromEntries(
+      arr.map((arg0) => {
+        const items = [arg0, closure_0];
+        return items;
+      }),
+    ),
+    () => {},
+    require("../../../Dispatcher.tsx").DispatchBand.Database,
+  );
+  const fromEntriesResult = Object.fromEntries(
+    arr.map((arg0) => {
+      const items = [arg0, closure_0];
+      return items;
+    }),
+  );
   dispatcherDefault.addDependencies(registerResult, arg2);
   return registerResult;
 };
-prototype["validateInDev"] = function validateInDev() {
-
-};
+prototype["validateInDev"] = function validateInDev() {};
 let result = set.fileFinishedImporting("modules/app_database/system/AppDatabaseManager.tsx");
 
 export { AppDatabaseManager };

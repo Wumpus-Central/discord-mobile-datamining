@@ -84,7 +84,7 @@ function _addPushNotificationMessageIfNotCached() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -265,19 +265,23 @@ function handleCleanup() {
 function handleRelationshipUpdate() {
   c0 = false;
   const item = mergeMessageDefault.forEach((reset) => {
-    closure_1_1(closure_1_2[19]).commit(reset.reset(reset.map((blocked) => {
-      let result = blocked;
-      if (blocked.blocked !== closure_1_15.isBlockedForMessage(blocked)) {
-        c0 = true;
-        result = blocked.set("blocked", obj.isBlockedForMessage(blocked));
-      }
-      let result1 = result;
-      if (result.ignored !== closure_1_15.isIgnoredForMessage(result)) {
-        c0 = true;
-        result1 = result.set("ignored", obj.isIgnoredForMessage(result));
-      }
-      return result1;
-    })));
+    closure_1_1(closure_1_2[19]).commit(
+      reset.reset(
+        reset.map((blocked) => {
+          let result = blocked;
+          if (blocked.blocked !== closure_1_15.isBlockedForMessage(blocked)) {
+            c0 = true;
+            result = blocked.set("blocked", obj.isBlockedForMessage(blocked));
+          }
+          let result1 = result;
+          if (result.ignored !== closure_1_15.isIgnoredForMessage(result)) {
+            c0 = true;
+            result1 = result.set("ignored", obj.isIgnoredForMessage(result));
+          }
+          return result1;
+        }),
+      ),
+    );
   });
   return c0;
 }
@@ -377,20 +381,40 @@ function handleMessageSendFailedAutomod(arg0) {
   }
   let obj2 = mergeMessageDefault;
 }
-({ BasicPermissions: closure_19, ChannelTypes: closure_20, MessageFlags: closure_21, MessageReferenceTypes: closure_22, MessageStates: closure_23, MessageTypes: closure_24, Permissions: closure_25 } = ME);
+({
+  BasicPermissions: closure_19,
+  ChannelTypes: closure_20,
+  MessageFlags: closure_21,
+  MessageReferenceTypes: closure_22,
+  MessageStates: closure_23,
+  MessageTypes: closure_24,
+  Permissions: closure_25,
+} = ME);
 let set = new Set();
 let closure_27 = new timestampDefault("MessageStore");
 let c28 = false;
 const Store = initializeDefault.Store;
-class MessageStore extends Store {
-}
+class MessageStore extends Store {}
 const prototype = MessageStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_8, closure_9, closure_10, closure_6, closure_11, closure_12, closure_13, closure_5, closure_7, closure_14, closure_15, closure_16, closure_17, closure_18);
+  this.waitFor(
+    closure_8,
+    closure_9,
+    closure_10,
+    closure_6,
+    closure_11,
+    closure_12,
+    closure_13,
+    closure_5,
+    closure_7,
+    closure_14,
+    closure_15,
+    closure_16,
+    closure_17,
+    closure_18,
+  );
   const items = [closure_5];
-  this.syncWith(items, () => {
-
-  });
+  this.syncWith(items, () => {});
 };
 prototype["getMessages"] = function getMessages(arg0) {
   if (closure_5.hasViewingRoles()) {
@@ -515,28 +539,34 @@ prototype["isLoadingMessages"] = function isLoadingMessages(channelId) {
 prototype["hasCurrentUserSentMessage"] = function hasCurrentUserSentMessage(arg0) {
   const currentUser = authStore.getCurrentUser();
   const messages = this.getMessages(arg0);
-  return null != messages.findNewest((author) => {
-    let id;
-    if (id != null) {
-      id = id.id;
-    }
-    return author.author.id === id;
-  });
-};
-prototype["hasCurrentUserSentWaveBlockingMessage"] = function hasCurrentUserSentWaveBlockingMessage(id) {
-  const currentUser = authStore.getCurrentUser();
-  const messages = this.getMessages(id);
-  return null != messages.findNewest((type) => {
-    let tmp = type.type !== closure_1_24.FRIEND_REQUEST_ACCEPTED;
-    if (tmp) {
+  return (
+    null !=
+    messages.findNewest((author) => {
       let id;
       if (id != null) {
         id = id.id;
       }
-      tmp = type.author.id === id;
-    }
-    return tmp;
-  });
+      return author.author.id === id;
+    })
+  );
+};
+prototype["hasCurrentUserSentWaveBlockingMessage"] = function hasCurrentUserSentWaveBlockingMessage(id) {
+  const currentUser = authStore.getCurrentUser();
+  const messages = this.getMessages(id);
+  return (
+    null !=
+    messages.findNewest((type) => {
+      let tmp = type.type !== closure_1_24.FRIEND_REQUEST_ACCEPTED;
+      if (tmp) {
+        let id;
+        if (id != null) {
+          id = id.id;
+        }
+        tmp = type.author.id === id;
+      }
+      return tmp;
+    })
+  );
 };
 prototype["hasCurrentUserSentMessageSinceAppStart"] = function hasCurrentUserSentMessageSinceAppStart() {
   return c28;
@@ -568,12 +598,27 @@ const messageStore = new MessageStore(dispatcherDefault, {
             let str4 = " hasMoreAfter:";
             let str5 = " isConnected:";
             let tmp5 = isConnectedResult;
-            let logResult = logger.log("Skipping background message sync for " + tmp8 + " cached:" + value.cached + " ready:" + value.ready + " hasMoreAfter:" + value.hasMoreAfter + " isConnected:" + isConnectedResult);
+            let logResult = logger.log(
+              "Skipping background message sync for " +
+                tmp8 +
+                " cached:" +
+                value.cached +
+                " ready:" +
+                value.ready +
+                " hasMoreAfter:" +
+                value.hasMoreAfter +
+                " isConnected:" +
+                isConnectedResult,
+            );
             continue;
           }
           continue;
         }
-        let mergeDeltaResult = value.mergeDelta(changesByChannelId[key10012].new_messages, changesByChannelId[key10012].modified_messages, changesByChannelId[key10012].deleted_message_ids);
+        let mergeDeltaResult = value.mergeDelta(
+          changesByChannelId[key10012].new_messages,
+          changesByChannelId[key10012].modified_messages,
+          changesByChannelId[key10012].deleted_message_ids,
+        );
         continue;
       }
       continue;
@@ -605,7 +650,17 @@ const messageStore = new MessageStore(dispatcherDefault, {
     ({ channelId, isBefore, isAfter, messages } = arg0);
     ({ jump, hasMoreBefore, hasMoreAfter, isStale, truncate, avoidInitialScroll } = arg0);
     const orCreate = mergeMessageDefault.getOrCreate(channelId);
-    const complete = orCreate.loadComplete({ newMessages: messages, isBefore, isAfter, jump, hasMoreBefore, hasMoreAfter, cached: isStale, hasFetched: true, avoidInitialScroll });
+    const complete = orCreate.loadComplete({
+      newMessages: messages,
+      isBefore,
+      isAfter,
+      jump,
+      hasMoreBefore,
+      hasMoreAfter,
+      cached: isStale,
+      hasFetched: true,
+      avoidInitialScroll,
+    });
     let tmp3 = null == truncate;
     if (!tmp3) {
       let tmp4 = !isBefore;
@@ -663,8 +718,22 @@ const messageStore = new MessageStore(dispatcherDefault, {
           messageId1 = jump.messageId;
         }
         if (null != messageId1) {
-          obj = { messageId: null, flash: null, offset: null, returnTargetId: null, jumpType: null, onJumpComplete: null };
-          ({ messageId: obj4[0], flash: obj4[1], offset: obj4[2], returnMessageId: obj4[3], jumpType: obj4[4], onJumpComplete: obj4[5] } = jump);
+          obj = {
+            messageId: null,
+            flash: null,
+            offset: null,
+            returnTargetId: null,
+            jumpType: null,
+            onJumpComplete: null,
+          };
+          ({
+            messageId: obj4[0],
+            flash: obj4[1],
+            offset: obj4[2],
+            returnMessageId: obj4[3],
+            jumpType: obj4[4],
+            onJumpComplete: obj4[5],
+          } = jump);
           jumpToPresentResult = orCreate.jumpToMessage(obj);
         } else {
           jumpToPresentResult = orCreate;
@@ -846,7 +915,10 @@ const messageStore = new MessageStore(dispatcherDefault, {
                 str3 = "";
               }
               const result1 = result.set("interactionError", str3);
-              let result2 = result1.set("flags", closure_1_0(closure_1_2[24]).addFlag(result1.flags, closure_1_21.EPHEMERAL));
+              let result2 = result1.set(
+                "flags",
+                closure_1_0(closure_1_2[24]).addFlag(result1.flags, closure_1_21.EPHEMERAL),
+              );
               const obj3 = closure_1_0(closure_1_2[24]);
             } else {
               let str = closure_0;
@@ -874,7 +946,9 @@ const messageStore = new MessageStore(dispatcherDefault, {
     if (null != orCreate) {
       if (orCreate.has(id)) {
         let tmpResult = tmp(5216);
-        tmpResult.commit(orCreate.update(id, (message) => message(closure_1_2[23]).updateMessageRecord(message, message.message)));
+        tmpResult.commit(
+          orCreate.update(id, (message) => message(closure_1_2[23]).updateMessageRecord(message, message.message)),
+        );
         message = message.message;
         const media_mention = message.media_mention;
         let message_id;
@@ -903,7 +977,10 @@ const messageStore = new MessageStore(dispatcherDefault, {
     const value = mergeMessageDefault.get(messageId.channelId);
     if (null != value) {
       if (value.has(messageId)) {
-        const updateResult = value.update(messageId, redactionSettingToRenderedString.handleExplicitMediaScanTimeoutForMessage);
+        const updateResult = value.update(
+          messageId,
+          redactionSettingToRenderedString.handleExplicitMediaScanTimeoutForMessage,
+        );
         mergeMessageDefault.commit(updateResult);
       }
     }
@@ -1164,7 +1241,9 @@ const messageStore = new MessageStore(dispatcherDefault, {
     if (null == value) {
       return false;
     } else {
-      const updateResult = value.update(messageId, (removeReactionsForEmoji) => removeReactionsForEmoji.removeReactionsForEmoji(emoji));
+      const updateResult = value.update(messageId, (removeReactionsForEmoji) =>
+        removeReactionsForEmoji.removeReactionsForEmoji(emoji),
+      );
       mergeMessageDefault.commit(updateResult);
     }
     const obj = mergeMessageDefault;
@@ -1217,7 +1296,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
     if (tmp2) {
       c28 = true;
     }
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/MessageStore.tsx");
 

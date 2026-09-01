@@ -34,7 +34,7 @@ function ActivityTileInner(participant) {
   }
   function _handleCanJoin() {
     const self = this;
-    const tmp = first(function*() {
+    const tmp = first(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -137,7 +137,8 @@ function ActivityTileInner(participant) {
   let tmp5Result = tmp5(tmp3[13]);
   const items2 = [closure_6];
   stateFromStores = tmp5Result.useStateFromStores(items2, () => {
-    embeddedActivitiesForChannelIncludingHidden = embeddedActivitiesForChannelIncludingHidden.getEmbeddedActivitiesForChannelIncludingHidden(channel.id);
+    embeddedActivitiesForChannelIncludingHidden =
+      embeddedActivitiesForChannelIncludingHidden.getEmbeddedActivitiesForChannelIncludingHidden(channel.id);
     return embeddedActivitiesForChannelIncludingHidden.find((applicationId) => {
       let id;
       if (id != null) {
@@ -217,7 +218,14 @@ function ActivityTileInner(participant) {
         onSingleTap();
       }
     }
-    const obj4 = { accessibilityRole: "button", accessibilityLabel: null, androidRippleConfig: null, onPress: null, style: null, children: null };
+    const obj4 = {
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      androidRippleConfig: null,
+      onPress: null,
+      style: null,
+      children: null,
+    };
     const intl4 = tmp5(tmp3[22]).intl;
     const obj5 = { applicationName: null };
     obj5[0] = name1;
@@ -227,11 +235,18 @@ function ActivityTileInner(participant) {
     obj4[4] = tmp.pressableOpacity;
     const obj6 = { application: null, resizeMode: "cover" };
     obj6[0] = first;
-    const items3 = [callback(tmp2(tmp3[29]), obj6), ];
+    const items3 = [callback(tmp2(tmp3[29]), obj6)];
     const obj7 = { style: null, children: null };
     const items4 = [tmp.activityPreview, participant.style];
     obj7[0] = items4;
-    const obj8 = { offsetAmount: -6, overflowStyle: null, overflowComponent: null, items: null, max: 4, renderItem: null };
+    const obj8 = {
+      offsetAmount: -6,
+      overflowStyle: null,
+      overflowComponent: null,
+      items: null,
+      max: 4,
+      renderItem: null,
+    };
     obj8[1] = tmp.overflow;
     obj8[2] = tmp5(tmp3[10]).OverflowText;
     obj8[3] = stateFromStoresArray;
@@ -248,7 +263,7 @@ function ActivityTileInner(participant) {
       obj[3] = tmp5;
       return closure_1_10(participant(onSingleTap[10]).CutoutableAvatarImage, obj);
     };
-    const items5 = [callback(tmp5(tmp3[10]).SummarizedIconRow, obj8), , , ];
+    const items5 = [callback(tmp5(tmp3[10]).SummarizedIconRow, obj8), , ,];
     const obj9 = { style: null, lineClamp: 2, variant: "text-sm/normal", children: null };
     obj9[0] = tmp.subtitleText;
     obj9[3] = formatToPlainStringResult;
@@ -282,20 +297,57 @@ noopAll;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 const XSMALL = require("Button").AvatarSizes.XSMALL;
 const themedRippleConfig = require("semanticColor").getThemedRippleConfig({ foreground: true });
-createCacheKey = { pressableOpacity: null, activityPreview: null, activityViewContainer: null, titleText: null, subtitleText: null, overflow: null, buttonWrapper: null, buttonPill: null };
-createCacheKey = { width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center" };
+createCacheKey = {
+  pressableOpacity: null,
+  activityPreview: null,
+  activityViewContainer: null,
+  titleText: null,
+  subtitleText: null,
+  overflow: null,
+  buttonWrapper: null,
+  buttonPill: null,
+};
+createCacheKey = {
+  width: "100%",
+  height: "100%",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  justifyContent: "center",
+  alignItems: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", display: "flex", width: "100%", padding: 16 };
 createCacheKey[2] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[3] = { fontSize: 16, lineHeight: 24, color: ThemesDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.DISPLAY_EXTRABOLD, textAlign: "center", marginLeft: 16, marginRight: 16 };
+createCacheKey[3] = {
+  fontSize: 16,
+  lineHeight: 24,
+  color: ThemesDefault.colors.TEXT_DEFAULT,
+  fontFamily: Fonts.DISPLAY_EXTRABOLD,
+  textAlign: "center",
+  marginLeft: 16,
+  marginRight: 16,
+};
 createCacheKey[4] = { textAlign: "center", marginLeft: 16, marginRight: 16 };
-let obj2 = { fontSize: 16, lineHeight: 24, color: ThemesDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.DISPLAY_EXTRABOLD, textAlign: "center", marginLeft: 16, marginRight: 16 };
-createCacheKey[5] = { height: require("Button").AVATAR_SIZE_MAP[XSMALL], backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
+let obj2 = {
+  fontSize: 16,
+  lineHeight: 24,
+  color: ThemesDefault.colors.TEXT_DEFAULT,
+  fontFamily: Fonts.DISPLAY_EXTRABOLD,
+  textAlign: "center",
+  marginLeft: 16,
+  marginRight: 16,
+};
+createCacheKey[5] = {
+  height: require("Button").AVATAR_SIZE_MAP[XSMALL],
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+};
 createCacheKey[6] = { marginTop: 8, alignSelf: "center" };
 createCacheKey[7] = { borderRadius: 100 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { height: require("Button").AVATAR_SIZE_MAP[XSMALL], backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
+let obj3 = {
+  height: require("Button").AVATAR_SIZE_MAP[XSMALL],
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+};
 let result = require("set").fileFinishedImporting("modules/video_calls/native/components/ActivityTile.tsx");
 
 export default function ActivityTile(arg0) {
@@ -304,4 +356,4 @@ export default function ActivityTile(arg0) {
   const merged = Object.assign(arg0);
   obj[1] = callback(ActivityTileInner, obj);
   return callback(ManaContext.ThemeContextProvider, obj);
-};
+}

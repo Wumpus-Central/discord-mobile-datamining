@@ -2,7 +2,7 @@
 import set from "../../../_runtime/00002_set.js";
 
 const obj = { NORMAL: 0, [0]: "NORMAL", BURST: 1, [1]: "BURST", VOTE: 2, [2]: "VOTE" };
-const items = [, ];
+const items = [,];
 ({ NORMAL: arr[0], BURST: arr[1] } = obj);
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/messages/MessageReactionsTypes.tsx");

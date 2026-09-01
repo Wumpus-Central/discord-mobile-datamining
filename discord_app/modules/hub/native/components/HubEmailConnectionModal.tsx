@@ -18,7 +18,12 @@ let closure_5 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionModal.tsx");
 
 export default function HubEmailConnectionModal(arg0) {
-  ({ isNestedNavigator: require, onCloseExtra: importDefault, invite: dependencyMap, displayStudentPrompt: HubEmailConnectionSteps } = arg0);
+  ({
+    isNestedNavigator: require,
+    onCloseExtra: importDefault,
+    invite: dependencyMap,
+    displayStudentPrompt: HubEmailConnectionSteps,
+  } = arg0);
   jsx = undefined;
   let obj = useNavigation;
   jsx = obj.useNavigation();
@@ -76,7 +81,7 @@ export default function HubEmailConnectionModal(arg0) {
       render(arg0) {
         const merged = Object.assign(arg0);
         return navigation(callback(12266), {});
-      }
+      },
     };
     obj2[closure_1_3.VERIFY_EMAIL] = {
       impressionName: tmp9(tmp8[7]).ImpressionNames.HUB_EMAIL_SIGNUP,
@@ -91,7 +96,7 @@ export default function HubEmailConnectionModal(arg0) {
       render(arg0) {
         const merged = Object.assign(arg0);
         return navigation(callback(12269), {});
-      }
+      },
     };
     obj2[closure_1_3.EMAIL_WAITLIST] = {
       fullscreen: true,
@@ -101,7 +106,7 @@ export default function HubEmailConnectionModal(arg0) {
       render(arg0) {
         const merged = Object.assign(arg0);
         return navigation(callback(12272), {});
-      }
+      },
     };
     obj2[closure_1_3.SUBMIT_SCHOOL] = {
       fullscreen: true,
@@ -111,7 +116,7 @@ export default function HubEmailConnectionModal(arg0) {
       render(arg0) {
         const merged = Object.assign(arg0);
         return navigation(callback(12274), {});
-      }
+      },
     };
     obj2[closure_1_3.SELECT_SCHOOL] = {
       fullscreen: true,
@@ -121,7 +126,7 @@ export default function HubEmailConnectionModal(arg0) {
       render(arg0) {
         const merged = Object.assign(arg0);
         return navigation(callback(12275), {});
-      }
+      },
     };
     obj2[closure_1_3.VERIFY_PIN] = {
       fullscreen: true,
@@ -131,7 +136,7 @@ export default function HubEmailConnectionModal(arg0) {
       render(arg0) {
         const merged = Object.assign(arg0);
         return navigation(callback(12276), {});
-      }
+      },
     };
     obj2[closure_1_3.SELECT_SCHOOL_SEARCH] = {
       fullscreen: true,
@@ -139,7 +144,7 @@ export default function HubEmailConnectionModal(arg0) {
       render(arg0) {
         const merged = Object.assign(arg0);
         return navigation(callback(12279), {});
-      }
+      },
     };
     obj1[0] = obj2;
     obj1[1] = items;
@@ -149,8 +154,12 @@ export default function HubEmailConnectionModal(arg0) {
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
   return jsx(NavigationStack.Navigator, { screens, initialRouteStack, headerBackTitle: null });
-};
+}
 export const HubEmailConnectionScreen = function HubEmailConnectionScreen(children) {
   const tmp = callback();
-  return jsx(SafeAreaPaddingView.SafeAreaPaddingView, { top: true, style: callback().safeArea, children: children.children });
+  return jsx(SafeAreaPaddingView.SafeAreaPaddingView, {
+    top: true,
+    style: callback().safeArea,
+    children: children.children,
+  });
 };

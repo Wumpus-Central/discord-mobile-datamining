@@ -2,9 +2,13 @@
 import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { SearchTabs } from "../../SearchConstants.tsx";
 
-let result = require("set").fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx",
+);
 
-export const useAutoTrackSearchTabCountsViewedAnalytics = function useAutoTrackSearchTabCountsViewedAnalytics(searchContext) {
+export const useAutoTrackSearchTabCountsViewedAnalytics = function useAutoTrackSearchTabCountsViewedAnalytics(
+  searchContext,
+) {
   searchContext = searchContext.searchContext;
   const visibleTabCounts = searchContext.visibleTabCounts;
   const visibleTabs = searchContext.visibleTabs;
@@ -36,7 +40,17 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = function useAutoTrackS
       }, 0);
       if (reduced > 0) {
         let obj = searchContext(visibleTabCounts[2]);
-        obj = { searchContext: null, searchResultTotalCount: null, numMemberTabReturnedResults: null, numChannelTabReturnedResults: null, numPeopleTabReturnedResults: null, numMessageTabReturnedResults: null, numMediaTabReturnedResults: null, numFileTabReturnedResults: null, numLinkTabReturnedResults: null };
+        obj = {
+          searchContext: null,
+          searchResultTotalCount: null,
+          numMemberTabReturnedResults: null,
+          numChannelTabReturnedResults: null,
+          numPeopleTabReturnedResults: null,
+          numMessageTabReturnedResults: null,
+          numMediaTabReturnedResults: null,
+          numFileTabReturnedResults: null,
+          numLinkTabReturnedResults: null,
+        };
         obj[0] = searchContext;
         obj[1] = reduced;
         const MEMBERS = closure_3.MEMBERS;

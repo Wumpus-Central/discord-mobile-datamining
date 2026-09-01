@@ -11,7 +11,14 @@ const require = arg1;
 let c3 = importAllResult;
 ({ InAppNotificationTypes: closure_6, UserSettingsSections: error } = ME);
 let obj = { iconContainer: null };
-obj = { width: 48, height: 48, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
+obj = {
+  width: 48,
+  height: 48,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+};
 obj[0] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function RestrictedHoursWarningNotification(notification) {
@@ -34,9 +41,23 @@ const memoResult = importAllResult.memo(function RestrictedHoursWarningNotificat
     obj = { screen: closure_1_7.FAMILY_CENTER };
     notification(closure_1_2[10]).openUserSettings(obj);
   }, items1);
-  obj = { icon: <View size="sm" color={type(712).colors.WHITE} />, header: memo, children: jsx(notification(4474).Text, obj1), onPress: callback, notification };
-  return jsx(notification(10255).NotificationPressable, { icon: <View size="sm" color={type(712).colors.WHITE} />, header: memo, children: jsx(notification(4474).Text, obj1), onPress: callback, notification });
+  obj = {
+    icon: <View size="sm" color={type(712).colors.WHITE} />,
+    header: memo,
+    children: jsx(notification(4474).Text, obj1),
+    onPress: callback,
+    notification,
+  };
+  return jsx(notification(10255).NotificationPressable, {
+    icon: <View size="sm" color={type(712).colors.WHITE} />,
+    header: memo,
+    children: jsx(notification(4474).Text, obj1),
+    onPress: callback,
+    notification,
+  });
 });
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/RestrictedHoursWarningNotification.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_notifications/native/RestrictedHoursWarningNotification.tsx",
+);
 
 export default memoResult;

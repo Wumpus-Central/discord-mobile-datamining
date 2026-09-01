@@ -13,7 +13,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       return closure_0.handleConnectionOpen();
-    }
+    },
   };
   applyArgumentsResult.queue = new Set();
   applyArgumentsResult.isFetchEnabled = false;
@@ -37,7 +37,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -127,7 +127,12 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               total = lib.body.total;
               const guilds = lib.body.guilds;
               closure_2 = guilds.map(lib(17412).fromDiscoverableGuildServer);
-              const obj8 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS", categoryId: null, guilds: null, total: null };
+              const obj8 = {
+                type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS",
+                categoryId: null,
+                guilds: null,
+                total: null,
+              };
               obj8[1] = c6;
               obj8[2] = closure_2;
               obj8[3] = total;
@@ -154,7 +159,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
       }
     })();
   });
-  applyArgumentsResult.fetchFeaturedGuilds = function() {
+  applyArgumentsResult.fetchFeaturedGuilds = function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -171,7 +176,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -275,7 +280,12 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
                 total = closure_3.body.total;
                 const guilds = closure_3.body.guilds;
                 lastFetchTimestamp = guilds.map(callback(closure_1_3[5]).fromDiscoverableGuildServer);
-                const obj9 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS", categoryId: null, guilds: null, total: null };
+                const obj9 = {
+                  type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS",
+                  categoryId: null,
+                  guilds: null,
+                  total: null,
+                };
                 obj9[1] = c0;
                 obj9[2] = lastFetchTimestamp;
                 obj9[3] = total;
@@ -305,7 +315,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
     iter.next();
     return iter;
   });
-  applyArgumentsResult.fetchCategoryFeaturedGuilds = function() {
+  applyArgumentsResult.fetchCategoryFeaturedGuilds = function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -317,9 +327,10 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersFeaturedSearchManager.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/global_discovery_servers/GlobalDiscoveryServersFeaturedSearchManager.tsx",
+);
 
 export default prototype;

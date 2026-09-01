@@ -33,7 +33,14 @@ function ChannelSubtitle(arg0) {
     }
     obj[5] = str;
     obj.children = tmp(10199).renderMessagePreviewMarkup(obj);
-    return jsx(tmp(4474).Text, { content: null, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null });
+    return jsx(tmp(4474).Text, {
+      content: null,
+      muted: null,
+      channelId: null,
+      guildId: null,
+      disableAnimatedEmoji: null,
+      color: null,
+    });
   }
 }
 noopAll;
@@ -66,7 +73,16 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
       obj1[3] = muted;
       obj1[4] = tmp3;
       obj1[5] = obj;
-      tmp9 = <ChannelSubtitle channelId={null} guildId={null} subtitle={null} muted={null} connected={null} textProps={null} />;
+      tmp9 = (
+        <ChannelSubtitle
+          channelId={null}
+          guildId={null}
+          subtitle={null}
+          muted={null}
+          connected={null}
+          textProps={null}
+        />
+      );
     }
     return tmp9;
   }

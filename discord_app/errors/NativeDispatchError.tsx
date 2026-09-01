@@ -42,11 +42,13 @@ Object.defineProperty(NativeDispatchError.prototype, "displayMessage", {
       if (DispatchErrorCodes.DISK_LOW === code) {
         ({ available, required } = self.context);
         const obj5 = formatSize;
-        const formatSizeResult = formatSize /* formatSize */.formatSize(available, { useKibibytes: true });
+        const formatSizeResult = formatSize /* formatSize */
+          .formatSize(available, { useKibibytes: true });
         const obj6 = formatSize;
         const intl13 = getSystemLocale /* getSystemLocale */.intl;
         let obj = { required: null, available: null };
-        obj[0] = formatSize /* formatSize */.formatSize(required, { useKibibytes: true });
+        obj[0] = formatSize /* formatSize */
+          .formatSize(required, { useKibibytes: true });
         obj[1] = formatSizeResult;
         return intl13.formatToPlainString(getSystemLocale /* getSystemLocale */.t["2DR5dl"], obj);
       } else if (tmp32.POST_INSTALL_FAILED === code) {
@@ -105,7 +107,7 @@ Object.defineProperty(NativeDispatchError.prototype, "displayMessage", {
       }
     }
   },
-  set: undefined
+  set: undefined,
 });
 
 export default NativeDispatchError;

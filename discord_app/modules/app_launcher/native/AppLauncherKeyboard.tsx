@@ -14,14 +14,35 @@ let c3 = importAllResult;
 let obj = { onboardingRoundingView: null, onboardingHeader: null, onboardingNavigatorContent: null };
 obj = { borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
 obj[0] = obj;
-createCacheKey = { borderWidth: 2, borderBottomWidth: 0, borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderBottomColor: "transparent", borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
+createCacheKey = {
+  borderWidth: 2,
+  borderBottomWidth: 0,
+  borderColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderBottomColor: "transparent",
+  borderTopLeftRadius: ThemesDefault.radii.sm,
+  borderTopRightRadius: ThemesDefault.radii.sm,
+};
 obj[1] = createCacheKey;
-obj[2] = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
+obj[2] = {
+  borderWidth: 2,
+  borderColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderTopLeftRadius: ThemesDefault.radii.sm,
+  borderTopRightRadius: ThemesDefault.radii.sm,
+};
 let closure_11 = createCacheKey.createStyles(obj);
 let c12 = null;
-let closure_13 = { code: "function AppLauncherKeyboardTsx1(){const{bottomSheetIndex}=this.__closure;return bottomSheetIndex.get();}" };
-let closure_14 = { code: "function AppLauncherKeyboardTsx2(i,prev){const{runOnJS,handleOnboardingParamChange,showOnboarding}=this.__closure;if(i===prev)return;runOnJS(handleOnboardingParamChange)(i,showOnboarding);}" };
-let obj2 = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
+let closure_13 = {
+  code: "function AppLauncherKeyboardTsx1(){const{bottomSheetIndex}=this.__closure;return bottomSheetIndex.get();}",
+};
+let closure_14 = {
+  code: "function AppLauncherKeyboardTsx2(i,prev){const{runOnJS,handleOnboardingParamChange,showOnboarding}=this.__closure;if(i===prev)return;runOnJS(handleOnboardingParamChange)(i,showOnboarding);}",
+};
+let obj2 = {
+  borderWidth: 2,
+  borderColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderTopLeftRadius: ThemesDefault.radii.sm,
+  borderTopRightRadius: ThemesDefault.radii.sm,
+};
 const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
   context = context.context;
   const chatInputRef = context.chatInputRef;
@@ -96,7 +117,11 @@ const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
       const obj = context(onClose[13]);
     }
   };
-  obj = { runOnJS: context(onClose[13]).runOnJS, handleOnboardingParamChange: callback1, showOnboarding: onboardingNavigatorContent };
+  obj = {
+    runOnJS: context(onClose[13]).runOnJS,
+    handleOnboardingParamChange: callback1,
+    showOnboarding: onboardingNavigatorContent,
+  };
   fn.__closure = obj;
   fn.__workletHash = 14003176039781;
   fn.__initData = callback1;
@@ -113,7 +138,7 @@ const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
     let obj = {};
     const merged = Object.assign(arg0);
     obj.pressBehavior = "collapse";
-    const children = [ref2(context(onClose[16]).BottomSheetBackdrop, obj), ];
+    const children = [ref2(context(onClose[16]).BottomSheetBackdrop, obj)];
     let tmp3Result = onboardingNavigatorContent;
     if (onboardingNavigatorContent) {
       obj = { context: null, visibleContent: null, bottomOffset: null };
@@ -194,7 +219,26 @@ const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
       const obj4 = context(onClose[21]);
     }
   }, items5);
-  obj1 = { ref: ref2, animationConfigs: closure_7, animatedIndex: sharedValue, animatedPosition: sharedValue1, chatInputRef, forceMaxHeight: null, enablePanDownToClose: null, onAnimate: null, onClose: null, transitionState: null, backdropComponent: null, disableHeaderRoundingAnimation: null, roundingViewStyle: null, headerStyle: null, isAppsKeyboard: true, rendersHandle: null, width: null, children: null };
+  obj1 = {
+    ref: ref2,
+    animationConfigs: closure_7,
+    animatedIndex: sharedValue,
+    animatedPosition: sharedValue1,
+    chatInputRef,
+    forceMaxHeight: null,
+    enablePanDownToClose: null,
+    onAnimate: null,
+    onClose: null,
+    transitionState: null,
+    backdropComponent: null,
+    disableHeaderRoundingAnimation: null,
+    roundingViewStyle: null,
+    headerStyle: null,
+    isAppsKeyboard: true,
+    rendersHandle: null,
+    width: null,
+    children: null,
+  };
   let obj6 = context(onClose[13]);
   if (!isScreenReaderEnabled) {
     let tmpResult = tmp(tmp2[20]);
@@ -225,7 +269,18 @@ const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
   obj1[15] = entrypoint !== context(onClose[25]).AppLauncherEntrypoint.VOICE;
   obj1[16] = defaultAppLauncherWidth;
   const obj2 = { style: { position: "relative", height: tmp8.maximum }, children: null };
-  obj3 = { bottomSheetExpandReasonRef: ref1, bottomSheetIndex: sharedValue, bottomSheetPosition: sharedValue1, context, chatInputRef, contentStyle: null, entrypoint: null, expandBottomSheet: null, keyboardCloseReasonRef: null, width: null };
+  obj3 = {
+    bottomSheetExpandReasonRef: ref1,
+    bottomSheetIndex: sharedValue,
+    bottomSheetPosition: sharedValue1,
+    context,
+    chatInputRef,
+    contentStyle: null,
+    entrypoint: null,
+    expandBottomSheet: null,
+    keyboardCloseReasonRef: null,
+    width: null,
+  };
   const tmp22 = chatInputRef(onClose[24]);
   const tmp24 = ref;
   if (onboardingNavigatorContent) {

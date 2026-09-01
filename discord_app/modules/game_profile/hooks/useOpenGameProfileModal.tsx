@@ -38,4 +38,4 @@ export default function useOpenGameProfileModal(arg0) {
     }
   }
   return fn;
-};
+}

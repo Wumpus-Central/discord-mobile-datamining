@@ -9,11 +9,13 @@ import DesktopSources from "../../../discord_common/js/packages/media-engine/Con
 
 const DeviceTypes = DesktopSources.DeviceTypes;
 ({ MediaEngineContextTypes: c5, SpeakingFlags: closure_6 } = DesktopSources);
-let closure_7 = { inputDeviceFrecency: DeviceTypes.AUDIO_INPUT, outputDeviceFrecency: DeviceTypes.AUDIO_OUTPUT, videoDeviceFrecency: DeviceTypes.VIDEO_INPUT };
+let closure_7 = {
+  inputDeviceFrecency: DeviceTypes.AUDIO_INPUT,
+  outputDeviceFrecency: DeviceTypes.AUDIO_OUTPUT,
+  videoDeviceFrecency: DeviceTypes.VIDEO_INPUT,
+};
 let obj = {
-  afterCompute() {
-
-  },
+  afterCompute() {},
   computeBonus() {
     return 100;
   },
@@ -21,7 +23,7 @@ let obj = {
     return arg0;
   },
   maxSamples: 256,
-  numFrequentlyItems: Infinity
+  numFrequentlyItems: Infinity,
 };
 obj = {};
 const stopWatch = new require("sleep").StopWatch();
@@ -38,13 +40,12 @@ obj[DeviceTypes.AUDIO_OUTPUT] = new DEFAULT_FRECENCYDefault(obj);
 const tmp7 = new DEFAULT_FRECENCYDefault(obj);
 obj[DeviceTypes.VIDEO_INPUT] = new DEFAULT_FRECENCYDefault(obj);
 const PersistedStore = initializeDefault.PersistedStore;
-class DeviceFrecencyStore extends PersistedStore {
-}
+class DeviceFrecencyStore extends PersistedStore {}
 const prototype = DeviceFrecencyStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   closure_0 = arg0;
   this.waitFor(closure_2, closure_3);
-  const items = [, , ];
+  const items = [, ,];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1], VIDEO_INPUT: arr[2] } = DeviceTypes);
   const item = items.forEach((arg0) => {
     let tmp2;
@@ -59,7 +60,7 @@ prototype["initialize"] = function initialize(arg0) {
   });
 };
 prototype["reset"] = function reset() {
-  const items = [, , ];
+  const items = [, ,];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1], VIDEO_INPUT: arr[2] } = DeviceTypes);
   const item = items.forEach((arg0) => {
     table[arg0].reset();
@@ -113,7 +114,11 @@ prototype["stopSampling"] = function stopSampling(AUDIO_OUTPUT, oldId) {
   obj.reset();
 };
 prototype["getState"] = function getState() {
-  obj = { [closure_4.AUDIO_INPUT]: obj[DeviceTypes.AUDIO_INPUT].usageHistory, [closure_4.AUDIO_OUTPUT]: obj[DeviceTypes.AUDIO_OUTPUT].usageHistory, [closure_4.VIDEO_INPUT]: obj[DeviceTypes.VIDEO_INPUT].usageHistory };
+  obj = {
+    [closure_4.AUDIO_INPUT]: obj[DeviceTypes.AUDIO_INPUT].usageHistory,
+    [closure_4.AUDIO_OUTPUT]: obj[DeviceTypes.AUDIO_OUTPUT].usageHistory,
+    [closure_4.VIDEO_INPUT]: obj[DeviceTypes.VIDEO_INPUT].usageHistory,
+  };
   return obj;
 };
 prototype["getDeviceIdsSortedByFrecency"] = function getDeviceIdsSortedByFrecency(arg0) {
@@ -122,7 +127,7 @@ prototype["getDeviceIdsSortedByFrecency"] = function getDeviceIdsSortedByFrecenc
 prototype["getUsageStats"] = function getUsageStats() {
   const self = this;
   obj = { [closure_4.AUDIO_INPUT]: [], [closure_4.AUDIO_OUTPUT]: [], [closure_4.VIDEO_INPUT]: [] };
-  const items = [, ];
+  const items = [,];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1] } = DeviceTypes);
   const item = items.forEach((AUDIO_OUTPUT) => {
     if (self.isSampling(AUDIO_OUTPUT)) {
@@ -133,7 +138,7 @@ prototype["getUsageStats"] = function getUsageStats() {
   });
   obj = {
     duration_input_device_used_ids: arr2.map((arg0) => {
-      [tmp, ] = arg0;
+      [tmp] = arg0;
       return tmp;
     }),
     duration_input_device_used_ms: arr3.map((arg0) => {
@@ -141,13 +146,13 @@ prototype["getUsageStats"] = function getUsageStats() {
       return tmp;
     }),
     duration_output_device_used_ids: arr4.map((arg0) => {
-      [tmp, ] = arg0;
+      [tmp] = arg0;
       return tmp;
     }),
     duration_output_device_used_ms: arr5.map((arg0) => {
       [, tmp] = arg0;
       return tmp;
-    })
+    }),
   };
   return obj;
 };
@@ -215,7 +220,7 @@ const deviceFrecencyStore = new DeviceFrecencyStore(dispatcherDefault, {
   },
   RTC_CONNECTION_CLIENT_CONNECT: function handleConnect() {
     deviceFrecencyStore.reset();
-  }
+  },
 });
 let obj1 = {
   AUDIO_SET_INPUT_DEVICE(oldId) {
@@ -277,7 +282,7 @@ let obj1 = {
   },
   RTC_CONNECTION_CLIENT_CONNECT: function handleConnect() {
     deviceFrecencyStore.reset();
-  }
+  },
 };
 const tmp8 = new DEFAULT_FRECENCYDefault(obj);
 const result = require("set").fileFinishedImporting("modules/media_engine/DeviceFrecencyStore.tsx");

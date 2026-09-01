@@ -33,15 +33,15 @@ function EmptyState(reason) {
     ReqPds = tmp2(1236).t.ReqPds;
   }
   obj = { style: tmp.emptyState, children: null };
-  const items = [callback2(AccountAgeTier10LargeBadge.BountiesPosterIllocon, { size: 32 }), ];
+  const items = [callback2(AccountAgeTier10LargeBadge.BountiesPosterIllocon, { size: 32 })];
   obj = { style: tmp.emptyStateText, children: null };
-  const items1 = [callback2(Text.Text, { variant: "text-sm/semibold", color: "text-default", children: stringResult }), ];
+  const items1 = [callback2(Text.Text, { variant: "text-sm/semibold", color: "text-default", children: stringResult })];
   obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl3 = tmp2(1236).intl;
   obj1[2] = intl3.format(ReqPds, {
     onClickLearnMore() {
       callback(table[14])();
-    }
+    },
   });
   items1[1] = callback2(Text.Text, obj1);
   obj[1] = items1;
@@ -207,13 +207,16 @@ function QuestHomeBountiesCarousel(bounties) {
       closure_1_15.current = null;
     }, 350);
   }, []);
-  const effect = first1.useEffect(() => () => {
-    if (null != ref.current) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
-    }
-  }, []);
+  const effect = first1.useEffect(
+    () => () => {
+      if (null != ref.current) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(tmp.current);
+        tmp.current = null;
+      }
+    },
+    [],
+  );
   const items5 = [bounties, first1, callback6];
   const effect1 = first1.useEffect(() => {
     function handleModalClose(key) {
@@ -264,9 +267,22 @@ function QuestHomeBountiesCarousel(bounties) {
   }, items5);
   callback7 = first1.useCallback((bountyId) => {
     let obj = bounties(first[25]);
-    if (obj.shouldMigrateToAdAnalyticsInterface(bounties(first[25]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_home_bounties")) {
+    if (
+      obj.shouldMigrateToAdAnalyticsInterface(
+        bounties(first[25]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+        "quest_home_bounties",
+      )
+    ) {
       let tmpResult = tmp(tmp2[26]);
-      obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null };
+      obj = {
+        type: null,
+        adCreativeType: null,
+        adCreativeId: null,
+        questContentCTA: null,
+        surfaceId: null,
+        sourceQuestContent: null,
+        questContentPosition: null,
+      };
       obj[0] = tmp(tmp2[27]).AdUserActionType.CLICK_INTERNAL;
       obj[1] = tmp(tmp2[28]).AdCreativeType.BOUNTY;
       obj[2] = bountyId.id;
@@ -277,7 +293,14 @@ function QuestHomeBountiesCarousel(bounties) {
       tmpResult.captureAdUserAction(obj);
     } else {
       tmpResult = tmp(tmp2[20]);
-      obj = { adContentId: null, adCreativeType: null, questContent: null, questContentCTA: null, sourceQuestContent: null, questContentPosition: null };
+      obj = {
+        adContentId: null,
+        adCreativeType: null,
+        questContent: null,
+        questContentCTA: null,
+        sourceQuestContent: null,
+        questContentPosition: null,
+      };
       obj[0] = bountyId.id;
       obj[1] = tmp(tmp2[28]).AdCreativeType.BOUNTY;
       obj[2] = tmp(tmp2[22]).QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
@@ -290,7 +313,10 @@ function QuestHomeBountiesCarousel(bounties) {
     closure_9.current = first2.isBountyCompleted(bountyId.id);
     callback3(true);
     const obj6 = ref(first[23]);
-    obj6.showModal({ bountyId: bountyId.id, sourceQuestContent: bounties(first[22]).QuestContent.QUEST_HOME_MOBILE_CAROUSEL });
+    obj6.showModal({
+      bountyId: bountyId.id,
+      sourceQuestContent: bounties(first[22]).QuestContent.QUEST_HOME_MOBILE_CAROUSEL,
+    });
   }, []);
   const tmp20 = ref(first[29])();
   isInView = tmp20.isInView;
@@ -299,19 +325,29 @@ function QuestHomeBountiesCarousel(bounties) {
   const callback8 = first1.useCallback((item) => {
     item = item.item;
     const index = item.index;
-    return closure_9(bounties(first[30]).BillableAdPlacementImpressionTrackerNative, {
-      adContentId: item.id,
-      adCreativeType: bounties(first[28]).AdCreativeType.BOUNTY,
-      questContent: bounties(first[22]).QuestContent.QUEST_HOME_MOBILE_CAROUSEL,
-      questContentPosition: index,
-      trackGuildAndChannelMetadata: false,
-      visibilityRef: closure_10,
-      sourceQuestContent: bounties(first[22]).QuestContent.QUEST_HOME_MOBILE_CAROUSEL,
-      overrideVisibility: isInView && undefined,
-      children() {
-        return callback(ref(first[8]), { bounty: item, index, isActive: index === closure_1_4, isModalVisible: closure_1_6, onPress: closure_1_17 });
-      }
-    }, item.id);
+    return closure_9(
+      bounties(first[30]).BillableAdPlacementImpressionTrackerNative,
+      {
+        adContentId: item.id,
+        adCreativeType: bounties(first[28]).AdCreativeType.BOUNTY,
+        questContent: bounties(first[22]).QuestContent.QUEST_HOME_MOBILE_CAROUSEL,
+        questContentPosition: index,
+        trackGuildAndChannelMetadata: false,
+        visibilityRef: closure_10,
+        sourceQuestContent: bounties(first[22]).QuestContent.QUEST_HOME_MOBILE_CAROUSEL,
+        overrideVisibility: isInView && undefined,
+        children() {
+          return callback(ref(first[8]), {
+            bounty: item,
+            index,
+            isActive: index === closure_1_4,
+            isModalVisible: closure_1_6,
+            onPress: closure_1_17,
+          });
+        },
+      },
+      item.id,
+    );
   }, items6);
   const items8 = [isInView, first1, first2];
   const callback9 = first1.useCallback((arg0) => {
@@ -334,7 +370,26 @@ function QuestHomeBountiesCarousel(bounties) {
   let obj = { style: tmp.container, children: null };
   obj = { ref: tmp20.containerRef, onLayout: callback1, children: null };
   const memo1 = first1.useMemo(() => ({ isInView, activeIndex: first1, isModalVisible: first2 }), items8);
-  obj = { ref, horizontal: true, data: bounties, renderItem: callback8, keyExtractor: callback7, contentContainerStyle: tmp.listContentContainer, snapToOffsets: memo, snapToEnd: false, decelerationRate: "fast", showsHorizontalScrollIndicator: false, ItemSeparatorComponent: callback6, ListFooterComponent: callback2, onScroll: callback3, onScrollBeginDrag: callback4, onMomentumScrollEnd: callback5, scrollEventThrottle: 16, extraData: memo1, CellRendererComponent: callback9 };
+  obj = {
+    ref,
+    horizontal: true,
+    data: bounties,
+    renderItem: callback8,
+    keyExtractor: callback7,
+    contentContainerStyle: tmp.listContentContainer,
+    snapToOffsets: memo,
+    snapToEnd: false,
+    decelerationRate: "fast",
+    showsHorizontalScrollIndicator: false,
+    ItemSeparatorComponent: callback6,
+    ListFooterComponent: callback2,
+    onScroll: callback3,
+    onScrollBeginDrag: callback4,
+    onMomentumScrollEnd: callback5,
+    scrollEventThrottle: 16,
+    extraData: memo1,
+    CellRendererComponent: callback9,
+  };
   obj[2] = callback2(bounties(first[31]).FlashList, obj);
   obj[1] = callback2(closure_5, obj);
   return callback2(closure_5, obj);
@@ -350,12 +405,25 @@ let closure_14 = createCacheKey.createStyles(() => {
   obj[0] = obj;
   obj = { paddingLeft: PX_16 };
   obj[1] = obj;
-  obj[2] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: 14, marginHorizontal: ThemesDefault.space.PX_16 };
+  obj[2] = {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: ThemesDefault.space.PX_12,
+    borderWidth: 1,
+    borderColor: ThemesDefault.colors.BORDER_MUTED,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+    borderRadius: ThemesDefault.radii.lg,
+    overflow: "hidden",
+    paddingHorizontal: ThemesDefault.space.PX_16,
+    paddingVertical: 14,
+    marginHorizontal: ThemesDefault.space.PX_16,
+  };
   obj[3] = { flex: 1, gap: 2 };
   return obj;
 });
 const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselConfig) {
-  ({ verticalScrollEnabled, orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel } = shopCarouselConfig);
+  ({ verticalScrollEnabled, orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel } =
+    shopCarouselConfig);
   if (showOrbShopPlaceholderCarousel === undefined) {
     showOrbShopPlaceholderCarousel = false;
   }
@@ -410,8 +478,10 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
       if (verticalScrollEnabled) {
         let tmp12 = "none" !== placement && obtainableOrbRewards > 0;
         if (tmp12) {
-          tmp12 = orbShopProducts.length >= tmp(14671).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
-          const tmp13 = orbShopProducts.length >= tmp(14671).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          tmp12 =
+            orbShopProducts.length >= tmp(14671).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          const tmp13 =
+            orbShopProducts.length >= tmp(14671).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         }
         if (!tmp12) {
           obj = { style: null, children: null };
@@ -429,7 +499,7 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
             tmp25 = null;
           }
           obj[3] = tmp25;
-          const items5 = [callback2(StarfieldBackgroundDefault, obj), ];
+          const items5 = [callback2(StarfieldBackgroundDefault, obj)];
           let tmp26 = null;
           if ("outside" === placement) {
             tmp26 = null;
@@ -438,7 +508,14 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
           obj[1] = items5;
           return closure_10(View, obj);
         } else {
-          obj1 = { embedded: null, replacesHeaderMedia: null, listEdgeSpacing: null, orbShopProducts: null, obtainableOrbRewards: null, showOrbShopPlaceholderCarousel: null };
+          obj1 = {
+            embedded: null,
+            replacesHeaderMedia: null,
+            listEdgeSpacing: null,
+            orbShopProducts: null,
+            obtainableOrbRewards: null,
+            showOrbShopPlaceholderCarousel: null,
+          };
           obj1[0] = "inside" === placement;
           obj1[1] = "replace_media" === placement;
           if ("outside" === placement) {

@@ -14,8 +14,7 @@ prototype = function InteractionRecord(name) {
   tmp.displayName = name_localized;
   return tmp;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["createFromServer"] = function createFromServer(user) {
   const obj = {};
   const merged = Object.assign(user);

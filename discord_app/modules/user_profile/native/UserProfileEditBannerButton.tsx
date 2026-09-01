@@ -39,18 +39,57 @@ function EditButton(disabled) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = { accessibilityRole: "button", accessibilityLabel, onPress, disabled: flag, style: callback2().editButton, children: null };
+  let obj = {
+    accessibilityRole: "button",
+    accessibilityLabel,
+    onPress,
+    disabled: flag,
+    style: callback2().editButton,
+    children: null,
+  };
   obj = { size: "xs", color: ThemesDefault.colors.WHITE };
   obj[5] = callback(PencilIcon.PencilIcon, obj);
   return callback(PressableBase.PressableOpacity, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { position: "relative" }, editButton: null, previewButton: null };
-createCacheKey = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round };
+createCacheKey = {
+  position: "absolute",
+  top: 12,
+  right: 12,
+  width: 28,
+  height: 28,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
+  borderRadius: ThemesDefault.radii.round,
+};
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { position: "absolute", justifyContent: "center", minHeight: 28, top: 12, right: 48, paddingVertical: 4, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, zIndex: 1 };
+createCacheKey[2] = {
+  position: "absolute",
+  justifyContent: "center",
+  minHeight: 28,
+  top: 12,
+  right: 48,
+  paddingVertical: 4,
+  paddingHorizontal: 12,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
+  zIndex: 1,
+};
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { position: "absolute", justifyContent: "center", minHeight: 28, top: 12, right: 48, paddingVertical: 4, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, zIndex: 1 };
+const obj1 = {
+  position: "absolute",
+  justifyContent: "center",
+  minHeight: 28,
+  top: 12,
+  right: 48,
+  paddingVertical: 4,
+  paddingHorizontal: 12,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
+  zIndex: 1,
+};
 const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditBannerButton.tsx");
 
 export default function UserProfileEditBannerButton(arg0) {
@@ -65,7 +104,19 @@ export default function UserProfileEditBannerButton(arg0) {
   }
   let obj = { style: callback2().container, children: null };
   const tmp = callback2();
-  const items = [callback(UserProfileBannerDefault, { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerHeight: useUserProfileBannerHeightDefault(), bannerSafeArea }), , ];
+  const items = [
+    callback(UserProfileBannerDefault, {
+      user,
+      displayProfile,
+      pendingBanner,
+      pendingAvatarSrc,
+      pendingThemeColors,
+      pendingAccentColor,
+      bannerHeight: useUserProfileBannerHeightDefault(),
+      bannerSafeArea,
+    }),
+    ,
+  ];
   if (showProfilePreviewButton) {
     obj = { userId: null };
     obj[0] = user.id;
@@ -82,4 +133,4 @@ export default function UserProfileEditBannerButton(arg0) {
   items[2] = showEditButton;
   obj[1] = items;
   return closure_6(View, obj);
-};
+}

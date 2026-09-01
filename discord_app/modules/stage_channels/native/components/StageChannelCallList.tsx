@@ -7,7 +7,10 @@ import useActiveSpeakerPillScrollHandler from "../StageChannelListStore.tsx";
 
 const require = arg1;
 let c4 = importAllResult;
-({ useActiveSpeakerPillScrollHandler: c5, useActiveSpeakerPillState: closure_6 } = require("useActiveSpeakerPillScrollHandler"));
+({
+  useActiveSpeakerPillScrollHandler: c5,
+  useActiveSpeakerPillState: closure_6,
+} = require("useActiveSpeakerPillScrollHandler"));
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let obj = { direction: require("Button").CutoutDirection.RIGHT, radius: 13, inset: -6 };
 let closure_11 = { STREAM: 0, [0]: "STREAM", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE" };
@@ -48,7 +51,7 @@ let closure_12 = importAllResult.memo((channel) => {
     if (num == null) {
       num = 1;
     }
-    const items = [Math.max(num, 1), , ];
+    const items = [Math.max(num, 1), ,];
     let num2 = tmp[tmp2.SPEAKER];
     if (num2 == null) {
       num2 = 1;
@@ -59,7 +62,10 @@ let closure_12 = importAllResult.memo((channel) => {
   }, items);
   actualStageSpeakerCount = channel(rowsBySection[9]).useActualStageSpeakerCount(channel.id);
   obj = channel(rowsBySection[9]);
-  stageParticipantsCount = channel(rowsBySection[9]).useStageParticipantsCount(channel.id, channel(rowsBySection[7]).StageChannelParticipantNamedIndex.AUDIENCE);
+  stageParticipantsCount = channel(rowsBySection[9]).useStageParticipantsCount(
+    channel.id,
+    channel(rowsBySection[7]).StageChannelParticipantNamedIndex.AUDIENCE,
+  );
   let items1 = [actualStageSpeakerCount, stageParticipantsCount];
   callback = importAllResult.useCallback((arg0) => {
     if (stageParticipantsCount.STREAM === arg0) {
@@ -128,8 +134,13 @@ let closure_12 = importAllResult.memo((channel) => {
     }
   }, items2);
   let obj2 = channel(rowsBySection[9]);
-  const stageParticipants = channel(rowsBySection[9]).useStageParticipants(channel.id, channel(rowsBySection[7]).StageChannelParticipantNamedIndex.SPEAKER);
-  const found = stageParticipants.filter((type) => type.type === channel(rowsBySection[7]).StageChannelParticipantTypes.VOICE);
+  const stageParticipants = channel(rowsBySection[9]).useStageParticipants(
+    channel.id,
+    channel(rowsBySection[7]).StageChannelParticipantNamedIndex.SPEAKER,
+  );
+  const found = stageParticipants.filter(
+    (type) => type.type === channel(rowsBySection[7]).StageChannelParticipantTypes.VOICE,
+  );
   mapped = found.map((user) => user.user);
   const items3 = [tmp[1], first, first1, tmp4[1], actualStageSpeakerCount, stageParticipantsCount, mapped];
   callback2 = importAllResult.useCallback((arg0) => {
@@ -220,7 +231,7 @@ let closure_12 = importAllResult.memo((channel) => {
       const _HermesInternal3 = HermesInternal;
       return callback(React.Fragment, obj, "stream-" + arg0 + "-" + arg1);
     } else if (tmp31.SPEAKER === arg0) {
-      const items = [tmp, ];
+      const items = [tmp];
       let tmp19 = !first1;
       if (!first1) {
         obj1 = { channel: null, participants: null, row: null };
@@ -235,7 +246,7 @@ let closure_12 = importAllResult.memo((channel) => {
       const _HermesInternal2 = HermesInternal;
       return sections(React.Fragment, obj2, "speaker-" + arg0 + "-" + arg1);
     } else if (tmp31.AUDIENCE === arg0) {
-      const items1 = [tmp, ];
+      const items1 = [tmp];
       let tmp10 = !first;
       if (!first) {
         obj = { channel: null, participants: null };
@@ -296,9 +307,19 @@ let closure_12 = importAllResult.memo((channel) => {
       callback(false);
     }
   }, items7);
-  return callback3(listSections(rowsBySection[16]), { ref: first(first1(), 1)[0], sections, renderItem, itemSize, renderSectionFooter, sectionFooterSize, onScroll });
+  return callback3(listSections(rowsBySection[16]), {
+    ref: first(first1(), 1)[0],
+    sections,
+    renderItem,
+    itemSize,
+    renderSectionFooter,
+    sectionFooterSize,
+    onScroll,
+  });
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallList.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/components/StageChannelCallList.tsx",
+);
 
 export default function StageChannelCallList(channel) {
   channel = channel.channel;
@@ -322,7 +343,10 @@ export default function StageChannelCallList(channel) {
     return obj;
   }, items);
   const obj2 = width(5071);
-  const tmp4 = callback(width(10154).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
+  const tmp4 = callback(
+    width(10154).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
+    2,
+  );
   obj = { channel, listSections: tmp4[0], rowsBySection: tmp4[1] };
   return callback3(closure_12, obj);
-};
+}

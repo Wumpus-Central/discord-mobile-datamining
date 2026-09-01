@@ -4,7 +4,9 @@ import { NOTIFICATION_PREVIEW_LINE_CLAMP as closure_4 } from "InAppNotificationC
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx",
+);
 
 export default function ForumThreadCreatedNotification(notification) {
   notification = notification.notification;
@@ -25,7 +27,10 @@ export default function ForumThreadCreatedNotification(notification) {
   userAuthor = obj.getUserAuthor(threadCreator, thread);
   const items = [parentChannel, guild, userAuthor];
   const items1 = [thread];
-  const memo = guild.useMemo(() => ({ type: "message", channel: parentChannel, parentChannel: null, guild, author: userAuthor }), items);
+  const memo = guild.useMemo(
+    () => ({ type: "message", channel: parentChannel, parentChannel: null, guild, author: userAuthor }),
+    items,
+  );
   const items2 = [notification.parentChannel.id];
   const callback = guild.useCallback(() => {
     notification(parentChannel[6]).transitionToThread(thread);
@@ -37,12 +42,27 @@ export default function ForumThreadCreatedNotification(notification) {
   }, items2);
   obj = { icon: null, children: null, header: null, onPress: null, onSettingsPress: null, notification: null };
   obj = { size: notification(tmp[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id };
-  obj[0] = jsx(notification(parentChannel[11]).Avatar, { size: notification(tmp[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id });
-  const formatToPlainStringResult = intl2.formatToPlainString(notification(parentChannel[4]).t.WUIDu9, { threadName: stringResult });
-  obj[1] = jsx(notification(parentChannel[12]).Text, { variant: "redesign/message-preview/medium", color: "text-subtle", lineClamp: userAuthor, children: intl2.formatToPlainString(notification(parentChannel[4]).t.WUIDu9, { threadName: stringResult }) });
+  obj[0] = jsx(notification(parentChannel[11]).Avatar, {
+    size: notification(tmp[11]).AvatarSizes.NORMAL,
+    user: threadCreator,
+    guildId: thread.guild_id,
+  });
+  const formatToPlainStringResult = intl2.formatToPlainString(notification(parentChannel[4]).t.WUIDu9, {
+    threadName: stringResult,
+  });
+  obj[1] = jsx(notification(parentChannel[12]).Text, {
+    variant: "redesign/message-preview/medium",
+    color: "text-subtle",
+    lineClamp: userAuthor,
+    children: intl2.formatToPlainString(notification(parentChannel[4]).t.WUIDu9, { threadName: stringResult }),
+  });
   obj[2] = memo;
   obj[3] = callback;
   obj[4] = callback1;
   obj[5] = notification;
-  return jsx(notification(parentChannel[10]).NotificationPressable, { size: notification(tmp[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id });
-};
+  return jsx(notification(parentChannel[10]).NotificationPressable, {
+    size: notification(tmp[11]).AvatarSizes.NORMAL,
+    user: threadCreator,
+    guildId: thread.guild_id,
+  });
+}

@@ -18,5 +18,5 @@ export default {
     _modDef4723.popWithKey(APPEAL_INGESTION_MODAL_KEY);
     const obj = _modDef4723;
     dispatcherDefault.dispatch({ type: "SAFETY_HUB_APPEAL_CLOSE" });
-  }
+  },
 };

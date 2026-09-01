@@ -38,7 +38,11 @@ export default function UserSettingsText() {
   const setting3 = RenderReactions.useSetting();
   obj1 = require(dataSavingMode[14]);
   const items = [closure_7];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ lowQualityImageMode: closure_7.dataSavingMode, videoUploadQuality: closure_7.videoUploadQuality, dataSavingMode: closure_7.dataSavingMode }));
+  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({
+    lowQualityImageMode: closure_7.dataSavingMode,
+    videoUploadQuality: closure_7.videoUploadQuality,
+    dataSavingMode: closure_7.dataSavingMode,
+  }));
   ({ lowQualityImageMode: require, videoUploadQuality } = stateFromStoresObject);
   dataSavingMode = stateFromStoresObject.dataSavingMode;
   let obj2 = require(dataSavingMode[14]);
@@ -57,7 +61,11 @@ export default function UserSettingsText() {
   let obj6 = require(dataSavingMode[16]);
   closure_4 = obj6.useNavigation();
   obj = { style: tmp5.flex, children: null };
-  obj = { spacing: videoUploadQuality(dataSavingMode[9]).space.PX_24, style: { paddingHorizontal: token }, children: null };
+  obj = {
+    spacing: videoUploadQuality(dataSavingMode[9]).space.PX_24,
+    style: { paddingHorizontal: token },
+    children: null,
+  };
   obj1 = { children: null };
   obj2 = { title: null, description: null, hasIcons: false, children: null };
   const intl = require(dataSavingMode[21]).intl;
@@ -69,7 +77,7 @@ export default function UserSettingsText() {
   obj3[0] = intl3.string(require(dataSavingMode[21]).t.U47N1p);
   obj3[1] = setting1;
   obj3[2] = require(dataSavingMode[11]).InlineEmbedMedia.updateSetting;
-  const items4 = [callback(require(dataSavingMode[25]).TableSwitchRow, obj3), ];
+  const items4 = [callback(require(dataSavingMode[25]).TableSwitchRow, obj3)];
   obj4 = { label: null, value: null, onValueChange: null };
   const intl4 = require(dataSavingMode[21]).intl;
   obj4[0] = intl4.string(require(dataSavingMode[21]).t.VP11No);
@@ -77,7 +85,7 @@ export default function UserSettingsText() {
   obj4[2] = require(dataSavingMode[11]).InlineAttachmentMedia.updateSetting;
   items4[1] = callback(require(dataSavingMode[25]).TableSwitchRow, obj4);
   obj2[3] = items4;
-  const items5 = [callback2(require(dataSavingMode[24]).TableRowGroup, obj2), ];
+  const items5 = [callback2(require(dataSavingMode[24]).TableRowGroup, obj2)];
   obj5 = { description: null, hasIcons: false, children: null };
   const intl5 = require(dataSavingMode[21]).intl;
   obj5[0] = intl5.string(require(dataSavingMode[21]).t.T0rbtM);
@@ -87,7 +95,13 @@ export default function UserSettingsText() {
   obj6[1] = setting4;
   obj6[2] = function updateImageDescriptions(image_descriptions) {
     let obj = videoUploadQuality(dataSavingMode[10]);
-    obj = { video_upload_quality: videoUploadQuality, image_descriptions, low_quality_image_mode: closure_0, data_saving_mode: dataSavingMode, updated_setting: "image_descriptions" };
+    obj = {
+      video_upload_quality: videoUploadQuality,
+      image_descriptions,
+      low_quality_image_mode: closure_0,
+      data_saving_mode: dataSavingMode,
+      updated_setting: "image_descriptions",
+    };
     obj.track(closure_1_9.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, obj);
     const ViewImageDescriptions = closure_1_0(dataSavingMode[11]).ViewImageDescriptions;
     ViewImageDescriptions.updateSetting(image_descriptions);
@@ -95,25 +109,33 @@ export default function UserSettingsText() {
   obj5[2] = callback(require(dataSavingMode[25]).TableSwitchRow, obj6);
   items5[1] = callback(require(dataSavingMode[24]).TableRowGroup, obj5);
   obj1[0] = items5;
-  const items6 = [callback2(closure_14, obj1), , , , , ];
+  const items6 = [callback2(closure_14, obj1), , , , ,];
   const obj7 = { title: null, value: null, onChange: null, description: null, hasIcons: false, children: null };
   const intl7 = require(dataSavingMode[21]).intl;
   obj7[0] = intl7.string(require(dataSavingMode[21]).t.PXq9f1).toUpperCase();
   obj7[1] = videoUploadQuality;
   obj7[2] = function updateVideoUploadQuality(videoUploadQuality) {
     let obj = videoUploadQuality(dataSavingMode[10]);
-    obj = { video_upload_quality: videoUploadQuality, image_descriptions: setting4, low_quality_image_mode: closure_0, data_saving_mode: dataSavingMode, updated_setting: "video_upload_quality" };
+    obj = {
+      video_upload_quality: videoUploadQuality,
+      image_descriptions: setting4,
+      low_quality_image_mode: closure_0,
+      data_saving_mode: dataSavingMode,
+      updated_setting: "video_upload_quality",
+    };
     obj.track(closure_1_9.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, obj);
     obj = { videoUploadQuality };
     const result = videoUploadQuality(dataSavingMode[12]).updatedUnsyncedSettings(obj);
   };
   const intl8 = require(dataSavingMode[21]).intl;
-  obj7[3] = intl8.format(require(dataSavingMode[21]).t["Up+hSO"], { supportURL: "https://support.discord.com/hc/articles/9665451164951" });
+  obj7[3] = intl8.format(require(dataSavingMode[21]).t["Up+hSO"], {
+    supportURL: "https://support.discord.com/hc/articles/9665451164951",
+  });
   const obj8 = { label: null, value: null };
   const intl9 = require(dataSavingMode[21]).intl;
   obj8[0] = intl9.string(require(dataSavingMode[21]).t.cWGW5d);
   obj8[1] = VideoQualitySettings.BEST;
-  const items7 = [callback(require(dataSavingMode[27]).TableRadioRow, obj8), , ];
+  const items7 = [callback(require(dataSavingMode[27]).TableRadioRow, obj8), ,];
   const obj9 = { label: null, value: null };
   const intl10 = require(dataSavingMode[21]).intl;
   obj9[0] = intl10.string(require(dataSavingMode[21]).t["5hKnyC"]);
@@ -125,7 +147,7 @@ export default function UserSettingsText() {
   obj10[1] = VideoQualitySettings.DATA_SAVER;
   items7[2] = callback(require(dataSavingMode[27]).TableRadioRow, obj10);
   obj7[5] = items7;
-  const items8 = [callback2(require(dataSavingMode[26]).TableRadioGroup, obj7), ];
+  const items8 = [callback2(require(dataSavingMode[26]).TableRadioGroup, obj7)];
   let tmp18Result = !result;
   if (!result) {
     const obj11 = { style: null, children: null };
@@ -134,7 +156,7 @@ export default function UserSettingsText() {
     obj12[0] = videoUploadQuality(tmp2[19]);
     obj12[1] = tmp(tmp2[18]).Icon.Sizes.SMALL;
     obj12[2] = tmp5.nitroIcon;
-    const items9 = [tmp16(tmp(tmp2[18]).Icon, obj12), ];
+    const items9 = [tmp16(tmp(tmp2[18]).Icon, obj12)];
     const obj13 = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
     obj13[2] = { marginLeft: 4 };
     const intl12 = tmp(tmp2[21]).intl;
@@ -155,7 +177,13 @@ export default function UserSettingsText() {
   }
   function toggleDataSavingMode(dataSavingMode) {
     let obj = videoUploadQuality(dataSavingMode[10]);
-    obj = { video_upload_quality: videoUploadQuality, image_descriptions: setting4, low_quality_image_mode: closure_0, data_saving_mode: dataSavingMode, updated_setting: "data_saving_mode" };
+    obj = {
+      video_upload_quality: videoUploadQuality,
+      image_descriptions: setting4,
+      low_quality_image_mode: closure_0,
+      data_saving_mode: dataSavingMode,
+      updated_setting: "data_saving_mode",
+    };
     obj.track(closure_1_9.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, obj);
     obj = { dataSavingMode };
     const result = videoUploadQuality(dataSavingMode[12]).updatedUnsyncedSettings(obj);
@@ -209,7 +237,7 @@ export default function UserSettingsText() {
   obj15[0] = callback2(require(dataSavingMode[23]).Stack, obj);
   obj[1] = callback(require(dataSavingMode[22]).Form, obj15);
   return callback(setting4, obj);
-};
+}
 export const setStickerAutocomplete = function setStickerAutocomplete(enabled) {
   let obj = expandEventPropertiesDefault;
   obj = { enabled, location: obj };
@@ -221,28 +249,52 @@ export const setStickerAutocomplete = function setStickerAutocomplete(enabled) {
 export const setLowQualityImageMode = function setLowQualityImageMode(lowQualityImageMode) {
   lowQualityImageMode = lowQualityImageMode.lowQualityImageMode;
   ({ videoUploadQuality, viewImageDescriptions, dataSavingMode } = lowQualityImageMode);
-  expandEventPropertiesDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "low_quality_image_mode" });
+  expandEventPropertiesDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, {
+    video_upload_quality: videoUploadQuality,
+    image_descriptions: viewImageDescriptions,
+    low_quality_image_mode: lowQualityImageMode,
+    data_saving_mode: dataSavingMode,
+    updated_setting: "low_quality_image_mode",
+  });
   const obj = expandEventPropertiesDefault;
   const result = saveGuildFoldersDefault.updatedUnsyncedSettings({ lowQualityImageMode });
 };
 export const setDataSavingMode = function setDataSavingMode(dataSavingMode) {
   dataSavingMode = dataSavingMode.dataSavingMode;
   ({ videoUploadQuality, viewImageDescriptions, lowQualityImageMode } = dataSavingMode);
-  expandEventPropertiesDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "data_saving_mode" });
+  expandEventPropertiesDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, {
+    video_upload_quality: videoUploadQuality,
+    image_descriptions: viewImageDescriptions,
+    low_quality_image_mode: lowQualityImageMode,
+    data_saving_mode: dataSavingMode,
+    updated_setting: "data_saving_mode",
+  });
   const obj = expandEventPropertiesDefault;
   const result = saveGuildFoldersDefault.updatedUnsyncedSettings({ dataSavingMode });
 };
 export const setVideoUploadQuality = function setVideoUploadQuality(videoUploadQuality) {
   videoUploadQuality = videoUploadQuality.videoUploadQuality;
   ({ viewImageDescriptions, lowQualityImageMode, dataSavingMode } = videoUploadQuality);
-  expandEventPropertiesDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "video_upload_quality" });
+  expandEventPropertiesDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, {
+    video_upload_quality: videoUploadQuality,
+    image_descriptions: viewImageDescriptions,
+    low_quality_image_mode: lowQualityImageMode,
+    data_saving_mode: dataSavingMode,
+    updated_setting: "video_upload_quality",
+  });
   const obj = expandEventPropertiesDefault;
   const result = saveGuildFoldersDefault.updatedUnsyncedSettings({ videoUploadQuality });
 };
 export const setImageDescriptions = function setImageDescriptions(viewImageDescriptions) {
   viewImageDescriptions = viewImageDescriptions.viewImageDescriptions;
   ({ videoUploadQuality, lowQualityImageMode, dataSavingMode } = viewImageDescriptions);
-  expandEventPropertiesDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "image_descriptions" });
+  expandEventPropertiesDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, {
+    video_upload_quality: videoUploadQuality,
+    image_descriptions: viewImageDescriptions,
+    low_quality_image_mode: lowQualityImageMode,
+    data_saving_mode: dataSavingMode,
+    updated_setting: "image_descriptions",
+  });
   const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
   ViewImageDescriptions.updateSetting(viewImageDescriptions);
 };

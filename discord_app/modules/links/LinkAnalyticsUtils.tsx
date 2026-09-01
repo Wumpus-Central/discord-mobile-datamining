@@ -6,7 +6,14 @@ import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
 import ME2 from "LinkUtils.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
-let closure_4 = { MESSAGE: "Discord Message Link", CHANNEL: "Discord Channel Link", SERVER_INVITE: "Discord Server Invite", GIFT: "Discord Gift Link", UNKNOWN: "Unknown", DISCOVERY: "Discord Discovery Link" };
+let closure_4 = {
+  MESSAGE: "Discord Message Link",
+  CHANNEL: "Discord Channel Link",
+  SERVER_INVITE: "Discord Server Invite",
+  GIFT: "Discord Gift Link",
+  UNKNOWN: "Unknown",
+  DISCOVERY: "Discord Discovery Link",
+};
 const items = [
   (arr) => {
     let SERVER_INVITE = null;
@@ -46,7 +53,7 @@ const items = [
       DISCOVERY = constants.DISCOVERY;
     }
     return DISCOVERY;
-  }
+  },
 ];
 const result = set.fileFinishedImporting("modules/links/LinkAnalyticsUtils.tsx");
 
@@ -119,6 +126,12 @@ export default {
   },
   trackAnnouncementMessageLinkClicked(arg0) {
     ({ messageId, channelId, guildId, sourceChannelId, sourceGuildId } = arg0);
-    expandEventPropertiesDefault.track(AnalyticEvents.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, { message_id: messageId, channel_id: channelId, guild_id: guildId, source_channel_id: sourceChannelId, source_guild_id: sourceGuildId });
-  }
+    expandEventPropertiesDefault.track(AnalyticEvents.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, {
+      message_id: messageId,
+      channel_id: channelId,
+      guild_id: guildId,
+      source_channel_id: sourceChannelId,
+      source_guild_id: sourceGuildId,
+    });
+  },
 };

@@ -14,7 +14,10 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
   ({ expanded, childNodes } = id);
   let obj = id(15885);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
+  const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({
+    disableSelectedColor: true,
+    disableBGColor: false,
+  });
   const items = [closure_4];
   const items1 = [id];
   const stateFromStores = id(589).useStateFromStores(items, () => {
@@ -38,7 +41,7 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
             action();
           }
         }
-      }
+      },
     };
     return obj;
   }, items1);
@@ -46,14 +49,34 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
   const obj2 = id(589);
   const items2 = [id];
   const sharedValue = id(4217).useSharedValue("" + id);
-  const memo1 = importAllResult.useMemo(() => ({
-    onPress() {
-      const result = closure_1_0(closure_1_2[9]).triggerHapticFeedback(closure_1_0(closure_1_2[9]).HapticFeedbackTypes.IMPACT_LIGHT);
-      const obj = closure_1_0(closure_1_2[9]);
-      const result1 = closure_1_1(closure_1_2[10]).toggleGuildFolderExpand(closure_0);
-    }
-  }), items2);
-  obj = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "category", config: "right", externalChildren: "category", children: "method" };
+  const memo1 = importAllResult.useMemo(
+    () => ({
+      onPress() {
+        const result = closure_1_0(closure_1_2[9]).triggerHapticFeedback(
+          closure_1_0(closure_1_2[9]).HapticFeedbackTypes.IMPACT_LIGHT,
+        );
+        const obj = closure_1_0(closure_1_2[9]);
+        const result1 = closure_1_1(closure_1_2[10]).toggleGuildFolderExpand(closure_0);
+      },
+    }),
+    items2,
+  );
+  obj = {
+    id: null,
+    accessibilityActions: null,
+    onAccessibilityAction: null,
+    selected: null,
+    unread: false,
+    circle: false,
+    styles: null,
+    label: null,
+    sharedId: null,
+    cutouts: "a",
+    overState: "category",
+    config: "right",
+    externalChildren: "category",
+    children: "method",
+  };
   const obj3 = id(4217);
   obj[0] = "" + id;
   obj[1] = accessibilityActions;
@@ -73,7 +96,22 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
   }
   obj[12] = tmp8Result;
   obj[13] = jsx(id(9396).HourglassIcon, {});
-  return jsx(UnreadIndicatorDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "category", config: "right", externalChildren: "category", children: "method" });
+  return jsx(UnreadIndicatorDefault, {
+    id: null,
+    accessibilityActions: null,
+    onAccessibilityAction: null,
+    selected: null,
+    unread: false,
+    circle: false,
+    styles: null,
+    label: null,
+    sharedId: null,
+    cutouts: "a",
+    overState: "category",
+    config: "right",
+    externalChildren: "category",
+    children: "method",
+  });
 });
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuildFolder.tsx");
 

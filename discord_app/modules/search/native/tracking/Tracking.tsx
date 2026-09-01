@@ -46,7 +46,16 @@ export default {
       const obj3 = SearchTokenTypes;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
-      obj = { search_session_id: null, search_query_id: null, search_location: null, guild_id: null, channel_id: null, channel_type: null, search_query_length: null, search_query_content_length: null };
+      obj = {
+        search_session_id: null,
+        search_query_id: null,
+        search_location: null,
+        guild_id: null,
+        channel_id: null,
+        channel_type: null,
+        search_query_length: null,
+        search_query_content_length: null,
+      };
       const obj4 = collectGuildAnalyticsMetadataDefault;
       obj[0] = _initializeDefault.getSessionId(searchContext);
       const obj6 = _initializeDefault;
@@ -80,7 +89,25 @@ export default {
       const obj3 = SearchTokenTypes;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
-      obj = { search_session_id: null, search_location: null, search_query_id: null, search_query_length: null, search_query_content_length: null, search_tab_selected: null, search_result_index: null, search_result_click_id: null, search_result_content_entity_type: null, search_result_user_id: null, search_result_message_id: null, search_result_channel_id: null, search_result_guild_id: null, search_result_channel_type: null, guild_id: null, channel_id: null, channel_type: null };
+      obj = {
+        search_session_id: null,
+        search_location: null,
+        search_query_id: null,
+        search_query_length: null,
+        search_query_content_length: null,
+        search_tab_selected: null,
+        search_result_index: null,
+        search_result_click_id: null,
+        search_result_content_entity_type: null,
+        search_result_user_id: null,
+        search_result_message_id: null,
+        search_result_channel_id: null,
+        search_result_guild_id: null,
+        search_result_channel_type: null,
+        guild_id: null,
+        channel_id: null,
+        channel_type: null,
+      };
       const obj4 = collectGuildAnalyticsMetadataDefault;
       obj[0] = _initializeDefault.getSessionId(searchContext);
       const obj6 = _initializeDefault;
@@ -118,7 +145,16 @@ export default {
   trackSearchResultReturned(searchContext) {
     searchContext = searchContext.searchContext;
     let obj = closure_4;
-    ({ searchResultTotalCount, numMemberTabReturnedResults, numChannelTabReturnedResults, numPeopleTabReturnedResults, numMessageTabReturnedResults, numMediaTabReturnedResults, numFileTabReturnedResults, numLinkTabReturnedResults } = searchContext);
+    ({
+      searchResultTotalCount,
+      numMemberTabReturnedResults,
+      numChannelTabReturnedResults,
+      numPeopleTabReturnedResults,
+      numMessageTabReturnedResults,
+      numMediaTabReturnedResults,
+      numFileTabReturnedResults,
+      numLinkTabReturnedResults,
+    } = searchContext);
     if (!closure_4.isInitialSearchQuery(searchContext)) {
       const guildIdFromSearchContext = SearchTokenTypes.getGuildIdFromSearchContext(searchContext);
       const obj2 = SearchTokenTypes;
@@ -127,7 +163,25 @@ export default {
       const obj3 = SearchTokenTypes;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
-      obj = { search_session_id: null, search_location: null, search_query_id: null, search_query_length: null, search_query_content_length: null, search_result_total_count: null, num_member_tab_returned_results: null, num_channel_tab_returned_results: null, num_people_tab_returned_results: null, num_message_tab_returned_results: null, num_media_tab_returned_results: null, num_file_tab_returned_results: null, num_link_tab_returned_results: null, exact_search_result_count_setting_enabled: null, guild_id: null, channel_id: null, channel_type: null };
+      obj = {
+        search_session_id: null,
+        search_location: null,
+        search_query_id: null,
+        search_query_length: null,
+        search_query_content_length: null,
+        search_result_total_count: null,
+        num_member_tab_returned_results: null,
+        num_channel_tab_returned_results: null,
+        num_people_tab_returned_results: null,
+        num_message_tab_returned_results: null,
+        num_media_tab_returned_results: null,
+        num_file_tab_returned_results: null,
+        num_link_tab_returned_results: null,
+        exact_search_result_count_setting_enabled: null,
+        guild_id: null,
+        channel_id: null,
+        channel_type: null,
+      };
       const obj4 = collectGuildAnalyticsMetadataDefault;
       obj[0] = _initializeDefault.getSessionId(searchContext);
       const obj6 = _initializeDefault;
@@ -168,7 +222,16 @@ export default {
       const obj3 = SearchTokenTypes;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
-      obj = { search_session_id: null, search_location: null, search_query_id: null, search_query_length: null, search_query_content_length: null, guild_id: null, channel_id: null, channel_type: null };
+      obj = {
+        search_session_id: null,
+        search_location: null,
+        search_query_id: null,
+        search_query_length: null,
+        search_query_content_length: null,
+        guild_id: null,
+        channel_id: null,
+        channel_type: null,
+      };
       const obj4 = collectGuildAnalyticsMetadataDefault;
       obj[0] = _initializeDefault.getSessionId(searchContext);
       const obj6 = _initializeDefault;
@@ -199,7 +262,16 @@ export default {
       const obj3 = SearchTokenTypes;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
-      obj = { search_session_id: null, search_location: null, search_query_id: null, search_query_length: null, search_query_content_length: null, guild_id: null, channel_id: null, channel_type: null };
+      obj = {
+        search_session_id: null,
+        search_location: null,
+        search_query_id: null,
+        search_query_length: null,
+        search_query_content_length: null,
+        guild_id: null,
+        channel_id: null,
+        channel_type: null,
+      };
       const obj4 = collectGuildAnalyticsMetadataDefault;
       obj[0] = _initializeDefault.getSessionId(searchContext);
       const obj6 = _initializeDefault;
@@ -226,7 +298,14 @@ export default {
     searchContext = searchContext.searchContext;
     ({ isHistoricalIndexing, documentsIndexed } = searchContext);
     let obj = collectGuildAnalyticsMetadataDefault;
-    obj = { is_historical_indexing: isHistoricalIndexing, documents_indexed: documentsIndexed, search_tab_selected: _initializeDefault.getSelectedTab(searchContext), search_location: null, search_session_id: null, search_query_id: null };
+    obj = {
+      is_historical_indexing: isHistoricalIndexing,
+      documents_indexed: documentsIndexed,
+      search_tab_selected: _initializeDefault.getSelectedTab(searchContext),
+      search_location: null,
+      search_session_id: null,
+      search_query_id: null,
+    };
     const obj3 = _initializeDefault;
     obj[3] = _initializeDefault.getLocation(searchContext);
     const obj4 = _initializeDefault;
@@ -239,7 +318,13 @@ export default {
     searchContext = searchContext.searchContext;
     const channel = store.getChannel(searchContext.channelId);
     let obj = collectGuildAnalyticsMetadataDefault;
-    obj = { search_tab_selected: _initializeDefault.getSelectedTab(searchContext), search_location: null, search_session_id: null, search_result_channel_type: null, search_history_type: null };
+    obj = {
+      search_tab_selected: _initializeDefault.getSelectedTab(searchContext),
+      search_location: null,
+      search_session_id: null,
+      search_result_channel_type: null,
+      search_history_type: null,
+    };
     const obj3 = _initializeDefault;
     obj[1] = _initializeDefault.getLocation(searchContext);
     const obj4 = _initializeDefault;
@@ -256,7 +341,12 @@ export default {
     searchContext = searchContext.searchContext;
     const channel = store.getChannel(searchContext.channelId);
     let obj = collectGuildAnalyticsMetadataDefault;
-    obj = { search_tab_selected: _initializeDefault.getSelectedTab(searchContext), search_location: null, search_session_id: null, search_result_channel_type: null };
+    obj = {
+      search_tab_selected: _initializeDefault.getSelectedTab(searchContext),
+      search_location: null,
+      search_session_id: null,
+      search_result_channel_type: null,
+    };
     const obj3 = _initializeDefault;
     obj[1] = _initializeDefault.getLocation(searchContext);
     const obj4 = _initializeDefault;
@@ -271,7 +361,14 @@ export default {
   trackSearchFilterAdd(location) {
     ({ searchContext, searchTokenType } = location);
     let obj = collectGuildAnalyticsMetadataDefault;
-    obj = { search_tab_selected: _initializeDefault.getSelectedTab(searchContext), search_location: null, search_session_id: null, search_query_id: null, search_filter_type: null, location: null };
+    obj = {
+      search_tab_selected: _initializeDefault.getSelectedTab(searchContext),
+      search_location: null,
+      search_session_id: null,
+      search_query_id: null,
+      search_filter_type: null,
+      location: null,
+    };
     const obj3 = _initializeDefault;
     obj[1] = _initializeDefault.getLocation(searchContext);
     const obj4 = _initializeDefault;
@@ -307,7 +404,14 @@ export default {
   trackSearchFilterRemove(isDefault) {
     ({ searchContext, searchTokenType } = isDefault);
     let obj = collectGuildAnalyticsMetadataDefault;
-    obj = { search_tab_selected: _initializeDefault.getSelectedTab(searchContext), search_location: null, search_session_id: null, search_query_id: null, search_filter_type: null, is_default_search_filter: null };
+    obj = {
+      search_tab_selected: _initializeDefault.getSelectedTab(searchContext),
+      search_location: null,
+      search_session_id: null,
+      search_query_id: null,
+      search_filter_type: null,
+      is_default_search_filter: null,
+    };
     const obj3 = _initializeDefault;
     obj[1] = _initializeDefault.getLocation(searchContext);
     const obj4 = _initializeDefault;
@@ -343,7 +447,12 @@ export default {
   trackSearchTabSelected(searchContext) {
     searchContext = searchContext.searchContext;
     let obj = collectGuildAnalyticsMetadataDefault;
-    obj = { search_session_id: _initializeDefault.getSessionId(searchContext), search_query_id: null, search_tab_selected: null, search_location: null };
+    obj = {
+      search_session_id: _initializeDefault.getSessionId(searchContext),
+      search_query_id: null,
+      search_tab_selected: null,
+      search_location: null,
+    };
     const obj3 = _initializeDefault;
     obj[1] = _initializeDefault.getQueryId(searchContext);
     const obj4 = _initializeDefault;
@@ -356,7 +465,14 @@ export default {
     ({ searchContext, channelId } = arg0);
     const channel = store.getChannel(channelId);
     let obj = collectGuildAnalyticsMetadataDefault;
-    obj = { search_tab_selected: _initializeDefault.getSelectedTab(searchContext), search_location: null, search_session_id: null, search_query_id: null, search_result_channel_type: null, search_result_channel_id: null };
+    obj = {
+      search_tab_selected: _initializeDefault.getSelectedTab(searchContext),
+      search_location: null,
+      search_session_id: null,
+      search_query_id: null,
+      search_result_channel_type: null,
+      search_result_channel_id: null,
+    };
     const obj3 = _initializeDefault;
     obj[1] = _initializeDefault.getLocation(searchContext);
     const obj4 = _initializeDefault;
@@ -370,5 +486,5 @@ export default {
     obj[4] = type;
     obj[5] = channelId;
     obj.trackWithMetadata(closure_7.SEARCH_V2_JUMP_TO_MESSAGE, obj);
-  }
+  },
 };

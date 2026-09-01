@@ -16,8 +16,15 @@ const memoResult = importAllResult.memo(function GIFFavButton(source) {
   let YELLOW_300 = isFavoriteGIF;
   let obj = source(isFavoriteGIF[2]);
   isFavoriteGIF = obj.useIsFavoriteGIF(source(isFavoriteGIF[3]).gifUrlKey(uri));
-  const items = [isFavoriteGIF, , , , , , , ];
-  ({ embedProviderName: arr[1], height: arr[2], isGIFV: arr[3], thumbnail: arr[4], uri: arr[5], width: arr[6] } = source);
+  const items = [isFavoriteGIF, , , , , , ,];
+  ({
+    embedProviderName: arr[1],
+    height: arr[2],
+    isGIFV: arr[3],
+    thumbnail: arr[4],
+    uri: arr[5],
+    width: arr[6],
+  } = source);
   items[7] = uri;
   const callback = importAllResult.useCallback(() => {
     if (isFavoriteGIF) {
@@ -80,6 +87,8 @@ const memoResult = importAllResult.memo(function GIFFavButton(source) {
   obj[2] = tmp4Result;
   tmp4Result = tmp4(uri(YELLOW_300[10]), obj);
 });
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaViewerOverlayButtonFavoriteGIF.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/media_viewer/native/components/overlay/MediaViewerOverlayButtonFavoriteGIF.tsx",
+);
 
 export default memoResult;

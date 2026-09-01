@@ -19,8 +19,7 @@ function handleTokenUpdated(token) {
   return false;
 }
 const Store = initializeDefault.Store;
-class ShareStore extends Store {
-}
+class ShareStore extends Store {}
 ShareStore.prototype["initialize"] = function initialize() {
   this.waitFor(closure_6, closure_7, closure_8, closure_9, closure_10, closure_11);
 };
@@ -87,7 +86,7 @@ const shareStore = new ShareStore(dispatcherDefault, {
       const obj7 = expandEventPropertiesDefault;
     }
     return false;
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("stores/native/ShareStore.tsx");
 

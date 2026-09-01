@@ -10,7 +10,18 @@ noopAll;
 let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIFeedbackSheet.tsx");
 
 export default function ICYMIFeedbackSheet() {
-  let obj = { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, otherKey: "other", trackOpen: null, feedbackReasons: null, trackReport: null };
+  let obj = {
+    headerLabel: null,
+    showHeaderCloseButton: true,
+    hideDontShowAgainCheckbox: true,
+    ratingsBodyLabel: null,
+    reasonsHeaderLabel: null,
+    reasons: null,
+    otherKey: "other",
+    trackOpen: null,
+    feedbackReasons: null,
+    trackReport: null,
+  };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["ppfH9+"]);
   const intl2 = getSystemLocale.intl;
@@ -20,7 +31,7 @@ export default function ICYMIFeedbackSheet() {
   obj = { label: null, value: "irrelevant_content" };
   const intl4 = getSystemLocale.intl;
   obj[0] = intl4.string(getSystemLocale.t.F6TmZA);
-  let items = [obj, , , , ];
+  let items = [obj, , , ,];
   obj = { label: null, value: "not_enough_content" };
   const intl5 = getSystemLocale.intl;
   obj[0] = intl5.string(getSystemLocale.t.voWAzi);
@@ -51,4 +62,4 @@ export default function ICYMIFeedbackSheet() {
     const result = ICYMIAnalytics.trackFeedFeedbackSubmitted(obj);
   };
   return jsx(closeActionSheetDefault, { label: null, value: "not_enough_content" });
-};
+}

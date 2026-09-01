@@ -17,7 +17,9 @@ obj[0] = obj;
 createCacheKey = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[1] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
-let closure_11 = { code: "function CollectiblesShopViewAllCategoryItemsTsx1(){const{borderOpacity}=this.__closure;return{opacity:borderOpacity.get()};}" };
+let closure_11 = {
+  code: "function CollectiblesShopViewAllCategoryItemsTsx1(){const{borderOpacity}=this.__closure;return{opacity:borderOpacity.get()};}",
+};
 const memoResult = importAllResult.memo((category) => {
   category = category.category;
   const analyticsContext = category.analyticsContext;
@@ -56,7 +58,13 @@ const memoResult = importAllResult.memo((category) => {
   const items2 = [sessionId, analyticsLocations, category.name];
   const effect = sharedValue.useEffect(() => {
     let obj = analyticsContext(analyticsLocations[14]);
-    obj = { location_stack: analyticsLocations, page_session_id: null, source: null, page_type: "index", category: null };
+    obj = {
+      location_stack: analyticsLocations,
+      page_session_id: null,
+      source: null,
+      page_type: "index",
+      category: null,
+    };
     let sessionId;
     if (analyticsContext != null) {
       sessionId = tmp3.sessionId;
@@ -69,7 +77,13 @@ const memoResult = importAllResult.memo((category) => {
     if (analyticsContext != null) {
       sessionId1 = tmp3.sessionId;
     }
-    obj = { sessionId: sessionId1, checkpoint: category(tmp2[15]).CollectiblesShopPerfCheckpoint.SHOP_MOUNTED, tab: closure_1_6.SHOP_ALL, unpublishedCategoriesShown: false, cacheDisabled: false };
+    obj = {
+      sessionId: sessionId1,
+      checkpoint: category(tmp2[15]).CollectiblesShopPerfCheckpoint.SHOP_MOUNTED,
+      tab: closure_1_6.SHOP_ALL,
+      unpublishedCategoriesShown: false,
+      cacheDisabled: false,
+    };
     category(analyticsLocations[15]).trackShopPerf(obj);
   }, items2);
   obj = { value: analyticsLocations, children: null };
@@ -80,7 +94,14 @@ const memoResult = importAllResult.memo((category) => {
   obj1[0] = obj2;
   obj3 = { skuIDs: [], activeSubscription: null, children: null };
   const obj4 = { style: tmp.rootContainer, children: null };
-  const items3 = [callback(category(analyticsLocations[18]).CollectiblesProgressiveImage, { source: { uri: mobileBgUrl }, style: absoluteFill.absoluteFill }), , , ];
+  const items3 = [
+    callback(category(analyticsLocations[18]).CollectiblesProgressiveImage, {
+      source: { uri: mobileBgUrl },
+      style: absoluteFill.absoluteFill,
+    }),
+    ,
+    ,
+  ];
   const obj6 = { logoUrl, buttonColor: null, categoryName: null };
   let toHexStringResult;
   let tmp2Result = tmp2(tmp3[19]);
@@ -93,7 +114,16 @@ const memoResult = importAllResult.memo((category) => {
   items3[1] = callback(tmp2Result, obj6);
   const items4 = [tmp.border, animatedStyle];
   items3[2] = callback(analyticsContext(analyticsLocations[12]).View, { style: items4 });
-  const obj7 = { category, products: filteredAndSortedProducts, scrollEnabled: true, onScroll: callback, paddingTop: null, paddingBottom: null, muteBundleStaticBackground: true, accessibilityLabel: null };
+  const obj7 = {
+    category,
+    products: filteredAndSortedProducts,
+    scrollEnabled: true,
+    onScroll: callback,
+    paddingTop: null,
+    paddingBottom: null,
+    muteBundleStaticBackground: true,
+    accessibilityLabel: null,
+  };
   tmp2Result = tmp2(tmp3[20]);
   obj7[4] = analyticsContext(analyticsLocations[6]).space.PX_16;
   obj7[5] = analyticsContext(analyticsLocations[10])().bottom + analyticsContext(analyticsLocations[6]).space.PX_16;
@@ -106,6 +136,8 @@ const memoResult = importAllResult.memo((category) => {
   obj[1] = callback(category(analyticsLocations[16]).CollectiblesAnalyticsProvider, obj1);
   return callback(category(analyticsLocations[8]).AnalyticsLocationProvider, obj);
 });
-let result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopViewAllCategoryItems.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/CollectiblesShopViewAllCategoryItems.tsx",
+);
 
 export default memoResult;

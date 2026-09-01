@@ -5,4 +5,4 @@ const result = set.fileFinishedImporting("modules/premium/gifting/hooks/useGifti
 
 export default function useGiftingPromotionConfig() {
   return null;
-};
+}

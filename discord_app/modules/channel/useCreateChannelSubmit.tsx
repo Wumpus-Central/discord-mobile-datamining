@@ -20,7 +20,7 @@ export default function useCreateChannelSubmit(arg0) {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (body === 2) {
         body = 3;
         HermesBuiltin.throwTypeError();
@@ -57,7 +57,16 @@ export default function useCreateChannelSubmit(arg0) {
               c5 = undefined;
               c6 = undefined;
               c7 = undefined;
-              ({ overwrites: c0, bitrate: closure_1, userLimit: closure_2, createMode: c3, guildId: c4, name: c5, channelType: c6, categoryId: c7 } = arr);
+              ({
+                overwrites: c0,
+                bitrate: closure_1,
+                userLimit: closure_2,
+                createMode: c3,
+                guildId: c4,
+                name: c5,
+                channelType: c6,
+                categoryId: c7,
+              } = arr);
               body = undefined;
               closure_9 = undefined;
               let id;
@@ -88,7 +97,15 @@ export default function useCreateChannelSubmit(arg0) {
               closure_1_1(true);
               c6 = 2;
               obj1 = closure_2_1(closure_2_3[6]);
-              const obj3 = { guildId: null, type: null, name: null, permissionOverwrites: null, bitrate: null, userLimit: null, parentId: null };
+              const obj3 = {
+                guildId: null,
+                type: null,
+                name: null,
+                permissionOverwrites: null,
+                bitrate: null,
+                userLimit: null,
+                parentId: null,
+              };
               obj3[0] = c4;
               obj3[1] = c6;
               obj3[2] = c5;
@@ -185,7 +202,7 @@ export default function useCreateChannelSubmit(arg0) {
   const items1 = [
     tmp2,
     tmp3[0],
-    React.useCallback(function() {
+    React.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -194,8 +211,8 @@ export default function useCreateChannelSubmit(arg0) {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    }, items)
+    }, items),
   ];
   return items1;
-};
+}
 export const CreateChannelMode = obj;

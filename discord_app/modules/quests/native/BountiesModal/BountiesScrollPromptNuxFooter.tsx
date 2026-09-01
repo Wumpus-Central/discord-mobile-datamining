@@ -8,7 +8,11 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles(() => ({ root: { alignItems: "center", gap: 2 }, titleText: { textAlign: "center" }, swipeText: { textAlign: "center", textTransform: "uppercase" } }));
+let closure_5 = createCacheKey.createStyles(() => ({
+  root: { alignItems: "center", gap: 2 },
+  titleText: { textAlign: "center" },
+  swipeText: { textAlign: "center", textTransform: "uppercase" },
+}));
 const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollPromptNuxFooter.tsx");
 
 export default function BountiesScrollPromptFooter() {
@@ -17,11 +21,11 @@ export default function BountiesScrollPromptFooter() {
   obj = { variant: "text-md/semibold", color: "text-default", style: tmp.titleText, children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.H57f41);
-  const items = [callback(Text.Text, obj), ];
+  const items = [callback(Text.Text, obj)];
   obj = { variant: "text-xxs/semibold", color: "text-muted", style: tmp.swipeText, children: null };
   const intl2 = getSystemLocale.intl;
   obj[3] = intl2.string(getSystemLocale.t.tG0zsk);
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
-};
+}

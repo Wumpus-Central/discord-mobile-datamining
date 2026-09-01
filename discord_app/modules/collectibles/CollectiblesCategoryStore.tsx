@@ -9,15 +9,19 @@ import closure_4 from "records/CollectiblesCategoryRecord.tsx";
 const require = arg1;
 function updateCategoriesAndProducts(map) {
   let items = [...closure_14.values()];
-  map = new Map(items.map((storeListingId) => {
-    const items = [storeListingId.storeListingId, storeListingId];
-    return items;
-  }));
+  map = new Map(
+    items.map((storeListingId) => {
+      const items = [storeListingId.storeListingId, storeListingId];
+      return items;
+    }),
+  );
   const productsFromCategories = map1(7299).getProductsFromCategories(map, true);
-  map1 = new Map(productsFromCategories.map((skuId) => {
-    const items = [skuId.skuId, skuId];
-    return items;
-  }));
+  map1 = new Map(
+    productsFromCategories.map((skuId) => {
+      const items = [skuId.skuId, skuId];
+      return items;
+    }),
+  );
   const item = map1.forEach((skuId) => {
     if (!map1.has(skuId.skuId)) {
       const result = map1.set(skuId.skuId, skuId);
@@ -25,10 +29,12 @@ function updateCategoriesAndProducts(map) {
   });
   const obj = map1(7299);
   const productsFromCategories1 = map1(7299).getProductsFromCategories(map, false);
-  map2 = new Map(productsFromCategories1.map((storeListingId) => {
-    const items = [storeListingId.storeListingId, storeListingId];
-    return items;
-  }));
+  map2 = new Map(
+    productsFromCategories1.map((storeListingId) => {
+      const items = [storeListingId.storeListingId, storeListingId];
+      return items;
+    }),
+  );
   closure_11 = [...map2.values()];
 }
 function reset() {
@@ -61,8 +67,7 @@ let c19;
 let closure_20 = {};
 let c21 = 0;
 const Store = initializeDefault.Store;
-class CollectiblesCategoryStore extends Store {
-}
+class CollectiblesCategoryStore extends Store {}
 const prototype = CollectiblesCategoryStore.prototype;
 prototype["initialize"] = function initialize() {
   const items = [closure_3];
@@ -72,7 +77,7 @@ Object.defineProperty(prototype, "isFetchingCategories", {
   get: function isFetchingCategories() {
     return c16;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isFetchingProduct"] = function isFetchingProduct(closure_0) {
   let tmp = null != closure_0;
@@ -100,49 +105,49 @@ Object.defineProperty(prototype, "error", {
   get: function error() {
     return c17;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "lastErrorTimestamp", {
   get: function lastErrorTimestamp() {
     return c19;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "lastSuccessfulFetch", {
   get: function lastSuccessfulFetch() {
     return c18;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "lastFetchOptions", {
   get: function lastFetchOptions() {
     return closure_20;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "categories", {
   get: function categories() {
     return map;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "products", {
   get: function products(arg0) {
     return map1;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "productsWithVariantsAsGroup", {
   get: function productsWithVariantsAsGroup() {
     return closure_11;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "skipNumCategories", {
   get: function skipNumCategories() {
     return c21;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getCategory"] = function getCategory(arg0) {
   let value;
@@ -215,10 +220,12 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
       if (!obj.isEqual(items, mapped)) {
         if (!categories.noOp) {
           const _Map = Map;
-          map = new Map(mapped.map((skuId) => {
-            const items = [skuId.skuId, skuId];
-            return items;
-          }));
+          map = new Map(
+            mapped.map((skuId) => {
+              const items = [skuId.skuId, skuId];
+              return items;
+            }),
+          );
           const _Date = Date;
           const date = new Date();
           const item = map.forEach((unpublishedAt) => {
@@ -266,11 +273,13 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
           if (null != product.bundledProducts) {
             const _Map = Map;
             let bundledProducts = value.bundledProducts;
-            map = new Map(bundledProducts.map((arg0) => {
-              const items = [, ];
-              ({ skuId: arr[0], prices: arr[1] } = arg0);
-              return items;
-            }));
+            map = new Map(
+              bundledProducts.map((arg0) => {
+                const items = [,];
+                ({ skuId: arr[0], prices: arr[1] } = arg0);
+                return items;
+              }),
+            );
             bundledProducts = product.bundledProducts;
             for (const item10012 of bundledProducts) {
               let tmp3 = item10012;
@@ -334,10 +343,12 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
     if (0 !== shopHome.shopHome.categories.length) {
       const _Map = Map;
       const categories = shopHome.shopHome.categories;
-      map = new Map(categories.map((skuId) => {
-        const items = [skuId.skuId, skuId];
-        return items;
-      }));
+      map = new Map(
+        categories.map((skuId) => {
+          const items = [skuId.skuId, skuId];
+          return items;
+        }),
+      );
       const _Map2 = Map;
       let items = [];
       HermesBuiltin.arraySpread(map, HermesBuiltin.arraySpread(map, 0));
@@ -348,7 +359,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
   COLLECTIBLES_SKIP_NUM_CATEGORIES: function handleSetSkipNumCategories(skipNumCategories) {
     skipNumCategories = skipNumCategories.skipNumCategories;
   },
-  LOGOUT: reset
+  LOGOUT: reset,
 });
 let result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesCategoryStore.tsx");
 

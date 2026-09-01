@@ -5,7 +5,9 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 let c3 = importAllResult;
 let closure_5 = { code: "function FadeInOutTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
-let closure_6 = { code: "function FadeInOutTsx2(finished){const{runOnJS,handleTransitionFinished}=this.__closure;if(finished){runOnJS(handleTransitionFinished)();}}" };
+let closure_6 = {
+  code: "function FadeInOutTsx2(finished){const{runOnJS,handleTransitionFinished}=this.__closure;if(finished){runOnJS(handleTransitionFinished)();}}",
+};
 const forwardRefResult = importAllResult.forwardRef((duration, ref) => {
   duration = duration.duration;
   let sharedValue;
@@ -55,9 +57,9 @@ const forwardRefResult = importAllResult.forwardRef((duration, ref) => {
       fn.__workletHash = 7644958904451;
       fn.__initData = closure_1_6;
       const result = store.set(obj.withTiming(0, obj, "respect-motion-settings", fn));
-    }
+    },
   }));
-  style = [, ];
+  style = [,];
   style[0] = style;
   style[1] = animatedStyle;
   return jsx(sharedValue(ref[2]).View, { style, children });

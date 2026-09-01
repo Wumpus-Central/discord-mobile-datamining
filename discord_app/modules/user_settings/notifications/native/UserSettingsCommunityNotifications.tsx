@@ -9,7 +9,9 @@ const require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { paddingHorizontal: 16 } });
-let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsCommunityNotifications.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/notifications/native/UserSettingsCommunityNotifications.tsx",
+);
 
 export default function UserSettingsCommunityNotifications() {
   let obj = stateFromStores(589);
@@ -30,19 +32,27 @@ export default function UserSettingsCommunityNotifications() {
       obj[0] = intl.string(stateFromStores(closure_1_2[10]).t.u6dc5B);
       obj[1] = !stateFromStores[arg0].disableRaidAlertNag;
       obj[2] = function onValueChange() {
-        const result = callback(closure_1_2[11]).updateUserGuildSettings(callback, (disableRaidAlertNag) => {
-          disableRaidAlertNag.disableRaidAlertNag = !disableRaidAlertNag.disableRaidAlertNag;
-        }, callback(closure_1_2[11]).UserSettingsDelay.INFREQUENT_USER_ACTION);
+        const result = callback(closure_1_2[11]).updateUserGuildSettings(
+          callback,
+          (disableRaidAlertNag) => {
+            disableRaidAlertNag.disableRaidAlertNag = !disableRaidAlertNag.disableRaidAlertNag;
+          },
+          callback(closure_1_2[11]).UserSettingsDelay.INFREQUENT_USER_ACTION,
+        );
       };
-      const items = [closure_1_4(stateFromStores(closure_1_2[9]).TableSwitchRow, obj), ];
+      const items = [closure_1_4(stateFromStores(closure_1_2[9]).TableSwitchRow, obj)];
       obj = { label: null, value: null, onValueChange: null };
       const intl2 = stateFromStores(closure_1_2[10]).intl;
       obj[0] = intl2.string(stateFromStores(closure_1_2[10]).t.P8MG6q);
       obj[1] = !stateFromStores[arg0].disableRaidAlertPush;
       obj[2] = function onValueChange() {
-        const result = callback(closure_1_2[11]).updateUserGuildSettings(callback, (disableRaidAlertPush) => {
-          disableRaidAlertPush.disableRaidAlertPush = !disableRaidAlertPush.disableRaidAlertPush;
-        }, callback(closure_1_2[11]).UserSettingsDelay.INFREQUENT_USER_ACTION);
+        const result = callback(closure_1_2[11]).updateUserGuildSettings(
+          callback,
+          (disableRaidAlertPush) => {
+            disableRaidAlertPush.disableRaidAlertPush = !disableRaidAlertPush.disableRaidAlertPush;
+          },
+          callback(closure_1_2[11]).UserSettingsDelay.INFREQUENT_USER_ACTION,
+        );
       };
       items[1] = closure_1_4(stateFromStores(closure_1_2[9]).TableSwitchRow, obj);
       obj[2] = items;
@@ -52,4 +62,4 @@ export default function UserSettingsCommunityNotifications() {
     tmp5 = callback(tmp2(8363).Form, obj);
   }
   return tmp5;
-};
+}

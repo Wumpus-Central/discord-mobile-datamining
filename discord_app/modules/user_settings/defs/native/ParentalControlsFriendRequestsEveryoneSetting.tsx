@@ -33,9 +33,11 @@ createToggle = {
       const result = ParentalControlledFriendSourceFlags.updateControlledSetting(selectedTeenId, tmp7);
     }
   },
-  unsearchable: true
+  unsearchable: true,
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsFriendRequestsEveryoneSetting.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/ParentalControlsFriendRequestsEveryoneSetting.tsx",
+);
 
 export default createToggle;

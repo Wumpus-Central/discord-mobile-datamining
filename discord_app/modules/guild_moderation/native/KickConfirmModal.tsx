@@ -17,4 +17,4 @@ export default function KickConfirmModal(onBeforeGoBack) {
     return closure_1_3(closure_1_1(onGoBack[5]), { onKick: onGoBack, guildId: closure_0, userId: closure_1 });
   };
   return jsx(importDefault(onGoBack[3]), { screenKey: "kick", title: null, render: null });
-};
+}

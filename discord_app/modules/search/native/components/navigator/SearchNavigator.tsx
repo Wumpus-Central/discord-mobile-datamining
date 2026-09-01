@@ -49,7 +49,7 @@ const memoResult = importAllResult.memo((route) => {
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
         return searchContext(16445).default;
-      }
+      },
     }),
     callback(closure_11.Screen, {
       name: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW,
@@ -62,14 +62,14 @@ const memoResult = importAllResult.memo((route) => {
           headerTitle() {
             return closure_1_8(closure_1_1(closure_1_2[14]), { channelId: route.params.channelId });
           },
-          fullScreenGestureEnabled: true
+          fullScreenGestureEnabled: true,
         };
         return obj;
       },
       getComponent() {
         return searchContext(16441).default;
-      }
-    })
+      },
+    }),
   ];
   obj[2] = items2;
   obj[1] = callback2(closure_11.Navigator, obj);

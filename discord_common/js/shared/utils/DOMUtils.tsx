@@ -3,7 +3,20 @@ import set from "../../../../_runtime/00002_set.js";
 
 const re0 = /input/i;
 const re1 = /textarea/i;
-let set = new Set(["text", "password", "number", "date", "datetime-local", "time", "week", "month", "email", "search", "tel", "url"]);
+let set = new Set([
+  "text",
+  "password",
+  "number",
+  "date",
+  "datetime-local",
+  "time",
+  "week",
+  "month",
+  "email",
+  "search",
+  "tel",
+  "url",
+]);
 let result = set.fileFinishedImporting("../discord_common/js/shared/utils/DOMUtils.tsx");
 
 export const isElement = function isElement(ownerDocument, name) {

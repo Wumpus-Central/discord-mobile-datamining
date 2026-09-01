@@ -29,7 +29,14 @@ function ReportAppProfile(arg0) {
   return callback(ActionSheetRowIcon.ActionSheetRow, obj);
 }
 function ReportAppBehavior(arg0) {
-  ({ user: require, entrypoint: importDefault, contextualGuildId: dependencyMap, contextualChannelId: closure_3, onSubmit: closure_4, appContext: closure_5 } = arg0);
+  ({
+    user: require,
+    entrypoint: importDefault,
+    contextualGuildId: dependencyMap,
+    contextualChannelId: closure_3,
+    onSubmit: closure_4,
+    appContext: closure_5,
+  } = arg0);
   let data;
   let obj = initialize;
   const items = [closure_3];
@@ -49,7 +56,14 @@ function ReportAppBehavior(arg0) {
     if (null != data) {
       let obj = closure_1_1(closure_1_2[7]);
       obj.hideActionSheet(data);
-      obj = { application: null, entrypoint: null, contextualGuildId: null, contextualChannelId: null, onSubmit: null, appContext: null };
+      obj = {
+        application: null,
+        entrypoint: null,
+        contextualGuildId: null,
+        contextualChannelId: null,
+        onSubmit: null,
+        appContext: null,
+      };
       obj[0] = tmp;
       obj[1] = closure_1;
       obj[2] = closure_2;
@@ -76,11 +90,11 @@ export default function BotReportChooser(arg0) {
   obj[0] = callback(Text.Text, obj);
   obj = { hasIcons: false, children: null };
   const merged = Object.assign(arg0);
-  const items = [callback(ReportAppProfile, {}), ];
+  const items = [callback(ReportAppProfile, {})];
   const merged1 = Object.assign(arg0);
   items[1] = callback(ReportAppBehavior, {});
   obj[1] = items;
   obj[1] = callback2(ActionSheetRowIcon.ActionSheetRow.Group, obj);
   return callback(ActionSheet.ActionSheet, obj);
-};
+}
 export const BOT_REPORT_CHOOSER_KEY = "BotReportChooser";

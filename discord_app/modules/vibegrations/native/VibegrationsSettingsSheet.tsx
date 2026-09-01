@@ -21,7 +21,12 @@ let closure_17 = createCacheKey.createStyles((paddingBottom) => {
   obj[0] = obj;
   obj = { gap: ThemesDefault.space.PX_16 };
   obj[1] = obj;
-  obj[2] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: ThemesDefault.space.PX_8 };
+  obj[2] = {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: ThemesDefault.space.PX_8,
+  };
   obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: ThemesDefault.space.PX_8 };
   obj[3] = { flex: 1, gap: ThemesDefault.space.PX_4 };
   return obj;
@@ -65,7 +70,7 @@ export default function VibegrationsSettingsSheet(projectId) {
         hint1 = found.hint;
       }
     }
-    const items = [hint1, ];
+    const items = [hint1];
     let requires_rebuild;
     if (found != null) {
       requires_rebuild = found.requires_rebuild;
@@ -89,7 +94,14 @@ export default function VibegrationsSettingsSheet(projectId) {
       if (typeof tmp24 === "string") {
         tmp29 = tmp24;
       }
-      let obj = { hasIcons: false, defaultValue: null, onChange: null, title: null, accessibilityLabel: null, children: null };
+      let obj = {
+        hasIcons: false,
+        defaultValue: null,
+        onChange: null,
+        title: null,
+        accessibilityLabel: null,
+        children: null,
+      };
       obj[1] = tmp29;
       obj[2] = function onChange(arg0) {
         closure_0 = arg0;
@@ -105,7 +117,9 @@ export default function VibegrationsSettingsSheet(projectId) {
       if (options == null) {
         options = [];
       }
-      obj[5] = options.map((label) => callback2(callback(table[18]).TableRadioRow, { label: label.label, value: label.value }, label.value));
+      obj[5] = options.map((label) =>
+        callback2(callback(table[18]).TableRadioRow, { label: label.label, value: label.value }, label.value),
+      );
       return memo(projectId(closure_2[17]).TableRadioGroup, obj, found.key);
     } else if ("checkbox" === found.type) {
       let tmp17 = first[found.key];
@@ -133,7 +147,16 @@ export default function VibegrationsSettingsSheet(projectId) {
       if (tmp11 == null) {
         tmp11 = memo1[found.key];
       }
-      obj = { label: null, description: null, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, isDisabled: null };
+      obj = {
+        label: null,
+        description: null,
+        autoComplete: "off",
+        autoCapitalize: "none",
+        autoCorrect: false,
+        value: null,
+        onChange: null,
+        isDisabled: null,
+      };
       obj[0] = found.label;
       obj[1] = joined;
       let str3 = "";
@@ -176,7 +199,7 @@ export default function VibegrationsSettingsSheet(projectId) {
         hint1 = def2.hint;
       }
     }
-    const items = [hint1, ];
+    const items = [hint1];
     let requires_rebuild;
     if (def2 != null) {
       requires_rebuild = def2.requires_rebuild;
@@ -200,7 +223,15 @@ export default function VibegrationsSettingsSheet(projectId) {
         obj[0] = closure_2.secretRowInfo;
         obj1 = { variant: "text-sm/medium", color: "text-default", children: null };
         obj1[2] = label;
-        const items1 = [memo(projectId(closure_2[21]).Text, obj1), memo(projectId(closure_2[21]).Text, { variant: "text-sm/normal", color: "text-muted", children: "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022" }), ];
+        const items1 = [
+          memo(projectId(closure_2[21]).Text, obj1),
+          memo(projectId(closure_2[21]).Text, {
+            variant: "text-sm/normal",
+            color: "text-muted",
+            children:
+              "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
+          }),
+        ];
         let tmp23 = null;
         if (null != joined) {
           const obj2 = { variant: "text-xs/normal", color: "text-muted", children: null };
@@ -209,8 +240,15 @@ export default function VibegrationsSettingsSheet(projectId) {
         }
         items1[2] = tmp23;
         obj[1] = items1;
-        const items2 = [memo1(first1, obj), ];
-        const obj3 = { variant: "secondary", size: "sm", text: null, accessibilityLabel: null, disabled: null, onPress: null };
+        const items2 = [memo1(first1, obj)];
+        const obj3 = {
+          variant: "secondary",
+          size: "sm",
+          text: null,
+          accessibilityLabel: null,
+          disabled: null,
+          onPress: null,
+        };
         const intl2 = projectId(closure_2[12]).intl;
         obj3[2] = intl2.string(notifyAgent(closure_2[13]).j6itec);
         const intl3 = projectId(closure_2[12]).intl;
@@ -232,7 +270,18 @@ export default function VibegrationsSettingsSheet(projectId) {
       }
       return tmp12Result;
     }
-    obj = { label, description: joined, placeholder: null, secureTextEntry: true, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, isDisabled: null };
+    obj = {
+      label,
+      description: joined,
+      placeholder: null,
+      secureTextEntry: true,
+      autoComplete: "off",
+      autoCapitalize: "none",
+      autoCorrect: false,
+      value: null,
+      onChange: null,
+      isDisabled: null,
+    };
     let str3;
     if (value.set) {
       str3 = "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022";
@@ -320,10 +369,12 @@ export default function VibegrationsSettingsSheet(projectId) {
     });
   }, items3);
   found = memo.filter((type) => "secret" !== type.type);
-  map = new Map(memo2.map((name) => {
-    const items = [name.name, name];
-    return items;
-  }));
+  map = new Map(
+    memo2.map((name) => {
+      const items = [name.name, name];
+      return items;
+    }),
+  );
   if (scopeKeys == null) {
     scopeKeys = [];
   }
@@ -360,7 +411,7 @@ export default function VibegrationsSettingsSheet(projectId) {
     const intl = projectId(closure_2[12]).intl;
     obj[1] = intl.string(notifyAgent(closure_2[13]).jczqxT);
     obj[2] = found.length;
-    const items = [obj, ];
+    const items = [obj];
     obj = { id: "secrets", label: null, count: null, page: null };
     const intl2 = projectId(closure_2[12]).intl;
     obj[1] = intl2.string(notifyAgent(closure_2[13]).iD7xfZ);
@@ -369,7 +420,12 @@ export default function VibegrationsSettingsSheet(projectId) {
     return items;
   }, items4);
   let someResult = found1.some((arg0) => map.has(arg0));
-  const segmentedControlState = projectId(9260).useSegmentedControlState({ items: memo3, pageWidth: tmp24, defaultIndex: num, onSetActiveIndex: tmp22 });
+  const segmentedControlState = projectId(9260).useSegmentedControlState({
+    items: memo3,
+    pageWidth: tmp24,
+    defaultIndex: num,
+    onSetActiveIndex: tmp22,
+  });
   if (tmp19) {
     let tmp28 = 1 === tmp21;
   } else {
@@ -441,121 +497,124 @@ export default function VibegrationsSettingsSheet(projectId) {
   }, items5);
   closure_20 = tmp30;
   const items6 = [null != memo4.values || null != memo4.secrets, notifyAgent, projectId, first2, memo4];
-  const callback1 = obj1.useCallback(stateFromStores(function*() {
-    if (c7 === 2) {
-      c7 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  const callback1 = obj1.useCallback(
+    stateFromStores(function* () {
+      if (c7 === 2) {
+        c7 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c7 = 2;
-        if (0 === c6) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_3 = tmp4;
-            closure_2 = tmp8;
-            let rebuildRequired;
-            let project;
-            if (closure_1_20) {
-              if (!closure_1_10) {
-                closure_1_11(true);
-                closure_1_12(false);
-                c5 = 2;
-                c6 = 3;
-                c7 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_10(closure_1_0, closure_1_19);
-                return obj1;
-              }
-            }
-            c7 = 3;
-          }
-        } else if (1 !== tmp8) {
-          if (2 === tmp8) {
-            c5 = 1;
-            closure_1_12(true);
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            closure_1_11(false);
-            c7 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            rebuildRequired = arg1.rebuildRequired;
-            if (!project) {
-              if (!c7.hasPendingSettingsRequest(rebuildRequired)) {
-                if (rebuildRequired) {
-                  closure_1_8(rebuildRequired);
-                } else {
-                  project = closure_1_12.getProject(rebuildRequired);
-                  let application_id;
-                  if (project != null) {
-                    application_id = project.application_id;
-                  }
-                  rebuildRequired = application_id;
-                  if (application_id == null) {
-                    rebuildRequired = null;
-                  }
-                  closure_1_1(closure_1_2[15])(rebuildRequired);
-                  let prop;
-                  const tmp19 = closure_1_1(closure_1_2[15]);
-                  if (project != null) {
-                    prop = project.preview_application_id;
-                  }
-                  project = prop;
-                  if (prop == null) {
-                    project = null;
-                  }
-                  closure_1_1(closure_1_2[15])(project);
-                  const tmp27 = closure_1_1(closure_1_2[15]);
+        try {
+          c7 = 2;
+          if (0 === c6) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_3 = tmp4;
+              closure_2 = tmp8;
+              let rebuildRequired;
+              let project;
+              if (closure_1_20) {
+                if (!closure_1_10) {
+                  closure_1_11(true);
+                  closure_1_12(false);
+                  c5 = 2;
+                  c6 = 3;
+                  c7 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = closure_1_10(closure_1_0, closure_1_19);
+                  return obj1;
                 }
               }
-              obj = closure_1_1(closure_1_2[16]);
-              obj.hideActionSheet(closure_1_16);
-              c5 = 1;
+              c7 = 3;
             }
-            const intl = closure_1_0(closure_1_2[12]).intl;
-            closure_1_9(closure_1_0, intl.string(closure_1_1(closure_1_2[13]).gqJFu0));
+          } else if (1 !== tmp8) {
+            if (2 === tmp8) {
+              c5 = 1;
+              closure_1_12(true);
+            } else if (arg0 === 1) {
+              c7 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 0;
+              closure_1_11(false);
+              c7 = 3;
+              const obj2 = { value: null, done: true };
+              obj2[0] = arg1;
+              return obj2;
+            } else {
+              rebuildRequired = arg1.rebuildRequired;
+              if (!project) {
+                if (!c7.hasPendingSettingsRequest(rebuildRequired)) {
+                  if (rebuildRequired) {
+                    closure_1_8(rebuildRequired);
+                  } else {
+                    project = closure_1_12.getProject(rebuildRequired);
+                    let application_id;
+                    if (project != null) {
+                      application_id = project.application_id;
+                    }
+                    rebuildRequired = application_id;
+                    if (application_id == null) {
+                      rebuildRequired = null;
+                    }
+                    closure_1_1(closure_1_2[15])(rebuildRequired);
+                    let prop;
+                    const tmp19 = closure_1_1(closure_1_2[15]);
+                    if (project != null) {
+                      prop = project.preview_application_id;
+                    }
+                    project = prop;
+                    if (prop == null) {
+                      project = null;
+                    }
+                    closure_1_1(closure_1_2[15])(project);
+                    const tmp27 = closure_1_1(closure_1_2[15]);
+                  }
+                }
+                obj = closure_1_1(closure_1_2[16]);
+                obj.hideActionSheet(closure_1_16);
+                c5 = 1;
+              }
+              const intl = closure_1_0(closure_1_2[12]).intl;
+              closure_1_9(closure_1_0, intl.string(closure_1_1(closure_1_2[13]).gqJFu0));
+            }
+            c5 = 0;
+            closure_1_11(false);
           }
           c5 = 0;
           closure_1_11(false);
-        }
-        c5 = 0;
-        closure_1_11(false);
-        throw closure_4;
-      } catch (tmp69) {
-        closure_4 = tmp69;
-        if (tmp5 === c5) {
-          c7 = tmp3;
-          throw tmp69;
-        } else if (tmp2 === tmp71) {
-          c6 = tmp2;
-        } else {
-          c6 = tmp;
+          throw closure_4;
+        } catch (tmp69) {
+          closure_4 = tmp69;
+          if (tmp5 === c5) {
+            c7 = tmp3;
+            throw tmp69;
+          } else if (tmp2 === tmp71) {
+            c6 = tmp2;
+          } else {
+            c6 = tmp;
+          }
         }
       }
-    }
-  }), items6);
+    }),
+    items6,
+  );
   obj = { startExpanded: true, header: null, children: null };
   obj = { title: null };
   let intl = tmp4(1236).intl;
@@ -571,7 +630,7 @@ export default function VibegrationsSettingsSheet(projectId) {
       tmp32Result = tmp32(tmp4(4474).Text, obj2);
     }
   }
-  const items7 = [tmp32Result, , , , ];
+  const items7 = [tmp32Result, , , ,];
   tmp32Result = null;
   if (0 === found.length) {
     tmp32Result = null;
@@ -596,19 +655,19 @@ export default function VibegrationsSettingsSheet(projectId) {
     const items8 = [
       tmp32Result1,
       found1.map(function renderScoped(arg0) {
-          closure_0 = arg0;
-          const value = map.get(arg0);
-          if (null != value) {
-            return renderSecret(value);
-          } else {
-            found = found.find((key) => key.key === closure_0);
-            let tmp4 = null;
-            if (null != found) {
-              tmp4 = renderValueSetting(found);
-            }
-            return tmp4;
+        closure_0 = arg0;
+        const value = map.get(arg0);
+        if (null != value) {
+          return renderSecret(value);
+        } else {
+          found = found.find((key) => key.key === closure_0);
+          let tmp4 = null;
+          if (null != found) {
+            tmp4 = renderValueSetting(found);
           }
-        })
+          return tmp4;
+        }
+      }),
     ];
     obj4[1] = items8;
     let tmp33Result = tmp33(tmp34, obj4);
@@ -622,7 +681,7 @@ export default function VibegrationsSettingsSheet(projectId) {
       obj6[1] = tmp32(tmp4(9762).SegmentedControl, obj7);
       tmp32Result2 = tmp32(tmp34, obj6);
     }
-    const items9 = [tmp32Result2, ];
+    const items9 = [tmp32Result2];
     const obj8 = { style: null, children: null };
     obj8[0] = tmp3.section;
     if (tmp28) {
@@ -661,5 +720,5 @@ export default function VibegrationsSettingsSheet(projectId) {
   obj1[1] = items7;
   obj[2] = memo1(first1, obj1);
   return memo(projectId(5989).ActionSheet, obj);
-};
+}
 export const VIBEGRATIONS_SETTINGS_SHEET_KEY = "VibegrationsSettingsSheet";

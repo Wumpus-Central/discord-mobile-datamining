@@ -36,9 +36,7 @@ export const requestMessageAuthor = function requestMessageAuthor(userId) {
           obj2.add(userId);
           user = _fetchProfileAll.getUser(userId);
           const obj = _fetchProfileAll;
-          user.finally(() => closure_1_3.delete(closure_0)).catch(() => {
-
-          });
+          user.finally(() => closure_1_3.delete(closure_0)).catch(() => {});
           const cleanupPromise = user.finally(() => closure_1_3.delete(closure_0));
         }
         obj3 = map;

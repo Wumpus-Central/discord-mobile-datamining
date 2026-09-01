@@ -10,7 +10,7 @@ function _tryLoadAsync() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -98,7 +98,7 @@ function _tryLoadOrResetCacheGatewayAsync() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c9 === 2) {
         c9 = 3;
         HermesBuiltin.throwTypeError();

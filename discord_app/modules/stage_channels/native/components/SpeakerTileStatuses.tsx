@@ -13,9 +13,29 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 require = arg1;
 let obj = { voiceStatusWrapper: null, moderatorStatusWrapper: null, restricted: null };
-obj = { position: "absolute", top: 4, left: 4, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
+obj = {
+  position: "absolute",
+  top: 4,
+  left: 4,
+  backgroundColor: ThemesDefault.colors.WHITE,
+  borderRadius: ThemesDefault.radii.md,
+  width: 24,
+  height: 24,
+  justifyContent: "center",
+  alignItems: "center",
+};
 obj[0] = obj;
-createCacheKey = { position: "absolute", top: 4, right: 4, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
+createCacheKey = {
+  position: "absolute",
+  top: 4,
+  right: 4,
+  backgroundColor: ThemesDefault.colors.WHITE,
+  borderRadius: ThemesDefault.radii.md,
+  width: 24,
+  height: 24,
+  justifyContent: "center",
+  alignItems: "center",
+};
 obj[1] = createCacheKey;
 obj[2] = { marginEnd: ThemesDefault.space.PX_4 };
 let closure_8 = createCacheKey.createStyles(obj);
@@ -30,7 +50,11 @@ const memoResult = importAllResult.memo((userId) => {
   const tmp = callback();
   const items2 = [closure_5];
   const items3 = [channelId, userId];
-  const stateFromStores1 = userId(589).useStateFromStores(items2, () => closure_1_5.getVoiceStateForChannel(channelId, userId), items3);
+  const stateFromStores1 = userId(589).useStateFromStores(
+    items2,
+    () => closure_1_5.getVoiceStateForChannel(channelId, userId),
+    items3,
+  );
   let flag;
   if (stateFromStores1 != null) {
     flag = stateFromStores1.isVoiceMuted();
@@ -103,9 +127,18 @@ export const VoiceStatus = memoResult;
 export const ModeratorStatus = memoResult1;
 export const BlockedStatus = function BlockedStatus() {
   const tmp = callback();
-  return jsx(Button.Icon, { style: callback().restricted, source: registerAssetDefault2, size: Button.Icon.Sizes.EXTRA_SMALL, color: ThemesDefault.unsafe_rawColors.RED_400 });
+  return jsx(Button.Icon, {
+    style: callback().restricted,
+    source: registerAssetDefault2,
+    size: Button.Icon.Sizes.EXTRA_SMALL,
+    color: ThemesDefault.unsafe_rawColors.RED_400,
+  });
 };
 export const IgnoredStatus = function IgnoredStatus() {
   const tmp = callback();
-  return jsx(Button.Icon, { style: callback().restricted, source: registerAssetDefault, size: Button.Icon.Sizes.EXTRA_SMALL });
+  return jsx(Button.Icon, {
+    style: callback().restricted,
+    source: registerAssetDefault,
+    size: Button.Icon.Sizes.EXTRA_SMALL,
+  });
 };

@@ -21,10 +21,20 @@ obj[1] = function validation(array) {
   obj = { devices: null };
   let arrayResult = array.array();
   const requiredResult = obj.required();
-  obj = { type: null, id: null, vendor: null, model: null, related: null, echo_cancellation: null, noise_suppression: null, automatic_gain_control: null, hardware_mute: null };
+  obj = {
+    type: null,
+    id: null,
+    vendor: null,
+    model: null,
+    related: null,
+    echo_cancellation: null,
+    noise_suppression: null,
+    automatic_gain_control: null,
+    hardware_mute: null,
+  };
   const obj5 = createRpcJoiSchemaObjectDefault(array);
   const stringResult = array.string();
-  const items = [, , ];
+  const items = [, ,];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1], VIDEO_INPUT: arr[2] } = DeviceTypes);
   obj[0] = array.string().required().valid(items);
   const requiredResult1 = array.string().required();
@@ -66,23 +76,26 @@ obj[2] = function handler(socket) {
     throw tmp10;
   } else {
     obj = devices(14124);
-    obj.setCertifiedDevices(socket.application.id, devices.map((type) => {
-      const related = type.related;
-      return {
-        type: type.type,
-        id: type.id,
-        vendor: type.vendor,
-        model: type.model,
-        related: related.filter((arg0) => {
-          closure_0 = arg0;
-          return closure_0.some((id) => id.id === closure_0);
-        }),
-        echoCancellation: type.echo_cancellation,
-        noiseSuppression: type.noise_suppression,
-        automaticGainControl: type.automatic_gain_control,
-        hardwareMute: type.hardware_mute
-      };
-    }));
+    obj.setCertifiedDevices(
+      socket.application.id,
+      devices.map((type) => {
+        const related = type.related;
+        return {
+          type: type.type,
+          id: type.id,
+          vendor: type.vendor,
+          model: type.model,
+          related: related.filter((arg0) => {
+            closure_0 = arg0;
+            return closure_0.some((id) => id.id === closure_0);
+          }),
+          echoCancellation: type.echo_cancellation,
+          noiseSuppression: type.noise_suppression,
+          automaticGainControl: type.automatic_gain_control,
+          hardwareMute: type.hardware_mute,
+        };
+      }),
+    );
   }
 };
 obj[RPCCommands.SET_CERTIFIED_DEVICES] = obj;

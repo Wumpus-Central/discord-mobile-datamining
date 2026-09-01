@@ -8,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/friend_suggestions/
 
 export default {
   fetch() {
-    return callback(function*() {
+    return callback(function* () {
       const callback = tmp3;
       c3 = 1;
       const HTTP = closure_1_0(closure_1_2[2]).HTTP;
@@ -38,5 +38,5 @@ export default {
   ignore(id) {
     const HTTP = sendRequest.HTTP;
     HTTP.del({ url: Endpoints.FRIEND_SUGGESTION(id), rejectWithError: true });
-  }
+  },
 };

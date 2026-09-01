@@ -22,7 +22,7 @@ function _backgroundSync() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -254,7 +254,7 @@ function _backgroundSync() {
                         return obj8;
                       }
                     }
-                    const items = [callback2(c6, closure_4, c5), callback4(c6, closure_4, c5, flag3), ];
+                    const items = [callback2(c6, closure_4, c5), callback4(c6, closure_4, c5, flag3)];
                     if (callback) {
                       let resolved = Promise.resolve();
                     } else {
@@ -370,7 +370,7 @@ function _backgroundSyncPrivateChannels() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -450,7 +450,9 @@ function _backgroundSyncPrivateChannels() {
               c5 = 2;
               c6 = 1;
               obj5 = { value: null, done: false };
-              obj5[0] = Promise.all(keys.map((arg0) => closure_1_25(c3, c5, null, arg0, body.changes_by_channel_id[arg0])));
+              obj5[0] = Promise.all(
+                keys.map((arg0) => closure_1_25(c3, c5, null, arg0, body.changes_by_channel_id[arg0])),
+              );
               return obj5;
             }
           } else if (2 === tmp5) {
@@ -521,7 +523,7 @@ function _backgroundSyncGuildData() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -559,7 +561,7 @@ function _backgroundSyncGuildData() {
               let guilds;
               let api_code_version;
               closure_11 = undefined;
-              const items = [callback2(7398).getCommittedVersions(), , ];
+              const items = [callback2(7398).getCommittedVersions(), ,];
               const obj18 = callback2(7398);
               items[1] = callback2(7401).getCommittedVersions();
               const obj19 = callback2(7401);
@@ -589,7 +591,12 @@ function _backgroundSyncGuildData() {
               let obj3 = { url: null, body: null, timeout: 5000, rejectWithError: false };
               obj3[0] = constants.BACKGROUND_SYNC;
               if (closure_7) {
-                const obj4 = { guild_versions: null, highest_last_message_id: null, api_code_version: null, channel_privacy: null };
+                const obj4 = {
+                  guild_versions: null,
+                  highest_last_message_id: null,
+                  api_code_version: null,
+                  channel_privacy: null,
+                };
                 obj4[0] = c5;
                 obj4[1] = c6.highest_last_message_id;
                 obj4[2] = c6.api_code_version;
@@ -664,7 +671,14 @@ function _backgroundSyncGuildData() {
                 }
                 closure_11 = [];
                 obj2 = callback2(709);
-                obj9 = { type: "BACKGROUND_SYNC", guilds: null, emojis: null, stickers: null, apiCodeVersion: null, promisesForBackgroundSyncToWaitOn: null };
+                obj9 = {
+                  type: "BACKGROUND_SYNC",
+                  guilds: null,
+                  emojis: null,
+                  stickers: null,
+                  apiCodeVersion: null,
+                  promisesForBackgroundSyncToWaitOn: null,
+                };
                 obj9[1] = guilds;
                 obj9[2] = guilds.map((data_mode) => {
                   if ("unavailable" === data_mode.data_mode) {
@@ -771,7 +785,7 @@ function _backgroundSyncGuildChannels() {
     c21 = 0;
     c22 = 0;
     c20 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c22 === 2) {
         c22 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -866,14 +880,21 @@ function _backgroundSyncGuildChannels() {
                   let valueResult = iter.value();
                   lib = valueResult;
                   throwTypeErrorResult = closure_1_14;
-                  throwTypeErrorResult = closure_1_14.verbose("Guild Message Background Syncing for ", valueResult.map((channelId) => channelId.channelId));
+                  throwTypeErrorResult = closure_1_14.verbose(
+                    "Guild Message Background Syncing for ",
+                    valueResult.map((channelId) => channelId.channelId),
+                  );
                   if (0 !== valueResult.length) {
                     let _Promise = Promise;
                     c21 = 1;
                     let num14 = 1;
                     c22 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = Promise.all(valueResult.map((guildId) => v0.withoutLogging().getLatest(guildId.guildId, guildId.channelId, 1)));
+                    obj1[0] = Promise.all(
+                      valueResult.map((guildId) =>
+                        v0.withoutLogging().getLatest(guildId.guildId, guildId.channelId, 1),
+                      ),
+                    );
                     return obj1;
                   }
                 } else {
@@ -1257,7 +1278,7 @@ function _processChannelChanges() {
     c11 = 0;
     c12 = 0;
     c10 = 0;
-    return (function*(arg0, arr) {
+    return (function* (arg0, arr) {
       if (c12 === 2) {
         c12 = 3;
         HermesBuiltin.throwTypeError();
@@ -1339,7 +1360,11 @@ function _processChannelChanges() {
                   let num6 = 1;
                   c12 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = Promise.all(arr4.map((channel_id) => closure_0.withoutLogging().get(closure_2, channel_id.channel_id, channel_id.id)));
+                  obj1[0] = Promise.all(
+                    arr4.map((channel_id) =>
+                      closure_0.withoutLogging().get(closure_2, channel_id.channel_id, channel_id.id),
+                    ),
+                  );
                   return obj1;
                 }
               }
@@ -1367,7 +1392,9 @@ function _processChannelChanges() {
               let tmp53 = closure_14;
               let tmp54 = length;
               let _HermesInternal = HermesInternal;
-              let verboseResult = closure_14.verbose("Fetched " + length.length + " modified messages from the database");
+              let verboseResult = closure_14.verbose(
+                "Fetched " + length.length + " modified messages from the database",
+              );
               let tmp56 = callback2;
               let tmp57 = dependencyMap;
               let obj7 = callback2(12);
@@ -1422,7 +1449,7 @@ function _processChannelChanges() {
             let tmp39 = callback2;
             let tmp40 = callback3;
             let tmp41 = new_messages;
-            let items1 = [new_messages, ];
+            let items1 = [new_messages];
             let tmp42 = closure_5;
             items1[1] = closure_5;
             callback2[callback3] = items1;

@@ -25,4 +25,4 @@ export default function getShelfItemData(applicationId) {
     }
   }
   return tmp4;
-};
+}

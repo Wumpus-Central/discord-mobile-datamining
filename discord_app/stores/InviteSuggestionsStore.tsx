@@ -52,7 +52,15 @@ function _computeRows(query) {
     const item = substr.forEach((id) => set1.add(id.id));
   }
   const obj2 = set1(9911);
-  return set1(9911).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_7 });
+  return set1(9911).generateRowsForQuery({
+    query,
+    omitUserIds: set,
+    suggestedUserIds: set,
+    maxRowsWithoutQuery: 100,
+    omitGuildId: id,
+    suggestedChannelIds: set1,
+    inviteTargetType: closure_7,
+  });
 }
 ({ ChannelTypes: map1, Permissions: closure_14 } = ME);
 let set = new Set();
@@ -60,8 +68,7 @@ let closure_17 = [];
 let map = new Map();
 let closure_19 = { numFriends: 0, numDms: 0, numGroupDms: 0, numChannels: 0 };
 const Store = initializeDefault.Store;
-class InviteSuggestionsStore extends Store {
-}
+class InviteSuggestionsStore extends Store {}
 const prototype = InviteSuggestionsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_10, closure_11, closure_8, closure_12, closure_9);
@@ -79,7 +86,13 @@ prototype["getSelectedInviteMetadata"] = function getSelectedInviteMetadata(isSu
   const value = map.get(isSuggested);
   const userAffinities = authStore.getUserAffinities();
   if (null != value) {
-    const obj = { rowNum: null, isAffinitySuggestion: null, numTotal: null, numAffinityConnections: null, isFiltered: null };
+    const obj = {
+      rowNum: null,
+      isAffinitySuggestion: null,
+      numTotal: null,
+      numAffinityConnections: null,
+      isFiltered: null,
+    };
     obj[0] = value.index;
     obj[1] = isSuggested.isSuggested;
     obj[2] = length.length;
@@ -130,7 +143,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(dispatcherDefault, {
     const item = rows.forEach((arg0, index) => {
       const result = map.set(arg0, { index });
     });
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/InviteSuggestionsStore.tsx");
 

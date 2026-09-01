@@ -13,16 +13,32 @@ noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_6, Fonts } = ME);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: { display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }, header: null, row: null };
+createCacheKey = {
+  container: { display: "flex", alignItems: "center", justifyContent: "center", padding: 16 },
+  header: null,
+  row: null,
+};
 createCacheKey = {};
-const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_BOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+const merged = Object.assign(
+  importDefaultResult(Fonts.PRIMARY_BOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
+);
 createCacheKey.textAlign = "center";
 createCacheKey.marginBottom = 24;
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { borderRadius: ThemesDefault.radii.sm, marginBottom: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[2] = {
+  borderRadius: ThemesDefault.radii.sm,
+  marginBottom: 8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: ThemesDefault.radii.sm, marginBottom: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionStudentPrompt.tsx");
+let obj1 = {
+  borderRadius: ThemesDefault.radii.sm,
+  marginBottom: 8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/hub/native/components/HubEmailConnectionStudentPrompt.tsx",
+);
 
 export default function HubEmailConnectionStudentPrompt(onClose) {
   onClose = onClose.onClose;
@@ -36,7 +52,7 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   obj1 = { style: tmp.header, children: null };
   const intl = onClose(1236).intl;
   obj1[1] = intl.string(onClose(1236).t["+/Pv0h"]);
-  const items = [callback(onClose(1297).LegacyText, obj1), , ];
+  const items = [callback(onClose(1297).LegacyText, obj1), ,];
   const obj2 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, subLabel: null, onPress: null };
   const obj3 = { source: invite(12267) };
   obj2[1] = callback(closure_4, obj3);
@@ -65,4 +81,4 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   obj[1] = items;
   obj[0] = callback2(closure_3, obj);
   return callback(onClose(12265).HubEmailConnectionScreen, obj);
-};
+}

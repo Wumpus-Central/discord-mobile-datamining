@@ -5,7 +5,11 @@ import set from "../../../_runtime/00002_set.js";
 const items = [{ field_type: MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.VERIFICATION }];
 const items1 = [MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TERMS];
 let set = new Set(items1);
-const items2 = [MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.MULTIPLE_CHOICE, MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TEXT_INPUT, MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.PARAGRAPH];
+const items2 = [
+  MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.MULTIPLE_CHOICE,
+  MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TEXT_INPUT,
+  MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.PARAGRAPH,
+];
 const obj = { field_type: MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.VERIFICATION };
 const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationConstants.tsx");
 

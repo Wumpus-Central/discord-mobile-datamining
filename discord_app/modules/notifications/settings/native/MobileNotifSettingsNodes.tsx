@@ -13,13 +13,11 @@ let obj = {
   useValue() {
     return true;
   },
-  onValueChange() {
-
-  },
+  onValueChange() {},
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL,
   usePredicate() {
     return false;
-  }
+  },
 };
 const toggle = createToggle.createToggle(obj);
 obj = {
@@ -30,13 +28,11 @@ obj = {
   useValue() {
     return true;
   },
-  onValueChange() {
-
-  },
+  onValueChange() {},
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL,
   usePredicate() {
     return false;
-  }
+  },
 };
 const toggle1 = createToggle.createToggle(obj);
 const toggle2 = createToggle.createToggle({
@@ -47,13 +43,11 @@ const toggle2 = createToggle.createToggle({
   useValue() {
     return true;
   },
-  onValueChange() {
-
-  },
+  onValueChange() {},
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL,
   usePredicate() {
     return false;
-  }
+  },
 });
 const obj1 = {
   useTitle() {
@@ -63,13 +57,11 @@ const obj1 = {
   useValue() {
     return true;
   },
-  onValueChange() {
-
-  },
+  onValueChange() {},
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL,
   usePredicate() {
     return false;
-  }
+  },
 };
 const toggle3 = createToggle.createToggle({
   useTitle() {
@@ -79,13 +71,11 @@ const toggle3 = createToggle.createToggle({
   useValue() {
     return true;
   },
-  onValueChange() {
-
-  },
+  onValueChange() {},
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL,
   usePredicate() {
     return false;
-  }
+  },
 });
 const obj2 = {
   useTitle() {
@@ -95,13 +85,11 @@ const obj2 = {
   useValue() {
     return true;
   },
-  onValueChange() {
-
-  },
+  onValueChange() {},
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL,
   usePredicate() {
     return false;
-  }
+  },
 };
 const toggle4 = createToggle.createToggle({
   useTitle() {
@@ -111,13 +99,11 @@ const toggle4 = createToggle.createToggle({
   useValue() {
     return true;
   },
-  onValueChange() {
-
-  },
+  onValueChange() {},
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL,
   usePredicate() {
     return false;
-  }
+  },
 });
 const obj3 = {
   useTitle() {
@@ -127,13 +113,11 @@ const obj3 = {
   useValue() {
     return true;
   },
-  onValueChange() {
-
-  },
+  onValueChange() {},
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL,
   usePredicate() {
     return false;
-  }
+  },
 };
 const toggle5 = createToggle.createToggle({
   useTitle() {
@@ -143,13 +127,11 @@ const toggle5 = createToggle.createToggle({
   useValue() {
     return true;
   },
-  onValueChange() {
-
-  },
+  onValueChange() {},
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL,
   usePredicate() {
     return false;
-  }
+  },
 });
 const obj4 = {
   useTitle() {
@@ -159,13 +141,11 @@ const obj4 = {
   useValue() {
     return true;
   },
-  onValueChange() {
-
-  },
+  onValueChange() {},
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL,
   usePredicate() {
     return false;
-  }
+  },
 };
 const toggle6 = createToggle.createToggle({
   useTitle() {
@@ -175,13 +155,11 @@ const toggle6 = createToggle.createToggle({
   useValue() {
     return true;
   },
-  onValueChange() {
-
-  },
+  onValueChange() {},
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL,
   usePredicate() {
     return false;
-  }
+  },
 });
 const obj5 = {
   useTitle() {
@@ -191,13 +169,11 @@ const obj5 = {
   useValue() {
     return true;
   },
-  onValueChange() {
-
-  },
+  onValueChange() {},
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL,
   usePredicate() {
     return false;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsNodes.tsx");
 

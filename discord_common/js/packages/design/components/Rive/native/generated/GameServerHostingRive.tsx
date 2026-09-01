@@ -6,21 +6,56 @@ import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
-let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
+let closure_3 = [
+  "fallback",
+  "artboard",
+  "stateMachine",
+  "defaultViewModelInstance",
+  "dataBinding",
+  "onDataBindingChange",
+];
 let c5 = importAllResult;
-let closure_7 = { Game_Server_Hosting_Main: { reducedMotion: "boolean" }, c_chara_5: {}, hytale_gameplay: { reducedMotion: "boolean" }, c_chara_1: {}, c_chara_4: {}, c_chara_2: {}, c_chara_3: {} };
-let closure_8 = { Game_Server_Hosting_Main: ["Instance"], c_chara_5: [], hytale_gameplay: ["Instance"], c_chara_1: [], c_chara_4: [], c_chara_2: [], c_chara_3: [] };
+let closure_7 = {
+  Game_Server_Hosting_Main: { reducedMotion: "boolean" },
+  c_chara_5: {},
+  hytale_gameplay: { reducedMotion: "boolean" },
+  c_chara_1: {},
+  c_chara_4: {},
+  c_chara_2: {},
+  c_chara_3: {},
+};
+let closure_8 = {
+  Game_Server_Hosting_Main: ["Instance"],
+  c_chara_5: [],
+  hytale_gameplay: ["Instance"],
+  c_chara_1: [],
+  c_chara_4: [],
+  c_chara_2: [],
+  c_chara_3: [],
+};
 let closure_9 = {
   Game_Server_Hosting_Main: function GameServerHostingMainBindings(arg0) {
     ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     return null;
   },
   hytale_gameplay: function HytalegameplayBindings(arg0) {
     ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     return null;
-  }
+  },
 };
 let closure_10 = importAllResult.forwardRef(function GameServerHostingRiveInner(defaultViewModelInstance, ref) {
   ({ fallback, artboard } = defaultViewModelInstance);
@@ -49,7 +84,16 @@ let closure_10 = importAllResult.forwardRef(function GameServerHostingRiveInner(
   }, items);
   const tmp = callback(defaultViewModelInstance, closure_3);
   let merged = Object.assign(tmp);
-  return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: dataBinding(onDataBindingChange[4]), artboard: str, artboardProperties: closure_7, artboardViewModelInstances: closure_8, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
+  return jsx(str(onDataBindingChange[3]).BaseRive, {
+    ref,
+    src: dataBinding(onDataBindingChange[4]),
+    artboard: str,
+    artboardProperties: closure_7,
+    artboardViewModelInstances: closure_8,
+    defaultViewModelInstance: str2,
+    stateMachine: defaultViewModelInstance.stateMachine,
+    renderDataBinding: callback,
+  });
 });
 const forwardRefResult = importAllResult.forwardRef(function GameServerHostingRiveWithBoundary(fallback, ref) {
   let obj = { fallback: fallback.fallback, children: null };
@@ -58,6 +102,8 @@ const forwardRefResult = importAllResult.forwardRef(function GameServerHostingRi
   obj[1] = <closure_10 ref={arg1} />;
   return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/GameServerHostingRive.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/design/components/Rive/native/generated/GameServerHostingRive.tsx",
+);
 
 export const GameServerHostingRive = forwardRefResult;

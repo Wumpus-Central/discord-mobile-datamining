@@ -65,7 +65,15 @@ function _computeCategories(arg0) {
         let tmp40 = pushNativeCategory;
         let obj5 = { emojiSections: null, renderingData: null };
         obj5[0] = items;
-        let obj6 = { type: null, label: null, guildId: null, emojiCount: null, emojisDisabled: null, emojisHidden: null, isSectionNitroLocked: null };
+        let obj6 = {
+          type: null,
+          label: null,
+          guildId: null,
+          emojiCount: null,
+          emojisDisabled: null,
+          emojisHidden: null,
+          isSectionNitroLocked: null,
+        };
         let tmp41 = constants3;
         obj6[0] = constants3.NATIVE_SECTION;
         let tmp42 = guild;
@@ -100,7 +108,14 @@ function _computeCategories(arg0) {
           let tmp29 = pushCategory;
           let obj8 = { emojiSections: null, renderingData: null, rowSize: null };
           obj8[0] = items;
-          let obj9 = { type: null, emojis: null, emojisDisabled: null, label: null, footer: null, isSectionNitroLocked: null };
+          let obj9 = {
+            type: null,
+            emojis: null,
+            emojisDisabled: null,
+            label: null,
+            footer: null,
+            isSectionNitroLocked: null,
+          };
           let tmp30 = constants3;
           obj9[0] = constants3.EMOJI;
           let tmp31 = emojis;
@@ -248,13 +263,18 @@ function pushNativeCategory(emojiSections) {
   emojiSections.push(emojiSections.renderingData);
 }
 ({ EmojiCategories: c5, EmojiCategoryTypes: closure_6 } = EmojiCategoryTypes);
-const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx",
+);
 
 export default function useComputeEmojiPickerFunctions() {
-  return callback(React.useState(() => {
-    const obj = { computeCategories: callback(1991).cachedFunction(closure_8), computeSearchResults: null };
-    const obj2 = callback(1991);
-    obj[1] = callback(1991).cachedFunction(closure_9);
-    return obj;
-  }), 1)[0];
-};
+  return callback(
+    React.useState(() => {
+      const obj = { computeCategories: callback(1991).cachedFunction(closure_8), computeSearchResults: null };
+      const obj2 = callback(1991);
+      obj[1] = callback(1991).cachedFunction(closure_9);
+      return obj;
+    }),
+    1,
+  )[0];
+}

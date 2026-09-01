@@ -15,11 +15,14 @@ export default function computeGlobalSpoilerDisplay(arg0, arg1) {
     const ON_CLICK = tmp.ON_CLICK;
     return false;
   }
-};
+}
 export const useShouldDisplaySpoilerObscurity = function useShouldDisplaySpoilerObscurity(channel) {
   const _require = channel;
   const items = [closure_2];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_2.can(closure_1_3.MANAGE_MESSAGES, closure_0));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
+    items,
+    () => closure_1_2.can(closure_1_3.MANAGE_MESSAGES, closure_0),
+  );
   const RenderSpoilers = require("../user_settings/UserSettings.tsx").RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   let flag = true;

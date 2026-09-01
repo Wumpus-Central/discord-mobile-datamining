@@ -27,4 +27,4 @@ export default function useOutboundPromotionRedemptionEndDate(arg0, arg1) {
       return tmp3(callback(tmp[1])(lib.endDate), "LL");
     }
   }, items);
-};
+}

@@ -17,13 +17,13 @@ obj = {
   },
   parent: null,
   IconComponent: QuestsIcon.QuestsIcon,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.QUEST_PREVIEW_TOOL_2,
   getComponent() {
     return SettingsQuestPreviewScreen /* SettingsQuestPreviewScreen */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/QuestPreviewToolSetting.tsx");

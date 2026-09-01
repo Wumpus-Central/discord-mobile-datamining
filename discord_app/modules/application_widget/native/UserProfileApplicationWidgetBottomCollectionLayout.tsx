@@ -35,7 +35,7 @@ function CollectionItem(arg0) {
     tmp11 = callback(tmp3(12757).ImageSkeleton, obj2);
     tmp12 = callback;
   }
-  const items1 = [tmp11, ];
+  const items1 = [tmp11];
   const obj3 = { style: tmp.itemContent, children: null };
   if ("value" === singleStringOrSkeleton.status) {
     const obj4 = { variant: "text-xs/medium", lineClamp: 2, children: null };
@@ -44,7 +44,7 @@ function CollectionItem(arg0) {
   } else {
     tmp12Result = tmp12(tmp3(12757).TextSkeleton, { variant: "text-xs/medium", widthChars: 6 });
   }
-  const items2 = [tmp12Result, ];
+  const items2 = [tmp12Result];
   if ("value" === singleStringOrSkeleton1.status) {
     const obj5 = { variant: "text-xxs/medium", color: "text-subtle", lineClamp: 2, children: null };
     obj5[3] = singleStringOrSkeleton1.text;
@@ -62,26 +62,45 @@ noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { grid: null, item: null, itemImage: null, itemContent: null };
-createCacheKey = { flexDirection: "row", flexWrap: "wrap", rowGap: ThemesDefault.space.PX_16, columnGap: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  flexDirection: "row",
+  flexWrap: "wrap",
+  rowGap: ThemesDefault.space.PX_16,
+  columnGap: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: "47%", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 obj1 = { width: "47%", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
-createCacheKey[2] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-let obj2 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+createCacheKey[2] = {
+  width: 48,
+  height: 48,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+};
+let obj2 = {
+  width: 48,
+  height: 48,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+};
 createCacheKey[3] = { flex: 1, gap: ThemesDefault.space.PX_4, minWidth: 0 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { flex: 1, gap: ThemesDefault.space.PX_4, minWidth: 0 };
-const result = require("set").fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetBottomCollectionLayout.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/application_widget/native/UserProfileApplicationWidgetBottomCollectionLayout.tsx",
+);
 
 export default function UserProfileApplicationWidgetBottomCollectionLayout(arg0) {
   ({ bottomConfig, resolveFieldValue } = arg0);
   let obj = { style: callback3().grid, children: null };
   obj = { componentConfig: bottomConfig.components.item_1, resolveFieldValue };
-  const items = [callback(CollectionItem, obj), , , ];
+  const items = [callback(CollectionItem, obj), , ,];
   obj = { componentConfig: bottomConfig.components.item_2, resolveFieldValue };
   items[1] = callback(CollectionItem, obj);
   items[2] = callback(CollectionItem, { componentConfig: bottomConfig.components.item_3, resolveFieldValue });
   items[3] = callback(CollectionItem, { componentConfig: bottomConfig.components.item_4, resolveFieldValue });
   obj[1] = items;
   return callback2(closure_3, obj);
-};
+}

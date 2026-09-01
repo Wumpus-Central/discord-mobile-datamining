@@ -19,9 +19,15 @@ function inBoundingBox(arg0, left) {
 }
 inBoundingBox.__closure = {};
 inBoundingBox.__workletHash = 14606221606756;
-inBoundingBox.__initData = { code: "function inBoundingBox_useSearchSuggestionsGestureTsx1(e,coordinates,safeAreaTop){const touch=e.allTouches[0];if(touch==null)return false;return coordinates.left<touch.absoluteX&&touch.absoluteX<coordinates.right&&coordinates.top<touch.absoluteY+safeAreaTop&&touch.absoluteY+safeAreaTop<coordinates.bottom;}" };
-let closure_5 = { code: "function useSearchSuggestionsGestureTsx2(e,manager){const{coordinates,inBoundingBox,safeAreaTop,dismissed}=this.__closure;manager.fail();const _coordinates=coordinates.get();if(_coordinates==null||inBoundingBox(e,_coordinates,safeAreaTop))return;dismissed.set(true);}" };
-let result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/useSearchSuggestionsGesture.tsx");
+inBoundingBox.__initData = {
+  code: "function inBoundingBox_useSearchSuggestionsGestureTsx1(e,coordinates,safeAreaTop){const touch=e.allTouches[0];if(touch==null)return false;return coordinates.left<touch.absoluteX&&touch.absoluteX<coordinates.right&&coordinates.top<touch.absoluteY+safeAreaTop&&touch.absoluteY+safeAreaTop<coordinates.bottom;}",
+};
+let closure_5 = {
+  code: "function useSearchSuggestionsGestureTsx2(e,manager){const{coordinates,inBoundingBox,safeAreaTop,dismissed}=this.__closure;manager.fail();const _coordinates=coordinates.get();if(_coordinates==null||inBoundingBox(e,_coordinates,safeAreaTop))return;dismissed.set(true);}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/search/native/components/layout/autocomplete/useSearchSuggestionsGesture.tsx",
+);
 
 export const useSearchSuggestionsGesture = function useSearchSuggestionsGesture(channelDetailsSearchContext) {
   const _require = channelDetailsSearchContext;
@@ -35,7 +41,10 @@ export const useSearchSuggestionsGesture = function useSearchSuggestionsGesture(
     }
   }, items);
   const items1 = [sharedValue, channelDetailsSearchContext, callback];
-  const effect = callback.useEffect(() => sharedValue(sharedValue1[2]).subscribeTextInputValue(closure_0, callback), items1);
+  const effect = callback.useEffect(
+    () => sharedValue(sharedValue1[2]).subscribeTextInputValue(closure_0, callback),
+    items1,
+  );
   const obj2 = _require(sharedValue1[1]);
   let num = 0;
   if (obj4.isAndroid()) {
@@ -56,8 +65,16 @@ export const useSearchSuggestionsGesture = function useSearchSuggestionsGesture(
         const first = arg0.allTouches[0];
         let tmp7 = null != first;
         if (tmp7) {
-          tmp7 = rect.left < first.absoluteX && first.absoluteX < rect.right && rect.top < first.absoluteY + tmp4 && first.absoluteY + tmp4 < rect.bottom;
-          const tmp8 = rect.left < first.absoluteX && first.absoluteX < rect.right && rect.top < first.absoluteY + tmp4 && first.absoluteY + tmp4 < rect.bottom;
+          tmp7 =
+            rect.left < first.absoluteX &&
+            first.absoluteX < rect.right &&
+            rect.top < first.absoluteY + tmp4 &&
+            first.absoluteY + tmp4 < rect.bottom;
+          const tmp8 =
+            rect.left < first.absoluteX &&
+            first.absoluteX < rect.right &&
+            rect.top < first.absoluteY + tmp4 &&
+            first.absoluteY + tmp4 < rect.bottom;
         }
         tmp2 = tmp7;
       }
@@ -79,5 +96,8 @@ export const useSearchSuggestionsGesture = function useSearchSuggestionsGesture(
     const result = sharedValue.set(true);
   }, items4);
   const items5 = [sharedValue, callback2, memo, callback1];
-  return callback.useMemo(() => ({ gesture: memo, dismissed: sharedValue, onLayoutMeasure: callback1, setDismissed: callback2 }), items5);
+  return callback.useMemo(
+    () => ({ gesture: memo, dismissed: sharedValue, onLayoutMeasure: callback1, setDismissed: callback2 }),
+    items5,
+  );
 };

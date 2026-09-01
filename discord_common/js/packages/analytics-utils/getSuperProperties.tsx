@@ -70,8 +70,7 @@ function getDeviceProperties() {
     obj.device_vendor_id = DeviceVendorID;
     obj.design_id = tmp2(673).DesignIds.DESIGN_TABS_IA;
     return obj;
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 const getSystemLocale = getSystemLocale2.getSystemLocale;
 const deviceProperties = "deviceProperties";
@@ -91,7 +90,18 @@ if (null != DiscordNative) {
       str3 = "linux" === platform ? "Linux" : platform;
     }
   }
-  let obj = { os: null, browser: "Discord Client", release_channel: null, client_version: null, os_version: null, os_arch: null, app_arch: null, system_locale: null, has_client_mods: null, client_launch_id: null };
+  let obj = {
+    os: null,
+    browser: "Discord Client",
+    release_channel: null,
+    client_version: null,
+    os_version: null,
+    os_arch: null,
+    app_arch: null,
+    system_locale: null,
+    has_client_mods: null,
+    client_launch_id: null,
+  };
   obj[0] = str3;
   if (!str4) {
     str4 = "unknown";
@@ -207,26 +217,28 @@ function extendSuperProperties(arg0) {
   const merged1 = Object.assign(arg0);
   closure_4 = encodeProperties.encodeProperties(obj);
 }
-let result = extendSuperProperties((function getContextualSuperProperties() {
-  const obj = { client_build_number: parseInt("6327", 10) };
-  let buildNumber;
-  if (DiscordNative != null) {
-    const app = DiscordNative.app;
-    buildNumber = app.getBuildNumber();
-  }
-  let isNaNResult = null == buildNumber;
-  if (!isNaNResult) {
-    const _isNaN = isNaN;
-    isNaNResult = isNaN(buildNumber);
-  }
-  if (!isNaNResult) {
-    obj.native_build_number = buildNumber;
-  }
-  obj.client_event_source = null;
-  obj.has_client_mods = usesClientMods.usesClientMods();
-  obj.client_launch_id = clientLaunchId.clientLaunchId;
-  return obj;
-})());
+let result = extendSuperProperties(
+  (function getContextualSuperProperties() {
+    const obj = { client_build_number: parseInt("6327", 10) };
+    let buildNumber;
+    if (DiscordNative != null) {
+      const app = DiscordNative.app;
+      buildNumber = app.getBuildNumber();
+    }
+    let isNaNResult = null == buildNumber;
+    if (!isNaNResult) {
+      const _isNaN = isNaN;
+      isNaNResult = isNaN(buildNumber);
+    }
+    if (!isNaNResult) {
+      obj.native_build_number = buildNumber;
+    }
+    obj.client_event_source = null;
+    obj.has_client_mods = usesClientMods.usesClientMods();
+    obj.client_launch_id = clientLaunchId.clientLaunchId;
+    return obj;
+  })(),
+);
 let result1 = set.fileFinishedImporting("../discord_common/js/packages/analytics-utils/getSuperProperties.tsx");
 
 export { getOS };

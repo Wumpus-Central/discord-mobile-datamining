@@ -150,7 +150,10 @@ export const isChannelFocused = function isChannelFocused() {
   return null != getFocusedChannelId();
 };
 export const useIsChannelFocused = function useIsChannelFocused() {
-  const tmp = callback(React.useState(() => null != callback2()), 2);
+  const tmp = callback(
+    React.useState(() => null != callback2()),
+    2,
+  );
   closure_0 = tmp[1];
   const items = [useChatLayoutDefault()];
   const effect = React.useEffect(() => {
@@ -182,7 +185,9 @@ export const isChannelFocusedForReadStateAck = function isChannelFocusedForReadS
       return true;
     } else {
       if (null != arg1) {
-        lastFocusedTimestampForHistoryItem = lastFocusedTimestampForHistoryItem.getLastFocusedTimestampForHistoryItem(CHANNEL_PREFIX + channelId);
+        lastFocusedTimestampForHistoryItem = lastFocusedTimestampForHistoryItem.getLastFocusedTimestampForHistoryItem(
+          CHANNEL_PREFIX + channelId,
+        );
         if (null != lastFocusedTimestampForHistoryItem) {
           if (lastFocusedTimestampForHistoryItem >= arg1) {
             return true;

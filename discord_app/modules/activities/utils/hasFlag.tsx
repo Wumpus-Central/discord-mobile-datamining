@@ -21,4 +21,4 @@ export default function hasFlag(flags) {
     tmp = hasFlagResult;
   }
   return tmp;
-};
+}

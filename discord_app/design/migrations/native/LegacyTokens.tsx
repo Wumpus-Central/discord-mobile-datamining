@@ -97,7 +97,9 @@ const result15 = createCacheKey.experimental_createToken((theme) => {
 const result16 = createCacheKey.experimental_createToken((theme) => {
   const obj = AccessibilityAnnouncer;
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
-  return AccessibilityAnnouncer.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.GUILD_BOOSTING_PINK;
+  return AccessibilityAnnouncer.isThemeDark(theme.theme)
+    ? unsafe_rawColors.WHITE
+    : unsafe_rawColors.GUILD_BOOSTING_PINK;
 });
 const result17 = createCacheKey.experimental_createToken((theme) => {
   const obj = AccessibilityAnnouncer;
@@ -151,7 +153,9 @@ const result25 = createCacheKey.experimental_createToken((theme) => {
 const result26 = createCacheKey.experimental_createToken((theme) => {
   const obj = AccessibilityAnnouncer;
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
-  return AccessibilityAnnouncer.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PLATFORM_PLAYSTATION;
+  return AccessibilityAnnouncer.isThemeDark(theme.theme)
+    ? unsafe_rawColors.WHITE
+    : unsafe_rawColors.PLATFORM_PLAYSTATION;
 });
 const result27 = createCacheKey.experimental_createToken((theme) => {
   if (obj.isThemeDark(theme.theme)) {

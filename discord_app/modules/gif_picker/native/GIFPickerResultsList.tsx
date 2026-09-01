@@ -11,9 +11,7 @@ createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 const obj1 = { length: 20 };
 let arr = Array.from(obj1);
-let closure_7 = arr.map(() => {
-
-});
+let closure_7 = arr.map(() => {});
 arr = Array.from(obj1);
 let closure_8 = arr.map(() => ({ width: 100, height: Math.floor(91 * Math.random()) + 90 }));
 const result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerResultsList.tsx");
@@ -43,7 +41,10 @@ export default function GIFPickerResultsList(columnWidth) {
     return src;
   }, []);
   const tmp = callback();
-  [tmp6, c0] = callback(React.useState(() => new Set()), 2);
+  [tmp6, c0] = callback(
+    React.useState(() => new Set()),
+    2,
+  );
   React = tmp6;
   const items1 = [tmp6, selectedGifSrc];
   const callback2 = React.useCallback((changed) => {
@@ -100,8 +101,29 @@ export default function GIFPickerResultsList(columnWidth) {
     MasonryFlashList = tmp11.MasonryFlashList;
     tmp12 = tmp10;
   }
-  const tmp5 = callback(React.useState(() => new Set()), 2);
-  let obj = { contentContainerStyle: { paddingBottom: onPressGIF(selectedGifSrc[5])({ hasCategories: false }).safeAreaBottomKeyboardAware }, data: resultItems, drawDistance: null, extraData: null, keyExtractor: null, keyboardDismissMode: null, keyboardShouldPersistTaps: "always", maintainVisibleContentPosition: null, numColumns: null, ListFooterComponent: null, optimizeItemArrangement: true, onViewableItemsChanged: null, preventNativeModalDismiss: null, renderItem: null, style: null };
+  const tmp5 = callback(
+    React.useState(() => new Set()),
+    2,
+  );
+  let obj = {
+    contentContainerStyle: {
+      paddingBottom: onPressGIF(selectedGifSrc[5])({ hasCategories: false }).safeAreaBottomKeyboardAware,
+    },
+    data: resultItems,
+    drawDistance: null,
+    extraData: null,
+    keyExtractor: null,
+    keyboardDismissMode: null,
+    keyboardShouldPersistTaps: "always",
+    maintainVisibleContentPosition: null,
+    numColumns: null,
+    ListFooterComponent: null,
+    optimizeItemArrangement: true,
+    onViewableItemsChanged: null,
+    preventNativeModalDismiss: null,
+    renderItem: null,
+    style: null,
+  };
   const isPortalKeyboardInModal = tmp12(selectedGifSrc[8]).useIsPortalKeyboardInModal();
   obj[2] = tmp12(selectedGifSrc[4]).GIF_PICKER_ITEM_ESIMTATED_HEIGHT;
   obj[3] = memo;
@@ -117,5 +139,25 @@ export default function GIFPickerResultsList(columnWidth) {
   obj[12] = inActionSheet;
   obj[13] = callback3;
   obj[14] = tmp.list;
-  return <MasonryFlashList contentContainerStyle={{ paddingBottom: onPressGIF(selectedGifSrc[5])({ hasCategories: false }).safeAreaBottomKeyboardAware }} data={resultItems} drawDistance={null} extraData={null} keyExtractor={null} keyboardDismissMode={null} keyboardShouldPersistTaps="always" maintainVisibleContentPosition={null} numColumns={null} ListFooterComponent={null} optimizeItemArrangement onViewableItemsChanged={null} preventNativeModalDismiss={null} renderItem={null} style={null} />;
-};
+  return (
+    <MasonryFlashList
+      contentContainerStyle={{
+        paddingBottom: onPressGIF(selectedGifSrc[5])({ hasCategories: false }).safeAreaBottomKeyboardAware,
+      }}
+      data={resultItems}
+      drawDistance={null}
+      extraData={null}
+      keyExtractor={null}
+      keyboardDismissMode={null}
+      keyboardShouldPersistTaps="always"
+      maintainVisibleContentPosition={null}
+      numColumns={null}
+      ListFooterComponent={null}
+      optimizeItemArrangement
+      onViewableItemsChanged={null}
+      preventNativeModalDismiss={null}
+      renderItem={null}
+      style={null}
+    />
+  );
+}

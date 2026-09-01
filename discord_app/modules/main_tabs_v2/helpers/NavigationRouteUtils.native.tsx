@@ -149,7 +149,8 @@ function popModal(c3, onExited) {
             items[index] = obj;
             let tmp37 = _require;
             let tmp38 = dependencyMap;
-            let CommonActions2 = require("../../../../_runtime/01500_createStandardNavigationFactories.js").CommonActions;
+            let CommonActions2 =
+              require("../../../../_runtime/01500_createStandardNavigationFactories.js").CommonActions;
             let obj3 = {};
             let tmp39 = obj3;
             let tmp40 = rootState;
@@ -334,7 +335,10 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
                   obj1[2] = obj;
                   const items = [obj1];
                   const items1 = [];
-                  HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(tmpResult.wrapRouteForRootNavigator(items), 0));
+                  HermesBuiltin.arraySpread(
+                    found,
+                    HermesBuiltin.arraySpread(tmpResult.wrapRouteForRootNavigator(items), 0),
+                  );
                   let CommonActions = tmp(1500).CommonActions;
                   const obj2 = {};
                   const merged = Object.assign(rootState);
@@ -733,7 +737,10 @@ export const coerceModalRoute = function coerceModalRoute(name) {
 export { isModalOpen };
 export const useIsModalOpen = function useIsModalOpen(SHARE_PREPARING_MODAL_KEY) {
   closure_0 = SHARE_PREPARING_MODAL_KEY;
-  const tmp = callback(callback3(() => closure_1_11(closure_0)), 2);
+  const tmp = callback(
+    callback3(() => closure_1_11(closure_0)),
+    2,
+  );
   closure_1 = tmp[1];
   const items = [SHARE_PREPARING_MODAL_KEY];
   callback2(() => {
@@ -775,35 +782,38 @@ export const getOpenModalKey = function getOpenModalKey() {
   }
 };
 export const useOpenModalKey = function useOpenModalKey() {
-  let tmp = callback(callback3(() => {
-    const rootNavigationRef = callback(table[2]).getRootNavigationRef();
-    let tmp;
-    if (null != rootNavigationRef) {
-      if (rootNavigationRef.isReady()) {
-        const rootState = rootNavigationRef.getRootState();
-        if (null != rootState) {
-          let tmp4;
-          if (null != rootState.routes[rootState.index]) {
-            if ("modal" === tmp3.name) {
-              tmp4 = tmp3;
-            }
-          }
-          let key;
-          if (tmp4 != null) {
-            const params = tmp4.params;
-            if (params != null) {
-              const modal = params.modal;
-              if (modal != null) {
-                key = modal.key;
+  let tmp = callback(
+    callback3(() => {
+      const rootNavigationRef = callback(table[2]).getRootNavigationRef();
+      let tmp;
+      if (null != rootNavigationRef) {
+        if (rootNavigationRef.isReady()) {
+          const rootState = rootNavigationRef.getRootState();
+          if (null != rootState) {
+            let tmp4;
+            if (null != rootState.routes[rootState.index]) {
+              if ("modal" === tmp3.name) {
+                tmp4 = tmp3;
               }
             }
+            let key;
+            if (tmp4 != null) {
+              const params = tmp4.params;
+              if (params != null) {
+                const modal = params.modal;
+                if (modal != null) {
+                  key = modal.key;
+                }
+              }
+            }
+            tmp = key;
           }
-          tmp = key;
         }
       }
-    }
-    return tmp;
-  }), 2);
+      return tmp;
+    }),
+    2,
+  );
   closure_0 = tmp[1];
   callback2(() => {
     let rootNavigationRef = callback(closure_1_2[2]).getRootNavigationRef();
@@ -856,21 +866,24 @@ export const getCurrentNavigationRouteName = function getCurrentNavigationRouteN
   }
 };
 export const useCurrentNavigationRouteName = function useCurrentNavigationRouteName() {
-  let tmp = callback(callback3(() => {
-    const rootNavigationRef = callback(table[2]).getRootNavigationRef();
-    let tmp;
-    if (null != rootNavigationRef) {
-      if (rootNavigationRef.isReady()) {
-        const currentRoute = rootNavigationRef.getCurrentRoute();
-        let name;
-        if (currentRoute != null) {
-          name = currentRoute.name;
+  let tmp = callback(
+    callback3(() => {
+      const rootNavigationRef = callback(table[2]).getRootNavigationRef();
+      let tmp;
+      if (null != rootNavigationRef) {
+        if (rootNavigationRef.isReady()) {
+          const currentRoute = rootNavigationRef.getCurrentRoute();
+          let name;
+          if (currentRoute != null) {
+            name = currentRoute.name;
+          }
+          tmp = name;
         }
-        tmp = name;
       }
-    }
-    return tmp;
-  }), 2);
+      return tmp;
+    }),
+    2,
+  );
   closure_0 = tmp[1];
   callback2(() => {
     let rootNavigationRef = callback(closure_1_2[2]).getRootNavigationRef();

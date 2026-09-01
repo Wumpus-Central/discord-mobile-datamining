@@ -7,8 +7,7 @@ import set from "../../../discord_common/js/packages/libdave/index.tsx";
 require = arg1;
 let closure_3 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class VerifiedKeyStore extends PersistedStore {
-}
+class VerifiedKeyStore extends PersistedStore {}
 const prototype = VerifiedKeyStore.prototype;
 prototype["initialize"] = function initialize(users) {
   users = undefined;
@@ -76,7 +75,7 @@ const verifiedKeyStore = new VerifiedKeyStore(dispatcherDefault, {
       delete tmp[tmp2];
     }
     return null != dependencyMap[arg0.userId];
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/rtc/VerifiedKeyStore.tsx");
 

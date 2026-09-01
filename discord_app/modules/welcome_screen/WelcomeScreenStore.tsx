@@ -29,8 +29,7 @@ let c3 = false;
 let c4 = false;
 let c5 = false;
 const Store = initializeDefault.Store;
-class WelcomeScreenStore extends Store {
-}
+class WelcomeScreenStore extends Store {}
 const prototype = WelcomeScreenStore.prototype;
 prototype["get"] = function get(arg0) {
   if (null != arg0) {
@@ -101,7 +100,7 @@ obj = {
   WELCOME_SCREEN_FETCH_FAIL: function handleFetchWelcomeScreenFail() {
     c4 = false;
     c5 = true;
-  }
+  },
 };
 const welcomeScreenStore = new WelcomeScreenStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/welcome_screen/WelcomeScreenStore.tsx");

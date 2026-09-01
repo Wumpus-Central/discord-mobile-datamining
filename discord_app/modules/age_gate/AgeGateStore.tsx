@@ -7,8 +7,7 @@ import result2 from "AgeGateConstants.tsx";
 const AGE_GATE_REGISTER_TIMEOUT_MS = result2.AGE_GATE_REGISTER_TIMEOUT_MS;
 let c0 = false;
 const Store = initializeDefault.Store;
-class AgeGateStore extends Store {
-}
+class AgeGateStore extends Store {}
 AgeGateStore.prototype["isUnderageAnonymous"] = function isUnderageAnonymous() {
   return c0;
 };
@@ -20,7 +19,7 @@ const ageGateStore = new AgeGateStore(dispatcherDefault, {
   },
   LOGIN_SUCCESS: function handleLogin() {
     c0 = false;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/age_gate/AgeGateStore.tsx");
 

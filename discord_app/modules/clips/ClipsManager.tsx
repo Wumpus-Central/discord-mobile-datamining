@@ -23,7 +23,12 @@ import ME from "../../Constants.tsx";
 import { StreamTypes } from "../go_live/Constants.tsx";
 
 require = arg1;
-({ WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: unpackModuleId, WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_12, CLIPS_HARDWARE_CLASSIFICATION_VERSION: map1, ClipsHardwareClassification: closure_14 } = result);
+({
+  WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: unpackModuleId,
+  WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_12,
+  CLIPS_HARDWARE_CLASSIFICATION_VERSION: map1,
+  ClipsHardwareClassification: closure_14,
+} = result);
 ({ AnalyticEvents: closure_15, RTCConnectionStates: closure_16 } = ME);
 initializeDefault;
 class ClipsManager extends tmp4 {
@@ -32,47 +37,47 @@ class ClipsManager extends tmp4 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       POST_CONNECTION_OPEN() {
-            return applyArgumentsResult.handlePostConnectionOpen();
-          },
+        return applyArgumentsResult.handlePostConnectionOpen();
+      },
       RTC_CONNECTION_FLAGS(arg0) {
-            return applyArgumentsResult.handleRTCConnectionFlags(arg0);
-          },
+        return applyArgumentsResult.handleRTCConnectionFlags(arg0);
+      },
       RTC_CONNECTION_USERS_MERGED(userIds) {
-            return applyArgumentsResult.handleRTCUsersUpdate(userIds);
-          },
+        return applyArgumentsResult.handleRTCUsersUpdate(userIds);
+      },
       CLIPS_INIT_FAILURE(arg0) {
-            return applyArgumentsResult.handleClipsInitFailure(arg0);
-          },
+        return applyArgumentsResult.handleClipsInitFailure(arg0);
+      },
       CLIPS_SETTINGS_UPDATE(arg0) {
-            return applyArgumentsResult.applyNativeClipsSettings(arg0);
-          },
+        return applyArgumentsResult.applyNativeClipsSettings(arg0);
+      },
       CLIPS_ALLOW_VOICE_RECORDING_UPDATE() {
-            return applyArgumentsResult.handleClipsAllowVoiceRecordingUpdate();
-          },
+        return applyArgumentsResult.handleClipsAllowVoiceRecordingUpdate();
+      },
       STREAM_START() {
-            return applyArgumentsResult.applyNativeClipsSettings();
-          },
+        return applyArgumentsResult.applyNativeClipsSettings();
+      },
       STREAM_DELETE(arg0) {
-            return applyArgumentsResult.handleStreamEnded(arg0);
-          },
+        return applyArgumentsResult.handleStreamEnded(arg0);
+      },
       STREAM_CLOSE(arg0) {
-            return applyArgumentsResult.handleStreamEnded(arg0);
-          },
+        return applyArgumentsResult.handleStreamEnded(arg0);
+      },
       RUNNING_GAME_TOGGLE_DETECTION(arg0) {
-            return applyArgumentsResult.handleClipsInitOnToggleDetection(arg0);
-          },
+        return applyArgumentsResult.handleClipsInitOnToggleDetection(arg0);
+      },
       RUNNING_GAMES_CHANGE(arg0) {
-            return applyArgumentsResult.handleClipsInitOnGamesChange(arg0);
-          },
+        return applyArgumentsResult.handleClipsInitOnGamesChange(arg0);
+      },
       CLIPS_RESTART() {
-            return applyArgumentsResult.fireClipsInitEvent(true);
-          },
+        return applyArgumentsResult.fireClipsInitEvent(true);
+      },
       RTC_CONNECTION_VIDEO(arg0) {
-            return applyArgumentsResult.handleRTCConnectionVideo(arg0);
-          },
+        return applyArgumentsResult.handleRTCConnectionVideo(arg0);
+      },
       RTC_CONNECTION_STATE(arg0) {
-            return applyArgumentsResult.handleRTCConnectionState(arg0);
-          }
+        return applyArgumentsResult.handleRTCConnectionState(arg0);
+      },
     };
     return applyArgumentsResult;
   }
@@ -122,7 +127,9 @@ prototype["handleRTCConnectionFlags"] = function handleRTCConnectionFlags(arg0) 
   } else {
     CALL = StreamTypes.CALL;
   }
-  const rTCConnection = store2.getRTCConnection(isStreamKeyAll.encodeStreamKey({ streamType: CALL, ownerId: userId, channelId, guildId }));
+  const rTCConnection = store2.getRTCConnection(
+    isStreamKeyAll.encodeStreamKey({ streamType: CALL, ownerId: userId, channelId, guildId }),
+  );
   if (null != rTCConnection) {
     self.applyStreamRecording(userId, rTCConnection);
   }
@@ -130,7 +137,11 @@ prototype["handleRTCConnectionFlags"] = function handleRTCConnectionFlags(arg0) 
 prototype["handleClipsInitFailure"] = function handleClipsInitFailure(arg0) {
   ({ applicationName, errMsg } = arg0);
   let obj = expandEventPropertiesDefault;
-  obj = { application_name: applicationName, error_message: errMsg, clip_runtime: apexExperiment2.getClipsRuntime("handleClipsInitFailure") };
+  obj = {
+    application_name: applicationName,
+    error_message: errMsg,
+    clip_runtime: apexExperiment2.getClipsRuntime("handleClipsInitFailure"),
+  };
   obj.track(constants2.CLIPS_INIT_FAILURE, obj);
 };
 prototype["maybeShowClipsWarning"] = function maybeShowClipsWarning(userId) {
@@ -184,9 +195,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
     obj = apexExperiment;
   }
 };
-prototype["loadClipsFromStorage"] = function loadClipsFromStorage() {
-
-};
+prototype["loadClipsFromStorage"] = function loadClipsFromStorage() {};
 prototype["handleRTCConnectionVideo"] = function handleRTCConnectionVideo(arg0) {
   ({ userId, guildId } = arg0);
   ({ context, channelId } = arg0);
@@ -213,7 +222,7 @@ prototype["handleRTCConnectionVideo"] = function handleRTCConnectionVideo(arg0) 
 };
 prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -249,7 +258,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
             v0 = 2;
             c5 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = v0(function*() {
+            obj1[0] = v0(function* () {
               closure_0 = tmp2;
               closure_0 = yield callback();
               if (closure_0 != null) {

@@ -26,10 +26,10 @@ export default function FamilyCenterActivityPage() {
   obj = { style: tmp.scrollView, children: null };
   const activeLinkUserIds = obj.useActiveLinkUserIds();
   obj = { style: tmp.container, children: null };
-  const items = [callback(FamilyCenterParentalConsentNoticeDefault, {}), ];
+  const items = [callback(FamilyCenterParentalConsentNoticeDefault, {})];
   if (0 === activeLinkUserIds.length) {
     obj1 = { children: null };
-    const items1 = [tmp3(tmp7(14481), {}), tmp3(tmp7(14491), {}), ];
+    const items1 = [tmp3(tmp7(14481), {}), tmp3(tmp7(14491), {})];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.dataConfirmation;
     obj2[1] = tmp3(tmp7(11491), {});
@@ -43,4 +43,4 @@ export default function FamilyCenterActivityPage() {
   obj[1] = items;
   obj[1] = callback(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, children: closure_7(closure_3, obj) });
   return callback(closure_4, obj);
-};
+}

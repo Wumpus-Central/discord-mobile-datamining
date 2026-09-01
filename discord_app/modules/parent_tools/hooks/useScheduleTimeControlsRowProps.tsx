@@ -35,4 +35,4 @@ export default function useScheduleTimeControlsRowProps(arr) {
     obj1[1] = jsx(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: null });
     return obj1;
   }
-};
+}

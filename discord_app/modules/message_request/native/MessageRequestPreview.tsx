@@ -32,19 +32,23 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
   ({ loaded, error } = messageRequestPreview);
   const items = [closure_5];
   const items1 = [message];
-  const stateFromStoresObject = channel(589).useStateFromStoresObject(items, () => {
-    let isBlockedForMessageResult = null != message;
-    if (isBlockedForMessageResult) {
-      isBlockedForMessageResult = closure_1_5.isBlockedForMessage(tmp);
-    }
-    const obj = { isBlocked: isBlockedForMessageResult, isIgnored: null };
-    let isIgnoredForMessageResult = null != tmp;
-    if (isIgnoredForMessageResult) {
-      isIgnoredForMessageResult = closure_1_5.isIgnoredForMessage(tmp);
-    }
-    obj[1] = isIgnoredForMessageResult;
-    return obj;
-  }, items1);
+  const stateFromStoresObject = channel(589).useStateFromStoresObject(
+    items,
+    () => {
+      let isBlockedForMessageResult = null != message;
+      if (isBlockedForMessageResult) {
+        isBlockedForMessageResult = closure_1_5.isBlockedForMessage(tmp);
+      }
+      const obj = { isBlocked: isBlockedForMessageResult, isIgnored: null };
+      let isIgnoredForMessageResult = null != tmp;
+      if (isIgnoredForMessageResult) {
+        isIgnoredForMessageResult = closure_1_5.isIgnoredForMessage(tmp);
+      }
+      obj[1] = isIgnoredForMessageResult;
+      return obj;
+    },
+    items1,
+  );
   const items2 = [channel, message];
   ({ isBlocked, isIgnored } = stateFromStoresObject);
   const effect = importAllResult.useEffect(() => {
@@ -129,8 +133,20 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
       }
     }
   }
-  obj = { style: channel.style, children: jsx(tmp2(1297).LegacyText, { style: tmp14, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
-  return <View style={arg0.style}>{jsx(tmp2(1297).LegacyText, { style: tmp14, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
+  obj = {
+    style: channel.style,
+    children: jsx(tmp2(1297).LegacyText, {
+      style: tmp14,
+      numberOfLines: 3,
+      ellipsizeMode: "tail",
+      children: stringResult,
+    }),
+  };
+  return (
+    <View style={arg0.style}>
+      {jsx(tmp2(1297).LegacyText, { style: tmp14, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}
+    </View>
+  );
 });
 const result = require("set").fileFinishedImporting("modules/message_request/native/MessageRequestPreview.tsx");
 

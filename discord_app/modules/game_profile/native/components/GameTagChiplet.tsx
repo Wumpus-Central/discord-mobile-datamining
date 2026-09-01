@@ -8,7 +8,11 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
-let closure_5 = createCacheKey.createStyles({ container: { flexShrink: 1, minWidth: 0, overflow: "hidden" }, text: { flexShrink: 1, minWidth: 0 }, image: { width: 12, height: 12 } });
+let closure_5 = createCacheKey.createStyles({
+  container: { flexShrink: 1, minWidth: 0, overflow: "hidden" },
+  text: { flexShrink: 1, minWidth: 0 },
+  image: { width: 12, height: 12 },
+});
 const memoResult = importAllResult.memo((game) => {
   game = game.game;
   ({ userId, textColor } = game);
@@ -16,7 +20,14 @@ const memoResult = importAllResult.memo((game) => {
   const iconURL = game.getIconURL(32);
   let obj = { gameId: game.id, source: GameProfileEmbedAction.GameProfileSources.CallTile, sourceUserId: userId };
   const tmp3 = useOpenGameProfileModalDefault;
-  obj = { guildTag: game.name, guildBadge: null, containerStyles: null, textStyle: null, onPress: null, textColor: null };
+  obj = {
+    guildTag: game.name,
+    guildBadge: null,
+    containerStyles: null,
+    textStyle: null,
+    onPress: null,
+    textColor: null,
+  };
   let tmp5Result;
   if (null != iconURL) {
     obj = { source: null, alt: "", style: null };
@@ -30,7 +41,14 @@ const memoResult = importAllResult.memo((game) => {
   ({ container: obj2[2], text: obj2[3] } = tmp);
   obj[4] = useOpenGameProfileModalDefault(obj);
   obj[5] = textColor;
-  return jsx(memoResult1.BaseGuildTagChiplet, { guildTag: game.name, guildBadge: null, containerStyles: null, textStyle: null, onPress: null, textColor: null });
+  return jsx(memoResult1.BaseGuildTagChiplet, {
+    guildTag: game.name,
+    guildBadge: null,
+    containerStyles: null,
+    textStyle: null,
+    onPress: null,
+    textColor: null,
+  });
 });
 const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameTagChiplet.tsx");
 

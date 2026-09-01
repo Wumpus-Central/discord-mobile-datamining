@@ -16,7 +16,7 @@ export const getScreens = function getScreens(isModal) {
     title: "",
     render() {
       return callback2(callback(14315), {});
-    }
+    },
   };
   obj = { title: null, render: null, headerLeft: null };
   const intl = getSystemLocale.intl;
@@ -36,7 +36,7 @@ export const getScreens = function getScreens(isModal) {
       const merged = Object.assign(arg0);
       return callback2(callback(14327), {});
     },
-    title: null
+    title: null,
   };
   const intl2 = tmp2(1236).intl;
   obj1[1] = intl2.string(getSystemLocale.t.UBBwwF);
@@ -45,7 +45,7 @@ export const getScreens = function getScreens(isModal) {
     render() {
       return callback2(callback(14328), {});
     },
-    title: null
+    title: null,
   };
   const intl3 = tmp2(1236).intl;
   obj2[1] = intl3.string(getSystemLocale.t.vrOCCk);
@@ -56,7 +56,7 @@ export const getScreens = function getScreens(isModal) {
       return callback2(callback(14332), {});
     },
     title: null,
-    headerLeft: null
+    headerLeft: null,
   };
   const intl4 = tmp2(1236).intl;
   obj3[1] = intl4.string(getSystemLocale.t["cY/IOu"]);
@@ -71,7 +71,7 @@ export const getScreens = function getScreens(isModal) {
     render() {
       return callback2(callback(14333), {});
     },
-    title: null
+    title: null,
   };
   const intl5 = tmp2(1236).intl;
   obj4[1] = intl5.string(getSystemLocale.t["7wPZln"]);

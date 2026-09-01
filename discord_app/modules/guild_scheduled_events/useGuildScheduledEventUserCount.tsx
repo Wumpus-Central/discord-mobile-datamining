@@ -12,7 +12,9 @@ export default function useGuildScheduledEventUserCount(arg0, arg1, arg2) {
   dependencyMap = arg2;
   let items = [closure_4];
   let items1 = [arg1, arg0, arg2];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.getUserCount(closure_1, closure_2));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_4.getUserCount(closure_1, closure_2),
+  );
   useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {
@@ -31,4 +33,4 @@ export default function useGuildScheduledEventUserCount(arg0, arg1, arg2) {
     }
   }, items1);
   return stateFromStores;
-};
+}

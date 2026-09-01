@@ -7,7 +7,9 @@ import useNSFWAllowed from "useNSFWAllowed.tsx";
 import closure_2 from "../../../stores/UserStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx",
+);
 
 export const resolveNsfwTogglesWithDefaults = function resolveNsfwTogglesWithDefaults(arg0, arg1, arg2, arg3) {
   let tmp = arg1;
@@ -35,7 +37,8 @@ export const useViewNsfwCommandsOrDefault = function useViewNsfwCommandsOrDefaul
   const obj = useAgeVerificationRunner;
   const nSFWAllowed = useNSFWAllowed.useNSFWAllowed();
   const obj2 = useNSFWAllowed;
-  const tmp3 = isFeatureAgeGated.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
+  const tmp3 =
+    isFeatureAgeGated.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
   let tmp4 = !tmp3;
   if (!tmp3) {
     let tmp5 = false !== nSFWAllowed;
@@ -56,7 +59,8 @@ export const useViewNsfwGuildsOrDefault = function useViewNsfwGuildsOrDefault() 
   const obj = useAgeVerificationRunner;
   const nSFWAllowed = useNSFWAllowed.useNSFWAllowed();
   const obj2 = useNSFWAllowed;
-  const tmp3 = isFeatureAgeGated.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
+  const tmp3 =
+    isFeatureAgeGated.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
   let tmp4 = !tmp3;
   if (!tmp3) {
     let tmp5 = false !== nSFWAllowed;

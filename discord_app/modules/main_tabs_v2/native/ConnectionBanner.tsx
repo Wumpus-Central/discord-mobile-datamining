@@ -47,7 +47,7 @@ function ConnectionBannerIcon(state) {
 function ConnectionBannerContent(state) {
   state = state.state;
   let obj = { style: callback3().content, children: null };
-  const items = [callback2(ConnectionBannerIcon, { state }), ];
+  const items = [callback2(ConnectionBannerIcon, { state })];
   let str = "text-muted";
   if (state === constants.BACK_ONLINE) {
     str = "text-feedback-positive";
@@ -76,7 +76,7 @@ function BackOnlineGlow(opacity) {
   let items = [token];
   const memo = React.useMemo(() => {
     const obj = closure_1_1(closure_1_2[14])(token);
-    const items = [obj.alpha(0).css(), , , ];
+    const items = [obj.alpha(0).css(), , ,];
     const alphaResult = obj.alpha(0);
     items[1] = obj.alpha(0.1).css();
     const alphaResult1 = obj.alpha(0.1);
@@ -87,7 +87,23 @@ function BackOnlineGlow(opacity) {
   }, items);
   obj = { style: items1, pointerEvents: "none", children: null };
   items1 = [tmp.glow, { opacity: opacity.progress }];
-  obj = { style: tmp.glow, maskElement: callback2(LinearGradientDefault, { style: tmp.glowMaskGradient, colors: closure_14, locations: closure_15, start: closure_16, end: closure_17 }), children: callback2(LinearGradientDefault, { style: tmp.glowMaskGradient, colors: memo, locations: closure_18, start: closure_19, end: closure_20 }) };
+  obj = {
+    style: tmp.glow,
+    maskElement: callback2(LinearGradientDefault, {
+      style: tmp.glowMaskGradient,
+      colors: closure_14,
+      locations: closure_15,
+      start: closure_16,
+      end: closure_17,
+    }),
+    children: callback2(LinearGradientDefault, {
+      style: tmp.glowMaskGradient,
+      colors: memo,
+      locations: closure_18,
+      start: closure_19,
+      end: closure_20,
+    }),
+  };
   obj[2] = callback2(_isNativeReflectConstructDefault, obj);
   return callback2(_modDef4217.View, obj);
 }
@@ -167,7 +183,7 @@ function ConnectionBannerInner() {
     obj1[0] = sharedValue;
     tmp21 = callback2(BackOnlineGlow, obj1);
   }
-  const items4 = [tmp21, ];
+  const items4 = [tmp21];
   let tmp24 = null;
   if (null != tmp12) {
     const obj2 = { state: null };
@@ -189,15 +205,37 @@ let closure_17 = { x: 1, y: 0.5 };
 let closure_18 = [0, 0.4, 0.75, 1];
 let closure_19 = { x: 0, y: 0 };
 let closure_20 = { x: 0, y: 1 };
-createCacheKey = { container: { position: "absolute", left: 0, right: 0, bottom: 0 }, glow: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }, glowMaskGradient: { flex: 1 }, content: null, leadingSlot: null, spinner: null };
-createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, height: CONNECTION_BANNER_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12 };
+createCacheKey = {
+  container: { position: "absolute", left: 0, right: 0, bottom: 0 },
+  glow: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 },
+  glowMaskGradient: { flex: 1 },
+  content: null,
+  leadingSlot: null,
+  spinner: null,
+};
+createCacheKey = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  height: CONNECTION_BANNER_HEIGHT,
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+};
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { width: 16, height: 16, alignItems: "center", justifyContent: "center" };
 let items = [{ scale: 0.8 }];
 createCacheKey[5] = { transform: items };
 let closure_21 = createCacheKey.createStyles(createCacheKey);
-let closure_25 = { code: "function ConnectionBannerTsx1(finished){const{shouldShowBanner,runOnJS,setRenderState}=this.__closure;if(finished===true&&!shouldShowBanner){runOnJS(setRenderState)(null);}}" };
-let closure_26 = { code: "function ConnectionBannerTsx2(){const{progress,CONNECTION_BANNER_HEIGHT}=this.__closure;return{transform:[{translateY:(1-progress.get())*CONNECTION_BANNER_HEIGHT}],opacity:progress.get()};}" };
+let closure_25 = {
+  code: "function ConnectionBannerTsx1(finished){const{shouldShowBanner,runOnJS,setRenderState}=this.__closure;if(finished===true&&!shouldShowBanner){runOnJS(setRenderState)(null);}}",
+};
+let closure_26 = {
+  code: "function ConnectionBannerTsx2(){const{progress,CONNECTION_BANNER_HEIGHT}=this.__closure;return{transform:[{translateY:(1-progress.get())*CONNECTION_BANNER_HEIGHT}],opacity:progress.get()};}",
+};
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
@@ -242,4 +280,4 @@ export default function ConnectionBanner() {
     }
   }
   return tmp4;
-};
+}

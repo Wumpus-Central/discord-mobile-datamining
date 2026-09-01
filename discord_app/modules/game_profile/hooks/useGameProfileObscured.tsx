@@ -14,11 +14,13 @@ export default function useGameProfileObscured(contentClassification) {
     result = false === tmp4;
   }
   if (result) {
-    result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(contentClassification.contentClassification);
+    result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(
+      contentClassification.contentClassification,
+    );
     const tmpResult = isAgeRestrictedContentClassification;
   }
   return result;
-};
+}
 export const isGameProfileObscured = function isGameProfileObscured(game, nsfwAllowed) {
   let result = null != game;
   if (result) {

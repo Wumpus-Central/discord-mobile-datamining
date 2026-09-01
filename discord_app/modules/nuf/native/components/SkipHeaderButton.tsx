@@ -24,7 +24,7 @@ export default function SkipHeaderButton(label) {
   }
   const obj = {};
   const merged = Object.assign(label);
-  const items = [tmp.button, ];
+  const items = [tmp.button];
   let prop;
   if (label.insideNavigator) {
     prop = tmp.insideNavigatorButton;
@@ -34,4 +34,4 @@ export default function SkipHeaderButton(label) {
   obj.label = label;
   obj.accessibilityLabel = label;
   return jsx(GenericHeaderTitle.HeaderTextButton, {});
-};
+}

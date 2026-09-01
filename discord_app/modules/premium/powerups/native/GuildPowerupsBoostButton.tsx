@@ -35,14 +35,28 @@ export const GuildPowerupsBoostButton = function GuildPowerupsBoostButton(guildI
   }, items3);
   let tmp10 = null;
   if (null != stateFromStores) {
-    obj = { guild: null, previousGuildSubscriptionSlot: null, analyticsSection: null, fractionalPremiumState: null, onAvailableSlotPress: null, premiumGroupRole: null };
+    obj = {
+      guild: null,
+      previousGuildSubscriptionSlot: null,
+      analyticsSection: null,
+      fractionalPremiumState: null,
+      onAvailableSlotPress: null,
+      premiumGroupRole: null,
+    };
     obj[0] = stateFromStores;
     obj[1] = memo;
     obj[2] = AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR;
     obj[3] = tmp6.fractionalState;
     obj[4] = tmp9;
     obj[5] = UNSPECIFIED;
-    tmp10 = jsx(tmp5(7145), { guild: null, previousGuildSubscriptionSlot: null, analyticsSection: null, fractionalPremiumState: null, onAvailableSlotPress: null, premiumGroupRole: null });
+    tmp10 = jsx(tmp5(7145), {
+      guild: null,
+      previousGuildSubscriptionSlot: null,
+      analyticsSection: null,
+      fractionalPremiumState: null,
+      onAvailableSlotPress: null,
+      premiumGroupRole: null,
+    });
   }
   return tmp10;
 };

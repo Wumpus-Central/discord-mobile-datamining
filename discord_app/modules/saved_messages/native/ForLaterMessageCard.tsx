@@ -18,14 +18,19 @@ class ForLaterDeletedMessageCard {
     tmp4 = closure_2;
     tmp2 = jsxs;
     obj = { variant: "primary", border: "subtle", shadow: "none", style: items, children: null };
-    items = [, ];
+    items = [,];
     ({ card: arr[0], deletedCard: arr[1] } = tmp);
     tmp5 = jsx;
     obj = { size: "xs", color: require("Themes").colors.ICON_MUTED };
     tmp6 = closure_1;
-    items1 = [, , ];
+    items1 = [, ,];
     items1[0] = jsx(require("CircleErrorIcon").CircleErrorIcon, obj);
-    obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.deletedText, children: null };
+    obj1 = {
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      style: tmp.deletedText,
+      children: null,
+    };
     if (null != savedMessage.saveData.dueAt) {
       intl2 = require("getSystemLocale").intl;
       stringResult = intl2.string(require("getSystemLocale").t["wuQm+j"]);
@@ -52,8 +57,19 @@ class ForLaterDeletedMessageCard {
 let c4 = importAllResult;
 ({ AnalyticEvents: error, ChannelTypes: closure_8, Permissions: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { card: { gap: 16, marginBottom: 16 }, cardDivider: null, deletedCard: null, deletedText: null, deletedActionButton: null };
-obj = { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+let obj = {
+  card: { gap: 16, marginBottom: 16 },
+  cardDivider: null,
+  deletedCard: null,
+  deletedText: null,
+  deletedActionButton: null,
+};
+obj = {
+  marginHorizontal: -16,
+  height: 1,
+  alignSelf: "stretch",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 obj[1] = obj;
 obj[2] = { flexDirection: "row", alignItems: "center", gap: 8 };
 obj[3] = { flex: 1 };
@@ -67,25 +83,147 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
   let obj = savedMessage(11294);
   savedMessageChannel = obj.useSavedMessageChannel(savedMessage);
   const items = [savedMessage, savedMessageChannel];
-  callback = importAllResult.useCallback(callback(function*() {
-    if (message === 2) {
-      message = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  callback = importAllResult.useCallback(
+    callback(function* () {
+      if (message === 2) {
+        message = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        message = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
+        try {
+          message = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              message = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              message = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              function jumpTo() {
+                const self = this;
+                const apply = c0.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              }
+              message = function _jumpTo() {
+                const self = this;
+                const tmp = closure_2_3(function* () {
+                  if (c2 === 2) {
+                    c2 = 3;
+                    HermesBuiltin.throwTypeError();
+                  } else if (tmp3 === 3) {
+                    if (arg0 === 1) {
+                      throw arg1;
+                    } else if (arg0 === 2) {
+                      let obj = { value: null, done: true };
+                      obj[0] = arg1;
+                      return obj;
+                    } else {
+                      return { value: "HermesInternal", done: null };
+                    }
+                  } else {
+                    try {
+                      c2 = 2;
+                      if (0 === c1) {
+                        if (arg0 === 1) {
+                          c2 = 3;
+                          throw arg1;
+                        } else if (arg0 === 2) {
+                          c2 = 3;
+                          obj = { value: null, done: true };
+                          obj[0] = arg1;
+                          return obj;
+                        } else {
+                          const callback = tmp4;
+                          let obj2 = callback(closure_2_2[15]);
+                          c1 = 1;
+                          c2 = 1;
+                          obj1 = { value: null, done: false };
+                          obj1[0] = obj2.savedMessageJumpToMessage(closure_1_0, c1);
+                          return obj1;
+                        }
+                      } else if (arg0 === 1) {
+                        c2 = 3;
+                        throw arg1;
+                      } else if (arg0 === 2) {
+                        c2 = 3;
+                        obj2 = { value: null, done: true };
+                        obj2[0] = arg1;
+                        return obj2;
+                      } else {
+                        let arr = closure_2_1(closure_2_2[16]);
+                        arr = arr.pop();
+                        const obj3 = {
+                          channel_id: null,
+                          message_id: null,
+                          message_author_id: null,
+                          type: null,
+                          due_duration: null,
+                        };
+                        obj3[0] = closure_1_0.saveData.channelId;
+                        obj3[1] = closure_1_0.saveData.messageId;
+                        const message = closure_1_0.message;
+                        let id;
+                        if (message != null) {
+                          id = message.author.id;
+                        }
+                        obj3[2] = id;
+                        if (null != closure_1_0.saveData.dueAt) {
+                          let BOOKMARK = callback(closure_2_2[18]).SavedMessageSortTypes.REMINDER;
+                        } else {
+                          BOOKMARK = callback(closure_2_2[18]).SavedMessageSortTypes.BOOKMARK;
+                        }
+                        obj3[3] = BOOKMARK;
+                        let diffResult;
+                        if (null != closure_1_0.saveData.dueAt) {
+                          obj = closure_2_1(closure_2_2[19])();
+                          diffResult = obj.diff(closure_1_0.saveData.dueAt);
+                        }
+                        obj3[4] = diffResult;
+                        closure_2_1(closure_2_2[17]).track(closure_2_7.FOR_LATER_SAVED_MESSAGE_JUMP, obj3);
+                        c2 = 3;
+                        return { value: "HermesInternal", done: null };
+                      }
+                    } catch (tmp26) {
+                      c2 = tmp;
+                      throw tmp26;
+                    }
+                  }
+                });
+                closure_0 = tmp;
+                const apply = tmp.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              };
+              if (v0(closure_1_2[20])(message.message, jumpTo)) {
+                v0 = 1;
+                message = 1;
+                obj1 = { value: null, done: false };
+                obj1[0] = jumpTo();
+                return obj1;
+              }
+            }
+          } else if (arg0 === 1) {
             message = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -93,153 +231,42 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
-          } else {
-            function jumpTo() {
-              const self = this;
-              const apply = c0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            }
-            message = function _jumpTo() {
-              const self = this;
-              const tmp = closure_2_3(function*() {
-                if (c2 === 2) {
-                  c2 = 3;
-                  HermesBuiltin.throwTypeError();
-                } else if (tmp3 === 3) {
-                  if (arg0 === 1) {
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    let obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  } else {
-                    return { value: "HermesInternal", done: null };
-                  }
-                } else {
-                  try {
-                    c2 = 2;
-                    if (0 === c1) {
-                      if (arg0 === 1) {
-                        c2 = 3;
-                        throw arg1;
-                      } else if (arg0 === 2) {
-                        c2 = 3;
-                        obj = { value: null, done: true };
-                        obj[0] = arg1;
-                        return obj;
-                      } else {
-                        const callback = tmp4;
-                        let obj2 = callback(closure_2_2[15]);
-                        c1 = 1;
-                        c2 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = obj2.savedMessageJumpToMessage(closure_1_0, c1);
-                        return obj1;
-                      }
-                    } else if (arg0 === 1) {
-                      c2 = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      c2 = 3;
-                      obj2 = { value: null, done: true };
-                      obj2[0] = arg1;
-                      return obj2;
-                    } else {
-                      let arr = closure_2_1(closure_2_2[16]);
-                      arr = arr.pop();
-                      const obj3 = { channel_id: null, message_id: null, message_author_id: null, type: null, due_duration: null };
-                      obj3[0] = closure_1_0.saveData.channelId;
-                      obj3[1] = closure_1_0.saveData.messageId;
-                      const message = closure_1_0.message;
-                      let id;
-                      if (message != null) {
-                        id = message.author.id;
-                      }
-                      obj3[2] = id;
-                      if (null != closure_1_0.saveData.dueAt) {
-                        let BOOKMARK = callback(closure_2_2[18]).SavedMessageSortTypes.REMINDER;
-                      } else {
-                        BOOKMARK = callback(closure_2_2[18]).SavedMessageSortTypes.BOOKMARK;
-                      }
-                      obj3[3] = BOOKMARK;
-                      let diffResult;
-                      if (null != closure_1_0.saveData.dueAt) {
-                        obj = closure_2_1(closure_2_2[19])();
-                        diffResult = obj.diff(closure_1_0.saveData.dueAt);
-                      }
-                      obj3[4] = diffResult;
-                      closure_2_1(closure_2_2[17]).track(closure_2_7.FOR_LATER_SAVED_MESSAGE_JUMP, obj3);
-                      c2 = 3;
-                      return { value: "HermesInternal", done: null };
-                    }
-                  } catch (tmp26) {
-                    c2 = tmp;
-                    throw tmp26;
-                  }
-                }
-              });
-              closure_0 = tmp;
-              const apply = tmp.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            };
-            if (v0(closure_1_2[20])(message.message, jumpTo)) {
-              v0 = 1;
-              message = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = jumpTo();
-              return obj1;
-            }
           }
-        } else if (arg0 === 1) {
           message = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          message = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          return { value: "HermesInternal", done: null };
+        } catch (tmp8) {
+          message = tmp;
+          throw tmp8;
         }
-        message = 3;
-        return { value: "HermesInternal", done: null };
-      } catch (tmp8) {
-        message = tmp;
-        throw tmp8;
       }
-    }
-  }), items);
+    }),
+    items,
+  );
   obj1 = savedMessage(589);
   const items1 = [closure_6];
   if (null != savedMessage.message) {
     if (null != savedMessageChannel) {
-      if (obj1.useStateFromStores(items1, () => {
-        let type;
-        if (savedMessageChannel != null) {
-          type = obj.type;
-        }
-        let tmp2 = type === closure_1_8.UNKNOWN;
-        if (!tmp2) {
-          let isPrivateResult;
-          if (obj != null) {
-            isPrivateResult = obj.isPrivate();
+      if (
+        obj1.useStateFromStores(items1, () => {
+          let type;
+          if (savedMessageChannel != null) {
+            type = obj.type;
           }
-          let canResult = isPrivateResult;
-          if (!canResult) {
-            canResult = closure_1_6.can(closure_1_9.VIEW_CHANNEL, obj);
+          let tmp2 = type === closure_1_8.UNKNOWN;
+          if (!tmp2) {
+            let isPrivateResult;
+            if (obj != null) {
+              isPrivateResult = obj.isPrivate();
+            }
+            let canResult = isPrivateResult;
+            if (!canResult) {
+              canResult = closure_1_6.can(closure_1_9.VIEW_CHANNEL, obj);
+            }
+            tmp2 = canResult;
           }
-          tmp2 = canResult;
-        }
-        return tmp2;
-      })) {
+          return tmp2;
+        })
+      ) {
         obj = { savedMessage: null, jumpToMessage: null, throttledNow: null };
         obj[0] = savedMessage;
         obj[1] = callback;
@@ -256,7 +283,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
           obj1[2] = tmp8;
           tmp6Result = tmp6(tmp2(12950).ForLaterCardReminderHeader, obj1);
         }
-        const items2 = [tmp6Result, , , ];
+        const items2 = [tmp6Result, , ,];
         let obj2 = { channel: null, actions: null };
         obj2[0] = savedMessageChannel;
         let tmp12 = null;

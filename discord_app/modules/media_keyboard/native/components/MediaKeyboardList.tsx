@@ -18,10 +18,18 @@ let obj = { listContainer: null };
 obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, marginTop: 8, paddingTop: 8 };
 obj[0] = obj;
 let closure_12 = createCacheKey.createStyles(obj);
-let closure_13 = { code: "function MediaKeyboardListTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get();}" };
-let closure_14 = { code: "function MediaKeyboardListTsx2(currentIndex){const{latch,runOnJS,setIsExpanded}=this.__closure;if(currentIndex>0.1&&!latch.get()){latch.set(true);runOnJS(setIsExpanded)(true);}}" };
-let closure_15 = { code: "function MediaKeyboardListTsx3(){const{animatedSnapPoints}=this.__closure;return animatedSnapPoints.get();}" };
-let closure_16 = { code: "function MediaKeyboardListTsx4(snapPoints,previous){const{cheapWorkletArrayShallowEqual,runOnJS,setBottomSheetState,windowHeight,computedStartHeight,maxDynamicContentSize}=this.__closure;var _snapPoints$,_snapPoints;if(cheapWorkletArrayShallowEqual(snapPoints,previous!==null&&previous!==void 0?previous:undefined))return;runOnJS(setBottomSheetState)({minimum:windowHeight-((_snapPoints$=snapPoints[0])!==null&&_snapPoints$!==void 0?_snapPoints$:computedStartHeight),maximum:windowHeight-((_snapPoints=snapPoints[snapPoints.length-1])!==null&&_snapPoints!==void 0?_snapPoints:maxDynamicContentSize)});}" };
+let closure_13 = {
+  code: "function MediaKeyboardListTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get();}",
+};
+let closure_14 = {
+  code: "function MediaKeyboardListTsx2(currentIndex){const{latch,runOnJS,setIsExpanded}=this.__closure;if(currentIndex>0.1&&!latch.get()){latch.set(true);runOnJS(setIsExpanded)(true);}}",
+};
+let closure_15 = {
+  code: "function MediaKeyboardListTsx3(){const{animatedSnapPoints}=this.__closure;return animatedSnapPoints.get();}",
+};
+let closure_16 = {
+  code: "function MediaKeyboardListTsx4(snapPoints,previous){const{cheapWorkletArrayShallowEqual,runOnJS,setBottomSheetState,windowHeight,computedStartHeight,maxDynamicContentSize}=this.__closure;var _snapPoints$,_snapPoints;if(cheapWorkletArrayShallowEqual(snapPoints,previous!==null&&previous!==void 0?previous:undefined))return;runOnJS(setBottomSheetState)({minimum:windowHeight-((_snapPoints$=snapPoints[0])!==null&&_snapPoints$!==void 0?_snapPoints$:computedStartHeight),maximum:windowHeight-((_snapPoints=snapPoints[snapPoints.length-1])!==null&&_snapPoints!==void 0?_snapPoints:maxDynamicContentSize)});}",
+};
 const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
   channel = channel.channel;
   let animatedIndex = channel;
@@ -154,7 +162,14 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
       const runOnJSResult = animatedIndex(sharedValue[10]).runOnJS(closure_24);
     }
   };
-  obj = { cheapWorkletArrayShallowEqual: animatedIndex(sharedValue[18]).cheapWorkletArrayShallowEqual, runOnJS: animatedIndex(sharedValue[10]).runOnJS, setBottomSheetState: tmp18, windowHeight: height, computedStartHeight: result, maxDynamicContentSize: diff };
+  obj = {
+    cheapWorkletArrayShallowEqual: animatedIndex(sharedValue[18]).cheapWorkletArrayShallowEqual,
+    runOnJS: animatedIndex(sharedValue[10]).runOnJS,
+    setBottomSheetState: tmp18,
+    windowHeight: height,
+    computedStartHeight: result,
+    maxDynamicContentSize: diff,
+  };
   fn.__closure = obj;
   fn.__workletHash = 4619753074319;
   fn.__initData = assets;
@@ -219,7 +234,10 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
       const items2 = [];
       const _Array = Array;
       let arraySpreadResult = HermesBuiltin.arraySpread(items1, 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(Array(3 * itemsPerRow - items1.length).fill(null), arraySpreadResult);
+      arraySpreadResult = HermesBuiltin.arraySpread(
+        Array(3 * itemsPerRow - items1.length).fill(null),
+        arraySpreadResult,
+      );
       const ArrayResult = Array(3 * itemsPerRow - items1.length);
       return _undefined(sharedValue[20]).chunk(items2, itemsPerRow);
     } else {
@@ -240,43 +258,86 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
     sharedValue(onManageLimited.CAMERA_BUTTON);
   }, items3);
   const items4 = [itemsPageSizeRef, extensions];
-  const items5 = [channel, draftType, callback1, onViewAll, onAttachPress, itemsPerRow, onPressItem, onLongPressItem, memo, includedUploadIds, flag2, uploadLimit, disableWhenReachedLimit, sum];
+  const items5 = [
+    channel,
+    draftType,
+    callback1,
+    onViewAll,
+    onAttachPress,
+    itemsPerRow,
+    onPressItem,
+    onLongPressItem,
+    memo,
+    includedUploadIds,
+    flag2,
+    uploadLimit,
+    disableWhenReachedLimit,
+    sum,
+  ];
   const callback2 = obj.useCallback(() => {
     let obj = _undefined(sharedValue[11]);
     obj = { batchSize: itemsPageSizeRef.current, extensions };
     const nextAssetPage = obj.getNextAssetPage(obj);
   }, items4);
-  const callback3 = obj.useCallback((arg0, rowIndex) => flag2(_undefined(sharedValue[21]), { draftType: _undefined, rowIndex, totalNumItems: c26, channel: animatedIndex, numPerRow: itemsPerRow, items: memo[rowIndex], onPressItem, onLongPressItem, includedUploadIds, uploadLimit, disableWhenReachedLimit, handleCameraPress: callback1, handleAttachPress: onAttachPress, handleViewAllPhotosPress: onViewAll, disabled: flag2 }, memo[rowIndex].reduce((arg0, node) => {
-    if (null == node) {
-      return arg0;
-    } else {
-      if (obj3.isMediaCameraNode(node)) {
-        const _HermesInternal4 = HermesInternal;
-        let combined = "" + arg0 + "-camera";
-      } else {
-        let tmp6Result = tmp6(tmp7[21]);
-        if (tmp6Result.isAttachFilesNode(node)) {
-          const _HermesInternal3 = HermesInternal;
-          combined = "" + arg0 + "-attach";
-        } else {
-          tmp6Result = tmp6(tmp7[21]);
-          if (tmp6Result.isViewAllPhotosNode(node)) {
-            const _HermesInternal2 = HermesInternal;
-            combined = "" + arg0 + "-view-all";
+  const callback3 = obj.useCallback(
+    (arg0, rowIndex) =>
+      flag2(
+        _undefined(sharedValue[21]),
+        {
+          draftType: _undefined,
+          rowIndex,
+          totalNumItems: c26,
+          channel: animatedIndex,
+          numPerRow: itemsPerRow,
+          items: memo[rowIndex],
+          onPressItem,
+          onLongPressItem,
+          includedUploadIds,
+          uploadLimit,
+          disableWhenReachedLimit,
+          handleCameraPress: callback1,
+          handleAttachPress: onAttachPress,
+          handleViewAllPhotosPress: onViewAll,
+          disabled: flag2,
+        },
+        memo[rowIndex].reduce((arg0, node) => {
+          if (null == node) {
+            return arg0;
           } else {
-            const _HermesInternal = HermesInternal;
-            combined = "" + arg0 + "-" + node.node.image.uri;
+            if (obj3.isMediaCameraNode(node)) {
+              const _HermesInternal4 = HermesInternal;
+              let combined = "" + arg0 + "-camera";
+            } else {
+              let tmp6Result = tmp6(tmp7[21]);
+              if (tmp6Result.isAttachFilesNode(node)) {
+                const _HermesInternal3 = HermesInternal;
+                combined = "" + arg0 + "-attach";
+              } else {
+                tmp6Result = tmp6(tmp7[21]);
+                if (tmp6Result.isViewAllPhotosNode(node)) {
+                  const _HermesInternal2 = HermesInternal;
+                  combined = "" + arg0 + "-view-all";
+                } else {
+                  const _HermesInternal = HermesInternal;
+                  combined = "" + arg0 + "-" + node.node.image.uri;
+                }
+              }
+            }
+            obj3 = callback(table[21]);
           }
-        }
-      }
-      obj3 = callback(table[21]);
-    }
-  }, rowIndex.toString())), items5);
+        }, rowIndex.toString()),
+      ),
+    items5,
+  );
   width = tmp6(tmp7[15])().width;
   const items6 = [width, itemsPerRow];
   const items7 = [onViewAll, flag2];
   const memo1 = obj.useMemo(() => {
-    const result = (width - (animatedIndex(sharedValue[21]).PARENT_PADDING + animatedIndex(sharedValue[21]).CHILD_PADDING * (itemsPerRow - 1))) / itemsPerRow;
+    const result =
+      (width -
+        (animatedIndex(sharedValue[21]).PARENT_PADDING +
+          animatedIndex(sharedValue[21]).CHILD_PADDING * (itemsPerRow - 1))) /
+      itemsPerRow;
     return result + animatedIndex(sharedValue[21]).SEPARATOR_SIZE;
   }, items6);
   const callback4 = obj.useCallback(() => flag2(_undefined(sharedValue[22]), { disabled: flag2, onViewAll }), items7);
@@ -285,14 +346,27 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
   }
   const items8 = [maximum];
   const memo2 = obj.useMemo(() => ({ height: maximum }), items8);
-  const tmp3Result = tmp3(obj.useState(() => 32 + 36 * onViewAll.getState().byAppEntry[closure_19].fontScale), 2);
+  const tmp3Result = tmp3(
+    obj.useState(() => 32 + 36 * onViewAll.getState().byAppEntry[closure_19].fontScale),
+    2,
+  );
   closure_31 = tmp3Result[1];
   const items9 = [onManageLimited];
-  const callback5 = obj.useCallback(() => flag2(_undefined(sharedValue[23]), { onPress: onManageLimited, onHeightChange: closure_31 }), items9);
+  const callback5 = obj.useCallback(
+    () => flag2(_undefined(sharedValue[23]), { onPress: onManageLimited, onHeightChange: closure_31 }),
+    items9,
+  );
   tmp9Result = tmp9(tmp7[24]);
   const modalDismissGuardRefreshControl = tmp9Result.useModalDismissGuardRefreshControl();
   const tmp25 = disableWhenReachedLimit();
-  obj1 = { photoPermissionStatus: first, photosEmpty: null, showCameraButton: null, onPressCamera: null, onManageLimited: null, onPressPrivacySettings: null };
+  obj1 = {
+    photoPermissionStatus: first,
+    photosEmpty: null,
+    showCameraButton: null,
+    onPressCamera: null,
+    onManageLimited: null,
+    onPressPrivacySettings: null,
+  };
   let tmp36 = null != assets;
   if (tmp36) {
     tmp36 = 0 === assets.edges.length;
@@ -310,7 +384,29 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
     if (first === extensions.LIMITED) {
       tmp38 = callback5;
     }
-    obj2 = { renderHeader: null, headerSize: null, style: null, renderItem: null, sections: null, itemSize: null, inActionSheet: true, refreshControl: null, preserveScrollMomentum: true, automaticallyAdjustsScrollIndicatorInsets: false, keyboardDismissMode: "none", onEndReached: null, onScroll: null, endReachedThreshold: 400, accessibilityRole: "list", accessibilityLabel: null, showsVerticalScrollIndicator: false, footerSize: null, renderFooter: null, chunkBase: null, batchesToRender: null };
+    obj2 = {
+      renderHeader: null,
+      headerSize: null,
+      style: null,
+      renderItem: null,
+      sections: null,
+      itemSize: null,
+      inActionSheet: true,
+      refreshControl: null,
+      preserveScrollMomentum: true,
+      automaticallyAdjustsScrollIndicatorInsets: false,
+      keyboardDismissMode: "none",
+      onEndReached: null,
+      onScroll: null,
+      endReachedThreshold: 400,
+      accessibilityRole: "list",
+      accessibilityLabel: null,
+      showsVerticalScrollIndicator: false,
+      footerSize: null,
+      renderFooter: null,
+      chunkBase: null,
+      batchesToRender: null,
+    };
     obj2[0] = tmp38;
     let num3 = 0;
     if (first === extensions.LIMITED) {

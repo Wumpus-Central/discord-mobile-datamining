@@ -11,7 +11,11 @@ export const useInviteApplicationBypassInfo = function useInviteApplicationBypas
   const items = [closure_2];
   const items1 = [guild];
   let hasItem;
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.can(closure_1_4.KICK_MEMBERS, closure_0), items1);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_2.can(closure_1_4.KICK_MEMBERS, closure_0),
+    items1,
+  );
   if (guild != null) {
     const features = guild.features;
     hasItem = features.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL);

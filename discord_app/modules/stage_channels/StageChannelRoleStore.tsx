@@ -34,7 +34,8 @@ function buildStageChannelUserRoles(id, closure_0, flag) {
       if (channel.isGuildStageVoice()) {
         obj = {};
         voiceStateForChannel = voiceStateForChannel.getVoiceStateForChannel(closure_0, id);
-        const audienceRequestToSpeakState = useAudienceRequestToSpeakState.getAudienceRequestToSpeakState(voiceStateForChannel);
+        const audienceRequestToSpeakState =
+          useAudienceRequestToSpeakState.getAudienceRequestToSpeakState(voiceStateForChannel);
         obj[obj.SPEAKER] = audienceRequestToSpeakState === useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE;
         let canResult = null;
         if (flag) {
@@ -120,8 +121,7 @@ let obj = { SPEAKER: "speaker", MODERATOR: "moderator" };
 let closure_11 = {};
 obj = { [obj.SPEAKER]: false, [obj.MODERATOR]: false };
 const Store = initializeDefault.Store;
-class StageChannelRoleStore extends Store {
-}
+class StageChannelRoleStore extends Store {}
 const prototype = StageChannelRoleStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_5, closure_4, closure_7, closure_8, closure_9, closure_6);
@@ -232,7 +232,7 @@ obj = {
     return reduced;
   },
   GUILD_CREATE: handleGuildCreateOrDelete,
-  GUILD_DELETE: handleGuildCreateOrDelete
+  GUILD_DELETE: handleGuildCreateOrDelete,
 };
 const stageChannelRoleStore = new StageChannelRoleStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelRoleStore.tsx");

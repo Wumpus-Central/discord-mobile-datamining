@@ -42,13 +42,28 @@ let closure_14 = createCacheKey.createStyles((items) => {
     PRIMARY_400 = ThemesDefault.unsafe_rawColors.PRIMARY_400;
     tmp5 = importDefault;
   }
-  obj = { ellipsis: { backgroundColor: PRIMARY_400, borderRadius: height, height, width: statusTypingDimensions.width, paddingStart: 4, paddingEnd: 2, marginRight: 0 }, ellipsisDot: null };
+  obj = {
+    ellipsis: {
+      backgroundColor: PRIMARY_400,
+      borderRadius: height,
+      height,
+      width: statusTypingDimensions.width,
+      paddingStart: 4,
+      paddingEnd: 2,
+      marginRight: 0,
+    },
+    ellipsisDot: null,
+  };
   obj = { width: dotSize, height: dotSize, backgroundColor: tmp5(712).colors.WHITE };
   obj[1] = obj;
   return obj;
 });
-let closure_15 = { code: "function StatusTsx1(){const{enableAnimation,withSpring,width,CHANNEL_SPRING_CONFIG,height,onAnimationFinished,borderRadius,translateX}=this.__closure;const shouldAnimate=enableAnimation.get()?'respect-motion-settings':'animate-never';return{width:withSpring(width,CHANNEL_SPRING_CONFIG,shouldAnimate),height:withSpring(height,CHANNEL_SPRING_CONFIG,shouldAnimate,onAnimationFinished),borderRadius:withSpring(borderRadius,CHANNEL_SPRING_CONFIG,shouldAnimate),transform:[{translateX:withSpring(translateX,CHANNEL_SPRING_CONFIG,shouldAnimate)}]};}" };
-let closure_16 = { code: "function StatusTsx2(){const{withSpring,statusOpacity,CHANNEL_SPRING_CONFIG}=this.__closure;return{opacity:withSpring(statusOpacity,CHANNEL_SPRING_CONFIG)};}" };
+let closure_15 = {
+  code: "function StatusTsx1(){const{enableAnimation,withSpring,width,CHANNEL_SPRING_CONFIG,height,onAnimationFinished,borderRadius,translateX}=this.__closure;const shouldAnimate=enableAnimation.get()?'respect-motion-settings':'animate-never';return{width:withSpring(width,CHANNEL_SPRING_CONFIG,shouldAnimate),height:withSpring(height,CHANNEL_SPRING_CONFIG,shouldAnimate,onAnimationFinished),borderRadius:withSpring(borderRadius,CHANNEL_SPRING_CONFIG,shouldAnimate),transform:[{translateX:withSpring(translateX,CHANNEL_SPRING_CONFIG,shouldAnimate)}]};}",
+};
+let closure_16 = {
+  code: "function StatusTsx2(){const{withSpring,statusOpacity,CHANNEL_SPRING_CONFIG}=this.__closure;return{opacity:withSpring(statusOpacity,CHANNEL_SPRING_CONFIG)};}",
+};
 const result = require("set").fileFinishedImporting("design/void/Status/native/Status.tsx");
 
 export default function Status(isMobileOnline) {
@@ -90,7 +105,7 @@ export default function Status(isMobileOnline) {
   obj[1] = tmp4Result;
   obj[1] = closure_11(closure_4, obj);
   return closure_11(closure_5, obj);
-};
+}
 export const StatusWithTyping = function StatusWithTyping(isMobileOnline) {
   let flag = isMobileOnline.isMobileOnline;
   if (flag === undefined) {
@@ -161,7 +176,16 @@ export const StatusWithTyping = function StatusWithTyping(isMobileOnline) {
       return obj;
     }
   }
-  obj = { enableAnimation: first, withSpring: tmp5(tmp4[20]).withSpring, width, CHANNEL_SPRING_CONFIG: closure_10, height, onAnimationFinished: tmp8, borderRadius: tmp11, translateX: num };
+  obj = {
+    enableAnimation: first,
+    withSpring: tmp5(tmp4[20]).withSpring,
+    width,
+    CHANNEL_SPRING_CONFIG: closure_10,
+    height,
+    onAnimationFinished: tmp8,
+    borderRadius: tmp11,
+    translateX: num,
+  };
   O.__closure = obj;
   O.__workletHash = 2188820017597;
   O.__initData = closure_15;
@@ -197,7 +221,7 @@ export const StatusWithTyping = function StatusWithTyping(isMobileOnline) {
     typing = callback(tmp3(tmp4[19]).View, obj2);
     let obj4 = { style: null, dotStyle: null, disableScale: true };
   }
-  const items2 = [typing, ];
+  const items2 = [typing];
   const obj5 = { style: animatedStyle1, children: null };
   const obj6 = { style: tmp.statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {

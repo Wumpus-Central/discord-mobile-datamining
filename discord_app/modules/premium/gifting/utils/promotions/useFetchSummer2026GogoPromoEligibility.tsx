@@ -4,7 +4,9 @@ import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import { Endpoints } from "../../../../../Constants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/gifting/utils/promotions/useFetchSummer2026GogoPromoEligibility.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/gifting/utils/promotions/useFetchSummer2026GogoPromoEligibility.tsx",
+);
 
 export const useFetchSummer2026GogoPromoEligibility = function useFetchSummer2026GogoPromoEligibility(someResult) {
   closure_0 = someResult;
@@ -23,11 +25,13 @@ export const useFetchSummer2026GogoPromoEligibility = function useFetchSummer202
       const obj = { url: null, rejectWithError: true };
       obj[0] = closure_1_4.GIFTING_PROMOTION_SUMMER_2026_GOGO_CAMPAIGN_ELIGIBILITY;
       const value = HTTP.get(obj);
-      value.then((body) => {
-        callback({ isEligible: body.body.is_eligible, hasFetched: true });
-      }).catch(() => {
-        callback({ isEligible: false, hasFetched: true });
-      });
+      value
+        .then((body) => {
+          callback({ isEligible: body.body.is_eligible, hasFetched: true });
+        })
+        .catch(() => {
+          callback({ isEligible: false, hasFetched: true });
+        });
       const nextPromise = value.then((body) => {
         callback({ isEligible: body.body.is_eligible, hasFetched: true });
       });

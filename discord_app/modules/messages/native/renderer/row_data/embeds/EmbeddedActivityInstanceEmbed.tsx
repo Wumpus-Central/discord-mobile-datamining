@@ -8,7 +8,9 @@ import closure_7 from "../../../../../../stores/UserStore.tsx";
 import { CodedLinkExtendedType } from "coded_links/CodedLinksConstants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx",
+);
 
 export const createActivityInstanceEmbed = function createActivityInstanceEmbed(message) {
   ({ application, activityInstance } = message);
@@ -26,7 +28,11 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
           nsfwAllowed = currentUser.nsfwAllowed;
         }
         obj1 = id(11514);
-        const contentClassificationVisibility = obj1.getContentClassificationVisibility(application.content_classification, channel, nsfwAllowed);
+        const contentClassificationVisibility = obj1.getContentClassificationVisibility(
+          application.content_classification,
+          channel,
+          nsfwAllowed,
+        );
         if (id(11514).ContentClassificationVisibility.DISPLAY === contentClassificationVisibility) {
           id = application;
           const channel_id = message.channel_id;
@@ -38,8 +44,11 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
           if (str == null) {
             str = "";
           }
-          embeddedActivitiesForChannelIncludingHidden = embeddedActivitiesForChannelIncludingHidden.getEmbeddedActivitiesForChannelIncludingHidden(str);
-          const found = embeddedActivitiesForChannelIncludingHidden.find((applicationId) => applicationId.applicationId === id.id);
+          embeddedActivitiesForChannelIncludingHidden =
+            embeddedActivitiesForChannelIncludingHidden.getEmbeddedActivitiesForChannelIncludingHidden(str);
+          const found = embeddedActivitiesForChannelIncludingHidden.find(
+            (applicationId) => applicationId.applicationId === id.id,
+          );
           const currentEmbeddedActivity = obj4.getCurrentEmbeddedActivity();
           let tmp5Result = tmp5(12882);
           let obj = { activity: null, applicationId: null, guildId: null, channelId: null };
@@ -57,7 +66,10 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
           }
           let stringResult = null;
           if (null != value) {
-            const findActivityResult = obj8.findActivity(value, (application_id) => application_id.application_id === id);
+            const findActivityResult = obj8.findActivity(
+              value,
+              (application_id) => application_id.application_id === id,
+            );
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -123,7 +135,27 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
             application = tmp5(5954).fetchApplication(application.id);
             const tmp5Result3 = tmp5(5954);
           }
-          const obj2 = { displayType: null, appId: null, messageId: null, title: null, header: null, info: null, tagline: null, staticBannerSrc: null, iconSrc: null, embedUrl: null, bannerRatio: "bot", actions: null, extendedType: null, gradientColors: null, backgroundColor: 0, borderColor: 0, headerColor: 0, headerText: null, type: null };
+          const obj2 = {
+            displayType: null,
+            appId: null,
+            messageId: null,
+            title: null,
+            header: null,
+            info: null,
+            tagline: null,
+            staticBannerSrc: null,
+            iconSrc: null,
+            embedUrl: null,
+            bannerRatio: "bot",
+            actions: null,
+            extendedType: null,
+            gradientColors: null,
+            backgroundColor: 0,
+            borderColor: 0,
+            headerColor: 0,
+            headerText: null,
+            type: null,
+          };
           obj2[0] = tmp5(11515).AppMessageEmbedDisplayType.DISPLAY;
           obj2[1] = application.id;
           obj2[2] = message.id;
@@ -145,7 +177,13 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
           obj2[12] = CodedLinkExtendedType.APP_MESSAGE_EMBED;
           const tmp5Result4 = tmp5(9084);
           obj2[13] = tmp5(11517).getAppGradientColors(appIconSrc);
-          obj4 = { applicationId: null, instanceId: null, appMessageEmbedModel: null, participantAvatarUris: null, participantsDescription: null };
+          obj4 = {
+            applicationId: null,
+            instanceId: null,
+            appMessageEmbedModel: null,
+            participantAvatarUris: null,
+            participantsDescription: null,
+          };
           obj4[0] = application.id;
           obj4[1] = activityInstance.id;
           obj4[2] = obj2;
@@ -161,11 +199,37 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
             const intl = tmp5(1236).intl;
             stringResult3 = intl.string(tmp5(1236).t.NIZyKq);
           }
-          const obj5 = { applicationId: null, instanceId: null, participantAvatarUris: null, participantsDescription: null, appMessageEmbedModel: null };
+          const obj5 = {
+            applicationId: null,
+            instanceId: null,
+            participantAvatarUris: null,
+            participantsDescription: null,
+            appMessageEmbedModel: null,
+          };
           obj5[0] = id;
           obj5[1] = activityInstance.id;
           obj5[2] = [];
-          const obj6 = { displayType: null, appId: null, messageId: null, title: null, header: null, info: null, tagline: null, iconSrc: null, staticBannerSrc: null, bannerRatio: "bot", actions: null, embedUrl: null, extendedType: null, gradientColors: null, backgroundColor: 0, borderColor: 0, headerColor: 0, headerText: null, type: null };
+          const obj6 = {
+            displayType: null,
+            appId: null,
+            messageId: null,
+            title: null,
+            header: null,
+            info: null,
+            tagline: null,
+            iconSrc: null,
+            staticBannerSrc: null,
+            bannerRatio: "bot",
+            actions: null,
+            embedUrl: null,
+            extendedType: null,
+            gradientColors: null,
+            backgroundColor: 0,
+            borderColor: 0,
+            headerColor: 0,
+            headerText: null,
+            type: null,
+          };
           obj6[0] = tmp5(11515).AppMessageEmbedDisplayType.BLOCKED;
           obj6[1] = id;
           obj6[2] = message.id;

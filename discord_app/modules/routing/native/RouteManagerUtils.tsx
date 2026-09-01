@@ -19,7 +19,12 @@ import closure_9 from "../../../stores/GuildChannelStore.tsx";
 import closure_10 from "../../../stores/SelectedChannelStore.tsx";
 import ME from "../../../Constants.tsx";
 import { VoiceChatDrawerState } from "../../video_calls/native/ChannelCallConstants.tsx";
-import { RouteParam, RouteParam as RouteParam2, RouteParam as RouteParam3, RouteParam as RouteParam4 } from "../RouteUtils.tsx";
+import {
+  RouteParam,
+  RouteParam as RouteParam2,
+  RouteParam as RouteParam3,
+  RouteParam as RouteParam4,
+} from "../RouteUtils.tsx";
 
 require = arg1;
 function voiceRouteRewriter(pathname) {
@@ -63,7 +68,10 @@ function voiceRouteRewriter(pathname) {
       obj5.log("voiceRouteRewriter: has voiceChannelParams = " + JSON.stringify(tmp4));
     }
     const _HermesInternal2 = HermesInternal;
-    const combined = "" + closure_8.lastNonVoiceRoute + Routes.VOICE_CHAT_CHANNEL_PARTIAL(tmp4.guildId, tmp4.channelId, tmp4.messageId);
+    const combined =
+      "" +
+      closure_8.lastNonVoiceRoute +
+      Routes.VOICE_CHAT_CHANNEL_PARTIAL(tmp4.guildId, tmp4.channelId, tmp4.messageId);
     let tmp17 = null;
     if (combined !== pathname.pathname) {
       if (obj5 != null) {
@@ -132,14 +140,30 @@ function updateSelectedChannelListener(location) {
   obj.voiceChannelId = voiceChannelId;
   obj.voiceGuildId = voiceGuildId;
   obj.voiceMessageId = voiceMessageId;
-  ({ guildId, channelId, messageId, jumpType, voiceChannelId: voiceChannelId2, voiceGuildId: voiceGuildId2, voiceMessageId: voiceMessageId2 } = obj);
+  ({
+    guildId,
+    channelId,
+    messageId,
+    jumpType,
+    voiceChannelId: voiceChannelId2,
+    voiceGuildId: voiceGuildId2,
+    voiceMessageId: voiceMessageId2,
+  } = obj);
   if (null == voiceChannelId2) {
     if (null == voiceGuildId2) {
       if (closure_15 != null) {
         const _JSON5 = JSON;
         const json = JSON.stringify(location);
         const _JSON6 = JSON;
-        const obj2 = { guildId: null, channelId: null, messageId: null, jumpType: null, voiceChannelId: null, voiceGuildId: null, voiceMessageId: null };
+        const obj2 = {
+          guildId: null,
+          channelId: null,
+          messageId: null,
+          jumpType: null,
+          voiceChannelId: null,
+          voiceGuildId: null,
+          voiceMessageId: null,
+        };
         obj2[0] = guildId;
         obj2[1] = channelId;
         obj2[2] = messageId;
@@ -148,7 +172,9 @@ function updateSelectedChannelListener(location) {
         obj2[5] = voiceGuildId2;
         obj2[6] = voiceMessageId2;
         const _HermesInternal3 = HermesInternal;
-        obj19.verbose("UpdateSelectedChannelListener -> no voice route present in " + json + " " + JSON.stringify(obj2) + " ");
+        obj19.verbose(
+          "UpdateSelectedChannelListener -> no voice route present in " + json + " " + JSON.stringify(obj2) + " ",
+        );
       }
       const channel = store.getChannel(store2.getLastSelectedChannelId());
       let isGuildVoiceResult;
@@ -197,7 +223,15 @@ function updateSelectedChannelListener(location) {
         }
         const _JSON = JSON;
         const _JSON2 = JSON;
-        const obj4 = { guildId: null, channelId: null, messageId: null, jumpType: null, voiceChannelId: null, voiceGuildId: null, voiceMessageId: null };
+        const obj4 = {
+          guildId: null,
+          channelId: null,
+          messageId: null,
+          jumpType: null,
+          voiceChannelId: null,
+          voiceGuildId: null,
+          voiceMessageId: null,
+        };
         obj4[0] = guildId;
         obj4[1] = channelId;
         obj4[2] = messageId;
@@ -207,7 +241,17 @@ function updateSelectedChannelListener(location) {
         obj4[6] = voiceMessageId2;
         const json1 = JSON.stringify(location);
         const _HermesInternal = HermesInternal;
-        obj26.log("UpdateSelectedChannelListener -> !!!VERY BAD!!! channel.id " + id + " (voiceChannelId " + voiceChannelId2 + ") is not a voice channel! and yet RouteUtils thinks it is! " + json1 + " " + JSON.stringify(obj4) + " ");
+        obj26.log(
+          "UpdateSelectedChannelListener -> !!!VERY BAD!!! channel.id " +
+            id +
+            " (voiceChannelId " +
+            voiceChannelId2 +
+            ") is not a voice channel! and yet RouteUtils thinks it is! " +
+            json1 +
+            " " +
+            JSON.stringify(obj4) +
+            " ",
+        );
       }
       obj26 = closure_15;
     }
@@ -216,7 +260,15 @@ function updateSelectedChannelListener(location) {
     const _JSON3 = JSON;
     const json2 = JSON.stringify(location);
     const _JSON4 = JSON;
-    const obj5 = { guildId: null, channelId: null, messageId: null, jumpType: null, voiceChannelId: null, voiceGuildId: null, voiceMessageId: null };
+    const obj5 = {
+      guildId: null,
+      channelId: null,
+      messageId: null,
+      jumpType: null,
+      voiceChannelId: null,
+      voiceGuildId: null,
+      voiceMessageId: null,
+    };
     obj5[0] = guildId;
     obj5[1] = channelId;
     obj5[2] = messageId;
@@ -305,7 +357,16 @@ let c16 = false;
 const tmp3 = new timestampDefault("RouteUtils");
 const CHANNELResult = Routes.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
 const guildIdResult = RouteParam.guildId();
-const items = ["" + CHANNELResult + Routes.VOICE_CHAT_CHANNEL_PARTIAL(RouteParam3.guildId({ name: "voiceGuildId" }), RouteParam4.channelId({ name: "voiceChannelId" }), ":voiceMessageId?"), CHANNELResult];
+const items = [
+  "" +
+    CHANNELResult +
+    Routes.VOICE_CHAT_CHANNEL_PARTIAL(
+      RouteParam3.guildId({ name: "voiceGuildId" }),
+      RouteParam4.channelId({ name: "voiceChannelId" }),
+      ":voiceMessageId?",
+    ),
+  CHANNELResult,
+];
 const guildIdResult1 = RouteParam3.guildId({ name: "voiceGuildId" });
 let result = require("set").fileFinishedImporting("modules/routing/native/RouteManagerUtils.tsx");
 
@@ -373,7 +434,16 @@ export const transitionToVoiceRoute = function transitionToVoiceRoute(arg0, arg1
     params = {};
   }
   const voiceChannelId = params.voiceChannelId;
-  logger.log("transitionToVoiceRoute(<" + arg0 + ">, <" + arg1 + ">), current route " + defaultRoute + " has voiceChannelId " + voiceChannelId);
+  logger.log(
+    "transitionToVoiceRoute(<" +
+      arg0 +
+      ">, <" +
+      arg1 +
+      ">), current route " +
+      defaultRoute +
+      " has voiceChannelId " +
+      voiceChannelId,
+  );
   if (voiceChannelId !== arg1) {
     transitionTo.transitionToGuild(arg0, arg1);
     const tmpResult = transitionTo;

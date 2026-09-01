@@ -15,7 +15,10 @@ createToggle = {
   IconComponent: require("LanguageIcon").LanguageIcon,
   useTrailing: function useLanguageSettingTrailing() {
     const items = [closure_2];
-    _require = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => locale.locale);
+    _require = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+      items,
+      () => locale.locale,
+    );
     const obj = initialize;
     const tmp = _require;
     const availableLocales = require("../../../../intl/index.native.tsx").getAvailableLocales();
@@ -27,13 +30,13 @@ createToggle = {
     }
     return stringResult;
   },
-  screen: createToggle
+  screen: createToggle,
 };
 createToggle = {
   route: require("ME").UserSettingsSections.LANGUAGE,
   getComponent() {
     return handleLanguageChange /* handleLanguageChange */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/LanguageSetting.tsx");

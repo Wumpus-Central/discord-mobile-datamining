@@ -56,7 +56,12 @@ function UserResult(user) {
   const stateFromStores1 = obj2.useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
   let obj3 = user(589);
   const items3 = [closure_7];
-  const stateFromStoresObject = obj3.useStateFromStoresObject(items3, () => ({ isMobileOnline: closure_1_7.isMobileOnline(user.id), isVROnline: closure_1_7.isVROnline(user.id), status: closure_1_7.getStatus(user.id), activities: closure_1_7.getActivities(user.id) }));
+  const stateFromStoresObject = obj3.useStateFromStoresObject(items3, () => ({
+    isMobileOnline: closure_1_7.isMobileOnline(user.id),
+    isVROnline: closure_1_7.isVROnline(user.id),
+    status: closure_1_7.getStatus(user.id),
+    activities: closure_1_7.getActivities(user.id),
+  }));
   const status = stateFromStoresObject.status;
   let extractTimestampResult;
   ({ isMobileOnline, isVROnline, activities } = stateFromStoresObject);
@@ -80,8 +85,20 @@ function UserResult(user) {
   obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: items4, children: null };
   items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items5 = [callback(_modDef16562, obj), , ];
-  obj1 = { user, guildId: "e", isMobileOnline: true, isVROnline: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi", status: null, streaming: "956202360ccc6511b561141de5cd74d2", style: "ro.messages.956202360ccc6511b561141de5cd74d2.compiled.messages", size: "jsona", animate: "text-md/semibold", typing: "text-feedback-critical", autoStatusCutout: null };
+  const items5 = [callback(_modDef16562, obj), ,];
+  obj1 = {
+    user,
+    guildId: "e",
+    isMobileOnline: true,
+    isVROnline: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi",
+    status: null,
+    streaming: "956202360ccc6511b561141de5cd74d2",
+    style: "ro.messages.956202360ccc6511b561141de5cd74d2.compiled.messages",
+    size: "jsona",
+    animate: "text-md/semibold",
+    typing: "text-feedback-critical",
+    autoStatusCutout: null,
+  };
   obj1[2] = isMobileOnline;
   obj1[3] = isVROnline;
   let tmp19 = null;
@@ -114,7 +131,16 @@ function UserResult(user) {
     comparator = tmp2(4322).getUserTag(user);
     const tmp2Result3 = tmp2(4322);
   }
-  obj2 = { name: comparator, subtitle: null, unread: null, resolvedUnreadSetting: null, muted: null, lastMessageTimestampString: null, mentionCount: null, mentionBadge: null };
+  obj2 = {
+    name: comparator,
+    subtitle: null,
+    unread: null,
+    resolvedUnreadSetting: null,
+    muted: null,
+    lastMessageTimestampString: null,
+    mentionCount: null,
+    mentionBadge: null,
+  };
   let tmp14Result;
   if (null != lastMessage) {
     if (null != channel) {
@@ -145,7 +171,10 @@ function UserResultWithChannel(arg0) {
   let obj = initialize;
   const items = [closure_9];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_9.isChannelMuted(undefined, channel.id));
-  const baseChannelUnreadBadgeState = useChannelUnreadBadgeState.useBaseChannelUnreadBadgeState(channel, stateFromStores);
+  const baseChannelUnreadBadgeState = useChannelUnreadBadgeState.useBaseChannelUnreadBadgeState(
+    channel,
+    stateFromStores,
+  );
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
   const obj2 = useChannelUnreadBadgeState;
   const items1 = [closure_8];

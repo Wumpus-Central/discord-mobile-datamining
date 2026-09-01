@@ -13,14 +13,31 @@ const require = arg1;
 noopAll;
 ({ Permissions: closure_6, Fonts } = sum);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: { display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", marginBottom: 88, padding: 16 }, title: null, subtitle: null };
+createCacheKey = {
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 88,
+    padding: 16,
+  },
+  title: null,
+  subtitle: null,
+};
 createCacheKey = {};
-const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24, { marginBottom: 8 }));
+const merged = Object.assign(
+  importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24, {
+    marginBottom: 8,
+  }),
+);
 createCacheKey.textAlign = "center";
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { paddingBottom: 2, textAlign: "center" };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventsNoContent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/GuildEventsNoContent.tsx",
+);
 
 export default function GuildEventsNoContent(guild) {
   guild = guild.guild;
@@ -32,8 +49,14 @@ export default function GuildEventsNoContent(guild) {
   let stateFromStores = obj.useStateFromStores(items, () => closure_1_4.can(closure_1_6.MANAGE_ROLES, guild), items1);
   obj = { style: tmp.container, children: null };
   obj = { icon: onClose(9753), IconComponent: guild(9755).CalendarIcon };
-  const items2 = [callback(onClose(8678), obj), , , ];
-  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const items2 = [callback(onClose(8678), obj), , ,];
+  obj1 = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = guild(1236).intl;
   obj1[4] = intl.string(guild(1236).t["WgZ+3D"]);
   items2[1] = callback(guild(4474).Text, obj1);
@@ -56,4 +79,4 @@ export default function GuildEventsNoContent(guild) {
   items2[3] = stateFromStores;
   obj[1] = items2;
   return closure_8(View, obj);
-};
+}

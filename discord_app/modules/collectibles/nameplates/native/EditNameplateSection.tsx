@@ -10,7 +10,12 @@ require = arg1;
 let c3 = importAllResult;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 let obj = { row: null, rowSpacer: null, nameplate: null };
-obj = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: require("useCollectibleListLayout").GUTTER_SIZE };
+obj = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  paddingHorizontal: require("useCollectibleListLayout").GUTTER_SIZE,
+};
 obj[0] = obj;
 createCacheKey = { height: require("useCollectibleListLayout").GUTTER_SIZE };
 obj[1] = createCacheKey;
@@ -58,7 +63,7 @@ const memoResult = importAllResult.memo((arg0) => {
       return closure_1_6(closure_4, obj, arg1);
     }
   });
-  const items2 = [callback(closure_4, obj), ];
+  const items2 = [callback(closure_4, obj)];
   obj = { style: tmp.rowSpacer };
   items2[1] = callback(closure_4, obj);
   obj[0] = items2;
@@ -77,7 +82,19 @@ const memoResult1 = importAllResult.memo((nameplate) => {
   }, items1);
   const tmp = callback3();
   const items2 = [tmp.nameplate, { borderRadius: 6 }];
-  return callback(nameplate(8091).EditCollectiblesListItemProduct, { skuId: nameplate.skuId, isSelected, onPress: callback, size, accessibilityLabel: nameplate.label, children: callback(setSelectedNameplate(8522), { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: items2 }) });
+  return callback(nameplate(8091).EditCollectiblesListItemProduct, {
+    skuId: nameplate.skuId,
+    isSelected,
+    onPress: callback,
+    size,
+    accessibilityLabel: nameplate.label,
+    children: callback(setSelectedNameplate(8522), {
+      nameplate: memo,
+      fullOpacity: true,
+      isSquarePreview: true,
+      style: items2,
+    }),
+  });
 });
 memoResult1.displayName = "EditNameplateItem";
 const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/native/EditNameplateSection.tsx");

@@ -8,9 +8,13 @@ import metadataDefault from "../../../../../../discord_assets/assets/mana/asset-
 
 const Image = get_ActivityIndicator.Image;
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ExperimentalDiscordShopLockupExperiementLogo.native.tsx");
+const result = set.fileFinishedImporting(
+  "design/components/mana-assets/native/generated/ExperimentalDiscordShopLockupExperiementLogo.native.tsx",
+);
 
-export const ExperimentalDiscordShopLockupExperiementLogo = function ExperimentalDiscordShopLockupExperiementLogo(color) {
+export const ExperimentalDiscordShopLockupExperiementLogo = function ExperimentalDiscordShopLockupExperiementLogo(
+  color,
+) {
   let ICON_STRONG = color.color;
   ({ accessible, accessibilityLabel, resizeMode } = color);
   if (ICON_STRONG === undefined) {
@@ -42,7 +46,23 @@ export const ExperimentalDiscordShopLockupExperiementLogo = function Experimenta
     }
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
-  obj1 = { fadeDuration: 0, source: { uri: metadataDefault }, style: items, accessible, accessibilityLabel, resizeMode };
+  obj1 = {
+    fadeDuration: 0,
+    source: { uri: metadataDefault },
+    style: items,
+    accessible,
+    accessibilityLabel,
+    resizeMode,
+  };
   items = [{ width: num * num3, height: num2 * num3 }, tmp6];
-  return <Image fadeDuration={0} source={{ uri: metadataDefault }} style={items} accessible={accessible} accessibilityLabel={accessibilityLabel} resizeMode={resizeMode} />;
+  return (
+    <Image
+      fadeDuration={0}
+      source={{ uri: metadataDefault }}
+      style={items}
+      accessible={accessible}
+      accessibilityLabel={accessibilityLabel}
+      resizeMode={resizeMode}
+    />
+  );
 };

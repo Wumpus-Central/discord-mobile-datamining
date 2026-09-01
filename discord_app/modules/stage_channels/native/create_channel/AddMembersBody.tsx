@@ -49,12 +49,30 @@ function _toPropertyKey(obj) {
 ({ View: error, ScrollView: closure_8, SectionList: c9 } = get_ActivityIndicator);
 ({ RowType: map1, MEMBER_REQUEST_COUNT: closure_14 } = RowType);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-createCacheKey = { inputContainer: null, inputDescContainer: null, inputDescText: null, tagRoleColor: null, tagAvatar: null, emptyState: null, emptyStateText: null, sectionRowWrapper: null, adminWarning: null };
+createCacheKey = {
+  inputContainer: null,
+  inputDescContainer: null,
+  inputDescText: null,
+  tagRoleColor: null,
+  tagAvatar: null,
+  emptyState: null,
+  emptyStateText: null,
+  sectionRowWrapper: null,
+  adminWarning: null,
+};
 createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12 };
+createCacheKey[1] = {
+  flexDirection: "row",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_12,
+};
 createCacheKey[2] = { flex: 1, textAlign: "center" };
-let obj1 = { flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12 };
+let obj1 = {
+  flexDirection: "row",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_12,
+};
 createCacheKey[3] = { height: 12, width: 12, borderRadius: ThemesDefault.radii.round };
 let obj2 = { height: 12, width: 12, borderRadius: ThemesDefault.radii.round };
 createCacheKey[4] = { width: 16, height: 16, borderRadius: ThemesDefault.radii.sm };
@@ -62,7 +80,10 @@ createCacheKey[5] = { backgroundColor: "transparent", paddingTop: 40 };
 let obj3 = { width: 16, height: 16, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[6] = { color: ThemesDefault.colors.TEXT_DEFAULT };
 let obj4 = { color: ThemesDefault.colors.TEXT_DEFAULT };
-createCacheKey[7] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: ThemesDefault.space.PX_12 };
+createCacheKey[7] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  paddingVertical: ThemesDefault.space.PX_12,
+};
 createCacheKey[8] = { marginHorizontal: 16, marginVertical: 8 };
 let closure_20 = createCacheKey.createStyles(createCacheKey);
 let obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: ThemesDefault.space.PX_12 };
@@ -113,7 +134,13 @@ export default function AddMembersBody(pendingAdditions) {
     let items2 = [];
   } else {
     let tmp10Result = tmp10(9707);
-    const rolesRowsWithPermissionDisabled = tmp10Result.getRolesRowsWithPermissionDisabled(guild, stateFromStores, channel, permission, filterByQuery);
+    const rolesRowsWithPermissionDisabled = tmp10Result.getRolesRowsWithPermissionDisabled(
+      guild,
+      stateFromStores,
+      channel,
+      permission,
+      filterByQuery,
+    );
     let tmp19 = 0 === rolesRowsWithPermissionDisabled.length && "" === str.trim();
     if (tmp19) {
       tmp19 = 1 === stateFromStores.length;
@@ -192,7 +219,7 @@ export default function AddMembersBody(pendingAdditions) {
     });
   };
   obj1[1] = callback2(pendingAdditions(9716), obj2);
-  const items5 = [callback2(closure_7, obj1), , , ];
+  const items5 = [callback2(closure_7, obj1), , ,];
   let tmp27Result = null;
   if (null != inputDesc) {
     obj3 = { style: null, children: null };
@@ -235,9 +262,18 @@ export default function AddMembersBody(pendingAdditions) {
       return tmp25(tmp26, obj10);
     }
   }
-  const obj11 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, keyboardShouldPersistTaps: "always" };
+  const obj11 = {
+    contentContainerStyle: null,
+    renderItem: null,
+    renderSectionHeader: null,
+    sections: null,
+    keyboardShouldPersistTaps: "always",
+  };
   const tmp4Result = pendingAdditions(9716);
-  obj11[0] = { paddingHorizontal: pendingAdditions(712).space.PX_16, paddingBottom: pendingAdditions(712).space.PX_16 + pendingAdditions(5594)(obj).insets.bottom };
+  obj11[0] = {
+    paddingHorizontal: pendingAdditions(712).space.PX_16,
+    paddingBottom: pendingAdditions(712).space.PX_16 + pendingAdditions(5594)(obj).insets.bottom,
+  };
   obj11[1] = function renderItem(item) {
     item = item.item;
     ({ index, section } = item);
@@ -246,7 +282,15 @@ export default function AddMembersBody(pendingAdditions) {
       const intl = guild(sectionRowWrapper[18]).intl;
       tmp = section.title === intl.string(guild(sectionRowWrapper[18]).t["LPJmL/"]);
     }
-    let obj = { start: tmp, end: index === section.data.length - 1, guildId: item.id, item, disabled: item.disabled, subLabel: null, onPress: null };
+    let obj = {
+      start: tmp,
+      end: index === section.data.length - 1,
+      guildId: item.id,
+      item,
+      disabled: item.disabled,
+      subLabel: null,
+      onPress: null,
+    };
     let stringResult = null;
     if (item.disabled) {
       const intl2 = guild(sectionRowWrapper[18]).intl;
@@ -290,7 +334,7 @@ export default function AddMembersBody(pendingAdditions) {
             const obj2 = { text: null, icon: null };
             obj2[0] = tmp4.name;
             const obj3 = { style: null };
-            const items = [closure_1_3.tagRoleColor, ];
+            const items = [closure_1_3.tagRoleColor];
             const obj4 = { backgroundColor: null };
             obj4[0] = tmp4.colorString;
             items[1] = obj4;
@@ -319,7 +363,14 @@ export default function AddMembersBody(pendingAdditions) {
   obj11[2] = function renderSectionHeader(section) {
     let tmp2 = null;
     if (section.section.data.length > 0) {
-      const obj = { style: null, maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: null };
+      const obj = {
+        style: null,
+        maxFontSizeMultiplier: 2,
+        accessibilityRole: "header",
+        variant: "text-sm/semibold",
+        color: "interactive-text-default",
+        children: null,
+      };
       obj[0] = sectionRowWrapper.sectionRowWrapper;
       obj[5] = tmp;
       tmp2 = closure_1_16(guild(sectionRowWrapper[24]).Text, obj);
@@ -328,4 +379,4 @@ export default function AddMembersBody(pendingAdditions) {
   };
   obj11[3] = items3;
   tmp27Result = tmp27(BottomSheetSectionList, obj11);
-};
+}

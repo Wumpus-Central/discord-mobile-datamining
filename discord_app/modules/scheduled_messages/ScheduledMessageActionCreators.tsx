@@ -12,7 +12,7 @@ function _createScheduledMessage() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -68,7 +68,17 @@ function _createScheduledMessage() {
               const HTTP = callback(closure_2[5]).HTTP;
               const obj3 = { url: null, body: null, rejectWithError: true };
               obj3[0] = closure_5.SCHEDULED_MESSAGES;
-              const obj4 = { channel_id: null, content: null, scheduled_timestamp: null, flags: null, message_reference: null, allowed_mentions: null, sticker_ids: null, poll: null, attachments: null };
+              const obj4 = {
+                channel_id: null,
+                content: null,
+                scheduled_timestamp: null,
+                flags: null,
+                message_reference: null,
+                allowed_mentions: null,
+                sticker_ids: null,
+                poll: null,
+                attachments: null,
+              };
               obj4[0] = callback;
               obj4[1] = closure_2.content;
               obj4[2] = message;
@@ -128,7 +138,10 @@ function _createScheduledMessage() {
             const obj11 = callback(closure_2[6]);
             const obj9 = { dismissAction: null };
             obj9[0] = constants.INDIRECT_ACTION;
-            const result = callback(closure_2[7]).UNSAFE_markDismissibleContentAsDismissed(callback(closure_2[8]).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK, obj9);
+            const result = callback(closure_2[7]).UNSAFE_markDismissibleContentAsDismissed(
+              callback(closure_2[8]).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK,
+              obj9,
+            );
             c6 = 0;
             c8 = 3;
             obj = { value: null, done: true };
@@ -165,7 +178,7 @@ function _updateScheduledMessage() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (body === 2) {
         body = 3;
         HermesBuiltin.throwTypeError();
@@ -327,7 +340,7 @@ function _deleteScheduledMessage() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -438,7 +451,7 @@ function _sendScheduledMessageNow() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -544,7 +557,7 @@ function _sendScheduledMessageNow() {
 }
 function _getScheduledMessages() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const callback = tmp2;
     const HTTP = closure_1_0(530).HTTP;
     obj1 = { url: null, rejectWithError: true };
@@ -564,7 +577,7 @@ function _getScheduledMessages() {
 }
 function _fetchScheduledMessages() {
   let self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     let callback2 = tmp3;
     closure_1_1(closure_1_2[4]).dispatch({ type: "FETCH_SCHEDULED_MESSAGES" });
     c3 = 1;

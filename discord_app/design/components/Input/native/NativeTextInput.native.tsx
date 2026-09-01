@@ -87,7 +87,7 @@ const forwardRefResult = importAllResult.forwardRef((value, ref2) => {
     if (!value.multiline) {
       obj1 = { style: null, children: null };
       obj1[0] = { flexBasis: 0, flexGrow: 1 };
-      const items4 = [tmp19, ];
+      const items4 = [tmp19];
       let current = ref.current;
       let isFocusedResult;
       if (current != null) {

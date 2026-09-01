@@ -20,7 +20,8 @@ function isMatchingListeningActivity(closure_0, party) {
   } else {
     isTopArtistEntryResult = tmp(8612).isTopArtistEntry(closure_0);
     if (isTopArtistEntryResult) {
-      isTopArtistEntryResult = closure_0.extra.media.provider === tmp(8614).ContentInventoryListenedMediaProvider.SPOTIFY;
+      isTopArtistEntryResult =
+        closure_0.extra.media.provider === tmp(8614).ContentInventoryListenedMediaProvider.SPOTIFY;
     }
     const tmpResult = tmp(8612);
   }

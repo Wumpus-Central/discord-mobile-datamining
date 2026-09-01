@@ -116,4 +116,4 @@ export default function validateBuildOverride(targetBuildOverride, items1) {
   const intl6 = getSystemLocale.intl;
   obj6[1] = intl6.string(getSystemLocale.t.d34xi4);
   return obj6;
-};
+}

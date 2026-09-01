@@ -4,8 +4,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 
 let closure_0 = {};
 const Store = initializeDefault.Store;
-class GuildConfigGatesStore extends Store {
-}
+class GuildConfigGatesStore extends Store {}
 const prototype = GuildConfigGatesStore.prototype;
 prototype["hasLoaded"] = function hasLoaded(arg0) {
   return null != dependencyMap[arg0];
@@ -20,11 +19,14 @@ prototype["getGates"] = function getGates(arg0) {
 GuildConfigGatesStore.displayName = "GuildConfigGatesStore";
 const guildConfigGatesStore = new GuildConfigGatesStore(dispatcherDefault, {
   GUILD_CONFIG_GATES_FETCH_SUCCESS: function handleFetchSuccess(guildId) {
-    closure_0[guildId.guildId] = { guildVerificationRoleEnabled: guildId.guildVerificationRoleEnabled, applicationIdentityLinkedRolesEnabled: guildId.applicationIdentityLinkedRolesEnabled };
+    closure_0[guildId.guildId] = {
+      guildVerificationRoleEnabled: guildId.guildVerificationRoleEnabled,
+      applicationIdentityLinkedRolesEnabled: guildId.applicationIdentityLinkedRolesEnabled,
+    };
   },
   LOGOUT: function handleLogout() {
     closure_0 = {};
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/guild_config_gates/GuildConfigGatesStore.tsx");
 

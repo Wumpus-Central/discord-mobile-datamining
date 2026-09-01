@@ -39,20 +39,20 @@ Object.defineProperty(prototype, "isTracing", {
     }
     return tmp2;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "endTime", {
   get: function endTime() {
     return this.endTime_;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "endTime", {
   get: undefined,
   set: function endTime(endTime_) {
     this.endTime_ = endTime_;
     this.isTracing_ = true;
-  }
+  },
 });
 prototype["resumeTracing"] = function resumeTracing() {
   const self = this;
@@ -196,7 +196,7 @@ prototype["timeAsync"] = function timeAsync(emoji, name, closure_1_0) {
   closure_1 = name;
   closure_2 = closure_1_0;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     closure_1 = tmp5;
     closure_0 = tmp2;
     if (!c3.isTracing) {
@@ -223,6 +223,8 @@ let items = [obj];
 obj[3] = items;
 obj.logs = obj.logGroups[0].logs;
 obj.prefix = "";
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx",
+);
 
 export default obj;

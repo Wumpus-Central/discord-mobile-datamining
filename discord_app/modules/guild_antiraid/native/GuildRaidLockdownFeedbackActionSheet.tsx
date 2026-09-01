@@ -8,7 +8,9 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { display: "flex", gap: 24 } });
-const result = require("set").fileFinishedImporting("modules/guild_antiraid/native/GuildRaidLockdownFeedbackActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_antiraid/native/GuildRaidLockdownFeedbackActionSheet.tsx",
+);
 
 export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
   guildId = guildId.guildId;
@@ -26,7 +28,7 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
   const intl = guildId(1236).intl;
   obj[0] = intl.string(guildId(1236).t["//3pvi"]);
   obj[1] = guildId(7263).RaidLockdownFeedbackType.DM_SPAM;
-  let items = [obj, , , , , ];
+  let items = [obj, , , , ,];
   obj = { text: null, value: null };
   const intl2 = guildId(1236).intl;
   obj[0] = intl2.string(guildId(1236).t.SdVsip);
@@ -67,21 +69,28 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
       children: items.map((label) => {
         const value = label.value;
         guildId = value;
-        return closure_1_6(guildId(7683).TableCheckboxRow, {
-          onPress() {
-            closure_1_2(closure_1_1.includes(closure_0) ? ((arr) => arr.filter((arg0) => arg0 !== closure_0)) : ((arg0) => {
-              const items = [];
-              items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-              return items;
-            }));
+        return closure_1_6(
+          guildId(7683).TableCheckboxRow,
+          {
+            onPress() {
+              closure_1_2(
+                closure_1_1.includes(closure_0)
+                  ? (arr) => arr.filter((arg0) => arg0 !== closure_0)
+                  : (arg0) => {
+                      const items = [];
+                      items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
+                      return items;
+                    },
+              );
+            },
+            checked: first.includes(value),
+            label: label.text,
           },
-          checked: first.includes(value),
-          label: label.text
-        }, value);
-      })
+          value,
+        );
+      }),
     }),
-  ,
-
+    ,
   ];
   let hasItem = first.includes(guildId(7263).RaidLockdownFeedbackType.OTHER);
   if (hasItem) {
@@ -102,7 +111,7 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
       obj.trackWithMetadata(closure_1_5.GUILD_RAID_LOCKDOWN_FEEDBACK, obj);
       first(4445).hideActionSheet("GuildRaidLockdownFeedbackActionSheet");
     },
-    text: null
+    text: null,
   };
   const intl9 = tmp5(1236).intl;
   obj10[1] = intl9.string(guildId(1236).t.nAt0rE);
@@ -110,4 +119,4 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
   obj7[1] = items1;
   obj5[2] = tmp8(tmp9, obj7);
   return callback(guildId(5989).ActionSheet, obj5);
-};
+}

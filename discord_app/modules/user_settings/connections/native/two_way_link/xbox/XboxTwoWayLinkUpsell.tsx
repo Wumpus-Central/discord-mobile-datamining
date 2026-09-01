@@ -14,7 +14,9 @@ require = arg1;
 noopAll;
 ({ HelpdeskArticles: c3, AnalyticsLocations: c4 } = ME);
 let closure_6 = createCacheKey.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxTwoWayLinkUpsell.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/xbox/XboxTwoWayLinkUpsell.tsx",
+);
 
 export const XboxTwoWayLinkUpsell = function XboxTwoWayLinkUpsell() {
   let obj = combinedDefault;
@@ -33,5 +35,9 @@ export const XboxTwoWayLinkUpsell = function XboxTwoWayLinkUpsell() {
     const items = [constants.RELINK_UPSELL];
     return callback(table[10]).showModal(items);
   };
-  return jsx(OneWayToTwoWayNewTag.OneWayToTwoWayLinkUpsell, { style: callback().upsellImage, source: null, resizeMode: "contain" });
+  return jsx(OneWayToTwoWayNewTag.OneWayToTwoWayLinkUpsell, {
+    style: callback().upsellImage,
+    source: null,
+    resizeMode: "contain",
+  });
 };

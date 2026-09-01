@@ -16,7 +16,7 @@ function _savedMessageJumpToMessage() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -109,7 +109,9 @@ function _savedMessageJumpToMessage() {
           if (lib != null) {
             guildId = lib.getGuildId();
           }
-          lib(closure_2[9])(closure_8.CHANNEL(guildId, closure_0.saveData.channelId, closure_0.saveData.messageId), { openChannel: true });
+          lib(closure_2[9])(closure_8.CHANNEL(guildId, closure_0.saveData.channelId, closure_0.saveData.messageId), {
+            openChannel: true,
+          });
           constants = 3;
           return { value: "HermesInternal", done: null };
         } catch (tmp30) {
@@ -173,7 +175,9 @@ export const useDueInString = function useDueInString(arg0) {
 export const useSavedMessageChannel = function useSavedMessageChannel(savedMessage) {
   const _require = savedMessage;
   const items = [closure_6];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_6.getChannel(savedMessage.saveData.channelId));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_6.getChannel(savedMessage.saveData.channelId),
+  );
   const items1 = [stateFromStores, savedMessage];
   return React.useMemo(() => {
     let tmp = stateFromStores;

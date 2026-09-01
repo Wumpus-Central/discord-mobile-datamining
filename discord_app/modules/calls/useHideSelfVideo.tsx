@@ -23,7 +23,11 @@ export default function useHideSelfVideo(arg0) {
   const items2 = [closure_4];
   const items3 = [stateFromStores, DEFAULT];
   let tmp5 = null == arg0;
-  const stateFromStores2 = DEFAULT(589).useStateFromStores(items2, () => closure_1_4.isLocalVideoDisabled(stateFromStores, DEFAULT), items3);
+  const stateFromStores2 = DEFAULT(589).useStateFromStores(
+    items2,
+    () => closure_1_4.isLocalVideoDisabled(stateFromStores, DEFAULT),
+    items3,
+  );
   if (!tmp5) {
     tmp5 = arg0 === stateFromStores;
   }
@@ -34,8 +38,12 @@ export default function useHideSelfVideo(arg0) {
     tmp5,
     stateFromStores2,
     (arg0) => {
-      stateFromStores(closure_1_2[5]).setDisableLocalVideo(stateFromStores, arg0 ? closure_1_5.DISABLED : closure_1_5.MANUAL_ENABLED, DEFAULT);
-    }
+      stateFromStores(closure_1_2[5]).setDisableLocalVideo(
+        stateFromStores,
+        arg0 ? closure_1_5.DISABLED : closure_1_5.MANUAL_ENABLED,
+        DEFAULT,
+      );
+    },
   ];
   return items4;
-};
+}

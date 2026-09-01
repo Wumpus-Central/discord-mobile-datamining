@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 ({ AnalyticEvents: c5, InstantInviteSources: closure_6, RelationshipTypes: error } = ME);
 let closure_9 = { ADD: "add" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionRow.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/friends/components/ContactSuggestionRow.tsx",
+);
 
 export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFriend) {
   suggestedFriend = suggestedFriend.suggestedFriend;
@@ -61,10 +63,14 @@ export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFrien
       }
       tmp12 = mutualFriendsCount1 > 0;
     }
-    const suggestedContactNameForSuggestion = suggestedFriend(onAddSuggestion[9]).getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend);
+    const suggestedContactNameForSuggestion = suggestedFriend(onAddSuggestion[9]).getSuggestedContactNameForSuggestion(
+      friendSuggestionName,
+      suggestedFriend,
+    );
     if (null != suggestedContactNameForSuggestion) {
       const _HermesInternal = HermesInternal;
-      let combined = "" + added(tmp3[4]).getUserTag(suggestedFriend.user) + " \u00B7 " + suggestedContactNameForSuggestion;
+      let combined =
+        "" + added(tmp3[4]).getUserTag(suggestedFriend.user) + " \u00B7 " + suggestedContactNameForSuggestion;
       let tmp15 = added;
       const obj6 = added(tmp3[4]);
     } else {
@@ -103,7 +109,13 @@ export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFrien
     const intl2 = tmp2(tmp3[6]).intl;
     obj[3] = intl2.string(suggestedFriend(onAddSuggestion[6]).t.Kzyxm9);
     obj[4] = !stateFromStores;
-    obj.subLabel = jsx(suggestedFriend(onAddSuggestion[11]).ActionStatusSubLabel, { actioned: null, label: null, secondaryLabel: null, actionStatus: null, animate: null });
+    obj.subLabel = jsx(suggestedFriend(onAddSuggestion[11]).ActionStatusSubLabel, {
+      actioned: null,
+      label: null,
+      secondaryLabel: null,
+      actionStatus: null,
+      animate: null,
+    });
     obj2 = { user: null, added: null, onAddSuggestion: null, animate: null };
     obj2[0] = suggestedFriend.user;
     obj2[1] = sharedValue;
@@ -119,8 +131,19 @@ export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFrien
       onAddSuggestion(id);
     };
     obj2[3] = !stateFromStores;
-    obj.trailing = jsx(suggestedFriend(onAddSuggestion[12]).ContactSuggestionActions, { user: null, added: null, onAddSuggestion: null, animate: null });
-    return jsx(tmp15(onAddSuggestion[10]), { actioned: null, label: null, secondaryLabel: null, actionStatus: null, animate: null });
+    obj.trailing = jsx(suggestedFriend(onAddSuggestion[12]).ContactSuggestionActions, {
+      user: null,
+      added: null,
+      onAddSuggestion: null,
+      animate: null,
+    });
+    return jsx(tmp15(onAddSuggestion[10]), {
+      actioned: null,
+      label: null,
+      secondaryLabel: null,
+      actionStatus: null,
+      animate: null,
+    });
   }
   obj = added(onAddSuggestion[4]);
   friendSuggestionName = obj.getName(suggestedFriend.user);

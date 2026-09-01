@@ -26,8 +26,14 @@ function handleCreateGuild() {
 class GuildsEmptyContent {
   constructor(arg0) {
     tmp = closure_15();
-    obj = { alwaysBounceVertical: false, bounces: false, style: tmp.scrollView, contentContainerStyle: items, children: null };
-    items = [, ];
+    obj = {
+      alwaysBounceVertical: false,
+      bounces: false,
+      style: tmp.scrollView,
+      contentContainerStyle: items,
+      children: null,
+    };
+    items = [,];
     items[0] = tmp.scrollViewContentContainer;
     items[1] = global.contentContainerStyle;
     obj = { children: null };
@@ -35,15 +41,15 @@ class GuildsEmptyContent {
     obj2 = { style: tmp.illustrationWrapper, children: null };
     obj3 = { source: require("registerAsset"), style: tmp.illustration };
     obj2[1] = jsx(Image, obj3);
-    items1 = [, ];
+    items1 = [,];
     items1[0] = jsx(View, obj2);
     obj4 = { style: tmp.textWrapper, children: null };
     obj5 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: items2, children: null };
-    items2 = [, ];
+    items2 = [,];
     ({ text: arr3[0], headerText: arr3[1] } = tmp);
     intl = require("getSystemLocale").intl;
     obj5[3] = intl.string(require("getSystemLocale").t["Y7Ml/I"]);
-    items3 = [, ];
+    items3 = [,];
     items3[0] = jsx(require("Text").Heading, obj5);
     obj6 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
     intl2 = require("getSystemLocale").intl;
@@ -52,14 +58,14 @@ class GuildsEmptyContent {
     obj4[1] = items3;
     items1[1] = jsxs(View, obj4);
     obj1[1] = items1;
-    items4 = [, ];
+    items4 = [,];
     items4[0] = jsxs(View, obj1);
     obj7 = { style: tmp.buttonContainer, spacing: 12, children: null };
     obj8 = { size: "lg", text: null, onPress: null };
     intl3 = require("getSystemLocale").intl;
     obj8[1] = intl3.string(require("getSystemLocale").t.riOUtB);
     obj8[2] = handleJoinGuild;
-    items5 = [, ];
+    items5 = [,];
     items5[0] = jsx(require("Button").Button, obj8);
     obj9 = { size: "lg", variant: "secondary", text: null, onPress: null };
     intl4 = require("getSystemLocale").intl;
@@ -77,7 +83,20 @@ let c4 = importAllResult;
 ({ Image: c5, View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ ME: unpackModuleId, MOBILE_GUILD_UPSELL_LIST: closure_12 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let obj = { scrollView: null, header: null, headerTitle: null, scrollViewContentContainer: null, headerInner: null, content: null, illustrationWrapper: null, illustration: null, buttonContainer: null, textWrapper: null, headerText: null, text: null };
+let obj = {
+  scrollView: null,
+  header: null,
+  headerTitle: null,
+  scrollViewContentContainer: null,
+  headerInner: null,
+  content: null,
+  illustrationWrapper: null,
+  illustration: null,
+  buttonContainer: null,
+  textWrapper: null,
+  headerText: null,
+  text: null,
+};
 obj = { borderTopLeftRadius: ThemesDefault.radii.xxl, borderTopRightRadius: ThemesDefault.radii.sm };
 obj[0] = obj;
 createCacheKey = { zIndex: 100, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
@@ -88,11 +107,24 @@ obj[4] = { flex: 1, flexDirection: "row", alignItems: "center" };
 let obj2 = { flexGrow: 2, justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[5] = { flexGrow: 2, paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
 obj[6] = { width: "100%", paddingHorizontal: 36 };
-let obj3 = { flexGrow: 2, paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
+let obj3 = {
+  flexGrow: 2,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  alignItems: "center",
+  justifyContent: "center",
+};
 obj[7] = { resizeMode: "contain", alignSelf: "center", marginBottom: ThemesDefault.space.PX_24 };
 let obj4 = { resizeMode: "contain", alignSelf: "center", marginBottom: ThemesDefault.space.PX_24 };
-obj[8] = { paddingBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let obj5 = { paddingBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+obj[8] = {
+  paddingBottom: ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
+let obj5 = {
+  paddingBottom: ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 obj[9] = { marginHorizontal: ThemesDefault.space.PX_16, marginVertical: ThemesDefault.space.PX_24 };
 let obj7 = {};
 const merged = Object.assign(require("Text").TextStyleSheet["heading-md/bold"]);
@@ -167,12 +199,18 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
     obj1[0] = tmp.headerTitle;
     let obj2 = { style: null, children: null };
     obj2[0] = tmp.headerInner;
-    let obj3 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
+    let obj3 = {
+      color: "mobile-text-heading-primary",
+      variant: "heading-lg/bold",
+      maxFontSizeMultiplier: 1.75,
+      accessibilityRole: "header",
+      children: null,
+    };
     const intl = tmp2(1236).intl;
     obj3[4] = intl.string(tmp2(1236).t["7hB4kg"]);
     obj2[1] = callback(tmp2(4474).Text, obj3);
     obj1[1] = callback(closure_6, obj2);
-    const items3 = [callback(closure_6, obj1), ];
+    const items3 = [callback(closure_6, obj1)];
     let tmp18;
     if (isScreenLandscape) {
       const obj4 = { paddingBottom: null };
@@ -191,7 +229,9 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
   }
   return tmp14Result;
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/empty_states/GuildsEmpty.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/guilds/empty_states/GuildsEmpty.tsx",
+);
 
 export default memoResult;
 export { GuildsEmptyContent };

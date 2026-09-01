@@ -26,7 +26,7 @@ createToggle = {
   onPress: function onAccountEmailSettingPress() {
     _modDef7687.open(true);
   },
-  withArrow: true
+  withArrow: true,
 };
 createToggle = createToggle.createPressable(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountEmailSetting.tsx");

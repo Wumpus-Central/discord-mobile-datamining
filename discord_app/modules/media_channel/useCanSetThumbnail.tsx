@@ -7,7 +7,10 @@ const result = require("set").fileFinishedImporting("modules/media_channel/useCa
 export default function useCanSetThumbnail(arg0, isImage) {
   const _require = arg0;
   const items = [closure_2];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_2.getChannel(closure_0));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
+    items,
+    () => closure_1_2.getChannel(closure_0),
+  );
   let isMediaChannelResult;
   if (stateFromStores != null) {
     isMediaChannelResult = stateFromStores.isMediaChannel();
@@ -20,4 +23,4 @@ export default function useCanSetThumbnail(arg0, isImage) {
     isMediaChannelResult = true === isImage;
   }
   return isMediaChannelResult;
-};
+}

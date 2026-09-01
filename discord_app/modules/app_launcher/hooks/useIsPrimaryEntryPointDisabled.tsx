@@ -15,7 +15,9 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
     channel = context.channel;
   }
   const items = [closure_4];
-  const stateFromStores = channel(589).useStateFromStores(items, () => closure_1_4.can(closure_1_5.USE_EMBEDDED_ACTIVITIES, channel));
+  const stateFromStores = channel(589).useStateFromStores(items, () =>
+    closure_1_4.can(closure_1_5.USE_EMBEDDED_ACTIVITIES, channel),
+  );
   const obj = channel(589);
   let id;
   if (channel != null) {
@@ -66,7 +68,8 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   let disabled = flag;
   let reason;
   if (activityAction !== channel(11629).ActivityAction.LEAVE) {
-    const tmp10 = application instanceof closure_3 ? application.embeddedActivityConfig : application.embedded_activity_config;
+    const tmp10 =
+      application instanceof closure_3 ? application.embeddedActivityConfig : application.embedded_activity_config;
     getPlatformDefault;
     tmp2(500);
     if (null != tmp10) {
@@ -97,4 +100,4 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
     reason = intl3.string(tmp2(1236).t.f41E1g);
   }
   return { disabled, reason };
-};
+}

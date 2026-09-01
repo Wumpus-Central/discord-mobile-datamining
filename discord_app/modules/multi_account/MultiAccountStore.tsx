@@ -11,8 +11,7 @@ const MAX_ACCOUNTS = MAX_ACCOUNTS2.MAX_ACCOUNTS;
 let obj = { INVALID: 0, [0]: "INVALID", VALIDATING: 1, [1]: "VALIDATING", VALID: 2, [2]: "VALID" };
 let closure_8 = [];
 const PersistedStore = initializeDefault.PersistedStore;
-class MultiAccountStore extends PersistedStore {
-}
+class MultiAccountStore extends PersistedStore {}
 const prototype = MultiAccountStore.prototype;
 prototype["initialize"] = function initialize(users) {
   if (null != users) {
@@ -45,7 +44,7 @@ Object.defineProperty(prototype, "canUseMultiAccountNotifications", {
   get: function canUseMultiAccountNotifications() {
     return this.getCanUseMultiAccountMobile();
   },
-  set: undefined
+  set: undefined,
 });
 MultiAccountStore.displayName = "MultiAccountStore";
 MultiAccountStore.persistKey = "MultiAccountStore";
@@ -63,7 +62,7 @@ const items = [
       obj[0] = [];
     }
     return obj;
-  }
+  },
 ];
 MultiAccountStore.migrations = items;
 obj = {
@@ -174,7 +173,7 @@ obj = {
       }
       return tmp;
     });
-  }
+  },
 };
 const multiAccountStore = new MultiAccountStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/multi_account/MultiAccountStore.tsx");

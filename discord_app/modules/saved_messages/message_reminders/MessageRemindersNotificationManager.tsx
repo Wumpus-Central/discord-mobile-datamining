@@ -67,16 +67,17 @@ let prototype = function MessageRemindersNotificationManager() {
     },
     SAVED_MESSAGE_DELETE() {
       return applyArgumentsResult.handleUpdates();
-    }
+    },
   };
   applyArgumentsResult.handleUpdates = function handleUpdates() {
     callback();
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx",
+);
 
 export default prototype;

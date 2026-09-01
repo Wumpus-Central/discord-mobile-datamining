@@ -8,7 +8,9 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 noopAll;
 let closure_3 = createCacheKey.createStyles({ crButton: { marginVertical: 16 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildPremiumRoleSubscribeButton.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/GuildPremiumRoleSubscribeButton.tsx",
+);
 
 export const GuildPremiumRoleSubscribeButton = function GuildPremiumRoleSubscribeButton(onPress) {
   const obj = { text: null, onPress: null, style: null, disabled: true };

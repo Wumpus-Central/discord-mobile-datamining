@@ -95,25 +95,53 @@ class BotTag {
       stringResult = intl.string(require("getSystemLocale").t.qwJHjo);
       tmp17 = closure_0;
     }
-    obj = { style: items, accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult, children: null };
-    items = [, , , ];
+    obj = {
+      style: items,
+      accessible: true,
+      accessibilityRole: "image",
+      accessibilityLabel: stringResult,
+      children: null,
+    };
+    items = [, , ,];
     items[0] = tmp2.tag;
     items[1] = tmp11;
     items[2] = global.style;
     items[3] = prop;
-    items1 = [, ];
+    items1 = [,];
     items1[0] = tmp6;
     items2 = [];
     items2[0] = tmp12;
-    items1[1] = jsx(require("Text").Text, { variant: "text-xs/semibold", lineClamp: 1, maxFontSizeMultiplier: 2, style: items2, children: tmp3 });
+    items1[1] = jsx(require("Text").Text, {
+      variant: "text-xs/semibold",
+      lineClamp: 1,
+      maxFontSizeMultiplier: 2,
+      style: items2,
+      children: tmp3,
+    });
     obj[4] = items1;
     return jsxs(View, obj);
   }
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { tag: null, verifiedTagLeftPadding: null, tagNormal: null, tagInverted: null, tagTextNormal: null, tagTextInverted: null };
-createCacheKey = { paddingLeft: 4, paddingRight: 4, borderRadius: ThemesDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 1 };
+createCacheKey = {
+  tag: null,
+  verifiedTagLeftPadding: null,
+  tagNormal: null,
+  tagInverted: null,
+  tagTextNormal: null,
+  tagTextInverted: null,
+};
+createCacheKey = {
+  paddingLeft: 4,
+  paddingRight: 4,
+  borderRadius: ThemesDefault.radii.xs,
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: 1,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingLeft: 1 };
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };

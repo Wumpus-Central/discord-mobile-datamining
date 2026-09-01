@@ -14,14 +14,13 @@ let c2 = null;
 let c3 = null;
 let c4 = null;
 const Store = initializeDefault.Store;
-class PremiumPaymentModalStore extends Store {
-}
+class PremiumPaymentModalStore extends Store {}
 const prototype = PremiumPaymentModalStore.prototype;
 Object.defineProperty(prototype, "paymentError", {
   get: function paymentError() {
     return c2;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getGiftCode"] = function getGiftCode(arg0) {
   let tmp = null;
@@ -64,7 +63,7 @@ const premiumPaymentModalStore = new PremiumPaymentModalStore(dispatcherDefault,
       }
     }
     return false;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/PremiumPaymentModalStore.tsx");
 

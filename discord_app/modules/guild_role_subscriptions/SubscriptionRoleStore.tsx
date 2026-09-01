@@ -135,8 +135,7 @@ const map2 = new Map();
 const map3 = new Map();
 let c15 = null;
 const Store = initializeDefault.Store;
-class SubscriptionRoleStore extends Store {
-}
+class SubscriptionRoleStore extends Store {}
 const prototype = SubscriptionRoleStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_6, closure_5, closure_7, closure_4);
@@ -240,7 +239,7 @@ const subscriptionRoleStore = new SubscriptionRoleStore(dispatcherDefault, {
       tmp5 = computeRolesForGuild(guildId);
     }
     return tmp5;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/guild_role_subscriptions/SubscriptionRoleStore.tsx");
 

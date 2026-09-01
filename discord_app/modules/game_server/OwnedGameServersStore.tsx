@@ -40,8 +40,7 @@ function handleGameServerUpsert(gameServer) {
 const GAME_SERVER_SHOP_MAX_INSTANCES = str11.GAME_SERVER_SHOP_MAX_INSTANCES;
 let closure_1 = [];
 const Store = initializeDefault.Store;
-class OwnedGameServersStore extends Store {
-}
+class OwnedGameServersStore extends Store {}
 const prototype = OwnedGameServersStore.prototype;
 prototype["getGameServers"] = function getGameServers() {
   return closure_1;
@@ -87,7 +86,7 @@ const ownedGameServersStore = new OwnedGameServersStore(dispatcherDefault, {
     if (null == gameServerId.guildId) {
       closure_1 = closure_1.filter((id) => id.id !== gameServerId);
     }
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/game_server/OwnedGameServersStore.tsx");
 

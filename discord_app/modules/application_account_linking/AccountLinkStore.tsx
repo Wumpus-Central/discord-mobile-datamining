@@ -7,8 +7,7 @@ import set from "../../../_runtime/00002_set.js";
 const map = new Map();
 let set = new Set();
 const Store = initializeDefault.Store;
-class AccountLinkStore extends Store {
-}
+class AccountLinkStore extends Store {}
 const prototype = AccountLinkStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_0);
@@ -36,7 +35,7 @@ const accountLinkStore = new AccountLinkStore(dispatcherDefault, {
   },
   ACCOUNT_LINK_DEVTOOLS_SET_GLOBALLY_DISBLED_FLOWS: function handleSetGloballyDisabledFlows(flows) {
     set = new Set(flows.flows);
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/application_account_linking/AccountLinkStore.tsx");
 

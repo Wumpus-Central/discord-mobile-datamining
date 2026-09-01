@@ -16,7 +16,9 @@ obj = { height: ThemesDefault.space.PX_16, width: "100%" };
 obj[0] = obj;
 obj = { paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[1] = obj;
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventsListView.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/GuildEventsListView.tsx",
+);
 
 export default function GuildEventsListView(lastAckedId) {
   ({ events, guild } = lastAckedId);
@@ -35,7 +37,16 @@ export default function GuildEventsListView(lastAckedId) {
     } else {
       BottomSheetFlatList = closure_4;
     }
-    obj = { data: null, style: null, keyExtractor: null, renderItem: null, ItemSeparatorComponent: null, initialNumToRender: 5, ListEmptyComponent: null, contentContainerStyle: null };
+    obj = {
+      data: null,
+      style: null,
+      keyExtractor: null,
+      renderItem: null,
+      ItemSeparatorComponent: null,
+      initialNumToRender: 5,
+      ListEmptyComponent: null,
+      contentContainerStyle: null,
+    };
     obj[0] = events;
     obj[1] = obj.container;
     obj[2] = function keyExtractor(id) {
@@ -59,7 +70,18 @@ export default function GuildEventsListView(lastAckedId) {
     obj1 = { paddingBottom: null };
     obj1[0] = tmp(tmp2[3]).space.PX_16 + tmp3;
     obj[7] = obj1;
-    return <BottomSheetFlatList data={null} style={null} keyExtractor={null} renderItem={null} ItemSeparatorComponent={null} initialNumToRender={5} ListEmptyComponent={null} contentContainerStyle={null} />;
+    return (
+      <BottomSheetFlatList
+        data={null}
+        style={null}
+        keyExtractor={null}
+        renderItem={null}
+        ItemSeparatorComponent={null}
+        initialNumToRender={5}
+        ListEmptyComponent={null}
+        contentContainerStyle={null}
+      />
+    );
   }
-};
+}
 export const styles = obj;

@@ -10,7 +10,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 createCacheKey = { container: null };
-createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL,
+  marginHorizontal: 8,
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsChannelRow.tsx");
@@ -30,7 +34,16 @@ export default function VibegrationsChannelRow(selected) {
     DEFAULT = id(11948).ChannelModes.DEFAULT;
     tmp5 = id;
   }
-  let obj = { onPress: callback, style: callback().container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null };
+  let obj = {
+    onPress: callback,
+    style: callback().container,
+    accessible: true,
+    accessibilityLabel: null,
+    accessibilityState: null,
+    mode: null,
+    name: null,
+    icon: null,
+  };
   const tmp = callback();
   const intl = tmp5(1236).intl;
   obj[3] = intl.string(messagesProxyDefault.Xmvb23);
@@ -44,4 +57,4 @@ export default function VibegrationsChannelRow(selected) {
   obj = { mode: DEFAULT, IconComponent: tmp5(10236).MagicWandIcon };
   obj[7] = jsx(tmp5(11948).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10236).MagicWandIcon });
   return jsx(BaseChannelSubtitleDefault, { mode: DEFAULT, IconComponent: tmp5(10236).MagicWandIcon });
-};
+}

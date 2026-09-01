@@ -24,7 +24,9 @@ function ResourceChannelRow(channelId) {
   stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
   obj1 = channelId(589);
   const items1 = [closure_9];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_9.can(closure_1_10.VIEW_CHANNEL, stateFromStores));
+  const stateFromStores1 = obj1.useStateFromStores(items1, () =>
+    closure_1_9.can(closure_1_10.VIEW_CHANNEL, stateFromStores),
+  );
   let obj2 = channelId(589);
   const items2 = [closure_8];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => closure_1_8.getMessages(channelId));
@@ -44,7 +46,12 @@ function ResourceChannelRow(channelId) {
   let tmp2Result = tmp2(11581);
   let flag = tmp2Result.useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
   const tmp11 = stateFromStores(16154)(firstResult);
-  const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
+  const tmp12 =
+    null != stateFromStores &&
+    null == stateFromStores2.first() &&
+    !stateFromStores2.loadingMore &&
+    !stateFromStores2.ready &&
+    !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
   const effect = React.useEffect(() => {
@@ -71,13 +78,20 @@ function ResourceChannelRow(channelId) {
       obj1[0] = tmp.textContent;
       obj2 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
       obj2[2] = channelId.title;
-      const items4 = [callback(tmp2(4474).Text, obj2), , ];
+      const items4 = [callback(tmp2(4474).Text, obj2), ,];
       let tmp19Result = tmp16;
       if (null == description || 0 === description.length) {
         tmp19Result = null != tmp11;
       }
       if (tmp19Result) {
-        const obj3 = { variant: "text-sm/normal", color: "text-default", style: null, lineClamp: 3, ellipsizeMode: "tail", children: null };
+        const obj3 = {
+          variant: "text-sm/normal",
+          color: "text-default",
+          style: null,
+          lineClamp: 3,
+          ellipsizeMode: "tail",
+          children: null,
+        };
         obj3[2] = tmp.messageContent;
         tmp10Result = tmp10(4468);
         obj4 = { guildId: null, channelId: null };
@@ -88,7 +102,14 @@ function ResourceChannelRow(channelId) {
       items4[1] = tmp19Result;
       tmp19Result = !tmp16;
       if (!(null == description || 0 === description.length)) {
-        obj5 = { variant: "text-sm/normal", color: "text-default", style: null, lineClamp: 3, ellipsizeMode: "tail", children: null };
+        obj5 = {
+          variant: "text-sm/normal",
+          color: "text-default",
+          style: null,
+          lineClamp: 3,
+          ellipsizeMode: "tail",
+          children: null,
+        };
         obj5[2] = tmp.messageContent;
         ({ guild_id: obj18[0], id: obj18[1] } = stateFromStores);
         obj5[5] = tmp10(4468).parse(description, true, { guildId: null, channelId: null });
@@ -98,7 +119,7 @@ function ResourceChannelRow(channelId) {
       }
       items4[2] = tmp19Result;
       obj1[1] = items4;
-      const items5 = [closure_13(closure_4, obj1), , ];
+      const items5 = [closure_13(closure_4, obj1), ,];
       let tmp19Result1 = null;
       if (null != icon) {
         tmp19Result1 = null;
@@ -124,7 +145,14 @@ function ResourceChannelRow(channelId) {
           if (!blocked) {
             tmp19Result2 = null;
             if (null != first) {
-              const obj9 = { channel: null, media: null, isEmbed: null, embedLeftBorderColor: null, firstMessageId: null, containerStyle: null };
+              const obj9 = {
+                channel: null,
+                media: null,
+                isEmbed: null,
+                embedLeftBorderColor: null,
+                firstMessageId: null,
+                containerStyle: null,
+              };
               obj9[0] = stateFromStores;
               obj9[1] = first;
               obj9[2] = firstMediaIsEmbed;
@@ -154,8 +182,25 @@ function ResourceChannelRow(channelId) {
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ Permissions: c10, Routes: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { container: { paddingHorizontal: 12, display: "flex", flexDirection: "column", alignItems: "center" }, emptyStateContainer: { padding: 20, display: "flex", flexDirection: "column", alignItems: "center" }, channelContainer: null, messageContent: null, textContent: null, thumbnail: null, emptyStateImage: null, icon: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8, padding: 12, borderRadius: ThemesDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "flex-start" };
+createCacheKey = {
+  container: { paddingHorizontal: 12, display: "flex", flexDirection: "column", alignItems: "center" },
+  emptyStateContainer: { padding: 20, display: "flex", flexDirection: "column", alignItems: "center" },
+  channelContainer: null,
+  messageContent: null,
+  textContent: null,
+  thumbnail: null,
+  emptyStateImage: null,
+  icon: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  marginBottom: 8,
+  padding: 12,
+  borderRadius: ThemesDefault.radii.sm,
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "flex-start",
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { marginTop: 8 };
 createCacheKey[4] = { flex: 1 };
@@ -175,7 +220,7 @@ export default function GuildHomeResources(guildId) {
     obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
     const intl = guildId(1236).intl;
     obj[2] = intl.string(guildId(1236).t.owvC9U);
-    const items = [callback(guildId(4474).Text, obj), , ];
+    const items = [callback(guildId(4474).Text, obj), ,];
     obj1 = { style: null, source: null };
     obj1[0] = tmp.emptyStateImage;
     obj1[1] = registerAssetDefault;
@@ -196,8 +241,19 @@ export default function GuildHomeResources(guildId) {
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    obj[1] = arr.map((channelId) => callback(closure_15, { channelId: channelId.channelId, title: channelId.title, icon: channelId.icon, description: channelId.description }, "resource-" + channelId.channelId));
+    obj[1] = arr.map((channelId) =>
+      callback(
+        closure_15,
+        {
+          channelId: channelId.channelId,
+          title: channelId.title,
+          icon: channelId.icon,
+          description: channelId.description,
+        },
+        "resource-" + channelId.channelId,
+      ),
+    );
     tmp6 = callback(closure_4, obj);
   }
   return tmp6;
-};
+}

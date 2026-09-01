@@ -54,21 +54,26 @@ export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
   importDefault = arg1;
   const FocusMode = require("../user_settings/UserSettings.tsx").FocusMode;
   const setting = FocusMode.getSetting();
-  const PreloadedUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
-  PreloadedUserSettingsActionCreators.updateAsync("notifications", (arg0) => {
-    const BoolValue = quiet_mode_enabled(closure_1_2[5]).BoolValue;
-    arg0.quietMode = BoolValue.create({ value: quiet_mode_enabled });
-    let str = "0";
-    if (quiet_mode_enabled) {
-      str = "0";
-      if (null != closure_1) {
-        const _Date = Date;
-        const _HermesInternal = HermesInternal;
-        str = "" + Date.now() + tmp;
+  const PreloadedUserSettingsActionCreators =
+    require("../user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
+  PreloadedUserSettingsActionCreators.updateAsync(
+    "notifications",
+    (arg0) => {
+      const BoolValue = quiet_mode_enabled(closure_1_2[5]).BoolValue;
+      arg0.quietMode = BoolValue.create({ value: quiet_mode_enabled });
+      let str = "0";
+      if (quiet_mode_enabled) {
+        str = "0";
+        if (null != closure_1) {
+          const _Date = Date;
+          const _HermesInternal = HermesInternal;
+          str = "" + Date.now() + tmp;
+        }
       }
-    }
-    arg0.focusModeExpiresAtMs = str;
-  }, require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
+      arg0.focusModeExpiresAtMs = str;
+    },
+    require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION,
+  );
   let obj = expandEventPropertiesDefault;
   obj = { update_type: constants.ACCOUNT, quiet_mode_enabled, quiet_mode_enabled_old: setting };
   obj.track(constants2.NOTIFICATION_SETTINGS_UPDATED, obj);

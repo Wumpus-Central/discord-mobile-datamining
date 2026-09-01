@@ -12,11 +12,23 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 const require = arg1;
 let c3 = importAllResult;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
-({ deleteChannelDetailsSearchState: error, useChannelDetailsSearchActiveSource: closure_8, useIsChannelDetailsSearchActive: c9 } = useChannelDetailsStore);
+({
+  deleteChannelDetailsSearchState: error,
+  useChannelDetailsSearchActiveSource: closure_8,
+  useIsChannelDetailsSearchActive: c9,
+} = useChannelDetailsStore);
 ({ SPRING_CHANNEL_HEADER: c10, CHANNEL_DETAILS_TOP_MARGIN } = ChannelDetailsNavigatorScreens);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 const PX_8 = ThemesDefault.space.PX_8;
-let obj = { detailsContainer: null, information: null, linkedLobby: null, search: null, searchLocked: null, autocompleteSuggestions: null, newHeader: null };
+let obj = {
+  detailsContainer: null,
+  information: null,
+  linkedLobby: null,
+  search: null,
+  searchLocked: null,
+  autocompleteSuggestions: null,
+  newHeader: null,
+};
 obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.backgroundColor = ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND;
@@ -32,7 +44,9 @@ obj[5] = { zIndex: 10 };
 let obj3 = { marginTop: CHANNEL_DETAILS_TOP_MARGIN, marginBottom: ThemesDefault.space.PX_16 };
 obj[6] = { paddingBottom: ThemesDefault.space.PX_12, zIndex: 10 };
 let closure_14 = createCacheKey.createStyles(obj);
-let closure_15 = { code: "function ChannelDetailsTsx1(){const{headerHeight,isSearchActive,withTiming,timingFast,withSpring,SPRING_CHANNEL_HEADER}=this.__closure;const height=headerHeight.get();return{position:'relative',pointerEvents:isSearchActive?'none':'auto',opacity:withTiming(isSearchActive?0:1,timingFast,'animate-always'),height:height!=null&&height>=0?withSpring(isSearchActive?0:height,{...SPRING_CHANNEL_HEADER,clamp:{min:0,max:height}}):undefined};}" };
+let closure_15 = {
+  code: "function ChannelDetailsTsx1(){const{headerHeight,isSearchActive,withTiming,timingFast,withSpring,SPRING_CHANNEL_HEADER}=this.__closure;const height=headerHeight.get();return{position:'relative',pointerEvents:isSearchActive?'none':'auto',opacity:withTiming(isSearchActive?0:1,timingFast,'animate-always'),height:height!=null&&height>=0?withSpring(isSearchActive?0:height,{...SPRING_CHANNEL_HEADER,clamp:{min:0,max:height}}):undefined};}",
+};
 let obj4 = { paddingBottom: ThemesDefault.space.PX_12, zIndex: 10 };
 const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
   channelId = channelId.channelId;
@@ -183,7 +197,14 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
       return obj;
     }
   }
-  obj = { headerHeight: sharedValue, isSearchActive: tmp9, withTiming: obj(tmp2[24]).withTiming, timingFast: obj(tmp2[25]).timingFast, withSpring: obj(tmp2[26]).withSpring, SPRING_CHANNEL_HEADER: top };
+  obj = {
+    headerHeight: sharedValue,
+    isSearchActive: tmp9,
+    withTiming: obj(tmp2[24]).withTiming,
+    timingFast: obj(tmp2[25]).timingFast,
+    withSpring: obj(tmp2[26]).withSpring,
+    SPRING_CHANNEL_HEADER: top,
+  };
   Q.__closure = obj;
   Q.__workletHash = 8423441529588;
   Q.__initData = closure_15;
@@ -204,12 +225,15 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
     }
   }, items6);
   const items7 = [channelId, channelDetailsSearchContext];
-  const effect4 = onChannelDeleted.useEffect(() => () => {
-    const result = closure_1_1(closure_1_2[27]).clearAllSearchMesssages();
-    closure_1_7(closure_0);
-    const obj = closure_1_1(closure_1_2[27]);
-    closure_1_1(closure_1_2[21]).deleteSearchQuery(closure_5);
-  }, items7);
+  const effect4 = onChannelDeleted.useEffect(
+    () => () => {
+      const result = closure_1_1(closure_1_2[27]).clearAllSearchMesssages();
+      closure_1_7(closure_0);
+      const obj = closure_1_1(closure_1_2[27]);
+      closure_1_1(closure_1_2[21]).deleteSearchQuery(closure_5);
+    },
+    items7,
+  );
   const items8 = [channelId];
   const effect5 = onChannelDeleted.useEffect(() => {
     const bestActiveInputForChannelId = channelId(isShowing[28]).getBestActiveInputForChannelId(channelId);
@@ -230,11 +254,20 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
     obj2[2] = onBackPress;
     let obj3 = { style: null, children: null };
     if (isSearchLocked) {
-      const items10 = [, ];
+      const items10 = [,];
       ({ searchLocked: arr15[0], autocompleteSuggestions: arr15[1] } = tmp);
       obj3[0] = items10;
       tmp = tmp7(tmp2[30]);
-      const obj4 = { ref: null, channelId: null, guildId: null, onSuggestionsLayoutMesure: null, onBackPress: null, suggestionsDismissed: null, setSuggestionsDismissed: null, showBackButton: null };
+      const obj4 = {
+        ref: null,
+        channelId: null,
+        guildId: null,
+        onSuggestionsLayoutMesure: null,
+        onBackPress: null,
+        suggestionsDismissed: null,
+        setSuggestionsDismissed: null,
+        showBackButton: null,
+      };
       obj4[0] = ref;
       obj4[1] = channelId;
       obj4[2] = guild_id;
@@ -255,7 +288,7 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
       obj4[7] = isAndroidResult;
       obj3[1] = tmp25(tmp, obj4);
       let tmp25Result = tmp25(tmp27, obj3);
-      obj3 = [tmp25Result, ];
+      obj3 = [tmp25Result];
       tmp7 = tmp7(tmp2[31]);
       const obj5 = { searchContext: null, width: null };
       obj5[0] = channelDetailsSearchContext;
@@ -266,7 +299,15 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
       let tmp29 = obj2;
     } else {
       obj3[0] = tmp.newHeader;
-      const obj6 = { ref: null, channel: null, onBackPress: null, onSuggestionsLayoutMeasure: null, suggestionsDismissed: null, setSuggestionsDismissed: null, componentWidth: null };
+      const obj6 = {
+        ref: null,
+        channel: null,
+        onBackPress: null,
+        onSuggestionsLayoutMeasure: null,
+        suggestionsDismissed: null,
+        setSuggestionsDismissed: null,
+        componentWidth: null,
+      };
       obj6[0] = ref;
       obj6[1] = stateFromStores;
       obj6[2] = onBackPress;
@@ -274,7 +315,7 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
       obj6[4] = dismissed;
       obj6[5] = setDismissed;
       obj6[6] = componentWidth;
-      const items11 = [tmp25(tmp7(tmp2[32]), obj6), ];
+      const items11 = [tmp25(tmp7(tmp2[32]), obj6)];
       const obj7 = { style: null, children: null };
       obj7[0] = animatedStyle;
       const obj8 = { style: null, onLayout: null, children: null };
@@ -282,7 +323,7 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
       obj8[1] = callback;
       const obj9 = { channel: null };
       obj9[0] = stateFromStores;
-      const items12 = [tmp25(tmp7(tmp2[33]), obj9), , ];
+      const items12 = [tmp25(tmp7(tmp2[33]), obj9), ,];
       const obj10 = { channel: null, containerStyle: null };
       obj10[0] = stateFromStores;
       obj10[1] = tmp.linkedLobby;
@@ -299,7 +340,7 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
       obj7[1] = tmp26(tmp7(tmp2[23]).View, obj8);
       items11[1] = tmp25(tmp7(tmp2[23]).View, obj7);
       obj3[1] = items11;
-      const items13 = [tmp26(tmp27, obj3), ];
+      const items13 = [tmp26(tmp27, obj3)];
       const obj12 = { freeze: null, children: null };
       obj12[0] = !isShowing;
       const obj13 = { style: null, collapsable: false, children: null };

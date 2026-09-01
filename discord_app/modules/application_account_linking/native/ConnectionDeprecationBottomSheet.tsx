@@ -48,13 +48,20 @@ function ApplicationIcon(application) {
   return closure_8(View, obj);
 }
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { iconContainer: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, content: null, text: null, connectionIcon: null };
+createCacheKey = {
+  iconContainer: { width: 56, height: 56, alignItems: "center", justifyContent: "center" },
+  content: null,
+  text: null,
+  connectionIcon: null,
+};
 createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { height: 48, width: 48 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/application_account_linking/native/ConnectionDeprecationBottomSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/application_account_linking/native/ConnectionDeprecationBottomSheet.tsx",
+);
 
 export default function ConnectionDeprecationBottomSheet(arg0) {
   ({ platformTypes: require, markAsDismissed } = arg0);
@@ -89,7 +96,9 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
     }
   }
   const items1 = [callback];
-  const stateFromStores1 = require(replacedBy[10]).useStateFromStores(items1, () => callback.getApplication(replacedBy));
+  const stateFromStores1 = require(replacedBy[10]).useStateFromStores(items1, () =>
+    callback.getApplication(replacedBy),
+  );
   startAuthorization = tmp4(tmp3[12])(stateFromStores1).startAuthorization;
   tmp4Result = tmp4(tmp3[13]);
   analyticsLocations = tmp4Result(tmp4(tmp3[14]).ACTION_SHEET).analyticsLocations;
@@ -99,8 +108,11 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
     obj = {
       applicationId: replacedBy,
       onSuccess() {
-        callback2(paths[16]).openLazy(callback(paths[18])(paths[17], paths.paths), "IncentivizedAccountLinkConfirmationBottomSheet");
-      }
+        callback2(paths[16]).openLazy(
+          callback(paths[18])(paths[17], paths.paths),
+          "IncentivizedAccountLinkConfirmationBottomSheet",
+        );
+      },
     };
     const result = obj.claimIncentivizedAccountLinkingReward(obj);
   }, items2);
@@ -121,7 +133,7 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
       const obj3 = { theme: null, platform: null };
       obj3[0] = theme;
       obj3[1] = value;
-      const items4 = [callback(ConnectionIcon, obj3), , ];
+      const items4 = [callback(ConnectionIcon, obj3), ,];
       const obj4 = { theme: null };
       obj4[0] = theme;
       items4[1] = callback(tmp2(tmp3[22]).UnionIcon, obj4);
@@ -129,20 +141,23 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
       obj5[0] = stateFromStores1;
       items4[2] = callback(ApplicationIcon, obj5);
       obj2[3] = items4;
-      const items5 = [callback2(tmp2(tmp3[21]).Stack, obj2), , ];
+      const items5 = [callback2(tmp2(tmp3[21]).Stack, obj2), ,];
       const obj6 = { justify: "center", children: null };
       const obj7 = { variant: "heading-xl/bold", style: null, children: null };
       obj7[1] = tmp.text;
       const intl = tmp2(tmp3[24]).intl;
       obj7[2] = intl.string(tmp4(tmp3[25]).vycLU2);
-      const items6 = [callback(tmp2(tmp3[23]).Text, obj7), ];
+      const items6 = [callback(tmp2(tmp3[23]).Text, obj7)];
       const obj8 = { variant: "text-md/medium", style: null, children: null };
       obj8[1] = tmp.text;
       const intl2 = tmp2(tmp3[24]).intl;
       const obj9 = { connectionName: null, orbCount: 200, orbsIconHook: null };
       obj9[0] = value.name;
       obj9[2] = function orbsIconHook() {
-        return callback2(callback(replacedBy[26]).OrbsIcon, { size: "xs", color: markAsDismissed(replacedBy[7]).colors.TEXT_STRONG });
+        return callback2(callback(replacedBy[26]).OrbsIcon, {
+          size: "xs",
+          color: markAsDismissed(replacedBy[7]).colors.TEXT_STRONG,
+        });
       };
       obj8[2] = intl2.format(tmp4(tmp3[25]).qV9zT6, obj9);
       items6[1] = callback(tmp2(tmp3[23]).Text, obj8);
@@ -156,7 +171,7 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
       obj12[1] = tmp4(tmp3[7]).colors.WHITE;
       obj11[1] = callback(tmp2(tmp3[28]).WindowLaunchIcon, obj12);
       obj11[4] = tmp11;
-      const items7 = [callback(tmp2(tmp3[27]).Button, obj11), ];
+      const items7 = [callback(tmp2(tmp3[27]).Button, obj11)];
       const obj13 = { text: null, variant: "secondary", size: "lg", onPress: null };
       const intl4 = tmp2(tmp3[24]).intl;
       obj13[0] = intl4.string(tmp2(tmp3[24]).t.TulDPl);
@@ -175,8 +190,10 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
     }
   }
   return false;
-};
-export const useShouldShowConnectionDeprecationBottomSheet = function useShouldShowConnectionDeprecationBottomSheet(deprecatedPlatformTypes) {
+}
+export const useShouldShowConnectionDeprecationBottomSheet = function useShouldShowConnectionDeprecationBottomSheet(
+  deprecatedPlatformTypes,
+) {
   deprecatedPlatformTypes = deprecatedPlatformTypes.deprecatedPlatformTypes;
   const items = [closure_6];
   const stateFromStoresObject = deprecatedPlatformTypes(589).useStateFromStoresObject(items, () => {

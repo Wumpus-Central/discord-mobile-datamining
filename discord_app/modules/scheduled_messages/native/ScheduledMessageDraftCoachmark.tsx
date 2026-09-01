@@ -13,7 +13,9 @@ function AttachedCoachmark(buttonRef) {
   return null;
 }
 let closure_7 = createCacheKey.createStyles({ image: { width: 100, height: 80 } });
-const result = require("set").fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageDraftCoachmark.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/scheduled_messages/native/ScheduledMessageDraftCoachmark.tsx",
+);
 
 export default function ScheduledMessageDraftCoachmark(onDismiss) {
   onDismiss = onDismiss.onDismiss;
@@ -23,7 +25,15 @@ export default function ScheduledMessageDraftCoachmark(onDismiss) {
   closure_1 = tmp;
   const items = [onDismiss, tmp.image];
   const memo = React.useMemo(() => {
-    const obj = { title: null, description: null, position: "top", offsetY: 4, visible: true, onDismiss: null, renderImgComponent: null };
+    const obj = {
+      title: null,
+      description: null,
+      position: "top",
+      offsetY: 4,
+      visible: true,
+      onDismiss: null,
+      renderImgComponent: null,
+    };
     const intl = onDismiss(closure_1_2[5]).intl;
     obj[0] = intl.string(onDismiss(closure_1_2[5]).t.Pu7sCU);
     const intl2 = onDismiss(closure_1_2[5]).intl;
@@ -44,4 +54,4 @@ export default function ScheduledMessageDraftCoachmark(onDismiss) {
     tmp3 = <AttachedCoachmark buttonRef={null} />;
   }
   return tmp3;
-};
+}

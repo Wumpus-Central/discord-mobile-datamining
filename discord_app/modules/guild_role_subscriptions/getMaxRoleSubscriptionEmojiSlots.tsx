@@ -5,4 +5,4 @@ const result = set.fileFinishedImporting("modules/guild_role_subscriptions/getMa
 
 export default function getMaxRoleSubscriptionEmojiSlots() {
   return 25;
-};
+}

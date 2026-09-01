@@ -16,7 +16,7 @@ const toggle = createToggle.createToggle({
   useDescription: function useSearchResultExactCountDescription() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.qx4cha);
-  }
+  },
 });
 const obj = {
   useTitle() {
@@ -29,7 +29,7 @@ const obj = {
   useDescription: function useSearchResultExactCountDescription() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.qx4cha);
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ExactSearchResultCountsSetting.tsx");
 

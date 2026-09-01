@@ -15,7 +15,13 @@ function Placeholder(arg0) {
   let obj = styles;
   const fastestListTableRowPlaceholderStyles = obj.useFastestListTableRowPlaceholderStyles();
   obj = { end, start, label: null, icon: null, height: "100%" };
-  const items = [fastestListTableRowPlaceholderStyles.placeholderUsername, callback(importAllResult.useState(() => ({ width: `${10 + 80 * Math.random() | 0}%` })), 1)[0]];
+  const items = [
+    fastestListTableRowPlaceholderStyles.placeholderUsername,
+    callback(
+      importAllResult.useState(() => ({ width: `${(10 + 80 * Math.random()) | 0}%` })),
+      1,
+    )[0],
+  ];
   obj[2] = callback2(View, { style: items });
   obj = { style: fastestListTableRowPlaceholderStyles.placeholderAvatar };
   obj[3] = callback2(View, obj);
@@ -27,13 +33,32 @@ function PlaceholderSection() {
 let c4 = importAllResult;
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = PX_24.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-obj = { sectionHeader: obj, stickyHeader: null, list: null, emptySection: null, section: null, interactiveSection: null, titlePressable: null, titleRow: null, badgeWrapper: null, badge: null };
+obj = {
+  sectionHeader: obj,
+  stickyHeader: null,
+  list: null,
+  emptySection: null,
+  section: null,
+  interactiveSection: null,
+  titlePressable: null,
+  titleRow: null,
+  badgeWrapper: null,
+  badge: null,
+};
 obj = { flex: 1, overflow: "hidden", top: -1 * PX_24.USERS_LIST_SECTION_BOTTOM_PADDING };
 createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj[1] = createCacheKey;
 obj[2] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: 16 };
 obj[3] = { paddingBottom: USERS_LIST_PADDING_BETWEEN_SECTIONS };
-obj[4] = { flex: 1, display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between", paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS, textTransform: "none" };
+obj[4] = {
+  flex: 1,
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "flex-start",
+  justifyContent: "space-between",
+  paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS,
+  textTransform: "none",
+};
 let obj2 = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: 16 };
 obj[5] = { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS - ThemesDefault.space.PX_8 };
 let obj3 = { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS - ThemesDefault.space.PX_8 };
@@ -44,9 +69,15 @@ obj[8] = { height: "100%" };
 let obj5 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 obj[9] = { position: "absolute", left: ThemesDefault.space.PX_4 + ThemesDefault.space.PX_4 / 2, top: 5 };
 let closure_10 = createCacheKey.createStyles(obj);
-let closure_13 = { code: "function UsersFastListTsx1(){const{scrollPosValue,stickyAt}=this.__closure;var _scrollPosValue;const scrollPos=(_scrollPosValue=scrollPosValue)===null||_scrollPosValue===void 0?void 0:_scrollPosValue.get();if(scrollPos==null||stickyAt==null){return false;}return scrollPos>=stickyAt;}" };
-let closure_14 = { code: "function UsersFastListTsx2(){const{isSticky,styles}=this.__closure;return{backgroundColor:isSticky.get()?styles.stickyHeader.backgroundColor:'transparent'};}" };
-let closure_15 = { code: "function UsersFastListTsx3(){const{isSticky}=this.__closure;return{opacity:isSticky.get()?1:0};}" };
+let closure_13 = {
+  code: "function UsersFastListTsx1(){const{scrollPosValue,stickyAt}=this.__closure;var _scrollPosValue;const scrollPos=(_scrollPosValue=scrollPosValue)===null||_scrollPosValue===void 0?void 0:_scrollPosValue.get();if(scrollPos==null||stickyAt==null){return false;}return scrollPos>=stickyAt;}",
+};
+let closure_14 = {
+  code: "function UsersFastListTsx2(){const{isSticky,styles}=this.__closure;return{backgroundColor:isSticky.get()?styles.stickyHeader.backgroundColor:'transparent'};}",
+};
+let closure_15 = {
+  code: "function UsersFastListTsx3(){const{isSticky}=this.__closure;return{opacity:isSticky.get()?1:0};}",
+};
 let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
   ({ title, colorOverride } = stickyAt);
   ({ actionTitle, badge, scrollPosValue } = stickyAt);
@@ -71,7 +102,7 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
   }, items);
   let obj = colorOverride(stickyAt[9]);
   clientThemesOverride = obj.useClientThemesOverride();
-  const items1 = [, , , ];
+  const items1 = [, , ,];
   ({ section: arr2[0], interactiveSection: arr2[1] } = tmp);
   items1[2] = onTitlePress;
   items1[3] = clientThemesOverride;
@@ -139,8 +170,15 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
       return animatedStyle(clientThemesOverride, obj);
     }
   }
-  obj = { maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-md/medium", color: "text-subtle", style: memo, children: null };
-  const items3 = [title, ];
+  obj = {
+    maxFontSizeMultiplier: 2,
+    accessibilityRole: "header",
+    variant: "text-md/medium",
+    color: "text-subtle",
+    style: memo,
+    children: null,
+  };
+  const items3 = [title];
   let tmp12 = null;
   if (null != badge) {
     obj1 = { style: null, children: null };
@@ -170,7 +208,7 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
     tmp18 = animatedStyle(tmp3(tmp4[13]).PressableOpacity, obj4);
   }
   const obj5 = { style: memo1, children: null };
-  const items5 = [tmp18, ];
+  const items5 = [tmp18];
   let tmp21 = null;
   if (null != actionTitle) {
     const obj6 = { onPress: null, children: null };
@@ -306,7 +344,7 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
     }
   }, items2);
   const memo = disableBackgroundOverlay.useMemo(() => {
-    const items = [list.list, , ];
+    const items = [list.list, ,];
     let tmp = disableBackgroundOverlay;
     if (disableBackgroundOverlay) {
       tmp = clientThemesOverride;
@@ -316,7 +354,31 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
     return items;
   }, items3);
   const tmp5 = getSectionProps(flag2[16])();
-  obj = { sections, sectionHeaderIsSticky: !flag2, sectionHeaderSize: callback2, estimatedListSize: "windowSize", ref, style: memo, itemSize: null, renderItem: null, renderListHeader: null, renderSectionHeader: null, insetStart: null, insetEnd: null, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "always", inActionSheet: null, onScroll: null, onLayout: null, placeholderConfig: null, listId: "users-fast-list", listHeaderSize: null, listHeaderAlwaysMounted: true, scrollReporting: "callbacks", wrapChildren: true };
+  obj = {
+    sections,
+    sectionHeaderIsSticky: !flag2,
+    sectionHeaderSize: callback2,
+    estimatedListSize: "windowSize",
+    ref,
+    style: memo,
+    itemSize: null,
+    renderItem: null,
+    renderListHeader: null,
+    renderSectionHeader: null,
+    insetStart: null,
+    insetEnd: null,
+    keyboardDismissMode: "on-drag",
+    keyboardShouldPersistTaps: "always",
+    inActionSheet: null,
+    onScroll: null,
+    onLayout: null,
+    placeholderConfig: null,
+    listId: "users-fast-list",
+    listHeaderSize: null,
+    listHeaderAlwaysMounted: true,
+    scrollReporting: "callbacks",
+    wrapChildren: true,
+  };
   const tmp12 = getSectionProps(flag2[7])();
   const tmp13 = closure_7;
   if (getItemSize == null) {
@@ -335,6 +397,8 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
   obj[19] = listHeaderSize;
   return tmp13(getSectionProps(flag2[21]), obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx",
+);
 
 export const UsersFastList = forwardRefResult;

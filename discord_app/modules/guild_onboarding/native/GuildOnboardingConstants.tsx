@@ -5,4 +5,10 @@ const result = set.fileFinishedImporting("modules/guild_onboarding/native/GuildO
 
 export const GUILD_ONBOARDING_MODAL_KEY = "GUILD_ONBOARDING_MODAL_KEY";
 export const CHANNELS_AND_ROLES_MODAL_KEY = "CHANNELS_AND_ROLES_MODAL_KEY";
-export const GuildOnboardingModalStates = { COVER: "cover", PROMPT: "prompt", CONNECTIONS: "connections", COMPLETED: "completed", RULES: "rules" };
+export const GuildOnboardingModalStates = {
+  COVER: "cover",
+  PROMPT: "prompt",
+  CONNECTIONS: "connections",
+  COMPLETED: "completed",
+  RULES: "rules",
+};

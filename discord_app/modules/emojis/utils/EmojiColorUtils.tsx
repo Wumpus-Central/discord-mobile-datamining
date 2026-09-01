@@ -27,7 +27,11 @@ function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
       palette = null;
       if (null != parseStringResult) {
         let tmp2Result = tmp2(4326);
-        const rawRgbToHslResult = tmp2Result.rawRgbToHsl(parseStringResult.red, parseStringResult.blue, parseStringResult.green);
+        const rawRgbToHslResult = tmp2Result.rawRgbToHsl(
+          parseStringResult.red,
+          parseStringResult.blue,
+          parseStringResult.green,
+        );
         tmp2Result = tmp2(4326);
         obj = { foreground: null, background: null, ratio: 3, saturationFactor: null };
         let tmp5Result = tmp5(689);

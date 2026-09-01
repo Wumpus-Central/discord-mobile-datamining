@@ -4,7 +4,9 @@ import __INTERNAL_VIEW_CONFIGDefault from "../../../../../discord_common/js/pack
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 noopAll;
-const result = require("set").fileFinishedImporting("design/void/AccessibilityFocusView/native/AccessibilityFocusView.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/void/AccessibilityFocusView/native/AccessibilityFocusView.tsx",
+);
 
 export default function AccessibilityFocusView(arg0) {
   ({ onAccessibilityFocus, onAccessibilityBlur } = arg0);
@@ -14,4 +16,4 @@ export default function AccessibilityFocusView(arg0) {
   obj.onAccessibilityFocus = onAccessibilityFocus;
   obj.onAccessibilityBlur = onAccessibilityBlur;
   return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
-};
+}

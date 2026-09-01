@@ -7,7 +7,9 @@ import ME from "../../../../../Constants.tsx";
 
 require = arg1;
 ({ HelpdeskArticles: c4, MessageFlags: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/EphemeralIndication.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/EphemeralIndication.tsx",
+);
 
 export const createEphemeralIndication = function createEphemeralIndication(message) {
   if (message.hasFlag(constants2.EPHEMERAL)) {

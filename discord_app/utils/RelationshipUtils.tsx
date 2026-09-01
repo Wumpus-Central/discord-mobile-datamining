@@ -19,7 +19,7 @@ export const showPendingNotification = function showPendingNotification(user) {
     onClick: () => {
       callback(table[4]).transitionToSection(constants.PENDING, { explicit: true });
     },
-    isUserAvatar: true
+    isUserAvatar: true,
   };
   obj.showNotification(getAvatarURLDefault.getUserAvatarURL(user), user.username, stringResult, {}, obj);
 };
@@ -37,7 +37,7 @@ export const showAcceptedNotification = function showAcceptedNotification(user) 
       obj = { recipientIds: user.id };
       obj.openPrivateChannel(obj);
     },
-    isUserAvatar: true
+    isUserAvatar: true,
   };
   obj.showNotification(getAvatarURLDefault.getUserAvatarURL(user), user.username, stringResult, {}, obj);
 };

@@ -10,7 +10,11 @@ import closure_6 from "CollectiblesCategoryStore.tsx";
 import { addDebugLog } from "CollectiblesDebugStore.tsx";
 import closure_8 from "CollectiblesPurchaseStore.tsx";
 import closure_9 from "CollectiblesShopStore.tsx";
-import { CollectiblesCategoriesRecord as closure_10, CollectiblesMarketingsRecord as closure_11, CollectiblesShopHomeRecord as closure_14 } from "records/CollectiblesCategoriesRecord.tsx";
+import {
+  CollectiblesCategoriesRecord as closure_10,
+  CollectiblesMarketingsRecord as closure_11,
+  CollectiblesShopHomeRecord as closure_14,
+} from "records/CollectiblesCategoriesRecord.tsx";
 import closure_12 from "records/CollectiblesProductRecord.tsx";
 import closure_13 from "records/CollectiblesPurchaseRecord.tsx";
 import { CollectiblesMobileShopScreen as closure_15 } from "CollectiblesShopConstants.tsx";
@@ -72,7 +76,7 @@ function _fetchCollectiblesCategories() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       let aPIError = tmp3;
       closure_4 = tmp5;
       let tmp = callback;
@@ -96,7 +100,13 @@ function _fetchCollectiblesCategories() {
         if (tmp99 != null) {
           sessionId = tmp99.sessionId;
         }
-        let obj2 = { sessionId: null, checkpoint: null, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
+        let obj2 = {
+          sessionId: null,
+          checkpoint: null,
+          tab: null,
+          unpublishedCategoriesShown: null,
+          cacheDisabled: null,
+        };
         obj2[0] = sessionId;
         obj2[1] = lib(closure_2[20]).CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_STARTED;
         let tab;
@@ -157,7 +167,13 @@ function _fetchCollectiblesCategories() {
           if (closure_2 != null) {
             sessionId1 = closure_2.sessionId;
           }
-          obj6 = { sessionId: null, checkpoint: null, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
+          obj6 = {
+            sessionId: null,
+            checkpoint: null,
+            tab: null,
+            unpublishedCategoriesShown: null,
+            cacheDisabled: null,
+          };
           obj6[0] = sessionId1;
           obj6[1] = lib(closure_2[20]).CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_COMPLETED;
           let tab1;
@@ -213,7 +229,7 @@ function fetchCollectiblesPurchases() {
 }
 function _fetchCollectiblesPurchases() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -348,7 +364,7 @@ function _fetchCollectiblesProduct() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_3 = tmp3;
       obj1 = { type: "COLLECTIBLES_PRODUCT_FETCH", skuId: null, startedAt: null };
       obj1[1] = callback;
@@ -441,7 +457,7 @@ function _maybeFetchCollectiblesProduct() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();
@@ -526,7 +542,7 @@ function _claimPremiumCollectiblesProduct() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -636,7 +652,7 @@ function _validateCollectiblesRecipient() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -732,7 +748,7 @@ function _validateCollectiblesRecipientsBatch() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -829,7 +845,7 @@ function _fetchCollectiblesMarketings() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       let body = tmp3;
       PROD = PROD.release;
       if (PROD === undefined) {
@@ -891,7 +907,7 @@ function _fetchCollectiblesShopHome() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       closure_5 = tmp3;
       obj1 = { type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: null, options: null };
       obj1[1] = callback;
@@ -911,7 +927,13 @@ function _fetchCollectiblesShopHome() {
         if (tmp82 != null) {
           sessionId = tmp82.sessionId;
         }
-        let obj2 = { sessionId: null, checkpoint: null, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
+        let obj2 = {
+          sessionId: null,
+          checkpoint: null,
+          tab: null,
+          unpublishedCategoriesShown: null,
+          cacheDisabled: null,
+        };
         obj2[0] = sessionId;
         obj2[1] = callback(closure_2[20]).CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_STARTED;
         let tab;
@@ -965,7 +987,13 @@ function _fetchCollectiblesShopHome() {
           if (closure_2 != null) {
             sessionId1 = closure_2.sessionId;
           }
-          obj6 = { sessionId: null, checkpoint: null, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
+          obj6 = {
+            sessionId: null,
+            checkpoint: null,
+            tab: null,
+            unpublishedCategoriesShown: null,
+            cacheDisabled: null,
+          };
           obj6[0] = sessionId1;
           obj6[1] = callback(closure_2[20]).CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_COMPLETED;
           let tab1;
@@ -1013,7 +1041,7 @@ function _claimCollectiblesCategoryReward() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -1124,7 +1152,7 @@ function _maybeFetchCollectiblesShopTabLayout() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       let layoutFetchError = tmp3;
       ({ tab: c0, abortSignal: c1 } = callback);
       yield "PX_16";
@@ -1209,7 +1237,13 @@ function _maybeFetchCollectiblesShopTabLayout() {
 ({ Endpoints: closure_16, Routes, UserSettingsSections: closure_17 } = ME);
 let result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
 
-export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesPurchases, fetchCollectiblesProduct, claimPremiumCollectiblesProduct };
+export default {
+  openCollectiblesShop,
+  closeCollectiblesShop,
+  fetchCollectiblesPurchases,
+  fetchCollectiblesProduct,
+  claimPremiumCollectiblesProduct,
+};
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {

@@ -9,7 +9,12 @@ createCacheKey = { headerStyle: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { INTRO: "INTRO", RETRY: "RETRY", EXPRESSIVE_INTRO: "EXPRESSIVE_INTRO", GOOGLE_WALLET_VERIFICATION: "GOOGLE_WALLET_VERIFICATION" };
+let obj1 = {
+  INTRO: "INTRO",
+  RETRY: "RETRY",
+  EXPRESSIVE_INTRO: "EXPRESSIVE_INTRO",
+  GOOGLE_WALLET_VERIFICATION: "GOOGLE_WALLET_VERIFICATION",
+};
 let result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationGetStartedModal.tsx");
 
 export default function AgeVerificationGetStartedModal(entryPoint) {
@@ -51,7 +56,7 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
         return null;
       },
       headerLeft: null,
-      render: null
+      render: null,
     };
     let obj2 = entryPoint(flag[5]);
     obj[2] = obj2.getHeaderCloseButton(closeModal);
@@ -67,7 +72,7 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
       headerLeft: entryPoint(flag[5]).getHeaderCloseButton(closeModal),
       render() {
         return closeModal(callback(8730), { onClose: closeModal, modalSessionId: closure_0 });
-      }
+      },
     };
     obj[memo.RETRY] = obj;
     obj1 = {
@@ -76,12 +81,18 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
         return null;
       },
       headerLeft: null,
-      render: null
+      render: null,
     };
     const obj5 = entryPoint(flag[5]);
     obj1[2] = entryPoint(flag[5]).getHeaderCloseButton(closeModal);
     obj1[3] = function render(arg0, navigation) {
-      return closeModal(callback(8731), { onClose: closeModalWithOnComplete, modalSessionId: closure_0, classificationId: dependencyMap, entryPoint: callback, navigation });
+      return closeModal(callback(8731), {
+        onClose: closeModalWithOnComplete,
+        modalSessionId: closure_0,
+        classificationId: dependencyMap,
+        entryPoint: callback,
+        navigation,
+      });
     };
     obj[memo.EXPRESSIVE_INTRO] = obj1;
     obj2 = {
@@ -90,7 +101,7 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
         return null;
       },
       headerLeft: null,
-      render: null
+      render: null,
     };
     const obj7 = entryPoint(flag[5]);
     obj2[2] = entryPoint(flag[5]).getHeaderBackButton();
@@ -123,5 +134,5 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
   const intl = tmp7(tmp8[13]).intl;
   obj[2] = intl.string(entryPoint(flag[13]).t["13/7kX"]);
   return onComplete(entryPoint(flag[12]).Navigator, obj);
-};
+}
 export const AgeVerificationGetStartedModalScenes = obj1;

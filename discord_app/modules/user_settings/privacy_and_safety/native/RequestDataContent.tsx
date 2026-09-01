@@ -10,8 +10,22 @@ const require = arg1;
 let c4 = importAllResult;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = { USERS: "Account", MESSAGES: "Messages", GUILDS: "Servers", ANALYTICS: "Analytics", ACTIVITIES: "Activities", ADS: "Ads", ZENDESK: "Zendesk" };
-let closure_11 = createCacheKey.createStyles({ content: { padding: 16 }, header: { marginBottom: 8 }, title: { marginBottom: 8 }, description: { marginBottom: 0 }, checkboxContainer: { marginBottom: 16 } });
+let closure_10 = {
+  USERS: "Account",
+  MESSAGES: "Messages",
+  GUILDS: "Servers",
+  ANALYTICS: "Analytics",
+  ACTIVITIES: "Activities",
+  ADS: "Ads",
+  ZENDESK: "Zendesk",
+};
+let closure_11 = createCacheKey.createStyles({
+  content: { padding: 16 },
+  header: { marginBottom: 8 },
+  title: { marginBottom: 8 },
+  description: { marginBottom: 0 },
+  checkboxContainer: { marginBottom: 16 },
+});
 const memoResult = importAllResult.memo(() => {
   const tmp = callback4();
   let obj = _require(first[6]);
@@ -56,38 +70,50 @@ const memoResult = importAllResult.memo(() => {
   let mapped = keys.map((arg0, arg1, arg2) => {
     ({ label, checked } = first[arg0]);
     const callback = arg0;
-    return closure_1_8(callback(first[8]).TableCheckboxRow, {
-      label,
-      checked,
-      onPress: (arg0) => {
-        closure_0 = arg0;
-        closure_1_3((arg0) => {
-          let obj = {};
-          const merged = Object.assign(arg0);
-          obj = {};
-          const merged1 = Object.assign(arg0[closure_0]);
-          obj.checked = closure_0;
-          obj[closure_0] = obj;
-          return obj;
-        });
+    return closure_1_8(
+      callback(first[8]).TableCheckboxRow,
+      {
+        label,
+        checked,
+        onPress: (arg0) => {
+          closure_0 = arg0;
+          closure_1_3((arg0) => {
+            let obj = {};
+            const merged = Object.assign(arg0);
+            obj = {};
+            const merged1 = Object.assign(arg0[closure_0]);
+            obj.checked = closure_0;
+            obj[closure_0] = obj;
+            return obj;
+          });
+        },
+        start: 0 === arg1,
+        end: arg1 === arg2.length - 1,
       },
-      start: 0 === arg1,
-      end: arg1 === arg2.length - 1
-    }, arg0);
+      arg0,
+    );
   });
-  const obj9 = { style: tmp.title, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj9 = {
+    style: tmp.title,
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl8 = _require(first[7]).intl;
   obj9[3] = intl8.string(_require(first[7]).t.jxXMEz);
-  const items = [callback2(_require(first[9]).Text, obj9), ];
+  const items = [callback2(_require(first[9]).Text, obj9)];
   const obj10 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl9 = _require(first[7]).intl;
   const obj11 = { helpdeskArticle: importDefault(first[10]).getArticleURL(HelpdeskArticles.GDPR_PACKAGE_CONTENTS) };
   obj10[3] = intl9.format(_require(first[7]).t.vtRhDA, obj11);
   items[1] = callback2(_require(first[9]).Text, obj10);
   obj8[1] = items;
-  const items1 = [callback3(closure_5, obj8), , ];
+  const items1 = [callback3(closure_5, obj8), ,];
   const obj15 = importDefault(first[10]);
-  items1[1] = callback2(closure_5, { style: tmp.checkboxContainer, children: callback2(_require(first[11]).TableRowGroup, { title: "", hasIcons: false, children: mapped }) });
+  items1[1] = callback2(closure_5, {
+    style: tmp.checkboxContainer,
+    children: callback2(_require(first[11]).TableRowGroup, { title: "", hasIcons: false, children: mapped }),
+  });
   const obj13 = { text: null, onPress: null, loading: null };
   const intl10 = _require(first[7]).intl;
   obj13[0] = intl10.string(_require(first[7]).t.NYgNg9);
@@ -99,98 +125,106 @@ const memoResult = importAllResult.memo(() => {
       callback2(true);
       let obj = callback(first[14]);
       const dataHarvest = obj.requestDataHarvest(mapped);
-      dataHarvest.then((body) => {
-        if (null != body) {
-          if (null != body.body) {
-            let obj = { title: null, body: null };
-            const intl3 = closure_1_0(closure_1_2[7]).intl;
-            obj[0] = intl3.string(closure_1_0(closure_1_2[7]).t.i2iul5);
-            const intl4 = closure_1_0(closure_1_2[7]).intl;
-            obj[1] = intl4.string(closure_1_0(closure_1_2[7]).t["6Nmv4i"]);
-            closure_1_1(closure_1_2[13]).show(obj);
-            arr = arr.pop();
-            const obj3 = closure_1_1(closure_1_2[13]);
-          }
-        }
-        obj = closure_1_1(closure_1_2[13]);
-        obj = { title: null, body: null };
-        const intl = closure_1_0(closure_1_2[7]).intl;
-        obj[0] = intl.string(closure_1_0(closure_1_2[7]).t.OjbtDm);
-        const intl2 = closure_1_0(closure_1_2[7]).intl;
-        obj[1] = intl2.string(closure_1_0(closure_1_2[7]).t["0F5Jyt"]);
-        obj.show(obj);
-      }, (message) => {
-        message = undefined;
-        if (message != null) {
-          message = message.message;
-        }
-        if (!message) {
-          let message1;
-          if (message != null) {
-            const body = message.body;
-            if (body != null) {
-              message1 = body.message;
+      dataHarvest
+        .then(
+          (body) => {
+            if (null != body) {
+              if (null != body.body) {
+                let obj = { title: null, body: null };
+                const intl3 = closure_1_0(closure_1_2[7]).intl;
+                obj[0] = intl3.string(closure_1_0(closure_1_2[7]).t.i2iul5);
+                const intl4 = closure_1_0(closure_1_2[7]).intl;
+                obj[1] = intl4.string(closure_1_0(closure_1_2[7]).t["6Nmv4i"]);
+                closure_1_1(closure_1_2[13]).show(obj);
+                arr = arr.pop();
+                const obj3 = closure_1_1(closure_1_2[13]);
+              }
+            }
+            obj = closure_1_1(closure_1_2[13]);
+            obj = { title: null, body: null };
+            const intl = closure_1_0(closure_1_2[7]).intl;
+            obj[0] = intl.string(closure_1_0(closure_1_2[7]).t.OjbtDm);
+            const intl2 = closure_1_0(closure_1_2[7]).intl;
+            obj[1] = intl2.string(closure_1_0(closure_1_2[7]).t["0F5Jyt"]);
+            obj.show(obj);
+          },
+          (message) => {
+            message = undefined;
+            if (message != null) {
+              message = message.message;
+            }
+            if (!message) {
+              let message1;
+              if (message != null) {
+                const body = message.body;
+                if (body != null) {
+                  message1 = body.message;
+                }
+              }
+              message = message1;
+            }
+            if (!message) {
+              const intl = arr(1236).intl;
+              message = intl.string(arr(1236).t["0F5Jyt"]);
+            }
+            let obj = callback(4857);
+            obj = { title: null, body: null };
+            const intl2 = arr(1236).intl;
+            obj[0] = intl2.string(arr(1236).t.OjbtDm);
+            obj[1] = message;
+            obj.show(obj);
+          },
+        )
+        .finally(() => callback(false));
+      const nextPromise = dataHarvest.then(
+        (body) => {
+          if (null != body) {
+            if (null != body.body) {
+              let obj = { title: null, body: null };
+              const intl3 = closure_1_0(closure_1_2[7]).intl;
+              obj[0] = intl3.string(closure_1_0(closure_1_2[7]).t.i2iul5);
+              const intl4 = closure_1_0(closure_1_2[7]).intl;
+              obj[1] = intl4.string(closure_1_0(closure_1_2[7]).t["6Nmv4i"]);
+              closure_1_1(closure_1_2[13]).show(obj);
+              arr = arr.pop();
+              const obj3 = closure_1_1(closure_1_2[13]);
             }
           }
-          message = message1;
-        }
-        if (!message) {
-          const intl = arr(1236).intl;
-          message = intl.string(arr(1236).t["0F5Jyt"]);
-        }
-        let obj = callback(4857);
-        obj = { title: null, body: null };
-        const intl2 = arr(1236).intl;
-        obj[0] = intl2.string(arr(1236).t.OjbtDm);
-        obj[1] = message;
-        obj.show(obj);
-      }).finally(() => callback(false));
-      const nextPromise = dataHarvest.then((body) => {
-        if (null != body) {
-          if (null != body.body) {
-            let obj = { title: null, body: null };
-            const intl3 = closure_1_0(closure_1_2[7]).intl;
-            obj[0] = intl3.string(closure_1_0(closure_1_2[7]).t.i2iul5);
-            const intl4 = closure_1_0(closure_1_2[7]).intl;
-            obj[1] = intl4.string(closure_1_0(closure_1_2[7]).t["6Nmv4i"]);
-            closure_1_1(closure_1_2[13]).show(obj);
-            arr = arr.pop();
-            const obj3 = closure_1_1(closure_1_2[13]);
-          }
-        }
-        obj = closure_1_1(closure_1_2[13]);
-        obj = { title: null, body: null };
-        const intl = closure_1_0(closure_1_2[7]).intl;
-        obj[0] = intl.string(closure_1_0(closure_1_2[7]).t.OjbtDm);
-        const intl2 = closure_1_0(closure_1_2[7]).intl;
-        obj[1] = intl2.string(closure_1_0(closure_1_2[7]).t["0F5Jyt"]);
-        obj.show(obj);
-      }, (message) => {
-        message = undefined;
-        if (message != null) {
-          message = message.message;
-        }
-        if (!message) {
-          let message1;
+          obj = closure_1_1(closure_1_2[13]);
+          obj = { title: null, body: null };
+          const intl = closure_1_0(closure_1_2[7]).intl;
+          obj[0] = intl.string(closure_1_0(closure_1_2[7]).t.OjbtDm);
+          const intl2 = closure_1_0(closure_1_2[7]).intl;
+          obj[1] = intl2.string(closure_1_0(closure_1_2[7]).t["0F5Jyt"]);
+          obj.show(obj);
+        },
+        (message) => {
+          message = undefined;
           if (message != null) {
-            const body = message.body;
-            if (body != null) {
-              message1 = body.message;
-            }
+            message = message.message;
           }
-          message = message1;
-        }
-        if (!message) {
-          const intl = arr(1236).intl;
-          message = intl.string(arr(1236).t["0F5Jyt"]);
-        }
-        let obj = callback(4857);
-        obj = { title: null, body: null };
-        const intl2 = arr(1236).intl;
-        obj[0] = intl2.string(arr(1236).t.OjbtDm);
-        obj[1] = message;
-        obj.show(obj);
-      });
+          if (!message) {
+            let message1;
+            if (message != null) {
+              const body = message.body;
+              if (body != null) {
+                message1 = body.message;
+              }
+            }
+            message = message1;
+          }
+          if (!message) {
+            const intl = arr(1236).intl;
+            message = intl.string(arr(1236).t["0F5Jyt"]);
+          }
+          let obj = callback(4857);
+          obj = { title: null, body: null };
+          const intl2 = arr(1236).intl;
+          obj[0] = intl2.string(arr(1236).t.OjbtDm);
+          obj[1] = message;
+          obj.show(obj);
+        },
+      );
     } else {
       obj = { title: null, body: null };
       let intl = callback(first[7]).intl;
@@ -206,6 +240,8 @@ const memoResult = importAllResult.memo(() => {
   obj7[1] = items1;
   return callback3(closure_6, obj7);
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/RequestDataContent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/privacy_and_safety/native/RequestDataContent.tsx",
+);
 
 export default memoResult;

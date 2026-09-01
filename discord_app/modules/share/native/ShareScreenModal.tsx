@@ -35,7 +35,7 @@ export default function ShareScreenModal(text) {
   const effect = React.useEffect(() => {
     function _fetchAttachments() {
       const self = this;
-      const tmp = attachmentManifest(function*() {
+      const tmp = attachmentManifest(function* () {
         if (v0 === 2) {
           v0 = 3;
           HermesBuiltin.throwTypeError();
@@ -136,7 +136,7 @@ export default function ShareScreenModal(text) {
   const effect1 = React.useEffect(() => {
     function _fetchChannel() {
       const self = this;
-      const tmp = attachmentManifest(function*() {
+      const tmp = attachmentManifest(function* () {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -278,4 +278,4 @@ export default function ShareScreenModal(text) {
   }, items3);
   obj = { sharedContent: memo, onClose };
   return first1(channelId(shareId[12]), obj);
-};
+}

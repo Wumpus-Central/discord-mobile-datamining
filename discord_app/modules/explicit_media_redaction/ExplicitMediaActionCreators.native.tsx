@@ -4,11 +4,19 @@ import closure_3 from "ExplicitMediaStore.tsx";
 import { EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_4 } from "ExplicitMediaRedactionConstants.tsx";
 
 require = arg1;
-let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaActionCreators.native.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/explicit_media_redaction/ExplicitMediaActionCreators.native.tsx",
+);
 
 export const handleSenderFalsePositiveFlow = function handleSenderFalsePositiveFlow(channelId, closure_1) {
   let obj = redactionSettingToRenderedString;
-  obj = { action: redactionSettingToRenderedString.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED, messageId: closure_1, channelId };
+  obj = {
+    action:
+      redactionSettingToRenderedString.TrackMediaRedactionActionType
+        .EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED,
+    messageId: closure_1,
+    channelId,
+  };
   const result = obj.trackMediaRedactionAction(obj);
   if (closure_3.canSubmitFpReport(closure_1)) {
     let tmp4Result = tmp4(4445);

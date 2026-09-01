@@ -102,14 +102,14 @@ function NameplateInner(isFocused) {
     obj1[0] = num2;
     obj[1] = obj1;
     obj[2] = { x: 1, y: 0 };
-    const items3 = [, ];
+    const items3 = [,];
     ({ left: arr4[0], right: arr4[1] } = backgroundGradientColors);
     obj[3] = items3;
     tmp15Result = callback(tmp5(4940), obj);
     const tmp15 = callback;
     const tmp5Result = tmp5(4940);
   }
-  const items4 = [tmp15Result, ];
+  const items4 = [tmp15Result];
   const tmp13 = closure_6;
   const tmpResult1 = flag6(8523);
   if (tmpResult2.isAndroid()) {
@@ -127,7 +127,11 @@ function NameplateInner(isFocused) {
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {
-  const obj = { container: { position: "absolute", overflow: "hidden", top: 0, bottom: 0, left: 0, right: 0 }, gradient: null, img: null };
+  const obj = {
+    container: { position: "absolute", overflow: "hidden", top: 0, bottom: 0, left: 0, right: 0 },
+    gradient: null,
+    img: null,
+  };
   let num = 1;
   let num2 = 1;
   if (!arg0) {
@@ -187,4 +191,4 @@ export default function Nameplate(nameplate) {
     tmp = callback(NameplateInner, obj);
   }
   return tmp;
-};
+}

@@ -34,7 +34,7 @@ function _handleToggleVideo() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       let channelVideoLimit = 0;
       closure_2 = tmp2;
       if (flag3 === undefined) {
@@ -113,8 +113,79 @@ let closure_17 = importDefaultResult.debounce((arg0) => {
 let closure_18 = importDefaultResult.debounce((arg0) => {
   arg0();
 }, 1);
-let obj = { EARPIECE: registerAssetDefault, BLUETOOTH_HEADSET: registerAssetDefault2, WIRED_HEADSET: registerAssetDefault3, SPEAKERPHONE: registerAssetDefault3, INVALID: registerAssetDefault3 };
-let closure_20 = { TYPE_UNKNOWN: 0, [0]: "TYPE_UNKNOWN", TYPE_BUILTIN_EARPIECE: 1, [1]: "TYPE_BUILTIN_EARPIECE", TYPE_BUILTIN_SPEAKER: 2, [2]: "TYPE_BUILTIN_SPEAKER", TYPE_WIRED_HEADSET: 3, [3]: "TYPE_WIRED_HEADSET", TYPE_WIRED_HEADPHONES: 4, [4]: "TYPE_WIRED_HEADPHONES", TYPE_LINE_ANALOG: 5, [5]: "TYPE_LINE_ANALOG", TYPE_LINE_DIGITAL: 6, [6]: "TYPE_LINE_DIGITAL", TYPE_BLUETOOTH_SCO: 7, [7]: "TYPE_BLUETOOTH_SCO", TYPE_BLUETOOTH_A2DP: 8, [8]: "TYPE_BLUETOOTH_A2DP", TYPE_HDMI: 9, [9]: "TYPE_HDMI", TYPE_HDMI_ARC: 10, [10]: "TYPE_HDMI_ARC", TYPE_USB_DEVICE: 11, [11]: "TYPE_USB_DEVICE", TYPE_USB_ACCESSORY: 12, [12]: "TYPE_USB_ACCESSORY", TYPE_DOCK: 13, [13]: "TYPE_DOCK", TYPE_FM: 14, [14]: "TYPE_FM", TYPE_BUILTIN_MIC: 15, [15]: "TYPE_BUILTIN_MIC", TYPE_FM_TUNER: 16, [16]: "TYPE_FM_TUNER", TYPE_TV_TUNER: 17, [17]: "TYPE_TV_TUNER", TYPE_TELEPHONY: 18, [18]: "TYPE_TELEPHONY", TYPE_AUX_LINE: 19, [19]: "TYPE_AUX_LINE", TYPE_IP: 20, [20]: "TYPE_IP", TYPE_BUS: 21, [21]: "TYPE_BUS", TYPE_USB_HEADSET: 22, [22]: "TYPE_USB_HEADSET", TYPE_HEARING_AID: 23, [23]: "TYPE_HEARING_AID", TYPE_BUILTIN_SPEAKER_SAFE: 24, [24]: "TYPE_BUILTIN_SPEAKER_SAFE", TYPE_REMOTE_SUBMIX: 25, [25]: "TYPE_REMOTE_SUBMIX", TYPE_BLE_HEADSET: 26, [26]: "TYPE_BLE_HEADSET", TYPE_BLE_SPEAKER: 27, [27]: "TYPE_BLE_SPEAKER", TYPE_ECHO_REFERENCE: 28, [28]: "TYPE_ECHO_REFERENCE", TYPE_HDMI_EARC: 29, [29]: "TYPE_HDMI_EARC", TYPE_BLE_BROADCAST: 30, [30]: "TYPE_BLE_BROADCAST", TYPE_DOCK_ANALOG: 31, [31]: "TYPE_DOCK_ANALOG" };
+let obj = {
+  EARPIECE: registerAssetDefault,
+  BLUETOOTH_HEADSET: registerAssetDefault2,
+  WIRED_HEADSET: registerAssetDefault3,
+  SPEAKERPHONE: registerAssetDefault3,
+  INVALID: registerAssetDefault3,
+};
+let closure_20 = {
+  TYPE_UNKNOWN: 0,
+  [0]: "TYPE_UNKNOWN",
+  TYPE_BUILTIN_EARPIECE: 1,
+  [1]: "TYPE_BUILTIN_EARPIECE",
+  TYPE_BUILTIN_SPEAKER: 2,
+  [2]: "TYPE_BUILTIN_SPEAKER",
+  TYPE_WIRED_HEADSET: 3,
+  [3]: "TYPE_WIRED_HEADSET",
+  TYPE_WIRED_HEADPHONES: 4,
+  [4]: "TYPE_WIRED_HEADPHONES",
+  TYPE_LINE_ANALOG: 5,
+  [5]: "TYPE_LINE_ANALOG",
+  TYPE_LINE_DIGITAL: 6,
+  [6]: "TYPE_LINE_DIGITAL",
+  TYPE_BLUETOOTH_SCO: 7,
+  [7]: "TYPE_BLUETOOTH_SCO",
+  TYPE_BLUETOOTH_A2DP: 8,
+  [8]: "TYPE_BLUETOOTH_A2DP",
+  TYPE_HDMI: 9,
+  [9]: "TYPE_HDMI",
+  TYPE_HDMI_ARC: 10,
+  [10]: "TYPE_HDMI_ARC",
+  TYPE_USB_DEVICE: 11,
+  [11]: "TYPE_USB_DEVICE",
+  TYPE_USB_ACCESSORY: 12,
+  [12]: "TYPE_USB_ACCESSORY",
+  TYPE_DOCK: 13,
+  [13]: "TYPE_DOCK",
+  TYPE_FM: 14,
+  [14]: "TYPE_FM",
+  TYPE_BUILTIN_MIC: 15,
+  [15]: "TYPE_BUILTIN_MIC",
+  TYPE_FM_TUNER: 16,
+  [16]: "TYPE_FM_TUNER",
+  TYPE_TV_TUNER: 17,
+  [17]: "TYPE_TV_TUNER",
+  TYPE_TELEPHONY: 18,
+  [18]: "TYPE_TELEPHONY",
+  TYPE_AUX_LINE: 19,
+  [19]: "TYPE_AUX_LINE",
+  TYPE_IP: 20,
+  [20]: "TYPE_IP",
+  TYPE_BUS: 21,
+  [21]: "TYPE_BUS",
+  TYPE_USB_HEADSET: 22,
+  [22]: "TYPE_USB_HEADSET",
+  TYPE_HEARING_AID: 23,
+  [23]: "TYPE_HEARING_AID",
+  TYPE_BUILTIN_SPEAKER_SAFE: 24,
+  [24]: "TYPE_BUILTIN_SPEAKER_SAFE",
+  TYPE_REMOTE_SUBMIX: 25,
+  [25]: "TYPE_REMOTE_SUBMIX",
+  TYPE_BLE_HEADSET: 26,
+  [26]: "TYPE_BLE_HEADSET",
+  TYPE_BLE_SPEAKER: 27,
+  [27]: "TYPE_BLE_SPEAKER",
+  TYPE_ECHO_REFERENCE: 28,
+  [28]: "TYPE_ECHO_REFERENCE",
+  TYPE_HDMI_EARC: 29,
+  [29]: "TYPE_HDMI_EARC",
+  TYPE_BLE_BROADCAST: 30,
+  [30]: "TYPE_BLE_BROADCAST",
+  TYPE_DOCK_ANALOG: 31,
+  [31]: "TYPE_DOCK_ANALOG",
+};
 const importDefaultResult1 = importDefaultResult;
 let result = set.fileFinishedImporting("modules/voice_calls/native/CallsUtils.tsx");
 
@@ -232,64 +303,74 @@ export const getAudioDeviceToDisplayText = function getAudioDeviceToDisplayText(
   }
   return stringResult;
 };
-export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
-  const items = [closure_14];
-  return initialize.useStateFromStoresObject(items, () => {
-    activeAudioDevice = activeAudioDevice.getActiveAudioDevice();
-    obj = { isAudioRouteEnabled: true, toggleAudio: callback(table[27]).showAudioOutputSelector, routeSource: null };
-    let simpleDeviceType;
-    if (activeAudioDevice != null) {
-      simpleDeviceType = activeAudioDevice.simpleDeviceType;
+export const useMaskedSpeakerStates = set.isAndroid()
+  ? () => {
+      const items = [closure_14];
+      return initialize.useStateFromStoresObject(items, () => {
+        activeAudioDevice = activeAudioDevice.getActiveAudioDevice();
+        obj = {
+          isAudioRouteEnabled: true,
+          toggleAudio: callback(table[27]).showAudioOutputSelector,
+          routeSource: null,
+        };
+        let simpleDeviceType;
+        if (activeAudioDevice != null) {
+          simpleDeviceType = activeAudioDevice.simpleDeviceType;
+        }
+        if (simpleDeviceType == null) {
+          simpleDeviceType = callback(table[28]).AudioDeviceType.INVALID;
+        }
+        obj[2] = closure_19[simpleDeviceType];
+        return obj;
+      }, []);
     }
-    if (simpleDeviceType == null) {
-      simpleDeviceType = callback(table[28]).AudioDeviceType.INVALID;
-    }
-    obj[2] = closure_19[simpleDeviceType];
-    return obj;
-  }, []);
-}) : (() => {
-  obj = isEnabled(589);
-  const items = [closure_9, closure_11, closure_8, closure_12, closure_10, closure_13];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    isVideoMode = isEnabled(9894).isVideoMode(closure_9, closure_11, closure_8, closure_12, closure_10);
-    currentRouteType = currentRouteType.getCurrentRouteType();
-    isEnabled = currentRouteType === isEnabled(9776).RouteTypes.SPEAKER;
-    const isBluetoothRoute = currentRouteType === isEnabled(9776).RouteTypes.BLUETOOTH;
-    if (!isEnabled) {
-      isEnabled = isBluetoothRoute;
-    }
-    if (!isEnabled) {
-      isEnabled = isVideoMode;
-    }
-    return { isEnabled, isVideoMode, isBluetoothRoute };
-  });
-  isEnabled = stateFromStoresObject.isEnabled;
-  let isVideoMode = stateFromStoresObject.isVideoMode;
-  const tmp3 = callback(React.useState(isEnabled), 2);
-  const first = tmp3[0];
-  dependencyMap = tmp3[1];
-  const items1 = [first, isVideoMode];
-  const items2 = [isEnabled, isVideoMode];
-  callback = React.useCallback(() => {
-    if (!closure_1_13.getMultipleRoutesAvailable()) {
-      closure_1_18.cancel();
-      if (!isVideoMode) {
-        dependencyMap(!first);
-      }
-    }
-    closure_1_17(!first);
-  }, items1);
-  const effect = React.useEffect(() => {
-    if (!closure_1_13.getMultipleRoutesAvailable()) {
-      if (!isVideoMode) {
-        closure_1_18(() => callback(closure_0));
-      }
-    }
-    dependencyMap(isEnabled);
-  }, items2);
-  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9801 : 9802) };
-  return obj;
-});
+  : () => {
+      obj = isEnabled(589);
+      const items = [closure_9, closure_11, closure_8, closure_12, closure_10, closure_13];
+      const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+        isVideoMode = isEnabled(9894).isVideoMode(closure_9, closure_11, closure_8, closure_12, closure_10);
+        currentRouteType = currentRouteType.getCurrentRouteType();
+        isEnabled = currentRouteType === isEnabled(9776).RouteTypes.SPEAKER;
+        const isBluetoothRoute = currentRouteType === isEnabled(9776).RouteTypes.BLUETOOTH;
+        if (!isEnabled) {
+          isEnabled = isBluetoothRoute;
+        }
+        if (!isEnabled) {
+          isEnabled = isVideoMode;
+        }
+        return { isEnabled, isVideoMode, isBluetoothRoute };
+      });
+      isEnabled = stateFromStoresObject.isEnabled;
+      let isVideoMode = stateFromStoresObject.isVideoMode;
+      const tmp3 = callback(React.useState(isEnabled), 2);
+      const first = tmp3[0];
+      dependencyMap = tmp3[1];
+      const items1 = [first, isVideoMode];
+      const items2 = [isEnabled, isVideoMode];
+      callback = React.useCallback(() => {
+        if (!closure_1_13.getMultipleRoutesAvailable()) {
+          closure_1_18.cancel();
+          if (!isVideoMode) {
+            dependencyMap(!first);
+          }
+        }
+        closure_1_17(!first);
+      }, items1);
+      const effect = React.useEffect(() => {
+        if (!closure_1_13.getMultipleRoutesAvailable()) {
+          if (!isVideoMode) {
+            closure_1_18(() => callback(closure_0));
+          }
+        }
+        dependencyMap(isEnabled);
+      }, items2);
+      obj = {
+        isAudioRouteEnabled: first,
+        toggleAudio: callback,
+        routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9801 : 9802),
+      };
+      return obj;
+    };
 export const useImmediateMaskedSpeakerStates = () => {
   obj = initialize;
   const items = [closure_13];

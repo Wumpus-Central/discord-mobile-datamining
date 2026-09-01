@@ -34,9 +34,11 @@ createToggle = {
   },
   useIsDisabled() {
     return useParentalControlledExplicitContentSettings.useIsParentallyControlled();
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsMutualFriendsSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/FriendRequestsMutualFriendsSetting.tsx",
+);
 
 export default createToggle;

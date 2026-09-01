@@ -34,15 +34,30 @@ function GuildProfileTraitView(trait) {
   trait = trait.trait;
   let obj = { style: callback3().trait, children: null };
   obj = { emoji: trait.emoji };
-  const items = [callback(TraitEmoji, obj), ];
+  const items = [callback(TraitEmoji, obj)];
   obj = { variant: "text-sm/medium", color: "text-default", children: trait.label };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 8 }, trait: null, emojiImage: null };
-createCacheKey = { display: "flex", flexDirection: "row", gap: 4, alignItems: "center", paddingHorizontal: 8, paddingVertical: 4, borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey = {
+  container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 8 },
+  trait: null,
+  emojiImage: null,
+};
+createCacheKey = {
+  display: "flex",
+  flexDirection: "row",
+  gap: 4,
+  alignItems: "center",
+  paddingHorizontal: 8,
+  paddingVertical: 4,
+  borderRadius: ThemesDefault.radii.lg,
+  borderWidth: 1,
+  borderStyle: "solid",
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { width: 16, height: 16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
@@ -60,5 +75,8 @@ export default function GuildProfileTraits(profile) {
     return mapped.filter((label) => label.label.length > 0);
   }, items);
   const tmp = callback3();
-  return callback(View, { style: callback3().container, children: memo.map((key) => callback(closure_9, { trait: key }, key.key)) });
-};
+  return callback(View, {
+    style: callback3().container,
+    children: memo.map((key) => callback(closure_9, { trait: key }, key.key)),
+  });
+}

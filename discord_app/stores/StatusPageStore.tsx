@@ -9,8 +9,7 @@ let c3 = null;
 let c4 = null;
 let c5 = null;
 const Store = initializeDefault.Store;
-class MaintenanceStore extends Store {
-}
+class MaintenanceStore extends Store {}
 const prototype = MaintenanceStore.prototype;
 prototype["initialize"] = function initialize() {
   const Storage = Storage2.Storage;
@@ -67,7 +66,7 @@ const maintenanceStore = new MaintenanceStore(dispatcherDefault, {
       const Storage = Storage2.Storage;
       const result = Storage.set(MaintenanceStore, id);
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("stores/StatusPageStore.tsx");
 

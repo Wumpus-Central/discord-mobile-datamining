@@ -22,7 +22,17 @@ function renderHistorySection() {
 let c3 = importAllResult;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { listWrapper: { marginTop: 8 }, list: { marginBottom: 4, flexShrink: 0 }, maskStrokeStyle: null, privateChannelWrapper: null, privateChannelIcon: null, badgeWrapper: null, guildWrapper: null, guildHistorySeparatorWrapper: null, guildHistorySeparator: null };
+let obj = {
+  listWrapper: { marginTop: 8 },
+  list: { marginBottom: 4, flexShrink: 0 },
+  maskStrokeStyle: null,
+  privateChannelWrapper: null,
+  privateChannelIcon: null,
+  badgeWrapper: null,
+  guildWrapper: null,
+  guildHistorySeparatorWrapper: null,
+  guildHistorySeparator: null,
+};
 obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[2] = obj;
 obj[3] = { position: "relative", paddingVertical: 2, justifyContent: "center", alignItems: "center" };
@@ -30,7 +40,12 @@ obj[4] = { width: 48, height: 48, borderRadius: 24, overflow: "hidden" };
 obj[5] = { position: "absolute", top: "50%", left: "50%", marginLeft: 6, marginTop: 6 };
 obj[6] = { paddingVertical: 2, justifyContent: "center", alignItems: "center" };
 obj[7] = { flex: 1, justifyContent: "center", alignItems: "center" };
-createCacheKey = { width: 2, height: 32, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
+createCacheKey = {
+  width: 2,
+  height: 32,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+};
 obj[8] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(obj);
 let closure_13 = importAllResult.memo(function GuildItemInner(guildId) {
@@ -46,7 +61,15 @@ let closure_13 = importAllResult.memo(function GuildItemInner(guildId) {
   const callback1 = importAllResult.useCallback(() => {
     guildId(closure_1_2[9]).transitionToGuild(guildId);
   }, items1);
-  obj = { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor };
+  obj = {
+    size: 48,
+    borderRadius: 16,
+    guildId,
+    selected: guildId.selected,
+    onPress: callback,
+    onLongPress: callback1,
+    backgroundColor: tmp.maskStrokeStyle.backgroundColor,
+  };
   obj[1] = callback(onGuildSelect(16551), obj);
   return callback(closure_5, obj);
 });
@@ -98,7 +121,7 @@ let closure_14 = importAllResult.memo(function PrivateChannelItemInner(channelId
       obj = { onPress: null, style: null, accessibilityRole: "button", accessible: true, children: null };
       obj[0] = tmp17;
       obj[1] = tmp.privateChannelWrapper;
-      const items4 = [tmp8, ];
+      const items4 = [tmp8];
       let tmp21 = stateFromStores2 > 0;
       if (tmp21) {
         obj1 = { style: null, children: null };
@@ -243,13 +266,29 @@ const memoResult = importAllResult.memo(function LaunchPadUnreadServers(selected
   } else {
     stringResult = string(t.kCt2zG);
   }
-  t = [renderCategoryItem({ name: stringResult, styles: categoryStyles }), ];
+  t = [renderCategoryItem({ name: stringResult, styles: categoryStyles })];
   renderCategoryItem = callback;
   AnimatedFastList = AnimatedFastList(tmp[23]).AnimatedFastList;
-  obj = { ref, style: list, horizontal: true, renderItem: callback1, renderSection: renderHistorySection, sectionSize: length, sections: prop, itemSize: 58, headerSize: 19, footerSize: 19, chunkBase: setSelectedGuild(prop[20])().width, showsHorizontalScrollIndicator: false, showsVerticalScrollIndicator: false, stickySectionsVariant: "disabled", keyboardShouldPersistTaps: "always" };
+  obj = {
+    ref,
+    style: list,
+    horizontal: true,
+    renderItem: callback1,
+    renderSection: renderHistorySection,
+    sectionSize: length,
+    sections: prop,
+    itemSize: 58,
+    headerSize: 19,
+    footerSize: 19,
+    chunkBase: setSelectedGuild(prop[20])().width,
+    showsHorizontalScrollIndicator: false,
+    showsVerticalScrollIndicator: false,
+    stickySectionsVariant: "disabled",
+    keyboardShouldPersistTaps: "always",
+  };
   list = list.list;
   length = prop.length;
-  prop = [length, , ];
+  prop = [length, ,];
   unreadGuilds = unreadGuilds.length;
   prop[1] = unreadGuilds;
   guildHistory = guildHistory.length;

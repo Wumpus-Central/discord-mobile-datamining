@@ -6,19 +6,18 @@ import DesktopSources from "../../discord_common/js/packages/media-engine/Consta
 
 const DEFAULT_VOICE_BITRATE = DesktopSources.DEFAULT_VOICE_BITRATE;
 const Store = initializeDefault.Store;
-class BitRateStore extends Store {
-}
+class BitRateStore extends Store {}
 Object.defineProperty(BitRateStore.prototype, "bitrate", {
   get: function bitrate() {
     return DEFAULT_VOICE_BITRATE;
   },
-  set: undefined
+  set: undefined,
 });
 BitRateStore.displayName = "BitRateStore";
 const bitRateStore = new BitRateStore(dispatcherDefault, {
   SET_CHANNEL_BITRATE: function handleSetChannelBitrate(bitrate) {
     bitrate = bitrate.bitrate;
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/BitRateStore.tsx");
 

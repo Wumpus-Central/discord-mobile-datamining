@@ -10,7 +10,7 @@ function _addOrUpdateSavedMessage() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       let lib = tmp2;
       displayToast = displayToast.displayToast;
       lib = Object.assign(displayToast, Object.create(null));
@@ -69,7 +69,9 @@ function _addOrUpdateSavedMessage() {
                 obj[3] = intl5.string(tmp6(tmp7[10]).t.ZGbTcy);
                 obj[4] = function onCancel() {
                   const SavedMessageSortTypes = callback(closure_1_2[12]).SavedMessageSortTypes;
-                  return callback(closure_1_2[11]).showForLaterModal(callback ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
+                  return callback(closure_1_2[11]).showForLaterModal(
+                    callback ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK,
+                  );
                 };
                 tmp8Result.show(obj);
                 const tmp6Result = tmp6(tmp7[3]);
@@ -144,7 +146,7 @@ function _removeSavedMessage() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -200,7 +202,11 @@ function _removeSavedMessage() {
               obj3 = { value: null, done: false };
               obj3[0] = obj3.deleteSavedMessage(closure_2).catch((body) => {
                 let obj = _undefined2(4194);
-                obj = { key: "SAVED_MESSAGE_REMOVE_ERROR", IconComponent: _undefined(7708).CircleErrorIcon, content: null };
+                obj = {
+                  key: "SAVED_MESSAGE_REMOVE_ERROR",
+                  IconComponent: _undefined(7708).CircleErrorIcon,
+                  content: null,
+                };
                 let message;
                 if (body != null) {
                   body = body.body;

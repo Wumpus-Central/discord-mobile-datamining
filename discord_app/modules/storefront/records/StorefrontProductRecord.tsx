@@ -4,7 +4,23 @@ import closure_1 from "../../skus/SKURecord.tsx";
 
 let prototype;
 prototype = function StorefrontProductRecord(arg0) {
-  ({ id: tmp.id, skuIds: tmp.skuIds, name: tmp.name, summary: tmp.summary, options: tmp.options, createdAt: tmp.createdAt, updatedAt: tmp.updatedAt, skus: tmp.skus, primaryCollectionId: tmp.primaryCollectionId, primaryCollectionStyles: tmp.primaryCollectionStyles, primaryCollectionPdpBgUrl: tmp.primaryCollectionPdpBgUrl, primaryCollectionWillUnpublishAt: tmp.primaryCollectionWillUnpublishAt, gameApplicationId: tmp.gameApplicationId, badgeOverride: tmp.badgeOverride, hideBadge: tmp.hideBadge } = arg0);
+  ({
+    id: tmp.id,
+    skuIds: tmp.skuIds,
+    name: tmp.name,
+    summary: tmp.summary,
+    options: tmp.options,
+    createdAt: tmp.createdAt,
+    updatedAt: tmp.updatedAt,
+    skus: tmp.skus,
+    primaryCollectionId: tmp.primaryCollectionId,
+    primaryCollectionStyles: tmp.primaryCollectionStyles,
+    primaryCollectionPdpBgUrl: tmp.primaryCollectionPdpBgUrl,
+    primaryCollectionWillUnpublishAt: tmp.primaryCollectionWillUnpublishAt,
+    gameApplicationId: tmp.gameApplicationId,
+    badgeOverride: tmp.badgeOverride,
+    hideBadge: tmp.hideBadge,
+  } = arg0);
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["fromServer"] = function fromServer(sku_ids) {
@@ -75,7 +91,23 @@ prototype["fromServer"] = function fromServer(sku_ids) {
     HermesBuiltin.throwTypeError();
   }
   obj = Object.create(tmp.prototype);
-  ({ id: tmp17.id, skuIds: tmp17.skuIds, name: tmp17.name, summary: tmp17.summary, options: tmp17.options, createdAt: tmp17.createdAt, updatedAt: tmp17.updatedAt, skus: tmp17.skus, primaryCollectionId: tmp17.primaryCollectionId, primaryCollectionStyles: tmp17.primaryCollectionStyles, primaryCollectionPdpBgUrl: tmp17.primaryCollectionPdpBgUrl, primaryCollectionWillUnpublishAt: tmp17.primaryCollectionWillUnpublishAt, gameApplicationId: tmp17.gameApplicationId, badgeOverride: tmp17.badgeOverride, hideBadge: tmp17.hideBadge } = obj);
+  ({
+    id: tmp17.id,
+    skuIds: tmp17.skuIds,
+    name: tmp17.name,
+    summary: tmp17.summary,
+    options: tmp17.options,
+    createdAt: tmp17.createdAt,
+    updatedAt: tmp17.updatedAt,
+    skus: tmp17.skus,
+    primaryCollectionId: tmp17.primaryCollectionId,
+    primaryCollectionStyles: tmp17.primaryCollectionStyles,
+    primaryCollectionPdpBgUrl: tmp17.primaryCollectionPdpBgUrl,
+    primaryCollectionWillUnpublishAt: tmp17.primaryCollectionWillUnpublishAt,
+    gameApplicationId: tmp17.gameApplicationId,
+    badgeOverride: tmp17.badgeOverride,
+    hideBadge: tmp17.hideBadge,
+  } = obj);
   return obj;
 };
 const result = require("set").fileFinishedImporting("modules/storefront/records/StorefrontProductRecord.tsx");

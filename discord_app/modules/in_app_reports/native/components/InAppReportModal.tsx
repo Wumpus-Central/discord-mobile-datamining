@@ -67,7 +67,7 @@ export default function InAppReportModal(arg0) {
         closure_0 = arg0;
         closure_3 = 0;
         c4 = 0;
-        return (function*(arg0) {
+        return (function* (arg0) {
           if (table === 2) {
             table = 3;
             HermesBuiltin.throwTypeError();
@@ -247,4 +247,4 @@ export default function InAppReportModal(arg0) {
     }
   }
   return tmp9;
-};
+}

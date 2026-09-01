@@ -175,7 +175,18 @@ function useTrackActivityDefaultIcon(arg0) {
   }
   closure_8 = tmp11;
   closure_9 = tmp13;
-  const items1 = [trackingSource, null != activity, tmp4, null == largeImageSrc, application_id, name, type, session_id, null != getOrFetchApplication || null != application, tmp11];
+  const items1 = [
+    trackingSource,
+    null != activity,
+    tmp4,
+    null == largeImageSrc,
+    application_id,
+    name,
+    type,
+    session_id,
+    null != getOrFetchApplication || null != application,
+    tmp11,
+  ];
   useEffect(() => {
     let tmp = closure_9;
     if (closure_9) {
@@ -186,7 +197,15 @@ function useTrackActivityDefaultIcon(arg0) {
     }
     if (tmp) {
       let obj = application_id(stateFromStores[16]);
-      obj = { source: null, application_id: null, activity_name: null, activity_type: null, activity_session_id: null, application_found: null, has_rich_assets: null };
+      obj = {
+        source: null,
+        application_id: null,
+        activity_name: null,
+        activity_type: null,
+        activity_session_id: null,
+        application_found: null,
+        has_rich_assets: null,
+      };
       obj[0] = trackingSource;
       obj[1] = application_id;
       obj[2] = name;
@@ -217,7 +236,7 @@ function useRichImageForActivity(activity, activityApplication) {
     if (null != large_image) {
       let obj = { src: null, text: null, url: null };
       let tmpResult = tmp(8049);
-      const items = [, ];
+      const items = [,];
       ({ LARGE: arr[0], LARGE: arr[1] } = ImageSizes);
       obj[0] = tmpResult.getAssetImage(activity.application_id, large_image, items);
       const assets2 = activity.assets;
@@ -251,7 +270,7 @@ function useRichImageForActivity(activity, activityApplication) {
     if (null != tmp10) {
       obj = { src: null, text: null, url: null };
       tmpResult = tmp(8049);
-      const items1 = [, ];
+      const items1 = [,];
       ({ LARGE: arr2[0], LARGE: arr2[1] } = ImageSizes);
       obj[0] = tmpResult.getAssetImage(activity.application_id, tmp10, items1);
       const assets5 = activity.assets;
@@ -401,7 +420,11 @@ export const useImageForContentEntry = function useImageForContentEntry(tracking
   tmp5Result = tmp5(8612);
   if (tmp5Result.isWatchedMediaEntry(entry)) {
     const obj6 = { src: null, alt: null };
-    obj6[0] = tmp5(8049).getAssetImage(entry.extra.application_id, entry.extra.media_assets_large_image, ImageSizes.LARGE);
+    obj6[0] = tmp5(8049).getAssetImage(
+      entry.extra.application_id,
+      entry.extra.media_assets_large_image,
+      ImageSizes.LARGE,
+    );
     obj6[1] = entry.extra.media_title;
     tmp7 = obj6;
     const tmp5Result1 = tmp5(8049);

@@ -13,7 +13,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseFlow.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseFlow.tsx",
+);
 
 export default function HeadlessCollectiblesPurchaseFlow(arg0) {
   ({ product, analyticsLocations } = arg0);
@@ -31,7 +33,9 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
   }
   let tmp7 = !isPurchased;
   if (!isPurchased) {
-    let tmp8 = GOOGLE === tmp6.APPLE_ADVANCED_COMMERCE && OTPACOMOrderExperiment.useConfig({ location: "CollectiblesPurchaseFlow" }).enabled;
+    let tmp8 =
+      GOOGLE === tmp6.APPLE_ADVANCED_COMMERCE &&
+      OTPACOMOrderExperiment.useConfig({ location: "CollectiblesPurchaseFlow" }).enabled;
     if (!tmp8) {
       let result = GOOGLE === tmp6.GOOGLE;
       if (result) {
@@ -55,27 +59,43 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
       return callback2(4445).hideActionSheet(callback(12527).PRODUCT_DETAILS_ACTION_SHEET_KEY);
     },
     checkoutAnalyticsFields: obj1,
-    children: null
+    children: null,
   };
   items = [product.skuId];
-  obj1 = { is_gift: false, location_stack: analyticsLocations, payment_type: "sku", sku_id: product.skuId, application_id: closure_3 };
+  obj1 = {
+    is_gift: false,
+    location_stack: analyticsLocations,
+    payment_type: "sku",
+    sku_id: product.skuId,
+    application_id: closure_3,
+  };
   const tmp3 = importDefault;
   const tmp4 = useCollectiblesExternalGatewayFacetDefault(product);
-  obj[9] = jsx(HeadlessCollectiblesPurchaseRunner.HeadlessCollectiblesPurchaseRunner, { product, attempt, analyticsLocations, onBuy, onBuySettled });
-  obj[2] = jsx(NativeCheckoutStoreProviderDefault, {
-    headless: true,
-    paymentGateway: GOOGLE,
-    orderRequired: tmp7,
-    skuIds: items,
-    isGift: false,
-    activeSubscription: null,
-    initialExternalGatewayFacet: useCollectiblesExternalGatewayFacetDefault(product),
-    onOrderRetryCancellation() {
-      return callback2(4445).hideActionSheet(callback(12527).PRODUCT_DETAILS_ACTION_SHEET_KEY);
+  obj[9] = jsx(HeadlessCollectiblesPurchaseRunner.HeadlessCollectiblesPurchaseRunner, {
+    product,
+    attempt,
+    analyticsLocations,
+    onBuy,
+    onBuySettled,
+  });
+  obj[2] = jsx(
+    NativeCheckoutStoreProviderDefault,
+    {
+      headless: true,
+      paymentGateway: GOOGLE,
+      orderRequired: tmp7,
+      skuIds: items,
+      isGift: false,
+      activeSubscription: null,
+      initialExternalGatewayFacet: useCollectiblesExternalGatewayFacetDefault(product),
+      onOrderRetryCancellation() {
+        return callback2(4445).hideActionSheet(callback(12527).PRODUCT_DETAILS_ACTION_SHEET_KEY);
+      },
+      checkoutAnalyticsFields: obj1,
+      children: null,
     },
-    checkoutAnalyticsFields: obj1,
-    children: null
-  }, product.skuId);
+    product.skuId,
+  );
   return jsx(NativePaymentContextProvider.NativePaymentContextProvider, {
     headless: true,
     paymentGateway: GOOGLE,
@@ -88,6 +108,6 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
       return callback2(4445).hideActionSheet(callback(12527).PRODUCT_DETAILS_ACTION_SHEET_KEY);
     },
     checkoutAnalyticsFields: obj1,
-    children: null
+    children: null,
   });
-};
+}

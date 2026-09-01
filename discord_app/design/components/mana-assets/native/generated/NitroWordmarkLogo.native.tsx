@@ -42,7 +42,23 @@ export const NitroWordmarkLogo = function NitroWordmarkLogo(color) {
     }
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
-  obj1 = { fadeDuration: 0, source: { uri: metadataDefault }, style: items, accessible, accessibilityLabel, resizeMode };
+  obj1 = {
+    fadeDuration: 0,
+    source: { uri: metadataDefault },
+    style: items,
+    accessible,
+    accessibilityLabel,
+    resizeMode,
+  };
   items = [{ width: num * num3, height: num2 * num3 }, tmp6];
-  return <Image fadeDuration={0} source={{ uri: metadataDefault }} style={items} accessible={accessible} accessibilityLabel={accessibilityLabel} resizeMode={resizeMode} />;
+  return (
+    <Image
+      fadeDuration={0}
+      source={{ uri: metadataDefault }}
+      style={items}
+      accessible={accessible}
+      accessibilityLabel={accessibilityLabel}
+      resizeMode={resizeMode}
+    />
+  );
 };

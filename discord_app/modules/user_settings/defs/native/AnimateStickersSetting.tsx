@@ -23,7 +23,7 @@ createToggle = {
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t["Xp+X2U"]);
       obj[1] = constants.ALWAYS_ANIMATE;
-      const items = [obj, , ];
+      const items = [obj, ,];
       obj = { label: null, value: null };
       const intl2 = callback(1236).intl;
       obj[0] = intl2.string(callback(1236).t.IlLT7e);
@@ -36,7 +36,7 @@ createToggle = {
       items[2] = obj;
       return items;
     }, []);
-  }
+  },
 };
 createToggle = createToggle.createRadio(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AnimateStickersSetting.tsx");

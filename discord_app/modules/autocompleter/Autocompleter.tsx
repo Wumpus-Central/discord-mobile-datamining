@@ -103,11 +103,32 @@ class Autocompleter {
     obj.updateAllResults = function updateAllResults() {
       clearTimeout(obj._asyncTimeout);
       const items = [];
-      HermesBuiltin.arraySpread(obj._inAppNavigations, HermesBuiltin.arraySpread(obj._linkResults, HermesBuiltin.arraySpread(obj._gameProfileResults, HermesBuiltin.arraySpread(obj._guildResults, HermesBuiltin.arraySpread(obj._voiceChannelResults, HermesBuiltin.arraySpread(obj._textChannelResults, HermesBuiltin.arraySpread(obj._groupDMResults, HermesBuiltin.arraySpread(obj._userResults, 0))))))));
+      HermesBuiltin.arraySpread(
+        obj._inAppNavigations,
+        HermesBuiltin.arraySpread(
+          obj._linkResults,
+          HermesBuiltin.arraySpread(
+            obj._gameProfileResults,
+            HermesBuiltin.arraySpread(
+              obj._guildResults,
+              HermesBuiltin.arraySpread(
+                obj._voiceChannelResults,
+                HermesBuiltin.arraySpread(
+                  obj._textChannelResults,
+                  HermesBuiltin.arraySpread(obj._groupDMResults, HermesBuiltin.arraySpread(obj._userResults, 0)),
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
       const tmp2 = closure_1_1(closure_1_2[16]);
       const tmp2Result = closure_1_1(closure_1_2[16])(items);
       const uniqByResult = closure_1_1(closure_1_2[16])(items).uniqBy((type) => "" + type.type + "-" + type.record.id);
-      obj.results = closure_1_1(closure_1_2[16])(items).uniqBy((type) => "" + type.type + "-" + type.record.id).sort(closure_1_1(closure_1_2[17])).value();
+      obj.results = closure_1_1(closure_1_2[16])(items)
+        .uniqBy((type) => "" + type.type + "-" + type.record.id)
+        .sort(closure_1_1(closure_1_2[17]))
+        .value();
       obj.onResultsChange(obj.results, obj.query);
     };
     obj.onResultsChange = global;
@@ -162,7 +183,9 @@ prototype["setLimit"] = function setLimit(_limit) {
     self._inAppNavigations.length = self._limit;
   }
 };
-prototype["setRefetchForSingleCategoryLimit"] = function setRefetchForSingleCategoryLimit(_refetchForSingleCategoryLimit) {
+prototype["setRefetchForSingleCategoryLimit"] = function setRefetchForSingleCategoryLimit(
+  _refetchForSingleCategoryLimit,
+) {
   this._refetchForSingleCategoryLimit = _refetchForSingleCategoryLimit;
 };
 prototype["setResultTypes"] = function setResultTypes(items) {
@@ -245,8 +268,18 @@ prototype["_willRefetchIfSingleCategoryResults"] = function _willRefetchIfSingle
   if (!_refetched) {
     let tmp3 = null == self.options.voiceChannelGuildFilter && null == self.options.userFilters;
     if (tmp3) {
-      const items = [, , , , , , , , ];
-      ({ _userResults: arr[0], _groupDMResults: arr[1], _textChannelResults: arr[2], _voiceChannelResults: arr[3], _guildResults: arr[4], _applicationResults: arr[5], _gameProfileResults: arr[6], _linkResults: arr[7], _inAppNavigations: arr[8] } = self);
+      const items = [, , , , , , , ,];
+      ({
+        _userResults: arr[0],
+        _groupDMResults: arr[1],
+        _textChannelResults: arr[2],
+        _voiceChannelResults: arr[3],
+        _guildResults: arr[4],
+        _applicationResults: arr[5],
+        _gameProfileResults: arr[6],
+        _linkResults: arr[7],
+        _inAppNavigations: arr[8],
+      } = self);
       tmp3 = 1 === items.filter((arg0) => arg0.length > 0).length;
     }
     tmp = tmp3;
@@ -379,7 +412,15 @@ prototype["queryTextChannels"] = function queryTextChannels(closure_1, _limit) {
     if (null != blacklist) {
       fn = (id) => !blacklist.has("channel:" + id.id);
     }
-    const obj = { query: null, guildId: null, limit: null, fuzzy: true, allowSnowflake: null, filter: null, boosters: null };
+    const obj = {
+      query: null,
+      guildId: null,
+      limit: null,
+      fuzzy: true,
+      allowSnowflake: null,
+      filter: null,
+      boosters: null,
+    };
     obj[0] = closure_1;
     obj[2] = _limit;
     obj[4] = options.allowSnowflake;
@@ -400,7 +441,15 @@ prototype["queryVoiceChannels"] = function queryVoiceChannels(closure_1, _limit)
     } else {
       boosterMap = {};
     }
-    const obj = { query: null, guildId: null, limit: null, fuzzy: true, type: null, allowSnowflake: null, boosters: null };
+    const obj = {
+      query: null,
+      guildId: null,
+      limit: null,
+      fuzzy: true,
+      type: null,
+      allowSnowflake: null,
+      boosters: null,
+    };
     obj[0] = closure_1;
     obj[1] = voiceChannelGuildFilter;
     obj[2] = _limit;

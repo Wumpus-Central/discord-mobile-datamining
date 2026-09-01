@@ -43,7 +43,13 @@ function PollEmoji(emoji) {
       return obj.getEmojiURL(obj);
     }
   });
-  obj = { style: emoji.style, src: stateFromStores, name: emoji.name, textEmojiStyle: tmp.emojiText, fastImageStyle: tmp.emojiImage };
+  obj = {
+    style: emoji.style,
+    src: stateFromStores,
+    name: emoji.name,
+    textEmojiStyle: tmp.emojiText,
+    fastImageStyle: tmp.emojiImage,
+  };
   return callback(EmojiDefault, obj);
 }
 function PollVotesHeader(message) {
@@ -61,139 +67,150 @@ function PollVotesHeader(message) {
   importAllResult = importAllResult.useRef(false);
   const items1 = [selectedAnswerId];
   const effect = importAllResult.useEffect(() => {
-    const timerId = setTimeout(callback(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+    const timerId = setTimeout(
+      callback(function* () {
+        if (v0 === 2) {
+          v0 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === closure_2) {
-            if (arg0 === 1) {
+          try {
+            v0 = 2;
+            if (0 === closure_2) {
+              if (arg0 === 1) {
+                v0 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                v0 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let current5 = tmp5;
+                let current4 = tmp2;
+                current4 = undefined;
+                current5 = undefined;
+                closure_2 = undefined;
+                v0 = undefined;
+                closure_4 = undefined;
+                let scrollWidth;
+                let scrollPageX;
+                let styles;
+                let width;
+                let pageX;
+                let x;
+                closure_11 = undefined;
+                current4 = v0.current;
+                current5 = closure_1_4.current;
+                if (null != current4) {
+                  if (null != current5) {
+                    let promise = new Promise((arg0) => {
+                      current4 = arg0;
+                      current4.measure((arg0, arg1, scrollWidth, arg3, scrollPageX) =>
+                        callback({ scrollWidth, scrollPageX }),
+                      );
+                    });
+                    promise = new Promise((arg0) => {
+                      closure_0 = arg0;
+                      current5.measure((arg0, arg1, width, arg3, pageX) => callback({ width, pageX }));
+                    });
+                    const promise1 = new Promise((arg0) => {
+                      closure_0 = arg0;
+                      current5.measureLayout(closure_0, (arg0) => callback({ x: arg0 }));
+                    });
+                    const items = [promise, promise, promise1];
+                    closure_2 = 1;
+                    v0 = 1;
+                    obj1 = { value: null, done: false };
+                    obj1[0] = Promise.all(items);
+                    return obj1;
+                  }
+                }
+                v0 = 3;
+              }
+            } else if (arg0 === 1) {
               v0 = 3;
               throw arg1;
             } else if (arg0 === 2) {
               v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj2 = { value: null, done: true };
+              obj2[0] = arg1;
+              return obj2;
             } else {
-              let current5 = tmp5;
-              let current4 = tmp2;
-              current4 = undefined;
-              current5 = undefined;
-              closure_2 = undefined;
-              v0 = undefined;
-              closure_4 = undefined;
-              let scrollWidth;
-              let scrollPageX;
-              let styles;
-              let width;
-              let pageX;
-              let x;
-              closure_11 = undefined;
-              current4 = v0.current;
-              current5 = closure_1_4.current;
-              if (null != current4) {
-                if (null != current5) {
-                  let promise = new Promise((arg0) => {
-                    current4 = arg0;
-                    current4.measure((arg0, arg1, scrollWidth, arg3, scrollPageX) => callback({ scrollWidth, scrollPageX }));
-                  });
-                  promise = new Promise((arg0) => {
-                    closure_0 = arg0;
-                    current5.measure((arg0, arg1, width, arg3, pageX) => callback({ width, pageX }));
-                  });
-                  const promise1 = new Promise((arg0) => {
-                    closure_0 = arg0;
-                    current5.measureLayout(closure_0, (arg0) => callback({ x: arg0 }));
-                  });
-                  const items = [promise, promise, promise1];
-                  closure_2 = 1;
-                  v0 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = Promise.all(items);
-                  return obj1;
-                }
-              }
-              v0 = 3;
-            }
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            closure_2 = arg1;
-            v0 = v0(closure_2, 3);
-            closure_4 = v0[0];
-            scrollWidth = closure_4.scrollWidth;
-            scrollPageX = closure_4.scrollPageX;
-            styles = v0[1];
-            width = styles.width;
-            pageX = styles.pageX;
-            x = v0[2].x;
-            closure_11 = !closure_1_9.useReducedMotion;
-            if (scrollWidth.current) {
-              if (pageX >= scrollPageX) {
-                if (pageX + width > scrollPageX + scrollWidth) {
-                  const current3 = v0.current;
-                  if (current3 != null) {
-                    const obj3 = { x: null, y: 0, animated: null };
-                    obj3[0] = x + width - scrollWidth + 16;
-                    obj3[2] = closure_11;
-                    current3.scrollTo(obj3);
+              closure_2 = arg1;
+              v0 = v0(closure_2, 3);
+              closure_4 = v0[0];
+              scrollWidth = closure_4.scrollWidth;
+              scrollPageX = closure_4.scrollPageX;
+              styles = v0[1];
+              width = styles.width;
+              pageX = styles.pageX;
+              x = v0[2].x;
+              closure_11 = !closure_1_9.useReducedMotion;
+              if (scrollWidth.current) {
+                if (pageX >= scrollPageX) {
+                  if (pageX + width > scrollPageX + scrollWidth) {
+                    const current3 = v0.current;
+                    if (current3 != null) {
+                      const obj3 = { x: null, y: 0, animated: null };
+                      obj3[0] = x + width - scrollWidth + 16;
+                      obj3[2] = closure_11;
+                      current3.scrollTo(obj3);
+                    }
                   }
                 }
+              } else {
+                const current = v0.current;
+                if (current != null) {
+                  obj = { x: null, y: 0, animated: null };
+                  obj[0] = x + width / 2 - scrollWidth / 2;
+                  obj[2] = closure_11;
+                  current.scrollTo(obj);
+                }
+                scrollWidth.current = true;
+                v0 = 3;
+                return { value: "HermesInternal", done: null };
               }
-            } else {
-              const current = v0.current;
-              if (current != null) {
-                obj = { x: null, y: 0, animated: null };
-                obj[0] = x + width / 2 - scrollWidth / 2;
-                obj[2] = closure_11;
-                current.scrollTo(obj);
-              }
-              scrollWidth.current = true;
-              v0 = 3;
-              return { value: "HermesInternal", done: null };
             }
+            const current2 = v0.current;
+            if (current2 != null) {
+              const obj4 = { x: null, y: 0, animated: null };
+              obj4[0] = x - 16;
+              obj4[2] = closure_11;
+              current2.scrollTo(obj4);
+            }
+          } catch (tmp36) {
+            v0 = tmp;
+            throw tmp36;
           }
-          const current2 = v0.current;
-          if (current2 != null) {
-            const obj4 = { x: null, y: 0, animated: null };
-            obj4[0] = x - 16;
-            obj4[2] = closure_11;
-            current2.scrollTo(obj4);
-          }
-        } catch (tmp36) {
-          v0 = tmp;
-          throw tmp36;
         }
-      }
-    }), 0);
+      }),
+      0,
+    );
   }, items1);
   message(setSelectedAnswerId[19]);
   let tmp9 = null;
   if (null != message.poll) {
     let obj = { children: null };
-    obj = { style: null, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+    obj = {
+      style: null,
+      variant: "redesign/heading-18/bold",
+      color: "mobile-text-heading-primary",
+      accessibilityRole: "header",
+      children: null,
+    };
     obj[0] = tmp.headerText;
     obj[4] = message.poll.question.text;
-    const items2 = [callback(tmp5(tmp6[17]).Text, obj), , ];
+    const items2 = [callback(tmp5(tmp6[17]).Text, obj), ,];
     obj = { style: null, variant: "text-md/medium", color: "text-default", children: null };
     obj[0] = tmp.subheaderText;
     const intl = tmp5(tmp6[15]).intl;
@@ -203,7 +220,16 @@ function PollVotesHeader(message) {
     items2[1] = callback(tmp5(tmp6[17]).Text, obj);
     let obj2 = { gesture: null, children: null };
     obj2[0] = tmp8;
-    let obj3 = { ref: null, style: null, contentContainerStyle: null, horizontal: true, showsHorizontalScrollIndicator: false, accessibilityRole: "tablist", accessibilityLabel: null, children: null };
+    let obj3 = {
+      ref: null,
+      style: null,
+      contentContainerStyle: null,
+      horizontal: true,
+      showsHorizontalScrollIndicator: false,
+      accessibilityRole: "tablist",
+      accessibilityLabel: null,
+      children: null,
+    };
     obj3[0] = ref;
     ({ answerScroll: obj6[1], answerScrollContainer: obj6[2] } = tmp);
     const intl2 = tmp5(tmp6[15]).intl;
@@ -215,7 +241,13 @@ function PollVotesHeader(message) {
       if (tmp) {
         tmp4 = closure_4;
       }
-      const obj = { ref: tmp4, answer, selected: tmp, reaction: message(setSelectedAnswerId[20]).reactionForId(message.reactions, String(answer.answer_id)), setSelectedAnswerId };
+      const obj = {
+        ref: tmp4,
+        answer,
+        selected: tmp,
+        reaction: message(setSelectedAnswerId[20]).reactionForId(message.reactions, String(answer.answer_id)),
+        setSelectedAnswerId,
+      };
       return closure_1_14(closure_1_18, obj, answer.answer_id);
     });
     obj2[1] = callback(closure_8, obj3);
@@ -237,12 +269,21 @@ function VotersList(channelId) {
   const tmp4 = messageId(analyticsLocations[22])({ channelId, messageId, reaction });
   reactors = tmp4.reactors;
   let obj = channelId(analyticsLocations[23]);
-  obj = { channelId, messageId, reactionSelected: reaction, reactors, reactorsHasMore: tmp4.hasMore, reactionType: channelId(analyticsLocations[24]).ReactionTypes.VOTE };
+  obj = {
+    channelId,
+    messageId,
+    reactionSelected: reaction,
+    reactors,
+    reactorsHasMore: tmp4.hasMore,
+    reactionType: channelId(analyticsLocations[24]).ReactionTypes.VOTE,
+  };
   const reactorsOnScrollNative = obj.useReactorsOnScrollNative(obj);
   const tmp = callback3();
   const tmp2 = messageId;
   const items = [closure_11];
-  stateFromStores = channelId(analyticsLocations[12]).useStateFromStores(items, () => closure_1_11.getChannel(channelId));
+  stateFromStores = channelId(analyticsLocations[12]).useStateFromStores(items, () =>
+    closure_1_11.getChannel(channelId),
+  );
   const items1 = [stateFromStores, reactors.length, channelId, messageId, analyticsLocations];
   const callback = sharedValue.useCallback((item) => {
     item = item.item;
@@ -264,7 +305,14 @@ function VotersList(channelId) {
     tmpResult = tmp(tmp2[26]);
     const userTag = tmpResult.getUserTag(item);
     let user = closure_1_13.getUser(item.id);
-    obj = { start: 0 === index, end: reactors.length - 1 === index, icon: null, label: null, subLabel: null, onPress: null };
+    obj = {
+      start: 0 === index,
+      end: reactors.length - 1 === index,
+      icon: null,
+      label: null,
+      subLabel: null,
+      onPress: null,
+    };
     let guild_id1;
     if (stateFromStores != null) {
       guild_id1 = tmp3.guild_id;
@@ -289,7 +337,13 @@ function VotersList(channelId) {
     }
     obj[4] = tmp13;
     obj[5] = function onPress() {
-      return messageId(analyticsLocations[30])({ userId: item.id, localUser: item, sourceAnalyticsLocations: closure_1_2, channelId: item, messageId: closure_1_1 });
+      return messageId(analyticsLocations[30])({
+        userId: item.id,
+        localUser: item,
+        sourceAnalyticsLocations: closure_1_2,
+        channelId: item,
+        messageId: closure_1_1,
+      });
     };
     return closure_1_14(channelId(analyticsLocations[27]).TableRow, obj);
   }, items1);
@@ -337,7 +391,7 @@ function NoResults() {
     tmp2Result = tmp2(11302);
   }
   obj[1] = tmp2Result;
-  const items = [closure_14(tmp8, obj), , ];
+  const items = [closure_14(tmp8, obj), ,];
   obj = { style: tmp.noResultsTitle, variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp9(1236).intl;
   obj[3] = intl.string(getSystemLocale.t.vhQK3o);
@@ -352,7 +406,24 @@ function NoResults() {
 let c5 = importAllResult;
 ({ Image: closure_6, View: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let obj = { headerText: { textAlign: "center", paddingHorizontal: 16 }, subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 }, answerScroll: { marginTop: 24 }, answerScrollContainer: { gap: 4, paddingHorizontal: 16 }, answerName: { marginTop: 16, marginHorizontal: 16, marginBottom: 8 }, list: { paddingHorizontal: 16 }, answerButton: null, answerSelected: null, answerEmoji: null, answerText: null, emojiText: null, emojiImage: null, noResultsContainer: null, noResultsImage: null, noResultsTitle: null, noResultsSubtitle: null };
+let obj = {
+  headerText: { textAlign: "center", paddingHorizontal: 16 },
+  subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 },
+  answerScroll: { marginTop: 24 },
+  answerScrollContainer: { gap: 4, paddingHorizontal: 16 },
+  answerName: { marginTop: 16, marginHorizontal: 16, marginBottom: 8 },
+  list: { paddingHorizontal: 16 },
+  answerButton: null,
+  answerSelected: null,
+  answerEmoji: null,
+  answerText: null,
+  emojiText: null,
+  emojiImage: null,
+  noResultsContainer: null,
+  noResultsImage: null,
+  noResultsTitle: null,
+  noResultsSubtitle: null,
+};
 obj = { padding: 8, flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.radii.xs, maxWidth: 200 };
 obj[6] = obj;
 createCacheKey = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
@@ -390,8 +461,16 @@ let closure_18 = importAllResult.forwardRef((answer, ref) => {
   }
   const intl = answer(1236).intl;
   let obj = { numVotes: num, option: answer.poll_media.text };
-  obj = { ref, onPress: callback, style: null, accessibilityRole: "tab", accessibilityState: null, accessibilityLabel: null, children: null };
-  const items1 = [tmp.answerButton, ];
+  obj = {
+    ref,
+    onPress: callback,
+    style: null,
+    accessibilityRole: "tab",
+    accessibilityState: null,
+    accessibilityLabel: null,
+    children: null,
+  };
+  const items1 = [tmp.answerButton];
   let answerSelected;
   if (selected) {
     answerSelected = tmp.answerSelected;
@@ -407,7 +486,7 @@ let closure_18 = importAllResult.forwardRef((answer, ref) => {
     obj[1] = answer.poll_media.emoji;
     tmp8 = callback(PollEmoji, obj);
   }
-  const items2 = [tmp8, , ];
+  const items2 = [tmp8, ,];
   let tmp11 = null;
   if (null != answer.poll_media.text) {
     obj1 = { style: null, variant: "text-sm/semibold", color: null, lineClamp: 1, children: null };
@@ -424,7 +503,9 @@ let closure_18 = importAllResult.forwardRef((answer, ref) => {
   obj[6] = items2;
   return closure_15(answer(5068).PressableHighlight, obj);
 });
-let closure_20 = { code: "function PollVotesActionSheetTsx1(){const{opacity}=this.__closure;return{flex:1,opacity:opacity.get(),marginBottom:32};}" };
+let closure_20 = {
+  code: "function PollVotesActionSheetTsx1(){const{opacity}=this.__closure;return{flex:1,opacity:opacity.get(),marginBottom:32};}",
+};
 let result = require("set").fileFinishedImporting("modules/polls/native/PollVotesActionSheet.tsx");
 
 export default function PollVotesActionSheet(channelId) {
@@ -495,13 +576,13 @@ export default function PollVotesActionSheet(channelId) {
     if (found != null) {
       text = found.poll_media.text;
     }
-    const items3 = [text, " - ", ];
+    const items3 = [text, " - "];
     const intl = tmp6(tmp2[15]).intl;
     const obj3 = { count: null };
     obj3[0] = num;
     items3[2] = intl.format(tmp6(tmp2[15]).t["SG/Cyy"], obj3);
     obj2[3] = items3;
-    const items4 = [closure_15(tmp6(tmp2[17]).Text, obj2), ];
+    const items4 = [closure_15(tmp6(tmp2[17]).Text, obj2)];
     if (null != memo) {
       if (num > 0) {
         const obj4 = { channelId: null, messageId: null, reaction: null };
@@ -519,4 +600,4 @@ export default function PollVotesActionSheet(channelId) {
   } else {
     return null;
   }
-};
+}

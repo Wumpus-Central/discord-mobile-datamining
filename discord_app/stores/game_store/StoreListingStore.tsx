@@ -47,8 +47,7 @@ let closure_7 = {};
 let closure_8 = {};
 let set = new Set();
 const Store = initializeDefault.Store;
-class StoreListingStore extends Store {
-}
+class StoreListingStore extends Store {}
 const prototype = StoreListingStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3);
@@ -160,7 +159,10 @@ const storeListingStore = new StoreListingStore(dispatcherDefault, {
         dependencyMap[id] = fromServer1;
         set.delete(storeListing.sku.id);
       }
-      tmp = null != dependencyMap[id] && !dependencyMap[id].isSlimDirectoryVersion() && fromServer1.isSlimDirectoryVersion();
+      tmp =
+        null != dependencyMap[id] &&
+        !dependencyMap[id].isSlimDirectoryVersion() &&
+        fromServer1.isSlimDirectoryVersion();
     }
   },
   USER_SETTINGS_PROTO_UPDATE: handleUserSettingsStoreUpdate,
@@ -195,9 +197,12 @@ const storeListingStore = new StoreListingStore(dispatcherDefault, {
         dependencyMap[id2] = fromServer;
         store_listing = set.delete(store_listing.sku.id);
       }
-      tmp = null != dependencyMap[id2] && !dependencyMap[id2].isSlimDirectoryVersion() && fromServer.isSlimDirectoryVersion();
+      tmp =
+        null != dependencyMap[id2] &&
+        !dependencyMap[id2].isSlimDirectoryVersion() &&
+        fromServer.isSlimDirectoryVersion();
     }
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/game_store/StoreListingStore.tsx");
 

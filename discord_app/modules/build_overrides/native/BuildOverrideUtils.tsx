@@ -24,7 +24,7 @@ function _setBuildOverride() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -112,7 +112,7 @@ function clearBuildOverride() {
 }
 function _clearBuildOverride() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -190,7 +190,7 @@ function _toggleOverride() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (currentBuildOverride === 2) {
         currentBuildOverride = 3;
         HermesBuiltin.throwTypeError();
@@ -300,7 +300,7 @@ function _setBuildOverrideFromLink() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (currentBuildOverride === 2) {
         currentBuildOverride = 3;
         HermesBuiltin.throwTypeError();

@@ -13,14 +13,30 @@ class LibraryApplicationRecord extends tmp2 {
   constructor(arg0) {
     tmp = new LibraryApplicationRecord(new.target, new.target, global);
     // ThrowIfThisInitialized (0x7c)
-    ({ id: tmp.id, createdAt: tmp.createdAt, flags: tmp.flags, branchId: tmp.branchId, entitlements: tmp.entitlements, branch: tmp.branch, sku: tmp.sku } = global);
+    ({
+      id: tmp.id,
+      createdAt: tmp.createdAt,
+      flags: tmp.flags,
+      branchId: tmp.branchId,
+      entitlements: tmp.entitlements,
+      branch: tmp.branch,
+      sku: tmp.sku,
+    } = global);
     tmp.isTestMode = global.isTestMode || false;
     return tmp;
   }
 }
 const prototype = LibraryApplicationRecord.prototype;
 LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
-  let obj = { id: id.application.id, branchId: id.branch_id, entitlements: null, branch: null, flags: null, createdAt: null, sku: null };
+  let obj = {
+    id: id.application.id,
+    branchId: id.branch_id,
+    entitlements: null,
+    branch: null,
+    flags: null,
+    createdAt: null,
+    sku: null,
+  };
   if (null != id.entitlements) {
     let entitlements = id.entitlements;
     let mapped = entitlements.map((arg0) => closure_4.createFromServer(arg0));
@@ -29,7 +45,13 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   }
   obj[2] = mapped;
   ({ branch: obj[3], flags: obj[4], created_at: obj[5] } = id);
-  obj = { id: id.sku.id, type: id.sku.type, premium: id.sku.premium, preorderReleaseAt: null, preorderApproximateReleaseDate: null };
+  obj = {
+    id: id.sku.id,
+    type: id.sku.type,
+    premium: id.sku.premium,
+    preorderReleaseAt: null,
+    preorderApproximateReleaseDate: null,
+  };
   let entitlementsResult = null;
   if (null != id.sku.preorder_release_at) {
     entitlements = hooksDefault;
@@ -47,7 +69,15 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   }
   const tmp7 = new LibraryApplicationRecord("Trying to call a non-function", entitlements, tmp2);
   // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp7.id, createdAt: tmp7.createdAt, flags: tmp7.flags, branchId: tmp7.branchId, entitlements: tmp7.entitlements, branch: tmp7.branch, sku: tmp7.sku } = obj);
+  ({
+    id: tmp7.id,
+    createdAt: tmp7.createdAt,
+    flags: tmp7.flags,
+    branchId: tmp7.branchId,
+    entitlements: tmp7.entitlements,
+    branch: tmp7.branch,
+    sku: tmp7.sku,
+  } = obj);
   tmp7.isTestMode = obj.isTestMode || false;
   return tmp7;
 };
@@ -61,7 +91,17 @@ LibraryApplicationRecord["createForTestMode"] = function createForTestMode(id) {
     HermesBuiltin.throwTypeError();
   }
   const items = [];
-  const tmp2 = new LibraryApplicationRecord("Trying to call a non-function", LibraryApplicationRecord, new.target, id, created_at, ENTITLED, id2, items, branch);
+  const tmp2 = new LibraryApplicationRecord(
+    "Trying to call a non-function",
+    LibraryApplicationRecord,
+    new.target,
+    id,
+    created_at,
+    ENTITLED,
+    id2,
+    items,
+    branch,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp2.id = id;
   tmp2.createdAt = created_at;

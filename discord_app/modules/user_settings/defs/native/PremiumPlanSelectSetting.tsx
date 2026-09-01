@@ -13,13 +13,13 @@ obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.PREMIUM,
   unsearchable: true,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.PREMIUM_PLAN_SELECT,
   getComponent() {
     return PremiumPlanSelectSettingScreen /* PremiumPlanSelectSettingScreen */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/PremiumPlanSelectSetting.tsx");

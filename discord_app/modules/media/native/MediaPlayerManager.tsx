@@ -21,12 +21,25 @@ import keys from "../../../../_runtime/00644_keys.js";
 ({ NativeEventEmitter: c3, NativeModules: c4 } = get_ActivityIndicator);
 const AppStates = ME.AppStates;
 const ActivityPanelModes = ActivityPanelModes2.ActivityPanelModes;
-({ PLAYBACK_COMPLETION_DETECTION_TOLERANCE: map1, PLAYBACK_PROGRESS_UPDATE_INTERVAL: closure_14 } = MediaPlaybackPanelModes);
+({ PLAYBACK_COMPLETION_DETECTION_TOLERANCE: map1, PLAYBACK_PROGRESS_UPDATE_INTERVAL: closure_14 } =
+  MediaPlaybackPanelModes);
 const Permissions = sum.Permissions;
 let closure_16 = new timestampDefault("MediaPlayerManager");
 let obj = keys.create((arg0) => {
   closure_0 = arg0;
-  obj = { activeMediaPlayerSource: "HermesInternal", mediaSourceMessage: "flex", canAccessMedia: "disabled", isPlaying: false, wasPipClosedByUser: null, progress: null, rate: "PX_16", showPip: "lifecycle", closePip: "App opened", displayedMediaItemIdsPerChannel: null, currentlyDisplayedChannelId: "flex" };
+  obj = {
+    activeMediaPlayerSource: "HermesInternal",
+    mediaSourceMessage: "flex",
+    canAccessMedia: "disabled",
+    isPlaying: false,
+    wasPipClosedByUser: null,
+    progress: null,
+    rate: "PX_16",
+    showPip: "lifecycle",
+    closePip: "App opened",
+    displayedMediaItemIdsPerChannel: null,
+    currentlyDisplayedChannelId: "flex",
+  };
   obj[8] = function closePip() {
     callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
   };
@@ -66,7 +79,13 @@ const prototype = MediaPlayerManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const self = this;
   obj = new closure_3(closure_4.MediaPlayerManager);
-  const items = [obj.addListener("MediaPlayerPlaybackSourceChanged", this.handleMediaPlayerPlaybackSourceChanged), obj.addListener("MediaPlayerPlaybackProgressUpdated", this.handleMediaPlayerPlaybackProgressUpdated), obj.addListener("MediaPlayerPlaybackRateChanged", this.handleMediaPlayerPlaybackRateChanged), obj.addListener("MediaPlayerViewWillAppear", this.handleMediaPlayerViewWillAppear), obj.addListener("MediaPlayerViewDidDisappear", this.handleMediaPlayerViewDidDisappear)];
+  const items = [
+    obj.addListener("MediaPlayerPlaybackSourceChanged", this.handleMediaPlayerPlaybackSourceChanged),
+    obj.addListener("MediaPlayerPlaybackProgressUpdated", this.handleMediaPlayerPlaybackProgressUpdated),
+    obj.addListener("MediaPlayerPlaybackRateChanged", this.handleMediaPlayerPlaybackRateChanged),
+    obj.addListener("MediaPlayerViewWillAppear", this.handleMediaPlayerViewWillAppear),
+    obj.addListener("MediaPlayerViewDidDisappear", this.handleMediaPlayerViewDidDisappear),
+  ];
   this.subscriptions = items;
   MediaPlayerManager = closure_4.MediaPlayerManager;
   const result = MediaPlayerManager.subscribeToPlaybackEvents();
@@ -284,7 +303,14 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_1_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      obj = { activeMediaPlayerSource: null, mediaSourceMessage: null, progress: "disabled", rate: false, isPlaying: false, wasPipClosedByUser: 0 };
+      obj = {
+        activeMediaPlayerSource: null,
+        mediaSourceMessage: null,
+        progress: "disabled",
+        rate: false,
+        isPlaying: false,
+        wasPipClosedByUser: 0,
+      };
       obj[0] = tmp3;
       let orFetchMediaSourceMessage;
       if (null != tmp3) {
@@ -468,7 +494,15 @@ function updateDisplayState(MediaPlayerManager, arg1, arg2, prototype, MediaPlay
   });
 }
 prototype["updateDisplayState"] = updateDisplayState;
-updateDisplayState = new updateDisplayState("MediaPlayerManager", tmp2, tmp, prototype, MediaPlayerManager, new.target, require);
+updateDisplayState = new updateDisplayState(
+  "MediaPlayerManager",
+  tmp2,
+  tmp,
+  prototype,
+  MediaPlayerManager,
+  new.target,
+  require,
+);
 // ThrowIfThisInitialized (0x7c)
 updateDisplayState.subscriptions = [];
 updateDisplayState.voicePanelStoreUnsubscribe = undefined;
@@ -482,7 +516,8 @@ updateDisplayState.handleEmbeddedActivitiesUpdated = handleEmbeddedActivitiesUpd
 let handleMediaPlayerPlaybackRateChanged = updateDisplayState.handleMediaPlayerPlaybackRateChanged;
 updateDisplayState.handleMediaPlayerPlaybackRateChanged = handleMediaPlayerPlaybackRateChanged.bind(updateDisplayState);
 let handleMediaPlayerPlaybackSourceChanged = updateDisplayState.handleMediaPlayerPlaybackSourceChanged;
-updateDisplayState.handleMediaPlayerPlaybackSourceChanged = handleMediaPlayerPlaybackSourceChanged.bind(updateDisplayState);
+updateDisplayState.handleMediaPlayerPlaybackSourceChanged =
+  handleMediaPlayerPlaybackSourceChanged.bind(updateDisplayState);
 let handleMediaPlayerViewWillAppear = updateDisplayState.handleMediaPlayerViewWillAppear;
 updateDisplayState.handleMediaPlayerViewWillAppear = handleMediaPlayerViewWillAppear.bind(updateDisplayState);
 let handleMediaPlayerViewDidDisappear = updateDisplayState.handleMediaPlayerViewDidDisappear;

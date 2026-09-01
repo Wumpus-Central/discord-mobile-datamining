@@ -12,12 +12,22 @@ const require = arg1;
 ({ useCallback: c4, useMemo: c5 } = noop);
 ({ AnalyticEvents: error, UserSettingsSections: closure_8 } = ME);
 createCacheKey = { ggContainer: null, noneIcon: null };
-createCacheKey = { height: 48, width: 48, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", paddingBottom: 4 };
+createCacheKey = {
+  height: 48,
+  width: 48,
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  alignItems: "center",
+  justifyContent: "center",
+  paddingBottom: 4,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileDisplayNameStylesEditButton.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_profile/native/UserProfileDisplayNameStylesEditButton.tsx",
+);
 
 export default function UserProfileDisplayNameStylesEditButton(user) {
   user = user.user;
@@ -33,7 +43,9 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   let obj = user(isTryItOut[8]);
   nativeStackNavigation = obj.useNativeStackNavigation();
   obj1 = user(isTryItOut[9]);
-  const isDisplayNameStylesFlywheelSettersEnabled = obj1.useIsDisplayNameStylesFlywheelSettersEnabled("UserProfileDisplayNameStylesEditButton");
+  const isDisplayNameStylesFlywheelSettersEnabled = obj1.useIsDisplayNameStylesFlywheelSettersEnabled(
+    "UserProfileDisplayNameStylesEditButton",
+  );
   if (isDisplayNameStylesFlywheelSettersEnabled) {
     const items = [tmp2(tmp3[11]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE];
     let items1 = items;
@@ -43,7 +55,10 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   let tmp6 = callback(user(isTryItOut[10]).useSelectedDismissibleContent(items1, undefined, true), 2);
   callback2 = tmp7;
   let tmp2Result = tmp2(tmp3[12]);
-  const guildMemberOrUserPendingDisplayNameStyles = tmp2Result.useGuildMemberOrUserPendingDisplayNameStyles(user, guildId);
+  const guildMemberOrUserPendingDisplayNameStyles = tmp2Result.useGuildMemberOrUserPendingDisplayNameStyles(
+    user,
+    guildId,
+  );
   ({ pendingDisplayNameStyles, tryItOutDisplayNameStyles } = guildMemberOrUserPendingDisplayNameStyles);
   obj = { userId: user.id, guildId, pendingDisplayNameStyles: null, ignoreDisabledStylesSetting: true };
   const obj3 = user(isTryItOut[10]);
@@ -95,7 +110,14 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
     } else {
       obj = { style: null, children: null };
       obj[0] = closure_3.ggContainer;
-      obj = { userId: null, guildId: null, userName: "Gg", pendingDisplayNameStyles: null, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };
+      obj = {
+        userId: null,
+        guildId: null,
+        userName: "Gg",
+        pendingDisplayNameStyles: null,
+        ignoreDisabledStylesSetting: true,
+        variant: "heading-xl/semibold",
+      };
       obj[0] = user.id;
       obj[1] = guildId;
       obj[3] = tmp;
@@ -104,11 +126,27 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
     }
     return tmp10;
   }, items4);
-  obj = { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null };
+  obj = {
+    label: null,
+    labelTrailing: null,
+    buttonText: null,
+    accessibilityValue: null,
+    onPress: null,
+    leading: null,
+    trailing: null,
+  };
   let intl = tmp2(tmp3[17]).intl;
   obj[0] = intl.string(tmp9(isTryItOut[24])["86GtGH"]);
-  obj1 = { showPremiumIcon: true, showNewBadge: tmp6[0] === tmp2(tmp3[11]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE };
-  obj[1] = jsx(user(isTryItOut[23]).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp6[0] === tmp2(tmp3[11]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE });
+  obj1 = {
+    showPremiumIcon: true,
+    showNewBadge:
+      tmp6[0] === tmp2(tmp3[11]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE,
+  };
+  obj[1] = jsx(user(isTryItOut[23]).UserProfileEditFormLabelBadges, {
+    showPremiumIcon: true,
+    showNewBadge:
+      tmp6[0] === tmp2(tmp3[11]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE,
+  });
   obj[2] = tmp15;
   obj[3] = { text: tmp15 };
   obj[4] = tmp14;
@@ -136,5 +174,13 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
     }
     return tmp3Result;
   }, items5)();
-  return jsx(user(isTryItOut[23]).UserProfileEditFormButton, { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null });
-};
+  return jsx(user(isTryItOut[23]).UserProfileEditFormButton, {
+    label: null,
+    labelTrailing: null,
+    buttonText: null,
+    accessibilityValue: null,
+    onPress: null,
+    leading: null,
+    trailing: null,
+  });
+}

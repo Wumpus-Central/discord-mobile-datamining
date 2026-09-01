@@ -12,5 +12,5 @@ export default {
     obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(id), body: obj, rejectWithError: false };
     obj = { flags: setFlagResult };
     return HTTP.patch(obj);
-  }
+  },
 };

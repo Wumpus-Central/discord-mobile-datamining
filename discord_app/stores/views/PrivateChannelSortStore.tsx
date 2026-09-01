@@ -39,7 +39,12 @@ function makeSortedChannel(channel, id) {
     }
     tmp = tmp2;
   }
-  obj = { channelId: channel.id, lastMessageId: tmp, isFavorite: messagesFavorite.isMessagesFavorite(channel.id), isRequest: null };
+  obj = {
+    channelId: channel.id,
+    lastMessageId: tmp,
+    isFavorite: messagesFavorite.isMessagesFavorite(channel.id),
+    isRequest: null,
+  };
   let isMessageRequestResult = messageRequest.isMessageRequest(channel.id);
   if (!isMessageRequestResult) {
     isMessageRequestResult = spam.isSpam(channel.id);
@@ -65,25 +70,25 @@ function handleCacheLoaded() {
   }
 }
 let closure_11 = { DEFAULT: "DEFAULT", FAVORITE: "FAVORITE" };
-const secondaryIndexMap = new require("version").SecondaryIndexMap(function indexBy(value) {
-  if (value.isRequest) {
-    let items = [];
-  } else {
-    items = [tmp ? closure_11.FAVORITE : closure_11.DEFAULT];
-  }
-  return items;
-}, function sortBy(arr, items, arg2) {
-  return -DISCORD_EPOCHDefault.extractTimestamp(arr.lastMessageId);
-});
+const secondaryIndexMap = new require("version").SecondaryIndexMap(
+  function indexBy(value) {
+    if (value.isRequest) {
+      let items = [];
+    } else {
+      items = [tmp ? closure_11.FAVORITE : closure_11.DEFAULT];
+    }
+    return items;
+  },
+  function sortBy(arr, items, arg2) {
+    return -DISCORD_EPOCHDefault.extractTimestamp(arr.lastMessageId);
+  },
+);
 let closure_15 = [];
 let closure_16 = [];
 let closure_17 = [];
-const f37224 = () => {
-
-};
+const f37224 = () => {};
 const Store = initializeDefault.Store;
-class PrivateChannelSortStore extends Store {
-}
+class PrivateChannelSortStore extends Store {}
 const prototype = PrivateChannelSortStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_6, closure_7, closure_3, closure_8, closure_4, closure_9, closure_10);
@@ -172,7 +177,7 @@ const privateChannelSortStore = new PrivateChannelSortStore(dispatcherDefault, {
   },
   LOGOUT: function handleLogout() {
     secondaryIndexMap.clear();
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("stores/views/PrivateChannelSortStore.tsx");
 

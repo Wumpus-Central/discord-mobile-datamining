@@ -24,6 +24,8 @@ const diff1 = diff - require("Text").TextStyleSheet["heading-md/bold"].lineHeigh
 createCacheKey = { paddingVertical: diff1 / 2 };
 let closure_4 = createCacheKey.createStyles({ pill: createCacheKey });
 HeaderButton.Icon = require("CollapsingText").BaseTextButton.Icon;
-const result = require("set").fileFinishedImporting("design/components/experimental/Button/native/HeaderButton.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/experimental/Button/native/HeaderButton.native.tsx",
+);
 
 export { HeaderButton };

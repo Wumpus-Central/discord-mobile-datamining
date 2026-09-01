@@ -9,7 +9,10 @@ import importAllResult from "../../../discord_common/js/packages/markup/MarkupPa
 import importDefaultResult1 from "MarkupUtils.tsx";
 import importDefaultResult3 from "../../../_runtime/00012_apply.js";
 
-const items = [parseLinkDefault.PROFILE_BIO_RULES, MarkupTextDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true }), ];
+const items = [
+  parseLinkDefault.PROFILE_BIO_RULES,
+  MarkupTextDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true }),
+];
 items[2] = MarkupText.createFetchingGameMentionRule();
 const importDefaultResultResult = importDefaultResult(items);
 let closure_3 = new privDefault({ max: 2000 });
@@ -19,11 +22,20 @@ let closure_5 = importAllResult.reactParserFor(importDefaultResultResult);
 let closure_6 = importDefaultResult1.astParserFor(importDefaultResultResult);
 const importAllResult1 = importAllResult;
 const importDefaultResult2 = importDefaultResult;
-const items1 = [importDefaultResult3.omit(importDefaultResultResult, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]), ];
+const items1 = [
+  importDefaultResult3.omit(importDefaultResultResult, [
+    "link",
+    "url",
+    "autolink",
+    "customEmoji",
+    "emoji",
+    "commandMention",
+  ]),
+];
 MarkupText = {
   react() {
     return null;
-  }
+  },
 };
 items1[1] = { emoji: MarkupText };
 const reactParserForResult = importAllResult1.reactParserFor(importDefaultResult2(items1));

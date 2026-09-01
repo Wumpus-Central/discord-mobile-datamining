@@ -23,7 +23,7 @@ createToggle = {
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t.aN3RNQ);
       obj[1] = callback(1306).GuildThemeSourcePreference.GUILD;
-      const items = [obj, ];
+      const items = [obj];
       obj = { label: null, value: null };
       const intl2 = callback(1236).intl;
       obj[0] = intl2.string(callback(1236).t.js8y7t);
@@ -34,9 +34,11 @@ createToggle = {
   },
   usePredicate() {
     return apexExperiment.useServerThemeUserEnabled("DefaultGuildThemePreferenceSetting");
-  }
+  },
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DefaultGuildThemePreferenceSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/DefaultGuildThemePreferenceSetting.tsx",
+);
 
 export default createToggle;

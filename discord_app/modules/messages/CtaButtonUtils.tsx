@@ -5,7 +5,12 @@ import shouldRenderReportFalsePositiveButton2 from "../explicit_media_redaction/
 import closure_2 from "../parent_tools/FamilyCenterPendingConnectionStore.tsx";
 
 require = arg1;
-let obj = { MARK_AS_FALSE_POSITIVE: "mark_as_false_positive", AGE_VERIFICATION_RETRY: "age_verification_retry", CONNECT_TO_TEEN: "connect_to_teen", AGE_VERIFICATION_MANUAL_REVIEW: "age_verification_manual_review" };
+let obj = {
+  MARK_AS_FALSE_POSITIVE: "mark_as_false_positive",
+  AGE_VERIFICATION_RETRY: "age_verification_retry",
+  CONNECT_TO_TEEN: "connect_to_teen",
+  AGE_VERIFICATION_MANUAL_REVIEW: "age_verification_manual_review",
+};
 let result = require("set").fileFinishedImporting("modules/messages/CtaButtonUtils.tsx");
 
 export const CtaButtonType = obj;

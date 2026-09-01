@@ -12,15 +12,35 @@ const require = arg1;
 ({ View: closure_6, SectionList: error } = get_ActivityIndicator);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { container: null, emojiList: null, row: null, emojiImage: null, emojiAlias: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "flex-start",
+  height: "100%",
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexGrow: 0, marginVertical: 24, marginHorizontal: 16, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[1] = {
+  flexGrow: 0,
+  marginVertical: 24,
+  marginHorizontal: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[2] = { alignItems: "flex-start", paddingTop: 16, paddingBottom: 14 };
 createCacheKey[3] = { width: 24, height: 24, marginBottom: 2 };
 createCacheKey[4] = { marginBottom: 2 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexGrow: 0, marginVertical: 24, marginHorizontal: 16, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionEmojiEditorModal.tsx");
+let obj1 = {
+  flexGrow: 0,
+  marginVertical: 24,
+  marginHorizontal: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionEmojiEditorModal.tsx",
+);
 
 export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   guildId = guildId.guildId;
@@ -45,7 +65,7 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   }
   function _handleSave(stateFromStores, arg1) {
     const self = this;
-    const tmp = onSave(function*() {
+    const tmp = onSave(function* () {
       closure_0 = tmp3;
       let v0 = 1;
       yield v0(closure_1_7);
@@ -92,17 +112,20 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
       const found = closure_5.filter((roles) => {
         closure_0 = roles;
         roles = roles.roles;
-        return 0 === roles.filter((arg0) => {
-          let tmp = arg0 === closure_1_1;
-          if (tmp) {
-            tmp = !closure_1_7.has(id.id);
-          }
-          let hasItem = !tmp;
-          if (!tmp) {
-            hasItem = closure_1_6.has(arg0);
-          }
-          return hasItem;
-        }).length;
+        return (
+          0 ===
+          roles.filter((arg0) => {
+            let tmp = arg0 === closure_1_1;
+            if (tmp) {
+              tmp = !closure_1_7.has(id.id);
+            }
+            let hasItem = !tmp;
+            if (!tmp) {
+              hasItem = closure_1_6.has(arg0);
+            }
+            return hasItem;
+          }).length
+        );
       });
       const _Set = Set;
       const set1 = new Set(found.map((id) => id.id));
@@ -136,7 +159,7 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
     }
   };
   obj[3] = listingId;
-  const items2 = [callback2(subscriptionRoleId(onClose[12]), obj), ];
+  const items2 = [callback2(subscriptionRoleId(onClose[12]), obj)];
   obj1 = {
     style: tmp.emojiList,
     renderItem(item) {
@@ -153,14 +176,14 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
       obj[1] = set(tmp2, obj);
       obj[2] = function label() {
         let obj = { name: item.name, style: closure_1_4.emojiAlias };
-        const children = [callback(subscriptionRoleId(onClose[17]), obj), ];
+        const children = [callback(subscriptionRoleId(onClose[17]), obj)];
         let tmpResult = closure_1;
         if (closure_1) {
           obj = { children: null };
           obj = { variant: "text-sm/normal", color: "interactive-text-active", children: null };
           const intl = guildId(tmp4[13]).intl;
           obj[2] = intl.string(guildId(tmp4[13]).t["1GlN06"]);
-          const items1 = [tmp3(guildId(tmp4[18]).Text, obj), ];
+          const items1 = [tmp3(guildId(tmp4[18]).Text, obj)];
           obj1 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
           const intl2 = guildId(tmp4[13]).intl;
           obj1[2] = intl2.string(guildId(tmp4[13]).t.J0XdJ4);
@@ -186,7 +209,7 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
     },
     sections: null,
     ItemSeparatorComponent: null,
-    keyboardShouldPersistTaps: "always"
+    keyboardShouldPersistTaps: "always",
   };
   const obj2 = { title: null, data: null };
   let intl2 = guildId(onClose[13]).intl;
@@ -200,4 +223,4 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   items2[1] = callback2(first, obj1);
   obj[1] = items2;
   return _handleSave(stateFromStores, obj);
-};
+}

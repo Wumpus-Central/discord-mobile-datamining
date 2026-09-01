@@ -5,7 +5,9 @@ import { NOOP } from "../../../Constants.tsx";
 
 const require = arg1;
 let closure_6 = { code: "function useMediaViewerClosePositionTsx1(){const{index}=this.__closure;return index.get();}" };
-let closure_7 = { code: "function useMediaViewerClosePositionTsx2(index){const{runOnJS,setClosePosition}=this.__closure;runOnJS(setClosePosition)(index);}" };
+let closure_7 = {
+  code: "function useMediaViewerClosePositionTsx2(index){const{runOnJS,setClosePosition}=this.__closure;runOnJS(setClosePosition)(index);}",
+};
 const result = require("set").fileFinishedImporting("modules/media_viewer/native/useMediaViewerClosePosition.tsx");
 
 export default function useMediaViewerClosePosition(index) {
@@ -22,16 +24,19 @@ export default function useMediaViewerClosePosition(index) {
   let callback;
   const tmp = sources(windowHeight[4])(onClose);
   React = tmp;
-  const tmp2 = windowWidth(React.useState(() => {
-    const tmp3 = sources[index.get(index)];
-    if (null != tmp3) {
-      let obj = sources(windowHeight[3])(windowWidth, tmp2, tmp3);
-    } else {
-      obj = { height: null };
-      obj[0] = tmp2;
-    }
-    return (windowHeight + obj.height) / 2;
-  }), 2);
+  const tmp2 = windowWidth(
+    React.useState(() => {
+      const tmp3 = sources[index.get(index)];
+      if (null != tmp3) {
+        let obj = sources(windowHeight[3])(windowWidth, tmp2, tmp3);
+      } else {
+        obj = { height: null };
+        obj[0] = tmp2;
+      }
+      return (windowHeight + obj.height) / 2;
+    }),
+    2,
+  );
   closure_5 = tmp2[1];
   const items = [tmp, sources, windowHeight, windowWidth];
   callback = React.useCallback((arg0) => {
@@ -66,4 +71,4 @@ export default function useMediaViewerClosePosition(index) {
     callback(index.get());
   }, items1);
   return tmp2[0];
-};
+}

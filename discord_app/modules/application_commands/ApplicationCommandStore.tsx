@@ -12,7 +12,15 @@ function handleInit() {
 }
 function getOrCreateChannelState(channelId) {
   if (!(channelId in dependencyMap)) {
-    const obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+    const obj = {
+      activeCommand: null,
+      activeCommandSection: null,
+      activeOptionName: null,
+      preferredCommandId: null,
+      optionStates: null,
+      initialValues: null,
+      commandOrigin: null,
+    };
     obj[4] = {};
     obj[5] = {};
     dependencyMap[channelId] = obj;
@@ -24,7 +32,15 @@ function handleSetActiveCommand(arg0) {
   let obj;
   ({ section, location: _location, triggerSection, queryLength, sectionName, query, searchResultsPosition } = arg0);
   if (!(channelId in dependencyMap)) {
-    obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+    obj = {
+      activeCommand: null,
+      activeCommandSection: null,
+      activeOptionName: null,
+      preferredCommandId: null,
+      optionStates: null,
+      initialValues: null,
+      commandOrigin: null,
+    };
     obj[4] = {};
     obj[5] = {};
     dependencyMap[channelId] = obj;
@@ -67,7 +83,16 @@ function handleSetActiveCommand(arg0) {
     }
     tmp2.optionStates = obj;
     if (null != command) {
-      obj = { command: null, location: null, triggerSection: null, queryLength: null, sectionName: null, query: null, searchResultsPosition: null, source: null };
+      obj = {
+        command: null,
+        location: null,
+        triggerSection: null,
+        queryLength: null,
+        sectionName: null,
+        query: null,
+        searchResultsPosition: null,
+        source: null,
+      };
       obj[0] = command;
       obj[1] = _location;
       obj[2] = triggerSection;
@@ -113,7 +138,14 @@ function handleUpdateOptionStates(channelId) {
           let tmp15 = arr2;
           isActive = arr2.isActive;
         }
-        obj = { hasValue: true, isActive: null, lastValidationResult: null, optionValue: null, location: null, length: null };
+        obj = {
+          hasValue: true,
+          isActive: null,
+          lastValidationResult: null,
+          optionValue: null,
+          location: null,
+          length: null,
+        };
         obj[1] = isActive;
         let tmp17 = arr;
         if (undefined !== arr.lastValidationResult) {
@@ -172,7 +204,14 @@ function handleUpdateOptionStates(channelId) {
           }
         }
       } else {
-        obj[tmp9] = { hasValue: false, isActive: false, lastValidationResult: null, optionValue: null, location: "r", length: "HermesInternal" };
+        obj[tmp9] = {
+          hasValue: false,
+          isActive: false,
+          lastValidationResult: null,
+          optionValue: null,
+          location: "r",
+          length: "HermesInternal",
+        };
         if (tmp.activeOptionName === tmp9) {
           tmp.activeOptionName = null;
         }
@@ -185,8 +224,7 @@ function handleUpdateOptionStates(channelId) {
 }
 let closure_5 = {};
 const Store = initializeDefault.Store;
-class ApplicationCommandStore extends Store {
-}
+class ApplicationCommandStore extends Store {}
 const prototype = ApplicationCommandStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_4);
@@ -215,7 +253,15 @@ prototype["initialize"] = function initialize() {
 };
 prototype["getActiveCommand"] = function getActiveCommand(channelId) {
   if (!(channelId in dependencyMap)) {
-    const obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+    const obj = {
+      activeCommand: null,
+      activeCommandSection: null,
+      activeOptionName: null,
+      preferredCommandId: null,
+      optionStates: null,
+      initialValues: null,
+      commandOrigin: null,
+    };
     obj[4] = {};
     obj[5] = {};
     dependencyMap[channelId] = obj;
@@ -224,7 +270,15 @@ prototype["getActiveCommand"] = function getActiveCommand(channelId) {
 };
 prototype["getActiveCommandSection"] = function getActiveCommandSection(id) {
   if (!(id in dependencyMap)) {
-    const obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+    const obj = {
+      activeCommand: null,
+      activeCommandSection: null,
+      activeOptionName: null,
+      preferredCommandId: null,
+      optionStates: null,
+      initialValues: null,
+      commandOrigin: null,
+    };
     obj[4] = {};
     obj[5] = {};
     dependencyMap[id] = obj;
@@ -233,7 +287,15 @@ prototype["getActiveCommandSection"] = function getActiveCommandSection(id) {
 };
 prototype["getActiveOptionName"] = function getActiveOptionName(channelId) {
   if (!(channelId in dependencyMap)) {
-    const obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+    const obj = {
+      activeCommand: null,
+      activeCommandSection: null,
+      activeOptionName: null,
+      preferredCommandId: null,
+      optionStates: null,
+      initialValues: null,
+      commandOrigin: null,
+    };
     obj[4] = {};
     obj[5] = {};
     dependencyMap[channelId] = obj;
@@ -242,7 +304,15 @@ prototype["getActiveOptionName"] = function getActiveOptionName(channelId) {
 };
 prototype["getActiveOption"] = function getActiveOption(channelId) {
   if (!(channelId in dependencyMap)) {
-    const obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+    const obj = {
+      activeCommand: null,
+      activeCommandSection: null,
+      activeOptionName: null,
+      preferredCommandId: null,
+      optionStates: null,
+      initialValues: null,
+      commandOrigin: null,
+    };
     obj[4] = {};
     obj[5] = {};
     dependencyMap[channelId] = obj;
@@ -263,7 +333,15 @@ prototype["getActiveOption"] = function getActiveOption(channelId) {
 };
 prototype["getPreferredCommandId"] = function getPreferredCommandId(arg0) {
   if (!(arg0 in dependencyMap)) {
-    const obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+    const obj = {
+      activeCommand: null,
+      activeCommandSection: null,
+      activeOptionName: null,
+      preferredCommandId: null,
+      optionStates: null,
+      initialValues: null,
+      commandOrigin: null,
+    };
     obj[4] = {};
     obj[5] = {};
     dependencyMap[arg0] = obj;
@@ -272,7 +350,15 @@ prototype["getPreferredCommandId"] = function getPreferredCommandId(arg0) {
 };
 prototype["getOptionStates"] = function getOptionStates(id) {
   if (!(id in dependencyMap)) {
-    const obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+    const obj = {
+      activeCommand: null,
+      activeCommandSection: null,
+      activeOptionName: null,
+      preferredCommandId: null,
+      optionStates: null,
+      initialValues: null,
+      commandOrigin: null,
+    };
     obj[4] = {};
     obj[5] = {};
     dependencyMap[id] = obj;
@@ -281,7 +367,15 @@ prototype["getOptionStates"] = function getOptionStates(id) {
 };
 prototype["getOptionState"] = function getOptionState(arg0, arg1) {
   if (!(arg0 in dependencyMap)) {
-    const obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+    const obj = {
+      activeCommand: null,
+      activeCommandSection: null,
+      activeOptionName: null,
+      preferredCommandId: null,
+      optionStates: null,
+      initialValues: null,
+      commandOrigin: null,
+    };
     obj[4] = {};
     obj[5] = {};
     dependencyMap[arg0] = obj;
@@ -290,7 +384,15 @@ prototype["getOptionState"] = function getOptionState(arg0, arg1) {
 };
 prototype["getCommandOrigin"] = function getCommandOrigin(id) {
   if (!(id in dependencyMap)) {
-    const obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+    const obj = {
+      activeCommand: null,
+      activeCommandSection: null,
+      activeOptionName: null,
+      preferredCommandId: null,
+      optionStates: null,
+      initialValues: null,
+      commandOrigin: null,
+    };
     obj[4] = {};
     obj[5] = {};
     dependencyMap[id] = obj;
@@ -299,7 +401,15 @@ prototype["getCommandOrigin"] = function getCommandOrigin(id) {
 };
 prototype["getSource"] = function getSource(arg0) {
   if (!(arg0 in dependencyMap)) {
-    const obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+    const obj = {
+      activeCommand: null,
+      activeCommandSection: null,
+      activeOptionName: null,
+      preferredCommandId: null,
+      optionStates: null,
+      initialValues: null,
+      commandOrigin: null,
+    };
     obj[4] = {};
     obj[5] = {};
     dependencyMap[arg0] = obj;
@@ -309,7 +419,15 @@ prototype["getSource"] = function getSource(arg0) {
 prototype["getOption"] = function getOption(arg0) {
   closure_0 = arg1;
   if (!(arg0 in dependencyMap)) {
-    const obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+    const obj = {
+      activeCommand: null,
+      activeCommandSection: null,
+      activeOptionName: null,
+      preferredCommandId: null,
+      optionStates: null,
+      initialValues: null,
+      commandOrigin: null,
+    };
     obj[4] = {};
     obj[5] = {};
     dependencyMap[arg0] = obj;
@@ -326,7 +444,15 @@ prototype["getOption"] = function getOption(arg0) {
 };
 prototype["getState"] = function getState(arg0) {
   if (!(arg0 in dependencyMap)) {
-    let obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+    let obj = {
+      activeCommand: null,
+      activeCommandSection: null,
+      activeOptionName: null,
+      preferredCommandId: null,
+      optionStates: null,
+      initialValues: null,
+      commandOrigin: null,
+    };
     obj[4] = {};
     obj[5] = {};
     dependencyMap[arg0] = obj;
@@ -344,7 +470,15 @@ const applicationCommandStore = new ApplicationCommandStore(dispatcherDefault, {
   APPLICATION_COMMAND_SET_PREFERRED_COMMAND: function handleSetPreferredCommand(arg0) {
     ({ channelId, commandId } = arg0);
     if (!(channelId in dependencyMap)) {
-      const obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+      const obj = {
+        activeCommand: null,
+        activeCommandSection: null,
+        activeOptionName: null,
+        preferredCommandId: null,
+        optionStates: null,
+        initialValues: null,
+        commandOrigin: null,
+      };
       obj[4] = {};
       obj[5] = {};
       dependencyMap[channelId] = obj;
@@ -377,10 +511,24 @@ const applicationCommandStore = new ApplicationCommandStore(dispatcherDefault, {
   APPLICATION_COMMAND_UPDATE_OPTIONS: handleUpdateOptionStates,
   APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function handleUpdateChannelState(changedOptionStates) {
     ({ channelId, preferredCommandId } = changedOptionStates);
-    let obj = { type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND", channelId, command: changedOptionStates.command, section: changedOptionStates.section, location: changedOptionStates.location };
+    let obj = {
+      type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND",
+      channelId,
+      command: changedOptionStates.command,
+      section: changedOptionStates.section,
+      location: changedOptionStates.location,
+    };
     let flag = handleSetActiveCommand(obj);
     if (!(channelId in dependencyMap)) {
-      obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
+      obj = {
+        activeCommand: null,
+        activeCommandSection: null,
+        activeOptionName: null,
+        preferredCommandId: null,
+        optionStates: null,
+        initialValues: null,
+        commandOrigin: null,
+      };
       obj[4] = {};
       obj[5] = {};
       dependencyMap[channelId] = obj;
@@ -408,7 +556,11 @@ const applicationCommandStore = new ApplicationCommandStore(dispatcherDefault, {
       tmp2.optionStates = {};
       flag2 = true;
     }
-    handleUpdateOptionStates({ type: "APPLICATION_COMMAND_UPDATE_OPTIONS", channelId, changedOptionStates: changedOptionStates.changedOptionStates });
+    handleUpdateOptionStates({
+      type: "APPLICATION_COMMAND_UPDATE_OPTIONS",
+      channelId,
+      changedOptionStates: changedOptionStates.changedOptionStates,
+    });
     if (!flag) {
       flag = flag2;
     }
@@ -416,7 +568,7 @@ const applicationCommandStore = new ApplicationCommandStore(dispatcherDefault, {
       flag = true;
     }
     return flag;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandStore.tsx");
 

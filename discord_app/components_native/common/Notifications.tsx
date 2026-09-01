@@ -20,4 +20,4 @@ export default function Notifications() {
     tmp3 = jsx(NotificationWrapperDefault, { notification: null }, stateFromStores.key);
   }
   return tmp3;
-};
+}

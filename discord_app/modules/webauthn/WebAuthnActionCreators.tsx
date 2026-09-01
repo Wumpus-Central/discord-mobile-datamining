@@ -7,7 +7,7 @@ import { Endpoints } from "../../Constants.tsx";
 require = arg1;
 function _fetchWebAuthnConditionalChallenge() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     let body = tmp4;
     const HTTP = closure_1_0(table[2]).HTTP;
     obj1 = { url: null, headers: null, rejectWithError: true };
@@ -31,7 +31,7 @@ function _fetchWebAuthnConditionalChallenge() {
 }
 function _fetchWebAuthnPasswordlessChallenge() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     let body = tmp4;
     const HTTP = closure_1_0(table[2]).HTTP;
     obj1 = { url: null, rejectWithError: true };
@@ -58,7 +58,7 @@ function _deleteWebAuthnCredential() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const HTTP = lib(table[2]).HTTP;
       obj1 = { url: null, rejectWithError: true };
       obj1[0] = closure_1_4.MFA_WEBAUTHN_CREDENTIAL(lib.id);
@@ -86,7 +86,7 @@ function _editWebAuthnCredential() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -177,7 +177,7 @@ function _editWebAuthnCredential() {
 }
 function _startRegisterWebAuthnCredential() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     let body = tmp4;
     const HTTP = closure_1_0(table[2]).HTTP;
     obj1 = { url: null, body: null, rejectWithError: false };
@@ -207,7 +207,7 @@ function _finishRegisterWebAuthnCredential() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();

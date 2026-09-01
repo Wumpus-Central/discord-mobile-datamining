@@ -32,14 +32,17 @@ function VariantCheckmark(variant) {
   const colors = ThemesDefault.colors;
   const tmp = useIsVariantColorLightDefault(variant.variant);
   const tmp2 = closure_4;
-  return tmp2(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: useIsVariantColorLightDefault(variant.variant) ? colors.BLACK : colors.WHITE, size: "xxs" });
+  return tmp2(CheckmarkSmallIcon.CheckmarkSmallIcon, {
+    color: useIsVariantColorLightDefault(variant.variant) ? colors.BLACK : colors.WHITE,
+    size: "xxs",
+  });
 }
 function VariantOverflowOption(isSelected) {
   const tmp = callback3(isSelected.isSelected);
   let obj = { style: items, children: null };
   items = [tmp.variantOption, { zIndex: isSelected.zIndex }];
   obj = { style: items1, children: null };
-  items1 = [, ];
+  items1 = [,];
   ({ variantOptionInner: arr2[0], variantOverflowInner: arr2[1] } = tmp);
   obj = { color: ThemesDefault.colors.WHITE, size: "xxs" };
   obj[1] = callback(PlusSmallIcon.PlusSmallIcon, obj);
@@ -53,9 +56,26 @@ obj[0] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
 let closure_7 = createCacheKey.createStyles((arg0) => {
   let obj = { variantOption: null, variantOptionInner: null, variantOverflowInner: null };
-  obj = { marginStart: -ThemesDefault.space.PX_4, width: 14, height: 14, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center" };
+  obj = {
+    marginStart: -ThemesDefault.space.PX_4,
+    width: 14,
+    height: 14,
+    borderWidth: 1,
+    borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    borderRadius: ThemesDefault.radii.round,
+    justifyContent: "center",
+    alignItems: "center",
+  };
   obj[0] = obj;
-  obj = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.round, borderWidth: null, borderColor: null };
+  obj = {
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: ThemesDefault.radii.round,
+    borderWidth: null,
+    borderColor: null,
+  };
   let num = 0;
   if (arg0) {
     num = 1;
@@ -81,7 +101,15 @@ const memoResult = importAllResult.memo(function CardProductVariants(product) {
     obj[0] = tmp.variantsContainer;
     const variants = product.variants;
     const substr = variants.slice(0, num3);
-    const items = [substr.map((variant) => closure_1_4(closure_1_8, { variant, isSelected: arg1 === defaultVariantIndex, zIndex: 4 - Math.abs(defaultVariantIndex - arg1) }, variant.variantValue)), ];
+    const items = [
+      substr.map((variant) =>
+        closure_1_4(
+          closure_1_8,
+          { variant, isSelected: arg1 === defaultVariantIndex, zIndex: 4 - Math.abs(defaultVariantIndex - arg1) },
+          variant.variantValue,
+        ),
+      ),
+    ];
     let tmp7Result = num3 !== length;
     if (tmp7Result) {
       obj = { isSelected: null, zIndex: null };

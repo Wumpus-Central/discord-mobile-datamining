@@ -21,7 +21,7 @@ export default function PasswordScreen() {
   }
   function _sendPassword() {
     const self = this;
-    const tmp = closure_1_3(function*() {
+    const tmp = closure_1_3(function* () {
       closure_2 = tmp3;
       closure_1_1(null);
       closure_1_3(true);
@@ -81,7 +81,20 @@ export default function PasswordScreen() {
   const intl = finish(first[9]).intl;
   obj[0] = intl.string(finish(first[9]).t.Rw1XuM);
   obj = { style: screenStyles.inputContainer, children: null };
-  obj1 = { autoFocus: true, required: true, textContentType: "password", label: null, autoComplete: "current-password", errorMessage: null, returnKeyType: "done", onChange: null, onSubmitEditing: null, isDisabled: null, isClearable: true, secureTextEntry: true };
+  obj1 = {
+    autoFocus: true,
+    required: true,
+    textContentType: "password",
+    label: null,
+    autoComplete: "current-password",
+    errorMessage: null,
+    returnKeyType: "done",
+    onChange: null,
+    onSubmitEditing: null,
+    isDisabled: null,
+    isClearable: true,
+    secureTextEntry: true,
+  };
   const intl2 = finish(first[9]).intl;
   obj1[3] = intl2.string(finish(first[9]).t["CIGa+7"]);
   obj1[5] = tmp6[0];
@@ -92,7 +105,20 @@ export default function PasswordScreen() {
     tmp15 = tmp11;
   }
   obj1[9] = tmp15;
-  obj[1] = jsx(finish(first[10]).TextInput, { autoFocus: true, required: true, textContentType: "password", label: null, autoComplete: "current-password", errorMessage: null, returnKeyType: "done", onChange: null, onSubmitEditing: null, isDisabled: null, isClearable: true, secureTextEntry: true });
+  obj[1] = jsx(finish(first[10]).TextInput, {
+    autoFocus: true,
+    required: true,
+    textContentType: "password",
+    label: null,
+    autoComplete: "current-password",
+    errorMessage: null,
+    returnKeyType: "done",
+    onChange: null,
+    onSubmitEditing: null,
+    isDisabled: null,
+    isClearable: true,
+    secureTextEntry: true,
+  });
   obj[1] = <View style={screenStyles.inputContainer}>{null}</View>;
   const obj2 = { text: null, disabled: null, loading: null, onPress: null };
   const tmp13 = importDefault(first[8]);
@@ -111,4 +137,4 @@ export default function PasswordScreen() {
   obj2[3] = sendPassword;
   obj[2] = jsx(tmp3(first[11]), { text: null, disabled: null, loading: null, onPress: null });
   return <tmp13 style={screenStyles.inputContainer}>{null}</tmp13>;
-};
+}

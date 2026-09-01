@@ -2,9 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 
 const obj = {
-  resolve() {
-
-  }
+  resolve() {},
 };
 const promise = new Promise((resolve) => {
   obj.resolve = resolve;

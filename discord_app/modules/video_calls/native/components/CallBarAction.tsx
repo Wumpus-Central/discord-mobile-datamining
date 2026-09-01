@@ -49,16 +49,16 @@ class ActionButton {
       accessibilityRole: "button",
       accessibilityState,
       onPress() {
-            closure_1_6();
-            callback();
-          },
+        closure_1_6();
+        callback();
+      },
       disabled: false,
       style: obj,
-      children: null
+      children: null,
     };
     obj = { width: result, height: result, borderRadius: tmp6.buttonRadius, marginHorizontal: num };
     tmp13 = View;
-    items = [, , ];
+    items = [, ,];
     items[0] = tmp.buttonContainer;
     items[1] = { width: result, height: result, borderRadius: tmp6.buttonRadius };
     num2 = 1;
@@ -68,16 +68,22 @@ class ActionButton {
     }
     obj1 = { style: items, children: null };
     items[2] = { opacity: num2 };
-    obj2 = { circleRadius: tmp6.buttonRadius, cutoutRadius: sum, enableCutout: showBadge, cutoutPositionInDegrees: 45, circleFillColor: null };
+    obj2 = {
+      circleRadius: tmp6.buttonRadius,
+      cutoutRadius: sum,
+      enableCutout: showBadge,
+      cutoutPositionInDegrees: 45,
+      circleFillColor: null,
+    };
     tmp2Result = require("CircleWithCutout");
     if (null == backgroundColor) {
       backgroundColor = closure_9;
     }
     obj2[4] = backgroundColor;
-    items1 = [, , , ];
+    items1 = [, , ,];
     items1[0] = tmp10(tmp2Result, obj2);
     obj3 = { style: items2, children: null };
-    items2 = [, ];
+    items2 = [,];
     items2[0] = tmp.iconContainer;
     items2[1] = { width: result, height: result };
     if (null != lottieComponent) {
@@ -101,7 +107,7 @@ class ActionButton {
     tmp10Result = null;
     if (showBadge) {
       obj7 = { style: null };
-      items3 = [, ];
+      items3 = [,];
       items3[0] = tmp.badge;
       obj8 = { width: null, height: null, borderRadius: null, top: null, left: null };
       obj8[0] = result1;
@@ -129,8 +135,28 @@ let closure_9 = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.WHITE, 0
 let closure_10 = Object.freeze({ buttonRadius: 28, badgeRadius: 6, cutoutInset: 3 });
 const frozen = Object.freeze({ buttonRadius: 24, badgeRadius: 4, cutoutInset: 2 });
 let closure_12 = 24 + 2 * frozen.buttonRadius * 5 + 96;
-hexToRgba = { buttonContainer: { position: "absolute" }, iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center" }, badge: { backgroundColor: "white", position: "absolute" }, notificationArea: null, notificationText: null, notificationAreaMentioned: null, notificationAreaUnread: null };
-hexToRgba = { position: "absolute", top: -4, right: -4, height: 24, minWidth: 24, paddingHorizontal: 4, borderRadius: 12, borderWidth: 4, borderColor: ThemesDefault.unsafe_rawColors.PRIMARY_760, alignItems: "center", justifyContent: "center" };
+hexToRgba = {
+  buttonContainer: { position: "absolute" },
+  iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center" },
+  badge: { backgroundColor: "white", position: "absolute" },
+  notificationArea: null,
+  notificationText: null,
+  notificationAreaMentioned: null,
+  notificationAreaUnread: null,
+};
+hexToRgba = {
+  position: "absolute",
+  top: -4,
+  right: -4,
+  height: 24,
+  minWidth: 24,
+  paddingHorizontal: 4,
+  borderRadius: 12,
+  borderWidth: 4,
+  borderColor: ThemesDefault.unsafe_rawColors.PRIMARY_760,
+  alignItems: "center",
+  justifyContent: "center",
+};
 hexToRgba[3] = hexToRgba;
 hexToRgba[4] = { lineHeight: 16 };
 createCacheKey = { backgroundColor: ThemesDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT };
@@ -203,7 +229,7 @@ export const NotifiedActionButton = function NotifiedActionButton(isMentioned) {
   const tmp2 = callback2();
   let obj = {};
   const merged1 = Object.assign(merged);
-  const items = [tmp2.notificationArea, ];
+  const items = [tmp2.notificationArea];
   if (true !== isMentioned) {
     if (undefined !== isMentioned) {
       let notificationAreaMentioned = tmp2.notificationAreaUnread;

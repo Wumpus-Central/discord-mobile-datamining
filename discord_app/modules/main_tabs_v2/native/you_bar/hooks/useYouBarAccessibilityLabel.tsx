@@ -12,7 +12,9 @@ import { apexExperiment } from "../YouBarGuildTagExperiment.tsx";
 
 const require = arg1;
 ({ ActivityTypes: c10, StatusTypes: unpackModuleId } = ME);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarAccessibilityLabel.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/you_bar/hooks/useYouBarAccessibilityLabel.tsx",
+);
 
 export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(stateFromStores) {
   const _require = id(4322).useName(stateFromStores);

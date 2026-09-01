@@ -22,7 +22,9 @@ createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16, alignItems: "cent
 createCacheKey[3] = { textAlign: "center" };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { marginBottom: ThemesDefault.space.PX_16, alignItems: "center", textAlign: "center" };
-const result = require("set").fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/native/google_play_price_changes/GooglePlayPriceChangeActionSheet.tsx",
+);
 
 export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -54,10 +56,17 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   const obj2 = { variant: "heading-xl/bold", style: tmp.header, children: null };
   const intl = tmp2(1236).intl;
   obj2[2] = intl.format(markAsDismissed(1236).t.x0bFvn, { subscriptionName: tierDisplayNameByPlanId });
-  const items2 = [callback(markAsDismissed(4474).Text, obj2), ];
+  const items2 = [callback(markAsDismissed(4474).Text, obj2)];
   const obj3 = { variant: "text-md/medium", style: tmp.body, children: null };
   const intl2 = tmp2(1236).intl;
-  const obj4 = { subscriptionName: tierDisplayNameByPlanId, changeDate: null, interval: null, newPrice: null, oldPrice: null, hc_article_url: null };
+  const obj4 = {
+    subscriptionName: tierDisplayNameByPlanId,
+    changeDate: null,
+    interval: null,
+    newPrice: null,
+    oldPrice: null,
+    hc_article_url: null,
+  };
   const formatPriceResult1 = markAsDismissed(6081).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
   obj4[1] = new Date(stateFromStores.expectedChargeTime);
   obj4[2] = intervalStringAsNoun;
@@ -68,7 +77,7 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   obj3[2] = intl2.format(markAsDismissed(1236).t["n+Hrjb"], obj4);
   items2[1] = callback(markAsDismissed(4474).Text, obj3);
   obj1[1] = items2;
-  const items3 = [callback2(View, obj1), ];
+  const items3 = [callback2(View, obj1)];
   const obj5 = { variant: "primary", text: null, onPress: null };
   const intl3 = tmp2(1236).intl;
   obj5[1] = intl3.string(markAsDismissed(1236).t.BddRzS);
@@ -79,4 +88,4 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   obj[1] = items3;
   obj[0] = callback2(View, obj);
   return callback(markAsDismissed(5622).BottomSheet, obj);
-};
+}

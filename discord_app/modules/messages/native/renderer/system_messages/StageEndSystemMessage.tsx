@@ -13,7 +13,15 @@ export const createStageEndSystemMessage = function createStageEndSystemMessage(
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   obj = { content: null };
   const intl = getSystemLocale.intl;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), topic: message.content };
+  obj = {
+    username: messageAuthorWithProcessedColor.nick,
+    usernameOnClick: formatUsernameOnClickDefault({
+      message,
+      author: messageAuthorWithProcessedColor,
+      roleStyle: roleStyle.roleStyle,
+    }),
+    topic: message.content,
+  };
   obj[0] = intl.formatToParts(getSystemLocale.t.vMJhvG, obj);
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj;

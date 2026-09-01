@@ -34,14 +34,23 @@ function BountiesModalAdvertiserCtaContent(bounty) {
   const tmp2Result1 = bounty(getQuestImpressionId[13]);
   const tmp8 = callback(buttonPressAnimationProps, callback);
   getQuestImpressionId = bounty(getQuestImpressionId[14]).useGetQuestImpressionId();
-  const items = [, , , ];
+  const items = [, , ,];
   ({ id: arr[0], cta: arr[1] } = bounty);
   items[2] = sourceQuestContent;
   items[3] = getQuestImpressionId;
   callback = React.useCallback((content) => {
     let obj = bounty(getQuestImpressionId[15]);
-    obj = { adContentId: bounty.id, adCreativeType: bounty(getQuestImpressionId[16]).AdCreativeType.BOUNTY, cta: bounty.cta };
-    obj = { content, ctaContent: bounty(getQuestImpressionId[17]).QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
+    obj = {
+      adContentId: bounty.id,
+      adCreativeType: bounty(getQuestImpressionId[16]).AdCreativeType.BOUNTY,
+      cta: bounty.cta,
+    };
+    obj = {
+      content,
+      ctaContent: bounty(getQuestImpressionId[17]).QuestContentCTA.OPEN_GAME_LINK,
+      impressionId: getQuestImpressionId(),
+      sourceQuestContent,
+    };
     const result = obj.openAdGameLinkDirectly(obj, obj);
   }, items);
   const items1 = [callback];
@@ -63,15 +72,37 @@ function BountiesModalAdvertiserCtaContent(bounty) {
   obj1.style = items4;
   const obj2 = { blurTheme: "dark", style: tmp.cta, pressed: sharedValue, children: null };
   const tmp2Result2 = bounty(getQuestImpressionId[14]);
-  const items5 = [callback2(closure_7, { style: tmp.ctaLogoContainer, children: callback2(sourceQuestContent(getQuestImpressionId[20]), obj4) }), , ];
+  const items5 = [
+    callback2(closure_7, {
+      style: tmp.ctaLogoContainer,
+      children: callback2(sourceQuestContent(getQuestImpressionId[20]), obj4),
+    }),
+    ,
+  ];
   const obj5 = { style: tmp.ctaInfo, children: null };
-  const items6 = [callback2(bounty(getQuestImpressionId[21]).Text, { lineClamp: 2, variant: "text-sm/semibold", color: "text-default", children: bountyCtaInfo.label }), callback2(bounty(getQuestImpressionId[21]).Text, { variant: "text-xs/medium", color: "text-default", children: bountyCtaInfo.subtext })];
+  const items6 = [
+    callback2(bounty(getQuestImpressionId[21]).Text, {
+      lineClamp: 2,
+      variant: "text-sm/semibold",
+      color: "text-default",
+      children: bountyCtaInfo.label,
+    }),
+    callback2(bounty(getQuestImpressionId[21]).Text, {
+      variant: "text-xs/medium",
+      color: "text-default",
+      children: bountyCtaInfo.subtext,
+    }),
+  ];
   obj5[1] = items6;
   items5[1] = callback3(closure_7, obj5);
   const obj3 = { style: tmp.ctaLogoContainer, children: callback2(sourceQuestContent(getQuestImpressionId[20]), obj4) };
   const obj6 = { lineClamp: 2, variant: "text-sm/semibold", color: "text-default", children: bountyCtaInfo.label };
   const obj7 = { variant: "text-xs/medium", color: "text-default", children: bountyCtaInfo.subtext };
-  items5[2] = callback2(closure_7, { accessible: false, importantForAccessibility: "no-hide-descendants", children: callback2(bounty(getQuestImpressionId[22]).Button, obj9) });
+  items5[2] = callback2(closure_7, {
+    accessible: false,
+    importantForAccessibility: "no-hide-descendants",
+    children: callback2(bounty(getQuestImpressionId[22]).Button, obj9),
+  });
   obj2[3] = items5;
   obj1.children = callback3(bounty(getQuestImpressionId[19]).BackgroundBlurView, obj2);
   obj[1] = callback2(closure_12, obj1);
@@ -82,8 +113,23 @@ let closure_3 = ["style"];
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = importDefaultResult.createAnimatedComponent(Pressable);
 let closure_13 = createCacheKey.createStyles(() => {
-  let obj = { outerContainer: null, ctaPressable: null, cta: null, ctaLogoContainer: null, ctaLogo: null, ctaInfo: null };
-  obj = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, alignItems: "center" };
+  let obj = {
+    outerContainer: null,
+    ctaPressable: null,
+    cta: null,
+    ctaLogoContainer: null,
+    ctaLogo: null,
+    ctaInfo: null,
+  };
+  obj = {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    paddingHorizontal: ThemesDefault.space.PX_16,
+    paddingBottom: ThemesDefault.space.PX_16,
+    alignItems: "center",
+  };
   obj[0] = obj;
   obj = {};
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_TOP_HIGH);
@@ -93,31 +139,64 @@ let closure_13 = createCacheKey.createStyles(() => {
   obj.borderRadius = ThemesDefault.radii.lg;
   obj.overflow = "hidden";
   obj[1] = obj;
-  obj[2] = { flexDirection: "row", alignItems: "center", paddingLeft: ThemesDefault.space.PX_12, paddingRight: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12 };
-  obj1 = { flexDirection: "row", alignItems: "center", paddingLeft: ThemesDefault.space.PX_12, paddingRight: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12 };
-  obj[3] = { width: 40, height: 40, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md, overflow: "hidden" };
+  obj[2] = {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingLeft: ThemesDefault.space.PX_12,
+    paddingRight: ThemesDefault.space.PX_16,
+    paddingVertical: ThemesDefault.space.PX_12,
+    gap: ThemesDefault.space.PX_12,
+  };
+  obj1 = {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingLeft: ThemesDefault.space.PX_12,
+    paddingRight: ThemesDefault.space.PX_16,
+    paddingVertical: ThemesDefault.space.PX_12,
+    gap: ThemesDefault.space.PX_12,
+  };
+  obj[3] = {
+    width: 40,
+    height: 40,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+    borderRadius: ThemesDefault.radii.md,
+    overflow: "hidden",
+  };
   const merged1 = Object.assign(absoluteFillObject.absoluteFillObject);
   obj[4] = {};
   obj[5] = { flex: 1, justifyContent: "center", gap: 2 };
   return obj;
 });
 let fn = function n(value) {
-  const obj = { opacity: CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, timingNone.timingStandard, "respect-motion-settings") };
+  const obj = {
+    opacity: CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, timingNone.timingStandard, "respect-motion-settings"),
+  };
   return obj;
 };
-let obj = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, timingStandard: require("timingNone").timingStandard };
+let obj = {
+  withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming,
+  timingStandard: require("timingNone").timingStandard,
+};
 fn.__closure = obj;
 fn.__workletHash = 2981824910249;
-fn.__initData = { code: "function BountiesModalAdvertiserCtaTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}" };
+fn.__initData = {
+  code: "function BountiesModalAdvertiserCtaTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}",
+};
 const fn2 = function s(value, fn2) {
-  const obj = { opacity: CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, timingNone.timingFast, "respect-motion-settings", fn2) };
+  const obj = {
+    opacity: CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, timingNone.timingFast, "respect-motion-settings", fn2),
+  };
   return obj;
 };
 obj = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, timingFast: require("timingNone").timingFast };
 fn2.__closure = obj;
 fn2.__workletHash = 15850601331978;
-fn2.__initData = { code: "function BountiesModalAdvertiserCtaTsx2(visible,cleanUp){const{withTiming,timingFast}=this.__closure;return{opacity:withTiming(visible,timingFast,'respect-motion-settings',cleanUp)};}" };
-let closure_17 = { code: "function BountiesModalAdvertiserCtaTsx3(){const{withTiming,interpolate,visibility,visible,timingStandard,timingFast}=this.__closure;return{transform:[{translateY:withTiming(interpolate(visibility,[0,1],[8,0]),visible?timingStandard:timingFast)}]};}" };
+fn2.__initData = {
+  code: "function BountiesModalAdvertiserCtaTsx2(visible,cleanUp){const{withTiming,timingFast}=this.__closure;return{opacity:withTiming(visible,timingFast,'respect-motion-settings',cleanUp)};}",
+};
+let closure_17 = {
+  code: "function BountiesModalAdvertiserCtaTsx3(){const{withTiming,interpolate,visibility,visible,timingStandard,timingFast}=this.__closure;return{transform:[{translateY:withTiming(interpolate(visibility,[0,1],[8,0]),visible?timingStandard:timingFast)}]};}",
+};
 let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalAdvertiserCta.tsx");
 
 export default function BountiesModalAdvertiserCta(visible) {
@@ -126,7 +205,9 @@ export default function BountiesModalAdvertiserCta(visible) {
   let num;
   let animatedStyle;
   let obj = visible(animatedStyle[23]);
-  const isBountiesModalTransitionsRefactorEnabled = obj.useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
+  const isBountiesModalTransitionsRefactorEnabled = obj.useIsBountiesModalTransitionsRefactorEnabled(
+    QuestsExperimentLocations.VIDEO_MODAL_MOBILE,
+  );
   obj1 = visible(animatedStyle[24]);
   let items = [closure_8];
   num = 0;
@@ -140,12 +221,24 @@ export default function BountiesModalAdvertiserCta(visible) {
     const obj2 = visible(animatedStyle[6]);
     const tmp2 = visible(animatedStyle[10]);
     obj = { transform: null };
-    obj = { translateY: obj.withTiming(visible(animatedStyle[6]).interpolate(num, [0, 1], [8, 0]), visible ? tmp2.timingStandard : tmp2.timingFast) };
+    obj = {
+      translateY: obj.withTiming(
+        visible(animatedStyle[6]).interpolate(num, [0, 1], [8, 0]),
+        visible ? tmp2.timingStandard : tmp2.timingFast,
+      ),
+    };
     const items = [obj];
     obj[0] = items;
     return obj;
   };
-  obj = { withTiming: tmp2(tmp3[9]).withTiming, interpolate: tmp2(tmp3[6]).interpolate, visibility: num, visible, timingStandard: tmp2(tmp3[10]).timingStandard, timingFast: tmp2(tmp3[10]).timingFast };
+  obj = {
+    withTiming: tmp2(tmp3[9]).withTiming,
+    interpolate: tmp2(tmp3[6]).interpolate,
+    visibility: num,
+    visible,
+    timingStandard: tmp2(tmp3[10]).timingStandard,
+    timingFast: tmp2(tmp3[10]).timingFast,
+  };
   fn.__closure = obj;
   fn.__workletHash = 252868467367;
   fn.__initData = closure_17;
@@ -184,4 +277,4 @@ export default function BountiesModalAdvertiserCta(visible) {
     shouldRender = callback2(BountiesModalAdvertiserCtaContent, obj2);
   }
   return shouldRender;
-};
+}

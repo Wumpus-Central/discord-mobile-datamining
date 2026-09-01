@@ -118,7 +118,17 @@ export const createForumPostActions = function createForumPostActions(arg0) {
       tmp14 = obj;
       const tmp8Result1 = tmp8(7855);
     }
-    const obj2 = { numDisplayedReactions: 3, isFollowing: null, followIcon: null, followLabel: null, shareIcon: null, shareLabel: null, defaultReaction: null, addReactLabel: null, sharePrompt: null };
+    const obj2 = {
+      numDisplayedReactions: 3,
+      isFollowing: null,
+      followIcon: null,
+      followLabel: null,
+      shareIcon: null,
+      shareLabel: null,
+      defaultReaction: null,
+      addReactLabel: null,
+      sharePrompt: null,
+    };
     obj2[1] = isFollowing;
     obj2[2] = assetUriForEmbed;
     const intl5 = tmp8(1236).intl;
@@ -140,6 +150,8 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   } else {
     tmp6Result = tmp6(1208);
     const _HermesInternal = HermesInternal;
-    tmp6Result.captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 4430 : 7858));
+    tmp6Result.captureMessage(
+      "Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 4430 : 7858),
+    );
   }
 };

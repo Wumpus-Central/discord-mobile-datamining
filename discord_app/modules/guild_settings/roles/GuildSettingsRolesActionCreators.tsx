@@ -84,7 +84,7 @@ function AsyncFromSyncIterator(arg0) {
         }
       }
       return rejectResult;
-    }
+    },
   };
   return new AsyncFromSyncIterator(arg0);
 }
@@ -100,7 +100,7 @@ function _saveRoleSettings() {
     c20 = 0;
     c21 = 0;
     c18 = 0;
-    const iter = (function*(arg0, done) {
+    const iter = (function* (arg0, done) {
       if (c21 === 2) {
         c21 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -158,7 +158,7 @@ function _saveRoleSettings() {
                   c21 = 1;
                   return { value: "PX_16", done: null };
                 }
-              break;
+                break;
               case 1:
                 if (arg0 === 1) {
                   c21 = 3;
@@ -204,7 +204,9 @@ function _saveRoleSettings() {
                       const items = [];
                       throwTypeErrorResult = items;
                       throwTypeErrorResult = HermesBuiltin.arraySpread(callback2, 0);
-                      sorted = items.sort((name, name2) => Number("" !== name.name.trim()) - Number("" !== name2.name.trim()));
+                      sorted = items.sort(
+                        (name, name2) => Number("" !== name.name.trim()) - Number("" !== name2.name.trim()),
+                      );
                     } else {
                       sorted = [];
                     }
@@ -217,7 +219,7 @@ function _saveRoleSettings() {
                   }
                   const obj30 = callback2(length[2]);
                 }
-              break;
+                break;
               case 2:
                 throwTypeErrorResult = closure_17;
                 throwTypeErrorResult = closure_16;
@@ -264,7 +266,7 @@ function _saveRoleSettings() {
                   throwTypeErrorResult = closure_15;
                   throw closure_15;
                 }
-              break;
+                break;
               case 3:
                 if (arg0 === 1) {
                   c21 = 3;
@@ -276,7 +278,7 @@ function _saveRoleSettings() {
                   obj5[0] = done;
                   return obj5;
                 }
-              break;
+                break;
               case 4:
                 c18 = 1;
                 throwTypeErrorResult = closure_7;
@@ -382,7 +384,17 @@ function _saveRoleSettings() {
                     throwTypeErrorResult = callback2;
                     throwTypeErrorResult = length;
                     throwTypeErrorResult = closure_7;
-                    const obj8 = { name: null, description: null, permissions: null, color: null, colors: null, hoist: null, mentionable: null, icon: null, unicodeEmoji: null };
+                    const obj8 = {
+                      name: null,
+                      description: null,
+                      permissions: null,
+                      color: null,
+                      colors: null,
+                      hoist: null,
+                      mentionable: null,
+                      icon: null,
+                      unicodeEmoji: null,
+                    };
                     throwTypeErrorResult = closure_7;
                     obj8[0] = closure_7.name;
                     throwTypeErrorResult = closure_7;
@@ -423,7 +435,7 @@ function _saveRoleSettings() {
                     return obj9;
                   }
                 }
-              break;
+                break;
               case 6:
                 closure_15 = throwTypeErrorResult;
                 throwTypeErrorResult = closure_17;
@@ -453,7 +465,7 @@ function _saveRoleSettings() {
                   obj10[0] = closure_12.return();
                   return obj10;
                 }
-              break;
+                break;
               case 7:
                 c18 = 1;
                 if (c10) {
@@ -461,7 +473,7 @@ function _saveRoleSettings() {
                 } else {
                   throw tmp95;
                 }
-              break;
+                break;
               case 8:
                 c18 = 3;
                 c10 = true;
@@ -483,7 +495,7 @@ function _saveRoleSettings() {
                     throw closure_8;
                   }
                 }
-              break;
+                break;
               case 9:
                 if (arg0 === 1) {
                   c21 = 3;
@@ -537,7 +549,7 @@ function _saveRoleSettings() {
                     }
                   }
                 }
-              break;
+                break;
               case 10:
                 if (arg0 === 1) {
                   c21 = 3;
@@ -574,7 +586,7 @@ function _saveRoleSettings() {
                     c9 = !done;
                   }
                 }
-              break;
+                break;
               case 11:
                 c18 = 1;
                 if (c10) {
@@ -582,7 +594,7 @@ function _saveRoleSettings() {
                 } else {
                   throw tmp49;
                 }
-              break;
+                break;
               case 12:
                 if (arg0 === 1) {
                   c21 = 3;
@@ -601,7 +613,7 @@ function _saveRoleSettings() {
                     return obj17;
                   }
                 }
-              break;
+                break;
               case 13:
                 c18 = 1;
                 if (c10) {
@@ -609,7 +621,7 @@ function _saveRoleSettings() {
                 } else {
                   throw tmp43;
                 }
-              break;
+                break;
               case 14:
                 if (arg0 === 1) {
                   c21 = 3;
@@ -628,7 +640,7 @@ function _saveRoleSettings() {
                     return obj18;
                   }
                 }
-              break;
+                break;
               case 15:
                 if (arg0 === 1) {
                   c21 = 3;
@@ -668,7 +680,7 @@ function _saveRoleSettings() {
                     return obj21;
                   }
                 }
-              break;
+                break;
               case 16:
                 c18 = 1;
                 if (c10) {
@@ -676,7 +688,7 @@ function _saveRoleSettings() {
                 } else {
                   throw tmp26;
                 }
-              break;
+                break;
               case 17:
                 if (arg0 === 1) {
                   c21 = 3;
@@ -695,7 +707,7 @@ function _saveRoleSettings() {
                     return obj22;
                   }
                 }
-              break;
+                break;
               case 18:
                 c18 = 1;
                 if (c10) {
@@ -703,7 +715,7 @@ function _saveRoleSettings() {
                 } else {
                   throw tmp20;
                 }
-              break;
+                break;
               case 19:
                 if (arg0 === 1) {
                   c21 = 3;
@@ -722,7 +734,7 @@ function _saveRoleSettings() {
                     return obj;
                   }
                 }
-              break;
+                break;
               default:
                 if (arg0 === 1) {
                   c21 = 3;
@@ -785,7 +797,9 @@ function _saveRoleSettings() {
   return applyArgumentsResult;
 }
 ({ ComponentActions: c4, DEFAULT_ROLE_COLOR: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesActionCreators.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/roles/GuildSettingsRolesActionCreators.tsx",
+);
 
 export const updateRoleSort = function updateRoleSort(roles) {
   let obj = dispatcherDefault;
@@ -876,9 +890,16 @@ export const updateRoleIcon = function updateRoleIcon(id, icon, unicodeEmoji) {
   obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON", id, icon, unicodeEmoji };
   obj.dispatch(obj);
 };
-export const updateRoleConnectionConfigurations = function updateRoleConnectionConfigurations(id, roleConnectionConfigurations) {
+export const updateRoleConnectionConfigurations = function updateRoleConnectionConfigurations(
+  id,
+  roleConnectionConfigurations,
+) {
   let obj = dispatcherDefault;
-  obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS", roleId: id, roleConnectionConfigurations };
+  obj = {
+    type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS",
+    roleId: id,
+    roleConnectionConfigurations,
+  };
   obj.dispatch(obj);
 };
 export const saveRoleSettings = function saveRoleSettings(id, items) {

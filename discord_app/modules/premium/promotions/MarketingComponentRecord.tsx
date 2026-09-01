@@ -10,7 +10,16 @@ class MarketingComponentRecord extends tmp2 {
   constructor(arg0) {
     tmp = new MarketingComponentRecord(new.target, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ id: tmp.id, componentType: tmp.componentType, properties: tmp.properties, promotionId: tmp.promotionId, startDate: tmp.startDate, endDate: tmp.endDate, effectiveStartDate: tmp.effectiveStartDate, effectiveEndDate: tmp.effectiveEndDate } = global);
+    ({
+      id: tmp.id,
+      componentType: tmp.componentType,
+      properties: tmp.properties,
+      promotionId: tmp.promotionId,
+      startDate: tmp.startDate,
+      endDate: tmp.endDate,
+      effectiveStartDate: tmp.effectiveStartDate,
+      effectiveEndDate: tmp.effectiveEndDate,
+    } = global);
     return tmp;
   }
 }
@@ -51,7 +60,10 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
     const binaryReader = new textDecoder(closure_1_2[2]).BinaryReader(buf, textDecoder);
     return binaryReader;
   }
-  const fromBinaryResult = fromBinary(obj2.base64decode(start_date.properties), { readUnknownField: true, readerFactory });
+  const fromBinaryResult = fromBinary(obj2.base64decode(start_date.properties), {
+    readUnknownField: true,
+    readerFactory,
+  });
   const promotion_id = start_date.promotion_id;
   let tmp12 = date;
   if (date == null) {
@@ -65,7 +77,20 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }
-  const tmp14 = new MarketingComponentRecord(str, obj, obj2, readerFactory, PremiumMarketingComponentProperties, fromBinary, MarketingComponentRecord, new.target, id, component_type, fromBinaryResult, promotion_id);
+  const tmp14 = new MarketingComponentRecord(
+    str,
+    obj,
+    obj2,
+    readerFactory,
+    PremiumMarketingComponentProperties,
+    fromBinary,
+    MarketingComponentRecord,
+    new.target,
+    id,
+    component_type,
+    fromBinaryResult,
+    promotion_id,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp14.id = id;
   tmp14.componentType = component_type;
@@ -81,7 +106,7 @@ Object.defineProperty(prototype, "isTimed", {
   get: function isTimed() {
     return null != this.startDate || null != this.endDate;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isIncludedInRollout"] = function isIncludedInRollout(id, date) {
   const self = this;

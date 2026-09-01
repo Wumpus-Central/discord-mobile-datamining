@@ -28,7 +28,7 @@ class BaseActivityPanelUI {
     mode = closure_3.useContext(global.context).mode;
     tmp = require("useIsConnectedToVoiceChannel")();
     closure_1 = tmp;
-    items = [, ];
+    items = [,];
     items[0] = mode;
     items[1] = tmp;
     memo = closure_3.useMemo(() => {
@@ -41,7 +41,7 @@ class BaseActivityPanelUI {
       tmp4 = closure_1_12;
     }, items);
     obj = { children: null };
-    items1 = [, ];
+    items1 = [,];
     items1[0] = renderActivityPanelSystemUIManager();
     obj = { items: memo, renderItem: renderActivityOrPIP, getItemKey: getKey, wrapChildren };
     items1[1] = jsx(require("ManaContext").TransitionGroup, obj);
@@ -59,6 +59,14 @@ const result = require("set").fileFinishedImporting("modules/activities/panel/na
 export default function ActivityPanelUI() {
   const callback = React.useCallback(() => callback2(callback(table[9]), {}), []);
   const items = [callback];
-  return React.useMemo(() => closure_1_7(closure_1_15, { renderActivityOrPIP: closure_1_9, context: closure_1_1(closure_1_2[10]), renderActivityPanelSystemUIManager: callback }), items);
-};
+  return React.useMemo(
+    () =>
+      closure_1_7(closure_1_15, {
+        renderActivityOrPIP: closure_1_9,
+        context: closure_1_1(closure_1_2[10]),
+        renderActivityPanelSystemUIManager: callback,
+      }),
+    items,
+  );
+}
 export { BaseActivityPanelUI };

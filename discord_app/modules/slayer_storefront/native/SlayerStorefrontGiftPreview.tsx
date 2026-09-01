@@ -56,7 +56,11 @@ function WarningBox(application) {
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 }, text: { textAlign: "center", paddingHorizontal: 32 }, warningBox: { marginHorizontal: 16 } });
+let closure_6 = createCacheKey.createStyles({
+  container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 },
+  text: { textAlign: "center", paddingHorizontal: 32 },
+  warningBox: { marginHorizontal: 16 },
+});
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx");
 
 export default function SlayerStorefrontGiftPreview(arg0) {
@@ -72,7 +76,7 @@ export default function SlayerStorefrontGiftPreview(arg0) {
     obj[0] = tmp.container;
     obj = { sku: null };
     obj[0] = sku;
-    const items = [callback(SlayerStorefrontItemCardDefault, obj), , ];
+    const items = [callback(SlayerStorefrontItemCardDefault, obj), ,];
     obj = { variant: "heading-md/normal", color: "mobile-text-heading-primary", style: null, children: null };
     obj[2] = tmp.text;
     const intl = getSystemLocale.intl;
@@ -86,7 +90,13 @@ export default function SlayerStorefrontGiftPreview(arg0) {
     obj1[2] = name;
     obj[3] = intl.formatToPlainString(getSystemLocale.t["2tBYtA"], obj1);
     items[1] = callback(Text.Text, obj);
-    const obj2 = { canStartAuthorization: null, hasAccountLinked: null, mobileAccountLinkingDisabled: null, sku: null, application: null };
+    const obj2 = {
+      canStartAuthorization: null,
+      hasAccountLinked: null,
+      mobileAccountLinkingDisabled: null,
+      sku: null,
+      application: null,
+    };
     obj2[0] = canStartAuthorization;
     obj2[1] = hasAccountLinked;
     obj2[2] = mobileAccountLinkingDisabled;
@@ -99,4 +109,4 @@ export default function SlayerStorefrontGiftPreview(arg0) {
     const tmp4 = View;
   }
   return tmp3Result;
-};
+}

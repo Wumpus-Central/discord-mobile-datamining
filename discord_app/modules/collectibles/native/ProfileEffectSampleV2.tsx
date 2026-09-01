@@ -11,13 +11,30 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let obj = { profileContainer: { position: "absolute", display: "flex", height: "100%", width: "100%" }, profileBackground: null, sampleProfileImage: null, profileBorder: null };
+let obj = {
+  profileContainer: { position: "absolute", display: "flex", height: "100%", width: "100%" },
+  profileBackground: null,
+  sampleProfileImage: null,
+  profileBorder: null,
+};
 obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj[1] = obj;
 obj[2] = { aspectRatio: SAMPLE_PROFILE_ASPECT_RATIO.SAMPLE_PROFILE_ASPECT_RATIO };
-obj[3] = { position: "absolute", height: "100%", width: "100%", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
+obj[3] = {
+  position: "absolute",
+  height: "100%",
+  width: "100%",
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+};
 let closure_5 = createCacheKey.createStyles(obj);
-let obj1 = { position: "absolute", height: "100%", width: "100%", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
+let obj1 = {
+  position: "absolute",
+  height: "100%",
+  width: "100%",
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+};
 const result = set.fileFinishedImporting("modules/collectibles/native/ProfileEffectSampleV2.tsx");
 
 export default function ProfileEffectSample(hideBackground) {
@@ -26,7 +43,7 @@ export default function ProfileEffectSample(hideBackground) {
     flag = false;
   }
   const tmp = callback2();
-  const items = [tmp.profileContainer, ];
+  const items = [tmp.profileContainer];
   let profileBackground = !flag;
   if (!flag) {
     profileBackground = tmp.profileBackground;
@@ -37,7 +54,7 @@ export default function ProfileEffectSample(hideBackground) {
   items1 = [tmp.sampleProfileImage];
   obj = { uri: metadataDefault };
   obj[1] = obj;
-  const items2 = [callback(preloadDefault, obj), , ];
+  const items2 = [callback(preloadDefault, obj), ,];
   let tmp4Result = !flag;
   if (!flag) {
     obj1 = { style: null };
@@ -45,7 +62,11 @@ export default function ProfileEffectSample(hideBackground) {
     tmp4Result = tmp4(tmp3, obj1);
   }
   items2[1] = tmp4Result;
-  items2[2] = callback(StaticEffectDefault, { skuId: hideBackground.item.skuId, bannerAdjustment: 0, useThumbnail: true });
+  items2[2] = callback(StaticEffectDefault, {
+    skuId: hideBackground.item.skuId,
+    bannerAdjustment: 0,
+    useThumbnail: true,
+  });
   obj[1] = items2;
   return closure_4(View, obj);
-};
+}

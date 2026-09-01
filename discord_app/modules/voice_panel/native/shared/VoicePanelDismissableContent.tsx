@@ -12,8 +12,12 @@ function VoiceControlsNuxActionSheetImporter() {
   return asyncRequireImpl(16680, dependencyMap.paths);
 }
 let c4 = importAllResult;
-let closure_10 = { code: "function VoicePanelDismissableContentTsx1(){const{mode,VoicePanelModes,focused}=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;}" };
-let closure_11 = { code: "function VoicePanelDismissableContentTsx2(manualId,previousManualId){const{runOnJS,handleFocusChange}=this.__closure;if(manualId!==previousManualId){runOnJS(handleFocusChange)(manualId);}}" };
+let closure_10 = {
+  code: "function VoicePanelDismissableContentTsx1(){const{mode,VoicePanelModes,focused}=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;}",
+};
+let closure_11 = {
+  code: "function VoicePanelDismissableContentTsx2(manualId,previousManualId){const{runOnJS,handleFocusChange}=this.__closure;if(manualId!==previousManualId){runOnJS(handleFocusChange)(manualId);}}",
+};
 const memoResult = importAllResult.memo(function VoicePanelDismissibleContent() {
   const context = callback.useContext(focused(mode[8]));
   const channelId = context.channelId;
@@ -75,9 +79,11 @@ const memoResult = importAllResult.memo(function VoicePanelDismissibleContent() 
         tmp3 = callback2(channelId(mode[12]).DismissibleActionSheet, obj);
       }
       return tmp3;
-    }
+    },
   });
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx",
+);
 
 export default memoResult;

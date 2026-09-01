@@ -6,12 +6,30 @@ import set from "../../../../../_runtime/00002_set.js";
 require = arg1;
 const preview = "preview";
 const responsive = "responsive";
-let obj = { foreground: require("ProfileFrameLayerOrder").ProfileFrameLayerOrder.FRONT, background: require("ProfileFrameLayerOrder").ProfileFrameLayerOrder.BACK };
-const items = [require("ProfileFrameLayerType").ProfileFrameLayerType.STAPLE, require("ProfileFrameLayerType").ProfileFrameLayerType.RAIL, require("ProfileFrameLayerType").ProfileFrameLayerType.BORDER];
+let obj = {
+  foreground: require("ProfileFrameLayerOrder").ProfileFrameLayerOrder.FRONT,
+  background: require("ProfileFrameLayerOrder").ProfileFrameLayerOrder.BACK,
+};
+const items = [
+  require("ProfileFrameLayerType").ProfileFrameLayerType.STAPLE,
+  require("ProfileFrameLayerType").ProfileFrameLayerType.RAIL,
+  require("ProfileFrameLayerType").ProfileFrameLayerType.BORDER,
+];
 let set = new Set(items);
-const items1 = [require("ProfileFrameLayerAnchor").ProfileFrameLayerAnchor.TOP, require("ProfileFrameLayerAnchor").ProfileFrameLayerAnchor.BOTTOM, require("ProfileFrameLayerAnchor").ProfileFrameLayerAnchor.CENTER];
+const items1 = [
+  require("ProfileFrameLayerAnchor").ProfileFrameLayerAnchor.TOP,
+  require("ProfileFrameLayerAnchor").ProfileFrameLayerAnchor.BOTTOM,
+  require("ProfileFrameLayerAnchor").ProfileFrameLayerAnchor.CENTER,
+];
 const set1 = new Set(items1);
-obj = { WRONG_PART_COUNT: "wrong_part_count", INVALID_INDEX: "invalid_index", INVALID_TYPE: "invalid_type", INVALID_ANCHOR: "invalid_anchor", INVALID_RESPONSIVE: "invalid_responsive", BORDER_HAS_ANCHOR: "border_has_anchor" };
+obj = {
+  WRONG_PART_COUNT: "wrong_part_count",
+  INVALID_INDEX: "invalid_index",
+  INVALID_TYPE: "invalid_type",
+  INVALID_ANCHOR: "invalid_anchor",
+  INVALID_RESPONSIVE: "invalid_responsive",
+  BORDER_HAS_ANCHOR: "border_has_anchor",
+};
 obj = { [obj.WRONG_PART_COUNT]: "wrong filename format", [obj.INVALID_INDEX]: "invalid index" };
 const items2 = [...set];
 obj[obj.INVALID_TYPE] = "invalid type (expected: " + items2.join(", ") + ")";

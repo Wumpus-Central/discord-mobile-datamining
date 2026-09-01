@@ -99,7 +99,7 @@ function _dataUrlToFile() {
     closure_2 = arg2;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       closure_3 = tmp4;
       closure_0 = closure_1;
       closure_1 = closure_2;
@@ -153,7 +153,7 @@ function _isPNGAnimated() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -300,7 +300,7 @@ export const zoomScale = function zoomScale(arg0, arg1, arg2, arg3) {
   let num2 = 2;
   if (tmp3) {
     const _window2 = window;
-    num2 = window.innerWidth * c6 / arg2;
+    num2 = (window.innerWidth * c6) / arg2;
   }
   let tmp6 = null != arg3;
   if (tmp6) {
@@ -310,7 +310,7 @@ export const zoomScale = function zoomScale(arg0, arg1, arg2, arg3) {
   let num3 = 2;
   if (tmp6) {
     const _window4 = window;
-    num3 = window.innerHeight * c6 / arg3;
+    num3 = (window.innerHeight * c6) / arg3;
   }
   const bound1 = Math.min(bound, num2, num3);
   return parseFloat(bound1.toFixed(2));

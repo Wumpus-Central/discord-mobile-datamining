@@ -419,169 +419,171 @@ function handleSelectedGuildChange() {
   }
   const first = Object.values(obj)[0];
   if (null != first) {
-    if ((function meetsGuildRequirements(c17) {
-      let guild_requirements = c17.guild_requirements;
-      if (undefined === guild_requirements) {
-        guild_requirements = [];
-      }
-      let guild_size = c17.guild_size;
-      if (undefined === guild_size) {
-        guild_size = [null, null];
-      }
-      let guild_permissions = c17.guild_permissions;
-      if (undefined === guild_permissions) {
-        guild_permissions = [];
-      }
-      if (0 === guild_requirements.length) {
-        return true;
-      } else {
-        for (const item10017 of guild_requirements) {
-          let tmp2 = set;
-          if (set.has(item10017)) {
-            continue;
-          } else {
-            let tmp3 = obj3;
-            obj3.return();
-            let flag = false;
-            return false;
-          }
+    if (
+      (function meetsGuildRequirements(c17) {
+        let guild_requirements = c17.guild_requirements;
+        if (undefined === guild_requirements) {
+          guild_requirements = [];
         }
-        const hasItem = guild_requirements.includes(constants3.GUILD_SIZE_ALL);
-        let flag3 = true;
-        guildsArray = guildsArray.getGuildsArray();
-        const iter = guildsArray[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let tmp14 = nextResult;
-          if (hasItem) {
-            let tmp17 = memberCount;
-            let tmp18 = nextResult;
-            memberCount = memberCount.getMemberCount(tmp14.id);
-            let tmp20 = memberCount;
-            if (null == memberCount) {
-              flag3 = false;
+        let guild_size = c17.guild_size;
+        if (undefined === guild_size) {
+          guild_size = [null, null];
+        }
+        let guild_permissions = c17.guild_permissions;
+        if (undefined === guild_permissions) {
+          guild_permissions = [];
+        }
+        if (0 === guild_requirements.length) {
+          return true;
+        } else {
+          for (const item10017 of guild_requirements) {
+            let tmp2 = set;
+            if (set.has(item10017)) {
               continue;
             } else {
-              if (null != guild_size[0]) {
-                let tmp21 = memberCount;
-                if (tmp20 < guild_size[0]) {
-                  flag3 = false;
-                  continue;
-                }
-              }
-              if (null != guild_size[1]) {
-                let tmp22 = memberCount;
-                if (tmp20 > guild_size[1]) {
-                  flag3 = false;
-                  continue;
-                }
-              }
+              let tmp3 = obj3;
+              obj3.return();
+              let flag = false;
+              return false;
             }
-          } else {
-            let tmp15 = constants3;
-            let tmp16 = constants3;
           }
-          let tmp23 = constants3;
-          let tmp24 = constants3;
-          if (!guild_requirements.includes(constants3.IS_COMMUNITY)) {
-            let tmp27 = tmp23;
-            if (!guild_requirements.includes(tmp24.IS_HUB)) {
-              let tmp30 = tmp23;
-              if (!guild_requirements.includes(tmp24.GUILD_PERMISSIONS)) {
-                let tmp40 = currentUser;
-                currentUser = currentUser.getCurrentUser();
-                let id;
-                if (currentUser != null) {
-                  id = currentUser.id;
-                }
-                let tmp43 = nextResult;
-                let tmp44 = id === tmp14.ownerId;
-                let tmp45 = closure_6;
-                let tmp46 = constants2;
-                let canResult = closure_6.can(constants2.ADMINISTRATOR, tmp14);
-                let tmp48 = constants3;
-                let tmp49 = constants3;
-                if (!guild_requirements.includes(constants3.IS_OWNER)) {
-                  let tmp51 = tmp48;
-                  if (!guild_requirements.includes(tmp49.IS_ADMIN)) {
-                    if (obj == null) {
-                      obj = {};
-                    }
-                    if (null == obj[c17.key]) {
-                      let tmp53 = obj;
-                      obj[c17.key] = c17;
-                    }
-                    let tmp54 = guildId;
-                    guildId = guildId.getGuildId();
-                    let tmp57 = null != guildId;
-                    if (tmp57) {
-                      let tmp58 = guildId;
-                      let tmp59 = nextResult;
-                      tmp57 = tmp56 === tmp14.id;
-                    }
-                    let tmp61 = tmp48;
-                    let tmp60 = tmp57;
-                    if (!guild_requirements.includes(tmp49.IS_VIEWING)) {
-                      if (!hasItem) {
-                        let tmp63 = iter;
-                        iter.return();
-                        return true;
-                      }
-                    } else {
-                      let tmp62 = tmp57;
-                    }
-                  } else {
-                    let tmp52 = canResult;
-                  }
-                } else {
-                  let tmp50 = tmp44;
-                }
-              } else if (0 === guild_permissions.length) {
+          const hasItem = guild_requirements.includes(constants3.GUILD_SIZE_ALL);
+          let flag3 = true;
+          guildsArray = guildsArray.getGuildsArray();
+          const iter = guildsArray[Symbol.iterator]();
+          const nextResult = iter.next();
+          while (iter !== undefined) {
+            let tmp14 = nextResult;
+            if (hasItem) {
+              let tmp17 = memberCount;
+              let tmp18 = nextResult;
+              memberCount = memberCount.getMemberCount(tmp14.id);
+              let tmp20 = memberCount;
+              if (null == memberCount) {
+                flag3 = false;
                 continue;
               } else {
-                let flag5 = false;
-                let tmp65 = guild_permissions;
-                let tmp31 = guild_permissions;
-                for (const item10086 of guild_permissions) {
-                  let tmp33 = callback;
-                  let tmp34 = table;
-                  let tmp32 = item10086;
-                  obj = callback(table[8]);
-                  let tmp35 = item10086;
-                  let tmp36 = closure_6;
-                  let tmp37 = nextResult;
-                  if (closure_6.can(obj.deserialize(tmp32), tmp14)) {
-                    flag5 = true;
-                    let tmp38 = obj4;
-                    obj4.return();
-                    break;
+                if (null != guild_size[0]) {
+                  let tmp21 = memberCount;
+                  if (tmp20 < guild_size[0]) {
+                    flag3 = false;
+                    continue;
                   }
+                }
+                if (null != guild_size[1]) {
+                  let tmp22 = memberCount;
+                  if (tmp20 > guild_size[1]) {
+                    flag3 = false;
+                    continue;
+                  }
+                }
+              }
+            } else {
+              let tmp15 = constants3;
+              let tmp16 = constants3;
+            }
+            let tmp23 = constants3;
+            let tmp24 = constants3;
+            if (!guild_requirements.includes(constants3.IS_COMMUNITY)) {
+              let tmp27 = tmp23;
+              if (!guild_requirements.includes(tmp24.IS_HUB)) {
+                let tmp30 = tmp23;
+                if (!guild_requirements.includes(tmp24.GUILD_PERMISSIONS)) {
+                  let tmp40 = currentUser;
+                  currentUser = currentUser.getCurrentUser();
+                  let id;
+                  if (currentUser != null) {
+                    id = currentUser.id;
+                  }
+                  let tmp43 = nextResult;
+                  let tmp44 = id === tmp14.ownerId;
+                  let tmp45 = closure_6;
+                  let tmp46 = constants2;
+                  let canResult = closure_6.can(constants2.ADMINISTRATOR, tmp14);
+                  let tmp48 = constants3;
+                  let tmp49 = constants3;
+                  if (!guild_requirements.includes(constants3.IS_OWNER)) {
+                    let tmp51 = tmp48;
+                    if (!guild_requirements.includes(tmp49.IS_ADMIN)) {
+                      if (obj == null) {
+                        obj = {};
+                      }
+                      if (null == obj[c17.key]) {
+                        let tmp53 = obj;
+                        obj[c17.key] = c17;
+                      }
+                      let tmp54 = guildId;
+                      guildId = guildId.getGuildId();
+                      let tmp57 = null != guildId;
+                      if (tmp57) {
+                        let tmp58 = guildId;
+                        let tmp59 = nextResult;
+                        tmp57 = tmp56 === tmp14.id;
+                      }
+                      let tmp61 = tmp48;
+                      let tmp60 = tmp57;
+                      if (!guild_requirements.includes(tmp49.IS_VIEWING)) {
+                        if (!hasItem) {
+                          let tmp63 = iter;
+                          iter.return();
+                          return true;
+                        }
+                      } else {
+                        let tmp62 = tmp57;
+                      }
+                    } else {
+                      let tmp52 = canResult;
+                    }
+                  } else {
+                    let tmp50 = tmp44;
+                  }
+                } else if (0 === guild_permissions.length) {
+                  continue;
+                } else {
+                  let flag5 = false;
+                  let tmp65 = guild_permissions;
+                  let tmp31 = guild_permissions;
+                  for (const item10086 of guild_permissions) {
+                    let tmp33 = callback;
+                    let tmp34 = table;
+                    let tmp32 = item10086;
+                    obj = callback(table[8]);
+                    let tmp35 = item10086;
+                    let tmp36 = closure_6;
+                    let tmp37 = nextResult;
+                    if (closure_6.can(obj.deserialize(tmp32), tmp14)) {
+                      flag5 = true;
+                      let tmp38 = obj4;
+                      obj4.return();
+                      break;
+                    }
+                    continue;
+                  }
+                  let tmp39 = flag5;
                   continue;
                 }
-                let tmp39 = flag5;
                 continue;
+              } else {
+                let tmp28 = nextResult;
+                let features2 = tmp14.features;
+                let tmp29 = constants;
               }
-              continue;
             } else {
-              let tmp28 = nextResult;
-              let features2 = tmp14.features;
-              let tmp29 = constants;
+              let tmp25 = nextResult;
+              let features = tmp14.features;
+              let tmp26 = constants;
             }
-          } else {
-            let tmp25 = nextResult;
-            let features = tmp14.features;
-            let tmp26 = constants;
+            continue;
           }
-          continue;
-        }
-        if (hasItem) {
-          if (flag3) {
-            return true;
+          if (hasItem) {
+            if (flag3) {
+              return true;
+            }
           }
+          return false;
         }
-        return false;
-      }
-    })(first)) {
+      })(first)
+    ) {
       obj = { type: "SURVEY_FETCHED", survey: null };
       obj[1] = first;
       setSurvey(obj);
@@ -601,11 +603,19 @@ let c18 = false;
 let c19 = null;
 const DAY = setDefault.Millis.DAY;
 const result = 10 * setDefault.Millis.HOUR;
-obj = { IS_OWNER: "is_owner", IS_ADMIN: "is_admin", IS_COMMUNITY: "is_community", GUILD_SIZE: "guild_size", IS_HUB: "is_hub", IS_VIEWING: "is_viewing", GUILD_PERMISSIONS: "guild_permissions", GUILD_SIZE_ALL: "guild_size_all" };
+obj = {
+  IS_OWNER: "is_owner",
+  IS_ADMIN: "is_admin",
+  IS_COMMUNITY: "is_community",
+  GUILD_SIZE: "guild_size",
+  IS_HUB: "is_hub",
+  IS_VIEWING: "is_viewing",
+  GUILD_PERMISSIONS: "guild_permissions",
+  GUILD_SIZE_ALL: "guild_size_all",
+};
 let set = new Set(Object.values(obj));
 const PersistedStore = initializeDefault.PersistedStore;
-class SurveyStore extends PersistedStore {
-}
+class SurveyStore extends PersistedStore {}
 const prototype = SurveyStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   const self = this;
@@ -681,7 +691,7 @@ let items = [
     }
     obj.hiddenSurveys = hiddenSurveys;
     return obj;
-  }
+  },
 ];
 SurveyStore.migrations = items;
 obj = {
@@ -722,7 +732,7 @@ obj = {
   },
   SURVEY_SEEN: function handleSurveySeen() {
     obj.lastSeen = Date.now();
-  }
+  },
 };
 const surveyStore = new SurveyStore(dispatcherDefault, obj);
 const result1 = set.fileFinishedImporting("stores/SurveyStore.tsx");

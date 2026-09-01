@@ -26,11 +26,37 @@ if (set.isAndroid()) {
   importDefaultResult = requireNativeComponent("DCDQRScanner");
 }
 let c10 = importDefaultResult;
-set = { scanner: { position: "absolute", height: "100%", width: "100%" }, closeButton: { marginLeft: 8 }, emptyView: null, showHelp: null, text: null };
+set = {
+  scanner: { position: "absolute", height: "100%", width: "100%" },
+  closeButton: { marginLeft: 8 },
+  emptyView: null,
+  showHelp: null,
+  text: null,
+};
 set = { backgroundColor: ThemesDefault.unsafe_rawColors.BLACK };
 set[2] = set;
-set[3] = { marginLeft: 16, marginRight: 16, marginTop: "auto", borderRadius: 16, backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_500, paddingTop: 4, paddingBottom: 4, paddingLeft: 16, paddingRight: 16 };
-let obj1 = { marginLeft: 16, marginRight: 16, marginTop: "auto", borderRadius: 16, backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_500, paddingTop: 4, paddingBottom: 4, paddingLeft: 16, paddingRight: 16 };
+set[3] = {
+  marginLeft: 16,
+  marginRight: 16,
+  marginTop: "auto",
+  borderRadius: 16,
+  backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_500,
+  paddingTop: 4,
+  paddingBottom: 4,
+  paddingLeft: 16,
+  paddingRight: 16,
+};
+let obj1 = {
+  marginLeft: 16,
+  marginRight: 16,
+  marginTop: "auto",
+  borderRadius: 16,
+  backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_500,
+  paddingTop: 4,
+  paddingBottom: 4,
+  paddingLeft: 16,
+  paddingRight: 16,
+};
 set[4] = { color: ThemesDefault.unsafe_rawColors.WHITE, textAlign: "center" };
 let closure_13 = { SUCCEEDED: "SUCCEEDED", FAILED: "FAILED" };
 let result = set.fileFinishedImporting("components_native/QRScannerModal.tsx");
@@ -53,7 +79,7 @@ export default function QRScannerModal(showHelp) {
   ({ bottom, top } = useSafeAreaInsetsDefault());
   if (tmp3) {
     obj = { style: null };
-    const items = [, ];
+    const items = [,];
     ({ scanner: arr[0], emptyView: arr[1] } = set);
     obj[0] = items;
     let tmp10Result = tmp10(tmp9, obj);
@@ -121,7 +147,7 @@ export default function QRScannerModal(showHelp) {
     tmp10Result = tmp10(DCDQRScanner, obj);
     tmp14 = tmp10;
   }
-  const items1 = [tmp10Result, , ];
+  const items1 = [tmp10Result, ,];
   obj1 = { accessibilityRole: "button", accessibilityLabel: null, source: null, style: null, onPress: null };
   const tmp7 = useSafeAreaInsetsDefault();
   let tmp8 = closure_9;
@@ -137,7 +163,7 @@ export default function QRScannerModal(showHelp) {
     tmp14Result = null;
     if (!tmp3) {
       const obj2 = { style: null, children: null };
-      const items3 = [tmp12.showHelp, ];
+      const items3 = [tmp12.showHelp];
       const obj3 = { marginBottom: null };
       obj3[0] = bottom + 8;
       items3[1] = obj3;
@@ -153,4 +179,4 @@ export default function QRScannerModal(showHelp) {
   items1[2] = tmp14Result;
   obj[1] = items1;
   return tmp8(closure_5, obj);
-};
+}

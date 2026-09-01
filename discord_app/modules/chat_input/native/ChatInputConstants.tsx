@@ -8,8 +8,34 @@ obj = { easing: Button.STANDARD_EASING, duration: 100 };
 const obj1 = { easing: Button.STANDARD_EASING, duration: 200 };
 const result = set.fileFinishedImporting("modules/chat_input/native/ChatInputConstants.tsx");
 
-export const TextAreaCta = { CHANNEL_LIST: "channel_list", CHANNEL_LINK: "channel_link", BACK_TO_HOME: "back_to_home", VERIFY_PHONE: "verify_phone", VERIFY_EMAIL: "verify_email", JOIN_GUILD: "join_guild", FOLLOW_ANNOUNCEMENT: "follow_announcement", BACK_TO_DISCOVERY: "back_to_discovery", MEMBER_VERIFICATION: "member_verification", MEMBER_VERIFICATION_CONFIRMED: "member_verification_confirmed", MEMBER_VERIFICATION_REJECTED: "member_verification_rejected", UNBLOCK: "unblock" };
-export const ChatInputActionType = { PHOTOS: 0, [0]: "PHOTOS", APPS: 1, [1]: "APPS", THREAD: 2, [2]: "THREAD", NITRO_GIFT: 3, [3]: "NITRO_GIFT", ALL_PHOTOS: 4, [4]: "ALL_PHOTOS", CAMERA: 5, [5]: "CAMERA" };
+export const TextAreaCta = {
+  CHANNEL_LIST: "channel_list",
+  CHANNEL_LINK: "channel_link",
+  BACK_TO_HOME: "back_to_home",
+  VERIFY_PHONE: "verify_phone",
+  VERIFY_EMAIL: "verify_email",
+  JOIN_GUILD: "join_guild",
+  FOLLOW_ANNOUNCEMENT: "follow_announcement",
+  BACK_TO_DISCOVERY: "back_to_discovery",
+  MEMBER_VERIFICATION: "member_verification",
+  MEMBER_VERIFICATION_CONFIRMED: "member_verification_confirmed",
+  MEMBER_VERIFICATION_REJECTED: "member_verification_rejected",
+  UNBLOCK: "unblock",
+};
+export const ChatInputActionType = {
+  PHOTOS: 0,
+  [0]: "PHOTOS",
+  APPS: 1,
+  [1]: "APPS",
+  THREAD: 2,
+  [2]: "THREAD",
+  NITRO_GIFT: 3,
+  [3]: "NITRO_GIFT",
+  ALL_PHOTOS: 4,
+  [4]: "ALL_PHOTOS",
+  CAMERA: 5,
+  [5]: "CAMERA",
+};
 export const ChatInputOmniButtonActionType = { OPENED: "opened", CLOSED: "dismissed" };
 export const CHAT_INPUT_ACTION_BUTTON_SIZE = 40;
 export const CHAT_INPUT_ACTION_BUTTON_MARGIN = 4;

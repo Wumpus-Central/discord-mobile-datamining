@@ -91,7 +91,7 @@ export default {
     if (arg3 === undefined) {
       flag2 = false;
     }
-    return flag2(function*() {
+    return flag2(function* () {
       closure_1 = tmp2;
       let body = tmp5;
       const fingerprint = closure_1_4.getFingerprint();
@@ -107,7 +107,14 @@ export default {
         obj1.authorization = "";
       }
       const obj5 = closure_1_1(4713);
-      const obj2 = { url: null, headers: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+      const obj2 = {
+        url: null,
+        headers: null,
+        body: null,
+        oldFormErrors: true,
+        trackedActionData: null,
+        rejectWithError: null,
+      };
       obj2[0] = closure_1_6.VERIFY_PHONE;
       obj2[1] = obj1;
       const obj3 = { phone: null, code: null };
@@ -127,6 +134,12 @@ export default {
       }
       return body.body;
     })();
-  }
+  },
 };
-export const ChangePhoneReason = { USER_ACTION_REQUIRED: "user_action_required", USER_SETTINGS_UPDATE: "user_settings_update", GUILD_PHONE_REQUIRED: "guild_phone_required", MFA_PHONE_UPDATE: "mfa_phone_update", CONTACT_SYNC: "contact_sync" };
+export const ChangePhoneReason = {
+  USER_ACTION_REQUIRED: "user_action_required",
+  USER_SETTINGS_UPDATE: "user_settings_update",
+  GUILD_PHONE_REQUIRED: "guild_phone_required",
+  MFA_PHONE_UPDATE: "mfa_phone_update",
+  CONTACT_SYNC: "contact_sync",
+};

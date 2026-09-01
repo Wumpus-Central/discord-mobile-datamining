@@ -8,7 +8,11 @@ initializeDefault;
 class CommonTriggerPointManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    applyArgumentsResult.actions = { VOICE_CHANNEL_SELECT: applyArgumentsResult.handleVoiceChannelSelect, CALL_CREATE: applyArgumentsResult.handleCallCreate, USER_SETTINGS_MODAL_OPEN: applyArgumentsResult.handleUserSettingsModalOpen };
+    applyArgumentsResult.actions = {
+      VOICE_CHANNEL_SELECT: applyArgumentsResult.handleVoiceChannelSelect,
+      CALL_CREATE: applyArgumentsResult.handleCallCreate,
+      USER_SETTINGS_MODAL_OPEN: applyArgumentsResult.handleUserSettingsModalOpen,
+    };
     return applyArgumentsResult;
   }
 }

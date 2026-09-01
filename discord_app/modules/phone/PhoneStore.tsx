@@ -18,8 +18,7 @@ const getDefaultCountryCode = DEFAULT_COUNTRY_CODE_NAME.getDefaultCountryCode;
 const getCountryCodeByAlpha2 = DEFAULT_COUNTRY_CODE_NAME.getCountryCodeByAlpha2;
 let closure_3 = getDefaultCountryCode();
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class PhoneStore extends DeviceSettingsStore {
-}
+class PhoneStore extends DeviceSettingsStore {}
 const prototype = PhoneStore.prototype;
 prototype["initialize"] = function initialize(selectedCountryCode) {
   if (null != selectedCountryCode) {
@@ -39,7 +38,7 @@ const phoneStore = new PhoneStore(dispatcherDefault, {
     countryCode = countryCode.countryCode;
   },
   CONNECTION_OPEN: handleSetLocationMetadata,
-  SET_LOCATION_METADATA: handleSetLocationMetadata
+  SET_LOCATION_METADATA: handleSetLocationMetadata,
 });
 const result = set.fileFinishedImporting("modules/phone/PhoneStore.tsx");
 

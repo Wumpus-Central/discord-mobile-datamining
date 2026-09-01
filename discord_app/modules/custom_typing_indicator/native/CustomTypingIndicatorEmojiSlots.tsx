@@ -40,17 +40,30 @@ function PlaceholderEmojiGlyph(pressed) {
     let obj = { opacity: null, transform: null };
     const obj2 = pressed(closure_1_2[30]);
     const obj3 = pressed(closure_1_2[29]);
-    obj[0] = obj2.withSpring(pressed(closure_1_2[29]).interpolate(value, [0, 1], [0.4, 1]), pressed(closure_1_2[31]).ON_PRESS_SPRING);
+    obj[0] = obj2.withSpring(
+      pressed(closure_1_2[29]).interpolate(value, [0, 1], [0.4, 1]),
+      pressed(closure_1_2[31]).ON_PRESS_SPRING,
+    );
     obj = { scale: null };
     const interpolateResult = pressed(closure_1_2[29]).interpolate(value, [0, 1], [0.4, 1]);
     const obj5 = pressed(closure_1_2[30]);
     const obj6 = pressed(closure_1_2[29]);
-    obj[0] = obj5.withSpring(pressed(closure_1_2[29]).interpolate(value, [0, 1], [1, 1.14]), pressed(closure_1_2[31]).ON_PRESS_SPRING);
+    obj[0] = obj5.withSpring(
+      pressed(closure_1_2[29]).interpolate(value, [0, 1], [1, 1.14]),
+      pressed(closure_1_2[31]).ON_PRESS_SPRING,
+    );
     items = [obj];
     obj[1] = items;
     return obj;
   };
-  obj = { pressed, withSpring: pressed(4927).withSpring, interpolate: pressed(4217).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4, ON_PRESS_SPRING: pressed(4931).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14 };
+  obj = {
+    pressed,
+    withSpring: pressed(4927).withSpring,
+    interpolate: pressed(4217).interpolate,
+    PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4,
+    ON_PRESS_SPRING: pressed(4931).ON_PRESS_SPRING,
+    PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14,
+  };
   fn.__closure = obj;
   fn.__workletHash = 16574219123934;
   fn.__initData = closure_11;
@@ -88,7 +101,7 @@ function CustomTypingIndicatorEmojiSlot(index) {
         }
       },
       pickerIntention: closure_1_5.TYPING_INDICATOR,
-      bypassPremiumEmojiEntitlement: true
+      bypassPremiumEmojiEntitlement: true,
     };
     const result = obj.openEmojiPickerActionSheet(obj);
   }, items);
@@ -109,7 +122,15 @@ function CustomTypingIndicatorEmojiSlot(index) {
     obj[1] = tmp2(tmp3[35]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT;
     formatToPlainStringResult = intl.formatToPlainString(onChange(tmp3[34]).O0Pe85, obj);
   }
-  obj1 = { style: callback2().slot, onPress: callback, onPressIn: callback1, onPressOut: callback2, accessibilityLabel: formatToPlainStringResult, radius: 16, children: null };
+  obj1 = {
+    style: callback2().slot,
+    onPress: callback,
+    onPressIn: callback1,
+    onPressOut: callback2,
+    accessibilityLabel: formatToPlainStringResult,
+    radius: 16,
+    children: null,
+  };
   if (null != emoji) {
     const obj2 = { emoji: null };
     obj2[0] = emoji;
@@ -121,18 +142,60 @@ function CustomTypingIndicatorEmojiSlot(index) {
     tmp11Result = tmp11(PlaceholderEmojiGlyph, obj3);
   }
   obj1[6] = tmp11Result;
-  return jsx(index(sharedValue[36]).Card, { style: callback2().slot, onPress: callback, onPressIn: callback1, onPressOut: callback2, accessibilityLabel: formatToPlainStringResult, radius: 16, children: null });
+  return jsx(index(sharedValue[36]).Card, {
+    style: callback2().slot,
+    onPress: callback,
+    onPressIn: callback1,
+    onPressOut: callback2,
+    accessibilityLabel: formatToPlainStringResult,
+    radius: 16,
+    children: null,
+  });
 }
 let c7 = 28;
-let items = [require("EmojiAngryFaceWithHornsIcon").EmojiAngryFaceWithHornsIcon, require("EmojiColdFaceIcon").EmojiColdFaceIcon, require("EmojiCowboyHatFaceIcon").EmojiCowboyHatFaceIcon, require("EmojiCryingFaceIcon").EmojiCryingFaceIcon, require("EmojiDisguisedFaceIcon").EmojiDisguisedFaceIcon, require("EmojiFaceVomitingIcon").EmojiFaceVomitingIcon, require("EmojiFaceWithMonocleIcon").EmojiFaceWithMonocleIcon, require("EmojiFaceWithSpiralEyesIcon").EmojiFaceWithSpiralEyesIcon, require("EmojiMeltingFaceIcon").EmojiMeltingFaceIcon, require("EmojiMoneyMouthFaceIcon").EmojiMoneyMouthFaceIcon, require("EmojiNerdFaceIcon").EmojiNerdFaceIcon, require("EmojiPartyingFaceIcon").EmojiPartyingFaceIcon, require("EmojiSalutingFaceIcon").EmojiSalutingFaceIcon, require("EmojiSkullIcon").EmojiSkullIcon, require("EmojiSmilingFaceWithHornsIcon").EmojiSmilingFaceWithHornsIcon, require("EmojiSmilingFaceWithSunglassesIcon").EmojiSmilingFaceWithSunglassesIcon, require("EmojiSquintingFaceWithTongueIcon").EmojiSquintingFaceWithTongueIcon, require("EmojiUpsideDownFaceIcon").EmojiUpsideDownFaceIcon, require("EmojiWoozyFaceIcon").EmojiWoozyFaceIcon, require("EmojiZanyFaceIcon").EmojiZanyFaceIcon, require("EmojiRollingOnTheFloorLaughingIcon").EmojiRollingOnTheFloorLaughingIcon, require("EmojiSmilingFaceWithHeartsIcon").EmojiSmilingFaceWithHeartsIcon];
-let closure_9 = createCacheKey.createStyles({ slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" } });
-let closure_11 = { code: "function CustomTypingIndicatorEmojiSlotsTsx1(){const{pressed,withSpring,interpolate,PLACEHOLDER_EMOJI_RESTING_OPACITY,ON_PRESS_SPRING,PLACEHOLDER_EMOJI_ACTIVE_SCALE}=this.__closure;const value=pressed.get();return{opacity:withSpring(interpolate(value,[0,1],[PLACEHOLDER_EMOJI_RESTING_OPACITY,1]),ON_PRESS_SPRING),transform:[{scale:withSpring(interpolate(value,[0,1],[1,PLACEHOLDER_EMOJI_ACTIVE_SCALE]),ON_PRESS_SPRING)}]};}" };
-let result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorEmojiSlots.tsx");
+let items = [
+  require("EmojiAngryFaceWithHornsIcon").EmojiAngryFaceWithHornsIcon,
+  require("EmojiColdFaceIcon").EmojiColdFaceIcon,
+  require("EmojiCowboyHatFaceIcon").EmojiCowboyHatFaceIcon,
+  require("EmojiCryingFaceIcon").EmojiCryingFaceIcon,
+  require("EmojiDisguisedFaceIcon").EmojiDisguisedFaceIcon,
+  require("EmojiFaceVomitingIcon").EmojiFaceVomitingIcon,
+  require("EmojiFaceWithMonocleIcon").EmojiFaceWithMonocleIcon,
+  require("EmojiFaceWithSpiralEyesIcon").EmojiFaceWithSpiralEyesIcon,
+  require("EmojiMeltingFaceIcon").EmojiMeltingFaceIcon,
+  require("EmojiMoneyMouthFaceIcon").EmojiMoneyMouthFaceIcon,
+  require("EmojiNerdFaceIcon").EmojiNerdFaceIcon,
+  require("EmojiPartyingFaceIcon").EmojiPartyingFaceIcon,
+  require("EmojiSalutingFaceIcon").EmojiSalutingFaceIcon,
+  require("EmojiSkullIcon").EmojiSkullIcon,
+  require("EmojiSmilingFaceWithHornsIcon").EmojiSmilingFaceWithHornsIcon,
+  require("EmojiSmilingFaceWithSunglassesIcon").EmojiSmilingFaceWithSunglassesIcon,
+  require("EmojiSquintingFaceWithTongueIcon").EmojiSquintingFaceWithTongueIcon,
+  require("EmojiUpsideDownFaceIcon").EmojiUpsideDownFaceIcon,
+  require("EmojiWoozyFaceIcon").EmojiWoozyFaceIcon,
+  require("EmojiZanyFaceIcon").EmojiZanyFaceIcon,
+  require("EmojiRollingOnTheFloorLaughingIcon").EmojiRollingOnTheFloorLaughingIcon,
+  require("EmojiSmilingFaceWithHeartsIcon").EmojiSmilingFaceWithHeartsIcon,
+];
+let closure_9 = createCacheKey.createStyles({
+  slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" },
+});
+let closure_11 = {
+  code: "function CustomTypingIndicatorEmojiSlotsTsx1(){const{pressed,withSpring,interpolate,PLACEHOLDER_EMOJI_RESTING_OPACITY,ON_PRESS_SPRING,PLACEHOLDER_EMOJI_ACTIVE_SCALE}=this.__closure;const value=pressed.get();return{opacity:withSpring(interpolate(value,[0,1],[PLACEHOLDER_EMOJI_RESTING_OPACITY,1]),ON_PRESS_SPRING),transform:[{scale:withSpring(interpolate(value,[0,1],[1,PLACEHOLDER_EMOJI_ACTIVE_SCALE]),ON_PRESS_SPRING)}]};}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/custom_typing_indicator/native/CustomTypingIndicatorEmojiSlots.tsx",
+);
 
 export default function CustomTypingIndicatorEmojiSlots(arg0) {
   ({ emojis: require, onChange: importDefault } = arg0);
   dependencyMap = undefined;
-  dependencyMap = callback(React.useState(() => dependencyMap(12).sampleSize(closure_8, dependencyMap(1942).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)), 1)[0];
+  dependencyMap = callback(
+    React.useState(() =>
+      dependencyMap(12).sampleSize(closure_8, dependencyMap(1942).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT),
+    ),
+    1,
+  )[0];
   let obj = { direction: "horizontal", spacing: 8, children: null };
   obj = { length: CUSTOM_TYPING_INDICATOR_EMOJI_COUNT.CUSTOM_TYPING_INDICATOR_EMOJI_COUNT };
   obj[2] = Array.from(obj, (arg0, index) => {
@@ -147,4 +210,4 @@ export default function CustomTypingIndicatorEmojiSlots(arg0) {
     return closure_1_6(closure_1_13, obj, index);
   });
   return jsx(Stack.Stack, { length: CUSTOM_TYPING_INDICATOR_EMOJI_COUNT.CUSTOM_TYPING_INDICATOR_EMOJI_COUNT });
-};
+}

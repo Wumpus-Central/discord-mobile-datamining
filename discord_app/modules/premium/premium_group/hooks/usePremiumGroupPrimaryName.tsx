@@ -19,7 +19,10 @@ export default function usePremiumGroupPrimaryName() {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  const premiumGroupMembership = usePremiumGroupMembershipDefault({ useCachedData: flag, fetch: flag2 }).premiumGroupMembership;
+  const premiumGroupMembership = usePremiumGroupMembershipDefault({
+    useCachedData: flag,
+    fetch: flag2,
+  }).premiumGroupMembership;
   let subscriptionId;
   if (premiumGroupMembership != null) {
     subscriptionId = premiumGroupMembership.subscriptionId;
@@ -27,7 +30,10 @@ export default function usePremiumGroupPrimaryName() {
   if (subscriptionId == null) {
     subscriptionId = null;
   }
-  const premiumGroupMembers = usePremiumGroupMembersDefault(subscriptionId, { useCachedData: flag, fetch: flag2 }).premiumGroupMembers;
+  const premiumGroupMembers = usePremiumGroupMembersDefault(subscriptionId, {
+    useCachedData: flag,
+    fetch: flag2,
+  }).premiumGroupMembers;
   let primary;
   if (premiumGroupMembers != null) {
     primary = premiumGroupMembers.primary;
@@ -42,4 +48,4 @@ export default function usePremiumGroupPrimaryName() {
     const obj2 = nameFromUser;
   }
   return nameFromUserResult;
-};
+}

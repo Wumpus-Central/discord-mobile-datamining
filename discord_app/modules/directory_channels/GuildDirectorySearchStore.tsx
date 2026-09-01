@@ -7,8 +7,7 @@ let closure_2 = [];
 let closure_3 = {};
 let closure_4 = {};
 const Store = initializeDefault.Store;
-class GuildDirectorySearchStore extends Store {
-}
+class GuildDirectorySearchStore extends Store {}
 const prototype = GuildDirectorySearchStore.prototype;
 prototype["getSearchState"] = function getSearchState(arg0) {
   let obj = dependencyMap[arg0];
@@ -97,7 +96,7 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(dispatcherDefaul
         tmp4[channelId] = obj;
       }
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/directory_channels/GuildDirectorySearchStore.tsx");
 

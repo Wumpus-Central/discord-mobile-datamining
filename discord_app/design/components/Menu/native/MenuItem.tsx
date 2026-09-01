@@ -5,7 +5,10 @@ import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;
-let closure_5 = createCacheKey.createStyles({ formIcon: { width: 20, height: 20 }, formLabel: { fontSize: 14, fontWeight: "500" } });
+let closure_5 = createCacheKey.createStyles({
+  formIcon: { width: 20, height: 20 },
+  formLabel: { fontSize: 14, fontWeight: "500" },
+});
 const forwardRefResult = importAllResult.forwardRef((action, ref) => {
   ({ label, IconComponent, iconSource, showIconFirst } = action);
   if (showIconFirst === undefined) {
@@ -30,7 +33,16 @@ const forwardRefResult = importAllResult.forwardRef((action, ref) => {
       tmp3 = jsx(menuClose(4930), { source: null, style: null });
     }
   }
-  obj = { ref, style, accessibilityRole: "menuitem", disabled, leading: null, trailing: null, label: null, onPress: null };
+  obj = {
+    ref,
+    style,
+    accessibilityRole: "menuitem",
+    disabled,
+    leading: null,
+    trailing: null,
+    label: null,
+    onPress: null,
+  };
   let tmp10 = null;
   if (null != iconSource) {
     tmp10 = null;
@@ -59,7 +71,16 @@ const forwardRefResult = importAllResult.forwardRef((action, ref) => {
     action();
     menuClose();
   };
-  return jsx(menuClose(5592), { ref, style, accessibilityRole: "menuitem", disabled, leading: null, trailing: null, label: null, onPress: null });
+  return jsx(menuClose(5592), {
+    ref,
+    style,
+    accessibilityRole: "menuitem",
+    disabled,
+    leading: null,
+    trailing: null,
+    label: null,
+    onPress: null,
+  });
 });
 const result = require("set").fileFinishedImporting("design/components/Menu/native/MenuItem.tsx");
 

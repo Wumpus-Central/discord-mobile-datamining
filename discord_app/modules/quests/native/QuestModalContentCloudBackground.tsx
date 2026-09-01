@@ -77,7 +77,7 @@ export default function QuestModalContentCloudBackground(align) {
   } else {
     obj1 = { style: null };
     obj1[0] = tmp.solidBackground;
-    const items1 = [tmp6(tmp5, obj1), ];
+    const items1 = [tmp6(tmp5, obj1)];
     const obj2 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj2[0] = items2;
@@ -87,4 +87,4 @@ export default function QuestModalContentCloudBackground(align) {
     obj[1] = items1;
     return tmp4(tmp5, obj);
   }
-};
+}

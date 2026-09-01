@@ -14,8 +14,7 @@ let closure_6 = [];
 let closure_7 = {};
 let closure_8 = {};
 const Store = initializeDefault.Store;
-class LurkingStore extends Store {
-}
+class LurkingStore extends Store {}
 const prototype = LurkingStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_1, closure_2, closure_3);
@@ -212,7 +211,7 @@ const lurkingStore = new LurkingStore(dispatcherDefault, {
       }
     }
     return flag;
-  }
+  },
 });
 const result = set2.fileFinishedImporting("modules/lurker_mode/LurkingStore.tsx");
 

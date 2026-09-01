@@ -12,8 +12,12 @@ set = {};
 let merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
 set[1] = set;
 let closure_7 = createCacheKey.createStyles(set);
-let closure_8 = { code: "function MediaKeyboardAccessoriesContainerTsx1(){const{animateOnMount,initialLayout,animatedIndex,initialPosition,animatedPosition,interpolate,IS_ANDROID}=this.__closure;const animatedMountDisabledAndNotInitialLayout=!animateOnMount&&!initialLayout.get();const animatedSheetIndexOrDefault=animatedMountDisabledAndNotInitialLayout?0:Math.min(animatedIndex.get(),0);const animatedSheetPositionOrDefault=animatedMountDisabledAndNotInitialLayout?initialPosition:animatedPosition.get();const transform=[{translateY:interpolate(animatedSheetIndexOrDefault,[-1,0],[100,0])}];if(IS_ANDROID){return{marginTop:animatedSheetPositionOrDefault,transform:transform};}return{top:animatedSheetPositionOrDefault,transform:transform};}" };
-let result = set.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardAccessoriesContainer.tsx");
+let closure_8 = {
+  code: "function MediaKeyboardAccessoriesContainerTsx1(){const{animateOnMount,initialLayout,animatedIndex,initialPosition,animatedPosition,interpolate,IS_ANDROID}=this.__closure;const animatedMountDisabledAndNotInitialLayout=!animateOnMount&&!initialLayout.get();const animatedSheetIndexOrDefault=animatedMountDisabledAndNotInitialLayout?0:Math.min(animatedIndex.get(),0);const animatedSheetPositionOrDefault=animatedMountDisabledAndNotInitialLayout?initialPosition:animatedPosition.get();const transform=[{translateY:interpolate(animatedSheetIndexOrDefault,[-1,0],[100,0])}];if(IS_ANDROID){return{marginTop:animatedSheetPositionOrDefault,transform:transform};}return{top:animatedSheetPositionOrDefault,transform:transform};}",
+};
+let result = set.fileFinishedImporting(
+  "modules/media_keyboard/native/components/MediaKeyboardAccessoriesContainer.tsx",
+);
 
 export default function MediaKeyboardAccessoriesContainer(children) {
   const animatedIndex = children.animatedIndex;
@@ -70,7 +74,15 @@ export default function MediaKeyboardAccessoriesContainer(children) {
     }
     return obj;
   };
-  obj = { animateOnMount, initialLayout: sharedValue, animatedIndex, initialPosition, animatedPosition, interpolate: animatedIndex(animateOnMount[6]).interpolate, IS_ANDROID: sharedValue };
+  obj = {
+    animateOnMount,
+    initialLayout: sharedValue,
+    animatedIndex,
+    initialPosition,
+    animatedPosition,
+    interpolate: animatedIndex(animateOnMount[6]).interpolate,
+    IS_ANDROID: sharedValue,
+  };
   fn.__closure = obj;
   fn.__workletHash = 10575537164844;
   fn.__initData = closure_8;
@@ -83,5 +95,11 @@ export default function MediaKeyboardAccessoriesContainer(children) {
     importantForAccessibility = "no-hide-descendants";
   }
   const style = [memo, animatedStyle];
-  return closure_5(animatedPosition(animateOnMount[6]).View, { importantForAccessibility, style, onLayout, pointerEvents: "box-none", children: children.children });
-};
+  return closure_5(animatedPosition(animateOnMount[6]).View, {
+    importantForAccessibility,
+    style,
+    onLayout,
+    pointerEvents: "box-none",
+    children: children.children,
+  });
+}

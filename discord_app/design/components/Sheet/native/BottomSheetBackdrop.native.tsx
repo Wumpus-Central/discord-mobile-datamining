@@ -5,8 +5,12 @@ import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ container: { flex: 1 } });
-let closure_5 = { code: "function BottomSheetBackdropNativeTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}" };
-let closure_6 = { code: "function BottomSheetBackdropNativeTsx2(){const{interpolate,animatedIndex,disappearsOnIndex,appearsOnIndex,opacity}=this.__closure;return{opacity:interpolate(animatedIndex.get(),[-1,disappearsOnIndex,appearsOnIndex],[0,0,opacity])};}" };
+let closure_5 = {
+  code: "function BottomSheetBackdropNativeTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}",
+};
+let closure_6 = {
+  code: "function BottomSheetBackdropNativeTsx2(){const{interpolate,animatedIndex,disappearsOnIndex,appearsOnIndex,opacity}=this.__closure;return{opacity:interpolate(animatedIndex.get(),[-1,disappearsOnIndex,appearsOnIndex],[0,0,opacity])};}",
+};
 const memoResult = importAllResult.memo((animatedIndex) => {
   animatedIndex = animatedIndex.animatedIndex;
   let num = animatedIndex.opacity;
@@ -80,7 +84,13 @@ const memoResult = importAllResult.memo((animatedIndex) => {
       return obj;
     }
   }
-  obj = { interpolate: animatedIndex(num[5]).interpolate, animatedIndex, disappearsOnIndex: num3, appearsOnIndex: num2, opacity: num };
+  obj = {
+    interpolate: animatedIndex(num[5]).interpolate,
+    animatedIndex,
+    disappearsOnIndex: num3,
+    appearsOnIndex: num2,
+    opacity: num,
+  };
   S.__closure = obj;
   S.__workletHash = 1140766381376;
   S.__initData = style;
@@ -90,7 +100,12 @@ const memoResult = importAllResult.memo((animatedIndex) => {
     const items = [container.container, style, animatedStyle];
     return items;
   }, items1);
-  const tmp10 = num3(animatedIndex(num[6]).Backdrop, { blur: "none", style: memo, onDismiss: callback, "aria-hidden": true });
+  const tmp10 = num3(animatedIndex(num[6]).Backdrop, {
+    blur: "none",
+    style: memo,
+    onDismiss: callback,
+    "aria-hidden": true,
+  });
   let tmp9Result = tmp10;
   if ("none" !== str) {
     obj1 = { gesture: null, children: null };

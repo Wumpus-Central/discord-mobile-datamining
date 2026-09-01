@@ -8,7 +8,7 @@ import { Endpoints } from "../../Constants.tsx";
 const require = arg1;
 function _fetchVideoFilterAssets() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -106,7 +106,7 @@ function _uploadVideoFilterAsset() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -208,7 +208,7 @@ function _deleteVideoFilterAsset() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -304,12 +304,16 @@ function _saveLastUsedBackgroundOption() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       dependencyMap = tmp2;
       const PreloadedUserSettingsActionCreators = lib(closure_1_2[9]).PreloadedUserSettingsActionCreators;
-      yield PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", (arg0) => {
-        arg0.videoBackgroundFilterDesktop = callback(tmp2[8]).getVideoBackgroundProtoFromOption(callback);
-      }, lib(closure_1_2[9]).UserSettingsDelay.FREQUENT_USER_ACTION);
+      yield PreloadedUserSettingsActionCreators.updateAsync(
+        "voiceAndVideo",
+        (arg0) => {
+          arg0.videoBackgroundFilterDesktop = callback(tmp2[8]).getVideoBackgroundProtoFromOption(callback);
+        },
+        lib(closure_1_2[9]).UserSettingsDelay.FREQUENT_USER_ACTION,
+      );
       if (1 === tmp5) {
         if (arg0 === 1) {
           c4 = 3;

@@ -14,20 +14,20 @@ class AnnouncementChannelLurkerBar {
     obj = { style: tmp.text, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null };
     intl = require("getSystemLocale").intl;
     obj[3] = intl.string(require("getSystemLocale").t.Hl0Mqh);
-    items = [, ];
+    items = [,];
     items[0] = jsx(require("Text").Text, obj);
     obj1 = {
       onPress() {
-            const guildId = channel.getGuildId();
-            if (null != guildId) {
-              const result = channel(closure_1_1[8]).showChannelFollowingActionSheet(channel.id, guildId);
-              const obj = channel(closure_1_1[8]);
-            }
-          },
+        const guildId = channel.getGuildId();
+        if (null != guildId) {
+          const result = channel(closure_1_1[8]).showChannelFollowingActionSheet(channel.id, guildId);
+          const obj = channel(closure_1_1[8]);
+        }
+      },
       text: null,
       size: "sm",
       variant: "secondary",
-      grow: true
+      grow: true,
     };
     intl2 = require("getSystemLocale").intl;
     obj1[1] = intl2.string(require("getSystemLocale").t["4z5PU1"]);

@@ -21,7 +21,15 @@ function Row(guildId) {
   let obj = guildId(589);
   const items1 = [closure_6, closure_4];
   const items2 = [guildId];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items1, () => ({ guild: closure_1_4.getGuild(guildId), muted: closure_1_6.isMuted(guildId), notifyHighlights: closure_1_6.getNotifyHighlights(guildId) }), items2);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items1,
+    () => ({
+      guild: closure_1_4.getGuild(guildId),
+      muted: closure_1_6.isMuted(guildId),
+      notifyHighlights: closure_1_6.getNotifyHighlights(guildId),
+    }),
+    items2,
+  );
   ({ guild, muted } = stateFromStoresObject);
   let name;
   if (guild != null) {
@@ -37,16 +45,32 @@ function Row(guildId) {
     obj[0] = guild;
     obj = { label: null, icon: null, value: null, onValueChange: null, start: null, end: null };
     obj[0] = guild.name;
-    obj[1] = jsx(GuildIconSizesDefault, { label: null, icon: null, value: null, onValueChange: null, start: null, end: null });
+    obj[1] = jsx(GuildIconSizesDefault, {
+      label: null,
+      icon: null,
+      value: null,
+      onValueChange: null,
+      start: null,
+      end: null,
+    });
     obj[2] = !muted;
     obj[3] = callback;
     obj[4] = isStart;
     obj[5] = isEnd;
-    return jsx(tmp2(5993).TableSwitchRow, { label: null, icon: null, value: null, onValueChange: null, start: null, end: null });
+    return jsx(tmp2(5993).TableSwitchRow, {
+      label: null,
+      icon: null,
+      value: null,
+      onValueChange: null,
+      start: null,
+      end: null,
+    });
   }
   tmp2 = guildId;
 }
-let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsHighlightNotifications.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/notifications/native/UserSettingsHighlightNotifications.tsx",
+);
 
 export default function UserSettingsHighlightNotifications() {
   let obj = stateFromStoresArray(589);
@@ -60,4 +84,4 @@ export default function UserSettingsHighlightNotifications() {
     tmp4 = jsx(stateFromStoresArray(8363).Form, { children: null });
   }
   return tmp4;
-};
+}

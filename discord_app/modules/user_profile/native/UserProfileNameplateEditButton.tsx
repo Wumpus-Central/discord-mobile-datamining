@@ -11,7 +11,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
 createCacheKey = { previewContainer: null, noneIcon: null };
-createCacheKey = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
+createCacheKey = {
+  height: COLLECTIBLES_PREVIEW_SIZE,
+  width: COLLECTIBLES_PREVIEW_SIZE,
+  borderRadius: ThemesDefault.radii.xs,
+  overflow: "hidden",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
@@ -78,14 +83,30 @@ export default function UserProfileNameplateEditButton(user) {
   }
   const items1 = [user, nameplate, guildId];
   if (isFetching) {
-    obj = { label: null, buttonText: null, onPress: null, leading: null, loading: true, disabled: true, hideArrow: true };
+    obj = {
+      label: null,
+      buttonText: null,
+      onPress: null,
+      leading: null,
+      loading: true,
+      disabled: true,
+      hideArrow: true,
+    };
     const intl4 = tmp3(1236).intl;
     obj[0] = intl4.string(tmp3(1236).t.x5CoXR);
     const intl5 = tmp3(1236).intl;
     obj[1] = intl5.string(tmp3(1236).t.MKDeyL);
     obj[2] = NOOP;
     obj[3] = <closure_4 animating size="large" />;
-    return jsx(tmp3(14272).UserProfileEditFormButton, { label: null, buttonText: null, onPress: null, leading: null, loading: true, disabled: true, hideArrow: true });
+    return jsx(tmp3(14272).UserProfileEditFormButton, {
+      label: null,
+      buttonText: null,
+      onPress: null,
+      leading: null,
+      loading: true,
+      disabled: true,
+      hideArrow: true,
+    });
   } else {
     let name;
     if (nameplateProduct != null) {
@@ -132,4 +153,4 @@ export default function UserProfileNameplateEditButton(user) {
     obj6[1] = tmp.noneIcon;
     tmp15Result = tmp15(tmp3(1297).Icon, obj6);
   }
-};
+}

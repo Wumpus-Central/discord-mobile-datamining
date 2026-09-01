@@ -120,9 +120,7 @@ obj = {
   lookupKey(arg0) {
     return arg0;
   },
-  afterCompute() {
-
-  }
+  afterCompute() {},
 };
 let closure_21 = new DEFAULT_FRECENCYDefault(obj);
 let closure_22 = [];
@@ -138,8 +136,7 @@ let closure_25 = applyDefault.debounce((volume) => {
   SoundboardSettings.updateSetting(obj);
 }, 1000);
 const Store = initializeDefault.Store;
-class SoundboardStore extends Store {
-}
+class SoundboardStore extends Store {}
 const prototype = SoundboardStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_6, settings, closure_5);
@@ -153,7 +150,11 @@ prototype["initialize"] = function initialize() {
   closure_24 = 0 === volume;
 };
 prototype["getOverlaySerializedState"] = function getOverlaySerializedState() {
-  return { soundboardSounds: Object.fromEntries(map), favoritedSoundIds: Array.from(set1), localSoundboardMutes: Array.from(set) };
+  return {
+    soundboardSounds: Object.fromEntries(map),
+    favoritedSoundIds: Array.from(set1),
+    localSoundboardMutes: Array.from(set),
+  };
 };
 prototype["getSounds"] = function getSounds() {
   return map;
@@ -172,7 +173,9 @@ prototype["getSound"] = function getSound(arg0, arg1) {
 prototype["getSoundById"] = function getSoundById(soundId) {
   closure_0 = soundId;
   const arr = Array.from(map.values());
-  return Array.from(map.values()).flat().find((soundId) => soundId.soundId === closure_0);
+  return Array.from(map.values())
+    .flat()
+    .find((soundId) => soundId.soundId === closure_0);
 };
 prototype["isFetchingSounds"] = function isFetchingSounds() {
   return closure_17 === obj.FETCHING;
@@ -239,7 +242,7 @@ Object.defineProperty(prototype, "playedSoundFrecencyWithoutFetchingLatest", {
   get: function playedSoundFrecencyWithoutFetchingLatest() {
     return closure_21;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isLocalSoundboardMuted"] = function isLocalSoundboardMuted(id) {
   return set.has(id);
@@ -393,14 +396,17 @@ obj = {
         if (playedSounds == null) {
           playedSounds = {};
         }
-        closure_21.overwriteHistory(applyDefault.mapValues(playedSounds, (recentUses) => {
-          obj = {};
-          const merged = Object.assign(recentUses);
-          recentUses = recentUses.recentUses;
-          const mapped = recentUses.map(Number);
-          obj.recentUses = mapped.filter((arg0) => arg0 > 0);
-          return obj;
-        }), closure_22);
+        closure_21.overwriteHistory(
+          applyDefault.mapValues(playedSounds, (recentUses) => {
+            obj = {};
+            const merged = Object.assign(recentUses);
+            recentUses = recentUses.recentUses;
+            const mapped = recentUses.map(Number);
+            obj.recentUses = mapped.filter((arg0) => arg0 > 0);
+            return obj;
+          }),
+          closure_22,
+        );
         obj = applyDefault;
       }
     } else if (tmp2.PRELOADED_USER_SETTINGS === type) {
@@ -453,7 +459,7 @@ obj = {
     const obj2 = hooksDefault();
     obj[1] = hooksDefault().add(1, "days").valueOf();
     const result = map1.set(topSoundsMetadata.guildId, obj);
-  }
+  },
 };
 const soundboardStore = new SoundboardStore(dispatcherDefault, obj);
 let result = set.fileFinishedImporting("modules/soundboard/SoundboardStore.tsx");

@@ -33,7 +33,10 @@ function RequestToSpeakRow(channel) {
   obj[3] = function onValueChange(arg0) {
     return _undefined(arg0);
   };
-  return closure_9(require("../../../../design/components/TableRow/native/TableSwitchRow.native.tsx").TableSwitchRow, obj);
+  return closure_9(
+    require("../../../../design/components/TableRow/native/TableSwitchRow.native.tsx").TableSwitchRow,
+    obj,
+  );
 }
 function ManageSelfSpeakerRow(channel) {
   channel = channel.channel;
@@ -47,7 +50,8 @@ function ManageSelfSpeakerRow(channel) {
   }
   const tmp4 = importDefault;
   const tmp5 = useAudienceRequestToSpeakStateDefault;
-  const tmp8 = useAudienceRequestToSpeakStateDefault(stateFromStores, id) === channel(4668).RequestToSpeakStates.ON_STAGE;
+  const tmp8 =
+    useAudienceRequestToSpeakStateDefault(stateFromStores, id) === channel(4668).RequestToSpeakStates.ON_STAGE;
   importDefault = tmp8;
   const intl = tmp(1236).intl;
   const string = intl.string;
@@ -81,7 +85,7 @@ function ManageSelfSpeakerRow(channel) {
     },
     icon: callback2(MicrophoneArrowRightIcon, {}),
     label: stringResult,
-    trailing: null
+    trailing: null,
   };
   obj = { source: registerAssetDefault };
   obj[3] = callback2(channel(1297).Icon, obj);
@@ -92,7 +96,9 @@ createCacheKey = { container: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/stage_channels/native/components/RequestToSpeakActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/components/RequestToSpeakActionSheet.tsx",
+);
 
 export default function RequestToSpeakActionSheet(channelId) {
   channelId = channelId.channelId;
@@ -111,7 +117,10 @@ export default function RequestToSpeakActionSheet(channelId) {
   const items1 = [closure_7];
   const stateFromStores = obj1.useStateFromStores(items1, () => closure_1_7.getChannel(channelId));
   let obj2 = channelId(5374);
-  const stageParticipantsCount = obj2.useStageParticipantsCount(channelId, channelId(5368).StageChannelParticipantNamedIndex.ALL_REQUESTED_TO_SPEAK);
+  const stageParticipantsCount = obj2.useStageParticipantsCount(
+    channelId,
+    channelId(5368).StageChannelParticipantNamedIndex.ALL_REQUESTED_TO_SPEAK,
+  );
   const tmp10 = first1(React.useState(0), 2);
   first = tmp10[0];
   dependencyMap = tmp10[1];
@@ -151,12 +160,12 @@ export default function RequestToSpeakActionSheet(channelId) {
     const obj4 = { hasIcons: true, children: null };
     const obj5 = { channel: null };
     obj5[0] = stateFromStores;
-    const items2 = [callback2(RequestToSpeakRow, obj5), ];
+    const items2 = [callback2(RequestToSpeakRow, obj5)];
     const obj6 = { channel: null };
     obj6[0] = stateFromStores;
     items2[1] = callback2(ManageSelfSpeakerRow, obj6);
     obj4[1] = items2;
-    const items3 = [callback3(tmp(5992).TableRowGroup, obj4), ];
+    const items3 = [callback3(tmp(5992).TableRowGroup, obj4)];
     const obj7 = { style: null, children: null };
     const obj8 = { paddingHorizontal: null };
     obj8[0] = token;
@@ -170,7 +179,7 @@ export default function RequestToSpeakActionSheet(channelId) {
     obj7[1] = callback2(tmp(4474).Text, obj9);
     items3[1] = callback2(View, obj7);
     obj3[2] = items3;
-    const items4 = [callback3(tmp(4926).Stack, obj3), ];
+    const items4 = [callback3(tmp(4926).Stack, obj3)];
     const obj11 = { channel: null, height: null };
     obj11[0] = stateFromStores;
     const _Math = Math;
@@ -184,4 +193,4 @@ export default function RequestToSpeakActionSheet(channelId) {
     const tmp3Result = tmp3(10013);
   }
   return tmp14;
-};
+}

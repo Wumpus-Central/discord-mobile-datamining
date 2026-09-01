@@ -32,7 +32,7 @@ function MediaPostGridThumbnailAndroid(arg0) {
     obj1[0] = closure_4.absoluteFill;
     obj1[1] = source;
     obj1[2] = tmp;
-    const items = [callback(preloadDefault, obj1), ];
+    const items = [callback(preloadDefault, obj1)];
     const obj2 = { shouldSpoiler: null, blurTheme: null };
     obj2[0] = shouldSpoiler;
     obj2[1] = blurTheme;
@@ -50,7 +50,7 @@ function MediaPostGridThumbnailIOS(arg0) {
     obj[0] = iosStyle;
     obj[1] = source;
     obj[2] = resizeMode;
-    const items = [callback(preloadDefault, obj), ];
+    const items = [callback(preloadDefault, obj)];
     obj = { shouldSpoiler: null, blurTheme: null };
     obj[0] = shouldSpoiler;
     obj[1] = blurTheme;
@@ -63,7 +63,7 @@ function MediaPostGridThumbnailIOS(arg0) {
     const items1 = [closure_4.absoluteFill, { opacity: 0.2 }];
     obj2[0] = items1;
     obj2[1] = backgroundImagesource;
-    const items2 = [callback(preloadDefault, obj2), , ];
+    const items2 = [callback(preloadDefault, obj2), ,];
     const obj3 = { style: null, source: null, resizeMode: null };
     obj3[0] = iosStyle;
     obj3[1] = source;
@@ -107,4 +107,4 @@ export default function MediaPostGridThumbnail(isPortrait) {
     tmp4Result = tmp4(MediaPostGridThumbnailIOS, obj);
   }
   return tmp4Result;
-};
+}

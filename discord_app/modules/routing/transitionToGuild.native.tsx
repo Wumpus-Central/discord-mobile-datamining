@@ -11,7 +11,12 @@ let result = set.fileFinishedImporting("modules/routing/transitionToGuild.native
 export const transitionToGuild = function transitionToGuild(guildId) {
   let obj = getChannelIdForGuildTransition;
   const channelIdForGuildTransition = obj.getChannelIdForGuildTransition(guildId);
-  const result = LayoutAnimation.DeprecatedLayoutAnimation({ duration: 0, create: "r", update: "WireType", delete: "style" });
+  const result = LayoutAnimation.DeprecatedLayoutAnimation({
+    duration: 0,
+    create: "r",
+    update: "WireType",
+    delete: "style",
+  });
   const obj2 = LayoutAnimation;
   obj = { navigationReplace: true };
   const obj3 = transitionTo;

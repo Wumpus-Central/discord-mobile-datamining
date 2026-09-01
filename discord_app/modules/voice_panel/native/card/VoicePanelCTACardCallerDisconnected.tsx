@@ -11,8 +11,22 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 let c4 = importAllResult;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let obj = { container: null, avatarContainer: null, avatarWrapper: null, avatar: null, disconnectedAvatar: null, textContainer: null, text: null };
-obj = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
+let obj = {
+  container: null,
+  avatarContainer: null,
+  avatarWrapper: null,
+  avatar: null,
+  disconnectedAvatar: null,
+  textContainer: null,
+  text: null,
+};
+obj = {
+  width: "100%",
+  height: "100%",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND,
+};
 obj[0] = obj;
 obj[1] = { flexDirection: "row", gap: 24 };
 createCacheKey = { width: 80, height: 80, borderRadius: ThemesDefault.radii.round, overflow: "hidden" };
@@ -38,22 +52,29 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
   let obj = channelId(tmp2[9]);
   let items = [closure_7];
   const items1 = [channelId, id, first];
-  [tmp9, tmp10, tmp11] = callback(obj.useStateFromStoresArray(items, () => {
-    const user = closure_1_7.getUser(id);
-    const user1 = closure_1_7.getUser(first);
-    let avatarURL;
-    if (user != null) {
-      avatarURL = user.getAvatarURL(undefined, 80);
-    }
-    const items = [avatarURL, , ];
-    let avatarURL1;
-    if (user1 != null) {
-      avatarURL1 = user1.getAvatarURL(undefined, 80);
-    }
-    items[1] = avatarURL1;
-    items[2] = first(id[10]).getName(undefined, channelId, user1);
-    return items;
-  }, items1), 3);
+  [tmp9, tmp10, tmp11] = callback(
+    obj.useStateFromStoresArray(
+      items,
+      () => {
+        const user = closure_1_7.getUser(id);
+        const user1 = closure_1_7.getUser(first);
+        let avatarURL;
+        if (user != null) {
+          avatarURL = user.getAvatarURL(undefined, 80);
+        }
+        const items = [avatarURL, ,];
+        let avatarURL1;
+        if (user1 != null) {
+          avatarURL1 = user1.getAvatarURL(undefined, 80);
+        }
+        items[1] = avatarURL1;
+        items[2] = first(id[10]).getName(undefined, channelId, user1);
+        return items;
+      },
+      items1,
+    ),
+    3,
+  );
   obj = { style: tmp3.container, children: null };
   let tmpResult = tmp(tmp2[11]);
   obj = { style: tmp3.avatarContainer, children: null };
@@ -76,7 +97,7 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
     tmp16Result = tmp16(tmpResult1, obj1);
     const tmpResult2 = tmp(tmp2[12]);
   }
-  const items2 = [tmp16Result, ];
+  const items2 = [tmp16Result];
   let tmp21Result = null != tmp10;
   if (tmp21Result) {
     const obj4 = { style: null, children: null };
@@ -90,7 +111,7 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
     }
     const obj6 = { source: null, style: null };
     obj6[0] = tmp24;
-    const items3 = [, ];
+    const items3 = [,];
     ({ avatar: arr5[0], disconnectedAvatar: arr5[1] } = tmp3);
     obj6[1] = items3;
     obj4[1] = callback2(tmp(tmp2[12]), obj6);
@@ -99,28 +120,35 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
   }
   items2[1] = tmp21Result;
   obj[1] = items2;
-  const items4 = [closure_9(tmpResult, obj), ];
+  const items4 = [closure_9(tmpResult, obj)];
   const obj7 = { style: tmp3.textContainer, children: null };
-  const tmp8 = callback(obj.useStateFromStoresArray(items, () => {
-    const user = closure_1_7.getUser(id);
-    const user1 = closure_1_7.getUser(first);
-    let avatarURL;
-    if (user != null) {
-      avatarURL = user.getAvatarURL(undefined, 80);
-    }
-    const items = [avatarURL, , ];
-    let avatarURL1;
-    if (user1 != null) {
-      avatarURL1 = user1.getAvatarURL(undefined, 80);
-    }
-    items[1] = avatarURL1;
-    items[2] = first(id[10]).getName(undefined, channelId, user1);
-    return items;
-  }, items1), 3);
+  const tmp8 = callback(
+    obj.useStateFromStoresArray(
+      items,
+      () => {
+        const user = closure_1_7.getUser(id);
+        const user1 = closure_1_7.getUser(first);
+        let avatarURL;
+        if (user != null) {
+          avatarURL = user.getAvatarURL(undefined, 80);
+        }
+        const items = [avatarURL, ,];
+        let avatarURL1;
+        if (user1 != null) {
+          avatarURL1 = user1.getAvatarURL(undefined, 80);
+        }
+        items[1] = avatarURL1;
+        items[2] = first(id[10]).getName(undefined, channelId, user1);
+        return items;
+      },
+      items1,
+    ),
+    3,
+  );
   const obj8 = { style: tmp3.text, variant: "heading-sm/semibold", color: "text-overlay-light", children: null };
   const intl = tmp7(tmp2[14]).intl;
   obj8[3] = intl.string(channelId(id[14]).t.WkAgPU);
-  const items5 = [callback2(channelId(id[13]).Text, obj8), ];
+  const items5 = [callback2(channelId(id[13]).Text, obj8)];
   let tmp26Result = null != tmp11;
   if (tmp26Result) {
     const obj9 = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: null };
@@ -137,6 +165,8 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
   obj[1] = items4;
   return closure_9(tmpResult, obj);
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCTACardCallerDisconnected.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/card/VoicePanelCTACardCallerDisconnected.tsx",
+);
 
 export default memoResult;

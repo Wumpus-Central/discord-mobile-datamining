@@ -88,12 +88,17 @@ let c5 = null;
 initializeDefault;
 let prototype = function InappropriateConversationsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.actions = { VIBING_WUMPUS_PLAY_MUSIC: fadeIn, VIBING_WUMPUS_STOP_MUSIC: handleStopMusic, VIBING_WUMPUS_PAUSE_MUSIC: handlePauseMusic };
+  applyArgumentsResult.actions = {
+    VIBING_WUMPUS_PLAY_MUSIC: fadeIn,
+    VIBING_WUMPUS_STOP_MUSIC: handleStopMusic,
+    VIBING_WUMPUS_PAUSE_MUSIC: handlePauseMusic,
+  };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
-const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsManager.tsx");
+const result = set.fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/InappropriateConversationsManager.tsx",
+);
 
 export default prototype;

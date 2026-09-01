@@ -9,7 +9,13 @@ import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
 
-export default function calculatePIPState(channelId, getTargetDimensions, lastParticipantId, speakingUserId, focusedId) {
+export default function calculatePIPState(
+  channelId,
+  getTargetDimensions,
+  lastParticipantId,
+  speakingUserId,
+  focusedId,
+) {
   let tmp = null != focusedId.focusedId;
   if (tmp) {
     participant = participant.getParticipant(channelId, focusedId.focusedId);
@@ -29,7 +35,15 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
   if (tmp11) {
     set.add(focusedId.focusedId);
   }
-  let obj = { channelId, lastParticipantId, speakingUserId, focusedParticipantId: focusedId.focusedId, blockList: set, panelMode: focusedId.mode, showSecondaryPIP: focusedId.showSecondaryPIP };
+  let obj = {
+    channelId,
+    lastParticipantId,
+    speakingUserId,
+    focusedParticipantId: focusedId.focusedId,
+    blockList: set,
+    panelMode: focusedId.mode,
+    showSecondaryPIP: focusedId.showSecondaryPIP,
+  };
   const pIPParticipantToShow = PIPReferenceDimensions.computePIPParticipantToShow(obj);
   let type1;
   if (pIPParticipantToShow != null) {
@@ -67,6 +81,14 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
   if (tmp10) {
     tmp10 = tmp;
   }
-  obj = { participant: pIPParticipantToShow, dimensions: PIPReferenceDimensions.computePIPSize(SquarePIPReferenceDimensions, tmp18, tmp10, focusedId.showSecondaryPIP) };
+  obj = {
+    participant: pIPParticipantToShow,
+    dimensions: PIPReferenceDimensions.computePIPSize(
+      SquarePIPReferenceDimensions,
+      tmp18,
+      tmp10,
+      focusedId.showSecondaryPIP,
+    ),
+  };
   return obj;
-};
+}

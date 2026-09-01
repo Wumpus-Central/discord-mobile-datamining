@@ -46,12 +46,15 @@ export default function ActivitiesDebugOverlay() {
   }
   const rect = useSafeAreaInsetsDefault();
   let obj = { style: items, pointerEvents: "none", children: null };
-  items = [tmp.container, ];
+  items = [tmp.container];
   obj = { paddingTop: rect.top + 16, paddingLeft: rect.left + 16 };
   items[1] = obj;
   obj = { style: tmp.row, children: null };
-  const items1 = [callback(Text.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), callback2(Text.Text, { variant: "text-md/normal", color: str, children: str2 })];
+  const items1 = [
+    callback(Text.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }),
+    callback2(Text.Text, { variant: "text-md/normal", color: str, children: str2 }),
+  ];
   obj[1] = items1;
   obj[2] = callback(View, obj);
   return callback2(View, obj);
-};
+}

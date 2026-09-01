@@ -29,4 +29,4 @@ export default function SecureFramesExistingVerificationsHelpMessage(arg0) {
     tmp5 = <View messageType={null}>{null}</View>;
   }
   return tmp5;
-};
+}

@@ -37,7 +37,9 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
 }
 noopAll;
 ({ GuildFeatures: c4, GuildSettingsSections: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx",
+);
 
 export default function GuildSettingsRoleSubscriptionsEmpty(guildId) {
   guildId = guildId.guildId;
@@ -52,4 +54,4 @@ export default function GuildSettingsRoleSubscriptionsEmpty(guildId) {
     tmp5 = <GuildSettingsRoleSubscriptionsEmptyContent guild={null} />;
   }
   return tmp5;
-};
+}

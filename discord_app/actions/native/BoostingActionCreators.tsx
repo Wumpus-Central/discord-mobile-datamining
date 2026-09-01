@@ -13,7 +13,11 @@ export const openApplyBoostModal = function openApplyBoostModal(guildId) {
 };
 export const openTransferModal = function openTransferModal(arg0) {
   ({ guildBoostSlots, guildId, intent, onResult } = arg0);
-  _modDef4723.pushLazy(asyncRequireImpl(5378, dependencyMap.paths), { guildId, guildBoostSlots, intent, onResult }, PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY);
+  _modDef4723.pushLazy(
+    asyncRequireImpl(5378, dependencyMap.paths),
+    { guildId, guildBoostSlots, intent, onResult },
+    PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY,
+  );
 };
 export const closeApplyBoostModal = function closeApplyBoostModal() {
   _modDef4723.popWithKey(PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY);

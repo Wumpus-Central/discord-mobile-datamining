@@ -21,16 +21,19 @@ function handleChannelDelete(channel) {
     const obj2 = channel(501);
   }
   if (enabled) {
-    if (0 === found.filter((kind) => {
-      let tmp = "channel" === kind.kind;
-      if (tmp) {
-        tmp = kind.channelId === channel.id;
-      }
-      if (tmp) {
-        tmp = kind.id !== c8;
-      }
-      return tmp;
-    }).length) {
+    if (
+      0 ===
+      found.filter((kind) => {
+        let tmp = "channel" === kind.kind;
+        if (tmp) {
+          tmp = kind.channelId === channel.id;
+        }
+        if (tmp) {
+          tmp = kind.id !== c8;
+        }
+        return tmp;
+      }).length
+    ) {
       return false;
     } else {
       found = found.filter((kind) => {
@@ -76,8 +79,7 @@ let c8 = null;
 let c9 = 1;
 let c10 = false;
 const PersistedStore = initializeDefault.PersistedStore;
-class ChannelTabsStore extends PersistedStore {
-}
+class ChannelTabsStore extends PersistedStore {}
 const prototype = ChannelTabsStore.prototype;
 prototype["initialize"] = function initialize(enabled) {
   this.waitFor(closure_4, closure_5);
@@ -103,17 +105,18 @@ prototype["initialize"] = function initialize(enabled) {
     activeTabId = null;
   }
   let id = activeTabId;
-  closure_9 = tabs.reduce((arg0, id) => {
-    const NumberResult = Number(id.id);
-    let tmp2 = arg0;
-    if (Number.isFinite(NumberResult)) {
-      tmp2 = arg0;
-      if (NumberResult > arg0) {
-        tmp2 = NumberResult;
+  closure_9 =
+    tabs.reduce((arg0, id) => {
+      const NumberResult = Number(id.id);
+      let tmp2 = arg0;
+      if (Number.isFinite(NumberResult)) {
+        tmp2 = arg0;
+        if (NumberResult > arg0) {
+          tmp2 = NumberResult;
+        }
       }
-    }
-    return tmp2;
-  }, 0) + 1;
+      return tmp2;
+    }, 0) + 1;
   let someResult = null == id;
   if (!someResult) {
     someResult = tabs.some((id) => id.id === id);
@@ -208,7 +211,7 @@ let items = [
     }
     obj[2] = flag;
     return obj;
-  }
+  },
 ];
 ChannelTabsStore.migrations = items;
 const channelTabsStore = new ChannelTabsStore(dispatcherDefault, {
@@ -615,7 +618,7 @@ const channelTabsStore = new ChannelTabsStore(dispatcherDefault, {
       closure_7 = [];
       c8 = null;
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/tabs/ChannelTabsStore.tsx");
 

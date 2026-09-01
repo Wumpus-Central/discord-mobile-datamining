@@ -69,7 +69,13 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
         if (null != embedIndex) {
           num2 = embedIndex;
           tmp10Result = tmp10(8568);
-          const result = tmp10Result.extractMediaSourcesFromEmbed(tmp7, tmp12, tmp12.embeds[index], index, messageChannel.guild_id);
+          const result = tmp10Result.extractMediaSourcesFromEmbed(
+            tmp7,
+            tmp12,
+            tmp12.embeds[index],
+            index,
+            messageChannel.guild_id,
+          );
           let found2 = result;
           let tmp25 = tmp10;
           if (num2 < result.length) {
@@ -81,7 +87,16 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
         }
         if (-1 !== num2) {
           let tmp25Result = tmp25(8566);
-          obj = { disableDownload: null, initialSources: null, initialIndex: null, originViewOrOriginLayout: null, analyticsSource: "Channel", channelId: null, contextName: null, contextIcon: null };
+          obj = {
+            disableDownload: null,
+            initialSources: null,
+            initialIndex: null,
+            originViewOrOriginLayout: null,
+            analyticsSource: "Channel",
+            channelId: null,
+            contextName: null,
+            contextIcon: null,
+          };
           obj[0] = tmp44;
           obj[1] = found2;
           obj[2] = num2;
@@ -117,7 +132,13 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
             if (null != components) {
               if (0 !== components.length) {
                 const tmp10Result2 = tmp10(8568);
-                const result1 = tmp10Result2.extractMediaSourcesFromComponent(tmp7, components, messageChannel.guild_id, tmp10(4745).asComponentId(componentId), componentMediaIndex);
+                const result1 = tmp10Result2.extractMediaSourcesFromComponent(
+                  tmp7,
+                  components,
+                  messageChannel.guild_id,
+                  tmp10(4745).asComponentId(componentId),
+                  componentMediaIndex,
+                );
                 if (null != result1) {
                   ({ sources, initialIndex: num2 } = result1);
                   tmp10(8568).setMediaSourcePortal(sources[num2], portal);

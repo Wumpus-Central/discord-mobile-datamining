@@ -12,8 +12,12 @@ let obj = { background: null };
 obj = { backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_HOVER };
 obj[0] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
-let closure_8 = { code: "function SettingListItemHighlightTsx1(){const{withSequence,withDelay,withTiming,Easing,runOnJS,clearSelectedSearchResult}=this.__closure;return{opacity:withSequence(withDelay(500,withTiming(0,{duration:0})),withTiming(0.2,{duration:300,easing:Easing.ease}),withTiming(0,{duration:300,easing:Easing.ease},'respect-motion-settings',function(finished){if(finished){runOnJS(clearSelectedSearchResult);}}))};}" };
-let closure_9 = { code: "function SettingListItemHighlightTsx2(finished){const{runOnJS,clearSelectedSearchResult}=this.__closure;if(finished){runOnJS(clearSelectedSearchResult);}}" };
+let closure_8 = {
+  code: "function SettingListItemHighlightTsx1(){const{withSequence,withDelay,withTiming,Easing,runOnJS,clearSelectedSearchResult}=this.__closure;return{opacity:withSequence(withDelay(500,withTiming(0,{duration:0})),withTiming(0.2,{duration:300,easing:Easing.ease}),withTiming(0,{duration:300,easing:Easing.ease},'respect-motion-settings',function(finished){if(finished){runOnJS(clearSelectedSearchResult);}}))};}",
+};
+let closure_9 = {
+  code: "function SettingListItemHighlightTsx2(finished){const{runOnJS,clearSelectedSearchResult}=this.__closure;if(finished){runOnJS(clearSelectedSearchResult);}}",
+};
 const memoResult = importAllResult.memo((start) => {
   start = start.start;
   const end = start.end;
@@ -24,7 +28,12 @@ const memoResult = importAllResult.memo((start) => {
     if (start) {
       lg = end(callback[5]).radii.lg;
     }
-    const obj = { borderTopStartRadius: lg, borderTopEndRadius: null, borderBottomStartRadius: null, borderBottomEndRadius: null };
+    const obj = {
+      borderTopStartRadius: lg,
+      borderTopEndRadius: null,
+      borderBottomStartRadius: null,
+      borderBottomEndRadius: null,
+    };
     let lg1;
     if (start) {
       lg1 = end(callback[5]).radii.lg;
@@ -66,10 +75,21 @@ const memoResult = importAllResult.memo((start) => {
     fn.__closure = obj1;
     fn.__workletHash = 13391094209244;
     fn.__initData = closure_1_9;
-    obj[0] = obj1.withSequence(withDelayResult, withTimingResult, start(callback[7]).withTiming(0, obj, "respect-motion-settings", fn));
+    obj[0] = obj1.withSequence(
+      withDelayResult,
+      withTimingResult,
+      start(callback[7]).withTiming(0, obj, "respect-motion-settings", fn),
+    );
     return obj;
   };
-  obj = { withSequence: start(callback[6]).withSequence, withDelay: start(callback[6]).withDelay, withTiming: start(callback[7]).withTiming, Easing: start(callback[6]).Easing, runOnJS: start(callback[6]).runOnJS, clearSelectedSearchResult: callback };
+  obj = {
+    withSequence: start(callback[6]).withSequence,
+    withDelay: start(callback[6]).withDelay,
+    withTiming: start(callback[7]).withTiming,
+    Easing: start(callback[6]).Easing,
+    runOnJS: start(callback[6]).runOnJS,
+    clearSelectedSearchResult: callback,
+  };
   fn.__closure = obj;
   fn.__workletHash = 13630242918990;
   fn.__initData = closure_8;

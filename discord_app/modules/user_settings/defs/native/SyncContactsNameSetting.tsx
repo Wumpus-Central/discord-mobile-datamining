@@ -17,14 +17,17 @@ const pressable = createToggle.createPressable({
   },
   parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onContactSyncNamePress() {
-    expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
+    expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, {
+      type: "Change Name",
+      location: { page: "User Settings" },
+    });
     const obj = expandEventPropertiesDefault;
     _modDef4723.pushLazy(asyncRequireImpl(14451, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {
     return null != _uploadContacts.useContactSyncAccount();
-  }
+  },
 });
 let obj = {
   useTitle() {
@@ -33,14 +36,17 @@ let obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onContactSyncNamePress() {
-    expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
+    expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, {
+      type: "Change Name",
+      location: { page: "User Settings" },
+    });
     const obj = expandEventPropertiesDefault;
     _modDef4723.pushLazy(asyncRequireImpl(14451, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {
     return null != _uploadContacts.useContactSyncAccount();
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/SyncContactsNameSetting.tsx");
 

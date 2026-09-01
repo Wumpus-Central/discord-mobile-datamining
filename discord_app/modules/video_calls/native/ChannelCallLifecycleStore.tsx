@@ -10,21 +10,39 @@ let c5 = false;
 let c6 = false;
 let c7 = false;
 let obj = {};
-obj = { x: "Array", y: "flexDirection", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: null };
+obj = {
+  x: "Array",
+  y: "flexDirection",
+  width: "y",
+  height: "HermesInternal",
+  screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: true,
+  isInitialized: true,
+  isVisible: null,
+};
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = obj;
-obj = { x: "Array", y: "flexDirection", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: null };
+obj = {
+  x: "Array",
+  y: "flexDirection",
+  width: "y",
+  height: "HermesInternal",
+  screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: true,
+  isInitialized: true,
+  isVisible: null,
+};
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = obj;
 let c10 = true;
 const Store = initializeDefault.Store;
-class ChannelCallLifecycleStore extends Store {
-}
+class ChannelCallLifecycleStore extends Store {}
 const prototype = ChannelCallLifecycleStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3);
 };
-prototype["shouldReactToSeriousThermalStateWhenActivityFocused"] = function shouldReactToSeriousThermalStateWhenActivityFocused() {
-  return c4;
-};
+prototype["shouldReactToSeriousThermalStateWhenActivityFocused"] =
+  function shouldReactToSeriousThermalStateWhenActivityFocused() {
+    return c4;
+  };
 prototype["consumedRequestToRespondToSeriousThermalState"] = function consumedRequestToRespondToSeriousThermalState() {
   return c5;
 };
@@ -70,13 +88,14 @@ const channelCallLifecycleStore = new ChannelCallLifecycleStore(dispatcherDefaul
       c4 = true;
     }
   },
-  EMBEDDED_ACTIVITY_CONSUME_RESPOND_TO_SERIOUS_THERMAL_STATE_REQUEST: function handleConsumeReactToSeriousThermalStateRequest(arg0) {
-    if (arg0 == null) {
-      HermesBuiltin.throwTypeError();
-    } else {
-      c5 = true;
-    }
-  },
+  EMBEDDED_ACTIVITY_CONSUME_RESPOND_TO_SERIOUS_THERMAL_STATE_REQUEST:
+    function handleConsumeReactToSeriousThermalStateRequest(arg0) {
+      if (arg0 == null) {
+        HermesBuiltin.throwTypeError();
+      } else {
+        c5 = true;
+      }
+    },
   EMBEDDED_ACTIVITY_DISREGARD_SERIOUS_THERMAL_STATE: function handleDisregardSeriousThermalState(arg0) {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
@@ -93,7 +112,9 @@ const channelCallLifecycleStore = new ChannelCallLifecycleStore(dispatcherDefaul
     const merged = Object.assign(obj);
     obj[voiceCallOverlayType] = voiceCallOverlayLayoutState;
   },
-  VOICE_CALL_SET_PIP_ENABLED_FOR_ACTIVITY_OR_STREAM: function handleSetPipEnabledForActivityOrStream(pipEnabledWhileFocusedOnActivityOrStream) {
+  VOICE_CALL_SET_PIP_ENABLED_FOR_ACTIVITY_OR_STREAM: function handleSetPipEnabledForActivityOrStream(
+    pipEnabledWhileFocusedOnActivityOrStream,
+  ) {
     closure_10 = pipEnabledWhileFocusedOnActivityOrStream.pipEnabledWhileFocusedOnActivityOrStream;
   },
   EMBEDDED_ACTIVITY_OPEN: function handleEmbeddedActivityOpen(arg0) {
@@ -109,7 +130,7 @@ const channelCallLifecycleStore = new ChannelCallLifecycleStore(dispatcherDefaul
     } else {
       c10 = true;
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/video_calls/native/ChannelCallLifecycleStore.tsx");
 

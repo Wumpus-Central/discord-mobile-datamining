@@ -35,7 +35,7 @@ export default function getThreadAutoArchiveTimeOnce(threadMetadata) {
     }
     return num3 + result;
   }
-};
+}
 export const getThreadLastActivityTime = function getThreadLastActivityTime(threadMetadata) {
   if (null == threadMetadata.threadMetadata) {
     return 0;

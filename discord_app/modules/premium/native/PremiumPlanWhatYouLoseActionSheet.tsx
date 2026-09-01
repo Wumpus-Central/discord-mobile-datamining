@@ -13,23 +13,50 @@ function WhatYouLoseItem(arg0) {
   ({ imageSource, text } = arg0);
   const tmp = callback3();
   let obj = { style: tmp.item, children: null };
-  const items = [callback(preloadDefault, { source: imageSource }), ];
+  const items = [callback(preloadDefault, { source: imageSource })];
   obj = { variant: "text-md/medium", style: tmp.itemLabel, children: text };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { body: { paddingTop: 24, paddingHorizontal: 24 }, title: null, subtitle: null, item: null, itemLabel: null, footer: null, button: null, keepText: null };
+createCacheKey = {
+  body: { paddingTop: 24, paddingHorizontal: 24 },
+  title: null,
+  subtitle: null,
+  item: null,
+  itemLabel: null,
+  footer: null,
+  button: null,
+  keepText: null,
+};
 createCacheKey = { marginBottom: 8, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginBottom: 16, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 let obj1 = { marginBottom: 16, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[3] = { marginBottom: 16, borderRadius: ThemesDefault.radii.sm, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, padding: 16 };
+createCacheKey[3] = {
+  marginBottom: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  padding: 16,
+};
 createCacheKey[4] = { marginTop: 8 };
 createCacheKey[5] = { paddingHorizontal: 16 };
 createCacheKey[6] = { marginBottom: 8 };
-let obj2 = { marginBottom: 16, borderRadius: ThemesDefault.radii.sm, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, padding: 16 };
+let obj2 = {
+  marginBottom: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  padding: 16,
+};
 createCacheKey[7] = { textAlign: "center", paddingVertical: 8, color: ThemesDefault.colors.TEXT_SUBTLE };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { DOWNGRADE: 0, [0]: "DOWNGRADE", CANCEL: 1, [1]: "CANCEL" };
@@ -55,7 +82,7 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
       obj[0] = subscription(premiumTypeFromSubscription[12]);
       const intl7 = closure_1_0(premiumTypeFromSubscription[13]).intl;
       obj[1] = intl7.format(closure_1_0(premiumTypeFromSubscription[13]).t["0hUHi6"], {});
-      const items = [obj, ];
+      const items = [obj];
       obj = { imageSource: null, text: null };
       obj[0] = subscription(premiumTypeFromSubscription[14]);
       const intl8 = closure_1_0(premiumTypeFromSubscription[13]).intl;
@@ -67,7 +94,7 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
       obj1[0] = whatYouLoseProfileTier1Source;
       const intl4 = closure_1_0(premiumTypeFromSubscription[13]).intl;
       obj1[1] = intl4.format(closure_1_0(premiumTypeFromSubscription[13]).t.xCaYwE, {});
-      const items1 = [obj1, , ];
+      const items1 = [obj1, ,];
       const obj2 = { imageSource: null, text: null };
       obj2[0] = subscription(premiumTypeFromSubscription[15]);
       const intl5 = closure_1_0(premiumTypeFromSubscription[13]).intl;
@@ -84,7 +111,7 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
       obj[0] = subscription(premiumTypeFromSubscription[17]);
       const intl = closure_1_0(premiumTypeFromSubscription[13]).intl;
       obj[1] = intl.format(closure_1_0(premiumTypeFromSubscription[13]).t["gpqr+n"], {});
-      const items2 = [obj, , ];
+      const items2 = [obj, ,];
       obj4 = { imageSource: null, text: null };
       obj4[0] = subscription(premiumTypeFromSubscription[16]);
       const intl2 = closure_1_0(premiumTypeFromSubscription[13]).intl;
@@ -100,7 +127,10 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
       return [];
     }
   }, items);
-  let items1 = [callback(subscription(premiumTypeFromSubscription[20]), { premiumType: premiumTypeFromSubscription }), , ];
+  let items1 = [
+    callback(subscription(premiumTypeFromSubscription[20]), { premiumType: premiumTypeFromSubscription }),
+    ,
+  ];
   obj = { style: tmp.body, children: null };
   obj = { variant: "heading-xl/extrabold", style: tmp.title, children: null };
   if (mode === obj4.CANCEL) {
@@ -111,7 +141,7 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
     stringResult = intl.string(tmp2(tmp3[13]).t["7VcWW0"]);
   }
   obj[2] = stringResult;
-  let items2 = [callback(require(premiumTypeFromSubscription[7]).Text, obj), , ];
+  let items2 = [callback(require(premiumTypeFromSubscription[7]).Text, obj), ,];
   obj1 = { variant: "text-md/medium", style: tmp.subtitle, children: null };
   if (mode === obj4.CANCEL) {
     let intl4 = tmp2(tmp3[13]).intl;
@@ -141,21 +171,32 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
   let intl5 = tmp2(tmp3[13]).intl;
   obj7[0] = intl5.string(require(premiumTypeFromSubscription[13]).t["3PatSz"]);
   obj7[2] = function onPress() {
-    callback(closure_1_0(premiumTypeFromSubscription[22]).STEP_ANALYTICS_NAMES[closure_1_0(undefined, premiumTypeFromSubscription[22]).CancellationFlowSteps.WHAT_YOU_LOSE]);
+    callback(
+      closure_1_0(premiumTypeFromSubscription[22]).STEP_ANALYTICS_NAMES[
+        closure_1_0(undefined, premiumTypeFromSubscription[22]).CancellationFlowSteps.WHAT_YOU_LOSE
+      ],
+    );
     subscription(premiumTypeFromSubscription[18]).hideActionSheet();
   };
   obj6[1] = callback(require(premiumTypeFromSubscription[21]).Button, obj7);
-  const items3 = [callback(whatYouLoseProfileTier1Source, obj6), ];
+  const items3 = [callback(whatYouLoseProfileTier1Source, obj6)];
   const obj8 = {
     variant: "text-sm/medium",
     style: tmp.keepText,
     onPress() {
       let obj = closure_1_0(premiumTypeFromSubscription[22]);
-      obj = { subscription, analyticsLocations, fromStep: closure_1_0(premiumTypeFromSubscription[22]).STEP_ANALYTICS_NAMES[closure_1_0(undefined, premiumTypeFromSubscription[22]).CancellationFlowSteps.WHAT_YOU_LOSE], toStep: null };
+      obj = {
+        subscription,
+        analyticsLocations,
+        fromStep: closure_1_0(premiumTypeFromSubscription[22]).STEP_ANALYTICS_NAMES[
+          closure_1_0(undefined, premiumTypeFromSubscription[22]).CancellationFlowSteps.WHAT_YOU_LOSE
+        ],
+        toStep: null,
+      };
       const result = obj.trackPremiumSubscriptionCancellationFlowStep(obj);
       subscription(premiumTypeFromSubscription[18]).hideActionSheet();
     },
-    children: null
+    children: null,
   };
   let intl6 = tmp2(tmp3[13]).intl;
   obj8[3] = intl6.string(require(premiumTypeFromSubscription[13]).t.rzVN6j);
@@ -164,5 +205,5 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
   items1[2] = closure_7(whatYouLoseProfileTier1Source, obj5);
   obj4[0] = items1;
   return closure_7(require(premiumTypeFromSubscription[19]).BottomSheet, obj4);
-};
+}
 export const WhatYouLoseMode = obj4;

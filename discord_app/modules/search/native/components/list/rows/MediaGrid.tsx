@@ -26,7 +26,27 @@ export default function MediaGrid(media) {
     obj[4] = media(onPress[6]).getMediaGridItemStyles(obj);
     return closure_1_7(tmp, obj);
   }, items);
-  obj = { numColumns: closure_5, data: media, renderItem: callback, ItemSeparatorComponent: media(onPress[8]).MediaVerticalSeparator, scrollEnabled: false };
-  obj[1] = jsx(media(onPress[7]).FlashList, { numColumns: closure_5, data: media, renderItem: callback, ItemSeparatorComponent: media(onPress[8]).MediaVerticalSeparator, scrollEnabled: false });
-  return <View numColumns={closure_5} data={media} renderItem={callback} ItemSeparatorComponent={media(onPress[8]).MediaVerticalSeparator} scrollEnabled={false} />;
-};
+  obj = {
+    numColumns: closure_5,
+    data: media,
+    renderItem: callback,
+    ItemSeparatorComponent: media(onPress[8]).MediaVerticalSeparator,
+    scrollEnabled: false,
+  };
+  obj[1] = jsx(media(onPress[7]).FlashList, {
+    numColumns: closure_5,
+    data: media,
+    renderItem: callback,
+    ItemSeparatorComponent: media(onPress[8]).MediaVerticalSeparator,
+    scrollEnabled: false,
+  });
+  return (
+    <View
+      numColumns={closure_5}
+      data={media}
+      renderItem={callback}
+      ItemSeparatorComponent={media(onPress[8]).MediaVerticalSeparator}
+      scrollEnabled={false}
+    />
+  );
+}

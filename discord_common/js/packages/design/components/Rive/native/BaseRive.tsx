@@ -9,7 +9,15 @@ const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const styles = StyleSheet.create({ container: { flexGrow: 1 }, fill: { flex: 1 }, hidden: { opacity: 0 } });
 const forwardRefResult = importAllResult.forwardRef(function BaseRiveInner(renderDataBinding, ref) {
-  ({ artboard, defaultViewModelInstance: require, referencedAssets, stateMachine, fit, alignment, withReducedMotion } = renderDataBinding);
+  ({
+    artboard,
+    defaultViewModelInstance: require,
+    referencedAssets,
+    stateMachine,
+    fit,
+    alignment,
+    withReducedMotion,
+  } = renderDataBinding);
   ({ src, style, artboardProperties, artboardViewModelInstances } = renderDataBinding);
   if (withReducedMotion === undefined) {
     withReducedMotion = "halt";
@@ -85,7 +93,7 @@ const forwardRefResult = importAllResult.forwardRef(function BaseRiveInner(rende
   pause = rivePlayback.pause;
   const items1 = [play, pause];
   const imperativeHandle = obj3.useImperativeHandle(ref, () => ({ play, pause }), items1);
-  const items2 = [container.container, ];
+  const items2 = [container.container];
   let hidden;
   if (null == riveViewRef) {
     hidden = tmp22.hidden;
@@ -93,7 +101,7 @@ const forwardRefResult = importAllResult.forwardRef(function BaseRiveInner(rende
   obj1 = { style: items2, children: null };
   items2[1] = hidden;
   if (null == riveFile) {
-    const items3 = [tmp24, ];
+    const items3 = [tmp24];
     let renderDataBindingResult;
     if (renderDataBinding != null) {
       if (instance == null) {
@@ -156,10 +164,18 @@ const forwardRefResult = importAllResult.forwardRef(function BaseRiveInner(rende
     const tmp25 = closure_6;
   }
 });
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/BaseRive.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/design/components/Rive/native/BaseRive.tsx",
+);
 
 export const BaseRive = forwardRefResult;
-export const useNumberBinding = function useNumberBinding(AnimationState, instance, AnimationState2, AnimationState1, playIfNeeded) {
+export const useNumberBinding = function useNumberBinding(
+  AnimationState,
+  instance,
+  AnimationState2,
+  AnimationState1,
+  playIfNeeded,
+) {
   let _require = AnimationState2;
   dependencyMap = playIfNeeded;
   const iter = require("../../../../../../../_runtime/04212_DataBindByName.js").useRiveNumber(AnimationState, instance);
@@ -239,7 +255,13 @@ export const useStringBinding = function useStringBinding(LVL, instance, LVL2, L
     }
   }, items2);
 };
-export const useBooleanBinding = function useBooleanBinding(reducedMotion, instance, reducedMotionEnabled, pressed1, playIfNeeded) {
+export const useBooleanBinding = function useBooleanBinding(
+  reducedMotion,
+  instance,
+  reducedMotionEnabled,
+  pressed1,
+  playIfNeeded,
+) {
   let _require = reducedMotionEnabled;
   dependencyMap = playIfNeeded;
   const iter = require("../../../../../../../_runtime/04212_DataBindByName.js").useRiveBoolean(reducedMotion, instance);
@@ -337,7 +359,13 @@ export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2,
     }
   }, items2);
 };
-export const useTriggerBinding = function useTriggerBinding(startAnimation, instance, startAnimation2, startAnimation1, playIfNeeded) {
+export const useTriggerBinding = function useTriggerBinding(
+  startAnimation,
+  instance,
+  startAnimation2,
+  startAnimation1,
+  playIfNeeded,
+) {
   const _require = startAnimation2;
   dependencyMap = playIfNeeded;
   let obj = DataBindByName;
@@ -382,19 +410,19 @@ export const useImageBinding = function useImageBinding(img, instance, prop12, p
           uri = playIfNeeded.resolveAssetSource(tmp).uri;
         }
         const fromURLAsync = RiveImages.loadFromURLAsync(uri);
-        fromURLAsync.then((arg0) => {
-          if (!c0) {
-            const imagePropertyResult = closure_1_1.imageProperty(c0);
-            if (imagePropertyResult != null) {
-              const result = imagePropertyResult.set(arg0);
+        fromURLAsync
+          .then((arg0) => {
+            if (!c0) {
+              const imagePropertyResult = closure_1_1.imageProperty(c0);
+              if (imagePropertyResult != null) {
+                const result = imagePropertyResult.set(arg0);
+              }
+              if (closure_1_4 != null) {
+                tmp6();
+              }
             }
-            if (closure_1_4 != null) {
-              tmp6();
-            }
-          }
-        }).catch(() => {
-
-        });
+          })
+          .catch(() => {});
         return () => {
           c0 = true;
         };
@@ -441,8 +469,7 @@ export const useArtboardBinding = function useArtboardBinding(Icon, instance, fi
             if (closure_4 != null) {
               tmp4();
             }
-          } catch (err) {
-          }
+          } catch (err) {}
         }
       }
       obj2 = closure_2;

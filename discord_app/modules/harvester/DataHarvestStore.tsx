@@ -5,20 +5,19 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 let c0 = false;
 let c1;
 const Store = initializeDefault.Store;
-class DataHarvestStore extends Store {
-}
+class DataHarvestStore extends Store {}
 const prototype = DataHarvestStore.prototype;
 Object.defineProperty(prototype, "harvestType", {
   get: function harvestType() {
     return c1;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "requestingHarvest", {
   get: function requestingHarvest() {
     return c0;
   },
-  set: undefined
+  set: undefined,
 });
 DataHarvestStore.displayName = "DataHarvestStore";
 const dataHarvestStore = new DataHarvestStore(dispatcherDefault, {
@@ -38,7 +37,7 @@ const dataHarvestStore = new DataHarvestStore(dispatcherDefault, {
   LOGOUT: function handleLogout() {
     c0 = false;
     c1 = null;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/harvester/DataHarvestStore.tsx");
 

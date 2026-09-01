@@ -22,7 +22,7 @@ createToggle = {
       str = "reduce";
     }
     const result = setFontSize.setPrefersReducedMotion(str);
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
 let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/EnableReducedMotionSetting.tsx");

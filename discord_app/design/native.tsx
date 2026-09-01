@@ -147,7 +147,8 @@ import Slider from "components/Slider/native/Slider.native.tsx";
 const result = set.fileFinishedImporting("design/native.tsx");
 
 export const AccessibilityAnnouncer = AccessibilityAnnouncer.AccessibilityAnnouncer;
-export const AccessibilityAnnouncerLiveRegion = updateAccessibilityAnnouncerLiveRegionMessage.AccessibilityAnnouncerLiveRegion;
+export const AccessibilityAnnouncerLiveRegion =
+  updateAccessibilityAnnouncerLiveRegionMessage.AccessibilityAnnouncerLiveRegion;
 export const useCheckboxA11yNative = useCheckboxA11yNative.useCheckboxA11yNative;
 export const useRadioA11yNative = useCheckboxA11yNative.useRadioA11yNative;
 export const useFieldLabelA11yNative = useFieldLabelA11yNative.useFieldLabelA11yNative;
@@ -232,7 +233,8 @@ export const setColorOpacity = ManaContext.setColorOpacity;
 export const WCAGContrastRatios = ManaContext.WCAGContrastRatios;
 export const ResolvableColor = map.ResolvableColor;
 export const useToken = map.useToken;
-export const getSemanticColorContextFromThemeContext = getSemanticColorContextFromThemeContext.getSemanticColorContextFromThemeContext;
+export const getSemanticColorContextFromThemeContext =
+  getSemanticColorContextFromThemeContext.getSemanticColorContextFromThemeContext;
 export const AnimatedEnterExitItem = AnimatedRenderItemDefault;
 export const AnimatedEnterExitRenderItemFn = AnimatedRenderItem.RenderItemFn;
 export const BottomSheet = Background.BottomSheet;
@@ -390,7 +392,8 @@ export const InitialRoute = NavigationStack.InitialRoute;
 export const NavigatorListenerProps = NavigationStack.NavigatorListenerProps;
 export const useNavigatorScreens = NavigationStack.useNavigatorScreens;
 export const useAccessibilityNativeStackOptions = NavigationStack.useAccessibilityNativeStackOptions;
-export const useAccessibilityNativeStackFocusTracking = useAccessibilityNativeStackFocusTracking.useAccessibilityNativeStackFocusTracking;
+export const useAccessibilityNativeStackFocusTracking =
+  useAccessibilityNativeStackFocusTracking.useAccessibilityNativeStackFocusTracking;
 export const useNavigatorShouldCrossfade = useNavigatorShouldCrossfade.useNavigatorShouldCrossfade;
 export const createAccessibleNativeStackNavigator = AccessibleNativeStackNavigatorDefault;
 export const useAccessibilityPatchedDescriptors = AccessibleNativeStackNavigator.useAccessibilityPatchedDescriptors;

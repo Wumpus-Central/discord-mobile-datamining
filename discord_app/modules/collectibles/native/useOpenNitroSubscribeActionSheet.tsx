@@ -19,4 +19,4 @@ export default function useOpenNitroSubscribeActionSheet() {
     obj = { page: closure_1_3.COLLECTIBLES_SHOP, section: COLLECTIBLES_SHOP };
     COLLECTIBLES_SHOP(analyticsLocations[4])(obj);
   }, items);
-};
+}

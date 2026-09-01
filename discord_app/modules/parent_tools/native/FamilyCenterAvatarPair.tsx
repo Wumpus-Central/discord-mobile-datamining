@@ -11,7 +11,15 @@ require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { avatars: null, icon: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 8 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.round,
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: 8,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 24, width: 24, marginHorizontal: 16 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
@@ -34,7 +42,7 @@ export default function FamilyCenterAvatarPair(otherUser) {
       obj[0] = tmp2(1297).AvatarSizes.LARGE_48;
       obj[1] = stateFromStores;
       obj[3] = stateFromStores.avatarDecoration;
-      const items1 = [callback(tmp2(1297).Avatar, obj), , ];
+      const items1 = [callback(tmp2(1297).Avatar, obj), ,];
       obj1 = { style: null, size: null, source: null };
       const items2 = [tmp.icon, iconStyles];
       obj1[0] = items2;
@@ -51,4 +59,4 @@ export default function FamilyCenterAvatarPair(otherUser) {
     }
   }
   return tmp5;
-};
+}

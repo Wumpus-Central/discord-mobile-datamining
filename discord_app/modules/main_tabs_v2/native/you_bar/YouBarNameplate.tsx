@@ -5,7 +5,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-let closure_6 = { code: "function YouBarNameplateTsx1(){const{withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG}=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};}" };
+let closure_6 = {
+  code: "function YouBarNameplateTsx1(){const{withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG}=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};}",
+};
 const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered) {
   isQuestRendered = isQuestRendered.isQuestRendered;
   const avatarSize = isQuestRendered.avatarSize;
@@ -30,12 +32,30 @@ const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered
     obj = { borderTopRightRadius: obj.withSpring(value, closure_1_4) };
     return obj;
   };
-  obj = { withSpring: isQuestRendered(4927).withSpring, isQuestRendered, questDockAnimatedBorderRadius: tmp4, borderRadius: token, YOU_BAR_SPRING_CONFIG };
+  obj = {
+    withSpring: isQuestRendered(4927).withSpring,
+    isQuestRendered,
+    questDockAnimatedBorderRadius: tmp4,
+    borderRadius: token,
+    YOU_BAR_SPRING_CONFIG,
+  };
   fn.__closure = obj;
   fn.__workletHash = 17156260157738;
   fn.__initData = closure_6;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  obj = { position: "absolute", top: 0, left: avatarSize, right: -1, bottom: 0, borderTopRightRadius: null, borderTopLeftRadius: 0, borderBottomRightRadius: null, borderBottomLeftRadius: 0, overflow: "hidden", width: null };
+  obj = {
+    position: "absolute",
+    top: 0,
+    left: avatarSize,
+    right: -1,
+    bottom: 0,
+    borderTopRightRadius: null,
+    borderTopLeftRadius: 0,
+    borderBottomRightRadius: null,
+    borderBottomLeftRadius: 0,
+    overflow: "hidden",
+    width: null,
+  };
   let num = 0;
   if (!isQuestRendered) {
     num = token;

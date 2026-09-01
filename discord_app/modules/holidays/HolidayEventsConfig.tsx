@@ -21,7 +21,7 @@ let obj = {
   soundpackLabel: getSystemLocale.t.Z5OQNp,
   appSpinnerSources: null,
   coachmarkDismissibleContent: null,
-  coachmarkBackgroundColor: "#1170ed"
+  coachmarkBackgroundColor: "#1170ed",
 };
 obj = { webmDark: registerAssetDefault, webmLight: registerAssetDefault2 };
 obj[8] = obj;

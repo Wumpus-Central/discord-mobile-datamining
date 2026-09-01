@@ -33,6 +33,8 @@ const forwardRefResult = importAllResult.forwardRef(function BackgroundBlurViewC
   obj.children = items1;
   return closure_4(View, obj);
 });
-const result = require("set").fileFinishedImporting("design/components/experimental/BackgroundBlurView/native/BackgroundBlurView.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/experimental/BackgroundBlurView/native/BackgroundBlurView.native.tsx",
+);
 
 export const BackgroundBlurView = forwardRefResult;

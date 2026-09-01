@@ -9,8 +9,12 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 ({ useState: c4, useEffect: c5, useRef: closure_6, useCallback: error } = noop);
-let closure_10 = { code: "function BalanceCounterTsx1(){const{runOnJS,setIsAnimating}=this.__closure;runOnJS(setIsAnimating)(false);}" };
-let closure_11 = { code: "function BalanceCounterTsx2(){const{isAnimating,animatedValue,runOnJS,setDisplayValue,setMaxDigits}=this.__closure;if(isAnimating){const roundedValue=Math.round(animatedValue.get());runOnJS(setDisplayValue)(roundedValue);runOnJS(setMaxDigits)(roundedValue.toString().length);}return{};}" };
+let closure_10 = {
+  code: "function BalanceCounterTsx1(){const{runOnJS,setIsAnimating}=this.__closure;runOnJS(setIsAnimating)(false);}",
+};
+let closure_11 = {
+  code: "function BalanceCounterTsx2(){const{isAnimating,animatedValue,runOnJS,setDisplayValue,setMaxDigits}=this.__closure;if(isAnimating){const roundedValue=Math.round(animatedValue.get());runOnJS(setDisplayValue)(roundedValue);runOnJS(setMaxDigits)(roundedValue.toString().length);}return{};}",
+};
 class BalanceCounter {
   constructor(arg0) {
     value = global.value;
@@ -66,7 +70,7 @@ class BalanceCounter {
       const result = set.set(obj.withSpring(value, obj, "respect-motion-settings", fn));
     }, []);
     closure_10 = tmp10;
-    items = [, , , , , ];
+    items = [, , , , ,];
     items[0] = value;
     items[1] = onValueChange;
     items[2] = onValueReached;
@@ -129,7 +133,13 @@ class BalanceCounter {
         return {};
       }
     }
-    obj = { isAnimating: first, animatedValue: sharedValue, runOnJS: require("../../reanimated/ReanimatedRexport.tsx").runOnJS, setDisplayValue: tmp5, setMaxDigits: tmp7 };
+    obj = {
+      isAnimating: first,
+      animatedValue: sharedValue,
+      runOnJS: require("../../reanimated/ReanimatedRexport.tsx").runOnJS,
+      setDisplayValue: tmp5,
+      setMaxDigits: tmp7,
+    };
     F.__closure = obj;
     F.__workletHash = 4408542396979;
     F.__initData = clearAnimationTimeout;
@@ -138,7 +148,7 @@ class BalanceCounter {
       tmp15 = closure_9;
       tmp16 = onValueChange;
       obj1 = { style: null, children: null };
-      items1 = [, ];
+      items1 = [,];
       items1[0] = tmp13;
       obj2 = { minWidth: null };
       num = 7;

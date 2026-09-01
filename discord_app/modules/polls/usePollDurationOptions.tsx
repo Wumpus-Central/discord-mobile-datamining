@@ -23,4 +23,4 @@ export default function usePollDurationOptions() {
   const intl7 = getSystemLocale.intl;
   obj[PollDurations.FOURTEEN_DAYS] = intl7.string(getSystemLocale.t["mb8A/O"]);
   return Object.freeze(obj);
-};
+}

@@ -5,8 +5,7 @@ import dispatcherDefault from "../../../../../Dispatcher.tsx";
 let obj = { APPS: "apps", COMMANDS: "commands" };
 let closure_1 = { selection: null };
 const PersistedStore = initializeDefault.PersistedStore;
-class FrecencySectionStore extends PersistedStore {
-}
+class FrecencySectionStore extends PersistedStore {}
 const prototype = FrecencySectionStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
@@ -31,10 +30,12 @@ obj = {
     obj = {};
     const merged = Object.assign(obj);
     obj.selection = selection.selection;
-  }
+  },
 };
 const frecencySectionStore = new FrecencySectionStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/FrecencySectionStore.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/screens/home/FrecencySectionStore.tsx",
+);
 
 export default frecencySectionStore;
 export const FrecencySectionSelection = obj;

@@ -8,4 +8,4 @@ export default function createWebSocket(url) {
   obj = { Origin: window.GLOBAL_ENV.NATIVE_WEBSOCKET_ORIGIN };
   const webSocket = new WebSocket(url, arg1, obj);
   return webSocket;
-};
+}

@@ -12,5 +12,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "USER_SETTINGS_MODAL_SET_SECTION", section };
     obj.dispatch(obj);
-  }
+  },
 };

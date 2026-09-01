@@ -7,18 +7,36 @@ export const productToGameServerGame = function productToGameServerGame(id) {
   const skus = id.skus;
   const mapped = skus.map((id) => {
     const plan_features = id.tenant_metadata.plan_features;
-    return { id: id.id, name: id.name, cost: id.tenant_metadata.boost_price, specifications: plan_features.map((title) => ({ title: title.title, description: title.description })) };
+    return {
+      id: id.id,
+      name: id.name,
+      cost: id.tenant_metadata.boost_price,
+      specifications: plan_features.map((title) => ({ title: title.title, description: title.description })),
+    };
   });
   const sorted = mapped.sort((cost, cost2) => cost2.cost - cost.cost);
   let num = 0;
   if (sorted.length > 0) {
     const _Math = Math;
     const items = [];
-    HermesBuiltin.arraySpread(sorted.map((cost) => cost.cost), 0);
+    HermesBuiltin.arraySpread(
+      sorted.map((cost) => cost.cost),
+      0,
+    );
     const _Math2 = Math;
     num = HermesBuiltin.apply(items, Math);
   }
-  const obj = { id: id.id, name: id.name, gameId: null, provider: null, plans: null, baseCost: null, disabled: null, early_access: null, can_market: null };
+  const obj = {
+    id: id.id,
+    name: id.name,
+    gameId: null,
+    provider: null,
+    plans: null,
+    baseCost: null,
+    disabled: null,
+    early_access: null,
+    can_market: null,
+  };
   const tenant_metadata = id.tenant_metadata;
   let str;
   if (tenant_metadata != null) {

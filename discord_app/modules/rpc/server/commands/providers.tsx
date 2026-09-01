@@ -45,7 +45,7 @@ obj = {
       obj[0] = constants2.INVALID_PROVIDER;
       const _HermesInternal = HermesInternal;
       let tmp4Result = tmp4(9503);
-      tmp4Result = new tmp4Result(obj, "Platform not found for provider \"" + provider + "\"");
+      tmp4Result = new tmp4Result(obj, 'Platform not found for provider "' + provider + '"');
       throw tmp4Result;
     } else if (provider !== constants.AMAZON_MUSIC) {
       obj = { errorCode: null };
@@ -60,7 +60,7 @@ obj = {
         c6 = 0;
         c7 = 0;
         c5 = 0;
-        return (function*(arg0, arg1) {
+        return (function* (arg0, arg1) {
           if (c7 === 2) {
             c7 = 3;
             HermesBuiltin.throwTypeError();
@@ -105,22 +105,37 @@ obj = {
                           callback(obj);
                           callback2(closure_2_2[10]).unsubscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
                           const ComponentDispatch = callback(closure_2_2[11]).ComponentDispatch;
-                          ComponentDispatch.unsubscribe(constants.CONNECTIONS_CALLBACK_ERROR, handleConnectionsCallbackError);
+                          ComponentDispatch.unsubscribe(
+                            constants.CONNECTIONS_CALLBACK_ERROR,
+                            handleConnectionsCallbackError,
+                          );
                           const obj2 = callback2(closure_2_2[10]);
                         }
                       }
                     };
                     function handleConnectionsCallbackError() {
                       let tmp = callback2(closure_2_2[9]);
-                      tmp = new tmp({ errorCode: closure_2_9.OAUTH2_ERROR }, "OAuth2 setup for \"" + callback + "\" failed");
+                      tmp = new tmp(
+                        { errorCode: closure_2_9.OAUTH2_ERROR },
+                        'OAuth2 setup for "' + callback + '" failed',
+                      );
                       callback2(tmp);
                       callback2(closure_2_2[10]).unsubscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
                       const ComponentDispatch = callback(closure_2_2[11]).ComponentDispatch;
-                      ComponentDispatch.unsubscribe(constants.CONNECTIONS_CALLBACK_ERROR, handleConnectionsCallbackError);
+                      ComponentDispatch.unsubscribe(
+                        constants.CONNECTIONS_CALLBACK_ERROR,
+                        handleConnectionsCallbackError,
+                      );
                     }
-                    const subscription = connection_redirect(709).subscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
+                    const subscription = connection_redirect(709).subscribe(
+                      "USER_CONNECTIONS_UPDATE",
+                      handleConnectionsUpdate,
+                    );
                     let ComponentDispatch = callback(1231).ComponentDispatch;
-                    const subscription1 = ComponentDispatch.subscribe(closure_2_7.CONNECTIONS_CALLBACK_ERROR, handleConnectionsCallbackError);
+                    const subscription1 = ComponentDispatch.subscribe(
+                      closure_2_7.CONNECTIONS_CALLBACK_ERROR,
+                      handleConnectionsCallbackError,
+                    );
                     obj1 = { platformType: null, location: null, successRedirect: null };
                     obj1[0] = closure_1_2.type;
                     obj1[1] = closure_2_6.ACTIVITY_RPC;
@@ -161,7 +176,10 @@ obj = {
                 }
                 const obj4 = { errorCode: null };
                 obj4[0] = closure_2_9.OAUTH2_ERROR;
-                const tmp19 = new connection_redirect(9503)(obj4, "Refreshing access token did not return a new access token");
+                const tmp19 = new connection_redirect(9503)(
+                  obj4,
+                  "Refreshing access token did not return a new access token",
+                );
                 throw tmp19;
               }
               c7 = 3;
@@ -177,7 +195,7 @@ obj = {
           }
         })();
       });
-      const promise = new Promise(function() {
+      const promise = new Promise(function () {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -195,7 +213,7 @@ obj = {
       throw tmp10;
     }
     let obj3 = connection_redirect(5227);
-  }
+  },
 };
 items1 = [RPC_AUTHENTICATED_SCOPE];
 obj = {
@@ -207,14 +225,14 @@ obj = {
     obj[0] = string.string().required();
     return requiredResult.keys(obj);
   },
-  handler: null
+  handler: null,
 };
 items2 = [RPC_AUTHENTICATED_SCOPE];
 let closure_3 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
-  const iter = (function*(arg0) {
+  const iter = (function* (arg0) {
     if (id === 2) {
       id = 3;
       HermesBuiltin.throwTypeError();
@@ -275,7 +293,7 @@ let closure_3 = importDefaultResult((arg0) => {
               obj2[0] = closure_9.INVALID_PROVIDER;
               const _HermesInternal = HermesInternal;
               let tmp59 = provider(9503);
-              tmp59 = new tmp59(obj2, "Platform not found for provider \"" + provider + "\"");
+              tmp59 = new tmp59(obj2, 'Platform not found for provider "' + provider + '"');
               throw tmp59;
             } else if (provider !== constants.AMAZON_MUSIC) {
               const obj3 = { errorCode: null };
@@ -338,7 +356,7 @@ let closure_3 = importDefaultResult((arg0) => {
   iter.next();
   return iter;
 });
-obj[2] = function() {
+obj[2] = function () {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {

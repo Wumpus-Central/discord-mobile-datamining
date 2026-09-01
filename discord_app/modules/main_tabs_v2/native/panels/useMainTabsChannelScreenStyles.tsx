@@ -10,10 +10,20 @@ const merged = Object.assign(require("get ActivityIndicator").StyleSheet.absolut
 const merged1 = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[0] = createCacheKey;
 let closure_3 = createCacheKey.createStyles(createCacheKey);
-let closure_4 = { code: "function useMainTabsChannelScreenStylesTsx1(){const{freezeValue,isDragging,translateX,maxWidth,elevationStyle,isCompletelyCovered}=this.__closure;var _freezeValue,_isCompletelyCovered;(_freezeValue=freezeValue)===null||_freezeValue===void 0||_freezeValue.get();const showBorder=isDragging.get()||translateX.get()!==0&&translateX.get()!==maxWidth;return{transform:[{translateX:translateX.get()}],shadowOpacity:showBorder?elevationStyle.shadowOpacity:0,elevation:showBorder?elevationStyle.elevation:0,opacity:(_isCompletelyCovered=isCompletelyCovered)!==null&&_isCompletelyCovered!==void 0&&_isCompletelyCovered.get()?0:1};}" };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/useMainTabsChannelScreenStyles.tsx");
+let closure_4 = {
+  code: "function useMainTabsChannelScreenStylesTsx1(){const{freezeValue,isDragging,translateX,maxWidth,elevationStyle,isCompletelyCovered}=this.__closure;var _freezeValue,_isCompletelyCovered;(_freezeValue=freezeValue)===null||_freezeValue===void 0||_freezeValue.get();const showBorder=isDragging.get()||translateX.get()!==0&&translateX.get()!==maxWidth;return{transform:[{translateX:translateX.get()}],shadowOpacity:showBorder?elevationStyle.shadowOpacity:0,elevation:showBorder?elevationStyle.elevation:0,opacity:(_isCompletelyCovered=isCompletelyCovered)!==null&&_isCompletelyCovered!==void 0&&_isCompletelyCovered.get()?0:1};}",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/panels/useMainTabsChannelScreenStyles.tsx",
+);
 
-export const useMainTabsChannelScreenStyles = function useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth, derivedValue, parentFreezeValue) {
+export const useMainTabsChannelScreenStyles = function useMainTabsChannelScreenStyles(
+  isDragging,
+  translateX,
+  maxWidth,
+  derivedValue,
+  parentFreezeValue,
+) {
   const _require = isDragging;
   dependencyMap = translateX;
   const React = maxWidth;
@@ -61,7 +71,14 @@ export const useMainTabsChannelScreenStyles = function useMainTabsChannelScreenS
     obj[3] = num4;
     return obj;
   };
-  fn.__closure = { freezeValue: parentFreezeValue, isDragging, translateX, maxWidth, elevationStyle: elevation, isCompletelyCovered: derivedValue };
+  fn.__closure = {
+    freezeValue: parentFreezeValue,
+    isDragging,
+    translateX,
+    maxWidth,
+    elevationStyle: elevation,
+    isCompletelyCovered: derivedValue,
+  };
   fn.__workletHash = 16765484569296;
   fn.__initData = closure_4;
   const animatedStyle = require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedStyle(fn);

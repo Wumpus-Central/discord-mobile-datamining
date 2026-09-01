@@ -9,14 +9,14 @@ let obj = {
     let tmp = prototypeDefault;
     tmp = new tmp({ errorCode: RPCErrors.INVALID_COMMAND }, "Unsupported command: " + cmd.cmd);
     throw tmp;
-  }
+  },
 };
 obj = {
   handler(cmd) {
     let tmp = prototypeDefault;
     tmp = new tmp({ errorCode: RPCErrors.INVALID_COMMAND }, "Deprecated command: " + cmd.cmd);
     throw tmp;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/rpc/helpers/unavailableCommand.tsx");
 

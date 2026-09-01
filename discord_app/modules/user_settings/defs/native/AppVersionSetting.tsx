@@ -28,7 +28,7 @@ let obj = {
     }
     return combined;
   },
-  usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting
+  usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting,
 };
 const createStaticResult = createToggle.createStatic({
   useTitle: function useAppVersionSettingTitle() {
@@ -52,7 +52,7 @@ const createStaticResult = createToggle.createStatic({
     }
     return combined;
   },
-  usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting
+  usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting,
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AppVersionSetting.tsx");
 

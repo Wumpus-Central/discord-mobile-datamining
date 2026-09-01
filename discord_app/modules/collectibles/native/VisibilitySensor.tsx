@@ -75,4 +75,4 @@ export default function _default(onChange) {
   const items3 = [children, callback(closure_5, {})];
   obj[2] = items3;
   return stopWatching(closure_5, obj);
-};
+}

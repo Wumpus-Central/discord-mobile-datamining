@@ -3,7 +3,9 @@ import closure_2 from "../../../../stores/AuthenticationStore.tsx";
 import closure_3 from "../../../../stores/VideoStreamStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorVideoStreamSenderReadyTimeoutNoStream.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/errors/av_errors/definitions/AVErrorVideoStreamSenderReadyTimeoutNoStream.tsx",
+);
 
 export const AVErrorVideoStreamSenderReadyTimeoutNoStreamDefinition = {
   getActiveErrors() {
@@ -23,5 +25,5 @@ export const AVErrorVideoStreamSenderReadyTimeoutNoStreamDefinition = {
   },
   makeErrorContextKey(mediaContext) {
     return "" + mediaContext.mediaContext + ":" + mediaContext.userId;
-  }
+  },
 };

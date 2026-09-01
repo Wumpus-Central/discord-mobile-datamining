@@ -13,8 +13,7 @@ let closure_6 = {};
 const set1 = new Set();
 let closure_8 = Object.freeze({});
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class GameConsoleStore extends DeviceSettingsStore {
-}
+class GameConsoleStore extends DeviceSettingsStore {}
 const prototype = GameConsoleStore.prototype;
 prototype["initialize"] = function initialize(lastSelectedDeviceByPlatform) {
   if (null != lastSelectedDeviceByPlatform) {
@@ -66,7 +65,14 @@ const gameConsoleStore = new GameConsoleStore(dispatcherDefault, {
     c3 = null;
   },
   WAIT_FOR_REMOTE_SESSION: function handleWaitForRemoteSession(sessionType) {
-    const obj = { type: sessionType.sessionType, nonce: sessionType.nonce, channelId: sessionType.channelId, startedAt: Date.now(), deviceId, commandId };
+    const obj = {
+      type: sessionType.sessionType,
+      nonce: sessionType.nonce,
+      channelId: sessionType.channelId,
+      startedAt: Date.now(),
+      deviceId,
+      commandId,
+    };
     ({ deviceId, commandId } = sessionType);
   },
   GAME_CONSOLE_FETCH_DEVICES_START: function handleFetchDevicesStart(platform) {
@@ -93,7 +99,7 @@ const gameConsoleStore = new GameConsoleStore(dispatcherDefault, {
   },
   GAME_CONSOLE_SELECT_DEVICE: function handleSelectDevice(platform) {
     closure_6[platform.platform] = platform.deviceId;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/game_console/GameConsoleStore.tsx");
 

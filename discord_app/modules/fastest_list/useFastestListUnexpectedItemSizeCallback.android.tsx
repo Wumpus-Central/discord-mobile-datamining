@@ -2,7 +2,9 @@
 import closure_2 from "../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx",
+);
 
 export default function useFastestListUnexpectedItemSizeCallback(arg0) {
   closure_0 = arg0;
@@ -79,4 +81,4 @@ export default function useFastestListUnexpectedItemSizeCallback(arg0) {
       }
     }
   }, items);
-};
+}

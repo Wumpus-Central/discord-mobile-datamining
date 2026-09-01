@@ -68,7 +68,19 @@ class GameRecord extends tmp2 {
       websites = [];
     }
     tmp5.websites = websites;
-    ({ companies: tmp5.companies, screenshot_hashes: tmp5.screenshotHashes, screenshot_urls: tmp5.screenshotUrls, trailers: tmp5.trailers, l30_rank: tmp5.l30Rank, summary_localized: tmp5.summaryLocalized, media: tmp5.media, first_release_date: tmp5.firstReleaseDate, shop_collection_ids: tmp5.shopCollectionIds, steam_release_status: tmp5.steamReleaseStatus, reviews } = global);
+    ({
+      companies: tmp5.companies,
+      screenshot_hashes: tmp5.screenshotHashes,
+      screenshot_urls: tmp5.screenshotUrls,
+      trailers: tmp5.trailers,
+      l30_rank: tmp5.l30Rank,
+      summary_localized: tmp5.summaryLocalized,
+      media: tmp5.media,
+      first_release_date: tmp5.firstReleaseDate,
+      shop_collection_ids: tmp5.shopCollectionIds,
+      steam_release_status: tmp5.steamReleaseStatus,
+      reviews,
+    } = global);
     steam = undefined;
     if (reviews != null) {
       steam = reviews.steam;
@@ -76,7 +88,14 @@ class GameRecord extends tmp2 {
     if (null != steam) {
       tmp9 = undefined;
       if (null != reviews.steam) {
-        obj = { rating: null, ratingCount: null, recentRating: null, recentRatingCount: null, localizedRating: null, localizedRatingCount: null };
+        obj = {
+          rating: null,
+          ratingCount: null,
+          recentRating: null,
+          recentRatingCount: null,
+          localizedRating: null,
+          localizedRatingCount: null,
+        };
         obj[0] = reviews.steam.rating;
         obj[1] = reviews.steam.rating_count;
         obj[2] = reviews.steam.recent_rating;

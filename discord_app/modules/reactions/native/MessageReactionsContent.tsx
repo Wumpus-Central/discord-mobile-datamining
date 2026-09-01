@@ -33,17 +33,22 @@ function useReactors(channelId) {
   let obj = channelId(reactionType[14]);
   let items = [closure_13];
   const items1 = [channelId, messageId, reaction.emoji, reactionType];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    const reactions = closure_1_13.getReactions(channelId, messageId, reaction.emoji, closure_1_15, reactionType);
-    let items;
-    if (reactions != null) {
-      items = reactions.values();
-    }
-    if (items == null) {
-      items = [];
-    }
-    return Array.from(items);
-  }, items1, messageId(reactionType[16]));
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      const reactions = closure_1_13.getReactions(channelId, messageId, reaction.emoji, closure_1_15, reactionType);
+      let items;
+      if (reactions != null) {
+        items = reactions.values();
+      }
+      if (items == null) {
+        items = [];
+      }
+      return Array.from(items);
+    },
+    items1,
+    messageId(reactionType[16]),
+  );
   obj = { reactors: stateFromStores, reactorsHasMore: null };
   if (reactionType === channelId(reactionType[17]).ReactionTypes.VOTE) {
     const count_details = reaction.count_details;
@@ -104,7 +109,9 @@ function useReactorsOnScrollNative(channelId) {
   const effect = obj.useEffect(() => {
     closure_8.current = callback;
   }, items1);
-  closure_9 = messageId(reactorsHasMore[19])(() => messageId(reactorsHasMore[20]).debounce((AUTO_DISMISS, current) => ref.current(AUTO_DISMISS, current), 16));
+  closure_9 = messageId(reactorsHasMore[19])(() =>
+    messageId(reactorsHasMore[20]).debounce((AUTO_DISMISS, current) => ref.current(AUTO_DISMISS, current), 16),
+  );
   return messageId(reactorsHasMore[19])(() => (nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     return callback(nativeEvent.contentOffset.y, nativeEvent.contentSize.height);
@@ -155,7 +162,7 @@ function ReactionTab(arg0) {
     emojiURL = getAvatarURLDefault.getEmojiURL(obj1);
     const obj6 = getAvatarURLDefault;
   }
-  const items1 = [tmp.tabContainer, , ];
+  const items1 = [tmp.tabContainer, ,];
   let tabContainerSelected = null;
   if (selected) {
     tabContainerSelected = tmp.tabContainerSelected;
@@ -168,14 +175,22 @@ function ReactionTab(arg0) {
       tmp16 = tmp8;
     }
   }
-  const obj2 = { style: items1, accessible: true, accessibilityLabel: emoji.name, accessibilityState: { selected }, children: null };
+  const obj2 = {
+    style: items1,
+    accessible: true,
+    accessibilityLabel: emoji.name,
+    accessibilityState: { selected },
+    children: null,
+  };
   items1[2] = tmp16;
-  const items2 = [, ];
+  const items2 = [,];
   ({ emoji: arr4[0], emojiText: arr4[1] } = tmp);
-  const items3 = [, ];
+  const items3 = [,];
   ({ emoji: arr5[0], emojiImage: arr5[1] } = tmp);
-  const items4 = [callback2(EmojiDefault, { src: emojiURL, name: emoji.name, textEmojiStyle: items2, fastImageStyle: items3 }), ];
-  const items5 = [tmp.reactionCountText, , ];
+  const items4 = [
+    callback2(EmojiDefault, { src: emojiURL, name: emoji.name, textEmojiStyle: items2, fastImageStyle: items3 }),
+  ];
+  const items5 = [tmp.reactionCountText, ,];
   let prop = null;
   if (selected) {
     prop = tmp.reactionCountTextSelected;
@@ -186,7 +201,11 @@ function ReactionTab(arg0) {
     tmp19 = tmp7;
   }
   items5[2] = tmp19;
-  items4[1] = callback2(Text.Text, { variant: "text-md/bold", style: items5, children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count });
+  items4[1] = callback2(Text.Text, {
+    variant: "text-md/bold",
+    style: items5,
+    children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count,
+  });
   obj2[4] = items4;
   let name = emoji.id;
   if (name == null) {
@@ -288,7 +307,7 @@ function RemoveAllButton(channelId) {
     obj2[0] = items4;
     const obj3 = { color: null, size: "sm" };
     obj3[0] = tmp5(tmp3[13]).unsafe_rawColors.WHITE;
-    const items5 = [callback2(tmp2(tmp3[42]).TrashIcon, obj3), ];
+    const items5 = [callback2(tmp2(tmp3[42]).TrashIcon, obj3)];
     obj4 = { style: null, variant: "text-sm/semibold", color: "text-overlay-light", children: null };
     obj4[0] = animatedStyle1;
     const intl = tmp2(tmp3[34]).intl;
@@ -318,17 +337,25 @@ function EmojiOptionsButton(channelId) {
     onPress: React.useCallback(() => {
       let obj = messageId(paths[43]);
       obj = { channelId, messageId, reaction: paths, canRemoveReactions: closure_2 };
-      obj.openLazy(channelId(paths[45])(paths[44], paths.paths), "ReactionEmojiOptionsActionSheet", obj, "replaceTopSheet");
+      obj.openLazy(
+        channelId(paths[45])(paths[44], paths.paths),
+        "ReactionEmojiOptionsActionSheet",
+        obj,
+        "replaceTopSheet",
+      );
     }, items2),
     style: callback4().emojiOptionsButton,
-    children: null
+    children: null,
   };
   obj = { variant: "text-xs/semibold", color: "text-subtle", children: null };
   const intl = channelId(1236).intl;
   obj[2] = intl.string(channelId(1236).t.pCaYID);
-  const items3 = [callback2(channelId(4474).Text, obj), ];
+  const items3 = [callback2(channelId(4474).Text, obj)];
   const tmp = callback4();
-  items3[1] = callback2(channelId(6003).ChevronSmallRightIcon, { color: messageId(712).colors.ICON_SUBTLE, size: "xs" });
+  items3[1] = callback2(channelId(6003).ChevronSmallRightIcon, {
+    color: messageId(712).colors.ICON_SUBTLE,
+    size: "xs",
+  });
   obj[2] = items3;
   return callback3(closure_7, obj);
 }
@@ -344,30 +371,44 @@ function ReactionTabs(setReactionSelectedIndex) {
       if (str == null) {
         str = "";
       }
-      return closure_1_17(closure_1_23, { reaction: emoji, selected: arg1 === reactionSelectedIndex }, "" + str + ":" + emoji.emoji.name);
+      return closure_1_17(
+        closure_1_23,
+        { reaction: emoji, selected: arg1 === reactionSelectedIndex },
+        "" + str + ":" + emoji.emoji.name,
+      );
     }),
     tabStyle: null,
     tabStyleActive: null,
     tabStyleSelected: null,
     tabIndexSelected: reactionSelectedIndex,
     onSelect(arg0) {
-      const result = reactionSelectedIndex(closure_1_3[49]).triggerHapticFeedback(setReactionSelectedIndex(closure_1_3[50]).IMPACT_LIGHT);
+      const result = reactionSelectedIndex(closure_1_3[49]).triggerHapticFeedback(
+        setReactionSelectedIndex(closure_1_3[50]).IMPACT_LIGHT,
+      );
       setReactionSelectedIndex(arg0);
     },
-    initialNumTabsToRender: reactionSelectedIndex(4132).MAX_REACTIONS
+    initialNumTabsToRender: reactionSelectedIndex(4132).MAX_REACTIONS,
   };
   ({ tab: obj3[1], tabActive: obj3[2], tabSelected: obj3[3] } = tmp);
-  const items = [callback2(setReactionSelectedIndex(10900), obj), callback2(setReactionSelectedIndex(8369), { outer: true }), ];
+  const items = [
+    callback2(setReactionSelectedIndex(10900), obj),
+    callback2(setReactionSelectedIndex(8369), { outer: true }),
+  ];
   obj1 = { style: tmp.removeButtonContainer, children: null };
   const obj2 = { style: tmp.emojiTextIdentifier, variant: "eyebrow", color: "text-default", children: null };
   const tmp4 = callback2;
   const tmp5 = setReactionSelectedIndex(10900);
   obj2[3] = reactionSelectedIndex(4132).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
-  const items1 = [callback2(reactionSelectedIndex(4474).Text, obj2), ];
+  const items1 = [callback2(reactionSelectedIndex(4474).Text, obj2)];
   const obj3 = {};
   const obj6 = reactionSelectedIndex(4132);
   const merged = Object.assign(setReactionSelectedIndex);
-  items1[1] = tmp4(obj.useExperiment({ location: "ReactionTabs" }, { autoTrackExposure: false }).tidaWebformEnabled ? EmojiOptionsButton : RemoveAllButton, obj3);
+  items1[1] = tmp4(
+    obj.useExperiment({ location: "ReactionTabs" }, { autoTrackExposure: false }).tidaWebformEnabled
+      ? EmojiOptionsButton
+      : RemoveAllButton,
+    obj3,
+  );
   obj1[1] = items1;
   items[2] = closure_18(closure_9, obj1);
   obj[1] = items;
@@ -377,13 +418,41 @@ function ReactionTabs(setReactionSelectedIndex) {
 ({ DEFAULT_NUM_REACTION_USERS: closure_15, Permissions: closure_16 } = ME);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = importDefaultResult.createAnimatedComponent(require("Text").Text);
-let obj = { container: { flex: 1 }, containerEmpty: null, listRow: null, tabContainer: null, tabContainerSelected: null, tab: null, tabSelected: null, tabActive: null, reactionTab: null, removeButtonContainer: null, emojiOptionsButton: null, removeAllButton: null, reactionCountText: null, reactionCountTextSelected: null, emoji: null, emojiText: null, emojiImage: null, emojiTextIdentifier: null, avatar: null, buttonRow: null, loadingSpinner: null };
+let obj = {
+  container: { flex: 1 },
+  containerEmpty: null,
+  listRow: null,
+  tabContainer: null,
+  tabContainerSelected: null,
+  tab: null,
+  tabSelected: null,
+  tabActive: null,
+  reactionTab: null,
+  removeButtonContainer: null,
+  emojiOptionsButton: null,
+  removeAllButton: null,
+  reactionCountText: null,
+  reactionCountTextSelected: null,
+  emoji: null,
+  emojiText: null,
+  emojiImage: null,
+  emojiTextIdentifier: null,
+  avatar: null,
+  buttonRow: null,
+  loadingSpinner: null,
+};
 obj = { padding: 32, borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
 obj[1] = obj;
 createCacheKey = { height: 48, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj[2] = createCacheKey;
 obj[3] = { flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.radii.sm, padding: 8, marginTop: 8 };
-let obj2 = { flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.radii.sm, padding: 8, marginTop: 8 };
+let obj2 = {
+  flexDirection: "row",
+  alignItems: "center",
+  borderRadius: ThemesDefault.radii.sm,
+  padding: 8,
+  marginTop: 8,
+};
 obj[4] = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
 obj[5] = { padding: 0, marginHorizontal: 8, marginBottom: 8 };
 obj[6] = { borderBottomColor: "transparent" };
@@ -394,8 +463,30 @@ obj[9] = { display: "flex", flexDirection: "row", justifyContent: "space-between
 let obj4 = { borderRadius: ThemesDefault.radii.sm };
 obj[10] = { flexDirection: "row", alignItems: "center", marginRight: ThemesDefault.space.PX_16, gap: 2 };
 let obj5 = { flexDirection: "row", alignItems: "center", marginRight: ThemesDefault.space.PX_16, gap: 2 };
-obj[11] = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderRadius: ThemesDefault.radii.xxl, height: 32, overflow: "hidden", minWidth: 42, marginRight: 20, display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 12 };
-let obj6 = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderRadius: ThemesDefault.radii.xxl, height: 32, overflow: "hidden", minWidth: 42, marginRight: 20, display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 12 };
+obj[11] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
+  borderRadius: ThemesDefault.radii.xxl,
+  height: 32,
+  overflow: "hidden",
+  minWidth: 42,
+  marginRight: 20,
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 12,
+};
+let obj6 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
+  borderRadius: ThemesDefault.radii.xxl,
+  height: 32,
+  overflow: "hidden",
+  minWidth: 42,
+  marginRight: 20,
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 12,
+};
 obj[12] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const obj7 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj[13] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
@@ -408,11 +499,20 @@ obj[18] = { marginRight: 10 };
 obj[19] = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center" };
 obj[20] = { height: 48, padding: 6 };
 let closure_20 = createCacheKey.createStyles(obj);
-let closure_24 = { code: "function MessageReactionsContentTsx1(){const{useReducedMotion,buttonWidth,withTiming}=this.__closure;return{maxWidth:useReducedMotion?buttonWidth.get():withTiming(buttonWidth.get(),{duration:200})};}" };
-let closure_25 = { code: "function MessageReactionsContentTsx2(){const{useReducedMotion,textOpacity,withTiming}=this.__closure;return{opacity:useReducedMotion?textOpacity.get():withTiming(textOpacity.get(),{duration:125}),color:'white',fontSize:14,marginLeft:8,textAlignVertical:'center'};}" };
+let closure_24 = {
+  code: "function MessageReactionsContentTsx1(){const{useReducedMotion,buttonWidth,withTiming}=this.__closure;return{maxWidth:useReducedMotion?buttonWidth.get():withTiming(buttonWidth.get(),{duration:200})};}",
+};
+let closure_25 = {
+  code: "function MessageReactionsContentTsx2(){const{useReducedMotion,textOpacity,withTiming}=this.__closure;return{opacity:useReducedMotion?textOpacity.get():withTiming(textOpacity.get(),{duration:125}),color:'white',fontSize:14,marginLeft:8,textAlignVertical:'center'};}",
+};
 const MessageReactionsContent_SwipableBounced = "MessageReactionsContent_SwipableBounced";
 let closure_30 = Storage.get("MessageReactionsContent_SwipableBounced", false);
-const obj9 = { lineHeight: 24, fontSize: 20, textAlign: "center", color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+const obj9 = {
+  lineHeight: 24,
+  fontSize: 20,
+  textAlign: "center",
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+};
 let result = require("set").fileFinishedImporting("modules/reactions/native/MessageReactionsContent.tsx");
 
 export { useReactors };
@@ -450,37 +550,40 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
   }
   closure_2 = isSelectedBurst;
   let obj = React;
-  let tmp3 = callback(React.useState(() => {
-    if (null == messageId) {
-      return 0;
-    } else {
-      const findIndexResult = channelId.findIndex((emoji) => {
-        const emojiEqualsResult = closure_1_0(closure_1_3[15]).emojiEquals(emoji.emoji, closure_1);
-        let num = emoji.burst_count;
-        if (num == null) {
-          num = 0;
-        }
-        let tmp2 = num > 0;
-        if (closure_2) {
-          if (tmp2) {
-            tmp2 = emojiEqualsResult;
+  let tmp3 = callback(
+    React.useState(() => {
+      if (null == messageId) {
+        return 0;
+      } else {
+        const findIndexResult = channelId.findIndex((emoji) => {
+          const emojiEqualsResult = closure_1_0(closure_1_3[15]).emojiEquals(emoji.emoji, closure_1);
+          let num = emoji.burst_count;
+          if (num == null) {
+            num = 0;
           }
-          let tmp3 = tmp2;
-        } else {
-          tmp3 = !tmp2;
-          if (!tmp2) {
-            tmp3 = emojiEqualsResult;
+          let tmp2 = num > 0;
+          if (closure_2) {
+            if (tmp2) {
+              tmp2 = emojiEqualsResult;
+            }
+            let tmp3 = tmp2;
+          } else {
+            tmp3 = !tmp2;
+            if (!tmp2) {
+              tmp3 = emojiEqualsResult;
+            }
           }
+          return tmp3;
+        });
+        let num = 0;
+        if (findIndexResult >= 0) {
+          num = findIndexResult;
         }
-        return tmp3;
-      });
-      let num = 0;
-      if (findIndexResult >= 0) {
-        num = findIndexResult;
+        return num;
       }
-      return num;
-    }
-  }), 2);
+    }),
+    2,
+  );
   const bound = Math.min(tmp3[0], reactions.length - 1);
   if (null != reactions[bound].me_vote) {
     let NORMAL = channelId(reactors[17]).ReactionTypes.VOTE;
@@ -502,7 +605,12 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
     tmp11 = reactors;
   }
   let tmp2 = callback4();
-  ({ reactors, reactorsHasMore } = useReactors({ channelId, messageId, reaction: reactions[bound], reactionType: NORMAL }));
+  ({ reactors, reactorsHasMore } = useReactors({
+    channelId,
+    messageId,
+    reaction: reactions[bound],
+    reactionType: NORMAL,
+  }));
   let tmp10Result = tmp10(tmp11[14]);
   let items = [closure_11];
   const items1 = [channelId];
@@ -513,16 +621,41 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
   const tmp20 = messageId(tmp11[51])();
   const items2 = [closure_14];
   const items3 = [channelId];
-  let tmp21 = tmp8(tmp9[14]).useStateFromStores(items2, () => closure_1_14.canWithPartialContext(closure_1_16.MANAGE_MESSAGES, { channelId }), items3) && !disableManage && isActiveChannelOrUnarchivableThread;
+  let tmp21 =
+    tmp8(tmp9[14]).useStateFromStores(
+      items2,
+      () => closure_1_14.canWithPartialContext(closure_1_16.MANAGE_MESSAGES, { channelId }),
+      items3,
+    ) &&
+    !disableManage &&
+    isActiveChannelOrUnarchivableThread;
   let name = tmp5.emoji.id;
   if (name == null) {
     name = tmp5.emoji.name;
   }
-  obj = { accessibilityLabel: null, footerSize: 48, insetBottom: null, onScroll: null, renderFooter: null, renderItem: null, renderQuickActions: null, itemSize: 48, sections: null, style: null };
+  obj = {
+    accessibilityLabel: null,
+    footerSize: 48,
+    insetBottom: null,
+    onScroll: null,
+    renderFooter: null,
+    renderItem: null,
+    renderQuickActions: null,
+    itemSize: 48,
+    sections: null,
+    style: null,
+  };
   let intl = tmp10(tmp11[34]).intl;
   obj[0] = intl.string(tmp10(tmp11[34]).t.gHp0C4);
   obj[2] = tmp20.bottom;
-  obj[3] = useReactorsOnScrollNative({ channelId, messageId, reactionSelected: reactions[bound], reactors, reactorsHasMore, reactionType: NORMAL });
+  obj[3] = useReactorsOnScrollNative({
+    channelId,
+    messageId,
+    reactionSelected: reactions[bound],
+    reactors,
+    reactorsHasMore,
+    reactionType: NORMAL,
+  });
   channelId = reactors;
   messageId = reactorsHasMore;
   closure_2 = undefined;
@@ -551,7 +684,16 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
   analyticsLocations = tmp19(tmp9[21])().analyticsLocations;
   let tmp19Result = tmp19(tmp9[22]);
   reactionToProfileEnabled = tmp19Result.useConfig({ location: "MessageReactionsContent" }).reactionToProfileEnabled;
-  const items5 = [reactors, channelId, tmp21, messageId, reactions[bound], tmpResult, analyticsLocations, reactionToProfileEnabled];
+  const items5 = [
+    reactors,
+    channelId,
+    tmp21,
+    messageId,
+    reactions[bound],
+    tmpResult,
+    analyticsLocations,
+    reactionToProfileEnabled,
+  ];
   obj[5] = obj.useCallback((arg0, arg1) => {
     obj = obj[arg1];
     const id = obj.id;
@@ -594,7 +736,13 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
         const tmp4Result1 = tmp4(tmp5[28]);
       }
     }
-    obj1 = { leading: closure_1_17(tmp10(reactors[27]).Avatar, obj), label: closure_1_17(messageId(reactors[29]), { user: obj, nick: nickname }), trailing: null, onPress: null, onLongPress: null };
+    obj1 = {
+      leading: closure_1_17(tmp10(reactors[27]).Avatar, obj),
+      label: closure_1_17(messageId(reactors[29]), { user: obj, nick: nickname }),
+      trailing: null,
+      onPress: null,
+      onLongPress: null,
+    };
     obj[2] = guildMemberAvatarSource;
     let tmp14Result = null;
     if (closure_4) {
@@ -603,7 +751,14 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
         obj2 = { onPress: null, children: null };
         obj2[0] = function onPress() {
           obj = channelId(reactors[18]);
-          obj = { channelId: NORMAL, messageId: id, emoji: closure_1_3.emoji, location: channelId(reactors[18]).ReactionLocations.MESSAGE, userId: obj.id, options: null };
+          obj = {
+            channelId: NORMAL,
+            messageId: id,
+            emoji: closure_1_3.emoji,
+            location: channelId(reactors[18]).ReactionLocations.MESSAGE,
+            userId: obj.id,
+            options: null,
+          };
           obj = { burst: NORMAL === channelId(reactors[17]).ReactionTypes.BURST };
           obj[5] = obj;
           return obj.removeReaction(obj);
@@ -624,7 +779,7 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
     }
     obj1[3] = tmp21;
     obj1[4] = openProfile;
-    const items = [closure_1_17(tmp4Result, obj1), ];
+    const items = [closure_1_17(tmp4Result, obj1)];
     tmp14Result = null;
     if (arg1 !== diff) {
       tmp14Result = tmp14(tmp4(tmp5[32]), {});
@@ -653,7 +808,14 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
     obj[2] = messageId(reactors[13]).unsafe_rawColors.RED_400;
     obj[3] = function onPress() {
       let obj = channelId(reactors[18]);
-      obj = { channelId: id, messageId: NORMAL, emoji: closure_1_2.emoji, location: channelId(reactors[18]).ReactionLocations.MESSAGE, userId: id.id, options: null };
+      obj = {
+        channelId: id,
+        messageId: NORMAL,
+        emoji: closure_1_2.emoji,
+        location: channelId(reactors[18]).ReactionLocations.MESSAGE,
+        userId: id.id,
+        options: null,
+      };
       obj = { burst: NORMAL === channelId(reactors[17]).ReactionTypes.BURST };
       obj[5] = obj;
       return obj.removeReaction(obj);
@@ -671,7 +833,13 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
   }, []);
   const tmp8Result = tmp8(tmp9[14]);
   const tmp10Result1 = tmp10(tmp11[30]);
-  obj = { scrollable: true, backdropOpacity: tmp10(tmp11[57]).BACKDROP_OPACITY, backdropChildren: null, header: null, children: null };
+  obj = {
+    scrollable: true,
+    backdropOpacity: tmp10(tmp11[57]).BACKDROP_OPACITY,
+    backdropChildren: null,
+    header: null,
+    children: null,
+  };
   let tmp27Result = null;
   if (NORMAL === tmp10(tmp11[17]).ReactionTypes.BURST) {
     obj1 = { style: null, pointerEvents: "none", children: null };
@@ -687,7 +855,13 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
   obj[2] = tmp27Result;
   tmp27Result = null;
   if (true !== flag) {
-    const obj3 = { reactions: null, reactionSelectedIndex: null, setReactionSelectedIndex: null, messageId: null, channelId: null };
+    const obj3 = {
+      reactions: null,
+      reactionSelectedIndex: null,
+      setReactionSelectedIndex: null,
+      messageId: null,
+      channelId: null,
+    };
     obj3[0] = reactions;
     obj3[1] = bound;
     obj3[2] = tmp3[1];

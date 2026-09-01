@@ -34,4 +34,4 @@ export default function useBottomSheetKeyboardHandling(onFocus) {
     }
     return obj;
   }, items);
-};
+}

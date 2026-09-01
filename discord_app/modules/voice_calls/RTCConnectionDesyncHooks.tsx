@@ -19,13 +19,16 @@ export const useEnsureSyncedChannelVoiceStates = function useEnsureSyncedChannel
   const _require = id;
   dependencyMap = voiceStates;
   let items = [closure_9, closure_10];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let desyncedVoiceStates = null;
-    if (closure_0 === closure_1_10.getChannelId()) {
-      desyncedVoiceStates = closure_1_9.getDesyncedVoiceStates();
-    }
-    return desyncedVoiceStates;
-  });
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let desyncedVoiceStates = null;
+      if (closure_0 === closure_1_10.getChannelId()) {
+        desyncedVoiceStates = closure_1_9.getDesyncedVoiceStates();
+      }
+      return desyncedVoiceStates;
+    },
+  );
   let obj = initialize;
   const items1 = [stateFromStoresArray];
   const React = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
@@ -39,68 +42,97 @@ export const useEnsureSyncedChannelVoiceStates = function useEnsureSyncedChannel
   });
   const obj2 = initialize;
   const items2 = [closure_11];
-  stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items2, () => {
-    const mapped = closure_3.map((arg0) => user.getUser(arg0));
-    return mapped.filter(id(voiceStates[13]).isNotNullish);
-  });
+  stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+    items2,
+    () => {
+      const mapped = closure_3.map((arg0) => user.getUser(arg0));
+      return mapped.filter(id(voiceStates[13]).isNotNullish);
+    },
+  );
   const obj3 = initialize;
   const items3 = [closure_7];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => closure_1_7.getBasicChannel(closure_0));
-  const items4 = [stateFromStoresArray, ];
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items3,
+    () => closure_1_7.getBasicChannel(closure_0),
+  );
+  const items4 = [stateFromStoresArray];
   let guild_id;
   if (stateFromStores1 != null) {
     guild_id = stateFromStores1.guild_id;
   }
   items4[1] = guild_id;
-  const memo = React.useMemo(() => stateFromStoresArray.map((id) => {
-    const obj = { voiceState: new closure_1_5(id.id), user: id, member: null, nick: null, comparator: null, _isPlaceholder: false };
-    let guild_id;
-    if (closure_5 != null) {
-      guild_id = tmp2.guild_id;
-    }
-    let member = null;
-    if (null != guild_id) {
-      let guild_id1;
-      if (tmp2 != null) {
-        guild_id1 = tmp2.guild_id;
-      }
-      member = closure_1_8.getMember(guild_id1, id.id);
-    }
-    obj[2] = member;
-    ({ globalName: obj[3], globalName: obj[4] } = id);
-    return obj;
-  }), items4);
-  const items5 = [stateFromStores, voiceStates, memo];
-  return React.useMemo(() => (function syncChannelVoiceStates(stateFromStores, closure_1, memo) {
-    if (null == stateFromStores) {
-      if (0 === memo.length) {
-        return closure_1;
-      }
-    }
-    const items = [];
-    const set = new Set();
-    const iter = closure_1[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let arr = items.push(nextResult);
-      let addResult = set.add(nextResult.user.id);
-      continue;
-    }
-    if (stateFromStores != null) {
-      const item = stateFromStores.forEach((arg0) => {
-        items.splice(items(set[11]).sortedIndexBy(items, arg0, (comparator) => comparator.comparator), 0, arg0);
-      });
-    }
-    if (memo.length > 0) {
-      const item1 = memo.forEach((user) => {
-        if (!set.has(user.user.id)) {
-          items.splice(items(set[11]).sortedIndexBy(items, user, (comparator) => comparator.comparator), 0, user);
-          const obj = items(set[11]);
+  const memo = React.useMemo(
+    () =>
+      stateFromStoresArray.map((id) => {
+        const obj = {
+          voiceState: new closure_1_5(id.id),
+          user: id,
+          member: null,
+          nick: null,
+          comparator: null,
+          _isPlaceholder: false,
+        };
+        let guild_id;
+        if (closure_5 != null) {
+          guild_id = tmp2.guild_id;
         }
-      });
-    }
-    return items;
-  })(stateFromStores, closure_1, memo), items5);
+        let member = null;
+        if (null != guild_id) {
+          let guild_id1;
+          if (tmp2 != null) {
+            guild_id1 = tmp2.guild_id;
+          }
+          member = closure_1_8.getMember(guild_id1, id.id);
+        }
+        obj[2] = member;
+        ({ globalName: obj[3], globalName: obj[4] } = id);
+        return obj;
+      }),
+    items4,
+  );
+  const items5 = [stateFromStores, voiceStates, memo];
+  return React.useMemo(
+    () =>
+      (function syncChannelVoiceStates(stateFromStores, closure_1, memo) {
+        if (null == stateFromStores) {
+          if (0 === memo.length) {
+            return closure_1;
+          }
+        }
+        const items = [];
+        const set = new Set();
+        const iter = closure_1[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let arr = items.push(nextResult);
+          let addResult = set.add(nextResult.user.id);
+          continue;
+        }
+        if (stateFromStores != null) {
+          const item = stateFromStores.forEach((arg0) => {
+            items.splice(
+              items(set[11]).sortedIndexBy(items, arg0, (comparator) => comparator.comparator),
+              0,
+              arg0,
+            );
+          });
+        }
+        if (memo.length > 0) {
+          const item1 = memo.forEach((user) => {
+            if (!set.has(user.user.id)) {
+              items.splice(
+                items(set[11]).sortedIndexBy(items, user, (comparator) => comparator.comparator),
+                0,
+                user,
+              );
+              const obj = items(set[11]);
+            }
+          });
+        }
+        return items;
+      })(stateFromStores, closure_1, memo),
+    items5,
+  );
 };
 export const useDesyncedChannelParticipants = function useDesyncedChannelParticipants(arg0) {
   const _require = arg0;
@@ -133,7 +165,11 @@ export const useEnsureSyncedChannelParticipants = function useEnsureSyncedChanne
         items = [];
         HermesBuiltin.arraySpread(tmp, 0);
         const item = arr.forEach((arg0) => {
-          items.splice(items(closure_1_1[11]).sortedIndexBy(items, arg0, (arg0) => callback(table[14]).sortKey(arg0)), 0, arg0);
+          items.splice(
+            items(closure_1_1[11]).sortedIndexBy(items, arg0, (arg0) => callback(table[14]).sortKey(arg0)),
+            0,
+            arg0,
+          );
         });
         tmp2 = items;
       }
@@ -145,10 +181,16 @@ export const useIsRTCDisconnectedUIVisible = function useIsRTCDisconnectedUIVisi
   const _require = arg0;
   dependencyMap = id;
   const items = [stateFromStores2];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => stateFromStores2.getId() === closure_1);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => stateFromStores2.getId() === closure_1,
+  );
   const obj = initialize;
   const items1 = [closure_10];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => channelId.getChannelId());
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => channelId.getChannelId(),
+  );
   React = React.useRef(null);
   const obj2 = initialize;
   [tmp4, closure_4] = stateFromStores1(React.useState(false), 2);
@@ -174,22 +216,25 @@ export const useIsRTCDisconnectedUIVisible = function useIsRTCDisconnectedUIVisi
   });
   const obj3 = initialize;
   const items3 = [closure_10, closure_12];
-  const stateFromStores3 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => {
-    let tmp2 = null != closure_1;
-    if (tmp2) {
-      tmp2 = null != closure_0;
-    }
-    if (tmp2) {
-      tmp2 = closure_1_10.getChannelId() === closure_0;
-    }
-    if (tmp2) {
-      tmp2 = null != closure_1_12.isInChannel(closure_0, tmp);
-    }
-    if (tmp2) {
-      tmp2 = !closure_1_10.isUserConnected(tmp);
-    }
-    return tmp2;
-  });
+  const stateFromStores3 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items3,
+    () => {
+      let tmp2 = null != closure_1;
+      if (tmp2) {
+        tmp2 = null != closure_0;
+      }
+      if (tmp2) {
+        tmp2 = closure_1_10.getChannelId() === closure_0;
+      }
+      if (tmp2) {
+        tmp2 = null != closure_1_12.isInChannel(closure_0, tmp);
+      }
+      if (tmp2) {
+        tmp2 = !closure_1_10.isUserConnected(tmp);
+      }
+      return tmp2;
+    },
+  );
   const items4 = [stateFromStores2];
   const effect = React.useEffect(() => {
     if (stateFromStores2) {

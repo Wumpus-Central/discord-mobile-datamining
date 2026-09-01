@@ -19,7 +19,7 @@ function WebsiteGameStoreLinkButton(data) {
     onPress() {
       trackAction(data.action);
       callback(data.url);
-    }
+    },
   });
 }
 noopAll;
@@ -52,7 +52,7 @@ export default function GameProfileStoreLinks(websiteButtons) {
         obj1 = { data: null, trackAction: null };
         obj1[0] = websiteButtons[0];
         obj1[1] = trackAction;
-        const items = [callback(WebsiteGameStoreLinkButton, obj1), ];
+        const items = [callback(WebsiteGameStoreLinkButton, obj1)];
         const obj2 = { data: null, trackAction: null };
         obj2[0] = websiteButtons[1];
         obj2[1] = trackAction;
@@ -91,4 +91,4 @@ export default function GameProfileStoreLinks(websiteButtons) {
     }
   }
   return null;
-};
+}

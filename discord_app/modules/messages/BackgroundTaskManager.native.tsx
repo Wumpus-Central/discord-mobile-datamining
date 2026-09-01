@@ -45,7 +45,7 @@ function endBackgroundTask(c7) {
 function backgroundify(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return callback(function*() {
+  return callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();

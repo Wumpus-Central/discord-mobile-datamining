@@ -4,8 +4,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 
 const map = new Map();
 const Store = initializeDefault.Store;
-class TransientKeyStore extends Store {
-}
+class TransientKeyStore extends Store {}
 const prototype = TransientKeyStore.prototype;
 prototype["getUsers"] = function getUsers() {
   return map;
@@ -39,7 +38,7 @@ const transientKeyStore = new TransientKeyStore(dispatcherDefault, {
   },
   SECURE_FRAMES_TRANSIENT_KEY_DELETE: function handleSecureFramesTransientKeyDelete(userId) {
     return map.delete(userId.userId);
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/rtc/TransientKeyStore.tsx");
 

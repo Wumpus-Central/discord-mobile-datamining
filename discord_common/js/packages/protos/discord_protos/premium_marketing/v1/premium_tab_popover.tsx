@@ -10,7 +10,7 @@ import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 require = arg1;
 class PremiumTabPopover$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , ];
+    items = [, , , , , , ,];
     items[0] = { no: 1, name: "header", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "body", kind: "scalar", T: 9 };
     items[2] = {
@@ -18,16 +18,16 @@ class PremiumTabPopover$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(8463).ThemeAwareAsset;
-          }
+        return callback(8463).ThemeAwareAsset;
+      },
     };
     items[3] = {
       no: 4,
       name: "button",
       kind: "message",
       T() {
-            return callback(8455).CTAButton;
-          }
+        return callback(8455).CTAButton;
+      },
     };
     items[4] = { no: 5, name: "help_article_id", kind: "scalar", T: 9 };
     items[5] = {
@@ -35,8 +35,8 @@ class PremiumTabPopover$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(8454).HelpArticle;
-          }
+        return callback(8454).HelpArticle;
+      },
     };
     obj = { no: 7, name: "header_localized", kind: "message", T: null };
     class T {
@@ -51,8 +51,8 @@ class PremiumTabPopover$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
-          }
+        return callback(8453).LocalizedString;
+      },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.PremiumTabPopover", items, T);
     // ThrowIfThisInitialized (0x7c)
@@ -120,7 +120,12 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         let tmp29 = LocalizedString2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
-        obj.headerLocalized = LocalizedString2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.headerLocalized);
+        obj.headerLocalized = LocalizedString2.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.headerLocalized,
+        );
       } else if (8 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
@@ -177,14 +182,30 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wri
   if (header.asset) {
     const ThemeAwareAsset = create4.ThemeAwareAsset;
     const tagResult2 = tag.tag(3, _mod1307.WireType.LengthDelimited);
-    const joined = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = ThemeAwareAsset.internalBinaryWrite(
+      header.asset,
+      tag.tag(3, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(
+      header.asset,
+      tag.tag(3, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.button) {
     const CTAButton = create3.CTAButton;
     const tagResult3 = tag.tag(4, _mod1307.WireType.LengthDelimited);
-    const joined1 = CTAButton.internalBinaryWrite(header.button, tag.tag(4, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(header.button, tag.tag(4, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = CTAButton.internalBinaryWrite(
+      header.button,
+      tag.tag(4, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(
+      header.button,
+      tag.tag(4, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if ("" !== header.helpArticleId) {
     tag.tag(5, _mod1307.WireType.LengthDelimited).string(header.helpArticleId);
@@ -193,20 +214,44 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wri
   if (header.helpArticle) {
     const HelpArticle = create2.HelpArticle;
     const tagResult5 = tag.tag(6, _mod1307.WireType.LengthDelimited);
-    const joined2 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined2 = HelpArticle.internalBinaryWrite(
+      header.helpArticle,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult2 = HelpArticle.internalBinaryWrite(
+      header.helpArticle,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.headerLocalized) {
     const LocalizedString = create.LocalizedString;
     const tagResult6 = tag.tag(7, _mod1307.WireType.LengthDelimited);
-    const joined3 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(7, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(7, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined3 = LocalizedString.internalBinaryWrite(
+      header.headerLocalized,
+      tag.tag(7, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult3 = LocalizedString.internalBinaryWrite(
+      header.headerLocalized,
+      tag.tag(7, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.bodyLocalized) {
     const LocalizedString2 = create.LocalizedString;
     const tagResult7 = tag.tag(8, _mod1307.WireType.LengthDelimited);
-    const joined4 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(8, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult4 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(8, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined4 = LocalizedString2.internalBinaryWrite(
+      header.bodyLocalized,
+      tag.tag(8, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult4 = LocalizedString2.internalBinaryWrite(
+      header.bodyLocalized,
+      tag.tag(8, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -227,7 +272,7 @@ let items = [
     kind: "message",
     T() {
       return callback(8463).ThemeAwareAsset;
-    }
+    },
   },
   {
     no: 4,
@@ -235,7 +280,7 @@ let items = [
     kind: "message",
     T() {
       return callback(8455).CTAButton;
-    }
+    },
   },
   { no: 5, name: "help_article_id", kind: "scalar", T: 9 },
   {
@@ -244,10 +289,9 @@ let items = [
     kind: "message",
     T() {
       return callback(8454).HelpArticle;
-    }
+    },
   },
-,
-
+  ,
 ];
 let obj = { no: 7, name: "header_localized", kind: "message", T: null };
 class T {
@@ -263,10 +307,20 @@ items[7] = {
   kind: "message",
   T() {
     return callback(8453).LocalizedString;
-  }
+  },
 };
-prototype = new prototype("discord_protos.premium_marketing.v1.PremiumTabPopover", items, tmp, T, PremiumTabPopover$Type, prototype, items);
+prototype = new prototype(
+  "discord_protos.premium_marketing.v1.PremiumTabPopover",
+  items,
+  tmp,
+  T,
+  PremiumTabPopover$Type,
+  prototype,
+  items,
+);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_tab_popover.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_tab_popover.tsx",
+);
 
 export const PremiumTabPopover = prototype;

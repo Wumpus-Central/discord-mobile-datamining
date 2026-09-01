@@ -19,8 +19,29 @@ let closure_13 = createCacheKey.createStyles((arg0) => {
   if (arg0 == null) {
     BACKGROUND_BASE_LOWER = ThemesDefault.colors.BACKGROUND_BASE_LOWER;
   }
-  let obj = { container: { backgroundColor: BACKGROUND_BASE_LOWER, alignItems: "center", paddingHorizontal: 16, paddingBottom: 16, paddingTop: 8 }, stickerContainer: { paddingBottom: 16 }, toastContainer: null, toastContent: null, gradient: null };
-  obj = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", gap: 8, height: 48, paddingHorizontal: 16, borderRadius: ThemesDefault.radii.xxl };
+  let obj = {
+    container: {
+      backgroundColor: BACKGROUND_BASE_LOWER,
+      alignItems: "center",
+      paddingHorizontal: 16,
+      paddingBottom: 16,
+      paddingTop: 8,
+    },
+    stickerContainer: { paddingBottom: 16 },
+    toastContainer: null,
+    toastContent: null,
+    gradient: null,
+  };
+  obj = {
+    flexDirection: "row",
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 8,
+    height: 48,
+    paddingHorizontal: 16,
+    borderRadius: ThemesDefault.radii.xxl,
+  };
   obj[2] = obj;
   obj[3] = { lineHeight: 20 };
   obj[4] = { position: "absolute", right: 0, left: 0, top: 0, height: 30 };
@@ -28,7 +49,9 @@ let closure_13 = createCacheKey.createStyles((arg0) => {
 });
 let c14 = "749054660769218631";
 const END = require("getGradientColorByPercentage").GradientPercentage.END;
-let closure_16 = { code: "function DMMessageStickerGreetingTsx1(){const{styles,isRendered,hasInputText,hasMessages,HEIGHT_COMPACT,HEIGHT_FULL,withDelay,withTiming,STANDARD_EASING}=this.__closure;const gradientOverlayOffset=styles.gradient.height;const hasHeight=isRendered&&!hasInputText;const heightExpanded=(hasMessages?HEIGHT_COMPACT:HEIGHT_FULL)-1;const targetHeight=hasHeight?heightExpanded+gradientOverlayOffset:0;const targetMargin=hasHeight?-gradientOverlayOffset:0;function generateAnimationConfig(value){return withDelay(300,withTiming(value,{easing:STANDARD_EASING,duration:250}));}return{justifyContent:'flex-end',overflow:'hidden',marginTop:generateAnimationConfig(targetMargin),height:generateAnimationConfig(targetHeight)};}" };
+let closure_16 = {
+  code: "function DMMessageStickerGreetingTsx1(){const{styles,isRendered,hasInputText,hasMessages,HEIGHT_COMPACT,HEIGHT_FULL,withDelay,withTiming,STANDARD_EASING}=this.__closure;const gradientOverlayOffset=styles.gradient.height;const hasHeight=isRendered&&!hasInputText;const heightExpanded=(hasMessages?HEIGHT_COMPACT:HEIGHT_FULL)-1;const targetHeight=hasHeight?heightExpanded+gradientOverlayOffset:0;const targetMargin=hasHeight?-gradientOverlayOffset:0;function generateAnimationConfig(value){return withDelay(300,withTiming(value,{easing:STANDARD_EASING,duration:250}));}return{justifyContent:'flex-end',overflow:'hidden',marginTop:generateAnimationConfig(targetMargin),height:generateAnimationConfig(targetHeight)};}",
+};
 const result = require("set").fileFinishedImporting("modules/messages/native/DMMessageStickerGreeting.tsx");
 
 export default function DMMessageStickerGreeting(channel) {
@@ -70,13 +93,17 @@ export default function DMMessageStickerGreeting(channel) {
   const tmp2 = END;
   const items2 = [closure_7];
   const items3 = [showConvoStarterInDM];
-  const stateFromStores2 = Text(589).useStateFromStores(items2, () => {
-    let stickerById = null;
-    if (closure_4) {
-      stickerById = closure_1_7.getStickerById(closure_1_14);
-    }
-    return stickerById;
-  }, items3);
+  const stateFromStores2 = Text(589).useStateFromStores(
+    items2,
+    () => {
+      let stickerById = null;
+      if (closure_4) {
+        stickerById = closure_1_7.getStickerById(closure_1_14);
+      }
+      return stickerById;
+    },
+    items3,
+  );
   const items4 = [showConvoStarterInDM];
   const effect = React.useEffect(() => {
     if (closure_4) {
@@ -100,104 +127,107 @@ export default function DMMessageStickerGreeting(channel) {
     lib(null);
   }, items5);
   const items6 = [first1, first, channel.id];
-  callback = React.useCallback(first1(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        let tmp7 = v0;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_1 = tmp3;
-            let showErrorToast = tmp7;
-            showErrorToast = function showErrorToast(intl) {
-              if (callback !== intl) {
-                tmp30(intl);
-              }
-              let obj = callback(tmp30[13]);
-              obj = { key: "HANDLE_WAVE_PRESS_TOAST", content: intl, icon: callback(tmp30[14]) };
-              obj.open(obj);
-            };
-            tmp7 = c3;
-            if (!c3) {
-              v0(true);
-              if (null !== closure_1_1) {
-                v0(false);
-                showErrorToast(tmp26);
-                c5 = 3;
-                return { value: "HermesInternal", done: null };
-              } else {
-                c3 = 1;
-                obj1 = { channelId: null, source: "In-channel greet" };
-                obj1[0] = closure_1_0.id;
-                closure_1_0(closure_1_2[15]).trackWaveCtaClicked(obj1);
-                const obj5 = closure_1_0(closure_1_2[15]);
-                v0 = 2;
-                c5 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = closure_1_1(closure_1_2[16]).sendGreetMessage(closure_1_0.id, closure_1_14);
-                return obj2;
-              }
-            }
-          }
-        } else {
-          if (1 === tmp7) {
-            c3 = 0;
-            closure_1 = closure_2;
-            let ok = closure_1.ok;
-            if (!ok) {
-              ok = 429 !== closure_1.status;
-            }
-            if (!ok) {
-              const intl = closure_1_0(closure_1_2[17]).intl;
-              showErrorToast(intl.string(closure_1_0(closure_1_2[17]).t.Whhv4w));
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c3 = 0;
-          }
-          tmp7 = v0(false);
-        }
+  callback = React.useCallback(
+    first1(function* () {
+      if (c5 === 2) {
         c5 = 3;
-      } catch (tmp30) {
-        closure_2 = tmp30;
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp30;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          v0 = tmp;
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          let tmp7 = v0;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_1 = tmp3;
+              let showErrorToast = tmp7;
+              showErrorToast = function showErrorToast(intl) {
+                if (callback !== intl) {
+                  tmp30(intl);
+                }
+                let obj = callback(tmp30[13]);
+                obj = { key: "HANDLE_WAVE_PRESS_TOAST", content: intl, icon: callback(tmp30[14]) };
+                obj.open(obj);
+              };
+              tmp7 = c3;
+              if (!c3) {
+                v0(true);
+                if (null !== closure_1_1) {
+                  v0(false);
+                  showErrorToast(tmp26);
+                  c5 = 3;
+                  return { value: "HermesInternal", done: null };
+                } else {
+                  c3 = 1;
+                  obj1 = { channelId: null, source: "In-channel greet" };
+                  obj1[0] = closure_1_0.id;
+                  closure_1_0(closure_1_2[15]).trackWaveCtaClicked(obj1);
+                  const obj5 = closure_1_0(closure_1_2[15]);
+                  v0 = 2;
+                  c5 = 1;
+                  const obj2 = { value: null, done: false };
+                  obj2[0] = closure_1_1(closure_1_2[16]).sendGreetMessage(closure_1_0.id, closure_1_14);
+                  return obj2;
+                }
+              }
+            }
+          } else {
+            if (1 === tmp7) {
+              c3 = 0;
+              closure_1 = closure_2;
+              let ok = closure_1.ok;
+              if (!ok) {
+                ok = 429 !== closure_1.status;
+              }
+              if (!ok) {
+                const intl = closure_1_0(closure_1_2[17]).intl;
+                showErrorToast(intl.string(closure_1_0(closure_1_2[17]).t.Whhv4w));
+              }
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              c3 = 0;
+            }
+            tmp7 = v0(false);
+          }
+          c5 = 3;
+        } catch (tmp30) {
+          closure_2 = tmp30;
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp30;
+          } else {
+            v0 = tmp;
+          }
         }
       }
-    }
-  }), items6);
+    }),
+    items6,
+  );
   _require = undefined;
   const TextResult1 = Text(589);
   [tmp17, tmp18] = callback(React.useState(false), 2);
@@ -236,7 +266,17 @@ export default function DMMessageStickerGreeting(channel) {
     obj[3] = obj5.withDelay(300, _undefined(lib[24]).withTiming(num, obj));
     return obj;
   };
-  obj = { styles: toastContent, isRendered: tmp17, hasInputText, hasMessages: stateFromStores, HEIGHT_COMPACT: 72, HEIGHT_FULL: 180, withDelay: Text(4217).withDelay, withTiming: Text(4479).withTiming, STANDARD_EASING: Text(1297).STANDARD_EASING };
+  obj = {
+    styles: toastContent,
+    isRendered: tmp17,
+    hasInputText,
+    hasMessages: stateFromStores,
+    HEIGHT_COMPACT: 72,
+    HEIGHT_FULL: 180,
+    withDelay: Text(4217).withDelay,
+    withTiming: Text(4479).withTiming,
+    STANDARD_EASING: Text(1297).STANDARD_EASING,
+  };
   fn.__closure = obj;
   fn.__workletHash = 6327401707106;
   fn.__initData = closure_16;
@@ -261,7 +301,7 @@ export default function DMMessageStickerGreeting(channel) {
     obj1 = { style: null, colors: null };
     obj1[0] = toastContent.gradient;
     obj1[1] = items8;
-    const items9 = [callback2(tmp5(4940), obj1), ];
+    const items9 = [callback2(tmp5(4940), obj1)];
     obj2 = { style: null, children: null };
     obj2[0] = toastContent.container;
     if (stateFromStores) {
@@ -278,7 +318,7 @@ export default function DMMessageStickerGreeting(channel) {
         obj4[2] = shouldAnimateSticker;
         tmp24Result = tmp24(tmp5, obj4);
       }
-      callback = [tmp24Result, ];
+      callback = [tmp24Result];
       Text = Text(4474).Text;
       let obj5 = { style: null, variant: "text-md/bold", children: null };
       toastContent = toastContent.toastContent;
@@ -300,7 +340,7 @@ export default function DMMessageStickerGreeting(channel) {
         tmp24Result = tmp24(tmp25, obj6);
       }
       const obj8 = { children: null };
-      const items10 = [tmp24Result, ];
+      const items10 = [tmp24Result];
       const obj9 = { text: null, onPress: null, shrink: true };
       obj9[0] = formatToPlainStringResult;
       obj9[1] = callback;
@@ -315,4 +355,4 @@ export default function DMMessageStickerGreeting(channel) {
     obj[2] = items9;
     tmp23Result = tmp23(tmp5(4217).View, obj);
   }
-};
+}

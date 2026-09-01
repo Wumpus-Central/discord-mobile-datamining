@@ -9,7 +9,9 @@ let closure_3 = AccountNotificationFlags.NotificationSettingsUpdateType;
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/notifications/summary_reminder/SummaryReminderNotificationUtils.tsx");
 
-export const onSummaryReminderNotificationSettingsChanged = function onSummaryReminderNotificationSettingsChanged(summary_reminder_notifications) {
+export const onSummaryReminderNotificationSettingsChanged = function onSummaryReminderNotificationSettingsChanged(
+  summary_reminder_notifications,
+) {
   const EnableSummaryReminderNotifications = explicitContentFromProto.EnableSummaryReminderNotifications;
   EnableSummaryReminderNotifications.updateSetting(summary_reminder_notifications);
   let obj = expandEventPropertiesDefault;

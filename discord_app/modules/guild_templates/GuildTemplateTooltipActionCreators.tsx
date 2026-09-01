@@ -8,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/guild_templates/Gui
 
 export default {
   checkGuildTemplateDirty(closure_0) {
-    return callback(function*() {
+    return callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -72,5 +72,5 @@ export default {
   },
   hideGuildTemplatePromotionTooltip() {
     dispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE" });
-  }
+  },
 };

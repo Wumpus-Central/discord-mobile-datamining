@@ -75,8 +75,7 @@ let closure_21 = {};
 let c22 = false;
 let c23 = null;
 const PersistedStore = initializeDefault.PersistedStore;
-class ChannelSectionStore extends PersistedStore {
-}
+class ChannelSectionStore extends PersistedStore {}
 const prototype = ChannelSectionStore.prototype;
 prototype["initialize"] = function initialize(isMembersOpen) {
   if (null != isMembersOpen) {
@@ -108,7 +107,13 @@ prototype["initialize"] = function initialize(isMembersOpen) {
   this.waitFor(closure_5, closure_3, closure_6, closure_7, closure_4, closure_8, closure_9, closure_10);
 };
 prototype["getState"] = function getState() {
-  return { isMembersOpen: c16, isSummariesOpen: c17, isProfileOpen: c19, sidebars: closure_20, guildSidebars: closure_21 };
+  return {
+    isMembersOpen: c16,
+    isSummariesOpen: c17,
+    isProfileOpen: c19,
+    sidebars: closure_20,
+    guildSidebars: closure_21,
+  };
 };
 prototype["getSection"] = function getSection(arg0, arg1) {
   if (c22) {
@@ -753,13 +758,18 @@ const channelSectionStore = new ChannelSectionStore(dispatcherDefault, {
       }
     }
     return false;
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/ChannelSectionStore.tsx");
 
 export default channelSectionStore;
 export const MESSAGE_REQUESTS_BASE_CHANNEL_ID = "message_requests";
 export const isViewChannelSidebar = function isViewChannelSidebar(type) {
-  const items = [SidebarType.SidebarType.VIEW_CHANNEL, SidebarType.SidebarType.VIEW_THREAD, SidebarType.SidebarType.VIEW_MESSAGE_REQUEST, SidebarType.SidebarType.VIEW_MOD_REPORT];
+  const items = [
+    SidebarType.SidebarType.VIEW_CHANNEL,
+    SidebarType.SidebarType.VIEW_THREAD,
+    SidebarType.SidebarType.VIEW_MESSAGE_REQUEST,
+    SidebarType.SidebarType.VIEW_MOD_REPORT,
+  ];
   return items.includes(type.type);
 };

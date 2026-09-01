@@ -7,7 +7,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 ({ AllFriendSourceFlags: c5, FriendSourceFlags: closure_6 } = ME);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/UserSettingsFriendRequests.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/content_and_social/native/UserSettingsFriendRequests.tsx",
+);
 
 export default function UserSettingsFriendRequests() {
   let FriendSourceFlagsSetting = setting(4166).FriendSourceFlagsSetting;
@@ -31,7 +33,7 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(tmp3);
   };
-  const items1 = [callback(setting(5993).TableSwitchRow, obj), , ];
+  const items1 = [callback(setting(5993).TableSwitchRow, obj), ,];
   obj1 = { label: null, value: null, onValueChange: null };
   const intl3 = setting(1236).intl;
   obj1[0] = intl3.string(setting(1236).t.IqlCSq);
@@ -65,4 +67,4 @@ export default function UserSettingsFriendRequests() {
   obj[2] = items1;
   obj[0] = callback2(setting(5992).TableRowGroup, obj);
   return callback(View, obj);
-};
+}

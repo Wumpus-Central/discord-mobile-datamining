@@ -12,7 +12,11 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
   const _require = id;
   const items = [closure_5];
   const items1 = [id];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.getChannel(closure_0), items1);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_5.getChannel(closure_0),
+    items1,
+  );
   let obj = initialize;
   const canEveryoneRoleResult = stateFromStores(4126).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
   const obj2 = stateFromStores(4126);
@@ -29,7 +33,7 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
         const result = id(id[6]).setEveryoneRolePermissionAllowed(tmp, closure_1_6.REQUEST_TO_SPEAK, arg0);
         const obj = id(id[6]);
       }
-    }
+    },
   ];
   return items2;
 };

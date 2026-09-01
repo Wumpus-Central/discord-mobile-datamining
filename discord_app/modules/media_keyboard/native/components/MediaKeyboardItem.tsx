@@ -24,7 +24,10 @@ function NewCaption(arg0) {
   let obj = { style: items, children: null };
   items = [tmp.labelContainer, style];
   obj = { source: registerAssetDefault, style: tmp.icon };
-  const items1 = [callback(Button.Icon, obj), callback(Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
+  const items1 = [
+    callback(Button.Icon, obj),
+    callback(Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label }),
+  ];
   obj[1] = items1;
   return callback2(closure_4, obj);
 }
@@ -48,51 +51,58 @@ function MediaKeyboardImage(draftType) {
   let obj = index(totalNumItems[12]);
   const items = [image];
   const items1 = [channelId, draftType, image, includedUploadIds];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const obj = {
-      upload: image.findUpload(totalNumItems, index, (id) => {
-        let doesImageMatchUploadResult = closure_1_0(closure_1_2[13]).doesImageMatchUpload(closure_6, id);
-        if (doesImageMatchUploadResult) {
-          doesImageMatchUploadResult = null == closure_5 || closure_5.includes(id.id);
-          const obj2 = closure_5;
-          const tmp3 = null == closure_5 || closure_5.includes(id.id);
-        }
-        return doesImageMatchUploadResult;
-      }),
-      uploadCount: null
-    };
-    let length;
-    if (includedUploadIds != null) {
-      length = includedUploadIds.length;
-    }
-    if (length == null) {
-      length = image.getUploadCount(totalNumItems, index);
-    }
-    obj[1] = length;
-    return obj;
-  }, items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => {
+      const obj = {
+        upload: image.findUpload(totalNumItems, index, (id) => {
+          let doesImageMatchUploadResult = closure_1_0(closure_1_2[13]).doesImageMatchUpload(closure_6, id);
+          if (doesImageMatchUploadResult) {
+            doesImageMatchUploadResult = null == closure_5 || closure_5.includes(id.id);
+            const obj2 = closure_5;
+            const tmp3 = null == closure_5 || closure_5.includes(id.id);
+          }
+          return doesImageMatchUploadResult;
+        }),
+        uploadCount: null,
+      };
+      let length;
+      if (includedUploadIds != null) {
+        length = includedUploadIds.length;
+      }
+      if (length == null) {
+        length = image.getUploadCount(totalNumItems, index);
+      }
+      obj[1] = length;
+      return obj;
+    },
+    items1,
+  );
   constants = tmp5;
   obj1 = onPressItem;
   const items2 = [channelId, item, null != stateFromStoresObject.upload, onPressItem, onLongPressItem];
-  const memo = onPressItem.useMemo(() => ({
-    onPress() {
-      let obj = closure_1_1(closure_1_2[14]);
-      obj.hideNativeMenu();
-      obj = { channelId: closure_2, item: closure_1, isIncluded: closure_7 };
-      callback(obj);
-    },
-    onLongPress() {
-      let obj = closure_1_1(closure_1_2[14]);
-      obj.hideNativeMenu();
-      if (closure_4 != null) {
-        obj = { channelId: null, item: null, isIncluded: null };
-        obj[0] = closure_2;
-        obj[1] = closure_1;
-        obj[2] = closure_7;
-        tmp2(obj);
-      }
-    }
-  }), items2);
+  const memo = onPressItem.useMemo(
+    () => ({
+      onPress() {
+        let obj = closure_1_1(closure_1_2[14]);
+        obj.hideNativeMenu();
+        obj = { channelId: closure_2, item: closure_1, isIncluded: closure_7 };
+        callback(obj);
+      },
+      onLongPress() {
+        let obj = closure_1_1(closure_1_2[14]);
+        obj.hideNativeMenu();
+        if (closure_4 != null) {
+          obj = { channelId: null, item: null, isIncluded: null };
+          obj[0] = closure_2;
+          obj[1] = closure_1;
+          obj[2] = closure_7;
+          tmp2(obj);
+        }
+      },
+    }),
+    items2,
+  );
   if (constants.PHOTO !== type) {
     if (constants2.IMAGE !== type) {
       if (tmp9.VIDEO === type) {
@@ -116,8 +126,8 @@ function MediaKeyboardImage(draftType) {
       }
       let tmp16 = !tmp5;
       if (!tmp5) {
-        tmp16 = stateFromStoresObject.uploadCount >= uploadLimit && disableWhenReachedLimit || disabled;
-        const tmp17 = stateFromStoresObject.uploadCount >= uploadLimit && disableWhenReachedLimit || disabled;
+        tmp16 = (stateFromStoresObject.uploadCount >= uploadLimit && disableWhenReachedLimit) || disabled;
+        const tmp17 = (stateFromStoresObject.uploadCount >= uploadLimit && disableWhenReachedLimit) || disabled;
       }
       obj = { style: null, children: null };
       obj[0] = tmp.checkIconContainer;
@@ -127,7 +137,16 @@ function MediaKeyboardImage(draftType) {
       obj1[3] = tmp.checkIcon;
       obj[1] = callback(tmp2(tmp3[9]).Icon, obj1);
       const items3 = [index, numItemsPerRow, totalNumItems];
-      let obj2 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, onLongPress: null, disabled: null, style: null, children: null };
+      let obj2 = {
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        accessibilityState: null,
+        onPress: null,
+        onLongPress: null,
+        disabled: null,
+        style: null,
+        children: null,
+      };
       obj2[1] = stringResult;
       const obj3 = { selected: null };
       obj3[0] = tmp5;
@@ -135,7 +154,7 @@ function MediaKeyboardImage(draftType) {
       obj2[3] = tmp7;
       obj2[4] = tmp8;
       obj2[5] = tmp16;
-      const items4 = [tmp.imageContainer, , ];
+      const items4 = [tmp.imageContainer, ,];
       let imageDisabled;
       const memo1 = obj1.useMemo(() => {
         let num = 0;
@@ -149,7 +168,13 @@ function MediaKeyboardImage(draftType) {
         if (0 === index) {
           num4 = 16;
         }
-        const obj = { borderTopLeftRadius: num4, borderTopRightRadius: null, borderBottomLeftRadius: null, borderBottomRightRadius: null, marginLeft: null };
+        const obj = {
+          borderTopLeftRadius: num4,
+          borderTopRightRadius: null,
+          borderBottomLeftRadius: null,
+          borderBottomRightRadius: null,
+          marginLeft: null,
+        };
         if (totalNumItems >= numItemsPerRow) {
           let tmp7 = tmp4 === tmp5 - 1;
         } else {
@@ -190,7 +215,7 @@ function MediaKeyboardImage(draftType) {
       items4[2] = memo1;
       obj2[6] = items4;
       const obj4 = { resizeMode: "cover", resizeMethod: "resize", style: null, source: null, localImageSource: null };
-      const items5 = [tmp.image, ];
+      const items5 = [tmp.image];
       const obj5 = { height: null, width: null };
       obj5[0] = size;
       obj5[1] = size;
@@ -206,11 +231,11 @@ function MediaKeyboardImage(draftType) {
       obj7[1] = size;
       obj7[2] = size;
       obj4[4] = obj7;
-      const items6 = [callback(tmp2(tmp3[9]).ThumbnailImage, obj4), tmp12, , ];
+      const items6 = [callback(tmp2(tmp3[9]).ThumbnailImage, obj4), tmp12, ,];
       let tmp18Result = null;
       if (tmp5) {
         const obj8 = { style: null };
-        const items7 = [tmp.selectedOverlay, ];
+        const items7 = [tmp.selectedOverlay];
         const obj9 = { height: null, width: null };
         obj9[0] = size;
         obj9[1] = size;
@@ -238,7 +263,7 @@ function MediaKeyboardImage(draftType) {
 function MediaKeyboardDummy(arg0) {
   ({ size, isFirstInRow } = arg0);
   const tmp = callback3();
-  const items = [tmp.imageContainer, ];
+  const items = [tmp.imageContainer];
   let obj = !isFirstInRow;
   if (!isFirstInRow) {
     obj = { marginLeft: 4 };
@@ -274,7 +299,14 @@ function MediaKeyboardSpecialButton(arg0) {
     obj[0] = obj2.withTiming(index(totalNumItems[5]).interpolateColor(index.get(), [0, 1], items), obj);
     return obj;
   };
-  obj = { withTiming: index(totalNumItems[20]).withTiming, interpolateColor: index(totalNumItems[5]).interpolateColor, pressed: sharedValue, backgroundColor, pressedBackgroundColor, Easing: index(totalNumItems[5]).Easing };
+  obj = {
+    withTiming: index(totalNumItems[20]).withTiming,
+    interpolateColor: index(totalNumItems[5]).interpolateColor,
+    pressed: sharedValue,
+    backgroundColor,
+    pressedBackgroundColor,
+    Easing: index(totalNumItems[5]).Easing,
+  };
   fn.__closure = obj;
   fn.__workletHash = 15924448581794;
   fn.__initData = closure_17;
@@ -292,9 +324,9 @@ function MediaKeyboardSpecialButton(arg0) {
     },
     onPress,
     style: null,
-    children: null
+    children: null,
   };
-  const items1 = [animatedStyle, , , , , ];
+  const items1 = [animatedStyle, , , , ,];
   ({ imageContainer: arr2[1], specialButton: arr2[2] } = tmp);
   items1[3] = { width: size, height: size };
   items1[4] = importAllResult.useMemo(() => {
@@ -309,7 +341,13 @@ function MediaKeyboardSpecialButton(arg0) {
     if (0 === index) {
       num4 = 16;
     }
-    const obj = { borderTopLeftRadius: num4, borderTopRightRadius: null, borderBottomLeftRadius: null, borderBottomRightRadius: null, marginLeft: null };
+    const obj = {
+      borderTopLeftRadius: num4,
+      borderTopRightRadius: null,
+      borderBottomLeftRadius: null,
+      borderBottomRightRadius: null,
+      marginLeft: null,
+    };
     if (totalNumItems >= numItemsPerRow) {
       let tmp7 = tmp4 === tmp5 - 1;
     } else {
@@ -357,11 +395,34 @@ let c3 = importAllResult;
 ({ ALAssetsType: error, DeviceMediaType: closure_8 } = frozen);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = importDefaultResult.createAnimatedComponent(Pressable);
-let obj = { container: { flexDirection: "row", paddingHorizontal: 12, alignItems: "center" }, image: null, imageContainer: null, labelContainer: null, mediaKeyboardItemLabelContainer: null, icon: null, checkIcon: null, checkIconContainer: null, selectedOverlay: null, specialButton: null, disabled: null, imageDisabled: null };
+let obj = {
+  container: { flexDirection: "row", paddingHorizontal: 12, alignItems: "center" },
+  image: null,
+  imageContainer: null,
+  labelContainer: null,
+  mediaKeyboardItemLabelContainer: null,
+  icon: null,
+  checkIcon: null,
+  checkIconContainer: null,
+  selectedOverlay: null,
+  specialButton: null,
+  disabled: null,
+  imageDisabled: null,
+};
 obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj[1] = obj;
 obj[2] = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", position: "relative" };
-createCacheKey = { flexDirection: "row", alignItems: "center", backgroundColor: null, borderRadius: null, paddingHorizontal: 5, paddingVertical: 4, position: "absolute", left: 8, bottom: 8 };
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: null,
+  borderRadius: null,
+  paddingHorizontal: 5,
+  paddingVertical: 4,
+  position: "absolute",
+  left: 8,
+  bottom: 8,
+};
 createCacheKey[2] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.6);
 createCacheKey[3] = ThemesDefault.radii.xs;
 obj[3] = createCacheKey;
@@ -370,7 +431,19 @@ let obj1 = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", position:
 obj[5] = { width: 12, height: 12, tintColor: ThemesDefault.colors.WHITE, marginEnd: 4 };
 let obj3 = { width: 12, height: 12, tintColor: ThemesDefault.colors.WHITE, marginEnd: 4 };
 obj[6] = { width: 14, height: 14, color: ThemesDefault.colors.BACKGROUND_BRAND };
-let obj5 = { width: 24, height: 24, position: "absolute", justifyContent: "center", alignItems: "center", right: 6, top: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.WHITE, borderWidth: 1, borderColor: null };
+let obj5 = {
+  width: 24,
+  height: 24,
+  position: "absolute",
+  justifyContent: "center",
+  alignItems: "center",
+  right: 6,
+  top: 6,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.WHITE,
+  borderWidth: 1,
+  borderColor: null,
+};
 obj5[10] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.1);
 obj[7] = obj5;
 let obj6 = {};
@@ -382,13 +455,32 @@ obj[9] = { flexDirection: "column", justifyContent: "center", alignItems: "cente
 obj[10] = { opacity: 0.4 };
 obj[11] = { opacity: 0.2 };
 let closure_12 = createCacheKey.createStyles(obj);
-hexToRgba = { backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, pressedBackgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE };
+hexToRgba = {
+  backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
+  pressedBackgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE,
+};
 let closure_16 = createCacheKey.createStyleProperties(hexToRgba);
-let closure_17 = { code: "function MediaKeyboardItemTsx1(){const{withTiming,interpolateColor,pressed,backgroundColor,pressedBackgroundColor,Easing}=this.__closure;return{backgroundColor:withTiming(interpolateColor(pressed.get(),[0,1],[backgroundColor,pressedBackgroundColor]),{duration:200,easing:Easing.out(Easing.quad)})};}" };
+let closure_17 = {
+  code: "function MediaKeyboardItemTsx1(){const{withTiming,interpolateColor,pressed,backgroundColor,pressedBackgroundColor,Easing}=this.__closure;return{backgroundColor:withTiming(interpolateColor(pressed.get(),[0,1],[backgroundColor,pressedBackgroundColor]),{duration:200,easing:Easing.out(Easing.quad)})};}",
+};
 let obj4 = { width: 14, height: 14, color: ThemesDefault.colors.BACKGROUND_BRAND };
 const memoResult = importAllResult.memo((arg0) => {
-  ({ items, channel: require, draftType: importDefault, onPressItem: dependencyMap, onLongPressItem: closure_3, rowIndex: closure_4, totalNumItems: Pressable, numPerRow } = arg0);
-  ({ includedUploadIds: closure_7, uploadLimit: closure_8, disableWhenReachedLimit: closure_9, disabled: closure_10 } = arg0);
+  ({
+    items,
+    channel: require,
+    draftType: importDefault,
+    onPressItem: dependencyMap,
+    onLongPressItem: closure_3,
+    rowIndex: closure_4,
+    totalNumItems: Pressable,
+    numPerRow,
+  } = arg0);
+  ({
+    includedUploadIds: closure_7,
+    uploadLimit: closure_8,
+    disableWhenReachedLimit: closure_9,
+    disabled: closure_10,
+  } = arg0);
   closure_11 = undefined;
   let obj;
   ({ handleCameraPress, handleAttachPress, handleViewAllPhotosPress } = arg0);
@@ -416,7 +508,16 @@ const memoResult = importAllResult.memo((arg0) => {
           hasItem = items.includes(type.type);
         }
         if (hasItem) {
-          obj = { size: null, onPress: null, disabled: null, accessibilityLabel: null, index: null, totalNumItems: null, numItemsPerRow: null, children: null };
+          obj = {
+            size: null,
+            onPress: null,
+            disabled: null,
+            accessibilityLabel: null,
+            index: null,
+            totalNumItems: null,
+            numItemsPerRow: null,
+            children: null,
+          };
           obj[0] = closure_11;
           obj[1] = obj[type.type].onPress;
           obj[2] = closure_10;
@@ -430,7 +531,21 @@ const memoResult = importAllResult.memo((arg0) => {
           obj[7] = closure_1_9(obj[type.type].Icon, obj1);
           return closure_1_9(closure_1_18, obj, arg1);
         } else {
-          obj = { channelId: null, draftType: null, index: null, totalNumItems: null, numItemsPerRow: null, item: null, includedUploadIds: null, uploadLimit: null, disableWhenReachedLimit: null, size: null, onPressItem: null, onLongPressItem: null, disabled: null };
+          obj = {
+            channelId: null,
+            draftType: null,
+            index: null,
+            totalNumItems: null,
+            numItemsPerRow: null,
+            item: null,
+            includedUploadIds: null,
+            uploadLimit: null,
+            disableWhenReachedLimit: null,
+            size: null,
+            onPressItem: null,
+            onLongPressItem: null,
+            disabled: null,
+          };
           obj[0] = id.id;
           obj[1] = closure_1;
           obj[2] = closure_4 * numPerRow + arg1;
@@ -447,7 +562,7 @@ const memoResult = importAllResult.memo((arg0) => {
           return closure_1_9(closure_1_14, obj, arg1);
         }
       }
-    })
+    }),
   });
 });
 let result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardItem.tsx");

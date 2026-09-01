@@ -85,7 +85,20 @@ function handleFormInit(location) {
   }
 }
 function _createInvite(code) {
-  obj = { code: code.code, temporary: code.temporary, revoked: code.revoked, inviter: null, channel: null, guild: null, uses: null, maxUses: null, maxAge: null, createdAt: null, flags: null, roles: null };
+  obj = {
+    code: code.code,
+    temporary: code.temporary,
+    revoked: code.revoked,
+    inviter: null,
+    channel: null,
+    guild: null,
+    uses: null,
+    maxUses: null,
+    maxAge: null,
+    createdAt: null,
+    flags: null,
+    roles: null,
+  };
   let tmp2 = null;
   let tmp = closure_17;
   if (null != code.inviter) {
@@ -117,7 +130,9 @@ function handleIntegrationsUpdate(type) {
       tmp5 = type.guildId === user.id;
     }
     if (tmp5) {
-      const guildIntegrationsApplications = _fetchGuildIntegrationsApplications.fetchGuildIntegrationsApplications(user.id);
+      const guildIntegrationsApplications = _fetchGuildIntegrationsApplications.fetchGuildIntegrationsApplications(
+        user.id,
+      );
       obj = _fetchGuildIntegrationsApplications;
     }
     tmp = tmp5;
@@ -145,14 +160,61 @@ let closure_15 = createChannelRecord.createChannelRecordFromInvite;
 const getGuildEveryoneRoleId = GuildNSFWContentLevel.getGuildEveryoneRoleId;
 const FormStates = ME.FormStates;
 const MFALevels = ME.MFALevels;
-({ GuildSettingsSections: closure_23, GuildSettingsSubsections: closure_24, Endpoints: closure_25, GuildFeatures: closure_26 } = ME);
+({
+  GuildSettingsSections: closure_23,
+  GuildSettingsSubsections: closure_24,
+  Endpoints: closure_25,
+  GuildFeatures: closure_26,
+} = ME);
 const DEFAULT_DISCOVERY_CATEGORY_ID = DEFAULT_DISCOVERY_CATEGORY_ID2.DEFAULT_DISCOVERY_CATEGORY_ID;
 ({ PUBLIC_SUCCESS_MODAL_SEEN_KEY: closure_28, CREATE_NEW_CHANNEL_VALUE: closure_29 } = PUBLIC_SUCCESS_MODAL_SEEN_KEY);
 let c30 = true;
-let closure_31 = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "ownerConfiguredContentLevel", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled", "officialMessageColor", "verificationRoleId"];
-let closure_32 = ["brandColorPrimary", "description", "icon", "name", "traits", "visibility", "gameApplicationIds", "customBanner", "tag", "badge", "badgeColorPrimary", "badgeColorSecondary"];
+let closure_31 = [
+  "name",
+  "description",
+  "icon",
+  "splash",
+  "banner",
+  "homeHeader",
+  "afkChannelId",
+  "afkTimeout",
+  "systemChannelId",
+  "verificationLevel",
+  "defaultMessageNotifications",
+  "explicitContentFilter",
+  "features",
+  "systemChannelFlags",
+  "preferredLocale",
+  "rulesChannelId",
+  "safetyAlertsChannelId",
+  "ownerConfiguredContentLevel",
+  "discoverySplash",
+  "publicUpdatesChannelId",
+  "premiumProgressBarEnabled",
+  "officialMessageColor",
+  "verificationRoleId",
+];
+let closure_32 = [
+  "brandColorPrimary",
+  "description",
+  "icon",
+  "name",
+  "traits",
+  "visibility",
+  "gameApplicationIds",
+  "customBanner",
+  "tag",
+  "badge",
+  "badgeColorPrimary",
+  "badgeColorSecondary",
+];
 set = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]);
-let closure_34 = { icon: "iconOriginalMd5", banner: "bannerOriginalMd5", splash: "splashOriginalMd5", discoverySplash: "discoverySplashOriginalMd5" };
+let closure_34 = {
+  icon: "iconOriginalMd5",
+  banner: "bannerOriginalMd5",
+  splash: "splashOriginalMd5",
+  discoverySplash: "discoverySplashOriginalMd5",
+};
 let c35 = false;
 let CLOSED = FormStates.CLOSED;
 let closure_37 = {};
@@ -167,7 +229,18 @@ let c45 = null;
 let c46 = 0;
 let NONE = MFALevels.NONE;
 let c48 = null;
-let obj = { primaryCategoryId: DEFAULT_DISCOVERY_CATEGORY_ID, secondaryCategoryIds: [], keywords: [], emojiDiscoverabilityEnabled: true, partnerActionedTimestamp: null, partnerApplicationTimestamp: null, isPublished: false, reasonsToJoin: [], socialLinks: [], about: "" };
+let obj = {
+  primaryCategoryId: DEFAULT_DISCOVERY_CATEGORY_ID,
+  secondaryCategoryIds: [],
+  keywords: [],
+  emojiDiscoverabilityEnabled: true,
+  partnerActionedTimestamp: null,
+  partnerApplicationTimestamp: null,
+  isPublished: false,
+  reasonsToJoin: [],
+  socialLinks: [],
+  about: "",
+};
 let c50 = false;
 let c53 = null;
 let c54 = 0;
@@ -175,8 +248,7 @@ let c55 = null;
 let c56 = null;
 let c57 = null;
 const Store = initializeDefault.Store;
-class GuildSettingsStore extends Store {
-}
+class GuildSettingsStore extends Store {}
 const prototype = GuildSettingsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_19, closure_14, closure_20);
@@ -278,7 +350,32 @@ prototype["getBans"] = function getBans() {
   return items;
 };
 prototype["getProps"] = function getProps() {
-  obj = { submitting: this.isSubmitting(), integrations: c57, section: closure_3, subsection: closure_4, errors: closure_37, guild: closure_7, bans: c53, bansVersion: c54, invites: c56, selectedRoleId: closure_10, fetchedEmbed: c39, embedEnabled: c41, embedChannelId: c43, mfaLevel: NONE, searchQuery: closure_5, vanityURLCode: c45, vanityURLUses: c46, originalGuild: closure_6, hasChanges: this.hasChanges(), guildMetadata: obj, analyticsLocation: c48, isGuildMetadataLoaded: c50, originalProfile: closure_8, profile: closure_9 };
+  obj = {
+    submitting: this.isSubmitting(),
+    integrations: c57,
+    section: closure_3,
+    subsection: closure_4,
+    errors: closure_37,
+    guild: closure_7,
+    bans: c53,
+    bansVersion: c54,
+    invites: c56,
+    selectedRoleId: closure_10,
+    fetchedEmbed: c39,
+    embedEnabled: c41,
+    embedChannelId: c43,
+    mfaLevel: NONE,
+    searchQuery: closure_5,
+    vanityURLCode: c45,
+    vanityURLUses: c46,
+    originalGuild: closure_6,
+    hasChanges: this.hasChanges(),
+    guildMetadata: obj,
+    analyticsLocation: c48,
+    isGuildMetadataLoaded: c50,
+    originalProfile: closure_8,
+    profile: closure_9,
+  };
   return obj;
 };
 GuildSettingsStore.displayName = "GuildSettingsStore";
@@ -461,7 +558,8 @@ obj = {
                 tmp13 = section.guildId === user.id;
               }
               if (tmp13) {
-                const guildIntegrationsApplications = _fetchGuildIntegrationsApplications.fetchGuildIntegrationsApplications(user.id);
+                const guildIntegrationsApplications =
+                  _fetchGuildIntegrationsApplications.fetchGuildIntegrationsApplications(user.id);
                 const obj3 = _fetchGuildIntegrationsApplications;
               }
               tmp12 = tmp13;
@@ -874,7 +972,18 @@ obj = {
       if (primaryCategoryId == null) {
         primaryCategoryId = DEFAULT_DISCOVERY_CATEGORY_ID;
       }
-      obj = { primaryCategoryId: null, secondaryCategoryIds: null, keywords: null, emojiDiscoverabilityEnabled: null, partnerActionedTimestamp: null, partnerApplicationTimestamp: null, isPublished: null, reasonsToJoin: null, socialLinks: null, about: null };
+      obj = {
+        primaryCategoryId: null,
+        secondaryCategoryIds: null,
+        keywords: null,
+        emojiDiscoverabilityEnabled: null,
+        partnerActionedTimestamp: null,
+        partnerApplicationTimestamp: null,
+        isPublished: null,
+        reasonsToJoin: null,
+        socialLinks: null,
+        about: null,
+      };
       obj[0] = primaryCategoryId;
       let secondaryCategoryIds = metadata.secondaryCategoryIds;
       if (secondaryCategoryIds == null) {
@@ -987,7 +1096,8 @@ obj = {
     }
   },
   GUILD_UPDATE_DISCOVERY_METADATA: function handleGuildUpdateMetadata(arg0) {
-    ({ primaryCategoryId, keywords, emojiDiscoverabilityEnabled, isPublished, reasonsToJoin, socialLinks, about } = arg0);
+    ({ primaryCategoryId, keywords, emojiDiscoverabilityEnabled, isPublished, reasonsToJoin, socialLinks, about } =
+      arg0);
     let tmp2 = null != user;
     if (tmp2) {
       tmp2 = tmp === user.id;
@@ -1055,7 +1165,7 @@ obj = {
       }
     }
     return false;
-  }
+  },
 };
 const guildSettingsStore = new GuildSettingsStore(dispatcherDefault, obj);
 let result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsStore.tsx");

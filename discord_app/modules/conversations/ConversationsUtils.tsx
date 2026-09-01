@@ -65,7 +65,26 @@ export const mapConversation = function mapConversation(summary_map) {
   if (null != title) {
     tmp4 = null;
     if ("" !== tmp2.title) {
-      let obj = { id: null, title: null, briefSummary: null, keyPoints: null, channelId: null, guildId: null, messageIds: null, userIds: null, startMessageId: null, endMessageId: null, messageCount: null, userCount: null, keywords: null, summaryMap: null, engagement: null, substance: null, dynamics: null, moderation: null };
+      let obj = {
+        id: null,
+        title: null,
+        briefSummary: null,
+        keyPoints: null,
+        channelId: null,
+        guildId: null,
+        messageIds: null,
+        userIds: null,
+        startMessageId: null,
+        endMessageId: null,
+        messageCount: null,
+        userCount: null,
+        keywords: null,
+        summaryMap: null,
+        engagement: null,
+        substance: null,
+        dynamics: null,
+        moderation: null,
+      };
       obj[0] = summary_map.id;
       ({ title: obj3[1], brief_summary } = tmp2);
       if (brief_summary == null) {
@@ -73,7 +92,17 @@ export const mapConversation = function mapConversation(summary_map) {
       }
       obj[2] = brief_summary;
       obj[3] = tmp2.key_points;
-      ({ channel_id: obj3[4], guild_id: obj3[5], message_ids: obj3[6], user_ids: obj3[7], start_message_id: obj3[8], end_message_id: obj3[9], message_count: obj3[10], user_count: obj3[11], keywords } = summary_map);
+      ({
+        channel_id: obj3[4],
+        guild_id: obj3[5],
+        message_ids: obj3[6],
+        user_ids: obj3[7],
+        start_message_id: obj3[8],
+        end_message_id: obj3[9],
+        message_count: obj3[10],
+        user_count: obj3[11],
+        keywords,
+      } = summary_map);
       if (keywords == null) {
         keywords = [];
       }
@@ -82,7 +111,10 @@ export const mapConversation = function mapConversation(summary_map) {
       if (null != summary_map.summary_map) {
         obj = { entries: null };
         const entries1 = summary_map.summary_map.entries;
-        obj[0] = entries1.map((summaryType) => ({ summaryType: summaryType.summary_type, contentJson: summaryType.content_json }));
+        obj[0] = entries1.map((summaryType) => ({
+          summaryType: summaryType.summary_type,
+          contentJson: summaryType.content_json,
+        }));
         tmp5 = obj;
       }
       obj[13] = tmp5;
@@ -90,10 +122,43 @@ export const mapConversation = function mapConversation(summary_map) {
       let tmp6 = null;
       if (null != summary_map.moderation) {
         const moderation = summary_map.moderation;
-        obj = { status: null, statusReason: null, messageViolationRate: null, flaggedMessageCount: null, totalMessageCount: null, flaggedMessageIds: null, flaggedMessageDetails: null, flaggedSummaryDetails: null, flaggedTitle: null, flaggedSummary: null, flaggedKeyPoints: null, failedMessageIds: null };
-        ({ status: obj2[0], status_reason: obj2[1], message_violation_rate: obj2[2], flagged_message_count: obj2[3], total_message_count: obj2[4], flagged_message_ids: obj2[5], flagged_message_details } = moderation);
-        obj[6] = flagged_message_details.map((messageId) => ({ messageId: messageId.message_id, category: messageId.category, severity: messageId.severity, confidence: messageId.confidence, reason: messageId.reason }));
-        ({ flagged_summary_details: obj2[7], flagged_title: obj2[8], flagged_summary: obj2[9], flagged_key_points: obj2[10], failed_message_ids: obj2[11] } = moderation);
+        obj = {
+          status: null,
+          statusReason: null,
+          messageViolationRate: null,
+          flaggedMessageCount: null,
+          totalMessageCount: null,
+          flaggedMessageIds: null,
+          flaggedMessageDetails: null,
+          flaggedSummaryDetails: null,
+          flaggedTitle: null,
+          flaggedSummary: null,
+          flaggedKeyPoints: null,
+          failedMessageIds: null,
+        };
+        ({
+          status: obj2[0],
+          status_reason: obj2[1],
+          message_violation_rate: obj2[2],
+          flagged_message_count: obj2[3],
+          total_message_count: obj2[4],
+          flagged_message_ids: obj2[5],
+          flagged_message_details,
+        } = moderation);
+        obj[6] = flagged_message_details.map((messageId) => ({
+          messageId: messageId.message_id,
+          category: messageId.category,
+          severity: messageId.severity,
+          confidence: messageId.confidence,
+          reason: messageId.reason,
+        }));
+        ({
+          flagged_summary_details: obj2[7],
+          flagged_title: obj2[8],
+          flagged_summary: obj2[9],
+          flagged_key_points: obj2[10],
+          failed_message_ids: obj2[11],
+        } = moderation);
         tmp6 = obj;
       }
       obj[17] = tmp6;

@@ -14,7 +14,7 @@ function _maybeFetchCollectionsWithProducts() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (fromServer === 2) {
         fromServer = 3;
         HermesBuiltin.throwTypeError();
@@ -104,7 +104,15 @@ function _maybeFetchCollectionsWithProducts() {
                   let obj7 = lib(flag[7]);
                   let obj3 = { url: null, query: null, rejectWithError: true };
                   obj3[0] = constants.STOREFRONT_COLLECTIONS_WITH_PRODUCTS;
-                  const obj4 = { collection_ids: null, locale: null, with_bundled_skus: true, include_google_sku_ids: true, include_unpublished_products: null, include_unpublished_collections: null, ignore_cache: null };
+                  const obj4 = {
+                    collection_ids: null,
+                    locale: null,
+                    with_bundled_skus: true,
+                    include_google_sku_ids: true,
+                    include_unpublished_products: null,
+                    include_unpublished_collections: null,
+                    ignore_cache: null,
+                  };
                   obj4[0] = c4;
                   obj4[1] = c4.locale;
                   obj4[4] = includeUnpublishedProducts;
@@ -123,7 +131,11 @@ function _maybeFetchCollectionsWithProducts() {
                 c4 = 0;
                 fromServer = flag2;
                 obj3 = includeUnpublishedProducts(flag[6]);
-                const obj6 = { type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_FAILURE", collectionIds: null, apiError: null };
+                const obj6 = {
+                  type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_FAILURE",
+                  collectionIds: null,
+                  apiError: null,
+                };
                 obj6[1] = c4;
                 const tmp28 = new includeUnpublishedProducts(flag[8])(fromServer);
                 obj6[2] = tmp28;
@@ -134,7 +146,11 @@ function _maybeFetchCollectionsWithProducts() {
               } else if (arg0 !== 2) {
                 body = arg1;
                 obj = includeUnpublishedProducts(flag[6]);
-                obj7 = { type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS", collectionIds: null, collections: null };
+                obj7 = {
+                  type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS",
+                  collectionIds: null,
+                  collections: null,
+                };
                 obj7[1] = c4;
                 const collections = body.body.collections;
                 obj7[2] = collections.map(fromServer.fromServer);
@@ -200,7 +216,21 @@ function getCollectionPageKey(includeUnpublishedProducts) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  return "" + "" + applicationId + ":" + useShopOrdering + ":" + flag + ":" + flag2 + ":" + includeUnpublishedProducts.offset + ":" + includeUnpublishedProducts.limit;
+  return (
+    "" +
+    "" +
+    applicationId +
+    ":" +
+    useShopOrdering +
+    ":" +
+    flag +
+    ":" +
+    flag2 +
+    ":" +
+    includeUnpublishedProducts.offset +
+    ":" +
+    includeUnpublishedProducts.limit
+  );
 }
 function _maybeFetchCollectionsForApplicationPage() {
   const self = this;
@@ -209,7 +239,7 @@ function _maybeFetchCollectionsForApplicationPage() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (fromServer === 2) {
         fromServer = 3;
         HermesBuiltin.throwTypeError();
@@ -295,7 +325,19 @@ function _maybeFetchCollectionsForApplicationPage() {
                   let obj6 = callback(closure_1_2[7]);
                   const obj2 = { url: null, query: null, rejectWithError: true };
                   obj2[0] = closure_1_7.STOREFRONT_COLLECTIONS_FOR_APPLICATION;
-                  obj3 = { application_id: null, use_shop_ordering: null, offset: null, limit: null, include_pricing: true, locale: null, with_bundled_skus: true, include_google_sku_ids: true, include_unpublished_products: null, include_unpublished_collections: null, ignore_cache: null };
+                  obj3 = {
+                    application_id: null,
+                    use_shop_ordering: null,
+                    offset: null,
+                    limit: null,
+                    include_pricing: true,
+                    locale: null,
+                    with_bundled_skus: true,
+                    include_google_sku_ids: true,
+                    include_unpublished_products: null,
+                    include_unpublished_collections: null,
+                    ignore_cache: null,
+                  };
                   obj3[0] = applicationId;
                   obj3[1] = tmp24;
                   obj3[2] = offset;
@@ -318,7 +360,11 @@ function _maybeFetchCollectionsForApplicationPage() {
               locale = 0;
               locale = closure_3;
               obj1 = callback2(709);
-              const obj5 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_FAILURE", pageKey: null, apiError: null };
+              const obj5 = {
+                type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_FAILURE",
+                pageKey: null,
+                apiError: null,
+              };
               obj5[1] = callback2;
               const tmp21 = new callback2(4377)(locale);
               obj5[2] = tmp21;
@@ -328,7 +374,14 @@ function _maybeFetchCollectionsForApplicationPage() {
               throw arg1;
             } else if (arg0 !== 2) {
               closure_3 = arg1;
-              obj6 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS", pageKey: null, listKey: null, applicationId: null, collections: null, total: null };
+              obj6 = {
+                type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS",
+                pageKey: null,
+                listKey: null,
+                applicationId: null,
+                collections: null,
+                total: null,
+              };
               obj6[1] = callback2;
               obj6[2] = dependencyMap;
               obj6[3] = applicationId;
@@ -376,7 +429,9 @@ function getCollectionsAfterKey(includeUnpublishedCollections) {
   if (flag === undefined) {
     flag = false;
   }
-  return "" + applicationId + ":after:" + anchorCollectionId + ":" + limit + ":" + includeUnpublishedProducts + ":" + flag;
+  return (
+    "" + applicationId + ":after:" + anchorCollectionId + ":" + limit + ":" + includeUnpublishedProducts + ":" + flag
+  );
 }
 function _maybeFetchCollectionsAfter() {
   const self = this;
@@ -385,7 +440,7 @@ function _maybeFetchCollectionsAfter() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (fromServer === 2) {
         fromServer = 3;
         HermesBuiltin.throwTypeError();
@@ -462,7 +517,19 @@ function _maybeFetchCollectionsAfter() {
                     obj6.dispatch(obj1);
                     const obj2 = { url: null, query: null, rejectWithError: true };
                     obj2[0] = closure_1_7.STOREFRONT_COLLECTIONS_FOR_APPLICATION;
-                    let obj3 = { application_id: null, use_shop_ordering: true, anchor_collection_id: null, limit: null, include_products: false, include_pricing: false, include_google_sku_ids: false, locale: null, include_unpublished_products: null, include_unpublished_collections: null, ignore_cache: null };
+                    let obj3 = {
+                      application_id: null,
+                      use_shop_ordering: true,
+                      anchor_collection_id: null,
+                      limit: null,
+                      include_products: false,
+                      include_pricing: false,
+                      include_google_sku_ids: false,
+                      locale: null,
+                      include_unpublished_products: null,
+                      include_unpublished_collections: null,
+                      ignore_cache: null,
+                    };
                     obj3[0] = applicationId;
                     obj3[2] = anchorCollectionId;
                     obj3[3] = lib.limit;
@@ -538,7 +605,7 @@ function _maybeFetchCollectionsForApplication() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (fromServer === 2) {
         fromServer = 3;
         HermesBuiltin.throwTypeError();
@@ -644,7 +711,15 @@ function _maybeFetchCollectionsForApplication() {
                     let httpGetWithCountryCodeQuery = callback(flag[7]).httpGetWithCountryCodeQuery;
                     obj4 = { url: null, query: null, rejectWithError: true };
                     obj4[0] = constants.STOREFRONT_COLLECTIONS_FOR_APPLICATION;
-                    const obj5 = { application_id: null, locale: null, with_bundled_skus: true, include_google_sku_ids: true, include_unpublished_products: null, include_unpublished_collections: null, ignore_cache: null };
+                    const obj5 = {
+                      application_id: null,
+                      locale: null,
+                      with_bundled_skus: true,
+                      include_google_sku_ids: true,
+                      include_unpublished_products: null,
+                      include_unpublished_collections: null,
+                      ignore_cache: null,
+                    };
                     obj5[0] = callback;
                     obj5[1] = locale.locale;
                     obj5[4] = includeUnpublishedProducts;
@@ -677,7 +752,11 @@ function _maybeFetchCollectionsForApplication() {
                 locale = 0;
                 closure_11 = flag2;
                 obj1 = includeUnpublishedProducts(flag[6]);
-                const obj9 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_FAILURE", applicationId: null, apiError: null };
+                const obj9 = {
+                  type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_FAILURE",
+                  applicationId: null,
+                  apiError: null,
+                };
                 obj9[1] = callback;
                 const tmp20 = new includeUnpublishedProducts(flag[8])(closure_11);
                 obj9[2] = tmp20;
@@ -687,7 +766,13 @@ function _maybeFetchCollectionsForApplication() {
                 throw arg1;
               } else if (arg0 !== 2) {
                 body = arg1;
-                const obj10 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS", applicationId: null, collections: null, includePricing: null, skuTypes: null };
+                const obj10 = {
+                  type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS",
+                  applicationId: null,
+                  collections: null,
+                  includePricing: null,
+                  skuTypes: null,
+                };
                 obj10[1] = callback;
                 const collections = body.body.collections;
                 obj10[2] = collections.map(fromServer.fromServer);

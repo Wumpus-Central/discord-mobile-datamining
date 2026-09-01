@@ -18,8 +18,13 @@ class GameIcon {
       size = closure_6.NORMAL;
     }
     tmp2 = closure_8();
-    obj = { [closure_6.NORMAL]: tmp2.normal, [closure_6.SMALL]: tmp2.small, [closure_6.SIZE_24]: tmp2.size24, [closure_6.LARGE]: tmp2.large };
-    items = [, , ];
+    obj = {
+      [closure_6.NORMAL]: tmp2.normal,
+      [closure_6.SMALL]: tmp2.small,
+      [closure_6.SIZE_24]: tmp2.size24,
+      [closure_6.LARGE]: tmp2.large,
+    };
+    items = [, ,];
     items[0] = tmp2.gameIcon;
     items[1] = obj[size];
     items[2] = global.style;
@@ -45,7 +50,7 @@ class GameIcon {
       tmp18 = jsx;
       tmp19 = View;
       obj1 = { style: null, children: null };
-      items1 = [, ];
+      items1 = [,];
       items1[0] = items;
       items1[1] = tmp2.entityWrapper;
       obj1[0] = items1;
@@ -82,7 +87,15 @@ noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
 let obj = { SIZE_24: "size_24", SMALL: "small", NORMAL: "normal", LARGE: "large" };
 obj = { [obj.SIZE_24]: 24, [obj.SMALL]: 32, [obj.NORMAL]: 48, [obj.LARGE]: 80 };
-obj = { gameIcon: { justifyContent: "center", alignItems: "center" }, size24: { width: obj.size_24, height: obj.size_24, borderRadius: ThemesDefault.radii.sm }, small: null, normal: null, large: null, placeholder: null, entityWrapper: null };
+obj = {
+  gameIcon: { justifyContent: "center", alignItems: "center" },
+  size24: { width: obj.size_24, height: obj.size_24, borderRadius: ThemesDefault.radii.sm },
+  small: null,
+  normal: null,
+  large: null,
+  placeholder: null,
+  entityWrapper: null,
+};
 createCacheKey = { width: obj.small, height: obj.small, borderRadius: ThemesDefault.radii.sm };
 obj[2] = createCacheKey;
 obj1 = { width: obj.size_24, height: obj.size_24, borderRadius: ThemesDefault.radii.sm };

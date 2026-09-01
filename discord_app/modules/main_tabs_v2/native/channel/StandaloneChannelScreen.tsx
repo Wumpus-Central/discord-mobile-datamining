@@ -29,14 +29,14 @@ function Header(channelId) {
   top = guildId(isNavigationScreen[10])().top;
   obj1 = channelId(isNavigationScreen[11]);
   gradientTop = obj1.useGradientTop();
-  let items = [, , , , , , ];
+  let items = [, , , , , ,];
   ({ headerWrapper: arr[0], headerWithFadingFrame: arr[1], splitDivider: arr[2], splitDividerTop: arr[3] } = tmp4);
   items[4] = gradientTop;
   items[5] = frame;
   items[6] = top;
   const items1 = [navigation, isNavigationScreen];
   const memo = frame.useMemo(() => {
-    const items = [channel.headerWrapper, gradientTop, , , , ];
+    const items = [channel.headerWrapper, gradientTop, , , ,];
     let prop;
     if (null != frame) {
       prop = tmp.headerWithFadingFrame;
@@ -72,18 +72,22 @@ function Header(channelId) {
   let obj2 = channelId(isNavigationScreen[12]);
   const items2 = [closure_5];
   const items3 = [guildId, channelId];
-  stateFromStores = obj2.useStateFromStores(items2, () => {
-    let tmp = guildId;
-    if (obj.isFavoritesGuildId(guildId)) {
-      channel = channel.getChannel(channelId);
-      let guild_id;
-      if (channel != null) {
-        guild_id = channel.guild_id;
+  stateFromStores = obj2.useStateFromStores(
+    items2,
+    () => {
+      let tmp = guildId;
+      if (obj.isFavoritesGuildId(guildId)) {
+        channel = channel.getChannel(channelId);
+        let guild_id;
+        if (channel != null) {
+          guild_id = channel.guild_id;
+        }
+        tmp = guild_id;
       }
-      tmp = guild_id;
-    }
-    return tmp;
-  }, items3);
+      return tmp;
+    },
+    items3,
+  );
   const items4 = [stateFromStores];
   obj = { IconComponent: null, label: null, action: null };
   const memo1 = frame.useMemo(() => {
@@ -121,7 +125,7 @@ function Header(channelId) {
     tmp13 = tmp11;
   }
   obj2 = { style: memo, children: null };
-  const items6 = [tmp13(navigation, { style: tmp4.headerBottomBorder }), ];
+  const items6 = [tmp13(navigation, { style: tmp4.headerBottomBorder })];
   if (!channelId.isBackEnabled) {
     const obj4 = { style: null };
     obj4[0] = tmp4.spacer;
@@ -129,7 +133,11 @@ function Header(channelId) {
   }
   const obj5 = { children: null };
   const obj6 = { children: null };
-  const items7 = [tmp13Result, tmp13(guildId(isNavigationScreen[20]), { channelId, isNavigationScreen, screenIndex, showCreateThread }), tmp13(guildId(isNavigationScreen[21]), { containerStyle: tmp4.actions, channelId, screenIndex, showCreateThread })];
+  const items7 = [
+    tmp13Result,
+    tmp13(guildId(isNavigationScreen[20]), { channelId, isNavigationScreen, screenIndex, showCreateThread }),
+    tmp13(guildId(isNavigationScreen[21]), { containerStyle: tmp4.actions, channelId, screenIndex, showCreateThread }),
+  ];
   obj6[0] = items7;
   items6[1] = closure_12(channelId(isNavigationScreen[19]).LayerScope, obj6);
   obj2[1] = items6;
@@ -142,27 +150,68 @@ let c3 = importAllResult;
 ({ MIDNIGHT_BORDER_WIDTH, MIN_HEADER_HEIGHT: closure_6 } = MIN_HEADER_HEIGHT);
 ({ EMPTY_STRING_SNOWFLAKE_ID: error, ME: closure_8, ThemeTypes: c9 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let obj = { container: { flex: 1 }, midnightContainerBorder: null, contentContainer: null, containerEmpty: null, headerWrapper: null, headerBottomBorder: null, headerWithFadingFrame: null, splitDivider: null, splitDividerTop: null, actions: null, spacer: null };
-obj = { borderLeftWidth: MIDNIGHT_BORDER_WIDTH, borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER, borderTopWidth: MIDNIGHT_BORDER_WIDTH, borderTopColor: "transparent" };
+let obj = {
+  container: { flex: 1 },
+  midnightContainerBorder: null,
+  contentContainer: null,
+  containerEmpty: null,
+  headerWrapper: null,
+  headerBottomBorder: null,
+  headerWithFadingFrame: null,
+  splitDivider: null,
+  splitDividerTop: null,
+  actions: null,
+  spacer: null,
+};
+obj = {
+  borderLeftWidth: MIDNIGHT_BORDER_WIDTH,
+  borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER,
+  borderTopWidth: MIDNIGHT_BORDER_WIDTH,
+  borderTopColor: "transparent",
+};
 obj[1] = obj;
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND };
 obj[2] = createCacheKey;
 obj[3] = { backgroundColor: ThemesDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND };
 let obj2 = { backgroundColor: ThemesDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND };
-obj[4] = { zIndex: 1, backgroundColor: ThemesDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND, flexDirection: "row", alignItems: "center", flexShrink: 0 };
+obj[4] = {
+  zIndex: 1,
+  backgroundColor: ThemesDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND,
+  flexDirection: "row",
+  alignItems: "center",
+  flexShrink: 0,
+};
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj4.top = undefined;
 obj4.height = 1;
 obj4.backgroundColor = ThemesDefault.colors.STANDALONE_CHANNEL_HEADER_BORDER;
 obj[5] = obj4;
-let obj3 = { zIndex: 1, backgroundColor: ThemesDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND, flexDirection: "row", alignItems: "center", flexShrink: 0 };
+let obj3 = {
+  zIndex: 1,
+  backgroundColor: ThemesDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND,
+  flexDirection: "row",
+  alignItems: "center",
+  flexShrink: 0,
+};
 obj[6] = { borderTopLeftRadius: ThemesDefault.modules.mobile.CHANNEL_DRAWER_CORNER_RADIUS };
 let obj5 = { borderTopLeftRadius: ThemesDefault.modules.mobile.CHANNEL_DRAWER_CORNER_RADIUS };
-obj[7] = { borderLeftWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH, borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER };
-let obj6 = { borderLeftWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH, borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER };
-obj[8] = { borderTopWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH, borderTopColor: ThemesDefault.colors.APP_FRAME_BORDER };
-let obj7 = { borderTopWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH, borderTopColor: ThemesDefault.colors.APP_FRAME_BORDER };
+obj[7] = {
+  borderLeftWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH,
+  borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER,
+};
+let obj6 = {
+  borderLeftWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH,
+  borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER,
+};
+obj[8] = {
+  borderTopWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH,
+  borderTopColor: ThemesDefault.colors.APP_FRAME_BORDER,
+};
+let obj7 = {
+  borderTopWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH,
+  borderTopColor: ThemesDefault.colors.APP_FRAME_BORDER,
+};
 obj[9] = { marginRight: ThemesDefault.space.PX_16 };
 let obj8 = { marginRight: ThemesDefault.space.PX_16 };
 obj[10] = { width: ThemesDefault.space.PX_16 };
@@ -195,10 +244,10 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
   const tmp10 = frame(4335)();
   isChatBesideChannelList = tmp10.isChatBesideChannelList;
   const isChatLockedOpen = tmp10.isChatLockedOpen;
-  let items = [frame, tmp9, isChatBesideChannelList, , ];
+  let items = [frame, tmp9, isChatBesideChannelList, ,];
   ({ container: arr[3], midnightContainerBorder: arr[4] } = tmp);
   const memo = importAllResult.useMemo(() => {
-    const items = [closure_2.container, ];
+    const items = [closure_2.container];
     let prop;
     if (null == frame) {
       if (closure_4) {
@@ -210,10 +259,10 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
     items[1] = prop;
     return items;
   }, items);
-  const items1 = [frame, , ];
+  const items1 = [frame, ,];
   ({ contentContainer: arr2[1], splitDivider: arr2[2] } = tmp);
   const memo1 = importAllResult.useMemo(() => {
-    const items = [closure_2.contentContainer, ];
+    const items = [closure_2.contentContainer];
     let splitDivider;
     if (null != frame) {
       splitDivider = closure_2.splitDivider;
@@ -234,17 +283,29 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
   tmp2Result = tmp2(589);
   const items2 = [isChatBesideChannelList];
   const items3 = [channelId];
-  const stateFromStores = tmp2Result.useStateFromStores(items2, () => {
-    let channel = null;
-    if (null != channelId) {
-      channel = isChatBesideChannelList.getChannel(tmp);
-    }
-    return channel;
-  }, items3);
+  const stateFromStores = tmp2Result.useStateFromStores(
+    items2,
+    () => {
+      let channel = null;
+      if (null != channelId) {
+        channel = isChatBesideChannelList.getChannel(tmp);
+      }
+      return channel;
+    },
+    items3,
+  );
   channelId(6094);
   if (null != channelId) {
     if (null != guildId) {
-      obj = { channelId: null, frame: null, guildId: null, isNavigationScreen: null, screenIndex: null, showCreateThread: null, isBackEnabled: null };
+      obj = {
+        channelId: null,
+        frame: null,
+        guildId: null,
+        isNavigationScreen: null,
+        screenIndex: null,
+        showCreateThread: null,
+        isBackEnabled: null,
+      };
       obj[0] = channelId;
       obj[1] = frame;
       obj[2] = guildId;
@@ -258,7 +319,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
           if (channelId === tmp36.GUILD_HOME) {
             obj = { style: null, children: null };
             obj[0] = memo;
-            const items4 = [tmp35, ];
+            const items4 = [tmp35];
             obj1 = { style: null, children: null };
             obj1[0] = memo1;
             let tmp33Result = null;
@@ -284,7 +345,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
               if (null != stateFromStores) {
                 const obj5 = { style: null, children: null };
                 obj5[0] = memo;
-                const items5 = [tmp35, ];
+                const items5 = [tmp35];
                 const obj6 = { style: null, children: null };
                 obj6[0] = memo1;
                 const obj7 = { channel: null };
@@ -298,7 +359,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
             if (showCreateThread) {
               const obj8 = { style: null, children: null };
               obj8[0] = memo1;
-              const items6 = [tmp35, ];
+              const items6 = [tmp35];
               const obj9 = { channelId: null, screenIndex: null };
               obj9[0] = channelId;
               obj9[1] = screenIndex;
@@ -307,7 +368,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
               return tmp18(closure_4, obj8);
             } else {
               const obj10 = { children: null };
-              const items7 = [tmp35, ];
+              const items7 = [tmp35];
               const obj11 = { style: null, children: null };
               obj11[0] = memo1;
               const obj12 = { guildId: null, channelId: null, chatInputRef: null, screenIndex: null };
@@ -345,10 +406,10 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
       }
       const obj15 = { style: null, children: null };
       obj15[0] = memo;
-      const items8 = [tmp35, ];
+      const items8 = [tmp35];
       const obj16 = { style: null, children: null };
       obj16[0] = memo1;
-      const items9 = [callback(tmp5(5070), { absolute: true }), ];
+      const items9 = [callback(tmp5(5070), { absolute: true })];
       const obj17 = { guildId: null, gatedChannelId: null };
       obj17[0] = guildId;
       let tmp32;

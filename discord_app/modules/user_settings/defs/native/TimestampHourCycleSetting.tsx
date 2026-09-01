@@ -22,7 +22,7 @@ createToggle = {
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t.FMWYvb);
       obj[1] = callback(1306).TimestampHourCycle.AUTO;
-      const items = [obj, , ];
+      const items = [obj, ,];
       obj = { label: null, value: null };
       const intl2 = callback(1236).intl;
       obj[0] = intl2.string(callback(1236).t.p8NOwi);
@@ -36,7 +36,7 @@ createToggle = {
       return items;
     }, []);
   },
-  usePredicate: require("__DiscordCreateDateFormatter").supportsSystemDateFormatter
+  usePredicate: require("__DiscordCreateDateFormatter").supportsSystemDateFormatter,
 };
 createToggle = createToggle.createRadio(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/TimestampHourCycleSetting.tsx");

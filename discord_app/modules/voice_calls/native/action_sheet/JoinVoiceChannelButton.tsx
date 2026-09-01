@@ -40,4 +40,4 @@ export default function JoinVoiceChannelButton(channel) {
   }, items1);
   obj[1] = jsx(channel(4928).Button, { disabled: flag, text: stringResult, onPress: callback });
   return <View style={items2}>{null}</View>;
-};
+}

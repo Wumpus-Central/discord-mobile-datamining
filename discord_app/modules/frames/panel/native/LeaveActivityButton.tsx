@@ -13,7 +13,7 @@ const memoResult = importAllResult.memo(function LeaveActivityButton(arg0) {
       const timerId = setTimeout(() => {
         closure_1_1(closure_1_2[4]).leaveFrame(id.id);
       }, 400);
-    }
+    },
   });
 });
 const result = require("set").fileFinishedImporting("modules/frames/panel/native/LeaveActivityButton.tsx");

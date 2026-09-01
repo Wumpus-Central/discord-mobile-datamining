@@ -241,7 +241,13 @@ function showFileSizeExceededAlert(c8, closure_1_2) {
     const obj7 = KESTREL_GA_UPLOAD_LIMIT_MB;
   } else {
     tmp2Result = tmp2(8169);
-    obj1 = { initialUpsellKey: null, analyticsLocation: null, analyticsLocations: null, analyticsProperties: null, largestFileSize: null };
+    obj1 = {
+      initialUpsellKey: null,
+      analyticsLocation: null,
+      analyticsLocations: null,
+      analyticsProperties: null,
+      largestFileSize: null,
+    };
     obj1[0] = constants3.UPLOAD;
     const obj2 = { section: null };
     obj2[0] = constants2.FILE_UPLOAD_POPOUT;
@@ -261,7 +267,7 @@ function _chatInputSendApplicationCommand() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0, isAuthorized) {
+    const iter = (function* (arg0, isAuthorized) {
       if (ref === 2) {
         ref = 3;
         HermesBuiltin.throwTypeError();
@@ -346,7 +352,13 @@ function _chatInputSendApplicationCommand() {
                   tmp20 = null != closure_5;
                 }
                 if (tmp20) {
-                  const obj5 = { text: null, parsedMessage: "Array", tts: "handleSendApplicationCommand", source: null, params: "M3 13H2v1h1v-1ZM2 14H1v1h1v-1Z" };
+                  const obj5 = {
+                    text: null,
+                    parsedMessage: "Array",
+                    tts: "handleSendApplicationCommand",
+                    source: null,
+                    params: "M3 13H2v1h1v-1ZM2 14H1v1h1v-1Z",
+                  };
                   obj5[0] = closure_5.content;
                   obj5[2] = closure_5.tts;
                   obj5[4] = params;
@@ -434,7 +446,13 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             let intl2 = getSystemLocale.intl;
             obj[2] = intl2.string(getSystemLocale.t.KJnHq3);
             obj[3] = function onConfirm() {
-              const obj = { text: closure_0, parsedMessage: closure_2, tts: "accessible", source: "Array", params: "isArray" };
+              const obj = {
+                text: closure_0,
+                parsedMessage: closure_2,
+                tts: "accessible",
+                source: "Array",
+                params: "isArray",
+              };
               obj[4] = params;
               closure_1_15(obj);
             };
@@ -452,7 +470,13 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             obj[0] = channel.id;
             obj[1] = uploads;
             obj[2] = function sendMessage() {
-              const obj = { text: closure_0, parsedMessage: closure_2, tts: "accessible", source: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000237859291021253, params: -0.00000000000000000000000000000000000000000000000030209180897870185 };
+              const obj = {
+                text: closure_0,
+                parsedMessage: closure_2,
+                tts: "accessible",
+                source: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000237859291021253,
+                params: -0.00000000000000000000000000000000000000000000000030209180897870185,
+              };
               obj[4] = params;
               closure_1_15(obj);
             };

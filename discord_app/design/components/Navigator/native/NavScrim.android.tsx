@@ -19,7 +19,7 @@ const memoResult = importAllResult.memo(() => {
   let tmp2 = null;
   if (0 !== insets.bottom) {
     let obj = { style: null, pointerEvents: "none" };
-    const items = [tmp.androidNavScrim, ];
+    const items = [tmp.androidNavScrim];
     obj = { height: null };
     obj[0] = insets.bottom;
     items[1] = obj;

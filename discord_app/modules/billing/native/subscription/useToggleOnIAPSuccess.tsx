@@ -16,4 +16,4 @@ export default function useToggleOnIAPSuccess() {
     };
   }, []);
   return tmp2;
-};
+}

@@ -70,9 +70,23 @@ class ApplicationCommandManager {
       if (insertOrJumpCommandOption.type !== closure_1_9.SLASH) {
         return false;
       } else {
-        const obj3 = { channelId: null, command: null, section: null, location: null, visualSection: null, query: null, addSpace: true };
+        const obj3 = {
+          channelId: null,
+          command: null,
+          section: null,
+          location: null,
+          visualSection: null,
+          query: null,
+          addSpace: true,
+        };
         obj3[0] = id;
-        ({ command: obj2[1], section: obj2[2], location: obj2[3], visualSection: obj2[4], query: obj2[5] } = insertOrJumpCommandOption);
+        ({
+          command: obj2[1],
+          section: obj2[2],
+          location: obj2[3],
+          visualSection: obj2[4],
+          query: obj2[5],
+        } = insertOrJumpCommandOption);
         obj.setCommand(obj3);
         return true;
       }
@@ -92,7 +106,14 @@ class ApplicationCommandManager {
       }
       current.setText(commandText);
       obj1 = obj(closure_1_3[8]);
-      obj = { channelId, command, section, location: _location, triggerSection: obj(closure_1_3[9]).getCommandTriggerSection(visualSection), queryLength: null };
+      obj = {
+        channelId,
+        command,
+        section,
+        location: _location,
+        triggerSection: obj(closure_1_3[9]).getCommandTriggerSection(visualSection),
+        queryLength: null,
+      };
       let length;
       if (query != null) {
         length = query.length;
@@ -162,7 +183,10 @@ class ApplicationCommandManager {
         if (interactionOptions == null) {
           interactionOptions = [];
         }
-        const initialValuesFromInteractionOptions = tmp2(tmp3[12]).getInitialValuesFromInteractionOptions(command, interactionOptions);
+        const initialValuesFromInteractionOptions = tmp2(tmp3[12]).getInitialValuesFromInteractionOptions(
+          command,
+          interactionOptions,
+        );
         const _Object = Object;
         const keys = Object.keys(initialValuesFromInteractionOptions);
         const mapped = keys.map((arg0) => {
@@ -331,7 +355,7 @@ class ApplicationCommandManager {
           return styles.commandOption();
         },
         deleteNodeOnBackspace: true,
-        editDisabled: true
+        editDisabled: true,
       };
       parser.addRule(obj);
       const parser2 = obj.parser;
@@ -352,7 +376,7 @@ class ApplicationCommandManager {
             type = data.option.type;
           }
           return type === lib(1955).ApplicationCommandOptionType.ATTACHMENT;
-        }
+        },
       };
       parser2.addRule(obj);
       const parser3 = obj.parser;
@@ -368,7 +392,7 @@ class ApplicationCommandManager {
         },
         editDisabled() {
           return false;
-        }
+        },
       };
       parser3.addRule(obj);
       const parser4 = obj.parser;
@@ -389,7 +413,7 @@ class ApplicationCommandManager {
         },
         editDisabled() {
           return false;
-        }
+        },
       });
       const parser5 = obj.parser;
       obj1 = {
@@ -409,7 +433,7 @@ class ApplicationCommandManager {
         },
         editDisabled() {
           return false;
-        }
+        },
       };
       parser5.addRule({
         ruleId: "userHighlightRuleId",
@@ -423,7 +447,7 @@ class ApplicationCommandManager {
         },
         editDisabled() {
           return false;
-        }
+        },
       });
       const parser6 = obj.parser;
       const obj2 = {
@@ -438,7 +462,7 @@ class ApplicationCommandManager {
         },
         editDisabled() {
           return false;
-        }
+        },
       };
       parser6.addRule({
         ruleId: "channelHighlightRuleId",
@@ -452,7 +476,7 @@ class ApplicationCommandManager {
         },
         editDisabled() {
           return false;
-        }
+        },
       });
       const parser7 = obj.parser;
       const obj3 = {
@@ -467,7 +491,7 @@ class ApplicationCommandManager {
         },
         editDisabled() {
           return false;
-        }
+        },
       };
       parser7.addRule({
         ruleId: "silentHighlightRuleId",
@@ -481,7 +505,7 @@ class ApplicationCommandManager {
         },
         editDisabled() {
           return false;
-        }
+        },
       });
       const parser8 = obj.parser;
       const obj4 = {
@@ -496,7 +520,7 @@ class ApplicationCommandManager {
         },
         editDisabled() {
           return false;
-        }
+        },
       };
       parser8.addRule({
         ruleId: "gameHighlightRuleId",
@@ -511,7 +535,7 @@ class ApplicationCommandManager {
         deleteNodeOnBackspace: true,
         editDisabled() {
           return true;
-        }
+        },
       });
       const parser9 = obj.parser;
       const obj5 = {
@@ -527,7 +551,7 @@ class ApplicationCommandManager {
         deleteNodeOnBackspace: true,
         editDisabled() {
           return true;
-        }
+        },
       };
       parser9.addRule({
         ruleId: "gameMentionInputRuleId",
@@ -542,7 +566,7 @@ class ApplicationCommandManager {
         deleteNodeOnBackspace: true,
         editDisabled() {
           return true;
-        }
+        },
       });
     };
     obj.getCurrentCommand = function getCurrentCommand(text, channel, preferredCommand, preferredCommandSection) {
@@ -589,7 +613,11 @@ class ApplicationCommandManager {
                   let obj4 = closure_1_2(tmp4[10]);
                   obj1 = { channel: null, type: "channel" };
                   obj1[0] = channel;
-                  let cachedApplicationSection = obj4.getCachedApplicationSection(obj1, tmp3(tmp4[13]).ApplicationCommandType.CHAT, found.applicationId);
+                  let cachedApplicationSection = obj4.getCachedApplicationSection(
+                    obj1,
+                    tmp3(tmp4[13]).ApplicationCommandType.CHAT,
+                    found.applicationId,
+                  );
                   let tmp20 = null;
                   if (null != cachedApplicationSection) {
                     let obj2 = { command: null, section: null };
@@ -604,7 +632,11 @@ class ApplicationCommandManager {
                 }
               } else {
                 tmp3Result = tmp3(tmp4[20]);
-                const draftCommand = tmp3Result.resolveDraftCommand(channel, text, closure_1_5.getDraftCommand(channel.id, closure_1_6.ChannelMessage));
+                const draftCommand = tmp3Result.resolveDraftCommand(
+                  channel,
+                  text,
+                  closure_1_5.getDraftCommand(channel.id, closure_1_6.ChannelMessage),
+                );
                 if (null != draftCommand) {
                   obj4 = { command: null, section: null };
                   const obj5 = {};
@@ -623,9 +655,15 @@ class ApplicationCommandManager {
                       obj1 = channel(closure_1_3[9]);
                       let obj2 = preferredCommand(closure_1_3[21]);
                       const regExp = new RegExp("^" + obj2.escape(joined), "i");
-                      const matchingGroupCommands = obj1.getMatchingGroupCommands(lib.contextCommands, regExp, closure_4, 2);
+                      const matchingGroupCommands = obj1.getMatchingGroupCommands(
+                        lib.contextCommands,
+                        regExp,
+                        closure_4,
+                        2,
+                      );
                       const found = matchingGroupCommands.filter((inputType) => {
-                        let tmp = inputType.inputType !== joined(closure_1_3[11]).ApplicationCommandInputType.PLACEHOLDER;
+                        let tmp =
+                          inputType.inputType !== joined(closure_1_3[11]).ApplicationCommandInputType.PLACEHOLDER;
                         if (tmp) {
                           tmp = inputType.displayName === joined || inputType.untranslatedName === tmp2;
                           const tmp3 = inputType.displayName === joined || inputType.untranslatedName === tmp2;
@@ -640,7 +678,11 @@ class ApplicationCommandManager {
                         }
                         obj = { channel: null, type: "channel" };
                         obj[0] = joined;
-                        const cachedApplicationSection = lib(tmp4[10]).getCachedApplicationSection(obj, channel(tmp4[13]).ApplicationCommandType.CHAT, first.applicationId);
+                        const cachedApplicationSection = lib(tmp4[10]).getCachedApplicationSection(
+                          obj,
+                          channel(tmp4[13]).ApplicationCommandType.CHAT,
+                          first.applicationId,
+                        );
                         if (null == cachedApplicationSection) {
                           obj = { v: null };
                         } else {
@@ -696,7 +738,10 @@ class ApplicationCommandManager {
         obj = closure_1_1(closure_1_3[18]);
         const _Array = Array;
         const optionValueNodes = obj.optionValueNodes;
-        const findLastResult = obj.findLast(Array.from(optionValueNodes.values()), (location) => location.location <= closure_0);
+        const findLastResult = obj.findLast(
+          Array.from(optionValueNodes.values()),
+          (location) => location.location <= closure_0,
+        );
         if (findLastResult != null) {
           const data = findLastResult.data;
           if (data != null) {
@@ -759,7 +804,12 @@ class ApplicationCommandManager {
               let tmp16 = tmp6;
               let tmp17 = tmp24;
               let optionValueParser = tmp25.optionValueParser;
-              let items1 = [optionValueParser.parse(text.substring(arr.location + option.displayName.length + 1, arr.location + arr.length), option)];
+              let items1 = [
+                optionValueParser.parse(
+                  text.substring(arr.location + option.displayName.length + 1, arr.location + arr.length),
+                  option,
+                ),
+              ];
               obj[tmp6] = items1;
             }
           }
@@ -768,7 +818,13 @@ class ApplicationCommandManager {
         return obj;
       }
     };
-    obj.insertFirstOptionIfValid = function insertFirstOptionIfValid(text, activeCommand, displayName, preferredCommandType, preferredCommandType2) {
+    obj.insertFirstOptionIfValid = function insertFirstOptionIfValid(
+      text,
+      activeCommand,
+      displayName,
+      preferredCommandType,
+      preferredCommandType2,
+    ) {
       if (text.startsWith("" + closure_1_11 + displayName)) {
         if (text.length > displayName.length + 1) {
           if (closure_1_10.test(text[displayName.length + 1])) {
@@ -795,7 +851,13 @@ class ApplicationCommandManager {
               }
             }
             if (null != first) {
-              const result = obj.insertOrJumpCommandOption(first, activeCommand.displayName.length + 2, true, undefined, activeCommand);
+              const result = obj.insertOrJumpCommandOption(
+                first,
+                activeCommand.displayName.length + 2,
+                true,
+                undefined,
+                activeCommand,
+              );
             }
             return true;
           }
@@ -803,7 +865,13 @@ class ApplicationCommandManager {
       }
       return false;
     };
-    obj.insertOrJumpCommandOption = function insertOrJumpCommandOption(activeOption, length, arg2, displayText, activeCommand) {
+    obj.insertOrJumpCommandOption = function insertOrJumpCommandOption(
+      activeOption,
+      length,
+      arg2,
+      displayText,
+      activeCommand,
+    ) {
       let flag = arg2;
       if (arg2 === undefined) {
         flag = false;
@@ -858,7 +926,10 @@ class ApplicationCommandManager {
             current3.replaceRange(obj);
           } else {
             const current2 = obj7.ref.current;
-            current2.setSelectedRange(value.location + activeOption.displayName.length + 1, value.length - activeOption.displayName.length - 1);
+            current2.setSelectedRange(
+              value.location + activeOption.displayName.length + 1,
+              value.length - activeOption.displayName.length - 1,
+            );
           }
         } else {
           if (null != value) {
@@ -949,7 +1020,7 @@ class ApplicationCommandManager {
             }
             obj1[2] = num6;
             obj1[3] = combined.length;
-            const items1 = [obj1, ];
+            const items1 = [obj1];
             const obj2 = { type: null, style: null, location: null, length: null };
             obj2[0] = obj(closure_1_3[6]).ChatInputNodeType.COMMAND_OPTION;
             const styles2 = obj7.styles;
@@ -967,7 +1038,14 @@ class ApplicationCommandManager {
             current.replaceRange(obj3);
           } else {
             const current4 = obj7.ref.current;
-            const obj4 = { location: null, length: null, text: null, nodes: null, keepCursorPosition: null, editId: null };
+            const obj4 = {
+              location: null,
+              length: null,
+              text: null,
+              nodes: null,
+              keepCursorPosition: null,
+              editId: null,
+            };
             obj4[0] = _location;
             obj4[1] = num2;
             obj4[2] = combined1;
@@ -1020,7 +1098,9 @@ class ApplicationCommandManager {
         } else {
           const result = obj.insertOrJumpCommandOption(firstInvalidOption);
           const result1 = obj.updateValidationResults();
-          const result2 = obj(closure_1_3[24]).triggerHapticFeedback(obj(closure_1_3[24]).HapticFeedbackTypes.NOTIFICATION_ERROR);
+          const result2 = obj(closure_1_3[24]).triggerHapticFeedback(
+            obj(closure_1_3[24]).HapticFeedbackTypes.NOTIFICATION_ERROR,
+          );
           const obj12 = obj(closure_1_3[24]);
           let applicationId;
           if (activeCommand != null) {
@@ -1060,7 +1140,11 @@ class ApplicationCommandManager {
           obj1 = { channel: null, type: "channel" };
           obj1[0] = channel;
           const obj10 = closure_1_2(closure_1_3[10]);
-          ({ commands, sections } = closure_1_2(closure_1_3[10]).getCachedResults(obj1, obj(closure_1_3[13]).ApplicationCommandType.CHAT, query));
+          ({ commands, sections } = closure_1_2(closure_1_3[10]).getCachedResults(
+            obj1,
+            obj(closure_1_3[13]).ApplicationCommandType.CHAT,
+            query,
+          ));
           if (null != commands) {
             if (commands.length > 0) {
               if (commands[0].inputType !== obj(closure_1_3[11]).ApplicationCommandInputType.PLACEHOLDER) {
@@ -1087,7 +1171,11 @@ class ApplicationCommandManager {
               }
             }
           }
-          const cachedResults = closure_1_2(closure_1_3[10]).getCachedResults(obj1, obj(closure_1_3[13]).ApplicationCommandType.CHAT, query);
+          const cachedResults = closure_1_2(closure_1_3[10]).getCachedResults(
+            obj1,
+            obj(closure_1_3[13]).ApplicationCommandType.CHAT,
+            query,
+          );
         }
         return false;
       }
@@ -1107,7 +1195,12 @@ prototype["getMentionGames"] = function getMentionGames() {
 };
 prototype["buildGameMentionNode"] = function buildGameMentionNode(game) {
   const styles = this.styles;
-  const obj = { type: addRule.ChatInputNodeType.GAME_HIGHLIGHT, style: styles.gameMention(), deleteNodeOnBackspace: true, editDisabled: true };
+  const obj = {
+    type: addRule.ChatInputNodeType.GAME_HIGHLIGHT,
+    style: styles.gameMention(),
+    deleteNodeOnBackspace: true,
+    editDisabled: true,
+  };
   const merged = Object.assign(findGameMentionTokens.buildGameMentionResult(game));
   return obj;
 };
@@ -1214,7 +1307,13 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       const obj8 = obj1(11725);
       preferredCommandType = obj8;
       preferredCommandType = activeCommand;
-      self.optionValidationResults = obj8.getValidationResults(activeCommand, self.optionValues, editId.channel.guild_id, editId.channel.id, false);
+      self.optionValidationResults = obj8.getValidationResults(
+        activeCommand,
+        self.optionValues,
+        editId.channel.guild_id,
+        editId.channel.id,
+        false,
+      );
       const chatInputNodes = self.chatInputNodes;
       self.chatInputNodes = chatInputNodes.map((type) => {
         if (type.type === obj1(11564).ChatInputNodeType.COMMAND_OPTION) {
@@ -1351,10 +1450,24 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       preferredCommandType = 1 === items1.filter((required) => !required.required).length;
       preferredCommandType = self;
       preferredCommandType = activeCommand;
-      if (!self.insertFirstOptionIfValid(editId.text, activeCommand, activeCommand.displayName, preferredCommandType, preferredCommandType)) {
+      if (
+        !self.insertFirstOptionIfValid(
+          editId.text,
+          activeCommand,
+          activeCommand.displayName,
+          preferredCommandType,
+          preferredCommandType,
+        )
+      ) {
         preferredCommandType = self;
         preferredCommandType = activeCommand;
-        preferredCommandType = self.insertFirstOptionIfValid(editId.text, activeCommand, activeCommand.untranslatedName, preferredCommandType, preferredCommandType);
+        preferredCommandType = self.insertFirstOptionIfValid(
+          editId.text,
+          activeCommand,
+          activeCommand.untranslatedName,
+          preferredCommandType,
+          preferredCommandType,
+        );
       }
     }
     if (name !== name1) {
@@ -1391,7 +1504,13 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
                   if (currentOption != null) {
                     name = currentOption.name;
                   }
-                  const obj = { isActive: name === name, optionValue: self.optionValues[name], hasValue: null, location: null, length: null };
+                  const obj = {
+                    isActive: name === name,
+                    optionValue: self.optionValues[name],
+                    hasValue: null,
+                    location: null,
+                    length: null,
+                  };
                   let tmp4 = null != arr;
                   if (tmp4) {
                     tmp4 = arr.length > 0;
@@ -1426,7 +1545,8 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
                   preferredCommandType = preferredCommandType.hasValue;
                 }
                 if (preferredCommandType) {
-                  obj1[self.activeOption.name].lastValidationResult = self.optionValidationResults[self.activeOption.name];
+                  obj1[self.activeOption.name].lastValidationResult =
+                    self.optionValidationResults[self.activeOption.name];
                 }
               }
             }
@@ -1480,7 +1600,14 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
         }
         if (tmp83) {
           preferredCommandType = importAll;
-          let obj3 = { channelId: null, command: null, section: null, preferredCommandId: null, location: null, changedOptionStates: null };
+          let obj3 = {
+            channelId: null,
+            command: null,
+            section: null,
+            preferredCommandId: null,
+            location: null,
+            changedOptionStates: null,
+          };
           obj3[0] = editId.channel.id;
           const activeCommand4 = self.activeCommand;
           preferredCommandType = undefined;
@@ -1714,7 +1841,9 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
               let tmp64 = value;
               let tmp65 = nextResult;
               let tmp66 = tmp58;
-              tmp63 = str2.substring(value.location + tmp56.displayName.length + 1, value.location + value.length) === tmp59.displayText;
+              tmp63 =
+                str2.substring(value.location + tmp56.displayName.length + 1, value.location + value.length) ===
+                tmp59.displayText;
             }
             tmp60 = tmp63;
           }
@@ -1752,7 +1881,12 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
         }
       }
     }
-    currentCommand = self.getCurrentCommand(editId.text, editId.channel, self.preferredCommand, self.preferredCommandSection);
+    currentCommand = self.getCurrentCommand(
+      editId.text,
+      editId.channel,
+      self.preferredCommand,
+      self.preferredCommandSection,
+    );
   }
 };
 prototype["updateValidationResults"] = function updateValidationResults() {

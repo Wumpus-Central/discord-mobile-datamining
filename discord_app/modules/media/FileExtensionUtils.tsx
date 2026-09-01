@@ -2,7 +2,17 @@
 import set from "../../../_runtime/00002_set.js";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
 
-let closure_2 = { "image/avif": "avif", "image/gif": "gif", "image/heic": "heic", "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "video/mp4": "mp4", "video/quicktime": "mov", "video/webm": "webm" };
+let closure_2 = {
+  "image/avif": "avif",
+  "image/gif": "gif",
+  "image/heic": "heic",
+  "image/jpeg": "jpg",
+  "image/png": "png",
+  "image/webp": "webp",
+  "video/mp4": "mp4",
+  "video/quicktime": "mov",
+  "video/webm": "webm",
+};
 const result = set.fileFinishedImporting("modules/media/FileExtensionUtils.tsx");
 
 export const getExtensionFromContentType = function getExtensionFromContentType(str) {

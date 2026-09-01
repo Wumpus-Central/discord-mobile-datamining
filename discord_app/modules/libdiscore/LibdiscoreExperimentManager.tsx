@@ -48,17 +48,17 @@ prototype["_initialize"] = function _initialize() {
     let obj = callback(table[4]);
     obj = { kind: "user", name: id.id, defaultConfig: { treatmentId: -1 }, variations: null };
     const treatments = id.getTreatments();
-    obj[3] = Object.fromEntries(treatments.map((treatmentId) => {
-      treatmentId = treatmentId.treatmentId;
-      const items = [treatmentId, { treatmentId }];
-      return items;
-    }));
+    obj[3] = Object.fromEntries(
+      treatments.map((treatmentId) => {
+        treatmentId = treatmentId.treatmentId;
+        const items = [treatmentId, { treatmentId }];
+        return items;
+      }),
+    );
     id.setExperiment(obj.createApexExperiment(obj));
   });
 };
-prototype["_terminate"] = function _terminate() {
-
-};
+prototype["_terminate"] = function _terminate() {};
 const libdiscoreExperimentManager = new LibdiscoreExperimentManager();
 const result = require("set").fileFinishedImporting("modules/libdiscore/LibdiscoreExperimentManager.tsx");
 

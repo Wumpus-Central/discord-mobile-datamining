@@ -11,7 +11,20 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let obj = { acronym: null };
-obj = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center", overflow: "hidden", marginTop: 0, marginRight: 10, borderColor: ThemesDefault.colors.BORDER_MUTED, borderStyle: "solid", borderWidth: 2 };
+obj = {
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+  marginTop: 0,
+  marginRight: 10,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+  borderStyle: "solid",
+  borderWidth: 2,
+};
 obj[0] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function ActivityInviteSheetRow(row) {
@@ -89,7 +102,17 @@ const memoResult = importAllResult.memo(function ActivityInviteSheetRow(row) {
     function handlePress() {
       callback(row);
     }
-    const obj5 = { start: null, end: null, icon: null, label: null, trailing: null, onPress: null, disabled: null, accessibilityActions: null, onAccessibilityAction: null };
+    const obj5 = {
+      start: null,
+      end: null,
+      icon: null,
+      label: null,
+      trailing: null,
+      onPress: null,
+      disabled: null,
+      accessibilityActions: null,
+      onAccessibilityAction: null,
+    };
     obj5[0] = start;
     obj5[1] = end;
     obj5[2] = tmp14;
@@ -106,7 +129,17 @@ const memoResult = importAllResult.memo(function ActivityInviteSheetRow(row) {
     obj5[6] = tmp30;
     obj5[7] = tmp26;
     obj5[8] = fn;
-    return jsx(tmp2(tmp3[20]).TableRow, { start: null, end: null, icon: null, label: null, trailing: null, onPress: null, disabled: null, accessibilityActions: null, onAccessibilityAction: null });
+    return jsx(tmp2(tmp3[20]).TableRow, {
+      start: null,
+      end: null,
+      icon: null,
+      label: null,
+      trailing: null,
+      onPress: null,
+      disabled: null,
+      accessibilityActions: null,
+      onAccessibilityAction: null,
+    });
   }
   user = user.getUser(id);
   const obj7 = {
@@ -119,7 +152,7 @@ const memoResult = importAllResult.memo(function ActivityInviteSheetRow(row) {
       }
     },
     style: { padding: 8, margin: -8 },
-    children: null
+    children: null,
   };
   let avatarSource;
   if (user != null) {
@@ -129,7 +162,10 @@ const memoResult = importAllResult.memo(function ActivityInviteSheetRow(row) {
     avatarSource = null;
   }
   const obj8 = { source: avatarSource, size: require(row[13]).AvatarSizes.REFRESH_MEDIUM_32 };
-  obj7[4] = jsx(require(row[13]).Avatar, { source: avatarSource, size: require(row[13]).AvatarSizes.REFRESH_MEDIUM_32 });
+  obj7[4] = jsx(require(row[13]).Avatar, {
+    source: avatarSource,
+    size: require(row[13]).AvatarSizes.REFRESH_MEDIUM_32,
+  });
   let tmp21Result = tmp21(tmp2(tmp3[12]).PressableOpacity, obj7);
   const obj9 = { nick: null, user: null };
   tmp = callback();

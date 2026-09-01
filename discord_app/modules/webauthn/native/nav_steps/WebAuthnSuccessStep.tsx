@@ -15,7 +15,7 @@ export default function WebAuthnSuccessStep() {
       headerLeft: navigation(closure_1_2[3]).getHeaderCloseButton(() => {
         closure_0.popToTop();
         const result = closure_1_1(closure_1_2[4]).closePasskeyUpsellModal();
-      })
+      }),
     };
     navigation.setOptions(obj);
   }, items);
@@ -23,4 +23,4 @@ export default function WebAuthnSuccessStep() {
   const intl = navigation(1236).intl;
   obj[1] = intl.format(navigation(1236).t.iVTs6i, {});
   return jsx(CodeRowDefault, { onGenerate: null, headerLabel: null });
-};
+}

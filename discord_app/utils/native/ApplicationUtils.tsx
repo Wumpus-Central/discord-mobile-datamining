@@ -16,7 +16,15 @@ const result = set.fileFinishedImporting("utils/native/ApplicationUtils.tsx");
 export const installApplication = function installApplication(arg0) {
   ({ applicationId, customInstallUrl } = arg0);
   let obj5 = customInstallUrl;
-  ({ installParams, integrationTypesConfig, guildId, channelId, disableGuildSelect, source, oauth2Callback: importDefault } = arg0);
+  ({
+    installParams,
+    integrationTypesConfig,
+    guildId,
+    channelId,
+    disableGuildSelect,
+    source,
+    oauth2Callback: importDefault,
+  } = arg0);
   if (null != customInstallUrl) {
     let obj = { application_id: null, auth_type: "custom_url", source: null, device_platform: "mobile_native" };
     obj[0] = applicationId;
@@ -33,21 +41,23 @@ export const installApplication = function installApplication(arg0) {
     if (null != integrationTypesConfig) {
       const _Object = Object;
       const values = Object.values(integrationTypesConfig);
-      if (values.some((oauth2_install_params) => {
-        let prop;
-        if (oauth2_install_params != null) {
-          prop = oauth2_install_params.oauth2_install_params;
-        }
-        let tmp2 = null != prop;
-        if (!tmp2) {
-          let oauth2InstallParams;
+      if (
+        values.some((oauth2_install_params) => {
+          let prop;
           if (oauth2_install_params != null) {
-            oauth2InstallParams = oauth2_install_params.oauth2InstallParams;
+            prop = oauth2_install_params.oauth2_install_params;
           }
-          tmp2 = null != oauth2InstallParams;
-        }
-        return tmp2;
-      })) {
+          let tmp2 = null != prop;
+          if (!tmp2) {
+            let oauth2InstallParams;
+            if (oauth2_install_params != null) {
+              oauth2InstallParams = oauth2_install_params.oauth2InstallParams;
+            }
+            tmp2 = null != oauth2InstallParams;
+          }
+          return tmp2;
+        })
+      ) {
         obj5 = expandEventPropertiesDefault;
         obj1 = { application_id: null, auth_type: "in_app", source: null, device_platform: "mobile_native" };
         obj1[0] = applicationId;
@@ -85,7 +95,15 @@ export const installApplication = function installApplication(arg0) {
       obj4[0] = applicationId;
       obj4[2] = source;
       expandEventPropertiesDefault.track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj4);
-      obj5 = { clientId: null, guildId: null, channelId: null, disableGuildSelect: null, scopes: null, permissions: null, callback: null };
+      obj5 = {
+        clientId: null,
+        guildId: null,
+        channelId: null,
+        disableGuildSelect: null,
+        scopes: null,
+        permissions: null,
+        callback: null,
+      };
       obj5[0] = applicationId;
       obj5[1] = guildId;
       obj5[2] = channelId;
@@ -153,7 +171,14 @@ export const openOAuth2Modal = function openOAuth2Modal(arg0) {
 export const installPrivateChannelIntegration = function installPrivateChannelIntegration(arg0) {
   ({ applicationId, channelId, callback } = arg0);
   let obj = _modDef4723;
-  obj = { clientId: applicationId, scopes: null, channelId: null, dismissOAuthModal: null, disableGuildSelect: true, callback: null };
+  obj = {
+    clientId: applicationId,
+    scopes: null,
+    channelId: null,
+    dismissOAuthModal: null,
+    disableGuildSelect: true,
+    callback: null,
+  };
   const items = [set2.OAuth2Scopes.APPLICATIONS_COMMANDS];
   obj[1] = items;
   obj[2] = channelId;

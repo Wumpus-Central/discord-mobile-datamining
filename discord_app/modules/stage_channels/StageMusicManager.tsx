@@ -42,14 +42,16 @@ function checkVoiceStates() {
         } else {
           const _Object = Object;
           const values = Object.values(voiceStatesForChannel.getVoiceStatesForChannel(voiceChannelId));
-          const tmp8 = null != values.find((suppress) => {
-            suppress = suppress.suppress;
-            let tmp = !suppress;
-            if (!suppress) {
-              tmp = !suppress.isVoiceMuted();
-            }
-            return tmp;
-          });
+          const tmp8 =
+            null !=
+            values.find((suppress) => {
+              suppress = suppress.suppress;
+              let tmp = !suppress;
+              if (!suppress) {
+                tmp = !suppress.isVoiceMuted();
+              }
+              return tmp;
+            });
           if (!tmp8) {
             if (!c9) {
               closure_10.volume = obj.getOutputVolume() / 400;
@@ -72,12 +74,24 @@ function checkVoiceStates() {
 }
 let c3 = importDefaultResult;
 let c9 = false;
-let closure_10 = createSoundForPack.createSound("stage_waiting", "stage_waiting", importDefaultResult.getOutputVolume() / 400);
+let closure_10 = createSoundForPack.createSound(
+  "stage_waiting",
+  "stage_waiting",
+  importDefaultResult.getOutputVolume() / 400,
+);
 initializeDefault;
 class StageMusicManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    applyArgumentsResult.actions = { VOICE_CHANNEL_SELECT: applyArgumentsResult.handleVoiceChannelSelect, LOGOUT: applyArgumentsResult.handleLogout, STAGE_MUSIC_MUTE: applyArgumentsResult.handleMute, STAGE_MUSIC_PLAY: applyArgumentsResult.handlePlay, VOICE_STATE_UPDATES: applyArgumentsResult.handleVoiceStateUpdates, AUDIO_SET_OUTPUT_VOLUME: applyArgumentsResult.handleSetOutputVolume, AUDIO_TOGGLE_SELF_DEAF: applyArgumentsResult.handleToggleSelfDeaf };
+    applyArgumentsResult.actions = {
+      VOICE_CHANNEL_SELECT: applyArgumentsResult.handleVoiceChannelSelect,
+      LOGOUT: applyArgumentsResult.handleLogout,
+      STAGE_MUSIC_MUTE: applyArgumentsResult.handleMute,
+      STAGE_MUSIC_PLAY: applyArgumentsResult.handlePlay,
+      VOICE_STATE_UPDATES: applyArgumentsResult.handleVoiceStateUpdates,
+      AUDIO_SET_OUTPUT_VOLUME: applyArgumentsResult.handleSetOutputVolume,
+      AUDIO_TOGGLE_SELF_DEAF: applyArgumentsResult.handleToggleSelfDeaf,
+    };
     return applyArgumentsResult;
   }
 }
@@ -137,14 +151,22 @@ export default stageMusicManager;
 export const useShowStageMusicMuteButton = function useShowStageMusicMuteButton(channelId) {
   const _require = channelId;
   const items = [closure_4];
-  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.getVoiceChannelId() === closure_0);
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_4.getVoiceChannelId() === closure_0,
+  );
   const obj = initialize;
-  const stageParticipants = require("StageChannelParticipantStoreHooks.tsx").useStageParticipants(channelId, require("StageChannelParticipants.tsx").StageChannelParticipantNamedIndex.SPEAKER);
+  const stageParticipants = require("StageChannelParticipantStoreHooks.tsx").useStageParticipants(
+    channelId,
+    require("StageChannelParticipants.tsx").StageChannelParticipantNamedIndex.SPEAKER,
+  );
   const obj2 = useStageParticipants;
-  const tmp2 = null != stageParticipants.find((voiceState) => {
-    voiceState = voiceState.voiceState;
-    return !voiceState.isVoiceMuted();
-  });
+  const tmp2 =
+    null !=
+    stageParticipants.find((voiceState) => {
+      voiceState = voiceState.voiceState;
+      return !voiceState.isVoiceMuted();
+    });
   const items1 = [closure_7];
   if (stateFromStores) {
     stateFromStores = null == obj3.useStateFromStores(items1, () => closure_1_7.getStageInstanceByChannel(closure_0));
@@ -156,7 +178,10 @@ export const useShowStageMusicMuteButton = function useShowStageMusicMuteButton(
 };
 export const shouldShowStageMusicMuteButton = function shouldShowStageMusicMuteButton(id) {
   let tmp = store2.getVoiceChannelId() === id;
-  mutableParticipants = mutableParticipants.getMutableParticipants(id, sortKey.StageChannelParticipantNamedIndex.SPEAKER);
+  mutableParticipants = mutableParticipants.getMutableParticipants(
+    id,
+    sortKey.StageChannelParticipantNamedIndex.SPEAKER,
+  );
   if (tmp) {
     tmp = null == closure_7.getStageInstanceByChannel(id);
   }

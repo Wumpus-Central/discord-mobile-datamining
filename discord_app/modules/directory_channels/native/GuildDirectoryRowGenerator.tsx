@@ -20,7 +20,9 @@ export const generateDirectoryRows = function generateDirectoryRows(arg0, arr, c
     return [];
   } else if (currentCategoryId !== DirectoryEntryCategories.ALL) {
     const obj4 = set(11871);
-    return set(11871).rankGuildEntries(arr).map((entry) => ({ type: constants.ENTRY, entry }));
+    return set(11871)
+      .rankGuildEntries(arr)
+      .map((entry) => ({ type: constants.ENTRY, entry }));
   } else {
     const items = [];
     const rankByDateAddedResult = set(11871).rankByDateAdded(arr);

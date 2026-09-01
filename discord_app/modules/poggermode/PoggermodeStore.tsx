@@ -87,20 +87,25 @@ function updateCombo(userId) {
 }
 ({ ShakeLevel: c5, ShakeLocation: closure_6 } = ConfettiLocation);
 let set = new Set();
-const secondaryIndexMap = new require("version").SecondaryIndexMap((arg0) => {
-  const items = [, ];
-  ({ userId: arr[0], channelId: arr[1] } = arg0);
-  return items;
-}, (channelId) => "" + channelId.channelId + "-" + channelId.userId);
-const secondaryIndexMap1 = new require("version").SecondaryIndexMap((combo) => {
-  const items = [, , ];
-  ({ messageId: arr[0], channelId: arr[1] } = combo);
-  items[2] = combo.combo.userId;
-  return items;
-}, (channelId) => "" + channelId.channelId + "-" + channelId.combo.userId + "-" + channelId.messageId);
+const secondaryIndexMap = new require("version").SecondaryIndexMap(
+  (arg0) => {
+    const items = [,];
+    ({ userId: arr[0], channelId: arr[1] } = arg0);
+    return items;
+  },
+  (channelId) => "" + channelId.channelId + "-" + channelId.userId,
+);
+const secondaryIndexMap1 = new require("version").SecondaryIndexMap(
+  (combo) => {
+    const items = [, ,];
+    ({ messageId: arr[0], channelId: arr[1] } = combo);
+    items[2] = combo.combo.userId;
+    return items;
+  },
+  (channelId) => "" + channelId.channelId + "-" + channelId.combo.userId + "-" + channelId.messageId,
+);
 const Store = initializeDefault.Store;
-class PoggermodeStore extends Store {
-}
+class PoggermodeStore extends Store {}
 const prototype = PoggermodeStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_4, closure_3);
@@ -239,7 +244,7 @@ const poggermodeStore = new PoggermodeStore(dispatcherDefault, {
     } else {
       return false;
     }
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/poggermode/PoggermodeStore.tsx");
 

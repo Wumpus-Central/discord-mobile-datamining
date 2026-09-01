@@ -20,7 +20,9 @@ createCacheKey = { overview: { flex: 1 }, overviewContent: null };
 createCacheKey = { paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
 let closure_18 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_settings/community/native/GuildSettingsModalCommunity.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/community/native/GuildSettingsModalCommunity.tsx",
+);
 
 export default function GuildSettingsModalCommunity(guildId) {
   guildId = guildId.guildId;
@@ -131,7 +133,13 @@ export default function GuildSettingsModalCommunity(guildId) {
       if (null != closure_5) {
         ({ id, rulesChannelId, publicUpdatesChannelId, preferredLocale, features, safetyAlertsChannelId } = closure_5);
         let obj = handlePublicSaveChanges(closure_1_2[15]);
-        obj = { rulesChannelId: null, safetyAlertsChannelId: null, publicUpdatesChannelId: null, preferredLocale: null, features: null };
+        obj = {
+          rulesChannelId: null,
+          safetyAlertsChannelId: null,
+          publicUpdatesChannelId: null,
+          preferredLocale: null,
+          features: null,
+        };
         obj[0] = rulesChannelId;
         obj[1] = safetyAlertsChannelId;
         obj[2] = publicUpdatesChannelId;
@@ -171,7 +179,10 @@ export default function GuildSettingsModalCommunity(guildId) {
       const found = channels[rulesChannel].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
       const mapped = found.map((channel) => {
         channel = channel.channel;
-        const obj = { value: channel.id, label: callback(table[19]).computeChannelName(channel, closure_9, closure_8, true) };
+        const obj = {
+          value: channel.id,
+          label: callback(table[19]).computeChannelName(channel, closure_9, closure_8, true),
+        };
         return obj;
       });
       const arr = channels[rulesChannel];
@@ -252,7 +263,7 @@ export default function GuildSettingsModalCommunity(guildId) {
     obj3[2] = closure_16(tmp(tmp2[26]).TableRow.TrailingText, obj4);
     obj3[4] = callback2;
     obj2[2] = closure_16(tmp(tmp2[26]).TableRow, obj3);
-    const items9 = [closure_16(tmp(tmp2[25]).TableRowGroup, obj2), , , ];
+    const items9 = [closure_16(tmp(tmp2[25]).TableRowGroup, obj2), , ,];
     let str2 = null;
     if (null != publicUpdatesChannel) {
       tmpResult = tmp(tmp2[19]);
@@ -321,4 +332,4 @@ export default function GuildSettingsModalCommunity(guildId) {
     const tmp22 = closure_17;
   }
   return tmp21Result1;
-};
+}

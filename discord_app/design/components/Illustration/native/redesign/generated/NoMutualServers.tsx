@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/NoMutualServers.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/NoMutualServers.tsx",
+);
 
 export const getNoMutualServersSource = function getNoMutualServersSource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getNoMutualServersSource = function getNoMutualServersSource(theme)
     },
     light() {
       return callback(9237);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useNoMutualServersSource = function useNoMutualServersSource() {
     },
     light() {
       return callback(9237);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const NoMutualServers = function NoMutualServers(arg0) {
     },
     light() {
       return callback(9237);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

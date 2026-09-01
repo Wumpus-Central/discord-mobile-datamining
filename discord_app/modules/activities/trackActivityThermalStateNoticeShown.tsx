@@ -26,7 +26,13 @@ export const trackActivityThermalStateNoticeShown = function trackActivityTherma
   if (currentEmbeddedActivity != null) {
     applicationId = currentEmbeddedActivity.applicationId;
   }
-  obj = { channel_id: embeddedActivityLocationChannelId, application_id: applicationId, activity_session_id: compositeInstanceId, guild_id: null, media_session_id: null };
+  obj = {
+    channel_id: embeddedActivityLocationChannelId,
+    application_id: applicationId,
+    activity_session_id: compositeInstanceId,
+    guild_id: null,
+    media_session_id: null,
+  };
   let guild_id;
   if (basicChannel != null) {
     guild_id = basicChannel.guild_id;

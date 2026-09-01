@@ -38,8 +38,16 @@ let closure_8 = importAllResult.memo((perk) => {
       obj2[1] = buyNitroPlanSelection.selection.item;
       tmp6Result = tmp6(tmp9(13047), obj2);
     }
-    const items = [tmp6Result, ];
-    const obj3 = { planSelection: null, location: null, sourceAnalyticsLocations: null, applicationId: null, onHostSheetClose: null, onPaymentSuccess: null, onPaymentDismiss: null };
+    const items = [tmp6Result];
+    const obj3 = {
+      planSelection: null,
+      location: null,
+      sourceAnalyticsLocations: null,
+      applicationId: null,
+      onHostSheetClose: null,
+      onPaymentSuccess: null,
+      onPaymentDismiss: null,
+    };
     obj3[0] = buyNitroPlanSelection;
     obj3[1] = QUICK_SWITCHERDefault.PREMIUM_MARKETING_PERK_CARD;
     obj3[2] = analyticsLocations;
@@ -58,7 +66,9 @@ let closure_8 = importAllResult.memo((perk) => {
   }
   return tmp6Result;
 });
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx",
+);
 
 export const openBuyNitroPerkDetails = function openBuyNitroPerkDetails(perk, arg1) {
   let obj = ACTION_SHEET_HEIGHT_HALF;

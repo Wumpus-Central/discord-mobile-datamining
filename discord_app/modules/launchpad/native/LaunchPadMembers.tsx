@@ -11,7 +11,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
-let closure_7 = createCacheKey.createStyles({ wrapper: { minHeight: 16 }, listStyle: { flex: 0 }, emptyWrapper: { padding: 20 }, emptyText: { textAlign: "center" } });
+let closure_7 = createCacheKey.createStyles({
+  wrapper: { minHeight: 16 },
+  listStyle: { flex: 0 },
+  emptyWrapper: { padding: 20 },
+  emptyText: { textAlign: "center" },
+});
 const memoResult = importAllResult.memo(function LaunchPadMembers() {
   const tmp = callback();
   let obj = defaultAreStatesEqual;
@@ -49,7 +54,11 @@ const memoResult = importAllResult.memo(function LaunchPadMembers() {
     obj = { channelId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 };
     obj[0] = stateFromStoresObject.channelId;
     obj[1] = tmp.listStyle;
-    obj[1] = jsx(_modDef11756, { channelId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
+    obj[1] = jsx(
+      _modDef11756,
+      { channelId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 },
+      stateFromStoresObject.channelId,
+    );
     let tmp8 = <View channelId={null} listStyleOverride={null} disableBottomSafeZone insetEnd={20} />;
   } else if ("thread" === stateFromStoresObject.type) {
     obj1 = { style: null, children: null };
@@ -57,7 +66,11 @@ const memoResult = importAllResult.memo(function LaunchPadMembers() {
     const obj2 = { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 };
     ({ channelId: obj5[0], guildId: obj5[1] } = stateFromStoresObject);
     obj2[2] = tmp.listStyle;
-    obj1[1] = jsx(_modDef16270, { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
+    obj1[1] = jsx(
+      _modDef16270,
+      { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 },
+      stateFromStoresObject.channelId,
+    );
     tmp8 = <View style={null}>{null}</View>;
   } else if ("guild" === stateFromStoresObject.type) {
     const obj3 = { style: null, children: null };
@@ -65,7 +78,11 @@ const memoResult = importAllResult.memo(function LaunchPadMembers() {
     const obj4 = { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 };
     ({ channelId: obj3[0], guildId: obj3[1] } = stateFromStoresObject);
     obj4[2] = tmp.listStyle;
-    obj3[1] = jsx(_modDef11187, { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
+    obj3[1] = jsx(
+      _modDef11187,
+      { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 },
+      stateFromStoresObject.channelId,
+    );
     tmp8 = <View style={null}>{null}</View>;
   } else {
     const obj5 = { style: null, children: null };

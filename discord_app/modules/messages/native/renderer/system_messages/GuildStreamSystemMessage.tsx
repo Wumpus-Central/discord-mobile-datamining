@@ -8,7 +8,9 @@ import createCommonMessageDefault from "createCommonMessage.tsx";
 import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
 
 const StreamTypes = StreamIssueReportReasons.StreamTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx",
+);
 
 export const createGuildStreamSystemMessage = function createGuildStreamSystemMessage(roleStyle) {
   const message = roleStyle.message;
@@ -20,7 +22,14 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
   const tmp3 = getHumanizedCallDurationDefault(message);
   obj1 = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj1.getMessageAuthorWithProcessedColor(message);
-  let obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  let obj = {
+    username: messageAuthorWithProcessedColor.nick,
+    usernameOnClick: formatUsernameOnClickDefault({
+      message,
+      author: messageAuthorWithProcessedColor,
+      roleStyle: roleStyle.roleStyle,
+    }),
+  };
   obj = { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: message.author.id, guildId: guild_id };
   obj1 = { ended: tmp4, content: null };
   const intl = getSystemLocale.intl;

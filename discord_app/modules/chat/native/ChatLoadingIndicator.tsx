@@ -52,7 +52,12 @@ function openLoadingIndicatorDebugBody() {
 let c4 = importAllResult;
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
-obj = { height: 8, width: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+obj = {
+  height: 8,
+  width: 8,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
 obj[1] = obj;
 let closure_16 = createCacheKey.createStyles(obj);
 let closure_18 = importAllResult.memo(() => {
@@ -74,7 +79,7 @@ let closure_18 = importAllResult.memo(() => {
     }
   });
   ({ messagesCached, messagesReady, connected } = stateFromStoresObject);
-  const items1 = ["messages.cached", ":", " ", , ];
+  const items1 = ["messages.cached", ":", " ", ,];
   let str = "text-feedback-critical";
   let str2 = "text-feedback-critical";
   if (messagesCached) {
@@ -96,8 +101,8 @@ let closure_18 = importAllResult.memo(() => {
     tmp4Result = tmp4(tmp(4474).Text, obj);
   }
   items1[4] = tmp4Result;
-  const items3 = [closure_14(closure_15, { children: items1 }), "\n", , , , , ];
-  const items4 = ["messages.ready", ":", " ", , ];
+  const items3 = [closure_14(closure_15, { children: items1 }), "\n", , , , ,];
+  const items4 = ["messages.ready", ":", " ", ,];
   let str6 = str;
   if (messagesReady) {
     str6 = "text-feedback-positive";
@@ -119,7 +124,7 @@ let closure_18 = importAllResult.memo(() => {
   items4[4] = tmp4Result;
   items3[2] = closure_14(closure_15, { children: items4 });
   items3[3] = "\n";
-  const items6 = ["connected", ":", " ", , ];
+  const items6 = ["connected", ":", " ", ,];
   let str10 = str;
   if (connected) {
     str10 = "text-feedback-positive";
@@ -147,7 +152,7 @@ let closure_18 = importAllResult.memo(() => {
   if (!messagesCached) {
     messagesCached = !connected;
   }
-  const items8 = ["should show chat indicator", ":", " ", , ];
+  const items8 = ["should show chat indicator", ":", " ", ,];
   if (messagesCached) {
     str = "text-feedback-positive";
   }
@@ -163,7 +168,9 @@ let closure_18 = importAllResult.memo(() => {
   obj6[2] = items3;
   return closure_14(Text.Text, obj6);
 });
-let closure_19 = { code: "function ChatLoadingIndicatorTsx1(){const{useReducedMotion,withRepeat,withSequence,withTiming,Easing}=this.__closure;if(useReducedMotion){return{transform:[]};}return{transform:[{scale:withRepeat(withSequence(withTiming(1,{duration:0}),withTiming(0.5,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)}),withTiming(1,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)})),-1)}]};}" };
+let closure_19 = {
+  code: "function ChatLoadingIndicatorTsx1(){const{useReducedMotion,withRepeat,withSequence,withTiming,Easing}=this.__closure;if(useReducedMotion){return{transform:[]};}return{transform:[{scale:withRepeat(withSequence(withTiming(1,{duration:0}),withTiming(0.5,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)}),withTiming(1,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)})),-1)}]};}",
+};
 const result = require("set").fileFinishedImporting("modules/chat/native/ChatLoadingIndicator.tsx");
 
 export const useShouldChannelShowLoadingIndicator = function useShouldChannelShowLoadingIndicator(channelId) {
@@ -252,7 +259,10 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
       obj1 = { duration: 1500, easing: null };
       const Easing2 = stateFromStores(closure_1_2[19]).Easing;
       obj1[1] = Easing2.bezier(0.4, 0, 0.2, 1);
-      obj[0] = obj3.withRepeat(obj4.withSequence(withTimingResult, withTimingResult1, stateFromStores(closure_1_2[20]).withTiming(1, obj1)), -1);
+      obj[0] = obj3.withRepeat(
+        obj4.withSequence(withTimingResult, withTimingResult1, stateFromStores(closure_1_2[20]).withTiming(1, obj1)),
+        -1,
+      );
       const items = [obj];
       obj[0] = items;
       tmp7 = obj;
@@ -260,14 +270,20 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     }
     return tmp7;
   };
-  obj = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4217).withRepeat, withSequence: stateFromStores(4217).withSequence, withTiming: stateFromStores(4479).withTiming, Easing: stateFromStores(4217).Easing };
+  obj = {
+    useReducedMotion: stateFromStores,
+    withRepeat: stateFromStores(4217).withRepeat,
+    withSequence: stateFromStores(4217).withSequence,
+    withTiming: stateFromStores(4479).withTiming,
+    Easing: stateFromStores(4217).Easing,
+  };
   fn.__closure = obj;
   fn.__workletHash = 17454673879926;
   fn.__initData = closure_19;
   obj = { style: tmp.container, children: null };
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const items2 = [tmp.pulse, animatedStyle];
-  const items3 = [callback2(_modDef4217.View, { style: items2 }), ];
+  const items3 = [callback2(_modDef4217.View, { style: items2 })];
   obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = stateFromStores(1236).intl;
   obj1[2] = intl.string(stateFromStores(1236).t.JwIJMV);

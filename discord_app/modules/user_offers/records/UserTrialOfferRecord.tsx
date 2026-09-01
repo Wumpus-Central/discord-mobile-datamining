@@ -67,7 +67,19 @@ UserTrialOfferRecord["createFromServer"] = function createFromServer(expires_at)
   if (typeof UserTrialOfferRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp13 = new UserTrialOfferRecord(str, _Date2, tmp9, UserTrialOfferRecord, new.target, id, user_id, trial_id, date, referrer_id, referrer);
+  const tmp13 = new UserTrialOfferRecord(
+    str,
+    _Date2,
+    tmp9,
+    UserTrialOfferRecord,
+    new.target,
+    id,
+    user_id,
+    trial_id,
+    date,
+    referrer_id,
+    referrer,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp13.id = id;
   tmp13.userId = user_id;
@@ -105,19 +117,19 @@ Object.defineProperty(prototype, "hasExpired", {
     }
     return tmp2;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isRedeemed", {
   get: function isRedeemed() {
     return null != this.redeemedAt;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasAcknowledged", {
   get: function hasAcknowledged() {
     return null != this.expiresAt;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isReferralTrial", {
   get: function isReferralTrial() {
@@ -127,7 +139,7 @@ Object.defineProperty(prototype, "isReferralTrial", {
     }
     return tmp;
   },
-  set: undefined
+  set: undefined,
 });
 const result = require("set").fileFinishedImporting("modules/user_offers/records/UserTrialOfferRecord.tsx");
 

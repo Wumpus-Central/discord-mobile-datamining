@@ -4,9 +4,10 @@ import dispatcherDefault from "../../../Dispatcher.tsx";
 
 const map = new Map();
 const Store = initializeDefault.Store;
-class InitialMemberVerificationStore extends Store {
-}
-InitialMemberVerificationStore.prototype["getInitialVerificationState"] = function getInitialVerificationState(closure_0) {
+class InitialMemberVerificationStore extends Store {}
+InitialMemberVerificationStore.prototype["getInitialVerificationState"] = function getInitialVerificationState(
+  closure_0,
+) {
   let tmp = null;
   if (null != closure_0) {
     let value = map.get(closure_0);
@@ -24,9 +25,11 @@ const initialMemberVerificationStore = new InitialMemberVerificationStore(dispat
     if (!map.has(guildId)) {
       const result = map.set(guildId, guildId.state);
     }
-  }
+  },
 });
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/InitialMemberVerificationStore.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/InitialMemberVerificationStore.tsx",
+);
 
 export default initialMemberVerificationStore;
 export const setInitialVerification = function setInitialVerification(guildId, state) {

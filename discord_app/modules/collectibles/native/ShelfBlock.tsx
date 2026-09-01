@@ -17,15 +17,57 @@ function ListItemSeparator() {
 }
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, containerWithBackground: null, backgroundImage: null, header: null, headingWrapper: null, listEdgeSpacer: null, listItemSeparator: null };
+createCacheKey = {
+  container: null,
+  containerWithBackground: null,
+  backgroundImage: null,
+  header: null,
+  headingWrapper: null,
+  listEdgeSpacer: null,
+  listItemSeparator: null,
+};
 createCacheKey = { width: "100%", paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24, paddingTop: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_24, overflow: "hidden" };
-createCacheKey[2] = { position: "absolute", top: 0, left: 0, bottom: 0, minWidth: "100%", aspectRatio: 2.5, resizeMode: "cover" };
-let obj1 = { marginTop: ThemesDefault.space.PX_24, paddingTop: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_24, overflow: "hidden" };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16, zIndex: 1 };
+createCacheKey[1] = {
+  marginTop: ThemesDefault.space.PX_24,
+  paddingTop: ThemesDefault.space.PX_24,
+  paddingBottom: ThemesDefault.space.PX_24,
+  overflow: "hidden",
+};
+createCacheKey[2] = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  bottom: 0,
+  minWidth: "100%",
+  aspectRatio: 2.5,
+  resizeMode: "cover",
+};
+let obj1 = {
+  marginTop: ThemesDefault.space.PX_24,
+  paddingTop: ThemesDefault.space.PX_24,
+  paddingBottom: ThemesDefault.space.PX_24,
+  overflow: "hidden",
+};
+createCacheKey[3] = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: ThemesDefault.space.PX_12,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  marginBottom: ThemesDefault.space.PX_16,
+  zIndex: 1,
+};
 createCacheKey[4] = { flexShrink: 1 };
-let obj2 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16, zIndex: 1 };
+let obj2 = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: ThemesDefault.space.PX_12,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  marginBottom: ThemesDefault.space.PX_16,
+  zIndex: 1,
+};
 createCacheKey[5] = { width: ThemesDefault.space.PX_16 };
 let obj3 = { width: ThemesDefault.space.PX_16 };
 createCacheKey[6] = { width: ThemesDefault.space.PX_12 };
@@ -92,7 +134,7 @@ export default function _default(block) {
   if (0 === filteredAndSortedProducts.length) {
     return null;
   } else {
-    const items4 = [tmp.container, ];
+    const items4 = [tmp.container];
     let containerWithBackground = tmp25;
     if (null != block.mobileBackgroundImage) {
       containerWithBackground = tmp.containerWithBackground;
@@ -114,7 +156,7 @@ export default function _default(block) {
       obj1[1] = obj2;
       tmp14Result = tmp14(stateFromStores, obj1);
     }
-    const items5 = [tmp14Result, , ];
+    const items5 = [tmp14Result, ,];
     obj3 = { style: null, children: null };
     obj3[0] = tmp.header;
     obj4 = { style: null, children: null };
@@ -133,7 +175,7 @@ export default function _default(block) {
     obj6[1] = tmp19;
     obj6[2] = block.name;
     obj4[1] = closure_9(tmp2(tmp3[18]).Heading, obj6);
-    const items6 = [closure_9(closure_5, obj4), ];
+    const items6 = [closure_9(closure_5, obj4)];
     tmp14Result = block.showButton && null != stateFromStores;
     if (tmp14Result) {
       let str2 = "secondary";
@@ -151,7 +193,21 @@ export default function _default(block) {
     obj3[1] = items6;
     items5[1] = closure_10(closure_5, obj3);
     const obj8 = { children: null };
-    const obj9 = { horizontal: true, accessibilityRole: "list", accessibilityLabel: null, data: null, keyExtractor: null, onScroll: null, renderItem: null, decelerationRate: "fast", snapToInterval: null, showsHorizontalScrollIndicator: false, ListHeaderComponent: null, ListFooterComponent: null, ItemSeparatorComponent: null };
+    const obj9 = {
+      horizontal: true,
+      accessibilityRole: "list",
+      accessibilityLabel: null,
+      data: null,
+      keyExtractor: null,
+      onScroll: null,
+      renderItem: null,
+      decelerationRate: "fast",
+      snapToInterval: null,
+      showsHorizontalScrollIndicator: false,
+      ListHeaderComponent: null,
+      ListFooterComponent: null,
+      ItemSeparatorComponent: null,
+    };
     obj9[2] = block.name;
     obj9[3] = filteredAndSortedProducts;
     obj9[4] = tmp13;
@@ -169,4 +225,4 @@ export default function _default(block) {
   }
   tmp6 = preferVCPrice;
   tmp7 = preferVCPrice(navigation[11]);
-};
+}

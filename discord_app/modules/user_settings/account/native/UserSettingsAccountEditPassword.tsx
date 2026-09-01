@@ -22,7 +22,15 @@ require = arg1;
 ({ AnalyticEvents: c10, LoginRequiredActions: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = { newPassword: "category", password: 17069889 };
-createCacheKey = { onePass: { width: 20, height: 20 }, unverifiedWrapper: null, container: null, header: null, requiredActionsSubtitle: null, requiredActionsTitle: null, image: null };
+createCacheKey = {
+  onePass: { width: 20, height: 20 },
+  unverifiedWrapper: null,
+  container: null,
+  header: null,
+  requiredActionsSubtitle: null,
+  requiredActionsTitle: null,
+  image: null,
+};
 createCacheKey = { overflow: "hidden", borderRadius: ThemesDefault.radii.xs, marginVertical: 16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { padding: 16 };
@@ -62,38 +70,40 @@ class EditPassword extends Component {
       showForcedPasswordUpdate = showForcedPasswordUpdate.props.showForcedPasswordUpdate;
       ({ password, newPassword } = showForcedPasswordUpdate.state);
       let obj = closure_1_2(closure_1_3[10]);
-      closure_1_2(closure_1_3[10]).saveAccountChanges({ password, newPassword }, { close: false }).then((ok) => {
-        ok = ok.ok;
-        if (!ok) {
-          const body = ok.body;
-          let username;
-          if (body != null) {
-            username = body.username;
+      closure_1_2(closure_1_3[10])
+        .saveAccountChanges({ password, newPassword }, { close: false })
+        .then((ok) => {
+          ok = ok.ok;
+          if (!ok) {
+            const body = ok.body;
+            let username;
+            if (body != null) {
+              username = body.username;
+            }
+            ok = null == username;
           }
-          ok = null == username;
-        }
-        if (!ok) {
-          const result = applyArgumentsResult(closure_2_3[11]).showInvalidUsernameToast();
-          const obj = applyArgumentsResult(closure_2_3[11]);
-        }
-        const errors = closure_2_8.getErrors();
-        let isEmptyResult = null == errors;
-        if (!isEmptyResult) {
-          isEmptyResult = closure_2_1(closure_2_3[12])(errors).isEmpty();
-          const obj2 = closure_2_1(closure_2_3[12])(errors);
-        }
-        if (isEmptyResult) {
-          if (showForcedPasswordUpdate) {
-            closure_2_1(closure_2_3[13]).track(closure_2_10.FORCED_UPDATE_PASSWORD_SUCCEEDED);
-            const obj3 = closure_2_1(closure_2_3[13]);
-            closure_2_1(closure_2_3[14]).close();
-            const obj4 = closure_2_1(closure_2_3[14]);
-          } else {
-            const navigation = showForcedPasswordUpdate.props.navigation;
-            navigation.pop();
+          if (!ok) {
+            const result = applyArgumentsResult(closure_2_3[11]).showInvalidUsernameToast();
+            const obj = applyArgumentsResult(closure_2_3[11]);
           }
-        }
-      });
+          const errors = closure_2_8.getErrors();
+          let isEmptyResult = null == errors;
+          if (!isEmptyResult) {
+            isEmptyResult = closure_2_1(closure_2_3[12])(errors).isEmpty();
+            const obj2 = closure_2_1(closure_2_3[12])(errors);
+          }
+          if (isEmptyResult) {
+            if (showForcedPasswordUpdate) {
+              closure_2_1(closure_2_3[13]).track(closure_2_10.FORCED_UPDATE_PASSWORD_SUCCEEDED);
+              const obj3 = closure_2_1(closure_2_3[13]);
+              closure_2_1(closure_2_3[14]).close();
+              const obj4 = closure_2_1(closure_2_3[14]);
+            } else {
+              const navigation = showForcedPasswordUpdate.props.navigation;
+              navigation.pop();
+            }
+          }
+        });
     };
     applyArgumentsResult.handleSetPasswordManagerRef = function handleSetPasswordManagerRef(passwordManagerRef) {
       closure_0.passwordManagerRef = passwordManagerRef;
@@ -123,8 +133,7 @@ const prototype = EditPassword.prototype;
 prototype["componentWillUnmount"] = function componentWillUnmount() {
   try {
     saveProfileAndAccountRequestAll.resetAccount();
-  } catch (err) {
-  }
+  } catch (err) {}
 };
 prototype["getError"] = function getError(arg0) {
   const errors = this.props.errors;
@@ -150,7 +159,7 @@ prototype["render"] = function render() {
     obj[1] = tmp2(handleOpenEmailVerificationDefault, {});
     hasBannerText = tmp2(tmp5, obj);
   }
-  const items = [hasBannerText, , , ];
+  const items = [hasBannerText, , ,];
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     obj = { style: null, children: null };
@@ -158,7 +167,7 @@ prototype["render"] = function render() {
     obj1 = { source: null, style: null };
     obj1[0] = registerAssetDefault;
     obj1[1] = tmp.image;
-    const items1 = [tmp2(closure_4, obj1), , ];
+    const items1 = [tmp2(closure_4, obj1), ,];
     const obj2 = { style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj2[0] = tmp.requiredActionsTitle;
     const intl = getSystemLocale.intl;
@@ -181,7 +190,7 @@ prototype["render"] = function render() {
     obj5[0] = tmp.requiredActionsTitle;
     const intl3 = getSystemLocale.intl;
     obj5[3] = intl3.string(getSystemLocale.t.geta79);
-    const items2 = [tmp2(Text.Text, obj5), ];
+    const items2 = [tmp2(Text.Text, obj5)];
     const obj6 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj6[0] = tmp.requiredActionsSubtitle;
     const intl4 = getSystemLocale.intl;
@@ -191,8 +200,32 @@ prototype["render"] = function render() {
     tmp4Result = tmp4(tmp5, obj4);
   }
   items[2] = tmp4Result;
-  const items3 = [closure_12(TextInput.TextInput, { label: passwordLabel, secureTextEntry: true, errorMessage: self.getError("password"), onChange: self.handlePasswordChange, value: password, onSubmitEditing: self.canSubmit() ? self.handleSubmit : self.handleFocusNewPassword, returnKeyType: "next", autoComplete: "current-password", required: true }), , ];
-  const obj8 = { label: newPasswordLabel, ref: self.handleSetNewPasswordRef, secureTextEntry: true, errorMessage: self.getError("new_password"), onChange: self.handleNewPasswordChange, value: newPassword, returnKeyType: "done", autoComplete: "new-password", onSubmitEditing: null, required: true };
+  const items3 = [
+    closure_12(TextInput.TextInput, {
+      label: passwordLabel,
+      secureTextEntry: true,
+      errorMessage: self.getError("password"),
+      onChange: self.handlePasswordChange,
+      value: password,
+      onSubmitEditing: self.canSubmit() ? self.handleSubmit : self.handleFocusNewPassword,
+      returnKeyType: "next",
+      autoComplete: "current-password",
+      required: true,
+    }),
+    ,
+  ];
+  const obj8 = {
+    label: newPasswordLabel,
+    ref: self.handleSetNewPasswordRef,
+    secureTextEntry: true,
+    errorMessage: self.getError("new_password"),
+    onChange: self.handleNewPasswordChange,
+    value: newPassword,
+    returnKeyType: "done",
+    autoComplete: "new-password",
+    onSubmitEditing: null,
+    required: true,
+  };
   let handleSubmit;
   if (self.canSubmit()) {
     handleSubmit = self.handleSubmit;
@@ -221,7 +254,9 @@ prototype["render"] = function render() {
   return closure_12(closure_6, obj10);
 };
 EditPassword.contextType = require("ManaContext").ThemeContext;
-let result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountEditPassword.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/account/native/UserSettingsAccountEditPassword.tsx",
+);
 
 export default function EditPasswordWrapper() {
   let obj = flag(7159);
@@ -253,7 +288,17 @@ export default function EditPasswordWrapper() {
       const items = [closure_1_11.UPDATE_PASSWORD];
       result = closure_1_7.requiredActionsIncludes(id, items);
     }
-    obj = { errors, submitting, settings, user: currentUser, verified: null, passwordLabel: null, newPasswordLabel: null, showForcedPasswordUpdate: null, hasBannerText: null };
+    obj = {
+      errors,
+      submitting,
+      settings,
+      user: currentUser,
+      verified: null,
+      passwordLabel: null,
+      newPasswordLabel: null,
+      showForcedPasswordUpdate: null,
+      hasBannerText: null,
+    };
     flag = undefined;
     if (currentUser != null) {
       flag = currentUser.verified;
@@ -277,4 +322,4 @@ export default function EditPasswordWrapper() {
   obj = { navigation: tmpResult.useNavigation() };
   const merged = Object.assign(stateFromStoresObject);
   return callback(EditPassword, obj);
-};
+}

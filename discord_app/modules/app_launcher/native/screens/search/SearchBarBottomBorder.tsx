@@ -9,8 +9,12 @@ createCacheKey = { border: null };
 createCacheKey = { borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-let closure_6 = { code: "function SearchBarBottomBorderTsx1(){const{withSpring,scrollPosition,triggerScrollHeight,springStandard}=this.__closure;return{opacity:withSpring(scrollPosition.get()>triggerScrollHeight?1:0,springStandard)};}" };
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/search/SearchBarBottomBorder.tsx");
+let closure_6 = {
+  code: "function SearchBarBottomBorderTsx1(){const{withSpring,scrollPosition,triggerScrollHeight,springStandard}=this.__closure;return{opacity:withSpring(scrollPosition.get()>triggerScrollHeight?1:0,springStandard)};}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/screens/search/SearchBarBottomBorder.tsx",
+);
 
 export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomBorder(arg0) {
   ({ key, triggerScrollHeight } = arg0);
@@ -38,7 +42,12 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
     obj = { opacity: obj.withSpring(num, triggerScrollHeight(closure_1_2[6]).springStandard) };
     return obj;
   };
-  obj = { withSpring: triggerScrollHeight(4927).withSpring, scrollPosition: sharedValue, triggerScrollHeight, springStandard: triggerScrollHeight(4931).springStandard };
+  obj = {
+    withSpring: triggerScrollHeight(4927).withSpring,
+    scrollPosition: sharedValue,
+    triggerScrollHeight,
+    springStandard: triggerScrollHeight(4931).springStandard,
+  };
   fn.__closure = obj;
   fn.__workletHash = 5466161440826;
   fn.__initData = closure_6;

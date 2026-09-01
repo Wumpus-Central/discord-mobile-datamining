@@ -10,8 +10,25 @@ require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").Pressable);
 let closure_7 = createCacheKey.createStyles((arg0) => {
-  let obj = { container: null, containerRefresh: null, roundedTop: null, roundedBottom: null, border: null, pressed: null, icon: null, label: null, trailingIndicator: null };
-  obj = { padding: CONTEXT_MENU_LONG_PRESS_DURATION_MS.CONTEXT_MENU_ITEM_PADDING, minHeight: CONTEXT_MENU_LONG_PRESS_DURATION_MS.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };
+  let obj = {
+    container: null,
+    containerRefresh: null,
+    roundedTop: null,
+    roundedBottom: null,
+    border: null,
+    pressed: null,
+    icon: null,
+    label: null,
+    trailingIndicator: null,
+  };
+  obj = {
+    padding: CONTEXT_MENU_LONG_PRESS_DURATION_MS.CONTEXT_MENU_ITEM_PADDING,
+    minHeight: CONTEXT_MENU_LONG_PRESS_DURATION_MS.CONTEXT_MENU_ITEM_BASE_HEIGHT,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    gap: 8,
+  };
   obj[0] = obj;
   obj[1] = { justifyContent: "flex-start" };
   obj = { borderTopLeftRadius: ThemesDefault.radii.lg, borderTopRightRadius: ThemesDefault.radii.lg };
@@ -32,8 +49,12 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
   return obj;
 });
 let closure_8 = { code: "function ContextMenuItemNativeTsx1(){const{pan}=this.__closure;return pan.get();}" };
-let closure_9 = { code: "function ContextMenuItemNativeTsx2(_current,previous){const{measure,ref,index,INDEX_BOUNDS_OFFSET,itemMeasurements,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET}=this.__closure;if(previous==null||_current===previous)return;const measurements=measure(ref);if(measurements!=null){const{pageX:pageX,pageY:pageY,width:width,height:height}=measurements;const offset=index*INDEX_BOUNDS_OFFSET;itemMeasurements.get()[offset+INDEX_BOUNDS_PAGE_X_OFFSET]=pageX;itemMeasurements.get()[offset+INDEX_BOUNDS_PAGE_Y_OFFSET]=pageY;itemMeasurements.get()[offset+INDEX_BOUNDS_WIDTH_OFFSET]=width;itemMeasurements.get()[offset+INDEX_BOUNDS_HEIGHT_OFFSET]=height;}}" };
-let closure_10 = { code: "function ContextMenuItemNativeTsx3(){const{activeIndex,index,pressed,withSpring,backgroundColor,SUBTLE_SPRING}=this.__closure;const isActive=activeIndex.get()===index||pressed.get()===1;return{backgroundColor:withSpring(isActive?backgroundColor:'transparent',SUBTLE_SPRING,'animate-always')};}" };
+let closure_9 = {
+  code: "function ContextMenuItemNativeTsx2(_current,previous){const{measure,ref,index,INDEX_BOUNDS_OFFSET,itemMeasurements,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET}=this.__closure;if(previous==null||_current===previous)return;const measurements=measure(ref);if(measurements!=null){const{pageX:pageX,pageY:pageY,width:width,height:height}=measurements;const offset=index*INDEX_BOUNDS_OFFSET;itemMeasurements.get()[offset+INDEX_BOUNDS_PAGE_X_OFFSET]=pageX;itemMeasurements.get()[offset+INDEX_BOUNDS_PAGE_Y_OFFSET]=pageY;itemMeasurements.get()[offset+INDEX_BOUNDS_WIDTH_OFFSET]=width;itemMeasurements.get()[offset+INDEX_BOUNDS_HEIGHT_OFFSET]=height;}}",
+};
+let closure_10 = {
+  code: "function ContextMenuItemNativeTsx3(){const{activeIndex,index,pressed,withSpring,backgroundColor,SUBTLE_SPRING}=this.__closure;const isActive=activeIndex.get()===index||pressed.get()===1;return{backgroundColor:withSpring(isActive?backgroundColor:'transparent',SUBTLE_SPRING,'animate-always')};}",
+};
 let result = require("set").fileFinishedImporting("design/components/ContextMenu/native/ContextMenuItem.native.tsx");
 
 export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
@@ -90,7 +111,17 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
       }
     }
   };
-  obj = { measure: index(pan[3]).measure, ref: animatedRef, index, INDEX_BOUNDS_OFFSET: index(pan[7]).INDEX_BOUNDS_OFFSET, itemMeasurements, INDEX_BOUNDS_PAGE_X_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_X_OFFSET, INDEX_BOUNDS_PAGE_Y_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_Y_OFFSET, INDEX_BOUNDS_WIDTH_OFFSET: index(pan[7]).INDEX_BOUNDS_WIDTH_OFFSET, INDEX_BOUNDS_HEIGHT_OFFSET: index(pan[7]).INDEX_BOUNDS_HEIGHT_OFFSET };
+  obj = {
+    measure: index(pan[3]).measure,
+    ref: animatedRef,
+    index,
+    INDEX_BOUNDS_OFFSET: index(pan[7]).INDEX_BOUNDS_OFFSET,
+    itemMeasurements,
+    INDEX_BOUNDS_PAGE_X_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_X_OFFSET,
+    INDEX_BOUNDS_PAGE_Y_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_Y_OFFSET,
+    INDEX_BOUNDS_WIDTH_OFFSET: index(pan[7]).INDEX_BOUNDS_WIDTH_OFFSET,
+    INDEX_BOUNDS_HEIGHT_OFFSET: index(pan[7]).INDEX_BOUNDS_HEIGHT_OFFSET,
+  };
   fn.__closure = obj;
   fn.__workletHash = 9571959267234;
   fn.__initData = closure_9;
@@ -116,7 +147,14 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
       return obj;
     }
   }
-  obj = { activeIndex, index, pressed: sharedValue, withSpring: index(pan[8]).withSpring, backgroundColor, SUBTLE_SPRING: index(pan[9]).SUBTLE_SPRING };
+  obj = {
+    activeIndex,
+    index,
+    pressed: sharedValue,
+    withSpring: index(pan[8]).withSpring,
+    backgroundColor,
+    SUBTLE_SPRING: index(pan[9]).SUBTLE_SPRING,
+  };
   P.__closure = obj;
   P.__workletHash = 624481847983;
   P.__initData = closure_10;
@@ -158,8 +196,17 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
   const callback1 = itemMeasurements.useCallback(() => {
     const result = activeIndex.set(index);
   }, items1);
-  obj4 = { ref: animatedRef, style: null, onLayout: null, onPressIn: null, onPressOut: null, onPress: null, accessibilityRole: null, children: null };
-  const items3 = [, , , , , ];
+  obj4 = {
+    ref: animatedRef,
+    style: null,
+    onLayout: null,
+    onPressIn: null,
+    onPressOut: null,
+    onPress: null,
+    accessibilityRole: null,
+    children: null,
+  };
+  const items3 = [, , , , ,];
   ({ container: arr4[0], containerRefresh: arr4[1] } = tmp4);
   let border = !end;
   const callback2 = itemMeasurements.useCallback(() => {
@@ -187,7 +234,7 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
   obj4[4] = callback2;
   obj4[5] = onPress;
   obj4[6] = str;
-  const items4 = [activeIndex(animatedRef(pan[3]).View, { children: tmp8 }), , ];
+  const items4 = [activeIndex(animatedRef(pan[3]).View, { children: tmp8 }), ,];
   const obj5 = { animated: true, variant: "text-md/medium", style: tmp4.label, color: null, children: null };
   let str2 = "text-strong";
   if ("destructive" === variant) {

@@ -23,7 +23,9 @@ export default {
     return tmp2 + combined;
   },
   getCreatorSupportArticleURL(MEDIA_CHANNEL) {
-    return "https://creator-support.discord.com" + "/hc/" + closure_3.locale.toLowerCase() + "/articles/" + MEDIA_CHANNEL;
+    return (
+      "https://creator-support.discord.com" + "/hc/" + closure_3.locale.toLowerCase() + "/articles/" + MEDIA_CHANNEL
+    );
   },
   getTwitterURL() {
     return getLocalizedLinkDefault(LocalizedLinks.TWITTER);
@@ -43,13 +45,22 @@ export default {
     return sum1;
   },
   getSearchURL(arg0) {
-    return combined + "/hc/" + closure_3.locale.toLowerCase() + "/search?utf8=%E2%9C%93&query=" + encodeURIComponent(arg0) + "&commit=Search";
+    return (
+      combined +
+      "/hc/" +
+      closure_3.locale.toLowerCase() +
+      "/search?utf8=%E2%9C%93&query=" +
+      encodeURIComponent(arg0) +
+      "&commit=Search"
+    );
   },
   getFeaturedArticlesJsonURL() {
     return combined + "/api/v2/help_center/en-us/articles.json?label_names=featured";
   },
   getAppsSupportURL(APPS_LEARN_MORE) {
-    return "https://support-apps.discord.com" + "/hc/" + closure_3.locale.toLowerCase() + "/articles/" + APPS_LEARN_MORE;
-  }
+    return (
+      "https://support-apps.discord.com" + "/hc/" + closure_3.locale.toLowerCase() + "/articles/" + APPS_LEARN_MORE
+    );
+  },
 };
 export const SUPPORT_LOCATION = combined;

@@ -112,10 +112,31 @@ function parseThemedStyles(obj, enabledExperiments) {
   }
   return obj;
 }
-let set = new Set(["backgroundColor", "borderBottomColor", "borderColor", "borderEndColor", "borderLeftColor", "borderRightColor", "borderStartColor", "borderTopColor", "color", "outlineColor", "shadowColor", "shadowOffset", "shadowOpacity", "shadowRadius", "elevation", "textDecorationColor", "textShadowColor", "tintColor"]);
+let set = new Set([
+  "backgroundColor",
+  "borderBottomColor",
+  "borderColor",
+  "borderEndColor",
+  "borderLeftColor",
+  "borderRightColor",
+  "borderStartColor",
+  "borderTopColor",
+  "color",
+  "outlineColor",
+  "shadowColor",
+  "shadowOffset",
+  "shadowOpacity",
+  "shadowRadius",
+  "elevation",
+  "textDecorationColor",
+  "textShadowColor",
+  "tintColor",
+]);
 let closure_8 = Symbol.for("dynamicToken");
 let closure_10 = ["light", "darker", "midnight"];
-let closure_11 = { code: "function createStylesTsx1(){const{resolvedStyles,withTiming,interpolateColor,themeIndex,stops,timingStandard}=this.__closure;const result={};for(const propertyName in resolvedStyles){const value=resolvedStyles[propertyName];if(Array.isArray(value)){result[propertyName]=withTiming(interpolateColor(themeIndex.get(),stops,value),timingStandard);}else{result[propertyName]=value;}}return result;}" };
+let closure_11 = {
+  code: "function createStylesTsx1(){const{resolvedStyles,withTiming,interpolateColor,themeIndex,stops,timingStandard}=this.__closure;const result={};for(const propertyName in resolvedStyles){const value=resolvedStyles[propertyName];if(Array.isArray(value)){result[propertyName]=withTiming(interpolateColor(themeIndex.get(),stops,value),timingStandard);}else{result[propertyName]=value;}}return result;}",
+};
 let result = set.fileFinishedImporting("design/components/Styles/native/createStyles.tsx");
 
 export const experimental_createToken = function experimental_createToken(arg0) {
@@ -150,29 +171,34 @@ export const createStyles = function createStyles(createCacheKey) {
       }
       const _Object = Object;
       const _Object2 = Object;
-      Object.defineProperties(obj, Object.fromEntries(keys.map((arg0) => {
-        closure_0 = arg0;
-        items = [
-          arg0,
-          {
-            configurable: true,
-            enumerable: true,
-            get() {
-              if (obj) {
-                items = [];
-                HermesBuiltin.arraySpread(closure_0, 0);
-                let applyResult = HermesBuiltin.apply(items, undefined);
-              } else {
-                applyResult = tmp2;
-              }
-              const tmpResult = closure_3_9(applyResult[closure_0], closure_1_1);
-              Object.defineProperty(closure_1_2, closure_0, { value: tmpResult, enumerable: true });
-              return tmpResult;
-            }
-          }
-        ];
-        return items;
-      })));
+      Object.defineProperties(
+        obj,
+        Object.fromEntries(
+          keys.map((arg0) => {
+            closure_0 = arg0;
+            items = [
+              arg0,
+              {
+                configurable: true,
+                enumerable: true,
+                get() {
+                  if (obj) {
+                    items = [];
+                    HermesBuiltin.arraySpread(closure_0, 0);
+                    let applyResult = HermesBuiltin.apply(items, undefined);
+                  } else {
+                    applyResult = tmp2;
+                  }
+                  const tmpResult = closure_3_9(applyResult[closure_0], closure_1_1);
+                  Object.defineProperty(closure_1_2, closure_0, { value: tmpResult, enumerable: true });
+                  return tmpResult;
+                },
+              },
+            ];
+            return items;
+          }),
+        ),
+      );
       const result = obj2.set(tmp2, obj);
       return obj;
     }
@@ -194,22 +220,27 @@ export const createLegacyClassComponentStyles = function createLegacyClassCompon
       const keys = Object.keys(createCacheKey);
       const _Object2 = Object;
       const _Object3 = Object;
-      Object.defineProperties(obj, Object.fromEntries(keys.map((arg0) => {
-        closure_0 = arg0;
-        const items = [
-          arg0,
-          {
-            configurable: true,
-            enumerable: true,
-            get() {
-              const tmp = closure_3_9(table[table], table);
-              Object.defineProperty(closure_1_1, table, { value: tmp, enumerable: true });
-              return tmp;
-            }
-          }
-        ];
-        return items;
-      })));
+      Object.defineProperties(
+        obj,
+        Object.fromEntries(
+          keys.map((arg0) => {
+            closure_0 = arg0;
+            const items = [
+              arg0,
+              {
+                configurable: true,
+                enumerable: true,
+                get() {
+                  const tmp = closure_3_9(table[table], table);
+                  Object.defineProperty(closure_1_1, table, { value: tmp, enumerable: true });
+                  return tmp;
+                },
+              },
+            ];
+            return items;
+          }),
+        ),
+      );
       const result = obj.set(key.key, obj);
       return obj;
     }
@@ -250,7 +281,7 @@ export const processColorOrThrow = function processColorOrThrow(arg0) {
   if (null == tmp) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("Unable to parse color: \"" + arg0 + "\"");
+    error = new Error('Unable to parse color: "' + arg0 + '"');
     throw error;
   } else {
     return tmp;
@@ -305,11 +336,11 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
           if (null == tmp42) {
             let _Error = Error;
             let _HermesInternal = HermesInternal;
-            let str2 = "\"";
-            let str3 = "Unable to parse color: \"";
+            let str2 = '"';
+            let str3 = 'Unable to parse color: "';
             let tmp26 = new.target;
             let tmp27 = new.target;
-            error = new Error("Unable to parse color: \"" + tmp40 + "\"");
+            error = new Error('Unable to parse color: "' + tmp40 + '"');
             let tmp29 = error;
             throw error;
           } else {
@@ -468,7 +499,14 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
       }
     }
     const obj4 = arr(obj[8]);
-    T.__closure = { resolvedStyles: tmp3, withTiming: arr(obj[9]).withTiming, interpolateColor: arr(obj[8]).interpolateColor, themeIndex, stops: callback, timingStandard: arr(obj[10]).timingStandard };
+    T.__closure = {
+      resolvedStyles: tmp3,
+      withTiming: arr(obj[9]).withTiming,
+      interpolateColor: arr(obj[8]).interpolateColor,
+      themeIndex,
+      stops: callback,
+      timingStandard: arr(obj[10]).timingStandard,
+    };
     T.__workletHash = 6815805628278;
     T.__initData = closure_1_11;
     return obj4.useAnimatedStyle(T);

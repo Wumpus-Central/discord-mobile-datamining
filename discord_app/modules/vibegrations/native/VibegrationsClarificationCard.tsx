@@ -9,15 +9,37 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { card: null, optionHeader: null, footer: null, customField: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.md,
+  padding: ThemesDefault.space.PX_12,
+  marginTop: ThemesDefault.space.PX_8,
+  gap: ThemesDefault.space.PX_8,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 let obj1 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 let obj2 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-createCacheKey[3] = { flex: 1, minHeight: 36, justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round };
+createCacheKey[3] = {
+  flex: 1,
+  minHeight: 36,
+  justifyContent: "center",
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: ThemesDefault.radii.round,
+};
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { flex: 1, minHeight: 36, justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round };
+let obj3 = {
+  flex: 1,
+  minHeight: 36,
+  justifyContent: "center",
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: ThemesDefault.radii.round,
+};
 let result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsClarificationCard.tsx");
 
 export default function VibegrationsClarificationCard(clarification) {
@@ -115,7 +137,15 @@ export default function VibegrationsClarificationCard(clarification) {
     obj[2] = intl.formatToPlainString(onSubmit(3501)["7bypa+"], obj1);
     tmp14 = callback(clarification(4474).Text, obj);
   }
-  const items4 = [tmp14, callback(clarification(4474).Text, { variant: "text-md/semibold", color: "text-default", children: clarification.questions[bound].question }), , ];
+  const items4 = [
+    tmp14,
+    callback(clarification(4474).Text, {
+      variant: "text-md/semibold",
+      color: "text-default",
+      children: clarification.questions[bound].question,
+    }),
+    ,
+  ];
   const options = tmp8.options;
   items4[2] = options.map((answer) => {
     closure_0 = answer;
@@ -135,7 +165,13 @@ export default function VibegrationsClarificationCard(clarification) {
     obj = { answer: answer.label };
     obj[1] = intl.formatToPlainString(k7lEgj, obj);
     obj = { style: optionHeader.optionHeader, children: null };
-    const items = [callback3(clarification(optionHeader[7]).Text, { variant: "text-sm/semibold", color: "text-default", children: answer.label }), ];
+    const items = [
+      callback3(clarification(optionHeader[7]).Text, {
+        variant: "text-sm/semibold",
+        color: "text-default",
+        children: answer.label,
+      }),
+    ];
     let tmp8Result = null;
     if (true === answer.recommended) {
       const obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
@@ -145,7 +181,7 @@ export default function VibegrationsClarificationCard(clarification) {
     }
     items[1] = tmp8Result;
     obj[1] = items;
-    const items1 = [closure_7(closure_5, obj), ];
+    const items1 = [closure_7(closure_5, obj)];
     tmp8Result = null;
     if (null != answer.detail) {
       tmp8Result = null;
@@ -171,9 +207,17 @@ export default function VibegrationsClarificationCard(clarification) {
       tmp19Result = tmp19(tmp20(4928).Button, obj4);
     }
   }
-  const items5 = [tmp19Result, ];
+  const items5 = [tmp19Result];
   const obj5 = { style: tmp.customField, children: null };
-  const obj6 = { size: "md", isCentered: false, placeholder: null, value: null, onChange: null, onSubmitEditing: null, returnKeyType: "send" };
+  const obj6 = {
+    size: "md",
+    isCentered: false,
+    placeholder: null,
+    value: null,
+    onChange: null,
+    onSubmitEditing: null,
+    returnKeyType: "send",
+  };
   const intl3 = tmp20(1236).intl;
   obj6[2] = intl3.string(onSubmit(3501).qifsdL);
   obj6[3] = str;
@@ -193,4 +237,4 @@ export default function VibegrationsClarificationCard(clarification) {
   items4[3] = closure_7(closure_5, obj3);
   obj[1] = items4;
   return closure_7(closure_5, obj);
-};
+}

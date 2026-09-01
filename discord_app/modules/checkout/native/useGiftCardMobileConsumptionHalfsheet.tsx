@@ -10,7 +10,9 @@ const require = arg1;
 const GiftCardMobileConsumptionActionSheet = "GiftCardMobileConsumptionActionSheet";
 let obj = { Idle: "idle", Opening: "opening", Opened: "opened" };
 let Idle = obj.Idle;
-const result = require("set").fileFinishedImporting("modules/checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx",
+);
 
 export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileConsumptionHalfsheet() {
   enabled = enabled(6250).useGiftCardsExperimentConfig({ location: "useGiftCardMobileConsumptionHalfsheet" }).enabled;
@@ -18,45 +20,57 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
   let tmp = enabled;
   let items = [callback];
   let items1 = [enabled];
-  const stateFromStores = enabled(589).useStateFromStores(items, () => {
-    if (enabled) {
-      const _Object = Object;
-      const values = Object.values(callback.paymentSources);
-      for (const item10013 of values) {
-        let tmp7 = item10013;
-        let tmp8 = closure_1_8;
-        if (item10013.type === closure_1_8.TDS_WALLET) {
-          let tmp9 = obj;
-          obj.return();
-          return item10013.id;
+  const stateFromStores = enabled(589).useStateFromStores(
+    items,
+    () => {
+      if (enabled) {
+        const _Object = Object;
+        const values = Object.values(callback.paymentSources);
+        for (const item10013 of values) {
+          let tmp7 = item10013;
+          let tmp8 = closure_1_8;
+          if (item10013.type === closure_1_8.TDS_WALLET) {
+            let tmp9 = obj;
+            obj.return();
+            return item10013.id;
+          }
         }
+        return null;
+      } else {
+        return null;
       }
-      return null;
-    } else {
-      return null;
-    }
-  }, items1);
+    },
+    items1,
+  );
   let obj2 = enabled(589);
   const items2 = [closure_5];
   const items3 = [stateFromStores];
-  const stateFromStores1 = enabled(589).useStateFromStores(items2, () => {
-    let balance = null;
-    if (null != stateFromStores) {
-      balance = ref.getBalance(tmp);
-    }
-    return balance;
-  }, items3);
+  const stateFromStores1 = enabled(589).useStateFromStores(
+    items2,
+    () => {
+      let balance = null;
+      if (null != stateFromStores) {
+        balance = ref.getBalance(tmp);
+      }
+      return balance;
+    },
+    items3,
+  );
   const obj3 = enabled(589);
   const items4 = [closure_5];
   const items5 = [stateFromStores];
   let tmp6 = enabled;
-  const stateFromStores2 = enabled(589).useStateFromStores(items4, () => {
-    let isFetching = null != stateFromStores;
-    if (isFetching) {
-      isFetching = ref.getIsFetching(tmp);
-    }
-    return isFetching;
-  }, items5);
+  const stateFromStores2 = enabled(589).useStateFromStores(
+    items4,
+    () => {
+      let isFetching = null != stateFromStores;
+      if (isFetching) {
+        isFetching = ref.getIsFetching(tmp);
+      }
+      return isFetching;
+    },
+    items5,
+  );
   if (enabled) {
     tmp6 = null != stateFromStores;
   }

@@ -21,4 +21,4 @@ export default function UserProfileAlertUserReported() {
   obj[0] = jsx(getAlertModalItemKey.AlertActionButton, { text: null }, "okay");
   obj[2] = jsx(getAlertModalItemKey.AlertActions, { text: null });
   return jsx(getAlertModalItemKey.AlertModal, { text: null });
-};
+}

@@ -5,7 +5,9 @@ import closure_3 from "../../oauth2/AuthorizedAppsStore.tsx";
 import { FetchState } from "../../oauth2/AuthorizedAppsStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx",
+);
 
 export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(application) {
   if (null == application) {
@@ -40,8 +42,13 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
           let flag2 = false;
           const obj2 = tokensToAppTokensMapDefault;
         } else {
-          flag2 = !(obj.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != obj.getNewestTokenForApplication(parentId));
-          const tmp6 = obj.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != obj.getNewestTokenForApplication(parentId);
+          flag2 = !(
+            obj.getFetchStateForApplication(parentId) === tmp5.FETCHED &&
+            null != obj.getNewestTokenForApplication(parentId)
+          );
+          const tmp6 =
+            obj.getFetchStateForApplication(parentId) === tmp5.FETCHED &&
+            null != obj.getNewestTokenForApplication(parentId);
         }
       } else {
         return false;

@@ -3,7 +3,9 @@ import set from "../../../_runtime/00002_set.js";
 import noop from "../../../_runtime/00019_noop.js";
 
 ({ useEffect: obj1, useRef: c3 } = noop);
-let result = set.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx");
+let result = set.fileFinishedImporting(
+  "modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx",
+);
 
 export const useCommunicationDisabledCountdownCleanup = function useCommunicationDisabledCountdownCleanup(guildMember) {
   importDefault = guildMember;

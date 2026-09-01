@@ -1,11 +1,22 @@
 // discord_app/modules/explicit_media_redaction/ObscureMediaModels.tsx
 import set from "../../../_runtime/00002_set.js";
 
-const obj = { SPOILER: "spoiler", EXPLICIT_CONTENT: "explicit_content", POTENTIAL_EXPLICIT_CONTENT: "potential_explicit_content", GORE_CONTENT: "gore_content", SELF_HARM_CONTENT: "self_harm_content" };
-const items = [, , , ];
-({ EXPLICIT_CONTENT: arr[0], GORE_CONTENT: arr[1], SELF_HARM_CONTENT: arr[2], POTENTIAL_EXPLICIT_CONTENT: arr[3] } = obj);
+const obj = {
+  SPOILER: "spoiler",
+  EXPLICIT_CONTENT: "explicit_content",
+  POTENTIAL_EXPLICIT_CONTENT: "potential_explicit_content",
+  GORE_CONTENT: "gore_content",
+  SELF_HARM_CONTENT: "self_harm_content",
+};
+const items = [, , ,];
+({
+  EXPLICIT_CONTENT: arr[0],
+  GORE_CONTENT: arr[1],
+  SELF_HARM_CONTENT: arr[2],
+  POTENTIAL_EXPLICIT_CONTENT: arr[3],
+} = obj);
 let set = new Set(items);
-const items1 = [, , ];
+const items1 = [, ,];
 ({ EXPLICIT_CONTENT: arr2[0], GORE_CONTENT: arr2[1], SELF_HARM_CONTENT: arr2[2] } = obj);
 const result = set.fileFinishedImporting("modules/explicit_media_redaction/ObscureMediaModels.tsx");
 

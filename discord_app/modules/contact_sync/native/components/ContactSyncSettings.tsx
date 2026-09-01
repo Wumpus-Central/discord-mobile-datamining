@@ -28,7 +28,7 @@ function _syncContacts() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -162,7 +162,7 @@ function _updateFriendSync() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -303,7 +303,7 @@ export default function ContactSyncSettings() {
     obj[0] = items1;
     tmp10Result = tmp10(tmp11, obj);
   }
-  const items2 = [tmp10Result, , ];
+  const items2 = [tmp10Result, ,];
   const obj2 = { label: null, value: null, onValueChange: null };
   const intl2 = tmp(1236).intl;
   obj2[0] = intl2.string(contactSyncAccount(1236).t.uSvEy7);
@@ -325,7 +325,7 @@ export default function ContactSyncSettings() {
   tmp10Result = null;
   if (null != contactSyncAccount) {
     let obj3 = { children: null };
-    const items3 = [tmp14(tmp(8363).FormDivider, {}), ];
+    const items3 = [tmp14(tmp(8363).FormDivider, {})];
     const obj4 = { label: null, trailing: null, onPress: null };
     const intl3 = tmp(1236).intl;
     obj4[0] = intl3.string(tmp(1236).t.nAsWKy);
@@ -333,9 +333,15 @@ export default function ContactSyncSettings() {
     obj5[0] = contactSyncAccount.name;
     obj4[1] = tmp14(tmp(8363).FormRow.Arrow, obj5);
     obj4[2] = function onPress() {
-      phone(hasFlagResult[11]).track(constants.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
+      phone(hasFlagResult[11]).track(constants.OPEN_MODAL, {
+        type: "Change Name",
+        location: { page: "User Settings" },
+      });
       const obj = phone(hasFlagResult[11]);
-      phone(hasFlagResult[17]).pushLazy(contactSyncAccount(hasFlagResult[19])(hasFlagResult[18], hasFlagResult.paths), "Contact Sync Name Update Modal");
+      phone(hasFlagResult[17]).pushLazy(
+        contactSyncAccount(hasFlagResult[19])(hasFlagResult[18], hasFlagResult.paths),
+        "Contact Sync Name Update Modal",
+      );
     };
     items3[1] = tmp14(tmp(8363).FormRow, obj4);
     obj3[0] = items3;
@@ -344,11 +350,13 @@ export default function ContactSyncSettings() {
   const obj6 = { children: null };
   items2[2] = tmp10Result;
   obj[1] = items2;
-  const items4 = [closure_12(contactSyncAccount(8363).FormSection, obj), , , ];
+  const items4 = [closure_12(contactSyncAccount(8363).FormSection, obj), , ,];
   const obj7 = { children: null };
   const intl4 = tmp(1236).intl;
   const tmpResult1 = contactSyncAccount(1399);
-  obj7[0] = intl4.format(contactSyncAccount(1236).t.BoR0dO, { onClick: contactSyncAccount(12218).handleOpenLearnMoreLink });
+  obj7[0] = intl4.format(contactSyncAccount(1236).t.BoR0dO, {
+    onClick: contactSyncAccount(12218).handleOpenLearnMoreLink,
+  });
   items4[1] = callback2(contactSyncAccount(8363).FormHint, obj7);
   const obj9 = { children: null };
   const intl5 = tmp(1236).intl;
@@ -368,7 +376,10 @@ export default function ContactSyncSettings() {
     obj = { phone, email: hasFlagResult1 };
     const result = obj.updateDiscoverability(obj);
   };
-  const items5 = [callback2(contactSyncAccount(8363).FormSwitchRow, obj11), callback2(contactSyncAccount(8363).FormDivider, {}), ];
+  const items5 = [
+    callback2(contactSyncAccount(8363).FormSwitchRow, obj11),
+    callback2(contactSyncAccount(8363).FormDivider, {}),
+  ];
   const obj12 = { label: null, subLabel: null, value: null, onValueChange: null };
   const intl9 = tmp(1236).intl;
   obj12[0] = intl9.string(contactSyncAccount(1236).t.dI4d4S);
@@ -385,7 +396,7 @@ export default function ContactSyncSettings() {
   items4[3] = closure_12(contactSyncAccount(8363).FormSection, obj10);
   obj6[0] = items4;
   return closure_12(closure_11, obj6);
-};
+}
 export { syncContacts };
 export { updateFriendSync };
 export const handleSyncContacts = function handleSyncContacts(localAccount, phone, arg2) {

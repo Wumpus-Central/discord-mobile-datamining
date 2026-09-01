@@ -22,14 +22,23 @@ function notifyListeners(isConnected) {
   if (isConnected == null) {
     flag = false;
   }
-  obj.log("Network status changed: isConnected:" + isConnected + " type:" + isConnected.type + " speed:" + obj.cellularGeneration);
-  const item = isConnected ? closure_4 : closure_5.forEach((arg0) => {
-    flag = isConnected;
-    if (isConnected == null) {
-      flag = false;
-    }
-    return arg0(flag, obj);
-  });
+  obj.log(
+    "Network status changed: isConnected:" +
+      isConnected +
+      " type:" +
+      isConnected.type +
+      " speed:" +
+      obj.cellularGeneration,
+  );
+  const item = isConnected
+    ? closure_4
+    : closure_5.forEach((arg0) => {
+        flag = isConnected;
+        if (isConnected == null) {
+          flag = false;
+        }
+        return arg0(flag, obj);
+      });
   const item1 = arr3.forEach((arg0) => arg0(obj));
 }
 const NetworkConnectionTypes = ME.NetworkConnectionTypes;
@@ -148,7 +157,7 @@ obj = {
   },
   isOnline() {
     return c8;
-  }
+  },
 };
 const result = set.fileFinishedImporting("utils/native/NetworkUtils.tsx");
 

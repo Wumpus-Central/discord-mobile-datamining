@@ -11,9 +11,13 @@ import { PaymentGateways } from "../../../Constants.tsx";
 import { InviteTypes } from "../../instant_invite/Constants.tsx";
 
 require = arg1;
-let result = require("set").fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx",
+);
 
-export const createSocialLayerStorefrontProductDetailsEmbed = function createSocialLayerStorefrontProductDetailsEmbed(theme) {
+export const createSocialLayerStorefrontProductDetailsEmbed = function createSocialLayerStorefrontProductDetailsEmbed(
+  theme,
+) {
   ({ skuId, guildOrApplication } = theme);
   ({ colors, baseColors } = getEmbedThemeColorsDefault(theme.theme));
   let obj = closure_6;
@@ -80,7 +84,9 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
               prop = colors.acceptLabelGreenColor;
             }
             obj.acceptLabelColor = prop;
-            obj.acceptLabelBackgroundColor = result1 ? colors.acceptLabelGreenBackgroundColor : colors.acceptBlurpleLabelBackgroundColor;
+            obj.acceptLabelBackgroundColor = result1
+              ? colors.acceptLabelGreenBackgroundColor
+              : colors.acceptBlurpleLabelBackgroundColor;
             obj.embedCanBeTapped = true;
             obj.canBeAccepted = true;
             obj.type = InviteTypes.GUILD;
@@ -98,151 +104,163 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
   obj.type = InviteTypes.GUILD;
   return obj;
 };
-export const useFetchSocialLayerStorefrontProductDetailsEmbedData = function useFetchSocialLayerStorefrontProductDetailsEmbedData(stateFromStores) {
-  const _require = stateFromStores;
-  const storeFront = country(first[12]).useNativeIAPPayments().storeFront;
-  country = undefined;
-  if (storeFront != null) {
-    country = storeFront.country;
-  }
-  let items = [stateFromStores];
-  let tmp4 = callback(React.useMemo(() => {
-    let items = [[], []];
-    return stateFromStores.reduce((arg0, arg1) => {
-      [arr, arr2] = arg0;
-      const iter = arg1.codedLinks[Symbol.iterator]();
-      while (iter !== undefined) {
-        ({ type, code } = nextResult);
-        let tmp2 = type;
-        let tmp3 = callback;
-        let tmp4 = table;
-        if (type === callback(table[13]).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
-          let tmp8 = code;
-          arr = arr.push(code.split("-"));
-        } else {
-          let tmp5 = type;
-          if (tmp2 === tmp3(tmp4[13]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
-            let tmp6 = code;
-            arr = arr2.push(code.split("-"));
+export const useFetchSocialLayerStorefrontProductDetailsEmbedData =
+  function useFetchSocialLayerStorefrontProductDetailsEmbedData(stateFromStores) {
+    const _require = stateFromStores;
+    const storeFront = country(first[12]).useNativeIAPPayments().storeFront;
+    country = undefined;
+    if (storeFront != null) {
+      country = storeFront.country;
+    }
+    let items = [stateFromStores];
+    let tmp4 = callback(
+      React.useMemo(() => {
+        let items = [[], []];
+        return stateFromStores.reduce((arg0, arg1) => {
+          [arr, arr2] = arg0;
+          const iter = arg1.codedLinks[Symbol.iterator]();
+          while (iter !== undefined) {
+            ({ type, code } = nextResult);
+            let tmp2 = type;
+            let tmp3 = callback;
+            let tmp4 = table;
+            if (type === callback(table[13]).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
+              let tmp8 = code;
+              arr = arr.push(code.split("-"));
+            } else {
+              let tmp5 = type;
+              if (tmp2 === tmp3(tmp4[13]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+                let tmp6 = code;
+                arr = arr2.push(code.split("-"));
+              }
+            }
+            continue;
           }
+          const items = [arr, arr2];
+          return items;
+        }, items);
+      }, items),
+      2,
+    );
+    first = tmp4[0];
+    callback = tmp6;
+    let items1 = [first, tmp4[1], country];
+    const effect = React.useEffect(() => {
+      while (tmp2 !== undefined) {
+        let tmp4 = lib;
+        let tmp5 = lib(tmp3, 2);
+        first = tmp5[0];
+        let tmp7 = first;
+        let tmp8 = tmp5[1];
+        let tmp9 = closure_1_6;
+        let isFetchingResult = null != closure_1_6.get(first);
+        if (!isFetchingResult) {
+          let tmp11 = closure_1_6;
+          let tmp12 = first;
+          isFetchingResult = closure_1_6.isFetching(tmp7);
+        }
+        if (!isFetchingResult) {
+          let tmp13 = closure_1_6;
+          let tmp14 = first;
+          isFetchingResult = closure_1_6.didFetchingSkuFail(tmp7);
+        }
+        if (!isFetchingResult) {
+          let tmp15 = stateFromStores;
+          let tmp16 = first;
+          let obj = stateFromStores(first[14]);
+          let tmp17 = tmp8;
+          let tmp18 = first;
+          obj = { withGoogleSkuIds: null, countryCode: null, paymentGateway: null };
+          let tmp19 = stateFromStores;
+          let tmp20 = first;
+          let obj3 = stateFromStores(first[15]);
+          obj[0] = obj3.isAndroid();
+          let tmp21 = country;
+          obj[1] = country;
+          let tmp22 = stateFromStores;
+          let tmp23 = first;
+          let obj4 = stateFromStores(first[15]);
+          let APPLE;
+          if (obj4.isIOS()) {
+            let tmp25 = closure_1_7;
+            APPLE = closure_1_7.APPLE;
+          }
+          obj[2] = APPLE;
+          let socialLayerStorefrontSku = obj.fetchSocialLayerStorefrontSku(tmp8, tmp7, obj);
         }
         continue;
       }
-      const items = [arr, arr2];
-      return items;
-    }, items);
-  }, items), 2);
-  first = tmp4[0];
-  callback = tmp6;
-  let items1 = [first, tmp4[1], country];
-  const effect = React.useEffect(() => {
-    while (tmp2 !== undefined) {
-      let tmp4 = lib;
-      let tmp5 = lib(tmp3, 2);
-      first = tmp5[0];
-      let tmp7 = first;
-      let tmp8 = tmp5[1];
-      let tmp9 = closure_1_6;
-      let isFetchingResult = null != closure_1_6.get(first);
-      if (!isFetchingResult) {
-        let tmp11 = closure_1_6;
-        let tmp12 = first;
-        isFetchingResult = closure_1_6.isFetching(tmp7);
-      }
-      if (!isFetchingResult) {
-        let tmp13 = closure_1_6;
-        let tmp14 = first;
-        isFetchingResult = closure_1_6.didFetchingSkuFail(tmp7);
-      }
-      if (!isFetchingResult) {
-        let tmp15 = stateFromStores;
-        let tmp16 = first;
-        let obj = stateFromStores(first[14]);
-        let tmp17 = tmp8;
-        let tmp18 = first;
-        obj = { withGoogleSkuIds: null, countryCode: null, paymentGateway: null };
-        let tmp19 = stateFromStores;
-        let tmp20 = first;
-        let obj3 = stateFromStores(first[15]);
-        obj[0] = obj3.isAndroid();
-        let tmp21 = country;
-        obj[1] = country;
-        let tmp22 = stateFromStores;
-        let tmp23 = first;
-        let obj4 = stateFromStores(first[15]);
-        let APPLE;
-        if (obj4.isIOS()) {
-          let tmp25 = closure_1_7;
-          APPLE = closure_1_7.APPLE;
+      for (const item10057 of closure_3) {
+        let tmp27 = lib;
+        let tmp28 = lib(item10057, 2);
+        let first1 = tmp28[0];
+        let tmp30 = first1;
+        let tmp31 = tmp28[1];
+        let tmp32 = closure_1_6;
+        let isFetchingResult1 = null != closure_1_6.get(first1);
+        if (!isFetchingResult1) {
+          let tmp34 = closure_1_6;
+          let tmp35 = first1;
+          isFetchingResult1 = closure_1_6.isFetching(tmp30);
         }
-        obj[2] = APPLE;
-        let socialLayerStorefrontSku = obj.fetchSocialLayerStorefrontSku(tmp8, tmp7, obj);
-      }
-      continue;
-    }
-    for (const item10057 of closure_3) {
-      let tmp27 = lib;
-      let tmp28 = lib(item10057, 2);
-      let first1 = tmp28[0];
-      let tmp30 = first1;
-      let tmp31 = tmp28[1];
-      let tmp32 = closure_1_6;
-      let isFetchingResult1 = null != closure_1_6.get(first1);
-      if (!isFetchingResult1) {
-        let tmp34 = closure_1_6;
-        let tmp35 = first1;
-        isFetchingResult1 = closure_1_6.isFetching(tmp30);
-      }
-      if (!isFetchingResult1) {
-        let tmp36 = closure_1_6;
-        let tmp37 = first1;
-        isFetchingResult1 = closure_1_6.didFetchingSkuFail(tmp30);
-      }
-      if (!isFetchingResult1) {
-        let tmp38 = stateFromStores;
-        let tmp39 = first;
-        let obj5 = stateFromStores(first[14]);
-        let tmp40 = tmp31;
-        let tmp41 = first1;
-        obj = { withGoogleSkuIds: null, countryCode: null, paymentGateway: null };
-        let tmp42 = stateFromStores;
-        let tmp43 = first;
-        let obj7 = stateFromStores(first[15]);
-        obj[0] = obj7.isAndroid();
-        let tmp44 = country;
-        obj[1] = country;
-        let tmp45 = stateFromStores;
-        let tmp46 = first;
-        let obj8 = stateFromStores(first[15]);
-        let APPLE1;
-        if (obj8.isIOS()) {
-          let tmp48 = closure_1_7;
-          APPLE1 = closure_1_7.APPLE;
+        if (!isFetchingResult1) {
+          let tmp36 = closure_1_6;
+          let tmp37 = first1;
+          isFetchingResult1 = closure_1_6.didFetchingSkuFail(tmp30);
         }
-        obj[2] = APPLE1;
-        let socialLayerStorefrontSkuForApplication = obj5.fetchSocialLayerStorefrontSkuForApplication(tmp31, tmp30, obj);
+        if (!isFetchingResult1) {
+          let tmp38 = stateFromStores;
+          let tmp39 = first;
+          let obj5 = stateFromStores(first[14]);
+          let tmp40 = tmp31;
+          let tmp41 = first1;
+          obj = { withGoogleSkuIds: null, countryCode: null, paymentGateway: null };
+          let tmp42 = stateFromStores;
+          let tmp43 = first;
+          let obj7 = stateFromStores(first[15]);
+          obj[0] = obj7.isAndroid();
+          let tmp44 = country;
+          obj[1] = country;
+          let tmp45 = stateFromStores;
+          let tmp46 = first;
+          let obj8 = stateFromStores(first[15]);
+          let APPLE1;
+          if (obj8.isIOS()) {
+            let tmp48 = closure_1_7;
+            APPLE1 = closure_1_7.APPLE;
+          }
+          obj[2] = APPLE1;
+          let socialLayerStorefrontSkuForApplication = obj5.fetchSocialLayerStorefrontSkuForApplication(
+            tmp31,
+            tmp30,
+            obj,
+          );
+        }
+        continue;
       }
-      continue;
-    }
-  }, items1);
-  let obj = country(first[12]);
-  const tmp = country;
-  const items2 = [closure_6];
-  const items3 = [tmp4[1], first];
-  const stateFromStoresArray = _require(first[16]).useStateFromStoresArray(items2, () => {
-    const items = [
-      ...first.map((arg0) => {
-        [tmp] = arg0;
-        return store.get(tmp);
-      }),
-      ...closure_3.map((arg0) => {
-        [tmp] = arg0;
-        return store.get(tmp);
-      })
-    ];
-    const found = items.filter(stateFromStores(first[17]).isNotNullish);
-    const items1 = [...new Set(found.map((applicationId) => applicationId.applicationId))];
-    return items1;
-  }, items3);
-  tmp(first[18])(stateFromStoresArray);
-};
+    }, items1);
+    let obj = country(first[12]);
+    const tmp = country;
+    const items2 = [closure_6];
+    const items3 = [tmp4[1], first];
+    const stateFromStoresArray = _require(first[16]).useStateFromStoresArray(
+      items2,
+      () => {
+        const items = [
+          ...first.map((arg0) => {
+            [tmp] = arg0;
+            return store.get(tmp);
+          }),
+          ...closure_3.map((arg0) => {
+            [tmp] = arg0;
+            return store.get(tmp);
+          }),
+        ];
+        const found = items.filter(stateFromStores(first[17]).isNotNullish);
+        const items1 = [...new Set(found.map((applicationId) => applicationId.applicationId))];
+        return items1;
+      },
+      items3,
+    );
+    tmp(first[18])(stateFromStoresArray);
+  };

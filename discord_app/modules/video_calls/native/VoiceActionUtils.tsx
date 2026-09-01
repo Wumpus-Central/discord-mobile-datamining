@@ -2,10 +2,17 @@
 import set from "../../../../_runtime/00002_set.js";
 import _handleToggleVideo from "../../voice_calls/native/CallsUtils.tsx";
 
-function NOOP() {
-
-}
-const obj = { SERVER_MUTE: 0, [0]: "SERVER_MUTE", SUPPRESS: 1, [1]: "SUPPRESS", SELF_MUTE: 2, [2]: "SELF_MUTE", NONE: 3, [3]: "NONE" };
+function NOOP() {}
+const obj = {
+  SERVER_MUTE: 0,
+  [0]: "SERVER_MUTE",
+  SUPPRESS: 1,
+  [1]: "SUPPRESS",
+  SELF_MUTE: 2,
+  [2]: "SELF_MUTE",
+  NONE: 3,
+  [3]: "NONE",
+};
 const result = set.fileFinishedImporting("modules/video_calls/native/VoiceActionUtils.tsx");
 
 export const DominantMuteState = obj;

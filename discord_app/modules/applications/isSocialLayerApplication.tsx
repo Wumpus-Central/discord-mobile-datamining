@@ -7,17 +7,29 @@ const ApplicationFlags = ME.ApplicationFlags;
 const result = set.fileFinishedImporting("modules/applications/isSocialLayerApplication.tsx");
 
 export default function isSocialLayerApplication(application) {
-  let hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION_LIMITED);
+  let hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(
+    application,
+    ApplicationFlags.SOCIAL_LAYER_INTEGRATION_LIMITED,
+  );
   if (!hasApplicationFlagResult) {
-    hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION);
+    hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(
+      application,
+      ApplicationFlags.SOCIAL_LAYER_INTEGRATION,
+    );
     const tmpResult = getApplicationFlags;
   }
   return hasApplicationFlagResult;
-};
+}
 export const isSocialLayerSDKAuthorization = function isSocialLayerSDKAuthorization(application, scopes) {
-  let hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION_LIMITED);
+  let hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(
+    application,
+    ApplicationFlags.SOCIAL_LAYER_INTEGRATION_LIMITED,
+  );
   if (!hasApplicationFlagResult) {
-    hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION);
+    hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(
+      application,
+      ApplicationFlags.SOCIAL_LAYER_INTEGRATION,
+    );
     const tmpResult = getApplicationFlags;
   }
   if (hasApplicationFlagResult) {

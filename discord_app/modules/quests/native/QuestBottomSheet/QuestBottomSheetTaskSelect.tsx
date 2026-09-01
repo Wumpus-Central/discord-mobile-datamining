@@ -6,7 +6,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetTaskSelect.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/quests/native/QuestBottomSheet/QuestBottomSheetTaskSelect.tsx",
+);
 
 export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
@@ -21,7 +23,7 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  const items = [callback(onTaskSelect(5599).TableRow, obj), ];
+  const items = [callback(onTaskSelect(5599).TableRow, obj)];
   obj = { arrow: true, icon: callback(onTaskSelect(9199).GameControllerIcon, {}), label: null, onPress: null };
   const intl2 = onTaskSelect(1236).intl;
   obj[2] = intl2.string(onTaskSelect(1236).t["8lAfuB"]);
@@ -35,4 +37,4 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   items[1] = callback(onTaskSelect(5599).TableRow, obj);
   obj[1] = items;
   return callback2(onTaskSelect(5992).TableRowGroup, obj);
-};
+}

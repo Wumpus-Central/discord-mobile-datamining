@@ -10,13 +10,13 @@ obj = {
     return "Text Input";
   },
   parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_TEXT_INPUT,
   getComponent() {
     return Sample /* Sample */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsTextInputSetting.tsx");

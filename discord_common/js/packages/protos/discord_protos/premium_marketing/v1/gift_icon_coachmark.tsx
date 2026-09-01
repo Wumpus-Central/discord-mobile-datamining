@@ -8,7 +8,7 @@ import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 require = arg1;
 class GiftIconCoachmark$Type extends MessageType {
   constructor() {
-    items = [, , , , , ];
+    items = [, , , , ,];
     items[0] = { no: 1, name: "header", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "body", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "asset_url", kind: "scalar", T: 9 };
@@ -17,8 +17,8 @@ class GiftIconCoachmark$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(8463).ThemeAwareAsset;
-          }
+        return callback(8463).ThemeAwareAsset;
+      },
     };
     obj = { no: 5, name: "header_localized", kind: "message", T: null };
     class T {
@@ -33,8 +33,8 @@ class GiftIconCoachmark$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
-          }
+        return callback(8453).LocalizedString;
+      },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.GiftIconCoachmark", items, T);
     // ThrowIfThisInitialized (0x7c)
@@ -86,7 +86,12 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         let tmp29 = LocalizedString2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
-        obj.headerLocalized = LocalizedString2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.headerLocalized);
+        obj.headerLocalized = LocalizedString2.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.headerLocalized,
+        );
       } else if (6 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
@@ -147,20 +152,44 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wri
   if (header.asset) {
     const ThemeAwareAsset = create2.ThemeAwareAsset;
     const tagResult3 = tag.tag(4, _mod1307.WireType.LengthDelimited);
-    const joined = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(4, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(4, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = ThemeAwareAsset.internalBinaryWrite(
+      header.asset,
+      tag.tag(4, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(
+      header.asset,
+      tag.tag(4, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.headerLocalized) {
     const LocalizedString = create.LocalizedString;
     const tagResult4 = tag.tag(5, _mod1307.WireType.LengthDelimited);
-    const joined1 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = LocalizedString.internalBinaryWrite(
+      header.headerLocalized,
+      tag.tag(5, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(
+      header.headerLocalized,
+      tag.tag(5, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.bodyLocalized) {
     const LocalizedString2 = create.LocalizedString;
     const tagResult5 = tag.tag(6, _mod1307.WireType.LengthDelimited);
-    const joined2 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined2 = LocalizedString2.internalBinaryWrite(
+      header.bodyLocalized,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult2 = LocalizedString2.internalBinaryWrite(
+      header.bodyLocalized,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -182,10 +211,9 @@ let items = [
     kind: "message",
     T() {
       return callback(8463).ThemeAwareAsset;
-    }
+    },
   },
-,
-
+  ,
 ];
 let obj = { no: 5, name: "header_localized", kind: "message", T: null };
 class T {
@@ -201,10 +229,20 @@ items[5] = {
   kind: "message",
   T() {
     return callback(8453).LocalizedString;
-  }
+  },
 };
-prototype = new prototype("discord_protos.premium_marketing.v1.GiftIconCoachmark", items, tmp, T, GiftIconCoachmark$Type, prototype, items);
+prototype = new prototype(
+  "discord_protos.premium_marketing.v1.GiftIconCoachmark",
+  items,
+  tmp,
+  T,
+  GiftIconCoachmark$Type,
+  prototype,
+  items,
+);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_icon_coachmark.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_icon_coachmark.tsx",
+);
 
 export const GiftIconCoachmark = prototype;

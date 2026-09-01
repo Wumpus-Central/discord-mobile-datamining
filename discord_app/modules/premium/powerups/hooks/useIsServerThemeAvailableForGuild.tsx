@@ -11,4 +11,4 @@ export default function useIsServerThemeAvailableForGuild(guildId, GuildThemeNux
   const tmp = require;
   const tmp3 = guildId;
   return null != resolveSavedActiveGuildTheme.useEnabledGuildThemeForGuildId(guildId, GuildThemeNuxTrigger);
-};
+}

@@ -11,17 +11,60 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 require = arg1;
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-createCacheKey = { scrollContainer: { paddingHorizontal: 16 }, header: { alignItems: "center", paddingTop: 20, paddingBottom: 24 }, headerTitle: { marginTop: 8 }, guidelinesContainer: null, footer: null, buttonWrapper: null, buttonPill: null, floatingButtonContainer: null, editButton: null, editText: null, editIcon: null };
-createCacheKey = { padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = {
+  scrollContainer: { paddingHorizontal: 16 },
+  header: { alignItems: "center", paddingTop: 20, paddingBottom: 24 },
+  headerTitle: { marginTop: 8 },
+  guidelinesContainer: null,
+  footer: null,
+  buttonWrapper: null,
+  buttonPill: null,
+  floatingButtonContainer: null,
+  editButton: null,
+  editText: null,
+  editIcon: null,
+};
+createCacheKey = {
+  padding: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { paddingBottom: 16 };
 createCacheKey[5] = { marginHorizontal: 16 };
 createCacheKey[6] = { borderRadius: ThemesDefault.radii.sm };
 let obj1 = { borderRadius: ThemesDefault.radii.sm };
-createCacheKey[7] = { marginTop: 16, position: "absolute", left: 16, right: 16, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[8] = { display: "flex", flexDirection: "row", alignItems: "center", position: "absolute", top: 12, right: 0 };
+createCacheKey[7] = {
+  marginTop: 16,
+  position: "absolute",
+  left: 16,
+  right: 16,
+  shadowColor: ThemesDefault.colors.BLACK,
+  shadowOffset: { width: 0, height: 1 },
+  shadowOpacity: 0.25,
+  shadowRadius: 4,
+  borderRadius: ThemesDefault.radii.sm,
+};
+createCacheKey[8] = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  position: "absolute",
+  top: 12,
+  right: 0,
+};
 createCacheKey[9] = { marginRight: 4 };
-let obj2 = { marginTop: 16, position: "absolute", left: 16, right: 16, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, borderRadius: ThemesDefault.radii.sm };
+let obj2 = {
+  marginTop: 16,
+  position: "absolute",
+  left: 16,
+  right: 16,
+  shadowColor: ThemesDefault.colors.BLACK,
+  shadowOffset: { width: 0, height: 1 },
+  shadowOpacity: 0.25,
+  shadowRadius: 4,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[10] = { color: ThemesDefault.colors.TEXT_BRAND };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { color: ThemesDefault.colors.TEXT_BRAND };
@@ -126,7 +169,13 @@ export default function ForumGuidelinesActionSheet(channel) {
     onPress(bottom[18]).open(channel.id);
   }, items5);
   obj1 = { scrollable: true, contentHeight: tmp11, footer: tmp14, onDismiss: channel.onClose, children: null };
-  let obj2 = { style: tmp.scrollContainer, scrollIndicatorInsets: { bottom }, contentContainerStyle: { paddingBottom: memo1 }, onContentSizeChange: callback, children: null };
+  let obj2 = {
+    style: tmp.scrollContainer,
+    scrollIndicatorInsets: { bottom },
+    contentContainerStyle: { paddingBottom: memo1 },
+    onContentSizeChange: callback,
+    children: null,
+  };
   const obj3 = { style: tmp.header, children: null };
   let tmp19Result = canManageChannel;
   if (canManageChannel) {
@@ -139,36 +188,46 @@ export default function ForumGuidelinesActionSheet(channel) {
     obj5[0] = tmp.editText;
     const intl3 = tmp2(tmp3[15]).intl;
     obj5[3] = intl3.string(tmp2(tmp3[15]).t.bt75uw);
-    const items6 = [tmp21(tmp2(tmp3[22]).Text, obj5), ];
+    const items6 = [tmp21(tmp2(tmp3[22]).Text, obj5)];
     const obj6 = { color: null, size: "xs" };
     obj6[0] = tmp.editIcon.color;
     items6[1] = tmp21(tmp2(tmp3[23]).PencilIcon, obj6);
     obj4[4] = items6;
     tmp19Result = tmp19(tmp2(tmp3[21]).PressableOpacity, obj4);
   }
-  const items7 = [tmp19Result, , ];
+  const items7 = [tmp19Result, ,];
   const obj7 = { IconComponent: null };
   let tmp5Result = tmp5(tmp3[24]);
   obj7[0] = channel(bottom[25]).BookCheckIcon;
   items7[1] = callback(tmp5Result, obj7);
-  const obj8 = { style: tmp.headerTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj8 = {
+    style: tmp.headerTitle,
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl4 = tmp2(tmp3[15]).intl;
   obj8[3] = intl4.string(channel(bottom[15]).t["4d4T4l"]);
   items7[2] = callback(channel(bottom[22]).Text, obj8);
   obj3[1] = items7;
-  const items8 = [closure_8(closure_5, obj3), ];
+  const items8 = [closure_8(closure_5, obj3)];
   const obj9 = { style: tmp.guidelinesContainer, children: null };
   const obj10 = { variant: "text-md/medium", color: "text-default", children: null };
   tmp5Result = tmp5(tmp3[26]);
-  obj10[2] = tmp5Result.parseForumPostGuidelines(channel.topic, true, { channelId: channel.id, allowHeading: true, allowList: true, allowLinks: true });
+  obj10[2] = tmp5Result.parseForumPostGuidelines(channel.topic, true, {
+    channelId: channel.id,
+    allowHeading: true,
+    allowList: true,
+    allowLinks: true,
+  });
   obj9[1] = callback(channel(bottom[22]).Text, obj10);
   items8[1] = callback(closure_5, obj9);
   obj2[4] = items8;
   obj1[4] = closure_8(channel(bottom[20]).BottomSheetScrollView, obj2);
-  const children = [callback(channel(bottom[19]).BottomSheet, obj1), ];
+  const children = [callback(channel(bottom[19]).BottomSheet, obj1)];
   if (tmp21Result) {
     const obj12 = { grow: true, style: null, pillStyle: null, text: null, onPress: null };
-    const items10 = [tmp.floatingButtonContainer, ];
+    const items10 = [tmp.floatingButtonContainer];
     const obj13 = { bottom: null };
     obj13[0] = bottom + 16;
     items10[1] = obj13;
@@ -181,7 +240,7 @@ export default function ForumGuidelinesActionSheet(channel) {
   }
   children[1] = tmp21Result;
   return closure_8(closure_9, { children });
-};
+}
 export const openForumGuidelinesActionSheet = function openForumGuidelinesActionSheet(arg0) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = {};

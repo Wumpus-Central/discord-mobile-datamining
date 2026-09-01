@@ -37,7 +37,7 @@ function readFavoriteGIFs(arg0) {
         tmp = obj;
       }
       return tmp;
-    }
+    },
   ];
   state = PersistedStore.migrateAndReadStoreState("GIFFavoritesStore", items).state;
   if (null != state) {
@@ -89,9 +89,7 @@ let items = [
         return true;
       }
     },
-    cleanup() {
-
-    }
+    cleanup() {},
   },
   {
     version: 3,
@@ -123,7 +121,7 @@ let items = [
             return obj;
           }
           obj = { usageHistory: {}, favorites: [] };
-        }
+        },
       ];
       const state = PersistedStore.migrateAndReadStoreState("StickersPersistedStore", items).state;
       if (null == state) {
@@ -152,7 +150,7 @@ let items = [
     cleanup() {
       const Storage = Storage4.Storage;
       Storage.remove("StickersPersistedStore");
-    }
+    },
   },
   {
     version: 4,
@@ -163,7 +161,7 @@ let items = [
           const Storage = callback(table[6]).Storage;
           const usageHistory = Storage.get("EmojiUsageHistory") || {};
           return { usageHistory };
-        }
+        },
       ];
       const state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
       if (null == state) {
@@ -200,7 +198,7 @@ let items = [
       Storage2.remove("EmojiUsageHistory");
       const Storage3 = Storage4.Storage;
       Storage3.remove("EmojiDiversitySurrogate");
-    }
+    },
   },
   {
     version: 6,
@@ -292,9 +290,7 @@ let items = [
         return true;
       }
     },
-    cleanup() {
-
-    }
+    cleanup() {},
   },
   {
     version: 7,
@@ -308,7 +304,10 @@ let items = [
         if (tmpResult.size(state.usageHistory) > 0) {
           const ApplicationCommandFrecency = create.ApplicationCommandFrecency;
           applicationCommandFrecency.applicationCommandFrecency = ApplicationCommandFrecency.create();
-          applicationCommandFrecency.applicationCommandFrecency.applicationCommands = b64ToProto.serializeUsageHistory(state.usageHistory, 500);
+          applicationCommandFrecency.applicationCommandFrecency.applicationCommands = b64ToProto.serializeUsageHistory(
+            state.usageHistory,
+            500,
+          );
           flag = true;
           const obj = b64ToProto;
         }
@@ -319,7 +318,7 @@ let items = [
     cleanup() {
       const Storage = Storage4.Storage;
       Storage.remove("ApplicationCommandFrecency");
-    }
+    },
   },
   {
     version: 8,
@@ -333,7 +332,8 @@ let items = [
         let tmpResult = tmp(12);
         let flag = false;
         if (tmpResult.size(state.favoriteSounds) > 0) {
-          const FavoriteSoundboardSounds = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx").FavoriteSoundboardSounds;
+          const FavoriteSoundboardSounds =
+            require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx").FavoriteSoundboardSounds;
           arg0.favoriteSoundboardSounds = FavoriteSoundboardSounds.create();
           tmpResult = tmp(11);
           const keys = tmpResult.keys(state.favoriteSounds);
@@ -354,7 +354,7 @@ let items = [
     cleanup() {
       const Storage = Storage4.Storage;
       Storage.remove("SoundboardFavoriteStore");
-    }
+    },
   },
   {
     version: 9,
@@ -384,7 +384,7 @@ let items = [
     cleanup() {
       const Storage = Storage4.Storage;
       Storage.remove(selectedChannelGuildFrecency);
-    }
+    },
   },
   {
     version: 10,
@@ -413,9 +413,7 @@ let items = [
         return flag;
       }
     },
-    cleanup() {
-
-    }
+    cleanup() {},
   },
   {
     version: 11,
@@ -463,10 +461,8 @@ let items = [
       }
       return false;
     },
-    cleanup() {
-
-    }
-  }
+    cleanup() {},
+  },
 ];
 const result = set.fileFinishedImporting("modules/user_settings/FrecencySettingsMigrations.tsx");
 

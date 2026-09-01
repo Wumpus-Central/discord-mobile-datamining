@@ -7,7 +7,16 @@ import set from "../../../_runtime/00002_set.js";
 const HelpdeskArticles = ME.HelpdeskArticles;
 let items = [AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.NSFW_GUILD];
 let set = new Set(items);
-let obj = { FACIAL_AGE_ESTIMATION: 1, [1]: "FACIAL_AGE_ESTIMATION", ID_VERIFICATION: 2, [2]: "ID_VERIFICATION", MODULAR: 3, [3]: "MODULAR", GOOGLE_WALLET: 9, [9]: "GOOGLE_WALLET" };
+let obj = {
+  FACIAL_AGE_ESTIMATION: 1,
+  [1]: "FACIAL_AGE_ESTIMATION",
+  ID_VERIFICATION: 2,
+  [2]: "ID_VERIFICATION",
+  MODULAR: 3,
+  [3]: "MODULAR",
+  GOOGLE_WALLET: 9,
+  [9]: "GOOGLE_WALLET",
+};
 obj = {};
 obj = { title: messagesProxyDefault["2yLvkS"], description: messagesProxyDefault.eJmat5 };
 obj[obj.FACIAL_AGE_ESTIMATION] = obj;
@@ -24,7 +33,7 @@ export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetS
   obj[0] = intl.string(require("../../intl/index.native.tsx").t.HphYKp);
   const intl2 = require("../../intl/index.native.tsx").intl;
   obj[1] = intl2.string(require("../../intl/index.native.tsx").t["GCZC+9"]);
-  const items = [obj, , ];
+  const items = [obj, ,];
   obj = { title: null, description: null };
   const intl3 = require("../../intl/index.native.tsx").intl;
   obj[0] = intl3.string(require("../../intl/index.native.tsx").t.nkO4L3);
@@ -40,13 +49,18 @@ export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetS
       const obj = closure_1_1(closure_1_2[3]);
       obj.openUrl(closure_1_1(closure_1_2[4]).getArticleURL(closure_1_3.TIGGER_PAWTECT_SYSTEM_DMS));
       const obj2 = closure_1_1(closure_1_2[4]);
-      const result = callback(closure_1_2[1]).trackAgeVerificationModalClicked(callback, callback(closure_1_2[1]).AgeVerificationModalVersion.PRIMARY, callback(closure_1_2[1]).AgeVerificationModalCta.SYSTEM_DMS_LEARN_MORE);
-    }
+      const result = callback(closure_1_2[1]).trackAgeVerificationModalClicked(
+        callback,
+        callback(closure_1_2[1]).AgeVerificationModalVersion.PRIMARY,
+        callback(closure_1_2[1]).AgeVerificationModalCta.SYSTEM_DMS_LEARN_MORE,
+      );
+    },
   });
   items[2] = obj;
   return items;
 };
-export const TRUSTED_PROVIDERS_URL = "https://discord.com/safety/age-assurance-on-discord-vendors-methods-and-your-data";
+export const TRUSTED_PROVIDERS_URL =
+  "https://discord.com/safety/age-assurance-on-discord-vendors-methods-and-your-data";
 export const AGE_VERIFICATION_MODAL_KEY = "AGE_VERIFICATION_MODAL_KEY";
 export const AGE_VERIFICATION_GET_STARTED_MODAL_KEY = "AGE_VERIFICATION_GET_STARTED_MODAL_KEY";
 export const AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY = "AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY";

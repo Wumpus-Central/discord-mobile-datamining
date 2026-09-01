@@ -12,7 +12,7 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
   useValue: explicitContentFromProto.HappeningNowCardsDisabled.useSetting,
-  onValueChange: explicitContentFromProto.HappeningNowCardsDisabled.updateSetting
+  onValueChange: explicitContentFromProto.HappeningNowCardsDisabled.updateSetting,
 });
 const obj = {
   useTitle() {
@@ -21,7 +21,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
   useValue: explicitContentFromProto.HappeningNowCardsDisabled.useSetting,
-  onValueChange: explicitContentFromProto.HappeningNowCardsDisabled.updateSetting
+  onValueChange: explicitContentFromProto.HappeningNowCardsDisabled.updateSetting,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DmsHappeningNowCardsSetting.tsx");
 

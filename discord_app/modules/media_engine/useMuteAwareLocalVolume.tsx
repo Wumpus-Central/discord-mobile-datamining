@@ -34,9 +34,9 @@ export default function useMuteAwareLocalVolume(arg0, arg1) {
         callback(closure_1_2[3]).setLocalVolume(tmp, arg0, callback);
         const obj2 = callback(closure_1_2[3]);
       }
-    }, items1)
+    }, items1),
   };
   items = [closure_4];
   items1 = [arg0, arg1];
   return obj;
-};
+}

@@ -264,8 +264,12 @@ let c4 = importAllResult;
 let closure_15 = createCacheKey.createStyles({ wrapper: StyleSheet.absoluteFillObject });
 let closure_16 = { MENTION: "mention", UNREAD: "unread" };
 let closure_17 = { beforeItem: null, afterItem: null };
-let closure_21 = { code: "function ChannelsUnreadBarsTsx1(){const{scrollPosValue}=this.__closure;return scrollPosValue.get();}" };
-let closure_22 = { code: "function ChannelsUnreadBarsTsx2(position,lastPosition){const{runOnJS,debouncedUpdate}=this.__closure;if(position!==lastPosition){runOnJS(debouncedUpdate)();}}" };
+let closure_21 = {
+  code: "function ChannelsUnreadBarsTsx1(){const{scrollPosValue}=this.__closure;return scrollPosValue.get();}",
+};
+let closure_22 = {
+  code: "function ChannelsUnreadBarsTsx2(position,lastPosition){const{runOnJS,debouncedUpdate}=this.__closure;if(position!==lastPosition){runOnJS(debouncedUpdate)();}}",
+};
 const memoResult = importAllResult.memo(function ChannelUnreadBarsComponent(fastList) {
   fastList = fastList.fastList;
   const guildChannels = fastList.guildChannels;
@@ -290,34 +294,41 @@ const memoResult = importAllResult.memo(function ChannelUnreadBarsComponent(fast
   closure_5 = importAllResult.useRef(null);
   obj1 = fastList(headerHeight[15]);
   youBarTotalHeight = obj1.useYouBarTotalHeight();
-  let tmp4 = id(importAllResult.useState(() => closure_1_20(fastList, guildChannels, headerHeight, youBarTotalHeight)), 2);
+  let tmp4 = id(
+    importAllResult.useState(() => closure_1_20(fastList, guildChannels, headerHeight, youBarTotalHeight)),
+    2,
+  );
   const first = tmp4[0];
   beforeItem = first.beforeItem;
   afterItem = first.afterItem;
   closure_9 = tmp4[1];
   let items = [fastList, guildChannels, headerHeight, youBarTotalHeight];
-  memo = importAllResult.useMemo(() => guildChannels(headerHeight[16])(() => {
-    closure_0 = closure_1_20(closure_0, closure_1, closure_2, closure_6);
-    callback((afterItem) => {
-      if (afterItem === closure_0) {
-        let tmp6 = afterItem;
-      } else {
-        afterItem = afterItem.afterItem;
-        const afterItem2 = tmp.afterItem;
-        tmp6 = tmp;
-        if (tmp4(afterItem, afterItem2)) {
-          beforeItem = afterItem.beforeItem;
-          const beforeItem2 = tmp.beforeItem;
-          tmp6 = tmp;
-          const tmp2Result = tmp2(tmp3[17]);
-        }
-        tmp2 = closure_1_1;
-        tmp3 = closure_1_2;
-        tmp4 = closure_1_1(closure_1_2[17]);
-      }
-      return tmp6;
-    });
-  }, 100), items);
+  memo = importAllResult.useMemo(
+    () =>
+      guildChannels(headerHeight[16])(() => {
+        closure_0 = closure_1_20(closure_0, closure_1, closure_2, closure_6);
+        callback((afterItem) => {
+          if (afterItem === closure_0) {
+            let tmp6 = afterItem;
+          } else {
+            afterItem = afterItem.afterItem;
+            const afterItem2 = tmp.afterItem;
+            tmp6 = tmp;
+            if (tmp4(afterItem, afterItem2)) {
+              beforeItem = afterItem.beforeItem;
+              const beforeItem2 = tmp.beforeItem;
+              tmp6 = tmp;
+              const tmp2Result = tmp2(tmp3[17]);
+            }
+            tmp2 = closure_1_1;
+            tmp3 = closure_1_2;
+            tmp4 = closure_1_1(closure_1_2[17]);
+          }
+          return tmp6;
+        });
+      }, 100),
+    items,
+  );
   const items1 = [memo, id];
   const effect = importAllResult.useEffect(() => {
     const items = [afterItem, closure_9];
@@ -369,7 +380,7 @@ const memoResult = importAllResult.memo(function ChannelUnreadBarsComponent(fast
   const items2 = [tmp9.wrapper, bannerWidth, listBottom, tmp12];
   let isMention;
   const memo1 = importAllResult.useMemo(() => {
-    const items = [wrapper.wrapper, ];
+    const items = [wrapper.wrapper];
     const obj = { width: bannerWidth, bottom: null };
     let num = 0;
     if (!closure_15) {
@@ -427,7 +438,15 @@ const memoResult = importAllResult.memo(function ChannelUnreadBarsComponent(fast
       fastList.scrollToLocation(obj);
     }
   }, items5);
-  obj1 = { position: "top", shown: "before" === str, onPress: callback, isMention: null, scrollPosition: null, listPaddingTop: 0, headerHeight: null };
+  obj1 = {
+    position: "top",
+    shown: "before" === str,
+    onPress: callback,
+    isMention: null,
+    scrollPosition: null,
+    listPaddingTop: 0,
+    headerHeight: null,
+  };
   let isMention2;
   let tmp10Result = tmp10(tmp2[24]);
   if (beforeItem != null) {
@@ -436,8 +455,16 @@ const memoResult = importAllResult.memo(function ChannelUnreadBarsComponent(fast
   obj1[3] = isMention2;
   obj1[4] = fastList.scrollPosValue;
   obj1[6] = headerHeight;
-  const items6 = [bannerWidth(tmp10Result, obj1), ];
-  obj2 = { position: "bottom", shown: "after" === str, onPress: callback1, isMention: null, scrollPosition: null, listPaddingTop: 0, headerHeight: null };
+  const items6 = [bannerWidth(tmp10Result, obj1)];
+  obj2 = {
+    position: "bottom",
+    shown: "after" === str,
+    onPress: callback1,
+    isMention: null,
+    scrollPosition: null,
+    listPaddingTop: 0,
+    headerHeight: null,
+  };
   let isMention3;
   tmp10Result = tmp10(tmp2[24]);
   if (afterItem != null) {

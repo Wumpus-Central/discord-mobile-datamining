@@ -43,9 +43,29 @@ const memoResult = importAllResult.memo(function GIFPickerNoResults(inActionShee
     tmp9 = modalDismissGuardRefreshControl;
   }
   obj[2] = tmp9;
-  obj = { source: searchEmptySource, body: stringResult, bodyStyle: tmp.emptyStateBody, containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateImage };
-  obj[3] = jsx(safeAreaBottomKeyboardAware(1297).RefreshEmptyState, { source: searchEmptySource, body: stringResult, bodyStyle: tmp.emptyStateBody, containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateImage });
-  return <BottomSheetScrollView source={searchEmptySource} body={stringResult} bodyStyle={tmp.emptyStateBody} containerStyle={tmp.emptyStateContainer} imageStyle={tmp.emptyStateImage} />;
+  obj = {
+    source: searchEmptySource,
+    body: stringResult,
+    bodyStyle: tmp.emptyStateBody,
+    containerStyle: tmp.emptyStateContainer,
+    imageStyle: tmp.emptyStateImage,
+  };
+  obj[3] = jsx(safeAreaBottomKeyboardAware(1297).RefreshEmptyState, {
+    source: searchEmptySource,
+    body: stringResult,
+    bodyStyle: tmp.emptyStateBody,
+    containerStyle: tmp.emptyStateContainer,
+    imageStyle: tmp.emptyStateImage,
+  });
+  return (
+    <BottomSheetScrollView
+      source={searchEmptySource}
+      body={stringResult}
+      bodyStyle={tmp.emptyStateBody}
+      containerStyle={tmp.emptyStateContainer}
+      imageStyle={tmp.emptyStateImage}
+    />
+  );
 });
 const result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerNoResults.tsx");
 

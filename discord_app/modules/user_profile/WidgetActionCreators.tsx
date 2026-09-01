@@ -15,7 +15,7 @@ export default {
   },
   savePendingWidgets(arg0) {
     closure_0 = arg0;
-    return callback(function*() {
+    return callback(function* () {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -116,7 +116,7 @@ export default {
   },
   uploadWidgetAsset(arg0) {
     closure_0 = arg0;
-    return callback(function*() {
+    return callback(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -226,7 +226,7 @@ export default {
       obj = {};
     }
     ({ onProgress: importDefault, signal: dependencyMap } = obj);
-    return callback(function*() {
+    return callback(function* () {
       let upload_url = tmp2;
       const HTTP2 = closure_1_0(530).HTTP;
       obj1 = { url: null, body: null, rejectWithError: true };
@@ -238,7 +238,14 @@ export default {
       const body = arg1.body;
       upload_url = body.upload_url;
       const HTTP = closure_1_0(530).HTTP;
-      const obj5 = { url: null, body: null, headers: null, onRequestProgress: null, signal: null, rejectWithError: true };
+      const obj5 = {
+        url: null,
+        body: null,
+        headers: null,
+        onRequestProgress: null,
+        signal: null,
+        rejectWithError: true,
+      };
       obj5[0] = upload_url;
       obj5[1] = body;
       const obj6 = { "Content-Type": null };
@@ -261,7 +268,7 @@ export default {
     })();
   },
   fetchSuggestedGames() {
-    return callback(function*() {
+    return callback(function* () {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -381,5 +388,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "WIDGET_SUGGESTED_REMOVE_GAME", applicationId };
     obj.dispatch(obj);
-  }
+  },
 };

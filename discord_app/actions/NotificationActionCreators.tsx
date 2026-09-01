@@ -88,5 +88,5 @@ export default {
   },
   clickedNotification() {
     dispatcherDefault.dispatch({ type: "NOTIFICATION_CLICK" });
-  }
+  },
 };

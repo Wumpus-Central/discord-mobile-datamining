@@ -13,7 +13,13 @@ import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let closure_10 = createCacheKey.createStyles((arg0) => {
-  const avatar = { borderRadius: ThemesDefault.radii.round, marginRight: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END, width: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, height: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, opacity: null };
+  const avatar = {
+    borderRadius: ThemesDefault.radii.round,
+    marginRight: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END,
+    width: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE,
+    height: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE,
+    opacity: null,
+  };
   let num = 1;
   if (arg0) {
     num = MUTED_OPACITY_CONTENT;
@@ -104,11 +110,30 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
     obj[2] = channel;
     obj[3] = stateFromStores1;
     obj[4] = tmpResult.avatar;
-    let tmp11Result = jsx(FacepileGroupDMAvatarDefault, { status: null, size: null, channel: null, animate: null, style: null });
+    let tmp11Result = jsx(FacepileGroupDMAvatarDefault, {
+      status: null,
+      size: null,
+      channel: null,
+      animate: null,
+      style: null,
+    });
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: 10, status: true, streaming: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==", style: null, size: "887e8ac454565dd48d794f382c8d2d9c", animate: "ja.messages.887e8ac454565dd48d794f382c8d2d9c.compiled.messages", typing: "jsona", autoStatusCutout: 200 };
+      obj = {
+        user: null,
+        avatarDecoration: null,
+        guildId: "e",
+        isMobileOnline: true,
+        isVROnline: 10,
+        status: true,
+        streaming: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==",
+        style: null,
+        size: "887e8ac454565dd48d794f382c8d2d9c",
+        animate: "ja.messages.887e8ac454565dd48d794f382c8d2d9c.compiled.messages",
+        typing: "jsona",
+        autoStatusCutout: 200,
+      };
       obj[0] = stateFromStores2;
       obj[1] = stateFromStores2.avatarDecoration;
       obj[3] = stateFromStores3;
@@ -123,12 +148,27 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
       obj[8] = REFRESH_MEDIUM_32;
       obj[9] = stateFromStores1;
       obj[10] = stateFromStores;
-      tmp11Result = jsx(tmp3(1297).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: 10, status: true, streaming: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==", style: null, size: "887e8ac454565dd48d794f382c8d2d9c", animate: "ja.messages.887e8ac454565dd48d794f382c8d2d9c.compiled.messages", typing: "jsona", autoStatusCutout: 200 });
+      tmp11Result = jsx(tmp3(1297).Avatar, {
+        user: null,
+        avatarDecoration: null,
+        guildId: "e",
+        isMobileOnline: true,
+        isVROnline: 10,
+        status: true,
+        streaming: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==",
+        style: null,
+        size: "887e8ac454565dd48d794f382c8d2d9c",
+        animate: "ja.messages.887e8ac454565dd48d794f382c8d2d9c.compiled.messages",
+        typing: "jsona",
+        autoStatusCutout: 200,
+      });
       const tmp11 = jsx;
     }
   }
   return tmp11Result;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelAvatar.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelAvatar.tsx",
+);
 
 export default memoResult;

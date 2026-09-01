@@ -28,7 +28,7 @@ function _getOrRefreshPushSyncToken() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -133,7 +133,12 @@ function _getOrRefreshPushSyncToken() {
   return applyArgumentsResult;
 }
 ({ DEVICE_TOKEN: error, DEVICE_VOIP_TOKEN: closure_8, Endpoints: c9 } = ME);
-({ BUNDLE_ID: c10, DEVICE_PUSH_VOIP_PROVIDER: unpackModuleId, getDevicePushProvider: closure_12, IS_QUEST_RELEASE: map1 } = require("str2"));
+({
+  BUNDLE_ID: c10,
+  DEVICE_PUSH_VOIP_PROVIDER: unpackModuleId,
+  getDevicePushProvider: closure_12,
+  IS_QUEST_RELEASE: map1,
+} = require("str2"));
 let closure_14 = new timestampDefault("PushNotificationActionCreators");
 let obj = {
   registerDevice(token, flag) {
@@ -141,7 +146,14 @@ let obj = {
       flag = false;
     }
     const canUseMultiAccountNotifications = obj.canUseMultiAccountNotifications;
-    logger.log("Registering push notification token: " + token + ", is voip:" + flag + ", multi-account:" + canUseMultiAccountNotifications);
+    logger.log(
+      "Registering push notification token: " +
+        token +
+        ", is voip:" +
+        flag +
+        ", multi-account:" +
+        canUseMultiAccountNotifications,
+    );
     const Storage = Storage2.Storage;
     const result = Storage.set(flag ? closure_8 : closure_7, token);
     if (canUseMultiAccountNotifications) {
@@ -179,7 +191,7 @@ let obj = {
     if (flag === undefined) {
       flag = false;
     }
-    return callback(function*() {
+    return callback(function* () {
       let id = tmp2;
       id = closure_1_6.getId();
       const validUsers = closure_1_5.getValidUsers();
@@ -216,7 +228,13 @@ let obj = {
               } else {
                 tmp9 = closure_1_12();
               }
-              const obj4 = { provider: null, token: null, push_sync_tokens: null, bypass_server_throttling_supported: null, bundle_id: null };
+              const obj4 = {
+                provider: null,
+                token: null,
+                push_sync_tokens: null,
+                bypass_server_throttling_supported: null,
+                bundle_id: null,
+              };
               obj4[0] = tmp9;
               obj4[1] = closure_1_0;
               obj4[2] = closure_1.filter(closure_1_0(1471).isNotNullish);
@@ -258,7 +276,7 @@ let obj = {
     obj[1] = obj;
     obj[2] = { event: encodeProperties.NetworkActionNames.USER_UNREGISTER_DEVICE_TOKEN };
     return obj.delete(obj);
-  }
+  },
 };
 const tmp4 = new timestampDefault("PushNotificationActionCreators");
 let result = require("set").fileFinishedImporting("actions/native/PushNotificationActionCreators.tsx");
@@ -277,7 +295,9 @@ export const setPushPermissionReactivationSeen = function setPushPermissionReact
   obj = { type: "PUSH_NOTIFICATION_PERMISSION_REACTIVATION_SEEN", promptType };
   obj.dispatch(obj);
 };
-export const setPushNotificationPermissionEligibleForPrompt = function setPushNotificationPermissionEligibleForPrompt(CHANNEL_BANNER) {
+export const setPushNotificationPermissionEligibleForPrompt = function setPushNotificationPermissionEligibleForPrompt(
+  CHANNEL_BANNER,
+) {
   let obj = dispatcherDefault;
   obj = { type: "PUSH_NOTIFICATION_PERMISSION_SET_ELIGIBLE", promptType: CHANNEL_BANNER };
   obj.dispatch(obj);

@@ -2,8 +2,7 @@
 import set from "../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("lib/LifecycleManager.tsx");
-class LifecycleManager {
-}
+class LifecycleManager {}
 const prototype = LifecycleManager.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;

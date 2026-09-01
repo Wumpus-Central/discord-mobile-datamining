@@ -97,7 +97,10 @@ prototype["_initialize"] = function _initialize() {
   const obj2 = dispatcherDefault;
   const subscription2 = dispatcherDefault.subscribe("APP_STATE_UPDATE", this.handleAppStateChanged);
   const obj3 = dispatcherDefault;
-  const subscription3 = dispatcherDefault.subscribe("ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", this.handleSetPrefersReducedMotion);
+  const subscription3 = dispatcherDefault.subscribe(
+    "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
+    this.handleSetPrefersReducedMotion,
+  );
   obj = { type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", prefersReducedMotion: obj.rawPrefersReducedMotion };
   const result = this.handleSetPrefersReducedMotion(obj);
 };

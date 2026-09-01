@@ -7,8 +7,7 @@ let obj = {};
 let closure_1 = {};
 let set = new Set();
 const Store = initializeDefault.Store;
-class GuildOnboardingMemberActionStore extends Store {
-}
+class GuildOnboardingMemberActionStore extends Store {}
 const prototype = GuildOnboardingMemberActionStore.prototype;
 prototype["getCompletedActions"] = function getCompletedActions(closure_0) {
   let tmp = null;
@@ -76,7 +75,7 @@ obj = {
       const id = guild.id;
       delete tmp2[tmp];
     }
-  }
+  },
 };
 const guildOnboardingMemberActionStore = new GuildOnboardingMemberActionStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingMemberActionStore.tsx");

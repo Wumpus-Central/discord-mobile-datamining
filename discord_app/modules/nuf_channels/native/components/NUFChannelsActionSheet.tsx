@@ -6,7 +6,9 @@ import { ContentDismissActionType } from "../../../dismissible_content/Dismissib
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/nuf_channels/native/components/NUFChannelsActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/nuf_channels/native/components/NUFChannelsActionSheet.tsx",
+);
 
 export default function NUFChannelsActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -26,9 +28,15 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
       return tmpResult;
     },
     startExpanded: true,
-    children: null
+    children: null,
   };
-  obj = { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null };
+  obj = {
+    illustration: jsx(NUFChannelIllustrationDefault, {}),
+    title: null,
+    description: null,
+    CTALabel: null,
+    onCTAPress: null,
+  };
   const intl = markAsDismissed(1236).intl;
   obj[1] = intl.string(markAsDismissed(1236).t.Ay9424);
   const intl2 = markAsDismissed(1236).intl;
@@ -36,6 +44,18 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
   const intl3 = markAsDismissed(1236).intl;
   obj[3] = intl3.string(markAsDismissed(1236).t.BddRzS);
   obj[4] = callback;
-  obj[2] = jsx(NUFActionSheetTemplateDefault, { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
-  return jsx(markAsDismissed(5622).BottomSheet, { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
-};
+  obj[2] = jsx(NUFActionSheetTemplateDefault, {
+    illustration: jsx(NUFChannelIllustrationDefault, {}),
+    title: null,
+    description: null,
+    CTALabel: null,
+    onCTAPress: null,
+  });
+  return jsx(markAsDismissed(5622).BottomSheet, {
+    illustration: jsx(NUFChannelIllustrationDefault, {}),
+    title: null,
+    description: null,
+    CTALabel: null,
+    onCTAPress: null,
+  });
+}

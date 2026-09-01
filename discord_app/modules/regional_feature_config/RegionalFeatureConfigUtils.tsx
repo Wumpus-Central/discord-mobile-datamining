@@ -11,7 +11,9 @@ export const isFeatureAgeGated = function isFeatureAgeGated(arg0) {
 export const useIsFeatureAgeGated = function useIsFeatureAgeGated(AGE_GATED_SPACES) {
   const _require = AGE_GATED_SPACES;
   const items = [closure_2];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.isFeatureAgeGated(closure_0));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_2.isFeatureAgeGated(closure_0),
+  );
 };
 export const isSettingTeenByDefault = function isSettingTeenByDefault(arg0) {
   return closure_2.isSettingTeenByDefault(arg0);
@@ -19,7 +21,9 @@ export const isSettingTeenByDefault = function isSettingTeenByDefault(arg0) {
 export const useIsSettingTeenByDefault = function useIsSettingTeenByDefault(GUILD_ACTIVITY_STATUS) {
   const _require = GUILD_ACTIVITY_STATUS;
   const items = [closure_2];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.isSettingTeenByDefault(closure_0));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_2.isSettingTeenByDefault(closure_0),
+  );
 };
 export const hasAgeGatedFeatures = function hasAgeGatedFeatures() {
   return closure_2.hasAgeGatedFeatures();

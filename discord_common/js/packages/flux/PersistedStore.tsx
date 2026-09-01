@@ -31,7 +31,9 @@ class PersistedStore extends r10016 {
       arg0();
     };
     tmp4 = require("throttle");
-    tmp3.throttledCallback = tmp4((arg0) => closure_0.callback(arg0), tmp3.getClass().throttleDelay, { leading: false });
+    tmp3.throttledCallback = tmp4((arg0) => closure_0.callback(arg0), tmp3.getClass().throttleDelay, {
+      leading: false,
+    });
     if (typeof tmp3.getClass().persistKey !== "string") {
       tmp15 = globalThis;
       _Error3 = Error;
@@ -40,7 +42,9 @@ class PersistedStore extends r10016 {
       str6 = "";
       tmp16 = new.target;
       tmp17 = new.target;
-      error = new Error("" + tmp3.getClass().name + " initialized without a `persistKey`. Add one so we know where to save your stuff!");
+      error = new Error(
+        "" + tmp3.getClass().name + " initialized without a `persistKey`. Add one so we know where to save your stuff!",
+      );
       tmp19 = error;
       throw error;
     } else if (typeof tmp3.initialize !== "function") {
@@ -51,18 +55,27 @@ class PersistedStore extends r10016 {
       str4 = "";
       tmp11 = new.target;
       tmp12 = new.target;
-      error1 = new Error("" + tmp3.getClass().name + " initialized without an `initialize` method. Add one that accepts the initial cached state.");
+      error1 = new Error(
+        "" +
+          tmp3.getClass().name +
+          " initialized without an `initialize` method. Add one that accepts the initial cached state.",
+      );
       tmp14 = error1;
       throw error1;
     } else if (typeof tmp3.getState !== "function") {
       tmp5 = globalThis;
       _Error = Error;
       _HermesInternal = HermesInternal;
-      str = " initialized without a `getState` method. Add one that returns the full state of the store for persistance to work.";
+      str =
+        " initialized without a `getState` method. Add one that returns the full state of the store for persistance to work.";
       str2 = "";
       tmp6 = new.target;
       tmp7 = new.target;
-      error2 = new Error("" + tmp3.getClass().name + " initialized without a `getState` method. Add one that returns the full state of the store for persistance to work.");
+      error2 = new Error(
+        "" +
+          tmp3.getClass().name +
+          " initialized without a `getState` method. Add one that returns the full state of the store for persistance to work.",
+      );
       tmp9 = error2;
       throw error2;
     } else {
@@ -81,29 +94,32 @@ PersistedStore["clearAll"] = function clearAll(arg0) {
   if (null == PersistedStore._clearAllPromise) {
     const promise = new Promise((arg0) => {
       closure_0 = arg0;
-      requestIdleCallback(() => {
-        closure_2_9.clearPersistQueue(callback);
-        const allPersistKeys = closure_2_9.allPersistKeys;
-        const item = allPersistKeys.forEach((persistKey) => {
-          if (closure_1_9.shouldClear(closure_0, persistKey)) {
-            const Storage = closure_1_0(closure_1_2[2]).Storage;
-            Storage.remove(persistKey);
-          }
-        });
-        const all = closure_2_5.getAll();
-        const item1 = all.forEach((getClass) => {
-          let shouldClearResult = getClass instanceof closure_1_9;
-          if (shouldClearResult) {
-            shouldClearResult = closure_1_9.shouldClear(closure_0, getClass.getClass().persistKey);
-          }
-          if (shouldClearResult) {
-            getClass._isInitialized = false;
-            getClass.initializeIfNeeded();
-          }
-        });
-        closure_2_9._clearAllPromise = null;
-        callback();
-      }, { timeout: 500 });
+      requestIdleCallback(
+        () => {
+          closure_2_9.clearPersistQueue(callback);
+          const allPersistKeys = closure_2_9.allPersistKeys;
+          const item = allPersistKeys.forEach((persistKey) => {
+            if (closure_1_9.shouldClear(closure_0, persistKey)) {
+              const Storage = closure_1_0(closure_1_2[2]).Storage;
+              Storage.remove(persistKey);
+            }
+          });
+          const all = closure_2_5.getAll();
+          const item1 = all.forEach((getClass) => {
+            let shouldClearResult = getClass instanceof closure_1_9;
+            if (shouldClearResult) {
+              shouldClearResult = closure_1_9.shouldClear(closure_0, getClass.getClass().persistKey);
+            }
+            if (shouldClearResult) {
+              getClass._isInitialized = false;
+              getClass.initializeIfNeeded();
+            }
+          });
+          closure_2_9._clearAllPromise = null;
+          callback();
+        },
+        { timeout: 500 },
+      );
     });
     tmp._clearAllPromise = promise;
   }
@@ -288,7 +304,13 @@ prototype["asyncPersist"] = function asyncPersist() {
         const promise = new Promise((arg0) => {
           closure_0 = arg0;
           const _writeResolvers = closure_1_9._writeResolvers;
-          const items = [arg0, requestIdleCallback(closure_0 > 0 ? (() => closure_1_2.throttledCallback(closure_0)) : (() => closure_1_2.callback(closure_0)), { timeout: 500 })];
+          const items = [
+            arg0,
+            requestIdleCallback(
+              closure_0 > 0 ? () => closure_1_2.throttledCallback(closure_0) : () => closure_1_2.callback(closure_0),
+              { timeout: 500 },
+            ),
+          ];
           const result = _writeResolvers.set(persistKey, items);
         });
         let result = tmp2._writePromises.set(persistKey, promise);
@@ -339,13 +361,11 @@ let result = set.fileFinishedImporting("../discord_common/js/packages/flux/Persi
 const prototype3 = function DeviceSettingsStore() {
   return HermesBuiltin.applyArguments(new.target, new.target);
 }.prototype;
-class prototype3 extends UserAgnosticStore {
-}
+class prototype3 extends UserAgnosticStore {}
 const prototype4 = function OfflineCacheStore() {
   return HermesBuiltin.applyArguments(new.target, new.target);
 }.prototype;
-class prototype4 extends UserAgnosticStore {
-}
+class prototype4 extends UserAgnosticStore {}
 
 export { PersistedStore };
 export const DeviceSettingsStore = prototype3;

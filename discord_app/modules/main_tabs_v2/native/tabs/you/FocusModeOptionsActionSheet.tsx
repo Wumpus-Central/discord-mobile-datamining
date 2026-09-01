@@ -12,15 +12,15 @@ let obj = {
   label() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.RxJGbL);
-  }
+  },
 };
-let items = [obj, , , , , ];
+let items = [obj, , , , ,];
 obj = {
   duration: setDefault.Millis.HOUR,
   label() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.UMWBZr);
-  }
+  },
 };
 items[1] = obj;
 obj = {
@@ -28,7 +28,7 @@ obj = {
   label() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.QmYWtu);
-  }
+  },
 };
 items[2] = obj;
 items[3] = {
@@ -36,21 +36,21 @@ items[3] = {
   label() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.EpAXPC);
-  }
+  },
 };
 obj1 = {
   duration: 8 * setDefault.Millis.HOUR,
   label() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.EpAXPC);
-  }
+  },
 };
 items[4] = {
   duration: setDefault.Millis.DAY,
   label() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["755t4q"]);
-  }
+  },
 };
 const obj3 = { duration: "Array", label: 0 };
 obj3[1] = function label() {
@@ -63,9 +63,11 @@ const obj2 = {
   label() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["755t4q"]);
-  }
+  },
 };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/FocusModeOptionsActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/you/FocusModeOptionsActionSheet.tsx",
+);
 
 export default function FocusModeOptionsActionSheet(onSelect) {
   onSelect = onSelect.onSelect;
@@ -89,21 +91,25 @@ export default function FocusModeOptionsActionSheet(onSelect) {
     tmp4Result = tmp4(tmp(5599).TableRow, obj);
   }
   obj1 = { children: null };
-  items = [tmp4Result, ];
+  items = [tmp4Result];
   items[1] = items.map((duration) => {
     duration = duration.duration;
     const label = duration.label;
-    return closure_1_2(onSelect(closure_1_1[7]).TableRow, {
-      accessibilityLabel: label(),
-      accessibilityHint: label(),
-      onPress() {
-        duration(true, duration);
+    return closure_1_2(
+      onSelect(closure_1_1[7]).TableRow,
+      {
+        accessibilityLabel: label(),
+        accessibilityHint: label(),
+        onPress() {
+          duration(true, duration);
+        },
+        trailing: null,
+        label: label(),
       },
-      trailing: null,
-      label: label()
-    }, "" + duration);
+      "" + duration,
+    );
   });
   obj[2] = items;
   obj1[0] = closure_3(onSelect(5992).TableRowGroup, obj);
   return closure_2(onSelect(5989).ActionSheet, obj1);
-};
+}

@@ -4,7 +4,10 @@ import useSKUPrice from "../storefront/StorefrontUtils.tsx";
 import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../skus/SKURecord.tsx";
 import { isCollectiblesWishlistItemRecord as closure_4 } from "records/CollectiblesWishlistItemRecord.tsx";
-import { isPremiumWishlistItemRecord as closure_5, isSKUWishlistItemRecord } from "records/PremiumWishlistItemRecord.tsx";
+import {
+  isPremiumWishlistItemRecord as closure_5,
+  isSKUWishlistItemRecord,
+} from "records/PremiumWishlistItemRecord.tsx";
 import { SKUProductLines } from "../../Constants.tsx";
 import { PremiumSubscriptionSKUs } from "../premium/PremiumConstants.tsx";
 
@@ -12,7 +15,20 @@ require = arg1;
 const result = require("set").fileFinishedImporting("modules/wishlists/WishlistUtils.tsx");
 
 export const createNitroSuggestedSku = function createNitroSuggestedSku() {
-  const obj = { id: PremiumSubscriptionSKUs.TIER_2, productLine: SKUProductLines.PREMIUM, name: null, features: null, genres: null, manifests: null, availableRegions: null, locales: null, bundledSkuIds: null, selectedOptions: null, eligibleOffers: null, prices: null };
+  const obj = {
+    id: PremiumSubscriptionSKUs.TIER_2,
+    productLine: SKUProductLines.PREMIUM,
+    name: null,
+    features: null,
+    genres: null,
+    manifests: null,
+    availableRegions: null,
+    locales: null,
+    bundledSkuIds: null,
+    selectedOptions: null,
+    eligibleOffers: null,
+    prices: null,
+  };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.lG6a5x);
   obj[3] = new Set();

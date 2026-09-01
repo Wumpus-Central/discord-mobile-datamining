@@ -13,7 +13,12 @@ import { ActivityPlatform } from "../../activities/Constants.tsx";
 
 require = arg1;
 function claimedOutboundPromotionCodeFromServer(code) {
-  return { code: code.code, userId: code.user_id, claimedAt: code.claimed_at, promotion: closure_5.createFromServer(code.promotion) };
+  return {
+    code: code.code,
+    userId: code.user_id,
+    claimedAt: code.claimed_at,
+    promotion: closure_5.createFromServer(code.promotion),
+  };
 }
 function _claimOutboundPromotion() {
   const self = this;
@@ -21,7 +26,7 @@ function _claimOutboundPromotion() {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       c3 = tmp2;
       ({ promotionId: c0, promotionTitle: c1, partnerId: c2, analyticsLocations: c3 } = callback);
       yield "PX_16";
@@ -36,7 +41,14 @@ function _claimOutboundPromotion() {
         ANDROID = tmp39.ANDROID;
       }
       const obj = callback2(698);
-      const obj5 = { platform: null, status: null, location_stack: null, promotion_id: null, name: null, partner: null };
+      const obj5 = {
+        platform: null,
+        status: null,
+        location_stack: null,
+        promotion_id: null,
+        name: null,
+        partner: null,
+      };
       obj5[0] = c6;
       obj5[1] = closure_4.status;
       obj5[2] = c3;
@@ -129,7 +141,10 @@ export const getNextUnseenOutboundPromotionId = function getNextUnseenOutboundPr
   const userContent = closure_4.settings.userContent;
   let prop;
   if (userContent != null) {
-    const tmp4 = userContent.recurringDismissibleContentStates[DismissibleContent.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR];
+    const tmp4 =
+      userContent.recurringDismissibleContentStates[
+        DismissibleContent.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR
+      ];
     if (tmp4 != null) {
       prop = tmp4.lastDismissedObjectId;
     }
@@ -172,7 +187,10 @@ export const shouldShowOutboundPromotionNotice = function shouldShowOutboundProm
   const userContent = closure_4.settings.userContent;
   let prop;
   if (userContent != null) {
-    const tmp4 = userContent.recurringDismissibleContentStates[DismissibleContent.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR];
+    const tmp4 =
+      userContent.recurringDismissibleContentStates[
+        DismissibleContent.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR
+      ];
     if (tmp4 != null) {
       prop = tmp4.lastDismissedObjectId;
     }
@@ -194,7 +212,11 @@ export const shouldShowOutboundPromotionNotice = function shouldShowOutboundProm
   }
   let tmp6 = null != id;
   if (tmp6) {
-    tmp6 = !addVersionedDismissedContent.isTimeRecurringSnowflakeBoundDismissibleContentDismissed(DismissibleContent.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, id, { cooldownDurationMs: 259200000 });
+    tmp6 = !addVersionedDismissedContent.isTimeRecurringSnowflakeBoundDismissibleContentDismissed(
+      DismissibleContent.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR,
+      id,
+      { cooldownDurationMs: 259200000 },
+    );
     let obj = addVersionedDismissedContent;
   }
   return tmp6;

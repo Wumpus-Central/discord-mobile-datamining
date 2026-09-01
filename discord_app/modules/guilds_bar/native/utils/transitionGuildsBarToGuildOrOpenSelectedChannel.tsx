@@ -5,7 +5,9 @@ import closure_3 from "../../../../stores/SelectedGuildStore.tsx";
 import { ME } from "../../../../Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx",
+);
 
 export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
@@ -48,4 +50,4 @@ export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
     tmp(6186).transitionToGuild(arg0);
     const tmpResult1 = tmp(6186);
   }
-};
+}

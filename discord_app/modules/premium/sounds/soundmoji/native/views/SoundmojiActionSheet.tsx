@@ -29,7 +29,10 @@ export default function SoundmojiActionSheet(guildId) {
   const soundId = guildId.soundId;
   const tmp = callback();
   const items = [guildId, channelId, messageId, soundId];
-  const memo = soundId.useMemo(() => guildId(messageId[6]).getSoundmojiFromMessage(guildId, channelId, messageId, soundId, []), items);
+  const memo = soundId.useMemo(
+    () => guildId(messageId[6]).getSoundmojiFromMessage(guildId, channelId, messageId, soundId, []),
+    items,
+  );
   let tmp4Result = null;
   if (null != memo) {
     let obj = { startExpanded: true, bodyStyles: null, children: null };
@@ -52,12 +55,12 @@ export default function SoundmojiActionSheet(guildId) {
       tmp4Result = tmp4(channelId(tmp6[8]), obj);
       const tmp11 = channelId(tmp6[8]);
     }
-    const items1 = [tmp4Result, ];
+    const items1 = [tmp4Result];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.textContainer;
     const obj2 = { variant: "text-sm/bold", children: null };
     obj2[1] = memo.name;
-    const items2 = [closure_5(guildId(messageId[10]).Text, obj2), ];
+    const items2 = [closure_5(guildId(messageId[10]).Text, obj2)];
     const obj3 = { variant: "text-sm/normal", children: null };
     const intl = tmp5(tmp6[11]).intl;
     obj3[1] = intl.string(guildId(messageId[11]).t.Tj5Nwi);
@@ -69,4 +72,4 @@ export default function SoundmojiActionSheet(guildId) {
     tmp4Result = tmp4(guildId(messageId[7]).BottomSheet, obj);
   }
   return tmp4Result;
-};
+}

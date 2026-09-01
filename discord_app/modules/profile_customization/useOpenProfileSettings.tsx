@@ -20,7 +20,12 @@ export default function useOpenProfileSettings() {
   }
   const guild = obj.guild;
   const scrollPosition = obj.scrollPosition;
-  const items = [guild, scrollPosition, obj.analyticsLocations, guild(scrollPosition[6]).useIsEligibleForUserProfileWYSIWYGEditing("useOpenProfileSettings")];
+  const items = [
+    guild,
+    scrollPosition,
+    obj.analyticsLocations,
+    guild(scrollPosition[6]).useIsEligibleForUserProfileWYSIWYGEditing("useOpenProfileSettings"),
+  ];
   return useCallback(() => {
     if (null != guild) {
       let obj = guild(scrollPosition[7]);
@@ -36,4 +41,4 @@ export default function useOpenProfileSettings() {
     obj = { screen: closure_1_4.PROFILE_CUSTOMIZATION };
     guild(scrollPosition[8]).openUserSettings(obj);
   }, items);
-};
+}

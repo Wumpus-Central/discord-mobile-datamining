@@ -90,7 +90,7 @@ export default function computeScrollData(shouldInitialScroll) {
     tmp4 = tmp11;
   }
   return tmp4;
-};
+}
 export const findMessageRowIndex = function findMessageRowIndex(previousRows, ChatTTITracker) {
   closure_0 = ChatTTITracker;
   const findIndexResult = previousRows.findIndex((message) => {

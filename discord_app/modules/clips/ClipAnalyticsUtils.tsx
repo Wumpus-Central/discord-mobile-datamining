@@ -138,9 +138,23 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
     num18 = 0;
   }
   obj.frames_encoded_unknown = num18;
-  ({ framesSubmitted: obj2.frames_submitted, framesSubmittedDuringClip: obj2.frames_submitted_during_clip, framesEncoded: obj2.frames_encoded, framesEncodedDuringClip: obj2.frames_encoded_during_clip, framesDropped: obj2.frames_dropped, framesDroppedDuringClip: obj2.frames_dropped_during_clip } = framesEncodedByEncoder);
+  ({
+    framesSubmitted: obj2.frames_submitted,
+    framesSubmittedDuringClip: obj2.frames_submitted_during_clip,
+    framesEncoded: obj2.frames_encoded,
+    framesEncodedDuringClip: obj2.frames_encoded_during_clip,
+    framesDropped: obj2.frames_dropped,
+    framesDroppedDuringClip: obj2.frames_dropped_during_clip,
+  } = framesEncodedByEncoder);
   obj.clip_duration_setting = store.getSettings().clipsLength;
-  ({ clipDuration: obj2.clip_duration, clipResolutionWidth: obj2.clip_resolution_width, clipResolutionHeight: obj2.clip_resolution_height, minFps: obj2.min_fps, maxFps: obj2.max_fps, submittedFps: obj2.submitted_fps } = framesEncodedByEncoder);
+  ({
+    clipDuration: obj2.clip_duration,
+    clipResolutionWidth: obj2.clip_resolution_width,
+    clipResolutionHeight: obj2.clip_resolution_height,
+    minFps: obj2.min_fps,
+    maxFps: obj2.max_fps,
+    submittedFps: obj2.submitted_fps,
+  } = framesEncodedByEncoder);
   obj.target_fps = state.getState().fps;
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
@@ -192,7 +206,12 @@ export const getClipBaseProperties = function getClipBaseProperties(clip) {
       str = "auto_ml";
     }
   }
-  return { clip_type: str, num_clip_participants: clip.users.length, clip_session_id: clip.gameSessionId, is_candidate: clip.isCandidate };
+  return {
+    clip_type: str,
+    num_clip_participants: clip.users.length,
+    clip_session_id: clip.gameSessionId,
+    is_candidate: clip.isCandidate,
+  };
 };
 export const getClipContextProperties = function getClipContextProperties(trackClipsShared) {
   const obj = { clip_runtime: apexExperiment.getClipsRuntime(trackClipsShared), current_clip_session_id: null };
@@ -233,7 +252,12 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
     }
   }
   obj = {};
-  obj = { clip_type: str, num_clip_participants: decision.users.length, clip_session_id: decision.gameSessionId, is_candidate: decision.isCandidate };
+  obj = {
+    clip_type: str,
+    num_clip_participants: decision.users.length,
+    clip_session_id: decision.gameSessionId,
+    is_candidate: decision.isCandidate,
+  };
   const merged = Object.assign(obj);
   obj1 = { clip_runtime: apexExperiment.getClipsRuntime("getPreSaveClipAnalytics"), current_clip_session_id: null };
   const currentClipsSession = store.getCurrentClipsSession();
@@ -254,7 +278,13 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
   }
   obj.media_session_id = mediaSessionId;
   obj.parent_media_session_id = mediaSessionId.getMediaSessionId();
-  ({ guildId: obj2.guild_id, channelId: obj2.channel_id, applicationId: obj2.application_id, applicationName: obj2.application_name, id: obj2.clip_uuid } = decision);
+  ({
+    guildId: obj2.guild_id,
+    channelId: obj2.channel_id,
+    applicationId: obj2.application_id,
+    applicationName: obj2.application_name,
+    id: obj2.clip_uuid,
+  } = decision);
   obj.clip_event_timeline_size = decision.timeline.length;
   return obj;
 };
@@ -287,7 +317,16 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
       tmp2 = isFavorite;
     }
   }
-  let obj = { is_favorite: tmp2, title_length: null, edit_start_time: null, edit_end_time: null, application_audio_enabled: null, voice_audio_enabled: null, soundboard_audio_enabled: null, crop: null };
+  let obj = {
+    is_favorite: tmp2,
+    title_length: null,
+    edit_start_time: null,
+    edit_end_time: null,
+    application_audio_enabled: null,
+    voice_audio_enabled: null,
+    soundboard_audio_enabled: null,
+    crop: null,
+  };
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {

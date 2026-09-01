@@ -6,7 +6,9 @@ import closure_3 from "../../../stores/SearchQueryStore.tsx";
 import { SEARCH_TABS_TO_SEARCH_QUERY_LIMITS as closure_4 } from "../../../../SearchConstants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx",
+);
 
 export const useSearchMessagesLoadingState = function useSearchMessagesLoadingState(arg0) {
   ({ searchContext: require, tab: dependencyMap } = arg0);
@@ -17,7 +19,11 @@ export const useSearchMessagesLoadingState = function useSearchMessagesLoadingSt
   const items = [closure_3, closure_2];
   return initialize.useStateFromStoresObject(items, () => {
     let obj = closure_1_0(closure_1_1[5]);
-    const searchTabFetchId = obj.getSearchTabFetchId(closure_0, closure_1, closure_1_3.getSearchResultsQuery(closure_0));
+    const searchTabFetchId = obj.getSearchTabFetchId(
+      closure_0,
+      closure_1,
+      closure_1_3.getSearchResultsQuery(closure_0),
+    );
     const isInitialFetchComplete = store.getIsInitialFetchComplete(searchTabFetchId);
     let isFetching = !tmp5;
     if (isInitialFetchComplete) {

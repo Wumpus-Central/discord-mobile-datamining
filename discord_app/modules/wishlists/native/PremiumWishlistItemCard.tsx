@@ -14,4 +14,4 @@ export default function PremiumWishlistItemCard(size) {
   const callback = React.useCallback(() => closure_1_4(size(closure_1_2[2]).PremiumSKUPreview, { size }), items);
   const merged1 = Object.assign(merged);
   return jsx(SourceIconDefault, { accessibilityLabel: sku.name, renderPreview: callback, source, size });
-};
+}

@@ -34,7 +34,7 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
           return closure_2_5(closure_0, obj);
         };
       });
-    }
+    },
   };
   _modDef4858.openLazy(obj);
 };

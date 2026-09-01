@@ -18,13 +18,13 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = StyleSheet.absoluteFillObject;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let closure_7 = [];
-function EMPTY_CALLBACK() {
-
-}
+function EMPTY_CALLBACK() {}
 function renderItem(arg0, menu, transitionState, cleanUp) {
   return jsx(ContextMenuDivider.ContextMenuPopout, { menu, transitionState, cleanUp }, arg0);
 }
-const result = require("set").fileFinishedImporting("design/components/ContextMenu/native/ContextMenuContainer.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/ContextMenu/native/ContextMenuContainer.native.tsx",
+);
 
 export const ContextMenuContainer = function ContextMenuContainer() {
   const tmp = callback();
@@ -55,7 +55,7 @@ export const ContextMenuContainer = function ContextMenuContainer() {
   callback = React.useCallback(() => {
     requestClose(true);
   }, items1);
-  const items2 = [callback, , ];
+  const items2 = [callback, ,];
   ({ overlayView: arr3[1], wrapperView: arr3[2] } = tmp);
   const callback1 = React.useCallback((children) => {
     let obj = { style: lib.overlayView, children: null };

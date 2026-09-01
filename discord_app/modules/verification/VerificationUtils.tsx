@@ -16,23 +16,51 @@ const items5 = [PHONE, REVERIFY_EMAIL];
 const items6 = [EMAIL, REVERIFY_PHONE];
 const items7 = [REVERIFY_EMAIL, REVERIFY_PHONE];
 const items8 = [VerificationTypes.CAPTCHA];
-let closure_5 = { [UserRequiredActions.REQUIRE_VERIFIED_EMAIL]: items, [UserRequiredActions.REQUIRE_VERIFIED_PHONE]: items1, [UserRequiredActions.REQUIRE_REVERIFIED_EMAIL]: items2, [UserRequiredActions.REQUIRE_REVERIFIED_PHONE]: items3, [UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE]: items4, [UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE]: items5, [UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE]: items6, [UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE]: items7, [UserRequiredActions.REQUIRE_CAPTCHA]: items8, [UserRequiredActions.AGREEMENTS]: [], [UserRequiredActions.REQUIRE_SAFETY_FLOWS]: [] };
+let closure_5 = {
+  [UserRequiredActions.REQUIRE_VERIFIED_EMAIL]: items,
+  [UserRequiredActions.REQUIRE_VERIFIED_PHONE]: items1,
+  [UserRequiredActions.REQUIRE_REVERIFIED_EMAIL]: items2,
+  [UserRequiredActions.REQUIRE_REVERIFIED_PHONE]: items3,
+  [UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE]: items4,
+  [UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE]: items5,
+  [UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE]: items6,
+  [UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE]: items7,
+  [UserRequiredActions.REQUIRE_CAPTCHA]: items8,
+  [UserRequiredActions.AGREEMENTS]: [],
+  [UserRequiredActions.REQUIRE_SAFETY_FLOWS]: [],
+};
 let result = set.fileFinishedImporting("modules/verification/VerificationUtils.tsx");
 
 export default {
   isPhoneReverification(currentUser, action) {
     let tmp = undefined !== currentUser && currentUser.isPhoneVerified();
     if (tmp) {
-      tmp = action === UserRequiredActions.REQUIRE_REVERIFIED_PHONE || action === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || action === UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
-      const tmp4 = action === UserRequiredActions.REQUIRE_REVERIFIED_PHONE || action === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || action === UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
+      tmp =
+        action === UserRequiredActions.REQUIRE_REVERIFIED_PHONE ||
+        action === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
+        action === UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
+      const tmp4 =
+        action === UserRequiredActions.REQUIRE_REVERIFIED_PHONE ||
+        action === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
+        action === UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
     }
     return tmp;
   },
   isEmailReverification(stateFromStores1) {
-    return stateFromStores1 === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL || stateFromStores1 === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || stateFromStores1 === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE;
+    return (
+      stateFromStores1 === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL ||
+      stateFromStores1 === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
+      stateFromStores1 === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE
+    );
   },
   isFullScreenVerification(action) {
-    let result = action === UserRequiredActions.REQUIRE_CAPTCHA || action === tmp.REQUIRE_VERIFIED_EMAIL || action === tmp.REQUIRE_VERIFIED_PHONE || action === tmp.REQUIRE_REVERIFIED_PHONE || action === tmp.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || action === tmp.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
+    let result =
+      action === UserRequiredActions.REQUIRE_CAPTCHA ||
+      action === tmp.REQUIRE_VERIFIED_EMAIL ||
+      action === tmp.REQUIRE_VERIFIED_PHONE ||
+      action === tmp.REQUIRE_REVERIFIED_PHONE ||
+      action === tmp.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
+      action === tmp.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
     if (!result) {
       const self = this;
       result = this.isEmailReverification(action);
@@ -64,5 +92,5 @@ export default {
   },
   areVerificationTypesEqual(arg0, arg1) {
     return applyDefault.isEqual(arg0, arg1);
-  }
+  },
 };

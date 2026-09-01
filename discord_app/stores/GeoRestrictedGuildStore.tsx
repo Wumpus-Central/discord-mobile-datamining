@@ -4,8 +4,7 @@ import dispatcherDefault from "../Dispatcher.tsx";
 
 let closure_0 = [];
 const Store = initializeDefault.Store;
-class GeoRestrictedGuildStore extends Store {
-}
+class GeoRestrictedGuildStore extends Store {}
 GeoRestrictedGuildStore.prototype["getGeoRestrictedGuilds"] = function getGeoRestrictedGuilds() {
   return closure_0;
 };
@@ -25,8 +24,14 @@ const geoRestrictedGuildStore = new GeoRestrictedGuildStore(dispatcherDefault, {
   GUILD_GEO_RESTRICTED: function handleGeoRestrictGuild(guildId) {
     let found = guildId;
     found = found.filter((id) => id.id !== found.guildId);
-    found.push({ id: guildId.guildId, name: guildId.name, icon: guildId.icon, unavailable: true, geo_restricted: true });
-  }
+    found.push({
+      id: guildId.guildId,
+      name: guildId.name,
+      icon: guildId.icon,
+      unavailable: true,
+      geo_restricted: true,
+    });
+  },
 });
 const result = require("set").fileFinishedImporting("stores/GeoRestrictedGuildStore.tsx");
 

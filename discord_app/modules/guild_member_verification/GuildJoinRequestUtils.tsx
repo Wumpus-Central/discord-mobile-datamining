@@ -5,7 +5,10 @@ import MAX_RESULTS_PER_PAGE from "MemberVerificationTypes.tsx";
 const result = set.fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestUtils.tsx");
 
 export const isActionedApplicationStatus = function isActionedApplicationStatus(applicationStatus) {
-  return applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.APPROVED || applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.REJECTED;
+  return (
+    applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.APPROVED ||
+    applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.REJECTED
+  );
 };
 export const isSubmittedApplicationStatus = function isSubmittedApplicationStatus(applicationStatus) {
   return applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.SUBMITTED;
@@ -19,7 +22,9 @@ export const isApprovedAndAcked = function isApprovedAndAcked(applicationStatus)
 };
 export const isActionedAndNotAcked = function isActionedAndNotAcked(request) {
   const applicationStatus = request.applicationStatus;
-  let tmp3 = applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.APPROVED || applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.REJECTED;
+  let tmp3 =
+    applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.APPROVED ||
+    applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.REJECTED;
   if (tmp3) {
     tmp3 = null == request.lastSeen;
   }

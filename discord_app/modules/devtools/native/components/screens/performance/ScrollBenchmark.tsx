@@ -6,7 +6,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx",
+);
 
 export default function ScrollBenchmark(subLabel) {
   let str = subLabel.subLabel;
@@ -30,4 +32,4 @@ export default function ScrollBenchmark(subLabel) {
   }
   obj[4] = start;
   return jsx(TableRowInner.TableRow, { label: str2, subLabel: str, variant: null, arrow: true, onPress: null });
-};
+}

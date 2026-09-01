@@ -12,7 +12,7 @@ function _getCachedOrFetchActivityApplicationForLaunch() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -144,7 +144,9 @@ function _getCachedOrFetchActivityApplicationForLaunch() {
 function isUsableApplicationRecord(embeddedActivityConfig) {
   return null != embeddedActivityConfig && null != embeddedActivityConfig.embeddedActivityConfig;
 }
-const result = require("set").fileFinishedImporting("modules/activities/utils/getCachedOrFetchActivityApplicationForLaunch.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/activities/utils/getCachedOrFetchActivityApplicationForLaunch.tsx",
+);
 
 export default function getCachedOrFetchActivityApplicationForLaunch() {
   const self = this;
@@ -155,4 +157,4 @@ export default function getCachedOrFetchActivityApplicationForLaunch() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

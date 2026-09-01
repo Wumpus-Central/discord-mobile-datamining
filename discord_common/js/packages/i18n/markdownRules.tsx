@@ -4,7 +4,20 @@ import t from "../../../../_runtime/04192_t.js";
 
 const link = t.defaultRules.link;
 const text = t.defaultRules.text;
-let obj = { newline: t.defaultRules.newline, paragraph: t.defaultRules.paragraph, url: t.defaultRules.url, link: null, strong: null, u: null, br: null, em: null, image: null, hook: null, noparse: null, text: null };
+let obj = {
+  newline: t.defaultRules.newline,
+  paragraph: t.defaultRules.paragraph,
+  url: t.defaultRules.url,
+  link: null,
+  strong: null,
+  u: null,
+  br: null,
+  em: null,
+  image: null,
+  hook: null,
+  noparse: null,
+  text: null,
+};
 obj = {};
 const merged = Object.assign(link);
 obj.parse = function parse(arg0, arg1, context) {

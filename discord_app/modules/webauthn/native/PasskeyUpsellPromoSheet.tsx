@@ -47,7 +47,7 @@ export default function PasswordlessUpsellPromoSheet() {
     },
     text: null,
     loading: null,
-    disabled: null
+    disabled: null,
   };
   const intl3 = tmp2(tmp3[8]).intl;
   const string2 = intl3.string;
@@ -60,7 +60,7 @@ export default function PasswordlessUpsellPromoSheet() {
   obj[2] = string2Result;
   obj[3] = tmp7;
   obj[4] = tmp7;
-  const items = [callback2(require(onRegisterSuccess[12]).Button, obj), ];
+  const items = [callback2(require(onRegisterSuccess[12]).Button, obj)];
   obj1 = {
     size: "lg",
     variant: "secondary",
@@ -70,7 +70,7 @@ export default function PasswordlessUpsellPromoSheet() {
       const result = callback(onRegisterSuccess[6]).closePasskeyUpsellPromoSheet();
     },
     text: null,
-    disabled: null
+    disabled: null,
   };
   const intl4 = tmp2(tmp3[8]).intl;
   const string3 = intl4.string;
@@ -87,5 +87,5 @@ export default function PasswordlessUpsellPromoSheet() {
   obj2[0] = items;
   obj[4] = closure_8(require(onRegisterSuccess[11]).ButtonGroup, obj2);
   return callback2(require(onRegisterSuccess[7]).PromoSheet, obj);
-};
+}
 export const PASSWORDLESS_UPSELL_MODAL_KEY = "PASSWORDLESS_UPSELL_MODAL_KEY";

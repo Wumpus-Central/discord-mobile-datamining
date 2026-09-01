@@ -14,8 +14,7 @@ noopAll;
 let obj = new timestampDefault("ApplicationStreamingManager");
 obj.enableNativeLogger(true);
 updateRegionDefault;
-class ApplicationStreamingManager extends tmp4 {
-}
+class ApplicationStreamingManager extends tmp4 {}
 const prototype = ApplicationStreamingManager.prototype;
 prototype["platformShowStreamFull"] = function platformShowStreamFull() {
   obj = _modDef4858;
@@ -28,7 +27,7 @@ prototype["platformShowStreamFull"] = function platformShowStreamFull() {
           return closure_1_6(closure_0, {});
         };
       });
-    }
+    },
   };
   obj.openLazy(obj);
 };
@@ -63,9 +62,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
     obj.warn("invalid start_stream: both application + display modes were specified (source-id: " + sourceId + ")");
   }
 };
-prototype["platformHandleVoiceStateUpdate"] = function platformHandleVoiceStateUpdate(arg0) {
-
-};
+prototype["platformHandleVoiceStateUpdate"] = function platformHandleVoiceStateUpdate(arg0) {};
 const applicationStreamingManager = new ApplicationStreamingManager();
 const result = require("set").fileFinishedImporting("modules/go_live/native/ApplicationStreamingManager.tsx");
 

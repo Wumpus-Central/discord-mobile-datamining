@@ -22,19 +22,26 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
   application = obj.useGameInvitesChannelOfficialApplication(parentChannel.id).application;
   const items = [closure_6, closure_7];
   const items1 = [application];
-  stateFromStores = description(stateFromStores[7]).useStateFromStores(items, () => {
-    let id;
-    if (application != null) {
-      id = application.id;
-    }
-    return application(stateFromStores[8])(closure_1_6, closure_1_7, id);
-  }, items1);
+  stateFromStores = description(stateFromStores[7]).useStateFromStores(
+    items,
+    () => {
+      let id;
+      if (application != null) {
+        id = application.id;
+      }
+      return application(stateFromStores[8])(closure_1_6, closure_1_7, id);
+    },
+    items1,
+  );
   const obj2 = description(stateFromStores[7]);
   let availableTags = parentChannel.availableTags;
   if (availableTags == null) {
     availableTags = [];
   }
-  const gameInviteVoiceChatState = description(stateFromStores[6]).useGameInviteVoiceChatState(availableTags, appliedTagIds);
+  const gameInviteVoiceChatState = description(stateFromStores[6]).useGameInviteVoiceChatState(
+    availableTags,
+    appliedTagIds,
+  );
   const voiceChatEnabled = gameInviteVoiceChatState.voiceChatEnabled;
   const items2 = [stateFromStores];
   ({ noMicTag, voiceToggleDisabled } = gameInviteVoiceChatState);
@@ -50,7 +57,16 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
     }
   }, items2);
   let tmpResult = tmp(tmp2[9]);
-  obj = { parentChannel, name: null, appliedTags: null, activityAction: null, applicationId: null, voiceChatEnabled: null, upload: null, onThreadCreated: null };
+  obj = {
+    parentChannel,
+    name: null,
+    appliedTags: null,
+    activityAction: null,
+    applicationId: null,
+    voiceChatEnabled: null,
+    upload: null,
+    onThreadCreated: null,
+  };
   tmpResult = tmp(tmp2[6]);
   obj[1] = tmpResult.deriveThreadName(description);
   obj[2] = appliedTagIds;
@@ -82,71 +98,74 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
     voiceToggleDisabled,
     submitting: tmp9,
     canSubmit: tmp10,
-    submit: obj4.useCallback(createForumPostCommon(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+    submit: obj4.useCallback(
+      createForumPostCommon(function* () {
+        if (v0 === 2) {
+          v0 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
+          try {
+            v0 = 2;
+            if (0 === c1) {
+              if (arg0 === 1) {
+                v0 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                v0 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                closure_0 = tmp3;
+                if (closure_1_5) {
+                  closure_1_4(true);
+                  c2 = 1;
+                  c1 = 2;
+                  v0 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = v0(closure_1_0);
+                  return obj1;
+                }
+              }
+            } else {
+              if (1 === tmp7) {
+                c2 = 0;
+                callback(false);
+              } else if (arg0 === 1) {
+                v0 = 3;
+                throw arg1;
+              } else if (arg0 !== 2) {
+                c2 = 0;
+              }
+              c2 = 0;
               v0 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
-            } else {
-              closure_0 = tmp3;
-              if (closure_1_5) {
-                closure_1_4(true);
-                c2 = 1;
-                c1 = 2;
-                v0 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = v0(closure_1_0);
-                return obj1;
-              }
             }
-          } else {
-            if (1 === tmp7) {
-              c2 = 0;
-              callback(false);
-            } else if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c2 = 0;
-            }
-            c2 = 0;
             v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-          v0 = 3;
-        } catch (tmp16) {
-          if (tmp4 === c2) {
-            v0 = tmp2;
-            throw tmp16;
-          } else {
-            c1 = tmp;
+          } catch (tmp16) {
+            if (tmp4 === c2) {
+              v0 = tmp2;
+              throw tmp16;
+            } else {
+              c1 = tmp;
+            }
           }
         }
-      }
-    }), items3)
+      }),
+      items3,
+    ),
   };
   return obj;
 };

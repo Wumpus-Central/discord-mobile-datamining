@@ -48,4 +48,4 @@ export default function useResolveGameForProfile(arg0) {
     tmp6Result = obj;
   }
   return tmp6Result;
-};
+}

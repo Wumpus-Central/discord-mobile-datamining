@@ -15,7 +15,9 @@ function loaderMaker() {
     return closure_1_4("div", { style });
   };
 }
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/code-splitting/CodeSplittingUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/code-splitting/CodeSplittingUtils.tsx",
+);
 for (const key10029 in require("_importWithRetry")) {
   let tmp4 = key10029;
   arg5[key10029] = require("_importWithRetry")[key10029];
@@ -97,7 +99,10 @@ export const makeLazyWithPreload = function makeLazyWithPreload(arg0) {
   class Wrapper {
     constructor(arg0) {
       tmp = c3;
-      first = renderLoader(c3.useState(() => closure_4), 1)[0];
+      first = renderLoader(
+        c3.useState(() => closure_4),
+        1,
+      )[0];
       if (null != first) {
         tmp10 = c4;
         obj = {};

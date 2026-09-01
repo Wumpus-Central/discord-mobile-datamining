@@ -53,10 +53,16 @@ const items2 = [
   () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.jgC65t);
-  }
+  },
 ];
-let closure_9 = createCacheKey.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" }, image: { alignSelf: "center", marginTop: -72, marginBottom: 16, width: "100%", resizeMode: "contain" } });
-const result = require("set").fileFinishedImporting("modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx");
+let closure_9 = createCacheKey.createStyles({
+  text: { marginTop: 16, lineHeight: 20, textAlign: "center" },
+  header: { textAlign: "center" },
+  image: { alignSelf: "center", marginTop: -72, marginBottom: 16, width: "100%", resizeMode: "contain" },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx",
+);
 
 export default function ChannelFollowSuccessAlert(arg0) {
   const tmp = callback3();
@@ -75,13 +81,18 @@ export default function ChannelFollowSuccessAlert(arg0) {
   const intl = tmp5(1236).intl;
   obj.confirmText = intl.string(require("../../../../intl/index.native.tsx").t["+IrDzN"]);
   obj = { source: stableMemo, style: tmp.image };
-  items1 = [callback(Image, obj), , ];
+  items1 = [callback(Image, obj), ,];
   const tmp2Result = componentDidMountDefault;
-  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stableMemo1() });
+  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, {
+    style: tmp.header,
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: stableMemo1(),
+  });
   const obj2 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
   const intl2 = tmp5(1236).intl;
   obj2[3] = intl2.string(require("../../../../intl/index.native.tsx").t["2QbSea"]);
   items1[2] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj2);
   obj.children = items1;
   return callback2(tmp2Result, obj);
-};
+}

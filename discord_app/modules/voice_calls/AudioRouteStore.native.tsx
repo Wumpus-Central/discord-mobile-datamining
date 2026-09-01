@@ -37,8 +37,7 @@ let c6 = false;
 let c7 = null;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.AudioRouteEmitter);
 const Store = initializeDefault.Store;
-class AudioRouteStoreClass extends Store {
-}
+class AudioRouteStoreClass extends Store {}
 const prototype = AudioRouteStoreClass.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4);
@@ -84,27 +83,29 @@ const audioRouteStoreClass = new AudioRouteStoreClass(dispatcherDefault, {
         const nextPromise = currentRoute1.then((routeType) => {
           callback(routeType.routeType, routeType.multipleRoutesAvailable);
         });
-        _catch = currentRoute1.then((routeType) => {
-          callback(routeType.routeType, routeType.multipleRoutesAvailable);
-        }).then(() => {
-          let emitChangeResult;
-          if (closure_10 != null) {
-            emitChangeResult = closure_10.emitChange();
-          }
-          return emitChangeResult;
-        }).catch;
-        _catch(() => {
-
-        });
-        const nextPromise1 = currentRoute1.then((routeType) => {
-          callback(routeType.routeType, routeType.multipleRoutesAvailable);
-        }).then(() => {
-          let emitChangeResult;
-          if (closure_10 != null) {
-            emitChangeResult = closure_10.emitChange();
-          }
-          return emitChangeResult;
-        });
+        _catch = currentRoute1
+          .then((routeType) => {
+            callback(routeType.routeType, routeType.multipleRoutesAvailable);
+          })
+          .then(() => {
+            let emitChangeResult;
+            if (closure_10 != null) {
+              emitChangeResult = closure_10.emitChange();
+            }
+            return emitChangeResult;
+          }).catch;
+        _catch(() => {});
+        const nextPromise1 = currentRoute1
+          .then((routeType) => {
+            callback(routeType.routeType, routeType.multipleRoutesAvailable);
+          })
+          .then(() => {
+            let emitChangeResult;
+            if (closure_10 != null) {
+              emitChangeResult = closure_10.emitChange();
+            }
+            return emitChangeResult;
+          });
       }
     }
     if (!tmp4) {
@@ -117,7 +118,7 @@ const audioRouteStoreClass = new AudioRouteStoreClass(dispatcherDefault, {
       _null = tmp3;
     }
     return false;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/voice_calls/AudioRouteStore.native.tsx");
 

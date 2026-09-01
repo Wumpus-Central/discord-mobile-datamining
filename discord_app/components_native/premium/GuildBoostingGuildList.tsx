@@ -36,18 +36,18 @@ function GuildBoostingGuildListItem(guildId) {
     tmp2Result = tmp2(6004);
     obj[1] = tmp5(6004).GuildIconSizes.LARGE;
     obj[2] = tmp.guildIcon;
-    const items1 = [callback(tmp2Result, obj), , ];
+    const items1 = [callback(tmp2Result, obj), ,];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.guildCardDescription;
     const obj2 = { variant: "text-md/bold", children: null };
     obj2[1] = stateFromStores.name;
-    const items2 = [callback(tmp5(4474).Text, obj2), ];
+    const items2 = [callback(tmp5(4474).Text, obj2)];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.subscriptionInfo;
     const obj4 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
     obj4[0] = tmp2(10402);
     obj4[1] = tmp.premiumGuildImage;
-    const items3 = [callback(closure_4, obj4), ];
+    const items3 = [callback(closure_4, obj4)];
     const obj5 = { variant: "text-xs/medium", children: null };
     const intl = tmp5(1236).intl;
     const obj6 = { subscriberCount: null };
@@ -70,8 +70,24 @@ function GuildBoostingGuildListItem(guildId) {
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { guildCard: null, guildIcon: null, guildCardDescription: null, subscriptionInfo: null, premiumGuildImage: null };
-createCacheKey = { padding: 12, paddingLeft: 16, borderRadius: ThemesDefault.radii.xs, marginBottom: 8, minHeight: 96, flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = {
+  guildCard: null,
+  guildIcon: null,
+  guildCardDescription: null,
+  subscriptionInfo: null,
+  premiumGuildImage: null,
+};
+createCacheKey = {
+  padding: 12,
+  paddingLeft: 16,
+  borderRadius: ThemesDefault.radii.xs,
+  marginBottom: 8,
+  minHeight: 96,
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginRight: 16 };
 createCacheKey[2] = { flex: 1 };
@@ -92,4 +108,4 @@ export default function GuildBoostingGuildList(guildCount) {
   const substr = stateFromStores.slice(0, guildCount);
   obj[1] = substr.map((guildId) => callback(closure_11, { guildId }, guildId));
   return callback(closure_3, obj);
-};
+}

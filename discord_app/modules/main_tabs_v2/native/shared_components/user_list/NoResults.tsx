@@ -9,8 +9,25 @@ require = arg1;
 noopAll;
 ({ View: obj1, ScrollView: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ headerContainer: { paddingHorizontal: 16 }, container: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 16, paddingBottom: 16, paddingTop: 32 }, image: { marginBottom: 12 }, textContainer: { justifyContent: "center", alignItems: "center" }, text: { textAlign: "center", marginTop: 4 }, fullHeightContentContainer: { paddingBottom: 0, paddingTop: 0 }, fullHeightScrollContent: { flexGrow: 1 } });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/NoResults.tsx");
+let closure_6 = createCacheKey.createStyles({
+  headerContainer: { paddingHorizontal: 16 },
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 16,
+    paddingBottom: 16,
+    paddingTop: 32,
+  },
+  image: { marginBottom: 12 },
+  textContainer: { justifyContent: "center", alignItems: "center" },
+  text: { textAlign: "center", marginTop: 4 },
+  fullHeightContentContainer: { paddingBottom: 0, paddingTop: 0 },
+  fullHeightScrollContent: { flexGrow: 1 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/NoResults.tsx",
+);
 
 export default function NoResults(illustration) {
   ({ subtitle, fullHeight } = illustration);
@@ -27,7 +44,7 @@ export default function NoResults(illustration) {
     fullHeightScrollContent = tmp.fullHeightScrollContent;
   }
   obj[2] = fullHeightScrollContent;
-  const items1 = [tmp.container, , ];
+  const items1 = [tmp.container, ,];
   if (fullHeight) {
     fullHeight = tmp.fullHeightContentContainer;
   }
@@ -41,9 +58,16 @@ export default function NoResults(illustration) {
     obj[1] = callback(illustration, {});
     tmp5 = callback(tmp4, obj);
   }
-  const items2 = [tmp5, ];
+  const items2 = [tmp5];
   obj1 = { style: tmp.textContainer, children: null };
-  const items3 = [callback(Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: title }), ];
+  const items3 = [
+    callback(Text.Text, {
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      style: tmp.text,
+      children: title,
+    }),
+  ];
   let tmp7Result = null;
   if (null != subtitle) {
     const obj3 = { variant: "text-xs/medium", color: "interactive-text-default", style: null, children: null };
@@ -58,4 +82,4 @@ export default function NoResults(illustration) {
   const items4 = [closure_5(closure_2, obj), children];
   obj[3] = items4;
   return closure_5(closure_3, obj);
-};
+}

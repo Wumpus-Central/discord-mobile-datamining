@@ -2,13 +2,27 @@
 import closure_2 from "../../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-let closure_3 = { code: "function useSearchSegmentedControlStateTsx1(){const{visibleTabsStateful}=this.__closure;return visibleTabsStateful;}" };
-let closure_4 = { code: "function useSearchSegmentedControlStateTsx2(){const{visibleTabs,activeIndex}=this.__closure;return visibleTabs.get()[activeIndex.get()];}" };
-let closure_5 = { code: "function useSearchSegmentedControlStateTsx3(){const{visibleTabs}=this.__closure;return visibleTabs.get();}" };
-let closure_6 = { code: "function useSearchSegmentedControlStateTsx4(visibleTabs){const{lastSelectedTab,runOnJS,setActiveIndex}=this.__closure;if(visibleTabs.length===0)return;const lastSelectedTabIndex=visibleTabs.indexOf(lastSelectedTab.get());const targetIndex=Math.max(0,lastSelectedTabIndex);const maxIndex=Math.max(0,visibleTabs.length-1);const nextActiveIndex=Math.min(targetIndex,maxIndex);runOnJS(setActiveIndex)(nextActiveIndex,false);}" };
-let closure_7 = { code: "function useSearchSegmentedControlStateTsx5(){const{selectedTab}=this.__closure;return selectedTab.get();}" };
-let closure_8 = { code: "function useSearchSegmentedControlStateTsx6(selectedTab){const{lastSelectedTab,runOnJS,onSelectedTabChange}=this.__closure;if(selectedTab==null)return;lastSelectedTab.set(selectedTab);runOnJS(onSelectedTabChange)(selectedTab);}" };
-let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchSegmentedControlState.tsx");
+let closure_3 = {
+  code: "function useSearchSegmentedControlStateTsx1(){const{visibleTabsStateful}=this.__closure;return visibleTabsStateful;}",
+};
+let closure_4 = {
+  code: "function useSearchSegmentedControlStateTsx2(){const{visibleTabs,activeIndex}=this.__closure;return visibleTabs.get()[activeIndex.get()];}",
+};
+let closure_5 = {
+  code: "function useSearchSegmentedControlStateTsx3(){const{visibleTabs}=this.__closure;return visibleTabs.get();}",
+};
+let closure_6 = {
+  code: "function useSearchSegmentedControlStateTsx4(visibleTabs){const{lastSelectedTab,runOnJS,setActiveIndex}=this.__closure;if(visibleTabs.length===0)return;const lastSelectedTabIndex=visibleTabs.indexOf(lastSelectedTab.get());const targetIndex=Math.max(0,lastSelectedTabIndex);const maxIndex=Math.max(0,visibleTabs.length-1);const nextActiveIndex=Math.min(targetIndex,maxIndex);runOnJS(setActiveIndex)(nextActiveIndex,false);}",
+};
+let closure_7 = {
+  code: "function useSearchSegmentedControlStateTsx5(){const{selectedTab}=this.__closure;return selectedTab.get();}",
+};
+let closure_8 = {
+  code: "function useSearchSegmentedControlStateTsx6(selectedTab){const{lastSelectedTab,runOnJS,onSelectedTabChange}=this.__closure;if(selectedTab==null)return;lastSelectedTab.set(selectedTab);runOnJS(onSelectedTabChange)(selectedTab);}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/search/native/components/tabs/hooks/useSearchSegmentedControlState.tsx",
+);
 
 export const useSearchSegmentedControlState = function useSearchSegmentedControlState(visibleTabs) {
   visibleTabs = visibleTabs.visibleTabs;
@@ -32,7 +46,11 @@ export const useSearchSegmentedControlState = function useSearchSegmentedControl
   T.__initData = derivedValue;
   derivedValue = visibleTabs(onSelectedTabChange[1]).useDerivedValue(T);
   const obj2 = visibleTabs(onSelectedTabChange[1]);
-  segmentedControlState = visibleTabs(onSelectedTabChange[2]).useSegmentedControlState({ items, defaultIndex: 0, pageWidth: width });
+  segmentedControlState = visibleTabs(onSelectedTabChange[2]).useSegmentedControlState({
+    items,
+    defaultIndex: 0,
+    pageWidth: width,
+  });
   activeIndex = segmentedControlState.activeIndex;
   setActiveIndex = segmentedControlState.setActiveIndex;
   const obj3 = visibleTabs(onSelectedTabChange[2]);

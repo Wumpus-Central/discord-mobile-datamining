@@ -14,13 +14,19 @@ export const useMessagePreviewExpandedHeight = function useMessagePreviewExpande
 };
 export const setMesssagePreviewHeight = function setMesssagePreviewHeight(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_2.setState(closure_0));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
+    closure_1_2.setState(closure_0),
+  );
 };
 export const setMesssagePreviewCollapsedHeight = function setMesssagePreviewCollapsedHeight(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_2.setState({ collapsedHeight: closure_0 }));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
+    closure_1_2.setState({ collapsedHeight: closure_0 }),
+  );
 };
 export const setMesssagePreviewExpandedHeight = function setMesssagePreviewExpandedHeight(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_2.setState({ expandedHeight: closure_0 }));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
+    closure_1_2.setState({ expandedHeight: closure_0 }),
+  );
 };

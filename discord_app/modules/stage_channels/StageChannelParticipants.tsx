@@ -43,7 +43,16 @@ function sortKey(speaker) {
     num = 999;
   }
   const combined = "" + num;
-  return "" + str2 + str3 + str4 + str + combined.padStart(3, "0") + connectedOn + getParticipantUserKeyDefault(userNick, user);
+  return (
+    "" +
+    str2 +
+    str3 +
+    str4 +
+    str +
+    combined.padStart(3, "0") +
+    connectedOn +
+    getParticipantUserKeyDefault(userNick, user)
+  );
 }
 function requestToSpeakSortKey(user) {
   user = user.user;
@@ -89,7 +98,18 @@ function getParticipantIndex(arg0) {
   }
   return items;
 }
-let obj = { SPEAKER: "SPEAKER", AUDIENCE: "AUDIENCE", NO_ROLE: "NO_ROLE", ALL_REQUESTED_TO_SPEAK: "ALL_REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_ONLY: "REQUESTED_TO_SPEAK_ONLY", BLOCKED: "BLOCKED", IGNORED: "IGNORED", FRIEND: "FRIEND", SELECTED: "SELECTED", MEDIA: "MEDIA" };
+let obj = {
+  SPEAKER: "SPEAKER",
+  AUDIENCE: "AUDIENCE",
+  NO_ROLE: "NO_ROLE",
+  ALL_REQUESTED_TO_SPEAK: "ALL_REQUESTED_TO_SPEAK",
+  REQUESTED_TO_SPEAK_ONLY: "REQUESTED_TO_SPEAK_ONLY",
+  BLOCKED: "BLOCKED",
+  IGNORED: "IGNORED",
+  FRIEND: "FRIEND",
+  SELECTED: "SELECTED",
+  MEDIA: "MEDIA",
+};
 obj = { VOICE: "VOICE", STREAM: "STREAM" };
 let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelParticipants.tsx");
 class StageChannelParticipants {
@@ -145,7 +165,20 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
         obj = getNicknameDefault;
         nick = obj.getName(self.guildId, self.channelId, user);
       }
-      obj = { user: null, userNick: null, nick: null, comparator: null, voiceState: null, role: null, speaker: null, member: null, blocked: null, ignored: null, isFriend: null, connectedOn: null };
+      obj = {
+        user: null,
+        userNick: null,
+        nick: null,
+        comparator: null,
+        voiceState: null,
+        role: null,
+        speaker: null,
+        member: null,
+        blocked: null,
+        ignored: null,
+        isFriend: null,
+        connectedOn: null,
+      };
       obj[0] = user;
       obj[1] = getNicknameDefault.getName(self.guildId, self.channelId, user);
       obj[2] = nick;
@@ -253,7 +286,7 @@ Object.defineProperty(prototype, "version", {
   get: function version() {
     return this._participantsIndex.version;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["size"] = function size(arg0) {
   const _participantsIndex = this._participantsIndex;
@@ -275,7 +308,7 @@ Object.defineProperty(prototype, "requestToSpeakVersion", {
   get: function requestToSpeakVersion() {
     return this._requestToSpeakIndex.version;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getRequestToSpeakParticipants"] = function getRequestToSpeakParticipants() {
   const _requestToSpeakIndex = this._requestToSpeakIndex;
@@ -286,5 +319,8 @@ export default StageChannelParticipants;
 export const StageChannelParticipantNamedIndex = obj;
 export const StageChannelParticipantTypes = obj;
 export const isRequestedToSpeakAll = function isRequestedToSpeakAll(rtsState) {
-  return rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+  return (
+    rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK ||
+    rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
+  );
 };

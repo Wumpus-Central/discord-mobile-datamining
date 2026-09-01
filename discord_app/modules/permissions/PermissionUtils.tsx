@@ -464,10 +464,20 @@ const Permissions = sum.Permissions;
 const result = set.fileFinishedImporting("modules/permissions/PermissionUtils.tsx");
 
 export { getGuildPermissionSpec };
-export const generateGuildPermissionSpec = function generateGuildPermissionSpec(showCreatorMonetizationAnalyticsPermission) {
+export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
+  showCreatorMonetizationAnalyticsPermission,
+) {
   const tmp = getGuildPermissionSpec(showCreatorMonetizationAnalyticsPermission);
-  const items = [, , , , , , ];
-  ({ VIEW_CHANNEL: arr[0], MANAGE_CHANNELS: arr[1], MANAGE_ROLES: arr[2], CREATE_GUILD_EXPRESSIONS: arr[3], MANAGE_GUILD_EXPRESSIONS: arr[4], VIEW_AUDIT_LOG: arr[5], VIEW_GUILD_ANALYTICS: arr[6] } = Permissions);
+  const items = [, , , , , ,];
+  ({
+    VIEW_CHANNEL: arr[0],
+    MANAGE_CHANNELS: arr[1],
+    MANAGE_ROLES: arr[2],
+    CREATE_GUILD_EXPRESSIONS: arr[3],
+    MANAGE_GUILD_EXPRESSIONS: arr[4],
+    VIEW_AUDIT_LOG: arr[5],
+    VIEW_GUILD_ANALYTICS: arr[6],
+  } = Permissions);
   if (showCreatorMonetizationAnalyticsPermission.showCreatorMonetizationAnalyticsPermission) {
     let arr = items.push(tmp2.VIEW_CREATOR_MONETIZATION_ANALYTICS);
   }
@@ -480,9 +490,16 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   obj[1] = items.map((arg0) => table[arg0.toString(arg0)]);
   const permissions = obj.permissions;
   obj.permissions = permissions.filter((isExperimental) => !isExperimental.isExperimental);
-  const items1 = [obj, , , , ];
-  const items2 = [, , , , , ];
-  ({ CREATE_INSTANT_INVITE: arr4[0], CHANGE_NICKNAME: arr4[1], MANAGE_NICKNAMES: arr4[2], KICK_MEMBERS: arr4[3], BAN_MEMBERS: arr4[4], MODERATE_MEMBERS: arr4[5] } = Permissions);
+  const items1 = [obj, , , ,];
+  const items2 = [, , , , ,];
+  ({
+    CREATE_INSTANT_INVITE: arr4[0],
+    CHANGE_NICKNAME: arr4[1],
+    MANAGE_NICKNAMES: arr4[2],
+    KICK_MEMBERS: arr4[3],
+    BAN_MEMBERS: arr4[4],
+    MODERATE_MEMBERS: arr4[5],
+  } = Permissions);
   obj = { title: null, permissions: null };
   const intl2 = require("../../intl/index.native.tsx").intl;
   obj[0] = intl2.string(require("../../intl/index.native.tsx").t.Ny49TN);
@@ -491,8 +508,29 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   const permissions1 = obj.permissions;
   obj.permissions = permissions1.filter((isExperimental) => !isExperimental.isExperimental);
   items1[1] = obj;
-  const items3 = [, , , , , , , , , , , , , , , , , , , ];
-  ({ SEND_MESSAGES: arr6[0], SEND_MESSAGES_IN_THREADS: arr6[1], CREATE_PUBLIC_THREADS: arr6[2], CREATE_PRIVATE_THREADS: arr6[3], EMBED_LINKS: arr6[4], ATTACH_FILES: arr6[5], ADD_REACTIONS: arr6[6], USE_EXTERNAL_EMOJIS: arr6[7], USE_EXTERNAL_STICKERS: arr6[8], USE_EXTERNAL_SOUNDS: arr6[9], MENTION_EVERYONE: arr6[10], MANAGE_MESSAGES: arr6[11], PIN_MESSAGES: arr6[12], MANAGE_OFFICIAL_MESSAGES: arr6[13], BYPASS_SLOWMODE: arr6[14], MANAGE_THREADS: arr6[15], READ_MESSAGE_HISTORY: arr6[16], SEND_TTS_MESSAGES: arr6[17], SEND_VOICE_MESSAGES: arr6[18], SEND_POLLS: arr6[19] } = Permissions);
+  const items3 = [, , , , , , , , , , , , , , , , , , ,];
+  ({
+    SEND_MESSAGES: arr6[0],
+    SEND_MESSAGES_IN_THREADS: arr6[1],
+    CREATE_PUBLIC_THREADS: arr6[2],
+    CREATE_PRIVATE_THREADS: arr6[3],
+    EMBED_LINKS: arr6[4],
+    ATTACH_FILES: arr6[5],
+    ADD_REACTIONS: arr6[6],
+    USE_EXTERNAL_EMOJIS: arr6[7],
+    USE_EXTERNAL_STICKERS: arr6[8],
+    USE_EXTERNAL_SOUNDS: arr6[9],
+    MENTION_EVERYONE: arr6[10],
+    MANAGE_MESSAGES: arr6[11],
+    PIN_MESSAGES: arr6[12],
+    MANAGE_OFFICIAL_MESSAGES: arr6[13],
+    BYPASS_SLOWMODE: arr6[14],
+    MANAGE_THREADS: arr6[15],
+    READ_MESSAGE_HISTORY: arr6[16],
+    SEND_TTS_MESSAGES: arr6[17],
+    SEND_VOICE_MESSAGES: arr6[18],
+    SEND_POLLS: arr6[19],
+  } = Permissions);
   let found = items3;
   if (!showCreatorMonetizationAnalyticsPermission.inSoundmojiExperiment) {
     found = items3.filter((arg0) => arg0 !== constants.USE_EXTERNAL_SOUNDS);
@@ -505,8 +543,20 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   const permissions2 = obj.permissions;
   obj.permissions = permissions2.filter((isExperimental) => !isExperimental.isExperimental);
   items1[2] = obj;
-  const items4 = [, , , , , , , , , , ];
-  ({ CONNECT: arr9[0], SPEAK: arr9[1], STREAM: arr9[2], USE_SOUNDBOARD: arr9[3], USE_EXTERNAL_SOUNDS: arr9[4], USE_VAD: arr9[5], PRIORITY_SPEAKER: arr9[6], MUTE_MEMBERS: arr9[7], DEAFEN_MEMBERS: arr9[8], MOVE_MEMBERS: arr9[9], SET_VOICE_CHANNEL_STATUS: arr9[10] } = Permissions);
+  const items4 = [, , , , , , , , , ,];
+  ({
+    CONNECT: arr9[0],
+    SPEAK: arr9[1],
+    STREAM: arr9[2],
+    USE_SOUNDBOARD: arr9[3],
+    USE_EXTERNAL_SOUNDS: arr9[4],
+    USE_VAD: arr9[5],
+    PRIORITY_SPEAKER: arr9[6],
+    MUTE_MEMBERS: arr9[7],
+    DEAFEN_MEMBERS: arr9[8],
+    MOVE_MEMBERS: arr9[9],
+    SET_VOICE_CHANNEL_STATUS: arr9[10],
+  } = Permissions);
   obj1 = { title: null, permissions: null };
   const intl4 = tmp6(1236).intl;
   obj1[0] = intl4.string(require("../../intl/index.native.tsx").t["46Ra1b"]);
@@ -515,8 +565,12 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   const permissions3 = obj1.permissions;
   obj1.permissions = permissions3.filter((isExperimental) => !isExperimental.isExperimental);
   items1[3] = obj1;
-  const items5 = [, , ];
-  ({ USE_APPLICATION_COMMANDS: arr11[0], USE_EMBEDDED_ACTIVITIES: arr11[1], USE_EXTERNAL_APPS: arr11[2] } = Permissions);
+  const items5 = [, ,];
+  ({
+    USE_APPLICATION_COMMANDS: arr11[0],
+    USE_EMBEDDED_ACTIVITIES: arr11[1],
+    USE_EXTERNAL_APPS: arr11[2],
+  } = Permissions);
   const obj2 = { title: null, permissions: null };
   const intl5 = tmp6(1236).intl;
   obj2[0] = intl5.string(require("../../intl/index.native.tsx").t["rrh/W6"]);
@@ -545,7 +599,7 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   const obj4 = { title: null, permissions: null };
   const intl7 = tmp6(1236).intl;
   obj4[0] = intl7.string(require("../../intl/index.native.tsx").t.b8lplT);
-  const items7 = [, ];
+  const items7 = [,];
   ({ CREATE_EVENTS: arr15[0], MANAGE_EVENTS: arr15[1] } = Permissions);
   _require = tmp;
   obj4[1] = items7.map((arg0) => table[arg0.toString(arg0)]);
@@ -581,11 +635,11 @@ export const generateChannelGeneralSection = function generateChannelGeneralSect
   }
   const VIEW_CHANNEL = Permissions.VIEW_CHANNEL;
   if (showManageWebhooks) {
-    const items = [VIEW_CHANNEL, , , ];
+    const items = [VIEW_CHANNEL, , ,];
     ({ MANAGE_CHANNELS: arr2[1], MANAGE_ROLES: arr2[2], MANAGE_WEBHOOKS: arr2[3] } = tmp2);
     let items1 = items;
   } else {
-    items1 = [VIEW_CHANNEL, , ];
+    items1 = [VIEW_CHANNEL, ,];
     ({ MANAGE_CHANNELS: arr[1], MANAGE_ROLES: arr[2] } = tmp2);
   }
   closure_0 = arg0;
@@ -598,8 +652,29 @@ export const generateChannelMembershipSection = function generateChannelMembersh
   return { title: intl17, permissions: items.map((arg0) => table[arg0.toString(arg0)]) };
 };
 export const generateChannelTextSection = function generateChannelTextSection(arg0, intl25, description) {
-  const items = [, , , , , , , , , , , , , , , , , , , ];
-  ({ SEND_MESSAGES: arr[0], SEND_MESSAGES_IN_THREADS: arr[1], CREATE_PUBLIC_THREADS: arr[2], CREATE_PRIVATE_THREADS: arr[3], EMBED_LINKS: arr[4], ATTACH_FILES: arr[5], ADD_REACTIONS: arr[6], USE_EXTERNAL_EMOJIS: arr[7], USE_EXTERNAL_STICKERS: arr[8], USE_EXTERNAL_SOUNDS: arr[9], MENTION_EVERYONE: arr[10], MANAGE_MESSAGES: arr[11], PIN_MESSAGES: arr[12], MANAGE_OFFICIAL_MESSAGES: arr[13], BYPASS_SLOWMODE: arr[14], MANAGE_THREADS: arr[15], READ_MESSAGE_HISTORY: arr[16], SEND_TTS_MESSAGES: arr[17], SEND_VOICE_MESSAGES: arr[18], SEND_POLLS: arr[19] } = Permissions);
+  const items = [, , , , , , , , , , , , , , , , , , ,];
+  ({
+    SEND_MESSAGES: arr[0],
+    SEND_MESSAGES_IN_THREADS: arr[1],
+    CREATE_PUBLIC_THREADS: arr[2],
+    CREATE_PRIVATE_THREADS: arr[3],
+    EMBED_LINKS: arr[4],
+    ATTACH_FILES: arr[5],
+    ADD_REACTIONS: arr[6],
+    USE_EXTERNAL_EMOJIS: arr[7],
+    USE_EXTERNAL_STICKERS: arr[8],
+    USE_EXTERNAL_SOUNDS: arr[9],
+    MENTION_EVERYONE: arr[10],
+    MANAGE_MESSAGES: arr[11],
+    PIN_MESSAGES: arr[12],
+    MANAGE_OFFICIAL_MESSAGES: arr[13],
+    BYPASS_SLOWMODE: arr[14],
+    MANAGE_THREADS: arr[15],
+    READ_MESSAGE_HISTORY: arr[16],
+    SEND_TTS_MESSAGES: arr[17],
+    SEND_VOICE_MESSAGES: arr[18],
+    SEND_POLLS: arr[19],
+  } = Permissions);
   let found = items;
   if (!description.inSoundmojiExperiment) {
     found = items.filter((arg0) => arg0 !== constants.USE_EXTERNAL_SOUNDS);
@@ -613,23 +688,62 @@ export const generateChannelTextSection = function generateChannelTextSection(ar
     found2 = found1.filter((arg0) => arg0 !== constants.CREATE_PUBLIC_THREADS);
   }
   closure_0 = arg0;
-  return { title: intl25, description: description.sectionDescription, permissions: found2.map((arg0) => table[arg0.toString(arg0)]) };
+  return {
+    title: intl25,
+    description: description.sectionDescription,
+    permissions: found2.map((arg0) => table[arg0.toString(arg0)]),
+  };
 };
 export const generateChannelVoiceSection = function generateChannelVoiceSection(arg0, intl) {
-  const items = [, , , , , , , , , , ];
-  ({ CONNECT: arr[0], SPEAK: arr[1], STREAM: arr[2], USE_SOUNDBOARD: arr[3], USE_EXTERNAL_SOUNDS: arr[4], USE_VAD: arr[5], PRIORITY_SPEAKER: arr[6], MUTE_MEMBERS: arr[7], DEAFEN_MEMBERS: arr[8], MOVE_MEMBERS: arr[9], SET_VOICE_CHANNEL_STATUS: arr[10] } = Permissions);
+  const items = [, , , , , , , , , ,];
+  ({
+    CONNECT: arr[0],
+    SPEAK: arr[1],
+    STREAM: arr[2],
+    USE_SOUNDBOARD: arr[3],
+    USE_EXTERNAL_SOUNDS: arr[4],
+    USE_VAD: arr[5],
+    PRIORITY_SPEAKER: arr[6],
+    MUTE_MEMBERS: arr[7],
+    DEAFEN_MEMBERS: arr[8],
+    MOVE_MEMBERS: arr[9],
+    SET_VOICE_CHANNEL_STATUS: arr[10],
+  } = Permissions);
   closure_0 = arg0;
   return { title: intl, permissions: items.map((arg0) => table[arg0.toString(arg0)]) };
 };
-export const generateChannelVoiceChatSection = function generateChannelVoiceChatSection(arg0, stringResult, description) {
-  const items = [, , , , , , , , , , , , , ];
-  ({ SEND_MESSAGES: arr[0], EMBED_LINKS: arr[1], ATTACH_FILES: arr[2], ADD_REACTIONS: arr[3], USE_EXTERNAL_EMOJIS: arr[4], USE_EXTERNAL_STICKERS: arr[5], USE_EXTERNAL_SOUNDS: arr[6], MENTION_EVERYONE: arr[7], MANAGE_MESSAGES: arr[8], BYPASS_SLOWMODE: arr[9], READ_MESSAGE_HISTORY: arr[10], SEND_TTS_MESSAGES: arr[11], SEND_VOICE_MESSAGES: arr[12], SEND_POLLS: arr[13] } = Permissions);
+export const generateChannelVoiceChatSection = function generateChannelVoiceChatSection(
+  arg0,
+  stringResult,
+  description,
+) {
+  const items = [, , , , , , , , , , , , ,];
+  ({
+    SEND_MESSAGES: arr[0],
+    EMBED_LINKS: arr[1],
+    ATTACH_FILES: arr[2],
+    ADD_REACTIONS: arr[3],
+    USE_EXTERNAL_EMOJIS: arr[4],
+    USE_EXTERNAL_STICKERS: arr[5],
+    USE_EXTERNAL_SOUNDS: arr[6],
+    MENTION_EVERYONE: arr[7],
+    MANAGE_MESSAGES: arr[8],
+    BYPASS_SLOWMODE: arr[9],
+    READ_MESSAGE_HISTORY: arr[10],
+    SEND_TTS_MESSAGES: arr[11],
+    SEND_VOICE_MESSAGES: arr[12],
+    SEND_POLLS: arr[13],
+  } = Permissions);
   let found = items;
   if (!description.inSoundmojiExperiment) {
     found = items.filter((arg0) => arg0 !== constants.USE_EXTERNAL_SOUNDS);
   }
   closure_0 = arg0;
-  return { title: stringResult, description: description.sectionDescription, permissions: found.map((arg0) => table[arg0.toString(arg0)]) };
+  return {
+    title: stringResult,
+    description: description.sectionDescription,
+    permissions: found.map((arg0) => table[arg0.toString(arg0)]),
+  };
 };
 export const generateChannelAppsSection = function generateChannelAppsSection(arg0, intl15, arg2) {
   let obj = arg2;
@@ -637,7 +751,7 @@ export const generateChannelAppsSection = function generateChannelAppsSection(ar
     obj = { showActivities: true };
   }
   obj = { title: intl15, permissions: null };
-  const items = [Permissions.USE_APPLICATION_COMMANDS, , ];
+  const items = [Permissions.USE_APPLICATION_COMMANDS, ,];
   let prop = null;
   if (obj.showActivities) {
     prop = tmp.USE_EMBEDDED_ACTIVITIES;
@@ -649,15 +763,19 @@ export const generateChannelAppsSection = function generateChannelAppsSection(ar
   obj[1] = found.map((arg0) => table[arg0.toString(arg0)]);
   return obj;
 };
-export const generateChannelStageVoiceSection = function generateChannelStageVoiceSection(arg0, intl10, isStageVideoEnabledResult) {
+export const generateChannelStageVoiceSection = function generateChannelStageVoiceSection(
+  arg0,
+  intl10,
+  isStageVideoEnabledResult,
+) {
   const obj = { title: intl10, permissions: null };
   const CONNECT = Permissions.CONNECT;
   if (isStageVideoEnabledResult) {
-    const items = [CONNECT, , , ];
+    const items = [CONNECT, , ,];
     ({ STREAM: arr2[1], MUTE_MEMBERS: arr2[2], MOVE_MEMBERS: arr2[3] } = tmp);
     let items1 = items;
   } else {
-    items1 = [CONNECT, , ];
+    items1 = [CONNECT, ,];
     ({ MUTE_MEMBERS: arr[1], MOVE_MEMBERS: arr[2] } = tmp);
   }
   closure_0 = arg0;
@@ -665,13 +783,13 @@ export const generateChannelStageVoiceSection = function generateChannelStageVoi
   return obj;
 };
 export const generateChannelStageSection = function generateChannelStageSection(arg0, intl11) {
-  const items = [, ];
+  const items = [,];
   ({ REQUEST_TO_SPEAK: arr[0], MENTION_EVERYONE: arr[1] } = Permissions);
   closure_0 = arg0;
   return { title: intl11, permissions: items.map((arg0) => table[arg0.toString(arg0)]) };
 };
 export const generateChannelEventsSection = function generateChannelEventsSection(arg0, intl12) {
-  const items = [, ];
+  const items = [,];
   ({ CREATE_EVENTS: arr[0], MANAGE_EVENTS: arr[1] } = Permissions);
   closure_0 = arg0;
   return { title: intl12, permissions: items.map((arg0) => table[arg0.toString(arg0)]) };

@@ -35,9 +35,56 @@ let items = [
   () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.JfibUq);
-  }
+  },
 ];
-let items1 = [set2.OAuth2Scopes.BOT, set2.OAuth2Scopes.OPENID, set2.OAuth2Scopes.IDENTIFY, set2.OAuth2Scopes.IDENTIFY_PREMIUM, set2.OAuth2Scopes.EMAIL, set2.OAuth2Scopes.CONNECTIONS, set2.OAuth2Scopes.MESSAGES_READ, set2.OAuth2Scopes.GUILDS, set2.OAuth2Scopes.GUILDS_JOIN, set2.OAuth2Scopes.GUILDS_MEMBERS_READ, set2.OAuth2Scopes.GUILDS_CHANNELS_READ, set2.OAuth2Scopes.GDM_JOIN, set2.OAuth2Scopes.RPC, set2.OAuth2Scopes.RPC_NOTIFICATIONS_READ, set2.OAuth2Scopes.RPC_VOICE_READ, set2.OAuth2Scopes.RPC_VOICE_WRITE, set2.OAuth2Scopes.RPC_VIDEO_READ, set2.OAuth2Scopes.RPC_VIDEO_WRITE, set2.OAuth2Scopes.RPC_SCREENSHARE_READ, set2.OAuth2Scopes.RPC_SCREENSHARE_WRITE, set2.OAuth2Scopes.RPC_ACTIVITIES_WRITE, set2.OAuth2Scopes.APPLICATION_IDENTITIES_WRITE, set2.OAuth2Scopes.MANAGED_PLATFORM_APPLICATION_IDENTITIES_WRITE, set2.OAuth2Scopes.APPLICATIONS_BUILDS_UPLOAD, set2.OAuth2Scopes.APPLICATIONS_BUILDS_READ, set2.OAuth2Scopes.APPLICATIONS_COMMANDS, set2.OAuth2Scopes.APPLICATIONS_COMMANDS_UPDATE, set2.OAuth2Scopes.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE, set2.OAuth2Scopes.APPLICATIONS_STORE_UPDATE, set2.OAuth2Scopes.APPLICATIONS_ENTITLEMENTS, set2.OAuth2Scopes.ACTIVITIES_INVITES_WRITE, set2.OAuth2Scopes.ACTIVITIES_READ, set2.OAuth2Scopes.ACTIVITIES_WRITE, set2.OAuth2Scopes.RELATIONSHIPS_READ, set2.OAuth2Scopes.RELATIONSHIPS_WRITE, set2.OAuth2Scopes.VOICE, set2.OAuth2Scopes.DM_CHANNELS_READ, set2.OAuth2Scopes.DM_CHANNELS_MESSAGES_READ, set2.OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, set2.OAuth2Scopes.ROLE_CONNECTIONS_WRITE, set2.OAuth2Scopes.PRESENCES_READ, set2.OAuth2Scopes.PRESENCES_WRITE, set2.OAuth2Scopes.GATEWAY_CONNECT, set2.OAuth2Scopes.PAYMENT_SOURCES_COUNTRY_CODE, set2.OAuth2Scopes.SDK_SOCIAL_LAYER_PRESENCE, set2.OAuth2Scopes.SDK_SOCIAL_LAYER];
+let items1 = [
+  set2.OAuth2Scopes.BOT,
+  set2.OAuth2Scopes.OPENID,
+  set2.OAuth2Scopes.IDENTIFY,
+  set2.OAuth2Scopes.IDENTIFY_PREMIUM,
+  set2.OAuth2Scopes.EMAIL,
+  set2.OAuth2Scopes.CONNECTIONS,
+  set2.OAuth2Scopes.MESSAGES_READ,
+  set2.OAuth2Scopes.GUILDS,
+  set2.OAuth2Scopes.GUILDS_JOIN,
+  set2.OAuth2Scopes.GUILDS_MEMBERS_READ,
+  set2.OAuth2Scopes.GUILDS_CHANNELS_READ,
+  set2.OAuth2Scopes.GDM_JOIN,
+  set2.OAuth2Scopes.RPC,
+  set2.OAuth2Scopes.RPC_NOTIFICATIONS_READ,
+  set2.OAuth2Scopes.RPC_VOICE_READ,
+  set2.OAuth2Scopes.RPC_VOICE_WRITE,
+  set2.OAuth2Scopes.RPC_VIDEO_READ,
+  set2.OAuth2Scopes.RPC_VIDEO_WRITE,
+  set2.OAuth2Scopes.RPC_SCREENSHARE_READ,
+  set2.OAuth2Scopes.RPC_SCREENSHARE_WRITE,
+  set2.OAuth2Scopes.RPC_ACTIVITIES_WRITE,
+  set2.OAuth2Scopes.APPLICATION_IDENTITIES_WRITE,
+  set2.OAuth2Scopes.MANAGED_PLATFORM_APPLICATION_IDENTITIES_WRITE,
+  set2.OAuth2Scopes.APPLICATIONS_BUILDS_UPLOAD,
+  set2.OAuth2Scopes.APPLICATIONS_BUILDS_READ,
+  set2.OAuth2Scopes.APPLICATIONS_COMMANDS,
+  set2.OAuth2Scopes.APPLICATIONS_COMMANDS_UPDATE,
+  set2.OAuth2Scopes.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE,
+  set2.OAuth2Scopes.APPLICATIONS_STORE_UPDATE,
+  set2.OAuth2Scopes.APPLICATIONS_ENTITLEMENTS,
+  set2.OAuth2Scopes.ACTIVITIES_INVITES_WRITE,
+  set2.OAuth2Scopes.ACTIVITIES_READ,
+  set2.OAuth2Scopes.ACTIVITIES_WRITE,
+  set2.OAuth2Scopes.RELATIONSHIPS_READ,
+  set2.OAuth2Scopes.RELATIONSHIPS_WRITE,
+  set2.OAuth2Scopes.VOICE,
+  set2.OAuth2Scopes.DM_CHANNELS_READ,
+  set2.OAuth2Scopes.DM_CHANNELS_MESSAGES_READ,
+  set2.OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE,
+  set2.OAuth2Scopes.ROLE_CONNECTIONS_WRITE,
+  set2.OAuth2Scopes.PRESENCES_READ,
+  set2.OAuth2Scopes.PRESENCES_WRITE,
+  set2.OAuth2Scopes.GATEWAY_CONNECT,
+  set2.OAuth2Scopes.PAYMENT_SOURCES_COUNTRY_CODE,
+  set2.OAuth2Scopes.SDK_SOCIAL_LAYER_PRESENCE,
+  set2.OAuth2Scopes.SDK_SOCIAL_LAYER,
+];
 let items2 = [set2.OAuth2Scopes.WEBHOOK_INCOMING, set2.OAuth2Scopes.BOT];
 const combined = items1.concat(items2);
 const result = set.fileFinishedImporting("modules/oauth2/scopes.tsx");
@@ -234,7 +281,7 @@ export const getScopeNames = function getScopeNames(nextResult, c2) {
     return items44;
   } else if (set2.OAuth2Scopes.SDK_SOCIAL_LAYER_PRESENCE === nextResult) {
     const intl7 = getSystemLocale.intl;
-    const items45 = [intl7.string(getSystemLocale.t.Pl1dTW), , , ];
+    const items45 = [intl7.string(getSystemLocale.t.Pl1dTW), , ,];
     const intl8 = getSystemLocale.intl;
     items45[1] = intl8.string(getSystemLocale.t.mPRcyT);
     const intl9 = getSystemLocale.intl;
@@ -248,7 +295,7 @@ export const getScopeNames = function getScopeNames(nextResult, c2) {
     return items45;
   } else if (set2.OAuth2Scopes.SDK_SOCIAL_LAYER === nextResult) {
     const intl = getSystemLocale.intl;
-    const items46 = [intl.string(getSystemLocale.t.Pl1dTW), , , , ];
+    const items46 = [intl.string(getSystemLocale.t.Pl1dTW), , , ,];
     const intl2 = getSystemLocale.intl;
     items46[1] = intl2.string(getSystemLocale.t["hc/+yg"]);
     const intl3 = getSystemLocale.intl;

@@ -18,7 +18,19 @@ class BalanceWidgetPillButton {
     tmp2 = closure_0;
     tmp3 = closure_2;
     tmp = jsx;
-    obj = { variant, onPress: global.onPress, size: "sm", text: null, icon: null, accessible: null, accessibilityElementsHidden: null, importantForAccessibility: null, accessibilityLabel: null, disabled: null, loading: null };
+    obj = {
+      variant,
+      onPress: global.onPress,
+      size: "sm",
+      text: null,
+      icon: null,
+      accessible: null,
+      accessibilityElementsHidden: null,
+      importantForAccessibility: null,
+      accessibilityLabel: null,
+      disabled: null,
+      loading: null,
+    };
     str = undefined;
     if (balance != null) {
       str = balance.toString();

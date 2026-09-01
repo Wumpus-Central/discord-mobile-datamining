@@ -14,10 +14,15 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
   let obj = _require(stateFromStoresArray[4]);
   let tmp = stateFromStoresArray;
   const items1 = [memo1];
-  stateFromStoresArray = _require(stateFromStoresArray[4]).useStateFromStoresArray(items1, () => memo1.getShelfActivities(closure_0));
+  stateFromStoresArray = _require(stateFromStoresArray[4]).useStateFromStoresArray(items1, () =>
+    memo1.getShelfActivities(closure_0),
+  );
   const obj2 = _require(stateFromStoresArray[4]);
   const items2 = [memo];
-  const stateFromStores1 = _require(stateFromStoresArray[4]).useStateFromStores(items2, () => memo.testModeEmbeddedApplicationId);
+  const stateFromStores1 = _require(stateFromStoresArray[4]).useStateFromStores(
+    items2,
+    () => memo.testModeEmbeddedApplicationId,
+  );
   let mapped = stateFromStoresArray.map((application_id) => application_id.application_id);
   let tmp5 = mapped;
   if (null != stateFromStores1) {

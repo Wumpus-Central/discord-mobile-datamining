@@ -162,7 +162,9 @@ function toggleDeaf() {
   trackDeviceChangedDefault.toggleSelfDeaf();
 }
 ({ AnalyticEvents: map1, PlatformTypes: closure_14 } = ME);
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelVoiceControlsButtons.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/controls/VoicePanelVoiceControlsButtons.tsx",
+);
 
 export const GameConsoles = function GameConsoles(arg0) {
   ({ channel: require, connected: importDefault } = arg0);
@@ -172,7 +174,9 @@ export const GameConsoles = function GameConsoles(arg0) {
     const obj = { title: null, hasIcons: true, children: null };
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t["mbi/fB"]);
-    obj[2] = arr.map((account) => closure_1_17(closure_1_18, { account, channel: closure_0, connected: closure_1 }, account.type));
+    obj[2] = arr.map((account) =>
+      closure_1_17(closure_1_18, { account, channel: closure_0, connected: closure_1 }, account.type),
+    );
     tmp2 = jsx(TableRowGroupTitle.TableRowGroup, { title: null, hasIcons: true, children: null });
   }
   return tmp2;
@@ -186,7 +190,10 @@ export const ActivitiesButton = function ActivitiesButton(openTab) {
   const callback = React.useCallback(() => {
     dismissPanel();
     const timerId = setTimeout(() => {
-      callback({ tab: "app_launcher", source: closure_1_0(closure_1_2[28]).VoicePanelTabAnalyticsSources.VOICE_CONTROLS });
+      callback({
+        tab: "app_launcher",
+        source: closure_1_0(closure_1_2[28]).VoicePanelTabAnalyticsSources.VOICE_CONTROLS,
+      });
     }, 200);
   }, items);
   let obj = { onPress: callback, icon: null, label: null };
@@ -245,7 +252,12 @@ export const ScreenshareButton = function ScreenshareButton(channel) {
     obj.track(closure_1_13.VOICE_PANEL_SCREENSHARE_BUTTON_TAPPED, obj);
     onPress();
   }, items);
-  return jsx(onPress(5599).TableRow, { disabled: !isFeatureEnabled, onPress: callback, icon: jsx(onPress(5605).TableRowIcon, { source: imgSource }), label: text });
+  return jsx(onPress(5599).TableRow, {
+    disabled: !isFeatureEnabled,
+    onPress: callback,
+    icon: jsx(onPress(5605).TableRowIcon, { source: imgSource }),
+    label: text,
+  });
 };
 export const StreamVolumeItem = function StreamVolumeItem() {
   let obj = initialize;
@@ -277,7 +289,14 @@ export const StreamVolumeItem = function StreamVolumeItem() {
       fn = () => true;
     }
     obj = { label: null };
-    obj1 = { onResponderGrant: null, value: null, onValueChange: null, color: null, maxTrackTintColor: null, accessibilityLabel: null };
+    obj1 = {
+      onResponderGrant: null,
+      value: null,
+      onValueChange: null,
+      color: null,
+      maxTrackTintColor: null,
+      accessibilityLabel: null,
+    };
     obj1[0] = fn;
     obj1[1] = tmp8;
     obj1[2] = tmp9;
@@ -285,7 +304,16 @@ export const StreamVolumeItem = function StreamVolumeItem() {
     obj1[4] = tmp4(712).unsafe_rawColors.PRIMARY_300;
     const intl2 = tmp(1236).intl;
     obj1[5] = intl2.string(tmp(1236).t.pEAl4b);
-    obj[0] = <tmp4Result onResponderGrant={null} value={null} onValueChange={null} color={null} maxTrackTintColor={null} accessibilityLabel={null} />;
+    obj[0] = (
+      <tmp4Result
+        onResponderGrant={null}
+        value={null}
+        onValueChange={null}
+        color={null}
+        maxTrackTintColor={null}
+        accessibilityLabel={null}
+      />
+    );
     obj[2] = jsx(tmp(5599).TableRow, { label: null });
     tmp11Result = tmp11(tmp(5992).TableRowGroup, obj);
     tmpResult = tmp(500);
@@ -298,7 +326,10 @@ export const DeafenSwitch = function DeafenSwitch() {
   const stateFromStores = obj.useStateFromStores(items, () => selfDeaf.isSelfDeaf());
   obj = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   obj = { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: registerAssetDefault5 };
-  obj[0] = jsx(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: registerAssetDefault5 });
+  obj[0] = jsx(TableRowIcon.TableRowIcon, {
+    IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon,
+    source: registerAssetDefault5,
+  });
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.wjcRFX);
   obj[2] = stateFromStores;
@@ -307,7 +338,10 @@ export const DeafenSwitch = function DeafenSwitch() {
   obj[4] = intl2.string(getSystemLocale.t.wjcRFX);
   const intl3 = getSystemLocale.intl;
   obj[5] = intl3.string(getSystemLocale.t.M3VN2U);
-  return jsx(TableSwitchRow.TableSwitchRow, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: registerAssetDefault5 });
+  return jsx(TableSwitchRow.TableSwitchRow, {
+    IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon,
+    source: registerAssetDefault5,
+  });
 };
 export const AudioRouteButton = function AudioRouteButton(arg0) {
   ({ channel: require, connected: importDefault } = arg0);
@@ -318,7 +352,7 @@ export const AudioRouteButton = function AudioRouteButton(arg0) {
       const result = closure_1_0(closure_1_2[44]).showAudioOutputSelector(id.id, closure_1);
     },
     label: null,
-    trailing: null
+    trailing: null,
   };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["A/Ly/2"]);
@@ -329,7 +363,7 @@ export const AudioRouteButton = function AudioRouteButton(arg0) {
       const result = closure_1_0(closure_1_2[44]).showAudioOutputSelector(id.id, closure_1);
     },
     label: null,
-    trailing: null
+    trailing: null,
   });
 };
 export const InviteButton = function InviteButton(channel) {
@@ -370,7 +404,10 @@ export const HideNonVideoParticipants = function HideNonVideoParticipants(channe
   }, items1);
   obj = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   obj = { IconComponent: channelId(10193).VideoIcon, source: stateFromStores(10041) };
-  obj[0] = jsx(channelId(5605).TableRowIcon, { IconComponent: channelId(10193).VideoIcon, source: stateFromStores(10041) });
+  obj[0] = jsx(channelId(5605).TableRowIcon, {
+    IconComponent: channelId(10193).VideoIcon,
+    source: stateFromStores(10041),
+  });
   const intl = channelId(1236).intl;
   obj[1] = intl.string(channelId(1236).t.ZMTRyc);
   obj[2] = stateFromStores;
@@ -379,7 +416,10 @@ export const HideNonVideoParticipants = function HideNonVideoParticipants(channe
   obj[4] = intl2.string(channelId(1236).t.ZMTRyc);
   const intl3 = channelId(1236).intl;
   obj[5] = intl3.string(channelId(1236).t.MlpCFS);
-  return jsx(channelId(5993).TableSwitchRow, { IconComponent: channelId(10193).VideoIcon, source: stateFromStores(10041) });
+  return jsx(channelId(5993).TableSwitchRow, {
+    IconComponent: channelId(10193).VideoIcon,
+    source: stateFromStores(10041),
+  });
 };
 export const HideSelfVideo = function HideSelfVideo() {
   const tmp3 = callback(useHideSelfVideoDefault(id.getId()), 3);
@@ -464,7 +504,9 @@ export const ShareActivityLogsButton = function ShareActivityLogsButton() {
 export const ToggleShowActivitiesDebugOverlay = function ToggleShowActivitiesDebugOverlay() {
   let obj = initialize;
   const items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => showActivitiesDebugOverlay.getShowActivitiesDebugOverlay());
+  const stateFromStores = obj.useStateFromStores(items, () =>
+    showActivitiesDebugOverlay.getShowActivitiesDebugOverlay(),
+  );
   obj = { icon: null, value: null, onValueChange: null, label: null };
   obj = { source: registerAssetDefault };
   obj[0] = jsx(TableRowIcon.TableRowIcon, { source: registerAssetDefault });
@@ -486,7 +528,10 @@ export const VoiceSettingsButton = function VoiceSettingsButton(guildId) {
   }, items);
   let obj = { onPress: callback, icon: null, label: null, subLabel: null, trailing: null };
   obj = { IconComponent: guildId(6240).SettingsIcon, source: registerAssetDefault4 };
-  obj[1] = jsx(guildId(5605).TableRowIcon, { IconComponent: guildId(6240).SettingsIcon, source: registerAssetDefault4 });
+  obj[1] = jsx(guildId(5605).TableRowIcon, {
+    IconComponent: guildId(6240).SettingsIcon,
+    source: registerAssetDefault4,
+  });
   const intl = guildId(1236).intl;
   obj[2] = intl.string(guildId(1236).t.NiTd0e);
   const intl2 = guildId(1236).intl;
@@ -509,9 +554,7 @@ export const ReportStreamIssueButton = function ReportStreamIssueButton(stream) 
 };
 export const RTCDebugPanelButton = function RTCDebugPanelButton() {
   let obj = voiceSettings;
-  const rtcDebugPanelResult = obj.rtcDebugPanel(() => {
-
-  });
+  const rtcDebugPanelResult = obj.rtcDebugPanel(() => {});
   let icon = rtcDebugPanelResult.icon;
   ({ label, onPress } = rtcDebugPanelResult);
   icon = undefined;

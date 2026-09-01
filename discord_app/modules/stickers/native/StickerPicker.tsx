@@ -12,13 +12,24 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 let c4 = importAllResult;
 ({ View: c5, ActivityIndicator: closure_6 } = get_ActivityIndicator);
-({ AnalyticEvents: c9, AnalyticsPages: c10, AnalyticsSections: unpackModuleId, UpsellTypes: closure_12, ChatInputComponentViewedTypes: map1 } = ME);
+({
+  AnalyticEvents: c9,
+  AnalyticsPages: c10,
+  AnalyticsSections: unpackModuleId,
+  UpsellTypes: closure_12,
+  ChatInputComponentViewedTypes: map1,
+} = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let obj = { container: { flex: 1 }, header: null, loadingIndicator: null, emptyState: null };
 obj = { paddingVertical: ThemesDefault.space.PX_8 };
 obj[1] = obj;
 obj[2] = { alignItems: "center", justifyContent: "center", flex: 1 };
-obj[3] = { marginTop: require("STICKER_PICKER_TAB_PANEL_ID").STICKER_SEARCH_HEADER_HEIGHT, alignItems: "center", justifyContent: "center", flex: 1 };
+obj[3] = {
+  marginTop: require("STICKER_PICKER_TAB_PANEL_ID").STICKER_SEARCH_HEADER_HEIGHT,
+  alignItems: "center",
+  justifyContent: "center",
+  flex: 1,
+};
 let closure_16 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function StickerPicker(channel) {
   channel = channel.channel;
@@ -41,7 +52,7 @@ const memoResult = importAllResult.memo(function StickerPicker(channel) {
   [tmp11, c4] = analyticsLocations(undefined.useState(null), 2);
   const tmp10 = analyticsLocations(undefined.useState(null), 2);
   ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(10354)({ hasCategories: true }));
-  const items1 = [, ];
+  const items1 = [,];
   ({ id: arr3[0], guild_id: arr3[1] } = channel);
   callback = importAllResult.useCallback((arg0) => {
     if ("" === arg0) {
@@ -133,7 +144,7 @@ const memoResult = importAllResult.memo(function StickerPicker(channel) {
     obj1[1] = tmp18(tmp2(6221).SearchField, obj2);
     tmp18Result = tmp18(tmp20, obj1);
   }
-  const items5 = [tmp18Result, , ];
+  const items5 = [tmp18Result, ,];
   if (stateFromStores) {
     if (0 === stickerCategories.length) {
       obj3 = { style: null, children: null };
@@ -142,7 +153,19 @@ const memoResult = importAllResult.memo(function StickerPicker(channel) {
       obj3[1] = tmp;
       tmp18Result = tmp18(tmp20, obj3);
     } else {
-      const obj4 = { bottomSheetRef: null, bottomSheetIndex: null, setCategoryIndex: null, onPressSticker: null, onLongPressStickerDetail: null, insetBottom: null, insetTop: null, channel: null, stickerFormats: null, searchResults: null, inPortalKeyboard: null };
+      const obj4 = {
+        bottomSheetRef: null,
+        bottomSheetIndex: null,
+        setCategoryIndex: null,
+        onPressSticker: null,
+        onLongPressStickerDetail: null,
+        insetBottom: null,
+        insetTop: null,
+        channel: null,
+        stickerFormats: null,
+        searchResults: null,
+        inPortalKeyboard: null,
+      };
       obj4[0] = bottomSheetRef;
       obj4[1] = bottomSheetIndex;
       obj4[2] = tmp7;

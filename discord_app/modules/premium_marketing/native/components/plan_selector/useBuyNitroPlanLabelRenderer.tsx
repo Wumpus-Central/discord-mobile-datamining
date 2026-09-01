@@ -13,11 +13,23 @@ const require = arg1;
 createCacheKey = { labelRow: null, discountBadge: null, discountBadgeText: null };
 createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8 };
+createCacheKey[1] = {
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360,
+  paddingVertical: 2,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+};
 createCacheKey[2] = { textTransform: "uppercase" };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/plan_selector/useBuyNitroPlanLabelRenderer.tsx");
+let obj1 = {
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360,
+  paddingVertical: 2,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/premium_marketing/native/components/plan_selector/useBuyNitroPlanLabelRenderer.tsx",
+);
 
 export const useBuyNitroPlanLabelRenderer = function useBuyNitroPlanLabelRenderer() {
   const tmp = callback();
@@ -32,7 +44,8 @@ export const useBuyNitroPlanLabelRenderer = function useBuyNitroPlanLabelRendere
     if (tmp2) {
       tmp2 = null != discounted.priceString;
     }
-    let tmp5 = null == tmp || hasDiscountOffer.hasDiscountOffer || null != trialTier && productId.premiumTier === trialTier;
+    let tmp5 =
+      null == tmp || hasDiscountOffer.hasDiscountOffer || (null != trialTier && productId.premiumTier === trialTier);
     if (!tmp5) {
       let tmp6 = bogoEligible;
       if (bogoEligible) {
@@ -51,7 +64,7 @@ export const useBuyNitroPlanLabelRenderer = function useBuyNitroPlanLabelRendere
       obj[0] = token;
       obj[1] = token1;
       obj[2] = lib(token1[11]).getIntervalString(productId.interval, false);
-      const items = [closure_1_8(lib(token1[10]).Text, obj), ];
+      const items = [closure_1_8(lib(token1[10]).Text, obj)];
       let tmp21Result = null != stringResult;
       if (tmp21Result) {
         obj1 = { style: null, children: null };

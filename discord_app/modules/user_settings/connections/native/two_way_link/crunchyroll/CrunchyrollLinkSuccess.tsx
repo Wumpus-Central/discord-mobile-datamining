@@ -15,7 +15,9 @@ noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ image: { width: 232, height: 108, marginBottom: 24 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx",
+);
 
 export default function CrunchyrollLinkDiscordSuccess(onClose) {
   let obj = styles;
@@ -23,8 +25,13 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = callback3();
-  const items = [callback(closure_3, { source: registerAssetDefault, style: callback3().image }), , ];
-  const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
+  const items = [callback(closure_3, { source: registerAssetDefault, style: callback3().image }), ,];
+  const obj2 = {
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    style: twoWayLinkStyles.title,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj2[3] = intl.string(getSystemLocale.t.Fnvxvk);
   items[1] = callback(Text.Text, obj2);
@@ -33,7 +40,7 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   obj3[3] = intl2.string(getSystemLocale.t.YwXceg);
   items[2] = callback(Text.Text, obj3);
   obj[1] = items;
-  const items1 = [callback2(closure_4, obj), ];
+  const items1 = [callback2(closure_4, obj)];
   const obj4 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
   const obj5 = { style: twoWayLinkStyles.footerButton, children: null };
   const obj6 = { size: "md", text: null, onPress: null };
@@ -45,4 +52,4 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   items1[1] = callback(SafeAreaPaddingView.SafeAreaPaddingView, obj4);
   obj[1] = items1;
   return callback2(closure_4, obj);
-};
+}

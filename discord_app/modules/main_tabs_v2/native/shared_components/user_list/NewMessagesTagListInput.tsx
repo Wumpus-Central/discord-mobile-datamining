@@ -10,7 +10,11 @@ import set from "../../../../../utils/PlatformUtils.tsx";
 const require = arg1;
 let c3 = importAllResult;
 let obj = { searchBarContainer: null, header: null, showSearchButton: null };
-obj = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+obj = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_8,
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+};
 obj[0] = obj;
 createCacheKey = { marginLeft: ThemesDefault.space.PX_12, marginBottom: null };
 let num = 0;
@@ -22,7 +26,9 @@ obj[1] = createCacheKey;
 obj[2] = { marginHorizontal: ThemesDefault.space.PX_12 };
 let closure_7 = createCacheKey.createStyles(obj);
 const obj2 = { marginHorizontal: ThemesDefault.space.PX_12 };
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/NewMessagesTagListInput.tsx");
+const result = set.fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/NewMessagesTagListInput.tsx",
+);
 
 export default importAllResult.memo(function NewMessagesTagListInput(forceSearchResults) {
   ({ onSelectUser: require, selectedUserIds } = forceSearchResults);
@@ -40,7 +46,18 @@ export default importAllResult.memo(function NewMessagesTagListInput(forceSearch
     return found.map(selectedUserIds(memo[8]));
   }, items);
   let obj = { style: tmp.searchBarContainer, children: null };
-  obj = { autoFocus, focusOnAdd: true, footer: null, icon: null, onChangeText: null, onFocus: null, onRemove: null, placeholder: null, tags: null, ref: null };
+  obj = {
+    autoFocus,
+    focusOnAdd: true,
+    footer: null,
+    icon: null,
+    onChangeText: null,
+    onFocus: null,
+    onRemove: null,
+    placeholder: null,
+    tags: null,
+    ref: null,
+  };
   let tmp6 = null;
   if (!hasQuery) {
     tmp6 = null;
@@ -70,7 +87,13 @@ export default importAllResult.memo(function NewMessagesTagListInput(forceSearch
   obj1 = { style: tmp.header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: null };
   const intl2 = require(tmp4[11]).intl;
   obj1[4] = intl2.string(require(memo[11]).t.kHyiXs);
-  obj[3] = jsx(require(memo[14]).Text, { style: tmp.header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: null });
+  obj[3] = jsx(require(memo[14]).Text, {
+    style: tmp.header,
+    variant: "text-sm/medium",
+    color: "text-muted",
+    accessible: false,
+    children: null,
+  });
   obj[4] = onChangeText;
   obj[5] = onFocus;
   obj[6] = function onRemove(arg0) {
@@ -88,6 +111,30 @@ export default importAllResult.memo(function NewMessagesTagListInput(forceSearch
   obj[7] = intl3.string(require(memo[11]).t.CaEER6);
   obj[8] = memo;
   obj[9] = tagListInputRef;
-  obj[1] = jsx(selectedUserIds(memo[9]), { autoFocus, focusOnAdd: true, footer: null, icon: null, onChangeText: null, onFocus: null, onRemove: null, placeholder: null, tags: null, ref: null });
-  return <View autoFocus={autoFocus} focusOnAdd footer={null} icon={null} onChangeText={null} onFocus={null} onRemove={null} placeholder={null} tags={null} ref={null} />;
+  obj[1] = jsx(selectedUserIds(memo[9]), {
+    autoFocus,
+    focusOnAdd: true,
+    footer: null,
+    icon: null,
+    onChangeText: null,
+    onFocus: null,
+    onRemove: null,
+    placeholder: null,
+    tags: null,
+    ref: null,
+  });
+  return (
+    <View
+      autoFocus={autoFocus}
+      focusOnAdd
+      footer={null}
+      icon={null}
+      onChangeText={null}
+      onFocus={null}
+      onRemove={null}
+      placeholder={null}
+      tags={null}
+      ref={null}
+    />
+  );
 });

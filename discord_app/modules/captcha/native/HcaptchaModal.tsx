@@ -63,10 +63,16 @@ class HcaptchaModal {
       obj1 = { spacing: null, align: "center", children: null };
       obj1[0] = require("Themes").space.PX_16;
       tmp17 = jsx;
-      obj2 = { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: null, children: null };
+      obj2 = {
+        accessibilityRole: "header",
+        variant: "heading-lg/bold",
+        color: "mobile-text-heading-primary",
+        style: null,
+        children: null,
+      };
       obj2[3] = tmp2.title;
       obj2[4] = stringResult;
-      items2 = [, ];
+      items2 = [,];
       items2[0] = jsx(require("Text").Text, obj2);
       tmp18 = ActivityIndicator;
       tmp3Result = require("set");
@@ -80,7 +86,7 @@ class HcaptchaModal {
       obj1[2] = items2;
       tmp14Result = tmp14(require("Stack").Stack, obj1);
     }
-    items3 = [, , ];
+    items3 = [, ,];
     items3[0] = tmp14Result;
     obj4 = { style: StyleSheet.absoluteFillObject, children: null };
     obj5 = {};
@@ -91,7 +97,7 @@ class HcaptchaModal {
     obj4[1] = jsx(tmp9Result, obj5);
     items3[1] = jsx(tmp15, obj4);
     obj6 = { style: null, pointerEvents: "box-none", children: null };
-    items4 = [, ];
+    items4 = [,];
     items4[0] = tmp2.closeButtonContainer;
     obj7 = { paddingTop: top + require("Themes").space.PX_8, paddingLeft: left + require("Themes").space.PX_16 };
     ({ top, left } = tmp10);
@@ -113,7 +119,12 @@ class HcaptchaModal {
 let closure_3 = ["onMessage", "onClose"];
 ({ ActivityIndicator: closure_6, View: error, StyleSheet: closure_8 } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let closure_13 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" }, title: { textAlign: "center" }, closeButtonContainer: { position: "absolute", top: 0, left: 0, zIndex: 2 }, closeButtonHitArea: { minWidth: 44, minHeight: 44, justifyContent: "center", alignItems: "center" } });
+let closure_13 = createCacheKey.createStyles({
+  container: { flex: 1, justifyContent: "center", alignItems: "center" },
+  title: { textAlign: "center" },
+  closeButtonContainer: { position: "absolute", top: 0, left: 0, zIndex: 2 },
+  closeButtonHitArea: { minWidth: 44, minHeight: 44, justifyContent: "center", alignItems: "center" },
+});
 HcaptchaModal.modalConfig = { animation: require("ME").ModalAnimation.FADE };
 const result = require("set").fileFinishedImporting("modules/captcha/native/HcaptchaModal.tsx");
 

@@ -26,4 +26,4 @@ export default function StickerPackBanner(arg0) {
     tmp2 = <closure_3 source={null} style={null} resizeMode="contain" />;
   }
   return tmp2;
-};
+}

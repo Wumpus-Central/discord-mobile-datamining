@@ -262,7 +262,11 @@ function useUserTag(user) {
   const merged = Object.assign(closure_8);
   const merged1 = Object.assign(arg1);
   const items = [closure_2];
-  return presentUserTag(user, {}, initialize.useStateFromStores(items, () => obj.hidePersonalInformation));
+  return presentUserTag(
+    user,
+    {},
+    initialize.useStateFromStores(items, () => obj.hidePersonalInformation),
+  );
 }
 function useDirectMessageRecipient(arg0) {
   const _require = arg0;
@@ -306,7 +310,7 @@ export default {
   getFormattedName,
   getGlobalName,
   humanizeStatus,
-  useDirectMessageRecipient
+  useDirectMessageRecipient,
 };
 export { nameFromUser };
 export { getName };

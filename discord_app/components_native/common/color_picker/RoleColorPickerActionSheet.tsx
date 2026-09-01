@@ -11,14 +11,40 @@ const require = arg1;
 ({ View: c5, Pressable: closure_6 } = get_ActivityIndicator);
 ({ DEFAULT_ROLE_COLOR: error, ROLE_COLORS } = ME);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let items = [...require("../../../index.native.tsx"), ...require("../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx"), ...require("../../../../_runtime/00005_asyncGeneratorStep.js"), ...require("../../../modules/gateway/native/fast_connect.tsx")];
+let items = [
+  ...require("../../../index.native.tsx"),
+  ...require("../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx"),
+  ...require("../../../../_runtime/00005_asyncGeneratorStep.js"),
+  ...require("../../../modules/gateway/native/fast_connect.tsx"),
+];
 createCacheKey = { body: null, colorWrap: null };
-createCacheKey = { paddingVertical: ThemesDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" };
+createCacheKey = {
+  paddingVertical: ThemesDefault.space.PX_16,
+  flexGrow: 1,
+  justifyContent: "center",
+  alignItems: "center",
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexGrow: 1, flexDirection: "row", flexWrap: "wrap", justifyContent: "center", maxWidth: 340, marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[1] = {
+  flexGrow: 1,
+  flexDirection: "row",
+  flexWrap: "wrap",
+  justifyContent: "center",
+  maxWidth: 340,
+  marginBottom: ThemesDefault.space.PX_16,
+};
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexGrow: 1, flexDirection: "row", flexWrap: "wrap", justifyContent: "center", maxWidth: 340, marginBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("components_native/common/color_picker/RoleColorPickerActionSheet.tsx");
+let obj1 = {
+  flexGrow: 1,
+  flexDirection: "row",
+  flexWrap: "wrap",
+  justifyContent: "center",
+  maxWidth: 340,
+  marginBottom: ThemesDefault.space.PX_16,
+};
+const result = require("set").fileFinishedImporting(
+  "components_native/common/color_picker/RoleColorPickerActionSheet.tsx",
+);
 
 export default function RoleColorPickerActionSheet(color) {
   color = color.color;
@@ -86,14 +112,28 @@ export default function RoleColorPickerActionSheet(color) {
   obj2[0] = closure_8(color(defaultColor[12]).BottomSheetTitleHeader, obj);
   const obj3 = { style: tmp.body, children: null };
   const obj4 = { style: tmp.colorWrap, children: null };
-  const items3 = [items.map((color) => callback2(onSelect(defaultColor[7]), { color, style: memo, selected: color === first, onSelect: callback2 }, color)), ];
-  const obj5 = { style: memo, onPress: callback1, accessibilityLabel: null, accessibilityRole: "button", children: null };
+  const items3 = [
+    items.map((color) =>
+      callback2(
+        onSelect(defaultColor[7]),
+        { color, style: memo, selected: color === first, onSelect: callback2 },
+        color,
+      ),
+    ),
+  ];
+  const obj5 = {
+    style: memo,
+    onPress: callback1,
+    accessibilityLabel: null,
+    accessibilityRole: "button",
+    children: null,
+  };
   const intl3 = tmp2(tmp3[13]).intl;
   obj5[2] = intl3.string(color(defaultColor[13]).t["/fkc8a"]);
   obj5[4] = closure_8(color(defaultColor[15]).EyeDropperIcon, { size: "lg" });
   items3[1] = closure_8(isWindowSmall, obj5);
   obj4[1] = items3;
-  const items4 = [callback(closure_5, obj4), ];
+  const items4 = [callback(closure_5, obj4)];
   const obj6 = { variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(tmp3[13]).intl;
   obj6[1] = intl4.string(color(defaultColor[13]).t.yBZMsQ);
@@ -104,4 +144,4 @@ export default function RoleColorPickerActionSheet(color) {
   obj3[1] = items4;
   obj2[1] = callback(closure_5, obj3);
   return closure_8(color(defaultColor[11]).BottomSheet, obj2);
-};
+}

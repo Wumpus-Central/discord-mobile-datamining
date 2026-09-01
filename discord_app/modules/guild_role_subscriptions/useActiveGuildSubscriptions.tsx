@@ -22,7 +22,9 @@ export default function useActiveGuildSubscriptions() {
   const tmp = useUserRoleSubscriptionRelationshipDefault() === constants.SUBSCRIBED;
   importDefault = tmp;
   const items = [closure_5];
-  let stateFromStores = flag(589).useStateFromStores(items, () => activeGuildSubscriptions.getActiveGuildSubscriptions());
+  let stateFromStores = flag(589).useStateFromStores(items, () =>
+    activeGuildSubscriptions.getActiveGuildSubscriptions(),
+  );
   closure_2 = React.useRef(false);
   const items1 = [flag, tmp];
   const effect = React.useEffect(() => {
@@ -60,4 +62,4 @@ export default function useActiveGuildSubscriptions() {
     stateFromStores = closure_7;
   }
   return stateFromStores;
-};
+}

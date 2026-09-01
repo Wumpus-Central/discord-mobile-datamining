@@ -16,8 +16,14 @@ createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BAS
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", bottom: 12, left: 12, right: 12 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let closure_9 = { [TwoFAModalSetupSections.LANDING]: 1, [TwoFAModalSetupSections.SCAN]: 2, [TwoFAModalSetupSections.ENTER_CODE]: 3 };
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModal.tsx");
+let closure_9 = {
+  [TwoFAModalSetupSections.LANDING]: 1,
+  [TwoFAModalSetupSections.SCAN]: 2,
+  [TwoFAModalSetupSections.ENTER_CODE]: 3,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModal.tsx",
+);
 
 export default function TwoFASetupModal(initialRouteName) {
   let LANDING = initialRouteName.initialRouteName;
@@ -33,28 +39,37 @@ export default function TwoFASetupModal(initialRouteName) {
       obj = {
         headerLeft: callback(5495).getHeaderCloseButton(callback2(14387).close),
         headerTitle() {
-          return callback3(callback(14390).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return callback3(callback(14390).PageMarker, {
+            currentPage: dependencyMap2[constants.LANDING],
+            numMarkers: Object.keys(dependencyMap2).length - 1,
+          });
         },
         render() {
           return callback3(callback2(14391), {});
-        }
+        },
       };
       obj[constants.LANDING] = obj;
       obj[constants.SCAN] = {
         headerTitle() {
-          return callback3(callback(14390).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return callback3(callback(14390).PageMarker, {
+            currentPage: dependencyMap2[constants.SCAN],
+            numMarkers: Object.keys(dependencyMap2).length - 1,
+          });
         },
         render() {
           return closure_1_6(closure_1_1(closure_1_2[14]), { totpSecret: closure_0 });
-        }
+        },
       };
       obj[constants.ENTER_CODE] = {
         headerTitle() {
-          return callback3(callback(14390).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return callback3(callback(14390).PageMarker, {
+            currentPage: dependencyMap2[constants.ENTER_CODE],
+            numMarkers: Object.keys(dependencyMap2).length - 1,
+          });
         },
         render() {
           return closure_1_6(closure_1_1(closure_1_2[15]), { totpSecret: closure_0 });
-        }
+        },
       };
       obj1 = { headerLeft: null, headerTitle: null, render: null };
       const obj4 = callback(5495);
@@ -69,12 +84,12 @@ export default function TwoFASetupModal(initialRouteName) {
       return obj;
     }),
     headerBackTitle: null,
-    headerTitleAlign: "center"
+    headerTitleAlign: "center",
   };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
   return callback(NavigationStack.Navigator, obj);
-};
+}
 export const TwoFASetupModalScreen = function TwoFASetupModalScreen(children) {
   let navigation;
   let name;
@@ -85,7 +100,7 @@ export const TwoFASetupModalScreen = function TwoFASetupModalScreen(children) {
   name = navigation.getState().routes[navigation.getState(navigation).routes.length - 1].name;
   const items = [navigation, name];
   obj = { style: tmp.container, children: null };
-  const items1 = [children.children, ];
+  const items1 = [children.children];
   if (name === TwoFAModalSetupSections.ENTER_CODE) {
     items1[1] = tmp4;
     obj[1] = items1;

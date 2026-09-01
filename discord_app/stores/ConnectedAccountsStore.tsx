@@ -16,8 +16,7 @@ const set1 = new Set();
 let closure_10 = {};
 let closure_11 = {};
 const Store = initializeDefault.Store;
-class ConnectedAccountsStore extends Store {
-}
+class ConnectedAccountsStore extends Store {}
 const prototype = ConnectedAccountsStore.prototype;
 prototype["isJoining"] = function isJoining(id) {
   return table[id] || false;
@@ -145,7 +144,7 @@ const connectedAccountsStore = new ConnectedAccountsStore(dispatcherDefault, {
   USER_CONNECTIONS_CALLBACK: function handleUserConnectionsCallback(arg0) {
     ({ code, state, openid_params, provider } = arg0);
     callbackDefault.callback(provider, { code, state, openid_params });
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/ConnectedAccountsStore.tsx");
 

@@ -4,8 +4,7 @@ import cleanUp from "AbstractSearchFetchManager.tsx";
 import fetch from "../SearchFetcher.tsx";
 
 const AbstractSearchFetchManager = cleanUp.AbstractSearchFetchManager;
-class SearchFetchManager extends AbstractSearchFetchManager {
-}
+class SearchFetchManager extends AbstractSearchFetchManager {}
 SearchFetchManager.prototype["create"] = function create(arg0) {
   ({ id, searchType, searchQuery } = arg0);
   this.cancel(id);

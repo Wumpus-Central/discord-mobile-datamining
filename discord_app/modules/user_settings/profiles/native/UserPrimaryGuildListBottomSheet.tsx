@@ -10,7 +10,14 @@ import set from "../../../../utils/PlatformUtils.tsx";
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" }, guildIcon: { marginLeft: 4 }, tag: { padding: 2 }, tagStyles: null, divider: null, itemTrailingStyle: null };
+let obj = {
+  titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" },
+  guildIcon: { marginLeft: 4 },
+  tag: { padding: 2 },
+  tagStyles: null,
+  divider: null,
+  itemTrailingStyle: null,
+};
 let num = 18;
 if (set.isAndroid()) {
   num = 16;
@@ -58,7 +65,7 @@ let closure_9 = importAllResult.memo((item) => {
     },
     label: null,
     icon: null,
-    trailing: null
+    trailing: null,
   };
   if (null != item) {
     let name = item.name;
@@ -83,7 +90,15 @@ let closure_9 = importAllResult.memo((item) => {
     tmp7Result = null != profile;
   }
   if (tmp7Result) {
-    const obj2 = { containerStyles: null, textStyle: null, guildTag: null, guildBadge: null, badgeSize: null, textVariant: "heading-md/semibold", textColor: "text-strong" };
+    const obj2 = {
+      containerStyles: null,
+      textStyle: null,
+      guildTag: null,
+      guildBadge: null,
+      badgeSize: null,
+      textVariant: "heading-md/semibold",
+      textColor: "text-strong",
+    };
     ({ tag: obj5[0], tagStyles: obj5[1] } = tmp);
     const tag = profile.tag;
     obj2[2] = tag;
@@ -108,12 +123,20 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   let items = [availableGuilds];
   memo = importAllResult.useMemo(() => {
     const items = [null];
-    HermesBuiltin.arraySpread(closure_1_1(closure_1_2[14]).sortBy(availableGuilds, (name) => name.name.toLowerCase()), 1);
+    HermesBuiltin.arraySpread(
+      closure_1_1(closure_1_2[14]).sortBy(availableGuilds, (name) => name.name.toLowerCase()),
+      1,
+    );
     return items;
   }, items);
   let obj = { scrollable: true, startExpanded: true, header: null, children: null };
   obj = { style: tmp.titleContainer, children: null };
-  obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+  obj = {
+    variant: "heading-lg/bold",
+    color: "mobile-text-heading-primary",
+    accessibilityRole: "header",
+    children: null,
+  };
   const intl = availableGuilds(1236).intl;
   obj[3] = intl.string(availableGuilds(1236).t.Fo0g9x);
   obj[1] = callback(availableGuilds(4474).Text, obj);
@@ -148,7 +171,7 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
       obj[3] = tmp3 === id;
       obj[4] = closure_2;
       return closure_1_6(closure_1_9, obj);
-    }
+    },
   });
   return callback(availableGuilds(5622).BottomSheet, obj);
-};
+}

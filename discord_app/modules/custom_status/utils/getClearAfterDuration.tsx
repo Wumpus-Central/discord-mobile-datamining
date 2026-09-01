@@ -15,4 +15,4 @@ export default function getClearAfterDuration(arg0) {
     _modDef38(typeof DAY === "number", "Invalid custom status clear timeout");
   }
   return DAY;
-};
+}

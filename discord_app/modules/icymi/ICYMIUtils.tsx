@@ -39,7 +39,7 @@ function _hydrateItems() {
     closure_2 = arg2;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -73,7 +73,10 @@ function _hydrateItems() {
                 const hydratedAttempt = obj1.loadHydratedAttempt(closure_1_14(tmp24, tmp25));
                 const found = substr.filter((arg0) => null == dependencyMap[arg0.id]);
                 const found1 = found.filter((type) => type.type === dependencyMap(8619).ICYMIItemTypes.MESSAGE);
-                const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
+                const mapped = found1.map((channel_id) => ({
+                  channel_id: channel_id.data.channel_id,
+                  message_id: channel_id.data.message_id,
+                }));
                 const mapped1 = found.map((type) => {
                   if (type.type === dependencyMap(8619).ICYMIItemTypes.MESSAGE) {
                     const message_context = type.data.message_context;
@@ -118,7 +121,10 @@ function _hydrateItems() {
                 const _Boolean = Boolean;
                 const found2 = mapped1.flat().filter(Boolean);
                 const found3 = found.filter((type) => type.type === dependencyMap(8619).ICYMIItemTypes.ACTIVITY);
-                const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
+                const mapped2 = found3.map((data) => ({
+                  user_id: data.data.user_id,
+                  content_id: data.data.content_id,
+                }));
                 const flatResult = mapped1.flat();
                 obj1 = { messageItems: null, activityItems: null };
                 let items = [];
@@ -161,7 +167,7 @@ function _hydrateItems() {
 }
 function _hydrateNextPage() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -232,7 +238,7 @@ function _regenerateFeedAndClearReadStates() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, ack) {
+    return (function* (arg0, ack) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -405,7 +411,18 @@ function _regenerateFeedAndClearReadStates() {
   return applyArgumentsResult;
 }
 ({ ChannelTypes: closure_12, GuildNSFWContentLevel: map1 } = ME);
-let obj = { UNKNOWN: 0, [0]: "UNKNOWN", DEFAULT: 1, [1]: "DEFAULT", MORE: 2, [2]: "MORE", LESS: 3, [3]: "LESS", MUTED: 4, [4]: "MUTED" };
+let obj = {
+  UNKNOWN: 0,
+  [0]: "UNKNOWN",
+  DEFAULT: 1,
+  [1]: "DEFAULT",
+  MORE: 2,
+  [2]: "MORE",
+  LESS: 3,
+  [3]: "LESS",
+  MUTED: 4,
+  [4]: "MUTED",
+};
 let result = require("set").fileFinishedImporting("modules/icymi/ICYMIUtils.tsx");
 
 export { generateHydrationId };
@@ -485,61 +502,94 @@ export const useGravityMessage = function useGravityMessage(message) {
   const _require = message;
   const items = [closure_8, closure_10];
   const items1 = [message];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    message = closure_1_8.getMessage(message.getChannelId(), message.id);
-    if (message == null) {
-      const hydratedItem = closure_1_10.getHydratedItem(tmp.id);
-      let message1;
-      if (hydratedItem != null) {
-        message1 = hydratedItem.message;
-      }
-      message = message1;
-    }
-    if (message == null) {
-      message = tmp;
-    }
-    return message;
-  }, items1);
-};
-export const useGravityMessageItem = function useGravityMessageItem(id) {
-  const _require = id;
-  const items = [closure_10];
-  const items1 = [id.id];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_10.getHydratedItem(id.id), items1);
-};
-export const useICYMIMessage = function useICYMIMessage(id, before_message_id) {
-  const _require = id;
-  closure_1 = before_message_id;
-  const items = [closure_8, closure_10];
-  const items1 = [id, before_message_id];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let tmp2 = null;
-    if (null != closure_1) {
-      let message = closure_1_8.getMessage(closure_0, tmp);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      message = closure_1_8.getMessage(message.getChannelId(), message.id);
       if (message == null) {
-        const hydratedItem = closure_1_10.getHydratedItem(tmp);
+        const hydratedItem = closure_1_10.getHydratedItem(tmp.id);
         let message1;
         if (hydratedItem != null) {
           message1 = hydratedItem.message;
         }
         message = message1;
       }
-      tmp2 = message;
-    }
-    return tmp2;
-  }, items1);
+      if (message == null) {
+        message = tmp;
+      }
+      return message;
+    },
+    items1,
+  );
+};
+export const useGravityMessageItem = function useGravityMessageItem(id) {
+  const _require = id;
+  const items = [closure_10];
+  const items1 = [id.id];
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_10.getHydratedItem(id.id),
+    items1,
+  );
+};
+export const useICYMIMessage = function useICYMIMessage(id, before_message_id) {
+  const _require = id;
+  closure_1 = before_message_id;
+  const items = [closure_8, closure_10];
+  const items1 = [id, before_message_id];
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let tmp2 = null;
+      if (null != closure_1) {
+        let message = closure_1_8.getMessage(closure_0, tmp);
+        if (message == null) {
+          const hydratedItem = closure_1_10.getHydratedItem(tmp);
+          let message1;
+          if (hydratedItem != null) {
+            message1 = hydratedItem.message;
+          }
+          message = message1;
+        }
+        tmp2 = message;
+      }
+      return tmp2;
+    },
+    items1,
+  );
 };
 export const icymiEnabled = function icymiEnabled(customScores) {
   return apexExperiment.getICYMIEnabled(customScores);
 };
 export const customStatusToContentInventoryEntry = function customStatusToContentInventoryEntry(data) {
-  obj = { id: data.id, type: MessageEmbedTypes.ICYMIItemTypes.CUSTOM_STATUS, activity: null, score: null, score_components: null };
-  obj = { id: data.id, author_id: data.data.user_id, author_type: ContentInventoryAuthorType.ContentInventoryAuthorType.USER, traits: [], participants: [], content_type: ContentInventoryEntryType.ContentInventoryEntryType.CUSTOM_STATUS, extra: null };
+  obj = {
+    id: data.id,
+    type: MessageEmbedTypes.ICYMIItemTypes.CUSTOM_STATUS,
+    activity: null,
+    score: null,
+    score_components: null,
+  };
+  obj = {
+    id: data.id,
+    author_id: data.data.user_id,
+    author_type: ContentInventoryAuthorType.ContentInventoryAuthorType.USER,
+    traits: [],
+    participants: [],
+    content_type: ContentInventoryEntryType.ContentInventoryEntryType.CUSTOM_STATUS,
+    extra: null,
+  };
   let str = data.data.text;
   if (str == null) {
     str = "";
   }
-  obj[6] = { type: "custom_status_extra", status: str, emoji_id: data.data.emoji_id, emoji_name: data.data.emoji_name, emoji_animated: data.data.emoji_animated, attachments: data.data.attachments };
+  obj[6] = {
+    type: "custom_status_extra",
+    status: str,
+    emoji_id: data.data.emoji_id,
+    emoji_name: data.data.emoji_name,
+    emoji_animated: data.data.emoji_animated,
+    attachments: data.data.attachments,
+  };
   obj[2] = obj;
   ({ score: obj[3], score_components: obj[4] } = data);
   return obj;
@@ -795,7 +845,9 @@ export const contentTypeToText = function contentTypeToText(arg0) {
     return intl.string(tmp(1236).t.pYrnTY);
   }
 };
-export const regenerateFeedAndClearReadStates = function regenerateFeedAndClearReadStates(ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON) {
+export const regenerateFeedAndClearReadStates = function regenerateFeedAndClearReadStates(
+  ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON,
+) {
   const self = this;
   const apply = _regenerateFeedAndClearReadStates.apply;
   if (typeof apply === "unknown") {

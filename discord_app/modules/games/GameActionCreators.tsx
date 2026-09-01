@@ -22,7 +22,7 @@ function _requestGames() {
     c4 = 0;
     c5 = 0;
     c3 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       dependencyMap = tmp3;
       c3 = 1;
       const HTTP = callback(closure_1_2[3]).HTTP;
@@ -70,7 +70,7 @@ function _fetchGamesWithSupplementalData() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -136,7 +136,7 @@ closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c2 = 0;
   c1 = 0;
-  return (function*(arg0) {
+  return (function* (arg0) {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -189,30 +189,33 @@ closure_0 = importDefaultResult((arg0) => {
     }
   })();
 });
-const batchInvocationManager = new require("start").BatchInvocationManager(function() {
-  const self = this;
-  const apply = closure_0.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}, {
-  predicate(closure_0) {
-    return !closure_4.hasNoData(closure_0);
+const batchInvocationManager = new require("start").BatchInvocationManager(
+  function () {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   },
-  onQueued(gameIds) {
-    let obj = dispatcherDefault;
-    obj = { type: "GAME_FETCH", gameIds };
-    return obj.dispatch(obj);
+  {
+    predicate(closure_0) {
+      return !closure_4.hasNoData(closure_0);
+    },
+    onQueued(gameIds) {
+      let obj = dispatcherDefault;
+      obj = { type: "GAME_FETCH", gameIds };
+      return obj.dispatch(obj);
+    },
+    onCancelled(gameIds) {
+      let obj = dispatcherDefault;
+      obj = { type: "GAME_FETCH_CANCELLED", gameIds };
+      return obj.dispatch(obj);
+    },
   },
-  onCancelled(gameIds) {
-    let obj = dispatcherDefault;
-    obj = { type: "GAME_FETCH_CANCELLED", gameIds };
-    return obj.dispatch(obj);
-  }
-});
+);
 const result = require("set").fileFinishedImporting("modules/games/GameActionCreators.tsx");
 
 export const fetchGamesWithSupplementalData = function fetchGamesWithSupplementalData(items) {

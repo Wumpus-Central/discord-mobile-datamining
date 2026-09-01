@@ -4,7 +4,9 @@ import closure_3 from "../../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../emojis/EmojiStore.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx",
+);
 
 export default function useEmojiPickerSearchState(arg0, arg1, arg2, arg3) {
   closure_0 = arg0;
@@ -46,6 +48,6 @@ export default function useEmojiPickerSearchState(arg0, arg1, arg2, arg3) {
       }
     }, items),
     searchQueryRef: ref,
-    searchResults: tmp2[0]
+    searchResults: tmp2[0],
   };
-};
+}

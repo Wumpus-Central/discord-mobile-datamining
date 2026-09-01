@@ -13,12 +13,27 @@ const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 const PX_8 = ThemesDefault.space.PX_8;
 const PX_16 = ThemesDefault.space.PX_16;
-createCacheKey = { container: { flex: 1 }, containerContent: { paddingTop: 16, paddingHorizontal: PX_16 }, warning: null, warningText: null };
-createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "flex-start", marginTop: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+createCacheKey = {
+  container: { flex: 1 },
+  containerContent: { paddingTop: 16, paddingHorizontal: PX_16 },
+  warning: null,
+  warningText: null,
+};
+createCacheKey = {
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_8,
+  alignItems: "flex-start",
+  marginTop: ThemesDefault.space.PX_8,
+  padding: ThemesDefault.space.PX_12,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flex: 1 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalServerTagCustomize.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_settings/native/GuildSettingsModalServerTagCustomize.tsx",
+);
 
 export default function GuildSettingsModalServerTagCustomize(guildId) {
   guildId = guildId.guildId;
@@ -105,7 +120,7 @@ export default function GuildSettingsModalServerTagCustomize(guildId) {
     obj = { badgeColorPrimary, badgeColorSecondary };
     obj.updateGuildProfile(guildId, obj);
   }, items7);
-  const items8 = [badge, callback2, , , ];
+  const items8 = [badge, callback2, , ,];
   let badgeColorPrimary;
   if (stateFromStores != null) {
     badgeColorPrimary = stateFromStores.badgeColorPrimary;
@@ -152,7 +167,7 @@ export default function GuildSettingsModalServerTagCustomize(guildId) {
       obj2[1] = str;
       obj2[2] = callback;
       obj2[5] = tmp16;
-      const items10 = [callback(tmp2(tmp3[22]).TextInput, obj2), ];
+      const items10 = [callback(tmp2(tmp3[22]).TextInput, obj2)];
       if (tmp28Result) {
         obj3 = { accessible: true, accessibilityLabel: null, style: null, children: null };
         const intl2 = tmp2(tmp3[23]).intl;
@@ -160,7 +175,7 @@ export default function GuildSettingsModalServerTagCustomize(guildId) {
         obj3[2] = tmp.warning;
         const obj4 = { size: "sm", color: null };
         obj4[1] = tmp5(tmp3[7]).colors.ICON_SUBTLE;
-        const items11 = [tmp27(tmp2(tmp3[24]).CircleInformationIcon, obj4), ];
+        const items11 = [tmp27(tmp2(tmp3[24]).CircleInformationIcon, obj4)];
         const obj5 = { variant: "text-sm/medium", color: "text-subtle", style: null, children: null };
         obj5[2] = tmp.warningText;
         const intl3 = tmp2(tmp3[23]).intl;
@@ -172,14 +187,21 @@ export default function GuildSettingsModalServerTagCustomize(guildId) {
       const obj6 = { children: null };
       items10[1] = tmp28Result;
       obj6[0] = items10;
-      const items12 = [closure_10(stateFromStores2, obj6), , ];
+      const items12 = [closure_10(stateFromStores2, obj6), ,];
       const obj7 = { guildId: null, selectedBadge: null, onSelectBadge: null, cellSize: null };
       obj7[0] = guildId;
       obj7[1] = badge;
       obj7[2] = callback1;
       obj7[3] = rounded;
       items12[1] = callback(tmp5(tmp3[26]), obj7);
-      const obj8 = { badge: null, primaryColor: null, secondaryColor: null, onSelectColor: null, onPressEyedropper: null, cellSize: null };
+      const obj8 = {
+        badge: null,
+        primaryColor: null,
+        secondaryColor: null,
+        onSelectColor: null,
+        onPressEyedropper: null,
+        cellSize: null,
+      };
       obj8[0] = badge;
       ({ badgeColorPrimary: obj14[1], badgeColorSecondary: obj14[2] } = stateFromStores);
       obj8[3] = callback2;
@@ -194,4 +216,4 @@ export default function GuildSettingsModalServerTagCustomize(guildId) {
     return null;
   }
   const tmp15 = str(badge.useState(stateFromStores2), 2);
-};
+}

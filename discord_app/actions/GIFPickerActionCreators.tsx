@@ -25,46 +25,55 @@ function doSearchRequest(q, arg1, limit) {
     obj = {};
   }
   let obj2 = collectGuildAnalyticsMetadataDefault;
-  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: require("../modules/gif_picker/GifProvider.tsx").GIF_PROVIDER };
+  obj = {
+    search_type: constants3.GIF,
+    load_id: store.getAnalyticsID(),
+    num_modifiers: Object.keys(obj).length,
+    modifiers: obj,
+    gif_provider: require("../modules/gif_picker/GifProvider.tsx").GIF_PROVIDER,
+  };
   obj2.trackWithMetadata(constants.SEARCH_STARTED, obj);
   const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj1 = { url: constants2.GIFS_SEARCH, query: null, oldFormErrors: true, rejectWithError: true };
   obj2 = { q, media_format: store.getSelectedFormat(), locale: closure_4.locale, limit };
   obj1[1] = obj2;
   const value = HTTP.get(obj1);
-  value.then((body) => {
-    body = body.body;
-    let obj = { startTime: dependencyMap, limit: closure_2 };
-    const startTime = obj.startTime;
-    const merged = Object.assign(obj, Object.create(null));
-    obj = { offset: 0, limit: null, totalResults: body.length };
-    let obj2 = q(10360);
-    obj = {};
-    const analyticsID = closure_1_5.getAnalyticsID();
-    const merged1 = Object.assign(obj);
-    const merged2 = Object.assign(merged);
-    obj.results = body.length;
-    const result = obj2.calculateAnalyticsMetadata(analyticsID, callback, obj);
-    if (null == startTime) {
-      obj1 = {};
-    } else {
-      obj1 = { load_duration_ms: null };
-      const _Date = Date;
-      obj1[0] = Date.now() - startTime;
-    }
-    obj2 = {};
-    const merged3 = Object.assign(result);
-    const merged4 = Object.assign(obj1);
-    obj2.gif_provider = q(10359).GIF_PROVIDER;
-    callback(4700).trackWithMetadata(closure_1_6.SEARCH_RESULT_VIEWED, obj2);
-    const obj6 = callback(4700);
-    const tmp2 = q;
-    callback(709).dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: q, items: body });
-  }, () => {
-    let obj = callback(709);
-    obj = { type: "GIF_PICKER_QUERY_FAILURE", query: closure_0 };
-    return obj.dispatch(obj);
-  });
+  value.then(
+    (body) => {
+      body = body.body;
+      let obj = { startTime: dependencyMap, limit: closure_2 };
+      const startTime = obj.startTime;
+      const merged = Object.assign(obj, Object.create(null));
+      obj = { offset: 0, limit: null, totalResults: body.length };
+      let obj2 = q(10360);
+      obj = {};
+      const analyticsID = closure_1_5.getAnalyticsID();
+      const merged1 = Object.assign(obj);
+      const merged2 = Object.assign(merged);
+      obj.results = body.length;
+      const result = obj2.calculateAnalyticsMetadata(analyticsID, callback, obj);
+      if (null == startTime) {
+        obj1 = {};
+      } else {
+        obj1 = { load_duration_ms: null };
+        const _Date = Date;
+        obj1[0] = Date.now() - startTime;
+      }
+      obj2 = {};
+      const merged3 = Object.assign(result);
+      const merged4 = Object.assign(obj1);
+      obj2.gif_provider = q(10359).GIF_PROVIDER;
+      callback(4700).trackWithMetadata(closure_1_6.SEARCH_RESULT_VIEWED, obj2);
+      const obj6 = callback(4700);
+      const tmp2 = q;
+      callback(709).dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: q, items: body });
+    },
+    () => {
+      let obj = callback(709);
+      obj = { type: "GIF_PICKER_QUERY_FAILURE", query: closure_0 };
+      return obj.dispatch(obj);
+    },
+  );
 }
 ({ AnalyticEvents: closure_6, Endpoints: error, SearchTypes: closure_8, GIFPickerResultTypes: c9 } = ME);
 ({ MAX_FAVORITE_GIFS_SIZE: c10, UserSettingsDelay: unpackModuleId } = MAX_FAVORITES);
@@ -80,7 +89,13 @@ export const trackSearchStart = function trackSearchStart(arg0) {
   } else {
     obj = {};
   }
-  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: GIF_PROVIDER.GIF_PROVIDER };
+  obj = {
+    search_type: constants3.GIF,
+    load_id: store.getAnalyticsID(),
+    num_modifiers: Object.keys(obj).length,
+    modifiers: obj,
+    gif_provider: GIF_PROVIDER.GIF_PROVIDER,
+  };
   collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.SEARCH_STARTED, obj);
 };
 export const trackSearchResultViewed = function trackSearchResultViewed(totalResults, TRENDING_GIFS) {
@@ -216,44 +231,53 @@ export const fetchTrendingGIFs = function fetchTrendingGIFs(closure_10) {
     obj = {};
   }
   let obj2 = collectGuildAnalyticsMetadataDefault;
-  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: require("../modules/gif_picker/GifProvider.tsx").GIF_PROVIDER };
+  obj = {
+    search_type: constants3.GIF,
+    load_id: store.getAnalyticsID(),
+    num_modifiers: Object.keys(obj).length,
+    modifiers: obj,
+    gif_provider: require("../modules/gif_picker/GifProvider.tsx").GIF_PROVIDER,
+  };
   obj2.trackWithMetadata(constants.SEARCH_STARTED, obj);
   const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj1 = { url: constants2.GIFS_TRENDING_GIFS, query: null, oldFormErrors: true, rejectWithError: true };
   obj2 = { media_format: store.getSelectedFormat(), locale: closure_4.locale, limit: closure_10 };
   obj1[1] = obj2;
   const value = HTTP.get(obj1);
-  value.then((body) => {
-    body = body.body;
-    let obj = { startTime: callback2, limit: callback };
-    const startTime = obj.startTime;
-    const merged = Object.assign(obj, Object.create(null));
-    obj = { offset: 0, limit: null, totalResults: body.length };
-    let obj2 = callback(closure_1_3[6]);
-    obj = {};
-    const analyticsID = closure_1_5.getAnalyticsID();
-    const merged1 = Object.assign(obj);
-    const merged2 = Object.assign(merged);
-    obj.results = body.length;
-    const result = obj2.calculateAnalyticsMetadata(analyticsID, closure_1_9.TRENDING_GIFS, obj);
-    if (null == startTime) {
-      obj1 = {};
-    } else {
-      obj1 = { load_duration_ms: null };
-      const _Date = Date;
-      obj1[0] = Date.now() - startTime;
-    }
-    obj2 = {};
-    const merged3 = Object.assign(result);
-    const merged4 = Object.assign(obj1);
-    obj2.gif_provider = callback(closure_1_3[5]).GIF_PROVIDER;
-    callback2(closure_1_3[4]).trackWithMetadata(closure_1_6.SEARCH_RESULT_VIEWED, obj2);
-    const obj6 = callback2(closure_1_3[4]);
-    const tmp2 = callback;
-    callback2(closure_1_3[8]).dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", items: body });
-  }, () => {
-    callback2(table[8]).dispatch({ type: "GIF_PICKER_QUERY_FAILURE" });
-  });
+  value.then(
+    (body) => {
+      body = body.body;
+      let obj = { startTime: callback2, limit: callback };
+      const startTime = obj.startTime;
+      const merged = Object.assign(obj, Object.create(null));
+      obj = { offset: 0, limit: null, totalResults: body.length };
+      let obj2 = callback(closure_1_3[6]);
+      obj = {};
+      const analyticsID = closure_1_5.getAnalyticsID();
+      const merged1 = Object.assign(obj);
+      const merged2 = Object.assign(merged);
+      obj.results = body.length;
+      const result = obj2.calculateAnalyticsMetadata(analyticsID, closure_1_9.TRENDING_GIFS, obj);
+      if (null == startTime) {
+        obj1 = {};
+      } else {
+        obj1 = { load_duration_ms: null };
+        const _Date = Date;
+        obj1[0] = Date.now() - startTime;
+      }
+      obj2 = {};
+      const merged3 = Object.assign(result);
+      const merged4 = Object.assign(obj1);
+      obj2.gif_provider = callback(closure_1_3[5]).GIF_PROVIDER;
+      callback2(closure_1_3[4]).trackWithMetadata(closure_1_6.SEARCH_RESULT_VIEWED, obj2);
+      const obj6 = callback2(closure_1_3[4]);
+      const tmp2 = callback;
+      callback2(closure_1_3[8]).dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", items: body });
+    },
+    () => {
+      callback2(table[8]).dispatch({ type: "GIF_PICKER_QUERY_FAILURE" });
+    },
+  );
 };
 export const gifUrlKey = function gifUrlKey(uri) {
   let str = uri;
@@ -273,155 +297,165 @@ export const gifUrlKey = function gifUrlKey(uri) {
 };
 export const addFavoriteGIF = function addFavoriteGIF(item) {
   const _require = item;
-  const FrecencyUserSettingsActionCreators = require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
-  FrecencyUserSettingsActionCreators.updateAsync("favoriteGifs", (gifs) => {
-    let obj = closure_1_1(closure_1_3[9]);
-    const values = Object.values(gifs.gifs);
-    let num = obj.max(values.map((order) => order.order));
-    if (num == null) {
-      num = 0;
-    }
-    obj1 = /\.(mp4|webm)(\?|$)/i;
-    if (obj1.test(item.src)) {
-      if (null != tmp3.gifSrc) {
-        if ("" !== tmp3.gifSrc) {
-          let tmpResult = tmp(tmp2[11]);
-          const toURLSafeResult = tmpResult.toURLSafe(tmp3.src);
-          let tmp9 = null != toURLSafeResult;
-          if (tmp9) {
-            let result = closure_1_2(tmp2[12]).isExternalProxiedAttachmentUrl(toURLSafeResult);
-            if (!result) {
-              result = tmp10(tmp2[12]).isAttachmentPathUrl(toURLSafeResult);
-              const tmp10Result = tmp10(tmp2[12]);
-            }
-            tmp9 = result;
-            const obj7 = closure_1_2(tmp2[12]);
-            tmp10 = closure_1_2;
-          }
-          let obj9 = src;
-          if (tmp9) {
-            obj9 = src;
-            if (closure_1_15.test(src)) {
-              tmpResult = tmp(tmp2[11]);
-              const str2 = tmpResult.toURLSafe(src);
-              let tmp13 = src;
-              if (null != str2) {
-                const formatted = str2.pathname.toLowerCase();
-                let endsWithResult1 = formatted.endsWith(".avif");
-                const endsWithResult2 = formatted.endsWith(".gif");
-                if (!endsWithResult) {
-                  tmp13 = src;
-                }
-                if (!endsWithResult1) {
-                  endsWithResult1 = endsWithResult2;
-                }
-                if (endsWithResult1) {
-                  const searchParams = str2.searchParams;
-                  const result1 = searchParams.set("format", "webp");
-                }
-                const searchParams2 = str2.searchParams;
-                const result2 = searchParams2.set("animated", "true");
-                src = str2.toString();
-                endsWithResult = formatted.endsWith(".webp");
-                const str10 = str2.pathname;
+  const FrecencyUserSettingsActionCreators =
+    require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
+  FrecencyUserSettingsActionCreators.updateAsync(
+    "favoriteGifs",
+    (gifs) => {
+      let obj = closure_1_1(closure_1_3[9]);
+      const values = Object.values(gifs.gifs);
+      let num = obj.max(values.map((order) => order.order));
+      if (num == null) {
+        num = 0;
+      }
+      obj1 = /\.(mp4|webm)(\?|$)/i;
+      if (obj1.test(item.src)) {
+        if (null != tmp3.gifSrc) {
+          if ("" !== tmp3.gifSrc) {
+            let tmpResult = tmp(tmp2[11]);
+            const toURLSafeResult = tmpResult.toURLSafe(tmp3.src);
+            let tmp9 = null != toURLSafeResult;
+            if (tmp9) {
+              let result = closure_1_2(tmp2[12]).isExternalProxiedAttachmentUrl(toURLSafeResult);
+              if (!result) {
+                result = tmp10(tmp2[12]).isAttachmentPathUrl(toURLSafeResult);
+                const tmp10Result = tmp10(tmp2[12]);
               }
-              obj9 = tmp13;
+              tmp9 = result;
+              const obj7 = closure_1_2(tmp2[12]);
+              tmp10 = closure_1_2;
             }
-          }
-          let combined = obj9;
-          if (obj9.startsWith("//")) {
-            const _HermesInternal = HermesInternal;
-            combined = "https:" + obj9;
-          }
-          if (closure_1_15.test(combined)) {
-            let format = item(tmp2[14]).GIFType.IMAGE;
-          } else {
-            format = tmp3.format;
-          }
-          let url = tmp3.url;
-          const toURLSafeResult1 = tmp(tmp2[11]).toURLSafe(url);
-          let tmp23 = url;
-          if (null != toURLSafeResult1) {
-            if (obj12.isAttachmentPathUrl(toURLSafeResult1)) {
-              const tmp24Result = tmp24(tmp2[12]);
-              url = tmp24(tmp2[12]).removeSignedUrlParameters(toURLSafeResult1).toString();
-              const str9 = tmp24(tmp2[12]).removeSignedUrlParameters(toURLSafeResult1);
+            let obj9 = src;
+            if (tmp9) {
+              obj9 = src;
+              if (closure_1_15.test(src)) {
+                tmpResult = tmp(tmp2[11]);
+                const str2 = tmpResult.toURLSafe(src);
+                let tmp13 = src;
+                if (null != str2) {
+                  const formatted = str2.pathname.toLowerCase();
+                  let endsWithResult1 = formatted.endsWith(".avif");
+                  const endsWithResult2 = formatted.endsWith(".gif");
+                  if (!endsWithResult) {
+                    tmp13 = src;
+                  }
+                  if (!endsWithResult1) {
+                    endsWithResult1 = endsWithResult2;
+                  }
+                  if (endsWithResult1) {
+                    const searchParams = str2.searchParams;
+                    const result1 = searchParams.set("format", "webp");
+                  }
+                  const searchParams2 = str2.searchParams;
+                  const result2 = searchParams2.set("animated", "true");
+                  src = str2.toString();
+                  endsWithResult = formatted.endsWith(".webp");
+                  const str10 = str2.pathname;
+                }
+                obj9 = tmp13;
+              }
             }
-            tmp23 = url;
-            obj12 = closure_1_2(tmp2[12]);
-            tmp24 = closure_1_2;
-          }
-          obj = {};
-          const merged = Object.assign(tmp3);
-          obj.src = combined;
-          obj.format = format;
-          obj.order = num + 1;
-          gifs.gifs[tmp23] = obj;
-          const FavoriteGIFs = item(tmp2[14]).FavoriteGIFs;
-          if (FavoriteGIFs.toBinary(gifs).length > closure_1_10) {
-            obj = { title: null, body: null };
-            const intl = tmp28(tmp2[16]).intl;
-            obj[0] = intl.string(tmp28(tmp2[16]).t["+XYXtZ"]);
-            const intl2 = tmp28(tmp2[16]).intl;
-            obj[1] = intl2.string(tmp28(tmp2[16]).t.YSDH9n);
-            tmp(tmp2[15]).show(obj);
-            return false;
-          } else {
-            const sizeResult = tmp(tmp2[9]).size(gifs.gifs);
-            if (sizeResult > 2) {
-              gifs.hideTooltip = true;
+            let combined = obj9;
+            if (obj9.startsWith("//")) {
+              const _HermesInternal = HermesInternal;
+              combined = "https:" + obj9;
             }
-            const tmpResult3 = tmp(tmp2[9]);
-            obj1 = { total_num_favorited: null };
-            obj1[0] = sizeResult;
-            tmp(tmp2[17]).track(closure_1_6.GIF_FAVORITED, obj1);
+            if (closure_1_15.test(combined)) {
+              let format = item(tmp2[14]).GIFType.IMAGE;
+            } else {
+              format = tmp3.format;
+            }
+            let url = tmp3.url;
+            const toURLSafeResult1 = tmp(tmp2[11]).toURLSafe(url);
+            let tmp23 = url;
+            if (null != toURLSafeResult1) {
+              if (obj12.isAttachmentPathUrl(toURLSafeResult1)) {
+                const tmp24Result = tmp24(tmp2[12]);
+                url = tmp24(tmp2[12]).removeSignedUrlParameters(toURLSafeResult1).toString();
+                const str9 = tmp24(tmp2[12]).removeSignedUrlParameters(toURLSafeResult1);
+              }
+              tmp23 = url;
+              obj12 = closure_1_2(tmp2[12]);
+              tmp24 = closure_1_2;
+            }
+            obj = {};
+            const merged = Object.assign(tmp3);
+            obj.src = combined;
+            obj.format = format;
+            obj.order = num + 1;
+            gifs.gifs[tmp23] = obj;
+            const FavoriteGIFs = item(tmp2[14]).FavoriteGIFs;
+            if (FavoriteGIFs.toBinary(gifs).length > closure_1_10) {
+              obj = { title: null, body: null };
+              const intl = tmp28(tmp2[16]).intl;
+              obj[0] = intl.string(tmp28(tmp2[16]).t["+XYXtZ"]);
+              const intl2 = tmp28(tmp2[16]).intl;
+              obj[1] = intl2.string(tmp28(tmp2[16]).t.YSDH9n);
+              tmp(tmp2[15]).show(obj);
+              return false;
+            } else {
+              const sizeResult = tmp(tmp2[9]).size(gifs.gifs);
+              if (sizeResult > 2) {
+                gifs.hideTooltip = true;
+              }
+              const tmpResult3 = tmp(tmp2[9]);
+              obj1 = { total_num_favorited: null };
+              obj1[0] = sizeResult;
+              tmp(tmp2[17]).track(closure_1_6.GIF_FAVORITED, obj1);
+            }
+            const tmpResult1 = tmp(tmp2[11]);
           }
-          const tmpResult1 = tmp(tmp2[11]);
+          src = tmp3.gifSrc;
         }
-        src = tmp3.gifSrc;
       }
-    }
-    const toURLSafeResult2 = closure_1_1(closure_1_3[11]).toURLSafe(item.src);
-    let tmp5 = null != toURLSafeResult2;
-    if (tmp5) {
-      let result3 = closure_1_2(tmp2[12]).isExternalProxiedAttachmentUrl(toURLSafeResult2);
-      if (!result3) {
-        result3 = tmp6(tmp2[12]).isAttachmentPathUrl(toURLSafeResult2);
-        const tmp6Result = tmp6(tmp2[12]);
+      const toURLSafeResult2 = closure_1_1(closure_1_3[11]).toURLSafe(item.src);
+      let tmp5 = null != toURLSafeResult2;
+      if (tmp5) {
+        let result3 = closure_1_2(tmp2[12]).isExternalProxiedAttachmentUrl(toURLSafeResult2);
+        if (!result3) {
+          result3 = tmp6(tmp2[12]).isAttachmentPathUrl(toURLSafeResult2);
+          const tmp6Result = tmp6(tmp2[12]);
+        }
+        tmp5 = result3;
+        const obj4 = closure_1_2(tmp2[12]);
+        tmp6 = closure_1_2;
       }
-      tmp5 = result3;
-      const obj4 = closure_1_2(tmp2[12]);
-      tmp6 = closure_1_2;
-    }
-    src = tmp3.src;
-  }, constants5.INFREQUENT_USER_ACTION);
+      src = tmp3.src;
+    },
+    constants5.INFREQUENT_USER_ACTION,
+  );
 };
 export const removeFavoriteGIF = function removeFavoriteGIF(uri) {
   const _require = uri;
-  const FrecencyUserSettingsActionCreators = require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
-  FrecencyUserSettingsActionCreators.updateAsync("favoriteGifs", (gifs) => {
-    if (closure_0 in gifs.gifs) {
-      delete tmp[tmp2];
-    } else {
-      let obj = closure_1_1(closure_1_3[11]);
-      const toURLSafeResult = obj.toURLSafe(tmp4);
-      if (null != toURLSafeResult) {
-        let str = tmp4;
-        if (obj2.isAttachmentPathUrl(toURLSafeResult)) {
-          str = tmp10(tmp6[12]).removeSignedUrlParameters(toURLSafeResult);
-          str = str.toString();
-          const tmp10Result = tmp10(tmp6[12]);
+  const FrecencyUserSettingsActionCreators =
+    require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
+  FrecencyUserSettingsActionCreators.updateAsync(
+    "favoriteGifs",
+    (gifs) => {
+      if (closure_0 in gifs.gifs) {
+        delete tmp[tmp2];
+      } else {
+        let obj = closure_1_1(closure_1_3[11]);
+        const toURLSafeResult = obj.toURLSafe(tmp4);
+        if (null != toURLSafeResult) {
+          let str = tmp4;
+          if (obj2.isAttachmentPathUrl(toURLSafeResult)) {
+            str = tmp10(tmp6[12]).removeSignedUrlParameters(toURLSafeResult);
+            str = str.toString();
+            const tmp10Result = tmp10(tmp6[12]);
+          }
+          obj2 = closure_1_2(tmp6[12]);
+          tmp10 = closure_1_2;
         }
-        obj2 = closure_1_2(tmp6[12]);
-        tmp10 = closure_1_2;
+        delete tmp[tmp3];
       }
-      delete tmp[tmp3];
-    }
-    obj = { total_num_favorited: null };
-    const obj4 = closure_1_1(closure_1_3[17]);
-    obj[0] = closure_1_1(closure_1_3[9]).size(gifs.gifs);
-    obj4.track(closure_1_6.GIF_UNFAVORITED, obj);
-  }, constants5.INFREQUENT_USER_ACTION);
+      obj = { total_num_favorited: null };
+      const obj4 = closure_1_1(closure_1_3[17]);
+      obj[0] = closure_1_1(closure_1_3[9]).size(gifs.gifs);
+      obj4.track(closure_1_6.GIF_UNFAVORITED, obj);
+    },
+    constants5.INFREQUENT_USER_ACTION,
+  );
 };
 export const fetchTrendingSearchTerms = function fetchTrendingSearchTerms() {
   const HTTP = sendRequest.HTTP;

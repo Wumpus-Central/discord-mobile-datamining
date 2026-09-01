@@ -9,4 +9,4 @@ const result = set.fileFinishedImporting("modules/launchpad/native/showLaunchPad
 export default function showLaunchPad() {
   const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
   ComponentDispatch.dispatch(ComponentActions.LAUNCH_PAD_SHOW);
-};
+}

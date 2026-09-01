@@ -26,7 +26,12 @@ function setIndex(arg0, index) {
 ({ ChannelFlags: unpackModuleId, StaticChannelRoute: closure_12 } = set);
 let result = set.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");
 
-export const useFilterCategoriesByQuery = function useFilterCategoriesByQuery(guildId, stateFromStores1, stateFromStores2, str) {
+export const useFilterCategoriesByQuery = function useFilterCategoriesByQuery(
+  guildId,
+  stateFromStores1,
+  stateFromStores2,
+  str,
+) {
   const _require = stateFromStores1;
   closure_1 = stateFromStores2;
   let formatted = str;
@@ -46,7 +51,10 @@ export const useFilterCategoriesByQuery = function useFilterCategoriesByQuery(gu
         if (!tmp6) {
           const tmp9 = stateFromStores2(formatted[11]);
           const obj = stateFromStores1(formatted[12]);
-          let hasItem = tmp9(arg1, stateFromStores1(formatted[12]).computeChannelName(channel.channel, closure_1_8, closure_1_7).toLowerCase());
+          let hasItem = tmp9(
+            arg1,
+            stateFromStores1(formatted[12]).computeChannelName(channel.channel, closure_1_8, closure_1_7).toLowerCase(),
+          );
           if (!hasItem) {
             formatted = channel.channel.topic.toLowerCase();
             hasItem = formatted.includes(arg1);
@@ -129,7 +137,13 @@ export const clearRecentChannels = function clearRecentChannels(closure_0, closu
   _bulkClearRecents.bulkClearRecents(closure_0, closure_1);
   const obj = _bulkClearRecents;
   const tmp2 = require;
-  ack.bulkAck(closure_1.map((channelId) => ({ channelId, readStateType: constants.CHANNEL, messageId: closure_6.lastMessageId(channelId) })));
+  ack.bulkAck(
+    closure_1.map((channelId) => ({
+      channelId,
+      readStateType: constants.CHANNEL,
+      messageId: closure_6.lastMessageId(channelId),
+    })),
+  );
   if (null != tmp) {
     transitionTo.transitionTo(closure_9.CHANNEL(closure_0, tmp));
     const tmp2Result = transitionTo;
@@ -140,29 +154,36 @@ export const useChannelBrowserSections = function useChannelBrowserSections(guil
   closure_1 = filterCategoriesByQuery;
   dependencyMap = arg2;
   let obj = UNSAFE_isDismissibleContentDismissed;
-  let result = obj.useIsDismissibleContentDismissed_UNSAFE(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.CHANNEL_BROWSER_NUX);
+  let result = obj.useIsDismissibleContentDismissed_UNSAFE(
+    require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx")
+      .DismissibleContent.CHANNEL_BROWSER_NUX,
+  );
   const items = [closure_4];
   const items1 = [guildId];
-  closure_3 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
-    const obj = {};
-    const mutableGuildChannelsForGuild = closure_1_4.getMutableGuildChannelsForGuild(closure_0);
-    for (const key10009 in mutableGuildChannelsForGuild) {
-      let tmp2 = key10009;
-      let parent_id = mutableGuildChannelsForGuild[key10009].parent_id;
-      if (null == parent_id) {
-        continue;
-      } else {
-        let num = obj[parent_id];
-        if (num == null) {
-          num = 0;
+  closure_3 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(
+    items,
+    () => {
+      const obj = {};
+      const mutableGuildChannelsForGuild = closure_1_4.getMutableGuildChannelsForGuild(closure_0);
+      for (const key10009 in mutableGuildChannelsForGuild) {
+        let tmp2 = key10009;
+        let parent_id = mutableGuildChannelsForGuild[key10009].parent_id;
+        if (null == parent_id) {
+          continue;
+        } else {
+          let num = obj[parent_id];
+          if (num == null) {
+            num = 0;
+          }
+          obj[parent_id] = num + 1;
+          continue;
         }
-        obj[parent_id] = num + 1;
         continue;
       }
-      continue;
-    }
-    return obj;
-  }, items1);
+      return obj;
+    },
+    items1,
+  );
   const _categories = filterCategoriesByQuery._categories;
   const mapped = _categories.map((channel) => {
     if ("null" === channel.channel.id) {
@@ -191,7 +212,9 @@ export const useChannelBrowserSections = function useChannelBrowserSections(guil
 export const useChannelBrowserChannelCount = function useChannelBrowserChannelCount(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.getCategories(closure_0));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_5.getCategories(closure_0),
+  );
   let sum = stateFromStores._categories[stateFromStores._categories.length - 1];
   if (null == sum) {
     return 0;

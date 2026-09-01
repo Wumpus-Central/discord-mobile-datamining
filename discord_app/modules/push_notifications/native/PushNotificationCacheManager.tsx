@@ -16,7 +16,7 @@ let prototype = function PushNotificationCacheManager() {
     },
     LOGOUT() {
       return applyArgumentsResult.handleLogout();
-    }
+    },
   };
   const items = [closure_2, () => applyArgumentsResult.syncMultiAccountUsers()];
   const items1 = [items];
@@ -56,8 +56,7 @@ let prototype = function PushNotificationCacheManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 let result = require("set").fileFinishedImporting("modules/push_notifications/native/PushNotificationCacheManager.tsx");
 

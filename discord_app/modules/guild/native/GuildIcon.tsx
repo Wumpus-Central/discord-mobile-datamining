@@ -11,9 +11,48 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 let c4 = importAllResult;
 ({ getGuildIconSource: closure_6, getGuildAcronym: error } = GuildNSFWContentLevel);
-let obj = { XXXSMALL: "XXXSMALL", XXSMALL_12: "XXSMALL_12", XXSMALL: "XXSMALL", XSMALL_20: "XSMALL_20", XSMALL: "XSMALL", SMALL: "SMALL", SMALL_32: "SMALL_32", SMALL_36: "SMALL_36", NORMAL: "NORMAL", LARGE: "LARGE", XLARGE: "XLARGE", XXLARGE: "XXLARGE" };
-let closure_10 = { [obj.XXXSMALL]: [6, 4, 4, 4, 2, 1], [obj.XXSMALL_12]: [8, 6, 6, 4, 4, 2], [obj.XXSMALL]: [10, 8, 8, 6, 6, 4], [obj.XSMALL_20]: [12, 10, 10, 8, 8, 6], [obj.XSMALL]: [16, 16, 16, 14, 14, 12], [obj.SMALL]: [16, 16, 16, 14, 14, 12], [obj.SMALL_32]: [16, 16, 16, 14, 14, 12], [obj.SMALL_36]: [16, 16, 16, 14, 14, 12], [obj.NORMAL]: [16, 16, 16, 14, 14, 12], [obj.LARGE]: [16, 16, 16, 14, 14, 12], [obj.XLARGE]: [16, 16, 16, 14, 14, 12], [obj.XXLARGE]: [16, 16, 16, 14, 14, 12] };
-obj = { [obj.XXXSMALL]: 10, [obj.XXSMALL_12]: 12, [obj.XXSMALL]: 16, [obj.XSMALL_20]: 20, [obj.XSMALL]: 24, [obj.SMALL]: 30, [obj.SMALL_32]: 32, [obj.SMALL_36]: 36, [obj.NORMAL]: 40, [obj.LARGE]: 48, [obj.XLARGE]: 64, [obj.XXLARGE]: 80 };
+let obj = {
+  XXXSMALL: "XXXSMALL",
+  XXSMALL_12: "XXSMALL_12",
+  XXSMALL: "XXSMALL",
+  XSMALL_20: "XSMALL_20",
+  XSMALL: "XSMALL",
+  SMALL: "SMALL",
+  SMALL_32: "SMALL_32",
+  SMALL_36: "SMALL_36",
+  NORMAL: "NORMAL",
+  LARGE: "LARGE",
+  XLARGE: "XLARGE",
+  XXLARGE: "XXLARGE",
+};
+let closure_10 = {
+  [obj.XXXSMALL]: [6, 4, 4, 4, 2, 1],
+  [obj.XXSMALL_12]: [8, 6, 6, 4, 4, 2],
+  [obj.XXSMALL]: [10, 8, 8, 6, 6, 4],
+  [obj.XSMALL_20]: [12, 10, 10, 8, 8, 6],
+  [obj.XSMALL]: [16, 16, 16, 14, 14, 12],
+  [obj.SMALL]: [16, 16, 16, 14, 14, 12],
+  [obj.SMALL_32]: [16, 16, 16, 14, 14, 12],
+  [obj.SMALL_36]: [16, 16, 16, 14, 14, 12],
+  [obj.NORMAL]: [16, 16, 16, 14, 14, 12],
+  [obj.LARGE]: [16, 16, 16, 14, 14, 12],
+  [obj.XLARGE]: [16, 16, 16, 14, 14, 12],
+  [obj.XXLARGE]: [16, 16, 16, 14, 14, 12],
+};
+obj = {
+  [obj.XXXSMALL]: 10,
+  [obj.XXSMALL_12]: 12,
+  [obj.XXSMALL]: 16,
+  [obj.XSMALL_20]: 20,
+  [obj.XSMALL]: 24,
+  [obj.SMALL]: 30,
+  [obj.SMALL_32]: 32,
+  [obj.SMALL_36]: 36,
+  [obj.NORMAL]: 40,
+  [obj.LARGE]: 48,
+  [obj.XLARGE]: 64,
+  [obj.XXLARGE]: 80,
+};
 let obj1 = { guildIcon: { justifyContent: "center", alignItems: "center", overflow: "hidden" } };
 obj1[obj.XXXSMALL] = { width: 10, height: 10, borderRadius: 3.3333333333333335 };
 obj1[obj.XXSMALL_12] = { width: 12, height: 12, borderRadius: 4 };
@@ -142,9 +181,12 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
     tmp23 = tmp24;
   }
   closure_14 = tmp25;
-  const effect = obj1.useEffect(() => () => {
-    closure_12.current = false;
-  }, []);
+  const effect = obj1.useEffect(
+    () => () => {
+      closure_12.current = false;
+    },
+    [],
+  );
   let items = [!tmp23, flag, tmp16 !== tmp19, guild, icon, preloadAnimation, size];
   const effect1 = obj1.useEffect(() => {
     if (null != obj) {
@@ -182,14 +224,16 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
         if (preloadAnimation) {
           if (typeof tmp11 === "string") {
             const obj3 = icon(flag[10]);
-            icon(flag[10]).preload(tmp11).then(() => {
-              const timerId = setTimeout(() => {
-                if (closure_1_12.current) {
-                  closure_1_9.current = closure_0;
-                  closure_1_10({});
-                }
-              }, 0);
-            });
+            icon(flag[10])
+              .preload(tmp11)
+              .then(() => {
+                const timerId = setTimeout(() => {
+                  if (closure_1_12.current) {
+                    closure_1_9.current = closure_0;
+                    closure_1_10({});
+                  }
+                }, 0);
+              });
             const preloadResult = icon(flag[10]).preload(tmp11);
           }
         }
@@ -258,13 +302,13 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
         return callback(true);
       },
       wrapperStyle: items,
-      textComponentStyle: null
+      textComponentStyle: null,
     };
     if (!closure_15) {
       obj[2] = undefined;
       return obj;
     } else {
-      items1 = [, , ];
+      items1 = [, ,];
       items1[0] = false === selected ? items1.guildText : items1.guildTextActive;
       obj = { fontSize: null };
       obj[0] = closure_18;
@@ -278,7 +322,16 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
     obj = { shouldRasterizeIOS: true, style: null, collapsable: false, children: null };
     obj[1] = wrapperStyle;
     let tmp13Result = tmp13(tmp14[11]);
-    obj = { numberOfLines: 1, ellipsizeMode: "tail", accessible: false, accessibilityRole: "none", accessibilityElementsHidden: true, experimental_useNativeText: true, style: null, children: null };
+    obj = {
+      numberOfLines: 1,
+      ellipsizeMode: "tail",
+      accessible: false,
+      accessibilityRole: "none",
+      accessibilityElementsHidden: true,
+      experimental_useNativeText: true,
+      style: null,
+      children: null,
+    };
     obj[6] = tmp39;
     obj[7] = acronym;
     obj[3] = tmp40(guild(tmp14[12]).NativeText, obj);

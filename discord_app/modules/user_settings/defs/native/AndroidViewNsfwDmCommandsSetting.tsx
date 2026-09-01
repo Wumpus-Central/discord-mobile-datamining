@@ -53,7 +53,7 @@ const toggle = createToggle.createToggle({
       shouldAgeVerifyForSettingsToggles = tmpResult.isAndroid();
     }
     return shouldAgeVerifyForSettingsToggles;
-  }
+  },
 });
 let obj = {
   useTitle() {
@@ -100,7 +100,7 @@ let obj = {
       shouldAgeVerifyForSettingsToggles = tmpResult.isAndroid();
     }
     return shouldAgeVerifyForSettingsToggles;
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/user_settings/defs/native/AndroidViewNsfwDmCommandsSetting.tsx");
 

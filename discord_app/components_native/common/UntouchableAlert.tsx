@@ -6,10 +6,11 @@ import createCacheKey from "../../design/components/Styles/native/createStyles.t
 import importAllResult from "../../../_runtime/00019_noop.js";
 
 require = arg1;
-let closure_4 = createCacheKey.createLegacyClassComponentStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });
+let closure_4 = createCacheKey.createLegacyClassComponentStyles({
+  container: { flex: 1, alignItems: "center", justifyContent: "center" },
+});
 const PureComponent = importAllResult.PureComponent;
-class UntouchableAlert extends PureComponent {
-}
+class UntouchableAlert extends PureComponent {}
 const prototype = UntouchableAlert.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
   const self = this;

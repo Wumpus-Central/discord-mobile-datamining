@@ -11,15 +11,36 @@ let c4 = importAllResult;
 ({ View: c5, Pressable: closure_6, StyleSheet: error } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
 let closure_11 = ["black", "transparent"];
-let obj = { animatedViewContainer: { overflow: "hidden" }, container: { position: "relative", width: "100%" }, measuringContainer: { width: "100%", position: "absolute" }, descriptionContainer: { marginTop: 8 }, viewMoreCTA: { position: "absolute", right: 0, bottom: 0, pointerEvents: "none" }, maskFill: { flex: 1, backgroundColor: "black" }, maskLastLine: { flexDirection: "row" }, maskFade: { width: 32 }, collapseDescriptionCTA: { marginTop: 4 }, nameContainer: null, nameText: null, partnerLabelWrapper: null };
+let obj = {
+  animatedViewContainer: { overflow: "hidden" },
+  container: { position: "relative", width: "100%" },
+  measuringContainer: { width: "100%", position: "absolute" },
+  descriptionContainer: { marginTop: 8 },
+  viewMoreCTA: { position: "absolute", right: 0, bottom: 0, pointerEvents: "none" },
+  maskFill: { flex: 1, backgroundColor: "black" },
+  maskLastLine: { flexDirection: "row" },
+  maskFade: { width: 32 },
+  collapseDescriptionCTA: { marginTop: 4 },
+  nameContainer: null,
+  nameText: null,
+  partnerLabelWrapper: null,
+};
 obj = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4, overflow: "hidden" };
 obj[9] = obj;
 obj[10] = { flexShrink: 1 };
-createCacheKey = { justifyContent: "center", paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, borderRadius: ThemesDefault.radii.lg };
+createCacheKey = {
+  justifyContent: "center",
+  paddingVertical: 2,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE,
+  borderRadius: ThemesDefault.radii.lg,
+};
 obj[11] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(obj);
 let closure_13 = { code: "function DetailsHeaderTsx1(){const{height}=this.__closure;return{height:height.get()};}" };
-let closure_14 = { code: "function DetailsHeaderTsx2(){const{runOnJS,setShouldLineClamp}=this.__closure;runOnJS(setShouldLineClamp)(true);}" };
+let closure_14 = {
+  code: "function DetailsHeaderTsx2(){const{runOnJS,setShouldLineClamp}=this.__closure;runOnJS(setShouldLineClamp)(true);}",
+};
 const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyle) {
   ({ application, mainContainerStyle, hideName } = viewContainerStyle);
   let sharedValue;
@@ -126,7 +147,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
         tmp6 = ref2.current > 0 && ref.current > 0;
       }
     },
-    children: null
+    children: null,
   };
   items3 = [tmp.container, mainContainerStyle];
   obj1 = { style: tmp.nameContainer, children: null };
@@ -137,7 +158,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
     obj2[4] = sectionName;
     tmp30Result = tmp30(tmp2(4474).Heading, obj2);
   }
-  const items4 = [tmp30Result, ];
+  const items4 = [tmp30Result];
   tmp30Result = null;
   if (isPartnerApplicationResult) {
     obj3 = { style: null, children: null };
@@ -150,7 +171,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   }
   items4[1] = tmp30Result;
   obj1[1] = items4;
-  const items5 = [closure_9(closure_5, obj1), ];
+  const items5 = [closure_9(closure_5, obj1)];
   let tmp28Result = tmp28Result1;
   if (tmp28Result1) {
     let descriptionContainer = !hideName;
@@ -174,7 +195,9 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
           fn.__closure = obj;
           fn.__workletHash = 6050776164847;
           fn.__initData = _undefined;
-          const result = sharedValue.set(obj2.withTiming(current, sharedValue(4482).timingStandard, "respect-motion-settings", fn));
+          const result = sharedValue.set(
+            obj2.withTiming(current, sharedValue(4482).timingStandard, "respect-motion-settings", fn),
+          );
         } else {
           _undefined(false);
           obj = sharedValue(4479);
@@ -191,8 +214,8 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
       const obj7 = { style: null, children: null };
       obj7[0] = absoluteFill;
       obj6[0] = tmp.maskFill;
-      const items6 = [tmp30(tmp31, obj6), ];
-      const items7 = [tmp.maskLastLine, ];
+      const items6 = [tmp30(tmp31, obj6)];
+      const items7 = [tmp.maskLastLine];
       if (num3 == null) {
         num3 = 0;
       }
@@ -203,7 +226,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
       obj8[0] = items7;
       const obj10 = { style: null };
       obj10[0] = tmp.maskFill;
-      const items8 = [tmp30(tmp31, obj10), , ];
+      const items8 = [tmp30(tmp31, obj10), ,];
       const obj11 = { start: null, end: null, colors: null, style: null };
       tmp23Result = tmp23(4940);
       obj11[0] = tmp2(691).HorizontalGradient.START;
@@ -234,7 +257,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
     obj15[2] = num4;
     obj15[3] = memo;
     obj14[1] = tmp30(tmp2(4474).Text, obj15);
-    const items10 = [tmp30(tmp23Result, obj14), , ];
+    const items10 = [tmp30(tmp23Result, obj14), ,];
     let tmp30Result2 = null;
     if (tmp27) {
       const obj16 = { style: null, children: null };
@@ -271,7 +294,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   items5[1] = tmp28Result;
   obj[2] = items5;
   obj[1] = closure_9(closure_5, obj);
-  const children = [num2(first(4217).View, obj), ];
+  const children = [num2(first(4217).View, obj)];
   let tmp28Result2 = !first2;
   if (!first2) {
     const obj19 = { style: null, onLayout: null, children: null };
@@ -293,7 +316,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
       obj20[2] = sectionName;
       tmp30Result4 = tmp30(tmp2(4474).Heading, obj20);
     }
-    const items14 = [tmp30Result4, ];
+    const items14 = [tmp30Result4];
     if (tmp28Result1) {
       let descriptionContainer2 = !hideName;
       if (!hideName) {
@@ -316,7 +339,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
         }
       };
       obj22[3] = memo;
-      const items15 = [tmp30(tmp2(4474).Text, obj22), ];
+      const items15 = [tmp30(tmp2(4474).Text, obj22)];
       const obj23 = { variant: "text-sm/medium", color: "text-brand", style: null, children: null };
       obj23[2] = tmp.collapseDescriptionCTA;
       const intl4 = tmp2(1236).intl;
@@ -332,6 +355,8 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   children[1] = tmp28Result2;
   return closure_9(num3, { children });
 });
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/DetailsHeader.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/screens/application_view/app/DetailsHeader.tsx",
+);
 
 export default memoResult;

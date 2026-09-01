@@ -9,7 +9,12 @@ import ApexExperiment from "../experiments/apex/index.tsx";
 ({ SAVED_BOOKMARKS_MAX: c3, SAVED_REMINDERS_MAX: c4 } = SAVED_BOOKMARKS_MAX);
 let obj = { 1: null, 2: { enabled: true } };
 obj[2] = { enabled: true };
-let closure_5 = ApexExperiment.createApexExperiment({ name: "2026-03-message-bookmarks", kind: "user", defaultConfig: { enabled: false }, variations: obj });
+let closure_5 = ApexExperiment.createApexExperiment({
+  name: "2026-03-message-bookmarks",
+  kind: "user",
+  defaultConfig: { enabled: false },
+  variations: obj,
+});
 class ForLaterFreemiumConfig {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -41,7 +46,7 @@ const obj2 = {
     obj.enabled = true;
     ({ b: tmp3.bookmarkLimit, r: tmp3.reminderLimit } = parsed);
     return obj;
-  }
+  },
 };
 obj2[2] = (arg0) => {
   const parsed = JSON.parse(arg0);

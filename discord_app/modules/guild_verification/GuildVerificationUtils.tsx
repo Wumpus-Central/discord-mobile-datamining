@@ -9,7 +9,9 @@ require = arg1;
 ({ GuildFeatures: c3, Routes: c4 } = ME);
 let result = require("set").fileFinishedImporting("modules/guild_verification/GuildVerificationUtils.tsx");
 
-export const inviteGuildHasPendingMemberDisabledVerification = function inviteGuildHasPendingMemberDisabledVerification(guild) {
+export const inviteGuildHasPendingMemberDisabledVerification = function inviteGuildHasPendingMemberDisabledVerification(
+  guild,
+) {
   const features = guild.features;
   let hasItem;
   if (features != null) {
@@ -25,7 +27,9 @@ export const inviteGuildHasPendingMemberDisabledVerification = function inviteGu
   }
   return hasItem;
 };
-export const openVerificationModalOrTransitionToApplication = function openVerificationModalOrTransitionToApplication(id) {
+export const openVerificationModalOrTransitionToApplication = function openVerificationModalOrTransitionToApplication(
+  id,
+) {
   request = request.getRequest(id);
   if (null != request) {
     if (request.applicationStatus !== MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.STARTED) {

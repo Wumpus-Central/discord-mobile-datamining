@@ -4,7 +4,9 @@ import closure_3 from "../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let closure_4 = { NONE: "none", LOADING: "loading", SUCCESS: "success", ERROR: "error" };
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoQuestCaptions.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/quests/native/VideoQuestModal/hooks/useVideoQuestCaptions.tsx",
+);
 
 export const useVideoQuestCaptions = (quest) => {
   const questAsset = url(10922).getQuestAsset(quest, url(10922).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
@@ -23,16 +25,18 @@ export const useVideoQuestCaptions = (quest) => {
       const obj = { url: null, rejectWithError: true };
       obj[0] = tmp;
       const value = HTTP.get(obj);
-      value.then((text) => {
-        try {
-          callback2(closure_1_0(closure_1_1[4]).parseVtt(text.text).cues);
-          callback(closure_1_4.SUCCESS);
-        } catch (err) {
+      value
+        .then((text) => {
+          try {
+            callback2(closure_1_0(closure_1_1[4]).parseVtt(text.text).cues);
+            callback(closure_1_4.SUCCESS);
+          } catch (err) {
+            callback(closure_1_4.ERROR);
+          }
+        })
+        .catch(() => {
           callback(closure_1_4.ERROR);
-        }
-      }).catch(() => {
-        callback(closure_1_4.ERROR);
-      });
+        });
       const nextPromise = value.then((text) => {
         try {
           callback2(closure_1_0(closure_1_1[4]).parseVtt(text.text).cues);

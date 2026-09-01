@@ -6,11 +6,13 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 noopAll;
 let closure_3 = createCacheKey.createStyles({ container: { borderRadius: 3 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/CreatorRevenueButton.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/CreatorRevenueButton.tsx",
+);
 
 export const CreatorRevenueButton = function CreatorRevenueButton(arg0) {
   ({ disabled, text, onPress, style, loading } = arg0);
-  style = [callback().container, ];
+  style = [callback().container];
   style[1] = style;
   return jsx(ShinyButtonDefault, { style, loading, disabled, onPress, text });
 };

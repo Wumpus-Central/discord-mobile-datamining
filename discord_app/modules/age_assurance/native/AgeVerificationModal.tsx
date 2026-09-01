@@ -24,7 +24,9 @@ function AgeVerifyScreen(uri) {
     }
   }, items1);
   const obj = onComplete(isSuspendedUser[3]);
-  const watchAgeVerificationStatusChange = onComplete(isSuspendedUser[5]).useWatchAgeVerificationStatusChange(callback1);
+  const watchAgeVerificationStatusChange = onComplete(isSuspendedUser[5]).useWatchAgeVerificationStatusChange(
+    callback1,
+  );
   const items2 = [callback, isSuspendedUser];
   const onMessage = callback.useCallback((nativeEvent) => {
     if (null != nativeEvent.nativeEvent.data) {
@@ -46,11 +48,17 @@ function AgeVerifyScreen(uri) {
         if (tmp3) {
           callback();
         }
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }, items2);
-  return jsx(onClose(isSuspendedUser[6]), { allowsInlineMediaPlayback: true, javaScriptEnabled: true, source: { uri: uri.webviewUrl }, onMessage, injectedJavaScript: "\n  window.addEventListener('message', function(event) {\n    window.ReactNativeWebView.postMessage(event.data);\n  }, true);\n" });
+  return jsx(onClose(isSuspendedUser[6]), {
+    allowsInlineMediaPlayback: true,
+    javaScriptEnabled: true,
+    source: { uri: uri.webviewUrl },
+    onMessage,
+    injectedJavaScript:
+      "\n  window.addEventListener('message', function(event) {\n    window.ReactNativeWebView.postMessage(event.data);\n  }, true);\n",
+  });
 }
 let closure_6 = { VERIFY_AGE: "VERIFY_AGE" };
 createCacheKey = { headerStyle: null };
@@ -89,12 +97,16 @@ export default function AgeVerificationModal(webviewUrl) {
         },
         render() {
           return closure_1_5(closure_1_7, { webviewUrl: closure_0, onComplete: closure_1, onClose: handleClose });
-        }
-      }
+        },
+      },
     };
   }, items);
   let obj = { screens: memo, initialRouteName: constants.VERIFY_AGE, headerBackTitle: null };
   const intl2 = webviewUrl(onClose[11]).intl;
   obj[2] = intl2.string(webviewUrl(onClose[11]).t["13/7kX"]);
-  return jsx(webviewUrl(onClose[12]).Navigator, { screens: memo, initialRouteName: constants.VERIFY_AGE, headerBackTitle: null });
-};
+  return jsx(webviewUrl(onClose[12]).Navigator, {
+    screens: memo,
+    initialRouteName: constants.VERIFY_AGE,
+    headerBackTitle: null,
+  });
+}

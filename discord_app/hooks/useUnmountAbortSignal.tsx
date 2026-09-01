@@ -14,7 +14,7 @@ export default function useUnmountAbortSignal() {
     closure_0.abort();
   });
   return tmp.signal;
-};
+}
 export const useUnmountAbortSignalWithDelay = function useUnmountAbortSignalWithDelay(arg0) {
   const _require = arg0;
   const tmp = useInitialValueDefault(() => {

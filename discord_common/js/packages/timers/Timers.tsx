@@ -1,8 +1,7 @@
 // discord_common/js/packages/timers/Timers.tsx
 import closure_0 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-class Timeout {
-}
+class Timeout {}
 const prototype = Timeout.prototype;
 prototype["start"] = function start(arg0, arg1) {
   let self = this;
@@ -72,11 +71,9 @@ const prototype3 = function BatchInvocationManagerResetError() {
   applyArgumentsResult.name = "BatchInvocationManagerResetError";
   return applyArgumentsResult;
 }.prototype;
-class prototype3 extends Error {
-}
+class prototype3 extends Error {}
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/timers/Timers.tsx");
-class Interval {
-}
+class Interval {}
 const prototype4 = Interval.prototype;
 prototype4["start"] = function start(arg0, arg1) {
   this.stop();
@@ -205,7 +202,7 @@ prototype5["reset"] = function reset() {
 };
 prototype5["_flush"] = function _flush() {
   const self = this;
-  return self(function*() {
+  return self(function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();

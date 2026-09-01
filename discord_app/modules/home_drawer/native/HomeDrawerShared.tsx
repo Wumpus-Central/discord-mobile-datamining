@@ -6,7 +6,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 noopAll;
 ({ jsxs: closure_1, jsx: obj1 } = jsxProd);
-let closure_3 = createCacheKey.createStyles({ container: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 12 }, titleContainer: { flex: 1, flexDirection: "column", justifyContent: "center", gap: 2 }, rightContainer: { overflow: "hidden" } });
+let closure_3 = createCacheKey.createStyles({
+  container: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 12 },
+  titleContainer: { flex: 1, flexDirection: "column", justifyContent: "center", gap: 2 },
+  rightContainer: { overflow: "hidden" },
+});
 const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerShared.tsx");
 
 export const HomeDrawerSharedItem = function HomeDrawerSharedItem(right) {
@@ -16,7 +20,7 @@ export const HomeDrawerSharedItem = function HomeDrawerSharedItem(right) {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.titleContainer, children: items };
   items = [title, subtitle];
-  const items1 = [callback(View, obj), ];
+  const items1 = [callback(View, obj)];
   let tmp4 = null;
   if (null != right) {
     obj = { style: null, children: null };

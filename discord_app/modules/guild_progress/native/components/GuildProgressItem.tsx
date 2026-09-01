@@ -31,7 +31,7 @@ export default function GuildProgressItem(guild) {
     title: null,
     isCompleted: null,
     renderEndComponent: null,
-    fullWidth: true
+    fullWidth: true,
   };
   obj = { uri: null };
   const tmp = callback();
@@ -45,9 +45,9 @@ export default function GuildProgressItem(guild) {
   let fn;
   if (numFinished > 0) {
     if (numFinished < totalSteps) {
-      fn = () => totalSteps(numFinished(completed[8]), { percent: 100 * numFinished / totalSteps, size: 32 });
+      fn = () => totalSteps(numFinished(completed[8]), { percent: (100 * numFinished) / totalSteps, size: 32 });
     }
   }
   obj[5] = fn;
   return tmp3(numFinished(completed[4]), obj);
-};
+}

@@ -5,14 +5,30 @@ import RPCCommands from "helpers.tsx";
 import CONTEXT_MENU_ICON_NAMES from "contextMenuIcons.tsx";
 
 function VoiceCapabilities(boolean) {
-  let obj = { available: boolean.boolean().required(), connected: null, participant_updates: null, binary_speaking: null, spatial: null };
+  let obj = {
+    available: boolean.boolean().required(),
+    connected: null,
+    participant_updates: null,
+    binary_speaking: null,
+    spatial: null,
+  };
   const booleanResult = boolean.boolean();
   obj[1] = boolean.boolean().required();
   const booleanResult1 = boolean.boolean();
   obj[2] = boolean.boolean().required();
   const booleanResult2 = boolean.boolean();
   obj[3] = boolean.boolean().required();
-  obj = { available: null, source_positioning: null, source_gain: null, source_spatial_blend: null, listener_pose: null, room_size: null, reflections: null, max_sources: null, max_updates_per_second: null };
+  obj = {
+    available: null,
+    source_positioning: null,
+    source_gain: null,
+    source_spatial_blend: null,
+    listener_pose: null,
+    room_size: null,
+    reflections: null,
+    max_sources: null,
+    max_updates_per_second: null,
+  };
   const booleanResult3 = boolean.boolean();
   obj[0] = boolean.boolean().required();
   const booleanResult4 = boolean.boolean();
@@ -45,7 +61,7 @@ let obj = {
   response(boolean) {
     const obj = { success: boolean.boolean().required() };
     return obj;
-  }
+  },
 };
 obj = {
   request(string) {
@@ -65,7 +81,7 @@ obj = {
     const stringResult3 = string.string();
     obj[3] = string.string().valid("rgba").required();
     return obj;
-  }
+  },
 };
 obj = { request: "Array", response: 0 };
 obj[1] = function response(string) {
@@ -103,7 +119,16 @@ obj6[1] = function response(string) {
   const stringResult1 = string.string();
   obj[2] = VoiceCapabilities(string).required();
   const obj4 = VoiceCapabilities(string);
-  obj = { user_id: null, username: null, global_name: null, avatar: null, mute: null, deaf: null, self_mute: null, self_deaf: null };
+  obj = {
+    user_id: null,
+    username: null,
+    global_name: null,
+    avatar: null,
+    mute: null,
+    deaf: null,
+    self_mute: null,
+    self_deaf: null,
+  };
   const arrayResult = string.array();
   obj[0] = string.string().required();
   const stringResult2 = string.string();
@@ -165,7 +190,32 @@ obj20[1] = function response(array) {
     HermesBuiltin.throwTypeError();
   }
   obj1 = { relationships: null };
-  const obj2 = { session_id: null, type: null, name: null, url: null, application_id: null, status_display_type: null, state: null, state_url: null, details: null, details_url: null, emoji: null, assets: null, timestamps: null, party: null, secrets: null, sync_id: null, created_at: null, instance: null, flags: null, metadata: null, platform: null, supported_platforms: null, buttons: null, hangStatus: null };
+  const obj2 = {
+    session_id: null,
+    type: null,
+    name: null,
+    url: null,
+    application_id: null,
+    status_display_type: null,
+    state: null,
+    state_url: null,
+    details: null,
+    details_url: null,
+    emoji: null,
+    assets: null,
+    timestamps: null,
+    party: null,
+    secrets: null,
+    sync_id: null,
+    created_at: null,
+    instance: null,
+    flags: null,
+    metadata: null,
+    platform: null,
+    supported_platforms: null,
+    buttons: null,
+    hangStatus: null,
+  };
   const stringResult = array.string();
   obj2[0] = array.string().optional();
   const stringResult1 = array.string();
@@ -283,11 +333,19 @@ obj26[1] = function response(string) {
   const obj = { ticket: string.string().required() };
   return obj;
 };
-function Activity(arg0) {
-
-}
+function Activity(arg0) {}
 function User(string) {
-  let obj = { id: null, username: null, global_name: null, discriminator: null, avatar: null, flags: null, bot: null, avatar_decoration_data: null, premium_type: null };
+  let obj = {
+    id: null,
+    username: null,
+    global_name: null,
+    discriminator: null,
+    avatar: null,
+    flags: null,
+    bot: null,
+    avatar_decoration_data: null,
+    premium_type: null,
+  };
   const stringResult = string.string();
   obj[0] = string.string().required().description("User ID");
   const requiredResult = string.string().required();
@@ -321,11 +379,19 @@ function User(string) {
   objectResult = string.object(obj);
   return objectResult.description("Discord User");
 }
-function ContextMenuIcon(arg0) {
-
-}
+function ContextMenuIcon(arg0) {}
 function ContextMenuItem(string) {
-  let obj = { id: null, type: null, label: null, subtext: null, icon: null, color: null, disabled: null, checked: null, group: null };
+  let obj = {
+    id: null,
+    type: null,
+    label: null,
+    subtext: null,
+    icon: null,
+    color: null,
+    disabled: null,
+    checked: null,
+    group: null,
+  };
   const stringResult = string.string();
   obj[0] = string.string().max(64).required();
   const maxResult = string.string().max(64);
@@ -365,12 +431,8 @@ function ContextMenuItem(string) {
   }
   return alternativesResult.try(string.object(obj), string.object(tmp3));
 }
-function ActionRowComponent(arg0) {
-
-}
-function ButtonComponent(arg0) {
-
-}
+function ActionRowComponent(arg0) {}
+function ButtonComponent(arg0) {}
 const result = set.fileFinishedImporting("../discord_common/js/packages/rpc-schema/definitions.tsx");
 
 export const RPCCommandSchemas = {
@@ -384,7 +446,13 @@ export const RPCCommandSchemas = {
       return obj;
     },
     response(string) {
-      let obj = { access_token: string.string().required(), user: null, scopes: null, expires: null, application: null };
+      let obj = {
+        access_token: string.string().required(),
+        user: null,
+        scopes: null,
+        expires: null,
+        application: null,
+      };
       obj = { username: null, discriminator: null, id: null, avatar: null, public_flags: null, global_name: null };
       const stringResult = string.string();
       obj[0] = string.string().required();
@@ -423,7 +491,7 @@ export const RPCCommandSchemas = {
       objectResult = string.object(obj);
       obj[4] = objectResult.required();
       return obj;
-    }
+    },
   },
   [RPCCommands.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: obj3,
   [RPCCommands.RPCCommand.GET_VOICE_CAPABILITIES]: obj4,
@@ -434,7 +502,16 @@ export const RPCCommandSchemas = {
     },
     response(array) {
       let obj = { participants: null };
-      obj = { user_id: null, username: null, global_name: null, avatar: null, mute: null, deaf: null, self_mute: null, self_deaf: null };
+      obj = {
+        user_id: null,
+        username: null,
+        global_name: null,
+        avatar: null,
+        mute: null,
+        deaf: null,
+        self_mute: null,
+        self_deaf: null,
+      };
       const arrayResult = array.array();
       obj[0] = array.string().required();
       const stringResult = array.string();
@@ -457,7 +534,7 @@ export const RPCCommandSchemas = {
       const objectResult = array.object(obj);
       obj[0] = arrayResult.items(array.object(obj).required()).required();
       return obj;
-    }
+    },
   },
   [RPCCommands.RPCCommand.START_VOICE_SESSION]: obj6,
   [RPCCommands.RPCCommand.UPDATE_VOICE_SPATIAL]: {
@@ -529,7 +606,7 @@ export const RPCCommandSchemas = {
     response(boolean) {
       const obj = { success: boolean.boolean().required() };
       return obj;
-    }
+    },
   },
   [RPCCommands.RPCCommand.ENABLE_VOICE_SPATIAL]: obj,
   [RPCCommands.RPCCommand.DISABLE_VOICE_SPATIAL]: obj,
@@ -547,7 +624,15 @@ export const RPCCommandSchemas = {
   [RPCCommands.RPCCommand.STOP_CAMERA_VIEW]: obj,
   [RPCCommands.RPCCommand.SHARE_INTERACTION]: {
     request(string) {
-      let obj = { command: string.string().required(), options: null, content: null, require_launch_channel: null, preview_image: null, components: null, pid: null };
+      let obj = {
+        command: string.string().required(),
+        options: null,
+        content: null,
+        require_launch_channel: null,
+        preview_image: null,
+        components: null,
+        pid: null,
+      };
       let arrayResult = string.array();
       obj = { name: null, value: null };
       const stringResult = string.string();
@@ -601,7 +686,7 @@ export const RPCCommandSchemas = {
     response(boolean) {
       const obj = { success: boolean.boolean().required() };
       return obj;
-    }
+    },
   },
   [RPCCommands.RPCCommand.SHARE_LINK]: {
     request(string) {
@@ -620,11 +705,20 @@ export const RPCCommandSchemas = {
       const booleanResult1 = boolean.boolean();
       obj[2] = boolean.boolean().required();
       return obj;
-    }
+    },
   },
   [RPCCommands.RPCCommand.SHARE_CONTENT]: {
     request(string) {
-      let obj = { content: null, link: null, custom_id: null, link_id: null, image_url: null, attachments: null, preview_title: null, preview_subtitle: null };
+      let obj = {
+        content: null,
+        link: null,
+        custom_id: null,
+        link_id: null,
+        image_url: null,
+        attachments: null,
+        preview_title: null,
+        preview_subtitle: null,
+      };
       const stringResult = string.string();
       obj[0] = string.string().max(1000).required();
       const maxResult = string.string().max(1000);
@@ -646,9 +740,14 @@ export const RPCCommandSchemas = {
       obj[1] = string.string().max(64).required();
       const maxResult3 = string.string().max(64);
       const stringResult7 = string.string();
-      obj[2] = string.string().valid("image/png", "image/jpeg", "image/gif", "image/webp", "video/mp4", "video/webm").required();
+      obj[2] = string
+        .string()
+        .valid("image/png", "image/jpeg", "image/gif", "image/webp", "video/mp4", "video/webm")
+        .required();
       obj[5] = maxResult1.items(string.object(obj));
-      const validResult = string.string().valid("image/png", "image/jpeg", "image/gif", "image/webp", "video/mp4", "video/webm");
+      const validResult = string
+        .string()
+        .valid("image/png", "image/jpeg", "image/gif", "image/webp", "video/mp4", "video/webm");
       obj[6] = string.string().max(100);
       const stringResult8 = string.string();
       obj[7] = string.string().max(100);
@@ -661,7 +760,7 @@ export const RPCCommandSchemas = {
       const booleanResult1 = boolean.boolean();
       obj[2] = boolean.boolean().required();
       return obj;
-    }
+    },
   },
   [RPCCommands.RPCCommand.OPEN_CONTEXT_MENU]: {
     request(string) {
@@ -689,7 +788,7 @@ export const RPCCommandSchemas = {
       const booleanResult = boolean.boolean();
       obj[1] = boolean.string().allow(null);
       return obj;
-    }
+    },
   },
   [RPCCommands.RPCCommand.OPEN_MEDIA_VIEWER]: {
     request(array) {
@@ -720,7 +819,7 @@ export const RPCCommandSchemas = {
     response(boolean) {
       const obj = { opened: boolean.boolean().required() };
       return obj;
-    }
+    },
   },
   [RPCCommands.RPCCommand.OPEN_USER_PROFILE]: {
     request(string) {
@@ -732,7 +831,7 @@ export const RPCCommandSchemas = {
     response(boolean) {
       const obj = { opened: boolean.boolean().required() };
       return obj;
-    }
+    },
   },
   [RPCCommands.RPCCommand.SHOW_TOOLTIP]: {
     request(string) {
@@ -758,7 +857,7 @@ export const RPCCommandSchemas = {
     response(boolean) {
       const obj = { shown: boolean.boolean().required() };
       return obj;
-    }
+    },
   },
   [RPCCommands.RPCCommand.HIDE_TOOLTIP]: obj17,
   [RPCCommands.RPCCommand.SHOW_TOAST]: {
@@ -774,7 +873,7 @@ export const RPCCommandSchemas = {
     response(boolean) {
       const obj = { shown: boolean.boolean().required() };
       return obj;
-    }
+    },
   },
   [RPCCommands.RPCCommand.SHOW_CONFIRM_MODAL]: {
     request(string) {
@@ -795,7 +894,7 @@ export const RPCCommandSchemas = {
     },
     response(boolean) {
       return { confirmed: boolean.boolean(), acknowledged: boolean.boolean() };
-    }
+    },
   },
   [RPCCommands.RPCCommand.GET_RELATIONSHIPS]: obj20,
   [RPCCommands.RPCCommand.INVITE_USER_EMBEDDED]: {
@@ -806,7 +905,7 @@ export const RPCCommandSchemas = {
       obj[1] = string.string().min(0).max(1024);
       return obj;
     },
-    response: "Array"
+    response: "Array",
   },
   [RPCCommands.RPCCommand.GET_USER]: {
     request(string) {
@@ -817,7 +916,7 @@ export const RPCCommandSchemas = {
     },
     response(arg0) {
       return User(arg0).allow(null);
-    }
+    },
   },
   [RPCCommands.RPCCommand.GET_QUEST_ENROLLMENT_STATUS]: {
     request(string) {
@@ -832,7 +931,7 @@ export const RPCCommandSchemas = {
       const stringResult1 = string.string();
       obj[2] = string.string().allow(null).optional();
       return obj;
-    }
+    },
   },
   [RPCCommands.RPCCommand.QUEST_START_TIMER]: {
     request(string) {
@@ -842,7 +941,7 @@ export const RPCCommandSchemas = {
     response(boolean) {
       const obj = { success: boolean.boolean().required() };
       return obj;
-    }
+    },
   },
   [RPCCommands.RPCCommand.GET_QUEST]: obj25,
   [RPCCommands.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: obj26,
@@ -854,6 +953,6 @@ export const RPCCommandSchemas = {
     response(boolean) {
       const obj = { enabled: boolean.boolean().required() };
       return obj;
-    }
-  }
+    },
+  },
 };

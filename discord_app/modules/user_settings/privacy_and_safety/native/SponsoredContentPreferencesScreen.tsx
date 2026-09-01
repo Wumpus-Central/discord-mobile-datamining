@@ -7,7 +7,9 @@ import { HelpdeskArticles } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SponsoredContentPreferencesScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/privacy_and_safety/native/SponsoredContentPreferencesScreen.tsx",
+);
 
 export default function SponsoredContentPreferencesScreen() {
   let obj = { settings: items, subLabel: null };
@@ -15,7 +17,7 @@ export default function SponsoredContentPreferencesScreen() {
   const intl = items1(1236).intl;
   obj = { helpdeskArticle: combinedDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };
   obj[1] = intl.format(items1(1236).t.cf9mvV, obj);
-  items1 = [obj, , ];
+  items1 = [obj, ,];
   obj = { settings: items2, subLabel: null };
   items2 = [MobileUserSettings.USE_DATA_FOR_QUESTS_3P_SPONSORED_CONTENT];
   const intl2 = items1(1236).intl;
@@ -33,4 +35,4 @@ export default function SponsoredContentPreferencesScreen() {
     return obj.createList(obj);
   }, items4);
   return jsx(_modDef14340, { node });
-};
+}

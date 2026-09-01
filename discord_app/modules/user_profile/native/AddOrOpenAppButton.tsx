@@ -13,13 +13,19 @@ function AddAppButton(application) {
   application = application.application;
   const guildId = application.guildId;
   let obj = React;
-  let items = [, , , , ];
+  let items = [, , , ,];
   ({ customInstallUrl: arr[0], id: arr[1], installParams: arr[2], integrationTypesConfig: arr[3] } = application);
   items[4] = guildId;
   [][0] = application;
   const callback = React.useCallback(() => {
     let obj = application(closure_1_2[8]);
-    obj = { applicationId: application.id, customInstallUrl: application.customInstallUrl, installParams: application.installParams, integrationTypesConfig: application.integrationTypesConfig, guildId };
+    obj = {
+      applicationId: application.id,
+      customInstallUrl: application.customInstallUrl,
+      installParams: application.installParams,
+      integrationTypesConfig: application.integrationTypesConfig,
+      guildId,
+    };
     obj.installApplication(obj);
     guildId(closure_1_2[9]).hideActionSheet();
   }, items);
@@ -46,7 +52,14 @@ function AddAppButton(application) {
         const obj3 = application(closure_1_2[12]);
       }
     }, items1);
-    obj = { text: null, onPress: null, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null, icon: null };
+    obj = {
+      text: null,
+      onPress: null,
+      onLongPress: null,
+      accessibilityActions: null,
+      onAccessibilityAction: null,
+      icon: null,
+    };
     let intl = tmp6(1236).intl;
     obj[0] = intl.string(tmp6(1236).t.NgXl3C);
     obj[1] = callback;
@@ -69,132 +82,135 @@ function OpenAppButton(profileApplication) {
   const tmp = callback2(React.useState(false), 2);
   callback = tmp[1];
   const items = [botUserId, channel, profileApplication.id];
-  callback = React.useCallback(callback(function*() {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c2 = 0;
-            let id = tmp2;
-            closure_0 = undefined;
-            id = undefined;
-            obj1 = { type: "channel", channel: null };
-            obj1[1] = closure_1_2;
-            const tmp44 = closure_1_6(obj1, closure_1_0.id);
-            closure_0 = tmp44;
-            const descriptor2 = tmp44.descriptor;
-            let application;
-            if (descriptor2 != null) {
-              application = descriptor2.application;
-            }
-            if (null == application) {
-              v0(true);
-            }
-            const descriptor = tmp44.descriptor;
-            let application1;
-            if (descriptor != null) {
-              application1 = descriptor.application;
-            }
-            closure_0 = application1;
-            if (application1 == null) {
-              v0 = 1;
-              c4 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = closure_1_1(closure_1_2[19]).fetchApplication(tmp43.id);
-              return obj2;
-            } else {
-              id = closure_0;
-              v0(false);
-              if (null != closure_0) {
-                let obj4 = closure_1_1(closure_1_2[9]);
-                obj4.hideAllActionSheets();
-                let obj5 = closure_1_1(closure_1_2[20]);
-                const obj3 = { recipientIds: null };
-                obj3[0] = id;
-                v0 = 2;
-                c4 = 1;
-                obj4 = { value: null, done: false };
-                obj4[0] = obj5.openPrivateChannel(obj3);
-                return obj4;
-              } else {
-                c4 = 3;
-              }
-            }
-            tmp43 = closure_1_0;
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            closure_0 = arg1;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          const _setTimeout = setTimeout;
-          const timerId = setTimeout(() => {
-            let obj = lib(table[21]);
-            const bestActiveInput = obj.getBestActiveInput();
-            if (bestActiveInput != null) {
-              obj = { type: null, context: null };
-              obj[0] = lib(table[22]).KeyboardTypes.APP_LAUNCHER;
-              obj = { initialRouteName: null, initiallyExpanded: true, application: null, installOnDemand: null };
-              obj[0] = closure_1_8.APPLICATION_VIEW;
-              obj[2] = closure_1;
-              const isGuildInstalled = lib.isGuildInstalled;
-              let tmp5 = !isGuildInstalled;
-              if (!isGuildInstalled) {
-                tmp5 = !lib.isUserInstalled;
-              }
-              obj[3] = tmp5;
-              obj[1] = obj;
-              bestActiveInput.openCustomKeyboard(obj);
-            }
-          }, 0);
-          obj = closure_1_1(closure_1_2[23]);
-          const obj6 = { application_id: null };
-          obj6[0] = id.id;
-          obj.track(closure_1_7.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj6);
-        }
+  callback = React.useCallback(
+    callback(function* () {
+      if (c4 === 2) {
         c4 = 3;
-        const obj7 = { value: null, done: true };
-        obj7[0] = arg1;
-        return obj7;
-      } catch (tmp35) {
-        c4 = tmp;
-        throw tmp35;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              c2 = 0;
+              let id = tmp2;
+              closure_0 = undefined;
+              id = undefined;
+              obj1 = { type: "channel", channel: null };
+              obj1[1] = closure_1_2;
+              const tmp44 = closure_1_6(obj1, closure_1_0.id);
+              closure_0 = tmp44;
+              const descriptor2 = tmp44.descriptor;
+              let application;
+              if (descriptor2 != null) {
+                application = descriptor2.application;
+              }
+              if (null == application) {
+                v0(true);
+              }
+              const descriptor = tmp44.descriptor;
+              let application1;
+              if (descriptor != null) {
+                application1 = descriptor.application;
+              }
+              closure_0 = application1;
+              if (application1 == null) {
+                v0 = 1;
+                c4 = 1;
+                const obj2 = { value: null, done: false };
+                obj2[0] = closure_1_1(closure_1_2[19]).fetchApplication(tmp43.id);
+                return obj2;
+              } else {
+                id = closure_0;
+                v0(false);
+                if (null != closure_0) {
+                  let obj4 = closure_1_1(closure_1_2[9]);
+                  obj4.hideAllActionSheets();
+                  let obj5 = closure_1_1(closure_1_2[20]);
+                  const obj3 = { recipientIds: null };
+                  obj3[0] = id;
+                  v0 = 2;
+                  c4 = 1;
+                  obj4 = { value: null, done: false };
+                  obj4[0] = obj5.openPrivateChannel(obj3);
+                  return obj4;
+                } else {
+                  c4 = 3;
+                }
+              }
+              tmp43 = closure_1_0;
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj5 = { value: null, done: true };
+              obj5[0] = arg1;
+              return obj5;
+            } else {
+              closure_0 = arg1;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 !== 2) {
+            const _setTimeout = setTimeout;
+            const timerId = setTimeout(() => {
+              let obj = lib(table[21]);
+              const bestActiveInput = obj.getBestActiveInput();
+              if (bestActiveInput != null) {
+                obj = { type: null, context: null };
+                obj[0] = lib(table[22]).KeyboardTypes.APP_LAUNCHER;
+                obj = { initialRouteName: null, initiallyExpanded: true, application: null, installOnDemand: null };
+                obj[0] = closure_1_8.APPLICATION_VIEW;
+                obj[2] = closure_1;
+                const isGuildInstalled = lib.isGuildInstalled;
+                let tmp5 = !isGuildInstalled;
+                if (!isGuildInstalled) {
+                  tmp5 = !lib.isUserInstalled;
+                }
+                obj[3] = tmp5;
+                obj[1] = obj;
+                bestActiveInput.openCustomKeyboard(obj);
+              }
+            }, 0);
+            obj = closure_1_1(closure_1_2[23]);
+            const obj6 = { application_id: null };
+            obj6[0] = id.id;
+            obj.track(closure_1_7.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj6);
+          }
+          c4 = 3;
+          const obj7 = { value: null, done: true };
+          obj7[0] = arg1;
+          return obj7;
+        } catch (tmp35) {
+          c4 = tmp;
+          throw tmp35;
+        }
       }
-    }
-  }), items);
+    }),
+    items,
+  );
   let obj = { text: null, loading: null, onPress: null };
   const intl = profileApplication(channel[16]).intl;
   obj[0] = intl.string(profileApplication(channel[16]).t["Cia+A8"]);
@@ -218,4 +234,4 @@ export default function AddOrOpenAppButton(arg0) {
     return tmp2;
   }
   tmp2 = <AddAppButton application={application} guildId={guildId} />;
-};
+}

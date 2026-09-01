@@ -11,8 +11,7 @@ require = arg1;
 const HOUR = setDefault.Millis.HOUR;
 let closure_5 = new privDefault({ max: 50 });
 const Store = initializeDefault.Store;
-class BadgeDirectoryStore extends Store {
-}
+class BadgeDirectoryStore extends Store {}
 const prototype = BadgeDirectoryStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3);
@@ -191,16 +190,25 @@ const badgeDirectoryStore = new BadgeDirectoryStore(dispatcherDefault, {
     let obj = store;
     let peekResult = store.peek(userId);
     if (peekResult == null) {
-      obj = { badges: null, catalogFetched: false, fetchError: false, fetchedAt: null, driftBackoff: null, driftFetchGateUntil: null };
+      obj = {
+        badges: null,
+        catalogFetched: false,
+        fetchError: false,
+        fetchedAt: null,
+        driftBackoff: null,
+        driftFetchGateUntil: null,
+      };
       const _Map = Map;
       const map = new Map();
       obj[0] = map;
       peekResult = obj;
     }
-    peekResult.badges = new Map(badges.map((badge_id) => {
-      const items = [badge_id.badge_id, badge_id];
-      return items;
-    }));
+    peekResult.badges = new Map(
+      badges.map((badge_id) => {
+        const items = [badge_id.badge_id, badge_id];
+        return items;
+      }),
+    );
     peekResult.catalogFetched = true;
     peekResult.fetchError = false;
     peekResult.fetchedAt = Date.now();
@@ -211,7 +219,14 @@ const badgeDirectoryStore = new BadgeDirectoryStore(dispatcherDefault, {
     let obj = store;
     let peekResult = store.peek(userId);
     if (peekResult == null) {
-      obj = { badges: null, catalogFetched: false, fetchError: false, fetchedAt: null, driftBackoff: null, driftFetchGateUntil: null };
+      obj = {
+        badges: null,
+        catalogFetched: false,
+        fetchError: false,
+        fetchedAt: null,
+        driftBackoff: null,
+        driftFetchGateUntil: null,
+      };
       const _Map = Map;
       const map = new Map();
       obj[0] = map;
@@ -225,7 +240,14 @@ const badgeDirectoryStore = new BadgeDirectoryStore(dispatcherDefault, {
     let obj = store;
     let peekResult = store.peek(userId);
     if (peekResult == null) {
-      obj = { badges: null, catalogFetched: false, fetchError: false, fetchedAt: null, driftBackoff: null, driftFetchGateUntil: null };
+      obj = {
+        badges: null,
+        catalogFetched: false,
+        fetchError: false,
+        fetchedAt: null,
+        driftBackoff: null,
+        driftFetchGateUntil: null,
+      };
       const _Map = Map;
       const map = new Map();
       obj[0] = map;
@@ -247,7 +269,10 @@ const badgeDirectoryStore = new BadgeDirectoryStore(dispatcherDefault, {
         }
         const _Array = Array;
         badges = value.badges;
-        if (badges.filter((id) => null != callback(table[3]).resolveProfileBadgeId(id.id)).length !== arr.filter((owned) => owned.owned).length) {
+        if (
+          badges.filter((id) => null != callback(table[3]).resolveProfileBadgeId(id.id)).length !==
+          arr.filter((owned) => owned.owned).length
+        ) {
           let num = value.driftFetchGateUntil;
           if (num == null) {
             num = 0;
@@ -280,7 +305,7 @@ const badgeDirectoryStore = new BadgeDirectoryStore(dispatcherDefault, {
   },
   LOGOUT: function handleReset() {
     store.reset();
-  }
+  },
 });
 let obj = {
   BADGE_DIRECTORY_FETCH_START: function handleFetchStart(userId) {
@@ -294,16 +319,25 @@ let obj = {
     let obj = store;
     let peekResult = store.peek(userId);
     if (peekResult == null) {
-      obj = { badges: null, catalogFetched: false, fetchError: false, fetchedAt: null, driftBackoff: null, driftFetchGateUntil: null };
+      obj = {
+        badges: null,
+        catalogFetched: false,
+        fetchError: false,
+        fetchedAt: null,
+        driftBackoff: null,
+        driftFetchGateUntil: null,
+      };
       const _Map = Map;
       const map = new Map();
       obj[0] = map;
       peekResult = obj;
     }
-    peekResult.badges = new Map(badges.map((badge_id) => {
-      const items = [badge_id.badge_id, badge_id];
-      return items;
-    }));
+    peekResult.badges = new Map(
+      badges.map((badge_id) => {
+        const items = [badge_id.badge_id, badge_id];
+        return items;
+      }),
+    );
     peekResult.catalogFetched = true;
     peekResult.fetchError = false;
     peekResult.fetchedAt = Date.now();
@@ -314,7 +348,14 @@ let obj = {
     let obj = store;
     let peekResult = store.peek(userId);
     if (peekResult == null) {
-      obj = { badges: null, catalogFetched: false, fetchError: false, fetchedAt: null, driftBackoff: null, driftFetchGateUntil: null };
+      obj = {
+        badges: null,
+        catalogFetched: false,
+        fetchError: false,
+        fetchedAt: null,
+        driftBackoff: null,
+        driftFetchGateUntil: null,
+      };
       const _Map = Map;
       const map = new Map();
       obj[0] = map;
@@ -328,7 +369,14 @@ let obj = {
     let obj = store;
     let peekResult = store.peek(userId);
     if (peekResult == null) {
-      obj = { badges: null, catalogFetched: false, fetchError: false, fetchedAt: null, driftBackoff: null, driftFetchGateUntil: null };
+      obj = {
+        badges: null,
+        catalogFetched: false,
+        fetchError: false,
+        fetchedAt: null,
+        driftBackoff: null,
+        driftFetchGateUntil: null,
+      };
       const _Map = Map;
       const map = new Map();
       obj[0] = map;
@@ -350,7 +398,10 @@ let obj = {
         }
         const _Array = Array;
         badges = value.badges;
-        if (badges.filter((id) => null != callback(table[3]).resolveProfileBadgeId(id.id)).length !== arr.filter((owned) => owned.owned).length) {
+        if (
+          badges.filter((id) => null != callback(table[3]).resolveProfileBadgeId(id.id)).length !==
+          arr.filter((owned) => owned.owned).length
+        ) {
           let num = value.driftFetchGateUntil;
           if (num == null) {
             num = 0;
@@ -383,7 +434,7 @@ let obj = {
   },
   LOGOUT: function handleReset() {
     store.reset();
-  }
+  },
 };
 let tmp2 = new privDefault({ max: 50 });
 let result = require("set").fileFinishedImporting("modules/badges/BadgeDirectoryStore.tsx");

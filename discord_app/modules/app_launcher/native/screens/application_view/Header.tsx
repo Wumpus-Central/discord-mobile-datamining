@@ -19,21 +19,91 @@ noopAll;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 const xl = ThemesDefault.radii.xl;
 let c11 = 105;
-createCacheKey = { headerContainer: { position: "absolute", top: -16, left: 0, right: 0, minHeight: 161 }, expandedHeaderBanner: { height: 105 }, appIconMask: null, collapsedHeaderBanner: null, collapsedHeaderBannerOverlay: null, loadingIcon: null, actionsWrapper: null };
-createCacheKey = { position: "absolute", padding: 4, bottom: -40, left: 16, backgroundColor: SCREEN_BACKGROUND_COLOR, borderRadius: ThemesDefault.radii.xl + 4 };
+createCacheKey = {
+  headerContainer: { position: "absolute", top: -16, left: 0, right: 0, minHeight: 161 },
+  expandedHeaderBanner: { height: 105 },
+  appIconMask: null,
+  collapsedHeaderBanner: null,
+  collapsedHeaderBannerOverlay: null,
+  loadingIcon: null,
+  actionsWrapper: null,
+};
+createCacheKey = {
+  position: "absolute",
+  padding: 4,
+  bottom: -40,
+  left: 16,
+  backgroundColor: SCREEN_BACKGROUND_COLOR,
+  borderRadius: ThemesDefault.radii.xl + 4,
+};
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { height: 56, justifyContent: "space-between", alignItems: "center", position: "absolute", top: 0, left: 0, right: 0, flexDirection: "row", paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: 16, paddingBottom: ThemesDefault.space.PX_12 };
+createCacheKey[3] = {
+  height: 56,
+  justifyContent: "space-between",
+  alignItems: "center",
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  flexDirection: "row",
+  paddingHorizontal: DEFAULT_CONTENT_PADDING,
+  paddingTop: 16,
+  paddingBottom: ThemesDefault.space.PX_12,
+};
 createCacheKey[4] = { backgroundColor: "black", position: "absolute", top: 0, left: 0, right: 0, bottom: 0 };
-let obj1 = { height: 56, justifyContent: "space-between", alignItems: "center", position: "absolute", top: 0, left: 0, right: 0, flexDirection: "row", paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: 16, paddingBottom: ThemesDefault.space.PX_12 };
-createCacheKey[5] = { height: 72, width: 72, borderRadius: xl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+let obj1 = {
+  height: 56,
+  justifyContent: "space-between",
+  alignItems: "center",
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  flexDirection: "row",
+  paddingHorizontal: DEFAULT_CONTENT_PADDING,
+  paddingTop: 16,
+  paddingBottom: ThemesDefault.space.PX_12,
+};
+createCacheKey[5] = {
+  height: 72,
+  width: 72,
+  borderRadius: xl,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 let obj2 = { height: 72, width: 72, borderRadius: xl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-createCacheKey[6] = { flexDirection: "row", display: "flex", gap: ThemesDefault.space.PX_16, position: "absolute", right: ThemesDefault.space.PX_12, top: ThemesDefault.space.PX_12, alignItems: "center", justifyContent: "center" };
+createCacheKey[6] = {
+  flexDirection: "row",
+  display: "flex",
+  gap: ThemesDefault.space.PX_16,
+  position: "absolute",
+  right: ThemesDefault.space.PX_12,
+  top: ThemesDefault.space.PX_12,
+  alignItems: "center",
+  justifyContent: "center",
+};
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let closure_13 = { code: "function HeaderTsx1(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[0,HEADER_SCROLL_RANGE],[0,-HEADER_SCROLL_RANGE],'clamp')}]};}" };
-let closure_14 = { code: "function HeaderTsx2(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[0,HEADER_SCROLL_RANGE],[0,HEADER_SCROLL_RANGE],'clamp')}]};}" };
-let closure_15 = { code: "function HeaderTsx3(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[16,0],'clamp')}],opacity:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[0,1],'clamp')};}" };
-let closure_16 = { code: "function HeaderTsx4(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{opacity:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[0,0.5],'clamp')};}" };
-let obj3 = { flexDirection: "row", display: "flex", gap: ThemesDefault.space.PX_16, position: "absolute", right: ThemesDefault.space.PX_12, top: ThemesDefault.space.PX_12, alignItems: "center", justifyContent: "center" };
+let closure_13 = {
+  code: "function HeaderTsx1(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[0,HEADER_SCROLL_RANGE],[0,-HEADER_SCROLL_RANGE],'clamp')}]};}",
+};
+let closure_14 = {
+  code: "function HeaderTsx2(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[0,HEADER_SCROLL_RANGE],[0,HEADER_SCROLL_RANGE],'clamp')}]};}",
+};
+let closure_15 = {
+  code: "function HeaderTsx3(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[16,0],'clamp')}],opacity:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[0,1],'clamp')};}",
+};
+let closure_16 = {
+  code: "function HeaderTsx4(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{opacity:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[0,0.5],'clamp')};}",
+};
+let obj3 = {
+  flexDirection: "row",
+  display: "flex",
+  gap: ThemesDefault.space.PX_16,
+  position: "absolute",
+  right: ThemesDefault.space.PX_12,
+  top: ThemesDefault.space.PX_12,
+  alignItems: "center",
+  justifyContent: "center",
+};
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/Header.tsx");
 
 export default function Header(application) {
@@ -155,14 +225,29 @@ export default function Header(application) {
   items1 = [tmp3.headerContainer, animatedStyle];
   let obj4 = { interpolate: scrollOffsetY(4217).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
   let items2 = [tmp3.expandedHeaderBanner, { backgroundColor: tmp6Result }];
-  const items3 = [tmp13(currentUser2, { style: items2, pointerEvents: "none", children: tmp13(currentUser2, obj7) }), , ];
+  const items3 = [
+    tmp13(currentUser2, { style: items2, pointerEvents: "none", children: tmp13(currentUser2, obj7) }),
+    ,
+  ];
   const obj8 = { style: items4, pointerEvents: "box-none", children: null };
   items4 = [tmp3.collapsedHeaderBanner, { backgroundColor: tmp6Result }, animatedStyle1];
   const items5 = [tmp3.collapsedHeaderBannerOverlay, animatedStyle3];
-  const items6 = [tmp13(_modDef4217.View, { style: items5, pointerEvents: "none" }), tmp13(AppLauncherBackButtonDefault, { onPress: onPressBack }), , ];
+  const items6 = [
+    tmp13(_modDef4217.View, { style: items5, pointerEvents: "none" }),
+    tmp13(AppLauncherBackButtonDefault, { onPress: onPressBack }),
+    ,
+  ];
   const obj6 = { style: items2, pointerEvents: "none", children: tmp13(currentUser2, obj7) };
   const tmp23 = currentUser2;
-  items6[2] = tmp13(_modDef4217.View, { style: animatedStyle2, pointerEvents: "none", children: tmp13(scrollOffsetY(4474).Heading, { variant: "heading-lg/bold", color: "text-overlay-light", children: str2 }) });
+  items6[2] = tmp13(_modDef4217.View, {
+    style: animatedStyle2,
+    pointerEvents: "none",
+    children: tmp13(scrollOffsetY(4474).Heading, {
+      variant: "heading-lg/bold",
+      color: "text-overlay-light",
+      children: str2,
+    }),
+  });
   items6[3] = tmp13(scrollOffsetY(1297).Spacer, { size: 32, pointerEvents: "none" });
   obj8[2] = items6;
   items3[1] = callback2(_modDef4217.View, obj8);
@@ -172,7 +257,14 @@ export default function Header(application) {
     if (tmpResult7.isRealApplication(application)) {
       const obj10 = { style: null, children: null };
       obj10[0] = tmp3.actionsWrapper;
-      const obj11 = { size: "sm", variant: "secondary-overlay", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
+      const obj11 = {
+        size: "sm",
+        variant: "secondary-overlay",
+        icon: null,
+        onPress: null,
+        accessibilityLabel: null,
+        maxFontSizeMultiplier: 1.5,
+      };
       obj11[2] = tmp5(4422);
       obj11[3] = function onPress() {
         let obj = callback(_undefined[22]);
@@ -201,7 +293,7 @@ export default function Header(application) {
       };
       const intl = tmp(1236).intl;
       obj11[4] = intl.string(tmp(1236).t.XWDihq);
-      const items7 = [tmp13(tmp(8006).IconButton, obj11), ];
+      const items7 = [tmp13(tmp(8006).IconButton, obj11)];
       const obj12 = { application: null, onAddAppMenuClick: null };
       obj12[0] = application;
       obj12[1] = onAddAppMenuClick;
@@ -214,6 +306,6 @@ export default function Header(application) {
   items3[2] = tmp22Result;
   obj5[2] = items3;
   return callback2(_modDef4217.View, obj5);
-};
+}
 export const SHEET_HANDLE_CONTAINER_HEIGHT = 16;
 export const EXPANDED_HEADER_HEIGHT = 161;

@@ -24,7 +24,8 @@ function ApplicationRejectedNotice(guildId) {
     const hasItem1 = features2.has(GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
   }
   const tmp = callback3();
-  ({ resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = useOnboardingMonetizationEnableFlowDefault(stateFromStores));
+  ({ resubmissionError, requestRejectedNoticeText, reapplyNoticeText } =
+    useOnboardingMonetizationEnableFlowDefault(stateFromStores));
   if (null != resubmissionError) {
     obj = { children: null };
     let tmp9Result = tmp9(11790);
@@ -97,8 +98,14 @@ function GuildSettingsRoleSubscription(arg0) {
 noopAll;
 ({ ActivityIndicator: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ container: { flex: 1 }, warningBlockContainer: { marginHorizontal: 16, marginTop: 16 }, spinner: { marginTop: 12 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionContainer.tsx");
+let closure_9 = createCacheKey.createStyles({
+  container: { flex: 1 },
+  warningBlockContainer: { marginHorizontal: 16, marginTop: 16 },
+  spinner: { marginTop: 12 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionContainer.tsx",
+);
 
 export default function GuildSettingsRoleSubscriptionContainer(guildId) {
   let obj = { guildId: guildId.guildId, refetchOnMount: true, children: null };
@@ -108,4 +115,4 @@ export default function GuildSettingsRoleSubscriptionContainer(guildId) {
   obj[1] = callback(GuildSettingsRoleSubscription, obj);
   obj[2] = callback(useRoleSubscriptionSettingsDisabled.RoleSubscriptionSettingsDisabledContextProvider, obj);
   return callback(useGroupListingsFetchContext.GroupListingsFetchContextProvider, obj);
-};
+}

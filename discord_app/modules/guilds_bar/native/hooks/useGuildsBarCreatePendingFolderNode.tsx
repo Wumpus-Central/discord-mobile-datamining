@@ -5,7 +5,9 @@ import closure_4 from "../../../guild_member_verification/UserGuildJoinRequestSt
 import closure_5 from "../../../../stores/ExpandedGuildFolderStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarCreatePendingFolderNode.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guilds_bar/native/hooks/useGuildsBarCreatePendingFolderNode.tsx",
+);
 
 export default function useGuildsBarCreatePendingFolderNode() {
   let obj = stateFromStores(589);
@@ -13,7 +15,9 @@ export default function useGuildsBarCreatePendingFolderNode() {
   stateFromStores = obj.useStateFromStores(items, () => obj.hasFetchedRequestToJoinGuilds);
   const arr2 = usePendingFolderGuildIdsDefault();
   const items1 = [closure_5];
-  const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => folderExpanded.isFolderExpanded(stateFromStores(table[5]).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER));
+  const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () =>
+    folderExpanded.isFolderExpanded(stateFromStores(table[5]).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER),
+  );
   const items2 = [stateFromStores];
   const effect = React.useEffect(() => {
     if (!stateFromStores) {
@@ -49,4 +53,4 @@ export default function useGuildsBarCreatePendingFolderNode() {
   const obj2 = stateFromStores(589);
   const tmp = stateFromStores;
   const tmp3 = dependencyMap;
-};
+}

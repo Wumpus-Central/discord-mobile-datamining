@@ -16,7 +16,14 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
     tmp5 = tmp;
   }
   let obj = { pillContainer: null, discountPillText: null };
-  obj = { backgroundColor: WHITE, borderRadius: tmp5(712).radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingVertical: 1 };
+  obj = {
+    backgroundColor: WHITE,
+    borderRadius: tmp5(712).radii.round,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 8,
+    paddingVertical: 1,
+  };
   obj[0] = obj;
   obj[1] = { textAlign: "center" };
   return obj;
@@ -72,7 +79,16 @@ export const PremiumPill = (discountOffer) => {
   callback = tmp8Result;
   const tmp8 = flag(flag2[6]);
   premiumTrialOfferPremiumType = discountOffer(flag2[7]).usePremiumTrialOfferPremiumType();
-  const items1 = [flag2, discountOffer, flag, trialOffer, premiumType, premiumTrialOfferPremiumType, tmp8Result.days, flag3];
+  const items1 = [
+    flag2,
+    discountOffer,
+    flag,
+    trialOffer,
+    premiumType,
+    premiumTrialOfferPremiumType,
+    tmp8Result.days,
+    flag3,
+  ];
   const str3 = premiumType.useMemo(() => {
     if (flag2) {
       const intl4 = discountOffer(flag2[8]).intl;

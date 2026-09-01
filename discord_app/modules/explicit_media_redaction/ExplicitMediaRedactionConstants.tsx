@@ -2,7 +2,11 @@
 import MessageEmbedTypes from "../../../discord_common/js/shared/shared-constants/MessageEmbedTypes.tsx";
 import set from "../../../_runtime/00002_set.js";
 
-const items = [MessageEmbedTypes.MessageEmbedTypes.IMAGE, MessageEmbedTypes.MessageEmbedTypes.VIDEO, MessageEmbedTypes.MessageEmbedTypes.GIFV];
+const items = [
+  MessageEmbedTypes.MessageEmbedTypes.IMAGE,
+  MessageEmbedTypes.MessageEmbedTypes.VIDEO,
+  MessageEmbedTypes.MessageEmbedTypes.GIFV,
+];
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionConstants.tsx");
 

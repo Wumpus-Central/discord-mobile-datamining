@@ -62,7 +62,13 @@ export const useAppKeyCommands = function useAppKeyCommands() {
     } else {
       keyModifierCommand = KeyCommandsView.KeyCommandsView.keyModifierCommand;
     }
-    obj = { input: "k", modifierFlags: keyModifierCommand, eventName: "keyCommandShowQuickSwitcher", discoverabilityTitle: null, onKeyCommand: null };
+    obj = {
+      input: "k",
+      modifierFlags: keyModifierCommand,
+      eventName: "keyCommandShowQuickSwitcher",
+      discoverabilityTitle: null,
+      onKeyCommand: null,
+    };
     const intl = tmp(tmp2[12]).intl;
     obj[3] = intl.string(callback(table[12]).t.yYsRlD);
     obj[4] = function onKeyCommand() {

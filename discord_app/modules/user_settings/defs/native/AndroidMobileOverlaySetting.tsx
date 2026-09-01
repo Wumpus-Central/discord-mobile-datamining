@@ -21,9 +21,11 @@ createToggle = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Wfoivk);
   },
-  usePredicate: require("getUserAgnosticState").isMobileOverlaySupported
+  usePredicate: require("getUserAgnosticState").isMobileOverlaySupported,
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx",
+);
 
 export default createToggle;

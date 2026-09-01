@@ -20,8 +20,7 @@ function handleSearchMessagesSuccess(data) {
 }
 let closure_2 = {};
 const Store = initializeDefault.Store;
-class ExplicitMediaSearchStore extends Store {
-}
+class ExplicitMediaSearchStore extends Store {}
 ExplicitMediaSearchStore.prototype["getMessage"] = function getMessage(arg0, arg1) {
   return dependencyMap["" + arg1 + ":" + arg0];
 };
@@ -60,7 +59,7 @@ const explicitMediaSearchStore = new ExplicitMediaSearchStore(dispatcherDefault,
       dependencyMap[combined] = redactionSettingToRenderedString.handleExplicitMediaScanTimeoutForMessage(tmp2);
       const obj = redactionSettingToRenderedString;
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaSearchStore.tsx");
 

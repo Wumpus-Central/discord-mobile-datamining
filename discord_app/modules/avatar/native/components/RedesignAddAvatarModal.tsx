@@ -12,7 +12,16 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { container: null, contentContainer: null, growContainer: null, headerContainer: null, buttonContainer: null, title: null, subtitle: null, errorContainer: null };
+createCacheKey = {
+  container: null,
+  contentContainer: null,
+  growContainer: null,
+  headerContainer: null,
+  buttonContainer: null,
+  title: null,
+  subtitle: null,
+  errorContainer: null,
+};
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 2, alignItems: "center" };
@@ -36,7 +45,7 @@ export default function RedesignAddAvatarModal(route) {
   let pendingImage;
   function _handleSelectAvatar() {
     const self = this;
-    const tmp = callback(function*() {
+    const tmp = callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -152,7 +161,7 @@ export default function RedesignAddAvatarModal(route) {
     imageUri = pendingImage.imageUri;
   }
   obj = { style: tmp.container, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
-  const items1 = [tmp.contentContainer, ];
+  const items1 = [tmp.contentContainer];
   obj1 = { paddingBottom: null, paddingHorizontal: null };
   const tmp9Result1 = onComplete(first[14]);
   obj1[0] = importDefault(first[9])().bottom + importDefault(first[8]).space.PX_16;
@@ -161,16 +170,22 @@ export default function RedesignAddAvatarModal(route) {
   obj[2] = items1;
   let obj2 = { style: tmp.headerContainer, children: null };
   let obj3 = { children: null };
-  let obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  let obj4 = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = tmp9(tmp8[19]).intl;
   obj4[4] = intl.string(onComplete(first[19]).t.XQRWvR);
-  const items2 = [callback(onComplete(first[18]).Text, obj4), ];
+  const items2 = [callback(onComplete(first[18]).Text, obj4)];
   let obj5 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = tmp9(tmp8[19]).intl;
   obj5[3] = intl2.string(onComplete(first[19]).t.fH9TLT);
   items2[1] = callback(onComplete(first[18]).Text, obj5);
   obj3[0] = items2;
-  const items3 = [callback2(closure_6, obj3), , ];
+  const items3 = [callback2(closure_6, obj3), ,];
   const memoizedImageSourceResult = onComplete(first[14]).memoizedImageSource(imageUri);
   const tmp15 = closure_7;
   items3[1] = callback(importDefault(first[20]), {
@@ -185,7 +200,7 @@ export default function RedesignAddAvatarModal(route) {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    }
+    },
   });
   const obj7 = { style: tmp.errorContainer, children: null };
   if (tmp17Result) {
@@ -197,7 +212,11 @@ export default function RedesignAddAvatarModal(route) {
   obj7[1] = tmp17Result;
   items3[2] = callback(closure_6, obj7);
   obj2[1] = items3;
-  const items4 = [callback2(closure_6, obj2), callback(importDefault(first[12]), { onAvatarSelect: tmp4[1], selectedAvatar: first }), callback(closure_6, { style: tmp.growContainer }), ];
+  const items4 = [
+    callback2(closure_6, obj2),
+    callback(importDefault(first[12]), { onAvatarSelect: tmp4[1], selectedAvatar: first }),
+    callback(closure_6, { style: tmp.growContainer }),
+  ];
   const obj10 = { style: tmp.buttonContainer, children: null };
   const obj11 = { variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
   const intl4 = tmp9(tmp8[19]).intl;
@@ -205,9 +224,7 @@ export default function RedesignAddAvatarModal(route) {
   obj11[3] = function onPress() {
     let fn = onComplete;
     if (null == onComplete) {
-      fn = () => {
-
-      };
+      fn = () => {};
     }
     return onComplete(first[22]).handlePressNext(pendingImage, first, fn);
   };
@@ -216,4 +233,4 @@ export default function RedesignAddAvatarModal(route) {
   items4[3] = callback(closure_6, obj10);
   obj[3] = items4;
   return callback2(tmp15, obj);
-};
+}

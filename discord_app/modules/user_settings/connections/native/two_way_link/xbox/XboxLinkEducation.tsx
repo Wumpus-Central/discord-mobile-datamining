@@ -15,7 +15,9 @@ require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkEducation.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/xbox/XboxLinkEducation.tsx",
+);
 
 export default function XboxLinkEducation(onClose) {
   let obj = styles;
@@ -25,8 +27,13 @@ export default function XboxLinkEducation(onClose) {
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   obj1 = { source: React.useMemo(() => ({ uri: callback(table[7]) }), []), style: callback3().image };
-  const items = [callback(closure_4, obj1), , ];
-  const obj2 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
+  const items = [callback(closure_4, obj1), ,];
+  const obj2 = {
+    variant: "heading-xl/bold",
+    color: "mobile-text-heading-primary",
+    style: twoWayLinkStyles.title,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj2[3] = intl.string(getSystemLocale.t.jHytat);
   items[1] = callback(Text.Text, obj2);
@@ -35,7 +42,7 @@ export default function XboxLinkEducation(onClose) {
   obj3[3] = intl2.format(getSystemLocale.t.yhozpz, { helpdeskArticleUrl: articleURL });
   items[2] = callback(Text.Text, obj3);
   obj[1] = items;
-  const items1 = [callback2(closure_5, obj), ];
+  const items1 = [callback2(closure_5, obj)];
   const obj4 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
   const obj5 = { style: twoWayLinkStyles.footerButton, children: null };
   const obj6 = { size: "lg", variant: "primary", text: null, onPress: null };
@@ -47,4 +54,4 @@ export default function XboxLinkEducation(onClose) {
   items1[1] = callback(SafeAreaPaddingView.SafeAreaPaddingView, obj4);
   obj[1] = items1;
   return callback2(closure_5, obj);
-};
+}

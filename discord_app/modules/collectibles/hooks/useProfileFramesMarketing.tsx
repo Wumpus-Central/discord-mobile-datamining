@@ -15,9 +15,13 @@ export const deriveProfileFramesMarketing = function deriveProfileFramesMarketin
   return { isAnnouncementEligible, isEarlyAccess, showGiftingMarketing: isAnnouncementEligible };
 };
 export const useProfileFramesMarketing = function useProfileFramesMarketing(CollectiblesMobileAnnouncementActionSheet) {
-  const canViewProfileFramesInCollectiblesShop = useCanPurchaseFrames.useCanViewProfileFramesInCollectiblesShop(CollectiblesMobileAnnouncementActionSheet);
+  const canViewProfileFramesInCollectiblesShop = useCanPurchaseFrames.useCanViewProfileFramesInCollectiblesShop(
+    CollectiblesMobileAnnouncementActionSheet,
+  );
   const obj = useCanPurchaseFrames;
-  const isEarlyAccess = useCanPurchaseFrames.useIsProfileFramesEarlyAccessPhase(CollectiblesMobileAnnouncementActionSheet);
+  const isEarlyAccess = useCanPurchaseFrames.useIsProfileFramesEarlyAccessPhase(
+    CollectiblesMobileAnnouncementActionSheet,
+  );
   let isAnnouncementEligible = canViewProfileFramesInCollectiblesShop;
   if (canViewProfileFramesInCollectiblesShop) {
     isAnnouncementEligible = !isEarlyAccess;

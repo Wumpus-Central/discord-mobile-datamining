@@ -4,7 +4,9 @@ import databaseNameDefault from "../../../app_database/system/DatabaseManager.ts
 import closure_3 from "../../../../stores/AuthenticationStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/useNativeAndroidEmojiPickerEnabled.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/emoji_picker/native/components/useNativeAndroidEmojiPickerEnabled.tsx",
+);
 
 export default function useNativeAndroidEmojiPickerEnabled() {
   let isAndroidResult = set.isAndroid();
@@ -13,4 +15,4 @@ export default function useNativeAndroidEmojiPickerEnabled() {
     const obj2 = databaseNameDefault;
   }
   return isAndroidResult;
-};
+}

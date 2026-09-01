@@ -6,7 +6,9 @@ import { ChannelTypes } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/channel/native/components/CreateChannelTypeDescription.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/channel/native/components/CreateChannelTypeDescription.tsx",
+);
 
 export default function CreateChannelTypeDescription(guildId) {
   guildId = guildId.guildId;
@@ -37,7 +39,11 @@ export default function CreateChannelTypeDescription(guildId) {
     const intl = tmp(1236).intl;
     obj[2] = intl.string(tmp(1236).t["2Ab4Id"]);
     obj[0] = jsx(tmp(4474).Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
-    tmp9 = <View variant="text-sm/normal" color="text-subtle">{null}</View>;
+    tmp9 = (
+      <View variant="text-sm/normal" color="text-subtle">
+        {null}
+      </View>
+    );
   }
   return tmp9;
-};
+}

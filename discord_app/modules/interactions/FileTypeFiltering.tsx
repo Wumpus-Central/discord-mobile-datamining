@@ -47,7 +47,10 @@ const result = require("set").fileFinishedImporting("modules/interactions/FileTy
 export const useFileTypesFormattedString = function useFileTypesFormattedString(fileTypes) {
   const _require = fileTypes;
   const items = [closure_5];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => locale.locale);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => locale.locale,
+  );
   const items1 = [fileTypes, stateFromStores];
   return React.useMemo(() => closure_1_11(closure_0, stateFromStores), items1);
 };
@@ -83,7 +86,13 @@ export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
     }
     const tmp24 = fileTypesFormattedStringHelper(fileTypes, locale.locale);
     closure_1 = tmp24;
-    let obj = { allowedExtensions: null, typesFormattedString: null, validateFilenames: null, showInvalidFileTypeAlert: null, mediaFilesAllowed: null };
+    let obj = {
+      allowedExtensions: null,
+      typesFormattedString: null,
+      validateFilenames: null,
+      showInvalidFileTypeAlert: null,
+      mediaFilesAllowed: null,
+    };
     obj[0] = items3;
     obj[1] = tmp24;
     obj[2] = function validateFilenames(arr) {
@@ -109,13 +118,15 @@ export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
       obj[1] = intl2.formatToPlainString(items3(closure_1_2[4]).t["5U9LSo"], obj);
       obj.show(obj);
     };
-    obj[4] = 0 === items3.length || items3.some((arg0) => {
-      let hasItem = closure_6.includes(arg0);
-      if (!hasItem) {
-        hasItem = closure_7.includes(arg0);
-      }
-      return hasItem;
-    });
+    obj[4] =
+      0 === items3.length ||
+      items3.some((arg0) => {
+        let hasItem = closure_6.includes(arg0);
+        if (!hasItem) {
+          hasItem = closure_7.includes(arg0);
+        }
+        return hasItem;
+      });
     return obj;
   }
   items3 = [];
@@ -196,13 +207,18 @@ export const useFileTypeFiltering = function useFileTypeFiltering(fileTypes) {
     typesFormattedString: memo1,
     validateFilenames: callback,
     showInvalidFileTypeAlert: callback1,
-    mediaFilesAllowed: React.useMemo(() => 0 === stateFromStores.length || stateFromStores.some((arg0) => {
-      let hasItem = closure_6.includes(arg0);
-      if (!hasItem) {
-        hasItem = closure_7.includes(arg0);
-      }
-      return hasItem;
-    }), items5)
+    mediaFilesAllowed: React.useMemo(
+      () =>
+        0 === stateFromStores.length ||
+        stateFromStores.some((arg0) => {
+          let hasItem = closure_6.includes(arg0);
+          if (!hasItem) {
+            hasItem = closure_7.includes(arg0);
+          }
+          return hasItem;
+        }),
+      items5,
+    ),
   };
   return obj;
 };

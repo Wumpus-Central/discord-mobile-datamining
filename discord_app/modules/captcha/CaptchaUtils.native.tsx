@@ -24,7 +24,7 @@ export default {
       },
       close() {
         return callback2(table[3]).hideActionSheet(closure_4);
-      }
+      },
     };
     const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
     const merged = Object.assign(obj);
@@ -64,7 +64,7 @@ export default {
         },
         close() {
           return callback2(4445).hideActionSheet(closure_4);
-        }
+        },
       };
       const merged = Object.assign(closure_0);
       const merged1 = Object.assign(c4);
@@ -74,5 +74,5 @@ export default {
   useIsCaptchaModalOpen() {
     const items = [closure_3];
     return initialize.useStateFromStores(items, () => key.getKey() === closure_4);
-  }
+  },
 };

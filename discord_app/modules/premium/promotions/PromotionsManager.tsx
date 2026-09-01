@@ -15,8 +15,26 @@ initializeDefault;
 class PromotionsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    obj = { POST_CONNECTION_OPEN: onPostConnectionOpen.bind(applyArgumentsResult), EXPERIMENTS_FETCH_SUCCESS: onPostConnectionOpen2.bind(applyArgumentsResult), IAP_PURCHASE_PRODUCT_SUCCESS: onMobilePurchaseSuccess.bind(applyArgumentsResult), GPLAY_PURCHASE_VERIFIED: onMobilePurchaseSuccess2.bind(applyArgumentsResult), BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: onOfferUpdated.bind(applyArgumentsResult), BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: onOfferUpdated2.bind(applyArgumentsResult), BILLING_REFERRAL_RESOLVE_SUCCESS: onOfferUpdated3.bind(applyArgumentsResult), VIRTUAL_CURRENCY_REDEEM_SUCCESS: onVCRedeemed.bind(applyArgumentsResult) };
-    ({ onPostConnectionOpen, onPostConnectionOpen: onPostConnectionOpen2, onMobilePurchaseSuccess, onMobilePurchaseSuccess: onMobilePurchaseSuccess2, onOfferUpdated, onOfferUpdated: onOfferUpdated2, onOfferUpdated: onOfferUpdated3, onVCRedeemed } = applyArgumentsResult);
+    obj = {
+      POST_CONNECTION_OPEN: onPostConnectionOpen.bind(applyArgumentsResult),
+      EXPERIMENTS_FETCH_SUCCESS: onPostConnectionOpen2.bind(applyArgumentsResult),
+      IAP_PURCHASE_PRODUCT_SUCCESS: onMobilePurchaseSuccess.bind(applyArgumentsResult),
+      GPLAY_PURCHASE_VERIFIED: onMobilePurchaseSuccess2.bind(applyArgumentsResult),
+      BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: onOfferUpdated.bind(applyArgumentsResult),
+      BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: onOfferUpdated2.bind(applyArgumentsResult),
+      BILLING_REFERRAL_RESOLVE_SUCCESS: onOfferUpdated3.bind(applyArgumentsResult),
+      VIRTUAL_CURRENCY_REDEEM_SUCCESS: onVCRedeemed.bind(applyArgumentsResult),
+    };
+    ({
+      onPostConnectionOpen,
+      onPostConnectionOpen: onPostConnectionOpen2,
+      onMobilePurchaseSuccess,
+      onMobilePurchaseSuccess: onMobilePurchaseSuccess2,
+      onOfferUpdated,
+      onOfferUpdated: onOfferUpdated2,
+      onOfferUpdated: onOfferUpdated3,
+      onVCRedeemed,
+    } = applyArgumentsResult);
     applyArgumentsResult.actions = obj;
     map = new Map();
     onLocaleChanged = applyArgumentsResult.onLocaleChanged;
@@ -27,7 +45,7 @@ class PromotionsManager extends tmp2 {
     applyArgumentsResult.stores = result1.set(closure_7, onPromotionsFetchSettled.bind(applyArgumentsResult));
     applyArgumentsResult.lastSubscriptionStateSignature = null;
     applyArgumentsResult.hasPendingSubscriptionRefetch = false;
-    applyArgumentsResult.maybeFetchBogoPromotion = closure_3(function*() {
+    applyArgumentsResult.maybeFetchBogoPromotion = closure_3(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -103,7 +121,7 @@ prototype["onLocaleChanged"] = function onLocaleChanged() {
 };
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();

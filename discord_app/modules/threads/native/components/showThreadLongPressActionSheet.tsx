@@ -11,7 +11,7 @@ export default function showThreadLongPressActionSheet(channelId) {
     channelId,
     onClose() {
       callback(table[0]).hideActionSheet("ThreadLongPressActionSheet");
-    }
+    },
   };
   obj.openLazy(asyncRequireImpl(15704, dependencyMap.paths), "ThreadLongPressActionSheet", obj);
-};
+}

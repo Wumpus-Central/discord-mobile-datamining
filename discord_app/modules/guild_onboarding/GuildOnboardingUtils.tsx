@@ -180,7 +180,11 @@ export const showRulesInOnboarding = function showRulesInOnboarding(stateFromSto
   }
   return tmp4;
 };
-export const getChannelCoverageForOnboarding = function getChannelCoverageForOnboarding(guildId, arr, defaultChannelIds) {
+export const getChannelCoverageForOnboarding = function getChannelCoverageForOnboarding(
+  guildId,
+  arr,
+  defaultChannelIds,
+) {
   const mapped = store.getChannels(guildId)[closure_7].map((channel) => channel.channel);
   let set;
   set = new Set();
@@ -225,7 +229,7 @@ export const getChannelCoverageForOnboarding = function getChannelCoverageForOnb
         const tmp3 = null != id.parent_id && set.has(id.parent_id);
       }
       return !hasItem;
-    })
+    }),
   ];
   return items;
 };
@@ -233,7 +237,9 @@ export const useChannelCoverageForOnboarding = function useChannelCoverageForOnb
   let set = arg0;
   const items = [closure_6];
   const obj = set(589);
-  const mapped = set(589).useStateFromStores(items, () => closure_1_6.getChannels(set))[closure_7].map((channel) => channel.channel);
+  const mapped = set(589)
+    .useStateFromStores(items, () => closure_1_6.getChannels(set))
+    [closure_7].map((channel) => channel.channel);
   set = undefined;
   set = new Set();
   let item = arr.forEach((options) => {
@@ -277,7 +283,7 @@ export const useChannelCoverageForOnboarding = function useChannelCoverageForOnb
         const tmp3 = null != id.parent_id && set.has(id.parent_id);
       }
       return !hasItem;
-    })
+    }),
   ];
   return items1;
 };
@@ -336,7 +342,12 @@ export const useIsChattableChannel = function useIsChattableChannel(arg0) {
     return isNotNullishResult;
   });
 };
-export const getMinimumSetOfDefaultChannelIds = function getMinimumSetOfDefaultChannelIds(closure_0, closure_1_4, onboardingPromptsForOnboarding, arg3) {
+export const getMinimumSetOfDefaultChannelIds = function getMinimumSetOfDefaultChannelIds(
+  closure_0,
+  closure_1_4,
+  onboardingPromptsForOnboarding,
+  arg3,
+) {
   let fn = arg3;
   if (arg3 === undefined) {
     fn = function o() {
@@ -359,24 +370,35 @@ export const getMinimumSetOfDefaultChannelIds = function getMinimumSetOfDefaultC
       const options = required.options;
       const push = navigation.push;
       const items = [];
-      HermesBuiltin.arraySpread(options.reduce((arg0, channelIds) => {
-        if (null == channelIds.channelIds) {
-          return [];
-        } else {
-          let tmp = arg0;
-          const arr = closure_1_16(closure_0, channelIds.channelIds, (id) => id.id, (arg0) => {
-            let tmp = callback(arg0);
-            if (tmp) {
-              tmp = !closure_2.includes(arg0);
+      HermesBuiltin.arraySpread(
+        options.reduce(
+          (arg0, channelIds) => {
+            if (null == channelIds.channelIds) {
+              return [];
+            } else {
+              let tmp = arg0;
+              const arr = closure_1_16(
+                closure_0,
+                channelIds.channelIds,
+                (id) => id.id,
+                (arg0) => {
+                  let tmp = callback(arg0);
+                  if (tmp) {
+                    tmp = !closure_2.includes(arg0);
+                  }
+                  return tmp;
+                },
+              );
+              if (arr.length < arg0.length) {
+                tmp = arr;
+              }
+              return tmp;
             }
-            return tmp;
-          });
-          if (arr.length < arg0.length) {
-            tmp = arr;
-          }
-          return tmp;
-        }
-      }, closure_1_16(closure_0, channelIds, (id) => id.id)), 0);
+          },
+          closure_1_16(closure_0, channelIds, (id) => id.id),
+        ),
+        0,
+      );
       HermesBuiltin.apply(items, navigation);
       let tmp = closure_1_16;
       const tmp2 = closure_0;
@@ -401,7 +423,10 @@ export const getChattableDefaultChannels = function getChattableDefaultChannels(
         }
         let tmp3 = null != channel;
         if (tmp3) {
-          const canChannelBeDefaultResult = dependencyMap(closure_1_3[11]).canChannelBeDefault(channel.guild_id, channel.id);
+          const canChannelBeDefaultResult = dependencyMap(closure_1_3[11]).canChannelBeDefault(
+            channel.guild_id,
+            channel.id,
+          );
           if (!canChannelBeDefaultResult) {
             tmp3 = canChannelBeDefaultResult;
           } else {
@@ -421,8 +446,11 @@ export const getChattableDefaultChannels = function getChattableDefaultChannels(
         }
         return tmp3;
       });
-    })(arr.map((id) => id.id), obj),
-    arr
+    })(
+      arr.map((id) => id.id),
+      obj,
+    ),
+    arr,
   ];
   return items;
 };
@@ -431,58 +459,65 @@ export const useChattableDefaultChannels = function useChattableDefaultChannels(
   closure_1 = arg1;
   let items = [closure_6];
   let items1 = [arg0, arg1];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const items = [];
-    const items1 = [];
-    const iter = closure_1_6.getChannels(callback)[closure_1_7][Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp2 = nextResult;
-      let tmp3 = callback;
-      let tmp4 = closure_1_3;
-      let obj = callback(closure_1_3[11]);
-      let canChannelBeDefaultResult = obj.canChannelBeDefault(nextResult.channel.guild_id, nextResult.channel.id);
-      if (canChannelBeDefaultResult) {
-        let obj2 = set;
-        let tmp6 = nextResult;
-        let hasItem = set.has(tmp2.channel.id);
-        if (hasItem) {
-          let tmp8 = nextResult;
-          let channel = tmp2.channel;
-          hasItem = !channel.isCategory();
-        }
-        if (!hasItem) {
-          let tmp9 = nextResult;
-          let channel2 = tmp2.channel;
-          let isThreadResult = channel2.isThread();
-          let hasItem1 = !isThreadResult;
-          if (!isThreadResult) {
-            let tmp12 = nextResult;
-            hasItem1 = null != tmp2.channel.parent_id;
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const items = [];
+      const items1 = [];
+      const iter = closure_1_6.getChannels(callback)[closure_1_7][Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let tmp2 = nextResult;
+        let tmp3 = callback;
+        let tmp4 = closure_1_3;
+        let obj = callback(closure_1_3[11]);
+        let canChannelBeDefaultResult = obj.canChannelBeDefault(nextResult.channel.guild_id, nextResult.channel.id);
+        if (canChannelBeDefaultResult) {
+          let obj2 = set;
+          let tmp6 = nextResult;
+          let hasItem = set.has(tmp2.channel.id);
+          if (hasItem) {
+            let tmp8 = nextResult;
+            let channel = tmp2.channel;
+            hasItem = !channel.isCategory();
           }
-          if (hasItem1) {
-            let tmp13 = nextResult;
-            hasItem1 = obj2.has(tmp2.channel.parent_id);
+          if (!hasItem) {
+            let tmp9 = nextResult;
+            let channel2 = tmp2.channel;
+            let isThreadResult = channel2.isThread();
+            let hasItem1 = !isThreadResult;
+            if (!isThreadResult) {
+              let tmp12 = nextResult;
+              hasItem1 = null != tmp2.channel.parent_id;
+            }
+            if (hasItem1) {
+              let tmp13 = nextResult;
+              hasItem1 = obj2.has(tmp2.channel.parent_id);
+            }
+            hasItem = hasItem1;
           }
-          hasItem = hasItem1;
+          canChannelBeDefaultResult = hasItem;
         }
-        canChannelBeDefaultResult = hasItem;
-      }
-      if (canChannelBeDefaultResult) {
-        let tmp14 = nextResult;
-        {}[tmp2.channel.id] = tmp2;
-        let arr = items.push(tmp2.channel);
-        let tmp16 = closure_1_15;
-        if (closure_1_15(tmp2.channel)) {
-          let tmp17 = nextResult;
-          arr = items1.push(tmp2.channel.id);
+        if (canChannelBeDefaultResult) {
+          let tmp14 = nextResult;
+          {
+          }
+          [tmp2.channel.id] = tmp2;
+          let arr = items.push(tmp2.channel);
+          let tmp16 = closure_1_15;
+          if (closure_1_15(tmp2.channel)) {
+            let tmp17 = nextResult;
+            arr = items1.push(tmp2.channel.id);
+          }
         }
+        continue;
       }
-      continue;
-    }
-    const items2 = [items1, items];
-    return items2;
-  }, items1, areStatesEqual);
+      const items2 = [items1, items];
+      return items2;
+    },
+    items1,
+    areStatesEqual,
+  );
 };
 export const getSelectedRoleIds = function getSelectedRoleIds(selectedOptions) {
   const mapped = selectedOptions.map((roleIds) => roleIds.roleIds);

@@ -15,5 +15,5 @@ export default function useTimeValue(arg0) {
     }
     return tmp2;
   });
-};
+}
 export const timeToMinutes = require("setsEqual").timeToMinutes;

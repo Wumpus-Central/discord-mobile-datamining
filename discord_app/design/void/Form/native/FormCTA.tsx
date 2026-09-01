@@ -13,11 +13,30 @@ import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 require = arg1;
 noopAll;
 createCacheKey = { form: null, title: null, description: null, icon: null, completedIcon: null, completedText: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xs, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12 };
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.xs,
+  paddingVertical: ThemesDefault.space.PX_12,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { fontSize: ThemesDefault.space.PX_16, lineHeight: 18, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-let obj1 = { fontSize: ThemesDefault.space.PX_16, lineHeight: 18, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-createCacheKey[2] = { fontSize: 12, lineHeight: 18, color: ThemesDefault.colors.TEXT_SUBTLE, fontFamily: Fonts.PRIMARY_MEDIUM };
+createCacheKey[1] = {
+  fontSize: ThemesDefault.space.PX_16,
+  lineHeight: 18,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  fontFamily: Fonts.PRIMARY_SEMIBOLD,
+};
+let obj1 = {
+  fontSize: ThemesDefault.space.PX_16,
+  lineHeight: 18,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  fontFamily: Fonts.PRIMARY_SEMIBOLD,
+};
+createCacheKey[2] = {
+  fontSize: 12,
+  lineHeight: 18,
+  color: ThemesDefault.colors.TEXT_SUBTLE,
+  fontFamily: Fonts.PRIMARY_MEDIUM,
+};
 let obj2 = { fontSize: 12, lineHeight: 18, color: ThemesDefault.colors.TEXT_SUBTLE, fontFamily: Fonts.PRIMARY_MEDIUM };
 createCacheKey[3] = { width: ThemesDefault.space.PX_40, height: ThemesDefault.space.PX_40 };
 createCacheKey[4] = { opacity: 0.3 };
@@ -33,7 +52,7 @@ export default function FormCTA(arg0) {
   const tmp = callback();
   let tmp3Result = null;
   if (null != iconSource) {
-    const items = [iconContainerStyle, ];
+    const items = [iconContainerStyle];
     let completedIcon = null;
     if (completed) {
       completedIcon = tmp.completedIcon;
@@ -52,7 +71,7 @@ export default function FormCTA(arg0) {
   }
   let tmp9Result = null;
   if (undefined !== subtitle) {
-    const items2 = [tmp.description, ];
+    const items2 = [tmp.description];
     let completedText = null;
     if (completed) {
       completedText = tmp.completedText;
@@ -67,13 +86,22 @@ export default function FormCTA(arg0) {
   if ("row-button" === variant) {
     let FormCheckbox = require;
     let obj4 = dependencyMap;
-    obj1 = { arrow: false, onPress: null, onLongPress: null, accessibilityState: null, label: null, subLabel: null, trailing: null, icon: null };
+    obj1 = {
+      arrow: false,
+      onPress: null,
+      onLongPress: null,
+      accessibilityState: null,
+      label: null,
+      subLabel: null,
+      trailing: null,
+      icon: null,
+    };
     obj1[1] = onPress;
     obj1[2] = onLongPress;
     const obj2 = { checked: null };
     obj2[0] = completed;
     obj1[3] = obj2;
-    const items3 = [tmp.title, , ];
+    const items3 = [tmp.title, ,];
     let completedText1;
     if (completed) {
       completedText1 = tmp.completedText;
@@ -94,10 +122,31 @@ export default function FormCTA(arg0) {
     }
     obj1[6] = trailing;
     obj1[7] = tmp3Result;
-    jsx(RowButtonWrapper.RowButton, { arrow: false, onPress: null, onLongPress: null, accessibilityState: null, label: null, subLabel: null, trailing: null, icon: null });
+    jsx(RowButtonWrapper.RowButton, {
+      arrow: false,
+      onPress: null,
+      onLongPress: null,
+      accessibilityState: null,
+      label: null,
+      subLabel: null,
+      trailing: null,
+      icon: null,
+    });
     tmp17 = importDefault;
   } else {
-    const obj5 = { start: true, end: true, variant: null, onPress: null, onLongPress: null, DEPRECATED_style: null, accessibilityState: null, label: null, subLabel: null, trailing: null, leading: null };
+    const obj5 = {
+      start: true,
+      end: true,
+      variant: null,
+      onPress: null,
+      onLongPress: null,
+      DEPRECATED_style: null,
+      accessibilityState: null,
+      label: null,
+      subLabel: null,
+      trailing: null,
+      leading: null,
+    };
     obj5[2] = variant;
     obj5[3] = onPress;
     obj5[4] = onLongPress;
@@ -106,7 +155,7 @@ export default function FormCTA(arg0) {
     const obj6 = { checked: null };
     obj6[0] = completed;
     obj5[6] = obj6;
-    const items5 = [tmp.title, , ];
+    const items5 = [tmp.title, ,];
     let completedText2;
     if (completed) {
       completedText2 = tmp.completedText;
@@ -128,6 +177,18 @@ export default function FormCTA(arg0) {
     }
     obj5[9] = tmp20Result;
     obj5[10] = tmp3Result;
-    return jsx(_modDef5592, { start: true, end: true, variant: null, onPress: null, onLongPress: null, DEPRECATED_style: null, accessibilityState: null, label: null, subLabel: null, trailing: null, leading: null });
+    return jsx(_modDef5592, {
+      start: true,
+      end: true,
+      variant: null,
+      onPress: null,
+      onLongPress: null,
+      DEPRECATED_style: null,
+      accessibilityState: null,
+      label: null,
+      subLabel: null,
+      trailing: null,
+      leading: null,
+    });
   }
-};
+}

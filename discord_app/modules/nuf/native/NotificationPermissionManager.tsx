@@ -44,7 +44,7 @@ function _shouldShowPrompt() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_2 = tmp2;
       closure_1 = tmp3;
       const NativePermissionManager = obj.NativePermissionManager;
@@ -84,7 +84,7 @@ function _shouldShowReactivationPrompt() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_2 = tmp2;
       closure_1 = tmp3;
       const NativePermissionManager = obj.NativePermissionManager;
@@ -135,7 +135,7 @@ function _logNotificationPermissionStatus() {
 }
 function _logNotificationPermissionStatus2() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -185,7 +185,12 @@ function _logNotificationPermissionStatus2() {
           callback = arg1;
           callback2 = callback(10168).allowInAppNotifications();
           const obj5 = callback(10168);
-          const obj2 = { os_enabled: null, foreground_app_enabled: null, background_app_enabled: null, notification_authorization_status: null };
+          const obj2 = {
+            os_enabled: null,
+            foreground_app_enabled: null,
+            background_app_enabled: null,
+            notification_authorization_status: null,
+          };
           obj2[0] = callback === constants2.AUTHORIZED;
           obj2[1] = callback2;
           obj2[2] = callback2;
@@ -216,7 +221,7 @@ function _logNotificationPermissionStatus2() {
 }
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: unpackModuleId, EventActionLocation: closure_12 } = EventActionType);
 ({ RelationshipTypes: map1, GuildFeatures: closure_14, AnalyticEvents: closure_15 } = ME);
-const items = [, ];
+const items = [,];
 ({ FRIEND_REQUEST_SENT: arr[0], INVITE_ACCEPTED: arr[1] } = PermissionPromptType);
 let c23 = null;
 initializeDefault;
@@ -227,27 +232,27 @@ class NotificationPermissionManager extends tmp4 {
     applyArgumentsResult.previousAppState = null;
     applyArgumentsResult.actions = {
       MESSAGE_CREATE(message) {
-            closure_0.handleMessageCreate(message);
-            const result = closure_0.handleMessageCreateForNudge(message);
-          },
+        closure_0.handleMessageCreate(message);
+        const result = closure_0.handleMessageCreateForNudge(message);
+      },
       MESSAGE_REACTION_ADD(optimistic) {
-            const result = closure_0.handleReactionAddForNudge(optimistic);
-          },
+        const result = closure_0.handleReactionAddForNudge(optimistic);
+      },
       INVITE_ACCEPT_SUCCESS(arg0) {
-            closure_0.handleInviteAccept(arg0);
-          },
+        closure_0.handleInviteAccept(arg0);
+      },
       RELATIONSHIP_ADD(arg0) {
-            const result = closure_0.handleSendFriendRequest(arg0);
-          },
+        const result = closure_0.handleSendFriendRequest(arg0);
+      },
       POST_CONNECTION_OPEN() {
-            closure_0.handleConnectionOpen();
-          },
+        closure_0.handleConnectionOpen();
+      },
       APP_STATE_UPDATE(arg0) {
-            closure_0.handleAppStateUpdate(arg0);
-          }
+        closure_0.handleAppStateUpdate(arg0);
+      },
     };
     closure_0 = applyArgumentsResult;
-    applyArgumentsResult.handleConnectionOpen = closure_3(function*() {
+    applyArgumentsResult.handleConnectionOpen = closure_3(function* () {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();
@@ -319,7 +324,7 @@ class NotificationPermissionManager extends tmp4 {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      const iter = (function*(arg0) {
+      const iter = (function* (arg0) {
         if (c4 === 2) {
           c4 = 3;
           HermesBuiltin.throwTypeError();
@@ -418,7 +423,7 @@ class NotificationPermissionManager extends tmp4 {
       iter.next();
       return iter;
     });
-    applyArgumentsResult.handleMessageCreate = function() {
+    applyArgumentsResult.handleMessageCreate = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -432,7 +437,7 @@ class NotificationPermissionManager extends tmp4 {
       closure_0 = arg0;
       c4 = 0;
       c5 = 0;
-      const iter = (function*(arg0) {
+      const iter = (function* (arg0) {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -542,7 +547,7 @@ class NotificationPermissionManager extends tmp4 {
       iter.next();
       return iter;
     });
-    applyArgumentsResult.handleInviteAccept = function() {
+    applyArgumentsResult.handleInviteAccept = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -556,7 +561,7 @@ class NotificationPermissionManager extends tmp4 {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      const iter = (function*(arg0) {
+      const iter = (function* (arg0) {
         if (c4 === 2) {
           c4 = 3;
           HermesBuiltin.throwTypeError();
@@ -657,7 +662,7 @@ class NotificationPermissionManager extends tmp4 {
       iter.next();
       return iter;
     });
-    applyArgumentsResult.handleSendFriendRequest = function() {
+    applyArgumentsResult.handleSendFriendRequest = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -673,7 +678,7 @@ class NotificationPermissionManager extends tmp4 {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      const iter = (function*(arg0) {
+      const iter = (function* (arg0) {
         if (c4 === 2) {
           c4 = 3;
           HermesBuiltin.throwTypeError();
@@ -721,7 +726,8 @@ class NotificationPermissionManager extends tmp4 {
                   obj1[0] = arg1;
                   return obj1;
                 } else {
-                  previousAppState = previousAppState.previousAppState === callback(closure_1_2[21]).AppStates.BACKGROUND;
+                  previousAppState =
+                    previousAppState.previousAppState === callback(closure_1_2[21]).AppStates.BACKGROUND;
                   closure_2 = state === callback(closure_1_2[21]).AppStates.ACTIVE;
                   let tmp7 = previousAppState;
                   if (previousAppState) {
@@ -776,7 +782,7 @@ class NotificationPermissionManager extends tmp4 {
       iter.next();
       return iter;
     });
-    applyArgumentsResult.handleAppStateUpdate = function() {
+    applyArgumentsResult.handleAppStateUpdate = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -786,7 +792,7 @@ class NotificationPermissionManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    applyArgumentsResult._handleNotificationAuthorizationStatusUpdate = closure_3(function*() {
+    applyArgumentsResult._handleNotificationAuthorizationStatusUpdate = closure_3(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -870,7 +876,9 @@ prototype["handleMessageCreateForNudge"] = function handleMessageCreateForNudge(
               isMutedResult = closure_8.isChannelMuted(guildId, channel.id);
             }
             if (!isMutedResult) {
-              const result = getOrRefreshPushSyncToken.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.CHANNEL_BANNER);
+              const result = getOrRefreshPushSyncToken.setPushNotificationPermissionEligibleForPrompt(
+                PermissionPromptType.CHANNEL_BANNER,
+              );
               const obj = getOrRefreshPushSyncToken;
             }
           }
@@ -891,7 +899,9 @@ prototype["handleReactionAddForNudge"] = function handleReactionAddForNudge(opti
           isMutedResult = closure_8.isChannelMuted(guildId, channel.id);
         }
         if (!isMutedResult) {
-          const result = getOrRefreshPushSyncToken.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.POST_REACTION_BANNER);
+          const result = getOrRefreshPushSyncToken.setPushNotificationPermissionEligibleForPrompt(
+            PermissionPromptType.POST_REACTION_BANNER,
+          );
           const obj = getOrRefreshPushSyncToken;
         }
       }

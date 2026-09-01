@@ -68,7 +68,7 @@ export const useModalState = function useModalState(url) {
         tmp();
       }
       onCancel();
-    }, items2)
+    }, items2),
   };
   return obj;
 };

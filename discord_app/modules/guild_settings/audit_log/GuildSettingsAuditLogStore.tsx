@@ -12,8 +12,29 @@ import ME from "../../../Constants.tsx";
 import importAllResult from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 const AuditLogActions = ME.AuditLogActions;
-({ AuditLogActionTypes: c10, AuditLogTargetTypes: unpackModuleId, AuditLogChangeKeys: closure_12, AUDIT_LOG_PAGE_LIMIT: map1, GuildSettingsSections: closure_14, Permissions } = ME);
-let closure_15 = importAllResult.combine(Permissions.KICK_MEMBERS, Permissions.BAN_MEMBERS, Permissions.ADMINISTRATOR, Permissions.MANAGE_CHANNELS, Permissions.MANAGE_GUILD, Permissions.MANAGE_MESSAGES, Permissions.MANAGE_NICKNAMES, Permissions.MANAGE_ROLES, Permissions.MANAGE_WEBHOOKS, Permissions.MANAGE_GUILD_EXPRESSIONS, Permissions.MOVE_MEMBERS, Permissions.MUTE_MEMBERS, Permissions.DEAFEN_MEMBERS);
+({
+  AuditLogActionTypes: c10,
+  AuditLogTargetTypes: unpackModuleId,
+  AuditLogChangeKeys: closure_12,
+  AUDIT_LOG_PAGE_LIMIT: map1,
+  GuildSettingsSections: closure_14,
+  Permissions,
+} = ME);
+let closure_15 = importAllResult.combine(
+  Permissions.KICK_MEMBERS,
+  Permissions.BAN_MEMBERS,
+  Permissions.ADMINISTRATOR,
+  Permissions.MANAGE_CHANNELS,
+  Permissions.MANAGE_GUILD,
+  Permissions.MANAGE_MESSAGES,
+  Permissions.MANAGE_NICKNAMES,
+  Permissions.MANAGE_ROLES,
+  Permissions.MANAGE_WEBHOOKS,
+  Permissions.MANAGE_GUILD_EXPRESSIONS,
+  Permissions.MOVE_MEMBERS,
+  Permissions.MUTE_MEMBERS,
+  Permissions.DEAFEN_MEMBERS,
+);
 let c16 = null;
 let closure_17 = [];
 let closure_18 = [];
@@ -34,8 +55,7 @@ let c32 = null;
 let closure_33 = {};
 let c34 = 0;
 const Store = initializeDefault.Store;
-class GuildSettingsAuditLogStore extends Store {
-}
+class GuildSettingsAuditLogStore extends Store {}
 const prototype = GuildSettingsAuditLogStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_8, closure_7, closure_6);
@@ -44,109 +64,109 @@ Object.defineProperty(prototype, "logs", {
   get: function logs() {
     return closure_17;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "integrations", {
   get: function integrations(arr) {
     return closure_18;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "webhooks", {
   get: function webhooks() {
     return closure_20;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "guildScheduledEvents", {
   get: function guildScheduledEvents() {
     return closure_21;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "automodRules", {
   get: function automodRules() {
     return closure_22;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "threads", {
   get: function threads() {
     return closure_23;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "applicationCommands", {
   get: function applicationCommands() {
     return closure_24;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isInitialLoading", {
   get: function isInitialLoading() {
     return c25;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isLoading", {
   get: function isLoading() {
     return c26;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isLoadingNextPage", {
   get: function isLoadingNextPage() {
     return c27;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasOlderLogs", {
   get: function hasOlderLogs() {
     return c28;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasError", {
   get: function hasError() {
     return c29;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "userIds", {
   get: function userIds(arg0) {
     return closure_19;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "userIdFilter", {
   get: function userIdFilter() {
     return c30;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "targetIdFilter", {
   get: function targetIdFilter() {
     return c32;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "actionFilter", {
   get: function actionFilter(userIdFilter, arg1) {
     return ALL;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "deletedTargets", {
   get: function deletedTargets() {
     return closure_33;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "groupedFetchCount", {
   get: function groupedFetchCount() {
     return c34;
   },
-  set: undefined
+  set: undefined,
 });
 GuildSettingsAuditLogStore.displayName = "GuildSettingsAuditLogStore";
 const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(dispatcherDefault, {
@@ -225,7 +245,11 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(dispatcherDefa
         tmp35 = null != prop;
       }
       if (tmp35) {
-        const tmp42 = new closure_1_3(closure_1_12.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, id.options.auto_moderation_rule_name);
+        const tmp42 = new closure_1_3(
+          closure_1_12.AUTO_MODERATION_TRIGGERED_RULE_NAME,
+          null,
+          id.options.auto_moderation_rule_name,
+        );
         items.push(tmp42);
       }
       let tmp45 = id.action_type === tmp25.VOICE_CHANNEL_STATUS_CREATE;
@@ -241,55 +265,68 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(dispatcherDefa
         const tmp52 = new closure_1_3(closure_1_12.STATUS, null, id.options.status);
         items.push(tmp52);
       }
-      let obj = { id: id.id, action: id.action_type, targetId: id.target_id, userId: id.user_id, changes: items, options: id.options };
+      let obj = {
+        id: id.id,
+        action: id.action_type,
+        targetId: id.target_id,
+        userId: id.user_id,
+        changes: items,
+        options: id.options,
+      };
       const tmp55 = new closure_1_2(obj);
       arr1 = items;
       const first = items[0];
-      if ((function shouldMergeEntries(first, action2, c1) {
-        let isEqualResult = null != first && first.action === action2.action && first.targetId === action2.targetId && first.userId === action2.userId;
-        if (isEqualResult) {
-          isEqualResult = callback(table[8]).isEqual(first.options, action2.options);
-          const obj = callback(table[8]);
-        }
-        if (isEqualResult) {
-          const timestampStart = action2.timestampStart;
-          isEqualResult = timestampStart.diff(first.timestampStart, "minutes") < num;
-        }
-        if (isEqualResult) {
-          isEqualResult = c1 < num2;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.targetType !== constants2.INVITE;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.MESSAGE_DELETE;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.MESSAGE_BULK_DELETE;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.MESSAGE_PIN;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.MESSAGE_UNPIN;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.MEMBER_MOVE;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.MEMBER_DISCONNECT;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.BOT_ADD;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.APPLICATION_COMMAND_PERMISSION_UPDATE;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.MEMBER_PRUNE;
-        }
-        return isEqualResult;
-      })(first, tmp55, c1)) {
+      if (
+        (function shouldMergeEntries(first, action2, c1) {
+          let isEqualResult =
+            null != first &&
+            first.action === action2.action &&
+            first.targetId === action2.targetId &&
+            first.userId === action2.userId;
+          if (isEqualResult) {
+            isEqualResult = callback(table[8]).isEqual(first.options, action2.options);
+            const obj = callback(table[8]);
+          }
+          if (isEqualResult) {
+            const timestampStart = action2.timestampStart;
+            isEqualResult = timestampStart.diff(first.timestampStart, "minutes") < num;
+          }
+          if (isEqualResult) {
+            isEqualResult = c1 < num2;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.targetType !== constants2.INVITE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MESSAGE_DELETE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MESSAGE_BULK_DELETE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MESSAGE_PIN;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MESSAGE_UNPIN;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MEMBER_MOVE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MEMBER_DISCONNECT;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.BOT_ADD;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.APPLICATION_COMMAND_PERMISSION_UPDATE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MEMBER_PRUNE;
+          }
+          return isEqualResult;
+        })(first, tmp55, c1)
+      ) {
         obj = { changes: null, timestampEnd: null };
         items1 = [];
         HermesBuiltin.arraySpread(tmp55.changes, HermesBuiltin.arraySpread(first.changes, 0));
@@ -359,7 +396,14 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(dispatcherDefa
   AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function handleFetchedNextPage(logs) {
     logs = logs.logs;
     c27 = false;
-    ({ integrations: closure_18, webhooks: closure_20, guildScheduledEvents: closure_21, automodRules: closure_22, threads: closure_23, applicationCommands: closure_24 } = logs);
+    ({
+      integrations: closure_18,
+      webhooks: closure_20,
+      guildScheduledEvents: closure_21,
+      automodRules: closure_22,
+      threads: closure_23,
+      applicationCommands: closure_24,
+    } = logs);
     let tmp = 0 === logs.length;
     if (!tmp) {
       tmp = logs.length < closure_13;
@@ -433,7 +477,11 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(dispatcherDefa
           tmp35 = null != prop;
         }
         if (tmp35) {
-          const tmp42 = new closure_1_3(closure_1_12.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, id.options.auto_moderation_rule_name);
+          const tmp42 = new closure_1_3(
+            closure_1_12.AUTO_MODERATION_TRIGGERED_RULE_NAME,
+            null,
+            id.options.auto_moderation_rule_name,
+          );
           items.push(tmp42);
         }
         let tmp45 = id.action_type === tmp25.VOICE_CHANNEL_STATUS_CREATE;
@@ -449,55 +497,68 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(dispatcherDefa
           const tmp52 = new closure_1_3(closure_1_12.STATUS, null, id.options.status);
           items.push(tmp52);
         }
-        let obj = { id: id.id, action: id.action_type, targetId: id.target_id, userId: id.user_id, changes: items, options: id.options };
+        let obj = {
+          id: id.id,
+          action: id.action_type,
+          targetId: id.target_id,
+          userId: id.user_id,
+          changes: items,
+          options: id.options,
+        };
         const tmp55 = new closure_1_2(obj);
         arr1 = items;
         const first = items[0];
-        if ((function shouldMergeEntries(first, action2, c1) {
-          let isEqualResult = null != first && first.action === action2.action && first.targetId === action2.targetId && first.userId === action2.userId;
-          if (isEqualResult) {
-            isEqualResult = callback(table[8]).isEqual(first.options, action2.options);
-            const obj = callback(table[8]);
-          }
-          if (isEqualResult) {
-            const timestampStart = action2.timestampStart;
-            isEqualResult = timestampStart.diff(first.timestampStart, "minutes") < num;
-          }
-          if (isEqualResult) {
-            isEqualResult = c1 < num2;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.targetType !== constants2.INVITE;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.MESSAGE_DELETE;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.MESSAGE_BULK_DELETE;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.MESSAGE_PIN;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.MESSAGE_UNPIN;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.MEMBER_MOVE;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.MEMBER_DISCONNECT;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.BOT_ADD;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.APPLICATION_COMMAND_PERMISSION_UPDATE;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.MEMBER_PRUNE;
-          }
-          return isEqualResult;
-        })(first, tmp55, c1)) {
+        if (
+          (function shouldMergeEntries(first, action2, c1) {
+            let isEqualResult =
+              null != first &&
+              first.action === action2.action &&
+              first.targetId === action2.targetId &&
+              first.userId === action2.userId;
+            if (isEqualResult) {
+              isEqualResult = callback(table[8]).isEqual(first.options, action2.options);
+              const obj = callback(table[8]);
+            }
+            if (isEqualResult) {
+              const timestampStart = action2.timestampStart;
+              isEqualResult = timestampStart.diff(first.timestampStart, "minutes") < num;
+            }
+            if (isEqualResult) {
+              isEqualResult = c1 < num2;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.targetType !== constants2.INVITE;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.MESSAGE_DELETE;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.MESSAGE_BULK_DELETE;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.MESSAGE_PIN;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.MESSAGE_UNPIN;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.MEMBER_MOVE;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.MEMBER_DISCONNECT;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.BOT_ADD;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.APPLICATION_COMMAND_PERMISSION_UPDATE;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.MEMBER_PRUNE;
+            }
+            return isEqualResult;
+          })(first, tmp55, c1)
+        ) {
           obj = { changes: null, timestampEnd: null };
           items1 = [];
           HermesBuiltin.arraySpread(tmp55.changes, HermesBuiltin.arraySpread(first.changes, 0));
@@ -650,7 +711,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(dispatcherDefa
     closure_21 = [];
     closure_22 = [];
     closure_23 = [];
-  }
+  },
 });
 let obj = {
   AUDIT_LOG_FETCH_START: function handleStartFetchingLogs() {
@@ -728,7 +789,11 @@ let obj = {
         tmp35 = null != prop;
       }
       if (tmp35) {
-        const tmp42 = new closure_1_3(closure_1_12.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, id.options.auto_moderation_rule_name);
+        const tmp42 = new closure_1_3(
+          closure_1_12.AUTO_MODERATION_TRIGGERED_RULE_NAME,
+          null,
+          id.options.auto_moderation_rule_name,
+        );
         items.push(tmp42);
       }
       let tmp45 = id.action_type === tmp25.VOICE_CHANNEL_STATUS_CREATE;
@@ -744,55 +809,68 @@ let obj = {
         const tmp52 = new closure_1_3(closure_1_12.STATUS, null, id.options.status);
         items.push(tmp52);
       }
-      let obj = { id: id.id, action: id.action_type, targetId: id.target_id, userId: id.user_id, changes: items, options: id.options };
+      let obj = {
+        id: id.id,
+        action: id.action_type,
+        targetId: id.target_id,
+        userId: id.user_id,
+        changes: items,
+        options: id.options,
+      };
       const tmp55 = new closure_1_2(obj);
       arr1 = items;
       const first = items[0];
-      if ((function shouldMergeEntries(first, action2, c1) {
-        let isEqualResult = null != first && first.action === action2.action && first.targetId === action2.targetId && first.userId === action2.userId;
-        if (isEqualResult) {
-          isEqualResult = callback(table[8]).isEqual(first.options, action2.options);
-          const obj = callback(table[8]);
-        }
-        if (isEqualResult) {
-          const timestampStart = action2.timestampStart;
-          isEqualResult = timestampStart.diff(first.timestampStart, "minutes") < num;
-        }
-        if (isEqualResult) {
-          isEqualResult = c1 < num2;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.targetType !== constants2.INVITE;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.MESSAGE_DELETE;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.MESSAGE_BULK_DELETE;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.MESSAGE_PIN;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.MESSAGE_UNPIN;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.MEMBER_MOVE;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.MEMBER_DISCONNECT;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.BOT_ADD;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.APPLICATION_COMMAND_PERMISSION_UPDATE;
-        }
-        if (isEqualResult) {
-          isEqualResult = action2.action !== constants.MEMBER_PRUNE;
-        }
-        return isEqualResult;
-      })(first, tmp55, c1)) {
+      if (
+        (function shouldMergeEntries(first, action2, c1) {
+          let isEqualResult =
+            null != first &&
+            first.action === action2.action &&
+            first.targetId === action2.targetId &&
+            first.userId === action2.userId;
+          if (isEqualResult) {
+            isEqualResult = callback(table[8]).isEqual(first.options, action2.options);
+            const obj = callback(table[8]);
+          }
+          if (isEqualResult) {
+            const timestampStart = action2.timestampStart;
+            isEqualResult = timestampStart.diff(first.timestampStart, "minutes") < num;
+          }
+          if (isEqualResult) {
+            isEqualResult = c1 < num2;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.targetType !== constants2.INVITE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MESSAGE_DELETE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MESSAGE_BULK_DELETE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MESSAGE_PIN;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MESSAGE_UNPIN;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MEMBER_MOVE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MEMBER_DISCONNECT;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.BOT_ADD;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.APPLICATION_COMMAND_PERMISSION_UPDATE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.MEMBER_PRUNE;
+          }
+          return isEqualResult;
+        })(first, tmp55, c1)
+      ) {
         obj = { changes: null, timestampEnd: null };
         items1 = [];
         HermesBuiltin.arraySpread(tmp55.changes, HermesBuiltin.arraySpread(first.changes, 0));
@@ -862,7 +940,14 @@ let obj = {
   AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function handleFetchedNextPage(logs) {
     logs = logs.logs;
     c27 = false;
-    ({ integrations: closure_18, webhooks: closure_20, guildScheduledEvents: closure_21, automodRules: closure_22, threads: closure_23, applicationCommands: closure_24 } = logs);
+    ({
+      integrations: closure_18,
+      webhooks: closure_20,
+      guildScheduledEvents: closure_21,
+      automodRules: closure_22,
+      threads: closure_23,
+      applicationCommands: closure_24,
+    } = logs);
     let tmp = 0 === logs.length;
     if (!tmp) {
       tmp = logs.length < closure_13;
@@ -936,7 +1021,11 @@ let obj = {
           tmp35 = null != prop;
         }
         if (tmp35) {
-          const tmp42 = new closure_1_3(closure_1_12.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, id.options.auto_moderation_rule_name);
+          const tmp42 = new closure_1_3(
+            closure_1_12.AUTO_MODERATION_TRIGGERED_RULE_NAME,
+            null,
+            id.options.auto_moderation_rule_name,
+          );
           items.push(tmp42);
         }
         let tmp45 = id.action_type === tmp25.VOICE_CHANNEL_STATUS_CREATE;
@@ -952,55 +1041,68 @@ let obj = {
           const tmp52 = new closure_1_3(closure_1_12.STATUS, null, id.options.status);
           items.push(tmp52);
         }
-        let obj = { id: id.id, action: id.action_type, targetId: id.target_id, userId: id.user_id, changes: items, options: id.options };
+        let obj = {
+          id: id.id,
+          action: id.action_type,
+          targetId: id.target_id,
+          userId: id.user_id,
+          changes: items,
+          options: id.options,
+        };
         const tmp55 = new closure_1_2(obj);
         arr1 = items;
         const first = items[0];
-        if ((function shouldMergeEntries(first, action2, c1) {
-          let isEqualResult = null != first && first.action === action2.action && first.targetId === action2.targetId && first.userId === action2.userId;
-          if (isEqualResult) {
-            isEqualResult = callback(table[8]).isEqual(first.options, action2.options);
-            const obj = callback(table[8]);
-          }
-          if (isEqualResult) {
-            const timestampStart = action2.timestampStart;
-            isEqualResult = timestampStart.diff(first.timestampStart, "minutes") < num;
-          }
-          if (isEqualResult) {
-            isEqualResult = c1 < num2;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.targetType !== constants2.INVITE;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.MESSAGE_DELETE;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.MESSAGE_BULK_DELETE;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.MESSAGE_PIN;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.MESSAGE_UNPIN;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.MEMBER_MOVE;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.MEMBER_DISCONNECT;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.BOT_ADD;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.APPLICATION_COMMAND_PERMISSION_UPDATE;
-          }
-          if (isEqualResult) {
-            isEqualResult = action2.action !== constants.MEMBER_PRUNE;
-          }
-          return isEqualResult;
-        })(first, tmp55, c1)) {
+        if (
+          (function shouldMergeEntries(first, action2, c1) {
+            let isEqualResult =
+              null != first &&
+              first.action === action2.action &&
+              first.targetId === action2.targetId &&
+              first.userId === action2.userId;
+            if (isEqualResult) {
+              isEqualResult = callback(table[8]).isEqual(first.options, action2.options);
+              const obj = callback(table[8]);
+            }
+            if (isEqualResult) {
+              const timestampStart = action2.timestampStart;
+              isEqualResult = timestampStart.diff(first.timestampStart, "minutes") < num;
+            }
+            if (isEqualResult) {
+              isEqualResult = c1 < num2;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.targetType !== constants2.INVITE;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.MESSAGE_DELETE;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.MESSAGE_BULK_DELETE;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.MESSAGE_PIN;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.MESSAGE_UNPIN;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.MEMBER_MOVE;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.MEMBER_DISCONNECT;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.BOT_ADD;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.APPLICATION_COMMAND_PERMISSION_UPDATE;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.MEMBER_PRUNE;
+            }
+            return isEqualResult;
+          })(first, tmp55, c1)
+        ) {
           obj = { changes: null, timestampEnd: null };
           items1 = [];
           HermesBuiltin.arraySpread(tmp55.changes, HermesBuiltin.arraySpread(first.changes, 0));
@@ -1153,7 +1255,7 @@ let obj = {
     closure_21 = [];
     closure_22 = [];
     closure_23 = [];
-  }
+  },
 };
 const result = require("set").fileFinishedImporting("modules/guild_settings/audit_log/GuildSettingsAuditLogStore.tsx");
 

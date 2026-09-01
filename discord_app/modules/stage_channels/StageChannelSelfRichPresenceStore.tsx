@@ -49,8 +49,13 @@ function handleUpdateActivity() {
               if (id === result) {
                 tmp15 = obj;
               }
-              const mutableParticipants = store.getMutableParticipants(channel.id, tmp12(5368).StageChannelParticipantNamedIndex.SPEAKER);
-              const length = mutableParticipants.filter((type) => type.type === callback(table[12]).StageChannelParticipantTypes.STREAM).length;
+              const mutableParticipants = store.getMutableParticipants(
+                channel.id,
+                tmp12(5368).StageChannelParticipantNamedIndex.SPEAKER,
+              );
+              const length = mutableParticipants.filter(
+                (type) => type.type === callback(table[12]).StageChannelParticipantTypes.STREAM,
+              ).length;
               const diff = mutableParticipants.length - length;
               let size;
               const diff1 = store.getParticipantCount(voiceChannelId) - length;
@@ -99,7 +104,7 @@ function handleUpdateActivity() {
               obj[4] = obj1;
               obj2 = { id: null, size: null };
               obj2[0] = result;
-              const items = [diff, ];
+              const items = [diff];
               const _Math = Math;
               items[1] = Math.max(diff1, num);
               obj2[1] = items;
@@ -122,8 +127,7 @@ function handleUpdateActivity() {
 ({ ActivityTypes: map1, GuildFeatures: closure_14, Permissions: closure_15, RTCConnectionStates: closure_16 } = ME);
 let c17 = null;
 const Store = initializeDefault.Store;
-class StageChannelSelfRichPresenceStore extends Store {
-}
+class StageChannelSelfRichPresenceStore extends Store {}
 const prototype = StageChannelSelfRichPresenceStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_5, closure_6, closure_8, closure_10, closure_11);
@@ -174,7 +178,7 @@ const stageChannelSelfRichPresenceStore = new StageChannelSelfRichPresenceStore(
       }
       tmp5 = null != result && null != voiceStates.find((channelId) => channelId.channelId === _undefined.channelId);
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelSelfRichPresenceStore.tsx");
 

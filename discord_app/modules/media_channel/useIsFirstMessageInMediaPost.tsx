@@ -8,32 +8,36 @@ const result = require("set").fileFinishedImporting("modules/media_channel/useIs
 export const useIsFirstMessageInMediaPost = function useIsFirstMessageInMediaPost(arg0) {
   const _require = arg0;
   const items = [arg0];
-  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores([], () => {
-    let tmp2 = null != closure_0;
-    if (tmp2) {
-      const channel_id = tmp.channel_id;
-      let flag = false;
-      if (tmp.id === obj.castChannelIdAsMessageId(channel_id)) {
-        const channel = closure_1_3.getChannel(channel_id);
-        flag = false;
-        if (null != channel) {
+  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
+    [],
+    () => {
+      let tmp2 = null != closure_0;
+      if (tmp2) {
+        const channel_id = tmp.channel_id;
+        let flag = false;
+        if (tmp.id === obj.castChannelIdAsMessageId(channel_id)) {
+          const channel = closure_1_3.getChannel(channel_id);
           flag = false;
-          if (channel.isForumPost()) {
-            const channel1 = obj2.getChannel(channel.parent_id);
-            let isMediaChannelResult;
-            if (channel1 != null) {
-              isMediaChannelResult = channel1.isMediaChannel();
+          if (null != channel) {
+            flag = false;
+            if (channel.isForumPost()) {
+              const channel1 = obj2.getChannel(channel.parent_id);
+              let isMediaChannelResult;
+              if (channel1 != null) {
+                isMediaChannelResult = channel1.isMediaChannel();
+              }
+              flag = true === isMediaChannelResult;
             }
-            flag = true === isMediaChannelResult;
           }
+          obj2 = closure_1_3;
         }
-        obj2 = closure_1_3;
+        tmp2 = flag;
+        obj = closure_1_1(closure_1_2[2]);
       }
-      tmp2 = flag;
-      obj = closure_1_1(closure_1_2[2]);
-    }
-    return tmp2;
-  }, items);
+      return tmp2;
+    },
+    items,
+  );
 };
 export const isFirstMessageInMediaPost = function isFirstMessageInMediaPost(channel_id) {
   let tmp = null != channel_id;

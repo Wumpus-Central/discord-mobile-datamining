@@ -31,7 +31,7 @@ function SettingsUpsellsTableRow(arg0) {
       dependencyMap(true);
       callback2(closure_1_0(8760).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_APPLY_CLICKED);
     },
-    icon: callback2(SettingsIcon.SettingsIcon, {})
+    icon: callback2(SettingsIcon.SettingsIcon, {}),
   };
   return callback2(InAppReportsUpsellsTableRowDefault, obj);
 }
@@ -45,7 +45,9 @@ let obj1 = { width: "100%", marginBottom: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { marginTop: ThemesDefault.space.PX_4 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { marginTop: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsSettingsUpsellsElement.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsSettingsUpsellsElement.tsx",
+);
 
 export default function SettingsUpsellElement(settingsUpsells) {
   settingsUpsells = settingsUpsells.settingsUpsells;
@@ -75,10 +77,20 @@ export default function SettingsUpsellElement(settingsUpsells) {
     obj1[0] = intl.string(tmp2(tmp3[15]).t["1yxTIJ"]);
     obj1[2] = settingsUpsellsConfigs.map((getTitle) => {
       ({ getDisabledTitle, getDescription, onApply } = getTitle);
-      return closure_1_9(closure_1_12, { title: getTitle.getTitle(), disabledTitle: getDisabledTitle(), description: getDescription(), onButtonClick: onApply, trackSettingsUpsellsAction: callback(settingsUpsells[arg1]) }, arg1);
+      return closure_1_9(
+        closure_1_12,
+        {
+          title: getTitle.getTitle(),
+          disabledTitle: getDisabledTitle(),
+          description: getDescription(),
+          onButtonClick: onApply,
+          trackSettingsUpsellsAction: callback(settingsUpsells[arg1]),
+        },
+        arg1,
+      );
     });
     obj[1] = callback2(tmp2(tmp3[14]).TableRowGroup, obj1);
-    const items1 = [callback2(closure_5, obj), ];
+    const items1 = [callback2(closure_5, obj)];
     const obj2 = { variant: "text-sm/medium", style: null, children: null };
     obj2[1] = tmp.goToSettingsText;
     const intl2 = tmp2(tmp3[15]).intl;
@@ -87,7 +99,13 @@ export default function SettingsUpsellElement(settingsUpsells) {
       let obj = settingsUpsells(reportId[17]);
       obj = { screen: closure_1_8.CONTENT_AND_SOCIAL };
       obj.openUserSettings(obj);
-      obj = { report_id: reportId, report_type: reportType.name, report_subtype: reportSubType, action: settingsUpsells(reportId[9]).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED };
+      obj = {
+        report_id: reportId,
+        report_type: reportType.name,
+        report_subtype: reportSubType,
+        action: settingsUpsells(reportId[9]).TrackIarSettingsUpsellsActionType
+          .SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED,
+      };
       closure_1_1(reportId[18]).trackWithMetadata(closure_1_7.IAR_SETTINGS_UPSELLS_ACTION, obj);
     };
     obj2[2] = intl2.format(tmp2(tmp3[15]).t["u7mo+k"], obj3);
@@ -96,4 +114,4 @@ export default function SettingsUpsellElement(settingsUpsells) {
     tmp6 = callback3(closure_5, obj);
   }
   return tmp6;
-};
+}

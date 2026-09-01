@@ -8,7 +8,8 @@ import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_7 } from "../Collectibles
 import ME from "../../../Constants.tsx";
 
 const require = arg1;
-({ createCollectiblesItemsFromServerResponse: c5, transformSKUToCollectiblesItem: closure_6 } = createCollectiblesItemsFromServerResponse);
+({ createCollectiblesItemsFromServerResponse: c5, transformSKUToCollectiblesItem: closure_6 } =
+  createCollectiblesItemsFromServerResponse);
 fromServerDefault;
 ({ PREMIUM_TYPE_NONE: closure_8, PriceSetAssignmentPurchaseTypes: c9 } = ME);
 let CollectiblesProductRecord;
@@ -16,7 +17,23 @@ class CollectiblesProductRecord extends tmp3 {
   constructor(arg0) {
     tmp = new CollectiblesProductRecord(global, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ summary: tmp.summary, type: tmp.type, premiumType: tmp.premiumType, items: tmp.items, categorySkuId: tmp.categorySkuId, isCategoryReward: tmp.isCategoryReward, prices: tmp.prices, bundledProducts: tmp.bundledProducts, previewAssets: tmp.previewAssets, googleSkuIds: tmp.googleSkuIds, variants: tmp.variants, eligibleOffers: tmp.eligibleOffers, badgeOverride: tmp.badgeOverride, hideBadge: tmp.hideBadge, isFirstParty: tmp.isFirstParty } = global);
+    ({
+      summary: tmp.summary,
+      type: tmp.type,
+      premiumType: tmp.premiumType,
+      items: tmp.items,
+      categorySkuId: tmp.categorySkuId,
+      isCategoryReward: tmp.isCategoryReward,
+      prices: tmp.prices,
+      bundledProducts: tmp.bundledProducts,
+      previewAssets: tmp.previewAssets,
+      googleSkuIds: tmp.googleSkuIds,
+      variants: tmp.variants,
+      eligibleOffers: tmp.eligibleOffers,
+      badgeOverride: tmp.badgeOverride,
+      hideBadge: tmp.hideBadge,
+      isFirstParty: tmp.isFirstParty,
+    } = global);
     return tmp;
   }
 }
@@ -65,7 +82,23 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   }
   tmp4 = new tmp4(obj, fromServerResult, obj, this, closure_8);
   // ThrowIfThisInitialized (0x7c)
-  ({ summary: tmp14.summary, type: tmp14.type, premiumType: tmp14.premiumType, items: tmp14.items, categorySkuId: tmp14.categorySkuId, isCategoryReward: tmp14.isCategoryReward, prices: tmp14.prices, bundledProducts: tmp14.bundledProducts, previewAssets: tmp14.previewAssets, googleSkuIds: tmp14.googleSkuIds, variants: tmp14.variants, eligibleOffers: tmp14.eligibleOffers, badgeOverride: tmp14.badgeOverride, hideBadge: tmp14.hideBadge, isFirstParty: tmp14.isFirstParty } = obj);
+  ({
+    summary: tmp14.summary,
+    type: tmp14.type,
+    premiumType: tmp14.premiumType,
+    items: tmp14.items,
+    categorySkuId: tmp14.categorySkuId,
+    isCategoryReward: tmp14.isCategoryReward,
+    prices: tmp14.prices,
+    bundledProducts: tmp14.bundledProducts,
+    previewAssets: tmp14.previewAssets,
+    googleSkuIds: tmp14.googleSkuIds,
+    variants: tmp14.variants,
+    eligibleOffers: tmp14.eligibleOffers,
+    badgeOverride: tmp14.badgeOverride,
+    hideBadge: tmp14.hideBadge,
+    isFirstParty: tmp14.isFirstParty,
+  } = obj);
   return tmp4;
 };
 CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefrontProductRecord(skus) {
@@ -79,7 +112,8 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
     }
     if (null != collectibles) {
       if (skus.skus.length > 1) {
-        let type = require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.VARIANTS_GROUP;
+        let type = require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx")
+          .CollectiblesItemType.VARIANTS_GROUP;
       } else {
         type = collectibles.type;
       }
@@ -88,7 +122,27 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         obj = {};
       }
       let items = obj.items;
-      obj = { storeListingId: null, skuId: null, name: null, summary: null, styles: null, type: null, premiumType: null, items: null, categorySkuId: null, isCategoryReward: null, prices: null, badgeOverride: null, hideBadge: null, previewAssets: null, variants: null, googleSkuIds: null, eligibleOffers: null, isFirstParty: null, bundledProducts: null };
+      obj = {
+        storeListingId: null,
+        skuId: null,
+        name: null,
+        summary: null,
+        styles: null,
+        type: null,
+        premiumType: null,
+        items: null,
+        categorySkuId: null,
+        isCategoryReward: null,
+        prices: null,
+        badgeOverride: null,
+        hideBadge: null,
+        previewAssets: null,
+        variants: null,
+        googleSkuIds: null,
+        eligibleOffers: null,
+        isFirstParty: null,
+        bundledProducts: null,
+      };
       ({ id: obj2[0], id: obj2[1] } = first);
       ({ name: obj2[2], summary: obj2[3], primaryCollectionStyles: obj2[4] } = skus);
       obj[5] = type;
@@ -117,7 +171,8 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
       ({ badgeOverride: obj2[11], hideBadge: obj2[12] } = skus);
       const previewAssetPaths = first.previewAssetPaths;
       obj[13] = previewAssetPaths;
-      let str2 = require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.VARIANTS_GROUP;
+      let str2 = require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx")
+        .CollectiblesItemType.VARIANTS_GROUP;
       let found;
       if (type === str2) {
         skus = skus.skus;
@@ -137,7 +192,29 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             }
             ({ items, item } = obj);
             first = closure_1_3(tenantMetadata.selectedOptions, 1)[0];
-            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "accessible", items: null, categorySkuId: null, isCategoryReward: null, prices: null, previewAssets: null, googleSkuIds: null, eligibleOffers: null, variants: null, bundledProducts: "<string:4148428801>", isFirstParty: "<string:1224737288>" };
+            obj = {
+              baseVariantName: null,
+              baseVariantSkuId: null,
+              variantLabel: null,
+              variantValue: null,
+              storeListingId: null,
+              skuId: null,
+              name: null,
+              summary: null,
+              styles: "Button",
+              type: "Array",
+              premiumType: "accessible",
+              items: null,
+              categorySkuId: null,
+              isCategoryReward: null,
+              prices: null,
+              previewAssets: null,
+              googleSkuIds: null,
+              eligibleOffers: null,
+              variants: null,
+              bundledProducts: "<string:4148428801>",
+              isFirstParty: "<string:1224737288>",
+            };
             obj[0] = skus.name;
             obj[1] = first.id;
             let str;
@@ -194,7 +271,12 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             }
             const tmp16 = new closure_1_14(obj, tmp, premiumType, items, premiumType, item);
             // ThrowIfThisInitialized (0x7c)
-            ({ baseVariantName: tmp16.baseVariantName, baseVariantSkuId: tmp16.baseVariantSkuId, variantLabel: tmp16.variantLabel, variantValue: tmp16.variantValue } = obj);
+            ({
+              baseVariantName: tmp16.baseVariantName,
+              baseVariantSkuId: tmp16.baseVariantSkuId,
+              variantLabel: tmp16.variantLabel,
+              variantValue: tmp16.variantValue,
+            } = obj);
             return tmp16;
           }
         });
@@ -244,7 +326,23 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
       }
       const tmp19 = new CollectiblesProductRecord(obj, premiumType, items, closure_7, type, str2);
       // ThrowIfThisInitialized (0x7c)
-      ({ summary: tmp19.summary, type: tmp19.type, premiumType: tmp19.premiumType, items: tmp19.items, categorySkuId: tmp19.categorySkuId, isCategoryReward: tmp19.isCategoryReward, prices: tmp19.prices, bundledProducts: tmp19.bundledProducts, previewAssets: tmp19.previewAssets, googleSkuIds: tmp19.googleSkuIds, variants: tmp19.variants, eligibleOffers: tmp19.eligibleOffers, badgeOverride: tmp19.badgeOverride, hideBadge: tmp19.hideBadge, isFirstParty: tmp19.isFirstParty } = obj);
+      ({
+        summary: tmp19.summary,
+        type: tmp19.type,
+        premiumType: tmp19.premiumType,
+        items: tmp19.items,
+        categorySkuId: tmp19.categorySkuId,
+        isCategoryReward: tmp19.isCategoryReward,
+        prices: tmp19.prices,
+        bundledProducts: tmp19.bundledProducts,
+        previewAssets: tmp19.previewAssets,
+        googleSkuIds: tmp19.googleSkuIds,
+        variants: tmp19.variants,
+        eligibleOffers: tmp19.eligibleOffers,
+        badgeOverride: tmp19.badgeOverride,
+        hideBadge: tmp19.hideBadge,
+        isFirstParty: tmp19.isFirstParty,
+      } = obj);
       return tmp19;
     }
   }
@@ -253,11 +351,15 @@ let prototype;
 prototype = function CollectiblesVariantProductRecord(arg0) {
   const tmp = new prototype(arg0, new.target);
   // ThrowIfThisInitialized (0x7c)
-  ({ baseVariantName: tmp.baseVariantName, baseVariantSkuId: tmp.baseVariantSkuId, variantLabel: tmp.variantLabel, variantValue: tmp.variantValue } = arg0);
+  ({
+    baseVariantName: tmp.baseVariantName,
+    baseVariantSkuId: tmp.baseVariantSkuId,
+    variantLabel: tmp.variantLabel,
+    variantValue: tmp.variantValue,
+  } = arg0);
   return tmp;
 }.prototype;
-class prototype extends CollectiblesProductRecord {
-}
+class prototype extends CollectiblesProductRecord {}
 prototype["fromServer"] = function fromServer(arg0) {
   ({ base_variant_name, base_variant_sku_id, variant_label, variant_value } = arg0);
   let obj = Object.create(null);
@@ -274,7 +376,12 @@ prototype["fromServer"] = function fromServer(arg0) {
   }
   tmp2 = new tmp2(obj, fromServerResult, obj);
   // ThrowIfThisInitialized (0x7c)
-  ({ baseVariantName: tmp5.baseVariantName, baseVariantSkuId: tmp5.baseVariantSkuId, variantLabel: tmp5.variantLabel, variantValue: tmp5.variantValue } = obj);
+  ({
+    baseVariantName: tmp5.baseVariantName,
+    baseVariantSkuId: tmp5.baseVariantSkuId,
+    variantLabel: tmp5.variantLabel,
+    variantValue: tmp5.variantValue,
+  } = obj);
   return tmp2;
 };
 const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesProductRecord.tsx");

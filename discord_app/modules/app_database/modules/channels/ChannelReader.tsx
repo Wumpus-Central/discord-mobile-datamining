@@ -14,14 +14,16 @@ prototype["getSync"] = function getSync(closure_1, closure_0) {
   const obj = itemsDefault;
   const manySyncUnsafe = itemsDefault.channels(closure_1).getManySyncUnsafe(closure_0);
   const diff = performance.now() - nowResult;
-  logger.log("synchronously loaded in " + diff + "ms (guild: " + closure_0 + ", channels: " + manySyncUnsafe.length + ")");
+  logger.log(
+    "synchronously loaded in " + diff + "ms (guild: " + closure_0 + ", channels: " + manySyncUnsafe.length + ")",
+  );
   const items = [manySyncUnsafe, diff];
   return items;
 };
 prototype["getAsync"] = function getAsync(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return callback(function*() {
+  return callback(function* () {
     let length = tmp5;
     closure_0 = tmp2;
     const _performance2 = performance;
@@ -35,7 +37,7 @@ prototype["getAsync"] = function getAsync(arg0, arg1) {
   })();
 };
 prototype["getGuildIds"] = function getGuildIds() {
-  return callback(function*() {
+  return callback(function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();

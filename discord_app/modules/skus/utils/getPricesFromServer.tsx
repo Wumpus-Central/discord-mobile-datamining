@@ -23,4 +23,4 @@ export default function getPricesFromServer(arg0) {
     }, {});
   }
   return reduced;
-};
+}

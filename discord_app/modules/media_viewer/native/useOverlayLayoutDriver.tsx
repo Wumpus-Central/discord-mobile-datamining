@@ -3,15 +3,19 @@ import closure_2 from "../../../../_runtime/00019_noop.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
-let closure_3 = { code: "function useOverlayLayoutDriverTsx1(){const{interpolate,animationDriver}=this.__closure;return{transform:[{translateY:interpolate(animationDriver.get(),[0,0.75,1],[-50,-50,0])}],opacity:interpolate(animationDriver.get(),[0,0.75,1],[0,0,1])};}" };
-let closure_4 = { code: "function useOverlayLayoutDriverTsx2(){const{interpolate,animationDriver}=this.__closure;return{transform:[{translateY:interpolate(animationDriver.get(),[0,0.75,1],[50,50,0])}],opacity:interpolate(animationDriver.get(),[0,0.75,1],[0,0,1])};}" };
+let closure_3 = {
+  code: "function useOverlayLayoutDriverTsx1(){const{interpolate,animationDriver}=this.__closure;return{transform:[{translateY:interpolate(animationDriver.get(),[0,0.75,1],[-50,-50,0])}],opacity:interpolate(animationDriver.get(),[0,0.75,1],[0,0,1])};}",
+};
+let closure_4 = {
+  code: "function useOverlayLayoutDriverTsx2(){const{interpolate,animationDriver}=this.__closure;return{transform:[{translateY:interpolate(animationDriver.get(),[0,0.75,1],[50,50,0])}],opacity:interpolate(animationDriver.get(),[0,0.75,1],[0,0,1])};}",
+};
 let result = require("set").fileFinishedImporting("modules/media_viewer/native/useOverlayLayoutDriver.tsx");
 
 export const useOverlayLayoutDriver = function useOverlayLayoutDriver() {
   sharedValue = sharedValue(4217).useSharedValue(0);
   let obj = sharedValue(4217);
   const mediaViewerDimensions = sharedValue(8588).useMediaViewerDimensions();
-  const items = [sharedValue, , ];
+  const items = [sharedValue, ,];
   ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);
   const effect = React.useEffect(() => {
     let obj = sharedValue(closure_1_1[3]);
@@ -25,7 +29,9 @@ export const useHeaderLayoutAnimation = function useHeaderLayoutAnimation(animat
   let obj = ReanimatedRexport;
   const fn = function o() {
     let obj = { transform: null, opacity: null };
-    obj = { translateY: animationDriver(closure_1_1[1]).interpolate(animationDriver.get(), [0, 0.75, 1], [-50, -50, 0]) };
+    obj = {
+      translateY: animationDriver(closure_1_1[1]).interpolate(animationDriver.get(), [0, 0.75, 1], [-50, -50, 0]),
+    };
     const items = [obj];
     obj[0] = items;
     const obj3 = animationDriver(closure_1_1[1]);
@@ -43,14 +49,19 @@ export const useFooterLayoutAnimation = function useFooterLayoutAnimation(overla
   let obj = ReanimatedRexport;
   const fn = function n() {
     let obj = { transform: null, opacity: null };
-    obj = { translateY: overlayLayoutDriver(closure_1_1[1]).interpolate(overlayLayoutDriver.get(), [0, 0.75, 1], [50, 50, 0]) };
+    obj = {
+      translateY: overlayLayoutDriver(closure_1_1[1]).interpolate(overlayLayoutDriver.get(), [0, 0.75, 1], [50, 50, 0]),
+    };
     const items = [obj];
     obj[0] = items;
     const obj3 = overlayLayoutDriver(closure_1_1[1]);
     obj[1] = overlayLayoutDriver(closure_1_1[1]).interpolate(overlayLayoutDriver.get(), [0, 0.75, 1], [0, 0, 1]);
     return obj;
   };
-  obj = { interpolate: require("../../reanimated/ReanimatedRexport.tsx").interpolate, animationDriver: overlayLayoutDriver };
+  obj = {
+    interpolate: require("../../reanimated/ReanimatedRexport.tsx").interpolate,
+    animationDriver: overlayLayoutDriver,
+  };
   fn.__closure = obj;
   fn.__workletHash = 15220711492711;
   fn.__initData = closure_4;

@@ -49,7 +49,14 @@ function DraggableContainer(children) {
       return obj;
     }
   }
-  obj = { windowDimensionsSharedValue: tmp5, insetsSharedValue: tmp4, clamp: _require(contentWidth[6]).clamp, dragBoundsPadding: num, contentWidth, contentHeight };
+  obj = {
+    windowDimensionsSharedValue: tmp5,
+    insetsSharedValue: tmp4,
+    clamp: _require(contentWidth[6]).clamp,
+    dragBoundsPadding: num,
+    contentWidth,
+    contentHeight,
+  };
   P.__closure = obj;
   P.__workletHash = 729779775192;
   P.__initData = callback;
@@ -105,7 +112,7 @@ function DraggableContainer(children) {
       ({ x, y } = tmp2);
       obj3 = closure_0(contentWidth[10]);
       obj[0] = obj3.withSpring(x, closure_0(contentWidth[11]).springUnclamped);
-      items = [, ];
+      items = [,];
       items[0] = obj;
       obj1 = { translateY: null };
       obj5 = closure_0(contentWidth[10]);
@@ -116,26 +123,52 @@ function DraggableContainer(children) {
     }
   }
   const obj7 = _require(contentWidth[6]);
-  W.__closure = { getClampedPosition: callback, x, y, withSpring: _require(contentWidth[10]).withSpring, springUnclamped: _require(contentWidth[11]).springUnclamped };
+  W.__closure = {
+    getClampedPosition: callback,
+    x,
+    y,
+    withSpring: _require(contentWidth[10]).withSpring,
+    springUnclamped: _require(contentWidth[11]).springUnclamped,
+  };
   W.__workletHash = 6251354551691;
   W.__initData = closure_14;
   const animatedStyle = obj7.useAnimatedStyle(W);
-  obj3 = { gesture: panGesture, children: sharedValue(importDefault(contentWidth[6]).View, { style: items1, children: children.children }) };
+  obj3 = {
+    gesture: panGesture,
+    children: sharedValue(importDefault(contentWidth[6]).View, { style: items1, children: children.children }),
+  };
   items1 = [tmp.widgetContainer, animatedStyle];
   return sharedValue(_require(contentWidth[9]).GestureDetector, obj3);
 }
 let c3 = importAllResult;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 let obj = { widgetContainer: { position: "absolute" }, widget: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: DEV_WIDGET_SIZE, width: DEV_WIDGET_SIZE, borderRadius: ThemesDefault.radii.xl };
+obj = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  justifyContent: "center",
+  alignItems: "center",
+  height: DEV_WIDGET_SIZE,
+  width: DEV_WIDGET_SIZE,
+  borderRadius: ThemesDefault.radii.xl,
+};
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
 obj[1] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
-let closure_10 = { code: "function DevWidgetTsx1(x,y){const{windowDimensionsSharedValue,insetsSharedValue,clamp,dragBoundsPadding,contentWidth,contentHeight}=this.__closure;const{width:windowWidth,height:windowHeight}=windowDimensionsSharedValue.get();const insets=insetsSharedValue.get();return{x:clamp(x,insets.left+dragBoundsPadding,windowWidth-insets.right-contentWidth-dragBoundsPadding),y:clamp(y,insets.top+dragBoundsPadding,windowHeight-insets.bottom-contentHeight-dragBoundsPadding)};}" };
-let closure_11 = { code: "function DevWidgetTsx2(){const{originalX,x,originalY,y}=this.__closure;originalX.set(x.get());originalY.set(y.get());}" };
-let closure_12 = { code: "function DevWidgetTsx3(event){const{getClampedPosition,originalX,originalY,x,y}=this.__closure;const{x:xClamped,y:yClamped}=getClampedPosition(originalX.get()+event.translationX,originalY.get()+event.translationY);x.set(xClamped);y.set(yClamped);}" };
-let closure_13 = { code: "function DevWidgetTsx4(){const{runOnJS,onChangePosition,x,y}=this.__closure;runOnJS(onChangePosition)({x:x.get(),y:y.get()});}" };
-let closure_14 = { code: "function DevWidgetTsx5(){const{getClampedPosition,x,y,withSpring,springUnclamped}=this.__closure;const{x:translateX,y:translateY}=getClampedPosition(x.get(),y.get());return{transform:[{translateX:withSpring(translateX,springUnclamped)},{translateY:withSpring(translateY,springUnclamped)}]};}" };
+let closure_10 = {
+  code: "function DevWidgetTsx1(x,y){const{windowDimensionsSharedValue,insetsSharedValue,clamp,dragBoundsPadding,contentWidth,contentHeight}=this.__closure;const{width:windowWidth,height:windowHeight}=windowDimensionsSharedValue.get();const insets=insetsSharedValue.get();return{x:clamp(x,insets.left+dragBoundsPadding,windowWidth-insets.right-contentWidth-dragBoundsPadding),y:clamp(y,insets.top+dragBoundsPadding,windowHeight-insets.bottom-contentHeight-dragBoundsPadding)};}",
+};
+let closure_11 = {
+  code: "function DevWidgetTsx2(){const{originalX,x,originalY,y}=this.__closure;originalX.set(x.get());originalY.set(y.get());}",
+};
+let closure_12 = {
+  code: "function DevWidgetTsx3(event){const{getClampedPosition,originalX,originalY,x,y}=this.__closure;const{x:xClamped,y:yClamped}=getClampedPosition(originalX.get()+event.translationX,originalY.get()+event.translationY);x.set(xClamped);y.set(yClamped);}",
+};
+let closure_13 = {
+  code: "function DevWidgetTsx4(){const{runOnJS,onChangePosition,x,y}=this.__closure;runOnJS(onChangePosition)({x:x.get(),y:y.get()});}",
+};
+let closure_14 = {
+  code: "function DevWidgetTsx5(){const{getClampedPosition,x,y,withSpring,springUnclamped}=this.__closure;const{x:translateX,y:translateY}=getClampedPosition(x.get(),y.get());return{transform:[{translateX:withSpring(translateX,springUnclamped)},{translateY:withSpring(translateY,springUnclamped)}]};}",
+};
 let closure_16 = importAllResult.memo(() => {
   const tmp = callback3();
   return callback(PressableBase.PressableOpacity, {
@@ -145,7 +178,7 @@ let closure_16 = importAllResult.memo(() => {
       return callback(table[13]).navigateToDevTools();
     },
     activeOpacity: 0.5,
-    children: callback(StaffBadgeIcon.StaffBadgeIcon, { size: "md", color: "white" })
+    children: callback(StaffBadgeIcon.StaffBadgeIcon, { size: "md", color: "white" }),
   });
 });
 let result = require("set").fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
@@ -155,7 +188,7 @@ export default function DevWidget() {
   const sharedValue = obj.useSharedValue(closure_4.devWidgetPosition.x);
   const sharedValue1 = _mod4217.useSharedValue(closure_4.devWidgetPosition.y);
   obj = { children: null };
-  const items = [callback(VisualEffectViewOverrideOverlay_Default, { x: sharedValue, y: sharedValue1 }), ];
+  const items = [callback(VisualEffectViewOverrideOverlay_Default, { x: sharedValue, y: sharedValue1 })];
   obj = {
     x: sharedValue,
     y: sharedValue1,
@@ -167,9 +200,9 @@ export default function DevWidget() {
       obj = { devWidgetPosition };
       return obj.updateDevToolsSettings(obj);
     },
-    children: callback(closure_16, {})
+    children: callback(closure_16, {}),
   };
   items[1] = callback(DraggableContainer, obj);
   obj[0] = items;
   return callback2(closure_7, obj);
-};
+}

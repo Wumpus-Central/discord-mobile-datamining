@@ -12,7 +12,14 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 const require = arg1;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-createCacheKey = { headerText: { marginTop: 32, marginHorizontal: 16, textAlign: "center" }, subheaderText: { marginVertical: 8, marginHorizontal: 16, textAlign: "center" }, input: null, otherOptionsContainer: null, rowContainer: null, background: null };
+createCacheKey = {
+  headerText: { marginTop: 32, marginHorizontal: 16, textAlign: "center" },
+  subheaderText: { marginVertical: 8, marginHorizontal: 16, textAlign: "center" },
+  input: null,
+  otherOptionsContainer: null,
+  rowContainer: null,
+  background: null,
+};
 createCacheKey = { marginTop: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { marginTop: 16, paddingHorizontal: 16 };
@@ -39,7 +46,10 @@ export default function AddFriendScreen(navigation) {
       let obj = contactSyncAccount(_undefined[10]);
       userTag = obj.getUserTag(currentUser);
     }
-    contactSyncAccount(_undefined[11]).track(constants.FRIEND_ADD_VIEWED, { friend_add_type: "Invite", source_page: "Add Friend Modal" });
+    contactSyncAccount(_undefined[11]).track(constants.FRIEND_ADD_VIEWED, {
+      friend_add_type: "Invite",
+      source_page: "Add Friend Modal",
+    });
     const intl = navigation(_undefined[12]).intl;
     obj = { url: "" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT, username: userTag };
     const obj2 = contactSyncAccount(_undefined[11]);
@@ -53,10 +63,13 @@ export default function AddFriendScreen(navigation) {
         let obj = closure_1_0(closure_1_2[14]);
         const intl = closure_1_0(closure_1_2[12]).intl;
         obj = {};
-        const renderHeaderTextButton = obj.getRenderHeaderTextButton(intl.string(closure_1_0(closure_1_2[12]).t.RDE0Sc), closure_3);
+        const renderHeaderTextButton = obj.getRenderHeaderTextButton(
+          intl.string(closure_1_0(closure_1_2[12]).t.RDE0Sc),
+          closure_3,
+        );
         const merged = Object.assign(arg0);
         return renderHeaderTextButton(obj);
-      }
+      },
     });
     const result = navigation(_undefined[9]).checkContactPermissions();
     result.then((arg0) => {
@@ -64,7 +77,9 @@ export default function AddFriendScreen(navigation) {
       const tmp = closure_1_9;
       const tmp2 = closure_1_0;
       const tmp3 = closure_1_2;
-      let tmp5 = arg0 === closure_1_9.NOT_DETERMINED || closure_1_0(closure_1_2[15]).isAndroid() && arg0 === closure_1_9.UNAUTHORIZED;
+      let tmp5 =
+        arg0 === closure_1_9.NOT_DETERMINED ||
+        (closure_1_0(closure_1_2[15]).isAndroid() && arg0 === closure_1_9.UNAUTHORIZED);
       if (!tmp5) {
         tmp5 = !tmp2(tmp3[9]).isContactSyncEnabled(closure_1);
         const tmp2Result = tmp2(tmp3[9]);
@@ -72,22 +87,32 @@ export default function AddFriendScreen(navigation) {
       callback(tmp5);
     });
   }, items);
-  const items1 = [callback(contactSyncAccount(5070), { absolute: true }), ];
+  const items1 = [callback(contactSyncAccount(5070), { absolute: true })];
   obj = { keyboardShouldPersistTaps: "handled", style: tmp.background, children: null };
-  obj = { style: tmp.headerText, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  obj = {
+    style: tmp.headerText,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   let intl = navigation(1236).intl;
   obj[4] = intl.string(navigation(1236).t.GWMTSE);
-  const items2 = [callback(navigation(4474).Text, obj), , , ];
+  const items2 = [callback(navigation(4474).Text, obj), , ,];
   obj1 = { style: tmp.subheaderText, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = navigation(1236).intl;
   obj1[3] = intl2.string(navigation(1236).t["Rn/sLl"]);
   items2[1] = callback(navigation(4474).Text, obj1);
-  items2[2] = callback(contactSyncAccount(13594), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
+  items2[2] = callback(contactSyncAccount(13594), {
+    style: tmp.input,
+    autoFocusInput: false,
+    sourcePage: navigation.route.params.sourcePage,
+  });
   const obj3 = { style: tmp.otherOptionsContainer, children: null };
   const obj4 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
   const intl3 = navigation(1236).intl;
   obj4[3] = intl3.string(navigation(1236).t.dukg0Z);
-  const items3 = [callback(navigation(4474).Text, obj4), ];
+  const items3 = [callback(navigation(4474).Text, obj4)];
   let tmp10Result = null;
   if (tmp5) {
     const obj5 = { style: null, location: "Add Friend Modal" };
@@ -102,4 +127,4 @@ export default function AddFriendScreen(navigation) {
   items1[1] = closure_11(closure_6, obj);
   obj6[0] = items1;
   return closure_11(closure_12, obj6);
-};
+}

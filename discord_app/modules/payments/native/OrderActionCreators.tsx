@@ -22,7 +22,7 @@ function _getOrders() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (logger === 2) {
         logger = 3;
         HermesBuiltin.throwTypeError();
@@ -172,7 +172,7 @@ function _createOrder() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (logger === 2) {
         logger = 3;
         HermesBuiltin.throwTypeError();
@@ -210,7 +210,16 @@ function _createOrder() {
               logger = undefined;
               c7 = undefined;
               let dispatchResult = callback;
-              ({ orderLineItems: c0, paymentGateway: c1, recipientUserId: c2, isGift: c3, giftInfo: c4, subscriptionFacet: c5, externalGatewayFacet: c6, countryCode: c7 } = callback);
+              ({
+                orderLineItems: c0,
+                paymentGateway: c1,
+                recipientUserId: c2,
+                isGift: c3,
+                giftInfo: c4,
+                subscriptionFacet: c5,
+                externalGatewayFacet: c6,
+                countryCode: c7,
+              } = callback);
               let obj2;
               let obj3;
               body = undefined;
@@ -408,9 +417,19 @@ function _getOrCreateOrder() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       c1 = 0;
-      ({ skuId: c0, paymentGateway: c1, recipientUserId: c2, purchaseType: c3, isGift: c4, giftInfo: c5, createdAfter: c6, subscriptionPlanId: c7, externalGatewayFacet: c8 } = c0);
+      ({
+        skuId: c0,
+        paymentGateway: c1,
+        recipientUserId: c2,
+        purchaseType: c3,
+        isGift: c4,
+        giftInfo: c5,
+        createdAfter: c6,
+        subscriptionPlanId: c7,
+        externalGatewayFacet: c8,
+      } = c0);
       yield "PX_16";
       const obj2 = { isGift: null, status: null, skuId: null, createdAfter: null };
       obj2[0] = constants;
@@ -427,7 +446,14 @@ function _getOrCreateOrder() {
         logger.info("reusing existing draft order", obj5);
         return id;
       }
-      const obj7 = { paymentGateway: null, recipientUserId: null, isGift: null, giftInfo: null, orderLineItems: null, externalGatewayFacet: null };
+      const obj7 = {
+        paymentGateway: null,
+        recipientUserId: null,
+        isGift: null,
+        giftInfo: null,
+        orderLineItems: null,
+        externalGatewayFacet: null,
+      };
       obj7[0] = c1;
       obj7[1] = c2;
       obj7[2] = constants;
@@ -461,7 +487,7 @@ function _patchOrderLineItem() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (logger === 2) {
         logger = 3;
         HermesBuiltin.throwTypeError();
@@ -633,7 +659,7 @@ function _patchOrder() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (logger === 2) {
         logger = 3;
         HermesBuiltin.throwTypeError();
@@ -667,7 +693,13 @@ function _patchOrder() {
               dependencyMap = undefined;
               c3 = undefined;
               c4 = undefined;
-              ({ orderId: c0, expectedRevision: c1, orderLineItems: c2, subscriptionFacet: c3, externalGatewayFacet: c4 } = callback);
+              ({
+                orderId: c0,
+                expectedRevision: c1,
+                orderLineItems: c2,
+                subscriptionFacet: c3,
+                externalGatewayFacet: c4,
+              } = callback);
               c5 = undefined;
               logger = undefined;
               c5 = 1;
@@ -811,7 +843,7 @@ function _updateOrder() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (logger === 2) {
         logger = 3;
         HermesBuiltin.throwTypeError();
@@ -1014,7 +1046,7 @@ function _discardOrder() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_1 = tmp4;
       const HTTP = lib(table[4]).HTTP;
       obj1 = { url: null, rejectWithError: false };
@@ -1044,7 +1076,7 @@ function _cancelSigningAndDiscardOrder() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const table = tmp3;
       c4 = 1;
       yield closure_1_21(callback);
@@ -1101,7 +1133,7 @@ function _markOrderAsSigningInProgress() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -1137,7 +1169,7 @@ function _markOrderAsSigningInProgress() {
               obj2[0] = closure_11;
               return obj2;
             } else {
-              const tmp6 = closure_1_3(function*() {
+              const tmp6 = closure_1_3(function* () {
                 if (c5 === 2) {
                   c5 = 3;
                   HermesBuiltin.throwTypeError();
@@ -1372,7 +1404,7 @@ function _cancelOrderSigning() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -1410,7 +1442,7 @@ function _cancelOrderSigning() {
                 obj2[0] = value;
                 return obj2;
               } else {
-                const tmp6 = closure_1_3(function*() {
+                const tmp6 = closure_1_3(function* () {
                   if (c5 === 2) {
                     c5 = 3;
                     HermesBuiltin.throwTypeError();

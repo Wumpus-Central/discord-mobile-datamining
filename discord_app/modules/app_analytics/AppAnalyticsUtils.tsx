@@ -41,7 +41,19 @@ function collectGuildAnalyticsMetadata(guildId) {
       member = member.getMember(guildId, id.getId());
       channels = channels.getChannels(guildId);
       const voiceStates = store4.getVoiceStates(guildId);
-      const obj = { guild_id: null, guild_size_total: null, guild_num_channels: null, guild_num_text_channels: null, guild_num_voice_channels: null, guild_num_roles: null, guild_member_num_roles: null, guild_member_perms: null, guild_is_vip: null, is_member: null, num_voice_channels_active: null };
+      const obj = {
+        guild_id: null,
+        guild_size_total: null,
+        guild_num_channels: null,
+        guild_num_text_channels: null,
+        guild_num_voice_channels: null,
+        guild_num_roles: null,
+        guild_member_num_roles: null,
+        guild_member_perms: null,
+        guild_is_vip: null,
+        is_member: null,
+        num_voice_channels_active: null,
+      };
       obj[0] = guild.id;
       obj[1] = memberCount.getMemberCount(guildId);
       obj[2] = channels[closure_7].length + channels[closure_8].length;
@@ -82,7 +94,13 @@ function collectChannelAnalyticsMetadata(channel) {
   } else {
     const guildId = channel.getGuildId();
     if (null == guildId) {
-      let obj = { channel_id: null, channel_type: null, channel_size_total: null, channel_member_perms: null, channel_hidden: null };
+      let obj = {
+        channel_id: null,
+        channel_type: null,
+        channel_size_total: null,
+        channel_member_perms: null,
+        channel_hidden: null,
+      };
       ({ id: obj3[0], type: obj3[1] } = channel);
       let num = 0;
       if (channel.isPrivate()) {
@@ -232,7 +250,12 @@ function getVoiceStateMetadata(guildId, channelId, videoEnabled) {
 }
 const THREAD_CHANNEL_TYPES = createChannelRecord.THREAD_CHANNEL_TYPES;
 ({ GUILD_SELECTABLE_CHANNELS_KEY: error, GUILD_VOCAL_CHANNELS_KEY: closure_8 } = comparator);
-({ GuildFeatures: closure_25, AnalyticsLocations: closure_26, Permissions: closure_27, ActivityTypes: closure_28 } = ME);
+({
+  GuildFeatures: closure_25,
+  AnalyticsLocations: closure_26,
+  Permissions: closure_27,
+  ActivityTypes: closure_28,
+} = ME);
 const isStaticChannelRoute = set2.isStaticChannelRoute;
 const result = set.fileFinishedImporting("modules/app_analytics/AppAnalyticsUtils.tsx");
 
@@ -329,7 +352,27 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
         return obj1;
       } else {
         snapshot = snapshot.getSnapshot(selectedChannelId, 10 * setDefault.Millis.SECOND);
-        const obj3 = { channel_id: null, channel_was_unread: null, channel_mention_count: null, channel_is_muted: null, channel_is_nsfw: null, channel_is_spoiler: null, channel_resolved_unread_setting: null, channel_preset: null, guild_id: null, guild_was_unread: null, guild_mention_count: null, guild_is_muted: null, guild_resolved_unread_setting: null, guild_preset: null, parent_id: null, parent_channel_type: null, has_pending_member_action: null, can_send_message: null, is_app_dm: false };
+        const obj3 = {
+          channel_id: null,
+          channel_was_unread: null,
+          channel_mention_count: null,
+          channel_is_muted: null,
+          channel_is_nsfw: null,
+          channel_is_spoiler: null,
+          channel_resolved_unread_setting: null,
+          channel_preset: null,
+          guild_id: null,
+          guild_was_unread: null,
+          guild_mention_count: null,
+          guild_is_muted: null,
+          guild_resolved_unread_setting: null,
+          guild_preset: null,
+          parent_id: null,
+          parent_channel_type: null,
+          has_pending_member_action: null,
+          can_send_message: null,
+          is_app_dm: false,
+        };
         obj3[0] = selectedChannelId;
         ({ unread: obj6[1], mentionCount: obj6[2] } = snapshot);
         obj3[3] = closure_22.isChannelMuted(channel.guild_id, channel.id);

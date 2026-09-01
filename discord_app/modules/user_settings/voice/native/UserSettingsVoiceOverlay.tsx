@@ -27,5 +27,10 @@ export default function UserSettingsVoiceOverlay() {
   obj[2] = stateFromStores;
   obj[3] = dispatcherDefault.setEnabled;
   obj[2] = jsx(TableSwitchRow.TableSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null });
-  return jsx(UserSettingsVoice.UserSettingsTableRowGroup, { label: null, subLabel: null, value: null, onValueChange: null });
-};
+  return jsx(UserSettingsVoice.UserSettingsTableRowGroup, {
+    label: null,
+    subLabel: null,
+    value: null,
+    onValueChange: null,
+  });
+}

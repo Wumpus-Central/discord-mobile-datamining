@@ -62,4 +62,4 @@ export default function useIframeLifecycle(arg0) {
       }
     };
   }, items);
-};
+}

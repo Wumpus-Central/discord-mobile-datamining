@@ -36,7 +36,7 @@ function _handleVoiceOrStageChannelConnectPress() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0, openGuildVoiceModal) {
+    return (function* (arg0, openGuildVoiceModal) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -123,7 +123,10 @@ function _handleVoiceOrStageChannelConnectPress() {
 }
 let c4 = importAllResult;
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let closure_18 = createCacheKey.createStyles(() => ({ voiceUsers: { display: "flex", flexDirection: "row", paddingRight: 16, marginTop: -2 }, pressable: { flex: 1 } }));
+let closure_18 = createCacheKey.createStyles(() => ({
+  voiceUsers: { display: "flex", flexDirection: "row", paddingRight: 16, marginTop: -2 },
+  pressable: { flex: 1 },
+}));
 let closure_19 = [];
 let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(channel) {
   channel = channel.channel;
@@ -152,7 +155,10 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
   const items = [closure_9];
   const stateFromStores = obj3.useStateFromStores(items, () => closure_1_9.resolveUnreadSetting(closure_0));
   let obj4 = useStageParticipants;
-  const stageParticipantsCount = obj4.useStageParticipantsCount(channel.id, require("../../../stage_channels/StageChannelParticipants.tsx").StageChannelParticipantNamedIndex.AUDIENCE);
+  const stageParticipantsCount = obj4.useStageParticipantsCount(
+    channel.id,
+    require("../../../stage_channels/StageChannelParticipants.tsx").StageChannelParticipantNamedIndex.AUDIENCE,
+  );
   let userLimit = stageParticipantsCount + voiceStates.length;
   _require = channel;
   callback = undefined;
@@ -162,7 +168,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0, openMemberVerificationModal) {
+    return (function* (arg0, openMemberVerificationModal) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -206,7 +212,9 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
               if (obj7.getChannelRoleSubscriptionStatus(guildId.id).needSubscriptionToAccess) {
                 tmp21Result = tmp21(tmp22[19]);
                 guild_id = guild_id.guild_id;
-                const transitionToResult = tmp21Result.transitionTo(closure_1_11.CHANNEL(guild_id, closure_1_13.ROLE_SUBSCRIPTIONS));
+                const transitionToResult = tmp21Result.transitionTo(
+                  closure_1_11.CHANNEL(guild_id, closure_1_13.ROLE_SUBSCRIPTIONS),
+                );
               } else {
                 closure_1_16(guild_id);
               }
@@ -217,7 +225,9 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
             throw openMemberVerificationModal;
           } else {
             if (arg0 !== 2) {
-              const result = openMemberVerificationModal.openMemberVerificationModal(guildId, () => closure_1_16(closure_0));
+              const result = openMemberVerificationModal.openMemberVerificationModal(guildId, () =>
+                closure_1_16(closure_0),
+              );
               c3 = 3;
             }
             c3 = 3;
@@ -232,7 +242,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
       }
     })();
   });
-  callback = importAllResult.useCallback(function() {
+  callback = importAllResult.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -251,7 +261,10 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
       callback(closure_1_2[21])();
       callback(lib);
     }, items1),
-    onLongPress: importAllResult.useCallback(() => lib(closure_1_2[22]).openChannelLongPressActionSheet(lib.id), items2)
+    onLongPress: importAllResult.useCallback(
+      () => lib(closure_1_2[22]).openChannelLongPressActionSheet(lib.id),
+      items2,
+    ),
   };
   items1 = [channel, callback];
   items2 = [channel.id];
@@ -292,7 +305,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
     }
   }, items6);
   let tmpResult = tmp(16559);
-  const items7 = [tmp6.pressable, ];
+  const items7 = [tmp6.pressable];
   let num = 0;
   if (voiceStates.length > 0) {
     num = 6;
@@ -302,7 +315,21 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
   const merged = Object.assign(obj);
   if (!channel.isGuildStageVoice()) {
     const merged1 = Object.assign(channelAccessibilityProps);
-    obj2 = { channel: null, subtitle: null, unread: null, resolvedUnreadSetting: null, mentionCount: null, mentionBadge: null, live: null, end: null, connected: null, fontScale: null, isSubscriptionGated: null, needSubscriptionToAccess: null, showGuildBadgeIcon: true };
+    obj2 = {
+      channel: null,
+      subtitle: null,
+      unread: null,
+      resolvedUnreadSetting: null,
+      mentionCount: null,
+      mentionBadge: null,
+      live: null,
+      end: null,
+      connected: null,
+      fontScale: null,
+      isSubscriptionGated: null,
+      needSubscriptionToAccess: null,
+      showGuildBadgeIcon: true,
+    };
     obj2[0] = channel;
     tmpResult = tmp(16571);
     if (topic == null) {
@@ -343,7 +370,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
     obj2[9] = fontScale;
     obj2[10] = isSubscriptionGated;
     obj2[11] = needSubscriptionToAccess;
-    const items8 = [tmpResult(obj2), ];
+    const items8 = [tmpResult(obj2)];
     let tmp31Result = null;
     if (voiceStates.length > 0) {
       obj7 = { style: null, children: null };
@@ -394,11 +421,16 @@ const memoResult = importAllResult.memo(function VoiceOrStageChannel(channel) {
     channel,
     voiceStates: stateFromStores,
     speakerVoiceStates: channel(589).useStateFromStoresArray(items1, () => {
-      const mutableParticipants = closure_1_6.getMutableParticipants(channel.id, channel(closure_1_2[32]).StageChannelParticipantNamedIndex.SPEAKER);
-      const found = mutableParticipants.filter((type) => type.type === callback(table[32]).StageChannelParticipantTypes.VOICE);
+      const mutableParticipants = closure_1_6.getMutableParticipants(
+        channel.id,
+        channel(closure_1_2[32]).StageChannelParticipantNamedIndex.SPEAKER,
+      );
+      const found = mutableParticipants.filter(
+        (type) => type.type === callback(table[32]).StageChannelParticipantTypes.VOICE,
+      );
       return found.map(channel(closure_1_2[46]).transformParticipantToSortedVoiceState);
     }),
-    subtitle: channel.customSubtitle
+    subtitle: channel.customSubtitle,
   };
   return callback2(closure_20, obj);
 });

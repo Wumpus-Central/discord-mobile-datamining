@@ -57,12 +57,16 @@ function extractMediaFromAttachment(width, closure_0, index, closure_02, arg4) {
     if (width.width > 0) {
       if (null != width.height) {
         if (width.height > 0) {
-          const enabledHarmTypesForMessage = getEligibleHarmTypesConfigsForContext.getEnabledHarmTypesForMessage(closure_0);
+          const enabledHarmTypesForMessage =
+            getEligibleHarmTypesConfigsForContext.getEnabledHarmTypesForMessage(closure_0);
           const obj14 = getEligibleHarmTypesConfigsForContext;
           obj = { type: null, media: null };
           obj[0] = ContentHarmTypeChannel.ObscuredMediaTypes.Attachment;
           obj[1] = width;
-          const result = getEligibleHarmTypesConfigsForContext.isMediaObscuredForHarmTypes(obj, enabledHarmTypesForMessage);
+          const result = getEligibleHarmTypesConfigsForContext.isMediaObscuredForHarmTypes(
+            obj,
+            enabledHarmTypesForMessage,
+          );
           const obj15 = getEligibleHarmTypesConfigsForContext;
           const isVideoFileResult = urlMatchesFileExtension.isVideoFile(width.filename);
           if (null != width.proxy_url) {
@@ -77,7 +81,29 @@ function extractMediaFromAttachment(width, closure_0, index, closure_02, arg4) {
             }
             const mobileOptimizedSrc = obj.getMobileOptimizedSrc(url, width, height, str2);
             if (isVideoFileResult) {
-              obj = { uri: null, messageId: null, guildId: null, channelId: null, videoURI: null, filename: null, mediaIndex: null, width: null, height: null, sourceURI: null, contentType: null, description: null, accessoryType: "attachment", spoiler: null, flags: null, obscure: null, placeholder: null, contentScanVersion: null, mediaViewIndex: null, attachmentId: null, shareURI: null };
+              obj = {
+                uri: null,
+                messageId: null,
+                guildId: null,
+                channelId: null,
+                videoURI: null,
+                filename: null,
+                mediaIndex: null,
+                width: null,
+                height: null,
+                sourceURI: null,
+                contentType: null,
+                description: null,
+                accessoryType: "attachment",
+                spoiler: null,
+                flags: null,
+                obscure: null,
+                placeholder: null,
+                contentScanVersion: null,
+                mediaViewIndex: null,
+                attachmentId: null,
+                shareURI: null,
+              };
               obj[0] = mobileOptimizedSrc;
               obj[1] = closure_0.id;
               obj[2] = closure_02;
@@ -107,7 +133,28 @@ function extractMediaFromAttachment(width, closure_0, index, closure_02, arg4) {
               obj[20] = url;
               return obj;
             } else {
-              obj1 = { uri: null, messageId: null, guildId: null, channelId: null, filename: null, mediaIndex: null, width: null, height: null, sourceURI: null, contentType: null, description: null, accessoryType: "attachment", spoiler: null, flags: null, obscure: null, placeholder: null, contentScanVersion: null, mediaViewIndex: null, attachmentId: null, shareURI: null };
+              obj1 = {
+                uri: null,
+                messageId: null,
+                guildId: null,
+                channelId: null,
+                filename: null,
+                mediaIndex: null,
+                width: null,
+                height: null,
+                sourceURI: null,
+                contentType: null,
+                description: null,
+                accessoryType: "attachment",
+                spoiler: null,
+                flags: null,
+                obscure: null,
+                placeholder: null,
+                contentScanVersion: null,
+                mediaViewIndex: null,
+                attachmentId: null,
+                shareURI: null,
+              };
               obj1[0] = mobileOptimizedSrc;
               obj1[1] = closure_0.id;
               obj1[2] = closure_02;
@@ -154,7 +201,7 @@ function extractMediaFromAttachment(width, closure_0, index, closure_02, arg4) {
                   const searchParams3 = str10.searchParams;
                   searchParams3.append("format", "webp");
                 }
-                const items = [obj1, ];
+                const items = [obj1];
                 const obj3 = {};
                 const merged1 = Object.assign(obj2);
                 obj3.uri = str10.toString();
@@ -166,7 +213,7 @@ function extractMediaFromAttachment(width, closure_0, index, closure_02, arg4) {
                 const str7 = new URL(url);
                 const searchParams = str7.searchParams;
                 searchParams.append("format", "webp");
-                const items1 = [obj1, ];
+                const items1 = [obj1];
                 const obj4 = {};
                 const merged2 = Object.assign(obj2);
                 obj4.uri = str7.toString();
@@ -280,7 +327,29 @@ function extractMediaFromEmbed(image, closure_0, contentMessage, arg3, closure_0
       }
       if (null != undefined) {
         if (!result1) {
-          obj2 = { uri: null, messageId: null, guildId: null, channelId: null, mediaIndex: null, videoURI: null, embedURI: null, width: null, height: null, isGIFV: null, sourceURI: null, embedProviderName: null, accessoryType: "embed", noCarousel: null, spoiler: null, flags: null, contentScanVersion: null, contentType: null, obscure: null, thumbnail: null, shareURI: null };
+          obj2 = {
+            uri: null,
+            messageId: null,
+            guildId: null,
+            channelId: null,
+            mediaIndex: null,
+            videoURI: null,
+            embedURI: null,
+            width: null,
+            height: null,
+            isGIFV: null,
+            sourceURI: null,
+            embedProviderName: null,
+            accessoryType: "embed",
+            noCarousel: null,
+            spoiler: null,
+            flags: null,
+            contentScanVersion: null,
+            contentType: null,
+            obscure: null,
+            thumbnail: null,
+            shareURI: null,
+          };
           obj2[0] = mobileOptimizedSrc;
           obj2[1] = closure_0.id;
           obj2[2] = closure_02;
@@ -323,7 +392,24 @@ function extractMediaFromEmbed(image, closure_0, contentMessage, arg3, closure_0
         }
       }
       if ("video" !== image.type) {
-        const obj4 = { uri: null, messageId: null, guildId: null, channelId: null, mediaIndex: null, width: null, height: null, sourceURI: null, accessoryType: "embed", noCarousel: null, spoiler: null, flags: null, obscure: null, contentScanVersion: null, contentType: null, shareURI: null };
+        const obj4 = {
+          uri: null,
+          messageId: null,
+          guildId: null,
+          channelId: null,
+          mediaIndex: null,
+          width: null,
+          height: null,
+          sourceURI: null,
+          accessoryType: "embed",
+          noCarousel: null,
+          spoiler: null,
+          flags: null,
+          obscure: null,
+          contentScanVersion: null,
+          contentType: null,
+          shareURI: null,
+        };
         obj4[0] = mobileOptimizedSrc;
         obj4[1] = closure_0.id;
         obj4[2] = closure_02;
@@ -363,14 +449,34 @@ function extractMediaFromEmbed(image, closure_0, contentMessage, arg3, closure_0
             if (1 === items1.length) {
               let first = items1[0];
             } else if (2 === items1.length) {
-              const items2 = [, ];
+              const items2 = [,];
               [arr2[0], arr2[1]] = items1;
               first = items2;
             }
             return first;
           }
         } else {
-          let obj6 = { uri: null, guildId: null, spoiler: null, flags: null, obscure: null, contentScanVersion: null, contentType: null, sourceURI: null, messageId: null, noCarousel: null, mediaIndex: null, accessoryType: "embed", width: null, height: null, channelId: null, embedURI: null, embedProviderName: null, disableDownload: true, shareURI: null };
+          let obj6 = {
+            uri: null,
+            guildId: null,
+            spoiler: null,
+            flags: null,
+            obscure: null,
+            contentScanVersion: null,
+            contentType: null,
+            sourceURI: null,
+            messageId: null,
+            noCarousel: null,
+            mediaIndex: null,
+            accessoryType: "embed",
+            width: null,
+            height: null,
+            channelId: null,
+            embedURI: null,
+            embedProviderName: null,
+            disableDownload: true,
+            shareURI: null,
+          };
           obj6[0] = mobileOptimizedSrc;
           obj6[1] = closure_02;
           obj6[2] = hasSpoilerEmbeds;
@@ -472,7 +578,24 @@ function extractMediaFromEmbed(image, closure_0, contentMessage, arg3, closure_0
             const str53 = str50.pathname;
           }
         }
-        let obj7 = { uri: null, guildId: null, spoiler: null, flags: null, obscure: null, contentScanVersion: null, contentType: null, messageId: null, noCarousel: null, mediaIndex: null, accessoryType: "embed", channelId: null, sourceURI: null, width: null, height: null, shareURI: null };
+        let obj7 = {
+          uri: null,
+          guildId: null,
+          spoiler: null,
+          flags: null,
+          obscure: null,
+          contentScanVersion: null,
+          contentType: null,
+          messageId: null,
+          noCarousel: null,
+          mediaIndex: null,
+          accessoryType: "embed",
+          channelId: null,
+          sourceURI: null,
+          width: null,
+          height: null,
+          shareURI: null,
+        };
         obj7[0] = tmp13(1492).getMobileOptimizedSrc(str2, image.thumbnail.width, image.thumbnail.height);
         obj7[1] = closure_02;
         obj7[2] = hasSpoilerEmbeds;
@@ -577,7 +700,23 @@ function toMediaSourceFromUnfurledMedia(id, guild_id, media, description, spoile
     obj = { type: null, media: null };
     obj[0] = tmp(6143).ObscuredMediaTypes.GenericMedia;
     obj[1] = media;
-    obj = { messageId: null, guildId: null, channelId: null, uri: null, sourceURI: null, width: null, height: null, contentType: null, description: null, spoiler: null, obscure: null, contentScanVersion: null, accessoryType: "component", mediaIndex: 0, shareURI: null };
+    obj = {
+      messageId: null,
+      guildId: null,
+      channelId: null,
+      uri: null,
+      sourceURI: null,
+      width: null,
+      height: null,
+      contentType: null,
+      description: null,
+      spoiler: null,
+      obscure: null,
+      contentScanVersion: null,
+      accessoryType: "component",
+      mediaIndex: 0,
+      shareURI: null,
+    };
     obj[0] = id.id;
     obj[1] = guild_id;
     obj[2] = id.channel_id;
@@ -629,7 +768,16 @@ function handleDownloadError() {
 }
 ({ MessageAttachmentFlags: closure_6, WEBP_RE_IOS: error } = ME);
 const re8 = /\.avif$/i;
-let obj = { PORTAL: 0, [0]: "PORTAL", TIKTOK_IFRAME: 1, [1]: "TIKTOK_IFRAME", WEB_FILE_IFRAME: 2, [2]: "WEB_FILE_IFRAME", DEFAULT: 3, [3]: "DEFAULT" };
+let obj = {
+  PORTAL: 0,
+  [0]: "PORTAL",
+  TIKTOK_IFRAME: 1,
+  [1]: "TIKTOK_IFRAME",
+  WEB_FILE_IFRAME: 2,
+  [2]: "WEB_FILE_IFRAME",
+  DEFAULT: 3,
+  [3]: "DEFAULT",
+};
 let result = require("set").fileFinishedImporting("modules/media_viewer/native/MediaSourceUtil.tsx");
 
 export const flattenSource = function flattenSource(closure_1, arg1) {
@@ -723,7 +871,11 @@ export const getEmbedMedia = function getEmbedMedia(embed) {
   return thumbnail;
 };
 export { extractMediaFromEmbed };
-export const extractMediaFromMessageComponents = function extractMediaFromMessageComponents(getContentMessage, contentMessage, closure_0) {
+export const extractMediaFromMessageComponents = function extractMediaFromMessageComponents(
+  getContentMessage,
+  contentMessage,
+  closure_0,
+) {
   if (0 === contentMessage.components.length) {
     return [];
   } else {
@@ -751,7 +903,13 @@ export const extractMediaFromMessageComponents = function extractMediaFromMessag
           let tmp14 = arg0;
           let tmp15 = arg2;
           let tmp12 = item10029;
-          let tmp16 = toMediaSourceFromUnfurledMedia(arg0, arg2, item10029.media, item10029.description, item10029.spoiler);
+          let tmp16 = toMediaSourceFromUnfurledMedia(
+            arg0,
+            arg2,
+            item10029.media,
+            item10029.description,
+            item10029.spoiler,
+          );
           if (null != tmp16) {
             obj = { sources: null, unfurledMediaItem: null };
             let tmp18 = tmp16;
@@ -771,7 +929,13 @@ export const extractMediaFromMessageComponents = function extractMediaFromMessag
           let num3 = 0;
           let tmp33 = getContentMessage;
           let tmp34 = closure_0;
-          let tmp35 = toMediaSourceFromUnfurledMedia(getContentMessage, closure_0, tmp4.media, tmp4.description, tmp4.spoiler);
+          let tmp35 = toMediaSourceFromUnfurledMedia(
+            getContentMessage,
+            closure_0,
+            tmp4.media,
+            tmp4.description,
+            tmp4.spoiler,
+          );
           if (null != tmp35) {
             obj = { sources: null, unfurledMediaItem: null };
             let tmp37 = tmp35;
@@ -787,7 +951,13 @@ export const extractMediaFromMessageComponents = function extractMediaFromMessag
     return items;
   }
 };
-export const extractMediaSourcesFromEmbed = function extractMediaSourcesFromEmbed(arg0, contentMessage, images, index, guild_id) {
+export const extractMediaSourcesFromEmbed = function extractMediaSourcesFromEmbed(
+  arg0,
+  contentMessage,
+  images,
+  index,
+  guild_id,
+) {
   closure_0 = arg0;
   importDefault = images;
   dependencyMap = index;
@@ -845,12 +1015,55 @@ export const extractMediaSourcesFromEmbed = function extractMediaSourcesFromEmbe
     const obj2 = lib(index[6]);
     obj = { type: lib(tmp6[7]).ObscuredMediaTypes.Embed, media: tmp8 };
     const tmp10 = lib(index[6]).getMediaObscuredReasonFromBitmask(obj, enabledHarmTypesForMessage).length > 0;
-    obj = { uri: mobileOptimizedSrc, messageId: lib.id, guildId: closure_3, channelId: lib.channel_id, mediaIndex: index, width: width.width, height: width.height, sourceURI: width.url, accessoryType: "embed", noCarousel: false, spoiler: hasSpoilerEmbeds, flags: tmp8.flags, obscure: tmp10, contentScanVersion: content_scan_version, contentType: width.contentType, shareURI: width.url };
-    const items = [obj, { uri: str, messageId: lib.id, guildId: closure_3, channelId: lib.channel_id, mediaIndex: index, width: width.width, height: width.height, sourceURI: width.url, accessoryType: "embed", noCarousel: false, spoiler: hasSpoilerEmbeds, contentType: width.contentType, flags: images.flags, obscure: tmp10, contentScanVersion: content_scan_version, shareURI: width.url }];
+    obj = {
+      uri: mobileOptimizedSrc,
+      messageId: lib.id,
+      guildId: closure_3,
+      channelId: lib.channel_id,
+      mediaIndex: index,
+      width: width.width,
+      height: width.height,
+      sourceURI: width.url,
+      accessoryType: "embed",
+      noCarousel: false,
+      spoiler: hasSpoilerEmbeds,
+      flags: tmp8.flags,
+      obscure: tmp10,
+      contentScanVersion: content_scan_version,
+      contentType: width.contentType,
+      shareURI: width.url,
+    };
+    const items = [
+      obj,
+      {
+        uri: str,
+        messageId: lib.id,
+        guildId: closure_3,
+        channelId: lib.channel_id,
+        mediaIndex: index,
+        width: width.width,
+        height: width.height,
+        sourceURI: width.url,
+        accessoryType: "embed",
+        noCarousel: false,
+        spoiler: hasSpoilerEmbeds,
+        contentType: width.contentType,
+        flags: images.flags,
+        obscure: tmp10,
+        contentScanVersion: content_scan_version,
+        shareURI: width.url,
+      },
+    ];
     return items;
   });
 };
-export const extractMediaSourcesFromComponent = function extractMediaSourcesFromComponent(id, components, guild_id, tmp10Result3, componentMediaIndex) {
+export const extractMediaSourcesFromComponent = function extractMediaSourcesFromComponent(
+  id,
+  components,
+  guild_id,
+  tmp10Result3,
+  componentMediaIndex,
+) {
   const _require = id;
   closure_1 = guild_id;
   obj = flattenComponents;
@@ -899,7 +1112,12 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
   }
   const flattenComponentsResult = obj.flattenComponents(components);
 };
-export const extractMediaSourcesFromMessage = function extractMediaSourcesFromMessage(message, message2, guild_id, GRAVITY_VALID_EMBED_TYPES) {
+export const extractMediaSourcesFromMessage = function extractMediaSourcesFromMessage(
+  message,
+  message2,
+  guild_id,
+  GRAVITY_VALID_EMBED_TYPES,
+) {
   const items = [];
   let num = 0;
   let num2 = 0;
@@ -1030,7 +1248,7 @@ export const useSelectedMediaSource = function useSelectedMediaSource(syncer) {
         }
       }
       return null;
-    }, items)
+    }, items),
   ];
   return items1;
 };
@@ -1052,7 +1270,11 @@ export const downloadMediaAsset = function downloadMediaAsset(mediaUrl, VIDEO) {
     const result = MediaViewerAnalytics.trackMediaViewerDownloadButtonTapped();
   }, handleDownloadError);
 };
-export const downloadMediaAssetWithContentType = function downloadMediaAssetWithContentType(mediaUrl, VIDEO, contentType) {
+export const downloadMediaAssetWithContentType = function downloadMediaAssetWithContentType(
+  mediaUrl,
+  VIDEO,
+  contentType,
+) {
   closure_0 = VIDEO;
   if (null != contentType) {
     const MediaManager2 = NativeModules.MediaManager;
@@ -1077,7 +1299,9 @@ export const downloadMediaAssetWithContentType = function downloadMediaAssetWith
   }, handleDownloadError);
 };
 export const getYoutubeClipVideoIdFromURI = function getYoutubeClipVideoIdFromURI(uri) {
-  const match = uri.match(/^https:\/\/www\.youtube\.com\/embed\/([A-Za-z0-9_-]*)(\?clip=([A-Za-z0-9_-]+)(&clipt=([A-Za-z0-9_-]+)))?$/);
+  const match = uri.match(
+    /^https:\/\/www\.youtube\.com\/embed\/([A-Za-z0-9_-]*)(\?clip=([A-Za-z0-9_-]+)(&clipt=([A-Za-z0-9_-]+)))?$/,
+  );
   if (null != match) {
     if (6 === match.length) {
       let tmp4 = null;

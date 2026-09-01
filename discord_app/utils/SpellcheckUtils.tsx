@@ -11,7 +11,7 @@ function _setEnabled() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -84,7 +84,7 @@ function _setLearnedWords() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -158,7 +158,7 @@ function _isMisspelled() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       let misspelled = tmp2;
       if (flag === undefined) {
         flag = false;
@@ -191,7 +191,7 @@ function _getCorrections() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -291,7 +291,7 @@ function _getCachedMisspelling() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*() {
+    const iter = (function* () {
       let cachedMisspelling = tmp2;
       if (num11 === undefined) {
         num11 = 5;
@@ -328,7 +328,7 @@ function _replaceWithCorrection() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -509,15 +509,11 @@ export const addResultListener = function addResultListener(arg0) {
     spellCheck = setDefault.spellCheck;
     let fn2 = spellCheck.on("spellcheck-result", arg0);
     if (fn2 == null) {
-      fn2 = () => {
-
-      };
+      fn2 = () => {};
     }
     let fn = fn2;
   } else {
-    fn = () => {
-
-    };
+    fn = () => {};
   }
   return fn;
 };

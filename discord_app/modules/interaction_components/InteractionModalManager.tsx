@@ -12,7 +12,7 @@ function _handleInteractionModalCreate() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, openInteractionModal) {
+    return (function* (arg0, openInteractionModal) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -69,7 +69,21 @@ function _handleInteractionModalCreate() {
                 if (interactionDebugContext != null) {
                   data = interactionDebugContext.interaction.data;
                 }
-                const obj = { interactionId: closure_0.id, nonce: closure_0.nonce, channelId: closure_0.channelId, applicationId: closure_0.application.id, hasApplicationRecord: null != application.getApplication(closure_0.application.id), hasActionApplicationBot: null != closure_0.application.bot, componentCount: closure_0.components.length, componentTypes: components.map((type) => type.type), sourceInteractionType: null, sourceApplicationId: null, sourceMessageId: null, hasSourceCustomId: null, hasSourceComponentId: null };
+                const obj = {
+                  interactionId: closure_0.id,
+                  nonce: closure_0.nonce,
+                  channelId: closure_0.channelId,
+                  applicationId: closure_0.application.id,
+                  hasApplicationRecord: null != application.getApplication(closure_0.application.id),
+                  hasActionApplicationBot: null != closure_0.application.bot,
+                  componentCount: closure_0.components.length,
+                  componentTypes: components.map((type) => type.type),
+                  sourceInteractionType: null,
+                  sourceApplicationId: null,
+                  sourceMessageId: null,
+                  hasSourceCustomId: null,
+                  hasSourceComponentId: null,
+                };
                 components = closure_0.components;
                 let interactionType;
                 if (data != null) {
@@ -178,12 +192,11 @@ let prototype = function InteractionModalManager() {
       if (tmp3) {
         callback(table[11])(iFrameModalApplicationId, iFrameModalKey);
       }
-    }
+    },
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 const result = require("set").fileFinishedImporting("modules/interaction_components/InteractionModalManager.tsx");
 

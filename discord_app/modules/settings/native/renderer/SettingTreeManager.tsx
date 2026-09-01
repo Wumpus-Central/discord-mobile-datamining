@@ -55,9 +55,7 @@ prototype2["transformParent"] = function transformParent(parent) {
   }
   return tmp;
 };
-prototype2["validate"] = function validate() {
-
-};
+prototype2["validate"] = function validate() {};
 prototype2["getAncestors"] = function getAncestors(field) {
   const self = this;
   const items = [];

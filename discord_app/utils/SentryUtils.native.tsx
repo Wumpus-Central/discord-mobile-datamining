@@ -309,7 +309,7 @@ let obj = {
         arg0(null);
       }
     });
-  }
+  },
 };
 const tmp2 = new timestampDefault("Sentry");
 let result = set.fileFinishedImporting("utils/SentryUtils.native.tsx");

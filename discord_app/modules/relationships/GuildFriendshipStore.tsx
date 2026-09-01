@@ -10,8 +10,7 @@ let closure_2 = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHIN
 let closure_3 = {};
 let c4 = 0;
 const Store = initializeDefault.Store;
-class GuildFriendshipStore extends Store {
-}
+class GuildFriendshipStore extends Store {}
 const prototype = GuildFriendshipStore.prototype;
 prototype["isFetchingFriendsForGuild"] = function isFetchingFriendsForGuild(arg0) {
   let fetchState;
@@ -69,7 +68,7 @@ const guildFriendshipStore = new GuildFriendshipStore(dispatcherDefault, {
         dependencyMap[guildId].fetchState = tmp5.FETCHED;
       }
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/relationships/GuildFriendshipStore.tsx");
 

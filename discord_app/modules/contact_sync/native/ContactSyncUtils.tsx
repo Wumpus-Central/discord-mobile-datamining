@@ -25,7 +25,7 @@ function _uploadContacts() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       dependencyMap = tmp2;
       if (flag === undefined) {
         flag = false;
@@ -36,7 +36,12 @@ function _uploadContacts() {
       const obj7 = flag(4713);
       const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
       obj2[0] = constants2.CONNECTION_SYNC_CONTACTS;
-      const obj3 = { friend_list_entries: null, background: null, allowed_in_suggestions: null, include_mutual_friends_count: false };
+      const obj3 = {
+        friend_list_entries: null,
+        background: null,
+        allowed_in_suggestions: null,
+        include_mutual_friends_count: false,
+      };
       obj3[0] = dependencyMap;
       obj3[1] = flag;
       obj3[2] = constants.ANYONE_WITH_CONTACT_INFO;
@@ -67,7 +72,11 @@ function _uploadContacts() {
   return applyArgumentsResult;
 }
 ({ useContactSyncStore: closure_6, clearDismissState: error, deleteStoredContacts: closure_8 } = setStoredContacts);
-({ CONTACT_SYNC_MODAL_KEY: c9, ContactPermissions: c10, ContactSyncSuggestionsSetting: unpackModuleId } = ContactSyncLandingPage);
+({
+  CONTACT_SYNC_MODAL_KEY: c9,
+  ContactPermissions: c10,
+  ContactSyncSuggestionsSetting: unpackModuleId,
+} = ContactSyncLandingPage);
 ({ Endpoints: closure_12, PlatformTypes: map1, FriendDiscoveryFlags: closure_14, HelpdeskArticles: closure_15 } = ME);
 error = new Error("No contact permissions");
 const error1 = new Error("No phone number");
@@ -138,7 +147,12 @@ export const adminDeleteContactSync = function adminDeleteContactSync() {
   const result = obj.removeLastUserContactsUpload();
   const ContactSyncEnabled = explicitContentFromProto.ContactSyncEnabled;
   ContactSyncEnabled.updateSetting(false);
-  obj = { url: closure_12.CONNECTION(constants2.CONTACTS, "@me"), oldFormErrors: true, trackedActionData: null, rejectWithError: false };
+  obj = {
+    url: closure_12.CONNECTION(constants2.CONTACTS, "@me"),
+    oldFormErrors: true,
+    trackedActionData: null,
+    rejectWithError: false,
+  };
   obj = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE };
   obj[2] = obj;
   return _modDef4713.delete(obj);

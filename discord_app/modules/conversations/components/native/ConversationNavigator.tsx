@@ -22,7 +22,9 @@ function HeaderWithBorder(arg0) {
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_6 = createNativeStackNavigator.createNativeStackNavigator();
-const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationNavigator.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/conversations/components/native/ConversationNavigator.tsx",
+);
 
 export default function ConversationNavigator(route) {
   const params = route.route.params;
@@ -44,13 +46,13 @@ export default function ConversationNavigator(route) {
           const intl = closure_1_0(closure_1_2[10]).intl;
           obj[1] = intl.string(closure_1_0(closure_1_2[10]).t.T3WBRp);
           return closure_1_3(closure_1_1(closure_1_2[9]), obj);
-        }
+        },
       };
       return obj;
     },
     getComponent() {
       return channelId(7834).default;
-    }
+    },
   };
   ({ Navigator, Screen } = Screen);
   const items = [
@@ -66,22 +68,29 @@ export default function ConversationNavigator(route) {
           },
           headerLeft: route(7607).getRenderBackImage(route.navigation),
           headerTitle() {
-            return closure_1_3(closure_1_1(closure_1_2[9]), { channelId: route.params.channelId, title: route.params.title, hasRightAction: true });
+            return closure_1_3(closure_1_1(closure_1_2[9]), {
+              channelId: route.params.channelId,
+              title: route.params.title,
+              hasRightAction: true,
+            });
           },
           headerRight() {
-            return closure_1_3(closure_1_1(closure_1_2[12]), { channelId: route.params.channelId, conversationId: route.params.conversationId });
-          }
+            return closure_1_3(closure_1_1(closure_1_2[12]), {
+              channelId: route.params.channelId,
+              conversationId: route.params.conversationId,
+            });
+          },
         };
         return obj;
       },
       getComponent() {
         return channelId(12917).default;
-      }
-    })
+      },
+    }),
   ];
   obj[2] = items;
   return callback2(Navigator, obj);
-};
+}
 export const openConversationNavigator = function openConversationNavigator(arg0) {
   ({ channelId, guildId } = arg0);
   let obj = getRootNavigationRef;

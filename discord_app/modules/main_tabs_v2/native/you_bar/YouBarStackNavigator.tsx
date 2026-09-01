@@ -64,9 +64,9 @@ const memoResult = importAllResult.memo(function YouBarStackNavigator() {
           options() {
             const merged = Object.assign(closure_2);
             return {};
-          }
+          },
         };
-        const items = [closure_1_9(closure_1_12.Screen, obj), , ];
+        const items = [closure_1_9(closure_1_12.Screen, obj), ,];
         let tmp3Result = null;
         if (iCYMIEnabled) {
           obj = { name: null, getComponent: null, options: null };
@@ -86,12 +86,12 @@ const memoResult = importAllResult.memo(function YouBarStackNavigator() {
           options() {
             const merged = Object.assign(closure_2);
             return {};
-          }
+          },
         });
         obj[0] = items;
         return closure_1_11(closure_1_10, obj);
-      }, items2)
-    })
+      }, items2),
+    }),
   };
   items2 = [current, iCYMIEnabled, accessibilityNativeStackOptions];
   obj[1] = callback(current(accessibilityNativeStackOptions[14]).LayerScope, obj1);

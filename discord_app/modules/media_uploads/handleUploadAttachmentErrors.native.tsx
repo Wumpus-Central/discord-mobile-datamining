@@ -16,10 +16,19 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
   if (undefined === code) {
     return false;
   } else if (code === constants.ENTITY_TOO_LARGE) {
-    const kestrelConfig = KESTREL_GA_UPLOAD_LIMIT_MB.getKestrelConfig({ location: "native.handleUploadMessageAttachmentsErrors" });
+    const kestrelConfig = KESTREL_GA_UPLOAD_LIMIT_MB.getKestrelConfig({
+      location: "native.handleUploadMessageAttachmentsErrors",
+    });
     const obj10 = KESTREL_GA_UPLOAD_LIMIT_MB;
     const maxFileSizeResult = getUploadFileSizeSum.maxFileSize(guildId);
-    let obj = { file: null, maxSize: null, baseMaxSize: null, guildId: null, analyticsLocations: null, errorReason: null };
+    let obj = {
+      file: null,
+      maxSize: null,
+      baseMaxSize: null,
+      guildId: null,
+      analyticsLocations: null,
+      errorReason: null,
+    };
     obj[0] = tmp;
     const obj11 = getUploadFileSizeSum;
     const tmp27 = showUploadFileSizeErrorDefault;

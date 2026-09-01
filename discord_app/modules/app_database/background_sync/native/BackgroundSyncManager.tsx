@@ -9,7 +9,10 @@ initializeDefault;
 class BackgroundSyncManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    applyArgumentsResult.actions = { MESSAGE_CREATE: applyArgumentsResult.handleMessageCreate, POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen };
+    applyArgumentsResult.actions = {
+      MESSAGE_CREATE: applyArgumentsResult.handleMessageCreate,
+      POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen,
+    };
     return applyArgumentsResult;
   }
 }
@@ -42,6 +45,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   _backgroundSync.backgroundSync({ force: false, messagesOnly: true, checkLastMessageId: true });
 };
 const backgroundSyncManager = new BackgroundSyncManager();
-const result = require("set").fileFinishedImporting("modules/app_database/background_sync/native/BackgroundSyncManager.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_database/background_sync/native/BackgroundSyncManager.tsx",
+);
 
 export default backgroundSyncManager;

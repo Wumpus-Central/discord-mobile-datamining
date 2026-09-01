@@ -21,17 +21,38 @@ let c3 = importAllResult;
 let closure_15 = createCacheKey.createStyles((width) => {
   const diff = width - 10;
   let obj = { root: null, container: null, guildIndicator: null, icon: null, backdrop: null, expandedChildren: null };
-  obj = { alignSelf: "stretch", paddingLeft: closure_8.left, marginTop: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_PADDING };
+  obj = {
+    alignSelf: "stretch",
+    paddingLeft: closure_8.left,
+    marginTop: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
+  };
   obj[0] = obj;
   obj[1] = { position: "relative", flexDirection: "row", alignItems: "center", height: 55, width };
   obj = { position: "absolute", left: -closure_8.left, top: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN };
   obj[2] = obj;
   obj[3] = { width: 59, height: 55, marginLeft: -3 };
-  obj[4] = { position: "absolute", top: 16, width, height: diff, borderRadius: ThemesDefault.modules.mobile.GUILD_ITEM_SELECTED_BORDER_RADIUS };
-  obj[5] = { position: "absolute", left: arg1 + 16, right: 8, top: 16, height: diff, transformOrigin: "0% 50%", flexDirection: "row", alignItems: "center" };
+  obj[4] = {
+    position: "absolute",
+    top: 16,
+    width,
+    height: diff,
+    borderRadius: ThemesDefault.modules.mobile.GUILD_ITEM_SELECTED_BORDER_RADIUS,
+  };
+  obj[5] = {
+    position: "absolute",
+    left: arg1 + 16,
+    right: 8,
+    top: 16,
+    height: diff,
+    transformOrigin: "0% 50%",
+    flexDirection: "row",
+    alignItems: "center",
+  };
   return obj;
 });
-let closure_17 = { code: "function GuildsBarItemEmptyNUXTsx1(){const{withSpring,selected,activeColor,inactiveColor,MODE_CHANGE_PHYSICS}=this.__closure;return{backgroundColor:withSpring(selected?activeColor:inactiveColor,MODE_CHANGE_PHYSICS,'animate-always')};}" };
+let closure_17 = {
+  code: "function GuildsBarItemEmptyNUXTsx1(){const{withSpring,selected,activeColor,inactiveColor,MODE_CHANGE_PHYSICS}=this.__closure;return{backgroundColor:withSpring(selected?activeColor:inactiveColor,MODE_CHANGE_PHYSICS,'animate-always')};}",
+};
 const memoResult = importAllResult.memo(function GuildsBarEmptyNUX() {
   let obj = stateFromStores(token1[10]);
   const token = obj.useToken(sharedValue(token1[8]).modules.mobile.GUILD_BAR_ITEM_SIZE);
@@ -59,7 +80,13 @@ const memoResult = importAllResult.memo(function GuildsBarEmptyNUX() {
     obj = { backgroundColor: obj.withSpring(stateFromStores ? token2 : token1, closure_1_11, "animate-always") };
     return obj;
   };
-  obj = { withSpring: stateFromStores(token1[13]).withSpring, selected: stateFromStores, activeColor: token2, inactiveColor: token1, MODE_CHANGE_PHYSICS };
+  obj = {
+    withSpring: stateFromStores(token1[13]).withSpring,
+    selected: stateFromStores,
+    activeColor: token2,
+    inactiveColor: token1,
+    MODE_CHANGE_PHYSICS,
+  };
   fn.__closure = obj;
   fn.__workletHash = 15012639840543;
   fn.__initData = closure_17;
@@ -68,13 +95,24 @@ const memoResult = importAllResult.memo(function GuildsBarEmptyNUX() {
   ({ guildsBarIconDrawerStyle, guildsBarLabelDrawerStyle } = context.homeDrawerState);
   obj = { onPress: handlePress };
   const tmp14 = sharedValue(token1[15])(obj);
-  obj1 = { style: tmp5.container, onPressIn: callback, onPressOut: callback1, onPress: handlePress, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, hitSlop: null, children: null };
+  obj1 = {
+    style: tmp5.container,
+    onPressIn: callback,
+    onPressOut: callback1,
+    onPress: handlePress,
+    accessible: true,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    accessibilityState: null,
+    hitSlop: null,
+    children: null,
+  };
   const intl = stateFromStores(token1[16]).intl;
   obj1[6] = intl.string(stateFromStores(token1[16]).t["3S2xmm"]);
   obj1[7] = { selected: stateFromStores };
   obj1[8] = closure_8;
   const items3 = [tmp5.backdrop, animatedStyle];
-  const items4 = [callback2(sharedValue(token1[12]).View, { style: items3 }), , ];
+  const items4 = [callback2(sharedValue(token1[12]).View, { style: items3 }), ,];
   obj2 = { style: tmp5.icon, source: sharedValue(token1[17]), resizeMode: "contain" };
   items4[1] = callback2(closure_5, obj2);
   obj3 = { style: tmp5.guildIndicator, children: callback2(stateFromStores(token1[18]).UnreadIndicator, obj4) };
@@ -89,7 +127,7 @@ const memoResult = importAllResult.memo(function GuildsBarEmptyNUX() {
     const obj7 = { style: null, children: null };
     obj7[0] = guildsBarIconDrawerStyle;
     obj7[1] = tmp17;
-    const items5 = [tmp16(tmp3(tmp2[20]), obj7), ];
+    const items5 = [tmp16(tmp3(tmp2[20]), obj7)];
     const obj8 = {};
     const merged = Object.assign(tmp14);
     const items6 = [tmp5.expandedChildren, guildsBarLabelDrawerStyle];

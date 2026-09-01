@@ -23,8 +23,10 @@ export default function PremiumGiftDMSuccessBody() {
   const tmp = callback3();
   let obj = NativeGiftContextProvider;
   obj = { children: null };
-  obj = { children: callback(PremiumGiftBackgroundAnimationDefault, { giftStyle: obj.useNativeGiftContext().giftStyle }) };
-  const items = [callback(View, obj), , ];
+  obj = {
+    children: callback(PremiumGiftBackgroundAnimationDefault, { giftStyle: obj.useNativeGiftContext().giftStyle }),
+  };
+  const items = [callback(View, obj), ,];
   obj1 = { style: tmp.title, variant: "heading-lg/bold", children: null };
   const intl = getSystemLocale.intl;
   obj1[2] = intl.string(getSystemLocale.t.MqZXbv);
@@ -35,7 +37,7 @@ export default function PremiumGiftDMSuccessBody() {
   items[2] = callback(Text.Text, obj2);
   obj[0] = items;
   return callback2(closure_6, obj);
-};
+}
 export const PremiumGiftDMSuccessActions = function PremiumGiftDMSuccessActions() {
   let obj = onClose(navigation[5]);
   const nativeGiftContext = obj.useNativeGiftContext();

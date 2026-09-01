@@ -9,4 +9,4 @@ const result = require("set").fileFinishedImporting("modules/user_settings/dev_t
 
 export default function UserSettingsJSError() {
   return jsx(Text.Text, { variant: "display-md", children: null.boo });
-};
+}

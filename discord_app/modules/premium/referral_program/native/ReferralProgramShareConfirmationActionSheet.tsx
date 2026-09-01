@@ -16,20 +16,20 @@ function SharedUser(user) {
   const name = obj.getName(user);
   const tmp6 = user.trialCreationResult === user(7198).CreateReferralStatus.FAIL;
   obj = { style: tmp.recipientRow, children: null };
-  const items = [tmp.avatarContainer, ];
+  const items = [tmp.avatarContainer];
   let erroredAvatar = tmp6;
   if (tmp6) {
     erroredAvatar = tmp.erroredAvatar;
   }
   obj = { style: items, size: tmp5(1297).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" };
   items[1] = erroredAvatar;
-  const items1 = [closure_5(user(1297).Avatar, obj), , ];
+  const items1 = [closure_5(user(1297).Avatar, obj), ,];
   if (tmp6) {
     obj1 = { children: null };
     const obj2 = { variant: "text-md/medium", color: "text-muted", style: null, children: null };
     obj2[2] = tmp.recipientDisplayName;
     obj2[3] = name;
-    const items2 = [tmp9(tmp5(4474).Text, obj2), ];
+    const items2 = [tmp9(tmp5(4474).Text, obj2)];
     const obj3 = { variant: "text-md/medium", color: "text-muted", children: null };
     const intl = tmp5(1236).intl;
     const obj4 = { userName: null };
@@ -62,23 +62,61 @@ function SharedUser(user) {
 const View = get_ActivityIndicator.View;
 const HelpdeskArticles = ME.HelpdeskArticles;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let obj = { content: null, headerAsset: null, header: null, subheader: null, recipientContainer: null, recipientRow: null, recipientDisplayName: null, erroredAvatar: null, avatarContainer: null };
+let obj = {
+  content: null,
+  headerAsset: null,
+  header: null,
+  subheader: null,
+  recipientContainer: null,
+  recipientRow: null,
+  recipientDisplayName: null,
+  erroredAvatar: null,
+  avatarContainer: null,
+};
 obj = { paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 obj[1] = { alignSelf: "center" };
-obj[2] = { marginTop: ThemesDefault.space.PX_16, alignSelf: "center", paddingHorizontal: ThemesDefault.space.PX_8, textAlign: "center" };
-let obj1 = { marginTop: ThemesDefault.space.PX_16, alignSelf: "center", paddingHorizontal: ThemesDefault.space.PX_8, textAlign: "center" };
+obj[2] = {
+  marginTop: ThemesDefault.space.PX_16,
+  alignSelf: "center",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  textAlign: "center",
+};
+let obj1 = {
+  marginTop: ThemesDefault.space.PX_16,
+  alignSelf: "center",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  textAlign: "center",
+};
 obj[3] = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8 };
 let obj2 = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8 };
 obj[4] = { gap: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_16, paddingBottom: 21 };
 let obj3 = { gap: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_16, paddingBottom: 21 };
-obj[5] = { flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
+obj[5] = {
+  flexDirection: "row",
+  alignItems: "center",
+  padding: ThemesDefault.space.PX_12,
+  gap: ThemesDefault.space.PX_12,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+};
 obj[6] = { flex: 1 };
 obj[7] = { opacity: 0.5 };
 obj[8] = { alignSelf: "center", justifyContent: "center" };
 let closure_8 = createCacheKey.createStyles(obj);
-let obj4 = { flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
-const result = set.fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareConfirmationActionSheet.tsx");
+let obj4 = {
+  flexDirection: "row",
+  alignItems: "center",
+  padding: ThemesDefault.space.PX_12,
+  gap: ThemesDefault.space.PX_12,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+};
+const result = set.fileFinishedImporting(
+  "modules/premium/referral_program/native/ReferralProgramShareConfirmationActionSheet.tsx",
+);
 
 export default function ReferralProgramShareConfirmationActionSheet(trialCreationResult) {
   require = trialCreationResult;
@@ -97,18 +135,44 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   let obj = { helpdeskArticle: null };
   obj1 = combinedDefault;
   obj[0] = obj1.getArticleURL(HelpdeskArticles.REFERRAL_PROGRAM);
-  obj = { startExpanded: true, contentStyles: tmp.content, header: callback(tmp5(5621).BottomSheetTitleHeader, { title: null }), children: null };
+  obj = {
+    startExpanded: true,
+    contentStyles: tmp.content,
+    header: callback(tmp5(5621).BottomSheetTitleHeader, { title: null }),
+    children: null,
+  };
   obj = { children: null };
   obj1 = { style: tmp.headerAsset, children: callback(tmp5(6256).FistBumpSpotIllustration, {}) };
-  const items = [callback(View, obj1), callback(tmp5(4474).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), , ];
+  const items = [
+    callback(View, obj1),
+    callback(tmp5(4474).Text, {
+      variant: "heading-lg/bold",
+      color: "mobile-text-heading-primary",
+      style: tmp.header,
+      children: stringResult,
+    }),
+    ,
+  ];
   const formatResult = intl3.format(tmp5(1236).t.AwGSWl, obj);
-  const obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult };
-  items[2] = callback(tmp5(4474).Text, { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: intl3.format(tmp5(1236).t.AwGSWl, obj) });
+  const obj2 = {
+    variant: "heading-lg/bold",
+    color: "mobile-text-heading-primary",
+    style: tmp.header,
+    children: stringResult,
+  };
+  items[2] = callback(tmp5(4474).Text, {
+    variant: "text-md/medium",
+    color: "text-default",
+    style: tmp.subheader,
+    children: intl3.format(tmp5(1236).t.AwGSWl, obj),
+  });
   const obj4 = { style: tmp.recipientContainer, children: null };
   arr = Array.from(trialCreationResult.selectedUsers);
-  obj4[1] = arr.map((id) => closure_1_5(closure_1_9, { user: id, trialCreationResult: trialCreationResult.get(id.id) }, id.id));
+  obj4[1] = arr.map((id) =>
+    closure_1_5(closure_1_9, { user: id, trialCreationResult: trialCreationResult.get(id.id) }, id.id),
+  );
   items[3] = callback(View, obj4);
   obj[0] = items;
   obj[3] = callback2(tmp5(4926).Stack, obj);
   return callback(tmp5(5622).BottomSheet, obj);
-};
+}

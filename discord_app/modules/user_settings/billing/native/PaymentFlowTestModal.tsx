@@ -19,28 +19,40 @@ const memoResult = importAllResult.memo(function PaymentFlowTestModal() {
           return callback2(callback(table[4]).GenericHeaderTitle, { title: children.children });
         },
         headerLeft: callback(closure_1_2[4]).getRenderModalCloseImage(navigation.navigation),
-        headerTitleAlign: "center"
+        headerTitleAlign: "center",
       };
       let merged = Object.assign(callback);
       let merged1 = Object.assign(closure_1_1(closure_1_2[5])());
       return obj;
     },
-    children: null
+    children: null,
   };
   obj = {
     name: "PaymentFlowTest",
     options() {
       return { title: "Payment Flow Test" };
     },
-    component: TestViewDefault
+    component: TestViewDefault,
   };
   ({ Navigator, Screen } = closure_4);
-  obj[1] = <Screen name="PaymentFlowTest" options={function options() {
-    return { title: "Payment Flow Test" };
-  }} component={TestViewDefault} />;
-  return <Navigator name="PaymentFlowTest" options={function options() {
-    return { title: "Payment Flow Test" };
-  }} component={TestViewDefault} />;
+  obj[1] = (
+    <Screen
+      name="PaymentFlowTest"
+      options={function options() {
+        return { title: "Payment Flow Test" };
+      }}
+      component={TestViewDefault}
+    />
+  );
+  return (
+    <Navigator
+      name="PaymentFlowTest"
+      options={function options() {
+        return { title: "Payment Flow Test" };
+      }}
+      component={TestViewDefault}
+    />
+  );
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/billing/native/PaymentFlowTestModal.tsx");
 

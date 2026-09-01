@@ -75,7 +75,7 @@ export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
         tmp2 = obj;
       }
       return tmp2;
-    }, items)
+    }, items),
   };
   return obj;
 };

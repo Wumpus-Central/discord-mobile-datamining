@@ -24,8 +24,7 @@ function handleHotspotUpdates() {
 }
 let c3 = false;
 const Store = initializeDefault.Store;
-class HubLinkNoticeStore extends Store {
-}
+class HubLinkNoticeStore extends Store {}
 const prototype = HubLinkNoticeStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_1, closure_0);
@@ -68,7 +67,7 @@ const hubLinkNoticeStore = new HubLinkNoticeStore(dispatcherDefault, {
       tmp2 = flag;
     }
     return tmp2;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/channel_notices/HubLinkNoticeStore.tsx");
 

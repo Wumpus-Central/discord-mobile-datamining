@@ -13,35 +13,38 @@ const result = require("set").fileFinishedImporting("modules/hub/useIsHubRealNam
 export default function useIsHubRealNamePromptShowing(arg0) {
   const _require = arg0;
   const items = [closure_6, closure_4, closure_7, closure_5];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const guild = closure_1_6.getGuild(closure_0);
-    let hasItem;
-    if (guild != null) {
-      const features = guild.features;
-      hasItem = features.has(closure_1_8.HUB);
-    }
-    if (true !== hasItem) {
-      return null;
-    } else if (true === closure_1_4.hasViewedPrompt(closure_1_9.REAL_NAME_PROMPT, guild.id)) {
-      return null;
-    } else {
-      const currentUser = closure_1_7.getCurrentUser();
-      if (null == currentUser) {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const guild = closure_1_6.getGuild(closure_0);
+      let hasItem;
+      if (guild != null) {
+        const features = guild.features;
+        hasItem = features.has(closure_1_8.HUB);
+      }
+      if (true !== hasItem) {
+        return null;
+      } else if (true === closure_1_4.hasViewedPrompt(closure_1_9.REAL_NAME_PROMPT, guild.id)) {
         return null;
       } else {
-        let id;
-        if (currentUser != null) {
-          id = currentUser.id;
+        const currentUser = closure_1_7.getCurrentUser();
+        if (null == currentUser) {
+          return null;
+        } else {
+          let id;
+          if (currentUser != null) {
+            id = currentUser.id;
+          }
+          const member = closure_1_5.getMember(guild.id, id);
+          let nick;
+          if (member != null) {
+            nick = member.nick;
+          }
+          return null == nick;
         }
-        const member = closure_1_5.getMember(guild.id, id);
-        let nick;
-        if (member != null) {
-          nick = member.nick;
-        }
-        return null == nick;
       }
-    }
-  });
+    },
+  );
   const items1 = [stateFromStores, arg0];
   const effect = React.useEffect(() => {
     let tmp2 = null != closure_0;
@@ -56,4 +59,4 @@ export default function useIsHubRealNamePromptShowing(arg0) {
     }
   }, items1);
   return true === stateFromStores;
-};
+}

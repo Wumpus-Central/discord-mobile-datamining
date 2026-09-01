@@ -19,4 +19,4 @@ export default function useSubscriptionRole(arg0, editStateId) {
     }
     return role;
   });
-};
+}

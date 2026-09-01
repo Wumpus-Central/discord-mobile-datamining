@@ -18,7 +18,7 @@ function _guildRoomConnect() {
     c12 = 0;
     c13 = 0;
     c11 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       if (c13 === 2) {
         c13 = 3;
         HermesBuiltin.throwTypeError();
@@ -135,7 +135,13 @@ function _guildRoomConnect() {
               let tmp57 = callback2;
               let tmp58 = dependencyMap;
               let obj13 = callback2(709);
-              let obj6 = { type: "GUILD_ROOM_CONNECT", room: null, guildId: null, pendingPosition: null, pendingSeat: null };
+              let obj6 = {
+                type: "GUILD_ROOM_CONNECT",
+                room: null,
+                guildId: null,
+                pendingPosition: null,
+                pendingSeat: null,
+              };
               let tmp59 = users;
               obj6[1] = users;
               let tmp60 = callback;
@@ -175,7 +181,7 @@ function _guildRoomConnect() {
                   let obj8 = { updateType: "position", updateReason: "default", position: null };
                   let tmp82 = closure_8;
                   obj8[2] = closure_8.position;
-                  items = [obj8, , , ];
+                  items = [obj8, , ,];
                   let obj9 = { updateType: "seat", updateReason: "default", seat: null };
                   let tmp83 = closure_8;
                   obj9[2] = closure_8.seat;
@@ -217,7 +223,14 @@ function _guildRoomConnect() {
                   let tmp20 = callback;
                   let tmp21 = dependencyMap;
                   obj2 = callback(4699);
-                  obj13 = { guildId: null, channelId: null, actualSeatPosition: null, targetSeatPosition: null, actualSeatId: null, targetSeatId: null };
+                  obj13 = {
+                    guildId: null,
+                    channelId: null,
+                    actualSeatPosition: null,
+                    targetSeatPosition: null,
+                    actualSeatId: null,
+                    targetSeatId: null,
+                  };
                   let tmp22 = callback;
                   obj13[0] = callback;
                   let tmp23 = callback2;
@@ -268,7 +281,7 @@ function _guildRoomUpdate() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -359,7 +372,13 @@ function _guildRoomUpdate() {
             c6 = 0;
             closure_9 = roomObjects;
             let obj12 = callback2(closure_2[7]);
-            const obj4 = { type: "GUILD_ROOM_UPDATE_FAILURE", originalRoom: null, originalRoomUsers: null, originalRoomObjects: null, guildId: null };
+            const obj4 = {
+              type: "GUILD_ROOM_UPDATE_FAILURE",
+              originalRoom: null,
+              originalRoomUsers: null,
+              originalRoomObjects: null,
+              guildId: null,
+            };
             obj4[1] = room;
             obj4[2] = id;
             obj4[3] = roomObjects;
@@ -427,7 +446,14 @@ function _guildRoomUpdate() {
                 c8 = users.get(id.getId());
                 if (null != c8) {
                   obj9 = callback(closure_2[8]);
-                  obj12 = { guildId: null, channelId: null, actualSeatPosition: null, targetSeatPosition: null, actualSeatId: null, targetSeatId: null };
+                  obj12 = {
+                    guildId: null,
+                    channelId: null,
+                    actualSeatPosition: null,
+                    targetSeatPosition: null,
+                    actualSeatId: null,
+                    targetSeatId: null,
+                  };
                   obj12[0] = callback;
                   obj12[1] = callback2;
                   obj12[2] = c8.position;
@@ -481,7 +507,7 @@ function _guildRoomObjectCreate() {
     closure_2 = arg2;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       const HTTP = callback(table[5]).HTTP;
       obj1 = { url: null, body: null, rejectWithError: true };
       obj1[0] = closure_1_6.GUILD_ROOM_OBJECT_CREATE(callback, closure_1);
@@ -508,7 +534,7 @@ function _guildRoomObjectUpdate() {
     closure_3 = arg3;
     c5 = 0;
     c4 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       const HTTP = callback(table[5]).HTTP;
       obj1 = { url: null, body: null, rejectWithError: true };
       obj1[0] = closure_1_6.GUILD_ROOM_OBJECT_UPDATE(callback, closure_1, table);
@@ -545,7 +571,7 @@ function _guildRoomObjectDelete() {
     closure_3 = arg3;
     c5 = 0;
     c4 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       const HTTP = callback(table[5]).HTTP;
       obj1 = { url: null, body: null, rejectWithError: true };
       obj1[0] = closure_1_6.GUILD_ROOM_OBJECT_DELETE(callback, closure_1, table);
@@ -578,7 +604,7 @@ function _createGuildRoomNote() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       if (c9 === 2) {
         c9 = 3;
         HermesBuiltin.throwTypeError();
@@ -688,7 +714,7 @@ function _deleteGuildRoomNote() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -768,7 +794,7 @@ function _fetchGuildRoom() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_3 = tmp3;
       c5 = 1;
       const HTTP = callback(closure_1_2[5]).HTTP;
@@ -952,7 +978,9 @@ export const maybeSetGuildRoomVideoOverlay = function maybeSetGuildRoomVideoOver
     const obj3 = dispatcherDefault;
   }
 };
-export const setGuildRoomRememberVideoOverlayVisibility = function setGuildRoomRememberVideoOverlayVisibility(rememberVideoOverlayVisibility) {
+export const setGuildRoomRememberVideoOverlayVisibility = function setGuildRoomRememberVideoOverlayVisibility(
+  rememberVideoOverlayVisibility,
+) {
   let obj = dispatcherDefault;
   obj = { type: "GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY", rememberVideoOverlayVisibility };
   obj.dispatch(obj);

@@ -78,7 +78,9 @@ function SpendingLimitRow(teenId) {
     fn = () => {
       let obj = closure_1_1(closure_1_2[10]);
       obj = { teenId };
-      obj.pushLazy(teenId(closure_1_2[12])(closure_1_2[11], closure_1_2.paths), obj, undefined, { animation: "slide_from_right" });
+      obj.pushLazy(teenId(closure_1_2[12])(closure_1_2[11], closure_1_2.paths), obj, undefined, {
+        animation: "slide_from_right",
+      });
     };
   }
   obj12[3] = fn;
@@ -117,24 +119,28 @@ function FamilyCenterSettingsTeenControls() {
   obj1 = { variant: "text-sm/semibold", children: null };
   const intl = tmp2(tmp3[8]).intl;
   obj1[1] = intl.string(importDefault(handleOpenSettings[9]).ahKIJO);
-  const items = [callback(activeLinkUserIds(handleOpenSettings[7]).Text, obj1), ];
+  const items = [callback(activeLinkUserIds(handleOpenSettings[7]).Text, obj1)];
   obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl2 = tmp2(tmp3[8]).intl;
   obj3 = {
     openSettingsHook(children) {
-      return closure_1_7(activeLinkUserIds(handleOpenSettings[7]).Text, { variant: "text-sm/medium", color: "text-link", onPress: handleOpenSettings, children }, arg1);
-    }
+      return closure_1_7(
+        activeLinkUserIds(handleOpenSettings[7]).Text,
+        { variant: "text-sm/medium", color: "text-link", onPress: handleOpenSettings, children },
+        arg1,
+      );
+    },
   };
   obj2[2] = intl2.format(importDefault(handleOpenSettings[9]).X9rW0j, obj3);
   items[1] = callback(activeLinkUserIds(handleOpenSettings[7]).Text, obj2);
   obj[1] = items;
-  const items1 = [callback2(activeLinkUserIds(handleOpenSettings[20]).Stack, obj), , ];
+  const items1 = [callback2(activeLinkUserIds(handleOpenSettings[20]).Stack, obj), ,];
   if (isFamilyCenterV3Enabled) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.controlsGroup;
     const obj5 = { cap: null };
     obj5[0] = spendingLimitFromUserSettings;
-    const items2 = [tmp10(SpendingLimitRow, obj5), ];
+    const items2 = [tmp10(SpendingLimitRow, obj5)];
     const obj6 = { label: null, subLabel: null, trailing: null, onPress: null, arrow: null };
     const intl3 = tmp2(tmp3[8]).intl;
     obj6[0] = intl3.string(tmp7(tmp3[9])["1Op+NP"]);
@@ -143,7 +149,9 @@ function FamilyCenterSettingsTeenControls() {
     let fn;
     if (rules.length > 0) {
       fn = () => {
-        navigation.navigate(closure_1_6.FAMILY_CENTER_PARENTAL_CONTROLS, { selectedSubPage: closure_1_5.SCREEN_TIME_CONTROLS });
+        navigation.navigate(closure_1_6.FAMILY_CENTER_PARENTAL_CONTROLS, {
+          selectedSubPage: closure_1_5.SCREEN_TIME_CONTROLS,
+        });
       };
     }
     const obj7 = { hasIcons: false, children: null };
@@ -206,7 +214,9 @@ function FamilyCenterSettingsParentalControls() {
       id = tmp.id;
     }
     if (tmp3) {
-      const teenSettingsAndConsents = shouldLoadSettingsForSelectedTeenUser(navigation[26]).fetchTeenSettingsAndConsents(tmp.id);
+      const teenSettingsAndConsents = shouldLoadSettingsForSelectedTeenUser(
+        navigation[26],
+      ).fetchTeenSettingsAndConsents(tmp.id);
       const obj = shouldLoadSettingsForSelectedTeenUser(navigation[26]);
     }
   }, items);
@@ -215,7 +225,7 @@ function FamilyCenterSettingsParentalControls() {
   obj = { variant: "text-sm/semibold", children: null };
   const intl = tmp2(1236).intl;
   obj[1] = intl.string(shouldLoadSettingsForSelectedTeenUser(2369).ahKIJO);
-  const items1 = [callback(selectedTeenUser(4474).Text, obj), , ];
+  const items1 = [callback(selectedTeenUser(4474).Text, obj), ,];
   obj1 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl2 = tmp2(1236).intl;
   obj1[2] = intl2.string(shouldLoadSettingsForSelectedTeenUser(2369).Sv236e);
@@ -225,9 +235,11 @@ function FamilyCenterSettingsParentalControls() {
   const intl3 = tmp2(1236).intl;
   obj3[0] = intl3.string(selectedTeenUser(1236).t["+o1pDZ"]);
   obj3[1] = function onPress() {
-    navigation.navigate(closure_1_6.FAMILY_CENTER_PARENTAL_CONTROLS, { selectedSubPage: closure_1_5.CONTENT_AND_SOCIAL });
+    navigation.navigate(closure_1_6.FAMILY_CENTER_PARENTAL_CONTROLS, {
+      selectedSubPage: closure_1_5.CONTENT_AND_SOCIAL,
+    });
   };
-  const items2 = [callback(selectedTeenUser(5599).TableRow, obj3), , , ];
+  const items2 = [callback(selectedTeenUser(5599).TableRow, obj3), , ,];
   const obj4 = { label: null, onPress: null, arrow: true };
   const intl4 = tmp2(1236).intl;
   obj4[0] = intl4.string(selectedTeenUser(1236).t.OAuOHD);
@@ -286,7 +298,14 @@ function FamilyCenterSettingsParentalControls() {
   return closure_8(selectedTeenUser(4926).Stack, obj);
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { teenControlsContainer: null, controlledSettingsHeader: null, parentalControlsContainer: null, controlsGroup: null, subLabelWarning: null, subLabelCritical: null };
+createCacheKey = {
+  teenControlsContainer: null,
+  controlledSettingsHeader: null,
+  parentalControlsContainer: null,
+  controlsGroup: null,
+  subLabelWarning: null,
+  subLabelCritical: null,
+};
 createCacheKey = { gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { gap: ThemesDefault.space.PX_4 };
@@ -312,4 +331,4 @@ export default function FamilyCenterSettingsControls() {
     closure_7(View, obj);
     const tmp3 = View;
   }
-};
+}

@@ -13,4 +13,4 @@ export default function PassthroughTouchView(onTouchDown) {
   obj.onTouchDown = onTouchDown.onTouchDown;
   obj.pointerEvents = "box-none";
   return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
-};
+}

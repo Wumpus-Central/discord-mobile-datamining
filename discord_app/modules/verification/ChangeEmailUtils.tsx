@@ -20,7 +20,7 @@ let closure_2 = {
   [ChangeEmailReasons.SOMETHING_ELSE]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.p38n1b);
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/verification/ChangeEmailUtils.tsx");
 

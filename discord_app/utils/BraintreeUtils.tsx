@@ -12,7 +12,7 @@ export const getBraintreeSDK = function getBraintreeSDK() {
     createPromise() {
       return callback(paths[4])(paths[3], paths.paths);
     },
-    webpackId: 4160
+    webpackId: 4160,
   };
   return obj.importWithRetry(obj).then((arg0) => arg0.default);
 };
@@ -26,29 +26,39 @@ export const collectDeviceData = function collectDeviceData() {
     obj[1] = 4160;
     const obj3 = client(4157);
     let importWithRetryResult = client(4157).importWithRetry(obj);
-    let nextPromise1 = client(4157).importWithRetry(obj).then((arg0) => arg0.default).then((client) => {
-      client = client.client;
-      let obj = { authorization: constants.BRAINTREE.KEY };
-      obj = client.create(obj);
-      return obj.then((arg0) => {
-        const callback = arg0;
-        let obj = callback(4157);
-        obj = {
-          createPromise() {
-            return callback(paths[4])(paths[3], paths.paths);
-          },
-          webpackId: 4160
-        };
-        const importWithRetryResult = obj.importWithRetry(obj);
-        return obj.importWithRetry(obj).then((arg0) => arg0.default).then((dataCollector) => {
-          dataCollector = dataCollector.dataCollector;
-          let obj = { client: closure_0 };
-          obj = dataCollector.create(obj);
-          return obj.then((deviceData) => deviceData.deviceData).catch(() => null);
-        });
-      }).catch(() => null);
-    });
-    const nextPromise = client(4157).importWithRetry(obj).then((arg0) => arg0.default);
+    let nextPromise1 = client(4157)
+      .importWithRetry(obj)
+      .then((arg0) => arg0.default)
+      .then((client) => {
+        client = client.client;
+        let obj = { authorization: constants.BRAINTREE.KEY };
+        obj = client.create(obj);
+        return obj
+          .then((arg0) => {
+            const callback = arg0;
+            let obj = callback(4157);
+            obj = {
+              createPromise() {
+                return callback(paths[4])(paths[3], paths.paths);
+              },
+              webpackId: 4160,
+            };
+            const importWithRetryResult = obj.importWithRetry(obj);
+            return obj
+              .importWithRetry(obj)
+              .then((arg0) => arg0.default)
+              .then((dataCollector) => {
+                dataCollector = dataCollector.dataCollector;
+                let obj = { client: closure_0 };
+                obj = dataCollector.create(obj);
+                return obj.then((deviceData) => deviceData.deviceData).catch(() => null);
+              });
+          })
+          .catch(() => null);
+      });
+    const nextPromise = client(4157)
+      .importWithRetry(obj)
+      .then((arg0) => arg0.default);
   } else {
     obj = client(4157);
     obj = { createPromise: null, webpackId: null };
@@ -57,12 +67,15 @@ export const collectDeviceData = function collectDeviceData() {
     };
     obj[1] = 4160;
     const importWithRetryResult1 = obj.importWithRetry(obj);
-    nextPromise1 = obj.importWithRetry(obj).then((arg0) => arg0.default).then((dataCollector) => {
-      dataCollector = dataCollector.dataCollector;
-      let obj = { client: closure_0 };
-      obj = dataCollector.create(obj);
-      return obj.then((deviceData) => deviceData.deviceData).catch(() => null);
-    });
+    nextPromise1 = obj
+      .importWithRetry(obj)
+      .then((arg0) => arg0.default)
+      .then((dataCollector) => {
+        dataCollector = dataCollector.dataCollector;
+        let obj = { client: closure_0 };
+        obj = dataCollector.create(obj);
+        return obj.then((deviceData) => deviceData.deviceData).catch(() => null);
+      });
     const nextPromise2 = obj.importWithRetry(obj).then((arg0) => arg0.default);
   }
   return nextPromise1;

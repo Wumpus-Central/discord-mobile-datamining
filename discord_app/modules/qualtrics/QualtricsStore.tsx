@@ -4,8 +4,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 
 let obj = { surveys: new Map() };
 const Store = initializeDefault.Store;
-class QualtricsStore extends Store {
-}
+class QualtricsStore extends Store {}
 QualtricsStore.prototype["getSurvey"] = function getSurvey(arg0) {
   const surveys = obj.surveys;
   let value = surveys.get(arg0);
@@ -19,7 +18,7 @@ obj = {
   QUALTRICS_SURVEY_FETCH_SUCCESS: function handleSurveyFetchSuccess(surveyId) {
     const surveys = obj.surveys;
     const result = surveys.set(surveyId.surveyId, surveyId.surveyDetails);
-  }
+  },
 };
 const qualtricsStore = new QualtricsStore(dispatcherDefault, obj);
 const map = new Map();

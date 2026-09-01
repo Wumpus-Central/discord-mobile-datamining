@@ -188,7 +188,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     planIdForPremiumType = first4;
     memo = first9;
     memo1 = first;
-    const items4 = [first2, recipientUserId, first3, , , , , ];
+    const items4 = [first2, recipientUserId, first3, , , , ,];
     let id;
     if (first5 != null) {
       id = first5.id;
@@ -207,7 +207,15 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     items4[6] = first9;
     items4[7] = first;
     memo1 = obj.useMemo(() => {
-      const obj = { gift_style: closure_0, recipient_id: revision, custom_message: setRevision, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null };
+      const obj = {
+        gift_style: closure_0,
+        recipient_id: revision,
+        custom_message: setRevision,
+        emoji_id: null,
+        emoji_name: null,
+        sound_id: null,
+        reward_sku_ids: null,
+      };
       let id;
       if (setOrder != null) {
         id = tmp.id;
@@ -276,7 +284,22 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     table = obj.useRef(false);
     const tmp2Result9 = tmp2(obj.useState(0), 2);
     closure_15 = tmp2Result9[1];
-    const items7 = [order, revision, planIdForPremiumType, memo, memo1, first7, first, first1, tmp5, tmp9, setRevision, setOrder, tmp26, tmp2Result9[0]];
+    const items7 = [
+      order,
+      revision,
+      planIdForPremiumType,
+      memo,
+      memo1,
+      first7,
+      first,
+      first1,
+      tmp5,
+      tmp9,
+      setRevision,
+      setOrder,
+      tmp26,
+      tmp2Result9[0],
+    ];
     const effect3 = obj.useEffect(() => {
       let id;
       if (id != null) {
@@ -342,7 +365,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                   }
                   tmp11.current = true;
                   first7 = tmp24;
-                  const promise = setOrder(function*() {
+                  const promise = setOrder(function* () {
                     if (c5 === 2) {
                       c5 = 3;
                       HermesBuiltin.throwTypeError();
@@ -376,10 +399,20 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                               v0 = 1;
                               if (null != c5) {
                                 let obj11 = id(id1[14]);
-                                obj1 = { orderId: null, expectedRevision: null, orderLineItems: null, externalGatewayFacet: null };
+                                obj1 = {
+                                  orderId: null,
+                                  expectedRevision: null,
+                                  orderLineItems: null,
+                                  externalGatewayFacet: null,
+                                };
                                 obj1[0] = closure_0;
                                 obj1[1] = revision;
-                                const obj2 = { sku_id: null, quantity: null, purchase_type: null, subscription_plan_id: null };
+                                const obj2 = {
+                                  sku_id: null,
+                                  quantity: null,
+                                  purchase_type: null,
+                                  subscription_plan_id: null,
+                                };
                                 ({ sku_id: obj14[0], quantity: obj14[1], purchase_type: obj14[2] } = closure_1_1);
                                 obj2[3] = c4;
                                 const items = [obj2];
@@ -392,7 +425,12 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                                 return obj3;
                               } else {
                                 let obj8 = id(id1[14]);
-                                let obj4 = { orderId: null, orderLineItemId: null, subscriptionPlanId: null, expectedRevision: null };
+                                let obj4 = {
+                                  orderId: null,
+                                  orderLineItemId: null,
+                                  subscriptionPlanId: null,
+                                  expectedRevision: null,
+                                };
                                 obj4[0] = closure_0;
                                 obj4[1] = closure_1_2;
                                 obj4[2] = c4;
@@ -407,7 +445,15 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                               obj4 = id(id1[14]);
                               const obj6 = { orderId: null, giftInfo: null, expectedRevision: null };
                               obj6[0] = revision;
-                              const obj7 = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
+                              const obj7 = {
+                                recipient_id: null,
+                                gift_style: null,
+                                emoji_id: null,
+                                emoji_name: null,
+                                sound_id: null,
+                                reward_sku_ids: null,
+                                custom_message_contents: null,
+                              };
                               obj7[0] = closure_1_6.recipient_id;
                               obj7[1] = closure_1_6.gift_style;
                               obj7[2] = closure_1_6.emoji_id;
@@ -511,7 +557,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                     }
                   })();
                   const tmp12 = closure_13;
-                  setOrder(function*() {
+                  setOrder(function* () {
                     if (c5 === 2) {
                       c5 = 3;
                       HermesBuiltin.throwTypeError();
@@ -545,10 +591,20 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                               v0 = 1;
                               if (null != c5) {
                                 let obj11 = id(id1[14]);
-                                obj1 = { orderId: null, expectedRevision: null, orderLineItems: null, externalGatewayFacet: null };
+                                obj1 = {
+                                  orderId: null,
+                                  expectedRevision: null,
+                                  orderLineItems: null,
+                                  externalGatewayFacet: null,
+                                };
                                 obj1[0] = closure_0;
                                 obj1[1] = revision;
-                                const obj2 = { sku_id: null, quantity: null, purchase_type: null, subscription_plan_id: null };
+                                const obj2 = {
+                                  sku_id: null,
+                                  quantity: null,
+                                  purchase_type: null,
+                                  subscription_plan_id: null,
+                                };
                                 ({ sku_id: obj14[0], quantity: obj14[1], purchase_type: obj14[2] } = closure_1_1);
                                 obj2[3] = c4;
                                 const items = [obj2];
@@ -561,7 +617,12 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                                 return obj3;
                               } else {
                                 let obj8 = id(id1[14]);
-                                let obj4 = { orderId: null, orderLineItemId: null, subscriptionPlanId: null, expectedRevision: null };
+                                let obj4 = {
+                                  orderId: null,
+                                  orderLineItemId: null,
+                                  subscriptionPlanId: null,
+                                  expectedRevision: null,
+                                };
                                 obj4[0] = closure_0;
                                 obj4[1] = closure_1_2;
                                 obj4[2] = c4;
@@ -576,7 +637,15 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                               obj4 = id(id1[14]);
                               const obj6 = { orderId: null, giftInfo: null, expectedRevision: null };
                               obj6[0] = revision;
-                              const obj7 = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
+                              const obj7 = {
+                                recipient_id: null,
+                                gift_style: null,
+                                emoji_id: null,
+                                emoji_name: null,
+                                sound_id: null,
+                                reward_sku_ids: null,
+                                custom_message_contents: null,
+                              };
                               obj7[0] = closure_1_6.recipient_id;
                               obj7[1] = closure_1_6.gift_style;
                               obj7[2] = closure_1_6.emoji_id;
@@ -678,21 +747,26 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                         }
                       }
                     }
-                  })().catch((error) => {
-                    let obj = id(setRevision[15]);
-                    obj = { orderId: id, planId: closure_4, needsPlanSync: closure_3, needsGiftSync: closure_4 };
-                    const result = obj.captureBillingException(error, { tags: { source: "NativeGiftContext_syncOrder" }, extra: obj });
-                    obj = { error, orderId: id };
-                    logger.error("Failed to sync order", obj);
-                    if (!c5) {
-                      closure_1_12(error);
-                    }
-                  }).finally(() => {
-                    closure_1_14.current = false;
-                    if (closure_1_13.current.orderId !== id2) {
-                      closure_1_15((arg0) => arg0 + 1);
-                    }
-                  });
+                  })()
+                    .catch((error) => {
+                      let obj = id(setRevision[15]);
+                      obj = { orderId: id, planId: closure_4, needsPlanSync: closure_3, needsGiftSync: closure_4 };
+                      const result = obj.captureBillingException(error, {
+                        tags: { source: "NativeGiftContext_syncOrder" },
+                        extra: obj,
+                      });
+                      obj = { error, orderId: id };
+                      logger.error("Failed to sync order", obj);
+                      if (!c5) {
+                        closure_1_12(error);
+                      }
+                    })
+                    .finally(() => {
+                      closure_1_14.current = false;
+                      if (closure_1_13.current.orderId !== id2) {
+                        closure_1_15((arg0) => arg0 + 1);
+                      }
+                    });
                   return () => {
                     c5 = true;
                   };
@@ -740,7 +814,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
       c5 = 0;
       c6 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (c6 === 2) {
           c6 = 3;
           HermesBuiltin.throwTypeError();
@@ -830,7 +904,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
       })();
     });
     const items9 = [skuId, orderContext.orderId];
-    callback1 = obj.useCallback(function() {
+    callback1 = obj.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -846,7 +920,18 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
       setOrder(lib(setRevision[33]).PaymentFlowStep.PLAN_SELECT);
       callback(false);
     }, items10);
-    const items11 = [callback, setCurrentAnalyticsStep, memo1, handlePremiumPurchase, productIdForGift, basePurchaseAnalytics, callback1, callback2, orderContext.orderId, first3];
+    const items11 = [
+      callback,
+      setCurrentAnalyticsStep,
+      memo1,
+      handlePremiumPurchase,
+      productIdForGift,
+      basePurchaseAnalytics,
+      callback1,
+      callback2,
+      orderContext.orderId,
+      first3,
+    ];
     callback3 = obj.useCallback((arg0) => {
       let obj = memo1;
       if (null != memo1.getNextTier(lib(setRevision[26]).BadgeId.GIFTING)) {
@@ -874,16 +959,31 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
             const obj = revision(setRevision[31]);
           }
         }
-        const subscription = revision(tmp2[31]).subscribe("GPLAY_UPDATE_PURCHASE_STATE", handleGPlayUpdatePurchaseAction);
+        const subscription = revision(tmp2[31]).subscribe(
+          "GPLAY_UPDATE_PURCHASE_STATE",
+          handleGPlayUpdatePurchaseAction,
+        );
         const obj3 = revision(tmp2[31]);
       }
       setOrder(lib(setRevision[33]).PaymentFlowStep.REVIEW);
-      obj = { productId: productIdForGift, isGift: true, analyticsLoadId: lib.load_id, analyticsLocation: lib.location, analyticsLocations: lib.location_stack, allowPlanChange: false, giftInfoOptions: memo1, onPurchaseComplete: null, onPurchaseError: null, orderId: null, analyticsData: null };
-      lib = setOrder(function*() {
+      obj = {
+        productId: productIdForGift,
+        isGift: true,
+        analyticsLoadId: lib.load_id,
+        analyticsLocation: lib.location,
+        analyticsLocations: lib.location_stack,
+        allowPlanChange: false,
+        giftInfoOptions: memo1,
+        onPurchaseComplete: null,
+        onPurchaseError: null,
+        orderId: null,
+        analyticsData: null,
+      };
+      lib = setOrder(function* () {
         yield closure_1_39(c1);
         return arg1;
       });
-      obj[7] = function() {
+      obj[7] = function () {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -905,7 +1005,31 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
       obj[10] = obj;
       handlePremiumPurchase(obj);
     }, items11);
-    const items12 = [orderContext, recipientUserId, stateFromStores, first2, first, first1, productIdForGift, first3, first4, first5, first6, first7, first10, basePurchaseAnalytics, setCurrentAnalyticsStep, tmp5, tmp9, onClose, callback3, stateFromStoresArray, fetchClaimableGiftingPromotionRewardSkuIds, first9, tmp29];
+    const items12 = [
+      orderContext,
+      recipientUserId,
+      stateFromStores,
+      first2,
+      first,
+      first1,
+      productIdForGift,
+      first3,
+      first4,
+      first5,
+      first6,
+      first7,
+      first10,
+      basePurchaseAnalytics,
+      setCurrentAnalyticsStep,
+      tmp5,
+      tmp9,
+      onClose,
+      callback3,
+      stateFromStoresArray,
+      fetchClaimableGiftingPromotionRewardSkuIds,
+      first9,
+      tmp29,
+    ];
     obj1 = { value: null, children: null };
     obj1[0] = obj.useMemo(() => {
       const obj = {};

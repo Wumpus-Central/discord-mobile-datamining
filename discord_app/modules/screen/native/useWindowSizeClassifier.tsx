@@ -18,7 +18,7 @@ export default function useWindowSizeClassifier() {
     XLARGE = obj.XLARGE;
   }
   return XLARGE;
-};
+}
 export const WindowSizeClassifier = obj;
 export const getWindowSizeClassifier = function getWindowSizeClassifier() {
   obj = useBaseAppContainerDimensions;

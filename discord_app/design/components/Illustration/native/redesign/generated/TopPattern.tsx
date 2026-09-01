@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/TopPattern.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/TopPattern.tsx",
+);
 
 export const getTopPatternSource = function getTopPatternSource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getTopPatternSource = function getTopPatternSource(theme) {
     },
     light() {
       return callback(13179);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useTopPatternSource = function useTopPatternSource() {
     },
     light() {
       return callback(13179);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const TopPattern = function TopPattern(arg0) {
     },
     light() {
       return callback(13179);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

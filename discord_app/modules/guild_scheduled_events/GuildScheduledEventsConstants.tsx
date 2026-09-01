@@ -4,17 +4,37 @@ import setDefault from "../../utils/Durations.tsx";
 import set from "../../../_runtime/00002_set.js";
 
 const ChannelTypes = ME.ChannelTypes;
-let obj = { SCHEDULED: 1, [1]: "SCHEDULED", ACTIVE: 2, [2]: "ACTIVE", COMPLETED: 3, [3]: "COMPLETED", CANCELED: 4, [4]: "CANCELED" };
-const items = [, ];
+let obj = {
+  SCHEDULED: 1,
+  [1]: "SCHEDULED",
+  ACTIVE: 2,
+  [2]: "ACTIVE",
+  COMPLETED: 3,
+  [3]: "COMPLETED",
+  CANCELED: 4,
+  [4]: "CANCELED",
+};
+const items = [,];
 ({ COMPLETED: arr[0], CANCELED: arr[1] } = obj);
 let set = new Set(items);
-obj = { NONE: 0, [0]: "NONE", STAGE_INSTANCE: 1, [1]: "STAGE_INSTANCE", VOICE: 2, [2]: "VOICE", EXTERNAL: 3, [3]: "EXTERNAL", PRIME_TIME: 4, [4]: "PRIME_TIME" };
-const items1 = [, ];
+obj = {
+  NONE: 0,
+  [0]: "NONE",
+  STAGE_INSTANCE: 1,
+  [1]: "STAGE_INSTANCE",
+  VOICE: 2,
+  [2]: "VOICE",
+  EXTERNAL: 3,
+  [3]: "EXTERNAL",
+  PRIME_TIME: 4,
+  [4]: "PRIME_TIME",
+};
+const items1 = [,];
 ({ STAGE_INSTANCE: arr2[0], PRIME_TIME: arr2[1] } = obj);
 obj = { [obj.STAGE_INSTANCE]: ChannelTypes.GUILD_STAGE_VOICE, [obj.VOICE]: ChannelTypes.GUILD_VOICE };
 const items2 = [obj.EXTERNAL];
 const set1 = new Set(items1);
-const items3 = [, ];
+const items3 = [,];
 ({ STAGE_INSTANCE: arr4[0], VOICE: arr4[1] } = obj);
 const set2 = new Set(items2);
 const result = 2 * setDefault.Millis.DAY;
@@ -42,5 +62,13 @@ export const MAX_RSVP_USER_DISPLAY_COUNT = 100;
 export const NEW_EVENT_WINDOW_MILLISECONDS = result;
 export const EVENT_STARTING_SOON_WINDOW_MILLISECONDS = result1;
 export const ACKED_RECENTLY_WINDOW_DAYS = 4;
-export const UpcomingGuildEventNoticeTypes = { NEW_EVENT: "Upcoming Event Notice", EVENT_STARTING_SOON: "Event Starting Soon Notice" };
-export const GuildScheduledEventUserResponses = { UNINTERESTED: 0, [0]: "UNINTERESTED", INTERESTED: 1, [1]: "INTERESTED" };
+export const UpcomingGuildEventNoticeTypes = {
+  NEW_EVENT: "Upcoming Event Notice",
+  EVENT_STARTING_SOON: "Event Starting Soon Notice",
+};
+export const GuildScheduledEventUserResponses = {
+  UNINTERESTED: 0,
+  [0]: "UNINTERESTED",
+  INTERESTED: 1,
+  [1]: "INTERESTED",
+};

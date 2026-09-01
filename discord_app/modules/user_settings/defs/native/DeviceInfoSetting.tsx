@@ -21,7 +21,7 @@ let obj = {
     const obj3 = getClientInfo;
     return "" + clientInfoString + " (" + obj3.getClientInfoString(DCDDeviceManager.getSystemVersion()) + ")";
   },
-  usePredicate: explicitContentFromProto.DeveloperMode.useSetting
+  usePredicate: explicitContentFromProto.DeveloperMode.useSetting,
 };
 const createStaticResult = createToggle.createStatic({
   useTitle() {
@@ -37,7 +37,7 @@ const createStaticResult = createToggle.createStatic({
     const obj3 = getClientInfo;
     return "" + clientInfoString + " (" + obj3.getClientInfoString(DCDDeviceManager.getSystemVersion()) + ")";
   },
-  usePredicate: explicitContentFromProto.DeveloperMode.useSetting
+  usePredicate: explicitContentFromProto.DeveloperMode.useSetting,
 });
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DeviceInfoSetting.tsx");
 

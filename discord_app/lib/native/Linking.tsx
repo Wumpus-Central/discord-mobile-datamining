@@ -18,8 +18,6 @@ export default {
     sanitizeURLPart.default(href, SAFARI, { forceExternalBrowser: true });
   },
   performURLNavigation(href) {
-    Linking.openURL(href).catch(() => {
-
-    });
-  }
+    Linking.openURL(href).catch(() => {});
+  },
 };

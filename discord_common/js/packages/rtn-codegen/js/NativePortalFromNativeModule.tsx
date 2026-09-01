@@ -4,6 +4,8 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 
 const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativePortalFromNativeModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativePortalFromNativeModule.tsx");
+const result = set.fileFinishedImporting(
+  "../discord_common/js/packages/rtn-codegen/js/NativePortalFromNativeModule.tsx",
+);
 
 export default enforcing;

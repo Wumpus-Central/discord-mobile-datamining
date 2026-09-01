@@ -13,7 +13,7 @@ function _isDefaultChannelThresholdMetAfterDelete() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();
@@ -99,7 +99,7 @@ function _isChattableChannelThresholdMetAfterChannelChange() {
     closure_2 = arg2;
     let onboardingPromptsForOnboarding = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (store === 2) {
         store = 3;
         HermesBuiltin.throwTypeError();
@@ -259,7 +259,7 @@ function _checkChattableChannelThresholdMetAfterChannelPermissionDeny() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (advancedMode === 2) {
         advancedMode = 3;
         HermesBuiltin.throwTypeError();
@@ -409,13 +409,14 @@ export const isDefaultChannelThresholdMetAfterDelete = function isDefaultChannel
   }
   return applyArgumentsResult;
 };
-export const checkChattableChannelThresholdMetAfterChannelPermissionDeny = function checkChattableChannelThresholdMetAfterChannelPermissionDeny(c5, VIEW_CHANNEL, allow) {
-  const self = this;
-  const apply = _checkChattableChannelThresholdMetAfterChannelPermissionDeny.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
+export const checkChattableChannelThresholdMetAfterChannelPermissionDeny =
+  function checkChattableChannelThresholdMetAfterChannelPermissionDeny(c5, VIEW_CHANNEL, allow) {
+    const self = this;
+    const apply = _checkChattableChannelThresholdMetAfterChannelPermissionDeny.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };

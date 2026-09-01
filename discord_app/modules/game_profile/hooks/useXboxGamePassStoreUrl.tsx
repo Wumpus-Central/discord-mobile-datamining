@@ -30,4 +30,4 @@ export default function useXboxGamePassStoreUrl(thirdPartySkus) {
     }
     return xboxGamePassStoreUrl;
   }
-};
+}

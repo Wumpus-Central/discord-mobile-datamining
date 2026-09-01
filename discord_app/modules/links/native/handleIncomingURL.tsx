@@ -15,7 +15,7 @@ function _handleIncomingURL() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, url) {
+    return (function* (arg0, url) {
       if (fingerprint === 2) {
         fingerprint = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -125,7 +125,9 @@ function _handleIncomingURL() {
                           throwTypeErrorResult = closure_1_10;
                           throwTypeErrorResult = url;
                           const _HermesInternal2 = HermesInternal;
-                          throwTypeErrorResult = closure_1_10.log("Extracted clean URL from AppsFlyer legacy URL: " + url);
+                          throwTypeErrorResult = closure_1_10.log(
+                            "Extracted clean URL from AppsFlyer legacy URL: " + url,
+                          );
                           store = 0;
                         }
                       }
@@ -133,7 +135,10 @@ function _handleIncomingURL() {
                       obj1 = { originalUrl: null };
                       throwTypeErrorResult = url;
                       obj1[0] = url;
-                      throwTypeErrorResult = closure_1_10.warn("Empty or whitespace-only URL fragment in AppsFlyer legacy URL", obj1);
+                      throwTypeErrorResult = closure_1_10.warn(
+                        "Empty or whitespace-only URL fragment in AppsFlyer legacy URL",
+                        obj1,
+                      );
                       fingerprint = 3;
                       const obj2 = { value: null, done: true };
                       obj2[0] = undefined;
@@ -157,7 +162,10 @@ function _handleIncomingURL() {
                       if (null != throwTypeErrorResult) {
                         throwTypeErrorResult = lib;
                         throwTypeErrorResult = closure_1_2;
-                        throwTypeErrorResult = lib(closure_1_2[8]).navigateToVoiceChannel(throwTypeErrorResult, "LiveActivity");
+                        throwTypeErrorResult = lib(closure_1_2[8]).navigateToVoiceChannel(
+                          throwTypeErrorResult,
+                          "LiveActivity",
+                        );
                         throwTypeErrorResult = url;
                         throwTypeErrorResult = url.indexOf("?");
                         let str3 = "";
@@ -182,7 +190,10 @@ function _handleIncomingURL() {
                           const obj4 = { action: "Open Voice Panel", channel_id: null, surface: null };
                           obj4[1] = throwTypeErrorResult.id;
                           obj4[2] = throwTypeErrorResult;
-                          throwTypeErrorResult = callback(closure_1_2[9]).track(constants.LIVE_ACTIVITY_INTERACTED, obj4);
+                          throwTypeErrorResult = callback(closure_1_2[9]).track(
+                            constants.LIVE_ACTIVITY_INTERACTED,
+                            obj4,
+                          );
                           const obj24 = callback(closure_1_2[9]);
                         }
                         const obj32 = lib(closure_1_2[8]);
@@ -329,7 +340,17 @@ function _handleIncomingURL() {
             }
             if (!tmp64) {
               obj6 = callback(url[9]);
-              const obj17 = { invite_code: null, guild_template_code: null, has_auth_token: null, is_backgrounded: null, attempt_id: null, deeplink_source: null, link_type: null, is_cold_start: null, received_installation_id: null };
+              const obj17 = {
+                invite_code: null,
+                guild_template_code: null,
+                has_auth_token: null,
+                is_backgrounded: null,
+                attempt_id: null,
+                deeplink_source: null,
+                link_type: null,
+                is_cold_start: null,
+                received_installation_id: null,
+              };
               obj17[0] = c16;
               obj17[1] = guildTemplateCode;
               let tmp85 = null != authToken;
@@ -448,4 +469,4 @@ export default function handleIncomingURL() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

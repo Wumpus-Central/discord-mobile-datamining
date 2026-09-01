@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/keyboard/native/useAnimatedKey
 
 export default function useAnimatedKeyboardHeight() {
   return _modDef14227.animatedKeyboardHeight;
-};
+}

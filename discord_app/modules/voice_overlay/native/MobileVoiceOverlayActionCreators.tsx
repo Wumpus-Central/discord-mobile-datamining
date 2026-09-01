@@ -9,5 +9,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "MOBILE_VOICE_OVERLAY_STATE_CHANGED", enabled };
     obj.dispatch(obj);
-  }
+  },
 };

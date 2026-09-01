@@ -28,7 +28,7 @@ export default function useGuildOnboardingAvailable(features) {
     stateFromStores = hasItem;
   }
   return stateFromStores;
-};
+}
 export const isGuildOnboardingAvailable = function isGuildOnboardingAvailable(guild) {
   if (null == guild) {
     return false;

@@ -32,15 +32,37 @@ function Emoji(url) {
 }
 let closure_7 = 6 * setDefault.Millis.SECOND;
 let closure_8 = 2 * setDefault.Millis.SECOND;
-createCacheKey = { voiceChannelEffectEmojiContainer: null, voiceChannelEffectEmojiContainerTileNotch: null, voiceChannelEffectEmoji: null, textEmoji: null, imageEmoji: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round, position: "absolute", right: 16, top: 16 };
+createCacheKey = {
+  voiceChannelEffectEmojiContainer: null,
+  voiceChannelEffectEmojiContainerTileNotch: null,
+  voiceChannelEffectEmoji: null,
+  textEmoji: null,
+  imageEmoji: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.round,
+  position: "absolute",
+  right: 16,
+  top: 16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { right: "auto", left: 16 };
 createCacheKey[2] = { padding: 12 };
-createCacheKey[3] = { fontSize: 32, lineHeight: 38, alignContent: "center", justifyContent: "center", display: "flex", width: 32, height: 32 };
+createCacheKey[3] = {
+  fontSize: 32,
+  lineHeight: 38,
+  alignContent: "center",
+  justifyContent: "center",
+  display: "flex",
+  width: 32,
+  height: 32,
+};
 createCacheKey[4] = { width: 32, height: 32 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let closure_11 = { code: "function AnimatedEffectEmojiTsx1(){const{withSequence,withTiming,ANIMATION_ROTATION_DEG,withDelay,useReducedMotion,STANDARD_EASING}=this.__closure;const rotate=withSequence(withTiming(ANIMATION_ROTATION_DEG+\"deg\",{duration:0}),withDelay(100,withTiming('0deg',{duration:useReducedMotion?0:300,easing:STANDARD_EASING})));const scale=withSequence(withTiming(0,{duration:0}),withDelay(100,withTiming(1,{duration:useReducedMotion?0:300,easing:STANDARD_EASING})));return{transform:[{scale:scale},{rotate:rotate}]};}" };
+let closure_11 = {
+  code: "function AnimatedEffectEmojiTsx1(){const{withSequence,withTiming,ANIMATION_ROTATION_DEG,withDelay,useReducedMotion,STANDARD_EASING}=this.__closure;const rotate=withSequence(withTiming(ANIMATION_ROTATION_DEG+\"deg\",{duration:0}),withDelay(100,withTiming('0deg',{duration:useReducedMotion?0:300,easing:STANDARD_EASING})));const scale=withSequence(withTiming(0,{duration:0}),withDelay(100,withTiming(1,{duration:useReducedMotion?0:300,easing:STANDARD_EASING})));return{transform:[{scale:scale},{rotate:rotate}]};}",
+};
 const result = require("set").fileFinishedImporting("modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx");
 
 export default function AnimatedEffectEmoji(onComplete) {
@@ -107,20 +129,27 @@ export default function AnimatedEffectEmoji(onComplete) {
       obj2 = { scale: null };
       obj3 = { duration: num, easing: tmp(tmp2[8]).STANDARD_EASING };
       obj2[0] = tmpResult.withSequence(withTimingResult1, tmpResult2.withDelay(100, tmpResult3.withTiming(1, obj3)));
-      items = [, ];
+      items = [,];
       items[0] = obj2;
       items[1] = { rotate: withSequenceResult };
       obj1[0] = items;
       return obj1;
     }
   }
-  obj = { withSequence: onComplete(stateFromStores[10]).withSequence, withTiming: onComplete(stateFromStores[11]).withTiming, ANIMATION_ROTATION_DEG: -120, withDelay: onComplete(stateFromStores[10]).withDelay, useReducedMotion: stateFromStores, STANDARD_EASING: onComplete(stateFromStores[8]).STANDARD_EASING };
+  obj = {
+    withSequence: onComplete(stateFromStores[10]).withSequence,
+    withTiming: onComplete(stateFromStores[11]).withTiming,
+    ANIMATION_ROTATION_DEG: -120,
+    withDelay: onComplete(stateFromStores[10]).withDelay,
+    useReducedMotion: stateFromStores,
+    STANDARD_EASING: onComplete(stateFromStores[8]).STANDARD_EASING,
+  };
   N.__closure = obj;
   N.__workletHash = 75069010226;
   N.__initData = closure_11;
   let tmp9Result = null;
   if (null != emoji) {
-    const items2 = [tmp.voiceChannelEffectEmojiContainer, , , ];
+    const items2 = [tmp.voiceChannelEffectEmojiContainer, , ,];
     let tmp2Result = tmp2(tmp3[8]);
     items2[1] = tmp2Result.generateBoxShadowStyle(tmp2(tmp3[8]).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
     items2[2] = tmp7;
@@ -141,4 +170,4 @@ export default function AnimatedEffectEmoji(onComplete) {
     tmp9Result = tmp9(sentAt(tmp3[10]).View, obj);
   }
   return tmp9Result;
-};
+}

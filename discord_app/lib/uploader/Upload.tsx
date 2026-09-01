@@ -62,9 +62,7 @@ class Upload extends EventEmitter {
   }
 }
 const prototype = Upload.prototype;
-prototype["cancel"] = function cancel() {
-
-};
+prototype["cancel"] = function cancel() {};
 prototype["resetState"] = function resetState() {
   return this;
 };
@@ -75,4 +73,11 @@ export const UploadPlatform = obj;
 export const isResolvedUpload = function isResolvedUpload(file) {
   return undefined !== file.isVideo && undefined !== file.isImage;
 };
-export const UploadOrigin = { FILE_ATTACHMENT: 0, [0]: "FILE_ATTACHMENT", IMAGE_PICKER: 1, [1]: "IMAGE_PICKER", IMAGE_EDITOR: 2, [2]: "IMAGE_EDITOR" };
+export const UploadOrigin = {
+  FILE_ATTACHMENT: 0,
+  [0]: "FILE_ATTACHMENT",
+  IMAGE_PICKER: 1,
+  [1]: "IMAGE_PICKER",
+  IMAGE_EDITOR: 2,
+  [2]: "IMAGE_EDITOR",
+};

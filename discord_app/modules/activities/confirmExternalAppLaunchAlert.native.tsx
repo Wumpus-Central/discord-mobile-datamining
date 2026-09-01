@@ -15,7 +15,7 @@ function ConfirmActivityGateContent(activityName) {
   const tmp = callback3();
   let obj = { style: tmp.alertContainer, children: null };
   obj = { source: registerAssetDefault, style: tmp.announcementBirb };
-  const items = [callback(closure_3, obj), , , ];
+  const items = [callback(closure_3, obj), , ,];
   obj = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["06YebE"]);
@@ -39,7 +39,7 @@ function LinkButton() {
     onPress() {
       callback(table[9]).openURL(closure_5);
     },
-    text: null
+    text: null,
   };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.E0gf5l);
@@ -49,13 +49,28 @@ function LinkButton() {
 noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertEyebrowText: { marginTop: 40, textAlign: "center" }, alertTitleText: { marginTop: 16, textAlign: "center" }, alertSubtitleText: { marginTop: 16, textAlign: "center" }, announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 }, linkWrapper: { marginTop: 8 } });
+let closure_8 = createCacheKey.createStyles({
+  alertContainer: { display: "flex", alignItems: "center", padding: 8 },
+  alertEyebrowText: { marginTop: 40, textAlign: "center" },
+  alertTitleText: { marginTop: 16, textAlign: "center" },
+  alertSubtitleText: { marginTop: 16, textAlign: "center" },
+  announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 },
+  linkWrapper: { marginTop: 8 },
+});
 const result = require("set").fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");
 
 export const confirmExternalAppLaunchAlert = function confirmExternalAppLaunchAlert(arg0) {
   ({ application, onConfirm, onCancel } = arg0);
   let obj = setDefault;
-  obj = { title: "", children: callback(ConfirmActivityGateContent, { application }), onConfirm, confirmText: null, onCancel: null, cancelText: null, footer: null };
+  obj = {
+    title: "",
+    children: callback(ConfirmActivityGateContent, { application }),
+    onConfirm,
+    confirmText: null,
+    onCancel: null,
+    cancelText: null,
+    footer: null,
+  };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["3PatSz"]);
   obj[4] = onCancel;

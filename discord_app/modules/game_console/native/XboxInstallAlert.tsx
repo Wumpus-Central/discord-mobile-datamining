@@ -42,4 +42,4 @@ export default function XboxInstallAlert(arg0) {
     }
   };
   return jsx(componentDidMountDefault, {});
-};
+}

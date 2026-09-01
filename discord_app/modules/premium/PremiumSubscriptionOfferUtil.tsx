@@ -13,7 +13,20 @@ import closure_5 from "../../stores/billing/SubscriptionStore.tsx";
 import GuildFeatures from "PremiumConstants.tsx";
 
 require = arg1;
-({ PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID: closure_6, PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID: error, PREMIUM_TIER_2_ANNUAL_V2_20_PERCENT_DISCOUNT_ID: closure_8, PREMIUM_TIER_2_ANNUAL_V2_30_PERCENT_DISCOUNT_ID: c9, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: c10, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: unpackModuleId, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID: closure_12, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: map1, PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID: closure_14, PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID: closure_15, PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: closure_16, PREMIUM_GROUP_30_PERCENT_3_MONTH_DISCOUNT_ID: closure_17 } = GuildFeatures);
+({
+  PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID: closure_6,
+  PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID: error,
+  PREMIUM_TIER_2_ANNUAL_V2_20_PERCENT_DISCOUNT_ID: closure_8,
+  PREMIUM_TIER_2_ANNUAL_V2_30_PERCENT_DISCOUNT_ID: c9,
+  PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: c10,
+  PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: unpackModuleId,
+  PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID: closure_12,
+  PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: map1,
+  PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID: closure_14,
+  PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID: closure_15,
+  PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: closure_16,
+  PREMIUM_GROUP_30_PERCENT_3_MONTH_DISCOUNT_ID: closure_17,
+} = GuildFeatures);
 function useHasDiscountApplied() {
   const items = [closure_5];
   const stateFromStores = initialize.useStateFromStores(items, () => store.getPremiumTypeSubscription());
@@ -64,7 +77,13 @@ export const useIsInPremiumOfferExperience = function useIsInPremiumOfferExperie
     tmp9 = hooksDefault(Date.now()) <= hooksDefault(prop);
     const tmp11Result = hooksDefault(Date.now());
   }
-  return null != premiumTrialOffer || hasActiveTrial || null != premiumDiscountOffer || null != premiumGroupDiscountOffer || tmp9;
+  return (
+    null != premiumTrialOffer ||
+    hasActiveTrial ||
+    null != premiumDiscountOffer ||
+    null != premiumGroupDiscountOffer ||
+    tmp9
+  );
 };
 export { useHasDiscountApplied };
 export const useActiveDiscountInfo = function useActiveDiscountInfo() {
@@ -155,14 +174,16 @@ export const useFetchChurnUserDiscountOffer = function useFetchChurnUserDiscount
       tmp8(true);
       obj = getPaymentGateway;
       const churnDiscountOffer = obj.fetchChurnDiscountOffer();
-      churnDiscountOffer.then((arg0) => {
-        callback2(arg0);
-        callback(true);
-        tmp8(false);
-      }).catch(() => {
-        callback(true);
-        tmp8(false);
-      });
+      churnDiscountOffer
+        .then((arg0) => {
+          callback2(arg0);
+          callback(true);
+          tmp8(false);
+        })
+        .catch(() => {
+          callback(true);
+          tmp8(false);
+        });
       const nextPromise = churnDiscountOffer.then((arg0) => {
         callback2(arg0);
         callback(true);

@@ -32,7 +32,10 @@ export const useThreadMemberListSections = function useThreadMemberListSections(
   });
   let obj = _require(stateFromStores[7]);
   const items1 = [closure_5];
-  const stateFromStoresObject = _require(stateFromStores[7]).useStateFromStoresObject(items1, () => ({ version: closure_1_5.getMemberListVersion(closure_0), members: closure_1_5.getMemberListSections(closure_0) }));
+  const stateFromStoresObject = _require(stateFromStores[7]).useStateFromStoresObject(items1, () => ({
+    version: closure_1_5.getMemberListVersion(closure_0),
+    members: closure_1_5.getMemberListSections(closure_0),
+  }));
   const members = stateFromStoresObject.members;
   closure_4 = tmp4;
   const items2 = [stateFromStores, members, stateFromStoresObject.version, null == stateFromStores];

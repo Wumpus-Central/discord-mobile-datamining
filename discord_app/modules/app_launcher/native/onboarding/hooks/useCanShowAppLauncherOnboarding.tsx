@@ -16,7 +16,9 @@ let closure_11 = 5 * setDefault.Millis.SECOND;
 let closure_12 = 14 * setDefault.Millis.DAY;
 const HOUR = setDefault.Millis.HOUR;
 const DAY = setDefault.Millis.DAY;
-let result1 = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useCanShowAppLauncherOnboarding.tsx");
+let result1 = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/onboarding/hooks/useCanShowAppLauncherOnboarding.tsx",
+);
 
 export default function useCanShowAppLauncherOnboarding(channelId) {
   channelId = channelId.channelId;
@@ -64,11 +66,16 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
   const tmp2Result1 = guild_id(589);
   const tmp2Result2 = guild_id(6251);
   const items5 = [closure_8];
-  const stateFromStoresObject = guild_id(589).useStateFromStoresObject(items5, () => ({ recentMessageMetadata: store2.getRecentMessageMetadata(), recentApplicationCommandMetadata: store2.getRecentApplicationCommandMetadata() }));
+  const stateFromStoresObject = guild_id(589).useStateFromStoresObject(items5, () => ({
+    recentMessageMetadata: store2.getRecentMessageMetadata(),
+    recentApplicationCommandMetadata: store2.getRecentApplicationCommandMetadata(),
+  }));
   ({ recentMessageMetadata, recentApplicationCommandMetadata } = stateFromStoresObject);
   const tmp2Result3 = guild_id(589);
   const items6 = [tmp14];
-  const stateFromStores4 = guild_id(589).useStateFromStores(items6, () => store.getTriggeredOnboardingContentMetadata());
+  const stateFromStores4 = guild_id(589).useStateFromStores(items6, () =>
+    store.getTriggeredOnboardingContentMetadata(),
+  );
   let tmp21 = null != recentMessageMetadata;
   if (tmp21) {
     tmp21 = timestamp < recentMessageMetadata.timeMs + closure_10;
@@ -95,19 +102,31 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
     const applicationId = recentApplicationCommandMetadata.applicationId;
   }
   const tmp2Result4 = guild_id(589);
-  result = guild_id(4298).useIsDismissibleContentDismissed_UNSAFE(tmp2(1373).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
+  result = guild_id(4298).useIsDismissibleContentDismissed_UNSAFE(
+    tmp2(1373).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER,
+  );
   const tmp2Result5 = guild_id(4298);
-  let result1 = guild_id(4298).useIsDismissibleContentDismissed_UNSAFE(tmp2(1373).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
+  let result1 = guild_id(4298).useIsDismissibleContentDismissed_UNSAFE(
+    tmp2(1373).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER,
+  );
   const tmp2Result6 = guild_id(4298);
   let tmp30 = null != stateFromStores4;
-  const result2 = guild_id(4298).useIsDismissibleContentDismissed_UNSAFE(tmp2(1373).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
+  const result2 = guild_id(4298).useIsDismissibleContentDismissed_UNSAFE(
+    tmp2(1373).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
+  );
   if (tmp30) {
     tmp30 = stateFromStores4.channelId === channelId;
   }
   if (tmp30) {
     tmp30 = stateFromStores4.timeMs + DAY > timestamp;
   }
-  obj = { canShowOnboarding: false, canShowBotsBanner: false, canShowAppsOrActivitiesBanner: false, willShowGlobalSearchOnboarding: false, fromTriggeredOnboarding: false };
+  obj = {
+    canShowOnboarding: false,
+    canShowBotsBanner: false,
+    canShowAppsOrActivitiesBanner: false,
+    willShowGlobalSearchOnboarding: false,
+    fromTriggeredOnboarding: false,
+  };
   if (null != stateFromStores) {
     let tmp32 = !tmp24;
     if (tmp24) {
@@ -142,7 +161,10 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
       obj.canShowOnboarding = true;
       obj.canShowAppsOrActivitiesBanner = true;
     }
-    if (callback(tmp2Result2.useSelectedDismissibleContent(items4), 1)[0] === tmp2(1373).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING) {
+    if (
+      callback(tmp2Result2.useSelectedDismissibleContent(items4), 1)[0] ===
+      tmp2(1373).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING
+    ) {
       obj.willShowGlobalSearchOnboarding = true;
       obj.canShowOnboarding = true;
     }
@@ -153,10 +175,14 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
     }
     if (tmp33) {
       obj.canShowOnboarding = true;
-      ({ canShowBotsBanner: obj12.canShowBotsBanner, canShowAppsOrActivitiesBanner: obj12.canShowAppsOrActivitiesBanner, willShowGlobalSearchOnboarding: obj12.willShowGlobalSearchOnboarding } = stateFromStores4);
+      ({
+        canShowBotsBanner: obj12.canShowBotsBanner,
+        canShowAppsOrActivitiesBanner: obj12.canShowAppsOrActivitiesBanner,
+        willShowGlobalSearchOnboarding: obj12.willShowGlobalSearchOnboarding,
+      } = stateFromStores4);
       obj.fromTriggeredOnboarding = true;
     }
   }
   return obj;
-};
+}
 export const RECENT_MESSAGE_MS = result;

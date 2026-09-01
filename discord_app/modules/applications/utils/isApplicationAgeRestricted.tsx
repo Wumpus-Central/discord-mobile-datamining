@@ -18,4 +18,4 @@ export default function isApplicationAgeRestricted(arg0) {
     return false;
   }
   obj = getUnitIdDefault;
-};
+}

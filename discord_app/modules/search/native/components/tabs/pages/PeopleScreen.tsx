@@ -27,7 +27,9 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
   let items = [onPressGroupDMItem];
   stateFromStores = obj1.useStateFromStores(items, () => onPressGroupDMItem.getResults(closure_1));
   const items1 = [onPressDMItem];
-  stateFromStores1 = _require(stateFromStores[8]).useStateFromStores(items1, () => onPressDMItem.isInitialSearchQuery(closure_0));
+  stateFromStores1 = _require(stateFromStores[8]).useStateFromStores(items1, () =>
+    onPressDMItem.isInitialSearchQuery(closure_0),
+  );
   const obj3 = _require(stateFromStores[8]);
   obj = { placeholderHeight: callback1, numColumns: 1 };
   fullscreenPlaceholderCount = _require(stateFromStores[9]).useFullscreenPlaceholderCount(obj);
@@ -41,7 +43,7 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -107,7 +109,7 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
     })();
   });
   const items2 = [onPressDMItem, searchContext];
-  callback = fullscreenPlaceholderCount.useCallback(function() {
+  callback = fullscreenPlaceholderCount.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

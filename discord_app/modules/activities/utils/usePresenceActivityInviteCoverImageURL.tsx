@@ -25,7 +25,11 @@ function _getPresenceActivityInviteCoverImageURL(messageId) {
     }
     let assetImage = null;
     if (null != invite_cover_image) {
-      assetImage = updateAssets.getAssetImage(presenceActivity.application_id, presenceActivity.assets.invite_cover_image, result);
+      assetImage = updateAssets.getAssetImage(
+        presenceActivity.application_id,
+        presenceActivity.assets.invite_cover_image,
+        result,
+      );
       const obj2 = updateAssets;
     }
     if (assetImage == null) {
@@ -41,7 +45,9 @@ function _getPresenceActivityInviteCoverImageURL(messageId) {
     return obj;
   }
 }
-let result = require("set").fileFinishedImporting("modules/activities/utils/usePresenceActivityInviteCoverImageURL.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/activities/utils/usePresenceActivityInviteCoverImageURL.tsx",
+);
 
 export const usePresenceActivityInviteCoverImageURL = (messageId) => {
   messageId = messageId.messageId;
@@ -51,7 +57,11 @@ export const usePresenceActivityInviteCoverImageURL = (messageId) => {
   let imageURL;
   const items = [closure_5];
   const items1 = [messageId, presenceActivity, application];
-  const stateFromStoresObject = messageId(cachedImageURL[4]).useStateFromStoresObject(items, () => closure_1_6({ messageId, presenceActivity, application }), items1);
+  const stateFromStoresObject = messageId(cachedImageURL[4]).useStateFromStoresObject(
+    items,
+    () => closure_1_6({ messageId, presenceActivity, application }),
+    items1,
+  );
   cachedImageURL = stateFromStoresObject.cachedImageURL;
   imageURL = stateFromStoresObject.imageURL;
   const items2 = [cachedImageURL, imageURL, messageId];

@@ -54,11 +54,15 @@ export const measureViewInView = function measureViewInView(arg0, arg1) {
   closure_1 = arg1;
   return new Promise((arg0) => {
     current = arg0;
-    current.measureLayout(closure_1, (arg0, arg1, width, height) => {
-      callback({ x: arg0, y: arg1, width, height });
-    }, () => {
-      callback(undefined);
-    });
+    current.measureLayout(
+      closure_1,
+      (arg0, arg1, width, height) => {
+        callback({ x: arg0, y: arg1, width, height });
+      },
+      () => {
+        callback(undefined);
+      },
+    );
   });
 };
 export const measureViewRefInView = function measureViewRefInView(ref, closure_1_0) {
@@ -69,11 +73,15 @@ export const measureViewRefInView = function measureViewRefInView(ref, closure_1
     closure_1 = closure_1_0;
     resolved = new Promise((arg0) => {
       current = arg0;
-      current.measureLayout(closure_1, (arg0, arg1, width, height) => {
-        callback({ x: arg0, y: arg1, width, height });
-      }, () => {
-        callback(undefined);
-      });
+      current.measureLayout(
+        closure_1,
+        (arg0, arg1, width, height) => {
+          callback({ x: arg0, y: arg1, width, height });
+        },
+        () => {
+          callback(undefined);
+        },
+      );
     });
   }
   return resolved;

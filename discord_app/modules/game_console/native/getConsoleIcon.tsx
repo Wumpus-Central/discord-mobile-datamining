@@ -6,13 +6,17 @@ import registerAssetDefault from "../../../../_runtime/09318_registerAsset.js";
 import registerAssetDefault2 from "../../../../_runtime/09893_registerAsset.js";
 
 const VoicePlatforms = ParticipantTypes.VoicePlatforms;
-const obj = { [XBOX]: registerAssetDefault, [PLAYSTATION]: registerAssetDefault2, [PLAYSTATION_STAGING]: registerAssetDefault2 };
+const obj = {
+  [XBOX]: registerAssetDefault,
+  [PLAYSTATION]: registerAssetDefault2,
+  [PLAYSTATION_STAGING]: registerAssetDefault2,
+};
 ({ XBOX, PLAYSTATION, PLAYSTATION_STAGING } = ME.PlatformTypes);
 const result = set.fileFinishedImporting("modules/game_console/native/getConsoleIcon.tsx");
 
 export default function getConsoleIcon(arg0) {
   return obj[arg0];
-};
+}
 export const getConsoleIconForVoicePlatform = function getConsoleIconForVoicePlatform(voicePlatform) {
   if (voicePlatform === VoicePlatforms.XBOX) {
     let tmp2 = registerAssetDefault;

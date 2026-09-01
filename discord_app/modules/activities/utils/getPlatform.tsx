@@ -12,4 +12,4 @@ export default function getPlatform(arg0) {
   } else {
     return PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.WEB;
   }
-};
+}

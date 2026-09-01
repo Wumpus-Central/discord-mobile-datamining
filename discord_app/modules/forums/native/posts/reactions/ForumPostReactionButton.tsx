@@ -20,7 +20,19 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 require = arg1;
 class BurstReactionButton {
   constructor(arg0) {
-    ({ colors, emoji, onPress, onLongPress, containerStyle, count, emojiSize, selected, animate, animateCount, accessible } = global);
+    ({
+      colors,
+      emoji,
+      onPress,
+      onLongPress,
+      containerStyle,
+      count,
+      emojiSize,
+      selected,
+      animate,
+      animateCount,
+      accessible,
+    } = global);
     tmp = closure_0;
     tmp2 = closure_2;
     obj = require("useEmojiColorPalette");
@@ -45,7 +57,7 @@ class BurstReactionButton {
       }
       str = str2;
     }
-    items = [, ];
+    items = [,];
     items[0] = containerStyle;
     obj = { backgroundColor: str, borderColor: null, borderWidth: null };
     backgroundColor1 = undefined;
@@ -59,7 +71,19 @@ class BurstReactionButton {
     if (selected) {
       num2 = 1;
     }
-    obj1 = { containerStyle: items, textStyle: null, selected: false, emoji: null, count: null, animate: null, onPress: null, onLongPress: null, emojiSize: null, animateCount: null, accessible: null };
+    obj1 = {
+      containerStyle: items,
+      textStyle: null,
+      selected: false,
+      emoji: null,
+      count: null,
+      animate: null,
+      onPress: null,
+      onLongPress: null,
+      emojiSize: null,
+      animateCount: null,
+      accessible: null,
+    };
     obj[2] = num2;
     items[1] = obj;
     accentColor = undefined;
@@ -106,8 +130,16 @@ class ReactionButton {
     }
     tmp6 = jsxs;
     tmp7 = closure_2;
-    obj1 = { style: items, accessible, accessibilityLabel: null, onPress: null, onLongPress: null, disabled: null, children: null };
-    items = [, , ];
+    obj1 = {
+      style: items,
+      accessible,
+      accessibilityLabel: null,
+      onPress: null,
+      onLongPress: null,
+      disabled: null,
+      children: null,
+    };
+    items = [, ,];
     items[0] = tmp.container;
     items[1] = containerStyle;
     items[2] = selected;
@@ -119,7 +151,7 @@ class ReactionButton {
     tmp8 = jsx;
     tmp9 = closure_1;
     obj2 = { textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: emojiURL, name: emoji.name };
-    items1 = [, ];
+    items1 = [,];
     items1[0] = jsx(require("Emoji"), obj2);
     tmp8Result = null != count;
     if (tmp8Result) {
@@ -144,15 +176,36 @@ class ReactionButton {
 }
 ({ jsxs: c5, jsx: closure_6 } = jsxProd);
 createCacheKey = { container: null, selected: null, textEmoji: null, imageEmoji: null, countContainer: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: 8, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.REACTION_BORDER_DEFAULT, backgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_DEFAULT, minWidth: 32, minHeight: 26, maxHeight: 26 };
+createCacheKey = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  paddingHorizontal: 8,
+  borderRadius: ThemesDefault.radii.sm,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.REACTION_BORDER_DEFAULT,
+  backgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_DEFAULT,
+  minWidth: 32,
+  minHeight: 26,
+  maxHeight: 26,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderColor: ThemesDefault.colors.REACTION_BORDER_REACTED_DEFAULT, backgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT };
+createCacheKey[1] = {
+  borderColor: ThemesDefault.colors.REACTION_BORDER_REACTED_DEFAULT,
+  backgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT,
+};
 createCacheKey[2] = { fontSize: 12 };
 createCacheKey[3] = { height: 16, width: 16 };
 createCacheKey[4] = { paddingStart: 4 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { borderColor: ThemesDefault.colors.REACTION_BORDER_REACTED_DEFAULT, backgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT };
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/reactions/ForumPostReactionButton.tsx");
+const obj1 = {
+  borderColor: ThemesDefault.colors.REACTION_BORDER_REACTED_DEFAULT,
+  backgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/forums/native/posts/reactions/ForumPostReactionButton.tsx",
+);
 
 export const DEFAULT_EMOJI_SIZE = 14;
 export const AdditionalReactionCount = function AdditionalReactionCount(arg0) {
@@ -214,7 +267,20 @@ export const ForumPostReactionButton = function ForumPostReactionButton(emojiSiz
     tmp6 = !disableReactionUpdates;
   }
   if (reaction.burst_count > 0) {
-    obj = { accessible: null, emoji: null, selected: null, colors: null, count: null, onPress: null, onLongPress: null, containerStyle: null, textStyle: null, emojiSize: null, animate: null, animateCount: null };
+    obj = {
+      accessible: null,
+      emoji: null,
+      selected: null,
+      colors: null,
+      count: null,
+      onPress: null,
+      onLongPress: null,
+      containerStyle: null,
+      textStyle: null,
+      emojiSize: null,
+      animate: null,
+      animateCount: null,
+    };
     obj[0] = tmp6;
     ({ emoji: obj3[1], me_burst: obj3[2], burst_colors } = reaction);
     if (burst_colors == null) {
@@ -233,7 +299,19 @@ export const ForumPostReactionButton = function ForumPostReactionButton(emojiSiz
     const tmp10 = callback2;
     const tmp11 = BurstReactionButton;
   } else {
-    obj = { accessible: null, emoji: null, selected: null, count: null, onPress: null, onLongPress: null, containerStyle: null, textStyle: null, emojiSize: null, animate: null, animateCount: null };
+    obj = {
+      accessible: null,
+      emoji: null,
+      selected: null,
+      count: null,
+      onPress: null,
+      onLongPress: null,
+      containerStyle: null,
+      textStyle: null,
+      emojiSize: null,
+      animate: null,
+      animateCount: null,
+    };
     obj[0] = tmp6;
     ({ emoji: obj2[1], me: obj2[2], count: obj2[3] } = reaction);
     obj[4] = callback;

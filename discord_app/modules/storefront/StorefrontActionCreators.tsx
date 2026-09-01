@@ -33,7 +33,7 @@ function _maybeFetchStorefrontPromotions() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -113,7 +113,7 @@ function _fetchStorefrontPromotions() {
     c4 = 0;
     c5 = 0;
     c3 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (promotionIdOverride === 2) {
         promotionIdOverride = 3;
         HermesBuiltin.throwTypeError();
@@ -223,7 +223,7 @@ function _fetchStorefrontPricesForApplicationId() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -312,7 +312,7 @@ function _fetchStorefrontPricesForSkuIds() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -407,7 +407,7 @@ function fetchStorefrontPrices() {
 }
 function _fetchStorefrontPrices() {
   const self = this;
-  const tmp = callback(function*(arg0) {
+  const tmp = callback(function* (arg0) {
     if (c4 === 2) {
       c4 = 3;
       HermesBuiltin.throwTypeError();

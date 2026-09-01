@@ -6,7 +6,7 @@ import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 require = arg1;
 class ThemeAwareAsset$Type extends MessageType {
   constructor() {
-    items = [, , , ];
+    items = [, , ,];
     items[0] = { no: 1, name: "light_url", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "dark_url", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "light_static_url", kind: "scalar", T: 9 };
@@ -111,9 +111,24 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(lightUrl, tag, w
   }
   return tag;
 };
-let items = [{ no: 1, name: "light_url", kind: "scalar", T: 9 }, { no: 2, name: "dark_url", kind: "scalar", T: 9 }, { no: 3, name: "light_static_url", kind: "scalar", T: 9 }, { no: 4, name: "dark_static_url", kind: "scalar", T: 9 }];
-prototype = new prototype("discord_protos.premium_marketing.v1.ThemeAwareAsset", items, tmp, ThemeAwareAsset$Type, prototype, items, arg1);
+let items = [
+  { no: 1, name: "light_url", kind: "scalar", T: 9 },
+  { no: 2, name: "dark_url", kind: "scalar", T: 9 },
+  { no: 3, name: "light_static_url", kind: "scalar", T: 9 },
+  { no: 4, name: "dark_static_url", kind: "scalar", T: 9 },
+];
+prototype = new prototype(
+  "discord_protos.premium_marketing.v1.ThemeAwareAsset",
+  items,
+  tmp,
+  ThemeAwareAsset$Type,
+  prototype,
+  items,
+  arg1,
+);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/theme_aware_asset.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/theme_aware_asset.tsx",
+);
 
 export const ThemeAwareAsset = prototype;

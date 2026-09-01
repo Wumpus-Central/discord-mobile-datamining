@@ -29,4 +29,4 @@ export default function useGuildsBarSelectedGuildScroller(arg0) {
       closure_2_1.removeChangeListener(handleSelectedGuildChange);
     };
   }, items);
-};
+}

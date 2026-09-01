@@ -126,25 +126,29 @@ function flattenPresence(id) {
       return tmp;
     }, values[0]);
     if (reduced.status === constants.OFFLINE) {
-      if (obj.every(dependencyMap[id], (status) => {
-        let tmp = status.status === constants.OFFLINE;
-        if (tmp) {
-          let tmp3 = null == status.hiddenActivities;
-          if (!tmp3) {
-            tmp3 = 0 === status.hiddenActivities.length;
+      if (
+        obj.every(dependencyMap[id], (status) => {
+          let tmp = status.status === constants.OFFLINE;
+          if (tmp) {
+            let tmp3 = null == status.hiddenActivities;
+            if (!tmp3) {
+              tmp3 = 0 === status.hiddenActivities.length;
+            }
+            tmp = tmp3;
           }
-          tmp = tmp3;
-        }
-        return tmp;
-      })) {
+          return tmp;
+        })
+      ) {
         delete tmp3[tmp2];
-      } else if (values.some((hiddenActivities) => {
-        let tmp = null != hiddenActivities.hiddenActivities;
-        if (tmp) {
-          tmp = hiddenActivities.hiddenActivities.length > 0;
-        }
-        return tmp;
-      })) {
+      } else if (
+        values.some((hiddenActivities) => {
+          let tmp = null != hiddenActivities.hiddenActivities;
+          if (tmp) {
+            tmp = hiddenActivities.hiddenActivities.length > 0;
+          }
+          return tmp;
+        })
+      ) {
         const _Object = Object;
         values = Object.values(values);
         const flatMapResult = values.flatMap((hiddenActivities) => {
@@ -160,15 +164,17 @@ function flattenPresence(id) {
           HermesBuiltin.arraySpread(flatMapResult, 0);
           const reversed = items.reverse();
           const _Map = Map;
-          const map = new Map(reversed.map((party) => {
-            party = party.party;
-            let id;
-            if (party != null) {
-              id = party.id;
-            }
-            const items = ["" + party.application_id + ":" + id, party];
-            return items;
-          }));
+          const map = new Map(
+            reversed.map((party) => {
+              party = party.party;
+              let id;
+              if (party != null) {
+                id = party.id;
+              }
+              const items = ["" + party.application_id + ":" + id, party];
+              return items;
+            }),
+          );
           const items1 = [];
           HermesBuiltin.arraySpread(map.values(), 0);
           tmp8 = items1;
@@ -196,15 +202,17 @@ function flattenPresence(id) {
       HermesBuiltin.arraySpread(flatMapResult1, 0);
       const reversed1 = items2.reverse();
       const _Map2 = Map;
-      map1 = new Map(reversed1.map((party) => {
-        party = party.party;
-        let id;
-        if (party != null) {
-          id = party.id;
-        }
-        const items = ["" + party.application_id + ":" + id, party];
-        return items;
-      }));
+      map1 = new Map(
+        reversed1.map((party) => {
+          party = party.party;
+          let id;
+          if (party != null) {
+            id = party.id;
+          }
+          const items = ["" + party.application_id + ":" + id, party];
+          return items;
+        }),
+      );
       const items3 = [];
       HermesBuiltin.arraySpread(map1.values(), 0);
       tmp23 = items3;
@@ -219,7 +227,10 @@ function flattenPresence(id) {
 function flattenPresenceInConnectionOpen(arg0) {
   if (null != dependencyMap[arg0]) {
     const _Object = Object;
-    const maxByResult = applyDefault.maxBy(Object.values(tmp), (processedAtTimestamp) => processedAtTimestamp.processedAtTimestamp);
+    const maxByResult = applyDefault.maxBy(
+      Object.values(tmp),
+      (processedAtTimestamp) => processedAtTimestamp.processedAtTimestamp,
+    );
     let tmp3 = maxByResult.status !== constants.OFFLINE;
     if (!tmp3) {
       let tmp2 = null != maxByResult.hiddenActivities;
@@ -292,15 +303,17 @@ function updatePresence(arg0) {
         HermesBuiltin.arraySpread(hiddenActivities, 0);
         const reversed = items1.reverse();
         const _Map = Map;
-        const map = new Map(reversed.map((party) => {
-          party = party.party;
-          let id;
-          if (party != null) {
-            id = party.id;
-          }
-          const items = ["" + party.application_id + ":" + id, party];
-          return items;
-        }));
+        const map = new Map(
+          reversed.map((party) => {
+            party = party.party;
+            let id;
+            if (party != null) {
+              id = party.id;
+            }
+            const items = ["" + party.application_id + ":" + id, party];
+            return items;
+          }),
+        );
         const items2 = [];
         HermesBuiltin.arraySpread(map.values(), 0);
         tmp15 = items2;
@@ -368,15 +381,17 @@ function updatePresenceInConnectionOpen(arg0) {
         HermesBuiltin.arraySpread(hiddenActivities, 0);
         const reversed = items1.reverse();
         const _Map = Map;
-        const map = new Map(reversed.map((party) => {
-          party = party.party;
-          let id;
-          if (party != null) {
-            id = party.id;
-          }
-          const items = ["" + party.application_id + ":" + id, party];
-          return items;
-        }));
+        const map = new Map(
+          reversed.map((party) => {
+            party = party.party;
+            let id;
+            if (party != null) {
+              id = party.id;
+            }
+            const items = ["" + party.application_id + ":" + id, party];
+            return items;
+          }),
+        );
         const items2 = [];
         HermesBuiltin.arraySpread(map.values(), 0);
         tmp13 = items2;
@@ -427,8 +442,7 @@ let closure_14 = {};
 let closure_15 = {};
 let closure_16 = {};
 const Store = initializeDefault.Store;
-class PresenceStore extends Store {
-}
+class PresenceStore extends Store {}
 const prototype = PresenceStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3);
@@ -645,7 +659,15 @@ prototype["getClientStatus"] = function getClientStatus(arg0) {
   return dependencyMap6[arg0];
 };
 prototype["getState"] = function getState() {
-  return { presencesForGuilds: closure_10, statuses: closure_11, activities: closure_12, filteredActivities: closure_13, hiddenActivities: closure_14, activityMetadata: closure_16, clientStatuses: closure_15 };
+  return {
+    presencesForGuilds: closure_10,
+    statuses: closure_11,
+    activities: closure_12,
+    filteredActivities: closure_13,
+    hiddenActivities: closure_14,
+    activityMetadata: closure_16,
+    clientStatuses: closure_15,
+  };
 };
 PresenceStore.displayName = "PresenceStore";
 const presenceStore = new PresenceStore(dispatcherDefault, {
@@ -669,14 +691,30 @@ const presenceStore = new PresenceStore(dispatcherDefault, {
       presences = presences.presences;
       const item = presences.forEach((status) => {
         const user = status.user;
-        closure_2_22({ guildId: presences.id, userId: user.id, status: status.status, clientStatus: status.clientStatus, activities: status.activities, hiddenActivities: status.hiddenActivities, processedAtTimestamp: status.processedAtTimestamp });
+        closure_2_22({
+          guildId: presences.id,
+          userId: user.id,
+          status: status.status,
+          clientStatus: status.clientStatus,
+          activities: status.activities,
+          hiddenActivities: status.hiddenActivities,
+          processedAtTimestamp: status.processedAtTimestamp,
+        });
         presences.add(user.id);
       });
     });
     const item1 = presences.forEach((user) => {
       user = user.user;
       if (null != user) {
-        obj = { guildId: null, userId: null, status: null, clientStatus: null, activities: null, hiddenActivities: null, processedAtTimestamp: null };
+        obj = {
+          guildId: null,
+          userId: null,
+          status: null,
+          clientStatus: null,
+          activities: null,
+          hiddenActivities: null,
+          processedAtTimestamp: null,
+        };
         obj[0] = closure_1_7;
         obj[1] = user.id;
         obj[2] = tmp;
@@ -692,13 +730,27 @@ const presenceStore = new PresenceStore(dispatcherDefault, {
     const item2 = set.forEach(flattenPresenceInConnectionOpen);
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(presences) {
-    ({ presencesForGuilds: closure_10, statuses: closure_11, activities: closure_12, hiddenActivities: closure_14, activityMetadata: closure_16 } = presences.presences);
+    ({
+      presencesForGuilds: closure_10,
+      statuses: closure_11,
+      activities: closure_12,
+      hiddenActivities: closure_14,
+      activityMetadata: closure_16,
+    } = presences.presences);
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     guild = guild.guild;
     const presences = guild.presences;
     const item = presences.forEach((user) => {
-      closure_1_21({ guildId: guild.id, userId: user.user.id, status: user.status, clientStatus: user.clientStatus, activities: user.activities, hiddenActivities: user.hiddenActivities, processedAtTimestamp: user.processedAtTimestamp });
+      closure_1_21({
+        guildId: guild.id,
+        userId: user.user.id,
+        status: user.status,
+        clientStatus: user.clientStatus,
+        activities: user.activities,
+        hiddenActivities: user.hiddenActivities,
+        processedAtTimestamp: user.processedAtTimestamp,
+      });
     });
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
@@ -731,7 +783,15 @@ const presenceStore = new PresenceStore(dispatcherDefault, {
       if (guildId == null) {
         guildId = closure_7;
       }
-      return closure_21({ guildId, userId: user.id, status, clientStatus, activities, hiddenActivities, processedAtTimestamp });
+      return closure_21({
+        guildId,
+        userId: user.id,
+        status,
+        clientStatus,
+        activities,
+        hiddenActivities,
+        processedAtTimestamp,
+      });
     });
     return mapped.some((arg0) => arg0);
   },
@@ -741,7 +801,15 @@ const presenceStore = new PresenceStore(dispatcherDefault, {
     const item = presences.forEach((user) => {
       user = user.user;
       if (null != user) {
-        const obj = { guildId: null, userId: null, status: null, clientStatus: null, activities: null, hiddenActivities: null, processedAtTimestamp: null };
+        const obj = {
+          guildId: null,
+          userId: null,
+          status: null,
+          clientStatus: null,
+          activities: null,
+          hiddenActivities: null,
+          processedAtTimestamp: null,
+        };
         obj[0] = closure_7;
         obj[1] = user.id;
         obj[2] = tmp;
@@ -761,7 +829,15 @@ const presenceStore = new PresenceStore(dispatcherDefault, {
     ({ guildId: importDefault, members } = arg0);
     const item = members.forEach((presence) => {
       if (null != presence.presence) {
-        const obj = { guildId: null, userId: null, status: null, clientStatus: null, activities: null, hiddenActivities: null, processedAtTimestamp: null };
+        const obj = {
+          guildId: null,
+          userId: null,
+          status: null,
+          clientStatus: null,
+          activities: null,
+          hiddenActivities: null,
+          processedAtTimestamp: null,
+        };
         obj[0] = closure_0;
         obj[1] = presence.user_id;
         obj[2] = presence.presence.status;
@@ -778,7 +854,15 @@ const presenceStore = new PresenceStore(dispatcherDefault, {
     if (addedMembers != null) {
       const item = addedMembers.forEach((presence) => {
         if (null != presence.presence) {
-          const obj = { guildId: null, userId: null, status: null, clientStatus: null, activities: null, hiddenActivities: null, processedAtTimestamp: null };
+          const obj = {
+            guildId: null,
+            userId: null,
+            status: null,
+            clientStatus: null,
+            activities: null,
+            hiddenActivities: null,
+            processedAtTimestamp: null,
+          };
           obj[0] = closure_0;
           obj[1] = presence.userId;
           obj[2] = presence.presence.status;
@@ -808,7 +892,7 @@ const presenceStore = new PresenceStore(dispatcherDefault, {
     const items1 = [...status.hiddenActivities];
     dependencyMap5[id] = items1.sort(sortActivity);
     delete tmp[tmp2];
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/PresenceStore.tsx");
 

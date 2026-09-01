@@ -22,28 +22,41 @@ function DirectMessageIcon(channel) {
   const tmp = callback2();
   const items1 = [closure_8];
   const items2 = [stateFromStores];
-  const stateFromStoresObject = channel(589).useStateFromStoresObject(items1, () => {
-    let isMobileOnlineResult = null != stateFromStores;
-    if (isMobileOnlineResult) {
-      isMobileOnlineResult = closure_1_8.isMobileOnline(tmp.id);
-    }
-    const obj = { isMobileOnline: isMobileOnlineResult, isVROnline: null, status: null };
-    let isVROnlineResult = null != tmp;
-    if (isVROnlineResult) {
-      isVROnlineResult = closure_1_8.isVROnline(tmp.id);
-    }
-    obj[1] = isVROnlineResult;
-    if (null != stateFromStores) {
-      let UNKNOWN = closure_1_8.getStatus(tmp.id);
-    } else {
-      UNKNOWN = closure_1_11.UNKNOWN;
-    }
-    obj[2] = UNKNOWN;
-    return obj;
-  }, items2);
+  const stateFromStoresObject = channel(589).useStateFromStoresObject(
+    items1,
+    () => {
+      let isMobileOnlineResult = null != stateFromStores;
+      if (isMobileOnlineResult) {
+        isMobileOnlineResult = closure_1_8.isMobileOnline(tmp.id);
+      }
+      const obj = { isMobileOnline: isMobileOnlineResult, isVROnline: null, status: null };
+      let isVROnlineResult = null != tmp;
+      if (isVROnlineResult) {
+        isVROnlineResult = closure_1_8.isVROnline(tmp.id);
+      }
+      obj[1] = isVROnlineResult;
+      if (null != stateFromStores) {
+        let UNKNOWN = closure_1_8.getStatus(tmp.id);
+      } else {
+        UNKNOWN = closure_1_11.UNKNOWN;
+      }
+      obj[2] = UNKNOWN;
+      return obj;
+    },
+    items2,
+  );
   let tmp9Result = null;
   if (null != stateFromStores) {
-    obj = { avatarDecoration: null, user: null, guildId: "Boolean", size: true, status: false, isMobileOnline: "done", isVROnline: "flowing", statusStyle: "hourglass" };
+    obj = {
+      avatarDecoration: null,
+      user: null,
+      guildId: "Boolean",
+      size: true,
+      status: false,
+      isMobileOnline: "done",
+      isVROnline: "flowing",
+      statusStyle: "hourglass",
+    };
     obj[0] = stateFromStores.avatarDecoration;
     obj[1] = stateFromStores;
     obj[3] = tmp2(1297).AvatarSizes.NORMAL;
@@ -83,8 +96,13 @@ function ThreadParentChannelLink(channel) {
   obj[3] = intl.format(channel(navigation[18]).t.YbkB3U, {
     channelName: tmp,
     channelNameHook() {
-      return closure_1_12(channel(navigation[17]).Text, { variant: "text-sm/medium", color: "text-brand", lineClamp: 1, children: closure_1 });
-    }
+      return closure_1_12(channel(navigation[17]).Text, {
+        variant: "text-sm/medium",
+        color: "text-brand",
+        lineClamp: 1,
+        children: closure_1,
+      });
+    },
   });
   obj[1] = callback(channel(navigation[17]).Text, obj);
   return callback(channel(navigation[16]).PressableOpacity, obj);
@@ -94,14 +112,21 @@ function ChannelSubtitle(channel) {
   let obj = channel(589);
   const items = [closure_9];
   const items1 = [channel];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    let privateChannelUserTagsString = null;
-    if (channel.isPrivate()) {
-      privateChannelUserTagsString = channel(closure_1_2[19]).getPrivateChannelUserTagsString(channel.recipients, closure_1_9);
-      const obj = channel(closure_1_2[19]);
-    }
-    return privateChannelUserTagsString;
-  }, items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let privateChannelUserTagsString = null;
+      if (channel.isPrivate()) {
+        privateChannelUserTagsString = channel(closure_1_2[19]).getPrivateChannelUserTagsString(
+          channel.recipients,
+          closure_1_9,
+        );
+        const obj = channel(closure_1_2[19]);
+      }
+      return privateChannelUserTagsString;
+    },
+    items1,
+  );
   if (channel.isPrivate()) {
     let tmp8 = null;
     if (null != stateFromStores) {
@@ -133,35 +158,47 @@ function ChannelNameHeaderContent(channel) {
   let obj = channel(stateFromStores[11]);
   let items = [closure_5];
   const items1 = [channel];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    channel = null;
-    if (channel.isThread()) {
-      channel = closure_1_5.getChannel(channel.parent_id);
-    }
-    return channel;
-  }, items1);
+  stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      channel = null;
+      if (channel.isThread()) {
+        channel = closure_1_5.getChannel(channel.parent_id);
+      }
+      return channel;
+    },
+    items1,
+  );
   obj1 = channel(stateFromStores[11]);
   const items2 = [closure_7];
   const items3 = [stateFromStores];
-  stateFromStores1 = obj1.useStateFromStores(items2, () => {
-    let canResult = null != stateFromStores;
-    if (canResult) {
-      canResult = closure_1_7.can(closure_1_10.VIEW_CHANNEL, tmp);
-    }
-    return canResult;
-  }, items3);
+  stateFromStores1 = obj1.useStateFromStores(
+    items2,
+    () => {
+      let canResult = null != stateFromStores;
+      if (canResult) {
+        canResult = closure_1_7.can(closure_1_10.VIEW_CHANNEL, tmp);
+      }
+      return canResult;
+    },
+    items3,
+  );
   let obj2 = channel(stateFromStores[11]);
   const items4 = [closure_6];
-  const items5 = [, ];
+  const items5 = [,];
   ({ id: arr6[0], guild_id: arr6[1] } = channel);
-  stateFromStores2 = obj2.useStateFromStores(items4, () => {
-    const guild = closure_1_6.getGuild(channel.guild_id);
-    let rulesChannelId;
-    if (guild != null) {
-      rulesChannelId = guild.rulesChannelId;
-    }
-    return rulesChannelId === channel.id;
-  }, items5);
+  stateFromStores2 = obj2.useStateFromStores(
+    items4,
+    () => {
+      const guild = closure_1_6.getGuild(channel.guild_id);
+      let rulesChannelId;
+      if (guild != null) {
+        rulesChannelId = guild.rulesChannelId;
+      }
+      return rulesChannelId === channel.id;
+    },
+    items5,
+  );
   const items6 = [channel, stateFromStores, stateFromStores1];
   const items7 = [channel, stateFromStores2, tmp];
   const memo = stateFromStores1.useMemo(() => {
@@ -202,7 +239,7 @@ function ChannelNameHeaderContent(channel) {
         let tmp5 = null;
         if (null != channelIconComponent) {
           const obj4 = { style: null, children: null };
-          const items = [, ];
+          const items = [,];
           ({ channelIcon: arr[0], channelTypeBox: arr[1] } = lib);
           obj4[0] = items;
           obj4[1] = closure_1_12(channelIconComponent, { size: "md", color: "mobile-text-heading-primary" });
@@ -211,18 +248,31 @@ function ChannelNameHeaderContent(channel) {
         return tmp5;
       }
     }, items7),
-
   ];
   obj = { style: tmp.channelData, children: null };
   if (channel.isDM()) {
-    obj = { userId: null, guildId: null, userName: null, variant: "redesign/heading-18/bold", defaultColor: "mobile-text-heading-primary", lineClamp: 1, ellipsizeMode: "tail" };
+    obj = {
+      userId: null,
+      guildId: null,
+      userName: null,
+      variant: "redesign/heading-18/bold",
+      defaultColor: "mobile-text-heading-primary",
+      lineClamp: 1,
+      ellipsizeMode: "tail",
+    };
     obj[0] = channel.getRecipientId();
     obj[1] = channel.guild_id;
     obj[2] = tmp4;
     let tmp13Result = tmp13(importDefault(tmp3[23]), obj);
     const tmp2Result = importDefault(tmp3[23]);
   } else {
-    obj1 = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", lineClamp: 1, ellipsizeMode: "tail", children: null };
+    obj1 = {
+      variant: "redesign/heading-18/bold",
+      color: "mobile-text-heading-primary",
+      lineClamp: 1,
+      ellipsizeMode: "tail",
+      children: null,
+    };
     obj1[4] = tmp4;
     tmp13Result = tmp13(channel(tmp3[17]).Text, obj1);
   }
@@ -250,7 +300,11 @@ function DMChannelNameHeader(channel) {
   }, items);
   const tmp = callback2();
   const items1 = [tmp.container, channel.containerStyle];
-  return callback(channel(5068).PressableOpacity, { style: items1, onPress: callback, children: callback(ChannelNameHeaderContent, { channel }) });
+  return callback(channel(5068).PressableOpacity, {
+    style: items1,
+    onPress: callback,
+    children: callback(ChannelNameHeaderContent, { channel }),
+  });
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);
@@ -267,7 +321,12 @@ let obj = { container: null, channelIcon: null, channelTypeBox: null, channelDat
 obj = { flexDirection: "row", gap: ThemesDefault.space.PX_12, alignItems: "center" };
 obj[0] = obj;
 obj[1] = { height: 40, width: 40, justifyContent: "center", alignItems: "center" };
-createCacheKey = { borderRadius: ThemesDefault.modules.mobile.CHANNEL_NAME_CHANNEL_ICON_RADIUS, borderWidth: ThemesDefault.modules.mobile.CHANNEL_NAME_CHANNEL_BORDER_WIDTH, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+createCacheKey = {
+  borderRadius: ThemesDefault.modules.mobile.CHANNEL_NAME_CHANNEL_ICON_RADIUS,
+  borderWidth: ThemesDefault.modules.mobile.CHANNEL_NAME_CHANNEL_BORDER_WIDTH,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 obj[2] = createCacheKey;
 obj[3] = { flex: 1 };
 obj[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
@@ -288,6 +347,8 @@ const memoResult = importAllResult.memo(function ChannelNameHeader(arg0) {
   }
   return tmpResult;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/header_v2/ChannelNameHeader.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/sidebar/details/header_v2/ChannelNameHeader.tsx",
+);
 
 export default memoResult;

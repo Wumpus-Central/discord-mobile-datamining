@@ -9,7 +9,9 @@ let closure_3 = AccountNotificationFlags.NotificationSettingsUpdateType;
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/notifications/server_trending/ServerTrendingNotificationUtils.tsx");
 
-export const onServerTrendingNotificationSettingsChanged = function onServerTrendingNotificationSettingsChanged(server_trending_notifications) {
+export const onServerTrendingNotificationSettingsChanged = function onServerTrendingNotificationSettingsChanged(
+  server_trending_notifications,
+) {
   const EnableServerTrendingNotifications = explicitContentFromProto.EnableServerTrendingNotifications;
   EnableServerTrendingNotifications.updateSetting(server_trending_notifications);
   let obj = expandEventPropertiesDefault;

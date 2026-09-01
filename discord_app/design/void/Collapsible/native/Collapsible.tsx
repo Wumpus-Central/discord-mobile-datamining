@@ -13,7 +13,9 @@ createCacheKey = { collapsible: { position: "relative", overflow: "hidden" }, co
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let closure_10 = { code: "function CollapsibleTsx1(){const{withSpring,totalHeight,EXPAND_SPRING}=this.__closure;return{height:withSpring(totalHeight,EXPAND_SPRING)};}" };
+let closure_10 = {
+  code: "function CollapsibleTsx1(){const{withSpring,totalHeight,EXPAND_SPRING}=this.__closure;return{height:withSpring(totalHeight,EXPAND_SPRING)};}",
+};
 const result = require("set").fileFinishedImporting("design/void/Collapsible/native/Collapsible.tsx");
 
 export default function Collapsible(isExpanded) {
@@ -71,7 +73,7 @@ export default function Collapsible(isExpanded) {
     const callback1 = obj.useCallback(() => {
       callback(!first);
     }, items1);
-    const items2 = [tmp.collapsible, ];
+    const items2 = [tmp.collapsible];
     let tmp22 = null;
     if (sum > 0) {
       tmp22 = animatedStyle;
@@ -84,7 +86,7 @@ export default function Collapsible(isExpanded) {
     const obj3 = { onPress: null };
     obj3[0] = callback1;
     obj2[1] = children(obj3);
-    const items3 = [c6(closure_5, obj2), ];
+    const items3 = [c6(closure_5, obj2)];
     const obj4 = { style: null, onLayout: null, children: null };
     obj4[0] = tmp.collapsibleContent;
     obj4[1] = tmp10;
@@ -97,4 +99,4 @@ export default function Collapsible(isExpanded) {
     num = 0;
   }
   num = first2;
-};
+}

@@ -5,7 +5,9 @@ import closure_5 from "../../../../stores/GuildStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/components/ChannelSelectComponentActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/native/components/ChannelSelectComponentActionSheet.tsx",
+);
 
 export default function ChannelSelectComponentActionSheet(guildId) {
   ({ selectionActionComponent, channelId } = guildId);
@@ -15,8 +17,17 @@ export default function ChannelSelectComponentActionSheet(guildId) {
   channelTypes = selectionActionComponent.channelTypes;
   const items = [channelId, channelTypes];
   ({ labelComponent, containerId, onSubmit, allowEmpty } = guildId);
-  const callback = React.useCallback((arg0) => channelId(channelTypes[4]).queryChannels(arg0, channelId, channelTypes), items);
-  const tmp2 = guildId(channelTypes[5])({ selectActionComponent: selectionActionComponent, containerId, guildId, queryOptions: callback, onSubmit });
+  const callback = React.useCallback(
+    (arg0) => channelId(channelTypes[4]).queryChannels(arg0, channelId, channelTypes),
+    items,
+  );
+  const tmp2 = guildId(channelTypes[5])({
+    selectActionComponent: selectionActionComponent,
+    containerId,
+    guildId,
+    queryOptions: callback,
+    onSubmit,
+  });
   ({ selectedOptions, submitSelection: c3 } = tmp2);
   ({ options, isSelected, onPressOptionItem, setQuery } = tmp2);
   return jsx(guildId(channelTypes[6]), {
@@ -57,6 +68,6 @@ export default function ChannelSelectComponentActionSheet(guildId) {
       }
     },
     channelId,
-    allowEmpty
+    allowEmpty,
   });
-};
+}

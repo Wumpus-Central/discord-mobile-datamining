@@ -49,7 +49,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "accessible"
+    animation: "accessible",
   },
   {
     check(arg0) {
@@ -62,8 +62,8 @@ const items = [
       }
       return isMatch;
     },
-    analyticsType: "API Token Warning"
-  }
+    analyticsType: "API Token Warning",
+  },
 ];
 let result = set.fileFinishedImporting("utils/ChatRestrictions.tsx");
 

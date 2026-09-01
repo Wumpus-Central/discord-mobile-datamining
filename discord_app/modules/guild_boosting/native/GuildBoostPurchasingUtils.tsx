@@ -12,7 +12,7 @@ function _launchGuildBoostFlowOrAlert() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (premiumTypeSubscription === 2) {
         premiumTypeSubscription = 3;
         HermesBuiltin.throwTypeError();
@@ -47,7 +47,14 @@ function _launchGuildBoostFlowOrAlert() {
               c3 = undefined;
               c4 = undefined;
               c5 = undefined;
-              ({ source: c0, analyticsLocations: c1, guildId: c2, onBack: c3, onPaymentSuccess: c4, onPaymentDismiss: c5 } = callback);
+              ({
+                source: c0,
+                analyticsLocations: c1,
+                guildId: c2,
+                onBack: c3,
+                onPaymentSuccess: c4,
+                onPaymentDismiss: c5,
+              } = callback);
               premiumTypeSubscription = undefined;
               let externalManagementMessage;
               c8 = undefined;
@@ -129,7 +136,18 @@ function _launchGuildBoostFlowOrAlert() {
               mobileBoostingEnabled = c8 === constants.YEAR;
             }
             const obj5 = callback(7153);
-            obj3 = { showCurrentPlan: false, isBoostPurchaseFlow: true, allowYearlyBundles: null, predicate: null, analyticsLocation: null, analyticsLocations: null, guildId: null, onBack: null, onPaymentSuccess: null, onPaymentDismiss: null };
+            obj3 = {
+              showCurrentPlan: false,
+              isBoostPurchaseFlow: true,
+              allowYearlyBundles: null,
+              predicate: null,
+              analyticsLocation: null,
+              analyticsLocations: null,
+              guildId: null,
+              onBack: null,
+              onPaymentSuccess: null,
+              onPaymentDismiss: null,
+            };
             obj3[2] = mobileBoostingEnabled;
             obj3[3] = function predicate(interval) {
               let tmp = !mobileBoostingEnabled;
@@ -148,9 +166,13 @@ function _launchGuildBoostFlowOrAlert() {
                 let num3 = 0;
                 const sum = interval.numPremiumGuild + num2;
                 if (null != c6) {
-                  const numPremiumGuildSubscriptions = _undefined(_undefined2[13]).getNumPremiumGuildSubscriptions(c6.additionalPlans);
+                  const numPremiumGuildSubscriptions = _undefined(_undefined2[13]).getNumPremiumGuildSubscriptions(
+                    c6.additionalPlans,
+                  );
                   const obj = _undefined(_undefined2[13]);
-                  num3 = numPremiumGuildSubscriptions + _null(_undefined2[13]).getNumIncludedPremiumGuildSubscriptionSlots(c6.planId);
+                  num3 =
+                    numPremiumGuildSubscriptions +
+                    _null(_undefined2[13]).getNumIncludedPremiumGuildSubscriptionSlots(c6.planId);
                   const obj2 = _null(_undefined2[13]);
                 }
                 tmp = sum > num3;

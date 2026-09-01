@@ -10,14 +10,25 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, hasError: null, stringOptionInput: null, expressionButton: null };
-createCacheKey = { width: "100%", backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.lg, padding: 14, borderWidth: 2, borderColor: "transparent", flexDirection: "row", alignItems: "center" };
+createCacheKey = {
+  width: "100%",
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  borderRadius: ThemesDefault.radii.lg,
+  padding: 14,
+  borderWidth: 2,
+  borderColor: "transparent",
+  flexDirection: "row",
+  alignItems: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderColor: ThemesDefault.colors.BORDER_FEEDBACK_CRITICAL };
 createCacheKey[2] = { maxHeight: 100, flex: 1, padding: 0, paddingTop: 0 };
 createCacheKey[3] = { marginVertical: -8, marginRight: -8 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { borderColor: ThemesDefault.colors.BORDER_FEEDBACK_CRITICAL };
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/options/text_input/AppLauncherTextInputOption.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/options/text_input/AppLauncherTextInputOption.tsx",
+);
 
 export default function AppLauncherTextInputOption(guildId) {
   ({ option, onChangeText } = guildId);
@@ -33,16 +44,19 @@ export default function AppLauncherTextInputOption(guildId) {
   closure_10 = undefined;
   ({ onFocus, onEndEditing, style, autoFocus, onPressIn } = guildId);
   const tmp = callback();
-  const tmp2 = first(React.useState(() => {
-    let str = "";
-    if (null != closure_2) {
-      str = "";
-      if ("text" === tmp.type) {
-        str = tmp.text;
+  const tmp2 = first(
+    React.useState(() => {
+      let str = "";
+      if (null != closure_2) {
+        str = "";
+        if ("text" === tmp.type) {
+          str = tmp.text;
+        }
       }
-    }
-    return str;
-  }), 2);
+      return str;
+    }),
+    2,
+  );
   first = tmp2[0];
   React = tmp2[1];
   let obj = onChangeText(9049);
@@ -113,14 +127,30 @@ export default function AppLauncherTextInputOption(guildId) {
   } else {
     TextInput = guildId(11743);
   }
-  const items3 = [tmp.container, , ];
+  const items3 = [tmp.container, ,];
   if (hasError) {
     hasError = tmp.hasError;
   }
   obj = { style: items3, children: null };
   items3[1] = hasError;
   items3[2] = style;
-  obj = { ref, autoFocus: false, value: first, style: tmp.stringOptionInput, maxLength: null, autoComplete: "off", onChangeText: null, onSelectionChange: null, onFocus: null, onEndEditing: null, textAlignVertical: "center", returnKeyType: "default", multiline: true, keyboardType: null, onPressIn: null };
+  obj = {
+    ref,
+    autoFocus: false,
+    value: first,
+    style: tmp.stringOptionInput,
+    maxLength: null,
+    autoComplete: "off",
+    onChangeText: null,
+    onSelectionChange: null,
+    onFocus: null,
+    onEndEditing: null,
+    textAlignVertical: "center",
+    returnKeyType: "default",
+    multiline: true,
+    keyboardType: null,
+    onPressIn: null,
+  };
   let maxLength;
   if (option.type === onChangeText(1955).ApplicationCommandOptionType.STRING) {
     maxLength = option.maxLength;
@@ -144,14 +174,21 @@ export default function AppLauncherTextInputOption(guildId) {
   }
   obj[13] = str;
   obj[14] = onPressIn;
-  const items4 = [closure_7(TextInput, obj), ];
+  const items4 = [closure_7(TextInput, obj)];
   if (tmp14Result) {
     obj1 = { style: null, onPress: null };
     obj1[0] = tmp.expressionButton;
     obj1[1] = function onPress() {
       let obj = onChangeText(closure_1_2[16]);
       const result = obj.dismissGlobalKeyboard();
-      obj = { pickerIntention: ref.CHAT, autoFocus: false, startExpanded: false, onPressEmoji: closure_9, guildId, onClose: closure_10 };
+      obj = {
+        pickerIntention: ref.CHAT,
+        autoFocus: false,
+        startExpanded: false,
+        onPressEmoji: closure_9,
+        guildId,
+        onClose: closure_10,
+      };
       const result1 = onChangeText(closure_1_2[17]).openEmojiPickerActionSheet(obj);
     };
     tmp14Result = tmp14(guildId(11744), obj1);
@@ -159,4 +196,4 @@ export default function AppLauncherTextInputOption(guildId) {
   items4[1] = tmp14Result;
   obj[1] = items4;
   return callback(closure_5, obj);
-};
+}

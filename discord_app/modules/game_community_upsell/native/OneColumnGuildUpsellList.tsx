@@ -9,7 +9,9 @@ const require = arg1;
 let closure_7 = { itemVisiblePercentThreshold: 50, minimumViewTime: 500 };
 let c8 = 0;
 let closure_9 = createCacheKey.createStyles({ hidden: { opacity: 0 } });
-const result = require("set").fileFinishedImporting("modules/game_community_upsell/native/OneColumnGuildUpsellList.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/game_community_upsell/native/OneColumnGuildUpsellList.tsx",
+);
 
 export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAction) {
   cardAction = cardAction.cardAction;
@@ -24,7 +26,10 @@ export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAc
   const callback = React.useCallback((id) => id.id, []);
   const ref = React.useRef(null);
   dependencyMap = ref;
-  const tmp4 = first(React.useState(() => closure_8 > 0), 2);
+  const tmp4 = first(
+    React.useState(() => closure_8 > 0),
+    2,
+  );
   first = tmp4[0];
   React = tmp4[1];
   const items = [first];
@@ -64,13 +69,20 @@ export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAc
   const items2 = [stateFromStoresObject];
   stateFromStoresObject = obj.useStateFromStoresObject(items2, () => stateFromStoresObject.getGuildGameIds());
   let tmp = callback();
-  analyticsLocations = analyticsLocations(5953)(analyticsLocations(5973).GAME_COMMUNITY_MULTI_GUILD_UPSELL_GUILDS_BAR_ENTRYPOINT).analyticsLocations;
+  analyticsLocations = analyticsLocations(5953)(
+    analyticsLocations(5973).GAME_COMMUNITY_MULTI_GUILD_UPSELL_GUILDS_BAR_ENTRYPOINT,
+  ).analyticsLocations;
   const items3 = [onDismiss, stateFromStoresObject, cardAction];
   dependencyMap = undefined;
   const callback3 = React.useCallback((item) => {
     item = item.item;
     let tmp = null;
-    const obj = { guild: item, gameId: stateFromStoresObject[item.id], cardAction: stateFromStoresObject, onDismiss: null };
+    const obj = {
+      guild: item,
+      gameId: stateFromStoresObject[item.id],
+      cardAction: stateFromStoresObject,
+      onDismiss: null,
+    };
     if (tmp2) {
       tmp = analyticsLocations;
     }
@@ -80,10 +92,12 @@ export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAc
   const tmp10 = analyticsLocations(5953);
   dependencyMap = React.useRef(new Set());
   const set = new Set();
-  const focusEffect = stateFromStoresObject(1500).useFocusEffect(React.useCallback(() => {
-    const current = ref.current;
-    current.clear();
-  }, []));
+  const focusEffect = stateFromStoresObject(1500).useFocusEffect(
+    React.useCallback(() => {
+      const current = ref.current;
+      current.clear();
+    }, []),
+  );
   const items4 = [stateFromStoresObject, analyticsLocations];
   const callback4 = React.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
@@ -112,7 +126,21 @@ export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAc
       }
     });
   }, items4);
-  obj = { ref, style: null, onViewableItemsChanged: null, viewabilityConfig: null, contentContainerStyle: null, keyExtractor: null, data: null, ListHeaderComponent: null, renderItem: null, drawDistance: 3000, onScroll: null, scrollEventThrottle: 16, onLoad: null };
+  obj = {
+    ref,
+    style: null,
+    onViewableItemsChanged: null,
+    viewabilityConfig: null,
+    contentContainerStyle: null,
+    keyExtractor: null,
+    data: null,
+    ListHeaderComponent: null,
+    renderItem: null,
+    drawDistance: 3000,
+    onScroll: null,
+    scrollEventThrottle: 16,
+    onLoad: null,
+  };
   let hidden;
   if (first) {
     hidden = tmp.hidden;
@@ -127,5 +155,19 @@ export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAc
   obj[8] = callback3;
   obj[10] = callback1;
   obj[12] = callback2;
-  return jsx(stateFromStoresObject(8105).FlashList, { ref, style: null, onViewableItemsChanged: null, viewabilityConfig: null, contentContainerStyle: null, keyExtractor: null, data: null, ListHeaderComponent: null, renderItem: null, drawDistance: 3000, onScroll: null, scrollEventThrottle: 16, onLoad: null });
+  return jsx(stateFromStoresObject(8105).FlashList, {
+    ref,
+    style: null,
+    onViewableItemsChanged: null,
+    viewabilityConfig: null,
+    contentContainerStyle: null,
+    keyExtractor: null,
+    data: null,
+    ListHeaderComponent: null,
+    renderItem: null,
+    drawDistance: 3000,
+    onScroll: null,
+    scrollEventThrottle: 16,
+    onLoad: null,
+  });
 };

@@ -136,10 +136,12 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
         }
       }
       const reactions = message.reactions;
-      if (reactions.some((emoji) => {
-        obj = obj(closure_1_2[10]);
-        return obj.emojiEquals(emoji.emoji, obj) && emoji.me;
-      })) {
+      if (
+        reactions.some((emoji) => {
+          obj = obj(closure_1_2[10]);
+          return obj.emojiEquals(emoji.emoji, obj) && emoji.me;
+        })
+      ) {
         tmpResult = tmp(4446);
         const result2 = tmpResult.triggerHapticFeedback(tmp(4446).HapticFeedbackTypes.IMPACT_LIGHT);
         obj1 = { channelId: null, messageId: null, emoji: null, location: null };
@@ -208,11 +210,17 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
           const tmpResult4 = tmp(4446);
           obj6 = { dismissAction: null };
           obj6[0] = ContentDismissActionType.INDIRECT_ACTION;
-          const result5 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(tmp(1373).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj6);
+          const result5 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(
+            tmp(1373).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER,
+            obj6,
+          );
           if (isContentShown(tmp(1373).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL)) {
             obj7 = { dismissAction: null, forceTrack: true };
             obj7[0] = tmp31.INDIRECT_ACTION;
-            const result6 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(tmp(1373).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL, obj7);
+            const result6 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(
+              tmp(1373).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL,
+              obj7,
+            );
             const tmpResult7 = tmp(4298);
           }
           tmp31 = ContentDismissActionType;

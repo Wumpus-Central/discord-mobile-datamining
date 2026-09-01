@@ -16,50 +16,60 @@ export default function useVoiceChannelGames(arg0, arg1, arg2) {
   dependencyMap = arg2;
   let items = [stateFromStores, closure_6, closure_5];
   const items1 = [arg0, arg1, arg2];
-  const stateFromStoresArray = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
-    if (closure_2) {
-      const _Set = Set;
-      const id = stateFromStores.getId();
-      const set = new Set();
-      const tmp10 = dependencyMap[Symbol.iterator]();
-      while (true) {
-        let tmp12 = tmp8;
-        let tmp14 = tmp10;
-        if (tmp10 === undefined) {
-          let _Array = Array;
-          return Array.from(set);
-        } else {
-          let user = tmp13.user;
-          if (user.id === id) {
-            let tmp20 = closure_1_6;
-            let activities = closure_1_6.getActivities();
-          } else {
-            let tmp16 = closure_1_5;
-            let tmp17 = user;
-            let tmp18 = closure_1;
-            activities = closure_1_5.getActivities(tmp15.id, closure_1);
+  const stateFromStoresArray =
+    require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+      items,
+      () => {
+        if (closure_2) {
+          const _Set = Set;
+          const id = stateFromStores.getId();
+          const set = new Set();
+          const tmp10 = dependencyMap[Symbol.iterator]();
+          while (true) {
+            let tmp12 = tmp8;
+            let tmp14 = tmp10;
+            if (tmp10 === undefined) {
+              let _Array = Array;
+              return Array.from(set);
+            } else {
+              let user = tmp13.user;
+              if (user.id === id) {
+                let tmp20 = closure_1_6;
+                let activities = closure_1_6.getActivities();
+              } else {
+                let tmp16 = closure_1_5;
+                let tmp17 = user;
+                let tmp18 = closure_1;
+                activities = closure_1_5.getActivities(tmp15.id, closure_1);
+              }
+              let tmp21 = activities;
+              let tmp22 = activities[Symbol.iterator]();
+            }
           }
-          let tmp21 = activities;
-          let tmp22 = activities[Symbol.iterator]();
+          tmp8 = dependencyMap;
+        } else {
+          return [];
         }
-      }
-      tmp8 = dependencyMap;
-    } else {
-      return [];
-    }
-  }, items1);
+      },
+      items1,
+    );
   const obj = initialize;
-  const getGamesForAppIds = require("../../../games/hooks/useGetGameForAppId.tsx").useGetGamesForAppIds(stateFromStoresArray);
+  const getGamesForAppIds = require("../../../games/hooks/useGetGameForAppId.tsx").useGetGamesForAppIds(
+    stateFromStoresArray,
+  );
   let obj2 = useGetGameForAppId;
   const items2 = [closure_7];
-  stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
-    currentUser = currentUser.getCurrentUser();
-    let nsfwAllowed;
-    if (currentUser != null) {
-      nsfwAllowed = currentUser.nsfwAllowed;
-    }
-    return nsfwAllowed;
-  });
+  stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items2,
+    () => {
+      currentUser = currentUser.getCurrentUser();
+      let nsfwAllowed;
+      if (currentUser != null) {
+        nsfwAllowed = currentUser.nsfwAllowed;
+      }
+      return nsfwAllowed;
+    },
+  );
   const items3 = [getGamesForAppIds, stateFromStores];
   return getGamesForAppIds.useMemo(() => {
     const items = [];
@@ -84,4 +94,4 @@ export default function useVoiceChannelGames(arg0, arg1, arg2) {
     }
     return items;
   }, items3);
-};
+}

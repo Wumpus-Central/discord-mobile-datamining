@@ -16,14 +16,14 @@ let obj = {
   usePredicate() {
     return false;
   },
-  screen: null
+  screen: null,
 };
 obj = {
   route: frozen.MobileNotifSettingsSections.NOTIF_REALTIME,
   getComponent() {
     error = new Error("Not yet supported");
     throw error;
-  }
+  },
 };
 obj[3] = obj;
 const route = createToggle.createRoute(obj);
@@ -41,8 +41,8 @@ const obj1 = {
     getComponent() {
       error = new Error("Not yet supported");
       throw error;
-    }
-  }
+    },
+  },
 };
 const route1 = createToggle.createRoute(obj1);
 const obj3 = {
@@ -54,21 +54,21 @@ const obj3 = {
   usePredicate() {
     return false;
   },
-  screen: null
+  screen: null,
 };
 const obj2 = {
   route: frozen.MobileNotifSettingsSections.NOTIF_CATEGORY_SOCIAL,
   getComponent() {
     error = new Error("Not yet supported");
     throw error;
-  }
+  },
 };
 obj3[3] = {
   route: frozen.MobileNotifSettingsSections.NOTIF_CATEGORY_SERVER,
   getComponent() {
     error = new Error("Not yet supported");
     throw error;
-  }
+  },
 };
 const route2 = createToggle.createRoute(obj3);
 const obj5 = {
@@ -80,21 +80,21 @@ const obj5 = {
   usePredicate() {
     return false;
   },
-  screen: null
+  screen: null,
 };
 const obj4 = {
   route: frozen.MobileNotifSettingsSections.NOTIF_CATEGORY_SERVER,
   getComponent() {
     error = new Error("Not yet supported");
     throw error;
-  }
+  },
 };
 obj5[3] = {
   route: frozen.MobileNotifSettingsSections.NOTIF_CATEGORY_OTHER,
   getComponent() {
     error = new Error("Not yet supported");
     throw error;
-  }
+  },
 };
 const route3 = createToggle.createRoute(obj5);
 const obj6 = {
@@ -102,7 +102,7 @@ const obj6 = {
   getComponent() {
     error = new Error("Not yet supported");
     throw error;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsRoutes.tsx");
 

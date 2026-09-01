@@ -16,7 +16,14 @@ function SettingsSection(guild) {
   guild = guild.guild;
   ({ isGuildAdmin, canManageGuild, canManageChannels, pushScreen: importDefault } = guild);
   const tmp2 = guild;
-  ({ canManageGuildExpressions, canViewAuditLog, canManageWebhooks, canUnlinkChannelLobbies, canConfigureOfficialMessages, categories } = guild);
+  ({
+    canManageGuildExpressions,
+    canViewAuditLog,
+    canManageWebhooks,
+    canUnlinkChannelLobbies,
+    canConfigureOfficialMessages,
+    categories,
+  } = guild);
   let obj = { label: null, arrow: true, icon: null, onPress: null };
   const intl = guild(1236).intl;
   obj[0] = intl.string(guild(1236).t["/dp6yY"]);
@@ -324,7 +331,16 @@ function GuildSettingsModalLandingInner(guild) {
       const obj2 = updateErrors(closure_1_3[9]);
     }
   }, items2);
-  ({ canManageGuild, isGuildAdmin, canManageRoles, canManageBans, canManageGuildExpressions, canManageChannels, canViewAuditLog, canManageWebhooks } = stateFromStoresObject);
+  ({
+    canManageGuild,
+    isGuildAdmin,
+    canManageRoles,
+    canManageBans,
+    canManageGuildExpressions,
+    canManageChannels,
+    canViewAuditLog,
+    canManageWebhooks,
+  } = stateFromStoresObject);
   let obj5 = guild(17108);
   const tmp11 = obj5.useChannelsAllowedToUnlink(guild.id).length > 0;
   const canManageGuildRoleSubscriptions = guild(6107).useCanManageGuildRoleSubscriptions(guild);
@@ -362,9 +378,26 @@ function GuildSettingsModalLandingInner(guild) {
       }
       return guildIconURL;
     },
-    disabled: !stateFromStoresObject.canManageGuild
+    disabled: !stateFromStoresObject.canManageGuild,
   };
-  const items5 = [callback(updateErrors(16431), obj1), callback(SettingsSection, { guild, categories: stateFromStores, isGuildAdmin, canManageGuild, canManageGuildExpressions, canManageChannels, canUnlinkChannelLobbies: tmp11, canViewAuditLog, canManageWebhooks, canConfigureOfficialMessages: result, pushScreen: callback }), , , ];
+  const items5 = [
+    callback(updateErrors(16431), obj1),
+    callback(SettingsSection, {
+      guild,
+      categories: stateFromStores,
+      isGuildAdmin,
+      canManageGuild,
+      canManageGuildExpressions,
+      canManageChannels,
+      canUnlinkChannelLobbies: tmp11,
+      canViewAuditLog,
+      canManageWebhooks,
+      canConfigureOfficialMessages: result,
+      pushScreen: callback,
+    }),
+    ,
+    ,
+  ];
   let tmp17Result = canManageGuild;
   if (canManageGuild) {
     obj3 = { guild: null, pushScreen: null };
@@ -389,7 +422,12 @@ function GuildSettingsModalLandingInner(guild) {
   obj5[0] = items6;
   return closure_16(closure_17, obj5);
 }
-({ GuildFeatures: unpackModuleId, GuildSettingsSections: closure_12, ChannelTypes: map1, AnalyticEvents: closure_14 } = ME);
+({
+  GuildFeatures: unpackModuleId,
+  GuildSettingsSections: closure_12,
+  ChannelTypes: map1,
+  AnalyticEvents: closure_14,
+} = ME);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 let closure_18 = createCacheKey.createStyles({ container: { flex: 1 }, containerContent: { paddingTop: 16 } });
 let result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalLanding.tsx");
@@ -410,4 +448,4 @@ export default function GuildSettingsModalLanding(guildId) {
     tmp4 = callback(GuildSettingsModalLandingInner, obj);
   }
   return tmp4;
-};
+}

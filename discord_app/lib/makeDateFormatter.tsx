@@ -46,7 +46,18 @@ function getLocaleData() {
     format5 = format;
     fn = (arg0) => format5[arg0];
   }
-  obj = { months: fn, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, meridiem: null, ordinal: null, longDateFormat: null, longFormatters: null, week: null };
+  obj = {
+    months: fn,
+    monthsShort: null,
+    weekdays: null,
+    weekdaysShort: null,
+    weekdaysMin: null,
+    meridiem: null,
+    ordinal: null,
+    longDateFormat: null,
+    longFormatters: null,
+    week: null,
+  };
   ordinal = "month";
   format5 = monthsShort;
   if (typeof monthsShort === "function") {
@@ -225,7 +236,7 @@ export default function makeFormatter(str) {
   // // eliminated: always false
   // // eliminated: always false
   // // eliminated: always false
-  _function = new Function("d", "localeData", tmp44 + "return (\n\"\" +\n" + items.join(" +\n") + "\n);");
+  _function = new Function("d", "localeData", tmp44 + 'return (\n"" +\n' + items.join(" +\n") + "\n);");
   return (input) => _function(input, closure_0);
-};
+}
 export { getLocaleData };

@@ -64,4 +64,4 @@ export default function isStaffToNonStaffForward(channel_id, arr) {
   } else {
     return false;
   }
-};
+}

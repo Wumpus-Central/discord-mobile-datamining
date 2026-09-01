@@ -32,23 +32,26 @@ function clearTimeout(arg0) {
 const LIBDISCORE_JSI = typedGlobal.typedGlobal.LIBDISCORE_JSI;
 let c1 = null;
 const map = new Map();
-let closure_3 = LIBDISCORE_JSI.makeTimerManager(function expirationCallback(arg0, arg1) {
-  const value = map.get(arg0);
-  if (value) {
-    if (arg1) {
-      map.delete(arg0);
+let closure_3 = LIBDISCORE_JSI.makeTimerManager(
+  function expirationCallback(arg0, arg1) {
+    const value = map.get(arg0);
+    if (value) {
+      if (arg1) {
+        map.delete(arg0);
+      }
+      value();
     }
-    value();
-  }
-}, {
-  slowExecutionThresholdMillis: 500,
-  delayedExecutionThresholdMillis: 5000,
-  onSlowTimer(arg0, arg1, arg2, arg3) {
-    if (c1 != null) {
-      tmp(arg0, arg1, arg2, arg3);
-    }
-  }
-});
+  },
+  {
+    slowExecutionThresholdMillis: 500,
+    delayedExecutionThresholdMillis: 5000,
+    onSlowTimer(arg0, arg1, arg2, arg3) {
+      if (c1 != null) {
+        tmp(arg0, arg1, arg2, arg3);
+      }
+    },
+  },
+);
 let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/timers.tsx");
 
 export function setTimersMonitorCallback(onTimersDelayCallback) {

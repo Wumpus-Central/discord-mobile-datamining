@@ -84,7 +84,7 @@ export const acquireDirectVideoStream = function acquireDirectVideoStream(curren
           const obj = current(value[0]);
         }
       }
-    }
+    },
   };
   return obj;
 };

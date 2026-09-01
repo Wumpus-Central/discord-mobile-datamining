@@ -27,7 +27,7 @@ prototype["enqueue"] = function enqueue(props) {
 };
 prototype["drainQueue"] = function drainQueue() {
   const self = this;
-  return self(function*() {
+  return self(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();

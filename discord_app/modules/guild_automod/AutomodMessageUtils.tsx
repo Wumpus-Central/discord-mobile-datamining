@@ -143,7 +143,10 @@ function getQuarantineEventFromMessage(embeds) {
   return null != tmp2 ? tmp2 : undefined;
 }
 function _getUserProfileRuleHeaderText(arg0, arg1, arg2) {
-  if (AutomodQuarantineUserActionMessageEmbedKeys.AutomodQuarantineUserActionMessageEmbedKeys.BLOCK_PROFILE_UPDATE === arg1) {
+  if (
+    AutomodQuarantineUserActionMessageEmbedKeys.AutomodQuarantineUserActionMessageEmbedKeys.BLOCK_PROFILE_UPDATE ===
+    arg1
+  ) {
     if (tmp(7256).AutomodBlockProfileUpdateMessageEmbedKeys.NICKNAME_UPDATE === arg0) {
       const intl6 = tmp(1236).intl;
       let stringResult = intl6.string(tmp(1236).t.t98DPb);
@@ -232,7 +235,24 @@ function extractAutomodMessageFields(message) {
   if (str == null) {
     str = "";
   }
-  const obj = { content: str, ruleName: null, decisionId: null, keyword: null, keywordMatchedContent: null, flaggedMessageId: null, timeoutDuration: null, quarantineType: null, quarantineAction: null, decisionReason: null, applicationName: null, interactionUserId: null, interactionCallbackType: null, embedChannel: null, embedChannelId: null, alertActionsExecution: null };
+  const obj = {
+    content: str,
+    ruleName: null,
+    decisionId: null,
+    keyword: null,
+    keywordMatchedContent: null,
+    flaggedMessageId: null,
+    timeoutDuration: null,
+    quarantineType: null,
+    quarantineAction: null,
+    decisionReason: null,
+    applicationName: null,
+    interactionUserId: null,
+    interactionCallbackType: null,
+    embedChannel: null,
+    embedChannelId: null,
+    alertActionsExecution: null,
+  };
   INTERACTION_CALLBACK_TYPE = tmp(7254).AutomodMessageEmbedKeys.RULE_NAME;
   let embeds3 = message.embeds;
   if (embeds3 == null) {
@@ -541,7 +561,7 @@ export default function useAutomodMessageFields(arg0) {
   const merged = Object.assign(memo);
   obj.embedChannel = stateFromStores;
   return obj;
-};
+}
 export const isAutomodMessageRecord = function isAutomodMessageRecord(message) {
   return message.type === constants2.AUTO_MODERATION_ACTION;
 };
@@ -890,7 +910,8 @@ export const getQuarantineReasonString = function getQuarantineReasonString(quar
   }
 };
 export const extractAutomodNotificationFields = function extractAutomodNotificationFields(message) {
-  _require = require("../../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedKeys.tsx").AutomodNotificationEmbedKeys.NOTIFICATION_TYPE;
+  _require = require("../../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedKeys.tsx")
+    .AutomodNotificationEmbedKeys.NOTIFICATION_TYPE;
   let embeds = message.embeds;
   if (embeds == null) {
     embeds = [];
@@ -1078,7 +1099,16 @@ export const extractAutomodNotificationFields = function extractAutomodNotificat
   if (null != tmp5) {
     tmp52 = tmp5;
   }
-  const obj = { notificationType: tmp52, joinAttempts: null, raidDatetime: null, dmsSent: null, raidType: null, resolvedReason: null, decisionId: null, suspiciousMentionActivityUntil: null };
+  const obj = {
+    notificationType: tmp52,
+    joinAttempts: null,
+    raidDatetime: null,
+    dmsSent: null,
+    raidType: null,
+    resolvedReason: null,
+    decisionId: null,
+    suspiciousMentionActivityUntil: null,
+  };
   let parsed;
   if (null != tmp11) {
     const _parseInt = parseInt;

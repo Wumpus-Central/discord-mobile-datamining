@@ -21,7 +21,7 @@ class SafetyWarningBanner {
       obj = { name: channelId(senderId[6]).MetricEvents.SAFETY_WARNING_VIEW };
       obj.increment(obj);
     }, []);
-    items = [, , , , ];
+    items = [, , , ,];
     items[0] = onDismiss;
     items[1] = channelId;
     items[2] = warningId;
@@ -31,31 +31,37 @@ class SafetyWarningBanner {
     obj = {
       style: tmp.closeButton,
       onPress: warningType.useCallback(() => {
-            if (onDismiss != null) {
-              tmp();
-            }
-            let obj = channelId(senderId[7]);
-            obj = { channelId, warningId, senderId, warningType, cta: channelId(senderId[7]).CtaEventTypes.USER_BANNER_DISMISS };
-            obj.trackCtaEvent(obj);
-          }, items),
+        if (onDismiss != null) {
+          tmp();
+        }
+        let obj = channelId(senderId[7]);
+        obj = {
+          channelId,
+          warningId,
+          senderId,
+          warningType,
+          cta: channelId(senderId[7]).CtaEventTypes.USER_BANNER_DISMISS,
+        };
+        obj.trackCtaEvent(obj);
+      }, items),
       accessibilityLabel: null,
-      children: null
+      children: null,
     };
     intl = require("getSystemLocale").intl;
     obj[2] = intl.string(require("getSystemLocale").t["1UatJ0"]);
     obj1 = { style: tmp.closeButtonIcon, source: require("registerAsset"), size: require("Button").IconSizes.MEDIUM };
     obj[3] = jsx(require("Button").Icon, obj1);
-    items1 = [, , ];
+    items1 = [, ,];
     items1[0] = jsx(Pressable, obj);
     obj2 = { style: tmp.contentContainer, children: null };
     obj3 = { style: tmp.safetyShieldIconContainer, children: null };
     obj4 = { style: tmp.safetyShieldIcon, source: require("registerAsset"), resizeMode: "contain" };
     obj3[1] = jsx(onDismiss, obj4);
-    items2 = [, ];
+    items2 = [,];
     items2[0] = jsx(View, obj3);
     obj5 = { style: tmp.textContainer, children: null };
     obj6 = { style: tmp.text, variant: "heading-md/semibold", children: header };
-    items3 = [, ];
+    items3 = [,];
     items3[0] = jsx(require("Text").Text, obj6);
     obj7 = { style: tmp.text, variant: "heading-sm/normal", children: description };
     items3[1] = jsx(require("Text").Text, obj7);
@@ -66,12 +72,23 @@ class SafetyWarningBanner {
     obj8 = {
       style: tmp.buttonsContainer,
       children: buttons.map((text) => {
-            let str = text.variant;
-            if (str == null) {
-              str = "primary";
-            }
-            return closure_7(channelId(senderId[13]).Button, { size: "md", variant: str, text: text.text, accessibilityLabel: text.text, onPress: text.onpress, grow: true }, arg1);
-          })
+        let str = text.variant;
+        if (str == null) {
+          str = "primary";
+        }
+        return closure_7(
+          channelId(senderId[13]).Button,
+          {
+            size: "md",
+            variant: str,
+            text: text.text,
+            accessibilityLabel: text.text,
+            onPress: text.onpress,
+            grow: true,
+          },
+          arg1,
+        );
+      }),
     };
     items1[2] = jsx(View, obj8);
     obj[1] = items1;
@@ -80,8 +97,22 @@ class SafetyWarningBanner {
 }
 ({ Image: c4, Pressable: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, contentContainer: null, safetyShieldIconContainer: null, safetyShieldIcon: null, textContainer: null, text: null, closeButton: null, closeButtonIcon: null, buttonsContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12 };
+createCacheKey = {
+  container: null,
+  contentContainer: null,
+  safetyShieldIconContainer: null,
+  safetyShieldIcon: null,
+  textContainer: null,
+  text: null,
+  closeButton: null,
+  closeButtonIcon: null,
+  buttonsContainer: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_12,
+};
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center" };
@@ -91,7 +122,12 @@ createCacheKey[4] = { flex: 1, marginLeft: ThemesDefault.space.PX_16, marginRigh
 let obj1 = { flex: 1, marginLeft: ThemesDefault.space.PX_16, marginRight: ThemesDefault.space.PX_40 };
 createCacheKey[5] = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 let obj2 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[6] = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_16, zIndex: 1 };
+createCacheKey[6] = {
+  position: "absolute",
+  top: ThemesDefault.space.PX_8,
+  right: ThemesDefault.space.PX_16,
+  zIndex: 1,
+};
 let obj3 = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_16, zIndex: 1 };
 createCacheKey[7] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let obj4 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };

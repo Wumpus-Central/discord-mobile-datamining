@@ -72,13 +72,17 @@ export default function useSafeAreaInsetsKeyboardAware() {
   const tmp3 = flag;
   [tmp8, c6] = appEntryKey(callback.useState(ref.current), 2);
   const items1 = [callback, flag, flag2];
-  const effect = callback.useEffect(() => ref(() => {
-    const tmp = callback();
-    if (ref.current !== tmp) {
-      ref.current = tmp;
-      callback2(tmp);
-    }
-  }), items1);
+  const effect = callback.useEffect(
+    () =>
+      ref(() => {
+        const tmp = callback();
+        if (ref.current !== tmp) {
+          ref.current = tmp;
+          callback2(tmp);
+        }
+      }),
+    items1,
+  );
   let isAndroidResult = !flag;
   if (flag) {
     isAndroidResult = !flag4;
@@ -114,4 +118,4 @@ export default function useSafeAreaInsetsKeyboardAware() {
     insets = obj;
   }
   return { insets };
-};
+}

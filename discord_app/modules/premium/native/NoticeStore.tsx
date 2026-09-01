@@ -86,12 +86,14 @@ function updateNotice() {
   }
 }
 let c6 = null;
-let items = [, ];
+let items = [,];
 ({ PREMIUM_TIER_2_TRIAL_ENDING: arr[0], PREMIUM_TIER_0_TRIAL_ENDING: arr[1] } = NoticeTypes);
-let closure_8 = { [NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING]: "hidePremiumTier0TrialEndingReminder", [NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING]: "hidePremiumTier2TrialEndingReminder" };
+let closure_8 = {
+  [NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING]: "hidePremiumTier0TrialEndingReminder",
+  [NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING]: "hidePremiumTier2TrialEndingReminder",
+};
 const Store = initializeDefault.Store;
-class NoticeStore extends Store {
-}
+class NoticeStore extends Store {}
 const prototype = NoticeStore.prototype;
 prototype["initialize"] = function initialize() {
   items = [closure_3];
@@ -153,7 +155,7 @@ const noticeStore = new NoticeStore(dispatcherDefault, {
       }
       updateNotice();
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/premium/native/NoticeStore.tsx");
 

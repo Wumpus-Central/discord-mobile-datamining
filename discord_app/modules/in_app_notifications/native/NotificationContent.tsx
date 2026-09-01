@@ -10,7 +10,13 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { body: { flex: 1 }, iconContainer: null, contentContainer: null, headerContainer: null, labelContainer: null };
+createCacheKey = {
+  body: { flex: 1 },
+  iconContainer: null,
+  contentContainer: null,
+  headerContainer: null,
+  labelContainer: null,
+};
 createCacheKey = { marginRight: ThemesDefault.space.PX_8 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { padding: ThemesDefault.space.PX_12, flexDirection: "row" };
@@ -32,14 +38,14 @@ export default function NotificationContent(arg0) {
     obj[1] = icon;
     tmp4 = callback(tmp3, obj);
   }
-  const items = [tmp4, , ];
+  const items = [tmp4, ,];
   obj = { style: tmp.body, children: null };
   obj1 = { style: tmp.labelContainer, children: null };
   let tmp6 = null;
   if (null != accessoryLabelNode) {
     tmp6 = accessoryLabelNode;
   }
-  const items1 = [tmp6, ];
+  const items1 = [tmp6];
   const obj2 = { style: tmp.headerContainer, children: null };
   if ("message" === header.type) {
     const obj3 = {};
@@ -60,4 +66,4 @@ export default function NotificationContent(arg0) {
   items[2] = rightAccessory;
   obj[1] = items;
   return closure_5(View, obj);
-};
+}

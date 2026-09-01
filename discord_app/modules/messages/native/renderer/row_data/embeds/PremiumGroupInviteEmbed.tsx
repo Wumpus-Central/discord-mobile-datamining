@@ -8,11 +8,20 @@ import getPremiumGroupInviteEmbedText from "../../../../../premium/premium_group
 import SubscriptionStatusTypes from "../../../../../premium/premium_group/PremiumGroupConstants.tsx";
 
 ({ HELP_CENTER_LINK: c3, PremiumGroupInviteState: c4 } = SubscriptionStatusTypes);
-const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx",
+);
 
 export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEmbed(message, theme, id, channel) {
   if (null != message.author) {
-    let obj = { headerTextColor: null, bodyTextColor: null, linkTextColor: null, backgroundColor: null, betaPillTextColor: null, betaPillBackgroundColor: null };
+    let obj = {
+      headerTextColor: null,
+      bodyTextColor: null,
+      linkTextColor: null,
+      backgroundColor: null,
+      betaPillTextColor: null,
+      betaPillBackgroundColor: null,
+    };
     obj[0] = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
     obj[1] = ThemesDefault.colors.TEXT_DEFAULT;
     obj[2] = ThemesDefault.colors.TEXT_LINK;
@@ -21,7 +30,8 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
     obj[5] = ThemesDefault.colors.WHITE;
     const obj4 = createCacheKey;
     const tmp8 = importDefault;
-    ({ backgroundColor, headerTextColor, bodyTextColor, linkTextColor, betaPillTextColor, betaPillBackgroundColor } = createCacheKey.createNativeStyleProperties(obj)(theme));
+    ({ backgroundColor, headerTextColor, bodyTextColor, linkTextColor, betaPillTextColor, betaPillBackgroundColor } =
+      createCacheKey.createNativeStyleProperties(obj)(theme));
     const tmp9 = createCacheKey.createNativeStyleProperties(obj)(theme);
     const author = message.author;
     const assetUriForEmbed = frozen.getAssetUriForEmbed(registerAssetDefault);
@@ -40,7 +50,19 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
       obj1[1] = closure_3;
       obj1[2] = linkTextColor;
       obj[0] = obj1;
-      const obj2 = { headerText: null, headerColor: null, backgroundColor: null, borderColor: null, headerImageUrl: null, betaPillText: null, betaPillTextColor: null, betaPillBackgroundColor: null, bodyText: null, bodyTextColor: null, learnMoreLink: null };
+      const obj2 = {
+        headerText: null,
+        headerColor: null,
+        backgroundColor: null,
+        borderColor: null,
+        headerImageUrl: null,
+        betaPillText: null,
+        betaPillTextColor: null,
+        betaPillBackgroundColor: null,
+        bodyText: null,
+        bodyTextColor: null,
+        learnMoreLink: null,
+      };
       obj2[0] = header;
       obj2[1] = headerTextColor;
       obj2[2] = backgroundColor;

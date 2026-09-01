@@ -11,9 +11,15 @@ let c3 = importAllResult;
 ({ VoicePanelControlsModes: c5, CONTROLS_DRAWER_HEADER_SIZE } = VoicePanelControlsModes);
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { width: "100%", paddingTop: CONTROLS_DRAWER_HEADER_SIZE } });
-let closure_11 = { code: "function VoicePanelControlsAppLauncherTsx1(){const{gestureSpecs}=this.__closure;return gestureSpecs.get().active;}" };
-let closure_12 = { code: "function VoicePanelControlsAppLauncherTsx2(){const{gestureSpecs}=this.__closure;return gestureSpecs.get().isDrawer;}" };
-let closure_13 = { code: "function VoicePanelControlsAppLauncherTsx3(){const{isGestureActive,isGestureDrawerMode,windowDimensions,safeArea}=this.__closure;const height=isGestureActive.get()||!isGestureDrawerMode.get()?windowDimensions.height-safeArea.top:'100%';return{height:height};}" };
+let closure_11 = {
+  code: "function VoicePanelControlsAppLauncherTsx1(){const{gestureSpecs}=this.__closure;return gestureSpecs.get().active;}",
+};
+let closure_12 = {
+  code: "function VoicePanelControlsAppLauncherTsx2(){const{gestureSpecs}=this.__closure;return gestureSpecs.get().isDrawer;}",
+};
+let closure_13 = {
+  code: "function VoicePanelControlsAppLauncherTsx3(){const{isGestureActive,isGestureDrawerMode,windowDimensions,safeArea}=this.__closure;const height=isGestureActive.get()||!isGestureDrawerMode.get()?windowDimensions.height-safeArea.top:'100%';return{height:height};}",
+};
 const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
   gestureSpecs = gestureSpecs.gestureSpecs;
   let setControlsMode;
@@ -82,14 +88,31 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
       return { height };
     }
   }
-  L.__closure = { isGestureActive: derivedValue, isGestureDrawerMode: derivedValue1, windowDimensions: tmp4, safeArea: rect };
+  L.__closure = {
+    isGestureActive: derivedValue,
+    isGestureDrawerMode: derivedValue1,
+    windowDimensions: tmp4,
+    safeArea: rect,
+  };
   L.__workletHash = 3671157204025;
   L.__initData = closure_13;
   obj = { children: null };
   const animatedStyle = gestureSpecs(4217).useAnimatedStyle(L);
   obj = { style: items2, children: null };
   items2 = [tmp.container, gradientTop, animatedStyle];
-  const items3 = [callback(setControlsMode(11654), { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: gestureSpecs(8435).AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth }), ];
+  const items3 = [
+    callback(setControlsMode(11654), {
+      bottomSheetIndex: sharedValue1,
+      bottomSheetPosition: sharedValue,
+      bottomSheetExpandReasonRef: ref1,
+      context: { type: "channel", channel: stateFromStores },
+      chatInputRef: appLauncherChatInputRefDummy,
+      entrypoint: gestureSpecs(8435).AppLauncherEntrypoint.VOICE,
+      keyboardCloseReasonRef: ref,
+      onActivityItemSelected: callback,
+      width: controlsDrawerOpenWidth,
+    }),
+  ];
   obj1 = { title: null, disablePill: true };
   const obj9 = gestureSpecs(4217);
   const intl = gestureSpecs(1236).intl;
@@ -99,6 +122,8 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   obj[0] = callback2(setControlsMode(4217).View, obj);
   return callback(closure_9, obj);
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsAppLauncher.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/controls/VoicePanelControlsAppLauncher.tsx",
+);
 
 export default memoResult;

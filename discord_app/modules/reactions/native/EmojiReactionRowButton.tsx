@@ -15,14 +15,29 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 let closure_6 = createCacheKey.createStyles((width) => {
   let obj = { emojiContainer: null };
-  obj = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.MOBILE_EMOJI_BUTTON_BACKGROUND, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
+  obj = {
+    width,
+    height: width,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: ThemesDefault.colors.MOBILE_EMOJI_BUTTON_BACKGROUND,
+    borderRadius: ThemesDefault.modules.button.BORDER_RADIUS,
+    overflow: "hidden",
+  };
   obj[0] = obj;
   return obj;
 });
 let closure_7 = createCacheKey.createStyles((width, fontSize, lineHeight) => {
   obj = { emojiImage: obj, emojiText: null };
   obj = { width, height: width };
-  obj = { lineHeight, fontSize, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: lineHeight, height: lineHeight };
+  obj = {
+    lineHeight,
+    fontSize,
+    color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+    textAlign: "center",
+    width: lineHeight,
+    height: lineHeight,
+  };
   obj[1] = obj;
   return obj;
 });
@@ -36,19 +51,42 @@ export const EmojiPickerRowButton = function EmojiPickerRowButton(iconSize) {
   const obj2 = AccessibilityAnnouncer;
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
   const isThemeLightResult = AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme);
-  obj = { activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 4, onPress: null, style: null, children: null };
+  obj = {
+    activeOpacity: 0.5,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    hitSlop: 4,
+    onPress: null,
+    style: null,
+    children: null,
+  };
   const intl = tmp2(1236).intl;
   obj[2] = intl.string(getSystemLocale.t.lfIHs4);
   obj[4] = onPress;
   const items = [tmp.emojiContainer, styles];
   obj[5] = items;
-  obj = { color: AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null };
+  obj = {
+    color: AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme)
+      ? unsafe_rawColors.PRIMARY_500
+      : unsafe_rawColors.PRIMARY_300,
+    size: null,
+  };
   if (str == null) {
     str = "md";
   }
   obj[1] = str;
-  obj[6] = jsx(ReactionIcon.ReactionIcon, { color: AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
-  return jsx(PressableBase.PressableOpacity, { color: AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
+  obj[6] = jsx(ReactionIcon.ReactionIcon, {
+    color: AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme)
+      ? unsafe_rawColors.PRIMARY_500
+      : unsafe_rawColors.PRIMARY_300,
+    size: null,
+  });
+  return jsx(PressableBase.PressableOpacity, {
+    color: AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme)
+      ? unsafe_rawColors.PRIMARY_500
+      : unsafe_rawColors.PRIMARY_300,
+    size: null,
+  });
 };
 export const EmojiReactionRowButton = function EmojiReactionRowButton(emoji) {
   animated = emoji.emoji;
@@ -56,7 +94,17 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emoji) {
   const tmp = callback(emoji.emojiContainerSize);
   let obj = dependencyMap;
   const memo = React.useMemo(() => ({ foreground: true }), []);
-  obj = { androidRippleConfig: memo, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, disabled: null, hitSlop: 4, onPress: null, style: null, children: null };
+  obj = {
+    androidRippleConfig: memo,
+    activeOpacity: 0.5,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    disabled: null,
+    hitSlop: 4,
+    onPress: null,
+    style: null,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   let name;
   if (animated != null) {

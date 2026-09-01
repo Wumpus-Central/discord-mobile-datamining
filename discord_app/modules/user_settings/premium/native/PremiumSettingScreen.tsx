@@ -22,4 +22,4 @@ export default function PremiumScreen() {
   const obj2 = useNavigation;
   const merged = Object.assign(settingNavigationRoute.params);
   return jsx(UserSettingsPremiumDefault, { onClose: close });
-};
+}

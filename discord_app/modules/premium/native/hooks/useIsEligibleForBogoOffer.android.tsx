@@ -5,14 +5,20 @@ import closure_4 from "../../promotions/PromotionsStore.tsx";
 import { PremiumTypes } from "../../PremiumConstants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx",
+);
 
 export const useIsEligibleForBogoOffer = function useIsEligibleForBogoOffer() {
   const items = [closure_4];
-  const stateFromStores = forceUpdate(589).useStateFromStores(items, () => activeBogoRewardPromotion.getActiveBogoRewardPromotion());
+  const stateFromStores = forceUpdate(589).useStateFromStores(items, () =>
+    activeBogoRewardPromotion.getActiveBogoRewardPromotion(),
+  );
   const obj = forceUpdate(589);
   const items1 = [closure_3];
-  const stateFromStores1 = forceUpdate(589).useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const stateFromStores1 = forceUpdate(589).useStateFromStores(items1, () =>
+    premiumTypeSubscription.getPremiumTypeSubscription(),
+  );
   const obj2 = forceUpdate(589);
   const premiumTrialOffer = forceUpdate(7192).usePremiumTrialOffer();
   const obj4 = forceUpdate(7192);

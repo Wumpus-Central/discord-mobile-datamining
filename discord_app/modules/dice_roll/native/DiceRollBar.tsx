@@ -10,11 +10,24 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { animatedContainer: { overflow: "hidden" }, container: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 8, gap: 12, borderTopWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 16,
+  paddingVertical: 8,
+  gap: 12,
+  borderTopWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let closure_10 = { code: "function DiceRollBarTsx1(){const{useReducedMotion,height,opacity,withTiming,ANIMATION_DURATION_MS,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:height.get(),opacity:opacity.get()};}return{height:withTiming(height.get(),{duration:ANIMATION_DURATION_MS,easing:DECELERATED_EASING}),opacity:withTiming(opacity.get(),{duration:ANIMATION_DURATION_MS,easing:DECELERATED_EASING})};}" };
-let closure_11 = { code: "function DiceRollBarTsx2(){const{rotation}=this.__closure;return{transform:[{rotate:rotation.get()+\"deg\"}]};}" };
+let closure_10 = {
+  code: "function DiceRollBarTsx1(){const{useReducedMotion,height,opacity,withTiming,ANIMATION_DURATION_MS,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:height.get(),opacity:opacity.get()};}return{height:withTiming(height.get(),{duration:ANIMATION_DURATION_MS,easing:DECELERATED_EASING}),opacity:withTiming(opacity.get(),{duration:ANIMATION_DURATION_MS,easing:DECELERATED_EASING})};}",
+};
+let closure_11 = {
+  code: 'function DiceRollBarTsx2(){const{rotation}=this.__closure;return{transform:[{rotate:rotation.get()+"deg"}]};}',
+};
 let result = require("set").fileFinishedImporting("modules/dice_roll/native/DiceRollBar.tsx");
 
 export default function DiceRollBar(channelId) {
@@ -63,7 +76,9 @@ export default function DiceRollBar(channelId) {
         let obj = stateFromStores(sharedValue1[8]);
         obj = { duration: 800, easing: null };
         obj[1] = stateFromStores(sharedValue1[8]).Easing.linear;
-        const result = sharedValue2.set(obj.withRepeat(stateFromStores(sharedValue1[9]).withTiming(360, obj), -1, false));
+        const result = sharedValue2.set(
+          obj.withRepeat(stateFromStores(sharedValue1[9]).withTiming(360, obj), -1, false),
+        );
         const obj2 = stateFromStores(sharedValue1[9]);
       }
     }
@@ -91,7 +106,14 @@ export default function DiceRollBar(channelId) {
     }
     return tmp7;
   };
-  obj = { useReducedMotion: stateFromStores, height: sharedValue, opacity: sharedValue1, withTiming: tmp3(tmp4[9]).withTiming, ANIMATION_DURATION_MS: 300, DECELERATED_EASING: tmp3(tmp4[10]).DECELERATED_EASING };
+  obj = {
+    useReducedMotion: stateFromStores,
+    height: sharedValue,
+    opacity: sharedValue1,
+    withTiming: tmp3(tmp4[9]).withTiming,
+    ANIMATION_DURATION_MS: 300,
+    DECELERATED_EASING: tmp3(tmp4[10]).DECELERATED_EASING,
+  };
   fn.__closure = obj;
   fn.__workletHash = 2405066513233;
   fn.__initData = closure_10;
@@ -119,7 +141,7 @@ export default function DiceRollBar(channelId) {
     obj2 = { style: null, children: null };
     obj2[0] = tmp14;
     obj2[1] = callback(tmp3(tmp4[12]).DiceIcon, { size: "md" });
-    const items4 = [callback(sharedValue(tmp4[8]).View, obj2), ];
+    const items4 = [callback(sharedValue(tmp4[8]).View, obj2)];
     obj3 = { variant: "text-sm/normal", color: "text-default", children: null };
     obj3[2] = barText;
     items4[1] = callback(tmp3(tmp4[13]).Text, obj3);
@@ -127,4 +149,4 @@ export default function DiceRollBar(channelId) {
     obj[1] = callback2(closure_4, obj1);
     return callback(sharedValue(tmp4[8]).View, obj);
   }
-};
+}

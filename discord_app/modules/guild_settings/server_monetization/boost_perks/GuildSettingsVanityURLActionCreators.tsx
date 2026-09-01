@@ -6,7 +6,9 @@ import dispatcherDefault from "../../../../Dispatcher.tsx";
 import { sendRequest } from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx",
+);
 
 export const fetchVanityUrl = function fetchVanityUrl(id) {
   const HTTP = sendRequest.HTTP;
@@ -31,21 +33,24 @@ export const saveCode = function saveCode(id, code) {
   obj = { code };
   obj[3] = require("../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
   const obj3 = sendRequest;
-  return HTTP.patch(obj).then((body) => {
-    ({ code, uses } = body.body);
-    callback(table[2]).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
-  }, (body) => {
-    let obj = closure_1_1(closure_1_2[2]);
-    obj = { type: "GUILD_SETTINGS_VANITY_URL_ERROR", error: body.body };
-    obj.dispatch(obj);
-    let throwErr;
-    if (throwErr != null) {
-      throwErr = throwErr.throwErr;
-    }
-    if (throwErr) {
-      throw body;
-    } else {
-      return body;
-    }
-  });
+  return HTTP.patch(obj).then(
+    (body) => {
+      ({ code, uses } = body.body);
+      callback(table[2]).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
+    },
+    (body) => {
+      let obj = closure_1_1(closure_1_2[2]);
+      obj = { type: "GUILD_SETTINGS_VANITY_URL_ERROR", error: body.body };
+      obj.dispatch(obj);
+      let throwErr;
+      if (throwErr != null) {
+        throwErr = throwErr.throwErr;
+      }
+      if (throwErr) {
+        throw body;
+      } else {
+        return body;
+      }
+    },
+  );
 };

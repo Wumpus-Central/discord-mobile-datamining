@@ -16,16 +16,104 @@ class SKURecord extends tmp2 {
   constructor(arg0) {
     tmp = new SKURecord(new.target, new.target, global);
     // ThrowIfThisInitialized (0x7c)
-    ({ id: tmp.id, type: tmp.type, applicationId: tmp.applicationId, application: tmp.application, eligiblePaymentGateways: tmp.eligiblePaymentGateways, googleSkuIds: tmp.googleSkuIds, productLine: tmp.productLine, name: tmp.name, preorderReleaseAt: tmp.preorderReleaseAt, preorderApproximateReleaseDate: tmp.preorderApproximateReleaseDate, releaseDate: tmp.releaseDate, summary: tmp.summary, features: tmp.features, genres: tmp.genres, dependentSkuId: tmp.dependentSkuId, manifests: tmp.manifests, availableRegions: tmp.availableRegions, accessType: tmp.accessType, systemRequirements: tmp.systemRequirements, contentRating: tmp.contentRating, contentRatingAgency: tmp.contentRatingAgency, legalNotice: tmp.legalNotice, price: tmp.price, prices: tmp.prices, premium: tmp.premium, showAgeGate: tmp.showAgeGate, restricted: tmp.restricted, slug: tmp.slug, exclusive: tmp.exclusive, locales: tmp.locales, flags: tmp.flags } = global);
+    ({
+      id: tmp.id,
+      type: tmp.type,
+      applicationId: tmp.applicationId,
+      application: tmp.application,
+      eligiblePaymentGateways: tmp.eligiblePaymentGateways,
+      googleSkuIds: tmp.googleSkuIds,
+      productLine: tmp.productLine,
+      name: tmp.name,
+      preorderReleaseAt: tmp.preorderReleaseAt,
+      preorderApproximateReleaseDate: tmp.preorderApproximateReleaseDate,
+      releaseDate: tmp.releaseDate,
+      summary: tmp.summary,
+      features: tmp.features,
+      genres: tmp.genres,
+      dependentSkuId: tmp.dependentSkuId,
+      manifests: tmp.manifests,
+      availableRegions: tmp.availableRegions,
+      accessType: tmp.accessType,
+      systemRequirements: tmp.systemRequirements,
+      contentRating: tmp.contentRating,
+      contentRatingAgency: tmp.contentRatingAgency,
+      legalNotice: tmp.legalNotice,
+      price: tmp.price,
+      prices: tmp.prices,
+      premium: tmp.premium,
+      showAgeGate: tmp.showAgeGate,
+      restricted: tmp.restricted,
+      slug: tmp.slug,
+      exclusive: tmp.exclusive,
+      locales: tmp.locales,
+      flags: tmp.flags,
+    } = global);
     tmp.externalPurchaseUrl = global.externalPurchaseUrl || null;
-    ({ deleted: tmp.deleted, bundledSkuIds: tmp.bundledSkuIds, bundledSkus: tmp.bundledSkus, tenantMetadata: tmp.tenantMetadata, selectedOptions: tmp.selectedOptions, productId: tmp.productId, thumbnailAssetId: tmp.thumbnailAssetId, description: tmp.description, orbsReward: tmp.orbsReward, eligibleOffers: tmp.eligibleOffers, previewAssetPaths: tmp.previewAssetPaths } = global);
+    ({
+      deleted: tmp.deleted,
+      bundledSkuIds: tmp.bundledSkuIds,
+      bundledSkus: tmp.bundledSkus,
+      tenantMetadata: tmp.tenantMetadata,
+      selectedOptions: tmp.selectedOptions,
+      productId: tmp.productId,
+      thumbnailAssetId: tmp.thumbnailAssetId,
+      description: tmp.description,
+      orbsReward: tmp.orbsReward,
+      eligibleOffers: tmp.eligibleOffers,
+      previewAssetPaths: tmp.previewAssetPaths,
+    } = global);
     return tmp;
   }
 }
 const prototype = SKURecord.prototype;
 SKURecord["createFromServer"] = function createFromServer(id) {
   const price = id.price;
-  let obj = { id: id.id, type: id.type, applicationId: id.application_id, application: null, eligiblePaymentGateways: null, googleSkuIds: null, productLine: null, name: null, releaseDate: null, preorderReleaseAt: null, preorderApproximateReleaseDate: null, summary: null, features: null, genres: null, dependentSkuId: null, manifests: null, availableRegions: null, accessType: null, systemRequirements: null, contentRating: null, contentRatingAgency: null, legalNotice: null, price: null, prices: null, premium: null, showAgeGate: null, restricted: null, slug: null, exclusive: null, locales: null, flags: null, externalPurchaseUrl: null, deleted: null, bundledSkuIds: null, bundledSkus: null, tenantMetadata: null, selectedOptions: null, productId: null, thumbnailAssetId: null, description: null, orbsReward: null, eligibleOffers: null, previewAssetPaths: null };
+  let obj = {
+    id: id.id,
+    type: id.type,
+    applicationId: id.application_id,
+    application: null,
+    eligiblePaymentGateways: null,
+    googleSkuIds: null,
+    productLine: null,
+    name: null,
+    releaseDate: null,
+    preorderReleaseAt: null,
+    preorderApproximateReleaseDate: null,
+    summary: null,
+    features: null,
+    genres: null,
+    dependentSkuId: null,
+    manifests: null,
+    availableRegions: null,
+    accessType: null,
+    systemRequirements: null,
+    contentRating: null,
+    contentRatingAgency: null,
+    legalNotice: null,
+    price: null,
+    prices: null,
+    premium: null,
+    showAgeGate: null,
+    restricted: null,
+    slug: null,
+    exclusive: null,
+    locales: null,
+    flags: null,
+    externalPurchaseUrl: null,
+    deleted: null,
+    bundledSkuIds: null,
+    bundledSkus: null,
+    tenantMetadata: null,
+    selectedOptions: null,
+    productId: null,
+    thumbnailAssetId: null,
+    description: null,
+    orbsReward: null,
+    eligibleOffers: null,
+    previewAssetPaths: null,
+  };
   let fromServer = null;
   if (null != id.application) {
     fromServer = closure_3.createFromServer(id.application);
@@ -61,7 +149,16 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   const set = new Set(id.features);
   const tmp = SKURecord;
   obj[13] = new Set(id.genres);
-  ({ dependent_sku_id: obj[14], manifests: obj[15], available_regions: obj[16], access_type: obj[17], system_requirements: obj[18], content_rating: obj[19], content_rating_agency: obj[20], legal_notice: obj[21] } = id);
+  ({
+    dependent_sku_id: obj[14],
+    manifests: obj[15],
+    available_regions: obj[16],
+    access_type: obj[17],
+    system_requirements: obj[18],
+    content_rating: obj[19],
+    content_rating_agency: obj[20],
+    legal_notice: obj[21],
+  } = id);
   let tmp14 = null;
   if (null != price) {
     obj = { amount: null, currency: null, saleAmount: null, salePercentage: null, premium: null };
@@ -111,13 +208,22 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   const selected_options = id.selected_options;
   let mapped1;
   if (selected_options != null) {
-    mapped1 = selected_options.map((optionName) => ({ optionName: optionName.option_name, optionValue: optionName.option_value }));
+    mapped1 = selected_options.map((optionName) => ({
+      optionName: optionName.option_name,
+      optionValue: optionName.option_value,
+    }));
   }
   if (mapped1 == null) {
     mapped1 = [];
   }
   obj[36] = mapped1;
-  ({ product_id: obj[37], thumbnail_asset_id: obj[38], description: obj[39], orbs_reward: obj[40], eligible_offers } = id);
+  ({
+    product_id: obj[37],
+    thumbnail_asset_id: obj[38],
+    description: obj[39],
+    orbs_reward: obj[40],
+    eligible_offers,
+  } = id);
   if (eligible_offers == null) {
     eligible_offers = [];
   }
@@ -148,13 +254,13 @@ Object.defineProperty(prototype, "supportedOperatingSystems", {
     }
     return keys;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isOnSale", {
   get: function isOnSale() {
     return null != this.price && null != this.price.saleAmount;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isGiftable"] = function isGiftable() {
   const self = this;
@@ -236,23 +342,24 @@ Object.defineProperty(prototype, "requiresPayment", {
     }
     return tmp2;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isTheGameAwardsWinner", {
   get: function isTheGameAwardsWinner() {
     return set.has(this.id);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "available", {
   get: function available() {
-    let hasFlagResult = hasFlag /* hasFlag */.hasFlag(this.flags, constants2.AVAILABLE);
+    let hasFlagResult = hasFlag /* hasFlag */
+      .hasFlag(this.flags, constants2.AVAILABLE);
     if (!hasFlagResult) {
       hasFlagResult = null != this.externalPurchaseUrl;
     }
     return hasFlagResult;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isAvailableForDistribution"] = function isAvailableForDistribution() {
   const self = this;
@@ -267,7 +374,8 @@ prototype["isAvailableForDistribution"] = function isAvailableForDistribution() 
     const premium = self.premium;
     let hasFlagResult = !premium;
     if (premium) {
-      hasFlagResult = hasFlag /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
+      hasFlagResult = hasFlag /* hasFlag */
+        .hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
       const obj = hasFlag;
     }
     available = hasFlagResult;
@@ -275,13 +383,15 @@ prototype["isAvailableForDistribution"] = function isAvailableForDistribution() 
   return available;
 };
 prototype["isAvailable"] = function isAvailable() {
-  return hasFlag /* hasFlag */.hasFlag(this.flags, constants2.AVAILABLE);
+  return hasFlag /* hasFlag */
+    .hasFlag(this.flags, constants2.AVAILABLE);
 };
 prototype["isPremiumPerk"] = function isPremiumPerk() {
   const self = this;
   let premium = this.premium;
   if (premium) {
-    let hasFlagResult = hasFlag /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
+    let hasFlagResult = hasFlag /* hasFlag */
+      .hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
     if (!hasFlagResult) {
       hasFlagResult = tmp(1399).hasFlag(self.flags, tmp3.PREMIUM_AND_DISTRIBUTION);
       const tmpResult = tmp(1399);

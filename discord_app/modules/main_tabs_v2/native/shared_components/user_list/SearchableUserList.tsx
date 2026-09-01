@@ -11,7 +11,11 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 const require = arg1;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { searchBarContainer: null, searchBar: null, searchBarRowContainer: null, noResults: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_8,
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: "disabled", minHeight: false };
 createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_8 };
@@ -19,7 +23,9 @@ let obj1 = { paddingTop: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx",
+);
 
 export default function SearchableUserList(selectedUserIds) {
   selectedUserIds = selectedUserIds.selectedUserIds;
@@ -82,7 +88,8 @@ export default function SearchableUserList(selectedUserIds) {
   if (flag12 === undefined) {
     flag12 = false;
   }
-  ({ defaultNoResultsFound, disableGradient, focusOnAdd, disableStickySections, disableThemedGradient } = selectedUserIds);
+  ({ defaultNoResultsFound, disableGradient, focusOnAdd, disableStickySections, disableThemedGradient } =
+    selectedUserIds);
   if (focusOnAdd === undefined) {
     focusOnAdd = true;
   }
@@ -92,7 +99,19 @@ export default function SearchableUserList(selectedUserIds) {
   const tmp2 = callback();
   let obj = ACTIONS;
   let tmp3 = handleMessage(ACTIONS.useState(""), 2);
-  const tmp6 = disabledUserIds(onSelectUser[8])({ query: tmp3[0], withGuildMembers: flag2, withAffinitySuggestions: flag3, withAlphabeticalSections: flag4, withFriends: flag5, withGameFriends: flag6, withFriendSuggestions: flag11, withFriendRequests: flag7, withFriendRequestsIncoming: flag8, withFriendRequestsOutgoing: flag9, withFriendRequestsSpam: flag10 });
+  const tmp6 = disabledUserIds(onSelectUser[8])({
+    query: tmp3[0],
+    withGuildMembers: flag2,
+    withAffinitySuggestions: flag3,
+    withAlphabeticalSections: flag4,
+    withFriends: flag5,
+    withGameFriends: flag6,
+    withFriendSuggestions: flag11,
+    withFriendRequests: flag7,
+    withFriendRequestsIncoming: flag8,
+    withFriendRequestsOutgoing: flag9,
+    withFriendRequestsSpam: flag10,
+  });
   closure_5 = tmp6;
   let items = [selectedUserIds];
   memo = ACTIONS.useMemo(() => {
@@ -127,7 +146,18 @@ export default function SearchableUserList(selectedUserIds) {
   const items4 = [tmp6, disabledUserIds, onSelectUser, handleMessage, ACTIONS, selectedUserIds];
   const callback2 = ACTIONS.useCallback((arg0, arg1) => {
     ({ user, firstMatch } = closure_5[arg0].items[arg1]);
-    const props = { type: tmp.type, user, nickname: null, onPress: null, handleMessage: null, disabled: null, selected: null, mode: null, start: null, end: null };
+    const props = {
+      type: tmp.type,
+      user,
+      nickname: null,
+      onPress: null,
+      handleMessage: null,
+      disabled: null,
+      selected: null,
+      mode: null,
+      start: null,
+      end: null,
+    };
     let tmp3;
     const diff = closure_5[arg0].items.length - 1;
     if (user.username !== firstMatch) {
@@ -195,7 +225,17 @@ export default function SearchableUserList(selectedUserIds) {
     flag12 = !tmp10;
   }
   if (someResult) {
-    obj = { ref: null, sections: null, getItemProps: null, getSectionProps: null, renderListHeader: null, listHeaderSize: null, insetEnd: 12, disableStickySections: null, disableThemedGradient: null };
+    obj = {
+      ref: null,
+      sections: null,
+      getItemProps: null,
+      getSectionProps: null,
+      renderListHeader: null,
+      listHeaderSize: null,
+      insetEnd: 12,
+      disableStickySections: null,
+      disableThemedGradient: null,
+    };
     obj[0] = ref;
     obj[1] = memo1;
     obj[2] = callback2;
@@ -209,7 +249,7 @@ export default function SearchableUserList(selectedUserIds) {
   } else {
     obj1 = { style: null, children: null };
     if (tmp19) {
-      const items6 = [noResults, ];
+      const items6 = [noResults];
       let prop1;
       if (flag5) {
         if (!flag12) {
@@ -245,7 +285,7 @@ export default function SearchableUserList(selectedUserIds) {
   if (!disableGradient) {
     tmp27Result = tmp27(tmp4(tmp5[16]), { absolute: true });
   }
-  const children = [tmp27Result, , ];
+  const children = [tmp27Result, ,];
   tmp27Result = null;
   if (flag5) {
     tmp27Result = null;
@@ -271,4 +311,4 @@ export default function SearchableUserList(selectedUserIds) {
   children[1] = tmp27Result;
   children[2] = tmp20Result;
   return closure_10(closure_9, { children });
-};
+}

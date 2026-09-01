@@ -6,7 +6,7 @@ import recordChannelFetchStartDefault from "MessageCacheStats.tsx";
 import ME from "../../Constants.tsx";
 
 function makeLogLine(channelId) {
-  const items = [channelId.channelId, , , ];
+  const items = [channelId.channelId, , ,];
   let str = "-1";
   let str2 = "-1";
   if (null != channelId.localMessageDetails) {
@@ -40,7 +40,13 @@ function handleAppStateUpdate(state) {
     const fetchLogs = recordChannelFetchStartDefault.fetchLogs;
     const mapped = Array.from(fetchLogs.values()).map(makeLogLine);
     let obj = expandEventPropertiesDefault;
-    obj = { num_channels_fetch_started: null, num_channels_local_cached: null, num_channels_fetched_network: null, num_times_backgrounded: null, fetch_entries: null };
+    obj = {
+      num_channels_fetch_started: null,
+      num_channels_local_cached: null,
+      num_channels_fetched_network: null,
+      num_times_backgrounded: null,
+      fetch_entries: null,
+    };
     obj[0] = recordChannelFetchStartDefault.channelsFetchStarted.size;
     obj[1] = recordChannelFetchStartDefault.channelsFetchedWithLocalMessages.size;
     obj[2] = recordChannelFetchStartDefault.channelsFetchedNetwork.size;
@@ -60,8 +66,7 @@ let prototype = function LocalMessageCacheStatsManager() {
   applyArgumentsResult.actions = { APP_STATE_UPDATE: handleAppStateUpdate };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp3 {
-}
+class prototype extends tmp3 {}
 prototype = new prototype();
 const result = set.fileFinishedImporting("modules/local_message_caching/LocalMessageCacheStatsManager.tsx");
 

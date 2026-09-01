@@ -40,7 +40,22 @@ function retryFailedUsers() {
             tmp6 = closure_1_9;
           }
           const result = closure_1_12.set(user.id, closure_1_8(tmp23, tmp6, user.id));
-          obj = { type: null, user: null, id: null, streamId: null, voiceState: null, voicePlatform: null, speaking: false, lastSpoke: 0, soundsharing: false, ringing: false, userNick: null, userAvatarDecoration: null, localVideoDisabled: false, isPoppedOut: false };
+          obj = {
+            type: null,
+            user: null,
+            id: null,
+            streamId: null,
+            voiceState: null,
+            voicePlatform: null,
+            speaking: false,
+            lastSpoke: 0,
+            soundsharing: false,
+            ringing: false,
+            userNick: null,
+            userAvatarDecoration: null,
+            localVideoDisabled: false,
+            isPoppedOut: false,
+          };
           obj[0] = closure_1_11.USER;
           obj[1] = user;
           obj[2] = user.id;
@@ -65,8 +80,7 @@ const tmp3 = new keysDefault();
 let closure_13 = new keysDefault();
 let set = new Set();
 const Store = initializeDefault.Store;
-class RTCConnectionDesyncStore extends Store {
-}
+class RTCConnectionDesyncStore extends Store {}
 const prototype = RTCConnectionDesyncStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_7, closure_6, closure_4, closure_5);
@@ -77,7 +91,7 @@ Object.defineProperty(prototype, "desyncedVoiceStatesCount", {
   get: function desyncedVoiceStatesCount() {
     return set.size();
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getDesyncedUserIds"] = function getDesyncedUserIds() {
   return set.keys();
@@ -164,7 +178,22 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(dispatcherDefault,
               tmp2 = closure_1_9;
             }
             const result = closure_1_12.set(user.id, closure_1_8(tmp21, tmp2, user.id));
-            obj = { type: null, user: null, id: null, streamId: null, voiceState: null, voicePlatform: null, speaking: false, lastSpoke: 0, soundsharing: false, ringing: false, userNick: null, userAvatarDecoration: null, localVideoDisabled: false, isPoppedOut: false };
+            obj = {
+              type: null,
+              user: null,
+              id: null,
+              streamId: null,
+              voiceState: null,
+              voicePlatform: null,
+              speaking: false,
+              lastSpoke: 0,
+              soundsharing: false,
+              ringing: false,
+              userNick: null,
+              userAvatarDecoration: null,
+              localVideoDisabled: false,
+              isPoppedOut: false,
+            };
             obj[0] = closure_1_11.USER;
             obj[1] = user;
             obj[2] = user.id;
@@ -199,7 +228,7 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(dispatcherDefault,
       deleteResult2 = set.delete(userId);
     }
     return tmp;
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/RTCConnectionDesyncStore.tsx");
 

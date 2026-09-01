@@ -19,17 +19,24 @@ let closure_8 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function BuyNitroAccountCredit() {
   let obj = initialize;
   const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    forApplication = forApplication.getForApplication(closure_6);
-    if (forApplication == null) {
-      const _Set = Set;
-      forApplication = new Set();
-    }
-    return forApplication;
-  }, [], areSetsEqual.areSetsEqual);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      forApplication = forApplication.getForApplication(closure_6);
+      if (forApplication == null) {
+        const _Set = Set;
+        forApplication = new Set();
+      }
+      return forApplication;
+    },
+    [],
+    areSetsEqual.areSetsEqual,
+  );
   const tmp = callback();
   const items1 = [closure_4];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const stateFromStores1 = initialize.useStateFromStores(items1, () =>
+    premiumTypeSubscription.getPremiumTypeSubscription(),
+  );
   const obj2 = initialize;
   const items2 = [closure_3];
   const stateFromStores2 = initialize.useStateFromStores(items2, () => {
@@ -43,9 +50,21 @@ const memoResult = importAllResult.memo(function BuyNitroAccountCredit() {
     }
     return flag;
   });
-  obj = { creditListContainerStyle: tmp.creditList, currentSubscription: stateFromStores1, entitlements: stateFromStores, hasPremiumGroup: stateFromStores2 };
-  return jsx(AccountCreditTierDefault, { creditListContainerStyle: tmp.creditList, currentSubscription: stateFromStores1, entitlements: stateFromStores, hasPremiumGroup: stateFromStores2 });
+  obj = {
+    creditListContainerStyle: tmp.creditList,
+    currentSubscription: stateFromStores1,
+    entitlements: stateFromStores,
+    hasPremiumGroup: stateFromStores2,
+  };
+  return jsx(AccountCreditTierDefault, {
+    creditListContainerStyle: tmp.creditList,
+    currentSubscription: stateFromStores1,
+    entitlements: stateFromStores,
+    hasPremiumGroup: stateFromStores2,
+  });
 });
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroAccountCredit.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium_marketing/native/components/BuyNitroAccountCredit.tsx",
+);
 
 export default memoResult;

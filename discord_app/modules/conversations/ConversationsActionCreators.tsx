@@ -18,7 +18,7 @@ function _fetchChannelConversations() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -88,7 +88,13 @@ function _fetchChannelConversations() {
                   c8 = "" + dependencyMap + ":" + c3 + ":" + limit2 + ":" + true === c5;
                   if (!limit2.isListFetchPending(callback, c8)) {
                     let obj4 = callback2(709);
-                    let obj2 = { type: "CONVERSATIONS_FETCH_START", channelId: null, direction: null, requestKey: null, isJump: null };
+                    let obj2 = {
+                      type: "CONVERSATIONS_FETCH_START",
+                      channelId: null,
+                      direction: null,
+                      requestKey: null,
+                      isJump: null,
+                    };
                     obj2[1] = callback;
                     obj2[2] = dependencyMap;
                     obj2[3] = c8;
@@ -156,7 +162,16 @@ function _fetchChannelConversations() {
               return obj7;
             } else {
               conversations = body.body.conversations;
-              const obj8 = { type: "CONVERSATIONS_FETCH_SUCCESS", channelId: null, rawConversations: null, direction: null, requestKey: null, anchor: null, isJump: null, fullyHydrated: null };
+              const obj8 = {
+                type: "CONVERSATIONS_FETCH_SUCCESS",
+                channelId: null,
+                rawConversations: null,
+                direction: null,
+                requestKey: null,
+                anchor: null,
+                isJump: null,
+                fullyHydrated: null,
+              };
               obj8[1] = callback;
               obj8[2] = conversations;
               obj8[3] = dependencyMap;
@@ -224,7 +239,7 @@ function _fetchConversationMessages() {
     c9 = 0;
     c10 = 0;
     c8 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       if (c10 === 2) {
         c10 = 3;
         HermesBuiltin.throwTypeError();
@@ -321,7 +336,14 @@ function _fetchConversationMessages() {
               throw arg1;
             } else if (arg0 !== 2) {
               closure_3 = arg1;
-              const obj6 = { type: "CONVERSATION_FETCH_SUCCESS", channelId: null, conversationId: null, messages: null, messageReferences: null, fullyHydrated: null };
+              const obj6 = {
+                type: "CONVERSATION_FETCH_SUCCESS",
+                channelId: null,
+                conversationId: null,
+                messages: null,
+                messageReferences: null,
+                fullyHydrated: null,
+              };
               obj6[1] = callback;
               obj6[2] = callback2;
               obj6[3] = closure_3.body.messages;
@@ -382,7 +404,10 @@ export const setSelectedConversation = function setSelectedConversation(channelI
   let obj = dispatcherDefault;
   obj = { type: "SET_SELECTED_CONVERSATION", channelId, conversationId };
   obj.dispatch(obj);
-  fetchConversationMessages(channelId, guildId, conversationId, { includeReactions: true, includeMessageReferences: true });
+  fetchConversationMessages(channelId, guildId, conversationId, {
+    includeReactions: true,
+    includeMessageReferences: true,
+  });
   conversationMetadata = conversationMetadata.getConversationMetadata(channelId, conversationId);
   if (flag) {
     let startMessageId;
@@ -410,11 +435,19 @@ export const setConversationFeedbackRating = function setConversationFeedbackRat
   obj.dispatch(obj);
 };
 export { fetchConversationMessages };
-export const trackTopicalNavigationEntrypointImpression = function trackTopicalNavigationEntrypointImpression(id, stateFromStores1) {
+export const trackTopicalNavigationEntrypointImpression = function trackTopicalNavigationEntrypointImpression(
+  id,
+  stateFromStores1,
+) {
   const ConversationsAnalytics = ConversationsAnalytics2.ConversationsAnalytics;
-  const result = ConversationsAnalytics.trackEntrypointImpression({ channelId: id, conversationCount: stateFromStores1 });
+  const result = ConversationsAnalytics.trackEntrypointImpression({
+    channelId: id,
+    conversationCount: stateFromStores1,
+  });
   if (closure_5.shouldTriggerOnNextExposure()) {
-    fetchSurveyDetailsDefault.fireSurveyAction(SurveyActionTypes.SurveyActionTypes.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS);
+    fetchSurveyDetailsDefault.fireSurveyAction(
+      SurveyActionTypes.SurveyActionTypes.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS,
+    );
     const obj2 = fetchSurveyDetailsDefault;
   }
   dispatcherDefault.dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" });

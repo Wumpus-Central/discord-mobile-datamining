@@ -77,102 +77,107 @@ export default function VibegrationsSecretsSheet(projectId) {
   callback3 = tmp10;
   closure_13 = tmp11;
   let items = [found.length > 0, found, found.length < request.fields.length, projectId, first1, first];
-  callback = React.useCallback(callback(function*() {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  callback = React.useCallback(
+    callback(function* () {
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_0 = tmp4;
-            if (closure_1_12) {
-              if (!c4) {
-                closure_1_5(true);
-                closure_1_6(false);
-                c3 = 2;
-                obj1 = { secrets: null };
-                const _Object = Object;
-                obj1[0] = Object.fromEntries(closure_1_11.map((arg0) => {
-                  const items = [arg0, tmp37[arg0].trim()];
-                  return items;
-                }));
-                v0 = 3;
-                c4 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = closure_1_8(closure_1_0, obj1);
-                return obj2;
+        try {
+          c4 = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_0 = tmp4;
+              if (closure_1_12) {
+                if (!c4) {
+                  closure_1_5(true);
+                  closure_1_6(false);
+                  c3 = 2;
+                  obj1 = { secrets: null };
+                  const _Object = Object;
+                  obj1[0] = Object.fromEntries(
+                    closure_1_11.map((arg0) => {
+                      const items = [arg0, tmp37[arg0].trim()];
+                      return items;
+                    }),
+                  );
+                  v0 = 3;
+                  c4 = 1;
+                  const obj2 = { value: null, done: false };
+                  obj2[0] = closure_1_8(closure_1_0, obj1);
+                  return obj2;
+                }
               }
+              c4 = 3;
             }
-            c4 = 3;
-          }
-        } else if (1 !== tmp8) {
-          if (2 === tmp8) {
-            c3 = 1;
-            closure_1_6(true);
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
+          } else if (1 !== tmp8) {
+            if (2 === tmp8) {
+              c3 = 1;
+              closure_1_6(true);
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              closure_1_5(false);
+              c4 = 3;
+              const obj3 = { value: null, done: true };
+              obj3[0] = arg1;
+              return obj3;
+            } else {
+              const intl = closure_1_0(closure_1_2[10]).intl;
+              const tmp55 = v0(closure_1_2[11]);
+              if (closure_13) {
+                let lM98yZ = tmp55.pu8e3p;
+              } else {
+                lM98yZ = tmp55.lM98yZ;
+              }
+              closure_1_7(closure_0, intl.string(lM98yZ));
+              obj = v0(closure_1_2[12]);
+              obj.hideActionSheet(closure_1_11);
+              c3 = 1;
+              const tmp47 = closure_1_7;
+              const tmp48 = closure_0;
+            }
             c3 = 0;
             closure_1_5(false);
-            c4 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            const intl = closure_1_0(closure_1_2[10]).intl;
-            const tmp55 = v0(closure_1_2[11]);
-            if (closure_13) {
-              let lM98yZ = tmp55.pu8e3p;
-            } else {
-              lM98yZ = tmp55.lM98yZ;
-            }
-            closure_1_7(closure_0, intl.string(lM98yZ));
-            obj = v0(closure_1_2[12]);
-            obj.hideActionSheet(closure_1_11);
-            c3 = 1;
-            const tmp47 = closure_1_7;
-            const tmp48 = closure_0;
           }
           c3 = 0;
           closure_1_5(false);
-        }
-        c3 = 0;
-        closure_1_5(false);
-        throw closure_2;
-      } catch (tmp37) {
-        closure_2 = tmp37;
-        if (tmp5 === c3) {
-          c4 = tmp3;
-          throw tmp37;
-        } else if (tmp2 === tmp39) {
-          v0 = tmp2;
-        } else {
-          v0 = tmp;
+          throw closure_2;
+        } catch (tmp37) {
+          closure_2 = tmp37;
+          if (tmp5 === c3) {
+            c4 = tmp3;
+            throw tmp37;
+          } else if (tmp2 === tmp39) {
+            v0 = tmp2;
+          } else {
+            v0 = tmp;
+          }
         }
       }
-    }
-  }), items);
+    }),
+    items,
+  );
   let obj = { startExpanded: true, header: null, children: null };
   obj = { title: null };
   let intl = projectId(first[10]).intl;
@@ -188,7 +193,7 @@ export default function VibegrationsSecretsSheet(projectId) {
       tmp13Result = tmp13(tmp14(tmp2[15]).Text, obj1);
     }
   }
-  let items1 = [tmp13Result, , , , , , ];
+  let items1 = [tmp13Result, , , , , ,];
   let obj2 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl2 = tmp14(tmp2[10]).intl;
   obj2[2] = intl2.string(importDefault(first[11]).p0Ay4J);
@@ -210,9 +215,16 @@ export default function VibegrationsSecretsSheet(projectId) {
     let obj = { style: closure_1.copyRow, children: null };
     obj = { style: closure_1.copyInfo, children: null };
     obj = { variant: "text-xs/semibold", color: "text-muted", children: children.label };
-    const items = [callback3(projectId(first[15]).Text, obj), callback3(projectId(first[15]).Text, { variant: "text-xs/normal", color: "text-default", children: children.value })];
+    const items = [
+      callback3(projectId(first[15]).Text, obj),
+      callback3(projectId(first[15]).Text, {
+        variant: "text-xs/normal",
+        color: "text-default",
+        children: children.value,
+      }),
+    ];
     obj[1] = items;
-    const items1 = [callback4(closure_6, obj), ];
+    const items1 = [callback4(closure_6, obj)];
     const intl = projectId(first[10]).intl;
     if (c7 === children.value) {
       let OpuAlK = tmp4(tmp5[10]).t.t5VZ88;
@@ -225,7 +237,7 @@ export default function VibegrationsSecretsSheet(projectId) {
       text: intl.string(OpuAlK),
       onPress() {
         return closure_1_9(value.value);
-      }
+      },
     });
     obj[1] = items1;
     return callback4(closure_6, obj, children.label);
@@ -233,7 +245,17 @@ export default function VibegrationsSecretsSheet(projectId) {
   const fields1 = request.fields;
   items1[4] = fields1.map((label) => {
     closure_0 = label;
-    const obj = { label: label.label, description: null, secureTextEntry: true, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, isDisabled: null };
+    const obj = {
+      label: label.label,
+      description: null,
+      secureTextEntry: true,
+      autoComplete: "off",
+      autoCapitalize: "none",
+      autoCorrect: false,
+      value: null,
+      onChange: null,
+      isDisabled: null,
+    };
     let hint;
     if (null != label.hint) {
       if ("" !== label.hint) {
@@ -270,5 +292,5 @@ export default function VibegrationsSecretsSheet(projectId) {
   obj[1] = items1;
   obj[2] = closure_10(closure_6, obj);
   return callback2(projectId(first[13]).ActionSheet, obj);
-};
+}
 export const VIBEGRATIONS_SECRETS_SHEET_KEY = "VibegrationsSecretsSheet";

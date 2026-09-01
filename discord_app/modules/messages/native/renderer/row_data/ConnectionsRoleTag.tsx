@@ -21,6 +21,11 @@ export const createConnectionsRoleTag = function createConnectionsRoleTag(merged
   if (obj2.getDarkness(hex2intResult) < 0.3) {
     PRIMARY_630 = ThemesDefault.unsafe_rawColors.PRIMARY_630;
   }
-  obj = { id: merged.id, name: merged.name, backgroundColor: processColor(colorString), iconColor: processColor(PRIMARY_630) };
+  obj = {
+    id: merged.id,
+    name: merged.name,
+    backgroundColor: processColor(colorString),
+    iconColor: processColor(PRIMARY_630),
+  };
   return obj;
 };

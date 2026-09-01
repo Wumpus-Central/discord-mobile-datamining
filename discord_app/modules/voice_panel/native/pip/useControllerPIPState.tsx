@@ -27,7 +27,14 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   let first1;
   c7 = undefined;
   obj = React;
-  ref = React.useRef({ id: "dispatch", mode: "isArray", width: false, height: 354, containerHeight: null, showSecondaryPIP: "\u{1F1FC}\u{1F1F8}" });
+  ref = React.useRef({
+    id: "dispatch",
+    mode: "isArray",
+    width: false,
+    height: 354,
+    containerHeight: null,
+    showSecondaryPIP: "\u{1F1FC}\u{1F1F8}",
+  });
   const tmp2 = first(React.useState(undefined), 2);
   first = tmp2[0];
   React = tmp2[1];
@@ -42,59 +49,81 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   dependencyMap = tmp7;
   let items = [closure_5, c7, closure_8];
   const items1 = [channelId, tmp7, mode];
-  const stateFromStores = obj(589).useStateFromStores(items, () => {
-    const channel = closure_1_8.getChannel(obj);
-    let isVocalResult;
-    if (channel != null) {
-      isVocalResult = channel.isVocal();
-    }
-    if (isVocalResult) {
-      if (!closure_2) {
+  const stateFromStores = obj(589).useStateFromStores(
+    items,
+    () => {
+      const channel = closure_1_8.getChannel(obj);
+      let isVocalResult;
+      if (channel != null) {
+        isVocalResult = channel.isVocal();
+      }
+      if (isVocalResult) {
+        if (!closure_2) {
+          return false;
+        }
+      }
+      const tmp4 = closure_1_12(_undefined.getMainFrame());
+      if (null != tmp4) {
+        if (tmp4.data.activityPanelMode === closure_1_11.PIP) {
+          return true;
+        }
+      }
+      connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
+      if (null == connectedActivityLocation) {
         return false;
+      } else {
+        const embeddedActivityLocationChannelId = obj(closure_2[12]).getEmbeddedActivityLocationChannelId(
+          connectedActivityLocation,
+        );
+        const channel1 = obj.getChannel(embeddedActivityLocationChannelId);
+        let result = null != channel1;
+        const activityPanelMode = obj3.getActivityPanelMode();
+        if (result) {
+          result = obj(closure_2[13]).isActivityInTextSupportedForChannel(channel1);
+          const tmp14Result = obj(closure_2[13]);
+        }
+        if (result) {
+          result = embeddedActivityLocationChannelId !== tmp;
+        }
+        let tmp10 = activityPanelMode === closure_1_11.PIP;
+        if (tmp10) {
+          tmp10 = ref === closure_1_10.PIP || embeddedActivityLocationChannelId !== tmp;
+          const tmp13 = ref === closure_1_10.PIP || embeddedActivityLocationChannelId !== tmp;
+        }
+        if (result) {
+          result = tmp10;
+        }
+        return result;
       }
-    }
-    const tmp4 = closure_1_12(_undefined.getMainFrame());
-    if (null != tmp4) {
-      if (tmp4.data.activityPanelMode === closure_1_11.PIP) {
-        return true;
-      }
-    }
-    connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
-    if (null == connectedActivityLocation) {
-      return false;
-    } else {
-      const embeddedActivityLocationChannelId = obj(closure_2[12]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
-      const channel1 = obj.getChannel(embeddedActivityLocationChannelId);
-      let result = null != channel1;
-      const activityPanelMode = obj3.getActivityPanelMode();
-      if (result) {
-        result = obj(closure_2[13]).isActivityInTextSupportedForChannel(channel1);
-        const tmp14Result = obj(closure_2[13]);
-      }
-      if (result) {
-        result = embeddedActivityLocationChannelId !== tmp;
-      }
-      let tmp10 = activityPanelMode === closure_1_11.PIP;
-      if (tmp10) {
-        tmp10 = ref === closure_1_10.PIP || embeddedActivityLocationChannelId !== tmp;
-        const tmp13 = ref === closure_1_10.PIP || embeddedActivityLocationChannelId !== tmp;
-      }
-      if (result) {
-        result = tmp10;
-      }
-      return result;
-    }
-    obj3 = connectedActivityLocation;
-  }, items1);
+      obj3 = connectedActivityLocation;
+    },
+    items1,
+  );
   let tmp10 = ref(16666)(channelId);
-  first1 = first(React.useState(() => ref(closure_2[16])((arg0) => arg0(), 1000, { leading: true })), 1)[0];
+  first1 = first(
+    React.useState(() => ref(closure_2[16])((arg0) => arg0(), 1000, { leading: true })),
+    1,
+  )[0];
   const items2 = [first1];
   const layoutEffect = React.useLayoutEffect(() => () => closure_6.cancel(), items2);
   const obj2 = obj(589);
   let tmp5 = ref;
-  [tmp14, c7] = first(React.useState(() => closure_2.getTargetDimensions(ref)), 2);
-  obj = { connected, mode, focusedId, participantTargetDimensions: tmp14, selfHasVideo: tmp10, showSecondaryPIP: stateFromStores };
-  let tmp13 = first(React.useState(() => closure_2.getTargetDimensions(ref)), 2);
+  [tmp14, c7] = first(
+    React.useState(() => closure_2.getTargetDimensions(ref)),
+    2,
+  );
+  obj = {
+    connected,
+    mode,
+    focusedId,
+    participantTargetDimensions: tmp14,
+    selfHasVideo: tmp10,
+    showSecondaryPIP: stateFromStores,
+  };
+  let tmp13 = first(
+    React.useState(() => closure_2.getTargetDimensions(ref)),
+    2,
+  );
   ({ participant, dimensions } = ref(16667)(channelId, layoutManager, focusedId, first, obj));
   obj = {};
   const merged = Object.assign(ref.current);

@@ -34,4 +34,4 @@ export default function getDefaultBackgroundData() {
   obj[DefaultVideoBackground.OPTION_9] = closure_4;
   obj[DefaultVideoBackground.OPTION_10] = closure_4;
   return obj;
-};
+}

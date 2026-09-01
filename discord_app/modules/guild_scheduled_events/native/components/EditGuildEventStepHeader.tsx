@@ -8,15 +8,27 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({ header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 8, marginBottom: 8 }, headerSubtitle: { textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventStepHeader.tsx");
+let closure_5 = createCacheKey.createStyles({
+  header: { alignItems: "center", paddingBottom: 24 },
+  headerTitle: { marginTop: 8, marginBottom: 8 },
+  headerSubtitle: { textAlign: "center" },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/EditGuildEventStepHeader.tsx",
+);
 
 export default function EditGuildEventStepHeader(children) {
   const subtitle = children.subtitle;
   const tmp = callback2();
   let obj = { style: tmp.header, children: null };
-  obj = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: children.title };
-  const items = [callback(Text.Text, obj), ];
+  obj = {
+    style: tmp.headerTitle,
+    accessibilityRole: "header",
+    variant: "heading-xl/semibold",
+    color: "mobile-text-heading-primary",
+    children: children.title,
+  };
+  const items = [callback(Text.Text, obj)];
   let tmp4Result = null;
   if (null != subtitle) {
     tmp4Result = null;
@@ -30,4 +42,4 @@ export default function EditGuildEventStepHeader(children) {
   items[1] = tmp4Result;
   obj[1] = items;
   return closure_4(View, obj);
-};
+}

@@ -32,4 +32,4 @@ export default function validateScope(arr, str) {
     }
     return tmp2;
   }
-};
+}

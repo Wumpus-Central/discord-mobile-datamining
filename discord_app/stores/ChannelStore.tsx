@@ -32,12 +32,18 @@ function ensureGuildLoaded(guild_id, Basic, getBasicChannel) {
             const _HermesInternal4 = HermesInternal;
             closure_17.verbose("hydrating guild (guild: " + guild_id + ", trace: " + getBasicChannel + ")");
             const _HermesInternal5 = HermesInternal;
-            const result = require("../modules/app_database/app/TryLoad.tsx").tryLoadOrResetCacheGateway("ensureGuildLoaded(" + guild_id + ")", () => databaseResult(closure_1_2[13]).getSync(closure_1, closure_0), "ensureGuildLoaded");
+            const result = require("../modules/app_database/app/TryLoad.tsx").tryLoadOrResetCacheGateway(
+              "ensureGuildLoaded(" + guild_id + ")",
+              () => databaseResult(closure_1_2[13]).getSync(closure_1, closure_0),
+              "ensureGuildLoaded",
+            );
             if (null == result) {
               set.add(guild_id);
               store.restored(guild_id);
               const _HermesInternal3 = HermesInternal;
-              obj3.log("load returned null; early returning (guild: " + guild_id + ", database: " + databaseResult + ")");
+              obj3.log(
+                "load returned null; early returning (guild: " + guild_id + ", database: " + databaseResult + ")",
+              );
             } else {
               [arr, tmp41] = callback(result, 2);
               tmp4(1978)(arr);
@@ -62,7 +68,15 @@ function ensureGuildLoaded(guild_id, Basic, getBasicChannel) {
                 continue;
               }
               const _HermesInternal2 = HermesInternal;
-              closure_17.verbose("hydration complete (guild: " + guild_id + ", channels: " + arr.length + ", guilds_loaded: " + closure_34 + ")");
+              closure_17.verbose(
+                "hydration complete (guild: " +
+                  guild_id +
+                  ", channels: " +
+                  arr.length +
+                  ", guilds_loaded: " +
+                  closure_34 +
+                  ")",
+              );
               const tmp4Result = tmp4(10);
             }
             obj3 = closure_17;
@@ -532,7 +546,14 @@ function guildChannelCount(id) {
   }
   return length;
 }
-({ createChannelRecordFromServer: error, isPrivate: closure_8, GUILD_CHANNEL_TYPES: c9, THREAD_CHANNEL_TYPES: c10, ALL_CHANNEL_TYPES: unpackModuleId, castChannelRecord: closure_12 } = createChannelRecord);
+({
+  createChannelRecordFromServer: error,
+  isPrivate: closure_8,
+  GUILD_CHANNEL_TYPES: c9,
+  THREAD_CHANNEL_TYPES: c10,
+  ALL_CHANNEL_TYPES: unpackModuleId,
+  castChannelRecord: closure_12,
+} = createChannelRecord);
 let closure_17 = new timestampDefault("ChannelStore");
 let closure_18 = {};
 let closure_19 = {};
@@ -583,183 +604,191 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((arg0) => !set.has(arg0))) {
       dependencyMap = c31;
-      return tmp(1976).tryLoadOrResetCacheGatewayAsync("loadChannels", callback2(function*() {
-        if (c7 === 2) {
-          c7 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp5 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+      return tmp(1976).tryLoadOrResetCacheGatewayAsync(
+        "loadChannels",
+        callback2(function* () {
+          if (c7 === 2) {
+            c7 = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp5 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
           } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          while (true) {
-            let num = 2;
-            c7 = 2;
-            let tmp6 = c6;
-            if (0 === c6) {
-              if (arg0 === 1) {
-                let num10 = 3;
-                c7 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                let num9 = 3;
-                c7 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let guildId = tmp;
-                closure_2 = tmp6;
-                let lib;
-                closure_1 = undefined;
-                closure_2 = undefined;
-                guildId = undefined;
-                let tmp45 = closure_1_0;
-                let mapped = closure_1_0.map((arg0) => {
-                  closure_0 = arg0;
-                  if (closure_1_29.has(arg0)) {
-                    return null;
-                  } else if (null != closure_1_30[arg0]) {
-                    const _HermesInternal = HermesInternal;
-                    closure_1_17.fileOnly("Skipping loading " + arg0 + " because a load is pending");
-                    return null;
-                  } else {
-                    let obj = callback(table[13]);
-                    const async = obj.getAsync(callback, arg0);
-                    const nextPromise = async.then((channels) => {
-                      closure_1_17.fileOnly("Lazy loaded channels for " + closure_0 + " #:" + channels.length);
-                      return { guildId: closure_0, channels };
-                    });
-                    closure_1_30[arg0] = nextPromise;
-                    obj = { guildId: null, promise: null };
-                    obj[0] = arg0;
-                    obj[1] = nextPromise;
-                    return obj;
-                  }
-                });
-                let tmp46 = closure_1_0;
-                let tmp47 = closure_1_2;
-                found = mapped.filter(closure_1_0(closure_1_2[10]).isNotNullish);
-                lib = found;
-                c5 = 1;
-                let _Promise = Promise;
-                c6 = 2;
-                let num17 = 1;
-                c7 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = Promise.all(found.map((promise) => promise.promise));
-                return obj1;
-              }
-            } else if (1 === tmp6) {
-              let tmp17 = closure_2;
-              let tmp18 = guildId;
-              let tmp19 = closure_4;
-              let tmp20 = closure_4;
-              c5 = 0;
-              let tmp21 = closure_1_17;
-              let tmp22 = lib;
-              let tmp23 = closure_4;
-              let errorResult = closure_1_17.error(`Failed to load channels from disk for ${closure_0.map((guildId) => guildId.guildId)}`, closure_4);
-              let tmp25 = lib;
-              closure_1 = lib;
-              let tmp26 = lib;
-              closure_1 = lib;
-              lib = lib[Symbol.iterator]();
-              let tmp27 = closure_1;
-              let tmp28 = lib;
-              while (lib !== undefined) {
-                let tmp30 = closure_2;
-                let tmp31 = guildId;
-                c5 = 2;
-                guildId = tmp29;
-                let tmp32 = closure_1_30;
-                let tmp33 = guildId;
-                guildId = guildId.guildId;
-                delete tmp3[tmp2];
+            while (true) {
+              let num = 2;
+              c7 = 2;
+              let tmp6 = c6;
+              if (0 === c6) {
+                if (arg0 === 1) {
+                  let num10 = 3;
+                  c7 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  let num9 = 3;
+                  c7 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  let guildId = tmp;
+                  closure_2 = tmp6;
+                  let lib;
+                  closure_1 = undefined;
+                  closure_2 = undefined;
+                  guildId = undefined;
+                  let tmp45 = closure_1_0;
+                  let mapped = closure_1_0.map((arg0) => {
+                    closure_0 = arg0;
+                    if (closure_1_29.has(arg0)) {
+                      return null;
+                    } else if (null != closure_1_30[arg0]) {
+                      const _HermesInternal = HermesInternal;
+                      closure_1_17.fileOnly("Skipping loading " + arg0 + " because a load is pending");
+                      return null;
+                    } else {
+                      let obj = callback(table[13]);
+                      const async = obj.getAsync(callback, arg0);
+                      const nextPromise = async.then((channels) => {
+                        closure_1_17.fileOnly("Lazy loaded channels for " + closure_0 + " #:" + channels.length);
+                        return { guildId: closure_0, channels };
+                      });
+                      closure_1_30[arg0] = nextPromise;
+                      obj = { guildId: null, promise: null };
+                      obj[0] = arg0;
+                      obj[1] = nextPromise;
+                      return obj;
+                    }
+                  });
+                  let tmp46 = closure_1_0;
+                  let tmp47 = closure_1_2;
+                  found = mapped.filter(closure_1_0(closure_1_2[10]).isNotNullish);
+                  lib = found;
+                  c5 = 1;
+                  let _Promise = Promise;
+                  c6 = 2;
+                  let num17 = 1;
+                  c7 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = Promise.all(found.map((promise) => promise.promise));
+                  return obj1;
+                }
+              } else if (1 === tmp6) {
+                let tmp17 = closure_2;
+                let tmp18 = guildId;
+                let tmp19 = closure_4;
+                let tmp20 = closure_4;
                 c5 = 0;
-                continue;
-              }
-              let tmp34 = closure_2;
-              let tmp35 = closure_4;
-              throw closure_4;
-            } else if (2 === tmp6) {
-              if (arg0 === 1) {
-                let num8 = 3;
-                c7 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 0;
-                let num7 = 3;
-                c7 = 3;
-                let obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                let tmp41 = closure_2;
-                let tmp42 = guildId;
-                closure_1 = arg1;
-                let tmp43 = closure_1_31;
-                let tmp44 = closure_2;
-                if (closure_1_31 !== closure_2) {
-                  let tmp14 = closure_1_17;
-                  let tmp15 = lib;
-                  let fileOnlyResult = closure_1_17.fileOnly(`lastResetTime has changed, skipping loads for ${closure_0.map((guildId) => guildId.guildId)}`);
+                let tmp21 = closure_1_17;
+                let tmp22 = lib;
+                let tmp23 = closure_4;
+                let errorResult = closure_1_17.error(
+                  `Failed to load channels from disk for ${closure_0.map((guildId) => guildId.guildId)}`,
+                  closure_4,
+                );
+                let tmp25 = lib;
+                closure_1 = lib;
+                let tmp26 = lib;
+                closure_1 = lib;
+                lib = lib[Symbol.iterator]();
+                let tmp27 = closure_1;
+                let tmp28 = lib;
+                while (lib !== undefined) {
+                  let tmp30 = closure_2;
+                  let tmp31 = guildId;
+                  c5 = 2;
+                  guildId = tmp29;
+                  let tmp32 = closure_1_30;
+                  let tmp33 = guildId;
+                  guildId = guildId.guildId;
+                  delete tmp3[tmp2];
                   c5 = 0;
-                  let num6 = 3;
+                  continue;
+                }
+                let tmp34 = closure_2;
+                let tmp35 = closure_4;
+                throw closure_4;
+              } else if (2 === tmp6) {
+                if (arg0 === 1) {
+                  let num8 = 3;
+                  c7 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c5 = 0;
+                  let num7 = 3;
+                  c7 = 3;
+                  let obj2 = { value: null, done: true };
+                  obj2[0] = arg1;
+                  return obj2;
+                } else {
+                  let tmp41 = closure_2;
+                  let tmp42 = guildId;
+                  closure_1 = arg1;
+                  let tmp43 = closure_1_31;
+                  let tmp44 = closure_2;
+                  if (closure_1_31 !== closure_2) {
+                    let tmp14 = closure_1_17;
+                    let tmp15 = lib;
+                    let fileOnlyResult = closure_1_17.fileOnly(
+                      `lastResetTime has changed, skipping loads for ${closure_0.map((guildId) => guildId.guildId)}`,
+                    );
+                    c5 = 0;
+                    let num6 = 3;
+                    c7 = 3;
+                    return { value: null, done: true };
+                  } else {
+                    let tmp10 = closure_1;
+                    closure_2 = closure_1.filter((guildId) => !set.has(guildId.guildId));
+                    let tmp11 = closure_1_1;
+                    let tmp12 = closure_1_2;
+                    obj1 = closure_1_1(closure_1_2[14]);
+                    let obj3 = { type: "LOAD_CHANNELS", channels: null };
+                    let tmp13 = closure_2;
+                    obj3[1] = closure_2;
+                    c6 = 3;
+                    let num5 = 1;
+                    c7 = 1;
+                    let obj4 = { value: null, done: false };
+                    obj4[0] = obj1.dispatch(obj3);
+                    return obj4;
+                  }
+                }
+              } else if (3 === tmp6) {
+                if (arg0 === 1) {
+                  let num4 = 3;
+                  c7 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c5 = 0;
+                  let num3 = 3;
+                  c7 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  c5 = 0;
+                  let num2 = 3;
                   c7 = 3;
                   return { value: null, done: true };
-                } else {
-                  let tmp10 = closure_1;
-                  closure_2 = closure_1.filter((guildId) => !set.has(guildId.guildId));
-                  let tmp11 = closure_1_1;
-                  let tmp12 = closure_1_2;
-                  obj1 = closure_1_1(closure_1_2[14]);
-                  let obj3 = { type: "LOAD_CHANNELS", channels: null };
-                  let tmp13 = closure_2;
-                  obj3[1] = closure_2;
-                  c6 = 3;
-                  let num5 = 1;
-                  c7 = 1;
-                  let obj4 = { value: null, done: false };
-                  obj4[0] = obj1.dispatch(obj3);
-                  return obj4;
                 }
-              }
-            } else if (3 === tmp6) {
-              if (arg0 === 1) {
-                let num4 = 3;
-                c7 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 0;
-                let num3 = 3;
-                c7 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
               } else {
+                let tmp7 = closure_4;
+                let tmp8 = closure_4;
                 c5 = 0;
-                let num2 = 3;
-                c7 = 3;
-                return { value: null, done: true };
+                let tmp9 = lib;
+                lib.return();
+                throw closure_4;
               }
-            } else {
-              let tmp7 = closure_4;
-              let tmp8 = closure_4;
-              c5 = 0;
-              let tmp9 = lib;
-              lib.return();
-              throw closure_4;
             }
           }
-        }
-      }));
+        }),
+      );
     } else {
       return null;
     }
@@ -769,8 +798,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
 };
 let closure_35 = { Basic: 0, [0]: "Basic", Full: 1, [1]: "Full" };
 const Store = initializeDefault.Store;
-class ChannelStore extends Store {
-}
+class ChannelStore extends Store {}
 const prototype2 = ChannelStore.prototype;
 prototype2["initialize"] = function initialize() {
   this.waitFor(closure_13, closure_5, closure_6, closure_14, closure_15);
@@ -852,7 +880,9 @@ prototype2["getSortedLinkedChannelsForGuild"] = function getSortedLinkedChannels
 };
 prototype2["getSortedPrivateChannels"] = function getSortedPrivateChannels() {
   const values = applyDefault(closure_21).values();
-  const sorted = values.sort((lastMessageId, lastMessageId2) => callback(table[17]).compare(lastMessageId.lastMessageId, lastMessageId2.lastMessageId));
+  const sorted = values.sort((lastMessageId, lastMessageId2) =>
+    callback(table[17]).compare(lastMessageId.lastMessageId, lastMessageId2.lastMessageId),
+  );
   const obj = applyDefault(closure_21);
   return sorted.reverse().value();
 };
@@ -900,7 +930,11 @@ prototype2["getInitialOverlayState"] = function getInitialOverlayState() {
   return {};
 };
 prototype2["getDebugInfo"] = function getDebugInfo() {
-  const obj = { loadedGuildIds: Array.from(set).sort(DISCORD_EPOCHDefault.compare), pendingGuildLoads: null, guildSizes: null };
+  const obj = {
+    loadedGuildIds: Array.from(set).sort(DISCORD_EPOCHDefault.compare),
+    pendingGuildLoads: null,
+    guildSizes: null,
+  };
   const keys = Object.keys(closure_30);
   obj[1] = keys.sort(DISCORD_EPOCHDefault.compare);
   const keys1 = Object.keys(closure_20);
@@ -934,7 +968,9 @@ const channelStore = new ChannelStore(dispatcherDefault, {
           length = Object.keys(dependencyMap2[id2]).length;
         }
         const _HermesInternal2 = HermesInternal;
-        closure_1_17.fileOnly("Restoring guild channels b/c unavailable in bg sync, for " + data_mode.id + " #:" + length);
+        closure_1_17.fileOnly(
+          "Restoring guild channels b/c unavailable in bg sync, for " + data_mode.id + " #:" + length,
+        );
         const item = closure_1_1(closure_1_2[19]).forEach(dependencyMap[data_mode.id], closure_1_43);
         const arr4 = closure_1_1(closure_1_2[19]);
       } else if ("partial" === data_mode.data_mode) {
@@ -990,7 +1026,9 @@ const channelStore = new ChannelStore(dispatcherDefault, {
         const arr = closure_1_1(closure_1_2[19]);
       } else {
         const _HermesInternal3 = HermesInternal;
-        closure_1_17.fileOnly("BG sync contained full channels for " + data_mode.id + " #:" + data_mode.channels.length);
+        closure_1_17.fileOnly(
+          "BG sync contained full channels for " + data_mode.id + " #:" + data_mode.channels.length,
+        );
         closure_1_37(data_mode.id);
         closure_1_29.add(data_mode.id);
         closure_1_5.restored(data_mode.id);
@@ -1033,7 +1071,9 @@ const channelStore = new ChannelStore(dispatcherDefault, {
       [tmp5, arr] = tmp4;
       let tmp6 = closure_17;
       let _HermesInternal = HermesInternal;
-      let fileOnlyResult = closure_17.fileOnly("Lazy cache contained full guild channels for " + tmp5 + " #:" + arr.length);
+      let fileOnlyResult = closure_17.fileOnly(
+        "Lazy cache contained full guild channels for " + tmp5 + " #:" + arr.length,
+      );
       let tmp8 = set;
       let addResult = set.add(tmp5);
       let tmp10 = arr;
@@ -1174,7 +1214,9 @@ const channelStore = new ChannelStore(dispatcherDefault, {
         let tmp10 = closure_17;
         let tmp11 = guildChannelCount;
         let _HermesInternal = HermesInternal;
-        let fileOnlyResult = closure_17.fileOnly("Restoring guild channels for " + tmp4.id + " #:" + guildChannelCount(tmp4.id));
+        let fileOnlyResult = closure_17.fileOnly(
+          "Restoring guild channels for " + tmp4.id + " #:" + guildChannelCount(tmp4.id),
+        );
       }
       let tmp13 = handleOneGuildCreate;
       let tmp14 = nextResult;
@@ -1288,7 +1330,7 @@ const channelStore = new ChannelStore(dispatcherDefault, {
       }
     });
   },
-  THREAD_UPDATE: handleThreadCreateOrUpdate
+  THREAD_UPDATE: handleThreadCreateOrUpdate,
 });
 let result = set.fileFinishedImporting("stores/ChannelStore.tsx");
 

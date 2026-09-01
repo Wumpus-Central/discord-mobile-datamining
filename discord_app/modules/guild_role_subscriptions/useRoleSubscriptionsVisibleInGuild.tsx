@@ -33,7 +33,9 @@ function computeCanEveryoneInGuildSeeRoleSubscriptions(c0) {
     return isViewingServerShopResult;
   }
 }
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx",
+);
 
 export const areRoleSubscriptionsVisibleInGuild = function areRoleSubscriptionsVisibleInGuild(c0, closure_3) {
   let hasRoleSubscriptionsInGuild = computeCanEveryoneInGuildSeeRoleSubscriptions(c0);
@@ -48,12 +50,19 @@ export const useRoleSubscriptionsVisibleInGuild = function useRoleSubscriptionsV
   const tmp = computeHasRoleSubscriptionsInGuildDefault(id1);
   const items = [closure_4, closure_3];
   const items1 = [id1];
-  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const items = [closure_1_4, closure_1_3];
-    return closure_1_6(closure_0, items);
-  }, items1);
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const items = [closure_1_4, closure_1_3];
+      return closure_1_6(closure_0, items);
+    },
+    items1,
+  );
   const obj = initialize;
-  const shouldHideGuildPurchaseEntryPoints = require("../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx").useShouldHideGuildPurchaseEntryPoints(id1).shouldHideGuildPurchaseEntryPoints;
+  const shouldHideGuildPurchaseEntryPoints =
+    require("../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx").useShouldHideGuildPurchaseEntryPoints(
+      id1,
+    ).shouldHideGuildPurchaseEntryPoints;
   let tmp3 = !shouldHideGuildPurchaseEntryPoints;
   if (!shouldHideGuildPurchaseEntryPoints) {
     if (!stateFromStores) {
@@ -69,12 +78,19 @@ export const useShowRoleSubscriptionsInChannelList = function useShowRoleSubscri
   const tmp3 = _require;
   let items = [closure_4, closure_3];
   const items1 = [id];
-  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const items = [closure_1_4, closure_1_3];
-    return closure_1_6(closure_0, items);
-  }, items1);
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const items = [closure_1_4, closure_1_3];
+      return closure_1_6(closure_0, items);
+    },
+    items1,
+  );
   const obj = initialize;
-  const shouldHideGuildPurchaseEntryPoints = require("../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx").useShouldHideGuildPurchaseEntryPoints(id).shouldHideGuildPurchaseEntryPoints;
+  const shouldHideGuildPurchaseEntryPoints =
+    require("../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx").useShouldHideGuildPurchaseEntryPoints(
+      id,
+    ).shouldHideGuildPurchaseEntryPoints;
   let tmp5 = !shouldHideGuildPurchaseEntryPoints;
   if (!shouldHideGuildPurchaseEntryPoints) {
     if (!stateFromStores) {

@@ -105,8 +105,7 @@ let closure_19 = { friends: "spriteIndex", blocked: "category", ignored: "paths"
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;
-class RelationshipStore extends Store {
-}
+class RelationshipStore extends Store {}
 const prototype = RelationshipStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4);
@@ -216,7 +215,11 @@ prototype["isIgnoredForMessage"] = function isIgnoredForMessage(message) {
 };
 prototype["isUnfilteredPendingIncoming"] = function isUnfilteredPendingIncoming(nextResult) {
   const self = this;
-  return map.get(nextResult) === RelationshipTypes.PENDING_INCOMING && !self.isSpam(nextResult) && !self.isIgnored(nextResult);
+  return (
+    map.get(nextResult) === RelationshipTypes.PENDING_INCOMING &&
+    !self.isSpam(nextResult) &&
+    !self.isIgnored(nextResult)
+  );
 };
 prototype["getPendingCount"] = function getPendingCount() {
   return c16;
@@ -643,7 +646,7 @@ const relationshipStore = new RelationshipStore(dispatcherDefault, {
   },
   UPDATE_STRANGER_STATUS: function handleUpdateStrangerStatus(isStranger) {
     closure_15[isStranger.userId] = { expiry: Date.now() + 300000, isStranger: isStranger.isStranger };
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/RelationshipStore.tsx");
 

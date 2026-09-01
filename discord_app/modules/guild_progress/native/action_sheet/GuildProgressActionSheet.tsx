@@ -18,8 +18,14 @@ class GuildProgressHeader {
     ({ title, subtitle } = global);
     tmp = closure_16();
     obj = { style: tmp.header, children: null };
-    obj = { style: tmp.headerTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title };
-    items = [, ];
+    obj = {
+      style: tmp.headerTitle,
+      variant: "heading-xl/extrabold",
+      color: "mobile-text-heading-primary",
+      accessibilityRole: "header",
+      children: title,
+    };
+    items = [,];
     items[0] = jsx(require("Text").Text, obj);
     obj1 = { style: tmp.headerSubtitle, children: subtitle };
     items[1] = jsx(require("Button").LegacyText, obj1);
@@ -28,15 +34,29 @@ class GuildProgressHeader {
   }
 }
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: c9 } = Steps);
-({ UPLOAD_MEDIUM_SIZE: c10, AnalyticEvents: unpackModuleId, ComponentActions: closure_12, InstantInviteSources: map1 } = ME);
+({
+  UPLOAD_MEDIUM_SIZE: c10,
+  AnalyticEvents: unpackModuleId,
+  ComponentActions: closure_12,
+  InstantInviteSources: map1,
+} = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-createCacheKey = { container: { padding: 16 }, header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 }, headerTitle: { marginBottom: 8, textAlign: "center" }, headerSubtitle: null, footer: null, center: null };
+createCacheKey = {
+  container: { padding: 16 },
+  header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 },
+  headerTitle: { marginBottom: 8, textAlign: "center" },
+  headerSubtitle: null,
+  footer: null,
+  center: null,
+};
 createCacheKey = { fontSize: 14, fontWeight: "500", color: ThemesDefault.colors.TEXT_SUBTLE };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { marginTop: 4 };
 createCacheKey[5] = { alignItems: "center" };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/guild_progress/native/action_sheet/GuildProgressActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_progress/native/action_sheet/GuildProgressActionSheet.tsx",
+);
 
 export default function GuildProgressActionSheet(guild) {
   guild = guild.guild;
@@ -47,7 +67,7 @@ export default function GuildProgressActionSheet(guild) {
   let id;
   function _addServerIcon() {
     const self = this;
-    const tmp = totalSteps(function*() {
+    const tmp = totalSteps(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -167,7 +187,7 @@ export default function GuildProgressActionSheet(guild) {
     title: null,
     isCompleted: null,
     analyticsSetupType: null,
-    analyticsAction: null
+    analyticsAction: null,
   };
   obj = { uri: importDefault(numFinished[17]) };
   obj[1] = obj;
@@ -194,7 +214,7 @@ export default function GuildProgressActionSheet(guild) {
     title: null,
     isCompleted: null,
     analyticsSetupType: null,
-    analyticsAction: null
+    analyticsAction: null,
   };
   obj2 = { uri: null };
   const tmp14 = callback(importDefault(numFinished[15]), obj);
@@ -226,7 +246,7 @@ export default function GuildProgressActionSheet(guild) {
     title: null,
     isCompleted: null,
     analyticsSetupType: null,
-    analyticsAction: null
+    analyticsAction: null,
   };
   const obj4 = { uri: null };
   const tmp16 = callback(importDefault(numFinished[15]), obj1);
@@ -240,7 +260,14 @@ export default function GuildProgressActionSheet(guild) {
   let tmp9Result = null;
   const tmp17 = importDefault(numFinished[15]);
   if (showBoostStep) {
-    const obj5 = { onPress: null, source: null, title: null, isCompleted: null, analyticsSetupType: null, analyticsAction: null };
+    const obj5 = {
+      onPress: null,
+      source: null,
+      title: null,
+      isCompleted: null,
+      analyticsSetupType: null,
+      analyticsAction: null,
+    };
     obj5[0] = function goToBoosts() {
       let obj = guild(numFinished[11]);
       obj.hideActionSheet(id);
@@ -267,11 +294,21 @@ export default function GuildProgressActionSheet(guild) {
     numFinished,
     total: totalSteps,
     stepsHook(children) {
-      return callback2(guild(numFinished[29]).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children }, arg1);
-    }
+      return callback2(
+        guild(numFinished[29]).Text,
+        { variant: "text-sm/medium", color: "mobile-text-heading-primary", children },
+        arg1,
+      );
+    },
   });
-  const items5 = [callback(GuildProgressHeader, obj8), tmp14, tmp16, callback(importDefault(numFinished[15]), obj3), tmp9Result, ];
-  const items6 = [tmp.footer, ];
+  const items5 = [
+    callback(GuildProgressHeader, obj8),
+    tmp14,
+    tmp16,
+    callback(importDefault(numFinished[15]), obj3),
+    tmp9Result,
+  ];
+  const items6 = [tmp.footer];
   let center = null;
   if (numFinished !== totalSteps) {
     center = tmp.center;
@@ -281,7 +318,12 @@ export default function GuildProgressActionSheet(guild) {
     obj.dismissProgress(guild.id);
     callback(numFinished[23]).hideActionSheet("guild-progress-" + guild.id);
     const obj2 = callback(numFinished[23]);
-    obj = { action: closure_1_9.DISMISS_GUILD_PROGRESS, setup_type: closure_1_8.GUILD_PROGRESS, num_total_actions: totalSteps, num_actions_completed: numFinished };
+    obj = {
+      action: closure_1_9.DISMISS_GUILD_PROGRESS,
+      setup_type: closure_1_8.GUILD_PROGRESS,
+      num_total_actions: totalSteps,
+      num_actions_completed: numFinished,
+    };
     callback(numFinished[13]).track(closure_1_11.SERVER_SETUP_CTA_CLICKED, obj);
   }
   const obj10 = { style: items6, children: null };
@@ -306,5 +348,5 @@ export default function GuildProgressActionSheet(guild) {
   obj7[1] = items5;
   const children = closure_15(tmp23, obj7);
   return callback(guild(numFinished[32]).ActionSheet, { showGradient: true, startExpanded: true, children });
-};
+}
 export { GuildProgressHeader };

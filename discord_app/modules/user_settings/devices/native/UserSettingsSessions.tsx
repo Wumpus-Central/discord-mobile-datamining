@@ -54,12 +54,15 @@ function UserSettingsSessions() {
       tmp21Result = tmp21(SessionInfo, obj2);
     }
     obj1[2] = tmp21Result;
-    const items1 = [callback2(tmp2(5992).TableRowGroup, obj1), , ];
+    const items1 = [callback2(tmp2(5992).TableRowGroup, obj1), ,];
     if (otherSessions.length > 0) {
       const obj3 = { title: null, hasIcons: true, children: null };
       const intl = tmp2(1236).intl;
       obj3[0] = intl.string(tmp2(1236).t.xx1MWc);
-      const items2 = [otherSessions.map((id_hash) => callback(closure_15, { session: id_hash }, id_hash.id_hash)), tmp21(UnknownLegacySessionsInfo, {})];
+      const items2 = [
+        otherSessions.map((id_hash) => callback(closure_15, { session: id_hash }, id_hash.id_hash)),
+        tmp21(UnknownLegacySessionsInfo, {}),
+      ];
       obj3[2] = items2;
       tmp20Result = tmp20(tmp2(5992).TableRowGroup, obj3);
     } else {
@@ -185,13 +188,13 @@ function SessionInfo(session) {
       obj4[0] = tmp.sessionInfoRow;
       const obj5 = { variant: "text-md/semibold", children: null };
       obj5[1] = found[0];
-      const items1 = [callback2(tmp9(4474).Text, obj5), ];
+      const items1 = [callback2(tmp9(4474).Text, obj5)];
       let tmp22Result = found.length > 1;
       if (tmp22Result) {
         const obj6 = { children: null };
         const obj7 = { variant: "text-md/semibold", accessibilityLabel: ",", style: null, children: "\u00B7" };
         obj7[2] = tmp.sessionInfoRowSpacing;
-        const items2 = [tmp20(tmp9(4474).Text, obj7), ];
+        const items2 = [tmp20(tmp9(4474).Text, obj7)];
         const obj8 = { variant: "text-md/semibold", children: null };
         obj8[1] = found[1];
         items2[1] = tmp20(tmp9(4474).Text, obj8);
@@ -218,7 +221,7 @@ function SessionInfo(session) {
         obj11[1] = tmp20(tmp9(4474).Text, obj12);
         tmp20Result = tmp20(tmp21, obj11);
       }
-      const items3 = [tmp20Result, ];
+      const items3 = [tmp20Result];
       let tmp20Result1 = null != formatDateResult;
       if (tmp20Result1) {
         const obj13 = { style: null, children: null };
@@ -259,14 +262,24 @@ function UnknownLegacySessionsInfo() {
     onClick() {
       closure_1_1(closure_1_2[24]).setSection(closure_1_9.ACCOUNT);
       const obj = closure_1_1(closure_1_2[24]);
-    }
+    },
   });
   return callback2(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, obj);
 }
 ({ ActivityIndicator: c5, View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ UserSettingsSections: c9, Fonts } = ME);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-createCacheKey = { description: { paddingHorizontal: 16, paddingTop: 8, marginBottom: 8 }, detailsText: null, container: null, loading: null, sessionInfo: null, sessionInfoRow: null, sessionInfoRowSpacing: null, logoutButton: null, list: null };
+createCacheKey = {
+  description: { paddingHorizontal: 16, paddingTop: 8, marginBottom: 8 },
+  detailsText: null,
+  container: null,
+  loading: null,
+  sessionInfo: null,
+  sessionInfoRow: null,
+  sessionInfoRowSpacing: null,
+  logoutButton: null,
+  list: null,
+};
 createCacheKey = {};
 const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_DEFAULT, 14));
 createCacheKey.fontWeight = "500";
@@ -284,4 +297,4 @@ const result = require("set").fileFinishedImporting("modules/user_settings/devic
 
 export default function UserSettingsSessionsContainer() {
   return callback2(UserSettingsSessions, {});
-};
+}

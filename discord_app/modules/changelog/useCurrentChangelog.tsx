@@ -12,29 +12,33 @@ function useChangelog(changelogId, stateFromStores) {
   let obj = _require(changelog[4]);
   const items = [closure_5];
   const items1 = [changelogId, stateFromStores];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    changelog = null;
-    if (null != closure_0) {
-      changelog = closure_1_5.getChangelog(tmp, closure_1);
-    }
-    let changelog1 = null;
-    if (null != closure_0) {
-      changelog1 = closure_1_5.getChangelog(tmp, "en-US");
-    }
-    let changelogLoadStatus = null != tmp;
-    if (changelogLoadStatus) {
-      changelogLoadStatus = closure_1_5.getChangelogLoadStatus(tmp, "en-US");
-    }
-    const obj = { changelog, loadState: null, defaultChangelog: null, defaultLoadState: null };
-    let changelogLoadStatus1 = null != tmp;
-    if (changelogLoadStatus1) {
-      changelogLoadStatus1 = closure_1_5.getChangelogLoadStatus(tmp, closure_1);
-    }
-    obj[1] = changelogLoadStatus1;
-    obj[2] = changelog1;
-    obj[3] = changelogLoadStatus;
-    return obj;
-  }, items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => {
+      changelog = null;
+      if (null != closure_0) {
+        changelog = closure_1_5.getChangelog(tmp, closure_1);
+      }
+      let changelog1 = null;
+      if (null != closure_0) {
+        changelog1 = closure_1_5.getChangelog(tmp, "en-US");
+      }
+      let changelogLoadStatus = null != tmp;
+      if (changelogLoadStatus) {
+        changelogLoadStatus = closure_1_5.getChangelogLoadStatus(tmp, "en-US");
+      }
+      const obj = { changelog, loadState: null, defaultChangelog: null, defaultLoadState: null };
+      let changelogLoadStatus1 = null != tmp;
+      if (changelogLoadStatus1) {
+        changelogLoadStatus1 = closure_1_5.getChangelogLoadStatus(tmp, closure_1);
+      }
+      obj[1] = changelogLoadStatus1;
+      obj[2] = changelog1;
+      obj[3] = changelogLoadStatus;
+      return obj;
+    },
+    items1,
+  );
   changelog = stateFromStoresObject.changelog;
   const loadState = stateFromStoresObject.loadState;
   const items2 = [changelogId, changelog, loadState, stateFromStores];

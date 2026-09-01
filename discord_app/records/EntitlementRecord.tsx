@@ -13,7 +13,28 @@ class EntitlementRecord extends tmp2 {
   constructor(arg0) {
     tmp = new EntitlementRecord(new.target, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ id: tmp.id, skuId: tmp.skuId, applicationId: tmp.applicationId, user: tmp.user, userId: tmp.userId, gifterId: tmp.gifterId, type: tmp.type, branches: tmp.branches, startsAt: tmp.startsAt, endsAt: tmp.endsAt, subscriptionId: tmp.subscriptionId, subscriptionPlanId: tmp.subscriptionPlanId, parentId: tmp.parentId, consumed: tmp.consumed, giftCodeBatchId: tmp.giftCodeBatchId, giftStyle: tmp.giftStyle, guildId: tmp.guildId, deleted: tmp.deleted, sourceType: tmp.sourceType, fulfillmentStatus: tmp.fulfillmentStatus } = global);
+    ({
+      id: tmp.id,
+      skuId: tmp.skuId,
+      applicationId: tmp.applicationId,
+      user: tmp.user,
+      userId: tmp.userId,
+      gifterId: tmp.gifterId,
+      type: tmp.type,
+      branches: tmp.branches,
+      startsAt: tmp.startsAt,
+      endsAt: tmp.endsAt,
+      subscriptionId: tmp.subscriptionId,
+      subscriptionPlanId: tmp.subscriptionPlanId,
+      parentId: tmp.parentId,
+      consumed: tmp.consumed,
+      giftCodeBatchId: tmp.giftCodeBatchId,
+      giftStyle: tmp.giftStyle,
+      guildId: tmp.guildId,
+      deleted: tmp.deleted,
+      sourceType: tmp.sourceType,
+      fulfillmentStatus: tmp.fulfillmentStatus,
+    } = global);
     return tmp;
   }
 }
@@ -71,7 +92,31 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
   if (typeof EntitlementRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp22 = new EntitlementRecord(str, tmp18, EntitlementRecord, new.target, id, sku_id, application_id, tmp2, user_id, gifter_user_id, type, branches, date, date1, subscription_id, id, parent_id, consumed, gift_code_batch_id, gift_style, guild_id, deleted, source_type);
+  const tmp22 = new EntitlementRecord(
+    str,
+    tmp18,
+    EntitlementRecord,
+    new.target,
+    id,
+    sku_id,
+    application_id,
+    tmp2,
+    user_id,
+    gifter_user_id,
+    type,
+    branches,
+    date,
+    date1,
+    subscription_id,
+    id,
+    parent_id,
+    consumed,
+    gift_code_batch_id,
+    gift_style,
+    guild_id,
+    deleted,
+    source_type,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp22.id = id;
   tmp22.skuId = sku_id;
@@ -103,7 +148,7 @@ Object.defineProperty(prototype, "isGiftable", {
     }
     return tmp;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get) {
   let tmp = arg2;

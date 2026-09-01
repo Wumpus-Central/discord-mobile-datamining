@@ -41,7 +41,14 @@ prototype["updateVoiceStates"] = function updateVoiceStates(userId, channelId) {
   }
 };
 prototype["getStats"] = function getStats() {
-  return { max_voice_state_count: this.maxVoiceStateCount, total_voice_state_count: this.totalParticipants.size, max_listener_count: this.maxListenerCount, total_listener_count: this.totalListeners.size, max_speaker_count: this.maxSpeakerCount, total_speaker_count: Object.keys(this.totalSpeakers).length };
+  return {
+    max_voice_state_count: this.maxVoiceStateCount,
+    total_voice_state_count: this.totalParticipants.size,
+    max_listener_count: this.maxListenerCount,
+    total_listener_count: this.totalListeners.size,
+    max_speaker_count: this.maxSpeakerCount,
+    total_speaker_count: Object.keys(this.totalSpeakers).length,
+  };
 };
 prototype["getUserVoiceSettingsStats"] = function getUserVoiceSettingsStats(arg0) {
   settings = settings.getSettings(arg0);
@@ -69,7 +76,10 @@ prototype["setSpeaking"] = function setSpeaking(userId, speaking) {
           const _Object = Object;
           let values = Object.values(self.totalSpeakers);
           const _Math = Math;
-          self.maxSpeakerCount = Math.max(self.maxSpeakerCount, values.filter((arg0) => arg0 !== constants.NONE).length);
+          self.maxSpeakerCount = Math.max(
+            self.maxSpeakerCount,
+            values.filter((arg0) => arg0 !== constants.NONE).length,
+          );
         }
       }
     }

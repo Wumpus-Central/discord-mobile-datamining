@@ -9,7 +9,9 @@ import ME from "../../../../../Constants.tsx";
 
 require = arg1;
 ({ HelpdeskArticles: closure_6, MessageFlags: error, MessageTypes: closure_8, Permissions: c9 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx",
+);
 
 export const createStageRaiseHandSystemMessage = function createStageRaiseHandSystemMessage(roleStyle) {
   const message = roleStyle.message;
@@ -43,7 +45,10 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
   }
   obj = { content: null, showInviteToSpeakButton: null, buttonLabel: null, ephemeralIndication: null };
   const intl = tmp(1236).intl;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6(7871)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  obj = {
+    username: messageAuthorWithProcessedColor.nick,
+    usernameOnClick: tmp6(7871)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }),
+  };
   obj[0] = intl.formatToParts(getSystemLocale.t.M87x7Y, obj);
   obj[1] = canResult;
   const intl2 = tmp(1236).intl;

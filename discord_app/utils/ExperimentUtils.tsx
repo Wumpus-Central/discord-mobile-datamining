@@ -119,5 +119,5 @@ export default {
       }
       return arg0;
     }, {});
-  }
+  },
 };

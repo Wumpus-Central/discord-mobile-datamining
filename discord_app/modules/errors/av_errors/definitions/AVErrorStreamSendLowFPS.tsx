@@ -28,7 +28,8 @@ export const AVErrorStreamSendLowFPSDefinition = {
             if (null == mediaEngineConnectionId) {
               return null;
             } else {
-              const lastNonZeroRemoteVideoSinkWantsTime = obj9.getLastNonZeroRemoteVideoSinkWantsTime(encodeStreamKeyResult);
+              const lastNonZeroRemoteVideoSinkWantsTime =
+                obj9.getLastNonZeroRemoteVideoSinkWantsTime(encodeStreamKeyResult);
               if (null != lastNonZeroRemoteVideoSinkWantsTime) {
                 const _performance = performance;
                 if (performance.now() - lastNonZeroRemoteVideoSinkWantsTime < closure_6) {
@@ -37,23 +38,34 @@ export const AVErrorStreamSendLowFPSDefinition = {
               }
               if (rTCConnection.hasActiveRemoteWants()) {
                 let tmp11Result = tmp11(4544);
-                participant = participant.getParticipant(currentUserActiveStream.channelId, tmp11Result.encodeStreamKey(currentUserActiveStream));
+                participant = participant.getParticipant(
+                  currentUserActiveStream.channelId,
+                  tmp11Result.encodeStreamKey(currentUserActiveStream),
+                );
                 if (null == participant) {
                   return null;
                 } else {
                   tmp11Result = tmp11(17421);
-                  const accumulatedStatsWithMinDatapoints = tmp11Result.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, currentUserActiveStream.ownerId);
+                  const accumulatedStatsWithMinDatapoints = tmp11Result.getAccumulatedStatsWithMinDatapoints(
+                    mediaEngineConnectionId,
+                    currentUserActiveStream.ownerId,
+                  );
                   if (null == accumulatedStatsWithMinDatapoints) {
                     return null;
                   } else {
                     const maxQuality = tmp11(9588).getMaxQuality(participant);
                     let tmp9 = null;
                     if (null != maxQuality) {
-                      if (accumulatedStatsWithMinDatapoints.short.frameRate < tmp11Result2.getWarningFrameRate(maxQuality.maxFrameRate)) {
+                      if (
+                        accumulatedStatsWithMinDatapoints.short.frameRate <
+                        tmp11Result2.getWarningFrameRate(maxQuality.maxFrameRate)
+                      ) {
                         obj = { type: null };
                         obj[0] = tmp11(9565).AVError.STREAM_SEND_LOW_FPS;
                         const tmp11Result3 = tmp11(17418);
-                        const merged = Object.assign(tmp11Result3.getStreamErrorContext(tmp11(4544).encodeStreamKey(currentUserActiveStream)));
+                        const merged = Object.assign(
+                          tmp11Result3.getStreamErrorContext(tmp11(4544).encodeStreamKey(currentUserActiveStream)),
+                        );
                         const items = [obj];
                         let tmp6 = items;
                         const tmp11Result4 = tmp11(4544);
@@ -81,5 +93,5 @@ export const AVErrorStreamSendLowFPSDefinition = {
   },
   makeErrorContextKey(streamKey) {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;
-  }
+  },
 };

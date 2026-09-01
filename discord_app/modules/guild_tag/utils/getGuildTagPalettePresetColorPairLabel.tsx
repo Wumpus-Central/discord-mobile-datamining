@@ -92,6 +92,9 @@ const result = set.fileFinishedImporting("modules/guild_tag/utils/getGuildTagPal
 
 export default function getGuildTagPalettePresetColorPairLabel(primary, primary) {
   const intl = getSystemLocale.intl;
-  return intl.formatToPlainString(getSystemLocale.t.g79C8T, { primaryColor: getGuildTagPalettePresetColorLabel(primary), secondaryColor: getGuildTagPalettePresetColorLabel(primary) });
-};
+  return intl.formatToPlainString(getSystemLocale.t.g79C8T, {
+    primaryColor: getGuildTagPalettePresetColorLabel(primary),
+    secondaryColor: getGuildTagPalettePresetColorLabel(primary),
+  });
+}
 export { getGuildTagPalettePresetColorLabel };

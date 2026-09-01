@@ -39,7 +39,14 @@ export const MODE_CHANGE_PHYSICS = obj;
 export const MODE_CHANGE_PHYSICS_CLAMPED = obj;
 export const BORDER_RADIUS_PHYSICS = obj1;
 export const PANEL_CONTROLS_HEIGHT_PHYSICS = obj2;
-export const SPEAKING_PHYSICS = { mass: 0.32, damping: 10, stiffness: 300, restDisplacementThreshold: 0.001, restSpeedThreshold: 0.001, overshootClamping: true };
+export const SPEAKING_PHYSICS = {
+  mass: 0.32,
+  damping: 10,
+  stiffness: 300,
+  restDisplacementThreshold: 0.001,
+  restSpeedThreshold: 0.001,
+  overshootClamping: true,
+};
 export const PUSH_TO_TALK_PIP_PHYSICS = { damping: 20, mass: 0.1, stiffness: 100 };
 export const DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE = { mass: 0.1, damping: 20, stiffness: 500 };
 export const GridItemTypes = { USER: "USER", STREAM: "STREAM", ACTIVITY: "ACTIVIY" };

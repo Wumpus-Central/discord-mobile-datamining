@@ -10,31 +10,37 @@ export default function useGuildPowerupsWarningConfig(arg0, arg1) {
   importDefault = arg1;
   const items = [closure_4];
   const items1 = [arg0];
-  stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => closure_1_4.getAppliedGuildBoostsForGuild(closure_0), items1);
+  stateFromStores = _require(stateFromStores[3]).useStateFromStores(
+    items,
+    () => closure_1_4.getAppliedGuildBoostsForGuild(closure_0),
+    items1,
+  );
   const items2 = [stateFromStores];
-  const diff = importDefault(stateFromStores[2])(arg0).spent - React.useMemo(() => {
-    let num;
-    if (stateFromStores != null) {
-      const filter = stateFromStores.filter;
-      if (filter != null) {
-        const found = filter((ended) => {
-          ended = ended.ended;
-          let tmp = !ended;
-          if (!ended) {
-            tmp = null == ended.endsAt;
+  const diff =
+    importDefault(stateFromStores[2])(arg0).spent -
+    React.useMemo(() => {
+      let num;
+      if (stateFromStores != null) {
+        const filter = stateFromStores.filter;
+        if (filter != null) {
+          const found = filter((ended) => {
+            ended = ended.ended;
+            let tmp = !ended;
+            if (!ended) {
+              tmp = null == ended.endsAt;
+            }
+            return tmp;
+          });
+          if (found != null) {
+            num = found.length;
           }
-          return tmp;
-        });
-        if (found != null) {
-          num = found.length;
         }
       }
-    }
-    if (num == null) {
-      num = 0;
-    }
-    return num;
-  }, items2);
+      if (num == null) {
+        num = 0;
+      }
+      return num;
+    }, items2);
   React = diff;
   const items3 = [diff, arg1];
   return React.useMemo(() => {
@@ -53,4 +59,4 @@ export default function useGuildPowerupsWarningConfig(arg0, arg1) {
     }
     return obj;
   }, items3);
-};
+}

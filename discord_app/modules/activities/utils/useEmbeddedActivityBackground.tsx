@@ -70,4 +70,4 @@ export default function useEmbeddedActivityBackground(applicationId) {
     }
   }, items);
   return { url, state };
-};
+}

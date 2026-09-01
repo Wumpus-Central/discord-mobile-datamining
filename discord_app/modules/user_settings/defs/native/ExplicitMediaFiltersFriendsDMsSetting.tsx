@@ -20,7 +20,9 @@ const pressable = createToggle.createPressable({
   },
   useTrailing: function useObscuredContentFriendsDmSettingValue() {
     const obj = useExplicitContentSettingOrDefault;
-    return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
+    return redactionSettingToRenderedString.redactionSettingToRenderedString(
+      obj.useExplicitContentSettingOrDefault().explicitContentFriendDm,
+    )();
   },
   onPress: function onObscuredContentFriendsDmOnPress() {
     let obj = resolveExplicitContentSettingWithDefaults;
@@ -39,14 +41,14 @@ const pressable = createToggle.createPressable({
   },
   useSearchTerms: function getSearchTerms() {
     const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
+    const items = [intl.string(getSystemLocale.t["N/oRI+"]), ,];
     const intl2 = getSystemLocale.intl;
     items[1] = intl2.string(getSystemLocale.t.QVdYsK);
     const intl3 = getSystemLocale.intl;
     items[2] = intl3.string(getSystemLocale.t["5mnTa7"]);
     return items;
   },
-  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
+  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled,
 });
 let obj = {
   useTitle: function getTitle() {
@@ -58,7 +60,9 @@ let obj = {
   },
   useTrailing: function useObscuredContentFriendsDmSettingValue() {
     const obj = useExplicitContentSettingOrDefault;
-    return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
+    return redactionSettingToRenderedString.redactionSettingToRenderedString(
+      obj.useExplicitContentSettingOrDefault().explicitContentFriendDm,
+    )();
   },
   onPress: function onObscuredContentFriendsDmOnPress() {
     let obj = resolveExplicitContentSettingWithDefaults;
@@ -77,14 +81,14 @@ let obj = {
   },
   useSearchTerms: function getSearchTerms() {
     const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
+    const items = [intl.string(getSystemLocale.t["N/oRI+"]), ,];
     const intl2 = getSystemLocale.intl;
     items[1] = intl2.string(getSystemLocale.t.QVdYsK);
     const intl3 = getSystemLocale.intl;
     items[2] = intl3.string(getSystemLocale.t["5mnTa7"]);
     return items;
   },
-  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
+  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled,
 };
 let result = set.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersFriendsDMsSetting.tsx");
 

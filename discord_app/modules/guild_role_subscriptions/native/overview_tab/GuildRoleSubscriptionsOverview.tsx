@@ -35,10 +35,24 @@ function PurchasePage(arg0) {
   if (storeFront != null) {
     country = storeFront.country;
   }
-  obj = { guildId, refetchOnMount: null == gatedChannelId, countryCode: country, dontFetchWhileTrue: null == country, children: jsx(SeparatorDefault, { guildId, gatedChannelId }) };
-  return jsx(useGroupListingsFetchContext.GroupListingsFetchContextProvider, { guildId, refetchOnMount: null == gatedChannelId, countryCode: country, dontFetchWhileTrue: null == country, children: jsx(SeparatorDefault, { guildId, gatedChannelId }) });
+  obj = {
+    guildId,
+    refetchOnMount: null == gatedChannelId,
+    countryCode: country,
+    dontFetchWhileTrue: null == country,
+    children: jsx(SeparatorDefault, { guildId, gatedChannelId }),
+  };
+  return jsx(useGroupListingsFetchContext.GroupListingsFetchContextProvider, {
+    guildId,
+    refetchOnMount: null == gatedChannelId,
+    countryCode: country,
+    dontFetchWhileTrue: null == country,
+    children: jsx(SeparatorDefault, { guildId, gatedChannelId }),
+  });
 }
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsOverview.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsOverview.tsx",
+);
 
 export default function GuildRoleSubscriptionsOverview(guildId) {
   guildId = guildId.guildId;
@@ -95,6 +109,6 @@ export default function GuildRoleSubscriptionsOverview(guildId) {
     const tmp7 = RoleSubscriptionsUnavailableNotice;
   }
   return tmp6Result;
-};
+}
 export { serverNameHook };
 export { RoleSubscriptionsUnavailableNotice };

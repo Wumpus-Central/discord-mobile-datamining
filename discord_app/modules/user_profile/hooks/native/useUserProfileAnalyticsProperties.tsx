@@ -2,7 +2,9 @@
 import closure_0 from "../../../../../_runtime/00019_noop.js";
 import { UserProfileAnalyticsTypes } from "../../Constants.tsx";
 
-let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx",
+);
 
 export default function useUserProfileAnalyticsProperties(userId) {
   userId = userId.userId;
@@ -15,7 +17,7 @@ export default function useUserProfileAnalyticsProperties(userId) {
   const type = userId.type;
   let memo;
   let memo1;
-  const items = [userId, channelId, guildId, displayProfile, , , , ];
+  const items = [userId, channelId, guildId, displayProfile, , , ,];
   let avatarDecoration;
   if (guildMember != null) {
     avatarDecoration = guildMember.avatarDecoration;
@@ -33,7 +35,17 @@ export default function useUserProfileAnalyticsProperties(userId) {
     if (type == null) {
       USER_SHEET = user.USER_SHEET;
     }
-    const obj = { type: USER_SHEET, other_user_id: userId, channel_id: channelId, guild_id: guildId, profile_has_nitro_customization: null, profile_has_theme_color_customized: null, profile_has_theme_animation: null, has_avatar_decoration: null, has_profile_effect: null };
+    const obj = {
+      type: USER_SHEET,
+      other_user_id: userId,
+      channel_id: channelId,
+      guild_id: guildId,
+      profile_has_nitro_customization: null,
+      profile_has_theme_color_customized: null,
+      profile_has_theme_animation: null,
+      has_avatar_decoration: null,
+      has_profile_effect: null,
+    };
     let tmp2 = null != displayProfile;
     if (tmp2) {
       let result;
@@ -71,7 +83,12 @@ export default function useUserProfileAnalyticsProperties(userId) {
     if (guildMember != null) {
       nick = tmp.nick;
     }
-    const obj = { has_nickname: Boolean(nick), has_guild_member_avatar: null, has_guild_member_banner: null, has_guild_member_bio: null };
+    const obj = {
+      has_nickname: Boolean(nick),
+      has_guild_member_avatar: null,
+      has_guild_member_banner: null,
+      has_guild_member_bio: null,
+    };
     let avatar;
     if (guildMember != null) {
       avatar = tmp.avatar;
@@ -100,4 +117,4 @@ export default function useUserProfileAnalyticsProperties(userId) {
     }
     return obj;
   }, items2);
-};
+}

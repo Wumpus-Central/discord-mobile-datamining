@@ -9,13 +9,24 @@ import { getEmptyActivityFormatter } from "../FamilyCenterUtils.tsx";
 import { useSelectedTeen } from "useSelectedTeen.tsx";
 
 require = arg1;
-({ ACCEPTED_LINK_REQUEST_TIMESTAMP_FORMATTER: closure_6, FAMILY_CENTER_REQUEST_QR_CODE_URL: error, MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_8, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: c9, PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER: c10, UserLinkStatus: unpackModuleId, UserLinkType: closure_12 } = items);
+({
+  ACCEPTED_LINK_REQUEST_TIMESTAMP_FORMATTER: closure_6,
+  FAMILY_CENTER_REQUEST_QR_CODE_URL: error,
+  MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_8,
+  MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: c9,
+  PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER: c10,
+  UserLinkStatus: unpackModuleId,
+  UserLinkType: closure_12,
+} = items);
 let result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useUserLinks.tsx");
 
 export const useUserIdsForLinkStatus = function useUserIdsForLinkStatus(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
+  const stateFromStores =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () =>
+      linkedUsers.getLinkedUsers(),
+    );
   const items1 = [stateFromStores, arg0];
   return React.useMemo(() => {
     const values = Object.values(stateFromStores);
@@ -38,7 +49,10 @@ export const useUserIdsForLinkStatus = function useUserIdsForLinkStatus(arg0) {
 export const useUsersForLinkStatus = function useUsersForLinkStatus(PENDING) {
   let _require = PENDING;
   const items = [closure_5];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
+  const stateFromStores =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () =>
+      linkedUsers.getLinkedUsers(),
+    );
   const items1 = [stateFromStores, PENDING];
   _require = React.useMemo(() => {
     const values = Object.values(stateFromStores);
@@ -59,7 +73,10 @@ export const useUsersForLinkStatus = function useUsersForLinkStatus(PENDING) {
   }, items1);
   const obj = defaultAreStatesEqual;
   const items2 = [closure_4];
-  const stateFromStoresArray = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items2, () => closure_0.map((arg0) => user.getUser(arg0)));
+  const stateFromStoresArray =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items2, () =>
+      closure_0.map((arg0) => user.getUser(arg0)),
+    );
   return stateFromStoresArray.filter((arg0) => null != arg0);
 };
 export const useActiveLinkUserIds = function useActiveLinkUserIds() {
@@ -108,7 +125,10 @@ export const useActiveLinkUsers = function useActiveLinkUsers() {
   let _require = ACTIVE;
   let stateFromStores;
   const items = [closure_5];
-  stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
+  stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
+    items,
+    () => linkedUsers.getLinkedUsers(),
+  );
   const items1 = [stateFromStores, ACTIVE];
   _require = React.useMemo(() => {
     const values = Object.values(stateFromStores);
@@ -129,7 +149,10 @@ export const useActiveLinkUsers = function useActiveLinkUsers() {
   }, items1);
   const obj = defaultAreStatesEqual;
   const items2 = [closure_4];
-  const stateFromStoresArray = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items2, () => closure_0.map((arg0) => user.getUser(arg0)));
+  const stateFromStoresArray =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items2, () =>
+      closure_0.map((arg0) => user.getUser(arg0)),
+    );
   return stateFromStoresArray.filter((arg0) => null != arg0);
 };
 export const useHasActiveLinks = function useHasActiveLinks() {
@@ -138,23 +161,25 @@ export const useHasActiveLinks = function useHasActiveLinks() {
   const items = [closure_5];
   stateFromStores = ACTIVE(647).useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, ACTIVE];
-  return React.useMemo(() => {
-    const values = Object.values(stateFromStores);
-    const found = values.filter((link_status) => {
-      let tmp = null != link_status;
-      if (tmp) {
-        tmp = link_status.link_status === closure_0;
-      }
-      return tmp;
-    });
-    const sorted = found.sort((updated_at, updated_at2) => {
-      const time = new Date(updated_at.updated_at).getTime();
-      const date = new Date(updated_at.updated_at);
-      return time - new Date(updated_at2.updated_at).getTime();
-    });
-    const mapped = sorted.map((user_id) => user_id.user_id);
-    return mapped.filter((arg0) => null != arg0);
-  }, items1).length > 0;
+  return (
+    React.useMemo(() => {
+      const values = Object.values(stateFromStores);
+      const found = values.filter((link_status) => {
+        let tmp = null != link_status;
+        if (tmp) {
+          tmp = link_status.link_status === closure_0;
+        }
+        return tmp;
+      });
+      const sorted = found.sort((updated_at, updated_at2) => {
+        const time = new Date(updated_at.updated_at).getTime();
+        const date = new Date(updated_at.updated_at);
+        return time - new Date(updated_at2.updated_at).getTime();
+      });
+      const mapped = sorted.map((user_id) => user_id.user_id);
+      return mapped.filter((arg0) => null != arg0);
+    }, items1).length > 0
+  );
 };
 export const useHasActiveParentLinks = function useHasActiveParentLinks() {
   const items = [closure_5];
@@ -196,23 +221,25 @@ export const useHasMaxConnections = function useHasMaxConnections() {
   const items = [closure_5];
   stateFromStores = ACTIVE(647).useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, ACTIVE];
-  return React.useMemo(() => {
-    const values = Object.values(stateFromStores);
-    const found = values.filter((link_status) => {
-      let tmp = null != link_status;
-      if (tmp) {
-        tmp = link_status.link_status === closure_0;
-      }
-      return tmp;
-    });
-    const sorted = found.sort((updated_at, updated_at2) => {
-      const time = new Date(updated_at.updated_at).getTime();
-      const date = new Date(updated_at.updated_at);
-      return time - new Date(updated_at2.updated_at).getTime();
-    });
-    const mapped = sorted.map((user_id) => user_id.user_id);
-    return mapped.filter((arg0) => null != arg0);
-  }, items1).length >= (tmp ? closure_8 : closure_9);
+  return (
+    React.useMemo(() => {
+      const values = Object.values(stateFromStores);
+      const found = values.filter((link_status) => {
+        let tmp = null != link_status;
+        if (tmp) {
+          tmp = link_status.link_status === closure_0;
+        }
+        return tmp;
+      });
+      const sorted = found.sort((updated_at, updated_at2) => {
+        const time = new Date(updated_at.updated_at).getTime();
+        const date = new Date(updated_at.updated_at);
+        return time - new Date(updated_at2.updated_at).getTime();
+      });
+      const mapped = sorted.map((user_id) => user_id.user_id);
+      return mapped.filter((arg0) => null != arg0);
+    }, items1).length >= (tmp ? closure_8 : closure_9)
+  );
 };
 export const usePendingRequestCount = function usePendingRequestCount() {
   const items = [closure_4];
@@ -282,13 +309,14 @@ export const useActivityWindowTimeStamp = function useActivityWindowTimeStamp(ac
   const obj = useSelectedTeen;
   const tmp = _require;
   const items = [closure_5];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
-    let rangeStartTimestamp = null;
-    if (null != closure_1) {
-      rangeStartTimestamp = closure_1_5.getRangeStartTimestamp();
-    }
-    return rangeStartTimestamp;
-  });
+  const stateFromStores =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
+      let rangeStartTimestamp = null;
+      if (null != closure_1) {
+        rangeStartTimestamp = closure_1_5.getRangeStartTimestamp();
+      }
+      return rangeStartTimestamp;
+    });
   let result = null;
   if (null != stateFromStores) {
     const _Date = Date;
@@ -301,12 +329,18 @@ export const useActivityWindowTimeStamp = function useActivityWindowTimeStamp(ac
 export const useLinkTimestampText = function useLinkTimestampText(id, status) {
   const _require = id;
   const items = [closure_5];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_5.getLinkTimestamp(closure_0));
+  const stateFromStores =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () =>
+      closure_1_5.getLinkTimestamp(closure_0),
+    );
   if (null == stateFromStores) {
     return null;
   } else {
     const _Date = Date;
-    require("../FamilyCenterUtils.tsx").formatLinkTimestamp(Date.parse(stateFromStores), status === constants.PENDING ? closure_10 : closure_6);
+    require("../FamilyCenterUtils.tsx").formatLinkTimestamp(
+      Date.parse(stateFromStores),
+      status === constants.PENDING ? closure_10 : closure_6,
+    );
     const tmpResult = getEmptyActivityFormatter;
   }
 };

@@ -5,13 +5,15 @@ import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
 
 let obj = { UPSELL: "UPSELL", NITRO: "NITRO", CREPE: "CREPE", INELIGIBLE: "INELIGIBLE" };
 obj = { NITRO: "nitro", CREPE: "crepe" };
-const items = [, ];
+const items = [,];
 ({ CREPE: arr[0], NITRO: arr[1] } = obj);
 const result = set.fileFinishedImporting("modules/quests/utils/QuestOrbMultiplierUtils.tsx");
 
 export const QuestOrbMultiplierEligibilityType = obj;
 export const QuestOrbMultiplierSource = obj;
-export const shouldReceiveQuestOrbMultiplier = function shouldReceiveQuestOrbMultiplier(questOrbMultiplierEligibilityForUser) {
+export const shouldReceiveQuestOrbMultiplier = function shouldReceiveQuestOrbMultiplier(
+  questOrbMultiplierEligibilityForUser,
+) {
   return items.includes(questOrbMultiplierEligibilityForUser);
 };
 export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(perks) {

@@ -13,7 +13,13 @@ import { StreamQualitiesToPremiumType as closure_15 } from "../modules/premium/P
 import { ResolutionTypes } from "../../discord_common/js/packages/media-engine/Constants.tsx";
 
 require = arg1;
-({ ApplicationStreamFPS: c10, ApplicationStreamResolutions: unpackModuleId, ApplicationStreamSettingRequirements: closure_12, getApplicationFramerate: map1, getApplicationResolution: closure_14 } = RESOLUTION_720);
+({
+  ApplicationStreamFPS: c10,
+  ApplicationStreamResolutions: unpackModuleId,
+  ApplicationStreamSettingRequirements: closure_12,
+  getApplicationFramerate: map1,
+  getApplicationResolution: closure_14,
+} = RESOLUTION_720);
 const result = require("set").fileFinishedImporting("utils/StreamQualityUtils.tsx");
 
 export const isPremiumResolution = function isPremiumResolution(maxQuality) {
@@ -26,17 +32,19 @@ export const isPremiumResolution = function isPremiumResolution(maxQuality) {
     closure_0 = callback2(height);
     let tmp6 = callback(maxQuality.maxFrameRate) !== FPS_5.FPS_5;
     if (tmp6) {
-      tmp6 = null == closure_12.find((resolution) => {
-        let tmp = resolution.resolution === closure_0;
-        if (tmp) {
-          tmp = resolution.fps !== closure_1_10.FPS_5;
-        }
-        if (tmp) {
-          tmp = !(null != resolution.quality || null != resolution.guildPremiumTier);
-          const tmp4 = null != resolution.quality || null != resolution.guildPremiumTier;
-        }
-        return tmp;
-      });
+      tmp6 =
+        null ==
+        closure_12.find((resolution) => {
+          let tmp = resolution.resolution === closure_0;
+          if (tmp) {
+            tmp = resolution.fps !== closure_1_10.FPS_5;
+          }
+          if (tmp) {
+            tmp = !(null != resolution.quality || null != resolution.guildPremiumTier);
+            const tmp4 = null != resolution.quality || null != resolution.guildPremiumTier;
+          }
+          return tmp;
+        });
     }
     return tmp6;
   }
@@ -44,14 +52,17 @@ export const isPremiumResolution = function isPremiumResolution(maxQuality) {
 export const isPremiumFPS = function isPremiumFPS(maxQuality) {
   if (null != maxQuality) {
     closure_0 = callback(maxQuality.maxFrameRate);
-    return null == closure_12.find((fps) => {
-      let tmp = fps.fps === closure_0;
-      if (tmp) {
-        tmp = !(null != fps.quality || null != fps.guildPremiumTier);
-        const tmp3 = null != fps.quality || null != fps.guildPremiumTier;
-      }
-      return tmp;
-    });
+    return (
+      null ==
+      closure_12.find((fps) => {
+        let tmp = fps.fps === closure_0;
+        if (tmp) {
+          tmp = !(null != fps.quality || null != fps.guildPremiumTier);
+          const tmp3 = null != fps.quality || null != fps.guildPremiumTier;
+        }
+        return tmp;
+      })
+    );
   }
 };
 export const isPremiumRequirement = function isPremiumRequirement(quality) {
@@ -166,7 +177,16 @@ export const trackStreamSettingsUpdate = function trackStreamSettingsUpdate(pres
   if (currentUser != null) {
     premiumType = currentUser.premiumType;
   }
-  obj = { user_premium_tier: premiumType, guild_premium_tier: null, stream_quality_user_premium_tier: null, stream_quality_guild_premium_tier: null, stream_quality_preset: null, stream_quality_resolution: null, stream_quality_frame_rate: null, soundshare_enabled: null };
+  obj = {
+    user_premium_tier: premiumType,
+    guild_premium_tier: null,
+    stream_quality_user_premium_tier: null,
+    stream_quality_guild_premium_tier: null,
+    stream_quality_preset: null,
+    stream_quality_resolution: null,
+    stream_quality_frame_rate: null,
+    soundshare_enabled: null,
+  };
   let premiumTier;
   if (guild != null) {
     premiumTier = guild.premiumTier;

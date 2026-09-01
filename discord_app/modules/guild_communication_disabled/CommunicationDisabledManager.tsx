@@ -54,7 +54,8 @@ function clearGuildMemberTimeout(closure_2, closure_1) {
     }
   }
 }
-({ getGuildIdFromCommunicationDisabledUserKey: c3, getUserIdFromCommunicationDisabledUserKey: c4 } = trackCommunicationDisabled);
+({ getGuildIdFromCommunicationDisabledUserKey: c3, getUserIdFromCommunicationDisabledUserKey: c4 } =
+  trackCommunicationDisabled);
 let c7 = null;
 initializeDefault;
 class CommunicationDisabledManager extends tmp3 {

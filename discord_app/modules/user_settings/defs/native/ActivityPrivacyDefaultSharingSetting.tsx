@@ -14,17 +14,27 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   usePredicate() {
-    return useIsInActivityPrivacyCopyExperiment.useIsInActivityPrivacyCopyExperiment("ActivityPrivacyDefaultSharingSetting");
+    return useIsInActivityPrivacyCopyExperiment.useIsInActivityPrivacyCopyExperiment(
+      "ActivityPrivacyDefaultSharingSetting",
+    );
   },
   useOptions() {
     return React.useMemo(() => {
-      let obj = { value: callback(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
+      let obj = {
+        value: callback(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF,
+        label: null,
+        subLabel: null,
+      };
       const intl = callback(1236).intl;
       obj[1] = intl.string(callback(1236).t.FzgQna);
       const intl2 = callback(1236).intl;
       obj[2] = intl2.string(callback(1236).t.SQxoyc);
-      const items = [obj, , ];
-      obj = { value: callback(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, label: null, subLabel: null };
+      const items = [obj, ,];
+      obj = {
+        value: callback(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
+        label: null,
+        subLabel: null,
+      };
       const intl3 = callback(1236).intl;
       obj[1] = intl3.string(callback(1236).t["1hvuGH"]);
       const intl4 = callback(1236).intl;
@@ -57,13 +67,19 @@ createToggle = {
         obj = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5[0], affectedGuildIds: obj5[1] } = affectedGuilds);
         obj[2] = activityRestrictionSettingName;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp2(2009)(15506, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+          tmp2(2009)(15506, dependencyMap.paths),
+          "ActivityPrivacyUpsellActionSheet",
+          obj,
+        );
         const obj4 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }
-  }
+  },
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx",
+);
 
 export default createToggle;

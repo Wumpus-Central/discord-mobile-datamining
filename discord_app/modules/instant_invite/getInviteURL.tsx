@@ -20,4 +20,4 @@ export default function getInviteURL() {
     str2 = "" + location.protocol + "//";
   }
   return "" + str2 + window.GLOBAL_ENV.INVITE_HOST + combined;
-};
+}

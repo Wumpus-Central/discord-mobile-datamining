@@ -8,8 +8,7 @@ const NotificationTypes = str2.NotificationTypes;
 let c1 = null;
 let closure_2 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class PushFeedbackStore extends PersistedStore {
-}
+class PushFeedbackStore extends PersistedStore {}
 const prototype = PushFeedbackStore.prototype;
 prototype["initialize"] = function initialize(pushFeedback) {
   if (null != pushFeedback) {
@@ -108,7 +107,7 @@ const pushFeedbackStore = new PushFeedbackStore(dispatcherDefault, {
       }
     }
     return false;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/push_feedback/PushFeedbackStore.tsx");
 

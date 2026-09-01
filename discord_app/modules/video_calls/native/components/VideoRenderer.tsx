@@ -9,7 +9,11 @@ const require = arg1;
 let c4 = importAllResult;
 ({ View: c5, StyleSheet: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ spinner: { height: 32, width: 32 }, center: { alignItems: "center", justifyContent: "center" }, zoomLayoutAndroid: { flex: 1 } });
+let closure_10 = createCacheKey.createStyles({
+  spinner: { height: 32, width: 32 },
+  center: { alignItems: "center", justifyContent: "center" },
+  zoomLayoutAndroid: { flex: 1 },
+});
 let obj = { COVER: 0, [0]: "COVER", CONTAIN: 1, [1]: "CONTAIN", AUTO: 2, [2]: "AUTO" };
 const memoResult = importAllResult.memo((gestureEnabled) => {
   ({ streamId, resizeMode } = gestureEnabled);
@@ -63,7 +67,7 @@ const memoResult = importAllResult.memo((gestureEnabled) => {
   callback = importAllResult.useCallback((nativeEvent) => {
     ({ width, height } = nativeEvent.nativeEvent);
     const size = resizeMode(1493).getWindowDimensions();
-    const bound = Math.min(Math.sqrt(size.width * size.height * 4 / (width * height)), 1);
+    const bound = Math.min(Math.sqrt((size.width * size.height * 4) / (width * height)), 1);
     callback2(width * bound);
     callback3(height * bound);
   }, items);
@@ -191,7 +195,16 @@ const memoResult = importAllResult.memo((gestureEnabled) => {
   const memo3 = importAllResult.useMemo(() => {
     const bound = Math.min(first2 * memo, first);
     const bound1 = Math.min(first3 * memo, first1);
-    return { position: "absolute", left: (first - bound) / 2, top: (first1 - bound1) / 2, width: bound, height: bound1, alignItems: "center", justifyContent: "center", overflow: "hidden" };
+    return {
+      position: "absolute",
+      left: (first - bound) / 2,
+      top: (first1 - bound1) / 2,
+      width: bound,
+      height: bound1,
+      alignItems: "center",
+      justifyContent: "center",
+      overflow: "hidden",
+    };
   }, items7);
   const memo4 = importAllResult.useMemo(() => ({ width: first, height: first1 }), items8);
   const items9 = [first2, memo, first, first3, first1];
@@ -230,7 +243,7 @@ const memoResult = importAllResult.memo((gestureEnabled) => {
     const items11 = [callback(tmp18(9585), obj4), tmp35];
     obj2[2] = items11;
     obj1[4] = callback2(first2, obj2);
-    const items12 = [callback(tmp18(9583), obj1), ];
+    const items12 = [callback(tmp18(9583), obj1)];
     const obj5 = { style: null, children: null };
     obj5[0] = memo5;
     let tmp56 = null;
@@ -255,7 +268,20 @@ const memoResult = importAllResult.memo((gestureEnabled) => {
     const tmp51 = callback2;
     const tmp54 = callback;
   } else if (flag) {
-    const obj6 = { ref: null, onLayout: null, style: null, contentContainerStyle: null, bounces: false, pinchGestureEnabled: null, maximumZoomScale: 8, minimumZoomScale: 1, showsVerticalScrollIndicator: false, showsHorizontalScrollIndicator: false, scrollEventThrottle: 16, children: null };
+    const obj6 = {
+      ref: null,
+      onLayout: null,
+      style: null,
+      contentContainerStyle: null,
+      bounces: false,
+      pinchGestureEnabled: null,
+      maximumZoomScale: 8,
+      minimumZoomScale: 1,
+      showsVerticalScrollIndicator: false,
+      showsHorizontalScrollIndicator: false,
+      scrollEventThrottle: 16,
+      children: null,
+    };
     obj6[0] = ref;
     obj6[1] = callback2;
     obj6[2] = closure_6.absoluteFillObject;
@@ -274,7 +300,7 @@ const memoResult = importAllResult.memo((gestureEnabled) => {
     obj10[3] = callback1;
     obj10[4] = memo1;
     obj9[0] = callback(tmp18(9585), obj10);
-    const items13 = [callback(tmp18(4217).View, obj9), ];
+    const items13 = [callback(tmp18(4217).View, obj9)];
     let tmp48 = null;
     if (tmp37) {
       let renderTagResult1;
@@ -285,7 +311,7 @@ const memoResult = importAllResult.memo((gestureEnabled) => {
     }
     items13[1] = tmp48;
     obj8[1] = items13;
-    const items14 = [callback2(first2, obj8), ];
+    const items14 = [callback2(first2, obj8)];
     tmp43Result = null;
     if (null != tmp35) {
       const obj11 = { style: null, children: null };

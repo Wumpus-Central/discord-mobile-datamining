@@ -14,7 +14,15 @@ let c3 = importAllResult;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let obj = { container: null, tag: null };
-obj = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 };
+obj = {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  borderRadius: 4,
+  paddingHorizontal: 4,
+  paddingVertical: 1,
+  columnGap: 2,
+};
 obj[0] = obj;
 let num = 16;
 if (set.isAndroid()) {
@@ -79,16 +87,30 @@ const memoResult1 = importAllResult.memo((textVariant) => {
       }
     }
     obj = { children: null };
-    const items = [tmp4, ];
+    const items = [tmp4];
     const items1 = [tag.tag, closure_4];
-    items[1] = closure_1_8(closure_1_0(str[9]).Text, { variant: str, color: str2, lineClamp: 1, ellipsizeMode: "tail", style: items1, children: closure_0 });
+    items[1] = closure_1_8(closure_1_0(str[9]).Text, {
+      variant: str,
+      color: str2,
+      lineClamp: 1,
+      ellipsizeMode: "tail",
+      style: items1,
+      children: closure_0,
+    });
     obj[0] = items;
     return closure_1_10(closure_1_9, obj);
   }
   const tmp2 = callback2();
   closure_6 = tmp2;
   if (null != onPress) {
-    let obj = { onPress: null, style: null, disabled: null, accessibilityRole: "button", accessibilityState: null, children: null };
+    let obj = {
+      onPress: null,
+      style: null,
+      disabled: null,
+      accessibilityRole: "button",
+      accessibilityState: null,
+      children: null,
+    };
     obj[0] = onPress;
     let items = [tmp2.container, containerStyles];
     obj[1] = items;
@@ -125,17 +147,21 @@ export default importAllResult.memo((primaryGuild) => {
   let obj = primaryGuild(guildId[11]);
   const items = [closure_6];
   const items1 = [userId, primaryGuild];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const user = closure_1_6.getUser(userId);
-    primaryGuild = undefined;
-    if (user != null) {
-      primaryGuild = user.primaryGuild;
-    }
-    let obj = primaryGuild(guildId[12]);
-    const userPrimaryGuild = obj.getUserPrimaryGuild(primaryGuild);
-    obj = { tag: userPrimaryGuild.tag, badge: userPrimaryGuild.badge, guildId: userPrimaryGuild.guildId };
-    return obj;
-  }, items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => {
+      const user = closure_1_6.getUser(userId);
+      primaryGuild = undefined;
+      if (user != null) {
+        primaryGuild = user.primaryGuild;
+      }
+      let obj = primaryGuild(guildId[12]);
+      const userPrimaryGuild = obj.getUserPrimaryGuild(primaryGuild);
+      obj = { tag: userPrimaryGuild.tag, badge: userPrimaryGuild.badge, guildId: userPrimaryGuild.guildId };
+      return obj;
+    },
+    items1,
+  );
   ({ tag, guildId } = stateFromStoresObject);
   [][0] = guildId;
   let tmp8Result = null;

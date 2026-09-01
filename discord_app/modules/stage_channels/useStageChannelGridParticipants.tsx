@@ -7,7 +7,16 @@ import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { throttleStateFn } from "../../hooks/useThrottle.tsx";
 
 const require = arg1;
-let closure_6 = { SELECTED: 0, [0]: "SELECTED", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE", MEDIA: 3, [3]: "MEDIA" };
+let closure_6 = {
+  SELECTED: 0,
+  [0]: "SELECTED",
+  SPEAKER: 1,
+  [1]: "SPEAKER",
+  AUDIENCE: 2,
+  [2]: "AUDIENCE",
+  MEDIA: 3,
+  [3]: "MEDIA",
+};
 const result = require("set").fileFinishedImporting("modules/stage_channels/useStageChannelGridParticipants.tsx");
 
 export const useStageChannelParticipantsList = function useStageChannelParticipantsList(arg0, arg1, arg2) {
@@ -16,14 +25,23 @@ export const useStageChannelParticipantsList = function useStageChannelParticipa
   closure_2 = arg2;
   const items = [closure_5];
   const items1 = [arg0];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const items = [closure_0, closure_1_5.getParticipantsVersion(closure_0)];
-    return items;
-  }, items1, require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const items = [closure_0, closure_1_5.getParticipantsVersion(closure_0)];
+      return items;
+    },
+    items1,
+    require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual,
+  );
   const obj = initialize;
   const items2 = [stateFromStores1];
   const items3 = [arg0];
-  stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => stateFromStores1.getSelectedParticipantId(closure_0), items3);
+  stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items2,
+    () => stateFromStores1.getSelectedParticipantId(closure_0),
+    items3,
+  );
   const items4 = [stateFromStores, arg1, stateFromStores1, arg2, arg0];
   return stateFromStores.useMemo(() => {
     const items = [];
@@ -32,7 +50,10 @@ export const useStageChannelParticipantsList = function useStageChannelParticipa
     c2 = -1;
     const items2 = [];
     if (c2) {
-      let mutableParticipants = closure_1_5.getMutableParticipants(items, id(memo[6]).StageChannelParticipantNamedIndex.SPEAKER);
+      let mutableParticipants = closure_1_5.getMutableParticipants(
+        items,
+        id(memo[6]).StageChannelParticipantNamedIndex.SPEAKER,
+      );
       const iter = mutableParticipants[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
@@ -80,7 +101,10 @@ export const useStageChannelParticipantsList = function useStageChannelParticipa
       items.push(chunkResult.length);
     }
     pushSection(items4, 1, false);
-    const items5 = [id(memo[6]).StageChannelParticipantNamedIndex.SPEAKER, id(memo[6]).StageChannelParticipantNamedIndex.AUDIENCE];
+    const items5 = [
+      id(memo[6]).StageChannelParticipantNamedIndex.SPEAKER,
+      id(memo[6]).StageChannelParticipantNamedIndex.AUDIENCE,
+    ];
     const item = items5.forEach((SPEAKER) => {
       const mutableParticipants = closure_2_5.getMutableParticipants(closure_1_3[0], SPEAKER);
       let found = mutableParticipants;
@@ -103,7 +127,10 @@ export const useStageChannelParticipantsList = function useStageChannelParticipa
   }, items4);
 };
 export const useThrottleDurationForChannel = function useThrottleDurationForChannel(id) {
-  stageParticipantsCount = stageParticipantsCount(5374).useStageParticipantsCount(id, stageParticipantsCount(5368).StageChannelParticipantNamedIndex.AUDIENCE);
+  stageParticipantsCount = stageParticipantsCount(5374).useStageParticipantsCount(
+    id,
+    stageParticipantsCount(5368).StageChannelParticipantNamedIndex.AUDIENCE,
+  );
   const tmp2 = callback(React.useState(false), 2);
   dependencyMap = tmp2[1];
   const items = [stageParticipantsCount];
@@ -120,7 +147,12 @@ export const useThrottleDurationForChannel = function useThrottleDurationForChan
   }
   return num;
 };
-export const useStageChannelParticipantsListThrottled = function useStageChannelParticipantsListThrottled(id, memo, throttleDurationForChannel, arg3) {
+export const useStageChannelParticipantsListThrottled = function useStageChannelParticipantsListThrottled(
+  id,
+  memo,
+  throttleDurationForChannel,
+  arg3,
+) {
   let flag = arg3;
   if (arg3 === undefined) {
     flag = false;
@@ -129,14 +161,23 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
   dependencyMap = memo;
   let items = [closure_5];
   let items1 = [id];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const items = [closure_0, closure_1_5.getParticipantsVersion(closure_0)];
-    return items;
-  }, items1, require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const items = [closure_0, closure_1_5.getParticipantsVersion(closure_0)];
+      return items;
+    },
+    items1,
+    require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual,
+  );
   const obj = initialize;
   let items2 = [stateFromStores1];
   let items3 = [id];
-  stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => stateFromStores1.getSelectedParticipantId(closure_0), items3);
+  stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items2,
+    () => stateFromStores1.getSelectedParticipantId(closure_0),
+    items3,
+  );
   let items4 = [stateFromStores, memo, stateFromStores1, flag, id];
   memo = stateFromStores.useMemo(() => {
     const items = [];
@@ -145,7 +186,10 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
     c2 = -1;
     const items2 = [];
     if (c2) {
-      let mutableParticipants = closure_1_5.getMutableParticipants(items, id(memo[6]).StageChannelParticipantNamedIndex.SPEAKER);
+      let mutableParticipants = closure_1_5.getMutableParticipants(
+        items,
+        id(memo[6]).StageChannelParticipantNamedIndex.SPEAKER,
+      );
       const iter = mutableParticipants[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
@@ -193,7 +237,10 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
       items.push(chunkResult.length);
     }
     pushSection(items4, 1, false);
-    const items5 = [id(memo[6]).StageChannelParticipantNamedIndex.SPEAKER, id(memo[6]).StageChannelParticipantNamedIndex.AUDIENCE];
+    const items5 = [
+      id(memo[6]).StageChannelParticipantNamedIndex.SPEAKER,
+      id(memo[6]).StageChannelParticipantNamedIndex.AUDIENCE,
+    ];
     const item = items5.forEach((SPEAKER) => {
       const mutableParticipants = closure_2_5.getMutableParticipants(closure_1_3[0], SPEAKER);
       let found = mutableParticipants;
@@ -219,7 +266,10 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
   const tmp4 = flag(memo, 2);
   let items5 = [memo[_require(undefined, 5368).StageChannelParticipantNamedIndex.AUDIENCE]];
   const obj3 = throttleStateFn;
-  [tmp8, tmp9] = flag(require("../../hooks/useThrottle.tsx").useThrottledState(memo, throttleDurationForChannel, items5), 2);
+  [tmp8, tmp9] = flag(
+    require("../../hooks/useThrottle.tsx").useThrottledState(memo, throttleDurationForChannel, items5),
+    2,
+  );
   if (flag) {
     let SELECTED = tmp10.MEDIA;
     let tmp11 = tmp10;
@@ -228,7 +278,7 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
     tmp11 = tmp10;
   }
   let items6 = [tmp5[SELECTED], tmp5[tmp11.SPEAKER], tmp8[tmp11.AUDIENCE]];
-  const items7 = [items6, ];
+  const items7 = [items6];
   const items8 = [tmp6[flag ? tmp11.MEDIA : tmp11.SELECTED], tmp6[tmp11.SPEAKER], tmp9[tmp11.AUDIENCE]];
   items7[1] = items8;
   return items7;

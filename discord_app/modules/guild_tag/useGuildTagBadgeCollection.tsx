@@ -67,4 +67,4 @@ export default function useGuildTagBadgeCollection() {
     }
     return { unlockedBadges, lockedBadges };
   }, items2);
-};
+}

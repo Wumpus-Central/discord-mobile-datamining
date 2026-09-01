@@ -34,7 +34,7 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     showResult = onConfirm();
   }
   return showResult;
-};
+}
 export const showDiscardChangesAlert = function showDiscardChangesAlert(arg0) {
   ({ onConfirm, onCancel } = arg0);
   let obj = _modDef4858;

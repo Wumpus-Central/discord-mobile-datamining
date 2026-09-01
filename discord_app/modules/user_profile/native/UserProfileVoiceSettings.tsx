@@ -21,7 +21,13 @@ function UserVoiceSettings(user) {
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   obj1 = user(trackUserProfileAction[10]);
   const items = [closure_5];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ localVolume: closure_1_5.getLocalVolume(user.id), isLocalMute: closure_1_5.isLocalMute(user.id), isLocalVideoDisabled: closure_1_5.isLocalVideoDisabled(user.id), isLocalVideoAutoDisabled: closure_1_5.isLocalVideoAutoDisabled(user.id), supportsDisableLocalVideo: closure_1_5.supportsDisableLocalVideo() }));
+  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({
+    localVolume: closure_1_5.getLocalVolume(user.id),
+    isLocalMute: closure_1_5.isLocalMute(user.id),
+    isLocalVideoDisabled: closure_1_5.isLocalVideoDisabled(user.id),
+    isLocalVideoAutoDisabled: closure_1_5.isLocalVideoAutoDisabled(user.id),
+    supportsDisableLocalVideo: closure_1_5.supportsDisableLocalVideo(),
+  }));
   ({ isLocalMute, isLocalVideoDisabled } = stateFromStoresObject);
   isLocalVideoAutoDisabled = stateFromStoresObject.isLocalVideoAutoDisabled;
   ({ localVolume, supportsDisableLocalVideo } = stateFromStoresObject);
@@ -36,7 +42,9 @@ function UserVoiceSettings(user) {
   });
   let obj3 = user(trackUserProfileAction[10]);
   const items2 = [isLocalVideoAutoDisabled];
-  const stateFromStores1 = obj3.useStateFromStores(items2, () => isLocalVideoAutoDisabled.isLocalSoundboardMuted(user.id));
+  const stateFromStores1 = obj3.useStateFromStores(items2, () =>
+    isLocalVideoAutoDisabled.isLocalSoundboardMuted(user.id),
+  );
   let obj4 = user(trackUserProfileAction[12]);
   obj = { channelId: channel.id };
   const isSecureFramesUIEnabled = obj4.useIsSecureFramesUIEnabled(obj);
@@ -46,7 +54,7 @@ function UserVoiceSettings(user) {
     onValueChange(arg0) {
       trackUserProfileAction({ action: "SET_VOLUME" });
       channel(trackUserProfileAction[14]).setLocalVolume(user.id, arg0);
-    }
+    },
   };
   const items3 = [callback(channel(trackUserProfileAction[13]), obj, "set-volume")];
   let tmp11 = !stateFromStores;
@@ -96,7 +104,7 @@ function UserVoiceSettings(user) {
       if (isLocalVideoAutoDisabled) {
         obj3 = { style: null, children: null };
         obj3[0] = tmp.disableVideoSublabel;
-        const items4 = [tmp10(tmp2(tmp3[23]).CircleErrorIcon, { size: "xxs", color: "text-feedback-warning" }), ];
+        const items4 = [tmp10(tmp2(tmp3[23]).CircleErrorIcon, { size: "xxs", color: "text-feedback-warning" })];
         obj4 = { variant: "text-xs/medium", color: "text-feedback-warning", children: null };
         const intl4 = tmp2(tmp3[16]).intl;
         obj4[2] = intl4.string(tmp2(tmp3[16]).t.m2Hyj0);
@@ -108,10 +116,15 @@ function UserVoiceSettings(user) {
       obj2[3] = function onPress() {
         trackUserProfileAction({ action: "DISABLE_VIDEO" });
         if (isLocalVideoAutoDisabled) {
-          const result = user(trackUserProfileAction[25]).confirmVideoUnstableConnection(() => closure_1_1(closure_1_2[14]).setDisableLocalVideo(id.id, closure_1_7.MANUAL_ENABLED));
+          const result = user(trackUserProfileAction[25]).confirmVideoUnstableConnection(() =>
+            closure_1_1(closure_1_2[14]).setDisableLocalVideo(id.id, closure_1_7.MANUAL_ENABLED),
+          );
           const obj2 = user(trackUserProfileAction[25]);
         } else {
-          channel(trackUserProfileAction[14]).setDisableLocalVideo(user.id, isLocalVideoDisabled ? closure_1_7.MANUAL_ENABLED : closure_1_7.DISABLED);
+          channel(trackUserProfileAction[14]).setDisableLocalVideo(
+            user.id,
+            isLocalVideoDisabled ? closure_1_7.MANUAL_ENABLED : closure_1_7.DISABLED,
+          );
           const obj = channel(trackUserProfileAction[14]);
         }
       };
@@ -127,11 +140,15 @@ function UserVoiceSettings(user) {
         trackUserProfileAction({ action: "VIEW_SECURE_FRAMES_VERIFICATION_CODE" });
         channel(trackUserProfileAction[28]).hideActionSheet();
         let obj = channel(trackUserProfileAction[28]);
-        const result = channel(trackUserProfileAction[29]).openSecureFramesUserVerificationModal(user.id, channel.id, () => {
-          let obj = closure_1_0(closure_1_2[30]);
-          obj = { userId: id.id, channelId: closure_1.id, guildId: closure_1.guild_id };
-          return obj.validateSecureFramesKeyConsistent(obj);
-        });
+        const result = channel(trackUserProfileAction[29]).openSecureFramesUserVerificationModal(
+          user.id,
+          channel.id,
+          () => {
+            let obj = closure_1_0(closure_1_2[30]);
+            obj = { userId: id.id, channelId: closure_1.id, guildId: closure_1.guild_id };
+            return obj.validateSecureFramesKeyConsistent(obj);
+          },
+        );
       };
       items3.push(tmp10(tmp2(tmp3[15]).UserProfileFormRow, obj5, "view-secure-frames-verification-code"));
     }
@@ -235,7 +252,12 @@ function CurrentUserVoiceSettings(channel) {
 }
 noopAll;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ card: { paddingBottom: 0 }, cardTitle: { marginBottom: 0 }, volumeSlider: { paddingVertical: 20 }, disableVideoSublabel: { flexDirection: "row", alignItems: "center", gap: 4 } });
+let closure_11 = createCacheKey.createStyles({
+  card: { paddingBottom: 0 },
+  cardTitle: { marginBottom: 0 },
+  volumeSlider: { paddingVertical: 20 },
+  disableVideoSublabel: { flexDirection: "row", alignItems: "center", gap: 4 },
+});
 let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileVoiceSettings.tsx");
 
 export default function UserProfileVoiceSettings(arg0) {
@@ -254,4 +276,4 @@ export default function UserProfileVoiceSettings(arg0) {
     tmp3 = callback(UserVoiceSettings, obj);
   }
   return tmp3;
-};
+}

@@ -11,7 +11,10 @@ import createDismissiblePremiumNewBadgeRouteProps from "DismissiblePremiumNewBad
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { CustomTypingIndicatorEditScreen } from "../../../custom_typing_indicator/native/CustomTypingIndicatorEditScreen.tsx";
 
-const dismissiblePremiumNewBadgeRouteProps = createDismissiblePremiumNewBadgeRouteProps.createDismissiblePremiumNewBadgeRouteProps(DismissibleContent.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE);
+const dismissiblePremiumNewBadgeRouteProps =
+  createDismissiblePremiumNewBadgeRouteProps.createDismissiblePremiumNewBadgeRouteProps(
+    DismissibleContent.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE,
+  );
 ({ useTrailing, usePreNavigationAction } = dismissiblePremiumNewBadgeRouteProps);
 obj = {
   useTitle() {
@@ -25,7 +28,7 @@ obj = {
   usePredicate() {
     return "settings" === apexExperiment.useCustomTypingIndicatorConfig("TypingIndicatorSetting").entryPoint;
   },
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.TYPING_INDICATOR,
@@ -34,7 +37,7 @@ obj = {
   },
   usePersistentBadge() {
     return { badgeType: SettingsBadgeType.SettingsBadgeType.BETA };
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/TypingIndicatorSetting.tsx");

@@ -48,11 +48,20 @@ function GuildBoostSlotsInventoryRow(arg0) {
   let obj = { style: tmp.subscriptionSlot, children: null };
   obj = { style: tmp.subscriptionSlotInner, children: null };
   obj = { style: tmp.subscriptionSlotInfo, children: null };
-  const items = [callback(Text.Text, { style: tmp.subscriptionSlotInfoTitle, lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: title }), subtitle];
+  const items = [
+    callback(Text.Text, {
+      style: tmp.subscriptionSlotInfoTitle,
+      lineClamp: 1,
+      variant: "text-md/semibold",
+      color: "interactive-text-active",
+      children: title,
+    }),
+    subtitle,
+  ];
   obj[1] = items;
   const items1 = [callback2(closure_5, obj), action];
   obj[1] = items1;
-  const items2 = [callback2(closure_5, obj), ];
+  const items2 = [callback2(closure_5, obj)];
   let tmp4Result = null;
   if (!isLast) {
     const obj2 = { style: null };
@@ -175,7 +184,7 @@ function UnusedGuildBoostSlots(unusedSlots) {
       obj[1] = tmpResult;
       obj[2] = arg1 === found.length - 1;
       return closure_1_11(closure_1_16, obj, cooldownEndsAt.id);
-    })
+    }),
   ];
   obj[1] = items;
   return closure_12(closure_5, obj);
@@ -193,18 +202,18 @@ function BoostedGuildInfo(guild) {
     obj[0] = guild;
     obj[1] = GuildIconSizes.GuildIconSizes.NORMAL;
     obj[1] = callback(GuildIconSizesDefault, obj);
-    const items = [callback(closure_5, obj), ];
+    const items = [callback(closure_5, obj)];
     obj1 = { children: null };
     const obj2 = { style: null, variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
     obj2[0] = tmp.guildInfoName;
     obj2[3] = guild.name;
-    const items1 = [callback(Text.Text, obj2), ];
+    const items1 = [callback(Text.Text, obj2)];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.guildInfoRowBottom;
     const obj4 = { source: null, style: null };
     obj4[0] = registerAssetDefault;
     obj4[1] = tmp.guildInfoRowIcon;
-    const items2 = [callback(closure_6, obj4), ];
+    const items2 = [callback(closure_6, obj4)];
     const obj5 = { style: null, variant: "text-xs/semibold", color: "interactive-text-active", children: null };
     obj5[0] = tmp.guildInfoSubscriptionCount;
     const intl = getSystemLocale.intl;
@@ -240,7 +249,8 @@ function BoostedGuild(arg0) {
       guildBannerSource = obj2.getGuildBannerSource(stateFromStores);
     }
   }
-  let subscriptionPlaceholderPatternSource = getSubscriptionPlaceholderPatternSource.useSubscriptionPlaceholderPatternSource();
+  let subscriptionPlaceholderPatternSource =
+    getSubscriptionPlaceholderPatternSource.useSubscriptionPlaceholderPatternSource();
   if (null != guildBannerSource) {
     subscriptionPlaceholderPatternSource = guildBannerSource;
   }
@@ -248,14 +258,14 @@ function BoostedGuild(arg0) {
   obj = { style: tmp.subscriptionBody, children: null };
   obj1 = { style: tmp.subscriptionImageView, children: null };
   obj2 = { source: subscriptionPlaceholderPatternSource, style: null };
-  const items2 = [tmp.subscriptionImage, ];
+  const items2 = [tmp.subscriptionImage];
   let prop = null;
   if (null == guildBannerSource) {
     prop = tmp.subscriptionImageFallback;
   }
   items2[1] = prop;
   obj2[1] = items2;
-  const items3 = [closure_11(closure_6, obj2), , ];
+  const items3 = [closure_11(closure_6, obj2), ,];
   let tmp11Result = null;
   if (null != guildBannerSource) {
     const obj3 = { style: null };
@@ -265,34 +275,95 @@ function BoostedGuild(arg0) {
   items3[1] = tmp11Result;
   items3[2] = closure_11(guildBoostSlots(13164), { guild: stateFromStores, theme: stateFromStores1 });
   obj1[1] = items3;
-  const items4 = [closure_12(closure_5, obj1), closure_11(BoostedGuildInfo, { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length })];
+  const items4 = [
+    closure_12(closure_5, obj1),
+    closure_11(BoostedGuildInfo, { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length }),
+  ];
   obj[1] = items4;
-  const items5 = [closure_12(closure_5, obj), ];
+  const items5 = [closure_12(closure_5, obj)];
   const obj4 = { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length };
   const tmp12 = closure_6;
   const tmp2 = require;
   const tmp2Result = getSubscriptionPlaceholderPatternSource;
-  items5[1] = closure_11(closure_5, { children: guildBoostSlots.map((guildBoostSlot) => closure_1_11(closure_1_17, { guild: stateFromStores, guildBoostSlot, isLast: arg1 === guildBoostSlots.length - 1 }, guildBoostSlot.id)) });
+  items5[1] = closure_11(closure_5, {
+    children: guildBoostSlots.map((guildBoostSlot) =>
+      closure_1_11(
+        closure_1_17,
+        { guild: stateFromStores, guildBoostSlot, isLast: arg1 === guildBoostSlots.length - 1 },
+        guildBoostSlot.id,
+      ),
+    ),
+  });
   obj[1] = items5;
   return closure_12(closure_5, obj);
 }
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-createCacheKey = { inventory: { marginBottom: 32 }, header: { marginHorizontal: 16, marginBottom: 16 }, boostedGuild: null, subscriptionBody: null, subscriptionImageView: null, subscriptionImage: null, subscriptionImageFallback: null, subscriptionImageOverlay: null, guildInfo: null, guildInfoIcon: null, guildInfoName: null, guildInfoRowBottom: null, guildInfoRowIcon: null, guildInfoSubscriptionCount: null, subscriptionSlot: null, subscriptionSlotInner: null, subscriptionSlotBorder: null, subscriptionSlotInfo: null, subscriptionSlotInfoTitle: null, subscriptionSlotInfoCooldown: null, unusedSlots: null };
+createCacheKey = {
+  inventory: { marginBottom: 32 },
+  header: { marginHorizontal: 16, marginBottom: 16 },
+  boostedGuild: null,
+  subscriptionBody: null,
+  subscriptionImageView: null,
+  subscriptionImage: null,
+  subscriptionImageFallback: null,
+  subscriptionImageOverlay: null,
+  guildInfo: null,
+  guildInfoIcon: null,
+  guildInfoName: null,
+  guildInfoRowBottom: null,
+  guildInfoRowIcon: null,
+  guildInfoSubscriptionCount: null,
+  subscriptionSlot: null,
+  subscriptionSlotInner: null,
+  subscriptionSlotBorder: null,
+  subscriptionSlotInfo: null,
+  subscriptionSlotInfoTitle: null,
+  subscriptionSlotInfoCooldown: null,
+  unusedSlots: null,
+};
 createCacheKey = { borderRadius: ThemesDefault.radii.xs, marginBottom: 16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, width: "100%", height: 112, overflow: "hidden", alignItems: "center", justifyContent: "center" };
+createCacheKey[4] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  width: "100%",
+  height: 112,
+  overflow: "hidden",
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[5] = { position: "absolute", width: "100%", height: "100%" };
 createCacheKey[6] = { opacity: 0.4 };
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, width: "100%", height: 112, overflow: "hidden", alignItems: "center", justifyContent: "center" };
-createCacheKey[7] = { position: "absolute", width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BLACK, opacity: 0.4 };
+let obj2 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  width: "100%",
+  height: 112,
+  overflow: "hidden",
+  alignItems: "center",
+  justifyContent: "center",
+};
+createCacheKey[7] = {
+  position: "absolute",
+  width: "100%",
+  height: "100%",
+  backgroundColor: ThemesDefault.colors.BLACK,
+  opacity: 0.4,
+};
 createCacheKey[8] = { flexDirection: "row", padding: 16 };
 createCacheKey[9] = { marginRight: 8 };
 let obj4 = {};
-let obj3 = { position: "absolute", width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BLACK, opacity: 0.4 };
-const merged = Object.assign(importDefaultResult(require("ME").Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, 20));
+let obj3 = {
+  position: "absolute",
+  width: "100%",
+  height: "100%",
+  backgroundColor: ThemesDefault.colors.BLACK,
+  opacity: 0.4,
+};
+const merged = Object.assign(
+  importDefaultResult(require("ME").Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, 20),
+);
 obj4.marginBottom = 4;
 createCacheKey[10] = obj4;
 createCacheKey[11] = { flexDirection: "row", alignItems: "center" };
@@ -324,14 +395,16 @@ export default function GuildBoostSlotsInventory() {
   const items1 = [closure_9];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => boostSlots.boostSlots);
   let obj2 = applyDefault(stateFromStores1);
-  const valueResult = obj2.groupBy((premiumGuildSubscription) => {
-    premiumGuildSubscription = premiumGuildSubscription.premiumGuildSubscription;
-    let str = "0";
-    if (null != premiumGuildSubscription) {
-      str = premiumGuildSubscription.guildId;
-    }
-    return str;
-  }).value();
+  const valueResult = obj2
+    .groupBy((premiumGuildSubscription) => {
+      premiumGuildSubscription = premiumGuildSubscription.premiumGuildSubscription;
+      let str = "0";
+      if (null != premiumGuildSubscription) {
+        str = premiumGuildSubscription.guildId;
+      }
+      return str;
+    })
+    .value();
   require = valueResult;
   const first = valueResult[0];
   const keys = Object.keys(valueResult);
@@ -350,7 +423,7 @@ export default function GuildBoostSlotsInventory() {
           tmp12 = callback(UnusedGuildBoostSlots, obj);
         }
       }
-      const items2 = [tmp12, ];
+      const items2 = [tmp12];
       tmp10Result = null;
       if (found.length > 0) {
         obj1 = { children: null };
@@ -358,7 +431,12 @@ export default function GuildBoostSlotsInventory() {
         obj2[0] = tmp.header;
         const intl = tmp3(1236).intl;
         obj2[3] = intl.string(tmp3(1236).t.gB9oQ7);
-        const items3 = [callback(tmp3(4474).Text, obj2), found.map((guildId) => closure_1_11(closure_1_20, { guildId, guildBoostSlots: valueResult[guildId] }, guildId))];
+        const items3 = [
+          callback(tmp3(4474).Text, obj2),
+          found.map((guildId) =>
+            closure_1_11(closure_1_20, { guildId, guildBoostSlots: valueResult[guildId] }, guildId),
+          ),
+        ];
         obj1[0] = items3;
         tmp10Result = tmp10(closure_13, obj1);
       }
@@ -371,4 +449,4 @@ export default function GuildBoostSlotsInventory() {
     tmp10Result = null;
   }
   return tmp10Result;
-};
+}

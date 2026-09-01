@@ -19,7 +19,7 @@ function _requestPushNotificationPermission() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (obj === 2) {
         obj = 3;
         HermesBuiltin.throwTypeError();
@@ -106,7 +106,7 @@ function _requestPushNotificationPermission() {
 }
 function _enableProvisionalPushNotification() {
   const self = this;
-  const tmp = callback2(function*() {
+  const tmp = callback2(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -190,7 +190,11 @@ function _enableProvisionalPushNotification() {
 }
 let result = require("set").fileFinishedImporting("modules/nuf/native/NotificationPermissionUtil.tsx");
 
-export const requestPushNotificationPermission = function requestPushNotificationPermission(ALLOW_TO_REQUEST, ALERT, callback) {
+export const requestPushNotificationPermission = function requestPushNotificationPermission(
+  ALLOW_TO_REQUEST,
+  ALERT,
+  callback,
+) {
   const self = this;
   const apply = _requestPushNotificationPermission.apply;
   if (typeof apply === "unknown") {
@@ -205,7 +209,7 @@ export const useShowReactivationPrompt = function useShowReactivationPrompt() {
   const effect = React.useEffect(() => {
     function _shouldShowReactivationPrompts() {
       const self = this;
-      const tmp = closure_2_4(function*() {
+      const tmp = closure_2_4(function* () {
         if (c2 === 2) {
           c2 = 3;
           HermesBuiltin.throwTypeError();
@@ -318,13 +322,15 @@ export const useCanSeePushNotificationNudge = function useCanSeePushNotification
     hasItem = null != stateFromStores;
   }
   if (hasItem) {
-    const items1 = [, , ];
+    const items1 = [, ,];
     ({ DENIED: arr2[0], PROVISIONAL: arr2[1], UNDETERMINED: arr2[2] } = closure_10);
     hasItem = items1.includes(stateFromStores);
   }
   return hasItem;
 };
-export const useShouldShowPushNotificationNudgeByPromptType = function useShouldShowPushNotificationNudgeByPromptType(CHANNEL_BANNER) {
+export const useShouldShowPushNotificationNudgeByPromptType = function useShouldShowPushNotificationNudgeByPromptType(
+  CHANNEL_BANNER,
+) {
   const isTeenInStrictCountry = set.useIsTeenInStrictCountry();
   let obj = set;
   const tmp = require;
@@ -351,7 +357,7 @@ export const useShouldShowPushNotificationNudgeByPromptType = function useShould
     hasItem = null != stateFromStores;
   }
   if (hasItem) {
-    const items1 = [, , ];
+    const items1 = [, ,];
     ({ DENIED: arr2[0], PROVISIONAL: arr2[1], UNDETERMINED: arr2[2] } = closure_10);
     hasItem = items1.includes(stateFromStores);
   }

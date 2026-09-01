@@ -7,8 +7,7 @@ import closure_2 from "GuildStore.tsx";
 let c3 = null;
 let closure_4 = {};
 const Store = initializeDefault.Store;
-class RegionStore extends Store {
-}
+class RegionStore extends Store {}
 const prototype = RegionStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2);
@@ -87,7 +86,7 @@ const regionStore = new RegionStore(dispatcherDefault, {
   },
   GUILD_DELETE: function handleDeleteGuild(arg0) {
     delete tmp2[tmp];
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/RegionStore.tsx");
 

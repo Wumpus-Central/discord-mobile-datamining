@@ -21,12 +21,27 @@ const result = createCacheKey.experimental_createToken((theme) => {
 });
 createCacheKey = { timestampColor: ThemesDefault.colors.TEXT_MUTED, highlightColor: result };
 let closure_4 = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result1 = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/createCommonMessage.tsx");
+const result1 = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/createCommonMessage.tsx",
+);
 
 export default function createCommonMessage(reactions) {
   ({ message, theme } = reactions);
   const tmp = callback(theme);
-  const obj = { id: message.id, channelId: message.channel_id, type: message.type, mentioned: message.mentioned, timestamp: null, timestampColor: null, dark: null, highlightColor: null, reactions: null, swipeToReplyIconUrl: null, swipeToEditIconUrl: null, accessibilityActions: null };
+  const obj = {
+    id: message.id,
+    channelId: message.channel_id,
+    type: message.type,
+    mentioned: message.mentioned,
+    timestamp: null,
+    timestampColor: null,
+    dark: null,
+    highlightColor: null,
+    reactions: null,
+    swipeToReplyIconUrl: null,
+    swipeToEditIconUrl: null,
+    accessibilityActions: null,
+  };
   channel = channel.getChannel(message.channel_id);
   obj[4] = resetCache.calendarFormat(message.timestamp, true);
   obj[5] = tmp.timestampColor;
@@ -41,4 +56,4 @@ export default function createCommonMessage(reactions) {
   const obj5 = frozen;
   obj[11] = MessageAccessibilityAction.createMessageAccessibilityActions(message, channel);
   return obj;
-};
+}

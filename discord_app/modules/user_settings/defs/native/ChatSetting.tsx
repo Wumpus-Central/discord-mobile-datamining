@@ -13,13 +13,13 @@ obj = {
   },
   parent: null,
   IconComponent: ImageTextIcon.ImageTextIcon,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.TEXT,
   getComponent() {
     return VideoUploadQualityNitroUpsell /* VideoUploadQualityNitroUpsell */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ChatSetting.tsx");

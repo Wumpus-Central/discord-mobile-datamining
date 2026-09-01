@@ -34,7 +34,7 @@ export default importAllResult.forwardRef(function VisualEffectView(blurAmount) 
   if ("default" === blurStyle) {
     token1 = token;
   }
-  const items = [{ backgroundColor: token1 }, merged.style, ];
+  const items = [{ backgroundColor: token1 }, merged.style];
   let tmp8;
   if (null != android_fallbackColor) {
     obj = { backgroundColor: null };
@@ -67,7 +67,13 @@ export default importAllResult.forwardRef(function VisualEffectView(blurAmount) 
     obj.style = items;
     let tmp14Result = tmp14(View, obj);
   } else if (closure_6) {
-    obj1 = { ref: null, blurAmount: null, blurTintIOSParityCompensationColor: null, tintColor: null, blurTargetViewNativeId: null };
+    obj1 = {
+      ref: null,
+      blurAmount: null,
+      blurTintIOSParityCompensationColor: null,
+      tintColor: null,
+      blurTargetViewNativeId: null,
+    };
     obj1[0] = arg1;
     if (blurAmountOverride == null) {
       if (null == num) {

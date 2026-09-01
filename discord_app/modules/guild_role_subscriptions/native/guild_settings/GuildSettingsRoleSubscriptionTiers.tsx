@@ -53,7 +53,7 @@ function Row(disabled) {
     disabled = false;
   }
   const tmp = callback4();
-  const style = [tmp.tierManagementButton, ];
+  const style = [tmp.tierManagementButton];
   if (disabled) {
     disabled = tmp.disabled;
   }
@@ -113,18 +113,18 @@ function EditListingButton(editStateId) {
       obj[2] = obj1;
       tmp11Result = tmp11(preloadDefault, obj);
     }
-    const items1 = [tmp11Result, , ];
+    const items1 = [tmp11Result, ,];
     obj2 = { style: null, children: null };
     obj2[0] = tmp.tierColumn;
     obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj3[2] = callback(obj1.useName(editStateId), 1)[0];
-    const items2 = [closure_17(tmp2(4474).Text, obj3), ];
+    const items2 = [closure_17(tmp2(4474).Text, obj3)];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.detailsRow;
     if (tmp11Result) {
       tmp11Result = tmp11(DraftBadge, {});
     }
-    const items3 = [tmp11Result, , , ];
+    const items3 = [tmp11Result, , ,];
     if (flag2) {
       flag2 = tmp11(ArchivedBadge, {});
     }
@@ -217,10 +217,10 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
         const intl2 = callback(1236).intl;
         obj[1] = intl2.string(callback(1236).t["KzCF/6"]);
         return callback2(callback(5495).NavigatorHeader, obj);
-      }
+      },
     });
   });
-  const items1 = [guildEligibleForTierTemplates, guildId, navigation, ];
+  const items1 = [guildEligibleForTierTemplates, guildId, navigation];
   let id;
   if (first != null) {
     id = first.id;
@@ -267,35 +267,39 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
     if (memo != null) {
       mapped = memo.map((editStateId) => {
         closure_0 = editStateId;
-        return closure_1_17(closure_1_24, {
-          editStateId,
-          guildId: closure_0,
-          groupListingId: first1,
-          onPress() {
-            const guild = closure_1_10.getGuild(closure_0);
-            closure_1_1(closure_1_3[35])(null != guild, "guild must not be null");
-            let obj = closure_1_2(closure_1_3[33]);
-            let id;
-            if (closure_1_3 != null) {
-              id = closure_1_3.id;
-            }
-            obj = {
-              groupListingId: id,
-              initialEditStateId: closure_0,
-              onBeforeDispatchNewListing(id) {
-                id = id.id;
-                closure_1 = id;
-                closure_1_7((arg0) => {
-                  const obj = {};
-                  const merged = Object.assign(arg0);
-                  obj[closure_1] = id;
-                  return obj;
-                });
+        return closure_1_17(
+          closure_1_24,
+          {
+            editStateId,
+            guildId: closure_0,
+            groupListingId: first1,
+            onPress() {
+              const guild = closure_1_10.getGuild(closure_0);
+              closure_1_1(closure_1_3[35])(null != guild, "guild must not be null");
+              let obj = closure_1_2(closure_1_3[33]);
+              let id;
+              if (closure_1_3 != null) {
+                id = closure_1_3.id;
               }
-            };
-            obj.pushTierEditScene(closure_1_1, obj);
-          }
-        }, editStateId);
+              obj = {
+                groupListingId: id,
+                initialEditStateId: closure_0,
+                onBeforeDispatchNewListing(id) {
+                  id = id.id;
+                  closure_1 = id;
+                  closure_1_7((arg0) => {
+                    const obj = {};
+                    const merged = Object.assign(arg0);
+                    obj[closure_1] = id;
+                    return obj;
+                  });
+                },
+              };
+              obj.pushTierEditScene(closure_1_1, obj);
+            },
+          },
+          editStateId,
+        );
       });
     }
     obj = { style: null, children: null };
@@ -309,7 +313,7 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
     let tmp2Result = tmp2(tmp3[36]);
     let intl = tmp5(tmp3[15]).intl;
     obj2[1] = intl.string(tmp5(tmp3[15]).t["7iBIoO"]);
-    const items4 = [callback2(tmp2Result, obj2), , , ];
+    const items4 = [callback2(tmp2Result, obj2), , ,];
     obj3 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj3[0] = tmp.tierManagementDescription;
     let intl2 = tmp5(tmp3[15]).intl;
@@ -324,7 +328,7 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
     obj6 = { source: null };
     tmp2Result = tmp2(tmp3[22]);
     obj6[0] = tmp2(tmp3[37]);
-    const items5 = [callback2(tmp2Result, obj6), ];
+    const items5 = [callback2(tmp2Result, obj6)];
     const obj7 = { style: null, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
     obj7[0] = tmp.createTierLabel;
     const intl3 = tmp5(tmp3[15]).intl;
@@ -346,32 +350,98 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
 ({ ActivityIndicator: closure_6, View: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ CurrencyCodes: map1, GuildSettingsSections: closure_14, GuildSettingsSubsections: closure_15 } = ME);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-createCacheKey = { container: { height: "100%" }, tierManagementDescription: { marginBottom: 16, paddingHorizontal: 16 }, tierManagementButton: null, tierColumn: null, tierIcon: null, tierPrice: null, draftBadge: null, draftBadgeLabel: null, archiveBadge: null, archiveBadgeLabel: null, unsavedBadge: null, unsavedBadgeLabel: null, detailsRow: null, createTierLabel: null, spinner: null, disabled: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, flexDirection: "row", alignItems: "center", alignSelf: "stretch", justifyContent: "flex-start", height: 72, padding: 16, marginHorizontal: 16, marginBottom: 8 };
+createCacheKey = {
+  container: { height: "100%" },
+  tierManagementDescription: { marginBottom: 16, paddingHorizontal: 16 },
+  tierManagementButton: null,
+  tierColumn: null,
+  tierIcon: null,
+  tierPrice: null,
+  draftBadge: null,
+  draftBadgeLabel: null,
+  archiveBadge: null,
+  archiveBadgeLabel: null,
+  unsavedBadge: null,
+  unsavedBadgeLabel: null,
+  detailsRow: null,
+  createTierLabel: null,
+  spinner: null,
+  disabled: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.sm,
+  flexDirection: "row",
+  alignItems: "center",
+  alignSelf: "stretch",
+  justifyContent: "flex-start",
+  height: 72,
+  padding: 16,
+  marginHorizontal: 16,
+  marginBottom: 8,
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flexDirection: "column", justifyContent: "center", alignItems: "flex-start", flex: 1 };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: 20, marginEnd: 12, height: 40, width: 40 };
+createCacheKey[4] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: 20,
+  marginEnd: 12,
+  height: 40,
+  width: 40,
+};
 createCacheKey[5] = { marginStart: 6 };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: 20, marginEnd: 12, height: 40, width: 40 };
-createCacheKey[6] = { backgroundColor: ThemesDefault.unsafe_rawColors.YELLOW_300, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 4 };
-let obj2 = { backgroundColor: ThemesDefault.unsafe_rawColors.YELLOW_300, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 4 };
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: 20,
+  marginEnd: 12,
+  height: 40,
+  width: 40,
+};
+createCacheKey[6] = {
+  backgroundColor: ThemesDefault.unsafe_rawColors.YELLOW_300,
+  borderRadius: ThemesDefault.radii.sm,
+  paddingHorizontal: 4,
+};
+let obj2 = {
+  backgroundColor: ThemesDefault.unsafe_rawColors.YELLOW_300,
+  borderRadius: ThemesDefault.radii.sm,
+  paddingHorizontal: 4,
+};
 createCacheKey[7] = { color: ThemesDefault.unsafe_rawColors.PRIMARY_860, textTransform: "uppercase" };
 let obj3 = { color: ThemesDefault.unsafe_rawColors.PRIMARY_860, textTransform: "uppercase" };
-createCacheKey[8] = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 4 };
+createCacheKey[8] = {
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500,
+  borderRadius: ThemesDefault.radii.sm,
+  paddingHorizontal: 4,
+};
 createCacheKey[9] = { textTransform: "uppercase" };
-let obj4 = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 4 };
-createCacheKey[10] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 4 };
+let obj4 = {
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500,
+  borderRadius: ThemesDefault.radii.sm,
+  paddingHorizontal: 4,
+};
+createCacheKey[10] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: ThemesDefault.radii.sm,
+  paddingHorizontal: 4,
+};
 createCacheKey[11] = { textTransform: "uppercase" };
 createCacheKey[12] = { flexDirection: "row", alignItems: "center", marginTop: 3 };
 createCacheKey[13] = { marginStart: 12 };
 createCacheKey[14] = { marginTop: 12 };
 createCacheKey[15] = { opacity: 0.5 };
 let closure_19 = createCacheKey.createStyles(createCacheKey);
-let obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 4 };
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionTiers.tsx");
+let obj5 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: ThemesDefault.radii.sm,
+  paddingHorizontal: 4,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionTiers.tsx",
+);
 
 export default function GuildSettingsRoleSubscriptionsTiers(guildId) {
   guildId = guildId.guildId;
   const obj = { guildId, children: callback2(GuildSettingsRoleSubscriptionsTiersInner, { guildId }) };
   return callback2(ApplicationRejectedNoticeDefault, obj);
-};
+}

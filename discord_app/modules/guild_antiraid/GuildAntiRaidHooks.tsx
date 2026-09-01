@@ -144,13 +144,14 @@ export const useGuildIncidentsState = function useGuildIncidentsState(id) {
     }
   });
   const items1 = [closure_9];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
-    let guildIncident = null;
-    if (null != closure_0) {
-      guildIncident = closure_1_9.getGuildIncident(tmp);
-    }
-    return guildIncident;
-  });
+  const stateFromStores1 =
+    require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
+      let guildIncident = null;
+      if (null != closure_0) {
+        guildIncident = closure_1_9.getGuildIncident(tmp);
+      }
+      return guildIncident;
+    });
   obj = { shouldShowIncidentActions: stateFromStores, incidentData: stateFromStores1, isUnderLockdown: null };
   let isUnderLockdownResult = null != stateFromStores1;
   if (isUnderLockdownResult) {

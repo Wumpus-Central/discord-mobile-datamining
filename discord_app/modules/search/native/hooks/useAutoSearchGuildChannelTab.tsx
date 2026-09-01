@@ -36,7 +36,10 @@ export const useAutoSearchGuildChannelTab = function useAutoSearchGuildChannelTa
     }
   }, items2);
   const items3 = [searchContext];
-  const effect2 = React.useEffect(() => () => {
-    const result = closure_1_1(closure_1_2[3]).cleanupGuildChannelTab(closure_0);
-  }, items3);
+  const effect2 = React.useEffect(
+    () => () => {
+      const result = closure_1_1(closure_1_2[3]).cleanupGuildChannelTab(closure_0);
+    },
+    items3,
+  );
 };

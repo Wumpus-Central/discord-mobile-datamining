@@ -11,7 +11,9 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 noopAll;
 let closure_5 = createCacheKey.createStyles({ header: { alignSelf: "center" } });
-const result = require("set").fileFinishedImporting("modules/provisional_accounts/native/ProvisionalAccountNoCallAllowed.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/provisional_accounts/native/ProvisionalAccountNoCallAllowed.tsx",
+);
 
 export default function ProvisionalAccountNoCallAllowed() {
   let obj = { header: null, title: null, content: null, actions: null };
@@ -31,4 +33,4 @@ export default function ProvisionalAccountNoCallAllowed() {
   obj1[0] = jsx(getAlertModalItemKey.AlertActionButton, { variant: "secondary", text: null }, "got-it");
   obj[3] = jsx(getAlertModalItemKey.AlertActions, { children: null });
   return jsx(getAlertModalItemKey.AlertModal, { helpdeskArticle: null });
-};
+}

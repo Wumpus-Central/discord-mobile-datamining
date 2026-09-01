@@ -120,7 +120,7 @@ function InviteHeader(invite) {
     obj1 = { guild: null, style: null, disableColor: true };
     obj1[0] = invite.guild;
     obj1[1] = tmp.featureIcon;
-    const items = [callback2(getGuildBadgeSourceDefault, obj1), ];
+    const items = [callback2(getGuildBadgeSourceDefault, obj1)];
     const obj2 = { style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj2[0] = tmp.guildNameText;
     obj2[3] = name;
@@ -231,7 +231,7 @@ function InviteJoinContext(invite) {
     }
     tmp3Result1 = tmp3(7480);
   }
-  const items1 = [tmp22, ];
+  const items1 = [tmp22];
   obj6 = { style: tmp.inviteJoinText, variant: "text-sm/normal", color: "text-default", children: formatResult };
   items1[1] = callback2(invite(4474).Text, obj6);
   obj3[1] = items1;
@@ -274,7 +274,7 @@ function InviteMemberCounts(invite) {
           obj = { children: null };
           obj1 = { style: null };
           obj1[0] = tmp.dotOnline;
-          const items = [callback2(tmp18, obj1), ];
+          const items = [callback2(tmp18, obj1)];
           const obj2 = { variant: "text-xs/medium", color: "text-default", children: null };
           const intl = getSystemLocale.intl;
           const obj3 = { membersOnline: null };
@@ -284,13 +284,13 @@ function InviteMemberCounts(invite) {
           obj[0] = items;
           tmp17Result = tmp17(closure_14, obj);
         }
-        const items1 = [tmp17Result, ];
+        const items1 = [tmp17Result];
         tmp17Result = null;
         if (null != tmp2.memberCount) {
           const obj4 = { children: null };
           const obj5 = { style: null };
           obj5[0] = tmp.dotOffline;
-          const items2 = [callback2(tmp18, obj5), ];
+          const items2 = [callback2(tmp18, obj5)];
           const obj6 = { variant: "text-xs/medium", color: "text-default", children: null };
           const intl2 = getSystemLocale.intl;
           const obj7 = { count: null };
@@ -310,11 +310,32 @@ function InviteMemberCounts(invite) {
 }
 ({ AnalyticEvents: c9, InviteStates: c10 } = ME);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { avatar: null, avatarContainer: null, inviteJoinContainer: null, inviteJoinText: null, inviterIconWrapper: null, inviterIcon: null, guildNameContainer: null, guildNameText: null, featureIcon: null, memberInfo: null, rolesList: null, dotOnline: null, dotOffline: null, embedDetailsCard: null };
+createCacheKey = {
+  avatar: null,
+  avatarContainer: null,
+  inviteJoinContainer: null,
+  inviteJoinText: null,
+  inviterIconWrapper: null,
+  inviterIcon: null,
+  guildNameContainer: null,
+  guildNameText: null,
+  featureIcon: null,
+  memberInfo: null,
+  rolesList: null,
+  dotOnline: null,
+  dotOffline: null,
+  embedDetailsCard: null,
+};
 createCacheKey = { height: 64, width: 64, margin: 0, borderRadius: ThemesDefault.radii.lg };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderRadius: ThemesDefault.radii.none, height: 64, width: 64, marginBottom: 24, marginTop: 24 };
-createCacheKey[2] = { flexDirection: "row", alignItems: "flex-start", marginBottom: 8, marginLeft: 16, marginRight: 16 };
+createCacheKey[2] = {
+  flexDirection: "row",
+  alignItems: "flex-start",
+  marginBottom: 8,
+  marginLeft: 16,
+  marginRight: 16,
+};
 createCacheKey[3] = { textAlign: "center" };
 let obj1 = { borderRadius: ThemesDefault.radii.none, height: 64, width: 64, marginBottom: 24, marginTop: 24 };
 createCacheKey[4] = { borderRadius: ThemesDefault.radii.none, marginRight: 8 };
@@ -327,14 +348,54 @@ createCacheKey[8] = { flexGrow: 0, marginRight: 8, opacity: require("result").DA
 createCacheKey[9] = { flexDirection: "row", alignItems: "center", marginBottom: 8 };
 createCacheKey[10] = { marginTop: 8, marginBottom: 8, alignItems: "center" };
 let obj4 = { flexGrow: 0, marginRight: 8, opacity: require("result").DARK_1_LIGHT_04 };
-createCacheKey[11] = { width: 8, height: 8, borderRadius: ThemesDefault.radii.sm, marginRight: 4, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
-let obj5 = { width: 8, height: 8, borderRadius: ThemesDefault.radii.sm, marginRight: 4, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
-createCacheKey[12] = { width: 8, height: 8, borderRadius: ThemesDefault.radii.sm, marginRight: 4, marginLeft: 16, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
-let obj6 = { width: 8, height: 8, borderRadius: ThemesDefault.radii.sm, marginRight: 4, marginLeft: 16, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
-createCacheKey[13] = { width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, borderRadius: ThemesDefault.radii.sm, marginTop: 16, marginBottom: 8 };
+createCacheKey[11] = {
+  width: 8,
+  height: 8,
+  borderRadius: ThemesDefault.radii.sm,
+  marginRight: 4,
+  backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360,
+};
+let obj5 = {
+  width: 8,
+  height: 8,
+  borderRadius: ThemesDefault.radii.sm,
+  marginRight: 4,
+  backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360,
+};
+createCacheKey[12] = {
+  width: 8,
+  height: 8,
+  borderRadius: ThemesDefault.radii.sm,
+  marginRight: 4,
+  marginLeft: 16,
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_400,
+};
+let obj6 = {
+  width: 8,
+  height: 8,
+  borderRadius: ThemesDefault.radii.sm,
+  marginRight: 4,
+  marginLeft: 16,
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_400,
+};
+createCacheKey[13] = {
+  width: "100%",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  padding: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  marginTop: 16,
+  marginBottom: 8,
+};
 let closure_15 = createCacheKey.createStyles(createCacheKey);
 let closure_21 = { ACCEPT: 0, [0]: "ACCEPT", DECLINE: 1, [1]: "DECLINE" };
-let obj7 = { width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, borderRadius: ThemesDefault.radii.sm, marginTop: 16, marginBottom: 8 };
+let obj7 = {
+  width: "100%",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  padding: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  marginTop: 16,
+  marginBottom: 8,
+};
 const result = require("set").fileFinishedImporting("modules/accept_invite/native/InviteDetails.tsx");
 
 export default function InviteDetails(invite) {
@@ -354,7 +415,7 @@ export default function InviteDetails(invite) {
   let stateFromStores1 = obj2.useStateFromStores(items1, () => canUseMultiAccountMobile.getCanUseMultiAccountMobile());
   obj = {};
   const merged = Object.assign(obj);
-  const items2 = [callback2(InviteDestinationIcon, obj), , , , , , ];
+  const items2 = [callback2(InviteDestinationIcon, obj), , , , , ,];
   obj = {};
   const merged1 = Object.assign(obj);
   items2[1] = callback2(InviteJoinContext, obj);
@@ -371,7 +432,7 @@ export default function InviteDetails(invite) {
     obj4[0] = tmp.embedDetailsCard;
     const obj5 = { event: null };
     obj5[0] = guild_scheduled_event;
-    const items3 = [tmp10(tmp4(9741).GuildEventCardHeader, obj5), , ];
+    const items3 = [tmp10(tmp4(9741).GuildEventCardHeader, obj5), ,];
     const obj6 = { event: null };
     obj6[0] = guild_scheduled_event;
     items3[1] = tmp10(tmp4(9741).GuildEventCardMetaInfo, obj6);
@@ -429,7 +490,18 @@ export default function InviteDetails(invite) {
     _undefined(closure_1_21.ACCEPT);
     callback();
   }
-  const items4 = [callback2(invite(4928).Button, { icon: tmp10Result, variant: "primary", size: "lg", text: tmp24, accessibilityLabel: stringResult, onPress: handleAcceptInvitePress, loading: tmp3 === constants2.ACCEPT, disabled: tmp3 === constants2.ACCEPT }), ];
+  const items4 = [
+    callback2(invite(4928).Button, {
+      icon: tmp10Result,
+      variant: "primary",
+      size: "lg",
+      text: tmp24,
+      accessibilityLabel: stringResult,
+      onPress: handleAcceptInvitePress,
+      loading: tmp3 === constants2.ACCEPT,
+      disabled: tmp3 === constants2.ACCEPT,
+    }),
+  ];
   const intl4 = tmp4(1236).intl;
   const string = intl4.string;
   const t = tmp4(1236).t;
@@ -458,10 +530,10 @@ export default function InviteDetails(invite) {
       callback2();
     },
     loading: tmp3 === constants2.DECLINE,
-    disabled: tmp3 === constants2.DECLINE
+    disabled: tmp3 === constants2.DECLINE,
   });
   obj12[0] = items4;
   items2[6] = closure_13(invite(5376).ButtonGroup, obj12);
   obj11[0] = items2;
   return closure_13(closure_14, obj11);
-};
+}

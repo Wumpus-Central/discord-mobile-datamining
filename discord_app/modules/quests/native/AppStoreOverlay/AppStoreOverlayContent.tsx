@@ -12,7 +12,7 @@ function _getAppStoreOverlayContent() {
     c3 = 0;
     c5 = 0;
     c4 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -107,7 +107,18 @@ function _getAppStoreOverlayContent() {
                   if ("" !== closure_2.app_id) {
                     let storeAppId = closure_2.app_id;
                   }
-                  obj1 = { title: null, subtitle: null, description: null, iconUrl: null, headerUrl: null, stats: null, media: null, storeUrl: null, appId: null, platform: null };
+                  obj1 = {
+                    title: null,
+                    subtitle: null,
+                    description: null,
+                    iconUrl: null,
+                    headerUrl: null,
+                    stats: null,
+                    media: null,
+                    storeUrl: null,
+                    appId: null,
+                    platform: null,
+                  };
                   ({ name: obj4[0], category: obj4[1], description: obj4[2], icon: obj4[3], header_image } = closure_2);
                   obj1[4] = header_image;
                   let tmp12;
@@ -157,14 +168,22 @@ function _getAppStoreOverlayContent() {
 const result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayContent.tsx");
 
 export const getIosAppStoreReviewsUrl = function getIosAppStoreReviewsUrl(arg0) {
-  return "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=" + arg0 + "&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software";
+  return (
+    "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=" +
+    arg0 +
+    "&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software"
+  );
 };
 export const openAppStoreReviews = function openAppStoreReviews(storeUrl, platform, appId) {
   if ("ios" === platform) {
     if (null != appId) {
       if ("" !== appId) {
         const _HermesInternal = HermesInternal;
-        _modDef4190.performURLNavigation("itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=" + appId + "&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software");
+        _modDef4190.performURLNavigation(
+          "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=" +
+            appId +
+            "&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software",
+        );
         const obj = _modDef4190;
       }
     }

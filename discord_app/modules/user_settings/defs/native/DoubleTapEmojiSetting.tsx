@@ -25,7 +25,13 @@ function SettingsEmoji(emoji) {
   } else {
     url = emoji.url;
   }
-  obj = { fastImageStyle: { height: 24, width: 24 }, src: url, name: null, adjustsFontSizeToFit: true, textEmojiStyle: null };
+  obj = {
+    fastImageStyle: { height: 24, width: 24 },
+    src: url,
+    name: null,
+    adjustsFontSizeToFit: true,
+    textEmojiStyle: null,
+  };
   let str = "";
   const tmp = callback2();
   const tmp4 = jsx;
@@ -52,7 +58,8 @@ const pressable = createToggle.createPressable({
     const setting = DoubleTapReactionEmoji.useSetting();
     let obj = getFallbackDoubleTapDisambiguatedEmoji;
     const result = obj.disambiguatedEmojiFromSettingsValue(setting);
-    const fallbackDoubleTapDisambiguatedEmoji = getFallbackDoubleTapDisambiguatedEmoji.getFallbackDoubleTapDisambiguatedEmoji();
+    const fallbackDoubleTapDisambiguatedEmoji =
+      getFallbackDoubleTapDisambiguatedEmoji.getFallbackDoubleTapDisambiguatedEmoji();
     if (null == result) {
       if (null != fallbackDoubleTapDisambiguatedEmoji) {
         obj = { emoji: null };
@@ -75,7 +82,7 @@ const pressable = createToggle.createPressable({
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (constants === 2) {
           constants = 3;
           HermesBuiltin.throwTypeError();
@@ -113,7 +120,12 @@ const pressable = createToggle.createPressable({
                 c3 = 1;
                 constants = 1;
                 const obj3 = { value: null, done: false };
-                obj3[0] = DoubleTapReactionEmoji.updateSetting({ emojiId: null, emojiName: null, animated: null, disableDoubleTap: false });
+                obj3[0] = DoubleTapReactionEmoji.updateSetting({
+                  emojiId: null,
+                  emojiName: null,
+                  animated: null,
+                  disableDoubleTap: false,
+                });
                 return obj3;
               }
             } else if (arg0 === 1) {
@@ -139,7 +151,7 @@ const pressable = createToggle.createPressable({
         }
       })();
     });
-    obj[1] = function() {
+    obj[1] = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -178,7 +190,7 @@ const pressable = createToggle.createPressable({
       flag = false;
     }
     return !flag;
-  }
+  },
 });
 let obj1 = {
   useTitle() {
@@ -191,7 +203,8 @@ let obj1 = {
     const setting = DoubleTapReactionEmoji.useSetting();
     let obj = getFallbackDoubleTapDisambiguatedEmoji;
     const result = obj.disambiguatedEmojiFromSettingsValue(setting);
-    const fallbackDoubleTapDisambiguatedEmoji = getFallbackDoubleTapDisambiguatedEmoji.getFallbackDoubleTapDisambiguatedEmoji();
+    const fallbackDoubleTapDisambiguatedEmoji =
+      getFallbackDoubleTapDisambiguatedEmoji.getFallbackDoubleTapDisambiguatedEmoji();
     if (null == result) {
       if (null != fallbackDoubleTapDisambiguatedEmoji) {
         obj = { emoji: null };
@@ -214,7 +227,7 @@ let obj1 = {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (constants === 2) {
           constants = 3;
           HermesBuiltin.throwTypeError();
@@ -252,7 +265,12 @@ let obj1 = {
                 c3 = 1;
                 constants = 1;
                 const obj3 = { value: null, done: false };
-                obj3[0] = DoubleTapReactionEmoji.updateSetting({ emojiId: null, emojiName: null, animated: null, disableDoubleTap: false });
+                obj3[0] = DoubleTapReactionEmoji.updateSetting({
+                  emojiId: null,
+                  emojiName: null,
+                  animated: null,
+                  disableDoubleTap: false,
+                });
                 return obj3;
               }
             } else if (arg0 === 1) {
@@ -278,7 +296,7 @@ let obj1 = {
         }
       })();
     });
-    obj[1] = function() {
+    obj[1] = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -317,7 +335,7 @@ let obj1 = {
       flag = false;
     }
     return !flag;
-  }
+  },
 };
 let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DoubleTapEmojiSetting.tsx");
 

@@ -5,8 +5,7 @@ import closure_0 from "../../stores/AuthenticationStore.tsx";
 
 let closure_1 = {};
 const Store = initializeDefault.Store;
-class RpcNotificationSettingsStore extends Store {
-}
+class RpcNotificationSettingsStore extends Store {}
 const prototype = RpcNotificationSettingsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_0);
@@ -35,7 +34,7 @@ const rpcNotificationSettingsStore = new RpcNotificationSettingsStore(dispatcher
     if (suppressNotifications.suppressNotifications) {
       closure_1[suppressNotifications.socketId] = suppressNotifications.targetUserId;
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/notifications/RpcNotificationSettingsStore.tsx");
 

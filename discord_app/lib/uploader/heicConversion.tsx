@@ -11,7 +11,7 @@ function _preConvertHeicForUpload() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -114,7 +114,7 @@ function _maybeConvertHeicToJpeg() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -158,7 +158,14 @@ function _maybeConvertHeicToJpeg() {
                 return Math.round(performance.now() - closure_3);
               };
               function fail(reason) {
-                return { success: false, originalFile: closure_0, sizeBefore: closure_0.size, sizeAfter: closure_0.size, reason, compressTimeMs: Math.round(performance.now() - closure_3) };
+                return {
+                  success: false,
+                  originalFile: closure_0,
+                  sizeBefore: closure_0.size,
+                  sizeAfter: closure_0.size,
+                  reason,
+                  compressTimeMs: Math.round(performance.now() - closure_3),
+                };
               }
               c7 = 1;
               c8 = 1;
@@ -285,7 +292,14 @@ function _maybeConvertHeicToJpeg() {
             ({ name, size } = lib);
             const _HermesInternal3 = HermesInternal;
             elapsed.log("converted " + name + ": " + size + " -> " + blob.size + " bytes in " + elapsed() + "ms");
-            const obj13 = { success: true, originalFile: null, convertedBlob: null, sizeBefore: null, sizeAfter: null, compressTimeMs: null };
+            const obj13 = {
+              success: true,
+              originalFile: null,
+              convertedBlob: null,
+              sizeBefore: null,
+              sizeAfter: null,
+              compressTimeMs: null,
+            };
             obj13[1] = lib;
             obj13[2] = blob;
             obj13[3] = lib.size;
@@ -321,7 +335,13 @@ function _maybeConvertHeicToJpeg() {
   return applyArgumentsResult;
 }
 let closure_4 = new timestampDefault("HEIC");
-let obj = { NATIVE_MODULE_UNAVAILABLE: "native_module_unavailable", PLATFORM_UNSUPPORTED: "platform_unsupported", SIZE_LIMIT_EXCEEDED: "size_limit_exceeded", CONVERSION_FAILED: "conversion_failed", UNKNOWN_ERROR: "unknown_error" };
+let obj = {
+  NATIVE_MODULE_UNAVAILABLE: "native_module_unavailable",
+  PLATFORM_UNSUPPORTED: "platform_unsupported",
+  SIZE_LIMIT_EXCEEDED: "size_limit_exceeded",
+  CONVERSION_FAILED: "conversion_failed",
+  UNKNOWN_ERROR: "unknown_error",
+};
 const tmp2 = new timestampDefault("HEIC");
 const result = require("set").fileFinishedImporting("lib/uploader/heicConversion.tsx");
 

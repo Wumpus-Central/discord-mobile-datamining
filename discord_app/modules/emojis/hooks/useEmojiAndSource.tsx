@@ -79,7 +79,7 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
   const effect1 = obj2.useEffect(() => {
     function _fetch() {
       const self = this;
-      const tmp = callback(function*() {
+      const tmp = callback(function* () {
         if (v0 === 2) {
           v0 = 3;
           HermesBuiltin.throwTypeError();
@@ -185,5 +185,13 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
     }
     return tmp4;
   }, items1);
-  return { expressionSourceGuild, expressionSourceApplication, sourceType: sourceType[0], joinedEmojiSourceGuildRecord, hasJoinedEmojiSourceGuild, emoji: emoji.emoji, isFetching };
+  return {
+    expressionSourceGuild,
+    expressionSourceApplication,
+    sourceType: sourceType[0],
+    joinedEmojiSourceGuildRecord,
+    hasJoinedEmojiSourceGuild,
+    emoji: emoji.emoji,
+    isFetching,
+  };
 };

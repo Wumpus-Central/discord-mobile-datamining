@@ -10,10 +10,15 @@ const result = require("set").fileFinishedImporting("modules/video_calls/native/
 export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
   const _require = id;
   const items = [closure_3];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_3.getChannel(closure_0));
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_3.getChannel(closure_0),
+  );
   const obj = initialize;
   const tmp = _require;
-  let isConnectedToVoiceChannel = require("../../voice_chat/VoiceChatHooks.tsx").useIsConnectedToVoiceChannel(stateFromStores);
+  let isConnectedToVoiceChannel = require("../../voice_chat/VoiceChatHooks.tsx").useIsConnectedToVoiceChannel(
+    stateFromStores,
+  );
   let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;

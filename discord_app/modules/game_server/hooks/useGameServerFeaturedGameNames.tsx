@@ -27,4 +27,4 @@ export default function useGameServerFeaturedGameNames() {
   }
   obj[1] = str2;
   return obj;
-};
+}

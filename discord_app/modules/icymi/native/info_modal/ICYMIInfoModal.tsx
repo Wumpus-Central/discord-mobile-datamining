@@ -24,7 +24,9 @@ export default function ICYMIInfoModal(extendedOnboarding) {
     obj[extendedOnboarding(closure_1_2[3]).ICYMIInfoScreens.DEFAULT] = obj;
     const obj5 = extendedOnboarding(closure_1_2[4]);
     if (skipIntro) {
-      let headerCloseButton = obj5.getHeaderCloseButton(() => callback2(4723).popWithKey(callback(16055).ICYMI_INFO_MODAL_KEY));
+      let headerCloseButton = obj5.getHeaderCloseButton(() =>
+        callback2(4723).popWithKey(callback(16055).ICYMI_INFO_MODAL_KEY),
+      );
     } else {
       headerCloseButton = obj5.getHeaderBackButton();
     }
@@ -49,7 +51,7 @@ export default function ICYMIInfoModal(extendedOnboarding) {
       render() {
         return callback3(callback2(16064), {});
       },
-      impressionName: extendedOnboarding(closure_1_2[6]).ImpressionNames.ICYMI_ONBOARDING_TOPICS
+      impressionName: extendedOnboarding(closure_1_2[6]).ImpressionNames.ICYMI_ONBOARDING_TOPICS,
     };
     obj2 = { headerLeft: null, headerRight: null, render: null, impressionName: null };
     obj1 = {
@@ -73,7 +75,7 @@ export default function ICYMIInfoModal(extendedOnboarding) {
       render() {
         return callback3(callback2(16064), {});
       },
-      impressionName: extendedOnboarding(closure_1_2[6]).ImpressionNames.ICYMI_ONBOARDING_TOPICS
+      impressionName: extendedOnboarding(closure_1_2[6]).ImpressionNames.ICYMI_ONBOARDING_TOPICS,
     };
     obj2[0] = extendedOnboarding(closure_1_2[4]).getHeaderBackButton();
     obj2[1] = function headerRight() {
@@ -109,4 +111,4 @@ export default function ICYMIInfoModal(extendedOnboarding) {
     obj[1] = tmp(16055).ICYMIInfoScreens.DEFAULT;
     return tmp5(tmp(11501).Modal, obj);
   }
-};
+}

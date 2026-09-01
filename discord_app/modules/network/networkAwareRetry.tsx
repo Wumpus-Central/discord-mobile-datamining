@@ -11,7 +11,7 @@ function _networkAwareRetry() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -171,4 +171,4 @@ export default function networkAwareRetry() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

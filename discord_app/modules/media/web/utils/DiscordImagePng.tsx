@@ -16,8 +16,7 @@ const prototype = DiscordImagePng.prototype;
 DiscordImagePng["create"] = function create(originalBuffer) {
   try {
     return new DiscordImagePng(decodeImageDefault.decode(originalBuffer), originalBuffer);
-  } catch (err) {
-  }
+  } catch (err) {}
 };
 prototype["hasTransparency"] = function hasTransparency() {
   const self = this;
@@ -48,7 +47,7 @@ prototype["isPng8"] = function isPng8() {
 };
 prototype["hasSrgbIccProfile"] = function hasSrgbIccProfile() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();

@@ -20,11 +20,14 @@ const toggle = createToggle.createToggle({
   parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: explicitContentFromProto.EnableScreenDowntimeScheduleNotifications.useSetting,
   onValueChange(arg0) {
-    const EnableScreenDowntimeScheduleNotifications = explicitContentFromProto.EnableScreenDowntimeScheduleNotifications;
+    const EnableScreenDowntimeScheduleNotifications =
+      explicitContentFromProto.EnableScreenDowntimeScheduleNotifications;
     return EnableScreenDowntimeScheduleNotifications.updateSetting(arg0);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
+    let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({
+      location: "ScreenDowntimeScheduleSetting",
+    });
     const obj = apexExperiment;
     const tmp2 = useUserIsTeenAgeGroupDefault();
     const hasActiveParentLinks = useUserIdsForLinkStatus.useHasActiveParentLinks();
@@ -35,7 +38,7 @@ const toggle = createToggle.createToggle({
       isFamilyCenterV3Enabled = hasActiveParentLinks;
     }
     return isFamilyCenterV3Enabled;
-  }
+  },
 });
 let obj = {
   useTitle() {
@@ -49,11 +52,14 @@ let obj = {
   parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: explicitContentFromProto.EnableScreenDowntimeScheduleNotifications.useSetting,
   onValueChange(arg0) {
-    const EnableScreenDowntimeScheduleNotifications = explicitContentFromProto.EnableScreenDowntimeScheduleNotifications;
+    const EnableScreenDowntimeScheduleNotifications =
+      explicitContentFromProto.EnableScreenDowntimeScheduleNotifications;
     return EnableScreenDowntimeScheduleNotifications.updateSetting(arg0);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
+    let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({
+      location: "ScreenDowntimeScheduleSetting",
+    });
     const obj = apexExperiment;
     const tmp2 = useUserIsTeenAgeGroupDefault();
     const hasActiveParentLinks = useUserIdsForLinkStatus.useHasActiveParentLinks();
@@ -64,7 +70,7 @@ let obj = {
       isFamilyCenterV3Enabled = hasActiveParentLinks;
     }
     return isFamilyCenterV3Enabled;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ScreenDowntimeScheduleSetting.tsx");
 

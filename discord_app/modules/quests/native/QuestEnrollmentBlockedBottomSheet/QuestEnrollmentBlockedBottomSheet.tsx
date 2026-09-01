@@ -53,12 +53,33 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
 }
 noopAll;
 createCacheKey = { heading: null, container: null };
-createCacheKey = { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 };
+createCacheKey = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_24,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
+createCacheKey[1] = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_32,
+};
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { display: "flex", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestEnrollmentBlockedBottomSheet/QuestEnrollmentBlockedBottomSheet.tsx");
+let obj1 = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_32,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/quests/native/QuestEnrollmentBlockedBottomSheet/QuestEnrollmentBlockedBottomSheet.tsx",
+);
 
 export default function QuestEnrollmentBlockedBottomSheetConnected(questContentPosition) {
   ({ questId: require, questEnrollmentBlockedUntil: importDefault, sourceQuestContent } = questContentPosition);
@@ -67,15 +88,33 @@ export default function QuestEnrollmentBlockedBottomSheetConnected(questContentP
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getQuest(closure_0));
   let tmp4 = null;
   if (null != stateFromStores) {
-    obj = { overrideVisibility: true, questOrQuests: null, questContent: null, questContentPosition: null, sourceQuestContent: null, children: null };
+    obj = {
+      overrideVisibility: true,
+      questOrQuests: null,
+      questContent: null,
+      questContentPosition: null,
+      sourceQuestContent: null,
+      children: null,
+    };
     obj[1] = stateFromStores;
     obj[2] = tmp(tmp2[8]).QuestContent.QUEST_ENROLLMENT_BLOCKED_BOTTOM_SHEET;
     obj[3] = questContentPosition.questContentPosition;
     obj[4] = sourceQuestContent;
     obj[5] = function children() {
-      return closure_1_5(closure_1_7, { questId: closure_0, questEnrollmentBlockedUntil: closure_1, sourceQuestContent });
+      return closure_1_5(closure_1_7, {
+        questId: closure_0,
+        questEnrollmentBlockedUntil: closure_1,
+        sourceQuestContent,
+      });
     };
-    tmp4 = jsx(tmp(tmp2[7]).QuestContentImpressionTrackerNative, { overrideVisibility: true, questOrQuests: null, questContent: null, questContentPosition: null, sourceQuestContent: null, children: null });
+    tmp4 = jsx(tmp(tmp2[7]).QuestContentImpressionTrackerNative, {
+      overrideVisibility: true,
+      questOrQuests: null,
+      questContent: null,
+      questContentPosition: null,
+      sourceQuestContent: null,
+      children: null,
+    });
   }
   return tmp4;
-};
+}

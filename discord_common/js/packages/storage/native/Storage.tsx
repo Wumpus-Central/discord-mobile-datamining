@@ -11,8 +11,7 @@ function parseValue(arg0) {
     try {
       const _JSON = JSON;
       parsed = JSON.parse(parsed);
-    } catch (err) {
-    }
+    } catch (err) {}
   }
   return parsed;
 }
@@ -46,7 +45,7 @@ prototype["refresh"] = function refresh() {
     new Set();
   }
   self.secureKeys = new Set();
-  const items1 = [closure_3.refresh(items), ];
+  const items1 = [closure_3.refresh(items)];
   let refreshResult;
   if (DCDStrongboxManager != null) {
     const items2 = [];
@@ -131,7 +130,7 @@ prototype["get"] = function get(key10009) {
 prototype["getAfterRefresh"] = function getAfterRefresh(closure_1_13) {
   closure_0 = closure_1_13;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     yield parsePromise.then(() => c1.get(c0));
     return arg1;
   })();
@@ -188,7 +187,7 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const self = this;
-  return self(function*() {
+  return self(function* () {
     if (item === 2) {
       item = 3;
       HermesBuiltin.throwTypeError();

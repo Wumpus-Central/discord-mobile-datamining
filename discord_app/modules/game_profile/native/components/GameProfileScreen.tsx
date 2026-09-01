@@ -22,16 +22,32 @@ function GetButton(onPress) {
 ({ View: c5, ActivityIndicator: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { loadingContainer: null, scrollView: null, stickyHeader: null };
-createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = {
+  flex: 1,
+  justifyContent: "center",
+  alignItems: "center",
+  minHeight: 300,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[2] = { position: "absolute", top: 0, left: 0, right: 0 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let closure_12 = { code: "function GameProfileScreenTsx1(){const{heroHeaderHeight,scrollY,STICKY_HEADER_HEIGHT}=this.__closure;return heroHeaderHeight.get()>0&&scrollY.get()>=heroHeaderHeight.get()-STICKY_HEADER_HEIGHT;}" };
-let closure_13 = { code: "function GameProfileScreenTsx2(isVisible,wasVisible){const{stickyHeaderVisible,withTiming}=this.__closure;if(isVisible!==wasVisible){stickyHeaderVisible.set(withTiming(isVisible?1:0,{duration:150}));}}" };
-let closure_14 = { code: "function GameProfileScreenTsx3(){const{interpolate,stickyHeaderVisible,STICKY_HEADER_HEIGHT}=this.__closure;return{transform:[{translateY:interpolate(stickyHeaderVisible.get(),[0,1],[-1*STICKY_HEADER_HEIGHT,0])}]};}" };
-let closure_15 = { code: "function GameProfileScreenTsx4(){const{scrollY,storeLinksSectionBottomY,STICKY_HEADER_HEIGHT}=this.__closure;return scrollY.get()>storeLinksSectionBottomY.get()-STICKY_HEADER_HEIGHT;}" };
-let closure_16 = { code: "function GameProfileScreenTsx5(shouldShow,prevShouldShow){const{runOnJS,setShowGetButton}=this.__closure;if(shouldShow!==prevShouldShow){runOnJS(setShowGetButton)(shouldShow);}}" };
+let closure_12 = {
+  code: "function GameProfileScreenTsx1(){const{heroHeaderHeight,scrollY,STICKY_HEADER_HEIGHT}=this.__closure;return heroHeaderHeight.get()>0&&scrollY.get()>=heroHeaderHeight.get()-STICKY_HEADER_HEIGHT;}",
+};
+let closure_13 = {
+  code: "function GameProfileScreenTsx2(isVisible,wasVisible){const{stickyHeaderVisible,withTiming}=this.__closure;if(isVisible!==wasVisible){stickyHeaderVisible.set(withTiming(isVisible?1:0,{duration:150}));}}",
+};
+let closure_14 = {
+  code: "function GameProfileScreenTsx3(){const{interpolate,stickyHeaderVisible,STICKY_HEADER_HEIGHT}=this.__closure;return{transform:[{translateY:interpolate(stickyHeaderVisible.get(),[0,1],[-1*STICKY_HEADER_HEIGHT,0])}]};}",
+};
+let closure_15 = {
+  code: "function GameProfileScreenTsx4(){const{scrollY,storeLinksSectionBottomY,STICKY_HEADER_HEIGHT}=this.__closure;return scrollY.get()>storeLinksSectionBottomY.get()-STICKY_HEADER_HEIGHT;}",
+};
+let closure_16 = {
+  code: "function GameProfileScreenTsx5(shouldShow,prevShouldShow){const{runOnJS,setShowGetButton}=this.__closure;if(shouldShow!==prevShouldShow){runOnJS(setShowGetButton)(shouldShow);}}",
+};
 let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 let result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileScreen.tsx");
 
@@ -69,7 +85,10 @@ export default function GameProfileScreen(gameId) {
   const tmp6Result = source(sourceUserId[10])(source(sourceUserId[11]).openURL);
   React = tmp6Result;
   obj1 = React;
-  first = num(React.useState(() => gameId(sourceUserId[12]).generateViewId()), 1)[0];
+  first = num(
+    React.useState(() => gameId(sourceUserId[12]).generateViewId()),
+    1,
+  )[0];
   ref = React.useRef(null);
   ref1 = React.useRef(0);
   let obj2 = gameId(sourceUserId[13]);
@@ -262,27 +281,39 @@ export default function GameProfileScreen(gameId) {
     obj.trackGameProfileOpen(obj);
   }, items7);
   const items8 = [gameId, source, sourceUserId, first];
-  const effect3 = obj1.useEffect(() => () => {
-    let obj = closure_1_0(closure_1_2[12]);
-    const guildIdAndVerifiedFromInvite = obj.getGuildIdAndVerifiedFromInvite(ref2.current);
-    ({ guildId, isVerified } = guildIdAndVerifiedFromInvite);
-    obj = { viewId: closure_5, gameId: closure_0, gameName: null, playedFriendIds: null, playedFriendsData: null, similarGames: null, guildId: null, isVerified: null };
-    let str = ref.current;
-    if (str == null) {
-      str = "";
-    }
-    obj[2] = str;
-    obj[3] = [];
-    obj[4] = [];
-    let similarGames = closure_1_7.getSimilarGames(closure_0);
-    if (similarGames == null) {
-      similarGames = [];
-    }
-    obj[5] = similarGames;
-    obj[6] = guildId;
-    obj[7] = isVerified;
-    const result = closure_1_0(closure_1_2[12]).trackGameProfileClose(obj);
-  }, items8);
+  const effect3 = obj1.useEffect(
+    () => () => {
+      let obj = closure_1_0(closure_1_2[12]);
+      const guildIdAndVerifiedFromInvite = obj.getGuildIdAndVerifiedFromInvite(ref2.current);
+      ({ guildId, isVerified } = guildIdAndVerifiedFromInvite);
+      obj = {
+        viewId: closure_5,
+        gameId: closure_0,
+        gameName: null,
+        playedFriendIds: null,
+        playedFriendsData: null,
+        similarGames: null,
+        guildId: null,
+        isVerified: null,
+      };
+      let str = ref.current;
+      if (str == null) {
+        str = "";
+      }
+      obj[2] = str;
+      obj[3] = [];
+      obj[4] = [];
+      let similarGames = closure_1_7.getSimilarGames(closure_0);
+      if (similarGames == null) {
+        similarGames = [];
+      }
+      obj[5] = similarGames;
+      obj[6] = guildId;
+      obj[7] = isVerified;
+      const result = closure_1_0(closure_1_2[12]).trackGameProfileClose(obj);
+    },
+    items8,
+  );
   const items9 = [sharedValue1];
   const items10 = [sharedValue3];
   const callback4 = obj1.useCallback((arg0) => {
@@ -301,7 +332,14 @@ export default function GameProfileScreen(gameId) {
     }
     return fn;
   }, items11);
-  obj2 = { ref: bottomSheetRef, startExpanded: true, scrollable: true, handleDisabled: true, onExpand: callback1, children: null };
+  obj2 = {
+    ref: bottomSheetRef,
+    startExpanded: true,
+    scrollable: true,
+    handleDisabled: true,
+    onExpand: callback1,
+    children: null,
+  };
   if (!isLoading) {
     if (null != data) {
       let tmp46 = first1;
@@ -312,7 +350,20 @@ export default function GameProfileScreen(gameId) {
       const obj4 = { obscured: null, children: null };
       obj4[0] = tmp13;
       tmp5Result = tmp5(tmp3[24]);
-      const obj5 = { game: null, invite: null, viewId: null, source: null, trackAction: null, onGuildInviteResolved: null, closeModal: null, scrollY: null, websiteButtons: null, onStoreLinksMeasured: null, onHeaderHeightMeasured: null, scrollOffsetRef: null };
+      const obj5 = {
+        game: null,
+        invite: null,
+        viewId: null,
+        source: null,
+        trackAction: null,
+        onGuildInviteResolved: null,
+        closeModal: null,
+        scrollY: null,
+        websiteButtons: null,
+        onStoreLinksMeasured: null,
+        onHeaderHeightMeasured: null,
+        scrollOffsetRef: null,
+      };
       obj5[0] = data;
       obj5[1] = first1;
       obj5[2] = first;
@@ -331,7 +382,7 @@ export default function GameProfileScreen(gameId) {
       obj3[3] = first1(tmp5Result, obj4);
       let tmp45 = first1(tmp2(tmp3[23]).BottomSheetScrollView, obj3);
     }
-    const items12 = [tmp45, , ];
+    const items12 = [tmp45, ,];
     const obj6 = { style: null, pointerEvents: "box-none", children: null };
     const items13 = [tmp.stickyHeader, animatedStyle];
     obj6[0] = items13;
@@ -350,4 +401,4 @@ export default function GameProfileScreen(gameId) {
   tmp43 = name;
   tmp45 = first1(first, { style: tmp.loadingContainer, children: first1(ref, { animating: true, size: "large" }) });
   tmp46 = first1;
-};
+}

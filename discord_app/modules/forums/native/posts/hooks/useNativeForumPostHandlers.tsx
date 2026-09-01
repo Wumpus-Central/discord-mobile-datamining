@@ -10,7 +10,12 @@ import ME from "../../../../../Constants.tsx";
 import { OpenThreadAnalyticsLocations as closure_15 } from "../../../../threads/ThreadConstants.tsx";
 
 const require = arg1;
-({ AnalyticsObjectTypes: unpackModuleId, AnalyticsPages: closure_12, AnalyticsSections: map1, EMPTY_STRING_SNOWFLAKE_ID: closure_14 } = ME);
+({
+  AnalyticsObjectTypes: unpackModuleId,
+  AnalyticsPages: closure_12,
+  AnalyticsSections: map1,
+  EMPTY_STRING_SNOWFLAKE_ID: closure_14,
+} = ME);
 let result = require("set").fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostHandlers.tsx");
 
 export default function useNativeForumPostHandlers(threadId) {
@@ -93,7 +98,17 @@ export default function useNativeForumPostHandlers(threadId) {
           str = str.toString();
         }
       }
-      obj = { uri: str, guildId: channel.guild_id, messageId: null, channelId: null, mediaIndex: null, width: null, height: null, accessoryType: null, attachmentId: null };
+      obj = {
+        uri: str,
+        guildId: channel.guild_id,
+        messageId: null,
+        channelId: null,
+        mediaIndex: null,
+        width: null,
+        height: null,
+        accessoryType: null,
+        attachmentId: null,
+      };
       let tmp18 = closure_0;
       if (closure_0 == null) {
         tmp18 = closure_1_14;
@@ -104,7 +119,14 @@ export default function useNativeForumPostHandlers(threadId) {
       return obj;
     });
     const obj2 = threadId(closure_1_3[12]);
-    obj = { initialIndex, initialSources: mapped, channelId: channel.id, contextName: channelName, contextIcon: channelIcon, originViewOrOriginLayout: containerRef.containerRef.current };
+    obj = {
+      initialIndex,
+      initialSources: mapped,
+      channelId: channel.id,
+      contextName: channelName,
+      contextIcon: channelIcon,
+      originViewOrOriginLayout: containerRef.containerRef.current,
+    };
     threadId(closure_1_3[16]).openMediaModal(obj);
   }, items);
   callback1 = React.useCallback(() => {
@@ -225,8 +247,13 @@ export default function useNativeForumPostHandlers(threadId) {
       NORMAL(closure_1_3[10])(null != channel, "[Forum Post Handlers] Thread cannot be null.");
       const firstMessage = closure_1_9.getMessage(threadId).firstMessage;
       NORMAL(closure_1_3[10])(null != firstMessage, "[Forum Post Handlers] Message cannot be null.");
-      const result = threadId(closure_1_3[25]).handleAddOrRemoveReaction(firstMessage.id, channel, null, NORMAL === threadId(closure_1_3[9]).ReactionTypes.BURST);
+      const result = threadId(closure_1_3[25]).handleAddOrRemoveReaction(
+        firstMessage.id,
+        channel,
+        null,
+        NORMAL === threadId(closure_1_3[9]).ReactionTypes.BURST,
+      );
     }, items7),
-    onTapMostRecentMessage: callback2
+    onTapMostRecentMessage: callback2,
   };
-};
+}

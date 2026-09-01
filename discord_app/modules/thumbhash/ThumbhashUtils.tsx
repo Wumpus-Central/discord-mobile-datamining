@@ -15,8 +15,8 @@ function thumbHashToRGBA(arg0) {
   if (num2 === undefined) {
     num2 = 1;
   }
-  let diff1 = arg0[0] | arg0[1] << 8 | arg0[2] << 16;
-  if ((arg0[3] | arg0[4] << 8) >> 15) {
+  let diff1 = arg0[0] | (arg0[1] << 8) | (arg0[2] << 16);
+  if ((arg0[3] | (arg0[4] << 8)) >> 15) {
     let num3 = 7;
     if (tmp3) {
       num3 = 5;
@@ -26,7 +26,7 @@ function thumbHashToRGBA(arg0) {
     tmp5 = 7 & tmp2;
   }
   const maxResult = max(3, tmp5);
-  if ((arg0[3] | arg0[4] << 8) >> 15) {
+  if ((arg0[3] | (arg0[4] << 8)) >> 15) {
     let num4 = 7 & tmp2;
   } else {
     num4 = 7;
@@ -61,7 +61,7 @@ function thumbHashToRGBA(arg0) {
       if (num10 * maxResult1 < maxResult * (maxResult1 - num8)) {
         do {
           let sum = tmp12 + 1;
-          let arr = items.push(((arg0[num6 + (tmp12 >> 1)] >> ((1 & tmp12) << 2) & 15) / 7.5 - 1) * tmp9);
+          let arr = items.push((((arg0[num6 + (tmp12 >> 1)] >> ((1 & tmp12) << 2)) & 15) / 7.5 - 1) * tmp9);
           let sum1 = num10 + 1;
           tmp12 = sum;
           num10 = sum1;
@@ -90,7 +90,7 @@ function thumbHashToRGBA(arg0) {
     if (num12 * 3 < result3) {
       do {
         let sum2 = tmp23 + 1;
-        arr = items1.push(((arg0[num6 + (tmp23 >> 1)] >> ((1 & tmp23) << 2) & 15) / 7.5 - 1) * tmp19);
+        arr = items1.push((((arg0[num6 + (tmp23 >> 1)] >> ((1 & tmp23) << 2)) & 15) / 7.5 - 1) * tmp19);
         let sum3 = num12 + 1;
         tmp23 = sum2;
         num12 = sum3;
@@ -116,7 +116,7 @@ function thumbHashToRGBA(arg0) {
     if (num14 * 3 < result5) {
       do {
         let sum4 = tmp33 + 1;
-        let arr1 = items2.push(((arg0[num6 + (tmp33 >> 1)] >> ((1 & tmp33) << 2) & 15) / 7.5 - 1) * tmp29);
+        let arr1 = items2.push((((arg0[num6 + (tmp33 >> 1)] >> ((1 & tmp33) << 2)) & 15) / 7.5 - 1) * tmp29);
         let sum5 = num14 + 1;
         tmp33 = sum4;
         num14 = sum5;
@@ -143,7 +143,7 @@ function thumbHashToRGBA(arg0) {
       if (num16 * 5 < result7) {
         do {
           let sum6 = tmp43 + 1;
-          let arr2 = items3.push(((arg0[num6 + (tmp43 >> 1)] >> ((1 & tmp43) << 2) & 15) / 7.5 - 1) * result);
+          let arr2 = items3.push((((arg0[num6 + (tmp43 >> 1)] >> ((1 & tmp43) << 2)) & 15) / 7.5 - 1) * result);
           let sum7 = num16 + 1;
           tmp43 = sum6;
           num16 = sum7;
@@ -190,7 +190,7 @@ function thumbHashToRGBA(arg0) {
           }
           let maxResult2 = max(maxResult, num22);
           for (let num23 = 0; num23 < maxResult2; num23 = num23 + 1) {
-            items4[num23] = cos(PI / w * tmp63 * num23);
+            items4[num23] = cos((PI / w) * tmp63 * num23);
           }
           let num24 = 3;
           if (tmp3) {
@@ -198,7 +198,7 @@ function thumbHashToRGBA(arg0) {
           }
           let maxResult3 = max(maxResult1, num24);
           for (let num25 = 0; num25 < maxResult3; num25 = num25 + 1) {
-            [][num25] = cos(PI / h * tmp56 * num25);
+            [][num25] = cos((PI / h) * tmp56 * num25);
           }
           let num26 = 0;
           let num27 = 0;
@@ -332,7 +332,10 @@ function thumbHashToRGBA(arg0) {
 let result = set.fileFinishedImporting("modules/thumbhash/ThumbhashUtils.tsx");
 
 export const createThumbhashImageFromPlaceholder = function createThumbhashImageFromPlaceholder(placeholder) {
-  const tmp = thumbHashToRGBA(Uint8Array.from(atob(placeholder), (str) => str.charCodeAt(0)), { detail: 1, pop: 1.1 });
+  const tmp = thumbHashToRGBA(
+    Uint8Array.from(atob(placeholder), (str) => str.charCodeAt(0)),
+    { detail: 1, pop: 1.1 },
+  );
   return thumbHashToRGBA2.rgbaToDataURL(tmp.w, tmp.h, tmp.rgba);
 };
 export { thumbHashToRGBA };

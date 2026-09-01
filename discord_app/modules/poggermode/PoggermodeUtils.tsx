@@ -4,7 +4,15 @@ import unsafe_getRawColor from "../../../discord_common/js/packages/tokens/shims
 import ConfettiLocation from "PoggermodeConstants.tsx";
 
 ({ ShakeLevel: obj1, SHAKE_STEPS: c3, SHAKE_STEP_DIVIDER: c4 } = ConfettiLocation);
-let items = [[1, 0.001], [25, 0.3], [100, 0.5], [250, 0.8], [500, 0.9], [2500, 0.95], [9001, 1]];
+let items = [
+  [1, 0.001],
+  [25, 0.3],
+  [100, 0.5],
+  [250, 0.8],
+  [500, 0.9],
+  [2500, 0.95],
+  [9001, 1],
+];
 let closure_5 = items.map((arg0) => {
   [tmp] = arg0;
   return tmp;
@@ -23,55 +31,61 @@ export const getComboShakeIntensity = function getComboShakeIntensity(userCombo,
   const items = [table[LEVEL_3], table2[LEVEL_3]];
   c0 = undefined;
   c1 = undefined;
-  [arr2, ] = items;
+  [arr2] = items;
   LEVEL_3 = undefined;
   const result = userCombo.value * userCombo.multiplier;
   LEVEL_3 = result;
   let num = 0;
   if (result > 0) {
     const _Math = Math;
-    num = Math.min(100000, arr2.reduce((arg0, arg1, arg2) => {
-      if (c2 > arg1) {
-        if (arg2 + 1 === length.length) {
-          return tmp4[arg2];
+    num = Math.min(
+      100000,
+      arr2.reduce((arg0, arg1, arg2) => {
+        if (c2 > arg1) {
+          if (arg2 + 1 === length.length) {
+            return tmp4[arg2];
+          } else {
+            return ((tmp - arg1) / (tmp6[arg2 + 1] - arg1)) * (tmp4[arg2 + 1] - tmp5) + tmp5;
+          }
         } else {
-          return (tmp - arg1) / (tmp6[arg2 + 1] - arg1) * (tmp4[arg2 + 1] - tmp5) + tmp5;
+          let tmp2 = arg0;
+          if (tmp === arg1) {
+            tmp2 = dependencyMap[arg2];
+          }
+          return tmp2;
         }
-      } else {
-        let tmp2 = arg0;
-        if (tmp === arg1) {
-          tmp2 = dependencyMap[arg2];
-        }
-        return tmp2;
-      }
-    }, 0));
+      }, 0),
+    );
   }
   return num;
 };
 export const getComboPercentage = function getComboPercentage(value) {
   const items = [closure_5, closure_6];
-  [arr2, ] = items;
+  [arr2] = items;
   c2 = undefined;
   const result = value.value * value.multiplier;
   c2 = result;
   let num = 0;
   if (result > 0) {
     const _Math = Math;
-    num = Math.min(1, arr2.reduce((arg0, arg1, arg2) => {
-      if (c2 > arg1) {
-        if (arg2 + 1 === length.length) {
-          return tmp4[arg2];
+    num = Math.min(
+      1,
+      arr2.reduce((arg0, arg1, arg2) => {
+        if (c2 > arg1) {
+          if (arg2 + 1 === length.length) {
+            return tmp4[arg2];
+          } else {
+            return ((tmp - arg1) / (tmp6[arg2 + 1] - arg1)) * (tmp4[arg2 + 1] - tmp5) + tmp5;
+          }
         } else {
-          return (tmp - arg1) / (tmp6[arg2 + 1] - arg1) * (tmp4[arg2 + 1] - tmp5) + tmp5;
+          let tmp2 = arg0;
+          if (tmp === arg1) {
+            tmp2 = dependencyMap[arg2];
+          }
+          return tmp2;
         }
-      } else {
-        let tmp2 = arg0;
-        if (tmp === arg1) {
-          tmp2 = dependencyMap[arg2];
-        }
-        return tmp2;
-      }
-    }, 0));
+      }, 0),
+    );
   }
   return num;
 };

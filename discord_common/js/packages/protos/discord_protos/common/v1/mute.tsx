@@ -13,18 +13,18 @@ class MuteNotificationSettings$Type extends MessageType {
       name: "end_time",
       kind: "message",
       T() {
-            return callback(1336).Timestamp;
-          }
+        return callback(1336).Timestamp;
+      },
     };
-    items = [, ];
+    items = [,];
     items[0] = obj;
     items[1] = {
       no: 2,
       name: "selected_time_window",
       kind: "message",
       T() {
-            return callback(1337).Int32Value;
-          }
+        return callback(1337).Int32Value;
+      },
     };
     tmp = new tmp("discord_protos.common.v1.MuteNotificationSettings", items, new.target);
     // ThrowIfThisInitialized (0x7c)
@@ -70,7 +70,12 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         let tmp24 = Int32Value;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
-        obj.selectedTimeWindow = Int32Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.selectedTimeWindow);
+        obj.selectedTimeWindow = Int32Value.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.selectedTimeWindow,
+        );
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -111,14 +116,30 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(endTime, tag, wr
   if (endTime.endTime) {
     const Timestamp = now.Timestamp;
     const tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
-    const joined = Timestamp.internalBinaryWrite(endTime.endTime, tag.tag(1, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = Timestamp.internalBinaryWrite(endTime.endTime, tag.tag(1, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = Timestamp.internalBinaryWrite(
+      endTime.endTime,
+      tag.tag(1, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = Timestamp.internalBinaryWrite(
+      endTime.endTime,
+      tag.tag(1, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (endTime.selectedTimeWindow) {
     const Int32Value = defineProperty.Int32Value;
     const tagResult1 = tag.tag(2, _mod1307.WireType.LengthDelimited);
-    const joined1 = Int32Value.internalBinaryWrite(endTime.selectedTimeWindow, tag.tag(2, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = Int32Value.internalBinaryWrite(endTime.selectedTimeWindow, tag.tag(2, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = Int32Value.internalBinaryWrite(
+      endTime.selectedTimeWindow,
+      tag.tag(2, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult1 = Int32Value.internalBinaryWrite(
+      endTime.selectedTimeWindow,
+      tag.tag(2, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -137,7 +158,7 @@ let items = [
     kind: "message",
     T() {
       return callback(1336).Timestamp;
-    }
+    },
   },
   {
     no: 2,
@@ -145,11 +166,21 @@ let items = [
     kind: "message",
     T() {
       return callback(1337).Int32Value;
-    }
-  }
+    },
+  },
 ];
-prototype = new prototype("discord_protos.common.v1.MuteNotificationSettings", items, tmp, MuteNotificationSettings$Type, prototype, items, arg1);
+prototype = new prototype(
+  "discord_protos.common.v1.MuteNotificationSettings",
+  items,
+  tmp,
+  MuteNotificationSettings$Type,
+  prototype,
+  items,
+  arg1,
+);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/common/v1/mute.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/common/v1/mute.tsx",
+);
 
 export const MuteNotificationSettings = prototype;

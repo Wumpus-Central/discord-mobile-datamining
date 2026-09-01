@@ -58,7 +58,15 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
               }
             }
           }
-          obj = { scrollToMessageId: null, jumpTargetId: null, jumpType: null, jumpSequenceId: null, minimizeScrolling: null, focusTargetId: null, shouldInitialScroll: null };
+          obj = {
+            scrollToMessageId: null,
+            jumpTargetId: null,
+            jumpType: null,
+            jumpSequenceId: null,
+            minimizeScrolling: null,
+            focusTargetId: null,
+            shouldInitialScroll: null,
+          };
           obj[0] = id;
           obj[1] = tmp13;
           obj[2] = tmp12;
@@ -99,7 +107,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
     tmp12 = ANIMATED;
     tmp13 = null;
   }
-};
+}
 export const useMessageJumpAndroidKeyboardHeight = function useMessageJumpAndroidKeyboardHeight() {
   let num = 0;
   if (obj2.isAndroid()) {
@@ -110,10 +118,14 @@ export const useMessageJumpAndroidKeyboardHeight = function useMessageJumpAndroi
   obj2 = set;
   const tmp = require;
   [tmp4, require] = callback(React.useState(num), 2);
-  const effect = obj.useEffect(() => closure_1_5((keyboardHeight) => {
-    if (obj.isAndroid()) {
-      callback(keyboardHeight.keyboardHeight);
-    }
-  }), []);
+  const effect = obj.useEffect(
+    () =>
+      closure_1_5((keyboardHeight) => {
+        if (obj.isAndroid()) {
+          callback(keyboardHeight.keyboardHeight);
+        }
+      }),
+    [],
+  );
   return tmp4;
 };

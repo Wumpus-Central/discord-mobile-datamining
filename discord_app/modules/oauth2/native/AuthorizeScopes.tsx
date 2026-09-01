@@ -39,13 +39,13 @@ function Scope(arg0) {
     tmp10Result = tmp10(tmp6(4438).CircleCheckIcon, obj1);
   }
   obj[3] = tmp10Result;
-  const items = [closure_4(View, obj), ];
+  const items = [closure_4(View, obj)];
   const obj2 = { style: tmp.scope, children: null };
   let str3;
   if (isFake) {
     str3 = "text-muted";
   }
-  const items1 = [closure_4(tmp6(4474).Text, { variant: "text-md/normal", color: str3, children: text }), ];
+  const items1 = [closure_4(tmp6(4474).Text, { variant: "text-md/normal", color: str3, children: text })];
   tmp10Result = null;
   if (null != error) {
     const obj3 = { variant: "text-xs/normal", children: null };
@@ -60,7 +60,14 @@ function Scope(arg0) {
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ scopesContainer: { flexDirection: "column", gap: 16 }, scopes: { flexDirection: "column", gap: 16 }, scopeContainer: { flexDirection: "row" }, scope: { flex: 1, flexDirection: "column", justifyContent: "center" }, iconWrapper: { marginRight: 12, width: 20, height: 20 }, fakeScopeIcon: { opacity: 0.6 } });
+let closure_6 = createCacheKey.createStyles({
+  scopesContainer: { flexDirection: "column", gap: 16 },
+  scopes: { flexDirection: "column", gap: 16 },
+  scopeContainer: { flexDirection: "row" },
+  scope: { flex: 1, flexDirection: "column", justifyContent: "center" },
+  iconWrapper: { marginRight: 12, width: 20, height: 20 },
+  fakeScopeIcon: { opacity: 0.6 },
+});
 const result = require("set").fileFinishedImporting("modules/oauth2/native/AuthorizeScopes.tsx");
 
 export default function AuthorizeScopes(accountScopes) {
@@ -91,7 +98,7 @@ export default function AuthorizeScopes(accountScopes) {
     obj = { application: null };
     obj[0] = application.name;
     obj[2] = intl.format(_1Hz_Sl, obj);
-    const items = [callback(tmp4(4474).Text, obj), ];
+    const items = [callback(tmp4(4474).Text, obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.scopes;
     const mapped = accountScopes.map((nextResult) => {
@@ -113,7 +120,7 @@ export default function AuthorizeScopes(accountScopes) {
         return closure_2_4(closure_2_7, obj, "" + closure_0 + "-" + arg1);
       });
     });
-    const items1 = [mapped.flat(), , ];
+    const items1 = [mapped.flat(), ,];
     if (hasItem) {
       const obj2 = { text: null };
       const intl2 = tmp4(1236).intl;
@@ -129,4 +136,4 @@ export default function AuthorizeScopes(accountScopes) {
     obj[1] = items;
     return closure_5(View, obj);
   }
-};
+}

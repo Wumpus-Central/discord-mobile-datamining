@@ -26,7 +26,13 @@ export default function _default(arg0) {
   initialProductSkuId = collectiblesShopDeepLinkProps.initialProductSkuId;
   initialVariantIndex = collectiblesShopDeepLinkProps.initialVariantIndex;
   initialCategorySkuId = collectiblesShopDeepLinkProps.initialCategorySkuId;
-  const items = [initialProductSkuId, initialVariantIndex, initialCategorySkuId, analyticsLocations, collectiblesAnalyticsContext];
+  const items = [
+    initialProductSkuId,
+    initialVariantIndex,
+    initialCategorySkuId,
+    analyticsLocations,
+    collectiblesAnalyticsContext,
+  ];
   const effect = initialProductSkuId.useEffect(() => {
     if (null != initialProductSkuId) {
       if (null != initialCategorySkuId) {
@@ -66,6 +72,10 @@ export default function _default(arg0) {
   obj1 = { style: { marginTop: 42 }, Illustration: tmp4(tmp3[13]).NoResults, body: null };
   const intl = tmp4(tmp3[14]).intl;
   obj1[2] = intl.string(onRenderFirstOrbsItem(collectiblesAnalyticsContext[14]).t.eAn6z2);
-  obj[1] = jsx(onRenderFirstOrbsItem(collectiblesAnalyticsContext[12]).EmptyState, { style: { marginTop: 42 }, Illustration: tmp4(tmp3[13]).NoResults, body: null });
+  obj[1] = jsx(onRenderFirstOrbsItem(collectiblesAnalyticsContext[12]).EmptyState, {
+    style: { marginTop: 42 },
+    Illustration: tmp4(tmp3[13]).NoResults,
+    body: null,
+  });
   tmp10 = <initialVariantIndex style={callback().container}>{null}</initialVariantIndex>;
-};
+}

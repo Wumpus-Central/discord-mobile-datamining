@@ -16,8 +16,19 @@ import set from "../../../../../_runtime/00002_set.js";
 require = arg1;
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_6, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: error } = MESSAGE_GROUP_SPACING);
 ({ MessageFlags: c9, MessageTypes: c10 } = ME);
-const result = createCacheKey.experimental_createToken(() => hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BRAND_500, 0.1));
-createCacheKey = { ephemeralBackgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, ephemeralGutterColor: ThemesDefault.colors.BACKGROUND_BRAND, giftIntentEphemeralBackgroundColor: result, mentionedBackgroundColor: ThemesDefault.colors.MESSAGE_MENTIONED_BACKGROUND_DEFAULT, mentionedGutterColor: ThemesDefault.unsafe_rawColors.YELLOW_300, automodBlockedBackgroundColor: ThemesDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT, automodBlockedGutterColor: ThemesDefault.unsafe_rawColors.RED_345, editingColor: ThemesDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT };
+const result = createCacheKey.experimental_createToken(() =>
+  hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BRAND_500, 0.1),
+);
+createCacheKey = {
+  ephemeralBackgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE,
+  ephemeralGutterColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  giftIntentEphemeralBackgroundColor: result,
+  mentionedBackgroundColor: ThemesDefault.colors.MESSAGE_MENTIONED_BACKGROUND_DEFAULT,
+  mentionedGutterColor: ThemesDefault.unsafe_rawColors.YELLOW_300,
+  automodBlockedBackgroundColor: ThemesDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT,
+  automodBlockedGutterColor: ThemesDefault.unsafe_rawColors.RED_345,
+  editingColor: ThemesDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT,
+};
 createCacheKey = createCacheKey.createNativeStyleProperties(createCacheKey);
 const MediaManager = require("get ActivityIndicator").NativeModules.MediaManager;
 let set = new Set(MediaManager.getConstants().supportedExtensions);
@@ -95,7 +106,10 @@ createCacheKey = {
         obj2 = createMinimalMessageRecord;
         if (obj2.hasEphemeralAppearance(message)) {
           const obj3 = { backgroundColor: null, gutterColor: null };
-          obj3[0] = message.type === constants2.GIFTING_PROMPT ? tmp.giftIntentEphemeralBackgroundColor : tmp.ephemeralBackgroundColor;
+          obj3[0] =
+            message.type === constants2.GIFTING_PROMPT
+              ? tmp.giftIntentEphemeralBackgroundColor
+              : tmp.ephemeralBackgroundColor;
           obj3[1] = tmp.ephemeralGutterColor;
         }
       }
@@ -106,7 +120,7 @@ createCacheKey = {
     if (!canReply) {
       return tmp.NONE;
     }
-  }
+  },
 };
 const result1 = set.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorUtils.tsx");
 

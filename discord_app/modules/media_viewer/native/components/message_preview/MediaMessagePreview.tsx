@@ -49,7 +49,7 @@ function MeasureMessage(message) {
       },
       rowGenerator: closure_1_16,
       message: c0,
-      style: closure_4.dummyLayout
+      style: closure_4.dummyLayout,
     };
     c0 = true;
     const truncated = {
@@ -72,14 +72,14 @@ function MeasureMessage(message) {
       },
       rowGenerator: closure_1_16,
       message: c0,
-      style: closure_4.dummyLayout
+      style: closure_4.dummyLayout,
     };
     return { full, truncated };
   }, items);
   obj = { children: null };
   obj = {};
   const merged = Object.assign(memo.full);
-  const items1 = [callback(onMeasure(onMeasureTruncated[14]), obj), ];
+  const items1 = [callback(onMeasure(onMeasureTruncated[14]), obj)];
   obj1 = {};
   const tmp4 = onMeasure(onMeasureTruncated[14]);
   const merged1 = Object.assign(memo.truncated);
@@ -90,14 +90,46 @@ function MeasureMessage(message) {
 ({ findNodeHandle: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let obj = new setOptionsDefault();
-obj = { renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderEmbeds: false, ignoreMentioned: true, inlineAttachmentMedia: false, inlineEmbedMedia: false, renderReactions: true, renderAttachments: false, renderReplies: false, renderThreadEmbeds: false, renderPolls: false, renderForumPostActions: false, forcedTheme: ThemeTypes.DARK, forceHideSimpleEmbedContent: true };
+obj = {
+  renderCodedLinks: false,
+  renderGiftCode: false,
+  renderActivityInstanceEmbed: false,
+  renderActivityInviteEmbed: false,
+  renderComponents: false,
+  renderEmbeds: false,
+  ignoreMentioned: true,
+  inlineAttachmentMedia: false,
+  inlineEmbedMedia: false,
+  renderReactions: true,
+  renderAttachments: false,
+  renderReplies: false,
+  renderThreadEmbeds: false,
+  renderPolls: false,
+  renderForumPostActions: false,
+  forcedTheme: ThemeTypes.DARK,
+  forceHideSimpleEmbedContent: true,
+};
 obj.setOptions(obj);
-let closure_17 = createCacheKey.createStyles({ dummyLayout: { position: "absolute", top: 0, left: -9999, bottom: 0, width: "100%", opacity: 0 } });
-obj = { reactionBackgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_DEFAULT, reactionBorderColor: ThemesDefault.colors.REACTION_BORDER_DEFAULT, reactionTextColor: ThemesDefault.colors.REACTION_TEXT_DEFAULT, activeReactionBackgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT, activeReactionBorderColor: ThemesDefault.colors.REACTION_BORDER_REACTED_DEFAULT, activeReactionTextColor: ThemesDefault.colors.REACTION_TEXT_REACTED_DEFAULT };
+let closure_17 = createCacheKey.createStyles({
+  dummyLayout: { position: "absolute", top: 0, left: -9999, bottom: 0, width: "100%", opacity: 0 },
+});
+obj = {
+  reactionBackgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_DEFAULT,
+  reactionBorderColor: ThemesDefault.colors.REACTION_BORDER_DEFAULT,
+  reactionTextColor: ThemesDefault.colors.REACTION_TEXT_DEFAULT,
+  activeReactionBackgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT,
+  activeReactionBorderColor: ThemesDefault.colors.REACTION_BORDER_REACTED_DEFAULT,
+  activeReactionTextColor: ThemesDefault.colors.REACTION_TEXT_REACTED_DEFAULT,
+};
 let closure_19 = createCacheKey.createNativeStyleProperties(obj);
-let closure_20 = createCacheKey.createNativeStyleProperties({ editedColor: ThemesDefault.colors.TEXT_MUTED, seeMoreLabelColor: ThemesDefault.colors.TEXT_DEFAULT });
+let closure_20 = createCacheKey.createNativeStyleProperties({
+  editedColor: ThemesDefault.colors.TEXT_MUTED,
+  seeMoreLabelColor: ThemesDefault.colors.TEXT_DEFAULT,
+});
 let obj1 = { editedColor: ThemesDefault.colors.TEXT_MUTED, seeMoreLabelColor: ThemesDefault.colors.TEXT_DEFAULT };
-let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/message_preview/MediaMessagePreview.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/media_viewer/native/components/message_preview/MediaMessagePreview.tsx",
+);
 
 export default function MediaMessagePreview(channelId) {
   channelId = channelId.channelId;
@@ -157,7 +189,14 @@ export default function MediaMessagePreview(channelId) {
     message.message.editedColor = editedColor;
     message.reactionsTheme = closure_17;
     if (!full) {
-      obj = { numberOfLines: 3, expandable: true, seeMoreLabel: null, seeMoreLabelColor: null, outAnimationDuration: null, outAnimation: "fade" };
+      obj = {
+        numberOfLines: 3,
+        expandable: true,
+        seeMoreLabel: null,
+        seeMoreLabelColor: null,
+        outAnimationDuration: null,
+        outAnimation: "fade",
+      };
       const intl = tmp(tmp2[18]).intl;
       const _HermesInternal = HermesInternal;
       obj[2] = " " + intl.string(tmp(tmp2[18]).t["7qbp3B"]);
@@ -170,29 +209,33 @@ export default function MediaMessagePreview(channelId) {
   obj1 = channelId(onClose[16]);
   const items2 = [flingDownRef, stateFromStores, disableReactionCreates, flingUpRef];
   const items3 = [channelId, messageId];
-  stateFromStores1 = obj1.useStateFromStores(items2, () => {
-    if (null != channelId) {
-      if (null != messageId) {
-        let message = stateFromStores.getMessage(tmp, tmp2);
-        if (message == null) {
-          message = disableReactionCreates.getMessage(tmp2);
-        }
-        if (message == null) {
-          const message1 = flingUpRef.getMessage(messageId(onClose[19]).castMessageIdAsChannelId(tmp2));
-          let firstMessage;
-          if (message1 != null) {
-            firstMessage = message1.firstMessage;
+  stateFromStores1 = obj1.useStateFromStores(
+    items2,
+    () => {
+      if (null != channelId) {
+        if (null != messageId) {
+          let message = stateFromStores.getMessage(tmp, tmp2);
+          if (message == null) {
+            message = disableReactionCreates.getMessage(tmp2);
           }
-          message = firstMessage;
-          obj = messageId(onClose[19]);
+          if (message == null) {
+            const message1 = flingUpRef.getMessage(messageId(onClose[19]).castMessageIdAsChannelId(tmp2));
+            let firstMessage;
+            if (message1 != null) {
+              firstMessage = message1.firstMessage;
+            }
+            message = firstMessage;
+            obj = messageId(onClose[19]);
+          }
+          if (message == null) {
+            message = flingDownRef.getMessage(tmp2);
+          }
+          return message;
         }
-        if (message == null) {
-          message = flingDownRef.getMessage(tmp2);
-        }
-        return message;
       }
-    }
-  }, items3);
+    },
+    items3,
+  );
   const tmp16 = onTapMessage(full.useState(0), 2);
   first1 = tmp16[0];
   closure_22 = tmp16[1];
@@ -241,7 +284,13 @@ export default function MediaMessagePreview(channelId) {
           obj.emoji = reaction.emoji;
           tmp6 = obj;
         }
-        const result = obj.handleAddOrRemoveReaction(tmp5, channel, tmp6, isBurst, channelId(onClose[23]).ReactionLocations.MOBILE_MEDIA_VIEWER);
+        const result = obj.handleAddOrRemoveReaction(
+          tmp5,
+          channel,
+          tmp6,
+          isBurst,
+          channelId(onClose[23]).ReactionLocations.MOBILE_MEDIA_VIEWER,
+        );
         const tmp3 = channelId;
         const tmp4 = onClose;
       }
@@ -266,7 +315,15 @@ export default function MediaMessagePreview(channelId) {
     if (null != stateFromStores) {
       obj = { gesture: null, children: null };
       obj[0] = tmp24;
-      obj = { scrollEventThrottle: 16, onScroll: null, onLayout: null, onContentSizeChange: null, showsVerticalScrollIndicator: null, bounces: null, children: null };
+      obj = {
+        scrollEventThrottle: 16,
+        onScroll: null,
+        onLayout: null,
+        onContentSizeChange: null,
+        showsVerticalScrollIndicator: null,
+        bounces: null,
+        children: null,
+      };
       obj[1] = function onScroll(nativeEvent) {
         nativeEvent = nativeEvent.nativeEvent;
         const velocity = nativeEvent.velocity;
@@ -287,7 +344,17 @@ export default function MediaMessagePreview(channelId) {
       obj[3] = callback1;
       obj[4] = full;
       obj[5] = tmp6;
-      obj1 = { ref: null, onLongPressLink: null, onLongPressMessage: null, onTapMessage: null, onTapReaction: null, onTapSeeMore: null, onTapTag: null, onTapLink: null, inverted: false };
+      obj1 = {
+        ref: null,
+        onLongPressLink: null,
+        onLongPressMessage: null,
+        onTapMessage: null,
+        onTapReaction: null,
+        onTapSeeMore: null,
+        onTapTag: null,
+        onTapLink: null,
+        inverted: false,
+      };
       obj1[0] = ref;
       obj1[1] = callback6;
       obj1[2] = callback3;
@@ -302,7 +369,15 @@ export default function MediaMessagePreview(channelId) {
           }
         }
         obj = channelId(onClose[27]);
-        obj = { allowWithinModal: true, chatInputRef: "Boolean", handleTransitionToThread: "BuyNitroPurchaseFlow", message: "absolute", messageChannel: null, selectedChannelId: "category", tapLinkData: "Error" };
+        obj = {
+          allowWithinModal: true,
+          chatInputRef: "Boolean",
+          handleTransitionToThread: "BuyNitroPurchaseFlow",
+          message: "absolute",
+          messageChannel: null,
+          selectedChannelId: "category",
+          tapLinkData: "Error",
+        };
         obj[2] = function handleTransitionToThread(arg0, arg1, arg2) {
           channel = channel.getChannel(arg1);
           if (null != channel) {
@@ -318,7 +393,7 @@ export default function MediaMessagePreview(channelId) {
         obj[6] = nativeEvent.nativeEvent;
         const result = obj.handleMessagesTapLink(obj);
       };
-      const items9 = [callback(tmp4(tmp2[26]), obj1), ];
+      const items9 = [callback(tmp4(tmp2[26]), obj1)];
       const obj2 = { rowGenerator: null, modifyRow: null, message: null };
       obj2[0] = closure_16;
       obj2[1] = callback;
@@ -326,7 +401,7 @@ export default function MediaMessagePreview(channelId) {
       items9[1] = callback(tmp4(tmp2[14]), obj2);
       obj[6] = items9;
       obj[1] = first(closure_6, obj);
-      const items10 = [callback(channelId(tmp2[25]).GestureDetector, obj), ];
+      const items10 = [callback(channelId(tmp2[25]).GestureDetector, obj)];
       let tmp28Result = null;
       if (tmp7[0]) {
         const obj3 = { disableReactionCreates: null, message: null, onMeasure: null, onMeasureTruncated: null };
@@ -346,4 +421,4 @@ export default function MediaMessagePreview(channelId) {
     }
   }
   return tmp26Result;
-};
+}

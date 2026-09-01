@@ -68,14 +68,34 @@ function ChannelName(channel) {
     obj1[0] = tmp.channelTypeIcon;
     tmp12 = callback(channelIconComponentWithGuild, obj1);
   }
-  const items1 = [tmp12, callback(channel(4474).Text, { style: tmp.channelName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
+  const items1 = [
+    tmp12,
+    callback(channel(4474).Text, {
+      style: tmp.channelName,
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      lineClamp: 1,
+      children: formatToPlainStringResult,
+    }),
+  ];
   obj[1] = items1;
   return closure_6(View, obj);
 }
 const View = get_ActivityIndicator.View;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { cardHeader: { flexDirection: "row", alignItems: "center", gap: 8 }, dmIcon: null, channelNameContainer: null, channelName: null, channelTypeIcon: null, actionsContainer: null };
-obj = { padding: 6, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm };
+let obj = {
+  cardHeader: { flexDirection: "row", alignItems: "center", gap: 8 },
+  dmIcon: null,
+  channelNameContainer: null,
+  channelName: null,
+  channelTypeIcon: null,
+  actionsContainer: null,
+};
+obj = {
+  padding: 6,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.sm,
+};
 obj[1] = obj;
 obj[2] = { flexDirection: "row", alignItems: "center", flexShrink: 1 };
 obj[3] = { flexShrink: 1 };
@@ -88,7 +108,7 @@ export const ForLaterCardHeader = function ForLaterCardHeader(channel) {
   channel = channel.channel;
   const tmp = callback2();
   let obj = { style: tmp.cardHeader, children: null };
-  const items = [callback(HeaderIcon, { channel }), , , ];
+  const items = [callback(HeaderIcon, { channel }), , ,];
   let tmp4Result = null;
   if (!channel.isPrivate()) {
     tmp4Result = tmp4(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "xxs" });

@@ -40,7 +40,12 @@ function ChangeBannerColorRow(user) {
   let tmp2Result = tmp2(8110);
   tmp2Result = tmp2(688);
   const memoizedImageSourceResult = tmp2Result.memoizedImageSource(pendingAvatarSrc);
-  const rgb2intResult = tmp2Result.rgb2int(require("../../calls/native/VideoBackground.tsx").useDominantColorFromImage(pendingAvatarSrc, memoizedImageSourceResult));
+  const rgb2intResult = tmp2Result.rgb2int(
+    require("../../calls/native/VideoBackground.tsx").useDominantColorFromImage(
+      pendingAvatarSrc,
+      memoizedImageSourceResult,
+    ),
+  );
   _require = rgb2intResult;
   if (undefined === pendingAccentColor) {
     let primaryColor;
@@ -69,14 +74,23 @@ function ChangeBannerColorRow(user) {
   obj1[1] = intl.string(require("../../../intl/index.native.tsx").t.xzNfPz);
   obj[0] = callback(require("../../../design/void/Form/native/index.tsx").FormLabel, obj1);
   const obj2 = { style: tmp.selectedColor, children: null };
-  const items2 = [callback(pendingAccentColor(14251), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
-  const obj4 = { style: tmp.selectedColorHex, variant: "text-md/medium", color: "interactive-text-default", children: null };
+  const items2 = [callback(pendingAccentColor(14251), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
+  const obj4 = {
+    style: tmp.selectedColorHex,
+    variant: "text-md/medium",
+    color: "interactive-text-default",
+    children: null,
+  };
   const obj3 = { style: tmp.bannerColor, color: pendingAccentColor };
   const tmp2Result1 = useDominantRGBFromImage;
   obj4[3] = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx").int2hex(pendingAccentColor);
   items2[1] = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj4);
   const tmp2Result2 = int2hslRaw;
-  items2[2] = callback(require("../../../design/void/native.tsx").Icon, { style: tmp.rowArrow, size: require("../../../design/void/native.tsx").Icon.Sizes.CUSTOM, source: pendingAccentColor(14256) });
+  items2[2] = callback(require("../../../design/void/native.tsx").Icon, {
+    style: tmp.rowArrow,
+    size: require("../../../design/void/native.tsx").Icon.Sizes.CUSTOM,
+    source: pendingAccentColor(14256),
+  });
   obj2[1] = items2;
   obj[1] = callback2(View, obj2);
   obj[2] = function handleChangeColor() {
@@ -86,18 +100,42 @@ function ChangeBannerColorRow(user) {
 }
 ({ AnalyticsObjects: error, UPLOAD_BANNER_SIZE: closure_8 } = ME);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-createCacheKey = { label: null, sublabel: null, nitroWheel: null, bannerColor: null, selectedColor: null, selectedColorHex: null, rowArrow: null, upsellButton: null, remove: null, titleWrapper: null, titleContainer: null };
+createCacheKey = {
+  label: null,
+  sublabel: null,
+  nitroWheel: null,
+  bannerColor: null,
+  selectedColor: null,
+  selectedColorHex: null,
+  rowArrow: null,
+  upsellButton: null,
+  remove: null,
+  titleWrapper: null,
+  titleContainer: null,
+};
 createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { color: ThemesDefault.colors.TEXT_DEFAULT };
 let obj1 = { color: ThemesDefault.colors.TEXT_DEFAULT };
 createCacheKey[2] = { marginLeft: ThemesDefault.space.PX_8 };
 let obj2 = { marginLeft: ThemesDefault.space.PX_8 };
-createCacheKey[3] = { borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderWidth: 1, borderRadius: ThemesDefault.radii.xs, height: 24, minWidth: 24 };
+createCacheKey[3] = {
+  borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.xs,
+  height: 24,
+  minWidth: 24,
+};
 createCacheKey[4] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[5] = { textTransform: "uppercase" };
 createCacheKey[6] = { height: 13, width: 8, marginLeft: 10, marginTop: 2 };
-let obj3 = { borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderWidth: 1, borderRadius: ThemesDefault.radii.xs, height: 24, minWidth: 24 };
+let obj3 = {
+  borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.xs,
+  height: 24,
+  minWidth: 24,
+};
 createCacheKey[7] = { marginTop: ThemesDefault.space.PX_8 };
 let obj4 = { marginTop: ThemesDefault.space.PX_8 };
 createCacheKey[8] = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
@@ -118,7 +156,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   }
   function _handleBannerUploadSelect(arg0) {
     const self = this;
-    const tmp = closure_1_3(function*() {
+    const tmp = closure_1_3(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -172,7 +210,13 @@ export default function ChangeBannerActionSheet(isTryItOut) {
             originalMd5 = lib.originalMd5;
             if (null != base64) {
               obj = closure_1_0(14247);
-              obj3 = { assetOrigin: null, imageUri: null, description: "", originalAsset: "Array", originalMd5: "platinum" };
+              obj3 = {
+                assetOrigin: null,
+                imageUri: null,
+                description: "",
+                originalAsset: "Array",
+                originalMd5: "platinum",
+              };
               obj3[0] = closure_1_0(7761).AssetOriginTypes.NEW_ASSET;
               obj3[1] = base64;
               obj3[4] = originalMd5;
@@ -201,7 +245,10 @@ export default function ChangeBannerActionSheet(isTryItOut) {
     flag = tmp2(4139).canUsePremiumProfileCustomization(user);
     const tmp2Result = tmp2(4139);
   }
-  let obj = { value: _handleBannerUploadSelect(5953)(isTryItOut.analyticsLocations).analyticsLocations, children: null };
+  let obj = {
+    value: _handleBannerUploadSelect(5953)(isTryItOut.analyticsLocations).analyticsLocations,
+    children: null,
+  };
   obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.Vgdusv);
@@ -211,14 +258,14 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   }
   obj[1] = tmp4Result;
   ({ titleWrapper: obj3[2], titleContainer: obj3[3] } = tmp);
-  const items = [closure_9(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), ];
+  const items = [closure_9(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj)];
   tmp4Result = null;
   if (!flag) {
     obj1 = { user: null };
     obj1[0] = user;
     tmp4Result = tmp4(ChangeBannerColorRow, obj1);
   }
-  const items1 = [tmp4Result, , ];
+  const items1 = [tmp4Result, ,];
   let obj2 = { style: tmp.label, children: null };
   const intl2 = tmp5(1236).intl;
   const string = intl2.string;
@@ -228,7 +275,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   } else {
     stringResult = string(t["70CYsY"]);
   }
-  const items2 = [closure_9(Form.FormLabel, { text: stringResult }), ];
+  const items2 = [closure_9(Form.FormLabel, { text: stringResult })];
   let tmp4Result1 = !flag;
   if (!flag) {
     let obj3 = { style: null, size: "sm" };
@@ -248,7 +295,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
     string2Result = string2(t2.NSTmdO);
   }
   obj5[2] = string2Result;
-  const items3 = [closure_9(Form.FormSubLabel, obj5), ];
+  const items3 = [closure_9(Form.FormSubLabel, obj5)];
   let tmp4Result2 = !flag;
   if (!flag) {
     const obj6 = { style: null, children: null };
@@ -277,7 +324,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   items1[1] = closure_9(TableRowInner.TableRow, obj4);
   if (showRemoveBanner) {
     const obj8 = { style: null, text: null };
-    const items4 = [, ];
+    const items4 = [,];
     ({ label: arr5[0], remove: arr5[1] } = tmp);
     obj8[0] = items4;
     if (removeText == null) {
@@ -299,4 +346,4 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   obj10[0] = items;
   obj[1] = closure_10(ActionSheet.ActionSheet, obj10);
   return closure_9(context.AnalyticsLocationProvider, obj);
-};
+}

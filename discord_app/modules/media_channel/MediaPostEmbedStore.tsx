@@ -2,12 +2,20 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 
-let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", FAILED: 3, [3]: "FAILED" };
+let obj = {
+  NOT_FETCHED: 0,
+  [0]: "NOT_FETCHED",
+  FETCHING: 1,
+  [1]: "FETCHING",
+  FETCHED: 2,
+  [2]: "FETCHED",
+  FAILED: 3,
+  [3]: "FAILED",
+};
 let closure_1 = {};
 let closure_2 = {};
 const Store = initializeDefault.Store;
-class MediaPostEmbedStore extends Store {
-}
+class MediaPostEmbedStore extends Store {}
 const prototype = MediaPostEmbedStore.prototype;
 prototype["getMediaPostEmbed"] = function getMediaPostEmbed(mediaPostEmbedChannelId) {
   if (null != mediaPostEmbedChannelId) {
@@ -48,7 +56,7 @@ obj = {
       closure_1 = {};
       closure_2 = {};
     }
-  }
+  },
 };
 const mediaPostEmbedStore = new MediaPostEmbedStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/media_channel/MediaPostEmbedStore.tsx");

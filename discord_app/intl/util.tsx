@@ -66,5 +66,8 @@ export const getNormalizedLocale = function getNormalizedLocale(str, arg1) {
 export const useSyncMessages = function useSyncMessages(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  const syncExternalStore = closure_2.useSyncExternalStore((arg0) => closure_0.onChange(arg0), () => closure_0.isLocaleLoaded(currentLocale.currentLocale));
+  const syncExternalStore = closure_2.useSyncExternalStore(
+    (arg0) => closure_0.onChange(arg0),
+    () => closure_0.isLocaleLoaded(currentLocale.currentLocale),
+  );
 };

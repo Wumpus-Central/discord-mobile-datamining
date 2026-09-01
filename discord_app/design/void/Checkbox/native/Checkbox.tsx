@@ -16,4 +16,4 @@ export default function Checkbox(style) {
     tmp5 = obj;
   }
   return <Image {...tmp5} />;
-};
+}

@@ -17,7 +17,12 @@ function DoubleTapErrorToastIcon() {
 }
 noopAll;
 createCacheKey = { icon: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderRadius: ThemesDefault.radii.round, padding: ThemesDefault.space.PX_4, marginLeft: ThemesDefault.space.PX_4 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
+  borderRadius: ThemesDefault.radii.round,
+  padding: ThemesDefault.space.PX_4,
+  marginLeft: ThemesDefault.space.PX_4,
+};
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapErrorToast.tsx");
@@ -53,7 +58,7 @@ export const showDoubleTapErrorToast = function showDoubleTapErrorToast(arg0) {
       }
       tmp3Result = closure_1_5(closure_1_0(closure_1_2[8]).Text, { variant: "text-sm/normal", children: formatResult });
     },
-    toastDurationMs: 3000
+    toastDurationMs: 3000,
   };
   obj.open(obj);
 };

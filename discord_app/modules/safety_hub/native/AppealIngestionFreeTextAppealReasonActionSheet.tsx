@@ -9,12 +9,19 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { footerText: { textAlign: "center" }, textArea: { marginTop: -16, marginBottom: 36 }, separator: null, closeIcon: null };
+createCacheKey = {
+  footerText: { textAlign: "center" },
+  textArea: { marginTop: -16, marginBottom: 36 },
+  separator: null,
+  closeIcon: null,
+};
 createCacheKey = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginHorizontal: -16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { alignSelf: "flex-end", flexDirection: "row", marginBottom: -26 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionFreeTextAppealReasonActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/safety_hub/native/AppealIngestionFreeTextAppealReasonActionSheet.tsx",
+);
 
 export default function AppealIngestionFreeTextAppealReasonActionSheet(onPress) {
   const onSave = onPress.onSave;
@@ -36,7 +43,17 @@ export default function AppealIngestionFreeTextAppealReasonActionSheet(onPress) 
   obj = { startExpanded: true, children: null };
   obj = { spacing: 16, children: null };
   const stringResult1 = intl3.string(onSave(first[8]).t["Rk+uJx"]);
-  const items1 = [callback2(onSave(first[11]).PressableOpacity, { onPress: onPress.onClose, style: tmp.closeIcon, children: callback2(onSave(first[12]).XSmallIcon, { size: "md" }) }), callback2(onSave(first[13]).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , , ];
+  const items1 = [
+    callback2(onSave(first[11]).PressableOpacity, {
+      onPress: onPress.onClose,
+      style: tmp.closeIcon,
+      children: callback2(onSave(first[12]).XSmallIcon, { size: "md" }),
+    }),
+    callback2(onSave(first[13]).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }),
+    ,
+    ,
+    ,
+  ];
   const obj2 = { maxLength: 1024, placeholder: null, containerStyle: null, value: null, onChange: null };
   const intl4 = tmp2(tmp3[8]).intl;
   obj2[1] = intl4.string(onSave(first[8]).t.bQrZIN);
@@ -53,7 +70,7 @@ export default function AppealIngestionFreeTextAppealReasonActionSheet(onPress) 
     onPress() {
       return onSave(first);
     },
-    text: null
+    text: null,
   };
   const intl6 = tmp2(tmp3[8]).intl;
   obj5[1] = intl6.string(onSave(first[8]).t["R3BPH+"]);
@@ -61,4 +78,4 @@ export default function AppealIngestionFreeTextAppealReasonActionSheet(onPress) 
   obj[1] = items1;
   obj[1] = callback3(onSave(first[10]).Stack, obj);
   return callback2(onSave(first[9]).BottomSheet, obj);
-};
+}

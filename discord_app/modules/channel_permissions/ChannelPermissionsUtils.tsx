@@ -53,7 +53,17 @@ function sortRoles(guildId, id) {
 }
 function getMemberRowData(id, id2) {
   const tmp3 = isGuildOwner(id2, id) ? RowType.OWNER : RowType.MEMBER;
-  const obj = { rowType: tmp3, name: null, username: null, id: null, avatarURL: null, bot: null, verifiedBot: null, disabled: null, key: null };
+  const obj = {
+    rowType: tmp3,
+    name: null,
+    username: null,
+    id: null,
+    avatarURL: null,
+    bot: null,
+    verifiedBot: null,
+    disabled: null,
+    key: null,
+  };
   nick = nick.getNick(id2.id, id.id);
   if (nick == null) {
     nick = nameFromUserDefault.getName(id);
@@ -95,7 +105,9 @@ export const getNoRolesRow = function getNoRolesRow() {
     const intl = getSystemLocale.intl;
     stringResult = intl.string(getSystemLocale.t["gnsna/"]);
   }
-  const items = [{ rowType: RowType.EMPTY_STATE, colorString: closure_13, name: stringResult, disabled: true, id: "EMPTY_STATE" }];
+  const items = [
+    { rowType: RowType.EMPTY_STATE, colorString: closure_13, name: stringResult, disabled: true, id: "EMPTY_STATE" },
+  ];
   return items;
 };
 export const isEveryoneRoleId = function isEveryoneRoleId(channelId, id) {
@@ -143,7 +155,13 @@ export const getRolesRows = function getRolesRows(guild, stateFromStores, channe
   const sorted = found.sort(sortRoles);
   return sorted.map((arg0) => callback(arg0));
 };
-export const getRolesRowsWithPermissionDisabled = function getRolesRowsWithPermissionDisabled(guild, stateFromStores, channel, permission, filterByQuery) {
+export const getRolesRowsWithPermissionDisabled = function getRolesRowsWithPermissionDisabled(
+  guild,
+  stateFromStores,
+  channel,
+  permission,
+  filterByQuery,
+) {
   closure_0 = channel;
   closure_1 = permission;
   let fn = filterByQuery;
@@ -331,7 +349,12 @@ export const getExistingRolesRows = function getExistingRolesRows(guild, sortedG
   }
   return mapped;
 };
-export const getExistingRolesRowWithPermissionDisabled = function getExistingRolesRowWithPermissionDisabled(guild, sortedGuildRoles, channel, MODERATE_STAGE_CHANNEL_PERMISSIONS) {
+export const getExistingRolesRowWithPermissionDisabled = function getExistingRolesRowWithPermissionDisabled(
+  guild,
+  sortedGuildRoles,
+  channel,
+  MODERATE_STAGE_CHANNEL_PERMISSIONS,
+) {
   let _require = MODERATE_STAGE_CHANNEL_PERMISSIONS;
   _require = channel;
   closure_1 = MODERATE_STAGE_CHANNEL_PERMISSIONS;

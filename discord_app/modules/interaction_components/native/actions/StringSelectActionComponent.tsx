@@ -3,7 +3,9 @@ import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/StringSelectActionComponent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/native/actions/StringSelectActionComponent.tsx",
+);
 
 export default function StringSelectActionComponent(type) {
   const _require = type;
@@ -43,10 +45,13 @@ export default function StringSelectActionComponent(type) {
     if (state != null) {
       type = tmp.type;
     }
-    const mapped = type === type ? state.values : [].map((arg0) => {
-      closure_0 = arg0;
-      return closure_2.findIndex((value) => value.value === closure_0);
-    });
+    const mapped =
+      type === type
+        ? state.values
+        : [].map((arg0) => {
+            closure_0 = arg0;
+            return closure_2.findIndex((value) => value.value === closure_0);
+          });
     return mapped.filter((arg0) => -1 !== arg0);
   }, items1);
   const parents = componentStateContext.getParents(type);
@@ -73,11 +78,18 @@ export default function StringSelectActionComponent(type) {
   obj[0] = obj1;
   obj[1] = function onTap() {
     let obj = type(options[7]);
-    obj = { selectionActionComponent: type, labelComponent: first, channelId: componentStateContext.channelId, containerId: customId, onSubmit: executeStateUpdate, allowEmpty: null };
+    obj = {
+      selectionActionComponent: type,
+      labelComponent: first,
+      channelId: componentStateContext.channelId,
+      containerId: customId,
+      onSubmit: executeStateUpdate,
+      allowEmpty: null,
+    };
     const combined = "StringSelectComponentActionSheet:" + customId;
     const tmp = type(options[9])(options[8], options.paths);
     obj[5] = type(options[2]).canSelectBeEmpty(type, "modal");
     obj.openLazy(tmp, combined, obj);
   };
   return state(tmp4(options[6]), obj);
-};
+}

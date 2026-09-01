@@ -10,4 +10,4 @@ const result = require("set").fileFinishedImporting("modules/billing/native/Bloc
 
 export default function BlockedPaymentsCountryActionSheet() {
   return jsx(Background.BottomSheet, { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) });
-};
+}

@@ -33,6 +33,6 @@ export default function useResolveGame(arg0) {
     data = null;
   }
   obj[1] = data;
-  obj[2] = null == gameId && null != applicationId && null == getOrFetchApplication || game.isLoading;
+  obj[2] = (null == gameId && null != applicationId && null == getOrFetchApplication) || game.isLoading;
   return obj;
-};
+}

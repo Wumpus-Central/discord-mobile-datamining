@@ -48,9 +48,19 @@ function manualOverrideLinkMeta(str) {
   }
   return null;
 }
-const regExp = new RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link/?\\?[\\S]+$", "i");
+const regExp = new RegExp(
+  "^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link/?\\?[\\S]+$",
+  "i",
+);
 const regExp1 = new RegExp("^dev://branch/([\\w-./]+)$", "i");
-set = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]);
+set = new Set([
+  "canary.discord.com",
+  "ptb.discord.com",
+  "discord.com",
+  "canary.discordapp.com",
+  "ptb.discordapp.com",
+  "discordapp.com",
+]);
 const set1 = new Set(["/__development/link", "/__development/link/"]);
 const result = set.fileFinishedImporting("modules/build_overrides/BuildOverrideUtils.tsx");
 
@@ -58,7 +68,9 @@ export const APP_VERSION = Version;
 export { getAPIEndpoint };
 export const getBuildOverride = function getBuildOverride() {
   let obj = isDiscordProxiedAssetUrlDefault;
-  const safeParseWithQueryResult = obj.safeParseWithQuery("" + location.protocol + "//" + location.host + "/__development/build_overrides");
+  const safeParseWithQueryResult = obj.safeParseWithQuery(
+    "" + location.protocol + "//" + location.host + "/__development/build_overrides",
+  );
   if (null == safeParseWithQueryResult) {
     let resolved = Promise.resolve(null);
   } else {
@@ -70,7 +82,10 @@ export const getBuildOverride = function getBuildOverride() {
     obj = { url: null, oldFormErrors: true, rejectWithError: false };
     obj[0] = UrlAll.format(safeParseWithQueryResult);
     const value = HTTP.get(obj);
-    resolved = value.then((body) => body.body || null, () => null);
+    resolved = value.then(
+      (body) => body.body || null,
+      () => null,
+    );
     const obj3 = UrlAll;
   }
   return resolved;
@@ -117,7 +132,10 @@ export const getBuildOverrideMeta = function getBuildOverrideMeta(url) {
       obj2 = UrlAll;
       obj2[0] = obj2.format(safeParseWithQueryResult);
       const value = HTTP.get(obj2);
-      resolved = value.then((body) => body.body || null, () => null);
+      resolved = value.then(
+        (body) => body.body || null,
+        () => null,
+      );
     }
     return resolved;
   }

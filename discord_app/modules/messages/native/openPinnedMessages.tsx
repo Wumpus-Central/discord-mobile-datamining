@@ -16,4 +16,4 @@ export default function openPinnedMessages(arg0, arg1) {
     obj[2] = arg1;
     rootNavigationRef.navigate("sidebar", obj);
   }
-};
+}

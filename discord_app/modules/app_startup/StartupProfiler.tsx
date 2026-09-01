@@ -2,7 +2,24 @@
 import closure_2 from "../../../_runtime/00019_noop.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
-let obj = { App: "App", AppContainer: "AppContainer", MainNavigator: "MainNavigator", StackNavigator: "StackNavigator", MainTabs: "MainTabs", MainDrawers: "MainDrawers", PrivateChannels: "PrivateChannels", Members: "Members", LeftPanel: "LeftPanel", Guilds: "Guilds", Channels: "Channels", RightPanel: "RightPanel", CenterPanel: "CenterPanel", Channel: "Channel", ChatView: "ChatView", Messages: "Messages" };
+let obj = {
+  App: "App",
+  AppContainer: "AppContainer",
+  MainNavigator: "MainNavigator",
+  StackNavigator: "StackNavigator",
+  MainTabs: "MainTabs",
+  MainDrawers: "MainDrawers",
+  PrivateChannels: "PrivateChannels",
+  Members: "Members",
+  LeftPanel: "LeftPanel",
+  Guilds: "Guilds",
+  Channels: "Channels",
+  RightPanel: "RightPanel",
+  CenterPanel: "CenterPanel",
+  Channel: "Channel",
+  ChatView: "ChatView",
+  Messages: "Messages",
+};
 obj = {};
 function setLevels(obj, arg1) {
   for (const key10006 in arg0) {
@@ -14,7 +31,23 @@ function setLevels(obj, arg1) {
     continue;
   }
 }
-obj = { [obj.App]: { [obj.AppContainer]: { [obj.MainNavigator]: { [obj.StackNavigator]: { [obj.MainTabs]: { [obj.MainDrawers]: { [obj.LeftPanel]: { [obj.Guilds]: {}, [obj.Channels]: {} }, [obj.RightPanel]: { [obj.Members]: {} }, [obj.CenterPanel]: { [obj.Channel]: { [obj.ChatView]: { [obj.Messages]: {} } } } } } } } } } };
+obj = {
+  [obj.App]: {
+    [obj.AppContainer]: {
+      [obj.MainNavigator]: {
+        [obj.StackNavigator]: {
+          [obj.MainTabs]: {
+            [obj.MainDrawers]: {
+              [obj.LeftPanel]: { [obj.Guilds]: {}, [obj.Channels]: {} },
+              [obj.RightPanel]: { [obj.Members]: {} },
+              [obj.CenterPanel]: { [obj.Channel]: { [obj.ChatView]: { [obj.Messages]: {} } } },
+            },
+          },
+        },
+      },
+    },
+  },
+};
 for (const key10073 in obj) {
   let tmp5 = key10073;
   obj[key10073] = "";
@@ -45,10 +78,17 @@ export default function StartupProfiler(children) {
     onRender(arg0, arg1, arg2) {
       profile(closure_1_1[2]).mark("\u{1F3A8}", "" + closure_1_4[profile] + profile + " " + arg1, arg2);
     },
-    children: children.children
+    children: children.children,
   };
-  return <Profiler.Profiler id={profile} onRender={function onRender(arg0, arg1, arg2) {
-    profile(closure_1_1[2]).mark("\u{1F3A8}", "" + closure_1_4[profile] + profile + " " + arg1, arg2);
-  }}>{arg0.children}</Profiler.Profiler>;
-};
+  return (
+    <Profiler.Profiler
+      id={profile}
+      onRender={function onRender(arg0, arg1, arg2) {
+        profile(closure_1_1[2]).mark("\u{1F3A8}", "" + closure_1_4[profile] + profile + " " + arg1, arg2);
+      }}
+    >
+      {arg0.children}
+    </Profiler.Profiler>
+  );
+}
 export const Profiles = obj;

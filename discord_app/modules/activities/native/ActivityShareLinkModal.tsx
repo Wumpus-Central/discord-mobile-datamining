@@ -19,8 +19,16 @@ createCacheKey = { paddingLeft: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingRight: ThemesDefault.space.PX_16 };
 let obj1 = { paddingRight: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-let obj2 = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+createCacheKey[2] = {
+  borderBottomWidth: 0,
+  shadowColor: "transparent",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+};
+let obj2 = {
+  borderBottomWidth: 0,
+  shadowColor: "transparent",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+};
 createCacheKey[3] = { flex: 1, display: "flex", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { flex: 1, display: "flex", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
@@ -95,150 +103,155 @@ export default function ActivityShareLinkModal(applicationId) {
   first3 = onShare(customId(linkId[16])(items5), 1)[0];
   const items6 = [first3, first, first2, message, onShare, first1];
   const items7 = [first2];
-  const callback2 = stateFromStores.useCallback(message(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp5 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  const callback2 = stateFromStores.useCallback(
+    message(function* () {
+      if (c3 === 2) {
+        c3 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp5 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === dependencyMap) {
-          if (arg0 === 1) {
+        try {
+          c3 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_1 = tmp3;
+              closure_0 = tmp2;
+              closure_0 = undefined;
+              closure_1 = undefined;
+              if (null != closure_1_14) {
+                dependencyMap = 1;
+                c3 = 1;
+                obj1 = { value: null, done: false };
+                obj1[0] = Promise.all(closure_1_9.map(closure_1_0(10718).getOrResolveChannelIdFromDestinationId));
+                return obj1;
+              } else {
+                c3 = 3;
+              }
+            }
+          } else if (arg0 === 1) {
             c3 = 3;
             throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_1 = tmp3;
-            closure_0 = tmp2;
-            closure_0 = undefined;
-            closure_1 = undefined;
-            if (null != closure_1_14) {
-              dependencyMap = 1;
-              c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = Promise.all(closure_1_9.map(closure_1_0(10718).getOrResolveChannelIdFromDestinationId));
-              return obj1;
-            } else {
-              c3 = 3;
-            }
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          closure_0 = arg1.filter(closure_1_0(1471).isNotNullish);
-          closure_1 = closure_1_0(14141).resolveActivityShareMessageContent(c3, name, closure_12);
-          callback2(true);
-          const item = closure_0.forEach((() => {
-            closure_0 = v3((arg0) => {
-              closure_0 = arg0;
-              c2 = 0;
-              c1 = 0;
-              return (function*(arg0) {
-                if (c1 === 2) {
-                  c1 = 3;
-                  HermesBuiltin.throwTypeError();
-                } else if (tmp3 === 3) {
-                  if (arg0 === 1) {
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    let obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  } else {
-                    return { value: "HermesInternal", done: null };
-                  }
-                } else {
-                  try {
-                    c1 = 2;
-                    if (0 === c2) {
+          } else if (arg0 !== 2) {
+            closure_0 = arg1.filter(closure_1_0(1471).isNotNullish);
+            closure_1 = closure_1_0(14141).resolveActivityShareMessageContent(c3, name, closure_12);
+            callback2(true);
+            const item = closure_0.forEach(
+              (() => {
+                closure_0 = v3((arg0) => {
+                  closure_0 = arg0;
+                  c2 = 0;
+                  c1 = 0;
+                  return (function* (arg0) {
+                    if (c1 === 2) {
+                      c1 = 3;
+                      HermesBuiltin.throwTypeError();
+                    } else if (tmp3 === 3) {
                       if (arg0 === 1) {
-                        c1 = 3;
                         throw arg1;
                       } else if (arg0 === 2) {
-                        c1 = 3;
-                        obj = { value: null, done: true };
+                        let obj = { value: null, done: true };
                         obj[0] = arg1;
                         return obj;
                       } else {
-                        const channel = closure_2_7.getChannel(closure_0);
-                        if (null != channel) {
-                          obj1 = closure_2_1(closure_2_2[19]);
-                          let obj2 = closure_2_1(closure_2_2[20]);
-                          obj1 = { location: null };
-                          obj1[0] = closure_2_11.ACTIVITY_SHARE;
-                          c2 = 1;
-                          c1 = 1;
-                          obj2 = { value: null, done: false };
-                          obj2[0] = obj1.sendMessage(tmp18, obj2.parse(channel, c1), false, obj1);
-                          return obj2;
-                        }
+                        return { value: "HermesInternal", done: null };
                       }
-                    } else if (arg0 === 1) {
-                      c1 = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      c1 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
+                    } else {
+                      try {
+                        c1 = 2;
+                        if (0 === c2) {
+                          if (arg0 === 1) {
+                            c1 = 3;
+                            throw arg1;
+                          } else if (arg0 === 2) {
+                            c1 = 3;
+                            obj = { value: null, done: true };
+                            obj[0] = arg1;
+                            return obj;
+                          } else {
+                            const channel = closure_2_7.getChannel(closure_0);
+                            if (null != channel) {
+                              obj1 = closure_2_1(closure_2_2[19]);
+                              let obj2 = closure_2_1(closure_2_2[20]);
+                              obj1 = { location: null };
+                              obj1[0] = closure_2_11.ACTIVITY_SHARE;
+                              c2 = 1;
+                              c1 = 1;
+                              obj2 = { value: null, done: false };
+                              obj2[0] = obj1.sendMessage(tmp18, obj2.parse(channel, c1), false, obj1);
+                              return obj2;
+                            }
+                          }
+                        } else if (arg0 === 1) {
+                          c1 = 3;
+                          throw arg1;
+                        } else if (arg0 === 2) {
+                          c1 = 3;
+                          obj = { value: null, done: true };
+                          obj[0] = arg1;
+                          return obj;
+                        }
+                        c1 = 3;
+                        return { value: "HermesInternal", done: null };
+                      } catch (tmp12) {
+                        c1 = tmp;
+                        throw tmp12;
+                      }
                     }
-                    c1 = 3;
-                    return { value: "HermesInternal", done: null };
-                  } catch (tmp12) {
-                    c1 = tmp;
-                    throw tmp12;
+                  })();
+                });
+                return function () {
+                  const self = this;
+                  const apply = closure_0.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
                   }
-                }
-              })();
-            });
-            return function() {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            };
-          })());
-          const obj5 = closure_1_0(14141);
-          let obj2 = { key: "ACTIVITY_SHARE_LINK_SUCCESS", content: null };
-          const intl = closure_1_0(1236).intl;
-          const obj3 = { applicationName: null };
-          obj3[0] = name.name;
-          obj2[1] = intl.formatToPlainString(closure_1_0(1236).t.jQULqL, obj3);
-          closure_1_1(4194).open(obj2);
-          callback(true, closure_7);
-          const obj6 = closure_1_1(4194);
-          const result = closure_1_0(14139).closeActivityShareLinkModal();
-          const obj9 = closure_1_0(14139);
+                  return applyArgumentsResult;
+                };
+              })(),
+            );
+            const obj5 = closure_1_0(14141);
+            let obj2 = { key: "ACTIVITY_SHARE_LINK_SUCCESS", content: null };
+            const intl = closure_1_0(1236).intl;
+            const obj3 = { applicationName: null };
+            obj3[0] = name.name;
+            obj2[1] = intl.formatToPlainString(closure_1_0(1236).t.jQULqL, obj3);
+            closure_1_1(4194).open(obj2);
+            callback(true, closure_7);
+            const obj6 = closure_1_1(4194);
+            const result = closure_1_0(14139).closeActivityShareLinkModal();
+            const obj9 = closure_1_0(14139);
+          }
+          c3 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } catch (tmp11) {
+          c3 = tmp;
+          throw tmp11;
         }
-        c3 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } catch (tmp11) {
-        c3 = tmp;
-        throw tmp11;
       }
-    }
-  }), items6);
+    }),
+    items6,
+  );
   closure_15 = stateFromStores.useCallback(() => {
     applicationId(linkId[23]).copy(first2);
     currentUser(true);
@@ -252,13 +265,27 @@ export default function ActivityShareLinkModal(applicationId) {
       height = "100%";
       return { height };
     }, items8),
-    children: null
+    children: null,
   };
-  obj = { headerStyle: tmp.header, title: null, headerTitle: null, headerLeft: null, headerRight: null, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null, headerTitleAlign: "center" };
+  obj = {
+    headerStyle: tmp.header,
+    title: null,
+    headerTitle: null,
+    headerLeft: null,
+    headerRight: null,
+    headerLeftContainerStyle: null,
+    headerRightContainerStyle: null,
+    headerStatusBarHeight: null,
+    headerTitleAlign: "center",
+  };
   let intl = applicationId(linkId[22]).intl;
   obj[1] = intl.string(applicationId(linkId[22]).t.r9qKow);
   obj[2] = function headerTitle(children) {
-    return first2(applicationId(linkId[29]).GenericHeaderTitle, { title: children.children, subtitle: message, variant: "redesign/heading-18/bold" });
+    return first2(applicationId(linkId[29]).GenericHeaderTitle, {
+      title: children.children,
+      subtitle: message,
+      variant: "redesign/heading-18/bold",
+    });
   };
   let obj4 = applicationId(linkId[30]);
   obj[3] = obj4.getHeaderCloseButton(callback1);
@@ -278,10 +305,28 @@ export default function ActivityShareLinkModal(applicationId) {
     num = customId(linkId[26])().top;
   }
   obj[7] = num + customId(linkId[11]).space.PX_8;
-  const items9 = [first2(applicationId(linkId[28]).Header, obj), ];
+  const items9 = [first2(applicationId(linkId[28]).Header, obj)];
   obj1 = { style: tmp.container, children: null };
-  const items10 = [first2(customId(linkId[33]), { absolute: true }), first2(customId(linkId[34]), { disableGradient: true, disableStickySections: true, initialSelectedDestinations: [], insetEnd: 0, onSelectedDestinationChange: callback, originDestination: memo, rowMode: UserRowModes.TOGGLE }), ];
-  let obj3 = { disabled: tmp7, floatingBackgroundColor: tmp.container.backgroundColor, isVisible: first1.length > 0, loading: tmp7, onPress: null, text: null };
+  const items10 = [
+    first2(customId(linkId[33]), { absolute: true }),
+    first2(customId(linkId[34]), {
+      disableGradient: true,
+      disableStickySections: true,
+      initialSelectedDestinations: [],
+      insetEnd: 0,
+      onSelectedDestinationChange: callback,
+      originDestination: memo,
+      rowMode: UserRowModes.TOGGLE,
+    }),
+  ];
+  let obj3 = {
+    disabled: tmp7,
+    floatingBackgroundColor: tmp.container.backgroundColor,
+    isVisible: first1.length > 0,
+    loading: tmp7,
+    onPress: null,
+    text: null,
+  };
   let tmp24;
   if (!tmp7) {
     tmp24 = callback2;
@@ -302,4 +347,4 @@ export default function ActivityShareLinkModal(applicationId) {
   items9[1] = closure_13(c6, obj1);
   obj[1] = items9;
   return closure_13(c6, obj);
-};
+}

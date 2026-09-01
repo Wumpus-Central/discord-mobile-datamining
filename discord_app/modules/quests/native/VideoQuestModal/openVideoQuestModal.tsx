@@ -35,9 +35,9 @@ export default function openVideoQuestModal(questId) {
       obj = { questId, sourceQuestContent, videoSessionId: closure_2 };
       return obj.handleVideoQuestModalClose(obj);
     },
-    sourceQuestContent
+    sourceQuestContent,
   };
   const obj3 = sourceQuestContent(4723);
   const tmp8 = questId(2009)(14726, dependencyMap.paths);
   return obj3.pushLazy(tmp8, obj, questId(11111).getVideoQuestModalKey(questId));
-};
+}

@@ -5,7 +5,7 @@ import { Endpoints } from "../../Constants.tsx";
 const require = arg1;
 function _requestGoogleWalletVerification() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const HTTP = v0(closure_1_2[2]).HTTP;
     obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
     obj1[0] = closure_1_4.GOOGLE_WALLET_REQUEST;
@@ -28,7 +28,7 @@ function _verifyGoogleWalletCredential() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -97,7 +97,7 @@ function _verifyGoogleWalletCredential() {
 }
 function _checkGoogleWalletAvailable() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();
@@ -183,7 +183,7 @@ function _getGoogleWalletCredential() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();

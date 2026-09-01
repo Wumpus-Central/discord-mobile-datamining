@@ -22,7 +22,14 @@ export default function useBuyNitroPerks(arg0) {
   importDefault = tmp;
   let items = [arg0, tmp];
   return React.useMemo(() => {
-    let obj = { id: "emoji", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
+    let obj = {
+      id: "emoji",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: true,
+      detail: null,
+    };
     const tmp = callback;
     const tmp2 = closure_1_2;
     const intl = callback(closure_1_2[5]).intl;
@@ -32,8 +39,16 @@ export default function useBuyNitroPerks(arg0) {
     obj[3] = callback(closure_1_2[6]).ReactionIcon;
     obj = { image: callback2(closure_1_2[7]), description: callback(closure_1_2[5]).t["3SUJLd"] };
     obj[5] = obj;
-    let items = [obj, , , , , , , , , , , , , , , ];
-    obj = { id: "uploads", label: null, labelBasic: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
+    let items = [obj, , , , , , , , , , , , , , ,];
+    obj = {
+      id: "uploads",
+      label: null,
+      labelBasic: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: true,
+      detail: null,
+    };
     const intl3 = callback(closure_1_2[5]).intl;
     obj[1] = intl3.string(callback(closure_1_2[5]).t["3BtVbk"]);
     const intl4 = callback(closure_1_2[5]).intl;
@@ -45,7 +60,14 @@ export default function useBuyNitroPerks(arg0) {
     items[1] = obj;
     let obj4 = callback(closure_1_2[10]);
     if (obj4.isAppIconsSupported()) {
-      let obj2 = { id: "custom-app-icons", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
+      let obj2 = {
+        id: "custom-app-icons",
+        label: null,
+        subLabel: null,
+        IconComponent: null,
+        includedInNitroBasic: true,
+        detail: null,
+      };
       const intl6 = tmp(tmp2[5]).intl;
       obj2[1] = intl6.string(tmp(tmp2[5]).t.OuItFi);
       const intl7 = tmp(tmp2[5]).intl;
@@ -57,7 +79,14 @@ export default function useBuyNitroPerks(arg0) {
       items2 = [];
     }
     let arraySpreadResult = HermesBuiltin.arraySpread(items2, 2);
-    let obj3 = { id: "profiles", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
+    let obj3 = {
+      id: "profiles",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: false,
+      detail: null,
+    };
     const intl8 = tmp(tmp2[5]).intl;
     obj3[1] = intl8.string(tmp(tmp2[5]).t["Gv/rQ6"]);
     const intl9 = tmp(tmp2[5]).intl;
@@ -69,7 +98,14 @@ export default function useBuyNitroPerks(arg0) {
     if (callback2) {
       let items3 = [];
     } else {
-      const obj5 = { id: "boosts", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
+      const obj5 = {
+        id: "boosts",
+        label: null,
+        subLabel: null,
+        IconComponent: null,
+        includedInNitroBasic: false,
+        detail: null,
+      };
       const intl10 = tmp(tmp2[5]).intl;
       const obj6 = { numBoosts: null };
       obj6[0] = closure_1_5;
@@ -84,7 +120,14 @@ export default function useBuyNitroPerks(arg0) {
       items3 = [obj5];
     }
     arraySpreadResult = HermesBuiltin.arraySpread(items3, arraySpreadResult + 1);
-    const obj8 = { id: "streaming", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
+    const obj8 = {
+      id: "streaming",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: false,
+      detail: null,
+    };
     const intl12 = tmp(tmp2[5]).intl;
     obj8[1] = intl12.string(tmp(tmp2[5]).t.RSXQYO);
     const intl13 = tmp(tmp2[5]).intl;
@@ -95,7 +138,14 @@ export default function useBuyNitroPerks(arg0) {
     obj8[5] = { image: callback2(tmp2[17]), description: tmp(tmp2[5]).t.ymCPxp };
     items[arraySpreadResult] = obj8;
     const sum = arraySpreadResult + 1;
-    const obj10 = { id: "super-reactions", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
+    const obj10 = {
+      id: "super-reactions",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: true,
+      detail: null,
+    };
     const intl14 = tmp(tmp2[5]).intl;
     obj10[1] = intl14.string(tmp(tmp2[5]).t["uZt5q/"]);
     const intl15 = tmp(tmp2[5]).intl;
@@ -107,7 +157,14 @@ export default function useBuyNitroPerks(arg0) {
     if (tmp5) {
       let items4 = [];
     } else {
-      const obj12 = { id: "badge", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
+      const obj12 = {
+        id: "badge",
+        label: null,
+        subLabel: null,
+        IconComponent: null,
+        includedInNitroBasic: true,
+        detail: null,
+      };
       const intl16 = tmp(tmp2[5]).intl;
       obj12[1] = intl16.string(tmp(tmp2[5]).t.SS87rQ);
       const intl17 = tmp(tmp2[5]).intl;
@@ -116,7 +173,14 @@ export default function useBuyNitroPerks(arg0) {
       items4 = [obj12];
     }
     const arraySpreadResult1 = HermesBuiltin.arraySpread(items4, sum + 1);
-    const obj13 = { id: "stickers", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
+    const obj13 = {
+      id: "stickers",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: true,
+      detail: null,
+    };
     const intl18 = tmp(tmp2[5]).intl;
     obj13[1] = intl18.string(tmp(tmp2[5]).t.tzdIwI);
     const intl19 = tmp(tmp2[5]).intl;
@@ -126,7 +190,14 @@ export default function useBuyNitroPerks(arg0) {
     obj13[5] = { image: callback2(tmp2[22]), description: tmp(tmp2[5]).t.FXlU24 };
     items[arraySpreadResult1] = obj13;
     const sum1 = arraySpreadResult1 + 1;
-    const obj15 = { id: "custom-sounds", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
+    const obj15 = {
+      id: "custom-sounds",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: false,
+      detail: null,
+    };
     const intl20 = tmp(tmp2[5]).intl;
     obj15[1] = intl20.string(tmp(tmp2[5]).t.LWsArT);
     const intl21 = tmp(tmp2[5]).intl;
@@ -136,7 +207,14 @@ export default function useBuyNitroPerks(arg0) {
     obj15[5] = { image: callback2(tmp2[24]), description: tmp(tmp2[5]).t["4lSyCY"] };
     items[sum1] = obj15;
     const sum2 = sum1 + 1;
-    const obj17 = { id: "entrance-sounds", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
+    const obj17 = {
+      id: "entrance-sounds",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: false,
+      detail: null,
+    };
     const intl22 = tmp(tmp2[5]).intl;
     obj17[1] = intl22.string(tmp(tmp2[5]).t["f4M+H9"]);
     const intl23 = tmp(tmp2[5]).intl;
@@ -144,7 +222,14 @@ export default function useBuyNitroPerks(arg0) {
     obj17[3] = tmp(tmp2[25]).DoorEnterIcon;
     items[sum2] = obj17;
     const sum3 = sum2 + 1;
-    const obj18 = { id: "video-backgrounds", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
+    const obj18 = {
+      id: "video-backgrounds",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: true,
+      detail: null,
+    };
     const intl24 = tmp(tmp2[5]).intl;
     obj18[1] = intl24.string(tmp(tmp2[5]).t.NaGpTf);
     const intl25 = tmp(tmp2[5]).intl;
@@ -154,7 +239,14 @@ export default function useBuyNitroPerks(arg0) {
     obj18[5] = { image: callback2(tmp2[27]), description: tmp(tmp2[5]).t["A8O/Qw"] };
     items[sum3] = obj18;
     const sum4 = sum3 + 1;
-    const obj20 = { id: "longer-messages", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
+    const obj20 = {
+      id: "longer-messages",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: false,
+      detail: null,
+    };
     const intl26 = tmp(tmp2[5]).intl;
     obj20[1] = intl26.string(tmp(tmp2[5]).t.BUScid);
     const intl27 = tmp(tmp2[5]).intl;
@@ -164,7 +256,14 @@ export default function useBuyNitroPerks(arg0) {
     obj20[5] = { image: callback2(tmp2[29]), description: tmp(tmp2[5]).t.vN6XpQ };
     items[sum4] = obj20;
     const sum5 = sum4 + 1;
-    const obj22 = { id: "more-servers", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
+    const obj22 = {
+      id: "more-servers",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: false,
+      detail: null,
+    };
     const intl28 = tmp(tmp2[5]).intl;
     obj22[1] = intl28.string(tmp(tmp2[5]).t.Bv8Pfk);
     const intl29 = tmp(tmp2[5]).intl;
@@ -174,7 +273,14 @@ export default function useBuyNitroPerks(arg0) {
     obj22[5] = { image: callback2(tmp2[31]), description: tmp(tmp2[5]).t.JMfaTU };
     items[sum5] = obj22;
     const sum6 = sum5 + 1;
-    const obj24 = { id: "client-themes", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
+    const obj24 = {
+      id: "client-themes",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: false,
+      detail: null,
+    };
     const intl30 = tmp(tmp2[5]).intl;
     obj24[1] = intl30.string(tmp(tmp2[5]).t.kWM48G);
     const intl31 = tmp(tmp2[5]).intl;
@@ -184,7 +290,14 @@ export default function useBuyNitroPerks(arg0) {
     obj24[5] = { image: callback2(tmp2[33]), description: tmp(tmp2[5]).t.jBTTws };
     items[sum6] = obj24;
     const sum7 = sum6 + 1;
-    const obj26 = { id: "display-name-styles", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
+    const obj26 = {
+      id: "display-name-styles",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: false,
+      detail: null,
+    };
     const intl32 = tmp(tmp2[5]).intl;
     obj26[1] = intl32.string(tmp(tmp2[5]).t.OLtTrt);
     const intl33 = tmp(tmp2[5]).intl;
@@ -192,7 +305,14 @@ export default function useBuyNitroPerks(arg0) {
     obj26[3] = tmp(tmp2[34]).LettersIcon;
     items[sum7] = obj26;
     const sum8 = sum7 + 1;
-    const obj27 = { id: "permadecos", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
+    const obj27 = {
+      id: "permadecos",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: false,
+      detail: null,
+    };
     const intl34 = tmp(tmp2[5]).intl;
     obj27[1] = intl34.string(tmp(tmp2[5]).t.L14NZN);
     const intl35 = tmp(tmp2[5]).intl;
@@ -200,14 +320,28 @@ export default function useBuyNitroPerks(arg0) {
     obj27[3] = tmp(tmp2[35]).TrophyIcon;
     items[sum8] = obj27;
     const sum9 = sum8 + 1;
-    const obj28 = { id: "early-access", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
+    const obj28 = {
+      id: "early-access",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: false,
+      detail: null,
+    };
     const intl36 = tmp(tmp2[5]).intl;
     obj28[1] = intl36.string(tmp(tmp2[5]).t.EYxi0o);
     const intl37 = tmp(tmp2[5]).intl;
     obj28[2] = intl37.string(tmp(tmp2[5]).t.M9AIt1);
     obj28[3] = tmp(tmp2[36]).SparklesIcon;
     items[sum9] = obj28;
-    const obj29 = { id: "member-pricing", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
+    const obj29 = {
+      id: "member-pricing",
+      label: null,
+      subLabel: null,
+      IconComponent: null,
+      includedInNitroBasic: false,
+      detail: null,
+    };
     const intl38 = tmp(tmp2[5]).intl;
     obj29[1] = intl38.string(tmp(tmp2[5]).t["H4/NBN"]);
     const intl39 = tmp(tmp2[5]).intl;
@@ -222,7 +356,7 @@ export default function useBuyNitroPerks(arg0) {
       let obj = closure_1_7(result);
       const items = [obj.hex(), closure_1_7(result1).hex()];
       const obj2 = closure_1_7(result1);
-      const items1 = [closure_1_8(result).hex(), ];
+      const items1 = [closure_1_8(result).hex()];
       const obj3 = closure_1_8(result);
       items1[1] = closure_1_8(result1).hex();
       let tmp4 = closure_1;
@@ -252,25 +386,37 @@ export default function useBuyNitroPerks(arg0) {
       if (0 === found1.length) {
         const items5 = [obj30];
         mapped = found;
-        HermesBuiltin.arraySpread(found.map((perk) => ({ kind: "perk", perk, start: 0 === arg1, end: arg1 === mapped.length - 1 })), 1);
+        HermesBuiltin.arraySpread(
+          found.map((perk) => ({ kind: "perk", perk, start: 0 === arg1, end: arg1 === mapped.length - 1 })),
+          1,
+        );
         let items6 = items5;
       } else {
-        items6 = [obj30, ];
+        items6 = [obj30];
         mapped = found;
-        const arraySpreadResult3 = HermesBuiltin.arraySpread(found.map((perk) => ({ kind: "perk", perk, start: 0 === arg1, end: arg1 === mapped.length - 1 })), 1);
+        const arraySpreadResult3 = HermesBuiltin.arraySpread(
+          found.map((perk) => ({ kind: "perk", perk, start: 0 === arg1, end: arg1 === mapped.length - 1 })),
+          1,
+        );
         const obj31 = { kind: "section-header", id: "nitro-only-perks-header", title: null, highlightNitro: true };
         const intl41 = tmp(tmp2[5]).intl;
         obj31[2] = intl41.string(tmp(tmp2[5]).t.YCZldK);
         items6[arraySpreadResult3] = obj31;
         mapped = found1;
-        HermesBuiltin.arraySpread(found1.map((perk) => ({ kind: "perk", perk, start: 0 === arg1, end: arg1 === mapped.length - 1 })), arraySpreadResult3 + 1);
+        HermesBuiltin.arraySpread(
+          found1.map((perk) => ({ kind: "perk", perk, start: 0 === arg1, end: arg1 === mapped.length - 1 })),
+          arraySpreadResult3 + 1,
+        );
       }
       return items6;
     } else {
       const items7 = [obj30];
-      HermesBuiltin.arraySpread(mapped.map((perk) => ({ kind: "perk", perk, start: 0 === arg1, end: arg1 === mapped.length - 1 })), 1);
+      HermesBuiltin.arraySpread(
+        mapped.map((perk) => ({ kind: "perk", perk, start: 0 === arg1, end: arg1 === mapped.length - 1 })),
+        1,
+      );
       return items7;
     }
     const obj25 = { image: callback2(tmp2[33]), description: tmp(tmp2[5]).t.jBTTws };
   }, items);
-};
+}

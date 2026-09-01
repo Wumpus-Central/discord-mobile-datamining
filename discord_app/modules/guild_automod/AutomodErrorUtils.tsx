@@ -85,15 +85,17 @@ function getAutomodErrorMessageFromMessageData(message) {
   }
   return stringResult;
 }
-class InvalidKeywordError extends Error {
-}
+class InvalidKeywordError extends Error {}
 const prototype = function InvalidRegexPatternError(intl) {
   return HermesBuiltin.applyArguments(new.target, new.target);
 }.prototype;
-class prototype extends Error {
-}
-const items = [, , ];
-({ AUTOMOD_MESSAGE_BLOCKED: arr[0], AUTOMOD_TITLE_BLOCKED: arr[1], AUTOMOD_INVALID_RUST_SERVICE_RESPONSE: arr[2] } = AbortCodes);
+class prototype extends Error {}
+const items = [, ,];
+({
+  AUTOMOD_MESSAGE_BLOCKED: arr[0],
+  AUTOMOD_TITLE_BLOCKED: arr[1],
+  AUTOMOD_INVALID_RUST_SERVICE_RESPONSE: arr[2],
+} = AbortCodes);
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/guild_automod/AutomodErrorUtils.tsx");
 

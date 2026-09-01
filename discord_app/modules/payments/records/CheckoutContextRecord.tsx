@@ -28,7 +28,15 @@ AvailablePlanRecord["createFromServer"] = function createFromServer(arg0) {
   if (typeof AvailablePlanRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp2 = new AvailablePlanRecord("Trying to call a non-function", AvailablePlanRecord, new.target, id, quantity, price, total);
+  const tmp2 = new AvailablePlanRecord(
+    "Trying to call a non-function",
+    AvailablePlanRecord,
+    new.target,
+    id,
+    quantity,
+    price,
+    total,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp2.id = id;
   tmp2.quantity = quantity;
@@ -41,7 +49,7 @@ AvailablePlanRecord["createFromServer"] = function createFromServer(arg0) {
   return tmp2;
 };
 prototype["getPlanQuantities"] = function getPlanQuantities() {
-  const items = [, ];
+  const items = [,];
   ({ id: arr[0], quantity: arr[1] } = this);
   const items1 = [items];
   const map = new Map(items1);
@@ -78,27 +86,32 @@ prototype["matchesItems"] = function matchesItems(closure_0) {
       }
       return true;
     }
-  })(planQuantities, (function toQuantitiesByPlanId(closure_0) {
-    const map = new Map();
-    const iter = closure_0[Symbol.iterator]();
-    while (iter !== undefined) {
-      ({ planId, quantity } = nextResult);
-      let num = map.get(planId);
-      if (num == null) {
-        num = 0;
+  })(
+    planQuantities,
+    (function toQuantitiesByPlanId(closure_0) {
+      const map = new Map();
+      const iter = closure_0[Symbol.iterator]();
+      while (iter !== undefined) {
+        ({ planId, quantity } = nextResult);
+        let num = map.get(planId);
+        if (num == null) {
+          num = 0;
+        }
+        let tmp2 = quantity;
+        let result = map.set(planId, num + quantity);
+        continue;
       }
-      let tmp2 = quantity;
-      let result = map.set(planId, num + quantity);
-      continue;
-    }
-    return map;
-  })(closure_0));
+      return map;
+    })(closure_0),
+  );
 };
 prototype["getPriceString"] = function getPriceString() {
   const total = this.total;
   const obj = formatSingleCurrencyPrice;
   const obj2 = new addDefault(total.amount);
-  return obj.formatPrice(new addDefault(total.amount).dividedBy(10 ** total.exponent).toNumber(), total.currency, { convertToMajorUnits: false });
+  return obj.formatPrice(new addDefault(total.amount).dividedBy(10 ** total.exponent).toNumber(), total.currency, {
+    convertToMajorUnits: false,
+  });
 };
 prototype["getAddOnPrice"] = function getAddOnPrice() {
   const self = this;
@@ -171,7 +184,16 @@ CheckoutContextRecord["createFromOrder"] = function createFromOrder(checkout_con
     if (typeof CheckoutContextRecord !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const tmp10 = new CheckoutContextRecord("Trying to call a non-function", available_plans, CheckoutContextRecord, new.target, payment_sources, country, allowed_currencies, mapped);
+    const tmp10 = new CheckoutContextRecord(
+      "Trying to call a non-function",
+      available_plans,
+      CheckoutContextRecord,
+      new.target,
+      payment_sources,
+      country,
+      allowed_currencies,
+      mapped,
+    );
     // ThrowIfThisInitialized (0x7c)
     if (payment_sources == null) {
       payment_sources = [];
@@ -193,7 +215,9 @@ CheckoutContextRecord["createFromOrder"] = function createFromOrder(checkout_con
   }
   return tmp2;
 };
-CheckoutContextRecord.prototype["getAvailablePlanForItems"] = function getAvailablePlanForItems(subscriptionItemsForProduct) {
+CheckoutContextRecord.prototype["getAvailablePlanForItems"] = function getAvailablePlanForItems(
+  subscriptionItemsForProduct,
+) {
   closure_0 = subscriptionItemsForProduct;
   const availablePlans = this.availablePlans;
   let found = availablePlans.find((matchesItems) => matchesItems.matchesItems(closure_0));

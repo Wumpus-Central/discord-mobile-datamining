@@ -9,5 +9,7 @@ const result = set.fileFinishedImporting("modules/group_dm/native/showChatGDMCus
 export default function showChatGDMCustomizeActionSheet(closure_0) {
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  _modDef4723.pushLazy(asyncRequireImpl(10658, dependencyMap.paths), closure_0, "customize-group-dm", { presentation: "modal" });
-};
+  _modDef4723.pushLazy(asyncRequireImpl(10658, dependencyMap.paths), closure_0, "customize-group-dm", {
+    presentation: "modal",
+  });
+}

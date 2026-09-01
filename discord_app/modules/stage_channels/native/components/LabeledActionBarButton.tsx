@@ -11,19 +11,48 @@ require = arg1;
 noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { buttonContainer: null, container: null, containerWithLabel: null, pressable: null, buttonContent: null, buttonText: null, rightTextMargin: null };
-createCacheKey = { minHeight: 56, minWidth: 56, alignItems: "center", justifyContent: "center", borderRadius: 28, backgroundColor: require("result").ACTION_BAR_BUTTON_BACKGROUND };
+createCacheKey = {
+  buttonContainer: null,
+  container: null,
+  containerWithLabel: null,
+  pressable: null,
+  buttonContent: null,
+  buttonText: null,
+  rightTextMargin: null,
+};
+createCacheKey = {
+  minHeight: 56,
+  minWidth: 56,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: 28,
+  backgroundColor: require("result").ACTION_BAR_BUTTON_BACKGROUND,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginHorizontal: 12 };
 createCacheKey[2] = { minWidth: "50%", maxWidth: "70%", flexShrink: 1 };
 createCacheKey[3] = { marginHorizontal: 12, borderRadius: 28 };
 createCacheKey[4] = { display: "flex", flexDirection: "row", alignItems: "center" };
-createCacheKey[5] = { marginStart: 8, fontSize: 14, color: ThemesDefault.colors.WHITE, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, paddingStart: 3 };
+createCacheKey[5] = {
+  marginStart: 8,
+  fontSize: 14,
+  color: ThemesDefault.colors.WHITE,
+  fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD,
+  paddingStart: 3,
+};
 createCacheKey[6] = { marginStart: 0, marginEnd: 8 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { LEFT: 0, [0]: "LEFT", RIGHT: 1, [1]: "RIGHT" };
-obj1 = { marginStart: 8, fontSize: 14, color: ThemesDefault.colors.WHITE, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, paddingStart: 3 };
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/LabeledActionBarButton.tsx");
+obj1 = {
+  marginStart: 8,
+  fontSize: 14,
+  color: ThemesDefault.colors.WHITE,
+  fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD,
+  paddingStart: 3,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/components/LabeledActionBarButton.tsx",
+);
 
 export const IconPosition = obj2;
 export const LabeledActionButton = function LabeledActionButton(children) {
@@ -33,7 +62,7 @@ export const LabeledActionButton = function LabeledActionButton(children) {
   }
   const merged = Object.assign(children, Object.create(null));
   const tmp3 = callback();
-  const items = [tmp3.container, ];
+  const items = [tmp3.container];
   let containerWithLabel = null;
   if (null != label) {
     containerWithLabel = tmp3.containerWithLabel;
@@ -42,7 +71,7 @@ export const LabeledActionButton = function LabeledActionButton(children) {
   items[1] = containerWithLabel;
   obj = { accessibilityRole: "button", disabled, style: tmp3.pressable };
   const merged1 = Object.assign(merged);
-  const items1 = [tmp3.buttonContainer, , ];
+  const items1 = [tmp3.buttonContainer, ,];
   let num = 1;
   if (disabled) {
     num = 0.25;
@@ -56,7 +85,7 @@ export const LabeledActionButton = function LabeledActionButton(children) {
   }
   obj1 = { style: items1, children: null };
   items1[2] = tmp11;
-  const items2 = [tmp3.buttonContent, ];
+  const items2 = [tmp3.buttonContent];
   obj2 = null;
   if (null != label) {
     obj2 = { paddingHorizontal: 16 };
@@ -70,10 +99,10 @@ export const LabeledActionButton = function LabeledActionButton(children) {
     obj4[1] = imageStyle;
     tmp4Result = tmp4(closure_2, obj4);
   }
-  const items3 = [tmp4Result, , ];
+  const items3 = [tmp4Result, ,];
   tmp4Result = null;
   if (null != label) {
-    const items4 = [tmp3.buttonText, ];
+    const items4 = [tmp3.buttonText];
     let rightTextMargin = iconPosition === tmp12.RIGHT;
     if (rightTextMargin) {
       rightTextMargin = tmp3.rightTextMargin;

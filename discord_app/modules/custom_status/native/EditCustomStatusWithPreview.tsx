@@ -16,7 +16,14 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 require = arg1;
 function ClearInputButton(onPress) {
-  let obj = { style: { borderRadius: 10, paddingLeft: 8 }, accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
+  let obj = {
+    style: { borderRadius: 10, paddingLeft: 8 },
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    onPress: null,
+    hitSlop: null,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.VkKicb);
   obj[3] = onPress.onPress;
@@ -175,7 +182,12 @@ function EditCustomStatusWithPreview(navigation) {
   }, items8);
   const items9 = [memo, onClose];
   callback7 = obj.useCallback(() => {
-    const obj = { hasEdits: memo, onHasEdits: navigation(analyticsLocations[27]).dismissKeyboard, resetPending: c11, onConfirm: onClose };
+    const obj = {
+      hasEdits: memo,
+      onHasEdits: navigation(analyticsLocations[27]).dismissKeyboard,
+      resetPending: c11,
+      onConfirm: onClose,
+    };
     onClose(analyticsLocations[26])(obj);
   }, items9);
   const items10 = [stateFromStores, first, first1, labelResult];
@@ -202,7 +214,7 @@ function EditCustomStatusWithPreview(navigation) {
         obj[2] = !closure_18;
         return closure_1_13(closure_1_0(closure_1_2[29]).HeaderTextButton, obj);
       },
-      headerLeft: navigation(analyticsLocations[30]).getHeaderCloseButton(callback7)
+      headerLeft: navigation(analyticsLocations[30]).getHeaderCloseButton(callback7),
     };
     navigation.setOptions(obj);
   }, items11);
@@ -214,7 +226,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj = { style: null, children: null };
     obj[0] = tmp5.previewContainer;
     obj[1] = memo1;
-    const items12 = [ref1(closure_6, obj), , , ];
+    const items12 = [ref1(closure_6, obj), , ,];
     obj1 = { style: null, children: null };
     obj1[0] = tmp5.statusSection;
     obj2 = { style: null, children: null };
@@ -223,12 +235,19 @@ function EditCustomStatusWithPreview(navigation) {
     const intl5 = tmp6(tmp7[11]).intl;
     obj3[3] = intl5.string(tmp6(tmp7[11]).t.zOdg0A);
     obj2[1] = ref1(tmp6(tmp7[31]).Text, obj3);
-    const items13 = [ref1(closure_6, obj2), ];
+    const items13 = [ref1(closure_6, obj2)];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp5.statusInput;
     const obj5 = { style: null, children: null };
     obj5[0] = tmp5.statusInputRow;
-    const obj6 = { ref: null, accessibilityLabel: null, accessibilityValue: null, accessibilityRole: "button", onPress: null, children: null };
+    const obj6 = {
+      ref: null,
+      accessibilityLabel: null,
+      accessibilityValue: null,
+      accessibilityRole: "button",
+      onPress: null,
+      children: null,
+    };
     obj6[0] = ref1;
     const intl6 = tmp6(tmp7[11]).intl;
     obj6[1] = intl6.string(tmp6(tmp7[11]).t.WkfRZP);
@@ -244,8 +263,28 @@ function EditCustomStatusWithPreview(navigation) {
     obj8[0] = first1;
     obj8[2] = tmp5.emoji;
     obj6[5] = ref1(tmp10(tmp7[32]), obj8);
-    const items14 = [ref1(tmp6(tmp7[10]).PressableOpacity, obj6), , ];
-    const obj9 = { ref: null, maxLength: null, placeholder: null, placeholderTextColor: null, accessibilityLabel: null, onSubmitEditing: null, onFocus: null, style: null, value: null, onChange: null, autoCorrect: false, showBorder: false, showTopContainer: false, autoCapitalize: "none", inputTextStyle: null, multiline: true, submitBehavior: "blurAndSubmit", returnKeyType: "done", autoFocus: true };
+    const items14 = [ref1(tmp6(tmp7[10]).PressableOpacity, obj6), ,];
+    const obj9 = {
+      ref: null,
+      maxLength: null,
+      placeholder: null,
+      placeholderTextColor: null,
+      accessibilityLabel: null,
+      onSubmitEditing: null,
+      onFocus: null,
+      style: null,
+      value: null,
+      onChange: null,
+      autoCorrect: false,
+      showBorder: false,
+      showTopContainer: false,
+      autoCapitalize: "none",
+      inputTextStyle: null,
+      multiline: true,
+      submitBehavior: "blurAndSubmit",
+      returnKeyType: "done",
+      autoFocus: true,
+    };
     obj9[0] = ref2;
     obj9[1] = closure_8;
     obj9[2] = labelResult;
@@ -282,7 +321,11 @@ function EditCustomStatusWithPreview(navigation) {
       let obj = navigation(analyticsLocations[27]);
       obj.dismissKeyboard();
       obj = { initialValue: first2, onChange: closure_10 };
-      onClose(analyticsLocations[36]).openLazy(navigation(analyticsLocations[38])(analyticsLocations[37], analyticsLocations.paths), "ClearAfterOptionsActionSheet", obj);
+      onClose(analyticsLocations[36]).openLazy(
+        navigation(analyticsLocations[38])(analyticsLocations[37], analyticsLocations.paths),
+        "ClearAfterOptionsActionSheet",
+        obj,
+      );
     };
     const obj13 = { variant: "text-sm/medium", children: null };
     obj13[1] = tmp10(tmp7[39])(first2);
@@ -326,15 +369,61 @@ function EditCustomStatusWithPreview(navigation) {
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: c9, AnalyticsSections: c10, NOOP: unpackModuleId, Fonts } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-createCacheKey = { container: { flexGrow: 1, padding: 16, rowGap: 24 }, statusSection: { rowGap: 8 }, statusInput: null, statusInputRow: null, emoji: null, status: null, statusText: null, inputPlaceholder: null, previewContainer: null, closeIcon: null, statusSectionHeader: null };
-createCacheKey = { flexDirection: "column", rowGap: 4, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.lg, padding: 12 };
+createCacheKey = {
+  container: { flexGrow: 1, padding: 16, rowGap: 24 },
+  statusSection: { rowGap: 8 },
+  statusInput: null,
+  statusInputRow: null,
+  emoji: null,
+  status: null,
+  statusText: null,
+  inputPlaceholder: null,
+  previewContainer: null,
+  closeIcon: null,
+  statusSectionHeader: null,
+};
+createCacheKey = {
+  flexDirection: "column",
+  rowGap: 4,
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  borderRadius: ThemesDefault.radii.lg,
+  padding: 12,
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[4] = { marginRight: 8 };
-createCacheKey[5] = { color: ThemesDefault.colors.TEXT_STRONG, lineHeight: 16, flexGrow: 1, alignSelf: "flex-start", paddingVertical: 0, paddingHorizontal: 0 };
-let obj1 = { color: ThemesDefault.colors.TEXT_STRONG, lineHeight: 16, flexGrow: 1, alignSelf: "flex-start", paddingVertical: 0, paddingHorizontal: 0 };
-createCacheKey[6] = { fontSize: 16, fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.TEXT_STRONG, flexGrow: 1, height: "auto", textAlignVertical: "center" };
-let obj2 = { fontSize: 16, fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.TEXT_STRONG, flexGrow: 1, height: "auto", textAlignVertical: "center" };
+createCacheKey[5] = {
+  color: ThemesDefault.colors.TEXT_STRONG,
+  lineHeight: 16,
+  flexGrow: 1,
+  alignSelf: "flex-start",
+  paddingVertical: 0,
+  paddingHorizontal: 0,
+};
+let obj1 = {
+  color: ThemesDefault.colors.TEXT_STRONG,
+  lineHeight: 16,
+  flexGrow: 1,
+  alignSelf: "flex-start",
+  paddingVertical: 0,
+  paddingHorizontal: 0,
+};
+createCacheKey[6] = {
+  fontSize: 16,
+  fontFamily: Fonts.PRIMARY_MEDIUM,
+  color: ThemesDefault.colors.TEXT_STRONG,
+  flexGrow: 1,
+  height: "auto",
+  textAlignVertical: "center",
+};
+let obj2 = {
+  fontSize: 16,
+  fontFamily: Fonts.PRIMARY_MEDIUM,
+  color: ThemesDefault.colors.TEXT_STRONG,
+  flexGrow: 1,
+  height: "auto",
+  textAlignVertical: "center",
+};
 createCacheKey[7] = { color: ThemesDefault.colors.TEXT_MUTED };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[8] = { alignItems: "center" };
@@ -363,7 +452,12 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     };
     obj[2] = analyticsLocations(closure_1_2[30]).getHeaderCloseButton(_prompt(closure_1_2[43]).pop);
     obj[4] = function render(arg0, navigation) {
-      return closure_1_13(closure_1_17, { navigation, onClose: callback2(closure_1_2[43]).pop, analyticsLocations: closure_0, prompt: callback2 });
+      return closure_1_13(closure_1_17, {
+        navigation,
+        onClose: callback2(closure_1_2[43]).pop,
+        analyticsLocations: closure_0,
+        prompt: callback2,
+      });
     };
     obj[0] = obj;
     return obj;
@@ -378,4 +472,4 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
   }
   obj[3] = obj;
   return tmp2(analyticsLocations(6008).Navigator, obj);
-};
+}

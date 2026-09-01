@@ -9,8 +9,7 @@ let closure_4 = {};
 let closure_5 = {};
 let closure_6 = {};
 const Store = initializeDefault.Store;
-class ApplicationDirectoryCollectionsStore extends Store {
-}
+class ApplicationDirectoryCollectionsStore extends Store {}
 const prototype = ApplicationDirectoryCollectionsStore.prototype;
 prototype["getLastFetchTimeMs"] = function getLastFetchTimeMs(arg0) {
   return table3["surface:" + arg0.surface + " activeState:" + arg0.activeState];
@@ -36,7 +35,10 @@ obj = {
     collections = collections.collections;
     const combined = "surface:" + collections.surface + " activeState:" + collections.activeState;
     const mapped = collections.map((application_directory_collection_items) => {
-      application_directory_collection_items.application_directory_collection_items = callback(table[0]).sortBy(application_directory_collection_items.application_directory_collection_items, ["position", "id"]);
+      application_directory_collection_items.application_directory_collection_items = callback(table[0]).sortBy(
+        application_directory_collection_items.application_directory_collection_items,
+        ["position", "id"],
+      );
       return application_directory_collection_items;
     });
     obj = applyDefault;
@@ -56,10 +58,12 @@ obj = {
     ({ surface, activeState } = arg0);
     const merged = Object.assign(obj);
     obj["surface:" + surface + " activeState:" + activeState] = obj.ERROR;
-  }
+  },
 };
 const applicationDirectoryCollectionsStore = new ApplicationDirectoryCollectionsStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryCollectionsStore.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/global_discovery_apps/stores/ApplicationDirectoryCollectionsStore.tsx",
+);
 
 export default applicationDirectoryCollectionsStore;
 export const FetchState = obj;

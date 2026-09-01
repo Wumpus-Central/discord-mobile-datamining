@@ -31,10 +31,16 @@ const memoResult = importAllResult.memo(function ChatInputGuardSpamMessageReques
       obj[2] = navigation(7680);
       obj.open(obj);
     },
-    onRejectSuccess: callback
+    onRejectSuccess: callback,
   };
   const messageRequestActions = channel(12006).useMessageRequestActions(obj);
-  ({ rejectMessageRequest: c3, isRejectLoading, isUserProfileLoading, isOptimisticRejected, markAsNotSpam: c4 } = messageRequestActions);
+  ({
+    rejectMessageRequest: c3,
+    isRejectLoading,
+    isUserProfileLoading,
+    isOptimisticRejected,
+    markAsNotSpam: c4,
+  } = messageRequestActions);
   let tmp7 = isRejectLoading;
   if (!isRejectLoading) {
     tmp7 = isUserProfileLoading;
@@ -42,7 +48,20 @@ const memoResult = importAllResult.memo(function ChatInputGuardSpamMessageReques
   if (!tmp7) {
     tmp7 = isOptimisticRejected;
   }
-  obj = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonPrimaryVariant: "destructive", buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
+  obj = {
+    type: "button-action",
+    message: null,
+    subtext: null,
+    buttonPrimaryText: null,
+    buttonPrimaryOnPress: null,
+    buttonPrimaryDisabled: null,
+    buttonPrimaryLoading: null,
+    buttonPrimaryVariant: "destructive",
+    buttonSecondaryText: null,
+    buttonSecondaryOnPress: null,
+    buttonSecondaryDisabled: null,
+    buttonSecondaryLoading: null,
+  };
   const obj4 = channel(12006);
   const tmp8 = jsx;
   let intl = tmp(1236).intl;
@@ -64,12 +83,16 @@ const memoResult = importAllResult.memo(function ChatInputGuardSpamMessageReques
   obj[8] = intl4.string(channel(1236).t.olZgw5);
   obj[9] = function buttonSecondaryOnPress(stopPropagation) {
     stopPropagation.stopPropagation();
-    _undefined2(channel, closure_2, () => closure_1_0(closure_1_2[11]).transitionToChannel(id.id, { navigationReplace: true }));
+    _undefined2(channel, closure_2, () =>
+      closure_1_0(closure_1_2[11]).transitionToChannel(id.id, { navigationReplace: true }),
+    );
   };
   obj[10] = tmp7;
   obj[11] = isUserProfileLoading;
   return tmp8(navigation(12012), obj);
 });
-const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardSpamMessageRequest.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/chat_input/native/guard/ChatInputGuardSpamMessageRequest.tsx",
+);
 
 export default memoResult;

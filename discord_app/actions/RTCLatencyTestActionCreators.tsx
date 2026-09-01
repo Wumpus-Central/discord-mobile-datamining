@@ -7,7 +7,10 @@ const result = set.fileFinishedImporting("actions/RTCLatencyTestActionCreators.t
 
 export const fetchRTCLatencyTestRegions = function fetchRTCLatencyTestRegions(arg0) {
   const HTTP = sendRequest.HTTP;
-  const obj = { url: "https:" + window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT + "?v=" + arg0, rejectWithError: sendRequest.rejectWithMigratedError() };
+  const obj = {
+    url: "https:" + window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT + "?v=" + arg0,
+    rejectWithError: sendRequest.rejectWithMigratedError(),
+  };
   return HTTP.get(obj);
 };
 export const completeRTCLatencyTest = function completeRTCLatencyTest(latencyRankedRegions, mapped) {

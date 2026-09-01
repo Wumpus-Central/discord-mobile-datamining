@@ -31,7 +31,7 @@ export const getSafetyToolsActionSheetKey = function getSafetyToolsActionSheetKe
 };
 export const getStrangerDangerSafetyTips = function getStrangerDangerSafetyTips() {
   const intl = getSystemLocale.intl;
-  const items = [intl.string(getSystemLocale.t["26fDv4"]), , ];
+  const items = [intl.string(getSystemLocale.t["26fDv4"]), ,];
   const intl2 = getSystemLocale.intl;
   items[1] = intl2.string(getSystemLocale.t.togDfk);
   const intl3 = getSystemLocale.intl;
@@ -40,7 +40,7 @@ export const getStrangerDangerSafetyTips = function getStrangerDangerSafetyTips(
 };
 export const getInappropriateConversationsSafetyTips = function getInappropriateConversationsSafetyTips() {
   const intl = getSystemLocale.intl;
-  const items = [intl.string(getSystemLocale.t.bCWw8l), , ];
+  const items = [intl.string(getSystemLocale.t.bCWw8l), ,];
   const intl2 = getSystemLocale.intl;
   items[1] = intl2.string(getSystemLocale.t.mzSucz);
   const intl3 = getSystemLocale.intl;

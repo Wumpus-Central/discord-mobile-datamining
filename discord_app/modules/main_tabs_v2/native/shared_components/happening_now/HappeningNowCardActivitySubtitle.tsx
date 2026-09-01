@@ -13,8 +13,12 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 require = arg1;
 noopAll;
-let closure_7 = createCacheKey.createStyles({ cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx");
+let closure_7 = createCacheKey.createStyles({
+  cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx",
+);
 
 export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubtitle(voiceState) {
   voiceState = voiceState.voiceState;
@@ -30,7 +34,11 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
     obj[0] = stateFromStores;
     tmp8 = getChannelA11yLabelDefault(obj);
   }
-  obj[1] = jsx(voiceState(14891).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: computeChannelNameDefault(stateFromStores) });
+  obj[1] = jsx(voiceState(14891).HappeningNowCardSubtitle, {
+    lineClamp: 1,
+    accessibilityLabel: tmp8,
+    children: computeChannelNameDefault(stateFromStores),
+  });
   return <View style={callback().cardDetails}>{null}</View>;
 };
 export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {

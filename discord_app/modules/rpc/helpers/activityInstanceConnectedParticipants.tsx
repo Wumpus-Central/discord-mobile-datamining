@@ -53,7 +53,7 @@ obj = {
       }
       return obj;
     };
-  }
+  },
 };
 const result = require("set").fileFinishedImporting("modules/rpc/helpers/activityInstanceConnectedParticipants.tsx");
 
@@ -64,9 +64,14 @@ export const activityInstanceConnectedParticipants = function activityInstanceCo
     obj[0] = [];
     return obj;
   } else {
-    _require = require("../../activities/utils/embeddedActivityLocationUtils.tsx").getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+    _require = require("../../activities/utils/embeddedActivityLocationUtils.tsx").getEmbeddedActivityLocationGuildId(
+      currentEmbeddedActivity.location,
+    );
     const obj2 = getEmbeddedActivityLocationChannelId;
-    const embeddedActivityLocationChannelId = require("../../activities/utils/embeddedActivityLocationUtils.tsx").getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+    const embeddedActivityLocationChannelId =
+      require("../../activities/utils/embeddedActivityLocationUtils.tsx").getEmbeddedActivityLocationChannelId(
+        currentEmbeddedActivity.location,
+      );
     obj = { participants: null };
     const _Array = Array;
     const obj3 = getEmbeddedActivityLocationChannelId;

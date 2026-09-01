@@ -42,14 +42,21 @@ function BadgeTileContent(arg0) {
     iconHidden = tmp.iconHidden;
   }
   obj[2] = iconHidden;
-  const items = [callback(BadgeCatalogIconDefault, obj), ];
+  const items = [callback(BadgeCatalogIconDefault, obj)];
   if (flag) {
     if (null != onShowPress) {
       if (!selected) {
         if (!alwaysVisible) {
           obj1 = { style: null, children: null };
           obj1[0] = tmp.indicatorButton;
-          const obj2 = { size: "sm", variant: "secondary-overlay", icon: null, accessibilityLabel: null, accessibilityHint: null, onPress: null };
+          const obj2 = {
+            size: "sm",
+            variant: "secondary-overlay",
+            icon: null,
+            accessibilityLabel: null,
+            accessibilityHint: null,
+            onPress: null,
+          };
           const obj3 = { size: "sm", color: null };
           obj3[1] = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT;
           obj2[2] = tmp13(tmp11(7741).EyeSlashIcon, obj3);
@@ -84,7 +91,19 @@ let c4 = importAllResult;
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 let c18 = 80;
 let c19 = 16.666666666666668;
-let obj = { gridInset: null, grid: null, upsell: null, upsellCard: null, upsellContent: null, upsellCta: null, upsellText: null, message: null, messageText: null, action: null, actionHidden: null };
+let obj = {
+  gridInset: null,
+  grid: null,
+  upsell: null,
+  upsellCard: null,
+  upsellContent: null,
+  upsellCta: null,
+  upsellText: null,
+  message: null,
+  messageText: null,
+  action: null,
+  actionHidden: null,
+};
 obj = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 createCacheKey = { position: "relative", width: "100%", marginTop: ThemesDefault.space.PX_8 };
@@ -98,16 +117,48 @@ let obj4 = { paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: Them
 obj[5] = { marginTop: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm };
 obj[6] = { textAlign: "center" };
 let obj5 = { marginTop: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm };
-obj[7] = { alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_32 };
+obj[7] = {
+  alignItems: "center",
+  justifyContent: "center",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_32,
+};
 obj[8] = { textAlign: "center" };
-let obj6 = { alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_32 };
+let obj6 = {
+  alignItems: "center",
+  justifyContent: "center",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_32,
+};
 obj[9] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16 };
 obj[10] = { opacity: 0 };
 let closure_20 = createCacheKey.createStyles(obj);
-let obj8 = { position: { position: "absolute", top: 0, left: 0 }, card: { flex: 1, alignItems: "center", justifyContent: "center", padding: 0 }, indicator: null, indicatorButton: null, iconHidden: null };
+let obj8 = {
+  position: { position: "absolute", top: 0, left: 0 },
+  card: { flex: 1, alignItems: "center", justifyContent: "center", padding: 0 },
+  indicator: null,
+  indicatorButton: null,
+  iconHidden: null,
+};
 let obj7 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16 };
-obj8[2] = { position: "absolute", top: ThemesDefault.space.PX_8, end: ThemesDefault.space.PX_8, width: 32, height: 32, alignItems: "flex-end", justifyContent: "flex-start" };
-obj8[3] = { position: "absolute", top: 0, end: 0, width: 48, height: 48, alignItems: "center", justifyContent: "center" };
+obj8[2] = {
+  position: "absolute",
+  top: ThemesDefault.space.PX_8,
+  end: ThemesDefault.space.PX_8,
+  width: 32,
+  height: 32,
+  alignItems: "flex-end",
+  justifyContent: "flex-start",
+};
+obj8[3] = {
+  position: "absolute",
+  top: 0,
+  end: 0,
+  width: 48,
+  height: 48,
+  alignItems: "center",
+  justifyContent: "center",
+};
 obj8[4] = { opacity: 0.3 };
 let closure_21 = createCacheKey.createStyles(obj8);
 function getSlotOffset(arg0, arg1) {
@@ -118,10 +169,23 @@ function getSlotOffset(arg0, arg1) {
   obj[1] = rounded * (arg1 + PX_16.BADGE_GRID_GAP);
   return obj;
 }
-let obj9 = { position: "absolute", top: ThemesDefault.space.PX_8, end: ThemesDefault.space.PX_8, width: 32, height: 32, alignItems: "flex-end", justifyContent: "flex-start" };
-getSlotOffset.__closure = { BADGE_GRID_COLUMNS: require("PX_16").BADGE_GRID_COLUMNS, BADGE_GRID_GAP: require("PX_16").BADGE_GRID_GAP };
+let obj9 = {
+  position: "absolute",
+  top: ThemesDefault.space.PX_8,
+  end: ThemesDefault.space.PX_8,
+  width: 32,
+  height: 32,
+  alignItems: "flex-end",
+  justifyContent: "flex-start",
+};
+getSlotOffset.__closure = {
+  BADGE_GRID_COLUMNS: require("PX_16").BADGE_GRID_COLUMNS,
+  BADGE_GRID_GAP: require("PX_16").BADGE_GRID_GAP,
+};
 getSlotOffset.__workletHash = 8647997879684;
-getSlotOffset.__initData = { code: "function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){const{BADGE_GRID_COLUMNS,BADGE_GRID_GAP}=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};}" };
+getSlotOffset.__initData = {
+  code: "function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){const{BADGE_GRID_COLUMNS,BADGE_GRID_GAP}=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};}",
+};
 let closure_24 = importAllResult.memo((badge) => {
   badge = badge.badge;
   ({ index, tileSize, selected, alwaysVisible, onPress } = badge);
@@ -138,7 +202,7 @@ let closure_24 = importAllResult.memo((badge) => {
   const callback = importAllResult.useCallback(() => {
     onPress(badge);
   }, items);
-  const items1 = [callback2().position, ];
+  const items1 = [callback2().position];
   const items2 = [{ translateX: result1 }, { translateY: result2 }];
   items1[1] = { width: tileSize, height: tileSize, transform: items2 };
   if (badge.hidden) {
@@ -190,19 +254,43 @@ let closure_24 = importAllResult.memo((badge) => {
   }
   return tmp10Result;
 });
-let closure_25 = { code: "function CustomizeBadgesSheetTsx2(){const{orderShared,badgeId,getSlotOffset,slotOffset,tileSize}=this.__closure;const slot=orderShared.get().indexOf(badgeId);return slot<0?null:getSlotOffset(slot+slotOffset,tileSize);}" };
-let closure_26 = { code: "function CustomizeBadgesSheetTsx3(target,previousTarget){const{isThisTileDragging,translateX,withTiming,timingStandard,translateY}=this.__closure;if(target==null||isThisTileDragging.get()){return;}if(target.x!==(previousTarget===null||previousTarget===void 0?void 0:previousTarget.x)){translateX.set(withTiming(target.x,timingStandard));}if(target.y!==(previousTarget===null||previousTarget===void 0?void 0:previousTarget.y)){translateY.set(withTiming(target.y,timingStandard));}}" };
-let closure_27 = { code: "function CustomizeBadgesSheetTsx4(){const{orderShared,tileSize,BADGE_GRID_GAP,clamp,translateX,BADGE_GRID_COLUMNS,translateY,slotOffset,moveBadgeInDisplayOrder,badgeId,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;const order=orderShared.get();const step=tileSize+BADGE_GRID_GAP;const column=clamp(Math.floor((translateX.get()+tileSize/2)/step),0,BADGE_GRID_COLUMNS-1);const row=Math.max(Math.floor((translateY.get()+tileSize/2)/step),0);const to=clamp(row*BADGE_GRID_COLUMNS+column-slotOffset,0,order.length-1);const next=moveBadgeInDisplayOrder(order,order.indexOf(badgeId),to);if(next!==order){orderShared.set(next);runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.DRAG_AND_DROP_MOVE);}}" };
-let closure_28 = { code: "function CustomizeBadgesSheetTsx5(){const{scrollOffset}=this.__closure;return scrollOffset.get();}" };
-let closure_29 = { code: "function CustomizeBadgesSheetTsx6(offset,previousOffset){const{isThisTileDragging,translateY,reslot}=this.__closure;if(previousOffset==null||!isThisTileDragging.get()){return;}translateY.set(translateY.get()+(offset-previousOffset));reslot();}" };
-let closure_30 = { code: "function handleStart_CustomizeBadgesSheetTsx7(){const{isAnyDragActive,isThisTileDragging,measure,scrollRef,dragViewport,scale,withTiming,DRAG_SCALE,timingStandard,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;if(isAnyDragActive.get()&&!isThisTileDragging.get()){return;}isAnyDragActive.set(true);isThisTileDragging.set(true);const viewport=measure(scrollRef);dragViewport.set(viewport==null?null:{pageY:viewport.pageY,height:viewport.height});scale.set(withTiming(DRAG_SCALE,timingStandard));runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.DRAG_AND_DROP_START);}" };
-let closure_31 = { code: "function handleChange_CustomizeBadgesSheetTsx8(event){const{isThisTileDragging,translateX,translateY,reslot,dragViewport,footerHeight,AUTO_SCROLL_EDGE_SIZE,autoScrollSpeed,clamp}=this.__closure;if(!isThisTileDragging.get()){return;}translateX.set(translateX.get()+event.changeX);translateY.set(translateY.get()+event.changeY);reslot();const viewport=dragViewport.get();if(viewport==null){return;}const fromTop=event.absoluteY-viewport.pageY;const fromBottom=viewport.pageY+viewport.height-footerHeight-event.absoluteY;if(fromTop<AUTO_SCROLL_EDGE_SIZE){autoScrollSpeed.set(-1+clamp(fromTop,0,AUTO_SCROLL_EDGE_SIZE)/AUTO_SCROLL_EDGE_SIZE);}else if(fromBottom<AUTO_SCROLL_EDGE_SIZE){autoScrollSpeed.set(1-clamp(fromBottom,0,AUTO_SCROLL_EDGE_SIZE)/AUTO_SCROLL_EDGE_SIZE);}else{autoScrollSpeed.set(0);}}" };
-let closure_32 = { code: "function handleFinalize_CustomizeBadgesSheetTsx9(){const{isThisTileDragging,autoScrollSpeed,dragViewport,orderShared,badgeId,getSlotOffset,slotOffset,tileSize,translateX,withTiming,timingStandard,translateY,scale,isAnyDragActive,runOnJS,triggerHapticFeedback,HapticFeedbackTypes,onCommitOrder}=this.__closure;if(!isThisTileDragging.get()){return;}autoScrollSpeed.set(0);dragViewport.set(null);const order=orderShared.get();const slot=order.indexOf(badgeId);if(slot>=0){const target=getSlotOffset(slot+slotOffset,tileSize);translateX.set(withTiming(target.x,timingStandard));translateY.set(withTiming(target.y,timingStandard));}scale.set(withTiming(1,timingStandard));isThisTileDragging.set(false);isAnyDragActive.set(false);runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.DRAG_AND_DROP_END);runOnJS(onCommitOrder)(order);}" };
-let closure_33 = { code: "function CustomizeBadgesSheetTsx10(){const{handleFinalize}=this.__closure;handleFinalize();}" };
-let closure_34 = { code: "function CustomizeBadgesSheetTsx11(event){const{handleChange}=this.__closure;handleChange(event);}" };
+let closure_25 = {
+  code: "function CustomizeBadgesSheetTsx2(){const{orderShared,badgeId,getSlotOffset,slotOffset,tileSize}=this.__closure;const slot=orderShared.get().indexOf(badgeId);return slot<0?null:getSlotOffset(slot+slotOffset,tileSize);}",
+};
+let closure_26 = {
+  code: "function CustomizeBadgesSheetTsx3(target,previousTarget){const{isThisTileDragging,translateX,withTiming,timingStandard,translateY}=this.__closure;if(target==null||isThisTileDragging.get()){return;}if(target.x!==(previousTarget===null||previousTarget===void 0?void 0:previousTarget.x)){translateX.set(withTiming(target.x,timingStandard));}if(target.y!==(previousTarget===null||previousTarget===void 0?void 0:previousTarget.y)){translateY.set(withTiming(target.y,timingStandard));}}",
+};
+let closure_27 = {
+  code: "function CustomizeBadgesSheetTsx4(){const{orderShared,tileSize,BADGE_GRID_GAP,clamp,translateX,BADGE_GRID_COLUMNS,translateY,slotOffset,moveBadgeInDisplayOrder,badgeId,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;const order=orderShared.get();const step=tileSize+BADGE_GRID_GAP;const column=clamp(Math.floor((translateX.get()+tileSize/2)/step),0,BADGE_GRID_COLUMNS-1);const row=Math.max(Math.floor((translateY.get()+tileSize/2)/step),0);const to=clamp(row*BADGE_GRID_COLUMNS+column-slotOffset,0,order.length-1);const next=moveBadgeInDisplayOrder(order,order.indexOf(badgeId),to);if(next!==order){orderShared.set(next);runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.DRAG_AND_DROP_MOVE);}}",
+};
+let closure_28 = {
+  code: "function CustomizeBadgesSheetTsx5(){const{scrollOffset}=this.__closure;return scrollOffset.get();}",
+};
+let closure_29 = {
+  code: "function CustomizeBadgesSheetTsx6(offset,previousOffset){const{isThisTileDragging,translateY,reslot}=this.__closure;if(previousOffset==null||!isThisTileDragging.get()){return;}translateY.set(translateY.get()+(offset-previousOffset));reslot();}",
+};
+let closure_30 = {
+  code: "function handleStart_CustomizeBadgesSheetTsx7(){const{isAnyDragActive,isThisTileDragging,measure,scrollRef,dragViewport,scale,withTiming,DRAG_SCALE,timingStandard,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;if(isAnyDragActive.get()&&!isThisTileDragging.get()){return;}isAnyDragActive.set(true);isThisTileDragging.set(true);const viewport=measure(scrollRef);dragViewport.set(viewport==null?null:{pageY:viewport.pageY,height:viewport.height});scale.set(withTiming(DRAG_SCALE,timingStandard));runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.DRAG_AND_DROP_START);}",
+};
+let closure_31 = {
+  code: "function handleChange_CustomizeBadgesSheetTsx8(event){const{isThisTileDragging,translateX,translateY,reslot,dragViewport,footerHeight,AUTO_SCROLL_EDGE_SIZE,autoScrollSpeed,clamp}=this.__closure;if(!isThisTileDragging.get()){return;}translateX.set(translateX.get()+event.changeX);translateY.set(translateY.get()+event.changeY);reslot();const viewport=dragViewport.get();if(viewport==null){return;}const fromTop=event.absoluteY-viewport.pageY;const fromBottom=viewport.pageY+viewport.height-footerHeight-event.absoluteY;if(fromTop<AUTO_SCROLL_EDGE_SIZE){autoScrollSpeed.set(-1+clamp(fromTop,0,AUTO_SCROLL_EDGE_SIZE)/AUTO_SCROLL_EDGE_SIZE);}else if(fromBottom<AUTO_SCROLL_EDGE_SIZE){autoScrollSpeed.set(1-clamp(fromBottom,0,AUTO_SCROLL_EDGE_SIZE)/AUTO_SCROLL_EDGE_SIZE);}else{autoScrollSpeed.set(0);}}",
+};
+let closure_32 = {
+  code: "function handleFinalize_CustomizeBadgesSheetTsx9(){const{isThisTileDragging,autoScrollSpeed,dragViewport,orderShared,badgeId,getSlotOffset,slotOffset,tileSize,translateX,withTiming,timingStandard,translateY,scale,isAnyDragActive,runOnJS,triggerHapticFeedback,HapticFeedbackTypes,onCommitOrder}=this.__closure;if(!isThisTileDragging.get()){return;}autoScrollSpeed.set(0);dragViewport.set(null);const order=orderShared.get();const slot=order.indexOf(badgeId);if(slot>=0){const target=getSlotOffset(slot+slotOffset,tileSize);translateX.set(withTiming(target.x,timingStandard));translateY.set(withTiming(target.y,timingStandard));}scale.set(withTiming(1,timingStandard));isThisTileDragging.set(false);isAnyDragActive.set(false);runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.DRAG_AND_DROP_END);runOnJS(onCommitOrder)(order);}",
+};
+let closure_33 = {
+  code: "function CustomizeBadgesSheetTsx10(){const{handleFinalize}=this.__closure;handleFinalize();}",
+};
+let closure_34 = {
+  code: "function CustomizeBadgesSheetTsx11(event){const{handleChange}=this.__closure;handleChange(event);}",
+};
 let closure_35 = { code: "function CustomizeBadgesSheetTsx12(){const{handleStart}=this.__closure;handleStart();}" };
-let closure_36 = { code: "function CustomizeBadgesSheetTsx13(_event,success){const{runOnJS,handlePress}=this.__closure;if(success){runOnJS(handlePress)();}}" };
-let closure_37 = { code: "function CustomizeBadgesSheetTsx14(){const{isThisTileDragging,translateX,translateY,scale}=this.__closure;return{zIndex:isThisTileDragging.get()?10:0,transform:[{translateX:translateX.get()},{translateY:translateY.get()},{scale:scale.get()}]};}" };
+let closure_36 = {
+  code: "function CustomizeBadgesSheetTsx13(_event,success){const{runOnJS,handlePress}=this.__closure;if(success){runOnJS(handlePress)();}}",
+};
+let closure_37 = {
+  code: "function CustomizeBadgesSheetTsx14(){const{isThisTileDragging,translateX,translateY,scale}=this.__closure;return{zIndex:isThisTileDragging.get()?10:0,transform:[{translateX:translateX.get()},{translateY:translateY.get()},{scale:scale.get()}]};}",
+};
 let closure_38 = importAllResult.memo((badge) => {
   badge = badge.badge;
   ({ index, tileSize } = badge);
@@ -321,7 +409,13 @@ let closure_38 = importAllResult.memo((badge) => {
       return;
     }
   }
-  obj = { isThisTileDragging: sharedValue, translateX: sharedValue2, withTiming: tmp2(tmp3[24]).withTiming, timingStandard: tmp2(tmp3[25]).timingStandard, translateY: sharedValue3 };
+  obj = {
+    isThisTileDragging: sharedValue,
+    translateX: sharedValue2,
+    withTiming: tmp2(tmp3[24]).withTiming,
+    timingStandard: tmp2(tmp3[25]).timingStandard,
+    translateY: sharedValue3,
+  };
   C.__closure = obj;
   C.__workletHash = 12859780785249;
   C.__initData = closure_26;
@@ -335,7 +429,11 @@ let closure_38 = importAllResult.memo((badge) => {
     const bound = Math.max(Math.floor((sharedValue3.get() + tileSize / 2) / sum), 0);
     const clampResult = badge(slotOffset[23]).clamp(rounded, 0, badge(slotOffset[12]).BADGE_GRID_COLUMNS - 1);
     const obj3 = badge(slotOffset[23]);
-    const clampResult1 = badge(slotOffset[23]).clamp(bound * badge(slotOffset[12]).BADGE_GRID_COLUMNS + clampResult - slotOffset, 0, value.length - 1);
+    const clampResult1 = badge(slotOffset[23]).clamp(
+      bound * badge(slotOffset[12]).BADGE_GRID_COLUMNS + clampResult - slotOffset,
+      0,
+      value.length - 1,
+    );
     const result = badge(slotOffset[26]).moveBadgeInDisplayOrder(value, value.indexOf(badge_id), clampResult1);
     if (result !== value) {
       const result1 = obj.set(result);
@@ -344,7 +442,21 @@ let closure_38 = importAllResult.memo((badge) => {
       const runOnJSResult = tmp(tmp2[23]).runOnJS(tmp(tmp2[27]).triggerHapticFeedback);
     }
   };
-  obj = { orderShared, tileSize, BADGE_GRID_GAP: tmp2(tmp3[12]).BADGE_GRID_GAP, clamp: tmp2(tmp3[23]).clamp, translateX: sharedValue2, BADGE_GRID_COLUMNS: tmp2(tmp3[12]).BADGE_GRID_COLUMNS, translateY: sharedValue3, slotOffset, moveBadgeInDisplayOrder: tmp2(tmp3[26]).moveBadgeInDisplayOrder, badgeId: badge_id, runOnJS: tmp2(tmp3[23]).runOnJS, triggerHapticFeedback: tmp2(tmp3[27]).triggerHapticFeedback, HapticFeedbackTypes: tmp2(tmp3[27]).HapticFeedbackTypes };
+  obj = {
+    orderShared,
+    tileSize,
+    BADGE_GRID_GAP: tmp2(tmp3[12]).BADGE_GRID_GAP,
+    clamp: tmp2(tmp3[23]).clamp,
+    translateX: sharedValue2,
+    BADGE_GRID_COLUMNS: tmp2(tmp3[12]).BADGE_GRID_COLUMNS,
+    translateY: sharedValue3,
+    slotOffset,
+    moveBadgeInDisplayOrder: tmp2(tmp3[26]).moveBadgeInDisplayOrder,
+    badgeId: badge_id,
+    runOnJS: tmp2(tmp3[23]).runOnJS,
+    triggerHapticFeedback: tmp2(tmp3[27]).triggerHapticFeedback,
+    HapticFeedbackTypes: tmp2(tmp3[27]).HapticFeedbackTypes,
+  };
   fn.__closure = obj;
   fn.__workletHash = 2876890058314;
   fn.__initData = closure_27;
@@ -371,7 +483,24 @@ let closure_38 = importAllResult.memo((badge) => {
   ee.__workletHash = 9903671525100;
   ee.__initData = closure_29;
   const animatedReaction1 = badge(slotOffset[23]).useAnimatedReaction(te, ee);
-  const items1 = [callback, scrollRef, sharedValue1, autoScrollSpeed, footerHeight, badge_id, tileSize, slotOffset, orderShared, isDragActive, onCommitOrder, tmp6, sharedValue, sharedValue4, sharedValue2, sharedValue3];
+  const items1 = [
+    callback,
+    scrollRef,
+    sharedValue1,
+    autoScrollSpeed,
+    footerHeight,
+    badge_id,
+    tileSize,
+    slotOffset,
+    orderShared,
+    isDragActive,
+    onCommitOrder,
+    tmp6,
+    sharedValue,
+    sharedValue4,
+    sharedValue2,
+    sharedValue3,
+  ];
   const memo = isDragActive.useMemo(() => {
     function handleStart() {
       let obj = store;
@@ -390,11 +519,26 @@ let closure_38 = importAllResult.memo((badge) => {
         const result3 = store7.set(tmp5Result.withTiming(1.05, tmp5(tmp6[25]).timingStandard));
         tmp5Result = tmp5(tmp6[23]);
         const obj2 = handleStart(handleFinalize[23]);
-        tmp5Result.runOnJS(handleStart(handleFinalize[27]).triggerHapticFeedback)(handleStart(handleFinalize[27]).HapticFeedbackTypes.DRAG_AND_DROP_START);
+        tmp5Result.runOnJS(handleStart(handleFinalize[27]).triggerHapticFeedback)(
+          handleStart(handleFinalize[27]).HapticFeedbackTypes.DRAG_AND_DROP_START,
+        );
         const runOnJSResult = tmp5Result.runOnJS(handleStart(handleFinalize[27]).triggerHapticFeedback);
       }
     }
-    let obj = { isAnyDragActive: isDragActive, isThisTileDragging: sharedValue, measure: badge(slotOffset[23]).measure, scrollRef, dragViewport: sharedValue1, scale: sharedValue4, withTiming: badge(slotOffset[24]).withTiming, DRAG_SCALE: 1.05, timingStandard: badge(slotOffset[25]).timingStandard, runOnJS: badge(slotOffset[23]).runOnJS, triggerHapticFeedback: badge(slotOffset[27]).triggerHapticFeedback, HapticFeedbackTypes: badge(slotOffset[27]).HapticFeedbackTypes };
+    let obj = {
+      isAnyDragActive: isDragActive,
+      isThisTileDragging: sharedValue,
+      measure: badge(slotOffset[23]).measure,
+      scrollRef,
+      dragViewport: sharedValue1,
+      scale: sharedValue4,
+      withTiming: badge(slotOffset[24]).withTiming,
+      DRAG_SCALE: 1.05,
+      timingStandard: badge(slotOffset[25]).timingStandard,
+      runOnJS: badge(slotOffset[23]).runOnJS,
+      triggerHapticFeedback: badge(slotOffset[27]).triggerHapticFeedback,
+      HapticFeedbackTypes: badge(slotOffset[27]).HapticFeedbackTypes,
+    };
     handleStart.__closure = obj;
     handleStart.__workletHash = 1819059999068;
     handleStart.__initData = closure_1_30;
@@ -419,7 +563,17 @@ let closure_38 = importAllResult.memo((badge) => {
         }
       }
     }
-    obj = { isThisTileDragging: sharedValue, translateX: sharedValue2, translateY: sharedValue3, reslot: callback, dragViewport: sharedValue1, footerHeight, AUTO_SCROLL_EDGE_SIZE: callback, autoScrollSpeed, clamp: badge(slotOffset[23]).clamp };
+    obj = {
+      isThisTileDragging: sharedValue,
+      translateX: sharedValue2,
+      translateY: sharedValue3,
+      reslot: callback,
+      dragViewport: sharedValue1,
+      footerHeight,
+      AUTO_SCROLL_EDGE_SIZE: callback,
+      autoScrollSpeed,
+      clamp: badge(slotOffset[23]).clamp,
+    };
     handleChange.__closure = obj;
     handleChange.__workletHash = 8169051982461;
     handleChange.__initData = closure_1_31;
@@ -439,23 +593,52 @@ let closure_38 = importAllResult.memo((badge) => {
           const result3 = result2 * (tmp58 + handleStart(handleFinalize[12]).BADGE_GRID_GAP);
           const rounded = Math.floor(sum / handleStart(handleFinalize[12]).BADGE_GRID_COLUMNS);
           const result4 = rounded * (tmp58 + handleStart(handleFinalize[12]).BADGE_GRID_GAP);
-          const result5 = store5.set(handleStart(handleFinalize[24]).withTiming(result3, handleStart(handleFinalize[25]).timingStandard));
+          const result5 = store5.set(
+            handleStart(handleFinalize[24]).withTiming(result3, handleStart(handleFinalize[25]).timingStandard),
+          );
           const obj2 = handleStart(handleFinalize[24]);
-          const result6 = store6.set(handleStart(handleFinalize[24]).withTiming(result4, handleStart(handleFinalize[25]).timingStandard));
+          const result6 = store6.set(
+            handleStart(handleFinalize[24]).withTiming(result4, handleStart(handleFinalize[25]).timingStandard),
+          );
           const obj3 = handleStart(handleFinalize[24]);
         }
-        const result7 = store7.set(handleStart(handleFinalize[24]).withTiming(1, handleStart(handleFinalize[25]).timingStandard));
+        const result7 = store7.set(
+          handleStart(handleFinalize[24]).withTiming(1, handleStart(handleFinalize[25]).timingStandard),
+        );
         const result8 = store3.set(false);
         const result9 = store.set(false);
         const obj4 = handleStart(handleFinalize[24]);
         const obj5 = handleStart(handleFinalize[23]);
-        handleStart(handleFinalize[23]).runOnJS(handleStart(handleFinalize[27]).triggerHapticFeedback)(handleStart(handleFinalize[27]).HapticFeedbackTypes.DRAG_AND_DROP_END);
-        const runOnJSResult = handleStart(handleFinalize[23]).runOnJS(handleStart(handleFinalize[27]).triggerHapticFeedback);
+        handleStart(handleFinalize[23]).runOnJS(handleStart(handleFinalize[27]).triggerHapticFeedback)(
+          handleStart(handleFinalize[27]).HapticFeedbackTypes.DRAG_AND_DROP_END,
+        );
+        const runOnJSResult = handleStart(handleFinalize[23]).runOnJS(
+          handleStart(handleFinalize[27]).triggerHapticFeedback,
+        );
         handleStart(handleFinalize[23]).runOnJS(closure_9)(value);
         const obj6 = handleStart(handleFinalize[23]);
       }
     }
-    obj = { isThisTileDragging: sharedValue, autoScrollSpeed, dragViewport: sharedValue1, orderShared, badgeId: badge_id, getSlotOffset: closure_1_22, slotOffset: handleFinalize, tileSize: handleChange, translateX: sharedValue2, withTiming: badge(slotOffset[24]).withTiming, timingStandard: badge(slotOffset[25]).timingStandard, translateY: sharedValue3, scale: sharedValue4, isAnyDragActive: isDragActive, runOnJS: badge(slotOffset[23]).runOnJS, triggerHapticFeedback: badge(slotOffset[27]).triggerHapticFeedback, HapticFeedbackTypes: badge(slotOffset[27]).HapticFeedbackTypes, onCommitOrder };
+    obj = {
+      isThisTileDragging: sharedValue,
+      autoScrollSpeed,
+      dragViewport: sharedValue1,
+      orderShared,
+      badgeId: badge_id,
+      getSlotOffset: closure_1_22,
+      slotOffset: handleFinalize,
+      tileSize: handleChange,
+      translateX: sharedValue2,
+      withTiming: badge(slotOffset[24]).withTiming,
+      timingStandard: badge(slotOffset[25]).timingStandard,
+      translateY: sharedValue3,
+      scale: sharedValue4,
+      isAnyDragActive: isDragActive,
+      runOnJS: badge(slotOffset[23]).runOnJS,
+      triggerHapticFeedback: badge(slotOffset[27]).triggerHapticFeedback,
+      HapticFeedbackTypes: badge(slotOffset[27]).HapticFeedbackTypes,
+      onCommitOrder,
+    };
     handleFinalize.__closure = obj;
     handleFinalize.__workletHash = 3306393552096;
     handleFinalize.__initData = closure_1_32;
@@ -508,14 +691,19 @@ let closure_38 = importAllResult.memo((badge) => {
     }
     let obj = { zIndex: num, transform: null };
     obj = { translateX: sharedValue2.get() };
-    const items = [obj, , ];
+    const items = [obj, ,];
     obj = { translateY: sharedValue3.get() };
     items[1] = obj;
     items[2] = { scale: sharedValue4.get() };
     obj[1] = items;
     return obj;
   }
-  ae.__closure = { isThisTileDragging: sharedValue, translateX: sharedValue2, translateY: sharedValue3, scale: sharedValue4 };
+  ae.__closure = {
+    isThisTileDragging: sharedValue,
+    translateX: sharedValue2,
+    translateY: sharedValue3,
+    scale: sharedValue4,
+  };
   ae.__workletHash = 17212815208240;
   ae.__initData = closure_37;
   const items2 = [badge_id, orderShared, onCommitOrder, slotOffset, tmp6];
@@ -572,7 +760,10 @@ let closure_38 = importAllResult.memo((badge) => {
   let obj4 = { gesture: memo, children: null };
   let obj5 = { accessible: true, accessibilityLabel: null };
   const intl4 = tmp2(tmp3[13]).intl;
-  obj5[1] = intl4.formatToPlainString(badge(slotOffset[13]).t["21W3EN"], { badgeName: badge.name, position: index + 1 });
+  obj5[1] = intl4.formatToPlainString(badge(slotOffset[13]).t["21W3EN"], {
+    badgeName: badge.name,
+    position: index + 1,
+  });
   if (alwaysVisible) {
     const intl6 = tmp2(tmp3[13]).intl;
     const tmp2Result5 = tmp2(tmp3[20]);
@@ -589,7 +780,7 @@ let closure_38 = importAllResult.memo((badge) => {
     const merged1 = Object.assign(obj7);
     obj5.accessibilityActions = items3;
     obj5.onAccessibilityAction = callback1;
-    const items4 = [tmp.position, , ];
+    const items4 = [tmp.position, ,];
     const obj8 = { width: null, height: null };
     obj8[0] = tileSize;
     obj8[1] = tileSize;
@@ -605,10 +796,19 @@ let closure_38 = importAllResult.memo((badge) => {
     return tmp26(tmp2(tmp3[28]).GestureDetector, obj4);
   }
 });
-let closure_39 = { code: "function CustomizeBadgesSheetTsx15({timeSincePreviousFrame:timeSincePreviousFrame}){const{autoScrollSpeed,autoScrollElapsed,MS_PER_FRAME_60FPS,AUTO_SCROLL_PIXELS_PER_SECOND,scrollTo,scrollRef,roundToNearestPixel,scrollOffset}=this.__closure;const speed=autoScrollSpeed.get();if(speed===0||timeSincePreviousFrame==null||timeSincePreviousFrame<=0){return;}autoScrollElapsed.set(autoScrollElapsed.get()+timeSincePreviousFrame);const elapsed=autoScrollElapsed.get();if(elapsed<MS_PER_FRAME_60FPS){return;}autoScrollElapsed.set(0);const delta=speed*AUTO_SCROLL_PIXELS_PER_SECOND*elapsed/1000;scrollTo(scrollRef,0,Math.max(roundToNearestPixel(scrollOffset.get()+delta),0),false);}" };
-let closure_40 = { code: "function CustomizeBadgesSheetTsx16(){const{autoScrollSpeed}=this.__closure;return autoScrollSpeed.get()!==0;}" };
-let closure_41 = { code: "function CustomizeBadgesSheetTsx17(isScrolling,wasScrolling){const{autoScrollElapsed,runOnJS,setAutoScrollerActive}=this.__closure;if(wasScrolling==null||isScrolling===wasScrolling){return;}autoScrollElapsed.set(0);runOnJS(setAutoScrollerActive)(isScrolling);}" };
-let obj10 = { BADGE_GRID_COLUMNS: require("PX_16").BADGE_GRID_COLUMNS, BADGE_GRID_GAP: require("PX_16").BADGE_GRID_GAP };
+let closure_39 = {
+  code: "function CustomizeBadgesSheetTsx15({timeSincePreviousFrame:timeSincePreviousFrame}){const{autoScrollSpeed,autoScrollElapsed,MS_PER_FRAME_60FPS,AUTO_SCROLL_PIXELS_PER_SECOND,scrollTo,scrollRef,roundToNearestPixel,scrollOffset}=this.__closure;const speed=autoScrollSpeed.get();if(speed===0||timeSincePreviousFrame==null||timeSincePreviousFrame<=0){return;}autoScrollElapsed.set(autoScrollElapsed.get()+timeSincePreviousFrame);const elapsed=autoScrollElapsed.get();if(elapsed<MS_PER_FRAME_60FPS){return;}autoScrollElapsed.set(0);const delta=speed*AUTO_SCROLL_PIXELS_PER_SECOND*elapsed/1000;scrollTo(scrollRef,0,Math.max(roundToNearestPixel(scrollOffset.get()+delta),0),false);}",
+};
+let closure_40 = {
+  code: "function CustomizeBadgesSheetTsx16(){const{autoScrollSpeed}=this.__closure;return autoScrollSpeed.get()!==0;}",
+};
+let closure_41 = {
+  code: "function CustomizeBadgesSheetTsx17(isScrolling,wasScrolling){const{autoScrollElapsed,runOnJS,setAutoScrollerActive}=this.__closure;if(wasScrolling==null||isScrolling===wasScrolling){return;}autoScrollElapsed.set(0);runOnJS(setAutoScrollerActive)(isScrolling);}",
+};
+let obj10 = {
+  BADGE_GRID_COLUMNS: require("PX_16").BADGE_GRID_COLUMNS,
+  BADGE_GRID_GAP: require("PX_16").BADGE_GRID_GAP,
+};
 let result = require("set").fileFinishedImporting("modules/badges/native/CustomizeBadgesSheet.tsx");
 
 export default function CustomizeBadgesSheet(analyticsLocations) {
@@ -666,7 +866,9 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   });
   let obj3 = tenureBadgeHideable(589);
   const items1 = [hasCatalog];
-  stateFromStores1 = obj3.useStateFromStores(items1, () => first(4139).canUsePremiumProfileCustomization(hasCatalog.getCurrentUser()));
+  stateFromStores1 = obj3.useStateFromStores(items1, () =>
+    first(4139).canUsePremiumProfileCustomization(hasCatalog.getCurrentUser()),
+  );
   if (analyticsLocations == null) {
     analyticsLocations = [];
   }
@@ -686,17 +888,28 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   let tmp9Result = tmp9(589);
   const items3 = [pendingBadgeDisplayOrder];
   const items4 = [stateFromStores];
-  stateFromStoresArray = tmp9Result.useStateFromStoresArray(items3, () => pendingBadgeDisplayOrder.getBadges(stateFromStores), items4);
+  stateFromStoresArray = tmp9Result.useStateFromStoresArray(
+    items3,
+    () => pendingBadgeDisplayOrder.getBadges(stateFromStores),
+    items4,
+  );
   tmp9Result = tmp9(589);
   const items5 = [pendingBadgeDisplayOrder];
   const items6 = [stateFromStores];
-  const stateFromStoresObject = tmp9Result.useStateFromStoresObject(items5, () => {
-    let hasCatalogForResult = null != stateFromStores;
-    if (hasCatalogForResult) {
-      hasCatalogForResult = pendingBadgeDisplayOrder.hasCatalogFor(tmp);
-    }
-    return { hasCatalog: hasCatalogForResult, hasCatalogError: pendingBadgeDisplayOrder.hasCatalogFetchErrorFor(stateFromStores) };
-  }, items6);
+  const stateFromStoresObject = tmp9Result.useStateFromStoresObject(
+    items5,
+    () => {
+      let hasCatalogForResult = null != stateFromStores;
+      if (hasCatalogForResult) {
+        hasCatalogForResult = pendingBadgeDisplayOrder.hasCatalogFor(tmp);
+      }
+      return {
+        hasCatalog: hasCatalogForResult,
+        hasCatalogError: pendingBadgeDisplayOrder.hasCatalogFetchErrorFor(stateFromStores),
+      };
+    },
+    items6,
+  );
   hasCatalog = stateFromStoresObject.hasCatalog;
   const items7 = [stateFromStores1, hasCatalog, analyticsLocations];
   const effect = obj1.useEffect(() => {
@@ -732,7 +945,10 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const items9 = [stateFromStoresArray];
   const stateFromStoresObject1 = tenureBadgeHideable(589).useStateFromStoresObject(items9, () => {
     const pendingChanges = stateFromStoresArray.getPendingChanges();
-    return { pendingBadgeDisplayOrder: pendingChanges.pendingBadgeDisplayOrder, pendingBadgeHiddenBadges: pendingChanges.pendingBadgeHiddenBadges };
+    return {
+      pendingBadgeDisplayOrder: pendingChanges.pendingBadgeDisplayOrder,
+      pendingBadgeHiddenBadges: pendingChanges.pendingBadgeHiddenBadges,
+    };
   }, []);
   pendingBadgeDisplayOrder = stateFromStoresObject1.pendingBadgeDisplayOrder;
   pendingBadgeHiddenBadges = stateFromStoresObject1.pendingBadgeHiddenBadges;
@@ -768,7 +984,10 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const result = sharedValue.set(memo2);
     }
   }, items14);
-  const tmp4Result = tmp4(obj1.useState(() => new Set()), 2);
+  const tmp4Result = tmp4(
+    obj1.useState(() => new Set()),
+    2,
+  );
   first1 = tmp4Result[0];
   closure_21 = tmp4Result[1];
   closure_22 = tmp2(7737)((badge_id) => {
@@ -781,7 +1000,9 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
         const result = tenureBadgeHideable(12498).setPendingBadgeDisplayOrder(items);
         const obj4 = tenureBadgeHideable(12498);
       }
-      const result1 = tenureBadgeHideable(12498).setPendingBadgeHiddenBadges(mapped.filter((arg0) => arg0 !== badge_id.badge_id));
+      const result1 = tenureBadgeHideable(12498).setPendingBadgeHiddenBadges(
+        mapped.filter((arg0) => arg0 !== badge_id.badge_id),
+      );
       const AccessibilityAnnouncer = tenureBadgeHideable(1351).AccessibilityAnnouncer;
       const intl2 = tenureBadgeHideable(1236).intl;
       let obj = { badgeName: null };
@@ -824,7 +1045,9 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     const result1 = tenureBadgeHideable(12498).setPendingBadgeHiddenBadges(items);
     const AccessibilityAnnouncer = tenureBadgeHideable(1351).AccessibilityAnnouncer;
     const intl = tenureBadgeHideable(1236).intl;
-    AccessibilityAnnouncer.announce(intl.formatToPlainString(tenureBadgeHideable(1236).t.q3t0Ht, { count: first1.size }));
+    AccessibilityAnnouncer.announce(
+      intl.formatToPlainString(tenureBadgeHideable(1236).t.q3t0Ht, { count: first1.size }),
+    );
     const obj = { count: first1.size };
     const obj3 = tenureBadgeHideable(12498);
     callback(new Set());
@@ -859,7 +1082,12 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
             const result1 = obj.set(0);
             const obj2 = tenureBadgeHideable(4217);
             const _Math = Math;
-            obj2.scrollTo(animatedRef, 0, Math.max(first(10730)(scrollViewOffset.get() + 700 * value * value / 1000), 0), false);
+            obj2.scrollTo(
+              animatedRef,
+              0,
+              Math.max(first(10730)(scrollViewOffset.get() + (700 * value * value) / 1000), 0),
+              false,
+            );
             const tmp12 = first(10730);
           }
           obj = sharedValue3;
@@ -867,7 +1095,16 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       }
     }
   }
-  obj = { autoScrollSpeed: sharedValue2, autoScrollElapsed: sharedValue3, MS_PER_FRAME_60FPS: sharedValue1, AUTO_SCROLL_PIXELS_PER_SECOND: 700, scrollTo: tmp9(4217).scrollTo, scrollRef: animatedRef, roundToNearestPixel: tmp2(10730), scrollOffset: scrollViewOffset };
+  obj = {
+    autoScrollSpeed: sharedValue2,
+    autoScrollElapsed: sharedValue3,
+    MS_PER_FRAME_60FPS: sharedValue1,
+    AUTO_SCROLL_PIXELS_PER_SECOND: 700,
+    scrollTo: tmp9(4217).scrollTo,
+    scrollRef: animatedRef,
+    roundToNearestPixel: tmp2(10730),
+    scrollOffset: scrollViewOffset,
+  };
   re.__closure = obj;
   re.__workletHash = 8283557804556;
   re.__initData = closure_39;
@@ -897,14 +1134,23 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const animatedReaction = tenureBadgeHideable(4217).useAnimatedReaction(oe, le);
   if (hasCatalog) {
     obj1 = { style: null, children: null };
-    const items16 = [tmp.gridInset, ];
+    const items16 = [tmp.gridInset];
     obj2 = { paddingBottom: null };
     obj2[0] = tmp2(712).space.PX_16 + first;
     items16[1] = obj2;
     obj1[0] = items16;
     let tmp47 = !stateFromStores1;
     if (!stateFromStores1) {
-      obj3 = { style: null, ctaText: null, cardStyle: null, contentStyle: null, ctaStyle: null, showLinearGradient: true, onPress: null, children: null };
+      obj3 = {
+        style: null,
+        ctaText: null,
+        cardStyle: null,
+        contentStyle: null,
+        ctaStyle: null,
+        showLinearGradient: true,
+        onPress: null,
+        children: null,
+      };
       obj3[0] = tmp.upsell;
       let intl2 = tmp9(1236).intl;
       obj3[1] = intl2.string(tmp9(1236).t.pj0XBN);
@@ -918,48 +1164,91 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       tmp47 = memo2(tmp2(14276), obj3);
       const tmp2Result = tmp2(14276);
     }
-    const items17 = [tmp47, ];
+    const items17 = [tmp47];
     const obj5 = { accessibilityRole: "list", style: null, children: null };
-    const items18 = [tmp.grid, ];
+    const items18 = [tmp.grid];
     const obj6 = { height: null };
     obj6[0] = num;
     items18[1] = obj6;
     obj5[1] = items18;
     const items19 = [
-      fixedBadges.map((badge, index) => memo2(animatedRef, { badge, index, tileSize: badgeTileSize, selected: first1.has(badge.badge_id), alwaysVisible: set.has(badge.badge_id), onPress: closure_22 }, badge.badge_id)),
+      fixedBadges.map((badge, index) =>
+        memo2(
+          animatedRef,
+          {
+            badge,
+            index,
+            tileSize: badgeTileSize,
+            selected: first1.has(badge.badge_id),
+            alwaysVisible: set.has(badge.badge_id),
+            onPress: closure_22,
+          },
+          badge.badge_id,
+        ),
+      ),
       reorderableBadges.map((badge_id) => {
-          if (stateFromStores1) {
-            let obj = { badge: null, index: null, tileSize: null, slotOffset: null, isFirst: null, isLast: null, selected: null, alwaysVisible: null, orderShared: null, isDragActive: null, scrollRef: null, scrollOffset: null, autoScrollSpeed: null, footerHeight: null, onCommitOrder: null, onPress: null };
-            obj[0] = badge_id;
-            obj[1] = fixedBadges.length + arg1;
-            obj[2] = badgeTileSize;
-            obj[3] = fixedBadges.length;
-            obj[4] = 0 === arg1;
-            obj[5] = arg1 === reorderableBadges.length - 1;
-            obj[6] = first1.has(badge_id.badge_id);
-            obj[7] = set.has(badge_id.badge_id);
-            obj[8] = sharedValue;
-            obj[9] = sharedValue1;
-            obj[10] = animatedRef;
-            obj[11] = scrollViewOffset;
-            obj[12] = sharedValue2;
-            obj[13] = first;
-            obj[14] = closure_18;
-            obj[15] = closure_22;
-            let tmpResult = tmp(closure_1_38, obj, badge_id.badge_id);
-          } else {
-            obj = { badge: null, index: null, tileSize: null, selected: null, alwaysVisible: null, onPress: null };
-            obj[0] = badge_id;
-            obj[1] = fixedBadges.length + arg1;
-            obj[2] = badgeTileSize;
-            obj[3] = first1.has(badge_id.badge_id);
-            obj[4] = set.has(badge_id.badge_id);
-            obj[5] = closure_22;
-            tmpResult = tmp(animatedRef, obj, badge_id.badge_id);
-          }
-          return tmpResult;
-        }),
-      hiddenBadges.map((badge) => memo2(animatedRef, { badge, index: fixedBadges.length + reorderableBadges.length + arg1, tileSize: badgeTileSize, selected: first1.has(badge.badge_id), alwaysVisible: set.has(badge.badge_id), onPress: closure_22 }, badge.badge_id))
+        if (stateFromStores1) {
+          let obj = {
+            badge: null,
+            index: null,
+            tileSize: null,
+            slotOffset: null,
+            isFirst: null,
+            isLast: null,
+            selected: null,
+            alwaysVisible: null,
+            orderShared: null,
+            isDragActive: null,
+            scrollRef: null,
+            scrollOffset: null,
+            autoScrollSpeed: null,
+            footerHeight: null,
+            onCommitOrder: null,
+            onPress: null,
+          };
+          obj[0] = badge_id;
+          obj[1] = fixedBadges.length + arg1;
+          obj[2] = badgeTileSize;
+          obj[3] = fixedBadges.length;
+          obj[4] = 0 === arg1;
+          obj[5] = arg1 === reorderableBadges.length - 1;
+          obj[6] = first1.has(badge_id.badge_id);
+          obj[7] = set.has(badge_id.badge_id);
+          obj[8] = sharedValue;
+          obj[9] = sharedValue1;
+          obj[10] = animatedRef;
+          obj[11] = scrollViewOffset;
+          obj[12] = sharedValue2;
+          obj[13] = first;
+          obj[14] = closure_18;
+          obj[15] = closure_22;
+          let tmpResult = tmp(closure_1_38, obj, badge_id.badge_id);
+        } else {
+          obj = { badge: null, index: null, tileSize: null, selected: null, alwaysVisible: null, onPress: null };
+          obj[0] = badge_id;
+          obj[1] = fixedBadges.length + arg1;
+          obj[2] = badgeTileSize;
+          obj[3] = first1.has(badge_id.badge_id);
+          obj[4] = set.has(badge_id.badge_id);
+          obj[5] = closure_22;
+          tmpResult = tmp(animatedRef, obj, badge_id.badge_id);
+        }
+        return tmpResult;
+      }),
+      hiddenBadges.map((badge) =>
+        memo2(
+          animatedRef,
+          {
+            badge,
+            index: fixedBadges.length + reorderableBadges.length + arg1,
+            tileSize: badgeTileSize,
+            selected: first1.has(badge.badge_id),
+            alwaysVisible: set.has(badge.badge_id),
+            onPress: closure_22,
+          },
+          badge.badge_id,
+        ),
+      ),
     ];
     obj5[2] = items19;
     items17[1] = sharedValue(context, obj5);
@@ -984,7 +1273,14 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     tmp41Result = tmp41(tmp42, obj9);
     tmp44 = tmp42;
   }
-  const obj10 = { startExpanded: true, scrollable: true, dismissAccessibilityLabel: null, header: null, footer: null, children: null };
+  const obj10 = {
+    startExpanded: true,
+    scrollable: true,
+    dismissAccessibilityLabel: null,
+    header: null,
+    footer: null,
+    children: null,
+  };
   const intl4 = tmp9(1236).intl;
   obj10[2] = intl4.string(tenureBadgeHideable(1236).t.x5SfWU);
   const obj11 = { title: null, subtitle: null };
@@ -994,12 +1290,19 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   let t = tmp9(1236).t;
   obj11[1] = intl6.string(stateFromStores1 ? t["Vzc4+8"] : t.ZuXSRp);
   obj10[3] = memo2(tenureBadgeHideable(5621).BottomSheetTitleHeader, obj11);
-  const items20 = [tmp.action, ];
+  const items20 = [tmp.action];
   let actionHidden = tmp51;
   if (0 === size) {
     actionHidden = tmp.actionHidden;
   }
-  const obj12 = { style: items20, onLayout: callback, pointerEvents: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+  const obj12 = {
+    style: items20,
+    onLayout: callback,
+    pointerEvents: null,
+    accessibilityElementsHidden: null,
+    importantForAccessibility: null,
+    children: null,
+  };
   items20[1] = actionHidden;
   let str = "none";
   if (size > 0) {
@@ -1022,6 +1325,10 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   obj13[1] = memo2(tenureBadgeHideable(4928).Button, obj14);
   obj12[5] = memo2(tenureBadgeHideable(5553).SafeAreaPaddingView, obj13);
   obj10[4] = memo2(tmp44, obj12);
-  obj10[5] = memo2(tenureBadgeHideable(5624).BottomSheetScrollView, { ref: animatedRef, contentContainerStyle: { paddingBottom: sum }, children: tmp41Result });
+  obj10[5] = memo2(tenureBadgeHideable(5624).BottomSheetScrollView, {
+    ref: animatedRef,
+    contentContainerStyle: { paddingBottom: sum },
+    children: tmp41Result,
+  });
   return memo2(tenureBadgeHideable(5622).BottomSheet, obj10);
-};
+}

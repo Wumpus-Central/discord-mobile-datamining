@@ -20,7 +20,9 @@ const subscription = importDefaultResult.subscribe("LOGOUT", () => {
   map1.clear();
   map3.clear();
 });
-let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreMetadataActionCreators.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/quests/native/AppStoreOverlay/AppStoreMetadataActionCreators.tsx",
+);
 
 export const getAppStoreMetadataCacheKey = function getAppStoreMetadataCacheKey(os) {
   return "" + os.os + "#" + os.storeAppId;
@@ -48,7 +50,7 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(closure_0) {
           return Promise.reject(value1.error);
         }
       }
-      const tmp7 = callback(function*() {
+      const tmp7 = callback(function* () {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();

@@ -12,7 +12,14 @@ const require = arg1;
 ({ View: c5, ActivityIndicator: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 const PX_16 = ThemesDefault.space.PX_16;
-createCacheKey = { container: null, controlBarContainer: null, segmentedControlContainer: null, pagesContainer: null, activityIndicator: null, allSectionsContainer: null };
+createCacheKey = {
+  container: null,
+  controlBarContainer: null,
+  segmentedControlContainer: null,
+  pagesContainer: null,
+  activityIndicator: null,
+  allSectionsContainer: null,
+};
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 };
@@ -42,13 +49,17 @@ export default function SettingsQuestPreviewScreen() {
   let tmpResult = tmp(tmp2[9]);
   let items = [callback2];
   let items1 = [first];
-  stateFromStores = tmpResult.useStateFromStores(items, () => {
-    let quest;
-    if (null != first) {
-      quest = callback2.getQuest(tmp);
-    }
-    return quest;
-  }, items1);
+  stateFromStores = tmpResult.useStateFromStores(
+    items,
+    () => {
+      let quest;
+      if (null != first) {
+        quest = callback2.getQuest(tmp);
+      }
+      return quest;
+    },
+    items1,
+  );
   tmpResult = tmp(tmp2[9]);
   const items2 = [memo];
   const stateFromStores1 = tmpResult.useStateFromStores(items2, () => memo.theme);
@@ -62,7 +73,7 @@ export default function SettingsQuestPreviewScreen() {
     }
     return tmp2;
   }, items3);
-  const items4 = [first, stateFromStores1, ];
+  const items4 = [first, stateFromStores1];
   let userStatus;
   if (stateFromStores != null) {
     userStatus = stateFromStores.userStatus;
@@ -111,7 +122,7 @@ export default function SettingsQuestPreviewScreen() {
       }
     }
     obj[2] = tmp3;
-    const items1 = [obj, , , ];
+    const items1 = [obj, , ,];
     obj = { id: "bar", label: null, page: null };
     const intl2 = tmp(tmp2[12]).intl;
     obj[1] = intl2.string(params(first[12]).t.uL4oBf);
@@ -136,7 +147,12 @@ export default function SettingsQuestPreviewScreen() {
   callback3 = obj1.useCallback((nativeEvent) => {
     callback2(nativeEvent.nativeEvent.layout.width);
   }, []);
-  const segmentedControlState = params(first[13]).useSegmentedControlState({ items: memo, pageWidth: tmp18, defaultIndex: 0, onPageChange: tmp5Result[1] });
+  const segmentedControlState = params(first[13]).useSegmentedControlState({
+    items: memo,
+    pageWidth: tmp18,
+    defaultIndex: 0,
+    onPageChange: tmp5Result[1],
+  });
   const items6 = [first1, memo];
   let questId1;
   const memo1 = obj1.useMemo(() => {
@@ -193,23 +209,31 @@ export default function SettingsQuestPreviewScreen() {
   const tmpResult1 = params(first[13]);
   const items11 = [callback2];
   const items12 = [first];
-  const stateFromStores2 = params(first[9]).useStateFromStores(items11, () => {
-    let result = null != first;
-    if (result) {
-      result = callback2.isFetchingQuestPreview(tmp);
-    }
-    return result;
-  }, items12);
+  const stateFromStores2 = params(first[9]).useStateFromStores(
+    items11,
+    () => {
+      let result = null != first;
+      if (result) {
+        result = callback2.isFetchingQuestPreview(tmp);
+      }
+      return result;
+    },
+    items12,
+  );
   const tmpResult2 = params(first[9]);
   const items13 = [callback2];
   const items14 = [first];
-  const stateFromStores3 = params(first[9]).useStateFromStores(items13, () => {
-    let fetchQuestPreviewError = null;
-    if (null != first) {
-      fetchQuestPreviewError = callback2.getFetchQuestPreviewError(tmp);
-    }
-    return fetchQuestPreviewError;
-  }, items14);
+  const stateFromStores3 = params(first[9]).useStateFromStores(
+    items13,
+    () => {
+      let fetchQuestPreviewError = null;
+      if (null != first) {
+        fetchQuestPreviewError = callback2.getFetchQuestPreviewError(tmp);
+      }
+      return fetchQuestPreviewError;
+    },
+    items14,
+  );
   if (stateFromStores2) {
     if (null == stateFromStores) {
       obj = { style: null, children: null };
@@ -223,7 +247,17 @@ export default function SettingsQuestPreviewScreen() {
   }
   obj1 = { style: tmp3.container, children: null };
   const tmpResult3 = params(first[9]);
-  const items15 = [callback2(stateFromStores1, { style: tmp3.controlBarContainer, children: callback2(params(first[16]).MobileQuestPreviewControlBar, { questId: first, setQuestId: tmp6[1], refreshQuest: callback4 }) }), , ];
+  const items15 = [
+    callback2(stateFromStores1, {
+      style: tmp3.controlBarContainer,
+      children: callback2(params(first[16]).MobileQuestPreviewControlBar, {
+        questId: first,
+        setQuestId: tmp6[1],
+        refreshQuest: callback4,
+      }),
+    }),
+    ,
+  ];
   tmp31Result = null != stateFromStores && null == stateFromStores3;
   if (tmp31Result) {
     const obj3 = { children: null };
@@ -232,7 +266,7 @@ export default function SettingsQuestPreviewScreen() {
     const obj5 = { state: null };
     obj5[0] = segmentedControlState;
     obj4[1] = tmp33(tmp(tmp2[17]).SegmentedControl, obj5);
-    const items16 = [tmp33(tmp32, obj4), ];
+    const items16 = [tmp33(tmp32, obj4)];
     const obj6 = { style: null, onLayout: null, children: null };
     obj6[0] = tmp3.pagesContainer;
     obj6[1] = callback3;
@@ -247,4 +281,4 @@ export default function SettingsQuestPreviewScreen() {
   items15[2] = callback2(params(first[19]).QuestBarPreview, { quest: stateFromStores, isVisible: memo1 });
   obj1[1] = items15;
   tmp31Result = tmp31(tmp32, obj1);
-};
+}

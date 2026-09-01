@@ -16,19 +16,20 @@ let c1 = null;
 let c2 = null;
 let closure_3 = { reportedMessages: {} };
 const PersistedStore = initializeDefault.PersistedStore;
-class ReportToModStore extends PersistedStore {
-}
+class ReportToModStore extends PersistedStore {}
 const prototype = ReportToModStore.prototype;
 prototype["initialize"] = function initialize(reportedMessages) {
   if (null != reportedMessages) {
     const _Object = Object;
     const _Object2 = Object;
     const entries = Object.entries(reportedMessages.reportedMessages);
-    closure_3.reportedMessages = Object.fromEntries(entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
-      const items = [tmp, new Set(tmp2)];
-      return items;
-    }));
+    closure_3.reportedMessages = Object.fromEntries(
+      entries.map((arg0) => {
+        [tmp, tmp2] = arg0;
+        const items = [tmp, new Set(tmp2)];
+        return items;
+      }),
+    );
   }
   let items = [closure_0];
   this.syncWith(items, handleSelectedGuildChange);
@@ -71,7 +72,7 @@ let items = [
       reportedMessages = {};
     }
     return { reportedMessages };
-  }
+  },
 ];
 ReportToModStore.migrations = items;
 const reportToModStore = new ReportToModStore(dispatcherDefault, {
@@ -107,14 +108,16 @@ const reportToModStore = new ReportToModStore(dispatcherDefault, {
     let set;
     if (guildId.guildId === c1) {
       const _Set = Set;
-      set = new Set(bans.map((user) => {
-        user = user.user;
-        let id;
-        if (user != null) {
-          id = user.id;
-        }
-        return id;
-      }));
+      set = new Set(
+        bans.map((user) => {
+          user = user.user;
+          let id;
+          if (user != null) {
+            id = user.id;
+          }
+          return id;
+        }),
+      );
       if (userIds == null) {
         userIds = [];
       }
@@ -141,7 +144,7 @@ const reportToModStore = new ReportToModStore(dispatcherDefault, {
     c1 = null;
     c2 = null;
     closure_3.reportedMessages = {};
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/report_to_mod/ReportToModStore.tsx");
 

@@ -12,10 +12,23 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 require = arg1;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 }, obscureContentContainer: null, spoilerOverlayBackground: null };
+let obj = {
+  spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 },
+  obscureContentContainer: null,
+  spoilerOverlayBackground: null,
+};
 obj = { gap: ThemesDefault.space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" };
 obj[1] = obj;
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.lg, height: ThemesDefault.space.PX_32, backgroundColor: null, flexGrow: 0, justifyContent: "center", alignItems: "center", alignSelf: "center" };
+createCacheKey = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  borderRadius: ThemesDefault.radii.lg,
+  height: ThemesDefault.space.PX_32,
+  backgroundColor: null,
+  flexGrow: 0,
+  justifyContent: "center",
+  alignItems: "center",
+  alignSelf: "center",
+};
 set = set.isAndroid();
 const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
 createCacheKey[3] = set ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_600;
@@ -47,14 +60,19 @@ export default importAllResult.memo(function MediaModalSpoilerOverlay(source) {
     obj[0] = str;
     obj[1] = token;
     obj[2] = absoluteFill.absoluteFill;
-    const items1 = [closure_6(tmp3(4918), obj), ];
+    const items1 = [closure_6(tmp3(4918), obj)];
     obj1 = { style: null, children: null };
     obj1[0] = items2.spoilerOverlayContainer;
     const obj2 = { style: null, children: null };
     if (source.obscure) {
       obj2[0] = items2.obscureContentContainer;
-      items2 = [tmp9(tmp(5030).ImageWarningIcon, { size: "lg", color: "white" }), ];
-      const obj3 = { accessibilityRole: "text", variant: "heading-md/medium", color: "text-overlay-light", children: null };
+      items2 = [tmp9(tmp(5030).ImageWarningIcon, { size: "lg", color: "white" })];
+      const obj3 = {
+        accessibilityRole: "text",
+        variant: "heading-md/medium",
+        color: "text-overlay-light",
+        children: null,
+      };
       const intl2 = tmp(1236).intl;
       stringResult = intl2.string(tmp(1236).t.SpxcUR);
       obj3[3] = stringResult;
@@ -63,7 +81,12 @@ export default importAllResult.memo(function MediaModalSpoilerOverlay(source) {
       let tmp9Result = tmp7(tmp11, obj2);
     } else {
       obj2[0] = items2.spoilerOverlayBackground;
-      const obj4 = { accessibilityRole: "text", variant: "heading-md/medium", color: "text-overlay-light", children: null };
+      const obj4 = {
+        accessibilityRole: "text",
+        variant: "heading-md/medium",
+        color: "text-overlay-light",
+        children: null,
+      };
       const intl = tmp(1236).intl;
       obj4[3] = intl.string(tmp(1236).t["F+x38C"]).toUpperCase();
       obj2[1] = tmp9(tmp(4474).Text, obj4);

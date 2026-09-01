@@ -55,4 +55,4 @@ export default function stripSensitiveLoggingData(arg0) {
     obj3.args = obj4;
     obj2 = obj3;
   }
-};
+}

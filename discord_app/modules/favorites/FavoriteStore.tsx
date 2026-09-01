@@ -117,8 +117,7 @@ let c11 = false;
 let c12 = false;
 let c13 = false;
 const Store = initializeDefault.Store;
-class FavoriteStore extends Store {
-}
+class FavoriteStore extends Store {}
 const prototype = FavoriteStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3);
@@ -133,19 +132,19 @@ Object.defineProperty(prototype, "favoriteGuildMuted", {
   get: function favoriteGuildMuted() {
     return c11;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "favoriteGuildEnabled", {
   get: function favoriteGuildEnabled() {
     return c12;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "favoriteGuildVisibleSetting", {
   get: function favoriteGuildVisibleSetting() {
     return closure_2;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "autoAddJoinedThreads", {
   get: function autoAddJoinedThreads() {
@@ -155,7 +154,7 @@ Object.defineProperty(prototype, "autoAddJoinedThreads", {
     }
     return tmp;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isFavorite"] = function isFavorite(arg0) {
   let tmp = null != arg0;

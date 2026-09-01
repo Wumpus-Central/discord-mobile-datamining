@@ -21,7 +21,8 @@ function useHasAndroidMessageNotificationsSetting() {
   }
   return isAndroidResult;
 }
-({ useAndroidMessageNotificationsEnabled: obj1, setAndroidMessageNotificationsEnabled } = _initializeAndroidNotificationSettingsStore);
+({ useAndroidMessageNotificationsEnabled: obj1, setAndroidMessageNotificationsEnabled } =
+  _initializeAndroidNotificationSettingsStore);
 const toggle = createToggle.createToggle({
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -30,7 +31,7 @@ const toggle = createToggle.createToggle({
   parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: useAndroidMessageNotificationsSettingValue,
   onValueChange: setAndroidMessageNotificationsEnabled,
-  usePredicate: useHasAndroidMessageNotificationsSetting
+  usePredicate: useHasAndroidMessageNotificationsSetting,
 });
 const obj = {
   useTitle() {
@@ -40,7 +41,7 @@ const obj = {
   parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: useAndroidMessageNotificationsSettingValue,
   onValueChange: setAndroidMessageNotificationsEnabled,
-  usePredicate: useHasAndroidMessageNotificationsSetting
+  usePredicate: useHasAndroidMessageNotificationsSetting,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AndroidMessageNotificationsSetting.tsx");
 

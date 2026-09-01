@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/EmptyServerSettingsEmoji.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/EmptyServerSettingsEmoji.tsx",
+);
 
 export const getEmptyServerSettingsEmojiSource = function getEmptyServerSettingsEmojiSource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getEmptyServerSettingsEmojiSource = function getEmptyServerSettings
     },
     light() {
       return callback(17156);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useEmptyServerSettingsEmojiSource = function useEmptyServerSettings
     },
     light() {
       return callback(17156);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const EmptyServerSettingsEmoji = function EmptyServerSettingsEmoji(arg0) 
     },
     light() {
       return callback(17156);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

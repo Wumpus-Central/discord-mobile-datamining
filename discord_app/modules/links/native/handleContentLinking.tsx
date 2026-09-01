@@ -9,7 +9,7 @@ function _handleContentLinking() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -183,4 +183,4 @@ export default function handleContentLinking() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -3,10 +3,17 @@ import set2 from "../../../../../_runtime/00002_set.js";
 import DesktopSources from "../Constants.tsx";
 
 const ExperimentFlags = DesktopSources.ExperimentFlags;
-let items = [{ name: "H264", encode: true, decode: true }, { name: "VP8", encode: true, decode: true }];
+let items = [
+  { name: "H264", encode: true, decode: true },
+  { name: "VP8", encode: true, decode: true },
+];
 const result = set2.fileFinishedImporting("../discord_common/js/packages/media-engine/utils/VideoCodecUtils.tsx");
 
-export const filterParsedVideoCodecs = function filterParsedVideoCodecs(parseNativeCodecsResult, experimentCodecs, arg2) {
+export const filterParsedVideoCodecs = function filterParsedVideoCodecs(
+  parseNativeCodecsResult,
+  experimentCodecs,
+  arg2,
+) {
   closure_0 = parseNativeCodecsResult;
   let flag = arg2;
   if (arg2 === undefined) {

@@ -8,7 +8,9 @@ import closure_4 from "../../../../stores/RTCConnectionStore.tsx";
 
 require = arg1;
 let closure_5 = 10 * setDefault.Millis.SECOND;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorAudioCaptureSampleRateMismatch.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/errors/av_errors/definitions/AVErrorAudioCaptureSampleRateMismatch.tsx",
+);
 
 export const AVErrorAudioCaptureSampleRateMismatchDefinition = {
   getActiveErrors() {
@@ -59,5 +61,5 @@ export const AVErrorAudioCaptureSampleRateMismatchDefinition = {
   },
   makeErrorContextKey(mediaSessionId) {
     return "" + mediaSessionId.mediaSessionId + ":" + mediaSessionId.audioInputDeviceName;
-  }
+  },
 };

@@ -9,8 +9,7 @@ let closure_0 = {};
 let c1 = null;
 let c2 = null;
 const PersistedStore = initializeDefault.PersistedStore;
-class LoginRequiredActionStore extends PersistedStore {
-}
+class LoginRequiredActionStore extends PersistedStore {}
 const prototype = LoginRequiredActionStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
@@ -80,7 +79,7 @@ const loginRequiredActionStore = new LoginRequiredActionStore(dispatcherDefault,
     if (userId.userId in closure_0) {
       delete tmp[tmp2];
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/auth/LoginRequiredActionStore.tsx");
 

@@ -45,4 +45,4 @@ export default function downsampleWaveform(arg0, arg1) {
     }
     return items;
   }
-};
+}

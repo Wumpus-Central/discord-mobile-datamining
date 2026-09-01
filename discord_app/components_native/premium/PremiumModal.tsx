@@ -9,7 +9,23 @@ const result = require("set").fileFinishedImporting("components_native/premium/P
 
 export default function PremiumModal(arg0) {
   ({ initialRoute, onClose } = arg0);
-  ({ applicationId, analyticsLocation, analyticsLocations, onBack, giftRecipientId, predicate, showCurrentPlan, isBoostPurchaseFlow, planId, activitySessionId, channelId, guildId, premiumFeatureCardOrder, onPaymentSuccess, onPaymentDismiss } = arg0);
+  ({
+    applicationId,
+    analyticsLocation,
+    analyticsLocations,
+    onBack,
+    giftRecipientId,
+    predicate,
+    showCurrentPlan,
+    isBoostPurchaseFlow,
+    planId,
+    activitySessionId,
+    channelId,
+    guildId,
+    premiumFeatureCardOrder,
+    onPaymentSuccess,
+    onPaymentDismiss,
+  } = arg0);
   if (initialRoute == null) {
     initialRoute = giftRecipientId.PREMIUM;
   }
@@ -22,7 +38,17 @@ export default function PremiumModal(arg0) {
   let obj4 = analyticsLocation(tmp[4]);
   obj1[1] = obj4.getHeaderCloseButton(onClose);
   obj1[2] = function render() {
-    return planId(onClose(onBack[5]), { applicationId, onClose, activitySessionId, channelId, guildId, premiumFeatureCardOrder, onPaymentSuccess, onPaymentDismiss, isFullScreenPresentation: true });
+    return planId(onClose(onBack[5]), {
+      applicationId,
+      onClose,
+      activitySessionId,
+      channelId,
+      guildId,
+      premiumFeatureCardOrder,
+      onPaymentSuccess,
+      onPaymentDismiss,
+      isFullScreenPresentation: true,
+    });
   };
   obj[giftRecipientId.PREMIUM] = obj1;
   const obj2 = { title: null, render: null };
@@ -55,7 +81,15 @@ export default function PremiumModal(arg0) {
   obj4[2] = { predicate, showCurrentPlan, isBoostPurchaseFlow };
   obj4[3] = function render(arg0) {
     ({ predicate, showCurrentPlan, isBoostPurchaseFlow } = arg0);
-    return planId(onClose(onBack[8]), { analyticsLocation, predicate, showCurrentPlan, isBoostPurchaseFlow, planId, applicationId, guildId });
+    return planId(onClose(onBack[8]), {
+      analyticsLocation,
+      predicate,
+      showCurrentPlan,
+      isBoostPurchaseFlow,
+      planId,
+      applicationId,
+      guildId,
+    });
   };
   obj[giftRecipientId.PREMIUM_PLAN_SELECT] = obj4;
   const obj5 = { title: null, headerLeft: null, render: null };
@@ -71,5 +105,5 @@ export default function PremiumModal(arg0) {
   obj[1] = initialRoute;
   obj[1] = planId(analyticsLocation(onBack[11]).Navigator, obj);
   return planId(analyticsLocation(onBack[10]).AnalyticsLocationProvider, obj);
-};
+}
 export const PREMIUM_KEY = "PREMIUM_KEY";

@@ -10,7 +10,12 @@ require = arg1;
 let c3 = importAllResult;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 let obj = { row: null, rowSpacer: null, profileEffect: null, sampleProfile: null };
-obj = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: require("useCollectibleListLayout").GUTTER_SIZE };
+obj = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  paddingHorizontal: require("useCollectibleListLayout").GUTTER_SIZE,
+};
 obj[0] = obj;
 createCacheKey = { height: require("useCollectibleListLayout").GUTTER_SIZE };
 obj[1] = createCacheKey;
@@ -64,7 +69,7 @@ const memoResult = importAllResult.memo((size) => {
       return closure_1_6(size, obj, arg1);
     }
   });
-  const items2 = [callback(size, obj), ];
+  const items2 = [callback(size, obj)];
   obj = { style: tmp.rowSpacer };
   items2[1] = callback(size, obj);
   obj[0] = items2;
@@ -108,7 +113,15 @@ const memoResult1 = importAllResult.memo((isSelected) => {
     }
     return combined;
   }, items1);
-  let obj = { skuId: item.skuId, isSelected: isSelected.isSelected, onPress: callback, isTryItOut: flag, size: isSelected.size, accessibilityLabel: null, children: null };
+  let obj = {
+    skuId: item.skuId,
+    isSelected: isSelected.isSelected,
+    onPress: callback,
+    isTryItOut: flag,
+    size: isSelected.size,
+    accessibilityLabel: null,
+    children: null,
+  };
   let accessibilityLabel;
   if (tmp4 != null) {
     accessibilityLabel = tmp4.accessibilityLabel;
@@ -120,12 +133,22 @@ const memoResult1 = importAllResult.memo((isSelected) => {
   obj1 = { uri: setSelectedProfileEffect(10750) };
   obj[0] = obj1;
   obj[1] = tmp.sampleProfile;
-  const items3 = [closure_6(setSelectedProfileEffect(5493), obj), closure_6(setSelectedProfileEffect(8510), { skuId: item.skuId, bannerAdjustment: 0, useThumbnail: true, thumbnailUrlOverride: memo })];
+  const items3 = [
+    closure_6(setSelectedProfileEffect(5493), obj),
+    closure_6(setSelectedProfileEffect(8510), {
+      skuId: item.skuId,
+      bannerAdjustment: 0,
+      useThumbnail: true,
+      thumbnailUrlOverride: memo,
+    }),
+  ];
   obj[3] = items3;
   obj[6] = callback2(View, obj);
   return closure_6(item(8091).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditProfileEffectItem";
-const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/native/EditProfileEffectSection.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/profile_effects/native/EditProfileEffectSection.tsx",
+);
 
 export const EditProfileEffectRow = memoResult;

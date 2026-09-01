@@ -48,7 +48,15 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
           canViewChannelResult = tmpResult.canViewChannel(channel);
         }
         tmpResult = tmp(4669);
-        obj = { mediaPostEmbedData: null, guild: null, parentChannel: null, postThread: null, user: null, selectedGuildId: null, canAccess: null };
+        obj = {
+          mediaPostEmbedData: null,
+          guild: null,
+          parentChannel: null,
+          postThread: null,
+          user: null,
+          selectedGuildId: null,
+          canAccess: null,
+        };
         obj[0] = media;
         obj[1] = guild;
         obj[2] = channel;
@@ -63,7 +71,10 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
           if (null != mediaPostEmbedCommonData.authorName) {
             if (null != mediaPostEmbedCommonData.channelName) {
               if (null != user) {
-                const userAuthorWithProcessedColor = tmp(7869).getUserAuthorWithProcessedColor(user, mediaPostEmbedCommonData.postThread);
+                const userAuthorWithProcessedColor = tmp(7869).getUserAuthorWithProcessedColor(
+                  user,
+                  mediaPostEmbedCommonData.postThread,
+                );
                 const intl6 = tmp(1236).intl;
                 obj = { username: null, usernameOnClick: null, channelName: null };
                 obj[0] = mediaPostEmbedCommonData.authorName;
@@ -109,7 +120,9 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 if (!value) {
                   value = obj7.get("obscure_blur_effect_self_harm_content_enabled");
                 }
-                const isPendingScanVersionResult = tmp(7345).isPendingScanVersion(mediaPostEmbedCommonData.contentScanVersion);
+                const isPendingScanVersionResult = tmp(7345).isPendingScanVersion(
+                  mediaPostEmbedCommonData.contentScanVersion,
+                );
                 let result = value;
                 if (value) {
                   result = tmp(7345).shouldAgeVerifyForExplicitMedia();
@@ -172,7 +185,11 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 obj4.ctaButtonColor = tmp11;
                 const tmpResult3 = tmp(7345);
               }
-              tmp15 = null != mediaPostEmbedCommonData.coverImage && !mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage && isAnimatedImageUrlResult && flag;
+              tmp15 =
+                null != mediaPostEmbedCommonData.coverImage &&
+                !mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage &&
+                isAnimatedImageUrlResult &&
+                flag;
             }
           }
           const intl = tmp(1236).intl;
@@ -184,4 +201,4 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
     }
     obj15 = embedFetchState;
   }
-};
+}

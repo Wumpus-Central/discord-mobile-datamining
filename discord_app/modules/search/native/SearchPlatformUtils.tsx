@@ -91,7 +91,7 @@ function getMediaGridItemStyles(numItems) {
   let obj = {};
   obj = { itemIndex, numItems: numItems.numItems, numColumns };
   const merged = Object.assign(getGridItemBorderStyles(obj));
-  const result = numItems.spacing * (numColumns - 1) / numColumns;
+  const result = (numItems.spacing * (numColumns - 1)) / numColumns;
   const result1 = itemIndex % numColumns;
   if (0 === result1) {
     obj = { marginEnd: null };
@@ -110,7 +110,7 @@ function getMediaGridItemStyles(numItems) {
 }
 function getGridItemSpacingStyles(numColumns) {
   numColumns = numColumns.numColumns;
-  const result = numColumns.spacing * (numColumns - 1) / numColumns;
+  const result = (numColumns.spacing * (numColumns - 1)) / numColumns;
   const result1 = numColumns.itemIndex % numColumns;
   if (0 === result1) {
     let obj = { marginEnd: null };
@@ -137,14 +137,16 @@ function getNextFetchLimit(arg0) {
 }
 function onInitialFetchMessagesSuccess(tabEntries) {
   tabEntries = tabEntries.tabEntries;
-  if (tabEntries.every((arg0) => {
-    [, tmp] = arg0;
-    let tmp2 = 0 === tmp.total_results;
-    if (!tmp2) {
-      tmp2 = null == tmp.total_results;
-    }
-    return tmp2;
-  })) {
+  if (
+    tabEntries.every((arg0) => {
+      [, tmp] = arg0;
+      let tmp2 = 0 === tmp.total_results;
+      if (!tmp2) {
+        tmp2 = null == tmp.total_results;
+      }
+      return tmp2;
+    })
+  ) {
     let obj = _modDef11927;
     obj = { searchContext: null };
     obj[0] = tabEntries.searchContext;
@@ -153,7 +155,9 @@ function onInitialFetchMessagesSuccess(tabEntries) {
 }
 function onFetchMessagesStart(searchQueryString) {
   searchQueryString = searchQueryString.searchQueryString;
-  _modDef11930.updateSearchQuery(searchQueryString.searchContext, (setSearchResultsQuery) => setSearchResultsQuery.setSearchResultsQuery(searchQueryString));
+  _modDef11930.updateSearchQuery(searchQueryString.searchContext, (setSearchResultsQuery) =>
+    setSearchResultsQuery.setSearchResultsQuery(searchQueryString),
+  );
 }
 function fetchInitialMessages(closure_0) {
   const _require = closure_0;
@@ -177,7 +181,18 @@ function fetchInitialMessages(closure_0) {
       obj[0] = closure_0;
       queryString(11927).trackSearchStarted(obj);
       const obj4 = queryString(11927);
-      obj = { searchContext: null, searchTabs: null, searchQueryString: null, getId: null, getLimit: null, onFetchStart: null, onFetchSuccess: null, pagination: null, trackExactTotalHits: null, searchMode: null };
+      obj = {
+        searchContext: null,
+        searchTabs: null,
+        searchQueryString: null,
+        getId: null,
+        getLimit: null,
+        onFetchStart: null,
+        onFetchSuccess: null,
+        pagination: null,
+        trackExactTotalHits: null,
+        searchMode: null,
+      };
       obj[0] = closure_0;
       obj[1] = tmp3;
       obj[2] = queryString;
@@ -198,7 +213,8 @@ function fetchInitialMessages(closure_0) {
       obj[8] = require("../../user_settings/UserSettings.tsx").SearchResultExactCountEnabled.getSetting();
       obj[9] = constants2.NEWEST;
       const tabMessages = obj6.fetchTabMessages(obj);
-      const SearchResultExactCountEnabled = require("../../user_settings/UserSettings.tsx").SearchResultExactCountEnabled;
+      const SearchResultExactCountEnabled =
+        require("../../user_settings/UserSettings.tsx").SearchResultExactCountEnabled;
     }
   }
 }
@@ -206,12 +222,25 @@ function syncAutocomplete(closure_0) {
   const queryString = store2.getQueryString(closure_0, true);
   let obj = SearchTokenTypes;
   const tokenizeQueryResult = obj.tokenizeQuery(queryString);
-  const selectionScope = SearchTokenTypes.getSelectionScope(tokenizeQueryResult, queryString.length - 1, queryString.length - 1);
+  const selectionScope = SearchTokenTypes.getSelectionScope(
+    tokenizeQueryResult,
+    queryString.length - 1,
+    queryString.length - 1,
+  );
   const obj2 = SearchTokenTypes;
   obj = { searchContext: closure_0, tokens: tokenizeQueryResult, cursorScope: selectionScope, queryString };
   const result = _modDef11914.updateAutocompleteQuery(obj);
 }
-({ CHANNEL_SEARCH_INITIAL_MESSAGE_TABS: c5, MAX_SEARCH_RESULTS_LIMIT: closure_6, MESSAGE_SEARCH_RESULT_TABS: error, SEARCH_INITIAL_MESSAGE_TABS: closure_8, SEARCH_TABS_TO_SEARCH_QUERY_LIMITS: c9, SearchFileTypes: c10, SearchLinkTypes: unpackModuleId, SearchMediaTypes: closure_12 } = MessageEmbedTypes);
+({
+  CHANNEL_SEARCH_INITIAL_MESSAGE_TABS: c5,
+  MAX_SEARCH_RESULTS_LIMIT: closure_6,
+  MESSAGE_SEARCH_RESULT_TABS: error,
+  SEARCH_INITIAL_MESSAGE_TABS: closure_8,
+  SEARCH_TABS_TO_SEARCH_QUERY_LIMITS: c9,
+  SearchFileTypes: c10,
+  SearchLinkTypes: unpackModuleId,
+  SearchMediaTypes: closure_12,
+} = MessageEmbedTypes);
 ({ PLATFORM_REGEX_ICON_PAIRS: map1, SEARCH_TEXT_INPUT_DEBOUNCE_TIME } = SEARCH_TEXT_INPUT_DEBOUNCE_TIME);
 ({ MessageFlags: closure_14, SearchModes: closure_15, SearchTypes: closure_16 } = ME);
 let obj = {
@@ -240,7 +269,18 @@ let obj = {
       }
       let tabMessages = !flag;
       if (!flag) {
-        obj = { searchContext: null, searchTabs: null, searchQueryString: null, getLimit: null, getId: null, onFetchStart: null, onFetchSuccess: null, pagination: null, trackExactTotalHits: null, searchMode: null };
+        obj = {
+          searchContext: null,
+          searchTabs: null,
+          searchQueryString: null,
+          getLimit: null,
+          getId: null,
+          onFetchStart: null,
+          onFetchSuccess: null,
+          pagination: null,
+          trackExactTotalHits: null,
+          searchMode: null,
+        };
         obj[0] = searchContext;
         const items = [tab];
         obj[1] = items;
@@ -286,7 +326,7 @@ let obj = {
   syncAutocompleteDebounced: null,
   navigateToSearchWithPrefetch: null,
   subscribeSearchQueryState: null,
-  subscribeTextInputValue: null
+  subscribeTextInputValue: null,
 };
 obj[11] = importDefaultResult.debounce(syncAutocomplete, SEARCH_TEXT_INPUT_DEBOUNCE_TIME);
 obj[12] = function navigateToSearchWithPrefetch(closure_8, closure_9) {
@@ -323,7 +363,10 @@ obj[13] = function subscribeSearchQueryState(searchContext, arg1, arg2, arg3) {
 obj[14] = function subscribeTextInputValue(closure_0, debounceResult, arg2) {
   closure_0 = debounceResult;
   let flag = arg2;
-  const f90141 = (getTextInputValue) => ({ textInputValue: getTextInputValue.getTextInputValue(), textInputChangedFromInput: getTextInputValue.getTextValueChangedFromInput() });
+  const f90141 = (getTextInputValue) => ({
+    textInputValue: getTextInputValue.getTextInputValue(),
+    textInputChangedFromInput: getTextInputValue.getTextValueChangedFromInput(),
+  });
   const f90142 = (textInputValue, textInputValue2) => {
     textInputValue = undefined;
     if (textInputValue2 != null) {
@@ -340,7 +383,10 @@ obj[14] = function subscribeTextInputValue(closure_0, debounceResult, arg2) {
   }
   let obj = callback;
   const manager = callback.getManager(closure_0);
-  obj = { textInputValue: manager.getTextInputValue(), textInputChangedFromInput: manager.getTextValueChangedFromInput() };
+  obj = {
+    textInputValue: manager.getTextInputValue(),
+    textInputChangedFromInput: manager.getTextValueChangedFromInput(),
+  };
   if (arg2) {
     flag = true;
   }
@@ -371,7 +417,15 @@ export const getMedia = function getMedia(items, items1) {
             tmpResult = tmp(tmp2[6]);
             const result = tmpResult.extractMediaFromAttachment(flags, closure_0, index, closure_0);
             if (null != result) {
-              obj = { type: null, attachment: null, messageId: null, channelId: null, author: null, mediaIndex: null, sources: null };
+              obj = {
+                type: null,
+                attachment: null,
+                messageId: null,
+                channelId: null,
+                author: null,
+                mediaIndex: null,
+                sources: null,
+              };
               obj[0] = closure_2_12.ATTACHMENT;
               obj[1] = flags;
               ({ id: obj5[2], channel_id: obj5[3], author: obj5[4] } = tmp4);
@@ -395,7 +449,15 @@ export const getMedia = function getMedia(items, items1) {
           let tmpResult = tmp(tmp2[6]);
           const result = tmpResult.extractMediaFromEmbed(image, closure_0, contentMessage, arg1, closure_0);
           if (null != result) {
-            obj = { type: null, embed: null, messageId: null, channelId: null, author: null, mediaIndex: null, sources: null };
+            obj = {
+              type: null,
+              embed: null,
+              messageId: null,
+              channelId: null,
+              author: null,
+              mediaIndex: null,
+              sources: null,
+            };
             obj[0] = closure_2_12.EMBED;
             obj[1] = image;
             ({ id: obj4[2], channel_id: obj4[3], author: obj4[4] } = tmp4);
@@ -415,7 +477,15 @@ export const getMedia = function getMedia(items, items1) {
     const iter = result[Symbol.iterator]();
     while (iter !== undefined) {
       let tmp6 = items;
-      obj = { type: null, messageId: null, channelId: null, author: null, mediaIndex: null, sources: null, unfurledMediaItem: null };
+      obj = {
+        type: null,
+        messageId: null,
+        channelId: null,
+        author: null,
+        mediaIndex: null,
+        sources: null,
+        unfurledMediaItem: null,
+      };
       let tmp7 = closure_1_12;
       obj[0] = closure_1_12.COMPONENT;
       ({ id: obj2[1], channel_id: obj2[2], author: obj2[3] } = getContentMessage);
@@ -468,7 +538,14 @@ export const getFiles = function getFiles(getContentMessage) {
           }
         }
       }
-      obj = { type: closure_1_10.MEDIA_ATTACHMENT, messageId: getContentMessage.id, channelId: getContentMessage.channel_id, author: getContentMessage.author, fileIndex, attachment };
+      obj = {
+        type: closure_1_10.MEDIA_ATTACHMENT,
+        messageId: getContentMessage.id,
+        channelId: getContentMessage.channel_id,
+        author: getContentMessage.author,
+        fileIndex,
+        attachment,
+      };
       items.push(obj);
     });
   }
@@ -487,9 +564,23 @@ export const getLinks = function getLinks(items, getContentMessage) {
       let obj = getContentMessage(items[6]);
       if (obj.isValidImageEmbed(image)) {
         let tmpResult = tmp(tmp2[6]);
-        const result = tmpResult.extractMediaFromEmbed(image, getContentMessage, contentMessage, arg1, guildIdFromSearchContext);
+        const result = tmpResult.extractMediaFromEmbed(
+          image,
+          getContentMessage,
+          contentMessage,
+          arg1,
+          guildIdFromSearchContext,
+        );
         if (null != result) {
-          obj = { type: null, messageId: null, channelId: null, author: null, linkIndex: null, sources: null, embed: null };
+          obj = {
+            type: null,
+            messageId: null,
+            channelId: null,
+            author: null,
+            linkIndex: null,
+            sources: null,
+            embed: null,
+          };
           obj[0] = closure_1_11.EMBED;
           ({ id: obj4[1], channel_id: obj4[2], author: obj4[3] } = tmp4);
           obj[4] = closure_4;

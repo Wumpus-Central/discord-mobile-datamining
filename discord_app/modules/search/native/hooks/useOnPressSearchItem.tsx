@@ -26,7 +26,7 @@ function _handleVoiceOrStageChannelConnectPress() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0, openGuildVoiceModal) {
+    return (function* (arg0, openGuildVoiceModal) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -199,7 +199,10 @@ export const useOnPressMessageItem = function useOnPressMessageItem(searchContex
           const merged = Object.assign(obj);
           obj1.onBeforeJumpToMessage = function onBeforeJumpToMessage(channel_link) {
             const ComponentDispatch = lib(closure_1_2[19]).ComponentDispatch;
-            ComponentDispatch.dispatch(closure_1_13.HIDE_CHANNEL_DETAILS, { channelId: lib.id, screenIndex: screenIndex.screenIndex });
+            ComponentDispatch.dispatch(closure_1_13.HIDE_CHANNEL_DETAILS, {
+              channelId: lib.id,
+              screenIndex: screenIndex.screenIndex,
+            });
           };
           obj[1] = obj1;
           obj.navigate("sidebar", obj);
@@ -258,7 +261,10 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
             const merged = Object.assign(obj);
             obj1.onBeforeJumpToMessage = function onBeforeJumpToMessage(channel_link) {
               const ComponentDispatch = lib(closure_1_2[19]).ComponentDispatch;
-              ComponentDispatch.dispatch(closure_1_13.HIDE_CHANNEL_DETAILS, { channelId: lib.id, screenIndex: screenIndex.screenIndex });
+              ComponentDispatch.dispatch(closure_1_13.HIDE_CHANNEL_DETAILS, {
+                channelId: lib.id,
+                screenIndex: screenIndex.screenIndex,
+              });
             };
             obj[1] = obj1;
             obj.navigate("sidebar", obj);
@@ -290,7 +296,10 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
               const merged = Object.assign(obj);
               obj1.onBeforeJumpToMessage = function onBeforeJumpToMessage(channel_link) {
                 const ComponentDispatch = lib(closure_1_2[19]).ComponentDispatch;
-                ComponentDispatch.dispatch(closure_1_13.HIDE_CHANNEL_DETAILS, { channelId: lib.id, screenIndex: screenIndex.screenIndex });
+                ComponentDispatch.dispatch(closure_1_13.HIDE_CHANNEL_DETAILS, {
+                  channelId: lib.id,
+                  screenIndex: screenIndex.screenIndex,
+                });
               };
               obj[1] = obj1;
               obj.navigate("sidebar", obj);
@@ -315,7 +324,14 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
           tmp6 = type.messageId === messageId.messageId && type.mediaIndex === tmp5.mediaIndex;
         }
       });
-      obj = { initialSources: null, initialIndex: null, onEndReached: null, onEndReachedThreshold: null, analyticsSource: "Search", originViewOrOriginLayout: null };
+      obj = {
+        initialSources: null,
+        initialIndex: null,
+        onEndReached: null,
+        onEndReachedThreshold: null,
+        analyticsSource: "Search",
+        originViewOrOriginLayout: null,
+      };
       obj[0] = items;
       obj[1] = c3;
       obj[2] = c2;
@@ -403,7 +419,9 @@ export const useOnPressGuildTextChannel = function useOnPressGuildTextChannel(se
       }
       closure_1_1(closure_1_2[22]).preload(channel.guild_id, channel.id);
       const obj2 = closure_1_1(closure_1_2[22]);
-      const result1 = searchContext(closure_1_2[9]).performKeyboardAwareNavigation(() => lib(closure_1_2[23]).transitionToChannel(lib.id));
+      const result1 = searchContext(closure_1_2[9]).performKeyboardAwareNavigation(() =>
+        lib(closure_1_2[23]).transitionToChannel(lib.id),
+      );
     }
   }, items);
 };
@@ -419,7 +437,7 @@ export const useOnPressGuildVoiceChannel = function useOnPressGuildVoiceChannel(
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0, openMemberVerificationModal) {
+    return (function* (arg0, openMemberVerificationModal) {
       let guildId = tmp2;
       let guild_id = lib;
       if (!obj9.maybeOpenAgeGateForVoiceChannel(lib.id)) {
@@ -440,7 +458,9 @@ export const useOnPressGuildVoiceChannel = function useOnPressGuildVoiceChannel(
           if (tmp23Result.getChannelRoleSubscriptionStatus(guild_id.id).needSubscriptionToAccess) {
             guild_id = guild_id.guild_id;
             const tmp23Result2 = tmp23(tmp24[32]);
-            const transitionToResult = tmp23(tmp24[32]).transitionTo(closure_1_12.CHANNEL(guild_id, closure_1_16.ROLE_SUBSCRIPTIONS));
+            const transitionToResult = tmp23(tmp24[32]).transitionTo(
+              closure_1_12.CHANNEL(guild_id, closure_1_16.ROLE_SUBSCRIPTIONS),
+            );
           } else {
             closure_1_17(guild_id);
           }
@@ -454,7 +474,7 @@ export const useOnPressGuildVoiceChannel = function useOnPressGuildVoiceChannel(
       return openMemberVerificationModal;
     })();
   });
-  callback = React.useCallback(function() {
+  callback = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

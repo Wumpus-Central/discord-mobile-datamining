@@ -13,7 +13,8 @@ const result = require("set").fileFinishedImporting("modules/mfa/native/componen
 
 export default function ClipboardCopyInput(arg0) {
   ({ label, onChangeCode, autoFocus } = arg0);
-  ({ placeholder, isValidClipboardCode, maxLength, error, textContentType, autoComplete, keyboardType, isDisabled } = arg0);
+  ({ placeholder, isValidClipboardCode, maxLength, error, textContentType, autoComplete, keyboardType, isDisabled } =
+    arg0);
   if (autoFocus === undefined) {
     autoFocus = true;
   }
@@ -33,7 +34,7 @@ export default function ClipboardCopyInput(arg0) {
   const effect = React.useEffect(() => {
     function _run() {
       const self = this;
-      const tmp = callback(function*() {
+      const tmp = callback(function* () {
         if (v0 === 2) {
           v0 = 3;
           HermesBuiltin.throwTypeError();
@@ -154,6 +155,45 @@ export default function ClipboardCopyInput(arg0) {
       })();
     }
   }, items1);
-  obj = { style: tmp.inputContainer, children: jsx(_require(stateFromStores[11]).TextInput, { ref, autoFocus, autoCorrect: false, autoCapitalize: "none", errorMessage: error, maxLength, onChange: onChangeCode, label, accessibilityLabel: label, placeholder, isClearable: true, textContentType, autoComplete, keyboardType, isDisabled }) };
-  return <View style={tmp.inputContainer}>{jsx(_require(stateFromStores[11]).TextInput, { ref, autoFocus, autoCorrect: false, autoCapitalize: "none", errorMessage: error, maxLength, onChange: onChangeCode, label, accessibilityLabel: label, placeholder, isClearable: true, textContentType, autoComplete, keyboardType, isDisabled })}</View>;
-};
+  obj = {
+    style: tmp.inputContainer,
+    children: jsx(_require(stateFromStores[11]).TextInput, {
+      ref,
+      autoFocus,
+      autoCorrect: false,
+      autoCapitalize: "none",
+      errorMessage: error,
+      maxLength,
+      onChange: onChangeCode,
+      label,
+      accessibilityLabel: label,
+      placeholder,
+      isClearable: true,
+      textContentType,
+      autoComplete,
+      keyboardType,
+      isDisabled,
+    }),
+  };
+  return (
+    <View style={tmp.inputContainer}>
+      {jsx(_require(stateFromStores[11]).TextInput, {
+        ref,
+        autoFocus,
+        autoCorrect: false,
+        autoCapitalize: "none",
+        errorMessage: error,
+        maxLength,
+        onChange: onChangeCode,
+        label,
+        accessibilityLabel: label,
+        placeholder,
+        isClearable: true,
+        textContentType,
+        autoComplete,
+        keyboardType,
+        isDisabled,
+      })}
+    </View>
+  );
+}

@@ -193,9 +193,18 @@ export default function createExperiment(config) {
   const result2 = map.set(constants.CONTROL, obj);
   const treatments = config.treatments;
   const item = treatments.forEach((config) => {
-    const result = map.set(config.id, { description: "Treatment " + config.id + ": " + config.label, config: config.config });
+    const result = map.set(config.id, {
+      description: "Treatment " + config.id + ": " + config.label,
+      config: config.config,
+    });
   });
-  obj1 = { id: config.id, title: config.label, commonTriggerPoint: config.commonTriggerPoint, description: items.map((description) => description.description), buckets: [...map.keys()] };
+  obj1 = {
+    id: config.id,
+    title: config.label,
+    commonTriggerPoint: config.commonTriggerPoint,
+    description: items.map((description) => description.description),
+    buckets: [...map.keys()],
+  };
   items = [...map.values()];
   if ("guild" === config.kind) {
     let tmpResult = tmp(tmp2[5]);
@@ -245,37 +254,40 @@ export default function createExperiment(config) {
       if (flag2 == null) {
         flag2 = false;
       }
-      const tmp9 = trackAutoExposure(trackExposureWithDescriptor(() => {
-        if (null != guildExperimentDescriptor) {
-          if (!flag) {
-            let NOT_ELIGIBLE = tmp.bucket;
-          }
-          let aaMode;
-          if (tmp != null) {
-            aaMode = tmp.aaMode;
-          }
-          if (aaMode) {
-            let defaultConfig = tmp3.defaultConfig;
-          } else {
-            const value = closure_1.get(NOT_ELIGIBLE);
-            defaultConfig = undefined;
-            if (value != null) {
-              defaultConfig = value.config;
+      const tmp9 = trackAutoExposure(
+        trackExposureWithDescriptor(() => {
+          if (null != guildExperimentDescriptor) {
+            if (!flag) {
+              let NOT_ELIGIBLE = tmp.bucket;
             }
-            if (defaultConfig == null) {
-              defaultConfig = tmp3.defaultConfig;
+            let aaMode;
+            if (tmp != null) {
+              aaMode = tmp.aaMode;
             }
+            if (aaMode) {
+              let defaultConfig = tmp3.defaultConfig;
+            } else {
+              const value = closure_1.get(NOT_ELIGIBLE);
+              defaultConfig = undefined;
+              if (value != null) {
+                defaultConfig = value.config;
+              }
+              if (defaultConfig == null) {
+                defaultConfig = tmp3.defaultConfig;
+              }
+            }
+            const items = [defaultConfig, NOT_ELIGIBLE];
+            let num = -1;
+            if (null != tmp) {
+              num = tmp.revision;
+            }
+            items[2] = num;
+            return items;
           }
-          const items = [defaultConfig, NOT_ELIGIBLE, ];
-          let num = -1;
-          if (null != tmp) {
-            num = tmp.revision;
-          }
-          items[2] = num;
-          return items;
-        }
-        NOT_ELIGIBLE = closure_2_8.NOT_ELIGIBLE;
-      }), 2);
+          NOT_ELIGIBLE = closure_2_8.NOT_ELIGIBLE;
+        }),
+        2,
+      );
       closure_5 = tmp9[1];
       [tmp11, tmp12, tmp13] = trackAutoExposure(tmp9[0], 3);
       const tmp14 = map(result3[7])(guildId);
@@ -298,19 +310,27 @@ export default function createExperiment(config) {
         }
       }, items);
       const items1 = [flag, tmp14];
-      subscribe(() => callback2(closure_6, (arg0, arg1, arg2) => {
-        closure_0 = arg0;
-        closure_1 = arg1;
-        closure_2 = arg2;
-        callback((arg0) => {
-          let tmp = arg0;
-          if (arg0[0] === closure_0) {
-            return tmp;
-          }
-          const items = [closure_0, closure_1, closure_2];
-          tmp = items;
-        });
-      }, { disable: flag }), items1);
+      subscribe(
+        () =>
+          callback2(
+            closure_6,
+            (arg0, arg1, arg2) => {
+              closure_0 = arg0;
+              closure_1 = arg1;
+              closure_2 = arg2;
+              callback((arg0) => {
+                let tmp = arg0;
+                if (arg0[0] === closure_0) {
+                  return tmp;
+                }
+                const items = [closure_0, closure_1, closure_2];
+                tmp = items;
+              });
+            },
+            { disable: flag },
+          ),
+        items1,
+      );
       return tmp11;
     },
     subscribe,
@@ -346,7 +366,12 @@ export default function createExperiment(config) {
         if (!obj.disable) {
           if (false !== obj.autoTrackExposure) {
             if (null == tmp.commonTriggerPoint) {
-              trackAutoExposure(guildId, obj.trackExposureOptions, false === obj.autoTrackExposure, guildExperimentDescriptor);
+              trackAutoExposure(
+                guildId,
+                obj.trackExposureOptions,
+                false === obj.autoTrackExposure,
+                guildExperimentDescriptor,
+              );
             }
           }
           let aaMode;
@@ -399,6 +424,6 @@ export default function createExperiment(config) {
         aaMode = guildExperimentDescriptor.aaMode;
       }
       return aaMode;
-    }
+    },
   };
-};
+}

@@ -8,12 +8,8 @@ let c3 = importAllResult;
 let closure_5 = createCacheKey.createStyles({ viewDefaults: { flex: 1 } });
 let context = importAllResult.createContext({
   keyCommands: [],
-  addKeyCommand(item10005) {
-
-  },
-  removeKeyCommand() {
-
-  }
+  addKeyCommand(item10005) {},
+  removeKeyCommand() {},
 });
 const result = require("set").fileFinishedImporting("modules/keyboard/native/KeyCommandsView.tsx");
 
@@ -39,7 +35,13 @@ export default function KeyCommandsView(style) {
     callback((arr) => arr.filter((eventName) => eventName.eventName !== closure_0));
   }, []);
   let items = [first, callback, callback1];
-  let obj = { value: callback1.useMemo(() => ({ keyCommands: first, addKeyCommand: callback, removeKeyCommand: callback1 }), items), children: null };
+  let obj = {
+    value: callback1.useMemo(
+      () => ({ keyCommands: first, addKeyCommand: callback, removeKeyCommand: callback1 }),
+      items,
+    ),
+    children: null,
+  };
   obj = {};
   const tmp2 = callback();
   const merged1 = Object.assign(merged);
@@ -55,7 +57,7 @@ export default function KeyCommandsView(style) {
   };
   obj[1] = jsx(first(14230), {});
   return <redux.Provider />;
-};
+}
 export const useKeyCommands = function useKeyCommands(memo) {
   closure_0 = memo;
   const context = importAllResult.useContext(closure_6);

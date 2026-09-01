@@ -27,7 +27,7 @@ export default function useChatWidth(arg0) {
     context = tmp5;
   }
   return context;
-};
+}
 export const getChatWidth = function getChatWidth(arg0) {
   const obj = useChatLayout;
   const tmp = require;

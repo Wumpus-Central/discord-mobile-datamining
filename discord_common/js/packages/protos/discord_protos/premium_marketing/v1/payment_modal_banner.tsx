@@ -7,7 +7,7 @@ import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 require = arg1;
 class PaymentModalBanner$Type extends MessageType {
   constructor() {
-    items = [, , , , ];
+    items = [, , , ,];
     items[0] = { no: 1, name: "asset_url", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "header", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "body", kind: "scalar", T: 9 };
@@ -24,8 +24,8 @@ class PaymentModalBanner$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
-          }
+        return callback(8453).LocalizedString;
+      },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.PaymentModalBanner", items, T);
     // ThrowIfThisInitialized (0x7c)
@@ -69,7 +69,12 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         let tmp29 = LocalizedString2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
-        obj.headerLocalized = LocalizedString2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.headerLocalized);
+        obj.headerLocalized = LocalizedString2.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.headerLocalized,
+        );
       } else if (5 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
@@ -130,14 +135,30 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
   if (assetUrl.headerLocalized) {
     const LocalizedString = create.LocalizedString;
     const tagResult3 = tag.tag(4, _mod1307.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(4, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(4, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = LocalizedString.internalBinaryWrite(
+      assetUrl.headerLocalized,
+      tag.tag(4, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(
+      assetUrl.headerLocalized,
+      tag.tag(4, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (assetUrl.bodyLocalized) {
     const LocalizedString2 = create.LocalizedString;
     const tagResult4 = tag.tag(5, _mod1307.WireType.LengthDelimited);
-    const joined1 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = LocalizedString2.internalBinaryWrite(
+      assetUrl.bodyLocalized,
+      tag.tag(5, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(
+      assetUrl.bodyLocalized,
+      tag.tag(5, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -149,7 +170,12 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
   }
   return tag;
 };
-let items = [{ no: 1, name: "asset_url", kind: "scalar", T: 9 }, { no: 2, name: "header", kind: "scalar", T: 9 }, { no: 3, name: "body", kind: "scalar", T: 9 }, , ];
+let items = [
+  { no: 1, name: "asset_url", kind: "scalar", T: 9 },
+  { no: 2, name: "header", kind: "scalar", T: 9 },
+  { no: 3, name: "body", kind: "scalar", T: 9 },
+  ,
+];
 let obj = { no: 4, name: "header_localized", kind: "message", T: null };
 class T {
   constructor() {
@@ -164,10 +190,20 @@ items[4] = {
   kind: "message",
   T() {
     return callback(8453).LocalizedString;
-  }
+  },
 };
-prototype = new prototype("discord_protos.premium_marketing.v1.PaymentModalBanner", items, tmp, T, PaymentModalBanner$Type, prototype, items);
+prototype = new prototype(
+  "discord_protos.premium_marketing.v1.PaymentModalBanner",
+  items,
+  tmp,
+  T,
+  PaymentModalBanner$Type,
+  prototype,
+  items,
+);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/payment_modal_banner.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/payment_modal_banner.tsx",
+);
 
 export const PaymentModalBanner = prototype;

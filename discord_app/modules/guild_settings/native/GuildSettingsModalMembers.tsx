@@ -74,7 +74,17 @@ let closure_20 = importAllResult.memo((guild) => {
       formatToPlainStringResult = intl.formatToPlainString(tmp2(1236).t["6eGpWx"], obj);
       tmp9 = guildMember;
     }
-    obj = { userId: null, guildId: null, accessibilityLabel: null, subLabel: null, disabled: null, onPress: null, arrow: true, start: null, end: null };
+    obj = {
+      userId: null,
+      guildId: null,
+      accessibilityLabel: null,
+      subLabel: null,
+      disabled: null,
+      onPress: null,
+      arrow: true,
+      start: null,
+      end: null,
+    };
     obj[0] = guildMember.userId;
     obj[1] = guild.id;
     obj[2] = formatToPlainStringResult;
@@ -87,9 +97,7 @@ let closure_20 = importAllResult.memo((guild) => {
     }
     obj[3] = tmp12Result;
     obj[4] = tmp5;
-    obj[5] = function onPress() {
-
-    };
+    obj[5] = function onPress() {};
     obj[7] = start;
     obj[8] = end;
     return closure_15(guildMember(10679), obj);
@@ -122,41 +130,53 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
   const tmp4 = callback();
   obj1 = guildId(guild[23]);
   items = [closure_10, first];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ guild: store.getGuild(guildId), guildLoaded: null != store.getGuild(guildId), sortedGuildRoles: first.getSortedRoles(guildId) }));
+  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({
+    guild: store.getGuild(guildId),
+    guildLoaded: null != store.getGuild(guildId),
+    sortedGuildRoles: first.getSortedRoles(guildId),
+  }));
   guild = stateFromStoresObject.guild;
   guildLoaded = stateFromStoresObject.guildLoaded;
   sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
   let obj2 = guildId(guild[23]);
   const items1 = [first1, closure_12];
   const items2 = [guild];
-  stateFromStores = obj2.useStateFromStores(items1, () => {
-    let canPruneGuildMembersResult = null != guild;
-    if (canPruneGuildMembersResult) {
-      canPruneGuildMembersResult = guildId(guild[24]).canPruneGuildMembers(tmp, authStore.getCurrentUser(), first1);
-      const obj = guildId(guild[24]);
-    }
-    return canPruneGuildMembersResult;
-  }, items2);
+  stateFromStores = obj2.useStateFromStores(
+    items1,
+    () => {
+      let canPruneGuildMembersResult = null != guild;
+      if (canPruneGuildMembersResult) {
+        canPruneGuildMembersResult = guildId(guild[24]).canPruneGuildMembers(tmp, authStore.getCurrentUser(), first1);
+        const obj = guildId(guild[24]);
+      }
+      return canPruneGuildMembersResult;
+    },
+    items2,
+  );
   let obj3 = guildId(guild[23]);
   const items3 = [first2];
   stateFromStores1 = obj3.useStateFromStores(items3, () => first2.getProps().selectedRoleId);
   let obj4 = guildId(guild[23]);
   const items4 = [stateFromStores2];
   const items5 = [guildId, guildLoaded];
-  stateFromStores2 = obj4.useStateFromStores(items4, () => {
-    let num = stateFromStores2.getMemberCount(guildId);
-    if (num == null) {
-      num = 0;
-    }
-    let tmp = num > 0;
-    if (tmp) {
-      tmp = num <= 10000;
-    }
-    if (tmp) {
-      tmp = guildLoaded;
-    }
-    return tmp;
-  }, items5);
+  stateFromStores2 = obj4.useStateFromStores(
+    items4,
+    () => {
+      let num = stateFromStores2.getMemberCount(guildId);
+      if (num == null) {
+        num = 0;
+      }
+      let tmp = num > 0;
+      if (tmp) {
+        tmp = num <= 10000;
+      }
+      if (tmp) {
+        tmp = guildLoaded;
+      }
+      return tmp;
+    },
+    items5,
+  );
   let obj5 = guildId(guild[23]);
   const items6 = [stateFromStoresArray];
   const items7 = [guildId];
@@ -170,10 +190,19 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
   const tmp15 = guildLoaded(sortedGuildRoles.useState(false), 2);
   first2 = tmp15[0];
   closure_14 = tmp15[1];
-  first3 = guildLoaded(sortedGuildRoles.useState(() => new navigation(guild[13])((arg0) => {
-    callback(arg0);
-    callback2(false);
-  }, first4, 100)), 2)[0];
+  first3 = guildLoaded(
+    sortedGuildRoles.useState(() =>
+      new navigation(guild[13])(
+        (arg0) => {
+          callback(arg0);
+          callback2(false);
+        },
+        first4,
+        100,
+      ),
+    ),
+    2,
+  )[0];
   const items8 = [guildId, stateFromStoresArray, first, stateFromStores1, first1];
   memo = sortedGuildRoles.useMemo(() => {
     function guildRoleIsFiltered(roles) {
@@ -288,10 +317,10 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
             obj[2] = ref.ref;
             const merged1 = Object.assign(merged);
             return callback3(callback(6237).HeaderActionButton, obj);
-          }
+          },
         };
         return closure_1_15(closure_1_0(closure_1_2[26]).ContextMenu, obj);
-      }
+      },
     });
   }, items9);
   const items10 = [stateFromStores2, guildId];
@@ -360,7 +389,13 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
   const items14 = [guild, diff, sortedGuildRoles];
   const callback1 = sortedGuildRoles.useCallback((guildMember) => {
     const index = guildMember.index;
-    return first3(closure_1_20, { guild, guildMember: guildMember.item, sortedGuildRoles, start: 0 === index, end: index === c17 });
+    return first3(closure_1_20, {
+      guild,
+      guildMember: guildMember.item,
+      sortedGuildRoles,
+      start: 0 === index,
+      end: index === c17,
+    });
   }, items14);
   obj = { style: tmp4.containerInner, children: null };
   obj = { style: tmp4.searchFieldContainer, children: null };
@@ -370,7 +405,7 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
   obj1[1] = intl.string(guildId(guild[20]).t.pYHobK);
   obj1[2] = callback;
   obj[1] = first3(guildId(guild[34]).SearchField, obj1);
-  const items15 = [first3(stateFromStores, obj), ];
+  const items15 = [first3(stateFromStores, obj)];
   if (0 !== memo.length) {
     obj2 = { keyExtractor: null, data: null, renderItem: null, contentContainerStyle: null };
     obj2[0] = callback2;

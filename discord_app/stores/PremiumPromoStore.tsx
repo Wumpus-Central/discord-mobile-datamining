@@ -9,8 +9,7 @@ import closure_3 from "RelationshipStore.tsx";
 let closure_4 = 180 * setDefault.Millis.DAY;
 let c5 = false;
 const Store = initializeDefault.Store;
-class PremiumPromoStore extends Store {
-}
+class PremiumPromoStore extends Store {}
 const prototype = PremiumPromoStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_2);
@@ -30,7 +29,7 @@ const premiumPromoStore = new PremiumPromoStore(dispatcherDefault, {
     }
     closure_5 = tmp2;
     return closure_5 !== tmp2;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/PremiumPromoStore.tsx");
 

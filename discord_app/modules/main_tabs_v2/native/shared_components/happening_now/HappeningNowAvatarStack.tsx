@@ -13,22 +13,66 @@ require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = { damping: 17, stiffness: 320, mass: 0.5 };
 let closure_11 = createCacheKey.createStyles((arg0, marginLeft) => {
-  let obj = { avatarStack: { flexDirection: "row" }, stageAvatarStack: null, avatarBubbles: null, avatars: null, shiftedAvatar: null, userCounter: null, ellipsisWrapper: null, ellipsisBorder: null };
-  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 };
+  let obj = {
+    avatarStack: { flexDirection: "row" },
+    stageAvatarStack: null,
+    avatarBubbles: null,
+    avatars: null,
+    shiftedAvatar: null,
+    userCounter: null,
+    ellipsisWrapper: null,
+    ellipsisBorder: null,
+  };
+  obj = {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+    borderRadius: 24,
+    paddingLeft: 4,
+    paddingRight: 4,
+    paddingVertical: 4,
+  };
   obj[1] = obj;
   obj[2] = { display: "flex", flexDirection: "row" };
   obj[3] = { display: "flex", flexDirection: "row" };
   obj[4] = { marginLeft: -marginLeft };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -marginLeft, height: Button.AVATAR_SIZE_MAP[arg0], minWidth: Button.AVATAR_SIZE_MAP[arg0], borderRadius: 10, paddingHorizontal: 4, paddingTop: 1 };
+  obj = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    marginLeft: -marginLeft,
+    height: Button.AVATAR_SIZE_MAP[arg0],
+    minWidth: Button.AVATAR_SIZE_MAP[arg0],
+    borderRadius: 10,
+    paddingHorizontal: 4,
+    paddingTop: 1,
+  };
   obj[5] = obj;
-  obj[6] = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "flex-end", overflow: "hidden", marginLeft: -4 - marginLeft };
+  obj[6] = {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "flex-end",
+    overflow: "hidden",
+    marginLeft: -4 - marginLeft,
+  };
   obj[7] = { borderColor: ThemesDefault.colors.CARD_SECONDARY_BG };
   return obj;
 });
-let closure_12 = { code: "function HappeningNowAvatarStackTsx1(){const{interpolate,typingValue,ELLIPSIS_WIDTH}=this.__closure;return{opacity:interpolate(typingValue.get(),[0,1],[0,1]),width:interpolate(typingValue.get(),[0,1],[0,ELLIPSIS_WIDTH])};}" };
-let closure_13 = { code: "function HappeningNowAvatarStackTsx2(finished){const{runOnJS,setRenderComponents,isTyping}=this.__closure;if(!finished)return;runOnJS(setRenderComponents)(isTyping);}" };
-let closure_14 = { code: "function HappeningNowAvatarStackTsx3(){const{isStage,extraUsers,avatars,AVATAR_SIZE_MAP,avatarSize,avatarOverlap,withSpring,SPRING_CONFIG}=this.__closure;const hasExtraBubble=!isStage&&extraUsers>0;const numBubbles=avatars.length+(hasExtraBubble?1:0);const width=numBubbles>0?numBubbles*AVATAR_SIZE_MAP[avatarSize]-(numBubbles-1)*avatarOverlap:0;return{width:withSpring(width,SPRING_CONFIG),marginRight:numBubbles===0?0:4};}" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAvatarStack.tsx");
+let closure_12 = {
+  code: "function HappeningNowAvatarStackTsx1(){const{interpolate,typingValue,ELLIPSIS_WIDTH}=this.__closure;return{opacity:interpolate(typingValue.get(),[0,1],[0,1]),width:interpolate(typingValue.get(),[0,1],[0,ELLIPSIS_WIDTH])};}",
+};
+let closure_13 = {
+  code: "function HappeningNowAvatarStackTsx2(finished){const{runOnJS,setRenderComponents,isTyping}=this.__closure;if(!finished)return;runOnJS(setRenderComponents)(isTyping);}",
+};
+let closure_14 = {
+  code: "function HappeningNowAvatarStackTsx3(){const{isStage,extraUsers,avatars,AVATAR_SIZE_MAP,avatarSize,avatarOverlap,withSpring,SPRING_CONFIG}=this.__closure;const hasExtraBubble=!isStage&&extraUsers>0;const numBubbles=avatars.length+(hasExtraBubble?1:0);const width=numBubbles>0?numBubbles*AVATAR_SIZE_MAP[avatarSize]-(numBubbles-1)*avatarOverlap:0;return{width:withSpring(width,SPRING_CONFIG),marginRight:numBubbles===0?0:4};}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAvatarStack.tsx",
+);
 
 export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimit) {
   ({ users, guildId: require, isTyping } = userLimit);
@@ -62,7 +106,10 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
   const tmp3 = mapped(XSMALL_20, num3);
   closure_6 = tmp3;
   let obj = num2;
-  [tmp5, c7] = XSMALL_20(num2.useState(() => isTyping), 2);
+  [tmp5, c7] = XSMALL_20(
+    num2.useState(() => isTyping),
+    2,
+  );
   obj1 = require(isStage[9]);
   let num4 = 0;
   if (isTyping) {
@@ -143,7 +190,10 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
     obj[1] = tmp2Result;
     return sharedValue(num3, obj, id.id);
   });
-  const tmp4 = XSMALL_20(num2.useState(() => isTyping), 2);
+  const tmp4 = XSMALL_20(
+    num2.useState(() => isTyping),
+    2,
+  );
   class H {
     constructor() {
       num = 0;
@@ -175,7 +225,16 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
       return obj;
     }
   }
-  obj = { isStage, extraUsers: diff, avatars: mapped, AVATAR_SIZE_MAP: tmp6(tmp7[8]).AVATAR_SIZE_MAP, avatarSize: XSMALL_20, avatarOverlap: num3, withSpring: tmp6(tmp7[11]).withSpring, SPRING_CONFIG: c10 };
+  obj = {
+    isStage,
+    extraUsers: diff,
+    avatars: mapped,
+    AVATAR_SIZE_MAP: tmp6(tmp7[8]).AVATAR_SIZE_MAP,
+    avatarSize: XSMALL_20,
+    avatarOverlap: num3,
+    withSpring: tmp6(tmp7[11]).withSpring,
+    SPRING_CONFIG: c10,
+  };
   H.__closure = obj;
   H.__workletHash = 5027466437777;
   H.__initData = closure_14;
@@ -188,7 +247,7 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
     const items3 = [tmp3.avatars, animatedStyle1];
     obj2[0] = items3;
     obj2[1] = mapped;
-    const items4 = [sharedValue(isTyping(tmp7[9]).View, obj2), ];
+    const items4 = [sharedValue(isTyping(tmp7[9]).View, obj2)];
     const obj3 = { color: "text-default", variant: "text-xs/semibold", children: null };
     obj3[2] = tmp6(tmp7[14]).humanizeValue(userCount, stateFromStores);
     items4[1] = sharedValue(tmp6(tmp7[13]).Text, obj3);
@@ -204,7 +263,7 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
     const obj5 = { style: null, children: null };
     obj5[0] = tmp3.avatars;
     obj5[1] = mapped;
-    const items7 = [sharedValue(tmp16, obj5), ];
+    const items7 = [sharedValue(tmp16, obj5)];
     let tmp18Result = null;
     if (diff > 0) {
       const obj6 = { style: null, children: null };
@@ -218,7 +277,7 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
     }
     items7[1] = tmp18Result;
     obj4[1] = items7;
-    const items9 = [tmp15(isTyping(tmp7[9]).View, obj4), ];
+    const items9 = [tmp15(isTyping(tmp7[9]).View, obj4)];
     if (!tmp18Result) {
       tmp18Result = isTyping;
     }

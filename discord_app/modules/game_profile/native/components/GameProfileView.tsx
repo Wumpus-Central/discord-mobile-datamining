@@ -22,10 +22,30 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, body: null, buttonsContainer: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  paddingBottom: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "column", paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_32, maxWidth: 520, alignSelf: "center", width: "100%" };
-let obj1 = { flexDirection: "column", paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_32, maxWidth: 520, alignSelf: "center", width: "100%" };
+createCacheKey[1] = {
+  flexDirection: "column",
+  paddingVertical: ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_32,
+  maxWidth: 520,
+  alignSelf: "center",
+  width: "100%",
+};
+let obj1 = {
+  flexDirection: "column",
+  paddingVertical: ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_32,
+  maxWidth: 520,
+  alignSelf: "center",
+  width: "100%",
+};
 createCacheKey[2] = { flexDirection: "column", gap: ThemesDefault.space.PX_8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { flexDirection: "column", gap: ThemesDefault.space.PX_8 };
@@ -53,16 +73,16 @@ export default function GameProfileView(arg0) {
   }, items);
   let obj = { value: analyticsLocations, children: null };
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(GameProfileHeaderDefault, { game, scrollY, onHeightMeasured: onHeaderHeightMeasured }), ];
+  const items1 = [callback(GameProfileHeaderDefault, { game, scrollY, onHeightMeasured: onHeaderHeightMeasured })];
   obj = {
     style: tmp.body,
     onLayout(nativeEvent) {
       closure_1.current = nativeEvent.nativeEvent.layout.y;
       callback();
     },
-    children: null
+    children: null,
   };
-  const items2 = [callback(ImageItemDefault, { game, viewId, source, trackAction }), , , , , , , , , , ];
+  const items2 = [callback(ImageItemDefault, { game, viewId, source, trackAction }), , , , , , , , , ,];
   let tmp5Result = websiteButtons.length > 0;
   if (tmp5Result) {
     obj1 = { onLayout: null, children: null };
@@ -82,13 +102,27 @@ export default function GameProfileView(arg0) {
   items2[2] = callback(SteamReviewRowDefault, { game, trackAction });
   items2[3] = callback(GameProfileSummaryDefault, { game, viewId, source, trackAction });
   items2[4] = callback(GameProfileLinkAccountDefault, { game, analyticsLocations, trackAction });
-  items2[5] = callback(GameProfileCommunityServerDefault, { closeModal, game, onInviteResolved: onGuildInviteResolved, trackAction });
-  items2[6] = callback(EmbedAnnouncementCardDefault, { gameId: game.id, invite, closeModal, trackAction, scrollOffsetRef });
+  items2[5] = callback(GameProfileCommunityServerDefault, {
+    closeModal,
+    game,
+    onInviteResolved: onGuildInviteResolved,
+    trackAction,
+  });
+  items2[6] = callback(EmbedAnnouncementCardDefault, {
+    gameId: game.id,
+    invite,
+    closeModal,
+    trackAction,
+    scrollOffsetRef,
+  });
   items2[7] = callback(HorizontalSpacingDefault, { game, closeModal, trackAction });
   items2[8] = callback(SpacerDefault, { gameId: game.id, trackAction });
   items2[9] = callback(GameProfileWebsiteButtonDefault, { game, viewId, source, trackAction });
   const obj5 = { style: tmp.buttonsContainer, children: null };
-  const items3 = [callback(GameProfileGameClaimCtaDefault, { game, trackAction }), callback(GameProfileReportButtonDefault, { applicationId: game.id, trackAction })];
+  const items3 = [
+    callback(GameProfileGameClaimCtaDefault, { game, trackAction }),
+    callback(GameProfileReportButtonDefault, { applicationId: game.id, trackAction }),
+  ];
   obj5[1] = items3;
   items2[10] = closure_6(View, obj5);
   obj[2] = items2;
@@ -96,4 +130,4 @@ export default function GameProfileView(arg0) {
   obj[1] = items1;
   obj[1] = closure_6(View, obj);
   return callback(onStoreLinksMeasured(5953).AnalyticsLocationProvider, obj);
-};
+}

@@ -94,7 +94,11 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
   }
   return str;
 }
-({ DefaultVideoBackground: c5, VideoFilterType: closure_6, ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: error } = VideoFilterType);
+({
+  DefaultVideoBackground: c5,
+  VideoFilterType: closure_6,
+  ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: error,
+} = VideoFilterType);
 const result = require("set").fileFinishedImporting("modules/video_backgrounds/VideoBackgroundUtils.tsx");
 
 export const isCustomBackgroundOption = function isCustomBackgroundOption(videoBackgroundOptionFromProto) {
@@ -135,7 +139,20 @@ export const trackBackgroundOptionUpdated = function trackBackgroundOptionUpdate
   channel = channel.getChannel(channelId);
   const voiceStateMetadata = collectGuildAnalyticsMetadata.getVoiceStateMetadata(guildId, channelId, true);
   const obj2 = collectGuildAnalyticsMetadata;
-  obj = { location, effect_type: null, effect_detail: null, effect_state: null, channel_id: null, channel_type: null, guild_id: null, voice_state_count: null, video_stream_count: null, media_session_id: null, rtc_connection_id: null, is_animated: null };
+  obj = {
+    location,
+    effect_type: null,
+    effect_detail: null,
+    effect_state: null,
+    channel_id: null,
+    channel_type: null,
+    guild_id: null,
+    voice_state_count: null,
+    video_stream_count: null,
+    media_session_id: null,
+    rtc_connection_id: null,
+    is_animated: null,
+  };
   let str = "None";
   if (null != closure_0) {
     str = "Video Background";

@@ -10,8 +10,15 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" }, header: { textAlign: "center", marginBottom: 8 }, body: { textAlign: "center", lineHeight: 20, marginBottom: 16 }, buttonWrapper: { width: "100%" } });
-const result = require("set").fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGateConfirm.tsx");
+let closure_10 = createCacheKey.createStyles({
+  container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" },
+  header: { textAlign: "center", marginBottom: 8 },
+  body: { textAlign: "center", lineHeight: 20, marginBottom: 16 },
+  buttonWrapper: { width: "100%" },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/age_gate/native/components/ExistingUserAgeGateConfirm.tsx",
+);
 
 export default function ExistingUserAgeGateConfirm(age) {
   const onConfirm = age.onConfirm;
@@ -19,7 +26,7 @@ export default function ExistingUserAgeGateConfirm(age) {
   dependencyMap = undefined;
   function _handleConfirm() {
     const self = this;
-    const tmp = _handleConfirm(function*() {
+    const tmp = _handleConfirm(function* () {
       closure_0 = tmp3;
       closure_1_2(true);
       c3 = 1;
@@ -58,7 +65,7 @@ export default function ExistingUserAgeGateConfirm(age) {
   obj = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = onConfirm(1236).intl;
   obj[3] = intl.format(onConfirm(1236).t.wumolR, { age: age.age });
-  const items = [callback2(onConfirm(4474).Text, obj), , ];
+  const items = [callback2(onConfirm(4474).Text, obj), ,];
   obj1 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
   const intl2 = onConfirm(1236).intl;
   const obj2 = { helpURL: null };
@@ -84,4 +91,4 @@ export default function ExistingUserAgeGateConfirm(age) {
   items[2] = callback2(View, obj3);
   obj[2] = items;
   return callback3(onConfirm(5553).SafeAreaPaddingView, obj);
-};
+}

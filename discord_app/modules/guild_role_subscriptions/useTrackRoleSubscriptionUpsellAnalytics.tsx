@@ -4,7 +4,9 @@ import closure_4 from "GuildRoleSubscriptionsStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useTrackRoleSubscriptionUpsellAnalytics.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/useTrackRoleSubscriptionUpsellAnalytics.tsx",
+);
 
 export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
   guildId = guildId.guildId;
@@ -16,26 +18,32 @@ export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
   let stateFromStoresArray;
   let analyticsLocations;
   closure_8 = undefined;
-  groupListingsFetchContext = guildId(_location[3]).useGroupListingsFetchContext("useTrackRoleSubscriptionUpsellAnalytics");
+  groupListingsFetchContext = guildId(_location[3]).useGroupListingsFetchContext(
+    "useTrackRoleSubscriptionUpsellAnalytics",
+  );
   const tmp2 = null != groupListingId(_location[4])(groupListingId).activeSubscription;
   closure_5 = tmp2;
   let obj = guildId(_location[3]);
   let items = [groupListingsFetchContext];
   const items1 = [relevantSubscriptionListingIds];
-  stateFromStoresArray = guildId(_location[5]).useStateFromStoresArray(items, () => {
-    let items = relevantSubscriptionListingIds;
-    if (relevantSubscriptionListingIds == null) {
-      items = [];
-    }
-    return items.filter((editStateId) => {
-      subscriptionListing = subscriptionListing.getSubscriptionListing(editStateId);
-      let published;
-      if (subscriptionListing != null) {
-        published = subscriptionListing.published;
+  stateFromStoresArray = guildId(_location[5]).useStateFromStoresArray(
+    items,
+    () => {
+      let items = relevantSubscriptionListingIds;
+      if (relevantSubscriptionListingIds == null) {
+        items = [];
       }
-      return true === published;
-    });
-  }, items1);
+      return items.filter((editStateId) => {
+        subscriptionListing = subscriptionListing.getSubscriptionListing(editStateId);
+        let published;
+        if (subscriptionListing != null) {
+          published = subscriptionListing.published;
+        }
+        return true === published;
+      });
+    },
+    items1,
+  );
   const obj2 = guildId(_location[5]);
   const tmp4 = groupListingId(_location[6]);
   let lastRouteChangeSourceLocationStack = guildId(_location[7]).getLastRouteChangeSourceLocationStack();
@@ -44,7 +52,15 @@ export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
   }
   analyticsLocations = tmp4(lastRouteChangeSourceLocationStack).analyticsLocations;
   closure_8 = relevantSubscriptionListingIds.useRef(false);
-  const items2 = [guildId, groupListingId, groupListingsFetchContext, _location, stateFromStoresArray, tmp2, analyticsLocations];
+  const items2 = [
+    guildId,
+    groupListingId,
+    groupListingsFetchContext,
+    _location,
+    stateFromStoresArray,
+    tmp2,
+    analyticsLocations,
+  ];
   const effect = relevantSubscriptionListingIds.useEffect(() => {
     let tmp = groupListingsFetchContext;
     if (groupListingsFetchContext) {
@@ -59,7 +75,13 @@ export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
     if (tmp) {
       ref.current = true;
       let obj = groupListingId(_location[8]);
-      obj = { role_subscription_group_listing_id: null, role_subscription_listing_ids: null, is_premium_member: null, location_stack: null, location: null };
+      obj = {
+        role_subscription_group_listing_id: null,
+        role_subscription_listing_ids: null,
+        is_premium_member: null,
+        location_stack: null,
+        location: null,
+      };
       obj[0] = groupListingId;
       obj[1] = stateFromStoresArray;
       obj[2] = constants;
@@ -70,4 +92,4 @@ export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
       const obj3 = guildId(_location[9]);
     }
   }, items2);
-};
+}

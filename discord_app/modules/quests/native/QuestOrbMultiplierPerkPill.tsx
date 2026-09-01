@@ -17,15 +17,34 @@ require = arg1;
 let closure_8 = { x: 0, y: 0 };
 let closure_9 = { x: 1, y: 0 };
 createCacheKey = { fullGradientContainer: null, fullGradient: null, fullGradientContent: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.round, overflow: "hidden", height: 19, backgroundColor: "transparent" };
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.round,
+  overflow: "hidden",
+  height: 19,
+  backgroundColor: "transparent",
+};
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj1.borderRadius = ThemesDefault.radii.round;
 createCacheKey[1] = obj1;
-createCacheKey[2] = { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_8, gap: 4, height: 19 };
+createCacheKey[2] = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  gap: 4,
+  height: 19,
+};
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_8, gap: 4, height: 19 };
+let obj2 = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  gap: 4,
+  height: 19,
+};
 let result = require("set").fileFinishedImporting("modules/quests/native/QuestOrbMultiplierPerkPill.tsx");
 
 export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(questId) {
@@ -44,11 +63,14 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
   let obj2 = map;
   const token = obj2.useToken(orbMultiplierEligibility(712).colors.EXPRESSIVE_GRADIENT_PINK_START, "dark");
   let obj3 = map;
-  const token1 = obj3.useToken(orbMultiplierEligibility(712).colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END, "dark");
+  const token1 = obj3.useToken(
+    orbMultiplierEligibility(712).colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END,
+    "dark",
+  );
   let obj4 = map;
   token2 = obj4.useToken(orbMultiplierEligibility(712).colors.BACKGROUND_BASE_LOWEST, "dark");
   let obj5 = hexToRgba;
-  const items = [obj5.hexOpacityToRgba(token, 1), ];
+  const items = [obj5.hexOpacityToRgba(token, 1)];
   let obj6 = hexToRgba;
   items[1] = obj6.hexOpacityToRgba(token1, 0.5);
   let obj7 = map;
@@ -81,7 +103,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
       tmp19 = questOrbRewardMultiplier(tmp2(8096).NitroWheelIcon, { size: "xs", color: "white" });
     }
     obj1 = { children: null };
-    const items2 = [tmp19, ];
+    const items2 = [tmp19];
     obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
     obj2[2] = formatToPlainStringResult;
     items2[1] = questOrbRewardMultiplier(tmp2(4474).Text, obj2);
@@ -97,7 +119,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     };
     obj3[3] = formatToPlainStringResult;
     obj4 = { style: null, children: null };
-    const items3 = [tmp.fullGradientContainer, ];
+    const items3 = [tmp.fullGradientContainer];
     obj5 = { backgroundColor: null };
     obj5[0] = tmp14;
     items3[1] = obj5;
@@ -110,7 +132,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
       obj6[3] = closure_9;
       tmp21Result = tmp21(tmp6(4940), obj6);
     }
-    const items4 = [tmp21Result, ];
+    const items4 = [tmp21Result];
     obj7 = { style: null, children: null };
     obj7[0] = tmp.fullGradientContent;
     obj7[1] = closure_7(closure_6, obj1);

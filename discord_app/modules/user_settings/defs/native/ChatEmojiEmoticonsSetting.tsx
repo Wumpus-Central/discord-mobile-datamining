@@ -12,7 +12,7 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.CHAT,
   useValue: explicitContentFromProto.ConvertEmoticons.useSetting,
-  onValueChange: explicitContentFromProto.ConvertEmoticons.updateSetting
+  onValueChange: explicitContentFromProto.ConvertEmoticons.updateSetting,
 });
 const obj = {
   useTitle() {
@@ -21,7 +21,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.CHAT,
   useValue: explicitContentFromProto.ConvertEmoticons.useSetting,
-  onValueChange: explicitContentFromProto.ConvertEmoticons.updateSetting
+  onValueChange: explicitContentFromProto.ConvertEmoticons.updateSetting,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ChatEmojiEmoticonsSetting.tsx");
 

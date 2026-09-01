@@ -39,7 +39,7 @@ function _getCurrentUserSigningKey() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const staticAuthSessionId = closure_1_5.getStaticAuthSessionId();
       v0(table[19])(null != staticAuthSessionId, "[getCurrentUserPublicKey] session id should not be null");
       yield closure_1_6.getMLSSigningKey(staticAuthSessionId, closure_0);
@@ -78,7 +78,7 @@ function _isPublicKeyMatch() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -181,7 +181,7 @@ function _uploadCurrentUserPublicKey() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -300,7 +300,7 @@ function _ensureCurrentUserPublicKey() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -369,7 +369,7 @@ function _isCurrentUserPublicKeyMatch() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, key) {
+    return (function* (arg0, key) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -536,7 +536,8 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
   }
   const tmp = callback(items, 2);
 }
-({ AnalyticsSecureFramesUserVerification: unpackModuleId, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
+({ AnalyticsSecureFramesUserVerification: unpackModuleId, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } =
+  SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
 ({ LinkingTypes: map1, Routes: closure_14, Endpoints: closure_15, HelpdeskArticles: closure_16 } = ME);
 let result = require("set").fileFinishedImporting("modules/rtc/SecureFramesUtils.tsx");
 
@@ -549,7 +550,13 @@ export const getSecureFramesPersistentCodesHelpdeskArticle = function getSecureF
 export const getSecureFramesVerifiedDevicesHelpdeskArticle = function getSecureFramesVerifiedDevicesHelpdeskArticle() {
   return combinedDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
 };
-export const addVerification = function addVerification(userId, fingerprintUserKey, isOtherUserKeyPersistent, channelId, DEEP_LINK) {
+export const addVerification = function addVerification(
+  userId,
+  fingerprintUserKey,
+  isOtherUserKeyPersistent,
+  channelId,
+  DEEP_LINK,
+) {
   let obj = savePersistentCodesEnabledDefault;
   if (isOtherUserKeyPersistent) {
     const secureFramesVerifiedKey = obj.createSecureFramesVerifiedKey(userId, fingerprintUserKey);
@@ -659,12 +666,22 @@ export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUser
   const tmp3 = hooksDefault(timestamp);
 };
 export const getUserVerificationDeeplink = function getUserVerificationDeeplink(arg0, arg1) {
-  return "" + location.protocol + "//" + location.host + closure_14.FEATURE(constants2.DAVE_PROTOCOL_VERIFICATION) + "?userId=" + arg0 + "&fingerprint=" + encodeURIComponent(arg1);
+  return (
+    "" +
+    location.protocol +
+    "//" +
+    location.host +
+    closure_14.FEATURE(constants2.DAVE_PROTOCOL_VERIFICATION) +
+    "?userId=" +
+    arg0 +
+    "&fingerprint=" +
+    encodeURIComponent(arg1)
+  );
 };
 export const getUserVerifyStateText = function getUserVerifyStateText(memo, name) {
   if (constants.OTHER_USER_DISCONNECTED === memo) {
     const intl13 = getSystemLocale.intl;
-    const items = [intl13.string(getSystemLocale.t.ZBHDM9), ];
+    const items = [intl13.string(getSystemLocale.t.ZBHDM9)];
     const intl14 = getSystemLocale.intl;
     let obj = { username: null };
     obj[0] = name;
@@ -672,13 +689,13 @@ export const getUserVerifyStateText = function getUserVerifyStateText(memo, name
     return items;
   } else if (tmp.CURRENT_USER_DISCONNECTED === memo) {
     const intl11 = getSystemLocale.intl;
-    const items1 = [intl11.string(getSystemLocale.t["5ICxE6"]), ];
+    const items1 = [intl11.string(getSystemLocale.t["5ICxE6"])];
     const intl12 = getSystemLocale.intl;
     items1[1] = intl12.string(getSystemLocale.t["v1eXp/"]);
     return items1;
   } else if (tmp.UNABLE_TO_VERIFY === memo) {
     const intl9 = getSystemLocale.intl;
-    const items2 = [intl9.string(getSystemLocale.t["+no/a7"]), ];
+    const items2 = [intl9.string(getSystemLocale.t["+no/a7"])];
     const intl10 = getSystemLocale.intl;
     obj = { username: null };
     obj[0] = name;
@@ -686,7 +703,7 @@ export const getUserVerifyStateText = function getUserVerifyStateText(memo, name
     return items2;
   } else if (tmp.FINGERPRINT_MISMATCH === memo) {
     const intl7 = getSystemLocale.intl;
-    const items3 = [intl7.string(getSystemLocale.t.HTJ76H), ];
+    const items3 = [intl7.string(getSystemLocale.t.HTJ76H)];
     const intl8 = getSystemLocale.intl;
     obj1 = { username: null };
     obj1[0] = name;
@@ -694,7 +711,7 @@ export const getUserVerifyStateText = function getUserVerifyStateText(memo, name
     return items3;
   } else if (tmp.OTHER_USER_ALREADY_VERIFIED === memo) {
     const intl5 = getSystemLocale.intl;
-    const items4 = [intl5.string(getSystemLocale.t["9lw+J+"]), ];
+    const items4 = [intl5.string(getSystemLocale.t["9lw+J+"])];
     const intl6 = getSystemLocale.intl;
     const obj2 = { username: null };
     obj2[0] = name;
@@ -702,7 +719,7 @@ export const getUserVerifyStateText = function getUserVerifyStateText(memo, name
     return items4;
   } else if (tmp.MATCH === memo) {
     const intl3 = getSystemLocale.intl;
-    const items5 = [intl3.string(getSystemLocale.t["xyE+Dn"]), ];
+    const items5 = [intl3.string(getSystemLocale.t["xyE+Dn"])];
     const intl4 = getSystemLocale.intl;
     const obj3 = { username: null };
     obj3[0] = name;
@@ -710,7 +727,7 @@ export const getUserVerifyStateText = function getUserVerifyStateText(memo, name
     return items5;
   } else if (tmp.OTHER_USER_INCONSISTENT_KEYS === memo) {
     const intl = getSystemLocale.intl;
-    const items6 = [intl.string(getSystemLocale.t.im1uUi), ];
+    const items6 = [intl.string(getSystemLocale.t.im1uUi)];
     const intl2 = getSystemLocale.intl;
     obj = { username: null };
     obj[0] = name;

@@ -149,7 +149,14 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
                 iconProxyURL1 = iconURL1;
               }
               ({ url, color } = first2);
-              const obj3 = { authorName: null, authorIconUrl: null, providerName: null, providerIconUrl: null, url: null, color: null };
+              const obj3 = {
+                authorName: null,
+                authorIconUrl: null,
+                providerName: null,
+                providerIconUrl: null,
+                url: null,
+                color: null,
+              };
               obj3[0] = name;
               obj3[1] = iconProxyURL;
               obj3[2] = text;
@@ -161,7 +168,17 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
             tmp32 = tmp34;
           }
         }
-        const obj4 = { id: null, media: null, title: null, body: null, content: null, timestamp: null, reactionCount: null, embedSource: null, poll: null };
+        const obj4 = {
+          id: null,
+          media: null,
+          title: null,
+          body: null,
+          content: null,
+          timestamp: null,
+          reactionCount: null,
+          embedSource: null,
+          poll: null,
+        };
         obj4[0] = tmp2Result.id;
         obj4[1] = result;
         obj4[2] = title;
@@ -181,7 +198,9 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
       result = tmp3Result.messageAttachmentToMediaItem(found2, tmp2Result);
     } else {
       const attachments1 = tmp2Result.attachments;
-      const found3 = attachments1.find((content_type) => found4(found6[3]).isVideoContentType(content_type.content_type));
+      const found3 = attachments1.find((content_type) =>
+        found4(found6[3]).isVideoContentType(content_type.content_type),
+      );
       if (null != found3) {
         result = tmp3(tmp[2]).messageAttachmentToMediaItem(found3, tmp2Result);
         const tmp3Result1 = tmp3(tmp[2]);

@@ -16,16 +16,22 @@ function handleUserSettingsProtoStoreChange() {
   if (applications == null) {
     applications = {};
   }
-  closure_7.overwriteHistory(applyDefault.mapValues(applications, (recentUses) => {
-    const obj = {};
-    const merged = Object.assign(recentUses);
-    recentUses = recentUses.recentUses;
-    const mapped = recentUses.map(Number);
-    obj.recentUses = mapped.filter((arg0) => arg0 > 0);
-    return obj;
-  }), closure_6.pendingUsages);
+  closure_7.overwriteHistory(
+    applyDefault.mapValues(applications, (recentUses) => {
+      const obj = {};
+      const merged = Object.assign(recentUses);
+      recentUses = recentUses.recentUses;
+      const mapped = recentUses.map(Number);
+      obj.recentUses = mapped.filter((arg0) => arg0 > 0);
+      return obj;
+    }),
+    closure_6.pendingUsages,
+  );
 }
-let items = [require("PermissionOverwriteType").ApplicationCommandType.CHAT, require("PermissionOverwriteType").ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [
+  require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  require("PermissionOverwriteType").ApplicationCommandType.PRIMARY_ENTRY_POINT,
+];
 let closure_6 = { pendingUsages: [] };
 let obj = {
   computeBonus() {
@@ -34,15 +40,12 @@ let obj = {
   lookupKey(arg0) {
     return arg0;
   },
-  afterCompute() {
-
-  },
-  numFrequentlyItems: require("ApplicationTypes").FREQUENCY_ITEM_LIMIT
+  afterCompute() {},
+  numFrequentlyItems: require("ApplicationTypes").FREQUENCY_ITEM_LIMIT,
 };
 let closure_7 = new DEFAULT_FRECENCYDefault(obj);
 const PersistedStore = initializeDefault.PersistedStore;
-class ApplicationFrecencyStore extends PersistedStore {
-}
+class ApplicationFrecencyStore extends PersistedStore {}
 const prototype = ApplicationFrecencyStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
@@ -113,7 +116,7 @@ obj = {
       }
     }
     return false;
-  }
+  },
 };
 const applicationFrecencyStore = new ApplicationFrecencyStore(dispatcherDefault, obj);
 const tmp2 = new DEFAULT_FRECENCYDefault(obj);

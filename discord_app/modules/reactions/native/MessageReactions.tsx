@@ -19,19 +19,27 @@ export default function MessageReactions(emoji) {
   let obj = items3(stateFromStores[3]);
   const items = [closure_4];
   const items1 = [channelId, messageId];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    const message = closure_1_4.getMessage(items3, messageId);
-    return null != message ? message.reactions : closure_1_6;
-  }, items1);
+  stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      const message = closure_1_4.getMessage(items3, messageId);
+      return null != message ? message.reactions : closure_1_6;
+    },
+    items1,
+  );
   const items2 = [stateFromStores];
-  const memo = React.useMemo(() => stateFromStores.filter((count_details) => {
-    count_details = count_details.count_details;
-    let vote;
-    if (count_details != null) {
-      vote = count_details.vote;
-    }
-    return null == vote;
-  }), items2);
+  const memo = React.useMemo(
+    () =>
+      stateFromStores.filter((count_details) => {
+        count_details = count_details.count_details;
+        let vote;
+        if (count_details != null) {
+          vote = count_details.vote;
+        }
+        return null == vote;
+      }),
+    items2,
+  );
   let arr4 = memo;
   if (null != reactions) {
     arr4 = memo;
@@ -57,8 +65,15 @@ export default function MessageReactions(emoji) {
     const merged2 = Object.assign(burst_count);
     items3.push(obj);
   });
-  const sorted = items3.sort((burst_count, burst_count2) => (burst_count2.burst_count > 0 ? burst_count2.burst_count : burst_count2.count) - (burst_count.burst_count > 0 ? burst_count.burst_count : burst_count.count));
-  obj = { value: messageId(stateFromStores[4])(messageId(stateFromStores[5]).MESSAGE_REACTIONS).analyticsLocations, children: null };
+  const sorted = items3.sort(
+    (burst_count, burst_count2) =>
+      (burst_count2.burst_count > 0 ? burst_count2.burst_count : burst_count2.count) -
+      (burst_count.burst_count > 0 ? burst_count.burst_count : burst_count.count),
+  );
+  obj = {
+    value: messageId(stateFromStores[4])(messageId(stateFromStores[5]).MESSAGE_REACTIONS).analyticsLocations,
+    children: null,
+  };
   if (items3.length > 0) {
     obj = { channelId: null, messageId: null, emoji: null, reactions: null, isSelectedBurst: null };
     obj[0] = channelId;
@@ -72,5 +87,8 @@ export default function MessageReactions(emoji) {
     tmp9Result = tmp9(tmp4(tmp2[6]).MessageReactionsEmpty, {});
   }
   obj[1] = tmp9Result;
-  return jsx(items3(stateFromStores[4]).AnalyticsLocationProvider, { value: messageId(stateFromStores[4])(messageId(stateFromStores[5]).MESSAGE_REACTIONS).analyticsLocations, children: null });
-};
+  return jsx(items3(stateFromStores[4]).AnalyticsLocationProvider, {
+    value: messageId(stateFromStores[4])(messageId(stateFromStores[5]).MESSAGE_REACTIONS).analyticsLocations,
+    children: null,
+  });
+}

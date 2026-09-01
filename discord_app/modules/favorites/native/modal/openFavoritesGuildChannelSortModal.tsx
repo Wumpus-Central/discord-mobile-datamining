@@ -8,7 +8,7 @@ const result = set.fileFinishedImporting("modules/favorites/native/modal/openFav
 
 export default function openFavoritesGuildChannelSortModal() {
   _modDef4723.pushLazy(asyncRequireImpl(15731, dependencyMap.paths), undefined, FavoritesGuildChannelSortModal);
-};
+}
 export const closeFavoritesGuildChannelSortModal = function closeFavoritesGuildChannelSortModal() {
   _modDef4723.popWithKey(FavoritesGuildChannelSortModal);
 };

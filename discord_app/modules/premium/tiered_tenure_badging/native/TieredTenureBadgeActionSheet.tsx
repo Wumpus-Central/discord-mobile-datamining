@@ -27,7 +27,7 @@ function TieredTenureBadgeItem(arg0) {
   }
   let tmp9Result = null;
   if (null != tieredTenureBadgeData) {
-    const items = [tmp.badgeContainer, ];
+    const items = [tmp.badgeContainer];
     let usersBadgeContainer = isUsersBadge;
     if (isUsersBadge) {
       usersBadgeContainer = tmp.usersBadgeContainer;
@@ -37,7 +37,7 @@ function TieredTenureBadgeItem(arg0) {
     obj[0] = items;
     obj = { resizeMode: "contain", source: null };
     obj[1] = small;
-    const items1 = [callback(preloadDefault, obj), , , ];
+    const items1 = [callback(preloadDefault, obj), , ,];
     obj1 = { style: null, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj1[0] = tmp.badgeName;
     const intl = tmp2(1236).intl;
@@ -74,15 +74,43 @@ function TieredTenureBadgeItem(arg0) {
 ({ AnalyticsPages: closure_8, UserSettingsSections: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 const TIERED_TENURE_BADGE_ACTION_SHEET = "TIERED_TENURE_BADGE_ACTION_SHEET";
-createCacheKey = { headerContainer: { paddingHorizontal: 24, alignItems: "center" }, title: { marginTop: 8, paddingHorizontal: 12, textAlign: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, container: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingHorizontal: 24, marginTop: 16 }, rowContainer: { flexDirection: "row", width: "100%", height: 160, gap: 8, justifyContent: "center", alignItems: "center", marginTop: 24 }, rowContainerWithUsersBadge: { height: 186 }, badgeContainer: { minWidth: 110, height: "100%", paddingTop: 16, alignItems: "center", paddingHorizontal: 8 }, usersBadgeContainer: null, badgeName: null, badgeRequirement: null, badgePremiumSince: null, footer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderWidth: 1.2, borderColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = {
+  headerContainer: { paddingHorizontal: 24, alignItems: "center" },
+  title: { marginTop: 8, paddingHorizontal: 12, textAlign: "center" },
+  subtitle: { marginTop: 8, textAlign: "center" },
+  container: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingHorizontal: 24, marginTop: 16 },
+  rowContainer: {
+    flexDirection: "row",
+    width: "100%",
+    height: 160,
+    gap: 8,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 24,
+  },
+  rowContainerWithUsersBadge: { height: 186 },
+  badgeContainer: { minWidth: 110, height: "100%", paddingTop: 16, alignItems: "center", paddingHorizontal: 8 },
+  usersBadgeContainer: null,
+  badgeName: null,
+  badgeRequirement: null,
+  badgePremiumSince: null,
+  footer: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderWidth: 1.2,
+  borderColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[7] = createCacheKey;
 createCacheKey[8] = { marginTop: 8 };
 createCacheKey[9] = { marginTop: 4 };
 createCacheKey[10] = { width: 90, marginTop: 4, textAlign: "center" };
 createCacheKey[11] = { marginHorizontal: 24 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgeActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/tiered_tenure_badging/native/TieredTenureBadgeActionSheet.tsx",
+);
 
 export default function TieredTenureBadgeActionSheet(userId) {
   userId = userId.userId;
@@ -142,7 +170,12 @@ export default function TieredTenureBadgeActionSheet(userId) {
     obj4.hideActionSheet(userId(tieredTenureBadgeDataForUser[22]).getUserProfileActionSheetKey(userId));
   }, items2);
   const tmp11 = importDefault(tieredTenureBadgeDataForUser[17]);
-  ({ loading, onPress } = importDefault(tieredTenureBadgeDataForUser[23])(false, callback, constants.TIERED_TENURE_BADGES_ACTION_SHEET, "replaceTopSheet"));
+  ({ loading, onPress } = importDefault(tieredTenureBadgeDataForUser[23])(
+    false,
+    callback,
+    constants.TIERED_TENURE_BADGES_ACTION_SHEET,
+    "replaceTopSheet",
+  ));
   const memo = React.useMemo(() => {
     let length;
     let sum;
@@ -170,7 +203,7 @@ export default function TieredTenureBadgeActionSheet(userId) {
     stringResult = string(t.RtGeFS);
   }
   obj2[3] = stringResult;
-  const items3 = [closure_10(userId(tieredTenureBadgeDataForUser[12]).Text, obj2), ];
+  const items3 = [closure_10(userId(tieredTenureBadgeDataForUser[12]).Text, obj2)];
   obj3 = { variant: "text-md/medium", color: "text-default", style: tmp.subtitle, children: null };
   const intl2 = tmp2(tmp3[13]).intl;
   if (isPremiumResult) {
@@ -185,7 +218,12 @@ export default function TieredTenureBadgeActionSheet(userId) {
   obj1[1] = items3;
   const obj5 = { style: items4, children: null };
   items4 = [tmp.footer, { paddingBottom: bottom }];
-  const tmp17 = importDefault(tieredTenureBadgeDataForUser[23])(false, callback, constants.TIERED_TENURE_BADGES_ACTION_SHEET, "replaceTopSheet");
+  const tmp17 = importDefault(tieredTenureBadgeDataForUser[23])(
+    false,
+    callback,
+    constants.TIERED_TENURE_BADGES_ACTION_SHEET,
+    "replaceTopSheet",
+  );
   const tmp10Result = importDefault(tieredTenureBadgeDataForUser[24]);
   if (isPremiumResult) {
     const obj6 = { shiny: false, text: null, onPress: null };
@@ -228,29 +266,33 @@ export default function TieredTenureBadgeActionSheet(userId) {
         }
         return arg0 === id;
       });
-      const items = [lib.rowContainer, ];
+      const items = [lib.rowContainer];
       let rowContainerWithUsersBadge = someResult;
       if (someResult) {
         rowContainerWithUsersBadge = lib.rowContainerWithUsersBadge;
       }
       items[1] = rowContainerWithUsersBadge;
-      return closure_1_10(closure_1_4, {
-        style: items,
-        children: arr.map((badge) => {
-          const obj = { badge, isUsersBadge: null, premiumSince: null };
-          let id;
-          if (user != null) {
-            id = user.id;
-          }
-          obj[1] = badge === id;
-          obj[2] = closure_3;
-          return closure_1_10(closure_1_14, obj, arg1);
-        })
-      }, arg1);
-    })
+      return closure_1_10(
+        closure_1_4,
+        {
+          style: items,
+          children: arr.map((badge) => {
+            const obj = { badge, isUsersBadge: null, premiumSince: null };
+            let id;
+            if (user != null) {
+              id = user.id;
+            }
+            obj[1] = badge === id;
+            obj[2] = closure_3;
+            return closure_1_10(closure_1_14, obj, arg1);
+          }),
+        },
+        arg1,
+      );
+    }),
   ];
   obj9[1] = items6;
   obj8[3] = closure_11(userId(tieredTenureBadgeDataForUser[26]).BottomSheetScrollView, obj9);
   return closure_10(userId(tieredTenureBadgeDataForUser[25]).BottomSheet, obj8);
-};
+}
 export const TIERED_TENURE_BADGE_ACTION_SHEET_KEY = "TIERED_TENURE_BADGE_ACTION_SHEET";

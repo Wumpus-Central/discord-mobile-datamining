@@ -17,7 +17,7 @@ class GuildPowerupCardFooterActive {
   constructor(arg0) {
     obj = { style: closure_6().inline, children: null };
     obj = { size: "xs", color: require("Themes").colors.STATUS_POSITIVE };
-    items = [, ];
+    items = [,];
     items[0] = jsx(require("CircleCheckIcon").CircleCheckIcon, obj);
     items[1] = jsx(require("Text").Text, { color: "status-positive", variant: "text-sm/bold", children: global.text });
     obj[1] = items;
@@ -28,7 +28,7 @@ class GuildPowerupCardFooterExpiring {
   constructor(arg0) {
     obj = { style: closure_6().inline, children: null };
     obj = { size: "xs", color: require("Themes").colors.STATUS_WARNING };
-    items = [, ];
+    items = [,];
     items[0] = jsx(require("CircleErrorIcon").CircleErrorIcon, obj);
     obj1 = { color: "text-feedback-warning", variant: "text-sm/bold", children: null };
     intl = require("getSystemLocale").intl;
@@ -43,7 +43,7 @@ class GuildPowerupCardFooterRemoving {
   constructor(arg0) {
     obj = { style: closure_6().inline, children: null };
     obj = { size: "xs", color: require("Themes").colors.STATUS_WARNING };
-    items = [, ];
+    items = [,];
     items[0] = jsx(require("CircleErrorIcon").CircleErrorIcon, obj);
     obj1 = { color: "text-feedback-warning", variant: "text-sm/bold", children: null };
     intl = require("getSystemLocale").intl;
@@ -109,7 +109,7 @@ class GuildPowerupCardFooterCost {
       obj = { size: "sm", color: null };
       tmp10 = closure_1;
       obj[1] = require("Themes").unsafe_rawColors.GUILD_BOOSTING_PINK;
-      items = [, ];
+      items = [,];
       items[0] = jsx(require("BoostGemIcon").BoostGemIcon, obj);
       str = "heading-sm/semibold";
       if (tmp5) {
@@ -134,7 +134,10 @@ class GuildPowerupCardFooterCost {
 }
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { justifyContent: "space-between" }, inline: { flexDirection: "row", alignItems: "center", gap: 2 } });
+let closure_6 = createCacheKey.createStyles({
+  container: { justifyContent: "space-between" },
+  inline: { flexDirection: "row", alignItems: "center", gap: 2 },
+});
 const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCardFooter.tsx");
 
 export { GuildPowerupCardFooterActive };
@@ -144,11 +147,14 @@ export { GuildPowerupCardFooterStatus };
 export { GuildPowerupCardFooterCost };
 export const GuildPowerupsCardFooter = function GuildPowerupsCardFooter(status) {
   let obj = { style: items, children: null };
-  items = [, , ];
+  items = [, ,];
   ({ inline: arr[0], container: arr[1] } = callback3());
   items[2] = status.style;
   obj = { cost: status.cost, costDecorator: status.costDecorator };
-  const items1 = [callback(GuildPowerupCardFooterCost, obj), callback(GuildPowerupCardFooterStatus, { status: status.status })];
+  const items1 = [
+    callback(GuildPowerupCardFooterCost, obj),
+    callback(GuildPowerupCardFooterStatus, { status: status.status }),
+  ];
   obj[1] = items1;
   return callback2(View, obj);
 };

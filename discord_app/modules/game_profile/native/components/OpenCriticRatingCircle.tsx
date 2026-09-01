@@ -14,8 +14,38 @@ export default function OpenCriticRatingCircle(size) {
   const result2 = 2 * Math.PI * result1;
   const result3 = Math.min(Math.max(size.rating, 0), 100) / 100;
   let obj = { width: size, height: size, children: null };
-  obj = { transform: "rotate(" + 360 * diff / 2 + " " + result + " " + result + ")", cx: result, cy: result, r: result1, stroke: size.strokeColor, strokeWidth: 2, fill: "none", strokeDasharray: result2, strokeDashoffset: result2 * diff };
+  obj = {
+    transform: "rotate(" + (360 * diff) / 2 + " " + result + " " + result + ")",
+    cx: result,
+    cy: result,
+    r: result1,
+    stroke: size.strokeColor,
+    strokeWidth: 2,
+    fill: "none",
+    strokeDasharray: result2,
+    strokeDashoffset: result2 * diff,
+  };
   diff = 1 - result3;
-  obj[2] = jsx(inlineStyles.Circle, { transform: "rotate(" + 360 * diff / 2 + " " + result + " " + result + ")", cx: result, cy: result, r: result1, stroke: size.strokeColor, strokeWidth: 2, fill: "none", strokeDasharray: result2, strokeDashoffset: result2 * diff });
-  return jsx(inlineStylesDefault, { transform: "rotate(" + 360 * diff / 2 + " " + result + " " + result + ")", cx: result, cy: result, r: result1, stroke: size.strokeColor, strokeWidth: 2, fill: "none", strokeDasharray: result2, strokeDashoffset: result2 * diff });
-};
+  obj[2] = jsx(inlineStyles.Circle, {
+    transform: "rotate(" + (360 * diff) / 2 + " " + result + " " + result + ")",
+    cx: result,
+    cy: result,
+    r: result1,
+    stroke: size.strokeColor,
+    strokeWidth: 2,
+    fill: "none",
+    strokeDasharray: result2,
+    strokeDashoffset: result2 * diff,
+  });
+  return jsx(inlineStylesDefault, {
+    transform: "rotate(" + (360 * diff) / 2 + " " + result + " " + result + ")",
+    cx: result,
+    cy: result,
+    r: result1,
+    stroke: size.strokeColor,
+    strokeWidth: 2,
+    fill: "none",
+    strokeDasharray: result2,
+    strokeDashoffset: result2 * diff,
+  });
+}

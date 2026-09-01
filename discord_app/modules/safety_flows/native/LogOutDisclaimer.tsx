@@ -16,17 +16,17 @@ export default function LogOutDisclaimer() {
   obj = {
     handleLogOut() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
-    }
+    },
   };
   obj[1] = intl.format(messagesProxyDefault["0DHxym"], obj);
   obj[0] = jsx(Text.Text, {
     handleLogOut() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
-    }
+    },
   });
   return jsx(ModalDisclaimer.ModalDisclaimer, {
     handleLogOut() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
-    }
+    },
   });
-};
+}

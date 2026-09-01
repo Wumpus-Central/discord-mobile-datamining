@@ -11,7 +11,7 @@ export default function useGuildsRouteGuildId() {
     guildId = params.guildId;
   }
   return guildId;
-};
+}
 export const useGuildsRouteGuildAndChannelId = function useGuildsRouteGuildAndChannelId() {
   const route = createStandardNavigationFactories.useRoute();
   let guildId;
@@ -21,7 +21,7 @@ export const useGuildsRouteGuildAndChannelId = function useGuildsRouteGuildAndCh
       guildId = params.guildId;
     }
   }
-  const items = [guildId, ];
+  const items = [guildId];
   let channelId;
   if (route != null) {
     const params2 = route.params;

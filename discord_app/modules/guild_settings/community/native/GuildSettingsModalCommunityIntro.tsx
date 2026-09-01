@@ -16,9 +16,12 @@ function FeatureCard(arg0) {
   const tmp = callback3();
   let obj = { style: tmp.featureCard, children: null };
   obj = { style: tmp.featureIcon, children: icon() };
-  const items = [callback(closure_4, obj), ];
+  const items = [callback(closure_4, obj)];
   obj = { style: tmp.featureDescription, children: null };
-  const items1 = [callback(Text.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: header }), callback(Text.Text, { variant: "text-sm/medium", color: "text-default", children: body })];
+  const items1 = [
+    callback(Text.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: header }),
+    callback(Text.Text, { variant: "text-sm/medium", color: "text-default", children: body }),
+  ];
   obj[1] = items1;
   items[1] = callback2(closure_4, obj);
   obj[1] = items;
@@ -27,14 +30,45 @@ function FeatureCard(arg0) {
 ({ View: c4, Image: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ HelpdeskArticles: c10, GuildFeatures: unpackModuleId, GuildSettingsSections: closure_12, Permissions: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-createCacheKey = { container: { height: "100%" }, contentPadding: { padding: 16 }, header: { textAlign: "center", marginBottom: 8 }, body: { textAlign: "center", marginBottom: 24 }, details: { textAlign: "center", marginTop: 24 }, headerImage: { width: "100%" }, features: { marginTop: 32, marginBottom: 32 }, featureCard: null, featureIcon: null, featureDescription: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, flex: 1, flexDirection: "row", padding: 16, borderRadius: ThemesDefault.radii.sm, marginTop: 8, alignItems: "flex-start" };
+createCacheKey = {
+  container: { height: "100%" },
+  contentPadding: { padding: 16 },
+  header: { textAlign: "center", marginBottom: 8 },
+  body: { textAlign: "center", marginBottom: 24 },
+  details: { textAlign: "center", marginTop: 24 },
+  headerImage: { width: "100%" },
+  features: { marginTop: 32, marginBottom: 32 },
+  featureCard: null,
+  featureIcon: null,
+  featureDescription: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+  flex: 1,
+  flexDirection: "row",
+  padding: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  marginTop: 8,
+  alignItems: "flex-start",
+};
 createCacheKey[7] = createCacheKey;
-createCacheKey[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 40, marginRight: 16, padding: 8 };
+createCacheKey[8] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  borderRadius: 40,
+  marginRight: 16,
+  padding: 8,
+};
 createCacheKey[9] = { overflow: "hidden", flex: 1 };
 let closure_17 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 40, marginRight: 16, padding: 8 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/community/native/GuildSettingsModalCommunityIntro.tsx");
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  borderRadius: 40,
+  marginRight: 16,
+  padding: 8,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/community/native/GuildSettingsModalCommunityIntro.tsx",
+);
 
 export default function GuildSettingsModalCommunityIntro(contentContainerStyle) {
   ({ guildId: require, onClose } = contentContainerStyle);
@@ -84,7 +118,7 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
   obj = { style: tmp.container, contentContainerStyle: items4, children: null };
   items4 = [tmp.contentPadding, contentContainerStyle.contentContainerStyle];
   obj1 = { resizeMode: "contain", source: obj4.useIntroHeaderSource(), style: tmp.headerImage };
-  const items5 = [callback(stateFromStores2, obj1), , , , , ];
+  const items5 = [callback(stateFromStores2, obj1), , , , ,];
   obj2 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = require(navigation[10]).intl;
   obj2[3] = intl.string(require(navigation[10]).t["M/gBcA"]);
@@ -117,26 +151,34 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
   const obj7 = { style: tmp.features, children: null };
   const obj8 = {
     icon() {
-      return callback2(callback(navigation[9]).AnalyticsIcon, { color: onClose(navigation[8]).unsafe_rawColors.GREEN_360 });
+      return callback2(callback(navigation[9]).AnalyticsIcon, {
+        color: onClose(navigation[8]).unsafe_rawColors.GREEN_360,
+      });
     },
     header: null,
-    body: null
+    body: null,
   };
   const intl5 = require(navigation[10]).intl;
   obj8[1] = intl5.string(require(navigation[10]).t.oVQF2y);
   const intl6 = require(navigation[10]).intl;
   obj8[2] = intl6.format(require(navigation[10]).t.A6G7ak, {
     featureHook(children) {
-      return callback2(callback(navigation[11]).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
-    }
+      return callback2(
+        callback(navigation[11]).Text,
+        { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children },
+        arg1,
+      );
+    },
   });
-  const items6 = [obj8, , ];
+  const items6 = [obj8, ,];
   const obj10 = {
     icon() {
-      return callback2(callback(navigation[12]).LightbulbIcon, { color: onClose(navigation[8]).unsafe_rawColors.YELLOW_300 });
+      return callback2(callback(navigation[12]).LightbulbIcon, {
+        color: onClose(navigation[8]).unsafe_rawColors.YELLOW_300,
+      });
     },
     header: null,
-    body: null
+    body: null,
   };
   const intl7 = require(navigation[10]).intl;
   obj10[1] = intl7.string(require(navigation[10]).t["0rJl9y"]);
@@ -146,17 +188,23 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
       return null;
     },
     featureHook(children) {
-      return callback2(callback(navigation[11]).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
-    }
+      return callback2(
+        callback(navigation[11]).Text,
+        { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children },
+        arg1,
+      );
+    },
   };
   obj10[2] = intl8.format(require(navigation[10]).t.XsCNky, obj11);
   items6[1] = obj10;
   const obj12 = {
     icon() {
-      return callback2(callback(navigation[13]).CircleInformationIcon, { color: onClose(navigation[8]).unsafe_rawColors.PLATFORM_PARTNER });
+      return callback2(callback(navigation[13]).CircleInformationIcon, {
+        color: onClose(navigation[8]).unsafe_rawColors.PLATFORM_PARTNER,
+      });
     },
     header: null,
-    body: null
+    body: null,
   };
   const intl9 = require(navigation[10]).intl;
   obj12[1] = intl9.string(require(navigation[10]).t.W2kLJC);
@@ -172,4 +220,4 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
   const items7 = [callback2(closure_6, obj), callback(require(navigation[23]).NavScrim, {})];
   obj[0] = items7;
   return callback2(closure_16, obj);
-};
+}

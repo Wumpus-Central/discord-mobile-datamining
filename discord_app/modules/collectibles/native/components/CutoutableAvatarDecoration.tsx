@@ -5,7 +5,9 @@ import closure_5 from "../../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/native/components/CutoutableAvatarDecoration.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/components/CutoutableAvatarDecoration.tsx",
+);
 
 export default function CutoutableAvatarDecoration(size) {
   size = size.size;
@@ -33,7 +35,13 @@ export default function CutoutableAvatarDecoration(size) {
     let obj = size(decorationStyle[5]);
     obj = { avatarDecoration, canAnimate: tmp2, size };
     const avatarDecorationURL = obj.getAvatarDecorationURL(obj);
-    obj = { avatarDecorationUrl: avatarDecorationURL, sizeStyle: obj1, style: items, shouldAnimate: tmp2, source: null };
+    obj = {
+      avatarDecorationUrl: avatarDecorationURL,
+      sizeStyle: obj1,
+      style: items,
+      shouldAnimate: tmp2,
+      source: null,
+    };
     items = [{ width: size, height: size }, decorationStyle];
     let str2 = avatarDecorationURL;
     if (avatarDecorationURL == null) {
@@ -84,10 +92,14 @@ export default function CutoutableAvatarDecoration(size) {
         obj5[0] = avatarDecorationUrl;
         obj5[1] = sizeStyle;
         obj4[2] = jsx(avatarDecoration(tmp2[8]), { url: null, style: null });
-        tmp16 = <stateFromStores style={null} pointerEvents="none">{null}</stateFromStores>;
+        tmp16 = (
+          <stateFromStores style={null} pointerEvents="none">
+            {null}
+          </stateFromStores>
+        );
       }
       tmpResult = size(tmp2[6]);
     }
   }
   return tmp6;
-};
+}

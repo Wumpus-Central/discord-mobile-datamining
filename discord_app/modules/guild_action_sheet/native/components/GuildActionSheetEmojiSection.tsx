@@ -13,17 +13,55 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ UpsellTypes: c9, AnalyticsSections: c10, Fonts } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { header: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" }, dotSeparator: null, premiumTitle: null, emojiContainer: null, emoji: null, emojiCount: null };
-createCacheKey = { width: 4, height: 4, borderRadius: ThemesDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: ThemesDefault.colors.TEXT_SUBTLE };
+createCacheKey = {
+  header: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" },
+  dotSeparator: null,
+  premiumTitle: null,
+  emojiContainer: null,
+  emoji: null,
+  emojiCount: null,
+};
+createCacheKey = {
+  width: 4,
+  height: 4,
+  borderRadius: ThemesDefault.radii.xs,
+  marginRight: 8,
+  marginLeft: 8,
+  backgroundColor: ThemesDefault.colors.TEXT_SUBTLE,
+};
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { color: ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE, marginLeft: 4, fontFamily: Fonts.PRIMARY_BOLD, fontSize: 12 };
+createCacheKey[2] = {
+  color: ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE,
+  marginLeft: 4,
+  fontFamily: Fonts.PRIMARY_BOLD,
+  fontSize: 12,
+};
 createCacheKey[3] = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", padding: 4 };
 createCacheKey[4] = { width: 24, height: 24 };
-let obj1 = { color: ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE, marginLeft: 4, fontFamily: Fonts.PRIMARY_BOLD, fontSize: 12 };
-createCacheKey[5] = { color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 12, fontFamily: Fonts.PRIMARY_BOLD, textAlign: "center", textAlignVertical: "center" };
+let obj1 = {
+  color: ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE,
+  marginLeft: 4,
+  fontFamily: Fonts.PRIMARY_BOLD,
+  fontSize: 12,
+};
+createCacheKey[5] = {
+  color: ThemesDefault.colors.TEXT_SUBTLE,
+  fontSize: 12,
+  fontFamily: Fonts.PRIMARY_BOLD,
+  textAlign: "center",
+  textAlignVertical: "center",
+};
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 12, fontFamily: Fonts.PRIMARY_BOLD, textAlign: "center", textAlignVertical: "center" };
-let result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetEmojiSection.tsx");
+let obj2 = {
+  color: ThemesDefault.colors.TEXT_SUBTLE,
+  fontSize: 12,
+  fontFamily: Fonts.PRIMARY_BOLD,
+  textAlign: "center",
+  textAlignVertical: "center",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/guild_action_sheet/native/components/GuildActionSheetEmojiSection.tsx",
+);
 
 export default function GuildActionSheetEmojiSection(guildId) {
   guildId = guildId.guildId;
@@ -43,7 +81,11 @@ export default function GuildActionSheetEmojiSection(guildId) {
   obj1 = guildId(first[10]);
   let items = [analyticsLocations];
   const items1 = [guildId];
-  const stateFromStoresArray = obj1.useStateFromStoresArray(items, () => analyticsLocations.getGuildEmoji(guildId), items1);
+  const stateFromStoresArray = obj1.useStateFromStoresArray(
+    items,
+    () => analyticsLocations.getGuildEmoji(guildId),
+    items1,
+  );
   let obj2 = guildId(first[12]);
   const token = obj2.useToken(importDefault(first[9]).modules.mobile.TABLE_ROW_PADDING);
   let obj3 = guildId(first[10]);
@@ -106,7 +148,9 @@ export default function GuildActionSheetEmojiSection(guildId) {
   }, items3);
   const tmp4Result = guildId(first[18]);
   const unsafe_rawColors = tmp6(tmp5[9]).unsafe_rawColors;
-  const tmp18 = guildId(first[18]).isThemeDark(theme.theme) ? unsafe_rawColors.PREMIUM_TIER_2_PURPLE : unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS;
+  const tmp18 = guildId(first[18]).isThemeDark(theme.theme)
+    ? unsafe_rawColors.PREMIUM_TIER_2_PURPLE
+    : unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS;
   let tmp20Result1 = null;
   if (substr.length > 0) {
     obj = { title: null, trailing: null, children: null };
@@ -122,14 +166,14 @@ export default function GuildActionSheetEmojiSection(guildId) {
       obj1[0] = tmp.header;
       obj2 = { style: null };
       obj2[0] = tmp.dotSeparator;
-      const items4 = [tmp20(num, obj2), , ];
+      const items4 = [tmp20(num, obj2), ,];
       obj3 = { source: null, color: null, size: null };
       obj3[0] = tmp6(tmp5[23]);
       obj3[1] = tmp18;
       obj3[2] = tmp4(tmp5[22]).Icon.Sizes.SMALL;
       items4[1] = tmp20(tmp4(tmp5[22]).Icon, obj3);
       obj4 = { style: null, children: null };
-      const items5 = [tmp.premiumTitle, ];
+      const items5 = [tmp.premiumTitle];
       const obj5 = { color: null };
       obj5[0] = tmp18;
       items5[1] = obj5;
@@ -146,39 +190,42 @@ export default function GuildActionSheetEmojiSection(guildId) {
     obj6[0] = tmp.emojiContainer;
     const items6 = [
       substr.map((accessibilityLabel) => {
-          closure_0 = accessibilityLabel;
-          let obj = {
-            accessibilityRole: "image",
-            accessibilityLabel: accessibilityLabel.name,
-            onPress() {
-              const result = guildId(first[24]).triggerHapticFeedback(callback(first[25]).IMPACT_LIGHT);
-              const obj = guildId(first[24]);
-              guildId(first[26]).presentEmoji(closure_0);
-              if (!closure_1_2) {
-                closure_1_3(true);
-              }
-            },
-            children: null
-          };
-          obj = { resizeMode: "contain", style: items, placeholder: null, source: null };
-          items = [lib.emoji, ];
-          obj = { margin: num };
-          items[1] = obj;
-          const tmp4 = lib(first[27]);
-          if (obj4.isThemeDark(lib2.theme)) {
-            let tmp3Result = tmp3(tmp2[28]);
-          } else {
-            tmp3Result = tmp3(tmp2[29]);
-          }
-          obj[2] = tmp3Result;
-          obj1 = { uri: null };
-          tmp3Result = tmp3(tmp2[30]);
-          obj1[0] = tmp3Result.getEmojiURL({ id: accessibilityLabel.id, animated: accessibilityLabel.animated, size: 48 });
-          obj[3] = obj1;
-          obj[3] = closure_1_11(tmp4, obj);
-          return closure_1_11(guildId(first[21]).PressableOpacity, obj, accessibilityLabel.id);
-        }),
-
+        closure_0 = accessibilityLabel;
+        let obj = {
+          accessibilityRole: "image",
+          accessibilityLabel: accessibilityLabel.name,
+          onPress() {
+            const result = guildId(first[24]).triggerHapticFeedback(callback(first[25]).IMPACT_LIGHT);
+            const obj = guildId(first[24]);
+            guildId(first[26]).presentEmoji(closure_0);
+            if (!closure_1_2) {
+              closure_1_3(true);
+            }
+          },
+          children: null,
+        };
+        obj = { resizeMode: "contain", style: items, placeholder: null, source: null };
+        items = [lib.emoji];
+        obj = { margin: num };
+        items[1] = obj;
+        const tmp4 = lib(first[27]);
+        if (obj4.isThemeDark(lib2.theme)) {
+          let tmp3Result = tmp3(tmp2[28]);
+        } else {
+          tmp3Result = tmp3(tmp2[29]);
+        }
+        obj[2] = tmp3Result;
+        obj1 = { uri: null };
+        tmp3Result = tmp3(tmp2[30]);
+        obj1[0] = tmp3Result.getEmojiURL({
+          id: accessibilityLabel.id,
+          animated: accessibilityLabel.animated,
+          size: 48,
+        });
+        obj[3] = obj1;
+        obj[3] = closure_1_11(tmp4, obj);
+        return closure_1_11(guildId(first[21]).PressableOpacity, obj, accessibilityLabel.id);
+      }),
     ];
     tmp20Result = null;
     if (bound > 0) {
@@ -190,7 +237,7 @@ export default function GuildActionSheetEmojiSection(guildId) {
         callback(true);
       };
       const obj8 = { style: null, children: null };
-      const items7 = [, , ];
+      const items7 = [, ,];
       ({ emoji: arr10[0], emojiCount: arr10[1] } = tmp);
       const obj9 = { margin: null };
       obj9[0] = num;
@@ -209,4 +256,4 @@ export default function GuildActionSheetEmojiSection(guildId) {
     const tmp25 = num;
   }
   return tmp20Result1;
-};
+}

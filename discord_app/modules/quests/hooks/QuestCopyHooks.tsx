@@ -20,7 +20,8 @@ import { PremiumTypes } from "../../premium/PremiumConstants.tsx";
 
 require = arg1;
 function _getQuestsInstructionsToWinReward(arg0) {
-  ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick, needsToConnect } = arg0);
+  ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick, needsToConnect } =
+    arg0);
   obj = dependencyMap;
   ({ sourceQuestContent, popoutTargetElementRef, onGameSheetOpened, onGameSheetClosed } = arg0);
   obj1 = obj(1946);
@@ -45,7 +46,14 @@ function _getQuestsInstructionsToWinReward(arg0) {
       obj[1] = targetMinutes4;
       let formatToPlainStringResult = intl12.formatToPlainString(_1votF6, obj);
     } else {
-      obj = { quest: null, sourceQuestContent: null, applications: null, popoutTargetElementRef: null, onGameSheetOpened: null, onGameSheetClosed: null };
+      obj = {
+        quest: null,
+        sourceQuestContent: null,
+        applications: null,
+        popoutTargetElementRef: null,
+        onGameSheetOpened: null,
+        onGameSheetClosed: null,
+      };
       obj[0] = quest;
       obj[1] = sourceQuestContent;
       if (applications == null) {
@@ -119,7 +127,14 @@ function _getQuestsInstructionsToWinReward(arg0) {
         } else {
           e_K3xJ = tmp76 ? t23.GFdaUK : t23.NIimTt;
         }
-        obj2 = { gameTitle: null, streamingDurationRequirement: null, rewardNameWithArticle: null, duration: null, targetMinutes: null, onGameTitleClick: null };
+        obj2 = {
+          gameTitle: null,
+          streamingDurationRequirement: null,
+          rewardNameWithArticle: null,
+          duration: null,
+          targetMinutes: null,
+          onGameTitleClick: null,
+        };
         obj2[0] = quest.config.messages.gameTitle;
         obj2[1] = targetMinutes3;
         obj2[2] = defaultRewardNameWithArticle;
@@ -161,7 +176,14 @@ function _getQuestsInstructionsToWinReward(arg0) {
         if (null == collectibleQuestRewardDuration) {
           const t18 = _1votF6(1236).t;
           const tmp64 = tmp63 ? t18.GFdaUK : t18.NIimTt;
-          obj3 = { gameTitle: null, targetMinutes: null, rewardNameWithArticle: null, duration: null, streamingDurationRequirement: null, onGameTitleClick: null };
+          obj3 = {
+            gameTitle: null,
+            targetMinutes: null,
+            rewardNameWithArticle: null,
+            duration: null,
+            streamingDurationRequirement: null,
+            onGameTitleClick: null,
+          };
           obj3[0] = quest.config.messages.gameTitle;
           obj3[1] = targetMinutes2;
           obj3[2] = defaultRewardNameWithArticle;
@@ -213,7 +235,14 @@ function _getQuestsInstructionsToWinReward(arg0) {
             if (hasItem1) {
             } else {
             }
-            const obj4 = { gameTitle: null, streamingDurationRequirement: null, rewardNameWithArticle: null, duration: null, questReward: null, onGameTitleClick: null };
+            const obj4 = {
+              gameTitle: null,
+              streamingDurationRequirement: null,
+              rewardNameWithArticle: null,
+              duration: null,
+              questReward: null,
+              onGameTitleClick: null,
+            };
             obj4[0] = quest.config.messages.gameTitle;
             obj4[1] = taskDetails.targetMinutes;
             obj4[2] = defaultRewardNameWithArticle;
@@ -308,7 +337,13 @@ function _getQuestsInstructionsToWinReward(arg0) {
               if (features.includes(constants2.CLOUD_GAMING_ACTIVITY)) {
                 const features2 = quest.config.features;
                 if (features2.includes(tmp29.CLOUD_GAMING_PROVIDER_NVIDIA)) {
-                  const obj8 = { activityName: null, providerName: "NVIDIA GeForce NOW", providerLink: null, streamingDurationRequirement: null, questReward: null };
+                  const obj8 = {
+                    activityName: null,
+                    providerName: "NVIDIA GeForce NOW",
+                    providerLink: null,
+                    streamingDurationRequirement: null,
+                    questReward: null,
+                  };
                   obj8[0] = quest.config.messages.gameTitle;
                   obj8[2] = combinedDefault.getArticleURL(HelpdeskArticles.NVIDIA_GEFORCE_CLOUD_GAMING_QUEST);
                   obj8[3] = targetMinutes;
@@ -373,7 +408,13 @@ function _getQuestsInstructionsToWinReward(arg0) {
                     if (null == collectibleQuestRewardDuration) {
                       const t6 = _1votF6(1236).t;
                       const tmp18 = tmp17 ? t6.bxN0nx : t6.thO6iA;
-                      const obj11 = { gameTitle: null, objective: null, duration: null, questReward: null, onGameTitleClick: null };
+                      const obj11 = {
+                        gameTitle: null,
+                        objective: null,
+                        duration: null,
+                        questReward: null,
+                        onGameTitleClick: null,
+                      };
                       obj11[0] = quest.config.messages.gameTitle;
                       let sum = str;
                       if (needsToConnect) {
@@ -418,7 +459,13 @@ function _getQuestsInstructionsToWinReward(arg0) {
                 if (null == collectibleQuestRewardDuration) {
                   const t = _1votF6(1236).t;
                   const tmp9 = tmp92 ? t.ER9rII : t["hkJ+Gs"];
-                  const obj12 = { gameTitle: null, streamingDurationRequirement: null, duration: null, questReward: null, onGameTitleClick: null };
+                  const obj12 = {
+                    gameTitle: null,
+                    streamingDurationRequirement: null,
+                    duration: null,
+                    questReward: null,
+                    onGameTitleClick: null,
+                  };
                   obj12[0] = quest.config.messages.gameTitle;
                   obj12[1] = taskDetails.targetMinutes;
                   obj12[2] = collectibleQuestRewardDuration;
@@ -484,10 +531,24 @@ function useQuestsInstructionsToWinReward(arg0) {
   return _getQuestsInstructionsToWinReward(obj);
 }
 ({ QuestsExperimentLocations: closure_8, ORBS_INTRO_QUEST_ID: c9, QuestVariants: c10 } = QuestsExperimentLocations);
-let closure_15 = { PLAY: 0, [0]: "PLAY", STREAM: 1, [1]: "STREAM", WATCH_VIDEO: 2, [2]: "WATCH_VIDEO", IN_GAME: 3, [3]: "IN_GAME" };
+let closure_15 = {
+  PLAY: 0,
+  [0]: "PLAY",
+  STREAM: 1,
+  [1]: "STREAM",
+  WATCH_VIDEO: 2,
+  [2]: "WATCH_VIDEO",
+  IN_GAME: 3,
+  [3]: "IN_GAME",
+};
 let result = require("set").fileFinishedImporting("modules/quests/hooks/QuestCopyHooks.tsx");
 
-export const useQuestInstructionTitle = function useQuestInstructionTitle(config, arg1, questContent, sourceQuestContent) {
+export const useQuestInstructionTitle = function useQuestInstructionTitle(
+  config,
+  arg1,
+  questContent,
+  sourceQuestContent,
+) {
   let obj = useQuests;
   const targetMinutes = obj.useQuestTaskDetails(config).targetMinutes;
   obj1 = useQuests;
@@ -602,8 +663,20 @@ export const getQuestsInstructionsToWinReward = function getQuestsInstructionsTo
   return _getQuestsInstructionsToWinReward(obj);
 };
 export { useQuestsInstructionsToWinReward };
-export const useQuestDescription = function useQuestDescription(quest, sourceQuestContent, QUEST_HOME_MOBILE, QuestHome) {
-  let obj = { quest, taskDetails: useQuests.useQuestTaskDetails(quest), location: QUEST_HOME_MOBILE, sourceQuestContent, popoutTargetElementRef: arg4, gameProfileSource: QuestHome };
+export const useQuestDescription = function useQuestDescription(
+  quest,
+  sourceQuestContent,
+  QUEST_HOME_MOBILE,
+  QuestHome,
+) {
+  let obj = {
+    quest,
+    taskDetails: useQuests.useQuestTaskDetails(quest),
+    location: QUEST_HOME_MOBILE,
+    sourceQuestContent,
+    popoutTargetElementRef: arg4,
+    gameProfileSource: QuestHome,
+  };
   let formatToPlainStringResult = useQuestsInstructionsToWinReward(obj);
   const userStatus = quest.userStatus;
   let claimedAt;
@@ -625,7 +698,8 @@ export const useQuestDescription = function useQuestDescription(quest, sourceQue
 };
 export const useQuestBarSubtitle = function useQuestBarSubtitle(arg0) {
   ({ quest, hasAlreadyLinked, onClickGameTitle } = arg0);
-  ({ isExpanded, sourceQuestContent, activeScreen, popoutTargetElementRef, onGameSheetOpened, onGameSheetClosed } = arg0);
+  ({ isExpanded, sourceQuestContent, activeScreen, popoutTargetElementRef, onGameSheetOpened, onGameSheetClosed } =
+    arg0);
   let obj = useQuests;
   const questFormattedDate = obj.useQuestFormattedDate(quest.config.rewardsConfig.rewardsExpireAt);
   obj1 = useQuests;
@@ -646,7 +720,16 @@ export const useQuestBarSubtitle = function useQuestBarSubtitle(arg0) {
     enrolledAt = userStatus2.enrolledAt;
   }
   let tmpResult = tmp(11083);
-  obj = { quest, location: constants.QUESTS_BAR, taskDetails: questTaskDetails, sourceQuestContent, popoutTargetElementRef, onGameSheetOpened, onGameSheetClosed, gameProfileSource: null };
+  obj = {
+    quest,
+    location: constants.QUESTS_BAR,
+    taskDetails: questTaskDetails,
+    sourceQuestContent,
+    popoutTargetElementRef,
+    onGameSheetOpened,
+    onGameSheetClosed,
+    gameProfileSource: null,
+  };
   const isQuestProgressing = tmpResult.useIsQuestProgressing(quest);
   obj[7] = GameProfileEmbedAction.GameProfileSources.QuestBar;
   if (tmp8) {
@@ -686,7 +769,10 @@ export const useQuestBarSubtitle = function useQuestBarSubtitle(arg0) {
         if (tmpResult2.isSponsoredPlayQuest(quest)) {
           if (tmp10) {
             if (!tmp11) {
-              const defaultRewardNameWithArticle = tmp(10927).getDefaultRewardNameWithArticle(quest.config, stateFromStores);
+              const defaultRewardNameWithArticle = tmp(10927).getDefaultRewardNameWithArticle(
+                quest.config,
+                stateFromStores,
+              );
               const intl5 = tmp(1236).intl;
               obj3 = { rewardNameWithArticle: null, targetMinutes: null };
               obj3[0] = defaultRewardNameWithArticle;
@@ -778,7 +864,10 @@ export const useQuestBarTitle = function useQuestBarTitle(questCreative) {
         return intl3.formatToPlainString(tmp(1236).t.lVZaXD, obj);
       }
     }
-    if (callback(obj3.useTaskPlatformScreen(questCreative, questTaskDetails), 1)[0] === tmp(5390).TaskPlatformScreen.SELECT) {
+    if (
+      callback(obj3.useTaskPlatformScreen(questCreative, questTaskDetails), 1)[0] ===
+      tmp(5390).TaskPlatformScreen.SELECT
+    ) {
       const intl2 = tmp(1236).intl;
       let stringResult = intl2.string(tmp(1236).t.EMrUHQ);
     } else {
@@ -906,7 +995,10 @@ export const usePremiumExtendableCopy = function usePremiumExtendableCopy(arg0) 
   const _require = arg0;
   const items = [arg0];
   [][0] = arg0;
-  const memo = React.useMemo(() => callback(closure_1_2[12]).isCollectibleQuestRewardPremiumExtendable(callback), items);
+  const memo = React.useMemo(
+    () => callback(closure_1_2[12]).isCollectibleQuestRewardPremiumExtendable(callback),
+    items,
+  );
   if (!memo) {
     return null;
   } else {
@@ -972,10 +1064,15 @@ export const getRewardCodeRedemptionInstructions = function getRewardCodeRedempt
 };
 export const useModalCtaConfig = function useModalCtaConfig(quest) {
   quest = quest.quest;
-  ({ questContent: importDefault, preCtaClick: dependencyMap, getImpressionId: closure_3, sourceQuestContent: closure_4 } = quest);
+  ({
+    questContent: importDefault,
+    preCtaClick: dependencyMap,
+    getImpressionId: closure_3,
+    sourceQuestContent: closure_4,
+  } = quest);
   function _defaultOnClickCta() {
     const self = this;
-    const tmp = closure_1_3(function*() {
+    const tmp = closure_1_3(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -1051,7 +1148,14 @@ export const useModalCtaConfig = function useModalCtaConfig(quest) {
     return applyArgumentsResult;
   }
   const items = [quest];
-  let obj = { ctaText: null, ctaVariant: "secondary", onClickCta: null, title: null, subtitle: null, ctaIconPosition: "end" };
+  let obj = {
+    ctaText: null,
+    ctaVariant: "secondary",
+    onClickCta: null,
+    title: null,
+    subtitle: null,
+    ctaIconPosition: "end",
+  };
   const memo = _defaultOnClickCta.useMemo(() => {
     let messages = quest;
     const ctaConfig = quest.config.ctaConfig;

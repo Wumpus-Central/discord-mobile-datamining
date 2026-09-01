@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/client_themes/native/useIsUsin
 
 export default function useIsUsingClientTheme() {
   return useActiveThemeType.useIsClientThemeOrCustomThemeActive();
-};
+}

@@ -8,7 +8,23 @@ const MessageEmbedTypes = ME.MessageEmbedTypes;
 let result = set.fileFinishedImporting("modules/messages/native/renderer/transformEmbeds.tsx");
 
 export default function transformEmbeds(arg0) {
-  ({ embeds, channelId: require, gifAutoPlay: importDefault, hasSpoilerEmbeds: dependencyMap, ignoreEmbedDescriptionCache: processColor, shouldInlineEmbedMedia: MessageEmbedTypes, colors: closure_5, showListsAndHeaders: closure_6, showMaskedLinks: closure_7, themedBackgroundColor: closure_8, enabledContentHarmTypeFlags: closure_9, authorIsBot: closure_10, showContentInventoryEntryFallbackEmbed: closure_11, shouldAgeVerify: closure_12, transformComponents: closure_13 } = arg0);
+  ({
+    embeds,
+    channelId: require,
+    gifAutoPlay: importDefault,
+    hasSpoilerEmbeds: dependencyMap,
+    ignoreEmbedDescriptionCache: processColor,
+    shouldInlineEmbedMedia: MessageEmbedTypes,
+    colors: closure_5,
+    showListsAndHeaders: closure_6,
+    showMaskedLinks: closure_7,
+    themedBackgroundColor: closure_8,
+    enabledContentHarmTypeFlags: closure_9,
+    authorIsBot: closure_10,
+    showContentInventoryEntryFallbackEmbed: closure_11,
+    shouldAgeVerify: closure_12,
+    transformComponents: closure_13,
+  } = arg0);
   function renderEmbedMedia(image) {
     ({ proxyURL, width, height } = image);
     const obj = {};
@@ -140,7 +156,10 @@ export default function transformEmbeds(arg0) {
                               if (provider2 != null) {
                                 name = provider2.name;
                               }
-                              const effectiveVideoProvider = tmp3(tmp4[4]).getEffectiveVideoProvider(name, type.video.url);
+                              const effectiveVideoProvider = tmp3(tmp4[4]).getEffectiveVideoProvider(
+                                name,
+                                type.video.url,
+                              );
                               const tmp3Result4 = tmp3(tmp4[4]);
                               tmp34 = tmp8;
                               if (tmp3Result5.shouldPlayVideoInline(effectiveVideoProvider)) {
@@ -190,7 +209,14 @@ export default function transformEmbeds(arg0) {
                             if (tmp.GIFV !== type) {
                               if (tmp.RICH === type) {
                                 if (null != type.rawDescription) {
-                                  const obj4 = { description: null, channelId: null, isField: false, ignoreCache: null, showListsAndHeaders: null, showMaskedLinks: null };
+                                  const obj4 = {
+                                    description: null,
+                                    channelId: null,
+                                    isField: false,
+                                    ignoreCache: null,
+                                    showListsAndHeaders: null,
+                                    showMaskedLinks: null,
+                                  };
                                   obj4[0] = type.rawDescription;
                                   obj4[1] = closure_0;
                                   obj4[3] = closure_3;
@@ -217,7 +243,15 @@ export default function transformEmbeds(arg0) {
                           }
                           let result1 = null;
                           if (null != rawName.rawValue) {
-                            obj = { description: null, channelId: null, isField: true, ignoreCache: null, replaceMap: null, showListsAndHeaders: null, showMaskedLinks: null };
+                            obj = {
+                              description: null,
+                              channelId: null,
+                              isField: true,
+                              ignoreCache: null,
+                              replaceMap: null,
+                              showListsAndHeaders: null,
+                              showMaskedLinks: null,
+                            };
                             obj[0] = rawName.rawValue;
                             obj[1] = closure_0;
                             obj[3] = closure_3;
@@ -271,7 +305,10 @@ export default function transformEmbeds(arg0) {
                             obj7[0] = tmp3(tmp4[12]).ObscuredMediaTypes.Embed;
                             obj7[1] = type;
                             let isMediaScanPendingResult = !closure_10;
-                            const mediaObscuredReasonFromBitmask = tmp3(tmp4[11]).getMediaObscuredReasonFromBitmask(obj7, closure_9);
+                            const mediaObscuredReasonFromBitmask = tmp3(tmp4[11]).getMediaObscuredReasonFromBitmask(
+                              obj7,
+                              closure_9,
+                            );
                             if (!closure_10) {
                               const obj8 = { type: null, media: null };
                               obj8[0] = tmp3(tmp4[12]).ObscuredMediaTypes.Embed;
@@ -288,7 +325,36 @@ export default function transformEmbeds(arg0) {
                             if (str10 == null) {
                               str10 = "";
                             }
-                            const obj9 = { id: null, type: null, spoiler: null, obscure: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null, provider: null, author: null, rawTitle: null, title: null, url: null, rawDescription: null, description: null, thumbnail: null, image: null, images: null, fields: null, components: null, footer: null, video: null, borderLeftColor: null, providerColor: null, headerTextColor: null, bodyTextColor: null, referenceId: null, backgroundColor: null };
+                            const obj9 = {
+                              id: null,
+                              type: null,
+                              spoiler: null,
+                              obscure: null,
+                              obscureAwaitingScan: null,
+                              verifyAge: null,
+                              obscureHideControls: null,
+                              obscureIsOpaque: null,
+                              provider: null,
+                              author: null,
+                              rawTitle: null,
+                              title: null,
+                              url: null,
+                              rawDescription: null,
+                              description: null,
+                              thumbnail: null,
+                              image: null,
+                              images: null,
+                              fields: null,
+                              components: null,
+                              footer: null,
+                              video: null,
+                              borderLeftColor: null,
+                              providerColor: null,
+                              headerTextColor: null,
+                              bodyTextColor: null,
+                              referenceId: null,
+                              backgroundColor: null,
+                            };
                             obj9[0] = str10;
                             const type2 = type.type;
                             obj9[1] = type2;
@@ -336,7 +402,11 @@ export default function transformEmbeds(arg0) {
                             const video = type.video;
                             obj9[21] = video;
                             obj9[22] = embedBorderLeftColor;
-                            ({ embedProviderColor: obj28[23], embedHeaderTextColor: obj28[24], embedBodyTextColor: obj28[25] } = tmp54);
+                            ({
+                              embedProviderColor: obj28[23],
+                              embedHeaderTextColor: obj28[24],
+                              embedBodyTextColor: obj28[25],
+                            } = tmp54);
                             const referenceId = type.referenceId;
                             obj9[26] = referenceId;
                             obj9[27] = closure_8;
@@ -404,4 +474,4 @@ export default function transformEmbeds(arg0) {
     }
     return [];
   });
-};
+}

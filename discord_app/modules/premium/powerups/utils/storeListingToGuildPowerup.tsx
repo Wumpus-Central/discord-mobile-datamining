@@ -22,7 +22,16 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
       powerup_metadata = sku4.powerup_metadata;
     }
     if (null != powerup_metadata) {
-      let obj = { title: null, skuId: null, cost: null, dependencies: null, animatedImageUrl: null, staticImageUrl: null, storeRemovalDate: null, deactivationCooldownPeriodDays: null };
+      let obj = {
+        title: null,
+        skuId: null,
+        cost: null,
+        dependencies: null,
+        animatedImageUrl: null,
+        staticImageUrl: null,
+        storeRemovalDate: null,
+        deactivationCooldownPeriodDays: null,
+      };
       obj[0] = powerup_metadata.summary;
       obj[1] = powerup_metadata.sku.id;
       obj[2] = powerup_metadata.boost_price;
@@ -171,4 +180,4 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
       }
     }
   }
-};
+}

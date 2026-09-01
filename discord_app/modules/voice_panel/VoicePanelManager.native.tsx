@@ -26,12 +26,11 @@ let prototype = function VoicePanelManager() {
           state.openChannel(channelId);
         }
       }
-    }
+    },
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 const result = require("set").fileFinishedImporting("modules/voice_panel/VoicePanelManager.native.tsx");
 

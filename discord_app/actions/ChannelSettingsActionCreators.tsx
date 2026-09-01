@@ -49,8 +49,57 @@ function selectPermissionOverwrite(overwriteId) {
   obj.dispatch(obj);
 }
 function updateChannel(arg0) {
-  ({ name, type, topic, bitrate, userLimit, nsfw, flags, rateLimitPerUser, defaultThreadRateLimitPerUser, defaultAutoArchiveDuration, template, defaultReactionEmoji, rtcRegion, videoQualityMode, autoArchiveDuration, locked, invitable, availableTags, defaultSortOrder, defaultForumLayout, defaultTagSetting, iconEmoji, themeColor } = arg0);
-  dispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_UPDATE", name, channelType: type, topic, bitrate, userLimit, nsfw, flags, rateLimitPerUser, defaultThreadRateLimitPerUser, defaultAutoArchiveDuration, template, defaultReactionEmoji, rtcRegion, videoQualityMode, autoArchiveDuration, locked, invitable, availableTags, defaultSortOrder, defaultForumLayout, defaultTagSetting, iconEmoji, themeColor });
+  ({
+    name,
+    type,
+    topic,
+    bitrate,
+    userLimit,
+    nsfw,
+    flags,
+    rateLimitPerUser,
+    defaultThreadRateLimitPerUser,
+    defaultAutoArchiveDuration,
+    template,
+    defaultReactionEmoji,
+    rtcRegion,
+    videoQualityMode,
+    autoArchiveDuration,
+    locked,
+    invitable,
+    availableTags,
+    defaultSortOrder,
+    defaultForumLayout,
+    defaultTagSetting,
+    iconEmoji,
+    themeColor,
+  } = arg0);
+  dispatcherDefault.dispatch({
+    type: "CHANNEL_SETTINGS_UPDATE",
+    name,
+    channelType: type,
+    topic,
+    bitrate,
+    userLimit,
+    nsfw,
+    flags,
+    rateLimitPerUser,
+    defaultThreadRateLimitPerUser,
+    defaultAutoArchiveDuration,
+    template,
+    defaultReactionEmoji,
+    rtcRegion,
+    videoQualityMode,
+    autoArchiveDuration,
+    locked,
+    invitable,
+    availableTags,
+    defaultSortOrder,
+    defaultForumLayout,
+    defaultTagSetting,
+    iconEmoji,
+    themeColor,
+  });
 }
 function saveChannel(id, arg1) {
   const self = this;
@@ -69,7 +118,7 @@ function _saveChannel() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       if (channel === 2) {
         channel = 3;
         HermesBuiltin.throwTypeError();
@@ -123,7 +172,33 @@ function _saveChannel() {
               c23 = undefined;
               let user;
               c25 = undefined;
-              ({ name: c1, type: c2, position: c3, topic: c4, bitrate: c5, userLimit: c6, nsfw: c7, flags: c8, permissionOverwrites: c9, rateLimitPerUser: c10, defaultThreadRateLimitPerUser: c11, defaultAutoArchiveDuration: c12, template: c13, defaultReactionEmoji: c14, rtcRegion: c15, videoQualityMode: c16, autoArchiveDuration: c17, locked: c18, invitable: c19, availableTags: c20, defaultSortOrder: c21, defaultForumLayout: c22, defaultTagSetting: c23, iconEmoji: c24, themeColor: c25 } = c1);
+              ({
+                name: c1,
+                type: c2,
+                position: c3,
+                topic: c4,
+                bitrate: c5,
+                userLimit: c6,
+                nsfw: c7,
+                flags: c8,
+                permissionOverwrites: c9,
+                rateLimitPerUser: c10,
+                defaultThreadRateLimitPerUser: c11,
+                defaultAutoArchiveDuration: c12,
+                template: c13,
+                defaultReactionEmoji: c14,
+                rtcRegion: c15,
+                videoQualityMode: c16,
+                autoArchiveDuration: c17,
+                locked: c18,
+                invitable: c19,
+                availableTags: c20,
+                defaultSortOrder: c21,
+                defaultForumLayout: c22,
+                defaultTagSetting: c23,
+                iconEmoji: c24,
+                themeColor: c25,
+              } = c1);
               let channel2;
               c4 = 1;
               channel = 1;
@@ -161,7 +236,33 @@ function _saveChannel() {
             let then = HTTP.patch;
             let obj4 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
             obj4[0] = c6.CHANNEL(callback);
-            let obj5 = { name: null, type: null, position: null, topic: null, bitrate: null, user_limit: null, nsfw: null, flags: null, permission_overwrites: null, rate_limit_per_user: null, default_thread_rate_limit_per_user: null, default_auto_archive_duration: null, template: null, rtc_region: null, video_quality_mode: null, auto_archive_duration: null, locked: null, invitable: null, default_reaction_emoji: null, available_tags: null, default_sort_order: null, default_forum_layout: null, default_tag_setting: null, icon_emoji: null, theme_color: null };
+            let obj5 = {
+              name: null,
+              type: null,
+              position: null,
+              topic: null,
+              bitrate: null,
+              user_limit: null,
+              nsfw: null,
+              flags: null,
+              permission_overwrites: null,
+              rate_limit_per_user: null,
+              default_thread_rate_limit_per_user: null,
+              default_auto_archive_duration: null,
+              template: null,
+              rtc_region: null,
+              video_quality_mode: null,
+              auto_archive_duration: null,
+              locked: null,
+              invitable: null,
+              default_reaction_emoji: null,
+              available_tags: null,
+              default_sort_order: null,
+              default_forum_layout: null,
+              default_tag_setting: null,
+              icon_emoji: null,
+              theme_color: null,
+            };
             obj5[0] = c1;
             obj5[1] = dependencyMap;
             obj5[2] = c3;
@@ -199,7 +300,13 @@ function _saveChannel() {
             obj5[18] = tmp8;
             let mapped;
             if (c20 != null) {
-              mapped = arr.map((id) => ({ id: id.id, name: id.name, emoji_id: id.emojiId, emoji_name: id.emojiName, moderated: id.moderated }));
+              mapped = arr.map((id) => ({
+                id: id.id,
+                name: id.name,
+                emoji_id: id.emojiId,
+                emoji_name: id.emojiName,
+                moderated: id.moderated,
+              }));
             }
             obj5[19] = mapped;
             obj5[20] = c21;
@@ -220,34 +327,37 @@ function _saveChannel() {
             obj4[3] = obj5.rejectWithMigratedError();
             HTTP = then(obj4);
             then = HTTP.then;
-            obj4 = then((arg0) => {
-              let obj = _undefined(_undefined2[4]);
-              obj = { type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId: closure_0 };
-              obj.dispatch(obj);
-              let guildId;
-              if (closure_26 != null) {
-                guildId = closure_26.getGuildId();
-              }
-              let tmp5 = null == guildId;
-              if (!tmp5) {
-                let isThreadResult;
+            obj4 = then(
+              (arg0) => {
+                let obj = _undefined(_undefined2[4]);
+                obj = { type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId: closure_0 };
+                obj.dispatch(obj);
+                let guildId;
                 if (closure_26 != null) {
-                  isThreadResult = obj4.isThread();
+                  guildId = closure_26.getGuildId();
                 }
-                tmp5 = isThreadResult;
-                obj4 = closure_26;
-              }
-              if (!tmp5) {
-                const result = _undefined(_undefined2[8]).checkGuildTemplateDirty(guildId);
-                const tmpResult = _undefined(_undefined2[8]);
-              }
-              return arg0;
-            }, (body) => {
-              let obj = _undefined(_undefined2[4]);
-              obj = { type: "CHANNEL_SETTINGS_SUBMIT_FAILURE", errors: body.body };
-              obj.dispatch(obj);
-              return body;
-            });
+                let tmp5 = null == guildId;
+                if (!tmp5) {
+                  let isThreadResult;
+                  if (closure_26 != null) {
+                    isThreadResult = obj4.isThread();
+                  }
+                  tmp5 = isThreadResult;
+                  obj4 = closure_26;
+                }
+                if (!tmp5) {
+                  const result = _undefined(_undefined2[8]).checkGuildTemplateDirty(guildId);
+                  const tmpResult = _undefined(_undefined2[8]);
+                }
+                return arg0;
+              },
+              (body) => {
+                let obj = _undefined(_undefined2[4]);
+                obj = { type: "CHANNEL_SETTINGS_SUBMIT_FAILURE", errors: body.body };
+                obj.dispatch(obj);
+                return body;
+              },
+            );
             channel = 3;
             arr = c20;
           }
@@ -285,7 +395,7 @@ function _deleteChannel() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -386,7 +496,18 @@ function removeLinkedLobby(closure_1_0) {
 ({ Endpoints: closure_6, Layers, ChannelSettingsSections: error } = ME);
 let result = require("set").fileFinishedImporting("actions/ChannelSettingsActionCreators.tsx");
 
-export default { init, open, close, setSection, selectPermissionOverwrite, updateChannel, saveChannel, deleteChannel, updateVoiceChannelStatus, removeLinkedLobby };
+export default {
+  init,
+  open,
+  close,
+  setSection,
+  selectPermissionOverwrite,
+  updateChannel,
+  saveChannel,
+  deleteChannel,
+  updateVoiceChannelStatus,
+  removeLinkedLobby,
+};
 export { init };
 export { open };
 export { close };

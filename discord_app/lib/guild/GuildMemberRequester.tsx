@@ -114,7 +114,13 @@ prototype2["flushRequests"] = function flushRequests() {
   const item = applyDefault.forEach(this._guildStates, (flushRequests) => flushRequests.flushRequests(self._onChange));
 };
 prototype2["requestUnacknowledged"] = function requestUnacknowledged() {
-  if (arr.reduce(this._guildStates, (arg0, requestUnacknowledged) => false !== requestUnacknowledged.requestUnacknowledged() || arg0, false)) {
+  if (
+    arr.reduce(
+      this._guildStates,
+      (arg0, requestUnacknowledged) => false !== requestUnacknowledged.requestUnacknowledged() || arg0,
+      false,
+    )
+  ) {
     const _flush = this._flush;
     _flush.delay();
   }
@@ -151,20 +157,23 @@ prototype2["getDebugState"] = function getDebugState(arg0) {
   const pendingRequestGuildIds = [];
   const unacknowledgedRequestGuildIds = [];
   const sentRequestGuildIds = [];
-  const item = pendingRequestGuildIds(unacknowledgedRequestGuildIds[1]).forEach(this._guildStates, (_pendingRequests) => {
-    _pendingRequests = _pendingRequests._pendingRequests;
-    if (_pendingRequests.has(closure_0)) {
-      pendingRequestGuildIds.push(_pendingRequests._guildId);
-    }
-    const _unacknowledgedRequests = _pendingRequests._unacknowledgedRequests;
-    if (_unacknowledgedRequests.has(closure_0)) {
-      unacknowledgedRequestGuildIds.push(_pendingRequests._guildId);
-    }
-    const _sentRequests = _pendingRequests._sentRequests;
-    if (_sentRequests.has(closure_0)) {
-      sentRequestGuildIds.push(_pendingRequests._guildId);
-    }
-  });
+  const item = pendingRequestGuildIds(unacknowledgedRequestGuildIds[1]).forEach(
+    this._guildStates,
+    (_pendingRequests) => {
+      _pendingRequests = _pendingRequests._pendingRequests;
+      if (_pendingRequests.has(closure_0)) {
+        pendingRequestGuildIds.push(_pendingRequests._guildId);
+      }
+      const _unacknowledgedRequests = _pendingRequests._unacknowledgedRequests;
+      if (_unacknowledgedRequests.has(closure_0)) {
+        unacknowledgedRequestGuildIds.push(_pendingRequests._guildId);
+      }
+      const _sentRequests = _pendingRequests._sentRequests;
+      if (_sentRequests.has(closure_0)) {
+        sentRequestGuildIds.push(_pendingRequests._guildId);
+      }
+    },
+  );
   return { pendingRequestGuildIds, unacknowledgedRequestGuildIds, sentRequestGuildIds };
 };
 

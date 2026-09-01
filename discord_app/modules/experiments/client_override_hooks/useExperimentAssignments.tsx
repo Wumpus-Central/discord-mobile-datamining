@@ -5,7 +5,9 @@ import closure_3 from "../ExperimentStore.tsx";
 import closure_4 from "../apex/ApexExperimentStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/experiments/client_override_hooks/useExperimentAssignments.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/experiments/client_override_hooks/useExperimentAssignments.tsx",
+);
 
 export const useExperimentAssignment = function useExperimentAssignment(experiment, arg1) {
   const _require = experiment;

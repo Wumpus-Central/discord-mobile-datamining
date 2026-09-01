@@ -34,8 +34,13 @@ export default function WishlistItemCard(arg0) {
     obj[2] = source;
     obj[3] = wishlistOwnerId;
     const merged3 = Object.assign(merged);
-    return jsx(SocialLayerStorefrontWishlistItemCardDefault, { sku: null, isOwned: null, source: null, wishlistOwnerId: null });
+    return jsx(SocialLayerStorefrontWishlistItemCardDefault, {
+      sku: null,
+      isOwned: null,
+      source: null,
+      wishlistOwnerId: null,
+    });
   } else {
     return null;
   }
-};
+}

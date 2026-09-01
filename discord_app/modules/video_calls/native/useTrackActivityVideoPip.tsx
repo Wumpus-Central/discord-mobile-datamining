@@ -9,7 +9,10 @@ const result = require("set").fileFinishedImporting("modules/video_calls/native/
 export default function useTrackActivityPip(arg0) {
   const _require = arg0;
   const items = [closure_4];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream());
+  const stateFromStores =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () =>
+      pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream(),
+    );
   let tmp2 = stateFromStores(8576)(stateFromStores);
   dependencyMap = tmp2;
   const tmp3 = stateFromStores(9602)();
@@ -33,4 +36,4 @@ export default function useTrackActivityPip(arg0) {
       }
     }
   }, items1);
-};
+}

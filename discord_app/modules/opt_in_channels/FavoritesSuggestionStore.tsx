@@ -50,8 +50,7 @@ let closure_3 = {};
 let closure_4 = {};
 let closure_5 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class FavoritesSuggestionStore extends PersistedStore {
-}
+class FavoritesSuggestionStore extends PersistedStore {}
 const prototype = FavoritesSuggestionStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   this.waitFor(closure_0, closure_1, closure_2);
@@ -109,7 +108,7 @@ const favoritesSuggestionStore = new FavoritesSuggestionStore(dispatcherDefault,
     dependencyMap2[guildId].add(channelId);
     dependencyMap[guildId].delete(channelId);
     return true;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/opt_in_channels/FavoritesSuggestionStore.tsx");
 

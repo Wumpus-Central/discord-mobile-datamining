@@ -13,39 +13,43 @@ const memoResult = importAllResult.memo(function ActivityPanelContainer() {
   let obj = initialize;
   const items = [closure_5, closure_3, closure_4];
   let tmp2 = null;
-  if (obj.useStateFromStores(items, () => {
-    connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
-    if (null == connectedActivityLocation) {
-      return false;
-    } else {
-      const embeddedActivityLocationChannelId = callback(table[6]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
-      if (null == embeddedActivityLocationChannelId) {
+  if (
+    obj.useStateFromStores(items, () => {
+      connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
+      if (null == connectedActivityLocation) {
         return false;
       } else {
-        channel = channel.getChannel(embeddedActivityLocationChannelId);
-        let type;
-        if (channel != null) {
-          type = channel.type;
-        }
-        let tmp4 = type === tmp8(tmp9[7]).ChannelTypes.GUILD_TEXT;
-        if (!tmp4) {
-          let isPrivateResult;
+        const embeddedActivityLocationChannelId = callback(table[6]).getEmbeddedActivityLocationChannelId(
+          connectedActivityLocation,
+        );
+        if (null == embeddedActivityLocationChannelId) {
+          return false;
+        } else {
+          channel = channel.getChannel(embeddedActivityLocationChannelId);
+          let type;
           if (channel != null) {
-            isPrivateResult = channel.isPrivate();
+            type = channel.type;
           }
-          let tmp6;
-          if (true === isPrivateResult) {
-            tmp6 = voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId;
+          let tmp4 = type === tmp8(tmp9[7]).ChannelTypes.GUILD_TEXT;
+          if (!tmp4) {
+            let isPrivateResult;
+            if (channel != null) {
+              isPrivateResult = channel.isPrivate();
+            }
+            let tmp6;
+            if (true === isPrivateResult) {
+              tmp6 = voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId;
+            }
+            tmp4 = tmp6;
           }
-          tmp4 = tmp6;
+          return tmp4;
         }
-        return tmp4;
+        const obj2 = callback(table[6]);
+        tmp8 = callback;
+        tmp9 = table;
       }
-      const obj2 = callback(table[6]);
-      tmp8 = callback;
-      tmp9 = table;
-    }
-  }, [])) {
+    }, [])
+  ) {
     obj = { children: null };
     obj[0] = jsx(renderActivityOrPIPDefault, {});
     tmp2 = jsx(BaseActivityPanelControllerDefault, { children: null });

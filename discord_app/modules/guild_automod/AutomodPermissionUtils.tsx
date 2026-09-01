@@ -3,8 +3,12 @@ import closure_2 from "../../stores/GuildMemberStore.tsx";
 import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
 
 const require = arg1;
-let items = [, , ];
-({ AUTOMOD_QUARANTINED_BIO: arr[0], AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME: arr[1], AUTOMOD_QUARANTINED_SERVER_TAG: arr[2] } = GuildMemberFlags);
+let items = [, ,];
+({
+  AUTOMOD_QUARANTINED_BIO: arr[0],
+  AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME: arr[1],
+  AUTOMOD_QUARANTINED_SERVER_TAG: arr[2],
+} = GuildMemberFlags);
 const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodPermissionUtils.tsx");
 
 export const AUTOMOD_QUARANTINED_PROFILE_FLAGS = items;
@@ -15,16 +19,18 @@ export const getAutomodQuarantinedProfileFlags = function getAutomodQuarantinedP
     let set = new Set();
   } else {
     const _Set = Set;
-    set = new Set(items.reduce((arr) => {
-      let num = flags;
-      if (flags == null) {
-        num = 0;
-      }
-      if (obj.hasFlag(num, arg1)) {
-        arr.push(arg1);
-      }
-      return arr;
-    }, []));
+    set = new Set(
+      items.reduce((arr) => {
+        let num = flags;
+        if (flags == null) {
+          num = 0;
+        }
+        if (obj.hasFlag(num, arg1)) {
+          arr.push(arg1);
+        }
+        return arr;
+      }, []),
+    );
   }
   return set;
 };
@@ -39,16 +45,18 @@ export const getAutomodQuarantinedGuildMemberFlags = function getAutomodQuaranti
       set = new Set();
     } else {
       const _Set = Set;
-      set = new Set(items.reduce((arr) => {
-        let num = flags;
-        if (flags == null) {
-          num = 0;
-        }
-        if (obj.hasFlag(num, arg1)) {
-          arr.push(arg1);
-        }
-        return arr;
-      }, []));
+      set = new Set(
+        items.reduce((arr) => {
+          let num = flags;
+          if (flags == null) {
+            num = 0;
+          }
+          if (obj.hasFlag(num, arg1)) {
+            arr.push(arg1);
+          }
+          return arr;
+        }, []),
+      );
     }
   }
   return set;
@@ -88,26 +96,30 @@ export const useCurrentUserAutomodQuaratinedProfile = function useCurrentUserAut
   const _require = guild_id;
   items = [closure_2];
   const items1 = [guild_id];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let tmp2 = null != selfMember;
-    if (tmp2) {
-      selfMember = closure_1_2.getSelfMember(tmp);
-      let tmp5 = null != selfMember;
-      if (tmp5) {
-        let someResult = null != selfMember.flags;
-        if (someResult) {
-          someResult = closure_1_4.some((arg0) => {
-            let num = selfMember.flags;
-            if (num == null) {
-              num = 0;
-            }
-            return selfMember(closure_1_1[2]).hasFlag(num, arg0);
-          });
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let tmp2 = null != selfMember;
+      if (tmp2) {
+        selfMember = closure_1_2.getSelfMember(tmp);
+        let tmp5 = null != selfMember;
+        if (tmp5) {
+          let someResult = null != selfMember.flags;
+          if (someResult) {
+            someResult = closure_1_4.some((arg0) => {
+              let num = selfMember.flags;
+              if (num == null) {
+                num = 0;
+              }
+              return selfMember(closure_1_1[2]).hasFlag(num, arg0);
+            });
+          }
+          tmp5 = someResult;
         }
-        tmp5 = someResult;
+        tmp2 = tmp5;
       }
-      tmp2 = tmp5;
-    }
-    return tmp2;
-  }, items1);
+      return tmp2;
+    },
+    items1,
+  );
 };

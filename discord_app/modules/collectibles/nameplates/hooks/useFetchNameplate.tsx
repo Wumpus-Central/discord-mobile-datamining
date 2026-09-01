@@ -21,6 +21,11 @@ export const useFetchNameplate = function useFetchNameplate(skuId) {
   if (type === CollectiblesItemType.CollectiblesItemType.NAMEPLATE) {
     first1 = product.items[0];
   }
-  obj = { nameplateProduct: product, nameplateRecord: first1, nameplateData: getNameplateData.getNameplateData(first1), isFetching: fetchCollectiblesProduct.isFetching };
+  obj = {
+    nameplateProduct: product,
+    nameplateRecord: first1,
+    nameplateData: getNameplateData.getNameplateData(first1),
+    isFetching: fetchCollectiblesProduct.isFetching,
+  };
   return obj;
 };

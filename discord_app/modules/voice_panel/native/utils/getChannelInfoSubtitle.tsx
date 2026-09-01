@@ -30,4 +30,4 @@ export default function getChannelInfoSubtitle(arg0, arg1, arg2) {
     obj[2] = arg2.length - 2 + num;
     return intl2.formatToPlainString(getSystemLocale.t.RFCI3S, obj);
   }
-};
+}

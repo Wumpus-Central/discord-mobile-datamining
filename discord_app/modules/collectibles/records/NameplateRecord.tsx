@@ -12,8 +12,7 @@ prototype = function NameplateRecord(arg0) {
   ({ asset: tmp2.asset, label: tmp2.label, palette: tmp2.palette } = arg0);
   return tmp2;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["fromServer"] = function fromServer(arg0) {
   const obj = {};
   let tmp = prototype;

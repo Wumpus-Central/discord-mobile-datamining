@@ -28,7 +28,12 @@ function getOrParseMessagePreviewMarkupAST(arg0) {
     if (startsWithResult) {
       tmp3 = content;
     }
-    const astParserForResultResult = get_defaultRulesDefault.astParserFor(tmp11Result)(tmp3, true, initialParserState, postProcessor);
+    const astParserForResultResult = get_defaultRulesDefault.astParserFor(tmp11Result)(
+      tmp3,
+      true,
+      initialParserState,
+      postProcessor,
+    );
     const result = obj.set(content, astParserForResultResult);
     return astParserForResultResult;
   }
@@ -71,7 +76,25 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
   if ("" === content) {
     return null;
   } else {
-    let obj = { allowLinks: true, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: null, soundboardSounds: null, formatInline: true, noStyleAndInteraction: true, allowHeading: true, allowList: true, disableAutoBlockNewlines: true, previewLinkTarget: false, disableAnimatedEmoji: null, unknownUserMentionPlaceholder: true, guildId: null, channelId: null, muted: null };
+    let obj = {
+      allowLinks: true,
+      allowDevLinks: false,
+      allowEmojiLinks: false,
+      allowGameMentions: false,
+      mentionChannels: null,
+      soundboardSounds: null,
+      formatInline: true,
+      noStyleAndInteraction: true,
+      allowHeading: true,
+      allowList: true,
+      disableAutoBlockNewlines: true,
+      previewLinkTarget: false,
+      disableAnimatedEmoji: null,
+      unknownUserMentionPlaceholder: true,
+      guildId: null,
+      channelId: null,
+      muted: null,
+    };
     obj[4] = [];
     obj[5] = [];
     obj[12] = disableAnimatedEmoji;
@@ -81,7 +104,15 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
       muted = false;
     }
     obj[16] = muted;
-    obj = { content: null, layout: null, color: null, initialParserState: null, fontScale: null, maxFontSizeMultiplier: null, postProcessor: null };
+    obj = {
+      content: null,
+      layout: null,
+      color: null,
+      initialParserState: null,
+      fontScale: null,
+      maxFontSizeMultiplier: null,
+      postProcessor: null,
+    };
     obj[0] = content;
     obj[1] = layout;
     obj[2] = color;

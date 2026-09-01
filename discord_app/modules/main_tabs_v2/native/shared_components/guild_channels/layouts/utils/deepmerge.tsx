@@ -94,6 +94,8 @@ merge.withOptions = (arg0) => {
   merge.options = obj;
   return merge(...substr);
 };
-const result = set2.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/utils/deepmerge.tsx");
+const result = set2.fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/guild_channels/layouts/utils/deepmerge.tsx",
+);
 
 export default merge;

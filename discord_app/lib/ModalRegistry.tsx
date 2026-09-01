@@ -41,7 +41,15 @@ prototype["getOpenModal"] = function getOpenModal() {
     if (props == null) {
       props = {};
     }
-    const obj = { key: null, component: null, props: null, closable: null, backdropInstant: null, backdropStyle: null, disableAnimation: null };
+    const obj = {
+      key: null,
+      component: null,
+      props: null,
+      closable: null,
+      backdropInstant: null,
+      backdropStyle: null,
+      disableAnimation: null,
+    };
     obj[0] = findIndexResult;
     obj[1] = this.modals[findIndexResult].getComponent();
     obj[2] = props;

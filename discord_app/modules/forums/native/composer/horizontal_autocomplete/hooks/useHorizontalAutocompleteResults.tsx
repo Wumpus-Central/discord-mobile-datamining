@@ -5,7 +5,9 @@ import ME from "../../../../../../Constants.tsx";
 
 const require = arg1;
 ({ AutoCompleteResultTypes: c4, ChannelTypes: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/hooks/useHorizontalAutocompleteResults.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/forums/native/composer/horizontal_autocomplete/hooks/useHorizontalAutocompleteResults.tsx",
+);
 
 export const useHorizontalAutocompleteResults = function useHorizontalAutocompleteResults(channel) {
   channel = channel.channel;
@@ -108,7 +110,7 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
         obj[1] = tmp13;
         obj[2] = tmp11;
         obj = { includeEmojiPremiumUpsell: false, channelTypes: null };
-        const items = [, , , ];
+        const items = [, , ,];
         ({ GUILD_FORUM: arr4[0], GUILD_MEDIA: arr4[1], GUILD_TEXT: arr4[2], GUILD_ANNOUNCEMENT: arr4[3] } = memo);
         obj[1] = items;
         obj[3] = obj;
@@ -151,12 +153,18 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
     callback(true);
   }, items5);
   obj = {
-    results: first.useMemo(() => first.filter((type) => {
-      type = type.type;
-      return type === constants.USER || type === constants.ROLE || type === constants.CHANNEL || type === constants.EMOJI;
-    }), items6),
+    results: first.useMemo(
+      () =>
+        first.filter((type) => {
+          type = type.type;
+          return (
+            type === constants.USER || type === constants.ROLE || type === constants.CHANNEL || type === constants.EMOJI
+          );
+        }),
+      items6,
+    ),
     autocompleteSelectionStart: memo1.autocompleteSelectionStart,
-    query
+    query,
   };
   items6 = [first];
   return obj;

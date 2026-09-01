@@ -7,8 +7,7 @@ import importAllResult from "../../../_runtime/00019_noop.js";
 
 require = arg1;
 const Component = importAllResult.Component;
-class CountDown extends Component {
-}
+class CountDown extends Component {}
 const prototype = CountDown.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
@@ -41,7 +40,7 @@ prototype["render"] = function render() {
     }
     if (result < 0) {
       const _Math = Math;
-      const items = [Math.floor(result / setDefault.Seconds.DAY), , , ];
+      const items = [Math.floor(result / setDefault.Seconds.DAY), , ,];
       const _Math2 = Math;
       const result1 = result % setDefault.Seconds.DAY;
       items[1] = Math.floor(result1 / setDefault.Seconds.HOUR);
@@ -67,7 +66,7 @@ prototype["render"] = function render() {
       children = joined;
       if (tmp) {
         const intl = getSystemLocale.intl;
-        const items1 = [intl.string(getSystemLocale.t.QJyuxY), , , ];
+        const items1 = [intl.string(getSystemLocale.t.QJyuxY), , ,];
         const intl2 = getSystemLocale.intl;
         items1[1] = intl2.string(getSystemLocale.t["1LyF1h"]);
         const intl3 = getSystemLocale.intl;

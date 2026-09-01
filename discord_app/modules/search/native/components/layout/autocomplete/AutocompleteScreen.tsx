@@ -12,7 +12,11 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c4 = importAllResult;
-({ SearchListItemTypes: c10, SearchQueryTagTypes: unpackModuleId, USER_ESTIMATED_ITEM_SIZE: closure_12 } = MessageEmbedTypes);
+({
+  SearchListItemTypes: c10,
+  SearchQueryTagTypes: unpackModuleId,
+  USER_ESTIMATED_ITEM_SIZE: closure_12,
+} = MessageEmbedTypes);
 ({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = ME);
 let closure_16 = [];
 const memoResult = importAllResult.memo(function AutocompleteScreen(searchContext) {
@@ -28,14 +32,23 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
   let obj = searchContext(first[10]);
   let items = [callback3];
   const items1 = [searchContext];
-  stateFromStores = obj.useStateFromStores(items, () => callback3.getState(searchContext), items1, searchContext(first[10]).statesWillNeverBeEqual);
+  stateFromStores = obj.useStateFromStores(
+    items,
+    () => callback3.getState(searchContext),
+    items1,
+    searchContext(first[10]).statesWillNeverBeEqual,
+  );
   const tmp4 = callback(fullscreenPlaceholderCount.useState(false), 2);
   first = tmp4[0];
   callback = tmp4[1];
   obj1 = searchContext(first[10]);
   const items2 = [closure_9];
   const items3 = [searchContext];
-  const stateFromStores1 = obj1.useStateFromStores(items2, () => closure_1_9.isTextInputValueEmpty(searchContext), items3);
+  const stateFromStores1 = obj1.useStateFromStores(
+    items2,
+    () => closure_1_9.isTextInputValueEmpty(searchContext),
+    items3,
+  );
   let obj2 = searchContext(first[11]);
   obj = { placeholderHeight: closure_12, numColumns: 1 };
   fullscreenPlaceholderCount = obj2.useFullscreenPlaceholderCount(obj);
@@ -73,7 +86,11 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
         let obj = stateFromStores(first[13]);
         obj.updateSearchQuery(tmp9, (setTextInputValue) => {
           setTextInputValue.setTextInputValue("");
-          const obj = { type: closure_1_11.ANSWER, text: closure_1_1(closure_1_2[15]).getUserTag(user), userId: user.id };
+          const obj = {
+            type: closure_1_11.ANSWER,
+            text: closure_1_1(closure_1_2[15]).getUserTag(user),
+            userId: user.id,
+          };
           setTextInputValue.addTag(obj);
           const result = setTextInputValue.restoreDraftTextInputValue();
         });
@@ -105,7 +122,11 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
         obj6 = callback2;
         stateFromStores(first[13]).updateSearchQuery(tmp8, (setTextInputValue) => {
           setTextInputValue.setTextInputValue("");
-          const obj = { type: closure_1_11.ANSWER, text: callback(closure_1_2[17]).quoteChannelName(closure_1), channelId: callback };
+          const obj = {
+            type: closure_1_11.ANSWER,
+            text: callback(closure_1_2[17]).quoteChannelName(closure_1),
+            channelId: callback,
+          };
           setTextInputValue.addTag(obj);
           const result = setTextInputValue.restoreDraftTextInputValue();
         });
@@ -120,33 +141,46 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
     }
   }, items7);
   const items8 = [searchContext];
-  const effect = fullscreenPlaceholderCount.useEffect(() => stateFromStores(first[12]).subscribeSearchQueryState(searchContext, (isAutocompleteVisible) => {
-    const obj = { isAutocompleteVisible: isAutocompleteVisible.isAutocompleteVisible(), textInputValue: isAutocompleteVisible.getTextInputValue(), prefixTag: null };
-    let prefixTag = isAutocompleteVisible.getPrefixTag();
-    if (prefixTag == null) {
-      prefixTag = null;
-    }
-    obj[2] = prefixTag;
-    return obj;
-  }, (isAutocompleteVisible, textInputValue) => {
-    if (isAutocompleteVisible.isAutocompleteVisible) {
-      textInputValue = undefined;
-      if (textInputValue != null) {
-        textInputValue = textInputValue.textInputValue;
-      }
-      let tmp6 = tmp === textInputValue;
-      if (tmp6) {
-        let prefixTag;
-        if (textInputValue != null) {
-          prefixTag = textInputValue.prefixTag;
-        }
-        tmp6 = tmp2 === prefixTag;
-      }
-      if (!tmp6) {
-        callback(true);
-      }
-    }
-  }, true), items8);
+  const effect = fullscreenPlaceholderCount.useEffect(
+    () =>
+      stateFromStores(first[12]).subscribeSearchQueryState(
+        searchContext,
+        (isAutocompleteVisible) => {
+          const obj = {
+            isAutocompleteVisible: isAutocompleteVisible.isAutocompleteVisible(),
+            textInputValue: isAutocompleteVisible.getTextInputValue(),
+            prefixTag: null,
+          };
+          let prefixTag = isAutocompleteVisible.getPrefixTag();
+          if (prefixTag == null) {
+            prefixTag = null;
+          }
+          obj[2] = prefixTag;
+          return obj;
+        },
+        (isAutocompleteVisible, textInputValue) => {
+          if (isAutocompleteVisible.isAutocompleteVisible) {
+            textInputValue = undefined;
+            if (textInputValue != null) {
+              textInputValue = textInputValue.textInputValue;
+            }
+            let tmp6 = tmp === textInputValue;
+            if (tmp6) {
+              let prefixTag;
+              if (textInputValue != null) {
+                prefixTag = textInputValue.prefixTag;
+              }
+              tmp6 = tmp2 === prefixTag;
+            }
+            if (!tmp6) {
+              callback(true);
+            }
+          }
+        },
+        true,
+      ),
+    items8,
+  );
   const items9 = [stateFromStores.autocompletes];
   const effect1 = fullscreenPlaceholderCount.useEffect(() => {
     callback(false);
@@ -336,6 +370,8 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
   }
   return tmp18;
 });
-let result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/search/native/components/layout/autocomplete/AutocompleteScreen.tsx",
+);
 
 export default memoResult;

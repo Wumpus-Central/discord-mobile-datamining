@@ -10,7 +10,15 @@ import { map } from "../../../../design/tokens/native/useToken.tsx";
 const require = arg1;
 let closure_7 = createCacheKey.createStyles((width, marginHorizontal) => {
   let obj = { containerRefresh: null, animationRefresh: null };
-  obj = { width, height: width, borderRadius: ThemesDefault.radii.sm, marginHorizontal, display: "flex", alignItems: "center", justifyContent: "center" };
+  obj = {
+    width,
+    height: width,
+    borderRadius: ThemesDefault.radii.sm,
+    marginHorizontal,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  };
   obj[0] = obj;
   obj[1] = { width: 24, height: 24 };
   return obj;
@@ -31,7 +39,10 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   const tmp9 = useRef(null);
   _require = tmp9;
   const items = [closure_5];
-  stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => useReducedMotion.useReducedMotion,
+  );
   const items1 = [channelId, stateFromStores];
   const effect = React.useEffect(() => {
     if (!stateFromStores) {
@@ -57,7 +68,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
     FadeOut = tmp(4217).FadeOut;
   }
   obj = { exiting: FadeOut, children: null };
-  const items2 = [tmp7.containerRefresh, style, ];
+  const items2 = [tmp7.containerRefresh, style];
   if (active) {
     active = !disabled;
   }
@@ -75,8 +86,32 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   const merged = Object.assign(accessibilityState);
   obj[3] = obj1;
   const merged1 = Object.assign(arg0);
-  obj2 = { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished };
-  obj.children = jsx(stateFromStores(5944), { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
-  obj[1] = jsx(require("../../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
-  return jsx(stateFromStores(4217).View, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
+  obj2 = {
+    ref: tmp9,
+    style: tmp7.animationRefresh,
+    source: { uri: animationDataUrl },
+    loop,
+    autoPlay: false,
+    onAnimationFinish: onAnimationFinished,
+  };
+  obj.children = jsx(stateFromStores(5944), {
+    ref: tmp9,
+    style: tmp7.animationRefresh,
+    source: { uri: animationDataUrl },
+    loop,
+    autoPlay: false,
+    onAnimationFinish: onAnimationFinished,
+  });
+  obj[1] = jsx(require("../../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, {
+    style: items2,
+    hitSlop: null,
+    accessibilityRole: "button",
+    accessibilityState: null,
+  });
+  return jsx(stateFromStores(4217).View, {
+    style: items2,
+    hitSlop: null,
+    accessibilityRole: "button",
+    accessibilityState: null,
+  });
 };

@@ -4,7 +4,9 @@ import ME from "../../../../../Constants.tsx";
 
 const require = arg1;
 ({ GuildSettingsSections: c4, AnalyticsSections: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupConfigureCallback.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/powerups/native/hooks/useGuildPowerupConfigureCallback.tsx",
+);
 
 export default function useGuildPowerupConfigureCallback(arg0, skuId) {
   closure_0 = arg0;
@@ -30,4 +32,4 @@ export default function useGuildPowerupConfigureCallback(arg0, skuId) {
     const obj = skuId(closure_1_2[2]);
     tmp5 = skuId;
   }, items);
-};
+}

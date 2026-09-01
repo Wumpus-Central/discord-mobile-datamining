@@ -9,7 +9,11 @@ import set from "../../../utils/PlatformUtils.tsx";
 const View = get_ActivityIndicator.View;
 const Permissions = sum.Permissions;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4, overflow: "hidden" }, channelButton: { flex: 1, flexDirection: "row", alignItems: "center", gap: 2 }, channelName: null };
+let obj = {
+  container: { flexDirection: "row", alignItems: "center", gap: 4, overflow: "hidden" },
+  channelButton: { flex: 1, flexDirection: "row", alignItems: "center", gap: 2 },
+  channelName: null,
+};
 let num = -1;
 if (set.isAndroid()) {
   num = -2;
@@ -74,7 +78,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
         icon() {
           const obj = { size: closure_1_0(closure_1_2[15]).GuildIconSizes.XSMALL, guild: closure_0 };
           return closure_1_6(closure_1_1(closure_1_2[15]), obj);
-        }
+        },
       };
       obj.open(obj);
     };
@@ -86,9 +90,20 @@ export default function UserProfileActivityVoiceChannel(guild) {
     tmp10Result = tmp10(tmp4(tmp3[16]).PressableOpacity, obj3);
     tmp13 = tmp10;
   }
-  const items2 = [tmp10Result, tmp13(guild(onAction[18]).ChevronSmallRightIcon, { size: "xxs", color: "text-default" }), , ];
+  const items2 = [
+    tmp10Result,
+    tmp13(guild(onAction[18]).ChevronSmallRightIcon, { size: "xxs", color: "text-default" }),
+    ,
+  ];
   if (stateFromStores) {
-    const obj5 = { style: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
+    const obj5 = {
+      style: null,
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      accessibilityHint: null,
+      onPress: null,
+      children: null,
+    };
     obj5[0] = tmp.channelButton;
     const obj6 = { channel: null };
     obj6[0] = channel;
@@ -101,7 +116,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
       const obj = guild(onAction[21]);
       channel(onAction[22]).hideAllActionSheets();
     };
-    const items3 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" }), ];
+    const items3 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" })];
     const obj7 = { style: null, variant: "text-xs/normal", lineClamp: 1, children: null };
     obj7[0] = tmp.channelName;
     obj7[3] = tmp6;
@@ -111,7 +126,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   } else {
     const obj8 = { style: null, children: null };
     obj8[0] = tmp.channelButton;
-    const items4 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" }), ];
+    const items4 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" })];
     const obj9 = { style: null, variant: "text-xs/normal", lineClamp: 1, children: null };
     obj9[0] = tmp.channelName;
     obj9[3] = tmp6;
@@ -134,18 +149,34 @@ export default function UserProfileActivityVoiceChannel(guild) {
         const merged = Object.assign(closure_4);
         obj.userId = userId;
         return closure_1_1(closure_1_2[25])(obj);
-      }
+      },
     };
-    obj.openLazy(guild(onAction[24])(onAction[23], onAction.paths), "UserProfileActivityVoiceChannelUsers", obj, "stack");
+    obj.openLazy(
+      guild(onAction[24])(onAction[23], onAction.paths),
+      "UserProfileActivityVoiceChannelUsers",
+      obj,
+      "stack",
+    );
   };
-  const obj12 = { size: guild(onAction[27]).AvatarSizes.SIZE_16, totalCount: arr.length, names: arr.map((username) => username.username), children: null };
+  const obj12 = {
+    size: guild(onAction[27]).AvatarSizes.SIZE_16,
+    totalCount: arr.length,
+    names: arr.map((username) => username.username),
+    children: null,
+  };
   let substr = arr;
   if (arr.length > 3) {
     substr = arr.slice(0, 3);
   }
-  obj12[3] = substr.map((id) => closure_1_6(guild(onAction[27]).Avatar, { size: guild(onAction[27]).AvatarSizes.SIZE_16, channel, guildId: guild.id, user: id }, id.id));
+  obj12[3] = substr.map((id) =>
+    closure_1_6(
+      guild(onAction[27]).Avatar,
+      { size: guild(onAction[27]).AvatarSizes.SIZE_16, channel, guildId: guild.id, user: id },
+      id.id,
+    ),
+  );
   obj10[3] = tmp13(guild(onAction[26]).AvatarPile, obj12);
   items2[3] = tmp13(guild(onAction[16]).PressableOpacity, obj10);
   obj[1] = items2;
   return closure_7(newestAnalyticsLocation, obj);
-};
+}

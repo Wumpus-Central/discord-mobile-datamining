@@ -44,7 +44,7 @@ const pressable = createToggle.createPressable({
       hasTeenDefaults = tmp4;
     }
     return hasTeenDefaults;
-  }
+  },
 });
 let obj = {
   useTitle() {
@@ -82,7 +82,7 @@ let obj = {
       hasTeenDefaults = tmp4;
     }
     return hasTeenDefaults;
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupNonAdultSetting.tsx");
 

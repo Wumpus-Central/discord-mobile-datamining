@@ -15,7 +15,7 @@ export default function getItemSubtitleForMaxPlayers(arg0) {
     formatToPlainStringResult = intl.string(getSystemLocale.t.s1vQIL);
   }
   return formatToPlainStringResult;
-};
+}
 export const getItemSubtitleForMaxPlayersShort = function getItemSubtitleForMaxPlayersShort(arg0) {
   if (arg0 > 0) {
     const _HermesInternal = HermesInternal;

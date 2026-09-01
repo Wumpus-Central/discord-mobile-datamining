@@ -10,7 +10,17 @@ import { Permissions } from "../../../Constants.tsx";
 
 require = arg1;
 function getEmbeddedActivityJoinability(arg0) {
-  ({ userId, activity, application, channelId, currentUser, ChannelStore, VoiceStateStore, PermissionStore, GuildStore } = arg0);
+  ({
+    userId,
+    activity,
+    application,
+    channelId,
+    currentUser,
+    ChannelStore,
+    VoiceStateStore,
+    PermissionStore,
+    GuildStore,
+  } = arg0);
   if (null == userId) {
     return obj.NO_USER;
   } else {
@@ -72,7 +82,9 @@ function getEmbeddedActivityJoinability(arg0) {
                 if (afkChannelId === channel.id) {
                   return obj.IS_AFK_CHANNEL;
                 } else {
-                  const currentClientVoiceChannelId = VoiceStateStore.getCurrentClientVoiceChannelId(channel.getGuildId());
+                  const currentClientVoiceChannelId = VoiceStateStore.getCurrentClientVoiceChannelId(
+                    channel.getGuildId(),
+                  );
                   const obj2 = allowChannelAccess;
                   const isChannelFullResult = allowChannelAccess.isChannelFull(channel, VoiceStateStore, GuildStore);
                   if (PermissionStore.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel)) {
@@ -104,7 +116,30 @@ function getEmbeddedActivityJoinability(arg0) {
     }
   }
 }
-let obj = { CAN_JOIN: 0, [0]: "CAN_JOIN", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 1, [1]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", NO_CHANNEL_CONNECT_PERMISSION: 2, [2]: "NO_CHANNEL_CONNECT_PERMISSION", CHANNEL_FULL: 3, [3]: "CHANNEL_FULL", NO_CHANNEL: 4, [4]: "NO_CHANNEL", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 5, [5]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", ACTIVITY_NOT_SUPPORTED_ON_OS: 6, [6]: "ACTIVITY_NOT_SUPPORTED_ON_OS", ACTIVITY_AGE_GATED: 7, [7]: "ACTIVITY_AGE_GATED", NO_USER: 8, [8]: "NO_USER", IS_AFK_CHANNEL: 9, [9]: "IS_AFK_CHANNEL", NO_GUILD: 10, [10]: "NO_GUILD" };
+let obj = {
+  CAN_JOIN: 0,
+  [0]: "CAN_JOIN",
+  NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 1,
+  [1]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION",
+  NO_CHANNEL_CONNECT_PERMISSION: 2,
+  [2]: "NO_CHANNEL_CONNECT_PERMISSION",
+  CHANNEL_FULL: 3,
+  [3]: "CHANNEL_FULL",
+  NO_CHANNEL: 4,
+  [4]: "NO_CHANNEL",
+  ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 5,
+  [5]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS",
+  ACTIVITY_NOT_SUPPORTED_ON_OS: 6,
+  [6]: "ACTIVITY_NOT_SUPPORTED_ON_OS",
+  ACTIVITY_AGE_GATED: 7,
+  [7]: "ACTIVITY_AGE_GATED",
+  NO_USER: 8,
+  [8]: "NO_USER",
+  IS_AFK_CHANNEL: 9,
+  [9]: "IS_AFK_CHANNEL",
+  NO_GUILD: 10,
+  [10]: "NO_GUILD",
+};
 const result = require("set").fileFinishedImporting("modules/activities/utils/getEmbeddedActivityJoinability.tsx");
 
 export default getEmbeddedActivityJoinability;
@@ -123,5 +158,21 @@ export const useEmbeddedActivityJoinability = function useEmbeddedActivityJoinab
   const obj2 = userId(channelId[9]);
   const items1 = [application, closure_7, stateFromStores, isActivitiesEnabledForCurrentPlatform];
   const items2 = [activity, application, channelId, stateFromStores, isActivitiesEnabledForCurrentPlatform, userId];
-  return userId(channelId[9]).useStateFromStores(items1, () => closure_1_10({ userId, activity, application, channelId, currentUser: stateFromStores, isActivitiesEnabledForCurrentPlatform, ChannelStore: application, VoiceStateStore: closure_1_7, PermissionStore: stateFromStores, GuildStore: isActivitiesEnabledForCurrentPlatform }), items2);
+  return userId(channelId[9]).useStateFromStores(
+    items1,
+    () =>
+      closure_1_10({
+        userId,
+        activity,
+        application,
+        channelId,
+        currentUser: stateFromStores,
+        isActivitiesEnabledForCurrentPlatform,
+        ChannelStore: application,
+        VoiceStateStore: closure_1_7,
+        PermissionStore: stateFromStores,
+        GuildStore: isActivitiesEnabledForCurrentPlatform,
+      }),
+    items2,
+  );
 };

@@ -26,9 +26,11 @@ createToggle = {
   useDescription() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.zlA23F);
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SidechainCompressionSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/SidechainCompressionSetting.tsx",
+);
 
 export default createToggle;

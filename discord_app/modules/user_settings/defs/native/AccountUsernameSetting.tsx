@@ -19,7 +19,9 @@ createToggle = {
   parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountUsernameSettingTrailing() {
     const items = [closure_3];
-    return initialize.useStateFromStores(items, () => callback(table[6]).getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
+    return initialize.useStateFromStores(items, () =>
+      callback(table[6]).getUserTag(currentUser.getCurrentUser(), { decoration: "never" }),
+    );
   },
   useDescription: function useAccountUsernameSettingDescription() {
     let obj = useCurrentUserHasAutomodQuarantinedProfile;
@@ -39,13 +41,13 @@ createToggle = {
     }
     return tmp5;
   },
-  screen: createToggle
+  screen: createToggle,
 };
 createToggle = {
   route: require("ME").UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
   getComponent() {
     return UsernameStatusMessage /* UsernameStatusMessage */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountUsernameSetting.tsx");

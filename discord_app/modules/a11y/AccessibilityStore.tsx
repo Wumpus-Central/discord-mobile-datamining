@@ -93,14 +93,61 @@ function handleReducedMotionUpdated() {
 let closure_3 = ["fontScale"];
 const Accessibility = ME.Accessibility;
 const ThemeTypes = ME.ThemeTypes;
-({ MESSAGE_GROUP_SPACING: c10, DEFAULT_COMPACT_SPACING: unpackModuleId, DEFAULT_COZY_SPACING: closure_12 } = MESSAGE_GROUP_SPACING);
+({
+  MESSAGE_GROUP_SPACING: c10,
+  DEFAULT_COMPACT_SPACING: unpackModuleId,
+  DEFAULT_COZY_SPACING: closure_12,
+} = MESSAGE_GROUP_SPACING);
 let obj = { DEFAULT: "default", HIGH: "high" };
 obj = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };
-obj = { fontSize: Accessibility.FONT_SIZE_DEFAULT, zoom: Accessibility.ZOOM_DEFAULT, keyboardModeEnabled: false, contrastMode: obj.DEFAULT, colorblindMode: false, lowContrastMode: false, saturation: 1, contrast: 1, desaturateUserColors: false, forcedColorsModalSeen: false, keyboardNavigationExplainerModalSeen: false, messageGroupSpacing: null, systemPrefersReducedMotion: "no-preference", systemPrefersCrossfades: false, prefersReducedMotion: "auto", systemForcedColors: "none", syncForcedColors: true, systemPrefersContrast: "no-preference", alwaysShowLinkDecorations: false, roleStyle: "username", officialMessageStyle: "default", officialMessageStyleExplicitlySet: false, displayNameStylesEnabled: true, submitButtonEnabled: false, syncProfileThemeWithUserTheme: false, enableCustomCursor: true, switchIconsEnabled: false, appsButtonEnabled: true, expressionPickerFormat: obj.FLEXIBLE, condensePickerWhenNarrow: true, emojiButtonEnabled: true, gifButtonEnabled: true, stickerButtonEnabled: true, youBarNameplateAnimation: "animate-never", youBarAvatarDecoAnimation: "animate-never" };
-let closure_17 = { 12: "font-size-12", 14: "font-size-14", 15: "font-size-15", 16: "font-size-16", 18: "font-size-18", 20: "font-size-20", 24: "font-size-24" };
+obj = {
+  fontSize: Accessibility.FONT_SIZE_DEFAULT,
+  zoom: Accessibility.ZOOM_DEFAULT,
+  keyboardModeEnabled: false,
+  contrastMode: obj.DEFAULT,
+  colorblindMode: false,
+  lowContrastMode: false,
+  saturation: 1,
+  contrast: 1,
+  desaturateUserColors: false,
+  forcedColorsModalSeen: false,
+  keyboardNavigationExplainerModalSeen: false,
+  messageGroupSpacing: null,
+  systemPrefersReducedMotion: "no-preference",
+  systemPrefersCrossfades: false,
+  prefersReducedMotion: "auto",
+  systemForcedColors: "none",
+  syncForcedColors: true,
+  systemPrefersContrast: "no-preference",
+  alwaysShowLinkDecorations: false,
+  roleStyle: "username",
+  officialMessageStyle: "default",
+  officialMessageStyleExplicitlySet: false,
+  displayNameStylesEnabled: true,
+  submitButtonEnabled: false,
+  syncProfileThemeWithUserTheme: false,
+  enableCustomCursor: true,
+  switchIconsEnabled: false,
+  appsButtonEnabled: true,
+  expressionPickerFormat: obj.FLEXIBLE,
+  condensePickerWhenNarrow: true,
+  emojiButtonEnabled: true,
+  gifButtonEnabled: true,
+  stickerButtonEnabled: true,
+  youBarNameplateAnimation: "animate-never",
+  youBarAvatarDecoAnimation: "animate-never",
+};
+let closure_17 = {
+  12: "font-size-12",
+  14: "font-size-14",
+  15: "font-size-15",
+  16: "font-size-16",
+  18: "font-size-18",
+  20: "font-size-20",
+  24: "font-size-24",
+};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class AccessibilityStore extends DeviceSettingsStore {
-}
+class AccessibilityStore extends DeviceSettingsStore {}
 const prototype = AccessibilityStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   const self = this;
@@ -127,27 +174,27 @@ prototype["initialize"] = function initialize(arg0) {
 };
 Object.defineProperty(prototype, "fontScale", {
   get: function fontScale(arg0) {
-    return obj.fontSize / Accessibility.FONT_SIZE_DEFAULT * 100;
+    return (obj.fontSize / Accessibility.FONT_SIZE_DEFAULT) * 100;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "fontSize", {
   get: function fontSize() {
     return obj.fontSize;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isFontScaledUp", {
   get: function isFontScaledUp() {
     return obj.fontSize > Accessibility.FONT_SIZE_DEFAULT;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isFontScaledDown", {
   get: function isFontScaledDown() {
     return obj.fontSize < Accessibility.FONT_SIZE_DEFAULT;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "fontScaleClass", {
   get: function fontScaleClass() {
@@ -169,73 +216,73 @@ Object.defineProperty(prototype, "fontScaleClass", {
     }
     return combined;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "zoom", {
   get: function zoom() {
     return obj.zoom;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isZoomedIn", {
   get: function isZoomedIn() {
     return obj.zoom > Accessibility.ZOOM_DEFAULT;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isZoomedOut", {
   get: function isZoomedOut() {
     return obj.zoom < Accessibility.ZOOM_DEFAULT;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "keyboardModeEnabled", {
   get: function keyboardModeEnabled() {
     return obj.keyboardModeEnabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "colorblindMode", {
   get: function colorblindMode() {
     return obj.colorblindMode;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "lowContrastMode", {
   get: function lowContrastMode() {
     return obj.lowContrastMode;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "saturation", {
   get: function saturation(arg0) {
     return obj.saturation;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "contrast", {
   get: function contrast() {
     return obj.contrast;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "desaturateUserColors", {
   get: function desaturateUserColors() {
     return obj.desaturateUserColors;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "forcedColorsModalSeen", {
   get: function forcedColorsModalSeen() {
     return obj.forcedColorsModalSeen;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "keyboardNavigationExplainerModalSeen", {
   get: function keyboardNavigationExplainerModalSeen() {
     return obj.keyboardNavigationExplainerModalSeen;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "messageGroupSpacing", {
   get: function messageGroupSpacing() {
@@ -247,45 +294,45 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
     }
     return messageGroupSpacing;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingIncreased", {
   get: function isMessageGroupSpacingIncreased() {
     const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
     return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_11 : closure_12);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingDecreased", {
   get: function isMessageGroupSpacingDecreased() {
     const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
     return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_11 : closure_12);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isSubmitButtonEnabled", {
   get: function isSubmitButtonEnabled() {
     return obj.submitButtonEnabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "syncProfileThemeWithUserTheme", {
   get: function syncProfileThemeWithUserTheme() {
     return obj.syncProfileThemeWithUserTheme;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "systemPrefersReducedMotion", {
   get: function systemPrefersReducedMotion() {
     return obj.systemPrefersReducedMotion;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "rawPrefersReducedMotion", {
   get: function rawPrefersReducedMotion() {
     return obj.prefersReducedMotion;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "useReducedMotion", {
   get: function useReducedMotion() {
@@ -300,19 +347,19 @@ Object.defineProperty(prototype, "useReducedMotion", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "systemForcedColors", {
   get: function systemForcedColors() {
     return obj.systemForcedColors;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "syncForcedColors", {
   get: function syncForcedColors() {
     return obj.syncForcedColors;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "useForcedColors", {
   get: function useForcedColors() {
@@ -323,97 +370,97 @@ Object.defineProperty(prototype, "useForcedColors", {
     }
     return !tmp;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "systemPrefersContrast", {
   get: function systemPrefersContrast() {
     return obj.systemPrefersContrast;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "systemPrefersCrossfades", {
   get: function systemPrefersCrossfades() {
     return obj.systemPrefersCrossfades;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "alwaysShowLinkDecorations", {
   get: function alwaysShowLinkDecorations(arg0) {
     return obj.alwaysShowLinkDecorations;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "enableCustomCursor", {
   get: function enableCustomCursor() {
     return obj.enableCustomCursor;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "roleStyle", {
   get: function roleStyle() {
     return obj.roleStyle;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "officialMessageStyle", {
   get: function officialMessageStyle() {
     return obj.officialMessageStyle;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "displayNameStylesEnabled", {
   get: function displayNameStylesEnabled(arg0) {
     return obj.displayNameStylesEnabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isHighContrastModeEnabled", {
   get: function isHighContrastModeEnabled() {
     return obj.contrastMode === obj.HIGH;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isSwitchIconsEnabled", {
   get: function isSwitchIconsEnabled() {
     return obj.switchIconsEnabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isAppsButtonEnabled", {
   get: function isAppsButtonEnabled() {
     return obj.appsButtonEnabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "expressionPickerFormat", {
   get: function expressionPickerFormat() {
     return obj.expressionPickerFormat;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "condensePickerWhenNarrow", {
   get: function condensePickerWhenNarrow() {
     return obj.condensePickerWhenNarrow;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isEmojiButtonEnabled", {
   get: function isEmojiButtonEnabled() {
     return obj.emojiButtonEnabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isGifButtonEnabled", {
   get: function isGifButtonEnabled() {
     return obj.gifButtonEnabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isStickerButtonEnabled", {
   get: function isStickerButtonEnabled() {
     return obj.stickerButtonEnabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "animateYouBarNameplate", {
   get: function animateYouBarNameplate() {
@@ -427,7 +474,7 @@ Object.defineProperty(prototype, "animateYouBarNameplate", {
       return !this.useReducedMotion;
     }
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "animateYouBarAvatarDeco", {
   get: function animateYouBarAvatarDeco() {
@@ -441,19 +488,19 @@ Object.defineProperty(prototype, "animateYouBarAvatarDeco", {
       return !this.useReducedMotion;
     }
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "youBarNameplateAnimation", {
   get: function youBarNameplateAnimation() {
     return obj.youBarNameplateAnimation;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "youBarAvatarDecoAnimation", {
   get: function youBarAvatarDecoAnimation() {
     return obj.youBarAvatarDecoAnimation;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return obj;
@@ -540,15 +587,13 @@ let items = [
     try {
       delete tmp[tmp2];
       return arg0;
-    } catch (err) {
-    }
+    } catch (err) {}
   },
   (arg0) => {
     try {
       delete tmp[tmp2];
       return arg0;
-    } catch (err) {
-    }
+    } catch (err) {}
   },
   (arg0) => {
     obj = {};
@@ -573,7 +618,7 @@ let items = [
     obj.youBarNameplateAnimation = "animate-never";
     obj.youBarAvatarDecoAnimation = "animate-never";
     return obj;
-  }
+  },
 ];
 AccessibilityStore.migrations = items;
 const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
@@ -680,7 +725,9 @@ const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
       obj.systemPrefersContrast = systemPrefersContrast.systemPrefersContrast;
     }
   },
-  ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: function handleSystemPrefersReducedMotionChanged(systemPrefersReducedMotion) {
+  ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: function handleSystemPrefersReducedMotionChanged(
+    systemPrefersReducedMotion,
+  ) {
     if (obj.systemPrefersReducedMotion === systemPrefersReducedMotion.systemPrefersReducedMotion) {
       return false;
     } else {
@@ -690,7 +737,9 @@ const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
       handleReducedMotionUpdated();
     }
   },
-  ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: function handleSystemPrefersCrossfadesChanged(systemPrefersCrossfades) {
+  ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: function handleSystemPrefersCrossfadesChanged(
+    systemPrefersCrossfades,
+  ) {
     if (obj.systemPrefersCrossfades === systemPrefersCrossfades.systemPrefersCrossfades) {
       return false;
     } else {
@@ -712,7 +761,9 @@ const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
   ACCESSIBILITY_SET_SYNC_FORCED_COLORS: function handleSetSyncForcedColors(syncForcedColors) {
     obj.syncForcedColors = syncForcedColors.syncForcedColors;
   },
-  ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: function handleSetAlwaysShowLinkDecorations(alwaysShowLinkDecorations) {
+  ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: function handleSetAlwaysShowLinkDecorations(
+    alwaysShowLinkDecorations,
+  ) {
     obj = {};
     const merged = Object.assign(obj);
     obj.alwaysShowLinkDecorations = alwaysShowLinkDecorations.alwaysShowLinkDecorations;
@@ -841,7 +892,7 @@ const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
       }
     }
     obj.youBarAvatarDecoAnimation = str;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/a11y/AccessibilityStore.tsx");
 

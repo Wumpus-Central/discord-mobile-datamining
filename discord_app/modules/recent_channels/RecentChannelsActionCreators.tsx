@@ -10,7 +10,7 @@ function _bulkClearRecents() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -42,11 +42,15 @@ function _bulkClearRecents() {
               constants = 1;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback(closure_1_2[2]).updateUserGuildSettings(callback, (arg0) => {
-                const Timestamp = callback(tmp2[3]).Timestamp;
-                arg0.guildRecentsDismissedAt = Timestamp.fromDate(new Date());
-                return true;
-              }, callback(closure_1_2[2]).UserSettingsDelay.INFREQUENT_USER_ACTION);
+              obj1[0] = callback(closure_1_2[2]).updateUserGuildSettings(
+                callback,
+                (arg0) => {
+                  const Timestamp = callback(tmp2[3]).Timestamp;
+                  arg0.guildRecentsDismissedAt = Timestamp.fromDate(new Date());
+                  return true;
+                },
+                callback(closure_1_2[2]).UserSettingsDelay.INFREQUENT_USER_ACTION,
+              );
               return obj1;
             }
           } else if (arg0 === 1) {

@@ -70,4 +70,4 @@ export default function useCardGridLayout() {
     obj[3] = num3;
   }
   return obj;
-};
+}

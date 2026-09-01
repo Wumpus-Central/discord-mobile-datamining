@@ -10,10 +10,20 @@ const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsxs: closure_6, jsx: error } = jsxProd);
 createCacheKey = { container: { margin: 16, flex: 1, alignItems: "center", padding: 40 }, item: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: ThemesDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderWidth: 2,
+  borderColor: ThemesDefault.colors.BORDER_STRONG,
+  flex: 1,
+  alignItems: "center",
+  justifyContent: "center",
+  height: 400,
+};
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemSegmentedControl.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/design_system/native/UserSettingsDesignSystemSegmentedControl.tsx",
+);
 
 export default function UserSettingsDesignSystemSegmentedControl() {
   const tmp = callback(React.useState(0), 2);
@@ -66,10 +76,13 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     onLayout: React.useCallback((nativeEvent) => {
       first(nativeEvent.nativeEvent.layout.width);
     }, []),
-    children: null
+    children: null,
   };
   obj1 = { spacing: 24, children: null };
-  let items1 = [callback3(first(9762).SegmentedControl, { state: segmentedControlState }), callback3(first(9268).SegmentedControlPages, { state: segmentedControlState }), ];
+  let items1 = [
+    callback3(first(9762).SegmentedControl, { state: segmentedControlState }),
+    callback3(first(9268).SegmentedControlPages, { state: segmentedControlState }),
+  ];
   const obj2 = { spacing: 8, direction: "horizontal", children: null };
   const items2 = [
     callback3(first(4928).Button, {
@@ -82,7 +95,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
         callback(sum);
         const AccessibilityAnnouncer = first(item[12]).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce("Tab added, " + sum + " tabs", "polite");
-      }
+      },
     }),
     callback3(first(4928).Button, {
       text: "Remove Tab",
@@ -94,8 +107,8 @@ export default function UserSettingsDesignSystemSegmentedControl() {
         callback(diff);
         const AccessibilityAnnouncer = first(item[12]).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce("Tab removed, " + diff + " tabs", "polite");
-      }
-    })
+      },
+    }),
   ];
   obj2[2] = items2;
   items1[2] = callback2(first(4926).Stack, obj2);
@@ -103,4 +116,4 @@ export default function UserSettingsDesignSystemSegmentedControl() {
   obj[2] = callback2(first(4926).Stack, obj1);
   obj[0] = callback3(closure_4, obj);
   return callback3(closure_5, obj);
-};
+}

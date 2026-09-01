@@ -42,5 +42,9 @@ export default function useExpressionPickerTabData(arg0) {
     return { expressionPickerTabsSorted: sorted, expressionPickerTabStrings: sorted.map((label) => label.label) };
   }, items);
   const prop = memo.expressionPickerTabsSorted;
-  return { expressionPickerSelectedIndex: num, expressionPickerViewType: num < prop.length ? prop[num] : prop[0].viewType, expressionPickerTabStrings: memo.expressionPickerTabStrings };
-};
+  return {
+    expressionPickerSelectedIndex: num,
+    expressionPickerViewType: num < prop.length ? prop[num] : prop[0].viewType,
+    expressionPickerTabStrings: memo.expressionPickerTabStrings,
+  };
+}

@@ -53,7 +53,7 @@ export const useHandleUseNow = function useHandleUseNow(onSuccess) {
       } else {
         tmp2();
       }
-    }, items1)
+    }, items1),
   };
   items1 = [tmp4, onSuccess];
   return obj;

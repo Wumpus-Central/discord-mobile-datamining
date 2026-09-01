@@ -25,18 +25,23 @@ export default function useGuildPowerupOnToggle(arg0, arg1) {
         callback3(undefined);
         const tmp6 = arg0 ? tmp5.enablePowerupForGuild : tmp5.disablePowerupForGuild;
         const tmp6Result = arg0 ? tmp5.enablePowerupForGuild : tmp5.disablePowerupForGuild(callback, tmp.skuId);
-        return arg0 ? tmp5.enablePowerupForGuild : tmp5.disablePowerupForGuild(callback, tmp.skuId).catch((body) => {
-          body = body.body;
-          let message;
-          if (body != null) {
-            message = body.message;
-          }
-          closure_3(message);
-          throw body;
-        }).finally(() => {
-          callback(false);
-        });
+        return arg0
+          ? tmp5.enablePowerupForGuild
+          : tmp5
+              .disablePowerupForGuild(callback, tmp.skuId)
+              .catch((body) => {
+                body = body.body;
+                let message;
+                if (body != null) {
+                  message = body.message;
+                }
+                closure_3(message);
+                throw body;
+              })
+              .finally(() => {
+                callback(false);
+              });
       }
-    }, items)
+    }, items),
   };
-};
+}

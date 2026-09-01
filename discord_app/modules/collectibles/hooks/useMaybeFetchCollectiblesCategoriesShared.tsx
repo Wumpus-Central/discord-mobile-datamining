@@ -9,9 +9,16 @@ import { initialize } from "../../../../discord_common/js/packages/flux/index.ts
 const require = arg1;
 ({ useEffect: c3, useCallback: c4 } = noop);
 ({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: error, COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS: closure_8 } = items);
-let result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategoriesShared.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/collectibles/hooks/useMaybeFetchCollectiblesCategoriesShared.tsx",
+);
 
-export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchCollectiblesCategoriesShared(arg0, noOp, arg2, skipFetch) {
+export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchCollectiblesCategoriesShared(
+  arg0,
+  noOp,
+  arg2,
+  skipFetch,
+) {
   const _require = arg0;
   dependencyMap = noOp;
   const callback = arg2;
@@ -29,21 +36,24 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
   let items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
   const items1 = [closure_6];
-  const tmp2 = callback(require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
-    const items = [, , , , , , ];
-    ({ isFetchingCategories: arr[0], lastFetchOptions: arr[1], error: arr[2], lastErrorTimestamp } = closure_6);
-    if (lastErrorTimestamp == null) {
-      lastErrorTimestamp = 0;
-    }
-    items[3] = lastErrorTimestamp;
-    let num = tmp.lastSuccessfulFetch;
-    if (num == null) {
-      num = 0;
-    }
-    items[4] = num;
-    ({ categories: arr[5], skipNumCategories: arr[6] } = closure_6);
-    return items;
-  }), 7);
+  const tmp2 = callback(
+    require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
+      const items = [, , , , , ,];
+      ({ isFetchingCategories: arr[0], lastFetchOptions: arr[1], error: arr[2], lastErrorTimestamp } = closure_6);
+      if (lastErrorTimestamp == null) {
+        lastErrorTimestamp = 0;
+      }
+      items[3] = lastErrorTimestamp;
+      let num = tmp.lastSuccessfulFetch;
+      if (num == null) {
+        num = 0;
+      }
+      items[4] = num;
+      ({ categories: arr[5], skipNumCategories: arr[6] } = closure_6);
+      return items;
+    }),
+    7,
+  );
   closure_5 = tmp3;
   closure_6 = tmp4;
   closure_7 = tmp5;
@@ -94,7 +104,7 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
       obj.includeBundles = true;
       obj.skipNumCategories = closure_9;
       const collectiblesCategories = callback(noOp[7]).fetchCollectiblesCategories(obj, undefined, closure_2);
-    }, items3)
+    }, items3),
   };
   return obj;
 };

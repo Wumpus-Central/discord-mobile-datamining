@@ -6,7 +6,9 @@ import { CONSOLE_VOICE_PLATFORMS } from "GameConsoleConstants.tsx";
 import { ActivityTypes } from "../../Constants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_console/useConsoleConnectedAccountForVoiceUpsell.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/game_console/useConsoleConnectedAccountForVoiceUpsell.tsx",
+);
 
 export default function useConsoleConnectedAccountForVoiceUpsell() {
   const items = [closure_4];
@@ -24,7 +26,12 @@ export default function useConsoleConnectedAccountForVoiceUpsell() {
   });
   const obj = found(589);
   const items1 = [closure_5];
-  const stateFromStores1 = found(589).useStateFromStores(items1, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo() || null != awaitingRemoteSessionInfo.getRemoteSessionId());
+  const stateFromStores1 = found(589).useStateFromStores(
+    items1,
+    () =>
+      null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo() ||
+      null != awaitingRemoteSessionInfo.getRemoteSessionId(),
+  );
   const obj2 = found(589);
   const items2 = [closure_3];
   const stateFromStores2 = found(589).useStateFromStores(items2, () => {
@@ -54,4 +61,4 @@ export default function useConsoleConnectedAccountForVoiceUpsell() {
     }
   }
   return tmp3;
-};
+}

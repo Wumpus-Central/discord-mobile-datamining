@@ -5,8 +5,7 @@ import closure_0 from "../../stores/GuildStore.tsx";
 
 const map = new Map();
 const Store = initializeDefault.Store;
-class GuildRoleConnectionsConfigurationStore extends Store {
-}
+class GuildRoleConnectionsConfigurationStore extends Store {}
 const prototype = GuildRoleConnectionsConfigurationStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_0);
@@ -18,7 +17,7 @@ GuildRoleConnectionsConfigurationStore.displayName = "GuildRoleConnectionsConfig
 const guildRoleConnectionsConfigurationStore = new GuildRoleConnectionsConfigurationStore(dispatcherDefault, {
   GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function handleFetchSuccess(roleId) {
     const result = map.set(roleId.roleId, roleId.roleConnectionConfigurations);
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/connections/GuildRoleConnectionsConfigurationStore.tsx");
 

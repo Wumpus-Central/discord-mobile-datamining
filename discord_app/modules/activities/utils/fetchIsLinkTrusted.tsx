@@ -11,7 +11,7 @@ function _fetchIsLinkTrusted() {
     c3 = 0;
     c5 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();

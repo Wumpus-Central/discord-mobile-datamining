@@ -6,4 +6,4 @@ let result = set.fileFinishedImporting("modules/chat/native/placeholder/getChatP
 export default function getChatPlaceholderRowWidth(arg0) {
   const result = 10000 * Math.sin(arg0);
   return 40 * (result - Math.floor(result)) + 60;
-};
+}

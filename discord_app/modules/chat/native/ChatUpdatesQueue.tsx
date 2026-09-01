@@ -49,7 +49,7 @@ Object.defineProperty(prototype, "isBlocking", {
     }
     return hasUpdatesResult;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["addBlocker"] = function addBlocker(blockerId) {
   if (null != blockerId) {

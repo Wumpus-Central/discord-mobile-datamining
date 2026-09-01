@@ -28,7 +28,7 @@ function _fetchSubscriptionPlansForSKU() {
     c10 = 0;
     c11 = 0;
     c9 = 0;
-    return (function*(arg0, arg1, arg2, arg3, arg4, arg5) {
+    return (function* (arg0, arg1, arg2, arg3, arg4, arg5) {
       if (c11 === 2) {
         c11 = 3;
         HermesBuiltin.throwTypeError();
@@ -172,13 +172,22 @@ function _fetchSubscriptionPlansForSKU() {
 let result = require("set").fileFinishedImporting("actions/SubscriptionPlanActionCreators.tsx");
 
 export { fetchSubscriptionPlansForSKU };
-export const fetchSubscriptionPlansBySKUs = function fetchSubscriptionPlansBySKUs(fetchedSKUIDs, country, APPLE_ADVANCED_COMMERCE) {
+export const fetchSubscriptionPlansBySKUs = function fetchSubscriptionPlansBySKUs(
+  fetchedSKUIDs,
+  country,
+  APPLE_ADVANCED_COMMERCE,
+) {
   closure_0 = country;
   closure_1 = APPLE_ADVANCED_COMMERCE;
   const found = fetchedSKUIDs.filter((arg0) => arg0 !== constants.NONE);
   return Promise.all(found.map((arg0) => closure_1_8(arg0, closure_0, undefined, undefined, undefined, closure_1)));
 };
-export const fetchPremiumSubscriptionPlans = function fetchPremiumSubscriptionPlans(country, arg1, arg2, APPLE_ADVANCED_COMMERCE) {
+export const fetchPremiumSubscriptionPlans = function fetchPremiumSubscriptionPlans(
+  country,
+  arg1,
+  arg2,
+  APPLE_ADVANCED_COMMERCE,
+) {
   closure_0 = country;
   closure_1 = arg1;
   closure_2 = arg2;

@@ -20,7 +20,15 @@ class BlankAudience {
   }
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ rowContainer: { flex: 1, flexDirection: "row", marginVertical: 16, paddingHorizontal: 4, justifyContent: "space-between" } });
+let closure_6 = createCacheKey.createStyles({
+  rowContainer: {
+    flex: 1,
+    flexDirection: "row",
+    marginVertical: 16,
+    paddingHorizontal: 4,
+    justifyContent: "space-between",
+  },
+});
 const memoResult = importAllResult.memo((theme) => {
   ({ channel: importDefault, participants, renderBlankAudience } = theme);
   if (renderBlankAudience === undefined) {
@@ -31,14 +39,16 @@ const memoResult = importAllResult.memo((theme) => {
   if (renderBlankAudience) {
     num = MAX_AUDIENCE_ROW_LIMIT - participants.length;
   }
-  const items = [callback2().rowContainer, ];
+  const items = [callback2().rowContainer];
   let str = "center";
   if (renderBlankAudience) {
     str = "space-between";
   }
   let obj = { style: items, children: null };
   items[1] = { justifyContent: str };
-  const items1 = [participants.map((id) => closure_1_4(closure_1_0(theme[6]), { theme, channel: closure_0, participant: id }, id.id)), ];
+  const items1 = [
+    participants.map((id) => closure_1_4(closure_1_0(theme[6]), { theme, channel: closure_0, participant: id }, id.id)),
+  ];
   let tmp5 = null;
   if (num > 0) {
     obj = { count: null };

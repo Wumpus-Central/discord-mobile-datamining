@@ -32,5 +32,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "UPLOAD_ITEM_CANCEL_REQUEST", file: found, itemId };
     obj.dispatch(obj);
-  }
+  },
 };

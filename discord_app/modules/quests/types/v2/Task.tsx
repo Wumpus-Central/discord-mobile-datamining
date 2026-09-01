@@ -65,7 +65,7 @@ export const questTaskConfigV2FromServer = function questTaskConfigV2FromServer(
     const entries = Object.entries(task_config_v2.tasks);
     const mapped = entries.map((arg0) => {
       [tmp, tmp2] = arg0;
-      const items = [tmp, ];
+      const items = [tmp];
       const type = tmp2.type;
       if (callback(table[1]).FirstPartyQuestTaskTypes.WATCH_VIDEO === type) {
         let obj = { type: null, target: null, assets: null, messages: null };
@@ -111,7 +111,14 @@ export const questTaskConfigV2FromServer = function questTaskConfigV2FromServer(
         ({ target: obj3[1], external_ids: obj3[2], applications: obj3[3] } = tmp2);
         tmp5 = obj5;
       } else if (tmp3(tmp4[1]).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME === type) {
-        obj = { type: null, target: null, eventName: null, messages: null, applications: null, accountLinkInstructions: null };
+        obj = {
+          type: null,
+          target: null,
+          eventName: null,
+          messages: null,
+          applications: null,
+          accountLinkInstructions: null,
+        };
         obj[0] = tmp3(tmp4[1]).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME;
         ({ target: obj[1], event_name: obj[2] } = tmp2);
         const obj6 = { taskTitle: null, taskDescription: null };
@@ -139,10 +146,12 @@ export const questTaskConfigV2FromServer = function questTaskConfigV2FromServer(
     });
     let obj = { tasks: null, joinOperator: null };
     const _Object2 = Object;
-    obj[0] = Object.fromEntries(mapped.filter((arg0) => {
-      [, tmp] = arg0;
-      return null !== tmp;
-    }));
+    obj[0] = Object.fromEntries(
+      mapped.filter((arg0) => {
+        [, tmp] = arg0;
+        return null !== tmp;
+      }),
+    );
     obj[1] = task_config_v2.join_operator;
     return obj;
   } catch (err) {

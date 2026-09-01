@@ -40,7 +40,8 @@ export default {
         set.delete(nonce);
         callback(arg0);
       });
-      const Commands = require("../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx").Commands;
+      const Commands =
+        require("../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx").Commands;
       Commands.flushText(arg0, nonce);
     }
   },
@@ -98,5 +99,5 @@ export default {
       const _JSON = JSON;
       Commands.replaceRange(arg0, _location, length, text, JSON.stringify(nodes), flag, editId);
     }
-  }
+  },
 };

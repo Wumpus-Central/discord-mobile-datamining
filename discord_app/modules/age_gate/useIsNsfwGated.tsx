@@ -10,17 +10,23 @@ export default function useIsNsfwGated(nsfw) {
   const _require = nsfw;
   nsfw = nsfw.nsfw;
   const items = [closure_3];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    currentUser = currentUser.getCurrentUser();
-    let nsfwAllowed;
-    if (currentUser != null) {
-      nsfwAllowed = currentUser.nsfwAllowed;
-    }
-    return nsfwAllowed;
-  });
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      currentUser = currentUser.getCurrentUser();
+      let nsfwAllowed;
+      if (currentUser != null) {
+        nsfwAllowed = currentUser.nsfwAllowed;
+      }
+      return nsfwAllowed;
+    },
+  );
   const obj = initialize;
   const items1 = [closure_2];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_2.didAgree(nsfw.guild_id));
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => closure_1_2.didAgree(nsfw.guild_id),
+  );
   let tmp3 = !stateFromStores1;
   if (nsfw) {
     if (stateFromStores1) {
@@ -29,4 +35,4 @@ export default function useIsNsfwGated(nsfw) {
     nsfw = tmp3;
   }
   return nsfw;
-};
+}

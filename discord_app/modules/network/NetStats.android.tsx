@@ -46,7 +46,26 @@ function updateNetworkUsage() {
 }
 ({ NativeModules: c4, AppState } = get_ActivityIndicator);
 let closure_9 = new timestampDefault("NetStats");
-let closure_10 = { signalStrengthLevel: null, isNetworkRoaming: false, cellularReceiveBytes: 0, cellularSendBytes: 0, totalReceiveBytes: 0, totalSendBytes: 0, uidReceiveBytes: 0, uidSendBytes: 0, socketBytesReceived: 0, otaBytesReceived: 0, otaNumRequests: 0, xhrBytesReceived: 0, xhrNumRequests: 0, frescoBytesReceived: 0, frescoNumRequests: 0, downloadBytesReceived: 0, downloadNumRequests: 0, mediaPlayerBytesReceived: 0 };
+let closure_10 = {
+  signalStrengthLevel: null,
+  isNetworkRoaming: false,
+  cellularReceiveBytes: 0,
+  cellularSendBytes: 0,
+  totalReceiveBytes: 0,
+  totalSendBytes: 0,
+  uidReceiveBytes: 0,
+  uidSendBytes: 0,
+  socketBytesReceived: 0,
+  otaBytesReceived: 0,
+  otaNumRequests: 0,
+  xhrBytesReceived: 0,
+  xhrNumRequests: 0,
+  frescoBytesReceived: 0,
+  frescoNumRequests: 0,
+  downloadBytesReceived: 0,
+  downloadNumRequests: 0,
+  mediaPlayerBytesReceived: 0,
+};
 let c11 = null;
 let obj = { type: require("configure").NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
 let c13 = null;
@@ -94,15 +113,17 @@ class EventTracker {
     obj.trackExistingEvents = function trackExistingEvents() {
       if (obj.existingEvents.length > 0) {
         let result = closure_1_6.submitEventsImmediately(tmp.existingEvents);
-        result.then(() => {
-          closure_1_9.fileOnly("Successfully logged existing network usage events", closure_0.existingEvents);
-          closure_0.existingEvents = [];
-          const result = closure_0.writeExistingEventStorage();
-        }).catch((status) => {
-          if (tmp) {
-            closure_1_9.error("Failed to log log existing network usage events", closure_0.existingEvents, status);
-          }
-        });
+        result
+          .then(() => {
+            closure_1_9.fileOnly("Successfully logged existing network usage events", closure_0.existingEvents);
+            closure_0.existingEvents = [];
+            const result = closure_0.writeExistingEventStorage();
+          })
+          .catch((status) => {
+            if (tmp) {
+              closure_1_9.error("Failed to log log existing network usage events", closure_0.existingEvents, status);
+            }
+          });
         const nextPromise = result.then(() => {
           closure_1_9.fileOnly("Successfully logged existing network usage events", closure_0.existingEvents);
           closure_0.existingEvents = [];
@@ -141,7 +162,7 @@ prototype["handleAppStateChange"] = function handleAppStateChange(arg0) {
 };
 prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -213,7 +234,7 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
 };
 prototype["track"] = function track() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -264,17 +285,19 @@ prototype["track"] = function track() {
         } else if (arg0 !== 2) {
           items = [arg1];
           let result = closure_1_6.submitEventsImmediately(items);
-          result.then(() => {
-            closure_2_9.fileOnly("Successfully tracked latest network usage", items);
-            const result = items.writeExistingEventStorage();
-          }).catch((status) => {
-            if (!tmp) {
-              closure_2_9.error("Failed to track latest network usage", items, status);
-            }
-            const existingEvents = items.existingEvents;
-            existingEvents.push(items[0]);
-            const result = items.writeExistingEventStorage();
-          });
+          result
+            .then(() => {
+              closure_2_9.fileOnly("Successfully tracked latest network usage", items);
+              const result = items.writeExistingEventStorage();
+            })
+            .catch((status) => {
+              if (!tmp) {
+                closure_2_9.error("Failed to track latest network usage", items, status);
+              }
+              const existingEvents = items.existingEvents;
+              existingEvents.push(items[0]);
+              const result = items.writeExistingEventStorage();
+            });
           const nextPromise = result.then(() => {
             closure_2_9.fileOnly("Successfully tracked latest network usage", items);
             const result = items.writeExistingEventStorage();
@@ -292,7 +315,7 @@ prototype["track"] = function track() {
   })();
 };
 prototype["getQueuedEvent"] = function getQueuedEvent() {
-  return callback(function*() {
+  return callback(function* () {
     closure_4 = tmp2;
     closure_1_19();
     const obj7 = closure_1_1(closure_1_2[13]);

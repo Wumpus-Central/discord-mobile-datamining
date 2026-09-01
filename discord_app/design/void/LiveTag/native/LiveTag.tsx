@@ -11,7 +11,15 @@ import set from "../../../../utils/PlatformUtils.tsx";
 require = arg1;
 noopAll;
 createCacheKey = { tag: null, tagText: null };
-createCacheKey = { paddingHorizontal: 6, paddingVertical: 2, borderRadius: ThemesDefault.radii.round, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.RED_400 };
+createCacheKey = {
+  paddingHorizontal: 6,
+  paddingVertical: 2,
+  borderRadius: ThemesDefault.radii.round,
+  overflow: "hidden",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.unsafe_rawColors.RED_400,
+};
 createCacheKey[0] = createCacheKey;
 const obj1 = { textAlign: "center", color: ThemesDefault.unsafe_rawColors.WHITE, marginTop: null };
 let num = 0;
@@ -33,5 +41,9 @@ export default function LiveTag(arg0) {
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t.dI3q4h).toUpperCase();
   obj[1] = jsx(Text.Text, { variant: "text-xs/bold", style: items1, lineClamp: 1, allowFontScaling, children: null });
-  return <View variant="text-xs/bold" style={items1} lineClamp={1} allowFontScaling={allowFontScaling}>{null}</View>;
-};
+  return (
+    <View variant="text-xs/bold" style={items1} lineClamp={1} allowFontScaling={allowFontScaling}>
+      {null}
+    </View>
+  );
+}

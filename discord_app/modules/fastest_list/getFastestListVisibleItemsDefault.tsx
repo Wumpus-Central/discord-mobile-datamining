@@ -61,4 +61,4 @@ export default function getFastestListVisibleItemsDefault(arg0) {
     }
     return obj;
   }
-};
+}

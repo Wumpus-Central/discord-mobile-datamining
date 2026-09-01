@@ -9,8 +9,7 @@ const map1 = new Map();
 const map2 = new Map();
 let c6 = false;
 const Store = initializeDefault.Store;
-class ContentInventoryStore extends Store {
-}
+class ContentInventoryStore extends Store {}
 const prototype = ContentInventoryStore.prototype;
 prototype["getFeeds"] = function getFeeds() {
   return map;
@@ -88,7 +87,7 @@ const contentInventoryStore = new ContentInventoryStore(dispatcherDefault, {
   },
   CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING: function handleDebugToggleImpressionCapping() {
     closure_6 = !closure_6;
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/content_inventory/ContentInventoryStore.tsx");
 

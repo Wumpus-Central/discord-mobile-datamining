@@ -64,13 +64,29 @@ function BalanceWidgetPillSection() {
       callback2(paths[13]).hideActionSheet();
     };
     obj[2] = obj1;
-    obj.openLazy(() => callback(paths[15])(paths[14], paths.paths).then((arg0) => arg0.default), "OrbsFlowTestModalBalanceWidgetMenuKey", obj);
+    obj.openLazy(
+      () => callback(paths[15])(paths[14], paths.paths).then((arg0) => arg0.default),
+      "OrbsFlowTestModalBalanceWidgetMenuKey",
+      obj,
+    );
   }, items1);
   let obj = { spacing: 16, style: tmp.container, children: null };
   obj = { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Pill" };
-  const items2 = [callback2(first(first1[11]).Text, obj), callback2(first(first1[17]).TextInput, { value: first1, onChange: callback, placeholder: "Enter balance amount", keyboardType: "numeric" }), callback2(first(first1[18]).Button, { text: "Apply Balance", variant: "primary", onPress: callback1 }), ];
+  const items2 = [
+    callback2(first(first1[11]).Text, obj),
+    callback2(first(first1[17]).TextInput, {
+      value: first1,
+      onChange: callback,
+      placeholder: "Enter balance amount",
+      keyboardType: "numeric",
+    }),
+    callback2(first(first1[18]).Button, { text: "Apply Balance", variant: "primary", onPress: callback1 }),
+  ];
   obj = { style: tmp.balancePillContainer, children: null };
-  const items3 = [callback2(first(first1[19]).BalanceWidgetPill, { balance: first }), callback2(first(first1[20]).BalanceWidgetPillButton, { balance: first, onPress: callback2 })];
+  const items3 = [
+    callback2(first(first1[19]).BalanceWidgetPill, { balance: first }),
+    callback2(first(first1[20]).BalanceWidgetPillButton, { balance: first, onPress: callback2 }),
+  ];
   obj[1] = items3;
   items2[3] = callback3(closure_6, obj);
   obj[2] = items2;
@@ -81,7 +97,11 @@ function OrbsFlowTest() {
   let obj = { children: null };
   obj = { style: callback4().wrap, contentContainerStyle: obj, children: null };
   obj = { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right };
-  const items = [callback2(BalanceWidgetMenuSection, {}), callback2(BalanceWidgetPillSection, {}), callback2(OrbCheckoutMenuDefault, {})];
+  const items = [
+    callback2(BalanceWidgetMenuSection, {}),
+    callback2(BalanceWidgetPillSection, {}),
+    callback2(OrbCheckoutMenuDefault, {}),
+  ];
   obj[2] = items;
   obj[0] = callback3(closure_5, obj);
   return callback2(Layer.LayerScope, obj);
@@ -96,7 +116,12 @@ obj[0] = obj;
 createNativeStackNavigator = { padding: ThemesDefault.space.PX_16 };
 obj[1] = createNativeStackNavigator;
 obj[2] = { marginBottom: 8 };
-createCacheKey = { flexDirection: "row", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  flexDirection: "row",
+  justifyContent: "center",
+  marginBottom: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_16,
+};
 obj[3] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function OrbsFlowTestModal() {
@@ -111,20 +136,20 @@ const memoResult = importAllResult.memo(function OrbsFlowTestModal() {
           return callback2(callback(table[6]).GenericHeaderTitle, { title: children.children });
         },
         headerLeft: callback(closure_1_2[6]).getRenderModalCloseImage(navigation.navigation),
-        headerTitleAlign: "center"
+        headerTitleAlign: "center",
       };
       let merged = Object.assign(callback);
       let merged1 = Object.assign(closure_1_1(closure_1_2[7])());
       return obj;
     },
-    children: callback2(closure_9.Screen, obj)
+    children: callback2(closure_9.Screen, obj),
   };
   obj = {
     name: "OrbsFlowTest",
     options() {
       return { title: "Orbs Flow Test" };
     },
-    component: OrbsFlowTest
+    component: OrbsFlowTest,
   };
   return callback2(closure_9.Navigator, obj);
 });

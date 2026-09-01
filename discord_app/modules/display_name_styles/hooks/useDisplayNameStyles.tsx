@@ -19,7 +19,9 @@ export default function useDisplayNameStyles() {
     ignoreDisabledStylesSetting = false;
   }
   let stateFromStores;
-  const displayNameStylesEnabled = require(stateFromStores[3]).useDisplayNameStylesEnabled({ location: "useDisplayNameStyles" });
+  const displayNameStylesEnabled = require(stateFromStores[3]).useDisplayNameStylesEnabled({
+    location: "useDisplayNameStyles",
+  });
   const obj2 = require(stateFromStores[3]);
   const tmp = require;
   const tmp2 = stateFromStores;
@@ -82,4 +84,4 @@ export default function useDisplayNameStyles() {
       displayNameStyles = displayNameStyles1;
     }
   }
-};
+}

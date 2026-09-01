@@ -59,4 +59,4 @@ export default function getNavigationModalPresentation() {
   }
   obj[1] = tmp4;
   return obj;
-};
+}

@@ -39,15 +39,21 @@ function saveBenefitChannels(benefitChannels) {
 }
 let closure_2 = CreatorMonetizationRestrictions.DefaultCreatorMonetizationRestrictions;
 let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
-const secondaryIndexMap = new version.SecondaryIndexMap((guild_id) => {
-  const items = ["guild:" + guild_id.guild_id, ...prop.map(makeGroupListingIndexSubscriptionListingTag)];
-  prop = guild_id.subscription_listings_ids;
-  return items;
-}, (id) => id.id);
-const secondaryIndexMap1 = new version.SecondaryIndexMap((application_id) => {
-  const items = ["application:" + application_id.application_id, "plan:" + application_id.subscription_plans[0].id];
-  return items;
-}, (id) => id.id);
+const secondaryIndexMap = new version.SecondaryIndexMap(
+  (guild_id) => {
+    const items = ["guild:" + guild_id.guild_id, ...prop.map(makeGroupListingIndexSubscriptionListingTag)];
+    prop = guild_id.subscription_listings_ids;
+    return items;
+  },
+  (id) => id.id,
+);
+const secondaryIndexMap1 = new version.SecondaryIndexMap(
+  (application_id) => {
+    const items = ["application:" + application_id.application_id, "plan:" + application_id.subscription_plans[0].id];
+    return items;
+  },
+  (id) => id.id,
+);
 let closure_7 = {};
 let set = new Set();
 let closure_9 = {};
@@ -58,10 +64,11 @@ const map = new Map();
 const map1 = new Map();
 let closure_19 = [];
 const Store = initializeDefault.Store;
-class GuildRoleSubscriptionsStore extends Store {
-}
+class GuildRoleSubscriptionsStore extends Store {}
 const prototype = GuildRoleSubscriptionsStore.prototype;
-prototype["getSubscriptionGroupListingsForGuildFetchState"] = function getSubscriptionGroupListingsForGuildFetchState(guildId) {
+prototype["getSubscriptionGroupListingsForGuildFetchState"] = function getSubscriptionGroupListingsForGuildFetchState(
+  guildId,
+) {
   let NOT_FETCHED = table[guildId];
   if (NOT_FETCHED == null) {
     NOT_FETCHED = obj.NOT_FETCHED;
@@ -77,11 +84,12 @@ prototype["getSubscriptionGroupListing"] = function getSubscriptionGroupListing(
 prototype["getSubscriptionGroupListingsForGuild"] = function getSubscriptionGroupListingsForGuild(arg0) {
   return secondaryIndexMap.values("guild:" + arg0);
 };
-prototype["getSubscriptionGroupListingForSubscriptionListing"] = function getSubscriptionGroupListingForSubscriptionListing(createSubscription) {
-  const values = secondaryIndexMap.values("subscription_listing:" + createSubscription);
-  _modDef38(values.length <= 1, "Found multiple group listings for listing");
-  return values[0];
-};
+prototype["getSubscriptionGroupListingForSubscriptionListing"] =
+  function getSubscriptionGroupListingForSubscriptionListing(createSubscription) {
+    const values = secondaryIndexMap.values("subscription_listing:" + createSubscription);
+    _modDef38(values.length <= 1, "Found multiple group listings for listing");
+    return values[0];
+  };
 prototype["getSubscriptionListing"] = function getSubscriptionListing(editStateId) {
   return secondaryIndexMap1.get(editStateId);
 };
@@ -228,7 +236,7 @@ obj = {
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED: function handleFetchRestrictionsAborted(guildId) {
     closure_12[guildId.guildId] = obj.NOT_FETCHED;
-  }
+  },
 };
 const guildRoleSubscriptionsStore = new GuildRoleSubscriptionsStore(dispatcherDefault, obj);
 let result = set.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx");

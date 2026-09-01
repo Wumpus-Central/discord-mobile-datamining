@@ -35,7 +35,7 @@ export default function useShowConnectedUserLimit(channel) {
     num2 = 0;
   }
   return num2 > 0 && !locked && !selected;
-};
+}
 export const useConnectedUserLimit = function useConnectedUserLimit(arg0) {
   ({ channel, video, considerMaxStageVoiceUserLimit } = arg0);
   if (considerMaxStageVoiceUserLimit === undefined) {

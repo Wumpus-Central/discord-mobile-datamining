@@ -14,7 +14,9 @@ import { Permissions } from "../../../../../../../Constants.tsx";
 import { InviteTypes } from "../../../../../../instant_invite/Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx",
+);
 
 export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(code, closure_2) {
   const tmp = callback(code.split("/"), 2);

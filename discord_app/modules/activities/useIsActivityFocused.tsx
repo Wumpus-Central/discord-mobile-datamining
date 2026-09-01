@@ -26,7 +26,7 @@ export default function useIsActivityFocused(arg0) {
     }
     return tmp3;
   });
-};
+}
 export const isActivityFocused = function isActivityFocused(channelId) {
   ({ ChannelRTCStore, EmbeddedActivitiesStore } = channelId);
   const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channelId.channelId);

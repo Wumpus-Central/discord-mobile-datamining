@@ -15,11 +15,11 @@ class GuildRoomManager extends tmp2 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       VOICE_STATE_UPDATES(arg0) {
-            return applyArgumentsResult.handleVoiceStateUpdates(arg0);
-          },
+        return applyArgumentsResult.handleVoiceStateUpdates(arg0);
+      },
       CONNECTION_RESUMED() {
-            return applyArgumentsResult.handleConnectionResumed();
-          }
+        return applyArgumentsResult.handleConnectionResumed();
+      },
     };
     return applyArgumentsResult;
   }

@@ -9,7 +9,15 @@ import createCacheKey from "../../../../../../design/components/Styles/native/cr
 const require = arg1;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, scroll: null, contentContainer: null, header: null, subtitle: null, buttonContainer: null, headerContainer: null };
+createCacheKey = {
+  container: null,
+  scroll: null,
+  contentContainer: null,
+  header: null,
+  subtitle: null,
+  buttonContainer: null,
+  headerContainer: null,
+};
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
@@ -23,7 +31,9 @@ let obj3 = { marginHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDe
 createCacheKey[6] = { marginBottom: ThemesDefault.space.PX_24 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { marginBottom: ThemesDefault.space.PX_24 };
-const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUSelectScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/gifting/native/views/promotions/GiftingSKUSelectScreen.tsx",
+);
 
 export default function GiftingSKUSelectScreen(rewardsToDisplay) {
   const defaultHighlightedReward = rewardsToDisplay.defaultHighlightedReward;
@@ -83,18 +93,32 @@ export default function GiftingSKUSelectScreen(rewardsToDisplay) {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.scroll, contentContainerStyle: tmp.contentContainer, children: null };
   obj = { style: tmp.headerContainer, children: null };
-  obj1 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+  obj1 = {
+    style: tmp.header,
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    accessibilityRole: "header",
+    children: null,
+  };
   const intl = defaultHighlightedReward(onSelect[8]).intl;
   obj1[4] = intl.string(defaultHighlightedReward(onSelect[8]).t["+ByEeM"]);
-  const items3 = [memo(defaultHighlightedReward(onSelect[7]).Text, obj1), ];
+  const items3 = [memo(defaultHighlightedReward(onSelect[7]).Text, obj1)];
   const obj2 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = defaultHighlightedReward(onSelect[8]).intl;
   obj2[3] = intl2.string(defaultHighlightedReward(onSelect[8]).t.vPeaOS);
   items3[1] = memo(defaultHighlightedReward(onSelect[7]).Text, obj2);
   obj[1] = items3;
-  const items4 = [callback(first1, obj), memo(claimableRewards(onSelect[9]), { rewardsToDisplay: rewardsToDisplay.allRewards, claimableRewards, onSelect: callback1, highlightedSkuId: first })];
+  const items4 = [
+    callback(first1, obj),
+    memo(claimableRewards(onSelect[9]), {
+      rewardsToDisplay: rewardsToDisplay.allRewards,
+      claimableRewards,
+      onSelect: callback1,
+      highlightedSkuId: first,
+    }),
+  ];
   obj[2] = items4;
-  const items5 = [callback(closure_6, obj), ];
+  const items5 = [callback(closure_6, obj)];
   const obj3 = { style: items6, children: null };
   items6 = [tmp.buttonContainer, { paddingBottom: claimableRewards(onSelect[6])().bottom }];
   const obj4 = { text: null, onPress: null, disabled: null };
@@ -106,4 +130,4 @@ export default function GiftingSKUSelectScreen(rewardsToDisplay) {
   items5[1] = memo(first1, obj3);
   obj[1] = items5;
   return callback(first1, obj);
-};
+}

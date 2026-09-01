@@ -11,8 +11,7 @@ let c7 = false;
 let c8 = true;
 let c9 = false;
 const Store = initializeDefault.Store;
-class PermissionSpeakStore extends Store {
-}
+class PermissionSpeakStore extends Store {}
 const prototype = PermissionSpeakStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_5);
@@ -84,7 +83,7 @@ const permissionSpeakStore = new PermissionSpeakStore(dispatcherDefault, {
       const Storage = Storage2.Storage;
       const result = Storage.set(hideSuppressWarning, c9);
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("stores/PermissionSpeakStore.tsx");
 

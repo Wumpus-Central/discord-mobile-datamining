@@ -314,16 +314,36 @@ let closure_19 = apply.throttle((data) => {
   obj.addBreadcrumb(obj);
 }, 3000);
 let c21;
-let closure_24 = { code: "function useGuildsBarGestureTsx1({timeSincePreviousFrame:timeSincePreviousFrame}){const{gestureState,pushScrollAccumulatedTime,MS_PER_FRAME_60FPS,pushScroll,scrollTo,scrollerRef,roundToNearestPixel,scrollPosition}=this.__closure;if(timeSincePreviousFrame==null||timeSincePreviousFrame<=0||gestureState.get().mode!=='drag'){return;}pushScrollAccumulatedTime.set(pushScrollAccumulatedTime.get()+timeSincePreviousFrame);if(pushScrollAccumulatedTime.get()<MS_PER_FRAME_60FPS){return;}const scrollSpeed=1000*pushScroll.get();const timeInSeconds=pushScrollAccumulatedTime.get()/1000;pushScrollAccumulatedTime.set(0);scrollTo(scrollerRef,0,Math.max(roundToNearestPixel(scrollPosition.get()+timeInSeconds*scrollSpeed),0),false);}" };
-let closure_25 = { code: "function useGuildsBarGestureTsx2(){const{gestureState,runOnJS,handleGestureEnd}=this.__closure;if(gestureState.get().mode==null||gestureState.get().mode==='cancel'){runOnJS(handleGestureEnd)('cancel');}}" };
-let closure_26 = { code: "function useGuildsBarGestureTsx3(){const{gestureState,runOnJS,handleGestureEnd}=this.__closure;if(gestureState.get().mode==='cancel'){runOnJS(handleGestureEnd)('cancel');}}" };
-let closure_27 = { code: "function useGuildsBarGestureTsx4({absoluteX:absoluteX,absoluteY:absoluteY}){const{gestureState,runOnJS,handlePress}=this.__closure;if(gestureState.get().mode!=='cancel'){runOnJS(handlePress)(absoluteX,absoluteY);}}" };
-let closure_28 = { code: "function useGuildsBarGestureTsx5(event,manager){const{gestureState}=this.__closure;if(gestureState.get().mode==='cancel'){manager.fail();}}" };
-let closure_29 = { code: "function useGuildsBarGestureTsx6(event,manager){const{scrollPosition,gestureState,dragRegion,runOnJS,handleTouchesDown}=this.__closure;var _touch$absoluteY;const touch=event.changedTouches[0];const pointerY=((_touch$absoluteY=touch===null||touch===void 0?void 0:touch.absoluteY)!==null&&_touch$absoluteY!==void 0?_touch$absoluteY:0)+scrollPosition.get();if(touch==null||gestureState.get().mode==='cancel'||pointerY<dragRegion.get().min||pointerY>dragRegion.get().max){manager.fail();}else if(event.changedTouches.length===1){runOnJS(handleTouchesDown)(touch.absoluteX,touch.absoluteY);}}" };
-let closure_30 = { code: "function useGuildsBarGestureTsx7(){const{runOnJS,handleGestureEnd}=this.__closure;runOnJS(handleGestureEnd)('cancel');}" };
-let closure_31 = { code: "function useGuildsBarGestureTsx8(){const{gestureState,runOnJS,handleGestureEnd}=this.__closure;if(gestureState.get().mode==='drag'){runOnJS(handleGestureEnd)('drop');}else if(gestureState.get().mode==='contextmenu'){runOnJS(handleGestureEnd)('contextmenu-open');}else{runOnJS(handleGestureEnd)('cancel');}}" };
-let closure_32 = { code: "function useGuildsBarGestureTsx9({absoluteX:absoluteX,absoluteY:absoluteY}){const{gestureState,listInsets,GESTURE_ACCELERATION_RANGE,windowSize,runOnJS,handleGuildDrag,handleContextMenuDrag}=this.__closure;if(gestureState.get().mode==='drag'){if(absoluteX!==gestureState.get().absoluteX||absoluteY!==gestureState.get().absoluteY){let{initialY:initialY}=gestureState.get();const minPushRange=listInsets.get().start+GESTURE_ACCELERATION_RANGE;const maxPushRange=windowSize-listInsets.get().end-GESTURE_ACCELERATION_RANGE;if(initialY<minPushRange&&absoluteY>initialY){initialY=absoluteY;}else if(initialY>maxPushRange&&absoluteY<initialY){initialY=absoluteY;}gestureState.set({...gestureState.get(),absoluteX:absoluteX,absoluteY:absoluteY,initialY:initialY});runOnJS(handleGuildDrag)(absoluteY);}}else if(gestureState.get().mode==='contextmenu'){runOnJS(handleContextMenuDrag)(absoluteX,absoluteY);}}" };
-let closure_33 = { code: "function useGuildsBarGestureTsx10(event,manager){const{gestureState,dragDropInProgress,DRAG_GESTURE_MINIMUM_DISTANCE,runOnJS,handleContextMenuDrag,handleGuildDrag}=this.__closure;const touch=event.changedTouches[0];if(gestureState.get().mode!=='pressed'||touch==null){if(gestureState.get().mode==='cancel'||touch==null){manager.fail();dragDropInProgress.set(false);}return;}const diffX=touch.absoluteX-gestureState.get().initialX;const absDiffY=Math.abs(touch.absoluteY-gestureState.get().absoluteY);if(diffX>DRAG_GESTURE_MINIMUM_DISTANCE&&diffX>absDiffY){gestureState.set({...gestureState.get(),mode:'contextmenu',absoluteX:touch.absoluteX,absoluteY:touch.absoluteY});dragDropInProgress.set(false);manager.activate();runOnJS(handleContextMenuDrag)(touch.absoluteX,touch.absoluteY);}else if(absDiffY>DRAG_GESTURE_MINIMUM_DISTANCE){gestureState.set({...gestureState.get(),mode:'drag',initialX:touch.absoluteX,initialY:touch.absoluteY,absoluteX:touch.absoluteX,absoluteY:touch.absoluteY});manager.activate();dragDropInProgress.set(true);runOnJS(handleGuildDrag)(touch.absoluteY);}}" };
+let closure_24 = {
+  code: "function useGuildsBarGestureTsx1({timeSincePreviousFrame:timeSincePreviousFrame}){const{gestureState,pushScrollAccumulatedTime,MS_PER_FRAME_60FPS,pushScroll,scrollTo,scrollerRef,roundToNearestPixel,scrollPosition}=this.__closure;if(timeSincePreviousFrame==null||timeSincePreviousFrame<=0||gestureState.get().mode!=='drag'){return;}pushScrollAccumulatedTime.set(pushScrollAccumulatedTime.get()+timeSincePreviousFrame);if(pushScrollAccumulatedTime.get()<MS_PER_FRAME_60FPS){return;}const scrollSpeed=1000*pushScroll.get();const timeInSeconds=pushScrollAccumulatedTime.get()/1000;pushScrollAccumulatedTime.set(0);scrollTo(scrollerRef,0,Math.max(roundToNearestPixel(scrollPosition.get()+timeInSeconds*scrollSpeed),0),false);}",
+};
+let closure_25 = {
+  code: "function useGuildsBarGestureTsx2(){const{gestureState,runOnJS,handleGestureEnd}=this.__closure;if(gestureState.get().mode==null||gestureState.get().mode==='cancel'){runOnJS(handleGestureEnd)('cancel');}}",
+};
+let closure_26 = {
+  code: "function useGuildsBarGestureTsx3(){const{gestureState,runOnJS,handleGestureEnd}=this.__closure;if(gestureState.get().mode==='cancel'){runOnJS(handleGestureEnd)('cancel');}}",
+};
+let closure_27 = {
+  code: "function useGuildsBarGestureTsx4({absoluteX:absoluteX,absoluteY:absoluteY}){const{gestureState,runOnJS,handlePress}=this.__closure;if(gestureState.get().mode!=='cancel'){runOnJS(handlePress)(absoluteX,absoluteY);}}",
+};
+let closure_28 = {
+  code: "function useGuildsBarGestureTsx5(event,manager){const{gestureState}=this.__closure;if(gestureState.get().mode==='cancel'){manager.fail();}}",
+};
+let closure_29 = {
+  code: "function useGuildsBarGestureTsx6(event,manager){const{scrollPosition,gestureState,dragRegion,runOnJS,handleTouchesDown}=this.__closure;var _touch$absoluteY;const touch=event.changedTouches[0];const pointerY=((_touch$absoluteY=touch===null||touch===void 0?void 0:touch.absoluteY)!==null&&_touch$absoluteY!==void 0?_touch$absoluteY:0)+scrollPosition.get();if(touch==null||gestureState.get().mode==='cancel'||pointerY<dragRegion.get().min||pointerY>dragRegion.get().max){manager.fail();}else if(event.changedTouches.length===1){runOnJS(handleTouchesDown)(touch.absoluteX,touch.absoluteY);}}",
+};
+let closure_30 = {
+  code: "function useGuildsBarGestureTsx7(){const{runOnJS,handleGestureEnd}=this.__closure;runOnJS(handleGestureEnd)('cancel');}",
+};
+let closure_31 = {
+  code: "function useGuildsBarGestureTsx8(){const{gestureState,runOnJS,handleGestureEnd}=this.__closure;if(gestureState.get().mode==='drag'){runOnJS(handleGestureEnd)('drop');}else if(gestureState.get().mode==='contextmenu'){runOnJS(handleGestureEnd)('contextmenu-open');}else{runOnJS(handleGestureEnd)('cancel');}}",
+};
+let closure_32 = {
+  code: "function useGuildsBarGestureTsx9({absoluteX:absoluteX,absoluteY:absoluteY}){const{gestureState,listInsets,GESTURE_ACCELERATION_RANGE,windowSize,runOnJS,handleGuildDrag,handleContextMenuDrag}=this.__closure;if(gestureState.get().mode==='drag'){if(absoluteX!==gestureState.get().absoluteX||absoluteY!==gestureState.get().absoluteY){let{initialY:initialY}=gestureState.get();const minPushRange=listInsets.get().start+GESTURE_ACCELERATION_RANGE;const maxPushRange=windowSize-listInsets.get().end-GESTURE_ACCELERATION_RANGE;if(initialY<minPushRange&&absoluteY>initialY){initialY=absoluteY;}else if(initialY>maxPushRange&&absoluteY<initialY){initialY=absoluteY;}gestureState.set({...gestureState.get(),absoluteX:absoluteX,absoluteY:absoluteY,initialY:initialY});runOnJS(handleGuildDrag)(absoluteY);}}else if(gestureState.get().mode==='contextmenu'){runOnJS(handleContextMenuDrag)(absoluteX,absoluteY);}}",
+};
+let closure_33 = {
+  code: "function useGuildsBarGestureTsx10(event,manager){const{gestureState,dragDropInProgress,DRAG_GESTURE_MINIMUM_DISTANCE,runOnJS,handleContextMenuDrag,handleGuildDrag}=this.__closure;const touch=event.changedTouches[0];if(gestureState.get().mode!=='pressed'||touch==null){if(gestureState.get().mode==='cancel'||touch==null){manager.fail();dragDropInProgress.set(false);}return;}const diffX=touch.absoluteX-gestureState.get().initialX;const absDiffY=Math.abs(touch.absoluteY-gestureState.get().absoluteY);if(diffX>DRAG_GESTURE_MINIMUM_DISTANCE&&diffX>absDiffY){gestureState.set({...gestureState.get(),mode:'contextmenu',absoluteX:touch.absoluteX,absoluteY:touch.absoluteY});dragDropInProgress.set(false);manager.activate();runOnJS(handleContextMenuDrag)(touch.absoluteX,touch.absoluteY);}else if(absDiffY>DRAG_GESTURE_MINIMUM_DISTANCE){gestureState.set({...gestureState.get(),mode:'drag',initialX:touch.absoluteX,initialY:touch.absoluteY,absoluteX:touch.absoluteX,absoluteY:touch.absoluteY});manager.activate();dragDropInProgress.set(true);runOnJS(handleGuildDrag)(touch.absoluteY);}}",
+};
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarGesture.tsx");
 
 export default function useGuildsBarGesture() {
@@ -339,7 +359,17 @@ export default function useGuildsBarGesture() {
   let sharedValue = gesture(token[7]).useSharedValue(0);
   let obj4 = gesture(token[7]);
   const sharedValue1 = gesture(token[7]).useSharedValue(0);
-  let tmp7 = callback((gestureState) => ({ gestureState: gestureState.gestureState, scrollPosition: gestureState.scrollPosition, dragRegion: gestureState.dragRegion, windowSize: gestureState.windowSize, listInsets: gestureState.listInsets, dragDropInProgress: gestureState.dragDropInProgress }), gesture(token[18]).shallow);
+  let tmp7 = callback(
+    (gestureState) => ({
+      gestureState: gestureState.gestureState,
+      scrollPosition: gestureState.scrollPosition,
+      dragRegion: gestureState.dragRegion,
+      windowSize: gestureState.windowSize,
+      listInsets: gestureState.listInsets,
+      dragDropInProgress: gestureState.dragDropInProgress,
+    }),
+    gesture(token[18]).shallow,
+  );
   let gestureState = tmp7.gestureState;
   let scrollPosition = tmp7.scrollPosition;
   let dragRegion = tmp7.dragRegion;
@@ -438,7 +468,12 @@ export default function useGuildsBarGesture() {
               tmp15 = obj2;
               tmp16 = closure_3;
               num3 = 0;
-              scrollToResult = obj2.scrollTo(closure_3, 0, Math.max(tmp13(scrollPosition.get() + result2 * result1), 0), false);
+              scrollToResult = obj2.scrollTo(
+                closure_3,
+                0,
+                Math.max(tmp13(scrollPosition.get() + result2 * result1), 0),
+                false,
+              );
             }
           }
         }
@@ -446,7 +481,16 @@ export default function useGuildsBarGesture() {
       return;
     }
   }
-  obj = { gestureState, pushScrollAccumulatedTime: sharedValue1, MS_PER_FRAME_60FPS: frameCallback, pushScroll: sharedValue, scrollTo: gesture(token[7]).scrollTo, scrollerRef, roundToNearestPixel: importDefault(token[19]), scrollPosition };
+  obj = {
+    gestureState,
+    pushScrollAccumulatedTime: sharedValue1,
+    MS_PER_FRAME_60FPS: frameCallback,
+    pushScroll: sharedValue,
+    scrollTo: gesture(token[7]).scrollTo,
+    scrollerRef,
+    roundToNearestPixel: importDefault(token[19]),
+    scrollPosition,
+  };
   W.__closure = obj;
   W.__workletHash = 14384524602726;
   W.__initData = closure_24;
@@ -552,7 +596,7 @@ export default function useGuildsBarGesture() {
                         tmp6 = c4;
                       }
                       obj.moveById(id, tmp2, tmp6, closure_5);
-                      node2(function*() {
+                      node2(function* () {
                         c3 = 1;
                         obj1 = v0(closure_1_2[22]);
                         yield obj1.saveGuildFolders(closure_1_7.getCompatibleGuildFolders());
@@ -570,7 +614,14 @@ export default function useGuildsBarGesture() {
                       })();
                     }
                     state = closure_1_9.getState();
-                    obj = { dragNode: tmp, overNode: node2, dropPosition: callback, dragRecyclerKey: null, itemSize: null, overState: null };
+                    obj = {
+                      dragNode: tmp,
+                      overNode: node2,
+                      dropPosition: callback,
+                      dragRecyclerKey: null,
+                      itemSize: null,
+                      overState: null,
+                    };
                     const item = dragSpecs.item;
                     let str;
                     if (item != null) {
@@ -604,7 +655,14 @@ export default function useGuildsBarGesture() {
             }
           }
           const state1 = obj.getState();
-          obj3 = { dragNode: null, overNode: null, dropPosition: null, itemSize: null, dragRecyclerKey: null, overState: "self" };
+          obj3 = {
+            dragNode: null,
+            overNode: null,
+            dropPosition: null,
+            itemSize: null,
+            dragRecyclerKey: null,
+            overState: "self",
+          };
           obj3[0] = node;
           obj3[1] = node;
           ({ itemTop: obj9[2], itemSize: obj9[3], item } = dragSpecs);
@@ -724,7 +782,22 @@ export default function useGuildsBarGesture() {
               if ("below" !== str2) {
                 diff = sum - sum1 - token;
               }
-              obj4 = { key: null, title: null, items: null, x: null, y: null, positionX: "left", positionY: null, width: null, height: null, state: null, dividerIndexes: null, keyboardShouldPersistTaps: "never", requestClose: null, onClose: null };
+              obj4 = {
+                key: null,
+                title: null,
+                items: null,
+                x: null,
+                y: null,
+                positionX: "left",
+                positionY: null,
+                width: null,
+                height: null,
+                state: null,
+                dividerIndexes: null,
+                keyboardShouldPersistTaps: "never",
+                requestClose: null,
+                onClose: null,
+              };
               const _HermesInternal = HermesInternal;
               obj4[0] = "" + tmp20;
               obj4[1] = tmp21;
@@ -749,15 +822,17 @@ export default function useGuildsBarGesture() {
                 gesture(token[23]).hideContextMenu();
                 closure_1_14("contextmenu-close");
               };
-              obj4[13] = function onClose() {
-
-              };
+              obj4[13] = function onClose() {};
               tmp10(result2[23]).showContextMenu(obj4);
               const tmp10Result2 = tmp10(result2[23]);
             }
           }
         }
-        const obj5 = { dragSpecs: null, overSpecs: "Array", windowSize: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093 };
+        const obj5 = {
+          dragSpecs: null,
+          overSpecs: "Array",
+          windowSize: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093,
+        };
         obj5[0] = obj;
         obj5[2] = sum;
         setStateShallow(obj5);
@@ -1054,7 +1129,21 @@ export default function useGuildsBarGesture() {
   let obj6 = gesture(token[7]);
   const items3 = [callback4];
   const onFastListScrollWorklet = gesture(token[29]).useExternalScrollEventHandler({ id: "guilds" });
-  const items4 = [dragDropInProgress, dragRegion, gestureState, callback3, callback, callback4, callback2, callback1, listInsets, scrollPosition, scrollerRef, windowSize, gesture];
+  const items4 = [
+    dragDropInProgress,
+    dragRegion,
+    gestureState,
+    callback3,
+    callback,
+    callback4,
+    callback2,
+    callback1,
+    listInsets,
+    scrollPosition,
+    scrollerRef,
+    windowSize,
+    gesture,
+  ];
   const onFastListScroll = fastListRef.useCallback(() => {
     gestureState = dragRegion.getState().gestureState;
     const value = gestureState.get();
@@ -1090,7 +1179,13 @@ export default function useGuildsBarGesture() {
       }
       fail.fail();
     };
-    obj = { scrollPosition, gestureState, dragRegion, runOnJS: gesture(token[7]).runOnJS, handleTouchesDown: callback1 };
+    obj = {
+      scrollPosition,
+      gestureState,
+      dragRegion,
+      runOnJS: gesture(token[7]).runOnJS,
+      handleTouchesDown: callback1,
+    };
     fn.__closure = obj;
     fn.__workletHash = 5430653816983;
     fn.__initData = closure_1_29;
@@ -1172,7 +1267,12 @@ export default function useGuildsBarGesture() {
             obj = {};
             const merged1 = Object.assign(obj.get());
             obj.mode = "drag";
-            ({ absoluteX: obj4.initialX, absoluteY: obj4.initialY, absoluteX: obj4.absoluteX, absoluteY: obj4.absoluteY } = first);
+            ({
+              absoluteX: obj4.initialX,
+              absoluteY: obj4.initialY,
+              absoluteX: obj4.absoluteX,
+              absoluteY: obj4.absoluteY,
+            } = first);
             const result2 = obj.set(obj);
             activate.activate();
             const result3 = store3.set(true);
@@ -1191,10 +1291,24 @@ export default function useGuildsBarGesture() {
       }
     };
     const manualActivationResult = Gesture3.Pan().manualActivation(true);
-    fn6.__closure = { gestureState, dragDropInProgress, DRAG_GESTURE_MINIMUM_DISTANCE: 10, runOnJS: gesture(token[7]).runOnJS, handleContextMenuDrag: callback3, handleGuildDrag: callback4 };
+    fn6.__closure = {
+      gestureState,
+      dragDropInProgress,
+      DRAG_GESTURE_MINIMUM_DISTANCE: 10,
+      runOnJS: gesture(token[7]).runOnJS,
+      handleContextMenuDrag: callback3,
+      handleGuildDrag: callback4,
+    };
     fn6.__workletHash = 15225957003871;
     fn6.__initData = closure_1_33;
-    let obj3 = { gestureState, dragDropInProgress, DRAG_GESTURE_MINIMUM_DISTANCE: 10, runOnJS: gesture(token[7]).runOnJS, handleContextMenuDrag: callback3, handleGuildDrag: callback4 };
+    let obj3 = {
+      gestureState,
+      dragDropInProgress,
+      DRAG_GESTURE_MINIMUM_DISTANCE: 10,
+      runOnJS: gesture(token[7]).runOnJS,
+      handleContextMenuDrag: callback3,
+      handleGuildDrag: callback4,
+    };
     const fn7 = function s(arg0) {
       ({ absoluteX, absoluteY } = arg0);
       obj = store;
@@ -1229,10 +1343,26 @@ export default function useGuildsBarGesture() {
       }
     };
     const onTouchesMoveResult1 = result1.onTouchesMove(fn6);
-    fn7.__closure = { gestureState, listInsets, GESTURE_ACCELERATION_RANGE: dragDropInProgress, windowSize, runOnJS: gesture(token[7]).runOnJS, handleGuildDrag: callback4, handleContextMenuDrag: callback3 };
+    fn7.__closure = {
+      gestureState,
+      listInsets,
+      GESTURE_ACCELERATION_RANGE: dragDropInProgress,
+      windowSize,
+      runOnJS: gesture(token[7]).runOnJS,
+      handleGuildDrag: callback4,
+      handleContextMenuDrag: callback3,
+    };
     fn7.__workletHash = 14488930469604;
     fn7.__initData = closure_1_32;
-    let obj4 = { gestureState, listInsets, GESTURE_ACCELERATION_RANGE: dragDropInProgress, windowSize, runOnJS: gesture(token[7]).runOnJS, handleGuildDrag: callback4, handleContextMenuDrag: callback3 };
+    let obj4 = {
+      gestureState,
+      listInsets,
+      GESTURE_ACCELERATION_RANGE: dragDropInProgress,
+      windowSize,
+      runOnJS: gesture(token[7]).runOnJS,
+      handleGuildDrag: callback4,
+      handleContextMenuDrag: callback3,
+    };
     const fn8 = function n() {
       if ("drag" === store.get().mode) {
         closure_1_0(closure_1_2[7]).runOnJS(closure_14)("drop");
@@ -1259,19 +1389,31 @@ export default function useGuildsBarGesture() {
     fn9.__initData = closure_1_30;
     return Gesture.Simultaneous(onTouchesCancelledResult, onEndResult1.onTouchesCancelled(fn9));
   }, items4);
-  const effect1 = fastListRef.useEffect(() => dragRegion.subscribe((dragSpecs) => {
-    if (null == dragSpecs.dragSpecs) {
-      if (null == dragSpecs.dropSpecs) {
-        const current = ref.current;
-        if (current != null) {
-          current.setDisableRecycling(false);
+  const effect1 = fastListRef.useEffect(
+    () =>
+      dragRegion.subscribe((dragSpecs) => {
+        if (null == dragSpecs.dragSpecs) {
+          if (null == dragSpecs.dropSpecs) {
+            const current = ref.current;
+            if (current != null) {
+              current.setDisableRecycling(false);
+            }
+          }
         }
-      }
-    }
-    const current2 = ref.current;
-    if (current2 != null) {
-      current2.setDisableRecycling(true);
-    }
-  }), []);
-  return { scrollPosition, gesture, scrollerRef, fastListRef, persistantKeys, onFastListScroll, onFastListScrollWorklet };
-};
+        const current2 = ref.current;
+        if (current2 != null) {
+          current2.setDisableRecycling(true);
+        }
+      }),
+    [],
+  );
+  return {
+    scrollPosition,
+    gesture,
+    scrollerRef,
+    fastListRef,
+    persistantKeys,
+    onFastListScroll,
+    onFastListScrollWorklet,
+  };
+}

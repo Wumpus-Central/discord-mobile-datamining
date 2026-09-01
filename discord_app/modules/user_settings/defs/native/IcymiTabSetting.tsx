@@ -24,7 +24,14 @@ const toggle = createToggle.createToggle({
       str = "hide";
     }
     obj.itemInteracted(str, "icymi_tab_toggle", "press");
-    _modDef8622.feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "icymi_tab_toggle", actionIntentType: "configure", actionDestinationType: null } });
+    _modDef8622.feedPageActioned({
+      actionParameters: {
+        actionGestureType: "press",
+        actionTargetElement: "icymi_tab_toggle",
+        actionIntentType: "configure",
+        actionDestinationType: null,
+      },
+    });
     const tmp = importDefault;
     const tmpResult = _modDef8622;
     obj = { enabled };
@@ -33,7 +40,7 @@ const toggle = createToggle.createToggle({
   usePredicate: function useICYMIPredicate() {
     const ICYMIStaffOnlyExperiment = apexExperiment.ICYMIStaffOnlyExperiment;
     return ICYMIStaffOnlyExperiment.useConfig({ location: "settings" }).enabled;
-  }
+  },
 });
 let obj = {
   useTitle() {
@@ -51,7 +58,14 @@ let obj = {
       str = "hide";
     }
     obj.itemInteracted(str, "icymi_tab_toggle", "press");
-    _modDef8622.feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "icymi_tab_toggle", actionIntentType: "configure", actionDestinationType: null } });
+    _modDef8622.feedPageActioned({
+      actionParameters: {
+        actionGestureType: "press",
+        actionTargetElement: "icymi_tab_toggle",
+        actionIntentType: "configure",
+        actionDestinationType: null,
+      },
+    });
     const tmp = importDefault;
     const tmpResult = _modDef8622;
     obj = { enabled };
@@ -60,7 +74,7 @@ let obj = {
   usePredicate: function useICYMIPredicate() {
     const ICYMIStaffOnlyExperiment = apexExperiment.ICYMIStaffOnlyExperiment;
     return ICYMIStaffOnlyExperiment.useConfig({ location: "settings" }).enabled;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/IcymiTabSetting.tsx");
 

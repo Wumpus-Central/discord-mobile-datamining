@@ -57,6 +57,8 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   obj3.inputStyle = inputStyle;
   return jsx(BaseTextField.BaseTextField, {});
 });
-const result = require("set").fileFinishedImporting("design/components/SplitTextInput/native/SplitTextField.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/SplitTextInput/native/SplitTextField.native.tsx",
+);
 
 export const SplitTextField = forwardRefResult;

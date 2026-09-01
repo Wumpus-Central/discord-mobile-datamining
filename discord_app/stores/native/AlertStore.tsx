@@ -6,8 +6,7 @@ let c0 = null;
 let c1 = -1;
 let c2 = null;
 const Store = initializeDefault.Store;
-class AlertStore extends Store {
-}
+class AlertStore extends Store {}
 const prototype = AlertStore.prototype;
 prototype["getAlert"] = function getAlert() {
   return c0;
@@ -27,7 +26,7 @@ const alertStore = new AlertStore(dispatcherDefault, {
   ALERT_CLOSE: function handleClose() {
     c0 = null;
     c2 = null;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/native/AlertStore.tsx");
 

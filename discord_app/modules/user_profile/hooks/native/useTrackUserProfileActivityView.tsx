@@ -5,14 +5,18 @@ import closure_5 from "../../../content_inventory/ContentInventoryOutboxStore.ts
 
 const require = arg1;
 ({ useEffect: c3, useState: c4 } = noop);
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileActivityView.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_profile/hooks/native/useTrackUserProfileActivityView.tsx",
+);
 
 export default function useTrackUserProfileActivityView(arg0) {
   ({ userId: require, onAction } = arg0);
   let callback;
   let callback2;
   const items = [closure_5];
-  const stateFromStores = require(onAction[3]).useStateFromStores(items, () => closure_1_5.isFetchingUserOutbox(closure_0));
+  const stateFromStores = require(onAction[3]).useStateFromStores(items, () =>
+    closure_1_5.isFetchingUserOutbox(closure_0),
+  );
   const tmp2 = callback(callback3(false), 2);
   callback = tmp2[1];
   let tmp3 = !stateFromStores;
@@ -27,4 +31,4 @@ export default function useTrackUserProfileActivityView(arg0) {
       callback(true);
     }
   }, items1);
-};
+}

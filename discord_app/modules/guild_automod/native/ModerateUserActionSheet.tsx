@@ -11,7 +11,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ container: { padding: 16, gap: 16 }, memberRoles: { justifyContent: "flex-start" } });
+let closure_11 = createCacheKey.createStyles({
+  container: { padding: 16, gap: 16 },
+  memberRoles: { justifyContent: "flex-start" },
+});
 const memoResult = importAllResult.memo((user) => {
   user = user.user;
   const guild = user.guild;
@@ -22,48 +25,62 @@ const memoResult = importAllResult.memo((user) => {
   let obj = user(stateFromStores[8]);
   let items = [c4];
   const items1 = [user, guild];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    let id;
-    if (guild != null) {
-      id = guild.id;
-    }
-    return _undefined.getMember(id, user.id);
-  }, items1);
+  stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let id;
+      if (guild != null) {
+        id = guild.id;
+      }
+      return _undefined.getMember(id, user.id);
+    },
+    items1,
+  );
   let tmp2Result = tmp2(tmp3[8]);
   const items2 = [closure_6, closure_7, closure_5];
   const items3 = [user, guild];
-  const stateFromStoresObject = tmp2Result.useStateFromStoresObject(items2, () => {
-    let canKickMemberResult = null != guild;
-    if (canKickMemberResult) {
-      let obj = user(stateFromStores[9]);
-      canKickMemberResult = obj.canKickMember(user, tmp);
-    }
-    obj = { canKickUser: canKickMemberResult, canBanUser: null, canChangeNick: null, canManageRoles: null, canModerateMembers: null };
-    let canBanMemberResult = null != tmp;
-    if (canBanMemberResult) {
-      canBanMemberResult = user(stateFromStores[9]).canBanMember(user, tmp);
-      const obj3 = user(stateFromStores[9]);
-    }
-    obj[1] = canBanMemberResult;
-    let canManageUserResult = null != tmp;
-    if (canManageUserResult) {
-      canManageUserResult = closure_1_6.canManageUser(closure_1_8.MANAGE_NICKNAMES, user, tmp);
-    }
-    obj[2] = canManageUserResult;
-    let canResult = null != tmp;
-    if (canResult) {
-      canResult = closure_1_6.can(closure_1_8.MANAGE_ROLES, tmp);
-    }
-    obj[3] = canResult;
-    let result = null != tmp;
-    if (result) {
-      const items = [closure_1_7, closure_1_5, closure_1_6];
-      result = user(stateFromStores[10]).canToggleCommunicationDisableOnUser(tmp.id, user.id, items);
-      const obj4 = user(stateFromStores[10]);
-    }
-    obj[4] = result;
-    return obj;
-  }, items3);
+  const stateFromStoresObject = tmp2Result.useStateFromStoresObject(
+    items2,
+    () => {
+      let canKickMemberResult = null != guild;
+      if (canKickMemberResult) {
+        let obj = user(stateFromStores[9]);
+        canKickMemberResult = obj.canKickMember(user, tmp);
+      }
+      obj = {
+        canKickUser: canKickMemberResult,
+        canBanUser: null,
+        canChangeNick: null,
+        canManageRoles: null,
+        canModerateMembers: null,
+      };
+      let canBanMemberResult = null != tmp;
+      if (canBanMemberResult) {
+        canBanMemberResult = user(stateFromStores[9]).canBanMember(user, tmp);
+        const obj3 = user(stateFromStores[9]);
+      }
+      obj[1] = canBanMemberResult;
+      let canManageUserResult = null != tmp;
+      if (canManageUserResult) {
+        canManageUserResult = closure_1_6.canManageUser(closure_1_8.MANAGE_NICKNAMES, user, tmp);
+      }
+      obj[2] = canManageUserResult;
+      let canResult = null != tmp;
+      if (canResult) {
+        canResult = closure_1_6.can(closure_1_8.MANAGE_ROLES, tmp);
+      }
+      obj[3] = canResult;
+      let result = null != tmp;
+      if (result) {
+        const items = [closure_1_7, closure_1_5, closure_1_6];
+        result = user(stateFromStores[10]).canToggleCommunicationDisableOnUser(tmp.id, user.id, items);
+        const obj4 = user(stateFromStores[10]);
+      }
+      obj[4] = result;
+      return obj;
+    },
+    items3,
+  );
   ({ canKickUser, canBanUser } = stateFromStoresObject);
   if (null != guild) {
     if (null != stateFromStores) {
@@ -108,7 +125,7 @@ const memoResult = importAllResult.memo((user) => {
             onRemove() {
               let arr = callback(table[16]);
               arr = arr.pop();
-            }
+            },
           };
           obj.pushLazy(user(stateFromStores[18])(stateFromStores[17], stateFromStores.paths), obj);
         };
@@ -163,7 +180,7 @@ const memoResult = importAllResult.memo((user) => {
             userId: user.id,
             cancelButtonCallback() {
               return closure_1_1(closure_1_2[19])({ guild: closure_1, user: closure_0 });
-            }
+            },
           });
         };
         items4.push(callback(tmp2(tmp3[13]).ActionSheetRow, obj3));
@@ -181,7 +198,7 @@ const memoResult = importAllResult.memo((user) => {
             userId: user.id,
             cancelButtonCallback() {
               return closure_1_1(closure_1_2[19])({ guild: closure_1, user: closure_0 });
-            }
+            },
           });
         };
         items4.push(callback(tmp2(tmp3[13]).ActionSheetRow, obj5));
@@ -199,7 +216,7 @@ const memoResult = importAllResult.memo((user) => {
       obj10[0] = items5;
       obj10[1] = guild;
       obj10[2] = tmp5;
-      const items6 = [callback(guild(tmp3[29]), obj10), ];
+      const items6 = [callback(guild(tmp3[29]), obj10)];
       const obj11 = { hasIcons: true, children: null };
       obj11[1] = items4.map((children) => callback(hideActionSheet.Fragment, { children }, "action_" + arg1));
       items6[1] = callback(tmp2(tmp3[30]).TableRowGroup, obj11);

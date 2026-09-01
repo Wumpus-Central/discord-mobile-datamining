@@ -12,13 +12,13 @@ obj = {
   },
   parent: null,
   unsearchable: true,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.PROFILE_CUSTOMIZATION,
   getComponent() {
     return ProfileCustomizationSubsection /* ProfileCustomizationSubsection */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ProfileCustomizationSetting.tsx");

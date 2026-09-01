@@ -13,19 +13,42 @@ class TableRowGroupTitle {
   constructor(arg0) {
     ({ title, style, lineClamp } = global);
     tmp = closure_8();
-    items = [, ];
+    items = [,];
     items[0] = tmp.title;
     items[1] = style;
-    return jsx(require("Text").Text, { accessibilityRole: "header", variant: "text-md/medium", color: "text-subtle", style: items, lineClamp, children });
+    return jsx(require("Text").Text, {
+      accessibilityRole: "header",
+      variant: "text-md/medium",
+      color: "text-subtle",
+      style: items,
+      lineClamp,
+      children,
+    });
   }
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { flexShrink: 0 }, content: null, title: null, description: null, hasTrailingText: null, helperText: null };
-createCacheKey = { borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 };
+createCacheKey = {
+  container: { flexShrink: 0 },
+  content: null,
+  title: null,
+  description: null,
+  hasTrailingText: null,
+  helperText: null,
+};
+createCacheKey = {
+  borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+  overflow: "hidden",
+  flexGrow: 1,
+  flexShrink: 0,
+  padding: 0,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginBottom: 8 };
 createCacheKey[3] = { marginBottom: 8 };
-createCacheKey[4] = { borderBottomLeftRadius: ThemesDefault.radii.none, borderBottomRightRadius: ThemesDefault.radii.none };
+createCacheKey[4] = {
+  borderBottomLeftRadius: ThemesDefault.radii.none,
+  borderBottomRightRadius: ThemesDefault.radii.none,
+};
 createCacheKey[5] = { marginTop: 8 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { borderBottomLeftRadius: ThemesDefault.radii.none, borderBottomRightRadius: ThemesDefault.radii.none };
@@ -69,7 +92,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     obj[0] = title;
     tmp6Result = tmp6(TableRowGroupTitle, obj);
   }
-  let items = [tmp6Result, , , ];
+  let items = [tmp6Result, , ,];
   tmp6Result = null != description;
   if (tmp6Result) {
     obj1 = { variant: "text-sm/normal", color: "text-subtle", style: null, children: null };
@@ -78,13 +101,18 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     tmp6Result = tmp6(tmp2(4474).Text, obj1);
   }
   items[1] = tmp6Result;
-  const items1 = [tmp.content, ];
+  const items1 = [tmp.content];
   hasTrailingText = null;
   if (hasTrailingText) {
     hasTrailingText = tmp.hasTrailingText;
   }
   items1[1] = hasTrailingText;
-  items[2] = closure_5(View, { style: items1, accessibilityRole: str, accessibilityLabel: accessibilityLabel.accessibilityLabel, children: mapped });
+  items[2] = closure_5(View, {
+    style: items1,
+    accessibilityRole: str,
+    accessibilityLabel: accessibilityLabel.accessibilityLabel,
+    children: mapped,
+  });
   let tmp6Result1 = null != helperText;
   if (tmp6Result1) {
     const obj2 = { variant: null, color: "text-muted", style: null, children: null };

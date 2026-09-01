@@ -4,8 +4,7 @@ import dispatcherDefault from "../Dispatcher.tsx";
 
 let closure_0 = {};
 const Store = initializeDefault.Store;
-class ChannelSKUStore extends Store {
-}
+class ChannelSKUStore extends Store {}
 ChannelSKUStore.prototype["getSkuIdForChannel"] = function getSkuIdForChannel(arg0) {
   return table[arg0];
 };
@@ -19,7 +18,7 @@ const channelSKUStore = new ChannelSKUStore(dispatcherDefault, {
     if (null != channelId) {
       closure_0[channelId] = tmp.sku.id;
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/ChannelSKUStore.tsx");
 

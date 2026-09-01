@@ -14,4 +14,4 @@ export default function openNotificationSettings() {
     const DeviceSettingsManager = NativeModules.DeviceSettingsManager;
     const result1 = DeviceSettingsManager.openNotificationSettings();
   }
-};
+}

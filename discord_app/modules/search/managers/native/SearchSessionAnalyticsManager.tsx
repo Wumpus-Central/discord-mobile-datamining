@@ -28,9 +28,7 @@ prototype["_terminate"] = function _terminate(searchContext) {
   const selectedTabs = this.selectedTabs;
   selectedTabs.delete(searchContextId);
 };
-prototype["_transferSession"] = function _transferSession(arg0, searchContext) {
-
-};
+prototype["_transferSession"] = function _transferSession(arg0, searchContext) {};
 prototype["getLocation"] = function getLocation(searchContext) {
   const locations = this.locations;
   return locations.get(SearchTokenTypes.getSearchContextId(searchContext));

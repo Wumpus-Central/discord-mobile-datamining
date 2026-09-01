@@ -13,4 +13,4 @@ export default function useInitRef(arg0) {
     tmp2.current = arg0();
   }
   return tmp2;
-};
+}

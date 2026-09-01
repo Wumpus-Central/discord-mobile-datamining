@@ -17,7 +17,7 @@ function _sendGiftIntentGif() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -213,9 +213,19 @@ function GiftIntentGifModalBody(channelId) {
   let obj4 = channelId(onClose[18]);
   obj1[2] = obj4.getGiftIntentCustomMessagePlaceholder();
   obj[1] = callback2(channelId(onClose[16]).TextArea, obj1);
-  const items3 = [callback2(closure_6, obj), , ];
+  const items3 = [callback2(closure_6, obj), ,];
   const obj2 = { style: tmp.pickerContainer, children: null };
-  const obj3 = { bottomSheetRef: first.useRef(null), channelId, guildId: null, initialQuery: null, inActionSheet: false, contentHorizontalPadding: null, selectedGifSrc: null, keyboardDismissMode: "on-drag", onPressGIF: null };
+  const obj3 = {
+    bottomSheetRef: first.useRef(null),
+    channelId,
+    guildId: null,
+    initialQuery: null,
+    inActionSheet: false,
+    contentHorizontalPadding: null,
+    selectedGifSrc: null,
+    keyboardDismissMode: "on-drag",
+    onPressGIF: null,
+  };
   let guild_id;
   const ref1 = first.useRef(null);
   let tmp2 = giftIntentType;
@@ -240,7 +250,7 @@ function GiftIntentGifModalBody(channelId) {
   obj5[2] = intl3.string(channelId(onClose[17]).t.TXNS7S);
   obj5[3] = callback1;
   obj5[4] = null == first;
-  const items4 = [callback2(channelId(onClose[20]).Button, obj5), ];
+  const items4 = [callback2(channelId(onClose[20]).Button, obj5)];
   const obj6 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl4 = tmp4(tmp3[17]).intl;
   obj6[2] = intl4.string(channelId(onClose[17]).t["ETE/oC"]);
@@ -258,10 +268,18 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { flex: 1 };
 let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
-createCacheKey[3] = { gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
+createCacheKey[3] = {
+  gap: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_8,
+};
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 let closure_15 = { GIFT_INTENT_GIF: "GIFT_INTENT_GIF" };
-let obj2 = { gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
+let obj2 = {
+  gap: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_8,
+};
 const result = require("set").fileFinishedImporting("modules/premium/gifting/native/GiftIntentGifModal.tsx");
 
 export default function GiftIntentGifModal(arg0) {
@@ -300,6 +318,6 @@ export default function GiftIntentGifModal(arg0) {
       };
       obj[closure_1_15.GIFT_INTENT_GIF] = obj;
       return obj;
-    })
+    }),
   });
-};
+}

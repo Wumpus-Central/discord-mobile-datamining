@@ -46,7 +46,15 @@ function UserProfileWishlistSuggestionsGridContent(arg0) {
   const tmp3 = useWishlistSuggestionsDismissibleContentDefault;
   let tmp8 = null;
   if (tmp3Result.isVisible) {
-    obj = { userId: null, wishlistId: null, wishlist: null, containerWidth: null, maxWidth: null, isDismissible: null, markAsDismissed: null };
+    obj = {
+      userId: null,
+      wishlistId: null,
+      wishlist: null,
+      containerWidth: null,
+      maxWidth: null,
+      isDismissible: null,
+      markAsDismissed: null,
+    };
     obj[0] = userId;
     obj[1] = wishlistId;
     obj[2] = stateFromStores;
@@ -86,10 +94,23 @@ function WishlistSuggestionsGridContents(arg0) {
     obj[2] = LinearTransition.springify().mass(0.8).damping(100).stiffness(300).reduceMotion(tmp);
     return obj;
   }, items1);
-  obj = { minCardSize: 80, maxCardSize: 120, containerWidth, maxWidth, sidePadding: closure_8 + PX_16 + 1, gap: closure_9 };
+  obj = {
+    minCardSize: 80,
+    maxCardSize: 120,
+    containerWidth,
+    maxWidth,
+    sidePadding: closure_8 + PX_16 + 1,
+    gap: closure_9,
+  };
   const analyticsLocations = contextDefault().analyticsLocations;
   let obj3 = stateFromStores(12584);
-  obj = { userId, wishlist, numWishlistItemsToRecommend: 15, maxWishlistItemsToShow: 9, source: stateFromStores(10457).WishlistFetchSource.USER_PROFILE };
+  obj = {
+    userId,
+    wishlist,
+    numWishlistItemsToRecommend: 15,
+    maxWishlistItemsToShow: 9,
+    source: stateFromStores(10457).WishlistFetchSource.USER_PROFILE,
+  };
   const items2 = obj3.useAddToWishlistGridItems(obj).items;
   const items3 = [trackUserProfileWishlistAction];
   const callback = React.useCallback(() => {
@@ -99,7 +120,11 @@ function WishlistSuggestionsGridContents(arg0) {
     const set = new Set(items);
     closure_1_1(closure_1_2[21]).hideAllActionSheets();
     const obj2 = closure_1_1(closure_1_2[21]);
-    obj = { analyticsSource: closure_1_1(closure_1_2[23]).USER_PROFILE_WISHLIST, analyticsLocations: null, screen: null };
+    obj = {
+      analyticsSource: closure_1_1(closure_1_2[23]).USER_PROFILE_WISHLIST,
+      analyticsLocations: null,
+      screen: null,
+    };
     const items1 = [closure_1_1(closure_1_2[23]).USER_PROFILE_WISHLIST];
     obj[1] = items1;
     obj[2] = closure_1_11.FEATURED_PAGE;
@@ -117,7 +142,13 @@ function WishlistSuggestionsGridContents(arg0) {
     let tmp12Result = callback(View, obj1);
   } else {
     obj3 = { newValue: null, children: null };
-    const obj4 = { impressionSessionId: null, surface: "user_profile_wishlist_suggestions_grid", wishlistOwnerId: null, wishlistId: null, analyticsLocations: null };
+    const obj4 = {
+      impressionSessionId: null,
+      surface: "user_profile_wishlist_suggestions_grid",
+      wishlistOwnerId: null,
+      wishlistId: null,
+      analyticsLocations: null,
+    };
     obj4[0] = tmp7;
     obj4[2] = userId;
     obj4[3] = wishlistId;
@@ -128,16 +159,28 @@ function WishlistSuggestionsGridContents(arg0) {
     ({ entering: obj16[1], exiting: obj16[2], layout: obj16[3] } = memo);
     const obj6 = { style: null, children: null };
     obj6[0] = tmp3.headerRow;
-    const obj7 = { accessibilityRole: "header", variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: null };
+    const obj7 = {
+      accessibilityRole: "header",
+      variant: "text-sm/medium",
+      color: "text-strong",
+      lineClamp: 1,
+      children: null,
+    };
     const intl4 = tmp(1236).intl;
     obj7[4] = intl4.string(tmp(1236).t["+GB8Kt"]);
-    const items4 = [callback(tmp(4474).Text, obj7), ];
-    const items5 = [tmp3.dismissButton, ];
+    const items4 = [callback(tmp(4474).Text, obj7)];
+    const items5 = [tmp3.dismissButton];
     let hiddenDismissButton = !isDismissible;
     if (!isDismissible) {
       hiddenDismissButton = tmp3.hiddenDismissButton;
     }
-    const obj8 = { style: null, pointerEvents: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+    const obj8 = {
+      style: null,
+      pointerEvents: null,
+      accessibilityElementsHidden: null,
+      importantForAccessibility: null,
+      children: null,
+    };
     items5[1] = hiddenDismissButton;
     obj8[0] = items5;
     let str = "none";
@@ -161,7 +204,7 @@ function WishlistSuggestionsGridContents(arg0) {
     obj8[4] = callback(tmp(8006).IconButton, obj9);
     items4[1] = callback(View, obj8);
     obj6[1] = items4;
-    const items6 = [closure_13(View, obj6), , ];
+    const items6 = [closure_13(View, obj6), ,];
     const obj11 = { items: null, wishlist: null, analyticsLocations: null, cardSize: null };
     obj11[0] = items2;
     obj11[1] = wishlist;
@@ -186,11 +229,36 @@ function WishlistSuggestionsGridContents(arg0) {
 ({ PROFILE_SIDE_PADDING: closure_8, WISHLIST_SUGGESTION_CARD_GAP: c9 } = ARBITRARY_LARGE_OFFSET);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const PX_16 = ThemesDefault.space.PX_16;
-createCacheKey = { container: null, headerRow: null, dismissButton: null, hiddenDismissButton: null, shopButtonContainer: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_16, padding: PX_16, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg, background: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = {
+  container: null,
+  headerRow: null,
+  dismissButton: null,
+  hiddenDismissButton: null,
+  shopButtonContainer: null,
+};
+createCacheKey = {
+  marginTop: ThemesDefault.space.PX_16,
+  padding: PX_16,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.lg,
+  background: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: "100%", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: ThemesDefault.space.PX_12 };
-let obj1 = { width: "100%", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: ThemesDefault.space.PX_12 };
+createCacheKey[1] = {
+  width: "100%",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  marginBottom: ThemesDefault.space.PX_12,
+};
+let obj1 = {
+  width: "100%",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  marginBottom: ThemesDefault.space.PX_12,
+};
 createCacheKey[2] = { marginVertical: -ThemesDefault.space.PX_10 };
 createCacheKey[3] = { opacity: 0 };
 let obj2 = { marginVertical: -ThemesDefault.space.PX_10 };
@@ -208,4 +276,4 @@ export default function UserProfileWishlistSuggestionsGrid(arg0) {
     tmp = callback(UserProfileWishlistSuggestionsGridContent, obj);
   }
   return tmp;
-};
+}

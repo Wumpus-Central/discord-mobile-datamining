@@ -4,8 +4,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 
 let closure_0 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class PopoutWindowStore extends PersistedStore {
-}
+class PopoutWindowStore extends PersistedStore {}
 const prototype = PopoutWindowStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let obj = arg0;
@@ -43,9 +42,7 @@ prototype["isWindowFullyInitialized"] = function isWindowFullyInitialized() {
 prototype["isWindowFullScreen"] = function isWindowFullScreen() {
   return false;
 };
-prototype["unmountWindow"] = function unmountWindow() {
-
-};
+prototype["unmountWindow"] = function unmountWindow() {};
 PopoutWindowStore.displayName = "PopoutWindowStore";
 PopoutWindowStore.persistKey = "PopoutWindowStoreIOS";
 const popoutWindowStore = new PopoutWindowStore(dispatcherDefault, {});

@@ -12,7 +12,9 @@ export default function useGetThreadDraftSettings(arg0) {
     if (null != closure_0) {
       let threadSettings = closure_1_3.getThreadSettings(tmp);
       if (threadSettings == null) {
-        threadSettings = obj.getThreadDraftWithParentMessageId(closure_1_1(closure_1_2[2]).castChannelIdAsMessageId(tmp));
+        threadSettings = obj.getThreadDraftWithParentMessageId(
+          closure_1_1(closure_1_2[2]).castChannelIdAsMessageId(tmp),
+        );
         const obj2 = closure_1_1(closure_1_2[2]);
       }
       tmp2 = threadSettings;
@@ -20,7 +22,7 @@ export default function useGetThreadDraftSettings(arg0) {
     }
     return tmp2;
   });
-};
+}
 export const useHasThreadDraft = function useHasThreadDraft(arg0) {
   const _require = arg0;
   const items = [closure_3];
@@ -29,7 +31,9 @@ export const useHasThreadDraft = function useHasThreadDraft(arg0) {
     if (tmp2) {
       let threadSettings = closure_1_3.getThreadSettings(tmp);
       if (threadSettings == null) {
-        threadSettings = obj.getThreadDraftWithParentMessageId(closure_1_1(closure_1_2[2]).castChannelIdAsMessageId(tmp));
+        threadSettings = obj.getThreadDraftWithParentMessageId(
+          closure_1_1(closure_1_2[2]).castChannelIdAsMessageId(tmp),
+        );
         const obj2 = closure_1_1(closure_1_2[2]);
       }
       tmp2 = null != threadSettings;

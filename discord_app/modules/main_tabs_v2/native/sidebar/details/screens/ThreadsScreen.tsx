@@ -41,7 +41,11 @@ function ThreadsScreen(channel) {
   obj[1] = tmp10;
   obj[2] = callback1;
   const tmp9 = ThreadListSectionDefault;
-  obj[3] = { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom + ThemesDefault.space.PX_16, paddingHorizontal: 16 };
+  obj[3] = {
+    paddingBottom:
+      useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom + ThemesDefault.space.PX_16,
+    paddingHorizontal: 16,
+  };
   obj[1] = <tmp9 channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
   return <tmp8 channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
 }
@@ -83,7 +87,9 @@ const memoResult1 = importAllResult.memo(() => {
   }
   return tmp3;
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx",
+);
 
 export default memoResult1;
 export const SearchTabsThreadScreen = memoResult;

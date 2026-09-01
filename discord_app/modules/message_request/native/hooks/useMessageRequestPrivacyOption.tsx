@@ -37,9 +37,17 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   obj[2] = tmp5;
   obj[3] = callback;
   obj[4] = hasItem1;
-  return jsx(id(5991).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
+  return jsx(id(5991).ActionSheetSwitchRow, {
+    label: null,
+    subLabel: null,
+    value: null,
+    onValueChange: null,
+    disabled: null,
+  });
 }
-const result = require("set").fileFinishedImporting("modules/message_request/native/hooks/useMessageRequestPrivacyOption.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/message_request/native/hooks/useMessageRequestPrivacyOption.tsx",
+);
 
 export const useMessageRequestPrivacyOption = function useMessageRequestPrivacyOption(guild) {
   let tmp = null;

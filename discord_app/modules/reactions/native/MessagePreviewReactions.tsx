@@ -14,13 +14,17 @@ export default function MessagePreviewReactions(emoji) {
   let obj = channelId(589);
   const items = [closure_4, closure_3];
   const items1 = [channelId, messageId];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    let message = closure_1_4.getMessage(messageId);
-    if (message == null) {
-      message = closure_1_3.getMessage(channelId, messageId);
-    }
-    return null != message ? message.reactions : closure_1_6;
-  }, items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let message = closure_1_4.getMessage(messageId);
+      if (message == null) {
+        message = closure_1_3.getMessage(channelId, messageId);
+      }
+      return null != message ? message.reactions : closure_1_6;
+    },
+    items1,
+  );
   obj = { value: messageId(5953)(messageId(5973).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
   if (stateFromStores.length > 0) {
     obj = { channelId: null, messageId: null, emoji: null, reactions: null };
@@ -33,5 +37,8 @@ export default function MessagePreviewReactions(emoji) {
     tmp4Result = tmp4(tmp(10894).MessageReactionsEmpty, {});
   }
   obj[1] = tmp4Result;
-  return jsx(channelId(5953).AnalyticsLocationProvider, { value: messageId(5953)(messageId(5973).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });
-};
+  return jsx(channelId(5953).AnalyticsLocationProvider, {
+    value: messageId(5953)(messageId(5973).MESSAGE_PREVIEW_REACTIONS).analyticsLocations,
+    children: null,
+  });
+}

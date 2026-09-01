@@ -17,7 +17,13 @@ export default {
   },
   saveDraft(id, result, ChannelMessage, toDraftCommandResult) {
     let obj = dispatcherDefault;
-    obj = { type: "DRAFT_SAVE", channelId: id, draft: result, draftType: ChannelMessage, command: toDraftCommandResult };
+    obj = {
+      type: "DRAFT_SAVE",
+      channelId: id,
+      draft: result,
+      draftType: ChannelMessage,
+      command: toDraftCommandResult,
+    };
     obj.dispatch(obj);
   },
   changeDraft(id, draft, ChannelMessage) {
@@ -34,5 +40,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "SCHEDULED_MESSAGE_DRAFT_CHANGE", channelId: closure_0, draft };
     obj.dispatch(obj);
-  }
+  },
 };

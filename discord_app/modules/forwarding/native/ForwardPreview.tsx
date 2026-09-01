@@ -31,12 +31,43 @@ function MessagePreview(content) {
     if (attachmentCount > 0) {
       num = 1;
     }
-    message.truncation = { numberOfLines: num, expandable: false, seeMoreLabel: "...", seeMoreLabelColor: lib.seeMoreLabelColor };
+    message.truncation = {
+      numberOfLines: num,
+      expandable: false,
+      seeMoreLabel: "...",
+      seeMoreLabelColor: lib.seeMoreLabelColor,
+    };
     message.message.edited = "";
   }, items);
   const memo = React.useMemo(() => {
     const obj = new lib(table[7])();
-    obj.setOptions({ renderEmbeds: false, renderReactions: false, inlineEmbedMedia: false, inlineAttachmentMedia: false, animateEmoji: true, gifAutoPlay: false, timestampHourCycle: 0, renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderThreadEmbeds: false, renderReplies: false, renderCommunicationDisabled: false, renderAttachments: false, renderExecutedCommands: false, renderPolls: false, renderSharedClientTheme: false, renderForumPostActions: false, ignoreMentioned: false, ignoreEmbedDescriptionCache: false, forceHideSimpleEmbedContent: false, enableSwipeActions: false, useAlternateEmbedColors: false });
+    obj.setOptions({
+      renderEmbeds: false,
+      renderReactions: false,
+      inlineEmbedMedia: false,
+      inlineAttachmentMedia: false,
+      animateEmoji: true,
+      gifAutoPlay: false,
+      timestampHourCycle: 0,
+      renderCodedLinks: false,
+      renderGiftCode: false,
+      renderActivityInstanceEmbed: false,
+      renderActivityInviteEmbed: false,
+      renderComponents: false,
+      renderThreadEmbeds: false,
+      renderReplies: false,
+      renderCommunicationDisabled: false,
+      renderAttachments: false,
+      renderExecutedCommands: false,
+      renderPolls: false,
+      renderSharedClientTheme: false,
+      renderForumPostActions: false,
+      ignoreMentioned: false,
+      ignoreEmbedDescriptionCache: false,
+      forceHideSimpleEmbedContent: false,
+      enableSwipeActions: false,
+      useAlternateEmbedColors: false,
+    });
     return obj;
   }, []);
   obj = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
@@ -48,24 +79,68 @@ function MessagePreview(content) {
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let c7 = 56;
-createCacheKey = { forwardPreview: null, quote: null, contentWrapper: null, attachmentPreview: null, attachmentPreviewVideo: null, videoThumbnail: null, playIcon: null, attachmentPreviewOverflow: null, overflowCount: null, attachmentRow: null, largeIcon: null };
+createCacheKey = {
+  forwardPreview: null,
+  quote: null,
+  contentWrapper: null,
+  attachmentPreview: null,
+  attachmentPreviewVideo: null,
+  videoThumbnail: null,
+  playIcon: null,
+  attachmentPreviewOverflow: null,
+  overflowCount: null,
+  attachmentRow: null,
+  largeIcon: null,
+};
 createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_12, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 4, height: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: 2 };
 createCacheKey[2] = { flexDirection: "column", flex: 1, paddingVertical: 4, gap: 6 };
 let obj1 = { width: 4, height: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: 2 };
-createCacheKey[3] = { position: "relative", width: 56, height: 56, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+createCacheKey[3] = {
+  position: "relative",
+  width: 56,
+  height: 56,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+};
 let obj2 = { position: "relative", width: 56, height: 56, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BLACK };
 createCacheKey[5] = { position: "absolute", top: 0, left: 0, opacity: 0.6 };
 createCacheKey[6] = { position: "absolute", top: 0, left: 0, margin: 16, zIndex: 100 };
 createCacheKey[7] = { position: "relative" };
 let obj3 = { backgroundColor: ThemesDefault.colors.BLACK };
-createCacheKey[8] = { position: "absolute", bottom: 0, right: 0, alignItems: "center", justifyContent: "center", textAlign: "center", width: 24, height: 24, lineHeight: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+createCacheKey[8] = {
+  position: "absolute",
+  bottom: 0,
+  right: 0,
+  alignItems: "center",
+  justifyContent: "center",
+  textAlign: "center",
+  width: 24,
+  height: 24,
+  lineHeight: 24,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+};
 createCacheKey[9] = { flexDirection: "row", alignItems: "center", gap: 6 };
 createCacheKey[10] = { width: 20, height: 20 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { position: "absolute", bottom: 0, right: 0, alignItems: "center", justifyContent: "center", textAlign: "center", width: 24, height: 24, lineHeight: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+let obj4 = {
+  position: "absolute",
+  bottom: 0,
+  right: 0,
+  alignItems: "center",
+  justifyContent: "center",
+  textAlign: "center",
+  width: 24,
+  height: 24,
+  lineHeight: 24,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+};
 const result = require("set").fileFinishedImporting("modules/forwarding/native/ForwardPreview.tsx");
 
 export const ForwardPreview = function ForwardPreview(message) {
@@ -95,7 +170,9 @@ export const ForwardPreview = function ForwardPreview(message) {
   }
   if (attachments.length > 0) {
     let tmp2Result = tmp2(12);
-    const countByResult = tmp2Result.countBy(attachments, (proxy_url) => callback(table[13]).getMosaicMediaTypeForAttachment(proxy_url, true));
+    const countByResult = tmp2Result.countBy(attachments, (proxy_url) =>
+      callback(table[13]).getMosaicMediaTypeForAttachment(proxy_url, true),
+    );
     let num2 = countByResult.IMAGE;
     if (num2 == null) {
       num2 = 0;
@@ -116,7 +193,7 @@ export const ForwardPreview = function ForwardPreview(message) {
       if (num3 > 0) {
         if (length === num3) {
           obj = { style: null, children: null };
-          const items = [, ];
+          const items = [,];
           ({ attachmentPreview: arr[0], attachmentPreviewVideo: arr[1] } = tmp);
           obj[0] = items;
           obj1 = { style: null, source: null, width: null, height: null };
@@ -127,7 +204,7 @@ export const ForwardPreview = function ForwardPreview(message) {
           obj1[1] = obj2;
           obj1[2] = c7;
           obj1[3] = c7;
-          const items1 = [callback(preloadDefault, obj1), ];
+          const items1 = [callback(preloadDefault, obj1)];
           const obj3 = { style: null, size: "md", color: "white" };
           obj3[0] = tmp.playIcon;
           items1[1] = callback(tmp2(10213).CirclePlayIcon, obj3);
@@ -225,7 +302,7 @@ export const ForwardPreview = function ForwardPreview(message) {
       const items2 = [obj13];
       obj15[0] = items2;
       obj15[1] = tmp7;
-      const items3 = [callback(SolidCutoutDefault, obj15), ];
+      const items3 = [callback(SolidCutoutDefault, obj15)];
       const obj16 = { style: null, variant: "text-xs/semibold", color: "text-default", children: null };
       obj16[0] = tmp.overflowCount;
       const items4 = ["+", length - 1];
@@ -236,7 +313,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     }
   }
   obj17 = { style: tmp.forwardPreview, children: null };
-  const items5 = [callback(View, { style: tmp.quote }), , , ];
+  const items5 = [callback(View, { style: tmp.quote }), , ,];
   const obj19 = { style: tmp.contentWrapper, children: null };
   let tmp36Result = null != checkpointData;
   if (tmp36Result) {
@@ -245,7 +322,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     obj20[1] = intl5.string(messagesProxyDefault.goiR2u);
     tmp36Result = tmp36(tmp2(4474).Text, obj20);
   }
-  const items6 = [tmp36Result, , ];
+  const items6 = [tmp36Result, ,];
   tmp36Result = hasContent;
   if (hasContent) {
     const obj21 = { message: null, contentMessage: null, attachmentCount: null };
@@ -274,7 +351,7 @@ export const ForwardPreview = function ForwardPreview(message) {
       obj23[1] = largeIcon;
       tmp36Result1 = tmp36(tmp8, obj23);
     }
-    const items7 = [tmp36Result1, ];
+    const items7 = [tmp36Result1];
     let tmp36Result2 = null != tmp9;
     if (tmp36Result2) {
       let str3 = "text-md/medium";

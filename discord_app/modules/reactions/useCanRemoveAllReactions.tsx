@@ -7,10 +7,19 @@ const result = require("set").fileFinishedImporting("modules/reactions/useCanRem
 
 export default function useCanRemoveAllReactions(channel) {
   const _require = channel;
-  isActiveChannelOrUnarchivableThread = _require(isActiveChannelOrUnarchivableThread[2]).useIsActiveChannelOrUnarchivableThread(channel);
+  isActiveChannelOrUnarchivableThread = _require(
+    isActiveChannelOrUnarchivableThread[2],
+  ).useIsActiveChannelOrUnarchivableThread(channel);
   const obj = _require(isActiveChannelOrUnarchivableThread[2]);
   const items = [closure_2];
   const items1 = [channel, isActiveChannelOrUnarchivableThread];
   const obj2 = _require(isActiveChannelOrUnarchivableThread[3]);
-  return null != channel && _require(isActiveChannelOrUnarchivableThread[3]).useStateFromStores(items, () => closure_1_2.can(closure_1_3.MANAGE_MESSAGES, closure_0) && isActiveChannelOrUnarchivableThread, items1);
-};
+  return (
+    null != channel &&
+    _require(isActiveChannelOrUnarchivableThread[3]).useStateFromStores(
+      items,
+      () => closure_1_2.can(closure_1_3.MANAGE_MESSAGES, closure_0) && isActiveChannelOrUnarchivableThread,
+      items1,
+    )
+  );
+}

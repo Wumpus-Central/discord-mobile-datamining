@@ -13,7 +13,13 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 require = arg1;
 function EmptyGuildList() {
-  const obj = { containerStyle: callback4().emptyStateContainer, title: null, body: null, darkSource: null, lightSource: null };
+  const obj = {
+    containerStyle: callback4().emptyStateContainer,
+    title: null,
+    body: null,
+    darkSource: null,
+    lightSource: null,
+  };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["2bfiLk"]);
   const intl2 = getSystemLocale.intl;
@@ -39,7 +45,15 @@ function GuildList(recipientId) {
       tmp5 = 0 === arr2.length;
     }
     callback = tmp5;
-    obj = { renderItem: null, contentContainerStyle: null, sections: null, renderSectionHeader: null, stickySectionHeadersEnabled: true, keyExtractor: null, ListEmptyComponent: null };
+    obj = {
+      renderItem: null,
+      contentContainerStyle: null,
+      sections: null,
+      renderSectionHeader: null,
+      stickySectionHeadersEnabled: true,
+      keyExtractor: null,
+      ListEmptyComponent: null,
+    };
     obj[0] = function renderItem(arg0) {
       ({ item, start, end } = arg0);
       return closure_1_6(source(sectionTitle[14]), { row: item, recipientId, source, start, end });
@@ -78,7 +92,7 @@ function GuildList(recipientId) {
   const intl = tmp(1236).intl;
   obj1[0] = intl.string(recipientId(1236).t["u+Ithu"]);
   obj1[1] = arr;
-  items = [obj1, ];
+  items = [obj1];
   const obj2 = { title: null, data: null };
   const intl2 = tmp(1236).intl;
   obj2[0] = intl2.string(recipientId(1236).t["c5T+X/"]);
@@ -91,11 +105,17 @@ createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { rowGap: 8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let obj1 = { rowGap: 8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey[2] = { paddingBottom: 6, paddingTop: 24, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey[2] = {
+  paddingBottom: 6,
+  paddingTop: 24,
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+};
 createCacheKey[3] = { margin: 24 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { paddingBottom: 6, paddingTop: 24, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/action_sheet/invite_to_guilds/GuildInviteActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/instant_invite/native/action_sheet/invite_to_guilds/GuildInviteActionSheet.tsx",
+);
 
 export default function GuildInviteActionSheet(arg0) {
   let _require;
@@ -106,24 +126,40 @@ export default function GuildInviteActionSheet(arg0) {
   let obj = { title: null };
   const intl = require("../../../../../intl/index.native.tsx").intl;
   obj[0] = intl.string(require("../../../../../intl/index.native.tsx").t.HvoZQD);
-  obj = { scrollable: true, startExpanded: true, header: callback2(require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx").BottomSheetTitleHeader, obj), contentStyles: tmp.content, children: null };
+  obj = {
+    scrollable: true,
+    startExpanded: true,
+    header: callback2(
+      require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx").BottomSheetTitleHeader,
+      obj,
+    ),
+    contentStyles: tmp.content,
+    children: null,
+  };
   obj = { style: tmp.searchbarWrapper, children: null };
   obj1 = {
     onChange(arg0) {
       callback(arg0);
     },
-    placeholder: null
+    placeholder: null,
   };
   const intl2 = require("../../../../../intl/index.native.tsx").intl;
   obj1[1] = intl2.string(require("../../../../../intl/index.native.tsx").t.uohsSv);
-  const items = [callback2(require("../../../../../design/components/TextField/native/SearchField.native.tsx").SearchField, obj1), ];
+  const items = [
+    callback2(require("../../../../../design/components/TextField/native/SearchField.native.tsx").SearchField, obj1),
+  ];
   const obj2 = { variant: "text-xs/medium", color: "text-subtle", children: null };
   const intl3 = require("../../../../../intl/index.native.tsx").intl;
-  const tmp3 = callback2(require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx").BottomSheetTitleHeader, obj);
-  obj2[2] = intl3.format(require("../../../../../intl/index.native.tsx").t["4UyUHh"], { xDays: isGuildMemberDefault.INVITE_OPTIONS_7_DAYS.label });
+  const tmp3 = callback2(
+    require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx").BottomSheetTitleHeader,
+    obj,
+  );
+  obj2[2] = intl3.format(require("../../../../../intl/index.native.tsx").t["4UyUHh"], {
+    xDays: isGuildMemberDefault.INVITE_OPTIONS_7_DAYS.label,
+  });
   items[1] = callback2(require("../../../../../design/components/Text/native/Text.tsx").Text, obj2);
   obj[1] = items;
   const items1 = [callback3(View, obj), callback2(GuildList, { query: tmp2[0], recipientId, source })];
   obj[4] = items1;
   return callback3(require("../../../../../design/components/Sheet/native/BottomSheet.native.tsx").BottomSheet, obj);
-};
+}

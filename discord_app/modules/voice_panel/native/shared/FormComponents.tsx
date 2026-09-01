@@ -26,7 +26,7 @@ function VoiceBadges(arg0) {
     obj[1] = callback(VideoDisabledSvgIcon.MuteDeafenIcon, obj);
     tmp6 = callback(tmp3Result, obj);
   }
-  const items = [tmp6, ];
+  const items = [tmp6];
   let tmp10 = null;
   if (null != videoIconState) {
     obj1 = { style: null, children: null };
@@ -44,8 +44,21 @@ function VoiceBadges(arg0) {
   return closure_6(setDefault, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: null, icon: null, notConnectedAvatar: null, memberRow: null, trailingContainer: null };
-createCacheKey = { marginLeft: 8, padding: 6, backgroundColor: ThemesDefault.colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: ThemesDefault.radii.round };
+createCacheKey = {
+  container: { marginHorizontal: 16 },
+  voiceBadgesContainer: { flexDirection: "row" },
+  iconWrapper: null,
+  icon: null,
+  notConnectedAvatar: null,
+  memberRow: null,
+  trailingContainer: null,
+};
+createCacheKey = {
+  marginLeft: 8,
+  padding: 6,
+  backgroundColor: ThemesDefault.colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND,
+  borderRadius: ThemesDefault.radii.round,
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { width: 16, height: 16, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[4] = { opacity: 0.5 };
@@ -178,7 +191,7 @@ export const MemberRowItem = function MemberRowItem(user) {
     }
     obj3[2] = tmp30;
     obj3[3] = nick;
-    const items3 = [tmp20(tmp4(tmp3[21]).Text, obj3), , ];
+    const items3 = [tmp20(tmp4(tmp3[21]).Text, obj3), ,];
     obj5 = { userId: null };
     obj5[0] = user.id;
     items3[1] = tmp20(tmp2(tmp3[28]), obj5);
@@ -216,7 +229,7 @@ export const MemberRowItem = function MemberRowItem(user) {
       tmp20Result = tmp20(VoiceBadges, obj9);
     }
   }
-  const items4 = [tmp20Result, ];
+  const items4 = [tmp20Result];
   let tmp20Result1 = null;
   if (null != gameRecord) {
     const obj10 = { game: null, size: 24, fallback: "placeholder" };

@@ -11,17 +11,18 @@ prototype = function WishlistRecommendationRecord(skus) {
   skus = skus.skus;
   tmp5.skus = skus.map((arg0) => closure_0.createFromServer(arg0));
   const entries = Object.entries(skus.skus_to_user_and_reason);
-  tmp5.skusToUserAndReason = Object.fromEntries(entries.map((arg0) => {
-    [tmp, tmp2] = arg0;
-    const items = [tmp, tmp2];
-    return items;
-  }));
+  tmp5.skusToUserAndReason = Object.fromEntries(
+    entries.map((arg0) => {
+      [tmp, tmp2] = arg0;
+      const items = [tmp, tmp2];
+      return items;
+    }),
+  );
   const applications = skus.applications;
   tmp5.applications = applications.map((arg0) => closure_1.createFromServer(arg0));
   return tmp5;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["fromServer"] = function fromServer(skus) {
   if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
@@ -31,11 +32,13 @@ prototype["fromServer"] = function fromServer(skus) {
   skus = skus.skus;
   tmp4.skus = skus.map((arg0) => closure_0.createFromServer(arg0));
   const entries = Object.entries(skus.skus_to_user_and_reason);
-  tmp4.skusToUserAndReason = Object.fromEntries(entries.map((arg0) => {
-    [tmp, tmp2] = arg0;
-    const items = [tmp, tmp2];
-    return items;
-  }));
+  tmp4.skusToUserAndReason = Object.fromEntries(
+    entries.map((arg0) => {
+      [tmp, tmp2] = arg0;
+      const items = [tmp, tmp2];
+      return items;
+    }),
+  );
   const applications = skus.applications;
   tmp4.applications = applications.map((arg0) => closure_1.createFromServer(arg0));
   return tmp4;

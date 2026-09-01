@@ -4,7 +4,9 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/native/GuildDisableCommunicationModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_communication_disabled/native/GuildDisableCommunicationModal.tsx",
+);
 
 export default function GuildDisableCommunicationModal(onBeforeGoBack) {
   const guildId = onBeforeGoBack.guildId;
@@ -21,4 +23,4 @@ export default function GuildDisableCommunicationModal(onBeforeGoBack) {
     return closure_1_3(user(onGoBack[6]), { user, guildId, onClose: onGoBack });
   };
   return <tmp user={null} />;
-};
+}

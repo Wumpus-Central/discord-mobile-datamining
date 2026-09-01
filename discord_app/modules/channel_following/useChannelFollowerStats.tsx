@@ -15,7 +15,11 @@ export default function useChannelFollowerStats(arg0) {
   dependencyMap = tmp[1];
   const items = [closure_5];
   const items1 = [arg0];
-  stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.getFollowerStatsForChannel(closure_0), items1);
+  stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_5.getFollowerStatsForChannel(closure_0),
+    items1,
+  );
   const items2 = [arg0, stateFromStores, first];
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {
@@ -33,4 +37,4 @@ export default function useChannelFollowerStats(arg0) {
   }, items2);
   const items3 = [stateFromStores, first];
   return items3;
-};
+}

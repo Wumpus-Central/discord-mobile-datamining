@@ -18,21 +18,34 @@ export const get1PShopApplicationIdForSKU = function get1PShopApplicationIdForSK
 };
 export const dismissOrbsOnboardingExperience = function dismissOrbsOnboardingExperience() {
   let obj = UNSAFE_isDismissibleContentDismissed;
-  if (!obj.UNSAFE_isDismissibleContentDismissed(DismissibleContent.DismissibleContent.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL)) {
+  if (
+    !obj.UNSAFE_isDismissibleContentDismissed(
+      DismissibleContent.DismissibleContent.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL,
+    )
+  ) {
     let tmpResult = tmp(4298);
     obj = { dismissAction: null, groupName: null };
     obj[0] = constants2.INDIRECT_ACTION;
     obj[1] = constants.VIRTUAL_CURRENCY_ONBOARDING;
-    const result = tmpResult.UNSAFE_markDismissibleContentAsDismissed(tmp(1373).DismissibleContent.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL, obj);
+    const result = tmpResult.UNSAFE_markDismissibleContentAsDismissed(
+      tmp(1373).DismissibleContent.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL,
+      obj,
+    );
     tmpResult = tmp(4298);
     obj = { dismissAction: null, groupName: null };
     obj[0] = constants2.INDIRECT_ACTION;
     obj[1] = constants.VIRTUAL_CURRENCY_ONBOARDING;
-    const result1 = tmpResult.UNSAFE_markDismissibleContentAsDismissed(tmp(1373).DismissibleContent.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, obj);
+    const result1 = tmpResult.UNSAFE_markDismissibleContentAsDismissed(
+      tmp(1373).DismissibleContent.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK,
+      obj,
+    );
     obj1 = { dismissAction: null, groupName: null };
     obj1[0] = constants2.INDIRECT_ACTION;
     obj1[1] = constants.VIRTUAL_CURRENCY_ONBOARDING;
-    const result2 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(tmp(1373).DismissibleContent.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, obj1);
+    const result2 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(
+      tmp(1373).DismissibleContent.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK,
+      obj1,
+    );
     const tmpResult1 = tmp(4298);
   }
 };

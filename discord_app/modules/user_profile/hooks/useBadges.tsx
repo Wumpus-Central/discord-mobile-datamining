@@ -49,5 +49,5 @@ export default function useBadges(getBadges) {
     }
     return mapped;
   }
-};
+}
 export const QUEST_COMPLETED_BADGE = "quest_completed";

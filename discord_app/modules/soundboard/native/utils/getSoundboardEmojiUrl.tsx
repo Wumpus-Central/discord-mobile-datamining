@@ -15,4 +15,4 @@ export default function getSoundboardEmojiUrl(emojiId) {
     emojiURL = obj.getEmojiURL(obj);
   }
   return emojiURL;
-};
+}

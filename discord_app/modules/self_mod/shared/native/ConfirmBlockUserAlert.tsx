@@ -12,8 +12,20 @@ const require = arg1;
 createCacheKey = { header: null, text: null, buttonsContainer: null };
 createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_4, textAlign: "center" };
-let obj1 = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_4, textAlign: "center" };
+createCacheKey[1] = {
+  color: ThemesDefault.colors.TEXT_SUBTLE,
+  marginTop: ThemesDefault.space.PX_8,
+  marginBottom: ThemesDefault.space.PX_24,
+  marginHorizontal: ThemesDefault.space.PX_4,
+  textAlign: "center",
+};
+let obj1 = {
+  color: ThemesDefault.colors.TEXT_SUBTLE,
+  marginTop: ThemesDefault.space.PX_8,
+  marginBottom: ThemesDefault.space.PX_24,
+  marginHorizontal: ThemesDefault.space.PX_4,
+  textAlign: "center",
+};
 createCacheKey[2] = { gap: ThemesDefault.space.PX_12, marginBottom: -ThemesDefault.space.PX_8 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { gap: ThemesDefault.space.PX_12, marginBottom: -ThemesDefault.space.PX_8 };
@@ -73,12 +85,12 @@ export default function ConfirmBlockUserAlert(userId) {
       obj[2] = intl.string(userId(onCancel[15]).t["ETE/oC"]);
       return callback(userId(onCancel[14]).Button, obj);
     },
-    children: null
+    children: null,
   };
   obj = { style: tmp.header, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
   let intl = userId(onCancel[15]).intl;
   obj[3] = intl.format(userId(onCancel[15]).t.x5pOn9, { name });
-  const items5 = [callback(userId(onCancel[16]).Text, obj), , ];
+  const items5 = [callback(userId(onCancel[16]).Text, obj), ,];
   obj1 = { style: tmp.text, variant: "text-md/medium", children: null };
   if (description == null) {
     const intl2 = tmp2(tmp3[15]).intl;
@@ -96,7 +108,7 @@ export default function ConfirmBlockUserAlert(userId) {
     str = "destructive";
   }
   obj4[3] = str;
-  const items6 = [callback(userId(onCancel[14]).Button, obj4), ];
+  const items6 = [callback(userId(onCancel[14]).Button, obj4)];
   let tmp12Result = null != onBlockAndReport;
   if (tmp12Result) {
     const obj5 = { size: "lg", onPress: null, text: null, variant: "secondary" };
@@ -110,4 +122,4 @@ export default function ConfirmBlockUserAlert(userId) {
   items5[2] = closure_8(onBlockAndReport, obj3);
   obj[1] = items5;
   return closure_8(channelId(onCancel[13]), obj);
-};
+}

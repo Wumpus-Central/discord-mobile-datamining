@@ -11,4 +11,4 @@ export default function isCrunchyrollActivity(application_id) {
     application_id = application_id.application_id;
   }
   return application_id === CRUNCHYROLL_CLIENT_ID;
-};
+}

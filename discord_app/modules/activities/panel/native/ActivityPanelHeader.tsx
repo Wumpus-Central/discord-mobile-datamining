@@ -27,7 +27,7 @@ function useBaseActivityPanelHeaderContent(landscape) {
   const tmp2 = setMode(1628)();
   closure_3 = tmp2;
   let items = [landscape];
-  const items1 = [landscape, tmp2, , ];
+  const items1 = [landscape, tmp2, ,];
   ({ panelHeader: arr2[2], panelLandscape: arr2[3] } = tmp);
   const memo = importAllResult.useMemo(() => {
     let num = 0;
@@ -46,7 +46,7 @@ function useBaseActivityPanelHeaderContent(landscape) {
     if (landscape) {
       num = 24;
     }
-    const items = [closure_2.panelHeader, , ];
+    const items = [closure_2.panelHeader, ,];
     let panelLandscape;
     if (landscape) {
       panelLandscape = closure_2.panelLandscape;
@@ -80,7 +80,15 @@ function useBaseActivityPanelHeaderContent(landscape) {
   const items2 = [setMode];
   obj = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
   const callback = importAllResult.useCallback(fn, items2);
-  obj = { mode: landscape(16602).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: callback, disableHorizontalSafeAreas: true };
+  obj = {
+    mode: landscape(16602).MorphablePanelModes.PANEL,
+    panGestureEnabled: true,
+    pipState,
+    swipeRequiresPop: true,
+    wrapperOffset,
+    onPanMinimizeGestureEnd: callback,
+    disableHorizontalSafeAreas: true,
+  };
   obj[0] = setMode(16602)(obj);
   obj[1] = memo;
   obj[2] = memo1;
@@ -106,7 +114,7 @@ class BaseActivityPanelContent {
       obj1[0] = headerWrapperStyles;
       tmp9 = closure_1;
       tmp7 = jsxs;
-      items = [, , ];
+      items = [, ,];
       items[0] = jsx(require("BlurVisualEffectView.tsx"), {});
       tmp3Result = !landscape;
       if (!landscape) {
@@ -129,7 +137,11 @@ class BaseActivityPanelContent {
 }
 let c4 = importAllResult;
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
-({ ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: c9, ActivityPanelModes: c10 } = ActivityPanelModes);
+({
+  ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8,
+  LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: c9,
+  ActivityPanelModes: c10,
+} = ActivityPanelModes);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = { panelHeader: null, panelLandscape: null, headerContainer: null, pullIndicator: null };
 obj = {};
@@ -141,11 +153,24 @@ obj.gap = 8;
 obj[0] = obj;
 obj[1] = { flexDirection: "column-reverse" };
 obj[2] = { position: "absolute", top: 0 };
-createCacheKey = { backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.sm, width: 32, height: 4, alignSelf: "center", marginTop: 4, opacity: 0.3 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.WHITE,
+  borderRadius: ThemesDefault.radii.sm,
+  width: 32,
+  height: 4,
+  alignSelf: "center",
+  marginTop: 4,
+  opacity: 0.3,
+};
 obj[3] = createCacheKey;
 let closure_14 = createCacheKey.createStyles(obj);
-let closure_15 = { code: "function ActivityPanelHeaderTsx1(){const{runOnJS,setMode,ActivityPanelModes}=this.__closure;runOnJS(setMode)(ActivityPanelModes.PIP);}" };
-let obj2 = { buttonContainer: { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, flexShrink: 1 }, buttonContainerLandscape: { flexDirection: "column-reverse" } };
+let closure_15 = {
+  code: "function ActivityPanelHeaderTsx1(){const{runOnJS,setMode,ActivityPanelModes}=this.__closure;runOnJS(setMode)(ActivityPanelModes.PIP);}",
+};
+let obj2 = {
+  buttonContainer: { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, flexShrink: 1 },
+  buttonContainerLandscape: { flexDirection: "column-reverse" },
+};
 const styles = createCacheKey.createStyles(obj2);
 let closure_19 = importAllResult.memo(function ActivityPanelHeaderContentInner(wrapperOffset) {
   ({ landscape, setMode } = wrapperOffset);
@@ -153,7 +178,11 @@ let closure_19 = importAllResult.memo(function ActivityPanelHeaderContentInner(w
   ({ gesture, headerWrapperStyles, headerStyles } = useBaseActivityPanelHeaderContent(obj));
   obj1 = initialize;
   const items = [closure_7];
-  const stateFromStores = obj1.useStateFromStores(items, () => store.getSelfEmbeddedActivityForLocation(store.getConnectedActivityLocation()), []);
+  const stateFromStores = obj1.useStateFromStores(
+    items,
+    () => store.getSelfEmbeddedActivityForLocation(store.getConnectedActivityLocation()),
+    [],
+  );
   let applicationId;
   if (stateFromStores != null) {
     applicationId = stateFromStores.applicationId;
@@ -167,8 +196,15 @@ let closure_19 = importAllResult.memo(function ActivityPanelHeaderContentInner(w
     id = first.id;
   }
   let tmp8Result = tmp8(_modDef16607, { applicationId: id });
-  obj = { hasConnectedActivity: null != stateFromStores, gesture, headerWrapperStyles, headerStyles, landscape, children: null };
-  const items2 = [tmp7.buttonContainer, ];
+  obj = {
+    hasConnectedActivity: null != stateFromStores,
+    gesture,
+    headerWrapperStyles,
+    headerStyles,
+    landscape,
+    children: null,
+  };
+  const items2 = [tmp7.buttonContainer];
   let prop;
   if (landscape) {
     prop = tmp7.buttonContainerLandscape;
@@ -184,7 +220,7 @@ let closure_19 = importAllResult.memo(function ActivityPanelHeaderContentInner(w
     }
     tmp17 = name;
   }
-  const items3 = [closure_12(tmp5Result, { activityName: tmp17, setMode }), , ];
+  const items3 = [closure_12(tmp5Result, { activityName: tmp17, setMode }), ,];
   tmp8Result = null != applicationId;
   if (tmp8Result) {
     obj1 = { applicationId: null };
@@ -198,7 +234,7 @@ let closure_19 = importAllResult.memo(function ActivityPanelHeaderContentInner(w
   }
   items3[2] = tmp20;
   obj[1] = items3;
-  const items4 = [closure_13(closure_5, obj), , ];
+  const items4 = [closure_13(closure_5, obj), ,];
   let tmp21 = null;
   if (!landscape) {
     tmp21 = tmp8Result;
@@ -235,7 +271,7 @@ const memoResult = importAllResult.memo(() => {
       const items = [headerContainer.headerContainer, { width: str2, height: str, right: 0, left: num, bottom: tmp }];
       return items;
     }, items),
-    children: callback2(closure_19, obj)
+    children: callback2(closure_19, obj),
   };
   obj = { landscape: wrapperDimensions.isWindowLandscape, setMode, wrapperOffset, pipState };
   return callback2(closure_5, obj);
@@ -274,6 +310,6 @@ export const useBaseActivityPanelHeader = function useBaseActivityPanelHeader(co
     wrapperDimensions,
     setMode,
     wrapperOffset,
-    pipState
+    pipState,
   };
 };

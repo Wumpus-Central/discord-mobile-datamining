@@ -43,7 +43,7 @@ export default function GuildProfileCTA(profile) {
   }, items1);
   const tmp5 = guildId(validInviteKey[9])(guildId);
   constants = tmp5;
-  const items2 = [guildId, ];
+  const items2 = [guildId];
   let applicationStatus;
   if (tmp5 != null) {
     applicationStatus = tmp5.applicationStatus;
@@ -144,4 +144,4 @@ export default function GuildProfileCTA(profile) {
   } else {
     return null;
   }
-};
+}

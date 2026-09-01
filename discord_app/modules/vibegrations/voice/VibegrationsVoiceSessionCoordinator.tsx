@@ -68,7 +68,17 @@ prototype["getSpatialCapabilities"] = function getSpatialCapabilities() {
   if (available) {
     available = store2.supports(constants.SPATIAL_AUDIO);
   }
-  return { available, source_positioning: available, source_gain: false, source_spatial_blend: false, listener_pose: available, room_size: false, reflections: false, max_sources: 50, max_updates_per_second: 20 };
+  return {
+    available,
+    source_positioning: available,
+    source_gain: false,
+    source_spatial_blend: false,
+    listener_pose: available,
+    room_size: false,
+    reflections: false,
+    max_sources: 50,
+    max_updates_per_second: 20,
+  };
 };
 prototype["getConnectedRTCConnection"] = function getConnectedRTCConnection() {
   const rTCConnection = store3.getRTCConnection();
@@ -91,7 +101,17 @@ prototype["getParticipants"] = function getParticipants(arg0) {
     if (null == user) {
       let items = [];
     } else {
-      const obj = { user_id: null, username: null, global_name: null, avatar: null, mute: null, deaf: null, self_mute: null, self_deaf: null, self_video: null };
+      const obj = {
+        user_id: null,
+        username: null,
+        global_name: null,
+        avatar: null,
+        mute: null,
+        deaf: null,
+        self_mute: null,
+        self_deaf: null,
+        self_video: null,
+      };
       obj[0] = userId.userId;
       ({ username: obj[1], globalName } = user);
       if (globalName == null) {
@@ -129,7 +149,19 @@ prototype["start"] = function start(id) {
         const tmp23 = new prototypeDefault(obj, "Another RPC session owns the voice session");
         throw tmp23;
       }
-      obj = { id: null, socketId: null, frameId: null, applicationId: null, channelId: null, rtcConnectionId: null, mediaEngineConnectionId: null, spatialEnabled: false, backgrounded: null, sources: null, appliedUserIds: null };
+      obj = {
+        id: null,
+        socketId: null,
+        frameId: null,
+        applicationId: null,
+        channelId: null,
+        rtcConnectionId: null,
+        mediaEngineConnectionId: null,
+        spatialEnabled: false,
+        backgrounded: null,
+        sources: null,
+        appliedUserIds: null,
+      };
       let obj2 = set(514);
       obj[0] = obj2.v4();
       obj[1] = id.id;
@@ -338,13 +370,15 @@ prototype["reconcileParticipants"] = function reconcileParticipants() {
             HermesBuiltin.arraySpread(session.appliedUserIds, 0);
             const found = items.filter((arg0) => !set.has(arg0));
             if (0 !== found.length) {
-              if (self.withMediaEngineConnection(session, (setUserPosition) => {
-                for (const item10006 of found) {
-                  let tmp = closure_1_13;
-                  let setUserPositionResult = arg0.setUserPosition(item10006, closure_1_13);
-                  continue;
-                }
-              })) {
+              if (
+                self.withMediaEngineConnection(session, (setUserPosition) => {
+                  for (const item10006 of found) {
+                    let tmp = closure_1_13;
+                    let setUserPositionResult = arg0.setUserPosition(item10006, closure_1_13);
+                    continue;
+                  }
+                })
+              ) {
                 for (const item10048 of found) {
                   let appliedUserIds = session.appliedUserIds;
                   let deleteResult = appliedUserIds.delete(item10048);
@@ -449,9 +483,7 @@ prototype["getParticipantIds"] = function getParticipantIds(channelId) {
   return new Set(Object.keys(store4.getVoiceStatesForChannel(channelId)));
 };
 prototype["hasMediaEngineConnection"] = function hasMediaEngineConnection(session) {
-  return this.withMediaEngineConnection(session, () => {
-
-  });
+  return this.withMediaEngineConnection(session, () => {});
 };
 prototype["withMediaEngineConnection"] = function withMediaEngineConnection(session, arg1) {
   closure_0 = session;

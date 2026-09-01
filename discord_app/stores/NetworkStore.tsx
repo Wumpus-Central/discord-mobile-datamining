@@ -24,8 +24,7 @@ let UNKNOWN = NetworkConnectionTypes.UNKNOWN;
 UNKNOWN = NetworkConnectionSpeeds.UNKNOWN;
 let c6 = null;
 const Store = initializeDefault.Store;
-class NetworkStoreClass extends Store {
-}
+class NetworkStoreClass extends Store {}
 const prototype = NetworkStoreClass.prototype;
 prototype["initialize"] = function initialize() {
   const networkInformation = awaitOnlineDefault.getNetworkInformation();

@@ -18,14 +18,20 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
   }
   let _require;
   importDefault = undefined;
-  const now = callback(React.useState(() => {
-    const timestamp = Date.now();
-    const rounded = Math.floor(timestamp / _undefined(687).Millis.SECOND);
-    return rounded * _undefined(687).Millis.SECOND;
-  }), 2);
+  const now = callback(
+    React.useState(() => {
+      const timestamp = Date.now();
+      const rounded = Math.floor(timestamp / _undefined(687).Millis.SECOND);
+      return rounded * _undefined(687).Millis.SECOND;
+    }),
+    2,
+  );
   _require = now[1];
   const items = [closure_5];
-  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => useReducedMotion.useReducedMotion,
+  );
   let slowTickMode = !isAppFocused;
   if (isAppFocused) {
     if (stateFromStores) {

@@ -5,7 +5,9 @@ import closure_3 from "../../../stores/GuildStore.tsx";
 const require = arg1;
 let c4 = "13.2";
 let items = [require("ME").GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx",
+);
 
 export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guildId) {
   if (obj.isIOS()) {

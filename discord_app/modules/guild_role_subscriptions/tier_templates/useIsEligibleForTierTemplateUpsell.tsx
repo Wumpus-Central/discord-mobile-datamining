@@ -5,16 +5,22 @@ import { initialize } from "../../../../discord_common/js/packages/flux/index.ts
 import { GuildFeatures } from "../GuildRoleSubscriptionsExperimentUtils.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/useIsEligibleForTierTemplateUpsell.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/tier_templates/useIsEligibleForTierTemplateUpsell.tsx",
+);
 
 export default function useIsEligibleForTierTemplateUpsell(guildId) {
   const _require = guildId;
   const items = [closure_2];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.getGuild(closure_0));
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_2.getGuild(closure_0),
+  );
   const obj = initialize;
   const tmp = _require;
   let hasItem;
-  const guildEligibleForTierTemplates = require("../GuildRoleSubscriptionsExperimentUtils.tsx").useGuildEligibleForTierTemplates(guildId);
+  const guildEligibleForTierTemplates =
+    require("../GuildRoleSubscriptionsExperimentUtils.tsx").useGuildEligibleForTierTemplates(guildId);
   if (stateFromStores != null) {
     const features = stateFromStores.features;
     hasItem = features.has(GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
@@ -36,4 +42,4 @@ export default function useIsEligibleForTierTemplateUpsell(guildId) {
     result = guildEligibleForTierTemplates;
   }
   return result;
-};
+}

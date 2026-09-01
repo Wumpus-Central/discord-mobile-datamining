@@ -24,4 +24,4 @@ export default function isGuildSelectable(id) {
     tmp2 = hasUnreadResult;
   }
   return tmp2;
-};
+}

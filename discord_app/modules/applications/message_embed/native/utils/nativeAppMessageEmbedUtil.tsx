@@ -6,9 +6,11 @@ import hasFetchedColors from "../../../../avatar/useAvatarColor.tsx";
 import hexToRgba from "../../../../../utils/ColorUtils.tsx";
 
 let c3 = "#000000";
-let items = [hexToRgba.hexToRgba(ThemesDefault.unsafe_rawColors.PRIMARY_760), ];
+let items = [hexToRgba.hexToRgba(ThemesDefault.unsafe_rawColors.PRIMARY_760)];
 items[1] = hexToRgba.hexToRgba(ThemesDefault.unsafe_rawColors.PRIMARY_760);
-const result = set.fileFinishedImporting("modules/applications/message_embed/native/utils/nativeAppMessageEmbedUtil.tsx");
+const result = set.fileFinishedImporting(
+  "modules/applications/message_embed/native/utils/nativeAppMessageEmbedUtil.tsx",
+);
 
 export const getAppGradientColors = function getAppGradientColors(id2) {
   if (null == id2) {

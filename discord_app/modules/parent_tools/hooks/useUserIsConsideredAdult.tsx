@@ -15,4 +15,4 @@ export default function useUserIsConsideredAdult() {
     }
     return nsfwAllowed;
   });
-};
+}

@@ -17,7 +17,12 @@ export const getThumbnailSrc = function getThumbnailSrc(thumbnailSrc) {
   }
   return thumbnailSrc;
 };
-export const convertCarouselItemsToMediaItems = function convertCarouselItemsToMediaItems(carouselItems, applicationId, stateFromStores2, heroWidth) {
+export const convertCarouselItemsToMediaItems = function convertCarouselItemsToMediaItems(
+  carouselItems,
+  applicationId,
+  stateFromStores2,
+  heroWidth,
+) {
   heroWidth = heroWidth.heroWidth;
   const items = [];
   const items1 = [];
@@ -78,7 +83,12 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
               let tmp45 = tmp26Result;
               let tmp46 = applicationId;
               let tmp47 = heroWidth;
-              assetURL1 = tmp26Result.getAssetURL(applicationId, tmp4.backgroundAssetId, heroWidth, tmp26(6073).LARGE_ASSET_FORMAT);
+              assetURL1 = tmp26Result.getAssetURL(
+                applicationId,
+                tmp4.backgroundAssetId,
+                heroWidth,
+                tmp26(6073).LARGE_ASSET_FORMAT,
+              );
             }
             obj[4] = assetURL1;
             arr = push(obj);
@@ -113,7 +123,12 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
               let tmp22 = tmp8Result;
               let tmp23 = applicationId;
               let tmp24 = heroWidth;
-              assetURL3 = tmp8Result.getAssetURL(applicationId, tmp4.backgroundAssetId, heroWidth, tmp8(6073).LARGE_ASSET_FORMAT);
+              assetURL3 = tmp8Result.getAssetURL(
+                applicationId,
+                tmp4.backgroundAssetId,
+                heroWidth,
+                tmp8(6073).LARGE_ASSET_FORMAT,
+              );
             }
             obj[3] = assetURL3;
             let arr1 = push(obj);

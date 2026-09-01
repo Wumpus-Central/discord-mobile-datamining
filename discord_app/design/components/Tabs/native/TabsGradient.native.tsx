@@ -10,11 +10,23 @@ const require = arg1;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = importDefaultResult.createAnimatedComponent(LinearGradientDefault);
 let closure_8 = { mass: 1, damping: 30, stiffness: 250 };
-let closure_9 = createCacheKey.createStyles({ gradient: { width: 50, position: "absolute", top: 0, bottom: 0, zIndex: 100 }, left: { left: 0 }, right: { right: 0 } });
-let closure_10 = { code: "function TabsGradientNativeTsx1(){const{withSpring,visible,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(visible.get()?1:0,SPRING_CONFIG)};}" };
-let closure_11 = { code: "function TabsGradientNativeTsx2(){const{itemDimensions,state}=this.__closure;const items=itemDimensions.get();const itemWidths=items.reduce(function(s,layout){var _layout$width;return s+((_layout$width=layout===null||layout===void 0?void 0:layout.width)!==null&&_layout$width!==void 0?_layout$width:0);},0);const itemsSpacing=items.length*state.itemSpacing;return itemWidths+itemsSpacing;}" };
-let closure_12 = { code: "function TabsGradientNativeTsx3(){const{scrollOffset,totalItemWidth,pageWidth}=this.__closure;return scrollOffset.get()>0&&totalItemWidth.get()>pageWidth;}" };
-let closure_13 = { code: "function TabsGradientNativeTsx4(){const{scrollOffset,totalItemWidth,pageWidth}=this.__closure;return scrollOffset.get()<totalItemWidth.get()-pageWidth&&totalItemWidth.get()>pageWidth;}" };
+let closure_9 = createCacheKey.createStyles({
+  gradient: { width: 50, position: "absolute", top: 0, bottom: 0, zIndex: 100 },
+  left: { left: 0 },
+  right: { right: 0 },
+});
+let closure_10 = {
+  code: "function TabsGradientNativeTsx1(){const{withSpring,visible,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(visible.get()?1:0,SPRING_CONFIG)};}",
+};
+let closure_11 = {
+  code: "function TabsGradientNativeTsx2(){const{itemDimensions,state}=this.__closure;const items=itemDimensions.get();const itemWidths=items.reduce(function(s,layout){var _layout$width;return s+((_layout$width=layout===null||layout===void 0?void 0:layout.width)!==null&&_layout$width!==void 0?_layout$width:0);},0);const itemsSpacing=items.length*state.itemSpacing;return itemWidths+itemsSpacing;}",
+};
+let closure_12 = {
+  code: "function TabsGradientNativeTsx3(){const{scrollOffset,totalItemWidth,pageWidth}=this.__closure;return scrollOffset.get()>0&&totalItemWidth.get()>pageWidth;}",
+};
+let closure_13 = {
+  code: "function TabsGradientNativeTsx4(){const{scrollOffset,totalItemWidth,pageWidth}=this.__closure;return scrollOffset.get()<totalItemWidth.get()-pageWidth&&totalItemWidth.get()>pageWidth;}",
+};
 const result = require("set").fileFinishedImporting("design/components/Tabs/native/TabsGradient.native.tsx");
 
 export default function TabsGradient(state) {
@@ -31,16 +43,19 @@ export default function TabsGradient(state) {
   let obj = derivedValue2(colors[3]);
   const fn = function f() {
     const value = itemDimensions.get();
-    return value.reduce((arg0, width) => {
-      let num;
-      if (width != null) {
-        num = width.width;
-      }
-      if (num == null) {
-        num = 0;
-      }
-      return arg0 + num;
-    }, 0) + value.length * derivedValue2.itemSpacing;
+    return (
+      value.reduce((arg0, width) => {
+        let num;
+        if (width != null) {
+          num = width.width;
+        }
+        if (num == null) {
+          num = 0;
+        }
+        return arg0 + num;
+      }, 0) +
+      value.length * derivedValue2.itemSpacing
+    );
   };
   fn.__closure = { itemDimensions, state };
   fn.__workletHash = 456613763143;
@@ -105,18 +120,24 @@ export default function TabsGradient(state) {
   let items = [colors];
   obj1 = { children: null };
   obj2 = { start: itemDimensions.START, end: itemDimensions.END, colors, style: items1, pointerEvents: "none" };
-  items1 = [, , ];
+  items1 = [, ,];
   ({ left: arr2[0], gradient: arr2[1] } = tmp6);
   items1[2] = animatedStyle;
   const memo = scrollOffset.useMemo(() => {
     const items = [...colors];
     return items.reverse();
   }, items);
-  const items2 = [pageWidth(closure_7, obj2), ];
-  const items3 = [, , ];
+  const items2 = [pageWidth(closure_7, obj2)];
+  const items3 = [, ,];
   ({ right: arr4[0], gradient: arr4[1] } = tmp6);
   items3[2] = animatedStyle1;
-  items2[1] = pageWidth(closure_7, { start: itemDimensions.START, end: itemDimensions.END, colors: memo, style: items3, pointerEvents: "none" });
+  items2[1] = pageWidth(closure_7, {
+    start: itemDimensions.START,
+    end: itemDimensions.END,
+    colors: memo,
+    style: items3,
+    pointerEvents: "none",
+  });
   obj1[0] = items2;
   return callback(derivedValue, obj1);
-};
+}

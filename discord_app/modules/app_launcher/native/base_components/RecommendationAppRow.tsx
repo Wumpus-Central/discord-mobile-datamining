@@ -6,7 +6,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/RecommendationAppRow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/base_components/RecommendationAppRow.tsx",
+);
 
 export default function RecommendationAppRow(onPress) {
   ({ application, isFirstRow } = onPress);
@@ -24,5 +26,12 @@ export default function RecommendationAppRow(onPress) {
   let obj = getAvatarURLDefault;
   obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
   const iconSource = obj.getApplicationIconSource(obj);
-  return jsx(AppRowLabel.BaseAppRow, { application, iconSource, onPress: onPress.onPress, isFirstRow, isLastRow, showsPromoted });
-};
+  return jsx(AppRowLabel.BaseAppRow, {
+    application,
+    iconSource,
+    onPress: onPress.onPress,
+    isFirstRow,
+    isLastRow,
+    showsPromoted,
+  });
+}

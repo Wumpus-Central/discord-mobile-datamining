@@ -46,10 +46,30 @@ function getDefaultInviteExpiration(arg0) {
 }
 ({ EMPTY_STRING_SNOWFLAKE_ID: c4, GuildFeatures: c5 } = ME);
 const value = isGuildMemberDefault.INVITE_OPTIONS_7_DAYS.value;
-const items = [{ id: 1, label: "14 days", config: { defaultMaxAge: 1209600 } }, { id: 2, label: "30 days", config: { defaultMaxAge: 2592000 } }, { id: 3, label: "60 days", config: { defaultMaxAge: 5184000 } }];
-let experiment = createExperiment.createExperiment({ kind: "guild", id: "2025-08_default_invite_expiration_guild", label: "Default Invite Expiration Guild", defaultConfig: { defaultMaxAge: 604800 }, treatments: items });
-const items1 = [{ id: 1, label: "14 days", config: { defaultMaxAge: 1209600 } }, { id: 2, label: "30 days", config: { defaultMaxAge: 2592000 } }, { id: 3, label: "60 days", config: { defaultMaxAge: 5184000 } }];
-let experiment1 = createExperiment.createExperiment({ kind: "guild", id: "2026-05_default_invite_expiration_guild_web", label: "Default Invite Expiration Guild Web", defaultConfig: { defaultMaxAge: 604800 }, treatments: items1 });
+const items = [
+  { id: 1, label: "14 days", config: { defaultMaxAge: 1209600 } },
+  { id: 2, label: "30 days", config: { defaultMaxAge: 2592000 } },
+  { id: 3, label: "60 days", config: { defaultMaxAge: 5184000 } },
+];
+let experiment = createExperiment.createExperiment({
+  kind: "guild",
+  id: "2025-08_default_invite_expiration_guild",
+  label: "Default Invite Expiration Guild",
+  defaultConfig: { defaultMaxAge: 604800 },
+  treatments: items,
+});
+const items1 = [
+  { id: 1, label: "14 days", config: { defaultMaxAge: 1209600 } },
+  { id: 2, label: "30 days", config: { defaultMaxAge: 2592000 } },
+  { id: 3, label: "60 days", config: { defaultMaxAge: 5184000 } },
+];
+let experiment1 = createExperiment.createExperiment({
+  kind: "guild",
+  id: "2026-05_default_invite_expiration_guild_web",
+  label: "Default Invite Expiration Guild Web",
+  defaultConfig: { defaultMaxAge: 604800 },
+  treatments: items1,
+});
 const result = require("set").fileFinishedImporting("modules/instant_invite/DefaultInviteExpirationExperiments.tsx");
 
 export const DEFAULT_MAX_AGE = value;

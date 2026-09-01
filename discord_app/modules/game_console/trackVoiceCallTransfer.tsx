@@ -29,4 +29,4 @@ export default function trackVoiceCallTransfer(arg0, arg1, sessionId) {
   obj[3] = rTCConnectionId.getRTCConnectionId();
   obj[4] = arg1;
   obj.track(AnalyticEvents.VOICE_CALL_TRANSFER, obj);
-};
+}

@@ -17,12 +17,33 @@ let c3 = importAllResult;
 ({ CHANNEL_MARGIN_VERTICAL: unpackModuleId, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = hairlineWidth);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = createCacheKey.createStyles((arg0, arg1) => {
-  let obj = { container: null, selected: null, selectedBorder: null, row: null, rowWithSubtitle: null, channelLabel: null, channelLabelText: null };
-  obj = { position: "relative", marginVertical: closure_11, marginHorizontal: 8, borderRadius: ThemesDefault.modules.mobile.CHANNEL_ITEM_RADIUS, flexGrow: 1 };
+  let obj = {
+    container: null,
+    selected: null,
+    selectedBorder: null,
+    row: null,
+    rowWithSubtitle: null,
+    channelLabel: null,
+    channelLabelText: null,
+  };
+  obj = {
+    position: "relative",
+    marginVertical: closure_11,
+    marginHorizontal: 8,
+    borderRadius: ThemesDefault.modules.mobile.CHANNEL_ITEM_RADIUS,
+    flexGrow: 1,
+  };
   obj[0] = obj;
   obj = { backgroundColor: ThemesDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
   obj[1] = obj;
-  obj[2] = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderRadius: ThemesDefault.modules.mobile.CHANNEL_ITEM_RADIUS };
+  obj[2] = {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    borderRadius: ThemesDefault.modules.mobile.CHANNEL_ITEM_RADIUS,
+  };
   obj[3] = { padding: 8, flexDirection: "row", alignItems: "center" };
   obj[4] = { flexGrow: 1, paddingVertical: 6 };
   obj[5] = { flexDirection: "column", flex: 1 };
@@ -50,35 +71,52 @@ const memoResult = importAllResult.memo((channel) => {
   let obj = channel(id[16]);
   const items = [closure_7, closure_6, closure_8, closure_9, closure_10, closure_5];
   const items1 = [channel, id];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    let obj = channel(id[17]);
-    const channelRoleSubscriptionStatus = obj.getChannelRoleSubscriptionStatus(id, closure_1_7, closure_1_6, closure_1_8);
-    obj = { hasUnread: closure_1_9.hasUnread(id), mentionCount: closure_1_9.getMentionCount(id), resolvedUnreadSetting: closure_1_10.resolveUnreadSetting(channel), embeddedActivitiesCount: null, isSubscriptionGated: null, needSubscriptionToAccess: null };
-    ({ isSubscriptionGated, needSubscriptionToAccess } = channelRoleSubscriptionStatus);
-    let num = 0;
-    if (null != channel) {
-      num = 0;
-      if (null != tmp2.id) {
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => {
+      let obj = channel(id[17]);
+      const channelRoleSubscriptionStatus = obj.getChannelRoleSubscriptionStatus(
+        id,
+        closure_1_7,
+        closure_1_6,
+        closure_1_8,
+      );
+      obj = {
+        hasUnread: closure_1_9.hasUnread(id),
+        mentionCount: closure_1_9.getMentionCount(id),
+        resolvedUnreadSetting: closure_1_10.resolveUnreadSetting(channel),
+        embeddedActivitiesCount: null,
+        isSubscriptionGated: null,
+        needSubscriptionToAccess: null,
+      };
+      ({ isSubscriptionGated, needSubscriptionToAccess } = channelRoleSubscriptionStatus);
+      let num = 0;
+      if (null != channel) {
         num = 0;
-        if ("" !== tmp2.id) {
-          const embeddedActivitiesForChannel = closure_1_5.getEmbeddedActivitiesForChannel(tmp2.id);
-          let num2;
-          if (embeddedActivitiesForChannel != null) {
-            num2 = embeddedActivitiesForChannel.length;
+        if (null != tmp2.id) {
+          num = 0;
+          if ("" !== tmp2.id) {
+            const embeddedActivitiesForChannel = closure_1_5.getEmbeddedActivitiesForChannel(tmp2.id);
+            let num2;
+            if (embeddedActivitiesForChannel != null) {
+              num2 = embeddedActivitiesForChannel.length;
+            }
+            if (num2 == null) {
+              num2 = 0;
+            }
+            num = num2;
           }
-          if (num2 == null) {
-            num2 = 0;
-          }
-          num = num2;
         }
       }
-    }
-    obj[3] = num;
-    obj[4] = isSubscriptionGated;
-    obj[5] = needSubscriptionToAccess;
-    return obj;
-  }, items1);
-  ({ hasUnread, mentionCount, isSubscriptionGated, needSubscriptionToAccess, resolvedUnreadSetting } = stateFromStoresObject);
+      obj[3] = num;
+      obj[4] = isSubscriptionGated;
+      obj[5] = needSubscriptionToAccess;
+      return obj;
+    },
+    items1,
+  );
+  ({ hasUnread, mentionCount, isSubscriptionGated, needSubscriptionToAccess, resolvedUnreadSetting } =
+    stateFromStoresObject);
   const items2 = [id, guild_id];
   const items3 = [id, isSuggestedSection];
   const callback = guild_id.useCallback(() => {
@@ -103,7 +141,15 @@ const memoResult = importAllResult.memo((channel) => {
     tmp9 = !muted;
   }
   let tmp3Result = tmp3(tmp4[22]);
-  const channelMode = tmp3Result.getChannelMode({ muted, selected, unread: tmp9, resolvedUnreadSetting, mentionCount, locked: false, channel });
+  const channelMode = tmp3Result.getChannelMode({
+    muted,
+    selected,
+    unread: tmp9,
+    resolvedUnreadSetting,
+    mentionCount,
+    locked: false,
+    channel,
+  });
   tmp3Result = tmp3(tmp4[23]);
   const isActivitiesInTextEnabled = tmp3Result.useIsActivitiesInTextEnabled(id);
   if (channel.isRulesChannel) {
@@ -116,20 +162,41 @@ const memoResult = importAllResult.memo((channel) => {
     const tmp3Result2 = tmp3(tmp4[14]);
   }
   const tmp3Result3 = channel(id[15]);
-  const BaseChannelIconResult = channel(id[15]).BaseChannelIcon({ mode: channelMode, source: channelIcon, IconComponent: BookCheckIcon });
+  const BaseChannelIconResult = channel(id[15]).BaseChannelIcon({
+    mode: channelMode,
+    source: channelIcon,
+    IconComponent: BookCheckIcon,
+  });
   obj = { experimental_useNativeText: true, lineClamp: 1, style: tmp.channelLabelText };
   const tmp16 = isSuggestedSection(id[24])(channel);
   const merged = Object.assign(channel(id[15]).useChannelNameTextProps(channelMode));
   obj.children = tmp16;
   const tmp19 = callback(channel(id[25]).Text, obj);
   const tmp3Result4 = channel(id[15]);
-  const children = [callback(isSuggestedSection(id[27]), { unread: tmp9, resolvedUnreadSetting }), , ];
-  obj = { onPressIn: callback, onPress: callback1, onLongPress: callback2, style: null, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, children: null };
-  const items6 = [tmp.container, ];
+  const children = [callback(isSuggestedSection(id[27]), { unread: tmp9, resolvedUnreadSetting }), ,];
+  obj = {
+    onPressIn: callback,
+    onPress: callback1,
+    onLongPress: callback2,
+    style: null,
+    accessible: true,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    accessibilityState: null,
+    children: null,
+  };
+  const items6 = [tmp.container];
   const tmp21 = isSuggestedSection(id[26]);
   items6[1] = channelMode === channel(id[15]).ChannelModes.SELECTED && tmp.selected;
   obj[3] = items6;
-  obj1 = { channel, unread: hasUnread, mentionCount, embeddedActivitiesCount: null, isSubscriptionGated: null, needSubscriptionToAccess: null };
+  obj1 = {
+    channel,
+    unread: hasUnread,
+    mentionCount,
+    embeddedActivitiesCount: null,
+    isSubscriptionGated: null,
+    needSubscriptionToAccess: null,
+  };
   let num = 0;
   const tmp22 = channelMode === channel(id[15]).ChannelModes.SELECTED && tmp.selected;
   if (isActivitiesInTextEnabled) {
@@ -146,15 +213,15 @@ const memoResult = importAllResult.memo((channel) => {
     obj2[0] = tmp.selectedBorder;
     tmp17Result = tmp17(View, obj2);
   }
-  const items7 = [tmp17Result, ];
+  const items7 = [tmp17Result];
   const obj3 = { ref, style: items8, children: null };
   items8 = [tmp.row, null != subtitle && tmp.rowWithSubtitle];
-  const items9 = [BaseChannelIconResult, , ];
+  const items9 = [BaseChannelIconResult, ,];
   let tmp20Result = tmp19;
   if (null != subtitle) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.channelLabel;
-    const items10 = [tmp19, ];
+    const items10 = [tmp19];
     const obj5 = { experimental_useNativeText: true, lineClamp: 1 };
     const merged1 = Object.assign(tmp3(tmp4[15]).getChannelSubtitleTextProps(channelMode));
     const tmp3Result5 = tmp3(tmp4[15]);
@@ -165,7 +232,14 @@ const memoResult = importAllResult.memo((channel) => {
     const tmp3Result6 = tmp3(tmp4[30]);
   }
   items9[1] = tmp20Result;
-  items9[2] = callback(isSuggestedSection(id[31]), { channel, isChannelSelected: selected, muted, isSubscriptionGated, needSubscriptionToAccess, enableActivities: isActivitiesInTextEnabled });
+  items9[2] = callback(isSuggestedSection(id[31]), {
+    channel,
+    isChannelSelected: selected,
+    muted,
+    isSubscriptionGated,
+    needSubscriptionToAccess,
+    enableActivities: isActivitiesInTextEnabled,
+  });
   obj3[2] = items9;
   items7[1] = closure_14(View, obj3);
   obj[8] = items7;

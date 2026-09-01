@@ -9,7 +9,9 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ error: { paddingVertical: 8 } });
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx",
+);
 
 export default function EditGuildEventDetails(guildEvent) {
   guildEvent = guildEvent.guildEvent;
@@ -42,16 +44,39 @@ export default function EditGuildEventDetails(guildEvent) {
     return addResult;
   }, items1);
   const tmp = callback2();
-  [c7, c8] = recurrenceRule(memo.useState(() => guildEvent(scheduledEndTime[8]).recurrenceRuleToOption(onChange(scheduledEndTime[7])(scheduledStartTime), recurrenceRule)), 2);
+  [c7, c8] = recurrenceRule(
+    memo.useState(() =>
+      guildEvent(scheduledEndTime[8]).recurrenceRuleToOption(
+        onChange(scheduledEndTime[7])(scheduledStartTime),
+        recurrenceRule,
+      ),
+    ),
+    2,
+  );
   const memo2 = memo.useMemo(() => onChange(scheduledEndTime[7])(), []);
   const items2 = [memo];
-  const memo3 = memo.useMemo(() => onChange(scheduledEndTime[7])().add(guildEvent(scheduledEndTime[8]).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"), []);
+  const memo3 = memo.useMemo(
+    () =>
+      onChange(scheduledEndTime[7])().add(guildEvent(scheduledEndTime[8]).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
+    [],
+  );
   const memo4 = memo.useMemo(() => onChange(scheduledEndTime[7])(memo).add(15, "minutes"), items2);
-  const memo5 = memo.useMemo(() => onChange(scheduledEndTime[7])().add(guildEvent(scheduledEndTime[8]).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"), []);
+  const memo5 = memo.useMemo(
+    () => onChange(scheduledEndTime[7])().add(guildEvent(scheduledEndTime[8]).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"),
+    [],
+  );
   ref = memo.useRef(null);
   const tmp10 = memo1(guildEvent.initialGuildEvent);
   closure_10 = tmp10;
-  const tmp4 = recurrenceRule(memo.useState(() => guildEvent(scheduledEndTime[8]).recurrenceRuleToOption(onChange(scheduledEndTime[7])(scheduledStartTime), recurrenceRule)), 2);
+  const tmp4 = recurrenceRule(
+    memo.useState(() =>
+      guildEvent(scheduledEndTime[8]).recurrenceRuleToOption(
+        onChange(scheduledEndTime[7])(scheduledStartTime),
+        recurrenceRule,
+      ),
+    ),
+    2,
+  );
   [tmp12, c11] = recurrenceRule(memo.useState(null), 2);
   let obj = guildEvent(scheduledEndTime[9]);
   closure_12 = obj.useNavigation();
@@ -63,7 +88,7 @@ export default function EditGuildEventDetails(guildEvent) {
     tmp17 = callback(tmp13(tmp14[10]).Text, obj);
   }
   obj = { children: null };
-  const items3 = [tmp17, ];
+  const items3 = [tmp17];
   obj1 = { text: null, variant: "primary", onPress: null, disabled: null };
   let intl = tmp13(tmp14[6]).intl;
   obj1[0] = intl.string(guildEvent(scheduledEndTime[6]).t.PDTjLN);
@@ -106,12 +131,11 @@ export default function EditGuildEventDetails(guildEvent) {
       onChange(name) {
         _undefined2(null);
         onChange({ name });
-      }
+      },
     }),
-  ,
-  ,
-  ,
-
+    ,
+    ,
+    ,
   ];
   const obj5 = {
     date: memo,
@@ -147,7 +171,7 @@ export default function EditGuildEventDetails(guildEvent) {
     minimumDate: memo2,
     maximumDate: memo3,
     dateLabel: null,
-    timeLabel: null
+    timeLabel: null,
   };
   const intl4 = tmp13(tmp14[6]).intl;
   obj5[5] = intl4.string(guildEvent(scheduledEndTime[6]).t.kKOIwJ);
@@ -182,7 +206,7 @@ export default function EditGuildEventDetails(guildEvent) {
         onChange(obj);
         _undefined(c7);
       }
-    }
+    },
   });
   if (description == null) {
     description = "";
@@ -200,8 +224,8 @@ export default function EditGuildEventDetails(guildEvent) {
           current.scrollToEnd();
         }
       }, 100);
-    }
+    },
   });
   obj2[2] = items4;
   return closure_10(tmp21, obj2);
-};
+}

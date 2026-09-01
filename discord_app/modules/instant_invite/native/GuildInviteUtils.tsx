@@ -25,7 +25,7 @@ function _sendGuildInvite() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();

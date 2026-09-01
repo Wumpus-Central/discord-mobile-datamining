@@ -8,5 +8,7 @@ const result = set.fileFinishedImporting("modules/application_commands/Applicati
 export const useCommandDiscoveryManager = obj;
 export const updateInitialSectionId = function updateInitialSectionId(arg0) {
   const _require = arg0;
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_2.setState(() => ({ initialSectionId: closure_0 })));
+  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
+    closure_1_2.setState(() => ({ initialSectionId: closure_0 })),
+  );
 };

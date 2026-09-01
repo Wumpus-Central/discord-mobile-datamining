@@ -15,7 +15,15 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: { marginHorizontal: 26 }, image: { alignSelf: "center", marginVertical: 32 }, header: null, description: null, upsellButton: null, continueButton: null, cancelButton: null };
+createCacheKey = {
+  container: { marginHorizontal: 26 },
+  image: { alignSelf: "center", marginVertical: 32 },
+  header: null,
+  description: null,
+  upsellButton: null,
+  continueButton: null,
+  cancelButton: null,
+};
 createCacheKey = {};
 const merged = Object.assign(createTextStyleDefault(require("sum").Fonts.DISPLAY_EXTRABOLD, undefined, 24));
 createCacheKey.alignSelf = "center";
@@ -23,12 +31,22 @@ createCacheKey.textAlign = "center";
 createCacheKey.paddingBottom = 8;
 createCacheKey.color = require("result").DARK_WHITE_500_LIGHT_BLACK_500;
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: require("result").DARK_WHITE_500_LIGHT_BLACK_500 };
+createCacheKey[3] = {
+  alignSelf: "center",
+  textAlign: "center",
+  paddingBottom: 32,
+  color: require("result").DARK_WHITE_500_LIGHT_BLACK_500,
+};
 createCacheKey[4] = { marginBottom: 16 };
 createCacheKey[5] = { marginBottom: 4 };
 createCacheKey[6] = { marginTop: 8, marginBottom: 4 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: require("result").DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj1 = {
+  alignSelf: "center",
+  textAlign: "center",
+  paddingBottom: 32,
+  color: require("result").DARK_WHITE_500_LIGHT_BLACK_500,
+};
 const result = require("set").fileFinishedImporting("modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx");
 
 export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
@@ -47,10 +65,13 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
   const stateFromStores = obj2.useStateFromStores(items, () => locale.locale);
   let obj3 = productId(589);
   const items1 = [closure_8];
-  const tmp9 = callback(obj3.useStateFromStoresArray(items1, () => {
-    const items = [closure_1_8.getProduct(productId), closure_1_8.isBusy()];
-    return items;
-  }), 2);
+  const tmp9 = callback(
+    obj3.useStateFromStoresArray(items1, () => {
+      const items = [closure_1_8.getProduct(productId), closure_1_8.isBusy()];
+      return items;
+    }),
+    2,
+  );
   const first = tmp9[0];
   let tmp11 = tmp2;
   if (!tmp2) {
@@ -82,7 +103,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     obj1 = { style: null, source: null };
     obj1[0] = tmp.image;
     obj1[1] = registerAssetDefault;
-    const items2 = [callback2(closure_5, obj1), , , , , ];
+    const items2 = [callback2(closure_5, obj1), , , , ,];
     obj2 = { style: null, accessibilityRole: "header", children: null };
     obj2[0] = tmp.header;
     const intl = tmp5(1236).intl;
@@ -140,4 +161,4 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     return callback2(componentDidMountDefault, obj);
   }
   const tmp3 = callback(React.useState(null), 2);
-};
+}

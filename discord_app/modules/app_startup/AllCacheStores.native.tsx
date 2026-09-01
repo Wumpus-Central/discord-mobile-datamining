@@ -35,6 +35,4 @@ import makeSortedChannel from "../../stores/views/PrivateChannelSortStore.tsx";
 
 const result = set.fileFinishedImporting("modules/app_startup/AllCacheStores.native.tsx");
 
-export default function noop() {
-
-};
+export default function noop() {}

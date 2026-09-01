@@ -15,7 +15,15 @@ import closure_8 from "../stores/ReadStateStore.tsx";
 import ME from "../Constants.tsx";
 
 require = arg1;
-({ AnalyticEvents: c9, AbortCodes: c10, Endpoints: unpackModuleId, Routes: closure_12, ME: map1, CURRENT_APP_CONTEXT: closure_14, ChannelTypes: closure_15 } = ME);
+({
+  AnalyticEvents: c9,
+  AbortCodes: c10,
+  Endpoints: unpackModuleId,
+  Routes: closure_12,
+  ME: map1,
+  CURRENT_APP_CONTEXT: closure_14,
+  ChannelTypes: closure_15,
+} = ME);
 let result = require("set").fileFinishedImporting("actions/ChannelActionCreators.tsx");
 
 export default {
@@ -33,7 +41,7 @@ export default {
       navigateToChannel = true;
     }
     const self = this;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -81,7 +89,11 @@ export default {
               };
               const _getRecipientsResult = closure_1_6._getRecipients(closure_1_0);
               if (1 === _getRecipientsResult.length) {
-                const _openCachedDMChannelResult = closure_1_6._openCachedDMChannel(v0(_getRecipientsResult, 1)[0], v02, c5);
+                const _openCachedDMChannelResult = closure_1_6._openCachedDMChannel(
+                  v0(_getRecipientsResult, 1)[0],
+                  v02,
+                  c5,
+                );
                 if (null != _openCachedDMChannelResult) {
                   joinCallIfRequested(_openCachedDMChannelResult);
                   c5 = 3;
@@ -92,7 +104,14 @@ export default {
               }
               v0 = 1;
               const HTTP = closure_1_0(closure_1_2[8]).HTTP;
-              const obj2 = { url: null, body: null, context: null, oldFormErrors: true, retries: 3, rejectWithError: null };
+              const obj2 = {
+                url: null,
+                body: null,
+                context: null,
+                oldFormErrors: true,
+                retries: 3,
+                rejectWithError: null,
+              };
               obj2[0] = closure_1_11.USER_CHANNELS;
               const obj3 = { recipients: null };
               obj3[0] = _getRecipientsResult;
@@ -162,7 +181,7 @@ export default {
       navigateToChannel = true;
     }
     const self = this;
-    return self(function*() {
+    return self(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -293,7 +312,7 @@ export default {
   ensurePrivateChannel(id) {
     closure_0 = id;
     const self = this;
-    return callback(function*() {
+    return callback(function* () {
       id = tmp5;
       let body = tmp2;
       const HTTP = closure_1_0(530).HTTP;
@@ -315,7 +334,7 @@ export default {
   },
   getOrEnsurePrivateChannel(closure_0) {
     const self = this;
-    return callback(function*() {
+    return callback(function* () {
       if (c0 === 2) {
         c0 = 3;
         HermesBuiltin.throwTypeError();
@@ -376,7 +395,7 @@ export default {
     })();
   },
   getDMChannel(closure_0) {
-    return callback(function*() {
+    return callback(function* () {
       let id = tmp2;
       let body = tmp5;
       const HTTP = closure_1_0(530).HTTP;
@@ -444,18 +463,25 @@ export default {
       const obj5 = transitionTo;
     }
     const HTTP = sendRequest.HTTP;
-    obj1 = { url: closure_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
+    obj1 = {
+      url: closure_11.CHANNEL(id),
+      query: { silent: flag2 },
+      oldFormErrors: true,
+      rejectWithError: sendRequest.rejectWithMigratedError(),
+    };
     const obj7 = sendRequest;
     const delResult = HTTP.del(obj1);
-    return HTTP.del(obj1).then(() => {
-      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
-      const intl = callback(1236).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1236).t.nRbucl));
-    }).catch(() => {
-      const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
-      const intl = callback(1236).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1236).t.ndXVI5));
-    });
+    return HTTP.del(obj1)
+      .then(() => {
+        const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
+        const intl = callback(1236).intl;
+        AccessibilityAnnouncer.announce(intl.string(callback(1236).t.nRbucl));
+      })
+      .catch(() => {
+        const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
+        const intl = callback(1236).intl;
+        AccessibilityAnnouncer.announce(intl.string(callback(1236).t.ndXVI5));
+      });
   },
   bulkLeaveGroupDMs(channel_ids) {
     const HTTP = sendRequest.HTTP;
@@ -466,7 +492,7 @@ export default {
   updatePermissionOverwrite(id, arr) {
     closure_0 = id;
     closure_1 = arr;
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
       const HTTP = closure_1_0(530).HTTP;
@@ -485,7 +511,7 @@ export default {
   },
   clearPermissionOverwrite(closure_0, id) {
     closure_1 = id;
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
       const HTTP = closure_1_0(530).HTTP;
@@ -509,25 +535,27 @@ export default {
     obj = { url: closure_11.CHANNEL_RECIPIENT(arg0, arg1), context: obj, oldFormErrors: true, rejectWithError: true };
     obj = { location };
     const putResult = HTTP.put(obj);
-    return HTTP.put(obj).then((status) => {
-      const AccessibilityAnnouncer = callback(self[17]).AccessibilityAnnouncer;
-      const intl = callback(self[18]).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(self[18]).t.cU0t1F));
-      if (callback != null) {
-        callback();
-      }
-      if (201 === status.status) {
-        let id = self._openPrivateChannel(status.body).id;
-      } else {
-        id = closure_1;
-      }
-      return id;
-    }).catch(() => {
-      const AccessibilityAnnouncer = callback(self[17]).AccessibilityAnnouncer;
-      const intl = callback(self[18]).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(self[18]).t["8GEdej"]));
-      return closure_1;
-    });
+    return HTTP.put(obj)
+      .then((status) => {
+        const AccessibilityAnnouncer = callback(self[17]).AccessibilityAnnouncer;
+        const intl = callback(self[18]).intl;
+        AccessibilityAnnouncer.announce(intl.string(callback(self[18]).t.cU0t1F));
+        if (callback != null) {
+          callback();
+        }
+        if (201 === status.status) {
+          let id = self._openPrivateChannel(status.body).id;
+        } else {
+          id = closure_1;
+        }
+        return id;
+      })
+      .catch(() => {
+        const AccessibilityAnnouncer = callback(self[17]).AccessibilityAnnouncer;
+        const intl = callback(self[18]).intl;
+        AccessibilityAnnouncer.announce(intl.string(callback(self[18]).t["8GEdej"]));
+        return closure_1;
+      });
   },
   addRecipients(id, arr, arg2, closure_2) {
     const self = this;
@@ -536,7 +564,9 @@ export default {
     return this.addRecipient(id, arr[0], arg2, closure_2).then((arg0) => {
       closure_0 = arg0;
       const substr = arr.slice(1);
-      return Promise.all(substr.map((arg0) => closure_1_2.addRecipient(closure_0, arg0, closure_0))).then(() => closure_0);
+      return Promise.all(substr.map((arg0) => closure_1_2.addRecipient(closure_0, arg0, closure_0))).then(
+        () => closure_0,
+      );
     });
   },
   removeRecipient(arg0, arg1) {
@@ -552,7 +582,7 @@ export default {
   setName(arg0, arg1) {
     closure_0 = arg0;
     closure_1 = arg1;
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp3;
       let channel = tmp2;
       channel = closure_1_7.getChannel(closure_1_0);
@@ -586,7 +616,7 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -641,7 +671,13 @@ export default {
               obj6.track(closure_1_9.CHANNEL_ICON_EDIT_PROGRESSED, obj2);
               c3 = 1;
               const HTTP = closure_1_0(closure_1_2[8]).HTTP;
-              const obj3 = { url: null, body: null, oldFormErrors: true, rejectWithError: true, failImmediatelyWhenRateLimited: true };
+              const obj3 = {
+                url: null,
+                body: null,
+                oldFormErrors: true,
+                rejectWithError: true,
+                failImmediatelyWhenRateLimited: true,
+              };
               obj3[0] = closure_1_11.CHANNEL(closure_1_0);
               let obj4 = { icon: null };
               obj4[0] = closure_1_1;
@@ -732,7 +768,7 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -915,7 +951,7 @@ export default {
     closure_1 = arg1;
     closure_2 = parent_id;
     closure_3 = formatToPlainStringResult;
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
       obj1 = { type: null, name: null, permission_overwrites: null };
@@ -942,7 +978,7 @@ export default {
   },
   fetchChannel(arg0) {
     closure_0 = arg0;
-    return callback(function*() {
+    return callback(function* () {
       const HTTP = v0(closure_1_2[8]).HTTP;
       obj1 = { url: null, rejectWithError: true };
       obj1[0] = closure_1_11.CHANNEL(v0);
@@ -953,7 +989,7 @@ export default {
   openChannel(arg0) {
     closure_0 = arg0;
     const self = this;
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp3;
       let table = 1;
       yield closure_1_1.fetchChannel(closure_1_0);
@@ -967,5 +1003,5 @@ export default {
       table = 0;
       return closure_1;
     })();
-  }
+  },
 };

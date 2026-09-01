@@ -7,7 +7,10 @@ let result = set.fileFinishedImporting("modules/applications/getApplicationInsta
 
 export const getActivityLaunchURL = function getActivityLaunchURL(applicationId) {
   ({ customId, referrerId, linkId } = applicationId);
-  const str = new URL(Routes.ACTIVITY_DETAILS(applicationId.applicationId), "" + location.protocol + "//" + location.host);
+  const str = new URL(
+    Routes.ACTIVITY_DETAILS(applicationId.applicationId),
+    "" + location.protocol + "//" + location.host,
+  );
   const searchParams = str.searchParams;
   if (null != linkId) {
     const result = searchParams.set("link_id", linkId);

@@ -29,41 +29,49 @@ function ChangeLogList(styling) {
   }
   const tmp = callback();
   let items = styling.node.items;
-  return <List key={state.key} style={callback().list}>{items.map((arg0, arg1) => {
-    closure_0 = arg0;
-    return closure_1_5(styling.components.ListItem, {
-      children(arg0) {
-        closure_1 = closure_1_1;
-        closure_2 = arg0;
-        const items = [];
-        let length = [];
-        const item = closure_0.forEach((type) => {
-          if ("list" === type.type) {
-            if (arr.length > 0) {
-              let obj = { variant: "text-sm/normal" };
-              const merged = Object.assign(table);
-              obj.children = callback(arr, closure_1);
-              arr = items.push(closure_1_5(callback(table[7]).Text, obj, -1));
-              arr = [];
-            }
-            obj = { children: null };
-            obj[0] = callback(type, closure_1);
-            arr = items.push(closure_1_5(items, obj, arg1));
-          } else {
-            arr.push(type);
-          }
-        });
-        if (length.length > 0) {
-          let obj = { variant: "text-sm/normal" };
-          let merged = Object.assign(arg0);
-          obj.children = closure_0(length, closure_1_1);
-          items.push(closure_2_5(closure_2_0(styling[7]).Text, obj, -1));
-          length = [];
-        }
-        return items;
-      }
-    }, arg1);
-  })}</List>;
+  return (
+    <List key={state.key} style={callback().list}>
+      {items.map((arg0, arg1) => {
+        closure_0 = arg0;
+        return closure_1_5(
+          styling.components.ListItem,
+          {
+            children(arg0) {
+              closure_1 = closure_1_1;
+              closure_2 = arg0;
+              const items = [];
+              let length = [];
+              const item = closure_0.forEach((type) => {
+                if ("list" === type.type) {
+                  if (arr.length > 0) {
+                    let obj = { variant: "text-sm/normal" };
+                    const merged = Object.assign(table);
+                    obj.children = callback(arr, closure_1);
+                    arr = items.push(closure_1_5(callback(table[7]).Text, obj, -1));
+                    arr = [];
+                  }
+                  obj = { children: null };
+                  obj[0] = callback(type, closure_1);
+                  arr = items.push(closure_1_5(items, obj, arg1));
+                } else {
+                  arr.push(type);
+                }
+              });
+              if (length.length > 0) {
+                let obj = { variant: "text-sm/normal" };
+                let merged = Object.assign(arg0);
+                obj.children = closure_0(length, closure_1_1);
+                items.push(closure_2_5(closure_2_0(styling[7]).Text, obj, -1));
+                length = [];
+              }
+              return items;
+            },
+          },
+          arg1,
+        );
+      })}
+    </List>
+  );
 }
 function ChangeLogParagraph(state) {
   state = state.state;
@@ -77,7 +85,11 @@ function ChangeLogParagraph(state) {
     Paragraph = Text.Text;
   }
   const tmp = callback();
-  return <Paragraph key={state.key} variant="text-sm/normal" style={callback().text}>{output(node.content, state)}</Paragraph>;
+  return (
+    <Paragraph key={state.key} variant="text-sm/normal" style={callback().text}>
+      {output(node.content, state)}
+    </Paragraph>
+  );
 }
 function ChangeLogStrong(arg0) {
   ({ node, output, state } = arg0);
@@ -116,7 +128,11 @@ function ChangeLogBlockQuote(state) {
   let obj = { style: tmp.container, children: null };
   obj = { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) };
   obj[1] = jsx(Text.Text, { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) });
-  return <closure_3 key={state.key} variant="text-sm/normal" style={tmp.text}>{output(node.content, state)}</closure_3>;
+  return (
+    <closure_3 key={state.key} variant="text-sm/normal" style={tmp.text}>
+      {output(node.content, state)}
+    </closure_3>
+  );
 }
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
@@ -125,8 +141,18 @@ createCacheKey = { color: ThemesDefault.colors.TEXT_LINK };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: 10 };
 createCacheKey[2] = { alignSelf: "center", flex: 1 };
-createCacheKey[3] = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: require("result").DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-const obj1 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: require("result").DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+createCacheKey[3] = {
+  borderLeftWidth: 2,
+  paddingLeft: 8,
+  marginBottom: 10,
+  borderLeftColor: require("result").DARK_PRIMARY_500_LIGHT_PRIMARY_300,
+};
+const obj1 = {
+  borderLeftWidth: 2,
+  paddingLeft: 8,
+  marginBottom: 10,
+  borderLeftColor: require("result").DARK_PRIMARY_500_LIGHT_PRIMARY_300,
+};
 createCacheKey[4] = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: ThemesDefault.colors.TEXT_MUTED };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 const obj2 = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: ThemesDefault.colors.TEXT_MUTED };
@@ -137,23 +163,31 @@ const obj3 = {
     return {
       react(node, output, state) {
         return closure_1_5(closure_1_8, { accessibilityRole: "link", node, output, state, styling: closure_0 });
-      }
+      },
     };
   },
   lheading(uri) {
     closure_0 = uri;
     return {
       react(className, arg1, key) {
-        return closure_1_5(uri.components.LHeading, { className: className.className, children: arg1(className.content, key) }, key.key);
-      }
+        return closure_1_5(
+          uri.components.LHeading,
+          { className: className.className, children: arg1(className.content, key) },
+          key.key,
+        );
+      },
     };
   },
   heading(uri) {
     closure_0 = uri;
     return {
       react(className, arg1, key) {
-        return closure_1_5(uri.components.Heading, { className: className.className, level: className.level, children: arg1(className.content, key) }, key.key);
-      }
+        return closure_1_5(
+          uri.components.Heading,
+          { className: className.className, level: className.level, children: arg1(className.content, key) },
+          key.key,
+        );
+      },
     };
   },
   list(arg0) {
@@ -161,7 +195,7 @@ const obj3 = {
     return {
       react(node, output, state) {
         return closure_1_5(closure_1_9, { node, output, state, styling: closure_0 });
-      }
+      },
     };
   },
   image: obj4,
@@ -172,24 +206,24 @@ const obj3 = {
     return {
       react(node, output, state) {
         return closure_1_5(closure_1_10, { node, output, state, styling: closure_0 });
-      }
+      },
     };
-  }
+  },
 };
 obj4 = {
   react(node, output, state) {
     return <ChangeLogImage node={arg0} output={arg1} state={arg2} />;
-  }
+  },
 };
 obj5 = {
   react(node, output, state) {
     return <ChangeLogBlockQuote node={arg0} output={arg1} state={arg2} />;
-  }
+  },
 };
 obj6 = {
   react(node, output, key) {
     return <ChangeLogStrong key={arg2.key} node={arg0} output={arg1} state={arg2} />;
-  }
+  },
 };
 const result = require("set").fileFinishedImporting("utils/native/ChangeLogUtils.tsx");
 

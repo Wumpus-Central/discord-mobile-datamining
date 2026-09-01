@@ -5,7 +5,9 @@ import GuildFeatures from "../../PremiumConstants.tsx";
 import usePremiumSince from "useTenureBadging.tsx";
 
 const TieredTenureBadge = GuildFeatures.TieredTenureBadge;
-const result = set.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTenureBadgeRequirementString.tsx");
+const result = set.fileFinishedImporting(
+  "modules/premium/tiered_tenure_badging/hooks/useTenureBadgeRequirementString.tsx",
+);
 
 export const useTenureBadgeRequirementString = function useTenureBadgeRequirementString() {
   let obj = usePremiumSince;

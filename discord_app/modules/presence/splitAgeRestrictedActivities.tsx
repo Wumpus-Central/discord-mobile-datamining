@@ -44,4 +44,4 @@ export default function splitAgeRestrictedActivities(arg0, arg1) {
     obj[1] = arg1;
     return obj;
   }
-};
+}

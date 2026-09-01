@@ -5,7 +5,9 @@ import closure_5 from "../../../../../stores/GuildRoleStore.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/role/AppLauncherRoleOption.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/options/role/AppLauncherRoleOption.tsx",
+);
 
 export default function AppLauncherRoleOption(option) {
   option = option.option;
@@ -18,16 +20,19 @@ export default function AppLauncherRoleOption(option) {
   let stateFromStores;
   guild_id = channel.guild_id;
   ({ style, autoFocus, hasError } = option);
-  let tmp = callback(channel.useState(() => {
-    let roleId = null;
-    if (null != closure_1) {
-      roleId = null;
-      if ("roleMention" === tmp.type) {
-        roleId = tmp.roleId;
+  let tmp = callback(
+    channel.useState(() => {
+      let roleId = null;
+      if (null != closure_1) {
+        roleId = null;
+        if ("roleMention" === tmp.type) {
+          roleId = tmp.roleId;
+        }
       }
-    }
-    return roleId;
-  }), 2);
+      return roleId;
+    }),
+    2,
+  );
   first = tmp[0];
   closure_8 = tmp[1];
   let obj = option(onRolePress[4]);
@@ -51,7 +56,16 @@ export default function AppLauncherRoleOption(option) {
       onRolePress({ role: null });
     }
   }, items1);
-  obj = { style, option, hasError, selected: null != stateFromStores, selectedItemName: null, onPress: null, leading: null, autoFocus: null };
+  obj = {
+    style,
+    option,
+    hasError,
+    selected: null != stateFromStores,
+    selectedItemName: null,
+    onPress: null,
+    leading: null,
+    autoFocus: null,
+  };
   let name;
   if (null != stateFromStores) {
     name = stateFromStores.name;
@@ -70,11 +84,15 @@ export default function AppLauncherRoleOption(option) {
         callback2(role.id);
         callback({ role });
       },
-      onActionSheetDismiss: closure_3
+      onActionSheetDismiss: closure_3,
     };
-    obj.openLazy(option(onRolePress[8])(onRolePress[7], onRolePress.paths), option(onRolePress[9]).APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY, obj);
+    obj.openLazy(
+      option(onRolePress[8])(onRolePress[7], onRolePress.paths),
+      option(onRolePress[9]).APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY,
+      obj,
+    );
   };
   obj[6] = guild_id(option(onRolePress[9]).RoleIcon, { role: stateFromStores });
   obj[7] = autoFocus;
   return guild_id(importDefault(onRolePress[5]), obj);
-};
+}

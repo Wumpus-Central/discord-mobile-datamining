@@ -53,7 +53,7 @@ export default function ForumPostMessageCount(hasUnreads) {
     str2 = "interactive-text-default";
   }
   obj[2] = str2;
-  const items1 = [closure_4(ChatIcon.ChatIcon, obj), , ];
+  const items1 = [closure_4(ChatIcon.ChatIcon, obj), ,];
   if (isMaxMessageCount) {
     obj1 = { variant: "text-sm/semibold", color: null, children: null };
     obj1[1] = str;
@@ -80,4 +80,4 @@ export default function ForumPostMessageCount(hasUnreads) {
   items1[2] = tmp5Result;
   obj[2] = items1;
   return closure_5(View, obj);
-};
+}

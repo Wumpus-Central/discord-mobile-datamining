@@ -16,4 +16,4 @@ export default function useIsVariantColorLight(variantValue) {
     }
     return isValidHexResult;
   }, items);
-};
+}

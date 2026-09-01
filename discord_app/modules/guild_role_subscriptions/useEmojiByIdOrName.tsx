@@ -7,18 +7,22 @@ function useEmojiByIdOrName(guildId, emojiId) {
   dependencyMap = emojiId;
   const items = [closure_2];
   const items1 = [guildId, emojiId];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    if (null == closure_1) {
-      return null;
-    } else {
-      const disambiguatedEmojiContext = closure_1_2.getDisambiguatedEmojiContext(closure_0);
-      let byId = disambiguatedEmojiContext.getById(tmp);
-      if (byId == null) {
-        byId = disambiguatedEmojiContext.getByName(tmp);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      if (null == closure_1) {
+        return null;
+      } else {
+        const disambiguatedEmojiContext = closure_1_2.getDisambiguatedEmojiContext(closure_0);
+        let byId = disambiguatedEmojiContext.getById(tmp);
+        if (byId == null) {
+          byId = disambiguatedEmojiContext.getByName(tmp);
+        }
+        return byId;
       }
-      return byId;
-    }
-  }, items1);
+    },
+    items1,
+  );
 }
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useEmojiByIdOrName.tsx");
 

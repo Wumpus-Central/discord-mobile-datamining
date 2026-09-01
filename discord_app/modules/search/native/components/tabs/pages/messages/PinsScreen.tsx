@@ -91,7 +91,7 @@ function InitialPinsScreen(searchContext) {
             return closure_1_7({ channelId: channelId.channelId, messageId: channelId.messageId }, closure_0);
           },
           lineClamp: closure_2_10,
-          messageSizeCacheRef: closure_1_8
+          messageSizeCacheRef: closure_1_8,
         };
         items.push(obj);
       });
@@ -128,7 +128,7 @@ function InitialPinsScreen(searchContext) {
       }
       const pins = isFocused(stateFromStores[10]).fetchPins(searchContext.channelId, { before: pinnedAt });
     },
-    ItemSeparatorComponent: null
+    ItemSeparatorComponent: null,
   };
   const obj6 = searchContext(stateFromStores[13]);
   obj[3] = searchContext(stateFromStores[15]).MessageVerticalSeparator;
@@ -145,11 +145,15 @@ function InitialPinsScreen(searchContext) {
       }
       const pins = isFocused(stateFromStores[10]).fetchPins(searchContext.channelId, { before: pinnedAt });
     },
-    ItemSeparatorComponent: null
+    ItemSeparatorComponent: null,
   });
 }
 let c3 = importAllResult;
-({ MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_8, SearchListItemTypes: c9, SEARCH_PINNED_MESSAGES_LINE_CLAMP: c10 } = MessageEmbedTypes);
+({
+  MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_8,
+  SearchListItemTypes: c9,
+  SEARCH_PINNED_MESSAGES_LINE_CLAMP: c10,
+} = MessageEmbedTypes);
 const memoResult = importAllResult.memo(function PinsScreen(searchContext) {
   searchContext = searchContext.searchContext;
   ({ tab, isFocused } = searchContext);
@@ -171,6 +175,8 @@ const memoResult = importAllResult.memo(function PinsScreen(searchContext) {
   }
   return tmp5;
 });
-let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/PinsScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/search/native/components/tabs/pages/messages/PinsScreen.tsx",
+);
 
 export default memoResult;

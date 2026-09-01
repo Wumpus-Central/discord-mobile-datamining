@@ -16,7 +16,12 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { dismissableOptionWrapper: { flexDirection: "row", alignItems: "center" }, optionViewContainer: { flex: 1 }, dismissButton: null, option: null };
+createCacheKey = {
+  dismissableOptionWrapper: { flexDirection: "row", alignItems: "center" },
+  optionViewContainer: { flex: 1 },
+  dismissButton: null,
+  option: null,
+};
 createCacheKey = { marginLeft: 8, marginRight: -4, padding: 4, borderRadius: ThemesDefault.radii.round };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flex: 1 };
@@ -35,7 +40,15 @@ export default function AppLauncherCommandOption(option) {
     if (tmp2(1955).ApplicationCommandOptionType.INTEGER !== type) {
       if (tmp2(1955).ApplicationCommandOptionType.NUMBER !== type) {
         if (tmp2(1955).ApplicationCommandOptionType.ATTACHMENT === type) {
-          let obj = { style: null, option: null, onSelectAttachment: null, channel: null, autoFocus: null, hasError: null, onPress: null };
+          let obj = {
+            style: null,
+            option: null,
+            onSelectAttachment: null,
+            channel: null,
+            autoFocus: null,
+            hasError: null,
+            onPress: null,
+          };
           obj[0] = tmp.option;
           obj[1] = name;
           obj[2] = function onSelectAttachment(arg0) {
@@ -76,7 +89,16 @@ export default function AppLauncherCommandOption(option) {
           tmp13 = tmp35;
           const tmp37 = AppLauncherBooleanOptionDefault;
         } else if (tmp2(1955).ApplicationCommandOptionType.MENTIONABLE === type) {
-          obj1 = { option: null, initialValue: null, onMentionablePress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
+          obj1 = {
+            option: null,
+            initialValue: null,
+            onMentionablePress: null,
+            onActionSheetDismiss: null,
+            channel: null,
+            autoFocus: null,
+            hasError: null,
+            onPress: null,
+          };
           obj1[0] = name;
           let first1;
           if (optionValues.current[name.name] != null) {
@@ -125,7 +147,17 @@ export default function AppLauncherCommandOption(option) {
           tmp13 = tmp28;
           const tmp30 = MentionableIconDefault;
         } else if (tmp2(1955).ApplicationCommandOptionType.ROLE === type) {
-          const obj2 = { style: null, option: null, initialValue: null, onRolePress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
+          const obj2 = {
+            style: null,
+            option: null,
+            initialValue: null,
+            onRolePress: null,
+            onActionSheetDismiss: null,
+            channel: null,
+            autoFocus: null,
+            hasError: null,
+            onPress: null,
+          };
           obj2[0] = tmp.option;
           obj2[1] = name;
           let first2;
@@ -155,7 +187,17 @@ export default function AppLauncherCommandOption(option) {
           tmp13 = tmp21;
           const tmp23 = AppLauncherRoleOptionDefault;
         } else if (tmp2(1955).ApplicationCommandOptionType.USER === type) {
-          const obj3 = { style: null, option: null, initialValue: null, onUserPress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
+          const obj3 = {
+            style: null,
+            option: null,
+            initialValue: null,
+            onUserPress: null,
+            onActionSheetDismiss: null,
+            channel: null,
+            autoFocus: null,
+            hasError: null,
+            onPress: null,
+          };
           obj3[0] = tmp.option;
           obj3[1] = name;
           let first3;
@@ -189,7 +231,17 @@ export default function AppLauncherCommandOption(option) {
           tmp13 = tmp14;
           const tmp16 = AppLauncherUserOptionDefault;
         } else if (tmp2(1955).ApplicationCommandOptionType.CHANNEL === type) {
-          obj = { style: null, option: null, initialValue: null, onChannelPress: null, onActionSheetDismiss: null, channel: null, autoFocus: null, hasError: null, onPress: null };
+          obj = {
+            style: null,
+            option: null,
+            initialValue: null,
+            onChannelPress: null,
+            onActionSheetDismiss: null,
+            channel: null,
+            autoFocus: null,
+            hasError: null,
+            onPress: null,
+          };
           obj[0] = tmp.option;
           obj[1] = name;
           let first4;
@@ -229,7 +281,7 @@ export default function AppLauncherCommandOption(option) {
           const obj5 = { style: null, children: null };
           obj5[0] = tmp.optionViewContainer;
           obj5[1] = tmp28Result;
-          let items = [tmp13(View, obj5), ];
+          let items = [tmp13(View, obj5)];
           const obj6 = { style: null, onPress: null, children: null };
           obj6[0] = tmp.dismissButton;
           obj6[1] = function onPress() {
@@ -246,7 +298,16 @@ export default function AppLauncherCommandOption(option) {
   }
   let tmp44 = null;
   if (null != name.choices) {
-    const obj7 = { style: null, option: null, initialValue: null, onSelect: null, onOpenChoicesSheet: null, onDismissChoicesSheet: null, autoFocus: null, hasError: null };
+    const obj7 = {
+      style: null,
+      option: null,
+      initialValue: null,
+      onSelect: null,
+      onOpenChoicesSheet: null,
+      onDismissChoicesSheet: null,
+      autoFocus: null,
+      hasError: null,
+    };
     obj7[0] = tmp.option;
     obj7[1] = name;
     let first5;
@@ -281,7 +342,19 @@ export default function AppLauncherCommandOption(option) {
     onDismiss(AppLauncherChoicesOptionDefault, obj7, name);
     const tmp57 = AppLauncherChoicesOptionDefault;
   } else if (name.autocomplete) {
-    const obj8 = { style: null, channel: null, option: null, activeCommand: null, optionValues: null, initialValue: null, autoFocus: null, onSelect: null, onOpenAutocompleteSheet: null, onDismissAutocompleteSheet: null, hasError: null };
+    const obj8 = {
+      style: null,
+      channel: null,
+      option: null,
+      activeCommand: null,
+      optionValues: null,
+      initialValue: null,
+      autoFocus: null,
+      onSelect: null,
+      onOpenAutocompleteSheet: null,
+      onDismissAutocompleteSheet: null,
+      hasError: null,
+    };
     obj8[0] = tmp.option;
     obj8[1] = channel;
     obj8[2] = name;
@@ -316,7 +389,18 @@ export default function AppLauncherCommandOption(option) {
     obj8[10] = hasError;
     tmp63(tmp64Result, obj8, name.name);
   } else {
-    const obj9 = { style: null, option: null, guildId: null, initialValue: null, onEndEditing: null, onChangeText: null, onFocus: null, autoFocus: null, hasError: null, onPressIn: null };
+    const obj9 = {
+      style: null,
+      option: null,
+      guildId: null,
+      initialValue: null,
+      onEndEditing: null,
+      onChangeText: null,
+      onFocus: null,
+      autoFocus: null,
+      hasError: null,
+      onPressIn: null,
+    };
     obj9[0] = tmp.option;
     obj9[1] = name;
     obj9[2] = channel.guild_id;
@@ -335,11 +419,11 @@ export default function AppLauncherCommandOption(option) {
       callback3(name, items);
     };
     obj9[6] = onFocus;
-    let items1 = [, ];
+    let items1 = [,];
     ({ FIRST_REQUIRED_OPTION: arr[0], OPTIONAL_OPTION_ADDED: arr[1] } = onPress);
     obj9[7] = items1.includes(autoFocusType);
     obj9[8] = hasError;
     obj9[9] = onPress;
     tmp63(tmp64Result, obj9, name.name);
   }
-};
+}

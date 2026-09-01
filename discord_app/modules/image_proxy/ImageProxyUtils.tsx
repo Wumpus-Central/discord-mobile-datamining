@@ -79,7 +79,10 @@ export const getSizedImageAssetURL = function getSizedImageAssetURL(value, size)
           const searchParams = str.searchParams;
           const _String = String;
           const obj3 = handleImageLoad;
-          const result = searchParams.set("size", String(obj3.getBestMediaProxySize(size.size * handleImageLoad.getDevicePixelRatio())));
+          const result = searchParams.set(
+            "size",
+            String(obj3.getBestMediaProxySize(size.size * handleImageLoad.getDevicePixelRatio())),
+          );
           const obj4 = handleImageLoad;
         }
         str = str.toString();

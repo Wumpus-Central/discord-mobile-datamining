@@ -5,48 +5,68 @@ import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
-let obj = { EXTRA_SMALL_10: "extraSmall10", EXTRA_SMALL: "extraSmall", SMALL: "small", SMALL_20: "small20", MEDIUM: "medium", LARGE: "large", CUSTOM: "custom", REFRESH_SMALL_16: "refreshSmall16", SMALL_14: "small14" };
+let obj = {
+  EXTRA_SMALL_10: "extraSmall10",
+  EXTRA_SMALL: "extraSmall",
+  SMALL: "small",
+  SMALL_20: "small20",
+  MEDIUM: "medium",
+  LARGE: "large",
+  CUSTOM: "custom",
+  REFRESH_SMALL_16: "refreshSmall16",
+  SMALL_14: "small14",
+};
 let closure_5 = createCacheKey.createStyles(() => {
   obj = { iconColor: null };
   obj = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   obj[0] = obj;
   return obj;
 });
-const memoResult = importAllResult.memo(importAllResult.forwardRef((size) => {
-  ({ color, disableColor } = size);
-  if (disableColor === undefined) {
-    disableColor = false;
-  }
-  let MEDIUM = size.size;
-  if (MEDIUM === undefined) {
-    MEDIUM = obj.MEDIUM;
-  }
-  ({ resizeMode, style } = size);
-  if (resizeMode === undefined) {
-    resizeMode = "cover";
-  }
-  ({ accessible, accessibilityLabel } = size);
-  if (disableColor) {
-    obj = { resizeMode: null, source: null, style: null, accessible: null, accessibilityLabel: null, fadeDuration: 0, ref: null };
-    obj[0] = resizeMode;
-    obj[1] = size.source;
-    let num = 10;
-    if (obj.EXTRA_SMALL_10 !== MEDIUM) {
-      num = 12;
-      if (tmp7.EXTRA_SMALL !== MEDIUM) {
-        num = 18;
-        if (tmp7.SMALL !== MEDIUM) {
-          num = 14;
-          if (tmp7.SMALL_14 !== MEDIUM) {
-            num = 20;
-            if (tmp7.SMALL_20 !== MEDIUM) {
-              num = 24;
-              if (tmp7.MEDIUM !== MEDIUM) {
-                num = 32;
-                if (tmp7.LARGE !== MEDIUM) {
-                  num = 16;
-                  if (tmp7.REFRESH_SMALL_16 !== MEDIUM) {
-                    const CUSTOM = tmp7.CUSTOM;
+const memoResult = importAllResult.memo(
+  importAllResult.forwardRef((size) => {
+    ({ color, disableColor } = size);
+    if (disableColor === undefined) {
+      disableColor = false;
+    }
+    let MEDIUM = size.size;
+    if (MEDIUM === undefined) {
+      MEDIUM = obj.MEDIUM;
+    }
+    ({ resizeMode, style } = size);
+    if (resizeMode === undefined) {
+      resizeMode = "cover";
+    }
+    ({ accessible, accessibilityLabel } = size);
+    if (disableColor) {
+      obj = {
+        resizeMode: null,
+        source: null,
+        style: null,
+        accessible: null,
+        accessibilityLabel: null,
+        fadeDuration: 0,
+        ref: null,
+      };
+      obj[0] = resizeMode;
+      obj[1] = size.source;
+      let num = 10;
+      if (obj.EXTRA_SMALL_10 !== MEDIUM) {
+        num = 12;
+        if (tmp7.EXTRA_SMALL !== MEDIUM) {
+          num = 18;
+          if (tmp7.SMALL !== MEDIUM) {
+            num = 14;
+            if (tmp7.SMALL_14 !== MEDIUM) {
+              num = 20;
+              if (tmp7.SMALL_20 !== MEDIUM) {
+                num = 24;
+                if (tmp7.MEDIUM !== MEDIUM) {
+                  num = 32;
+                  if (tmp7.LARGE !== MEDIUM) {
+                    num = 16;
+                    if (tmp7.REFRESH_SMALL_16 !== MEDIUM) {
+                      const CUSTOM = tmp7.CUSTOM;
+                    }
                   }
                 }
               }
@@ -54,24 +74,24 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((size) => {
           }
         }
       }
+      obj = { width: null, height: null };
+      obj[0] = num;
+      obj[1] = num;
+      const items = [obj, undefined, style];
+      obj[2] = items;
+      obj[3] = accessible;
+      obj[4] = accessibilityLabel;
+      obj[6] = arg1;
+      return <Image width={null} height={null} />;
+    } else if (null != color) {
+      obj = { tintColor: null };
+      obj[0] = color;
+      let iconColor = obj;
+    } else {
+      iconColor = tmp2.iconColor;
     }
-    obj = { width: null, height: null };
-    obj[0] = num;
-    obj[1] = num;
-    const items = [obj, undefined, style];
-    obj[2] = items;
-    obj[3] = accessible;
-    obj[4] = accessibilityLabel;
-    obj[6] = arg1;
-    return <Image width={null} height={null} />;
-  } else if (null != color) {
-    obj = { tintColor: null };
-    obj[0] = color;
-    let iconColor = obj;
-  } else {
-    iconColor = tmp2.iconColor;
-  }
-}));
+  }),
+);
 memoResult.displayName = "Icon";
 memoResult.Sizes = obj;
 const result = require("set").fileFinishedImporting("design/void/Icon/native/Icon.tsx");

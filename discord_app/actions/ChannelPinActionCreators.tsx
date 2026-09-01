@@ -11,7 +11,7 @@ let obj = {
   pinMessage(id, id2) {
     closure_0 = id;
     closure_1 = id2;
-    return callback(function*() {
+    return callback(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -143,7 +143,7 @@ let obj = {
   unpinMessage(id, id2) {
     closure_0 = id;
     closure_1 = id2;
-    return callback(function*() {
+    return callback(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -285,17 +285,25 @@ let obj = {
       obj1[1] = toISOStringResult;
       obj[1] = obj1;
       const value = HTTP.get(obj);
-      value.then((body) => {
-        obj = closure_1_1(closure_1_2[8]);
-        obj = { type: "LOAD_PINNED_MESSAGES_SUCCESS", pins: body.body.items, channelId: closure_0, hasMore: body.body.has_more };
-        obj.dispatch(obj);
-      }, () => {
-        obj = closure_1_1(closure_1_2[8]);
-        obj = { type: "LOAD_PINNED_MESSAGES_FAILURE", channelId: closure_0 };
-        obj.dispatch(obj);
-      });
+      value.then(
+        (body) => {
+          obj = closure_1_1(closure_1_2[8]);
+          obj = {
+            type: "LOAD_PINNED_MESSAGES_SUCCESS",
+            pins: body.body.items,
+            channelId: closure_0,
+            hasMore: body.body.has_more,
+          };
+          obj.dispatch(obj);
+        },
+        () => {
+          obj = closure_1_1(closure_1_2[8]);
+          obj = { type: "LOAD_PINNED_MESSAGES_FAILURE", channelId: closure_0 };
+          obj.dispatch(obj);
+        },
+      );
     }
-  }
+  },
 };
 const result = require("set").fileFinishedImporting("actions/ChannelPinActionCreators.tsx");
 

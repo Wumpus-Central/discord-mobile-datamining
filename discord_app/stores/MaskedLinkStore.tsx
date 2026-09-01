@@ -16,8 +16,7 @@ if (window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT != null) {
   replaced = str.replace("//", "");
 }
 const Store = initializeDefault.Store;
-class MaskedLinkStore extends Store {
-}
+class MaskedLinkStore extends Store {}
 const prototype = MaskedLinkStore.prototype;
 prototype["initialize"] = function initialize() {
   const Storage = Storage2.Storage;
@@ -143,7 +142,7 @@ const maskedLinkStore = new MaskedLinkStore(dispatcherDefault, {
       obj[1] = set1;
       const result = Storage.set(MaskedLinkStore, obj);
     }
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/MaskedLinkStore.tsx");
 

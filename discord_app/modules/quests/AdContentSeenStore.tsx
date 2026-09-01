@@ -112,8 +112,7 @@ function syncWithQuestStore() {
 }
 let map = new Map();
 const PersistedStore = initializeDefault.PersistedStore;
-class AdContentSeenStore extends PersistedStore {
-}
+class AdContentSeenStore extends PersistedStore {}
 const prototype = AdContentSeenStore.prototype;
 prototype["initialize"] = function initialize(seenContentIds) {
   const self = this;
@@ -200,7 +199,7 @@ const adContentSeenStore = new AdContentSeenStore(dispatcherDefault, {
       }
       return flag;
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/quests/AdContentSeenStore.tsx");
 

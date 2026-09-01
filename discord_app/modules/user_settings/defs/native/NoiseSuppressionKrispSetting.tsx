@@ -26,12 +26,20 @@ createToggle = {
     const intl = getSystemLocale.intl;
     obj[1] = intl.string(getSystemLocale.t.rdoNzt);
     obj[2] = noiseCancellationDeferredToSystem;
-    const items = [obj, , ];
-    obj = { value: handleAutomaticGainControlChange.NoiseSuppressionOpt.STANDARD, disabled: noiseCancellationDeferredToSystem, label: null };
+    const items = [obj, ,];
+    obj = {
+      value: handleAutomaticGainControlChange.NoiseSuppressionOpt.STANDARD,
+      disabled: noiseCancellationDeferredToSystem,
+      label: null,
+    };
     const intl2 = getSystemLocale.intl;
     obj[2] = intl2.string(getSystemLocale.t.qXeYHw);
     items[1] = obj;
-    obj1 = { value: handleAutomaticGainControlChange.NoiseSuppressionOpt.NONE, disabled: noiseCancellationDeferredToSystem, label: null };
+    obj1 = {
+      value: handleAutomaticGainControlChange.NoiseSuppressionOpt.NONE,
+      disabled: noiseCancellationDeferredToSystem,
+      label: null,
+    };
     const intl3 = getSystemLocale.intl;
     obj1[2] = intl3.string(getSystemLocale.t.wkYAlz);
     items[2] = obj1;
@@ -45,7 +53,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     const items = [intl.string(getSystemLocale.t.hmfkCi)];
     return items;
-  }
+  },
 };
 createToggle = createToggle.createRadio(createToggle);
 let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionKrispSetting.tsx");

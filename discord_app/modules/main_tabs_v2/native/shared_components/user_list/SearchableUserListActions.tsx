@@ -10,7 +10,7 @@ class UserFlashListActions {
     actions = global.actions;
     tmp = jsx;
     obj = { style: items, children: null };
-    items = [, ];
+    items = [,];
     items[0] = { flex: 1 };
     items[1] = global.style;
     tmp2 = View;
@@ -18,7 +18,17 @@ class UserFlashListActions {
     if (actions != null) {
       mapped = actions.map((arg0, arg1) => {
         ({ label, subLabel, icon, IconComponent, iconVariant, onPress } = arg0);
-        return callback2(callback(5599).TableRow, { label, subLabel, icon: callback2(callback(5599).TableRow.Icon, { source: icon, IconComponent, variant: iconVariant }), onPress, arrow: true }, arg1);
+        return callback2(
+          callback(5599).TableRow,
+          {
+            label,
+            subLabel,
+            icon: callback2(callback(5599).TableRow.Icon, { source: icon, IconComponent, variant: iconVariant }),
+            onPress,
+            arrow: true,
+          },
+          arg1,
+        );
       });
     }
     obj[1] = tmp(require("TableRowGroupTitle").TableRowGroup, { hasIcons: true, children: mapped });
@@ -26,7 +36,9 @@ class UserFlashListActions {
   }
 }
 ({ View: c4, StyleSheet: c5 } = get_ActivityIndicator);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/SearchableUserListActions.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/SearchableUserListActions.tsx",
+);
 
 export const useUserListActionsProps = function useUserListActionsProps(actions) {
   actions = actions.actions;

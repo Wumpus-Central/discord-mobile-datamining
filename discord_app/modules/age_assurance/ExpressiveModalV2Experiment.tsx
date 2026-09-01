@@ -7,7 +7,12 @@ import ApexExperiment from "../experiments/apex/index.tsx";
 require = arg1;
 ApexExperiment = { 1: null, 2: { enabled: true } };
 ApexExperiment[2] = { enabled: true };
-let closure_3 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-07-expressive-modal-v2", defaultConfig: { enabled: false }, variations: ApexExperiment });
+let closure_3 = ApexExperiment.createApexExperiment({
+  kind: "user",
+  name: "2026-07-expressive-modal-v2",
+  defaultConfig: { enabled: false },
+  variations: ApexExperiment,
+});
 const result = require("set").fileFinishedImporting("modules/age_assurance/ExpressiveModalV2Experiment.tsx");
 
 export const useIsExpressiveModalV2Enabled = function useIsExpressiveModalV2Enabled(location) {
@@ -15,7 +20,9 @@ export const useIsExpressiveModalV2Enabled = function useIsExpressiveModalV2Enab
   const isSuspendedUser = obj.useIsSuspendedUser();
   const items = [closure_2];
   obj = { location };
-  const stateFromStores = initialize.useStateFromStores(items, () => isExpressiveModalV2Enabled.getIsExpressiveModalV2Enabled());
+  const stateFromStores = initialize.useStateFromStores(items, () =>
+    isExpressiveModalV2Enabled.getIsExpressiveModalV2Enabled(),
+  );
   let enabled = closure_3.useConfig(obj).enabled;
   if (isSuspendedUser) {
     enabled = stateFromStores;

@@ -20,9 +20,7 @@ class NativeMenuStore extends Store {
     return applyArgumentsResult;
   }
 }
-NativeMenuStore.prototype["initialize"] = function initialize() {
-
-};
+NativeMenuStore.prototype["initialize"] = function initialize() {};
 NativeMenuStore.displayName = "NativeMenuStore";
 const nativeMenuStore = new NativeMenuStore(dispatcherDefault, {
   SHOW_NATIVE_MENU: function handleShowNativeMenu(arg0) {
@@ -36,7 +34,7 @@ const nativeMenuStore = new NativeMenuStore(dispatcherDefault, {
     }
     c0 = null;
     c1 = null;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/native_menu/native/NativeMenuStore.tsx");
 

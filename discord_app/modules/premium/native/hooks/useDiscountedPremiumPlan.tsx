@@ -30,13 +30,17 @@ export const useDiscountedPremiumPlan = function useDiscountedPremiumPlan(premiu
   const items2 = [memo];
   obj = {
     discountedPlan: memo,
-    discountedProduct: obj.useStateFromStores(items1, () => {
-      let product = null;
-      if (null != memo) {
-        product = closure_1_3.getProduct(tmp.productId);
-      }
-      return product;
-    }, items2)
+    discountedProduct: obj.useStateFromStores(
+      items1,
+      () => {
+        let product = null;
+        if (null != memo) {
+          product = closure_1_3.getProduct(tmp.productId);
+        }
+        return product;
+      },
+      items2,
+    ),
   };
   return obj;
 };

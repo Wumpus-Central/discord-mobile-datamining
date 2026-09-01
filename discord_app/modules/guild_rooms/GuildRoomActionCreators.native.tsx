@@ -11,7 +11,7 @@ function _guildRoomConnect() {
     c5 = 0;
     c4 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       c7 = 1;
       obj1 = callback(table[1]);
       yield obj1.guildRoomConnect(callback, table, closure_2, closure_3);
@@ -46,7 +46,7 @@ function _guildRoomUpdate() {
     c4 = 0;
     c3 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       c6 = 1;
       obj1 = callback(table[1]);
       yield obj1.guildRoomUpdate(callback, table, closure_2);

@@ -10,8 +10,10 @@ createCacheKey = { container: null };
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BLACK };
 createCacheKey[0] = createCacheKey;
 let closure_2 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageChannelBackground.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/components/StageChannelBackground.tsx",
+);
 
 export default function StageChannelBackground(children) {
   return <View style={callback().container}>{arg0.children}</View>;
-};
+}

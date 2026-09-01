@@ -40,32 +40,91 @@ function InlineSegment(children) {
   return tmp2;
 }
 let c4 = importAllResult;
-({ AuditLogTargetTypes: c10, AuditLogActionTypes: unpackModuleId, AuditLogActions: closure_12, Fonts, AuditLogChangeKeys: map1 } = ME);
+({
+  AuditLogTargetTypes: c10,
+  AuditLogActionTypes: unpackModuleId,
+  AuditLogActions: closure_12,
+  Fonts,
+  AuditLogChangeKeys: map1,
+} = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-createCacheKey = { container: { marginHorizontal: 8, marginVertical: 4, borderRadius: 3 }, rowContainer: { flex: 1, flexDirection: "row", alignItems: "center" }, titleContainer: { marginRight: 24, flex: 1 }, title: { marginHorizontal: 8 }, discriminator: null, avatar: null, timestamp: null, arrow: null, rotate90: null, changesContainer: null, changeRow: null, changeNumberText: null, changeItemText: null, colorHook: null, colorsHook: null, changeItemContent: null, changeItemRow: null, changeItemTextLine: null, forumTag: null, imageEmoji: null, textEmoji: null };
+createCacheKey = {
+  container: { marginHorizontal: 8, marginVertical: 4, borderRadius: 3 },
+  rowContainer: { flex: 1, flexDirection: "row", alignItems: "center" },
+  titleContainer: { marginRight: 24, flex: 1 },
+  title: { marginHorizontal: 8 },
+  discriminator: null,
+  avatar: null,
+  timestamp: null,
+  arrow: null,
+  rotate90: null,
+  changesContainer: null,
+  changeRow: null,
+  changeNumberText: null,
+  changeItemText: null,
+  colorHook: null,
+  colorsHook: null,
+  changeItemContent: null,
+  changeItemRow: null,
+  changeItemTextLine: null,
+  forumTag: null,
+  imageEmoji: null,
+  textEmoji: null,
+};
 createCacheKey = { fontSize: 12, lineHeight: 30, color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { marginLeft: 10, height: 32, width: 32 };
-createCacheKey[6] = { fontSize: 12, marginHorizontal: 8, marginTop: 8, color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
+createCacheKey[6] = {
+  fontSize: 12,
+  marginHorizontal: 8,
+  marginTop: 8,
+  color: ThemesDefault.unsafe_rawColors.PRIMARY_400,
+};
 let obj1 = { fontSize: 12, marginHorizontal: 8, marginTop: 8, color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
 createCacheKey[7] = { height: 13, width: 8, marginRight: 8, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let items = [{ rotate: "90deg" }];
 createCacheKey[8] = { transform: items };
 let obj2 = { height: 13, width: 8, marginRight: 8, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[9] = { marginTop: ThemesDefault.space.PX_4, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+createCacheKey[9] = {
+  marginTop: ThemesDefault.space.PX_4,
+  padding: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 createCacheKey[10] = { flexDirection: "row", flex: 1, alignItems: "flex-start" };
 createCacheKey[11] = { marginRight: 10, fontFamily: Fonts.CODE_BOLD, lineHeight: 24 };
-let obj3 = { marginTop: ThemesDefault.space.PX_4, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+let obj3 = {
+  marginTop: ThemesDefault.space.PX_4,
+  padding: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 createCacheKey[12] = { color: ThemesDefault.unsafe_rawColors.PRIMARY_400, alignItems: "baseline", fontSize: 14 };
 let obj4 = { color: ThemesDefault.unsafe_rawColors.PRIMARY_400, alignItems: "baseline", fontSize: 14 };
-createCacheKey[13] = { height: 10, width: 10, borderRadius: 5, borderColor: ThemesDefault.unsafe_rawColors.TRANSPARENT };
-createCacheKey[14] = { display: "flex", flexDirection: "row", fontFamily: Fonts.PRIMARY_MEDIUM, justifyContent: "center", alignItems: "center" };
+createCacheKey[13] = {
+  height: 10,
+  width: 10,
+  borderRadius: 5,
+  borderColor: ThemesDefault.unsafe_rawColors.TRANSPARENT,
+};
+createCacheKey[14] = {
+  display: "flex",
+  flexDirection: "row",
+  fontFamily: Fonts.PRIMARY_MEDIUM,
+  justifyContent: "center",
+  alignItems: "center",
+};
 createCacheKey[15] = { flex: 1, alignItems: "flex-start" };
 createCacheKey[16] = { alignItems: "center", flexDirection: "row", flexWrap: "wrap" };
 createCacheKey[17] = { lineHeight: 24 };
 let obj5 = { height: 10, width: 10, borderRadius: 5, borderColor: ThemesDefault.unsafe_rawColors.TRANSPARENT };
 let items1 = [{ translateY: 0.5 }];
-createCacheKey[18] = { height: "auto", paddingVertical: 0, paddingHorizontal: ThemesDefault.space.PX_4, transform: items1 };
+createCacheKey[18] = {
+  height: "auto",
+  paddingVertical: 0,
+  paddingHorizontal: ThemesDefault.space.PX_4,
+  transform: items1,
+};
 createCacheKey[19] = { height: 14, width: 14 };
 createCacheKey[20] = { fontSize: 14, lineHeight: 16 };
 let closure_16 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
@@ -102,16 +161,31 @@ prototype["renderTitle"] = function renderTitle() {
   if (null == changeTitle) {
     return null;
   } else {
-    obj = { style: null, accessibilityRole: "header", variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
+    obj = {
+      style: null,
+      accessibilityRole: "header",
+      variant: "text-md/medium",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj[0] = tmp.title;
     let intl = _require(tmp2[19]).intl;
-    obj = { user: null, target: null, userHook: null, targetHook: null, count: null, channel: null, channelHook: null, subtarget: null };
+    obj = {
+      user: null,
+      target: null,
+      userHook: null,
+      targetHook: null,
+      count: null,
+      channel: null,
+      channelHook: null,
+      subtarget: null,
+    };
     obj[0] = user;
     obj[1] = target;
     obj[2] = function userHook() {
       let obj = user;
       if (null != user) {
-        const items = [log(target[20]).getUserTag(obj, { mode: "username" }), ];
+        const items = [log(target[20]).getUserTag(obj, { mode: "username" })];
         const hasUniqueUsernameResult = obj.hasUniqueUsername();
         let tmp22 = !hasUniqueUsernameResult;
         if (!hasUniqueUsernameResult) {
@@ -146,7 +220,7 @@ prototype["renderTitle"] = function renderTitle() {
     obj[3] = function targetHook(children) {
       if (log.targetType === closure_1_10.USER) {
         if (target instanceof closure_1_7) {
-          const items = [log(target[20]).getUserTag(tmp3, { mode: "username" }), ];
+          const items = [log(target[20]).getUserTag(tmp3, { mode: "username" })];
           let tmp12 = "0" !== tmp3.discriminator;
           if (tmp12) {
             let obj = { style: null, children: null };
@@ -209,7 +283,13 @@ prototype["renderRoleUpdate"] = function renderRoleUpdate(newValue) {
   newValue = newValue.newValue;
   let mapped = null;
   if (Array.isArray(newValue)) {
-    mapped = newValue.map((children) => callback2(callback(table[15]).Text, { variant: "text-sm/medium", color: "text-muted", children: children.name }, children.id));
+    mapped = newValue.map((children) =>
+      callback2(
+        callback(table[15]).Text,
+        { variant: "text-sm/medium", color: "text-muted", children: children.name },
+        children.id,
+      ),
+    );
   }
   return mapped;
 };
@@ -219,7 +299,11 @@ prototype["renderPermissionUpdate"] = function renderPermissionUpdate(newValue) 
   let mapped = null;
   if (Array.isArray(newValue)) {
     mapped = newValue.map((arg0) => {
-      const obj = { variant: "text-sm/medium", color: "text-muted", children: closure_1_2(closure_1_3[18]).getStringForPermission(arg0, self.props.log) };
+      const obj = {
+        variant: "text-sm/medium",
+        color: "text-muted",
+        children: closure_1_2(closure_1_3[18]).getStringForPermission(arg0, self.props.log),
+      };
       return closure_1_14(self(closure_1_3[15]).Text, obj, arg0);
     });
   }
@@ -278,7 +362,20 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                 return null;
               } else {
                 const intl = v0(tmp[19]).intl;
-                const obj2 = { oldValue: null, newValue: null, count: null, subtarget: null, newColorHook: null, newColorsHook: null, oldColorHook: null, oldTagHook: null, newTagHook: null, oldEmojiHook: null, newEmojiHook: null, applicationHook: null };
+                const obj2 = {
+                  oldValue: null,
+                  newValue: null,
+                  count: null,
+                  subtarget: null,
+                  newColorHook: null,
+                  newColorsHook: null,
+                  oldColorHook: null,
+                  oldTagHook: null,
+                  newTagHook: null,
+                  oldEmojiHook: null,
+                  newEmojiHook: null,
+                  applicationHook: null,
+                };
                 obj2[0] = oldValue2;
                 obj2[1] = newValue;
                 const _Array = Array;
@@ -297,7 +394,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                 obj2[3] = str;
                 obj2[4] = function newColorHook(arg0, arg1) {
                   let obj = { children: closure_2_14(closure_2_5, { style: items }) };
-                  items = [arr.colorHook, ];
+                  items = [arr.colorHook];
                   obj = { backgroundColor: items3 };
                   items[1] = obj;
                   return closure_2_14(closure_2_19, obj, arg1);
@@ -305,7 +402,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                 obj2[5] = function newColorsHook(arg0, arg1) {
                   let obj = { children: null };
                   obj = { style: arr.colorsHook, children: null };
-                  let items = [, , ];
+                  let items = [, ,];
                   ({ primary_color: arr[0], secondary_color: arr[1], tertiary_color: arr[2] } = items3);
                   const found = items.filter(changeItemTextLine(log[26]).isNotNullish);
                   obj[1] = found.map((color) => {
@@ -317,9 +414,9 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                     obj = { variant: "text-sm/bold", children: null };
                     let tmp3Result = tmp3(tmp4[27]);
                     obj[1] = "" + str + tmp3Result.int2hex(color).toUpperCase() + " ";
-                    const items = [closure_1_14(closure_1_0(closure_1_3[15]).Text, obj), ];
+                    const items = [closure_1_14(closure_1_0(closure_1_3[15]).Text, obj)];
                     obj = { style: null };
-                    const items1 = [colorHook.colorHook, ];
+                    const items1 = [colorHook.colorHook];
                     obj1 = { backgroundColor: null };
                     tmp3Result = tmp3(tmp4[27]);
                     obj1[0] = tmp3Result.int2hex(color);
@@ -397,7 +494,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                   let obj3 = { style: null, children: null };
                   obj3[0] = lib.changeRow;
                   let obj4 = { variant: "text-sm/bold", style: null, children: null };
-                  let items = [lib.changeNumberText, ];
+                  let items = [lib.changeNumberText];
                   let obj5 = { color: null };
                   obj5[0] = RED_400;
                   items[1] = obj5;
@@ -408,7 +505,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                   }
                   let items1 = [str2, changeItemTextLine, " \u2014"];
                   obj4[2] = items1;
-                  const items2 = [closure_1_15(tmp39(tmp[15]).Text, obj4), ];
+                  const items2 = [closure_1_15(tmp39(tmp[15]).Text, obj4)];
                   const obj6 = { style: null, children: null };
                   obj6[0] = lib.changeItemContent;
                   obj7 = { style: null, children: null };
@@ -424,7 +521,9 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                           obj[1] = changeItemTextLine;
                           obj[2] = arr;
                           const _HermesInternal = HermesInternal;
-                          arr = items3.push(closure_1_14(changeItemTextLine(closure_1_3[15]).Text, obj, "text-" + items3.length));
+                          arr = items3.push(
+                            closure_1_14(changeItemTextLine(closure_1_3[15]).Text, obj, "text-" + items3.length),
+                          );
                           arr = [];
                         }
                         arr = items3.push(type);
@@ -441,7 +540,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                     lib = [];
                   }
                   obj7[1] = items3;
-                  const items4 = [closure_1_14(closure_1_5, obj7), ];
+                  const items4 = [closure_1_14(closure_1_5, obj7)];
                   let tmp36 = null;
                   if (null != result) {
                     tmp36 = result;
@@ -554,8 +653,14 @@ prototype["render"] = function render() {
   obj1[3] = str3;
   obj1[4] = onHeaderClick;
   const obj2 = { style: tmp.rowContainer, children: null };
-  const items2 = [callback(user(17131), { action: log.action }), , , ];
-  const obj4 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
+  const items2 = [callback(user(17131), { action: log.action }), , ,];
+  const obj4 = {
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    onPress: null,
+    children: null,
+  };
   const intl = tmp10(1236).intl;
   obj4[1] = intl.string(tmp10(1236).t.iXAna6);
   let username;
@@ -602,7 +707,14 @@ prototype["render"] = function render() {
         obj5[2] = tmp10(1297).AvatarSizes.SMALL;
         obj4[4] = tmp17(tmp20, obj5);
         items2[1] = tmp17(tmp10(5068).PressableOpacity, obj4);
-        const obj6 = { accessibilityRole: "button", accessibilityState: null, onPress: null, style: null, disabled: null, children: null };
+        const obj6 = {
+          accessibilityRole: "button",
+          accessibilityState: null,
+          onPress: null,
+          style: null,
+          disabled: null,
+          children: null,
+        };
         obj7 = { expanded: null, disabled: null };
         obj7[0] = expanded;
         obj7[1] = !checkChangesToRenderResult;
@@ -624,7 +736,7 @@ prototype["render"] = function render() {
         }
         items2[3] = tmp17Result;
         obj2[1] = items2;
-        const items5 = [tmp15(tmp16, obj2), ];
+        const items5 = [tmp15(tmp16, obj2)];
         let renderChangeSummaryResult = null;
         if (expanded) {
           renderChangeSummaryResult = self.renderChangeSummary();

@@ -3,7 +3,9 @@ import set from "../../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../../_runtime/02009_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../ActionSheetActionCreators.tsx";
 
-const result = set.fileFinishedImporting("modules/action_sheet/native/components/showLongPressForumPostActionSheet.tsx");
+const result = set.fileFinishedImporting(
+  "modules/action_sheet/native/components/showLongPressForumPostActionSheet.tsx",
+);
 
 export default function showLongPressForumPostActionSheet(thread, parentChannel) {
   let hideActionSheet = arg2;
@@ -13,4 +15,4 @@ export default function showLongPressForumPostActionSheet(thread, parentChannel)
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { thread, parentChannel, onClose: hideActionSheet };
   obj.openLazy(asyncRequireImpl(10304, dependencyMap.paths), "ForumPostLongPressActionSheet", obj);
-};
+}

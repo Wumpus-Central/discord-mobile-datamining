@@ -7,7 +7,9 @@ import closure_3 from "../../stores/ChannelStore.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/spoiler_channels/maybeOpenSpoilerGateForVoiceChannel.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/spoiler_channels/maybeOpenSpoilerGateForVoiceChannel.native.tsx",
+);
 
 export const maybeOpenSpoilerGateForVoiceChannel = function maybeOpenSpoilerGateForVoiceChannel(id) {
   channel = channel.getChannel(id);
@@ -20,7 +22,10 @@ export const maybeOpenSpoilerGateForVoiceChannel = function maybeOpenSpoilerGate
   if (!tmp2) {
     obj = { channelId: null };
     obj[0] = channel.id;
-    useAlertStore.openAlert(VoicePanelSpoilerAlert.VOICE_PANEL_SPOILER_KEY, jsx(VoicePanelSpoilerAlertDefault, { channelId: null }));
+    useAlertStore.openAlert(
+      VoicePanelSpoilerAlert.VOICE_PANEL_SPOILER_KEY,
+      jsx(VoicePanelSpoilerAlertDefault, { channelId: null }),
+    );
     flag = true;
     const obj2 = useAlertStore;
   }

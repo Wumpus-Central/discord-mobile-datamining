@@ -17,7 +17,7 @@ export const ModalScreen = function ModalScreen(children) {
   let backgroundColor = children.backgroundColor;
   const tmp = callback();
   const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
-  const style = [tmp.container, ];
+  const style = [tmp.container];
   if (backgroundColor == null) {
     backgroundColor = tmp.container.backgroundColor;
   }

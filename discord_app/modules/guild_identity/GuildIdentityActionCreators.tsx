@@ -12,7 +12,7 @@ function _saveGuildIdentityChanges() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -51,7 +51,16 @@ function _saveGuildIdentityChanges() {
               c8 = undefined;
               let dispatchResult = callback;
               dispatchResult = callback2;
-              ({ nick: c1, avatar: c2, avatarDescription: c3, avatarId: c4, avatarDecoration: c5, nameplate: c6, displayNameStyles: c7, avatarOriginalMd5: c8 } = callback2);
+              ({
+                nick: c1,
+                avatar: c2,
+                avatarDescription: c3,
+                avatarId: c4,
+                avatarDecoration: c5,
+                nameplate: c6,
+                displayNameStyles: c7,
+                avatarOriginalMd5: c8,
+              } = callback2);
               let obj3;
               let body;
               body = undefined;
@@ -84,7 +93,17 @@ function _saveGuildIdentityChanges() {
                 dispatchResult = callback;
                 obj2[1] = callback;
                 dispatchResult = callback2(709).dispatch(obj2);
-                obj3 = { nick: null, avatar: null, avatar_description: null, avatar_id: null, avatar_decoration_sku_id: null, collectibles: null, display_name_font_id: null, display_name_effect_id: null, display_name_colors: null };
+                obj3 = {
+                  nick: null,
+                  avatar: null,
+                  avatar_description: null,
+                  avatar_id: null,
+                  avatar_decoration_sku_id: null,
+                  collectibles: null,
+                  display_name_font_id: null,
+                  display_name_effect_id: null,
+                  display_name_colors: null,
+                };
                 dispatchResult = callback2;
                 obj3[0] = callback2;
                 dispatchResult = dependencyMap;

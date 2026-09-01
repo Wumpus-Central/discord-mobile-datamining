@@ -58,7 +58,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -147,7 +147,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
   });
   const items = [tmp17, onError, onSuccess];
   closure_0 = undefined;
-  callback = obj2.useCallback(function() {
+  callback = obj2.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -162,7 +162,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -251,7 +251,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
   });
   const items1 = [tmp17, onError, onSuccess];
   closure_0 = undefined;
-  const callback1 = obj2.useCallback(function() {
+  const callback1 = obj2.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -266,7 +266,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -355,7 +355,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
   });
   const items2 = [tmp17, onError, onSuccess];
   closure_0 = undefined;
-  callback2 = obj2.useCallback(function() {
+  callback2 = obj2.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -370,7 +370,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -458,7 +458,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     })();
   });
   const items3 = [tmp17, onError, onSuccess];
-  const callback3 = obj2.useCallback(function() {
+  const callback3 = obj2.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -470,98 +470,101 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
   }, items3);
   const items4 = [first, onError, onSuccess];
   closure_0 = undefined;
-  const callback4 = obj2.useCallback(callback(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  const callback4 = obj2.useCallback(
+    callback(function* () {
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let callback = tmp4;
-            let aPIError = tmp8;
-            aPIError = undefined;
-            if (closure_1_6) {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
               c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
             } else {
-              closure_1_7(true);
-              c3 = 2;
-              obj1 = closure_1_0(closure_1_2[5]);
-              c4 = 3;
-              c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.getLinkCodeForCurrentUser();
-              return obj1;
+              let callback = tmp4;
+              let aPIError = tmp8;
+              aPIError = undefined;
+              if (closure_1_6) {
+                c5 = 3;
+              } else {
+                closure_1_7(true);
+                c3 = 2;
+                obj1 = closure_1_0(closure_1_2[5]);
+                c4 = 3;
+                c5 = 1;
+                obj1 = { value: null, done: false };
+                obj1[0] = obj1.getLinkCodeForCurrentUser();
+                return obj1;
+              }
             }
-          }
-        } else if (1 !== tmp8) {
-          if (2 === tmp8) {
-            c3 = 1;
-            callback = closure_2;
-            aPIError = new closure_1_0(closure_1_2[6]).APIError(callback);
-            if (aPIError != null) {
-              tmp25(aPIError);
+          } else if (1 !== tmp8) {
+            if (2 === tmp8) {
+              c3 = 1;
+              callback = closure_2;
+              aPIError = new closure_1_0(closure_1_2[6]).APIError(callback);
+              if (aPIError != null) {
+                tmp25(aPIError);
+              }
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              callback2(false);
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              if (callback != null) {
+                callback();
+              }
+              c3 = 1;
             }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
             c3 = 0;
             callback2(false);
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            if (callback != null) {
-              callback();
-            }
-            c3 = 1;
           }
           c3 = 0;
-          callback2(false);
-        }
-        c3 = 0;
-        closure_1_7(false);
-        throw closure_2;
-      } catch (tmp42) {
-        closure_2 = tmp42;
-        if (tmp5 === c3) {
-          c5 = tmp3;
-          throw tmp42;
-        } else if (tmp2 === tmp44) {
-          c4 = tmp2;
-        } else {
-          c4 = tmp;
+          closure_1_7(false);
+          throw closure_2;
+        } catch (tmp42) {
+          closure_2 = tmp42;
+          if (tmp5 === c3) {
+            c5 = tmp3;
+            throw tmp42;
+          } else if (tmp2 === tmp44) {
+            c4 = tmp2;
+          } else {
+            c4 = tmp;
+          }
         }
       }
-    }
-  }), items4);
+    }),
+    items4,
+  );
   closure_0 = callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -650,7 +653,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
   });
   const items5 = [first2, onError, onSuccess];
   closure_0 = undefined;
-  const callback5 = obj2.useCallback(function() {
+  const callback5 = obj2.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -666,7 +669,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -755,7 +758,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
   });
   const items6 = [first1, onError, onSuccess];
   closure_0 = undefined;
-  const callback6 = obj2.useCallback(function() {
+  const callback6 = obj2.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -770,7 +773,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -812,7 +815,12 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
                     c5 = 3;
                     c6 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = obj1.fetchMoreTeenActivity(selectedTeenId, tmp52, startId, actionsForDisplayType[actionsForDisplayType.length - 1].event_id);
+                    obj1[0] = obj1.fetchMoreTeenActivity(
+                      selectedTeenId,
+                      tmp52,
+                      startId,
+                      actionsForDisplayType[actionsForDisplayType.length - 1].event_id,
+                    );
                     return obj1;
                   }
                 }
@@ -869,7 +877,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     selectTeenUser: callback5,
     getLinkCode: callback4,
     requestLink: callback6,
-    loadMore: obj2.useCallback(function() {
+    loadMore: obj2.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -886,7 +894,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     isGetLinkCodeLoading: first,
     isSelectTeenUserLoading: first2,
     isRequestingLink: first1,
-    isMoreLoading: first3
+    isMoreLoading: first3,
   };
   return obj;
 };

@@ -6,6 +6,4 @@ const result = set.fileFinishedImporting("modules/analytics_sessions/SessionRout
 export function isActiveUserRoute() {
   return true;
 }
-export function subscribeToLocationChanges(handleLocationChange) {
-
-}
+export function subscribeToLocationChanges(handleLocationChange) {}

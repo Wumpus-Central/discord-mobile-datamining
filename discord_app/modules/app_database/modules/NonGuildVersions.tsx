@@ -16,11 +16,11 @@ class NonGuildVersions {
     closure_0 = obj;
     obj.actions = {
       CONNECTION_OPEN(arg0, arg1) {
-            return obj.handleConnectionOpen(arg0, arg1);
-          },
+        return obj.handleConnectionOpen(arg0, arg1);
+      },
       BACKGROUND_SYNC(arg0, arg1) {
-            return obj.handleConnectionOpen(arg0, arg1);
-          }
+        return obj.handleConnectionOpen(arg0, arg1);
+      },
     };
     tmp2 = closure_2;
     obj = require("isCacheEnabled");
@@ -29,34 +29,36 @@ class NonGuildVersions {
       tmp4 = closure_1;
       obj2 = require("apply");
       num = 10;
-      addChangeListenerResult = closure_4.addChangeListener(obj2.throttle(() => {
-        const databaseResult = callback(table[5]).database();
-        if (databaseResult != null) {
-          databaseResult.transaction((database) => {
-            guildId = guildId.getGuildId();
-            if (null != guildId) {
-              const _isNaN = isNaN;
-              const _Number = Number;
-              if (!isNaN(Number(guildId))) {
-                obj = callback(1956);
-                const result = obj.nonGuildVersionsTransaction(database);
-                obj = { id: "initial_guild_id", versionString: null };
-                obj[1] = guildId;
-                result.put(obj);
+      addChangeListenerResult = closure_4.addChangeListener(
+        obj2.throttle(() => {
+          const databaseResult = callback(table[5]).database();
+          if (databaseResult != null) {
+            databaseResult.transaction((database) => {
+              guildId = guildId.getGuildId();
+              if (null != guildId) {
+                const _isNaN = isNaN;
+                const _Number = Number;
+                if (!isNaN(Number(guildId))) {
+                  obj = callback(1956);
+                  const result = obj.nonGuildVersionsTransaction(database);
+                  obj = { id: "initial_guild_id", versionString: null };
+                  obj[1] = guildId;
+                  result.put(obj);
+                }
               }
-            }
-            const result1 = callback(1956).nonGuildVersionsTransaction(database);
-            result1.delete("initial_guild_id");
-          });
-        }
-      }, 10 * require("set").Millis.SECOND));
+              const result1 = callback(1956).nonGuildVersionsTransaction(database);
+              result1.delete("initial_guild_id");
+            });
+          }
+        }, 10 * require("set").Millis.SECOND),
+      );
     }
     return obj;
   }
 }
 const prototype = NonGuildVersions.prototype;
 prototype["getCommittedVersions"] = function getCommittedVersions() {
-  return callback(function*() {
+  return callback(function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();
@@ -155,9 +157,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(apiCodeVersion
     result.put(obj);
   }
 };
-prototype["resetInMemoryState"] = function resetInMemoryState() {
-
-};
+prototype["resetInMemoryState"] = function resetInMemoryState() {};
 obj = Object.create(NonGuildVersions.prototype);
 obj.actions = {
   CONNECTION_OPEN(arg0, arg1) {
@@ -165,30 +165,32 @@ obj.actions = {
   },
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleConnectionOpen(arg0, arg1);
-  }
+  },
 };
 if (isCacheEnabled.isCacheEnabled()) {
-  importDefaultResult.addChangeListener(applyDefault.throttle(() => {
-    const databaseResult = callback(table[5]).database();
-    if (databaseResult != null) {
-      databaseResult.transaction((database) => {
-        guildId = guildId.getGuildId();
-        if (null != guildId) {
-          const _isNaN = isNaN;
-          const _Number = Number;
-          if (!isNaN(Number(guildId))) {
-            obj = callback(1956);
-            const result = obj.nonGuildVersionsTransaction(database);
-            obj = { id: "initial_guild_id", versionString: null };
-            obj[1] = guildId;
-            result.put(obj);
+  importDefaultResult.addChangeListener(
+    applyDefault.throttle(() => {
+      const databaseResult = callback(table[5]).database();
+      if (databaseResult != null) {
+        databaseResult.transaction((database) => {
+          guildId = guildId.getGuildId();
+          if (null != guildId) {
+            const _isNaN = isNaN;
+            const _Number = Number;
+            if (!isNaN(Number(guildId))) {
+              obj = callback(1956);
+              const result = obj.nonGuildVersionsTransaction(database);
+              obj = { id: "initial_guild_id", versionString: null };
+              obj[1] = guildId;
+              result.put(obj);
+            }
           }
-        }
-        const result1 = callback(1956).nonGuildVersionsTransaction(database);
-        result1.delete("initial_guild_id");
-      });
-    }
-  }, 10 * setDefault.Millis.SECOND));
+          const result1 = callback(1956).nonGuildVersionsTransaction(database);
+          result1.delete("initial_guild_id");
+        });
+      }
+    }, 10 * setDefault.Millis.SECOND),
+  );
   const importDefaultResult1 = applyDefault;
 }
 const tmp2 = new timestampDefault("NonGuildVersions");

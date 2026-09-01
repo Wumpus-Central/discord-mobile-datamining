@@ -22,7 +22,7 @@ function SourceIcon(toastText) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: null
+    children: null,
   };
   obj = { color: ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
   obj[5] = callback(toastText(9204).HeartIcon, obj);
@@ -33,7 +33,14 @@ noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let obj = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8 };
 obj = { card: null, overlayContainer: null, previewWrap: null, dimmedPreview: null, sourceIcon: null, lockBadge: null };
-obj = { borderWidth: 1, borderRadius: ThemesDefault.radii.lg, borderColor: ThemesDefault.colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" };
+obj = {
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.lg,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+};
 obj[0] = obj;
 createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -81,7 +88,7 @@ export default function WishlistItemCardBase(username) {
   if (null != primaryColor) {
     containerBackground = obj1.useUserProfileColors({ theme, primaryColor, secondaryColor }).containerBackground;
   }
-  const items = [tmp.card, { backgroundColor: containerBackground }, ];
+  const items = [tmp.card, { backgroundColor: containerBackground }];
   if (typeof size === "object") {
     obj = { width: null, height: null };
     ({ width: obj4[0], height: obj4[1] } = size);
@@ -91,8 +98,10 @@ export default function WishlistItemCardBase(username) {
   }
   items[2] = obj;
   const intl = tmp2(1236).intl;
-  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.p3RmJF, { username: username.recipientName });
-  const items1 = [accessibilityLabel, , ];
+  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.p3RmJF, {
+    username: username.recipientName,
+  });
+  const items1 = [accessibilityLabel, ,];
   if (obj4.OWNED === overlay) {
     const intl3 = tmp2(1236).intl;
     let stringResult = intl3.string(tmp2(1236).t["6cfuDj"]);
@@ -112,17 +121,23 @@ export default function WishlistItemCardBase(username) {
   items1[2] = tmp10;
   const found = items1.filter(tmp2(1471).isNotNullish);
   const joined = found.join(", ");
-  const items2 = [tmp.previewWrap, ];
+  const items2 = [tmp.previewWrap];
   let dimmedPreview = overlay === tmp7.OWNED;
   if (dimmedPreview) {
     dimmedPreview = tmp.dimmedPreview;
   }
   obj1 = { style: items2, "aria-hidden": true, children: renderPreview() };
   items2[1] = dimmedPreview;
-  const items3 = [closure_5(closure_4, obj1), , , ];
+  const items3 = [closure_5(closure_4, obj1), , ,];
   let tmp14Result = overlay === tmp7.OWNED;
   if (tmp14Result) {
-    obj2 = { style: null, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+    obj2 = {
+      style: null,
+      pointerEvents: "none",
+      accessibilityElementsHidden: true,
+      importantForAccessibility: "no-hide-descendants",
+      children: null,
+    };
     obj2[0] = tmp.overlayContainer;
     const obj3 = { color: null, size: "custom", style: null };
     obj3[0] = tmp5(712).colors.WHITE;
@@ -133,7 +148,13 @@ export default function WishlistItemCardBase(username) {
   items3[1] = tmp14Result;
   tmp14Result = overlay === tmp7.LOCKED;
   if (tmp14Result) {
-    obj4 = { style: null, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+    obj4 = {
+      style: null,
+      pointerEvents: "none",
+      accessibilityElementsHidden: true,
+      importantForAccessibility: "no-hide-descendants",
+      children: null,
+    };
     obj4[0] = tmp.lockBadge;
     const obj5 = { color: null, size: "custom", style: null };
     obj5[0] = tmp5(712).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT;
@@ -150,7 +171,14 @@ export default function WishlistItemCardBase(username) {
   items3[3] = tmp14Result1;
   const tmp12Result = closure_7(closure_6, { children: items3 });
   if (null == onPress) {
-    const obj7 = { style: null, accessible: null, accessibilityLabel: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+    const obj7 = {
+      style: null,
+      accessible: null,
+      accessibilityLabel: null,
+      accessibilityElementsHidden: null,
+      importantForAccessibility: null,
+      children: null,
+    };
     obj7[0] = items;
     obj7[1] = "" !== joined || undefined;
     let tmp22;
@@ -167,7 +195,15 @@ export default function WishlistItemCardBase(username) {
     obj7[5] = tmp12Result;
     return tmp14(tmp15, obj7);
   } else {
-    const obj8 = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+    const obj8 = {
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      style: null,
+      onPress: null,
+      accessibilityElementsHidden: null,
+      importantForAccessibility: null,
+      children: null,
+    };
     obj8[1] = joined;
     obj8[2] = items;
     obj8[3] = onPress;
@@ -182,7 +218,7 @@ export default function WishlistItemCardBase(username) {
   }
   const tmp12 = closure_7;
   const tmp13 = closure_6;
-};
+}
 export const DEFAULT_ITEM_SIZE = 170;
 export const CARD_TOP_RIGHT_OVERLAY_POSITION = obj;
 export const WishlistItemCardOverlay = obj4;

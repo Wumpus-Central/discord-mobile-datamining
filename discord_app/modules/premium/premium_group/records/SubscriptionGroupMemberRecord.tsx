@@ -20,7 +20,11 @@ SubscriptionGroupMemberRecord["createFromServer"] = function createFromServer(us
   if (typeof SubscriptionGroupMemberRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp2 = new SubscriptionGroupMemberRecord("Trying to call a non-function", SubscriptionGroupMemberRecord, new.target);
+  const tmp2 = new SubscriptionGroupMemberRecord(
+    "Trying to call a non-function",
+    SubscriptionGroupMemberRecord,
+    new.target,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp2.user = new closure_0(user.user);
   ({ member_type: tmp2.member_type, accepted_at: tmp2.accepted_at } = user);
@@ -43,7 +47,9 @@ prototype["isInvited"] = function isInvited() {
   }
   return tmp;
 };
-const result = require("set").fileFinishedImporting("modules/premium/premium_group/records/SubscriptionGroupMemberRecord.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/premium_group/records/SubscriptionGroupMemberRecord.tsx",
+);
 
 export default SubscriptionGroupMemberRecord;
 export const SubscriptionMemberTypes = obj;

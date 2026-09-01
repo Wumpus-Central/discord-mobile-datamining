@@ -36,7 +36,7 @@ const tmp2 = keys.create()((arg0) => {
     currentPremiumPlanId: null,
     setCurrentPremiumPlanId(currentPremiumPlanId) {
       return callback({ currentPremiumPlanId });
-    }
+    },
   };
 });
 const result = set.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx");

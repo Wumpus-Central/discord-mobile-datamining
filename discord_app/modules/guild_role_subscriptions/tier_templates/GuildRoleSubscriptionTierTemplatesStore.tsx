@@ -9,8 +9,7 @@ const createChannelRecord = createChannelRecord2.createChannelRecord;
 let closure_2 = {};
 let closure_3 = {};
 const Store = initializeDefault.Store;
-class GuildRoleSubscriptionTierTemplatesStore extends Store {
-}
+class GuildRoleSubscriptionTierTemplatesStore extends Store {}
 const prototype = GuildRoleSubscriptionTierTemplatesStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_1);
@@ -50,8 +49,10 @@ const guildRoleSubscriptionTierTemplatesStore = new GuildRoleSubscriptionTierTem
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES: function handleFetchTemplates(guildId) {
     closure_2[guildId.guildId] = guildId.templates;
-  }
+  },
 });
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesStore.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesStore.tsx",
+);
 
 export default guildRoleSubscriptionTierTemplatesStore;

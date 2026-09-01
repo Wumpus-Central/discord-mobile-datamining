@@ -12,7 +12,7 @@ function _handleForwardBreadcrumb() {
     c4 = 0;
     c5 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (guild === 2) {
         guild = 3;
         HermesBuiltin.throwTypeError();
@@ -111,7 +111,15 @@ function _handleForwardBreadcrumb() {
           if (basicChannel != null) {
             guild_id = basicChannel.guild_id;
           }
-          const obj5 = { guild_id: null, channel_id: null, message_id: null, breadcrumb_guild_id: null, breadcrumb_channel_id: null, breadcrumb_message_id: null, did_lurk: null };
+          const obj5 = {
+            guild_id: null,
+            channel_id: null,
+            message_id: null,
+            breadcrumb_guild_id: null,
+            breadcrumb_channel_id: null,
+            breadcrumb_message_id: null,
+            did_lurk: null,
+          };
           obj5[0] = guild_id;
           obj5[1] = lib.channel_id;
           obj5[2] = lib.id;
@@ -161,4 +169,4 @@ export default function handleForwardBreadcrumb() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

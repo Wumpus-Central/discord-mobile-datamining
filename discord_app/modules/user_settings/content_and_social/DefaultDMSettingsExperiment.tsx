@@ -8,7 +8,9 @@ const result = set.fileFinishedImporting("modules/user_settings/content_and_soci
 
 export const shouldAgeVerifyForDMDefaultOff = function shouldAgeVerifyForDMDefaultOff() {
   const obj = isFeatureAgeGated;
-  const isFeatureAgeGatedResult = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.DM_PRIVACY_SETTINGS);
+  const isFeatureAgeGatedResult = isFeatureAgeGated.isFeatureAgeGated(
+    AgeGatedFeature.AgeGatedFeature.DM_PRIVACY_SETTINGS,
+  );
   const obj2 = useAgeVerificationRunner;
   return useAgeVerificationRunner.shouldShowTiggerPawtect() && isFeatureAgeGatedResult;
 };

@@ -18,7 +18,12 @@ const memoResult = importAllResult.memo((arg0) => {
   const obj = { postpone: screen.postponeRender, ignoreKeyboard: screen.ignoreKeyboard, viewStyle, children: null };
   const items = [customNavbarResult, screen.render(route.params, navigation)];
   obj[3] = items;
-  return jsxs(PostponeRender.PostponeRender, { postpone: screen.postponeRender, ignoreKeyboard: screen.ignoreKeyboard, viewStyle, children: null });
+  return jsxs(PostponeRender.PostponeRender, {
+    postpone: screen.postponeRender,
+    ignoreKeyboard: screen.ignoreKeyboard,
+    viewStyle,
+    children: null,
+  });
 });
 const result = require("set").fileFinishedImporting("design/components/Navigator/native/NavigatorScreen.native.tsx");
 

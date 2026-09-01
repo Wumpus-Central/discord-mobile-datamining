@@ -9,7 +9,15 @@ function createItem(id, type, arg2) {
   if (MessageEmbedTypes.ICYMIItemTypes.MESSAGE === type) {
     if (type.message.id === type.message.channel_id) {
       if (null != type.threadChannel) {
-        let obj = { id: null, timestamp: null, channelType: null, data: null, score: null, debugScore: null, unread: null };
+        let obj = {
+          id: null,
+          timestamp: null,
+          channelType: null,
+          data: null,
+          score: null,
+          debugScore: null,
+          unread: null,
+        };
         obj[0] = id.id;
         const _Date5 = Date;
         obj[1] = Date.now();
@@ -105,10 +113,12 @@ export default function useICYMIItems() {
   const items5 = [stateFromStores1];
   const effect = React.useEffect(() => {
     stateFromStores1 = Date.now() + stateFromStores1.length;
-    closure_1_1(closure_1_2[4]).ackGravityItems(stateFromStores1.map((id) => {
-      closure_0 = tmp - 1;
-      return { id: id.id, timestamp: +closure_0 };
-    }, true));
+    closure_1_1(closure_1_2[4]).ackGravityItems(
+      stateFromStores1.map((id) => {
+        closure_0 = tmp - 1;
+        return { id: id.id, timestamp: +closure_0 };
+      }, true),
+    );
   }, items5);
   const items6 = [];
   let num = 0;
@@ -214,4 +224,4 @@ export default function useICYMIItems() {
   }
   obj = { unreadItems: items6, readItems: items7, allUnreadItemsHydrated: stateFromStores2 >= stateFromStores.length };
   return obj;
-};
+}

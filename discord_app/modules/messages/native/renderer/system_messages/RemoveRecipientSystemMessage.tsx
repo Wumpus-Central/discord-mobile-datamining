@@ -7,7 +7,9 @@ import closure_4 from "../../../../../stores/ChannelStore.tsx";
 import closure_5 from "../../../../../stores/UserStore.tsx";
 
 const THREAD_CHANNEL_TYPES = createChannelRecord.THREAD_CHANNEL_TYPES;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/RemoveRecipientSystemMessage.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/RemoveRecipientSystemMessage.tsx",
+);
 
 export const createRemoveRecipientSystemMessage = function createRemoveRecipientSystemMessage(message) {
   ({ message, roleStyle } = message);
@@ -19,7 +21,10 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
   }
   let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }) };
+  obj = {
+    username: messageAuthorWithProcessedColor.nick,
+    usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }),
+  };
   if (message.author.id === first) {
     const intl = tmp5(1236).intl;
     const formatToParts = intl.formatToParts;

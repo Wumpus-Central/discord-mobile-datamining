@@ -4,7 +4,14 @@ import identity from "../../../_runtime/00700_identity.js";
 import createJSONStorage from "../../../_runtime/04345_createJSONStorage.js";
 
 let c0 = require;
-let closure_2 = Object.freeze({ inspectedExpressionPosition: { rowIndex: 0, columnIndex: 0 }, hasInteracted: false, activeCategoryIndex: 0, searchPlaceholder: null, bottomPosition: null, analyticsId: null });
+let closure_2 = Object.freeze({
+  inspectedExpressionPosition: { rowIndex: 0, columnIndex: 0 },
+  hasInteracted: false,
+  activeCategoryIndex: 0,
+  searchPlaceholder: null,
+  bottomPosition: null,
+  analyticsId: null,
+});
 c0 = undefined;
 identity = identity.createWithEqualityFn();
 let withEqualityFnResult = identity(createJSONStorage.subscribeWithSelector(() => closure_2));
@@ -47,7 +54,7 @@ let obj = {
   },
   getAnalyticsId() {
     return withEqualityFnResult.getState().analyticsId;
-  }
+  },
 };
 c0 = undefined;
 identity = identity.createWithEqualityFn();
@@ -91,7 +98,7 @@ obj = {
   },
   getAnalyticsId() {
     return withEqualityFnResult.getState().analyticsId;
-  }
+  },
 };
 c0 = undefined;
 identity = identity.createWithEqualityFn();
@@ -146,10 +153,10 @@ export default function createStore() {
     },
     getAnalyticsId() {
       return withEqualityFnResult.getState().analyticsId;
-    }
+    },
   };
   return obj;
-};
+}
 export const INACTIVE_CATEGORY_INDEX = -1;
 export const EmojiPickerStore = obj;
 export const StickerPickerStore = obj;
@@ -191,7 +198,7 @@ export const SoundboardPickerStore = {
   },
   getAnalyticsId() {
     return withEqualityFnResult.getState().analyticsId;
-  }
+  },
 };
 export const ApplicationCommandDiscoveryPickerStore = {
   useStore: withEqualityFn3Result,
@@ -231,5 +238,5 @@ export const ApplicationCommandDiscoveryPickerStore = {
   },
   getAnalyticsId() {
     return withEqualityFnResult.getState().analyticsId;
-  }
+  },
 };

@@ -2,15 +2,23 @@
 import initializeDefault from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../../../Dispatcher.tsx";
 
-let obj = { canShowBotsBanner: false, canShowAppsOrActivitiesBanner: false, willShowGlobalSearchOnboarding: false, timeMs: 0, channelId: "0" };
+let obj = {
+  canShowBotsBanner: false,
+  canShowAppsOrActivitiesBanner: false,
+  willShowGlobalSearchOnboarding: false,
+  timeMs: 0,
+  channelId: "0",
+};
 let closure_1 = { lastSeenTimeMs: null, triggeredOnboardingContentMetadata: obj };
 const PersistedStore = initializeDefault.PersistedStore;
-class AppLauncherOnboardingPersistedStore extends PersistedStore {
-}
+class AppLauncherOnboardingPersistedStore extends PersistedStore {}
 const prototype = AppLauncherOnboardingPersistedStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
-    ({ lastSeenTimeMs: closure_1.lastSeenTimeMs, triggeredOnboardingContentMetadata: closure_1.triggeredOnboardingContentMetadata } = arg0);
+    ({
+      lastSeenTimeMs: closure_1.lastSeenTimeMs,
+      triggeredOnboardingContentMetadata: closure_1.triggeredOnboardingContentMetadata,
+    } = arg0);
   }
 };
 prototype["getState"] = function getState() {
@@ -44,7 +52,13 @@ const items = [
     if (canShowBotsBanner == null) {
       canShowBotsBanner = obj.canShowBotsBanner;
     }
-    obj = { canShowBotsBanner, canShowAppsOrActivitiesBanner: null, willShowGlobalSearchOnboarding: null, timeMs: null, channelId: null };
+    obj = {
+      canShowBotsBanner,
+      canShowAppsOrActivitiesBanner: null,
+      willShowGlobalSearchOnboarding: null,
+      timeMs: null,
+      channelId: null,
+    };
     let prop;
     if (lastSeenTimeMs != null) {
       const triggeredOnboardingContentMetadata2 = lastSeenTimeMs.triggeredOnboardingContentMetadata;
@@ -91,18 +105,22 @@ const items = [
     obj[4] = channelId;
     obj[1] = obj;
     return obj;
-  }
+  },
 ];
 AppLauncherOnboardingPersistedStore.migrations = items;
 obj = {
   APP_LAUNCHER_ONBOARDING_SET_LAST_SEEN_TIME_MS: function handleSetLastSeenTimeMs() {
     closure_1.lastSeenTimeMs = Date.now();
   },
-  APP_LAUNCHER_ONBOARDING_SET_TRIGGERED_ONBOARDING_CONTENT_METADATA: function handleSetTriggeredOnboardingContentMetadata(triggeredOnboardingContentMetadata) {
-    closure_1.triggeredOnboardingContentMetadata = triggeredOnboardingContentMetadata.triggeredOnboardingContentMetadata;
-  }
+  APP_LAUNCHER_ONBOARDING_SET_TRIGGERED_ONBOARDING_CONTENT_METADATA:
+    function handleSetTriggeredOnboardingContentMetadata(triggeredOnboardingContentMetadata) {
+      closure_1.triggeredOnboardingContentMetadata =
+        triggeredOnboardingContentMetadata.triggeredOnboardingContentMetadata;
+    },
 };
 const appLauncherOnboardingPersistedStore = new AppLauncherOnboardingPersistedStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingPersistedStore.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingPersistedStore.tsx",
+);
 
 export default appLauncherOnboardingPersistedStore;

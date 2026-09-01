@@ -14,6 +14,8 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetHeaderS
   ({ animatedIndex, onPress } = arg0);
   return <View style={callback().headerHandleOnlyWrap}>{jsx(_modDef10434, { animatedIndex, onPress })}</View>;
 });
-const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx",
+);
 
 export default memoResult;

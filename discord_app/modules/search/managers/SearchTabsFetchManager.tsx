@@ -7,9 +7,12 @@ import { AbstractSearchFetchManager } from "AbstractSearchFetchManager.tsx";
 
 require = arg1;
 let closure_2 = ["include_nsfw", "channel_id"];
-({ SEARCH_FILTERS_BY_TAB: c4, SEARCH_QUERY_BY_SEARCH_FILTER: c5, SEARCH_QUERY_DEFAULT_FILTERS: closure_6 } = MessageEmbedTypes);
-class SearchTabsFetchManager extends AbstractSearchFetchManager {
-}
+({
+  SEARCH_FILTERS_BY_TAB: c4,
+  SEARCH_QUERY_BY_SEARCH_FILTER: c5,
+  SEARCH_QUERY_DEFAULT_FILTERS: closure_6,
+} = MessageEmbedTypes);
+class SearchTabsFetchManager extends AbstractSearchFetchManager {}
 const prototype = SearchTabsFetchManager.prototype;
 prototype["createRequestPayload"] = function createRequestPayload(trackExactTotalHits) {
   ({ searchQuery, searchTabs, getLimit: require, pagination: dependencyMap } = trackExactTotalHits);
@@ -17,7 +20,12 @@ prototype["createRequestPayload"] = function createRequestPayload(trackExactTota
   let obj;
   ({ include_nsfw, channel_id } = searchQuery);
   closure_2 = obj(searchQuery, closure_2);
-  obj = { include_nsfw, channel_ids: channel_id, tabs: {}, track_exact_total_hits: trackExactTotalHits.trackExactTotalHits };
+  obj = {
+    include_nsfw,
+    channel_ids: channel_id,
+    tabs: {},
+    track_exact_total_hits: trackExactTotalHits.trackExactTotalHits,
+  };
   const item = searchTabs.forEach((arg0) => {
     if (null != closure_1_4[arg0]) {
       obj = closure_1_5[tmp2];
@@ -36,16 +44,32 @@ prototype["createRequestPayload"] = function createRequestPayload(trackExactTota
 };
 prototype["createWithPayload"] = function createWithPayload(searchTabs) {
   ({ searchContext, searchQuery } = searchTabs);
-  const requestPayload = this.createRequestPayload({ searchQuery, searchTabs: searchTabs.searchTabs, getLimit: searchTabs.getLimit, pagination: searchTabs.pagination, trackExactTotalHits: searchTabs.trackExactTotalHits });
+  const requestPayload = this.createRequestPayload({
+    searchQuery,
+    searchTabs: searchTabs.searchTabs,
+    getLimit: searchTabs.getLimit,
+    pagination: searchTabs.pagination,
+    trackExactTotalHits: searchTabs.trackExactTotalHits,
+  });
   const type = searchContext.type;
   if (SearchTypes.GUILD !== type) {
     if (tmp2.GUILD_CHANNEL !== type) {
       if (tmp2.THREAD !== type) {
         if (tmp2.CHANNEL === type) {
-          const searchTabFetcherImpl = new fetch.SearchTabFetcherImpl(searchContext.channelId, searchContext.type, searchQuery, requestPayload);
+          const searchTabFetcherImpl = new fetch.SearchTabFetcherImpl(
+            searchContext.channelId,
+            searchContext.type,
+            searchQuery,
+            requestPayload,
+          );
           return searchTabFetcherImpl;
         } else if (tmp2.DMS === type) {
-          const searchTabFetcherImpl1 = new fetch.SearchTabFetcherImpl(searchContext.type, searchContext.type, searchQuery, requestPayload);
+          const searchTabFetcherImpl1 = new fetch.SearchTabFetcherImpl(
+            searchContext.type,
+            searchContext.type,
+            searchQuery,
+            requestPayload,
+          );
           return searchTabFetcherImpl1;
         } else {
           const _Error = Error;
@@ -56,13 +80,25 @@ prototype["createWithPayload"] = function createWithPayload(searchTabs) {
       }
     }
   }
-  const searchTabFetcherImpl2 = new fetch.SearchTabFetcherImpl(searchContext.guildId, searchContext.type, searchQuery, requestPayload);
+  const searchTabFetcherImpl2 = new fetch.SearchTabFetcherImpl(
+    searchContext.guildId,
+    searchContext.type,
+    searchQuery,
+    requestPayload,
+  );
   return searchTabFetcherImpl2;
 };
 prototype["create"] = function create(arg0) {
   ({ id, searchContext, searchQuery, searchTabs, getLimit, pagination, trackExactTotalHits } = arg0);
   this.cancel(id);
-  const withPayload = this.createWithPayload({ searchContext, searchQuery, searchTabs, getLimit, pagination, trackExactTotalHits });
+  const withPayload = this.createWithPayload({
+    searchContext,
+    searchQuery,
+    searchTabs,
+    getLimit,
+    pagination,
+    trackExactTotalHits,
+  });
   const result = this.set(id, withPayload);
   return withPayload;
 };

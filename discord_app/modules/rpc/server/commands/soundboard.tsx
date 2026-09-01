@@ -16,14 +16,16 @@ let items = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
 obj[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function handler() {
-  return callback(function*() {
+  return callback(function* () {
     closure_1 = tmp5;
     let sounds2 = tmp2;
     const obj2 = closure_1_0(table[6]);
     yield obj2.maybeFetchSoundboardSounds();
     sounds2 = sounds.getSounds();
     closure_1 = [];
-    const item = sounds2.forEach((arr) => arr.forEach((arg0) => arr.push(closure_1_0(closure_1_2[7]).soundboardSoundToAPI(arg0))));
+    const item = sounds2.forEach((arr) =>
+      arr.forEach((arg0) => arr.push(closure_1_0(closure_1_2[7]).soundboardSoundToAPI(arg0))),
+    );
     return closure_1;
   })();
 };
@@ -40,7 +42,7 @@ obj1[1] = function validation(string) {
 };
 obj1[2] = function handler(args) {
   ({ guild_id: require, sound_id: importDefault } = args.args);
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();

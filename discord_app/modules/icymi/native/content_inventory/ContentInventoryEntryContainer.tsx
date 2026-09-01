@@ -14,7 +14,15 @@ const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom) => {
   if (!arg1) {
     num = marginBottom.margin;
   }
-  let obj = { pressable: { marginTop: num }, container: null, screenshotContainer: null, header: null, headerInfo: null, title: null, subTitleContainer: null };
+  let obj = {
+    pressable: { marginTop: num },
+    container: null,
+    screenshotContainer: null,
+    header: null,
+    headerInfo: null,
+    title: null,
+    subTitleContainer: null,
+  };
   obj = { marginHorizontal: marginBottom.margin, paddingBottom: null, paddingTop: null };
   let num2 = 0;
   if (!arg1) {
@@ -28,7 +36,13 @@ const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom) => {
   obj[2] = num3;
   obj[1] = obj;
   obj[2] = { marginBottom: marginBottom.margin };
-  obj = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12, marginBottom: marginBottom.margin };
+  obj = {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: ThemesDefault.space.PX_12,
+    marginBottom: marginBottom.margin,
+  };
   obj[3] = obj;
   obj[4] = { flex: 1 };
   let num4 = 1;
@@ -41,7 +55,9 @@ const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom) => {
   obj[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/ContentInventoryEntryContainer.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/icymi/native/content_inventory/ContentInventoryEntryContainer.tsx",
+);
 
 export default function ContentInventoryEntryContainer(contentId) {
   contentId = contentId.contentId;
@@ -66,7 +82,12 @@ export default function ContentInventoryEntryContainer(contentId) {
       obj = { itemId: null, itemType: null, actionParameters: null };
       obj[0] = contentId;
       obj[1] = type;
-      obj[2] = { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null };
+      obj[2] = {
+        actionGestureType: "press",
+        actionTargetElement: "item_container",
+        actionIntentType: "open",
+        actionDestinationType: null,
+      };
       obj1.feedItemActioned(obj);
       tmp();
     } else {
@@ -75,7 +96,12 @@ export default function ContentInventoryEntryContainer(contentId) {
       obj = { itemId: null, itemType: null, actionParameters: null };
       obj[0] = contentId;
       obj[1] = type;
-      obj[2] = { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: "user" };
+      obj[2] = {
+        actionGestureType: "press",
+        actionTargetElement: "item_container",
+        actionIntentType: "open",
+        actionDestinationType: "user",
+      };
       userId(type[7]).feedItemActioned(obj);
       obj1 = { userId: null };
       obj1[0] = userId;
@@ -94,7 +120,7 @@ export default function ContentInventoryEntryContainer(contentId) {
     obj = { hideDivider: null, highlight: null, children: null };
     obj[0] = flag;
     obj[1] = highlight;
-    const items2 = [tmp.container, ];
+    const items2 = [tmp.container];
     let screenshotContainer = flag;
     if (flag) {
       screenshotContainer = tmp.screenshotContainer;
@@ -107,13 +133,13 @@ export default function ContentInventoryEntryContainer(contentId) {
     const obj3 = { animate: true, size: null, user: null, guildId: "Array" };
     obj3[1] = tmp3(tmp4[12]).AvatarSizes.NORMAL;
     obj3[2] = stateFromStores;
-    const items3 = [closure_6(tmp3(tmp4[12]).Avatar, obj3, stateFromStores.id), ];
+    const items3 = [closure_6(tmp3(tmp4[12]).Avatar, obj3, stateFromStores.id)];
     let obj4 = { style: null, children: null };
     obj4[0] = tmp.headerInfo;
     let obj5 = { style: null, children: null };
     obj5[0] = tmp.title;
     obj5[1] = title;
-    const items4 = [closure_6(View, obj5), ];
+    const items4 = [closure_6(View, obj5)];
     const obj6 = { style: null, children: null };
     obj6[0] = tmp.subTitleContainer;
     obj6[1] = subtitle;
@@ -128,5 +154,5 @@ export default function ContentInventoryEntryContainer(contentId) {
     tmp7Result = tmp7(tmp3(tmp4[10]).PressableHighlight, obj);
   }
   return tmp7Result;
-};
+}
 export const useStyles = iCYMIStyles;

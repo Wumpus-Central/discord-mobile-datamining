@@ -7,14 +7,19 @@ import ActivityPanelModes2 from "../activities/panel/ActivityPanelConstants.tsx"
 import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
 import FrameLayoutModes from "FramesConstants.tsx";
 
-({ FrameIntent: obj1, FrameLayoutModes: c3, getFrameIntentForSurface: c4, isLaunched: c5, makeFrameId: closure_6 } = FrameLayoutModes);
+({
+  FrameIntent: obj1,
+  FrameLayoutModes: c3,
+  getFrameIntentForSurface: c4,
+  isLaunched: c5,
+  makeFrameId: closure_6,
+} = FrameLayoutModes);
 const ActivityPanelModes = ActivityPanelModes2.ActivityPanelModes;
 const NOOP_TRUE = sum.NOOP_TRUE;
 const map = new Map();
 let c10 = null;
 const Store = initializeDefault.Store;
-class FramesStoreClass extends Store {
-}
+class FramesStoreClass extends Store {}
 const prototype = FramesStoreClass.prototype;
 prototype["getFrame"] = function getFrame(frameId) {
   if (null != frameId) {
@@ -59,7 +64,14 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
   FRAME_LAUNCH_START: function handleFrameLaunchStart(applicationId) {
     ({ frameId, surface } = applicationId);
     const tmp = callback(surface);
-    const result = map.set(frameId, { id: frameId, applicationId: applicationId.applicationId, intent: tmp, surface, state: "loading", data: null });
+    const result = map.set(frameId, {
+      id: frameId,
+      applicationId: applicationId.applicationId,
+      intent: tmp,
+      surface,
+      state: "loading",
+      data: null,
+    });
   },
   FRAME_LAUNCH: function handleFrameLaunch(frameId) {
     frameId = frameId.frameId;
@@ -76,7 +88,18 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
         obj = {};
         const merged = Object.assign(value);
         obj.state = "launched";
-        obj = { url: null, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, prefersPictureInPictureOnNavigateAway: false, iframeId: null };
+        obj = {
+          url: null,
+          connectedSince: null,
+          layoutMode: null,
+          activityPanelMode: null,
+          proxyTicket: null,
+          proxyTicketRefreshing: false,
+          orientationLock: null,
+          pipOrientationLock: null,
+          prefersPictureInPictureOnNavigateAway: false,
+          iframeId: null,
+        };
         obj[0] = tmp14;
         const _Date = Date;
         obj[1] = Date.now();
@@ -198,7 +221,9 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
     }
     return flag;
   },
-  FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY: function handleSetPrefersPictureInPictureOnNavigateAway(frameId) {
+  FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY: function handleSetPrefersPictureInPictureOnNavigateAway(
+    frameId,
+  ) {
     frameId = frameId.frameId;
     let flag = false;
     if (null != frameId) {
@@ -289,7 +314,8 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
           obj = {};
           const merged1 = Object.assign(data);
           obj.iframeId = iframeId;
-          obj.prefersPictureInPictureOnNavigateAway = data.iframeId === iframeId && data.prefersPictureInPictureOnNavigateAway;
+          obj.prefersPictureInPictureOnNavigateAway =
+            data.iframeId === iframeId && data.prefersPictureInPictureOnNavigateAway;
           obj.data = obj;
           const result = obj.set(frameId, obj);
           flag2 = true;
@@ -349,7 +375,7 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
       flag = tmp5;
     }
     return flag;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/frames/FramesStore.tsx");
 

@@ -6,5 +6,5 @@ const result = set.fileFinishedImporting("modules/tracking/TrackingConsentUtils.
 export default {
   canUseInstallationId() {
     return true;
-  }
+  },
 };

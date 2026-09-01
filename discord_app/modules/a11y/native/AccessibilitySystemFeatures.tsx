@@ -297,5 +297,5 @@ export default {
         const result = callback(14092).systemPrefersCrossfadesChanged(systemPrefersCrossfades);
       });
     }
-  }
+  },
 };

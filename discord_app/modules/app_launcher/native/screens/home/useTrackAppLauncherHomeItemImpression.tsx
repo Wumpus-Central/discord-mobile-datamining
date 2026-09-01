@@ -2,11 +2,14 @@
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/useTrackAppLauncherHomeItemImpression.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/screens/home/useTrackAppLauncherHomeItemImpression.tsx",
+);
 
 export const useTrackAppLauncherHomeItemImpression = function useTrackAppLauncherHomeItemImpression() {
   let obj = trackAppLauncherItemImpressionOnFirstView(11673);
-  trackAppLauncherItemImpressionOnFirstView = obj.useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
+  trackAppLauncherItemImpressionOnFirstView =
+    obj.useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
   obj = {
     trackAppLauncherHomeItemImpression: React.useCallback((viewableItems) => {
       viewableItems = viewableItems.viewableItems;
@@ -38,10 +41,24 @@ export const useTrackAppLauncherHomeItemImpression = function useTrackAppLaunche
             const flags2 = shelfItem22.application.flags;
           }
         }
-        let obj = { itemKey: "sectionName:" + item.sectionName + " applicationId:" + applicationId, sectionName: item.sectionName, sectionPosition: shelfItem1SectionPosition, sectionOverallPosition: item.sectionOverallPosition, applicationId, applicationFlags: closure_1_1(closure_1_2[4]).asUintN(32, flags) };
+        let obj = {
+          itemKey: "sectionName:" + item.sectionName + " applicationId:" + applicationId,
+          sectionName: item.sectionName,
+          sectionPosition: shelfItem1SectionPosition,
+          sectionOverallPosition: item.sectionOverallPosition,
+          applicationId,
+          applicationFlags: closure_1_1(closure_1_2[4]).asUintN(32, flags),
+        };
         callback(obj);
         if (tmp7) {
-          obj = { itemKey: null, sectionName: null, sectionPosition: null, sectionOverallPosition: null, applicationId: null, applicationFlags: null };
+          obj = {
+            itemKey: null,
+            sectionName: null,
+            sectionPosition: null,
+            sectionOverallPosition: null,
+            applicationId: null,
+            applicationFlags: null,
+          };
           const _HermesInternal = HermesInternal;
           obj[0] = "sectionName:" + item.sectionName + " applicationId:" + id;
           obj[1] = item.sectionName;
@@ -57,7 +74,7 @@ export const useTrackAppLauncherHomeItemImpression = function useTrackAppLaunche
           callback(obj);
         }
       });
-    }, items)
+    }, items),
   };
   items = [trackAppLauncherItemImpressionOnFirstView];
   return obj;

@@ -18,9 +18,9 @@ let prototype = function SubscriptionManager() {
       const result = applyArgumentsResult.maybeFetchSubscriptions();
       const result1 = applyArgumentsResult.maybeFetchCountryCode();
       const result2 = applyArgumentsResult.maybeFetchMostRecentSubscription();
-    }
+    },
   };
-  applyArgumentsResult.maybeFetchSubscriptions = callback(function*() {
+  applyArgumentsResult.maybeFetchSubscriptions = callback(function* () {
     if (currentUser === 2) {
       currentUser = 3;
       HermesBuiltin.throwTypeError();
@@ -139,7 +139,7 @@ let prototype = function SubscriptionManager() {
     }
   };
   require = applyArgumentsResult;
-  applyArgumentsResult.maybeFetchCountryCode = callback(function*() {
+  applyArgumentsResult.maybeFetchCountryCode = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -197,7 +197,7 @@ let prototype = function SubscriptionManager() {
       }
     }
   });
-  applyArgumentsResult.fetchCountryCode = callback(function*() {
+  applyArgumentsResult.fetchCountryCode = callback(function* () {
     if (c2 === 2) {
       c2 = 3;
       HermesBuiltin.throwTypeError();
@@ -269,8 +269,7 @@ let prototype = function SubscriptionManager() {
   });
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp3 {
-}
+class prototype extends tmp3 {}
 prototype = new prototype();
 let result = require("set").fileFinishedImporting("modules/premium/SubscriptionManager.tsx");
 

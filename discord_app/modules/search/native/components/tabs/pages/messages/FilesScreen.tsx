@@ -5,7 +5,12 @@ import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;
-({ SearchListItemTypes: c4, CARD_ESTIMATED_ITEM_SIZE: c5, FILES_OR_LINKS_NUM_COLUMNS: closure_6, FILES_OR_LINKS_GAP_WIDTH: error } = MessageEmbedTypes);
+({
+  SearchListItemTypes: c4,
+  CARD_ESTIMATED_ITEM_SIZE: c5,
+  FILES_OR_LINKS_NUM_COLUMNS: closure_6,
+  FILES_OR_LINKS_GAP_WIDTH: error,
+} = MessageEmbedTypes);
 const memoResult = importAllResult.memo(function FilesScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const tab = searchContext.tab;
@@ -52,7 +57,7 @@ const memoResult = importAllResult.memo(function FilesScreen(searchContext) {
               return closure_1_4(arg0, closure_0);
             },
             imageStyle: closure_1_2,
-            containerStyle: null
+            containerStyle: null,
           };
           obj = { itemIndex: sum, spacing: closure_2_7, numColumns: closure_2_6 };
           obj[3] = items(closure_2_2[9]).getGridItemSpacingStyles(obj);
@@ -94,14 +99,36 @@ const memoResult = importAllResult.memo(function FilesScreen(searchContext) {
     }
     return items;
   }, items1);
-  obj = { data: memo, searchContext, tab, isFocused, contentContainerStyle: contentContainerStyles.filesOrLinksContentContainer, ItemSeparatorComponent: null, numColumns: null, isFirstPageLoading: null, isNextPageLoading: null };
+  obj = {
+    data: memo,
+    searchContext,
+    tab,
+    isFocused,
+    contentContainerStyle: contentContainerStyles.filesOrLinksContentContainer,
+    ItemSeparatorComponent: null,
+    numColumns: null,
+    isFirstPageLoading: null,
+    isNextPageLoading: null,
+  };
   let obj5 = searchContext(fileOrLinkImageDimensions[8]);
   obj[5] = searchContext(fileOrLinkImageDimensions[11]).CardVerticalSeparator;
   obj[6] = closure_6;
   obj[7] = isFirstPageLoading;
   obj[8] = isNextPageLoading;
-  return jsx(searchMessages(fileOrLinkImageDimensions[7]), { data: memo, searchContext, tab, isFocused, contentContainerStyle: contentContainerStyles.filesOrLinksContentContainer, ItemSeparatorComponent: null, numColumns: null, isFirstPageLoading: null, isNextPageLoading: null });
+  return jsx(searchMessages(fileOrLinkImageDimensions[7]), {
+    data: memo,
+    searchContext,
+    tab,
+    isFocused,
+    contentContainerStyle: contentContainerStyles.filesOrLinksContentContainer,
+    ItemSeparatorComponent: null,
+    numColumns: null,
+    isFirstPageLoading: null,
+    isNextPageLoading: null,
+  });
 });
-let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/FilesScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/search/native/components/tabs/pages/messages/FilesScreen.tsx",
+);
 
 export default memoResult;

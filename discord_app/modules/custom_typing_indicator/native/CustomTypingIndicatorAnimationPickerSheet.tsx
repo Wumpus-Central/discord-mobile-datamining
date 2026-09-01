@@ -13,12 +13,19 @@ function MotionOptionButton(isSelected) {
   isSelected = isSelected.isSelected;
   ({ label, onPress } = isSelected);
   const tmp = callback4();
-  const items = [tmp.optionCard, ];
+  const items = [tmp.optionCard];
   let optionCardSelected = isSelected;
   if (isSelected) {
     optionCardSelected = tmp.optionCardSelected;
   }
-  const obj = { style: items, onPress, border: null, accessibilityRole: "togglebutton", accessibilityState: null, children: null };
+  const obj = {
+    style: items,
+    onPress,
+    border: null,
+    accessibilityRole: "togglebutton",
+    accessibilityState: null,
+    children: null,
+  };
   items[1] = optionCardSelected;
   let str = "faint";
   if (isSelected) {
@@ -39,7 +46,9 @@ let obj1 = { alignSelf: "center", paddingVertical: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { borderColor: ThemesDefault.colors.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE, borderWidth: 2 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { borderColor: ThemesDefault.colors.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE, borderWidth: 2 };
-const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorAnimationPickerSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/custom_typing_indicator/native/CustomTypingIndicatorAnimationPickerSheet.tsx",
+);
 
 export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   onChange = onChange.onChange;
@@ -53,7 +62,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   let obj = { value: onChange(1930).TypingIndicatorAnimation.UNSPECIFIED, label: null };
   const intl = onChange(1236).intl;
   obj[1] = intl.string(onChange(1236).t.PoWNfe);
-  const items = [obj, , , ];
+  const items = [obj, , ,];
   obj = { value: onChange(1930).TypingIndicatorAnimation.PULSE, label: null };
   const intl2 = onChange(1236).intl;
   obj[1] = intl2.string(first(3503)["gyL/ce"]);
@@ -74,26 +83,36 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   const obj5 = { emojis, animation: first, typingSuggestion: onChange(1930).TypingSuggestion.UNSPECIFIED };
   obj4[0] = obj5;
   obj3[1] = callback2(first(11553), obj4);
-  const items1 = [callback2(View, obj3), ];
+  const items1 = [callback2(View, obj3)];
   const obj6 = { spacing: 8, children: null };
   const items2 = [items.slice(0, 2), items.slice(2, 4)];
-  obj6[1] = items2.map((arr) => closure_1_6(onChange(table[13]).Stack, {
-    direction: "horizontal",
-    spacing: 8,
-    children: arr.map((label) => {
-      closure_0 = label;
-      return closure_1_6(closure_1_9, {
-        label: label.label,
-        isSelected: closure_1 === label.value,
-        onPress() {
-          const value = label.value;
-          closure_1_2(value);
-          label(value);
-        }
-      }, label.label);
-    })
-  }, arg1));
+  obj6[1] = items2.map((arr) =>
+    closure_1_6(
+      onChange(table[13]).Stack,
+      {
+        direction: "horizontal",
+        spacing: 8,
+        children: arr.map((label) => {
+          closure_0 = label;
+          return closure_1_6(
+            closure_1_9,
+            {
+              label: label.label,
+              isSelected: closure_1 === label.value,
+              onPress() {
+                const value = label.value;
+                closure_1_2(value);
+                label(value);
+              },
+            },
+            label.label,
+          );
+        }),
+      },
+      arg1,
+    ),
+  );
   items1[1] = callback2(onChange(4926).Stack, obj6);
   obj2[2] = items1;
   return callback3(onChange(5989).ActionSheet, obj2);
-};
+}

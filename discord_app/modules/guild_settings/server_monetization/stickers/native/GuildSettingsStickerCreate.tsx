@@ -21,7 +21,17 @@ let c5 = importAllResult;
 ({ HelpdeskArticles: c10, UPLOAD_STICKER_SIZE: unpackModuleId } = ME);
 ({ EMOJI_URL_BASE_SIZE: closure_12, EmojiIntention: map1 } = set);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-let obj = { container: null, title: null, description: null, help: null, stack: null, emojiPreview: null, stickerPreviewLabel: null, stickerPreview: null, stickerPreviewImage: null };
+let obj = {
+  container: null,
+  title: null,
+  description: null,
+  help: null,
+  stack: null,
+  emojiPreview: null,
+  stickerPreviewLabel: null,
+  stickerPreview: null,
+  stickerPreviewImage: null,
+};
 obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
 createCacheKey = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8 };
@@ -32,16 +42,52 @@ obj[3] = { marginBottom: ThemesDefault.space.PX_16 };
 let obj3 = { marginBottom: ThemesDefault.space.PX_16 };
 obj[4] = { marginTop: ThemesDefault.space.PX_8 };
 let obj4 = { marginTop: ThemesDefault.space.PX_8 };
-obj[5] = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.lg, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
-let obj5 = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.lg, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+obj[5] = {
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_12,
+  marginBottom: ThemesDefault.space.PX_4,
+  borderRadius: ThemesDefault.radii.lg,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_12,
+};
+let obj5 = {
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_12,
+  marginBottom: ThemesDefault.space.PX_4,
+  borderRadius: ThemesDefault.radii.lg,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_12,
+};
 obj[6] = { marginTop: ThemesDefault.space.PX_8 };
 let obj6 = { marginTop: ThemesDefault.space.PX_8 };
-obj[7] = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, marginBottom: ThemesDefault.space.PX_8, height: 2 * ThemesDefault.space.PX_64, width: 2 * ThemesDefault.space.PX_64, borderRadius: ThemesDefault.radii.lg, justifyContent: "center", alignItems: "center" };
-let obj7 = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, marginBottom: ThemesDefault.space.PX_8, height: 2 * ThemesDefault.space.PX_64, width: 2 * ThemesDefault.space.PX_64, borderRadius: ThemesDefault.radii.lg, justifyContent: "center", alignItems: "center" };
+obj[7] = {
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  marginBottom: ThemesDefault.space.PX_8,
+  height: 2 * ThemesDefault.space.PX_64,
+  width: 2 * ThemesDefault.space.PX_64,
+  borderRadius: ThemesDefault.radii.lg,
+  justifyContent: "center",
+  alignItems: "center",
+};
+let obj7 = {
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  marginBottom: ThemesDefault.space.PX_8,
+  height: 2 * ThemesDefault.space.PX_64,
+  width: 2 * ThemesDefault.space.PX_64,
+  borderRadius: ThemesDefault.radii.lg,
+  justifyContent: "center",
+  alignItems: "center",
+};
 obj[8] = { width: ThemesDefault.space.PX_96, height: ThemesDefault.space.PX_96 };
 let closure_18 = createCacheKey.createStyles(obj);
 let obj8 = { width: ThemesDefault.space.PX_96, height: ThemesDefault.space.PX_96 };
-let result = set.fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreate.tsx");
+let result = set.fileFinishedImporting(
+  "modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreate.tsx",
+);
 
 export default importAllResult.forwardRef((stickerId, ref) => {
   stickerId = stickerId.stickerId;
@@ -121,7 +167,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   }
   function _handleImagePicker() {
     const self = this;
-    const tmp = ref(function*() {
+    const tmp = ref(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -224,7 +270,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   }
   function _handleSave() {
     const self = this;
-    const tmp = ref(function*() {
+    const tmp = ref(function* () {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -257,7 +303,16 @@ export default importAllResult.forwardRef((stickerId, ref) => {
                 if (null != c6) {
                   if (null != closure_1_14) {
                     if (null != closure_1_10) {
-                      obj1 = { guildId: null, name: null, tags: null, description: null, uri: null, mimeType: "image/png", platform: "mobile", originalMd5: null };
+                      obj1 = {
+                        guildId: null,
+                        name: null,
+                        tags: null,
+                        description: null,
+                        uri: null,
+                        mimeType: "image/png",
+                        platform: "mobile",
+                        originalMd5: null,
+                      };
                       obj1[0] = closure_1_1;
                       obj1[1] = tmp26;
                       const obj13 = closure_1_0(closure_1_2[18]);
@@ -382,7 +437,10 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   first1 = tmp12[0];
   callback = tmp12[1];
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
-  const items = [{ ref: ref1, offset: { type: "toRef", ref: ref2 } }, { ref: ref2, offset: { type: "toBottom" } }];
+  const items = [
+    { ref: ref1, offset: { type: "toRef", ref: ref2 } },
+    { ref: ref2, offset: { type: "toBottom" } },
+  ];
   const onFocus = _calculateScrollOffsetDefault({ insets, inputs: items, scrollViewRef: ref }).onFocus;
   stickerById = undefined;
   const tmp11 = ref1(ref2.useState(undefined), 2);
@@ -469,7 +527,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     obj1[1] = tmp.title;
     const intl = stickerId(1236).intl;
     obj1[2] = intl.string(stickerId(1236).t["9N2OWD"]);
-    const items2 = [callback(stickerId(4474).Text, obj1), , , ];
+    const items2 = [callback(stickerId(4474).Text, obj1), , ,];
     let obj2 = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
     obj2[2] = tmp.description;
     const intl2 = stickerId(1236).intl;
@@ -502,13 +560,20 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     const tmp26 = closure_16;
     const tmp27 = callback;
   }
-  const items3 = [tmp23Result, ];
+  const items3 = [tmp23Result];
   const obj8 = { style: tmp.stack, children: null };
   const obj9 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.stickerPreviewLabel, children: null };
   const intl5 = stickerId(1236).intl;
   obj9[3] = intl5.string(stickerId(1236).t.gjdiKE);
-  const items4 = [callback(stickerId(4474).Text, obj9), , , , , , ];
-  let obj10 = { style: tmp.stickerPreview, disabled: null != tmp16Result, onPress: handleImagePicker, accessibilityRole: "button", accessibilityLabel: null, children: null };
+  const items4 = [callback(stickerId(4474).Text, obj9), , , , , ,];
+  let obj10 = {
+    style: tmp.stickerPreview,
+    disabled: null != tmp16Result,
+    onPress: handleImagePicker,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    children: null,
+  };
   const intl6 = stickerId(1236).intl;
   obj10[4] = intl6.string(stickerId(1236).t.O1REe1);
   if (null != tmp16Result) {
@@ -540,7 +605,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
       obj = { pickerIntention: _undefined4.GUILD_STICKER_RELATED_EMOJI, guildId: closure_1, onPressEmoji: closure_15 };
       const result = obj.openEmojiPickerActionSheet(obj);
     },
-    children: null
+    children: null,
   };
   if (null != first1) {
     const obj16 = { fastImageStyle: null, name: null, src: null };
@@ -560,7 +625,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   } else {
     tmp32Result = tmp32(tmp31(8228).ReactionIcon, { size: "md", color: "text-subtle" });
   }
-  const items5 = [tmp32Result, ];
+  const items5 = [tmp32Result];
   if (null != first1) {
     const _HermesInternal = HermesInternal;
     let combined = ":" + first1.name + ":";
@@ -568,10 +633,25 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     const intl8 = tmp31(1236).intl;
     combined = intl8.string(tmp31(1236).t.QTK0TJ);
   }
-  items5[1] = callback(stickerId(4474).Text, { variant: "text-md/semibold", color: "input-placeholder-text-default", children: combined });
+  items5[1] = callback(stickerId(4474).Text, {
+    variant: "text-md/semibold",
+    color: "input-placeholder-text-default",
+    children: combined,
+  });
   obj15[2] = items5;
   items4[3] = closure_17(stickerId(5068).PressableHighlight, obj15);
-  const obj18 = { ref: ref1, label: null, placeholder: null, onChange: null, onFocus: null, onSubmitEditing: null, isDisabled: false, isClearable: true, returnKeyType: "next", submitBehavior: "submit" };
+  const obj18 = {
+    ref: ref1,
+    label: null,
+    placeholder: null,
+    onChange: null,
+    onFocus: null,
+    onSubmitEditing: null,
+    isDisabled: false,
+    isClearable: true,
+    returnKeyType: "next",
+    submitBehavior: "submit",
+  };
   const intl9 = tmp31(1236).intl;
   obj18[1] = intl9.string(stickerId(1236).t["0VRh6n"]);
   const intl10 = tmp31(1236).intl;
@@ -611,7 +691,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     text: null,
     variant: null,
     disabled: null,
-    loading: false
+    loading: false,
   };
   const intl13 = tmp31(1236).intl;
   obj20[1] = intl13.string(stickerId(1236).t["R3BPH+"]);

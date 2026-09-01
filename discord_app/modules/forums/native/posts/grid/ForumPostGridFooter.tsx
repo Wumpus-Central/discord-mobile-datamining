@@ -13,8 +13,17 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 require = arg1;
 noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", marginTop: 12 }, dot: null };
-createCacheKey = { height: 4, width: 4, borderRadius: 2, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginHorizontal: 8 };
+createCacheKey = {
+  footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", marginTop: 12 },
+  dot: null,
+};
+createCacheKey = {
+  height: 4,
+  width: 4,
+  borderRadius: 2,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginHorizontal: 8,
+};
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridFooter.tsx");
@@ -26,12 +35,12 @@ export default function ForumPostGridFooter(parentChannel) {
   const typingUserIds = obj.useTypingUserIds(thread.id);
   let tmp5Result = typingUserIds.length > 0;
   obj = { style: tmp.footer, children: null };
-  const items = [callback(num2Default, { thread, hasUnreads }), , ];
+  const items = [callback(num2Default, { thread, hasUnreads }), ,];
   if (tmp5Result) {
     obj = { children: null };
     obj1 = { style: null };
     obj1[0] = tmp.dot;
-    const items1 = [tmp7(tmp6, obj1), ];
+    const items1 = [tmp7(tmp6, obj1)];
     const obj2 = { thread: null, typingUserIds: null, hasUnreads: null };
     obj2[0] = thread;
     obj2[1] = typingUserIds;
@@ -53,4 +62,4 @@ export default function ForumPostGridFooter(parentChannel) {
   items[2] = tmp7Result;
   obj[1] = items;
   return closure_7(View, obj);
-};
+}

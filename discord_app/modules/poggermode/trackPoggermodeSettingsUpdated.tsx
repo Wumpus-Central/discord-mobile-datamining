@@ -28,9 +28,31 @@ function getConfettiLocationName(arg0) {
 ({ ShakeLocation: obj1, ConfettiLocation: c3 } = ConfettiLocation);
 const AnalyticEvents = ME.AnalyticEvents;
 const throttleResult = importDefaultResult.throttle((arg0) => {
-  ({ enabled, combosEnabled, combosRequiredCount, screenshakeEnabled, shakeIntensity, screenshakeEnabledLocations, confettiEnabled, confettiSize, confettiCount, confettiEnabledLocations } = arg0);
+  ({
+    enabled,
+    combosEnabled,
+    combosRequiredCount,
+    screenshakeEnabled,
+    shakeIntensity,
+    screenshakeEnabledLocations,
+    confettiEnabled,
+    confettiSize,
+    confettiCount,
+    confettiEnabledLocations,
+  } = arg0);
   let obj = expandEventPropertiesDefault;
-  obj = { enabled, combos_enabled: combosEnabled, combos_required_count: combosRequiredCount, screenshake_enabled: screenshakeEnabled, shake_intensity: shakeIntensity, screenshake_enabled_locations: null, confetti_enabled: null, confetti_size: null, confetti_count: null, confetti_enabled_locations: null };
+  obj = {
+    enabled,
+    combos_enabled: combosEnabled,
+    combos_required_count: combosRequiredCount,
+    screenshake_enabled: screenshakeEnabled,
+    shake_intensity: shakeIntensity,
+    screenshake_enabled_locations: null,
+    confetti_enabled: null,
+    confetti_size: null,
+    confetti_count: null,
+    confetti_enabled_locations: null,
+  };
   importDefault = getScreenshakeLocationName;
   const entries = Object.entries(screenshakeEnabledLocations);
   const found = entries.filter((arg0) => {

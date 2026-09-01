@@ -135,46 +135,163 @@ function getActionType(action) {
                                                                         if (tmp.INTEGRATION_DELETE !== action) {
                                                                           if (tmp.MEMBER_DISCONNECT !== action) {
                                                                             if (tmp.STAGE_INSTANCE_DELETE !== action) {
-                                                                              if (tmp.GUILD_SCHEDULED_EVENT_DELETE !== action) {
-                                                                                if (tmp.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE !== action) {
+                                                                              if (
+                                                                                tmp.GUILD_SCHEDULED_EVENT_DELETE !==
+                                                                                action
+                                                                              ) {
+                                                                                if (
+                                                                                  tmp.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE !==
+                                                                                  action
+                                                                                ) {
                                                                                   if (tmp.THREAD_DELETE !== action) {
-                                                                                    if (tmp.AUTO_MODERATION_BLOCK_MESSAGE !== action) {
-                                                                                      if (tmp.AUTO_MODERATION_RULE_DELETE !== action) {
-                                                                                        if (tmp.ONBOARDING_PROMPT_DELETE !== action) {
-                                                                                          if (tmp.GUILD_HOME_REMOVE_ITEM !== action) {
-                                                                                            if (tmp.SOUNDBOARD_SOUND_DELETE !== action) {
-                                                                                              if (tmp.VOICE_CHANNEL_STATUS_DELETE !== action) {
-                                                                                                if (tmp.GUILD_UPDATE !== action) {
-                                                                                                  if (tmp.CHANNEL_UPDATE !== action) {
-                                                                                                    if (tmp.CHANNEL_OVERWRITE_UPDATE !== action) {
-                                                                                                      if (tmp.MEMBER_UPDATE !== action) {
-                                                                                                        if (tmp.MEMBER_ROLE_UPDATE !== action) {
-                                                                                                          if (tmp.ROLE_UPDATE !== action) {
-                                                                                                            if (tmp.INVITE_UPDATE !== action) {
-                                                                                                              if (tmp.WEBHOOK_UPDATE !== action) {
-                                                                                                                if (tmp.EMOJI_UPDATE !== action) {
-                                                                                                                  if (tmp.STICKER_UPDATE !== action) {
-                                                                                                                    if (tmp.INTEGRATION_UPDATE !== action) {
-                                                                                                                      if (tmp.MEMBER_MOVE !== action) {
-                                                                                                                        if (tmp.STAGE_INSTANCE_UPDATE !== action) {
-                                                                                                                          if (tmp.GUILD_SCHEDULED_EVENT_UPDATE !== action) {
-                                                                                                                            if (tmp.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE !== action) {
-                                                                                                                              if (tmp.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE !== action) {
-                                                                                                                                if (tmp.THREAD_UPDATE !== action) {
-                                                                                                                                  if (tmp.APPLICATION_COMMAND_PERMISSION_UPDATE !== action) {
-                                                                                                                                    if (tmp.CREATOR_MONETIZATION_TERMS_ACCEPTED !== action) {
-                                                                                                                                      if (tmp.AUTO_MODERATION_RULE_UPDATE !== action) {
-                                                                                                                                        if (tmp.AUTO_MODERATION_FLAG_TO_CHANNEL !== action) {
-                                                                                                                                          if (tmp.AUTO_MODERATION_USER_COMMUNICATION_DISABLED !== action) {
-                                                                                                                                            if (tmp.AUTO_MODERATION_QUARANTINE_USER !== action) {
-                                                                                                                                              if (tmp.ONBOARDING_PROMPT_UPDATE !== action) {
-                                                                                                                                                if (tmp.ONBOARDING_UPDATE !== action) {
-                                                                                                                                                  if (tmp.SOUNDBOARD_SOUND_UPDATE !== action) {
-                                                                                                                                                    if (tmp.HOME_SETTINGS_UPDATE !== action) {
-                                                                                                                                                      if (tmp.GUILD_MEMBER_VERIFICATION_UPDATE !== action) {
-                                                                                                                                                        if (tmp.GUILD_PROFILE_UPDATE !== action) {
-                                                                                                                                                          if (tmp.GUILD_MIGRATE_PIN_PERMISSION !== action) {
-                                                                                                                                                            if (tmp.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION !== action) {
+                                                                                    if (
+                                                                                      tmp.AUTO_MODERATION_BLOCK_MESSAGE !==
+                                                                                      action
+                                                                                    ) {
+                                                                                      if (
+                                                                                        tmp.AUTO_MODERATION_RULE_DELETE !==
+                                                                                        action
+                                                                                      ) {
+                                                                                        if (
+                                                                                          tmp.ONBOARDING_PROMPT_DELETE !==
+                                                                                          action
+                                                                                        ) {
+                                                                                          if (
+                                                                                            tmp.GUILD_HOME_REMOVE_ITEM !==
+                                                                                            action
+                                                                                          ) {
+                                                                                            if (
+                                                                                              tmp.SOUNDBOARD_SOUND_DELETE !==
+                                                                                              action
+                                                                                            ) {
+                                                                                              if (
+                                                                                                tmp.VOICE_CHANNEL_STATUS_DELETE !==
+                                                                                                action
+                                                                                              ) {
+                                                                                                if (
+                                                                                                  tmp.GUILD_UPDATE !==
+                                                                                                  action
+                                                                                                ) {
+                                                                                                  if (
+                                                                                                    tmp.CHANNEL_UPDATE !==
+                                                                                                    action
+                                                                                                  ) {
+                                                                                                    if (
+                                                                                                      tmp.CHANNEL_OVERWRITE_UPDATE !==
+                                                                                                      action
+                                                                                                    ) {
+                                                                                                      if (
+                                                                                                        tmp.MEMBER_UPDATE !==
+                                                                                                        action
+                                                                                                      ) {
+                                                                                                        if (
+                                                                                                          tmp.MEMBER_ROLE_UPDATE !==
+                                                                                                          action
+                                                                                                        ) {
+                                                                                                          if (
+                                                                                                            tmp.ROLE_UPDATE !==
+                                                                                                            action
+                                                                                                          ) {
+                                                                                                            if (
+                                                                                                              tmp.INVITE_UPDATE !==
+                                                                                                              action
+                                                                                                            ) {
+                                                                                                              if (
+                                                                                                                tmp.WEBHOOK_UPDATE !==
+                                                                                                                action
+                                                                                                              ) {
+                                                                                                                if (
+                                                                                                                  tmp.EMOJI_UPDATE !==
+                                                                                                                  action
+                                                                                                                ) {
+                                                                                                                  if (
+                                                                                                                    tmp.STICKER_UPDATE !==
+                                                                                                                    action
+                                                                                                                  ) {
+                                                                                                                    if (
+                                                                                                                      tmp.INTEGRATION_UPDATE !==
+                                                                                                                      action
+                                                                                                                    ) {
+                                                                                                                      if (
+                                                                                                                        tmp.MEMBER_MOVE !==
+                                                                                                                        action
+                                                                                                                      ) {
+                                                                                                                        if (
+                                                                                                                          tmp.STAGE_INSTANCE_UPDATE !==
+                                                                                                                          action
+                                                                                                                        ) {
+                                                                                                                          if (
+                                                                                                                            tmp.GUILD_SCHEDULED_EVENT_UPDATE !==
+                                                                                                                            action
+                                                                                                                          ) {
+                                                                                                                            if (
+                                                                                                                              tmp.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE !==
+                                                                                                                              action
+                                                                                                                            ) {
+                                                                                                                              if (
+                                                                                                                                tmp.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE !==
+                                                                                                                                action
+                                                                                                                              ) {
+                                                                                                                                if (
+                                                                                                                                  tmp.THREAD_UPDATE !==
+                                                                                                                                  action
+                                                                                                                                ) {
+                                                                                                                                  if (
+                                                                                                                                    tmp.APPLICATION_COMMAND_PERMISSION_UPDATE !==
+                                                                                                                                    action
+                                                                                                                                  ) {
+                                                                                                                                    if (
+                                                                                                                                      tmp.CREATOR_MONETIZATION_TERMS_ACCEPTED !==
+                                                                                                                                      action
+                                                                                                                                    ) {
+                                                                                                                                      if (
+                                                                                                                                        tmp.AUTO_MODERATION_RULE_UPDATE !==
+                                                                                                                                        action
+                                                                                                                                      ) {
+                                                                                                                                        if (
+                                                                                                                                          tmp.AUTO_MODERATION_FLAG_TO_CHANNEL !==
+                                                                                                                                          action
+                                                                                                                                        ) {
+                                                                                                                                          if (
+                                                                                                                                            tmp.AUTO_MODERATION_USER_COMMUNICATION_DISABLED !==
+                                                                                                                                            action
+                                                                                                                                          ) {
+                                                                                                                                            if (
+                                                                                                                                              tmp.AUTO_MODERATION_QUARANTINE_USER !==
+                                                                                                                                              action
+                                                                                                                                            ) {
+                                                                                                                                              if (
+                                                                                                                                                tmp.ONBOARDING_PROMPT_UPDATE !==
+                                                                                                                                                action
+                                                                                                                                              ) {
+                                                                                                                                                if (
+                                                                                                                                                  tmp.ONBOARDING_UPDATE !==
+                                                                                                                                                  action
+                                                                                                                                                ) {
+                                                                                                                                                  if (
+                                                                                                                                                    tmp.SOUNDBOARD_SOUND_UPDATE !==
+                                                                                                                                                    action
+                                                                                                                                                  ) {
+                                                                                                                                                    if (
+                                                                                                                                                      tmp.HOME_SETTINGS_UPDATE !==
+                                                                                                                                                      action
+                                                                                                                                                    ) {
+                                                                                                                                                      if (
+                                                                                                                                                        tmp.GUILD_MEMBER_VERIFICATION_UPDATE !==
+                                                                                                                                                        action
+                                                                                                                                                      ) {
+                                                                                                                                                        if (
+                                                                                                                                                          tmp.GUILD_PROFILE_UPDATE !==
+                                                                                                                                                          action
+                                                                                                                                                        ) {
+                                                                                                                                                          if (
+                                                                                                                                                            tmp.GUILD_MIGRATE_PIN_PERMISSION !==
+                                                                                                                                                            action
+                                                                                                                                                          ) {
+                                                                                                                                                            if (
+                                                                                                                                                              tmp.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION !==
+                                                                                                                                                              action
+                                                                                                                                                            ) {
                                                                                                                                                               return constants3.ALL;
                                                                                                                                                             }
                                                                                                                                                           }
@@ -300,8 +417,7 @@ const prototype = function AuditLogRecord(timestampEnd) {
   tmp5.user = user;
   return tmp5;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 const result = require("set").fileFinishedImporting("records/AuditLogRecord.tsx");
 
 export default prototype;

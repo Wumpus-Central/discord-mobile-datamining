@@ -10,13 +10,13 @@ obj = {
     return "Tooltip";
   },
   parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_TOOLTIP,
   getComponent() {
     return Content /* Content */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsTooltipSetting.tsx");

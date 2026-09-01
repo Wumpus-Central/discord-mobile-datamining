@@ -8,7 +8,8 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;
-({ PROFILE_CONTENT_BOTTOM_PADDING: closure_6, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: error } = ARBITRARY_LARGE_OFFSET);
+({ PROFILE_CONTENT_BOTTOM_PADDING: closure_6, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: error } =
+  ARBITRARY_LARGE_OFFSET);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
   user = user.user;
@@ -20,7 +21,9 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
   ({ disableMessage, scrollPosition } = user);
   const tmp3 = channel(trackUserProfileAction[6])();
   const tmp5 = channel(trackUserProfileAction[7])(ACTION_SHEET_MAX_WIDTH);
-  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = channel(trackUserProfileAction[8])({ scrollPosition, bannerHeight: tmp5 }));
+  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = channel(
+    trackUserProfileAction[8],
+  )({ scrollPosition, bannerHeight: tmp5 }));
   let obj = user(trackUserProfileAction[10]);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   obj1 = user(trackUserProfileAction[11]);
@@ -68,7 +71,15 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
   const containerBackground = userProfileColors.containerBackground;
   if (null != user) {
     if (null != stateFromStores) {
-      obj = { user: null, displayProfile: null, bannerHeight: null, bannerAnimatedStyle: null, bannerImageAnimatedStyle: null, blurAnimatedProps: null, showBlur: null };
+      obj = {
+        user: null,
+        displayProfile: null,
+        bannerHeight: null,
+        bannerAnimatedStyle: null,
+        bannerImageAnimatedStyle: null,
+        blurAnimatedProps: null,
+        showBlur: null,
+      };
       obj[0] = user;
       obj[1] = displayProfile;
       obj[2] = tmp5;
@@ -76,7 +87,7 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
       obj[4] = bannerImageAnimatedStyle;
       obj[5] = blurAnimatedProps;
       obj[6] = showBlur;
-      const items2 = [callback(tmp(tmp2[21]), obj), , ];
+      const items2 = [callback(tmp(tmp2[21]), obj), ,];
       obj = { style: null, children: null };
       const items3 = [tmp3.bannerButtons, bannerAnimatedStyle];
       obj[0] = items3;
@@ -99,8 +110,8 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
       const obj4 = { backgroundColor: null };
       obj4[0] = tmp20;
       obj3[3] = obj4;
-      const items4 = [callback(tmp7(tmp2[24]).OpenableUserProfileAvatar, obj3), ];
-      const items5 = [, , ];
+      const items4 = [callback(tmp7(tmp2[24]).OpenableUserProfileAvatar, obj3)];
+      const items5 = [, ,];
       ({ profileContentWrapper: arr4[0], profileContent: arr4[1] } = tmp3);
       let num = 0;
       if (null == tmp16) {
@@ -112,7 +123,13 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
       obj6[1] = channel(trackUserProfileAction[9])().bottom + closure_6;
       items5[2] = obj6;
       obj5[0] = items5;
-      const obj7 = { customStatusActivity: null, hasCustomProfileTheme: null, onPressTruncatedStatus: null, style: null, emojiOnlyStyle: null };
+      const obj7 = {
+        customStatusActivity: null,
+        hasCustomProfileTheme: null,
+        onPressTruncatedStatus: null,
+        style: null,
+        emojiOnlyStyle: null,
+      };
       obj7[0] = tmp16;
       obj7[1] = null != primaryColor;
       obj7[2] = function onPressTruncatedStatus() {
@@ -123,13 +140,30 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
           id = channel.id;
         }
         obj[2] = id;
-        obj.openLazy(user(trackUserProfileAction[28])(trackUserProfileAction[27], trackUserProfileAction.paths), "UserProfileCustomStatusActionSheet", obj, "stack");
+        obj.openLazy(
+          user(trackUserProfileAction[28])(trackUserProfileAction[27], trackUserProfileAction.paths),
+          "UserProfileCustomStatusActionSheet",
+          obj,
+          "stack",
+        );
       };
       ({ customStatusBubble: obj10[3], emojiOnlyCustomStatusBubble: obj10[4] } = tmp3);
-      const items6 = [callback(tmp(tmp2[25]), obj7), , ];
+      const items6 = [callback(tmp(tmp2[25]), obj7), ,];
       const obj8 = { style: null, children: null };
       obj8[0] = tmp3.primaryInfo;
-      const obj9 = { user: null, guildId: null, displayName: null, pronouns: null, badges: null, badgeContainerBackground: null, displayNameAccessibilityHint: null, onPressDisplayName: null, onPressUserTag: null, onPressPronouns: null, showBadgeToastOnPress: true };
+      const obj9 = {
+        user: null,
+        guildId: null,
+        displayName: null,
+        pronouns: null,
+        badges: null,
+        badgeContainerBackground: null,
+        displayNameAccessibilityHint: null,
+        onPressDisplayName: null,
+        onPressUserTag: null,
+        onPressPronouns: null,
+        showBadgeToastOnPress: true,
+      };
       obj9[0] = user;
       obj9[1] = guild_id;
       obj9[2] = name;
@@ -156,7 +190,7 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
       obj9[7] = handleCopyUsername;
       obj9[8] = handleCopyUsername;
       obj9[9] = handlePressPronouns;
-      const items7 = [callback(tmpResult, obj9), , ];
+      const items7 = [callback(tmpResult, obj9), ,];
       const obj10 = { user: null };
       obj10[0] = user;
       items7[1] = callback(tmp(tmp2[31]), obj10);
@@ -179,7 +213,15 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
         tmp7Result1 = tmp7(tmp2[33]);
       }
       obj11[2] = tmp37Result;
-      const obj13 = { icon: null, text: null, variant: "secondary", disabled: null, grow: true, accessibilityHint: null, onPress: null };
+      const obj13 = {
+        icon: null,
+        text: null,
+        variant: "secondary",
+        disabled: null,
+        grow: true,
+        accessibilityHint: null,
+        onPress: null,
+      };
       const obj14 = { size: "sm", color: null };
       obj14[1] = tmp(tmp2[37]).colors.CONTROL_SECONDARY_TEXT_DEFAULT;
       obj13[0] = callback(tmp7(tmp2[36]).ChatIcon, obj14);
@@ -206,7 +248,7 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
       items6[1] = closure_10(guild_id, obj8);
       let tmp35Result = null;
       if (null != stateFromStores) {
-        const items8 = [tmp3.card, ];
+        const items8 = [tmp3.card];
         const obj16 = { backgroundColor: null };
         obj16[0] = containerBackground;
         items8[1] = obj16;
@@ -217,7 +259,7 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
         obj18[1] = stateFromStores;
         obj18[2] = guild_id;
         obj18[3] = items8;
-        const items9 = [tmp37(tmp(tmp2[40]), obj18), , , ];
+        const items9 = [tmp37(tmp(tmp2[40]), obj18), , ,];
         const obj19 = { userId: null, displayProfile: null, channel: null, style: null };
         obj19[0] = user.id;
         obj19[1] = displayProfile;
@@ -230,8 +272,15 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
           obj20[0] = user.id;
           obj20[1] = guild_id;
           obj20[2] = items8;
-          const items10 = [tmp37(tmp(tmp2[42]), obj20), ];
-          const obj21 = { user: null, currentUser: null, guildId: null, channelId: null, showUserProfile: null, style: null };
+          const items10 = [tmp37(tmp(tmp2[42]), obj20)];
+          const obj21 = {
+            user: null,
+            currentUser: null,
+            guildId: null,
+            channelId: null,
+            showUserProfile: null,
+            style: null,
+          };
           obj21[0] = user;
           obj21[1] = stateFromStores;
           obj21[2] = guild_id;

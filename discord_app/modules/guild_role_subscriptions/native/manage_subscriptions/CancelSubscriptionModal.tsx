@@ -6,7 +6,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 noopAll;
 let closure_5 = { CANCEL_SUBSCRIPTION: "CANCEL_SUBSCRIPTION" };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/CancelSubscriptionModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/manage_subscriptions/CancelSubscriptionModal.tsx",
+);
 
 export default function CancelSubscriptionModal(onClose) {
   onClose = onClose.onClose;
@@ -26,7 +28,7 @@ export default function CancelSubscriptionModal(onClose) {
         return closure_1_4(closure_1_3, obj);
       },
       title: "Subscriptions",
-      headerLeft: onClose(bottom[6]).getHeaderCloseButton(onClose)
+      headerLeft: onClose(bottom[6]).getHeaderCloseButton(onClose),
     };
     screens[closure_1_5.CANCEL_SUBSCRIPTION] = obj;
     obj = { name: closure_1_5.CANCEL_SUBSCRIPTION, params: closure_1 };
@@ -34,4 +36,4 @@ export default function CancelSubscriptionModal(onClose) {
     return { screens, initialStack };
   }));
   return jsx(onClose(bottom[7]).Navigator, { screens, initialRouteStack });
-};
+}

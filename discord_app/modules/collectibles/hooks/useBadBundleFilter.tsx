@@ -34,16 +34,23 @@ export const useBadBundleFilter = function useBadBundleFilter() {
                   obj[1] = defaultPriceSetAssignmentPurchaseType;
                   return null != tmp(tmp2[7]).getProductOrbPrice(obj);
                 } else {
-                  defaultPriceSetAssignmentPurchaseType = tmp(tmp2[6]).getDefaultPriceSetAssignmentPurchaseType(defaultPriceSetAssignmentPurchaseType);
+                  defaultPriceSetAssignmentPurchaseType = tmp(tmp2[6]).getDefaultPriceSetAssignmentPurchaseType(
+                    defaultPriceSetAssignmentPurchaseType,
+                  );
                   const tmpResult2 = tmp(tmp2[6]);
-                  let result = tmp(tmp2[6]).extractPriceByPurchaseTypes(bundledProducts, defaultPriceSetAssignmentPurchaseType);
+                  let result = tmp(tmp2[6]).extractPriceByPurchaseTypes(
+                    bundledProducts,
+                    defaultPriceSetAssignmentPurchaseType,
+                  );
                   if (null != result) {
                     if (0 !== result.amount) {
                       let num2 = 0;
                       if (null != bundledProducts.bundledProducts) {
                         bundledProducts = bundledProducts.bundledProducts;
                         num2 = bundledProducts.reduce((arg0, arg1) => {
-                          const result = defaultPriceSetAssignmentPurchaseType(closure_1_2[6]).extractPriceByPurchaseTypes(arg1, defaultPriceSetAssignmentPurchaseType);
+                          const result = defaultPriceSetAssignmentPurchaseType(
+                            closure_1_2[6],
+                          ).extractPriceByPurchaseTypes(arg1, defaultPriceSetAssignmentPurchaseType);
                           let num;
                           if (result != null) {
                             num = result.amount;

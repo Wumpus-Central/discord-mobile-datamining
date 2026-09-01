@@ -2,7 +2,9 @@
 import closure_2 from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/useAllowFriendsFromMutualGuildsOnly.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/content_and_social/useAllowFriendsFromMutualGuildsOnly.tsx",
+);
 
 export const useAllowFriendsFromMutualGuildsOnly = function useAllowFriendsFromMutualGuildsOnly() {
   const FriendSourceFlagsSetting = setting(4166).FriendSourceFlagsSetting;

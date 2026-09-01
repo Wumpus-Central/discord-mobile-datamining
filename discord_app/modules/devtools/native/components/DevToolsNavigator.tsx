@@ -17,7 +17,7 @@ let closure_8 = importAllResult.memo((screenKey) => {
   let _require;
   let obj = NavigationStack;
   _require = obj.useAccessibilityNativeStackOptions();
-  let items = [callback(mapDefault, {}), ];
+  let items = [callback(mapDefault, {})];
   if (str == null) {
     str = "home";
   }
@@ -32,12 +32,12 @@ let closure_8 = importAllResult.memo((screenKey) => {
           return callback2(callback(table[6]).GenericHeaderTitle, { title: children.children });
         },
         headerLeft: callback(closure_1_2[6]).getRenderModalCloseImage(navigation.navigation),
-        headerTitleAlign: "center"
+        headerTitleAlign: "center",
       };
       let merged = Object.assign(callback);
       return obj;
     },
-    children: null
+    children: null,
   };
   const items1 = [
     callback(Navigator.Screen, {
@@ -47,33 +47,41 @@ let closure_8 = importAllResult.memo((screenKey) => {
         return {
           headerTitle() {
             let obj = { style: { flexDirection: "row" }, children: null };
-            const items = [callback3(callback(9373).HammerIcon, { size: "sm" }), ];
-            obj = { style: null, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
+            const items = [callback3(callback(9373).HammerIcon, { size: "sm" })];
+            obj = {
+              style: null,
+              variant: "heading-md/semibold",
+              color: "mobile-text-heading-primary",
+              children: "DevTools",
+            };
             obj = { marginLeft: callback2(712).space.PX_8 };
             obj[0] = obj;
             items[1] = callback3(callback(4474).Text, obj);
             obj[1] = items;
             return callback4(closure_3, obj);
           },
-          title: "DevTools"
+          title: "DevTools",
         };
-      }
+      },
     }),
-  ,
-
+    ,
   ];
   let merged = Object.assign(tmp(15177).DevToolsScreens);
   let merged1 = Object.assign(tmp(15177).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((arg0) => {
-    [tmp, ] = arg0;
-    return callback2(closure_7.Screen, {
-      name: tmp,
-      children: tmp2,
-      options() {
-        return { title: closure_0 };
-      }
-    }, tmp);
+    [tmp] = arg0;
+    return callback2(
+      closure_7.Screen,
+      {
+        name: tmp,
+        children: tmp2,
+        options() {
+          return { title: closure_0 };
+        },
+      },
+      tmp,
+    );
   });
   obj1 = {
     name: "home",
@@ -82,39 +90,49 @@ let closure_8 = importAllResult.memo((screenKey) => {
       return {
         headerTitle() {
           let obj = { style: { flexDirection: "row" }, children: null };
-          const items = [callback3(callback(9373).HammerIcon, { size: "sm" }), ];
-          obj = { style: null, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
+          const items = [callback3(callback(9373).HammerIcon, { size: "sm" })];
+          obj = {
+            style: null,
+            variant: "heading-md/semibold",
+            color: "mobile-text-heading-primary",
+            children: "DevTools",
+          };
           obj = { marginLeft: callback2(712).space.PX_8 };
           obj[0] = obj;
           items[1] = callback3(callback(4474).Text, obj);
           obj[1] = items;
           return callback4(closure_3, obj);
         },
-        title: "DevTools"
+        title: "DevTools",
       };
-    }
+    },
   };
   const obj2 = {};
   const tmp4 = closure_6;
   const tmp5 = callback;
   const tmp6 = importDefault;
   const tmp7 = Navigator;
-  const designSystemScreens = require("../../../settings/native/renderer/SettingRendererUtils.tsx").getDesignSystemScreens();
+  const designSystemScreens =
+    require("../../../settings/native/renderer/SettingRendererUtils.tsx").getDesignSystemScreens();
   items1[2] = designSystemScreens.map((arg0) => {
     [, tmp] = arg0;
-    return callback2(closure_7.Screen, {
-      name: tmp.route,
-      getComponent: tmp.getComponent,
-      options(navigation) {
-        let obj = closure_1_0(closure_1_2[5]);
-        let str = obj.getCachedSettingTitle(closure_0);
-        if (str == null) {
-          str = "Design System";
-        }
-        obj = { title: str, headerLeft: closure_1_0(closure_1_2[6]).getRenderModalBackImage(navigation.navigation) };
-        return obj;
-      }
-    }, tmp.route);
+    return callback2(
+      closure_7.Screen,
+      {
+        name: tmp.route,
+        getComponent: tmp.getComponent,
+        options(navigation) {
+          let obj = closure_1_0(closure_1_2[5]);
+          let str = obj.getCachedSettingTitle(closure_0);
+          if (str == null) {
+            str = "Design System";
+          }
+          obj = { title: str, headerLeft: closure_1_0(closure_1_2[6]).getRenderModalBackImage(navigation.navigation) };
+          return obj;
+        },
+      },
+      tmp.route,
+    );
   });
   obj[2] = items1;
   items[1] = closure_5(Navigator.Navigator, obj);

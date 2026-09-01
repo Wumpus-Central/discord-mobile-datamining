@@ -10,7 +10,7 @@ function _trackVoiceFeedback() {
     closure_1 = arg1;
     c6 = 0;
     c7 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -46,7 +46,15 @@ function _trackVoiceFeedback() {
               store = undefined;
               c6 = undefined;
               c7 = undefined;
-              ({ rating: c1, category: closure_2, reasonCode: c3, reasonDescription: c4, variant: c5, feedback: c6, analyticsData: c7 } = dependencyMap);
+              ({
+                rating: c1,
+                category: closure_2,
+                reasonCode: c3,
+                reasonDescription: c4,
+                variant: c5,
+                feedback: c6,
+                analyticsData: c7,
+              } = dependencyMap);
               let settings;
               let inputDeviceId;
               let name;
@@ -115,7 +123,31 @@ function _trackVoiceFeedback() {
             if (dependencyMap == null) {
               callback2 = "no response";
             }
-            const obj4 = { rating: null, category: null, reason_code: null, reason_description: null, reason_variant: null, feedback: null, audio_input_mode: null, automatic_audio_input_sensitivity_enabled: null, audio_input_sensitivity: null, vad_use_advanced_voice_activity: null, echo_cancellation_enabled: null, noise_suppression_enabled: null, automatic_gain_control_enabled: null, voice_output_volume: null, noise_cancellation_enabled: null, input_device_name: null, output_device_name: null, video_device_name: null, audio_subsystem: null, audio_layer: null, automatic_audio_subsystem: null, krisp_nc_model: null, audio_output_mode: null };
+            const obj4 = {
+              rating: null,
+              category: null,
+              reason_code: null,
+              reason_description: null,
+              reason_variant: null,
+              feedback: null,
+              audio_input_mode: null,
+              automatic_audio_input_sensitivity_enabled: null,
+              audio_input_sensitivity: null,
+              vad_use_advanced_voice_activity: null,
+              echo_cancellation_enabled: null,
+              noise_suppression_enabled: null,
+              automatic_gain_control_enabled: null,
+              voice_output_volume: null,
+              noise_cancellation_enabled: null,
+              input_device_name: null,
+              output_device_name: null,
+              video_device_name: null,
+              audio_subsystem: null,
+              audio_layer: null,
+              automatic_audio_subsystem: null,
+              krisp_nc_model: null,
+              audio_output_mode: null,
+            };
             obj4[0] = callback2;
             obj4[1] = closure_2;
             obj4[2] = callback2;
@@ -186,4 +218,4 @@ export default function trackVoiceFeedback() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

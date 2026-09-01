@@ -11,13 +11,13 @@ obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.AUTHORIZED_APPS,
   unsearchable: true,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.AUTHORIZED_APP,
   getComponent() {
     return AuthorizedAppScreen /* AuthorizedAppScreen */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AuthorizedAppSetting.tsx");

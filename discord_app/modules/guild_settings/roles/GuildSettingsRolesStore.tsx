@@ -113,12 +113,15 @@ function syncGuildChanges(guildId) {
           guildId = arg0;
           const found = items1.find((id) => id.id === closure_0);
           c1 = -1;
-          if (null != guildId.find((id) => {
-            if (id.id === closure_0) {
-              closure_1 = arg1;
-              return true;
-            }
-          })) {
+          if (
+            null !=
+            guildId.find((id) => {
+              if (id.id === closure_0) {
+                closure_1 = arg1;
+                return true;
+              }
+            })
+          ) {
             if (null != found) {
               guildId[c1] = found;
             }
@@ -196,7 +199,20 @@ const GuildSettingsRoleEditSections = MAX_SUBCATEGORIES.GuildSettingsRoleEditSec
 ({ DEFAULT_ROLE_COLOR: closure_15, GuildFeatures: closure_16 } = ME);
 ({ DEFAULT_GRADIENT_ROLE_COLORS: closure_17, HOLOGRAPHIC_ROLE_COLORS: closure_18 } = HOLOGRAPHIC_ROLE_COLORS);
 let obj = { SOLID: "solid", GRADIENT: "gradient", HOLOGRAPHIC: "holographic" };
-let closure_20 = { [GuildSettingsRoleEditSections.DISPLAY]: ["name", "hoist", "mentionable", "color", "colors", "colorString", "colorStrings"], [GuildSettingsRoleEditSections.PERMISSIONS]: ["permissions"], [GuildSettingsRoleEditSections.MEMBERS]: [], [GuildSettingsRoleEditSections.VERIFICATIONS]: [] };
+let closure_20 = {
+  [GuildSettingsRoleEditSections.DISPLAY]: [
+    "name",
+    "hoist",
+    "mentionable",
+    "color",
+    "colors",
+    "colorString",
+    "colorStrings",
+  ],
+  [GuildSettingsRoleEditSections.PERMISSIONS]: ["permissions"],
+  [GuildSettingsRoleEditSections.MEMBERS]: [],
+  [GuildSettingsRoleEditSections.VERIFICATIONS]: [],
+};
 set = new Set();
 let CLOSED = FormStates.CLOSED;
 let c23 = false;
@@ -237,7 +253,12 @@ let closure_33 = applyDefault.debounce(() => {
     c0 = arg0;
     c0 = arg0;
     const found = closure_1_25.find((id) => id.id === closure_0);
-    if (closure_1_9(found, closure_1_26.find((id) => id.id === c0))) {
+    if (
+      closure_1_9(
+        found,
+        closure_1_26.find((id) => id.id === c0),
+      )
+    ) {
       closure_1_21.delete(arg0);
       if (0 === closure_1_21.size) {
         c23 = false;
@@ -261,8 +282,7 @@ let closure_33 = applyDefault.debounce(() => {
   }
 }, 500);
 const Store = initializeDefault.Store;
-class GuildSettingsRolesStore extends Store {
-}
+class GuildSettingsRolesStore extends Store {}
 const prototype = GuildSettingsRolesStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_11, closure_8, closure_10);
@@ -320,49 +340,49 @@ Object.defineProperty(prototype, "errorMessage", {
   get: function errorMessage() {
     return closure_6;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasSortChanges", {
   get: function hasSortChanges() {
     return c24;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasRoleConfigurationChanges", {
   get: function hasRoleConfigurationChanges() {
     return c27;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "guild", {
   get: function guild() {
     return closure_4;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "editedRoleIds", {
   get: function editedRoleIds() {
     return Array.from(set);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "editedRoleIdsForConfigurations", {
   get: function editedRoleIdsForConfigurations() {
     return set1;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "roles", {
   get: function roles() {
     return closure_25;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "formState", {
   get: function formState() {
     return CLOSED;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getSortDeltas"] = function getSortDeltas() {
   if (null != user) {
@@ -857,10 +877,12 @@ obj = {
   },
   GUILD_SETTINGS_ROLES_DUPLICATE_SUCCESS: function handleDuplicateSuccess(arg0) {
     ({ role, roles } = arg0);
-    map = new Map(closure_25.map((id) => {
-      const items = [id.id, id];
-      return items;
-    }));
+    map = new Map(
+      closure_25.map((id) => {
+        const items = [id.id, id];
+        return items;
+      }),
+    );
     let result = map.set(role.id, role);
     let id = map;
     let found1;
@@ -882,10 +904,12 @@ obj = {
       obj.position = length - 1 - arg1;
       return obj;
     });
-    map1 = new Map(closure_26.map((id) => {
-      const items = [id.id, id];
-      return items;
-    }));
+    map1 = new Map(
+      closure_26.map((id) => {
+        const items = [id.id, id];
+        return items;
+      }),
+    );
     const result1 = map1.set(role.id, role);
     id = map1;
     found1 = undefined;
@@ -1013,7 +1037,9 @@ obj = {
       obj2 = applyDefault;
     }
   },
-  GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function handleUpdateRoleConnectionConfigurations(roleId) {
+  GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function handleUpdateRoleConnectionConfigurations(
+    roleId,
+  ) {
     roleId = roleId.roleId;
     const found = closure_25.find((id) => id.id === closure_0);
     if (null == found) {
@@ -1084,7 +1110,7 @@ obj = {
       }
     }
     return false;
-  }
+  },
 };
 const guildSettingsRolesStore = new GuildSettingsRolesStore(dispatcherDefault, obj);
 let result = set.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesStore.tsx");

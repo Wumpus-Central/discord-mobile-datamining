@@ -13,10 +13,19 @@ const require = arg1;
 let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let obj = { empty: null, messages: null, chat: null };
-obj = { flex: 1, borderTopWidth: require("get ActivityIndicator").StyleSheet.hairlineWidth, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+obj = {
+  flex: 1,
+  borderTopWidth: require("get ActivityIndicator").StyleSheet.hairlineWidth,
+  borderTopColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 obj[0] = obj;
 obj[1] = { flex: 1, overflow: "hidden" };
-createCacheKey = { backgroundColor: ThemesDefault.colors.CHANNEL_BACKGROUND_DEFAULT, justifyContent: "flex-start", overflow: "hidden", flex: 1 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.CHANNEL_BACKGROUND_DEFAULT,
+  justifyContent: "flex-start",
+  overflow: "hidden",
+  flex: 1,
+};
 obj[2] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard) {
@@ -30,7 +39,13 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
   if (flag2 === undefined) {
     flag2 = false;
   }
-  ({ guildId, HACK_fixModalInteraction: closure_3, screenIndex: closure_4, secondaryTextFieldRef: createChannelRecord, setNoExtractUI: closure_6 } = alwaysRespectKeyboard);
+  ({
+    guildId,
+    HACK_fixModalInteraction: closure_3,
+    screenIndex: closure_4,
+    secondaryTextFieldRef: createChannelRecord,
+    setNoExtractUI: closure_6,
+  } = alwaysRespectKeyboard);
   let setInterstitial;
   let stateFromStores;
   channel = undefined;
@@ -88,22 +103,26 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
   let tmp2Result = tmp2(tmp3[11]);
   const items3 = [setInterstitial];
   const items4 = [channelId, tmp10];
-  const stateFromStoresObject = tmp2Result.useStateFromStoresObject(items3, () => {
-    const messages = setInterstitial.getMessages(channelId);
-    let tmp = 0 === messages.length;
-    if (tmp) {
-      tmp = messages.loadingMore || !messages.ready;
-      const tmp2 = messages.loadingMore || !messages.ready;
-    }
-    const obj = { shouldRenderPlaceholder: tmp, shouldRenderBegginingRow: null };
-    const hasMoreBefore = messages.hasMoreBefore;
-    let tmp3 = !hasMoreBefore;
-    if (!hasMoreBefore) {
-      tmp3 = !closure_14;
-    }
-    obj[1] = tmp3;
-    return obj;
-  }, items4);
+  const stateFromStoresObject = tmp2Result.useStateFromStoresObject(
+    items3,
+    () => {
+      const messages = setInterstitial.getMessages(channelId);
+      let tmp = 0 === messages.length;
+      if (tmp) {
+        tmp = messages.loadingMore || !messages.ready;
+        const tmp2 = messages.loadingMore || !messages.ready;
+      }
+      const obj = { shouldRenderPlaceholder: tmp, shouldRenderBegginingRow: null };
+      const hasMoreBefore = messages.hasMoreBefore;
+      let tmp3 = !hasMoreBefore;
+      if (!hasMoreBefore) {
+        tmp3 = !closure_14;
+      }
+      obj[1] = tmp3;
+      return obj;
+    },
+    items4,
+  );
   ({ shouldRenderPlaceholder: c15, shouldRenderBegginingRow: c16 } = stateFromStoresObject);
   closure_17 = obj.useCallback((isFirstMessageVisible) => {
     const current = ref.current;
@@ -143,11 +162,14 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
   const effect2 = obj.useEffect(() => {
     closure_10.current = channel.id;
   }, items9);
-  const effect3 = obj.useEffect(() => () => {
-    const result = closure_1_0(closure_1_2[21]).clearOldestUnreadMessageId(ref.current);
-  }, []);
+  const effect3 = obj.useEffect(
+    () => () => {
+      const result = closure_1_0(closure_1_2[21]).clearOldestUnreadMessageId(ref.current);
+    },
+    [],
+  );
   obj = { profile: flag(chatInputRef[33]).Profiles.ChatView, children: null };
-  const items10 = [channel(channelId(chatInputRef[34]), { channelId, guildId }), , ];
+  const items10 = [channel(channelId(chatInputRef[34]), { channelId, guildId }), ,];
   let tmp18Result = null;
   if (!flag2) {
     tmp18Result = tmp18(tmp9(tmp3[35]), { absolute: true });
@@ -163,13 +185,44 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
       let obj = { style: setInterstitial.messages, channelId, stickyHeader: null, children: null };
       obj = { channel, ref: closure_12, scrollToNewMessages: closure_19 };
       obj[2] = channel(channelId(chatInputRef[23]), obj);
-      obj = { alwaysRespectKeyboard: flag, channel, screenIndex: closure_4, chatInputRef, HACK_fixModalInteraction: closure_3, isResourceChannel: closure_14, onPressKey: closure_18, onScroll: closure_17, ref, style: setInterstitial.chat, visibleMessagesWindowHandler: closure_13, children: null };
+      obj = {
+        alwaysRespectKeyboard: flag,
+        channel,
+        screenIndex: closure_4,
+        chatInputRef,
+        HACK_fixModalInteraction: closure_3,
+        isResourceChannel: closure_14,
+        onPressKey: closure_18,
+        onScroll: closure_17,
+        ref,
+        style: setInterstitial.chat,
+        visibleMessagesWindowHandler: closure_13,
+        children: null,
+      };
       const tmp2 = ref;
       const tmp5 = channelId(chatInputRef[22]);
       const tmp8 = channel;
-      const items = [channel(channelId(chatInputRef[25]), { ref: chatInputRef, channel, isResourceChannel: closure_14, screenIndex: closure_4, secondaryTextFieldRef: closure_5, setNoExtractUI: closure_6, onJumpToPresent: closure_20 }), ];
+      const items = [
+        channel(channelId(chatInputRef[25]), {
+          ref: chatInputRef,
+          channel,
+          isResourceChannel: closure_14,
+          screenIndex: closure_4,
+          secondaryTextFieldRef: closure_5,
+          setNoExtractUI: closure_6,
+          onJumpToPresent: closure_20,
+        }),
+      ];
       const obj2 = { channelId, guildId: null, shouldRender: null };
-      obj1 = { ref: chatInputRef, channel, isResourceChannel: closure_14, screenIndex: closure_4, secondaryTextFieldRef: closure_5, setNoExtractUI: closure_6, onJumpToPresent: closure_20 };
+      obj1 = {
+        ref: chatInputRef,
+        channel,
+        isResourceChannel: closure_14,
+        screenIndex: closure_4,
+        secondaryTextFieldRef: closure_5,
+        setNoExtractUI: closure_6,
+        onJumpToPresent: closure_20,
+      };
       const tmp11 = ref;
       const tmp12 = closure_20;
       const tmp9 = channelId(chatInputRef[24]);
@@ -177,7 +230,7 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
       obj2[2] = c16;
       items[1] = channel(channelId(chatInputRef[26]), obj2);
       obj[11] = items;
-      const items1 = [callback(tmp9, obj), , , ];
+      const items1 = [callback(tmp9, obj), , ,];
       let obj5 = flag(chatInputRef[27]);
       let tmp7Result = null;
       if (!obj5.isAndroid()) {
@@ -207,7 +260,11 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
       const obj6 = { children: null };
       items1[3] = tmp7Result1;
       obj[3] = items1;
-      const items2 = [callback(tmp5, obj), channel(channelId(chatInputRef[31]), { channelId }), channel(channelId(chatInputRef[32]), { channelId })];
+      const items2 = [
+        callback(tmp5, obj),
+        channel(channelId(chatInputRef[31]), { channelId }),
+        channel(channelId(chatInputRef[32]), { channelId }),
+      ];
       obj6[0] = items2;
       return callback(tmp2, obj6);
     }

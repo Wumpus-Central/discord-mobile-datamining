@@ -5,7 +5,7 @@ import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 let require = arg1;
 function _refreshSavedMessages() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c2 === 2) {
       c2 = 3;
       HermesBuiltin.throwTypeError();
@@ -77,7 +77,7 @@ let prototype = function SavedMessagesManager() {
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       return applyArgumentsResult.handlePostConnectionOpen();
-    }
+    },
   };
   applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
     !(function refreshSavedMessages() {
@@ -93,8 +93,7 @@ let prototype = function SavedMessagesManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 let result = require("set").fileFinishedImporting("modules/saved_messages/SavedMessagesManager.tsx");
 

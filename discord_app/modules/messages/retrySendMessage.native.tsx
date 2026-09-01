@@ -55,4 +55,4 @@ export default function retrySendMessage(id, id2, arr) {
     };
     tmpResult.sendMessage(id, obj, undefined, obj);
   }
-};
+}

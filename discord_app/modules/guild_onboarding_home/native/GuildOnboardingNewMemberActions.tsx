@@ -33,17 +33,23 @@ function MemberActionRow(channelId) {
   stateFromStores = obj1.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
   let obj2 = channelId(stateFromStores[15]);
   const items1 = [closure_9];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_9.can(closure_1_12.VIEW_CHANNEL, stateFromStores));
+  const stateFromStores1 = obj2.useStateFromStores(items1, () =>
+    closure_1_9.can(closure_1_12.VIEW_CHANNEL, stateFromStores),
+  );
   let obj3 = channelId(stateFromStores[15]);
   const items2 = [closure_5];
   const items3 = [id];
-  const stateFromStores2 = obj3.useStateFromStores(items2, () => {
-    let customEmojiById = null;
-    if (null != id) {
-      customEmojiById = closure_1_5.getCustomEmojiById(tmp);
-    }
-    return customEmojiById;
-  }, items3);
+  const stateFromStores2 = obj3.useStateFromStores(
+    items2,
+    () => {
+      let customEmojiById = null;
+      if (null != id) {
+        customEmojiById = closure_1_5.getCustomEmojiById(tmp);
+      }
+      return customEmojiById;
+    },
+    items3,
+  );
   let obj4 = id(stateFromStores[17]);
   const newMemberActionIconURL = obj4.getNewMemberActionIconURL({ channelId, icon });
   [][0] = stateFromStores;
@@ -96,12 +102,12 @@ function MemberActionRow(channelId) {
       const obj7 = { onPress: null, style: null, children: null };
       obj7[0] = tmp10;
       obj7[1] = tmp.actionContainer;
-      const items4 = [tmp14, , ];
+      const items4 = [tmp14, ,];
       const obj8 = { style: null, children: null };
       obj8[0] = tmp.channelNameContainer;
       const obj9 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       obj9[2] = title;
-      const items5 = [tmp15(tmp2(tmp3[21]).Text, obj9), ];
+      const items5 = [tmp15(tmp2(tmp3[21]).Text, obj9)];
       const obj10 = { variant: "text-xs/normal", color: "text-muted", children: null };
       const intl = tmp2(tmp3[25]).intl;
       const obj11 = { channelName: null };
@@ -123,18 +129,53 @@ function MemberActionRow(channelId) {
   return tmp11;
 }
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-createCacheKey = { actionsContainer: { paddingHorizontal: 12 }, actionsHeader: { display: "flex", marginBottom: 16 }, actionContainer: null, channelNameContainer: null, icon: null, emoji: null, textEmoji: null, emojiPlaceholder: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8, padding: 12, borderRadius: ThemesDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "center" };
+createCacheKey = {
+  actionsContainer: { paddingHorizontal: 12 },
+  actionsHeader: { display: "flex", marginBottom: 16 },
+  actionContainer: null,
+  channelNameContainer: null,
+  icon: null,
+  emoji: null,
+  textEmoji: null,
+  emojiPlaceholder: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  marginBottom: 8,
+  padding: 12,
+  borderRadius: ThemesDefault.radii.sm,
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flex: 1, marginHorizontal: 8 };
 createCacheKey[4] = { width: 40, height: 40, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[5] = { width: 40, height: 40 };
 createCacheKey[6] = { width: 40, textAlign: "center" };
 let obj1 = { width: 40, height: 40, borderRadius: ThemesDefault.radii.xs };
-createCacheKey[7] = { width: 40, height: 40, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, display: "flex", alignItems: "center", justifyContent: "center" };
+createCacheKey[7] = {
+  width: 40,
+  height: 40,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: 20,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
 let closure_17 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { width: 40, height: 40, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, display: "flex", alignItems: "center", justifyContent: "center" };
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/GuildOnboardingNewMemberActions.tsx");
+let obj2 = {
+  width: 40,
+  height: 40,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: 20,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/guild_onboarding_home/native/GuildOnboardingNewMemberActions.tsx",
+);
 
 export default function GuildOnboardingNewMemberActions(guildId) {
   guildId = guildId.guildId;
@@ -155,7 +196,7 @@ export default function GuildOnboardingNewMemberActions(guildId) {
   let obj3 = guildId(stateFromStores2[15]);
   const items4 = [closure_8];
   stateFromStores3 = obj3.useStateFromStores(items4, () => closure_1_8.getGuild(guildId));
-  const items5 = [stateFromStores1, guildId, ];
+  const items5 = [stateFromStores1, guildId];
   let flags;
   if (stateFromStores2 != null) {
     flags = stateFromStores2.flags;
@@ -201,18 +242,23 @@ export default function GuildOnboardingNewMemberActions(guildId) {
         const items6 = [
           callback(View, obj),
           stateFromStores.map((channelId) => {
-                  const obj = { channelId: channelId.channelId, title: channelId.title, emoji: channelId.emoji, icon: channelId.icon, completed: null };
-                  let flag;
-                  if (stateFromStores1 != null) {
-                    flag = tmp3[channelId.channelId];
-                  }
-                  if (flag == null) {
-                    flag = false;
-                  }
-                  obj[4] = flag;
-                  return closure_1_15(closure_1_18, obj, "member-action-" + channelId.channelId);
-                }),
-
+            const obj = {
+              channelId: channelId.channelId,
+              title: channelId.title,
+              emoji: channelId.emoji,
+              icon: channelId.icon,
+              completed: null,
+            };
+            let flag;
+            if (stateFromStores1 != null) {
+              flag = tmp3[channelId.channelId];
+            }
+            if (flag == null) {
+              flag = false;
+            }
+            obj[4] = flag;
+            return closure_1_15(closure_1_18, obj, "member-action-" + channelId.channelId);
+          }),
         ];
         let rulesChannelId;
         if (stateFromStores3 != null) {
@@ -229,7 +275,7 @@ export default function GuildOnboardingNewMemberActions(guildId) {
           obj4[0] = tmp2(tmp3[22]).Icon.Sizes.REFRESH_SMALL_16;
           obj4[1] = stateFromStores1(tmp3[29]);
           obj3[1] = tmp17(tmp2(tmp3[22]).Icon, obj4);
-          const items7 = [tmp17(tmp16, obj3), ];
+          const items7 = [tmp17(tmp16, obj3)];
           const obj5 = { style: null, children: null };
           obj5[0] = tmp.channelNameContainer;
           const obj6 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
@@ -247,4 +293,4 @@ export default function GuildOnboardingNewMemberActions(guildId) {
     }
   }
   return tmp15Result;
-};
+}

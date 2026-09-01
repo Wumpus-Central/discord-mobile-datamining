@@ -7,7 +7,7 @@ import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 require = arg1;
 class GiftIcon$Type extends MessageType {
   constructor() {
-    items = [, , , ];
+    items = [, , ,];
     items[0] = { no: 1, name: "box_animation_url", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "trinket_animation_url", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "trinket_glow_animation_url", kind: "scalar", T: 9 };
@@ -16,8 +16,8 @@ class GiftIcon$Type extends MessageType {
       name: "gradient",
       kind: "message",
       T() {
-            return callback(table[2]).Gradient;
-          }
+        return callback(table[2]).Gradient;
+      },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.GiftIcon", items, new.target);
     // ThrowIfThisInitialized (0x7c)
@@ -114,8 +114,16 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(boxAnimationUrl,
   if (boxAnimationUrl.gradient) {
     const Gradient = create.Gradient;
     const tagResult3 = tag.tag(4, _mod1307.WireType.LengthDelimited);
-    const joined = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = Gradient.internalBinaryWrite(
+      boxAnimationUrl.gradient,
+      tag.tag(4, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = Gradient.internalBinaryWrite(
+      boxAnimationUrl.gradient,
+      tag.tag(4, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -137,11 +145,21 @@ let items = [
     kind: "message",
     T() {
       return callback(table[2]).Gradient;
-    }
-  }
+    },
+  },
 ];
-prototype = new prototype("discord_protos.premium_marketing.v1.GiftIcon", items, tmp, GiftIcon$Type, prototype, items, arg1);
+prototype = new prototype(
+  "discord_protos.premium_marketing.v1.GiftIcon",
+  items,
+  tmp,
+  GiftIcon$Type,
+  prototype,
+  items,
+  arg1,
+);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_icon.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_icon.tsx",
+);
 
 export const GiftIcon = prototype;

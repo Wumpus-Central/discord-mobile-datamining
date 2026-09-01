@@ -51,7 +51,13 @@ export default function usePendingAvatarSettings(isTryItOut) {
       dependencyMap(avatarDecoration);
     }
   }, items2);
-  obj = { pendingAvatar, pendingAvatarDecoration, pendingErrors, setPendingAvatar: null, setPendingAvatarDecoration: null };
+  obj = {
+    pendingAvatar,
+    pendingAvatarDecoration,
+    pendingErrors,
+    setPendingAvatar: null,
+    setPendingAvatarDecoration: null,
+  };
   if (isTryItOut) {
     setTryItOutAvatar = tmp3(8077).setTryItOutAvatar;
   }
@@ -61,4 +67,4 @@ export default function usePendingAvatarSettings(isTryItOut) {
   }
   obj[4] = setTryItOutAvatarDecoration;
   return obj;
-};
+}

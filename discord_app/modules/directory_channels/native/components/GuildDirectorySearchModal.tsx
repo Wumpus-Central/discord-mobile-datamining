@@ -6,7 +6,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 noopAll;
 const SEARCH_SCREEN_KEY = "SEARCH_SCREEN_KEY";
-const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectorySearchModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/directory_channels/native/components/GuildDirectorySearchModal.tsx",
+);
 
 export default function GuildDirectorySearchModal(arg0) {
   const _require = arg0;
@@ -18,9 +20,9 @@ export default function GuildDirectorySearchModal(arg0) {
         render() {
           const merged = Object.assign(closure_0);
           return closure_1_3(closure_1_1(closure_1_2[2]), {});
-        }
-      }
+        },
+      },
     })),
-    initialRouteName: SEARCH_SCREEN_KEY
+    initialRouteName: SEARCH_SCREEN_KEY,
   });
-};
+}

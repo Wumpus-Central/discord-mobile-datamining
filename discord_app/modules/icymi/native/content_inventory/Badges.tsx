@@ -19,11 +19,17 @@ class ActiveTimestamp {
     now = undefined;
     obj = require("useTimestampTickedNow");
     now = obj.useTimestampTickedNow().now;
-    items = [, ];
+    items = [,];
     items[0] = entry;
     items[1] = now;
     memo = closure_3.useMemo(() => entry(closure_1_2[7]).formatActiveTimestamp(entry, now), items);
-    return jsx(require("Text").Text, { style: global.style, variant: "text-sm/medium", tabularNumbers: true, color: "text-feedback-positive", children: memo });
+    return jsx(require("Text").Text, {
+      style: global.style,
+      variant: "text-sm/medium",
+      tabularNumbers: true,
+      color: "text-feedback-positive",
+      children: memo,
+    });
   }
 }
 function ContentTimestamp(entry) {
@@ -51,7 +57,7 @@ function BaseBadge(accessibilityLabel) {
   const tmp = callback3();
   let obj = { style: tmp.badgeContainer, accessible: null != accessibilityLabel, accessibilityLabel, children: null };
   obj = { style: tmp.icon, color: iconColor };
-  const items = [callback(Icon, obj), ];
+  const items = [callback(Icon, obj)];
   obj = { variant: "text-sm/medium", style: tmp.text, children: text };
   items[1] = callback(Text.Text, obj);
   obj[3] = items;
@@ -59,7 +65,17 @@ function BaseBadge(accessibilityLabel) {
 }
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
 createCacheKey = { icon: { width: 16, height: 16 }, badgeContainer: null, text: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4, backgroundColor: "rgba(255, 255, 255, 0.08)", paddingVertical: ThemesDefault.space.PX_4, paddingLeft: ThemesDefault.space.PX_8, paddingRight: 10, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: 4,
+  backgroundColor: "rgba(255, 255, 255, 0.08)",
+  paddingVertical: ThemesDefault.space.PX_4,
+  paddingLeft: ThemesDefault.space.PX_8,
+  paddingRight: 10,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { color: ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
@@ -75,7 +91,10 @@ export const GameTimestampBadge = function GameTimestampBadge(entry) {
   obj = { style: tmp.badgeContainer, children: null };
   const isEntryActiveResult = obj.isEntryActive(entry);
   const tmp2 = require;
-  obj = { style: tmp.icon, color: obj.isEntryActive(entry) ? colors.STATUS_POSITIVE : colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
+  obj = {
+    style: tmp.icon,
+    color: obj.isEntryActive(entry) ? colors.STATUS_POSITIVE : colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
+  };
   const items = [callback(GameControllerIcon.GameControllerIcon, obj), callback(ContentTimestamp, { entry })];
   obj[1] = items;
   return callback2(View, obj);
@@ -180,7 +199,7 @@ export const TopGameBadge = function TopGameBadge(entry) {
     obj[0] = tmp(8843).TrophyIcon;
     obj = { children: null };
     const intl = tmp(1236).intl;
-    const items = [intl.string(tmp(1236).t["/50eHi"]), ": ", ];
+    const items = [intl.string(tmp(1236).t["/50eHi"]), ": "];
     const intl2 = tmp(1236).intl;
     obj1 = { hours: null };
     const _Math = Math;

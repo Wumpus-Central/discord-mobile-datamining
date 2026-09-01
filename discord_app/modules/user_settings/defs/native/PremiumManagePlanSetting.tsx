@@ -12,13 +12,13 @@ obj = {
     return intl.string(getSystemLocale.t["8jmdON"]);
   },
   parent: MobileUserSettings.MobileUserSettings.PREMIUM,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.PREMIUM_MANAGE_PLAN,
   getComponent() {
     return PremiumPlanSelectSettingScreen /* PremiumPlanSelectSettingScreen */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/PremiumManagePlanSetting.tsx");

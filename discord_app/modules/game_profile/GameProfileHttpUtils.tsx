@@ -16,7 +16,7 @@ function _getShopCollection() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       dependencyMap = tmp3;
       obj1 = { type: "GAME_PROFILE_GET_SHOP_COLLECTION_START", collectionId: null };
       obj1[1] = callback;
@@ -68,7 +68,7 @@ function _fetchSimilarGames() {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -160,7 +160,7 @@ function _getGameAnnouncements() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       closure_5 = tmp3;
       closure_4 = tmp5;
       obj1 = { type: "GAME_PROFILE_GET_ANNOUNCEMENTS_START", gameId: null };
@@ -191,7 +191,13 @@ function _getGameAnnouncements() {
         throw body;
       } else if (arg0 !== 2) {
         body = body.body;
-        const obj6 = { type: "GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS", gameId: null, messages: null, channelId: null, guildId: null };
+        const obj6 = {
+          type: "GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS",
+          gameId: null,
+          messages: null,
+          channelId: null,
+          guildId: null,
+        };
         obj6[1] = callback;
         const obj9 = body(709);
         obj6[2] = callback(8878).toAnnouncementMessages(body.messages);
@@ -254,7 +260,7 @@ initialize = {
     })(arg0);
   },
   retryConfig: initialize,
-  failureStaleAfter: setDefault.Seconds.MINUTE
+  failureStaleAfter: setDefault.Seconds.MINUTE,
 };
 initialize = {
   backoff() {
@@ -262,7 +268,7 @@ initialize = {
     const result = 5 * setDefault.Millis.SECOND;
     tmp = new tmp(result, 5 * setDefault.Millis.MINUTE);
     return tmp;
-  }
+  },
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult, initialize);
 let result = require("set").fileFinishedImporting("modules/game_profile/GameProfileHttpUtils.tsx");

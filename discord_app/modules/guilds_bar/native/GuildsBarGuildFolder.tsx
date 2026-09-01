@@ -34,7 +34,7 @@ function MiniGuildIcon(arg0) {
   } else if (3 === position) {
     guildPreview3 = tmp4.guildPreview3;
   }
-  const items1 = [tmp4.guildPreviewIcon, , ];
+  const items1 = [tmp4.guildPreviewIcon, ,];
   let prop;
   const obj2 = initialize;
   const tmp = require;
@@ -90,7 +90,7 @@ function TransitionWrapper(children) {
     if (1 === sharedValue.get()) {
       obj = { translateY: null };
       obj[0] = obj5.withSpring(0, tmp4);
-      const items = [obj, ];
+      const items = [obj];
       if (num !== sharedValue.get()) {
         let num2 = 1.3;
         if (flag) {
@@ -105,7 +105,17 @@ function TransitionWrapper(children) {
       return obj;
     }
   };
-  obj = { withSpring: tmp(tmp2[14]).withSpring, visible: sharedValue, FOLDER_SPRING_PHYSICS: closure_13, state, TransitionStates: tmp(tmp2[19]).TransitionStates, runOnJS: tmp(tmp2[18]).runOnJS, cleanUp, fromTop: flag, guildItemSize: token };
+  obj = {
+    withSpring: tmp(tmp2[14]).withSpring,
+    visible: sharedValue,
+    FOLDER_SPRING_PHYSICS: closure_13,
+    state,
+    TransitionStates: tmp(tmp2[19]).TransitionStates,
+    runOnJS: tmp(tmp2[18]).runOnJS,
+    cleanUp,
+    fromTop: flag,
+    guildItemSize: token,
+  };
   fn.__closure = obj;
   fn.__workletHash = 14426547532118;
   fn.__initData = closure_20;
@@ -192,10 +202,38 @@ let closure_16 = createCacheKey.createStyles(() => {
   if (arg1 === undefined) {
     num2 = 0;
   }
-  let obj = { folderBackground: null, folderScaleContainer: null, guildPreviewIcon: null, guildPreviewIconUnselected: null, guildPreview0: null, guildPreview1: null, guildPreview2: null, guildPreview3: null, guildPreviewWrapper: null };
-  obj = { position: "absolute", top: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, left: ThemesDefault.modules.mobile.GUILD_FOLDER_BACKGROUND_LEFT, backgroundColor: ThemesDefault.colors.GUILD_FOLDER_BACKGROUND, borderTopLeftRadius: ThemesDefault.modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS, borderTopRightRadius: ThemesDefault.modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS, borderBottomLeftRadius: ThemesDefault.modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS, borderBottomRightRadius: ThemesDefault.modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS, width: num + num2 };
+  let obj = {
+    folderBackground: null,
+    folderScaleContainer: null,
+    guildPreviewIcon: null,
+    guildPreviewIconUnselected: null,
+    guildPreview0: null,
+    guildPreview1: null,
+    guildPreview2: null,
+    guildPreview3: null,
+    guildPreviewWrapper: null,
+  };
+  obj = {
+    position: "absolute",
+    top: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN,
+    left: ThemesDefault.modules.mobile.GUILD_FOLDER_BACKGROUND_LEFT,
+    backgroundColor: ThemesDefault.colors.GUILD_FOLDER_BACKGROUND,
+    borderTopLeftRadius: ThemesDefault.modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS,
+    borderTopRightRadius: ThemesDefault.modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS,
+    borderBottomLeftRadius: ThemesDefault.modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS,
+    borderBottomRightRadius: ThemesDefault.modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS,
+    width: num + num2,
+  };
   obj[0] = obj;
-  obj[1] = { position: "absolute", top: 0, left: 0, width: num, height: num, justifyContent: "center", alignItems: "center" };
+  obj[1] = {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: num,
+    height: num,
+    justifyContent: "center",
+    alignItems: "center",
+  };
   obj = { position: "absolute", margin: ThemesDefault.modules.mobile.GUILD_FOLDER_PREVIEW_ICON_MARGIN };
   obj[2] = obj;
   obj[3] = { borderRadius: ThemesDefault.radii.sm };
@@ -204,10 +242,17 @@ let closure_16 = createCacheKey.createStyles(() => {
   obj[6] = { bottom: 0, left: 0 };
   obj[7] = { bottom: 0, right: 0 };
   obj1 = { borderRadius: ThemesDefault.radii.sm };
-  obj[8] = { position: "absolute", width: num, height: num, opacity: ThemesDefault.modules.mobile.GUILD_FOLDER_PREVIEW_OPACITY };
+  obj[8] = {
+    position: "absolute",
+    width: num,
+    height: num,
+    opacity: ThemesDefault.modules.mobile.GUILD_FOLDER_PREVIEW_OPACITY,
+  };
   return obj;
 });
-let closure_18 = { code: "function GuildsBarGuildFolderTsx1(values){const{withSpring,TRANSITION_PHYSICS}=this.__closure;return{animations:{height:withSpring(values.targetHeight,TRANSITION_PHYSICS,'animate-always')},initialValues:{height:values.currentHeight}};}" };
+let closure_18 = {
+  code: "function GuildsBarGuildFolderTsx1(values){const{withSpring,TRANSITION_PHYSICS}=this.__closure;return{animations:{height:withSpring(values.targetHeight,TRANSITION_PHYSICS,'animate-always')},initialValues:{height:values.currentHeight}};}",
+};
 const memoResult = importAllResult.memo(function FolderBGInner(color) {
   color = color.color;
   let token2;
@@ -245,14 +290,20 @@ const memoResult = importAllResult.memo(function FolderBGInner(color) {
       }
     }
   }, items);
-  const style = [tmp3.folderBackground, memo, ];
+  const style = [tmp3.folderBackground, memo];
   obj = { height: token + token1 + (token + 2 * token1) * totalItems + tmp4 };
   style[2] = obj;
   return callback2(token2(7796), { pointerEvents: "none", collapsable: false, layout, style });
 });
-let closure_20 = { code: "function GuildsBarGuildFolderTsx2(){const{withSpring,visible,FOLDER_SPRING_PHYSICS,state,TransitionStates,runOnJS,cleanUp,fromTop,guildItemSize}=this.__closure;return{opacity:withSpring(visible.get(),FOLDER_SPRING_PHYSICS,undefined,function(finished){if(finished&&state===TransitionStates.YEETED)runOnJS(cleanUp)();}),transform:[{translateY:withSpring(visible.get()===1?0:fromTop?-guildItemSize:guildItemSize,FOLDER_SPRING_PHYSICS)},{scale:withSpring(visible.get()===1?1:fromTop?0.3:1.3,FOLDER_SPRING_PHYSICS)}]};}" };
-let closure_21 = { code: "function GuildsBarGuildFolderTsx3(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED)runOnJS(cleanUp)();}" };
-let closure_26 = { code: "function GuildsBarGuildFolderTsx4(values){const{dragDropInProgress,sharedId,id,isDragTarget,withSpring,TRANSITION_PHYSICS}=this.__closure;var _id;const shouldAnimate=dragDropInProgress.get()&&sharedId.get()===\"\"+id&&!isDragTarget;sharedId.set(\"\"+((_id=id)!==null&&_id!==void 0?_id:null));return{animations:{originY:shouldAnimate?withSpring(values.targetOriginY,TRANSITION_PHYSICS,'animate-always'):values.targetOriginY,height:shouldAnimate?withSpring(values.targetHeight,TRANSITION_PHYSICS,'animate-always'):values.targetHeight},initialValues:{originY:values.currentOriginY,height:values.currentHeight}};}" };
+let closure_20 = {
+  code: "function GuildsBarGuildFolderTsx2(){const{withSpring,visible,FOLDER_SPRING_PHYSICS,state,TransitionStates,runOnJS,cleanUp,fromTop,guildItemSize}=this.__closure;return{opacity:withSpring(visible.get(),FOLDER_SPRING_PHYSICS,undefined,function(finished){if(finished&&state===TransitionStates.YEETED)runOnJS(cleanUp)();}),transform:[{translateY:withSpring(visible.get()===1?0:fromTop?-guildItemSize:guildItemSize,FOLDER_SPRING_PHYSICS)},{scale:withSpring(visible.get()===1?1:fromTop?0.3:1.3,FOLDER_SPRING_PHYSICS)}]};}",
+};
+let closure_21 = {
+  code: "function GuildsBarGuildFolderTsx3(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED)runOnJS(cleanUp)();}",
+};
+let closure_26 = {
+  code: "function GuildsBarGuildFolderTsx4(values){const{dragDropInProgress,sharedId,id,isDragTarget,withSpring,TRANSITION_PHYSICS}=this.__closure;var _id;const shouldAnimate=dragDropInProgress.get()&&sharedId.get()===\"\"+id&&!isDragTarget;sharedId.set(\"\"+((_id=id)!==null&&_id!==void 0?_id:null));return{animations:{originY:shouldAnimate?withSpring(values.targetOriginY,TRANSITION_PHYSICS,'animate-always'):values.targetOriginY,height:shouldAnimate?withSpring(values.targetHeight,TRANSITION_PHYSICS,'animate-always'):values.targetHeight},initialValues:{originY:values.currentOriginY,height:values.currentHeight}};}",
+};
 const memoResult1 = importAllResult.memo(function GuildsBarGuildFolder(id) {
   id = id.id;
   const expanded = id.expanded;
@@ -286,95 +337,105 @@ const memoResult1 = importAllResult.memo(function GuildsBarGuildFolder(id) {
       return { unread: false, mentionCount: 0, isMentionLowImportance: false };
     } else {
       const mutableGuildStates = childNodes.getMutableGuildStates();
-      return childNodes.reduce((mentionCount, id) => {
-        if (null != id.id) {
-          let num;
-          if (table[id.id] != null) {
-            num = tmp5.highImportanceMentionCount;
-          }
-          if (num == null) {
-            num = 0;
-          }
-          let num2;
-          if (table[id.id] != null) {
-            num2 = tmp.lowImportanceMentionCount;
-          }
-          if (num2 == null) {
-            num2 = 0;
-          }
-          mentionCount.mentionCount = mentionCount.mentionCount + num + num2;
-          let flag = mentionCount.unread;
-          if (!flag) {
-            let unread;
-            if (tmp4[id.id] != null) {
-              unread = tmp2.unread;
+      return childNodes.reduce(
+        (mentionCount, id) => {
+          if (null != id.id) {
+            let num;
+            if (table[id.id] != null) {
+              num = tmp5.highImportanceMentionCount;
             }
-            flag = unread;
+            if (num == null) {
+              num = 0;
+            }
+            let num2;
+            if (table[id.id] != null) {
+              num2 = tmp.lowImportanceMentionCount;
+            }
+            if (num2 == null) {
+              num2 = 0;
+            }
+            mentionCount.mentionCount = mentionCount.mentionCount + num + num2;
+            let flag = mentionCount.unread;
+            if (!flag) {
+              let unread;
+              if (tmp4[id.id] != null) {
+                unread = tmp2.unread;
+              }
+              flag = unread;
+            }
+            if (flag == null) {
+              flag = false;
+            }
+            mentionCount.unread = flag;
+            let isMentionLowImportance = mentionCount.isMentionLowImportance;
+            if (isMentionLowImportance) {
+              isMentionLowImportance = 0 === num;
+            }
+            mentionCount.isMentionLowImportance = isMentionLowImportance;
           }
-          if (flag == null) {
-            flag = false;
-          }
-          mentionCount.unread = flag;
-          let isMentionLowImportance = mentionCount.isMentionLowImportance;
-          if (isMentionLowImportance) {
-            isMentionLowImportance = 0 === num;
-          }
-          mentionCount.isMentionLowImportance = isMentionLowImportance;
-        }
-        return mentionCount;
-      }, { unread: false, mentionCount: 0, isMentionLowImportance: true });
+          return mentionCount;
+        },
+        { unread: false, mentionCount: 0, isMentionLowImportance: true },
+      );
     }
   });
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
   let obj3 = id(name[12]);
   let items1 = [closure_6, selectedPreviewId];
   let items2 = [expanded, id, childNodes];
-  const stateFromStoresObject1 = obj3.useStateFromStoresObject(items1, () => {
-    let num = 0;
-    guildId = guildId.getGuildId();
-    const iter = childNodes[Symbol.iterator]();
-    while (iter !== undefined) {
-      if (iter.next().id === guildId) {
-        let tmp = guildId;
-        let tmp7 = iter;
-        iter.return();
-        break;
-      } else {
-        let tmp4 = num;
-        let sum = num + 1;
-        num = sum;
-        if (4 <= sum) {
-          let tmp6 = iter;
+  const stateFromStoresObject1 = obj3.useStateFromStoresObject(
+    items1,
+    () => {
+      let num = 0;
+      guildId = guildId.getGuildId();
+      const iter = childNodes[Symbol.iterator]();
+      while (iter !== undefined) {
+        if (iter.next().id === guildId) {
+          let tmp = guildId;
+          let tmp7 = iter;
           iter.return();
           break;
-        }
-        break;
-      }
-      let tmp8 = expanded;
-      let flag = false;
-      if (!expanded) {
-        let tmp9 = null;
-        flag = false;
-        if (null != guildId) {
-          let tmp10 = selectedPreviewId;
-          let guildsTree = selectedPreviewId.getGuildsTree();
-          let node = guildsTree.getNode(guildId);
-          let parentId;
-          if (node != null) {
-            parentId = node.parentId;
+        } else {
+          let tmp4 = num;
+          let sum = num + 1;
+          num = sum;
+          if (4 <= sum) {
+            let tmp6 = iter;
+            iter.return();
+            break;
           }
-          let tmp13 = id;
-          flag = parentId === id;
+          break;
         }
+        let tmp8 = expanded;
+        let flag = false;
+        if (!expanded) {
+          let tmp9 = null;
+          flag = false;
+          if (null != guildId) {
+            let tmp10 = selectedPreviewId;
+            let guildsTree = selectedPreviewId.getGuildsTree();
+            let node = guildsTree.getNode(guildId);
+            let parentId;
+            if (node != null) {
+              parentId = node.parentId;
+            }
+            let tmp13 = id;
+            flag = parentId === id;
+          }
+        }
+        let obj = { selectedPreviewId: null, hasGuildSelected: null };
+        obj[0] = tmp;
+        obj[1] = flag;
+        return obj;
       }
-      let obj = { selectedPreviewId: null, hasGuildSelected: null };
-      obj[0] = tmp;
-      obj[1] = flag;
-      return obj;
-    }
-  }, items2);
+    },
+    items2,
+  );
   selectedPreviewId = stateFromStoresObject1.selectedPreviewId;
-  const guildsBarAnimatedWrapperStyles = obj1.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true });
+  const guildsBarAnimatedWrapperStyles = obj1.useGuildsBarAnimatedWrapperStyles({
+    disableSelectedColor: true,
+    disableBGColor: true,
+  });
   let tmp = id;
   const tmp3 = expanded;
   ({ badge, cutouts } = expanded(name[23])({ mentionCount, isMentionLowImportance }));
@@ -394,25 +455,30 @@ const memoResult1 = importAllResult.memo(function GuildsBarGuildFolder(id) {
   folderPreviewStyle = memo.folderPreviewStyle;
   const items6 = [id, foldersChanged];
   const items7 = [expanded, childNodes, tintStyle, selectedPreviewId];
-  const memo1 = color.useMemo(() => ({
-    onPress() {
-      if (null != closure_5) {
-        const value = obj.get();
-        const _HermesInternal = HermesInternal;
-        if (value.has("" + closure_0)) {
-          const _Set = Set;
-          const set = new Set(obj.get());
-          const _HermesInternal2 = HermesInternal;
-          set.add("" + tmp);
-          const result = obj.set(set);
+  const memo1 = color.useMemo(
+    () => ({
+      onPress() {
+        if (null != closure_5) {
+          const value = obj.get();
+          const _HermesInternal = HermesInternal;
+          if (value.has("" + closure_0)) {
+            const _Set = Set;
+            const set = new Set(obj.get());
+            const _HermesInternal2 = HermesInternal;
+            set.add("" + tmp);
+            const result = obj.set(set);
+          }
+          tmp = closure_0;
         }
-        tmp = closure_0;
-      }
-      const result1 = closure_1_0(closure_1_2[26]).triggerHapticFeedback(closure_1_0(closure_1_2[26]).HapticFeedbackTypes.IMPACT_LIGHT);
-      const obj4 = closure_1_0(closure_1_2[26]);
-      const result2 = closure_1_1(closure_1_2[27]).toggleGuildFolderExpand(closure_0);
-    }
-  }), items6);
+        const result1 = closure_1_0(closure_1_2[26]).triggerHapticFeedback(
+          closure_1_0(closure_1_2[26]).HapticFeedbackTypes.IMPACT_LIGHT,
+        );
+        const obj4 = closure_1_0(closure_1_2[26]);
+        const result2 = closure_1_1(closure_1_2[27]).toggleGuildFolderExpand(closure_0);
+      },
+    }),
+    items6,
+  );
   const items8 = [expanded, tmp4.guildPreviewWrapper, folderPreviewStyle];
   const memo2 = color.useMemo(() => {
     if (expanded) {
@@ -447,7 +513,7 @@ const memoResult1 = importAllResult.memo(function GuildsBarGuildFolder(id) {
     }
   }, items7);
   const callback = color.useCallback((arg0) => {
-    const items = [guildId.guildPreviewWrapper, ];
+    const items = [guildId.guildPreviewWrapper];
     let tmp4;
     if (!expanded) {
       tmp4 = folderPreviewStyle;
@@ -477,7 +543,7 @@ const memoResult1 = importAllResult.memo(function GuildsBarGuildFolder(id) {
             action();
           }
         }
-      }
+      },
     };
     return obj;
   }, items9);
@@ -532,13 +598,42 @@ const memoResult1 = importAllResult.memo(function GuildsBarGuildFolder(id) {
       return { animations: obj, initialValues: obj1 };
     }
   }
-  obj = { dragDropInProgress, sharedId: sharedValue, id, isDragTarget, withSpring: id(name[14]).withSpring, TRANSITION_PHYSICS: sharedValue };
+  obj = {
+    dragDropInProgress,
+    sharedId: sharedValue,
+    id,
+    isDragTarget,
+    withSpring: id(name[14]).withSpring,
+    TRANSITION_PHYSICS: sharedValue,
+  };
   E.__closure = obj;
   E.__workletHash = 11967845900199;
   E.__initData = closure_26;
   const items10 = [id, sharedValue, isDragTarget, dragDropInProgress];
   const callback1 = color.useCallback(E, items10);
-  obj = { id: null, draggedItemSize: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: null, circle: false, styles: null, label: null, isDragTarget: null, dragState: null, sharedId: null, cutouts: null, config: null, isDragPreview: null, overState: null, expanded: null, layout: null, externalChildren: null, expandedChildren: null, children: null };
+  obj = {
+    id: null,
+    draggedItemSize: null,
+    accessibilityActions: null,
+    onAccessibilityAction: null,
+    selected: null,
+    unread: null,
+    circle: false,
+    styles: null,
+    label: null,
+    isDragTarget: null,
+    dragState: null,
+    sharedId: null,
+    cutouts: null,
+    config: null,
+    isDragPreview: null,
+    overState: null,
+    expanded: null,
+    layout: null,
+    externalChildren: null,
+    expandedChildren: null,
+    children: null,
+  };
   const obj6 = id(name[18]);
   obj[0] = "" + id;
   obj[1] = itemSize;
@@ -551,45 +646,50 @@ const memoResult1 = importAllResult.memo(function GuildsBarGuildFolder(id) {
   }
   obj[5] = tmp19;
   obj[7] = guildsBarAnimatedWrapperStyles;
-  obj[8] = obj5.useStateFromStores(items3, () => {
-    if (null != name) {
-      let obj = { count: 1, names: null, label: null };
-      const items = [tmp];
-      obj[1] = items;
-      obj[2] = tmp;
-      return obj;
-    } else {
-      const items1 = [];
-      let num = 0;
-      const obj4 = childNodes[Symbol.iterator]();
-      while (obj4 !== undefined) {
-        let tmp5 = foldersChanged;
-        let guild = foldersChanged.getGuild(tmp3.id);
-        if (null != guild) {
-          let tmp8 = guild;
-          let arr = items1.push(tmp7.name);
-        }
-        let tmp10 = num;
-        let sum = num + 1;
-        num = sum;
-        if (3 <= sum) {
-          let tmp12 = obj4;
-          obj4.return();
-          break;
-        }
-        obj = { names: null, count: null, label: null };
-        obj[0] = items1;
-        let tmp13 = childNodes;
-        obj[1] = childNodes.length;
-        let tmp14 = id;
-        let tmp15 = name;
-        let obj2 = id(name[24]);
-        obj[2] = obj2.getListSummaryLabel(items1, childNodes.length);
+  obj[8] = obj5.useStateFromStores(
+    items3,
+    () => {
+      if (null != name) {
+        let obj = { count: 1, names: null, label: null };
+        const items = [tmp];
+        obj[1] = items;
+        obj[2] = tmp;
         return obj;
+      } else {
+        const items1 = [];
+        let num = 0;
+        const obj4 = childNodes[Symbol.iterator]();
+        while (obj4 !== undefined) {
+          let tmp5 = foldersChanged;
+          let guild = foldersChanged.getGuild(tmp3.id);
+          if (null != guild) {
+            let tmp8 = guild;
+            let arr = items1.push(tmp7.name);
+          }
+          let tmp10 = num;
+          let sum = num + 1;
+          num = sum;
+          if (3 <= sum) {
+            let tmp12 = obj4;
+            obj4.return();
+            break;
+          }
+          obj = { names: null, count: null, label: null };
+          obj[0] = items1;
+          let tmp13 = childNodes;
+          obj[1] = childNodes.length;
+          let tmp14 = id;
+          let tmp15 = name;
+          let obj2 = id(name[24]);
+          obj[2] = obj2.getListSummaryLabel(items1, childNodes.length);
+          return obj;
+        }
+        const tmp16 = childNodes;
       }
-      const tmp16 = childNodes;
-    }
-  }, items4, expanded(name[25])).label;
+    },
+    items4,
+    expanded(name[25]),
+  ).label;
   obj[9] = isDragTarget;
   obj[10] = dragState;
   obj[11] = sharedValue;

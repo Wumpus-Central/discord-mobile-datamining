@@ -26,32 +26,32 @@ class SimpleActionSheet {
       tmp5Result1 = tmp5(require("RedesignBottomSheetTitleHeaderBase").BottomSheetTitleHeader, obj);
     }
     obj1 = { children: null };
-    items = [, ];
+    items = [,];
     items[0] = tmp5Result1;
     obj2 = {
       hasIcons: global.hasIcons,
       children: options.map((arg0, arg1) => {
-            ({ icon, IconComponent, onPress: closure_0 } = arg0);
-            ({ label, isDestructive } = arg0);
-            if (null != icon) {
-              let obj = { source: null, IconComponent: null };
-              obj[0] = icon;
-              obj[1] = IconComponent;
-              const tmp = closure_1_2(closure_1_0(closure_1_1[5]).ActionSheetRow.Icon, obj);
-            }
-            obj = { icon: tmp, variant: null, label: null, onPress: null };
-            let str = "default";
-            if (isDestructive) {
-              str = "danger";
-            }
-            obj[1] = str;
-            obj[2] = label;
-            obj[3] = function onPress() {
-              closure_1_0();
-              callback();
-            };
-            return closure_1_2(closure_1_0(closure_1_1[5]).ActionSheetRow, obj, arg1);
-          })
+        ({ icon, IconComponent, onPress: closure_0 } = arg0);
+        ({ label, isDestructive } = arg0);
+        if (null != icon) {
+          let obj = { source: null, IconComponent: null };
+          obj[0] = icon;
+          obj[1] = IconComponent;
+          const tmp = closure_1_2(closure_1_0(closure_1_1[5]).ActionSheetRow.Icon, obj);
+        }
+        obj = { icon: tmp, variant: null, label: null, onPress: null };
+        let str = "default";
+        if (isDestructive) {
+          str = "danger";
+        }
+        obj[1] = str;
+        obj[2] = label;
+        obj[3] = function onPress() {
+          closure_1_0();
+          callback();
+        };
+        return closure_1_2(closure_1_0(closure_1_1[5]).ActionSheetRow, obj, arg1);
+      }),
     };
     items[1] = jsx(require("ActionSheetRowIcon").ActionSheetRow.Group, obj2);
     obj1[0] = items;

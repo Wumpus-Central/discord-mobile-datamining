@@ -15,8 +15,7 @@ function handleGuildReset(guild) {
 let set = new Set();
 let closure_4 = {};
 const Store = initializeDefault.Store;
-class ChannelStatusStore extends Store {
-}
+class ChannelStatusStore extends Store {}
 const prototype = ChannelStatusStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2);
@@ -60,7 +59,7 @@ const channelStatusStore = new ChannelStatusStore(dispatcherDefault, {
   },
   FETCH_CHANNEL_INFO: function handleFetchChannelInfo(guildId) {
     set.add(guildId.guildId);
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/channel/ChannelStatusStore.tsx");
 

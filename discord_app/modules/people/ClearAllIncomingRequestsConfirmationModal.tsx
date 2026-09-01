@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/people/ClearAllIncomingRequest
 
 export default function openClearAllIncomingRequestsConfirmationModal(arg0) {
   openClearAllIncomingRequestsConfirmationModal.default(arg0);
-};
+}

@@ -10,7 +10,7 @@ function _decodeEncodedUserRecord() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, str) {
+    return (function* (arg0, str) {
       closure_3 = tmp2;
       dependencyMap = tmp5;
       let callback = table;
@@ -64,7 +64,10 @@ export const base64Encode = function base64Encode(arg0) {
   const items = [...uint8Array];
   const str = btoa(String.fromCharCode.apply(items));
   const str2 = btoa(String.fromCharCode.apply(items)).replace(/\//g, "_");
-  return btoa(String.fromCharCode.apply(items)).replace(/\//g, "_").replace(/\+/g, "-").replace(/={1,2}$/, "");
+  return btoa(String.fromCharCode.apply(items))
+    .replace(/\//g, "_")
+    .replace(/\+/g, "-")
+    .replace(/={1,2}$/, "");
 };
 export const base64Decode = function base64Decode(closure_0) {
   return Uint8Array.from(atob(closure_0), (str) => str.charCodeAt(0));

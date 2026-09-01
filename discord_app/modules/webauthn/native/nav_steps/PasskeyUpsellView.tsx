@@ -14,7 +14,18 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ View: c5, Image: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: null, scrollViewContainer: null, headerContainer: null, headerImage: null, headerText: null, circleIcon: null, listContainer: null, row: null, text: null, buttonContainer: null };
+createCacheKey = {
+  container: null,
+  scrollViewContainer: null,
+  headerContainer: null,
+  headerImage: null,
+  headerText: null,
+  circleIcon: null,
+  listContainer: null,
+  row: null,
+  text: null,
+  buttonContainer: null,
+};
 createCacheKey = { flex: 1, flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 1, justifyContent: "space-between", paddingHorizontal: ThemesDefault.space.PX_16 };
@@ -23,10 +34,28 @@ createCacheKey[2] = { alignItems: "center", justifyContent: "center", gap: Theme
 createCacheKey[3] = { height: 190, width: 220, resizeMode: "contain" };
 createCacheKey[4] = { textAlign: "center" };
 let obj2 = { alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_16 };
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.round };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.round };
-createCacheKey[6] = { gap: ThemesDefault.space.PX_24, marginLeft: ThemesDefault.space.PX_8, marginRight: ThemesDefault.space.PX_8 };
-let obj4 = { gap: ThemesDefault.space.PX_24, marginLeft: ThemesDefault.space.PX_8, marginRight: ThemesDefault.space.PX_8 };
+createCacheKey[5] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  width: ThemesDefault.space.PX_32,
+  height: ThemesDefault.space.PX_32,
+  borderRadius: ThemesDefault.radii.round,
+};
+let obj3 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  width: ThemesDefault.space.PX_32,
+  height: ThemesDefault.space.PX_32,
+  borderRadius: ThemesDefault.radii.round,
+};
+createCacheKey[6] = {
+  gap: ThemesDefault.space.PX_24,
+  marginLeft: ThemesDefault.space.PX_8,
+  marginRight: ThemesDefault.space.PX_8,
+};
+let obj4 = {
+  gap: ThemesDefault.space.PX_24,
+  marginLeft: ThemesDefault.space.PX_8,
+  marginRight: ThemesDefault.space.PX_8,
+};
 createCacheKey[7] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "center" };
 createCacheKey[8] = { flex: 1 };
 let obj5 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "center" };
@@ -65,8 +94,14 @@ export default function PasskeyUpsellView() {
   obj = { contentContainerStyle: tmp4.scrollViewContainer, children: null };
   obj1 = { style: tmp4.headerContainer, children: null };
   const tmp6 = onRegisterSuccess(onCancel.useState(false), 2);
-  const items1 = [callback(closure_6, { source: registerAssetDefault, style: tmp4.headerImage }), , ];
-  const obj3 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp4.headerText, children: null };
+  const items1 = [callback(closure_6, { source: registerAssetDefault, style: tmp4.headerImage }), ,];
+  const obj3 = {
+    accessibilityRole: "header",
+    variant: "heading-xl/bold",
+    color: "mobile-text-heading-primary",
+    style: tmp4.headerText,
+    children: null,
+  };
   let intl = navigation(1236).intl;
   obj3[4] = intl.string(navigation(1236).t.CjleBl);
   items1[1] = callback(navigation(4474).Text, obj3);
@@ -85,18 +120,18 @@ export default function PasskeyUpsellView() {
   obj4[3] = stringResult;
   items1[2] = callback(navigation(4474).Text, obj4);
   obj1[1] = items1;
-  const items2 = [closure_12(closure_5, obj1), , ];
+  const items2 = [closure_12(closure_5, obj1), ,];
   const obj5 = { style: tmp4.listContainer, children: null };
   const obj6 = { style: tmp4.row, children: null };
-  const items3 = [callback(closure_5, { style: tmp4.circleIcon }), ];
+  const items3 = [callback(closure_5, { style: tmp4.circleIcon })];
   obj8 = { variant: "heading-md/normal", color: "text-default", style: tmp4.text, children: null };
   const intl3 = tmp(1236).intl;
   obj8[3] = intl3.string(navigation(1236).t.HtqVkj);
   items3[1] = callback(navigation(4474).Text, obj8);
   obj6[1] = items3;
-  const items4 = [closure_12(closure_5, obj6), ];
+  const items4 = [closure_12(closure_5, obj6)];
   const obj9 = { style: tmp4.row, children: null };
-  const items5 = [callback(closure_5, { style: tmp4.circleIcon }), ];
+  const items5 = [callback(closure_5, { style: tmp4.circleIcon })];
   const obj11 = { variant: "heading-md/normal", color: "text-default", style: tmp4.text, children: null };
   isIOSResult = obj8.isIOS();
   const obj10 = { style: tmp4.circleIcon };
@@ -120,7 +155,7 @@ export default function PasskeyUpsellView() {
   const obj13 = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl5 = tmp(1236).intl;
   obj13[2] = intl5.format(navigation(1236).t.OeGXVv, { learnMoreLink: articleURL });
-  const items6 = [callback(navigation(4474).Text, obj13), , ];
+  const items6 = [callback(navigation(4474).Text, obj13), ,];
   const intl6 = tmp(1236).intl;
   const string3 = intl6.string;
   const t3 = tmp(1236).t;
@@ -140,7 +175,7 @@ export default function PasskeyUpsellView() {
     size: "lg",
     disabled: tmp7,
     loading: tmp7,
-    grow: true
+    grow: true,
   });
   const intl7 = tmp(1236).intl;
   const string4 = intl7.string;
@@ -150,10 +185,16 @@ export default function PasskeyUpsellView() {
   } else {
     string4Result = string4(t4["7J6/nG"]);
   }
-  items6[2] = callback(navigation(4928).Button, { text: string4Result, onPress: onCancel, size: "lg", variant: "secondary", grow: true });
+  items6[2] = callback(navigation(4928).Button, {
+    text: string4Result,
+    onPress: onCancel,
+    size: "lg",
+    variant: "secondary",
+    grow: true,
+  });
   obj12[1] = items6;
   items2[2] = closure_12(closure_5, obj12);
   obj[1] = items2;
   obj[2] = closure_12(tmp12, obj);
   return callback(navigation(5553).SafeAreaPaddingView, obj);
-};
+}

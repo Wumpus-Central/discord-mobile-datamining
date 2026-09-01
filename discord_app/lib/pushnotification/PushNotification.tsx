@@ -24,7 +24,16 @@ export default {
           closure_0 = arg0;
           let tmp2 = null;
           if (null != arg0) {
-            let obj = { getData: null, getMessage: null, getSound: null, getCategory: null, getAlert: null, getContentAvailable: null, getBadgeCount: null, finish: null };
+            let obj = {
+              getData: null,
+              getMessage: null,
+              getSound: null,
+              getCategory: null,
+              getAlert: null,
+              getContentAvailable: null,
+              getBadgeCount: null,
+              finish: null,
+            };
             obj[0] = function getData() {
               const obj = {};
               const merged = Object.assign(message);
@@ -196,7 +205,16 @@ export default {
           handleLocalNotification = arg0;
           let tmp = null;
           if (null != arg0) {
-            const obj = { getData: null, getMessage: null, getSound: null, getCategory: null, getAlert: null, getContentAvailable: null, getBadgeCount: null, finish: null };
+            const obj = {
+              getData: null,
+              getMessage: null,
+              getSound: null,
+              getCategory: null,
+              getAlert: null,
+              getContentAvailable: null,
+              getBadgeCount: null,
+              finish: null,
+            };
             obj[0] = function getData() {
               const obj = {};
               const merged = Object.assign(message);
@@ -248,7 +266,16 @@ export default {
           handleLocalNotification = arg0;
           let tmp = null;
           if (null != arg0) {
-            const obj = { getData: null, getMessage: null, getSound: null, getCategory: null, getAlert: null, getContentAvailable: null, getBadgeCount: null, finish: null };
+            const obj = {
+              getData: null,
+              getMessage: null,
+              getSound: null,
+              getCategory: null,
+              getAlert: null,
+              getContentAvailable: null,
+              getBadgeCount: null,
+              finish: null,
+            };
             obj[0] = function getData() {
               const obj = {};
               const merged = Object.assign(message);
@@ -376,5 +403,5 @@ export default {
         arg0(false);
       }
     });
-  }
+  },
 };

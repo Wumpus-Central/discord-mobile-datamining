@@ -10,19 +10,23 @@ export default function useHasVideoPermission(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_3];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let tmp = null != callback;
-    if (tmp) {
-      let isPrivateResult = obj.isPrivate();
-      if (!isPrivateResult) {
-        const obj2 = callback(closure_1_1[3]);
-        isPrivateResult = obj2.canStreamInChannel(obj, closure_1_2, closure_1_3, false);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let tmp = null != callback;
+      if (tmp) {
+        let isPrivateResult = obj.isPrivate();
+        if (!isPrivateResult) {
+          const obj2 = callback(closure_1_1[3]);
+          isPrivateResult = obj2.canStreamInChannel(obj, closure_1_2, closure_1_3, false);
+        }
+        tmp = isPrivateResult;
       }
-      tmp = isPrivateResult;
-    }
-    return tmp;
-  }, items1);
-};
+      return tmp;
+    },
+    items1,
+  );
+}
 export const getVideoPermission = function getVideoPermission(channel) {
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {

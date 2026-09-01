@@ -29,12 +29,8 @@ class ForegroundServiceManager {
   }
 }
 const prototype = ForegroundServiceManager.prototype;
-prototype["initialize"] = function initialize() {
-
-};
-prototype["terminate"] = function terminate() {
-
-};
+prototype["initialize"] = function initialize() {};
+prototype["terminate"] = function terminate() {};
 prototype["addServiceHandler"] = function addServiceHandler(arg0) {
   const self = this;
   closure_0 = arg0;
@@ -98,8 +94,7 @@ obj.handleChange = function handleChange() {
   }
 };
 initializeDefault;
-class ForegroundServiceLifecycleManager extends tmp4 {
-}
+class ForegroundServiceLifecycleManager extends tmp4 {}
 const prototype2 = ForegroundServiceLifecycleManager.prototype;
 prototype2["_initialize"] = function _initialize() {
   obj.initialize();

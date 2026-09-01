@@ -151,7 +151,7 @@ export default {
           tmp();
         }
       };
-      const items = [callback(confirmText(4863).AlertActionButton, obj), ];
+      const items = [callback(confirmText(4863).AlertActionButton, obj)];
       let tmp30Result = null;
       if (null != cancelText) {
         obj1 = { variant: "secondary", text: null, onPress: null };
@@ -170,16 +170,21 @@ export default {
       obj[3] = tmp31(tmp32, obj2);
       obj3 = { dismissable: null };
       obj3[0] = true === isDismissable;
-      obj7.openAlert(text, callback(confirmText(4863).AlertModal, obj), () => {
-        if (!c5) {
-          if (c4 != null) {
-            tmp();
+      obj7.openAlert(
+        text,
+        callback(confirmText(4863).AlertModal, obj),
+        () => {
+          if (!c5) {
+            if (c4 != null) {
+              tmp();
+            }
           }
-        }
-        if (c6 === c2) {
-          c6 = null;
-        }
-      }, obj3);
+          if (c6 === c2) {
+            c6 = null;
+          }
+        },
+        obj3,
+      );
       const obj10 = confirmText(4947);
     } else {
       if (null != c6) {
@@ -216,7 +221,7 @@ export default {
           callback(true);
         },
         cancelText: null,
-        onCancel: null
+        onCancel: null,
       };
       const intl = callback(closure_1_2[5]).intl;
       obj[1] = intl.string(callback(closure_1_2[5]).t["ETE/oC"]);
@@ -226,5 +231,5 @@ export default {
       const merged = Object.assign(callback);
       self.show(obj);
     });
-  }
+  },
 };

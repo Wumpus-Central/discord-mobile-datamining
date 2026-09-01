@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/WebhookEmpty.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/WebhookEmpty.tsx",
+);
 
 export const getWebhookEmptySource = function getWebhookEmptySource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getWebhookEmptySource = function getWebhookEmptySource(theme) {
     },
     light() {
       return callback(16429);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useWebhookEmptySource = function useWebhookEmptySource() {
     },
     light() {
       return callback(16429);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const WebhookEmpty = function WebhookEmpty(arg0) {
     },
     light() {
       return callback(16429);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

@@ -69,4 +69,4 @@ export default function usePipDimensions(channelId) {
     }
     return { height, width };
   }, items);
-};
+}

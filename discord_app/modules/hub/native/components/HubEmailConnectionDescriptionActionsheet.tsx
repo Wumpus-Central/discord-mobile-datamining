@@ -11,7 +11,9 @@ require = arg1;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 let closure_4 = createCacheKey.createStyles({ description: { marginBottom: 8 } });
-const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx",
+);
 
 export default function HubEmailConnectionDescriptionActionsheet() {
   const tmp = callback3();
@@ -19,7 +21,7 @@ export default function HubEmailConnectionDescriptionActionsheet() {
   obj = { title: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["48kg+O"]);
-  const items = [callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), , ];
+  const items = [callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), ,];
   obj = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = getSystemLocale.intl;
   obj[3] = intl2.string(getSystemLocale.t.O1k9XX);
@@ -30,4 +32,4 @@ export default function HubEmailConnectionDescriptionActionsheet() {
   items[2] = callback(Text.Text, obj1);
   obj[0] = items;
   return callback2(Background.BottomSheet, obj);
-};
+}

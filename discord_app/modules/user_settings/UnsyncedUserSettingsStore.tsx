@@ -21,8 +21,7 @@ const STANDARD = obj.STANDARD;
 let c11 = null;
 let closure_12 = {};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class UnsyncedUserSettingsStore extends DeviceSettingsStore {
-}
+class UnsyncedUserSettingsStore extends DeviceSettingsStore {}
 const prototype = UnsyncedUserSettingsStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let obj = arg0;
@@ -59,7 +58,7 @@ Object.defineProperty(prototype, "displayCompactAvatars", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "lowQualityImageMode", {
   get: function lowQualityImageMode() {
@@ -69,7 +68,7 @@ Object.defineProperty(prototype, "lowQualityImageMode", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "videoUploadQuality", {
   get: function videoUploadQuality(arg0) {
@@ -79,7 +78,7 @@ Object.defineProperty(prototype, "videoUploadQuality", {
     }
     return videoUploadQuality;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "dataSavingMode", {
   get: function dataSavingMode() {
@@ -92,7 +91,7 @@ Object.defineProperty(prototype, "dataSavingMode", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "expressionPickerWidth", {
   get: function expressionPickerWidth() {
@@ -102,7 +101,7 @@ Object.defineProperty(prototype, "expressionPickerWidth", {
     }
     return MIN;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "messageRequestSidebarWidth", {
   get: function messageRequestSidebarWidth() {
@@ -112,7 +111,7 @@ Object.defineProperty(prototype, "messageRequestSidebarWidth", {
     }
     return messageRequestSidebarWidth;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "threadSidebarWidth", {
   get: function threadSidebarWidth() {
@@ -122,7 +121,7 @@ Object.defineProperty(prototype, "threadSidebarWidth", {
     }
     return threadSidebarWidth;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "postSidebarWidth", {
   get: function postSidebarWidth() {
@@ -132,7 +131,7 @@ Object.defineProperty(prototype, "postSidebarWidth", {
     }
     return postSidebarWidth;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "callChatSidebarWidth", {
   get: function callChatSidebarWidth() {
@@ -142,7 +141,7 @@ Object.defineProperty(prototype, "callChatSidebarWidth", {
     }
     return callChatSidebarWidth;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "homeSidebarWidth", {
   get: function homeSidebarWidth() {
@@ -157,13 +156,13 @@ Object.defineProperty(prototype, "homeSidebarWidth", {
     }
     return homeSidebarWidth;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "callHeaderHeight", {
   get: function callHeaderHeight() {
     return closure_12.callHeaderHeight;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "useSystemTheme", {
   get: function useSystemTheme() {
@@ -173,13 +172,13 @@ Object.defineProperty(prototype, "useSystemTheme", {
     }
     return UNSET;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "activityPanelHeight", {
   get: function activityPanelHeight() {
     return closure_12.activityPanelHeight;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "disableVoiceChannelChangeAlert", {
   get: function disableVoiceChannelChangeAlert() {
@@ -189,7 +188,7 @@ Object.defineProperty(prototype, "disableVoiceChannelChangeAlert", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "disableHardwareMuteSilenceAlert", {
   get: function disableHardwareMuteSilenceAlert() {
@@ -199,7 +198,7 @@ Object.defineProperty(prototype, "disableHardwareMuteSilenceAlert", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "disableEmbeddedActivityPopOutAlert", {
   get: function disableEmbeddedActivityPopOutAlert() {
@@ -209,7 +208,7 @@ Object.defineProperty(prototype, "disableEmbeddedActivityPopOutAlert", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "disableActivityHardwareAccelerationPrompt", {
   get: function disableActivityHardwareAccelerationPrompt() {
@@ -219,7 +218,7 @@ Object.defineProperty(prototype, "disableActivityHardwareAccelerationPrompt", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "disableInviteWithTextChannelActivityLaunch", {
   get: function disableInviteWithTextChannelActivityLaunch() {
@@ -229,7 +228,7 @@ Object.defineProperty(prototype, "disableInviteWithTextChannelActivityLaunch", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "disableHideSelfStreamAndVideoConfirmationAlert", {
   get: function disableHideSelfStreamAndVideoConfirmationAlert() {
@@ -239,7 +238,7 @@ Object.defineProperty(prototype, "disableHideSelfStreamAndVideoConfirmationAlert
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "pushUpsellUserSettingsDismissed", {
   get: function pushUpsellUserSettingsDismissed() {
@@ -249,7 +248,7 @@ Object.defineProperty(prototype, "pushUpsellUserSettingsDismissed", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "disableActivityHostLeftNitroUpsell", {
   get: function disableActivityHostLeftNitroUpsell() {
@@ -259,7 +258,7 @@ Object.defineProperty(prototype, "disableActivityHostLeftNitroUpsell", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "disableCallUserConfirmationPrompt", {
   get: function disableCallUserConfirmationPrompt() {
@@ -269,7 +268,7 @@ Object.defineProperty(prototype, "disableCallUserConfirmationPrompt", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "disableApplicationSubscriptionCancellationSurvey", {
   get: function disableApplicationSubscriptionCancellationSurvey() {
@@ -279,7 +278,7 @@ Object.defineProperty(prototype, "disableApplicationSubscriptionCancellationSurv
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "allowVibegrationsPictureInPictureOnNavigateAway", {
   get: function allowVibegrationsPictureInPictureOnNavigateAway() {
@@ -289,7 +288,7 @@ Object.defineProperty(prototype, "allowVibegrationsPictureInPictureOnNavigateAwa
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "darkSidebar", {
   get: function darkSidebar() {
@@ -299,7 +298,7 @@ Object.defineProperty(prototype, "darkSidebar", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "saveCameraUploadsToDevice", {
   get: function saveCameraUploadsToDevice() {
@@ -309,7 +308,7 @@ Object.defineProperty(prototype, "saveCameraUploadsToDevice", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isVisualRefreshDisabled"] = function isVisualRefreshDisabled(arg0) {
   let disableVisualRefresh = closure_12.disableVisualRefresh;
@@ -326,7 +325,7 @@ Object.defineProperty(prototype, "listDensity", {
     }
     return COZY;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hdrDynamicRange", {
   get: function hdrDynamicRange() {
@@ -336,7 +335,7 @@ Object.defineProperty(prototype, "hdrDynamicRange", {
     }
     return str;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "pauseSelfStreamPreviewWhenUnfocused", {
   get: function pauseSelfStreamPreviewWhenUnfocused() {
@@ -346,7 +345,7 @@ Object.defineProperty(prototype, "pauseSelfStreamPreviewWhenUnfocused", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 UnsyncedUserSettingsStore.displayName = "UnsyncedUserSettingsStore";
 UnsyncedUserSettingsStore.persistKey = "UnsyncedUserSettingsStore";
@@ -356,11 +355,29 @@ const items = [
     const value = Storage.get("UserSettingsStore");
     const Storage2 = Storage3.Storage;
     Storage2.remove("UserSettingsStore");
-    return applyDefault.pick(value, "dataSavingMode", "videoUploadQuality", "lowQualityImageMode", "useSystemTheme", "expressionPickerWidth", "disableVoiceChannelChangeAlert", "disableHardwareMuteSilenceAlert", "disableHideSelfStreamAndVideoConfirmationAlert", "pushUpsellDismissed", "disableEmbeddedActivityPopOutAlert", "disableActivityHardwareAccelerationPrompt", "disableInviteWithTextChannelActivityLaunch", "disableActivityHostLeftNitroUpsell", "disableCallUserConfirmationPrompt", "disableApplicationSubscriptionCancellationSurvey", "enableAndroidChatListAnimations");
+    return applyDefault.pick(
+      value,
+      "dataSavingMode",
+      "videoUploadQuality",
+      "lowQualityImageMode",
+      "useSystemTheme",
+      "expressionPickerWidth",
+      "disableVoiceChannelChangeAlert",
+      "disableHardwareMuteSilenceAlert",
+      "disableHideSelfStreamAndVideoConfirmationAlert",
+      "pushUpsellDismissed",
+      "disableEmbeddedActivityPopOutAlert",
+      "disableActivityHardwareAccelerationPrompt",
+      "disableInviteWithTextChannelActivityLaunch",
+      "disableActivityHostLeftNitroUpsell",
+      "disableCallUserConfirmationPrompt",
+      "disableApplicationSubscriptionCancellationSurvey",
+      "enableAndroidChatListAnimations",
+    );
   },
   (arg0) => {
     delete tmp[tmp2];
-  }
+  },
 ];
 UnsyncedUserSettingsStore.migrations = items;
 obj = {
@@ -379,11 +396,17 @@ obj = {
   },
   REGISTER_SUCCESS: function handleRegisterSuccess() {
     closure_12.useSystemTheme = SystemThemeState.ON;
-  }
+  },
 };
 const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/user_settings/UnsyncedUserSettingsStore.tsx");
 
 export default unsyncedUserSettingsStore;
 export const VideoQualitySettings = obj;
-export const VideoCompressionQuality = { VERY_LOW: "very_low", LOW: "low", MEDIUM: "medium", HIGH: "high", VERY_HIGH: "very_high" };
+export const VideoCompressionQuality = {
+  VERY_LOW: "very_low",
+  LOW: "low",
+  MEDIUM: "medium",
+  HIGH: "high",
+  VERY_HIGH: "very_high",
+};

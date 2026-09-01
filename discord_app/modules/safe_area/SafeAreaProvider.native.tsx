@@ -109,58 +109,67 @@ export const SafeAreaReporter = function SafeAreaReporter() {
         });
         let obj = safeAreaInsets(ref[8]);
       }
-    }, items1)
+    }, items1),
   };
-  return <View style={closure_6} onLayout={React.useCallback(() => {
-    if (!ref.current) {
-      tmp.current = true;
-      safeAreaInsets(ref[8]).batchUpdates(() => {
-        let obj = callback(closure_1_2[3]);
-        if (obj.isMetaQuest()) {
-          let META_QUEST_SAFE_AREA_INSETS = tmp3(tmp4[4]).META_QUEST_SAFE_AREA_INSETS;
-        } else {
-          META_QUEST_SAFE_AREA_INSETS = tmp;
-          if (tmp3Result.isAndroid()) {
-            safeAreaInsets = callback2(tmp4[6]).getState().byAppEntry[tmp2].safeAreaInsets;
-            const obj3 = callback2(tmp4[6]);
-            const rect = callback2(tmp4[7]).getStableSafeAreaInsets(tmp2);
-            let tmp7 = tmp;
-            if (null != rect) {
-              if (rect.bottom === safeAreaInsets.bottom) {
-                if (rect.top === safeAreaInsets.top) {
-                  tmp7 = safeAreaInsets;
+  return (
+    <View
+      style={closure_6}
+      onLayout={React.useCallback(() => {
+        if (!ref.current) {
+          tmp.current = true;
+          safeAreaInsets(ref[8]).batchUpdates(() => {
+            let obj = callback(closure_1_2[3]);
+            if (obj.isMetaQuest()) {
+              let META_QUEST_SAFE_AREA_INSETS = tmp3(tmp4[4]).META_QUEST_SAFE_AREA_INSETS;
+            } else {
+              META_QUEST_SAFE_AREA_INSETS = tmp;
+              if (tmp3Result.isAndroid()) {
+                safeAreaInsets = callback2(tmp4[6]).getState().byAppEntry[tmp2].safeAreaInsets;
+                const obj3 = callback2(tmp4[6]);
+                const rect = callback2(tmp4[7]).getStableSafeAreaInsets(tmp2);
+                let tmp7 = tmp;
+                if (null != rect) {
+                  if (rect.bottom === safeAreaInsets.bottom) {
+                    if (rect.top === safeAreaInsets.top) {
+                      tmp7 = safeAreaInsets;
+                    }
+                  }
+                  obj = { bottom: null, top: null, left: null, right: null };
+                  ({ bottom: obj5[0], top: obj5[1] } = rect);
+                  ({ left: obj5[2], right: obj5[3] } = tmp);
+                  safeAreaInsets = obj;
                 }
+                META_QUEST_SAFE_AREA_INSETS = tmp7;
+                const obj4 = callback2(tmp4[7]);
               }
-              obj = { bottom: null, top: null, left: null, right: null };
-              ({ bottom: obj5[0], top: obj5[1] } = rect);
-              ({ left: obj5[2], right: obj5[3] } = tmp);
-              safeAreaInsets = obj;
+              tmp3Result = tmp3(tmp4[5]);
             }
-            META_QUEST_SAFE_AREA_INSETS = tmp7;
-            const obj4 = callback2(tmp4[7]);
-          }
-          tmp3Result = tmp3(tmp4[5]);
+            callback2(closure_1_2[6]).setState((byAppEntry) => {
+              let tmp3 = byAppEntry;
+              if (byAppEntry.byAppEntry[closure_1_1].safeAreaInsets !== META_QUEST_SAFE_AREA_INSETS) {
+                let obj = { byAppEntry: null };
+                obj = {};
+                const merged = Object.assign(byAppEntry.byAppEntry);
+                obj = { safeAreaInsets: null };
+                obj[0] = tmp2;
+                obj[tmp] = obj;
+                obj[0] = obj;
+                tmp3 = obj;
+              }
+              return tmp3;
+            });
+          });
+          let obj = safeAreaInsets(ref[8]);
         }
-        callback2(closure_1_2[6]).setState((byAppEntry) => {
-          let tmp3 = byAppEntry;
-          if (byAppEntry.byAppEntry[closure_1_1].safeAreaInsets !== META_QUEST_SAFE_AREA_INSETS) {
-            let obj = { byAppEntry: null };
-            obj = {};
-            const merged = Object.assign(byAppEntry.byAppEntry);
-            obj = { safeAreaInsets: null };
-            obj[0] = tmp2;
-            obj[tmp] = obj;
-            obj[0] = obj;
-            tmp3 = obj;
-          }
-          return tmp3;
-        });
-      });
-      let obj = safeAreaInsets(ref[8]);
-    }
-  }, items1)} />;
+      }, items1)}
+    />
+  );
 };
 export const SafeAreaProvider = function SafeAreaProvider(arg0) {
   ({ children, style } = arg0);
-  return jsx(_mod1631.SafeAreaProvider, { initialMetrics: EMPTY_SAFE_AREA_INSETS.INITIAL_SAFE_AREA_METRICS, children, style });
+  return jsx(_mod1631.SafeAreaProvider, {
+    initialMetrics: EMPTY_SAFE_AREA_INSETS.INITIAL_SAFE_AREA_METRICS,
+    children,
+    style,
+  });
 };

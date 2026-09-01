@@ -131,11 +131,11 @@ class ChannelRowPreview {
         str5 = "";
         combined = "" + authorLabel + ": ";
       }
-      items = [, ];
+      items = [,];
       items[0] = combined;
       items[1] = text;
       obj3[5] = items;
-      items1 = [, ];
+      items1 = [,];
       items1[0] = tmp10(require("Text").Text, obj3);
       tmp14 = null != trailingIcon;
       if (tmp14) {
@@ -183,14 +183,31 @@ class NativeChannelRowPreview {
     InlineAttachmentMedia = require("explicitContentFromProto").InlineAttachmentMedia;
     setting2 = InlineAttachmentMedia.getSetting();
     closure_6 = setting2;
-    items = [, , , ];
+    items = [, , ,];
     items[0] = setting;
     items[1] = setting1;
     items[2] = setting2;
     items[3] = gifAutoPlay;
     memo = closure_3.useMemo(() => {
       let obj = new gifAutoPlay(seeMoreLabelColor[23])();
-      obj = { renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
+      obj = {
+        renderEmbeds: setting,
+        inlineEmbedMedia: setting1,
+        inlineAttachmentMedia: setting2,
+        renderReactions: false,
+        animateEmoji: false,
+        gifAutoPlay,
+        renderReplies: false,
+        renderCodedLinks: false,
+        renderGiftCode: false,
+        renderActivityInviteEmbed: false,
+        renderThreadEmbeds: false,
+        renderForumPostActions: false,
+        ignoreMentioned: true,
+        enableSwipeActions: false,
+        renderExecutedCommands: false,
+        useAlternateEmbedColors: true,
+      };
       obj.setOptions(obj);
       return obj;
     }, items);
@@ -198,34 +215,33 @@ class NativeChannelRowPreview {
       pointerEvents: "none",
       horizontalOffset: 0,
       modifyRow(message) {
-            let processColorOrThrowResult;
-            message.contextType = closure_1_0(seeMoreLabelColor[25]).MessageContextType.SEARCH;
-            if (null != closure_3) {
-              try {
-                processColorOrThrowResult = closure_1_0(seeMoreLabelColor[26]).processColorOrThrow(tmp4);
-                const tmp2Result = closure_1_0(seeMoreLabelColor[26]);
-              } catch (err) {
-              }
-            }
-            if (null != processColorOrThrowResult) {
-              message.message.textColor = processColorOrThrowResult;
-            }
-            if (null != closure_0) {
-              const obj = { numberOfLines: null, expandable: false, seeMoreLabel: "...", seeMoreLabelColor: null };
-              obj[0] = tmp6;
-              if (processColorOrThrowResult == null) {
-                processColorOrThrowResult = seeMoreLabelColor.seeMoreLabelColor;
-              }
-              obj[3] = processColorOrThrowResult;
-              message.truncation = obj;
-            }
-          },
+        let processColorOrThrowResult;
+        message.contextType = closure_1_0(seeMoreLabelColor[25]).MessageContextType.SEARCH;
+        if (null != closure_3) {
+          try {
+            processColorOrThrowResult = closure_1_0(seeMoreLabelColor[26]).processColorOrThrow(tmp4);
+            const tmp2Result = closure_1_0(seeMoreLabelColor[26]);
+          } catch (err) {}
+        }
+        if (null != processColorOrThrowResult) {
+          message.message.textColor = processColorOrThrowResult;
+        }
+        if (null != closure_0) {
+          const obj = { numberOfLines: null, expandable: false, seeMoreLabel: "...", seeMoreLabelColor: null };
+          obj[0] = tmp6;
+          if (processColorOrThrowResult == null) {
+            processColorOrThrowResult = seeMoreLabelColor.seeMoreLabelColor;
+          }
+          obj[3] = processColorOrThrowResult;
+          message.truncation = obj;
+        }
+      },
       message,
       rowGenerator: memo,
       messageSizeCacheRef,
       maxHeight,
       gradientStyles,
-      gradientColors
+      gradientColors,
     };
     return closure_6(require("DCDChatItem"), obj1);
   }
@@ -236,14 +252,26 @@ let closure_9 = importAllResult.memo((arg0) => {
   ({ markup, channelId, guildId, muted, layout, color } = arg0);
   const fontScale = getFontScale.useFontScale();
   const obj = getFontScale;
-  return getOrParseMessagePreviewMarkupAST.renderMessagePreviewMarkup({ content, muted, guildId, channelId, layout, color, fontScale });
+  return getOrParseMessagePreviewMarkupAST.renderMessagePreviewMarkup({
+    content,
+    muted,
+    guildId,
+    channelId,
+    layout,
+    color,
+    fontScale,
+  });
 });
 const memoResult = importAllResult.memo((message) => {
   const _require = message;
   let obj = initialize;
   const items = [closure_5];
   const items1 = [message.message.author.id];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.isBlockedOrIgnored(message.message.author.id), items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => closure_1_5.isBlockedOrIgnored(message.message.author.id),
+    items1,
+  );
   if (obj2.isMessageContentPreviewable(message.message)) {
     if (!stateFromStores) {
       obj = {};
@@ -256,7 +284,9 @@ const memoResult = importAllResult.memo((message) => {
   const merged1 = Object.assign(message);
   tmp7 = callback(ChannelRowPreview, obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx",
+);
 
 export { ChannelRowPreview };
 export { NativeChannelRowPreview };

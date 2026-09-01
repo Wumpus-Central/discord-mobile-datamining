@@ -26,7 +26,11 @@ export const NativePaymentContextProvider = function NativePaymentContextProvide
       isFetchingForSKUsResult = closure_1_4.isFetchingForSKUs(skuIDs);
     }
     if (!isFetchingForSKUsResult) {
-      const subscriptionPlansBySKUs = skuIDs(selectedPlanId[7]).fetchSubscriptionPlansBySKUs(skuIDs, storeFront.country, closure_1_5.APPLE_ADVANCED_COMMERCE);
+      const subscriptionPlansBySKUs = skuIDs(selectedPlanId[7]).fetchSubscriptionPlansBySKUs(
+        skuIDs,
+        storeFront.country,
+        closure_1_5.APPLE_ADVANCED_COMMERCE,
+      );
       const obj = skuIDs(selectedPlanId[7]);
     }
   }, items);
@@ -38,25 +42,41 @@ export const NativePaymentContextProvider = function NativePaymentContextProvide
   obj = {
     isReadyToPurchase: nativeIAPPayments.nativePaymentsConnected,
     setSelectedPlanId: tmp3.setSelectedPlanId,
-    selectedPlan: skuIDs(selectedPlanId[9]).useStateFromStores(items1, () => {
-      let value = null;
-      if (null != selectedPlanId) {
-        value = closure_1_4.get(tmp);
-      }
-      return value;
-    }, items2),
+    selectedPlan: skuIDs(selectedPlanId[9]).useStateFromStores(
+      items1,
+      () => {
+        let value = null;
+        if (null != selectedPlanId) {
+          value = closure_1_4.get(tmp);
+        }
+        return value;
+      },
+      items2,
+    ),
     storeFront,
-    activeSubscription
+    activeSubscription,
   };
   obj[0] = obj;
   obj[1] = children;
-  return <redux.Provider isReadyToPurchase={nativeIAPPayments.nativePaymentsConnected} setSelectedPlanId={tmp3.setSelectedPlanId} selectedPlan={skuIDs(selectedPlanId[9]).useStateFromStores(items1, () => {
-    let value = null;
-    if (null != selectedPlanId) {
-      value = closure_1_4.get(tmp);
-    }
-    return value;
-  }, items2)} storeFront={storeFront} activeSubscription={activeSubscription} />;
+  return (
+    <redux.Provider
+      isReadyToPurchase={nativeIAPPayments.nativePaymentsConnected}
+      setSelectedPlanId={tmp3.setSelectedPlanId}
+      selectedPlan={skuIDs(selectedPlanId[9]).useStateFromStores(
+        items1,
+        () => {
+          let value = null;
+          if (null != selectedPlanId) {
+            value = closure_1_4.get(tmp);
+          }
+          return value;
+        },
+        items2,
+      )}
+      storeFront={storeFront}
+      activeSubscription={activeSubscription}
+    />
+  );
 };
 export const useNativeIAPPaymentContext = tmp4;
 export const useForwardedNativePaymentContext = tmp5;

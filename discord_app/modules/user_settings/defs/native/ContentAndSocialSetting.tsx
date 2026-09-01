@@ -13,13 +13,13 @@ obj = {
   },
   parent: null,
   IconComponent: FriendsIcon.FriendsIcon,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.CONTENT_AND_SOCIAL,
   getComponent() {
     return ContentAndSocialSettings /* ContentAndSocialSettings */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ContentAndSocialSetting.tsx");

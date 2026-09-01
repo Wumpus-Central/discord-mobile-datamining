@@ -33,28 +33,42 @@ export const useIsContentDismissed = function useIsContentDismissed(arg0, arg1) 
     return hasBitResult;
   });
 };
-export const markContentAsDismissed = function markContentAsDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, closure_0, arg2, AUTO_DISMISS) {
+export const markContentAsDismissed = function markContentAsDismissed(
+  GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK,
+  closure_0,
+  arg2,
+  AUTO_DISMISS,
+) {
   const _require = true;
   importDefault = GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK;
   dependencyMap = closure_0;
   let obj = updateUserGuildSettings;
-  const result = obj.updateUserGuildSettings(closure_0, (dismissedGuildContent) => {
-    dismissedGuildContent = closure_1_3.getDismissedGuildContent(guildId);
-    let hasBitResult = null != dismissedGuildContent;
-    if (hasBitResult) {
-      hasBitResult = callback(guildId[4]).hasBit(dismissedGuildContent, tmp);
-      const obj = callback(guildId[4]);
-    }
-    if (!callback) {
-      const tmp9 = callback(guildId[4]);
-      dismissedGuildContent.dismissedGuildContent = tmp6 ? tmp9.addBit : tmp9.removeBit(dismissedGuildContent.dismissedGuildContent, tmp);
-    }
-    return false;
-  }, UserSettingsDelay.INFREQUENT_USER_ACTION);
+  const result = obj.updateUserGuildSettings(
+    closure_0,
+    (dismissedGuildContent) => {
+      dismissedGuildContent = closure_1_3.getDismissedGuildContent(guildId);
+      let hasBitResult = null != dismissedGuildContent;
+      if (hasBitResult) {
+        hasBitResult = callback(guildId[4]).hasBit(dismissedGuildContent, tmp);
+        const obj = callback(guildId[4]);
+      }
+      if (!callback) {
+        const tmp9 = callback(guildId[4]);
+        dismissedGuildContent.dismissedGuildContent = tmp6
+          ? tmp9.addBit
+          : tmp9.removeBit(dismissedGuildContent.dismissedGuildContent, tmp);
+      }
+      return false;
+    },
+    UserSettingsDelay.INFREQUENT_USER_ACTION,
+  );
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
     obj = { type: null, guild_id: null, action: null };
-    obj[0] = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK];
+    obj[0] =
+      require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleGuildContent[
+        GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK
+      ];
     obj[1] = closure_0;
     if (AUTO_DISMISS == null) {
       UNKNOWN = ContentDismissActionType.UNKNOWN;
@@ -68,17 +82,23 @@ export const unmarkContentAsDismissed = function unmarkContentAsDismissed(dc, gu
   const _require = false;
   closure_1 = dc;
   dependencyMap = guildId;
-  const result = require("../user_settings/UserSettingsProtoActionCreators.tsx").updateUserGuildSettings(guildId, (dismissedGuildContent) => {
-    dismissedGuildContent = closure_1_3.getDismissedGuildContent(guildId);
-    let hasBitResult = null != dismissedGuildContent;
-    if (hasBitResult) {
-      hasBitResult = callback(guildId[4]).hasBit(dismissedGuildContent, tmp);
-      const obj = callback(guildId[4]);
-    }
-    if (!callback) {
-      const tmp9 = callback(guildId[4]);
-      dismissedGuildContent.dismissedGuildContent = tmp6 ? tmp9.addBit : tmp9.removeBit(dismissedGuildContent.dismissedGuildContent, tmp);
-    }
-    return false;
-  }, UserSettingsDelay.FREQUENT_USER_ACTION);
+  const result = require("../user_settings/UserSettingsProtoActionCreators.tsx").updateUserGuildSettings(
+    guildId,
+    (dismissedGuildContent) => {
+      dismissedGuildContent = closure_1_3.getDismissedGuildContent(guildId);
+      let hasBitResult = null != dismissedGuildContent;
+      if (hasBitResult) {
+        hasBitResult = callback(guildId[4]).hasBit(dismissedGuildContent, tmp);
+        const obj = callback(guildId[4]);
+      }
+      if (!callback) {
+        const tmp9 = callback(guildId[4]);
+        dismissedGuildContent.dismissedGuildContent = tmp6
+          ? tmp9.addBit
+          : tmp9.removeBit(dismissedGuildContent.dismissedGuildContent, tmp);
+      }
+      return false;
+    },
+    UserSettingsDelay.FREQUENT_USER_ACTION,
+  );
 };

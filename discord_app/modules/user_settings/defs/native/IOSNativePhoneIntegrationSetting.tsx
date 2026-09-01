@@ -22,7 +22,7 @@ const toggle = createToggle.createToggle({
       const obj2 = set2;
     }
     return enabled;
-  }
+  },
 });
 const obj = {
   useTitle() {
@@ -39,7 +39,7 @@ const obj = {
       const obj2 = set2;
     }
     return enabled;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/IOSNativePhoneIntegrationSetting.tsx");
 

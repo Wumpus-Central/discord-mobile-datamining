@@ -23,4 +23,4 @@ export default function getFlattenedChannelList(arg0, arg1) {
   const arr = applyDefault(arg0);
   const flattenDeepResult = mapped.flattenDeep();
   return mapped.flattenDeep().filter(fn).value();
-};
+}

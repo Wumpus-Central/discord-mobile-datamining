@@ -51,7 +51,10 @@ export const getNames = function getNames(user) {
     if (null == names[toLocaleLowerCase]) {
       const obj = names(closure_1_2[4]);
       const str = names(closure_1_2[4]).stripDiacritics(toLocaleLowerCase.toLocaleLowerCase());
-      tmp[toLocaleLowerCase] = names(closure_1_2[4]).stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim().split(" ");
+      tmp[toLocaleLowerCase] = names(closure_1_2[4])
+        .stripDiacritics(toLocaleLowerCase.toLocaleLowerCase())
+        .trim()
+        .split(" ");
       const str2 = names(closure_1_2[4]).stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim();
     }
   });

@@ -14,7 +14,7 @@ export default function useStageChannelConnectAction(arg0) {
     return NORMAL;
   }
   NORMAL = obj.NORMAL;
-};
+}
 export const ChannelConnectAction = obj;
 export const useStageChannelStartEvent = function useStageChannelStartEvent(id) {
   return { isLive: useStageChannelIsLiveDefault(id), isModerator: useCurrentUserStageRolesDefault(id, true).moderator };

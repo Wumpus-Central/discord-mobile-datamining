@@ -122,9 +122,7 @@ prototype["initializeIfNeeded"] = function initializeIfNeeded() {
     }
   }
 };
-prototype["initialize"] = function initialize() {
-
-};
+prototype["initialize"] = function initialize() {};
 prototype["syncWith"] = function syncWith(items, handleUserSettingsProtoStoreChange) {
   const self = this;
   let wrapper = handleUserSettingsProtoStoreChange;
@@ -148,23 +146,26 @@ prototype["syncWith"] = function syncWith(items, handleUserSettingsProtoStoreCha
     }
     closure_0 = num;
     c2 = null;
-    closure_0 = 0 === num ? (() => {
-      clearImmediate(immediate);
-      immediate = setImmediate(wrapper);
-    }) : (() => {
-      if (null == timeout) {
-        const _setTimeout = setTimeout;
-        timeout = setTimeout(() => {
-          try {
-            callback();
-            c2 = null;
-          } catch (tmp4) {
-            c2 = null;
-            throw tmp4;
+    closure_0 =
+      0 === num
+        ? () => {
+            clearImmediate(immediate);
+            immediate = setImmediate(wrapper);
           }
-        }, closure_0);
-      }
-    });
+        : () => {
+            if (null == timeout) {
+              const _setTimeout = setTimeout;
+              timeout = setTimeout(() => {
+                try {
+                  callback();
+                  c2 = null;
+                } catch (tmp4) {
+                  c2 = null;
+                  throw tmp4;
+                }
+              }, closure_0);
+            }
+          };
     const item = items.forEach((addChangeListener) => addChangeListener.addChangeListener(closure_0));
   } else {
     const item1 = items.forEach((_syncWiths) => {
@@ -178,16 +179,25 @@ prototype["waitFor"] = function waitFor() {
   const items = [...arguments];
   const mapped = items.map((_dispatcher) => {
     let dispatchToken = null;
-    closure_1_1(closure_1_2[3])(null != _dispatcher, "Store.waitFor(...) called with null Store at index " + arg1 + " for store " + self.getName());
+    closure_1_1(closure_1_2[3])(
+      null != _dispatcher,
+      "Store.waitFor(...) called with null Store at index " + arg1 + " for store " + self.getName(),
+    );
     if (null != _dispatcher._dispatcher) {
-      closure_1_1(closure_1_2[3])(_dispatcher._dispatcher === self._dispatcher, "Stores belong to two separate dispatchers.");
+      closure_1_1(closure_1_2[3])(
+        _dispatcher._dispatcher === self._dispatcher,
+        "Stores belong to two separate dispatchers.",
+      );
       dispatchToken = _dispatcher.getDispatchToken();
     }
     return dispatchToken;
   });
   const _dispatcher = this._dispatcher;
   let dispatchToken = this.getDispatchToken();
-  _dispatcher.addDependencies(dispatchToken, mapped.filter((arg0) => null != arg0));
+  _dispatcher.addDependencies(
+    dispatchToken,
+    mapped.filter((arg0) => null != arg0),
+  );
 };
 prototype["emitChange"] = function emitChange() {
   loggerDefault.markChanged(this);

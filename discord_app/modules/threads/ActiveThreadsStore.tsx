@@ -72,8 +72,7 @@ let closure_5 = {};
 let set = new Set();
 let closure_8 = {};
 const Store = initializeDefault.Store;
-class ActiveThreadsStore extends Store {
-}
+class ActiveThreadsStore extends Store {}
 const prototype = ActiveThreadsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4);
@@ -234,7 +233,7 @@ const activeThreadsStore = new ActiveThreadsStore(dispatcherDefault, {
       }
     }
     return false;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/threads/ActiveThreadsStore.tsx");
 

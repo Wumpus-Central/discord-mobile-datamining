@@ -37,11 +37,11 @@ function ImageItem(index) {
         },
         onClose() {
           return callback2(false);
-        }
+        },
       };
       obj.openMediaModal(obj);
     }, items),
-    children: <closure_6 {...obj} />
+    children: <closure_6 {...obj} />,
   };
   items1 = [tmp.mediaItem, { width, height }];
   obj = { source: { uri: url }, style: tmp.mediaImage };
@@ -100,14 +100,23 @@ function TrailerItem(active) {
         },
         onClose() {
           return callback2(false);
-        }
+        },
       };
       obj.openMediaModal(obj);
     }, items1),
-    children: null
+    children: null,
   };
   items2 = [tmp.mediaItem, { width, height }];
-  obj = { style: tmp.mediaVideo, source: { uri: url }, poster: posterUrl, paused: !active, muted: true, resizeMode: "cover", pauseWhileAppInactive: true, controls: ref1.current };
+  obj = {
+    style: tmp.mediaVideo,
+    source: { uri: url },
+    poster: posterUrl,
+    paused: !active,
+    muted: true,
+    resizeMode: "cover",
+    pauseWhileAppInactive: true,
+    controls: ref1.current,
+  };
   const tmp10 = closure_7;
   const tmp3 = trackAction(onScrollToIndex.useState(0), 2);
   let combined;
@@ -119,16 +128,33 @@ function TrailerItem(active) {
   return ref1(tmp10, obj);
 }
 ({ View: c5, Image: closure_6, Pressable: error } = get_ActivityIndicator);
-createCacheKey = { container: null, scrollView: null, scrollViewContent: null, mediaItem: null, mediaImage: null, mediaVideo: null };
+createCacheKey = {
+  container: null,
+  scrollView: null,
+  scrollViewContent: null,
+  mediaItem: null,
+  mediaImage: null,
+  mediaVideo: null,
+};
 createCacheKey = { gap: ThemesDefault.space.PX_12, marginHorizontal: -ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", overflow: "visible" };
 createCacheKey[2] = { gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
 const obj1 = { gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
-createCacheKey[3] = { maxWidth: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_WIDTH, maxHeight: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_HEIGHT, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
+createCacheKey[3] = {
+  maxWidth: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_WIDTH,
+  maxHeight: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_HEIGHT,
+  borderRadius: ThemesDefault.radii.lg,
+  overflow: "hidden",
+};
 createCacheKey[4] = { width: "100%", height: "100%", resizeMode: "cover" };
-const obj2 = { maxWidth: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_WIDTH, maxHeight: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_HEIGHT, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
+const obj2 = {
+  maxWidth: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_WIDTH,
+  maxHeight: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_HEIGHT,
+  borderRadius: ThemesDefault.radii.lg,
+  overflow: "hidden",
+};
 createCacheKey[5] = { width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BLACK };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 const obj3 = { width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BLACK };
@@ -172,10 +198,16 @@ export default function GameProfileMedia(game) {
   const items1 = [first];
   memo2 = React.useMemo(() => {
     const diff = first - trackAction(obscured[6]).space.PX_12;
-    return Math.max(0, Math.min(game(obscured[7]).MEDIA_ITEM_MAX_WIDTH, diff - 2 * trackAction(obscured[6]).space.PX_16));
+    return Math.max(
+      0,
+      Math.min(game(obscured[7]).MEDIA_ITEM_MAX_WIDTH, diff - 2 * trackAction(obscured[6]).space.PX_16),
+    );
   }, items1);
   const items2 = [memo2];
-  closure_13 = React.useMemo(() => Math.min(game(obscured[7]).MEDIA_ITEM_MAX_HEIGHT, memo2 / game(obscured[7]).MEDIA_ITEM_ASPECT_RATIO), items2);
+  closure_13 = React.useMemo(
+    () => Math.min(game(obscured[7]).MEDIA_ITEM_MAX_HEIGHT, memo2 / game(obscured[7]).MEDIA_ITEM_ASPECT_RATIO),
+    items2,
+  );
   const items3 = [memo1, memo];
   closure_14 = React.useMemo(() => game(obscured[7]).buildMediaViewerSources(memo1, memo), items3);
   const items4 = [memo1, first, memo2];
@@ -231,14 +263,36 @@ export default function GameProfileMedia(game) {
     obj = { style: null, onLayout: null, children: null };
     obj[0] = tmp.container;
     obj[1] = callback;
-    obj = { ref: null, showsHorizontalScrollIndicator: false, style: null, contentContainerStyle: null, decelerationRate: "fast", snapToOffsets: null, snapToStart: false, snapToEnd: false, onMomentumScrollEnd: null, children: null };
+    obj = {
+      ref: null,
+      showsHorizontalScrollIndicator: false,
+      style: null,
+      contentContainerStyle: null,
+      decelerationRate: "fast",
+      snapToOffsets: null,
+      snapToStart: false,
+      snapToEnd: false,
+      onMomentumScrollEnd: null,
+      children: null,
+    };
     obj[0] = ref;
     ({ scrollView: obj3[2], scrollViewContent: obj3[3] } = tmp);
     obj[5] = memo3;
     obj[8] = callback1;
     obj[9] = memo1.map((type) => {
       if ("trailer" === type.type) {
-        let obj = { url: null, posterUrl: null, active: null, index: null, sources: null, trackAction: null, width: null, height: null, onScrollToIndex: null, setMediaModalOpen: null };
+        let obj = {
+          url: null,
+          posterUrl: null,
+          active: null,
+          index: null,
+          sources: null,
+          trackAction: null,
+          width: null,
+          height: null,
+          onScrollToIndex: null,
+          setMediaModalOpen: null,
+        };
         ({ originalUrl: obj[0], previewUrl: obj[1] } = type);
         let tmp4 = !obscured;
         if (!obscured) {
@@ -260,7 +314,16 @@ export default function GameProfileMedia(game) {
         const tmp = ref;
         const tmp2 = memo2;
       } else {
-        obj = { url: null, index: null, sources: null, trackAction: null, width: null, height: null, onScrollToIndex: null, setMediaModalOpen: null };
+        obj = {
+          url: null,
+          index: null,
+          sources: null,
+          trackAction: null,
+          width: null,
+          height: null,
+          onScrollToIndex: null,
+          setMediaModalOpen: null,
+        };
         obj[0] = type.previewUrl;
         obj[1] = arg1;
         obj[2] = closure_14;
@@ -279,4 +342,4 @@ export default function GameProfileMedia(game) {
     const tmp17 = trackAction(tmp2[13]);
   }
   return tmp13;
-};
+}

@@ -8,7 +8,19 @@ const MessageAttachmentFlags = ME.MessageAttachmentFlags;
 let result = set.fileFinishedImporting("modules/messages/native/renderer/transformMessageAttachments.tsx");
 
 export default function transformMessageAttachments(arg0) {
-  ({ attachments, uploadAttachments: require, shouldInlineAttachmentMedia: importDefault, gifAutoPlay: dependencyMap, viewImageDescriptions: AttachmentType, useReducedMotion: MessageAttachmentFlags, shouldObscureSpoiler: closure_5, themedBackgroundColor: closure_6, enabledContentHarmTypeFlags: closure_7, shouldAgeVerify: closure_8, colors: closure_9 } = arg0);
+  ({
+    attachments,
+    uploadAttachments: require,
+    shouldInlineAttachmentMedia: importDefault,
+    gifAutoPlay: dependencyMap,
+    viewImageDescriptions: AttachmentType,
+    useReducedMotion: MessageAttachmentFlags,
+    shouldObscureSpoiler: closure_5,
+    themedBackgroundColor: closure_6,
+    enabledContentHarmTypeFlags: closure_7,
+    shouldAgeVerify: closure_8,
+    colors: closure_9,
+  } = arg0);
   const found = attachments.filter((flags) => {
     let tmp = null == flags.flags;
     if (!tmp) {
@@ -92,7 +104,12 @@ export default function transformMessageAttachments(arg0) {
         }
         let tmp27;
         if (tmpResult3.hasFlag(flags, closure_1_4.IS_CLIP)) {
-          obj = { attachmentTagText: null, attachmentTagIconType: "clip", attachmentTagBackgroundColor: null, attachmentTagTextColor: null };
+          obj = {
+            attachmentTagText: null,
+            attachmentTagIconType: "clip",
+            attachmentTagBackgroundColor: null,
+            attachmentTagTextColor: null,
+          };
           const intl = tmp(tmp2[7]).intl;
           obj[0] = intl.string(tmp(tmp2[7]).t.gESDiU);
           ({ clipTagBackgroundColor: obj10[2], clipTagTextColor: obj10[3] } = closure_9);
@@ -111,7 +128,40 @@ export default function transformMessageAttachments(arg0) {
             }
           }
         }
-        obj = { url: null, isSuspiciousDownload: null, videoUrl: null, filename: null, size: null, description: null, alt: null, altTextHint: null, showDescription: null, durationSecs: null, waveform: null, width: null, height: null, hint: null, role: null, attachmentType: null, id: null, isAnimated: null, uploaderId: null, uploaderItemId: null, backgroundColor: null, placeholder: null, placeholderVersion: null, mediaViewerBufferForPlaybackMs: 1000, mediaViewerBufferForPlaybackAfterRebufferMs: 1000, mediaViewerMinBufferMs: 20000, mediaViewerMaxBufferMs: 20000, mediaViewerEnableDecoderFallback: false, mediaViewerEnableAsyncBufferQueueing: true, mediaViewerHttpEngine: null, srcIsAnimated: null, inlinePlaybackDisabled: null };
+        obj = {
+          url: null,
+          isSuspiciousDownload: null,
+          videoUrl: null,
+          filename: null,
+          size: null,
+          description: null,
+          alt: null,
+          altTextHint: null,
+          showDescription: null,
+          durationSecs: null,
+          waveform: null,
+          width: null,
+          height: null,
+          hint: null,
+          role: null,
+          attachmentType: null,
+          id: null,
+          isAnimated: null,
+          uploaderId: null,
+          uploaderItemId: null,
+          backgroundColor: null,
+          placeholder: null,
+          placeholderVersion: null,
+          mediaViewerBufferForPlaybackMs: 1000,
+          mediaViewerBufferForPlaybackAfterRebufferMs: 1000,
+          mediaViewerMinBufferMs: 20000,
+          mediaViewerMaxBufferMs: 20000,
+          mediaViewerEnableDecoderFallback: false,
+          mediaViewerEnableAsyncBufferQueueing: true,
+          mediaViewerHttpEngine: null,
+          srcIsAnimated: null,
+          inlinePlaybackDisabled: null,
+        };
         obj[0] = localUri;
         let tmp29 = null != localUri;
         if (tmp29) {
@@ -180,7 +230,12 @@ export default function transformMessageAttachments(arg0) {
         obj[31] = isWebPlayerVideoFileResult;
         const str5 = intl2.string(tmp(tmp2[7]).t.jCV1Tz);
         const tmp38 = closure_6;
-        obj1 = { attachment: null, shouldObscureSpoiler: null, enabledContentHarmTypeFlags: null, shouldAgeVerify: null };
+        obj1 = {
+          attachment: null,
+          shouldObscureSpoiler: null,
+          enabledContentHarmTypeFlags: null,
+          shouldAgeVerify: null,
+        };
         obj1[0] = arg0;
         obj1[1] = closure_5;
         obj1[2] = closure_7;
@@ -215,4 +270,4 @@ export default function transformMessageAttachments(arg0) {
       tmp15 = tmp17;
     }
   });
-};
+}

@@ -34,12 +34,12 @@ function ProposalCard(proposal) {
     privileged_intents = [];
   }
   let obj = { style: items, children: null };
-  items = [, ];
+  items = [,];
   ({ surface: arr3[0], proposalCard: arr3[1] } = callback3());
   obj = { variant: "heading-md/bold", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault["60htw+"]);
-  const items1 = [callback(Text.Text, obj), , , , , ];
+  const items1 = [callback(Text.Text, obj), , , , ,];
   if ("" === trimmed) {
     const intl2 = tmp6(1236).intl;
     let stringResult = intl2.string(tmp8(3501).IHCafX);
@@ -54,9 +54,15 @@ function ProposalCard(proposal) {
     obj1 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl3 = tmp6(1236).intl;
     obj1[2] = intl3.string(tmp8(3501).KLyB8Y);
-    const items2 = [tmp3(tmp6(4474).Text, obj1), ];
+    const items2 = [tmp3(tmp6(4474).Text, obj1)];
     const changes = proposal.changes;
-    items2[1] = changes.map((arg0, arg1) => callback2(callback(table[11]).Text, { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + arg0 }, arg1));
+    items2[1] = changes.map((arg0, arg1) =>
+      callback2(
+        callback(table[11]).Text,
+        { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + arg0 },
+        arg1,
+      ),
+    );
     obj[2] = items2;
     tmp5Result = tmp5(tmp6(4926).Stack, obj);
   }
@@ -67,7 +73,7 @@ function ProposalCard(proposal) {
     const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl4 = tmp6(1236).intl;
     obj3[2] = intl4.string(tmp8(3501).ieqTtP);
-    const items3 = [tmp3(tmp6(4474).Text, obj3), ];
+    const items3 = [tmp3(tmp6(4474).Text, obj3)];
     const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
     obj4[2] = bot_permissions.join(", ");
     items3[1] = tmp3(tmp6(4474).Text, obj4);
@@ -81,7 +87,7 @@ function ProposalCard(proposal) {
     const obj6 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl5 = tmp6(1236).intl;
     obj6[2] = intl5.string(tmp8(3501).Cn9qix);
-    const items4 = [tmp3(tmp6(4474).Text, obj6), ];
+    const items4 = [tmp3(tmp6(4474).Text, obj6)];
     const obj7 = { variant: "text-sm/normal", color: "text-default", children: null };
     obj7[2] = privileged_intents.join(", ");
     items4[1] = tmp3(tmp6(4474).Text, obj7);
@@ -116,13 +122,13 @@ function IdeaCards(arg0) {
           return title(title);
         },
         accessibilityLabel: null,
-        children: null
+        children: null,
       };
       const intl = closure_1_0(closure_1_2[8]).intl;
       obj = { title: title.title };
       obj[1] = intl.formatToPlainString(closure_1_1(closure_1_2[9]).pztRGi, obj);
       obj = { variant: "text-md/semibold", color: "text-default", children: title.title };
-      const items = [closure_1_14(closure_1_0(closure_1_2[11]).Text, obj), ];
+      const items = [closure_1_14(closure_1_0(closure_1_2[11]).Text, obj)];
       let tmpResult = null;
       if ("" !== title.value) {
         obj1 = { variant: "text-sm/normal", color: "text-muted", children: null };
@@ -132,7 +138,7 @@ function IdeaCards(arg0) {
       items[1] = tmpResult;
       obj[2] = closure_1_15(closure_1_0(closure_1_2[10]).Stack, { direction: "vertical", spacing: 4, children: items });
       return closure_1_14(closure_1_0(closure_1_2[14]).Card, obj, title.id);
-    })
+    }),
   ];
   obj[1] = items;
   return callback2(closure_5, obj);
@@ -147,9 +153,9 @@ function AttachmentPills(projectId) {
   const items = [projectId];
   closure_2 = importAllResult.useCallback((arg0) => {
     const promise = closure_1_10(projectId, arg0);
-    closure_1_10(projectId, arg0).then((arg0) => callback(table[15]).openURL(arg0)).catch(() => {
-
-    });
+    closure_1_10(projectId, arg0)
+      .then((arg0) => callback(table[15]).openURL(arg0))
+      .catch(() => {});
   }, items);
   return callback(closure_5, {
     style: tmp.attachmentPills,
@@ -182,7 +188,7 @@ function AttachmentPills(projectId) {
         tmp12 = closure_1_14(closure_1_5, obj1, "" + id.name + "-" + arg1);
       }
       return tmp12;
-    })
+    }),
   });
 }
 function IdeasOffer(onAsk) {
@@ -194,7 +200,7 @@ function IdeasOffer(onAsk) {
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault.tG5PBo);
   obj[1] = callback(Text.Text, obj);
-  const items = [callback(closure_5, obj), ];
+  const items = [callback(closure_5, obj)];
   obj1 = { variant: "secondary", size: "sm", disabled: null == onAsk, onPress: onAsk, text: null };
   const intl2 = getSystemLocale.intl;
   obj1[4] = intl2.string(messagesProxyDefault.cwTe5o);
@@ -206,16 +212,15 @@ function ActivityBox(tree) {
   tree = tree.tree;
   if (0 !== tree.steps.length) {
     let obj = { style: null, children: null };
-    const items = [, ];
+    const items = [,];
     ({ surface: arr[0], activityBox: arr[1] } = tmp);
     obj[0] = items;
     const steps = tree.steps;
     const items1 = [
       steps.map((id) => {
-          const obj = { variant: "text-sm/normal", color: "text-muted", children: callback(16188).describeNode(id) };
-          return callback3(callback(4474).Text, obj, id.id);
-        }),
-
+        const obj = { variant: "text-sm/normal", color: "text-muted", children: callback(16188).describeNode(id) };
+        return callback3(callback(4474).Text, obj, id.id);
+      }),
     ];
     const tasks = tree.tasks;
     items1[1] = tasks.map((task) => {
@@ -258,7 +263,7 @@ function TodoList(todos) {
         str = "text-feedback-positive";
       }
       obj = { variant: "text-sm/semibold", color: str, children: closure_1_23[children.status] };
-      const items = [closure_1_14(lib(closure_1_2[11]).Text, obj), ];
+      const items = [closure_1_14(lib(closure_1_2[11]).Text, obj)];
       let str2 = "text-default";
       if ("completed" === children.status) {
         str2 = "text-muted";
@@ -267,23 +272,60 @@ function TodoList(todos) {
       items[1] = closure_1_14(lib(closure_1_2[11]).Text, obj);
       obj[1] = items;
       return closure_1_15(closure_1_5, obj, children.id);
-    })
+    }),
   ];
   obj[1] = items;
   return callback2(closure_5, obj);
 }
 let c3 = importAllResult;
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
-({ ensureConnection: c9, getAttachmentUrl: c10, interruptTurn: unpackModuleId, sendUserMessage: closure_12 } = rejectPendingPublish);
+({
+  ensureConnection: c9,
+  getAttachmentUrl: c10,
+  interruptTurn: unpackModuleId,
+  sendUserMessage: closure_12,
+} = rejectPendingPublish);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = { allowList: true, allowHeading: true, allowLinks: true };
-let obj = { container: { flex: 1 }, transcript: { flex: 1 }, transcriptContent: null, row: null, surface: null, userBubble: null, assistantBubble: null, proposalCard: null, ideaCards: null, todoList: null, todoRow: null, activityBox: null, attachmentPills: null, attachmentPill: null, ideasOffer: null, ideasOfferHint: null, statusRow: null, thinkingRow: null, thinkingLabel: null };
+let obj = {
+  container: { flex: 1 },
+  transcript: { flex: 1 },
+  transcriptContent: null,
+  row: null,
+  surface: null,
+  userBubble: null,
+  assistantBubble: null,
+  proposalCard: null,
+  ideaCards: null,
+  todoList: null,
+  todoRow: null,
+  activityBox: null,
+  attachmentPills: null,
+  attachmentPill: null,
+  ideasOffer: null,
+  ideasOfferHint: null,
+  statusRow: null,
+  thinkingRow: null,
+  thinkingLabel: null,
+};
 obj = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12 };
 obj[2] = obj;
 createCacheKey = { marginVertical: ThemesDefault.space.PX_4 };
 obj[3] = createCacheKey;
-obj[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_12 };
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_12 };
+obj[4] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.md,
+  padding: ThemesDefault.space.PX_12,
+};
+let obj2 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.md,
+  padding: ThemesDefault.space.PX_12,
+};
 obj[5] = { alignSelf: "flex-end", maxWidth: "85%", gap: ThemesDefault.space.PX_4 };
 let obj3 = { alignSelf: "flex-end", maxWidth: "85%", gap: ThemesDefault.space.PX_4 };
 obj[6] = { alignSelf: "flex-start", maxWidth: "95%", gap: ThemesDefault.space.PX_4 };
@@ -298,17 +340,69 @@ obj[10] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "fl
 let obj8 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "flex-start" };
 obj[11] = { gap: ThemesDefault.space.PX_4, paddingVertical: ThemesDefault.space.PX_4 };
 let obj9 = { gap: ThemesDefault.space.PX_4, paddingVertical: ThemesDefault.space.PX_4 };
-obj[12] = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_4, marginTop: ThemesDefault.space.PX_4 };
-let obj10 = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_4, marginTop: ThemesDefault.space.PX_4 };
-obj[13] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
-let obj11 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
-obj[14] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8 };
+obj[12] = {
+  flexDirection: "row",
+  flexWrap: "wrap",
+  gap: ThemesDefault.space.PX_4,
+  marginTop: ThemesDefault.space.PX_4,
+};
+let obj10 = {
+  flexDirection: "row",
+  flexWrap: "wrap",
+  gap: ThemesDefault.space.PX_4,
+  marginTop: ThemesDefault.space.PX_4,
+};
+obj[13] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: ThemesDefault.radii.round,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_4,
+};
+let obj11 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: ThemesDefault.radii.round,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_4,
+};
+obj[14] = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_8,
+};
 obj[15] = { flexShrink: 1 };
-let obj12 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8 };
-obj[16] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_4 };
-let obj13 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_4 };
-obj[17] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
-let obj14 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
+let obj12 = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_8,
+};
+obj[16] = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_4,
+};
+let obj13 = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_4,
+};
+obj[17] = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_4,
+};
+let obj14 = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_4,
+};
 obj[18] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 let closure_17 = createCacheKey.createStyles(obj);
 let closure_23 = { completed: "\u2713", in_progress: "\u203A", pending: "\u00B7" };
@@ -342,12 +436,12 @@ let closure_25 = importAllResult.memo((isNewest) => {
   if ("user" === message.role) {
     if ("" !== trimmed) {
       let obj = { style: null, children: null };
-      const items4 = [, , ];
+      const items4 = [, ,];
       ({ row: arr9[0], userBubble: arr9[1], surface: arr9[2] } = tmp);
       obj[0] = items4;
       obj = { userId: null };
       obj[0] = message.user_id;
-      const items5 = [callback(VibegrationsMessageAuthorDefault, obj), , ];
+      const items5 = [callback(VibegrationsMessageAuthorDefault, obj), ,];
       let tmp51Result = null;
       if ("" !== trimmed) {
         obj1 = { variant: "text-md/normal", color: "text-default", children: null };
@@ -454,34 +548,37 @@ let closure_25 = importAllResult.memo((isNewest) => {
       }
     }
     obj = { style: null, children: null };
-    const items6 = [, ];
+    const items6 = [,];
     ({ row: arr7[0], assistantBubble: arr7[1] } = tmp);
     obj[0] = items6;
     const items7 = [
       memo1.map((children) => {
-          obj = { style: lib.surface, children: closure_1_14(message(closure_1_2[11]).Text, obj) };
-          obj = { variant: "text-sm/normal", color: "text-muted", children: children.content };
-          return closure_1_14(closure_1_5, obj, children.key);
-        }),
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-  ,
-
+        obj = { style: lib.surface, children: closure_1_14(message(closure_1_2[11]).Text, obj) };
+        obj = { variant: "text-sm/normal", color: "text-muted", children: children.content };
+        return closure_1_14(closure_1_5, obj, children.key);
+      }),
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
     ];
     const obj3 = { tree: null };
     obj3[0] = memo;
     items7[1] = callback(ActivityBox, obj3);
     items7[2] = memo2.map((content) => {
       let obj = { style: lib.surface, children: null };
-      obj = { variant: "text-md/normal", color: "text-default", children: lib(closure_1_2[12]).parse(content.content, true, closure_1_16) };
+      obj = {
+        variant: "text-md/normal",
+        color: "text-default",
+        children: lib(closure_1_2[12]).parse(content.content, true, closure_1_16),
+      };
       obj[1] = closure_1_14(message(closure_1_2[11]).Text, obj);
       return closure_1_14(closure_1_5, obj, content.key);
     });
@@ -681,7 +778,15 @@ export default function VibegrationsNativeChat(projectId) {
     },
     renderItem(item) {
       item = item.item;
-      const obj = { projectId, message: item, isNewest: item.render_id === render_id, onApprove: closure_3, onPickIdea: closure_4, onAskForIdeas: null, onAnswerClarification: null };
+      const obj = {
+        projectId,
+        message: item,
+        isNewest: item.render_id === render_id,
+        onApprove: closure_3,
+        onPickIdea: closure_4,
+        onAskForIdeas: null,
+        onAnswerClarification: null,
+      };
       let tmp4;
       if (closure_7) {
         tmp4 = closure_5;
@@ -694,11 +799,11 @@ export default function VibegrationsNativeChat(projectId) {
       obj[6] = tmp5;
       return closure_1_14(closure_1_25, obj);
     },
-    ListFooterComponent: null
+    ListFooterComponent: null,
   };
   if (!stateFromStores2) {
     obj[6] = null;
-    const items16 = [tmp18(tmp19, obj), , ];
+    const items16 = [tmp18(tmp19, obj), ,];
     let tmp18Result = null;
     if (null != stringResult) {
       obj1 = { style: null, children: null };
@@ -725,13 +830,13 @@ export default function VibegrationsNativeChat(projectId) {
   } else {
     obj4 = { style: null, children: null };
     obj4[0] = tmp.thinkingRow;
-    const items17 = [tmp18(closure_4, { size: "small" }), ];
+    const items17 = [tmp18(closure_4, { size: "small" })];
     obj5 = { style: null, children: null };
     obj5[0] = tmp.thinkingLabel;
     const obj6 = { variant: "text-sm/bold", color: "text-subtle", children: null };
     const intl3 = tmp2(tmp3[8]).intl;
     obj6[2] = intl3.string(stateFromStores(tmp3[9]).Xmvb23);
-    const items18 = [tmp18(tmp2(tmp3[11]).Text, obj6), ];
+    const items18 = [tmp18(tmp2(tmp3[11]).Text, obj6)];
     const intl4 = tmp2(tmp3[8]).intl;
     tmp18Result = stateFromStores(tmp3[9]);
     const obj7 = { variant: "text-sm/medium", color: "text-subtle", children: null };
@@ -744,4 +849,4 @@ export default function VibegrationsNativeChat(projectId) {
     obj4[1] = items17;
     tmp16(tmp17, obj4);
   }
-};
+}

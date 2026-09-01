@@ -19,7 +19,13 @@ let num2 = 48;
 if (set.isAndroid()) {
   num2 = 56;
 }
-set = { titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 }, horizontalPadding: { paddingHorizontal: 16 }, thinTitle: { paddingTop: 26 }, titleText: null, error: null };
+set = {
+  titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 },
+  horizontalPadding: { paddingHorizontal: 16 },
+  thinTitle: { paddingTop: 26 },
+  titleText: null,
+  error: null,
+};
 set = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: ThemesDefault.colors.TEXT_SUBTLE };
 set[3] = set;
 set = { color: ThemesDefault.unsafe_rawColors.RED_400 };
@@ -47,7 +53,7 @@ export default function FormTitle(thinTitle) {
   }
   ({ viewStyle, textStyle } = thinTitle);
   const tmp = callback();
-  const items = [tmp.titleWrapper, , , ];
+  const items = [tmp.titleWrapper, , ,];
   if (flag) {
     flag = tmp.thinTitle;
   }
@@ -59,7 +65,7 @@ export default function FormTitle(thinTitle) {
   let obj = { style: items, children: null };
   items[2] = horizontalPadding;
   items[3] = viewStyle;
-  const items1 = [tmp.titleText, textStyle, ];
+  const items1 = [tmp.titleText, textStyle];
   if (flag2) {
     flag2 = tmp.error;
   }
@@ -73,6 +79,6 @@ export default function FormTitle(thinTitle) {
   const items2 = [closure_3(Button.LegacyText, obj), icon];
   obj[1] = items2;
   return closure_4(closure_2, obj);
-};
+}
 export const FORM_TITLE_HEIGHT = num;
 export const THIN_FORM_TITLE_HEIGHT = num2;

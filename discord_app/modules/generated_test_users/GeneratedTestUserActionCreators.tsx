@@ -15,7 +15,7 @@ function _getGeneratedPoolById() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       const callback = callback2;
       obj1 = { url: null, trackedActionData: null, rejectWithError: false };
       obj1[0] = closure_1_6.GENERATED_POOL_BY_ID(callback);
@@ -24,25 +24,27 @@ function _getGeneratedPoolById() {
       obj1[1] = obj2;
       const value = callback2(4713).get(obj1);
       const obj6 = callback2(4713);
-      yield value.then((body) => {
-        body = body.body;
-        if (body.ok) {
-          const users = body.users;
-          let obj = { type: "GENERATED_POOL_BY_ID_FETCH_SUCCESS", pool: null, users: null };
-          const GeneratedTestPoolRecord = callback(15211).GeneratedTestPoolRecord;
-          const obj2 = closure_1_1(709);
-          obj[1] = GeneratedTestPoolRecord.fromServer(body.generated_pool).setPassword(callback);
-          obj[2] = users.map((arg0) => new closure_4(arg0));
-          obj2.dispatch(obj);
-          const fromServerResult = GeneratedTestPoolRecord.fromServer(body.generated_pool);
-        } else {
-          obj = closure_1_1(8675);
-          obj.showFailedToast(closure_1_7.GENERIC_ERROR);
-        }
-      }).catch(() => {
-        callback2(8675).showFailedToast(constants.GENERIC_ERROR);
-        return null;
-      });
+      yield value
+        .then((body) => {
+          body = body.body;
+          if (body.ok) {
+            const users = body.users;
+            let obj = { type: "GENERATED_POOL_BY_ID_FETCH_SUCCESS", pool: null, users: null };
+            const GeneratedTestPoolRecord = callback(15211).GeneratedTestPoolRecord;
+            const obj2 = closure_1_1(709);
+            obj[1] = GeneratedTestPoolRecord.fromServer(body.generated_pool).setPassword(callback);
+            obj[2] = users.map((arg0) => new closure_4(arg0));
+            obj2.dispatch(obj);
+            const fromServerResult = GeneratedTestPoolRecord.fromServer(body.generated_pool);
+          } else {
+            obj = closure_1_1(8675);
+            obj.showFailedToast(closure_1_7.GENERIC_ERROR);
+          }
+        })
+        .catch(() => {
+          callback2(8675).showFailedToast(constants.GENERIC_ERROR);
+          return null;
+        });
       return arg1;
     })();
   });

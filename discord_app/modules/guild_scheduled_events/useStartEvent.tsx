@@ -5,10 +5,8 @@ import closure_5 from "../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let closure_6 = {
-  onSuccess() {
-
-  },
-  permissionOverwrites: []
+  onSuccess() {},
+  permissionOverwrites: [],
 };
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useStartEvent.tsx");
 
@@ -22,7 +20,7 @@ export default function useStartEvent() {
       c7 = 0;
       c8 = 0;
       c6 = 0;
-      const iter = (function*(arg0, arg1) {
+      const iter = (function* (arg0, arg1) {
         c4 = tmp3;
         let tmp57 = onSuccess;
         if (onSuccess === undefined) {
@@ -138,7 +136,7 @@ export default function useStartEvent() {
       }
       return applyArgumentsResult;
     },
-    { loading: tmp[0], error: tmp2[0] }
+    { loading: tmp[0], error: tmp2[0] },
   ];
   return items;
-};
+}

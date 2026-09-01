@@ -48,7 +48,11 @@ class WishlistEmptyState {
       const set = new Set(items);
       closure_1_1(closure_1_2[23]).hideAllActionSheets();
       const obj2 = closure_1_1(closure_1_2[23]);
-      obj = { analyticsSource: closure_1_1(closure_1_2[25]).USER_PROFILE_WISHLIST, analyticsLocations: null, screen: null };
+      obj = {
+        analyticsSource: closure_1_1(closure_1_2[25]).USER_PROFILE_WISHLIST,
+        analyticsLocations: null,
+        screen: null,
+      };
       const items1 = [closure_1_1(closure_1_2[25]).USER_PROFILE_WISHLIST];
       obj[1] = items1;
       obj[2] = closure_1_18.FEATURED_PAGE;
@@ -58,9 +62,14 @@ class WishlistEmptyState {
     obj1 = { variant: "text-md/medium", color: str, accessibilityRole: "header", children: null };
     intl = require("getSystemLocale").intl;
     obj1[3] = intl.string(require("getSystemLocale").t.HGnLLT);
-    items1 = [, , ];
+    items1 = [, ,];
     items1[0] = jsx(require("Text").Text, obj1);
-    obj2 = { variant: "text-sm/normal", color: "mobile-text-heading-primary", style: tmp4.emptyStateText, children: null };
+    obj2 = {
+      variant: "text-sm/normal",
+      color: "mobile-text-heading-primary",
+      style: tmp4.emptyStateText,
+      children: null,
+    };
     intl2 = require("getSystemLocale").intl;
     obj2[3] = intl2.string(require("getSystemLocale").t["/X1ny6"]);
     items1[1] = jsx(require("Text").Text, obj2);
@@ -83,7 +92,11 @@ class WishlistEmptyState {
 }
 ({ TrackUserProfileWishlistActions: closure_14, UserProfileSections: closure_15 } = USER_PROFILE_TOOLTIP_DELAY);
 ({ Routes: closure_16, SKUProductLines: closure_17 } = ME);
-({ GiftingOrigin: closure_19, PremiumSubscriptionSKUToPremiumType: closure_20, SubscriptionIntervalTypes: closure_21 } = GuildFeatures);
+({
+  GiftingOrigin: closure_19,
+  PremiumSubscriptionSKUToPremiumType: closure_20,
+  SubscriptionIntervalTypes: closure_21,
+} = GuildFeatures);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
 let closure_25 = new timestampDefault("UserProfileWishlistGrid");
 let closure_26 = createCacheKey.createStyles(() => {
@@ -91,15 +104,36 @@ let closure_26 = createCacheKey.createStyles(() => {
   if (arg0 === undefined) {
     flag = false;
   }
-  let obj = { headerRow: null, headerButtons: null, gridWrapper: null, itemsContainer: null, emptyState: null, emptyStateText: null, emptyStateCta: null, disclaimer: null, disclaimerTop: null };
-  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: ThemesDefault.space.PX_12 };
+  let obj = {
+    headerRow: null,
+    headerButtons: null,
+    gridWrapper: null,
+    itemsContainer: null,
+    emptyState: null,
+    emptyStateText: null,
+    emptyStateCta: null,
+    disclaimer: null,
+    disclaimerTop: null,
+  };
+  obj = {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: ThemesDefault.space.PX_12,
+  };
   obj[0] = obj;
   obj = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
   obj[1] = obj;
   obj[2] = { width: "100%", alignItems: "center" };
   obj[3] = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_16, justifyContent: "flex-start" };
   const space = ThemesDefault.space;
-  const obj2 = { alignItems: "center", paddingTop: flag ? space.PX_24 : space.PX_48, paddingBottom: null, paddingHorizontal: null, gap: null };
+  const obj2 = {
+    alignItems: "center",
+    paddingTop: flag ? space.PX_24 : space.PX_48,
+    paddingBottom: null,
+    paddingHorizontal: null,
+    gap: null,
+  };
   const space2 = tmp(712).space;
   obj2[2] = flag ? space2.PX_12 : space2.PX_48;
   obj2[3] = ThemesDefault.space.PX_32;
@@ -109,8 +143,26 @@ let closure_26 = createCacheKey.createStyles(() => {
   obj1 = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_16, justifyContent: "flex-start" };
   obj[6] = { marginTop: ThemesDefault.space.PX_24 };
   const obj3 = { marginTop: ThemesDefault.space.PX_24 };
-  obj[7] = { padding: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-  const obj4 = { padding: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+  obj[7] = {
+    padding: ThemesDefault.space.PX_8,
+    gap: ThemesDefault.space.PX_4,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: ThemesDefault.radii.sm,
+    borderWidth: 1,
+    borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  };
+  const obj4 = {
+    padding: ThemesDefault.space.PX_8,
+    gap: ThemesDefault.space.PX_4,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: ThemesDefault.radii.sm,
+    borderWidth: 1,
+    borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  };
   obj[8] = { marginBottom: ThemesDefault.space.PX_16 };
   return obj;
 });
@@ -163,13 +215,17 @@ export default function UserProfileWishlistGrid(wishlistId) {
   let obj7 = _require(tmp3[34]);
   let items3 = [memo2];
   let items4 = [stateFromStores, wishlistId];
-  const stateFromStores3 = obj7.useStateFromStores(items3, () => {
-    let wishlistSettings = null;
-    if (null != stateFromStores) {
-      wishlistSettings = memo2.getWishlistSettings(tmp.userId, closure_0);
-    }
-    return wishlistSettings;
-  }, items4);
+  const stateFromStores3 = obj7.useStateFromStores(
+    items3,
+    () => {
+      let wishlistSettings = null;
+      if (null != stateFromStores) {
+        wishlistSettings = memo2.getWishlistSettings(tmp.userId, closure_0);
+      }
+      return wishlistSettings;
+    },
+    items4,
+  );
   let visibility;
   if (stateFromStores3 != null) {
     visibility = stateFromStores3.visibility;
@@ -190,20 +246,26 @@ export default function UserProfileWishlistGrid(wishlistId) {
   tmp6Result = tmp6(tmp3[34]);
   let items6 = [memo1];
   let items7 = [stateFromStores];
-  stateFromStores5 = tmp6Result.useStateFromStores(items6, () => {
-    let user = null;
-    if (null != stateFromStores) {
-      user = memo1.getUser(tmp.userId);
-    }
-    return user;
-  }, items7);
+  stateFromStores5 = tmp6Result.useStateFromStores(
+    items6,
+    () => {
+      let user = null;
+      if (null != stateFromStores) {
+        user = memo1.getUser(tmp.userId);
+      }
+      return user;
+    },
+    items7,
+  );
   if (stateFromStores5 != null) {
     const nsfwAllowed = stateFromStores5.nsfwAllowed;
   }
   let tmp20 = visibility === tmp6(tmp3[35]).WishlistVisibility.PRIVATE;
   const tmp14 = memo1;
   let tmp4 = importDefault(context[30])({ containerWidth, maxWidth });
-  isShopStandalonePdpMobileEnabled = _require(context[36]).useIsShopStandalonePdpMobileEnabled("product_details_action_sheet");
+  isShopStandalonePdpMobileEnabled = _require(context[36]).useIsShopStandalonePdpMobileEnabled(
+    "product_details_action_sheet",
+  );
   let intl = tmp6(tmp3[27]).intl;
   const string = intl.string;
   const t = tmp6(tmp3[27]).t;
@@ -244,15 +306,19 @@ export default function UserProfileWishlistGrid(wishlistId) {
   const tmp6Result1 = _require(context[36]);
   const items10 = [stateFromStores];
   const items11 = [memo1, stateFromStores5];
-  stateFromStoresArray = _require(context[34]).useStateFromStoresArray(items10, () => {
-    if (null == stateFromStores5) {
-      let items = [];
-    } else {
-      const found = memo1.filter((skuId) => closure_1_7.hasSentGift(skuId.skuId, id.id));
-      items = found.map((skuId) => skuId.skuId);
-    }
-    return items;
-  }, items11);
+  stateFromStoresArray = _require(context[34]).useStateFromStoresArray(
+    items10,
+    () => {
+      if (null == stateFromStores5) {
+        let items = [];
+      } else {
+        const found = memo1.filter((skuId) => closure_1_7.hasSentGift(skuId.skuId, id.id));
+        items = found.map((skuId) => skuId.skuId);
+      }
+      return items;
+    },
+    items11,
+  );
   const items12 = [stateFromStoresArray];
   memo2 = analyticsLocations.useMemo(() => new Set(stateFromStoresArray), items12);
   obj = { wishlistId, onAction: trackUserProfileWishlistAction, productLines: null, isVisible: null };
@@ -270,7 +336,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -339,7 +405,12 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                 let obj23 = callback(context[23]);
                                 obj23.hideAllActionSheets();
                                 if (obj25.isCollectibleGiftingSupported()) {
-                                  const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null, onNavigateAway: null };
+                                  const obj2 = {
+                                    analyticsLocations: null,
+                                    analyticsSource: null,
+                                    screen: null,
+                                    onNavigateAway: null,
+                                  };
                                   const items1 = [callback(context[25]).USER_PROFILE_WISHLIST];
                                   obj2[0] = items1;
                                   obj2[1] = callback(context[25]).USER_PROFILE_WISHLIST;
@@ -352,7 +423,12 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                   throwTypeErrorResult = lib;
                                   throwTypeErrorResult = context;
                                   const obj28 = lib(context[24]);
-                                  const obj3 = { skuId: null, analyticsLocations: null, lockedRecipientUser: null, giftingOrigin: null };
+                                  const obj3 = {
+                                    skuId: null,
+                                    analyticsLocations: null,
+                                    lockedRecipientUser: null,
+                                    giftingOrigin: null,
+                                  };
                                   obj3[0] = throwTypeErrorResult.skuId;
                                   throwTypeErrorResult = callback;
                                   throwTypeErrorResult = context;
@@ -370,11 +446,14 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                 } else {
                                   const _HermesInternal2 = HermesInternal;
                                   let country = 1;
-                                  const combined = "" + closure_2_16.COLLECTIBLES_SHOP + "#itemSkuId=" + throwTypeErrorResult.skuId;
+                                  const combined =
+                                    "" + closure_2_16.COLLECTIBLES_SHOP + "#itemSkuId=" + throwTypeErrorResult.skuId;
                                   v0 = 3;
                                   c7 = 1;
                                   let obj5 = { value: null, done: false };
-                                  obj5[0] = callback(context[53]).redirectWithHandoffToken(combined, { forceExternalBrowser: true });
+                                  obj5[0] = callback(context[53]).redirectWithHandoffToken(combined, {
+                                    forceExternalBrowser: true,
+                                  });
                                   return obj5;
                                 }
                                 obj25 = lib(context[51]);
@@ -392,7 +471,9 @@ export default function UserProfileWishlistGrid(wishlistId) {
                           throwTypeErrorResult = context;
                           const items3 = [callback(context[25]).USER_PROFILE_WISHLIST];
                           obj6[1] = items3;
-                          throwTypeErrorResult = throwTypeErrorResult(throwTypeErrorResult[55]).openProductDetailsActionSheetForSku(obj6, "stack");
+                          throwTypeErrorResult = throwTypeErrorResult(
+                            throwTypeErrorResult[55],
+                          ).openProductDetailsActionSheetForSku(obj6, "stack");
                           const throwTypeErrorResultResult = throwTypeErrorResult(throwTypeErrorResult[55]);
                         } else {
                           if (throwTypeErrorResultResult1.isCollectiblesShopOpen()) {
@@ -436,7 +517,12 @@ export default function UserProfileWishlistGrid(wishlistId) {
                           } else {
                             throwTypeErrorResult = lib;
                             throwTypeErrorResult = context;
-                            const obj9 = { analyticsLocations: null, analyticsSource: null, initialProductSkuId: null, screen: null };
+                            const obj9 = {
+                              analyticsLocations: null,
+                              analyticsSource: null,
+                              initialProductSkuId: null,
+                              screen: null,
+                            };
                             throwTypeErrorResult = callback;
                             throwTypeErrorResult = context;
                             const items5 = [callback(context[25]).USER_PROFILE_WISHLIST];
@@ -474,7 +560,12 @@ export default function UserProfileWishlistGrid(wishlistId) {
                           }
                           const obj10 = { withGoogleSkuIds: true, countryCode: null };
                           obj10[1] = country;
-                          const socialLayerStorefrontSkuForApplication = obj17.fetchSocialLayerStorefrontSkuForApplication(tmp62.applicationId, throwTypeErrorResult.skuId, obj10);
+                          const socialLayerStorefrontSkuForApplication =
+                            obj17.fetchSocialLayerStorefrontSkuForApplication(
+                              tmp62.applicationId,
+                              throwTypeErrorResult.skuId,
+                              obj10,
+                            );
                         }
                         let obj19 = lib(context[48]);
                         if (!closure_1_8) {
@@ -486,7 +577,13 @@ export default function UserProfileWishlistGrid(wishlistId) {
                               throwTypeErrorResult = lib;
                               throwTypeErrorResult = context;
                               const obj54 = callback(context[23]);
-                              let obj11 = { skuId: null, analyticsLocations: null, lockedRecipientUser: null, giftingOrigin: null, onGiftModalDismiss: null };
+                              let obj11 = {
+                                skuId: null,
+                                analyticsLocations: null,
+                                lockedRecipientUser: null,
+                                giftingOrigin: null,
+                                onGiftModalDismiss: null,
+                              };
                               obj11[0] = throwTypeErrorResult.skuId;
                               throwTypeErrorResult = callback;
                               throwTypeErrorResult = context;
@@ -625,7 +722,13 @@ export default function UserProfileWishlistGrid(wishlistId) {
                 throwTypeErrorResult = c3;
                 throwTypeErrorResult = lib;
                 throwTypeErrorResult = context;
-                obj23 = { recipientUserId: null, premiumType: null, planInterval: null, order: null, analyticsLocations: null };
+                obj23 = {
+                  recipientUserId: null,
+                  premiumType: null,
+                  planInterval: null,
+                  order: null,
+                  analyticsLocations: null,
+                };
                 throwTypeErrorResult = closure_1_9;
                 obj23[0] = closure_1_9.id;
                 throwTypeErrorResult = c3;
@@ -664,7 +767,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
       }
     })();
   });
-  const items13 = [wishlistId, trackUserProfileWishlistAction, tmp40Result, stateFromStores5, memo2, , , ];
+  const items13 = [wishlistId, trackUserProfileWishlistAction, tmp40Result, stateFromStores5, memo2, , ,];
   let country;
   if (storeFront != null) {
     country = storeFront.country;
@@ -672,7 +775,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
   items13[5] = country;
   items13[6] = isShopStandalonePdpMobileEnabled;
   items13[7] = createOrReuseGiftOrder;
-  closure_14 = obj11.useCallback(function() {
+  closure_14 = obj11.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -693,7 +796,12 @@ export default function UserProfileWishlistGrid(wishlistId) {
     obj[2] = tmp4;
     trackUserProfileWishlistAction(obj);
     obj = { wishlistId: callback, analyticsContext: context, analyticsLocations };
-    _undefined(context[23]).openLazy(callback(context[57])(context[56], context.paths), "EditWishlistActionSheet", obj, "stack");
+    _undefined(context[23]).openLazy(
+      callback(context[57])(context[56], context.paths),
+      "EditWishlistActionSheet",
+      obj,
+      "stack",
+    );
   }, items14);
   const callback1 = obj11.useCallback(() => {
     let obj = { action: constants.PRESS_ADD_WISHLIST_ITEM, wishlistId: callback, productLines: new Set(items) };
@@ -728,17 +836,17 @@ export default function UserProfileWishlistGrid(wishlistId) {
     }
     if (tmp40Result) {
       obj = { style: null, children: null };
-      const items16 = [, ];
+      const items16 = [,];
       ({ disclaimer: arr18[0], disclaimerTop: arr18[1] } = tmp);
       obj[0] = items16;
-      const items17 = [callback(tmp6(tmp3[58]).CircleInformationIcon, { size: "sm" }), ];
+      const items17 = [callback(tmp6(tmp3[58]).CircleInformationIcon, { size: "sm" })];
       obj1 = { variant: "text-xs/medium", color: "text-subtle", children: null };
       obj1[2] = stringResult;
       items17[1] = callback(tmp6(tmp3[26]).Text, obj1);
       obj[1] = items17;
       tmp40Result = tmp40(storeFront, obj);
     }
-    const items18 = [tmp40Result, , ];
+    const items18 = [tmp40Result, ,];
     let obj2 = { style: null, children: null };
     obj2[0] = tmp.headerRow;
     obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
@@ -746,7 +854,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     obj4 = { count: null };
     obj4[0] = memo.length;
     obj3[2] = intl2.formatToPlainString(tmp6(tmp3[27]).t.r6Y1Lg, obj4);
-    const items19 = [callback(tmp6(tmp3[26]).Text, obj3), ];
+    const items19 = [callback(tmp6(tmp3[26]).Text, obj3)];
     if (tmp40Result) {
       obj5 = { style: null, children: null };
       obj5[0] = tmp.headerButtons;
@@ -755,7 +863,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
       let intl3 = tmp6(tmp3[27]).intl;
       obj6[3] = intl3.string(tmp6(tmp3[27]).t.SDUwM0);
       obj6[4] = callback1;
-      const items20 = [tmp37(tmp6(tmp3[28]).Button, obj6), ];
+      const items20 = [tmp37(tmp6(tmp3[28]).Button, obj6)];
       obj7 = { size: "sm", variant: "secondary", icon: null, onPress: null, accessibilityLabel: null };
       let obj8 = { size: "sm", color: null };
       obj8[1] = tmp2(tmp3[18]).colors.CONTROL_SECONDARY_TEXT_DEFAULT;
@@ -803,5 +911,5 @@ export default function UserProfileWishlistGrid(wishlistId) {
     return closure_23(closure_24, obj9);
   }
   const tmp6Result2 = _require(context[34]);
-};
+}
 export { WishlistEmptyState };

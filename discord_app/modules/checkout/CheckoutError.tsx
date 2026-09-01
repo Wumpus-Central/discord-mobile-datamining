@@ -9,8 +9,7 @@ const prototype = function CheckoutError(arg0) {
   tmp.name = "FatalCheckoutError";
   return tmp;
 }.prototype;
-class prototype extends RevenueError {
-}
+class prototype extends RevenueError {}
 const result = set.fileFinishedImporting("modules/checkout/CheckoutError.tsx");
 
 export const CheckoutError = prototype;

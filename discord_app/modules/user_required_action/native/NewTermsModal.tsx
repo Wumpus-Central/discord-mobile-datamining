@@ -33,8 +33,22 @@ function handleMoreActions() {
 ({ View: closure_6, Keyboard: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ MarketingURLs: c10, UserRequiredActions: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { contentContainer: null, scrollView: null, container: null, description: null, agreementDescription: null, navbarRight: null, stickyFooter: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, flexGrow: 1, display: "flex", alignContent: "center", justifyContent: "center" };
+createCacheKey = {
+  contentContainer: null,
+  scrollView: null,
+  container: null,
+  description: null,
+  agreementDescription: null,
+  navbarRight: null,
+  stickyFooter: null,
+};
+createCacheKey = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  flexGrow: 1,
+  display: "flex",
+  alignContent: "center",
+  justifyContent: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
@@ -45,9 +59,23 @@ createCacheKey[4] = { marginTop: ThemesDefault.space.PX_24 };
 let obj3 = { marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[5] = { position: "absolute", right: 0, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let obj4 = { position: "absolute", right: 0, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[6] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_24, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[6] = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_16,
+  marginTop: ThemesDefault.space.PX_24,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderTopWidth: 1,
+  borderTopColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let obj5 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_24, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj5 = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_16,
+  marginTop: ThemesDefault.space.PX_24,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderTopWidth: 1,
+  borderTopColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 let result = require("set").fileFinishedImporting("modules/user_required_action/native/NewTermsModal.tsx");
 
 export default function NewTermsModal() {
@@ -59,25 +87,46 @@ export default function NewTermsModal() {
   importDefault = tmp5[1];
   let obj = memo(5501);
   obj.useNavigatorBackPressHandler(memo(4925).BackPressHandler.minimize);
-  dependencyMap = React.useCallback(callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  dependencyMap = React.useCallback(
+    callback(function* () {
+      if (c3 === 2) {
+        c3 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === table) {
-          if (arg0 === 1) {
+        try {
+          c3 = 2;
+          if (0 === table) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const callback = tmp5;
+              closure_0 = tmp2;
+              closure_0 = undefined;
+              closure_1_1(true);
+              obj1 = closure_1_0(table[15]);
+              table = 1;
+              c3 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = obj1.acceptAgreements();
+              return obj1;
+            }
+          } else if (arg0 === 1) {
             c3 = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -86,43 +135,29 @@ export default function NewTermsModal() {
             obj[0] = arg1;
             return obj;
           } else {
-            const callback = tmp5;
-            closure_0 = tmp2;
-            closure_0 = undefined;
-            closure_1_1(true);
-            obj1 = closure_1_0(table[15]);
-            table = 1;
-            c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = obj1.acceptAgreements();
-            return obj1;
+            closure_0 = arg1;
+            callback(closure_0);
+            c3 = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          closure_0 = arg1;
-          callback(closure_0);
-          c3 = 3;
-          return { value: "HermesInternal", done: null };
+        } catch (tmp15) {
+          c3 = tmp;
+          throw tmp15;
         }
-      } catch (tmp15) {
-        c3 = tmp;
-        throw tmp15;
       }
-    }
-  }), []);
-  obj = { type: memo(503).ImpressionTypes.VIEW, name: memo(503).ImpressionNames.USER_AGREEMENTS, properties: { required_action: memo } };
+    }),
+    [],
+  );
+  obj = {
+    type: memo(503).ImpressionTypes.VIEW,
+    name: memo(503).ImpressionNames.USER_AGREEMENTS,
+    properties: { required_action: memo },
+  };
   trackImpressionDefault(obj, {}, []);
   let tmp10 = null;
   if (null != memo) {
     obj = { style: null, children: null };
-    const items = [tmp.container, ];
+    const items = [tmp.container];
     obj1 = { paddingTop: null, paddingBottom: null };
     obj1[0] = top;
     obj1[1] = rect.bottom;
@@ -136,7 +171,7 @@ export default function NewTermsModal() {
     const obj3 = { maxFontSizeMultiplier: 2, variant: "heading-xxl/bold", children: null };
     const intl = tmp6(1236).intl;
     obj3[2] = intl.string(tmp6(1236).t["7glvXu"]);
-    const items2 = [callback3(tmp6(4474).Text, obj3), , , , , , ];
+    const items2 = [callback3(tmp6(4474).Text, obj3), , , , , ,];
     const obj4 = { variant: "text-md/normal", style: null, children: null };
     obj4[1] = tmp.description;
     const intl2 = tmp6(1236).intl;
@@ -174,7 +209,7 @@ export default function NewTermsModal() {
     obj14[2] = intl7.string(tmp6(1236).t["+USXQE"]);
     items2[6] = callback3(tmp6(4474).Text, obj14);
     obj2[3] = items2;
-    const items3 = [callback4(closure_8, obj2), , ];
+    const items3 = [callback4(closure_8, obj2), ,];
     const obj15 = { style: null, children: null };
     obj15[0] = tmp.stickyFooter;
     const obj16 = { loading: null, onPress: null, text: null };
@@ -188,8 +223,15 @@ export default function NewTermsModal() {
     obj16[2] = intl8.string(tmp6(1236).t["+TBKL1"]);
     obj15[1] = callback3(tmp6(4928).Button, obj16);
     items3[1] = callback3(closure_6, obj15);
-    const obj17 = { style: null, source: null, color: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null };
-    const items4 = [tmp.navbarRight, ];
+    const obj17 = {
+      style: null,
+      source: null,
+      color: null,
+      onPress: null,
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+    };
+    const items4 = [tmp.navbarRight];
     const obj18 = { top: null };
     obj18[0] = top;
     items4[1] = obj18;
@@ -205,4 +247,4 @@ export default function NewTermsModal() {
     const tmp2Result = tmp2(9067);
   }
   return tmp10;
-};
+}

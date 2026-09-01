@@ -16,7 +16,17 @@ if (set.isAndroid()) {
   num = 14;
 }
 set = { gapContainer: { height: num }, tagContainer: null, tag: null };
-set = { alignItems: "center", justifyContent: "center", flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, marginVertical: (num - 16) / 2, height: 16, gap: 2 };
+set = {
+  alignItems: "center",
+  justifyContent: "center",
+  flexDirection: "row",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  borderRadius: 4,
+  paddingHorizontal: 4,
+  marginVertical: (num - 16) / 2,
+  height: 16,
+  gap: 2,
+};
 let num2 = 16;
 set[1] = set;
 if (set.isAndroid()) {
@@ -52,7 +62,7 @@ export default function VoiceGuildTagChiplet(userId) {
       obj2[0] = guildTagBadgeUrl;
       obj1[0] = obj2;
       obj1[1] = GuildTagBadgeSize.SIZE_12;
-      const items2 = [callback(tmp2(9007).GuildTagBadge, obj1), ];
+      const items2 = [callback(tmp2(9007).GuildTagBadge, obj1)];
       const obj3 = { variant: "text-xs/semibold", color: "text-default", style: null, children: null };
       obj3[2] = tmp.tag;
       obj3[3] = tag;
@@ -63,4 +73,4 @@ export default function VoiceGuildTagChiplet(userId) {
     }
   }
   return null;
-};
+}

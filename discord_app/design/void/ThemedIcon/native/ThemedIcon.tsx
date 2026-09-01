@@ -15,4 +15,4 @@ export default function ThemedIcon(themedColor) {
   obj = { color: token };
   const merged1 = Object.assign(merged);
   return jsx(IconSizesDefault, { color: token });
-};
+}

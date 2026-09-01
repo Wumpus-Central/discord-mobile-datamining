@@ -50,6 +50,24 @@ export default function FramePanelController(children) {
       const obj = closure_1_1(closure_1_2[7]);
     }
   }, items1);
-  obj = { context: contextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children };
-  return jsx(mainFrameId(16588).BaseActivityPanelController, { context: contextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
-};
+  obj = {
+    context: contextDefault,
+    orientationLockStateForApp,
+    mode,
+    hasConnectedActivity: null != mainFrameId,
+    connectedActivityAppId,
+    currentApp,
+    updateActivityPanelMode: callback,
+    children: children.children,
+  };
+  return jsx(mainFrameId(16588).BaseActivityPanelController, {
+    context: contextDefault,
+    orientationLockStateForApp,
+    mode,
+    hasConnectedActivity: null != mainFrameId,
+    connectedActivityAppId,
+    currentApp,
+    updateActivityPanelMode: callback,
+    children: children.children,
+  });
+}

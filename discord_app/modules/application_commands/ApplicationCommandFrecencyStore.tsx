@@ -16,14 +16,17 @@ function handleUserSettingsProtoStoreChange() {
   if (applicationCommands == null) {
     applicationCommands = {};
   }
-  closure_7.overwriteHistory(applyDefault.mapValues(applicationCommands, (recentUses) => {
-    const obj = {};
-    const merged = Object.assign(recentUses);
-    recentUses = recentUses.recentUses;
-    const mapped = recentUses.map(Number);
-    obj.recentUses = mapped.filter((arg0) => arg0 > 0);
-    return obj;
-  }), closure_6.pendingUsages);
+  closure_7.overwriteHistory(
+    applyDefault.mapValues(applicationCommands, (recentUses) => {
+      const obj = {};
+      const merged = Object.assign(recentUses);
+      recentUses = recentUses.recentUses;
+      const mapped = recentUses.map(Number);
+      obj.recentUses = mapped.filter((arg0) => arg0 > 0);
+      return obj;
+    }),
+    closure_6.pendingUsages,
+  );
 }
 ({ DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: c3, SUB_COMMAND_KEY_SEPARATOR: c4 } = TRUE_OPTION_NAME);
 let closure_6 = { pendingUsages: [] };
@@ -34,15 +37,12 @@ let obj = {
   lookupKey(arg0) {
     return arg0;
   },
-  afterCompute() {
-
-  },
-  numFrequentlyItems: require("ApplicationTypes").FREQUENCY_ITEM_LIMIT
+  afterCompute() {},
+  numFrequentlyItems: require("ApplicationTypes").FREQUENCY_ITEM_LIMIT,
 };
 let closure_7 = new DEFAULT_FRECENCYDefault(obj);
 const PersistedStore = initializeDefault.PersistedStore;
-class ApplicationCommandFrecencyStore extends PersistedStore {
-}
+class ApplicationCommandFrecencyStore extends PersistedStore {}
 const prototype = ApplicationCommandFrecencyStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
@@ -117,7 +117,7 @@ obj = {
       }
     }
     return false;
-  }
+  },
 };
 const applicationCommandFrecencyStore = new ApplicationCommandFrecencyStore(dispatcherDefault, obj);
 let tmp3 = new DEFAULT_FRECENCYDefault(obj);

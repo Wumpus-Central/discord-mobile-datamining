@@ -47,7 +47,7 @@ function IncomingRequestRow(user) {
     } else {
       obj[0] = tmp.ACCEPT;
       obj[1] = acceptRequestAccessibilityLabel;
-      items1 = [obj, ];
+      items1 = [obj];
       obj = { name: null, label: null };
       obj[0] = stateFromStores1.DECLINE;
       obj[1] = ignoreRequestAccessibilityLabel;
@@ -78,7 +78,9 @@ function IncomingRequestRow(user) {
   userTag = applicationId(accepted[9]).useUserTag(user);
   const obj3 = applicationId(accepted[9]);
   const items4 = [acceptRequestAccessibilityLabel];
-  stateFromStores1 = user(accepted[7]).useStateFromStores(items4, () => acceptRequestAccessibilityLabel.getApplication(applicationId));
+  stateFromStores1 = user(accepted[7]).useStateFromStores(items4, () =>
+    acceptRequestAccessibilityLabel.getApplication(applicationId),
+  );
   const items5 = [stateFromStores1, applicationId, userTag];
   const memo1 = onAcceptIncomingRequest.useMemo(() => {
     if (null != stateFromStores1) {
@@ -102,9 +104,24 @@ function IncomingRequestRow(user) {
   obj.accessibilityActions = memo;
   obj.accessibilityLabel = accessibilityLabel;
   obj.onAccessibilityAction = callback;
-  obj = { actioned: sharedValue, label: memo1, actionStatus: acceptedRequestLabel, actionStatusAccessibilityLabel: acceptedRequestAccessibilityLabel, animate: !stateFromStores };
+  obj = {
+    actioned: sharedValue,
+    label: memo1,
+    actionStatus: acceptedRequestLabel,
+    actionStatusAccessibilityLabel: acceptedRequestAccessibilityLabel,
+    animate: !stateFromStores,
+  };
   obj.subLabel = userTag(user(accepted[13]).ActionStatusSubLabel, obj);
-  obj1 = { user, pressed: sharedValue, applicationId, onAcceptIncomingRequest, onDeclineIncomingRequest, animate: !stateFromStores, acceptRequestAccessibilityLabel, ignoreRequestAccessibilityLabel };
+  obj1 = {
+    user,
+    pressed: sharedValue,
+    applicationId,
+    onAcceptIncomingRequest,
+    onDeclineIncomingRequest,
+    animate: !stateFromStores,
+    acceptRequestAccessibilityLabel,
+    ignoreRequestAccessibilityLabel,
+  };
   obj.trailing = userTag(user(accepted[14]).IncomingRequestRowActions, obj1);
   return userTag(applicationId(accepted[12]), obj);
 }
@@ -113,14 +130,26 @@ function IncomingGameFriendRequestRow(arg0) {
   const merged = Object.assign(arg0, Object.create(null));
   let obj = nameFromUserDefault;
   const userTag = obj.useUserTag(user);
-  obj = { user, applicationId: application.id, accessibilityLabel: null, acceptedRequestLabel: null, acceptedRequestAccessibilityLabel: null, acceptRequestAccessibilityLabel: null, ignoreRequestAccessibilityLabel: null };
+  obj = {
+    user,
+    applicationId: application.id,
+    accessibilityLabel: null,
+    acceptedRequestLabel: null,
+    acceptedRequestAccessibilityLabel: null,
+    acceptRequestAccessibilityLabel: null,
+    ignoreRequestAccessibilityLabel: null,
+  };
   const intl = application(1236).intl;
   obj[2] = intl.formatToPlainString(application(1236).t.u6lp4x, { name: userTag });
   const intl2 = application(1236).intl;
   obj = {
     applicationNameHook() {
-      return closure_1_8(closure_1_1(closure_1_2[11]), { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
-    }
+      return closure_1_8(
+        closure_1_1(closure_1_2[11]),
+        { application, textVariant: "text-xs/medium", iconSize: 12 },
+        application.id,
+      );
+    },
   };
   obj[3] = intl2.format(application(1236).t.gRgJGR, obj);
   const intl3 = application(1236).intl;
@@ -130,19 +159,36 @@ function IncomingGameFriendRequestRow(arg0) {
   const intl5 = application(1236).intl;
   obj[6] = intl5.formatToPlainString(application(1236).t.d8Cw5e, { name: userTag, applicationName: application.name });
   const merged1 = Object.assign(merged);
-  return <IncomingRequestRow applicationNameHook={function applicationNameHook() {
-    return closure_1_8(closure_1_1(closure_1_2[11]), { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
-  }} />;
+  return (
+    <IncomingRequestRow
+      applicationNameHook={function applicationNameHook() {
+        return closure_1_8(
+          closure_1_1(closure_1_2[11]),
+          { application, textVariant: "text-xs/medium", iconSize: 12 },
+          application.id,
+        );
+      }}
+    />
+  );
 }
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/IncomingRequestRow.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/friends/components/IncomingRequestRow.tsx",
+);
 
 export const IncomingFriendRequestRow = function IncomingFriendRequestRow(user) {
   user = user.user;
   const merged = Object.assign(user, Object.create(null));
   let obj = nameFromUserDefault;
   const userTag = obj.useUserTag(user);
-  obj = { user, accessibilityLabel: null, acceptedRequestLabel: null, acceptedRequestAccessibilityLabel: null, acceptRequestAccessibilityLabel: null, ignoreRequestAccessibilityLabel: null };
+  obj = {
+    user,
+    accessibilityLabel: null,
+    acceptedRequestLabel: null,
+    acceptedRequestAccessibilityLabel: null,
+    acceptRequestAccessibilityLabel: null,
+    ignoreRequestAccessibilityLabel: null,
+  };
   const intl = getSystemLocale.intl;
   obj[1] = intl.formatToPlainString(getSystemLocale.t.u6lp4x, { name: userTag });
   const intl2 = getSystemLocale.intl;
@@ -154,7 +200,16 @@ export const IncomingFriendRequestRow = function IncomingFriendRequestRow(user) 
   const intl5 = getSystemLocale.intl;
   obj[5] = intl5.formatToPlainString(getSystemLocale.t["0OF9IB"], { name: userTag });
   const merged1 = Object.assign(merged);
-  return <IncomingRequestRow user={user} accessibilityLabel={null} acceptedRequestLabel={null} acceptedRequestAccessibilityLabel={null} acceptRequestAccessibilityLabel={null} ignoreRequestAccessibilityLabel={null} />;
+  return (
+    <IncomingRequestRow
+      user={user}
+      accessibilityLabel={null}
+      acceptedRequestLabel={null}
+      acceptedRequestAccessibilityLabel={null}
+      acceptRequestAccessibilityLabel={null}
+      ignoreRequestAccessibilityLabel={null}
+    />
+  );
 };
 export const ConnectedIncomingGameFriendRequestRow = function ConnectedIncomingGameFriendRequestRow(applicationId) {
   applicationId = applicationId.applicationId;

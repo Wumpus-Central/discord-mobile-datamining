@@ -22,7 +22,9 @@ const obj2 = { textAlign: "center", marginTop: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_8, width: "100%" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { marginTop: ThemesDefault.space.PX_8, width: "100%" };
-const result = require("set").fileFinishedImporting("modules/nuf/native/components/notification/NotificationNudgeBottomSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/nuf/native/components/notification/NotificationNudgeBottomSheet.tsx",
+);
 
 export default function NotificationNudgeBottomSheet(actionLocation) {
   actionLocation = actionLocation.actionLocation;
@@ -52,7 +54,11 @@ export default function NotificationNudgeBottomSheet(actionLocation) {
     obj = { action: closure_1_6.ACCEPT, prompt_type: surface };
     obj.track(closure_1_7.CONTEXTUAL_REMINDER_ACTION, obj);
     markAsDismissed(closure_1_8.USER_DISMISS);
-    const pushNotificationPermission = actionLocation(markAsDismissed[10]).requestPushNotificationPermission(closure_1_5.ALLOW_TO_REQUEST, actionLocation, callback);
+    const pushNotificationPermission = actionLocation(markAsDismissed[10]).requestPushNotificationPermission(
+      closure_1_5.ALLOW_TO_REQUEST,
+      actionLocation,
+      callback,
+    );
   }, items2);
   const callback2 = onHide.useCallback(() => {
     let obj = surface(markAsDismissed[8]);
@@ -63,15 +69,32 @@ export default function NotificationNudgeBottomSheet(actionLocation) {
   }, items3);
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
-  obj = { style: tmp.illustration, children: callback(actionLocation(markAsDismissed[12]).BellSpotIllustration, { scale: 0.8 }) };
-  const items4 = [callback(callback, obj), callback(actionLocation(markAsDismissed[13]).Text, { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: title }), callback(actionLocation(markAsDismissed[13]).Text, { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: body }), ];
+  obj = {
+    style: tmp.illustration,
+    children: callback(actionLocation(markAsDismissed[12]).BellSpotIllustration, { scale: 0.8 }),
+  };
+  const items4 = [
+    callback(callback, obj),
+    callback(actionLocation(markAsDismissed[13]).Text, {
+      style: tmp.title,
+      variant: "heading-xl/bold",
+      accessibilityRole: "header",
+      children: title,
+    }),
+    callback(actionLocation(markAsDismissed[13]).Text, {
+      style: tmp.body,
+      variant: "text-sm/medium",
+      color: "text-default",
+      children: body,
+    }),
+  ];
   const obj3 = { style: tmp.buttonsContainer, children: null };
   const obj4 = { children: null };
   const obj5 = { text: null, onPress: null };
   const intl = actionLocation(markAsDismissed[16]).intl;
   obj5[0] = intl.string(actionLocation(markAsDismissed[16]).t["+7MDbQ"]);
   obj5[1] = callback1;
-  const items5 = [callback(actionLocation(markAsDismissed[15]).Button, obj5), ];
+  const items5 = [callback(actionLocation(markAsDismissed[15]).Button, obj5)];
   const obj6 = { text: null, onPress: null, variant: "secondary" };
   const intl2 = actionLocation(markAsDismissed[16]).intl;
   obj6[0] = intl2.string(actionLocation(markAsDismissed[16]).t.L5eIZ2);
@@ -83,4 +106,4 @@ export default function NotificationNudgeBottomSheet(actionLocation) {
   obj[1] = items4;
   obj[0] = callback2(callback, obj);
   return callback(actionLocation(markAsDismissed[11]).BottomSheet, obj);
-};
+}

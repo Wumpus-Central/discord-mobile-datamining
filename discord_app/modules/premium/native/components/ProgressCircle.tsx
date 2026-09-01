@@ -9,10 +9,13 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createLegacyClassComponentStyles({ progressCircle: { alignItems: "center", justifyContent: "center" }, circle: { position: "absolute", width: "100%", height: "100%" }, circleOverlay: { position: "relative", display: "flex", justifyContent: "center", alignItems: "center" } });
+let closure_6 = createCacheKey.createLegacyClassComponentStyles({
+  progressCircle: { alignItems: "center", justifyContent: "center" },
+  circle: { position: "absolute", width: "100%", height: "100%" },
+  circleOverlay: { position: "relative", display: "flex", justifyContent: "center", alignItems: "center" },
+});
 const Component = importAllResult.Component;
-class ProgressCircle extends Component {
-}
+class ProgressCircle extends Component {}
 const prototype = ProgressCircle.prototype;
 prototype["renderCircle"] = function renderCircle() {
   const props = this.props;
@@ -24,7 +27,17 @@ prototype["renderCircle"] = function renderCircle() {
   const tmp = callback2(this.context);
   obj[0] = "0 0 " + size + " " + size;
   obj[1] = tmp.circle;
-  obj = { fill: "none", cx: size / 2, cy: size / 2, r: result, strokeWidth, strokeLinecap: "round", transform: "rotate(-90 " + size / 2 + " " + size / 2 + ")", stroke: props.color, style: obj };
+  obj = {
+    fill: "none",
+    cx: size / 2,
+    cy: size / 2,
+    r: result,
+    strokeWidth,
+    strokeLinecap: "round",
+    transform: "rotate(-90 " + size / 2 + " " + size / 2 + ")",
+    stroke: props.color,
+    style: obj,
+  };
   obj = { strokeDasharray: result1, strokeDashoffset: (1 - bound / 100) * result1 };
   obj[2] = callback(inlineStyles.Circle, obj);
   return callback(inlineStylesDefault, obj);
@@ -35,7 +48,7 @@ prototype["render"] = function render() {
   const children = props.children;
   let obj = { style: items, children: null };
   items = [tmp.progressCircle, props.style];
-  const items1 = [this.renderCircle(), ];
+  const items1 = [this.renderCircle()];
   let tmp4 = null;
   if (null != children) {
     obj = { style: null, children: null };

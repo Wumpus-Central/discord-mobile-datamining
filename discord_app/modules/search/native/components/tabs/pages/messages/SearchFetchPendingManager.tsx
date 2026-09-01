@@ -30,7 +30,9 @@ let closure_3 = function SearchFetchPendingManager() {
   };
   return obj;
 }.prototype;
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx",
+);
 
 export const useSearchFetchPendingManager = function useSearchFetchPendingManager(searchContext) {
   importDefault = searchContext;
@@ -67,10 +69,14 @@ export const useSearchFetchPendingManager = function useSearchFetchPendingManage
   });
   dependencyMap = tmp;
   const items = [searchContext, tmp];
-  const effect = React.useEffect(() => searchContext(table[1]).subscribeTextInputValue(searchContext, (arg0, arg1) => {
-    if (arg1 !== arg0) {
-      navigation.reset();
-    }
-  }), items);
+  const effect = React.useEffect(
+    () =>
+      searchContext(table[1]).subscribeTextInputValue(searchContext, (arg0, arg1) => {
+        if (arg1 !== arg0) {
+          navigation.reset();
+        }
+      }),
+    items,
+  );
   return tmp;
 };

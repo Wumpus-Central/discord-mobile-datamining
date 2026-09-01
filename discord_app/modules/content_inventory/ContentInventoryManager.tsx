@@ -155,7 +155,13 @@ function scheduleNextFetch() {
         obj1[2] = obj;
         tmp2(709).dispatch(obj1);
         const _setTimeout = setTimeout;
-        const result = obj3.set(tmp, setTimeout(() => callback2({ feedId: closure_12, feature: callback(table[14]).ContentInventoryFeature.INBOX }), sum));
+        const result = obj3.set(
+          tmp,
+          setTimeout(
+            () => callback2({ feedId: closure_12, feature: callback(table[14]).ContentInventoryFeature.INBOX }),
+            sum,
+          ),
+        );
         const tmp2Result = tmp2(709);
       }
     }
@@ -179,7 +185,7 @@ function _fetchInventory() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       let refresh_token = tmp3;
       ({ feedId: c0, feature: c1, force } = callback);
       if (force === undefined) {
@@ -233,7 +239,10 @@ function _fetchInventory() {
           c6 = callback2(force[9]).Millis.MINUTE * Math.pow(2, c5);
           c7 = callback3(c5);
           const _setTimeout = setTimeout;
-          const result = closure_14.set(callback, setTimeout(() => closure_1_23({ feedId: c0, feature: c1, force }), c6 + c7));
+          const result = closure_14.set(
+            callback,
+            setTimeout(() => closure_1_23({ feedId: c0, feature: c1, force }), c6 + c7),
+          );
           const result1 = store.set(callback, c5 + 1);
         } else {
           obj1 = callback2(force[12]);
@@ -337,7 +346,10 @@ function handleSpotifyNewTrack(connectionId) {
   }
 }
 function handleFetchGameProfileFeed() {
-  fetchInventory({ feedId: ContentInventoryFeedKey.GLOBAL_FEED, feature: ContentInventoryFeature.ContentInventoryFeature.GAME_PROFILE });
+  fetchInventory({
+    feedId: ContentInventoryFeedKey.GLOBAL_FEED,
+    feature: ContentInventoryFeature.ContentInventoryFeature.GAME_PROFILE,
+  });
 }
 mapDefault;
 let closure_11 = 2 * setDefault.Millis.MINUTE;
@@ -347,15 +359,26 @@ const map = new Map();
 let set = new Set();
 const map1 = new Map();
 let c17 = null;
-let closure_18 = apply.debounce(require("_getMyContentInventory").postTrackToContentInventory, 3000, { trailing: true });
+let closure_18 = apply.debounce(require("_getMyContentInventory").postTrackToContentInventory, 3000, {
+  trailing: true,
+});
 initializeDefault;
 let prototype = function ContentInventoryManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.actions = { POST_CONNECTION_OPEN: handlePostConnectionOpen, CONNECTION_CLOSED: handleConnectionClosed, WINDOW_FOCUS: handleUpdatePollingState, IDLE: handleUpdatePollingState, CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: handleUpdatePollingState, CONTENT_INVENTORY_MANUAL_REFRESH: handleManualRefresh, CONTENT_INVENTORY_INBOX_STALE: handleInboxStale, SPOTIFY_NEW_TRACK: handleSpotifyNewTrack, GAME_PROFILE_OPEN: handleFetchGameProfileFeed };
+  applyArgumentsResult.actions = {
+    POST_CONNECTION_OPEN: handlePostConnectionOpen,
+    CONNECTION_CLOSED: handleConnectionClosed,
+    WINDOW_FOCUS: handleUpdatePollingState,
+    IDLE: handleUpdatePollingState,
+    CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: handleUpdatePollingState,
+    CONTENT_INVENTORY_MANUAL_REFRESH: handleManualRefresh,
+    CONTENT_INVENTORY_INBOX_STALE: handleInboxStale,
+    SPOTIFY_NEW_TRACK: handleSpotifyNewTrack,
+    GAME_PROFILE_OPEN: handleFetchGameProfileFeed,
+  };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp6 {
-}
+class prototype extends tmp6 {}
 prototype = new prototype();
 let result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryManager.tsx");
 

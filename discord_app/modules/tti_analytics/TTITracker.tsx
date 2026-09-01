@@ -22,11 +22,9 @@ function serialize(arg0, arg1) {
   }
   return null;
 }
-function loggerCallback() {
-
-}
+function loggerCallback() {}
 global.__timingFunction = () => performance.now();
-let closure_7 = null == global.__getTotalRequireTime ? (() => 0) : (() => global.__getTotalRequireTime());
+let closure_7 = null == global.__getTotalRequireTime ? () => 0 : () => global.__getTotalRequireTime();
 class TTITimer {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -40,13 +38,13 @@ Object.defineProperty(prototype, "start", {
   get: function start() {
     return this.start_;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "end", {
   get: function end() {
     return this.end_;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["hasStart"] = function hasStart() {
   return this.start_ > 0;
@@ -150,7 +148,7 @@ prototype["measure"] = function measure(arg0) {
 prototype["measureAsync"] = function measureAsync(closure_1_5) {
   closure_0 = closure_1_5;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     closure_1 = tmp5;
     closure_0 = tmp2;
     if (closure_1_1.start_ > 0) {
@@ -167,7 +165,7 @@ prototype["measureAsync"] = function measureAsync(closure_1_5) {
 prototype["measureAsyncWithoutNesting"] = function measureAsyncWithoutNesting(arg0) {
   closure_0 = arg0;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     closure_1 = tmp5;
     closure_0 = tmp2;
     if (closure_1_1.start_ > 0) {
@@ -212,7 +210,7 @@ Object.defineProperty(prototype2, "time", {
   get: function time() {
     return this.time_;
   },
-  set: undefined
+  set: undefined,
 });
 prototype2["record"] = function record(timestamp) {
   if (timestamp === undefined) {
@@ -262,14 +260,13 @@ prototype2["serialize"] = function serialize(arg0) {
   }
   return tmp;
 };
-class TTIImportEvent {
-}
+class TTIImportEvent {}
 const prototype3 = TTIImportEvent.prototype;
 Object.defineProperty(prototype3, "time", {
   get: function time() {
     return this.time_;
   },
-  set: undefined
+  set: undefined,
 });
 prototype3["record"] = function record() {
   if (0 === this.time_) {
@@ -566,7 +563,15 @@ const prototype4 = function TTITrackers() {
   if (typeof TTIImportEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  obj = { polyfillsEnd: Object.create(tmp42.prototype), sentryEnd: null, appStateChangeStart: null, appStateChangeEnd: null, loadMiniCacheStart: null, loadStorageStart: null, loadStorageEnd: null };
+  obj = {
+    polyfillsEnd: Object.create(tmp42.prototype),
+    sentryEnd: null,
+    appStateChangeStart: null,
+    appStateChangeEnd: null,
+    loadMiniCacheStart: null,
+    loadStorageStart: null,
+    loadStorageEnd: null,
+  };
   if (typeof TTIImportEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -727,7 +732,10 @@ prototype5["recordMessageRender"] = function recordMessageRender(channelId, mapp
               const sorted = cachedMessageIds.sort(_default.compare);
               const sorted1 = mapped.sort(_default.compare);
               const _Math = Math;
-              self.messageCacheAgeSeconds = Math.floor((_default.extractTimestamp(sorted1.reverse()[0]) - _default.extractTimestamp(sorted.reverse()[0])) / 1000);
+              self.messageCacheAgeSeconds = Math.floor(
+                (_default.extractTimestamp(sorted1.reverse()[0]) - _default.extractTimestamp(sorted.reverse()[0])) /
+                  1000,
+              );
               const length = mapped.filter((arg0) => {
                 const cachedMessageIds = self.cachedMessageIds;
                 let hasItem;
@@ -795,7 +803,10 @@ prototype5["processNativeLogs"] = function processNativeLogs(nativeLogs, closure
   }
 };
 prototype5["serializeAppStartupMetrics"] = function serializeAppStartupMetrics() {
-  return { ready_packing_algorithm: this.readyProperties.packing_algorithm, ready_unpack_duration_ms: this.readyProperties.unpack_duration_ms };
+  return {
+    ready_packing_algorithm: this.readyProperties.packing_algorithm,
+    ready_unpack_duration_ms: this.readyProperties.unpack_duration_ms,
+  };
 };
 prototype5["serializeWebPerfStartupMetrics"] = function serializeWebPerfStartupMetrics(arg0) {
   const obj = {};
@@ -987,7 +998,19 @@ prototype5["serializeTTITracker"] = function serializeTTITracker(c3) {
   obj.ready_size_metrics_duration_ms = this.readyProperties.size_metrics_duration_ms;
   obj.had_cache_at_startup = this.readyProperties.had_cache_at_startup;
   obj.used_cache_at_startup = this.readyProperties.used_cache_at_startup;
-  ({ wasAuthenticated: obj2.was_authenticated, didBackgroundApp: obj2.did_background_app, interstitial: obj2.interstitial, messageCacheMissingReason: obj2.message_cache_missing_reason, messageCacheAgeSeconds: obj2.message_cache_age_seconds, messageCacheCount: obj2.message_cache_count, messageCacheHavingCount: obj2.message_cache_having_count, messageCacheMissingCount: obj2.message_cache_missing_count, messageRenderFullCount: obj2.message_render_full_count, messageRenderCachedCount: obj2.message_render_cached_count, messageRenderHasMoreAfter: obj2.message_render_has_more_after } = this);
+  ({
+    wasAuthenticated: obj2.was_authenticated,
+    didBackgroundApp: obj2.did_background_app,
+    interstitial: obj2.interstitial,
+    messageCacheMissingReason: obj2.message_cache_missing_reason,
+    messageCacheAgeSeconds: obj2.message_cache_age_seconds,
+    messageCacheCount: obj2.message_cache_count,
+    messageCacheHavingCount: obj2.message_cache_having_count,
+    messageCacheMissingCount: obj2.message_cache_missing_count,
+    messageRenderFullCount: obj2.message_render_full_count,
+    messageRenderCachedCount: obj2.message_render_cached_count,
+    messageRenderHasMoreAfter: obj2.message_render_has_more_after,
+  } = this);
   obj.duration_major_js_imports = this.loadImports.end - this.loadIndex.start + mapped.sum();
   const earlyCacheInfo = this.earlyCacheInfo;
   let num;

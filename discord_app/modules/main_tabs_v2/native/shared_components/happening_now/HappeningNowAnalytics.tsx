@@ -67,7 +67,9 @@ function getItemChannelId(channelId) {
   }
   return channelId;
 }
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAnalytics.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAnalytics.tsx",
+);
 
 export const getAffinityProperties = function getAffinityProperties(data) {
   id = id.getId();

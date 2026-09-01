@@ -13,10 +13,10 @@ let prototype = function ChangelogManager() {
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN(arg0) {
       return closure_0.handleConnectionOpen(arg0);
-    }
+    },
   };
   closure_0 = undefined;
-  closure_0 = callback(function*() {
+  closure_0 = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -222,7 +222,7 @@ let prototype = function ChangelogManager() {
       }
     }
   });
-  applyArgumentsResult.handleConnectionOpen = function() {
+  applyArgumentsResult.handleConnectionOpen = function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -234,8 +234,7 @@ let prototype = function ChangelogManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 const result = require("set").fileFinishedImporting("modules/changelog/ChangelogManager.tsx");
 

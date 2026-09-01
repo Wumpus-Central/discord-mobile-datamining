@@ -213,4 +213,4 @@ export default function getActivityStatusText(name) {
     obj16 = {};
     tmp15Result = tmp15(9257);
   }
-};
+}

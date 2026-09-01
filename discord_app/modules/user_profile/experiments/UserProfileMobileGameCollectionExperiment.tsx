@@ -4,9 +4,18 @@ import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const obj = { 1: null };
 obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-07-mobile-game-collection", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/user_profile/experiments/UserProfileMobileGameCollectionExperiment.tsx");
+let closure_0 = ApexExperiment.createApexExperiment({
+  name: "2026-07-mobile-game-collection",
+  kind: "user",
+  defaultConfig: { enabled: false },
+  variations: obj,
+});
+const result = set.fileFinishedImporting(
+  "modules/user_profile/experiments/UserProfileMobileGameCollectionExperiment.tsx",
+);
 
-export const useIsMobileGameCollectionExperimentEnabled = function useIsMobileGameCollectionExperimentEnabled(UserProfileWidgetsBoard) {
+export const useIsMobileGameCollectionExperimentEnabled = function useIsMobileGameCollectionExperimentEnabled(
+  UserProfileWidgetsBoard,
+) {
   return closure_0.useConfig({ location: UserProfileWidgetsBoard }).enabled;
 };

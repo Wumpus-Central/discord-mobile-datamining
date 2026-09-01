@@ -27,18 +27,22 @@ identity = {
   },
   onValueChange: function onIOSConversationSuggestionsSettingValueChange(arg0) {
     const result = IntentsHandler.setConversationSuggestionsEnabled(arg0);
-    result.then((arg0) => {
-      const callback = arg0;
-      callback(705).batchUpdates(() => closure_1_4.setState({ isEnabled: closure_0 }));
-    }).catch((arg0) => {
-      new callback2(3)("ConversationSuggestions").error("Error suggesting conversations", arg0);
-    });
+    result
+      .then((arg0) => {
+        const callback = arg0;
+        callback(705).batchUpdates(() => closure_1_4.setState({ isEnabled: closure_0 }));
+      })
+      .catch((arg0) => {
+        new callback2(3)("ConversationSuggestions").error("Error suggesting conversations", arg0);
+      });
   },
   usePredicate: function useHasIOSConversationSuggestionsSetting() {
     return !set.isAndroid();
-  }
+  },
 };
 identity = createToggle.createToggle(identity);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx",
+);
 
 export default identity;

@@ -10,8 +10,22 @@ import createCacheKey from "../../../Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
-let closure_2 = ["size", "isRound", "text", "value", "icon", "iconPosition", "accessibilityLabel", "accessibilityValue", "maxFontSizeMultiplier"];
-let obj = { buttonText: { flexGrow: 1, flexShrink: 1, width: "100%" }, buttonTextPlaceholder: null, buttonTextValue: null };
+let closure_2 = [
+  "size",
+  "isRound",
+  "text",
+  "value",
+  "icon",
+  "iconPosition",
+  "accessibilityLabel",
+  "accessibilityValue",
+  "maxFontSizeMultiplier",
+];
+let obj = {
+  buttonText: { flexGrow: 1, flexShrink: 1, width: "100%" },
+  buttonTextPlaceholder: null,
+  buttonTextValue: null,
+};
 obj = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
 obj[1] = obj;
 createCacheKey = { color: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
@@ -35,7 +49,11 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   }
   const tmp4 = callback(size, closure_2);
   let obj = useInputStyles;
-  const inputStyles = obj.useInputStyles({ size: str, isRound: undefined !== isRound && isRound, hasLeadingIcon: tmp7 });
+  const inputStyles = obj.useInputStyles({
+    size: str,
+    isRound: undefined !== isRound && isRound,
+    hasLeadingIcon: tmp7,
+  });
   const tmp9 = callback2();
   if (null != icon) {
     if (tmp7) {
@@ -53,7 +71,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
     obj2.variant = "tertiary";
     obj2.icon = icon;
     obj2.iconPosition = str2;
-    const items = [, ];
+    const items = [,];
     ({ padding: arr[0], radius: arr[1] } = inputStyles);
     obj2.pillStyle = items;
     if (accessibilityLabel == null) {
@@ -70,7 +88,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
       accessibilityValue = obj3;
     }
     obj2.accessibilityValue = accessibilityValue;
-    const items1 = [inputStyles.text, tmp9.buttonText, , ];
+    const items1 = [inputStyles.text, tmp9.buttonText, ,];
     const obj4 = { style: null, numberOfLines: 1, maxFontSizeMultiplier: null, children: null };
     items1[2] = null != value ? tmp9.buttonTextValue : tmp9.buttonTextPlaceholder;
     items1[3] = {};
@@ -80,10 +98,16 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
       value = text;
     }
     obj4[3] = value;
-    obj2.textElement = <Text style={null} numberOfLines={1} maxFontSizeMultiplier={null}>{null}</Text>;
+    obj2.textElement = (
+      <Text style={null} numberOfLines={1} maxFontSizeMultiplier={null}>
+        {null}
+      </Text>
+    );
     return jsx(CollapsingText.BaseTextButton, {});
   }
 });
-const result = require("set").fileFinishedImporting("design/components/experimental/Button/native/InputButton.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/experimental/Button/native/InputButton.native.tsx",
+);
 
 export const InputButton = forwardRefResult;

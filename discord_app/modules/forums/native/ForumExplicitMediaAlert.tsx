@@ -25,14 +25,20 @@ export default function ForumExplicitMediaAlert(arg0) {
   ({ channelId: require, messageId: importDefault, onClose } = arg0);
   const tmp = callback3();
   let obj = { noDefaultButtons: true, style: tmp.container, onClose, children: null };
-  obj = { accessibilityRole: "header", variant: "heading-md/extrabold", color: "text-default", style: items, children: null };
-  items = [, ];
+  obj = {
+    accessibilityRole: "header",
+    variant: "heading-md/extrabold",
+    color: "text-default",
+    style: items,
+    children: null,
+  };
+  items = [,];
   ({ title: arr[0], text: arr[1] } = tmp);
   const intl = require(onClose[7]).intl;
   obj[4] = intl.string(require(onClose[7]).t.B3vFdU);
-  const items1 = [callback(require(onClose[6]).Text, obj), , , ];
+  const items1 = [callback(require(onClose[6]).Text, obj), , ,];
   obj = { style: items2, maxFontSizeMultiplier: 1, variant: "text-md/normal", children: null };
-  items2 = [, ];
+  items2 = [,];
   ({ body: arr3[0], text: arr3[1] } = tmp);
   const intl2 = require(onClose[7]).intl;
   obj[3] = intl2.string(require(onClose[7]).t.i4AbAS);
@@ -50,9 +56,9 @@ export default function ForumExplicitMediaAlert(arg0) {
     handleFalsePositiveHook() {
       onClose();
       const result = closure_1_0(onClose[9]).handleSenderFalsePositiveFlow(closure_0, closure_1);
-    }
+    },
   });
   items1[3] = callback(require(onClose[6]).Text, obj3);
   obj[3] = items1;
   return callback2(importDefault(onClose[5]), obj);
-};
+}

@@ -55,7 +55,14 @@ export default function getTimestampString(arg0, arg1) {
     return tmp7;
   }
   importDefault = tmp4;
-  obj = { seconds: flag(tmp2[0]).t.sMPmtq, minutes: flag(tmp2[0]).t.N9M4N1, hours: flag(tmp2[0]).t.p0KedC, days: flag(tmp2[0]).t.gjK5av, months: flag(tmp2[0]).t.kHo4Or, years: flag(tmp2[0]).t.KjKr2P };
+  obj = {
+    seconds: flag(tmp2[0]).t.sMPmtq,
+    minutes: flag(tmp2[0]).t.N9M4N1,
+    hours: flag(tmp2[0]).t.p0KedC,
+    days: flag(tmp2[0]).t.gjK5av,
+    months: flag(tmp2[0]).t.kHo4Or,
+    years: flag(tmp2[0]).t.KjKr2P,
+  };
   if (diffResult < 60) {
     let seconds;
     if (tmp4 != null) {
@@ -112,4 +119,4 @@ export default function getTimestampString(arg0, arg1) {
     }
   }
   return importDefault(obj[1])(arg0).format("LL");
-};
+}

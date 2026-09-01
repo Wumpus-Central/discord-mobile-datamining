@@ -26,7 +26,9 @@ export const canReportMessageToMods = function canReportMessageToMods(message) {
       if (null == guild) {
         return false;
       } else {
-        return getGuildModeratorReportingEnabledDefault(guild) && null != getGuildModeratorReportChannelIdDefault(guild);
+        return (
+          getGuildModeratorReportingEnabledDefault(guild) && null != getGuildModeratorReportChannelIdDefault(guild)
+        );
       }
     }
   } else {
@@ -179,7 +181,10 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
           tmp9 = null == firstMessage;
         }
         if (!tmp9) {
-          tmp9 = !tmp10(6138).messageHasObscurableMediaForBitmask(firstMessage, tmp10(6141).ContentHarmTypeBitMask.EXPLICIT);
+          tmp9 = !tmp10(6138).messageHasObscurableMediaForBitmask(
+            firstMessage,
+            tmp10(6141).ContentHarmTypeBitMask.EXPLICIT,
+          );
           const tmp10Result = tmp10(6138);
         }
         return tmp9;
@@ -192,7 +197,10 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
     obj3 = isCurrentUserTeen;
   }
 };
-export const isModeratorReportThreadStarterMessage = function isModeratorReportThreadStarterMessage(isFirstMessageInForumPost, isModeratorReportChannel) {
+export const isModeratorReportThreadStarterMessage = function isModeratorReportThreadStarterMessage(
+  isFirstMessageInForumPost,
+  isModeratorReportChannel,
+) {
   const result = isFirstMessageInForumPost.isFirstMessageInForumPost(isModeratorReportChannel);
   let tmp2 = !result;
   if (result) {

@@ -82,7 +82,8 @@ function rebuildState(refreshThreadIds) {
     }
     if (refreshThreadIds1) {
       const obj3 = importDefaultResult;
-      _require = require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.LATEST_ACTIVITY;
+      _require = require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder
+        .LATEST_ACTIVITY;
       closure_21 = importDefaultResult.chain(closure_19).sort((id, id) => {
         let compare = closure_1_2;
         let num = -1;
@@ -113,7 +114,8 @@ function rebuildState(refreshThreadIds) {
       });
       const chainResult = importDefaultResult.chain(closure_19);
       const obj5 = importDefaultResult;
-      _require = require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.CREATION_DATE;
+      _require = require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder
+        .CREATION_DATE;
       closure_20 = importDefaultResult.chain(closure_19).sort((id, id) => {
         let compare = closure_1_2;
         let num = -1;
@@ -144,7 +146,11 @@ function rebuildState(refreshThreadIds) {
       });
       const chainResult1 = importDefaultResult.chain(closure_19);
     }
-    const valueResult = LATEST_ACTIVITY === require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
+    const valueResult =
+      LATEST_ACTIVITY ===
+      require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.LATEST_ACTIVITY
+        ? closure_21
+        : closure_20.value();
     let found = valueResult;
     if (0 !== set.size) {
       _require = set;
@@ -191,7 +197,11 @@ function rebuildState(refreshThreadIds) {
       tmp33 = found1;
     }
     found1 = tmp33;
-    const iter = LATEST_ACTIVITY === require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
+    const iter =
+      LATEST_ACTIVITY ===
+      require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.LATEST_ACTIVITY
+        ? closure_21
+        : closure_20;
     obj = set1;
   }
 }
@@ -210,8 +220,7 @@ let closure_21 = importDefaultResult.chain(items);
 const set1 = new Set();
 const set2 = new Set();
 const Store = initializeDefault.Store;
-class ForumActivePostStore extends Store {
-}
+class ForumActivePostStore extends Store {}
 const prototype = ForumActivePostStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_6, closure_7, closure_8, closure_9, closure_5);
@@ -364,7 +373,7 @@ const forumActivePostStore = new ForumActivePostStore(dispatcherDefault, {
       }
     }
     return false;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/forums/ForumActivePostStore.tsx");
 

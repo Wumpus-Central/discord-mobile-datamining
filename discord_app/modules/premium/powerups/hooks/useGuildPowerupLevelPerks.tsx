@@ -52,4 +52,4 @@ export default function useGuildPowerupLevelPerks(arg0) {
     const mapped = features.map((arg0) => table[arg0]);
     return items.concat(mapped.filter(lib(includeStickers[5]).isNotNullish));
   }, items);
-};
+}

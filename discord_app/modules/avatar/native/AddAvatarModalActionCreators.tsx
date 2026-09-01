@@ -37,7 +37,11 @@ export const handlePressNext = function handlePressNext(pendingImage, first, fn)
 export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
   const _require = arg0;
   let obj = expandEventPropertiesDefault;
-  obj.track(AnalyticEvents.NUO_TRANSITION, { flow_type: "Mobile NUX Post Reg", from_step: "Skip avatar modal", skip_attempt: true });
+  obj.track(AnalyticEvents.NUO_TRANSITION, {
+    flow_type: "Mobile NUX Post Reg",
+    from_step: "Skip avatar modal",
+    skip_attempt: true,
+  });
   obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false };
   const intl = require("../../../intl/index.native.tsx").intl;
   obj[0] = intl.string(require("../../../intl/index.native.tsx").t.DnKHuV);

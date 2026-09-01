@@ -33,7 +33,15 @@ function _activityFromSetting(emojiName) {
   if (emojiName.label != null) {
     value = iter.value;
   }
-  obj = { name: "Custom Status", type: ActivityTypes.CUSTOM_STATUS, state: null, timestamps: null, emoji: null, details: null, metadata: null };
+  obj = {
+    name: "Custom Status",
+    type: ActivityTypes.CUSTOM_STATUS,
+    state: null,
+    timestamps: null,
+    emoji: null,
+    details: null,
+    metadata: null,
+  };
   let text;
   if (emojiName.text.length > 0) {
     text = emojiName.text;
@@ -75,16 +83,20 @@ export const useCustomStatusActivity = function useCustomStatusActivity() {
   }
   const items = [closure_4];
   const items1 = [emojiId];
-  stateFromStores = setting(stateFromStores[5]).useStateFromStores(items, () => {
-    let usableCustomEmojiById = null;
-    if (null != emojiId) {
-      usableCustomEmojiById = null;
-      if ("0" !== tmp) {
-        usableCustomEmojiById = closure_1_4.getUsableCustomEmojiById(tmp);
+  stateFromStores = setting(stateFromStores[5]).useStateFromStores(
+    items,
+    () => {
+      let usableCustomEmojiById = null;
+      if (null != emojiId) {
+        usableCustomEmojiById = null;
+        if ("0" !== tmp) {
+          usableCustomEmojiById = closure_1_4.getUsableCustomEmojiById(tmp);
+        }
       }
-    }
-    return usableCustomEmojiById;
-  }, items1);
+      return usableCustomEmojiById;
+    },
+    items1,
+  );
   const items2 = [setting, stateFromStores];
   return useMemo(() => {
     let tmp2 = null;

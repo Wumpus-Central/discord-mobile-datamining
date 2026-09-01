@@ -35,7 +35,7 @@ export default function useDisplayProfile(arg0, arg1) {
     }
     return tmp2;
   });
-};
+}
 export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFetchEffect(arg0, arg1) {
   let _require = arg0;
   closure_1 = arg1;

@@ -28,7 +28,8 @@ function withContent(currentlyShown, content) {
       const currentlyShownGroup = currentlyShown.currentlyShownGroup;
       currentlyShownGroup.add(content.groupName);
     }
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require("DismissibleContentFatigueConfig.tsx").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE =
+      require("DismissibleContentFatigueConfig.tsx").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     if (!CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content)) {
       currentlyShown.shownFatigableCandidate = content;
       const prevFatigableCandidate = currentlyShown.prevFatigableCandidate;
@@ -194,7 +195,16 @@ function withUpdateWinner(candidates) {
 }
 const taskRunner = new require("schedule").TaskRunner();
 let closure_6 = identity.createWithEqualityFn(function initState() {
-  const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
+  const obj = {
+    candidates: new Map(),
+    shownFatigableCandidate: null,
+    prevFatigableCandidate: null,
+    recentlyShown: [],
+    currentlyShown: null,
+    currentlyShownGroup: null,
+    lastWinnerTime: 0,
+    postConnectionOpen: false,
+  };
   const map = new Map();
   obj[4] = new Set();
   const set = new Set();
@@ -203,8 +213,7 @@ let closure_6 = identity.createWithEqualityFn(function initState() {
 });
 let c7 = false;
 const Store = initializeDefault.Store;
-class DismissibleContentShownStateStore extends Store {
-}
+class DismissibleContentShownStateStore extends Store {}
 const prototype = DismissibleContentShownStateStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
@@ -220,7 +229,16 @@ identity = {
   CONNECTION_OPEN() {
     batchUpdates.batchUpdates(() => {
       state.setState(() => {
-        const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
+        const obj = {
+          candidates: new Map(),
+          shownFatigableCandidate: null,
+          prevFatigableCandidate: null,
+          recentlyShown: [],
+          currentlyShown: null,
+          currentlyShownGroup: null,
+          lastWinnerTime: 0,
+          postConnectionOpen: false,
+        };
         const map = new Map();
         obj[4] = new Set();
         const set = new Set();
@@ -234,7 +252,16 @@ identity = {
   LOGOUT() {
     batchUpdates.batchUpdates(() => {
       state.setState(() => {
-        const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
+        const obj = {
+          candidates: new Map(),
+          shownFatigableCandidate: null,
+          prevFatigableCandidate: null,
+          recentlyShown: [],
+          currentlyShown: null,
+          currentlyShownGroup: null,
+          lastWinnerTime: 0,
+          postConnectionOpen: false,
+        };
         const map = new Map();
         obj[4] = new Set();
         const set = new Set();
@@ -244,14 +271,14 @@ identity = {
       });
     });
     taskRunner.unschedule();
-  }
+  },
 };
 const dismissibleContentShownStateStore = new DismissibleContentShownStateStore(dispatcherDefault, identity);
 let result = require("set").fileFinishedImporting("modules/dismissible_content/DismissibleContentShownStateStore.tsx");
 
 export default function useDismissibleContentShownStateStore(arg0, arg1) {
   return store(arg0, arg1);
-};
+}
 export const isInCooldown = function isInCooldown() {
   const state = store.getState();
   new Date();
@@ -271,7 +298,8 @@ export const isStateInCooldown = function isStateInCooldown(shownFatigableCandid
 };
 export const addCandidateContent = function addCandidateContent(content) {
   const _require = content;
-  const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require("DismissibleContentFatigueConfig.tsx").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+  const CONTENT_TYPES_WITH_BYPASS_FATIGUE =
+    require("DismissibleContentFatigueConfig.tsx").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
   closure_1 = CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content);
   require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     closure_1_6.setState((candidates) => {
@@ -406,14 +434,23 @@ export const getCurrentlyShownCounts = function getCurrentlyShownCounts() {
     items.filter((arg0) => {
       const CONTENT_TYPES_WITH_BYPASS_FATIGUE = callback(table[4]).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
       return !CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(arg0);
-    }).length
+    }).length,
   ];
   return items1;
 };
 export const reset = function reset() {
   batchUpdates.batchUpdates(() => {
     state.setState(() => {
-      const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
+      const obj = {
+        candidates: new Map(),
+        shownFatigableCandidate: null,
+        prevFatigableCandidate: null,
+        recentlyShown: [],
+        currentlyShown: null,
+        currentlyShownGroup: null,
+        lastWinnerTime: 0,
+        postConnectionOpen: false,
+      };
       const map = new Map();
       obj[4] = new Set();
       const set = new Set();

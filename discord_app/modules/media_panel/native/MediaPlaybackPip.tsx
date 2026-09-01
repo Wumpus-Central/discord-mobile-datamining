@@ -27,19 +27,23 @@ function MediaInfo(message) {
   obj1 = message(589);
   const items = [closure_8, closure_11, closure_10];
   const items1 = [message];
-  const stateFromStores = obj1.useStateFromStores(items, () => {
-    let channel_id;
-    if (message != null) {
-      channel_id = message.channel_id;
-    }
-    const channel = closure_1_8.getChannel(channel_id);
-    let channelName = null;
-    if (null != channel) {
-      const obj = message(4674);
-      channelName = obj.computeChannelName(channel, closure_1_11, closure_1_10, true, true);
-    }
-    return channelName;
-  }, items1);
+  const stateFromStores = obj1.useStateFromStores(
+    items,
+    () => {
+      let channel_id;
+      if (message != null) {
+        channel_id = message.channel_id;
+      }
+      const channel = closure_1_8.getChannel(channel_id);
+      let channelName = null;
+      if (null != channel) {
+        const obj = message(4674);
+        channelName = obj.computeChannelName(channel, closure_1_11, closure_1_10, true, true);
+      }
+      return channelName;
+    },
+    items1,
+  );
   const tmp7 = first1(React.useState(0), 2);
   first = tmp7[0];
   dependencyMap = tmp7[1];
@@ -85,7 +89,7 @@ function MediaInfo(message) {
           obj2[0] = { flex: 1 };
           const obj3 = { spacing: 20, speed: 0.2, children: null };
           obj3[2] = tmp14;
-          const items3 = [tmp13(tmp2(16804).Marquee, obj3), ];
+          const items3 = [tmp13(tmp2(16804).Marquee, obj3)];
           const obj4 = { start: null, end: null, locations: null, colors: null, style: null };
           obj4[0] = { x: 0, y: 0 };
           obj4[1] = { x: 1, y: 0 };
@@ -97,7 +101,7 @@ function MediaInfo(message) {
           obj2[1] = items3;
           tmp16Result = tmp16(tmp15, obj2);
         }
-        const items5 = [tmp16Result, ];
+        const items5 = [tmp16Result];
         let tmp13Result = null != stateFromStores;
         if (tmp13Result) {
           const obj5 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: null };
@@ -130,7 +134,10 @@ function PiPControls(message) {
           if (channel != null) {
             guildId = channel.getGuildId();
           }
-          visible(closure_1_2[20])(closure_1_14.CHANNEL(guildId, tmp.channel_id, tmp.id), { navigationReplace: true, openChannel: true });
+          visible(closure_1_2[20])(closure_1_14.CHANNEL(guildId, tmp.channel_id, tmp.id), {
+            navigationReplace: true,
+            openChannel: true,
+          });
           const tmp6 = visible;
           const tmp6Result = visible(closure_1_2[20]);
           const tmp7 = closure_1_2;
@@ -171,28 +178,78 @@ function PiPControls(message) {
   }
   obj = { style: items1, children: null };
   items1 = [tmp.pipControls, animatedStyle];
-  const items2 = [callback2(message(8984).BackgroundBlurFill, { blurAmount: 0.05 }), , ];
-  const items3 = [, ];
+  const items2 = [callback2(message(8984).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
+  const items3 = [,];
   ({ pipButton: arr4[0], backButton: arr4[1] } = tmp);
-  items2[1] = callback2(closure_6, { disabled: !visible, style: items3, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: stringResult, children: callback2(message(5499).ArrowLargeLeftIcon, { size: "sm" }) });
-  obj1 = { disabled: !visible, style: items3, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: stringResult, children: callback2(message(5499).ArrowLargeLeftIcon, { size: "sm" }) };
-  const items4 = [, ];
+  items2[1] = callback2(closure_6, {
+    disabled: !visible,
+    style: items3,
+    onPress: callback,
+    accessible: true,
+    accessibilityRole: "button",
+    accessibilityLabel: stringResult,
+    children: callback2(message(5499).ArrowLargeLeftIcon, { size: "sm" }),
+  });
+  obj1 = {
+    disabled: !visible,
+    style: items3,
+    onPress: callback,
+    accessible: true,
+    accessibilityRole: "button",
+    accessibilityLabel: stringResult,
+    children: callback2(message(5499).ArrowLargeLeftIcon, { size: "sm" }),
+  };
+  const items4 = [,];
   ({ pipButton: arr5[0], dismissButton: arr5[1] } = tmp);
-  items2[2] = callback2(closure_6, { disabled: !visible, style: items4, onPress: message.handleClosePip, accessible: true, accessibilityRole: "button", accessibilityLabel: string2Result, children: callback2(message(4431).XLargeIcon, { size: "sm" }) });
+  items2[2] = callback2(closure_6, {
+    disabled: !visible,
+    style: items4,
+    onPress: message.handleClosePip,
+    accessible: true,
+    accessibilityRole: "button",
+    accessibilityLabel: string2Result,
+    children: callback2(message(4431).XLargeIcon, { size: "sm" }),
+  });
   obj[1] = items2;
   return callback3(visible(4217).View, obj);
 }
 ({ Easing: c5, StyleSheet, TouchableOpacity: closure_6, View: error } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = ME);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-createCacheKey = { container: createCacheKey, pipControls: null, pipButton: null, dismissButton: null, backButton: null, infoContainer: null, infoContainerGradient: null, infoContent: null, actionContainer: null, playPauseButton: null, progressBar: null };
-createCacheKey = { justifyContent: "center", alignItems: "center", height: SquarePIPReferenceDimensions.height, width: SquarePIPReferenceDimensions.width };
+createCacheKey = {
+  container: createCacheKey,
+  pipControls: null,
+  pipButton: null,
+  dismissButton: null,
+  backButton: null,
+  infoContainer: null,
+  infoContainerGradient: null,
+  infoContent: null,
+  actionContainer: null,
+  playPauseButton: null,
+  progressBar: null,
+};
+createCacheKey = {
+  justifyContent: "center",
+  alignItems: "center",
+  height: SquarePIPReferenceDimensions.height,
+  width: SquarePIPReferenceDimensions.width,
+};
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj1.zIndex = 5;
 createCacheKey[1] = obj1;
 const merged1 = Object.assign(ThemesDefault.shadows.SHADOW_LOW_HOVER);
-createCacheKey[2] = { position: "absolute", top: 8, padding: 8, borderRadius: ThemesDefault.radii.round, borderWidth: 1, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, tintColor: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
+createCacheKey[2] = {
+  position: "absolute",
+  top: 8,
+  padding: 8,
+  borderRadius: ThemesDefault.radii.round,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT,
+  tintColor: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT,
+  backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
+};
 createCacheKey[3] = { right: 8 };
 createCacheKey[4] = { left: 8 };
 createCacheKey[5] = { justifyContent: "center", alignItems: "center", marginBottom: 8, height: 34 };
@@ -200,17 +257,44 @@ const merged2 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey[6] = {};
 createCacheKey[7] = { justifyContent: "center", alignItems: "center", alignSelf: "stretch", marginHorizontal: 4 };
 createCacheKey[8] = { justifyContent: "center", alignItems: "center", width: 48, height: 48, zIndex: 100 };
-let obj2 = { position: "absolute", top: 8, padding: 8, borderRadius: ThemesDefault.radii.round, borderWidth: 1, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, tintColor: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
+let obj2 = {
+  position: "absolute",
+  top: 8,
+  padding: 8,
+  borderRadius: ThemesDefault.radii.round,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT,
+  tintColor: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT,
+  backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
+};
 let obj3 = {};
-createCacheKey[9] = { justifyContent: "center", alignItems: "center", width: 32, height: 32, zIndex: 100, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+createCacheKey[9] = {
+  justifyContent: "center",
+  alignItems: "center",
+  width: 32,
+  height: 32,
+  zIndex: 100,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
 let obj5 = {};
 const merged3 = Object.assign(StyleSheet.absoluteFillObject);
 obj5.justifyContent = "center";
 obj5.alignItems = "center";
 createCacheKey[10] = obj5;
 let closure_17 = createCacheKey.createStyles(createCacheKey);
-let closure_19 = { code: "function MediaPlaybackPipTsx1(){const{withTiming,visible}=this.__closure;return{opacity:withTiming(visible?1:0,{duration:200})};}" };
-let obj4 = { justifyContent: "center", alignItems: "center", width: 32, height: 32, zIndex: 100, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+let closure_19 = {
+  code: "function MediaPlaybackPipTsx1(){const{withTiming,visible}=this.__closure;return{opacity:withTiming(visible?1:0,{duration:200})};}",
+};
+let obj4 = {
+  justifyContent: "center",
+  alignItems: "center",
+  width: 32,
+  height: 32,
+  zIndex: 100,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
 let result = require("set").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPip.tsx");
 
 export default function MediaPlaybackPip() {
@@ -218,7 +302,15 @@ export default function MediaPlaybackPip() {
   let obj = React;
   obj1 = progress(mediaSourceMessage[28]);
   let obj2 = progress(mediaSourceMessage[29]);
-  const mediaPlayerManagerStore = obj1.useMediaPlayerManagerStore(obj2.useShallow((isPlaying) => ({ isPlaying: isPlaying.isPlaying, progress: isPlaying.progress, activeMediaPlayerSource: isPlaying.activeMediaPlayerSource, mediaSourceMessage: isPlaying.mediaSourceMessage, closePip: isPlaying.closePip })));
+  const mediaPlayerManagerStore = obj1.useMediaPlayerManagerStore(
+    obj2.useShallow((isPlaying) => ({
+      isPlaying: isPlaying.isPlaying,
+      progress: isPlaying.progress,
+      activeMediaPlayerSource: isPlaying.activeMediaPlayerSource,
+      mediaSourceMessage: isPlaying.mediaSourceMessage,
+      closePip: isPlaying.closePip,
+    })),
+  );
   const isPlaying = mediaPlayerManagerStore.isPlaying;
   progress = isPlaying;
   ({ progress, activeMediaPlayerSource } = mediaPlayerManagerStore);
@@ -228,23 +320,27 @@ export default function MediaPlaybackPip() {
   const ref = React.useRef(null);
   const items = [first];
   const items1 = [activeMediaPlayerSource];
-  const stateFromStores = progress(mediaSourceMessage[13]).useStateFromStores(items, () => {
-    let channelId;
-    if (callback != null) {
-      channelId = tmp.channelId;
-    }
-    if (callback != null) {
-      const messageId = tmp.messageId;
-    }
-    let message = null;
-    if (null != channelId) {
-      message = null;
-      if (null != messageId) {
-        message = first.getMessage(channelId, messageId);
+  const stateFromStores = progress(mediaSourceMessage[13]).useStateFromStores(
+    items,
+    () => {
+      let channelId;
+      if (callback != null) {
+        channelId = tmp.channelId;
       }
-    }
-    return message;
-  }, items1);
+      if (callback != null) {
+        const messageId = tmp.messageId;
+      }
+      let message = null;
+      if (null != channelId) {
+        message = null;
+        if (null != messageId) {
+          message = first.getMessage(channelId, messageId);
+        }
+      }
+      return message;
+    },
+    items1,
+  );
   if (null != stateFromStores) {
     mediaSourceMessage = stateFromStores;
   }
@@ -314,7 +410,17 @@ export default function MediaPlaybackPip() {
       if (activeMediaPlayerSource != null) {
         messageId = activeMediaPlayerSource.messageId;
       }
-      const obj = { message_id: messageId, sender_user_id: null, type: null, is_voice_message: null, total_duration_secs: null, pip_playback_start_time_secs: null, pip_playback_end_time_secs: null, pip_opened_timestamp: null, pip_closed_timestamp: null };
+      const obj = {
+        message_id: messageId,
+        sender_user_id: null,
+        type: null,
+        is_voice_message: null,
+        total_duration_secs: null,
+        pip_playback_start_time_secs: null,
+        pip_playback_end_time_secs: null,
+        pip_opened_timestamp: null,
+        pip_closed_timestamp: null,
+      };
       let id;
       if (message != null) {
         id = message.author.id;
@@ -438,8 +544,26 @@ export default function MediaPlaybackPip() {
     return closure_1_15(PlayIcon, { color: callback(tmp4[11]).colors.WHITE, size: "md" });
   }, items7);
   const items9 = [mediaSourceMessage, callback, first, hasFlagResult];
-  const memo1 = obj.useMemo(() => closure_1_15(closure_1_18, { message: closure_3, activeMediaPlayerSource: callback, isVoiceMessage: closure_4, isControlVisible: first }), items8);
-  const memo2 = obj.useMemo(() => closure_1_15(closure_1_20, { message: closure_3, handleClosePip: callback, visible: first, isVoiceMessage: closure_4 }), items9);
+  const memo1 = obj.useMemo(
+    () =>
+      closure_1_15(closure_1_18, {
+        message: closure_3,
+        activeMediaPlayerSource: callback,
+        isVoiceMessage: closure_4,
+        isControlVisible: first,
+      }),
+    items8,
+  );
+  const memo2 = obj.useMemo(
+    () =>
+      closure_1_15(closure_1_20, {
+        message: closure_3,
+        handleClosePip: callback,
+        visible: first,
+        isVoiceMessage: closure_4,
+      }),
+    items9,
+  );
   const intl = tmp3(tmp4[23]).intl;
   const string = intl.string;
   const t = tmp3(tmp4[23]).t;
@@ -458,7 +582,7 @@ export default function MediaPlaybackPip() {
   }
   let num = 0;
   if (null != progress) {
-    num = progress.time / progress.duration * 100;
+    num = (progress.time / progress.duration) * 100;
   }
   let num3 = 0;
   if (null != progress) {
@@ -477,11 +601,24 @@ export default function MediaPlaybackPip() {
       }
     },
     accessible: false,
-    children: null
+    children: null,
   };
-  const items10 = [memo2, memo1, ];
+  const items10 = [memo2, memo1];
   obj = { style: tmp.actionContainer, children: null };
-  obj1 = { style: tmp.progressBar, size: 48, width: 2, prefill: num, easing: first.out(first.linear), duration: null, fill: null, rotation: 0, lineCap: "round", ref: null, tintColor: null, backgroundColor: null };
+  obj1 = {
+    style: tmp.progressBar,
+    size: 48,
+    width: 2,
+    prefill: num,
+    easing: first.out(first.linear),
+    duration: null,
+    fill: null,
+    rotation: 0,
+    lineCap: "round",
+    ref: null,
+    tintColor: null,
+    backgroundColor: null,
+  };
   let num4 = 0;
   if (isPlaying) {
     num4 = num3;
@@ -497,8 +634,14 @@ export default function MediaPlaybackPip() {
   obj1[10] = tmp3Result.useToken(callback(mediaSourceMessage[11]).colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT);
   tmp3Result = tmp3(tmp4[12]);
   obj1[11] = tmp3Result.useToken(callback(mediaSourceMessage[11]).colors.BACKGROUND_MOD_MUTED);
-  const items11 = [closure_15(progress(mediaSourceMessage[33]).AnimatedCircularProgress, obj1), ];
-  obj2 = { style: tmp.playPauseButton, onPress: callback1, accessibilityRole: "button", accessibilityLabel: null, children: null };
+  const items11 = [closure_15(progress(mediaSourceMessage[33]).AnimatedCircularProgress, obj1)];
+  obj2 = {
+    style: tmp.playPauseButton,
+    onPress: callback1,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    children: null,
+  };
   if (isPlaying) {
     stringResult = string2Result;
   }
@@ -509,4 +652,4 @@ export default function MediaPlaybackPip() {
   items10[2] = closure_16(dismissPanel, obj);
   obj[4] = items10;
   return closure_16(closure_6, obj);
-};
+}

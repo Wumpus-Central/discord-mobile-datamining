@@ -12,7 +12,9 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ asLaunched: c9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: unpackModuleId } = FrameLayoutModes);
 let closure_13 = createCacheKey.createStyles({ activityContainer: { flex: 1 } });
-let closure_14 = { code: "function VoicePanelSecondaryPIPContentTsx1(){const{getActivityContainerPipStylesSpec,pipState,activePipOrientationLockState,windowDimensions}=this.__closure;const{width:width,height:height,shouldVerticallyCenter:shouldVerticallyCenter,shouldHorizontallyCenter:shouldHorizontallyCenter,marginLeft:marginLeft,marginTop:marginTop}=getActivityContainerPipStylesSpec({pipWidth:pipState.width,pipHeight:pipState.height,pipOrientationLockState:activePipOrientationLockState,isLandscape:windowDimensions.get().landscape});return{width:width,height:height,left:shouldHorizontallyCenter?'50%':'0%',top:shouldVerticallyCenter?'50%':'0%',marginLeft:marginLeft,marginTop:marginTop};}" };
+let closure_14 = {
+  code: "function VoicePanelSecondaryPIPContentTsx1(){const{getActivityContainerPipStylesSpec,pipState,activePipOrientationLockState,windowDimensions}=this.__closure;const{width:width,height:height,shouldVerticallyCenter:shouldVerticallyCenter,shouldHorizontallyCenter:shouldHorizontallyCenter,marginLeft:marginLeft,marginTop:marginTop}=getActivityContainerPipStylesSpec({pipWidth:pipState.width,pipHeight:pipState.height,pipOrientationLockState:activePipOrientationLockState,isLandscape:windowDimensions.get().landscape});return{width:width,height:height,left:shouldHorizontallyCenter?'50%':'0%',top:shouldVerticallyCenter?'50%':'0%',marginLeft:marginLeft,marginTop:marginTop};}",
+};
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelSecondaryPIPContent.tsx");
 
 export default function VoicePanelSecondaryPIPContent() {
@@ -31,7 +33,14 @@ export default function VoicePanelSecondaryPIPContent() {
     if (selfEmbeddedActivityForLocation != null) {
       applicationId = selfEmbeddedActivityForLocation.applicationId;
     }
-    obj = { connectedEmbeddedActivityChannelId: windowDimensions(connectedEmbeddedActivityChannelId[12]).getEmbeddedActivityLocationChannelId(connectedActivityLocation), connectedEmbeddedActivity: selfEmbeddedActivityForLocation, pipOrientationLockState: null, panelMode: null };
+    obj = {
+      connectedEmbeddedActivityChannelId: windowDimensions(
+        connectedEmbeddedActivityChannelId[12],
+      ).getEmbeddedActivityLocationChannelId(connectedActivityLocation),
+      connectedEmbeddedActivity: selfEmbeddedActivityForLocation,
+      pipOrientationLockState: null,
+      panelMode: null,
+    };
     let pipOrientationLockStateForApp;
     if (null != applicationId) {
       pipOrientationLockStateForApp = obj.getPipOrientationLockStateForApp(applicationId);
@@ -45,29 +54,45 @@ export default function VoicePanelSecondaryPIPContent() {
   const tmp2 = windowDimensions;
   const tmp3 = callback();
   const items1 = [pipOrientationLockState];
-  const stateFromStoresObject1 = windowDimensions(connectedEmbeddedActivityChannelId[11]).useStateFromStoresObject(items1, () => {
-    const tmp = callback(pipOrientationLockState.getMainFrame());
-    const obj = { hasLaunchedFrame: null != tmp, framePanelMode: null, framePipOrientationLockState: null };
-    let activityPanelMode;
-    if (tmp != null) {
-      activityPanelMode = tmp.data.activityPanelMode;
-    }
-    if (activityPanelMode == null) {
-      activityPanelMode = constants.DISCONNECTED;
-    }
-    obj[1] = activityPanelMode;
-    obj[2] = callback2(tmp);
-    return obj;
-  });
+  const stateFromStoresObject1 = windowDimensions(connectedEmbeddedActivityChannelId[11]).useStateFromStoresObject(
+    items1,
+    () => {
+      const tmp = callback(pipOrientationLockState.getMainFrame());
+      const obj = { hasLaunchedFrame: null != tmp, framePanelMode: null, framePipOrientationLockState: null };
+      let activityPanelMode;
+      if (tmp != null) {
+        activityPanelMode = tmp.data.activityPanelMode;
+      }
+      if (activityPanelMode == null) {
+        activityPanelMode = constants.DISCONNECTED;
+      }
+      obj[1] = activityPanelMode;
+      obj[2] = callback2(tmp);
+      return obj;
+    },
+  );
   ({ hasLaunchedFrame, framePanelMode, framePipOrientationLockState } = stateFromStoresObject1);
   const obj4 = windowDimensions(connectedEmbeddedActivityChannelId[11]);
   const items2 = [closure_6];
   width = size.width;
   height = size.height;
   const items3 = [width, height];
-  const stateFromStores = windowDimensions(connectedEmbeddedActivityChannelId[11]).useStateFromStores(items2, () => closure_1_6.getChannel(connectedEmbeddedActivityChannelId));
+  const stateFromStores = windowDimensions(connectedEmbeddedActivityChannelId[11]).useStateFromStores(items2, () =>
+    closure_1_6.getChannel(connectedEmbeddedActivityChannelId),
+  );
   let tmp8 = null != connectedEmbeddedActivity;
-  const memo = width.useMemo(() => ({ width, height, position: "absolute", left: "50%", marginLeft: -1 * size(connectedEmbeddedActivityChannelId[13])(width / 2), top: "50%", marginTop: -1 * size(connectedEmbeddedActivityChannelId[13])(height / 2) }), items3);
+  const memo = width.useMemo(
+    () => ({
+      width,
+      height,
+      position: "absolute",
+      left: "50%",
+      marginLeft: -1 * size(connectedEmbeddedActivityChannelId[13])(width / 2),
+      top: "50%",
+      marginTop: -1 * size(connectedEmbeddedActivityChannelId[13])(height / 2),
+    }),
+    items3,
+  );
   if (tmp8) {
     tmp8 = !tmp(obj[14])(connectedEmbeddedActivityChannelId);
   }
@@ -82,7 +107,12 @@ export default function VoicePanelSecondaryPIPContent() {
   }
   const obj5 = windowDimensions(connectedEmbeddedActivityChannelId[11]);
   const fn = function s() {
-    let obj = { pipWidth: size.width, pipHeight: size.height, pipOrientationLockState, isLandscape: windowDimensions.get().landscape };
+    let obj = {
+      pipWidth: size.width,
+      pipHeight: size.height,
+      pipOrientationLockState,
+      isLandscape: windowDimensions.get().landscape,
+    };
     size = size(connectedEmbeddedActivityChannelId[16])(obj);
     obj = { width: size.width, height: size.height, left: null, top: null, marginLeft: null, marginTop: null };
     let str = "0%";
@@ -98,7 +128,12 @@ export default function VoicePanelSecondaryPIPContent() {
     ({ marginLeft: obj2[4], marginTop: obj2[5] } = size);
     return obj;
   };
-  obj = { getActivityContainerPipStylesSpec: tmp(obj[16]), pipState: size, activePipOrientationLockState: pipOrientationLockState, windowDimensions };
+  obj = {
+    getActivityContainerPipStylesSpec: tmp(obj[16]),
+    pipState: size,
+    activePipOrientationLockState: pipOrientationLockState,
+    windowDimensions,
+  };
   fn.__closure = obj;
   fn.__workletHash = 12186082276755;
   fn.__initData = closure_14;
@@ -128,4 +163,4 @@ export default function VoicePanelSecondaryPIPContent() {
   obj1 = tmp13(tmpResult, obj1);
   obj[2] = obj1;
   tmp13Result = tmp13(tmpResult, obj);
-};
+}

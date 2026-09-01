@@ -13,7 +13,7 @@ function _openActivityDMLauncher() {
     closure_4 = arg4;
     c7 = 0;
     c8 = 0;
-    const iter = (function*(arg0, customId) {
+    const iter = (function* (arg0, customId) {
       let id = tmp2;
       if (flag === undefined) {
         flag = false;
@@ -89,7 +89,15 @@ function _openActivityDMLauncher() {
               bestActiveInput.openCustomKeyboard(obj8);
             }
           } else {
-            const obj10 = { targetApplicationId: null, locationObject: null, channelId: null, analyticsLocations: null, commandOrigin: null, referrerId: null, customId: null };
+            const obj10 = {
+              targetApplicationId: null,
+              locationObject: null,
+              channelId: null,
+              analyticsLocations: null,
+              commandOrigin: null,
+              referrerId: null,
+              customId: null,
+            };
             obj10[0] = callback;
             obj10[1] = {};
             obj10[2] = c7;
@@ -139,4 +147,4 @@ export default function openActivityDMLauncher() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

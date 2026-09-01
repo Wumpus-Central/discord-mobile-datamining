@@ -9,7 +9,7 @@ function _createStripeSetupIntent() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       const table = tmp2;
       if (obj1 === undefined) {
         obj1 = {};
@@ -40,7 +40,7 @@ function _createSetupIntentForPaymentElements() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       const table = tmp2;
       if (obj1 === undefined) {
         obj1 = {};

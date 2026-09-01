@@ -32,7 +32,15 @@ function handleMessageSendFailure(shouldNotify) {
       const MESSAGE_FAILED_TO_SEND = constants.MESSAGE_FAILED_TO_SEND;
       const notificationDuration = isReactionMilestoneNotification.getNotificationDuration(MESSAGE_FAILED_TO_SEND);
       const obj4 = isReactionMilestoneNotification;
-      obj1 = { type: null, channelId: null, messageId: null, key: null, duration: null, onDismiss: null, inAppNotificationId: null };
+      obj1 = {
+        type: null,
+        channelId: null,
+        messageId: null,
+        key: null,
+        duration: null,
+        onDismiss: null,
+        inAppNotificationId: null,
+      };
       obj1[0] = MESSAGE_FAILED_TO_SEND;
       obj1[1] = channelId;
       obj1[2] = messageId;
@@ -85,8 +93,7 @@ let prototype = function MessageSendFailureNotificationManager() {
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp3 {
-}
+class prototype extends tmp3 {}
 prototype = new prototype();
 let result = require("set").fileFinishedImporting("modules/messages/native/MessageSendFailureNotificationManager.tsx");
 

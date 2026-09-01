@@ -4,7 +4,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/LayoutUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/LayoutUtils.tsx",
+);
 
 export const GappedList = function GappedList(gap) {
   let num = gap.gap;
@@ -19,7 +21,7 @@ export const GappedList = function GappedList(gap) {
   Children = found.Children;
   return callback(closure_4, {
     children: Children.map(found, (arg0, arg1) => {
-      const items = [arg0, ];
+      const items = [arg0];
       if (arg1 === found.length - 1) {
         let obj = { children: null };
         items[1] = tmp3;
@@ -32,6 +34,6 @@ export const GappedList = function GappedList(gap) {
         obj[0] = num;
         tmp4Result = closure_1_3(num(renderGap[2]).Spacer, obj);
       }
-    })
+    }),
   });
 };

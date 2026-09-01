@@ -43,4 +43,4 @@ export default function useSoundboardSoundPlayer(arg0, arg1) {
     return Promise.resolve();
   };
   return obj;
-};
+}

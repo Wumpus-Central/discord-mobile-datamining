@@ -59,7 +59,7 @@ function FamilyCenterPendingLinkRow(otherUser) {
           obj = { otherUser: str };
           obj.pushLazy(str(closure_1_2[15])(closure_1_2[14], closure_1_2.paths), obj);
         };
-        const items = [, ];
+        const items = [,];
         ({ actionButton: arr[0], actionButtonFirst: arr[1] } = tmp);
         obj[3] = items;
         const obj3 = { size: null, disableColor: true, source: null };
@@ -68,7 +68,7 @@ function FamilyCenterPendingLinkRow(otherUser) {
         obj[4] = closure_5(tmp5(1297).Icon, obj3);
         tmp12Result = tmp12(tmp5(5068).PressableOpacity, obj);
       }
-      const items1 = [tmp12Result, ];
+      const items1 = [tmp12Result];
       tmp14 = closure_5;
       const intl2 = tmp5(1236).intl;
       let str2;
@@ -76,7 +76,13 @@ function FamilyCenterPendingLinkRow(otherUser) {
         str2 = str.toString();
       }
       const obj4 = { children: null };
-      const obj5 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+      const obj5 = {
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        onPress: null,
+        style: null,
+        children: null,
+      };
       const obj6 = { name: null };
       obj6[0] = str2;
       obj5[1] = intl2.formatToPlainString(tmp2(2369)["4GtllP"], obj6);
@@ -106,15 +112,39 @@ function FamilyCenterPendingLinkRow(otherUser) {
 noopAll;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 createCacheKey = { container: { marginTop: 24 }, content: null, header: null };
-createCacheKey = { display: "flex", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  display: "flex",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginBottom: 10 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { actionButton: { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 }, actionButtonFirst: null };
+let obj1 = {
+  actionButton: {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+    tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+    borderRadius: ThemesDefault.radii.round,
+    alignItems: "center",
+    justifyContent: "center",
+    height: 32,
+    width: 32,
+  },
+  actionButtonFirst: null,
+};
 createCacheKey = { marginRight: ThemesDefault.space.PX_8 };
 obj1[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(obj1);
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
+let obj2 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+  height: 32,
+  width: 32,
+};
 const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterPendingLinks.tsx");
 
 export default function FamilyCenterPendingLinks() {
@@ -133,7 +163,7 @@ export default function FamilyCenterPendingLinks() {
     obj1 = { style: null, variant: "eyebrow", color: "text-default", children: null };
     obj1[0] = tmp.header;
     obj1[3] = tmp6;
-    const items = [callback(Text.Text, obj1), ];
+    const items = [callback(Text.Text, obj1)];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.content;
     obj2[1] = usersForLinkStatus.map((id) => callback(closure_10, { otherUser: id }, "pending-" + id.id));
@@ -142,4 +172,4 @@ export default function FamilyCenterPendingLinks() {
     tmp7 = callback2(View, obj);
   }
   return tmp7;
-};
+}

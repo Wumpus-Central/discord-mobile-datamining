@@ -58,4 +58,4 @@ export default function useBuyNitroListData(selection) {
   obj[2] = tmp;
   obj[3] = ref;
   return obj;
-};
+}

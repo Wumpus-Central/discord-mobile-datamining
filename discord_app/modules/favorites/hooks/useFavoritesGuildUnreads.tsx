@@ -16,52 +16,55 @@ export default function useFavoritesGuildUnreads(arg0) {
   return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const keys = closure_1_1(closure_1_2[8]).keys(set);
     set = new Set();
-    return keys.reduce((badge, id) => {
-      const channel = closure_1_5.getChannel(id);
-      let guildId;
-      if (channel != null) {
-        guildId = channel.getGuildId();
-      }
-      const mentionCount = closure_1_8.getMentionCount(id);
-      if (!set.has(id)) {
-        set.add(id);
-        badge.badge = badge.badge + mentionCount;
-      }
-      let unread = badge.unread;
-      if (!unread) {
-        let hasUnreadResult = closure_1_8.hasUnread(id);
-        if (hasUnreadResult) {
-          hasUnreadResult = closure_1_6.shouldCountChannelUnread(channel, mentionCount);
+    return keys.reduce(
+      (badge, id) => {
+        const channel = closure_1_5.getChannel(id);
+        let guildId;
+        if (channel != null) {
+          guildId = channel.getGuildId();
         }
-        unread = hasUnreadResult;
-      }
-      badge.unread = unread;
-      if (null != guildId) {
-        const activeJoinedRelevantThreadsForParent = closure_1_3.getActiveJoinedRelevantThreadsForParent(guildId, id);
-        for (const key10024 in activeJoinedRelevantThreadsForParent) {
-          let tmp14 = key10024;
-          let obj4 = closure_1_8;
-          let mentionCount1 = closure_1_8.getMentionCount(key10024);
-          let obj5 = set;
-          if (!set.has(key10024)) {
-            let addResult1 = obj5.add(key10024);
-            arg0.badge = arg0.badge + mentionCount1;
+        const mentionCount = closure_1_8.getMentionCount(id);
+        if (!set.has(id)) {
+          set.add(id);
+          badge.badge = badge.badge + mentionCount;
+        }
+        let unread = badge.unread;
+        if (!unread) {
+          let hasUnreadResult = closure_1_8.hasUnread(id);
+          if (hasUnreadResult) {
+            hasUnreadResult = closure_1_6.shouldCountChannelUnread(channel, mentionCount);
           }
-          let tmp7 = closure_1_5;
-          let unread2 = arg0.unread;
-          if (!unread2) {
-            let hasUnreadResult1 = obj4.hasUnread(key10024);
-            if (hasUnreadResult1) {
-              let tmp10 = closure_1_6;
-              hasUnreadResult1 = closure_1_6.shouldCountChannelUnread(tmp8, mentionCount1);
+          unread = hasUnreadResult;
+        }
+        badge.unread = unread;
+        if (null != guildId) {
+          const activeJoinedRelevantThreadsForParent = closure_1_3.getActiveJoinedRelevantThreadsForParent(guildId, id);
+          for (const key10024 in activeJoinedRelevantThreadsForParent) {
+            let tmp14 = key10024;
+            let obj4 = closure_1_8;
+            let mentionCount1 = closure_1_8.getMentionCount(key10024);
+            let obj5 = set;
+            if (!set.has(key10024)) {
+              let addResult1 = obj5.add(key10024);
+              arg0.badge = arg0.badge + mentionCount1;
             }
-            unread2 = hasUnreadResult1;
+            let tmp7 = closure_1_5;
+            let unread2 = arg0.unread;
+            if (!unread2) {
+              let hasUnreadResult1 = obj4.hasUnread(key10024);
+              if (hasUnreadResult1) {
+                let tmp10 = closure_1_6;
+                hasUnreadResult1 = closure_1_6.shouldCountChannelUnread(tmp8, mentionCount1);
+              }
+              unread2 = hasUnreadResult1;
+            }
+            arg0.unread = unread2;
+            continue;
           }
-          arg0.unread = unread2;
-          continue;
         }
-      }
-      return badge;
-    }, { badge: 0, unread: false });
+        return badge;
+      },
+      { badge: 0, unread: false },
+    );
   });
-};
+}

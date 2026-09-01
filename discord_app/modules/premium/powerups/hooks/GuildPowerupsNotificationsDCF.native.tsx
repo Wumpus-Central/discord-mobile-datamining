@@ -35,21 +35,11 @@ export const useGuildPowerupNotificationDCF = function useGuildPowerupNotificati
   return obj.useSelectedTimeRecurringDismissibleContent(prop, obj);
 };
 export function useNewGamesCoachmarkDC(arg0) {
-  const items = [
-    null,
-    () => {
-
-    }
-  ];
+  const items = [null, () => {}];
   return items;
 }
 export function useGameServerPricingCoachmarkDCF(arg0) {
-  const items = [
-    null,
-    () => {
-
-    }
-  ];
+  const items = [null, () => {}];
   return items;
 }
 export const useBoostToUnlockCoachmarkDCF = function useBoostToUnlockCoachmarkDCF(arg0, id, GUILD_HEADER_TOOLTIPS) {
@@ -61,15 +51,18 @@ export const useBoostToUnlockCoachmarkDCF = function useBoostToUnlockCoachmarkDC
       prop = tmp2(1373).DismissibleContent.BOOST_TO_UNLOCK_COACHMARK;
     }
   }
-  obj = { cooldownDurationMs: tmp2(12059).BOOST_TO_UNLOCK_COACHMARK_COOLDOWN, numTimesToRecur: tmp2(12059).BOOST_TO_UNLOCK_COACHMARK_MAX_TIMES_TO_RECUR };
-  return useSelectedDismissibleContent.useSelectedTimeRecurringGuildDismissibleContent(prop, id, obj, GUILD_HEADER_TOOLTIPS);
+  obj = {
+    cooldownDurationMs: tmp2(12059).BOOST_TO_UNLOCK_COACHMARK_COOLDOWN,
+    numTimesToRecur: tmp2(12059).BOOST_TO_UNLOCK_COACHMARK_MAX_TIMES_TO_RECUR,
+  };
+  return useSelectedDismissibleContent.useSelectedTimeRecurringGuildDismissibleContent(
+    prop,
+    id,
+    obj,
+    GUILD_HEADER_TOOLTIPS,
+  );
 };
 export function useExpiringPowerupCoachmarkDCF(arg0, c0) {
-  const items = [
-    null,
-    () => {
-
-    }
-  ];
+  const items = [null, () => {}];
   return items;
 }

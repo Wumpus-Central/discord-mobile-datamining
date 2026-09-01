@@ -115,7 +115,16 @@ const memoResult = importAllResult.memo((node) => {
   let obj = node(14348);
   obj.useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
   obj = { style: tmp.container, children: null };
-  obj = { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null };
+  obj = {
+    ref,
+    ListHeaderComponent: node.ListHeaderComponent,
+    contentContainerStyle: null,
+    scrollIndicatorInsets: null,
+    keyExtractor: null,
+    renderItem: null,
+    data: null,
+    getItemType: null,
+  };
   obj1 = {};
   const merged = Object.assign(tmp.contentContainer);
   obj1.paddingBottom = field(1628)().bottom + field(712).space.PX_16;
@@ -125,8 +134,28 @@ const memoResult = importAllResult.memo((node) => {
   obj[5] = renderItem;
   obj[6] = memo;
   obj[7] = getItemType;
-  obj[1] = jsx(node(8105).FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null });
-  return <View ref={ref} ListHeaderComponent={node.ListHeaderComponent} contentContainerStyle={null} scrollIndicatorInsets={null} keyExtractor={null} renderItem={null} data={null} getItemType={null} />;
+  obj[1] = jsx(node(8105).FlashList, {
+    ref,
+    ListHeaderComponent: node.ListHeaderComponent,
+    contentContainerStyle: null,
+    scrollIndicatorInsets: null,
+    keyExtractor: null,
+    renderItem: null,
+    data: null,
+    getItemType: null,
+  });
+  return (
+    <View
+      ref={ref}
+      ListHeaderComponent={node.ListHeaderComponent}
+      contentContainerStyle={null}
+      scrollIndicatorInsets={null}
+      keyExtractor={null}
+      renderItem={null}
+      data={null}
+      getItemType={null}
+    />
+  );
 });
 const memoResult1 = importAllResult.memo((node) => {
   node = node.node;
@@ -151,9 +180,12 @@ const memoResult1 = importAllResult.memo((node) => {
   const items = [field, node];
   memo = isLoading.useMemo(() => node(settings[12]).toSettingListItems(node, field), items);
   const items1 = [settings, isLoading, placeholderCount];
-  memo1 = isLoading.useMemo(() => node(settings[12]).getScoredSettingListSearchResultItems(settings, isLoading, placeholderCount), items1);
+  memo1 = isLoading.useMemo(
+    () => node(settings[12]).getScoredSettingListSearchResultItems(settings, isLoading, placeholderCount),
+    items1,
+  );
   const items2 = [memo, memo1, state];
-  memo2 = isLoading.useMemo(() => state ? memo : memo1, items2);
+  memo2 = isLoading.useMemo(() => (state ? memo : memo1), items2);
   const items3 = [tmp.searchResultsHeader, state];
   const items4 = [state, isLoading, memo2.length];
   const memo3 = isLoading.useMemo(() => {
@@ -177,7 +209,19 @@ const memoResult1 = importAllResult.memo((node) => {
     }
     return tmp;
   }, items4);
-  obj = { keyboardShouldPersistTaps: "always", contentContainerStyle: null, ListHeaderComponentStyle: null, ListHeaderComponent: null, ListEmptyComponent: null, onScroll: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null };
+  obj = {
+    keyboardShouldPersistTaps: "always",
+    contentContainerStyle: null,
+    ListHeaderComponentStyle: null,
+    ListHeaderComponent: null,
+    ListEmptyComponent: null,
+    onScroll: null,
+    scrollIndicatorInsets: null,
+    keyExtractor: null,
+    renderItem: null,
+    data: null,
+    getItemType: null,
+  };
   obj = {};
   const merged = Object.assign(tmp.contentContainer);
   obj.paddingBottom = importDefault(settings[11])().bottom + importDefault(settings[7]).space.PX_16;

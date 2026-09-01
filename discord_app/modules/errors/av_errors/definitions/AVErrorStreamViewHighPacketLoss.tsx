@@ -4,7 +4,9 @@ import closure_3 from "../../../../stores/AuthenticationStore.tsx";
 import closure_4 from "../../../../stores/StreamRTCConnectionStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewHighPacketLoss.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/errors/av_errors/definitions/AVErrorStreamViewHighPacketLoss.tsx",
+);
 
 export const AVErrorStreamViewHighPacketLossDefinition = {
   getActiveErrors() {
@@ -24,7 +26,10 @@ export const AVErrorStreamViewHighPacketLossDefinition = {
           return arr;
         } else {
           let tmpResult = tmp(tmp2[3]);
-          const accumulatedStatsWithMinDatapoints = tmpResult.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId.ownerId);
+          const accumulatedStatsWithMinDatapoints = tmpResult.getAccumulatedStatsWithMinDatapoints(
+            mediaEngineConnectionId,
+            ownerId.ownerId,
+          );
           if (null != accumulatedStatsWithMinDatapoints) {
             if (10 < 100 * accumulatedStatsWithMinDatapoints.short.packetLossRate) {
               obj = { type: null };
@@ -43,5 +48,5 @@ export const AVErrorStreamViewHighPacketLossDefinition = {
   },
   makeErrorContextKey(streamKey) {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;
-  }
+  },
 };

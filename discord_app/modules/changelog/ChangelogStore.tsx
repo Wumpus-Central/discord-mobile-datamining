@@ -24,8 +24,7 @@ let c12 = null;
 let c13 = null;
 let set = new Set();
 const Store = initializeDefault.Store;
-class ChangelogStore extends Store {
-}
+class ChangelogStore extends Store {}
 const prototype = ChangelogStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3);
@@ -149,7 +148,7 @@ const changelogStore = new ChangelogStore(dispatcherDefault, {
     const date = new Date(changelogDate);
     const Storage = Storage3.Storage;
     const result = Storage.set(lastChangeLogDate, changelogDate);
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/changelog/ChangelogStore.tsx");
 

@@ -5,8 +5,7 @@ import dispatcherDefault from "../../../Dispatcher.tsx";
 let c0 = null;
 let c1 = false;
 const Store = initializeDefault.Store;
-class VibegrationsBuilderPreviewStore extends Store {
-}
+class VibegrationsBuilderPreviewStore extends Store {}
 const prototype = VibegrationsBuilderPreviewStore.prototype;
 prototype["getBuilderPreviewApplicationId"] = function getBuilderPreviewApplicationId() {
   return c0;
@@ -35,7 +34,7 @@ const vibegrationsBuilderPreviewStore = new VibegrationsBuilderPreviewStore(disp
     if (enabled === enabled) {
       return false;
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/vibegrations/stores/VibegrationsBuilderPreviewStore.tsx");
 

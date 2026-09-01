@@ -18,4 +18,4 @@ export default function useSmsAutofill(arg0) {
       closure_0.remove();
     };
   }, items1);
-};
+}

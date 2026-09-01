@@ -12,7 +12,14 @@ require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { container: null };
-createCacheKey = { display: "flex", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, padding: 12, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  display: "flex",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  padding: 12,
+  justifyContent: "center",
+  alignItems: "center",
+  borderRadius: ThemesDefault.radii.md,
+};
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_LEDGE);
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
@@ -41,7 +48,10 @@ export default function FamilyCenterActivityTotal(displayType) {
     num = 0;
   }
   obj[2] = num;
-  const items = [closure_3(Text.Text, obj), closure_3(Text.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult })];
+  const items = [
+    closure_3(Text.Text, obj),
+    closure_3(Text.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult }),
+  ];
   obj[1] = items;
   return closure_4(View, obj);
-};
+}

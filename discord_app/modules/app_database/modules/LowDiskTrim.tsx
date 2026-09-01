@@ -9,8 +9,8 @@ class LowDiskTrim {
     obj.isLowDisk = false;
     obj.actions = {
       POST_CONNECTION_OPEN() {
-            return obj.handlePostConnectionOpen();
-          }
+        return obj.handlePostConnectionOpen();
+      },
     };
     addChangeListenerResult = closure_2.addChangeListener(() => obj.handleFileSystemStoreChanged());
     return obj;
@@ -37,15 +37,13 @@ prototype["handleFileSystemStoreChanged"] = function handleFileSystemStoreChange
   }
   self.isLowDisk = isLowDisk;
 };
-prototype["resetInMemoryState"] = function resetInMemoryState() {
-
-};
+prototype["resetInMemoryState"] = function resetInMemoryState() {};
 obj = Object.create(LowDiskTrim.prototype);
 obj.isLowDisk = false;
 obj.actions = {
   POST_CONNECTION_OPEN() {
     return obj.handlePostConnectionOpen();
-  }
+  },
 };
 importDefaultResult.addChangeListener(() => obj.handleFileSystemStoreChanged());
 let result = require("set").fileFinishedImporting("modules/app_database/modules/LowDiskTrim.tsx");

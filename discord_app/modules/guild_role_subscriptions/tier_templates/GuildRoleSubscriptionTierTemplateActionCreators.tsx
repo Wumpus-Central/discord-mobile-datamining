@@ -10,7 +10,7 @@ function _getTemplates() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -86,7 +86,9 @@ function _getTemplates() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx",
+);
 
 export const stashTemplateChannels = function stashTemplateChannels(selectedTemplate, guildId) {
   let obj = dispatcherDefault;

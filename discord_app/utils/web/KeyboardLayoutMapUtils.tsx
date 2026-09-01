@@ -28,7 +28,7 @@ function syncKeyboardLayoutMap() {
 }
 function _syncKeyboardLayoutMap() {
   const self = this;
-  const tmp = callback2(function*() {
+  const tmp = callback2(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -171,7 +171,7 @@ function getKeyboardMapper() {
         closure_0 = arg0;
         c3 = 0;
         c4 = 0;
-        return (function*(arg0) {
+        return (function* (arg0) {
           if (c4 === 2) {
             c4 = 3;
             HermesBuiltin.throwTypeError();
@@ -241,7 +241,7 @@ function getKeyboardMapper() {
           }
         })();
       });
-      promise = new Promise(function() {
+      promise = new Promise(function () {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -260,7 +260,7 @@ function getKeyboardMapper() {
 }
 function _resetKeyboardMapper() {
   const self = this;
-  const tmp = callback2(function*() {
+  const tmp = callback2(function* () {
     if (c2 === 2) {
       c2 = 3;
       HermesBuiltin.throwTypeError();
@@ -343,7 +343,7 @@ function reverseLookupCodeFromKey(toLocaleLowerCase) {
           closure_0 = arg0;
           c3 = 0;
           c4 = 0;
-          return (function*(arg0) {
+          return (function* (arg0) {
             if (c4 === 2) {
               c4 = 3;
               HermesBuiltin.throwTypeError();
@@ -413,7 +413,7 @@ function reverseLookupCodeFromKey(toLocaleLowerCase) {
             }
           })();
         });
-        promise = new Promise(function() {
+        promise = new Promise(function () {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -454,7 +454,7 @@ function getExactKeyboardEventMatchFromAny(key) {
           closure_0 = arg0;
           c3 = 0;
           c4 = 0;
-          return (function*(arg0) {
+          return (function* (arg0) {
             if (c4 === 2) {
               c4 = 3;
               HermesBuiltin.throwTypeError();
@@ -524,7 +524,7 @@ function getExactKeyboardEventMatchFromAny(key) {
             }
           })();
         });
-        promise = new Promise(function() {
+        promise = new Promise(function () {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -570,7 +570,7 @@ function initializeKeyboardMapper() {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (c4 === 2) {
           c4 = 3;
           HermesBuiltin.throwTypeError();
@@ -640,7 +640,7 @@ function initializeKeyboardMapper() {
         }
       })();
     });
-    promise = new Promise(function() {
+    promise = new Promise(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -654,7 +654,56 @@ function initializeKeyboardMapper() {
   return promise;
 }
 set = new Set([192, 220, 222, 223, 229]);
-const frozen = Object.freeze({ KeyA: "a", KeyB: "b", KeyC: "c", KeyD: "d", KeyE: "e", KeyF: "f", KeyG: "g", KeyH: "h", KeyI: "i", KeyJ: "j", KeyK: "k", KeyL: "l", KeyM: "m", KeyN: "n", KeyO: "o", KeyP: "p", KeyQ: "q", KeyR: "r", KeyS: "s", KeyT: "t", KeyU: "u", KeyV: "v", KeyW: "w", KeyX: "x", KeyY: "y", KeyZ: "z", Digit0: "0", Digit1: "1", Digit2: "2", Digit3: "3", Digit4: "4", Digit5: "5", Digit6: "6", Digit7: "7", Digit8: "8", Digit9: "9", Backquote: "`", Backslash: "\\", Quote: "'", Slash: "/", Comma: ",", Period: ".", Semicolon: ";", Equal: "=", Minus: "-", BracketLeft: "[", BracketRight: "]", IntlBackslash: "\u00A7" });
+const frozen = Object.freeze({
+  KeyA: "a",
+  KeyB: "b",
+  KeyC: "c",
+  KeyD: "d",
+  KeyE: "e",
+  KeyF: "f",
+  KeyG: "g",
+  KeyH: "h",
+  KeyI: "i",
+  KeyJ: "j",
+  KeyK: "k",
+  KeyL: "l",
+  KeyM: "m",
+  KeyN: "n",
+  KeyO: "o",
+  KeyP: "p",
+  KeyQ: "q",
+  KeyR: "r",
+  KeyS: "s",
+  KeyT: "t",
+  KeyU: "u",
+  KeyV: "v",
+  KeyW: "w",
+  KeyX: "x",
+  KeyY: "y",
+  KeyZ: "z",
+  Digit0: "0",
+  Digit1: "1",
+  Digit2: "2",
+  Digit3: "3",
+  Digit4: "4",
+  Digit5: "5",
+  Digit6: "6",
+  Digit7: "7",
+  Digit8: "8",
+  Digit9: "9",
+  Backquote: "`",
+  Backslash: "\\",
+  Quote: "'",
+  Slash: "/",
+  Comma: ",",
+  Period: ".",
+  Semicolon: ";",
+  Equal: "=",
+  Minus: "-",
+  BracketLeft: "[",
+  BracketRight: "]",
+  IntlBackslash: "\u00A7",
+});
 class DiscordKeyboardLayoutMap {
   constructor() {
     tmp = global;
@@ -663,16 +712,18 @@ class DiscordKeyboardLayoutMap {
     }
     obj = Object.create(new.target.prototype);
     entries = Object.entries(tmp);
-    map = new Map(entries.map((arg0) => {
-      [tmp, obj] = arg0;
-      const items = [tmp, ];
-      let toLocaleLowerCaseResult = obj;
-      if (null != obj) {
-        toLocaleLowerCaseResult = obj.toLocaleLowerCase();
-      }
-      items[1] = toLocaleLowerCaseResult;
-      return items;
-    }));
+    map = new Map(
+      entries.map((arg0) => {
+        [tmp, obj] = arg0;
+        const items = [tmp];
+        let toLocaleLowerCaseResult = obj;
+        if (null != obj) {
+          toLocaleLowerCaseResult = obj.toLocaleLowerCase();
+        }
+        items[1] = toLocaleLowerCaseResult;
+        return items;
+      }),
+    );
     obj.map = map;
     return obj;
   }
@@ -700,7 +751,7 @@ Object.defineProperty(prototype, "size", {
   get: function size() {
     return this.map.size;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["_set"] = function _set(arg0, arg1) {
   const result = this.map.set(arg0, arg1);
@@ -708,16 +759,18 @@ prototype["_set"] = function _set(arg0, arg1) {
 set = Object.create(DiscordKeyboardLayoutMap.prototype);
 let entries = Object.entries(frozen);
 let tmp3 = new timestampDefault("KeyboardLayoutMapUtils");
-set.map = new Map(entries.map((arg0) => {
-  [tmp, obj] = arg0;
-  const items = [tmp, ];
-  let toLocaleLowerCaseResult = obj;
-  if (null != obj) {
-    toLocaleLowerCaseResult = obj.toLocaleLowerCase();
-  }
-  items[1] = toLocaleLowerCaseResult;
-  return items;
-}));
+set.map = new Map(
+  entries.map((arg0) => {
+    [tmp, obj] = arg0;
+    const items = [tmp];
+    let toLocaleLowerCaseResult = obj;
+    if (null != obj) {
+      toLocaleLowerCaseResult = obj.toLocaleLowerCase();
+    }
+    items[1] = toLocaleLowerCaseResult;
+    return items;
+  }),
+);
 let c15 = "keyboard-layout-map";
 class BaseKeyboardMapper {
   constructor() {
@@ -781,7 +834,7 @@ Object.defineProperty(prototype2, "cachedKeyCodeMapEntries", {
     }
     return self._cachedKeyCodeMapEntries;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype2, "cachedKeyMapEntries", {
   get: function cachedKeyMapEntries() {
@@ -791,7 +844,7 @@ Object.defineProperty(prototype2, "cachedKeyMapEntries", {
     }
     return self._cachedKeyMapEntries;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype2, "cachedKeyLayoutMapEntries", {
   get: function cachedKeyLayoutMapEntries() {
@@ -801,7 +854,7 @@ Object.defineProperty(prototype2, "cachedKeyLayoutMapEntries", {
     }
     return self._cachedKeyLayoutMapEntries;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype2, "cachedAllEvents", {
   get: function cachedAllEvents() {
@@ -811,7 +864,7 @@ Object.defineProperty(prototype2, "cachedAllEvents", {
     }
     return self._cachedAllEvents;
   },
-  set: undefined
+  set: undefined,
 });
 prototype2["getKeyCodeMapItem"] = function getKeyCodeMapItem(keyCode) {
   const self = this;
@@ -856,7 +909,12 @@ prototype2["_hasExactMatch"] = function _hasExactMatch(keyCode) {
     return false;
   } else {
     const self = this;
-    return null != this.keyCodeMap[keyCode.keyCode] && this.keyCodeMap[keyCode.keyCode].some((key) => key.key === keyCode.key && key.code === keyCode.code && key.keyCode === keyCode.keyCode);
+    return (
+      null != this.keyCodeMap[keyCode.keyCode] &&
+      this.keyCodeMap[keyCode.keyCode].some(
+        (key) => key.key === keyCode.key && key.code === keyCode.code && key.keyCode === keyCode.keyCode,
+      )
+    );
   }
 };
 prototype2["addEvent"] = function addEvent(keyCode) {
@@ -890,7 +948,14 @@ prototype2["addEvent"] = function addEvent(keyCode) {
         }
         if (logKeyboardMismatches) {
           const _HermesInternal = HermesInternal;
-          logger.error("KeyboardMapper - Key code mismatch for key " + obj.key + ": " + self.keyMap[obj.key] + " !== " + obj.keyCode);
+          logger.error(
+            "KeyboardMapper - Key code mismatch for key " +
+              obj.key +
+              ": " +
+              self.keyMap[obj.key] +
+              " !== " +
+              obj.keyCode,
+          );
         }
       }
       let items = self.keyCodeMap[obj.keyCode];
@@ -960,8 +1025,7 @@ prototype2["findCodeFromKeyboardLayoutMap"] = function findCodeFromKeyboardLayou
   }
   return first;
 };
-class KeyboardMapper extends BaseKeyboardMapper {
-}
+class KeyboardMapper extends BaseKeyboardMapper {}
 const prototype3 = KeyboardMapper.prototype;
 prototype3["getKeyString"] = function getKeyString(keyCode, code) {
   const self = this;
@@ -1055,7 +1119,11 @@ prototype3["findExactKeyboardEventMatch"] = function findExactKeyboardEventMatch
     }
   }
 };
-prototype3["getWeightedPossibleKeyStringMatches"] = function getWeightedPossibleKeyStringMatches(keyString, code, keyCode) {
+prototype3["getWeightedPossibleKeyStringMatches"] = function getWeightedPossibleKeyStringMatches(
+  keyString,
+  code,
+  keyCode,
+) {
   closure_0 = keyString;
   closure_1 = code;
   closure_2 = keyCode;
@@ -1297,7 +1365,7 @@ export const getLayoutMap = function getLayoutMap() {
           closure_0 = arg0;
           c3 = 0;
           c4 = 0;
-          return (function*(arg0) {
+          return (function* (arg0) {
             if (c4 === 2) {
               c4 = 3;
               HermesBuiltin.throwTypeError();
@@ -1367,7 +1435,7 @@ export const getLayoutMap = function getLayoutMap() {
             }
           })();
         });
-        promise = new Promise(function() {
+        promise = new Promise(function () {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {
@@ -1407,7 +1475,7 @@ export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAn
           closure_0 = arg0;
           c3 = 0;
           c4 = 0;
-          return (function*(arg0) {
+          return (function* (arg0) {
             if (c4 === 2) {
               c4 = 3;
               HermesBuiltin.throwTypeError();
@@ -1477,7 +1545,7 @@ export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAn
             }
           })();
         });
-        promise = new Promise(function() {
+        promise = new Promise(function () {
           const self = this;
           const apply = closure_0.apply;
           if (typeof apply === "unknown") {

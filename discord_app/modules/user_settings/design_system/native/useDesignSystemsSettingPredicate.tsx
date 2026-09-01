@@ -2,7 +2,9 @@
 import set from "../../../../../_runtime/00002_set.js";
 import useStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
 
-const result = set.fileFinishedImporting("modules/user_settings/design_system/native/useDesignSystemsSettingPredicate.tsx");
+const result = set.fileFinishedImporting(
+  "modules/user_settings/design_system/native/useDesignSystemsSettingPredicate.tsx",
+);
 
 export const useDesignSystemsSettingPredicate = function useDesignSystemsSettingPredicate() {
   let staffOrDeveloperSettingPredicate = useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();

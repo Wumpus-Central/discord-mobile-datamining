@@ -107,7 +107,15 @@ function RouteSettingSearchResult(setting) {
     obj = { navigation: stackNavigation, screen, preNavigationAction };
     const result1 = title(index[14]).onRouteSettingOnPress(obj);
   }, items);
-  obj = { label: title, onPress: callback, arrow: true, icon: callback3(SettingSearchResultIcon, { IconComponent }), subLabel: callback3(SettingSearchResultBreadcrumbs, { breadcrumbs }), start: 0 === index, end: index === total - 1 };
+  obj = {
+    label: title,
+    onPress: callback,
+    arrow: true,
+    icon: callback3(SettingSearchResultIcon, { IconComponent }),
+    subLabel: callback3(SettingSearchResultBreadcrumbs, { breadcrumbs }),
+    start: 0 === index,
+    end: index === total - 1,
+  };
   return callback3(title(index[12]).TableRow, obj);
 }
 function PressableSettingSearchResult(setting) {
@@ -126,7 +134,15 @@ function PressableSettingSearchResult(setting) {
     const result1 = title(index[40]).dismissGlobalKeyboard();
     onPress();
   }, items);
-  return callback3(title(index[12]).TableRow, { label: title, onPress: callback, icon: callback3(SettingSearchResultIcon, { IconComponent }), subLabel: callback3(SettingSearchResultBreadcrumbs, { breadcrumbs }), start: 0 === index, end: index === total - 1, arrow: settingData.withArrow });
+  return callback3(title(index[12]).TableRow, {
+    label: title,
+    onPress: callback,
+    icon: callback3(SettingSearchResultIcon, { IconComponent }),
+    subLabel: callback3(SettingSearchResultBreadcrumbs, { breadcrumbs }),
+    start: 0 === index,
+    end: index === total - 1,
+    arrow: settingData.withArrow,
+  });
 }
 function StaticSettingSearchResult(title) {
   title = title.title;
@@ -179,27 +195,68 @@ function SettingSearchResultPlaceholder(arg0) {
   ({ start, end } = arg0);
   const tmp = callback5();
   let obj = { start, end, label: null, icon: null };
-  const items = [tmp.placeholderUsername, callback(importAllResult.useState(() => ({ width: `${10 + 80 * Math.random() | 0}%` })), 1)[0]];
+  const items = [
+    tmp.placeholderUsername,
+    callback(
+      importAllResult.useState(() => ({ width: `${(10 + 80 * Math.random()) | 0}%` })),
+      1,
+    )[0],
+  ];
   obj[2] = callback3(View, { style: items });
   obj = { style: tmp.placeholderAvatar };
   obj[3] = callback3(View, obj);
   return callback3(TableRowInner.TableRow, obj);
 }
-let closure_3 = ["onSlidingComplete", "step", "startIcon", "endIcon", "minimumValue", "maximumValue", "valueLabel", "defaultValue", "onValueChange"];
+let closure_3 = [
+  "onSlidingComplete",
+  "step",
+  "startIcon",
+  "endIcon",
+  "minimumValue",
+  "maximumValue",
+  "valueLabel",
+  "defaultValue",
+  "onValueChange",
+];
 let closure_4 = ["settingData"];
 let error = importAllResult;
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-let obj = { slider: null, sliderTitle: null, radioSettingHighlight: null, defaultIcon: null, placeholderAvatar: null, placeholderUsername: null };
+let obj = {
+  slider: null,
+  sliderTitle: null,
+  radioSettingHighlight: null,
+  defaultIcon: null,
+  placeholderAvatar: null,
+  placeholderUsername: null,
+};
 obj = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8 };
 obj[0] = obj;
 obj[1] = { flexDirection: "row", justifyContent: "space-between" };
 obj[2] = { top: 26 };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  justifyContent: "center",
+  alignItems: "center",
+};
 obj[3] = createCacheKey;
-obj[4] = { width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], height: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], borderRadius: ThemesDefault.radii.xl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-let obj2 = { width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], height: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], borderRadius: ThemesDefault.radii.xl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-obj[5] = { height: 20, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+obj[4] = {
+  width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32],
+  height: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32],
+  borderRadius: ThemesDefault.radii.xl,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
+let obj2 = {
+  width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32],
+  height: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32],
+  borderRadius: ThemesDefault.radii.xl,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
+obj[5] = {
+  height: 20,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 let closure_17 = createCacheKey.createStyles(obj);
 let closure_18 = importAllResult.memo((arg0) => {
   ({ useTrailing, usePreNavigationAction, screen } = arg0);
@@ -232,7 +289,18 @@ let closure_18 = importAllResult.memo((arg0) => {
     obj = { navigation: stackNavigation, screen, preNavigationAction };
     const result = obj.onRouteSettingOnPress(obj);
   }, items);
-  obj = { label: title, subLabel: description, disabled: isDisabled, arrow: true, variant, icon: null, trailing: null, onPress: null, start: null, end: null };
+  obj = {
+    label: title,
+    subLabel: description,
+    disabled: isDisabled,
+    arrow: true,
+    variant,
+    icon: null,
+    trailing: null,
+    onPress: null,
+    start: null,
+    end: null,
+  };
   let tmp10Result = null;
   if (null != IconComponent) {
     obj = { IconComponent: null };
@@ -325,7 +393,18 @@ let closure_21 = importAllResult.memo((arg0) => {
   if (useTrailing != null) {
     trailing = useTrailing();
   }
-  obj = { label: title, subLabel: description, arrow: withArrow, variant, icon: null, onPress: null, disabled: null, trailing: null, start: null, end: null };
+  obj = {
+    label: title,
+    subLabel: description,
+    arrow: withArrow,
+    variant,
+    icon: null,
+    onPress: null,
+    disabled: null,
+    trailing: null,
+    start: null,
+    end: null,
+  };
   let tmp10Result = null;
   if (null != IconComponent) {
     obj = { IconComponent: null, variant: null };
@@ -349,7 +428,7 @@ let closure_21 = importAllResult.memo((arg0) => {
   obj[7] = tmp12;
   obj[8] = start;
   obj[9] = end;
-  const children = [closure_14(TableRowInner.TableRow, obj), ];
+  const children = [closure_14(TableRowInner.TableRow, obj)];
   if (highlightSettingItem) {
     const obj2 = { start: null, end: null };
     obj2[0] = start;
@@ -374,7 +453,17 @@ let closure_22 = importAllResult.memo((arg0) => {
   if (useIsDisabled != null) {
     isDisabled = useIsDisabled();
   }
-  obj = { label: title, subLabel: description, icon: null, value: null, variant: null, disabled: null, onValueChange: null, start: null, end: null };
+  obj = {
+    label: title,
+    subLabel: description,
+    icon: null,
+    value: null,
+    variant: null,
+    disabled: null,
+    onValueChange: null,
+    start: null,
+    end: null,
+  };
   let tmp8Result = null;
   if (null != IconComponent) {
     obj = { IconComponent: null, variant: null };
@@ -396,7 +485,7 @@ let closure_22 = importAllResult.memo((arg0) => {
     obj1[0] = tmp8Result;
     tmp8Result1 = tmp8(ForceSwitchIcons, obj1);
   }
-  const children = [tmp8Result1, ];
+  const children = [tmp8Result1];
   if (highlightSettingItem) {
     const obj2 = { start: null, end: null };
     obj2[0] = start;
@@ -430,10 +519,14 @@ let closure_24 = importAllResult.memo((arg0) => {
       } else {
         combined = label.value;
       }
-      return callback2(callback(table[24]).TableRadioRow, { value: combined, label: label.label, subLabel: label.subLabel, disabled: label.disabled }, label.value);
-    })
+      return callback2(
+        callback(table[24]).TableRadioRow,
+        { value: combined, label: label.label, subLabel: label.subLabel, disabled: label.disabled },
+        label.value,
+      );
+    }),
   };
-  const children = [callback3(context2.TableRadioGroup, obj, combined), ];
+  const children = [callback3(context2.TableRadioGroup, obj, combined)];
   if (highlightSettingItem) {
     obj = { start: true, end: true, style: null };
     obj[2] = tmp.radioSettingHighlight;
@@ -470,7 +563,17 @@ let closure_25 = importAllResult.memo((arg0) => {
       const obj2 = trailing(closure_1_2[26]);
     }
   }, items);
-  obj = { label: title, subLabel: description, onPress: null, variant: null, disabled: null, icon: null, trailing: null, start: null, end: null };
+  obj = {
+    label: title,
+    subLabel: description,
+    onPress: null,
+    variant: null,
+    disabled: null,
+    icon: null,
+    trailing: null,
+    start: null,
+    end: null,
+  };
   let tmp12 = null;
   if (null != trailing) {
     tmp12 = callback;
@@ -495,7 +598,7 @@ let closure_25 = importAllResult.memo((arg0) => {
   obj[6] = tmp11Result;
   obj[7] = start;
   obj[8] = end;
-  const children = [closure_14(trailing(5599).TableRow, obj), ];
+  const children = [closure_14(trailing(5599).TableRow, obj)];
   if (highlightSettingItem) {
     let obj2 = { start: null, end: null };
     obj2[0] = start;
@@ -516,9 +619,12 @@ let closure_26 = importAllResult.memo((arg0) => {
     value = useValue();
   }
   obj = { label: title, start, end, subLabel: null };
-  obj = { style: callback5().slider, children: callback3(VolumeSliderDefault, { value, maxVolume: maximum, onValueChange, accessibilityLabel: title }) };
+  obj = {
+    style: callback5().slider,
+    children: callback3(VolumeSliderDefault, { value, maxVolume: maximum, onValueChange, accessibilityLabel: title }),
+  };
   obj[3] = callback3(View, obj);
-  const children = [callback3(TableRowInner.TableRow, obj), ];
+  const children = [callback3(TableRowInner.TableRow, obj)];
   if (highlightSettingItem) {
     obj1 = { start: null, end: null };
     obj1[0] = start;
@@ -574,13 +680,16 @@ let closure_27 = importAllResult.memo((useTrailing) => {
   let obj = onSlidingComplete(num2[15]);
   const items = [c9];
   const stateFromStores = obj.useStateFromStores(items, () => _undefined.locale);
-  const tmp8 = onValueChange(first.useState(() => {
-    value = value.value;
-    if (value == null) {
-      value = num3;
-    }
-    return value;
-  }), 2);
+  const tmp8 = onValueChange(
+    first.useState(() => {
+      value = value.value;
+      if (value == null) {
+        value = num3;
+      }
+      return value;
+    }),
+    2,
+  );
   first = tmp8[0];
   closure_8 = tmp8[1];
   [tmp11, c9] = onValueChange(first.useState(false), 2);
@@ -626,9 +735,12 @@ let closure_27 = importAllResult.memo((useTrailing) => {
   }
   obj = { start, end, shadow: "none", border: "none", children: null };
   obj = { style: tmp4.sliderTitle, children: null };
-  const items7 = [callback3(onSlidingComplete(num2[32]).Text, { variant: "text-md/semibold", children: title }), trailing];
+  const items7 = [
+    callback3(onSlidingComplete(num2[32]).Text, { variant: "text-md/semibold", children: title }),
+    trailing,
+  ];
   obj[1] = items7;
-  const items8 = [callback4(closure_8, obj), ];
+  const items8 = [callback4(closure_8, obj)];
   let tmp20Result = null != first;
   if (tmp20Result) {
     if (formatPercentResult == null) {
@@ -640,7 +752,14 @@ let closure_27 = importAllResult.memo((useTrailing) => {
     tmp20Result = tmp20(tmp5(tmp6[32]).Text, obj1);
   }
   items8[1] = tmp20Result;
-  const items9 = [callback4(onSlidingComplete(num2[31]).Stack, { direction: "horizontal", justify: "space-between", children: items8 }), , ];
+  const items9 = [
+    callback4(onSlidingComplete(num2[31]).Stack, {
+      direction: "horizontal",
+      justify: "space-between",
+      children: items8,
+    }),
+    ,
+  ];
   tmp5Result = tmp5(tmp6[34]);
   let slider;
   if (tmp5Result.isAndroid()) {
@@ -657,8 +776,16 @@ let closure_27 = importAllResult.memo((useTrailing) => {
   obj3.maximumValue = num4;
   obj3.onSlidingStart = callback;
   obj3.onSlidingComplete = callback2;
-  obj3.startIcon = callback3(onSlidingComplete(num2[36]).PressableOpacity, { accessible: false, onPress: callback6, children: startIcon });
-  obj3.endIcon = callback3(onSlidingComplete(num2[36]).PressableOpacity, { accessible: false, onPress: callback5, children: endIcon });
+  obj3.startIcon = callback3(onSlidingComplete(num2[36]).PressableOpacity, {
+    accessible: false,
+    onPress: callback6,
+    children: startIcon,
+  });
+  obj3.endIcon = callback3(onSlidingComplete(num2[36]).PressableOpacity, {
+    accessible: false,
+    onPress: callback5,
+    children: endIcon,
+  });
   obj2[1] = callback3(onSlidingComplete(num2[35]).Slider, obj3);
   items9[1] = callback3(closure_8, obj2);
   let tmp26 = !tmp11;
@@ -675,7 +802,11 @@ let closure_27 = importAllResult.memo((useTrailing) => {
   obj[4] = callback4(onSlidingComplete(num2[31]).Stack, obj4);
   return callback3(onSlidingComplete(num2[30]).Card, obj);
 });
-let obj3 = { height: 20, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+let obj3 = {
+  height: 20,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 let result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingRenderer.tsx");
 
 export { GuildSelectDefaultIcon };

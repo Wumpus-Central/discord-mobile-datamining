@@ -17,7 +17,7 @@ function _fetchGuildHomeSettings() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       dependencyMap = tmp3;
       obj1 = { type: "GUILD_HOME_SETTINGS_FETCH_START", guildId: null };
       obj1[1] = callback;
@@ -59,7 +59,7 @@ function _fetchNewMemberActions() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -166,7 +166,7 @@ function _clearNewMemberActions() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       dependencyMap = tmp3;
       obj1 = { type: "GUILD_NEW_MEMBER_ACTIONS_DELETE_START", guildId: null };
       obj1[1] = callback;
@@ -207,7 +207,9 @@ function _clearNewMemberActions() {
   return applyArgumentsResult;
 }
 ({ AnalyticEvents: closure_8, Endpoints: c9 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeActionCreators.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_onboarding_home/GuildOnboardingHomeActionCreators.tsx",
+);
 
 export const fetchGuildHomeSettings = function fetchGuildHomeSettings(guildId) {
   const self = this;

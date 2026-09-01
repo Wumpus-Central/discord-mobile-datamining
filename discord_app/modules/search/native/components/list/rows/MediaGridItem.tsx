@@ -18,7 +18,9 @@ obj[1] = { position: "absolute", top: 8, right: 8 };
 obj[2] = { padding: 0 };
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_12 = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };
-let closure_13 = { code: "function MediaGridItemTsx1(){const{withTiming,opacity,timingStandard}=this.__closure;return{opacity:withTiming(opacity.get(),timingStandard)};}" };
+let closure_13 = {
+  code: "function MediaGridItemTsx1(){const{withTiming,opacity,timingStandard}=this.__closure;return{opacity:withTiming(opacity.get(),timingStandard)};}",
+};
 const memoResult = importAllResult.memo(function MediaGridItem(media) {
   media = media.media;
   const size = media.size;
@@ -34,7 +36,7 @@ const memoResult = importAllResult.memo(function MediaGridItem(media) {
   obj1 = media(onPress[7]);
   const items = [closure_7];
   stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getChannel(media.channelId));
-  const items1 = [media.author, ];
+  const items1 = [media.author];
   let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
@@ -77,7 +79,16 @@ const memoResult = importAllResult.memo(function MediaGridItem(media) {
   obj1 = { ref, style: memo1, accessibilityRole: "button", onPress: callback, children: null };
   let tmp14Result = media.type === SearchMediaTypes.EMBED;
   if (tmp14Result) {
-    const obj2 = { sources: null, embed: null, messageId: null, channelId: null, authorId: null, scale: null, containerHeight: null, containerWidth: null };
+    const obj2 = {
+      sources: null,
+      embed: null,
+      messageId: null,
+      channelId: null,
+      authorId: null,
+      scale: null,
+      containerHeight: null,
+      containerWidth: null,
+    };
     ({ sources: obj8[0], embed: obj8[1], messageId: obj8[2], channelId: obj8[3] } = media);
     obj2[4] = media.author.id;
     obj2[5] = scale;
@@ -85,10 +96,17 @@ const memoResult = importAllResult.memo(function MediaGridItem(media) {
     obj2[7] = size;
     tmp14Result = tmp14(tmp3(tmp4[11]).SearchEmbedMediaImage, obj2);
   }
-  const items6 = [tmp14Result, , , , ];
+  const items6 = [tmp14Result, , , ,];
   tmp14Result = media.type === tmp17.ATTACHMENT;
   if (tmp14Result) {
-    const obj3 = { attachment: null, channelId: null, authorId: null, scale: null, containerHeight: null, containerWidth: null };
+    const obj3 = {
+      attachment: null,
+      channelId: null,
+      authorId: null,
+      scale: null,
+      containerHeight: null,
+      containerWidth: null,
+    };
     ({ attachment: obj9[0], channelId: obj9[1] } = media);
     obj3[2] = media.author.id;
     obj3[3] = scale;
@@ -107,7 +125,16 @@ const memoResult = importAllResult.memo(function MediaGridItem(media) {
   items6[2] = tmp14Result1;
   let tmp14Result2 = media.type === tmp17.COMPONENT;
   if (tmp14Result2) {
-    const obj5 = { unfurledMediaItem: null, sources: null, channelId: null, authorId: null, isBot: null, scale: null, containerHeight: null, containerWidth: null };
+    const obj5 = {
+      unfurledMediaItem: null,
+      sources: null,
+      channelId: null,
+      authorId: null,
+      isBot: null,
+      scale: null,
+      containerHeight: null,
+      containerWidth: null,
+    };
     ({ unfurledMediaItem: obj11[0], sources: obj11[1], channelId: obj11[2] } = media);
     obj5[3] = media.author.id;
     obj5[4] = media.author.bot;

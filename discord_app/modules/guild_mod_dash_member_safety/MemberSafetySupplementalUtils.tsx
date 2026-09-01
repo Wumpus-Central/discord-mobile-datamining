@@ -21,7 +21,13 @@ function updateFetchRequests(arr) {
   });
 }
 function _transformFetchMemberSupplementalResponse(userId) {
-  return { userId: userId.user_id, sourceInviteCode: userId.source_invite_code, joinSourceType: userId.join_source_type, inviterId: userId.inviter_id, integrationType: userId.integration_type };
+  return {
+    userId: userId.user_id,
+    sourceInviteCode: userId.source_invite_code,
+    joinSourceType: userId.join_source_type,
+    inviterId: userId.inviter_id,
+    integrationType: userId.integration_type,
+  };
 }
 function _fetchMemberSupplemental() {
   const self = this;
@@ -31,7 +37,7 @@ function _fetchMemberSupplemental() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -120,7 +126,10 @@ function _fetchMemberSupplemental() {
               c5 = [];
               const item = closure_4.forEach((userId) => arr.push(userId.userId));
               constants = v0(callback, c5);
-              v0 = v0(callback, arr2.filter((arg0) => !arr.includes(arg0)));
+              v0 = v0(
+                callback,
+                arr2.filter((arg0) => !arr.includes(arg0)),
+              );
               callback2(constants, constants.SUCCEEDED);
               callback2(v0, constants.FAILED);
               c5 = 0;
@@ -159,10 +168,42 @@ function _fetchMemberSupplemental() {
   return applyArgumentsResult;
 }
 let closure_5 = {};
-let closure_6 = { FAILED: 0, [0]: "FAILED", UNFETCHED: 1, [1]: "UNFETCHED", PENDING: 2, [2]: "PENDING", SUCCEEDED: 3, [3]: "SUCCEEDED", FAILED_NO_RETRY: 4, [4]: "FAILED_NO_RETRY" };
-let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", BOT: 1, [1]: "BOT", INTEGRATION: 2, [2]: "INTEGRATION", DISCOVERY: 3, [3]: "DISCOVERY", HUB: 4, [4]: "HUB", INVITE: 5, [5]: "INVITE", VANITY_URL: 6, [6]: "VANITY_URL", MANUAL_MEMBER_VERIFICATION: 7, [7]: "MANUAL_MEMBER_VERIFICATION", SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL: 8, [8]: "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL" };
+let closure_6 = {
+  FAILED: 0,
+  [0]: "FAILED",
+  UNFETCHED: 1,
+  [1]: "UNFETCHED",
+  PENDING: 2,
+  [2]: "PENDING",
+  SUCCEEDED: 3,
+  [3]: "SUCCEEDED",
+  FAILED_NO_RETRY: 4,
+  [4]: "FAILED_NO_RETRY",
+};
+let obj = {
+  UNSPECIFIED: 0,
+  [0]: "UNSPECIFIED",
+  BOT: 1,
+  [1]: "BOT",
+  INTEGRATION: 2,
+  [2]: "INTEGRATION",
+  DISCOVERY: 3,
+  [3]: "DISCOVERY",
+  HUB: 4,
+  [4]: "HUB",
+  INVITE: 5,
+  [5]: "INVITE",
+  VANITY_URL: 6,
+  [6]: "VANITY_URL",
+  MANUAL_MEMBER_VERIFICATION: 7,
+  [7]: "MANUAL_MEMBER_VERIFICATION",
+  SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL: 8,
+  [8]: "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL",
+};
 obj = { DISCORD: "discord", TWITCH: "twitch", YOUTUBE: "youtube", GUILD_SUBSCRIPTION: "guild_subscription" };
-const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx",
+);
 
 export const registerFetchedSupplementals = function registerFetchedSupplementals(guildId, memberIds) {
   closure_0 = guildId;
@@ -236,7 +277,7 @@ export const useGetIntegrationIconString = function useGetIntegrationIconString(
   const value = obj.get(PlatformTypes.useLegacyPlatformType(arg0));
   let tmp5 = null;
   if (null != value) {
-    const items = [, ];
+    const items = [,];
     ({ TWITCH: arr[0], YOUTUBE: arr[1] } = obj);
     tmp5 = null;
     if (items.includes(arg0)) {

@@ -87,7 +87,11 @@ function questMatchesApplicationId(arg0, quest) {
   const obj = getApplicationIdsByTaskTypes;
   return null != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
 }
-({ DISCORD_APPLICATION_ID: c4, PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: c5, PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_6 } = QuestsExperimentLocations);
+({
+  DISCORD_APPLICATION_ID: c4,
+  PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: c5,
+  PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_6,
+} = QuestsExperimentLocations);
 const result = require("set").fileFinishedImporting("modules/quests/utils/QuestMatchingUtils.tsx");
 
 export { questMatchesActivity };
@@ -154,7 +158,11 @@ export const getQuestsFromActivities = function getQuestsFromActivities(result, 
   }
   return null;
 };
-export const getEligibleQuestsForApplicationId = function getEligibleQuestsForApplicationId(quests, applicationId, arg2) {
+export const getEligibleQuestsForApplicationId = function getEligibleQuestsForApplicationId(
+  quests,
+  applicationId,
+  arg2,
+) {
   closure_0 = applicationId;
   let flag = arg2;
   if (arg2 === undefined) {

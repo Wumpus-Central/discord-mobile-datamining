@@ -14,8 +14,7 @@ obj[1] = setDefault.Millis.HOUR;
 importDefaultResult = new importDefaultResult(obj);
 let c5 = importDefaultResult;
 const Store = initializeDefault.Store;
-class GuildSettingsEmojiStore extends Store {
-}
+class GuildSettingsEmojiStore extends Store {}
 const prototype = GuildSettingsEmojiStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_1);
@@ -65,7 +64,7 @@ obj = {
       num = 0;
     }
     dependencyMap[guildId] = num + 1;
-  }
+  },
 };
 const guildSettingsEmojiStore = new GuildSettingsEmojiStore(dispatcherDefault, obj);
 let result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsEmojiStore.tsx");

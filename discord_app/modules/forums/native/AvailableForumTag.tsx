@@ -9,11 +9,30 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { pill: null, pillSelected: null, pillDisabled: null, emoji: null, imageEmoji: null, textEmoji: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 12, borderRadius: 20, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, margin: 6, borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden", height: 32 };
+createCacheKey = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 12,
+  borderRadius: 20,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  margin: 6,
+  borderWidth: 2,
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  overflow: "hidden",
+  height: 32,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderWidth: 1 };
 createCacheKey[2] = { opacity: 0.6 };
-createCacheKey[3] = { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" };
+createCacheKey[3] = {
+  height: 18,
+  width: 18,
+  marginRight: 4,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[4] = { height: 16, width: 16 };
 createCacheKey[5] = { fontSize: 14, lineHeight: 20 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
@@ -93,10 +112,17 @@ export default function AvailableForumTag(tag) {
         const tmp11 = closure_1_1(tmp4[9]);
         const tmp9 = _undefined;
       }
-      const items = [tmp9Result, _undefined(tag(disabled[11]).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: c5 })];
+      const items = [
+        tmp9Result,
+        _undefined(tag(disabled[11]).Text, {
+          variant: "text-sm/semibold",
+          color: "mobile-text-heading-primary",
+          children: c5,
+        }),
+      ];
       obj.children = items;
       return c7(tag(disabled[8]).PressableScale, obj);
-    }
+    },
   };
   return callback(importDefault(disabled[7]), obj);
-};
+}

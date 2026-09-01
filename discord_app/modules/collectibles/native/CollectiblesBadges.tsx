@@ -14,24 +14,102 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { badgeTextUppercase: { textTransform: "uppercase" }, badgeSurfaceDarkMode: null, badgeSurfaceLightMode: null, newIconBadge: null, limitedTimeBadge: null, lockIconBadge: null, newLockIconBadge: null, badgePill: null, iconTextBadge: null };
+createCacheKey = {
+  badgeTextUppercase: { textTransform: "uppercase" },
+  badgeSurfaceDarkMode: null,
+  badgeSurfaceLightMode: null,
+  newIconBadge: null,
+  limitedTimeBadge: null,
+  lockIconBadge: null,
+  newLockIconBadge: null,
+  badgePill: null,
+  iconTextBadge: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.WHITE };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND };
 let obj1 = { backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND };
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.round, paddingHorizontal: 6, paddingVertical: 2 };
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.round, paddingHorizontal: 6, paddingVertical: 2 };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.md, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
-const obj3 = { backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.md, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.ICON_OVERLAY_DARK, padding: 5, borderRadius: ThemesDefault.radii.round };
-const obj4 = { backgroundColor: ThemesDefault.colors.ICON_OVERLAY_DARK, padding: 5, borderRadius: ThemesDefault.radii.round };
-createCacheKey[6] = { backgroundColor: ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS_2, flexDirection: "row", paddingHorizontal: 5, paddingVertical: 3, borderRadius: ThemesDefault.radii.round, alignItems: "center", gap: 2 };
-const obj5 = { backgroundColor: ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS_2, flexDirection: "row", paddingHorizontal: 5, paddingVertical: 3, borderRadius: ThemesDefault.radii.round, alignItems: "center", gap: 2 };
-createCacheKey[7] = { paddingHorizontal: ThemesDefault.space.PX_4, paddingVertical: 1.5, borderRadius: ThemesDefault.radii.round, flexShrink: 1 };
-const obj6 = { paddingHorizontal: ThemesDefault.space.PX_4, paddingVertical: 1.5, borderRadius: ThemesDefault.radii.round, flexShrink: 1 };
-createCacheKey[8] = { flexDirection: "row", alignItems: "center", gap: 4, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: 2, borderRadius: ThemesDefault.radii.round };
+createCacheKey[3] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderRadius: ThemesDefault.radii.round,
+  paddingHorizontal: 6,
+  paddingVertical: 2,
+};
+let obj2 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderRadius: ThemesDefault.radii.round,
+  paddingHorizontal: 6,
+  paddingVertical: 2,
+};
+createCacheKey[4] = {
+  backgroundColor: ThemesDefault.colors.WHITE,
+  borderRadius: ThemesDefault.radii.md,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_4,
+};
+const obj3 = {
+  backgroundColor: ThemesDefault.colors.WHITE,
+  borderRadius: ThemesDefault.radii.md,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_4,
+};
+createCacheKey[5] = {
+  backgroundColor: ThemesDefault.colors.ICON_OVERLAY_DARK,
+  padding: 5,
+  borderRadius: ThemesDefault.radii.round,
+};
+const obj4 = {
+  backgroundColor: ThemesDefault.colors.ICON_OVERLAY_DARK,
+  padding: 5,
+  borderRadius: ThemesDefault.radii.round,
+};
+createCacheKey[6] = {
+  backgroundColor: ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS_2,
+  flexDirection: "row",
+  paddingHorizontal: 5,
+  paddingVertical: 3,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  gap: 2,
+};
+const obj5 = {
+  backgroundColor: ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS_2,
+  flexDirection: "row",
+  paddingHorizontal: 5,
+  paddingVertical: 3,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  gap: 2,
+};
+createCacheKey[7] = {
+  paddingHorizontal: ThemesDefault.space.PX_4,
+  paddingVertical: 1.5,
+  borderRadius: ThemesDefault.radii.round,
+  flexShrink: 1,
+};
+const obj6 = {
+  paddingHorizontal: ThemesDefault.space.PX_4,
+  paddingVertical: 1.5,
+  borderRadius: ThemesDefault.radii.round,
+  flexShrink: 1,
+};
+createCacheKey[8] = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: 4,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  paddingVertical: 2,
+  borderRadius: ThemesDefault.radii.round,
+};
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj7 = { flexDirection: "row", alignItems: "center", gap: 4, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: 2, borderRadius: ThemesDefault.radii.round };
+const obj7 = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: 4,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  paddingVertical: 2,
+  borderRadius: ThemesDefault.radii.round,
+};
 const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesBadges.tsx");
 
 export const NewBadge = function NewBadge(style) {
@@ -58,7 +136,7 @@ export const LockBadge = function LockBadge(isNew) {
     obj[1] = items;
     obj = { size: "xxs", color: null };
     obj[1] = ThemesDefault.colors.WHITE;
-    const items1 = [callback(LockIcon.LockIcon, obj), ];
+    const items1 = [callback(LockIcon.LockIcon, obj)];
     obj1 = { variant: "text-xs/bold", color: "text-overlay-light", style: null, children: null };
     obj1[2] = tmp.badgeTextUppercase;
     const intl = getSystemLocale.intl;
@@ -92,7 +170,7 @@ export const PremiumBadge = function PremiumBadge(isNew) {
     obj[1] = items;
     obj = { size: "xxs", color: null };
     obj[1] = ThemesDefault.colors.WHITE;
-    const items1 = [callback(NitroWheelIcon.NitroWheelIcon, obj), ];
+    const items1 = [callback(NitroWheelIcon.NitroWheelIcon, obj)];
     obj1 = { variant: "text-xs/bold", color: "text-overlay-light", style: null, children: null };
     obj1[2] = tmp.badgeTextUppercase;
     const intl = getSystemLocale.intl;
@@ -126,7 +204,7 @@ export const IconBadgePill = function IconBadgePill(isDark) {
   isDark = isDark.isDark;
   ({ icon, accessibilityLabel } = isDark);
   const tmp = callback3();
-  const items = [tmp.badgePill, ];
+  const items = [tmp.badgePill];
   const obj = { style: items, accessibilityLabel, children: null };
   items[1] = isDark ? tmp.badgeSurfaceDarkMode : tmp.badgeSurfaceLightMode;
   let str = "white";
@@ -140,14 +218,14 @@ export const IconTextBadge = function IconTextBadge(isDark) {
   isDark = isDark.isDark;
   ({ icon, label } = isDark);
   const tmp = callback3();
-  const items = [tmp.iconTextBadge, ];
+  const items = [tmp.iconTextBadge];
   let obj = { style: items, children: null };
   items[1] = isDark ? tmp.badgeSurfaceDarkMode : tmp.badgeSurfaceLightMode;
   let str = "white";
   if (isDark) {
     str = "black";
   }
-  const items1 = [closure_5(icon, { size: "xs", color: str }), ];
+  const items1 = [closure_5(icon, { size: "xs", color: str })];
   let str2 = "text-overlay-light";
   if (isDark) {
     str2 = "text-overlay-dark";

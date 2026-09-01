@@ -30,20 +30,38 @@ const forwardRefResult = forwardRef((animationType, ref) => {
         playResult = current.play();
       }
       return playResult;
-    }
+    },
   }));
   if (isThemeLightResult) {
     let SpendEarnOrbsLottie = tmp(10843).SpendEarnOrbsLightThemeLottie;
   } else {
     SpendEarnOrbsLottie = tmp(10845).SpendEarnOrbsLottie;
   }
-  obj = { ref: tmp5, size: "custom", width: 60, height: 60, opacity: 0.8, animation: null, useLottieDefaultColors: true };
+  obj = {
+    ref: tmp5,
+    size: "custom",
+    width: 60,
+    height: 60,
+    opacity: 0.8,
+    animation: null,
+    useLottieDefaultColors: true,
+  };
   let str = "spend";
   if (null != animationType) {
     str = animationType;
   }
   obj[5] = str;
-  return <SpendEarnOrbsLottie ref={tmp5} size="custom" width={60} height={60} opacity={0.8} animation={null} useLottieDefaultColors />;
+  return (
+    <SpendEarnOrbsLottie
+      ref={tmp5}
+      size="custom"
+      width={60}
+      height={60}
+      opacity={0.8}
+      animation={null}
+      useLottieDefaultColors
+    />
+  );
 });
 forwardRefResult.displayName = "OrbsLottieAnimation";
 const result = require("set").fileFinishedImporting("modules/virtual_currency/native/OrbLottieAnimation.tsx");

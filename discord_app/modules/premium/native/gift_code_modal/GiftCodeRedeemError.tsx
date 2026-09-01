@@ -15,9 +15,20 @@ noopAll;
 ({ Image: c3, View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, body: null, header: null, message: null, footer: null };
-createCacheKey = { flex: 1, justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  flex: 1,
+  justifyContent: "space-between",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28, paddingBottom: 12, paddingHorizontal: 32 };
+createCacheKey[1] = {
+  flex: 1,
+  alignItems: "center",
+  justifyContent: "center",
+  paddingTop: 28,
+  paddingBottom: 12,
+  paddingHorizontal: 32,
+};
 createCacheKey[2] = { marginTop: 32, textAlign: "center" };
 createCacheKey[3] = { marginTop: 8, textAlign: "center" };
 createCacheKey[4] = { paddingHorizontal: 24 };
@@ -35,14 +46,14 @@ export default function GiftCodeRedeemError(children) {
   } else {
     tmp9Result = tmp9(11370);
   }
-  const items = [closure_6(closure_3, { source: tmp9Result }), , ];
+  const items = [closure_6(closure_3, { source: tmp9Result }), ,];
   obj1 = { variant: "heading-xl/bold", style: tmp.header, children: null };
   const intl = tmp2(1236).intl;
   obj1[2] = intl.formatToMarkdownString(getSystemLocale.t.JUvC0s, {});
   items[1] = closure_6(Text.Text, obj1);
   items[2] = closure_6(Text.Text, { variant: "text-lg/medium", style: tmp.message, children: children.message });
   obj[2] = items;
-  const items1 = [closure_7(closure_5, obj), ];
+  const items1 = [closure_7(closure_5, obj)];
   const obj3 = { style: tmp.footer, children: null };
   const obj4 = { text: null, size: "md", onPress: null };
   const intl2 = tmp2(1236).intl;
@@ -54,4 +65,4 @@ export default function GiftCodeRedeemError(children) {
   items1[1] = closure_6(closure_4, obj3);
   obj[2] = items1;
   return closure_7(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-};
+}

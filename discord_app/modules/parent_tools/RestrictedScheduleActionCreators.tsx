@@ -10,7 +10,7 @@ function _addRestrictedScheduleRule() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       closure_3 = tmp2;
       const table = tmp5;
       const HTTP = callback(closure_1_2[2]).HTTP;
@@ -45,7 +45,7 @@ function _updateRestrictedScheduleRule() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       closure_4 = tmp2;
       closure_3 = tmp5;
       const HTTP = callback(530).HTTP;
@@ -79,7 +79,7 @@ function _deleteRestrictedScheduleRule() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();

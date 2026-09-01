@@ -22,7 +22,7 @@ export const useSelectPremiumGift = function useSelectPremiumGift(PremiumGiftPla
     c4 = 0;
     c5 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (v02 === 2) {
         v02 = 3;
         HermesBuiltin.throwTypeError();
@@ -109,7 +109,7 @@ export const useSelectPremiumGift = function useSelectPremiumGift(PremiumGiftPla
     })();
   });
   const items = [setPremiumType, planInterval, createOrReuseGiftOrder, recipientUserId, setOrder, navigation];
-  return setOrder.useCallback(function() {
+  return setOrder.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

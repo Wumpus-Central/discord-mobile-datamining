@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/EmptyServerSettingsAuditLog.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/EmptyServerSettingsAuditLog.tsx",
+);
 
 export const getEmptyServerSettingsAuditLogSource = function getEmptyServerSettingsAuditLogSource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getEmptyServerSettingsAuditLogSource = function getEmptyServerSetti
     },
     light() {
       return callback(17143);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useEmptyServerSettingsAuditLogSource = function useEmptyServerSetti
     },
     light() {
       return callback(17143);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const EmptyServerSettingsAuditLog = function EmptyServerSettingsAuditLog(
     },
     light() {
       return callback(17143);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

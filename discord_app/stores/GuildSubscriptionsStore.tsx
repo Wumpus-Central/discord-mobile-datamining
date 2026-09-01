@@ -209,11 +209,24 @@ let closure_20 = new _enqueueDefault((subscriptions) => {
   obj.dispatch(obj);
 });
 const Store = initializeDefault.Store;
-class GuildSubscriptionsStore extends Store {
-}
+class GuildSubscriptionsStore extends Store {}
 const prototype = GuildSubscriptionsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_8, closure_10, closure_11, closure_5, closure_12, closure_13, closure_14, closure_6, closure_15, closure_16, closure_17, closure_18, closure_7);
+  this.waitFor(
+    closure_8,
+    closure_10,
+    closure_11,
+    closure_5,
+    closure_12,
+    closure_13,
+    closure_14,
+    closure_6,
+    closure_15,
+    closure_16,
+    closure_17,
+    closure_18,
+    closure_7,
+  );
   const items = [closure_7];
   this.syncWith(items, handleSpotifyUpdate);
   const items1 = [closure_10];
@@ -489,7 +502,7 @@ const guildSubscriptionsStore = new GuildSubscriptionsStore(dispatcherDefault, {
     channel = channel.channel;
     return store4.unsubscribeThreadMemberList(channel.guild_id, channel.id);
   },
-  THREAD_LIST_SYNC: resubscribe
+  THREAD_LIST_SYNC: resubscribe,
 });
 let obj = {
   CONNECTION_OPEN: handleConnectionOpenOrResumed,
@@ -739,7 +752,7 @@ let obj = {
     channel = channel.channel;
     return store4.unsubscribeThreadMemberList(channel.guild_id, channel.id);
   },
-  THREAD_LIST_SYNC: resubscribe
+  THREAD_LIST_SYNC: resubscribe,
 };
 let tmp3 = new _enqueueDefault((subscriptions) => {
   for (const key10004 in arg0) {

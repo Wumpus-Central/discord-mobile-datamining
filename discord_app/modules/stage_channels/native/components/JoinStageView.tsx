@@ -23,5 +23,9 @@ export default function JoinStageView(channel) {
   const tmp2 = stylesDefault;
   obj[1] = fillChunk.getParticipantNamesText(channel, found);
   obj[2] = jsx(AgeVerificationSpeakerActionSheet.JoinStagePrompt, { channel });
-  return <tmp2 title={null} body={null}>{null}</tmp2>;
-};
+  return (
+    <tmp2 title={null} body={null}>
+      {null}
+    </tmp2>
+  );
+}

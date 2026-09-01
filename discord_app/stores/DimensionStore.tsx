@@ -7,8 +7,7 @@ let closure_2 = {};
 let closure_3 = {};
 let closure_4 = { scrollTop: 0 };
 const Store = initializeDefault.Store;
-class DimensionStore extends Store {
-}
+class DimensionStore extends Store {}
 const prototype = DimensionStore.prototype;
 prototype["percentageScrolled"] = function percentageScrolled(arg0) {
   if (null != dependencyMap[arg0]) {
@@ -95,7 +94,7 @@ const dimensionStore = new DimensionStore(dispatcherDefault, {
     if (tmp3) {
       delete tmp[tmp2];
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/DimensionStore.tsx");
 

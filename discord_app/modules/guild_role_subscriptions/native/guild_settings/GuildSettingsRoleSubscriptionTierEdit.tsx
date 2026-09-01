@@ -37,11 +37,17 @@ function ArchiveOrDeleteTierSection() {
   const editStateContext = obj1.useEditStateContext();
   const guildId = editStateContext.guildId;
   ({ groupListingId, editStateId } = editStateContext);
-  ({ buttonText, descriptionText, handleArchiveOrDelete, deleting, archiving } = useArchiveOrDeleteDefault(guildId, groupListingId, editStateId, navigation));
+  ({ buttonText, descriptionText, handleArchiveOrDelete, deleting, archiving } = useArchiveOrDeleteDefault(
+    guildId,
+    groupListingId,
+    editStateId,
+    navigation,
+  ));
   let obj2 = useShouldHideGuildPurchaseEntryPoints;
-  const allowSelfRemoveMonetization = obj2.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).allowSelfRemoveMonetization;
+  const allowSelfRemoveMonetization =
+    obj2.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).allowSelfRemoveMonetization;
   obj = { style: tmp.actionHeader, children: buttonText };
-  items = [callback2(FormHeaderDefault, obj), , ];
+  items = [callback2(FormHeaderDefault, obj), ,];
   obj = { style: tmp.actionDescription, variant: "text-sm/medium", color: "text-default", children: descriptionText };
   items[1] = callback2(Text.Text, obj);
   obj1 = { style: tmp.actionButton, children: null };
@@ -96,7 +102,15 @@ function TabContent(selectedTab) {
 }
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-createCacheKey = { container: { flex: 1 }, tabsContainer: null, tabsContainerWithDraft: null, actionButton: null, tabContent: null, actionHeader: null, actionDescription: null };
+createCacheKey = {
+  container: { flex: 1 },
+  tabsContainer: null,
+  tabsContainerWithDraft: null,
+  actionButton: null,
+  tabContent: null,
+  actionHeader: null,
+  actionDescription: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { paddingBottom: 0 };
@@ -105,7 +119,7 @@ createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW 
 createCacheKey[5] = { marginTop: 24, paddingStart: 16 };
 createCacheKey[6] = { marginBottom: 16, marginLeft: 16 };
 let closure_17 = createCacheKey.createStyles(createCacheKey);
-let items = [, , ];
+let items = [, ,];
 ({ DETAILS: arr[0], DESIGN: arr[1], BENEFITS: arr[2] } = GuildRoleSubscriptionsTierScenes);
 let closure_19 = items.reduce((arg0, arg1, arg2) => {
   arg0[arg1] = arg2;
@@ -119,7 +133,12 @@ let closure_22 = require("noop").forwardRef((arg0, ref) => {
   ({ guildId: require, groupListingId } = editStateContext);
   obj1 = useFetchListingsForGuild;
   const publishSubscriptionListing = obj1.usePublishSubscriptionListing();
-  ({ error, publishSubscriptionListing: importAll, clearError: dependencyMap, submitting } = publishSubscriptionListing);
+  ({
+    error,
+    publishSubscriptionListing: importAll,
+    clearError: dependencyMap,
+    submitting,
+  } = publishSubscriptionListing);
   const subscriptionListing = useFetchListingsForGuild.useSubscriptionListing(editStateContext.editStateId);
   const obj3 = useFetchListingsForGuild;
   const roleSubscriptionSettingsDisabled = useRoleSubscriptionSettingsDisabled.useRoleSubscriptionSettingsDisabled();
@@ -132,7 +151,7 @@ let closure_22 = require("noop").forwardRef((arg0, ref) => {
       if (!subscriptionListing.published) {
         if (null != error) {
           obj = { children: null };
-          items = [callback2(Button.Spacer, { size: 16 }), , ];
+          items = [callback2(Button.Spacer, { size: 16 }), ,];
           obj = { children: null };
           obj[0] = error.getAnyErrorMessage();
           items[1] = callback2(groupListingId(11790), obj);
@@ -170,7 +189,9 @@ let closure_22 = require("noop").forwardRef((arg0, ref) => {
   return tmp7;
 });
 let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionTierEdit.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionTierEdit.tsx",
+);
 
 export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
   guildId = guildId.guildId;
@@ -214,21 +235,34 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
   ref = obj.useRef(null);
   tmp9Result = tmp9(tmp6[29]);
   hasChanges = tmp9Result.useHasChanges(first);
-  const createOrUpdateListingFromEditState = onBeforeDispatchNewListing(first[29]).useCreateOrUpdateListingFromEditState();
+  const createOrUpdateListingFromEditState = onBeforeDispatchNewListing(
+    first[29],
+  ).useCreateOrUpdateListingFromEditState();
   loading = createOrUpdateListingFromEditState.loading;
   handleCreateOrUpdateFromEditState = createOrUpdateListingFromEditState.handleCreateOrUpdateFromEditState;
   error = createOrUpdateListingFromEditState.error;
-  items = [guildId, handleCreateOrUpdateFromEditState, first, groupListingId, onBeforeDispatchNewListing, removeEditStateId];
-  callback = obj.useCallback(() => handleCreateOrUpdateFromEditState({
+  items = [
     guildId,
-    editStateId: first,
+    handleCreateOrUpdateFromEditState,
+    first,
     groupListingId,
     onBeforeDispatchNewListing,
-    onAfterDispatchNewListing(id) {
-      callback(id.id);
-      callback2(closure_3);
-    }
-  }), items);
+    removeEditStateId,
+  ];
+  callback = obj.useCallback(
+    () =>
+      handleCreateOrUpdateFromEditState({
+        guildId,
+        editStateId: first,
+        groupListingId,
+        onBeforeDispatchNewListing,
+        onAfterDispatchNewListing(id) {
+          callback(id.id);
+          callback2(closure_3);
+        },
+      }),
+    items,
+  );
   const items1 = [error];
   const layoutEffect = obj.useLayoutEffect(() => {
     if (null != error) {
@@ -243,31 +277,36 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
   }, items1);
   const tmp2 = callback;
   const tmp9Result1 = onBeforeDispatchNewListing(first[29]);
-  [tmp17, c14] = callback(loading.useRoleTierEditStore((currentScene) => {
-    let DETAILS = currentScene.currentScene;
-    if (DETAILS == null) {
-      DETAILS = handleCreateOrUpdateFromEditState.DETAILS;
-    }
-    items = [DETAILS, currentScene.setScene];
-    return items;
-  }), 2);
+  [tmp17, c14] = callback(
+    loading.useRoleTierEditStore((currentScene) => {
+      let DETAILS = currentScene.currentScene;
+      if (DETAILS == null) {
+        DETAILS = handleCreateOrUpdateFromEditState.DETAILS;
+      }
+      items = [DETAILS, currentScene.setScene];
+      return items;
+    }),
+    2,
+  );
   const items2 = [navigation, hasChanges, first1, loading, callback];
   const layoutEffect1 = obj.useLayoutEffect(() => {
     navigation.setOptions({
-      headerRight: loading ? (() => callback2(callback(table[31]).HeaderSubmittingIndicator, {})) : (() => {
-        const obj = { text: null, onPress: null, disabled: null };
-        const intl = closure_1_0(closure_1_3[28]).intl;
-        obj[0] = intl.string(closure_1_0(closure_1_3[28]).t["R3BPH+"]);
-        obj[1] = closure_13;
-        obj[2] = !closure_9;
-        return closure_1_14(closure_1_0(closure_1_3[32]).HeaderActionButton, obj);
-      }),
+      headerRight: loading
+        ? () => callback2(callback(table[31]).HeaderSubmittingIndicator, {})
+        : () => {
+            const obj = { text: null, onPress: null, disabled: null };
+            const intl = closure_1_0(closure_1_3[28]).intl;
+            obj[0] = intl.string(closure_1_0(closure_1_3[28]).t["R3BPH+"]);
+            obj[1] = closure_13;
+            obj[2] = !closure_9;
+            return closure_1_14(closure_1_0(closure_1_3[32]).HeaderActionButton, obj);
+          },
       headerTitle() {
         const obj = { title: closure_6, subtitle: null };
         const intl = closure_1_0(closure_1_3[28]).intl;
         obj[1] = intl.string(closure_1_0(closure_1_3[28]).t.t94EHg);
         return closure_1_14(closure_1_0(closure_1_3[31]).NavigatorHeader, obj);
-      }
+      },
     });
   }, items2);
   const items3 = [navigation, first, guildId];
@@ -283,7 +322,9 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
       if (!tmp8) {
         arr = arr.pop();
       }
-      tmp8 = name !== error.ROLE_SUBSCRIPTIONS_TIER_EDIT || subscriptionGroupListingsForGuildFetchState === hasChanges.FETCHING;
+      tmp8 =
+        name !== error.ROLE_SUBSCRIPTIONS_TIER_EDIT ||
+        subscriptionGroupListingsForGuildFetchState === hasChanges.FETCHING;
     }
   }, items3);
   guildId(first[33]);
@@ -299,10 +340,10 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
         }
       }
     },
-    items: null
+    items: null,
   };
   let intl = tmp5(tmp6[28]).intl;
-  const items4 = [intl.string(guildId(first[28]).t.f7rGug), , ];
+  const items4 = [intl.string(guildId(first[28]).t.f7rGug), ,];
   const intl2 = tmp5(tmp6[28]).intl;
   items4[1] = intl2.string(guildId(first[28]).t.YCpDtS);
   const intl3 = tmp5(tmp6[28]).intl;
@@ -330,7 +371,9 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
     obj3[1] = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
       let tmp3 = null;
-      if (markAsDismissed.visibleContent === guildId(first[34]).DismissibleContent.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATES) {
+      if (
+        markAsDismissed.visibleContent === guildId(first[34]).DismissibleContent.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATES
+      ) {
         const obj = { markAsDismissed: null, actionSheetKey: "TierTemplateSelected", importer: null };
         obj[0] = function markAsDismissed() {
           return markAsDismissed(closure_1_13.UNKNOWN);
@@ -340,8 +383,8 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
       }
       return tmp3;
     };
-    const items7 = [callback2(groupListingId(tmp6[37]), obj3), , ];
-    const items8 = [tmp.tabsContainer, ];
+    const items7 = [callback2(groupListingId(tmp6[37]), obj3), ,];
+    const items8 = [tmp.tabsContainer];
     let prop = null;
     if (!flag) {
       prop = tmp.tabsContainerWithDraft;
@@ -351,7 +394,7 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
     obj4[0] = items8;
     const obj5 = { state: null };
     obj5[0] = tmp21;
-    const items9 = [callback2(tmp5(tmp6[39]).SegmentedControl, obj5), ];
+    const items9 = [callback2(tmp5(tmp6[39]).SegmentedControl, obj5)];
     const obj6 = { ref: null };
     obj6[0] = ref;
     items9[1] = callback2(closure_22, obj6);
@@ -365,12 +408,15 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
     obj[3] = callback2(tmp5(tmp6[25]).RoleSubscriptionSettingsDisabledContextProvider, obj1);
     return callback2(tmp5(tmp6[12]).EditStateContextProvider, obj);
   }
-  const tmp2Result = callback(loading.useRoleTierEditStore((currentScene) => {
-    let DETAILS = currentScene.currentScene;
-    if (DETAILS == null) {
-      DETAILS = handleCreateOrUpdateFromEditState.DETAILS;
-    }
-    items = [DETAILS, currentScene.setScene];
-    return items;
-  }), 2);
-};
+  const tmp2Result = callback(
+    loading.useRoleTierEditStore((currentScene) => {
+      let DETAILS = currentScene.currentScene;
+      if (DETAILS == null) {
+        DETAILS = handleCreateOrUpdateFromEditState.DETAILS;
+      }
+      items = [DETAILS, currentScene.setScene];
+      return items;
+    }),
+    2,
+  );
+}

@@ -10,7 +10,14 @@ import PlatformTypes from "../../../../../discord_common/js/shared/utils/Platfor
 
 require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let obj = { wrapper: { flexDirection: "row", alignItems: "center" }, dot: null, dotContainer: null, onlineDot: null, offlineDot: null, refreshText: null };
+let obj = {
+  wrapper: { flexDirection: "row", alignItems: "center" },
+  dot: null,
+  dotContainer: null,
+  onlineDot: null,
+  offlineDot: null,
+  refreshText: null,
+};
 obj = { width: 8, height: 8, borderRadius: ThemesDefault.radii.sm };
 obj[1] = obj;
 obj[2] = { alignItems: "center", justifyContent: "center", marginRight: 4 };
@@ -45,7 +52,7 @@ const memoResult = importAllResult.memo(function MemberCount(arg0) {
     const tmp11 = callback();
     obj = { style: null, children: null };
     obj[0] = tmp11.wrapper;
-    const items = [tmp11.dotContainer, ];
+    const items = [tmp11.dotContainer];
     let tmp15 = null != dotContainerWidth;
     if (tmp15) {
       obj = { width: null };
@@ -55,12 +62,12 @@ const memoResult = importAllResult.memo(function MemberCount(arg0) {
     obj1 = { style: null, children: null };
     items[1] = tmp15;
     obj1[0] = items;
-    const items1 = [tmp11.dot, ];
+    const items1 = [tmp11.dot];
     const obj2 = { style: null };
     items1[1] = "online" === type ? tmp11.onlineDot : tmp11.offlineDot;
     obj2[0] = items1;
     obj1[1] = closure_3(View, obj2);
-    const items2 = [closure_3(View, obj1), ];
+    const items2 = [closure_3(View, obj1)];
     if (color == null) {
       color = "text-default";
     }
@@ -73,6 +80,8 @@ const memoResult = importAllResult.memo(function MemberCount(arg0) {
     return closure_4(View, obj);
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx",
+);
 
 export default memoResult;

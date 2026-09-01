@@ -10,7 +10,20 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   closure_1 = arg1;
-  obj = { dragSpecs: "Boolean", overSpecs: "disabled", dropSpecs: "isArray", dragRegion: require("../../reanimated/ReanimatedRexport.tsx").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "sans-serif-medium", scrollPosition: "normal", windowSize: "a", setStateShallow: "isArray", dropStart: "no", dropComplete: "channelId" };
+  obj = {
+    dragSpecs: "Boolean",
+    overSpecs: "disabled",
+    dropSpecs: "isArray",
+    dragRegion: require("../../reanimated/ReanimatedRexport.tsx").makeMutable({ min: 0, max: 0 }),
+    gestureState: null,
+    dragDropInProgress: null,
+    listInsets: "sans-serif-medium",
+    scrollPosition: "normal",
+    windowSize: "a",
+    setStateShallow: "isArray",
+    dropStart: "no",
+    dropComplete: "channelId",
+  };
   const obj2 = ReanimatedRexport;
   obj[4] = require("../../reanimated/ReanimatedRexport.tsx").makeMutable(obj);
   const obj3 = ReanimatedRexport;
@@ -53,7 +66,9 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "accessible" }));
+      callback(tmp2[3]).batchUpdates(() =>
+        newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "accessible" }),
+      );
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -108,7 +123,13 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        obj = { isDragTarget: false, dragState: "disabled", overState: "isArray", itemSize: null, dragDropInProgress: 1 };
+        obj = {
+          isDragTarget: false,
+          dragState: "disabled",
+          overState: "isArray",
+          itemSize: null,
+          dragDropInProgress: 1,
+        };
         obj[4] = dragDropInProgress;
         return obj;
       }

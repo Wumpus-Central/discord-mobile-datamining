@@ -8,8 +8,7 @@ import _modDef10937 from "../app_state/DiscordAppState.native.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let c4 = 30000;
-class QuestHomeRoundtripTracker {
-}
+class QuestHomeRoundtripTracker {}
 const prototype = QuestHomeRoundtripTracker.prototype;
 prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
   const self = this;
@@ -27,7 +26,7 @@ prototype["sendMetric"] = function sendMetric(timeout, duration) {
     obj = { name: null, tags: null };
     obj[0] = set2.MetricEvents.QUEST_HOME_ROUNDTRIP;
     const _HermesInternal = HermesInternal;
-    const items = ["includes_bounties:" + arg2, ];
+    const items = ["includes_bounties:" + arg2];
     const _HermesInternal2 = HermesInternal;
     items[1] = "timeout:" + timeout;
     obj[1] = items;

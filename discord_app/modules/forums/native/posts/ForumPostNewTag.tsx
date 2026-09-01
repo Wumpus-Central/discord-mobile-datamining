@@ -16,4 +16,4 @@ const result = require("set").fileFinishedImporting("modules/forums/native/posts
 export default function ForumPostNewTag(containerStyle) {
   containerStyle = [containerStyle.containerStyle, callback().container];
   return jsx(Button.NewTag, { containerStyle, variant: "text-xs/bold", color: "badge-text-brand" });
-};
+}

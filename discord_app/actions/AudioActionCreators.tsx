@@ -35,7 +35,17 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video, arg4) {
     if (null != inputDevices[inputDeviceId]) {
       str2 = tmp6.name;
     }
-    obj = { device_from_name: null, device_to_name: null, device_type: null, device_is_certified: null, location: null, location_stack: null, voice_channel_type: null, audio_subsystem: null, audio_layer: null };
+    obj = {
+      device_from_name: null,
+      device_to_name: null,
+      device_type: null,
+      device_is_certified: null,
+      location: null,
+      location_stack: null,
+      voice_channel_type: null,
+      audio_subsystem: null,
+      audio_layer: null,
+    };
     obj[0] = certifiedDeviceName.getCertifiedDeviceName(inputDeviceId, str2);
     if (null != inputDevices[found]) {
       str = tmp7.name;
@@ -61,18 +71,20 @@ let obj = new timestampDefault("AudioActionCreators");
 obj.enableNativeLogger(true);
 let closure_15 = debounceDefault((target_user_id, context, volume) => {
   obj = expandEventPropertiesDefault;
-  obj = { target_user_id, context, volume, media_session_id: store3.getMediaSessionId(), rtc_connection_id: store3.getRTCConnectionId() };
+  obj = {
+    target_user_id,
+    context,
+    volume,
+    media_session_id: store3.getMediaSessionId(),
+    rtc_connection_id: store3.getRTCConnectionId(),
+  };
   obj.track(constants2.USER_VOLUME_SETTING_UPDATED, obj);
 }, 300);
 function isNotSupported() {
   return false;
 }
-function trackToggleSelfMute() {
-
-}
-function trackToggleSelfDeaf() {
-
-}
+function trackToggleSelfMute() {}
+function trackToggleSelfDeaf() {}
 obj = {
   enable() {
     return Promise.resolve(true);
@@ -228,7 +240,14 @@ obj = {
       HermesBuiltin.throwTypeError();
     }
     obj = dispatcherDefault;
-    obj = { type: "AUDIO_SET_LOCAL_VIDEO_DISABLED", context: DEFAULT, userId: closure_0, videoToggleState: MANUAL_ENABLED, persist: flag, isAutomatic: flag2 };
+    obj = {
+      type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
+      context: DEFAULT,
+      userId: closure_0,
+      videoToggleState: MANUAL_ENABLED,
+      persist: flag,
+      isAutomatic: flag2,
+    };
     obj.dispatch(obj);
   },
   setLocalVolume(userId, USER, DEFAULT) {
@@ -255,7 +274,12 @@ obj = {
       HermesBuiltin.throwTypeError();
     }
     const audioMixerSettings = store2.getAudioMixerSettings();
-    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("spatial_audio_enabled", enabled, audioMixerSettings.enabled, arg1);
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault(
+      "spatial_audio_enabled",
+      enabled,
+      audioMixerSettings.enabled,
+      arg1,
+    );
     obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_AUDIO_MIXER_SETTINGS", context: MediaEngineContextTypes.DEFAULT, settings: null };
     obj = {};
@@ -315,7 +339,14 @@ obj = {
         str2 = tmp24.name;
       }
       let tmp4Result = tmp4(698);
-      obj2 = { mode: null, location_stack: null, voice_channel_type: null, input_device_name: null, audio_subsystem: null, audio_layer: null };
+      obj2 = {
+        mode: null,
+        location_stack: null,
+        voice_channel_type: null,
+        input_device_name: null,
+        audio_subsystem: null,
+        audio_layer: null,
+      };
       obj2[0] = mode;
       obj2[1] = analyticsLocations;
       let type;
@@ -345,7 +376,17 @@ obj = {
           str = tmp12.name;
         }
         tmp4Result = tmp4(698);
-        obj3 = { location_stack: null, voice_channel_type: null, input_device_name: null, audio_subsystem: null, audio_layer: null, old_threshold: null, new_threshold: null, old_auto_threshold: null, new_auto_threshold: null };
+        obj3 = {
+          location_stack: null,
+          voice_channel_type: null,
+          input_device_name: null,
+          audio_subsystem: null,
+          audio_layer: null,
+          old_threshold: null,
+          new_threshold: null,
+          old_auto_threshold: null,
+          new_auto_threshold: null,
+        };
         obj3[0] = analyticsLocations;
         let type1;
         if (channel1 != null) {
@@ -487,7 +528,12 @@ obj = {
       HermesBuiltin.throwTypeError();
     }
     const activeInputProfile = store2.getActiveInputProfile();
-    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("active_input_profile", inputProfile, activeInputProfile, obj.analyticsLocations);
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault(
+      "active_input_profile",
+      inputProfile,
+      activeInputProfile,
+      obj.analyticsLocations,
+    );
     const tmp = importDefault;
     const tmp3 = trackVoiceAndVideoDebuggingSettingsUpdatedDefault;
     obj = { type: "AUDIO_SET_ACTIVE_INPUT_PROFILE", inputProfile };
@@ -509,7 +555,12 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("stream_attenuation_enabled", enabled, store2.getSidechainCompression(), obj.analyticsLocations);
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault(
+      "stream_attenuation_enabled",
+      enabled,
+      store2.getSidechainCompression(),
+      obj.analyticsLocations,
+    );
     const tmp = trackVoiceAndVideoDebuggingSettingsUpdatedDefault;
     obj = { type: "AUDIO_SET_SIDECHAIN_COMPRESSION", enabled };
     dispatcherDefault.dispatch(obj);
@@ -522,7 +573,12 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("stream_attenuation_strength", strength, store2.getSidechainCompressionStrength(), obj.analyticsLocations);
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault(
+      "stream_attenuation_strength",
+      strength,
+      store2.getSidechainCompressionStrength(),
+      obj.analyticsLocations,
+    );
     const tmp = trackVoiceAndVideoDebuggingSettingsUpdatedDefault;
     obj = { type: "AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH", strength };
     dispatcherDefault.dispatch(obj);
@@ -571,9 +627,17 @@ obj = {
     if (attenuation !== attenuation) {
       trackVoiceAndVideoDebuggingSettingsUpdatedDefault("global_attenuation_strength", attenuation, attenuation);
     } else if (attenuateWhileSpeakingSelf !== attenuateWhileSpeakingSelf) {
-      trackVoiceAndVideoDebuggingSettingsUpdatedDefault("global_attenuation_for_self_speak_enabled", attenuateWhileSpeakingSelf, attenuateWhileSpeakingSelf);
+      trackVoiceAndVideoDebuggingSettingsUpdatedDefault(
+        "global_attenuation_for_self_speak_enabled",
+        attenuateWhileSpeakingSelf,
+        attenuateWhileSpeakingSelf,
+      );
     } else if (attenuateWhileSpeakingOthers !== attenuateWhileSpeakingOthers) {
-      trackVoiceAndVideoDebuggingSettingsUpdatedDefault("global_attenuation_for_other_speak_enabled", attenuateWhileSpeakingOthers, attenuateWhileSpeakingOthers);
+      trackVoiceAndVideoDebuggingSettingsUpdatedDefault(
+        "global_attenuation_for_other_speak_enabled",
+        attenuateWhileSpeakingOthers,
+        attenuateWhileSpeakingOthers,
+      );
     }
     obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_ATTENUATION", attenuation, attenuateWhileSpeakingSelf, attenuateWhileSpeakingOthers };
@@ -598,14 +662,18 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("silence_warning_enabled", enabled, store2.getEnableSilenceWarning());
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault(
+      "silence_warning_enabled",
+      enabled,
+      store2.getEnableSilenceWarning(),
+    );
     obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_DISPLAY_SILENCE_WARNING", enabled };
     obj.dispatch(obj);
   },
   setDebugLogging(arg0) {
     closure_0 = arg0;
-    return callback(function*() {
+    return callback(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -676,7 +744,11 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("experimental_soundshare_enabled", enabled, store2.getExperimentalSoundshare());
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault(
+      "experimental_soundshare_enabled",
+      enabled,
+      store2.getExperimentalSoundshare(),
+    );
     obj = dispatcherDefault;
     obj = { type: "MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE", enabled };
     obj.dispatch(obj);
@@ -685,14 +757,18 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("system_screenshare_picker_enabled", enabled, store2.getUseSystemScreensharePicker());
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault(
+      "system_screenshare_picker_enabled",
+      enabled,
+      store2.getUseSystemScreensharePicker(),
+    );
     obj = dispatcherDefault;
     obj = { type: "MEDIA_ENGINE_SET_USE_SYSTEM_SCREENSHARE_PICKER", enabled };
     obj.dispatch(obj);
   },
   setAudioSubsystem(arg0) {
     closure_0 = arg0;
-    return callback(function*() {
+    return callback(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -780,7 +856,11 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("diagnostic_audio_recording_enabled", enabled, store2.getAecDump());
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault(
+      "diagnostic_audio_recording_enabled",
+      enabled,
+      store2.getAecDump(),
+    );
     obj = dispatcherDefault;
     obj = { type: "MEDIA_ENGINE_SET_AEC_DUMP", enabled };
     obj.dispatch(obj);
@@ -837,7 +917,7 @@ obj = {
     obj = dispatcherDefault;
     obj = { type: "MEDIA_ENGINE_RESET_SETTINGS", overrides };
     return obj.dispatch(obj);
-  }
+  },
 };
 let result = require("set").fileFinishedImporting("actions/AudioActionCreators.tsx");
 

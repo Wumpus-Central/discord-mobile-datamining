@@ -41,7 +41,7 @@ function SubmitFeedbackScreen(onSubmit) {
   obj = { style: tmp.headerTitle, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["7bdzNo"]);
-  const items = [callback2(Text.Text, obj), , , ];
+  const items = [callback2(Text.Text, obj), , ,];
   obj1 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = getSystemLocale.intl;
   obj1[3] = intl2.string(getSystemLocale.t.Lbpk6m);
@@ -56,18 +56,26 @@ function SubmitFeedbackScreen(onSubmit) {
           return closure_1_1(closure_0);
         },
         trailing: null,
-        label: null
+        label: null,
       };
       obj = { active: closure_0 === value, style: closure_2.radioIndicator };
       obj[1] = closure_1_7(closure_1_0(closure_2[15]).RadioIndicator, obj);
-      obj = { style: closure_2.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: children.name };
+      obj = {
+        style: closure_2.formRow,
+        variant: "text-md/semibold",
+        color: "interactive-text-active",
+        children: children.name,
+      };
       obj[2] = closure_1_7(closure_1_0(closure_2[13]).Text, obj);
-      children = [closure_1_7(closure_1_0(closure_2[14]).FormRow, obj), arg1 < feedbackOptions.length - 1 && closure_1_7(closure_1_0(closure_2[14]).FormDivider, {})];
+      children = [
+        closure_1_7(closure_1_0(closure_2[14]).FormRow, obj),
+        arg1 < feedbackOptions.length - 1 && closure_1_7(closure_1_0(closure_2[14]).FormDivider, {}),
+      ];
       return closure_1_8(closure_1_4.Fragment, { children }, value);
-    })
+    }),
   });
   const obj3 = { style: items1, children: null };
-  items1 = [tmp.submitButtonContainer, ];
+  items1 = [tmp.submitButtonContainer];
   const obj2 = {
     style: tmp.formBody,
     children: feedbackOptions.map((children) => {
@@ -78,15 +86,23 @@ function SubmitFeedbackScreen(onSubmit) {
           return closure_1_1(closure_0);
         },
         trailing: null,
-        label: null
+        label: null,
       };
       obj = { active: closure_0 === value, style: closure_2.radioIndicator };
       obj[1] = closure_1_7(closure_1_0(closure_2[15]).RadioIndicator, obj);
-      obj = { style: closure_2.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: children.name };
+      obj = {
+        style: closure_2.formRow,
+        variant: "text-md/semibold",
+        color: "interactive-text-active",
+        children: children.name,
+      };
       obj[2] = closure_1_7(closure_1_0(closure_2[13]).Text, obj);
-      children = [closure_1_7(closure_1_0(closure_2[14]).FormRow, obj), arg1 < feedbackOptions.length - 1 && closure_1_7(closure_1_0(closure_2[14]).FormDivider, {})];
+      children = [
+        closure_1_7(closure_1_0(closure_2[14]).FormRow, obj),
+        arg1 < feedbackOptions.length - 1 && closure_1_7(closure_1_0(closure_2[14]).FormDivider, {}),
+      ];
       return closure_1_8(closure_1_4.Fragment, { children }, value);
-    })
+    }),
   };
   items1[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom + 16 };
   const obj5 = { size: "md", text: null, onPress: null };
@@ -100,21 +116,75 @@ function SubmitFeedbackScreen(onSubmit) {
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 const SUBMIT_FEEDBACK = "SUBMIT_FEEDBACK";
-createCacheKey = { container: null, header: null, headerTitle: null, headerSubtitle: null, closeButtonContainer: null, formBody: null, formRow: null, radioIndicator: null, submitButtonContainer: null };
-createCacheKey = { flex: 1, paddingHorizontal: 16, paddingVertical: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 };
+createCacheKey = {
+  container: null,
+  header: null,
+  headerTitle: null,
+  headerSubtitle: null,
+  closeButtonContainer: null,
+  formBody: null,
+  formRow: null,
+  radioIndicator: null,
+  submitButtonContainer: null,
+};
+createCacheKey = {
+  flex: 1,
+  paddingHorizontal: 16,
+  paddingVertical: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  flexDirection: "column",
+  height: "100%",
+  paddingTop: 8,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", justifyContent: "flex-end", paddingHorizontal: 16, paddingVertical: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey[1] = {
+  flexDirection: "row",
+  justifyContent: "flex-end",
+  paddingHorizontal: 16,
+  paddingVertical: 8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { textAlign: "center", marginTop: 8 };
 createCacheKey[4] = { marginVertical: 14 };
-let obj1 = { flexDirection: "row", justifyContent: "flex-end", paddingHorizontal: 16, paddingVertical: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[5] = { marginTop: 24, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj1 = {
+  flexDirection: "row",
+  justifyContent: "flex-end",
+  paddingHorizontal: 16,
+  paddingVertical: 8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
+createCacheKey[5] = {
+  marginTop: 24,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[6] = { paddingVertical: 2 };
 createCacheKey[7] = { marginRight: 0 };
-let obj2 = { marginTop: 24, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[8] = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj2 = {
+  marginTop: 24,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
+createCacheKey[8] = {
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  right: 0,
+  paddingHorizontal: 16,
+  paddingVertical: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj3 = {
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  right: 0,
+  paddingHorizontal: 16,
+  paddingVertical: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 const result = require("set").fileFinishedImporting("modules/guild_automod/native/AutomodSubmitFeedbackModal.tsx");
 
 export default function AutomodSubmitFeedbackModal(onCloseModal) {
@@ -133,10 +203,19 @@ export default function AutomodSubmitFeedbackModal(onCloseModal) {
     };
     function onSubmit() {
       let obj = callback(onChange[17]);
-      obj = { feedback_type: onChange, message_id: closure_1.messageId, content: closure_1.messageContent, decision_id: closure_1.decisionId };
+      obj = {
+        feedback_type: onChange,
+        message_id: closure_1.messageId,
+        content: closure_1.messageContent,
+        decision_id: closure_1.decisionId,
+      };
       obj.trackWithMetadata(closure_1_6.GUILD_AUTOMOD_FEEDBACK, obj);
       ({ messageId, channel } = closure_1);
-      callback(onChange[18]).executeAlertAction(messageId, channel, callback(onChange[19]).AutomodAlertActionType.SUBMIT_FEEDBACK);
+      callback(onChange[18]).executeAlertAction(
+        messageId,
+        channel,
+        callback(onChange[19]).AutomodAlertActionType.SUBMIT_FEEDBACK,
+      );
       const obj3 = callback(onChange[18]);
       callback(onChange[20]).presentFeedbackSent();
       callback();
@@ -153,9 +232,13 @@ export default function AutomodSubmitFeedbackModal(onCloseModal) {
         },
         render() {
           return closure_1_7(closure_1_12, { feedback: closure_1, onChange, onSubmit });
-        }
-      }
+        },
+      },
     };
   }, items);
-  return callback2(onCloseModal(first[21]).Navigator, { screens: memo, initialRouteName: SUBMIT_FEEDBACK, headerStatusBarHeight: automodDecision(first[12])().top });
-};
+  return callback2(onCloseModal(first[21]).Navigator, {
+    screens: memo,
+    initialRouteName: SUBMIT_FEEDBACK,
+    headerStatusBarHeight: automodDecision(first[12])().top,
+  });
+}

@@ -256,4 +256,4 @@ export default function getActivityHeader(session_id) {
     obj29 = unpackStageChannelParty;
   }
   return obj;
-};
+}

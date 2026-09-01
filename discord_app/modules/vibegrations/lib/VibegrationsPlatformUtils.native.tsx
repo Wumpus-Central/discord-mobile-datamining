@@ -38,13 +38,7 @@ export default {
   relayPreviewControl(closure_0, id, request, arg3) {
     return Promise.resolve({ status: "unavailable" });
   },
-  releasePreviewControl(closure_0) {
-
-  },
-  beginPreviewOperation(projectId) {
-
-  },
-  endPreviewOperation(projectId) {
-
-  }
+  releasePreviewControl(closure_0) {},
+  beginPreviewOperation(projectId) {},
+  endPreviewOperation(projectId) {},
 };

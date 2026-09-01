@@ -25,7 +25,9 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   const stateFromStores = obj.useStateFromStores(items, () => {
     let isPurchasingProductResult = null != isClaiming.isClaiming;
     if (!isPurchasingProductResult) {
-      isPurchasingProductResult = purchasingProduct.isPurchasingProduct(callback(table[6]).ProductIds.GENERIC_CONSUMABLE);
+      isPurchasingProductResult = purchasingProduct.isPurchasingProduct(
+        callback(table[6]).ProductIds.GENERIC_CONSUMABLE,
+      );
     }
     return isPurchasingProductResult;
   });
@@ -40,7 +42,17 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
     obj[3] = text;
     tmp4Result = tmp4(tmp(4474).Text, obj);
   }
-  obj = { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null };
+  obj = {
+    textElement: tmp4Result,
+    text: null,
+    accessibilityLabel: null,
+    variant: "primary",
+    size: null,
+    grow: true,
+    icon: null,
+    onPress: null,
+    disabled: null,
+  };
   let tmp6;
   if (!flag) {
     tmp6 = text;
@@ -60,5 +72,15 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
     callback2();
   };
   obj[8] = stateFromStores;
-  return jsx(CollapsingText.BaseTextButton, { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null });
+  return jsx(CollapsingText.BaseTextButton, {
+    textElement: tmp4Result,
+    text: null,
+    accessibilityLabel: null,
+    variant: "primary",
+    size: null,
+    grow: true,
+    icon: null,
+    onPress: null,
+    disabled: null,
+  });
 };

@@ -12,7 +12,8 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ updateRegistrationOptions: closure_8, useRegistrationUIStore: c9 } = useRegistrationUIStore);
-({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: unpackModuleId } = RegistrationTransitionActionTypes);
+({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: unpackModuleId } =
+  RegistrationTransitionActionTypes);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 createCacheKey = { globalName: null, button: null, page: null };
 createCacheKey = { marginTop: ThemesDefault.space.PX_24 };
@@ -20,7 +21,15 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[2] = { flex: 1 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let closure_15 = ["discord", "hypesquad", "snowsgiving", "system message", "system mesage", "sustem mesage", "sustem message"];
+let closure_15 = [
+  "discord",
+  "hypesquad",
+  "snowsgiving",
+  "system message",
+  "system mesage",
+  "sustem mesage",
+  "sustem message",
+];
 let closure_16 = ["everyone", "here"];
 let obj1 = { marginTop: ThemesDefault.space.PX_24 };
 let result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterDisplayName.tsx");
@@ -33,13 +42,16 @@ export default function RegisterDisplayName() {
   const tmp7 = context(callback.useState(false), 2);
   importDefault = tmp7[1];
   let tmp4 = importDefault(str[11])();
-  const tmp9 = context(callback.useState(() => {
-    str = state.getState().registrationOptions.globalName;
-    if (str == null) {
-      str = "";
-    }
-    return str;
-  }), 2);
+  const tmp9 = context(
+    callback.useState(() => {
+      str = state.getState().registrationOptions.globalName;
+      if (str == null) {
+        str = "";
+      }
+      return str;
+    }),
+    2,
+  );
   str = tmp9[0];
   callback = tmp9[1];
   const tmp10 = (function getGlobalNameError(str) {
@@ -64,7 +76,9 @@ export default function RegisterDisplayName() {
   context = callback.useContext(_require(str[13]).TrackRegistrationContext);
   const tmp8 = callback2((errors) => errors.errors);
   obj1 = _require(str[15]);
-  importDefault(str[14])(obj1.getPreviousRegistrationTransitionStep(_require(str[16]).AuthStates.REGISTER_DISPLAY_NAME));
+  importDefault(str[14])(
+    obj1.getPreviousRegistrationTransitionStep(_require(str[16]).AuthStates.REGISTER_DISPLAY_NAME),
+  );
   const tmp12 = importDefault(str[14]);
   importDefault(str[17])(_require(str[16]).AuthStates.REGISTER_DISPLAY_NAME);
   const items = [context];
@@ -78,7 +92,7 @@ export default function RegisterDisplayName() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -130,7 +144,11 @@ export default function RegisterDisplayName() {
                 }
               }
               obj3 = callback(str[15]);
-              const result = obj3.handleNextOrSubmitRegistration(callback(str[16]).AuthStates.REGISTER_DISPLAY_NAME, callback, closure_1_4);
+              const result = obj3.handleNextOrSubmitRegistration(
+                callback(str[16]).AuthStates.REGISTER_DISPLAY_NAME,
+                callback,
+                closure_1_4,
+              );
               c3 = 3;
               return { value: "HermesInternal", done: null };
             }
@@ -152,7 +170,7 @@ export default function RegisterDisplayName() {
     })();
   });
   const items1 = [navigation, context];
-  callback = callback.useCallback(function() {
+  callback = callback.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -173,7 +191,7 @@ export default function RegisterDisplayName() {
           return callback(null);
         };
         return closure_1_12(closure_1_0(closure_1_2[20]).HeaderActionButton, obj);
-      }
+      },
     });
   }, items2);
   let tmp21 = importDefault(str[21])("global_name", tmp8);
@@ -201,7 +219,7 @@ export default function RegisterDisplayName() {
     errorMessage: tmp21,
     label: null,
     description: null,
-    isClearable: true
+    isClearable: true,
   };
   let intl2 = tmp5(tmp3[10]).intl;
   obj1[7] = intl2.string(_require(str[10]).t["9AjdkD"]);
@@ -212,7 +230,7 @@ export default function RegisterDisplayName() {
   }
   obj1[8] = stringResult;
   obj[1] = closure_12(_require(str[23]).TextInput, obj1);
-  const items3 = [closure_12(View, obj), ];
+  const items3 = [closure_12(View, obj)];
   let obj2 = { style: tmp.button, children: null };
   let obj3 = { size: "lg", loading: tmp7[0], text: null, onPress: null, disabled: null };
   const intl4 = tmp5(tmp3[10]).intl;
@@ -237,4 +255,4 @@ export default function RegisterDisplayName() {
     tmp24Result = tmp24(tmp2(tmp3[25]), obj4);
   }
   return tmp24Result;
-};
+}

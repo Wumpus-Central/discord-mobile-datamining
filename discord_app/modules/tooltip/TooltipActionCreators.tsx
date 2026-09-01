@@ -17,5 +17,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "TOOLTIP_SHOW_ATTEMPT", tooltip: closure_0, ignoreMaxShownLimit: flag };
     obj.dispatch(obj);
-  }
+  },
 };

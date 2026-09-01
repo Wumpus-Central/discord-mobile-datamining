@@ -11,8 +11,24 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 require = arg1;
 noopAll;
 const HAPPENING_NOW_CARD_MARGIN_RIGHT = HAPPENING_NOW_PANELS_CONTAINER_PADDING.HAPPENING_NOW_CARD_MARGIN_RIGHT;
-({ HAPPENING_NOW_CARD_PADDING: c5, HAPPENING_NOW_CARD_HEIGHT: closure_6, HAPPENING_NOW_BADGE_SIZE } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
-({ HAPPENING_NOW_CARD_WIDTH_SMALL_MIN: closure_8, HAPPENING_NOW_CARD_WIDTH_SMALL_MAX: c9, HAPPENING_NOW_CARD_WIDTH_MEDIUM_MIN: c10, HAPPENING_NOW_CARD_WIDTH_MEDIUM_MAX: unpackModuleId, HAPPENING_NOW_CARD_WIDTH_LARGE_MIN: closure_12, HAPPENING_NOW_CARD_WIDTH_LARGE_MAX: map1, HAPPENING_NOW_CARD_PADDING_RIGHT: closure_14, HAPPENING_NOW_CARD_WIDTH_STRETCHY_MIN: closure_15, HAPPENING_NOW_CARD_WIDTH_STRETCHY_MAX: closure_16, HAPPENING_NOW_CARD_WIDTH_LARGE_PANELS_MAX: closure_17, HAPPENING_NOW_PANELS_CONTAINER_PADDING } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
+({
+  HAPPENING_NOW_CARD_PADDING: c5,
+  HAPPENING_NOW_CARD_HEIGHT: closure_6,
+  HAPPENING_NOW_BADGE_SIZE,
+} = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
+({
+  HAPPENING_NOW_CARD_WIDTH_SMALL_MIN: closure_8,
+  HAPPENING_NOW_CARD_WIDTH_SMALL_MAX: c9,
+  HAPPENING_NOW_CARD_WIDTH_MEDIUM_MIN: c10,
+  HAPPENING_NOW_CARD_WIDTH_MEDIUM_MAX: unpackModuleId,
+  HAPPENING_NOW_CARD_WIDTH_LARGE_MIN: closure_12,
+  HAPPENING_NOW_CARD_WIDTH_LARGE_MAX: map1,
+  HAPPENING_NOW_CARD_PADDING_RIGHT: closure_14,
+  HAPPENING_NOW_CARD_WIDTH_STRETCHY_MIN: closure_15,
+  HAPPENING_NOW_CARD_WIDTH_STRETCHY_MAX: closure_16,
+  HAPPENING_NOW_CARD_WIDTH_LARGE_PANELS_MAX: closure_17,
+  HAPPENING_NOW_PANELS_CONTAINER_PADDING,
+} = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 let closure_20 = HAPPENING_NOW_PANELS_CONTAINER_PADDING + HAPPENING_NOW_CARD_MARGIN_RIGHT;
 let closure_21 = createCacheKey.createStyles((arg0, arg1, arg2) => {
@@ -55,14 +71,29 @@ let closure_21 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   }
   const obj3 = { card: null, cardBadgeWrapper: null, cardBadge: null };
   const merged = Object.assign(obj);
-  obj3[0] = { padding: closure_5, paddingRight: closure_14, marginRight: HAPPENING_NOW_CARD_MARGIN_RIGHT, height: closure_6, flexDirection: "row", alignItems: "center" };
+  obj3[0] = {
+    padding: closure_5,
+    paddingRight: closure_14,
+    marginRight: HAPPENING_NOW_CARD_MARGIN_RIGHT,
+    height: closure_6,
+    flexDirection: "row",
+    alignItems: "center",
+  };
   obj3[1] = { position: "absolute", top: 0, right: 0 };
-  obj3[2] = { display: "flex", alignItems: "center", justifyContent: "center", width: HAPPENING_NOW_BADGE_SIZE, height: HAPPENING_NOW_BADGE_SIZE };
+  obj3[2] = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: HAPPENING_NOW_BADGE_SIZE,
+    height: HAPPENING_NOW_BADGE_SIZE,
+  };
   return obj3;
 });
 createCacheKey = { marginRight: HAPPENING_NOW_BADGE_SIZE + 4 };
 let closure_22 = createCacheKey.createStyles({ cardHeaderMargin: createCacheKey });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCard.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCard.tsx",
+);
 
 export default function HappeningNowCard(onPress) {
   let flag = onPress.panelVariant;
@@ -75,7 +106,18 @@ export default function HappeningNowCard(onPress) {
   const tmp3 = useIsWindowLargeDefault();
   const tmp4 = closure_21;
   ({ accessibilityLabel, accessibilityHint } = onPress);
-  let obj = { variant: "secondary", style: items, onPress: onPress.onPress, border: "faint", shadow: null, onLongPress: null, disabled: null, accessibilityLabel: null, accessibilityHint: null, children: null };
+  let obj = {
+    variant: "secondary",
+    style: items,
+    onPress: onPress.onPress,
+    border: "faint",
+    shadow: null,
+    onLongPress: null,
+    disabled: null,
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    children: null,
+  };
   items = [tmp4Result.card, onPress.style];
   let str;
   if (null == tmp6) {
@@ -86,7 +128,7 @@ export default function HappeningNowCard(onPress) {
   obj[6] = null == onPress.onPress;
   obj[7] = accessibilityLabel;
   obj[8] = accessibilityHint;
-  const items1 = [onPress.children, ];
+  const items1 = [onPress.children];
   let tmp8 = null;
   if (null != IconComponent) {
     obj = { style: null, children: null };
@@ -100,7 +142,7 @@ export default function HappeningNowCard(onPress) {
   items1[1] = tmp8;
   obj[9] = items1;
   return closure_19(PressableCard.Card, obj);
-};
+}
 export const HappeningNowCardHeader = function HappeningNowCardHeader(displayNameFont) {
   displayNameFont = displayNameFont.displayNameFont;
   ({ children, noMargin } = displayNameFont);
@@ -109,14 +151,20 @@ export const HappeningNowCardHeader = function HappeningNowCardHeader(displayNam
   if (!noMargin) {
     cardHeaderMargin = tmp2.cardHeaderMargin;
   }
-  const items = [cardHeaderMargin, ];
+  const items = [cardHeaderMargin];
   let tmp5 = null;
   if (null != displayNameFont) {
     let obj = { fontFamily: null };
     obj[0] = displayNameFont;
     tmp5 = obj;
   }
-  obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", lineClamp: 1, maxFontSizeMultiplier: 2, style: items };
+  obj = {
+    variant: "text-md/medium",
+    color: "mobile-text-heading-primary",
+    lineClamp: 1,
+    maxFontSizeMultiplier: 2,
+    style: items,
+  };
   items[1] = tmp5;
   const merged1 = Object.assign(merged);
   obj.children = children;

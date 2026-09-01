@@ -63,7 +63,12 @@ export default function AdvancedInstantInvite(maxAge) {
       obj[0] = closure_11;
       obj[1] = roleIds;
       obj[2] = onChangeRoleIds;
-      obj.openLazy(maxUses(onChangeMaxAge[13])(onChangeMaxAge[12], onChangeMaxAge.paths), "SelectInviteRolesActionSheet", obj, "stack");
+      obj.openLazy(
+        maxUses(onChangeMaxAge[13])(onChangeMaxAge[12], onChangeMaxAge.paths),
+        "SelectInviteRolesActionSheet",
+        obj,
+        "stack",
+      );
     }
   }, items);
   const items2 = [maxUses, maxUsesOptions, onChangeMaxUses];
@@ -140,7 +145,7 @@ export default function AdvancedInstantInvite(maxAge) {
   }
   obj5[2] = name;
   obj4[2] = callback(maxUses(onChangeMaxAge[21]).TableRow, obj5);
-  const items5 = [callback(maxUses(onChangeMaxAge[20]).TableRowGroup, obj4), , , , ];
+  const items5 = [callback(maxUses(onChangeMaxAge[20]).TableRowGroup, obj4), , , ,];
   const obj6 = { title: null, hasIcons: false, children: null };
   const intl3 = tmp11(tmp12[15]).intl;
   obj6[0] = intl3.string(maxUses(onChangeMaxAge[15]).t["4QuV7G"]);
@@ -156,7 +161,7 @@ export default function AdvancedInstantInvite(maxAge) {
   obj7[1] = tmp32Result;
   obj7[3] = callback1;
   obj7[4] = null == onChangeMaxAge;
-  const items6 = [callback(maxUses(onChangeMaxAge[21]).TableRow, obj7), ];
+  const items6 = [callback(maxUses(onChangeMaxAge[21]).TableRow, obj7)];
   const obj9 = { label: null, trailing: null, arrow: true, onPress: null, disabled: null };
   const intl5 = tmp11(tmp12[15]).intl;
   obj9[0] = intl5.string(maxUses(onChangeMaxAge[15]).t["+3vH1h"]);
@@ -211,7 +216,13 @@ export default function AdvancedInstantInvite(maxAge) {
     obj16[0] = intl10.string(tmp11(tmp12[15]).t["1i1bUl"]);
     obj16[1] = tmp11(tmp12[23]).hasFlag(flags, tmp11(tmp12[24]).GuildInviteFlags.IS_APPLICATION_BYPASS);
     obj16[2] = function onValueChange(arg0) {
-      return callback(maxUses(onChangeMaxAge[23]).setFlag(flags, maxUses(onChangeMaxAge[24]).GuildInviteFlags.IS_APPLICATION_BYPASS, arg0));
+      return callback(
+        maxUses(onChangeMaxAge[23]).setFlag(
+          flags,
+          maxUses(onChangeMaxAge[24]).GuildInviteFlags.IS_APPLICATION_BYPASS,
+          arg0,
+        ),
+      );
     };
     obj15[2] = tmp32(tmp11(tmp12[22]).TableSwitchRow, obj16);
     tmp32Result3 = tmp32(tmp11(tmp12[20]).TableRowGroup, obj15);
@@ -221,4 +232,4 @@ export default function AdvancedInstantInvite(maxAge) {
   obj3[1] = items5;
   obj2[1] = roleIds(maxUses(onChangeMaxAge[18]).Stack, obj3);
   return callback(maxUses, obj2);
-};
+}

@@ -7,11 +7,14 @@ import identity from "../../../../_runtime/00700_identity.js";
 require = arg1;
 function usePriceTiers(guildId) {
   const _require = guildId;
-  let tmp = callback(withEqualityFn((arg0) => {
-    const items = [, , ];
-    ({ priceTiers: arr[0], priceTierState: arr[1], loadPriceTiers: arr[2] } = arg0);
-    return items;
-  }, require("../../../../_runtime/04106_isIterable.js").shallow), 3);
+  let tmp = callback(
+    withEqualityFn((arg0) => {
+      const items = [, ,];
+      ({ priceTiers: arr[0], priceTierState: arr[1], loadPriceTiers: arr[2] } = arg0);
+      return items;
+    }, require("../../../../_runtime/04106_isIterable.js").shallow),
+    3,
+  );
   const first = tmp[0];
   closure_2 = tmp3;
   dependencyMap = tmp[2];
@@ -36,7 +39,7 @@ function usePriceTiers(guildId) {
         callback(arg0);
       }
     },
-    guildId
+    guildId,
   };
 }
 let obj = { IDLE: 0, [0]: "IDLE", LOADING: 1, [1]: "LOADING", ERROR: 2, [2]: "ERROR" };
@@ -71,7 +74,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
   obj.priceTierState = obj.IDLE;
   obj.loadPriceTiers = function loadPriceTiers(arg0) {
     closure_0 = arg0;
-    return closure_1_5(function*() {
+    return closure_1_5(function* () {
       closure_1 = tmp3;
       c2 = 1;
       callback(closure_2_3[2]).batchUpdates(() => callback({ priceTierState: closure_1_6.LOADING }));
@@ -108,7 +111,7 @@ export const resetImperatively = function resetImperatively() {
   withEqualityFn.getState().reset();
 };
 export const useCurrentTierEditScene = function useCurrentTierEditScene() {
-  const items = [, ];
+  const items = [,];
   ({ currentScene: arr[0], setScene: arr[1] } = withEqualityFn());
   return items;
 };
@@ -134,21 +137,21 @@ export const usePriceTiersAvailableInGuild = function usePriceTiersAvailableInGu
 };
 export const useGroupCoverState = function useGroupCoverState() {
   return withEqualityFn((arg0) => {
-    const items = [, ];
+    const items = [,];
     ({ groupCover: arr[0], setGroupCover: arr[1] } = arg0);
     return items;
   }, isIterable.shallow);
 };
 export const useGroupDescriptionState = function useGroupDescriptionState() {
   return withEqualityFn((arg0) => {
-    const items = [, ];
+    const items = [,];
     ({ groupDescription: arr[0], setGroupDescription: arr[1] } = arg0);
     return items;
   }, isIterable.shallow);
 };
 export const useGroupIsFullGateState = function useGroupIsFullGateState() {
   return withEqualityFn((arg0) => {
-    const items = [, ];
+    const items = [,];
     ({ groupIsFullGate: arr[0], setGroupIsFullGate: arr[1] } = arg0);
     return items;
   }, isIterable.shallow);

@@ -60,7 +60,12 @@ function newMessage(assistant, content, arg2) {
   return obj;
 }
 function newMessageFromHistory(ts) {
-  const tmp = newMessage(ts.role, ts.content, { ts: ts.ts, id: ts.id, userId: ts.user_id, attachments: ts.attachments });
+  const tmp = newMessage(ts.role, ts.content, {
+    ts: ts.ts,
+    id: ts.id,
+    userId: ts.user_id,
+    attachments: ts.attachments,
+  });
   if (null != ts.kind) {
     tmp.kind = ts.kind;
   }
@@ -131,7 +136,8 @@ function patchTurn(projectId, turnId, arg2) {
           let tmp3 = value[diff1];
           let tmp4 = diff1;
           if ("assistant" === tmp3.role) {
-            let someResult = true === tmp3.finished || true === tmp3.continued || "" !== tmp3.content || null != tmp3.proposal;
+            let someResult =
+              true === tmp3.finished || true === tmp3.continued || "" !== tmp3.content || null != tmp3.proposal;
             if (!someResult) {
               let steps = tmp3.steps;
               someResult = steps.some((kind) => set.has(kind.kind));
@@ -201,7 +207,8 @@ function hasOpenTurn(map) {
           if ("side_reply" !== tmp.kind) {
             let flag = flag2;
             if (!flag2) {
-              let someResult = true === tmp.finished || true === tmp.continued || "" !== tmp.content || null != tmp.proposal;
+              let someResult =
+                true === tmp.finished || true === tmp.continued || "" !== tmp.content || null != tmp.proposal;
               if (!someResult) {
                 let steps = tmp.steps;
                 someResult = steps.some((kind) => set.has(kind.kind));
@@ -213,7 +220,8 @@ function hasOpenTurn(map) {
             }
             tmp4 = flag;
             if (null != tmp.turn_id) {
-              let someResult1 = true === tmp.finished || true === tmp.continued || "" !== tmp.content || null != tmp.proposal;
+              let someResult1 =
+                true === tmp.finished || true === tmp.continued || "" !== tmp.content || null != tmp.proposal;
               if (!someResult1) {
                 let steps2 = tmp.steps;
                 someResult1 = steps2.some((kind) => set.has(kind.kind));
@@ -583,8 +591,7 @@ let c26 = 0;
 let closure_27 = [];
 let c28 = 0;
 const Store = initializeDefault.Store;
-class VibegrationsChatStore extends Store {
-}
+class VibegrationsChatStore extends Store {}
 const prototype = VibegrationsChatStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_8, closure_9, closure_10, closure_11, closure_12, closure_13);
@@ -727,22 +734,30 @@ const vibegrationsChatStore = new VibegrationsChatStore(dispatcherDefault, {
       }
       const mapped = entries.map(newMessageFromHistory);
       const _Set = Set;
-      set = new Set(items.flatMap((id) => {
-        if (null == id.id) {
-          let items = [];
-        } else {
-          items = [id.id];
-        }
-        return items;
-      }));
+      set = new Set(
+        items.flatMap((id) => {
+          if (null == id.id) {
+            let items = [];
+          } else {
+            items = [id.id];
+          }
+          return items;
+        }),
+      );
       items = [];
-      HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(mapped.filter((id) => {
-        let tmp = null == id.id;
-        if (!tmp) {
-          tmp = !set.has(id.id);
-        }
-        return tmp;
-      }), 0));
+      HermesBuiltin.arraySpread(
+        items,
+        HermesBuiltin.arraySpread(
+          mapped.filter((id) => {
+            let tmp = null == id.id;
+            if (!tmp) {
+              tmp = !set.has(id.id);
+            }
+            return tmp;
+          }),
+          0,
+        ),
+      );
       const result1 = map.set(projectId, items);
       const obj = map;
     }
@@ -832,7 +847,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(dispatcherDefault, {
         }
         if (-1 !== num4) {
           if (num4 <= findIndexResult) {
-            const items1 = [, ];
+            const items1 = [,];
             const arraySpreadResult1 = HermesBuiltin.arraySpread(arr3.slice(0, num4), 0);
             obj = {};
             const merged1 = Object.assign(arr3[num4]);
@@ -846,7 +861,11 @@ const vibegrationsChatStore = new VibegrationsChatStore(dispatcherDefault, {
             items1[arraySpreadResult1] = obj;
             obj1 = { turnId: null };
             obj1[0] = activeTurnId;
-            items1[HermesBuiltin.arraySpread(arr3.slice(num4 + 1), arraySpreadResult1 + 1)] = newMessage("assistant", "", obj1);
+            items1[HermesBuiltin.arraySpread(arr3.slice(num4 + 1), arraySpreadResult1 + 1)] = newMessage(
+              "assistant",
+              "",
+              obj1,
+            );
             const result = obj.set(projectId, items1);
             recordThinkingTransition(projectId);
           }
@@ -878,7 +897,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(dispatcherDefault, {
       const findIndexResult = value.findIndex((id) => id.id === inReplyTo);
       if (-1 !== findIndexResult) {
         const disposition = tmp7.disposition;
-        const items = [, ];
+        const items = [,];
         let arraySpreadResult = HermesBuiltin.arraySpread(value.slice(0, findIndexResult), 0);
         items[arraySpreadResult] = callback2(value[findIndexResult], closure_3);
         const sum = arraySpreadResult + 1;
@@ -913,14 +932,17 @@ const vibegrationsChatStore = new VibegrationsChatStore(dispatcherDefault, {
       someResult = value.some((disposition) => null != disposition.disposition);
     }
     if (someResult) {
-      const result = obj.set(projectId, value.map((disposition) => {
-        if (null == disposition.disposition) {
-          return disposition;
-        } else {
-          disposition = disposition.disposition;
-          return callback(disposition, closure_4);
-        }
-      }));
+      const result = obj.set(
+        projectId,
+        value.map((disposition) => {
+          if (null == disposition.disposition) {
+            return disposition;
+          } else {
+            disposition = disposition.disposition;
+            return callback(disposition, closure_4);
+          }
+        }),
+      );
     }
     patchTurn(projectId, turnId.turnId, (content) => {
       const obj = {};
@@ -1056,60 +1078,65 @@ const vibegrationsChatStore = new VibegrationsChatStore(dispatcherDefault, {
     const deleteResult1 = map4.delete(projectId);
     const value = map.get(projectId);
     if (null != value) {
-      if (value.some((role) => {
-        let tmp = "assistant" === role.role;
-        if (tmp) {
-          let someResult = true === role.finished || true === role.continued;
-          if (!someResult) {
-            someResult = "" !== role.content;
-          }
-          if (!someResult) {
-            someResult = null != role.proposal;
-          }
-          if (!someResult) {
-            const steps = role.steps;
-            someResult = steps.some((kind) => set.has(kind.kind));
-          }
-          tmp = !someResult;
-        }
-        return tmp;
-      })) {
-        const result = map.set(projectId, value.map((disposition) => {
-          if (null != disposition.disposition) {
-            disposition = disposition.disposition;
-            return callback3(disposition, closure_5);
-          } else {
-            let tmp2 = disposition;
-            if ("assistant" === disposition.role) {
-              let someResult = true === disposition.finished || true === disposition.continued;
-              if (!someResult) {
-                someResult = "" !== disposition.content;
-              }
-              if (!someResult) {
-                someResult = null != disposition.proposal;
-              }
-              if (!someResult) {
-                const steps = disposition.steps;
-                someResult = steps.some((kind) => set.has(kind.kind));
-              }
-              tmp2 = disposition;
-              if (!someResult) {
-                let obj = {};
-                const merged = Object.assign(disposition);
-                obj.provisionalTodo = undefined;
-                const items = [];
-                obj = { type: "step", kind: "terminal_error", message: null };
-                const intl = callback(1236).intl;
-                obj[2] = intl.string(callback2(3501)["wjWm+/"]);
-                items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj;
-                obj.steps = items;
-                tmp2 = obj;
-                const arraySpreadResult = HermesBuiltin.arraySpread(disposition.steps, 0);
-              }
+      if (
+        value.some((role) => {
+          let tmp = "assistant" === role.role;
+          if (tmp) {
+            let someResult = true === role.finished || true === role.continued;
+            if (!someResult) {
+              someResult = "" !== role.content;
             }
-            return tmp2;
+            if (!someResult) {
+              someResult = null != role.proposal;
+            }
+            if (!someResult) {
+              const steps = role.steps;
+              someResult = steps.some((kind) => set.has(kind.kind));
+            }
+            tmp = !someResult;
           }
-        }));
+          return tmp;
+        })
+      ) {
+        const result = map.set(
+          projectId,
+          value.map((disposition) => {
+            if (null != disposition.disposition) {
+              disposition = disposition.disposition;
+              return callback3(disposition, closure_5);
+            } else {
+              let tmp2 = disposition;
+              if ("assistant" === disposition.role) {
+                let someResult = true === disposition.finished || true === disposition.continued;
+                if (!someResult) {
+                  someResult = "" !== disposition.content;
+                }
+                if (!someResult) {
+                  someResult = null != disposition.proposal;
+                }
+                if (!someResult) {
+                  const steps = disposition.steps;
+                  someResult = steps.some((kind) => set.has(kind.kind));
+                }
+                tmp2 = disposition;
+                if (!someResult) {
+                  let obj = {};
+                  const merged = Object.assign(disposition);
+                  obj.provisionalTodo = undefined;
+                  const items = [];
+                  obj = { type: "step", kind: "terminal_error", message: null };
+                  const intl = callback(1236).intl;
+                  obj[2] = intl.string(callback2(3501)["wjWm+/"]);
+                  items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj;
+                  obj.steps = items;
+                  tmp2 = obj;
+                  const arraySpreadResult = HermesBuiltin.arraySpread(disposition.steps, 0);
+                }
+              }
+              return tmp2;
+            }
+          }),
+        );
         recordThinkingTransition(projectId);
       }
     }
@@ -1174,7 +1201,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(dispatcherDefault, {
       continue;
     }
     return flag ? undefined : false;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/vibegrations/stores/VibegrationsChatStore.tsx");
 

@@ -5,7 +5,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx",
+);
 
 export default function InAppReportsUpsellsTableRow(disabled) {
   ({ title, disabledTitle, variant } = disabled);
@@ -31,5 +33,12 @@ export default function InAppReportsUpsellsTableRow(disabled) {
   obj[3] = icon;
   obj[4] = disabled;
   obj[5] = variant;
-  return jsx(TableRowInner.TableRow, { label: tmp2, subLabel: null, onPress: null, icon: null, disabled: null, variant: null });
-};
+  return jsx(TableRowInner.TableRow, {
+    label: tmp2,
+    subLabel: null,
+    onPress: null,
+    icon: null,
+    disabled: null,
+    variant: null,
+  });
+}

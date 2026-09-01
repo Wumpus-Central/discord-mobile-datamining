@@ -12,4 +12,4 @@ export default function isWatchTogetherApplication(arg0) {
     hasItem = items.includes(arg0);
   }
   return hasItem;
-};
+}

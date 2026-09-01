@@ -34,7 +34,7 @@ export const shouldShareApplicationActivity = function shouldShareApplicationAct
 export const calculateProgressPercentage = function calculateProgressPercentage(arg0, arg1) {
   let num = 100;
   if (0 !== arg1) {
-    num = arg0 / arg1 * 100;
+    num = (arg0 / arg1) * 100;
   }
   return num;
 };
@@ -67,31 +67,34 @@ export const convertToTransitionState = function convertToTransitionState(type) 
   return tmp;
 };
 export const getCombinedProgress = function getCombinedProgress(arr) {
-  return arr.reduce((total, type) => {
-    let tmp = null;
-    if (null != type) {
-      if (type.type !== constants.INSTALLING) {
-        if (type.type !== tmp2.UPDATING) {
-          let tmp3 = null;
+  return arr.reduce(
+    (total, type) => {
+      let tmp = null;
+      if (null != type) {
+        if (type.type !== constants.INSTALLING) {
+          if (type.type !== tmp2.UPDATING) {
+            let tmp3 = null;
+          }
+          tmp = tmp3;
         }
-        tmp = tmp3;
+        tmp3 = type;
       }
-      tmp3 = type;
-    }
-    let tmp4 = total;
-    if (null != tmp) {
-      tmp4 = total;
-      if (type.type !== constants.UP_TO_DATE) {
-        const obj = { total: null, progress: null };
-        const _Number = Number;
-        obj[0] = total.total + Number(tmp.total);
-        const _Number2 = Number;
-        obj[1] = total.progress + Number(tmp.progress);
-        tmp4 = obj;
+      let tmp4 = total;
+      if (null != tmp) {
+        tmp4 = total;
+        if (type.type !== constants.UP_TO_DATE) {
+          const obj = { total: null, progress: null };
+          const _Number = Number;
+          obj[0] = total.total + Number(tmp.total);
+          const _Number2 = Number;
+          obj[1] = total.progress + Number(tmp.progress);
+          tmp4 = obj;
+        }
       }
-    }
-    return tmp4;
-  }, { total: 0, progress: 0 });
+      return tmp4;
+    },
+    { total: 0, progress: 0 },
+  );
 };
 export const isUserEntitledToLibraryApplication = function isUserEntitledToLibraryApplication(libraryApplication) {
   let isEntitledResult = libraryApplication.isDiscordApplication();

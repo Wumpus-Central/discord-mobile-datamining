@@ -19,14 +19,32 @@ function LinkButton(arg0) {
       callback(698).track(constants.CHANGE_LOG_CTA_CLICKED, obj);
     },
     style: tmp.link,
-    children: callback(Text.Text, obj)
+    children: callback(Text.Text, obj),
   };
   obj = { variant: "text-md/normal", color: "text-link", lineClamp, style: tmp.link, children: items };
   items = ["\n", text];
   return callback2(Pressable, obj);
 }
 ({ jsxs: error, jsx: closure_8, Fragment: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 }, span: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, display: "flex", paddingBottom: 2 }, link: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, bottom: -4, position: "relative" } });
+let closure_10 = createCacheKey.createStyles({
+  text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 },
+  span: {
+    alignSelf: "stretch",
+    textAlignVertical: "bottom",
+    width: "100%",
+    flexGrow: 1,
+    display: "flex",
+    paddingBottom: 2,
+  },
+  link: {
+    alignSelf: "stretch",
+    textAlignVertical: "bottom",
+    width: "100%",
+    flexGrow: 1,
+    bottom: -4,
+    position: "relative",
+  },
+});
 const result = require("set").fileFinishedImporting("modules/profile_customization/native/BioText.tsx");
 
 export default function BioText(lineClamp) {
@@ -66,7 +84,7 @@ export default function BioText(lineClamp) {
     const intl = tmp12(tmp6[12]).intl;
     const items1 = [intl.string(bio(tmp6[12]).t.OJmNR9), "\n"];
     obj[4] = items1;
-    const items2 = [closure_7(bio(tmp6[8]).Text, obj, "changelog-bio"), ];
+    const items2 = [closure_7(bio(tmp6[8]).Text, obj, "changelog-bio")];
     obj = { variant: null, color: null, lineClamp: null, style: null, children: null };
     obj[0] = textVariant;
     if (tmp3) {
@@ -107,4 +125,4 @@ export default function BioText(lineClamp) {
     tmp8Result = null;
   }
   return tmp8Result;
-};
+}

@@ -9,9 +9,14 @@ import closure_4 from "../../../../../stores/ChannelStore.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
-createCacheKey = { iconTintColor: ThemesDefault.colors.ICON_STRONG, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
+createCacheKey = {
+  iconTintColor: ThemesDefault.colors.ICON_STRONG,
+  iconDividerColor: ThemesDefault.colors.ICON_STRONG,
+};
 let closure_5 = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx",
+);
 
 export const createPremiumGroupInviteSystemMessage = function createPremiumGroupInviteSystemMessage(message) {
   ({ message, theme } = message);

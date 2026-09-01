@@ -36,14 +36,22 @@ function ForLaterPage(type) {
     tmp9 = arr.length > 0;
   }
   const items = [closure_6];
-  const stateFromStores = first(589).useStateFromStores(items, () => overdueMessageReminderCount.getOverdueMessageReminderCount());
+  const stateFromStores = first(589).useStateFromStores(items, () =>
+    overdueMessageReminderCount.getOverdueMessageReminderCount(),
+  );
   let tmp2Result = tmp2(5953);
   const analyticsLocations = tmp2Result(tmp2(5973).FOR_LATER_POPOUT).analyticsLocations;
   obj = { type: null, name: null, properties: null };
   tmp2Result = tmp2(8892);
   obj[0] = first(503).ImpressionTypes.MODAL;
   obj[1] = first(503).ImpressionNames.FOR_LATER_LIST_VIEWED;
-  obj = { tab_type: type, total_count: arr.length, overdue_count: stateFromStores, nitro_upsell_bar_shown: null, nitro_roadblock_upsell_bar_shown: null };
+  obj = {
+    tab_type: type,
+    total_count: arr.length,
+    overdue_count: stateFromStores,
+    nitro_upsell_bar_shown: null,
+    nitro_roadblock_upsell_bar_shown: null,
+  };
   let tmp13 = tmp9;
   if (tmp9) {
     tmp13 = !tmp8;
@@ -87,7 +95,7 @@ function ForLaterPage(type) {
     obj5[3] = keyExtractor;
     obj5[4] = type.handleScroll;
     obj4[1] = callback2(tmp4(8105).FlashList, obj5);
-    const items2 = [callback2(View, obj4), ];
+    const items2 = [callback2(View, obj4)];
     let tmp25Result = null;
     if (tmp9) {
       const obj6 = { isReminder: null, isAtLimit: null };
@@ -114,7 +122,9 @@ obj[1] = createCacheKey;
 obj[2] = { paddingHorizontal: 16, paddingVertical: 8 };
 obj[3] = { flex: 1 };
 let closure_10 = createCacheKey.createStyles(obj);
-let closure_11 = { code: "function ForLaterScreenTsx1(){const{borderOpacity}=this.__closure;return{opacity:borderOpacity.get()};}" };
+let closure_11 = {
+  code: "function ForLaterScreenTsx1(){const{borderOpacity}=this.__closure;return{opacity:borderOpacity.get()};}",
+};
 const memoResult = importAllResult.memo((type) => {
   let sharedValue;
   const tmp = callback4();
@@ -137,7 +147,10 @@ const memoResult = importAllResult.memo((type) => {
   obj = { style: tmp.container, children: null };
   const animatedStyle = sharedValue(4217).useAnimatedStyle(fn);
   const items1 = [tmp.headerBorder, animatedStyle];
-  const items2 = [callback2(_modDef4217.View, { style: items1 }), callback2(ForLaterPage, { type: type.type, handleScroll: callback })];
+  const items2 = [
+    callback2(_modDef4217.View, { style: items1 }),
+    callback2(ForLaterPage, { type: type.type, handleScroll: callback }),
+  ];
   obj[1] = items2;
   return callback3(View, obj);
 });

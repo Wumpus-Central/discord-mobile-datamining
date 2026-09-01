@@ -41,19 +41,19 @@ Object.defineProperty(prototype, "fails", {
   get: function fails() {
     return this._fails;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "current", {
   get: function current(AUTO_DISMISS, current, arg2) {
     return this._current;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "pending", {
   get: function pending() {
     return null != this._timeoutId;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["succeed"] = function succeed() {
   this.cancel();

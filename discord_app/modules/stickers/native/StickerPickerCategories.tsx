@@ -16,8 +16,27 @@ let c4 = importAllResult;
 const EXPRESSION_FOOTER_HEIGHT = ME.EXPRESSION_FOOTER_HEIGHT;
 const NODE_SIZE = ME.NODE_SIZE;
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-obj = { list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, item: { height: EXPRESSION_FOOTER_HEIGHT, width: EXPRESSION_FOOTER_HEIGHT, justifyContent: "center", alignItems: "center" }, itemInner: obj, fadedItem: { opacity: 0.5 }, activeItem: null, guildIcon: null, guildItemPlaceholder: null };
-obj = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
+obj = {
+  list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
+  item: {
+    height: EXPRESSION_FOOTER_HEIGHT,
+    width: EXPRESSION_FOOTER_HEIGHT,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  itemInner: obj,
+  fadedItem: { opacity: 0.5 },
+  activeItem: null,
+  guildIcon: null,
+  guildItemPlaceholder: null,
+};
+obj = {
+  justifyContent: "center",
+  alignItems: "center",
+  height: NODE_SIZE,
+  width: NODE_SIZE,
+  borderRadius: NODE_SIZE / 2,
+};
 createCacheKey = { opacity: 1, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 obj[4] = createCacheKey;
 obj[5] = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 };
@@ -65,14 +84,23 @@ let closure_17 = importAllResult.memo((category) => {
     }
     return tmp12Result;
   }, items);
-  obj = { androidRippleConfig: closure_10, accessibilityRole: "tab", accessibilityLabel: category.name, accessibilityState: { selected: isActive }, disabled: 0 === category.stickers.length, onPress: null, style: null, children: null };
+  obj = {
+    androidRippleConfig: closure_10,
+    accessibilityRole: "tab",
+    accessibilityLabel: category.name,
+    accessibilityState: { selected: isActive },
+    disabled: 0 === category.stickers.length,
+    onPress: null,
+    style: null,
+    children: null,
+  };
   let tmp10;
   if (category.stickers.length > 0) {
     tmp10 = callback;
   }
   obj[5] = tmp10;
   obj[6] = tmp.item;
-  const items1 = [tmp.itemInner, ];
+  const items1 = [tmp.itemInner];
   obj = { style: items1, children: null };
   items1[1] = isActive ? tmp.activeItem : tmp.fadedItem;
   if (null != category.icon) {
@@ -186,7 +214,10 @@ export default function _default(categories) {
   const items4 = [callback];
   const items5 = [categories, tmp8];
   const callback1 = first.useCallback((nativeEvent) => {
-    closure_2.current = { start: nativeEvent.nativeEvent.contentOffset.x, end: nativeEvent.nativeEvent.contentOffset.x + nativeEvent.nativeEvent.layoutMeasurement.width };
+    closure_2.current = {
+      start: nativeEvent.nativeEvent.contentOffset.x,
+      end: nativeEvent.nativeEvent.contentOffset.x + nativeEvent.nativeEvent.layoutMeasurement.width,
+    };
     callback();
   }, items4);
   callback2 = first.useCallback((arg0) => {
@@ -210,13 +241,37 @@ export default function _default(categories) {
       callback();
     }
   }, items7);
-  const callback5 = first.useCallback((arg0, index) => closure_1_14(closure_1_17, { category: categories[index], index, isActive: index === categoryIndex, onPressCategory: callback2 }), items8);
+  const callback5 = first.useCallback(
+    (arg0, index) =>
+      closure_1_14(closure_1_17, {
+        category: categories[index],
+        index,
+        isActive: index === categoryIndex,
+        onPressCategory: callback2,
+      }),
+    items8,
+  );
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
   const tmp19 = categoryIndex(9206)();
   const tmp20 = closure_15;
-  obj = { estimatedListSize: "windowSize", horizontal: true, itemSize: EXPRESSION_FOOTER_HEIGHT, keyboardShouldPersistTaps: "always", listId: ExpressionPickerViewType.STICKER, onLayout: callback4, onScroll: callback1, placeholderConfig: tmp19, ref, scrollReporting: "callbacks", sections: memo, renderItem: callback5, showsHorizontalScrollIndicator: false, style: tmp.list };
-  const items9 = [callback(categoryIndex(7778), obj), ];
+  obj = {
+    estimatedListSize: "windowSize",
+    horizontal: true,
+    itemSize: EXPRESSION_FOOTER_HEIGHT,
+    keyboardShouldPersistTaps: "always",
+    listId: ExpressionPickerViewType.STICKER,
+    onLayout: callback4,
+    onScroll: callback1,
+    placeholderConfig: tmp19,
+    ref,
+    scrollReporting: "callbacks",
+    sections: memo,
+    renderItem: callback5,
+    showsHorizontalScrollIndicator: false,
+    style: tmp.list,
+  };
+  const items9 = [callback(categoryIndex(7778), obj)];
   let tmp22Result = null != first && first1;
   if (tmp22Result) {
     obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -224,7 +279,7 @@ export default function _default(categories) {
     const intl = categories(1236).intl;
     obj[2] = intl.string(categories(1236).t.rzCcjK);
     obj1 = { style: null, children: null };
-    const items10 = [, ];
+    const items10 = [,];
     ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
     obj1[0] = items10;
     const obj2 = { style: null, source: null };
@@ -237,4 +292,4 @@ export default function _default(categories) {
   items9[1] = tmp22Result;
   obj[2] = items9;
   return tmp20(categoryIndex(9207), obj);
-};
+}

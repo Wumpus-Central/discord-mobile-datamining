@@ -27,7 +27,19 @@ createToggle = {
     const items = [index, callback, tmp.fontScale];
     return callback.useMemo(() => {
       const text = `${closure_0.fontScale * 100}%`;
-      const obj = { value: index, minimumValue: 0, maximumValue: closure_1_4.length - 1, step: 1, onValueChange: callback, startIcon: closure_1_5(lib(index[6]).CircleMinusIcon, {}), endIcon: closure_1_5(lib(index[7]).CirclePlusIcon, {}), accessibilityLabel: null, accessibilityValue: null, valueLabel: null, defaultValue: null };
+      const obj = {
+        value: index,
+        minimumValue: 0,
+        maximumValue: closure_1_4.length - 1,
+        step: 1,
+        onValueChange: callback,
+        startIcon: closure_1_5(lib(index[6]).CircleMinusIcon, {}),
+        endIcon: closure_1_5(lib(index[7]).CirclePlusIcon, {}),
+        accessibilityLabel: null,
+        accessibilityValue: null,
+        valueLabel: null,
+        defaultValue: null,
+      };
       const intl = lib(index[8]).intl;
       obj[7] = intl.string(lib(index[8]).t.i19n5L);
       obj[8] = { text };
@@ -36,7 +48,7 @@ createToggle = {
       return obj;
     }, items);
   },
-  usePredicate: require("set").isAndroid
+  usePredicate: require("set").isAndroid,
 };
 createToggle = createToggle.createSlider(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AndroidFontScaleSetting.tsx");

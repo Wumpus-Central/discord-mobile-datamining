@@ -42,7 +42,7 @@ obj2[RPC_SCOPE_CONFIG.ANY] = items1;
 obj1[0] = obj2;
 obj1[1] = function handler(socket) {
   socket = socket.socket;
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -118,7 +118,11 @@ obj1[1] = function handler(socket) {
             c2 = 2;
             c3 = 1;
             const obj5 = { value: null, done: false };
-            obj5[0] = tmp86(tmp87[10]).launchImageLibraryAsync({ mediaType: "photo", includeBase64: false, selectionLimit: 1 });
+            obj5[0] = tmp86(tmp87[10]).launchImageLibraryAsync({
+              mediaType: "photo",
+              includeBase64: false,
+              selectionLimit: 1,
+            });
             return obj5;
           } else {
             const obj6 = { errorCode: null };

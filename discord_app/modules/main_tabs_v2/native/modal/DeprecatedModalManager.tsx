@@ -89,14 +89,16 @@ let closure_15 = {
       result = null != token.getToken();
     }
     if (result) {
-      result = !isEligibleForSafetyFlowsExperiment.isEligibleForSafetyFlowsExperiment({ location: "modal-manager-verification" });
+      result = !isEligibleForSafetyFlowsExperiment.isEligibleForSafetyFlowsExperiment({
+        location: "modal-manager-verification",
+      });
       const obj2 = isEligibleForSafetyFlowsExperiment;
     }
     return result;
   },
   getComponent() {
     return PhoneThenEmailInterstitial /* PhoneThenEmailInterstitial */.default;
-  }
+  },
 };
 const USER_REQUIRED_ACTION_UPDATE = "USER_REQUIRED_ACTION_UPDATE";
 let closure_17 = {
@@ -112,7 +114,7 @@ let closure_17 = {
   },
   getComponent() {
     return handleTouch /* handleTouch */.default;
-  }
+  },
 };
 initializeDefault;
 let prototype = function DeprecatedModalManager() {
@@ -148,7 +150,7 @@ let prototype = function DeprecatedModalManager() {
     EMAIL_VERIFICATION_MODAL_CLOSE: handlePoppedModal,
     CREATE_INVITE_MODAL_CLOSE: handlePoppedModal,
     QUICKSWITCHER_HIDE: handlePoppedModal,
-    IFE_EXPERIMENT_SEARCH_MODAL_CLOSE: handlePoppedModal
+    IFE_EXPERIMENT_SEARCH_MODAL_CLOSE: handlePoppedModal,
   };
   obj = {
     key: "GUILD_SETTINGS_OPEN",
@@ -156,7 +158,7 @@ let prototype = function DeprecatedModalManager() {
     closable: false,
     getComponent() {
       return callback(17101).default;
-    }
+    },
   };
   obj = {
     key: "NOTIFICATION_SETTINGS_MODAL_OPEN",
@@ -164,13 +166,12 @@ let prototype = function DeprecatedModalManager() {
     closable: false,
     getComponent() {
       return callback(17375).default;
-    }
+    },
   };
   applyArgumentsResult.actions = obj;
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp4 {
-}
+class prototype extends tmp4 {}
 prototype = new prototype();
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/modal/DeprecatedModalManager.tsx");
 

@@ -9,18 +9,46 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-({ AnalyticsSections: closure_6, AnalyticsObjects: error, AnalyticsPages: closure_8, AnalyticsObjectTypes: c9, HelpdeskArticles: c10 } = ME);
+({
+  AnalyticsSections: closure_6,
+  AnalyticsObjects: error,
+  AnalyticsPages: closure_8,
+  AnalyticsObjectTypes: c9,
+  HelpdeskArticles: c10,
+} = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 createCacheKey = { container: null, buttonContainer: null, header: null, subheader: null, image: null };
-createCacheKey = { dipslay: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", padding: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.lg, marginBottom: ThemesDefault.space.PX_24 };
+createCacheKey = {
+  dipslay: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: ThemesDefault.space.PX_16,
+  borderRadius: ThemesDefault.radii.lg,
+  marginBottom: ThemesDefault.space.PX_24,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24, width: 335, height: 48 };
 createCacheKey[2] = { marginBottom: 12, textAlign: "center" };
 createCacheKey[3] = { textAlign: "center" };
 let obj1 = { marginTop: ThemesDefault.space.PX_24, width: 335, height: 48 };
-createCacheKey[4] = { alignSelf: "center", paddingBottom: ThemesDefault.space.PX_16, height: 213, width: 335, borderRadius: ThemesDefault.radii.lg, marginBottom: 12 };
+createCacheKey[4] = {
+  alignSelf: "center",
+  paddingBottom: ThemesDefault.space.PX_16,
+  height: 213,
+  width: 335,
+  borderRadius: ThemesDefault.radii.lg,
+  marginBottom: 12,
+};
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { alignSelf: "center", paddingBottom: ThemesDefault.space.PX_16, height: 213, width: 335, borderRadius: ThemesDefault.radii.lg, marginBottom: 12 };
+let obj2 = {
+  alignSelf: "center",
+  paddingBottom: ThemesDefault.space.PX_16,
+  height: 213,
+  width: 335,
+  borderRadius: ThemesDefault.radii.lg,
+  marginBottom: 12,
+};
 const result = require("set").fileFinishedImporting("modules/premium/promotions/native/BogoPromotionActionSheet.tsx");
 
 export default function BogoPromotionActionSheet(markAsDismissed) {
@@ -33,7 +61,12 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
   const callback = React.useCallback(() => {
     markAsDismissed(closure_1_11.PRIMARY);
     obj = { analyticsLocation: obj, analyticsLocations, premiumType: closure_1_5.TIER_2 };
-    obj = { page: closure_1_8.BOGO_PROMOTION_ACTION_SHEET, section: closure_1_6.FOOTER, object: closure_1_7.BUTTON_CTA, objectType: closure_1_9.BUY };
+    obj = {
+      page: closure_1_8.BOGO_PROMOTION_ACTION_SHEET,
+      section: closure_1_6.FOOTER,
+      object: closure_1_7.BUTTON_CTA,
+      objectType: closure_1_9.BUY,
+    };
     analyticsLocations(closure_1_2[9])(obj);
   }, items);
   const callback1 = React.useCallback(() => {
@@ -42,8 +75,13 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
   let obj = { onDismiss: callback1, children: null };
   obj = { style: items2, children: null };
   items2 = [tmp.container];
-  obj = { source: { uri: "https://cdn.discordapp.com/assets/content/a59aed2e0e61a955dc3e0f4f6f7ab295e39f89a93c4f01e4bd84ed7fb418ec63.png" }, style: tmp.image };
-  const items3 = [callback(analyticsLocations(5493), obj), , , ];
+  obj = {
+    source: {
+      uri: "https://cdn.discordapp.com/assets/content/a59aed2e0e61a955dc3e0f4f6f7ab295e39f89a93c4f01e4bd84ed7fb418ec63.png",
+    },
+    style: tmp.image,
+  };
+  const items3 = [callback(analyticsLocations(5493), obj), , ,];
   obj1 = { style: items4, color: "mobile-text-heading-primary", variant: "heading-xl/bold", children: null };
   items4 = [tmp.header];
   const intl = markAsDismissed(1236).intl;
@@ -67,4 +105,4 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
   obj[1] = items3;
   obj[1] = callback2(View, obj);
   return callback(markAsDismissed(5622).BottomSheet, obj);
-};
+}

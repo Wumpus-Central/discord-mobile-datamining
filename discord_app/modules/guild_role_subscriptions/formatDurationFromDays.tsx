@@ -17,4 +17,4 @@ export default function formatDurationFromDays(days) {
   const intl = getSystemLocale.intl;
   obj = { days };
   formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t["k2UNz+"], obj);
-};
+}

@@ -62,85 +62,238 @@ function createChannelRecord(type) {
 ({ BITRATE_DEFAULT: c5, ChannelTypes } = ME);
 const BasicPermissions = ME.BasicPermissions;
 ({ ChannelTypesSets: closure_8, Permissions } = ME);
-let items = [, , , , , , , , , ];
-({ GUILD_TEXT: arr[0], GUILD_ANNOUNCEMENT: arr[1], ANNOUNCEMENT_THREAD: arr[2], PUBLIC_THREAD: arr[3], PRIVATE_THREAD: arr[4], GUILD_DIRECTORY: arr[5], GUILD_FORUM: arr[6], GUILD_MEDIA: arr[7], DM: arr[8], GROUP_DM: arr[9] } = ChannelTypes);
+let items = [, , , , , , , , ,];
+({
+  GUILD_TEXT: arr[0],
+  GUILD_ANNOUNCEMENT: arr[1],
+  ANNOUNCEMENT_THREAD: arr[2],
+  PUBLIC_THREAD: arr[3],
+  PRIVATE_THREAD: arr[4],
+  GUILD_DIRECTORY: arr[5],
+  GUILD_FORUM: arr[6],
+  GUILD_MEDIA: arr[7],
+  DM: arr[8],
+  GROUP_DM: arr[9],
+} = ChannelTypes);
 let set = new Set(items);
-let items1 = [, , , , , , , , , , , , , , , ];
-({ DM: arr2[0], GROUP_DM: arr2[1], GUILD_TEXT: arr2[2], GUILD_VOICE: arr2[3], GUILD_STAGE_VOICE: arr2[4], GUILD_CATEGORY: arr2[5], GUILD_ANNOUNCEMENT: arr2[6], GUILD_STORE: arr2[7], ANNOUNCEMENT_THREAD: arr2[8], PUBLIC_THREAD: arr2[9], PRIVATE_THREAD: arr2[10], GUILD_DIRECTORY: arr2[11], GUILD_FORUM: arr2[12], GUILD_MEDIA: arr2[13], GUILD_SPACE: arr2[14], MEDIA_THREAD: arr2[15] } = ChannelTypes);
-const items2 = [, , , , ];
-({ GUILD_TEXT: arr3[0], GUILD_ANNOUNCEMENT: arr3[1], ANNOUNCEMENT_THREAD: arr3[2], PUBLIC_THREAD: arr3[3], PRIVATE_THREAD: arr3[4] } = ChannelTypes);
+let items1 = [, , , , , , , , , , , , , , ,];
+({
+  DM: arr2[0],
+  GROUP_DM: arr2[1],
+  GUILD_TEXT: arr2[2],
+  GUILD_VOICE: arr2[3],
+  GUILD_STAGE_VOICE: arr2[4],
+  GUILD_CATEGORY: arr2[5],
+  GUILD_ANNOUNCEMENT: arr2[6],
+  GUILD_STORE: arr2[7],
+  ANNOUNCEMENT_THREAD: arr2[8],
+  PUBLIC_THREAD: arr2[9],
+  PRIVATE_THREAD: arr2[10],
+  GUILD_DIRECTORY: arr2[11],
+  GUILD_FORUM: arr2[12],
+  GUILD_MEDIA: arr2[13],
+  GUILD_SPACE: arr2[14],
+  MEDIA_THREAD: arr2[15],
+} = ChannelTypes);
+const items2 = [, , , ,];
+({
+  GUILD_TEXT: arr3[0],
+  GUILD_ANNOUNCEMENT: arr3[1],
+  ANNOUNCEMENT_THREAD: arr3[2],
+  PUBLIC_THREAD: arr3[3],
+  PRIVATE_THREAD: arr3[4],
+} = ChannelTypes);
 const set2 = new Set(items2);
-const items3 = [, , , , , ];
-({ GUILD_TEXT: arr4[0], GUILD_ANNOUNCEMENT: arr4[1], GUILD_FORUM: arr4[2], GUILD_MEDIA: arr4[3], GUILD_VOICE: arr4[4], GUILD_STAGE_VOICE: arr4[5] } = ChannelTypes);
+const items3 = [, , , , ,];
+({
+  GUILD_TEXT: arr4[0],
+  GUILD_ANNOUNCEMENT: arr4[1],
+  GUILD_FORUM: arr4[2],
+  GUILD_MEDIA: arr4[3],
+  GUILD_VOICE: arr4[4],
+  GUILD_STAGE_VOICE: arr4[5],
+} = ChannelTypes);
 const set1 = new Set(items1);
-const items4 = [, , , , , , , , , , , , ];
-({ GUILD_TEXT: arr5[0], GUILD_VOICE: arr5[1], GUILD_STAGE_VOICE: arr5[2], GUILD_CATEGORY: arr5[3], GUILD_ANNOUNCEMENT: arr5[4], GUILD_STORE: arr5[5], ANNOUNCEMENT_THREAD: arr5[6], PUBLIC_THREAD: arr5[7], PRIVATE_THREAD: arr5[8], GUILD_DIRECTORY: arr5[9], GUILD_FORUM: arr5[10], GUILD_MEDIA: arr5[11], GUILD_SPACE: arr5[12] } = ChannelTypes);
+const items4 = [, , , , , , , , , , , ,];
+({
+  GUILD_TEXT: arr5[0],
+  GUILD_VOICE: arr5[1],
+  GUILD_STAGE_VOICE: arr5[2],
+  GUILD_CATEGORY: arr5[3],
+  GUILD_ANNOUNCEMENT: arr5[4],
+  GUILD_STORE: arr5[5],
+  ANNOUNCEMENT_THREAD: arr5[6],
+  PUBLIC_THREAD: arr5[7],
+  PRIVATE_THREAD: arr5[8],
+  GUILD_DIRECTORY: arr5[9],
+  GUILD_FORUM: arr5[10],
+  GUILD_MEDIA: arr5[11],
+  GUILD_SPACE: arr5[12],
+} = ChannelTypes);
 const set4 = new Set(items4);
-const items5 = [, , , ];
+const items5 = [, , ,];
 ({ GUILD_TEXT: arr6[0], GUILD_ANNOUNCEMENT: arr6[1], GUILD_FORUM: arr6[2], GUILD_MEDIA: arr6[3] } = ChannelTypes);
 const set3 = new Set(items3);
-const items6 = [, ];
+const items6 = [,];
 ({ GUILD_VOICE: arr7[0], GUILD_STAGE_VOICE: arr7[1] } = ChannelTypes);
 const set6 = new Set(items6);
 const items7 = [ChannelTypes.GUILD_STAGE_VOICE];
 const set5 = new Set(items5);
-const items8 = [, ];
+const items8 = [,];
 ({ DM: arr9[0], GROUP_DM: arr9[1] } = ChannelTypes);
 const set8 = new Set(items8);
 const items9 = [ChannelTypes.GROUP_DM];
 const set9 = new Set(items9);
-const items10 = [, , , , , , ];
-({ DM: arr11[0], GROUP_DM: arr11[1], GUILD_TEXT: arr11[2], GUILD_ANNOUNCEMENT: arr11[3], ANNOUNCEMENT_THREAD: arr11[4], PUBLIC_THREAD: arr11[5], PRIVATE_THREAD: arr11[6] } = ChannelTypes);
+const items10 = [, , , , , ,];
+({
+  DM: arr11[0],
+  GROUP_DM: arr11[1],
+  GUILD_TEXT: arr11[2],
+  GUILD_ANNOUNCEMENT: arr11[3],
+  ANNOUNCEMENT_THREAD: arr11[4],
+  PUBLIC_THREAD: arr11[5],
+  PRIVATE_THREAD: arr11[6],
+} = ChannelTypes);
 const set10 = new Set(items10);
-const items11 = [, , , , , ];
-({ DM: arr12[0], GROUP_DM: arr12[1], GUILD_VOICE: arr12[2], GUILD_STAGE_VOICE: arr12[3], PUBLIC_THREAD: arr12[4], PRIVATE_THREAD: arr12[5] } = ChannelTypes);
+const items11 = [, , , , ,];
+({
+  DM: arr12[0],
+  GROUP_DM: arr12[1],
+  GUILD_VOICE: arr12[2],
+  GUILD_STAGE_VOICE: arr12[3],
+  PUBLIC_THREAD: arr12[4],
+  PRIVATE_THREAD: arr12[5],
+} = ChannelTypes);
 const set11 = new Set(items11);
-const items12 = [, , , , , , , , , ];
-({ GUILD_TEXT: arr13[0], GUILD_ANNOUNCEMENT: arr13[1], ANNOUNCEMENT_THREAD: arr13[2], PUBLIC_THREAD: arr13[3], PRIVATE_THREAD: arr13[4], GUILD_DIRECTORY: arr13[5], GUILD_FORUM: arr13[6], GUILD_MEDIA: arr13[7], DM: arr13[8], GROUP_DM: arr13[9] } = ChannelTypes);
+const items12 = [, , , , , , , , ,];
+({
+  GUILD_TEXT: arr13[0],
+  GUILD_ANNOUNCEMENT: arr13[1],
+  ANNOUNCEMENT_THREAD: arr13[2],
+  PUBLIC_THREAD: arr13[3],
+  PRIVATE_THREAD: arr13[4],
+  GUILD_DIRECTORY: arr13[5],
+  GUILD_FORUM: arr13[6],
+  GUILD_MEDIA: arr13[7],
+  DM: arr13[8],
+  GROUP_DM: arr13[9],
+} = ChannelTypes);
 const set12 = new Set(items12);
-const items13 = [, , , ];
-({ ANNOUNCEMENT_THREAD: arr14[0], PUBLIC_THREAD: arr14[1], PRIVATE_THREAD: arr14[2], MEDIA_THREAD: arr14[3] } = ChannelTypes);
+const items13 = [, , ,];
+({
+  ANNOUNCEMENT_THREAD: arr14[0],
+  PUBLIC_THREAD: arr14[1],
+  PRIVATE_THREAD: arr14[2],
+  MEDIA_THREAD: arr14[3],
+} = ChannelTypes);
 const set13 = new Set(items13);
-const items14 = [, ];
+const items14 = [,];
 ({ PUBLIC_THREAD: arr15[0], PRIVATE_THREAD: arr15[1] } = ChannelTypes);
 const set14 = new Set(items14);
-const items15 = [, , , ];
+const items15 = [, , ,];
 ({ GUILD_TEXT: arr16[0], GUILD_ANNOUNCEMENT: arr16[1], GUILD_FORUM: arr16[2], GUILD_MEDIA: arr16[3] } = ChannelTypes);
 const set7 = new Set(items7);
-const items16 = [, , , , , , , , , , , ];
-({ DM: arr17[0], GROUP_DM: arr17[1], GUILD_TEXT: arr17[2], GUILD_ANNOUNCEMENT: arr17[3], ANNOUNCEMENT_THREAD: arr17[4], PUBLIC_THREAD: arr17[5], PRIVATE_THREAD: arr17[6], GUILD_FORUM: arr17[7], GUILD_MEDIA: arr17[8], GUILD_DIRECTORY: arr17[9], GUILD_VOICE: arr17[10], GUILD_STAGE_VOICE: arr17[11] } = ChannelTypes);
+const items16 = [, , , , , , , , , , ,];
+({
+  DM: arr17[0],
+  GROUP_DM: arr17[1],
+  GUILD_TEXT: arr17[2],
+  GUILD_ANNOUNCEMENT: arr17[3],
+  ANNOUNCEMENT_THREAD: arr17[4],
+  PUBLIC_THREAD: arr17[5],
+  PRIVATE_THREAD: arr17[6],
+  GUILD_FORUM: arr17[7],
+  GUILD_MEDIA: arr17[8],
+  GUILD_DIRECTORY: arr17[9],
+  GUILD_VOICE: arr17[10],
+  GUILD_STAGE_VOICE: arr17[11],
+} = ChannelTypes);
 const set16 = new Set(items16);
-const items17 = [, , , , , , , , , , ];
-({ GUILD_TEXT: arr18[0], GUILD_ANNOUNCEMENT: arr18[1], GUILD_STORE: arr18[2], GUILD_VOICE: arr18[3], GUILD_STAGE_VOICE: arr18[4], ANNOUNCEMENT_THREAD: arr18[5], PUBLIC_THREAD: arr18[6], PRIVATE_THREAD: arr18[7], GUILD_DIRECTORY: arr18[8], GUILD_FORUM: arr18[9], GUILD_MEDIA: arr18[10] } = ChannelTypes);
+const items17 = [, , , , , , , , , ,];
+({
+  GUILD_TEXT: arr18[0],
+  GUILD_ANNOUNCEMENT: arr18[1],
+  GUILD_STORE: arr18[2],
+  GUILD_VOICE: arr18[3],
+  GUILD_STAGE_VOICE: arr18[4],
+  ANNOUNCEMENT_THREAD: arr18[5],
+  PUBLIC_THREAD: arr18[6],
+  PRIVATE_THREAD: arr18[7],
+  GUILD_DIRECTORY: arr18[8],
+  GUILD_FORUM: arr18[9],
+  GUILD_MEDIA: arr18[10],
+} = ChannelTypes);
 const set15 = new Set(items15);
-const items18 = [, , , , , , , , ];
-({ GUILD_ANNOUNCEMENT: arr19[0], GUILD_CATEGORY: arr19[1], GUILD_STORE: arr19[2], GUILD_TEXT: arr19[3], GUILD_VOICE: arr19[4], GUILD_STAGE_VOICE: arr19[5], GUILD_DIRECTORY: arr19[6], GUILD_FORUM: arr19[7], GUILD_MEDIA: arr19[8] } = ChannelTypes);
+const items18 = [, , , , , , , ,];
+({
+  GUILD_ANNOUNCEMENT: arr19[0],
+  GUILD_CATEGORY: arr19[1],
+  GUILD_STORE: arr19[2],
+  GUILD_TEXT: arr19[3],
+  GUILD_VOICE: arr19[4],
+  GUILD_STAGE_VOICE: arr19[5],
+  GUILD_DIRECTORY: arr19[6],
+  GUILD_FORUM: arr19[7],
+  GUILD_MEDIA: arr19[8],
+} = ChannelTypes);
 const set17 = new Set(items17);
-const items19 = [, ];
+const items19 = [,];
 ({ GUILD_TEXT: arr20[0], GUILD_ANNOUNCEMENT: arr20[1] } = ChannelTypes);
 const set18 = new Set(items18);
-const items20 = [, , , ];
+const items20 = [, , ,];
 ({ GUILD_TEXT: arr21[0], GUILD_ANNOUNCEMENT: arr21[1], GUILD_FORUM: arr21[2], GUILD_MEDIA: arr21[3] } = ChannelTypes);
 const set19 = new Set(items19);
-const items21 = [, , , , , ];
-({ GUILD_TEXT: arr22[0], GUILD_ANNOUNCEMENT: arr22[1], GUILD_FORUM: arr22[2], GUILD_MEDIA: arr22[3], GUILD_VOICE: arr22[4], GUILD_STAGE_VOICE: arr22[5] } = ChannelTypes);
+const items21 = [, , , , ,];
+({
+  GUILD_TEXT: arr22[0],
+  GUILD_ANNOUNCEMENT: arr22[1],
+  GUILD_FORUM: arr22[2],
+  GUILD_MEDIA: arr22[3],
+  GUILD_VOICE: arr22[4],
+  GUILD_STAGE_VOICE: arr22[5],
+} = ChannelTypes);
 const set20 = new Set(items20);
-const items22 = [, , , , ];
-({ GUILD_ANNOUNCEMENT: arr23[0], GUILD_TEXT: arr23[1], GUILD_FORUM: arr23[2], GUILD_MEDIA: arr23[3], ANNOUNCEMENT_THREAD: arr23[4] } = ChannelTypes);
+const items22 = [, , , ,];
+({
+  GUILD_ANNOUNCEMENT: arr23[0],
+  GUILD_TEXT: arr23[1],
+  GUILD_FORUM: arr23[2],
+  GUILD_MEDIA: arr23[3],
+  ANNOUNCEMENT_THREAD: arr23[4],
+} = ChannelTypes);
 const set21 = new Set(items21);
-const items23 = [, , , , , , , ];
-({ GUILD_TEXT: arr24[0], GUILD_FORUM: arr24[1], GUILD_MEDIA: arr24[2], ANNOUNCEMENT_THREAD: arr24[3], PUBLIC_THREAD: arr24[4], PRIVATE_THREAD: arr24[5], GUILD_VOICE: arr24[6], GUILD_STAGE_VOICE: arr24[7] } = ChannelTypes);
+const items23 = [, , , , , , ,];
+({
+  GUILD_TEXT: arr24[0],
+  GUILD_FORUM: arr24[1],
+  GUILD_MEDIA: arr24[2],
+  ANNOUNCEMENT_THREAD: arr24[3],
+  PUBLIC_THREAD: arr24[4],
+  PRIVATE_THREAD: arr24[5],
+  GUILD_VOICE: arr24[6],
+  GUILD_STAGE_VOICE: arr24[7],
+} = ChannelTypes);
 const set22 = new Set(items22);
-const items24 = [, , , ];
-({ PUBLIC_THREAD: arr25[0], PRIVATE_THREAD: arr25[1], GUILD_VOICE: arr25[2], GUILD_STAGE_VOICE: arr25[3] } = ChannelTypes);
+const items24 = [, , ,];
+({
+  PUBLIC_THREAD: arr25[0],
+  PRIVATE_THREAD: arr25[1],
+  GUILD_VOICE: arr25[2],
+  GUILD_STAGE_VOICE: arr25[3],
+} = ChannelTypes);
 const set23 = new Set(items23);
-const items25 = [, , ];
+const items25 = [, ,];
 ({ GUILD_TEXT: arr26[0], GUILD_FORUM: arr26[1], GUILD_MEDIA: arr26[2] } = ChannelTypes);
 const set24 = new Set(items24);
-const items26 = [, , , ];
-({ GUILD_TEXT: arr27[0], GUILD_CATEGORY: arr27[1], GUILD_FORUM: arr27[2], GUILD_ANNOUNCEMENT: arr27[3] } = ChannelTypes);
+const items26 = [, , ,];
+({
+  GUILD_TEXT: arr27[0],
+  GUILD_CATEGORY: arr27[1],
+  GUILD_FORUM: arr27[2],
+  GUILD_ANNOUNCEMENT: arr27[3],
+} = ChannelTypes);
 const set25 = new Set(items25);
-const items27 = [, , , ];
+const items27 = [, , ,];
 ({ GUILD_TEXT: arr28[0], GUILD_ANNOUNCEMENT: arr28[1], GUILD_FORUM: arr28[2], GUILD_VOICE: arr28[3] } = ChannelTypes);
 const set26 = new Set(items26);
 const set27 = new Set(items27);
@@ -169,8 +322,7 @@ class ChannelRecordProperties {
   }
 }
 let closure_25 = Object.freeze({});
-class ChannelRecordBase extends ChannelRecordProperties {
-}
+class ChannelRecordBase extends ChannelRecordProperties {}
 const prototype = ChannelRecordBase.prototype;
 Object.defineProperty(prototype, "permissionOverwrites", {
   get: function permissionOverwrites() {
@@ -180,7 +332,7 @@ Object.defineProperty(prototype, "permissionOverwrites", {
     }
     return permissionOverwrites_;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "topic", {
   get: function topic() {
@@ -190,7 +342,7 @@ Object.defineProperty(prototype, "topic", {
     }
     return str;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "position", {
   get: function position(align, arg1) {
@@ -200,7 +352,7 @@ Object.defineProperty(prototype, "position", {
     }
     return num;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "bitrate", {
   get: function bitrate() {
@@ -210,7 +362,7 @@ Object.defineProperty(prototype, "bitrate", {
     }
     return bitrate_;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "userLimit", {
   get: function userLimit() {
@@ -220,7 +372,7 @@ Object.defineProperty(prototype, "userLimit", {
     }
     return num;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "nsfw", {
   get: function nsfw() {
@@ -230,7 +382,7 @@ Object.defineProperty(prototype, "nsfw", {
     }
     return flag;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "rateLimitPerUser", {
   get: function rateLimitPerUser() {
@@ -240,7 +392,7 @@ Object.defineProperty(prototype, "rateLimitPerUser", {
     }
     return num;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "flags", {
   get: function flags() {
@@ -250,7 +402,7 @@ Object.defineProperty(prototype, "flags", {
     }
     return num;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["toJS"] = function toJS() {
   const merged = Object.assign(this);
@@ -592,7 +744,7 @@ Object.defineProperty(prototype, "accessPermissions", {
     }
     return VIEW_CHANNEL;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["hasFlag"] = function hasFlag(arg0) {
   return hasFlag.hasFlag(this.flags, arg0);
@@ -609,19 +761,128 @@ Object.defineProperty(prototype, "isHDStreamSplashed", {
     }
     return tmp2;
   },
-  set: undefined
+  set: undefined,
 });
 let UnknownChannelRecord;
 class UnknownChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
     tmp = new UnknownChannelRecord(global, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ application_id: tmp.application_id, appliedTags: tmp.appliedTags, availableTags: tmp.availableTags, bitrate_: tmp.bitrate_, defaultAutoArchiveDuration: tmp.defaultAutoArchiveDuration, defaultForumLayout: tmp.defaultForumLayout, defaultReactionEmoji: tmp.defaultReactionEmoji, defaultSortOrder: tmp.defaultSortOrder, defaultTagSetting: tmp.defaultTagSetting, defaultThreadRateLimitPerUser: tmp.defaultThreadRateLimitPerUser, flags_: tmp.flags_, gameId: tmp.gameId, icon: tmp.icon, iconEmoji: tmp.iconEmoji, isMessageRequest: tmp.isMessageRequest, isMessageRequestTimestamp: tmp.isMessageRequestTimestamp, isSpam: tmp.isSpam, lastMessageId: tmp.lastMessageId, lastNonMessageActivityTimestamp: tmp.lastNonMessageActivityTimestamp, lastPinTimestamp: tmp.lastPinTimestamp, member: tmp.member, memberCount: tmp.memberCount, memberIdsPreview: tmp.memberIdsPreview, memberListId: tmp.memberListId, messageCount: tmp.messageCount, nicks: tmp.nicks, nsfw_: tmp.nsfw_, originChannelId: tmp.originChannelId, ownerId: tmp.ownerId, parent_id: tmp.parent_id, parentChannelThreadType: tmp.parentChannelThreadType, permissionOverwrites_: tmp.permissionOverwrites_, position_: tmp.position_, rateLimitPerUser_: tmp.rateLimitPerUser_, rawRecipients: tmp.rawRecipients, recipients: tmp.recipients, recipientFlags: tmp.recipientFlags, rtcRegion: tmp.rtcRegion, safetyWarnings: tmp.safetyWarnings, blockedUserWarningDismissed: tmp.blockedUserWarningDismissed, template: tmp.template, themeColor: tmp.themeColor, threadMetadata: tmp.threadMetadata, topic_: tmp.topic_, userLimit_: tmp.userLimit_, version: tmp.version, videoQualityMode: tmp.videoQualityMode, linkedLobby: tmp.linkedLobby, hdStreamingUntil: tmp.hdStreamingUntil, hdStreamingBuyerId: tmp.hdStreamingBuyerId, voiceHangout: tmp.voiceHangout } = global);
+    ({
+      application_id: tmp.application_id,
+      appliedTags: tmp.appliedTags,
+      availableTags: tmp.availableTags,
+      bitrate_: tmp.bitrate_,
+      defaultAutoArchiveDuration: tmp.defaultAutoArchiveDuration,
+      defaultForumLayout: tmp.defaultForumLayout,
+      defaultReactionEmoji: tmp.defaultReactionEmoji,
+      defaultSortOrder: tmp.defaultSortOrder,
+      defaultTagSetting: tmp.defaultTagSetting,
+      defaultThreadRateLimitPerUser: tmp.defaultThreadRateLimitPerUser,
+      flags_: tmp.flags_,
+      gameId: tmp.gameId,
+      icon: tmp.icon,
+      iconEmoji: tmp.iconEmoji,
+      isMessageRequest: tmp.isMessageRequest,
+      isMessageRequestTimestamp: tmp.isMessageRequestTimestamp,
+      isSpam: tmp.isSpam,
+      lastMessageId: tmp.lastMessageId,
+      lastNonMessageActivityTimestamp: tmp.lastNonMessageActivityTimestamp,
+      lastPinTimestamp: tmp.lastPinTimestamp,
+      member: tmp.member,
+      memberCount: tmp.memberCount,
+      memberIdsPreview: tmp.memberIdsPreview,
+      memberListId: tmp.memberListId,
+      messageCount: tmp.messageCount,
+      nicks: tmp.nicks,
+      nsfw_: tmp.nsfw_,
+      originChannelId: tmp.originChannelId,
+      ownerId: tmp.ownerId,
+      parent_id: tmp.parent_id,
+      parentChannelThreadType: tmp.parentChannelThreadType,
+      permissionOverwrites_: tmp.permissionOverwrites_,
+      position_: tmp.position_,
+      rateLimitPerUser_: tmp.rateLimitPerUser_,
+      rawRecipients: tmp.rawRecipients,
+      recipients: tmp.recipients,
+      recipientFlags: tmp.recipientFlags,
+      rtcRegion: tmp.rtcRegion,
+      safetyWarnings: tmp.safetyWarnings,
+      blockedUserWarningDismissed: tmp.blockedUserWarningDismissed,
+      template: tmp.template,
+      themeColor: tmp.themeColor,
+      threadMetadata: tmp.threadMetadata,
+      topic_: tmp.topic_,
+      userLimit_: tmp.userLimit_,
+      version: tmp.version,
+      videoQualityMode: tmp.videoQualityMode,
+      linkedLobby: tmp.linkedLobby,
+      hdStreamingUntil: tmp.hdStreamingUntil,
+      hdStreamingBuyerId: tmp.hdStreamingBuyerId,
+      voiceHangout: tmp.voiceHangout,
+    } = global);
     return tmp;
   }
 }
 UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
-  obj = { application_id: application_id.application_id, appliedTags: application_id.applied_tags, availableTags: null, bitrate_: null, defaultAutoArchiveDuration: null, defaultForumLayout: null, defaultReactionEmoji: null, defaultSortOrder: null, defaultTagSetting: null, defaultThreadRateLimitPerUser: null, flags_: null, gameId: null, guild_id: null, icon: null, iconEmoji: null, id: null, isMessageRequest: null, isMessageRequestTimestamp: null, isSpam: null, lastMessageId: null, lastNonMessageActivityTimestamp: null, lastPinTimestamp: null, member: null, memberCount: null, memberIdsPreview: null, memberListId: null, messageCount: null, name: null, nicks: null, nsfw_: null, originChannelId: null, ownerId: null, parent_id: null, parentChannelThreadType: "find", permissionOverwrites_: true, position_: true, rateLimitPerUser_: true, rawRecipients: true, recipients: true, recipientFlags: true, rtcRegion: "D", safetyWarnings: "DD", blockedUserWarningDismissed: "rightwards_pushing_hand", template: "__initData", themeColor: "Symbol", threadMetadata: "Promise", topic_: "children", totalMessageSent: "items", type: "channelId", userLimit_: "forEach", version: "values", videoQualityMode: "WireType", linkedLobby: "options", hdStreamingUntil: "context", hdStreamingBuyerId: "replace", voiceHangout: "i" };
+  obj = {
+    application_id: application_id.application_id,
+    appliedTags: application_id.applied_tags,
+    availableTags: null,
+    bitrate_: null,
+    defaultAutoArchiveDuration: null,
+    defaultForumLayout: null,
+    defaultReactionEmoji: null,
+    defaultSortOrder: null,
+    defaultTagSetting: null,
+    defaultThreadRateLimitPerUser: null,
+    flags_: null,
+    gameId: null,
+    guild_id: null,
+    icon: null,
+    iconEmoji: null,
+    id: null,
+    isMessageRequest: null,
+    isMessageRequestTimestamp: null,
+    isSpam: null,
+    lastMessageId: null,
+    lastNonMessageActivityTimestamp: null,
+    lastPinTimestamp: null,
+    member: null,
+    memberCount: null,
+    memberIdsPreview: null,
+    memberListId: null,
+    messageCount: null,
+    name: null,
+    nicks: null,
+    nsfw_: null,
+    originChannelId: null,
+    ownerId: null,
+    parent_id: null,
+    parentChannelThreadType: "find",
+    permissionOverwrites_: true,
+    position_: true,
+    rateLimitPerUser_: true,
+    rawRecipients: true,
+    recipients: true,
+    recipientFlags: true,
+    rtcRegion: "D",
+    safetyWarnings: "DD",
+    blockedUserWarningDismissed: "rightwards_pushing_hand",
+    template: "__initData",
+    themeColor: "Symbol",
+    threadMetadata: "Promise",
+    topic_: "children",
+    totalMessageSent: "items",
+    type: "channelId",
+    userLimit_: "forEach",
+    version: "values",
+    videoQualityMode: "WireType",
+    linkedLobby: "options",
+    hdStreamingUntil: "context",
+    hdStreamingBuyerId: "replace",
+    voiceHangout: "i",
+  };
   if (null == application_id.available_tags) {
     obj[2] = undefined;
     ({ bitrate: obj[3], default_auto_archive_duration: obj[4], default_forum_layout: obj[5] } = application_id);
@@ -638,7 +899,13 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
     }
     let guild_id = arg1;
     obj[6] = tmp2;
-    ({ default_sort_order: obj[7], default_tag_setting: obj[8], default_thread_rate_limit_per_user: obj[9], flags: obj[10], game_id: obj[11] } = application_id);
+    ({
+      default_sort_order: obj[7],
+      default_tag_setting: obj[8],
+      default_thread_rate_limit_per_user: obj[9],
+      flags: obj[10],
+      game_id: obj[11],
+    } = application_id);
     if (arg1 == null) {
       guild_id = application_id.guild_id;
     }
@@ -654,7 +921,15 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
       tmp5 = obj;
     }
     obj[14] = tmp5;
-    ({ id: obj[15], is_message_request: obj[16], is_message_request_timestamp: obj[17], is_spam: obj[18], last_message_id: obj[19], last_non_message_activity_timestamp: obj[20], last_pin_timestamp: obj[21] } = application_id);
+    ({
+      id: obj[15],
+      is_message_request: obj[16],
+      is_message_request_timestamp: obj[17],
+      is_spam: obj[18],
+      last_message_id: obj[19],
+      last_non_message_activity_timestamp: obj[20],
+      last_pin_timestamp: obj[21],
+    } = application_id);
     let tmp6;
     if (null != application_id.member) {
       obj1 = { flags: null, muted: null, muteConfig: null, joinTimestamp: null };
@@ -665,7 +940,13 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
       tmp6 = obj1;
     }
     obj[22] = tmp6;
-    ({ member_count: obj[23], member_ids_preview: obj[24], member_list_id: obj[25], message_count: obj[26], name } = application_id);
+    ({
+      member_count: obj[23],
+      member_ids_preview: obj[24],
+      member_list_id: obj[25],
+      message_count: obj[26],
+      name,
+    } = application_id);
     if (name == null) {
       name = "";
     }
@@ -674,14 +955,24 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
     if (null == nicks) {
       let obj2 = {};
     } else {
-      obj2 = applyDefault.reduce(nicks, (arg0, id) => {
-        arg0[id.id] = id.nick;
-        return arg0;
-      }, {});
+      obj2 = applyDefault.reduce(
+        nicks,
+        (arg0, id) => {
+          arg0[id.id] = id.nick;
+          return arg0;
+        },
+        {},
+      );
       const arr3 = applyDefault;
     }
     obj[28] = obj2;
-    ({ nsfw: obj[29], origin_channel_id: obj[30], owner_id: obj[31], parent_id: obj[32], permission_overwrites } = application_id);
+    ({
+      nsfw: obj[29],
+      origin_channel_id: obj[30],
+      owner_id: obj[31],
+      parent_id: obj[32],
+      permission_overwrites,
+    } = application_id);
     const obj3 = {};
     if (permission_overwrites != null) {
       const item = permission_overwrites.forEach((id) => {
@@ -701,10 +992,24 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
       mapped = [];
     }
     obj[38] = mapped;
-    ({ recipient_flags: obj[39], rtc_region: obj[40], safety_warnings: obj[41], blocked_user_warning_dismissed: obj[42], template: obj[43], theme_color: obj[44] } = application_id);
+    ({
+      recipient_flags: obj[39],
+      rtc_region: obj[40],
+      safety_warnings: obj[41],
+      blocked_user_warning_dismissed: obj[42],
+      template: obj[43],
+      theme_color: obj[44],
+    } = application_id);
     let tmp10;
     if (null != application_id.thread_metadata) {
-      const obj4 = { archived: null, autoArchiveDuration: null, archiveTimestamp: null, createTimestamp: null, locked: null, invitable: null };
+      const obj4 = {
+        archived: null,
+        autoArchiveDuration: null,
+        archiveTimestamp: null,
+        createTimestamp: null,
+        locked: null,
+        invitable: null,
+      };
       obj4[0] = application_id.thread_metadata.archived;
       obj4[1] = application_id.thread_metadata.auto_archive_duration;
       obj4[2] = application_id.thread_metadata.archive_timestamp;
@@ -725,7 +1030,15 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
       UNKNOWN = ChannelTypes.UNKNOWN;
     }
     obj[48] = UNKNOWN;
-    ({ user_limit: obj[49], version: obj[50], video_quality_mode: obj[51], linked_lobby: obj[52], hd_streaming_until: obj[53], hd_streaming_buyer_id: obj[54], voice_hangout: obj[55] } = application_id);
+    ({
+      user_limit: obj[49],
+      version: obj[50],
+      video_quality_mode: obj[51],
+      linked_lobby: obj[52],
+      hd_streaming_until: obj[53],
+      hd_streaming_buyer_id: obj[54],
+      voice_hangout: obj[55],
+    } = application_id);
     return obj3(1400).dangerouslyCast(obj, UnknownChannelRecord);
   } else {
     const available_tags = application_id.available_tags;
@@ -749,18 +1062,69 @@ class GuildVocalChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
     tmp = new GuildVocalChannelRecord(global, new.target, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ application_id: tmp.application_id, bitrate_: tmp.bitrate_, flags_: tmp.flags_, iconEmoji: tmp.iconEmoji, lastMessageId: tmp.lastMessageId, lastPinTimestamp: tmp.lastPinTimestamp, memberListId: tmp.memberListId, nsfw_: tmp.nsfw_, originChannelId: tmp.originChannelId, parent_id: tmp.parent_id, permissionOverwrites_ } = global);
+    ({
+      application_id: tmp.application_id,
+      bitrate_: tmp.bitrate_,
+      flags_: tmp.flags_,
+      iconEmoji: tmp.iconEmoji,
+      lastMessageId: tmp.lastMessageId,
+      lastPinTimestamp: tmp.lastPinTimestamp,
+      memberListId: tmp.memberListId,
+      nsfw_: tmp.nsfw_,
+      originChannelId: tmp.originChannelId,
+      parent_id: tmp.parent_id,
+      permissionOverwrites_,
+    } = global);
     if (permissionOverwrites_ == null) {
       permissionOverwrites_ = {};
     }
     tmp.permissionOverwrites_ = permissionOverwrites_;
-    ({ position_: tmp.position_, rateLimitPerUser_: tmp.rateLimitPerUser_, rtcRegion: tmp.rtcRegion, themeColor: tmp.themeColor, topic_: tmp.topic_, userLimit_: tmp.userLimit_, version: tmp.version, videoQualityMode: tmp.videoQualityMode, hdStreamingUntil: tmp.hdStreamingUntil, hdStreamingBuyerId: tmp.hdStreamingBuyerId, voiceHangout: tmp.voiceHangout } = global);
+    ({
+      position_: tmp.position_,
+      rateLimitPerUser_: tmp.rateLimitPerUser_,
+      rtcRegion: tmp.rtcRegion,
+      themeColor: tmp.themeColor,
+      topic_: tmp.topic_,
+      userLimit_: tmp.userLimit_,
+      version: tmp.version,
+      videoQualityMode: tmp.videoQualityMode,
+      hdStreamingUntil: tmp.hdStreamingUntil,
+      hdStreamingBuyerId: tmp.hdStreamingBuyerId,
+      voiceHangout: tmp.voiceHangout,
+    } = global);
     return tmp;
   }
 }
 GuildVocalChannelRecord["fromServer"] = function fromServer(application_id) {
   let guild_id = arg1;
-  obj = { application_id: application_id.application_id, bitrate_: application_id.bitrate, flags_: application_id.flags, guild_id: null, iconEmoji: null, id: null, lastMessageId: null, lastPinTimestamp: null, memberListId: null, name: null, nsfw_: null, originChannelId: null, parent_id: null, permissionOverwrites_: null, position_: null, rateLimitPerUser_: null, rtcRegion: null, themeColor: null, topic_: null, type: null, userLimit_: null, version: null, videoQualityMode: null, hdStreamingUntil: null, hdStreamingBuyerId: null, voiceHangout: null };
+  obj = {
+    application_id: application_id.application_id,
+    bitrate_: application_id.bitrate,
+    flags_: application_id.flags,
+    guild_id: null,
+    iconEmoji: null,
+    id: null,
+    lastMessageId: null,
+    lastPinTimestamp: null,
+    memberListId: null,
+    name: null,
+    nsfw_: null,
+    originChannelId: null,
+    parent_id: null,
+    permissionOverwrites_: null,
+    position_: null,
+    rateLimitPerUser_: null,
+    rtcRegion: null,
+    themeColor: null,
+    topic_: null,
+    type: null,
+    userLimit_: null,
+    version: null,
+    videoQualityMode: null,
+    hdStreamingUntil: null,
+    hdStreamingBuyerId: null,
+    voiceHangout: null,
+  };
   if (arg1 == null) {
     guild_id = application_id.guild_id;
   }
@@ -809,7 +1173,14 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id) {
     GUILD_VOICE = ChannelTypes.GUILD_VOICE;
   }
   obj[19] = GUILD_VOICE;
-  ({ user_limit: obj[20], version: obj[21], video_quality_mode: obj[22], hd_streaming_until: obj[23], hd_streaming_buyer_id: obj[24], voice_hangout: obj[25] } = application_id);
+  ({
+    user_limit: obj[20],
+    version: obj[21],
+    video_quality_mode: obj[22],
+    hd_streaming_until: obj[23],
+    hd_streaming_buyer_id: obj[24],
+    voice_hangout: obj[25],
+  } = application_id);
   let GUILD_TEXT = obj.type;
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
@@ -824,18 +1195,63 @@ class GuildTextualChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
     tmp = new GuildTextualChannelRecord(global, new.target, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ application_id: tmp.application_id, defaultAutoArchiveDuration: tmp.defaultAutoArchiveDuration, defaultThreadRateLimitPerUser: tmp.defaultThreadRateLimitPerUser, flags_: tmp.flags_, iconEmoji: tmp.iconEmoji, lastMessageId: tmp.lastMessageId, lastPinTimestamp: tmp.lastPinTimestamp, memberListId: tmp.memberListId, nsfw_: tmp.nsfw_, parent_id: tmp.parent_id, permissionOverwrites_ } = global);
+    ({
+      application_id: tmp.application_id,
+      defaultAutoArchiveDuration: tmp.defaultAutoArchiveDuration,
+      defaultThreadRateLimitPerUser: tmp.defaultThreadRateLimitPerUser,
+      flags_: tmp.flags_,
+      iconEmoji: tmp.iconEmoji,
+      lastMessageId: tmp.lastMessageId,
+      lastPinTimestamp: tmp.lastPinTimestamp,
+      memberListId: tmp.memberListId,
+      nsfw_: tmp.nsfw_,
+      parent_id: tmp.parent_id,
+      permissionOverwrites_,
+    } = global);
     if (permissionOverwrites_ == null) {
       permissionOverwrites_ = {};
     }
     tmp.permissionOverwrites_ = permissionOverwrites_;
-    ({ position_: tmp.position_, rateLimitPerUser_: tmp.rateLimitPerUser_, themeColor: tmp.themeColor, topic_: tmp.topic_, version: tmp.version, linkedLobby: tmp.linkedLobby, hdStreamingBuyerId: tmp.hdStreamingBuyerId, hdStreamingUntil: tmp.hdStreamingUntil } = global);
+    ({
+      position_: tmp.position_,
+      rateLimitPerUser_: tmp.rateLimitPerUser_,
+      themeColor: tmp.themeColor,
+      topic_: tmp.topic_,
+      version: tmp.version,
+      linkedLobby: tmp.linkedLobby,
+      hdStreamingBuyerId: tmp.hdStreamingBuyerId,
+      hdStreamingUntil: tmp.hdStreamingUntil,
+    } = global);
     return tmp;
   }
 }
 GuildTextualChannelRecord["fromServer"] = function fromServer(application_id) {
   let guild_id = arg1;
-  obj = { application_id: application_id.application_id, defaultAutoArchiveDuration: application_id.default_auto_archive_duration, defaultThreadRateLimitPerUser: application_id.default_thread_rate_limit_per_user, flags_: application_id.flags, guild_id: null, iconEmoji: null, id: null, lastMessageId: null, lastPinTimestamp: null, memberListId: null, name: null, nsfw_: null, parent_id: null, permissionOverwrites_: null, position_: null, rateLimitPerUser_: null, themeColor: null, topic_: null, type: null, linkedLobby: null, hdStreamingUntil: null, hdStreamingBuyerId: null, version: null };
+  obj = {
+    application_id: application_id.application_id,
+    defaultAutoArchiveDuration: application_id.default_auto_archive_duration,
+    defaultThreadRateLimitPerUser: application_id.default_thread_rate_limit_per_user,
+    flags_: application_id.flags,
+    guild_id: null,
+    iconEmoji: null,
+    id: null,
+    lastMessageId: null,
+    lastPinTimestamp: null,
+    memberListId: null,
+    name: null,
+    nsfw_: null,
+    parent_id: null,
+    permissionOverwrites_: null,
+    position_: null,
+    rateLimitPerUser_: null,
+    themeColor: null,
+    topic_: null,
+    type: null,
+    linkedLobby: null,
+    hdStreamingUntil: null,
+    hdStreamingBuyerId: null,
+    version: null,
+  };
   if (arg1 == null) {
     guild_id = application_id.guild_id;
   }
@@ -884,7 +1300,12 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
   }
   obj[18] = GUILD_TEXT;
-  ({ linked_lobby: obj[19], hd_streaming_until: obj[20], hd_streaming_buyer_id: obj[21], version: obj[22] } = application_id);
+  ({
+    linked_lobby: obj[19],
+    hd_streaming_until: obj[20],
+    hd_streaming_buyer_id: obj[21],
+    version: obj[22],
+  } = application_id);
   let GUILD_TEXT2 = obj.type;
   if (GUILD_TEXT2 == null) {
     GUILD_TEXT2 = ChannelTypes.GUILD_TEXT;
@@ -895,22 +1316,14 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id) {
   }
   return obj(1400).dangerouslyCast(obj, tmp7);
 };
-class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {
-}
-class GuildCategoryChannelRecord extends GuildTextualChannelRecord {
-}
-class GuildDirectoryChannelRecord extends GuildTextualChannelRecord {
-}
-class GuildStageVoiceChannelRecord extends GuildVocalChannelRecord {
-}
-class GuildStoreChannelRecord extends GuildTextualChannelRecord {
-}
-class GuildTextChannelRecord extends GuildTextualChannelRecord {
-}
-class GuildSpaceChannelRecord extends GuildTextualChannelRecord {
-}
-class GuildVoiceChannelRecord extends GuildVocalChannelRecord {
-}
+class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {}
+class GuildCategoryChannelRecord extends GuildTextualChannelRecord {}
+class GuildDirectoryChannelRecord extends GuildTextualChannelRecord {}
+class GuildStageVoiceChannelRecord extends GuildVocalChannelRecord {}
+class GuildStoreChannelRecord extends GuildTextualChannelRecord {}
+class GuildTextChannelRecord extends GuildTextualChannelRecord {}
+class GuildSpaceChannelRecord extends GuildTextualChannelRecord {}
+class GuildVoiceChannelRecord extends GuildVocalChannelRecord {}
 let ForumChannelRecord;
 class ForumChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -921,12 +1334,35 @@ class ForumChannelRecord extends ChannelRecordBase {
       availableTags = [];
     }
     tmp2.availableTags = availableTags;
-    ({ defaultAutoArchiveDuration: tmp2.defaultAutoArchiveDuration, defaultForumLayout: tmp2.defaultForumLayout, defaultReactionEmoji: tmp2.defaultReactionEmoji, defaultSortOrder: tmp2.defaultSortOrder, defaultTagSetting: tmp2.defaultTagSetting, defaultThreadRateLimitPerUser: tmp2.defaultThreadRateLimitPerUser, flags_: tmp2.flags_, gameId: tmp2.gameId, iconEmoji: tmp2.iconEmoji, lastMessageId: tmp2.lastMessageId, lastPinTimestamp: tmp2.lastPinTimestamp, memberListId: tmp2.memberListId, nsfw_: tmp2.nsfw_, parent_id: tmp2.parent_id, permissionOverwrites_ } = global);
+    ({
+      defaultAutoArchiveDuration: tmp2.defaultAutoArchiveDuration,
+      defaultForumLayout: tmp2.defaultForumLayout,
+      defaultReactionEmoji: tmp2.defaultReactionEmoji,
+      defaultSortOrder: tmp2.defaultSortOrder,
+      defaultTagSetting: tmp2.defaultTagSetting,
+      defaultThreadRateLimitPerUser: tmp2.defaultThreadRateLimitPerUser,
+      flags_: tmp2.flags_,
+      gameId: tmp2.gameId,
+      iconEmoji: tmp2.iconEmoji,
+      lastMessageId: tmp2.lastMessageId,
+      lastPinTimestamp: tmp2.lastPinTimestamp,
+      memberListId: tmp2.memberListId,
+      nsfw_: tmp2.nsfw_,
+      parent_id: tmp2.parent_id,
+      permissionOverwrites_,
+    } = global);
     if (permissionOverwrites_ == null) {
       permissionOverwrites_ = {};
     }
     tmp2.permissionOverwrites_ = permissionOverwrites_;
-    ({ position_: tmp2.position_, rateLimitPerUser_: tmp2.rateLimitPerUser_, template: tmp2.template, themeColor: tmp2.themeColor, topic_: tmp2.topic_, version: tmp2.version } = global);
+    ({
+      position_: tmp2.position_,
+      rateLimitPerUser_: tmp2.rateLimitPerUser_,
+      template: tmp2.template,
+      themeColor: tmp2.themeColor,
+      topic_: tmp2.topic_,
+      version: tmp2.version,
+    } = global);
     return tmp2;
   }
 }
@@ -948,7 +1384,34 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags) {
       });
     }
   } else {
-    obj = { availableTags: null, defaultAutoArchiveDuration: null, defaultForumLayout: null, defaultReactionEmoji: null, defaultSortOrder: null, defaultTagSetting: null, defaultThreadRateLimitPerUser: null, flags_: null, gameId: null, guild_id: null, iconEmoji: null, id: null, lastMessageId: null, lastPinTimestamp: null, memberListId: null, name: null, nsfw_: null, parent_id: null, permissionOverwrites_: null, position_: null, rateLimitPerUser_: null, template: null, themeColor: null, topic_: null, type: null, version: null };
+    obj = {
+      availableTags: null,
+      defaultAutoArchiveDuration: null,
+      defaultForumLayout: null,
+      defaultReactionEmoji: null,
+      defaultSortOrder: null,
+      defaultTagSetting: null,
+      defaultThreadRateLimitPerUser: null,
+      flags_: null,
+      gameId: null,
+      guild_id: null,
+      iconEmoji: null,
+      id: null,
+      lastMessageId: null,
+      lastPinTimestamp: null,
+      memberListId: null,
+      name: null,
+      nsfw_: null,
+      parent_id: null,
+      permissionOverwrites_: null,
+      position_: null,
+      rateLimitPerUser_: null,
+      template: null,
+      themeColor: null,
+      topic_: null,
+      type: null,
+      version: null,
+    };
     obj[0] = [];
     ({ default_auto_archive_duration: obj[1], default_forum_layout: obj[2] } = available_tags);
     let tmp2;
@@ -964,7 +1427,13 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags) {
     }
     let guild_id = arg1;
     obj[3] = tmp2;
-    ({ default_sort_order: obj[4], default_tag_setting: obj[5], default_thread_rate_limit_per_user: obj[6], flags: obj[7], game_id: obj[8] } = available_tags);
+    ({
+      default_sort_order: obj[4],
+      default_tag_setting: obj[5],
+      default_thread_rate_limit_per_user: obj[6],
+      flags: obj[7],
+      game_id: obj[8],
+    } = available_tags);
     if (arg1 == null) {
       guild_id = available_tags.guild_id;
     }
@@ -980,7 +1449,13 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags) {
       tmp5 = obj;
     }
     obj[10] = tmp5;
-    ({ id: obj[11], last_message_id: obj[12], last_pin_timestamp: obj[13], member_list_id: obj[14], name } = available_tags);
+    ({
+      id: obj[11],
+      last_message_id: obj[12],
+      last_pin_timestamp: obj[13],
+      member_list_id: obj[14],
+      name,
+    } = available_tags);
     if (name == null) {
       name = "";
     }
@@ -1052,7 +1527,18 @@ class PrivateChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
     tmp5 = new PrivateChannelRecord(global, tmp4, tmp3, tmp2, tmp, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ application_id: tmp5.application_id, flags_: tmp5.flags_, icon: tmp5.icon, isMessageRequest: tmp5.isMessageRequest, isMessageRequestTimestamp: tmp5.isMessageRequestTimestamp, isSpam: tmp5.isSpam, lastMessageId: tmp5.lastMessageId, lastPinTimestamp: tmp5.lastPinTimestamp, nicks: tmp5.nicks, ownerId: tmp5.ownerId } = global);
+    ({
+      application_id: tmp5.application_id,
+      flags_: tmp5.flags_,
+      icon: tmp5.icon,
+      isMessageRequest: tmp5.isMessageRequest,
+      isMessageRequestTimestamp: tmp5.isMessageRequestTimestamp,
+      isSpam: tmp5.isSpam,
+      lastMessageId: tmp5.lastMessageId,
+      lastPinTimestamp: tmp5.lastPinTimestamp,
+      nicks: tmp5.nicks,
+      ownerId: tmp5.ownerId,
+    } = global);
     tmp5.rawRecipients = PrivateChannelRecord.sortRecipients(global.rawRecipients, tmp5.id);
     recipients = global.recipients;
     if (recipients == null) {
@@ -1084,7 +1570,27 @@ PrivateChannelRecord["sortRecipients"] = function sortRecipients(rawRecipients, 
 };
 PrivateChannelRecord["fromServer"] = function fromServer(application_id) {
   const sortRecipientsResult = PrivateChannelRecord.sortRecipients(application_id.recipients, application_id.id);
-  let reduced = { application_id: application_id.application_id, flags_: application_id.flags, guild_id: null, icon: application_id.icon, id: application_id.id, isMessageRequest: application_id.is_message_request, isMessageRequestTimestamp: application_id.is_message_request_timestamp, isSpam: null, lastMessageId: null, lastPinTimestamp: null, name: null, nicks: null, ownerId: null, rawRecipients: null, recipients: null, recipientFlags: null, safetyWarnings: null, blockedUserWarningDismissed: null, type: null };
+  let reduced = {
+    application_id: application_id.application_id,
+    flags_: application_id.flags,
+    guild_id: null,
+    icon: application_id.icon,
+    id: application_id.id,
+    isMessageRequest: application_id.is_message_request,
+    isMessageRequestTimestamp: application_id.is_message_request_timestamp,
+    isSpam: null,
+    lastMessageId: null,
+    lastPinTimestamp: null,
+    name: null,
+    nicks: null,
+    ownerId: null,
+    rawRecipients: null,
+    recipients: null,
+    recipientFlags: null,
+    safetyWarnings: null,
+    blockedUserWarningDismissed: null,
+    type: null,
+  };
   let flag = application_id.is_spam;
   if (flag == null) {
     flag = false;
@@ -1099,10 +1605,14 @@ PrivateChannelRecord["fromServer"] = function fromServer(application_id) {
   if (null == nicks) {
     reduced = {};
   } else {
-    reduced = applyDefault.reduce(nicks, (arg0, id) => {
-      arg0[id.id] = id.nick;
-      return arg0;
-    }, {});
+    reduced = applyDefault.reduce(
+      nicks,
+      (arg0, id) => {
+        arg0[id.id] = id.nick;
+        return arg0;
+      },
+      {},
+    );
     const arr2 = applyDefault;
   }
   reduced[11] = reduced;
@@ -1158,10 +1668,8 @@ prototype2["addRecipient"] = function addRecipient(arg0, arg1, arg2) {
 prototype2["removeRecipient"] = function removeRecipient(id2) {
   return this.set("recipients", applyDefault.without(this.recipients, id2));
 };
-class DMChannelRecord extends PrivateChannelRecord {
-}
-class GroupDMChannelRecord extends PrivateChannelRecord {
-}
+class DMChannelRecord extends PrivateChannelRecord {}
+class GroupDMChannelRecord extends PrivateChannelRecord {}
 let prototype3;
 prototype3 = function ThreadChannelRecord(appliedTags) {
   const tmp2 = new prototype3(appliedTags, tmp);
@@ -1171,18 +1679,61 @@ prototype3 = function ThreadChannelRecord(appliedTags) {
     appliedTags = [];
   }
   tmp2.appliedTags = appliedTags;
-  ({ bitrate_: tmp2.bitrate_, flags_: tmp2.flags_, lastMessageId: tmp2.lastMessageId, lastPinTimestamp: tmp2.lastPinTimestamp, member: tmp2.member, memberCount: tmp2.memberCount, memberIdsPreview: tmp2.memberIdsPreview, messageCount: tmp2.messageCount, nsfw_: tmp2.nsfw_, ownerId: tmp2.ownerId, parent_id: tmp2.parent_id, parentChannelThreadType: tmp2.parentChannelThreadType, rateLimitPerUser_: tmp2.rateLimitPerUser_, rtcRegion: tmp2.rtcRegion, threadMetadata: tmp2.threadMetadata, userLimit_: tmp2.userLimit_, videoQualityMode: tmp2.videoQualityMode, lastNonMessageActivityTimestamp: tmp2.lastNonMessageActivityTimestamp } = appliedTags);
+  ({
+    bitrate_: tmp2.bitrate_,
+    flags_: tmp2.flags_,
+    lastMessageId: tmp2.lastMessageId,
+    lastPinTimestamp: tmp2.lastPinTimestamp,
+    member: tmp2.member,
+    memberCount: tmp2.memberCount,
+    memberIdsPreview: tmp2.memberIdsPreview,
+    messageCount: tmp2.messageCount,
+    nsfw_: tmp2.nsfw_,
+    ownerId: tmp2.ownerId,
+    parent_id: tmp2.parent_id,
+    parentChannelThreadType: tmp2.parentChannelThreadType,
+    rateLimitPerUser_: tmp2.rateLimitPerUser_,
+    rtcRegion: tmp2.rtcRegion,
+    threadMetadata: tmp2.threadMetadata,
+    userLimit_: tmp2.userLimit_,
+    videoQualityMode: tmp2.videoQualityMode,
+    lastNonMessageActivityTimestamp: tmp2.lastNonMessageActivityTimestamp,
+  } = appliedTags);
   return tmp2;
 }.prototype;
-class prototype3 extends ChannelRecordBase {
-}
+class prototype3 extends ChannelRecordBase {}
 prototype3["fromServer"] = function fromServer(applied_tags) {
   applied_tags = applied_tags.applied_tags;
   if (applied_tags == null) {
     applied_tags = [];
   }
   let guild_id = arg1;
-  obj = { appliedTags: applied_tags, bitrate_: applied_tags.bitrate, flags_: applied_tags.flags, guild_id: null, id: null, lastMessageId: null, lastPinTimestamp: null, member: null, memberCount: null, memberIdsPreview: null, messageCount: null, name: null, nsfw_: null, ownerId: null, parent_id: null, parentChannelThreadType: null, rateLimitPerUser_: null, rtcRegion: null, threadMetadata: null, totalMessageSent: null, type: null, userLimit_: null, videoQualityMode: null, lastNonMessageActivityTimestamp: null };
+  obj = {
+    appliedTags: applied_tags,
+    bitrate_: applied_tags.bitrate,
+    flags_: applied_tags.flags,
+    guild_id: null,
+    id: null,
+    lastMessageId: null,
+    lastPinTimestamp: null,
+    member: null,
+    memberCount: null,
+    memberIdsPreview: null,
+    messageCount: null,
+    name: null,
+    nsfw_: null,
+    ownerId: null,
+    parent_id: null,
+    parentChannelThreadType: null,
+    rateLimitPerUser_: null,
+    rtcRegion: null,
+    threadMetadata: null,
+    totalMessageSent: null,
+    type: null,
+    userLimit_: null,
+    videoQualityMode: null,
+    lastNonMessageActivityTimestamp: null,
+  };
   if (arg1 == null) {
     guild_id = applied_tags.guild_id;
   }
@@ -1211,10 +1762,23 @@ prototype3["fromServer"] = function fromServer(applied_tags) {
     flag = false;
   }
   obj[12] = flag;
-  ({ owner_id: obj[13], parent_id: obj[14], parentChannelThreadType: obj[15], rate_limit_per_user: obj[16], rtc_region: obj[17] } = applied_tags);
+  ({
+    owner_id: obj[13],
+    parent_id: obj[14],
+    parentChannelThreadType: obj[15],
+    rate_limit_per_user: obj[16],
+    rtc_region: obj[17],
+  } = applied_tags);
   let tmp3;
   if (null != applied_tags.thread_metadata) {
-    obj = { archived: null, autoArchiveDuration: null, archiveTimestamp: null, createTimestamp: null, locked: null, invitable: null };
+    obj = {
+      archived: null,
+      autoArchiveDuration: null,
+      archiveTimestamp: null,
+      createTimestamp: null,
+      locked: null,
+      invitable: null,
+    };
     obj[0] = applied_tags.thread_metadata.archived;
     obj[1] = applied_tags.thread_metadata.auto_archive_duration;
     obj[2] = applied_tags.thread_metadata.archive_timestamp;
@@ -1238,8 +1802,42 @@ prototype3["fromServer"] = function fromServer(applied_tags) {
   ({ user_limit: obj[21], video_quality_mode: obj[22], last_non_message_activity_timestamp: obj[23] } = applied_tags);
   return exact.dangerouslyCast(obj, prototype3);
 };
-let closure_29 = { [ChannelTypes.DM]: PrivateChannelRecord.fromServer, [ChannelTypes.GROUP_DM]: PrivateChannelRecord.fromServer, [ChannelTypes.GUILD_TEXT]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_VOICE]: GuildVocalChannelRecord.fromServer, [ChannelTypes.GUILD_STAGE_VOICE]: GuildVocalChannelRecord.fromServer, [ChannelTypes.GUILD_CATEGORY]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_ANNOUNCEMENT]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_STORE]: GuildTextualChannelRecord.fromServer, [ChannelTypes.ANNOUNCEMENT_THREAD]: prototype3.fromServer, [ChannelTypes.PUBLIC_THREAD]: prototype3.fromServer, [ChannelTypes.PRIVATE_THREAD]: prototype3.fromServer, [ChannelTypes.MEDIA_THREAD]: prototype3.fromServer, [ChannelTypes.GUILD_DIRECTORY]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_FORUM]: ForumChannelRecord.fromServer, [ChannelTypes.GUILD_MEDIA]: ForumChannelRecord.fromServer, [ChannelTypes.GUILD_SPACE]: GuildTextualChannelRecord.fromServer };
-let closure_30 = { [ChannelTypes.DM]: DMChannelRecord, [ChannelTypes.GROUP_DM]: GroupDMChannelRecord, [ChannelTypes.GUILD_TEXT]: GuildTextChannelRecord, [ChannelTypes.GUILD_VOICE]: GuildVoiceChannelRecord, [ChannelTypes.GUILD_STAGE_VOICE]: GuildStageVoiceChannelRecord, [ChannelTypes.GUILD_CATEGORY]: GuildCategoryChannelRecord, [ChannelTypes.GUILD_ANNOUNCEMENT]: GuildAnnouncementChannelRecord, [ChannelTypes.GUILD_STORE]: GuildStoreChannelRecord, [ChannelTypes.ANNOUNCEMENT_THREAD]: prototype3, [ChannelTypes.PUBLIC_THREAD]: prototype3, [ChannelTypes.PRIVATE_THREAD]: prototype3, [ChannelTypes.MEDIA_THREAD]: prototype3, [ChannelTypes.GUILD_DIRECTORY]: GuildDirectoryChannelRecord, [ChannelTypes.GUILD_FORUM]: ForumChannelRecord, [ChannelTypes.GUILD_MEDIA]: ForumChannelRecord, [ChannelTypes.GUILD_SPACE]: GuildSpaceChannelRecord };
+let closure_29 = {
+  [ChannelTypes.DM]: PrivateChannelRecord.fromServer,
+  [ChannelTypes.GROUP_DM]: PrivateChannelRecord.fromServer,
+  [ChannelTypes.GUILD_TEXT]: GuildTextualChannelRecord.fromServer,
+  [ChannelTypes.GUILD_VOICE]: GuildVocalChannelRecord.fromServer,
+  [ChannelTypes.GUILD_STAGE_VOICE]: GuildVocalChannelRecord.fromServer,
+  [ChannelTypes.GUILD_CATEGORY]: GuildTextualChannelRecord.fromServer,
+  [ChannelTypes.GUILD_ANNOUNCEMENT]: GuildTextualChannelRecord.fromServer,
+  [ChannelTypes.GUILD_STORE]: GuildTextualChannelRecord.fromServer,
+  [ChannelTypes.ANNOUNCEMENT_THREAD]: prototype3.fromServer,
+  [ChannelTypes.PUBLIC_THREAD]: prototype3.fromServer,
+  [ChannelTypes.PRIVATE_THREAD]: prototype3.fromServer,
+  [ChannelTypes.MEDIA_THREAD]: prototype3.fromServer,
+  [ChannelTypes.GUILD_DIRECTORY]: GuildTextualChannelRecord.fromServer,
+  [ChannelTypes.GUILD_FORUM]: ForumChannelRecord.fromServer,
+  [ChannelTypes.GUILD_MEDIA]: ForumChannelRecord.fromServer,
+  [ChannelTypes.GUILD_SPACE]: GuildTextualChannelRecord.fromServer,
+};
+let closure_30 = {
+  [ChannelTypes.DM]: DMChannelRecord,
+  [ChannelTypes.GROUP_DM]: GroupDMChannelRecord,
+  [ChannelTypes.GUILD_TEXT]: GuildTextChannelRecord,
+  [ChannelTypes.GUILD_VOICE]: GuildVoiceChannelRecord,
+  [ChannelTypes.GUILD_STAGE_VOICE]: GuildStageVoiceChannelRecord,
+  [ChannelTypes.GUILD_CATEGORY]: GuildCategoryChannelRecord,
+  [ChannelTypes.GUILD_ANNOUNCEMENT]: GuildAnnouncementChannelRecord,
+  [ChannelTypes.GUILD_STORE]: GuildStoreChannelRecord,
+  [ChannelTypes.ANNOUNCEMENT_THREAD]: prototype3,
+  [ChannelTypes.PUBLIC_THREAD]: prototype3,
+  [ChannelTypes.PRIVATE_THREAD]: prototype3,
+  [ChannelTypes.MEDIA_THREAD]: prototype3,
+  [ChannelTypes.GUILD_DIRECTORY]: GuildDirectoryChannelRecord,
+  [ChannelTypes.GUILD_FORUM]: ForumChannelRecord,
+  [ChannelTypes.GUILD_MEDIA]: ForumChannelRecord,
+  [ChannelTypes.GUILD_SPACE]: GuildSpaceChannelRecord,
+};
 let result = set.fileFinishedImporting("records/ChannelRecord.tsx");
 
 export const isGuildSelectableChannelType = function isGuildSelectableChannelType(arg0) {

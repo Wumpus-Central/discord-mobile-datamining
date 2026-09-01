@@ -15,5 +15,5 @@ export default {
     obj = { type: "NOTICE_DISMISS" };
     const merged = Object.assign(arg0);
     obj.dispatch(obj);
-  }
+  },
 };

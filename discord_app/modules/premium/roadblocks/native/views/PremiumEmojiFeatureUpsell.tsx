@@ -13,8 +13,12 @@ let closure_5 = createCacheKey.createStyles((arg0) => {
   obj[0] = obj;
   return obj;
 });
-let closure_6 = { code: "function PremiumEmojiFeatureUpsellTsx1(){const{shouldShow,inPortalKeyboard,bottomSheetIndex}=this.__closure;if(!shouldShow.get()){return false;}return inPortalKeyboard?bottomSheetIndex.get()===1:bottomSheetIndex.get()===0;}" };
-const result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumEmojiFeatureUpsell.tsx");
+let closure_6 = {
+  code: "function PremiumEmojiFeatureUpsellTsx1(){const{shouldShow,inPortalKeyboard,bottomSheetIndex}=this.__closure;if(!shouldShow.get()){return false;}return inPortalKeyboard?bottomSheetIndex.get()===1:bottomSheetIndex.get()===0;}",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/premium/roadblocks/native/views/PremiumEmojiFeatureUpsell.tsx",
+);
 
 export default function PremiumEmojiFeatureUpsell(bottomSheetIndex) {
   bottomSheetIndex = bottomSheetIndex.bottomSheetIndex;
@@ -52,4 +56,4 @@ export default function PremiumEmojiFeatureUpsell(bottomSheetIndex) {
     const tmpResult = tmp(tmp2[9]);
   }
   return tmp8;
-};
+}

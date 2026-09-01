@@ -3,7 +3,9 @@ import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../../../stores/UserStore.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/hooks/useEmojiPickerViewableItemsCallback.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/premium/roadblocks/native/hooks/useEmojiPickerViewableItemsCallback.tsx",
+);
 
 export default function useEmojiPickerViewableItemsChanged(arg0) {
   const _require = arg0;
@@ -54,4 +56,4 @@ export default function useEmojiPickerViewableItemsChanged(arg0) {
     }
     return { onViewableItemsChanged };
   }, items1);
-};
+}

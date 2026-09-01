@@ -72,7 +72,17 @@ function RowButtonWrapper(experimental_withBlurBackground) {
     const result = sharedValue.set(0);
   }, items1);
   if (experimental_withBlurBackground.experimental_withBlurBackground) {
-    obj = { shadow: "none", border: "none", start: true, end: true, onPress: null, onPressIn: null, onPressOut: null, style: null, disabled: null };
+    obj = {
+      shadow: "none",
+      border: "none",
+      start: true,
+      end: true,
+      onPress: null,
+      onPressIn: null,
+      onPressOut: null,
+      style: null,
+      disabled: null,
+    };
     obj[4] = onPress;
     obj[5] = function onPressIn(arg0) {
       const onPressIn = merged.onPressIn;
@@ -88,7 +98,7 @@ function RowButtonWrapper(experimental_withBlurBackground) {
       }
       callback2();
     };
-    const items2 = [, ];
+    const items2 = [,];
     ({ card: arr3[0], cardWithBlur: arr3[1] } = tmp2);
     obj[7] = items2;
     obj[8] = disabled;
@@ -113,7 +123,13 @@ function RowButtonWrapper(experimental_withBlurBackground) {
 }
 let closure_5 = createCacheKey.createStyles(() => {
   let obj = { card: null, cardWithBlur: null };
-  obj = { padding: "y", borderTopStartRadius: "has", borderTopEndRadius: null, borderBottomStartRadius: "\u{1F60E}", borderBottomEndRadius: 6 };
+  obj = {
+    padding: "y",
+    borderTopStartRadius: "has",
+    borderTopEndRadius: null,
+    borderBottomStartRadius: "\u{1F60E}",
+    borderBottomEndRadius: 6,
+  };
   obj[1] = ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS;
   obj[2] = ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS;
   obj[3] = ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS;

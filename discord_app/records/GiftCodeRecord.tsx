@@ -9,13 +9,35 @@ import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 const require = arg1;
 toJSDefault;
-const frozen = Object.freeze({ PAYMENT_SOURCE_REQUIRED: 1, EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2, NOT_SELF_REDEEMABLE: 4 });
+const frozen = Object.freeze({
+  PAYMENT_SOURCE_REQUIRED: 1,
+  EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
+  NOT_SELF_REDEEMABLE: 4,
+});
 let GiftCodeRecord;
 class GiftCodeRecord extends tmp2 {
   constructor(arg0) {
     tmp = new GiftCodeRecord(new.target, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ userId: tmp.userId, code: tmp.code, skuId: tmp.skuId, applicationId: tmp.applicationId, uses: tmp.uses, maxUses: tmp.maxUses, expiresAt: tmp.expiresAt, redeemed: tmp.redeemed, storeListingId: tmp.storeListingId, subscriptionPlanId: tmp.subscriptionPlanId, subscriptionPlan: tmp.subscriptionPlan, revoked: tmp.revoked, entitlementBranches: tmp.entitlementBranches, flags: tmp.flags, subscriptionTrial: tmp.subscriptionTrial, promotion: tmp.promotion, giftStyle: tmp.giftStyle } = global);
+    ({
+      userId: tmp.userId,
+      code: tmp.code,
+      skuId: tmp.skuId,
+      applicationId: tmp.applicationId,
+      uses: tmp.uses,
+      maxUses: tmp.maxUses,
+      expiresAt: tmp.expiresAt,
+      redeemed: tmp.redeemed,
+      storeListingId: tmp.storeListingId,
+      subscriptionPlanId: tmp.subscriptionPlanId,
+      subscriptionPlan: tmp.subscriptionPlan,
+      revoked: tmp.revoked,
+      entitlementBranches: tmp.entitlementBranches,
+      flags: tmp.flags,
+      subscriptionTrial: tmp.subscriptionTrial,
+      promotion: tmp.promotion,
+      giftStyle: tmp.giftStyle,
+    } = global);
     return tmp;
   }
 }
@@ -66,7 +88,26 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   if (typeof GiftCodeRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp14 = new GiftCodeRecord("Trying to call a non-function", tmp11, tmp12, promotion, GiftCodeRecord, new.target, id, code, sku_id, application_id, uses, max_uses, tmp4, redeemed, id1, subscription_plan_id, fromServer, entitlement_branches);
+  const tmp14 = new GiftCodeRecord(
+    "Trying to call a non-function",
+    tmp11,
+    tmp12,
+    promotion,
+    GiftCodeRecord,
+    new.target,
+    id,
+    code,
+    sku_id,
+    application_id,
+    uses,
+    max_uses,
+    tmp4,
+    redeemed,
+    id1,
+    subscription_plan_id,
+    fromServer,
+    entitlement_branches,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp14.userId = id;
   tmp14.code = code;
@@ -100,25 +141,25 @@ Object.defineProperty(prototype, "hasMultipleCopies", {
   get: function hasMultipleCopies() {
     return this.maxUses > 1;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isClaimed", {
   get: function isClaimed() {
     return this.uses >= this.maxUses;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "remainingUses", {
   get: function remainingUses() {
     return this.maxUses - this.uses;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isSubscription", {
   get: function isSubscription() {
     return null != this.subscriptionPlanId;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "premiumSubscriptionType", {
   get: function premiumSubscriptionType() {
@@ -132,25 +173,27 @@ Object.defineProperty(prototype, "premiumSubscriptionType", {
     }
     return tmp2;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isSelfRedeemable", {
   get: function isSelfRedeemable() {
-    return !hasFlag /* hasFlag */.hasFlag(this.flags, frozen.NOT_SELF_REDEEMABLE);
+    return !hasFlag /* hasFlag */
+      .hasFlag(this.flags, frozen.NOT_SELF_REDEEMABLE);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isExistingPremiumSubscriptionDisallowed", {
   get: function isExistingPremiumSubscriptionDisallowed() {
-    return hasFlag /* hasFlag */.hasFlag(this.flags, frozen.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
+    return hasFlag /* hasFlag */
+      .hasFlag(this.flags, frozen.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "analyticsData", {
   get: function analyticsData(arg0) {
     return { gift_code: this.code, gift_code_max_uses: this.maxUses };
   },
-  set: undefined
+  set: undefined,
 });
 prototype["toString"] = function toString() {
   return this.code;

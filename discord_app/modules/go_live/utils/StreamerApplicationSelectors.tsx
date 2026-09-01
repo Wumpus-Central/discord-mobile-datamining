@@ -56,22 +56,27 @@ export const useGetStreamApplication = function useGetStreamApplication(stream) 
   const _require = stream;
   const items = [closure_3];
   const items1 = [stream];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let obj = closure_1_3;
-    let tmp2 = null;
-    if (null != closure_0) {
-      let findActivityResult = null;
-      if (null != tmp) {
-        findActivityResult = obj.findActivity(tmp.ownerId, closure_1_5);
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let obj = closure_1_3;
+      let tmp2 = null;
+      if (null != closure_0) {
+        let findActivityResult = null;
+        if (null != tmp) {
+          findActivityResult = obj.findActivity(tmp.ownerId, closure_1_5);
+        }
+        let tmp5 = null;
+        if (null != findActivityResult) {
+          obj = { id: null, name: null };
+          ({ application_id: obj2[0], name: obj2[1] } = findActivityResult);
+          tmp5 = obj;
+        }
+        tmp2 = tmp5;
       }
-      let tmp5 = null;
-      if (null != findActivityResult) {
-        obj = { id: null, name: null };
-        ({ application_id: obj2[0], name: obj2[1] } = findActivityResult);
-        tmp5 = obj;
-      }
-      tmp2 = tmp5;
-    }
-    return tmp2;
-  }, items1, streamApplicationEqualityCheck);
+      return tmp2;
+    },
+    items1,
+    streamApplicationEqualityCheck,
+  );
 };

@@ -12,11 +12,11 @@ class MessageSessionMetadataManager extends tmp2 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       MESSAGE_CREATE(arg0) {
-            return applyArgumentsResult.handleMessageCreate(arg0);
-          },
+        return applyArgumentsResult.handleMessageCreate(arg0);
+      },
       MESSAGE_UPDATE(arg0) {
-            return applyArgumentsResult.handleMessageUpdate(arg0);
-          }
+        return applyArgumentsResult.handleMessageUpdate(arg0);
+      },
     };
     return applyArgumentsResult;
   }

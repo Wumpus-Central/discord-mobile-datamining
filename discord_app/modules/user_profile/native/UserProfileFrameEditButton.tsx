@@ -12,7 +12,16 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 const PX_4 = ThemesDefault.space.PX_4;
 createCacheKey = { previewContainer: null, noneIcon: null };
-createCacheKey = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, paddingVertical: PX_4, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
+createCacheKey = {
+  height: COLLECTIBLES_PREVIEW_SIZE,
+  width: COLLECTIBLES_PREVIEW_SIZE,
+  paddingVertical: PX_4,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  justifyContent: "center",
+  alignItems: "center",
+  borderRadius: ThemesDefault.radii.xs,
+  overflow: "hidden",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
@@ -26,7 +35,8 @@ export default function UserProfileFrameEditButton(arg0) {
   let userProfileFrame;
   const tmp = callback();
   let obj = user(12530);
-  const canViewProfileFramesInCollectiblesShop = obj.useCanViewProfileFramesInCollectiblesShop("UserProfileFrameEditButton");
+  const canViewProfileFramesInCollectiblesShop =
+    obj.useCanViewProfileFramesInCollectiblesShop("UserProfileFrameEditButton");
   obj1 = user(6251);
   const items = [user(1373).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE];
   const tmp5 = userProfileFrame(obj1.useSelectedDismissibleContent(items), 2);
@@ -94,7 +104,15 @@ export default function UserProfileFrameEditButton(arg0) {
       }
     }
     if (fetchCollectiblesProduct.isFetching) {
-      obj1 = { label: null, buttonText: null, onPress: null, leading: null, loading: true, disabled: true, hideArrow: true };
+      obj1 = {
+        label: null,
+        buttonText: null,
+        onPress: null,
+        leading: null,
+        loading: true,
+        disabled: true,
+        hideArrow: true,
+      };
       const intl4 = tmp2(1236).intl;
       obj1[0] = intl4.string(tmp2(1236).t.GWrZOd);
       const intl5 = tmp2(1236).intl;
@@ -103,7 +121,14 @@ export default function UserProfileFrameEditButton(arg0) {
       obj1[3] = tmp19(tmp2(6048).ActivityIndicator, { animating: true, size: "large" });
       obj2 = obj1;
     } else {
-      obj2 = { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null };
+      obj2 = {
+        label: null,
+        labelTrailing: null,
+        buttonText: null,
+        accessibilityValue: null,
+        onPress: null,
+        leading: null,
+      };
       const intl3 = tmp2(1236).intl;
       obj2[0] = intl3.string(tmp2(1236).t.GWrZOd);
       const obj3 = { showNewBadge: null };
@@ -137,4 +162,4 @@ export default function UserProfileFrameEditButton(arg0) {
   } else {
     return null;
   }
-};
+}

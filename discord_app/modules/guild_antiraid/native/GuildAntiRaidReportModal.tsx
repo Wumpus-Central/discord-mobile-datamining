@@ -20,7 +20,16 @@ function ReportModal(onSubmit) {
   const tmp = callback4();
   dependencyMap = tmp;
   const items = [tmp];
-  closure_3 = React.useCallback((arg0) => closure_1_9(closure_1_0(formRow[8]).Text, { style: formRow.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: closure_1_7(arg0) }), items);
+  closure_3 = React.useCallback(
+    (arg0) =>
+      closure_1_9(closure_1_0(formRow[8]).Text, {
+        style: formRow.formRow,
+        variant: "text-md/semibold",
+        color: "interactive-text-active",
+        children: closure_1_7(arg0),
+      }),
+    items,
+  );
   let obj = { style: tmp.container, children: null };
   const callback = React.useCallback(() => {
     callback(formRow[9]).openURL(callback3());
@@ -28,42 +37,50 @@ function ReportModal(onSubmit) {
   obj = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.format(getSystemLocale.t.Hg8Ee7, { onClick: callback });
-  const items1 = [callback2(Text.Text, obj), , ];
+  const items1 = [callback2(Text.Text, obj), ,];
   obj = {
     style: tmp.formBody,
     children: callback2(TableRowGroupTitle.TableRowGroup, {
       hasIcons: false,
       children: closure_8.map((arg0, arg1) => {
         closure_0 = arg0;
-        return closure_1_9(closure_1_0(formRow[12]).TableCheckboxRow, {
+        return closure_1_9(
+          closure_1_0(formRow[12]).TableCheckboxRow,
+          {
+            start: 0 === arg1,
+            end: arg1 === closure_1_8.length - 1,
+            label: callback2(arg0),
+            checked: closure_0.includes(arg0),
+            onPress() {
+              return closure_1_1(closure_0);
+            },
+          },
+          arg0,
+        );
+      }),
+    }),
+  };
+  items1[1] = callback2(View, obj);
+  const obj2 = { style: items2, children: null };
+  items2 = [tmp.submitButtonContainer];
+  obj1 = {
+    hasIcons: false,
+    children: closure_8.map((arg0, arg1) => {
+      closure_0 = arg0;
+      return closure_1_9(
+        closure_1_0(formRow[12]).TableCheckboxRow,
+        {
           start: 0 === arg1,
           end: arg1 === closure_1_8.length - 1,
           label: callback2(arg0),
           checked: closure_0.includes(arg0),
           onPress() {
             return closure_1_1(closure_0);
-          }
-        }, arg0);
-      })
-    })
-  };
-  items1[1] = callback2(View, obj);
-  const obj2 = { style: items2, children: null };
-  items2 = [tmp.submitButtonContainer, ];
-  obj1 = {
-    hasIcons: false,
-    children: closure_8.map((arg0, arg1) => {
-      closure_0 = arg0;
-      return closure_1_9(closure_1_0(formRow[12]).TableCheckboxRow, {
-        start: 0 === arg1,
-        end: arg1 === closure_1_8.length - 1,
-        label: callback2(arg0),
-        checked: closure_0.includes(arg0),
-        onPress() {
-          return closure_1_1(closure_0);
-        }
-      }, arg0);
-    })
+          },
+        },
+        arg0,
+      );
+    }),
   };
   items2[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom + 16 };
   const obj4 = { size: "md", text: null, onPress: null };
@@ -75,18 +92,46 @@ function ReportModal(onSubmit) {
   obj[1] = items1;
   return callback3(View, obj);
 }
-({ getReportRaidHelpArticleURL: closure_6, getReportRaidTypeLabel: error, REPORT_RAID_OPTIONS: closure_8 } = getReportRaidHelpArticleURL);
+({
+  getReportRaidHelpArticleURL: closure_6,
+  getReportRaidTypeLabel: error,
+  REPORT_RAID_OPTIONS: closure_8,
+} = getReportRaidHelpArticleURL);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
 createCacheKey = { container: null, headerSubtitle: null, formBody: null, formRow: null, submitButtonContainer: null };
-createCacheKey = { flex: 1, paddingHorizontal: 16, paddingVertical: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 };
+createCacheKey = {
+  flex: 1,
+  paddingHorizontal: 16,
+  paddingVertical: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  flexDirection: "column",
+  height: "100%",
+  paddingTop: 8,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginTop: 8 };
 createCacheKey[2] = { marginTop: 24 };
 createCacheKey[3] = { paddingVertical: 2 };
-createCacheKey[4] = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey[4] = {
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  right: 0,
+  paddingHorizontal: 16,
+  paddingVertical: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj1 = {
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  right: 0,
+  paddingHorizontal: 16,
+  paddingVertical: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 let result = require("set").fileFinishedImporting("modules/guild_antiraid/native/GuildAntiRaidReportModal.tsx");
 
 export default function GuildAntiRaidReportModal(onCloseModal) {
@@ -129,5 +174,9 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
     obj[closure_1_11] = obj;
     return obj;
   }, items);
-  return callback2(onCloseModal(first[16]).Navigator, { screens: memo, initialRouteName: REPORT_RAID, headerStatusBarHeight: guildId(first[7])().top });
-};
+  return callback2(onCloseModal(first[16]).Navigator, {
+    screens: memo,
+    initialRouteName: REPORT_RAID,
+    headerStatusBarHeight: guildId(first[7])().top,
+  });
+}

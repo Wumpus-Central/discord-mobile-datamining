@@ -5,8 +5,7 @@ import hide_icymi_tabDefault from "LabFeatures.tsx";
 
 let closure_2 = {};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class LabFeatureStore extends DeviceSettingsStore {
-}
+class LabFeatureStore extends DeviceSettingsStore {}
 const prototype = LabFeatureStore.prototype;
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return { toggleStates: closure_2 };
@@ -45,7 +44,7 @@ LabFeatureStore.persistKey = "LabFeatureStore";
 const labFeatureStore = new LabFeatureStore(dispatcherDefault, {
   LAB_FEATURE_TOGGLE: function handleLabFeatureToggleSet(labFeature) {
     closure_2[labFeature.labFeature] = labFeature.enabled;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/labs/LabFeatureStore.tsx");
 

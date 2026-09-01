@@ -28,14 +28,18 @@ export default function GuildThemeMemberCoachmark(guildId) {
   dependencyMap = tmp;
   const items = [c5];
   const items1 = [guildId];
-  const stateFromStores = guildId(589).useStateFromStores(items, () => {
-    const stateForGuild = _undefined.getStateForGuild(guildId);
-    let tmp2;
-    if (stateForGuild != null) {
-      tmp2 = stateForGuild.allPowerups[guildId(undefined, 4368).GUILD_POWERUP_GUILD_THEME_SKU_ID];
-    }
-    return tmp2;
-  }, items1);
+  const stateFromStores = guildId(589).useStateFromStores(
+    items,
+    () => {
+      const stateForGuild = _undefined.getStateForGuild(guildId);
+      let tmp2;
+      if (stateForGuild != null) {
+        tmp2 = stateForGuild.allPowerups[guildId(undefined, 4368).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+      }
+      return tmp2;
+    },
+    items1,
+  );
   let obj = guildId(589);
   let tmp2 = guildId;
   const items2 = [guildPowerupBannerImage];
@@ -61,14 +65,29 @@ export default function GuildThemeMemberCoachmark(guildId) {
   }, items4);
   const items5 = [callback, callback1, guildPowerupBannerImage, tmp.coachmarkImage, stateFromStores1];
   const memo = stateFromStores1.useMemo(() => {
-    const obj = { title: null, description: null, visible: true, position: "bottom", offsetY: 8, onDismiss: null, renderImgComponent: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
+    const obj = {
+      title: null,
+      description: null,
+      visible: true,
+      position: "bottom",
+      offsetY: 8,
+      onDismiss: null,
+      renderImgComponent: null,
+      buttonLabel: null,
+      buttonVariant: "primary",
+      onButtonPress: null,
+    };
     const intl = guildId(1236).intl;
     obj[0] = intl.string(markAsDismissed(2401).RK6NbY);
     const intl2 = guildId(1236).intl;
     obj[1] = intl2.string(markAsDismissed(2401).xlAqGk);
     obj[5] = callback;
     obj[6] = function renderImgComponent() {
-      return closure_1_8(closure_1_1(closure_1_2[16]), { imageUrl: closure_4, isAnimated: !closure_3, style: coachmarkImage.coachmarkImage });
+      return closure_1_8(closure_1_1(closure_1_2[16]), {
+        imageUrl: closure_4,
+        isAnimated: !closure_3,
+        style: coachmarkImage.coachmarkImage,
+      });
     };
     const intl3 = guildId(1236).intl;
     obj[7] = intl3.string(guildId(1236).t.oPAx73);
@@ -78,4 +97,4 @@ export default function GuildThemeMemberCoachmark(guildId) {
   const obj3 = guildId(12084);
   const coachmark = tmp2(8973).useCoachmark(guildId.targetRef, memo);
   return null;
-};
+}

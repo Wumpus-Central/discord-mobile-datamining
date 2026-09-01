@@ -25,7 +25,7 @@ function _updateAssets() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const table = tmp2;
       body = tmp5;
       const HTTP = callback(closure_1_2[6]).HTTP;
@@ -77,7 +77,7 @@ function _getAssets() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_1 = tmp2;
       assets = yield closure_1_15(assets);
       if (assets != null) {
@@ -103,7 +103,7 @@ function _resolveExternalAssets() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c9 === 2) {
         c9 = 3;
         HermesBuiltin.throwTypeError();
@@ -231,20 +231,22 @@ function _resolveExternalAssets() {
 }
 function updateUrlAssetIds(arr) {
   let num = 0;
-  if (arr.filter((str) => {
-    let startsWithResult;
-    if (str != null) {
-      startsWithResult = str.startsWith("http:");
-    }
-    if (!startsWithResult) {
-      let startsWithResult1;
+  if (
+    arr.filter((str) => {
+      let startsWithResult;
       if (str != null) {
-        startsWithResult1 = str.startsWith("https:");
+        startsWithResult = str.startsWith("http:");
       }
-      startsWithResult = startsWithResult1;
-    }
-    return startsWithResult;
-  }).length > 0) {
+      if (!startsWithResult) {
+        let startsWithResult1;
+        if (str != null) {
+          startsWithResult1 = str.startsWith("https:");
+        }
+        startsWithResult = startsWithResult1;
+      }
+      return startsWithResult;
+    }).length > 0
+  ) {
     let num3 = 0;
     let num4 = 0;
     num = 0;
@@ -332,7 +334,7 @@ function _fetchAssetIds() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -500,11 +502,19 @@ let obj = {
   },
   serialize(arg0) {
     return arg0.split(c8)[1];
-  }
+  },
 };
 obj = {
   deserialize(arg0, arg1) {
-    return "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + encodeURIComponent(arg0) + "-" + arg1[0] + "x" + arg1[1] + ".jpg";
+    return (
+      "https://static-cdn.jtvnw.net/previews-ttv/live_user_" +
+      encodeURIComponent(arg0) +
+      "-" +
+      arg1[0] +
+      "x" +
+      arg1[1] +
+      ".jpg"
+    );
   },
   serialize(str) {
     const match = str.match(closure_9);
@@ -513,7 +523,7 @@ obj = {
       tmp2 = match[1];
     }
     return tmp2;
-  }
+  },
 };
 obj = {
   deserialize(arg0) {
@@ -526,7 +536,7 @@ obj = {
       tmp2 = match[1];
     }
     return tmp2;
-  }
+  },
 };
 let closure_11 = {
   [PlatformTypes.SPOTIFY]: obj,
@@ -571,8 +581,8 @@ let closure_11 = {
     },
     serialize(arg0) {
       return arg0;
-    }
-  }
+    },
+  },
 };
 const map = new Map();
 let result = require("set").fileFinishedImporting("utils/ApplicationAssetUtils.tsx");
@@ -638,10 +648,30 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
         const _location = location;
         const _window2 = window;
         const _HermesInternal2 = HermesInternal;
-        let combined = "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/app-assets/" + application_id + "/" + media_assets_large_image + "." + str + str4;
+        let combined =
+          "" +
+          location.protocol +
+          "//" +
+          window.GLOBAL_ENV.CDN_HOST +
+          "/app-assets/" +
+          application_id +
+          "/" +
+          media_assets_large_image +
+          "." +
+          str +
+          str4;
       } else {
         const _HermesInternal = HermesInternal;
-        combined = "" + sendRequest.getAPIBaseURL() + "/applications/" + application_id + "/app-assets/" + media_assets_large_image + "." + str + str4;
+        combined =
+          "" +
+          sendRequest.getAPIBaseURL() +
+          "/applications/" +
+          application_id +
+          "/app-assets/" +
+          media_assets_large_image +
+          "." +
+          str +
+          str4;
         const obj = sendRequest;
       }
       return combined;
@@ -653,20 +683,22 @@ export { fetchAssetIds };
 export const getAssetIds = function getAssetIds(id, closure_11) {
   const items = [];
   let num = 0;
-  if (closure_11.filter((str) => {
-    let startsWithResult;
-    if (str != null) {
-      startsWithResult = str.startsWith("http:");
-    }
-    if (!startsWithResult) {
-      let startsWithResult1;
+  if (
+    closure_11.filter((str) => {
+      let startsWithResult;
       if (str != null) {
-        startsWithResult1 = str.startsWith("https:");
+        startsWithResult = str.startsWith("http:");
       }
-      startsWithResult = startsWithResult1;
-    }
-    return startsWithResult;
-  }).length > 0) {
+      if (!startsWithResult) {
+        let startsWithResult1;
+        if (str != null) {
+          startsWithResult1 = str.startsWith("https:");
+        }
+        startsWithResult = startsWithResult1;
+      }
+      return startsWithResult;
+    }).length > 0
+  ) {
     let num3 = 0;
     let num4 = 0;
     num = 0;

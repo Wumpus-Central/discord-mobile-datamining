@@ -8,15 +8,23 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 ({ PremiumTypes: c4, SubscriptionPlanInfo: c5 } = GuildFeatures);
 ({ AnalyticEvents: closure_6, AnalyticsObjectTypes, AnalyticsPages, AnalyticsSections } = ME);
-let closure_9 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_PREMIUM, objectType: AnalyticsObjectTypes.BUY };
-const result = require("set").fileFinishedImporting("modules/premium/native/discounts/PremiumDiscountOfferActionSheet.tsx");
+let closure_9 = {
+  page: AnalyticsPages.USER_SETTINGS,
+  section: AnalyticsSections.SETTINGS_PREMIUM,
+  objectType: AnalyticsObjectTypes.BUY,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/premium/native/discounts/PremiumDiscountOfferActionSheet.tsx",
+);
 
 export default function _default(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   const userDiscountOffer = markAsDismissed.userDiscountOffer;
   let analyticsLocations;
   let memo;
-  analyticsLocations = userDiscountOffer(analyticsLocations[5])(userDiscountOffer(analyticsLocations[6]).PREMIUM_DISCOUNT_OFFER_ACTION_SHEET).analyticsLocations;
+  analyticsLocations = userDiscountOffer(analyticsLocations[5])(
+    userDiscountOffer(analyticsLocations[6]).PREMIUM_DISCOUNT_OFFER_ACTION_SHEET,
+  ).analyticsLocations;
   const items = [userDiscountOffer];
   memo = memo.useMemo(() => {
     let first;
@@ -88,4 +96,4 @@ export default function _default(markAsDismissed) {
     const tmp10 = jsx;
   }
   return tmp10Result;
-};
+}

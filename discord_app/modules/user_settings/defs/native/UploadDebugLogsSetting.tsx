@@ -10,7 +10,7 @@ import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx"
 require = arg1;
 function _handleUploadDebugLogSettingPress() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -60,7 +60,10 @@ function _handleUploadDebugLogSettingPress() {
           c3 = 0;
           (function onUploadDebugLogsRequestFinish() {
             tmp4(tmp31[5]).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
-            const timerId = setTimeout(() => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
+            const timerId = setTimeout(
+              () => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })),
+              5000,
+            );
           })();
           throw dependencyMap;
         } else {
@@ -75,7 +78,10 @@ function _handleUploadDebugLogSettingPress() {
             c3 = 0;
             (function onUploadDebugLogsRequestFinish() {
               tmp4(tmp31[5]).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
-              const timerId = setTimeout(() => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
+              const timerId = setTimeout(
+                () => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })),
+                5000,
+              );
             })();
             c5 = 3;
           } else if (arg0 === 1) {
@@ -93,7 +99,10 @@ function _handleUploadDebugLogSettingPress() {
           c3 = 0;
           (function onUploadDebugLogsRequestFinish() {
             tmp4(tmp31[5]).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
-            const timerId = setTimeout(() => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
+            const timerId = setTimeout(
+              () => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })),
+              5000,
+            );
           })();
           c5 = 3;
           obj = { value: null, done: true };
@@ -149,7 +158,7 @@ keys = {
   },
   useIsDisabled: function useIsUploadDebugLogsDisabled() {
     return callback2().isDisabled;
-  }
+  },
 };
 keys = createToggle.createPressable(keys);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/UploadDebugLogsSetting.tsx");

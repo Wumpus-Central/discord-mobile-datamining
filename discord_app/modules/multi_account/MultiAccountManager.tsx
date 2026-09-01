@@ -13,11 +13,11 @@ class MultiAccountManager extends tmp2 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       LOGOUT(arg0) {
-            return applyArgumentsResult.handleLogout(arg0);
-          },
+        return applyArgumentsResult.handleLogout(arg0);
+      },
       MULTI_ACCOUNT_SWITCH_START(targetUserId) {
-            return applyArgumentsResult.handleMultiAccountSwitchStart(targetUserId);
-          }
+        return applyArgumentsResult.handleMultiAccountSwitchStart(targetUserId);
+      },
     };
     applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
       let switchResult = closure_1_4.getSwitchResult();

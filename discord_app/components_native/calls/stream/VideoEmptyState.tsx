@@ -12,10 +12,21 @@ noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let obj = { NONE: "NONE", STREAM_ENDED: "STREAM_ENDED", STREAM_FAILED: "STREAM_FAILED" };
 obj = { container: null, placeholderImage: null, placeholderText: null, buttonWrapper: null, buttonPill: null };
-obj = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_700, padding: 8 };
+obj = {
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_700,
+  padding: 8,
+};
 obj[0] = obj;
 obj[1] = { marginBottom: 8, width: "100%", resizeMode: "contain" };
-createCacheKey = { color: ThemesDefault.unsafe_rawColors.WHITE, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, fontSize: 16, lineHeight: 20, textAlign: "center" };
+createCacheKey = {
+  color: ThemesDefault.unsafe_rawColors.WHITE,
+  fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD,
+  fontSize: 16,
+  lineHeight: 20,
+  textAlign: "center",
+};
 obj[2] = createCacheKey;
 obj[3] = { marginTop: 16, alignSelf: "center" };
 obj[4] = { borderRadius: ThemesDefault.radii.round };
@@ -36,7 +47,7 @@ export default function VideoEmptyState(style) {
       tmp16 = callback(stream(9567).StreamEnded, obj);
     }
     obj = { children: null };
-    const items = [tmp16, ];
+    const items = [tmp16];
     obj1 = { style: null, children: null };
     obj1[0] = tmp2.placeholderText;
     const intl2 = stream(1236).intl;
@@ -54,7 +65,7 @@ export default function VideoEmptyState(style) {
       tmp7 = callback(stream(9570).StreamFailed, obj);
     }
     let obj2 = { children: null };
-    const items1 = [tmp7, ];
+    const items1 = [tmp7];
     let obj3 = { style: null, children: null };
     obj3[0] = tmp2.placeholderText;
     const intl = stream(1236).intl;
@@ -96,7 +107,7 @@ export default function VideoEmptyState(style) {
   const merged1 = Object.assign(merged);
   const items4 = [tmp2.container, style.style];
   obj4.style = items4;
-  const items5 = [tmp5Result, , ];
+  const items5 = [tmp5Result, ,];
   let tmp34 = null != errorCode;
   if (tmp34) {
     const obj5 = { variant: "text-sm/semibold", color: "text-muted", selectable: true, children: null };
@@ -125,5 +136,5 @@ export default function VideoEmptyState(style) {
   items5[2] = tmp36;
   obj4.children = items5;
   return closure_7(View, obj4);
-};
+}
 export const VideoEmptyTypes = obj;

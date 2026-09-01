@@ -5,7 +5,9 @@ import closure_5 from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 const result = require("MAX_RESULTS_PER_PAGE").MAX_RESULTS_PER_PAGE * require("MAX_RESULTS_PER_PAGE").MAX_VISIBLE_PAGES;
-const result1 = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/usePaginatedMemberApplications.tsx");
+const result1 = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/hooks/usePaginatedMemberApplications.tsx",
+);
 
 export const MEMBER_APPLICATION_FETCH_LIMIT = result;
 export const usePaginatedMemberApplications = function usePaginatedMemberApplications(guildId) {
@@ -30,7 +32,7 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -81,34 +83,40 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
                   obj1[0] = lib;
                   obj1[1] = tmp69;
                   obj1[2] = closure_6;
-                  const merged = Object.assign((function getRequestPaginationParams(closure_0, aPIError, arg2, arg3, flag) {
-                    const tmp2 = arg3 === callback(4302).GuildJoinRequestApplicationStatuses.SUBMITTED;
-                    if (arg2 === callback(4302).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
-                      if (!flag) {
-                        if (0 !== aPIError.length) {
-                          let obj = { before: null };
-                          obj[0] = tmp2 ? aPIError[aPIError.length - 1].joinRequestId : aPIError[aPIError.length - 1].actionedAt;
-                          return obj;
+                  const merged = Object.assign(
+                    (function getRequestPaginationParams(closure_0, aPIError, arg2, arg3, flag) {
+                      const tmp2 = arg3 === callback(4302).GuildJoinRequestApplicationStatuses.SUBMITTED;
+                      if (arg2 === callback(4302).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
+                        if (!flag) {
+                          if (0 !== aPIError.length) {
+                            let obj = { before: null };
+                            obj[0] = tmp2
+                              ? aPIError[aPIError.length - 1].joinRequestId
+                              : aPIError[aPIError.length - 1].actionedAt;
+                            return obj;
+                          }
                         }
-                      }
-                      obj = { before: null };
-                      const _Date = Date;
-                      const date = new Date();
-                      obj[0] = _undefined(11).fromTimestamp(date.getTime());
-                      return obj;
-                    } else {
-                      if (!flag) {
-                        if (0 !== aPIError.length) {
-                          obj = { after: null };
-                          obj[0] = tmp2 ? aPIError[aPIError.length - 1].joinRequestId : aPIError[aPIError.length - 1].actionedAt;
-                          return obj;
+                        obj = { before: null };
+                        const _Date = Date;
+                        const date = new Date();
+                        obj[0] = _undefined(11).fromTimestamp(date.getTime());
+                        return obj;
+                      } else {
+                        if (!flag) {
+                          if (0 !== aPIError.length) {
+                            obj = { after: null };
+                            obj[0] = tmp2
+                              ? aPIError[aPIError.length - 1].joinRequestId
+                              : aPIError[aPIError.length - 1].actionedAt;
+                            return obj;
+                          }
                         }
+                        obj1 = { after: null };
+                        obj1[0] = closure_0;
+                        return obj1;
                       }
-                      obj1 = { after: null };
-                      obj1[0] = closure_0;
-                      return obj1;
-                    }
-                  })(lib, aPIError, tmp68, tmp69, flag));
+                    })(lib, aPIError, tmp68, tmp69, flag),
+                  );
                   ref3 = 3;
                   c7 = 1;
                   const obj2 = { value: null, done: false };
@@ -165,7 +173,7 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
   });
   const items = [first, guildId, guildJoinRequests];
   return {
-    fetchNextPage: React.useCallback(function() {
+    fetchNextPage: React.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -175,6 +183,6 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
       }
       return applyArgumentsResult;
     }, items),
-    error: first
+    error: first,
   };
 };

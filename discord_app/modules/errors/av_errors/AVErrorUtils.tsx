@@ -18,7 +18,10 @@ export const getReportInboundErrors = function getReportInboundErrors() {
   }
   return result;
 };
-export const getAccumulatedStatsWithMinDatapoints = function getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId) {
+export const getAccumulatedStatsWithMinDatapoints = function getAccumulatedStatsWithMinDatapoints(
+  mediaEngineConnectionId,
+  ownerId,
+) {
   let num = arg2;
   if (arg2 === undefined) {
     num = 15;

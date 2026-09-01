@@ -31,7 +31,7 @@ export default function useSelectStage() {
     c3 = 0;
     c6 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_2 = tmp3;
       c5 = 1;
       if (closure_1 === closure_1) {
@@ -65,7 +65,7 @@ export default function useSelectStage() {
   const items2 = [first];
   const items3 = [
     first,
-    React.useCallback(function() {
+    React.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -74,7 +74,7 @@ export default function useSelectStage() {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    }, items2)
+    }, items2),
   ];
   return items3;
-};
+}

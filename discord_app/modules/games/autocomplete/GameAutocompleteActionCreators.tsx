@@ -11,7 +11,7 @@ function _fetchGameAutocomplete() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();

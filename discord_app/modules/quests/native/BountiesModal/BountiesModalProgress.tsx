@@ -17,13 +17,41 @@ let closure_9 = createCacheKey.createStyles(() => {
   obj.backgroundColor = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
   obj.opacity = 0.54;
   obj[1] = obj;
-  obj = { position: "absolute", height: "100%", left: 0, bottom: 0, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_300, shadowOffset: { width: 0, height: 0 }, shadowRadius: 8, shadowOpacity: 1, elevation: 4, shadowColor: "#30C773" };
+  obj = {
+    position: "absolute",
+    height: "100%",
+    left: 0,
+    bottom: 0,
+    borderRadius: ThemesDefault.radii.round,
+    backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_300,
+    shadowOffset: { width: 0, height: 0 },
+    shadowRadius: 8,
+    shadowOpacity: 1,
+    elevation: 4,
+    shadowColor: "#30C773",
+  };
   obj[2] = obj;
-  obj[3] = { position: "absolute", height: "100%", left: 0, bottom: 0, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_300, shadowOffset: { width: 0, height: 0 }, shadowRadius: 12, shadowOpacity: 1, elevation: 8, shadowColor: ThemesDefault.unsafe_rawColors.GREEN_300 };
+  obj[3] = {
+    position: "absolute",
+    height: "100%",
+    left: 0,
+    bottom: 0,
+    borderRadius: ThemesDefault.radii.round,
+    backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_300,
+    shadowOffset: { width: 0, height: 0 },
+    shadowRadius: 12,
+    shadowOpacity: 1,
+    elevation: 8,
+    shadowColor: ThemesDefault.unsafe_rawColors.GREEN_300,
+  };
   return obj;
 });
-let closure_10 = { code: "function BountiesModalProgressTsx1(){const{withTiming,visible,timingFast}=this.__closure;return{opacity:withTiming(visible?1:0,timingFast)};}" };
-let closure_11 = { code: "function BountiesModalProgressTsx2(){const{withTiming,progress,shouldSkipAnimation,timingNone,timingFast}=this.__closure;return{width:withTiming(progress*100+\"%\",shouldSkipAnimation?timingNone:timingFast,'animate-always')};}" };
+let closure_10 = {
+  code: "function BountiesModalProgressTsx1(){const{withTiming,visible,timingFast}=this.__closure;return{opacity:withTiming(visible?1:0,timingFast)};}",
+};
+let closure_11 = {
+  code: "function BountiesModalProgressTsx2(){const{withTiming,progress,shouldSkipAnimation,timingNone,timingFast}=this.__closure;return{width:withTiming(progress*100+\"%\",shouldSkipAnimation?timingNone:timingFast,'animate-always')};}",
+};
 let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalProgress.tsx");
 
 export default function BountiesModalProgress(progress) {
@@ -68,7 +96,13 @@ export default function BountiesModalProgress(progress) {
       return obj;
     }
   }
-  obj = { withTiming: progress(first[7]).withTiming, progress, shouldSkipAnimation: first, timingNone: progress(first[8]).timingNone, timingFast: progress(first[8]).timingFast };
+  obj = {
+    withTiming: progress(first[7]).withTiming,
+    progress,
+    shouldSkipAnimation: first,
+    timingNone: progress(first[8]).timingNone,
+    timingFast: progress(first[8]).timingFast,
+  };
   B.__closure = obj;
   B.__workletHash = 15586067343237;
   B.__initData = closure_11;
@@ -76,12 +110,12 @@ export default function BountiesModalProgress(progress) {
   obj1 = { style: items, children: null };
   items = [tmp.progressContainer, progress.style, animatedStyle];
   obj2 = { style: tmp.progressTrack };
-  const items1 = [callback2(closure_6, obj2), , ];
+  const items1 = [callback2(closure_6, obj2), ,];
   const items2 = [tmp.progressBarGlowLayer, animatedStyle1];
   items1[1] = callback2(visible(first[6]).View, { style: items2 });
   const items3 = [tmp.progressBar, animatedStyle1];
   items1[2] = callback2(visible(first[6]).View, { style: items3 });
   obj1[1] = items1;
   return callback3(visible(first[6]).View, obj1);
-};
+}
 export const PROGRESS_BAR_HEIGHT = 4;

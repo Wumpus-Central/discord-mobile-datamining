@@ -29,7 +29,9 @@ const Image = get_ActivityIndicator.Image;
 const CodedLinkExtendedType = CodedLinkExtendedType2.CodedLinkExtendedType;
 ({ HelpdeskArticles: closure_14, ChannelTypes: closure_15, GuildFeatures: closure_16 } = ME);
 ({ InviteTargetTypes: closure_17, InviteTypes: closure_18 } = InviteSendStates);
-const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildInvite.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildInvite.tsx",
+);
 
 export const createResolvingGuildInvite = function createResolvingGuildInvite(closure_2) {
   const tmp = getEmbedThemeColorsDefault(closure_2);
@@ -387,7 +389,10 @@ export const createGuildInvite = function createGuildInvite(invite, isOwnInvite,
     const tmp28 = formatToPlainStringResult1;
   }
   if (tmp7) {
-    ({ acceptLabelGreenColor: acceptLabelGreenColor2, acceptLabelGreenBackgroundColor: acceptLabelGreenBackgroundColor2 } = colors);
+    ({
+      acceptLabelGreenColor: acceptLabelGreenColor2,
+      acceptLabelGreenBackgroundColor: acceptLabelGreenBackgroundColor2,
+    } = colors);
     const intl7 = tmp10(1236).intl;
     const string = intl7.string;
     if (flag) {
@@ -397,7 +402,10 @@ export const createGuildInvite = function createGuildInvite(invite, isOwnInvite,
     }
   } else {
     if (tmp23) {
-      ({ acceptLabelDisabledColor: acceptLabelGreenColor, acceptLabelDisabledBackgroundColor: acceptLabelGreenBackgroundColor } = colors);
+      ({
+        acceptLabelDisabledColor: acceptLabelGreenColor,
+        acceptLabelDisabledBackgroundColor: acceptLabelGreenBackgroundColor,
+      } = colors);
       const intl6 = tmp10(1236).intl;
       let stringResult1 = intl6.string(tmp10(1236).t.cEnaWx);
     } else {

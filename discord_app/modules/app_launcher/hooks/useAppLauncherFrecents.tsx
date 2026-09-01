@@ -56,7 +56,10 @@ function useFrecentApps(onlyActivityApps) {
     return items;
   }, items3);
   let obj2 = context(stateFromStores[8]);
-  sortApplicationsViaFrecency = context(stateFromStores[11]).useSortApplicationsViaFrecency(found, stateFromStoresArray);
+  sortApplicationsViaFrecency = context(stateFromStores[11]).useSortApplicationsViaFrecency(
+    found,
+    stateFromStoresArray,
+  );
   const obj3 = context(stateFromStores[11]);
   const items4 = [stateFromStores1];
   stateFromStores1 = context(stateFromStores[8]).useStateFromStores(items4, () => {
@@ -85,7 +88,8 @@ function useFrecentApps(onlyActivityApps) {
           obj = closure_1_0(closure_1_3[13]);
         }
         if (isEmbeddedAppResult) {
-          isEmbeddedAppResult = null != closure_1_0(closure_1_3[14]).queryForPrimaryAppCommand(closure_0, application.id);
+          isEmbeddedAppResult =
+            null != closure_1_0(closure_1_3[14]).queryForPrimaryAppCommand(closure_0, application.id);
           const obj2 = closure_1_0(closure_1_3[14]);
         }
         return isEmbeddedAppResult;
@@ -101,7 +105,10 @@ function useFrecentApps(onlyActivityApps) {
 }
 const BuiltInSectionId = TRUE_OPTION_NAME.BuiltInSectionId;
 let obj = { commandTypes: null };
-let items = [require("PermissionOverwriteType").ApplicationCommandType.CHAT, require("PermissionOverwriteType").ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [
+  require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  require("PermissionOverwriteType").ApplicationCommandType.PRIMARY_ENTRY_POINT,
+];
 obj[0] = items;
 let closure_12 = { placeholderCount: 0, limit: TRUE_OPTION_NAME.DISCOVERY_COMMANDS_QUERY_LIMIT, includeFrecency: true };
 const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useAppLauncherFrecents.tsx");
@@ -123,7 +130,9 @@ export default function useAppLauncherFrecentCommandsAndApps(arg0) {
     filterSection(closure_1_10.FRECENCY);
   }, items);
   const items1 = [closure_8];
-  stateFromStores = onlyActivityApps(filterSection[8]).useStateFromStores(items1, () => lastUsedCommandId.getLastUsedCommandId());
+  stateFromStores = onlyActivityApps(filterSection[8]).useStateFromStores(items1, () =>
+    lastUsedCommandId.getLastUsedCommandId(),
+  );
   obj = {
     loading: discovery.loading,
     frecencyCommands: stateFromStores.useMemo(() => {
@@ -142,18 +151,21 @@ export default function useAppLauncherFrecentCommandsAndApps(arg0) {
         let tmp6 = data;
         if (null != found) {
           const items = [found];
-          HermesBuiltin.arraySpread(data.filter((id) => id.id !== closure_4), 1);
+          HermesBuiltin.arraySpread(
+            data.filter((id) => id.id !== closure_4),
+            1,
+          );
           tmp6 = items;
         }
         return tmp6;
       }
     }, items2),
     frecentApps: useFrecentApps({ sectionDescriptors, context, onlyActivityApps, includeAuthorizedAppsAndFetch: true }),
-    sectionDescriptors
+    sectionDescriptors,
   };
   items2 = [commands, commandsByActiveSection, stateFromStores, onlyActivityApps];
   return obj;
-};
+}
 export const useAppLauncherFrecentApps = function useAppLauncherFrecentApps(context) {
   context = context.context;
   ({ onlyActivityApps, allowCommandFetch, includeAuthorizedAppsAndFetch } = context);

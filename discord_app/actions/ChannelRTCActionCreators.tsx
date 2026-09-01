@@ -78,7 +78,13 @@ export default {
   },
   jumpToVoiceChannelMessage(voiceGuildId2, voiceChannelId2, voiceMessageId2, jumpType) {
     let obj = dispatcherDefault;
-    obj = { type: "CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE", guildId: voiceGuildId2, channelId: voiceChannelId2, messageId: voiceMessageId2, jumpType };
+    obj = {
+      type: "CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE",
+      guildId: voiceGuildId2,
+      channelId: voiceChannelId2,
+      messageId: voiceMessageId2,
+      jumpType,
+    };
     obj.dispatch(obj);
-  }
+  },
 };

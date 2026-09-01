@@ -5,7 +5,9 @@ import closure_5 from "../../../stores/ConnectedAccountsStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/application_account_linking/hooks/useProviderConnection.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/application_account_linking/hooks/useProviderConnection.tsx",
+);
 
 export const useProviderConnection = function useProviderConnection(provider_id) {
   let _require = provider_id;
@@ -20,7 +22,10 @@ export const useProviderConnection = function useProviderConnection(provider_id)
   });
   const items1 = [closure_5];
   let tmp3 = null != stateFromStores;
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => fetching.isFetching());
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => fetching.isFetching(),
+  );
   if (tmp3) {
     tmp3 = !stateFromStores.revoked;
   }
@@ -30,7 +35,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
     c3 = 0;
     c6 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -128,7 +133,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
     loading: stateFromStores1,
     hasConnection: tmp3,
     canConnect: null != provider_id,
-    startConnection: React.useCallback(function() {
+    startConnection: React.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -138,7 +143,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
       }
       return applyArgumentsResult;
     }, items2),
-    account: stateFromStores
+    account: stateFromStores,
   };
   return obj;
 };

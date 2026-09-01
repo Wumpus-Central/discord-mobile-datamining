@@ -90,7 +90,12 @@ class MessageRecord extends MinimalMessageRecord {
   constructor(arg0) {
     tmp2 = new MessageRecord(global, new.target, tmp, global, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ id: tmp2.id, channel_id: tmp2.channel_id, author: tmp2.author, customRenderedContent: tmp2.customRenderedContent } = global);
+    ({
+      id: tmp2.id,
+      channel_id: tmp2.channel_id,
+      author: tmp2.author,
+      customRenderedContent: tmp2.customRenderedContent,
+    } = global);
     tmp2.mentions = global.mentions || [];
     tmp2.mentionRoles = global.mentionRoles || [];
     tmp2.mentionChannels = global.mentionChannels || [];
@@ -125,7 +130,11 @@ class MessageRecord extends MinimalMessageRecord {
     tmp2.interactionData = global.interactionData || null;
     tmp2.interactionMetadata = global.interactionMetadata || null;
     tmp2.interactionError = global.interactionError || null;
-    ({ roleSubscriptionData: tmp2.roleSubscriptionData, purchaseNotification: tmp2.purchaseNotification, poll: tmp2.poll } = global);
+    ({
+      roleSubscriptionData: tmp2.roleSubscriptionData,
+      purchaseNotification: tmp2.purchaseNotification,
+      poll: tmp2.poll,
+    } = global);
     tmp2.sharedClientTheme = global.shared_client_theme || global.sharedClientTheme;
     tmp2.referralTrialOfferId = global.referralTrialOfferId || null;
     tmp2.premiumGroupInviteId = global.premiumGroupInviteId || null;
@@ -339,21 +348,46 @@ prototype["addReaction"] = function addReaction(arg0) {
   });
   if (-1 === c5) {
     if (NORMAL === _require(colors[5]).ReactionTypes.BURST) {
-      obj = { emoji: null, me: false, me_burst: null, count: 0, count_details: null, burst_count: 1, burst_colors: null };
+      obj = {
+        emoji: null,
+        me: false,
+        me_burst: null,
+        count: 0,
+        count_details: null,
+        burst_count: 1,
+        burst_colors: null,
+      };
       obj[0] = arg0;
       obj[2] = flag;
       obj[4] = { burst: 1, normal: 0 };
       obj[6] = colors;
       mapped.push(obj);
     } else if (NORMAL === tmp7(tmp8[5]).ReactionTypes.VOTE) {
-      obj = { emoji: null, me: false, me_burst: false, me_vote: null, count: 0, count_details: null, burst_count: 0, burst_colors: null };
+      obj = {
+        emoji: null,
+        me: false,
+        me_burst: false,
+        me_vote: null,
+        count: 0,
+        count_details: null,
+        burst_count: 0,
+        burst_colors: null,
+      };
       obj[0] = arg0;
       obj[3] = flag;
       obj[5] = { burst: 0, normal: 0, vote: 1 };
       obj[7] = [];
       mapped.push(obj);
     } else {
-      obj1 = { emoji: null, me: null, me_burst: false, count: 1, count_details: null, burst_count: 0, burst_colors: null };
+      obj1 = {
+        emoji: null,
+        me: null,
+        me_burst: false,
+        count: 1,
+        count_details: null,
+        burst_count: 0,
+        burst_colors: null,
+      };
       obj1[0] = arg0;
       obj1[1] = flag;
       obj1[4] = { burst: 0, normal: 1 };
@@ -369,7 +403,10 @@ prototype["addReactionBatch"] = function addReactionBatch(reactions, id) {
   closure_0 = id;
   return reactions.reduce((arg0, arg1) => {
     ({ users, emoji: closure_0, reactionType: closure_1 } = arg1);
-    return users.reduce((addReaction) => addReaction.addReaction(closure_0, arg1 === closure_1_0, { reactionType: closure_1 }), arg0);
+    return users.reduce(
+      (addReaction) => addReaction.addReaction(closure_0, arg1 === closure_1_0, { reactionType: closure_1 }),
+      arg0,
+    );
   }, this);
 };
 prototype["removeReaction"] = function removeReaction(arg0) {
@@ -510,7 +547,10 @@ prototype["removeReaction"] = function removeReaction(arg0) {
 prototype["removeReactionsForEmoji"] = function removeReactionsForEmoji(emoji) {
   closure_0 = emoji;
   ({ reactions, set } = this);
-  return set("reactions", reactions.filter((emoji) => !emoji(closure_1_2[3]).emojiEquals(emoji.emoji, emoji)));
+  return set(
+    "reactions",
+    reactions.filter((emoji) => !emoji(closure_1_2[3]).emojiEquals(emoji.emoji, emoji)),
+  );
 };
 prototype["isSystemDM"] = function isSystemDM() {
   const author = this.author;
@@ -584,13 +624,17 @@ const prototype2 = function MessageSnapshotRecord(message) {
   tmp3.moderatorReport = moderator_report;
   return tmp3;
 }.prototype;
-class prototype2 extends tmp2 {
-}
+class prototype2 extends tmp2 {}
 
 export default MessageRecord;
 export { MinimalMessageRecord };
 export const ModeratorReport = function ModeratorReport(arg0) {
-  ({ reporting_user_id: tmp.reporting_user_id, reported_user_id: tmp.reported_user_id, reporting_member: tmp.reporting_member, reported_member: tmp.reported_member } = arg0);
+  ({
+    reporting_user_id: tmp.reporting_user_id,
+    reported_user_id: tmp.reported_user_id,
+    reporting_member: tmp.reporting_member,
+    reported_member: tmp.reported_member,
+  } = arg0);
   return Object.create(new.target.prototype);
 }.prototype;
 export const MessageSnapshotRecord = prototype2;

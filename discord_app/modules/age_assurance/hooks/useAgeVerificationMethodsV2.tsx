@@ -8,24 +8,42 @@ const require = arg1;
 let result = require("set").fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethodsV2.tsx");
 
 export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2() {
-  [tmp2, closure_0] = callback2(React.useState(() => {
-    let methodsV2 = callback.methodsV2;
-    if (methodsV2 == null) {
-      methodsV2 = [];
-    }
-    return methodsV2;
-  }), 2);
-  const tmp = callback2(React.useState(() => {
-    let methodsV2 = callback.methodsV2;
-    if (methodsV2 == null) {
-      methodsV2 = [];
-    }
-    return methodsV2;
-  }), 2);
-  [tmp4, importDefault] = callback2(React.useState(() => callback.methodsV2FooterMessage), 2);
-  const tmp3 = callback2(React.useState(() => callback.methodsV2FooterMessage), 2);
-  [tmp6, dependencyMap] = callback2(React.useState(() => callback.methodsV2OutageBannerMessage), 2);
-  const tmp7 = callback2(React.useState(() => null == callback.methodsV2), 2);
+  [tmp2, closure_0] = callback2(
+    React.useState(() => {
+      let methodsV2 = callback.methodsV2;
+      if (methodsV2 == null) {
+        methodsV2 = [];
+      }
+      return methodsV2;
+    }),
+    2,
+  );
+  const tmp = callback2(
+    React.useState(() => {
+      let methodsV2 = callback.methodsV2;
+      if (methodsV2 == null) {
+        methodsV2 = [];
+      }
+      return methodsV2;
+    }),
+    2,
+  );
+  [tmp4, importDefault] = callback2(
+    React.useState(() => callback.methodsV2FooterMessage),
+    2,
+  );
+  const tmp3 = callback2(
+    React.useState(() => callback.methodsV2FooterMessage),
+    2,
+  );
+  [tmp6, dependencyMap] = callback2(
+    React.useState(() => callback.methodsV2OutageBannerMessage),
+    2,
+  );
+  const tmp7 = callback2(
+    React.useState(() => null == callback.methodsV2),
+    2,
+  );
   let callback = tmp7[1];
   const tmp8 = callback2(React.useState(false), 2);
   callback2 = tmp8[1];
@@ -36,7 +54,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -142,7 +160,12 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
               }
               lib = arg1;
               obj1 = closure_2_1(closure_2_2[6]);
-              obj5 = { type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: null, footerMessage: null, outageBannerMessage: null };
+              obj5 = {
+                type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS",
+                methods: null,
+                footerMessage: null,
+                outageBannerMessage: null,
+              };
               obj5[1] = lib.methods;
               obj5[2] = lib.footerMessage;
               obj5[3] = lib.outageBannerMessage;
@@ -175,7 +198,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
       }
     })();
   });
-  callback = React.useCallback(function() {
+  callback = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -193,7 +216,10 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
       closure_5.current = false;
     };
   }, items);
-  const tmp5 = callback2(React.useState(() => callback.methodsV2OutageBannerMessage), 2);
+  const tmp5 = callback2(
+    React.useState(() => callback.methodsV2OutageBannerMessage),
+    2,
+  );
   const items1 = [callback];
   return {
     loading: tmp7[0],
@@ -203,6 +229,6 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
     outageBannerMessage: tmp6,
     refetch: React.useCallback(() => {
       callback(true);
-    }, items1)
+    }, items1),
   };
 };

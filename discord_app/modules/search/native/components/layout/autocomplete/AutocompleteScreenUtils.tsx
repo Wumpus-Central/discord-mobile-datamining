@@ -11,7 +11,9 @@ import { SearchListItemTypes } from "../../../../SearchConstants.tsx";
 import { RelationshipTypes } from "../../../../../../Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx",
+);
 
 export const getSearchQueryChannelIds = function getSearchQueryChannelIds(items) {
   return new Set(store2.getChannelIds(items));

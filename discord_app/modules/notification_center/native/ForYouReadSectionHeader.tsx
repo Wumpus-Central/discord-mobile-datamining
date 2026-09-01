@@ -11,7 +11,12 @@ require = arg1;
 noopAll;
 ({ View: obj1, StyleSheet } = get_ActivityIndicator);
 createCacheKey = { container: null, textHeader: null };
-createCacheKey = { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 8, paddingHorizontal: 24 };
+createCacheKey = {
+  borderTopWidth: StyleSheet.hairlineWidth,
+  borderTopColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginVertical: 8,
+  paddingHorizontal: 24,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: 20 };
 let closure_4 = createCacheKey.createStyles(createCacheKey);
@@ -25,5 +30,9 @@ export const ForYouReadSectionHeader = function ForYouReadSectionHeader() {
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.hftC1K);
   obj[1] = jsx(Text.Text, { style: tmp.textHeader, variant: "text-sm/semibold", children: null });
-  return <closure_2 style={tmp.textHeader} variant="text-sm/semibold">{null}</closure_2>;
+  return (
+    <closure_2 style={tmp.textHeader} variant="text-sm/semibold">
+      {null}
+    </closure_2>
+  );
 };

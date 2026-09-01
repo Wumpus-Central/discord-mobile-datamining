@@ -8,15 +8,22 @@ const result = require("set").fileFinishedImporting("modules/accept_invite/nativ
 
 export default function AcceptInviteModal(arg0) {
   const _require = arg0;
-  const effect = React.useEffect(() => () => {
-
-  }, []);
+  const effect = React.useEffect(() => () => {}, []);
   const items = [arg0];
   return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, {
     screens: React.useMemo(() => {
       let obj = {};
-      obj = { fullscreen: true, headerShown: false, impressionName: lib(closure_1_2[3]).ImpressionNames.INVITE_ACCEPT, impressionProperties: null, render: null };
-      obj = { deeplink_attempt_id: lib.deeplinkAttemptId, invite_code: lib(closure_1_2[4]).parseInviteCodeFromInviteKey(lib.code) };
+      obj = {
+        fullscreen: true,
+        headerShown: false,
+        impressionName: lib(closure_1_2[3]).ImpressionNames.INVITE_ACCEPT,
+        impressionProperties: null,
+        render: null,
+      };
+      obj = {
+        deeplink_attempt_id: lib.deeplinkAttemptId,
+        invite_code: lib(closure_1_2[4]).parseInviteCodeFromInviteKey(lib.code),
+      };
       obj[3] = obj;
       obj[4] = function render() {
         const obj = {};
@@ -27,6 +34,6 @@ export default function AcceptInviteModal(arg0) {
       obj[closure_1_4.ACCEPT_INVITE] = obj;
       return obj;
     }, items),
-    initialRouteName: CreateGuildModalStates.ACCEPT_INVITE
+    initialRouteName: CreateGuildModalStates.ACCEPT_INVITE,
   });
-};
+}

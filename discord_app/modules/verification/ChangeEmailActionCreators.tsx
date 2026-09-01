@@ -11,7 +11,7 @@ function _confirmEmailChange() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const obj5 = v0(4713);
       obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
       obj1[0] = closure_1_4.USER_EMAIL_VERIFY_CODE;
@@ -43,7 +43,10 @@ export const sendConfirmationCode = function sendConfirmationCode() {
   }
   let obj = _modDef4713;
   obj = { url: Endpoints.USER_EMAIL, trackedActionData: null, rejectWithError: false };
-  obj = { event: encodeProperties.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE, properties: { is_resend: flag } };
+  obj = {
+    event: encodeProperties.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
+    properties: { is_resend: flag },
+  };
   obj[1] = obj;
   return obj.put(obj);
 };

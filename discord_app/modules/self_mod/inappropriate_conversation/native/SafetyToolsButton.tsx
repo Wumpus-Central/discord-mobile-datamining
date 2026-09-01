@@ -11,7 +11,9 @@ createCacheKey = { safetyToolsButton: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/SafetyToolsButton.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/native/SafetyToolsButton.tsx",
+);
 
 export const SafetyToolsButton = function SafetyToolsButton(channelId) {
   channelId = channelId.channelId;
@@ -31,7 +33,9 @@ export const SafetyToolsButton = function SafetyToolsButton(channelId) {
   let obj = channelId(warningId[6]);
   safetyToolsButtonTooltipForChannel = obj.useSafetyToolsButtonTooltipForChannel(channelId);
   let tmp = callback();
-  shouldShowInitialSafetyToolsButtonTooltip = channelId(warningId[7]).useShouldShowInitialSafetyToolsButtonTooltip(channelId);
+  shouldShowInitialSafetyToolsButtonTooltip = channelId(warningId[7]).useShouldShowInitialSafetyToolsButtonTooltip(
+    channelId,
+  );
   let tmp4 = warningType(safetyToolsButtonTooltipForChannel.useState(false), 2);
   first = tmp4[0];
   callback = tmp4[1];
@@ -64,7 +68,14 @@ export const SafetyToolsButton = function SafetyToolsButton(channelId) {
   const items2 = [channelId, warningId, warningType, recipientId, safetyToolsButtonTooltipForChannel];
   callback1 = safetyToolsButtonTooltipForChannel.useCallback((viewName) => {
     let obj = channelId(warningId[9]);
-    obj = { channelId, warningId, warningType, senderId: recipientId, viewName, isNudgeWarning: null != safetyToolsButtonTooltipForChannel };
+    obj = {
+      channelId,
+      warningId,
+      warningType,
+      senderId: recipientId,
+      viewName,
+      isNudgeWarning: null != safetyToolsButtonTooltipForChannel,
+    };
     obj.trackNamedViewEvent(obj);
   }, items2);
   const effect = safetyToolsButtonTooltipForChannel.useEffect(() => {
@@ -131,7 +142,7 @@ export const SafetyToolsButton = function SafetyToolsButton(channelId) {
       visible: memo,
       onPress() {
         return callback();
-      }
+      },
     };
   }, items6);
   let obj2 = channelId(warningId[7]);

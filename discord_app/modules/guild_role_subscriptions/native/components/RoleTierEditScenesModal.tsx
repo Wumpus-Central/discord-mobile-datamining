@@ -22,14 +22,16 @@ function orderify(str) {
 }
 ({ useCurrentTierEditScene: c5, useResetTierEditState: closure_6 } = usePriceTiers);
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ stepsIndicator: { position: "absolute", alignSelf: "center", height: 48 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/RoleTierEditScenesModal.tsx");
+let closure_11 = createCacheKey.createStyles({
+  stepsIndicator: { position: "absolute", alignSelf: "center", height: 48 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/RoleTierEditScenesModal.tsx",
+);
 
 export default function RoleTierEditScenesModal(modalKey) {
   const _require = modalKey;
-  function handleClose(arg0) {
-
-  }
+  function handleClose(arg0) {}
   modalKey = modalKey.modalKey;
   const steps = modalKey.steps;
   const onClose = modalKey.onClose;
@@ -43,13 +45,17 @@ export default function RoleTierEditScenesModal(modalKey) {
     modalKey(steps[17]).popWithKey(modalKey);
   }, items);
   let items1 = [steps];
-  const memo = React.useMemo(() => steps.map((str) => {
-    let scene = str;
-    if (typeof str !== "string") {
-      scene = str.scene;
-    }
-    return scene;
-  }), items1);
+  const memo = React.useMemo(
+    () =>
+      steps.map((str) => {
+        let scene = str;
+        if (typeof str !== "string") {
+          scene = str.scene;
+        }
+        return scene;
+      }),
+    items1,
+  );
   const tmp2 = onClose(callback(), 2);
   let obj = { children: null };
   ({ screens, initialStack } = modalKey(steps[18])(() => {
@@ -86,7 +92,7 @@ export default function RoleTierEditScenesModal(modalKey) {
       fullscreen: true,
       headerTitle() {
         return null;
-      }
+      },
     };
     obj1 = {};
     let merged2 = Object.assign(obj);
@@ -102,7 +108,7 @@ export default function RoleTierEditScenesModal(modalKey) {
           callback2();
           callback();
         },
-        accessibilityLabel: null
+        accessibilityLabel: null,
       };
       const intl = DETAILS(closure_1_2[9]).intl;
       obj[2] = intl.string(DETAILS(closure_1_2[9]).t.cpT0Cq);
@@ -162,7 +168,7 @@ export default function RoleTierEditScenesModal(modalKey) {
           callback2();
           callback();
         },
-        accessibilityLabel: null
+        accessibilityLabel: null,
       };
       const intl = DETAILS(closure_1_2[9]).intl;
       obj[2] = intl.string(DETAILS(closure_1_2[9]).t.cpT0Cq);
@@ -221,7 +227,7 @@ export default function RoleTierEditScenesModal(modalKey) {
           callback2();
           callback();
         },
-        accessibilityLabel: null
+        accessibilityLabel: null,
       };
       const intl = DETAILS(closure_1_2[9]).intl;
       obj[2] = intl.string(DETAILS(closure_1_2[9]).t.cpT0Cq);
@@ -238,7 +244,10 @@ export default function RoleTierEditScenesModal(modalKey) {
     const merged7 = Object.assign(obj7);
     obj6.render = function render() {
       const CHANNEL_BENEFITS = closure_1_7.CHANNEL_BENEFITS;
-      callback(closure_1_2[6])(null != DETAILS[CHANNEL_BENEFITS], "Props not provided in screen map for scene " + CHANNEL_BENEFITS);
+      callback(closure_1_2[6])(
+        null != DETAILS[CHANNEL_BENEFITS],
+        "Props not provided in screen map for scene " + CHANNEL_BENEFITS,
+      );
       const getRuntimeProps = tmp2.getRuntimeProps;
       let runtimeProps;
       if (getRuntimeProps != null) {
@@ -275,7 +284,7 @@ export default function RoleTierEditScenesModal(modalKey) {
           callback2();
           callback();
         },
-        accessibilityLabel: null
+        accessibilityLabel: null,
       };
       const intl = DETAILS(closure_1_2[9]).intl;
       obj[2] = intl.string(DETAILS(closure_1_2[9]).t.cpT0Cq);
@@ -292,7 +301,10 @@ export default function RoleTierEditScenesModal(modalKey) {
     const merged9 = Object.assign(obj9);
     obj8.render = function render() {
       const INTANGIBLE_BENEFITS = closure_1_7.INTANGIBLE_BENEFITS;
-      callback(closure_1_2[6])(null != DETAILS[INTANGIBLE_BENEFITS], "Props not provided in screen map for scene " + INTANGIBLE_BENEFITS);
+      callback(closure_1_2[6])(
+        null != DETAILS[INTANGIBLE_BENEFITS],
+        "Props not provided in screen map for scene " + INTANGIBLE_BENEFITS,
+      );
       const getRuntimeProps = tmp2.getRuntimeProps;
       let runtimeProps;
       if (getRuntimeProps != null) {
@@ -329,7 +341,7 @@ export default function RoleTierEditScenesModal(modalKey) {
           callback2();
           callback();
         },
-        accessibilityLabel: null
+        accessibilityLabel: null,
       };
       const intl = DETAILS(closure_1_2[9]).intl;
       obj[2] = intl.string(DETAILS(closure_1_2[9]).t.cpT0Cq);
@@ -346,7 +358,10 @@ export default function RoleTierEditScenesModal(modalKey) {
     const merged11 = Object.assign(obj11);
     obj10.render = function render() {
       const CONFIRMATION = closure_1_7.CONFIRMATION;
-      callback(closure_1_2[6])(null != DETAILS[CONFIRMATION], "Props not provided in screen map for scene " + CONFIRMATION);
+      callback(closure_1_2[6])(
+        null != DETAILS[CONFIRMATION],
+        "Props not provided in screen map for scene " + CONFIRMATION,
+      );
       const getRuntimeProps = tmp2.getRuntimeProps;
       let runtimeProps;
       if (getRuntimeProps != null) {
@@ -388,7 +403,7 @@ export default function RoleTierEditScenesModal(modalKey) {
           callback2();
           callback();
         },
-        accessibilityLabel: null
+        accessibilityLabel: null,
       };
       const intl = DETAILS(closure_1_2[9]).intl;
       obj[2] = intl.string(DETAILS(closure_1_2[9]).t.cpT0Cq);
@@ -447,7 +462,7 @@ export default function RoleTierEditScenesModal(modalKey) {
           callback2();
           callback();
         },
-        accessibilityLabel: null
+        accessibilityLabel: null,
       };
       const intl = DETAILS(closure_1_2[9]).intl;
       obj[2] = intl.string(DETAILS(closure_1_2[9]).t.cpT0Cq);
@@ -538,14 +553,14 @@ export default function RoleTierEditScenesModal(modalKey) {
         }
       }
     },
-    headerBackTitle: null
+    headerBackTitle: null,
   };
   let intl = _require(steps[9]).intl;
   obj[3] = intl.string(_require(steps[9]).t["13/7kX"]);
-  const items2 = [callback3(_require(steps[19]).Navigator, obj), ];
+  const items2 = [callback3(_require(steps[19]).Navigator, obj)];
   obj = { style: items3, current: tmp3[0] + 1, total: memo.length };
   items3 = [tmp.stepsIndicator, { top: modalKey(steps[16])().top }];
   items2[1] = callback3(modalKey(steps[20]), obj);
   obj[0] = items2;
   return memo(handleClose, obj);
-};
+}

@@ -16,7 +16,10 @@ function VerificationListItem(userId) {
   const callback = React.useCallback(() => {
     const result = userId(closure_1_2[5]).deletePersistentVerification(userId, verification.verifiedKey);
   }, items);
-  const memo = React.useMemo(() => userId(closure_1_2[5]).getSecureFramesUserVerifiedTimestamp(verification.timestamp), items1);
+  const memo = React.useMemo(
+    () => userId(closure_1_2[5]).getSecureFramesUserVerifiedTimestamp(verification.timestamp),
+    items1,
+  );
   let obj = { label: null, subLabel: null, start: null, end: null, trailing: null };
   const intl = userId(1236).intl;
   obj[0] = intl.formatToPlainString(userId(1236).t.N4qBBO, { index });
@@ -29,7 +32,12 @@ function VerificationListItem(userId) {
 }
 function SectionListItem(children) {
   const tmp = callback();
-  return jsx(Text.Text, { style: callback().section, variant: "text-sm/semibold", color: "text-default", children: children.title });
+  return jsx(Text.Text, {
+    style: callback().section,
+    variant: "text-sm/semibold",
+    color: "text-default",
+    children: children.title,
+  });
 }
 function renderItem(item) {
   item = item.item;
@@ -73,9 +81,16 @@ function ClearVerificationsListFooter(userId) {
   obj[2] = callback;
   return jsx(userId(5599).TableRow, { variant: "text-xs/medium", color: "text-subtle", children: null });
 }
-let closure_7 = createCacheKey.createStyles({ list: { flexGrow: 1 }, listContent: { paddingVertical: 32, paddingHorizontal: 16 }, listFooter: { marginTop: 32 }, section: { marginBottom: 8 } });
+let closure_7 = createCacheKey.createStyles({
+  list: { flexGrow: 1 },
+  listContent: { paddingVertical: 32, paddingHorizontal: 16 },
+  listFooter: { marginTop: 32 },
+  section: { marginBottom: 8 },
+});
 let closure_8 = { VERIFICATION: "VERIFICATION", SECTION: "SECTION" };
-let result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SettingsSecureFramesVerificationsScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/privacy_and_safety/native/SettingsSecureFramesVerificationsScreen.tsx",
+);
 
 export default function SettingsSecureFramesVerificationsScreen() {
   const tmp = callback();
@@ -112,7 +127,14 @@ export default function SettingsSecureFramesVerificationsScreen() {
     obj[1] = intl.formatToPlainString(userId(1236).t["/MBjYF"], obj);
     items.push(obj);
     const item = secureFramesUserVerifiedKeys.forEach((verification) => {
-      items.push({ type: closure_2_8.VERIFICATION, verification, index: arg1 + 1, userId: items, start: 0 === arg1, end: arg1 === closure_1_3.length - 1 });
+      items.push({
+        type: closure_2_8.VERIFICATION,
+        verification,
+        index: arg1 + 1,
+        userId: items,
+        start: 0 === arg1,
+        end: arg1 === closure_1_3.length - 1,
+      });
     });
     return items;
   }, items1);
@@ -122,9 +144,36 @@ export default function SettingsSecureFramesVerificationsScreen() {
     }
   }, items2);
   obj = { style: tmp.list, children: null };
-  obj = { keyExtractor, getItemType, renderItem, data: memo, contentContainerStyle: tmp.listContent, ListFooterComponent: null };
+  obj = {
+    keyExtractor,
+    getItemType,
+    renderItem,
+    data: memo,
+    contentContainerStyle: tmp.listContent,
+    ListFooterComponent: null,
+  };
   obj1 = { style: tmp.listFooter, children: <ClearVerificationsListFooter userId={userId} /> };
-  obj[5] = <View style={tmp.listFooter}><ClearVerificationsListFooter userId={userId} /></View>;
-  obj[1] = jsx(userId(8105).FlashList, { keyExtractor, getItemType, renderItem, data: memo, contentContainerStyle: tmp.listContent, ListFooterComponent: null });
-  return <View keyExtractor={keyExtractor} getItemType={getItemType} renderItem={renderItem} data={memo} contentContainerStyle={tmp.listContent} ListFooterComponent={null} />;
-};
+  obj[5] = (
+    <View style={tmp.listFooter}>
+      <ClearVerificationsListFooter userId={userId} />
+    </View>
+  );
+  obj[1] = jsx(userId(8105).FlashList, {
+    keyExtractor,
+    getItemType,
+    renderItem,
+    data: memo,
+    contentContainerStyle: tmp.listContent,
+    ListFooterComponent: null,
+  });
+  return (
+    <View
+      keyExtractor={keyExtractor}
+      getItemType={getItemType}
+      renderItem={renderItem}
+      data={memo}
+      contentContainerStyle={tmp.listContent}
+      ListFooterComponent={null}
+    />
+  );
+}

@@ -30,4 +30,4 @@ export default function RoleIcon(arg0) {
     }
   }
   return tmp;
-};
+}

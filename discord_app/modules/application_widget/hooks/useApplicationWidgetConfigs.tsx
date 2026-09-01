@@ -11,13 +11,17 @@ export default function useApplicationWidgetConfigs(arg0) {
   const DeveloperMode = _require(setting[2]).DeveloperMode;
   setting = DeveloperMode.useSetting();
   const items = [stateFromStores1];
-  const stateFromStores = _require(setting[3]).useStateFromStores(items, () => stateFromStores1.getFeaturedFetchState());
+  const stateFromStores = _require(setting[3]).useStateFromStores(items, () =>
+    stateFromStores1.getFeaturedFetchState(),
+  );
   let obj = _require(setting[3]);
   const items1 = [stateFromStores1];
   stateFromStores1 = _require(setting[3]).useStateFromStores(items1, () => stateFromStores1.getDeveloperFetchState());
   const obj2 = _require(setting[3]);
   const items2 = [stateFromStores1];
-  const stateFromStoresArray = _require(setting[3]).useStateFromStoresArray(items2, () => lib.filter((arg0) => fetchState.getFetchState(arg0) === constants.NOT_FETCHED));
+  const stateFromStoresArray = _require(setting[3]).useStateFromStoresArray(items2, () =>
+    lib.filter((arg0) => fetchState.getFetchState(arg0) === constants.NOT_FETCHED),
+  );
   const obj3 = _require(setting[3]);
   const items3 = [stateFromStores1];
   const stateFromStoresArray1 = _require(setting[3]).useStateFromStoresArray(items3, () => {
@@ -26,17 +30,13 @@ export default function useApplicationWidgetConfigs(arg0) {
   });
   const effect = stateFromStores.useEffect(() => {
     const featuredWidgetConfigs = lib(setting[5]).fetchFeaturedWidgetConfigs();
-    featuredWidgetConfigs.catch(() => {
-
-    });
+    featuredWidgetConfigs.catch(() => {});
   }, []);
   const items4 = [setting];
   const effect1 = stateFromStores.useEffect(() => {
     if (setting) {
       const developerWidgetConfigs = lib(setting[5]).fetchDeveloperWidgetConfigs();
-      developerWidgetConfigs.catch(() => {
-
-      });
+      developerWidgetConfigs.catch(() => {});
       const obj = lib(setting[5]);
     }
   }, items4);
@@ -50,9 +50,7 @@ export default function useApplicationWidgetConfigs(arg0) {
             let tmp8 = setting;
             let obj = lib(setting[5]);
             let widgetConfigs = obj.fetchWidgetConfigs(item10012);
-            let catchPromise = widgetConfigs.catch(() => {
-
-            });
+            let catchPromise = widgetConfigs.catch(() => {});
             continue;
           }
         }
@@ -60,4 +58,4 @@ export default function useApplicationWidgetConfigs(arg0) {
     }
   }, items5);
   return stateFromStoresArray1;
-};
+}

@@ -10,7 +10,16 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 let closure_8 = require("DismissibleContent").DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
-let items = [require("registerAsset"), require("registerAsset"), require("registerAsset"), require("registerAsset"), require("registerAsset"), require("registerAsset"), require("registerAsset"), require("registerAsset")];
+let items = [
+  require("registerAsset"),
+  require("registerAsset"),
+  require("registerAsset"),
+  require("registerAsset"),
+  require("registerAsset"),
+  require("registerAsset"),
+  require("registerAsset"),
+  require("registerAsset"),
+];
 createCacheKey = { fill: null, nitroIcon: null, description: null };
 createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -19,11 +28,19 @@ createCacheKey.alignItems = "center";
 createCacheKey.justifyContent = "center";
 createCacheKey.top = -150;
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { tintColor: ThemesDefault.colors.WHITE, width: 32, height: 32, marginVertical: -8, marginRight: -4 };
+createCacheKey[1] = {
+  tintColor: ThemesDefault.colors.WHITE,
+  width: 32,
+  height: 32,
+  marginVertical: -8,
+  marginRight: -4,
+};
 createCacheKey[2] = { paddingHorizontal: 16 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 const obj1 = { tintColor: ThemesDefault.colors.WHITE, width: 32, height: 32, marginVertical: -8, marginRight: -4 };
-const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/SuperReactionUpsellActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/burst_reactions/SuperReactionUpsellActionSheet.tsx",
+);
 
 export default function SuperReactionCoachmarkActionSheet(onDismiss) {
   let _require;
@@ -41,7 +58,18 @@ export default function SuperReactionCoachmarkActionSheet(onDismiss) {
   const obj3 = _require(obj[17]);
   let tmp8 = null;
   if (!isPremiumResult) {
-    obj = { title: null, backdropProps: null, description: null, descriptionStyle: null, dismissibleContent: null, primaryButtonText: null, primaryButtonIcon: null, onPrimaryButtonPress: null, secondaryButtonText: null, onDismiss: null };
+    obj = {
+      title: null,
+      backdropProps: null,
+      description: null,
+      descriptionStyle: null,
+      dismissibleContent: null,
+      primaryButtonText: null,
+      primaryButtonIcon: null,
+      onPrimaryButtonPress: null,
+      secondaryButtonText: null,
+      onDismiss: null,
+    };
     const intl = tmp4(tmp3[24]).intl;
     obj[0] = intl.string(tmp4(tmp3[24]).t.Wfl5zp);
     obj = { backdropOpacity: null, backdropChildren: null };
@@ -61,7 +89,11 @@ export default function SuperReactionCoachmarkActionSheet(onDismiss) {
     obj[7] = function onPrimaryButtonPress() {
       obj = analyticsLocations(obj[27]);
       obj.hideActionSheet();
-      obj = { analyticsLocation: obj, analyticsLocations, premiumFeatureCardOrder: lib(obj[19]).PremiumFeatureCardOrder.TIER_2_LEADING };
+      obj = {
+        analyticsLocation: obj,
+        analyticsLocations,
+        premiumFeatureCardOrder: lib(obj[19]).PremiumFeatureCardOrder.TIER_2_LEADING,
+      };
       analyticsLocations(obj[18])(obj);
     };
     const intl4 = tmp4(tmp3[24]).intl;
@@ -71,4 +103,4 @@ export default function SuperReactionCoachmarkActionSheet(onDismiss) {
     const tmp2Result = tmp2(tmp3[23]);
   }
   return tmp8;
-};
+}

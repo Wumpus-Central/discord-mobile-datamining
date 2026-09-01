@@ -14,7 +14,9 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 let closure_3 = ["guildActivityIndicatorSource"];
 ({ GuildFeatures: closure_12, Permissions: map1 } = ME);
-let closure_15 = createCacheKey.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
+let closure_15 = createCacheKey.createStyles({
+  topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" },
+});
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");
 
 export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImportance) {
@@ -37,68 +39,80 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
   });
   const items1 = [cutoutTopRight, closure_11, cutout];
   const items2 = [arg0, stateFromStores];
-  const stateFromStores1 = _require(stateFromStores[11]).useStateFromStores(items1, () => {
-    if (stateFromStores) {
-      const request = cutoutTopRight.getRequest(callback);
-      const currentUser = closure_1_11.getCurrentUser();
-      if (null != currentUser) {
-        if (null != request) {
-          if (request.userId === currentUser.id) {
-            const member = cutout.getMember(tmp2, request.userId);
-            if (null != member) {
-              if (!member.isPending) {
-                const obj = callback(stateFromStores[12]);
+  const stateFromStores1 = _require(stateFromStores[11]).useStateFromStores(
+    items1,
+    () => {
+      if (stateFromStores) {
+        const request = cutoutTopRight.getRequest(callback);
+        const currentUser = closure_1_11.getCurrentUser();
+        if (null != currentUser) {
+          if (null != request) {
+            if (request.userId === currentUser.id) {
+              const member = cutout.getMember(tmp2, request.userId);
+              if (null != member) {
+                if (!member.isPending) {
+                  const obj = callback(stateFromStores[12]);
+                }
               }
+              return request.applicationStatus;
             }
-            return request.applicationStatus;
           }
         }
+        tmp2 = callback;
       }
-      tmp2 = callback;
-    }
-  }, items2);
+    },
+    items2,
+  );
   let obj2 = _require(stateFromStores[11]);
   const items3 = [closure_10, closure_9, memo];
   const items4 = [arg0];
-  const stateFromStores2 = _require(stateFromStores[11]).useStateFromStores(items3, () => {
-    const guild = closure_1_9.getGuild(closure_0);
-    if (null != guild) {
-      if (closure_1_10.can(closure_1_13.MANAGE_GUILD, guild)) {
-        const guildIncident = memo.getGuildIncident(closure_0);
-        let hasItem;
-        if (guild != null) {
-          const features = guild.features;
-          const has = features.has;
-          if (has != null) {
-            hasItem = has(closure_1_12.INVITES_DISABLED);
+  const stateFromStores2 = _require(stateFromStores[11]).useStateFromStores(
+    items3,
+    () => {
+      const guild = closure_1_9.getGuild(closure_0);
+      if (null != guild) {
+        if (closure_1_10.can(closure_1_13.MANAGE_GUILD, guild)) {
+          const guildIncident = memo.getGuildIncident(closure_0);
+          let hasItem;
+          if (guild != null) {
+            const features = guild.features;
+            const has = features.has;
+            if (has != null) {
+              hasItem = has(closure_1_12.INVITES_DISABLED);
+            }
           }
+          if (!hasItem) {
+            let invitesDisabledUntil;
+            if (guildIncident != null) {
+              invitesDisabledUntil = guildIncident.invitesDisabledUntil;
+            }
+            let tmp10 = null != invitesDisabledUntil;
+            if (tmp10) {
+              const _Date = Date;
+              const date = new Date(guildIncident.invitesDisabledUntil);
+              const _Date2 = Date;
+              const date1 = new Date();
+              tmp10 = date > date1;
+            }
+            hasItem = tmp10;
+          }
+          return hasItem;
         }
-        if (!hasItem) {
-          let invitesDisabledUntil;
-          if (guildIncident != null) {
-            invitesDisabledUntil = guildIncident.invitesDisabledUntil;
-          }
-          let tmp10 = null != invitesDisabledUntil;
-          if (tmp10) {
-            const _Date = Date;
-            const date = new Date(guildIncident.invitesDisabledUntil);
-            const _Date2 = Date;
-            const date1 = new Date();
-            tmp10 = date > date1;
-          }
-          hasItem = tmp10;
-        }
-        return hasItem;
       }
-    }
-    return false;
-  }, items4);
+      return false;
+    },
+    items4,
+  );
   const tmp5 = importDefault(stateFromStores[13])(arg0);
   closure_3 = tmp5;
   const obj3 = _require(stateFromStores[11]);
-  const token = _require(stateFromStores[14]).useToken(importDefault(stateFromStores[15]).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const token = _require(stateFromStores[14]).useToken(
+    importDefault(stateFromStores[15]).modules.mobile.GUILD_BAR_ITEM_SIZE,
+  );
   const obj4 = _require(stateFromStores[14]);
-  const token1 = _require(stateFromStores[14]).useToken(importDefault(stateFromStores[15]).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+  const token1 = _require(stateFromStores[14]).useToken(
+    importDefault(stateFromStores[15]).modules.mobile.GUILD_BAR_ITEM_MARGIN,
+  );
   const items5 = [tmp.topRightBadge, token1];
   memo = token1.useMemo(() => {
     const items = [lib.topRightBadge, { top: token1 - callback(stateFromStores[16]).BADGE_PADDING }];
@@ -143,7 +157,12 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
     return obj1;
   }, items6);
   cutoutTopRight = memo1.cutoutTopRight;
-  obj = { mentionCount, isMentionLowImportance, joinRequestState: stateFromStores1, shouldShowInvitesDisabled: stateFromStores2 };
+  obj = {
+    mentionCount,
+    isMentionLowImportance,
+    joinRequestState: stateFromStores1,
+    shouldShowInvitesDisabled: stateFromStores2,
+  };
   let tmp10 = importDefault(stateFromStores[19])(obj);
   cutout = tmp10.cutout;
   obj = {
@@ -159,8 +178,8 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
       }
       return items;
     }, items7),
-    mediaState: tmp5
+    mediaState: tmp5,
   };
   items7 = [cutoutTopRight, cutout];
   return obj;
-};
+}

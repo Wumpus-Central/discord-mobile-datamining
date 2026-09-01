@@ -20,9 +20,9 @@ class GiftCustomMessage {
     obj = {
       style: tmp.container,
       onLayout(nativeEvent) {
-            return callback(nativeEvent.nativeEvent.layout.y);
-          },
-      children: null
+        return callback(nativeEvent.nativeEvent.layout.y);
+      },
+      children: null,
     };
     callback = closure_2.useCallback((arg0) => {
       setCustomGiftMessage(arg0);
@@ -47,8 +47,20 @@ const memoResult = importAllResult.memo((arg0) => {
   ({ onFocusMessage, setMessagePosition } = arg0);
   let obj = NativeGiftContextProvider;
   const nativeGiftContext = obj.useNativeGiftContext();
-  obj = { onFocusMessage, setMessagePosition, customGiftMessage: nativeGiftContext.customGiftMessage, setCustomGiftMessage: nativeGiftContext.setCustomGiftMessage };
-  return <GiftCustomMessage onFocusMessage={onFocusMessage} setMessagePosition={setMessagePosition} customGiftMessage={nativeGiftContext.customGiftMessage} setCustomGiftMessage={nativeGiftContext.setCustomGiftMessage} />;
+  obj = {
+    onFocusMessage,
+    setMessagePosition,
+    customGiftMessage: nativeGiftContext.customGiftMessage,
+    setCustomGiftMessage: nativeGiftContext.setCustomGiftMessage,
+  };
+  return (
+    <GiftCustomMessage
+      onFocusMessage={onFocusMessage}
+      setMessagePosition={setMessagePosition}
+      customGiftMessage={nativeGiftContext.customGiftMessage}
+      setCustomGiftMessage={nativeGiftContext.setCustomGiftMessage}
+    />
+  );
 });
 const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftCustomMessage.tsx");
 

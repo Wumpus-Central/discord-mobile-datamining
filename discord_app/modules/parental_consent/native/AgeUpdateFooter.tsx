@@ -19,7 +19,7 @@ export default function AgeUpdateFooter() {
       let obj = callback2(8682);
       obj = { entryPoint: callback(8684).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
       return obj.showAgeVerificationGetStartedModal(obj);
-    }
+    },
   };
   obj[3] = intl.format(messagesProxyDefault.ifObbX, obj);
   return jsx(Text.Text, {
@@ -27,6 +27,6 @@ export default function AgeUpdateFooter() {
       let obj = callback2(8682);
       obj = { entryPoint: callback(8684).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
       return obj.showAgeVerificationGetStartedModal(obj);
-    }
+    },
   });
-};
+}

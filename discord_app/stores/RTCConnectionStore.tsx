@@ -49,7 +49,16 @@ function createRTCConnection(arg0, arg1, arg2) {
       closure_4 = arg4;
       closure_1_1(closure_1_2[8]).wait(() => {
         let obj = closure_2_1(closure_2_2[8]);
-        obj = { type: "RTC_CONNECTION_VIDEO", guildId: mediaEngineConnectionId, channelId: closure_1, userId: closure_2, streamId: closure_3, rtcServerId: closure_4, context: closure_2_11.DEFAULT, mediaEngineConnectionId: mediaEngineConnectionId.getMediaEngineConnectionId() };
+        obj = {
+          type: "RTC_CONNECTION_VIDEO",
+          guildId: mediaEngineConnectionId,
+          channelId: closure_1,
+          userId: closure_2,
+          streamId: closure_3,
+          rtcServerId: closure_4,
+          context: closure_2_11.DEFAULT,
+          mediaEngineConnectionId: mediaEngineConnectionId.getMediaEngineConnectionId(),
+        };
         return obj.dispatch(obj);
       });
     });
@@ -80,7 +89,14 @@ function createRTCConnection(arg0, arg1, arg2) {
       closure_1 = arg1;
       closure_1_1(closure_1_2[8]).wait(() => {
         let obj = closure_2_1(closure_2_2[8]);
-        obj = { type: "RTC_CONNECTION_FLAGS", flags: closure_1, userId: closure_0, guildId: closure_0.guildId, channelId: closure_0.channelId, context: closure_0.context };
+        obj = {
+          type: "RTC_CONNECTION_FLAGS",
+          flags: closure_1,
+          userId: closure_0,
+          guildId: closure_0.guildId,
+          channelId: closure_0.channelId,
+          context: closure_0.context,
+        };
         obj.dispatch(obj);
       });
     });
@@ -93,7 +109,13 @@ function createRTCConnection(arg0, arg1, arg2) {
       closure_0 = arg0;
       closure_1_1(closure_1_2[8]).wait(() => {
         let obj = closure_2_1(closure_2_2[8]);
-        obj = { type: "RTC_CONNECTION_CLIENT_CONNECT", userIds: closure_0, guildId: closure_0.guildId, channelId: closure_0.channelId, context: closure_0.context };
+        obj = {
+          type: "RTC_CONNECTION_CLIENT_CONNECT",
+          userIds: closure_0,
+          guildId: closure_0.guildId,
+          channelId: closure_0.channelId,
+          context: closure_0.context,
+        };
         obj.dispatch(obj);
       });
     });
@@ -101,7 +123,13 @@ function createRTCConnection(arg0, arg1, arg2) {
       closure_0 = arg0;
       closure_1_1(closure_1_2[8]).wait(() => {
         let obj = closure_2_1(closure_2_2[8]);
-        obj = { type: "RTC_CONNECTION_CLIENT_DISCONNECT", userId: closure_0, guildId: closure_0.guildId, channelId: closure_0.channelId, context: closure_0.context };
+        obj = {
+          type: "RTC_CONNECTION_CLIENT_DISCONNECT",
+          userId: closure_0,
+          guildId: closure_0.guildId,
+          channelId: closure_0.channelId,
+          context: closure_0.context,
+        };
         obj.dispatch(obj);
       });
     });
@@ -145,7 +173,15 @@ function destroyRTCConnection(arg0) {
   if (null == redux) {
     return false;
   } else {
-    let obj = { duration: null, mediaSessionId: null, rtcConnectionId: null, wasEverMultiParticipant: null, wasEverRtcConnected: null, voiceStateAnalytics: null, channelId: null };
+    let obj = {
+      duration: null,
+      mediaSessionId: null,
+      rtcConnectionId: null,
+      wasEverMultiParticipant: null,
+      wasEverRtcConnected: null,
+      voiceStateAnalytics: null,
+      channelId: null,
+    };
     obj[0] = redux.getDuration();
     let mediaSessionId = redux.getMediaSessionId();
     if (mediaSessionId == null) {
@@ -199,8 +235,7 @@ let c22 = false;
 let c23 = null;
 let c24 = null;
 const Store = initializeDefault.Store;
-class RTCConnectionStore extends Store {
-}
+class RTCConnectionStore extends Store {}
 const prototype = RTCConnectionStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_6, closure_5, closure_7);
@@ -600,7 +635,11 @@ const rTCConnectionStore = new RTCConnectionStore(dispatcherDefault, {
     if (null != channelId.channelId) {
       timeout = new require("../../discord_common/js/packages/timers/Timers.tsx").Timeout();
       timeout.start(30000, () => {
-        closure_1_12.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", { joinVoiceId: channelId.joinVoiceId, channelId: channelId.channelId, guildId: channelId.guildId });
+        closure_1_12.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", {
+          joinVoiceId: channelId.joinVoiceId,
+          channelId: channelId.channelId,
+          guildId: channelId.guildId,
+        });
         c24 = null;
       });
       const obj = { joinVoiceId: null, channelId: null, guildId: null, timeout: null };
@@ -689,7 +728,7 @@ const rTCConnectionStore = new RTCConnectionStore(dispatcherDefault, {
     if (closure_3 != null) {
       const result = closure_3.setSimulcastDebugOverride(tmp, tmp2, tmp3);
     }
-  }
+  },
 });
 let obj = {
   CONNECTION_OPEN: function handleConnectionOpen(sessionId) {
@@ -896,7 +935,11 @@ let obj = {
     if (null != channelId.channelId) {
       timeout = new require("../../discord_common/js/packages/timers/Timers.tsx").Timeout();
       timeout.start(30000, () => {
-        closure_1_12.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", { joinVoiceId: channelId.joinVoiceId, channelId: channelId.channelId, guildId: channelId.guildId });
+        closure_1_12.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", {
+          joinVoiceId: channelId.joinVoiceId,
+          channelId: channelId.channelId,
+          guildId: channelId.guildId,
+        });
         c24 = null;
       });
       const obj = { joinVoiceId: null, channelId: null, guildId: null, timeout: null };
@@ -985,7 +1028,7 @@ let obj = {
     if (closure_3 != null) {
       const result = closure_3.setSimulcastDebugOverride(tmp, tmp2, tmp3);
     }
-  }
+  },
 };
 let tmp3 = new timestampDefault("RTCConnectionStore");
 require("expandEventProperties").then((addExtraAnalyticsDecorator) => {

@@ -2,7 +2,9 @@
 import closure_3 from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useVisibleUserProfileConnectionsAndAppIdentities.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_profile/hooks/useVisibleUserProfileConnectionsAndAppIdentities.tsx",
+);
 
 export default function useVisibleUserProfileConnectionsAndAppIdentities(arg0) {
   const filteredAppIdentities = importDefault(memo[1])(arg0).filteredAppIdentities;
@@ -34,20 +36,26 @@ export default function useVisibleUserProfileConnectionsAndAppIdentities(arg0) {
       });
       return mapped.filter((application) => null != application.application);
     }, items2),
-    connections: found.useMemo(() => closure_1.filter((type) => {
-      const value = closure_1_1(closure_1_2[5]).get(type.type);
-      let migrationExperimentEnabled;
-      if (value != null) {
-        const migrationData = value.migrationData;
-        if (migrationData != null) {
-          migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("useVisibleUserProfileConnectionsAndAppIdentities");
-        }
-      }
-      let tmp3 = !migrationExperimentEnabled;
-      if (migrationExperimentEnabled) {
-        tmp3 = !set.has(value.migrationData.replacedBy);
-      }
-      return tmp3;
-    }), items3)
+    connections: found.useMemo(
+      () =>
+        closure_1.filter((type) => {
+          const value = closure_1_1(closure_1_2[5]).get(type.type);
+          let migrationExperimentEnabled;
+          if (value != null) {
+            const migrationData = value.migrationData;
+            if (migrationData != null) {
+              migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled(
+                "useVisibleUserProfileConnectionsAndAppIdentities",
+              );
+            }
+          }
+          let tmp3 = !migrationExperimentEnabled;
+          if (migrationExperimentEnabled) {
+            tmp3 = !set.has(value.migrationData.replacedBy);
+          }
+          return tmp3;
+        }),
+      items3,
+    ),
   };
-};
+}

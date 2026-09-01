@@ -5,8 +5,12 @@ import { MEDIA_PICKER_SEND_BUTTON_SPRING as closure_5 } from "../../media_keyboa
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-let closure_7 = { code: "function FloatingApplyButtonTsx1(){const{visible}=this.__closure;return{pointerEvents:visible?'box-none':'none'};}" };
-let closure_8 = { code: "function FloatingApplyButtonTsx2(){const{visible,tokens,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=visible?1:0;const targetTranslateY=visible?0:60;const targetScale=visible?1:0.9;return{position:'absolute',bottom:0,left:0,right:0,marginHorizontal:tokens.space.PX_16,flexDirection:'column',justifyContent:'flex-end',transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}],opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,MEDIA_PICKER_SEND_BUTTON_SPRING)};}" };
+let closure_7 = {
+  code: "function FloatingApplyButtonTsx1(){const{visible}=this.__closure;return{pointerEvents:visible?'box-none':'none'};}",
+};
+let closure_8 = {
+  code: "function FloatingApplyButtonTsx2(){const{visible,tokens,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=visible?1:0;const targetTranslateY=visible?0:60;const targetScale=visible?1:0.9;return{position:'absolute',bottom:0,left:0,right:0,marginHorizontal:tokens.space.PX_16,flexDirection:'column',justifyContent:'flex-end',transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}],opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,MEDIA_PICKER_SEND_BUTTON_SPRING)};}",
+};
 let result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/FloatingApplyButton.tsx");
 
 export default function FloatingApplyButton(visible) {
@@ -47,7 +51,17 @@ export default function FloatingApplyButton(visible) {
       if (tmp) {
         num3 = 1;
       }
-      obj = { position: "absolute", bottom: 0, left: 0, right: 0, marginHorizontal: onPress(closure_2[7]).space.PX_16, flexDirection: "column", justifyContent: "flex-end", transform: null, opacity: null };
+      obj = {
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        marginHorizontal: onPress(closure_2[7]).space.PX_16,
+        flexDirection: "column",
+        justifyContent: "flex-end",
+        transform: null,
+        opacity: null,
+      };
       tmp2 = closure_2;
       tmp3 = closure_2;
       withSpringResult = num2;
@@ -57,7 +71,7 @@ export default function FloatingApplyButton(visible) {
         tmp6 = closure_1_5;
         withSpringResult = obj2.withSpring(num2, closure_1_5);
       }
-      items = [, ];
+      items = [,];
       items[0] = { translateY: withSpringResult };
       withSpringResult1 = num3;
       if (!tmp3) {
@@ -79,14 +93,22 @@ export default function FloatingApplyButton(visible) {
       return obj;
     }
   }
-  obj = { visible, tokens: onPress(stateFromStores[7]), reducedMotion: stateFromStores, withSpring: visible(stateFromStores[8]).withSpring, MEDIA_PICKER_SEND_BUTTON_SPRING: closure_5 };
+  obj = {
+    visible,
+    tokens: onPress(stateFromStores[7]),
+    reducedMotion: stateFromStores,
+    withSpring: visible(stateFromStores[8]).withSpring,
+    MEDIA_PICKER_SEND_BUTTON_SPRING: closure_5,
+  };
   P.__closure = obj;
   P.__workletHash = 17409059357308;
   P.__initData = closure_8;
   const items1 = [onPress];
   const animatedStyle = obj2.useAnimatedStyle(P);
   const callback = React.useCallback(() => {
-    const result = visible(stateFromStores[9]).triggerHapticFeedback(visible(stateFromStores[9]).HapticFeedbackTypes.IMPACT_MEDIUM);
+    const result = visible(stateFromStores[9]).triggerHapticFeedback(
+      visible(stateFromStores[9]).HapticFeedbackTypes.IMPACT_MEDIUM,
+    );
     onPress();
   }, items1);
   obj = { style: animatedStyle, children: null };
@@ -108,6 +130,10 @@ export default function FloatingApplyButton(visible) {
     renderButtonResult = tmp7(visible(stateFromStores[10]).Button, obj3);
   }
   obj1[2] = renderButtonResult;
-  obj[1] = jsx(onPress(stateFromStores[6]).View, { style: { marginBottom: onPress(stateFromStores[5])().bottom }, animatedProps, children: null });
+  obj[1] = jsx(onPress(stateFromStores[6]).View, {
+    style: { marginBottom: onPress(stateFromStores[5])().bottom },
+    animatedProps,
+    children: null,
+  });
   return jsx(onPress(stateFromStores[6]).View, { style: animatedStyle, children: null });
-};
+}

@@ -43,7 +43,10 @@ function EditProfileFrameInner(user) {
   const items1 = [user];
   const effect = React.useEffect(() => {
     if (!tmp) {
-      setSelectedProfileFrame(guildId[23])(obj.id, obj.getAvatarURL(null, 80), { withMutualGuilds: true, dispatchWait: true });
+      setSelectedProfileFrame(guildId[23])(obj.id, obj.getAvatarURL(null, 80), {
+        withMutualGuilds: true,
+        dispatchWait: true,
+      });
       const tmp4 = setSelectedProfileFrame(guildId[23]);
     }
   }, items1);
@@ -51,12 +54,18 @@ function EditProfileFrameInner(user) {
   let skuId;
   const callback = React.useCallback((arg0) => {
     ({ items, size, selectedSkuId } = arg0);
-    return closure_1_9(user(guildId[24]).EditProfileFrameRow, { items, size, selectedSkuId, setSelectedProfileFrame, guildId });
+    return closure_1_9(user(guildId[24]).EditProfileFrameRow, {
+      items,
+      size,
+      selectedSkuId,
+      setSelectedProfileFrame,
+      guildId,
+    });
   }, items2);
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
-  const items3 = [closure_9(ProfileFrameSectionPreview, { previewSkuId: skuId, user, guildId }), , ];
+  const items3 = [closure_9(ProfileFrameSectionPreview, { previewSkuId: skuId, user, guildId }), ,];
   obj = { user, previewSkuId: null, nitroJoinCTA: null, nitroUpgradeCTA: null };
   let skuId1;
   const tmp13 = closure_10;
@@ -115,7 +124,7 @@ function ProfileFrameSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [callback(purchase(10857), { user, guildId, profileFrame: memo, maxWidth: 280 }), ];
+  const items1 = [callback(purchase(10857), { user, guildId, profileFrame: memo, maxWidth: 280 })];
   obj = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj[3] = items2;
@@ -159,7 +168,11 @@ export default function EditProfileFrameActionSheet(arg0) {
   const analyticsLocations = tmp2Result(tmp2(tmp3[12]).EDIT_PROFILE_FRAME_SHEET).analyticsLocations;
   const items = [guildId, tmp4Result];
   memo = React.useMemo(() => {
-    const obj = { type: callback(first[12]).EDIT_PROFILE_FRAME_SHEET, guild_id: guildId, profile_has_nitro_customization: null };
+    const obj = {
+      type: callback(first[12]).EDIT_PROFILE_FRAME_SHEET,
+      guild_id: guildId,
+      profile_has_nitro_customization: null,
+    };
     let tmp = null != callback;
     if (tmp) {
       let result;
@@ -191,17 +204,35 @@ export default function EditProfileFrameActionSheet(arg0) {
     obj.setPendingChanges(obj);
   }, items2);
   obj = { value: analyticsLocations, children: null };
-  obj = { scrollable: true, ref: obj.useBottomSheetRef().bottomSheetRef, onExpand: callback, startExpanded: true, children: null };
+  obj = {
+    scrollable: true,
+    ref: obj.useBottomSheetRef().bottomSheetRef,
+    onExpand: callback,
+    startExpanded: true,
+    children: null,
+  };
   obj1 = { style: tmp.container, children: null };
-  const items3 = [callback(closure_5, { style: tmp.bounceOffset }), , ];
+  const items3 = [callback(closure_5, { style: tmp.bounceOffset }), ,];
   const obj3 = { variant: "redesign/heading-18/bold", style: tmp.title, children: null };
   const intl = guildId(tmp3[17]).intl;
   obj3[2] = intl.string(guildId(first[17]).t["oTSa/q"]);
   items3[1] = callback(guildId(first[16]).Heading, obj3);
-  items3[2] = callback(EditProfileFrameInner, { user, selectedProfileFrame: first, setSelectedProfileFrame: tmp6[1], guildId });
+  items3[2] = callback(EditProfileFrameInner, {
+    user,
+    selectedProfileFrame: first,
+    setSelectedProfileFrame: tmp6[1],
+    guildId,
+  });
   obj1[1] = items3;
-  const items4 = [callback2(closure_5, obj1), ];
-  const obj4 = { user, currentSkuId: null, selectedSkuId: null, onApply: null, analyticsLocations: null, analyticsSource: null };
+  const items4 = [callback2(closure_5, obj1)];
+  const obj4 = {
+    user,
+    currentSkuId: null,
+    selectedSkuId: null,
+    onApply: null,
+    analyticsLocations: null,
+    analyticsSource: null,
+  };
   let skuId;
   tmp2Result = tmp2(tmp3[18]);
   if (currentProfileFrame != null) {
@@ -220,4 +251,4 @@ export default function EditProfileFrameActionSheet(arg0) {
   obj[4] = items4;
   obj[1] = callback2(guildId(first[15]).BottomSheet, obj);
   return callback(guildId(first[11]).AnalyticsLocationProvider, obj);
-};
+}

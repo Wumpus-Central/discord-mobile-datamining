@@ -2,7 +2,9 @@
 import closure_0 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_1 from "../../../../../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/useBenchmarkResults.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/performance/useBenchmarkResults.tsx",
+);
 
 export default function useBenchmarkResults() {
   const tmp = callback(React.useState([]), 2);
@@ -28,6 +30,6 @@ export default function useBenchmarkResults() {
         return items;
       });
     }, []),
-    clear: React.useCallback(() => callback([]), [])
+    clear: React.useCallback(() => callback([]), []),
   };
-};
+}

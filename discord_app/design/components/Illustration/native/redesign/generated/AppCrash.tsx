@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/AppCrash.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/AppCrash.tsx",
+);
 
 export const getAppCrashSource = function getAppCrashSource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getAppCrashSource = function getAppCrashSource(theme) {
     },
     light() {
       return callback(9943);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useAppCrashSource = function useAppCrashSource() {
     },
     light() {
       return callback(9943);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const AppCrash = function AppCrash(arg0) {
     },
     light() {
       return callback(9943);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

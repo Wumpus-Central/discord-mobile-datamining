@@ -384,7 +384,13 @@ function logErrorsToAnalytics(arg0, items) {
             function appendArrayMismatches(combined, primaryValue, shadowValue) {
               obj = value(appendDeepMismatches[4]);
               if (!obj.areArraysShallowEqual(primaryValue, shadowValue)) {
-                obj = { fieldName: null, primaryType: "array", shadowType: "array", primaryArrayLength: null, secondaryArrayLength: null };
+                obj = {
+                  fieldName: null,
+                  primaryType: "array",
+                  shadowType: "array",
+                  primaryArrayLength: null,
+                  secondaryArrayLength: null,
+                };
                 obj[0] = combined;
                 obj[3] = primaryValue.length;
                 obj[4] = shadowValue.length;
@@ -451,7 +457,11 @@ function logErrorsToAnalytics(arg0, items) {
                                 }
                                 let tmp17 = str;
                                 let tmp18 = item10034;
-                                let appendDeepMismatchesResult = appendDeepMismatches(str, tmp7.primaryValue, tmp7.shadowValue);
+                                let appendDeepMismatchesResult = appendDeepMismatches(
+                                  str,
+                                  tmp7.primaryValue,
+                                  tmp7.shadowValue,
+                                );
                               }
                             }
                           }
@@ -483,7 +493,13 @@ function logErrorsToAnalytics(arg0, items) {
             const mismatchesByLastAction2 = value.mismatchesByLastAction;
             const result1 = mismatchesByLastAction2.set(lastResult, num2 + 1);
             value.mismatchesReported = value.mismatchesReported + 1;
-            obj = { store_name: null, action_type: null, num_missing_keys: null, num_extra_keys: null, mismatched_fields: null };
+            obj = {
+              store_name: null,
+              action_type: null,
+              num_missing_keys: null,
+              num_extra_keys: null,
+              mismatched_fields: null,
+            };
             obj[0] = arg0;
             obj[1] = lastResult;
             ({ numMissingKeys: obj5[2], numExtraKeys: obj5[3] } = tmp21);

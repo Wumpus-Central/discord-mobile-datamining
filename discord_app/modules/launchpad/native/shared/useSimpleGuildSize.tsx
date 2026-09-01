@@ -31,6 +31,6 @@ export default function useSimpleGuildSize(size) {
       obj[2] = num2;
       const items = [obj, memo, style];
       return items;
-    }, items1)
+    }, items1),
   };
-};
+}

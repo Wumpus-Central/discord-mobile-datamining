@@ -19,4 +19,4 @@ export default function isOnPlayStation(platform) {
     tmp3 = platform1 === tmp2.PS5;
   }
   return tmp3;
-};
+}

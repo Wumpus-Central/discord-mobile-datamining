@@ -23,11 +23,19 @@ function MessageStandardEmojiActionSheet(emojiNode) {
       obj = { nonce: c0 };
       obj.track(closure_1_4.CLOSE_POPOUT, obj);
     },
-    children: null
+    children: null,
   };
-  obj = { style: callback().contentWrapper, children: jsx(EmojiDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result }) };
-  obj[2] = <View style={callback().contentWrapper}>{jsx(EmojiDefault, { emojiNode: arg0.emojiNode, nonce: v4Result })}</View>;
-  return jsx(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx").BottomSheet, { style: callback().contentWrapper, children: jsx(EmojiDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result }) });
+  obj = {
+    style: callback().contentWrapper,
+    children: jsx(EmojiDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result }),
+  };
+  obj[2] = (
+    <View style={callback().contentWrapper}>{jsx(EmojiDefault, { emojiNode: arg0.emojiNode, nonce: v4Result })}</View>
+  );
+  return jsx(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx").BottomSheet, {
+    style: callback().contentWrapper,
+    children: jsx(EmojiDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result }),
+  });
 }
 function MessageCustomEmojiActionSheet(emojiNode) {
   emojiNode = emojiNode.emojiNode;
@@ -48,7 +56,15 @@ function MessageCustomEmojiActionSheet(emojiNode) {
     };
     obj1 = { style: null, children: null };
     obj1[0] = tmp.contentWrapper;
-    const obj2 = { emojiNode: null, sourceType: null, expressionSourceApplication: null, expressionSourceGuild: null, customEmojiFromJoinedGuild: null, hasJoinedEmojiSourceGuild: null, nonce: null };
+    const obj2 = {
+      emojiNode: null,
+      sourceType: null,
+      expressionSourceApplication: null,
+      expressionSourceGuild: null,
+      customEmojiFromJoinedGuild: null,
+      hasJoinedEmojiSourceGuild: null,
+      nonce: null,
+    };
     obj2[0] = emojiNode;
     obj2[1] = tmp5;
     obj2[2] = tmp7;
@@ -56,7 +72,15 @@ function MessageCustomEmojiActionSheet(emojiNode) {
     obj2[4] = tmp9;
     obj2[5] = tmp8;
     obj2[6] = v4Result;
-    obj1[1] = jsx(CustomEmojiContentDefault, { emojiNode: null, sourceType: null, expressionSourceApplication: null, expressionSourceGuild: null, customEmojiFromJoinedGuild: null, hasJoinedEmojiSourceGuild: null, nonce: null });
+    obj1[1] = jsx(CustomEmojiContentDefault, {
+      emojiNode: null,
+      sourceType: null,
+      expressionSourceApplication: null,
+      expressionSourceGuild: null,
+      customEmojiFromJoinedGuild: null,
+      hasJoinedEmojiSourceGuild: null,
+      nonce: null,
+    });
     obj[2] = <View style={null}>{null}</View>;
     return jsx(tmp2(5622).BottomSheet, { startExpanded: true, onDismiss: null, children: null });
   }
@@ -82,4 +106,4 @@ export default function MessageEmojiActionSheet(emojiNode) {
     tmpResult = tmp(MessageCustomEmojiActionSheet, obj);
   }
   return tmpResult;
-};
+}

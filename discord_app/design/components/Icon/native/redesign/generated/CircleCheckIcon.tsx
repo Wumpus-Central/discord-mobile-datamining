@@ -10,7 +10,9 @@ import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx",
+);
 
 export const CircleCheckIcon = function CircleCheckIcon(color) {
   ({ style, secondaryColor } = color);
@@ -25,7 +27,7 @@ export const CircleCheckIcon = function CircleCheckIcon(color) {
   let obj = { children: null };
   obj = { source: registerAsset, color: secondaryColor, style };
   const merged1 = Object.assign(merged);
-  const items = [callback(BaseIconImage.BaseIconImage, obj), ];
+  const items = [callback(BaseIconImage.BaseIconImage, obj)];
   obj = { source: registerAsset2, color: INTERACTIVE_ICON_DEFAULT, style: items2 };
   const items1 = [style];
   items2 = [];

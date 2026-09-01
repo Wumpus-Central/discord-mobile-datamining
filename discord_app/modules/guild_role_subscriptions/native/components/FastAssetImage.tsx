@@ -4,7 +4,9 @@ import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FastAssetImage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/FastAssetImage.tsx",
+);
 
 export default function FastAssetImage(style) {
   const applicationId = style.applicationId;
@@ -41,4 +43,4 @@ export default function FastAssetImage(style) {
     return { uri };
   }, items1);
   return jsx(asset(first[4]), { style: style.style, onLayout, source });
-};
+}

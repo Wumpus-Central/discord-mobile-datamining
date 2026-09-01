@@ -80,7 +80,11 @@ export default function GuildPowerupsMarketingHeader(guild) {
       obj4[0] = str2;
       obj[2] = intl.format(tmp2(2401)["7lwpzR"], obj4);
       obj[1] = jsx(guild(4474).Text, { style: null, variant: "text-sm/semibold", children: null });
-      return <View style={null} variant="text-sm/semibold">{null}</View>;
+      return (
+        <View style={null} variant="text-sm/semibold">
+          {null}
+        </View>
+      );
     }
   }
-};
+}

@@ -7,11 +7,14 @@ let prototype;
 prototype = function CollectiblesStoreListingStylesRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
   // ThrowIfThisInitialized (0x7c)
-  ({ backgroundColors: tmp.backgroundColors, buttonColors: tmp.buttonColors, confettiColors: tmp.confettiColors } = arg0);
+  ({
+    backgroundColors: tmp.backgroundColors,
+    buttonColors: tmp.buttonColors,
+    confettiColors: tmp.confettiColors,
+  } = arg0);
   return tmp;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["fromServer"] = function fromServer(arg0) {
   ({ background_colors, button_colors, confetti_colors } = arg0);
   const mapped = background_colors.map((color) => {
@@ -36,6 +39,8 @@ prototype["fromServer"] = function fromServer(arg0) {
   tmp5.confettiColors = mapped2;
   return tmp5;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesStoreListingStylesRecord.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/records/CollectiblesStoreListingStylesRecord.tsx",
+);
 
 export default prototype;

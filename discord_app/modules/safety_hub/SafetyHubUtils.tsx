@@ -20,7 +20,16 @@ function parseMessageEmbedForProps(fields) {
     if (str == null) {
       str = "";
     }
-    const obj = { header: null, icon: null, body: null, ctas: null, timestamp: null, theme: null, learn_more_link: null, classification_id: null };
+    const obj = {
+      header: null,
+      icon: null,
+      body: null,
+      ctas: null,
+      timestamp: null,
+      theme: null,
+      learn_more_link: null,
+      classification_id: null,
+    };
     obj[0] = str;
     obj[1] = reduced[constants3.ICON_TYPE];
     let str2 = reduced[tmp2.BODY];
@@ -45,7 +54,11 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-({ AppealIngestionSignal: c4, SafetySystemNotificationCtaType: c5, SafetySystemNotificationEmbedKeys: closure_6 } = SafetyHubView);
+({
+  AppealIngestionSignal: c4,
+  SafetySystemNotificationCtaType: c5,
+  SafetySystemNotificationEmbedKeys: closure_6,
+} = SafetyHubView);
 ({ AbortCodes: error, MessageAttachmentFlags: closure_8 } = ME);
 const result = require("set").fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 

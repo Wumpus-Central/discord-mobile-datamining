@@ -68,21 +68,56 @@ const result8 = createCacheKey.experimental_createToken((theme) => {
   }
   return PRIMARY_600;
 });
-createCacheKey = { acceptBlurpleLabelBackgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, acceptLabelGreenBackgroundColor: ThemesDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT, acceptLabelGreenColor: ThemesDefault.unsafe_rawColors.WHITE, backgroundColor: ThemesDefault.colors.MOBILE_EMBED_BACKGROUND_DEFAULT, bodyTextColor: ThemesDefault.colors.TEXT_DEFAULT, clearLabelRedBackgroundColor: ThemesDefault.unsafe_rawColors.RED_400, clearLabelRedColor: ThemesDefault.unsafe_rawColors.WHITE, headerColor: ThemesDefault.colors.TEXT_SUBTLE, subtitleColor: ThemesDefault.colors.TEXT_SUBTLE, titleColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, acceptLabelActiveBackgroundColor: result, acceptLabelDisabledBackgroundColor: result1, acceptLabelDisabledBorderColor: result2, acceptLabelDisabledTextColor: result3, acceptLabelDisabledColor: result4, borderColor: result5, resolvingGradientEnd: result6, resolvingGradientStart: result7, thumbnailBackgroundColor: result8, voiceActiveColor: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE, voiceHeaderBackgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, voiceMutedColor: ThemesDefault.colors.TEXT_MUTED };
+createCacheKey = {
+  acceptBlurpleLabelBackgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  acceptLabelGreenBackgroundColor: ThemesDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT,
+  acceptLabelGreenColor: ThemesDefault.unsafe_rawColors.WHITE,
+  backgroundColor: ThemesDefault.colors.MOBILE_EMBED_BACKGROUND_DEFAULT,
+  bodyTextColor: ThemesDefault.colors.TEXT_DEFAULT,
+  clearLabelRedBackgroundColor: ThemesDefault.unsafe_rawColors.RED_400,
+  clearLabelRedColor: ThemesDefault.unsafe_rawColors.WHITE,
+  headerColor: ThemesDefault.colors.TEXT_SUBTLE,
+  subtitleColor: ThemesDefault.colors.TEXT_SUBTLE,
+  titleColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  acceptLabelActiveBackgroundColor: result,
+  acceptLabelDisabledBackgroundColor: result1,
+  acceptLabelDisabledBorderColor: result2,
+  acceptLabelDisabledTextColor: result3,
+  acceptLabelDisabledColor: result4,
+  borderColor: result5,
+  resolvingGradientEnd: result6,
+  resolvingGradientStart: result7,
+  thumbnailBackgroundColor: result8,
+  voiceActiveColor: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE,
+  voiceHeaderBackgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  voiceMutedColor: ThemesDefault.colors.TEXT_MUTED,
+};
 let closure_4 = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result9 = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx");
+const result9 = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx",
+);
 
 export default function getEmbedThemeColors(arg0) {
   const colors = callback(arg0);
-  const baseColors = { borderColor: colors.borderColor, backgroundColor: colors.backgroundColor, thumbnailCornerRadius: 15, headerColor: colors.headerColor };
+  const baseColors = {
+    borderColor: colors.borderColor,
+    backgroundColor: colors.backgroundColor,
+    thumbnailCornerRadius: 15,
+    headerColor: colors.headerColor,
+  };
   return { colors, baseColors };
-};
+}
 export const useEmbedThemeColors = function useEmbedThemeColors(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   return React.useMemo(() => {
     const colors = closure_1_4(closure_0);
-    const baseColors = { borderColor: colors.borderColor, backgroundColor: colors.backgroundColor, thumbnailCornerRadius: 15, headerColor: colors.headerColor };
+    const baseColors = {
+      borderColor: colors.borderColor,
+      backgroundColor: colors.backgroundColor,
+      thumbnailCornerRadius: 15,
+      headerColor: colors.headerColor,
+    };
     return { colors, baseColors };
   }, items);
 };

@@ -5,4 +5,4 @@ const result = set.fileFinishedImporting("modules/guilds_bar/native/utils/isGuil
 
 export default function isGuildsBarGuildDataEqual(icon, icon2) {
   return icon.icon === icon2.icon && icon.guildName === icon2.guildName;
-};
+}

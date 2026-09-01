@@ -10,4 +10,4 @@ export default function isChangelogChannel(arg0) {
     tmp = arg0 === dMFromUserId.getDMFromUserId(SYSTEM_UPDATES_USER_ID);
   }
   return tmp;
-};
+}

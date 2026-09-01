@@ -41,7 +41,7 @@ const forwardRefResult = importAllResult.forwardRef((onLoad, ref) => {
         const Commands = closure_1_0(closure_1_2[2]).Commands;
         Commands.seek(tmp.current, arg0);
       }
-    }
+    },
   }));
   const merged1 = Object.assign(merged);
   return jsx(ref(8102), { ref, onLoad: callback });
@@ -52,46 +52,49 @@ export const useAPNGPlayerControls = function useAPNGPlayerControls(ref) {
   closure_0 = ref;
   closure_1 = importAllResult.useRef(false);
   const items = [ref];
-  return importAllResult.useMemo(() => ({
-    play() {
-      let current = null == closure_0.current;
-      if (!current) {
-        current = ref.current;
-      }
-      if (!current) {
-        const current2 = closure_0.current;
-        current2.play();
-        ref.current = true;
-      }
-    },
-    pause() {
-      let current = null != closure_0.current;
-      if (current) {
-        current = ref.current;
-      }
-      if (current) {
-        const current2 = closure_0.current;
-        current2.pause();
-        ref.current = false;
-      }
-    },
-    stop() {
-      let current = null != closure_0.current;
-      if (current) {
-        current = ref.current;
-      }
-      if (current) {
-        const current2 = closure_0.current;
-        current2.stop();
-        ref.current = false;
-      }
-    },
-    seek(arg0) {
-      if (null != closure_0.current) {
-        const current = tmp.current;
-        current.seek(arg0);
-      }
-    }
-  }), items);
+  return importAllResult.useMemo(
+    () => ({
+      play() {
+        let current = null == closure_0.current;
+        if (!current) {
+          current = ref.current;
+        }
+        if (!current) {
+          const current2 = closure_0.current;
+          current2.play();
+          ref.current = true;
+        }
+      },
+      pause() {
+        let current = null != closure_0.current;
+        if (current) {
+          current = ref.current;
+        }
+        if (current) {
+          const current2 = closure_0.current;
+          current2.pause();
+          ref.current = false;
+        }
+      },
+      stop() {
+        let current = null != closure_0.current;
+        if (current) {
+          current = ref.current;
+        }
+        if (current) {
+          const current2 = closure_0.current;
+          current2.stop();
+          ref.current = false;
+        }
+      },
+      seek(arg0) {
+        if (null != closure_0.current) {
+          const current = tmp.current;
+          current.seek(arg0);
+        }
+      },
+    }),
+    items,
+  );
 };
 export const APNGPlayer = forwardRefResult;

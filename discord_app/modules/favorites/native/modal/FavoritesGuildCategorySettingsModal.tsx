@@ -80,11 +80,16 @@ function FavoritesGuildCategorySettings(categoryId) {
         obj.onPress = closure_10;
         obj.disabled = !closure_7;
         return closure_1_8(closure_1_0(closure_1_2[12]).HeaderTextButton, obj);
-      }
+      },
     });
   }, items6);
   const items7 = [categoryId, callback, stateFromStores];
-  obj = { style: tmp.container, contentContainerStyle: tmp.content, keyboardShouldPersistTaps: "handled", children: null };
+  obj = {
+    style: tmp.container,
+    contentContainerStyle: tmp.content,
+    keyboardShouldPersistTaps: "handled",
+    children: null,
+  };
   const callback2 = obj3.useCallback(() => {
     let obj = onGoBack(navigation[14]);
     obj = { title: null, body: null, confirmText: null, confirmColor: null, cancelText: null, onConfirm: null };
@@ -105,7 +110,15 @@ function FavoritesGuildCategorySettings(categoryId) {
     obj.show(obj);
   }, items7);
   obj = { spacing: onGoBack(tmp3[7]).space.PX_24, children: null };
-  obj1 = { label: null, accessibilityLabel: null, placeholder: null, value: null, onChange: null, maxLength: null, isClearable: true };
+  obj1 = {
+    label: null,
+    accessibilityLabel: null,
+    placeholder: null,
+    value: null,
+    onChange: null,
+    maxLength: null,
+    isClearable: true,
+  };
   let intl = tmp2(tmp3[13]).intl;
   obj1[0] = intl.string(categoryId(navigation[13]).t.OCAkGP);
   let intl2 = tmp2(tmp3[13]).intl;
@@ -115,9 +128,14 @@ function FavoritesGuildCategorySettings(categoryId) {
   obj1[3] = str;
   obj1[4] = tmp8;
   obj1[5] = closure_7;
-  const items8 = [callback(categoryId(navigation[17]).TextInput, obj1), ];
+  const items8 = [callback(categoryId(navigation[17]).TextInput, obj1)];
   obj2 = { hasIcons: true, children: null };
-  obj3 = { variant: "danger", icon: callback(tmp2(tmp3[20]).TrashIcon, { color: "text-feedback-critical" }), label: null, onPress: null };
+  obj3 = {
+    variant: "danger",
+    icon: callback(tmp2(tmp3[20]).TrashIcon, { color: "text-feedback-critical" }),
+    label: null,
+    onPress: null,
+  };
   let intl4 = tmp2(tmp3[13]).intl;
   obj3[2] = intl4.string(categoryId(navigation[13]).t.ifbXnL);
   obj3[3] = callback2;
@@ -134,7 +152,9 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { padding: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/favorites/native/modal/FavoritesGuildCategorySettingsModal.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/favorites/native/modal/FavoritesGuildCategorySettingsModal.tsx",
+);
 
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
@@ -147,4 +167,4 @@ export default function FavoritesGuildCategorySettingsModal(categoryId) {
     return closure_1_8(closure_1_11, { categoryId, onGoBack });
   };
   return callback(onGoBack(10661), obj);
-};
+}

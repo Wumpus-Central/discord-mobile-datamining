@@ -12,7 +12,7 @@ let prototype = function UserOfferManager() {
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       return applyArgumentsResult.handlePostConnectionOpen();
-    }
+    },
   };
   applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
     currentUser = currentUser.getCurrentUser();
@@ -37,8 +37,7 @@ let prototype = function UserOfferManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 const result = require("set").fileFinishedImporting("modules/premium/native/UserOfferManager.tsx");
 

@@ -11,14 +11,16 @@ require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TermsField.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/form_fields/TermsField.tsx",
+);
 
 export default function TermsField(field) {
   field = field.field;
   ({ onChange, rulesChannelId } = field);
   let flag = field.response;
   let obj = { style: callback2().container, children: null };
-  const items = [callback(TermsFieldListItemDefault, { rules: field.values, rulesChannelId }), ];
+  const items = [callback(TermsFieldListItemDefault, { rules: field.values, rulesChannelId })];
   if (flag == null) {
     flag = false;
   }
@@ -29,4 +31,4 @@ export default function TermsField(field) {
   items[1] = callback(TableCheckboxRow.TableCheckboxRow, obj);
   obj[1] = items;
   return closure_5(View, obj);
-};
+}

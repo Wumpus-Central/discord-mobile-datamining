@@ -6,7 +6,9 @@ import closure_3 from "../../stores/GuildMemberStore.tsx";
 require = arg1;
 let items = [12, 25, 50, 100];
 let closure_5 = { FORWARD: 1, [1]: "FORWARD", BACKWARD: -1, [-1]: "BACKWARD" };
-let result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyPagination.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_mod_dash_member_safety/GuildMemberSafetyPagination.tsx",
+);
 class GuildMemberSafetyPagination {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -21,7 +23,13 @@ class GuildMemberSafetyPagination {
       return arg0;
     };
     obj.guildId = global;
-    obj = { pageSize: closure_4[0], currentPage: 1, continuationToken: null, sort: require("result").OrderBy.ORDER_BY_UNSPECIFIED, elasticSearchCursor: null };
+    obj = {
+      pageSize: closure_4[0],
+      currentPage: 1,
+      continuationToken: null,
+      sort: require("result").OrderBy.ORDER_BY_UNSPECIFIED,
+      elasticSearchCursor: null,
+    };
     obj._paginationState = obj;
     obj._version = 0;
     tmp = closure_2(obj._initPaginationFromRawMembers(arg1), 2);
@@ -32,7 +40,13 @@ class GuildMemberSafetyPagination {
 }
 const prototype = GuildMemberSafetyPagination.prototype;
 prototype["reset"] = function reset() {
-  this._paginationState = { pageSize: items[0], currentPage: 1, continuationToken: null, sort: result2.OrderBy.ORDER_BY_UNSPECIFIED, elasticSearchCursor: null };
+  this._paginationState = {
+    pageSize: items[0],
+    currentPage: 1,
+    continuationToken: null,
+    sort: result2.OrderBy.ORDER_BY_UNSPECIFIED,
+    elasticSearchCursor: null,
+  };
   this._sortedMemberIds = [];
   this._cachedPaginationChunks = {};
   this._version = this._version + 1;
@@ -57,7 +71,7 @@ prototype["_initPaginationFromRawMembers"] = function _initPaginationFromRawMemb
       const result = self._reduceMemberIdsToPaginationChunks(arg0, userId.userId, arg2);
       items.push(userId.userId);
       return result;
-    }, {})
+    }, {}),
   ];
   return items1;
 };
@@ -185,13 +199,13 @@ Object.defineProperty(prototype, "paginatedMembers", {
   get: function paginatedMembers() {
     return this._cachedPaginationChunks;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "version", {
   get: function version() {
     return this._version;
   },
-  set: undefined
+  set: undefined,
 });
 
 export const PAGINATION_PAGE_SIZE_OPTIONS = items;
@@ -199,7 +213,13 @@ export const MAX_VISIBLE_PAGES = 7;
 export const MAX_FORWARD_PAGE_SKIP = 5;
 export const DEFAULT_SEARCH_CHUNK_LIMIT = 250;
 export const createDefaultMemberSafetyPaginationState = function createDefaultMemberSafetyPaginationState() {
-  return { pageSize: items[0], currentPage: 1, continuationToken: null, sort: result2.OrderBy.ORDER_BY_UNSPECIFIED, elasticSearchCursor: null };
+  return {
+    pageSize: items[0],
+    currentPage: 1,
+    continuationToken: null,
+    sort: result2.OrderBy.ORDER_BY_UNSPECIFIED,
+    elasticSearchCursor: null,
+  };
 };
 export const getSearchChunkLimit = function getSearchChunkLimit(paginationState) {
   return Math.max(5 * paginationState.pageSize, 250);

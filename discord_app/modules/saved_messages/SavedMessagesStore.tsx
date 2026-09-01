@@ -90,32 +90,34 @@ function handleGuild() {
   return tmp;
 }
 let c3 = 10000000000000;
-const secondaryIndexMap = new require("version").SecondaryIndexMap((saveData) => {
-  const items = [SavedMessageSortTypes.SavedMessageSortTypes.ALL, ];
-  if (null != saveData.saveData.dueAt) {
-    let BOOKMARK = tmp(7604).SavedMessageSortTypes.REMINDER;
-  } else {
-    BOOKMARK = tmp(7604).SavedMessageSortTypes.BOOKMARK;
-  }
-  items[1] = BOOKMARK;
-  return items;
-}, (saveData) => {
-  saveData = saveData.saveData;
-  if (null != saveData.dueAt) {
-    let diff = getTimeSafe(saveData.dueAt);
-  } else {
-    diff = c3 - getTimeSafe(saveData.savedAt);
-  }
-  return diff;
-});
+const secondaryIndexMap = new require("version").SecondaryIndexMap(
+  (saveData) => {
+    const items = [SavedMessageSortTypes.SavedMessageSortTypes.ALL];
+    if (null != saveData.saveData.dueAt) {
+      let BOOKMARK = tmp(7604).SavedMessageSortTypes.REMINDER;
+    } else {
+      BOOKMARK = tmp(7604).SavedMessageSortTypes.BOOKMARK;
+    }
+    items[1] = BOOKMARK;
+    return items;
+  },
+  (saveData) => {
+    saveData = saveData.saveData;
+    if (null != saveData.dueAt) {
+      let diff = getTimeSafe(saveData.dueAt);
+    } else {
+      diff = c3 - getTimeSafe(saveData.savedAt);
+    }
+    return diff;
+  },
+);
 let c6 = true;
 let c7 = 0;
 let set = new Set();
 const set1 = new Set();
 const map = new Map();
 const Store = initializeDefault.Store;
-class SavedMessagesStore extends Store {
-}
+class SavedMessagesStore extends Store {}
 const prototype = SavedMessagesStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2);
@@ -348,7 +350,7 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
   GUILD_ROLE_DELETE: handleGuild,
   MESSAGE_REMINDER_DUE: function handleMessageReminderDue(savedMessage) {
     set.add(savedMessage.savedMessage.saveData.messageId);
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/saved_messages/SavedMessagesStore.tsx");
 

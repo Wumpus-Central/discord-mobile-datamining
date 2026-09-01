@@ -17,7 +17,9 @@ import { InviteTargetTypes } from "../../../../../../instant_invite/Constants.ts
 
 const require = arg1;
 let closure_16 = ["embedded_cover"];
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx",
+);
 
 export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivityInviteEmbed(inviteCode) {
   let id;

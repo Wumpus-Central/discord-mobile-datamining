@@ -8,8 +8,7 @@ let set = new Set();
 obj[0] = set;
 obj[1] = new Set();
 const PersistedStore = initializeDefault.PersistedStore;
-class DisplayNameStylesSeenStore extends PersistedStore {
-}
+class DisplayNameStylesSeenStore extends PersistedStore {}
 const prototype = DisplayNameStylesSeenStore.prototype;
 prototype["initialize"] = function initialize(seenFontIds) {
   seenFontIds = undefined;
@@ -19,7 +18,12 @@ prototype["initialize"] = function initialize(seenFontIds) {
   if (seenFontIds == null) {
     seenFontIds = [];
   }
-  obj = { seenFontIds: new Set(seenFontIds), seenEffectIds: null, newFontsBadgeDismissed: null, newEffectsBadgeDismissed: null };
+  obj = {
+    seenFontIds: new Set(seenFontIds),
+    seenEffectIds: null,
+    newFontsBadgeDismissed: null,
+    newEffectsBadgeDismissed: null,
+  };
   let seenEffectIds;
   if (seenFontIds != null) {
     seenEffectIds = seenFontIds.seenEffectIds;
@@ -47,7 +51,12 @@ prototype["initialize"] = function initialize(seenFontIds) {
   obj[3] = flag2;
 };
 prototype["getState"] = function getState() {
-  obj = { seenFontIds: Array.from(obj.seenFontIds), seenEffectIds: Array.from(obj.seenEffectIds), newFontsBadgeDismissed: obj.newFontsBadgeDismissed, newEffectsBadgeDismissed: obj.newEffectsBadgeDismissed };
+  obj = {
+    seenFontIds: Array.from(obj.seenFontIds),
+    seenEffectIds: Array.from(obj.seenEffectIds),
+    newFontsBadgeDismissed: obj.newFontsBadgeDismissed,
+    newEffectsBadgeDismissed: obj.newEffectsBadgeDismissed,
+  };
   return obj;
 };
 prototype["getSeenFonts"] = function getSeenFonts() {
@@ -71,7 +80,7 @@ let items = [
     obj.newFontsBadgeDismissed = false;
     obj.newEffectsBadgeDismissed = false;
     return obj;
-  }
+  },
 ];
 DisplayNameStylesSeenStore.migrations = items;
 obj = {
@@ -122,7 +131,7 @@ obj = {
       const merged = Object.assign(obj);
       obj.newEffectsBadgeDismissed = true;
     }
-  }
+  },
 };
 const displayNameStylesSeenStore = new DisplayNameStylesSeenStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesSeenStore.tsx");

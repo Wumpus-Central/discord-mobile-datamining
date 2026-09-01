@@ -25,7 +25,15 @@ function AudienceItem(arg0) {
   }
   obj = { style: collapsed ? tmp2.listenersCollapsed : tmp2.listeners, children: null };
   obj = { style: tmp2.listenersIconWrapper, children: callback(HeadphonesIcon.HeadphonesIcon, obj1) };
-  const items = [callback(View, obj), callback(Text.Text, { style: tmp2.listenersText, variant: c10, color: "redesign-channel-name-muted-text", children: formatToPlainStringResult })];
+  const items = [
+    callback(View, obj),
+    callback(Text.Text, {
+      style: tmp2.listenersText,
+      variant: c10,
+      color: "redesign-channel-name-muted-text",
+      children: formatToPlainStringResult,
+    }),
+  ];
   obj[1] = items;
   return closure_7(View, obj);
 }
@@ -44,8 +52,38 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
     tmp4 = tmp;
   }
   const round = tmp4(712).radii.round;
-  let obj = { listeners: { display: "flex", flexDirection: "row", alignItems: "center", padding: 4, marginTop: 4, marginLeft: -8 }, listenersCollapsed: { flexDirection: "row", alignItems: "center", backgroundColor: BACKGROUND_BASE_LOWEST, borderRadius: round, marginLeft: -16, marginTop: 4, paddingLeft: 2, paddingRight: 6 }, listenersIconWrapper: null, listenersText: null, userCollapsedOverlap: null, headphonesIcon: null };
-  obj = { alignItems: "center", justifyContent: "center", backgroundColor: BACKGROUND_BASE_LOWEST, marginRight: 8, marginLeft: 4, borderRadius: round };
+  let obj = {
+    listeners: {
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      padding: 4,
+      marginTop: 4,
+      marginLeft: -8,
+    },
+    listenersCollapsed: {
+      flexDirection: "row",
+      alignItems: "center",
+      backgroundColor: BACKGROUND_BASE_LOWEST,
+      borderRadius: round,
+      marginLeft: -16,
+      marginTop: 4,
+      paddingLeft: 2,
+      paddingRight: 6,
+    },
+    listenersIconWrapper: null,
+    listenersText: null,
+    userCollapsedOverlap: null,
+    headphonesIcon: null,
+  };
+  obj = {
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: BACKGROUND_BASE_LOWEST,
+    marginRight: 8,
+    marginLeft: 4,
+    borderRadius: round,
+  };
   const merged = Object.assign(getLayoutStyles.makeSizeStyle(20));
   obj[2] = obj;
   obj[3] = { marginRight: 4 };
@@ -63,7 +101,14 @@ let closure_12 = importAllResult.memo((voiceState) => {
   let obj = user(589);
   const items = [closure_5];
   const items1 = [channel.guild_id, user.id];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ storeMember: closure_1_5.getMember(channel.guild_id, user.id), isGuest: closure_1_5.isGuestOrLurker(channel.guild_id, user.id) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => ({
+      storeMember: closure_1_5.getMember(channel.guild_id, user.id),
+      isGuest: closure_1_5.isGuestOrLurker(channel.guild_id, user.id),
+    }),
+    items1,
+  );
   let userCollapsedOverlap = null;
   ({ storeMember, isGuest } = stateFromStoresObject);
   if (collapsed) {
@@ -73,7 +118,20 @@ let closure_12 = importAllResult.memo((voiceState) => {
     }
   }
   obj = { style: userCollapsedOverlap, children: null };
-  obj = { user, member: null, mute: null, deaf: null, selfVideo: null, selfMute: null, selfDeaf: null, suppress: null, collapsed: null, sessionId: null, channel: null, isGuest: null };
+  obj = {
+    user,
+    member: null,
+    mute: null,
+    deaf: null,
+    selfVideo: null,
+    selfMute: null,
+    selfDeaf: null,
+    suppress: null,
+    collapsed: null,
+    sessionId: null,
+    channel: null,
+    isGuest: null,
+  };
   const tmp = channel;
   tmp3 = callback2(channel(7617)());
   const tmp6 = View;
@@ -81,7 +139,14 @@ let closure_12 = importAllResult.memo((voiceState) => {
     member = storeMember;
   }
   obj[1] = member;
-  ({ mute: obj3[2], deaf: obj3[3], selfVideo: obj3[4], selfMute: obj3[5], selfDeaf: obj3[6], suppress: obj3[7] } = voiceState2);
+  ({
+    mute: obj3[2],
+    deaf: obj3[3],
+    selfVideo: obj3[4],
+    selfMute: obj3[5],
+    selfDeaf: obj3[6],
+    suppress: obj3[7],
+  } = voiceState2);
   obj[8] = collapsed;
   obj[9] = voiceState2.sessionId;
   obj[10] = channel;
@@ -123,7 +188,15 @@ export default function VoiceUsers(collapsed) {
     if (0 !== voiceStates.length) {
       obj = { collapsed: null, children: null };
       obj[0] = collapsed;
-      const items1 = [voiceStates.map((user) => closure_1_6(closure_1_12, { voiceState: user, channel, collapsed, isFirst: 0 === arg1 }, "voice-user-item-" + user.user.id + "-" + user.voiceState.sessionId)), ];
+      const items1 = [
+        voiceStates.map((user) =>
+          closure_1_6(
+            closure_1_12,
+            { voiceState: user, channel, collapsed, isFirst: 0 === arg1 },
+            "voice-user-item-" + user.user.id + "-" + user.voiceState.sessionId,
+          ),
+        ),
+      ];
       let tmp17 = null != audienceCount && audienceCount > 0;
       if (tmp17) {
         obj = { audienceCount: null, collapsed: null };
@@ -140,7 +213,7 @@ export default function VoiceUsers(collapsed) {
     return tmp15Result;
   }
   mapped = closure_9;
-};
+}
 export const getAudienceItemHeight = function getAudienceItemHeight(fontScale) {
   return 8 + Math.max(20, map.scaleTextLineHeight(c10, fontScale));
 };

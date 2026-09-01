@@ -37,13 +37,13 @@ createToggle = {
     return jsx(Button.Badge, { value: unseenOutboundPromotions.length });
   },
   unsearchable: true,
-  screen: createToggle
+  screen: createToggle,
 };
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM_GIFTING,
   getComponent() {
     return GiftingSectionTitle /* GiftingSectionTitle */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/PremiumGiftingSetting.tsx");

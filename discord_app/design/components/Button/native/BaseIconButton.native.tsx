@@ -73,7 +73,15 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
   obj.pressed = sharedValue;
   obj.scaleAmountInPx = num;
   obj.hitSlop = bound;
-  obj = { style: items1, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null };
+  obj = {
+    style: items1,
+    variant: str,
+    size: DEFAULT_BUTTON_SIZE,
+    loading,
+    loaderSize: null,
+    pressed: null,
+    children: null,
+  };
   items1 = [tmp3.pill, pillStyle];
   let str3 = "xs";
   if ("lg" === DEFAULT_BUTTON_SIZE) {
@@ -90,8 +98,24 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
     tmp10Result = tmp10(closure_5, obj1);
   }
   obj[6] = tmp10Result;
-  obj.children = jsx(PillWrapper.ButtonPill, { style: items1, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null });
-  return jsx(BaseButton.BaseButton, { style: items1, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null });
+  obj.children = jsx(PillWrapper.ButtonPill, {
+    style: items1,
+    variant: str,
+    size: DEFAULT_BUTTON_SIZE,
+    loading,
+    loaderSize: null,
+    pressed: null,
+    children: null,
+  });
+  return jsx(BaseButton.BaseButton, {
+    style: items1,
+    variant: str,
+    size: DEFAULT_BUTTON_SIZE,
+    loading,
+    loaderSize: null,
+    pressed: null,
+    children: null,
+  });
 });
 const result = require("set").fileFinishedImporting("design/components/Button/native/BaseIconButton.native.tsx");
 

@@ -21,7 +21,7 @@ export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(
           return closure_2_3(IgnoreThermalStateAlert, obj);
         };
       });
-    }
+    },
   };
   obj.openLazy(obj);
 };

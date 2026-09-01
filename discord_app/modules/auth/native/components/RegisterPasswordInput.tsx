@@ -72,7 +72,9 @@ obj3[1] = require("../../../../../_runtime/00300_get_BatchedBridge.js");
 const obj4 = { layout: null };
 const obj2 = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
 obj4[0] = require("../../../../../_runtime/00300_get_BatchedBridge.js");
-const easingResult = LinearTransition.easing(Easing.inOut(require("../../../reanimated/ReanimatedRexport.tsx").Easing.quad));
+const easingResult = LinearTransition.easing(
+  Easing.inOut(require("../../../reanimated/ReanimatedRexport.tsx").Easing.quad),
+);
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   ({ password, onPasswordChange } = arg0);
   ({ returnKeyType, autoFocus } = arg0);
@@ -135,7 +137,25 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   callback3 = obj.useCallback(() => {
     tmp9((arg0) => !arg0);
   }, items5);
-  obj = { ref: null, textContentType: "newPassword", autoComplete: "new-password", onChange: null, value: null, label: null, accessibilityHint: null, secureTextEntry: null, returnKeyType: null, autoCapitalize: "none", onSubmitEditing: null, onFocus: null, onBlur: null, trailingIcon: null, trailingPressableProps: null, errorMessage: null, status: null };
+  obj = {
+    ref: null,
+    textContentType: "newPassword",
+    autoComplete: "new-password",
+    onChange: null,
+    value: null,
+    label: null,
+    accessibilityHint: null,
+    secureTextEntry: null,
+    returnKeyType: null,
+    autoCapitalize: "none",
+    onSubmitEditing: null,
+    onFocus: null,
+    onBlur: null,
+    trailingIcon: null,
+    trailingPressableProps: null,
+    errorMessage: null,
+    status: null,
+  };
   const tmp22 = closure_10;
   const tmp23 = closure_12;
   const tmp7 = stateFromStores(obj.useState(false), 2);
@@ -175,7 +195,10 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     str = "error";
   }
   obj[16] = str;
-  const children = [closure_11(onPasswordChange(first[16]).TextInput, obj), closure_11(PasswordStrength, { password, isPasswordFocused: first, passwordError: tmp14, passwordScore }), ];
+  const children = [
+    closure_11(onPasswordChange(first[16]).TextInput, obj),
+    closure_11(PasswordStrength, { password, isPasswordFocused: first, passwordError: tmp14, passwordScore }),
+  ];
   let tmp24Result = null;
   if (null != memo) {
     tmp24Result = null;

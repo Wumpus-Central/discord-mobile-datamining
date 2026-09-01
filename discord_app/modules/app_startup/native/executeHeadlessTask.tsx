@@ -15,7 +15,7 @@ function _executeHeadlessTask() {
     c11 = 0;
     c12 = 0;
     c9 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c12 === 2) {
         c12 = 3;
         HermesBuiltin.throwTypeError();
@@ -88,4 +88,4 @@ export default function executeHeadlessTask() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

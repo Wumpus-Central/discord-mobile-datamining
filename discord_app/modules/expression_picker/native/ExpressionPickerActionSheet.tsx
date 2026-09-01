@@ -37,13 +37,33 @@ export default function ExpressionPickerActionSheet(arg0) {
       isIOSResult = callback(tmp7(9124), obj);
     }
     obj = { children: null };
-    const items1 = [isIOSResult, ];
-    obj1 = { scrollable: true, animatedIndex: null, startHeight: null, containerHeight: null, onDismiss: null, children: null };
+    const items1 = [isIOSResult];
+    obj1 = {
+      scrollable: true,
+      animatedIndex: null,
+      startHeight: null,
+      containerHeight: null,
+      onDismiss: null,
+      children: null,
+    };
     obj1[1] = sharedValue;
     obj1[2] = height * closure_5;
     obj1[3] = diff;
     obj1[4] = onDismiss;
-    obj2 = { bottomSheetRef: null, bottomSheetIndex: null, channel: null, expressionType: null, hideGifFavorites: null, onPressEmoji: null, onPressGIF: null, onPressSticker: null, visibleTabs: null, initialGifQuery: null, stickerFormats: null, height: null };
+    obj2 = {
+      bottomSheetRef: null,
+      bottomSheetIndex: null,
+      channel: null,
+      expressionType: null,
+      hideGifFavorites: null,
+      onPressEmoji: null,
+      onPressGIF: null,
+      onPressSticker: null,
+      visibleTabs: null,
+      initialGifQuery: null,
+      stickerFormats: null,
+      height: null,
+    };
     obj2[0] = ref;
     obj2[1] = sharedValue;
     obj2[2] = stateFromStores;
@@ -80,4 +100,4 @@ export default function ExpressionPickerActionSheet(arg0) {
     const tmp2Result = tmp2(500);
   }
   return tmp15Result;
-};
+}

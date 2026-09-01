@@ -3,7 +3,21 @@ import set from "../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/errors/CommonSentryInitUtils.tsx");
 
-export const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = ["notification_clicked", "experiment_user_triggered", "experiment_dm_triggered", "experiment_guild_triggered", "device_event", "react_soft_exception", "network_capabilities_changed", "foreground_service", "app_lifecycle", "ui_lifecycle", "touch_event", "http_request", "websocket_message_received"];
+export const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = [
+  "notification_clicked",
+  "experiment_user_triggered",
+  "experiment_dm_triggered",
+  "experiment_guild_triggered",
+  "device_event",
+  "react_soft_exception",
+  "network_capabilities_changed",
+  "foreground_service",
+  "app_lifecycle",
+  "ui_lifecycle",
+  "touch_event",
+  "http_request",
+  "websocket_message_received",
+];
 export const filterThrottle = function filterThrottle(arg0) {
   ({ maxBudgetMinute: closure_0, maxBudgetHour: closure_1 } = arg0);
   closure_2 = { minute: { slot: 0, budgetUsed: 0 }, hour: { slot: 0, budgetUsed: 0 } };

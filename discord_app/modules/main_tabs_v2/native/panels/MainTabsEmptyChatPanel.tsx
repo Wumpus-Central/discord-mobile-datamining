@@ -38,7 +38,11 @@ export default function MainTabsEmptyChatPanel() {
     obj = { style: null, pointerEvents: "box-none", children: null };
     obj[0] = tmp4.container;
     obj[2] = jsx(FavoritesEmptyStateDefault, {});
-    tmp5 = <closure_4 style={null} pointerEvents="box-none">{null}</closure_4>;
+    tmp5 = (
+      <closure_4 style={null} pointerEvents="box-none">
+        {null}
+      </closure_4>
+    );
   }
   return tmp5;
-};
+}

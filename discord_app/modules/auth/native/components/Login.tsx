@@ -25,7 +25,13 @@ class LinkButton {
     if (str2 === undefined) {
       str2 = "text-link";
     }
-    obj = { style: items, hitSlop: { top: 8, right: 8, bottom: 8 }, accessibilityRole: "button", onPress, children: jsx(require("Text").Text, { style: textStyle, variant: str, color: str2, children: text }) };
+    obj = {
+      style: items,
+      hitSlop: { top: 8, right: 8, bottom: 8 },
+      accessibilityRole: "button",
+      onPress,
+      children: jsx(require("Text").Text, { style: textStyle, variant: str, color: str2, children: text }),
+    };
     items = [];
     items[0] = containerStyle;
     return jsx(require("PressableBase").PressableOpacity, obj);
@@ -52,7 +58,14 @@ function handlePressPasswordManagerHint() {
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((arg0) => {
-  const obj = { password: { marginTop: 24 }, button: { width: "100%", marginTop: 16 }, hint: { marginTop: 4 }, link: { alignSelf: "flex-start", paddingVertical: 4 }, separator: { paddingHorizontal: 16, paddingVertical: 4 }, content: null };
+  const obj = {
+    password: { marginTop: 24 },
+    button: { width: "100%", marginTop: 16 },
+    hint: { marginTop: 4 },
+    link: { alignSelf: "flex-start", paddingVertical: 4 },
+    separator: { paddingHorizontal: 16, paddingVertical: 4 },
+    content: null,
+  };
   let num = 0;
   if (arg0) {
     num = 12;
@@ -104,9 +117,12 @@ export default function Login(isMultiAccount) {
   first1 = tmp18[0];
   callback3 = tmp18[1];
   closure_11 = React.useRef(undefined);
-  const effect = React.useEffect(() => () => {
-    clearTimeout(ref.current);
-  }, []);
+  const effect = React.useEffect(
+    () => () => {
+      clearTimeout(ref.current);
+    },
+    [],
+  );
   callback = React.useCallback((retry_after) => {
     _undefined3(retry_after);
     if (null != retry_after.retry_after) {
@@ -120,112 +136,117 @@ export default function Login(isMultiAccount) {
     }
   }, []);
   let obj2 = _require(ref[18]);
-  const focusEffect = obj2.useFocusEffect(React.useCallback(() => {
-    _undefined2(false);
-  }, []));
+  const focusEffect = obj2.useFocusEffect(
+    React.useCallback(() => {
+      _undefined2(false);
+    }, []),
+  );
   const items1 = [callback, first];
-  closure_13 = React.useCallback(callback(function*() {
-    if (v02 === 2) {
-      v02 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v02 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            v02 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v02 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c1 = tmp4;
-            closure_0 = tmp8;
-            closure_0 = undefined;
-            c1 = undefined;
-            v0(true);
-            v02({});
-            c3 = 2;
-            let obj3 = callback(6052);
-            v0 = 3;
-            v02 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = obj3.forgotPassword(closure_1_6);
-            return obj1;
-          }
-        } else if (1 === tmp8) {
-          c3 = 0;
-          v0(false);
-          throw dependencyMap;
+  closure_13 = React.useCallback(
+    callback(function* () {
+      if (v02 === 2) {
+        v02 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          if (2 === tmp8) {
-            c3 = 1;
-            let obj2 = closure_1_0(7721);
-            callback = obj2.getAuthenticationErrorsFromV6OrEarlierAPIError(dependencyMap);
-            callback2(callback);
-            c3 = 0;
-            v0(false);
-            v02 = 3;
-          } else if (arg0 === 1) {
-            v02 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            v0(false);
-            v02 = 3;
-            obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            closure_0 = arg1;
-            if (false !== closure_0) {
-              if (closure_0 === closure_1_0(7719).PasswordResetMethods.ONE_TIME_LOGIN) {
-                obj = closure_1_0(4859);
-                obj.openAlert("one-time-login-forgot-password-confirm", closure_1_10(callback(7720), {}));
-              } else {
-                obj3 = { title: null, body: null };
-                const intl = closure_1_0(1236).intl;
-                obj3[0] = intl.string(closure_1_0(1236).t.f5Pi7A);
-                const intl2 = closure_1_0(1236).intl;
-                const obj4 = { email: null };
-                obj4[0] = closure_6;
-                obj3[1] = intl2.format(closure_1_0(1236).t["6u5hQ9"], obj4);
-                callback(4858).show(obj3);
-                const obj8 = callback(4858);
-              }
-              c3 = 1;
-            }
-          }
-          c3 = 0;
-          v0(false);
-          v02 = 3;
           return { value: "HermesInternal", done: null };
         }
-      } catch (tmp47) {
-        dependencyMap = tmp47;
-        if (tmp5 === c3) {
-          v02 = tmp3;
-          throw tmp47;
-        } else if (tmp2 === tmp49) {
-          v0 = tmp2;
-        } else {
-          v0 = tmp;
+      } else {
+        try {
+          v02 = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              v02 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              v02 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              c1 = tmp4;
+              closure_0 = tmp8;
+              closure_0 = undefined;
+              c1 = undefined;
+              v0(true);
+              v02({});
+              c3 = 2;
+              let obj3 = callback(6052);
+              v0 = 3;
+              v02 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = obj3.forgotPassword(closure_1_6);
+              return obj1;
+            }
+          } else if (1 === tmp8) {
+            c3 = 0;
+            v0(false);
+            throw dependencyMap;
+          } else {
+            if (2 === tmp8) {
+              c3 = 1;
+              let obj2 = closure_1_0(7721);
+              callback = obj2.getAuthenticationErrorsFromV6OrEarlierAPIError(dependencyMap);
+              callback2(callback);
+              c3 = 0;
+              v0(false);
+              v02 = 3;
+            } else if (arg0 === 1) {
+              v02 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              v0(false);
+              v02 = 3;
+              obj2 = { value: null, done: true };
+              obj2[0] = arg1;
+              return obj2;
+            } else {
+              closure_0 = arg1;
+              if (false !== closure_0) {
+                if (closure_0 === closure_1_0(7719).PasswordResetMethods.ONE_TIME_LOGIN) {
+                  obj = closure_1_0(4859);
+                  obj.openAlert("one-time-login-forgot-password-confirm", closure_1_10(callback(7720), {}));
+                } else {
+                  obj3 = { title: null, body: null };
+                  const intl = closure_1_0(1236).intl;
+                  obj3[0] = intl.string(closure_1_0(1236).t.f5Pi7A);
+                  const intl2 = closure_1_0(1236).intl;
+                  const obj4 = { email: null };
+                  obj4[0] = closure_6;
+                  obj3[1] = intl2.format(closure_1_0(1236).t["6u5hQ9"], obj4);
+                  callback(4858).show(obj3);
+                  const obj8 = callback(4858);
+                }
+                c3 = 1;
+              }
+            }
+            c3 = 0;
+            v0(false);
+            v02 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } catch (tmp47) {
+          dependencyMap = tmp47;
+          if (tmp5 === c3) {
+            v02 = tmp3;
+            throw tmp47;
+          } else if (tmp2 === tmp49) {
+            v0 = tmp2;
+          } else {
+            v0 = tmp;
+          }
         }
       }
-    }
-  }), items1);
+    }),
+    items1,
+  );
   _require = undefined;
   _require = callback((arg0, arg1) => {
     closure_0 = arg0;
@@ -234,7 +255,7 @@ export default function Login(isMultiAccount) {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       closure_4 = tmp3;
       if (flag === undefined) {
         flag = false;
@@ -254,7 +275,8 @@ export default function Login(isMultiAccount) {
         closure_4 = closure_5;
         closure_1_4(false);
         obj1 = callback(ref[23]);
-        const authenticationErrorsFromV6OrEarlierAPIError = obj1.getAuthenticationErrorsFromV6OrEarlierAPIError(closure_4);
+        const authenticationErrorsFromV6OrEarlierAPIError =
+          obj1.getAuthenticationErrorsFromV6OrEarlierAPIError(closure_4);
         closure_1_12(authenticationErrorsFromV6OrEarlierAPIError);
         c8 = 3;
       } else if (arg0 === 1) {
@@ -270,7 +292,7 @@ export default function Login(isMultiAccount) {
     return iter;
   });
   const items2 = [callback, flag];
-  callback1 = React.useCallback(function() {
+  callback1 = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -281,99 +303,102 @@ export default function Login(isMultiAccount) {
     return applyArgumentsResult;
   }, items2);
   const items3 = [callback, first1];
-  callback2 = React.useCallback(callback(function*() {
-    if (v02 === 2) {
-      v02 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  callback2 = React.useCallback(
+    callback(function* () {
+      if (v02 === 2) {
+        v02 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v02 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            v02 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v02 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let message = tmp4;
-            c0 = tmp8;
-            c0 = undefined;
-            if (!closure_1_9) {
-              if (!closure_1_8.getIsPasswordlessActive()) {
-                let obj3 = closure_1_1(closure_1_2[24]);
-                const passkeyAuthenticator = obj3.getPasskeyAuthenticator();
-                v0(true);
-                v02({});
-                c3 = 2;
-                obj1 = { authenticateFunc: null };
-                obj1[0] = passkeyAuthenticator;
-                v0 = 3;
-                v02 = 1;
-                let obj2 = { value: null, done: false };
-                obj2[0] = closure_1_1(closure_1_2[19]).authenticatePasswordless(obj1);
-                return obj2;
+        try {
+          v02 = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              v02 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              v02 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let message = tmp4;
+              c0 = tmp8;
+              c0 = undefined;
+              if (!closure_1_9) {
+                if (!closure_1_8.getIsPasswordlessActive()) {
+                  let obj3 = closure_1_1(closure_1_2[24]);
+                  const passkeyAuthenticator = obj3.getPasskeyAuthenticator();
+                  v0(true);
+                  v02({});
+                  c3 = 2;
+                  obj1 = { authenticateFunc: null };
+                  obj1[0] = passkeyAuthenticator;
+                  v0 = 3;
+                  v02 = 1;
+                  let obj2 = { value: null, done: false };
+                  obj2[0] = closure_1_1(closure_1_2[19]).authenticatePasswordless(obj1);
+                  return obj2;
+                }
               }
+              v02 = 3;
             }
-            v02 = 3;
-          }
-        } else if (1 !== tmp8) {
-          if (2 === tmp8) {
-            c3 = 1;
-            message = closure_2;
-            if (message instanceof callback(closure_1_2[25]).APIError) {
-              obj2 = callback(closure_1_2[23]);
-              callback = obj2.getAuthenticationErrorsFromAPIError(closure_1_1);
-              callback2(callback);
-            } else if (!(closure_1_1 instanceof callback(closure_1_2[26]).IgnorableWebAuthnError)) {
-              obj3 = { message: null };
-              obj3[0] = message.message;
-              v02(obj3);
+          } else if (1 !== tmp8) {
+            if (2 === tmp8) {
+              c3 = 1;
+              message = closure_2;
+              if (message instanceof callback(closure_1_2[25]).APIError) {
+                obj2 = callback(closure_1_2[23]);
+                callback = obj2.getAuthenticationErrorsFromAPIError(closure_1_1);
+                callback2(callback);
+              } else if (!(closure_1_1 instanceof callback(closure_1_2[26]).IgnorableWebAuthnError)) {
+                obj3 = { message: null };
+                obj3[0] = message.message;
+                v02(obj3);
+              }
+            } else if (arg0 === 1) {
+              v02 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              v0(false);
+              v02 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              c3 = 1;
             }
-          } else if (arg0 === 1) {
-            v02 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
             c3 = 0;
             v0(false);
-            v02 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c3 = 1;
           }
           c3 = 0;
           v0(false);
-        }
-        c3 = 0;
-        v0(false);
-        throw closure_2;
-      } catch (tmp52) {
-        closure_2 = tmp52;
-        if (tmp5 === c3) {
-          v02 = tmp3;
-          throw tmp52;
-        } else if (tmp2 === tmp54) {
-          v0 = tmp2;
-        } else {
-          v0 = tmp;
+          throw closure_2;
+        } catch (tmp52) {
+          closure_2 = tmp52;
+          if (tmp5 === c3) {
+            v02 = tmp3;
+            throw tmp52;
+          } else if (tmp2 === tmp54) {
+            v0 = tmp2;
+          } else {
+            v0 = tmp;
+          }
         }
       }
-    }
-  }), items3);
+    }),
+    items3,
+  );
   navigation(ref[27])();
   navigation(ref[28])(navigation, callback1);
   let tmp27 = navigation(ref[29])("login", tmp13);
@@ -432,7 +457,7 @@ export default function Login(isMultiAccount) {
     testID: "login_login_input",
     onPressCountrySelector: null,
     isClearable: true,
-    autoComplete: "username"
+    autoComplete: "username",
   };
   let tmpResult = tmp(tmp2[35]);
   const intl3 = tmp4(tmp2[12]).intl;
@@ -441,7 +466,7 @@ export default function Login(isMultiAccount) {
   obj1[12] = function onPressCountrySelector() {
     return navigation.push(first1.COUNTRY_SELECT);
   };
-  const items4 = [callback3(tmpResult, obj1), , , , ];
+  const items4 = [callback3(tmpResult, obj1), , , ,];
   obj2 = {
     containerStyle: tmp3.password,
     ref,
@@ -458,7 +483,7 @@ export default function Login(isMultiAccount) {
     returnKeyType: "done",
     errorMessage: null,
     testID: "login_password_input",
-    autoComplete: "current-password"
+    autoComplete: "current-password",
   };
   const intl4 = tmp4(tmp2[12]).intl;
   obj2[7] = intl4.string(_require(ref[12]).t["CIGa+7"]);
@@ -481,7 +506,7 @@ export default function Login(isMultiAccount) {
     onPress() {
       return _undefined((arg0) => !arg0);
     },
-    hitSlop: { top: 8, bottom: 8 }
+    hitSlop: { top: 8, bottom: 8 },
   };
   obj2[11] = navigation(ref[29])("password", tmp13);
   items4[1] = callback3(_require(ref[36]).TextInput, obj2);
@@ -490,7 +515,7 @@ export default function Login(isMultiAccount) {
     onPress() {
       return callback2();
     },
-    text: null
+    text: null,
   };
   const intl6 = tmp4(tmp2[12]).intl;
   obj3[2] = intl6.string(_require(ref[12]).t.wWIufs);
@@ -542,9 +567,12 @@ export default function Login(isMultiAccount) {
   if (tmp4Result3.isMetaQuest()) {
     tmp43 = tmp30Result;
   }
-  const items5 = [tmp43, , , ];
+  const items5 = [tmp43, , ,];
   tmp4Result3 = _require(ref[33]);
-  items5[1] = callback3(_require(ref[40]).Stack, { style: tmp3.separator, children: callback3(_require(ref[41]).OrSeparator, {}) });
+  items5[1] = callback3(_require(ref[40]).Stack, {
+    style: tmp3.separator,
+    children: callback3(_require(ref[41]).OrSeparator, {}),
+  });
   const obj11 = { style: tmp3.separator, children: callback3(_require(ref[41]).OrSeparator, {}) };
   if (tmp4Result4.isMetaQuest()) {
     tmp30Result = tmp33Result;
@@ -564,5 +592,5 @@ export default function Login(isMultiAccount) {
   obj10[1] = items5;
   obj8[2] = closure_11(first, obj10);
   return callback3(tmpResult, obj8);
-};
+}
 export { LinkButton };

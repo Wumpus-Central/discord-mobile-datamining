@@ -25,4 +25,4 @@ export default function doesOrientationMatchLockState(arg0, arg1) {
     tmp = tmp3;
   }
   return tmp;
-};
+}

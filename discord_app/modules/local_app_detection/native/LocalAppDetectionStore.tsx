@@ -14,11 +14,11 @@ class LocalAppDetectionStore extends DeviceSettingsStore {
     closure_0 = undefined;
     obj = {
       POST_CONNECTION_OPEN() {
-            return obj.handlePostConnectionOpen();
-          },
+        return obj.handlePostConnectionOpen();
+      },
       LOCAL_APP_DETECTION_COMPLETE(arg0) {
-            return obj.handleLocalAppDetectionComplete(arg0);
-          }
+        return obj.handleLocalAppDetectionComplete(arg0);
+      },
     };
     tmp2 = new tmp2(require("dispatcher"), obj, new.target, tmp2, tmp, new.target);
     // ThrowIfThisInitialized (0x7c)
@@ -109,14 +109,24 @@ prototype["DEV_resetState"] = DEV_resetState;
 LocalAppDetectionStore.displayName = "AppDetectionStore";
 LocalAppDetectionStore.persistKey = "AppDetectionStore";
 object = undefined;
-object = new Object(dispatcherDefault, {
-  POST_CONNECTION_OPEN() {
-    return obj.handlePostConnectionOpen();
+object = new Object(
+  dispatcherDefault,
+  {
+    POST_CONNECTION_OPEN() {
+      return obj.handlePostConnectionOpen();
+    },
+    LOCAL_APP_DETECTION_COMPLETE(arg0) {
+      return obj.handleLocalAppDetectionComplete(arg0);
+    },
   },
-  LOCAL_APP_DETECTION_COMPLETE(arg0) {
-    return obj.handleLocalAppDetectionComplete(arg0);
-  }
-}, tmp, LocalAppDetectionStore, Object, prototype, new.target, undefined, DEV_resetState);
+  tmp,
+  LocalAppDetectionStore,
+  Object,
+  prototype,
+  new.target,
+  undefined,
+  DEV_resetState,
+);
 // ThrowIfThisInitialized (0x7c)
 const result = require("set").fileFinishedImporting("modules/local_app_detection/native/LocalAppDetectionStore.tsx");
 

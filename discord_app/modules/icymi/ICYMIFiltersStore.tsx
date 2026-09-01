@@ -6,8 +6,7 @@ import MessageEmbedTypes from "ICYMITypes.tsx";
 require = arg1;
 let closure_2 = {};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class ICYMIFiltersStore extends DeviceSettingsStore {
-}
+class ICYMIFiltersStore extends DeviceSettingsStore {}
 const prototype = ICYMIFiltersStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let obj = arg0;
@@ -36,7 +35,7 @@ ICYMIFiltersStore.persistKey = "ICYMIFiltersStore";
 const iCYMIFiltersStore = new ICYMIFiltersStore(dispatcherDefault, {
   SET_ICYMI_FILTERS: function handleFilters(filters) {
     filters = filters.filters;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/icymi/ICYMIFiltersStore.tsx");
 

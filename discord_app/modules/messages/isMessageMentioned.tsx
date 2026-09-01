@@ -36,10 +36,13 @@ function isMentioned(suppressRoles) {
               return false;
             } else {
               member = member.getMember(guildId, userId);
-              return null != member && mentionRoles.some((arg0) => {
-                const roles = member.roles;
-                return roles.includes(arg0);
-              });
+              return (
+                null != member &&
+                mentionRoles.some((arg0) => {
+                  const roles = member.roles;
+                  return roles.includes(arg0);
+                })
+              );
             }
           }
         }
@@ -59,8 +62,16 @@ export default function isMessageMentioned(suppressRoles) {
   if (flag === undefined) {
     flag = false;
   }
-  return isMentioned({ userId: suppressRoles.userId, channelId: message.channel_id, mentionEveryone: message.mentionEveryone, mentionUsers: message.mentions, mentionRoles: message.mentionRoles, suppressEveryone, suppressRoles: flag });
-};
+  return isMentioned({
+    userId: suppressRoles.userId,
+    channelId: message.channel_id,
+    mentionEveryone: message.mentionEveryone,
+    mentionUsers: message.mentions,
+    mentionRoles: message.mentionRoles,
+    suppressEveryone,
+    suppressRoles: flag,
+  });
+}
 export const isRawMessageMentioned = function isRawMessageMentioned(suppressRoles) {
   ({ rawMessage, suppressEveryone } = suppressRoles);
   if (suppressEveryone === undefined) {
@@ -70,7 +81,15 @@ export const isRawMessageMentioned = function isRawMessageMentioned(suppressRole
   if (flag === undefined) {
     flag = false;
   }
-  const obj = { userId: suppressRoles.userId, channelId: rawMessage.channel_id, mentionEveryone: null, mentionUsers: null, mentionRoles: null, suppressEveryone: null, suppressRoles: null };
+  const obj = {
+    userId: suppressRoles.userId,
+    channelId: rawMessage.channel_id,
+    mentionEveryone: null,
+    mentionUsers: null,
+    mentionRoles: null,
+    suppressEveryone: null,
+    suppressRoles: null,
+  };
   let flag2 = rawMessage.mention_everyone;
   if (flag2 == null) {
     flag2 = false;

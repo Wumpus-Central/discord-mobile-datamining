@@ -11,8 +11,7 @@ import set from "../../../_runtime/00002_set.js";
 require = arg1;
 let set = new Set();
 const Store = initializeDefault.Store;
-class MediaPostSharePromptStore extends Store {
-}
+class MediaPostSharePromptStore extends Store {}
 const prototype = MediaPostSharePromptStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_5, closure_3);
@@ -55,7 +54,7 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(dispatcherDefaul
   },
   LOGOUT: function handleLogout() {
     set.clear();
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/media_channel/MediaPostSharePromptStore.tsx");
 

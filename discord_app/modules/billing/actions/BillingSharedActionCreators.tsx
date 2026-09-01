@@ -16,7 +16,7 @@ function _validatePaymentSourceBillingAddress() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -51,8 +51,26 @@ function _validatePaymentSourceBillingAddress() {
               obj1 = { url: null, body: null, rejectWithError: false };
               obj1[0] = closure_1_7.BILLING_PAYMENT_SOURCES_VALIDATE_BILLING_ADDRESS;
               let obj2 = { billing_address: null };
-              let obj3 = { name: null, line_1: null, line_2: null, city: null, state: null, postal_code: null, country: null, email: null };
-              ({ name: obj11[0], line1: obj11[1], line2: obj11[2], city: obj11[3], state: obj11[4], postalCode: obj11[5], country: obj11[6], email: obj11[7] } = callback);
+              let obj3 = {
+                name: null,
+                line_1: null,
+                line_2: null,
+                city: null,
+                state: null,
+                postal_code: null,
+                country: null,
+                email: null,
+              };
+              ({
+                name: obj11[0],
+                line1: obj11[1],
+                line2: obj11[2],
+                city: obj11[3],
+                state: obj11[4],
+                postalCode: obj11[5],
+                country: obj11[6],
+                email: obj11[7],
+              } = callback);
               obj2[0] = obj3;
               obj1[1] = obj2;
               c5 = 2;
@@ -114,7 +132,7 @@ function _popupBridgeState() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const table = tmp2;
       let state = tmp5;
       const HTTP = callback(closure_1_2[4]).HTTP;
@@ -150,7 +168,7 @@ function _createPaymentSource() {
     c9 = 0;
     c10 = 0;
     c8 = 0;
-    const iter = (function*(arg0, arg1, arg2, arg3) {
+    const iter = (function* (arg0, arg1, arg2, arg3) {
       if (c10 === 2) {
         c10 = 3;
         HermesBuiltin.throwTypeError();
@@ -208,10 +226,28 @@ function _createPaymentSource() {
               const obj3 = { location: null };
               obj3[0] = closure_3.analyticsLocation;
               obj2[1] = obj3;
-              let obj4 = { payment_gateway: null, token: null, billing_address: null, billing_address_token: null, bank: null, pix: null, return_url: null, default: null };
+              let obj4 = {
+                payment_gateway: null,
+                token: null,
+                billing_address: null,
+                billing_address_token: null,
+                bank: null,
+                pix: null,
+                return_url: null,
+                default: null,
+              };
               obj4[0] = callback;
               obj4[1] = callback2;
-              let obj5 = { name: null, line_1: null, line_2: null, city: null, state: null, postal_code: null, country: null, email: null };
+              let obj5 = {
+                name: null,
+                line_1: null,
+                line_2: null,
+                city: null,
+                state: null,
+                postal_code: null,
+                country: null,
+                email: null,
+              };
               obj5[0] = user.name;
               obj5[1] = user.line1;
               obj5[2] = user.line2;
@@ -347,7 +383,13 @@ export const dispatchConfirmationError = function dispatchConfirmationError(erro
       const _HermesInternal = HermesInternal;
       combined = "" + stringResult + ": " + message.message;
     }
-    obj = { failure_message: null, error_type: null, failure_code: null, failure_sub_code: null, payment_source_type: null };
+    obj = {
+      failure_message: null,
+      error_type: null,
+      failure_code: null,
+      failure_sub_code: null,
+      payment_source_type: null,
+    };
     obj[0] = combined;
     ({ type: obj3[1], code: obj3[2], decline_code: obj3[3], payment_method } = message);
     let type;

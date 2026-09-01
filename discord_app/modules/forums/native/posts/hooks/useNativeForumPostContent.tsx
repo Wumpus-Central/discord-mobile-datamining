@@ -117,4 +117,4 @@ export default function useNativeForumPostContent(arg0) {
     stringResult1 = intl8.string(getSystemLocale.t.Lkp2fB);
     tmp6 = null != message && message.ignored;
   }
-};
+}

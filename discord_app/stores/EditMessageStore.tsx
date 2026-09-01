@@ -10,8 +10,7 @@ require = arg1;
 let closure_4 = {};
 let closure_5 = {};
 const Store = initializeDefault.Store;
-class EditMessageStore extends Store {
-}
+class EditMessageStore extends Store {}
 const prototype = EditMessageStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3);
@@ -112,7 +111,7 @@ const editMessageStore = new EditMessageStore(dispatcherDefault, {
   LOGOUT: function handleLogout() {
     closure_4 = {};
     closure_5 = {};
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/EditMessageStore.tsx");
 

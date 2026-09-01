@@ -17,10 +17,12 @@ function resolveCreatingNotes(roomId, objects) {
           _require = store.getId();
           const _Set = Set;
           const found = value.filter((createdBy) => createdBy.createdBy === closure_0);
-          set = new Set(found.map((position) => {
-            position = position.position;
-            return "" + position.x + "," + position.y;
-          }));
+          set = new Set(
+            found.map((position) => {
+              position = position.position;
+              return "" + position.x + "," + position.y;
+            }),
+          );
           const found1 = arr.filter((position) => {
             position = position.position;
             return !set.has("" + position.x + "," + position.y);
@@ -70,8 +72,7 @@ let closure_23 = {};
 let closure_24 = {};
 let closure_25 = [];
 const PersistedStore = initializeDefault.PersistedStore;
-class GuildRoomStore extends PersistedStore {
-}
+class GuildRoomStore extends PersistedStore {}
 const prototype = GuildRoomStore.prototype;
 prototype["initialize"] = function initialize(rememberVideoOverlayVisibility) {
   this.waitFor(closure_6, closure_7, closure_8);
@@ -374,9 +375,11 @@ obj = {
   GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY: function handleSetVideoOverlayVisibility(value) {
     value = value.value;
   },
-  GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY: function handleSetRememberVideoOverlayVisibility(rememberVideoOverlayVisibility) {
+  GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY: function handleSetRememberVideoOverlayVisibility(
+    rememberVideoOverlayVisibility,
+  ) {
     closure_21 = rememberVideoOverlayVisibility.rememberVideoOverlayVisibility;
-  }
+  },
 };
 const guildRoomStore = new GuildRoomStore(dispatcherDefault, obj);
 let result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomStore.tsx");

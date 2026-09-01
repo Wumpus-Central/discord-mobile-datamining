@@ -63,4 +63,4 @@ export default function resolveTheme(arg0, arg1) {
     }
     obj6 = getToken;
   }
-};
+}

@@ -28,7 +28,9 @@ function NitroHomeHeader(arg0) {
   navigation = obj.useNavigation();
   obj1 = onClose(13075);
   const items = [navigation, onClose];
-  const mobileNitroManageSubscriptionsSettingsExperiment = obj1.useMobileNitroManageSubscriptionsSettingsExperiment({ location: "NitroHomeHeader" });
+  const mobileNitroManageSubscriptionsSettingsExperiment = obj1.useMobileNitroManageSubscriptionsSettingsExperiment({
+    location: "NitroHomeHeader",
+  });
   let hasActiveTrial;
   const callback = React.useCallback(() => {
     if (undefined !== onClose) {
@@ -42,9 +44,19 @@ function NitroHomeHeader(arg0) {
   }
   obj = { style: tmp.contentContainer, children: null };
   obj = { style: tmp.headerContainer, children: null };
-  obj1 = { style: tmp.backButtonWrapper, onPress: callback, children: callback2(tmp2(5499).ArrowLargeLeftIcon, { size: "md", color: "white" }) };
-  const items1 = [callback2(onClose(5068).PressableOpacity, obj1), , ];
-  const obj2 = { variant: "display-sm", color: "text-overlay-light", style: tmp.headerText, accessibilityRole: "header", children: null };
+  obj1 = {
+    style: tmp.backButtonWrapper,
+    onPress: callback,
+    children: callback2(tmp2(5499).ArrowLargeLeftIcon, { size: "md", color: "white" }),
+  };
+  const items1 = [callback2(onClose(5068).PressableOpacity, obj1), ,];
+  const obj2 = {
+    variant: "display-sm",
+    color: "text-overlay-light",
+    style: tmp.headerText,
+    accessibilityRole: "header",
+    children: null,
+  };
   const intl = tmp2(1236).intl;
   obj2[4] = intl.string(onClose(1236).t["BnquQ/"]);
   items1[1] = callback2(onClose(4474).Text, obj2);
@@ -57,7 +69,11 @@ function NitroHomeHeader(arg0) {
     obj4[0] = tmp.backButtonWrapper;
     obj4[1] = function onPress() {
       let obj = navigation(closure_1_2[19]);
-      obj = { current_component: closure_1_23.YOUR_NITRO_HOME, next_component: closure_1_23.YOUR_NITRO_PLAN, interaction_component: "header_settings_icon" };
+      obj = {
+        current_component: closure_1_23.YOUR_NITRO_HOME,
+        next_component: closure_1_23.YOUR_NITRO_PLAN,
+        interaction_component: "header_settings_icon",
+      };
       obj.track(closure_1_11.NITRO_HOME_NAVIGATION, obj);
       navigation.push(closure_1_14.PREMIUM_MANAGE_PLAN);
     };
@@ -67,7 +83,7 @@ function NitroHomeHeader(arg0) {
   tmp11Result = !!hasActiveTrial;
   items1[2] = tmp11Result;
   obj[1] = items1;
-  const items2 = [closure_18(closure_5, obj), ];
+  const items2 = [closure_18(closure_5, obj)];
   if (tmp11Result) {
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.pillParent;
@@ -87,7 +103,10 @@ function NewTab(arg0) {
   obj1 = frozen;
   const premiumPerkCard = obj1.usePremiumPerkCard();
   let obj2 = usePromotionMarketingComponent;
-  const promotionMarketingComponent = obj2.usePromotionMarketingComponent(require("../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx").MarketingComponentType.MARKETING_PAGE_BANNER);
+  const promotionMarketingComponent = obj2.usePromotionMarketingComponent(
+    require("../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx")
+      .MarketingComponentType.MARKETING_PAGE_BANNER,
+  );
   _require = React.useRef(false);
   const ref = React.useRef(null);
   const callback = React.useCallback((nativeEvent) => {
@@ -95,14 +114,29 @@ function NewTab(arg0) {
     obj = { nativeEvent: nativeEvent.nativeEvent, trackedType: closure_1_19, hasTrackedScrolledToBottom: callback };
     return obj.trackIfScrolledToBottom(obj);
   }, []);
-  obj = { ref, contentContainerStyle: items, showsVerticalScrollIndicator: false, onScrollEndDrag: callback, onMomentumScrollEnd: callback, scrollEventThrottle: 0, children: null };
+  obj = {
+    ref,
+    contentContainerStyle: items,
+    showsVerticalScrollIndicator: false,
+    onScrollEndDrag: callback,
+    onMomentumScrollEnd: callback,
+    scrollEventThrottle: 0,
+    children: null,
+  };
   items = [tmp.featureCardsContainer, { paddingBottom: extraBottomHeight }];
   let tmp12 = null != promotionMarketingComponent;
   if (tmp12) {
     tmp12 = "marketingPageBanner" === promotionMarketingComponent.properties.properties.oneofKind;
   }
   if (tmp12) {
-    obj = { style: null, cardStyle: null, bannerFields: null, analyticsPage: "Nitro Home Banner Tile", componentId: null, promotionId: null };
+    obj = {
+      style: null,
+      cardStyle: null,
+      bannerFields: null,
+      analyticsPage: "Nitro Home Banner Tile",
+      componentId: null,
+      promotionId: null,
+    };
     obj1 = { width: null };
     let tmp8Result = tmp8(13059);
     obj1[0] = tmp2(13077).PERK_CARD_SIZES[tmp2(undefined, 13077).PerkCardVariant.WIDE].width;
@@ -112,11 +146,23 @@ function NewTab(arg0) {
     ({ id: obj5[4], promotionId: obj5[5] } = promotionMarketingComponent);
     tmp12 = callback2(tmp8Result, obj);
   }
-  const items1 = [tmp12, callback2(require("../../../premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx").TieredTenureBadgePerkCard, {}), , , , , ];
+  const items1 = [
+    tmp12,
+    callback2(
+      require("../../../premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx").TieredTenureBadgePerkCard,
+      {},
+    ),
+    ,
+    ,
+    ,
+    ,
+  ];
   let tmp15Result = null;
   if (isEligibleSenderForReferralProgram) {
     obj2 = { onLayout: null, children: null };
-    obj2[0] = useScrollToSectionDefault(ref, scrollToSectionId).createSectionLayoutHandler(NitroHomeSectionId.REFERRAL_PROGRAM);
+    obj2[0] = useScrollToSectionDefault(ref, scrollToSectionId).createSectionLayoutHandler(
+      NitroHomeSectionId.REFERRAL_PROGRAM,
+    );
     obj2[1] = tmp15(tmp2(13104).ReferralProgramPerkCard, {});
     tmp15Result = tmp15(closure_5, obj2);
   }
@@ -158,7 +204,14 @@ function PerksTab(extraBottomHeight) {
     obj = { nativeEvent: nativeEvent.nativeEvent, trackedType: closure_1_20, hasTrackedScrolledToBottom: closure_1 };
     const result = obj.trackIfScrolledToBottom(obj);
   }, []);
-  obj = { contentContainerStyle: items, showsVerticalScrollIndicator: false, onScrollEndDrag: callback, onMomentumScrollEnd: callback, scrollEventThrottle: 0, children: null };
+  obj = {
+    contentContainerStyle: items,
+    showsVerticalScrollIndicator: false,
+    onScrollEndDrag: callback,
+    onMomentumScrollEnd: callback,
+    scrollEventThrottle: 0,
+    children: null,
+  };
   items = [callback6().featureCardsContainer, { paddingBottom: extraBottomHeight.extraBottomHeight }];
   obj = { title: null, perks: null, onItemChange: null };
   const tmp = callback6();
@@ -169,22 +222,22 @@ function PerksTab(extraBottomHeight) {
   if (fractionalState === FractionalPremiumStates.FP_ONLY) {
     let clientThemes = premiumPerkCard.customProfile;
     if (isInReverseTrial) {
-      const items1 = [clientThemes, ];
+      const items1 = [clientThemes];
       clientThemes = premiumPerkCard.clientThemes;
       items1[1] = clientThemes;
       let items2 = items1;
     } else {
-      items2 = [clientThemes, , ];
+      items2 = [clientThemes, ,];
       ({ clientThemes: arr3[1], greyServerBoosts: arr3[2] } = premiumPerkCard);
     }
   } else {
-    const items3 = [, , ];
+    const items3 = [, ,];
     ({ customProfile: arr2[0], clientThemes: arr2[1], serverBoosts: arr2[2] } = premiumPerkCard);
     obj[1] = items3;
     obj[2] = function onItemChange(arg0) {
       return callback(closure_1_22.CAROUSEL_SECTION_NAME_1, arg0);
     };
-    const items4 = [tmp8(tmp10, obj), , , ];
+    const items4 = [tmp8(tmp10, obj), , ,];
     obj1 = { title: null, perks: null, onItemChange: null };
     let tmp9Result = tmp9(13116);
     const intl2 = tmp2(1236).intl;
@@ -195,7 +248,7 @@ function PerksTab(extraBottomHeight) {
     } else {
       items6 = [];
     }
-    const items7 = [, , ];
+    const items7 = [, ,];
     const arraySpreadResult = HermesBuiltin.arraySpread(items6, 0);
     items7[arraySpreadResult] = premiumPerkCard.emoji;
     const sum = arraySpreadResult + 1;
@@ -209,8 +262,14 @@ function PerksTab(extraBottomHeight) {
     tmp9Result = tmp9(13116);
     const intl3 = tmp2(1236).intl;
     obj2[0] = intl3.string(tmp2(1236).t.LgHbnL);
-    const items8 = [, , , , ];
-    ({ memberPricing: arr9[0], earlyAccess: arr9[1], largeUploads: arr9[2], hdVideo: arr9[3], superReactions: arr9[4] } = premiumPerkCard);
+    const items8 = [, , , ,];
+    ({
+      memberPricing: arr9[0],
+      earlyAccess: arr9[1],
+      largeUploads: arr9[2],
+      hdVideo: arr9[3],
+      superReactions: arr9[4],
+    } = premiumPerkCard);
     obj2[1] = items8;
     obj2[2] = function onItemChange(arg0) {
       return callback(closure_1_22.CAROUSEL_SECTION_NAME_3, arg0);
@@ -229,7 +288,7 @@ function PerksTab(extraBottomHeight) {
         items10 = [entranceSounds, premiumPerkCard.greyBadge];
       }
     } else {
-      const items11 = [, ];
+      const items11 = [,];
       ({ entranceSounds: arr10[0], badge: arr10[1] } = premiumPerkCard);
       obj3[1] = items11;
       obj3[2] = function onItemChange(arg0) {
@@ -243,15 +302,34 @@ function PerksTab(extraBottomHeight) {
   }
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ AnalyticEvents: unpackModuleId, HorizontalGradient: closure_12, ThemeTypes: map1, UserSettingsSections: closure_14 } = ME);
+({
+  AnalyticEvents: unpackModuleId,
+  HorizontalGradient: closure_12,
+  ThemeTypes: map1,
+  UserSettingsSections: closure_14,
+} = ME);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 NewTab = "NewTab";
 PerksTab = "PerksTab";
 const importDefaultResultResult = importDefaultResult(ThemesDefault.unsafe_rawColors.PLUM_24);
 let closure_21 = importDefaultResult(ThemesDefault.unsafe_rawColors.PLUM_24).alpha(0.6).hex();
-let closure_22 = { CAROUSEL_SECTION_NAME_1: "NitroFavorites", CAROUSEL_SECTION_NAME_2: "MakeDiscordYours", CAROUSEL_SECTION_NAME_3: "EnjoyAnUpgradedDiscord", CAROUSEL_SECTION_NAME_4: "ShowUpTheWayYouWant" };
+let closure_22 = {
+  CAROUSEL_SECTION_NAME_1: "NitroFavorites",
+  CAROUSEL_SECTION_NAME_2: "MakeDiscordYours",
+  CAROUSEL_SECTION_NAME_3: "EnjoyAnUpgradedDiscord",
+  CAROUSEL_SECTION_NAME_4: "ShowUpTheWayYouWant",
+};
 let closure_23 = { YOUR_NITRO_HOME: "YourNitroHome", YOUR_NITRO_PLAN: "YourNitroPlan" };
-let obj = { container: null, background: null, tabContent: null, featureCardsContainer: null, segmentedControlActual: null, segmentedControlVirtual: null, androidSegmentedControlBackground: null, backSwipeSensor: null };
+let obj = {
+  container: null,
+  background: null,
+  tabContent: null,
+  featureCardsContainer: null,
+  segmentedControlActual: null,
+  segmentedControlVirtual: null,
+  androidSegmentedControlBackground: null,
+  backSwipeSensor: null,
+};
 obj = { display: "flex", width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 obj[0] = obj;
 obj[1] = { position: "absolute", width: "100%" };
@@ -264,18 +342,51 @@ createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH
 obj[6] = createCacheKey;
 obj[7] = { position: "absolute", top: 0, left: 0, height: "100%", width: "10%" };
 let closure_24 = createCacheKey.createStyles(obj);
-let obj3 = { headerContainer: { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 8, justifyContent: "space-between", gap: 8 }, contentContainer: { display: "flex", flexDirection: "column" }, backButtonWrapper: null, headerText: null, pillParent: null };
+let obj3 = {
+  headerContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    justifyContent: "space-between",
+    gap: 8,
+  },
+  contentContainer: { display: "flex", flexDirection: "column" },
+  backButtonWrapper: null,
+  headerText: null,
+  pillParent: null,
+};
 let obj1 = { position: "absolute", top: 0, left: 16, right: 16, borderRadius: ThemesDefault.radii.lg };
-obj3[2] = { width: 24, height: 24, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center" };
+obj3[2] = {
+  width: 24,
+  height: 24,
+  borderRadius: ThemesDefault.radii.lg,
+  alignItems: "center",
+  justifyContent: "center",
+};
 obj3[3] = { textAlign: "center", width: "80%", lineHeight: 28 };
 obj3[4] = { display: "flex", flexDirection: "column", alignItems: "center" };
 let closure_25 = createCacheKey.createStyles(obj3);
-let obj5 = { featureCardsContainer: { display: "flex", flexDirection: "column", rowGap: 16, alignItems: "center", paddingTop: 24 }, marketingBannerCard: null };
-let obj4 = { width: 24, height: 24, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center" };
+let obj5 = {
+  featureCardsContainer: { display: "flex", flexDirection: "column", rowGap: 16, alignItems: "center", paddingTop: 24 },
+  marketingBannerCard: null,
+};
+let obj4 = {
+  width: 24,
+  height: 24,
+  borderRadius: ThemesDefault.radii.lg,
+  alignItems: "center",
+  justifyContent: "center",
+};
 obj5[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
 let closure_27 = createCacheKey.createStyles(obj5);
-let closure_29 = createCacheKey.createStyles({ featureCardsContainer: { display: "flex", flexDirection: "column", rowGap: 24, paddingTop: 24 } });
-let closure_31 = { code: "function PremiumNitroHomeTsx1(){const{floatTabBottomOffset}=this.__closure;return{bottom:floatTabBottomOffset.get()};}" };
+let closure_29 = createCacheKey.createStyles({
+  featureCardsContainer: { display: "flex", flexDirection: "column", rowGap: 24, paddingTop: 24 },
+});
+let closure_31 = {
+  code: "function PremiumNitroHomeTsx1(){const{floatTabBottomOffset}=this.__closure;return{bottom:floatTabBottomOffset.get()};}",
+};
 let obj6 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
 let result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumNitroHome.tsx");
 
@@ -320,7 +431,9 @@ export default function PremiumNitroHome(onClose) {
   [tmp18, c5] = callback(stateFromStores.useState(true), 2);
   let obj6 = bottom(589);
   const items2 = [promotionMarketingComponent];
-  const stateFromStores1 = obj6.useStateFromStores(items2, () => promotionMarketingComponent.getPremiumTypeSubscription());
+  const stateFromStores1 = obj6.useStateFromStores(items2, () =>
+    promotionMarketingComponent.getPremiumTypeSubscription(),
+  );
   const callback2 = stateFromStores.useCallback((arg0) => {
     if (0 === arg0) {
       let obj = navigation(_undefined[19]);
@@ -342,9 +455,12 @@ export default function PremiumNitroHome(onClose) {
   let obj8 = bottom(13117);
   const maybeFetchTieredTenureBadgeData = obj8.useMaybeFetchTieredTenureBadgeData();
   const field = closure_9.useField("scrollToSectionId");
-  const effect = stateFromStores.useEffect(() => () => {
-    closure_9.resetState();
-  }, []);
+  const effect = stateFromStores.useEffect(
+    () => () => {
+      closure_9.resetState();
+    },
+    [],
+  );
   let obj9 = bottom(9260);
   obj = { items: null, pageWidth: null, onPageChange: null };
   obj = { label: null, id: null, page: null };
@@ -354,7 +470,7 @@ export default function PremiumNitroHome(onClose) {
   obj[1] = intl2.string(bottom(1236).t.tahjbP);
   obj1 = { extraBottomHeight: tmp14 + 16, scrollToSectionId: field };
   obj[2] = callback2(NewTab, obj1);
-  const items3 = [obj, ];
+  const items3 = [obj];
   obj2 = { label: null, id: null, page: null };
   const intl3 = bottom(1236).intl;
   obj2[0] = intl3.string(bottom(1236).t.w3RBdW);
@@ -388,7 +504,12 @@ export default function PremiumNitroHome(onClose) {
   const effect1 = obj4.useEffect(() => {
     if (!stateFromStores) {
       const obj = bottom(_undefined[43]);
-      const result = sharedValue.set(obj.withDelay(500, bottom(_undefined[44]).withSpring(bottom + 8, { duration: 2000, dampingRatio: 0.4, stiffness: 300 })));
+      const result = sharedValue.set(
+        obj.withDelay(
+          500,
+          bottom(_undefined[44]).withSpring(bottom + 8, { duration: 2000, dampingRatio: 0.4, stiffness: 300 }),
+        ),
+      );
       const obj2 = bottom(_undefined[44]);
     }
   }, items4);
@@ -402,13 +523,25 @@ export default function PremiumNitroHome(onClose) {
   isEligibleSenderForReferralProgram = bottom(7965).useIsEligibleSenderForReferralProgram();
   const items5 = [isEligibleSenderForReferralProgram];
   const effect2 = obj4.useEffect(() => {
-    if (!obj.UNSAFE_isDismissibleContentDismissed(bottom(_undefined[48]).DismissibleContent.MOBILE_NITRO_HOME_SETTINGS_BADGE)) {
+    if (
+      !obj.UNSAFE_isDismissibleContentDismissed(
+        bottom(_undefined[48]).DismissibleContent.MOBILE_NITRO_HOME_SETTINGS_BADGE,
+      )
+    ) {
       let tmpResult = tmp(tmp2[47]);
-      const result = tmpResult.UNSAFE_markDismissibleContentAsDismissed(tmp(tmp2[48]).DismissibleContent.MOBILE_NITRO_HOME_SETTINGS_BADGE);
+      const result = tmpResult.UNSAFE_markDismissibleContentAsDismissed(
+        tmp(tmp2[48]).DismissibleContent.MOBILE_NITRO_HOME_SETTINGS_BADGE,
+      );
     }
     tmpResult = tmp(tmp2[47]);
-    if (!tmpResult.UNSAFE_isDismissibleContentDismissed(bottom(_undefined[48]).DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE)) {
-      const result1 = tmp(tmp2[47]).UNSAFE_markDismissibleContentAsDismissed(tmp(tmp2[48]).DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE);
+    if (
+      !tmpResult.UNSAFE_isDismissibleContentDismissed(
+        bottom(_undefined[48]).DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE,
+      )
+    ) {
+      const result1 = tmp(tmp2[47]).UNSAFE_markDismissibleContentAsDismissed(
+        tmp(tmp2[48]).DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE,
+      );
       const tmpResult1 = tmp(tmp2[47]);
     }
     if (isEligibleSenderForReferralProgram) {
@@ -417,13 +550,19 @@ export default function PremiumNitroHome(onClose) {
     }
   }, items5);
   const effect3 = obj4.useEffect(() => {
-    if (!obj.UNSAFE_isDismissibleContentDismissed(bottom(_undefined[48]).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD)) {
-      const result = tmp(tmp2[47]).UNSAFE_markDismissibleContentAsDismissed(tmp(tmp2[48]).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD);
+    if (
+      !obj.UNSAFE_isDismissibleContentDismissed(bottom(_undefined[48]).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD)
+    ) {
+      const result = tmp(tmp2[47]).UNSAFE_markDismissibleContentAsDismissed(
+        tmp(tmp2[48]).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD,
+      );
       const tmpResult = tmp(tmp2[47]);
     }
   }, []);
   let tmpResult2 = bottom(7965);
-  promotionMarketingComponent = bottom(13013).usePromotionMarketingComponent(tmp(10515).MarketingComponentType.PREMIUM_TAB);
+  promotionMarketingComponent = bottom(13013).usePromotionMarketingComponent(
+    tmp(10515).MarketingComponentType.PREMIUM_TAB,
+  );
   const items6 = [promotionMarketingComponent];
   const effect4 = obj4.useEffect(() => {
     let isDismissed = null == promotionMarketingComponent;
@@ -432,12 +571,19 @@ export default function PremiumNitroHome(onClose) {
     }
     if (!isDismissed) {
       let obj = bottom(_undefined[47]);
-      isDismissed = obj.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(bottom(_undefined[48]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, tmp.promotionId).isDismissed;
+      isDismissed = obj.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(
+        bottom(_undefined[48]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
+        tmp.promotionId,
+      ).isDismissed;
     }
     if (!isDismissed) {
       obj = { dismissAction: null };
       obj[0] = closure_1_15.AUTO_DISMISS;
-      const result = bottom(_undefined[50]).markSnowflakeBoundDismissibleContentAsDismissed(bottom(_undefined[48]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, tmp.promotionId, obj);
+      const result = bottom(_undefined[50]).markSnowflakeBoundDismissibleContentAsDismissed(
+        bottom(_undefined[48]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
+        tmp.promotionId,
+        obj,
+      );
       const obj2 = bottom(_undefined[50]);
     }
   }, items6);
@@ -446,7 +592,12 @@ export default function PremiumNitroHome(onClose) {
   obj5 = { style: tmp5.background, source: null };
   tmp6Result = tmp6(5493);
   obj5[1] = navigation(13119);
-  const items8 = [callback2(tmp6Result, obj5), callback2(NitroHomeHeader, { onClose: onClose.onClose, subscription: stateFromStores1 }), , , ];
+  const items8 = [
+    callback2(tmp6Result, obj5),
+    callback2(NitroHomeHeader, { onClose: onClose.onClose, subscription: stateFromStores1 }),
+    ,
+    ,
+  ];
   let tmp26Result = tmp21.fractionalState !== FractionalPremiumStates.NONE && !isInReverseTrial;
   if (tmp26Result) {
     obj6 = { countdownText: null };
@@ -455,7 +606,7 @@ export default function PremiumNitroHome(onClose) {
   }
   items8[2] = tmp26Result;
   obj7 = { style: tmp5.tabContent, children: null };
-  const items9 = [callback2(bottom(9268).SegmentedControlPages, { state: segmentedControlState }), ];
+  const items9 = [callback2(bottom(9268).SegmentedControlPages, { state: segmentedControlState })];
   if (tmp26Result) {
     obj8 = { style: null };
     const items10 = [tmp5.backSwipeSensor];
@@ -467,13 +618,23 @@ export default function PremiumNitroHome(onClose) {
   items8[3] = closure_18(c5, obj7);
   obj9 = { style: animatedStyle, onLayout: callback1, children: null };
   const tmpResult3 = bottom(13013);
-  const items11 = [callback2(c5, { style: tmp5.segmentedControlActual, onLayout: callback, children: callback2(bottom(9762).SegmentedControl, { state: segmentedControlState, variant: "experimental_Small" }) }), , ];
+  const items11 = [
+    callback2(c5, {
+      style: tmp5.segmentedControlActual,
+      onLayout: callback,
+      children: callback2(bottom(9762).SegmentedControl, {
+        state: segmentedControlState,
+        variant: "experimental_Small",
+      }),
+    }),
+    ,
+  ];
   let tmp26Result1 = !isThemeDarkResult;
   if (!isThemeDarkResult) {
     const obj11 = { start: null, end: null, colors: null, style: null };
     ({ START: obj29[0], END: obj29[1] } = closure_12);
     obj11[2] = ["rgba(218, 187, 249, 0.5)", "rgba(229, 177, 193, 0.5)"];
-    const items12 = [tmp5.segmentedControlVirtual, ];
+    const items12 = [tmp5.segmentedControlVirtual];
     const obj12 = { height: null, zIndex: 2 };
     obj12[0] = tmp14;
     items12[1] = obj12;
@@ -481,10 +642,14 @@ export default function PremiumNitroHome(onClose) {
     tmp26Result1 = tmp26(tmp6(4940), obj11);
   }
   items11[1] = tmp26Result1;
-  const obj10 = { style: tmp5.segmentedControlActual, onLayout: callback, children: callback2(bottom(9762).SegmentedControl, { state: segmentedControlState, variant: "experimental_Small" }) };
+  const obj10 = {
+    style: tmp5.segmentedControlActual,
+    onLayout: callback,
+    children: callback2(bottom(9762).SegmentedControl, { state: segmentedControlState, variant: "experimental_Small" }),
+  };
   if (tmpResult4.isAndroid()) {
     const obj13 = { style: null };
-    const items13 = [, , ];
+    const items13 = [, ,];
     ({ segmentedControlVirtual: arr15[0], androidSegmentedControlBackground: arr15[1] } = tmp5);
     const obj14 = { height: null, zIndex: 1, overflow: "hidden" };
     obj14[0] = tmp14;
@@ -498,7 +663,7 @@ export default function PremiumNitroHome(onClose) {
     }
     obj15 = { blurAmount: null, style: null, blurTheme: null, tintColor: null };
     obj15[0] = num3;
-    const items14 = [tmp5.segmentedControlVirtual, ];
+    const items14 = [tmp5.segmentedControlVirtual];
     const obj16 = { height: null, zIndex: 1, overflow: "hidden" };
     obj16[0] = tmp14;
     items14[1] = obj16;
@@ -517,5 +682,5 @@ export default function PremiumNitroHome(onClose) {
   items8[4] = closure_18(navigation(4217).View, obj9);
   obj4[1] = items8;
   return closure_18(c5, obj4);
-};
+}
 export const BACK_BUTTON_SIZE = 24;

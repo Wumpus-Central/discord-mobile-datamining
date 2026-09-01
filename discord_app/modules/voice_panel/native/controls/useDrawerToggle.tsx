@@ -3,7 +3,9 @@ import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { VoicePanelControlsModes } from "VoicePanelControlsConstants.tsx";
 
 const require = arg1;
-let closure_5 = { code: "function useDrawerToggleTsx1(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}" };
+let closure_5 = {
+  code: "function useDrawerToggleTsx1(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}",
+};
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/useDrawerToggle.tsx");
 
 export default function useDrawerToggle(arg0) {
@@ -47,4 +49,4 @@ export default function useDrawerToggle(arg0) {
   obj[2] = stringResult;
   obj[3] = !controlsSpecs(connected[4])(connected);
   return obj;
-};
+}

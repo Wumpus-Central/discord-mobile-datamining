@@ -31,8 +31,7 @@ let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FE
 let closure_3 = {};
 let closure_4 = {};
 const Store = initializeDefault.Store;
-class ApplicationAssetsStore extends Store {
-}
+class ApplicationAssetsStore extends Store {}
 const prototype = ApplicationAssetsStore.prototype;
 prototype["getApplicationAssetFetchState"] = function getApplicationAssetFetchState(id) {
   let NOT_FETCHED = table[id];
@@ -51,7 +50,7 @@ prototype["getFetchingIds"] = function getFetchingIds() {
     ...found.map((arg0) => {
       [tmp] = arg0;
       return tmp;
-    })
+    }),
   ];
   return items;
 };
@@ -89,7 +88,7 @@ obj = {
     }
   },
   EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: handleFetchEmbeddedActivityShelfSuccess,
-  DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: handleFetchEmbeddedActivityShelfSuccess
+  DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: handleFetchEmbeddedActivityShelfSuccess,
 };
 const applicationAssetsStore = new ApplicationAssetsStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/applications/ApplicationAssetsStore.tsx");

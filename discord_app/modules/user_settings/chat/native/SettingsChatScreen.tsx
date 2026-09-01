@@ -27,8 +27,10 @@ function VideoUploadQualityNitroUpsell() {
   });
   obj = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = require("../../../../intl/index.native.tsx").intl;
-  obj[2] = intl.format(require("../../../../intl/index.native.tsx").t["Up+hSO"], { supportURL: "https://support.discord.com/hc/articles/9665451164951" });
-  const children = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj), ];
+  obj[2] = intl.format(require("../../../../intl/index.native.tsx").t["Up+hSO"], {
+    supportURL: "https://support.discord.com/hc/articles/9665451164951",
+  });
+  const children = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj)];
   let tmp7Result = !stateFromStores;
   if (!stateFromStores) {
     obj = { style: null, children: null };
@@ -41,7 +43,7 @@ function VideoUploadQualityNitroUpsell() {
     obj3[1] = registerAssetDefault;
     obj3[2] = tmp(1297).Icon.Sizes.SMALL;
     obj3[3] = ThemesDefault.unsafe_rawColors.PRIMARY_400;
-    const items2 = [tmp7(tmp(1297).Icon, obj3), ];
+    const items2 = [tmp7(tmp(1297).Icon, obj3)];
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp(1236).intl;
     const obj5 = { onClick: null };
@@ -61,7 +63,12 @@ function VideoUploadQualityNitroUpsell() {
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { card: null, cardContent: null, cardIcon: null };
-createCacheKey = { marginTop: 8, borderColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: ThemesDefault.radii.lg };
+createCacheKey = {
+  marginTop: 8,
+  borderColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.lg,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[2] = { marginEnd: 8 };
@@ -84,12 +91,12 @@ export default function SettingsChatScreen(route) {
     obj = { label: null, settings: null, subLabel: null };
     const intl = route(closure_1_2[13]).intl;
     obj[0] = intl.string(route(closure_1_2[13]).t["9nyle0"]);
-    const items = [, , ];
+    const items = [, ,];
     ({ DISPLAY_MEDIA_LINKS: arr[0], DISPLAY_MEDIA_UPLOADS: arr[1], IMAGE_DESCRIPTIONS: arr[2] } = closure_1_7);
     obj[1] = items;
     const intl2 = route(closure_1_2[13]).intl;
     obj[2] = intl2.string(route(closure_1_2[13]).t.T0rbtM);
-    const items1 = [obj, , , , , , , , ];
+    const items1 = [obj, , , , , , , ,];
     obj1 = { label: null, settings: null, subLabel: null };
     const intl3 = route(closure_1_2[13]).intl;
     obj1[0] = intl3.string(route(closure_1_2[13]).t.YTnrbV);
@@ -117,14 +124,14 @@ export default function SettingsChatScreen(route) {
     const obj5 = { label: null, settings: null, subLabel: null };
     const intl8 = route(closure_1_2[13]).intl;
     obj5[0] = intl8.string(route(closure_1_2[13]).t.sMOuuS);
-    const items6 = [, ];
+    const items6 = [,];
     ({ EMOJI_REACTIONS_ON_MESSAGES: arr7[0], CHAT_EMOJI_EMOTICONS: arr7[1] } = closure_1_7);
     obj5[1] = items6;
     const intl9 = route(closure_1_2[13]).intl;
     obj5[2] = intl9.format(route(closure_1_2[13]).t.GejoQK, {
       emojiHook(arg0) {
         return arg0;
-      }
+      },
     });
     items1[5] = obj5;
     const obj7 = { label: null, settings: null, subLabel: null };
@@ -138,7 +145,7 @@ export default function SettingsChatScreen(route) {
     const obj8 = { label: null, settings: null };
     const intl12 = route(closure_1_2[13]).intl;
     obj8[0] = intl12.string(route(closure_1_2[13]).t["4NDJgM"]);
-    const items8 = [, , ];
+    const items8 = [, ,];
     ({ SWIPE_RIGHT_TO_LEFT: arr9[0], DOUBLE_TAP_TO_REACT_ENABLED: arr9[1], DOUBLE_TAP_EMOJI: arr9[2] } = closure_1_7);
     obj8[1] = items8;
     items1[7] = obj8;
@@ -162,4 +169,4 @@ export default function SettingsChatScreen(route) {
     return obj.createList(obj);
   }, items);
   return callback(_modDef14340, { node });
-};
+}

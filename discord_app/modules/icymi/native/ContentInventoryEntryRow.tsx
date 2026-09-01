@@ -43,4 +43,4 @@ export default function ContentInventoryEntryRow(content) {
     obj[1] = flag;
     return jsx(itemsDefault, { content: null, renderForScreenshot: null });
   }
-};
+}

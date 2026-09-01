@@ -41,7 +41,13 @@ const memoResult = importAllResult.memo(function PortalKeyboardRendererComponent
         obj[2] = cleanUp;
         obj[3] = state;
         obj[4] = tmp11(tmp12[6]).AppLauncherEntrypoint.TEXT;
-        return jsx(channel(tmp12[5]), { context: null, chatInputRef: null, onClose: null, transitionState: null, entrypoint: null });
+        return jsx(channel(tmp12[5]), {
+          context: null,
+          chatInputRef: null,
+          onClose: null,
+          transitionState: null,
+          entrypoint: null,
+        });
       } else if (tmp11(tmp12[4]).KeyboardTypes.MEDIA === type) {
         obj = { channel: null, chatInputRef: null, onClose: null, transitionState: null };
         obj[0] = memo;

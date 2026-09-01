@@ -35,7 +35,7 @@ export default function VerifiedRoleIcon(arg0) {
   }
   let obj = getHigherContrastColor;
   const items = [WHITE, PRIMARY_630];
-  const diff = size - size / 8 * 2;
+  const diff = size - (size / 8) * 2;
   const higherContrastColor = obj.getHigherContrastColor({ backgroundColor: roleColor, colors: items });
   obj1 = useRoleIcon;
   obj = { guildId, roleId: null, size: null };
@@ -65,4 +65,4 @@ export default function VerifiedRoleIcon(arg0) {
   }
   obj[1] = roleIcon;
   return <View style={items1}>{null}</View>;
-};
+}

@@ -28,9 +28,9 @@ function _generatePairwiseFingerprint() {
     closure_4 = arg4;
     c7 = 0;
     c8 = 0;
-    return (function*(arg0, arg1, arg2, arg3, arg4) {
+    return (function* (arg0, arg1, arg2, arg3, arg4) {
       closure_6 = tmp2;
-      const items = [lib(9827).generateKeyFingerprint(lib, uint8Array, closure_2), ];
+      const items = [lib(9827).generateKeyFingerprint(lib, uint8Array, closure_2)];
       const obj9 = lib(9827);
       items[1] = lib(9827).generateKeyFingerprint(lib, closure_3, closure_4);
       lib = yield Promise.all(items);
@@ -55,9 +55,17 @@ function _generatePairwiseFingerprint() {
   return applyArgumentsResult;
 }
 let closure_4 = { N: 16384, r: 8, p: 2, dkLen: 64 };
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/libdave/package/src/PairwiseFingerprint.ts");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/libdave/package/src/PairwiseFingerprint.ts",
+);
 
-export const generatePairwiseFingerprint = function generatePairwiseFingerprint(arg0, uint8Array2, id, uint8Array3, arg4) {
+export const generatePairwiseFingerprint = function generatePairwiseFingerprint(
+  arg0,
+  uint8Array2,
+  id,
+  uint8Array3,
+  arg4,
+) {
   const self = this;
   const apply = _generatePairwiseFingerprint.apply;
   if (typeof apply === "unknown") {

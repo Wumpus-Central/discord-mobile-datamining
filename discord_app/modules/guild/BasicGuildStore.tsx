@@ -5,8 +5,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 let c0 = 0;
 let closure_1 = {};
 const Store = initializeDefault.Store;
-class BasicGuildStore extends Store {
-}
+class BasicGuildStore extends Store {}
 const prototype = BasicGuildStore.prototype;
 prototype["getGuild"] = function getGuild(arg0) {
   if (null != dependencyMap[arg0]) {
@@ -44,7 +43,7 @@ const basicGuildStore = new BasicGuildStore(dispatcherDefault, {
   BASIC_GUILD_FETCH_FAILURE: function handleBasicGuildFetchFailure(guildId) {
     closure_1[guildId.guildId] = { type: "failed" };
     return false;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/guild/BasicGuildStore.tsx");
 

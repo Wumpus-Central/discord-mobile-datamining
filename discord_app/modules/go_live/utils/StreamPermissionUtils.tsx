@@ -103,7 +103,16 @@ function canWatchStream(basicChannel1, closure_17, closure_12, closure_14, closu
     return items1;
   }
 }
-let obj = { REMOTE_MODE: 0, [0]: "REMOTE_MODE", CHANNEL_FULL: 1, [1]: "CHANNEL_FULL", NO_PERMISSION: 2, [2]: "NO_PERMISSION", AGE_RESTRICTED: 3, [3]: "AGE_RESTRICTED" };
+let obj = {
+  REMOTE_MODE: 0,
+  [0]: "REMOTE_MODE",
+  CHANNEL_FULL: 1,
+  [1]: "CHANNEL_FULL",
+  NO_PERMISSION: 2,
+  [2]: "NO_PERMISSION",
+  AGE_RESTRICTED: 3,
+  [3]: "AGE_RESTRICTED",
+};
 let result = require("set").fileFinishedImporting("modules/go_live/utils/StreamPermissionUtils.tsx");
 
 export { canStreamInChannel };
@@ -112,7 +121,9 @@ export { canWatchStream };
 export const useCanWatchStream = function useCanWatchStream(stateFromStores) {
   const _require = stateFromStores;
   const items = [closure_8, closure_6, closure_7, closure_3];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => closure_1_12(closure_0, closure_1_8, closure_1_6, closure_1_7, closure_1_3));
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () =>
+    closure_1_12(closure_0, closure_1_8, closure_1_6, closure_1_7, closure_1_3),
+  );
 };
 export const getStreamEligibleChannels = function getStreamEligibleChannels(arg0, closure_1_2, closure_1_3) {
   const items = [];

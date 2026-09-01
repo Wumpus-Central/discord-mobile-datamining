@@ -26,7 +26,7 @@ function _getEmojiColors() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -332,7 +332,7 @@ let obj = {
   triggerFullscreenAnimation(arg0) {
     ({ channelId, messageId, emoji } = arg0);
     const result = onDismiss.openBurstReactionFirstSendActionSheet({ channelId, messageId, emoji });
-  }
+  },
 };
 let result = require("set").fileFinishedImporting("utils/EmojiUtilsPlatformed.native.tsx");
 

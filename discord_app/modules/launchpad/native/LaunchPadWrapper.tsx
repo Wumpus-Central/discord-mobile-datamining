@@ -32,7 +32,11 @@ export default function LaunchPadWrapper(launchPadType) {
   const tmp = callback3();
   let obj = updaters(isModalOpen[10]);
   isModalOpen = obj.useIsModalOpen();
-  ({ launchPadCoverStyles, launchPadStyles } = updaters(isModalOpen[11])({ launchPadSharedState, launchPadShown, gestureState }));
+  ({ launchPadCoverStyles, launchPadStyles } = updaters(isModalOpen[11])({
+    launchPadSharedState,
+    launchPadShown,
+    gestureState,
+  }));
   const tmp7 = updaters(isModalOpen[12])(launchPadShown);
   callback = tmp7;
   ref = ref.useRef(!tmp7);
@@ -106,7 +110,7 @@ export default function LaunchPadWrapper(launchPadType) {
   }, items5);
   obj = { style: absoluteFill.absoluteFill, pointerEvents: "box-none", children: null };
   const tmp6 = updaters(isModalOpen[11])({ launchPadSharedState, launchPadShown, gestureState });
-  const items6 = [callback2(updaters(isModalOpen[18]).View, { style: launchPadCoverStyles, pointerEvents: "none" }), , ];
+  const items6 = [callback2(updaters(isModalOpen[18]).View, { style: launchPadCoverStyles, pointerEvents: "none" }), ,];
   let tmp20Result = null;
   if (launchPadType === LaunchPadTypes.PULL_TAB) {
     tmp20Result = null;
@@ -121,17 +125,37 @@ export default function LaunchPadWrapper(launchPadType) {
   }
   items6[1] = tmp20Result;
   obj1 = { style: launchPadStyles, pointerEvents: "none", children: null };
-  const obj2 = { nativeID: "launch-pad", style: tmp.modalWrapper, onAccessibilityEscape: callback, accessibilityViewIsModal: tmp7, children: null };
+  const obj2 = {
+    nativeID: "launch-pad",
+    style: tmp.modalWrapper,
+    onAccessibilityEscape: callback,
+    accessibilityViewIsModal: tmp7,
+    children: null,
+  };
   let str2 = "no";
   if (tmp7) {
     str2 = "yes";
   }
-  const obj3 = { importantForAccessibility: str2, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null };
+  const obj3 = {
+    importantForAccessibility: str2,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    onPress: null,
+    style: null,
+  };
   const intl = tmp2(tmp3[21]).intl;
   obj3[2] = intl.string(updaters(isModalOpen[21]).t.WAI6xu);
   obj3[3] = callback;
   obj3[4] = tmp.a11yDismiss;
-  const items7 = [callback2(callback, obj3), callback2(closure_7, { accessible: false, "aria-hidden": true, onPress: callback, style: absoluteFill.absoluteFillObject }), ];
+  const items7 = [
+    callback2(callback, obj3),
+    callback2(closure_7, {
+      accessible: false,
+      "aria-hidden": true,
+      onPress: callback,
+      style: absoluteFill.absoluteFillObject,
+    }),
+  ];
   let tmp23 = !tmp7;
   if (!tmp7) {
     tmp23 = tmp16;
@@ -141,10 +165,13 @@ export default function LaunchPadWrapper(launchPadType) {
   const tmp18 = closure_5;
   const tmp19 = absoluteFill;
   const tmp22 = callback;
-  items7[2] = callback2(updaters(isModalOpen[22]).Freeze, { freeze: tmp23, children: callback2(updaters(isModalOpen[23]), { visible: tmp7, sharedState: launchPadSharedState }) });
+  items7[2] = callback2(updaters(isModalOpen[22]).Freeze, {
+    freeze: tmp23,
+    children: callback2(updaters(isModalOpen[23]), { visible: tmp7, sharedState: launchPadSharedState }),
+  });
   obj2[4] = items7;
   obj1[2] = closure_13(updaters(isModalOpen[20]).AccessibilityView, obj2);
   items6[2] = callback2(updaters(isModalOpen[18]).View, obj1);
   obj[2] = items6;
   return closure_13(tmp18, obj);
-};
+}

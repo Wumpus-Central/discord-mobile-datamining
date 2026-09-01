@@ -14,7 +14,7 @@ export default function usePrevious(arg0) {
     closure_1.current = closure_0;
   }, items);
   return tmp.current;
-};
+}
 export const usePreviousWhen = function usePreviousWhen(value) {
   value = value.value;
   const callback = value;

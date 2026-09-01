@@ -16,5 +16,9 @@ export const StopIcon = function StopIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, {
+    source: registerAsset,
+    color: INTERACTIVE_ICON_DEFAULT,
+    style: color.style,
+  });
 };

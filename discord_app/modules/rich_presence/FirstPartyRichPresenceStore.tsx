@@ -25,8 +25,7 @@ function updateActivities() {
 let items = [handleUpdateActivityDefault];
 let closure_3 = [];
 const Store = initializeDefault.Store;
-class FirstPartyRichPresenceStore extends Store {
-}
+class FirstPartyRichPresenceStore extends Store {}
 const prototype = FirstPartyRichPresenceStore.prototype;
 prototype["initialize"] = function initialize() {
   this.syncWith(items, updateActivities);

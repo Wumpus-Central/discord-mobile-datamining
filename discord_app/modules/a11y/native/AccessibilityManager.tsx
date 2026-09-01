@@ -41,11 +41,14 @@ export default {
     updateSaturation.updateSaturation(closure_6.saturation);
   },
   updateMotionSettings() {
-    uDefault(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, { reduceMotion: closure_6.useReducedMotion, prefersCrossfades: closure_6.systemPrefersCrossfades });
+    uDefault(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, {
+      reduceMotion: closure_6.useReducedMotion,
+      prefersCrossfades: closure_6.systemPrefersCrossfades,
+    });
   },
   checkScreenreaderEnabled() {
     const self = this;
-    return callback(function*() {
+    return callback(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -130,5 +133,5 @@ export default {
       }
       success.delete(success.announcement);
     });
-  }
+  },
 };

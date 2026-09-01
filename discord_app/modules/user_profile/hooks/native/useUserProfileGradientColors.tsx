@@ -7,15 +7,24 @@ import { initialize } from "../../../../../discord_common/js/packages/flux/index
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileGradientColors.tsx");
 
-export const useUserProfileGradientColors = function useUserProfileGradientColors(primaryColor, secondaryColor, fallbackBackground) {
+export const useUserProfileGradientColors = function useUserProfileGradientColors(
+  primaryColor,
+  secondaryColor,
+  fallbackBackground,
+) {
   const _require = primaryColor;
   dependencyMap = secondaryColor;
   const React = fallbackBackground;
   const items = [overlay];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => overlay.syncProfileThemeWithUserTheme);
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => overlay.syncProfileThemeWithUserTheme,
+  );
   let obj = initialize;
   let obj2 = ManaContext;
-  const profileThemeValues = require("../../useProfileThemeValues.native.tsx").useProfileThemeValues(obj2.useThemeContext().theme);
+  const profileThemeValues = require("../../useProfileThemeValues.native.tsx").useProfileThemeValues(
+    obj2.useThemeContext().theme,
+  );
   if (stateFromStores) {
     let prop;
     if (!tmp3) {

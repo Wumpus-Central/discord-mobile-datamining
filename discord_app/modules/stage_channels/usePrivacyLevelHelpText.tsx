@@ -15,9 +15,14 @@ export default function useStagePrivacyLevelSettings(channel, privacy_level) {
   const _require = channel;
   let obj = initialize;
   const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.can(closure_1_7.CREATE_INSTANT_INVITE, closure_0));
+  const stateFromStores = obj.useStateFromStores(items, () =>
+    closure_1_4.can(closure_1_7.CREATE_INSTANT_INVITE, closure_0),
+  );
   const obj2 = applyOverwritesAll;
-  const canEveryoneRoleResult = obj2.canEveryoneRole(fromStringAll.combine(Permissions.VIEW_CHANNEL, Permissions.CONNECT), channel);
+  const canEveryoneRoleResult = obj2.canEveryoneRole(
+    fromStringAll.combine(Permissions.VIEW_CHANNEL, Permissions.CONNECT),
+    channel,
+  );
   privacy_level = undefined;
   if (privacy_level != null) {
     privacy_level = privacy_level.privacy_level;
@@ -56,4 +61,4 @@ export default function useStagePrivacyLevelSettings(channel, privacy_level) {
   }
   obj[2] = tmp15;
   return obj;
-};
+}

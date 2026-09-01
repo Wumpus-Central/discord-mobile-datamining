@@ -10,8 +10,7 @@ let c3 = null;
 const map = new Map();
 let set = new Set();
 const Store = initializeDefault.Store;
-class WindowStore extends Store {
-}
+class WindowStore extends Store {}
 const prototype = WindowStore.prototype;
 prototype["isFocused"] = function isFocused() {
   let mainWindowId = arg0;
@@ -93,7 +92,12 @@ const windowStore = new WindowStore(dispatcherDefault, {
   WINDOW_INIT: function handleWindowInit(isElementFullscreen) {
     _modDef38(!map.has(isElementFullscreen.windowId), "Window initialized multiple times");
     const focused = isElementFullscreen.focused;
-    obj = { windowSize: obj, isElementFullscreen: isElementFullscreen.isElementFullscreen, focused, visible: isElementFullscreen.visible };
+    obj = {
+      windowSize: obj,
+      isElementFullscreen: isElementFullscreen.isElementFullscreen,
+      focused,
+      visible: isElementFullscreen.visible,
+    };
     obj = { width: isElementFullscreen.width, height: isElementFullscreen.height };
     const result = map.set(isElementFullscreen.windowId, obj);
     if (focused) {
@@ -193,12 +197,10 @@ const windowStore = new WindowStore(dispatcherDefault, {
       flag = true;
     }
     return flag;
-  }
+  },
 });
 require("expandEventProperties").then((addExtraAnalyticsDecorator) => {
-  const result = addExtraAnalyticsDecorator.addExtraAnalyticsDecorator(() => {
-
-  });
+  const result = addExtraAnalyticsDecorator.addExtraAnalyticsDecorator(() => {});
 });
 let result = set.fileFinishedImporting("stores/web/WindowStore.tsx");
 

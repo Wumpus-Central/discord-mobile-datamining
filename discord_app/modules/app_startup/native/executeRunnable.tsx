@@ -17,18 +17,21 @@ export default function executeRunnable(arg0, arg1) {
   getIsPausedAll.setIsPaused(false);
   const obj2 = getIsPausedAll;
   const combined = "executeRunnable:" + arg0;
-  return setRequestedByAll.withRequest(combined, callback(function*() {
-    const obj4 = closure_1_0(15);
-    obj4.identifyWebSocket();
-    const init = closure_1_1(9).init;
-    yield init.measureAsync(closure_1_5);
-    yield closure_1_6.promise;
-    const _HermesInternal = HermesInternal;
-    v0(675).startBridgeTo("AppContainer:" + closure_0.toLowerCase());
-    const obj9 = v0(675);
-    return closure_1_1(10).time("\u{1F3C3}", "Run", () => {
-      const Emitter = callback(table[8]).Emitter;
-      return Emitter.batched(callback);
-    });
-  }));
-};
+  return setRequestedByAll.withRequest(
+    combined,
+    callback(function* () {
+      const obj4 = closure_1_0(15);
+      obj4.identifyWebSocket();
+      const init = closure_1_1(9).init;
+      yield init.measureAsync(closure_1_5);
+      yield closure_1_6.promise;
+      const _HermesInternal = HermesInternal;
+      v0(675).startBridgeTo("AppContainer:" + closure_0.toLowerCase());
+      const obj9 = v0(675);
+      return closure_1_1(10).time("\u{1F3C3}", "Run", () => {
+        const Emitter = callback(table[8]).Emitter;
+        return Emitter.batched(callback);
+      });
+    }),
+  );
+}

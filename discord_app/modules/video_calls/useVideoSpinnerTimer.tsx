@@ -15,10 +15,13 @@ export default function useVideoSpinnerTimer(userId) {
     flag = false;
   }
   let first;
-  first = userId(streamId.useState(() => {
-    const videoSpinnerTimer = new closure_1_0(videoSpinnerContext[2]).VideoSpinnerTimer(closure_0);
-    return videoSpinnerTimer;
-  }), 1)[0];
+  first = userId(
+    streamId.useState(() => {
+      const videoSpinnerTimer = new closure_1_0(videoSpinnerContext[2]).VideoSpinnerTimer(closure_0);
+      return videoSpinnerTimer;
+    }),
+    1,
+  )[0];
   const items = [loading, flag, streamId, first, videoSpinnerContext, userId];
   const effect = streamId.useEffect(() => {
     if (!flag) {
@@ -29,4 +32,4 @@ export default function useVideoSpinnerTimer(userId) {
       }
     }
   }, items);
-};
+}

@@ -4,7 +4,12 @@ import ApexExperiment from "../experiments/apex/index.tsx";
 
 const obj = { 1: null };
 obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-07-react-native-plain-text", kind: "user", defaultConfig: { enabled: false }, variations: obj });
+let closure_0 = ApexExperiment.createApexExperiment({
+  name: "2026-07-react-native-plain-text",
+  kind: "user",
+  defaultConfig: { enabled: false },
+  variations: obj,
+});
 const result = set.fileFinishedImporting("modules/design/PlainTextExperiment.tsx");
 
 export const usePlainTextExperiment = function usePlainTextExperiment(RootThemeContextProvider) {

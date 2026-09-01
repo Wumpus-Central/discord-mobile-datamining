@@ -34,7 +34,16 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
       str = "hidden";
     }
   }
-  obj = { banner: obj, background: null, clouds: null, wumpus: str, wumpusImage: null, backButton: null, content: null, fade: null };
+  obj = {
+    banner: obj,
+    background: null,
+    clouds: null,
+    wumpus: str,
+    wumpusImage: null,
+    backButton: null,
+    content: null,
+    fade: null,
+  };
   obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   if (!arg1) {
@@ -54,8 +63,20 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   obj[1] = obj;
   const tmp3 = -ThemesDefault.space.PX_16;
   const tmp5 = absoluteFillObject;
-  obj[2] = { position: "absolute", top: -ThemesDefault.space.PX_16, right: "category", left: "Error", alignSelf: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009153274628370773 };
-  obj1 = { position: "absolute", top: -ThemesDefault.space.PX_16, right: "category", left: "Error", alignSelf: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009153274628370773 };
+  obj[2] = {
+    position: "absolute",
+    top: -ThemesDefault.space.PX_16,
+    right: "category",
+    left: "Error",
+    alignSelf: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009153274628370773,
+  };
+  obj1 = {
+    position: "absolute",
+    top: -ThemesDefault.space.PX_16,
+    right: "category",
+    left: "Error",
+    alignSelf: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009153274628370773,
+  };
   obj[3] = { position: "absolute", top: arg0 + ThemesDefault.space.PX_20, right: ThemesDefault.space.PX_4 };
   const obj2 = { position: "absolute", top: arg0 + ThemesDefault.space.PX_20, right: ThemesDefault.space.PX_4 };
   obj[4] = { height: ThemesDefault.space.PX_80 + ThemesDefault.space.PX_4 };
@@ -72,7 +93,13 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   const items = [{ scaleX: -1 }];
   obj4[3] = items;
   obj[5] = obj4;
-  const obj5 = { alignItems: "center", gap: ThemesDefault.space.PX_8, paddingTop: null, paddingHorizontal: null, paddingBottom: null };
+  const obj5 = {
+    alignItems: "center",
+    gap: ThemesDefault.space.PX_8,
+    paddingTop: null,
+    paddingHorizontal: null,
+    paddingBottom: null,
+  };
   const sum = arg0 + tmp(712).space.PX_80;
   obj5[2] = sum + ThemesDefault.space.PX_4;
   obj5[3] = ThemesDefault.space.PX_16;
@@ -87,8 +114,12 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   obj[7] = obj6;
   return obj;
 });
-let closure_12 = { code: "function BuyNitroMarketingHeaderTsx1(){const{floatX,floatY}=this.__closure;return{transform:[{translateX:floatX.get()},{translateY:floatY.get()}]};}" };
-let closure_13 = { code: "function BuyNitroMarketingHeaderTsx2(){const{cloudsOpacity}=this.__closure;return{opacity:cloudsOpacity.get()};}" };
+let closure_12 = {
+  code: "function BuyNitroMarketingHeaderTsx1(){const{floatX,floatY}=this.__closure;return{transform:[{translateX:floatX.get()},{translateY:floatY.get()}]};}",
+};
+let closure_13 = {
+  code: "function BuyNitroMarketingHeaderTsx2(){const{cloudsOpacity}=this.__closure;return{opacity:cloudsOpacity.get()};}",
+};
 let result = require("set").fileFinishedImporting("modules/premium_marketing/native/BuyNitroMarketingHeader.tsx");
 
 export default function BuyNitroMarketingHeader(arg0) {
@@ -116,12 +147,18 @@ export default function BuyNitroMarketingHeader(arg0) {
     if (!accessibilityPreferencesSharedValue.get().reduceMotion) {
       let tmpResult = tmp(tmp2[6]);
       tmpResult = tmp(tmp2[8]);
-      const result = sharedValue.set(tmpResult.withRepeat(tmpResult.withTiming(closure_1_9, { duration: 3400 }), -1, true));
+      const result = sharedValue.set(
+        tmpResult.withRepeat(tmpResult.withTiming(closure_1_9, { duration: 3400 }), -1, true),
+      );
       const tmpResult1 = tmp(tmp2[6]);
-      const result1 = sharedValue1.set(tmpResult1.withRepeat(tmp(tmp2[8]).withTiming(-closure_1_10, { duration: 2600 }), -1, true));
+      const result1 = sharedValue1.set(
+        tmpResult1.withRepeat(tmp(tmp2[8]).withTiming(-closure_1_10, { duration: 2600 }), -1, true),
+      );
       const tmpResult2 = tmp(tmp2[8]);
       const tmpResult3 = tmp(tmp2[6]);
-      const result2 = sharedValue2.set(tmpResult3.withRepeat(tmp(tmp2[8]).withTiming(0.6, { duration: 2800 }), -1, true));
+      const result2 = sharedValue2.set(
+        tmpResult3.withRepeat(tmp(tmp2[8]).withTiming(0.6, { duration: 2800 }), -1, true),
+      );
       const tmpResult4 = tmp(tmp2[8]);
     }
   }, items);
@@ -129,7 +166,7 @@ export default function BuyNitroMarketingHeader(arg0) {
   const fn = function s() {
     let obj = { transform: null };
     obj = { translateX: sharedValue.get() };
-    const items = [obj, ];
+    const items = [obj];
     obj = { translateY: sharedValue1.get() };
     items[1] = obj;
     obj[0] = items;
@@ -153,8 +190,15 @@ export default function BuyNitroMarketingHeader(arg0) {
   if (isAndroidResult) {
     isAndroidResult = callback(tmp(tmp2[12]), { barStyle: "light-content" });
   }
-  const items1 = [isAndroidResult, , , , , , ];
-  obj = { selectedTier, nitroColors: Gradients.PREMIUM_TIER_2, basicColors: Gradients.PREMIUM_TIER_0, start: null, end: null, style: null };
+  const items1 = [isAndroidResult, , , , , ,];
+  obj = {
+    selectedTier,
+    nitroColors: Gradients.PREMIUM_TIER_2,
+    basicColors: Gradients.PREMIUM_TIER_0,
+    start: null,
+    end: null,
+    style: null,
+  };
   let tmpResult = tmp(tmp2[13]);
   obj[3] = sharedValue(sharedValue2[14]).HorizontalGradient.START;
   obj[4] = sharedValue(sharedValue2[14]).HorizontalGradient.END;
@@ -188,12 +232,18 @@ export default function BuyNitroMarketingHeader(arg0) {
   }
   items1[4] = tmp18Result;
   const obj6 = { style: tmp7.content, children: null };
-  const obj7 = { accessible: true, accessibilityRole: "header", accessibilityLabel: null, source: null, resizeMode: "contain" };
+  const obj7 = {
+    accessible: true,
+    accessibilityRole: "header",
+    accessibilityLabel: null,
+    source: null,
+    resizeMode: "contain",
+  };
   let tmpResult1 = sharedValue1(sharedValue2[15]);
   const intl = tmp4(tmp2[19]).intl;
   obj7[2] = intl.string(sharedValue(sharedValue2[19]).t.lpNrPu);
   obj7[3] = sharedValue1(sharedValue2[20]);
-  const items5 = [callback(sharedValue1(sharedValue2[15]), obj7), ];
+  const items5 = [callback(sharedValue1(sharedValue2[15]), obj7)];
   const obj8 = { variant: "text-md/medium", color: "text-overlay-light", children: null };
   const intl2 = tmp4(tmp2[19]).intl;
   obj8[2] = intl2.string(sharedValue(sharedValue2[19]).t.SD5MJW);
@@ -210,4 +260,4 @@ export default function BuyNitroMarketingHeader(arg0) {
   items1[6] = callback(closure_5, obj9);
   obj[1] = items1;
   return closure_8(closure_5, obj);
-};
+}

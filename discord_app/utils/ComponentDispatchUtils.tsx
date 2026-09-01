@@ -22,13 +22,13 @@ obj = {
     obj = { type: "ComponentDispatch", description: found, data: obj, durationMs };
     obj = { actionData, fullActionName };
     obj.reportEvent(obj);
-  }
+  },
 };
 obj = {
   warn(arg0) {
     const items = [arg0, ...HermesBuiltin.copyRestArgs()];
     return warn.warn.apply(items);
-  }
+  },
 };
 const componentDispatcher = new safeDispatch.ComponentDispatcher(obj);
 const tmp2 = new timestampDefault("ComponentDispatchUtils");

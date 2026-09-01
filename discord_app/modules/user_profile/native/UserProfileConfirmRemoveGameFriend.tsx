@@ -26,7 +26,7 @@ export default function UserProfileConfirmRemoveGameFriend(gameName) {
   const intl3 = userId(1236).intl;
   obj[1] = intl3.string(userId(1236).t.RLcE6x);
   obj[2] = callback;
-  const items1 = [callback(userId(4863).AlertActionButton, obj, "confirm-remove"), ];
+  const items1 = [callback(userId(4863).AlertActionButton, obj, "confirm-remove")];
   obj1 = { variant: "secondary", text: null };
   const intl4 = userId(1236).intl;
   obj1[1] = intl4.string(userId(1236).t["eN6+rI"]);
@@ -34,4 +34,4 @@ export default function UserProfileConfirmRemoveGameFriend(gameName) {
   obj[0] = items1;
   obj[2] = callback2(userId(4863).AlertActions, obj);
   return callback(userId(4863).AlertModal, obj);
-};
+}

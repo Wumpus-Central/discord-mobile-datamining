@@ -4,8 +4,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 
 let c0 = 0;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class TopicalNavigationSurveyStore extends DeviceSettingsStore {
-}
+class TopicalNavigationSurveyStore extends DeviceSettingsStore {}
 const prototype = TopicalNavigationSurveyStore.prototype;
 prototype["initialize"] = function initialize(channelsExposedCount) {
   let num;
@@ -30,7 +29,7 @@ TopicalNavigationSurveyStore.persistKey = "TopicalNavigationSurveyStore";
 const topicalNavigationSurveyStore = new TopicalNavigationSurveyStore(dispatcherDefault, {
   TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION: function handleTopicalNavigationEntrypointImpression() {
     closure_0 = closure_0 + 1;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/conversations/TopicalNavigationSurveyStore.tsx");
 

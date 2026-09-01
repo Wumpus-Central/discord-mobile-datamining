@@ -12,17 +12,33 @@ const memoResult = importAllResult.memo(() => {
   if (obj.useIsScreenReaderEnabled()) {
     tmp3 = null;
     if (!tmpResult.isAndroid()) {
-      obj = { nativeID: "chat-input-accessibility-divider", accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null };
+      obj = {
+        nativeID: "chat-input-accessibility-divider",
+        accessible: true,
+        accessibilityLabel: null,
+        accessibilityRole: "header",
+        style: null,
+      };
       const intl = tmp(1236).intl;
       obj[2] = intl.string(tmp(1236).t["uKZtC/"]);
       const items = [absoluteFill.absoluteFill, { height: 1 }];
       obj[4] = items;
-      tmp3 = <closure_3 nativeID="chat-input-accessibility-divider" accessible accessibilityLabel={null} accessibilityRole="header" style={null} />;
+      tmp3 = (
+        <closure_3
+          nativeID="chat-input-accessibility-divider"
+          accessible
+          accessibilityLabel={null}
+          accessibilityRole="header"
+          style={null}
+        />
+      );
     }
     tmpResult = tmp(500);
   }
   return tmp3;
 });
-const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputAccessibilityDivider.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/chat_input/native/accessories/ChatInputAccessibilityDivider.tsx",
+);
 
 export const ChatInputAccessibilityDivider = memoResult;

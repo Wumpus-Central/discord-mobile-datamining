@@ -16,32 +16,35 @@ const forwardRefResult = importAllResult.forwardRef((enabled, ref) => {
   let obj = flag(keyboardType[3]);
   isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
   const items = [flag, isScreenReaderEnabled, keyboardType, onSelectKeyboard];
-  const memo = onSelectKeyboard.useMemo(() => ({
-    imperativeHandle() {
-      return {
-        focused(controlsSpecs, arg1) {
-          let tmp = closure_0;
-          if (closure_0) {
-            tmp = controlsSpecs;
-          }
-          if (tmp) {
-            tmp = closure_1 !== closure_1_0(closure_1_1[4]).KeyboardTypes.SYSTEM;
-          }
-          if (tmp) {
-            tmp = closure_3;
-          }
-          if (tmp) {
-            const obj = { type: null };
-            obj[0] = closure_1_0(closure_1_1[4]).KeyboardTypes.SYSTEM;
-            callback(obj);
-          }
-        }
-      };
-    },
-    openSystemKeyboard() {
-      callback({ type: closure_1_0(closure_1_1[4]).KeyboardTypes.SYSTEM });
-    }
-  }), items);
+  const memo = onSelectKeyboard.useMemo(
+    () => ({
+      imperativeHandle() {
+        return {
+          focused(controlsSpecs, arg1) {
+            let tmp = closure_0;
+            if (closure_0) {
+              tmp = controlsSpecs;
+            }
+            if (tmp) {
+              tmp = closure_1 !== closure_1_0(closure_1_1[4]).KeyboardTypes.SYSTEM;
+            }
+            if (tmp) {
+              tmp = closure_3;
+            }
+            if (tmp) {
+              const obj = { type: null };
+              obj[0] = closure_1_0(closure_1_1[4]).KeyboardTypes.SYSTEM;
+              callback(obj);
+            }
+          },
+        };
+      },
+      openSystemKeyboard() {
+        callback({ type: closure_1_0(closure_1_1[4]).KeyboardTypes.SYSTEM });
+      },
+    }),
+    items,
+  );
   const imperativeHandle = onSelectKeyboard.useImperativeHandle(ref, memo.imperativeHandle);
   let tmp6 = null;
   if (flag) {

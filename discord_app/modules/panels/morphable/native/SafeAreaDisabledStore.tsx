@@ -43,7 +43,7 @@ let obj = keys.create((arg0, arg1) => {
           }
         });
       });
-    }
+    },
   };
   return obj;
 });

@@ -51,7 +51,9 @@ const memoResult = importAllResult.memo(function NotificationSettingChannelOverr
         if ("" !== closure_3) {
           if (null != str) {
             const obj = closure_1_0(closure_1_2[14]);
-            const formatted = closure_1_0(closure_1_2[14]).computeChannelName(channel, closure_1_9, closure_1_8).toLowerCase();
+            const formatted = closure_1_0(closure_1_2[14])
+              .computeChannelName(channel, closure_1_9, closure_1_8)
+              .toLowerCase();
             const str3 = closure_1_0(closure_1_2[14]).computeChannelName(channel, closure_1_9, closure_1_8);
             return closure_1_1(closure_1_2[15])(str.toLowerCase(), formatted);
           }
@@ -107,7 +109,7 @@ const memoResult = importAllResult.memo(function NotificationSettingChannelOverr
   obj1[0] = intl.string(require(stateFromStores[16]).t["5h0QOP"]);
   obj1[1] = tmp6[1];
   obj[1] = callback(require(stateFromStores[23]).SearchField, obj1);
-  const items4 = [callback(View, obj), ];
+  const items4 = [callback(View, obj)];
   if (0 === channels.length) {
     const obj2 = { Illustration: null, title: null, body: null };
     obj2[0] = tmp2(tmp3[25]).NoResults;
@@ -117,7 +119,15 @@ const memoResult = importAllResult.memo(function NotificationSettingChannelOverr
     obj2[2] = intl3.string(tmp2(tmp3[16]).t.f5cMAg);
     let tmp15Result = tmp15(tmp2(tmp3[24]).EmptyState, obj2);
   } else {
-    let obj3 = { sections: null, renderItem: null, itemSize: null, insetEnd: null, estimatedListSize: "windowSize", placeholderConfig: null, wrapChildren: true };
+    let obj3 = {
+      sections: null,
+      renderItem: null,
+      itemSize: null,
+      insetEnd: null,
+      estimatedListSize: "windowSize",
+      placeholderConfig: null,
+      wrapChildren: true,
+    };
     obj3[0] = memo.sections;
     obj3[1] = callback;
     obj3[2] = tmp10;
@@ -129,6 +139,8 @@ const memoResult = importAllResult.memo(function NotificationSettingChannelOverr
   obj[1] = items4;
   return closure_13(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/notification_settings/native/NotificationSettingChannelOverrides.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/notification_settings/native/NotificationSettingChannelOverrides.native.tsx",
+);
 
 export default memoResult;

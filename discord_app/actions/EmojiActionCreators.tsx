@@ -18,7 +18,7 @@ function _updateEmoji() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -129,12 +129,17 @@ let result = require("set").fileFinishedImporting("actions/EmojiActionCreators.t
 
 export const setDiversityColor = function setDiversityColor(arg0) {
   const _require = arg0;
-  const PreloadedUserSettingsActionCreators = require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
-  PreloadedUserSettingsActionCreators.updateAsync("textAndImages", (diversitySurrogate) => {
-    const StringValue = callback(closure_1_2[7]).StringValue;
-    diversitySurrogate.diversitySurrogate = StringValue.create();
-    diversitySurrogate.diversitySurrogate.value = callback;
-  }, constants.FREQUENT_USER_ACTION);
+  const PreloadedUserSettingsActionCreators =
+    require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
+  PreloadedUserSettingsActionCreators.updateAsync(
+    "textAndImages",
+    (diversitySurrogate) => {
+      const StringValue = callback(closure_1_2[7]).StringValue;
+      diversitySurrogate.diversitySurrogate = StringValue.create();
+      diversitySurrogate.diversitySurrogate.value = callback;
+    },
+    constants.FREQUENT_USER_ACTION,
+  );
 };
 export const fetchEmoji = function fetchEmoji(guildId) {
   const _require = guildId;
@@ -144,15 +149,18 @@ export const fetchEmoji = function fetchEmoji(guildId) {
   const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj = { url: Endpoints.GUILD_EMOJIS(guildId), oldFormErrors: true, rejectWithError: true };
   const value = HTTP.get(obj);
-  value.then((body) => {
-    let obj = closure_1_1(closure_1_2[8]);
-    obj = { type: "EMOJI_FETCH_SUCCESS", guildId: closure_0, emojis: body.body };
-    return obj.dispatch(obj);
-  }, () => {
-    let obj = closure_1_1(closure_1_2[8]);
-    obj = { type: "EMOJI_FETCH_FAILURE", guildId: closure_0 };
-    return obj.dispatch(obj);
-  });
+  value.then(
+    (body) => {
+      let obj = closure_1_1(closure_1_2[8]);
+      obj = { type: "EMOJI_FETCH_SUCCESS", guildId: closure_0, emojis: body.body };
+      return obj.dispatch(obj);
+    },
+    () => {
+      let obj = closure_1_1(closure_1_2[8]);
+      obj = { type: "EMOJI_FETCH_FAILURE", guildId: closure_0 };
+      return obj.dispatch(obj);
+    },
+  );
 };
 export const uploadEmoji = function uploadEmoji(guildId) {
   guildId = guildId.guildId;
@@ -161,7 +169,14 @@ export const uploadEmoji = function uploadEmoji(guildId) {
   let obj = dispatcherDefault;
   obj.dispatch({ type: "EMOJI_UPLOAD_START", guildId });
   const HTTP = guildId(530).HTTP;
-  obj = { url: Endpoints.GUILD_EMOJIS(guildId), body: { image, name, roles }, headers: fromBlobDefault.buildHeadersForMd5(originalMd5), context: null, oldFormErrors: true, rejectWithError: null };
+  obj = {
+    url: Endpoints.GUILD_EMOJIS(guildId),
+    body: { image, name, roles },
+    headers: fromBlobDefault.buildHeadersForMd5(originalMd5),
+    context: null,
+    oldFormErrors: true,
+    rejectWithError: null,
+  };
   let page;
   if (analyticsLocation != null) {
     page = analyticsLocation.page;
@@ -171,17 +186,20 @@ export const uploadEmoji = function uploadEmoji(guildId) {
   const tmp3 = guildId;
   obj[5] = guildId(530).rejectWithMigratedError();
   const tmp3Result = guildId(530);
-  return HTTP.post(obj).then((body) => {
-    let obj = closure_1_1(closure_1_2[8]);
-    obj = { type: "EMOJI_UPLOAD_STOP", guildId };
-    obj.dispatch(obj);
-    return body.body;
-  }, (arg0) => {
-    let obj = closure_1_1(closure_1_2[8]);
-    obj = { type: "EMOJI_UPLOAD_STOP", guildId };
-    obj.dispatch(obj);
-    return Promise.reject(arg0);
-  });
+  return HTTP.post(obj).then(
+    (body) => {
+      let obj = closure_1_1(closure_1_2[8]);
+      obj = { type: "EMOJI_UPLOAD_STOP", guildId };
+      obj.dispatch(obj);
+      return body.body;
+    },
+    (arg0) => {
+      let obj = closure_1_1(closure_1_2[8]);
+      obj = { type: "EMOJI_UPLOAD_STOP", guildId };
+      obj.dispatch(obj);
+      return Promise.reject(arg0);
+    },
+  );
 };
 export const deleteEmoji = function deleteEmoji(c0, id) {
   let obj = dispatcherDefault;
@@ -235,51 +253,55 @@ export const favoriteEmoji = function favoriteEmoji(customEmojiFromJoinedGuild) 
   name = tmp;
   if (null != tmp) {
     const FrecencyUserSettingsActionCreators = name(1370).FrecencyUserSettingsActionCreators;
-    FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", (emojis) => {
-      emojis = emojis.emojis;
-      let tmp = emojis;
-      if (closure_1_6.totalUnavailableGuilds <= 0) {
-        tmp = emojis;
-        if (closure_1_5.isConnected()) {
-          const mapped = emojis.map((emojiId) => {
-            customEmojiById = customEmojiById.getCustomEmojiById(emojiId);
-            if (customEmojiById == null) {
-              customEmojiById = callback(table[14]).getByName(emojiId);
-              const obj = callback(table[14]);
-            }
-            return customEmojiById;
-          });
-          const found = mapped.filter(name(closure_1_2[15]).isNotNullish);
-          let obj = closure_1_1(closure_1_2[16])(found);
-          const items = [];
-          HermesBuiltin.arraySpread(obj.keys(), 0);
-          tmp = items;
-        }
-      }
-      emojis.emojis = tmp;
-      if (obj2.size(emojis.emojis) >= closure_1_8) {
-        obj = { title: null, body: null };
-        const intl = name(tmp10[12]).intl;
-        obj[0] = intl.string(name(tmp10[12]).t["+XYXtZ"]);
-        const intl2 = name(tmp10[12]).intl;
-        obj = { count: null };
-        obj[0] = tmp11;
-        obj[1] = intl2.formatToPlainString(name(tmp10[12]).t.JaIyFi, obj);
-        closure_1_1(tmp10[18]).show(obj);
-        let flag = false;
-        const tmp9Result = closure_1_1(tmp10[18]);
-      } else {
+    FrecencyUserSettingsActionCreators.updateAsync(
+      "favoriteEmojis",
+      (emojis) => {
         emojis = emojis.emojis;
-        const hasItem = emojis.includes(name);
-        flag = !hasItem;
-        if (!hasItem) {
-          const emojis1 = emojis.emojis;
-          emojis1.push(tmp12);
+        let tmp = emojis;
+        if (closure_1_6.totalUnavailableGuilds <= 0) {
+          tmp = emojis;
+          if (closure_1_5.isConnected()) {
+            const mapped = emojis.map((emojiId) => {
+              customEmojiById = customEmojiById.getCustomEmojiById(emojiId);
+              if (customEmojiById == null) {
+                customEmojiById = callback(table[14]).getByName(emojiId);
+                const obj = callback(table[14]);
+              }
+              return customEmojiById;
+            });
+            const found = mapped.filter(name(closure_1_2[15]).isNotNullish);
+            let obj = closure_1_1(closure_1_2[16])(found);
+            const items = [];
+            HermesBuiltin.arraySpread(obj.keys(), 0);
+            tmp = items;
+          }
         }
-        tmp12 = name;
-      }
-      return flag;
-    }, constants.INFREQUENT_USER_ACTION);
+        emojis.emojis = tmp;
+        if (obj2.size(emojis.emojis) >= closure_1_8) {
+          obj = { title: null, body: null };
+          const intl = name(tmp10[12]).intl;
+          obj[0] = intl.string(name(tmp10[12]).t["+XYXtZ"]);
+          const intl2 = name(tmp10[12]).intl;
+          obj = { count: null };
+          obj[0] = tmp11;
+          obj[1] = intl2.formatToPlainString(name(tmp10[12]).t.JaIyFi, obj);
+          closure_1_1(tmp10[18]).show(obj);
+          let flag = false;
+          const tmp9Result = closure_1_1(tmp10[18]);
+        } else {
+          emojis = emojis.emojis;
+          const hasItem = emojis.includes(name);
+          flag = !hasItem;
+          if (!hasItem) {
+            const emojis1 = emojis.emojis;
+            emojis1.push(tmp12);
+          }
+          tmp12 = name;
+        }
+        return flag;
+      },
+      constants.INFREQUENT_USER_ACTION,
+    );
   }
 };
 export const unfavoriteEmoji = function unfavoriteEmoji(customEmojiFromJoinedGuild) {
@@ -302,35 +324,39 @@ export const unfavoriteEmoji = function unfavoriteEmoji(customEmojiFromJoinedGui
   name = tmp;
   if (null != tmp) {
     const FrecencyUserSettingsActionCreators = name(1370).FrecencyUserSettingsActionCreators;
-    FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", (emojis) => {
-      emojis = emojis.emojis;
-      let tmp = emojis;
-      if (closure_1_6.totalUnavailableGuilds <= 0) {
-        tmp = emojis;
-        if (closure_1_5.isConnected()) {
-          const mapped = emojis.map((emojiId) => {
-            customEmojiById = customEmojiById.getCustomEmojiById(emojiId);
-            if (customEmojiById == null) {
-              customEmojiById = callback(table[14]).getByName(emojiId);
-              const obj = callback(table[14]);
-            }
-            return customEmojiById;
-          });
-          const found = mapped.filter(name(closure_1_2[15]).isNotNullish);
-          const items = [];
-          HermesBuiltin.arraySpread(closure_1_1(closure_1_2[16])(found).keys(), 0);
-          tmp = items;
-          let obj = closure_1_1(closure_1_2[16])(found);
+    FrecencyUserSettingsActionCreators.updateAsync(
+      "favoriteEmojis",
+      (emojis) => {
+        emojis = emojis.emojis;
+        let tmp = emojis;
+        if (closure_1_6.totalUnavailableGuilds <= 0) {
+          tmp = emojis;
+          if (closure_1_5.isConnected()) {
+            const mapped = emojis.map((emojiId) => {
+              customEmojiById = customEmojiById.getCustomEmojiById(emojiId);
+              if (customEmojiById == null) {
+                customEmojiById = callback(table[14]).getByName(emojiId);
+                const obj = callback(table[14]);
+              }
+              return customEmojiById;
+            });
+            const found = mapped.filter(name(closure_1_2[15]).isNotNullish);
+            const items = [];
+            HermesBuiltin.arraySpread(closure_1_1(closure_1_2[16])(found).keys(), 0);
+            tmp = items;
+            let obj = closure_1_1(closure_1_2[16])(found);
+          }
         }
-      }
-      emojis.emojis = tmp;
-      emojis = emojis.emojis;
-      if (emojis.includes(name)) {
-        const emojis1 = emojis.emojis;
-        emojis.emojis = emojis1.filter((arg0) => closure_0 !== arg0);
-      } else {
-        return false;
-      }
-    }, constants.INFREQUENT_USER_ACTION);
+        emojis.emojis = tmp;
+        emojis = emojis.emojis;
+        if (emojis.includes(name)) {
+          const emojis1 = emojis.emojis;
+          emojis.emojis = emojis1.filter((arg0) => closure_0 !== arg0);
+        } else {
+          return false;
+        }
+      },
+      constants.INFREQUENT_USER_ACTION,
+    );
   }
 };

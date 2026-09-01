@@ -8,7 +8,17 @@ import { getRuleCountByTriggerType } from "AutomodStore.tsx";
 import AutomodEventType from "Constants.tsx";
 
 require = arg1;
-({ AutomodTriggerType: c4, MAX_KEYWORDS_PER_KEYWORD_FILTER: c5, MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER: closure_6, MAX_CHARACTERS_PER_KEYWORD: error, MIN_CHARACTERS_PER_KEYWORD: closure_8, MIN_REGEX_PATTERN_LENGTH: c9, MAX_REGEX_PATTERN_LENGTH: c10, AutomodActionType: unpackModuleId, AutomodEventType: closure_12 } = AutomodEventType);
+({
+  AutomodTriggerType: c4,
+  MAX_KEYWORDS_PER_KEYWORD_FILTER: c5,
+  MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER: closure_6,
+  MAX_CHARACTERS_PER_KEYWORD: error,
+  MIN_CHARACTERS_PER_KEYWORD: closure_8,
+  MIN_REGEX_PATTERN_LENGTH: c9,
+  MAX_REGEX_PATTERN_LENGTH: c10,
+  AutomodActionType: unpackModuleId,
+  AutomodEventType: closure_12,
+} = AutomodEventType);
 const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodRuleUtils.tsx");
 
 export const getNewAutomodRuleMockId = function getNewAutomodRuleMockId(arg0, arg1) {
@@ -58,7 +68,20 @@ export const isRuleUserProfileFilter = function isRuleUserProfileFilter(triggerT
 };
 export const createDefaultRule = function createDefaultRule(arg0, arg1) {
   let obj = AutomodTriggerType.triggerConfigs[arg1];
-  obj = { id: null, name: null, guildId: null, eventType: null, triggerType: null, triggerMetadata: null, enabled: true, creatorId: null, actions: null, position: 0, exemptChannels: null, exemptRoles: null };
+  obj = {
+    id: null,
+    name: null,
+    guildId: null,
+    eventType: null,
+    triggerType: null,
+    triggerMetadata: null,
+    enabled: true,
+    creatorId: null,
+    actions: null,
+    position: 0,
+    exemptChannels: null,
+    exemptRoles: null,
+  };
   const defaultTriggerMetadataForTriggerType = AutomodTriggerType.getDefaultTriggerMetadataForTriggerType(arg1, arg0);
   obj[0] = "" + arg0 + "-" + arg1 + "-new-rule";
   obj[1] = obj.getDefaultRuleName();
@@ -104,7 +127,9 @@ export const validateKeywordsOrThrow = function validateKeywordsOrThrow(arr) {
   } else {
     const item = arr.forEach((keyword) => {
       const intl = callback(1236).intl;
-      const invalidKeywordError = new callback(7848).InvalidKeywordError(intl.formatToPlainString(callback(1236).t.rbRvGe, { keyword, max: closure_7, min: closure_8 }));
+      const invalidKeywordError = new callback(7848).InvalidKeywordError(
+        intl.formatToPlainString(callback(1236).t.rbRvGe, { keyword, max: closure_7, min: closure_8 }),
+      );
       throw invalidKeywordError;
     });
   }
@@ -120,7 +145,9 @@ export const validateRegexPatternsOrThrow = function validateRegexPatternsOrThro
   } else {
     const item = arr.forEach((regex) => {
       const intl = callback(1236).intl;
-      const invalidRegexPatternError = new callback(7848).InvalidRegexPatternError(intl.formatToPlainString(callback(1236).t.WR0m9w, { regex, max: closure_10, min: closure_9 }));
+      const invalidRegexPatternError = new callback(7848).InvalidRegexPatternError(
+        intl.formatToPlainString(callback(1236).t.WR0m9w, { regex, max: closure_10, min: closure_9 }),
+      );
       throw invalidRegexPatternError;
     });
   }
@@ -157,7 +184,9 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
     } else {
       const item = keywordFilter.forEach((keyword) => {
         const intl = callback(1236).intl;
-        const invalidKeywordError = new callback(7848).InvalidKeywordError(intl.formatToPlainString(callback(1236).t.rbRvGe, { keyword, max: closure_7, min: closure_8 }));
+        const invalidKeywordError = new callback(7848).InvalidKeywordError(
+          intl.formatToPlainString(callback(1236).t.rbRvGe, { keyword, max: closure_7, min: closure_8 }),
+        );
         throw invalidKeywordError;
       });
       if (regexPatterns.length > closure_6) {
@@ -170,7 +199,9 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
       } else {
         const item1 = regexPatterns.forEach((regex) => {
           const intl = callback(1236).intl;
-          const invalidRegexPatternError = new callback(7848).InvalidRegexPatternError(intl.formatToPlainString(callback(1236).t.WR0m9w, { regex, max: closure_10, min: closure_9 }));
+          const invalidRegexPatternError = new callback(7848).InvalidRegexPatternError(
+            intl.formatToPlainString(callback(1236).t.WR0m9w, { regex, max: closure_10, min: closure_9 }),
+          );
           throw invalidRegexPatternError;
         });
       }

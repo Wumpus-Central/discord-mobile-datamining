@@ -52,7 +52,7 @@ function _fetchDesktopSubscriptionSkus() {
     c21 = 0;
     c22 = 0;
     c20 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (logger === 2) {
         logger = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -331,7 +331,19 @@ function _fetchDesktopSubscriptionSkus() {
                         let tmp72 = amount;
                         let tmp73 = name;
                         user2 = amount[name];
-                        let obj4 = { identifier: null, price: null, currencySymbol: null, currencyCode: null, priceString: null, countryCode: null, downloadable: false, description: null, title: null, type: null, subscriptionOffers: null };
+                        let obj4 = {
+                          identifier: null,
+                          price: null,
+                          currencySymbol: null,
+                          currencyCode: null,
+                          priceString: null,
+                          countryCode: null,
+                          downloadable: false,
+                          description: null,
+                          title: null,
+                          type: null,
+                          subscriptionOffers: null,
+                        };
                         let tmp75 = c13;
                         obj4[0] = c13;
                         let tmp76 = amount;
@@ -493,7 +505,7 @@ function _fetchDesktopSubscriptionSkus() {
 }
 function _loadUserCountry() {
   const self = this;
-  const tmp = importDefaultResult(function*() {
+  const tmp = importDefaultResult(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -572,7 +584,7 @@ function _subscribe() {
     c10 = 0;
     c11 = 0;
     c9 = 0;
-    return (function*(arg0, arg1, arg2, arg3, arg4) {
+    return (function* (arg0, arg1, arg2, arg3, arg4) {
       closure_7 = tmp3;
       const callback2 = dependencyMap;
       dependencyMap = closure_4;
@@ -634,7 +646,7 @@ function _verifyPurchase() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -699,7 +711,16 @@ function _verifyPurchase() {
               const HTTP = lib(closure_1_2[23]).HTTP;
               const obj2 = { url: null, body: null, rejectWithError: false };
               obj2[0] = closure_1_14.VERIFY_PURCHASE;
-              let obj3 = { purchase_token: null, user_id: null, package_name: null, subscription_sku_id: null, one_time_purchase_sku_id: null, gift_info_options: null, one_time_purchase_options: null, load_id: null };
+              let obj3 = {
+                purchase_token: null,
+                user_id: null,
+                package_name: null,
+                subscription_sku_id: null,
+                one_time_purchase_sku_id: null,
+                gift_info_options: null,
+                one_time_purchase_options: null,
+                load_id: null,
+              };
               obj3[0] = lib.purchaseToken;
               obj3[1] = id;
               obj3[2] = lib.packageName;
@@ -804,7 +825,7 @@ closure_0 = importDefaultResult(() => {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  const iter = (function*() {
+  const iter = (function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();
@@ -941,7 +962,7 @@ const importDefaultResultResult = importDefaultResult(() => {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  const iter = (function*() {
+  const iter = (function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();
@@ -1000,8 +1021,15 @@ const importDefaultResultResult = importDefaultResult(() => {
         } else if (2 === tmp7) {
           c4 = 0;
           c5 = closure_3;
-          const items1 = [, , , , , ];
-          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = closure_1_16);
+          const items1 = [, , , , ,];
+          ({
+            SERVICE_DISCONNECTED: arr[0],
+            SERVICE_TIMEOUT: arr[1],
+            SERVICE_UNAVAILABLE: arr[2],
+            BILLING_UNAVAILABLE: arr[3],
+            FEATURE_NOT_SUPPORTED: arr[4],
+            BILLING_CLIENT_NOT_READY: arr[5],
+          } = closure_1_16);
           const _String = String;
           const mapped = items1.map(String);
           let code;
@@ -1090,7 +1118,7 @@ closure_0 = importDefaultResult(() => {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  let iter = (function*() {
+  let iter = (function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();
@@ -1169,8 +1197,7 @@ closure_0 = importDefaultResult(() => {
                         const planIdForGift = IAPProductIds(table[11]).getPlanIdForGift(tmp2);
                         items.push(tmp2);
                         const obj = IAPProductIds(table[11]);
-                      } catch (err) {
-                      }
+                      } catch (err) {}
                     }
                   })(IAPProductIds);
                   return obj3;
@@ -1246,7 +1273,7 @@ const importDefaultResultResult1 = importDefaultResult(() => {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  const iter = (function*() {
+  const iter = (function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();
@@ -1305,8 +1332,15 @@ const importDefaultResultResult1 = importDefaultResult(() => {
         } else if (2 === tmp7) {
           c4 = 0;
           c5 = closure_3;
-          const items1 = [, , , , , ];
-          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = closure_1_16);
+          const items1 = [, , , , ,];
+          ({
+            SERVICE_DISCONNECTED: arr[0],
+            SERVICE_TIMEOUT: arr[1],
+            SERVICE_UNAVAILABLE: arr[2],
+            BILLING_UNAVAILABLE: arr[3],
+            FEATURE_NOT_SUPPORTED: arr[4],
+            BILLING_CLIENT_NOT_READY: arr[5],
+          } = closure_1_16);
           const _String = String;
           const mapped = items1.map(String);
           let code;
@@ -1390,7 +1424,7 @@ const importDefaultResultResult1 = importDefaultResult(() => {
   iter.next();
   return iter;
 });
-closure_0 = importDefaultResult(function*() {
+closure_0 = importDefaultResult(function* () {
   if (c0 === 2) {
     c0 = 3;
     HermesBuiltin.throwTypeError();
@@ -1449,7 +1483,7 @@ const importDefaultResultResult2 = importDefaultResult(() => {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  const iter = (function*() {
+  const iter = (function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();
@@ -1508,8 +1542,15 @@ const importDefaultResultResult2 = importDefaultResult(() => {
         } else if (2 === tmp7) {
           c4 = 0;
           c5 = closure_3;
-          const items1 = [, , , , , ];
-          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = closure_1_16);
+          const items1 = [, , , , ,];
+          ({
+            SERVICE_DISCONNECTED: arr[0],
+            SERVICE_TIMEOUT: arr[1],
+            SERVICE_UNAVAILABLE: arr[2],
+            BILLING_UNAVAILABLE: arr[3],
+            FEATURE_NOT_SUPPORTED: arr[4],
+            BILLING_CLIENT_NOT_READY: arr[5],
+          } = closure_1_16);
           const _String = String;
           const mapped = items1.map(String);
           let code;
@@ -1603,7 +1644,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
   c7 = 0;
   c8 = 0;
   c6 = 0;
-  return (function*(arg0, arg1) {
+  return (function* (arg0, arg1) {
     if (c8 === 2) {
       c8 = 3;
       HermesBuiltin.throwTypeError();
@@ -1692,7 +1733,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
     }
   })();
 });
-closure_0 = importDefaultResult(function*() {
+closure_0 = importDefaultResult(function* () {
   if (c5 === 2) {
     c5 = 3;
     HermesBuiltin.throwTypeError();
@@ -1809,7 +1850,7 @@ const importDefaultResultResult3 = importDefaultResult(() => {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  const iter = (function*() {
+  const iter = (function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();
@@ -1868,8 +1909,15 @@ const importDefaultResultResult3 = importDefaultResult(() => {
         } else if (2 === tmp7) {
           c4 = 0;
           c5 = closure_3;
-          const items1 = [, , , , , ];
-          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = closure_1_16);
+          const items1 = [, , , , ,];
+          ({
+            SERVICE_DISCONNECTED: arr[0],
+            SERVICE_TIMEOUT: arr[1],
+            SERVICE_UNAVAILABLE: arr[2],
+            BILLING_UNAVAILABLE: arr[3],
+            FEATURE_NOT_SUPPORTED: arr[4],
+            BILLING_CLIENT_NOT_READY: arr[5],
+          } = closure_1_16);
           const _String = String;
           const mapped = items1.map(String);
           let code;
@@ -1979,7 +2027,7 @@ export const ensureSkusLoaded = function ensureSkusLoaded(closure_30) {
           } else if (!authenticated.isAuthenticated()) {
             return Promise.resolve();
           }
-          const tmp9 = importDefaultResult(function*() {
+          const tmp9 = importDefaultResult(function* () {
             if (c5 === 2) {
               c5 = 3;
               HermesBuiltin.throwTypeError();
@@ -2090,7 +2138,7 @@ export const loadUserCountry = function loadUserCountry() {
   }
   return applyArgumentsResult;
 };
-export const purchase = function() {
+export const purchase = function () {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -2163,6 +2211,10 @@ export const updatePendingDowngrade = function updatePendingDowngrade(closure_0,
 export const downgradeSubscription = function downgradeSubscription(pendingDowngrade) {
   ({ purchaseToken, subscriptionId, newSubscriptionSkuId } = pendingDowngrade);
   const HTTP = callback(getUserCountry[23]).HTTP;
-  return HTTP.post({ url: constants2.DOWNGRADE_SUBSCRIPTION, body: { purchase_token: purchaseToken, subscription_id: subscriptionId, subscription_sku_id: newSubscriptionSkuId }, rejectWithError: false });
+  return HTTP.post({
+    url: constants2.DOWNGRADE_SUBSCRIPTION,
+    body: { purchase_token: purchaseToken, subscription_id: subscriptionId, subscription_sku_id: newSubscriptionSkuId },
+    rejectWithError: false,
+  });
 };
 export const getUserCountry = importDefaultResultResult3;

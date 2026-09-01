@@ -13,7 +13,9 @@ const result = require("set").fileFinishedImporting("modules/external_pip/useExt
 
 export default function useExternalPipParticipant() {
   const items = [closure_7];
-  const channelId = selectedParticipantStreamId(focusedParticipantStreamId[7]).useStateFromStores(items, () => channelId.getChannelId());
+  const channelId = selectedParticipantStreamId(focusedParticipantStreamId[7]).useStateFromStores(items, () =>
+    channelId.getChannelId(),
+  );
   let tmpResult = tmp(tmp2[7]);
   const items1 = [closure_5];
   let stateFromStores1 = tmpResult.useStateFromStores(items1, () => id.getId());
@@ -58,7 +60,11 @@ export default function useExternalPipParticipant() {
       id2 = tmp6.id;
     }
     if (stateFromStores1.current !== id2) {
-      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "PX_16", focusedParticipantType: null };
+      let obj = {
+        focusedParticipantStreamId: "Array",
+        focusedParticipantUserId: "PX_16",
+        focusedParticipantType: null,
+      };
       obj[2] = _undefined.current;
     } else {
       let type1;
@@ -111,156 +117,164 @@ export default function useExternalPipParticipant() {
   let tmp6 = stateFromStores1(React.useState(0), 2);
   const items3 = [selectedParticipantSpeaking];
   const items4 = [channelId, focusedParticipantStreamId, stateFromStores1, tmp7];
-  selectedParticipantSpeaking = selectedParticipantStreamId(focusedParticipantStreamId[7]).useStateFromStoresObject(items3, () => {
-    let tmp20;
-    let tmp30;
-    let tmp35;
-    if (null != selectedParticipantStreamId) {
-      if (null == focusedParticipantStreamId) {
-        const _Date = Date;
-        let tmp24;
-        const timestamp = Date.now();
-        const participants = selectedParticipantSpeaking.getParticipants(tmp);
-        let iter = participants[Symbol.iterator]();
-        let nextResult = iter.next();
-        while (iter !== undefined) {
-          let tmp5 = nextResult;
-          if (!tmp53) {
-            let tmp6 = nextResult;
-            let tmp7 = closure_1_9;
-            if (tmp5.type === closure_1_9.USER) {
-              let tmp8 = nextResult;
-              let user = tmp5.user;
-              let id;
-              if (user != null) {
-                id = user.id;
+  selectedParticipantSpeaking = selectedParticipantStreamId(focusedParticipantStreamId[7]).useStateFromStoresObject(
+    items3,
+    () => {
+      let tmp20;
+      let tmp30;
+      let tmp35;
+      if (null != selectedParticipantStreamId) {
+        if (null == focusedParticipantStreamId) {
+          const _Date = Date;
+          let tmp24;
+          const timestamp = Date.now();
+          const participants = selectedParticipantSpeaking.getParticipants(tmp);
+          let iter = participants[Symbol.iterator]();
+          let nextResult = iter.next();
+          while (iter !== undefined) {
+            let tmp5 = nextResult;
+            if (!tmp53) {
+              let tmp6 = nextResult;
+              let tmp7 = closure_1_9;
+              if (tmp5.type === closure_1_9.USER) {
+                let tmp8 = nextResult;
+                let user = tmp5.user;
+                let id;
+                if (user != null) {
+                  id = user.id;
+                }
+                let tmp10 = stateFromStores1;
               }
-              let tmp10 = stateFromStores1;
+              continue;
             }
-            continue;
-          }
-          let tmp11 = nextResult;
-          let type = tmp5.type;
-          if (closure_1_9.USER === type) {
-            let tmp21 = nextResult;
-            let speaking = tmp5.speaking;
-            if (!speaking) {
-              let tmp22 = nextResult;
-              speaking = timestamp - tmp5.lastSpoke < 1000;
-            }
-            if (speaking) {
-              let tmp23 = tmp24;
-              speaking = null == tmp24;
-            }
-            if (speaking) {
-              tmp24 = nextResult;
-            }
-            let tmp25 = nextResult;
-            let voiceState = tmp5.voiceState;
-            let flag;
-            if (voiceState != null) {
-              flag = voiceState.selfVideo;
-            }
-            if (flag == null) {
-              flag = false;
-            }
-            if (flag) {
-              let tmp26 = tmp30;
-              let tmp27 = null == tmp30;
-              if (!tmp27) {
-                let tmp28 = tmp30;
-                let tmp29 = nextResult;
-                tmp27 = tmp30.lastSpoke < tmp5.lastSpoke;
+            let tmp11 = nextResult;
+            let type = tmp5.type;
+            if (closure_1_9.USER === type) {
+              let tmp21 = nextResult;
+              let speaking = tmp5.speaking;
+              if (!speaking) {
+                let tmp22 = nextResult;
+                speaking = timestamp - tmp5.lastSpoke < 1000;
               }
-              flag = tmp27;
-            }
-            if (flag) {
-              tmp30 = nextResult;
-            }
-            let tmp31 = tmp35;
-            let tmp32 = null == tmp35;
-            if (!tmp32) {
-              let tmp33 = tmp35;
-              let tmp34 = nextResult;
-              tmp32 = tmp35.lastSpoke < tmp5.lastSpoke;
-            }
-            if (tmp32) {
-              tmp35 = nextResult;
-            }
-          } else if (tmp12.STREAM === type) {
-            let tmp55 = tmp20;
-            let tmp14 = null != tmp20;
-            if (!tmp14) {
-              let tmp13 = nextResult;
-              tmp14 = null == tmp5.streamId;
-            }
-            if (!tmp14) {
-              let tmp15 = closure_1_8;
-              let tmp16 = nextResult;
-              let tmp17 = closure_1_8(tmp5);
-              if (tmp17) {
-                let tmp18 = nextResult;
-                let tmp19 = stateFromStores1;
-                tmp17 = tmp5.user.id === stateFromStores1;
+              if (speaking) {
+                let tmp23 = tmp24;
+                speaking = null == tmp24;
               }
-              tmp14 = tmp17;
+              if (speaking) {
+                tmp24 = nextResult;
+              }
+              let tmp25 = nextResult;
+              let voiceState = tmp5.voiceState;
+              let flag;
+              if (voiceState != null) {
+                flag = voiceState.selfVideo;
+              }
+              if (flag == null) {
+                flag = false;
+              }
+              if (flag) {
+                let tmp26 = tmp30;
+                let tmp27 = null == tmp30;
+                if (!tmp27) {
+                  let tmp28 = tmp30;
+                  let tmp29 = nextResult;
+                  tmp27 = tmp30.lastSpoke < tmp5.lastSpoke;
+                }
+                flag = tmp27;
+              }
+              if (flag) {
+                tmp30 = nextResult;
+              }
+              let tmp31 = tmp35;
+              let tmp32 = null == tmp35;
+              if (!tmp32) {
+                let tmp33 = tmp35;
+                let tmp34 = nextResult;
+                tmp32 = tmp35.lastSpoke < tmp5.lastSpoke;
+              }
+              if (tmp32) {
+                tmp35 = nextResult;
+              }
+            } else if (tmp12.STREAM === type) {
+              let tmp55 = tmp20;
+              let tmp14 = null != tmp20;
+              if (!tmp14) {
+                let tmp13 = nextResult;
+                tmp14 = null == tmp5.streamId;
+              }
+              if (!tmp14) {
+                let tmp15 = closure_1_8;
+                let tmp16 = nextResult;
+                let tmp17 = closure_1_8(tmp5);
+                if (tmp17) {
+                  let tmp18 = nextResult;
+                  let tmp19 = stateFromStores1;
+                  tmp17 = tmp5.user.id === stateFromStores1;
+                }
+                tmp14 = tmp17;
+              }
+              if (!tmp14) {
+                tmp20 = nextResult;
+              }
             }
-            if (!tmp14) {
-              tmp20 = nextResult;
+          }
+          const obj = { selectedParticipantSpeaking: null, selectedParticipantUserId: null, selectedStreamId: null };
+          obj[0] = null != tmp24;
+          let id1;
+          if (tmp24 != null) {
+            const user2 = tmp24.user;
+            if (user2 != null) {
+              id1 = user2.id;
             }
           }
-        }
-        const obj = { selectedParticipantSpeaking: null, selectedParticipantUserId: null, selectedStreamId: null };
-        obj[0] = null != tmp24;
-        let id1;
-        if (tmp24 != null) {
-          const user2 = tmp24.user;
-          if (user2 != null) {
-            id1 = user2.id;
-          }
-        }
-        if (id1 == null) {
-          let id2;
-          if (tmp30 != null) {
-            const user3 = tmp30.user;
-            if (user3 != null) {
-              id2 = user3.id;
-            }
-          }
-          id1 = id2;
-        }
-        if (id1 == null) {
-          let id3;
-          if (tmp35 != null) {
-            const user4 = tmp35.user;
-            if (user4 != null) {
-              id3 = user4.id;
-            }
-          }
-          id1 = id3;
-        }
-        obj[1] = id1;
-        if (null != tmp24) {
-          let streamId = tmp24.streamId;
-        } else {
-          streamId = undefined;
-          if (tmp20 != null) {
-            streamId = tmp20.streamId;
-          }
-          if (streamId == null) {
-            let streamId1;
+          if (id1 == null) {
+            let id2;
             if (tmp30 != null) {
-              streamId1 = tmp30.streamId;
+              const user3 = tmp30.user;
+              if (user3 != null) {
+                id2 = user3.id;
+              }
             }
-            streamId = streamId1;
+            id1 = id2;
           }
+          if (id1 == null) {
+            let id3;
+            if (tmp35 != null) {
+              const user4 = tmp35.user;
+              if (user4 != null) {
+                id3 = user4.id;
+              }
+            }
+            id1 = id3;
+          }
+          obj[1] = id1;
+          if (null != tmp24) {
+            let streamId = tmp24.streamId;
+          } else {
+            streamId = undefined;
+            if (tmp20 != null) {
+              streamId = tmp20.streamId;
+            }
+            if (streamId == null) {
+              let streamId1;
+              if (tmp30 != null) {
+                streamId1 = tmp30.streamId;
+              }
+              streamId = streamId1;
+            }
+          }
+          obj[2] = streamId;
+          return obj;
         }
-        obj[2] = streamId;
-        return obj;
       }
-    }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "accessible" };
-  }, items4);
+      return {
+        selectedParticipantSpeaking: false,
+        selectedParticipantUserId: "Boolean",
+        selectedStreamId: "accessible",
+      };
+    },
+    items4,
+  );
   const items5 = [selectedParticipantSpeaking.selectedParticipantSpeaking];
   const effect = React.useEffect(() => {
     if (selectedParticipantSpeaking.selectedParticipantSpeaking) {
@@ -286,12 +300,22 @@ export default function useExternalPipParticipant() {
     if (null != closure_0) {
       const useExternalPipParticipant = "useExternalPipParticipant";
       let mediaEngine = closure_1_6.getMediaEngine();
-      mediaEngine.eachConnection((setHasActiveVideoOutputSink) => setHasActiveVideoOutputSink.setHasActiveVideoOutputSink(closure_0, true, useExternalPipParticipant));
+      mediaEngine.eachConnection((setHasActiveVideoOutputSink) =>
+        setHasActiveVideoOutputSink.setHasActiveVideoOutputSink(closure_0, true, useExternalPipParticipant),
+      );
       return () => {
         const mediaEngine = closure_1_6.getMediaEngine();
-        mediaEngine.eachConnection((setHasActiveVideoOutputSink) => setHasActiveVideoOutputSink.setHasActiveVideoOutputSink(closure_0, false, closure_1));
+        mediaEngine.eachConnection((setHasActiveVideoOutputSink) =>
+          setHasActiveVideoOutputSink.setHasActiveVideoOutputSink(closure_0, false, closure_1),
+        );
       };
     }
   }, items6);
-  return { channelId, selectedParticipantStreamId, selectedParticipantUserId, selectedParticipantSpeaking: selectedParticipantSpeaking.selectedParticipantSpeaking, focusedParticipantType };
-};
+  return {
+    channelId,
+    selectedParticipantStreamId,
+    selectedParticipantUserId,
+    selectedParticipantSpeaking: selectedParticipantSpeaking.selectedParticipantSpeaking,
+    focusedParticipantType,
+  };
+}

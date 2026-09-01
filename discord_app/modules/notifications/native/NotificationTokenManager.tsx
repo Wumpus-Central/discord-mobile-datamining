@@ -46,9 +46,12 @@ class NotificationTokenManager extends tmp2 {
         const stringResult = intl.string(applyArgumentsResult(closure_1_2[13]).t.TBA5Xg);
         const intl2 = applyArgumentsResult(closure_1_2[13]).intl;
         const intl3 = applyArgumentsResult(closure_1_2[13]).intl;
-        const result = DCDNotificationCategoryUtils.registerNotificationReplyCategories(stringResult, intl2.string(applyArgumentsResult(closure_1_2[13]).t.TXNS7S), intl3.string(applyArgumentsResult(closure_1_2[13]).t.TBA5Xg), () => {
-
-        });
+        const result = DCDNotificationCategoryUtils.registerNotificationReplyCategories(
+          stringResult,
+          intl2.string(applyArgumentsResult(closure_1_2[13]).t.TXNS7S),
+          intl3.string(applyArgumentsResult(closure_1_2[13]).t.TBA5Xg),
+          () => {},
+        );
         if (closure_1_3.PushNotificationAndroid) {
           const PushNotificationAndroid = tmp5.PushNotificationAndroid;
           const result1 = PushNotificationAndroid.onRegisterNotificationToken();
@@ -63,17 +66,22 @@ class NotificationTokenManager extends tmp2 {
     applyArgumentsResult.handleSyncNoMultiAccountOnLoginSuccess = function handleSyncNoMultiAccountOnLoginSuccess() {
       const result = applyArgumentsResult.handleSyncNoMultiAccount();
     };
-    applyArgumentsResult.handleSyncNoMultiAccountOnRegisterSuccess = function handleSyncNoMultiAccountOnRegisterSuccess() {
-      applyArgumentsResult.postConnectionOpenTimeoutID = setTimeout(applyArgumentsResult.handleSyncNoMultiAccountOnPostConnectionOpen, 5000);
-    };
-    applyArgumentsResult.handleSyncNoMultiAccountOnPostConnectionOpen = function handleSyncNoMultiAccountOnPostConnectionOpen() {
-      if (null != applyArgumentsResult.postConnectionOpenTimeoutID) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(obj.postConnectionOpenTimeoutID);
-        obj.postConnectionOpenTimeoutID = null;
-        const result = obj.handleSyncNoMultiAccount();
-      }
-    };
+    applyArgumentsResult.handleSyncNoMultiAccountOnRegisterSuccess =
+      function handleSyncNoMultiAccountOnRegisterSuccess() {
+        applyArgumentsResult.postConnectionOpenTimeoutID = setTimeout(
+          applyArgumentsResult.handleSyncNoMultiAccountOnPostConnectionOpen,
+          5000,
+        );
+      };
+    applyArgumentsResult.handleSyncNoMultiAccountOnPostConnectionOpen =
+      function handleSyncNoMultiAccountOnPostConnectionOpen() {
+        if (null != applyArgumentsResult.postConnectionOpenTimeoutID) {
+          const _clearTimeout = clearTimeout;
+          clearTimeout(obj.postConnectionOpenTimeoutID);
+          obj.postConnectionOpenTimeoutID = null;
+          const result = obj.handleSyncNoMultiAccount();
+        }
+      };
     applyArgumentsResult.handleSyncNoMultiAccount = function handleSyncNoMultiAccount() {
       let canSync = applyArgumentsResult.canSync;
       if (canSync) {
@@ -110,7 +118,10 @@ prototype["_initialize"] = function _initialize() {
   const obj = dispatcherDefault;
   const subscription1 = dispatcherDefault.subscribe("REGISTER_SUCCESS", self.handleSyncNoMultiAccountOnRegisterSuccess);
   const obj2 = dispatcherDefault;
-  const subscription2 = dispatcherDefault.subscribe("POST_CONNECTION_OPEN", self.handleSyncNoMultiAccountOnPostConnectionOpen);
+  const subscription2 = dispatcherDefault.subscribe(
+    "POST_CONNECTION_OPEN",
+    self.handleSyncNoMultiAccountOnPostConnectionOpen,
+  );
   const obj3 = dispatcherDefault;
   const subscription3 = dispatcherDefault.subscribe("POST_CONNECTION_OPEN", self.handleSyncWithMultiAccount);
   const obj4 = dispatcherDefault;
@@ -176,9 +187,26 @@ prototype["registerNotificationCategories"] = function registerNotificationCateg
 };
 prototype["registerLegacyNotificationCategories"] = function registerLegacyNotificationCategories() {
   const registerNotificationCategories = NativeModules.DCDNotificationCategoryUtils.registerNotificationCategories;
-  const registerNotificationCategoriesAndGroups = NativeModules.DCDNotificationCategoryUtils.registerNotificationCategoriesAndGroups;
+  const registerNotificationCategoriesAndGroups =
+    NativeModules.DCDNotificationCategoryUtils.registerNotificationCategoriesAndGroups;
   if (null != registerNotificationCategoriesAndGroups) {
-    let obj = { calls: null, mediaConnections: null, messages: null, directMessages: null, friendRequests: null, polls: null, social: null, stageLive: null, guildEventLive: null, guildHighlights: null, forumThreadCreated: null, systemMessages: null, other: null, default: null, reactions: null };
+    let obj = {
+      calls: null,
+      mediaConnections: null,
+      messages: null,
+      directMessages: null,
+      friendRequests: null,
+      polls: null,
+      social: null,
+      stageLive: null,
+      guildEventLive: null,
+      guildHighlights: null,
+      forumThreadCreated: null,
+      systemMessages: null,
+      other: null,
+      default: null,
+      reactions: null,
+    };
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(messagesProxyDefault["IUH/Oe"]);
     const intl2 = getSystemLocale.intl;
@@ -220,7 +248,20 @@ prototype["registerLegacyNotificationCategories"] = function registerLegacyNotif
     obj[3] = intl19.string(messagesProxyDefault.q5M7HV);
     const result = registerNotificationCategoriesAndGroups(obj, obj);
   } else if (null != registerNotificationCategories) {
-    obj = { calls: null, mediaConnections: null, messages: null, directMessages: null, social: null, gameDetection: null, stageLive: null, guildEventLive: null, guildHighlights: null, forumThreadCreated: null, other: null, otherHighPriority: null };
+    obj = {
+      calls: null,
+      mediaConnections: null,
+      messages: null,
+      directMessages: null,
+      social: null,
+      gameDetection: null,
+      stageLive: null,
+      guildEventLive: null,
+      guildHighlights: null,
+      forumThreadCreated: null,
+      other: null,
+      otherHighPriority: null,
+    };
     const intl20 = getSystemLocale.intl;
     obj[0] = intl20.string(getSystemLocale.t.JJogjm);
     const intl21 = getSystemLocale.intl;
@@ -292,7 +333,7 @@ Object.defineProperty(prototype, "canSync", {
     }
     return isInitialized;
   },
-  set: undefined
+  set: undefined,
 });
 const notificationTokenManager = new NotificationTokenManager();
 let result = set2.fileFinishedImporting("modules/notifications/native/NotificationTokenManager.tsx");

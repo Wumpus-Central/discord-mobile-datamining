@@ -31,10 +31,27 @@ prototype["getStats"] = function getStats() {
   let result;
   if (null != this.startCPU) {
     if (null != cumulativeCPUUsage) {
-      result = 100 * (cumulativeCPUUsage.usage - self.startCPU.usage) / ((cumulativeCPUUsage.sampleTime - self.startCPU.sampleTime) / 1000);
+      result =
+        (100 * (cumulativeCPUUsage.usage - self.startCPU.usage)) /
+        ((cumulativeCPUUsage.sampleTime - self.startCPU.sampleTime) / 1000);
     }
   }
-  obj = { client_performance_cpu_percentile25: report.percentiles[25], client_performance_cpu_percentile50: report.percentiles[50], client_performance_cpu_percentile75: report.percentiles[75], client_performance_cpu_percentile90: report.percentiles[90], client_performance_cpu_percentile95: report.percentiles[95], client_performance_cpu_mean: null, client_performance_memory_percentile25: null, client_performance_memory_percentile50: null, client_performance_memory_percentile75: null, client_performance_memory_percentile90: null, client_performance_memory_percentile95: null, client_performance_memory_min: null, client_performance_memory_max: null, client_performance_memory_mean: null };
+  obj = {
+    client_performance_cpu_percentile25: report.percentiles[25],
+    client_performance_cpu_percentile50: report.percentiles[50],
+    client_performance_cpu_percentile75: report.percentiles[75],
+    client_performance_cpu_percentile90: report.percentiles[90],
+    client_performance_cpu_percentile95: report.percentiles[95],
+    client_performance_cpu_mean: null,
+    client_performance_memory_percentile25: null,
+    client_performance_memory_percentile50: null,
+    client_performance_memory_percentile75: null,
+    client_performance_memory_percentile90: null,
+    client_performance_memory_percentile95: null,
+    client_performance_memory_min: null,
+    client_performance_memory_max: null,
+    client_performance_memory_mean: null,
+  };
   if (null == result) {
     result = report.mean;
   }
@@ -60,7 +77,7 @@ prototype["takeSample"] = function takeSample() {
       flag = false;
       if (diff >= 1) {
         const cpuHistogram = self.cpuHistogram;
-        cpuHistogram.addSample((cumulativeCPUUsage.usage - self.lastCPU.usage) / (diff / 1000) * 100, diff);
+        cpuHistogram.addSample(((cumulativeCPUUsage.usage - self.lastCPU.usage) / (diff / 1000)) * 100, diff);
         flag = true;
       }
     }
@@ -81,7 +98,7 @@ prototype["takeSample"] = function takeSample() {
   }
 };
 prototype["getCurrentBattery"] = function getCurrentBattery() {
-  return callback(function*() {
+  return callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -150,7 +167,7 @@ prototype["getCurrentBattery"] = function getCurrentBattery() {
 };
 prototype["setLastBattery"] = function setLastBattery() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c2 === 2) {
       c2 = 3;
       HermesBuiltin.throwTypeError();
@@ -206,7 +223,7 @@ prototype["setLastBattery"] = function setLastBattery() {
 };
 prototype["getBatteryLevelStats"] = function getBatteryLevelStats() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();

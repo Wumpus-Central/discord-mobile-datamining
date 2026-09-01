@@ -32,8 +32,13 @@ export const getSubscriptionSKUs = function getSubscriptionSKUs(items) {
   });
   return mapped.map((skuId) => skuId.skuId);
 };
-export const subscriptionCanSwitchImmediately = function subscriptionCanSwitchImmediately(getCurrentSubscriptionPlanIdForGroup, newPlanId, arr) {
-  const currentSubscriptionPlanIdForGroup = getCurrentSubscriptionPlanIdForGroup.getCurrentSubscriptionPlanIdForGroup(arr);
+export const subscriptionCanSwitchImmediately = function subscriptionCanSwitchImmediately(
+  getCurrentSubscriptionPlanIdForGroup,
+  newPlanId,
+  arr,
+) {
+  const currentSubscriptionPlanIdForGroup =
+    getCurrentSubscriptionPlanIdForGroup.getCurrentSubscriptionPlanIdForGroup(arr);
   if (getCurrentSubscriptionPlanIdForGroup.type === constants2.PREMIUM) {
     if (null == currentSubscriptionPlanIdForGroup) {
       return true;
@@ -58,8 +63,13 @@ export const subscriptionCanSwitchImmediately = function subscriptionCanSwitchIm
     return index < arr.indexOf(newPlanId);
   }
 };
-export const subscriptionCanDowngrade = function subscriptionCanDowngrade(getCurrentSubscriptionPlanIdForGroup, arg1, arr) {
-  const currentSubscriptionPlanIdForGroup = getCurrentSubscriptionPlanIdForGroup.getCurrentSubscriptionPlanIdForGroup(arr);
+export const subscriptionCanDowngrade = function subscriptionCanDowngrade(
+  getCurrentSubscriptionPlanIdForGroup,
+  arg1,
+  arr,
+) {
+  const currentSubscriptionPlanIdForGroup =
+    getCurrentSubscriptionPlanIdForGroup.getCurrentSubscriptionPlanIdForGroup(arr);
   if (getCurrentSubscriptionPlanIdForGroup.type !== constants2.PREMIUM) {
     let obj = { oldPlanId: null, newPlanId: null };
     obj[0] = currentSubscriptionPlanIdForGroup;
@@ -107,19 +117,22 @@ export const useGetOrFetchSubscriptionPlan = function useGetOrFetchSubscriptionP
   const _require = subscriptionPlanId;
   closure_1 = arg1;
   let items = [closure_5];
-  const tmp = callback(_require(first[9]).useStateFromStoresArray(items, () => {
-    let value = null;
-    if (null != closure_0) {
-      value = closure_1_5.get(tmp);
-    }
-    const items = [value, ];
-    let isFetchingForSKUResult = null != value;
-    if (isFetchingForSKUResult) {
-      isFetchingForSKUResult = closure_1_5.isFetchingForSKU(value.skuId);
-    }
-    items[1] = isFetchingForSKUResult;
-    return items;
-  }), 2);
+  const tmp = callback(
+    _require(first[9]).useStateFromStoresArray(items, () => {
+      let value = null;
+      if (null != closure_0) {
+        value = closure_1_5.get(tmp);
+      }
+      const items = [value];
+      let isFetchingForSKUResult = null != value;
+      if (isFetchingForSKUResult) {
+        isFetchingForSKUResult = closure_1_5.isFetchingForSKU(value.skuId);
+      }
+      items[1] = isFetchingForSKUResult;
+      return items;
+    }),
+    2,
+  );
   first = tmp[0];
   callback = tmp3;
   const items1 = [first, subscriptionPlanId, arg1, tmp[1]];
@@ -132,7 +145,10 @@ export const useGetOrFetchSubscriptionPlan = function useGetOrFetchSubscriptionP
           const tmp5 = callback(first[5]);
           const tmp6 = null != closure_1_9[tmp12];
           const obj = subscriptionPlanId(first[8]);
-          const subscriptionPlansForSKU = obj.fetchSubscriptionPlansForSKU(subscriptionPlanId(first[7]).castPremiumSubscriptionAsSkuId(tmp2.skuId), callback);
+          const subscriptionPlansForSKU = obj.fetchSubscriptionPlansForSKU(
+            subscriptionPlanId(first[7]).castPremiumSubscriptionAsSkuId(tmp2.skuId),
+            callback,
+          );
           const obj2 = subscriptionPlanId(first[7]);
         }
       }

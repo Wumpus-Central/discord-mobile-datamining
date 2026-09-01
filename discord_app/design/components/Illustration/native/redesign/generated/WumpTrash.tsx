@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/WumpTrash.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/WumpTrash.tsx",
+);
 
 export const getWumpTrashSource = function getWumpTrashSource(theme) {
   let obj = getIllustrationSource;
@@ -17,7 +19,7 @@ export const getWumpTrashSource = function getWumpTrashSource(theme) {
     },
     darker() {
       return callback(15571);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -29,7 +31,7 @@ export const useWumpTrashSource = function useWumpTrashSource() {
     },
     darker() {
       return callback(15571);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -41,7 +43,7 @@ export const WumpTrash = function WumpTrash(arg0) {
     },
     darker() {
       return callback(15571);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

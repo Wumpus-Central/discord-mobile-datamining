@@ -17,11 +17,11 @@ export default function UserProfileOverscrollBanner(arg0) {
   ({ bannerAnimatedStyle, bannerImageAnimatedStyle, blurAnimatedProps, showBlur, privateBanner } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   let obj = { style: bannerAnimatedStyle, children: null };
-  const items = [privateBanner, ];
+  const items = [privateBanner];
   obj = { style: bannerImageAnimatedStyle, children: null };
   obj = {};
   const merged1 = Object.assign(merged);
-  const items1 = [callback(UserProfileBannerDefault, obj), ];
+  const items1 = [callback(UserProfileBannerDefault, obj)];
   const tmp3 = callback;
   const tmp4 = UserProfileBannerDefault;
   let tmp3Result = set.isIOS() && showBlur;
@@ -36,4 +36,4 @@ export default function UserProfileOverscrollBanner(arg0) {
   items[1] = closure_5(importDefaultResult.View, obj);
   obj[1] = items;
   return closure_5(importDefaultResult.View, obj);
-};
+}

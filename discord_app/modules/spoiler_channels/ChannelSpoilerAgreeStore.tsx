@@ -5,8 +5,7 @@ import closure_0 from "../../stores/AuthenticationStore.tsx";
 
 let closure_1 = { users: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class ChannelSpoilerAgreeStore extends DeviceSettingsStore {
-}
+class ChannelSpoilerAgreeStore extends DeviceSettingsStore {}
 const prototype = ChannelSpoilerAgreeStore.prototype;
 prototype["initialize"] = function initialize(users) {
   this.waitFor(closure_0);
@@ -70,7 +69,7 @@ const channelSpoilerAgreeStore = new ChannelSpoilerAgreeStore(dispatcherDefault,
       tmp4 = tmp6;
     }
     return tmp4;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/spoiler_channels/ChannelSpoilerAgreeStore.tsx");
 

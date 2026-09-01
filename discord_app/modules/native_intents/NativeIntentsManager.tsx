@@ -62,7 +62,18 @@ function makeSearchItem(channel, guild, flag) {
     id = closure_10;
   }
   const CHANNELResult = closure_14.CHANNEL(id, channel.id);
-  obj = { id: CHANNELResult, relatedUniqueIdentifier: CHANNELResult, type: "url", title: sum, displayName: sum, thumbnailURL: null, rankingHint: null, keywords: null, alternateNames: null, isUpdate: null };
+  obj = {
+    id: CHANNELResult,
+    relatedUniqueIdentifier: CHANNELResult,
+    type: "url",
+    title: sum,
+    displayName: sum,
+    thumbnailURL: null,
+    rankingHint: null,
+    keywords: null,
+    alternateNames: null,
+    isUpdate: null,
+  };
   const obj2 = computeChannelName;
   const channelIconURL = getChannelIconURL.getChannelIconURL(channel, 128, false);
   let startsWithResult;
@@ -116,7 +127,15 @@ function makeGuildDomain(guild, flag) {
     flag = false;
   }
   const CHANNELResult = closure_14.CHANNEL(guild.id);
-  let obj = { id: CHANNELResult, relatedUniqueIdentifier: CHANNELResult, type: "url", title: guild.name, displayName: guild.name, alternateNames: null, rankingHint: null };
+  let obj = {
+    id: CHANNELResult,
+    relatedUniqueIdentifier: CHANNELResult,
+    type: "url",
+    title: guild.name,
+    displayName: guild.name,
+    alternateNames: null,
+    rankingHint: null,
+  };
   const items = ["*" + guild.name];
   obj[5] = items;
   obj[6] = constants4.GUILD;
@@ -209,7 +228,16 @@ function setChannelActivity(channelId) {
       const items3 = [];
       HermesBuiltin.arraySpread(set, 0);
       const CHANNELResult = closure_14.CHANNEL(channel.guild_id, channel.id);
-      obj = { webpageURL: null, relatedUniqueIdentifier: null, eligibleForHandoff: true, eligibleForSearch: true, title: null, keywords: null, displayName: null, type: "com.discord.view-channel" };
+      obj = {
+        webpageURL: null,
+        relatedUniqueIdentifier: null,
+        eligibleForHandoff: true,
+        eligibleForSearch: true,
+        title: null,
+        keywords: null,
+        displayName: null,
+        type: "com.discord.view-channel",
+      };
       const _HermesInternal2 = HermesInternal;
       obj[0] = "" + constants2.BASE_URL + CHANNELResult;
       obj[1] = CHANNELResult;
@@ -296,7 +324,24 @@ initializeDefault;
 class NativeIntentsManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handleInit, LOGOUT: applyArgumentsResult.handleLogout, CHANNEL_SELECT: applyArgumentsResult.handleChannelSelect, CHANNEL_CREATE: applyArgumentsResult.handleChannelCreate, CHANNEL_DELETE: applyArgumentsResult.handleChannelDelete, CHANNEL_UPDATES: applyArgumentsResult.handleChannelUpdates, GUILD_CREATE: applyArgumentsResult.handleGuildCreateOrUpdate, GUILD_UPDATE: applyArgumentsResult.handleGuildCreateOrUpdate, GUILD_DELETE: applyArgumentsResult.handleGuildDelete, RELATIONSHIP_ADD: applyArgumentsResult.handleRelationshipChange, RELATIONSHIP_REMOVE: applyArgumentsResult.handleRelationshipChange, RELATIONSHIP_UPDATE: applyArgumentsResult.handleRelationshipChange, THREAD_CREATE: applyArgumentsResult.handleChannelCreate, THREAD_DELETE: applyArgumentsResult.handleChannelDelete, THREAD_UPDATE: applyArgumentsResult.handleThreadUpdate, USER_UPDATE: applyArgumentsResult.handleUserUpdate };
+    applyArgumentsResult.actions = {
+      POST_CONNECTION_OPEN: applyArgumentsResult.handleInit,
+      LOGOUT: applyArgumentsResult.handleLogout,
+      CHANNEL_SELECT: applyArgumentsResult.handleChannelSelect,
+      CHANNEL_CREATE: applyArgumentsResult.handleChannelCreate,
+      CHANNEL_DELETE: applyArgumentsResult.handleChannelDelete,
+      CHANNEL_UPDATES: applyArgumentsResult.handleChannelUpdates,
+      GUILD_CREATE: applyArgumentsResult.handleGuildCreateOrUpdate,
+      GUILD_UPDATE: applyArgumentsResult.handleGuildCreateOrUpdate,
+      GUILD_DELETE: applyArgumentsResult.handleGuildDelete,
+      RELATIONSHIP_ADD: applyArgumentsResult.handleRelationshipChange,
+      RELATIONSHIP_REMOVE: applyArgumentsResult.handleRelationshipChange,
+      RELATIONSHIP_UPDATE: applyArgumentsResult.handleRelationshipChange,
+      THREAD_CREATE: applyArgumentsResult.handleChannelCreate,
+      THREAD_DELETE: applyArgumentsResult.handleChannelDelete,
+      THREAD_UPDATE: applyArgumentsResult.handleThreadUpdate,
+      USER_UPDATE: applyArgumentsResult.handleUserUpdate,
+    };
     return applyArgumentsResult;
   }
 }

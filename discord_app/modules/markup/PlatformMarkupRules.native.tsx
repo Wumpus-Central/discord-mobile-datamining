@@ -12,7 +12,19 @@ import getGameMentionData from "../game_mentions/hooks/useGameMentionData.tsx";
 import INVISIBLE_CHAR_REGEX2 from "MarkupInvisibleUnicode.tsx";
 
 const Image = get_ActivityIndicator.Image;
-obj = { escape: obj, invisibleUnicode: null, text: null, emoji: null, customEmoji: null, channelMention: null, gameMention: null, channelOrMessageUrl: null, mediaPostLink: null, attachmentLink: null, silentPrefix: null };
+obj = {
+  escape: obj,
+  invisibleUnicode: null,
+  text: null,
+  emoji: null,
+  customEmoji: null,
+  channelMention: null,
+  gameMention: null,
+  channelOrMessageUrl: null,
+  mediaPostLink: null,
+  attachmentLink: null,
+  silentPrefix: null,
+};
 obj = {
   requiredFirstCharacters: ["\\"],
   match(arg0, allowEscape) {
@@ -33,7 +45,7 @@ obj = {
       }
       return tmp3;
     }
-  }
+  },
 };
 obj = {};
 let merged = Object.assign(tDefault.defaultRules.escape);
@@ -67,14 +79,14 @@ obj[2] = {
       }
       return tmp9;
     }
-  }
+  },
 };
 obj[3] = {
   parse(content) {
     let obj = parseRawEmojiObjectDefault;
     obj = { type: "emoji", content: content[0], surrogate: obj.convertNameToSurrogate(content[1]) };
     return obj;
-  }
+  },
 };
 obj[4] = {
   order: textRegexpDefault.order,
@@ -99,7 +111,7 @@ obj[4] = {
     obj[2] = emojiURL;
     obj[3] = emojiURL1;
     return obj;
-  }
+  },
 };
 obj[5] = {
   parse(arg0, arg1, arg2) {
@@ -168,7 +180,7 @@ obj[5] = {
     }
     obj.inContent = mapped1;
     return obj;
-  }
+  },
 };
 obj[6] = {
   parse(gameId, arg1, channelId) {
@@ -178,7 +190,13 @@ obj[6] = {
     if (gameMentionData != null) {
       gameIcon = gameMentionData.gameIcon;
     }
-    obj = { type: "gameMention", gameId: tmp, channelId: channelId.channelId, icon: getGameMediaRefURLDefault(tmp, gameIcon, { size: 32 }), displayName: null };
+    obj = {
+      type: "gameMention",
+      gameId: tmp,
+      channelId: channelId.channelId,
+      icon: getGameMediaRefURLDefault(tmp, gameIcon, { size: 32 }),
+      displayName: null,
+    };
     let gameName;
     if (gameMentionData != null) {
       gameName = gameMentionData.gameName;
@@ -189,7 +207,7 @@ obj[6] = {
     }
     obj[4] = gameName;
     return obj;
-  }
+  },
 };
 obj[7] = {
   parse(arg0, arg1, arg2) {
@@ -258,7 +276,7 @@ obj[7] = {
     }
     obj.inContent = mapped1;
     return obj;
-  }
+  },
 };
 obj[8] = {
   parse(arg0, arg1, arg2) {
@@ -327,13 +345,13 @@ obj[8] = {
     }
     obj.inContent = mapped1;
     return obj;
-  }
+  },
 };
 obj[9] = {
   parse(arg0, arg1, arg2) {
     const attachmentLink = regExpDefault.attachmentLink;
     return attachmentLink.parse(arg0, arg1, arg2);
-  }
+  },
 };
 let obj1 = {
   order: textRegexpDefault.order,
@@ -358,7 +376,7 @@ let obj1 = {
     obj[2] = emojiURL;
     obj[3] = emojiURL1;
     return obj;
-  }
+  },
 };
 obj[10] = {
   order: textRegexpDefault.order,
@@ -368,7 +386,7 @@ obj[10] = {
   },
   parse(content) {
     return { type: "text", content: content[0] };
-  }
+  },
 };
 let obj2 = {
   order: textRegexpDefault.order,
@@ -378,7 +396,7 @@ let obj2 = {
   },
   parse(content) {
     return { type: "text", content: content[0] };
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/markup/PlatformMarkupRules.native.tsx");
 
@@ -421,7 +439,13 @@ export const hydrateGameMention = function hydrateGameMention(gameId, channelId)
   if (gameMentionData != null) {
     gameIcon = gameMentionData.gameIcon;
   }
-  obj = { type: "gameMention", gameId, channelId: channelId.channelId, icon: getGameMediaRefURLDefault(gameId, gameIcon, { size: 32 }), displayName: null };
+  obj = {
+    type: "gameMention",
+    gameId,
+    channelId: channelId.channelId,
+    icon: getGameMediaRefURLDefault(gameId, gameIcon, { size: 32 }),
+    displayName: null,
+  };
   let gameName;
   if (gameMentionData != null) {
     gameName = gameMentionData.gameName;

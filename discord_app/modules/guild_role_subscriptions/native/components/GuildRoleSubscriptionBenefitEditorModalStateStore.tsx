@@ -33,7 +33,9 @@ let closure_3 = identity.createWithEqualityFn((arg0) => {
   };
   return obj;
 });
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx",
+);
 
 export const resetImperatively = function resetImperatively() {
   const state = store.getState();
@@ -55,35 +57,35 @@ export const initializeImperatively = function initializeImperatively(benefit) {
 };
 export const useDescriptionState = function useDescriptionState() {
   return store((arg0) => {
-    const items = [, ];
+    const items = [,];
     ({ description: arr[0], setDescription: arr[1] } = arg0);
     return items;
   }, isIterable.shallow);
 };
 export const useEmojiIdState = function useEmojiIdState() {
   return store((arg0) => {
-    const items = [, ];
+    const items = [,];
     ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
     return items;
   }, isIterable.shallow);
 };
 export const useEmojiNameState = function useEmojiNameState() {
   return store((arg0) => {
-    const items = [, ];
+    const items = [,];
     ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
     return items;
   }, isIterable.shallow);
 };
 export const useNameState = function useNameState() {
   return store((arg0) => {
-    const items = [, ];
+    const items = [,];
     ({ name: arr[0], setName: arr[1] } = arg0);
     return items;
   }, isIterable.shallow);
 };
 export const useRefIdState = function useRefIdState() {
   return store((arg0) => {
-    const items = [, ];
+    const items = [,];
     ({ refId: arr[0], setRefId: arr[1] } = arg0);
     return items;
   }, isIterable.shallow);

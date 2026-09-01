@@ -13,13 +13,13 @@ obj = {
   },
   parent: null,
   IconComponent: LaptopPhoneIcon.LaptopPhoneIcon,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.SESSIONS,
   getComponent() {
     return UserSettingsSessions /* UserSettingsSessions */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DevicesSetting.tsx");

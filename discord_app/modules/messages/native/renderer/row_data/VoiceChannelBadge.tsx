@@ -38,10 +38,12 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
             }
             let isPrivateResult = channel.isPrivate();
             if (!isPrivateResult) {
-              isPrivateResult = closure_4.can(Permissions.VIEW_CHANNEL, channel) && closure_4.can(Permissions.CONNECT, channel);
+              isPrivateResult =
+                closure_4.can(Permissions.VIEW_CHANNEL, channel) && closure_4.can(Permissions.CONNECT, channel);
               const obj4 = closure_4;
               const tmp8 = Permissions;
-              const tmp9 = closure_4.can(Permissions.VIEW_CHANNEL, channel) && closure_4.can(Permissions.CONNECT, channel);
+              const tmp9 =
+                closure_4.can(Permissions.VIEW_CHANNEL, channel) && closure_4.can(Permissions.CONNECT, channel);
             }
             if (!result) {
               if (isPrivateResult) {

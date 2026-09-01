@@ -12,7 +12,15 @@ import { ModalType } from "../analytics/GuildPowerupAnalytics.tsx";
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { headerContainer: null, extraContentContainer: null, warningText: null };
-obj = { width: 64, height: 64, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, alignSelf: "center" };
+obj = {
+  width: 64,
+  height: 64,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  alignSelf: "center",
+};
 obj[0] = obj;
 obj[1] = { paddingHorizontal: ThemesDefault.space.PX_12 };
 obj[2] = { textAlign: "center" };
@@ -30,12 +38,19 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
   const tmp2 = importDefault;
   const tmp4 = useGuildPowerupOnDeactivateDefault(guildId, powerup);
   let obj = ModalType;
-  const logPowerupModalOpened = obj.useLogPowerupModalOpened(guildId, powerup, require("../analytics/GuildPowerupAnalytics.tsx").ModalType.DEACTIVATE);
+  const logPowerupModalOpened = obj.useLogPowerupModalOpened(
+    guildId,
+    powerup,
+    require("../analytics/GuildPowerupAnalytics.tsx").ModalType.DEACTIVATE,
+  );
   obj = { header: null, title: null, content: null, actions: null, extraContent: null };
   obj = { style: tmp.headerContainer, children: null };
   const arr = useDeactivateWarningTextDefault(guildId, powerup);
   const tmp8 = View;
-  obj[1] = callback(require("../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx").CircleErrorIcon, { color: ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "custom", style: { width: 40, height: 40 } });
+  obj[1] = callback(
+    require("../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx").CircleErrorIcon,
+    { color: ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "custom", style: { width: 40, height: 40 } },
+  );
   obj[0] = callback(View, obj);
   const intl = require("../../../../intl/index.native.tsx").intl;
   obj[1] = intl.formatToPlainString(messagesProxyDefault.iEBw1M, { perk: powerup.title });
@@ -49,30 +64,39 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
     tmp7Result = tmp7(tmp5(4474).Text, obj4);
   }
   const obj5 = { children: null };
-  const items = [tmp7Result, , ];
+  const items = [tmp7Result, ,];
   const obj6 = {
     variant: "destructive",
     onPress(stopPropagation) {
       stopPropagation.stopPropagation();
       return _undefined();
     },
-    text: null
+    text: null,
   };
   const intl3 = tmp5(1236).intl;
   obj6[2] = intl3.string(messagesProxyDefault.PYPdl4);
-  items[1] = callback(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton, obj6, "deactivate");
+  items[1] = callback(
+    require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton,
+    obj6,
+    "deactivate",
+  );
   const obj7 = {
-    onPress() {
-
-    },
+    onPress() {},
     variant: "secondary",
-    text: null
+    text: null,
   };
   const intl4 = tmp5(1236).intl;
   obj7[2] = intl4.string(require("../../../../intl/index.native.tsx").t["ETE/oC"]);
-  items[2] = callback(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton, obj7, "cancel");
+  items[2] = callback(
+    require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton,
+    obj7,
+    "cancel",
+  );
   obj5[0] = items;
-  obj[3] = closure_5(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActions, obj5);
+  obj[3] = closure_5(
+    require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActions,
+    obj5,
+  );
   obj1 = { color: ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "custom", style: { width: 40, height: 40 } };
   const obj2 = { perk: powerup.title };
   const obj3 = { perk: powerup.title };
@@ -93,7 +117,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
       obj[2] = str2;
       obj[3] = critical.text;
       return closure_1_4(lib(closure_1_2[12]).Text, obj, arg1);
-    })
+    }),
   });
   return callback(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertModal, obj);
-};
+}

@@ -49,19 +49,28 @@ function StepPill(isActive) {
       obj2 = isActive(closure_2[5]);
       obj[0] = obj2.interpolate(closure_2.get(), [0, 1], [12, 36]);
       obj3 = isActive(closure_2[5]);
-      items = [, ];
+      items = [,];
       items[0] = closure_4;
       items[1] = closure_3;
       obj[1] = obj3.interpolateColor(closure_2.get(), [0, 1], items);
       obj4 = isActive(closure_2[5]);
-      items1 = [, ];
+      items1 = [,];
       items1[0] = c1;
       items1[1] = 1;
       obj[2] = obj4.interpolate(closure_2.get(), [0, 1], items1);
       return obj;
     }
   }
-  obj = { interpolate: tmp6(tmp7[5]).interpolate, sharedValue, WIDTH_INACTIVE: 12, WIDTH_ACTIVE: 36, interpolateColor: tmp6(tmp7[5]).interpolateColor, inactiveColor: token1, activeColor: token, inactiveOpacity: num };
+  obj = {
+    interpolate: tmp6(tmp7[5]).interpolate,
+    sharedValue,
+    WIDTH_INACTIVE: 12,
+    WIDTH_ACTIVE: 36,
+    interpolateColor: tmp6(tmp7[5]).interpolateColor,
+    inactiveColor: token1,
+    activeColor: token,
+    inactiveOpacity: num,
+  };
   I.__closure = obj;
   I.__workletHash = 12485955218699;
   I.__initData = closure_8;
@@ -70,8 +79,13 @@ function StepPill(isActive) {
   return jsx(num(sharedValue[5]).View, { style });
 }
 let closure_6 = { overshootClamping: true };
-let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row", gap: 4 }, stepPill: { height: 4, borderRadius: 2 } });
-let closure_8 = { code: "function ModalStepIndicatorNativeTsx1(){const{interpolate,sharedValue,WIDTH_INACTIVE,WIDTH_ACTIVE,interpolateColor,inactiveColor,activeColor,inactiveOpacity}=this.__closure;return{width:interpolate(sharedValue.get(),[0,1],[WIDTH_INACTIVE,WIDTH_ACTIVE]),backgroundColor:interpolateColor(sharedValue.get(),[0,1],[inactiveColor,activeColor]),opacity:interpolate(sharedValue.get(),[0,1],[inactiveOpacity,1])};}" };
+let closure_7 = createCacheKey.createStyles({
+  container: { flexDirection: "row", gap: 4 },
+  stepPill: { height: 4, borderRadius: 2 },
+});
+let closure_8 = {
+  code: "function ModalStepIndicatorNativeTsx1(){const{interpolate,sharedValue,WIDTH_INACTIVE,WIDTH_ACTIVE,interpolateColor,inactiveColor,activeColor,inactiveOpacity}=this.__closure;return{width:interpolate(sharedValue.get(),[0,1],[WIDTH_INACTIVE,WIDTH_ACTIVE]),backgroundColor:interpolateColor(sharedValue.get(),[0,1],[inactiveColor,activeColor]),opacity:interpolate(sharedValue.get(),[0,1],[inactiveOpacity,1])};}",
+};
 let result = require("set").fileFinishedImporting("design/components/Modal/native/ModalStepIndicator.native.tsx");
 
 export const ModalStepIndicator = function ModalStepIndicator(arg0) {
@@ -92,7 +106,9 @@ export const ModalStepIndicator = function ModalStepIndicator(arg0) {
       obj[1] = activeColor;
       obj[2] = inactiveColor;
       obj[3] = inactiveOpacity;
-      let arr = items.push(<StepPill key={num} isActive={null} activeColor={null} inactiveColor={null} inactiveOpacity={null} />);
+      let arr = items.push(
+        <StepPill key={num} isActive={null} activeColor={null} inactiveColor={null} inactiveOpacity={null} />,
+      );
     }
     if (currentStep < 0) {
       obj = { style: null, children: null };
@@ -101,7 +117,15 @@ export const ModalStepIndicator = function ModalStepIndicator(arg0) {
       return <View style={null}>{null}</View>;
     } else {
       const intl = getSystemLocale.intl;
-      obj1 = { accessible: true, accessibilityRole: "progressbar", accessibilityLabel: null, accessibilityValue: null, importantForAccessibility: "yes", style: null, children: null };
+      obj1 = {
+        accessible: true,
+        accessibilityRole: "progressbar",
+        accessibilityLabel: null,
+        accessibilityValue: null,
+        importantForAccessibility: "yes",
+        style: null,
+        children: null,
+      };
       obj1[2] = intl.string(messagesProxyDefault.KUwsC0);
       const obj2 = { min: 1, max: null, now: null };
       obj2[1] = totalSteps;
@@ -109,7 +133,18 @@ export const ModalStepIndicator = function ModalStepIndicator(arg0) {
       obj1[3] = obj2;
       obj1[5] = tmp.container;
       obj1[6] = items;
-      return <View accessible accessibilityRole="progressbar" accessibilityLabel={null} accessibilityValue={null} importantForAccessibility="yes" style={null}>{null}</View>;
+      return (
+        <View
+          accessible
+          accessibilityRole="progressbar"
+          accessibilityLabel={null}
+          accessibilityValue={null}
+          importantForAccessibility="yes"
+          style={null}
+        >
+          {null}
+        </View>
+      );
     }
   }
 };

@@ -40,13 +40,15 @@ let closure_10 = importAllResult.memo((item) => {
       setFeature(item);
       setFeature(closure_1_2[9]).hideActionSheet();
     },
-    trailing: callback(item(7694).FormRadio, obj)
+    trailing: callback(item(7694).FormRadio, obj),
   };
   obj = { selected: featureId === featureId1 };
   return callback(item(5599).TableRow, obj);
 });
 const obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center" };
-const result = require("set").fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx",
+);
 
 export default function BugReporterFeatureActionSheet(features) {
   features = features.features;
@@ -112,19 +114,45 @@ export default function BugReporterFeatureActionSheet(features) {
   closure_5 = tmp6;
   const items1 = [items, setFeature, feature];
   const items2 = [tmp6, items];
-  const callback = items.useCallback((arg0, arg1) => closure_1_6(closure_1_10, { item: items[arg0].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[arg0].data.length - 1 }), items1);
-  const callback1 = items.useCallback((arg0) => closure_1_6(closure_1_9, { title: items[arg0].title, height: closure_5 }), items2);
+  const callback = items.useCallback(
+    (arg0, arg1) =>
+      closure_1_6(closure_1_10, {
+        item: items[arg0].data[arg1],
+        feature,
+        setFeature,
+        start: 0 === arg1,
+        end: arg1 === items[arg0].data.length - 1,
+      }),
+    items1,
+  );
+  const callback1 = items.useCallback(
+    (arg0) => closure_1_6(closure_1_9, { title: items[arg0].title, height: closure_5 }),
+    items2,
+  );
   let obj = { scrollable: true, startExpanded: true, header: null, children: null };
   obj = { title: null };
   const intl = features(setFeature[18]).intl;
   obj[0] = intl.string(features(setFeature[18]).t["77VVd8"]);
   obj[2] = callback(features(setFeature[17]).BottomSheetTitleHeader, obj);
-  obj = { style: tmp.searchBar, children: callback(features(setFeature[19]).SearchField, { size: "md", onChange: tmp2[1] }) };
-  const items3 = [callback(closure_5, obj), ];
-  obj1 = { style: tmp.list, inActionSheet: true, sections: memo.sections, itemSize: feature(setFeature[14])(), estimatedListSize: "windowSize", renderItem: callback, renderSectionHeader: callback1, sectionHeaderSize: tmp6, insetEnd: null };
+  obj = {
+    style: tmp.searchBar,
+    children: callback(features(setFeature[19]).SearchField, { size: "md", onChange: tmp2[1] }),
+  };
+  const items3 = [callback(closure_5, obj)];
+  obj1 = {
+    style: tmp.list,
+    inActionSheet: true,
+    sections: memo.sections,
+    itemSize: feature(setFeature[14])(),
+    estimatedListSize: "windowSize",
+    renderItem: callback,
+    renderSectionHeader: callback1,
+    sectionHeaderSize: tmp6,
+    insetEnd: null,
+  };
   const tmp5 = feature(setFeature[14])();
   obj1[8] = feature(setFeature[5]).space.PX_16 + feature(setFeature[11])().insets.bottom;
   items3[1] = callback(feature(setFeature[20]), obj1);
   obj[3] = items3;
   return callback2(features(setFeature[16]).BottomSheet, obj);
-};
+}

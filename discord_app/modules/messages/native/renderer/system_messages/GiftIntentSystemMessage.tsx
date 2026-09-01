@@ -6,9 +6,14 @@ import createCommonMessageDefault from "createCommonMessage.tsx";
 import createGiftIntentEmbed from "../row_data/embeds/GiftIntentEmbed.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-let closure_3 = createCacheKey.createNativeStyleProperties({ iconTintColor: ThemesDefault.colors.BACKGROUND_BRAND, iconDividerColor: ThemesDefault.colors.ICON_STRONG });
+let closure_3 = createCacheKey.createNativeStyleProperties({
+  iconTintColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  iconDividerColor: ThemesDefault.colors.ICON_STRONG,
+});
 let obj = { iconTintColor: ThemesDefault.colors.BACKGROUND_BRAND, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx",
+);
 
 export const createGiftIntentSystemMessage = function createGiftIntentSystemMessage(message) {
   ({ message, theme } = message);

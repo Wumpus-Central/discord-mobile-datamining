@@ -72,7 +72,12 @@ function ProfileFramePreviewImage(arg0) {
     obj[1] = getCollectibleTypeName.PREVIEW_SIZE * closure_5;
     obj[2] = getCollectibleTypeName.PREVIEW_SIZE;
     obj[3] = tmp(712).colors.BACKGROUND_BASE_LOW;
-    obj[1] = jsx(tmp(10749), { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null });
+    obj[1] = jsx(tmp(10749), {
+      profileFrame: null,
+      previewWidth: null,
+      previewHeight: null,
+      profileBackgroundColor: null,
+    });
     tmp4 = <closure_3 profileFrame={null} previewWidth={null} previewHeight={null} profileBackgroundColor={null} />;
     const tmpResult = tmp(10749);
   }
@@ -149,18 +154,77 @@ function CollectiblePreview(arg0) {
 }
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
-createCacheKey = { purchasePlaceholder: null, avatarDecorationPreview: null, nameplateContainer: null, nameplatePreview: null, profileFrameContainer: null };
-createCacheKey = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12 };
+createCacheKey = {
+  purchasePlaceholder: null,
+  avatarDecorationPreview: null,
+  nameplateContainer: null,
+  nameplatePreview: null,
+  profileFrameContainer: null,
+};
+createCacheKey = {
+  width: require("getCollectibleTypeName").PREVIEW_SIZE,
+  height: require("getCollectibleTypeName").PREVIEW_SIZE,
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginRight: 12,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12 };
-let obj1 = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12 };
-createCacheKey[2] = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, borderRadius: ThemesDefault.radii.xs, overflow: "hidden", position: "relative" };
-let obj2 = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, borderRadius: ThemesDefault.radii.xs, overflow: "hidden", position: "relative" };
-createCacheKey[3] = { position: "absolute", right: 0, width: require("getCollectibleTypeName").PREVIEW_SIZE * require("getCollectibleTypeName").NAMEPLATE_ASPECT_RATIO, height: require("getCollectibleTypeName").PREVIEW_SIZE };
-let obj3 = { position: "absolute", right: 0, width: require("getCollectibleTypeName").PREVIEW_SIZE * require("getCollectibleTypeName").NAMEPLATE_ASPECT_RATIO, height: require("getCollectibleTypeName").PREVIEW_SIZE };
-createCacheKey[4] = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
+createCacheKey[1] = {
+  width: require("getCollectibleTypeName").PREVIEW_SIZE,
+  height: require("getCollectibleTypeName").PREVIEW_SIZE,
+  marginRight: 12,
+};
+let obj1 = {
+  width: require("getCollectibleTypeName").PREVIEW_SIZE,
+  height: require("getCollectibleTypeName").PREVIEW_SIZE,
+  marginRight: 12,
+};
+createCacheKey[2] = {
+  width: require("getCollectibleTypeName").PREVIEW_SIZE,
+  height: require("getCollectibleTypeName").PREVIEW_SIZE,
+  marginRight: 12,
+  borderRadius: ThemesDefault.radii.xs,
+  overflow: "hidden",
+  position: "relative",
+};
+let obj2 = {
+  width: require("getCollectibleTypeName").PREVIEW_SIZE,
+  height: require("getCollectibleTypeName").PREVIEW_SIZE,
+  marginRight: 12,
+  borderRadius: ThemesDefault.radii.xs,
+  overflow: "hidden",
+  position: "relative",
+};
+createCacheKey[3] = {
+  position: "absolute",
+  right: 0,
+  width: require("getCollectibleTypeName").PREVIEW_SIZE * require("getCollectibleTypeName").NAMEPLATE_ASPECT_RATIO,
+  height: require("getCollectibleTypeName").PREVIEW_SIZE,
+};
+let obj3 = {
+  position: "absolute",
+  right: 0,
+  width: require("getCollectibleTypeName").PREVIEW_SIZE * require("getCollectibleTypeName").NAMEPLATE_ASPECT_RATIO,
+  height: require("getCollectibleTypeName").PREVIEW_SIZE,
+};
+createCacheKey[4] = {
+  width: require("getCollectibleTypeName").PREVIEW_SIZE,
+  height: require("getCollectibleTypeName").PREVIEW_SIZE,
+  marginRight: 12,
+  alignItems: "center",
+  justifyContent: "center",
+};
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
+let obj4 = {
+  width: require("getCollectibleTypeName").PREVIEW_SIZE,
+  height: require("getCollectibleTypeName").PREVIEW_SIZE,
+  marginRight: 12,
+  alignItems: "center",
+  justifyContent: "center",
+};
 const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityItemPreview.tsx");
 
 export default function FamilyCenterActivityItemPreview(arg0) {
@@ -179,5 +243,9 @@ export default function FamilyCenterActivityItemPreview(arg0) {
     tmp2Result = tmp2(CollectiblePreview, obj);
   }
   obj[2] = tmp2Result;
-  return <closure_3 accessible accessibilityLabel={displayName}>{null}</closure_3>;
-};
+  return (
+    <closure_3 accessible accessibilityLabel={displayName}>
+      {null}
+    </closure_3>
+  );
+}

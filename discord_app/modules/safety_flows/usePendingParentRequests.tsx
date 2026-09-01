@@ -13,7 +13,9 @@ export const useDerivedPendingRequests = function useDerivedPendingRequests(arr,
   const _require = arr;
   dependencyMap = stateFromStores1;
   let items = [closure_4];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    linkedUsers.getLinkedUsers(),
+  );
   let obj = initialize;
   const items1 = [closure_5];
   stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
@@ -28,10 +30,12 @@ export const useDerivedPendingRequests = function useDerivedPendingRequests(arr,
   return stateFromStores1.useMemo(() => {
     if (closure_1) {
       const _Map = Map;
-      const map = new Map(arr.map((parent_id) => {
-        const items = [parent_id.parent_id, parent_id];
-        return items;
-      }));
+      const map = new Map(
+        arr.map((parent_id) => {
+          const items = [parent_id.parent_id, parent_id];
+          return items;
+        }),
+      );
       let items = [];
       const _Object = Object;
       const values = Object.values(stateFromStores);
@@ -122,7 +126,7 @@ export const usePendingRequestListController = function usePendingRequestListCon
     onError() {
       _undefined(null);
       callback();
-    }
+    },
   };
   const familyCenterActions = pendingRequests(11489).useFamilyCenterActions(obj);
   acceptLinkRequest = familyCenterActions.acceptLinkRequest;
@@ -133,7 +137,10 @@ export const usePendingRequestListController = function usePendingRequestListCon
     tmp6 = isDeclineLoading;
   }
   isDeclineLoading = tmp6;
-  let tmp2Result = tmp2(obj2.useState(() => new Set()), 2);
+  let tmp2Result = tmp2(
+    obj2.useState(() => new Set()),
+    2,
+  );
   [c6, c7] = tmp2Result;
   callback = obj2.useCallback((arg0) => {
     closure_0 = arg0;
@@ -194,7 +201,16 @@ export const usePendingRequestListController = function usePendingRequestListCon
         return Array.from(map.values());
       });
     }
-    obj = { seenRequests: null, hasMaxConnections: null, actioningUserId: null, isAcceptLoading: null, isDeclineLoading: null, actionsDisabled: null, handleAccept: null, handleDecline: null };
+    obj = {
+      seenRequests: null,
+      hasMaxConnections: null,
+      actioningUserId: null,
+      isAcceptLoading: null,
+      isDeclineLoading: null,
+      actionsDisabled: null,
+      handleAccept: null,
+      handleDecline: null,
+    };
     obj[0] = tmp12;
     obj[1] = hasMaxConnections;
     obj[2] = tmp4;
@@ -208,10 +224,12 @@ export const usePendingRequestListController = function usePendingRequestListCon
   if (pendingRequests !== tmp15) {
     tmp16(pendingRequests);
     tmp13((arr) => {
-      const map = new Map(arr.map((parent_id) => {
-        const items = [parent_id.parent_id, parent_id];
-        return items;
-      }));
+      const map = new Map(
+        arr.map((parent_id) => {
+          const items = [parent_id.parent_id, parent_id];
+          return items;
+        }),
+      );
       for (const item10015 of pendingRequests) {
         let result = map.set(item10015.parent_id, item10015);
         continue;
@@ -232,18 +250,21 @@ export const usePendingRequestResolution = function usePendingRequestResolution(
     }
     return link_status;
   });
-  [tmp3, tmp4] = callback(React.useState(() => {
-    let str = "connected";
-    if (stateFromStores !== closure_1_6.ACTIVE) {
-      if (null == tmp) {
-        let str2 = null;
-      } else {
-        str2 = "declined";
+  [tmp3, tmp4] = callback(
+    React.useState(() => {
+      let str = "connected";
+      if (stateFromStores !== closure_1_6.ACTIVE) {
+        if (null == tmp) {
+          let str2 = null;
+        } else {
+          str2 = "declined";
+        }
+        str = str2;
       }
-      str = str2;
-    }
-    return str;
-  }), 2);
+      return str;
+    }),
+    2,
+  );
   const tmp5 = callback(React.useState(stateFromStores), 2);
   const first = tmp5[0];
   if (stateFromStores !== first) {

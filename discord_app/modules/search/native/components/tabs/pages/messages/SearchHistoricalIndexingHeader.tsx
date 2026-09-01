@@ -7,8 +7,13 @@ import createCacheKey from "../../../../../../../design/components/Styles/native
 
 const require = arg1;
 ({ SearchTabs: c5, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = MessageEmbedTypes);
-let closure_7 = createCacheKey.createStyles({ header: { marginBottom: 16 }, headerMessages: { marginHorizontal: SEARCH_LIST_HORIZONTAL_PADDING, marginTop: SEARCH_ROW_TAP_STATE_PADDING } });
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchHistoricalIndexingHeader.tsx");
+let closure_7 = createCacheKey.createStyles({
+  header: { marginBottom: 16 },
+  headerMessages: { marginHorizontal: SEARCH_LIST_HORIZONTAL_PADDING, marginTop: SEARCH_ROW_TAP_STATE_PADDING },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/search/native/components/tabs/pages/messages/SearchHistoricalIndexingHeader.tsx",
+);
 
 export default function HistoricalIndexingHeader(searchContext) {
   searchContext = searchContext.searchContext;
@@ -37,6 +42,14 @@ export default function HistoricalIndexingHeader(searchContext) {
   obj = { variant: "heading-sm/normal", color: "interactive-text-default", children: null };
   const intl = searchContext(tab[8]).intl;
   obj[2] = intl.format(searchContext(tab[8]).t["4Y3O+O"], { count: memo });
-  obj[3] = jsx(searchContext(tab[7]).Text, { variant: "heading-sm/normal", color: "interactive-text-default", children: null });
-  return jsx(searchContext(tab[6]).Card, { variant: "heading-sm/normal", color: "interactive-text-default", children: null });
-};
+  obj[3] = jsx(searchContext(tab[7]).Text, {
+    variant: "heading-sm/normal",
+    color: "interactive-text-default",
+    children: null,
+  });
+  return jsx(searchContext(tab[6]).Card, {
+    variant: "heading-sm/normal",
+    color: "interactive-text-default",
+    children: null,
+  });
+}

@@ -23,19 +23,21 @@ createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWE
 createCacheKey[3] = { marginTop: 8, marginBottom: 16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 };
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotificationActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/notifications/settings/native/NotificationSettingsMessageNotificationActionSheet.tsx",
+);
 
 export default function NotificationSettingsMessageNotificationActionSheet(defaultValue) {
   const tmp = callback3();
   let obj = { startExpanded: true, backgroundStyles: tmp.sheet, children: null };
   obj = { style: tmp.header, children: callback(NotificationSettingsMockMessageDefault, obj) };
   obj = { notificationSetting: defaultValue.value };
-  const items = [callback(View, obj), ];
+  const items = [callback(View, obj)];
   obj1 = { style: tmp.content, children: null };
   const obj2 = { variant: "text-sm/semibold", children: null };
   const intl = getSystemLocale.intl;
   obj2[1] = intl.string(getSystemLocale.t["1m22ZB"]);
-  const items1 = [callback(Text.Text, obj2), callback(Text.Text, { variant: "text-xs/medium", color: "text-muted" }), ];
+  const items1 = [callback(Text.Text, obj2), callback(Text.Text, { variant: "text-xs/medium", color: "text-muted" })];
   const obj3 = { style: tmp.form, children: null };
   const obj4 = { defaultValue: defaultValue.value, onChange: defaultValue.onChange, hasIcons: false, children: null };
   const obj5 = { label: null, value: null, subLabel: null };
@@ -43,7 +45,7 @@ export default function NotificationSettingsMessageNotificationActionSheet(defau
   obj5[0] = intl2.string(getSystemLocale.t["HVah/3"]);
   obj5[1] = UserNotificationSettings.ALL_MESSAGES;
   obj5[2] = defaultValue.allMessagesSubLabel;
-  const items2 = [callback(TableRadioRow.TableRadioRow, obj5), , ];
+  const items2 = [callback(TableRadioRow.TableRadioRow, obj5), ,];
   const obj6 = { label: null, value: null };
   const intl3 = getSystemLocale.intl;
   obj6[0] = intl3.string(getSystemLocale.t["tu+ZWJ"]);
@@ -61,4 +63,4 @@ export default function NotificationSettingsMessageNotificationActionSheet(defau
   items[1] = callback2(View, obj1);
   obj[2] = items;
   return callback2(Background.BottomSheet, obj);
-};
+}

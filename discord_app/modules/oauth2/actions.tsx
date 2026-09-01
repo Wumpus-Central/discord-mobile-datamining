@@ -42,14 +42,38 @@ function _authorize() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       c1 = tmp2;
-      ({ authorize: c0, clientId: c1, scopes: c2, responseType: c3, redirectUri: c4, codeChallenge: c5, codeChallengeMethod: c6, state: c7, permissions: c8, guildId: c9, channelId: c10, integrationType: c11, connectedAccountProvider: c12, nonce: c13 } = callback);
+      ({
+        authorize: c0,
+        clientId: c1,
+        scopes: c2,
+        responseType: c3,
+        redirectUri: c4,
+        codeChallenge: c5,
+        codeChallengeMethod: c6,
+        state: c7,
+        permissions: c8,
+        guildId: c9,
+        channelId: c10,
+        integrationType: c11,
+        connectedAccountProvider: c12,
+        nonce: c13,
+      } = callback);
       yield "PX_16";
       const HTTP = callback(c2[4]).HTTP;
       let obj2 = { url: null, query: null, body: null, oldFormErrors: true, rejectWithError: null };
       obj2[0] = OAUTH2_AUTHORIZE.OAUTH2_AUTHORIZE;
-      const obj3 = { client_id: null, response_type: null, redirect_uri: null, code_challenge: null, code_challenge_method: null, scope: null, state: null, nonce: null };
+      const obj3 = {
+        client_id: null,
+        response_type: null,
+        redirect_uri: null,
+        code_challenge: null,
+        code_challenge_method: null,
+        scope: null,
+        state: null,
+        nonce: null,
+      };
       obj3[0] = c1;
       obj3[1] = c3;
       obj3[2] = c4;
@@ -59,7 +83,16 @@ function _authorize() {
       obj3[6] = OAUTH2_AUTHORIZE;
       obj3[7] = c13;
       obj2[1] = obj3;
-      const obj4 = { guild_id: null, webhook_channel_id: null, channel_id: null, permissions: null, authorize: null, integration_type: null, connected_account_provider: null, location_context: null };
+      const obj4 = {
+        guild_id: null,
+        webhook_channel_id: null,
+        channel_id: null,
+        permissions: null,
+        authorize: null,
+        integration_type: null,
+        connected_account_provider: null,
+        location_context: null,
+      };
       obj4[0] = c9;
       if (null != c9) {
         if (null != c10) {
@@ -102,14 +135,37 @@ function _fetchAuthorization() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       c1 = tmp2;
-      ({ clientId: c0, scopes: c1, responseType: c2, redirectUri: c3, codeChallenge: c4, codeChallengeMethod: c5, state: c6, integrationType: c7, connectedAccountProvider: c8, nonce: c9, signal: c10 } = callback);
+      ({
+        clientId: c0,
+        scopes: c1,
+        responseType: c2,
+        redirectUri: c3,
+        codeChallenge: c4,
+        codeChallengeMethod: c5,
+        state: c6,
+        integrationType: c7,
+        connectedAccountProvider: c8,
+        nonce: c9,
+        signal: c10,
+      } = callback);
       yield "PX_16";
       const HTTP = callback(530).HTTP;
       const obj2 = { url: null, query: null, signal: null, retries: 3, oldFormErrors: true, rejectWithError: null };
       obj2[0] = OAUTH2_AUTHORIZE.OAUTH2_AUTHORIZE;
-      const obj3 = { client_id: null, response_type: null, redirect_uri: null, code_challenge: null, code_challenge_method: null, scope: null, state: null, integration_type: null, connected_account_provider: null, nonce: null };
+      const obj3 = {
+        client_id: null,
+        response_type: null,
+        redirect_uri: null,
+        code_challenge: null,
+        code_challenge_method: null,
+        scope: null,
+        state: null,
+        integration_type: null,
+        connected_account_provider: null,
+        nonce: null,
+      };
       obj3[0] = callback;
       obj3[1] = dependencyMap;
       obj3[2] = c3;
@@ -148,7 +204,7 @@ function _startSamsungAuthorization() {
     closure_4 = arg4;
     c6 = 0;
     c5 = 0;
-    return (function*(arg0, arg1, arg2, arg3, arg4) {
+    return (function* (arg0, arg1, arg2, arg3, arg4) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -178,7 +234,14 @@ function _startSamsungAuthorization() {
               const HTTP = callback(530).HTTP;
               obj1 = { url: null, query: null, rejectWithError: null };
               obj1[0] = closure_1_7.OAUTH2_AUTHORIZE_SAMSUNG;
-              const obj2 = { client_id: null, state: null, response_type: null, redirect_uri: null, prompt: "consent", scope: null };
+              const obj2 = {
+                client_id: null,
+                state: null,
+                response_type: null,
+                redirect_uri: null,
+                prompt: "consent",
+                scope: null,
+              };
               obj2[0] = callback;
               obj2[1] = closure_4;
               obj2[2] = dependencyMap;
@@ -226,7 +289,7 @@ function _fetchChannels() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const HTTP = callback(530).HTTP;
       obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_7.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS;
@@ -253,7 +316,7 @@ function _verifyUserCode() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const HTTP = callback(530).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_7.OAUTH2_DEVICE_VERIFY;
@@ -281,7 +344,7 @@ function _finishUserCode() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       const HTTP = callback(530).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_7.OAUTH2_DEVICE_FINISH;
@@ -311,7 +374,7 @@ function _finishUserCodeTwoWayLinkError() {
     closure_2 = arg2;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       const HTTP = callback(530).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_7.OAUTH2_DEVICE_FINISH;
@@ -365,7 +428,13 @@ export const fetchAuthorization = function fetchAuthorization(arg0) {
   }
   return applyArgumentsResult;
 };
-export const startSamsungAuthorization = function startSamsungAuthorization(closure_0, closure_45, closure_1, arg3, closure_5) {
+export const startSamsungAuthorization = function startSamsungAuthorization(
+  closure_0,
+  closure_45,
+  closure_1,
+  arg3,
+  closure_5,
+) {
   const self = this;
   const apply = _startSamsungAuthorization.apply;
   if (typeof apply === "unknown") {
@@ -387,7 +456,10 @@ export const fetchChannels = function fetchChannels(closure_0) {
 };
 export const logoutWithRedirect = function logoutWithRedirect(pathname, login_required_account_manager) {
   const obj = handleLogoutDefault;
-  obj.logout(login_required_account_manager, getAuthenticationPath.getLoginPath(pathname.pathname + pathname.search, false));
+  obj.logout(
+    login_required_account_manager,
+    getAuthenticationPath.getLoginPath(pathname.pathname + pathname.search, false),
+  );
 };
 export const verifyUserCode = function verifyUserCode(closure_1_0) {
   const self = this;

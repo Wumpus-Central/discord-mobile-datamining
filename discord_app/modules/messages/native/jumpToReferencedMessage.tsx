@@ -17,4 +17,4 @@ export default function jumpToReferencedMessage(messageReference) {
     obj[3] = messageReference.id;
     obj.jumpToMessage(obj);
   }
-};
+}

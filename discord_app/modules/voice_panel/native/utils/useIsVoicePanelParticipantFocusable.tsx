@@ -51,13 +51,17 @@ function isVoicePanelParticipantFocusable(sharedValue1, closure_1, id2, arg3, cl
   }
 }
 ({ isActivityParticipant: closure_6, isStreamParticipant: error, isUserParticipant: closure_8 } = ParticipantTypes);
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/useIsVoicePanelParticipantFocusable.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/utils/useIsVoicePanelParticipantFocusable.tsx",
+);
 
 export default function useIsVoicePanelParticipantFocusable(arg0, arg1, arg2) {
   const _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;
   const items = [closure_3, closure_5, closure_2, closure_4];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_9(closure_0, closure_1, closure_2, closure_1_3, closure_1_5, closure_2, closure_1_4));
-};
+  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_9(closure_0, closure_1, closure_2, closure_1_3, closure_1_5, closure_2, closure_1_4),
+  );
+}
 export { isVoicePanelParticipantFocusable };

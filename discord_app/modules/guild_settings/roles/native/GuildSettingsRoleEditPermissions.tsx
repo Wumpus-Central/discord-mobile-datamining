@@ -15,14 +15,21 @@ const require = arg1;
 ({ View: closure_6, Keyboard: error, SectionList: closure_8 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = ME);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-createCacheKey = { emptyState: { backgroundColor: "transparent", paddingTop: 40 }, sectionSeparator: null, emptyStateText: null, subLabel: null };
+createCacheKey = {
+  emptyState: { backgroundColor: "transparent", paddingTop: 40 },
+  sectionSeparator: null,
+  emptyStateText: null,
+  subLabel: null,
+};
 createCacheKey = { height: ThemesDefault.space.PX_24 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { color: ThemesDefault.colors.TEXT_DEFAULT };
 createCacheKey[3] = { includeFontPadding: true };
 let closure_17 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { color: ThemesDefault.colors.TEXT_DEFAULT };
-const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditPermissions.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/roles/native/GuildSettingsRoleEditPermissions.tsx",
+);
 
 export default function GuildSettingsRoleEditPermission(guild) {
   guild = guild.guild;
@@ -78,7 +85,11 @@ export default function GuildSettingsRoleEditPermission(guild) {
       first.dismiss();
       let obj = role(closure_1_3[14]);
       obj = { permissionsEdited: c9, onPermissionsChanged: closure_3, guildId: guild.id };
-      obj.openLazy(guild(closure_1_3[16])(closure_1_3[15], closure_1_3.paths), "role-permission-templates-" + guild.id + "-" + role.id, obj);
+      obj.openLazy(
+        guild(closure_1_3[16])(closure_1_3[15], closure_1_3.paths),
+        "role-permission-templates-" + guild.id + "-" + role.id,
+        obj,
+      );
     };
     obj[2] = intl.format(guild(1236).t.ZhSOBy, obj1);
     tmp18Result = tmp18(guild(4474).Text, obj);
@@ -98,7 +109,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(17214), { role }), , , ];
+  const children = [closure_14(role(17214), { role }), , ,];
   const tmp14Result = role(16410);
   const tmp24 = mapped1.length > 0;
   const tmp25 = closure_16;
@@ -106,7 +117,17 @@ export default function GuildSettingsRoleEditPermission(guild) {
   children[1] = closure_14(closure_6, { children: closure_14(guild(6221).SearchField, obj3) });
   children[2] = tmp18Result;
   if (tmp24) {
-    const obj4 = { sections: null, stickySectionHeadersEnabled: false, renderItem: null, renderSectionHeader: null, SectionSeparatorComponent: null, ItemSeparatorComponent: null, keyExtractor: null, keyboardDismissMode: "on-drag", contentContainerStyle: null };
+    const obj4 = {
+      sections: null,
+      stickySectionHeadersEnabled: false,
+      renderItem: null,
+      renderSectionHeader: null,
+      SectionSeparatorComponent: null,
+      ItemSeparatorComponent: null,
+      keyExtractor: null,
+      keyboardDismissMode: "on-drag",
+      contentContainerStyle: null,
+    };
     obj4[0] = mapped1;
     obj4[2] = function renderItem(section) {
       ({ item, index } = section);
@@ -132,10 +153,23 @@ export default function GuildSettingsRoleEditPermission(guild) {
         tmp2 = !_undefined.can(flag, flag, null, obj);
         const obj3 = closure_1_2(closure_1_3[21]);
       }
-      obj = { variant: "text-xs/medium", color: "text-subtle", style: closure_4.subLabel, children: guild(closure_1_3[22]).renderDescription(description) };
+      obj = {
+        variant: "text-xs/medium",
+        color: "text-subtle",
+        style: closure_4.subLabel,
+        children: guild(closure_1_3[22]).renderDescription(description),
+      };
       const obj5 = guild(closure_1_3[22]);
       tmp = closure_6;
-      obj1 = { start: 0 === index, end: index === section.section.data.length - 1, value: null, disabled: null, onValueChange: null, label: null, subLabel: null };
+      obj1 = {
+        start: 0 === index,
+        end: index === section.section.data.length - 1,
+        value: null,
+        disabled: null,
+        onValueChange: null,
+        label: null,
+        subLabel: null,
+      };
       const tmp21 = closure_1_14(guild(closure_1_3[12]).Text, obj);
       obj1[2] = closure_1_2(closure_1_3[21]).has(closure_2, flag);
       obj1[3] = tmp2;
@@ -155,7 +189,12 @@ export default function GuildSettingsRoleEditPermission(guild) {
     };
     obj4[3] = function renderSectionHeader(section) {
       const title = section.section.title;
-      return callback2(closure_6, { accessible: true, accessibilityRole: "header", accessibilityLabel: title, children: callback2(guild(table[24]).TableRowGroupTitle, { title }) });
+      return callback2(closure_6, {
+        accessible: true,
+        accessibilityRole: "header",
+        accessibilityLabel: title,
+        children: callback2(guild(table[24]).TableRowGroupTitle, { title }),
+      });
     };
     obj4[4] = function SectionSeparatorComponent(leadingItem) {
       let tmp = null;
@@ -186,4 +225,4 @@ export default function GuildSettingsRoleEditPermission(guild) {
   }
   children[3] = tmp18Result1;
   return tmp25(tmp26, { children });
-};
+}

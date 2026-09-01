@@ -18,17 +18,22 @@ createToggle = {
   },
   usePredicate: function useHasCommunityActivityAlertsSetting() {
     const items = [closure_2];
-    return initialize.useStateFromStores(items, () => Object.keys(guildAlertSettings.getGuildAlertSettings()).length > 0);
+    return initialize.useStateFromStores(
+      items,
+      () => Object.keys(guildAlertSettings.getGuildAlertSettings()).length > 0,
+    );
   },
-  screen: createToggle
+  screen: createToggle,
 };
 createToggle = {
   route: require("ME").UserSettingsSections.COMMUNITY_ALERTS,
   getComponent() {
     return UserSettingsCommunityNotifications /* UserSettingsCommunityNotifications */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx",
+);
 
 export default createToggle;

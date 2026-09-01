@@ -3,7 +3,9 @@ import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { CurrencyCodes } from "../../../../../discord_common/js/shared/Constants.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.android.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/premium/native/hooks/useDiscountedPremiumProductInfo.android.tsx",
+);
 
 export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProductInfo(premiumDiscountOffer, items3) {
   const _require = premiumDiscountOffer;
@@ -49,7 +51,7 @@ export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProd
         }
       }
       return null;
-    }, items)
+    }, items),
   };
   return obj;
 };

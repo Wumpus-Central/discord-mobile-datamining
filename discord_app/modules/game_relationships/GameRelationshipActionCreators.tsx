@@ -36,7 +36,7 @@ function _deleteGameRelationship() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       dependencyMap = tmp3;
       c1 = tmp5;
       ({ userId: c0, applicationId: c1, onSuccess: c2 } = callback);
@@ -78,7 +78,7 @@ function _removeGameFriend() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -174,7 +174,7 @@ function _cancelGameFriendRequest() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -279,31 +279,46 @@ export default {
     return applyArgumentsResult;
   },
   acceptGameFriendRequest(arg0) {
-    function onSuccess(arg0) {
-
-    }
+    function onSuccess(arg0) {}
     ({ userId, applicationId } = arg0);
     const HTTP = onSuccess(530).HTTP;
-    let obj = { url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId), body: { type: constants.FRIEND }, oldFormErrors: true, rejectWithError: false };
-    const putResult = HTTP.put({ url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId), body: { type: constants.FRIEND }, oldFormErrors: true, rejectWithError: false });
-    return HTTP.put({ url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId), body: { type: constants.FRIEND }, oldFormErrors: true, rejectWithError: false }).then(() => {
-      const AccessibilityAnnouncer = onSuccess(closure_1_2[6]).AccessibilityAnnouncer;
-      const intl = onSuccess(closure_1_2[4]).intl;
-      AccessibilityAnnouncer.announce(intl.string(onSuccess(closure_1_2[4]).t.taJiuc));
-    }).catch((arg0) => {
-      const aPIError = new onSuccess(4376).APIError(arg0);
-      let anyErrorMessage = aPIError.getAnyErrorMessage();
-      const obj = { title: null, body: null };
-      const intl = onSuccess(1236).intl;
-      obj[0] = intl.string(onSuccess(1236).t["328j/I"]);
-      if (null == anyErrorMessage) {
-        const intl2 = tmp(1236).intl;
-        anyErrorMessage = intl2.string(tmp(1236).t.fEptJP);
-      }
-      obj[1] = anyErrorMessage;
-      callback(4857).show(obj);
-      return Promise.reject(arg0);
+    let obj = {
+      url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId),
+      body: { type: constants.FRIEND },
+      oldFormErrors: true,
+      rejectWithError: false,
+    };
+    const putResult = HTTP.put({
+      url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId),
+      body: { type: constants.FRIEND },
+      oldFormErrors: true,
+      rejectWithError: false,
     });
+    return HTTP.put({
+      url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId),
+      body: { type: constants.FRIEND },
+      oldFormErrors: true,
+      rejectWithError: false,
+    })
+      .then(() => {
+        const AccessibilityAnnouncer = onSuccess(closure_1_2[6]).AccessibilityAnnouncer;
+        const intl = onSuccess(closure_1_2[4]).intl;
+        AccessibilityAnnouncer.announce(intl.string(onSuccess(closure_1_2[4]).t.taJiuc));
+      })
+      .catch((arg0) => {
+        const aPIError = new onSuccess(4376).APIError(arg0);
+        let anyErrorMessage = aPIError.getAnyErrorMessage();
+        const obj = { title: null, body: null };
+        const intl = onSuccess(1236).intl;
+        obj[0] = intl.string(onSuccess(1236).t["328j/I"]);
+        if (null == anyErrorMessage) {
+          const intl2 = tmp(1236).intl;
+          anyErrorMessage = intl2.string(tmp(1236).t.fEptJP);
+        }
+        obj[1] = anyErrorMessage;
+        callback(4857).show(obj);
+        return Promise.reject(arg0);
+      });
   },
   cancelGameFriendRequest(arg0) {
     const self = this;
@@ -314,5 +329,5 @@ export default {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  }
+  },
 };

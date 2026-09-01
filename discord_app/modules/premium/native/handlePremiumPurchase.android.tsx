@@ -27,7 +27,7 @@ function _validatePurchase() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -81,7 +81,14 @@ function _validatePurchase() {
               const HTTP = callback(530).HTTP;
               const obj2 = { url: null, body: null, rejectWithError: false };
               obj2[0] = constants.GOOGLE_PLAY_VALIDATE_PURCHASE;
-              const obj3 = { product_id: null, offer_id: null, subscription_id: null, currency: null, price: null, is_gift: null };
+              const obj3 = {
+                product_id: null,
+                offer_id: null,
+                subscription_id: null,
+                currency: null,
+                price: null,
+                is_gift: null,
+              };
               obj3[0] = callback;
               obj3[1] = dependencyMap;
               let id;
@@ -147,7 +154,9 @@ let result = require("set").fileFinishedImporting("modules/premium/native/handle
 
 export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
   const items = [closure_9];
-  const stateFromStores = _require(premiumDiscountOffer[17]).useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const stateFromStores = _require(premiumDiscountOffer[17]).useStateFromStores(items, () =>
+    premiumTypeSubscription.getPremiumTypeSubscription(),
+  );
   _require = stateFromStores;
   let obj = _require(premiumDiscountOffer[17]);
   const premiumTrialOffer = _require(premiumDiscountOffer[18]).usePremiumTrialOffer();
@@ -174,7 +183,7 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -222,7 +231,15 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                 c11 = undefined;
                 let callback3;
                 throwTypeErrorResult = c0;
-                ({ productId: c0, skuId: closure_1, analyticsLoadId: c2, analyticsLocation: c3, analyticsLocations: c4, analyticsData: c5, isGift } = c0);
+                ({
+                  productId: c0,
+                  skuId: closure_1,
+                  analyticsLoadId: c2,
+                  analyticsLocation: c3,
+                  analyticsLocations: c4,
+                  analyticsData: c5,
+                  isGift,
+                } = c0);
                 if (isGift === undefined) {
                   isGift = false;
                 }
@@ -236,7 +253,12 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                 if (flag2 === undefined) {
                   flag2 = true;
                 }
-                ({ applicationId: c9, giftInfoOptions: c10, onPurchaseComplete: c11, onPurchaseError: c12 } = throwTypeErrorResult);
+                ({
+                  applicationId: c9,
+                  giftInfoOptions: c10,
+                  onPurchaseComplete: c11,
+                  onPurchaseError: c12,
+                } = throwTypeErrorResult);
                 c13 = undefined;
                 c14 = undefined;
                 c15 = undefined;
@@ -279,7 +301,9 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                   obj2[2] = isEligibleForBogoOffer;
                   throwTypeErrorResult = callback2;
                   obj2[3] = callback2;
-                  const basePurchaseFlowAnalyticsFields = callback(premiumDiscountOffer[21]).getBasePurchaseFlowAnalyticsFields(obj2);
+                  const basePurchaseFlowAnalyticsFields = callback(
+                    premiumDiscountOffer[21],
+                  ).getBasePurchaseFlowAnalyticsFields(obj2);
                   throwTypeErrorResult = id;
                   closure_1 = id;
                   if (id == null) {
@@ -427,7 +451,8 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                       throwTypeErrorResult = premiumTrialOffer;
                       throwTypeErrorResult = premiumDiscountOffer;
                       throwTypeErrorResult = callback;
-                      throwTypeErrorResult = null != premiumTrialOffer(premiumDiscountOffer[22]).giftInfoOptionsCache[callback];
+                      throwTypeErrorResult =
+                        null != premiumTrialOffer(premiumDiscountOffer[22]).giftInfoOptionsCache[callback];
                     }
                     if (throwTypeErrorResult) {
                       throwTypeErrorResult = c2;
@@ -460,13 +485,23 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                     throwTypeErrorResult = premiumDiscountOffer;
                     throwTypeErrorResult = lib;
                     throwTypeErrorResult = lib;
-                    closure_21 = callback(premiumDiscountOffer[23]).convertToMinorCurrencyUnits(lib.price / 100, lib.currencyCode);
+                    closure_21 = callback(premiumDiscountOffer[23]).convertToMinorCurrencyUnits(
+                      lib.price / 100,
+                      lib.currencyCode,
+                    );
                     c5 = 1;
                     const obj20 = callback(premiumDiscountOffer[23]);
                   }
                   throwTypeErrorResult = c2;
                   throwTypeErrorResult = c3;
-                  let obj9 = { productId: null, premiumSubscription: null, offerId: null, currency: null, price: null, isGift: null };
+                  let obj9 = {
+                    productId: null,
+                    premiumSubscription: null,
+                    offerId: null,
+                    currency: null,
+                    price: null,
+                    isGift: null,
+                  };
                   throwTypeErrorResult = callback;
                   obj9[0] = callback;
                   throwTypeErrorResult = callback;
@@ -621,8 +656,17 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
     iter.next();
     return iter;
   });
-  const items1 = [null != stateFromStores, paymentGatewayPlanId, prop, id, premiumTrialOffer, premiumDiscountOffer, stateFromStores, isEligibleForBogoOffer];
-  return paymentGatewayPlanId.useCallback(function() {
+  const items1 = [
+    null != stateFromStores,
+    paymentGatewayPlanId,
+    prop,
+    id,
+    premiumTrialOffer,
+    premiumDiscountOffer,
+    stateFromStores,
+    isEligibleForBogoOffer,
+  ];
+  return paymentGatewayPlanId.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

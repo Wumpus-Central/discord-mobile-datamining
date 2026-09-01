@@ -270,7 +270,15 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
       if (decoderUsageStats.has(userId)) {
         value = decoderUsageStats.get(userId);
       }
-      obj = { codec_asymmetric_session: null, codec_h264_decode_duration_sec: null, codec_h265_decode_duration_sec: null, codec_vp8_decode_duration_sec: null, codec_vp9_decode_duration_sec: null, codec_av1_decode_duration_sec: null, codec_unknown_decode_duration_sec: null };
+      obj = {
+        codec_asymmetric_session: null,
+        codec_h264_decode_duration_sec: null,
+        codec_h265_decode_duration_sec: null,
+        codec_vp8_decode_duration_sec: null,
+        codec_vp9_decode_duration_sec: null,
+        codec_av1_decode_duration_sec: null,
+        codec_unknown_decode_duration_sec: null,
+      };
       obj[0] = tmp;
       let num = value.get(parseEncoder.CodecTypes.H264);
       if (num == null) {
@@ -311,7 +319,15 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
     HermesBuiltin.arraySpread(encoderUsageStats.keys(), 0);
     map = encoderUsageStats.get(items.sort()[0]);
   }
-  obj = { codec_asymmetric_session: tmp, codec_h264_encode_duration_sec: null, codec_h265_encode_duration_sec: null, codec_vp8_encode_duration_sec: null, codec_vp9_encode_duration_sec: null, codec_av1_encode_duration_sec: null, codec_unknown_encode_duration_sec: null };
+  obj = {
+    codec_asymmetric_session: tmp,
+    codec_h264_encode_duration_sec: null,
+    codec_h265_encode_duration_sec: null,
+    codec_vp8_encode_duration_sec: null,
+    codec_vp9_encode_duration_sec: null,
+    codec_av1_encode_duration_sec: null,
+    codec_unknown_encode_duration_sec: null,
+  };
   let num8 = map.get(parseEncoder.CodecTypes.H264);
   if (num8 == null) {
     num8 = 0;
@@ -348,7 +364,12 @@ prototype["getCameraDurationStats"] = function getCameraDurationStats() {
   const cameraDuration = this.cameraDuration;
   const cameraOpportunityDuration = this.cameraOpportunityDuration;
   const cameraSendDuration = this.cameraSendDuration;
-  return { camera_enabled_duration: Math.round(cameraDuration.totalDurationSeconds()), camera_send_opportunity_duration: Math.round(cameraOpportunityDuration.totalDurationSeconds()), camera_send_duration: Math.round(cameraSendDuration.totalDurationSeconds()), num_camera_on_toggles: this.cameraToggles };
+  return {
+    camera_enabled_duration: Math.round(cameraDuration.totalDurationSeconds()),
+    camera_send_opportunity_duration: Math.round(cameraOpportunityDuration.totalDurationSeconds()),
+    camera_send_duration: Math.round(cameraSendDuration.totalDurationSeconds()),
+    num_camera_on_toggles: this.cameraToggles,
+  };
 };
 prototype["getOutboundStats"] = function getOutboundStats() {
   const self = this;
@@ -421,7 +442,7 @@ prototype["getOutboundStats"] = function getOutboundStats() {
           if (num5 == null) {
             num5 = 0;
           }
-          num4 = Math.round(8 * num5 / result);
+          num4 = Math.round((8 * num5) / result);
         }
         obj.target_bitrate_network = num4;
         let tmp18 = null;
@@ -465,7 +486,7 @@ prototype["getOutboundStats"] = function getOutboundStats() {
           if (num8 == null) {
             num8 = 0;
           }
-          num7 = Math.round(8 * num8 / result);
+          num7 = Math.round((8 * num8) / result);
         }
         obj.target_bitrate_max = num7;
         let num10 = 0;
@@ -474,7 +495,7 @@ prototype["getOutboundStats"] = function getOutboundStats() {
           if (num11 == null) {
             num11 = 0;
           }
-          num10 = Math.round(8 * num11 / result);
+          num10 = Math.round((8 * num11) / result);
         }
         obj.outbound_bandwidth_estimate = num10;
         let tmp27 = null;
@@ -687,7 +708,12 @@ prototype["getOutboundStats"] = function getOutboundStats() {
           result4 = vmafHistogram.outboundSinkWantSum / vmafHistogram.outboundSinkWantNum;
         }
         obj.average_outbound_want = result4;
-        ({ framesDroppedRateLimiter: obj5.frames_dropped_rate_limiter, framesDroppedEncoderQueue: obj5.frames_dropped_encoder_queue, framesDroppedCongestionWindow: obj5.frames_dropped_congestion_window, framesDroppedEncoder: obj5.frames_dropped_encoder } = vmafHistogram);
+        ({
+          framesDroppedRateLimiter: obj5.frames_dropped_rate_limiter,
+          framesDroppedEncoderQueue: obj5.frames_dropped_encoder_queue,
+          framesDroppedCongestionWindow: obj5.frames_dropped_congestion_window,
+          framesDroppedEncoder: obj5.frames_dropped_encoder,
+        } = vmafHistogram);
         const hqSimulcastStreamEncoded = obj.hqSimulcastStreamEncoded;
         const totalDurationSecondsResult = hqSimulcastStreamEncoded.totalDurationSeconds();
         let num27 = 0;
@@ -871,7 +897,105 @@ prototype["getStats"] = function getStats(aggregationDuration) {
     const report4 = localWantHistogram.getReport([1, 5, 10, 25, 50, 75, 90, 95]);
     const systemResources = aggregationDuration.systemResources;
     const stats = systemResources.getStats();
-    obj = { duration: null, duration_aggregation: null, duration_stopped_receiving: null, duration_stream_under_8mbps: null, duration_stream_under_7mbps: null, duration_stream_under_6mbps: null, duration_stream_under_5mbps: null, duration_stream_under_4mbps: null, duration_stream_under_3mbps: null, duration_stream_under_2mbps: null, duration_stream_under_1_5mbps: null, duration_stream_under_1mbps: null, duration_stream_under_0_5mbps: null, duration_stream_at_0mbps: null, duration_fps_under_60: null, duration_fps_under_55: null, duration_fps_under_50: null, duration_fps_under_45: null, duration_fps_under_40: null, duration_fps_under_35: null, duration_fps_under_30: null, duration_fps_under_25: null, duration_fps_under_20: null, duration_fps_under_15: null, duration_fps_under_10: null, duration_fps_under_5: null, duration_fps_at_0: null, avg_resolution: null, avg_minor_resolution: null, avg_major_resolution: null, min_resolution_width: null, min_resolution_height: null, duration_resolution_under_720: null, duration_resolution_under_480: null, duration_resolution_under_360: null, num_pauses: null, duration_paused: null, duration_zero_receivers: null, duration_video_stopped: null, duration_hq_simulcast_stream_watched: null, duration_lq_simulcast_stream_watched: null, duration_hq_simulcast_stream_eligible: null, duration_lq_simulcast_stream_eligible: null, num_quality_changes: null, duration_window_occluded: null, duration_incoming_video_stopped_for_occlusion: null, num_window_occlusion_changes: null, fps_percentile1: null, fps_percentile5: null, fps_percentile10: null, fps_percentile25: null, fps_percentile50: null, fps_percentile75: null, bitrate_percentile1: null, bitrate_percentile5: null, bitrate_percentile10: null, bitrate_percentile25: null, bitrate_percentile50: null, bitrate_percentile75: null, bitrate_percentile99: null, resolution_percentile1: null, resolution_percentile5: null, resolution_percentile10: null, resolution_percentile25: null, resolution_percentile50: null, resolution_percentile75: null, inbound_bitrate_estimate_percentile1: null, inbound_bitrate_estimate_percentile5: null, inbound_bitrate_estimate_percentile10: null, inbound_bitrate_estimate_percentile25: null, inbound_bitrate_estimate_percentile50: null, inbound_bitrate_estimate_percentile75: null, inbound_bitrate_estimate_percentile99: null, local_want_percentile1: null, local_want_percentile5: null, local_want_percentile10: null, local_want_percentile25: null, local_want_percentile50: null, local_want_percentile75: null, local_want_percentile90: null, local_want_percentile95: null, average_local_want: null, duration_video_effect: null, cryptor_max_attempts: null, duration_decoder_ffmpeg: null, duration_decoder_dav1d: null, duration_decoder_vp8_libvpx: null, duration_decoder_electron: null, duration_decoder_videotoolbox: null, duration_decoder_uncategorized: null, duration_decoder_unknown: null, duration_decoder_exynos: null, duration_decoder_webrtc: null, duration_decoder_qualcomm: null, duration_decoder_mediatek: null, duration_decoder_d3d11videodecoder: null, duration_decoder_android: null };
+    obj = {
+      duration: null,
+      duration_aggregation: null,
+      duration_stopped_receiving: null,
+      duration_stream_under_8mbps: null,
+      duration_stream_under_7mbps: null,
+      duration_stream_under_6mbps: null,
+      duration_stream_under_5mbps: null,
+      duration_stream_under_4mbps: null,
+      duration_stream_under_3mbps: null,
+      duration_stream_under_2mbps: null,
+      duration_stream_under_1_5mbps: null,
+      duration_stream_under_1mbps: null,
+      duration_stream_under_0_5mbps: null,
+      duration_stream_at_0mbps: null,
+      duration_fps_under_60: null,
+      duration_fps_under_55: null,
+      duration_fps_under_50: null,
+      duration_fps_under_45: null,
+      duration_fps_under_40: null,
+      duration_fps_under_35: null,
+      duration_fps_under_30: null,
+      duration_fps_under_25: null,
+      duration_fps_under_20: null,
+      duration_fps_under_15: null,
+      duration_fps_under_10: null,
+      duration_fps_under_5: null,
+      duration_fps_at_0: null,
+      avg_resolution: null,
+      avg_minor_resolution: null,
+      avg_major_resolution: null,
+      min_resolution_width: null,
+      min_resolution_height: null,
+      duration_resolution_under_720: null,
+      duration_resolution_under_480: null,
+      duration_resolution_under_360: null,
+      num_pauses: null,
+      duration_paused: null,
+      duration_zero_receivers: null,
+      duration_video_stopped: null,
+      duration_hq_simulcast_stream_watched: null,
+      duration_lq_simulcast_stream_watched: null,
+      duration_hq_simulcast_stream_eligible: null,
+      duration_lq_simulcast_stream_eligible: null,
+      num_quality_changes: null,
+      duration_window_occluded: null,
+      duration_incoming_video_stopped_for_occlusion: null,
+      num_window_occlusion_changes: null,
+      fps_percentile1: null,
+      fps_percentile5: null,
+      fps_percentile10: null,
+      fps_percentile25: null,
+      fps_percentile50: null,
+      fps_percentile75: null,
+      bitrate_percentile1: null,
+      bitrate_percentile5: null,
+      bitrate_percentile10: null,
+      bitrate_percentile25: null,
+      bitrate_percentile50: null,
+      bitrate_percentile75: null,
+      bitrate_percentile99: null,
+      resolution_percentile1: null,
+      resolution_percentile5: null,
+      resolution_percentile10: null,
+      resolution_percentile25: null,
+      resolution_percentile50: null,
+      resolution_percentile75: null,
+      inbound_bitrate_estimate_percentile1: null,
+      inbound_bitrate_estimate_percentile5: null,
+      inbound_bitrate_estimate_percentile10: null,
+      inbound_bitrate_estimate_percentile25: null,
+      inbound_bitrate_estimate_percentile50: null,
+      inbound_bitrate_estimate_percentile75: null,
+      inbound_bitrate_estimate_percentile99: null,
+      local_want_percentile1: null,
+      local_want_percentile5: null,
+      local_want_percentile10: null,
+      local_want_percentile25: null,
+      local_want_percentile50: null,
+      local_want_percentile75: null,
+      local_want_percentile90: null,
+      local_want_percentile95: null,
+      average_local_want: null,
+      duration_video_effect: null,
+      cryptor_max_attempts: null,
+      duration_decoder_ffmpeg: null,
+      duration_decoder_dav1d: null,
+      duration_decoder_vp8_libvpx: null,
+      duration_decoder_electron: null,
+      duration_decoder_videotoolbox: null,
+      duration_decoder_uncategorized: null,
+      duration_decoder_unknown: null,
+      duration_decoder_exynos: null,
+      duration_decoder_webrtc: null,
+      duration_decoder_qualcomm: null,
+      duration_decoder_mediatek: null,
+      duration_decoder_d3d11videodecoder: null,
+      duration_decoder_android: null,
+    };
     const _Math2 = Math;
     obj[0] = Math.floor(diff / 1000);
     const _Math3 = Math;
@@ -1266,9 +1390,41 @@ prototype["getStats"] = function getStats(aggregationDuration) {
     obj[96] = num65;
     const merged = Object.assign(stats);
     const aggregatedProperties = aggregationDuration.aggregatedProperties;
-    ({ bytes, framesDropped, networkFramesDropped, framesCodec, freezeCount, totalFreezesDuration, totalFramesDuration, cryptorFailureCount } = aggregatedProperties);
+    ({
+      bytes,
+      framesDropped,
+      networkFramesDropped,
+      framesCodec,
+      freezeCount,
+      totalFreezesDuration,
+      totalFramesDuration,
+      cryptorFailureCount,
+    } = aggregatedProperties);
     let num66 = cryptorFailureCount;
-    ({ framesCodecError, framesNetwork, packets, packetsLost, nackCount, pliCount, qpSum, pauseCount, totalPausesDuration, totalDecodeTime, keyframes, passthroughCount, cryptorSuccessCount, cryptorDuration, cryptorAttempts, cryptorMissingKeyCount, cryptorInvalidNonceCount, qualityDecodeErrors, qualityDecoderReboots, qualityScoreErrors, qualityFrameDrops, qualitySizeMismatches } = aggregatedProperties);
+    ({
+      framesCodecError,
+      framesNetwork,
+      packets,
+      packetsLost,
+      nackCount,
+      pliCount,
+      qpSum,
+      pauseCount,
+      totalPausesDuration,
+      totalDecodeTime,
+      keyframes,
+      passthroughCount,
+      cryptorSuccessCount,
+      cryptorDuration,
+      cryptorAttempts,
+      cryptorMissingKeyCount,
+      cryptorInvalidNonceCount,
+      qualityDecodeErrors,
+      qualityDecoderReboots,
+      qualityScoreErrors,
+      qualityFrameDrops,
+      qualitySizeMismatches,
+    } = aggregatedProperties);
     if (cryptorFailureCount == null) {
       num66 = 0;
     }
@@ -1303,7 +1459,7 @@ prototype["getStats"] = function getStats(aggregationDuration) {
       if (bytes == null) {
         num69 = 0;
       }
-      num68 = Math.round(8 * num69 / result);
+      num68 = Math.round((8 * num69) / result);
     }
     obj.avg_bitrate = num68;
     let num71 = 0;

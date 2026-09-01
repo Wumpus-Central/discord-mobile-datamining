@@ -17,7 +17,8 @@ function handleChannelSelect(channelId) {
         if (null != channel) {
           if (channel.isDM()) {
             tmp4Result = tmp4(11031);
-            const inappropriateConversationTakeoverForChannel = tmp4Result.getInappropriateConversationTakeoverForChannel(channelId);
+            const inappropriateConversationTakeoverForChannel =
+              tmp4Result.getInappropriateConversationTakeoverForChannel(channelId);
             let flag3 = null != inappropriateConversationTakeoverForChannel;
             if (flag3) {
               const obj = { warningId: null, warningType: null, senderId: null, channelId: null };
@@ -57,7 +58,9 @@ function handleChannelUpdates(channels) {
           return false;
         } else {
           tmpResult = tmp(11031);
-          const inappropriateConversationTakeoverForChannel = tmpResult.getInappropriateConversationTakeoverForChannel(found.id);
+          const inappropriateConversationTakeoverForChannel = tmpResult.getInappropriateConversationTakeoverForChannel(
+            found.id,
+          );
           const tmp6 = null == inappropriateConversationTakeoverForChannel || !found.isDM();
           let flag3 = !tmp6;
           if (!tmp6) {
@@ -85,8 +88,7 @@ let prototype = function ChannelSafetyWarningsManager() {
   applyArgumentsResult.actions = { CHANNEL_SELECT: handleChannelSelect, CHANNEL_UPDATES: handleChannelUpdates };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 const result = require("set").fileFinishedImporting("modules/self_mod/ChannelSafetyWarningsManager.tsx");
 

@@ -16,7 +16,9 @@ createCacheKey = { screenContainer: null };
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16 };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannel.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/notifications/settings/native/NotificationSettingsChannel.tsx",
+);
 
 export default function NotificationSettingsChannel(channel) {
   const _require = channel;
@@ -33,7 +35,7 @@ export default function NotificationSettingsChannel(channel) {
       title: "" + closure_1 + " (" + dependencyMap + ")",
       headerTitle() {
         return closure_1_6(closure_1_0(closure_1_2[10]).NavigatorHeader, { title: closure_1, subtitle: closure_2 });
-      }
+      },
     };
     options.setOptions(obj);
     if (channel.inGuildContext) {
@@ -45,13 +47,24 @@ export default function NotificationSettingsChannel(channel) {
   });
   const items = [channel.channel];
   const items1 = [channel.channel];
-  const callback = React.useCallback(() => channel(10232).updateChannelToGuildDefault(channel.channel.guild_id, channel.channel.id), items);
+  const callback = React.useCallback(
+    () => channel(10232).updateChannelToGuildDefault(channel.channel.guild_id, channel.channel.id),
+    items,
+  );
   const callback1 = React.useCallback(() => {
-    const result = callback(5487).updateChannelOverrideSettings(channel.channel.guild_id, channel.channel.id, { muted: false }, channel(5482).NotificationLabels.Unmuted);
+    const result = callback(5487).updateChannelOverrideSettings(
+      channel.channel.guild_id,
+      channel.channel.id,
+      { muted: false },
+      channel(5482).NotificationLabels.Unmuted,
+    );
   }, items1);
   let obj2 = initialize;
   const items2 = [closure_5];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items2, () => ({ config: closure_1_5.getChannelMuteConfig(channel.channel.guild_id, channel.channel.id), muted: closure_1_5.isChannelMuted(channel.channel.guild_id, channel.channel.id) }));
+  const stateFromStoresObject = obj2.useStateFromStoresObject(items2, () => ({
+    config: closure_1_5.getChannelMuteConfig(channel.channel.guild_id, channel.channel.id),
+    muted: closure_1_5.isChannelMuted(channel.channel.guild_id, channel.channel.id),
+  }));
   obj = { style: callback2().screenContainer, children: null };
   let muted = stateFromStoresObject.muted;
   if (muted) {
@@ -64,12 +77,18 @@ export default function NotificationSettingsChannel(channel) {
     muted = callback(tmp(10234).NotificationSettingsMuteBanner, obj);
     const tmpResult = tmp(10234);
   }
-  const items3 = [muted, , , , , ];
+  const items3 = [muted, , , , ,];
   obj1 = { channel: channel.channel };
   items3[1] = callback(require("NotificationSettingsPresets.tsx").NotificationSettingsChannelPresets, obj1);
   obj2 = { style: { marginTop: 24 }, channel: channel.channel };
-  items3[2] = callback(require("NotificationSettingsMessageNotification.tsx").NotificationSettingsChannelMessageNotification, obj2);
-  items3[3] = callback(require("NotificationSettingsMessageUnread.tsx").NotificationSettingsChannelMessageUnread, { style: { marginTop: 24 }, channel: channel.channel });
+  items3[2] = callback(
+    require("NotificationSettingsMessageNotification.tsx").NotificationSettingsChannelMessageNotification,
+    obj2,
+  );
+  items3[3] = callback(require("NotificationSettingsMessageUnread.tsx").NotificationSettingsChannelMessageUnread, {
+    style: { marginTop: 24 },
+    channel: channel.channel,
+  });
   channel = channel.channel;
   let isForumLikeChannelResult = channel.isForumLikeChannel();
   if (isForumLikeChannelResult) {
@@ -94,4 +113,4 @@ export default function NotificationSettingsChannel(channel) {
   items3[5] = tmp11Result;
   obj[1] = items3;
   return closure_7(require("../../../../design/void/Form/native/index.tsx").Form, obj);
-};
+}

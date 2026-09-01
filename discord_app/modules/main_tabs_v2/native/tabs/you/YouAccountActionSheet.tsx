@@ -45,8 +45,11 @@ function YouStatusRadioGroup() {
     obj = { source: callback(13755), variant: "text-status-online" };
     obj[0] = callback2(setting(5605).TableRowIcon, obj);
     obj[1] = constants.ONLINE;
-    const items = [obj, , , ];
-    obj = { icon: callback2(setting(5605).TableRowIcon, { source: callback(13752), variant: "text-status-idle" }), value: constants.IDLE };
+    const items = [obj, , ,];
+    obj = {
+      icon: callback2(setting(5605).TableRowIcon, { source: callback(13752), variant: "text-status-idle" }),
+      value: constants.IDLE,
+    };
     items[1] = obj;
     const obj2 = { icon: null, value: null };
     obj1 = { source: callback(13752), variant: "text-status-idle" };
@@ -87,7 +90,12 @@ function YouStatusRadioGroup() {
           const _Date = Date;
           const _Number = Number;
           const date = new Date(Number(tmp6));
-          obj[0] = date.toLocaleString(tmp2(tmp3[22]).intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
+          obj[0] = date.toLocaleString(tmp2(tmp3[22]).intl.currentLocale, {
+            month: "numeric",
+            day: "numeric",
+            hour: "numeric",
+            minute: "2-digit",
+          });
           formatToPlainStringResult = intl.formatToPlainString(tmp2(tmp3[22]).t.BWD8fs, obj);
         }
       }
@@ -118,8 +126,12 @@ function ThemeRadioGroup() {
   let obj4 = getThemeForColor;
   obj1[1] = obj4.getThemeName(constants.LIGHT);
   obj1[2] = constants.LIGHT;
-  const items1 = [callback(TableRadioRow.TableRadioRow, obj1), , , ];
-  let obj2 = { icon: callback(ThemeGrayIcon.ThemeGrayIcon, {}), label: getThemeForColor.getThemeName(constants.DARK), value: constants.DARK };
+  const items1 = [callback(TableRadioRow.TableRadioRow, obj1), , ,];
+  let obj2 = {
+    icon: callback(ThemeGrayIcon.ThemeGrayIcon, {}),
+    label: getThemeForColor.getThemeName(constants.DARK),
+    value: constants.DARK,
+  };
   items1[1] = callback(TableRadioRow.TableRadioRow, obj2);
   const obj3 = { icon: callback(ThemeDarkIcon.ThemeDarkIcon, {}), label: null, value: null };
   const obj7 = getThemeForColor;
@@ -149,27 +161,40 @@ function YouAccountRadioGroup() {
   const items1 = [closure_12];
   stateFromStores1 = obj2.useStateFromStores(items1, () => obj.hidePersonalInformation);
   const items2 = [multiAccountUsers, stateFromStores1];
-  const memo = importAllResult.useMemo(() => multiAccountUsers.map((id) => {
-    let obj = new closure_1_10(id);
-    let combined = null;
-    if (!closure_1) {
-      combined = null;
-      if (!obj.hasUniqueUsername()) {
-        const _HermesInternal = HermesInternal;
-        combined = "#" + obj.discriminator;
-      }
-    }
-    let str2 = "always";
-    if (closure_1) {
-      str2 = "never";
-    }
-    obj = { label: closure_1_1(closure_1_3[34]).getUserTag(obj, { mode: "username", identifiable: str2 }), value: id.id, subLabel: combined, icon: null };
-    obj = { user: obj, guildId: "Array", size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093 };
-    obj[2] = closure_1_0(closure_1_3[35]).AvatarSizes.REFRESH_MEDIUM_32;
-    obj[3] = closure_1_19(closure_1_0(closure_1_3[35]).Avatar, obj);
-    return obj;
-  }), items2);
-  const items3 = [multiAccountUsers, ];
+  const memo = importAllResult.useMemo(
+    () =>
+      multiAccountUsers.map((id) => {
+        let obj = new closure_1_10(id);
+        let combined = null;
+        if (!closure_1) {
+          combined = null;
+          if (!obj.hasUniqueUsername()) {
+            const _HermesInternal = HermesInternal;
+            combined = "#" + obj.discriminator;
+          }
+        }
+        let str2 = "always";
+        if (closure_1) {
+          str2 = "never";
+        }
+        obj = {
+          label: closure_1_1(closure_1_3[34]).getUserTag(obj, { mode: "username", identifiable: str2 }),
+          value: id.id,
+          subLabel: combined,
+          icon: null,
+        };
+        obj = {
+          user: obj,
+          guildId: "Array",
+          size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093,
+        };
+        obj[2] = closure_1_0(closure_1_3[35]).AvatarSizes.REFRESH_MEDIUM_32;
+        obj[3] = closure_1_19(closure_1_0(closure_1_3[35]).Avatar, obj);
+        return obj;
+      }),
+    items2,
+  );
+  const items3 = [multiAccountUsers];
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -190,7 +215,7 @@ function YouAccountRadioGroup() {
     obj2[2] = intl.string(tmp2(1236).t.HxrBOZ);
     obj1[1] = callback(tmp2(4474).Text, obj2);
     obj[1] = callback(tmp2(5068).PressableOpacity, obj1);
-    const items4 = [callback(closure_5, obj), ];
+    const items4 = [callback(closure_5, obj)];
     const obj3 = { title: null, onChange: null, defaultValue: null, hasIcons: true, children: null };
     const intl2 = tmp2(1236).intl;
     obj3[0] = intl2.string(tmp2(1236).t.oMNyYN);
@@ -216,7 +241,15 @@ function FocusModeSetting() {
   if (!focusModeEnabled) {
     return null;
   } else {
-    tmp5Result = { accessibilityLabel: null, accessibilityHint: null, icon: null, onValueChange: null, value: null, label: null, subLabel: null };
+    tmp5Result = {
+      accessibilityLabel: null,
+      accessibilityHint: null,
+      icon: null,
+      onValueChange: null,
+      value: null,
+      label: null,
+      subLabel: null,
+    };
     const intl = getSystemLocale.intl;
     tmp5Result[0] = intl.string(getSystemLocale.t.wCxBOc);
     const intl2 = getSystemLocale.intl;
@@ -260,7 +293,12 @@ function FocusModeSetting() {
     const date = new Date(Number(setting));
     setting = date;
     currentLocale = getSystemLocale.intl.currentLocale;
-    toLocaleStringResult = date.toLocaleString(currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
+    toLocaleStringResult = date.toLocaleString(currentLocale, {
+      month: "numeric",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+    });
     obj2[0] = toLocaleStringResult;
     stringResult = intl5.formatToPlainString(getSystemLocale.t.BWD8fs, obj2);
   }
@@ -296,7 +334,14 @@ function CustomStatus() {
   const token1 = tmp2Result.useToken(tmp5(712).modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
   const token2 = map.useToken(tmp5(712).modules.mobile.TABLE_ROW_LABEL_COLOR);
   obj = { shadow: "none", border: "none", style: tmp.customStatusRow, children: null };
-  obj = { style: tmp.customStatusEditButton, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
+  obj = {
+    style: tmp.customStatusEditButton,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    onPress: null,
+    children: null,
+  };
   const intl = tmp2(1236).intl;
   const string = intl.string;
   const t = tmp2(1236).t;
@@ -345,7 +390,7 @@ function CustomStatus() {
     obj3[1] = tmp.leadingIcon;
     tmp14Result = tmp14(tmp2(8228).ReactionIcon, obj3);
   }
-  let items = [tmp14Result, ];
+  let items = [tmp14Result];
   const obj4 = { variant: token1, color: token2, lineClamp: 2, style: tmp.customStatusText, children: null };
   if (!tmp8) {
     const intl3 = tmp2(1236).intl;
@@ -354,7 +399,7 @@ function CustomStatus() {
   obj4[4] = gameMentionsAsPlainText;
   items[1] = closure_19(Text.Text, obj4);
   obj[5] = items;
-  const items1 = [closure_20(PressableBase.PressableOpacity, obj), ];
+  const items1 = [closure_20(PressableBase.PressableOpacity, obj)];
   tmp14Result = null;
   if (null != customStatusActivity) {
     const obj5 = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, style: null, children: null };
@@ -374,23 +419,64 @@ function CustomStatus() {
   const tmp2Result1 = map;
   items1[1] = tmp14Result;
   obj[3] = items1;
-  return closure_19(TableRowGroupTitle.TableRowGroup, { hasIcons: false, children: closure_20(PressableCard.Card, obj) });
+  return closure_19(TableRowGroupTitle.TableRowGroup, {
+    hasIcons: false,
+    children: closure_20(PressableCard.Card, obj),
+  });
 }
 let c4 = importAllResult;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_14, AuthStates: closure_15, StatusTypes: closure_16, ThemeTypes: closure_17 } = ME);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-let obj = { account: { position: "relative" }, manage: { position: "absolute", right: 0, zIndex: 100 }, leadingIcon: { width: 24, height: 24, margin: 4 }, trailingIcon: null, customStatusRow: null, customStatusEditButton: null, customStatusRemoveButton: null, customStatusText: null };
+let obj = {
+  account: { position: "relative" },
+  manage: { position: "absolute", right: 0, zIndex: 100 },
+  leadingIcon: { width: 24, height: 24, margin: 4 },
+  trailingIcon: null,
+  customStatusRow: null,
+  customStatusEditButton: null,
+  customStatusRemoveButton: null,
+  customStatusText: null,
+};
 obj = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 16, height: 16 };
 obj[3] = obj;
-createCacheKey = { padding: 0, flexDirection: "row", alignItems: "center", gap: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+createCacheKey = {
+  padding: 0,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+};
 obj[4] = createCacheKey;
-obj[5] = { minHeight: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-let obj2 = { minHeight: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-obj[6] = { height: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
+obj[5] = {
+  minHeight: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT,
+  padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+  flex: 1,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+};
+let obj2 = {
+  minHeight: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT,
+  padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+  flex: 1,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+};
+obj[6] = {
+  height: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT,
+  paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+  alignItems: "center",
+  justifyContent: "center",
+};
 obj[7] = { flexShrink: 1 };
 let closure_21 = createCacheKey.createStyles(obj);
-let obj3 = { height: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
+let obj3 = {
+  height: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT,
+  paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+  alignItems: "center",
+  justifyContent: "center",
+};
 const memoResult = importAllResult.memo((statusOnly) => {
   let flag = statusOnly.statusOnly;
   if (flag === undefined) {
@@ -418,7 +504,13 @@ const memoResult = importAllResult.memo((statusOnly) => {
   if (tmp5) {
     tmp7Result = tmp7(ThemeRadioGroup, {});
   }
-  const items2 = [tmp7Result, closure_19(YouStatusRadioGroup, {}), closure_19(FocusModeSetting, {}), closure_19(CustomStatus, {}), , ];
+  const items2 = [
+    tmp7Result,
+    closure_19(YouStatusRadioGroup, {}),
+    closure_19(FocusModeSetting, {}),
+    closure_19(CustomStatus, {}),
+    ,
+  ];
   tmp7Result = !flag;
   if (!flag) {
     tmp7Result = stateFromStores;

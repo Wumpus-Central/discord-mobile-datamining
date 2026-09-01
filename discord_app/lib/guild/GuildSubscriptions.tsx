@@ -75,7 +75,15 @@ prototype["reset"] = function reset() {
 };
 prototype["get"] = function get(arg0) {
   ({ _typing, _threads, _activities, _members, _memberUpdates, _channels, _threadMemberLists } = this);
-  return { typing: _typing.has(arg0), threads: _threads.has(arg0), activities: _activities.has(arg0), members: _members.get(arg0), member_updates: _memberUpdates.has(arg0), channels: _channels.get(arg0), thread_member_lists: _threadMemberLists.get(arg0) };
+  return {
+    typing: _typing.has(arg0),
+    threads: _threads.has(arg0),
+    activities: _activities.has(arg0),
+    members: _members.get(arg0),
+    member_updates: _memberUpdates.has(arg0),
+    channels: _channels.get(arg0),
+    thread_member_lists: _threadMemberLists.get(arg0),
+  };
 };
 prototype["getSubscribedThreadIds"] = function getSubscribedThreadIds() {
   const _threadMemberLists = this._threadMemberLists;

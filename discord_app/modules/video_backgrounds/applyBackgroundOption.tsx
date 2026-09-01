@@ -15,7 +15,7 @@ function _getFilterBlob() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const _fetch = fetch;
       closure_0 = yield fetch(closure_0);
       const Uint8ClampedArray = yield closure_0.blob();
@@ -58,7 +58,7 @@ function _applyBackgroundOption() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c9 === 2) {
         c9 = 3;
         HermesBuiltin.throwTypeError();
@@ -139,7 +139,13 @@ function _applyBackgroundOption() {
                         return obj2;
                       } else {
                         c5 = tmp8;
-                        callback3(callback, callback2, callback(source[6]).FilterSettingsGraph.BACKGROUND_REPLACEMENT, c4, c5);
+                        callback3(
+                          callback,
+                          callback2,
+                          callback(source[6]).FilterSettingsGraph.BACKGROUND_REPLACEMENT,
+                          c4,
+                          c5,
+                        );
                         c7 = 0;
                         tmp32 = callback3;
                       }
@@ -233,7 +239,7 @@ function _applyBackgroundOptionLive() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -333,7 +339,7 @@ function _applyBackgroundOptionPreview() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0, arg1, arg2) {
+    const iter = (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -444,7 +450,8 @@ export const applyBackgroundOptionPreview = function applyBackgroundOptionPrevie
 export const applyInitialVideoBackgroundOption = function applyInitialVideoBackgroundOption() {
   currentUser = currentUser.getCurrentUser();
   if (null != currentUser) {
-    const lastUsedVideoBackgroundOption = getLastUsedVideoBackgroundOption.getLastUsedVideoBackgroundOption(currentUser);
+    const lastUsedVideoBackgroundOption =
+      getLastUsedVideoBackgroundOption.getLastUsedVideoBackgroundOption(currentUser);
     let tmp6 = isVideoBackgroundSupportedDefault();
     if (tmp6) {
       tmp6 = !hasBeenApplied.hasBeenApplied;

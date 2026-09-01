@@ -11,7 +11,7 @@ function _search() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();

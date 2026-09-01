@@ -12,14 +12,27 @@ function announceActioned(intl) {
 }
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles(() => ({ container: { overflow: "hidden" }, actionStatus: { position: "absolute" } }));
+let closure_5 = createCacheKey.createStyles(() => ({
+  container: { overflow: "hidden" },
+  actionStatus: { position: "absolute" },
+}));
 let closure_7 = importDefaultResult.createAnimatedComponent(require("Text").Text);
-let closure_8 = { code: "function ActionStatusSubLabelTsx1(){const{hasSecondLine,actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const currentlyHasSecondLine=hasSecondLine&&!actioned.get();const lineHeightValue=lineHeight*fontScale;const currentLineHeightValue=currentlyHasSecondLine?lineHeightValue*2:lineHeightValue;return{height:!animate||!actioned.get()?currentLineHeightValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[currentlyHasSecondLine?lineHeightValue*2:lineHeightValue,lineHeightValue]))};}" };
-let closure_9 = { code: "function ActionStatusSubLabelTsx2(){const{actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const translateYValue=actioned.get()?lineHeight*fontScale:0;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[0,translateYValue]))}]};}" };
-let closure_10 = { code: "function ActionStatusSubLabelTsx3(){const{actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const translateYValue=actioned.get()?0:-lineHeight*fontScale;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[translateYValue,0]))}],opacity:!animate?actioned.get()?1:0:withTiming(actioned.get()?1:0)};}" };
+let closure_8 = {
+  code: "function ActionStatusSubLabelTsx1(){const{hasSecondLine,actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const currentlyHasSecondLine=hasSecondLine&&!actioned.get();const lineHeightValue=lineHeight*fontScale;const currentLineHeightValue=currentlyHasSecondLine?lineHeightValue*2:lineHeightValue;return{height:!animate||!actioned.get()?currentLineHeightValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[currentlyHasSecondLine?lineHeightValue*2:lineHeightValue,lineHeightValue]))};}",
+};
+let closure_9 = {
+  code: "function ActionStatusSubLabelTsx2(){const{actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const translateYValue=actioned.get()?lineHeight*fontScale:0;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[0,translateYValue]))}]};}",
+};
+let closure_10 = {
+  code: "function ActionStatusSubLabelTsx3(){const{actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const translateYValue=actioned.get()?0:-lineHeight*fontScale;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[translateYValue,0]))}],opacity:!animate?actioned.get()?1:0:withTiming(actioned.get()?1:0)};}",
+};
 let closure_11 = { code: "function ActionStatusSubLabelTsx4(){const{actioned}=this.__closure;return actioned.get();}" };
-let closure_12 = { code: "function ActionStatusSubLabelTsx5(actioned,actionedPrev){const{actionStatusAccessibilityLabel,runOnJS,announceActioned}=this.__closure;const isActioned=actioned&&actionedPrev===false;if(!isActioned||actionStatusAccessibilityLabel==null){return;}runOnJS(announceActioned)(actionStatusAccessibilityLabel);}" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ActionStatusSubLabel.tsx");
+let closure_12 = {
+  code: "function ActionStatusSubLabelTsx5(actioned,actionedPrev){const{actionStatusAccessibilityLabel,runOnJS,announceActioned}=this.__closure;const isActioned=actioned&&actionedPrev===false;if(!isActioned||actionStatusAccessibilityLabel==null){return;}runOnJS(announceActioned)(actionStatusAccessibilityLabel);}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/friends/components/ActionStatusSubLabel.tsx",
+);
 
 export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
   let num = lineHeight.lineHeight;
@@ -73,7 +86,7 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
             num3 = 2;
             result2 = 2 * result;
           }
-          items = [, ];
+          items = [,];
           items[0] = result2;
           items[1] = result;
           withTimingResult = obj2.withTiming(obj3.interpolate(num2, [0, 1], items));
@@ -82,7 +95,15 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
       return { height: withTimingResult };
     }
   }
-  obj = { hasSecondLine: tmp, actioned, lineHeight: num, fontScale, animate, withTiming: num(actionStatusAccessibilityLabel[7]).withTiming, interpolate: num(actionStatusAccessibilityLabel[4]).interpolate };
+  obj = {
+    hasSecondLine: tmp,
+    actioned,
+    lineHeight: num,
+    fontScale,
+    animate,
+    withTiming: num(actionStatusAccessibilityLabel[7]).withTiming,
+    interpolate: num(actionStatusAccessibilityLabel[4]).interpolate,
+  };
   L.__closure = obj;
   L.__workletHash = 14210085997091;
   L.__initData = closure_8;
@@ -107,7 +128,14 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
     const transform = [{ translateY: withTimingResult }];
     return { transform };
   };
-  obj = { actioned, lineHeight: num, fontScale, animate, withTiming: num(actionStatusAccessibilityLabel[7]).withTiming, interpolate: num(actionStatusAccessibilityLabel[4]).interpolate };
+  obj = {
+    actioned,
+    lineHeight: num,
+    fontScale,
+    animate,
+    withTiming: num(actionStatusAccessibilityLabel[7]).withTiming,
+    interpolate: num(actionStatusAccessibilityLabel[4]).interpolate,
+  };
   fn.__closure = obj;
   fn.__workletHash = 1040596522101;
   fn.__initData = closure_9;
@@ -134,7 +162,7 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
         if (obj.get()) {
           num2 = 1;
         }
-        items = [, ];
+        items = [,];
         items[0] = num;
         items[1] = 0;
         withTimingResult = obj2.withTiming(obj3.interpolate(num2, [0, 1], items));
@@ -161,7 +189,14 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
       return obj;
     }
   }
-  obj1 = { actioned, lineHeight: num, fontScale, animate, withTiming: num(actionStatusAccessibilityLabel[7]).withTiming, interpolate: num(actionStatusAccessibilityLabel[4]).interpolate };
+  obj1 = {
+    actioned,
+    lineHeight: num,
+    fontScale,
+    animate,
+    withTiming: num(actionStatusAccessibilityLabel[7]).withTiming,
+    interpolate: num(actionStatusAccessibilityLabel[4]).interpolate,
+  };
   V.__closure = obj1;
   V.__workletHash = 2183035188794;
   V.__initData = closure_10;
@@ -189,15 +224,36 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
     }
   };
   const obj8 = num(actionStatusAccessibilityLabel[4]);
-  fn2.__closure = { actionStatusAccessibilityLabel, runOnJS: num(actionStatusAccessibilityLabel[4]).runOnJS, announceActioned };
+  fn2.__closure = {
+    actionStatusAccessibilityLabel,
+    runOnJS: num(actionStatusAccessibilityLabel[4]).runOnJS,
+    announceActioned,
+  };
   fn2.__workletHash = 14141240445417;
   fn2.__initData = closure_12;
   const animatedReaction = obj8.useAnimatedReaction(Y, fn2);
   obj3 = { style: items, children: null };
   items = [tmp3.container, animatedStyle];
-  let items1 = [animate(closure_7, { variant: str, maxFontSizeMultiplier, color: "text-default", style: animatedStyle1, lineClamp: 1, children: label }), , ];
+  let items1 = [
+    animate(closure_7, {
+      variant: str,
+      maxFontSizeMultiplier,
+      color: "text-default",
+      style: animatedStyle1,
+      lineClamp: 1,
+      children: label,
+    }),
+    ,
+  ];
   if (tmp) {
-    const obj4 = { variant: null, maxFontSizeMultiplier: null, style: null, color: "text-default", lineClamp: 1, children: null };
+    const obj4 = {
+      variant: null,
+      maxFontSizeMultiplier: null,
+      style: null,
+      color: "text-default",
+      lineClamp: 1,
+      children: null,
+    };
     obj4[0] = str;
     obj4[1] = maxFontSizeMultiplier;
     obj4[2] = animatedStyle1;
@@ -206,7 +262,14 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
   }
   items1[1] = tmp;
   const items2 = [tmp3.actionStatus, animatedStyle2];
-  items1[2] = animate(closure_7, { variant: str, maxFontSizeMultiplier, color: "text-default", style: items2, lineClamp: 1, children: actionStatus });
+  items1[2] = animate(closure_7, {
+    variant: str,
+    maxFontSizeMultiplier,
+    color: "text-default",
+    style: items2,
+    lineClamp: 1,
+    children: actionStatus,
+  });
   obj3[1] = items1;
   return closure_4(actioned(actionStatusAccessibilityLabel[4]).View, obj3);
 };

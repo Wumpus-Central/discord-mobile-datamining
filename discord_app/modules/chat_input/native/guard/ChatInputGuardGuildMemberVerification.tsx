@@ -12,7 +12,10 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-let closure_8 = createCacheKey.createStyles({ noticeIcon: { height: 36, width: 36, resizeMode: "contain" }, lottieAnimation: { height: 36, width: 36 } });
+let closure_8 = createCacheKey.createStyles({
+  noticeIcon: { height: 36, width: 36, resizeMode: "contain" },
+  lottieAnimation: { height: 36, width: 36 },
+});
 const memoResult = importAllResult.memo(function ChatInputGuardGuildMemberVerification(guildId) {
   guildId = guildId.guildId;
   const tmp = callback();
@@ -74,12 +77,28 @@ const memoResult = importAllResult.memo(function ChatInputGuardGuildMemberVerifi
     tmp13Result = tmp13(playDefault, obj);
     const tmp14Result = playDefault;
   }
-  obj1 = { type: "simple-action", icon: tmp13Result, message: stringResult, actionIcon: tmp7, actionLabel: null, actionOnPress: null };
+  obj1 = {
+    type: "simple-action",
+    icon: tmp13Result,
+    message: stringResult,
+    actionIcon: tmp7,
+    actionLabel: null,
+    actionOnPress: null,
+  };
   const intl4 = tmp2(1236).intl;
   obj1[4] = intl4.string(guildId(1236).t["r8/DT+"]);
   obj1[5] = fn;
-  return jsx(ChatInputGuardDefault, { type: "simple-action", icon: tmp13Result, message: stringResult, actionIcon: tmp7, actionLabel: null, actionOnPress: null });
+  return jsx(ChatInputGuardDefault, {
+    type: "simple-action",
+    icon: tmp13Result,
+    message: stringResult,
+    actionIcon: tmp7,
+    actionLabel: null,
+    actionOnPress: null,
+  });
 });
-let result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx",
+);
 
 export default memoResult;

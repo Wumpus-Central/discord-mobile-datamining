@@ -5,4 +5,4 @@ const result = set.fileFinishedImporting("modules/rpc/helpers/createRpcJoiSchema
 
 export default function createRpcJoiSchemaObject(object) {
   return object.object().unknown(true);
-};
+}

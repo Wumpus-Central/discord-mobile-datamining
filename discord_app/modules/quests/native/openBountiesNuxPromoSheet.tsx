@@ -8,5 +8,5 @@ const result = set.fileFinishedImporting("modules/quests/native/openBountiesNuxP
 
 export default function openBountiesNuxPromoSheet() {
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14668, dependencyMap.paths), BountiesNuxPromoSheet, {});
-};
+}
 export const PROMO_SHEET_KEY = "BountiesNuxPromoSheet";

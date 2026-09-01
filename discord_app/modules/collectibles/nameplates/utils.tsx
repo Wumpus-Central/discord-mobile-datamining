@@ -112,23 +112,43 @@ export const parseFirstFrame = function parseFirstFrame(arg0) {
 };
 export const getNameplateSampleUsers = function getNameplateSampleUsers() {
   let obj = { mallow: null, phibi: null, locke: null, cherry: null, boom: null };
-  obj = { name: null, avatarSrc: "https://cdn.discordapp.com/assets/content/6dcafe1231097505560fd098f0e6698990f0082369d34c35d8c3ee9615709f84.png" };
+  obj = {
+    name: null,
+    avatarSrc:
+      "https://cdn.discordapp.com/assets/content/6dcafe1231097505560fd098f0e6698990f0082369d34c35d8c3ee9615709f84.png",
+  };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.SbKDHi);
   obj[0] = obj;
-  obj = { name: null, avatarSrc: "https://cdn.discordapp.com/assets/content/17ae2ee3b8476755370ca9fa4d776d0bb811e50962409a7ae2dedd1b96c95eab.png" };
+  obj = {
+    name: null,
+    avatarSrc:
+      "https://cdn.discordapp.com/assets/content/17ae2ee3b8476755370ca9fa4d776d0bb811e50962409a7ae2dedd1b96c95eab.png",
+  };
   const intl2 = getSystemLocale.intl;
   obj[0] = intl2.string(getSystemLocale.t["LMSo+F"]);
   obj[1] = obj;
-  obj1 = { name: null, avatarSrc: "https://cdn.discordapp.com/assets/content/a82a9daadc5c7842f183c0f61966b07d3aeeea478b7c8a4b8af48334eb1ce15f.png" };
+  obj1 = {
+    name: null,
+    avatarSrc:
+      "https://cdn.discordapp.com/assets/content/a82a9daadc5c7842f183c0f61966b07d3aeeea478b7c8a4b8af48334eb1ce15f.png",
+  };
   const intl3 = getSystemLocale.intl;
   obj1[0] = intl3.string(getSystemLocale.t.g5Dumi);
   obj[2] = obj1;
-  const obj2 = { name: null, avatarSrc: "https://cdn.discordapp.com/assets/content/afc2e8306ce540dccac7da1ca0871684d0bf67e77967ff0f679be84a0a6e51b7.png" };
+  const obj2 = {
+    name: null,
+    avatarSrc:
+      "https://cdn.discordapp.com/assets/content/afc2e8306ce540dccac7da1ca0871684d0bf67e77967ff0f679be84a0a6e51b7.png",
+  };
   const intl4 = getSystemLocale.intl;
   obj2[0] = intl4.string(getSystemLocale.t.p5Z3Ol);
   obj[3] = obj2;
-  const obj3 = { name: null, avatarSrc: "https://cdn.discordapp.com/assets/content/e264a2b0b8d963edd255c223abf1c0554f00a2f3a38640e509a38bc03d73b606.png" };
+  const obj3 = {
+    name: null,
+    avatarSrc:
+      "https://cdn.discordapp.com/assets/content/e264a2b0b8d963edd255c223abf1c0554f00a2f3a38640e509a38bc03d73b606.png",
+  };
   const intl5 = getSystemLocale.intl;
   obj3[0] = intl5.string(getSystemLocale.t.ncslie);
   obj[4] = obj3;

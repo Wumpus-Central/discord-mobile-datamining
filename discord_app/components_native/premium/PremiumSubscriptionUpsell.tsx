@@ -14,21 +14,60 @@ import createCacheKey from "../../design/components/Styles/native/createStyles.t
 require = arg1;
 noopAll;
 ({ View: c3, Image: c4, StyleSheet } = get_ActivityIndicator);
-({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: c9 } = GuildFeatures);
+({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: c9 } =
+  GuildFeatures);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { title: { textAlign: "center" }, subtitle: { lineHeight: 20, marginTop: 8, textAlign: "center" }, upsell: null, upsellCard: null, upsellFeatures: null, upsellFeatureSubLogo: null, upsellFeatureList: null, upsellButton: null, upsellFeatureLogoTier2: null, upsellLabel: null, upsellRow: null };
-createCacheKey = { paddingTop: 32, borderTopWidth: 2 * StyleSheet.hairlineWidth, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey = {
+  title: { textAlign: "center" },
+  subtitle: { lineHeight: 20, marginTop: 8, textAlign: "center" },
+  upsell: null,
+  upsellCard: null,
+  upsellFeatures: null,
+  upsellFeatureSubLogo: null,
+  upsellFeatureList: null,
+  upsellButton: null,
+  upsellFeatureLogoTier2: null,
+  upsellLabel: null,
+  upsellRow: null,
+};
+createCacheKey = {
+  paddingTop: 32,
+  borderTopWidth: 2 * StyleSheet.hairlineWidth,
+  borderTopColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { borderRadius: ThemesDefault.radii.xs, padding: 16, alignItems: "center" };
 let obj1 = { borderRadius: ThemesDefault.radii.xs, padding: 16, alignItems: "center" };
-createCacheKey[4] = { borderRadius: ThemesDefault.radii.sm, padding: 16, marginTop: 12, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[4] = {
+  borderRadius: ThemesDefault.radii.sm,
+  padding: 16,
+  marginTop: 12,
+  alignSelf: "stretch",
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 createCacheKey[5] = { alignSelf: "center", height: 10, width: 54 };
 createCacheKey[6] = { marginTop: 8 };
 createCacheKey[7] = { marginTop: 16 };
 createCacheKey[8] = { alignSelf: "center", height: 20, marginTop: 6, width: 84 };
-let obj2 = { borderRadius: ThemesDefault.radii.sm, padding: 16, marginTop: 12, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[9] = { color: ThemesDefault.unsafe_rawColors.WHITE, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, fontSize: 16, lineHeight: 20 };
-let obj3 = { color: ThemesDefault.unsafe_rawColors.WHITE, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, fontSize: 16, lineHeight: 20 };
+let obj2 = {
+  borderRadius: ThemesDefault.radii.sm,
+  padding: 16,
+  marginTop: 12,
+  alignSelf: "stretch",
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
+createCacheKey[9] = {
+  color: ThemesDefault.unsafe_rawColors.WHITE,
+  fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD,
+  fontSize: 16,
+  lineHeight: 20,
+};
+let obj3 = {
+  color: ThemesDefault.unsafe_rawColors.WHITE,
+  fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD,
+  fontSize: 16,
+  lineHeight: 20,
+};
 createCacheKey[10] = { paddingVertical: 0, marginTop: 8, color: ThemesDefault.unsafe_rawColors.WHITE };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { paddingVertical: 0, marginTop: 8, color: ThemesDefault.unsafe_rawColors.WHITE };
@@ -57,11 +96,17 @@ export default function PremiumSubscriptionUpsell(arg0) {
     tmp5Result = tmp5(4139);
     if (tmp5Result.isPremium(stateFromStores)) {
       obj1 = { children: null };
-      const obj2 = { style: null, accessibilityRole: "header", variant: "heading-lg/semibold", color: "text-overlay-light", children: null };
+      const obj2 = {
+        style: null,
+        accessibilityRole: "header",
+        variant: "heading-lg/semibold",
+        color: "text-overlay-light",
+        children: null,
+      };
       obj2[0] = tmp.title;
       const intl2 = tmp2(1236).intl;
       obj2[4] = intl2.string(tmp2(1236).t.YYfHlx);
-      const items2 = [tmp6(tmp2(4474).Text, obj2), ];
+      const items2 = [tmp6(tmp2(4474).Text, obj2)];
       const obj3 = { style: null, variant: "text-md/semibold", color: "text-overlay-light", children: null };
       obj3[0] = tmp.subtitle;
       const intl3 = tmp2(1236).intl;
@@ -72,19 +117,25 @@ export default function PremiumSubscriptionUpsell(arg0) {
       obj1[0] = items2;
       let tmp6Result = tmp8(closure_11, obj1);
     } else {
-      const obj5 = { style: null, accessibilityRole: "header", variant: "heading-lg/semibold", color: "text-overlay-light", children: null };
+      const obj5 = {
+        style: null,
+        accessibilityRole: "header",
+        variant: "heading-lg/semibold",
+        color: "text-overlay-light",
+        children: null,
+      };
       obj5[0] = tmp.title;
       const intl = tmp2(1236).intl;
       obj5[4] = intl.string(tmp2(1236).t["qUl+K4"]);
       tmp6Result = tmp6(tmp2(4474).Text, obj5);
     }
-    const items3 = [tmp6Result, , ];
+    const items3 = [tmp6Result, ,];
     const obj6 = { style: null, children: null };
     obj6[0] = tmp.upsellFeatures;
     const obj7 = { style: null, source: null };
     obj7[0] = tmp.upsellFeatureSubLogo;
     obj7[1] = tmp5(13197);
-    const items4 = [closure_10(closure_4, obj7), , ];
+    const items4 = [closure_10(closure_4, obj7), ,];
     const obj8 = { style: null, source: null };
     obj8[0] = tmp.upsellFeatureLogoTier2;
     obj8[1] = tmp5(13198);
@@ -99,7 +150,7 @@ export default function PremiumSubscriptionUpsell(arg0) {
     obj11[0] = tmp2(1897).formatPercent(locale.locale, closure_9 / 100);
     obj10[1] = intl4.formatToPlainString(tmp2(1236).t.P3aEj6, obj11);
     obj10[2] = tmp5(712).unsafe_rawColors.WHITE;
-    const items5 = [obj10, ];
+    const items5 = [obj10];
     const obj12 = { IconComponent: null, label: null, color: null };
     obj12[0] = tmp2(4429).CheckmarkLargeIcon;
     const intl5 = tmp2(1236).intl;
@@ -129,4 +180,4 @@ export default function PremiumSubscriptionUpsell(arg0) {
     tmp6Result = tmp6(tmp7, obj);
     const tmp2Result = tmp2(1897);
   }
-};
+}

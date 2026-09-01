@@ -9,14 +9,19 @@ import createCacheKey from "../../design/components/Styles/native/createStyles.t
 require = arg1;
 ({ View: obj1, ScrollView: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { alignItems: "center" }, carouselContentWrapper: { flexDirection: "row" }, pageIndicator: { flexDirection: "row", justifyContent: "space-around", alignItems: "center" }, activeIndicator: null, inactiveIndicator: null };
+createCacheKey = {
+  container: { alignItems: "center" },
+  carouselContentWrapper: { flexDirection: "row" },
+  pageIndicator: { flexDirection: "row", justifyContent: "space-around", alignItems: "center" },
+  activeIndicator: null,
+  inactiveIndicator: null,
+};
 createCacheKey = { color: ThemesDefault.colors.ICON_STRONG };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { color: ThemesDefault.colors.ICON_SUBTLE };
 let closure_6 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const Component = importAllResult.Component;
-class PageIndicator extends Component {
-}
+class PageIndicator extends Component {}
 PageIndicator.prototype["render"] = function render() {
   const tmp = callback3(this.context);
   const props = this.props;
@@ -31,7 +36,7 @@ PageIndicator.prototype["render"] = function render() {
       let tmp4 = callback;
       let obj = { fontSize: null };
       obj[0] = tmp3;
-      let items1 = [obj, ];
+      let items1 = [obj];
       let tmp7 = num;
       obj = { style: null, children: "\u2022" };
       items1[1] = num === tmp2 ? tmp.activeIndicator : tmp.inactiveIndicator;
@@ -84,14 +89,22 @@ Carousel.prototype["render"] = function render() {
   }
   obj = { style: items, children: null };
   items = [tmp.container, self.props.style];
-  obj = { automaticallyAdjustContentInsets: false, horizontal: true, pagingEnabled: true, scrollEnabled: length > 1, nestedScrollEnabled: true, showsHorizontalScrollIndicator: false, onMomentumScrollEnd: self.onAnimationEnd };
+  obj = {
+    automaticallyAdjustContentInsets: false,
+    horizontal: true,
+    pagingEnabled: true,
+    scrollEnabled: length > 1,
+    nestedScrollEnabled: true,
+    showsHorizontalScrollIndicator: false,
+    onMomentumScrollEnd: self.onAnimationEnd,
+  };
   const merged = Object.assign(scrollViewProps);
   obj.children = callback(closure_2, {
     style: tmp.carouselContentWrapper,
     onStartShouldSetResponder() {
       return true;
     },
-    children: self.props.children
+    children: self.props.children,
   });
   const items1 = [callback(closure_3, obj), tmp3];
   obj[1] = items1;

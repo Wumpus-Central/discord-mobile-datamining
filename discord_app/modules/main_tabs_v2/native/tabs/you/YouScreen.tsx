@@ -47,7 +47,13 @@ function BackButton(paddingTop) {
     const intl = tmp2(1236).intl;
     formatToPlainStringResult = intl.string(tmp2(1236).t["13/7kX"]);
   }
-  obj = { style: items1, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult, onPress: handleBackButtonPress, children: callback2(tmp2(15991).CloseIconWithBadgeOnSide, { count: stateFromStores }) };
+  obj = {
+    style: items1,
+    accessibilityRole: "button",
+    accessibilityLabel: formatToPlainStringResult,
+    onPress: handleBackButtonPress,
+    children: callback2(tmp2(15991).CloseIconWithBadgeOnSide, { count: stateFromStores }),
+  };
   items1 = [callback4().backButton, { top: paddingTop.paddingTop }];
   return callback2(PressableBase.PressableOpacity, obj);
 }
@@ -106,7 +112,8 @@ function UnconnectedYouScreen(arg0) {
   fn.__initData = closure_28;
   const tmp15 = navigateToShop(4413)();
   const animatedScrollHandler = obj4.useAnimatedScrollHandler(fn);
-  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = navigateToShop(8918)({ scrollPosition: sharedValue, bannerHeight: tmp7Result }));
+  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } =
+    navigateToShop(8918)({ scrollPosition: sharedValue, bannerHeight: tmp7Result }));
   const size = tmp5(1493)();
   const height = size.height;
   let num = 0;
@@ -248,14 +255,25 @@ function UnconnectedYouScreen(arg0) {
       const memo2 = obj.useMemo(() => {
         let tmp = null;
         if (closure_10) {
-          const obj = { title: null, description: null, avatarSrc: null, decorationAsset: "", renderImgComponent: null };
+          const obj = {
+            title: null,
+            description: null,
+            avatarSrc: null,
+            decorationAsset: "",
+            renderImgComponent: null,
+          };
           const intl = navigateToSettings(_undefined[22]).intl;
           obj[0] = intl.string(navigateToSettings(_undefined[22]).t.epBu6F);
           const intl2 = navigateToSettings(_undefined[22]).intl;
           obj[1] = intl2.string(navigateToSettings(_undefined[22]).t["o8+3AX"]);
           obj[2] = {};
           obj[4] = function renderImgComponent() {
-            return callback2(callback(table[49]), { source: { uri: "https://cdn.discordapp.com/assets/content/1979309f7455b06e0bc1e8f5da89de9934155a0a9a74bfff5b680c82fb45d53f.png" }, style: { width: 80, height: 80 } });
+            return callback2(callback(table[49]), {
+              source: {
+                uri: "https://cdn.discordapp.com/assets/content/1979309f7455b06e0bc1e8f5da89de9934155a0a9a74bfff5b680c82fb45d53f.png",
+              },
+              style: { width: 80, height: 80 },
+            });
           };
           tmp = obj;
         }
@@ -286,7 +304,8 @@ function UnconnectedYouScreen(arg0) {
               }
               const tmpResult1 = tmp(tmp12(6251).useSelectedDismissibleContent(items5), 2);
               closure_13 = tmp68;
-              const tmp69 = tmpResult1[0] === tmp12(1373).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_PROFILE_COACHMARK;
+              const tmp69 =
+                tmpResult1[0] === tmp12(1373).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_PROFILE_COACHMARK;
               closure_14 = tmp69;
               let tmp70 = tmp63;
               if (!tmp63) {
@@ -303,15 +322,31 @@ function UnconnectedYouScreen(arg0) {
                 tmp74Result = null;
                 if (tmp72) {
                   if (tmp63) {
-                    const obj6 = { buttonRef: null, markAsDismissed: null, visible: null, title: null, description: null, avatarSrc: null, decorationAsset: null, renderImgComponent: null, navigateToShop: null };
+                    const obj6 = {
+                      buttonRef: null,
+                      markAsDismissed: null,
+                      visible: null,
+                      title: null,
+                      description: null,
+                      avatarSrc: null,
+                      decorationAsset: null,
+                      renderImgComponent: null,
+                      navigateToShop: null,
+                    };
                     obj6[0] = ref4;
                     obj6[1] = tmp57;
                     obj6[2] = tmp58;
-                    ({ title: obj25[3], description: obj25[4], avatarSrc: obj25[5], decorationAsset: obj25[6], renderImgComponent: obj25[7] } = memo2);
+                    ({
+                      title: obj25[3],
+                      description: obj25[4],
+                      avatarSrc: obj25[5],
+                      decorationAsset: obj25[6],
+                      renderImgComponent: obj25[7],
+                    } = memo2);
                     obj6[8] = callback1;
                     tmp63 = callback2(tmp5(16371), obj6);
                   }
-                  const items6 = [tmp63, , ];
+                  const items6 = [tmp63, ,];
                   if (tmp65) {
                     const obj7 = { buttonRef: null };
                     obj7[0] = ref5;
@@ -356,7 +391,15 @@ function UnconnectedYouScreen(arg0) {
                 }
                 navigateToSettings();
               }, items8);
-              const obj10 = { isLoading: null, navigateToPremium: null, navigateToSettings: null, navigateToShop: null, shopButtonRef: null, settingsButtonRef: null, paddingBottom: null };
+              const obj10 = {
+                isLoading: null,
+                navigateToPremium: null,
+                navigateToSettings: null,
+                navigateToShop: null,
+                shopButtonRef: null,
+                settingsButtonRef: null,
+                paddingBottom: null,
+              };
               obj10[0] = tmp37;
               obj10[1] = navigateToPremium;
               obj10[2] = callback2;
@@ -369,7 +412,14 @@ function UnconnectedYouScreen(arg0) {
               obj11[0] = theme;
               obj11[1] = primaryColor;
               obj11[2] = secondaryColor;
-              const obj12 = { value: null, openedAt: null, fetchStartedAt: null, fetchEndedAt: null, isLoaded: null, children: null };
+              const obj12 = {
+                value: null,
+                openedAt: null,
+                fetchStartedAt: null,
+                fetchEndedAt: null,
+                isLoaded: null,
+                children: null,
+              };
               obj12[0] = createUserProfileAnalyticsContext;
               obj12[1] = ref1.current;
               let fetchStartedAt;
@@ -402,13 +452,21 @@ function UnconnectedYouScreen(arg0) {
                 tmp84Result = tmp84(tmp5(8548), obj14);
                 const tmp5Result4 = tmp5(8548);
               }
-              const items10 = [tmp84Result, , , , , ];
+              const items10 = [tmp84Result, , , , ,];
               const obj15 = { gradientHeight: null, bannerHeight: null, style: null };
               obj15[0] = height;
               obj15[1] = tmp7Result;
               obj15[2] = tmp10.background;
               items10[1] = callback2(tmp5(8915), obj15);
-              const obj16 = { contentContainerStyle: null, ref: null, onScroll: null, onLayout: null, scrollEventThrottle: null, style: null, children: null };
+              const obj16 = {
+                contentContainerStyle: null,
+                ref: null,
+                onScroll: null,
+                onLayout: null,
+                scrollEventThrottle: null,
+                style: null,
+                children: null,
+              };
               obj16[0] = contentContainerStyle;
               obj16[1] = ref;
               obj16[2] = animatedScrollHandler;
@@ -424,12 +482,12 @@ function UnconnectedYouScreen(arg0) {
                 obj18[0] = bound1;
                 tmp84Result = tmp84(BackButton, obj18);
               }
-              const items12 = [tmp84Result, ];
+              const items12 = [tmp84Result];
               const obj19 = { style: null, children: null };
               const items13 = [dimensionStyle, bannerImageAnimatedStyle];
               obj19[0] = items13;
               const obj20 = { style: null };
-              const items14 = [sharedValue.absoluteFill, ];
+              const items14 = [sharedValue.absoluteFill];
               const obj21 = { backgroundColor: null };
               tmp = sharedValue;
               const tmp5Result3 = tmp5(16381);
@@ -437,7 +495,7 @@ function UnconnectedYouScreen(arg0) {
               obj21[0] = tmp12(688).int2hex(userProfileBannerBackgroundColor);
               items14[1] = obj21;
               obj20[0] = items14;
-              const items15 = [callback2(bound, obj20), , ];
+              const items15 = [callback2(bound, obj20), ,];
               tmp = null != source;
               if (!tmp) {
                 items15[1] = tmp;
@@ -453,10 +511,10 @@ function UnconnectedYouScreen(arg0) {
                 obj19[1] = items15;
                 items12[1] = tmp89(tmp5(4217).View, obj19);
                 obj17[1] = items12;
-                const items16 = [tmp89(tmp5(4217).View, obj17), , , ];
+                const items16 = [tmp89(tmp5(4217).View, obj17), , ,];
                 if (tmp89Result) {
                   const obj23 = { pointerEvents: "box-none", style: null, children: null };
-                  const items17 = [tmp10.profileEffectLayer, , ];
+                  const items17 = [tmp10.profileEffectLayer, ,];
                   const obj24 = { width: null, height: null };
                   obj24[0] = bound;
                   obj24[1] = height;
@@ -466,7 +524,7 @@ function UnconnectedYouScreen(arg0) {
                   const obj25 = { skuId: null, bannerAdjustment: 0, replayOnNavigationFocus: true, paused: null };
                   obj25[0] = skuId2;
                   obj25[3] = tmp28;
-                  const items18 = [tmp84(tmp5(8510), obj25), ];
+                  const items18 = [tmp84(tmp5(8510), obj25)];
                   tmp = BackButton;
                   const obj26 = { paddingTop: null };
                   obj26[0] = bound1;
@@ -475,7 +533,19 @@ function UnconnectedYouScreen(arg0) {
                   tmp89Result = tmp89(tmp5(4217).View, obj23);
                 }
                 items16[1] = tmp89Result;
-                const obj27 = { user: null, userTheme: null, scrollViewRef: null, style: null, navigateToProfileCustomization: null, navigateToCustomStatus: null, navigateToFriends: null, navigateToPremium: null, navigateToShop: null, initialTab: null, animateAvatar: null };
+                const obj27 = {
+                  user: null,
+                  userTheme: null,
+                  scrollViewRef: null,
+                  style: null,
+                  navigateToProfileCustomization: null,
+                  navigateToCustomStatus: null,
+                  navigateToFriends: null,
+                  navigateToPremium: null,
+                  navigateToShop: null,
+                  initialTab: null,
+                  animateAvatar: null,
+                };
                 obj27[0] = user;
                 obj27[1] = tmp15;
                 obj27[2] = ref;
@@ -519,18 +589,24 @@ function UnconnectedYouScreen(arg0) {
                 };
                 let intl2 = tmp12(1236).intl;
                 obj30[2] = intl2.string(tmp12(1236).t["3fzj/l"]);
-                const obj31 = { style: null, accessibilityRole: "image", accessibilityLabel: null, source: null, paused: null };
+                const obj31 = {
+                  style: null,
+                  accessibilityRole: "image",
+                  accessibilityLabel: null,
+                  source: null,
+                  paused: null,
+                };
                 obj31[0] = dimensionStyle;
                 obj31[2] = formatToPlainStringResult;
                 obj31[3] = source;
                 obj31[4] = tmp28;
-                const items20 = [tmp84(tmp5(5493), obj31), ];
+                const items20 = [tmp84(tmp5(5493), obj31)];
                 tmp = !obj32;
                 if (!obj32) {
                   obj32 = { label: null, style: null, textStyle: null };
                   const intl3 = tmp12(1236).intl;
                   obj32[0] = intl3.string(tmp12(1236).t.I5gL2H);
-                  const items21 = [tmp10.gifTag, ];
+                  const items21 = [tmp10.gifTag];
                   dimensionStyle = { top: null };
                   dimensionStyle[0] = bound1;
                   items21[1] = dimensionStyle;
@@ -542,7 +618,13 @@ function UnconnectedYouScreen(arg0) {
                 obj30[3] = items20;
                 tmp = tmp89(tmp12(5068).PressableOpacity, obj30);
               } else {
-                const obj33 = { style: null, accessibilityRole: "image", accessibilityLabel: null, source: null, paused: null };
+                const obj33 = {
+                  style: null,
+                  accessibilityRole: "image",
+                  accessibilityLabel: null,
+                  source: null,
+                  paused: null,
+                };
                 obj33[0] = dimensionStyle;
                 obj33[2] = formatToPlainStringResult;
                 obj33[3] = source;
@@ -565,7 +647,12 @@ function UnconnectedYouScreen(arg0) {
   }
 }
 ({ StyleSheet: c5, View: closure_6, ScrollView } = get_ActivityIndicator);
-({ YOU_ACTION_SHEET_TOP_INSET: closure_12, YOU_AVATAR_SIZE: map1, YOU_SCREEN_ID: closure_14, YOU_SCROLL_EVENT_THROTTLE: closure_15 } = YOU_SCREEN_ID);
+({
+  YOU_ACTION_SHEET_TOP_INSET: closure_12,
+  YOU_AVATAR_SIZE: map1,
+  YOU_SCREEN_ID: closure_14,
+  YOU_SCROLL_EVENT_THROTTLE: closure_15,
+} = YOU_SCREEN_ID);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
 let closure_22 = importDefaultResult.createAnimatedComponent(_modDef8920);
 let closure_23 = createCacheKey.createStyles((marginTop) => {
@@ -580,7 +667,16 @@ let closure_23 = createCacheKey.createStyles((marginTop) => {
     xl1 = ThemesDefault.radii.xl;
   }
   obj[1] = xl1;
-  obj = { container: null, background: null, scrollView: null, profileEffectLayer: null, banner: null, gifTag: null, gifTagText: null, content: null };
+  obj = {
+    container: null,
+    background: null,
+    scrollView: null,
+    profileEffectLayer: null,
+    banner: null,
+    gifTag: null,
+    gifTagText: null,
+    content: null,
+  };
   const merged = Object.assign(obj);
   obj[0] = { flex: 1, flexGrow: 1, position: "relative" };
   const merged1 = Object.assign(obj);
@@ -606,12 +702,21 @@ let closure_23 = createCacheKey.createStyles((marginTop) => {
 });
 let closure_24 = createCacheKey.createStyles(() => {
   let obj = { backButton: null };
-  obj = { position: "absolute", marginTop: ThemesDefault.space.PX_4, left: ThemesDefault.space.PX_16, zIndex: 99, alignItems: "center", justifyContent: "center" };
+  obj = {
+    position: "absolute",
+    marginTop: ThemesDefault.space.PX_4,
+    left: ThemesDefault.space.PX_16,
+    zIndex: 99,
+    alignItems: "center",
+    justifyContent: "center",
+  };
   obj[0] = obj;
   return obj;
 });
 let closure_25 = importDefaultResult.createAnimatedComponent(ScrollView);
-let closure_28 = { code: "function YouScreenTsx1(e){const{scrollPosition}=this.__closure;scrollPosition.set(e.contentOffset.y);}" };
+let closure_28 = {
+  code: "function YouScreenTsx1(e){const{scrollPosition}=this.__closure;scrollPosition.set(e.contentOffset.y);}",
+};
 const importDefaultResult1 = importDefaultResult;
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreen.tsx");
 
@@ -702,12 +807,21 @@ export default function YouScreen(initialTab) {
   obj = {
     scrollToTop() {
       callback();
-    }
+    },
   };
   const scrollToTop = stateFromStores(memo[36]).useScrollToTop(React.useRef(obj));
   let tmp18 = null;
   if (null != stateFromStores) {
-    obj = { user: null, navigateToSettings: null, navigateToPremium: null, navigateToProfileCustomization: null, navigateToCustomStatus: null, navigateToFriends: null, navigateToShop: null, initialTab: null };
+    obj = {
+      user: null,
+      navigateToSettings: null,
+      navigateToPremium: null,
+      navigateToProfileCustomization: null,
+      navigateToCustomStatus: null,
+      navigateToFriends: null,
+      navigateToShop: null,
+      initialTab: null,
+    };
     obj[0] = stateFromStores;
     obj[1] = callback;
     obj[2] = callback1;
@@ -719,4 +833,4 @@ export default function YouScreen(initialTab) {
     tmp18 = callback2(UnconnectedYouScreen, obj);
   }
   return tmp18;
-};
+}

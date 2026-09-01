@@ -16,15 +16,20 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 function IntroDemo(isReminder) {
   isReminder = isReminder.isReminder;
   const tmp = callback3();
-  let obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+  let obj = {
+    style: tmp.demo,
+    accessibilityElementsHidden: true,
+    importantForAccessibility: "no-hide-descendants",
+    children: null,
+  };
   obj = { style: tmp.messages, children: null };
   obj = { source: { uri: setDefault }, style: tmp.avatar };
-  const items = [callback(closure_3, obj), ];
+  const items = [callback(closure_3, obj)];
   const obj2 = { style: tmp.messageLines, children: null };
   const obj3 = { variant: "text-sm/semibold", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
   obj3[2] = intl.string(getSystemLocale.t.cqpybK);
-  const items1 = [callback(Text.Text, obj3), , , ];
+  const items1 = [callback(Text.Text, obj3), , ,];
   const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = getSystemLocale.intl;
   obj4[2] = intl2.string(getSystemLocale.t["h+KPxy"]);
@@ -40,9 +45,9 @@ function IntroDemo(isReminder) {
   obj2[1] = items1;
   items[1] = callback2(closure_5, obj2);
   obj[1] = items;
-  const items2 = [callback2(closure_5, obj), ];
+  const items2 = [callback2(closure_5, obj)];
   const obj7 = { style: tmp.sheet, children: null };
-  const items3 = [callback(closure_5, { style: tmp.grabber }), , ];
+  const items3 = [callback(closure_5, { style: tmp.grabber }), ,];
   const obj9 = { icon: BookmarkIcon.BookmarkIcon, label: null, highlighted: null };
   const intl5 = getSystemLocale.intl;
   obj9[1] = intl5.string(getSystemLocale.t.tpxJto);
@@ -65,7 +70,7 @@ function SheetRow(hasArrow) {
     flag = false;
   }
   const tmp = callback3();
-  const items = [tmp.sheetRow, ];
+  const items = [tmp.sheetRow];
   let sheetRowHighlighted = null;
   if (highlighted) {
     sheetRowHighlighted = tmp.sheetRowHighlighted;
@@ -73,7 +78,7 @@ function SheetRow(hasArrow) {
   let obj = { style: items, children: null };
   items[1] = sheetRowHighlighted;
   obj = { size: "sm", color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  const items1 = [callback(icon, obj), , ];
+  const items1 = [callback(icon, obj), ,];
   obj = { variant: "text-sm/medium", color: "text-default", style: tmp.sheetRowLabel, children: label };
   items1[1] = callback(Text.Text, obj);
   let tmp5Result = null;
@@ -89,8 +94,30 @@ function SheetRow(hasArrow) {
 ({ Image: c3, ScrollView: c4, View: c5 } = get_ActivityIndicator);
 const ACTION_SHEET_BORDER_RADIUS = ACTION_SHEET_START_HEIGHT_RATIO.ACTION_SHEET_BORDER_RADIUS;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { scrollView: { flex: 1 }, pageContainer: null, container: null, upsellImage: null, textContainer: null, text: null, demo: null, messages: null, avatar: null, messageLines: null, sheet: null, grabber: null, sheetRow: null, sheetRowHighlighted: null, sheetRowLabel: null };
-obj = { flexGrow: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_32, paddingBottom: ThemesDefault.space.PX_32 };
+let obj = {
+  scrollView: { flex: 1 },
+  pageContainer: null,
+  container: null,
+  upsellImage: null,
+  textContainer: null,
+  text: null,
+  demo: null,
+  messages: null,
+  avatar: null,
+  messageLines: null,
+  sheet: null,
+  grabber: null,
+  sheetRow: null,
+  sheetRowHighlighted: null,
+  sheetRowLabel: null,
+};
+obj = {
+  flexGrow: 1,
+  justifyContent: "center",
+  alignItems: "center",
+  paddingHorizontal: ThemesDefault.space.PX_32,
+  paddingBottom: ThemesDefault.space.PX_32,
+};
 obj[1] = obj;
 obj[2] = { alignItems: "center" };
 obj[3] = { width: 180, height: 144, marginBottom: ThemesDefault.space.PX_16 };
@@ -98,20 +125,80 @@ let obj1 = { width: 180, height: 144, marginBottom: ThemesDefault.space.PX_16 };
 obj[4] = { gap: ThemesDefault.space.PX_8 };
 obj[5] = { textAlign: "center" };
 let obj2 = { gap: ThemesDefault.space.PX_8 };
-obj[6] = { alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_NORMAL, borderRadius: ThemesDefault.radii.md, borderWidth: 1, marginTop: ThemesDefault.space.PX_24, overflow: "hidden" };
-let obj3 = { alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_NORMAL, borderRadius: ThemesDefault.radii.md, borderWidth: 1, marginTop: ThemesDefault.space.PX_24, overflow: "hidden" };
+obj[6] = {
+  alignSelf: "stretch",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderColor: ThemesDefault.colors.BORDER_NORMAL,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 1,
+  marginTop: ThemesDefault.space.PX_24,
+  overflow: "hidden",
+};
+let obj3 = {
+  alignSelf: "stretch",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderColor: ThemesDefault.colors.BORDER_NORMAL,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 1,
+  marginTop: ThemesDefault.space.PX_24,
+  overflow: "hidden",
+};
 obj[7] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_12 };
 let obj4 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_12 };
 obj[8] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round };
 let obj5 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round };
 obj[9] = { flex: 1, gap: ThemesDefault.space.PX_4 };
 let obj6 = { flex: 1, gap: ThemesDefault.space.PX_4 };
-obj[10] = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, marginInline: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8 };
-let obj7 = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, marginInline: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8 };
-obj[11] = { alignSelf: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.round, height: 4, marginVertical: ThemesDefault.space.PX_8, width: 36 };
-const obj8 = { alignSelf: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.round, height: 4, marginVertical: ThemesDefault.space.PX_8, width: 36 };
-obj[12] = { alignItems: "center", borderRadius: ThemesDefault.radii.sm, flexDirection: "row", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_12 };
-let obj9 = { alignItems: "center", borderRadius: ThemesDefault.radii.sm, flexDirection: "row", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_12 };
+obj[10] = {
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS,
+  borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS,
+  marginInline: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_8,
+  paddingBottom: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+};
+let obj7 = {
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS,
+  borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS,
+  marginInline: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_8,
+  paddingBottom: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+};
+obj[11] = {
+  alignSelf: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  borderRadius: ThemesDefault.radii.round,
+  height: 4,
+  marginVertical: ThemesDefault.space.PX_8,
+  width: 36,
+};
+const obj8 = {
+  alignSelf: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  borderRadius: ThemesDefault.radii.round,
+  height: 4,
+  marginVertical: ThemesDefault.space.PX_8,
+  width: 36,
+};
+obj[12] = {
+  alignItems: "center",
+  borderRadius: ThemesDefault.radii.sm,
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_12,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  paddingVertical: ThemesDefault.space.PX_12,
+};
+let obj9 = {
+  alignItems: "center",
+  borderRadius: ThemesDefault.radii.sm,
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_12,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  paddingVertical: ThemesDefault.space.PX_12,
+};
 obj[13] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj[14] = { flex: 1 };
 let closure_8 = createCacheKey.createStyles(obj);
@@ -124,14 +211,25 @@ export default function ForLaterIntro(type) {
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
   obj = { source: importDefault(tmp4 ? 12952 : 12953), style: tmp.upsellImage };
-  const items = [closure_6(closure_3, obj), , ];
+  const items = [closure_6(closure_3, obj), ,];
   obj1 = { style: tmp.textContainer, children: null };
-  const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  const obj2 = {
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    style: tmp.text,
+    children: null,
+  };
   const intl = tmp2(1236).intl;
   const t = tmp2(1236).t;
   obj2[3] = intl.string(tmp4 ? t["5Iw19e"] : t["93WOd1"]);
-  const items1 = [closure_6(Text.Heading, obj2), ];
-  const obj3 = { variant: "text-sm/medium", color: "text-default", style: tmp.text, includeFontPadding: true, children: null };
+  const items1 = [closure_6(Text.Heading, obj2)];
+  const obj3 = {
+    variant: "text-sm/medium",
+    color: "text-default",
+    style: tmp.text,
+    includeFontPadding: true,
+    children: null,
+  };
   const intl2 = tmp2(1236).intl;
   const t2 = tmp2(1236).t;
   const intl3 = tmp2(1236).intl;
@@ -144,4 +242,4 @@ export default function ForLaterIntro(type) {
   obj[1] = items;
   obj[2] = closure_7(closure_5, obj);
   return closure_6(closure_4, obj);
-};
+}

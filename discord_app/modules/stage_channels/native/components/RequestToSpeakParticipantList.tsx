@@ -16,22 +16,34 @@ function RequestToSpeakParticipant(participant) {
   let obj = { style: tmp.participantItemContainer, children: null };
   obj = {
     onPress() {
-      channel(analyticsLocations[8])({ userId: participant.user.id, channelId: channel.id, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
+      channel(analyticsLocations[8])({
+        userId: participant.user.id,
+        channelId: channel.id,
+        isVoiceContext: true,
+        sourceAnalyticsLocations: analyticsLocations,
+      });
     },
     accessibilityLabel: null,
     accessibilityRole: "button",
     style: null,
-    children: null
+    children: null,
   };
-  const items = [participant.user.username, ];
+  const items = [participant.user.username];
   let obj2 = participant(analyticsLocations[9]);
   items[1] = obj2.participantMemberInfo(participant);
   obj[1] = items.join(", ");
   obj[3] = tmp.touchableContainer;
-  obj = { style: tmp.participantAvatarContainer, children: callback(participant(analyticsLocations[10]).Avatar, { user: participant.user, guildId: channel.guild_id, size: participant(analyticsLocations[10]).AvatarSizes.NORMAL }) };
-  const items1 = [callback(View, obj), ];
+  obj = {
+    style: tmp.participantAvatarContainer,
+    children: callback(participant(analyticsLocations[10]).Avatar, {
+      user: participant.user,
+      guildId: channel.guild_id,
+      size: participant(analyticsLocations[10]).AvatarSizes.NORMAL,
+    }),
+  };
+  const items1 = [callback(View, obj)];
   obj2 = { style: tmp.participantNameplateContainer, children: null };
-  const items2 = [tmp.participantNameplateText, ];
+  const items2 = [tmp.participantNameplateText];
   const member = participant.member;
   let colorString;
   if (member != null) {
@@ -41,16 +53,26 @@ function RequestToSpeakParticipant(participant) {
     colorString = tmp.participantNameplateText.color;
   }
   items2[1] = { color: colorString };
-  const items3 = [callback(participant(analyticsLocations[10]).LegacyText, { style: items2, numberOfLines: 1, children: participant.user.username }), ];
+  const items3 = [
+    callback(participant(analyticsLocations[10]).LegacyText, {
+      style: items2,
+      numberOfLines: 1,
+      children: participant.user.username,
+    }),
+  ];
   const obj4 = { variant: "text-xs/medium", color: "text-default", children: null };
-  obj1 = { user: participant.user, guildId: channel.guild_id, size: participant(analyticsLocations[10]).AvatarSizes.NORMAL };
+  obj1 = {
+    user: participant.user,
+    guildId: channel.guild_id,
+    size: participant(analyticsLocations[10]).AvatarSizes.NORMAL,
+  };
   const obj3 = { style: items2, numberOfLines: 1, children: participant.user.username };
   obj4[2] = participant(analyticsLocations[9]).participantMemberInfo(participant);
   items3[1] = callback(participant(analyticsLocations[11]).Text, obj4);
   obj2[1] = items3;
   items1[1] = closure_5(View, obj2);
   obj[4] = items1;
-  const items4 = [closure_5(participant(analyticsLocations[7]).PressableOpacity, obj), ];
+  const items4 = [closure_5(participant(analyticsLocations[7]).PressableOpacity, obj)];
   const obj5 = { style: tmp.participantActionContainer, children: null };
   const obj6 = { accessibilityLabel: null, containerStyle: null, source: null, onPress: null, disabled: null };
   let tmp2Result = tmp2(tmp3[12]);
@@ -59,8 +81,10 @@ function RequestToSpeakParticipant(participant) {
   obj6[1] = tmp.participantActionIcon;
   obj6[2] = channel(analyticsLocations[14]);
   obj6[3] = onGrantRequest;
-  obj6[4] = participant.rtsState === participant(analyticsLocations[15]).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-  const items5 = [callback(tmp2Result, obj6), ];
+  obj6[4] =
+    participant.rtsState ===
+    participant(analyticsLocations[15]).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+  const items5 = [callback(tmp2Result, obj6)];
   const obj7 = { accessibilityLabel: null, containerStyle: null, source: null, onPress: null };
   tmp2Result = tmp2(tmp3[12]);
   const intl2 = tmp6(tmp3[13]).intl;
@@ -76,8 +100,33 @@ function RequestToSpeakParticipant(participant) {
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { paddingVertical: 4, flexDirection: "column", minHeight: 288, flex: 1 }, listContainer: { paddingVertical: 4, flexDirection: "column", flex: 1 }, participantItemContainer: { padding: 12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, touchableContainer: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, participantAvatarContainer: { paddingLeft: 4 }, participantNameplateContainer: { paddingHorizontal: 16, flex: 1 }, participantNameplateText: null, participantActionContainer: null, participantActionIcon: null, emptyContainer: null, emptyParticipant: null, emptyTitle: null, emptyBody: null };
-createCacheKey = { fontSize: 16, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, marginTop: 0, marginBottom: 0, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey = {
+  container: { paddingVertical: 4, flexDirection: "column", minHeight: 288, flex: 1 },
+  listContainer: { paddingVertical: 4, flexDirection: "column", flex: 1 },
+  participantItemContainer: {
+    padding: 12,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  touchableContainer: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
+  participantAvatarContainer: { paddingLeft: 4 },
+  participantNameplateContainer: { paddingHorizontal: 16, flex: 1 },
+  participantNameplateText: null,
+  participantActionContainer: null,
+  participantActionIcon: null,
+  emptyContainer: null,
+  emptyParticipant: null,
+  emptyTitle: null,
+  emptyBody: null,
+};
+createCacheKey = {
+  fontSize: 16,
+  fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD,
+  marginTop: 0,
+  marginBottom: 0,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+};
 createCacheKey[6] = createCacheKey;
 createCacheKey[7] = { flexDirection: "row", paddingRight: 4 };
 createCacheKey[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
@@ -87,7 +136,9 @@ createCacheKey[11] = { textAlign: "center", marginTop: 16, marginBottom: 8 };
 createCacheKey[12] = { textAlign: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/RequestToSpeakParticipantList.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/components/RequestToSpeakParticipantList.tsx",
+);
 
 export default function RequestToSpeakParticipantList(channel) {
   channel = channel.channel;
@@ -104,8 +155,14 @@ export default function RequestToSpeakParticipantList(channel) {
     obj[0] = tmp.emptyContainer;
     obj1 = { source: null };
     obj1[0] = importDefault(tmp3[20]);
-    const items = [callback(importDefault(tmp3[19]), obj1), , ];
-    const obj2 = { style: null, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+    const items = [callback(importDefault(tmp3[19]), obj1), ,];
+    const obj2 = {
+      style: null,
+      accessibilityRole: "header",
+      variant: "heading-lg/extrabold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj2[0] = tmp.emptyTitle;
     const intl = tmp2(tmp3[13]).intl;
     obj2[4] = intl.string(tmp2(tmp3[13]).t["7R24mX"]);
@@ -121,7 +178,7 @@ export default function RequestToSpeakParticipantList(channel) {
     const tmp11 = importDefault(tmp3[19]);
   } else {
     const obj4 = { style: null, itemSize: 64, renderItem: null, keyboardShouldPersistTaps: "always", sections: null };
-    const items1 = [tmp.listContainer, ];
+    const items1 = [tmp.listContainer];
     const obj5 = { height: null };
     obj5[0] = channel.height;
     items1[1] = obj5;
@@ -151,4 +208,4 @@ export default function RequestToSpeakParticipantList(channel) {
     tmp6 = callback(importDefault(tmp3[21]), obj4);
   }
   return tmp6;
-};
+}

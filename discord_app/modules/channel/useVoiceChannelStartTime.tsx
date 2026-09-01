@@ -11,14 +11,24 @@ const result = require("set").fileFinishedImporting("modules/channel/useVoiceCha
 export const useStartTime = function useStartTime(channel) {
   const _require = channel;
   const items = [closure_5, closure_4];
-  const stateFromStoresObject = _require(hasRequestedStartTimes[5]).useStateFromStoresObject(items, () => ({ hasRequestedStartTimes: closure_1_5.hasRequestedStartTimes(channel.guild_id), startTime: closure_1_5.getStartTime(channel), isGuildUnavailable: unavailable.isUnavailable(channel.guild_id) }));
+  const stateFromStoresObject = _require(hasRequestedStartTimes[5]).useStateFromStoresObject(items, () => ({
+    hasRequestedStartTimes: closure_1_5.hasRequestedStartTimes(channel.guild_id),
+    startTime: closure_1_5.getStartTime(channel),
+    isGuildUnavailable: unavailable.isUnavailable(channel.guild_id),
+  }));
   hasRequestedStartTimes = stateFromStoresObject.hasRequestedStartTimes;
   const isGuildUnavailable = stateFromStoresObject.isGuildUnavailable;
   let obj = _require(hasRequestedStartTimes[5]);
   const items1 = [stateFromStores];
   stateFromStores = _require(hasRequestedStartTimes[5]).useStateFromStores(items1, () => stateFromStores.isConnected());
   closure_4 = tmp3;
-  const items2 = [channel.type === ChannelTypes.GUILD_VOICE, channel.guild_id, hasRequestedStartTimes, isGuildUnavailable, stateFromStores];
+  const items2 = [
+    channel.type === ChannelTypes.GUILD_VOICE,
+    channel.guild_id,
+    hasRequestedStartTimes,
+    isGuildUnavailable,
+    stateFromStores,
+  ];
   const effect = isGuildUnavailable.useEffect(() => {
     let tmp = !hasRequestedStartTimes;
     if (!hasRequestedStartTimes) {

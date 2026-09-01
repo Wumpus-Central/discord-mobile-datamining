@@ -19,7 +19,15 @@ import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 require = arg1;
 function serializePurchaseResponse(originalTransactionDate) {
   _modDef38(null != originalTransactionDate.transactionId, "should have transactionId");
-  const obj = { originalTransactionDate: originalTransactionDate.originalTransactionDateIOS, originalTransactionIdentifier: null, transactionDate: null, transactionIdentifier: null, productIdentifier: null, transactionReceipt: null, jwsRepresentation: null };
+  const obj = {
+    originalTransactionDate: originalTransactionDate.originalTransactionDateIOS,
+    originalTransactionIdentifier: null,
+    transactionDate: null,
+    transactionIdentifier: null,
+    productIdentifier: null,
+    transactionReceipt: null,
+    jwsRepresentation: null,
+  };
   let parsed;
   if (null != originalTransactionDate.originalTransactionIdentifierIOS) {
     const _parseInt = parseInt;
@@ -40,7 +48,7 @@ function _restorePurchases() {
     closure_0 = arg0;
     c7 = 0;
     c8 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -161,7 +169,15 @@ function _restorePurchases() {
                 callback2 = map(arg1, (originalPurchase) => {
                   let obj = { originalPurchase, purchaseResponse: null };
                   callback(closure_3[10])(null != originalPurchase.transactionId, "should have transactionId");
-                  obj = { originalTransactionDate: originalPurchase.originalTransactionDateIOS, originalTransactionIdentifier: null, transactionDate: null, transactionIdentifier: null, productIdentifier: null, transactionReceipt: null, jwsRepresentation: null };
+                  obj = {
+                    originalTransactionDate: originalPurchase.originalTransactionDateIOS,
+                    originalTransactionIdentifier: null,
+                    transactionDate: null,
+                    transactionIdentifier: null,
+                    productIdentifier: null,
+                    transactionReceipt: null,
+                    jwsRepresentation: null,
+                  };
                   let parsed;
                   if (null != originalPurchase.originalTransactionIdentifierIOS) {
                     const _parseInt = parseInt;
@@ -170,7 +186,11 @@ function _restorePurchases() {
                   obj[1] = parsed;
                   obj[2] = originalPurchase.transactionDate;
                   obj[3] = parseInt(originalPurchase.transactionId);
-                  ({ productId: obj2[4], transactionReceipt: obj2[5], verificationResultIOS: obj2[6] } = originalPurchase);
+                  ({
+                    productId: obj2[4],
+                    transactionReceipt: obj2[5],
+                    verificationResultIOS: obj2[6],
+                  } = originalPurchase);
                   obj[1] = obj;
                   return obj;
                 });
@@ -190,7 +210,15 @@ function _restorePurchases() {
               }).map((originalPurchase) => {
                 let obj = { originalPurchase, purchaseResponse: null };
                 callback(closure_3[10])(null != originalPurchase.transactionId, "should have transactionId");
-                obj = { originalTransactionDate: originalPurchase.originalTransactionDateIOS, originalTransactionIdentifier: null, transactionDate: null, transactionIdentifier: null, productIdentifier: null, transactionReceipt: null, jwsRepresentation: null };
+                obj = {
+                  originalTransactionDate: originalPurchase.originalTransactionDateIOS,
+                  originalTransactionIdentifier: null,
+                  transactionDate: null,
+                  transactionIdentifier: null,
+                  productIdentifier: null,
+                  transactionReceipt: null,
+                  jwsRepresentation: null,
+                };
                 let parsed;
                 if (null != originalPurchase.originalTransactionIdentifierIOS) {
                   const _parseInt = parseInt;
@@ -199,7 +227,11 @@ function _restorePurchases() {
                 obj[1] = parsed;
                 obj[2] = originalPurchase.transactionDate;
                 obj[3] = parseInt(originalPurchase.transactionId);
-                ({ productId: obj2[4], transactionReceipt: obj2[5], verificationResultIOS: obj2[6] } = originalPurchase);
+                ({
+                  productId: obj2[4],
+                  transactionReceipt: obj2[5],
+                  verificationResultIOS: obj2[6],
+                } = originalPurchase);
                 obj[1] = obj;
                 return obj;
               });
@@ -263,7 +295,7 @@ function remapStorefront(countryCode) {
 }
 function _fetchStoreFront() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -351,14 +383,17 @@ function _fetchStoreFront() {
 }
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = ME);
 ({ InAppUtils: unpackModuleId, RNIapIosSk2: closure_12 } = require("get ActivityIndicator").NativeModules);
-let items = [require("../../../_runtime/metro/10795__.js").ErrorCode.E_USER_CANCELLED, ME.StoreKitErrors.PAYMENT_CANCELED];
+let items = [
+  require("../../../_runtime/metro/10795__.js").ErrorCode.E_USER_CANCELLED,
+  ME.StoreKitErrors.PAYMENT_CANCELED,
+];
 let set = new Set(items);
 new timestampDefault("IAPUtils.tsx");
 let _default = {
   loadProducts() {
     if (obj.isIOS()) {
       const _Object = Object;
-      let items = [productSK2ToIAPProductDefault.fetchSubscriptions(Object.values(tmp(6087).ProductIds)), ];
+      let items = [productSK2ToIAPProductDefault.fetchSubscriptions(Object.values(tmp(6087).ProductIds))];
       const obj2 = productSK2ToIAPProductDefault;
       const _Object2 = Object;
       items[1] = productSK2ToIAPProductDefault.fetchProducts(Object.values(tmp(6087).ProductIds));
@@ -395,7 +430,7 @@ let _default = {
       c6 = 0;
       c7 = 0;
       c5 = 0;
-      return (function*(arg0, arg1) {
+      return (function* (arg0, arg1) {
         if (c7 === 2) {
           c7 = 3;
           HermesBuiltin.throwTypeError();
@@ -499,7 +534,7 @@ let _default = {
         }
       })();
     });
-    return new Promise(function() {
+    return new Promise(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -543,7 +578,7 @@ let _default = {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  }
+  },
 };
 set = set.isIOS();
 if (set) {
@@ -599,7 +634,7 @@ export const makeIAPRequest = function makeIAPRequest(c1, arg1, closure_3) {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -633,7 +668,13 @@ export const makeIAPRequest = function makeIAPRequest(c1, arg1, closure_3) {
               if (null != currentUser) {
                 c5 = 1;
                 let obj3 = callback(closure_2_3[8]);
-                obj1 = { requestJSONString: null, sku: null, appAccountToken: null, andDangerouslyFinishTransactionAutomaticallyIOS: false, useACOM: null };
+                obj1 = {
+                  requestJSONString: null,
+                  sku: null,
+                  appAccountToken: null,
+                  andDangerouslyFinishTransactionAutomaticallyIOS: false,
+                  useACOM: null,
+                };
                 obj1[0] = callback;
                 obj1[1] = callback2;
                 obj1[2] = closure_2_15(currentUser.id);
@@ -703,7 +744,7 @@ export const makeIAPRequest = function makeIAPRequest(c1, arg1, closure_3) {
       }
     })();
   });
-  return new Promise(function() {
+  return new Promise(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

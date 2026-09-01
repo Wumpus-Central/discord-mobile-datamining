@@ -8,5 +8,5 @@ const result = set.fileFinishedImporting("modules/color_picker/native/showCustom
 
 export default function showCustomColorPickerActionSheet(arg0, arg1) {
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14250, dependencyMap.paths), CustomColorPicker, arg0, arg1);
-};
+}
 export const CUSTOM_COLOR_PICKER_KEY = "CustomColorPicker";

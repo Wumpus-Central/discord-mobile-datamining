@@ -7,8 +7,7 @@ import closure_2 from "GuildStore.tsx";
 require = arg1;
 let closure_3 = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };
 const PersistedStore = initializeDefault.PersistedStore;
-class GuildAffinitiesStore extends PersistedStore {
-}
+class GuildAffinitiesStore extends PersistedStore {}
 const prototype = GuildAffinitiesStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
@@ -26,13 +25,13 @@ Object.defineProperty(prototype, "affinities", {
   get: function affinities() {
     return closure_3.guildAffinities;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasRequestResolved", {
   get: function hasRequestResolved() {
     return 0 !== closure_3.lastFetched;
   },
-  set: undefined
+  set: undefined,
 });
 GuildAffinitiesStore.displayName = "GuildAffinitiesStore";
 GuildAffinitiesStore.persistKey = "GuildAffinitiesStore";
@@ -59,7 +58,7 @@ const guildAffinitiesStore = new GuildAffinitiesStore(dispatcherDefault, {
   },
   LOGOUT: function handleLogout() {
     closure_3 = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/GuildAffinitiesStore.tsx");
 

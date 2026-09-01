@@ -50,7 +50,7 @@ class VoiceProcessingOptions {
       intl4 = require("getSystemLocale").intl;
       obj2[1] = intl4.string(require("getSystemLocale").t.rdoNzt);
       obj2[2] = noiseCancellationDeferredToSystem;
-      items1 = [, , ];
+      items1 = [, ,];
       items1[0] = jsx(require("TableRadioRow").TableRadioRow, obj2);
       obj3 = { disabled: null, value: null, label: null };
       obj3[0] = noiseCancellationDeferredToSystem;
@@ -65,7 +65,7 @@ class VoiceProcessingOptions {
       obj4[2] = intl6.string(require("getSystemLocale").t.wkYAlz);
       items1[2] = jsx(require("TableRadioRow").TableRadioRow, obj4);
       obj1[4] = items1;
-      items2 = [, ];
+      items2 = [,];
       items2[0] = jsxs(require("context").TableRadioGroup, obj1);
       obj5 = { style: null, children: null };
       obj5[0] = krisp.optionsDescriptionContainer;
@@ -84,7 +84,7 @@ class VoiceProcessingOptions {
       }
       obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
       obj7[2] = formatResult;
-      items3 = [, ];
+      items3 = [,];
       items3[0] = tmp8(Text, obj7);
       obj8 = { style: null, children: null };
       krisp = krisp.krisp;
@@ -107,10 +107,13 @@ class VoiceProcessingOptions {
       obj10[0] = intl.string(require("getSystemLocale").t.t8Qhib);
       intl2 = require("getSystemLocale").intl;
       obj10[1] = intl2.string(require("getSystemLocale").t.najZCV);
-      obj10[2] = selectedNoiseSuppressionOption === require("handleAutomaticGainControlChange").NoiseSuppressionOpt.STANDARD;
+      obj10[2] =
+        selectedNoiseSuppressionOption === require("handleAutomaticGainControlChange").NoiseSuppressionOpt.STANDARD;
       obj10[3] = function onValueChange(arg0) {
         const NoiseSuppressionOpt = callback(10076).NoiseSuppressionOpt;
-        return callback(10076).handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
+        return callback(10076).handleNoiseSuppressionChange(
+          arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE,
+        );
       };
       obj9[1] = jsx(require("TableSwitchRow").TableSwitchRow, obj10);
       return jsx(require("UserSettingsVoice").UserSettingsTableRowGroup, obj9);
@@ -130,7 +133,13 @@ let result = require("set").fileFinishedImporting("modules/user_settings/voice/n
 export default function UserSettingsVoiceProcessing() {
   let obj = initialize;
   const items = [closure_4];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ echoCancellation: store.getEchoCancellation(), advancedVoiceActivitySupported: store.isAdvancedVoiceActivitySupported(), automaticGainControl: store.getAutomaticGainControl(), inputMode: store.getMode(), vadUseKrisp: store.getModeOptions().vadUseKrisp }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    echoCancellation: store.getEchoCancellation(),
+    advancedVoiceActivitySupported: store.isAdvancedVoiceActivitySupported(),
+    automaticGainControl: store.getAutomaticGainControl(),
+    inputMode: store.getMode(),
+    vadUseKrisp: store.getModeOptions().vadUseKrisp,
+  }));
   ({ advancedVoiceActivitySupported, inputMode: require } = stateFromStoresObject);
   ({ echoCancellation, automaticGainControl, vadUseKrisp } = stateFromStoresObject);
   obj = { title: null, hasIcons: false, children: null };
@@ -142,7 +151,7 @@ export default function UserSettingsVoiceProcessing() {
   obj[1] = echoCancellation;
   obj[2] = handleAutomaticGainControlChange.handleEchoCancellationChange;
   obj[2] = callback(TableSwitchRow.TableSwitchRow, obj);
-  const items1 = [callback(UserSettingsVoice.UserSettingsTableRowGroup, obj), callback(VoiceProcessingOptions, {}), ];
+  const items1 = [callback(UserSettingsVoice.UserSettingsTableRowGroup, obj), callback(VoiceProcessingOptions, {})];
   obj1 = { label: null, subLabel: null, value: null, onValueChange: null };
   const intl3 = getSystemLocale.intl;
   obj1[0] = intl3.string(getSystemLocale.t.cUMdH0);
@@ -150,7 +159,7 @@ export default function UserSettingsVoiceProcessing() {
   obj1[1] = intl4.string(getSystemLocale.t["6EjbvA"]);
   obj1[2] = automaticGainControl;
   obj1[3] = handleAutomaticGainControlChange.handleAutomaticGainControlChange;
-  const items2 = [callback(TableSwitchRow.TableSwitchRow, obj1), ];
+  const items2 = [callback(TableSwitchRow.TableSwitchRow, obj1)];
   if (advancedVoiceActivitySupported) {
     const obj2 = { label: null, subLabel: null, value: null, onValueChange: null };
     const intl5 = tmp(1236).intl;
@@ -170,5 +179,5 @@ export default function UserSettingsVoiceProcessing() {
   items1[2] = closure_6(UserSettingsVoice.UserSettingsTableRowGroup, { hasIcons: false, children: items2 });
   obj3[0] = items1;
   return closure_6(closure_7, obj3);
-};
+}
 export { VoiceProcessingOptions };

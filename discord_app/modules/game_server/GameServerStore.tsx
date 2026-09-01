@@ -29,8 +29,7 @@ let c2 = 86400000;
 let closure_3 = {};
 let closure_4 = { catalog: {}, hasFetchedCatalog: false, catalogLastFetchedAt: "r" };
 const PersistedStore = initializeDefault.PersistedStore;
-class GameServerStore extends PersistedStore {
-}
+class GameServerStore extends PersistedStore {}
 const prototype = GameServerStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
@@ -71,7 +70,10 @@ prototype["getLowestGameCostForGuild"] = function getLowestGameCostForGuild(clos
     if (0 !== values.length) {
       const _Math = Math;
       const items = [];
-      HermesBuiltin.arraySpread(values.map((baseCost) => baseCost.baseCost), 0);
+      HermesBuiltin.arraySpread(
+        values.map((baseCost) => baseCost.baseCost),
+        0,
+      );
       const _Math2 = Math;
       applyResult = HermesBuiltin.apply(items, Math);
     }
@@ -354,7 +356,7 @@ const gameServerStore = new GameServerStore(dispatcherDefault, {
     const merged1 = Object.assign(tmp2);
     obj.appliedBoosts = reduced;
     obj[guildId] = obj;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/game_server/GameServerStore.tsx");
 

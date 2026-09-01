@@ -71,7 +71,16 @@ function GuildSearchAndInvite(guildId) {
   const memo = onInvitePress.useMemo(() => {
     let tmp = null;
     if (canInvite) {
-      const obj = { variant: "secondary", size: "sm", icon: null, onPress: null, onPressDisabled: null, accessibilityLabel: null, disabled: null, maxFontSizeMultiplier: 2 };
+      const obj = {
+        variant: "secondary",
+        size: "sm",
+        icon: null,
+        onPress: null,
+        onPressDisabled: null,
+        accessibilityLabel: null,
+        disabled: null,
+        maxFontSizeMultiplier: 2,
+      };
       obj[2] = canInvite(invitesDisabled[21]);
       obj[3] = onInvitePress;
       obj[4] = closure_1_15;
@@ -84,7 +93,16 @@ function GuildSearchAndInvite(guildId) {
   }, items);
   obj = { style: tmp.container, children: null };
   if (useButtonComponent) {
-    obj = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: null, onPress: null, text: null, maxFontSizeMultiplier: 2 };
+    obj = {
+      variant: "secondary",
+      grow: true,
+      shrink: true,
+      size: "sm",
+      icon: null,
+      onPress: null,
+      text: null,
+      maxFontSizeMultiplier: 2,
+    };
     obj[4] = tmp4(tmp3[25]);
     obj[5] = tmp5;
     let intl2 = tmp2(tmp3[22]).intl;
@@ -101,10 +119,17 @@ function GuildSearchAndInvite(guildId) {
     obj2[1] = onPressIn;
     obj2[2] = onPressOut;
     obj1[1] = tmp11(tmp2(tmp3[27]).SearchButtonContent, obj2);
-    const items4 = [tmp11(tmp4(tmp3[26]).View, obj1), ];
+    const items4 = [tmp11(tmp4(tmp3[26]).View, obj1)];
     let tmp11Result = null;
     if (canInvite) {
-      const obj3 = { variant: "tertiary", icon: null, onPress: null, onPressDisabled: null, accessibilityLabel: null, disabled: null };
+      const obj3 = {
+        variant: "tertiary",
+        icon: null,
+        onPress: null,
+        onPressDisabled: null,
+        accessibilityLabel: null,
+        disabled: null,
+      };
       obj3[1] = tmp4(tmp3[21]);
       obj3[2] = onInvitePress;
       obj3[3] = handleInviteDisabledPress;
@@ -123,14 +148,27 @@ let c3 = importAllResult;
 ({ GuildFeatures: c10, InstantInviteSources: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = createCacheKey.createStyles((arg0) => {
-  let obj = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: SEARCH_BAR_MARGIN_BOTTOM, flexDirection: "row", gap: null };
+  let obj = {
+    paddingHorizontal: ThemesDefault.space.PX_16,
+    marginBottom: SEARCH_BAR_MARGIN_BOTTOM,
+    flexDirection: "row",
+    gap: null,
+  };
   let num = 10;
   if (arg0) {
     num = tmp(712).space.PX_12;
   }
   obj = { container: obj, search: { flex: 1 }, badge: null };
   obj[3] = num;
-  obj = { position: "absolute", right: 0, top: 0, width: 8, height: 8, borderRadius: tmp(712).radii.round, backgroundColor: tmp(712).colors.BACKGROUND_BRAND };
+  obj = {
+    position: "absolute",
+    right: 0,
+    top: 0,
+    width: 8,
+    height: 8,
+    borderRadius: tmp(712).radii.round,
+    backgroundColor: tmp(712).colors.BACKGROUND_BRAND,
+  };
   obj[2] = obj;
   return obj;
 });
@@ -147,19 +185,38 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
   let obj = guild(589);
   const items = [closure_6];
   const items1 = [guild];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    const channels = closure_1_6.getChannels(guild.id);
-    return guild(closure_1_2[29]).shouldRenderInvite(channels, guild);
-  }, items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      const channels = closure_1_6.getChannels(guild.id);
+      return guild(closure_1_2[29]).shouldRenderInvite(channels, guild);
+    },
+    items1,
+  );
   const tmp2 = setDefault(() => {
     const channelId = closure_1_8.getChannelId(guild.id);
     const channels = closure_1_6.getChannels(guild.id);
-    const result = guild(closure_1_2[30]).handleOpenInviteActionsheet(guild, channelId, channels, closure_1_11.GUILD_HEADER);
+    const result = guild(closure_1_2[30]).handleOpenInviteActionsheet(
+      guild,
+      channelId,
+      channels,
+      closure_1_11.GUILD_HEADER,
+    );
   });
   const shouldShowInvitesDisabledNotif = guild(11940).useShouldShowInvitesDisabledNotif(guild);
   const obj2 = guild(11940);
   const tmp5 = useEventsButtonPropsDefault(guild);
-  obj = { guildId: guild.id, canInvite: stateFromStores, invitesDisabled: shouldShowInvitesDisabledNotif, onInvitePress: tmp2, onEventsPress: tmp5.handlePress, onEventsLongPress: tmp5.handleLongPress, hasUnreadEvents: tmp5.hasUnread, useEventsButton: null, useButtonComponent: null };
+  obj = {
+    guildId: guild.id,
+    canInvite: stateFromStores,
+    invitesDisabled: shouldShowInvitesDisabledNotif,
+    onInvitePress: tmp2,
+    onEventsPress: tmp5.handlePress,
+    onEventsLongPress: tmp5.handleLongPress,
+    hasUnreadEvents: tmp5.hasUnread,
+    useEventsButton: null,
+    useButtonComponent: null,
+  };
   if (flag2) {
     flag2 = tmp4;
   }

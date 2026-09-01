@@ -21,7 +21,7 @@ function _startAudioRecording() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -60,7 +60,13 @@ function _startAudioRecording() {
               const _performance2 = performance;
               closure_1 = performance.now();
               const mediaEngine1 = store.getMediaEngine();
-              obj1 = { echoCancellation: null, echoCancellationPreEcho: false, noiseSuppression: null, automaticGainControlConfig: null, noiseCancellation: null };
+              obj1 = {
+                echoCancellation: null,
+                echoCancellationPreEcho: false,
+                noiseSuppression: null,
+                automaticGainControlConfig: null,
+                noiseCancellation: null,
+              };
               obj1[0] = store.getEchoCancellation();
               obj1[2] = store.getNoiseSuppression();
               const obj2 = { enabled: null };
@@ -156,7 +162,7 @@ function stopAndGetAudioRecording() {
 }
 function _endAudioRecording() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -249,7 +255,7 @@ function stopAndCacheAudioRecording() {
 }
 function _stopAndCacheAudioRecording() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -316,8 +322,23 @@ function _stopAndCacheAudioRecording() {
   }
   return applyArgumentsResult;
 }
-({ addVoiceMessageWave: c5, resetVoiceMessageState: closure_6, setSavedVoiceMessageUploadData: error, setVoiceMessageRecordingId: closure_8, setVoiceMessageRecordingState: c9, setVoiceMessageStartTimeMillis: c10, useVoiceMessagesUIStore: unpackModuleId, VoiceMessageRecordingStatus: closure_12 } = VoiceMessageRecordingStatus);
-({ WAVEFORM_WAVE_MAX_VALUE: map1, VOICE_RECORDING_MIN_DB: closure_14, VOICE_RECORDING_MAX_DB: closure_15, WAVEFORM_MAX_SAMPLES: closure_16, VOICE_RECORDING_MAX_DURATION_MILLIS: closure_17 } = VoiceMessageAnimationState);
+({
+  addVoiceMessageWave: c5,
+  resetVoiceMessageState: closure_6,
+  setSavedVoiceMessageUploadData: error,
+  setVoiceMessageRecordingId: closure_8,
+  setVoiceMessageRecordingState: c9,
+  setVoiceMessageStartTimeMillis: c10,
+  useVoiceMessagesUIStore: unpackModuleId,
+  VoiceMessageRecordingStatus: closure_12,
+} = VoiceMessageRecordingStatus);
+({
+  WAVEFORM_WAVE_MAX_VALUE: map1,
+  VOICE_RECORDING_MIN_DB: closure_14,
+  VOICE_RECORDING_MAX_DB: closure_15,
+  WAVEFORM_MAX_SAMPLES: closure_16,
+  VOICE_RECORDING_MAX_DURATION_MILLIS: closure_17,
+} = VoiceMessageAnimationState);
 let c19 = null;
 let closure_20 = new timestampDefault("VoiceMessages");
 const tmp4 = new timestampDefault("VoiceMessages");
@@ -370,7 +391,13 @@ export { stopAndCacheAudioRecording };
 export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(CANCELLED_DURATION, durationSecs, first) {
   if (null != first) {
     let obj = expandEventPropertiesDefault;
-    obj = { recording_start_timestamp: null, recording_stop_timestamp: null, duration_secs: null, result: null, initialize_secs: null };
+    obj = {
+      recording_start_timestamp: null,
+      recording_stop_timestamp: null,
+      duration_secs: null,
+      result: null,
+      initialize_secs: null,
+    };
     obj[0] = first;
     const _Date = Date;
     obj[1] = Date.now();
@@ -385,5 +412,7 @@ export const triggerHaptic = function triggerHaptic() {
   const obj = HapticFeedbackTypes2;
   const obj2 = set;
   const HapticFeedbackTypes = HapticFeedbackTypes2.HapticFeedbackTypes;
-  const result = obj.triggerHapticFeedback(set.isAndroid() ? HapticFeedbackTypes.IMPACT_LIGHT : HapticFeedbackTypes.IMPACT_MEDIUM);
+  const result = obj.triggerHapticFeedback(
+    set.isAndroid() ? HapticFeedbackTypes.IMPACT_LIGHT : HapticFeedbackTypes.IMPACT_MEDIUM,
+  );
 };

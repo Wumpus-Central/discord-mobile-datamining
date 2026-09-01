@@ -9,7 +9,12 @@ import { ChannelFlags } from "../channel/ChannelConstants.tsx";
 
 require = arg1;
 function getCreationDefaultFormatter() {
-  const obj = { minutes: getSystemLocale.t.nFt9ck, hours: getSystemLocale.t.jzCewe, days: getSystemLocale.t.U4I0sw, month: null };
+  const obj = {
+    minutes: getSystemLocale.t.nFt9ck,
+    hours: getSystemLocale.t.jzCewe,
+    days: getSystemLocale.t.U4I0sw,
+    month: null,
+  };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["nBNJ/L"]);
   return obj;

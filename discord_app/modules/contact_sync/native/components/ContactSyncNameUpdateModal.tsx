@@ -34,7 +34,7 @@ function ContactSyncNameInputScreen() {
       c2 = 0;
       c4 = 0;
       c3 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         closure_1 = tmp3;
         callback(true);
         c3 = 1;
@@ -81,7 +81,7 @@ function ContactSyncNameInputScreen() {
       return onNext(null);
     },
     loading: tmp3[0],
-    initialName: null
+    initialName: null,
   };
   let str;
   let tmp = callback2();
@@ -99,14 +99,26 @@ function ContactSyncNameInputScreen() {
       return onNext(null);
     },
     loading: tmp3[0],
-    initialName: null
+    initialName: null,
   });
-  return <tmp5 onNext={onNext} onRemoveName={function onRemoveName(arg0) {
-    return onNext(null);
-  }} loading={tmp3[0]} initialName={null} />;
+  return (
+    <tmp5
+      onNext={onNext}
+      onRemoveName={function onRemoveName(arg0) {
+        return onNext(null);
+      }}
+      loading={tmp3[0]}
+      initialName={null}
+    />
+  );
 }
 createCacheKey = { container: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
+createCacheKey = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  justifyContent: "center",
+  paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32,
+};
 createCacheKey[0] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj1 = {};
@@ -117,12 +129,14 @@ let obj2 = {
   ignoreKeyboard: true,
   fullscreen: true,
   headerLeft: null,
-  title: ""
+  title: "",
 };
 obj2[3] = HeaderBackImage.getHeaderCloseButton(onClose);
 obj1[ContactSyncScenes.NAME_INPUT] = obj2;
-const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx",
+);
 
 export default function ContactSyncNameUpdateModal() {
   return jsx(NavigationStack.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj1 });
-};
+}

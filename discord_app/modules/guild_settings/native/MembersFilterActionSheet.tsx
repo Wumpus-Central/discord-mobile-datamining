@@ -72,8 +72,8 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
       ({ colorString: obj3[1], colorStrings: obj3[2] } = item);
       tmpResult = tmp(tmp2(tmp3[12]).RoleDot, obj);
     }
-    const items = [tmpResult, ];
-    const items1 = [labelContainer.label, ];
+    const items = [tmpResult];
+    const items1 = [labelContainer.label];
     let tmp10 = null;
     if (null != item.colorString) {
       tmp10 = null;
@@ -84,7 +84,11 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
       }
     }
     items1[1] = tmp10;
-    items[1] = closure_1_8(closure_1_0(onFilterRoleId[13]).Text, { variant: "text-md/medium", style: items1, children: item.name });
+    items[1] = closure_1_8(closure_1_0(onFilterRoleId[13]).Text, {
+      variant: "text-md/medium",
+      style: items1,
+      children: item.name,
+    });
     obj[1] = items;
     obj[1] = closure_1_9(callback, obj);
     obj[2] = function legacyCompat_onPress() {
@@ -106,8 +110,8 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
     renderItem: callback1,
     contentContainerStyle: tmp2.listView,
     initialNumToRender: 10,
-    removeClippedSubviews: false
+    removeClippedSubviews: false,
   };
   obj[2] = callback(require(onFilterRoleId[17]).BottomSheetFlatList, obj1);
   return callback(require(onFilterRoleId[14]).ActionSheet, obj);
-};
+}

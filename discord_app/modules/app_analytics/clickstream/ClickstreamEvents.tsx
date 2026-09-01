@@ -18,7 +18,14 @@ export const getClickstreamDrainEvent = function getClickstreamDrainEvent(first,
     obj[2] = arr.map((guild_id) => guild_id.guild_id);
     return obj;
   } else if (tmp2.FRIENDS_LIST_VIEWED_CLICKSTREAM === first) {
-    obj = { time_minus: null, rtc_states: null, tab_opened: null, num_friends: null, now_playing_visible: null, now_playing_num_cards: null };
+    obj = {
+      time_minus: null,
+      rtc_states: null,
+      tab_opened: null,
+      num_friends: null,
+      now_playing_visible: null,
+      now_playing_num_cards: null,
+    };
     obj[0] = arr.map((timestamp) => {
       timestamp = timestamp.timestamp;
       const time = date.getTime();
@@ -42,7 +49,13 @@ export const getClickstreamDrainEvent = function getClickstreamDrainEvent(first,
     obj1[3] = arr.map((channel_type) => channel_type.channel_type);
     return obj1;
   } else if (tmp2.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM === first) {
-    obj = { time_minus: null, rtc_states: null, load_duration_ms: null, were_messages_cached: null, is_first_load: null };
+    obj = {
+      time_minus: null,
+      rtc_states: null,
+      load_duration_ms: null,
+      were_messages_cached: null,
+      is_first_load: null,
+    };
     obj[0] = arr.map((timestamp) => {
       timestamp = timestamp.timestamp;
       const time = date.getTime();

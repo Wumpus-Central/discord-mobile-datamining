@@ -13,7 +13,9 @@ import ME from "../../../../Constants.tsx";
 
 const useContactSyncStore = setStoredContacts.useContactSyncStore;
 ({ PlatformTypes: closure_8, FriendDiscoveryFlags: c9 } = ME);
-const result = set.fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/getTrackFriendsListViewedData.native.tsx");
+const result = set.fileFinishedImporting(
+  "modules/app_analytics/track/friends_list_viewed/getTrackFriendsListViewedData.native.tsx",
+);
 
 export default function getTrackFriendsListViewedData() {
   localAccount = localAccount.getLocalAccount(constants.CONTACTS);
@@ -37,4 +39,4 @@ export default function getTrackFriendsListViewedData() {
   obj.is_discoverable_email = hasFlagResult1;
   obj.is_discoverable_phone = hasFlagResult;
   return obj;
-};
+}

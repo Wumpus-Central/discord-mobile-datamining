@@ -37,7 +37,7 @@ function YouScreenWidgetsBoardContainer(arg0) {
   const tmp = useSharedStylesDefault();
   const items = [tmp.card, { backgroundColor: containerBackground, borderColor: containerBorderColor, borderWidth: 1 }];
   let obj = { style: tmp.profileContent, children: null };
-  const items1 = [callback2(UserProfileWidgetsBoardEditNoticeDefault, {}), ];
+  const items1 = [callback2(UserProfileWidgetsBoardEditNoticeDefault, {})];
   obj = { userId, isVisible: activeSection === UserProfileSections.WIDGETS, cardStyle: items };
   items1[1] = callback2(WidgetRendererDefault, obj);
   obj[1] = items1;
@@ -54,13 +54,16 @@ function EditSection(navigateToProfileCustomization) {
   obj1 = React;
   const ref = React.useRef(null);
   let obj2 = navigateToProfileCustomization(first[18]);
-  const isDisplayNameStylesFlywheelSettersEnabled = obj2.useIsDisplayNameStylesFlywheelSettersEnabled("YouScreenUserProfileContent");
+  const isDisplayNameStylesFlywheelSettersEnabled =
+    obj2.useIsDisplayNameStylesFlywheelSettersEnabled("YouScreenUserProfileContent");
   let obj3 = navigateToProfileCustomization(first[19]);
   const isBadgeManagementEnabled = obj3.useIsBadgeManagementEnabled({ location: "YouScreenUserProfileContent" });
   let obj4 = navigateToProfileCustomization(first[20]);
   const customTypingIndicatorConfig = obj4.useCustomTypingIndicatorConfig("YouScreenUserProfileContent");
   ({ canSet, entryPoint } = customTypingIndicatorConfig);
-  const tmp9 = useIsContentShown(navigateToProfileCustomization(first[21]).DismissibleContent.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS);
+  const tmp9 = useIsContentShown(
+    navigateToProfileCustomization(first[21]).DismissibleContent.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS,
+  );
   let tmp10 = isProfileLoaded;
   if (isProfileLoaded) {
     tmp10 = isDisplayNameStylesFlywheelSettersEnabled;
@@ -117,13 +120,28 @@ function EditSection(navigateToProfileCustomization) {
   obj1[3] = intl.string(navigateToProfileCustomization(first[27]).t.AAjhgi);
   obj1[4] = callback;
   obj[1] = callback2(navigateToProfileCustomization(first[24]).Button, obj1);
-  const items2 = [callback2(trackUserProfileAction(first[23]), obj), , , ];
-  obj3 = { targetRef: ref, visible: first === tmp4(tmp2[21]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK, markAsDismissed: tmp16 };
+  const items2 = [callback2(trackUserProfileAction(first[23]), obj), , ,];
+  obj3 = {
+    targetRef: ref,
+    visible: first === tmp4(tmp2[21]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK,
+    markAsDismissed: tmp16,
+  };
   items2[1] = callback2(trackUserProfileAction(first[28]), obj3);
-  obj4 = { targetRef: ref, visible: first === tmp4(tmp2[21]).DismissibleContent.BADGE_CUSTOMIZATION_COACHMARK, markAsDismissed: tmp16, onTryItOut: navigateToProfileCustomization };
+  obj4 = {
+    targetRef: ref,
+    visible: first === tmp4(tmp2[21]).DismissibleContent.BADGE_CUSTOMIZATION_COACHMARK,
+    markAsDismissed: tmp16,
+    onTryItOut: navigateToProfileCustomization,
+  };
   items2[2] = callback2(trackUserProfileAction(first[29]), obj4);
   const tmpResult = trackUserProfileAction(first[23]);
-  items2[3] = callback2(trackUserProfileAction(first[30]), { targetRef: ref, visible: first === navigateToProfileCustomization(first[21]).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_PROFILE_COACHMARK, markAsDismissed: tmp14[1] });
+  items2[3] = callback2(trackUserProfileAction(first[30]), {
+    targetRef: ref,
+    visible:
+      first ===
+      navigateToProfileCustomization(first[21]).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_PROFILE_COACHMARK,
+    markAsDismissed: tmp14[1],
+  });
   obj[0] = items2;
   return callback3(closure_15, obj);
 }
@@ -229,7 +247,12 @@ export default function YouScreenUserProfileContent(user) {
     trackUserProfileAction({ action: "PRESS_SECTION", section });
   }, items3);
   const obj13 = user(navigateToPremium[42]);
-  const profileSectionTabs = user(navigateToPremium[41]).useProfileSectionTabs({ initialUserProfileSection: initialTab, wishlistTabIndex, boardTabIndex, onTabChange: callback2 });
+  const profileSectionTabs = user(navigateToPremium[41]).useProfileSectionTabs({
+    initialUserProfileSection: initialTab,
+    wishlistTabIndex,
+    boardTabIndex,
+    onTabChange: callback2,
+  });
   activeProfileTabSection = profileSectionTabs.activeProfileTabSection;
   setActiveProfileTabSection = profileSectionTabs.setActiveProfileTabSection;
   restoreActiveIndex = profileSectionTabs.restoreActiveIndex;
@@ -253,16 +276,28 @@ export default function YouScreenUserProfileContent(user) {
   if (null != obj7) {
     labelResult = obj7.label();
   }
-  const items6 = [containerBackground, containerBorderColor, tmp3, navigateToPremium, shouldShowExpiringTrialOfferCard, navigateToShop, null != primaryColor, enabled, user, tmp6, navigateToFriends];
+  const items6 = [
+    containerBackground,
+    containerBorderColor,
+    tmp3,
+    navigateToPremium,
+    shouldShowExpiringTrialOfferCard,
+    navigateToShop,
+    null != primaryColor,
+    enabled,
+    user,
+    tmp6,
+    navigateToFriends,
+  ];
   callback4 = obj5.useCallback(() => {
-    const items = [closure_5.card, ];
+    const items = [closure_5.card];
     let obj = { backgroundColor: containerBackground, borderColor: containerBorderColor, borderWidth: 1 };
     items[1] = obj;
     obj = { style: items1, children: null };
-    items1 = [, ];
+    items1 = [,];
     ({ cards: arr2[0], profileContent: arr2[1] } = closure_5);
     obj = { navigateToPremium, style: items };
-    const items2 = [enabled(navigateToFriends(navigateToPremium[44]), obj), , , , , , , , , ];
+    const items2 = [enabled(navigateToFriends(navigateToPremium[44]), obj), , , , , , , , ,];
     let tmp3Result = !shouldShowExpiringTrialOfferCard;
     if (!shouldShowExpiringTrialOfferCard) {
       obj1 = { navigateToPremium: null, navigateToShop: null, hasCustomProfileTheme: null };
@@ -289,7 +324,13 @@ export default function YouScreenUserProfileContent(user) {
     obj[1] = items2;
     return c14(navigation, obj);
   }, items6);
-  const items7 = [tmp3.profileContent, stateFromStores1, first, activeProfileTabSection === UserProfileSections.WISHLIST, user.id];
+  const items7 = [
+    tmp3.profileContent,
+    stateFromStores1,
+    first,
+    activeProfileTabSection === UserProfileSections.WISHLIST,
+    user.id,
+  ];
   callback5 = obj5.useCallback(() => {
     let obj = { style: closure_5.profileContent, children: null };
     if (null == stateFromStores1) {
@@ -310,7 +351,7 @@ export default function YouScreenUserProfileContent(user) {
       tmp4Result = tmp4(navigateToFriends(navigateToPremium[53]), obj);
       const tmp7 = navigateToFriends(navigateToPremium[53]);
     }
-    const items = [tmp4Result, ];
+    const items = [tmp4Result];
     obj = { userId: user.id, wishlistId: tmp3, containerWidth: null };
     let tmp15;
     if (first > 0) {
@@ -321,7 +362,18 @@ export default function YouScreenUserProfileContent(user) {
     obj[1] = items;
     return c14(navigation, obj);
   }, items7);
-  const items8 = [callback4, callback5, handlePageContentSize, tmp18, boardTabIndex, wishlistTabIndex, user.id, activeProfileTabSection, containerBackground, containerBorderColor];
+  const items8 = [
+    callback4,
+    callback5,
+    handlePageContentSize,
+    tmp18,
+    boardTabIndex,
+    wishlistTabIndex,
+    user.id,
+    activeProfileTabSection,
+    containerBackground,
+    containerBorderColor,
+  ];
   const memo = obj5.useMemo(() => {
     let obj = { id: "main", label: null, page: null };
     const intl = user(navigateToPremium[27]).intl;
@@ -331,7 +383,7 @@ export default function YouScreenUserProfileContent(user) {
       onContentSizeChange(arg0, arg1) {
         return callback(0, arg0, arg1);
       },
-      children: callback4()
+      children: callback4(),
     };
     obj[2] = enabled(closure_5, obj);
     const items = [obj];
@@ -355,18 +407,28 @@ export default function YouScreenUserProfileContent(user) {
     const obj3 = { id: "wishlist", label: null, page: null };
     const intl3 = tmp(tmp2[27]).intl;
     obj3[1] = intl3.string(user(navigateToPremium[27]).t["7lZ31J"]);
-    obj3[2] = enabled(closure_5, {
-      scrollEnabled: false,
-      onContentSizeChange(arg0, arg1) {
-        return callback(closure_19, arg0, arg1);
+    obj3[2] = enabled(
+      closure_5,
+      {
+        scrollEnabled: false,
+        onContentSizeChange(arg0, arg1) {
+          return callback(closure_19, arg0, arg1);
+        },
+        children: callback5(),
       },
-      children: callback5()
-    }, wishlistTabIndex);
+      wishlistTabIndex,
+    );
     items.push(obj3);
     return items;
   }, items8);
   let tmp4Result = tmp4(tmp2[55]);
-  obj = { pageWidth: first, defaultIndex: activeProfileTabSectionIndex, itemSpacing: tmp(tmp2[26]).space.PX_24, items: memo, onPageChange: handleTabChange };
+  obj = {
+    pageWidth: first,
+    defaultIndex: activeProfileTabSectionIndex,
+    itemSpacing: tmp(tmp2[26]).space.PX_24,
+    items: memo,
+    onPageChange: handleTabChange,
+  };
   segmentedControlState = tmp4Result.useSegmentedControlState(obj);
   tmp4Result = tmp4(tmp2[42]);
   const pagerFillHeight = tmp4Result.usePagerFillHeight();
@@ -376,7 +438,11 @@ export default function YouScreenUserProfileContent(user) {
     restoreActiveIndex(segmentedControlState);
   }, items9);
   const obj14 = user(navigateToPremium[41]);
-  const pagesHeightStyle = user(navigateToPremium[42]).usePagesHeightStyle(segmentedControlState, pageHeights.pageHeights, fillHeight);
+  const pagesHeightStyle = user(navigateToPremium[42]).usePagesHeightStyle(
+    segmentedControlState,
+    pageHeights.pageHeights,
+    fillHeight,
+  );
   closure_31 = obj5.useRef(segmentedControlState.setActiveIndex);
   const items10 = [segmentedControlState];
   const effect1 = obj5.useEffect(() => {
@@ -384,51 +450,80 @@ export default function YouScreenUserProfileContent(user) {
   }, items10);
   const tmp4Result1 = user(navigateToPremium[42]);
   const items11 = [initialTab, navigation, wishlistTabIndex, setActiveProfileTabSection];
-  const focusEffect = user(navigateToPremium[31]).useFocusEffect(obj5.useCallback(() => {
-    if (undefined !== initialTab) {
-      let num = 0;
-      if (tmp === constants.WISHLIST) {
-        num = wishlistTabIndex;
-      }
-      const _setTimeout = setTimeout;
-      const timeout = setTimeout(() => {
-        closure_1_24(closure_1_4 === constants.WISHLIST ? constants.WISHLIST : constants.MAIN);
-        closure_1_31.current(num, false, true);
-        closure_1_6.setParams({ initialTab: "r" });
-      }, 80);
-    }
-    return () => {
-      if (null != closure_0) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(tmp);
-      }
-      let obj = closure_1_6;
-      if (!closure_1_6.isFocused()) {
-        const parent = obj.getParent();
-        let isFocusedResult;
-        if (parent != null) {
-          isFocusedResult = parent.isFocused();
+  const focusEffect = user(navigateToPremium[31]).useFocusEffect(
+    obj5.useCallback(() => {
+      if (undefined !== initialTab) {
+        let num = 0;
+        if (tmp === constants.WISHLIST) {
+          num = wishlistTabIndex;
         }
-        if (isFocusedResult) {
-          obj = { initialTab: null };
-          obj[0] = constants.MAIN;
-          obj.setParams(obj);
-        }
+        const _setTimeout = setTimeout;
+        const timeout = setTimeout(() => {
+          closure_1_24(closure_1_4 === constants.WISHLIST ? constants.WISHLIST : constants.MAIN);
+          closure_1_31.current(num, false, true);
+          closure_1_6.setParams({ initialTab: "r" });
+        }, 80);
       }
-    };
-  }, items11));
+      return () => {
+        if (null != closure_0) {
+          const _clearTimeout = clearTimeout;
+          clearTimeout(tmp);
+        }
+        let obj = closure_1_6;
+        if (!closure_1_6.isFocused()) {
+          const parent = obj.getParent();
+          let isFocusedResult;
+          if (parent != null) {
+            isFocusedResult = parent.isFocused();
+          }
+          if (isFocusedResult) {
+            obj = { initialTab: null };
+            obj[0] = constants.MAIN;
+            obj.setParams(obj);
+          }
+        }
+      };
+    }, items11),
+  );
   obj = { style, children: null };
   obj1 = { style: items12, children: null };
   items12 = [tmp3.profileContentWrapper, { paddingTop: 0 }];
-  const items13 = [enabled(stateFromStores1, { user, backgroundColor: avatarBackground, statusStyle: { backgroundColor: statusBackground }, animate: flag }), , , ];
-  obj2 = { ref, customStatusActivity, hasCustomProfileTheme: tmp10, style: items14, emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble, editEnabled: true, placeholderText: labelResult, prompt: obj7 };
-  items14 = [, ];
+  const items13 = [
+    enabled(stateFromStores1, {
+      user,
+      backgroundColor: avatarBackground,
+      statusStyle: { backgroundColor: statusBackground },
+      animate: flag,
+    }),
+    ,
+    ,
+  ];
+  obj2 = {
+    ref,
+    customStatusActivity,
+    hasCustomProfileTheme: tmp10,
+    style: items14,
+    emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble,
+    editEnabled: true,
+    placeholderText: labelResult,
+    prompt: obj7,
+  };
+  items14 = [,];
   ({ customStatusBubble: arr16[0], customStatusBubbleInset: arr16[1] } = tmp3);
   items13[1] = enabled(navigateToFriends(navigateToPremium[58]), obj2);
   obj3 = { style: items15, children: null };
-  items15 = [, ];
+  items15 = [,];
   ({ primaryInfo: arr17[0], profileContent: arr17[1] } = tmp3);
-  obj4 = { user, pronouns: null, badges: null, badgeContainerBackground: null, onPressDisplayName: null, displayNameAccessibilityHint: null, themeType: null, showChevron: true };
+  obj4 = {
+    user,
+    pronouns: null,
+    badges: null,
+    badgeContainerBackground: null,
+    onPressDisplayName: null,
+    displayNameAccessibilityHint: null,
+    themeType: null,
+    showChevron: true,
+  };
   let pronouns;
   const tmp4Result2 = user(navigateToPremium[31]);
   if (tmp6 != null) {
@@ -444,9 +539,13 @@ export default function YouScreenUserProfileContent(user) {
   obj5[0] = user(navigateToPremium[60]).getStatusLabel(stateFromStores);
   const tmp4Result3 = user(navigateToPremium[60]);
   let intl2 = tmp4(tmp2[27]).intl;
-  obj4[5] = "" + intl.formatToPlainString(user(navigateToPremium[27]).t["er+FRD"], obj5) + ", " + intl2.string(user(navigateToPremium[27]).t.C6COaT);
+  obj4[5] =
+    "" +
+    intl.formatToPlainString(user(navigateToPremium[27]).t["er+FRD"], obj5) +
+    ", " +
+    intl2.string(user(navigateToPremium[27]).t.C6COaT);
   obj4[6] = containerBackground.YOU_SCREEN;
-  const items16 = [enabled(tmpResult, obj4), ];
+  const items16 = [enabled(tmpResult, obj4)];
   obj6 = { navigateToProfileCustomization, hasBadges: arr.length > 0, isProfileLoaded: null != tmp6 };
   items16[1] = enabled(boardTabIndex, obj6);
   obj3[1] = items16;
@@ -461,8 +560,13 @@ export default function YouScreenUserProfileContent(user) {
   obj10 = { children: null };
   obj9[1] = str;
   obj8[1] = enabled(user(navigateToPremium[61]).Tabs, obj9);
-  const items17 = [enabled(navigation, obj8), ];
-  obj11 = { ref: pagerRef, onLayout: measureFill, style: pagesHeightStyle, children: tmp39(tmp4(tmp2[62]).SegmentedControlPages, { state: segmentedControlState }) };
+  const items17 = [enabled(navigation, obj8)];
+  obj11 = {
+    ref: pagerRef,
+    onLayout: measureFill,
+    style: pagesHeightStyle,
+    children: tmp39(tmp4(tmp2[62]).SegmentedControlPages, { state: segmentedControlState }),
+  };
   items17[1] = enabled(navigateToFriends(navigateToPremium[56]).View, obj11);
   obj7[2] = items17;
   items13[3] = c14(navigation, obj7);
@@ -470,4 +574,4 @@ export default function YouScreenUserProfileContent(user) {
   obj10[0] = c14(navigation, obj1);
   obj[1] = enabled(user(navigateToPremium[57]).LayerScope, obj10);
   return enabled(navigateToFriends(navigateToPremium[56]).View, obj);
-};
+}

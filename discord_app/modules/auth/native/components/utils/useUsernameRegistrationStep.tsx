@@ -6,8 +6,11 @@ import { useRegistrationUIStore } from "../../RegistrationUIStore.tsx";
 import RegistrationTransitionActionTypes from "../../../RegistrationConstants.tsx";
 
 const require = arg1;
-({ authStateToRegisterTransitionStep: error, RegistrationTransitionActionTypes: closure_8 } = RegistrationTransitionActionTypes);
-let result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useUsernameRegistrationStep.tsx");
+({ authStateToRegisterTransitionStep: error, RegistrationTransitionActionTypes: closure_8 } =
+  RegistrationTransitionActionTypes);
+let result = require("set").fileFinishedImporting(
+  "modules/auth/native/components/utils/useUsernameRegistrationStep.tsx",
+);
 
 export const useUsernameRegistrationStep = function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
   const _require = REGISTER_ACCOUNT_INFORMATION;
@@ -24,7 +27,10 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
   first = tmp7[0];
   const obj2 = _require(navigation[6]);
   const tmp5 = useRegistrationUIStore;
-  const tmp10 = context(navigation[7])("username", useRegistrationUIStore((errors) => errors.errors));
+  const tmp10 = context(navigation[7])(
+    "username",
+    useRegistrationUIStore((errors) => errors.errors),
+  );
   const tmp5Result = useRegistrationUIStore((errors) => errors.errors);
   const usernameStatus = _require(navigation[8]).useUsernameStatus(first, true, true);
   obj = usernameStatus;
@@ -66,7 +72,7 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
       const tmp3Result1 = tmp3(tmp4[10]);
     }
   }, items);
-  const items2 = [first, , ];
+  const items2 = [first, ,];
   let message;
   const memo = obj.useMemo(() => {
     let tmp2 = null == first;
@@ -113,7 +119,7 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
       }
       const intl = REGISTER_ACCOUNT_INFORMATION(navigation[12]).intl;
       message = intl.string(REGISTER_ACCOUNT_INFORMATION(navigation[12]).t.GPfy3L);
-    }, items2)
+    }, items2),
   };
   return obj;
 };

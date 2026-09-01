@@ -136,12 +136,15 @@ function resolveChannelScreens(index, isChatLockedOpen) {
     if (arr2.length > 0) {
       const items1 = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(arr2, 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(items.map((index) => {
-        obj = {};
-        const merged = Object.assign(index);
-        obj.index = index.index + arr2.length;
-        return obj;
-      }), arraySpreadResult);
+      arraySpreadResult = HermesBuiltin.arraySpread(
+        items.map((index) => {
+          obj = {};
+          const merged = Object.assign(index);
+          obj.index = index.index + arr2.length;
+          return obj;
+        }),
+        arraySpreadResult,
+      );
       return items1;
     }
   }
@@ -151,34 +154,46 @@ function resolveChannelScreens(index, isChatLockedOpen) {
   }
   return tmp8;
 }
-let obj = { DEFAULT: 0, [0]: "DEFAULT", BACKGROUND_SAVED: 1, [1]: "BACKGROUND_SAVED", FALLBACK_RENDERED: 2, [2]: "FALLBACK_RENDERED" };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/useChannelScreensFromNavigation.tsx");
+let obj = {
+  DEFAULT: 0,
+  [0]: "DEFAULT",
+  BACKGROUND_SAVED: 1,
+  [1]: "BACKGROUND_SAVED",
+  FALLBACK_RENDERED: 2,
+  [2]: "FALLBACK_RENDERED",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/panels/useChannelScreensFromNavigation.tsx",
+);
 
 export default function useChannelScreensFromNavigation(arg0) {
   closure_0 = arg0;
   const tmp = useChatLayoutDefault();
   importDefault = tmp;
-  [tmp3, dependencyMap] = callback(React.useState(() => {
-    const arr = closure_1_13(store.getState(), closure_1);
-    if (arr.length > 0) {
-      return arr;
-    } else {
-      let guildId = closure_1_7.getGuildId();
-      const channelId = closure_1_6.getChannelId();
-      if (null == channelId) {
-        let items = [];
+  [tmp3, dependencyMap] = callback(
+    React.useState(() => {
+      const arr = closure_1_13(store.getState(), closure_1);
+      if (arr.length > 0) {
+        return arr;
       } else {
-        obj = { index: 0, type: null, guildId: null, channelId: null };
-        obj[1] = closure_1_10.FALLBACK_RENDERED;
-        if (guildId == null) {
-          guildId = closure_1_8;
+        let guildId = closure_1_7.getGuildId();
+        const channelId = closure_1_6.getChannelId();
+        if (null == channelId) {
+          let items = [];
+        } else {
+          obj = { index: 0, type: null, guildId: null, channelId: null };
+          obj[1] = closure_1_10.FALLBACK_RENDERED;
+          if (guildId == null) {
+            guildId = closure_1_8;
+          }
+          obj[2] = guildId;
+          obj[3] = channelId;
+          items = [obj];
         }
-        obj[2] = guildId;
-        obj[3] = channelId;
-        items = [obj];
       }
-    }
-  }), 2);
+    }),
+    2,
+  );
   callback = React.useCallback((arg0, arg1) => {
     if (null != arg0) {
       if (arg0.length > 0) {
@@ -237,7 +252,7 @@ export default function useChannelScreensFromNavigation(arg0) {
     };
   }, items1);
   return tmp3;
-};
+}
 export const ChannelScreenType = obj;
 export { getActiveTabsRoute };
 export const isActiveTabsGuilds = function isActiveTabsGuilds(state) {

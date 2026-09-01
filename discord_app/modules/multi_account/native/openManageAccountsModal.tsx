@@ -13,4 +13,4 @@ export default function openManageAccountsModal(initialRouteName) {
   obj.hideActionSheet();
   obj = { initialRouteName };
   _modDef4723.pushLazy(asyncRequireImpl(15966, dependencyMap.paths), obj, SWITCH_ACCOUNTS_MODAL_KEY);
-};
+}

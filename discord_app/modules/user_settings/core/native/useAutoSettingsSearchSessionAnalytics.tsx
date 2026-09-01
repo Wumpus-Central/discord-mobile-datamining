@@ -6,7 +6,9 @@ import closure_4 from "../../../../stores/native/AppStateStore.tsx";
 import closure_5 from "../../UserSettingSearchStore.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx",
+);
 
 export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSearchSessionAnalytics() {
   const items = [closure_4];
@@ -49,39 +51,55 @@ export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSea
     }
   }, items1);
   const items2 = [stateFromStores];
-  const effect1 = React.useEffect(() => closure_5.subscribe((isFocused) => {
-    isFocused = isFocused.isFocused;
-    if (!isFocused) {
-      isFocused = isFocused.query.length > 0;
-    }
-    return isFocused;
-  }, (arg0) => {
-    const obj = callback(table[7]);
-    if (arg0) {
-      obj.initialize();
-    } else {
-      obj.terminate();
-    }
-  }, {
-    equalityFn(arg0, arg1) {
-      return arg0 === arg1;
-    }
-  }), items2);
+  const effect1 = React.useEffect(
+    () =>
+      closure_5.subscribe(
+        (isFocused) => {
+          isFocused = isFocused.isFocused;
+          if (!isFocused) {
+            isFocused = isFocused.query.length > 0;
+          }
+          return isFocused;
+        },
+        (arg0) => {
+          const obj = callback(table[7]);
+          if (arg0) {
+            obj.initialize();
+          } else {
+            obj.terminate();
+          }
+        },
+        {
+          equalityFn(arg0, arg1) {
+            return arg0 === arg1;
+          },
+        },
+      ),
+    items2,
+  );
   const items3 = [stateFromStores];
-  const effect2 = React.useEffect(() => closure_5.subscribe((isFocused) => {
-    isFocused = isFocused.isFocused;
-    if (isFocused) {
-      isFocused = isFocused.query.length > 0;
-    }
-    return isFocused;
-  }, (arg0) => {
-    if (arg0) {
-      const result = callback(table[7]).maybeTrackQueryEntered();
-      const obj = callback(table[7]);
-    }
-  }, {
-    equalityFn(arg0, arg1) {
-      return arg0 === arg1;
-    }
-  }), items3);
+  const effect2 = React.useEffect(
+    () =>
+      closure_5.subscribe(
+        (isFocused) => {
+          isFocused = isFocused.isFocused;
+          if (isFocused) {
+            isFocused = isFocused.query.length > 0;
+          }
+          return isFocused;
+        },
+        (arg0) => {
+          if (arg0) {
+            const result = callback(table[7]).maybeTrackQueryEntered();
+            const obj = callback(table[7]);
+          }
+        },
+        {
+          equalityFn(arg0, arg1) {
+            return arg0 === arg1;
+          },
+        },
+      ),
+    items3,
+  );
 };

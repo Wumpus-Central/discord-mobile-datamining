@@ -11,7 +11,12 @@ function getPathsFromURL(target) {
   const url = parseURLSafely(target);
   if (null != url) {
     if (null != url.pathname) {
-      obj = { url: null, inviteHostRemainingPath: null, templateHostRemainingPath: null, primaryHostRemainingPath: null };
+      obj = {
+        url: null,
+        inviteHostRemainingPath: null,
+        templateHostRemainingPath: null,
+        primaryHostRemainingPath: null,
+      };
       obj[0] = url;
       let replaced;
       if (url.host != null) {
@@ -313,7 +318,7 @@ let str7 = obj.host;
 if (str7 == null) {
   str7 = "";
 }
-let items = [importDefaultResult.escape(str7), , , , ];
+let items = [importDefaultResult.escape(str7), , , ,];
 let str8 = obj.host;
 if (str8 == null) {
   str8 = "";
@@ -360,7 +365,8 @@ function findCodedLinks(str) {
           const items = [];
           function _loop(iter) {
             let formatted = closure_1_30;
-            ({ url, inviteHostRemainingPath, templateHostRemainingPath, primaryHostRemainingPath } = closure_1_30(iter));
+            ({ url, inviteHostRemainingPath, templateHostRemainingPath, primaryHostRemainingPath } =
+              closure_1_30(iter));
             if (null != url) {
               if (null != url.pathname) {
                 let query = null;
@@ -412,7 +418,10 @@ function findCodedLinks(str) {
                 }
                 if (null != match) {
                   if ("https:" === url.protocol) {
-                    const inviteKeyFromUrlParams = tmp4(tmp5[9]).generateInviteKeyFromUrlParams(inviteHostRemainingPath.substring(1), url.search);
+                    const inviteKeyFromUrlParams = tmp4(tmp5[9]).generateInviteKeyFromUrlParams(
+                      inviteHostRemainingPath.substring(1),
+                      url.search,
+                    );
                     const invite = closure_1_3.getInvite(inviteKeyFromUrlParams);
                     if (null != invite) {
                       if (tmp4Result2.isEmbeddedApplicationInvite(invite)) {
@@ -470,7 +479,10 @@ function findCodedLinks(str) {
                     if (iter.includes("\\")) {
                       return 0;
                     } else {
-                      const inviteKeyFromUrlParams1 = tmp4(tmp5[9]).generateInviteKeyFromUrlParams(match2[2], url.search);
+                      const inviteKeyFromUrlParams1 = tmp4(tmp5[9]).generateInviteKeyFromUrlParams(
+                        match2[2],
+                        url.search,
+                      );
                       let obj20 = set;
                       if (!set.has(inviteKeyFromUrlParams1)) {
                         obj20.add(inviteKeyFromUrlParams1);
@@ -566,7 +578,9 @@ function findCodedLinks(str) {
                       const scopes = formatted.scopes;
                       let someResult;
                       if (scopes != null) {
-                        someResult = scopes.some((arg0) => arg0 !== callback(table[12]).OAuth2Scopes.APPLICATIONS_COMMANDS);
+                        someResult = scopes.some(
+                          (arg0) => arg0 !== callback(table[12]).OAuth2Scopes.APPLICATIONS_COMMANDS,
+                        );
                       }
                       tmp58 = someResult;
                     }
@@ -1044,13 +1058,15 @@ export const isSuspiciousCodedLink = function isSuspiciousCodedLink(arr) {
         return true;
       } else {
         const items = [obj2, obj4, obj6, obj9, obj11];
-        if (items.some((host) => {
-          let replaced;
-          if (url.host != null) {
-            replaced = str.replace(/^www[.]/i, "");
-          }
-          return replaced === host.host;
-        })) {
+        if (
+          items.some((host) => {
+            let replaced;
+            if (url.host != null) {
+              replaced = str.replace(/^www[.]/i, "");
+            }
+            return replaced === host.host;
+          })
+        ) {
           let flag;
           if (url.pathname != null) {
             const formatted = str2.toUpperCase();
@@ -1123,7 +1139,8 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
           const items = [];
           function _loop(iter) {
             let formatted = closure_1_30;
-            ({ url, inviteHostRemainingPath, templateHostRemainingPath, primaryHostRemainingPath } = closure_1_30(iter));
+            ({ url, inviteHostRemainingPath, templateHostRemainingPath, primaryHostRemainingPath } =
+              closure_1_30(iter));
             if (null != url) {
               if (null != url.pathname) {
                 let query = null;
@@ -1175,7 +1192,10 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                 }
                 if (null != match) {
                   if ("https:" === url.protocol) {
-                    const inviteKeyFromUrlParams = tmp4(tmp5[9]).generateInviteKeyFromUrlParams(inviteHostRemainingPath.substring(1), url.search);
+                    const inviteKeyFromUrlParams = tmp4(tmp5[9]).generateInviteKeyFromUrlParams(
+                      inviteHostRemainingPath.substring(1),
+                      url.search,
+                    );
                     const invite = closure_1_3.getInvite(inviteKeyFromUrlParams);
                     if (null != invite) {
                       if (tmp4Result2.isEmbeddedApplicationInvite(invite)) {
@@ -1233,7 +1253,10 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                     if (iter.includes("\\")) {
                       return 0;
                     } else {
-                      const inviteKeyFromUrlParams1 = tmp4(tmp5[9]).generateInviteKeyFromUrlParams(match2[2], url.search);
+                      const inviteKeyFromUrlParams1 = tmp4(tmp5[9]).generateInviteKeyFromUrlParams(
+                        match2[2],
+                        url.search,
+                      );
                       let obj20 = set;
                       if (!set.has(inviteKeyFromUrlParams1)) {
                         obj20.add(inviteKeyFromUrlParams1);
@@ -1329,7 +1352,9 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                       const scopes = formatted.scopes;
                       let someResult;
                       if (scopes != null) {
-                        someResult = scopes.some((arg0) => arg0 !== callback(table[12]).OAuth2Scopes.APPLICATIONS_COMMANDS);
+                        someResult = scopes.some(
+                          (arg0) => arg0 !== callback(table[12]).OAuth2Scopes.APPLICATIONS_COMMANDS,
+                        );
                       }
                       tmp58 = someResult;
                     }

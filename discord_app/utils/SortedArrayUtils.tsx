@@ -11,7 +11,7 @@ export const insertionIndex = function insertionIndex(arg0, arg1, arg2) {
   let num2 = 0;
   if (0 < length) {
     do {
-      let tmp = num + length >>> 1;
+      let tmp = (num + length) >>> 1;
       let tmp2 = length;
       sum = num;
       tmp4 = tmp;
@@ -34,7 +34,7 @@ export const insert = function insert(arr) {
   let num2 = 0;
   if (0 < length) {
     do {
-      let tmp = num + length >>> 1;
+      let tmp = (num + length) >>> 1;
       let tmp2 = length;
       sum = num;
       tmp4 = tmp;

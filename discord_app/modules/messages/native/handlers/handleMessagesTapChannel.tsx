@@ -33,7 +33,7 @@ function _maybeStartLurking() {
     c5 = 0;
     c4 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -114,7 +114,7 @@ function _handleMessagesTapChannel() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (channelId === 2) {
         channelId = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -232,7 +232,11 @@ function _handleMessagesTapChannel() {
                               throwTypeErrorResult = constants5;
                               obj3[1] = constants5.BROWSE;
                               throwTypeErrorResult = closure_18;
-                              throwTypeErrorResult = navigationReplace(v0[15]).pushLazy(lib(v0[17])(v0[16], v0.paths), obj3, closure_18);
+                              throwTypeErrorResult = navigationReplace(v0[15]).pushLazy(
+                                lib(v0[17])(v0[16], v0.paths),
+                                obj3,
+                                closure_18,
+                              );
                               const obj27 = navigationReplace(v0[15]);
                             } else {
                               channelId = 3;
@@ -258,7 +262,11 @@ function _handleMessagesTapChannel() {
                               throwTypeErrorResult = constants5;
                               obj4[1] = constants5.CUSTOMIZE;
                               throwTypeErrorResult = closure_18;
-                              throwTypeErrorResult = navigationReplace(v0[15]).pushLazy(lib(v0[17])(v0[16], v0.paths), obj4, closure_18);
+                              throwTypeErrorResult = navigationReplace(v0[15]).pushLazy(
+                                lib(v0[17])(v0[16], v0.paths),
+                                obj4,
+                                closure_18,
+                              );
                               const obj25 = navigationReplace(v0[15]);
                             } else {
                               channelId = 3;
@@ -312,7 +320,11 @@ function _handleMessagesTapChannel() {
                                           obj5[0] = role2;
                                           throwTypeErrorResult = guildId;
                                           obj5[1] = guildId;
-                                          throwTypeErrorResult = navigationReplace(v0[19]).openLazy(throwTypeErrorResult, "GuildRoleConnectionsConnectAccountsActionSheet-" + role2.id, obj5);
+                                          throwTypeErrorResult = navigationReplace(v0[19]).openLazy(
+                                            throwTypeErrorResult,
+                                            "GuildRoleConnectionsConnectAccountsActionSheet-" + role2.id,
+                                            obj5,
+                                          );
                                           const obj20 = navigationReplace(v0[19]);
                                         }
                                       }
@@ -327,7 +339,10 @@ function _handleMessagesTapChannel() {
                                       obj6 = { guildId: null };
                                       throwTypeErrorResult = guildId;
                                       obj6[0] = guildId;
-                                      throwTypeErrorResult = navigationReplace(v0[15]).pushLazy(lib(v0[17])(v0[21], v0.paths), obj6);
+                                      throwTypeErrorResult = navigationReplace(v0[15]).pushLazy(
+                                        lib(v0[17])(v0[21], v0.paths),
+                                        obj6,
+                                      );
                                       const obj22 = navigationReplace(v0[15]);
                                     }
                                   } else {
@@ -371,7 +386,10 @@ function _handleMessagesTapChannel() {
                               let obj8 = { navigationReplace: null, openChannel: true };
                               throwTypeErrorResult = navigationReplace;
                               obj8[0] = navigationReplace;
-                              throwTypeErrorResult = throwTypeErrorResult(closure_15.CHANNEL(guildId, constants4.GUILD_HOME), obj8);
+                              throwTypeErrorResult = throwTypeErrorResult(
+                                closure_15.CHANNEL(guildId, constants4.GUILD_HOME),
+                                obj8,
+                              );
                             } else {
                               channelId = 3;
                               return { value: "HermesInternal", done: null };
@@ -577,7 +595,10 @@ function _handleMessagesTapChannel() {
               obj17 = { navigationReplace: null, openChannel: true };
               throwTypeErrorResult = navigationReplace;
               obj17[0] = navigationReplace;
-              throwTypeErrorResult = throwTypeErrorResult(closure_15.CHANNEL(channel.guild_id, channel.id, messageId), obj17);
+              throwTypeErrorResult = throwTypeErrorResult(
+                closure_15.CHANNEL(channel.guild_id, channel.id, messageId),
+                obj17,
+              );
             }
           } catch (throwTypeErrorResult) {
             channelId = throwTypeErrorResult;

@@ -25,13 +25,19 @@ const SubscriptionStatusTypes = ME.SubscriptionStatusTypes;
 let closure_4 = sum.PaymentGatewayToFriendlyName;
 const jsx = jsxProd.jsx;
 let closure_6 = new timestampDefault("PremiumManagementUtils");
-let obj = { IN_APP: "manage_in_app", IN_EXTERNAL_MOBILE_PAYMENT_GATEWAY: "manage_in_external_mobile_payment_gateway", IN_WEB: "manage_in_web" };
+let obj = {
+  IN_APP: "manage_in_app",
+  IN_EXTERNAL_MOBILE_PAYMENT_GATEWAY: "manage_in_external_mobile_payment_gateway",
+  IN_WEB: "manage_in_web",
+};
 const tmp2 = new timestampDefault("PremiumManagementUtils");
 let result = set.fileFinishedImporting("modules/premium/native/utils/PremiumManagementUtils.tsx");
 
 export const MobileWebDestinationTypes = { PREMIUM_MANAGEMENT: "premium_management" };
 export const PremiumManagementMethod = obj;
-export const getPremiumManagementMethod = function getPremiumManagementMethod(isOnPlatformMatchingExternalPaymentGateway) {
+export const getPremiumManagementMethod = function getPremiumManagementMethod(
+  isOnPlatformMatchingExternalPaymentGateway,
+) {
   if (null == isOnPlatformMatchingExternalPaymentGateway) {
     return null;
   } else if (isOnPlatformMatchingExternalPaymentGateway.isOnPlatformMatchingExternalPaymentGateway) {
@@ -94,13 +100,23 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                     obj[0] = tmp.loadId;
                     const tmp4 = null != tmp.onSuccessCallback ? tmp.onSuccessCallback : closure_1_8;
                     const tmp5 = null != tmp.onFailureCallback ? tmp.onFailureCallback : closure_1_9;
-                    const result = obj.goToStandaloneNitroManagementFromMobileApp("premium_external_management", obj, tmp4, tmp5);
+                    const result = obj.goToStandaloneNitroManagementFromMobileApp(
+                      "premium_external_management",
+                      obj,
+                      tmp4,
+                      tmp5,
+                    );
                   }
                 };
                 const intl3 = tmp13(1236).intl;
                 const t = tmp13(1236).t;
                 obj[2] = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
-                jsx(tmp13(7151).LinkButton, { containerStyle: null, onPress: null, text: null, variant: "text-sm/semibold" });
+                jsx(tmp13(7151).LinkButton, {
+                  containerStyle: null,
+                  onPress: null,
+                  text: null,
+                  variant: "text-sm/semibold",
+                });
                 const tmp9 = jsx;
               } else {
                 function manageExternalNitroSubscription() {
@@ -110,7 +126,12 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                     obj[0] = tmp.loadId;
                     const tmp4 = null != tmp.onSuccessCallback ? tmp.onSuccessCallback : closure_1_8;
                     const tmp5 = null != tmp.onFailureCallback ? tmp.onFailureCallback : closure_1_9;
-                    return obj.goToStandaloneNitroManagementFromMobileApp("premium_external_management", obj, tmp4, tmp5);
+                    return obj.goToStandaloneNitroManagementFromMobileApp(
+                      "premium_external_management",
+                      obj,
+                      tmp4,
+                      tmp5,
+                    );
                   }
                 }
                 const intl2 = tmp13(1236).intl;
@@ -118,7 +139,10 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                 obj1[0] = manageExternalNitroSubscription;
                 return intl2.format(tmp13(1236).t.IERwUb, obj1);
               }
-              tmp8 = status === SubscriptionStatusTypes.CANCELED || status === SubscriptionStatusTypes.PAUSE_PENDING || status === SubscriptionStatusTypes.PAST_DUE;
+              tmp8 =
+                status === SubscriptionStatusTypes.CANCELED ||
+                status === SubscriptionStatusTypes.PAUSE_PENDING ||
+                status === SubscriptionStatusTypes.PAST_DUE;
             }
           }
           const intl = tmp13(1236).intl;

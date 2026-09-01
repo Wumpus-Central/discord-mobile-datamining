@@ -22,7 +22,18 @@ export default function trackAckMessages(channel_id) {
   obj[3] = guildsArray.map((id) => {
     const mentionCount = closure_3.getMentionCount(id.id);
     const hasUnreadResult = closure_3.hasUnread(id.id);
-    return "" + id.id + "," + hasUnreadResult + "," + mentionCount + "," + closure_5.isMuted(id.id) + "," + closure_5.resolveGuildUnreadSetting(id);
+    return (
+      "" +
+      id.id +
+      "," +
+      hasUnreadResult +
+      "," +
+      mentionCount +
+      "," +
+      closure_5.isMuted(id.id) +
+      "," +
+      closure_5.resolveGuildUnreadSetting(id)
+    );
   });
   collectGuildAnalyticsMetadata.trackWithMetadata(AnalyticEvents.ACK_MESSAGES, obj);
-};
+}

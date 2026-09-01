@@ -19,7 +19,7 @@ function GuildPill(guild) {
   const tmp = callback4();
   let obj = { style: tmp.guildPill, children: null };
   obj = { guild, size: GuildIconSizes.GuildIconSizes.SMALL_32, animate: true };
-  const items = [callback(GuildIconSizesDefault, obj), ];
+  const items = [callback(GuildIconSizesDefault, obj)];
   obj = { style: tmp.guildName, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   let name;
   if (guild != null) {
@@ -32,17 +32,48 @@ function GuildPill(guild) {
 }
 ({ HelpdeskArticles: closure_8, HighlightSettings: c9 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { contentContainer: { padding: 24, alignItems: "center", justifyContent: "center" }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginBottom: 4 }, centerText: { textAlign: "center" }, feedback: { marginTop: 16, alignItems: "stretch", alignSelf: "stretch", paddingBottom: 16 }, thanks: { height: 40, textAlign: "center", textAlignVertical: "center" }, settings: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginVertical: 8, padding: 0 };
+createCacheKey = {
+  contentContainer: { padding: 24, alignItems: "center", justifyContent: "center" },
+  header: { alignItems: "center", paddingBottom: 24 },
+  headerTitle: { marginBottom: 4 },
+  centerText: { textAlign: "center" },
+  feedback: { marginTop: 16, alignItems: "stretch", alignSelf: "stretch", paddingBottom: 16 },
+  thanks: { height: 40, textAlign: "center", textAlignVertical: "center" },
+  settings: null,
+};
+createCacheKey = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  marginVertical: 8,
+  padding: 0,
+};
 createCacheKey[6] = createCacheKey;
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { guildPill: null, guildName: null };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
-obj1[0] = { flexDirection: "row", padding: 8, marginBottom: 16, backgroundColor: ThemesDefault.colors.GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round };
+obj1[0] = {
+  flexDirection: "row",
+  padding: 8,
+  marginBottom: 16,
+  backgroundColor: ThemesDefault.colors.GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.round,
+};
 obj1[1] = { paddingHorizontal: 8 };
 let closure_14 = createCacheKey.createStyles(obj1);
-let obj2 = { flexDirection: "row", padding: 8, marginBottom: 16, backgroundColor: ThemesDefault.colors.GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round };
-let result = require("set").fileFinishedImporting("modules/notifications/native/GuildHighlightsNotificationsActionSheet.tsx");
+let obj2 = {
+  flexDirection: "row",
+  padding: 8,
+  marginBottom: 16,
+  backgroundColor: ThemesDefault.colors.GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.round,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/notifications/native/GuildHighlightsNotificationsActionSheet.tsx",
+);
 
 export default function SummaryFeedbackActionSheet(guildId) {
   guildId = guildId.guildId;
@@ -88,9 +119,12 @@ export default function SummaryFeedbackActionSheet(guildId) {
     }
   }, items);
   const items1 = [first, callback];
-  const effect = React.useEffect(() => () => {
-    callback(closure_3);
-  }, items1);
+  const effect = React.useEffect(
+    () => () => {
+      callback(closure_3);
+    },
+    items1,
+  );
   const items2 = [callback];
   const callback1 = React.useCallback((arg0) => {
     callback(arg0);
@@ -116,7 +150,15 @@ export default function SummaryFeedbackActionSheet(guildId) {
   obj1 = guildId(ref[13]);
   const items3 = [closure_7, closure_6];
   const items4 = [guildId];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items3, () => ({ guild: guild.getGuild(guildId), muted: lib.isMuted(guildId), notifyHighlights: lib.getNotifyHighlights(guildId) }), items4);
+  const stateFromStoresObject = obj1.useStateFromStoresObject(
+    items3,
+    () => ({
+      guild: guild.getGuild(guildId),
+      muted: lib.isMuted(guildId),
+      notifyHighlights: lib.getNotifyHighlights(guildId),
+    }),
+    items4,
+  );
   let muted = stateFromStoresObject.muted;
   let reasons;
   ({ guild, notifyHighlights } = stateFromStoresObject);
@@ -168,7 +210,7 @@ export default function SummaryFeedbackActionSheet(guildId) {
     obj2[0] = tmp.header;
     const obj3 = { guild: null };
     obj3[0] = guild;
-    const items5 = [closure_11(GuildPill, obj3), , ];
+    const items5 = [closure_11(GuildPill, obj3), ,];
     const obj4 = { style: null, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
     obj4[0] = tmp.headerTitle;
     const intl4 = tmp11(tmp12[14]).intl;
@@ -182,7 +224,7 @@ export default function SummaryFeedbackActionSheet(guildId) {
     obj5[3] = intl5.format(tmp11(tmp12[14]).t.enfuur, obj6);
     items5[2] = closure_11(tmp11(tmp12[11]).Text, obj5);
     obj2[1] = items5;
-    const items6 = [callback2(first1, obj2), , , ];
+    const items6 = [callback2(first1, obj2), , ,];
     let tmp27Result = null != null;
     if (tmp27Result) {
       const obj7 = { style: null, children: null };
@@ -239,14 +281,20 @@ export default function SummaryFeedbackActionSheet(guildId) {
     }
     if (tmp17) {
       const obj14 = { style: null, variant: "heading-md/semibold", color: "text-brand", children: null };
-      const items7 = [, ];
+      const items7 = [,];
       ({ centerText: arr7[0], thanks: arr7[1] } = tmp);
       obj14[0] = items7;
       const intl3 = tmp11(tmp12[14]).intl;
       obj14[3] = intl3.string(tmp11(tmp12[14]).t.kZbFIO);
       let tmp18Result = tmp18(tmp11(tmp12[11]).Text, obj14);
     } else {
-      const obj15 = { ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, trackOpen: null, onFeedbackChanged: null };
+      const obj15 = {
+        ratingsBodyLabel: null,
+        reasonsHeaderLabel: null,
+        reasons: null,
+        trackOpen: null,
+        onFeedbackChanged: null,
+      };
       const intl = tmp11(tmp12[14]).intl;
       obj15[0] = intl.string(tmp11(tmp12[14]).t.Yzl7Or);
       const intl2 = tmp11(tmp12[14]).intl;
@@ -259,12 +307,10 @@ export default function SummaryFeedbackActionSheet(guildId) {
         reasons1 = [];
       }
       obj15[2] = reasons1;
-      obj15[3] = null != feedbackSettings ? feedbackSettings.onFeedbackShown : (() => {
-
-      });
+      obj15[3] = null != feedbackSettings ? feedbackSettings.onFeedbackShown : () => {};
       obj15[4] = callback1;
       tmp18Result = tmp18(tmp11(tmp12[15]).FeedbackForm, obj15);
     }
     tmp17 = obj13.rating === FeedbackRating.GOOD || null != obj13.reason;
   }
-};
+}

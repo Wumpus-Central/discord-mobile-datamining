@@ -16,10 +16,16 @@ createCacheKey = { backgroundColor: ThemesDefault.colors.CONTROL_CRITICAL_PRIMAR
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { tintColor: ThemesDefault.colors.WHITE };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let closure_12 = { code: "function VoicePanelDisconnectCancelButtonTsx1(){const{mode,VoicePanelModes,focused}=this.__closure;var _focused$get$id,_focused$get;if(mode.get()!==VoicePanelModes.PANEL){return null;}return(_focused$get$id=(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)!==null&&_focused$get$id!==void 0?_focused$get$id:null;}" };
-let closure_13 = { code: "function VoicePanelDisconnectCancelButtonTsx2(focusId,lastFocusId){const{runOnJS,handleFocusChange}=this.__closure;if(focusId!==lastFocusId){runOnJS(handleFocusChange)(focusId);}}" };
+let closure_12 = {
+  code: "function VoicePanelDisconnectCancelButtonTsx1(){const{mode,VoicePanelModes,focused}=this.__closure;var _focused$get$id,_focused$get;if(mode.get()!==VoicePanelModes.PANEL){return null;}return(_focused$get$id=(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)!==null&&_focused$get$id!==void 0?_focused$get$id:null;}",
+};
+let closure_13 = {
+  code: "function VoicePanelDisconnectCancelButtonTsx2(focusId,lastFocusId){const{runOnJS,handleFocusChange}=this.__closure;if(focusId!==lastFocusId){runOnJS(handleFocusChange)(focusId);}}",
+};
 let obj1 = { tintColor: ThemesDefault.colors.WHITE };
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelDisconnectCancelButton.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/controls/buttons/VoicePanelDisconnectCancelButton.tsx",
+);
 
 export default function DisconnectCancelButton(props) {
   let _require;
@@ -144,7 +150,13 @@ export default function DisconnectCancelButton(props) {
   } else {
     PhoneHangUpIcon = tmp8(tmp3[18]).PhoneHangUpIcon;
   }
-  obj1 = { onPress: callback1, props: props.props, style: tmp.disconnectCancelBG, accessibilityLabel: null, children: null };
+  obj1 = {
+    onPress: callback1,
+    props: props.props,
+    style: tmp.disconnectCancelBG,
+    accessibilityLabel: null,
+    children: null,
+  };
   if (first === constants.ACTIVITY) {
     const intl3 = tmp8(tmp3[20]).intl;
     let stringResult = intl3.string(tmp8(tmp3[20]).t["R/FK4A"]);
@@ -158,5 +170,11 @@ export default function DisconnectCancelButton(props) {
   obj1[3] = stringResult;
   const items1 = [PhoneHangUpIcon, tmp.icon];
   obj1[4] = obj.useMemo(() => closure_1_9(PhoneHangUpIcon, { style: lib.icon }), items1);
-  return jsx(channelId(focused[19]), { onPress: callback1, props: props.props, style: tmp.disconnectCancelBG, accessibilityLabel: null, children: null });
-};
+  return jsx(channelId(focused[19]), {
+    onPress: callback1,
+    props: props.props,
+    style: tmp.disconnectCancelBG,
+    accessibilityLabel: null,
+    children: null,
+  });
+}

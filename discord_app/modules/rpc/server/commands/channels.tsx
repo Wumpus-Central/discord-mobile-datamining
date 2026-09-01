@@ -50,7 +50,10 @@ obj[1] = function handler(args) {
       tmp = require;
     }
     const obj3 = recurseReplaceContentTree;
-    return obj3.transformChannel(channel, recurseReplaceContentTree.hasMessageReadPermission(channel, socket.application.id, socket.authorization.scopes));
+    return obj3.transformChannel(
+      channel,
+      recurseReplaceContentTree.hasMessageReadPermission(channel, socket.application.id, socket.authorization.scopes),
+    );
   }
 };
 obj[RPCCommands.GET_CHANNEL] = obj;
@@ -79,7 +82,7 @@ obj[RPCCommands.GET_CHANNELS] = {
     const found1 = found.filter((arg0) => closure_7.can(constants.VIEW_CHANNEL, arg0));
     obj[0] = found1.map((id) => ({ id: id.id, name: id.name, type: id.type }));
     return obj;
-  }
+  },
 };
 let obj2 = { scope: null, handler: null };
 let obj3 = {};
@@ -151,53 +154,68 @@ obj4[2] = function handler(args) {
       }
     }
     const storeWaitResult = server.storeWait(socket, () => closure_1_5.getChannel(channel_id), num);
-    const catchPromise = server.storeWait(socket, () => closure_1_5.getChannel(channel_id), num).catch(() => {
-      throw new channel_id(flag2[9])({ errorCode: constants.SELECT_CHANNEL_TIMED_OUT }, "Request to select voice channel timed out.");
-    });
-    return server.storeWait(socket, () => closure_1_5.getChannel(channel_id), num).catch(() => {
-      throw new channel_id(flag2[9])({ errorCode: constants.SELECT_CHANNEL_TIMED_OUT }, "Request to select voice channel timed out.");
-    }).then((type) => {
-      if (null == type) {
-        let obj = { errorCode: null };
-        obj[0] = closure_1_12.INVALID_CHANNEL;
-        const _HermesInternal = HermesInternal;
-        let tmp16 = channel_id(flag2[9]);
-        tmp16 = new tmp16(obj, "Invalid channel id: " + channel_id);
-        throw tmp16;
-      } else if (closure_1_3(type.type)) {
-        const items = [Promise.resolve(type), ];
-        const obj2 = socket(flag2[10]);
-        items[1] = obj2.transformChannel(type, socket(flag2[10]).hasMessageReadPermission(type, socket.application.id, socket.authorization.scopes));
-        return Promise.all(items);
-      } else {
-        obj = { errorCode: null };
-        obj[0] = closure_1_12.INVALID_CHANNEL;
-        const tmp7 = new channel_id(flag2[9])(obj, "Channel is not a voice channel");
-        throw tmp7;
-      }
-    }).then((arg0) => {
-      [tmp, tmp2] = arg0;
-      if (tmp2.guild_id) {
-        let obj = socket(flag2[16]);
-        if (obj.isChannelFull(tmp, closure_1_9, closure_1_6)) {
+    const catchPromise = server
+      .storeWait(socket, () => closure_1_5.getChannel(channel_id), num)
+      .catch(() => {
+        throw new channel_id(flag2[9])(
+          { errorCode: constants.SELECT_CHANNEL_TIMED_OUT },
+          "Request to select voice channel timed out.",
+        );
+      });
+    return server
+      .storeWait(socket, () => closure_1_5.getChannel(channel_id), num)
+      .catch(() => {
+        throw new channel_id(flag2[9])(
+          { errorCode: constants.SELECT_CHANNEL_TIMED_OUT },
+          "Request to select voice channel timed out.",
+        );
+      })
+      .then((type) => {
+        if (null == type) {
+          let obj = { errorCode: null };
+          obj[0] = closure_1_12.INVALID_CHANNEL;
+          const _HermesInternal = HermesInternal;
+          let tmp16 = channel_id(flag2[9]);
+          tmp16 = new tmp16(obj, "Invalid channel id: " + channel_id);
+          throw tmp16;
+        } else if (closure_1_3(type.type)) {
+          const items = [Promise.resolve(type)];
+          const obj2 = socket(flag2[10]);
+          items[1] = obj2.transformChannel(
+            type,
+            socket(flag2[10]).hasMessageReadPermission(type, socket.application.id, socket.authorization.scopes),
+          );
+          return Promise.all(items);
+        } else {
           obj = { errorCode: null };
           obj[0] = closure_1_12.INVALID_CHANNEL;
-          const tmp28 = new channel_id(flag2[9])(obj, "Channel is full");
-          throw tmp28;
-        } else if (!closure_1_7.can(closure_1_11.CONNECT, tmp)) {
-          obj = { errorCode: null };
-          obj[0] = closure_1_12.INVALID_PERMISSIONS;
-          const tmp15 = new channel_id(flag2[9])(obj, "Connect permission required to join channel");
-          throw tmp15;
+          const tmp7 = new channel_id(flag2[9])(obj, "Channel is not a voice channel");
+          throw tmp7;
         }
-      }
-      const voiceChannel = channel_id(flag2[15]).selectVoiceChannel(tmp.id);
-      if (flag2) {
-        socket(flag2[17]).replaceWith(closure_1_10.CHANNEL(tmp.guild_id, tmp.id));
-        const obj4 = socket(flag2[17]);
-      }
-      return tmp2;
-    });
+      })
+      .then((arg0) => {
+        [tmp, tmp2] = arg0;
+        if (tmp2.guild_id) {
+          let obj = socket(flag2[16]);
+          if (obj.isChannelFull(tmp, closure_1_9, closure_1_6)) {
+            obj = { errorCode: null };
+            obj[0] = closure_1_12.INVALID_CHANNEL;
+            const tmp28 = new channel_id(flag2[9])(obj, "Channel is full");
+            throw tmp28;
+          } else if (!closure_1_7.can(closure_1_11.CONNECT, tmp)) {
+            obj = { errorCode: null };
+            obj[0] = closure_1_12.INVALID_PERMISSIONS;
+            const tmp15 = new channel_id(flag2[9])(obj, "Connect permission required to join channel");
+            throw tmp15;
+          }
+        }
+        const voiceChannel = channel_id(flag2[15]).selectVoiceChannel(tmp.id);
+        if (flag2) {
+          socket(flag2[17]).replaceWith(closure_1_10.CHANNEL(tmp.guild_id, tmp.id));
+          const obj4 = socket(flag2[17]);
+        }
+        return tmp2;
+      });
   } else {
     obj = channel_id(tmp[15]);
     let voiceChannel = obj.selectVoiceChannel(null);
@@ -220,7 +238,10 @@ obj6[1] = function handler(socket) {
   let transformChannelResult = null;
   if (null != channel) {
     const obj = recurseReplaceContentTree;
-    transformChannelResult = obj.transformChannel(channel, recurseReplaceContentTree.hasMessageReadPermission(channel, socket.application.id, socket.authorization.scopes));
+    transformChannelResult = obj.transformChannel(
+      channel,
+      recurseReplaceContentTree.hasMessageReadPermission(channel, socket.application.id, socket.authorization.scopes),
+    );
     const obj2 = recurseReplaceContentTree;
   }
   return transformChannelResult;
@@ -251,7 +272,7 @@ const obj1 = {
     const found1 = found.filter((arg0) => closure_7.can(constants.VIEW_CHANNEL, arg0));
     obj[0] = found1.map((id) => ({ id: id.id, name: id.name, type: id.type }));
     return obj;
-  }
+  },
 };
 obj[RPCCommands.SELECT_TEXT_CHANNEL] = {
   scope: set2.OAuth2Scopes.RPC,
@@ -275,78 +296,110 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = {
     }
     if (channel_id) {
       const storeWaitResult = server.storeWait(socket, () => closure_1_5.getChannel(channel_id), num);
-      const catchPromise = server.storeWait(socket, () => closure_1_5.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(9503)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
-      });
-      let nextPromise1 = server.storeWait(socket, () => closure_1_5.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(9503)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
-      }).then((type) => {
-        if (null == type) {
-          let obj = { errorCode: null };
-          obj[0] = closure_1_12.INVALID_CHANNEL;
-          const _HermesInternal = HermesInternal;
-          let tmp16 = channel_id(closure_1_2[9]);
-          tmp16 = new tmp16(obj, "Invalid channel id: " + channel_id);
-          throw tmp16;
-        } else if (closure_1_4(type.type)) {
-          const items = [Promise.resolve(type), ];
-          const obj2 = socket(closure_1_2[10]);
-          items[1] = obj2.transformChannel(type, socket(closure_1_2[10]).hasMessageReadPermission(type, socket.application.id, socket.authorization.scopes));
-          return Promise.all(items);
-        } else {
-          obj = { errorCode: null };
-          obj[0] = closure_1_12.INVALID_CHANNEL;
-          const tmp7 = new channel_id(closure_1_2[9])(obj, "Channel is not a text channel");
-          throw tmp7;
-        }
-      }).then((arg0) => {
-        [tmp, tmp2] = arg0;
-        if (tmp2.guild_id) {
-          if (!closure_7.can(constants.VIEW_CHANNEL, tmp)) {
-            const obj = { errorCode: null };
-            obj[0] = constants2.INVALID_CHANNEL;
-            const tmp11 = new channel_id(9503)(obj, "No permission to see channel");
-            throw tmp11;
+      const catchPromise = server
+        .storeWait(socket, () => closure_1_5.getChannel(channel_id), num)
+        .catch(() => {
+          throw new channel_id(9503)(
+            { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
+            "Request to select text channel timed out.",
+          );
+        });
+      let nextPromise1 = server
+        .storeWait(socket, () => closure_1_5.getChannel(channel_id), num)
+        .catch(() => {
+          throw new channel_id(9503)(
+            { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
+            "Request to select text channel timed out.",
+          );
+        })
+        .then((type) => {
+          if (null == type) {
+            let obj = { errorCode: null };
+            obj[0] = closure_1_12.INVALID_CHANNEL;
+            const _HermesInternal = HermesInternal;
+            let tmp16 = channel_id(closure_1_2[9]);
+            tmp16 = new tmp16(obj, "Invalid channel id: " + channel_id);
+            throw tmp16;
+          } else if (closure_1_4(type.type)) {
+            const items = [Promise.resolve(type)];
+            const obj2 = socket(closure_1_2[10]);
+            items[1] = obj2.transformChannel(
+              type,
+              socket(closure_1_2[10]).hasMessageReadPermission(
+                type,
+                socket.application.id,
+                socket.authorization.scopes,
+              ),
+            );
+            return Promise.all(items);
+          } else {
+            obj = { errorCode: null };
+            obj[0] = closure_1_12.INVALID_CHANNEL;
+            const tmp7 = new channel_id(closure_1_2[9])(obj, "Channel is not a text channel");
+            throw tmp7;
           }
-        }
-        if (tmp2.guild_id) {
-          socket(1222).replaceWith(closure_10.CHANNEL(tmp2.guild_id, tmp.id));
-          const obj3 = socket(1222);
-        } else {
-          const privateChannel = channel_id(5355).selectPrivateChannel(tmp.id);
-          const obj2 = channel_id(5355);
-        }
-        return tmp2;
-      });
-      const nextPromise = server.storeWait(socket, () => closure_1_5.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(9503)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
-      }).then((type) => {
-        if (null == type) {
-          let obj = { errorCode: null };
-          obj[0] = closure_1_12.INVALID_CHANNEL;
-          const _HermesInternal = HermesInternal;
-          let tmp16 = channel_id(closure_1_2[9]);
-          tmp16 = new tmp16(obj, "Invalid channel id: " + channel_id);
-          throw tmp16;
-        } else if (closure_1_4(type.type)) {
-          const items = [Promise.resolve(type), ];
-          const obj2 = socket(closure_1_2[10]);
-          items[1] = obj2.transformChannel(type, socket(closure_1_2[10]).hasMessageReadPermission(type, socket.application.id, socket.authorization.scopes));
-          return Promise.all(items);
-        } else {
-          obj = { errorCode: null };
-          obj[0] = closure_1_12.INVALID_CHANNEL;
-          const tmp7 = new channel_id(closure_1_2[9])(obj, "Channel is not a text channel");
-          throw tmp7;
-        }
-      });
+        })
+        .then((arg0) => {
+          [tmp, tmp2] = arg0;
+          if (tmp2.guild_id) {
+            if (!closure_7.can(constants.VIEW_CHANNEL, tmp)) {
+              const obj = { errorCode: null };
+              obj[0] = constants2.INVALID_CHANNEL;
+              const tmp11 = new channel_id(9503)(obj, "No permission to see channel");
+              throw tmp11;
+            }
+          }
+          if (tmp2.guild_id) {
+            socket(1222).replaceWith(closure_10.CHANNEL(tmp2.guild_id, tmp.id));
+            const obj3 = socket(1222);
+          } else {
+            const privateChannel = channel_id(5355).selectPrivateChannel(tmp.id);
+            const obj2 = channel_id(5355);
+          }
+          return tmp2;
+        });
+      const nextPromise = server
+        .storeWait(socket, () => closure_1_5.getChannel(channel_id), num)
+        .catch(() => {
+          throw new channel_id(9503)(
+            { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
+            "Request to select text channel timed out.",
+          );
+        })
+        .then((type) => {
+          if (null == type) {
+            let obj = { errorCode: null };
+            obj[0] = closure_1_12.INVALID_CHANNEL;
+            const _HermesInternal = HermesInternal;
+            let tmp16 = channel_id(closure_1_2[9]);
+            tmp16 = new tmp16(obj, "Invalid channel id: " + channel_id);
+            throw tmp16;
+          } else if (closure_1_4(type.type)) {
+            const items = [Promise.resolve(type)];
+            const obj2 = socket(closure_1_2[10]);
+            items[1] = obj2.transformChannel(
+              type,
+              socket(closure_1_2[10]).hasMessageReadPermission(
+                type,
+                socket.application.id,
+                socket.authorization.scopes,
+              ),
+            );
+            return Promise.all(items);
+          } else {
+            obj = { errorCode: null };
+            obj[0] = closure_1_12.INVALID_CHANNEL;
+            const tmp7 = new channel_id(closure_1_2[9])(obj, "Channel is not a text channel");
+            throw tmp7;
+          }
+        });
     } else {
       socket(1222).transitionTo(constants.ME);
       nextPromise1 = null;
       let obj = socket(1222);
     }
     return nextPromise1;
-  }
+  },
 };
 const obj8 = {
   scope: set2.OAuth2Scopes.RPC,
@@ -370,78 +423,110 @@ const obj8 = {
     }
     if (channel_id) {
       const storeWaitResult = server.storeWait(socket, () => closure_1_5.getChannel(channel_id), num);
-      const catchPromise = server.storeWait(socket, () => closure_1_5.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(9503)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
-      });
-      let nextPromise1 = server.storeWait(socket, () => closure_1_5.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(9503)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
-      }).then((type) => {
-        if (null == type) {
-          let obj = { errorCode: null };
-          obj[0] = closure_1_12.INVALID_CHANNEL;
-          const _HermesInternal = HermesInternal;
-          let tmp16 = channel_id(closure_1_2[9]);
-          tmp16 = new tmp16(obj, "Invalid channel id: " + channel_id);
-          throw tmp16;
-        } else if (closure_1_4(type.type)) {
-          const items = [Promise.resolve(type), ];
-          const obj2 = socket(closure_1_2[10]);
-          items[1] = obj2.transformChannel(type, socket(closure_1_2[10]).hasMessageReadPermission(type, socket.application.id, socket.authorization.scopes));
-          return Promise.all(items);
-        } else {
-          obj = { errorCode: null };
-          obj[0] = closure_1_12.INVALID_CHANNEL;
-          const tmp7 = new channel_id(closure_1_2[9])(obj, "Channel is not a text channel");
-          throw tmp7;
-        }
-      }).then((arg0) => {
-        [tmp, tmp2] = arg0;
-        if (tmp2.guild_id) {
-          if (!closure_7.can(constants.VIEW_CHANNEL, tmp)) {
-            const obj = { errorCode: null };
-            obj[0] = constants2.INVALID_CHANNEL;
-            const tmp11 = new channel_id(9503)(obj, "No permission to see channel");
-            throw tmp11;
+      const catchPromise = server
+        .storeWait(socket, () => closure_1_5.getChannel(channel_id), num)
+        .catch(() => {
+          throw new channel_id(9503)(
+            { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
+            "Request to select text channel timed out.",
+          );
+        });
+      let nextPromise1 = server
+        .storeWait(socket, () => closure_1_5.getChannel(channel_id), num)
+        .catch(() => {
+          throw new channel_id(9503)(
+            { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
+            "Request to select text channel timed out.",
+          );
+        })
+        .then((type) => {
+          if (null == type) {
+            let obj = { errorCode: null };
+            obj[0] = closure_1_12.INVALID_CHANNEL;
+            const _HermesInternal = HermesInternal;
+            let tmp16 = channel_id(closure_1_2[9]);
+            tmp16 = new tmp16(obj, "Invalid channel id: " + channel_id);
+            throw tmp16;
+          } else if (closure_1_4(type.type)) {
+            const items = [Promise.resolve(type)];
+            const obj2 = socket(closure_1_2[10]);
+            items[1] = obj2.transformChannel(
+              type,
+              socket(closure_1_2[10]).hasMessageReadPermission(
+                type,
+                socket.application.id,
+                socket.authorization.scopes,
+              ),
+            );
+            return Promise.all(items);
+          } else {
+            obj = { errorCode: null };
+            obj[0] = closure_1_12.INVALID_CHANNEL;
+            const tmp7 = new channel_id(closure_1_2[9])(obj, "Channel is not a text channel");
+            throw tmp7;
           }
-        }
-        if (tmp2.guild_id) {
-          socket(1222).replaceWith(closure_10.CHANNEL(tmp2.guild_id, tmp.id));
-          const obj3 = socket(1222);
-        } else {
-          const privateChannel = channel_id(5355).selectPrivateChannel(tmp.id);
-          const obj2 = channel_id(5355);
-        }
-        return tmp2;
-      });
-      const nextPromise = server.storeWait(socket, () => closure_1_5.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(9503)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
-      }).then((type) => {
-        if (null == type) {
-          let obj = { errorCode: null };
-          obj[0] = closure_1_12.INVALID_CHANNEL;
-          const _HermesInternal = HermesInternal;
-          let tmp16 = channel_id(closure_1_2[9]);
-          tmp16 = new tmp16(obj, "Invalid channel id: " + channel_id);
-          throw tmp16;
-        } else if (closure_1_4(type.type)) {
-          const items = [Promise.resolve(type), ];
-          const obj2 = socket(closure_1_2[10]);
-          items[1] = obj2.transformChannel(type, socket(closure_1_2[10]).hasMessageReadPermission(type, socket.application.id, socket.authorization.scopes));
-          return Promise.all(items);
-        } else {
-          obj = { errorCode: null };
-          obj[0] = closure_1_12.INVALID_CHANNEL;
-          const tmp7 = new channel_id(closure_1_2[9])(obj, "Channel is not a text channel");
-          throw tmp7;
-        }
-      });
+        })
+        .then((arg0) => {
+          [tmp, tmp2] = arg0;
+          if (tmp2.guild_id) {
+            if (!closure_7.can(constants.VIEW_CHANNEL, tmp)) {
+              const obj = { errorCode: null };
+              obj[0] = constants2.INVALID_CHANNEL;
+              const tmp11 = new channel_id(9503)(obj, "No permission to see channel");
+              throw tmp11;
+            }
+          }
+          if (tmp2.guild_id) {
+            socket(1222).replaceWith(closure_10.CHANNEL(tmp2.guild_id, tmp.id));
+            const obj3 = socket(1222);
+          } else {
+            const privateChannel = channel_id(5355).selectPrivateChannel(tmp.id);
+            const obj2 = channel_id(5355);
+          }
+          return tmp2;
+        });
+      const nextPromise = server
+        .storeWait(socket, () => closure_1_5.getChannel(channel_id), num)
+        .catch(() => {
+          throw new channel_id(9503)(
+            { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
+            "Request to select text channel timed out.",
+          );
+        })
+        .then((type) => {
+          if (null == type) {
+            let obj = { errorCode: null };
+            obj[0] = closure_1_12.INVALID_CHANNEL;
+            const _HermesInternal = HermesInternal;
+            let tmp16 = channel_id(closure_1_2[9]);
+            tmp16 = new tmp16(obj, "Invalid channel id: " + channel_id);
+            throw tmp16;
+          } else if (closure_1_4(type.type)) {
+            const items = [Promise.resolve(type)];
+            const obj2 = socket(closure_1_2[10]);
+            items[1] = obj2.transformChannel(
+              type,
+              socket(closure_1_2[10]).hasMessageReadPermission(
+                type,
+                socket.application.id,
+                socket.authorization.scopes,
+              ),
+            );
+            return Promise.all(items);
+          } else {
+            obj = { errorCode: null };
+            obj[0] = closure_1_12.INVALID_CHANNEL;
+            const tmp7 = new channel_id(closure_1_2[9])(obj, "Channel is not a text channel");
+            throw tmp7;
+          }
+        });
     } else {
       socket(1222).transitionTo(constants.ME);
       nextPromise1 = null;
       let obj = socket(1222);
     }
     return nextPromise1;
-  }
+  },
 };
 obj[RPCCommands.CREATE_CHANNEL_INVITE] = {
   scope: set2.OAuth2Scopes.RPC,
@@ -452,10 +537,13 @@ obj[RPCCommands.CREATE_CHANNEL_INVITE] = {
     const invite = generateAcceptInviteOptionsDefault.createInvite(channel_id, merged, "RPC");
     return invite.catch(() => {
       let tmp = closure_1_1(closure_1_2[9]);
-      tmp = new tmp({ errorCode: closure_1_12.INVALID_PERMISSIONS }, "Unable to generate an invite for " + channel_id + ". Does this user have permissions?");
+      tmp = new tmp(
+        { errorCode: closure_1_12.INVALID_PERMISSIONS },
+        "Unable to generate an invite for " + channel_id + ". Does this user have permissions?",
+      );
       throw tmp;
     });
-  }
+  },
 };
 const obj9 = {
   scope: set2.OAuth2Scopes.RPC,
@@ -466,10 +554,13 @@ const obj9 = {
     const invite = generateAcceptInviteOptionsDefault.createInvite(channel_id, merged, "RPC");
     return invite.catch(() => {
       let tmp = closure_1_1(closure_1_2[9]);
-      tmp = new tmp({ errorCode: closure_1_12.INVALID_PERMISSIONS }, "Unable to generate an invite for " + channel_id + ". Does this user have permissions?");
+      tmp = new tmp(
+        { errorCode: closure_1_12.INVALID_PERMISSIONS },
+        "Unable to generate an invite for " + channel_id + ". Does this user have permissions?",
+      );
       throw tmp;
     });
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/rpc/server/commands/channels.tsx");
 

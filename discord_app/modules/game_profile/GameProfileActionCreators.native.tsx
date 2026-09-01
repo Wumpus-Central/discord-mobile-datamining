@@ -11,8 +11,14 @@ export default {
   openGameProfileModal(arg0) {
     ({ gameId, gameProfileModalChecks } = arg0);
     ({ source, sourceUserId, stackingBehavior } = arg0);
-    _modDef38(gameProfileModalChecks.shouldOpenGameProfile, "Passed a false value for [gameProfileModalChecks]. Are you using the useShouldOpenGameProfile hook correctly?");
-    _modDef38(gameProfileModalChecks.gameId === gameId, "Passed an unexpected [gameId]. Are you passing a different one than you passed to useShouldOpenGameProfileModal?");
+    _modDef38(
+      gameProfileModalChecks.shouldOpenGameProfile,
+      "Passed a false value for [gameProfileModalChecks]. Are you using the useShouldOpenGameProfile hook correctly?",
+    );
+    _modDef38(
+      gameProfileModalChecks.gameId === gameId,
+      "Passed an unexpected [gameId]. Are you passing a different one than you passed to useShouldOpenGameProfileModal?",
+    );
     let obj = ACTION_SHEET_HEIGHT_HALFDefault;
     obj = { gameId, source, sourceUserId };
     obj.openLazy(asyncRequireImpl(8807, dependencyMap.paths), "game-profile-" + gameId, obj, stackingBehavior);
@@ -23,7 +29,11 @@ export default {
     dispatcherDefault.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId });
     const obj = dispatcherDefault;
     const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
-    obj2.openLazy(asyncRequireImpl(8807, dependencyMap.paths), "game-profile-" + gameId, { gameId, source, initialScrollOffset });
+    obj2.openLazy(asyncRequireImpl(8807, dependencyMap.paths), "game-profile-" + gameId, {
+      gameId,
+      source,
+      initialScrollOffset,
+    });
   },
   setGameProfilePendingReturn(arg0) {
     ({ gameId, channelId, initialScrollOffset } = arg0);
@@ -33,5 +43,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId: id };
     obj.dispatch(obj);
-  }
+  },
 };

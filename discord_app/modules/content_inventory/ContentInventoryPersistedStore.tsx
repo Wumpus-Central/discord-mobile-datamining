@@ -81,8 +81,7 @@ let c5 = 0;
 let c6 = false;
 let c7 = false;
 const PersistedStore = initializeDefault.PersistedStore;
-class ContentInventoryPersistedStore extends PersistedStore {
-}
+class ContentInventoryPersistedStore extends PersistedStore {}
 const prototype = ContentInventoryPersistedStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let obj = arg0;
@@ -107,7 +106,7 @@ Object.defineProperty(prototype, "hidden", {
   get: function hidden(arg0) {
     return closure_2.hidden;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["reset"] = function reset() {
   closure_2 = { itemImpressions: [], hidden: false };
@@ -148,7 +147,7 @@ const contentInventoryPersistedStore = new ContentInventoryPersistedStore(dispat
   },
   CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: function handleToggleContentInventoryFeedHidden() {
     closure_2.hidden = !closure_2.hidden;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryPersistedStore.tsx");
 

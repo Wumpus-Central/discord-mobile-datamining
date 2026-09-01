@@ -14,8 +14,7 @@ let closure_10 = {};
 let closure_11 = {};
 let closure_12 = {};
 const Store = initializeDefault.Store;
-class LastMentionTimestampStore extends Store {
-}
+class LastMentionTimestampStore extends Store {}
 const prototype = LastMentionTimestampStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3, closure_4);
@@ -27,7 +26,12 @@ prototype["getGlobalStats"] = function getGlobalStats() {
     const _Date = Date;
     rounded = Math.floor((Date.now() - tmp) / 1000);
   }
-  const obj = { approx_seconds_since_last_notification: rounded, approx_seconds_since_last_mention: null, approx_seconds_since_last_role_mention: null, approx_seconds_since_last_everyone_mention: null };
+  const obj = {
+    approx_seconds_since_last_notification: rounded,
+    approx_seconds_since_last_mention: null,
+    approx_seconds_since_last_role_mention: null,
+    approx_seconds_since_last_everyone_mention: null,
+  };
   let rounded1 = null;
   if (null != c6) {
     const _Math2 = Math;
@@ -58,7 +62,16 @@ prototype["getStats"] = function getStats(arg0) {
     const _Date = Date;
     rounded = Math.floor((Date.now() - tmp) / 1000);
   }
-  const obj = { approx_seconds_since_last_notification: rounded, approx_seconds_since_last_mention: null, approx_seconds_since_last_role_mention: null, approx_seconds_since_last_everyone_mention: null, approx_seconds_since_last_guild_notification: null, approx_seconds_since_last_guild_mention: null, approx_seconds_since_last_guild_role_mention: null, approx_seconds_since_last_guild_everyone_mention: null };
+  const obj = {
+    approx_seconds_since_last_notification: rounded,
+    approx_seconds_since_last_mention: null,
+    approx_seconds_since_last_role_mention: null,
+    approx_seconds_since_last_everyone_mention: null,
+    approx_seconds_since_last_guild_notification: null,
+    approx_seconds_since_last_guild_mention: null,
+    approx_seconds_since_last_guild_role_mention: null,
+    approx_seconds_since_last_guild_everyone_mention: null,
+  };
   let rounded1 = null;
   if (null != c6) {
     const _Math2 = Math;
@@ -251,7 +264,7 @@ const lastMentionTimestampStore = new LastMentionTimestampStore(dispatcherDefaul
         closure_11[guildId] = timestamp;
       }
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/notifications/LastMentionTimestampStore.tsx");
 
@@ -285,7 +298,13 @@ export const trackMessageNotificationTimestamps = function trackMessageNotificat
     });
   }
   let obj = id(member[3]);
-  obj = { type: "MESSAGE_NOTIFICATION_SHOWN", guildId, mentioned: someResult, roleMentioned: null, everyoneMentioned: null };
+  obj = {
+    type: "MESSAGE_NOTIFICATION_SHOWN",
+    guildId,
+    mentioned: someResult,
+    roleMentioned: null,
+    everyoneMentioned: null,
+  };
   if (someResult1) {
     someResult1 = !result1;
   }

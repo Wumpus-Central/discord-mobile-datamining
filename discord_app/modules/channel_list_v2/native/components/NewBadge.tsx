@@ -19,7 +19,15 @@ let closure_5 = createCacheKey.createStyles((arg0, arg1) => {
     num = 1;
   }
   obj = { text: { textAlign: "center", textTransform: "uppercase", marginTop: num }, base: null };
-  obj = { flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, paddingHorizontal: 6, paddingVertical: 3, backgroundColor: null };
+  obj = {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: ThemesDefault.radii.round,
+    paddingHorizontal: 6,
+    paddingVertical: 3,
+    backgroundColor: null,
+  };
   if (tmpResult.isThemeLight(arg1)) {
     if (!arg0) {
       let MOBILE_TOAST_BACKGROUND_DEFAULT = tmp3(712).colors.BACKGROUND_BRAND;
@@ -47,5 +55,9 @@ export default function NewBadge() {
   const intl = tmp7(1236).intl;
   obj[3] = intl.string(getSystemLocale.t.y2b7CA);
   obj[1] = jsx(Text.Text, { variant: "text-xxs/bold", style: tmp4.text, color: null, children: null });
-  return <View variant="text-xxs/bold" style={tmp4.text} color={null}>{null}</View>;
-};
+  return (
+    <View variant="text-xxs/bold" style={tmp4.text} color={null}>
+      {null}
+    </View>
+  );
+}

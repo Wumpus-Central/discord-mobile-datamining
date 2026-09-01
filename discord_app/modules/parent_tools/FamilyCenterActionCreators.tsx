@@ -23,7 +23,7 @@ function _maybeFetchCollectiblesForInvoices() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -113,7 +113,7 @@ function _maybeFetchCollectiblesForGifts() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -189,7 +189,7 @@ function _updateLinkForUserId() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -269,7 +269,7 @@ function _removeLinkForUserId() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -310,7 +310,11 @@ function _removeLinkForUserId() {
               obj3[0] = HTTP.del(obj1).then((body) => {
                 body = body.body;
                 let obj = v3(table[5]);
-                obj = { type: "FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS", linkedUsers: body, deletedUserId: closure_0 };
+                obj = {
+                  type: "FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS",
+                  linkedUsers: body,
+                  deletedUserId: closure_0,
+                };
                 obj.dispatch(obj);
                 return body;
               });
@@ -346,7 +350,7 @@ function _removeLinkForUserId() {
 }
 function _getLinkCodeForCurrentUser() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -384,7 +388,11 @@ function _getLinkCodeForCurrentUser() {
             obj2[0] = value.then((body) => {
               body = body.body;
               const link_code = body.link_code;
-              v1(table[5]).dispatch({ type: "FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS", linkCode: link_code, expiresAt: body.expires_at });
+              v1(table[5]).dispatch({
+                type: "FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS",
+                linkCode: link_code,
+                expiresAt: body.expires_at,
+              });
               return link_code;
             });
             return obj2;
@@ -418,7 +426,7 @@ function _getLinkCodeForCurrentUser() {
 }
 function _shareIarWithParents() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -486,7 +494,7 @@ let result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCe
 
 export default {
   initialPageLoad() {
-    return callback(function*() {
+    return callback(function* () {
       if (closure_15 === 2) {
         closure_15 = 3;
         HermesBuiltin.throwTypeError();
@@ -557,7 +565,22 @@ export default {
                 if (lib != null) {
                   teen_user_id = lib.teen_user_id;
                 }
-                obj4 = { teenId: null, rangeStartId: null, totals: null, actions: null, users: null, guilds: null, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, spendingLimit: null, monthlyPurchases: null, invoices: null, gifts: null };
+                obj4 = {
+                  teenId: null,
+                  rangeStartId: null,
+                  totals: null,
+                  actions: null,
+                  users: null,
+                  guilds: null,
+                  topUserActivities: null,
+                  topGuildActivities: null,
+                  totalSpendAmount: null,
+                  totalSpendCurrency: null,
+                  spendingLimit: null,
+                  monthlyPurchases: null,
+                  invoices: null,
+                  gifts: null,
+                };
                 obj4[0] = teen_user_id;
                 let range_start_id;
                 if (lib != null) {
@@ -705,7 +728,13 @@ export default {
                 return obj;
               }
               obj3 = lib(709);
-              const obj7 = { type: "FAMILY_CENTER_INITIAL_LOAD", familyCenterTeenActivity: null, linkedUsers: null, users: null, ageGroup: null };
+              const obj7 = {
+                type: "FAMILY_CENTER_INITIAL_LOAD",
+                familyCenterTeenActivity: null,
+                linkedUsers: null,
+                users: null,
+                ageGroup: null,
+              };
               obj7[1] = obj4;
               obj7[2] = dependencyMap;
               obj7[3] = users2;
@@ -747,7 +776,7 @@ export default {
     })();
   },
   fetchLinkedUsers() {
-    return callback(function*() {
+    return callback(function* () {
       let obj4 = tmp2;
       let body = tmp5;
       const HTTP = closure_1_0(530).HTTP;
@@ -766,7 +795,7 @@ export default {
     })();
   },
   getConnectionPrerequisites(closure_0, closure_1) {
-    return callback(function*() {
+    return callback(function* () {
       const HTTP = v0(closure_1_2[6]).HTTP;
       obj1 = { url: null, query: null, rejectWithError: true };
       obj1[0] = closure_1_7.FAMILY_CENTER_CONNECTION_PREREQUISITES;
@@ -789,7 +818,7 @@ export default {
   requestLink(userId, linkCode) {
     closure_0 = userId;
     closure_1 = linkCode;
-    return callback(function*() {
+    return callback(function* () {
       let obj5 = tmp2;
       let body = tmp5;
       const HTTP = closure_1_0(530).HTTP;
@@ -814,7 +843,7 @@ export default {
   },
   fetchTeenActivity(arg0) {
     closure_0 = arg0;
-    return callback(function*() {
+    return callback(function* () {
       if (c11 === 2) {
         c11 = 3;
         HermesBuiltin.throwTypeError();
@@ -872,7 +901,22 @@ export default {
               } else {
                 body = arg1.body;
                 teen_audit_log = body.teen_audit_log;
-                obj4 = { teenId: null, rangeStartId: null, totals: null, actions: null, users: null, guilds: null, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, spendingLimit: null, monthlyPurchases: null, invoices: null, gifts: null };
+                obj4 = {
+                  teenId: null,
+                  rangeStartId: null,
+                  totals: null,
+                  actions: null,
+                  users: null,
+                  guilds: null,
+                  topUserActivities: null,
+                  topGuildActivities: null,
+                  totalSpendAmount: null,
+                  totalSpendCurrency: null,
+                  spendingLimit: null,
+                  monthlyPurchases: null,
+                  invoices: null,
+                  gifts: null,
+                };
                 obj4[0] = teen_audit_log.teen_user_id;
                 obj4[1] = teen_audit_log.range_start_id;
                 obj4[2] = teen_audit_log.totals;
@@ -1017,7 +1061,7 @@ export default {
     closure_1 = arg1;
     closure_2 = startId;
     const callback = event_id;
-    return callback(function*() {
+    return callback(function* () {
       closure_7 = tmp2;
       closure_6 = tmp5;
       const HTTP = closure_1_0(closure_1_2[6]).HTTP;
@@ -1026,7 +1070,19 @@ export default {
       obj1[1] = closure_1_0(closure_1_2[6]).rejectWithMigratedError();
       yield HTTP.get(obj1);
       let teen_audit_log = arg1.body.teen_audit_log;
-      let obj4 = { teenId: null, rangeStartId: null, actions: null, users: null, guilds: null, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, invoices: null, gifts: null };
+      let obj4 = {
+        teenId: null,
+        rangeStartId: null,
+        actions: null,
+        users: null,
+        guilds: null,
+        topUserActivities: null,
+        topGuildActivities: null,
+        totalSpendAmount: null,
+        totalSpendCurrency: null,
+        invoices: null,
+        gifts: null,
+      };
       obj4[0] = teen_audit_log.teen_user_id;
       obj4[1] = teen_audit_log.range_start_id;
       obj4[2] = teen_audit_log.actions;
@@ -1103,7 +1159,11 @@ export default {
   fetchTeenSettingsAndConsents(id) {
     const _require = id;
     const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-    let obj = { url: closure_7.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(id), rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+    let obj = {
+      url: closure_7.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(id),
+      rejectWithError:
+        require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+    };
     const value = HTTP.get(obj);
     return value.then((body) => {
       ({ settings, consents } = body.body);
@@ -1116,7 +1176,7 @@ export default {
     closure_0 = arg0;
     closure_1 = closure_0;
     closure_2 = arg2;
-    return callback(function*() {
+    return callback(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -1146,14 +1206,23 @@ export default {
               closure_1 = tmp2;
               let settings = tmp5;
               settings = undefined;
-              const protoFieldClass = closure_1_0(1371).getProtoFieldClass(closure_1_0(1306).PreloadedUserSettings, closure_1_1);
+              const protoFieldClass = closure_1_0(1371).getProtoFieldClass(
+                closure_1_0(1306).PreloadedUserSettings,
+                closure_1_1,
+              );
               settings = closure_1_4.getSettings(closure_1_0);
               let tmp13;
               if (settings != null) {
                 tmp13 = settings[tmp37];
               }
               let tmp34Result = tmp34(1371);
-              const modifiedProto = tmp34Result.createModifiedProto(tmp13, dependencyMap, protoFieldClass, tmp34(1306).PreloadedUserSettings, tmp37);
+              const modifiedProto = tmp34Result.createModifiedProto(
+                tmp13,
+                dependencyMap,
+                protoFieldClass,
+                tmp34(1306).PreloadedUserSettings,
+                tmp37,
+              );
               if (null != modifiedProto) {
                 const HTTP = tmp34(530).HTTP;
                 obj1 = { url: null, body: null, rejectWithError: null };
@@ -1207,7 +1276,7 @@ export default {
       obj = { type: "FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS", userId: closure_0, consents: body.body };
       obj.dispatch(obj);
     });
-  }
+  },
 };
 export const updateLinkForUserId = function updateLinkForUserId(arg0, ACTIVE) {
   const self = this;

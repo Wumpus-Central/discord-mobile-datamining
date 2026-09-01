@@ -18,7 +18,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 function FormControlText(children) {
   const tmp = callback3();
-  return callback2(Text.Text, { variant: "text-sm/medium", color: "text-default", style: callback3().formControlText, children: children.text });
+  return callback2(Text.Text, {
+    variant: "text-sm/medium",
+    color: "text-default",
+    style: callback3().formControlText,
+    children: children.text,
+  });
 }
 function FormControlSubtext(text) {
   text = text.text;
@@ -33,15 +38,41 @@ function FormControlSubtext(text) {
 }
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { button: null, buttonTextContainer: null, formControlText: null, labelTrailing: null, newBadge: null };
-createCacheKey = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: 12, padding: 12, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  button: null,
+  buttonTextContainer: null,
+  formControlText: null,
+  labelTrailing: null,
+  newBadge: null,
+};
+createCacheKey = {
+  flexGrow: 1,
+  flexShrink: 1,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: 12,
+  padding: 12,
+  borderColor: ThemesDefault.colors.BORDER_STRONG,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 1, flexShrink: 1, flexDirection: "column" };
 createCacheKey[2] = { marginRight: "auto", flexShrink: 1 };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", marginLeft: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_4 };
+createCacheKey[3] = {
+  flexDirection: "row",
+  alignItems: "center",
+  marginLeft: ThemesDefault.space.PX_4,
+  gap: ThemesDefault.space.PX_4,
+};
 createCacheKey[4] = { paddingTop: 0 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexDirection: "row", alignItems: "center", marginLeft: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_4 };
+let obj1 = {
+  flexDirection: "row",
+  alignItems: "center",
+  marginLeft: ThemesDefault.space.PX_4,
+  gap: ThemesDefault.space.PX_4,
+};
 const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditFormControls.tsx");
 
 export const UserProfileEditFormLabelBadges = function UserProfileEditFormLabelBadges(showPremiumIcon) {
@@ -61,7 +92,7 @@ export const UserProfileEditFormLabelBadges = function UserProfileEditFormLabelB
     if (flag) {
       tmp5 = callback2(NitroWheelIcon.NitroWheelIcon, { size: "xs" });
     }
-    const items = [tmp5, ];
+    const items = [tmp5];
     let tmp9 = null;
     if (flag2) {
       obj = { text: null, style: null };
@@ -96,12 +127,22 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
   }
   const tmp = callback3();
   let obj = { label, labelTrailing, children: null };
-  obj = { onPress, style: tmp.button, accessibilityRole: "button", accessibilityLabel: label, accessibilityValue, accessibilityHint: null, accessibilityState: null, disabled: null, children: null };
+  obj = {
+    onPress,
+    style: tmp.button,
+    accessibilityRole: "button",
+    accessibilityLabel: label,
+    accessibilityValue,
+    accessibilityHint: null,
+    accessibilityState: null,
+    disabled: null,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[5] = intl.string(getSystemLocale.t["4lAcxv"]);
   obj[6] = { disabled, busy: flag };
   obj[7] = disabled;
-  const items = [leading, , , ];
+  const items = [leading, , ,];
   if (content == null) {
     obj = { style: null, children: null };
     obj[0] = tmp.buttonTextContainer;
@@ -111,7 +152,7 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
       obj1[0] = buttonText;
       tmp2Result = tmp2(FormControlText, obj1);
     }
-    const items1 = [tmp2Result, ];
+    const items1 = [tmp2Result];
     const obj2 = { text: null };
     obj2[0] = buttonSubtext;
     items1[1] = tmp2(FormControlSubtext, obj2);
@@ -180,7 +221,7 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
     accessibilityHint: null,
     accessibilityState: null,
     disabled: null,
-    children: null
+    children: null,
   };
   if (accessibilityLabel == null) {
     accessibilityLabel = subLabel;
@@ -189,7 +230,10 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
   obj[5] = accessibilityHint;
   obj[6] = { disabled, checked: tmp5[0] };
   obj[7] = disabled;
-  const items1 = [closure_6(FormControlText, { text: subLabel }), closure_6(FormSwitch.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled })];
+  const items1 = [
+    closure_6(FormControlText, { text: subLabel }),
+    closure_6(FormSwitch.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled }),
+  ];
   obj[8] = items1;
   obj[1] = closure_7(PressableHighlight, obj);
   return closure_6(Input.Input, obj);

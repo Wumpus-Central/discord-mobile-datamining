@@ -64,7 +64,8 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
           let obj3 = { fontSize: null };
           obj3[0] = closure_4;
           obj[1] = obj3;
-          let str = emoji.type === callback(mediaAttachmentState[11]).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
+          let str =
+            emoji.type === callback(mediaAttachmentState[11]).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
           if (str == null) {
             str = "";
           }
@@ -83,8 +84,8 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
       }
     }, items1),
     upload: stateFromStores,
-    setUploadSize: tmp4[1]
+    setUploadSize: tmp4[1],
   };
   items1 = [mediaAttachmentState, arg4, arg3, stateFromStores, tmp7, first];
   return obj;
-};
+}

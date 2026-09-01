@@ -13,11 +13,20 @@ export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottom
   obj = {
     metadata: appId,
     onOpen() {
-      callback(closure_1_3.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, appId, callback(closure_1_2[4]).AppStoreOverlayVariant.CUSTOM);
+      callback(
+        closure_1_3.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED,
+        appId,
+        callback(closure_1_2[4]).AppStoreOverlayVariant.CUSTOM,
+      );
     },
     onDismiss(arg0) {
       const result = callback(closure_1_2[6]).clearAppStoreOverlayOpen();
-      callback(closure_1_3.QUEST_APP_STORE_OVERLAY_CLOSED, appId, callback(closure_1_2[4]).AppStoreOverlayVariant.CUSTOM, arg0);
+      callback(
+        closure_1_3.QUEST_APP_STORE_OVERLAY_CLOSED,
+        appId,
+        callback(closure_1_2[4]).AppStoreOverlayVariant.CUSTOM,
+        arg0,
+      );
       const ComponentDispatch = callback(closure_1_2[5]).ComponentDispatch;
       ComponentDispatch.dispatch(closure_1_4.QUEST_APP_STORE_OVERLAY_FINISHED);
     },
@@ -26,9 +35,9 @@ export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottom
       const result = callback(closure_1_2[6]).setAppStoreOverlayOpen({
         trackOverlayEvent(arg0, arg1) {
           return callback(arg0, closure_1, callback(MAIN_CTA[4]).AppStoreOverlayVariant.CUSTOM, arg1, MAIN_CTA);
-        }
+        },
       });
-    }
+    },
   };
   obj.openLazy(asyncRequireImpl(11101, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
 };

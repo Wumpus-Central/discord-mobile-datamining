@@ -17,10 +17,29 @@ noopAll;
 ({ AnalyticEvents: c9, AuthStates: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 createCacheKey = { container: null, mainCard: null, addAccountLabel: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.sm, paddingTop: ThemesDefault.space.PX_16, margin: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderRadius: ThemesDefault.radii.sm,
+  paddingTop: ThemesDefault.space.PX_16,
+  margin: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginVertical: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.sm, flexDirection: "column", alignItems: "stretch", alignSelf: "stretch", display: "flex" };
-let obj1 = { marginVertical: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.sm, flexDirection: "column", alignItems: "stretch", alignSelf: "stretch", display: "flex" };
+createCacheKey[1] = {
+  marginVertical: ThemesDefault.space.PX_16,
+  borderRadius: ThemesDefault.radii.sm,
+  flexDirection: "column",
+  alignItems: "stretch",
+  alignSelf: "stretch",
+  display: "flex",
+};
+let obj1 = {
+  marginVertical: ThemesDefault.space.PX_16,
+  borderRadius: ThemesDefault.radii.sm,
+  flexDirection: "column",
+  alignItems: "stretch",
+  alignSelf: "stretch",
+  display: "flex",
+};
 createCacheKey[2] = { color: ThemesDefault.colors.TEXT_LINK };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { color: ThemesDefault.colors.TEXT_LINK };
@@ -33,7 +52,7 @@ export default function ChooseAccount() {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (c4 === 2) {
           c4 = 3;
           HermesBuiltin.throwTypeError();
@@ -63,7 +82,14 @@ export default function ChooseAccount() {
                 closure_2 = tmp5;
                 closure_1 = tmp2;
                 let string = lib;
-                obj1 = { title: null, body: null, confirmText: null, confirmColor: null, cancelText: null, isDismissable: true };
+                obj1 = {
+                  title: null,
+                  body: null,
+                  confirmText: null,
+                  confirmColor: null,
+                  cancelText: null,
+                  isDismissable: true,
+                };
                 const intl3 = lib(1236).intl;
                 obj1[0] = intl3.string(lib(1236).t.n0Fbg6);
                 const intl4 = lib(1236).intl;
@@ -129,7 +155,14 @@ export default function ChooseAccount() {
   _require = obj.useNavigation();
   obj1 = useMultiAccountUsers;
   const multiAccountUsers = obj1.useMultiAccountUsers().multiAccountUsers;
-  obj = { headerText: null, subHeader: null, backgroundImageSource: null, backgroundImageCover: true, contentStyle: null, children: null };
+  obj = {
+    headerText: null,
+    subHeader: null,
+    backgroundImageSource: null,
+    backgroundImageCover: true,
+    contentStyle: null,
+    children: null,
+  };
   let intl = require("../../../intl/index.native.tsx").intl;
   obj[0] = intl.string(require("../../../intl/index.native.tsx").t.bVbB63);
   obj = { variant: "text-sm/medium", color: "text-default", children: null };
@@ -154,7 +187,7 @@ export default function ChooseAccount() {
           }
           return tmp4;
         },
-        trailing: null
+        trailing: null,
       };
       obj = {
         accessibilityRole: "button",
@@ -177,7 +210,7 @@ export default function ChooseAccount() {
             }
             return tmp4;
           };
-          const items = [obj, ];
+          const items = [obj];
           obj1 = { label: null, onPress: null, isDestructive: true };
           const intl2 = arr(closure_1_3[14]).intl;
           obj1[0] = intl2.string(arr(closure_1_3[14]).t.lSLMaU);
@@ -197,18 +230,25 @@ export default function ChooseAccount() {
           obj[1] = items;
           const result = obj1.showSimpleActionSheet(obj);
         },
-        children: null
+        children: null,
       };
-      obj = { size: arr(closure_1_3[15]).Icon.Sizes.SMALL_20, source: multiAccountUsers(closure_1_3[23]), disableColor: true };
+      obj = {
+        size: arr(closure_1_3[15]).Icon.Sizes.SMALL_20,
+        source: multiAccountUsers(closure_1_3[23]),
+        disableColor: true,
+      };
       obj[2] = closure_1_11(id(closure_1_3[15]).Icon, obj);
       obj[2] = closure_1_11(id(closure_1_3[22]).PressableOpacity, obj);
       return closure_1_11(multiAccountUsers(closure_1_3[21]), obj, id.id);
     }),
-
   ];
   let obj2 = { leading: null, label: null, labelStyle: null, onPress: null };
   const tmp2 = multiAccountUsers(7745);
-  obj2[0] = callback(require("../../../design/void/Form/native/index.tsx").FormRow.Icon, { themedColor: multiAccountUsers(712).colors.TEXT_LINK, size: require("../../../design/void/native.tsx").Icon.Sizes.SMALL_20, source: multiAccountUsers(15544) });
+  obj2[0] = callback(require("../../../design/void/Form/native/index.tsx").FormRow.Icon, {
+    themedColor: multiAccountUsers(712).colors.TEXT_LINK,
+    size: require("../../../design/void/native.tsx").Icon.Sizes.SMALL_20,
+    source: multiAccountUsers(15544),
+  });
   let intl3 = require("../../../intl/index.native.tsx").intl;
   obj2[1] = intl3.string(require("../../../intl/index.native.tsx").t.bPP34Q);
   obj2[2] = tmp.addAccountLabel;
@@ -233,4 +273,4 @@ export default function ChooseAccount() {
   obj1[1] = items;
   obj[5] = callback2(View, obj1);
   return callback(tmp2, obj);
-};
+}

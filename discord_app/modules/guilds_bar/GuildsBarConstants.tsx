@@ -8,4 +8,9 @@ const result = set.fileFinishedImporting("modules/guilds_bar/GuildsBarConstants.
 
 export const DEFAULT_FOLDER_COLOR = hex2intResult;
 export const GuildPeekCardTypes = { WHO: 0, [0]: "WHO", WHAT: 1, [1]: "WHAT" };
-export const CardCategory = { HANGOUT: "hangout", EMBEDDED_ACTIVITY: "embedded-activity", EVENT: "event", GAMING: "gaming" };
+export const CardCategory = {
+  HANGOUT: "hangout",
+  EMBEDDED_ACTIVITY: "embedded-activity",
+  EVENT: "event",
+  GAMING: "gaming",
+};

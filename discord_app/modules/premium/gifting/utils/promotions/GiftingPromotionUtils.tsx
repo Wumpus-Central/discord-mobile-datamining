@@ -14,7 +14,9 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
   const first = tmp[0];
   dependencyMap = tmp[1];
   let items = [hasPreviouslyFetched];
-  stateFromStoresArray = first(589).useStateFromStoresArray(items, () => hasPreviouslyFetched.getGiftPromotionRewardSkuIds());
+  stateFromStoresArray = first(589).useStateFromStoresArray(items, () =>
+    hasPreviouslyFetched.getGiftPromotionRewardSkuIds(),
+  );
   const obj = first(589);
   const fetchPurchases = first(8084).useFetchPurchases();
   purchases = fetchPurchases.purchases;
@@ -38,7 +40,9 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
       }
     }
   }, items1);
-  const someResult = stateFromStoresArray.some((arg0) => arg0 === first(10511).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID);
+  const someResult = stateFromStoresArray.some(
+    (arg0) => arg0 === first(10511).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID,
+  );
   closure_7 = someResult;
   const obj3 = first(8084);
   const fetchSummer2026GogoPromoEligibility = first(10512).useFetchSummer2026GogoPromoEligibility(someResult);
@@ -61,7 +65,7 @@ export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
   return map;
 };
 export const useShouldShowSelectFreeSkuStep = function useShouldShowSelectFreeSkuStep(id) {
-  const items = [, ];
+  const items = [,];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {
@@ -86,7 +90,7 @@ export const useShouldShowSelectFreeSkuStep = function useShouldShowSelectFreeSk
   return tmp4;
 };
 export const useShouldAutoSelectGiftingPromotionReward = function useShouldAutoSelectGiftingPromotionReward(id) {
-  const items = [, ];
+  const items = [,];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {
@@ -106,7 +110,7 @@ export const useShouldAutoSelectGiftingPromotionReward = function useShouldAutoS
   return tmp3;
 };
 export const useIsPlanEligibleForGiftingPromotion = function useIsPlanEligibleForGiftingPromotion(id) {
-  const items = [, ];
+  const items = [,];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
   id = undefined;
   if (id != null) {
@@ -157,7 +161,12 @@ export const createGradientStyle = function createGradientStyle(gradient) {
 };
 export const createBackgroundStyle = function createBackgroundStyle(arg0) {
   if (null != arg0) {
-    const obj = { backgroundImage: null, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" };
+    const obj = {
+      backgroundImage: null,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
     const _HermesInternal = HermesInternal;
     obj[0] = "url(" + arg0 + ")";
     return obj;
@@ -192,7 +201,10 @@ export const combinePromotionStyles = function combinePromotionStyles(background
 export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftPromotionReminderNotice() {
   const GiftPromotionReminderExperiment = apexExperiment2.GiftPromotionReminderExperiment;
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
-    if (null == marketingComponentByType.getMarketingComponentByType(tmp(10515).MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
+    if (
+      null ==
+      marketingComponentByType.getMarketingComponentByType(tmp(10515).MarketingComponentType.GIFT_REMINDER_NAGBAR)
+    ) {
       return false;
     } else {
       const giftPromotion = obj.getGiftPromotion();
@@ -203,10 +215,16 @@ export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftProm
       let tmp5 = null != id;
       if (tmp5) {
         let tmpResult = tmp(4298);
-        let isDismissed = tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1373).DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, id).isDismissed;
+        let isDismissed = tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(
+          tmp(1373).DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK,
+          id,
+        ).isDismissed;
         if (isDismissed) {
           tmpResult = tmp(4298);
-          isDismissed = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1373).DismissibleContent.GIFTING_PROMOTION_REMINDER, id).isDismissed;
+          isDismissed = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(
+            tmp(1373).DismissibleContent.GIFTING_PROMOTION_REMINDER,
+            id,
+          ).isDismissed;
         }
         tmp5 = isDismissed;
       }

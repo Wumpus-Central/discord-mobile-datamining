@@ -26,17 +26,23 @@ export default function MentionSubtitle(channel) {
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   obj = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
-  const items = [callback(channelIconComponentWithGuild, obj), ];
-  obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
+  const items = [callback(channelIconComponentWithGuild, obj)];
+  obj1 = {
+    variant: "text-xs/medium",
+    color: "text-muted",
+    lineClamp: 1,
+    style: subtitleStyles.subtitleText,
+    children: null,
+  };
   const intl = tmp(1236).intl;
   obj1[4] = intl.format(getSystemLocale.t.L9YdGH, {
     channelName,
     count: count - 1,
     channelHook(children) {
       return callback2(callback(table[6]).Text, { variant: "text-xs/medium", children }, arg1);
-    }
+    },
   });
   items[1] = callback(Text.Text, obj1);
   obj[1] = items;
   return callback2(View, obj);
-};
+}

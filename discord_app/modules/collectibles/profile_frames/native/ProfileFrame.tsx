@@ -23,7 +23,7 @@ function ProfileFrameLayer(skuId) {
   const tmp5 = layer(overflowTop[7])({ skuId: skuId.skuId, layer, width: sum });
   assetUrl = tmp5.assetUrl;
   imageHeight = tmp5.imageHeight;
-  const items = [, , , , , ];
+  const items = [, , , , ,];
   ({ anchor: arr[0], type: arr[1], order: arr[2] } = layer);
   items[3] = overflowTop;
   items[4] = overflowBottom;
@@ -153,17 +153,36 @@ function LiveProfileFrame(frame) {
   }, items);
   if (0 !== memo.length) {
     if (0 !== containerWidth) {
-      ({ overflowTop: c6, overflowBottom: c7, overflowHorizontal: c8 } = frame(containerWidth[9])(frame, containerWidth));
+      ({
+        overflowTop: c6,
+        overflowBottom: c7,
+        overflowHorizontal: c8,
+      } = frame(containerWidth[9])(frame, containerWidth));
       const obj = { style: null, children: null };
       obj[0] = tmp.container;
-      obj[1] = memo.map((id) => _undefined(closure_1_10, { skuId: frame.skuId, layer: id, overflowTop: c6, overflowBottom: c7, overflowHorizontal: _undefined, containerWidth, containerHeight: closure_2 }, id.id));
+      obj[1] = memo.map((id) =>
+        _undefined(
+          closure_1_10,
+          {
+            skuId: frame.skuId,
+            layer: id,
+            overflowTop: c6,
+            overflowBottom: c7,
+            overflowHorizontal: _undefined,
+            containerWidth,
+            containerHeight: closure_2,
+          },
+          id.id,
+        ),
+      );
       return <profileThemeType style={null}>{null}</profileThemeType>;
     }
   }
   return null;
 }
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: c5, PROFILE_FRAME_Z_INDEX: closure_6 } = PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO);
+({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: c5, PROFILE_FRAME_Z_INDEX: closure_6 } =
+  PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO);
 createCacheKey = { container: null, layer: null };
 createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -191,4 +210,4 @@ export default function ProfileFrame(arg0) {
     tmp7 = <LiveProfileFrame />;
   }
   return tmp7;
-};
+}

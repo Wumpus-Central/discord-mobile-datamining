@@ -10,7 +10,19 @@ function updateAveragedStatsHelper(arg0, arg1, arg2, arr, arr2) {
   let tmp = arg2;
   const found = arr.find((type) => "video" === type.type);
   if (null == arg2) {
-    const obj = { packetsSentOrReceived: 0, packetsLost: 0, packetLossRate: 0, frameRate: 0, resolution: 0, entropy: 0, numDatapoints: 0, frameRateAggregated: 0, resolutionAggregated: 0, entropyAggregated: 0, minVersion: null };
+    const obj = {
+      packetsSentOrReceived: 0,
+      packetsLost: 0,
+      packetLossRate: 0,
+      frameRate: 0,
+      resolution: 0,
+      entropy: 0,
+      numDatapoints: 0,
+      frameRateAggregated: 0,
+      resolutionAggregated: 0,
+      entropyAggregated: 0,
+      minVersion: null,
+    };
     obj[10] = arg0;
     tmp = obj;
   }
@@ -148,7 +160,13 @@ function updateAveragedStats(arg0, arg1, version, version2) {
   if (version2 != null) {
     outbound = version2.stats.rtp.outbound;
   }
-  arg0[arg1][id] = updateAveragedStatsHelper(version.version, num, arg0[arg1][id], version.stats.rtp.outbound, outbound);
+  arg0[arg1][id] = updateAveragedStatsHelper(
+    version.version,
+    num,
+    arg0[arg1][id],
+    version.stats.rtp.outbound,
+    outbound,
+  );
   const keys = Object.keys(version.stats.rtp.inbound);
   for (const item10043 of keys) {
     let tmp5 = item10043;
@@ -197,8 +215,7 @@ let closure_4 = {};
 let closure_5 = {};
 let closure_6 = {};
 const Store = initializeDefault.Store;
-class MediaEngineStatsStore extends Store {
-}
+class MediaEngineStatsStore extends Store {}
 const prototype = MediaEngineStatsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3);
@@ -242,7 +259,11 @@ prototype["getStatsHistory"] = function getStatsHistory(arg0) {
   }
   return items;
 };
-prototype["getAccumulatedPerformanceStats"] = function getAccumulatedPerformanceStats(mediaEngineConnectionId, ownerId, long) {
+prototype["getAccumulatedPerformanceStats"] = function getAccumulatedPerformanceStats(
+  mediaEngineConnectionId,
+  ownerId,
+  long,
+) {
   if (null == mediaEngineConnectionId) {
     return null;
   } else {
@@ -269,7 +290,9 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(dispatcherDefault, {
       if (0 !== prop.length) {
         let tmp26 = prop;
         let tmp27 = nextResult;
-        {}[tmp3] = tmp2;
+        {
+        }
+        [tmp3] = tmp2;
         let tmp28 = closure_4;
         if (!(tmp3 in closure_4)) {
           let tmp4 = prop;
@@ -364,7 +387,7 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(dispatcherDefault, {
         delete tmp[tmp2];
       }
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/media_engine/MediaEngineStatsStore.tsx");
 

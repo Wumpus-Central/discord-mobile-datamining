@@ -9,6 +9,12 @@ const result = set.fileFinishedImporting("modules/self_mod/shared/ShowSafetyToas
 export const showSafetyToast = function showSafetyToast(arg0) {
   ({ id, text } = arg0);
   let obj = dispatcherDefault;
-  obj = { key: id, icon: registerAssetDefault, IconComponent: ShieldIcon.ShieldIcon, iconColor: "text-brand", content: text };
+  obj = {
+    key: id,
+    icon: registerAssetDefault,
+    IconComponent: ShieldIcon.ShieldIcon,
+    iconColor: "text-brand",
+    content: text,
+  };
   obj.open(obj);
 };

@@ -41,7 +41,7 @@ function ActionSheetSelector(arg0) {
         },
         trailing: null,
         start: null,
-        end: null
+        end: null,
       };
       ({ label: obj[1], description: obj[2] } = type);
       let tmpResult;
@@ -52,7 +52,7 @@ function ActionSheetSelector(arg0) {
       obj[5] = 0 === arg1;
       obj[6] = arg1 === closure_1_10.length - 1;
       return closure_1_7(closure_1_0(5599).TableRow, obj, type.type);
-    })
+    }),
   });
   obj[1] = callback2(closure_5, obj);
   return callback2(Background.BottomSheet, obj);
@@ -60,7 +60,11 @@ function ActionSheetSelector(arg0) {
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { wrap: null, contentContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingHorizontal: ThemesDefault.space.PX_12 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  flex: 1,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_16 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
@@ -71,7 +75,7 @@ let items = [
     description: "Shows a warning for potentially malicious domains",
     show() {
       return _modDef12812.show("https://example-phishing-site.com/malicious-page");
-    }
+    },
   },
   {
     type: "suspicious-download",
@@ -79,16 +83,25 @@ let items = [
     description: "Warns users about potentially dangerous file downloads",
     show() {
       return _modDef12810.show("https://suspicious-file.com/dangerous-file.exe");
-    }
+    },
   },
   {
     type: "inappropriate-conversation",
     label: "Inappropriate Conversation",
     description: "Shows safety warning for inappropriate conversations",
     show() {
-      return _modDef4723.pushLazy(asyncRequireImpl(15322, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
-    }
-  }
+      return _modDef4723.pushLazy(
+        asyncRequireImpl(15322, dependencyMap.paths),
+        {
+          warningId: "test-warning-123",
+          warningType: "inappropriate_conversation",
+          senderId: "123456789",
+          channelId: "987654321",
+        },
+        "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL",
+      );
+    },
+  },
 ];
 let obj1 = { paddingVertical: ThemesDefault.space.PX_16 };
 const obj2 = {
@@ -97,9 +110,11 @@ const obj2 = {
   description: "Shows a warning for potentially malicious domains",
   show() {
     return _modDef12812.show("https://example-phishing-site.com/malicious-page");
-  }
+  },
 };
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsActionSheetsScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsActionSheetsScreen.tsx",
+);
 
 export default function DevToolsActionSheetsScreen() {
   const tmp = callback4();
@@ -117,9 +132,16 @@ export default function DevToolsActionSheetsScreen() {
   }, items);
   obj = { spacing: 16, children: null };
   obj = { children: null };
-  const items1 = [callback2(first(4474).Text, { variant: "heading-lg/medium", children: "Action Sheets" }), callback2(first(5992).TableRowGroup, { description: "Tap an option to launch the action sheet immediately", hasIcons: false, children: callback2(first(5599).TableRow, obj2) })];
+  const items1 = [
+    callback2(first(4474).Text, { variant: "heading-lg/medium", children: "Action Sheets" }),
+    callback2(first(5992).TableRowGroup, {
+      description: "Tap an option to launch the action sheet immediately",
+      hasIcons: false,
+      children: callback2(first(5599).TableRow, obj2),
+    }),
+  ];
   obj[0] = items1;
   obj[1] = callback3(first(5601).Card, obj);
   obj[2] = callback2(first(4926).Stack, obj);
   return callback2(closure_6, obj);
-};
+}

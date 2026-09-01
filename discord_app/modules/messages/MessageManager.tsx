@@ -122,7 +122,15 @@ function fetchMessages(arg0) {
                   if (flag2) {
                     const _HermesInternal2 = HermesInternal;
                     logger.log("Jumping to start of thread " + channel.id);
-                    obj1 = { channelId: null, limit: null, jump: null, isPreload: null, skipLocalFetch: null, avoidInitialScroll: null, fetchKey: null };
+                    obj1 = {
+                      channelId: null,
+                      limit: null,
+                      jump: null,
+                      isPreload: null,
+                      skipLocalFetch: null,
+                      avoidInitialScroll: null,
+                      fetchKey: null,
+                    };
                     obj1[0] = channelId;
                     const tmp9Result4 = tmp9(7201);
                     obj1[1] = getMessageLimit.getMessageLimit("MessageManager.threadStart");
@@ -145,8 +153,18 @@ function fetchMessages(arg0) {
                     if (!obj10.ready) {
                       const trackedAckMessageId = obj16.getTrackedAckMessageId(channel.id);
                       const _HermesInternal = HermesInternal;
-                      logger.log("Jumping to most recent message in thread " + channel.id + " - " + trackedAckMessageId);
-                      const obj3 = { channelId: null, limit: null, jump: null, isPreload: null, skipLocalFetch: null, avoidInitialScroll: null, fetchKey: null };
+                      logger.log(
+                        "Jumping to most recent message in thread " + channel.id + " - " + trackedAckMessageId,
+                      );
+                      const obj3 = {
+                        channelId: null,
+                        limit: null,
+                        jump: null,
+                        isPreload: null,
+                        skipLocalFetch: null,
+                        avoidInitialScroll: null,
+                        fetchKey: null,
+                      };
                       obj3[0] = channelId;
                       const tmp9Result5 = tmp9(7201);
                       obj3[1] = getMessageLimit.getMessageLimit("MessageManager.threadUnread");
@@ -162,7 +180,15 @@ function fetchMessages(arg0) {
                   }
                   obj16 = closure_11;
                 }
-                const obj5 = { channelId: null, limit: null, isPreload: null, skipLocalFetch: null, jump: null, avoidInitialScroll: null, fetchKey: null };
+                const obj5 = {
+                  channelId: null,
+                  limit: null,
+                  isPreload: null,
+                  skipLocalFetch: null,
+                  jump: null,
+                  avoidInitialScroll: null,
+                  fetchKey: null,
+                };
                 obj5[0] = channelId;
                 const tmp9Result6 = tmp9(7201);
                 obj5[1] = getMessageLimit.getMessageLimit("MessageManager.initialFetch");
@@ -175,7 +201,15 @@ function fetchMessages(arg0) {
                 obj5[6] = fetchKey;
                 return tmp9Result6.fetchMessages(obj5);
               } else {
-                obj7 = { channelId: null, messageId: null, flash: true, isPreload: null, skipLocalFetch: null, jumpType: null, avoidInitialScroll: null };
+                obj7 = {
+                  channelId: null,
+                  messageId: null,
+                  flash: true,
+                  isPreload: null,
+                  skipLocalFetch: null,
+                  jumpType: null,
+                  avoidInitialScroll: null,
+                };
                 obj7[0] = channelId;
                 obj7[1] = messageId;
                 obj7[3] = isPreload;
@@ -329,7 +363,12 @@ function handleVoiceChannelSelect(guildId) {
   fetchMessages({ guildId: guildId.guildId, channelId: guildId.channelId });
 }
 function handleJumpToVoiceChannelMessage(guildId) {
-  fetchMessages({ guildId: guildId.guildId, channelId: guildId.channelId, messageId: guildId.messageId, jumpType: guildId.jumpType });
+  fetchMessages({
+    guildId: guildId.guildId,
+    channelId: guildId.channelId,
+    messageId: guildId.messageId,
+    jumpType: guildId.jumpType,
+  });
 }
 function handleChannelSectionStoreChange() {
   const channelId = store3.getChannelId();
@@ -475,7 +514,14 @@ function handleAppWillBecomeActive() {
     const newLocalMessages = trackInviteDefault.fetchNewLocalMessages(channelId, closure_14);
   }
 }
-({ MAX_MESSAGES_PER_CHANNEL: closure_14, CURRENT_APP_CONTEXT: closure_15, ChannelTypes: closure_16, AbortCodes: closure_17, Routes: closure_18, ChannelTypesSets: closure_19 } = ME);
+({
+  MAX_MESSAGES_PER_CHANNEL: closure_14,
+  CURRENT_APP_CONTEXT: closure_15,
+  ChannelTypes: closure_16,
+  AbortCodes: closure_17,
+  Routes: closure_18,
+  ChannelTypesSets: closure_19,
+} = ME);
 let closure_21 = 10 * setDefault.Millis.SECOND;
 let closure_22 = new timestampDefault("MessageManager");
 let closure_25 = 90 * setDefault.Millis.DAY;
@@ -496,23 +542,23 @@ class MessageManager extends tmp4 {
       VOICE_CHANNEL_SELECT: handleVoiceChannelSelect,
       THREAD_CREATE: handleChannelCreate,
       THREAD_LIST_SYNC() {
-            callback();
-          },
+        callback();
+      },
       CHANNEL_CREATE: handleChannelCreate,
       CHANNEL_PRELOAD: handleChannelPreload,
       GUILD_CREATE() {
-            callback();
-          },
+        callback();
+      },
       MESSAGE_END_EDIT: handleMessageEditEnd,
       LOAD_MESSAGES_SUCCESS: handleLoadMessagesSuccess,
       UPLOAD_FAIL: handleUploadFail,
       CHANNEL_DELETE() {
-            callback();
-          },
+        callback();
+      },
       THREAD_DELETE() {
-            callback();
-          },
-      CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE: handleJumpToVoiceChannelMessage
+        callback();
+      },
+      CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE: handleJumpToVoiceChannelMessage,
     };
     applyArgumentsResult.actions = obj;
     return applyArgumentsResult;

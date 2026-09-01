@@ -9,10 +9,16 @@ import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 noopAll;
 ({ AutomodActionType: c3, SUBMIT_FEEDBACK_MODAL_KEY: c4 } = AutomodEventType);
-const result = require("set").fileFinishedImporting("modules/guild_automod/GuildAutomodActionActionCreators.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_automod/GuildAutomodActionActionCreators.native.tsx",
+);
 
 export const getPromiseableActionHandlers = function getPromiseableActionHandlers() {
-  return { [closure_3.BLOCK_MESSAGE]: null, [closure_3.FLAG_TO_CHANNEL]: null, [closure_3.USER_COMMUNICATION_DISABLED]: null };
+  return {
+    [closure_3.BLOCK_MESSAGE]: null,
+    [closure_3.FLAG_TO_CHANNEL]: null,
+    [closure_3.USER_COMMUNICATION_DISABLED]: null,
+  };
 };
 export const openSubmitFeedback = function openSubmitFeedback(messageId, content, decisionId, channel) {
   let obj = _modDef4723;
@@ -20,17 +26,13 @@ export const openSubmitFeedback = function openSubmitFeedback(messageId, content
     onCloseModal() {
       callback(table[3]).popWithKey(closure_4);
     },
-    automodDecision: obj
+    automodDecision: obj,
   };
   obj = { messageId, messageContent: content, decisionId, channel };
   obj.pushLazy(asyncRequireImpl(11439, dependencyMap.paths), obj, closure_4);
 };
-export function openRaidResolveModal() {
-
-}
-export function openConfirmRemoveMentionRaid(arg0) {
-
-}
+export function openRaidResolveModal() {}
+export function openConfirmRemoveMentionRaid(arg0) {}
 export const openAutomodProfileQuarantineAlert = function openAutomodProfileQuarantineAlert(guildId) {
   closure_0 = guildId;
   let obj = _modDef4858;
@@ -45,7 +47,7 @@ export const openAutomodProfileQuarantineAlert = function openAutomodProfileQuar
           return closure_2_5(closure_0, obj);
         };
       });
-    }
+    },
   };
   obj.openLazy(obj);
 };

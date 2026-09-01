@@ -13,8 +13,15 @@ import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "../../relationships/native/Res
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-({ AnalyticEvents: unpackModuleId, AVATAR_MAX_SIZE: closure_12, ChannelTypesSets: map1, NOOP: closure_14, RelationshipTypes: closure_15 } = ME);
-({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_17, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_18 } = IGNORE_CONFIRMATION_ACTION_SHEET_KEY);
+({
+  AnalyticEvents: unpackModuleId,
+  AVATAR_MAX_SIZE: closure_12,
+  ChannelTypesSets: map1,
+  NOOP: closure_14,
+  RelationshipTypes: closure_15,
+} = ME);
+({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_17, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_18 } =
+  IGNORE_CONFIRMATION_ACTION_SHEET_KEY);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
 let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileOverflowMenu.tsx");
 
@@ -40,13 +47,20 @@ export default function UserProfileOverflowMenu(user) {
   let tmp2 = channel;
   let obj = user(channel[12]);
   let items = [analyticsLocations];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ relationshipType: analyticsLocations.getRelationshipType(user.id), isIgnored: analyticsLocations.isIgnored(user.id) }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    relationshipType: analyticsLocations.getRelationshipType(user.id),
+    isIgnored: analyticsLocations.isIgnored(user.id),
+  }));
   ({ relationshipType, isIgnored } = stateFromStoresObject);
   obj1 = user(channel[12]);
   let items1 = [newestAnalyticsLocation, trackUserProfileAction];
   const stateFromStoresObject1 = obj1.useStateFromStoresObject(items1, () => {
     ({ getChannel, getChannel: getChannel2 } = trackUserProfileAction);
-    return { selectedChannel: getChannel(newestAnalyticsLocation.getChannelId()), selectedVoiceChannelId: newestAnalyticsLocation.getVoiceChannelId(), selectedVoiceChannel: getChannel2(newestAnalyticsLocation.getVoiceChannelId()) };
+    return {
+      selectedChannel: getChannel(newestAnalyticsLocation.getChannelId()),
+      selectedVoiceChannelId: newestAnalyticsLocation.getVoiceChannelId(),
+      selectedVoiceChannel: getChannel2(newestAnalyticsLocation.getVoiceChannelId()),
+    };
   });
   selectedChannel = stateFromStoresObject1.selectedChannel;
   selectedVoiceChannelId = stateFromStoresObject1.selectedVoiceChannelId;
@@ -103,7 +117,10 @@ export default function UserProfileOverflowMenu(user) {
   }
   enabled = displayProfile(tmp2[26]).useExperiment({ guildId: guild_id1, location: "UserProfileOverflowMenu" }).enabled;
   const tmp7Result1 = displayProfile(tmp2[26]);
-  const tidaWebformEnabled = displayProfile(tmp2[27]).useExperiment({ location: "UserProfileOverflowMenu" }, { autoTrackExposure: false }).tidaWebformEnabled;
+  const tidaWebformEnabled = displayProfile(tmp2[27]).useExperiment(
+    { location: "UserProfileOverflowMenu" },
+    { autoTrackExposure: false },
+  ).tidaWebformEnabled;
   const tmp7Result2 = displayProfile(tmp2[27]);
   const items3 = [context];
   const stateFromStoresObject2 = user(tmp2[12]).useStateFromStoresObject(items3, () => {
@@ -154,7 +171,7 @@ export default function UserProfileOverflowMenu(user) {
   obj1 = { disableTrack: !enabled };
   const items4 = [user.id];
   displayProfile(tmp2[28])(obj, obj1, items4);
-  const items5 = [user.id, , , ];
+  const items5 = [user.id, , ,];
   id = undefined;
   if (channel != null) {
     id = channel.id;
@@ -445,7 +462,9 @@ export default function UserProfileOverflowMenu(user) {
             callback({ action: "COPY_USERNAME", analyticsLocations: closure_8 });
             const obj = { action: "COPY_USERNAME", analyticsLocations: closure_8 };
             const obj2 = bannerURL(closure_1_2[48]);
-            obj2.copy(closure_1_1(closure_1_2[49]).getUserTag(bannerURL, { decoration: "never", identifiable: "always" }));
+            obj2.copy(
+              closure_1_1(closure_1_2[49]).getUserTag(bannerURL, { decoration: "never", identifiable: "always" }),
+            );
             const obj3 = closure_1_1(closure_1_2[49]);
             const result = bannerURL(closure_1_2[50]).presentUsernameCopied();
           };
@@ -539,7 +558,12 @@ export default function UserProfileOverflowMenu(user) {
       const intl16 = tmp(tmp2[31]).intl;
       obj16[0] = intl16.string(tmp(tmp2[31]).t.PHjkRE);
       obj16[1] = function action() {
-        return displayProfile(channel[52])({ userId: id, selectedChannel, showUserProfile: closure_14, analyticsLocations });
+        return displayProfile(channel[52])({
+          userId: id,
+          selectedChannel,
+          showUserProfile: closure_14,
+          analyticsLocations,
+        });
       };
       items6.push(obj16);
     }
@@ -555,7 +579,10 @@ export default function UserProfileOverflowMenu(user) {
       obj20[0] = items8;
       obj20[1] = function onOpen() {
         if (closure_17) {
-          const result = user(channel[55]).trackShopThisLookMenuAction(user(channel[55]).ShopThisLookMenuAction.MENU_VIEWED, guildId.ACTION_SHEET);
+          const result = user(channel[55]).trackShopThisLookMenuAction(
+            user(channel[55]).ShopThisLookMenuAction.MENU_VIEWED,
+            guildId.ACTION_SHEET,
+          );
           const obj = user(channel[55]);
         }
       };
@@ -573,7 +600,7 @@ export default function UserProfileOverflowMenu(user) {
       };
       obj19[1] = callback(tmp(tmp2[54]).ContextMenu, obj20);
       obj18[1] = callback(tmp7(tmp2[53]).View, obj19);
-      const items9 = [callback(selectedVoiceChannel, obj18), ];
+      const items9 = [callback(selectedVoiceChannel, obj18)];
       const obj21 = { targetRef: null, visible: null, onDismiss: null, onPress: null };
       obj21[0] = ref;
       obj21[1] = isVisible;
@@ -624,4 +651,4 @@ export default function UserProfileOverflowMenu(user) {
     };
     t2 = items6.push(obj22);
   }
-};
+}

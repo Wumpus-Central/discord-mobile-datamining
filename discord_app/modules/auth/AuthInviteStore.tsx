@@ -6,8 +6,7 @@ import fromGuildPropertiesWithAdditionalFields from "../../utils/GuildRecordUtil
 require = arg1;
 let closure_2 = {};
 const Store = initializeDefault.Store;
-class AuthInviteStore extends Store {
-}
+class AuthInviteStore extends Store {}
 AuthInviteStore.prototype["getGuild"] = function getGuild(arg0) {
   return table[arg0];
 };
@@ -20,7 +19,7 @@ const authInviteStore = new AuthInviteStore(dispatcherDefault, {
     } else {
       closure_2[guild.id] = fromGuildPropertiesWithAdditionalFields.fromInviteGuild(guild);
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/auth/AuthInviteStore.tsx");
 

@@ -36,7 +36,13 @@ function useFavoritesAccess(FavoritesGuildActionSheet) {
     tmp6 = tmp7;
   }
   if (!tmp6) {
-    obj = { hasAccess: null, isExperimentEnabled: null, isFreemium: null, favoriteLimit: null, canUpsellFavoriteLimit: null };
+    obj = {
+      hasAccess: null,
+      isExperimentEnabled: null,
+      isFreemium: null,
+      favoriteLimit: null,
+      canUpsellFavoriteLimit: null,
+    };
     obj[0] = tmp6;
     obj[1] = enabled;
     obj[2] = isFreemium;
@@ -65,7 +71,10 @@ export const getFavoritesAccess = function getFavoritesAccess() {
   let obj = useFavoritesGuildConfig;
   const favoritesGuildConfig = obj.getFavoritesGuildConfig({ location: "getFavoritesAccess" });
   ({ enabled, isFreemium } = favoritesGuildConfig);
-  const isPremiumExactlyResult = isPremiumAtLeastDefault.isPremiumExactly(currentUser.getCurrentUser(), PremiumTypes.TIER_2);
+  const isPremiumExactlyResult = isPremiumAtLeastDefault.isPremiumExactly(
+    currentUser.getCurrentUser(),
+    PremiumTypes.TIER_2,
+  );
   let tmp5 = enabled;
   if (enabled) {
     let tmp6 = isPremiumExactlyResult;
@@ -75,7 +84,13 @@ export const getFavoritesAccess = function getFavoritesAccess() {
     tmp5 = tmp6;
   }
   if (!tmp5) {
-    obj = { hasAccess: null, isExperimentEnabled: null, isFreemium: null, favoriteLimit: null, canUpsellFavoriteLimit: null };
+    obj = {
+      hasAccess: null,
+      isExperimentEnabled: null,
+      isFreemium: null,
+      favoriteLimit: null,
+      canUpsellFavoriteLimit: null,
+    };
     obj[0] = tmp5;
     obj[1] = enabled;
     obj[2] = isFreemium;
@@ -101,7 +116,9 @@ export const useFavoritesLimitUpsell = function useFavoritesLimitUpsell() {
   ({ canUpsellFavoriteLimit, favoriteLimit } = useFavoritesAccess("useFavoritesLimitUpsell"));
   const tmp = useFavoritesAccess("useFavoritesLimitUpsell");
   const items = [closure_5];
-  const favoriteCount = initialize.useStateFromStores(items, () => favoritesCountAgainstLimit.getFavoritesCountAgainstLimit());
+  const favoriteCount = initialize.useStateFromStores(items, () =>
+    favoritesCountAgainstLimit.getFavoritesCountAgainstLimit(),
+  );
   if (shouldShowUpsell) {
     shouldShowUpsell = true;
   }
@@ -115,11 +132,15 @@ export const useFavorites = function useFavorites() {
 export const useFavorite = function useFavorite(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.getFavorite(closure_0));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_5.getFavorite(closure_0),
+  );
 };
 export const useFavoritedChannelIds = function useFavoritedChannelIds() {
   const items = [closure_5];
-  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () =>
+    favoriteChannels.getFavoriteChannels(),
+  );
   const obj = initialize;
   return DISCORD_EPOCHDefault.keys(stateFromStoresObject);
 };
@@ -176,7 +197,9 @@ export const useFavoritesAwareChannel = function useFavoritesAwareChannel(arg0, 
   let tmp = arg0;
   const _require = arg0;
   const items = [closure_3];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => guildId.getGuildId());
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    guildId.getGuildId(),
+  );
   const obj = initialize;
   const obj2 = getFavoritesAwareGuildName;
   initialize;

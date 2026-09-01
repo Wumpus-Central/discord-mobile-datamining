@@ -19,8 +19,12 @@ obj[2] = { transform: items, width: 56, flex: 0, height: "300%", top: "-10%" };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, flex: 1 };
 obj[3] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(obj);
-let closure_10 = { code: "function ShineAnimationTsx1(){const{interpolate,progress}=this.__closure;const widthPercent=interpolate(progress.get(),[0,1],[20,160]);return{width:widthPercent+\"%\"};}" };
-let closure_11 = { code: "function ShineAnimationTsx2(){const{ShineAnimationConfig,interpolateColor,progress,flashStartColor,flashEndColor}=this.__closure;const startTime=ShineAnimationConfig.FLASH_TIME_PERCENT;const duration=ShineAnimationConfig.FLASH_DURATION_PERCENT;return{backgroundColor:interpolateColor(progress.get(),[0,startTime,startTime,startTime+duration,1],[flashStartColor,flashStartColor,flashEndColor,flashEndColor,flashStartColor])};}" };
+let closure_10 = {
+  code: 'function ShineAnimationTsx1(){const{interpolate,progress}=this.__closure;const widthPercent=interpolate(progress.get(),[0,1],[20,160]);return{width:widthPercent+"%"};}',
+};
+let closure_11 = {
+  code: "function ShineAnimationTsx2(){const{ShineAnimationConfig,interpolateColor,progress,flashStartColor,flashEndColor}=this.__closure;const startTime=ShineAnimationConfig.FLASH_TIME_PERCENT;const duration=ShineAnimationConfig.FLASH_DURATION_PERCENT;return{backgroundColor:interpolateColor(progress.get(),[0,startTime,startTime,startTime+duration,1],[flashStartColor,flashStartColor,flashEndColor,flashEndColor,flashStartColor])};}",
+};
 const memoResult = importAllResult.memo(function ShineAnimation(arg0) {
   let sharedValue;
   importDefault = undefined;
@@ -33,7 +37,9 @@ const memoResult = importAllResult.memo(function ShineAnimation(arg0) {
   const effect = importAllResult.useEffect(() => {
     const obj = sharedValue(hexResult1[5]);
     const obj2 = sharedValue(hexResult1[5]);
-    const result = sharedValue.set(obj.withDelay(400, obj2.withRepeat(sharedValue(hexResult1[6]).withTiming(1, { duration: 1000 }), -1, false)));
+    const result = sharedValue.set(
+      obj.withDelay(400, obj2.withRepeat(sharedValue(hexResult1[6]).withTiming(1, { duration: 1000 }), -1, false)),
+    );
   }, items);
   obj1 = sharedValue(hexResult1[5]);
   class A {
@@ -51,7 +57,9 @@ const memoResult = importAllResult.memo(function ShineAnimation(arg0) {
   const animatedStyle = obj1.useAnimatedStyle(A);
   const tmp5 = importDefault(hexResult1[7]);
   const tmp5Result = importDefault(hexResult1[7])(importDefault(hexResult1[4]).unsafe_rawColors.BRAND_360);
-  const hexResult = importDefault(hexResult1[7])(importDefault(hexResult1[4]).unsafe_rawColors.BRAND_360).alpha(0.2).hex();
+  const hexResult = importDefault(hexResult1[7])(importDefault(hexResult1[4]).unsafe_rawColors.BRAND_360)
+    .alpha(0.2)
+    .hex();
   importDefault = hexResult;
   const alphaResult = importDefault(hexResult1[7])(importDefault(hexResult1[4]).unsafe_rawColors.BRAND_360).alpha(0.2);
   const tmp7 = importDefault(hexResult1[7]);
@@ -68,7 +76,7 @@ const memoResult = importAllResult.memo(function ShineAnimation(arg0) {
       items[2] = FLASH_TIME_PERCENT;
       items[3] = FLASH_TIME_PERCENT + closure_1_8.FLASH_DURATION_PERCENT;
       items[4] = 1;
-      items1 = [, , , , ];
+      items1 = [, , , ,];
       items1[0] = closure_1;
       items1[1] = closure_1;
       items1[2] = closure_2;
@@ -78,7 +86,13 @@ const memoResult = importAllResult.memo(function ShineAnimation(arg0) {
       return obj;
     }
   }
-  obj = { ShineAnimationConfig: closure_8, interpolateColor: sharedValue(hexResult1[5]).interpolateColor, progress: sharedValue, flashStartColor: hexResult, flashEndColor: hexResult1 };
+  obj = {
+    ShineAnimationConfig: closure_8,
+    interpolateColor: sharedValue(hexResult1[5]).interpolateColor,
+    progress: sharedValue,
+    flashStartColor: hexResult,
+    flashEndColor: hexResult1,
+  };
   E.__closure = obj;
   E.__workletHash = 9845866779228;
   E.__initData = closure_11;
@@ -86,7 +100,7 @@ const memoResult = importAllResult.memo(function ShineAnimation(arg0) {
   obj1 = { style: items1, children: null };
   items1 = [tmp.container, style, animatedStyle1];
   let obj2 = { style: tmp.shineContainer, children: null };
-  const items2 = [callback(importDefault(hexResult1[5]).View, { style: animatedStyle }), ];
+  const items2 = [callback(importDefault(hexResult1[5]).View, { style: animatedStyle })];
   const obj8 = sharedValue(hexResult1[5]);
   items2[1] = callback(closure_5, { style: tmp.shine, children: callback(closure_5, obj4) });
   obj2[1] = items2;

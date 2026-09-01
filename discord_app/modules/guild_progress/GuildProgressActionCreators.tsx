@@ -22,5 +22,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "GUILD_PROGRESS_DISMISS", guildId: id };
     obj.dispatch(obj);
-  }
+  },
 };

@@ -26,7 +26,9 @@ let obj1 = { gap: ThemesDefault.space.PX_4, marginBottom: ThemesDefault.space.PX
 createCacheKey[4] = { paddingVertical: ThemesDefault.space.PX_16, gap: 8 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { paddingVertical: ThemesDefault.space.PX_16, gap: 8 };
-const result = require("set").fileFinishedImporting("modules/shared_space_warnings/native/BlockedUserInVoiceChannelActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/shared_space_warnings/native/BlockedUserInVoiceChannelActionSheet.tsx",
+);
 
 export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   ({ channelId: require, blockedUserId } = arg0);
@@ -44,13 +46,13 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   const string = intl.string;
   const t = require(stateFromStores[12]).t;
   if (stateFromStores) {
-    let items2 = [string(t.cpgfFk), "\n", ];
+    let items2 = [string(t.cpgfFk), "\n"];
     const intl3 = tmp2(tmp3[12]).intl;
     items2[2] = intl3.string(tmp2(tmp3[12]).t.UKQ4Cn);
     obj[0] = items2;
     let tmp9 = obj;
   } else {
-    const items3 = [string(t.xj3j47), "\n", ];
+    const items3 = [string(t.xj3j47), "\n"];
     const intl2 = tmp2(tmp3[12]).intl;
     items3[2] = intl2.string(tmp2(tmp3[12]).t.wWueRW);
     obj[0] = items3;
@@ -58,15 +60,24 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   }
   obj = { style: tmp.container, children: null };
   obj1 = { source: blockedUserId(tmp3[14]), style: tmp.headerImage };
-  const items4 = [callback(closure_3, obj1), , , ];
+  const items4 = [callback(closure_3, obj1), , ,];
   let obj2 = { style: tmp.headerText, children: null };
-  const obj3 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
+  const obj3 = {
+    variant: "heading-xl/bold",
+    color: "mobile-text-heading-primary",
+    style: tmp.centerText,
+    children: null,
+  };
   const intl4 = tmp2(tmp3[12]).intl;
   obj3[3] = intl4.string(require(stateFromStores[12]).t["1/gpFh"]);
-  const items5 = [callback(require(stateFromStores[15]).Text, obj3), ];
+  const items5 = [callback(require(stateFromStores[15]).Text, obj3)];
   const tmp7Result = closure_13(closure_12, tmp9);
   const tmp8 = closure_12;
-  items5[1] = callback(require(stateFromStores[15]).Text, { variant: "text-md/medium", style: tmp.centerText, children: closure_13(closure_12, tmp9) });
+  items5[1] = callback(require(stateFromStores[15]).Text, {
+    variant: "text-md/medium",
+    style: tmp.centerText,
+    children: closure_13(closure_12, tmp9),
+  });
   obj2[1] = items5;
   items4[1] = closure_13(closure_4, obj2);
   if (null != user) {
@@ -91,7 +102,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   const obj7 = { startExpanded: true, children: null };
   const obj8 = { hasIcons: true, children: null };
   obj6[1] = intl5.formatToPlainString(require(stateFromStores[12]).t.w0YvUo, { userName: username });
-  const items6 = [callback(require(stateFromStores[17]).TableRow, obj6), ];
+  const items6 = [callback(require(stateFromStores[17]).TableRow, obj6)];
   const obj9 = { icon: callback(require(stateFromStores[20]).MicrophoneIcon, {}), label: null };
   const intl6 = tmp2(tmp3[12]).intl;
   obj9[1] = intl6.string(require(stateFromStores[12]).t["+4O9nX"]);
@@ -106,7 +117,13 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
       obj.hideActionSheet();
       blockedUserId(stateFromStores[23]).disconnect();
       const obj2 = blockedUserId(stateFromStores[23]);
-      obj = { action: closure_1_9.CLICK_TO_LEAVE, channel_id: closure_0, blocked_user_ids: null, ignored_user_ids: null, warning_surface: null };
+      obj = {
+        action: closure_1_9.CLICK_TO_LEAVE,
+        channel_id: closure_0,
+        blocked_user_ids: null,
+        ignored_user_ids: null,
+        warning_surface: null,
+      };
       if (stateFromStores) {
         const items = [blockedUserId];
         let items1 = items;
@@ -123,11 +140,11 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
       obj[4] = closure_1_10.POST_JOIN_SHEET;
       blockedUserId(stateFromStores[24]).track(closure_1_11.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, obj);
     },
-    text: null
+    text: null,
   };
   const intl7 = tmp2(tmp3[12]).intl;
   obj11[2] = intl7.string(require(stateFromStores[12]).t["Y56/oK"]);
-  const items7 = [callback(require(stateFromStores[21]).Button, obj11), ];
+  const items7 = [callback(require(stateFromStores[21]).Button, obj11)];
   const obj12 = {
     size: "lg",
     variant: "secondary",
@@ -135,7 +152,13 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
       let obj = blockedUserId(stateFromStores[22]);
       obj.hideActionSheet();
       closure_1_8(blockedUserId);
-      obj = { action: closure_1_9.CLICK_TO_STAY, channel_id: closure_0, blocked_user_ids: null, ignored_user_ids: null, warning_surface: null };
+      obj = {
+        action: closure_1_9.CLICK_TO_STAY,
+        channel_id: closure_0,
+        blocked_user_ids: null,
+        ignored_user_ids: null,
+        warning_surface: null,
+      };
       if (stateFromStores) {
         const items = [tmp2];
         let items1 = items;
@@ -152,7 +175,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
       obj[4] = closure_1_10.POST_JOIN_SHEET;
       blockedUserId(stateFromStores[24]).track(closure_1_11.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, obj);
     },
-    text: null
+    text: null,
   };
   const intl8 = tmp2(tmp3[12]).intl;
   obj12[3] = intl8.string(require(stateFromStores[12]).t.bCcJST);
@@ -162,4 +185,4 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   obj[1] = items4;
   obj7[1] = closure_13(closure_4, obj);
   return callback(require(stateFromStores[13]).ActionSheet, obj7);
-};
+}

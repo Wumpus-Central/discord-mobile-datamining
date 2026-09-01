@@ -16,27 +16,59 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 let c5 = importAllResult;
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let obj = { container: { flexDirection: "row", padding: 16, marginVertical: 6, marginHorizontal: 8 }, guildInfoContainer: { flexDirection: "column", flex: 1 }, guildIcon: null, guildWrapper: null, guildDescription: null, memberInfo: null, dotOnline: null, dotOffline: null, headerContainer: null, titleContainer: null, flex: null };
+let obj = {
+  container: { flexDirection: "row", padding: 16, marginVertical: 6, marginHorizontal: 8 },
+  guildInfoContainer: { flexDirection: "column", flex: 1 },
+  guildIcon: null,
+  guildWrapper: null,
+  guildDescription: null,
+  memberInfo: null,
+  dotOnline: null,
+  dotOffline: null,
+  headerContainer: null,
+  titleContainer: null,
+  flex: null,
+};
 obj = { borderRadius: ThemesDefault.radii.sm, marginRight: 16 };
 obj[2] = obj;
 obj[3] = { flex: 1 };
 obj[4] = { flexShrink: 1, marginBottom: 8 };
 obj[5] = { flexDirection: "row", alignItems: "center", marginBottom: 8 };
-createCacheKey = { width: 8, height: 8, borderRadius: ThemesDefault.radii.sm, marginRight: 4, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
+createCacheKey = {
+  width: 8,
+  height: 8,
+  borderRadius: ThemesDefault.radii.sm,
+  marginRight: 4,
+  backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360,
+};
 obj[6] = createCacheKey;
-obj[7] = { width: 8, height: 8, borderRadius: ThemesDefault.radii.sm, marginRight: 4, marginLeft: 16, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
+obj[7] = {
+  width: 8,
+  height: 8,
+  borderRadius: ThemesDefault.radii.sm,
+  marginRight: 4,
+  marginLeft: 16,
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_400,
+};
 obj[8] = { flexDirection: "row", marginBottom: 4, justifyContent: "space-between" };
 obj[9] = { flexDirection: "row", flex: 1 };
 obj[10] = { flex: 1, height: 4 };
 let closure_13 = createCacheKey.createStyles(obj);
-let obj2 = { width: 8, height: 8, borderRadius: ThemesDefault.radii.sm, marginRight: 4, marginLeft: 16, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
+let obj2 = {
+  width: 8,
+  height: 8,
+  borderRadius: ThemesDefault.radii.sm,
+  marginRight: 4,
+  marginLeft: 16,
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_400,
+};
 const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
   entry = entry.entry;
   importDefault = undefined;
   dependencyMap = undefined;
   function _handleJoinGuild() {
     const self = this;
-    const tmp = _handleJoinGuild(function*() {
+    const tmp = _handleJoinGuild(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -113,7 +145,10 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
               if (channelId != null) {
                 guildId = channelId.getGuildId();
               }
-              const result = closure_1_0(closure_1_2[13]).setHubProgressActionComplete(guildId, closure_1_0(closure_1_2[14]).HubProgressStep.JOIN_GUILD);
+              const result = closure_1_0(closure_1_2[13]).setHubProgressActionComplete(
+                guildId,
+                closure_1_0(closure_1_2[14]).HubProgressStep.JOIN_GUILD,
+              );
               c3 = 0;
               closure_1_2(false);
               c5 = 3;
@@ -168,16 +203,23 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
     const tmp2Result = tmp2(1426);
   }
   obj4[2] = result;
-  const items1 = [closure_10(GuildIconSizesDefault, obj4), ];
+  const items1 = [closure_10(GuildIconSizesDefault, obj4)];
   const obj5 = { style: tmp.guildInfoContainer, children: null };
-  const items2 = [closure_10(entry(4474).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: entry.name }), ];
+  const items2 = [
+    closure_10(entry(4474).Text, {
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      lineClamp: 1,
+      children: entry.name,
+    }),
+  ];
   const obj6 = { style: tmp.memberInfo, children: null };
   let tmp10Result = null;
   if (null != approximatePresenceCount) {
     const obj7 = { children: null };
     const obj8 = { style: null };
     obj8[0] = tmp.dotOnline;
-    const items3 = [tmp9(tmp11, obj8), ];
+    const items3 = [tmp9(tmp11, obj8)];
     const obj9 = { variant: "text-xs/medium", color: "text-default", children: null };
     const intl3 = tmp2(1236).intl;
     const obj10 = { membersOnline: null };
@@ -187,13 +229,13 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
     obj7[0] = items3;
     tmp10Result = tmp10(closure_11, obj7);
   }
-  const items4 = [tmp10Result, ];
+  const items4 = [tmp10Result];
   tmp10Result = null;
   if (null != approximateMemberCount) {
     const obj11 = { children: null };
     const obj12 = { style: null };
     obj12[0] = tmp.dotOffline;
-    const items5 = [tmp9(tmp11, obj12), ];
+    const items5 = [tmp9(tmp11, obj12)];
     const obj13 = { variant: "text-xs/medium", color: "text-default", children: null };
     const intl4 = tmp2(1236).intl;
     const obj14 = { count: null };
@@ -209,11 +251,11 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
   obj5[1] = items2;
   items1[1] = closure_12(View, obj5);
   obj3[1] = items1;
-  const items6 = [closure_12(View, obj3), ];
+  const items6 = [closure_12(View, obj3)];
   const tmp6Result = GuildIconSizesDefault;
   items6[1] = closure_10(View, { children: closure_10(GuildDirectoryMoreMenuDefault, { entry }) });
   obj2[1] = items6;
-  const items7 = [closure_12(View, obj2), , , ];
+  const items7 = [closure_12(View, obj2), , ,];
   let tmp9Result = null != description;
   if (tmp9Result) {
     tmp9Result = "" !== description;
@@ -239,7 +281,7 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
       return applyArgumentsResult;
     },
     variant: null,
-    text: null
+    text: null,
   };
   let str2 = "active";
   if (tmp4) {

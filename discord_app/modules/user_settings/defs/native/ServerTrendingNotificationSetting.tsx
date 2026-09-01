@@ -20,7 +20,7 @@ const toggle = createToggle.createToggle({
   onValueChange: onServerTrendingNotificationSettingsChanged.onServerTrendingNotificationSettingsChanged,
   usePredicate() {
     return false;
-  }
+  },
 });
 const obj = {
   useTitle() {
@@ -36,7 +36,7 @@ const obj = {
   onValueChange: onServerTrendingNotificationSettingsChanged.onServerTrendingNotificationSettingsChanged,
   usePredicate() {
     return false;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ServerTrendingNotificationSetting.tsx");
 

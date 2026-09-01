@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/GuildSubscriptionNoGuilds.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/GuildSubscriptionNoGuilds.tsx",
+);
 
 export const getGuildSubscriptionNoGuildsSource = function getGuildSubscriptionNoGuildsSource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getGuildSubscriptionNoGuildsSource = function getGuildSubscriptionN
     },
     light() {
       return callback(13193);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useGuildSubscriptionNoGuildsSource = function useGuildSubscriptionN
     },
     light() {
       return callback(13193);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const GuildSubscriptionNoGuilds = function GuildSubscriptionNoGuilds(arg0
     },
     light() {
       return callback(13193);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

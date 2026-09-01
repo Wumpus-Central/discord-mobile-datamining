@@ -19,7 +19,7 @@ const toggle = createToggle.createToggle({
   parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: useInAppMessageSoundsEnabled,
   onValueChange: setInAppMessageSoundsEnabled,
-  usePredicate: isMetaQuest.isMetaQuest
+  usePredicate: isMetaQuest.isMetaQuest,
 });
 const obj = {
   useTitle() {
@@ -33,7 +33,7 @@ const obj = {
   parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: useInAppMessageSoundsEnabled,
   onValueChange: setInAppMessageSoundsEnabled,
-  usePredicate: isMetaQuest.isMetaQuest
+  usePredicate: isMetaQuest.isMetaQuest,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/InAppMessageSoundsSetting.tsx");
 

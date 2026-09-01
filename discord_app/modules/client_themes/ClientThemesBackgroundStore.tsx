@@ -51,7 +51,8 @@ function handleSelectivelySyncedStoreChange() {
   }
 }
 function handleSyncedModeChange() {
-  return isPerModeThemingActive /* isPerModeThemingActive */.isPerModeThemingActive();
+  return isPerModeThemingActive /* isPerModeThemingActive */
+    .isPerModeThemingActive();
 }
 function handleSameAsDeviceThemeToggle() {
   return true;
@@ -169,7 +170,7 @@ Object.defineProperty(prototype, "gradientPreset", {
     }
     obj = isPerModeThemingActive;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getLinearGradient"] = function getLinearGradient() {
   let linearGradientForBackgroundGradient = null;
@@ -183,19 +184,19 @@ Object.defineProperty(prototype, "isPreview", {
   get: function isPreview() {
     return c14;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isCoachmark", {
   get: function isCoachmark() {
     return c15;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "mobilePendingThemeIndex", {
   get: function mobilePendingThemeIndex() {
     return closure_4;
   },
-  set: undefined
+  set: undefined,
 });
 ClientThemesBackgroundStore.displayName = "ClientThemesBackgroundStore";
 ClientThemesBackgroundStore.persistKey = "ClientThemesBackgroundStore";
@@ -254,7 +255,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(dispatcherDe
   SYSTEM_THEME_CHANGE: handleSyncedModeChange,
   UPDATE_SYNCED_CLIENT_THEME: handleSyncedModeChange,
   SET_SAME_AS_DEVICE_THEME_ENABLED: handleSameAsDeviceThemeToggle,
-  CLEAR_SYNCED_CLIENT_THEMES: handleSameAsDeviceThemeToggle
+  CLEAR_SYNCED_CLIENT_THEMES: handleSameAsDeviceThemeToggle,
 });
 let result = require("set").fileFinishedImporting("modules/client_themes/ClientThemesBackgroundStore.tsx");
 

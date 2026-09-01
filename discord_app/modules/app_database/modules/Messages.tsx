@@ -84,29 +84,29 @@ class Messages {
     closure_0 = obj;
     obj.actions = {
       CHANNEL_DELETE(arg0, arg1) {
-            return obj.handleChannelDelete(arg0, arg1);
-          },
+        return obj.handleChannelDelete(arg0, arg1);
+      },
       GUILD_DELETE(arg0, arg1) {
-            return obj.handleGuildDelete(arg0, arg1);
-          },
+        return obj.handleGuildDelete(arg0, arg1);
+      },
       LOAD_MESSAGES_SUCCESS(arg0, arg1) {
-            return obj.handleLoadMessagesSuccess(arg0, arg1);
-          },
+        return obj.handleLoadMessagesSuccess(arg0, arg1);
+      },
       MESSAGE_CREATE(arg0, arg1) {
-            return obj.handleMessageCreate(arg0, arg1);
-          },
+        return obj.handleMessageCreate(arg0, arg1);
+      },
       MESSAGE_DELETE_BULK(arg0, arg1) {
-            return obj.handleMessageDeleteBulk(arg0, arg1);
-          },
+        return obj.handleMessageDeleteBulk(arg0, arg1);
+      },
       MESSAGE_DELETE(arg0, arg1) {
-            return obj.handleMessageDelete(arg0, arg1);
-          },
+        return obj.handleMessageDelete(arg0, arg1);
+      },
       MESSAGE_PREVIEWS_LOADED(arg0, arg1) {
-            return obj.handleMessagePreviewsLoaded(arg0, arg1);
-          },
+        return obj.handleMessagePreviewsLoaded(arg0, arg1);
+      },
       MESSAGE_UPDATE(arg0, arg1) {
-            return obj.handleMessageUpdate(arg0, arg1);
-          }
+        return obj.handleMessageUpdate(arg0, arg1);
+      },
     };
     return obj;
   }
@@ -117,7 +117,7 @@ prototype2["startupLoad"] = function startupLoad(arg0, arg1, arg2, closure_1_9) 
   closure_1 = arg1;
   closure_2 = arg2;
   const callback = closure_1_9;
-  return callback(function*() {
+  return callback(function* () {
     closure_1 = tmp5;
     closure_0 = tmp2;
     const obj2 = closure_1_1(table[7]);
@@ -129,7 +129,7 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -168,7 +168,9 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
                   table = 1;
                   c3 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = closure_1_1(tmp12[7]).messages(closure_1_0).getLatest(basicChannel.guild_id, closure_1_1, table);
+                  obj1[0] = closure_1_1(tmp12[7])
+                    .messages(closure_1_0)
+                    .getLatest(basicChannel.guild_id, closure_1_1, table);
                   return obj1;
                 }
                 tmp12 = table;
@@ -294,22 +296,30 @@ prototype2["handleGuildDelete"] = function handleGuildDelete(guild) {
     this.deleteGuild(guild.guild.id, arg1);
   }
 };
-prototype2["resetInMemoryState"] = function resetInMemoryState() {
-
-};
+prototype2["resetInMemoryState"] = function resetInMemoryState() {};
 prototype2["insertStale"] = function insertStale(guildId, channel_id, item10009, database) {
   const obj = itemsDefault;
   const result = closure_5.lastTimeConnectedChanged();
   const KvMessage = set(7232).KvMessage;
   const messagesTransactionResult = itemsDefault.messagesTransaction(database);
-  messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), set(1957).ConflictOptions.Skip);
+  messagesTransactionResult.put(
+    guildId,
+    channel_id,
+    KvMessage.fromMessage(guildId, channel_id, item10009, result),
+    set(1957).ConflictOptions.Skip,
+  );
 };
 prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, database) {
   const messagesTransactionResult = itemsDefault.messagesTransaction(database);
   const result = closure_5.lastTimeConnectedChanged();
   const KvMessage = set(7232).KvMessage;
   const obj = itemsDefault;
-  messagesTransactionResult.put(guildId, channelId, KvMessage.fromMessage(guildId, channelId, message, result), set(1957).ConflictOptions.Replace);
+  messagesTransactionResult.put(
+    guildId,
+    channelId,
+    KvMessage.fromMessage(guildId, channelId, message, result),
+    set(1957).ConflictOptions.Replace,
+  );
   messagesTransactionResult.trimChannel(guildId, channelId, closure_7.saveLimit(channelId));
 };
 prototype2["upsertMany"] = function upsertMany(guild_id, channelId, messages, database) {
@@ -326,7 +336,11 @@ prototype2["upsertMany"] = function upsertMany(guild_id, channelId, messages, da
     let tmp7 = channelId;
     let tmp8 = nextResult;
     let tmp9 = result;
-    let putResult = messagesTransactionResult.put(guild_id, channelId, KvMessage.fromMessage(guild_id, channelId, nextResult, result));
+    let putResult = messagesTransactionResult.put(
+      guild_id,
+      channelId,
+      KvMessage.fromMessage(guild_id, channelId, nextResult, result),
+    );
     continue;
   }
   messagesTransactionResult.trimChannel(guild_id, channelId, closure_7.saveLimit(channelId));
@@ -341,10 +355,14 @@ prototype2["replaceChannel"] = function replaceChannel(arg0, channelId, arr, dat
   if (arr.length > saveLimitResult) {
     substr = arr.slice(arr.length - saveLimitResult);
   }
-  messagesTransactionResult.replaceChannel(arg0, channelId, substr.map((nextResult) => {
-    const KvMessage = callback(table[9]).KvMessage;
-    return KvMessage.fromMessage(callback, closure_1, nextResult, table);
-  }));
+  messagesTransactionResult.replaceChannel(
+    arg0,
+    channelId,
+    substr.map((nextResult) => {
+      const KvMessage = callback(table[9]).KvMessage;
+      return KvMessage.fromMessage(callback, closure_1, nextResult, table);
+    }),
+  );
   messagesTransactionResult.trimChannel(arg0, channelId, closure_7.saveLimit(channelId));
 };
 prototype2["updateOne"] = function updateOne(guildId, channel_id, message, database) {
@@ -352,7 +370,7 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
   closure_1 = channel_id;
   closure_2 = message;
   const callback = database;
-  return callback(function*() {
+  return callback(function* () {
     if (database === 2) {
       database = 3;
       HermesBuiltin.throwTypeError();
@@ -460,7 +478,7 @@ set.actions = {
   },
   MESSAGE_UPDATE(arg0, arg1) {
     return obj.handleMessageUpdate(arg0, arg1);
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/app_database/modules/Messages.tsx");
 

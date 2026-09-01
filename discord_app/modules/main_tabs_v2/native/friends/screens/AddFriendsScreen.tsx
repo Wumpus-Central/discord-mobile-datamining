@@ -35,7 +35,7 @@ function _handleShare() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, code) {
+    return (function* (arg0, code) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -130,24 +130,56 @@ function areHydratedGameFriendRequestRowStatesEqual(arr) {
   closure_0 = arg1;
   let tmp = arr === arg1;
   if (!tmp) {
-    tmp = arr.length === arg1.length && arr.every((user) => user.user === table[arg1].user && user.applicationId === table[arg1].applicationId);
-    const tmp2 = arr.length === arg1.length && arr.every((user) => user.user === table[arg1].user && user.applicationId === table[arg1].applicationId);
+    tmp =
+      arr.length === arg1.length &&
+      arr.every((user) => user.user === table[arg1].user && user.applicationId === table[arg1].applicationId);
+    const tmp2 =
+      arr.length === arg1.length &&
+      arr.every((user) => user.user === table[arg1].user && user.applicationId === table[arg1].applicationId);
   }
   return tmp;
 }
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, RelationshipTypes: closure_15 } = ME);
+({
+  AnalyticEvents: closure_12,
+  AnalyticsSections: map1,
+  InstantInviteSources: closure_14,
+  RelationshipTypes: closure_15,
+} = ME);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-let closure_19 = { FIND_FRIENDS: 0, [0]: "FIND_FRIENDS", INCOMING_FRIEND_REQUESTS: 1, [1]: "INCOMING_FRIEND_REQUESTS", INCOMING_GAME_FRIEND_REQUESTS: 2, [2]: "INCOMING_GAME_FRIEND_REQUESTS", CONTACT_SUGGESTIONS: 3, [3]: "CONTACT_SUGGESTIONS" };
-createCacheKey = { container: { flex: 1 }, inviteAppsContainerNonSticky: null, inviteAppsContentContainer: null, emptyContainer: null, emptyActionContainer: null, loading: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: ThemesDefault.space.PX_16 };
+let closure_19 = {
+  FIND_FRIENDS: 0,
+  [0]: "FIND_FRIENDS",
+  INCOMING_FRIEND_REQUESTS: 1,
+  [1]: "INCOMING_FRIEND_REQUESTS",
+  INCOMING_GAME_FRIEND_REQUESTS: 2,
+  [2]: "INCOMING_GAME_FRIEND_REQUESTS",
+  CONTACT_SUGGESTIONS: 3,
+  [3]: "CONTACT_SUGGESTIONS",
+};
+createCacheKey = {
+  container: { flex: 1 },
+  inviteAppsContainerNonSticky: null,
+  inviteAppsContentContainer: null,
+  emptyContainer: null,
+  emptyActionContainer: null,
+  loading: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  paddingVertical: ThemesDefault.space.PX_16,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { paddingTop: 0, paddingBottom: 0, minWidth: "100%" };
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let obj1 = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[4] = { marginHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
 let obj2 = { marginHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, justifyContent: "center", flex: 1 };
+createCacheKey[5] = {
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  justifyContent: "center",
+  flex: 1,
+};
 let closure_20 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, justifyContent: "center", flex: 1 };
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/AddFriendsScreen.tsx");
@@ -181,7 +213,9 @@ export default function AddFriendsScreen(navigation) {
   let tmp = callback4();
   let tmp2 = importDefault;
   let obj = analyticsLocations;
-  analyticsLocations = importDefault(analyticsLocations[20])(importDefault(analyticsLocations[21]).ADD_FRIENDS).analyticsLocations;
+  analyticsLocations = importDefault(analyticsLocations[20])(
+    importDefault(analyticsLocations[21]).ADD_FRIENDS,
+  ).analyticsLocations;
   obj1 = React;
   let tmp3 = importDefault(analyticsLocations[20]);
   [c3, c4] = callback(React.useState([]), 2);
@@ -238,7 +272,12 @@ export default function AddFriendsScreen(navigation) {
   }, items);
   let items1 = [analyticsLocations];
   closure_14 = React.useCallback((id) => {
-    callback(analyticsLocations[24])({ userId: id.id, localUser: id, sourceAnalyticsLocations: analyticsLocations, location: "Add Friends Modal User Profile" });
+    callback(analyticsLocations[24])({
+      userId: id.id,
+      localUser: id,
+      sourceAnalyticsLocations: analyticsLocations,
+      location: "Add Friends Modal User Profile",
+    });
   }, items1);
   let obj2 = _require(analyticsLocations[25]);
   const items2 = [first1, closure_10];
@@ -277,54 +316,65 @@ export default function AddFriendsScreen(navigation) {
       }
     });
     const obj2 = callback(analyticsLocations[26]);
-    return callback(analyticsLocations[26]).unionBy(items1, items, (id) => id.id).sort((arg0, arg1) => {
-      const name = callback(4322).getName(arg0);
-      const obj = callback(4322);
-      return name.localeCompare(callback(4322).getName(arg1));
-    });
+    return callback(analyticsLocations[26])
+      .unionBy(items1, items, (id) => id.id)
+      .sort((arg0, arg1) => {
+        const name = callback(4322).getName(arg0);
+        const obj = callback(4322);
+        return name.localeCompare(callback(4322).getName(arg1));
+      });
   });
   let obj3 = _require(analyticsLocations[25]);
   const items3 = [closure_8, first1, closure_10];
   const items4 = [first1, first];
-  stateFromStores = obj3.useStateFromStores(items3, () => {
-    gameRelationshipsByType = gameRelationshipsByType.getGameRelationshipsByType(stateFromStoresArray.PENDING_INCOMING);
-    const items = [];
-    const item = gameRelationshipsByType.forEach((id) => {
-      id = id.id;
-      const applicationId = id.applicationId;
-      const user = authStore.getUser(id);
-      let obj = first1;
-      let someResult = first1.isSpam(id) || obj.isBlockedOrIgnored(id);
-      if (!someResult) {
-        someResult = null == user;
-      }
-      if (!someResult) {
-        someResult = closure_1_7.some((userId) => userId.userId === id && userId.applicationId === tmp);
-      }
-      if (!someResult) {
-        obj = { user: null, applicationId: null };
-        obj[0] = user;
-        obj[1] = applicationId;
-        id.push(obj);
-      }
-    });
-    const items1 = [];
-    const item1 = first1.forEach((userId) => {
-      const user = authStore.getUser(userId.userId);
-      if (null != user) {
-        const obj = { user: null, applicationId: null };
-        obj[0] = user;
-        obj[1] = userId.applicationId;
-        items1.push(obj);
-      }
-    });
-    let obj = callback(analyticsLocations[26]);
-    return callback(analyticsLocations[26]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
-      const name = items1(4322).getName(user.user);
-      const obj = items1(4322);
-      return name.localeCompare(items1(4322).getName(user2.user));
-    });
-  }, items4, areHydratedGameFriendRequestRowStatesEqual);
+  stateFromStores = obj3.useStateFromStores(
+    items3,
+    () => {
+      gameRelationshipsByType = gameRelationshipsByType.getGameRelationshipsByType(
+        stateFromStoresArray.PENDING_INCOMING,
+      );
+      const items = [];
+      const item = gameRelationshipsByType.forEach((id) => {
+        id = id.id;
+        const applicationId = id.applicationId;
+        const user = authStore.getUser(id);
+        let obj = first1;
+        let someResult = first1.isSpam(id) || obj.isBlockedOrIgnored(id);
+        if (!someResult) {
+          someResult = null == user;
+        }
+        if (!someResult) {
+          someResult = closure_1_7.some((userId) => userId.userId === id && userId.applicationId === tmp);
+        }
+        if (!someResult) {
+          obj = { user: null, applicationId: null };
+          obj[0] = user;
+          obj[1] = applicationId;
+          id.push(obj);
+        }
+      });
+      const items1 = [];
+      const item1 = first1.forEach((userId) => {
+        const user = authStore.getUser(userId.userId);
+        if (null != user) {
+          const obj = { user: null, applicationId: null };
+          obj[0] = user;
+          obj[1] = userId.applicationId;
+          items1.push(obj);
+        }
+      });
+      let obj = callback(analyticsLocations[26]);
+      return callback(analyticsLocations[26])
+        .unionBy(items1, items, (user) => user.user.id)
+        .sort((user, user2) => {
+          const name = items1(4322).getName(user.user);
+          const obj = items1(4322);
+          return name.localeCompare(items1(4322).getName(user2.user));
+        });
+    },
+    items4,
+    areHydratedGameFriendRequestRowStatesEqual,
+  );
   let tmp6 = callback(React.useState([]), 2);
   ({ added: c17, setAdded: c18, friendSuggestions } = importDefault(analyticsLocations[28])());
   let tmp15 = friendSuggestions.length > 0;
@@ -362,9 +412,13 @@ export default function AddFriendsScreen(navigation) {
   let tmp4Result = tmp4(obj1.useState(false), 2);
   importDefault = tmp4Result[1];
   const items6 = [navigation];
-  const effect = obj1.useEffect(() => _undefined.addListener("transitionEnd", () => {
-    callback(true);
-  }), items6);
+  const effect = obj1.useEffect(
+    () =>
+      _undefined.addListener("transitionEnd", () => {
+        callback(true);
+      }),
+    items6,
+  );
   _require = undefined;
   let tmp13Result = tmp13(obj[18]);
   const contactSyncAccount = tmp13Result.useContactSyncAccount();
@@ -403,7 +457,7 @@ export default function AddFriendsScreen(navigation) {
     if (c22) {
       num = 2;
     }
-    const items = [num, , , ];
+    const items = [num, , ,];
     let num2 = 4;
     let num3 = 4;
     if (!closure_20) {
@@ -444,11 +498,11 @@ export default function AddFriendsScreen(navigation) {
     }
   }, []);
   obj = { value: analyticsLocations, children: null };
-  const items8 = [callback3(tmp2(obj[30]), { absolute: true }), ];
+  const items8 = [callback3(tmp2(obj[30]), { absolute: true })];
   obj = { style: tmp.container, children: null };
   obj1 = { style: tmp.inviteAppsContainerNonSticky, children: callback3(tmp2(obj[31]), obj2) };
   obj2 = { onItemPressed: c22, contentContainerStyle: tmp.inviteAppsContentContainer };
-  const items9 = [callback3(c6, obj1), ];
+  const items9 = [callback3(c6, obj1)];
   if (!tmp4Result[0]) {
     if (!tmp28) {
       obj3 = { style: null, children: null };
@@ -474,7 +528,7 @@ export default function AddFriendsScreen(navigation) {
     obj6[2] = tmp32(tmp13(obj[34]).TableRow.Icon, obj7);
     obj6[4] = callback;
     obj5[1] = tmp32(tmp13(obj[34]).TableRow, obj6);
-    const items10 = [tmp32(tmp33, obj5), ];
+    const items10 = [tmp32(tmp33, obj5)];
     tmp = null;
     if (result) {
       tmp2 = tmp2(obj[40]);
@@ -486,7 +540,13 @@ export default function AddFriendsScreen(navigation) {
     tmp31(first, obj4);
     const tmp35 = first;
   } else {
-    const obj8 = { sections: null, getItemProps: null, getSectionProps: null, insetEnd: 12, disableStickySections: true };
+    const obj8 = {
+      sections: null,
+      getItemProps: null,
+      getSectionProps: null,
+      insetEnd: 12,
+      disableStickySections: true,
+    };
     obj8[0] = memo1;
     obj8[1] = function getItemProps(arg0, arg1) {
       closure_0 = tmp;
@@ -496,7 +556,15 @@ export default function AddFriendsScreen(navigation) {
           if (c22) {
             let obj = { type: "custom", itemType: "showContactSyncCTA", key: "showContactSyncCTA", component: null };
             obj[3] = function component() {
-              let obj = { start: true, height: "100%", label: null, labelLineClamp: 1, icon: null, trailing: null, onPress: null };
+              let obj = {
+                start: true,
+                height: "100%",
+                label: null,
+                labelLineClamp: 1,
+                icon: null,
+                trailing: null,
+                onPress: null,
+              };
               const intl = callback(id[16]).intl;
               obj[2] = intl.string(callback(id[16]).t.j2POVo);
               obj = { IconComponent: callback(id[35]).FriendsIcon };
@@ -510,7 +578,16 @@ export default function AddFriendsScreen(navigation) {
         }
         obj = { type: "custom", itemType: "addByUsername", key: "addByUsername", component: null };
         obj[3] = function component() {
-          let obj = { start: !closure_22, end: true, height: "100%", label: null, labelLineClamp: 1, icon: null, arrow: true, onPress: null };
+          let obj = {
+            start: !closure_22,
+            end: true,
+            height: "100%",
+            label: null,
+            labelLineClamp: 1,
+            icon: null,
+            arrow: true,
+            onPress: null,
+          };
           const intl = callback(id[16]).intl;
           obj[3] = intl.string(callback(id[16]).t.QzVsOs);
           obj = { IconComponent: callback(id[36]).AtIcon };
@@ -526,12 +603,17 @@ export default function AddFriendsScreen(navigation) {
               let obj = {
                 onPress() {
                   let obj = closure_1_1(closure_1_2[23]);
-                  obj = { section_id: closure_1_11.PENDING, truncated_count: 3, expanded_count: length.length, location: "AddFriends" };
+                  obj = {
+                    section_id: closure_1_11.PENDING,
+                    truncated_count: 3,
+                    expanded_count: length.length,
+                    location: "AddFriends",
+                  };
                   obj.track(closure_1_12.FRIEND_FINDER_SECTION_EXPANDED, obj);
                   navigation.navigate("requests");
                 },
                 users: arr.slice(3),
-                count: arr.length
+                count: arr.length,
               };
               return closure_1_17(callback2(id[37]), obj);
             };
@@ -542,7 +624,15 @@ export default function AddFriendsScreen(navigation) {
         const obj2 = { type: "custom", itemType: "incomingRequest", key: null, component: null };
         obj2[2] = stateFromStoresArray[arg1].id;
         obj2[3] = function component() {
-          return callback3(callback(analyticsLocations[38]).IncomingFriendRequestRow, { accepted: closure_5.includes(id.id), user: id, start: closure_0, end: closure_1, onPress: closure_1_14, onDeclineIncomingRequest: closure_1_12, onAcceptIncomingRequest: closure_1_11 });
+          return callback3(callback(analyticsLocations[38]).IncomingFriendRequestRow, {
+            accepted: closure_5.includes(id.id),
+            user: id,
+            start: closure_0,
+            end: closure_1,
+            onPress: closure_1_14,
+            onDeclineIncomingRequest: closure_1_12,
+            onAcceptIncomingRequest: closure_1_11,
+          });
         };
         return obj2;
       } else if (tmp3.INCOMING_GAME_FRIEND_REQUESTS === arg0) {
@@ -555,7 +645,7 @@ export default function AddFriendsScreen(navigation) {
                   navigation.navigate("requests");
                 },
                 users: null,
-                count: null
+                count: null,
               };
               const substr = arr2.slice(3);
               obj[1] = substr.map((user) => user.user);
@@ -571,7 +661,16 @@ export default function AddFriendsScreen(navigation) {
         const _HermesInternal = HermesInternal;
         obj4[2] = "" + user.id + "-" + applicationId;
         obj4[3] = function component() {
-          return callback3(callback(analyticsLocations[38]).ConnectedIncomingGameFriendRequestRow, { accepted: null != closure_1_9.find((userId) => userId.userId === id.id && userId.applicationId === tmp), applicationId, user, start: closure_0, end: closure_1, onPress: closure_1_14, onDeclineIncomingRequest: closure_1_12, onAcceptIncomingRequest: closure_1_11 });
+          return callback3(callback(analyticsLocations[38]).ConnectedIncomingGameFriendRequestRow, {
+            accepted: null != closure_1_9.find((userId) => userId.userId === id.id && userId.applicationId === tmp),
+            applicationId,
+            user,
+            start: closure_0,
+            end: closure_1,
+            onPress: closure_1_14,
+            onDeclineIncomingRequest: closure_1_12,
+            onAcceptIncomingRequest: closure_1_11,
+          });
         };
         return obj4;
       } else if (tmp3.CONTACT_SUGGESTIONS === arg0) {
@@ -608,7 +707,7 @@ export default function AddFriendsScreen(navigation) {
                 items[HermesBuiltin.arraySpread(arg0, 0)] = closure_5;
                 return items;
               });
-            }
+            },
           });
         };
         return obj;
@@ -617,4 +716,4 @@ export default function AddFriendsScreen(navigation) {
     obj8[2] = callback1;
     tmp32(tmp13(obj[33]).UsersFastList, obj8);
   }
-};
+}

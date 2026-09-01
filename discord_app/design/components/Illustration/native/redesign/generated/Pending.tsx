@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/Pending.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/Pending.tsx",
+);
 
 export const getPendingSource = function getPendingSource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getPendingSource = function getPendingSource(theme) {
     },
     light() {
       return callback(16470);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const usePendingSource = function usePendingSource() {
     },
     light() {
       return callback(16470);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const Pending = function Pending(arg0) {
     },
     light() {
       return callback(16470);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

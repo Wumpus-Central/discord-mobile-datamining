@@ -8,8 +8,7 @@ require = arg1;
 let obj = { version: "", description: "", formFields: [] };
 let closure_4 = {};
 const Store = initializeDefault.Store;
-class MemberVerificationFormStore extends Store {
-}
+class MemberVerificationFormStore extends Store {}
 const prototype = MemberVerificationFormStore.prototype;
 prototype["get"] = function get(arg0) {
   if (null != arg0) {
@@ -73,10 +72,12 @@ obj = {
       const id = guild.id;
     }
     delete tmp2[tmp];
-  }
+  },
 };
 const memberVerificationFormStore = new MemberVerificationFormStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/MemberVerificationFormStore.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/MemberVerificationFormStore.tsx",
+);
 
 export default memberVerificationFormStore;
 export const NO_MEMBER_VERIFICATION_FORM = obj;

@@ -33,7 +33,7 @@ createToggle = {
               secureTextEntry: false,
               actionText: null,
               confirmColor: null,
-              useKeyboardAwareWrapper: true
+              useKeyboardAwareWrapper: true,
             };
             const intl = closure_1_0(closure_1_2[4]).intl;
             obj[1] = intl.string(closure_1_0(closure_1_2[4]).t["mGppp/"]);
@@ -54,7 +54,7 @@ createToggle = {
         closeOnSuccess: false,
         actionText: null,
         confirmColor: null,
-        useKeyboardAwareWrapper: true
+        useKeyboardAwareWrapper: true,
       };
       let intl = callback(1236).intl;
       obj[2] = intl.string(callback(1236).t.PsQmzU);
@@ -67,15 +67,17 @@ createToggle = {
       return false;
     }, []);
   },
-  screen: createToggle
+  screen: createToggle,
 };
 createToggle = {
   route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
   getComponent() {
     return CodeRow /* CodeRow */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx",
+);
 
 export default createToggle;

@@ -5,7 +5,9 @@ import closure_5 from "../../../../friend_suggestions/FriendSuggestionStore.tsx"
 import { SuggestedFriendSource } from "../screens/FriendsScreenConstants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx",
+);
 
 export default function useSuggestedFriends(arg0) {
   let obj = arg0;
@@ -14,7 +16,9 @@ export default function useSuggestedFriends(arg0) {
   }
   let flag = obj.isConnected;
   const items = [closure_5];
-  stateFromStoresArray = stateFromStoresArray(flag[4]).useStateFromStoresArray(items, () => suggestions.getSuggestions());
+  stateFromStoresArray = stateFromStoresArray(flag[4]).useStateFromStoresArray(items, () =>
+    suggestions.getSuggestions(),
+  );
   const tmp = callback(React.useState([]), 2);
   const first = tmp[0];
   if (flag == null) {
@@ -25,20 +29,32 @@ export default function useSuggestedFriends(arg0) {
     if (flag) {
       const found = first.filter((source) => source.source === constants.USER_SUGGESTIONS);
       const mapped = stateFromStoresArray.map((user) => {
-        const obj = { user: user.user, friendSuggestionName: name, source: constants.USER_SUGGESTIONS, contactNames: user.contactNames };
+        const obj = {
+          user: user.user,
+          friendSuggestionName: name,
+          source: constants.USER_SUGGESTIONS,
+          contactNames: user.contactNames,
+        };
         name = user.name;
         return obj;
       });
       let obj = first(flag[5]);
-      return first(flag[5]).unionBy(found, mapped, (user) => user.user.id).sort((user, user2) => {
-        const name = callback(4322).getName(user.user);
-        const obj = callback(4322);
-        return name.localeCompare(callback(4322).getName(user2.user));
-      });
+      return first(flag[5])
+        .unionBy(found, mapped, (user) => user.user.id)
+        .sort((user, user2) => {
+          const name = callback(4322).getName(user.user);
+          const obj = callback(4322);
+          return name.localeCompare(callback(4322).getName(user2.user));
+        });
     } else {
       return [];
     }
   }, items1);
-  obj = { added: first, setAdded: tmp[1], friendSuggestions: memo, numFriendSuggestions: flag ? memo.length : stateFromStoresArray.length };
+  obj = {
+    added: first,
+    setAdded: tmp[1],
+    friendSuggestions: memo,
+    numFriendSuggestions: flag ? memo.length : stateFromStoresArray.length,
+  };
   return obj;
-};
+}

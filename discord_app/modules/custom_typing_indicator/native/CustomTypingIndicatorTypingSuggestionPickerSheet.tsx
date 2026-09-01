@@ -11,7 +11,9 @@ createCacheKey = { content: null };
 createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorTypingSuggestionPickerSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/custom_typing_indicator/native/CustomTypingIndicatorTypingSuggestionPickerSheet.tsx",
+);
 
 export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChange) {
   onChange = onChange.onChange;
@@ -32,7 +34,7 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
       onChange(arg0);
     },
     hasIcons: false,
-    children: null
+    children: null,
   };
   const tmp = callback2();
   const customTypingIndicatorSuggestionPresets = onChange(11543).getCustomTypingIndicatorSuggestionPresets();
@@ -49,7 +51,7 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
       onChange(arg0);
     },
     hasIcons: false,
-    children: null
+    children: null,
   });
   return jsx(onChange(5989).ActionSheet, {
     value: tmp2[0],
@@ -58,6 +60,6 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
       onChange(arg0);
     },
     hasIcons: false,
-    children: null
+    children: null,
   });
-};
+}

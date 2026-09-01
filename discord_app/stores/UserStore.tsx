@@ -429,7 +429,13 @@ function handleConnectionOpen(user) {
     });
   });
   if (null != obj[store2.getId(store2)]) {
-    obj = { id: null, username: "Wumpus", discriminator: "0", globalName: "Wumpus", avatar: "c1f86b313385cb97985f1b118851c28c" };
+    obj = {
+      id: null,
+      username: "Wumpus",
+      discriminator: "0",
+      globalName: "Wumpus",
+      avatar: "c1f86b313385cb97985f1b118851c28c",
+    };
     obj[0] = c13;
     const tmp12 = new closure_5(obj);
     obj[c13] = tmp12;
@@ -837,31 +843,32 @@ function handleGuildMembersChunkBatch(arg0) {
   function _loop(iter) {
     closure_0 = iter;
     const members = iter.members;
-    closure_0 = members.reduce((arg0, avatar) => {
-      guildId = guildId.guildId;
-      avatar = avatar.avatar;
-      let flag = false;
-      if (null != closure_1_11[avatar.user.id]) {
-        if (null == avatar) {
-          let result = obj.removeGuildAvatarHash(guildId);
-        } else {
-          result = obj.addGuildAvatarHash(guildId, avatar);
-        }
-        tmp2[obj.id] = result;
-        flag = tmp4;
-        if (obj !== result) {
-          closure_12 = closure_12 + 1;
+    closure_0 =
+      members.reduce((arg0, avatar) => {
+        guildId = guildId.guildId;
+        avatar = avatar.avatar;
+        let flag = false;
+        if (null != closure_1_11[avatar.user.id]) {
+          if (null == avatar) {
+            let result = obj.removeGuildAvatarHash(guildId);
+          } else {
+            result = obj.addGuildAvatarHash(guildId, avatar);
+          }
+          tmp2[obj.id] = result;
           flag = tmp4;
+          if (obj !== result) {
+            closure_12 = closure_12 + 1;
+            flag = tmp4;
+          }
         }
-      }
-      if (!flag) {
-        flag = tmp;
-      }
-      if (!flag) {
-        flag = arg0;
-      }
-      return flag;
-    }, false) || closure_0;
+        if (!flag) {
+          flag = tmp;
+        }
+        if (!flag) {
+          flag = arg0;
+        }
+        return flag;
+      }, false) || closure_0;
   }
   const iter = arg0.chunks[Symbol.iterator]();
   while (iter !== undefined) {
@@ -1110,7 +1117,10 @@ function handleInitiateAgeVerification(arg0) {
     let flag = null != obj2;
     if (flag) {
       const id = obj.getId();
-      store2[id] = obj2.set("ageVerificationStatus", PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING);
+      store2[id] = obj2.set(
+        "ageVerificationStatus",
+        PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING,
+      );
       flag = true;
     }
     return flag;
@@ -1120,7 +1130,8 @@ function handleCloseAgeVerificationModal(status) {
   const obj2 = store2[store2.getId(store2)];
   let tmp2 = null != obj2;
   if (tmp2) {
-    let flag = obj2.ageVerificationStatus === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    let flag =
+      obj2.ageVerificationStatus === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
     if (flag) {
       const id = obj.getId();
       store2[id] = obj2.set("ageVerificationStatus", status.status);
@@ -1185,8 +1196,8 @@ class UserStore extends tmp2 {
       UPDATE_CLIENT_PREMIUM_TYPE: updatePremiumType,
       OVERLAY_INITIALIZE: handleInitialize,
       CACHE_LOADED(users) {
-            return obj.handleLoadCache(users);
-          },
+        return obj.handleLoadCache(users);
+      },
       USER_UPDATE: handleUserUpdate,
       USER_RESTRICTED_SCHEDULE_UPDATE: handleRestrictedScheduleUpdate,
       USER_PROFILE_FETCH_SUCCESS: handleUserProfileFetchSuccess,
@@ -1249,7 +1260,7 @@ class UserStore extends tmp2 {
       EMBEDDED_ACTIVITY_UPDATE_V2: handleEmbeddedActivityUpdateV2,
       INITIATE_AGE_VERIFICATION: handleInitiateAgeVerification,
       CLOSE_AGE_VERIFICATION_MODAL: handleCloseAgeVerificationModal,
-      INTERACTION_MODAL_CREATE: handleInteractionModalCreate
+      INTERACTION_MODAL_CREATE: handleInteractionModalCreate,
     };
     tmp = new tmp(obj, handleCloseAgeVerificationModal, new.target, tmp);
     // ThrowIfThisInitialized (0x7c)
@@ -1314,7 +1325,7 @@ prototype["handleLoadCache"] = function handleLoadCache(users) {
       continue;
     }
   }
-  const items = [, ];
+  const items = [,];
   ({ privateChannels: arr[0], initialGuildChannels: arr[1] } = users);
   for (const item10056 of items) {
     let tmp30 = item10056;

@@ -7,6 +7,8 @@ const memoResult = importAllResult.memo(function MessagesItemPlaceholder(arg0) {
   ({ row, height } = arg0);
   return jsx(_modDef9918, { row, height });
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemPlaceholder.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/items/MessagesItemPlaceholder.tsx",
+);
 
 export default memoResult;

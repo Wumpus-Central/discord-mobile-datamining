@@ -11,5 +11,8 @@ export default function useCanCurrentUserSpeakInChannel(arg0) {
   const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => id.getId());
   const obj = initialize;
-  return useAudienceRequestToSpeakStateDefault(stateFromStores, arg0) === useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE;
-};
+  return (
+    useAudienceRequestToSpeakStateDefault(stateFromStores, arg0) ===
+    useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE
+  );
+}

@@ -48,7 +48,10 @@ function BackwardsCompatibleAppIconRows(arg0) {
   }
 }
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
+let closure_11 = createCacheKey.createStyles({
+  container: { padding: 16 },
+  bottomUpsellPadding: { paddingBottom: 56 },
+});
 const result = require("set").fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");
 
 export default function AppIconRows(onSelect) {
@@ -61,7 +64,8 @@ export default function AppIconRows(onSelect) {
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj2 = isPremiumAtLeast;
   const isPremiumResult = obj2.isPremium(stateFromStores);
-  const tmp7 = limitedTimeAppIcons.length > 0 && limitedTimeAppIcons.filter((isHidden) => !isHidden.isHidden).length > 0;
+  const tmp7 =
+    limitedTimeAppIcons.length > 0 && limitedTimeAppIcons.filter((isHidden) => !isHidden.isHidden).length > 0;
   let tmp10 = null;
   if (tmp7) {
     obj = { hasNitro: null, icons: null, currentAppIcon: null, title: null, onSelect: null };
@@ -73,7 +77,7 @@ export default function AppIconRows(onSelect) {
     obj[4] = onSelect;
     tmp10 = callback(BackwardsCompatibleAppIconRows, obj);
   }
-  const items1 = [tmp10, ];
+  const items1 = [tmp10];
   let bottomUpsellPadding = !isPremiumResult;
   if (!isPremiumResult) {
     bottomUpsellPadding = tmp.bottomUpsellPadding;
@@ -92,4 +96,4 @@ export default function AppIconRows(onSelect) {
   items1[1] = callback(View, obj);
   obj2[0] = items1;
   return closure_10(closure_9, obj2);
-};
+}

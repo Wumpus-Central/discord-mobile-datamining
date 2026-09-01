@@ -4,7 +4,14 @@ import set from "../../../../_runtime/00002_set.js";
 
 const require = arg1;
 let set = new Set(["1402418703554842694", "356877880938070016"]);
-let items = [require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.EPICGAMES, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.STEAM, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.ROBLOX, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.BATTLENET, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.RIOT, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.MINECRAFT];
+let items = [
+  require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.EPICGAMES,
+  require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.STEAM,
+  require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.ROBLOX,
+  require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.BATTLENET,
+  require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.RIOT,
+  require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.MINECRAFT,
+];
 const result = set.fileFinishedImporting("modules/game_profile/hooks/useGameProfileStoreWebsites.tsx");
 
 export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(data) {
@@ -35,7 +42,8 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
         let found;
         if (arr != null) {
           found = arr.filter((category) => {
-            let tmp3 = category.category === closure_1_0(closure_1_2[1]).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES;
+            let tmp3 =
+              category.category === closure_1_0(closure_1_2[1]).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES;
             if (tmp3) {
               tmp3 = !closure_1_4.has(closure_2);
             }
@@ -61,7 +69,9 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
           someResult = steamReleaseStatus === steamWebsiteUrl(id1[4]).SteamReleaseStatus.RETIRED_ABANDONED;
         }
         if (!someResult) {
-          someResult = found.some((category) => category.category === callback(8815).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+          someResult = found.some(
+            (category) => category.category === callback(8815).ThirdPartyGameApplicationWebsiteCategory.STEAM,
+          );
         }
         if (!someResult) {
           let obj = { category: null, url: null };

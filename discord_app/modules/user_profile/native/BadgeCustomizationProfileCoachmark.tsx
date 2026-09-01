@@ -4,7 +4,9 @@ import closure_4 from "../../../stores/UserStore.tsx";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx",
+);
 
 export default function BadgeCustomizationProfileCoachmark(visible) {
   visible = visible.visible;
@@ -12,10 +14,23 @@ export default function BadgeCustomizationProfileCoachmark(visible) {
   const onTryItOut = visible.onTryItOut;
   let stateFromStores;
   const items = [closure_4];
-  stateFromStores = visible(onTryItOut[3]).useStateFromStores(items, () => markAsDismissed(onTryItOut[4]).canUsePremiumProfileCustomization(currentUser.getCurrentUser()));
+  stateFromStores = visible(onTryItOut[3]).useStateFromStores(items, () =>
+    markAsDismissed(onTryItOut[4]).canUsePremiumProfileCustomization(currentUser.getCurrentUser()),
+  );
   const items1 = [stateFromStores, visible, markAsDismissed, onTryItOut];
   const memo = stateFromStores.useMemo(() => {
-    let obj = { title: null, description: null, visible: null, position: "bottom", gradientColor: "blue", graphic: null, onDismiss: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
+    let obj = {
+      title: null,
+      description: null,
+      visible: null,
+      position: "bottom",
+      gradientColor: "blue",
+      graphic: null,
+      onDismiss: null,
+      buttonLabel: null,
+      buttonVariant: "primary",
+      onButtonPress: null,
+    };
     const intl = visible(onTryItOut[5]).intl;
     obj[0] = intl.string(visible(onTryItOut[5]).t["9JoKQb"]);
     const intl2 = visible(onTryItOut[5]).intl;
@@ -40,4 +55,4 @@ export default function BadgeCustomizationProfileCoachmark(visible) {
   let obj = visible(onTryItOut[3]);
   const coachmark = visible(onTryItOut[7]).useCoachmark(visible.targetRef, memo);
   return null;
-};
+}

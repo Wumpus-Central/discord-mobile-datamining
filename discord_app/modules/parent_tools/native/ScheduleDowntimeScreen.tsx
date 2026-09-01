@@ -26,11 +26,15 @@ function OverlappingSchedulesWarning(conflictingEntries) {
     obj = { variant: "text-sm/medium", children: null };
     const intl = getSystemLocale.intl;
     obj[1] = intl.string(messagesProxyDefault["26A0Df"]);
-    const items = [callback2(Text.Text, obj), ];
+    const items = [callback2(Text.Text, obj)];
     obj1 = { spacing: 4, children: null };
     obj1[1] = conflictingEntries.map((dayLabel) => {
       dayLabel = dayLabel.dayLabel;
-      return callback2(callback(table[14]).Text, { variant: "text-sm/medium", children: "" + dayLabel + "  " + dayLabel.timeRange }, dayLabel);
+      return callback2(
+        callback(table[14]).Text,
+        { variant: "text-sm/medium", children: "" + dayLabel + "  " + dayLabel.timeRange },
+        dayLabel,
+      );
     });
     items[1] = callback2(Stack.Stack, obj1);
     obj[1] = items;
@@ -41,8 +45,22 @@ function OverlappingSchedulesWarning(conflictingEntries) {
 }
 ({ View: closure_6, Pressable: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: { flex: 1 }, scrollContent: null, section: null, sectionHeader: null, daysContainer: null, dayButton: null, dayButtonSelected: null, overlapWarningContent: null, footer: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_24 };
+createCacheKey = {
+  container: { flex: 1 },
+  scrollContent: null,
+  section: null,
+  sectionHeader: null,
+  daysContainer: null,
+  dayButton: null,
+  dayButtonSelected: null,
+  overlapWarningContent: null,
+  footer: null,
+};
+createCacheKey = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_24,
+  gap: ThemesDefault.space.PX_24,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { gap: ThemesDefault.space.PX_8 };
 let obj1 = { gap: ThemesDefault.space.PX_8 };
@@ -50,20 +68,46 @@ createCacheKey[3] = { gap: ThemesDefault.space.PX_4 };
 let obj2 = { gap: ThemesDefault.space.PX_4 };
 createCacheKey[4] = { flexDirection: "row", gap: ThemesDefault.space.PX_8 };
 let obj3 = { flexDirection: "row", gap: ThemesDefault.space.PX_8 };
-createCacheKey[5] = { flex: 1, aspectRatio: 1, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderWidth: 1, borderColor: "transparent" };
+createCacheKey[5] = {
+  flex: 1,
+  aspectRatio: 1,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND,
+  borderWidth: 1,
+  borderColor: "transparent",
+};
 createCacheKey[6] = { backgroundColor: "rgba(88, 101, 242, 0.16)", borderColor: "rgba(88, 101, 242, 1)" };
-let obj4 = { flex: 1, aspectRatio: 1, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderWidth: 1, borderColor: "transparent" };
+let obj4 = {
+  flex: 1,
+  aspectRatio: 1,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND,
+  borderWidth: 1,
+  borderColor: "transparent",
+};
 createCacheKey[7] = { marginTop: ThemesDefault.space.PX_24 };
 let obj5 = { marginTop: ThemesDefault.space.PX_24 };
-createCacheKey[8] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
+createCacheKey[8] = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_8,
+};
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj6 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
+let obj6 = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_8,
+};
 let result = require("set").fileFinishedImporting("modules/parent_tools/native/ScheduleDowntimeScreen.tsx");
 
 export default function ScheduleDowntimeScreen() {
   function _handleSubmit() {
     const self = this;
-    const tmp = dependencyMap(function*() {
+    const tmp = dependencyMap(function* () {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -241,7 +285,10 @@ export default function ScheduleDowntimeScreen() {
     obj[1] = num;
     tmp16 = obj;
   }
-  let tmp9Result = tmp9(stackNavigation(stringResult[21])({ initial: tmp16, defaultValue: { hours: 22, minutes: 0 } }), 2);
+  let tmp9Result = tmp9(
+    stackNavigation(stringResult[21])({ initial: tmp16, defaultValue: { hours: 22, minutes: 0 } }),
+    2,
+  );
   const first1 = tmp9Result[0];
   const callback2 = tmp9Result[1];
   let endTime;
@@ -274,7 +321,7 @@ export default function ScheduleDowntimeScreen() {
   const tmp9Result2 = memo(obj2.useState(false), 2);
   const first4 = tmp9Result2[0];
   closure_17 = tmp9Result2[1];
-  const items1 = [null != rule, , ];
+  const items1 = [null != rule, ,];
   let ruleId;
   if (rule != null) {
     ruleId = rule.ruleId;
@@ -296,7 +343,7 @@ export default function ScheduleDowntimeScreen() {
   }, items1);
   const items2 = [memo, memo1, first3];
   const memo2 = obj2.useMemo(() => lib(rule[19]).computeOverlappingInfo(first3, memo1, memo), items2);
-  const items3 = [teenId, , ];
+  const items3 = [teenId, ,];
   let ruleId1;
   let set = new Set(days);
   if (rule != null) {
@@ -304,103 +351,113 @@ export default function ScheduleDowntimeScreen() {
   }
   items3[1] = ruleId1;
   items3[2] = stackNavigation;
-  callback = obj2.useCallback(callback(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  callback = obj2.useCallback(
+    callback(function* () {
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === table) {
-          if (arg0 === 1) {
+        try {
+          c5 = 2;
+          if (0 === table) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const navigation = tmp3;
+              if (null != c5) {
+                let ruleId;
+                if (table != null) {
+                  ruleId = tmp28.ruleId;
+                }
+                if (null != ruleId) {
+                  closure_1_17(true);
+                  c4 = 1;
+                  obj1 = closure_1_0(table[22]);
+                  table = 2;
+                  c5 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = obj1.deleteRestrictedScheduleRule(c5, tmp28.ruleId);
+                  return obj1;
+                }
+              }
+              c5 = 3;
+            }
+          } else if (1 === tmp7) {
+            c4 = 0;
+            closure_1_17(false);
+            throw closure_3;
+          } else if (arg0 === 1) {
             c5 = 3;
             throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const navigation = tmp3;
-            if (null != c5) {
-              let ruleId;
-              if (table != null) {
-                ruleId = tmp28.ruleId;
-              }
-              if (null != ruleId) {
-                closure_1_17(true);
-                c4 = 1;
-                obj1 = closure_1_0(table[22]);
-                table = 2;
-                c5 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj1.deleteRestrictedScheduleRule(c5, tmp28.ruleId);
-                return obj1;
+          } else if (arg0 !== 2) {
+            const user = closure_1_9.getUser(c5);
+            let rules;
+            if (user != null) {
+              const restrictedSchedule = user.restrictedSchedule;
+              if (restrictedSchedule != null) {
+                rules = restrictedSchedule.rules;
               }
             }
-            c5 = 3;
+            let length = rules;
+            if (rules == null) {
+              length = [];
+            }
+            if (0 === length.length) {
+              navigation.navigate(closure_1_10.FAMILY_CENTER);
+            } else {
+              navigation.goBack();
+            }
+            c4 = 0;
+            closure_1_17(false);
           }
-        } else if (1 === tmp7) {
           c4 = 0;
           closure_1_17(false);
-          throw closure_3;
-        } else if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          const user = closure_1_9.getUser(c5);
-          let rules;
-          if (user != null) {
-            const restrictedSchedule = user.restrictedSchedule;
-            if (restrictedSchedule != null) {
-              rules = restrictedSchedule.rules;
-            }
-          }
-          let length = rules;
-          if (rules == null) {
-            length = [];
-          }
-          if (0 === length.length) {
-            navigation.navigate(closure_1_10.FAMILY_CENTER);
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } catch (tmp35) {
+          closure_3 = tmp35;
+          if (tmp4 === c4) {
+            c5 = tmp2;
+            throw tmp35;
           } else {
-            navigation.goBack();
+            table = tmp;
           }
-          c4 = 0;
-          closure_1_17(false);
-        }
-        c4 = 0;
-        closure_1_17(false);
-        c5 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } catch (tmp35) {
-        closure_3 = tmp35;
-        if (tmp4 === c4) {
-          c5 = tmp2;
-          throw tmp35;
-        } else {
-          table = tmp;
         }
       }
-    }
-  }), items3);
+    }),
+    items3,
+  );
   const items4 = [stackNavigation, null != rule, callback, first4];
   const layoutEffect = obj2.useLayoutEffect(() => {
     if (closure_6) {
       let obj = { headerRight: null };
       obj[0] = function headerRight() {
-        let obj = { onPress: closure_19, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 8, disabled: null, children: null };
+        let obj = {
+          onPress: closure_19,
+          accessibilityRole: "button",
+          accessibilityLabel: null,
+          hitSlop: 8,
+          disabled: null,
+          children: null,
+        };
         const intl = closure_1_0(closure_1_2[15]).intl;
         obj[2] = intl.string(closure_1_0(closure_1_2[15]).t.oyYWHE);
         obj[4] = closure_16;
@@ -413,7 +470,7 @@ export default function ScheduleDowntimeScreen() {
   }, items4);
   tmp2Result = tmp2(stringResult[19]);
   const timeToMinutesResult = tmp2Result.timeToMinutes(first1);
-  const tmp33 = callback(function*() {
+  const tmp33 = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -531,7 +588,7 @@ export default function ScheduleDowntimeScreen() {
     let obj4 = { variant: "text-md/medium", color: "text-subtle", children: null };
     const intl3 = tmp2(stringResult[15]).intl;
     obj4[2] = intl3.string(tmp13(stringResult[16]).AcJ4ke);
-    const items5 = [callback2(tmp2(stringResult[14]).Text, obj4), , , ];
+    const items5 = [callback2(tmp2(stringResult[14]).Text, obj4), , ,];
     let tmp43Result = tmp8;
     if (tmp8) {
       const obj5 = { hasIcons: false, children: null };
@@ -551,7 +608,7 @@ export default function ScheduleDowntimeScreen() {
     const obj8 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
     const intl5 = tmp2(stringResult[15]).intl;
     obj8[2] = intl5.string(tmp13(stringResult[16])["37z4a2"]);
-    const items6 = [callback2(tmp2(stringResult[14]).Text, obj8), ];
+    const items6 = [callback2(tmp2(stringResult[14]).Text, obj8)];
     const obj9 = { hasIcons: false, children: null };
     const obj10 = { label: null, trailing: null, arrow: true, onPress: null };
     const intl6 = tmp2(stringResult[15]).intl;
@@ -578,7 +635,7 @@ export default function ScheduleDowntimeScreen() {
       };
       obj.openLazy(tmp2, "ScheduleDowntimeStartTimePicker", obj);
     };
-    const items7 = [callback2(tmp2(stringResult[26]).TableRow, obj10), ];
+    const items7 = [callback2(tmp2(stringResult[26]).TableRow, obj10)];
     const obj12 = { label: null, trailing: null, arrow: true, onPress: null };
     const intl7 = tmp2(stringResult[15]).intl;
     obj12[0] = intl7.string(tmp13(stringResult[16])["5SHDP6"]);
@@ -612,19 +669,19 @@ export default function ScheduleDowntimeScreen() {
     const obj16 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
     const intl8 = tmp2(stringResult[15]).intl;
     obj16[2] = intl8.string(tmp13(stringResult[16]).HaV0Sg);
-    const items8 = [callback2(tmp2(stringResult[14]).Text, obj16), ];
+    const items8 = [callback2(tmp2(stringResult[14]).Text, obj16)];
     const obj17 = { variant: "text-sm/normal", color: "text-muted", children: null };
     obj17[2] = formatResult;
     items8[1] = callback2(tmp2(stringResult[14]).Text, obj17);
     obj15[1] = items8;
-    const items9 = [first2(closure_6, obj15), , ];
+    const items9 = [first2(closure_6, obj15), ,];
     const obj18 = { style: null, children: null };
     obj18[0] = tmp.daysContainer;
     const DAYS_ORDERED = tmp2(stringResult[19]).DAYS_ORDERED;
     obj18[1] = DAYS_ORDERED.map((arg0, arg1) => {
       const lib = arg0;
       const hasItem = first3.has(arg0);
-      const items = [lib.dayButton, ];
+      const items = [lib.dayButton];
       let dayButtonSelected = hasItem;
       if (hasItem) {
         dayButtonSelected = lib.dayButtonSelected;
@@ -645,7 +702,7 @@ export default function ScheduleDowntimeScreen() {
         accessibilityRole: "button",
         accessibilityState: { selected: hasItem },
         accessibilityLabel: dependencyMap[arg1],
-        children: null
+        children: null,
       };
       items[1] = dayButtonSelected;
       let str = "text-muted";
@@ -672,7 +729,7 @@ export default function ScheduleDowntimeScreen() {
     items5[3] = first2(closure_6, obj14);
     obj3[1] = items5;
     obj21[0] = first2(closure_6, obj3);
-    const items10 = [callback2(tmp44, obj21), ];
+    const items10 = [callback2(tmp44, obj21)];
     let obj22 = { style: null, children: null };
     obj22[0] = tmp.footer;
     let Button = tmp2(stringResult[28]).Button;
@@ -695,7 +752,7 @@ export default function ScheduleDowntimeScreen() {
     tmp40 = !tmp40;
     obj24[2] = tmp40;
     obj24[3] = first4;
-    const items11 = [callback2(Button, obj24), ];
+    const items11 = [callback2(Button, obj24)];
     const obj25 = { text: null, onPress: null, disabled: null, variant: "secondary", size: "lg" };
     intl9 = tmp2(stringResult[15]).intl;
     string = intl9.string;
@@ -716,4 +773,4 @@ export default function ScheduleDowntimeScreen() {
     first2(closure_6, obj2);
     const tmp2Result5 = tmp2(stringResult[19]);
   }
-};
+}

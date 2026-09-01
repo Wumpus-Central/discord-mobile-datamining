@@ -30,9 +30,23 @@ export default function SafetyToolsActionSheetWrapper(channelId) {
     obj[3] = hasHeaderBack;
     obj[4] = headerTitle;
     obj[5] = channelId;
-    obj[2] = jsx(onClose(tmp2[5]), { recipientId: null, warningId: null, warningType: null, hasBackButton: null, title: null, channelId: null });
+    obj[2] = jsx(onClose(tmp2[5]), {
+      recipientId: null,
+      warningId: null,
+      warningType: null,
+      hasBackButton: null,
+      title: null,
+      channelId: null,
+    });
     obj[3] = children;
-    tmp5 = jsx(channelId(tmp2[4]).BottomSheet, { recipientId: null, warningId: null, warningType: null, hasBackButton: null, title: null, channelId: null });
+    tmp5 = jsx(channelId(tmp2[4]).BottomSheet, {
+      recipientId: null,
+      warningId: null,
+      warningType: null,
+      hasBackButton: null,
+      title: null,
+      channelId: null,
+    });
   }
   return tmp5;
-};
+}

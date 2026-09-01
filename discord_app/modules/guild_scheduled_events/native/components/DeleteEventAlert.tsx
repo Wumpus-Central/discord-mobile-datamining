@@ -8,7 +8,9 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 noopAll;
 let closure_6 = createCacheKey.createStyles({ contentText: { textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/DeleteEventAlert.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/DeleteEventAlert.tsx",
+);
 
 export default function DeleteEventAlert(eventException) {
   ({ eventId: require, guildId: importDefault, recurrenceId } = eventException);
@@ -16,7 +18,7 @@ export default function DeleteEventAlert(eventException) {
   closure_4 = undefined;
   function _handleConfirmClick() {
     const self = this;
-    const tmp = eventException(function*() {
+    const tmp = eventException(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -144,7 +146,7 @@ export default function DeleteEventAlert(eventException) {
       }
       return applyArgumentsResult;
     },
-    text: null
+    text: null,
   };
   if (null != recurrence_rule) {
     if (!tmp7) {
@@ -152,7 +154,7 @@ export default function DeleteEventAlert(eventException) {
       let stringResult1 = intl4.string(tmp2(tmp3[9]).t["8ZsNv5"]);
     }
     obj1[2] = stringResult1;
-    const items1 = [tmp8(tmp11, obj1, "delete"), ];
+    const items1 = [tmp8(tmp11, obj1, "delete")];
     let obj2 = { variant: "secondary", text: null };
     const intl6 = tmp2(tmp3[9]).intl;
     obj2[1] = intl6.string(tmp2(tmp3[9]).t.oEAioF);
@@ -162,4 +164,4 @@ export default function DeleteEventAlert(eventException) {
   }
   const intl5 = tmp2(tmp3[9]).intl;
   stringResult1 = intl5.string(tmp2(tmp3[9]).t.B9sJLX);
-};
+}

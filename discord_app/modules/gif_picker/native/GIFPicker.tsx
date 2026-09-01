@@ -9,7 +9,13 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 let c5 = importAllResult;
-({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: c9, GIF_FETCH_LIMIT_IOS: c10, GIFPickerResultTypes: unpackModuleId, TooltipNames: closure_12 } = ME);
+({
+  AnalyticEvents: closure_8,
+  ChatInputComponentViewedTypes: c9,
+  GIF_FETCH_LIMIT_IOS: c10,
+  GIFPickerResultTypes: unpackModuleId,
+  TooltipNames: closure_12,
+} = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = createCacheKey.createStyles({ container: { flex: 1 } });
 const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
@@ -112,7 +118,10 @@ const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
   const favoriteGIFsMobile = obj1.useFavoriteGIFsMobile();
   favorites = favoriteGIFsMobile.favorites;
   const items3 = [favorites, first2];
-  closure_20 = onPressGIF.useMemo(() => bottomSheetRef(initialQuery[12]).filterFavoriteGIFsByQuery(favorites, first2), items3);
+  closure_20 = onPressGIF.useMemo(
+    () => bottomSheetRef(initialQuery[12]).filterFavoriteGIFsByQuery(favorites, first2),
+    items3,
+  );
   let obj2 = bottomSheetRef(initialQuery[13]);
   const items4 = [first];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items4, () => {
@@ -194,15 +203,28 @@ const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
   }, items7);
   const items8 = [callback2];
   const items9 = [onPressGIF, resultItems.length, resultQuery];
-  const memo2 = onPressGIF.useMemo(() => _undefined(channelId(initialQuery[15]), {
-    onClickSuggestion(arg0) {
-      return callback(arg0, false);
-    }
-  }), items8);
+  const memo2 = onPressGIF.useMemo(
+    () =>
+      _undefined(channelId(initialQuery[15]), {
+        onClickSuggestion(arg0) {
+          return callback(arg0, false);
+        },
+      }),
+    items8,
+  );
   const items10 = [bottomSheetRef, callback2];
   const callback3 = onPressGIF.useCallback((gifId, index) => {
     let obj = guildId(initialQuery[7]);
-    obj = { type: closure_11.SEARCH, index, offset: 0, limit: closure_10, results: resultItems.length, totalResults: resultItems.length, query: resultQuery, gifId: gifId.id };
+    obj = {
+      type: closure_11.SEARCH,
+      index,
+      offset: 0,
+      limit: closure_10,
+      results: resultItems.length,
+      totalResults: resultItems.length,
+      query: resultQuery,
+      gifId: gifId.id,
+    };
     obj.trackSelectGIF(obj);
     onPressGIF(gifId);
   }, items9);
@@ -224,7 +246,7 @@ const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
     }
   }, items10);
   obj = { onLayout: callback, style: null, children: null };
-  const items11 = [tmp.container, ];
+  const items11 = [tmp.container];
   let tmp31 = null;
   if (null != contentHorizontalPadding) {
     obj = { paddingHorizontal: null };
@@ -233,7 +255,16 @@ const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
   }
   items11[1] = tmp31;
   obj[1] = items11;
-  const items12 = [callback(tmp3(obj[16]), { categoryType: first1, columnWidth, onQueryClear: callback1, onQueryChange: callback2, onFavoritesQueryChange: tmp16[1], searchInputRef: ref }), ];
+  const items12 = [
+    callback(tmp3(obj[16]), {
+      categoryType: first1,
+      columnWidth,
+      onQueryClear: callback1,
+      onQueryChange: callback2,
+      onFavoritesQueryChange: tmp16[1],
+      searchInputRef: ref,
+    }),
+  ];
   if (resultItems.length <= 0) {
     if (!tmp10[0]) {
       if (first2.length <= 0) {
@@ -261,7 +292,17 @@ const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
     }
   }
   tmp3 = tmp3(obj[18]);
-  obj = { columns, columnWidth, loading: tmp12, inActionSheet: flag, resultItems, onPressGIF: callback3, selectedGifSrc, keyboardDismissMode, ListFooterComponent: memo2 };
+  obj = {
+    columns,
+    columnWidth,
+    loading: tmp12,
+    inActionSheet: flag,
+    resultItems,
+    onPressGIF: callback3,
+    selectedGifSrc,
+    keyboardDismissMode,
+    ListFooterComponent: memo2,
+  };
   tmp32Result = tmp32(tmp3, obj);
 });
 const result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPicker.tsx");

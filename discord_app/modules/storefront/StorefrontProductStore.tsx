@@ -5,8 +5,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 let closure_0 = {};
 let closure_1 = {};
 const Store = initializeDefault.Store;
-class StorefrontProductStore extends Store {
-}
+class StorefrontProductStore extends Store {}
 const prototype = StorefrontProductStore.prototype;
 prototype["getFetchState"] = function getFetchState(arg0) {
   let tmp;
@@ -205,7 +204,9 @@ const storefrontProductStore = new StorefrontProductStore(dispatcherDefault, {
       });
     });
   },
-  STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS: function handleCollectionsForApplicationFetchSuccess(collections) {
+  STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS: function handleCollectionsForApplicationFetchSuccess(
+    collections,
+  ) {
     collections = collections.collections;
     closure_0 = undefined;
     closure_0 = Date.now();
@@ -216,7 +217,9 @@ const storefrontProductStore = new StorefrontProductStore(dispatcherDefault, {
       });
     });
   },
-  STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS: function handleCollectionsForApplicationPageFetchSuccess(collections) {
+  STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS: function handleCollectionsForApplicationPageFetchSuccess(
+    collections,
+  ) {
     collections = collections.collections;
     closure_0 = undefined;
     closure_0 = Date.now();
@@ -236,7 +239,7 @@ const storefrontProductStore = new StorefrontProductStore(dispatcherDefault, {
   LOGOUT: function handleLogout() {
     closure_0 = {};
     closure_1 = {};
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/storefront/StorefrontProductStore.tsx");
 

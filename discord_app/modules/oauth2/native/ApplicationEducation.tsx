@@ -20,7 +20,7 @@ function ApplicationEducationEntry(children) {
     obj[0] = tmp.entryIcon;
     iconComponentResult = iconComponent(obj);
   }
-  const items = [iconComponentResult, ];
+  const items = [iconComponentResult];
   obj = { variant: "text-md/normal", style: tmp.entryText, children: children.text };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
@@ -28,7 +28,12 @@ function ApplicationEducationEntry(children) {
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-createCacheKey = { applicationEducation: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 12 }, entryText: { flex: 1 }, entryIcon: null };
+createCacheKey = {
+  applicationEducation: { flexDirection: "column", gap: 16 },
+  entry: { flexDirection: "row", alignItems: "center", gap: 12 },
+  entryText: { flex: 1 },
+  entryIcon: null,
+};
 createCacheKey = { width: 20, height: 20, tintColor: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[3] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
@@ -160,7 +165,12 @@ export default function ApplicationEducation(arg0) {
         }
       }
       const obj13 = { children: null };
-      const items1 = [tmp27, items.map((iconComponent) => callback(closure_9, { iconComponent: iconComponent.iconComponent, text: iconComponent.text }, arg1))];
+      const items1 = [
+        tmp27,
+        items.map((iconComponent) =>
+          callback(closure_9, { iconComponent: iconComponent.iconComponent, text: iconComponent.text }, arg1),
+        ),
+      ];
       obj11[1] = items1;
       const items2 = [closure_6(View, obj11), callback(tmp4(9361).AuthorizeFormSeparator, {})];
       obj13[0] = items2;
@@ -170,4 +180,4 @@ export default function ApplicationEducation(arg0) {
     }
     return tmp30Result;
   }
-};
+}

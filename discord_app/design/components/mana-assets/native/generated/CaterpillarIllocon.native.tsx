@@ -5,7 +5,9 @@ import preloadDefault from "../../../../../components_native/common/FastImage.ts
 import metadataDefault from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-2x.png.js";
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/CaterpillarIllocon.native.tsx");
+const result = set.fileFinishedImporting(
+  "design/components/mana-assets/native/generated/CaterpillarIllocon.native.tsx",
+);
 
 export const CaterpillarIllocon = function CaterpillarIllocon(size) {
   let num = size.size;
@@ -13,7 +15,14 @@ export const CaterpillarIllocon = function CaterpillarIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  let obj = {
+    fadeDuration: 0,
+    source: null,
+    style: null,
+    accessible: null,
+    accessibilityLabel: null,
+    resizeMode: null,
+  };
   obj = { uri: metadataDefault };
   obj[1] = obj;
   const items = [{ width: num, height: num }];

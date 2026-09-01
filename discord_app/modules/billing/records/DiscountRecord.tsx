@@ -4,13 +4,25 @@ import GuildFeatures from "../../premium/PremiumConstants.tsx";
 
 toJSDefault;
 ({ SubscriptionIntervalTypes, DiscountUserUsageLimitIntervalTypes } = GuildFeatures);
-let closure_0 = { [DiscountUserUsageLimitIntervalTypes.DAY]: SubscriptionIntervalTypes.DAY, [DiscountUserUsageLimitIntervalTypes.WEEK]: SubscriptionIntervalTypes.DAY, [DiscountUserUsageLimitIntervalTypes.MONTH]: SubscriptionIntervalTypes.MONTH, [DiscountUserUsageLimitIntervalTypes.YEAR]: SubscriptionIntervalTypes.YEAR };
+let closure_0 = {
+  [DiscountUserUsageLimitIntervalTypes.DAY]: SubscriptionIntervalTypes.DAY,
+  [DiscountUserUsageLimitIntervalTypes.WEEK]: SubscriptionIntervalTypes.DAY,
+  [DiscountUserUsageLimitIntervalTypes.MONTH]: SubscriptionIntervalTypes.MONTH,
+  [DiscountUserUsageLimitIntervalTypes.YEAR]: SubscriptionIntervalTypes.YEAR,
+};
 let DiscountRecord;
 class DiscountRecord extends tmp2 {
   constructor(arg0) {
     tmp = new DiscountRecord(new.target, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ id: tmp.id, planIds: tmp.planIds, userUsageLimitInterval: tmp.userUsageLimitInterval, userUsageLimitIntervalCount: tmp.userUsageLimitIntervalCount, userUsageLimit: tmp.userUsageLimit, amount: tmp.amount } = global);
+    ({
+      id: tmp.id,
+      planIds: tmp.planIds,
+      userUsageLimitInterval: tmp.userUsageLimitInterval,
+      userUsageLimitIntervalCount: tmp.userUsageLimitIntervalCount,
+      userUsageLimit: tmp.userUsageLimit,
+      amount: tmp.amount,
+    } = global);
     return tmp;
   }
 }
@@ -21,7 +33,15 @@ DiscountRecord["createFromServer"] = function createFromServer(arg0) {
   if (typeof DiscountRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp2 = new DiscountRecord("Trying to call a non-function", DiscountRecord, new.target, id, plan_ids, user_usage_limit_interval, user_usage_limit_interval_count);
+  const tmp2 = new DiscountRecord(
+    "Trying to call a non-function",
+    DiscountRecord,
+    new.target,
+    id,
+    plan_ids,
+    user_usage_limit_interval,
+    user_usage_limit_interval_count,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp2.id = id;
   tmp2.planIds = plan_ids;
@@ -35,25 +55,25 @@ Object.defineProperty(prototype, "intervalType", {
   get: function intervalType() {
     return this.userUsageLimitInterval;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "intervalCount", {
   get: function intervalCount() {
     return this.userUsageLimit;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isMultiInterval", {
   get: function isMultiInterval() {
     return this.userUsageLimit > 1;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "applicableSubscriptionInterval", {
   get: function applicableSubscriptionInterval() {
     return table[this.userUsageLimitInterval];
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getApproximateDiscountAmountOff"] = function getApproximateDiscountAmountOff(arg0) {
   const parsed = parseFloat(this.amount);

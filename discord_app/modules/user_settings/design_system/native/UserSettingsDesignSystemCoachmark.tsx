@@ -52,7 +52,7 @@ function Content() {
       buttonLabel: null,
       onButtonPress: null,
       buttonVariant: null,
-      gradientColor: null
+      gradientColor: null,
     };
     obj = { type: "image", src: null, aspectRatio: null };
     obj = { uri: callback(first1[6]) };
@@ -85,7 +85,7 @@ function Content() {
     },
     variant: "primary",
     text: str2,
-    size: "md"
+    size: "md",
   };
   const tmp24 = first5(first(first1[8]).Button, obj);
   if (first1) {
@@ -104,9 +104,16 @@ function Content() {
     obj1[1] = tmp24;
     tmp23Result = tmp23(str, obj1);
   }
-  const items3 = [tmp23Result, , , , , , , ];
+  const items3 = [tmp23Result, , , , , , ,];
   const obj2 = { hasIcons: false, children: null };
-  const items4 = [first5(first(first1[11]).TableSwitchRow, { label: "Enable Bottom Position", value: first2, onValueChange: tmp6[1] }), first5(first(first1[11]).TableSwitchRow, { label: "Enable Button", value: first3, onValueChange: tmp13[1] })];
+  const items4 = [
+    first5(first(first1[11]).TableSwitchRow, {
+      label: "Enable Bottom Position",
+      value: first2,
+      onValueChange: tmp6[1],
+    }),
+    first5(first(first1[11]).TableSwitchRow, { label: "Enable Button", value: first3, onValueChange: tmp13[1] }),
+  ];
   obj2[1] = items4;
   items3[1] = closure_8(first(first1[10]).TableRowGroup, obj2);
   const obj3 = { style: { marginVertical: 16 }, children: null };
@@ -117,11 +124,31 @@ function Content() {
   const tmp26 = closure_9;
   const tmp8Result = first(first1[7]);
   const items5 = ["primary", "secondary", "experimental_premium-primary"];
-  obj3[1] = first5(first(first1[12]).TableRadioGroup, { title: "Button Variant", defaultValue: str, onChange: tmp15[1], hasIcons: false, children: items5.map((value) => first5(first(first1[13]).TableRadioRow, { value, label: value }, value)) });
+  obj3[1] = first5(first(first1[12]).TableRadioGroup, {
+    title: "Button Variant",
+    defaultValue: str,
+    onChange: tmp15[1],
+    hasIcons: false,
+    children: items5.map((value) => first5(first(first1[13]).TableRadioRow, { value, label: value }, value)),
+  });
   items3[2] = first5(str, obj3);
   const obj6 = { style: { marginVertical: 16 }, children: null };
-  const obj5 = { title: "Button Variant", defaultValue: str, onChange: tmp15[1], hasIcons: false, children: items5.map((value) => first5(first(first1[13]).TableRadioRow, { value, label: value }, value)) };
-  const items6 = [{ label: "None", value: "none" }, { label: "Purple", value: "purple" }, { label: "Blue", value: "blue" }, { label: "Green", value: "green" }, { label: "Pink", value: "pink" }, { label: "Nitro Pink", value: "nitro-pink" }, { label: "Nitro Green", value: "nitro-green" }];
+  const obj5 = {
+    title: "Button Variant",
+    defaultValue: str,
+    onChange: tmp15[1],
+    hasIcons: false,
+    children: items5.map((value) => first5(first(first1[13]).TableRadioRow, { value, label: value }, value)),
+  };
+  const items6 = [
+    { label: "None", value: "none" },
+    { label: "Purple", value: "purple" },
+    { label: "Blue", value: "blue" },
+    { label: "Green", value: "green" },
+    { label: "Pink", value: "pink" },
+    { label: "Nitro Pink", value: "nitro-pink" },
+    { label: "Nitro Green", value: "nitro-green" },
+  ];
   obj6[1] = first5(first(first1[12]).TableRadioGroup, {
     title: "Gradient Color",
     defaultValue: first4,
@@ -130,7 +157,7 @@ function Content() {
     children: items6.map((value) => {
       const label = value.label;
       return first5(first(first1[13]).TableRadioRow, { value: value.value, label }, label);
-    })
+    }),
   });
   items3[3] = first5(str, obj6);
   const obj8 = { style: { marginVertical: 16 }, children: null };
@@ -142,21 +169,40 @@ function Content() {
     children: items6.map((value) => {
       const label = value.label;
       return first5(first(first1[13]).TableRadioRow, { value: value.value, label }, label);
-    })
+    }),
   };
   const items7 = ["21/9", "16/9", "6/4", "2/1", "1/1"];
-  obj8[1] = first5(first(first1[12]).TableRadioGroup, { title: "Aspect Ratio", defaultValue: first5, onChange: tmp18[1], hasIcons: false, children: items7.map((value) => first5(first(first1[13]).TableRadioRow, { value, label: value }, value)) });
+  obj8[1] = first5(first(first1[12]).TableRadioGroup, {
+    title: "Aspect Ratio",
+    defaultValue: first5,
+    onChange: tmp18[1],
+    hasIcons: false,
+    children: items7.map((value) => first5(first(first1[13]).TableRadioRow, { value, label: value }, value)),
+  });
   items3[4] = first5(str, obj8);
-  items3[5] = first5(first(first1[11]).TableSwitchRow, { label: "Enable Blur Background", value: first1, onValueChange: tmp4[1] });
-  items3[6] = first5(first(first1[11]).TableSwitchRow, { label: "Unlock Orientation", value: tmp11, onValueChange: tmp12 });
+  items3[5] = first5(first(first1[11]).TableSwitchRow, {
+    label: "Enable Blur Background",
+    value: first1,
+    onValueChange: tmp4[1],
+  });
+  items3[6] = first5(first(first1[11]).TableSwitchRow, {
+    label: "Unlock Orientation",
+    value: tmp11,
+    onValueChange: tmp12,
+  });
   items3[7] = first5(first(first1[5]).TooltipNote, {});
   obj4[0] = items3;
   return closure_8(tmp26, obj4);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ container: { paddingTop: 240, flex: 1, alignItems: "center", justifyContent: "center" }, flex: { flex: 1, padding: 16 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemCoachmark.tsx");
+let closure_10 = createCacheKey.createStyles({
+  container: { paddingTop: 240, flex: 1, alignItems: "center", justifyContent: "center" },
+  flex: { flex: 1, padding: 16 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/design_system/native/UserSettingsDesignSystemCoachmark.tsx",
+);
 
 export default function UserSettingsDesignSystemCoachmark() {
   let obj = { style: callback2().flex, bottom: true, children: null };
@@ -165,4 +211,4 @@ export default function UserSettingsDesignSystemCoachmark() {
   obj[0] = callback(Layer.LayerScope, obj);
   obj[2] = callback(closure_6, obj);
   return callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-};
+}

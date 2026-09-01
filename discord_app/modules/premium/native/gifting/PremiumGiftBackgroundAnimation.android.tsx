@@ -8,8 +8,16 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ container: { display: "flex", alignItems: "flex-end", justifyContent: "center", flexDirection: "row" }, consistentHeight: { height: 300 }, animation: { maxWidth: 375, width: "100%", height: "auto" }, baseAnimation: { position: "absolute", bottom: 0 }, lottie: { height: 275 } });
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundAnimation.android.tsx");
+let closure_9 = createCacheKey.createStyles({
+  container: { display: "flex", alignItems: "flex-end", justifyContent: "center", flexDirection: "row" },
+  consistentHeight: { height: 300 },
+  animation: { maxWidth: 375, width: "100%", height: "auto" },
+  baseAnimation: { position: "absolute", bottom: 0 },
+  lottie: { height: 275 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/premium/native/gifting/PremiumGiftBackgroundAnimation.android.tsx",
+);
 
 export default function PremiumGiftBackgroundAnimation(giftStyle) {
   giftStyle = giftStyle.giftStyle;
@@ -45,8 +53,14 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
   closure_11 = tmp13[1];
   const items1 = [giftStyle];
   const items2 = [giftStyle];
-  const memo = first.useMemo(() => giftStyle(ref[8]).getGiftAnimationData(giftStyle, giftStyle(ref[7]).AnimationState.ACTION), items1);
-  const memo1 = first.useMemo(() => giftStyle(ref[8]).getGiftAnimationData(giftStyle, giftStyle(ref[7]).AnimationState.LOOP), items2);
+  const memo = first.useMemo(
+    () => giftStyle(ref[8]).getGiftAnimationData(giftStyle, giftStyle(ref[7]).AnimationState.ACTION),
+    items1,
+  );
+  const memo1 = first.useMemo(
+    () => giftStyle(ref[8]).getGiftAnimationData(giftStyle, giftStyle(ref[7]).AnimationState.LOOP),
+    items2,
+  );
   obj1 = giftStyle(ref[8]);
   const lottieType = obj1.getLottieType(giftStyle);
   const items3 = [first2, first1, giftStyle, first];
@@ -99,13 +113,13 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
       }
     }
   }, items6);
-  const items7 = [tmp.container, ];
+  const items7 = [tmp.container];
   if (consistentHeight) {
     consistentHeight = tmp.consistentHeight;
   }
   obj = { style: items7, children: null };
   items7[1] = consistentHeight;
-  const items8 = [, , , ];
+  const items8 = [, , ,];
   ({ baseAnimation: arr9[0], animation: arr9[1] } = tmp);
   const tmp22 = first2;
   const tmp23 = closure_5;
@@ -119,10 +133,18 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
       num = 1;
     }
   }
-  obj = { style: items8, hardwareAccelerationAndroid: lottieType === tmp2(tmp3[8]).LottieType.LOTTIE, ref, source: memo, autoPlay: !stateFromStores, onAnimationFinish: callback, loop: false };
+  obj = {
+    style: items8,
+    hardwareAccelerationAndroid: lottieType === tmp2(tmp3[8]).LottieType.LOTTIE,
+    ref,
+    source: memo,
+    autoPlay: !stateFromStores,
+    onAnimationFinish: callback,
+    loop: false,
+  };
   items8[3] = { opacity: num };
-  const items9 = [closure_7(tmp26, obj), ];
-  const items10 = [tmp.animation, , ];
+  const items9 = [closure_7(tmp26, obj)];
+  const items10 = [tmp.animation, ,];
   const tmp27 = lottieType === giftStyle(ref[8]).LottieType.LOTTIE && tmp.lottie;
   const tmp25Result = tmp25(ref[9]);
   items10[1] = lottieType === giftStyle(ref[8]).LottieType.LOTTIE && tmp.lottie;
@@ -133,7 +155,14 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
       num2 = 1;
     }
   }
-  obj1 = { style: items10, hardwareAccelerationAndroid: lottieType === tmp2(tmp3[8]).LottieType.LOTTIE, ref: ref1, source: memo1, autoPlay: null, loop: true };
+  obj1 = {
+    style: items10,
+    hardwareAccelerationAndroid: lottieType === tmp2(tmp3[8]).LottieType.LOTTIE,
+    ref: ref1,
+    source: memo1,
+    autoPlay: null,
+    loop: true,
+  };
   items10[2] = { opacity: num2 };
   let tmp31 = !stateFromStores;
   if (!stateFromStores) {
@@ -143,4 +172,4 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
   items9[1] = closure_7(tmp25Result, obj1);
   obj[1] = items9;
   return tmp22(tmp23, obj);
-};
+}

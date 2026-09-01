@@ -185,7 +185,11 @@ export const ConversationsAnalytics = {
     obj = {};
     obj[2] = guild_id;
     const merged = Object.assign(obj);
-    ({ conversationId: obj3.conversation_id, isThumbsUp: obj3.is_thumbs_up, isFocusMode: obj3.is_focus_mode } = channelId);
+    ({
+      conversationId: obj3.conversation_id,
+      isThumbsUp: obj3.is_thumbs_up,
+      isFocusMode: obj3.is_focus_mode,
+    } = channelId);
     obj.track(AnalyticEvents.TOPICAL_NAV_THUMBS_CLICKED, obj);
   },
   trackThumbsDownReasonSelected(channelId) {
@@ -211,7 +215,12 @@ export const ConversationsAnalytics = {
     obj = {};
     obj[2] = guild_id;
     const merged = Object.assign(obj);
-    ({ conversationId: obj3.conversation_id, isFocusMode: obj3.is_focus_mode, reasons: obj3.reasons, otherText: obj3.other_text } = channelId);
+    ({
+      conversationId: obj3.conversation_id,
+      isFocusMode: obj3.is_focus_mode,
+      reasons: obj3.reasons,
+      otherText: obj3.other_text,
+    } = channelId);
     obj.track(AnalyticEvents.TOPICAL_NAV_THUMBS_DOWN_REASON_SELECTED, obj);
-  }
+  },
 };

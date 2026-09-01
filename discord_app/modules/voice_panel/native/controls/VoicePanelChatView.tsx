@@ -16,8 +16,14 @@ require = arg1;
 let c3 = importAllResult;
 ({ ComponentActions: c4, ME: c5 } = ME);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ container: { flex: 1, overflow: "hidden", paddingTop: CONTROLS_DRAWER_HEADER_SIZE }, gradientWrapper: { position: "absolute", top: CONTROLS_DRAWER_HEADER_SIZE, left: 0 }, titleBlur: { opacity: 0 } });
-let closure_9 = { code: "function VoicePanelChatViewTsx1(){const{windowDimensions}=this.__closure;return{width:windowDimensions.get().width,height:windowDimensions.get().height};}" };
+let closure_8 = createCacheKey.createStyles({
+  container: { flex: 1, overflow: "hidden", paddingTop: CONTROLS_DRAWER_HEADER_SIZE },
+  gradientWrapper: { position: "absolute", top: CONTROLS_DRAWER_HEADER_SIZE, left: 0 },
+  titleBlur: { opacity: 0 },
+});
+let closure_9 = {
+  code: "function VoicePanelChatViewTsx1(){const{windowDimensions}=this.__closure;return{width:windowDimensions.get().width,height:windowDimensions.get().height};}",
+};
 let closure_10 = importAllResult.memo(() => {
   const windowDimensions = importAllResult.useContext(dismissPanelDefault).windowDimensions;
   let obj = windowDimensions(4217);
@@ -96,9 +102,15 @@ const memoResult1 = importAllResult.memo(function VoicePanelChatView(shown) {
   }, []);
   obj = { value: controlsDrawerOpenWidth, children: null };
   obj = { gradient: ref(guildId[20])(), children: null };
-  obj1 = { nativeID: "voice-panel-chat-view", accessibilityViewIsModal: shown, onAccessibilityEscape: callback, style: items2, children: null };
+  obj1 = {
+    nativeID: "voice-panel-chat-view",
+    accessibilityViewIsModal: shown,
+    onAccessibilityEscape: callback,
+    style: items2,
+    children: null,
+  };
   items2 = [tmp.container, gradientTop];
-  const items3 = [callback(closure_10, {}), , ];
+  const items3 = [callback(closure_10, {}), ,];
   const obj2 = { title: null, disablePill: true, blurStyle: null };
   const tmp11 = closure_7;
   const tmp9 = ref(guildId[20])();
@@ -110,7 +122,15 @@ const memoResult1 = importAllResult.memo(function VoicePanelChatView(shown) {
   if (guildId == null) {
     guildId = closure_5;
   }
-  items3[2] = callback(ref(guildId[25]), { disableGradient: true, alwaysRespectKeyboard: false, setNoExtractUI: false, guildId, channelId, chatInputRef: ref, screenIndex: "voice-panel" });
+  items3[2] = callback(ref(guildId[25]), {
+    disableGradient: true,
+    alwaysRespectKeyboard: false,
+    setNoExtractUI: false,
+    guildId,
+    channelId,
+    chatInputRef: ref,
+    screenIndex: "voice-panel",
+  });
   obj1[4] = items3;
   obj[1] = tmp11(shown(guildId[23]).AccessibilityView, obj1);
   obj[1] = callback(shown(guildId[22]).ThemeContextProvider, obj);

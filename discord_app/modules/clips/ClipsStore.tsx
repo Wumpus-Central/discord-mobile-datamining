@@ -20,7 +20,7 @@ import set from "../../../_runtime/00002_set.js";
 require = arg1;
 function _migrateDefaultStorage() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -258,7 +258,18 @@ function trackClipMessage(message) {
   }
   obj = apexExperimentDefault;
 }
-({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_6, ClipSaveTypes: error, ClipsUserEducationType: closure_8, ClipsLogger: c9, MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: c10, ClipsHardwareClassification: unpackModuleId, ClipsSaveNoOpReason: closure_12, ClipsLengthSettings, ClipsViewerConnectivitySettings, DEFAULT_CLIPS_BITRATE_PERCENT } = result);
+({
+  CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_6,
+  ClipSaveTypes: error,
+  ClipsUserEducationType: closure_8,
+  ClipsLogger: c9,
+  MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: c10,
+  ClipsHardwareClassification: unpackModuleId,
+  ClipsSaveNoOpReason: closure_12,
+  ClipsLengthSettings,
+  ClipsViewerConnectivitySettings,
+  DEFAULT_CLIPS_BITRATE_PERCENT,
+} = result);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = ME);
 let c16 = "default";
 let c17 = "Discord Clips";
@@ -281,12 +292,38 @@ const map = new Map();
 map1 = new Map();
 const map2 = new Map();
 let closure_35 = [];
-obj = { clipsEnabled: false, storageLocation: "default", clipsQuality: obj, clipsLength: ClipsLengthSettings.SECONDS_30, remindersEnabled: true, decoupledClipsEnabled: false, viewerClipsEnabled: true, viewerConnectivity: ClipsViewerConnectivitySettings.ALL, maxAutoClips: 20, clipSignals: { enableDistributedSignals: true, enableGameSignals: true }, debugTooltipsEnabled: false, enableAutoclipping: "PX_16", showPovClipsInGallery: true };
-obj = { resolution: ApplicationStreamResolutions.RESOLUTION_1080, frameRate: ApplicationStreamFPS.FPS_30, bitratePercent: DEFAULT_CLIPS_BITRATE_PERCENT };
-let closure_37 = { clipsSettings: obj, hardwareClassification: null, hardwareClassificationForDecoupled: null, hardwareClassificationVersion: 0, newClipIds: [], hasClips: false, hasTakenDecoupledClip: false, clipsEducationState: { dismissedAt: null, numberOfGamesLaunchedSinceDismissal: 0, numberOfTimesDismissed: 0 } };
+obj = {
+  clipsEnabled: false,
+  storageLocation: "default",
+  clipsQuality: obj,
+  clipsLength: ClipsLengthSettings.SECONDS_30,
+  remindersEnabled: true,
+  decoupledClipsEnabled: false,
+  viewerClipsEnabled: true,
+  viewerConnectivity: ClipsViewerConnectivitySettings.ALL,
+  maxAutoClips: 20,
+  clipSignals: { enableDistributedSignals: true, enableGameSignals: true },
+  debugTooltipsEnabled: false,
+  enableAutoclipping: "PX_16",
+  showPovClipsInGallery: true,
+};
+obj = {
+  resolution: ApplicationStreamResolutions.RESOLUTION_1080,
+  frameRate: ApplicationStreamFPS.FPS_30,
+  bitratePercent: DEFAULT_CLIPS_BITRATE_PERCENT,
+};
+let closure_37 = {
+  clipsSettings: obj,
+  hardwareClassification: null,
+  hardwareClassificationForDecoupled: null,
+  hardwareClassificationVersion: 0,
+  newClipIds: [],
+  hasClips: false,
+  hasTakenDecoupledClip: false,
+  clipsEducationState: { dismissedAt: null, numberOfGamesLaunchedSinceDismissal: 0, numberOfTimesDismissed: 0 },
+};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class ClipsStoreClass extends DeviceSettingsStore {
-}
+class ClipsStoreClass extends DeviceSettingsStore {}
 const prototype = ClipsStoreClass.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
@@ -638,10 +675,11 @@ let items = [
     obj = {};
     const merged1 = Object.assign(clipsSettings.clipsSettings);
     obj.clipsEnabled = clipsSettings.clipsSettings.clipsEnabled && clipsSettings.clipsSettings.decoupledClipsEnabled;
-    obj.decoupledClipsEnabled = clipsSettings.clipsSettings.clipsEnabled && clipsSettings.clipsSettings.decoupledClipsEnabled;
+    obj.decoupledClipsEnabled =
+      clipsSettings.clipsSettings.clipsEnabled && clipsSettings.clipsSettings.decoupledClipsEnabled;
     obj.clipsSettings = obj;
     return obj;
-  }
+  },
 ];
 ClipsStoreClass.migrations = items;
 obj = {
@@ -890,7 +928,11 @@ obj = {
     }
   },
   RTC_CONNECTION_FLAGS: function handleRTCConnectionFlagsUpdate(flags) {
-    obj = { clipsEnabled: hasFlag.hasFlag(flags.flags, constants5.CLIPS_ENABLED), allowVoiceRecording: null, allowAnyViewerClips: null };
+    obj = {
+      clipsEnabled: hasFlag.hasFlag(flags.flags, constants5.CLIPS_ENABLED),
+      allowVoiceRecording: null,
+      allowAnyViewerClips: null,
+    };
     const obj2 = hasFlag;
     obj[1] = hasFlag.hasFlag(flags.flags, constants5.ALLOW_VOICE_RECORDING);
     const obj3 = hasFlag;
@@ -943,7 +985,8 @@ obj = {
   RUNNING_GAMES_CHANGE: function handleRunningGamesChange(added) {
     if (added.added.length > 0) {
       const clipsEducationState = closure_37.clipsEducationState;
-      clipsEducationState.numberOfGamesLaunchedSinceDismissal = clipsEducationState.numberOfGamesLaunchedSinceDismissal + 1;
+      clipsEducationState.numberOfGamesLaunchedSinceDismissal =
+        clipsEducationState.numberOfGamesLaunchedSinceDismissal + 1;
     }
   },
   CLIPS_SET_EXPORTING: function handleSetExporting(clipIds) {
@@ -977,7 +1020,7 @@ obj = {
     c24 = null;
     c23 = null;
     closure_27 = {};
-  }
+  },
 };
 const clipsStoreClass = new ClipsStoreClass(dispatcherDefault, obj);
 result = set.fileFinishedImporting("modules/clips/ClipsStore.tsx");

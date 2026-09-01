@@ -4,7 +4,9 @@ import closure_4 from "../../../../stores/GuildStore.tsx";
 import closure_5 from "../GuildPowerupsStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx",
+);
 
 export default function useGuildPowerupRollbackModalConfig(guildId, location) {
   const _require = guildId;
@@ -64,7 +66,7 @@ export default function useGuildPowerupRollbackModalConfig(guildId, location) {
         }
       }
       return null;
-    }, items2)
+    }, items2),
   };
   return obj;
-};
+}

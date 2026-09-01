@@ -25,7 +25,7 @@ function AutomatedUnderageAppealStatus() {
         onPress() {
           return callback(table[8]).logout("safety_hub_page_appeal_success", constants.LOGIN);
         },
-        children
+        children,
       });
     };
     obj[0] = intl4.format(tmp(1236).t.hyh4ls, obj);
@@ -106,7 +106,11 @@ export default function SafetyHubPage(visible) {
   const effect = React.useEffect(() => {
     if (visible) {
       if (null != safetyHubFetchError) {
-        callback(safetyHubFetchError[22]).openLazy(visible(safetyHubFetchError[24])(safetyHubFetchError[23], safetyHubFetchError.paths), "SafetyHubErrorActionSheet", {});
+        callback(safetyHubFetchError[22]).openLazy(
+          visible(safetyHubFetchError[24])(safetyHubFetchError[23], safetyHubFetchError.paths),
+          "SafetyHubErrorActionSheet",
+          {},
+        );
         const obj2 = callback(safetyHubFetchError[22]);
       }
     }
@@ -114,7 +118,7 @@ export default function SafetyHubPage(visible) {
   }, items);
   if (tmp4) {
     obj = { style: null, children: null };
-    const items1 = [, ];
+    const items1 = [,];
     ({ container: arr4[0], loadingIndicator: arr4[1] } = tmp);
     obj[0] = items1;
     obj[1] = callback(closure_6, { animating: true, size: "large" });
@@ -134,4 +138,4 @@ export default function SafetyHubPage(visible) {
     }
   }
   return tmp9;
-};
+}

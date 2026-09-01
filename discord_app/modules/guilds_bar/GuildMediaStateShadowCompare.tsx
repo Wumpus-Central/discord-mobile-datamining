@@ -33,17 +33,19 @@ export const compareGuildMediaState = function compareGuildMediaState(closure_0,
     if (str == null) {
       str = "unknown";
     }
-    const tmp = 0 === closure_5.filter((arg0) => {
-      let flag = table[arg0];
-      if (flag == null) {
-        flag = false;
-      }
-      let flag2 = table2[arg0];
-      if (flag2 == null) {
-        flag2 = false;
-      }
-      return flag !== flag2;
-    }).length;
+    const tmp =
+      0 ===
+      closure_5.filter((arg0) => {
+        let flag = table[arg0];
+        if (flag == null) {
+          flag = false;
+        }
+        let flag2 = table2[arg0];
+        if (flag2 == null) {
+          flag2 = false;
+        }
+        return flag !== flag2;
+      }).length;
     const joined = found.join(",");
     let str3 = "persistent";
     let str4 = "persistent";
@@ -81,7 +83,14 @@ export const compareGuildMediaState = function compareGuildMediaState(closure_0,
       }
     }
     if (flag) {
-      obj = { guildId: null, lastAction: null, mismatchedFields: null, fromHook: null, fromStore: null, isTransient: null };
+      obj = {
+        guildId: null,
+        lastAction: null,
+        mismatchedFields: null,
+        fromHook: null,
+        fromStore: null,
+        isTransient: null,
+      };
       obj[0] = closure_0;
       obj[1] = str;
       obj[2] = found;
@@ -93,7 +102,8 @@ export const compareGuildMediaState = function compareGuildMediaState(closure_0,
       }
       const _HermesInternal2 = HermesInternal;
       const mismatchedFields = obj.mismatchedFields;
-      const combined1 = "GuildMediaStateStore diverged from useGuildMediaState after " + obj.lastAction + " (" + str3 + "): ";
+      const combined1 =
+        "GuildMediaStateStore diverged from useGuildMediaState after " + obj.lastAction + " (" + str3 + "): ";
       const sum = combined1 + mismatchedFields.join(", ");
       logger.warn(sum, obj);
       obj = { tags: null, extra: null };

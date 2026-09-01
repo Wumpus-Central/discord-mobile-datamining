@@ -34,5 +34,5 @@ export default {
       const obj2 = hasFlag;
     }
     return tmp;
-  }
+  },
 };

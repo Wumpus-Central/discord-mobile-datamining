@@ -10,7 +10,13 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles((arg0) => {
-  const labelPressable = { paddingBottom: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
+  const labelPressable = {
+    paddingBottom: ThemesDefault.space.PX_4,
+    gap: ThemesDefault.space.PX_8,
+    alignItems: "center",
+    alignSelf: "center",
+    flexGrow: null,
+  };
   let num = 0;
   if (arg0) {
     num = 1;
@@ -36,8 +42,14 @@ const forwardRefResult = importAllResult.forwardRef((grow) => {
     obj.accessibilityLabel = "";
     obj.size = "lg";
     obj.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    const items = [callback(BaseIconButton.BaseIconButton, obj), ];
-    obj1 = { style: null, variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier: null, children: null };
+    const items = [callback(BaseIconButton.BaseIconButton, obj)];
+    obj1 = {
+      style: null,
+      variant: "text-xs/medium",
+      color: "interactive-text-default",
+      maxFontSizeMultiplier: null,
+      children: null,
+    };
     obj1[0] = tmp2.label;
     obj1[3] = maxFontSizeMultiplier;
     obj1[4] = label;

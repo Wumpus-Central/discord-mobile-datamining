@@ -14,7 +14,10 @@ const result = require("set").fileFinishedImporting("modules/favorites/analytics
 export default function trackFavoritesGuildViewed() {
   let obj = useFavoritesAccess;
   const obj2 = isPremiumAtLeastDefault;
-  const isPremiumExactlyResult = isPremiumAtLeastDefault.isPremiumExactly(currentUser.getCurrentUser(), PremiumTypes.TIER_2);
+  const isPremiumExactlyResult = isPremiumAtLeastDefault.isPremiumExactly(
+    currentUser.getCurrentUser(),
+    PremiumTypes.TIER_2,
+  );
   obj = { source: null, total_favorites: null, is_xp_enabled: null, is_premium_tier_2: null };
   const obj3 = expandEventPropertiesDefault;
   obj[0] = setNextFavoritesGuildViewSource.consumeNextFavoritesGuildViewSource();
@@ -22,4 +25,4 @@ export default function trackFavoritesGuildViewed() {
   obj[2] = obj.getFavoritesAccess().isExperimentEnabled;
   obj[3] = isPremiumExactlyResult;
   obj3.track(AnalyticEvents.FAVORITES_GUILD_VIEWED, obj);
-};
+}

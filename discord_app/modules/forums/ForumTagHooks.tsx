@@ -15,22 +15,26 @@ export const useAvailableTags = function useAvailableTags(parent_id) {
   }
   const items = [closure_3];
   const items1 = [parent_id];
-  return parent_id(589).useStateFromStoresObject(items, () => {
-    const channel = closure_1_3.getChannel(parent_id);
-    let availableTags;
-    if (channel != null) {
-      availableTags = channel.availableTags;
-    }
-    if (availableTags == null) {
-      availableTags = [];
-    }
-    return availableTags.reduce((arg0, id) => {
-      const obj = {};
-      const merged = Object.assign(arg0);
-      obj[id.id] = id;
-      return obj;
-    }, {});
-  }, items1);
+  return parent_id(589).useStateFromStoresObject(
+    items,
+    () => {
+      const channel = closure_1_3.getChannel(parent_id);
+      let availableTags;
+      if (channel != null) {
+        availableTags = channel.availableTags;
+      }
+      if (availableTags == null) {
+        availableTags = [];
+      }
+      return availableTags.reduce((arg0, id) => {
+        const obj = {};
+        const merged = Object.assign(arg0);
+        obj[id.id] = id;
+        return obj;
+      }, {});
+    },
+    items1,
+  );
 };
 export const useAppliedTags = function useAppliedTags(thread) {
   let parent_id = thread;
@@ -40,22 +44,26 @@ export const useAppliedTags = function useAppliedTags(thread) {
   }
   const items = [closure_3];
   const items1 = [parent_id];
-  stateFromStoresObject = parent_id(stateFromStoresObject[4]).useStateFromStoresObject(items, () => {
-    const channel = closure_1_3.getChannel(parent_id);
-    let availableTags;
-    if (channel != null) {
-      availableTags = channel.availableTags;
-    }
-    if (availableTags == null) {
-      availableTags = [];
-    }
-    return availableTags.reduce((arg0, id) => {
-      const obj = {};
-      const merged = Object.assign(arg0);
-      obj[id.id] = id;
-      return obj;
-    }, {});
-  }, items1);
+  stateFromStoresObject = parent_id(stateFromStoresObject[4]).useStateFromStoresObject(
+    items,
+    () => {
+      const channel = closure_1_3.getChannel(parent_id);
+      let availableTags;
+      if (channel != null) {
+        availableTags = channel.availableTags;
+      }
+      if (availableTags == null) {
+        availableTags = [];
+      }
+      return availableTags.reduce((arg0, id) => {
+        const obj = {};
+        const merged = Object.assign(arg0);
+        obj[id.id] = id;
+        return obj;
+      }, {});
+    },
+    items1,
+  );
   const items2 = [stateFromStoresObject, thread];
   return React.useMemo(() => {
     let found;
@@ -99,22 +107,26 @@ export const useSomeAppliedTags = function useSomeAppliedTags(thread, arg1) {
   }
   let items = [closure_3];
   const items1 = [parent_id];
-  const stateFromStoresObject = parent_id(memo[4]).useStateFromStoresObject(items, () => {
-    const channel = closure_1_3.getChannel(parent_id);
-    let availableTags;
-    if (channel != null) {
-      availableTags = channel.availableTags;
-    }
-    if (availableTags == null) {
-      availableTags = [];
-    }
-    return availableTags.reduce((arg0, id) => {
-      const obj = {};
-      const merged = Object.assign(arg0);
-      obj[id.id] = id;
-      return obj;
-    }, {});
-  }, items1);
+  const stateFromStoresObject = parent_id(memo[4]).useStateFromStoresObject(
+    items,
+    () => {
+      const channel = closure_1_3.getChannel(parent_id);
+      let availableTags;
+      if (channel != null) {
+        availableTags = channel.availableTags;
+      }
+      if (availableTags == null) {
+        availableTags = [];
+      }
+      return availableTags.reduce((arg0, id) => {
+        const obj = {};
+        const merged = Object.assign(arg0);
+        obj[id.id] = id;
+        return obj;
+      }, {});
+    },
+    items1,
+  );
   memo = stateFromStoresObject;
   const items2 = [stateFromStoresObject, thread];
   memo = React.useMemo(() => {
@@ -151,8 +163,10 @@ export const useSomeAppliedTags = function useSomeAppliedTags(thread, arg1) {
 export const useVisibleForumTags = function useVisibleForumTags(parentChannel) {
   const _require = parentChannel;
   const items = [closure_4];
-  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => closure_1_4.can(closure_1_5.MANAGE_THREADS, stateFromStores));
-  const items1 = [stateFromStores, ];
+  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () =>
+    closure_1_4.can(closure_1_5.MANAGE_THREADS, stateFromStores),
+  );
+  const items1 = [stateFromStores];
   let availableTags;
   if (parentChannel != null) {
     availableTags = parentChannel.availableTags;
@@ -178,18 +192,24 @@ export const useVisibleAppliedForumTags = function useVisibleAppliedForumTags(ar
   let stateFromStores1 = arg1;
   let items = [closure_3];
   const items1 = [arg0];
-  stateFromStores = stateFromStores(stateFromStores1[4]).useStateFromStores(items, () => {
-    let parent_id;
-    if (stateFromStores != null) {
-      parent_id = stateFromStores.parent_id;
-    }
-    return closure_1_3.getChannel(parent_id);
-  }, items1);
+  stateFromStores = stateFromStores(stateFromStores1[4]).useStateFromStores(
+    items,
+    () => {
+      let parent_id;
+      if (stateFromStores != null) {
+        parent_id = stateFromStores.parent_id;
+      }
+      return closure_1_3.getChannel(parent_id);
+    },
+    items1,
+  );
   stateFromStores1 = undefined;
   const obj = stateFromStores(stateFromStores1[4]);
   const items2 = [closure_4];
-  stateFromStores1 = stateFromStores(stateFromStores1[4]).useStateFromStores(items2, () => closure_1_4.can(closure_1_5.MANAGE_THREADS, stateFromStores));
-  const items3 = [stateFromStores1, ];
+  stateFromStores1 = stateFromStores(stateFromStores1[4]).useStateFromStores(items2, () =>
+    closure_1_4.can(closure_1_5.MANAGE_THREADS, stateFromStores),
+  );
+  const items3 = [stateFromStores1];
   let availableTags;
   if (stateFromStores != null) {
     availableTags = stateFromStores.availableTags;

@@ -15,14 +15,16 @@ export const doesGameHaveRichPresence = function doesGameHaveRichPresence(id, it
       }
       if (tmp3) {
         const linkedGames = application.linkedGames;
-        tmp3 = undefined !== linkedGames.find((type) => {
-          let tmp = type.type === items2(closure_1_1[1]).GameLinkTypes.LINKED;
-          if (tmp) {
-            const id = type.id;
-            tmp = null != id.find((application_id) => application_id.application_id === id);
-          }
-          return tmp;
-        });
+        tmp3 =
+          undefined !==
+          linkedGames.find((type) => {
+            let tmp = type.type === items2(closure_1_1[1]).GameLinkTypes.LINKED;
+            if (tmp) {
+              const id = type.id;
+              tmp = null != id.find((application_id) => application_id.application_id === id);
+            }
+            return tmp;
+          });
       }
       return tmp3;
     }

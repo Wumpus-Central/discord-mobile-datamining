@@ -8,16 +8,34 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { fill: { flex: 1 }, scrollView: null, scrollViewContentLandscape: null, scrollViewContentPortrait: null, header: null, bodyContainer: null, bodyContainerBackground: null, footerPortrait: null, separator: null };
+createCacheKey = {
+  fill: { flex: 1 },
+  scrollView: null,
+  scrollViewContentLandscape: null,
+  scrollViewContentPortrait: null,
+  header: null,
+  bodyContainer: null,
+  bodyContainerBackground: null,
+  footerPortrait: null,
+  separator: null,
+};
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flexDirection: "row", alignItems: "center", width: "100%", flexGrow: 1, gap: 16 };
 createCacheKey[3] = { flexDirection: "column", width: "100%", flexGrow: 1, gap: 16 };
 createCacheKey[4] = { paddingTop: 24 };
 createCacheKey[5] = { flexDirection: "column", gap: 16, padding: 16 };
-createCacheKey[6] = { marginHorizontal: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg };
+createCacheKey[6] = {
+  marginHorizontal: 16,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.lg,
+};
 createCacheKey[7] = { flexDirection: "column", padding: 16, gap: 16 };
-let obj1 = { marginHorizontal: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg };
+let obj1 = {
+  marginHorizontal: 16,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.lg,
+};
 createCacheKey[8] = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
@@ -112,7 +130,7 @@ export default function OAuth2AuthorizeContent(onScroll) {
       }
     },
     centerContent,
-    children: null
+    children: null,
   };
   items2 = [tmp.scrollView, { paddingLeft: left, paddingRight: right }];
   items3 = [size.width > size.height ? tmp.scrollViewContentLandscape : tmp.scrollViewContentPortrait];
@@ -126,8 +144,8 @@ export default function OAuth2AuthorizeContent(onScroll) {
     obj2[1] = header;
     tmp17Result = tmp17(closure_4, obj2);
   }
-  const items4 = [tmp17Result, ];
-  const items5 = [tmp.bodyContainer, , ];
+  const items4 = [tmp17Result];
+  const items5 = [tmp.bodyContainer, ,];
   let prop = null;
   if (hasContentBackground) {
     prop = tmp.bodyContainerBackground;
@@ -135,13 +153,13 @@ export default function OAuth2AuthorizeContent(onScroll) {
   items5[1] = prop;
   const obj3 = { style: items5, children: null };
   items5[2] = size.width > size.height ? { flex: 1 } : {};
-  const items6 = [body, ];
+  const items6 = [body];
   let tmp15Result = null;
   if (null != appDetails) {
     const obj4 = { children: null };
     const obj5 = { style: null };
     obj5[0] = tmp.separator;
-    const items7 = [tmp17(tmp22, obj5), ];
+    const items7 = [tmp17(tmp22, obj5)];
     const obj6 = { children: null };
     obj6[0] = appDetails;
     items7[1] = tmp17(tmp22, obj6);
@@ -153,7 +171,7 @@ export default function OAuth2AuthorizeContent(onScroll) {
   items4[1] = closure_8(closure_4, obj3);
   obj1[1] = items4;
   obj[8] = closure_8(tmp3Result, obj1);
-  const items8 = [closure_6(first1, obj), ];
+  const items8 = [closure_6(first1, obj)];
   tmp17Result = null;
   if (null != footer) {
     const obj7 = { onLayout: null, style: null, children: null };
@@ -167,4 +185,4 @@ export default function OAuth2AuthorizeContent(onScroll) {
   items8[1] = tmp17Result;
   obj[1] = items8;
   return closure_8(tmp3Result, obj);
-};
+}

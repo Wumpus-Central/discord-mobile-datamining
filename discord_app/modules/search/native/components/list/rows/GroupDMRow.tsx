@@ -28,7 +28,16 @@ export default function GroupDMRow(channel) {
   if (str == null) {
     str2 = "";
   }
-  obj = { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null };
+  obj = {
+    label: str2,
+    icon: tmp6,
+    onPress: callback,
+    accessibilityLabel: null,
+    subLabel: null,
+    trailing: null,
+    accessibilityActions: null,
+    onAccessibilityAction: null,
+  };
   if (str == null) {
     str = "";
   }
@@ -37,5 +46,14 @@ export default function GroupDMRow(channel) {
   obj[5] = trailing;
   obj[6] = accessibilityActions;
   obj[7] = onAccessibilityAction;
-  return jsx(channel(16236).SearchListRow, { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null });
-};
+  return jsx(channel(16236).SearchListRow, {
+    label: str2,
+    icon: tmp6,
+    onPress: callback,
+    accessibilityLabel: null,
+    subLabel: null,
+    trailing: null,
+    accessibilityActions: null,
+    onAccessibilityAction: null,
+  });
+}

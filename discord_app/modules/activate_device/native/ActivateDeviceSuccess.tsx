@@ -38,12 +38,17 @@ export const ActivateDeviceSuccess = function ActivateDeviceSuccess(onComplete) 
     tmp9 = callback(preloadDefault, obj);
     const tmp13 = preloadDefault;
   }
-  const items = [tmp9, , ];
+  const items = [tmp9, ,];
   obj = { style: innerContentDefault.innerContent, children: null };
-  obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: innerContentDefault.centerText, children: null };
+  obj = {
+    variant: "heading-lg/bold",
+    color: "mobile-text-heading-primary",
+    style: innerContentDefault.centerText,
+    children: null,
+  };
   const intl3 = getSystemLocale.intl;
   obj[3] = intl3.string(getSystemLocale.t.qDtJmD);
-  const items1 = [callback(Text.Text, obj), ];
+  const items1 = [callback(Text.Text, obj)];
   let tmp18Result = null;
   if (null != stringResult) {
     obj1 = { variant: "text-md/medium", color: "text-default", style: null, children: null };

@@ -43,7 +43,12 @@ export const presentFriendRequestAcceptedToast = function presentFriendRequestAc
     obj[0] = username.username;
     stringResult = intl.formatToPlainString(getSystemLocale.t.b3eoD4, obj);
   }
-  obj = { key: "TOAST_FRIEND_REQUEST_ACCEPTED", content: stringResult, IconComponent: tmp2(4415).UserPlusIcon, iconColor: "status-positive" };
+  obj = {
+    key: "TOAST_FRIEND_REQUEST_ACCEPTED",
+    content: stringResult,
+    IconComponent: tmp2(4415).UserPlusIcon,
+    iconColor: "status-positive",
+  };
   obj.open(obj);
 };
 export const presentGameFriendRequestAcceptedToast = function presentGameFriendRequestAcceptedToast() {
@@ -56,7 +61,12 @@ export const presentGameFriendRequestAcceptedToast = function presentGameFriendR
 };
 export const presentFriendRequestIgnoredToast = function presentFriendRequestIgnoredToast() {
   let obj = dispatcherDefault;
-  obj = { key: "TOAST_FRIEND_REQUEST_IGNORED", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+  obj = {
+    key: "TOAST_FRIEND_REQUEST_IGNORED",
+    content: null,
+    IconComponent: null,
+    iconColor: "icon-feedback-critical",
+  };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.YlavlY);
   obj[2] = UserMinusIcon.UserMinusIcon;
@@ -64,7 +74,12 @@ export const presentFriendRequestIgnoredToast = function presentFriendRequestIgn
 };
 export const presentGameFriendRequestIgnoredToast = function presentGameFriendRequestIgnoredToast() {
   let obj = dispatcherDefault;
-  obj = { key: "TOAST_GAME_FRIEND_REQUEST_IGNORED", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+  obj = {
+    key: "TOAST_GAME_FRIEND_REQUEST_IGNORED",
+    content: null,
+    IconComponent: null,
+    iconColor: "icon-feedback-critical",
+  };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.P6BzJP);
   obj[2] = UserMinusIcon.UserMinusIcon;
@@ -193,7 +208,12 @@ export const presentNoiseCancellation = function presentNoiseCancellation(arg0) 
 };
 export const presentNoiseCancellationError = function presentNoiseCancellationError() {
   let obj = dispatcherDefault;
-  obj = { key: "MOBILE_NOISE_CANCELLATION_CPU_OVERUSE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+  obj = {
+    key: "MOBILE_NOISE_CANCELLATION_CPU_OVERUSE",
+    content: null,
+    IconComponent: null,
+    iconColor: "icon-feedback-critical",
+  };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.DnmX2G);
   obj[2] = XLargeIcon2.XLargeIcon;
@@ -206,7 +226,12 @@ export const presentError = function presentError(intl) {
 };
 export const presentVoiceActivityDetectionError = function presentVoiceActivityDetectionError() {
   let obj = dispatcherDefault;
-  obj = { key: "MOBILE_ADVANCED_VOICE_ACTIVITY_CPU_OVERUSE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+  obj = {
+    key: "MOBILE_ADVANCED_VOICE_ACTIVITY_CPU_OVERUSE",
+    content: null,
+    IconComponent: null,
+    iconColor: "icon-feedback-critical",
+  };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.zz1Tft);
   obj[2] = XLargeIcon2.XLargeIcon;
@@ -223,7 +248,12 @@ export const roleIdCopied = function roleIdCopied(closure_2) {
 };
 export const communityRequirementSatisfied = function communityRequirementSatisfied() {
   let obj = dispatcherDefault;
-  obj = { key: "ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP", content: null, IconComponent: null, iconColor: "status-positive" };
+  obj = {
+    key: "ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP",
+    content: null,
+    IconComponent: null,
+    iconColor: "status-positive",
+  };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.PHjrpp);
   obj[2] = CheckmarkLargeIcon.CheckmarkLargeIcon;
@@ -324,7 +354,12 @@ export const memberOrRoleAddedToast = function memberOrRoleAddedToast(c1, c0) {
 };
 export const roleTemplateAppliedToast = function roleTemplateAppliedToast() {
   let obj = dispatcherDefault;
-  obj = { key: "ROLE_PERMISSION_TEMPLATE_SELECT_CONFIRMATION_TOAST", content: null, IconComponent: null, iconColor: "status-positive" };
+  obj = {
+    key: "ROLE_PERMISSION_TEMPLATE_SELECT_CONFIRMATION_TOAST",
+    content: null,
+    IconComponent: null,
+    iconColor: "status-positive",
+  };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.e6xHUV);
   obj[2] = CheckmarkLargeIcon.CheckmarkLargeIcon;
@@ -398,17 +433,27 @@ export const presentCopiedToClipboard = function presentCopiedToClipboard() {
   obj[2] = CopyIcon.CopyIcon;
   obj.open(obj);
 };
-export const presentGuildRoleSubscriptionTrialTierMonthCost = function presentGuildRoleSubscriptionTrialTierMonthCost() {
-  let obj = dispatcherDefault;
-  obj = { key: "GUILD_ROLE_SUBSCRIPTION_MANAGE_SUBSCRIPTION_PAGE_TRIAL_PRICE_INFO", content: null, IconComponent: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t["/q6fpa"]);
-  obj[2] = CircleInformationIcon.CircleInformationIcon;
-  obj.open(obj);
-};
+export const presentGuildRoleSubscriptionTrialTierMonthCost =
+  function presentGuildRoleSubscriptionTrialTierMonthCost() {
+    let obj = dispatcherDefault;
+    obj = {
+      key: "GUILD_ROLE_SUBSCRIPTION_MANAGE_SUBSCRIPTION_PAGE_TRIAL_PRICE_INFO",
+      content: null,
+      IconComponent: null,
+    };
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t["/q6fpa"]);
+    obj[2] = CircleInformationIcon.CircleInformationIcon;
+    obj.open(obj);
+  };
 export const showVoiceRecordingFailed = function showVoiceRecordingFailed() {
   let obj = dispatcherDefault;
-  obj = { key: "VOICE_MESSAGES_RECORDING_FAILED", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+  obj = {
+    key: "VOICE_MESSAGES_RECORDING_FAILED",
+    content: null,
+    IconComponent: null,
+    iconColor: "icon-feedback-critical",
+  };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.H03AqF);
   obj[2] = XLargeIcon2.XLargeIcon;
@@ -432,7 +477,12 @@ export const showTransferOwnershipSuccess = function showTransferOwnershipSucces
 };
 export const showSafetySuccess = function showSafetySuccess(BLOCK_SUCCESS, safetyToastTypeContent) {
   let obj = dispatcherDefault;
-  obj = { key: BLOCK_SUCCESS, content: safetyToastTypeContent, IconComponent: CircleCheckIcon.CircleCheckIcon, iconColor: "status-positive" };
+  obj = {
+    key: BLOCK_SUCCESS,
+    content: safetyToastTypeContent,
+    IconComponent: CircleCheckIcon.CircleCheckIcon,
+    iconColor: "status-positive",
+  };
   obj.open(obj);
 };
 export const showVerificationSent = function showVerificationSent() {

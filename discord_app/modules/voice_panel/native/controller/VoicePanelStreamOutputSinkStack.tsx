@@ -2,7 +2,9 @@
 import closure_0 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_1 from "../../../../../_runtime/00019_noop.js";
 
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/controller/VoicePanelStreamOutputSinkStack.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/controller/VoicePanelStreamOutputSinkStack.tsx",
+);
 class VoicePanelStreamOutputSinkStack {
   constructor(arg0) {
     flag = arg1;
@@ -96,7 +98,9 @@ prototype["setActive"] = function setActive(arg0, arg1, arg2) {
   closure_1 = arg1;
   closure_2 = arg2;
   const mediaEngine = this.mediaEngine;
-  mediaEngine.eachConnection((setHasActiveVideoOutputSink) => setHasActiveVideoOutputSink.setHasActiveVideoOutputSink(closure_0, closure_1, closure_2));
+  mediaEngine.eachConnection((setHasActiveVideoOutputSink) =>
+    setHasActiveVideoOutputSink.setHasActiveVideoOutputSink(closure_0, closure_1, closure_2),
+  );
 };
 prototype["sourceId"] = function sourceId(closure_1) {
   return "VoicePanelStreamOutputSinkStack-" + closure_1;

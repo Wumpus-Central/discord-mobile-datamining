@@ -10,4 +10,4 @@ export default function useMaybeAddReactionMarketingEasterEggNote(arg0) {
     tmp = useMaybeAddPollsMarketingEasterEggNoteDefault(arg0);
   }
   return tmp;
-};
+}

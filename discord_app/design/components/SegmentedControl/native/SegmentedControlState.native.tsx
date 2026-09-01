@@ -2,8 +2,12 @@
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-let closure_4 = { code: "function SegmentedControlStateNativeTsx1(index,dimensions){const{itemDimensions,itemCount}=this.__closure;itemDimensions.get()[index]=dimensions;itemDimensions.set([...itemDimensions.get()].slice(0,itemCount));}" };
-let result = require("set").fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlState.native.tsx");
+let closure_4 = {
+  code: "function SegmentedControlStateNativeTsx1(index,dimensions){const{itemDimensions,itemCount}=this.__closure;itemDimensions.get()[index]=dimensions;itemDimensions.set([...itemDimensions.get()].slice(0,itemCount));}",
+};
+let result = require("set").fileFinishedImporting(
+  "design/components/SegmentedControl/native/SegmentedControlState.native.tsx",
+);
 
 export const useSegmentedControlState = function useSegmentedControlState(items) {
   items = items.items;
@@ -140,6 +144,40 @@ export const useSegmentedControlState = function useSegmentedControlState(items)
   M.__initData = onPageChangeStart;
   const items4 = [sharedValue, length];
   callback1 = onPageChange.useCallback(M, items4);
-  const items5 = [sharedValue4, sharedValue5, animatedRef, sharedValue1, sharedValue2, sharedValue3, items, sharedValue, PX_24, pageWidth, sharedValue6, callback, callback1, enabled];
-  return onPageChange.useMemo(() => ({ activeIndex: sharedValue4, visiblePageRange: sharedValue5, pagerRef: animatedRef, scrollTarget: sharedValue1, scrollOverflow: sharedValue2, scrollOffset: sharedValue3, items, itemDimensions: sharedValue, itemSpacing: PX_24, pageWidth, pressedIndex: sharedValue6, onPageChangeRef: closure_15, setActiveIndex: callback, setItemDimensions: callback1, useReducedMotion: enabled }), items5);
+  const items5 = [
+    sharedValue4,
+    sharedValue5,
+    animatedRef,
+    sharedValue1,
+    sharedValue2,
+    sharedValue3,
+    items,
+    sharedValue,
+    PX_24,
+    pageWidth,
+    sharedValue6,
+    callback,
+    callback1,
+    enabled,
+  ];
+  return onPageChange.useMemo(
+    () => ({
+      activeIndex: sharedValue4,
+      visiblePageRange: sharedValue5,
+      pagerRef: animatedRef,
+      scrollTarget: sharedValue1,
+      scrollOverflow: sharedValue2,
+      scrollOffset: sharedValue3,
+      items,
+      itemDimensions: sharedValue,
+      itemSpacing: PX_24,
+      pageWidth,
+      pressedIndex: sharedValue6,
+      onPageChangeRef: closure_15,
+      setActiveIndex: callback,
+      setItemDimensions: callback1,
+      useReducedMotion: enabled,
+    }),
+    items5,
+  );
 };

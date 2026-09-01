@@ -21,7 +21,17 @@ require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ HubEmailConnectionSteps: c9, INVITE_ROUTING_HUB_GUILD_ID: c10 } = HubEmailConnectionSteps);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { container: { paddingHorizontal: 16 }, header: { marginTop: 16, marginBottom: 16, alignSelf: "center" }, scrollViewContainer: { flexGrow: 2 }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 24 }, input: { marginBottom: 32 }, textInput: null, growSpacing: null, buttonContainer: null };
+createCacheKey = {
+  container: { paddingHorizontal: 16 },
+  header: { marginTop: 16, marginBottom: 16, alignSelf: "center" },
+  scrollViewContainer: { flexGrow: 2 },
+  title: { textAlign: "center", marginBottom: 8 },
+  description: { textAlign: "center", marginBottom: 24 },
+  input: { marginBottom: 32 },
+  textInput: null,
+  growSpacing: null,
+  buttonContainer: null,
+};
 createCacheKey = { borderRadius: ThemesDefault.radii.lg };
 createCacheKey[6] = createCacheKey;
 createCacheKey[7] = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
@@ -40,7 +50,7 @@ export default function HubEmailConnectionContent(arg0) {
   let ref;
   function _signup() {
     const self = this;
-    let tmp = first(function*() {
+    let tmp = first(function* () {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -248,29 +258,72 @@ export default function HubEmailConnectionContent(arg0) {
     }
   }
   obj = { ref, contentContainerStyle: null, children: null };
-  const items = [tmp.scrollViewContainer, ];
+  const items = [tmp.scrollViewContainer];
   obj1 = { paddingBottom: invite(5594)().insets.bottom + invite(712).space.PX_16 };
   items[1] = obj1;
   obj[1] = items;
   obj2 = { style: tmp.container, children: null };
   const tmp16 = _signup;
   const tmp7 = callback(React.useState(null), 2);
-  const items1 = [callback2(ref, { style: tmp.header, children: callback2(AccountAgeTier10LargeBadge.InkQuillSpotIllustration, { scale: 0.75 }) }), callback2(Text.Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: formatToPlainStringResult }), , ];
+  const items1 = [
+    callback2(ref, {
+      style: tmp.header,
+      children: callback2(AccountAgeTier10LargeBadge.InkQuillSpotIllustration, { scale: 0.75 }),
+    }),
+    callback2(Text.Text, {
+      variant: "heading-xl/bold",
+      color: "mobile-text-heading-primary",
+      style: tmp.title,
+      accessibilityRole: "header",
+      children: formatToPlainStringResult,
+    }),
+    ,
+  ];
   let obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = tmp2(1236).intl;
   obj5[3] = intl3.format(getSystemLocale.t["6kzaqs"], {
     onClick() {
-      invite(paths[18]).openLazy(callback(paths[20])(paths[19], paths.paths), "HubEmailConnectionDescriptionActionsheet");
-    }
+      invite(paths[18]).openLazy(
+        callback(paths[20])(paths[19], paths.paths),
+        "HubEmailConnectionDescriptionActionsheet",
+      );
+    },
   });
   items1[2] = callback2(Text.Text, obj5);
-  let obj7 = { label: null, placeholder: null, value: null, textContentType: "emailAddress", autoCapitalize: "none", keyboardType: "email-address", hint: null, textStyle: null, onChangeText: null, style: null, clearButtonVisibility: null, error: null, onFocus: null, onBlur: null };
-  let obj3 = { style: tmp.header, children: callback2(AccountAgeTier10LargeBadge.InkQuillSpotIllustration, { scale: 0.75 }) };
-  let obj4 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: formatToPlainStringResult };
+  let obj7 = {
+    label: null,
+    placeholder: null,
+    value: null,
+    textContentType: "emailAddress",
+    autoCapitalize: "none",
+    keyboardType: "email-address",
+    hint: null,
+    textStyle: null,
+    onChangeText: null,
+    style: null,
+    clearButtonVisibility: null,
+    error: null,
+    onFocus: null,
+    onBlur: null,
+  };
+  let obj3 = {
+    style: tmp.header,
+    children: callback2(AccountAgeTier10LargeBadge.InkQuillSpotIllustration, { scale: 0.75 }),
+  };
+  let obj4 = {
+    variant: "heading-xl/bold",
+    color: "mobile-text-heading-primary",
+    style: tmp.title,
+    accessibilityRole: "header",
+    children: formatToPlainStringResult,
+  };
   let obj6 = {
     onClick() {
-      invite(paths[18]).openLazy(callback(paths[20])(paths[19], paths.paths), "HubEmailConnectionDescriptionActionsheet");
-    }
+      invite(paths[18]).openLazy(
+        callback(paths[20])(paths[19], paths.paths),
+        "HubEmailConnectionDescriptionActionsheet",
+      );
+    },
   };
   const intl4 = tmp2(1236).intl;
   obj7[0] = intl4.string(getSystemLocale.t["K/7rLI"]);
@@ -278,7 +331,10 @@ export default function HubEmailConnectionContent(arg0) {
   obj7[1] = intl5.string(getSystemLocale.t.ImAOh5);
   obj7[2] = first;
   const intl6 = tmp2(1236).intl;
-  obj7[6] = intl6.format(getSystemLocale.t.RPT0vj, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
+  obj7[6] = intl6.format(getSystemLocale.t.RPT0vj, {
+    termsURL: MarketingURLs.TERMS,
+    privacyURL: MarketingURLs.PRIVACY,
+  });
   obj7[7] = tmp.textInput;
   obj7[8] = tmp4[1];
   obj7[9] = tmp.input;
@@ -307,7 +363,7 @@ export default function HubEmailConnectionContent(arg0) {
   };
   items1[3] = callback2(invite(7704), obj7);
   obj2[1] = items1;
-  const items2 = [closure_13(ref, obj2), callback2(ref, { style: tmp.growSpacing }), ];
+  const items2 = [closure_13(ref, obj2), callback2(ref, { style: tmp.growSpacing })];
   const obj11 = { style: tmp.buttonContainer, children: null };
   const obj12 = { size: "lg", text: null, onPress: null, loading: null };
   const intl7 = tmp2(1236).intl;
@@ -328,4 +384,4 @@ export default function HubEmailConnectionContent(arg0) {
   obj[2] = items2;
   obj9[0] = closure_13(tmp16, obj);
   return callback2(HubEmailConnectionModal.HubEmailConnectionScreen, obj9);
-};
+}

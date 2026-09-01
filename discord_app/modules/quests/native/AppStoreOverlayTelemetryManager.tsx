@@ -14,8 +14,8 @@ class AppStoreOverlayTelemetryManager extends tmp2 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       APP_STATE_UPDATE(arg0) {
-            return applyArgumentsResult.handleAppStateUpdate(arg0);
-          }
+        return applyArgumentsResult.handleAppStateUpdate(arg0);
+      },
     };
     return applyArgumentsResult;
   }

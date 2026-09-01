@@ -19,7 +19,13 @@ import { MobileUserSettings } from "../../user_settings/core/native/SettingsCons
 const require = arg1;
 let closure_4 = ["code", "state"];
 require("processCallbacks").addPostConnectionCallback;
-({ AnalyticEvents: closure_12, LinkingTypes: map1, Routes: closure_14, UserSettingsSections: closure_15, PlatformTypes: closure_16 } = ME);
+({
+  AnalyticEvents: closure_12,
+  LinkingTypes: map1,
+  Routes: closure_14,
+  UserSettingsSections: closure_15,
+  PlatformTypes: closure_16,
+} = ME);
 let result = require("set").fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
 export default function handleSupportedURL(payload) {
@@ -79,7 +85,9 @@ export default function handleSupportedURL(payload) {
       flag = true;
     } else {
       result = addPostConnectionCallback;
-      result = addPostConnectionCallback(() => rootNavigationRef1.navigate("friends", { screen: "add-friends", params: { sourcePage: "Deeplink" } }));
+      result = addPostConnectionCallback(() =>
+        rootNavigationRef1.navigate("friends", { screen: "add-friends", params: { sourcePage: "Deeplink" } }),
+      );
       flag = true;
     }
     const obj38 = payload(inviteCode[19]);
@@ -172,13 +180,13 @@ export default function handleSupportedURL(payload) {
       result = inviteCode;
       giftCode = payload(inviteCode[26]).resolveGiftCode(giftCode);
       const obj29 = payload(inviteCode[26]);
-      result = giftCode.then((giftCode) => {
-        rootNavigationRef1(inviteCode[27]).track(constants.OPEN_MODAL, { type: "gift_accept", location: null });
-        const obj = rootNavigationRef1(inviteCode[27]);
-        const result = payload(inviteCode[28]).openGiftCodeRedeemModal(giftCode.giftCode.code);
-      }).catch(() => {
-
-      });
+      result = giftCode
+        .then((giftCode) => {
+          rootNavigationRef1(inviteCode[27]).track(constants.OPEN_MODAL, { type: "gift_accept", location: null });
+          const obj = rootNavigationRef1(inviteCode[27]);
+          const result = payload(inviteCode[28]).openGiftCodeRedeemModal(giftCode.giftCode.code);
+        })
+        .catch(() => {});
       flag3 = true;
       const nextPromise = giftCode.then((giftCode) => {
         rootNavigationRef1(inviteCode[27]).track(constants.OPEN_MODAL, { type: "gift_accept", location: null });
@@ -294,31 +302,39 @@ export default function handleSupportedURL(payload) {
           result = payload;
           let obj6 = { token: null };
           obj6[0] = payload.token;
-          result = rootNavigationRef1(inviteCode[18]).pushLazy(payload(inviteCode[35])(inviteCode[38], inviteCode.paths), obj6, "ONE_TIME_LOGIN_MODAL");
+          result = rootNavigationRef1(inviteCode[18]).pushLazy(
+            payload(inviteCode[35])(inviteCode[38], inviteCode.paths),
+            obj6,
+            "ONE_TIME_LOGIN_MODAL",
+          );
           flag = true;
           const obj21 = rootNavigationRef1(inviteCode[18]);
         } else if (result.REMOTE_AUTH === type) {
           remoteAuthFingerprint = payload.remoteAuthFingerprint;
           result = null;
-          result = addPostConnectionCallback(null != remoteAuthFingerprint ? (() => {
-            let obj = rootNavigationRef1(inviteCode[18]);
-            obj = { remoteAuthFingerprint };
-            obj.pushLazy(payload(inviteCode[35])(inviteCode[39], inviteCode.paths), obj, "REMOTE_AUTH_MODAL");
-          }) : (() => {
-            let obj = payload(inviteCode[40]);
-            const tmp = inviteCode;
-            const tmp3 = payload(inviteCode[40]).isMetaQuest() ? closure_19.HEADSET_CAMERA : closure_19.CAMERA;
-            const permission = rootNavigationRef1(tmp[41]).requestPermission(tmp3);
-            const obj2 = rootNavigationRef1(tmp[41]);
-            permission.then((arg0) => {
-              if (arg0) {
-                callback2(paths[18]).pushLazy(callback(paths[35])(paths[42], paths.paths), { showHelp: true });
-                const obj = callback2(paths[18]);
-              }
-            }).catch(() => {
-
-            });
-          }));
+          result = addPostConnectionCallback(
+            null != remoteAuthFingerprint
+              ? () => {
+                  let obj = rootNavigationRef1(inviteCode[18]);
+                  obj = { remoteAuthFingerprint };
+                  obj.pushLazy(payload(inviteCode[35])(inviteCode[39], inviteCode.paths), obj, "REMOTE_AUTH_MODAL");
+                }
+              : () => {
+                  let obj = payload(inviteCode[40]);
+                  const tmp = inviteCode;
+                  const tmp3 = payload(inviteCode[40]).isMetaQuest() ? closure_19.HEADSET_CAMERA : closure_19.CAMERA;
+                  const permission = rootNavigationRef1(tmp[41]).requestPermission(tmp3);
+                  const obj2 = rootNavigationRef1(tmp[41]);
+                  permission
+                    .then((arg0) => {
+                      if (arg0) {
+                        callback2(paths[18]).pushLazy(callback(paths[35])(paths[42], paths.paths), { showHelp: true });
+                        const obj = callback2(paths[18]);
+                      }
+                    })
+                    .catch(() => {});
+                },
+          );
           flag = true;
         } else if (result.PROMOTIONS === type) {
           result = inviteCode;
@@ -347,101 +363,103 @@ export default function handleSupportedURL(payload) {
           obj13.pushLazy(payload(inviteCode[35])(inviteCode[44], inviteCode.paths), obj8);
           flag = true;
         } else if (result.GUILD_EVENT_DETAILS === type) {
-          addPostConnectionCallback(guildTemplateCode(function*() {
-            if (c4 === 2) {
-              c4 = 3;
-              HermesBuiltin.throwTypeError();
-            } else if (tmp5 === 3) {
-              if (arg0 === 1) {
-                throw arg1;
-              } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c4 = 2;
-                if (0 === paths) {
-                  if (arg0 === 1) {
-                    c4 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c4 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  } else {
-                    let id = tmp2;
-                    c1 = tmp3;
-                    closure_0 = undefined;
-                    c1 = undefined;
-                    id = undefined;
-                    closure_1_1(paths[18]).popAll();
-                    ({ guildId: closure_0, guildEventId: c1 } = closure_1_0);
-                    paths = 1;
-                    c4 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = closure_1_0(paths[35])(paths[45], paths.paths);
-                    return obj1;
-                  }
+          addPostConnectionCallback(
+            guildTemplateCode(function* () {
+              if (c4 === 2) {
+                c4 = 3;
+                HermesBuiltin.throwTypeError();
+              } else if (tmp5 === 3) {
+                if (arg0 === 1) {
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  let obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
                 } else {
-                  if (1 === tmp6) {
+                  return { value: "HermesInternal", done: null };
+                }
+              } else {
+                try {
+                  c4 = 2;
+                  if (0 === paths) {
                     if (arg0 === 1) {
                       c4 = 3;
                       throw arg1;
                     } else if (arg0 === 2) {
                       c4 = 3;
-                      let obj2 = { value: null, done: true };
-                      obj2[0] = arg1;
-                      return obj2;
+                      obj = { value: null, done: true };
+                      obj[0] = arg1;
+                      return obj;
                     } else {
-                      if (null != _default.getGuild(closure_0)) {
-                        obj1 = closure_1_0(paths[46]);
-                        obj1.transitionToGuild(closure_0);
-                      }
-                      const guildScheduledEvent = closure_1_8.getGuildScheduledEvent(c1);
-                      closure_0 = guildScheduledEvent;
-                      if (guildScheduledEvent == null) {
-                        let obj4 = closure_1_1(paths[47]);
-                        paths = 2;
-                        c4 = 1;
-                        const obj3 = { value: null, done: false };
-                        obj3[0] = obj4.fetchGuildEvent(closure_1_0, closure_1_1);
-                        return obj3;
-                      }
-                      _default = arg1.default;
+                      let id = tmp2;
+                      c1 = tmp3;
+                      closure_0 = undefined;
+                      c1 = undefined;
+                      id = undefined;
+                      closure_1_1(paths[18]).popAll();
+                      ({ guildId: closure_0, guildEventId: c1 } = closure_1_0);
+                      paths = 1;
+                      c4 = 1;
+                      obj1 = { value: null, done: false };
+                      obj1[0] = closure_1_0(paths[35])(paths[45], paths.paths);
+                      return obj1;
                     }
-                  } else if (arg0 === 1) {
-                    c4 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c4 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
                   } else {
-                    closure_0 = arg1;
+                    if (1 === tmp6) {
+                      if (arg0 === 1) {
+                        c4 = 3;
+                        throw arg1;
+                      } else if (arg0 === 2) {
+                        c4 = 3;
+                        let obj2 = { value: null, done: true };
+                        obj2[0] = arg1;
+                        return obj2;
+                      } else {
+                        if (null != _default.getGuild(closure_0)) {
+                          obj1 = closure_1_0(paths[46]);
+                          obj1.transitionToGuild(closure_0);
+                        }
+                        const guildScheduledEvent = closure_1_8.getGuildScheduledEvent(c1);
+                        closure_0 = guildScheduledEvent;
+                        if (guildScheduledEvent == null) {
+                          let obj4 = closure_1_1(paths[47]);
+                          paths = 2;
+                          c4 = 1;
+                          const obj3 = { value: null, done: false };
+                          obj3[0] = obj4.fetchGuildEvent(closure_1_0, closure_1_1);
+                          return obj3;
+                        }
+                        _default = arg1.default;
+                      }
+                    } else if (arg0 === 1) {
+                      c4 = 3;
+                      throw arg1;
+                    } else if (arg0 === 2) {
+                      c4 = 3;
+                      obj = { value: null, done: true };
+                      obj[0] = arg1;
+                      return obj;
+                    } else {
+                      closure_0 = arg1;
+                    }
+                    id = closure_0;
+                    if (null != id) {
+                      obj2 = closure_1_0(paths[48]);
+                      obj4 = { eventId: null, event: null };
+                      obj4[0] = id.id;
+                      obj4[1] = id;
+                      const result = obj2.openGuildEventDetails(obj4);
+                    }
+                    c4 = 3;
+                    return { value: "HermesInternal", done: null };
                   }
-                  id = closure_0;
-                  if (null != id) {
-                    obj2 = closure_1_0(paths[48]);
-                    obj4 = { eventId: null, event: null };
-                    obj4[0] = id.id;
-                    obj4[1] = id;
-                    const result = obj2.openGuildEventDetails(obj4);
-                  }
-                  c4 = 3;
-                  return { value: "HermesInternal", done: null };
+                } catch (tmp35) {
+                  c4 = tmp;
+                  throw tmp35;
                 }
-              } catch (tmp35) {
-                c4 = tmp;
-                throw tmp35;
               }
-            }
-          }));
+            }),
+          );
           flag = true;
         } else if (result.MOBILE_WEB_HANDOFF === type) {
           const redirectUrl = payload.redirectUrl;
@@ -454,87 +472,89 @@ export default function handleSupportedURL(payload) {
           const result2 = obj10.redirectWithHandoffToken("" + redirectUrl.pathname + redirectUrl.search, obj9);
           flag = true;
         } else if (result.VOICE_CHANNEL === type) {
-          addPostConnectionCallback(guildTemplateCode(function*() {
-            if (c2 === 2) {
-              c2 = 3;
-              HermesBuiltin.throwTypeError();
-            } else if (tmp3 === 3) {
-              if (arg0 === 1) {
-                throw arg1;
-              } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+          addPostConnectionCallback(
+            guildTemplateCode(function* () {
+              if (c2 === 2) {
+                c2 = 3;
+                HermesBuiltin.throwTypeError();
+              } else if (tmp3 === 3) {
+                if (arg0 === 1) {
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  let obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  return { value: "HermesInternal", done: null };
+                }
               } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c2 = 2;
-                if (0 === v0) {
-                  if (arg0 === 1) {
+                try {
+                  c2 = 2;
+                  if (0 === v0) {
+                    if (arg0 === 1) {
+                      c2 = 3;
+                      throw arg1;
+                    } else if (arg0 === 2) {
+                      c2 = 3;
+                      obj = { value: null, done: true };
+                      obj[0] = arg1;
+                      return obj;
+                    } else {
+                      closure_0 = tmp4;
+                      let tmp19 = null != closure_1_0.guildId;
+                      if (tmp19) {
+                        tmp19 = null != closure_1_0.channelId;
+                      }
+                      if (tmp19) {
+                        tmp19 = null != closure_1_0.userId;
+                      }
+                      if (tmp19) {
+                        v0(closure_1_3[18]).popAll();
+                        v0 = 1;
+                        c2 = 1;
+                        obj1 = { value: null, done: false };
+                        obj1[0] = closure_1_0(closure_1_3[35])(closure_1_3[45], closure_1_3.paths);
+                        return obj1;
+                      }
+                    }
+                  } else if (arg0 === 1) {
                     c2 = 3;
                     throw arg1;
                   } else if (arg0 === 2) {
                     c2 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    const obj2 = { value: null, done: true };
+                    obj2[0] = arg1;
+                    return obj2;
                   } else {
-                    closure_0 = tmp4;
-                    let tmp19 = null != closure_1_0.guildId;
-                    if (tmp19) {
-                      tmp19 = null != closure_1_0.channelId;
+                    if (null != _default.getGuild(closure_0.guildId)) {
+                      obj = closure_1_0(closure_1_3[46]);
+                      obj.transitionToGuild(closure_0.guildId);
                     }
-                    if (tmp19) {
-                      tmp19 = null != closure_1_0.userId;
-                    }
-                    if (tmp19) {
-                      v0(closure_1_3[18]).popAll();
-                      v0 = 1;
-                      c2 = 1;
-                      obj1 = { value: null, done: false };
-                      obj1[0] = closure_1_0(closure_1_3[35])(closure_1_3[45], closure_1_3.paths);
-                      return obj1;
-                    }
+                    let obj3 = { streamType: null, ownerId: null, guildId: null, channelId: null };
+                    obj3[0] = closure_1_18.GUILD;
+                    obj3[1] = closure_0.userId;
+                    obj3[2] = closure_0.guildId;
+                    obj3[3] = closure_0.channelId;
+                    v0(closure_1_3[50])(obj3);
+                    _default = arg1.default;
                   }
-                } else if (arg0 === 1) {
-                  c2 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c2 = 3;
-                  const obj2 = { value: null, done: true };
-                  obj2[0] = arg1;
-                  return obj2;
-                } else {
-                  if (null != _default.getGuild(closure_0.guildId)) {
-                    obj = closure_1_0(closure_1_3[46]);
-                    obj.transitionToGuild(closure_0.guildId);
+                  let tmp23 = "transfer_cancelled" === closure_0.action;
+                  if (tmp23) {
+                    tmp23 = "xbox" === closure_0.via;
                   }
-                  let obj3 = { streamType: null, ownerId: null, guildId: null, channelId: null };
-                  obj3[0] = closure_1_18.GUILD;
-                  obj3[1] = closure_0.userId;
-                  obj3[2] = closure_0.guildId;
-                  obj3[3] = closure_0.channelId;
-                  v0(closure_1_3[50])(obj3);
-                  _default = arg1.default;
+                  if (tmp23) {
+                    obj3 = closure_1_0(closure_1_3[51]);
+                    obj3.disconnectRemote();
+                  }
+                  c2 = 3;
+                  return { value: "HermesInternal", done: null };
+                } catch (tmp37) {
+                  c2 = tmp;
+                  throw tmp37;
                 }
-                let tmp23 = "transfer_cancelled" === closure_0.action;
-                if (tmp23) {
-                  tmp23 = "xbox" === closure_0.via;
-                }
-                if (tmp23) {
-                  obj3 = closure_1_0(closure_1_3[51]);
-                  obj3.disconnectRemote();
-                }
-                c2 = 3;
-                return { value: "HermesInternal", done: null };
-              } catch (tmp37) {
-                c2 = tmp;
-                throw tmp37;
               }
-            }
-          }));
+            }),
+          );
           flag = true;
         } else if (result.ICYMI === type) {
           addPostConnectionCallback(() => {
@@ -563,7 +583,7 @@ export default function handleSupportedURL(payload) {
           addPostConnectionCallback(() => {
             let hasItem = null != payload.callbackCode && null != tmp.callbackState && null != tmp.provider;
             if (hasItem) {
-              const items = [, , , ];
+              const items = [, , ,];
               ({ XBOX: arr[0], PLAYSTATION: arr[1], PLAYSTATION_STAGING: arr[2], CRUNCHYROLL: arr[3] } = closure_1_16);
               hasItem = items.includes(tmp.provider);
             }
@@ -576,133 +596,135 @@ export default function handleSupportedURL(payload) {
           });
           flag = true;
         } else if (result.USER_CONNECTIONS_CALLBACK === type) {
-          addPostConnectionCallback(guildTemplateCode(function*() {
-            if (c8 === 2) {
-              c8 = 3;
-              HermesBuiltin.throwTypeError();
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw arg1;
-              } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+          addPostConnectionCallback(
+            guildTemplateCode(function* () {
+              if (c8 === 2) {
+                c8 = 3;
+                HermesBuiltin.throwTypeError();
+              } else if (tmp4 === 3) {
+                if (arg0 === 1) {
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  let obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  return { value: "HermesInternal", done: null };
+                }
               } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c8 = 2;
-                if (0 === c7) {
-                  if (arg0 === 1) {
-                    c8 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c8 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  } else {
-                    closure_6 = tmp5;
-                    closure_5 = tmp2;
-                    let body;
-                    closure_1 = undefined;
-                    const searchParams = closure_1_0.searchParams;
-                    const state = searchParams.state;
-                    const tmp51 = closure_1_5(searchParams, closure_1_4);
-                    if (null != state) {
-                      obj1 = { code: null, state: null };
-                      obj1[0] = searchParams.code;
-                      obj1[1] = state;
-                      closure_1 = tmp51;
-                      const keys = Object.keys();
-                      if (keys === undefined) {
-                        closure_3 = tmp12;
-                        closure_2 = tmp11;
+                try {
+                  c8 = 2;
+                  if (0 === c7) {
+                    if (arg0 === 1) {
+                      c8 = 3;
+                      throw arg1;
+                    } else if (arg0 === 2) {
+                      c8 = 3;
+                      obj = { value: null, done: true };
+                      obj[0] = arg1;
+                      return obj;
+                    } else {
+                      closure_6 = tmp5;
+                      closure_5 = tmp2;
+                      let body;
+                      closure_1 = undefined;
+                      const searchParams = closure_1_0.searchParams;
+                      const state = searchParams.state;
+                      const tmp51 = closure_1_5(searchParams, closure_1_4);
+                      if (null != state) {
+                        obj1 = { code: null, state: null };
+                        obj1[0] = searchParams.code;
+                        obj1[1] = state;
                         closure_1 = tmp51;
-                        body = keys;
-                      } else {
-                        closure_3 = tmp12;
-                        closure_2 = tmp11;
-                        closure_1 = tmp10;
-                        body = keys;
-                        let tmp20;
-                        let obj2 = body[closure_2];
-                        while (obj2 !== undefined) {
-                          let tmp57 = obj2;
-                          let tmp58 = tmp17;
-                          closure_3 = tmp17;
-                          let tmp59 = tmp16;
-                          closure_2 = tmp16;
-                          let tmp60 = tmp15;
-                          closure_1 = tmp15;
-                          let tmp61 = tmp14;
-                          body = tmp14;
-                          tmp20 = tmp19;
-                          if (!obj2.startsWith("openid.")) {
-                            continue;
-                          } else {
-                            obj2 = tmp19;
-                            if (null == tmp19) {
-                              obj2 = {};
+                        const keys = Object.keys();
+                        if (keys === undefined) {
+                          closure_3 = tmp12;
+                          closure_2 = tmp11;
+                          closure_1 = tmp51;
+                          body = keys;
+                        } else {
+                          closure_3 = tmp12;
+                          closure_2 = tmp11;
+                          closure_1 = tmp10;
+                          body = keys;
+                          let tmp20;
+                          let obj2 = body[closure_2];
+                          while (obj2 !== undefined) {
+                            let tmp57 = obj2;
+                            let tmp58 = tmp17;
+                            closure_3 = tmp17;
+                            let tmp59 = tmp16;
+                            closure_2 = tmp16;
+                            let tmp60 = tmp15;
+                            closure_1 = tmp15;
+                            let tmp61 = tmp14;
+                            body = tmp14;
+                            tmp20 = tmp19;
+                            if (!obj2.startsWith("openid.")) {
+                              continue;
+                            } else {
+                              obj2 = tmp19;
+                              if (null == tmp19) {
+                                obj2 = {};
+                              }
+                              obj2[obj2] = searchParams[obj2];
+                              tmp20 = obj2;
+                              continue;
                             }
-                            obj2[obj2] = searchParams[obj2];
-                            tmp20 = obj2;
                             continue;
                           }
-                          continue;
+                          closure_3 = tmp17;
+                          closure_2 = tmp16;
+                          closure_1 = tmp15;
+                          body = tmp14;
                         }
-                        closure_3 = tmp17;
-                        closure_2 = tmp16;
-                        closure_1 = tmp15;
-                        body = tmp14;
+                        if (null != tmp19) {
+                          obj1.openid_params = tmp19;
+                        }
+                        let obj4 = closure_1_1(closure_1_3[18]);
+                        obj4.popAll();
+                        const obj3 = { screen: null };
+                        obj3[0] = closure_1_15.CONNECTIONS;
+                        closure_1_0(closure_1_3[22]).openUserSettings(obj3);
+                        const obj6 = closure_1_0(closure_1_3[22]);
+                        tmp10 = tmp51;
+                        c7 = 1;
+                        c8 = 1;
+                        obj4 = { value: null, done: false };
+                        obj4[0] = closure_1_1(closure_1_3[56]).callback(closure_1_0.provider, obj1);
+                        return obj4;
+                      } else {
+                        c8 = 3;
                       }
-                      if (null != tmp19) {
-                        obj1.openid_params = tmp19;
-                      }
-                      let obj4 = closure_1_1(closure_1_3[18]);
-                      obj4.popAll();
-                      const obj3 = { screen: null };
-                      obj3[0] = closure_1_15.CONNECTIONS;
-                      closure_1_0(closure_1_3[22]).openUserSettings(obj3);
-                      const obj6 = closure_1_0(closure_1_3[22]);
-                      tmp10 = tmp51;
-                      c7 = 1;
-                      c8 = 1;
-                      obj4 = { value: null, done: false };
-                      obj4[0] = closure_1_1(closure_1_3[56]).callback(closure_1_0.provider, obj1);
-                      return obj4;
-                    } else {
-                      c8 = 3;
                     }
+                  } else if (arg0 === 1) {
+                    c8 = 3;
+                    throw arg1;
+                  } else if (arg0 !== 2) {
+                    body = arg1;
+                    body = body.body;
+                    let redirect;
+                    if (body != null) {
+                      redirect = body.redirect;
+                    }
+                    closure_1 = closure_1_1(closure_1_3[57]).toURLSafe(redirect);
+                    if (null != closure_1) {
+                      closure_1_1(closure_1_3[43]).openURL(closure_1.toString());
+                      const obj13 = closure_1_1(closure_1_3[43]);
+                    }
+                    const obj12 = closure_1_1(closure_1_3[57]);
                   }
-                } else if (arg0 === 1) {
                   c8 = 3;
-                  throw arg1;
-                } else if (arg0 !== 2) {
-                  body = arg1;
-                  body = body.body;
-                  let redirect;
-                  if (body != null) {
-                    redirect = body.redirect;
-                  }
-                  closure_1 = closure_1_1(closure_1_3[57]).toURLSafe(redirect);
-                  if (null != closure_1) {
-                    closure_1_1(closure_1_3[43]).openURL(closure_1.toString());
-                    const obj13 = closure_1_1(closure_1_3[43]);
-                  }
-                  const obj12 = closure_1_1(closure_1_3[57]);
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } catch (tmp30) {
+                  c8 = tmp;
+                  throw tmp30;
                 }
-                c8 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } catch (tmp30) {
-                c8 = tmp;
-                throw tmp30;
               }
-            }
-          }));
+            }),
+          );
           flag = true;
         } else if (result.CONNECTIONS === type) {
           addPostConnectionCallback(() => {
@@ -727,7 +749,11 @@ export default function handleSupportedURL(payload) {
         } else if (result.GUILD_SETTINGS_PICKER === type) {
           addPostConnectionCallback(() => {
             let obj = payload(inviteCode[60]);
-            obj = { section: payload.settingsSection, subsection: payload.settingsSubsection, feature: payload.feature };
+            obj = {
+              section: payload.settingsSection,
+              subsection: payload.settingsSubsection,
+              feature: payload.feature,
+            };
             const result = obj.openGuildSettingsPickerModal(obj);
           });
           flag = true;
@@ -740,7 +766,9 @@ export default function handleSupportedURL(payload) {
             obj3 = rootNavigationRef1(tmp45[18]);
             obj12 = { text: null, channelId: null, shareId: null, attachmentManifest: null };
             ({ text: obj5[0], channelId: obj5[1], shareId: obj5[2], attachmentManifest: obj5[3] } = payload);
-            obj3.pushLazy(tmp44(tmp45[35])(tmp45[62], tmp45.paths), obj12, SHARE_SCREEN_MODAL_KEY, { presentation: "modal" });
+            obj3.pushLazy(tmp44(tmp45[35])(tmp45[62], tmp45.paths), obj12, SHARE_SCREEN_MODAL_KEY, {
+              presentation: "modal",
+            });
             flag = true;
           }
           tmp44 = payload;
@@ -762,75 +790,77 @@ export default function handleSupportedURL(payload) {
                 flag = true;
               } else if (result.MOBILE_WEB_REDIRECT_CHECKOUT === type) {
                 deepLinkAction = payload.deepLinkAction;
-                addPostConnectionCallback(guildTemplateCode(function*() {
-                  if (paths === 2) {
-                    paths = 3;
-                    HermesBuiltin.throwTypeError();
-                  } else if (tmp5 === 3) {
-                    if (arg0 === 1) {
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      let obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
+                addPostConnectionCallback(
+                  guildTemplateCode(function* () {
+                    if (paths === 2) {
+                      paths = 3;
+                      HermesBuiltin.throwTypeError();
+                    } else if (tmp5 === 3) {
+                      if (arg0 === 1) {
+                        throw arg1;
+                      } else if (arg0 === 2) {
+                        let obj = { value: null, done: true };
+                        obj[0] = arg1;
+                        return obj;
+                      } else {
+                        return { value: "HermesInternal", done: null };
+                      }
                     } else {
-                      return { value: "HermesInternal", done: null };
-                    }
-                  } else {
-                    try {
-                      paths = 2;
-                      if (0 === c2) {
-                        if (arg0 === 1) {
+                      try {
+                        paths = 2;
+                        if (0 === c2) {
+                          if (arg0 === 1) {
+                            paths = 3;
+                            throw arg1;
+                          } else if (arg0 === 2) {
+                            paths = 3;
+                            obj = { value: null, done: true };
+                            obj[0] = arg1;
+                            return obj;
+                          } else {
+                            let guild = tmp2;
+                            let guildId = tmp3;
+                            guildId = undefined;
+                            guild = undefined;
+                            if (closure_1_9 === closure_1_22.PREMIUM_CHECKOUT_SUCCESS) {
+                              closure_1_9("succeeded");
+                            } else if (tmp32 === tmp33.PREMIUM_SUBSCRIPTION_UPDATE) {
+                              const subscriptions = closure_1_0(paths[65]).fetchSubscriptions();
+                              const obj3 = closure_1_0(paths[65]);
+                            } else if (tmp32 === tmp33.GUILD_BOOST_CHECKOUT_SUCCESS) {
+                              closure_1_1(paths[18]).popAll();
+                              guildId = closure_1_0.guildId;
+                              c2 = 1;
+                              paths = 1;
+                              obj1 = { value: null, done: false };
+                              obj1[0] = closure_1_0(paths[35])(paths[45], paths.paths);
+                              return obj1;
+                            }
+                            paths = 3;
+                          }
+                        } else if (arg0 === 1) {
                           paths = 3;
                           throw arg1;
-                        } else if (arg0 === 2) {
-                          paths = 3;
-                          obj = { value: null, done: true };
-                          obj[0] = arg1;
-                          return obj;
-                        } else {
-                          let guild = tmp2;
-                          let guildId = tmp3;
-                          guildId = undefined;
-                          guild = undefined;
-                          if (closure_1_9 === closure_1_22.PREMIUM_CHECKOUT_SUCCESS) {
-                            closure_1_9("succeeded");
-                          } else if (tmp32 === tmp33.PREMIUM_SUBSCRIPTION_UPDATE) {
-                            const subscriptions = closure_1_0(paths[65]).fetchSubscriptions();
-                            const obj3 = closure_1_0(paths[65]);
-                          } else if (tmp32 === tmp33.GUILD_BOOST_CHECKOUT_SUCCESS) {
-                            closure_1_1(paths[18]).popAll();
-                            guildId = closure_1_0.guildId;
-                            c2 = 1;
-                            paths = 1;
-                            obj1 = { value: null, done: false };
-                            obj1[0] = closure_1_0(paths[35])(paths[45], paths.paths);
-                            return obj1;
+                        } else if (arg0 !== 2) {
+                          guild = arg1.default.getGuild(guildId);
+                          if (null != guild) {
+                            closure_1_0(paths[46]).transitionToGuild(guildId);
+                            closure_1_1(paths[66])(guild);
+                            const obj6 = closure_1_0(paths[46]);
                           }
-                          paths = 3;
+                          const _default = arg1.default;
                         }
-                      } else if (arg0 === 1) {
                         paths = 3;
-                        throw arg1;
-                      } else if (arg0 !== 2) {
-                        guild = arg1.default.getGuild(guildId);
-                        if (null != guild) {
-                          closure_1_0(paths[46]).transitionToGuild(guildId);
-                          closure_1_1(paths[66])(guild);
-                          const obj6 = closure_1_0(paths[46]);
-                        }
-                        const _default = arg1.default;
+                        obj = { value: null, done: true };
+                        obj[0] = arg1;
+                        return obj;
+                      } catch (tmp16) {
+                        paths = tmp;
+                        throw tmp16;
                       }
-                      paths = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    } catch (tmp16) {
-                      paths = tmp;
-                      throw tmp16;
                     }
-                  }
-                }));
+                  }),
+                );
                 flag = true;
               } else if (result.SHOP === type) {
                 addPostConnectionCallback(() => {
@@ -929,7 +959,13 @@ export default function handleSupportedURL(payload) {
                 });
                 flag = true;
               } else if (result.ACTIVITY === type) {
-                rootNavigationRef1(inviteCode[74])(payload.applicationId, payload.referrerId, payload.customId, payload.linkId, payload.isDeepLink);
+                rootNavigationRef1(inviteCode[74])(
+                  payload.applicationId,
+                  payload.referrerId,
+                  payload.customId,
+                  payload.linkId,
+                  payload.isDeepLink,
+                );
                 flag = true;
               } else if (result.CONNECTED_GAMES === type) {
                 addPostConnectionCallback(() => {
@@ -978,7 +1014,11 @@ export default function handleSupportedURL(payload) {
                 addPostConnectionCallback(() => {
                   let obj = rootNavigationRef1(inviteCode[18]);
                   obj.popAll();
-                  obj = { gameId, source: payload(inviteCode[77]).GameProfileSources.Deeplink, gameProfileModalChecks: obj };
+                  obj = {
+                    gameId,
+                    source: payload(inviteCode[77]).GameProfileSources.Deeplink,
+                    gameProfileModalChecks: obj,
+                  };
                   obj = { shouldOpenGameProfile: true, gameId };
                   payload(inviteCode[78]).default.openGameProfileModal(obj);
                 });
@@ -1049,4 +1089,4 @@ export default function handleSupportedURL(payload) {
     const obj47 = payload(inviteCode[79]);
   }
   return flag;
-};
+}

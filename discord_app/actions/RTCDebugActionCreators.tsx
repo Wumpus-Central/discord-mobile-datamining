@@ -24,7 +24,11 @@ export const setSection = function setSection(section) {
   obj.dispatch(obj);
 };
 export const setShouldRecordNextConnection = function setShouldRecordNextConnection(value) {
-  trackVoiceAndVideoDebuggingSettingsUpdatedDefault("connection_replay_log_enabled", value, closure_2.shouldRecordNextConnection());
+  trackVoiceAndVideoDebuggingSettingsUpdatedDefault(
+    "connection_replay_log_enabled",
+    value,
+    closure_2.shouldRecordNextConnection(),
+  );
   let obj = dispatcherDefault;
   obj = { type: "RTC_DEBUG_SET_RECORDING_FLAG", value };
   obj.dispatch(obj);

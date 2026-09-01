@@ -12,17 +12,28 @@ export default function useVoteReactors(channelId) {
   let obj = channelId(reaction[2]);
   let items = [closure_3];
   const items1 = [channelId, messageId, reaction.emoji];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    const reactions = closure_1_3.getReactions(channelId, messageId, reaction.emoji, closure_1_4, channelId(reaction[3]).ReactionTypes.VOTE);
-    let items;
-    if (reactions != null) {
-      items = reactions.values();
-    }
-    if (items == null) {
-      items = [];
-    }
-    return Array.from(items);
-  }, items1, messageId(reaction[4]));
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      const reactions = closure_1_3.getReactions(
+        channelId,
+        messageId,
+        reaction.emoji,
+        closure_1_4,
+        channelId(reaction[3]).ReactionTypes.VOTE,
+      );
+      let items;
+      if (reactions != null) {
+        items = reactions.values();
+      }
+      if (items == null) {
+        items = [];
+      }
+      return Array.from(items);
+    },
+    items1,
+    messageId(reaction[4]),
+  );
   obj = { reactors: stateFromStores, hasMore: null };
   const count_details = reaction.count_details;
   let num;
@@ -34,4 +45,4 @@ export default function useVoteReactors(channelId) {
   }
   obj[1] = num > stateFromStores.length;
   return obj;
-};
+}

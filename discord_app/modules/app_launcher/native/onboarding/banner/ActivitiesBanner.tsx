@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ActivitiesBanner.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/onboarding/banner/ActivitiesBanner.tsx",
+);
 
 export default function ActivitiesBanner(context) {
   let obj = useActivityApplications;
@@ -28,4 +30,4 @@ export default function ActivitiesBanner(context) {
     }
   }
   return tmp6Result;
-};
+}

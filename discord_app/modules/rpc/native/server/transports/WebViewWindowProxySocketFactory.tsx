@@ -16,6 +16,6 @@ export default function _default(logger) {
     onSendingToRPCClient(arg0, id) {
       const combined = "Socket Emit: " + id;
       logger.info(combined, logger(closure_1_1[1])(arg0));
-    }
+    },
   });
-};
+}

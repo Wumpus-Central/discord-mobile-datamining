@@ -15,16 +15,24 @@ function DoubleTapReminderContent(emoji) {
   const intl = getSystemLocale.intl;
   obj = {
     protipHook(children) {
-      return callback2(callback(table[5]).Text, { variant: "text-sm/bold", color: "text-feedback-info", children }, "doubleTapReminder");
+      return callback2(
+        callback(table[5]).Text,
+        { variant: "text-sm/bold", color: "text-feedback-info", children },
+        "doubleTapReminder",
+      );
     },
-    emojiName: emoji.emoji.name
+    emojiName: emoji.emoji.name,
   };
   obj[2] = intl.format(getSystemLocale.t.C2tQIV, obj);
   return jsx(Text.Text, {
     protipHook(children) {
-      return callback2(callback(table[5]).Text, { variant: "text-sm/bold", color: "text-feedback-info", children }, "doubleTapReminder");
+      return callback2(
+        callback(table[5]).Text,
+        { variant: "text-sm/bold", color: "text-feedback-info", children },
+        "doubleTapReminder",
+      );
     },
-    emojiName: emoji.emoji.name
+    emojiName: emoji.emoji.name,
   });
 }
 noopAll;
@@ -37,7 +45,12 @@ let result = require("set").fileFinishedImporting("modules/double_tap_to_react/n
 export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapReminderToast(emoji) {
   const _require = emoji;
   let obj = UNSAFE_isDismissibleContentDismissed;
-  if (!obj.UNSAFE_isDismissibleContentDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER)) {
+  if (
+    !obj.UNSAFE_isDismissibleContentDismissed(
+      require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx")
+        .DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER,
+    )
+  ) {
     const DoubleTapReactionEmoji = tmp(4166).DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.getSetting();
     let flag = setting.disableDoubleTap;
@@ -66,7 +79,10 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
       const obj4 = dispatcherDefault;
       obj = { dismissAction: null, forceTrack: true };
       obj[0] = ContentDismissActionType.AUTO_DISMISS;
-      const result1 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(tmp(1373).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj);
+      const result1 = tmp(4298).UNSAFE_markDismissibleContentAsDismissed(
+        tmp(1373).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER,
+        obj,
+      );
       const tmpResult1 = tmp(4298);
     }
   }

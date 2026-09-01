@@ -35,7 +35,7 @@ function ChannelsAndRolesScreen(guildId) {
     obj[1] = first;
     obj[2] = tmp10[1];
     const intl = tmp2(tmp3[11]).intl;
-    const items1 = [intl.string(tmp2(tmp3[11]).t.F1VixV), ];
+    const items1 = [intl.string(tmp2(tmp3[11]).t.F1VixV)];
     const intl2 = tmp2(tmp3[11]).intl;
     items1[1] = intl2.string(tmp2(tmp3[11]).t.MWmtj8);
     obj[3] = items1.map((id) => ({ id, label: id, page: null }));
@@ -62,7 +62,7 @@ function ChannelsAndRolesScreen(guildId) {
       obj1[1] = callback2(tmp2(tmp3[12]).SegmentedControl, obj2);
       tmp17 = callback2(tmp16, obj1);
     }
-    const items3 = [tmp17, ];
+    const items3 = [tmp17];
     if (first === GuildOnboardingTab.CUSTOMIZE) {
       const obj3 = { setTab: null, guildId: null };
       obj3[0] = tmp12;
@@ -107,7 +107,7 @@ export default function ChannelsAndRolesModal(arg0) {
     title: stringResult,
     render() {
       return closure_1_8(closure_1_11, { guildId: closure_0, defaultTab: closure_1 });
-    }
+    },
   };
   return tmp3(_modDef10661, obj);
-};
+}

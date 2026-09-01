@@ -14,7 +14,19 @@ noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles(() => {
   let obj = { tagWrapper: null, tagText: null, highlightedTagWrapper: null, tagIcon: null, start: null, end: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, marginHorizontal: 2, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, overflow: "hidden", flexDirection: "row", alignItems: "center", flexShrink: 1 };
+  obj = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+    marginHorizontal: 2,
+    borderRadius: ThemesDefault.radii.xs,
+    borderWidth: 1,
+    borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+    paddingHorizontal: ThemesDefault.space.PX_8,
+    paddingVertical: ThemesDefault.space.PX_4,
+    overflow: "hidden",
+    flexDirection: "row",
+    alignItems: "center",
+    flexShrink: 1,
+  };
   obj[0] = obj;
   obj[1] = { flexShrink: 1 };
   obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
@@ -40,8 +52,11 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
   const intl = getSystemLocale.intl;
   let obj = { text: tag.text };
   const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t["0Vb9FQ"], obj);
-  ({ onAccessibilityAction, accessibilityActions } = useAccessibilityPressDefault(() => callback("remove"), formatToPlainStringResult));
-  const items = [tmp.tagWrapper, , , ];
+  ({ onAccessibilityAction, accessibilityActions } = useAccessibilityPressDefault(
+    () => callback("remove"),
+    formatToPlainStringResult,
+  ));
+  const items = [tmp.tagWrapper, , ,];
   let prop;
   if (selected) {
     prop = tmp.highlightedTagWrapper;
@@ -65,7 +80,7 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
     accessibilityLabel: formatToPlainStringResult,
     accessibilityActions,
     onAccessibilityAction,
-    children: null
+    children: null,
   };
   items[3] = end;
   let tmp10 = null;
@@ -75,7 +90,7 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
     obj[1] = tag.icon;
     tmp10 = callback(View, obj);
   }
-  const items1 = [tmp10, ];
+  const items1 = [tmp10];
   obj1 = { style: tmp.tagText, lineClamp: 1, variant: "text-sm/medium", color: null, children: null };
   let str = "text-default";
   if (selected) {

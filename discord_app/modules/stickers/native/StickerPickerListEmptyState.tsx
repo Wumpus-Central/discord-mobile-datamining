@@ -18,7 +18,10 @@ const memoResult = importAllResult.memo(function StickerPickerListEmptyState(ins
   ({ inActionSheet, insetTop } = insetBottom);
   insetBottom = insetBottom.insetBottom;
   const items = [insetBottom, insetTop];
-  const memo = importAllResult.useMemo(() => ({ marginBottom: insetBottom + closure_1_5, marginTop: insetTop, flex: 1 }), items);
+  const memo = importAllResult.useMemo(
+    () => ({ marginBottom: insetBottom + closure_1_5, marginTop: insetTop, flex: 1 }),
+    items,
+  );
   let obj = insetTop(9159);
   const modalDismissGuardRefreshControl = obj.useModalDismissGuardRefreshControl();
   if (inActionSheet) {
@@ -38,8 +41,24 @@ const memoResult = importAllResult.memo(function StickerPickerListEmptyState(ins
   ({ emptyStateBody: obj3[1], emptyStateContainer: obj3[2], emptyStateImage: obj3[3] } = callback());
   obj[4] = insetBottom(10410);
   obj[5] = { marginBottom: 0 };
-  obj[3] = jsx(insetTop(1297).RefreshEmptyState, { body: null, bodyStyle: null, containerStyle: null, imageStyle: null, source: null, titleStyle: null });
-  return <BottomSheetScrollView body={null} bodyStyle={null} containerStyle={null} imageStyle={null} source={null} titleStyle={null} />;
+  obj[3] = jsx(insetTop(1297).RefreshEmptyState, {
+    body: null,
+    bodyStyle: null,
+    containerStyle: null,
+    imageStyle: null,
+    source: null,
+    titleStyle: null,
+  });
+  return (
+    <BottomSheetScrollView
+      body={null}
+      bodyStyle={null}
+      containerStyle={null}
+      imageStyle={null}
+      source={null}
+      titleStyle={null}
+    />
+  );
 });
 const result = require("set").fileFinishedImporting("modules/stickers/native/StickerPickerListEmptyState.tsx");
 

@@ -18,8 +18,8 @@ class AppIconPremiumManager extends tmp3 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       APP_STATE_UPDATE(arg0) {
-            return applyArgumentsResult.handleAppStateUpdate(arg0);
-          }
+        return applyArgumentsResult.handleAppStateUpdate(arg0);
+      },
     };
     return applyArgumentsResult;
   }
@@ -39,7 +39,7 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
 };
 prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -144,13 +144,16 @@ prototype["resetIcon"] = function resetIcon(arg0, c0, ORPHANED) {
   closure_1 = ORPHANED;
   let obj = fetchCurrentAppIcon;
   const setAppIconResult = require("AppIconUtils.tsx").setAppIcon(DEFAULT, c0);
-  require("AppIconUtils.tsx").setAppIcon(DEFAULT, c0).then(() => {
-    let obj = ORPHANED(closure_1_2[10]);
-    obj = { previous_icon_id: closure_0, reset_to_icon_id: closure_1_8, reset_reason: ORPHANED };
-    obj.track(closure_1_6.APP_ICON_AUTO_RESET, obj);
-  }).catch((arg0) => {
-    logger.error("Failed to reset app icon:", arg0);
-  });
+  require("AppIconUtils.tsx")
+    .setAppIcon(DEFAULT, c0)
+    .then(() => {
+      let obj = ORPHANED(closure_1_2[10]);
+      obj = { previous_icon_id: closure_0, reset_to_icon_id: closure_1_8, reset_reason: ORPHANED };
+      obj.track(closure_1_6.APP_ICON_AUTO_RESET, obj);
+    })
+    .catch((arg0) => {
+      logger.error("Failed to reset app icon:", arg0);
+    });
 };
 const appIconPremiumManager = new AppIconPremiumManager();
 const tmp2 = new timestampDefault("AppIconPremiumManager");

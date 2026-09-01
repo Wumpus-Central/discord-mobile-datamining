@@ -96,7 +96,11 @@ const memoResult = importAllResult.memo(function PrivateChannelHeader(channelId)
   ({ isMobileOnline, isVROnline, status } = stateFromStoresObject);
   const items3 = [channelId, screenIndex];
   const callback = stateFromStores1.useCallback(() => {
-    const result = channelId(stateFromStores[11]).navigateToChannelDetails(channelId, screenIndex, "private-channel-header-title");
+    const result = channelId(stateFromStores[11]).navigateToChannelDetails(
+      channelId,
+      screenIndex,
+      "private-channel-header-title",
+    );
   }, items3);
   if (null != stateFromStores) {
     let tmp2Result = tmp2(tmp3[12]);
@@ -169,11 +173,17 @@ const memoResult = importAllResult.memo(function PrivateChannelHeader(channelId)
       renderUserAvatarResult = tmp2Result3.renderEmptyIcon();
     }
   }
-  const items4 = [renderUserAvatarResult, ];
+  const items4 = [renderUserAvatarResult];
   tmp = callback2();
   const tmp28 = closure_12;
   tmp4 = closure_7;
-  obj2 = { accessibleTitle: formatToPlainStringResult, subtitle: tmp10Result, disableArrow: !pressable, userId: null, guildId: null };
+  obj2 = {
+    accessibleTitle: formatToPlainStringResult,
+    subtitle: tmp10Result,
+    disableArrow: !pressable,
+    userId: null,
+    guildId: null,
+  };
   let id;
   if (stateFromStores1 != null) {
     id = stateFromStores1.id;
@@ -202,6 +212,8 @@ const memoResult = importAllResult.memo(function PrivateChannelHeader(channelId)
   }
   const tmp2Result4 = channelId(stateFromStores[17]);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/PrivateChannelHeader.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/channel/header/PrivateChannelHeader.tsx",
+);
 
 export default memoResult;

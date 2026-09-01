@@ -50,7 +50,7 @@ function _loadJsonAsset() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       let asset1 = 0;
       let uri = tmp2;
       if (flag === undefined) {
@@ -205,6 +205,6 @@ export const jsonAssets = {
   },
   i18n_hi() {
     return loadJsonAsset(registerAsset30);
-  }
+  },
 };
 export { loadJsonAsset };

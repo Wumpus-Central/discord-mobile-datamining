@@ -8,7 +8,9 @@ import { GuildFeatures } from "../../../../../../../../Constants.tsx";
 import { InviteTypes } from "../../../../../../../instant_invite/Constants.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildProfileInvite.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildProfileInvite.tsx",
+);
 
 export const createGuildProfileInvite = function createGuildProfileInvite(invite, closure_2) {
   const tmp3 = getEmbedThemeColorsDefault(closure_2);
@@ -161,7 +163,10 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
   let formatToPlainStringResult2;
   if (null != guildProfileFromInvite) {
     const tmp4Result5 = tmp4(7482);
-    const establishedDate = tmp4Result5.getEstablishedDate(tmp(11).extractTimestamp(guildProfileFromInvite.id), locale.locale);
+    const establishedDate = tmp4Result5.getEstablishedDate(
+      tmp(11).extractTimestamp(guildProfileFromInvite.id),
+      locale.locale,
+    );
     const intl8 = tmp4(1236).intl;
     const obj3 = { createdAtDate: null };
     obj3[0] = establishedDate;

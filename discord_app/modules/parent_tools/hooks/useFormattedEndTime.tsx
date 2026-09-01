@@ -19,9 +19,13 @@ export default function useFormattedEndTime() {
     let formatResult = null;
     if (null != nextEndTime) {
       const _Intl = Intl;
-      const dateTimeFormat = new Intl.DateTimeFormat(callback(table[1]).intl.currentLocale, { hour: "numeric", minute: "2-digit", weekday: "long" });
+      const dateTimeFormat = new Intl.DateTimeFormat(callback(table[1]).intl.currentLocale, {
+        hour: "numeric",
+        minute: "2-digit",
+        weekday: "long",
+      });
       formatResult = dateTimeFormat.format(nextEndTime);
     }
     return formatResult;
   });
-};
+}

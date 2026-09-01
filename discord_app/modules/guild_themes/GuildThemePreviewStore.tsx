@@ -15,17 +15,38 @@ function handleEnd() {
   let flag = !tmp;
   if (!tmp) {
     timeout.stop();
-    closure_5 = { guildId: null, draft: null, original: null, draftEnabled: false, originalEnabled: false, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
+    closure_5 = {
+      guildId: null,
+      draft: null,
+      original: null,
+      draftEnabled: false,
+      originalEnabled: false,
+      origin: null,
+      owner: null,
+      isSaving: false,
+      isAwaitingGuildUpdate: false,
+      saveError: null,
+    };
     flag = true;
   }
   return flag;
 }
 ({ GuildThemePreviewOrigin, GuildThemePreviewOwner } = GuildThemePreviewOrigin);
 const timeout = new require("start").Timeout();
-let closure_5 = { guildId: null, draft: null, original: null, draftEnabled: false, originalEnabled: false, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
+let closure_5 = {
+  guildId: null,
+  draft: null,
+  original: null,
+  draftEnabled: false,
+  originalEnabled: false,
+  origin: null,
+  owner: null,
+  isSaving: false,
+  isAwaitingGuildUpdate: false,
+  saveError: null,
+};
 const Store = initializeDefault.Store;
-class GuildThemePreviewStore extends Store {
-}
+class GuildThemePreviewStore extends Store {}
 const prototype = GuildThemePreviewStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3);
@@ -34,67 +55,67 @@ Object.defineProperty(prototype, "guildId", {
   get: function guildId() {
     return closure_5.guildId;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "draft", {
   get: function draft() {
     return closure_5.draft;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "original", {
   get: function original() {
     return closure_5.original;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "draftEnabled", {
   get: function draftEnabled() {
     return closure_5.draftEnabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "originalEnabled", {
   get: function originalEnabled() {
     return closure_5.originalEnabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "origin", {
   get: function origin(arg0, arg1, arg2) {
     return closure_5.origin;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "owner", {
   get: function owner() {
     return closure_5.owner;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isActive", {
   get: function isActive() {
     return null != closure_5.guildId;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isSaving", {
   get: function isSaving() {
     return closure_5.isSaving;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isAwaitingGuildUpdate", {
   get: function isAwaitingGuildUpdate() {
     return closure_5.isAwaitingGuildUpdate;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "saveError", {
   get: function saveError() {
     return closure_5.saveError;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["hasChanges"] = function hasChanges() {
   let tmp = null != closure_5.guildId;
@@ -114,7 +135,18 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
     owner = owner.owner;
     ({ guildId, draft, original, draftEnabled, originalEnabled, origin } = owner);
     timeout.stop();
-    const obj = { guildId, draft: cloneGuildThemeSettings.cloneGuildThemeSettings(draft), original: null, draftEnabled: null, originalEnabled: null, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
+    const obj = {
+      guildId,
+      draft: cloneGuildThemeSettings.cloneGuildThemeSettings(draft),
+      original: null,
+      draftEnabled: null,
+      originalEnabled: null,
+      origin: null,
+      owner: null,
+      isSaving: false,
+      isAwaitingGuildUpdate: false,
+      saveError: null,
+    };
     const obj2 = cloneGuildThemeSettings;
     obj[2] = cloneGuildThemeSettings.cloneGuildThemeSettings(original);
     obj[3] = draftEnabled;
@@ -273,7 +305,18 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
       let flag = !tmp5;
       if (!tmp5) {
         timeout.stop();
-        closure_5 = { guildId: null, draft: null, original: null, draftEnabled: false, originalEnabled: false, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
+        closure_5 = {
+          guildId: null,
+          draft: null,
+          original: null,
+          draftEnabled: false,
+          originalEnabled: false,
+          origin: null,
+          owner: null,
+          isSaving: false,
+          isAwaitingGuildUpdate: false,
+          saveError: null,
+        };
         flag = true;
       }
       tmp2 = flag;
@@ -294,7 +337,18 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
       flag = true;
       if (!tmp4) {
         timeout.stop();
-        closure_5 = { guildId: null, draft: null, original: null, draftEnabled: false, originalEnabled: false, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
+        closure_5 = {
+          guildId: null,
+          draft: null,
+          original: null,
+          draftEnabled: false,
+          originalEnabled: false,
+          origin: null,
+          owner: null,
+          isSaving: false,
+          isAwaitingGuildUpdate: false,
+          saveError: null,
+        };
         flag = true;
       }
     }
@@ -313,7 +367,18 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
       flag = true;
       if (!tmp3) {
         timeout.stop();
-        closure_5 = { guildId: null, draft: null, original: null, draftEnabled: false, originalEnabled: false, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
+        closure_5 = {
+          guildId: null,
+          draft: null,
+          original: null,
+          draftEnabled: false,
+          originalEnabled: false,
+          origin: null,
+          owner: null,
+          isSaving: false,
+          isAwaitingGuildUpdate: false,
+          saveError: null,
+        };
         flag = true;
       }
     }
@@ -334,7 +399,18 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
         flag = true;
         if (!tmp6) {
           timeout.stop();
-          closure_5 = { guildId: null, draft: null, original: null, draftEnabled: false, originalEnabled: false, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
+          closure_5 = {
+            guildId: null,
+            draft: null,
+            original: null,
+            draftEnabled: false,
+            originalEnabled: false,
+            origin: null,
+            owner: null,
+            isSaving: false,
+            isAwaitingGuildUpdate: false,
+            saveError: null,
+          };
           flag = true;
         }
       }
@@ -385,7 +461,18 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
           flag2 = true;
           if (!tmp16) {
             timeout.stop();
-            closure_5 = { guildId: null, draft: null, original: null, draftEnabled: false, originalEnabled: false, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
+            closure_5 = {
+              guildId: null,
+              draft: null,
+              original: null,
+              draftEnabled: false,
+              originalEnabled: false,
+              origin: null,
+              owner: null,
+              isSaving: false,
+              isAwaitingGuildUpdate: false,
+              saveError: null,
+            };
             flag2 = true;
           }
         }
@@ -397,7 +484,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
     }
     return tmp5;
   },
-  LOGOUT: handleEnd
+  LOGOUT: handleEnd,
 });
 const result = require("set").fileFinishedImporting("modules/guild_themes/GuildThemePreviewStore.tsx");
 

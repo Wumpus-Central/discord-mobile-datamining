@@ -12,7 +12,13 @@ let c4 = importAllResult;
 ({ AppState: c5, View: closure_6 } = get_ActivityIndicator);
 let closure_9 = createCacheKey.createStyles(() => {
   let obj = { container: null, video: null, image: null };
-  obj = { borderRadius: ThemesDefault.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
+  obj = {
+    borderRadius: ThemesDefault.radii.sm,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
+  };
   obj[0] = obj;
   obj[1] = { overflow: "hidden", height: "100%", width: "100%" };
   obj[2] = { height: "100%", width: "100%" };
@@ -59,7 +65,17 @@ const memoResult = importAllResult.memo(function QuestDockRewardTile(assetUrl) {
   items3 = [tmp6.container, { height, width }, style];
   if (isAnimatedAsset) {
     if (withAnimation) {
-      obj = { style: null, source: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", poster: null, resizeMode: "cover", paused: null, muted: true };
+      obj = {
+        style: null,
+        source: null,
+        disableFocus: true,
+        preventsDisplaySleepDuringVideoPlayback: false,
+        importantForAccessibility: "no-hide-descendants",
+        poster: null,
+        resizeMode: "cover",
+        paused: null,
+        muted: true,
+      };
       obj[0] = tmp6.video;
       obj1 = { uri: null };
       obj1[0] = assetUrl;

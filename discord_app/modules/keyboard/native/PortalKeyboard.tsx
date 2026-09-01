@@ -10,7 +10,15 @@ let c3 = "default";
 const modal = "modal";
 const result = require("set").fileFinishedImporting("modules/keyboard/native/PortalKeyboard.tsx");
 
-export const PortalKeyboardState = { EMPTY: "empty", REQUEST_OPEN: "request_open", OPENING: "opening", OPEN: "open", REQUEST_CLOSE: "request_close", CLOSING: "closing", CLOSED: "closed" };
+export const PortalKeyboardState = {
+  EMPTY: "empty",
+  REQUEST_OPEN: "request_open",
+  OPENING: "opening",
+  OPEN: "open",
+  REQUEST_CLOSE: "request_close",
+  CLOSING: "closing",
+  CLOSED: "closed",
+};
 export const PORTAL_HOST_NAME_DEFAULT = "default";
 export const PORTAL_HOST_NAME_MODAL = "modal";
 export const PortalKeyboard = function PortalKeyboard(children) {

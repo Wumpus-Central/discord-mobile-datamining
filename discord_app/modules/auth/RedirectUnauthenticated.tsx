@@ -18,7 +18,7 @@ export default function RedirectUnauthenticated() {
     const tmp2Result = getAuthenticationPath;
   }
   return jsx(_extends.Redirect, { to });
-};
+}
 export const getRedirectPath = function getRedirectPath() {
   if (CONFERENCE_MODE_ENABLED) {
     let REGISTER = Routes.REGISTER;

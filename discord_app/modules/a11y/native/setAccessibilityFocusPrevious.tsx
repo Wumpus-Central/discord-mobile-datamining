@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/a11y/native/setAccessibilityFo
 
 export default function setAccessibilityFocusPrevious() {
   enforcingDefault.restorePreviousFocus();
-};
+}

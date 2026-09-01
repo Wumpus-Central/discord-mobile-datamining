@@ -7,7 +7,12 @@ import { asyncRequireImpl } from "../../../_runtime/02009_asyncRequireImpl.js";
 let closure_3 = LOCATION_CONTEXT_MOBILE.getSafetyToolsActionSheetKey;
 const result = set.fileFinishedImporting("modules/self_mod/SafetyToolsActionCreators.native.tsx");
 
-export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType) {
+export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(
+  channelId,
+  recipientId,
+  warningId,
+  warningType,
+) {
   const tmp = callback(channelId);
   const _require = tmp;
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
@@ -18,7 +23,7 @@ export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(ch
     recipientId,
     onClose() {
       closure_1_1(closure_1_2[1]).hideActionSheet(closure_0);
-    }
+    },
   };
   obj.openLazy(asyncRequireImpl(11026, dependencyMap.paths), tmp, obj);
 };

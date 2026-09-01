@@ -59,7 +59,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     const result = giftCodeRecord(closure_1_2[18]).presentCopiedToClipboard();
   }, items);
   obj[0] = callback(giftCodeURL(10602), { giftStyle });
-  const items1 = [callback(View, obj), , , , ];
+  const items1 = [callback(View, obj), , , ,];
   obj = { style: tmp.title, variant: "heading-lg/bold", children: null };
   const intl = tmp2(1236).intl;
   obj[2] = intl.string(giftCodeRecord(1236).t["/s1xR7"]);
@@ -78,7 +78,15 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   obj4 = { style: tmp.inputLabel, variant: "heading-md/bold", children: null };
   const intl3 = tmp2(1236).intl;
   obj4[2] = intl3.string(giftCodeRecord(1236).t["qS+yMo"]);
-  const items2 = [callback(giftCodeRecord(4474).Text, obj4), callback(giftCodeRecord(8984).InputButton, { text: giftCodeURL, icon: giftCodeURL(4426), iconPosition: "end", onPress: callback })];
+  const items2 = [
+    callback(giftCodeRecord(4474).Text, obj4),
+    callback(giftCodeRecord(8984).InputButton, {
+      text: giftCodeURL,
+      icon: giftCodeURL(4426),
+      iconPosition: "end",
+      onPress: callback,
+    }),
+  ];
   obj3[1] = items2;
   items1[3] = closure_10(View, obj3);
   const obj6 = { style: tmp.disclaimer, variant: "text-xs/normal", children: null };
@@ -87,7 +95,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   items1[4] = callback(giftCodeRecord(4474).Text, obj6);
   obj2[0] = items1;
   return closure_10(closure_9, obj2);
-};
+}
 export const PremiumGiftSuccessActions = function PremiumGiftSuccessActions(giftCodeRecord) {
   let onClose;
   let prePurchaseGiftingBadgeProgress;
@@ -134,7 +142,7 @@ export const PremiumGiftSuccessActions = function PremiumGiftSuccessActions(gift
   const intl = onClose(navigation[15]).intl;
   obj[1] = intl.string(onClose(navigation[15]).t.RDE0Sc);
   obj[2] = callback1;
-  const items2 = [callback(onClose(navigation[14]).Button, obj), ];
+  const items2 = [callback(onClose(navigation[14]).Button, obj)];
   obj1 = { variant: "secondary", text: null, onPress: null };
   const intl2 = onClose(navigation[15]).intl;
   obj1[1] = intl2.string(onClose(navigation[15]).t.cpT0Cq);

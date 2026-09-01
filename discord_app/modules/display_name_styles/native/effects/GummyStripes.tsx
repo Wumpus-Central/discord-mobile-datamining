@@ -16,7 +16,7 @@ export default function GummyStripes(colors) {
   closure_0 = callback2();
   return callback(closure_4, {
     children: colors.map((color) => {
-      const items = [lib.stripe, , ];
+      const items = [lib.stripe, ,];
       let stripeOverlap = arg1 > 0;
       if (stripeOverlap) {
         stripeOverlap = lib.stripeOverlap;
@@ -27,6 +27,6 @@ export default function GummyStripes(colors) {
       items[2] = obj;
       obj[0] = items;
       return closure_1_3(closure_1_2, obj, arg1);
-    })
+    }),
   });
-};
+}

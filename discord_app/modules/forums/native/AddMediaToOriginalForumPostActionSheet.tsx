@@ -20,7 +20,7 @@ function _upload2() {
     let attachments = 0;
     c9 = 0;
     closure_7 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c9 === 2) {
         c9 = 3;
         HermesBuiltin.throwTypeError();
@@ -55,7 +55,13 @@ function _upload2() {
               message = undefined;
               c4 = undefined;
               onResult = callback;
-              ({ threadId: c0, attachments: closure_1, setIsUploading: closure_2, guild: message, analyticsLocations: c4 } = callback);
+              ({
+                threadId: c0,
+                attachments: closure_1,
+                setIsUploading: closure_2,
+                guild: message,
+                analyticsLocations: c4,
+              } = callback);
               c5 = undefined;
               c6 = undefined;
               c7 = undefined;
@@ -88,11 +94,16 @@ function _upload2() {
               });
               onResult = onResult.on("progress", (currentSize) => {
                 let obj = _undefined(5123);
-                const kestrelConfig = obj.getKestrelConfig({ location: "native.AddMediaToOriginalForumPostActionSheet" });
+                const kestrelConfig = obj.getKestrelConfig({
+                  location: "native.AddMediaToOriginalForumPostActionSheet",
+                });
                 const maxFileSizeResult = _undefined(5078).maxFileSize(message.id);
                 const obj2 = _undefined(5078);
                 const tmp3 = message;
-                const effectiveKestrelLimit = _undefined(5123).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
+                const effectiveKestrelLimit = _undefined(5123).getEffectiveKestrelLimit(
+                  kestrelConfig,
+                  maxFileSizeResult,
+                );
                 if (currentSize.currentSize > effectiveKestrelLimit) {
                   _undefined2.cancel();
                   dependencyMap(false);
@@ -207,7 +218,11 @@ function _upload2() {
               store = tmp24;
               if (store.code === closure_11.EXPLICIT_CONTENT) {
                 obj4 = callback2(7201);
-                const result1 = obj4.sendExplicitMediaClydeError(callback, store.attachments, callback(7345).TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED);
+                const result1 = obj4.sendExplicitMediaClydeError(
+                  callback,
+                  store.attachments,
+                  callback(7345).TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED,
+                );
               } else {
                 onResult = c5;
                 onResult = callback2;
@@ -295,8 +310,26 @@ function _upload2() {
 }
 ({ AbortCodes: unpackModuleId, Endpoints: closure_12 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-createCacheKey = { container: { paddingHorizontal: 16, paddingTop: 24 }, post: null, postContent: null, title: null, description: null, button: null, buttonMargin: null };
-createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.md, marginBottom: 32, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 };
+createCacheKey = {
+  container: { paddingHorizontal: 16, paddingTop: 24 },
+  post: null,
+  postContent: null,
+  title: null,
+  description: null,
+  button: null,
+  buttonMargin: null,
+};
+createCacheKey = {
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.md,
+  marginBottom: 32,
+  shadowColor: ThemesDefault.colors.BLACK,
+  shadowOffset: { width: 0, height: 1 },
+  shadowOpacity: 0.25,
+  shadowRadius: 4,
+  elevation: 4,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginBottom: 0, padding: 8 };
 createCacheKey[3] = { textAlign: "center", marginBottom: 8 };
@@ -326,17 +359,25 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   obj1 = threadId(sendMessage[28]);
   const items2 = [closure_9];
   const items3 = [stateFromStores];
-  stateFromStores1 = obj1.useStateFromStores(items2, () => {
-    let guildId;
-    if (stateFromStores != null) {
-      guildId = stateFromStores.getGuildId();
-    }
-    return closure_1_9.getGuild(guildId);
-  }, items3);
+  stateFromStores1 = obj1.useStateFromStores(
+    items2,
+    () => {
+      let guildId;
+      if (stateFromStores != null) {
+        guildId = stateFromStores.getGuildId();
+      }
+      return closure_1_9.getGuild(guildId);
+    },
+    items3,
+  );
   let obj2 = threadId(sendMessage[28]);
   const items4 = [closure_10];
   const items5 = [threadId];
-  stateFromStores2 = obj2.useStateFromStores(items4, () => closure_1_10.getMessage(threadId, attachments(sendMessage[18]).castChannelIdAsMessageId(threadId)), items5);
+  stateFromStores2 = obj2.useStateFromStores(
+    items4,
+    () => closure_1_10.getMessage(threadId, attachments(sendMessage[18]).castChannelIdAsMessageId(threadId)),
+    items5,
+  );
   analyticsLocations = attachments(sendMessage[29])().analyticsLocations;
   const items6 = [stateFromStores, stateFromStores1, stateFromStores2, threadId, attachments, analyticsLocations];
   const items7 = [sendMessage];
@@ -403,8 +444,14 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   obj = { startExpanded: true, children: null };
   obj1 = { style: tmp.container, children: null };
   obj2 = { pointerEvents: "none", style: tmp.post, children: callback3(tmp4(tmp5[33]).ForumPostListDisabled, obj3) };
-  const items9 = [callback3(stateFromStores2, obj2), , , , , ];
-  const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const items9 = [callback3(stateFromStores2, obj2), , , , ,];
+  const obj4 = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = tmp4(tmp5[27]).intl;
   obj4[4] = intl.string(threadId(sendMessage[27]).t["+SZF6S"]);
   items9[1] = callback3(threadId(sendMessage[34]).Text, obj4);
@@ -413,7 +460,15 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   obj5[3] = intl2.string(threadId(sendMessage[27]).t["0Ycgw5"]);
   items9[2] = callback3(threadId(sendMessage[34]).Text, obj5);
   const obj6 = { style: tmp.buttonMargin, children: null };
-  const obj7 = { grow: true, variant: "primary", text: null, pillStyle: null, onPress: null, loading: null, disabled: null };
+  const obj7 = {
+    grow: true,
+    variant: "primary",
+    text: null,
+    pillStyle: null,
+    onPress: null,
+    loading: null,
+    disabled: null,
+  };
   const intl3 = tmp4(tmp5[27]).intl;
   obj7[2] = intl3.string(threadId(sendMessage[27]).t.d611xH);
   obj7[3] = tmp.button;
@@ -443,4 +498,4 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   obj1[1] = items9;
   obj[1] = callback4(stateFromStores2, obj1);
   return callback3(threadId(sendMessage[32]).BottomSheet, obj);
-};
+}

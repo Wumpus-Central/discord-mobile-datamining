@@ -26,9 +26,11 @@ createToggle = {
     const intl = getSystemLocale.intl;
     const items = [intl.string(getSystemLocale.t.nuFtHH)];
     return items;
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AutoVoiceSensitivitySetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/AutoVoiceSensitivitySetting.tsx",
+);
 
 export default createToggle;

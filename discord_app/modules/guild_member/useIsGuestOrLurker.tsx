@@ -11,16 +11,20 @@ export default function useIsGuestOrLurker(arg0, arg1) {
   dependencyMap = arg1;
   const items = [closure_3, closure_2];
   const items1 = [arg0, arg1];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const guild = closure_1_3.getGuild(closure_0);
-    let hasItem;
-    if (guild != null) {
-      const features = guild.features;
-      hasItem = features.has(closure_1_4.CONFERENCE);
-    }
-    return true !== hasItem && closure_1_2.isGuestOrLurker(closure_0, closure_1);
-  }, items1);
-};
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const guild = closure_1_3.getGuild(closure_0);
+      let hasItem;
+      if (guild != null) {
+        const features = guild.features;
+        hasItem = features.has(closure_1_4.CONFERENCE);
+      }
+      return true !== hasItem && closure_1_2.isGuestOrLurker(closure_0, closure_1);
+    },
+    items1,
+  );
+}
 export const isGuestOrLurkerInGuild = function isGuestOrLurkerInGuild(guild_id, id) {
   guild = guild.getGuild(guild_id);
   let hasItem;

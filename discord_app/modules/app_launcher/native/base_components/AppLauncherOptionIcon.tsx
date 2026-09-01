@@ -7,10 +7,17 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 noopAll;
 createCacheKey = { iconWrapper: null };
-createCacheKey = { justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round };
+createCacheKey = {
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: ThemesDefault.radii.round,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherOptionIcon.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/base_components/AppLauncherOptionIcon.tsx",
+);
 
 export default function AppLauncherOptionIcon(wrapperSize) {
   let num = wrapperSize.wrapperSize;
@@ -22,5 +29,5 @@ export default function AppLauncherOptionIcon(wrapperSize) {
   obj[0] = items;
   obj[1] = wrapperSize.icon;
   return <View style={null}>{null}</View>;
-};
+}
 export const useAppLauncherOptionIconStyles = createCacheKey;

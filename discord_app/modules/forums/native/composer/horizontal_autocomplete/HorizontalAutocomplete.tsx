@@ -47,18 +47,46 @@ noopAll;
 ({ TouchableOpacity: c3, View: c4, StyleSheet } = get_ActivityIndicator);
 ({ ChannelTypes: c10, Fonts } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { emoji: { width: 32, height: 32 }, emojiImage: { resizeMode: "contain" }, emojiText: { lineHeight: 32, fontSize: 27, textAlign: "center" }, emojiName: { marginLeft: 8 }, nickname: null, status: null, horizontalAutocompleteOption: null, roleIcon: null, channelName: null };
+createCacheKey = {
+  emoji: { width: 32, height: 32 },
+  emojiImage: { resizeMode: "contain" },
+  emojiText: { lineHeight: 32, fontSize: 27, textAlign: "center" },
+  emojiName: { marginLeft: 8 },
+  nickname: null,
+  status: null,
+  horizontalAutocompleteOption: null,
+  roleIcon: null,
+  channelName: null,
+};
 createCacheKey = {};
 const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.TEXT_DEFAULT, 14));
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[6] = { paddingHorizontal: 8, flex: 1, flexDirection: "row", height: 56, alignItems: "center", borderRightWidth: StyleSheet.hairlineWidth, borderRightColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[6] = {
+  paddingHorizontal: 8,
+  flex: 1,
+  flexDirection: "row",
+  height: 56,
+  alignItems: "center",
+  borderRightWidth: StyleSheet.hairlineWidth,
+  borderRightColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 createCacheKey[7] = { marginRight: 4 };
 createCacheKey[8] = { marginLeft: 8 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let closure_14 = { code: "function HorizontalAutocompleteTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
-let obj2 = { paddingHorizontal: 8, flex: 1, flexDirection: "row", height: 56, alignItems: "center", borderRightWidth: StyleSheet.hairlineWidth, borderRightColor: ThemesDefault.colors.BORDER_SUBTLE };
+let closure_14 = {
+  code: "function HorizontalAutocompleteTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
+};
+let obj2 = {
+  paddingHorizontal: 8,
+  flex: 1,
+  flexDirection: "row",
+  height: 56,
+  alignItems: "center",
+  borderRightWidth: StyleSheet.hairlineWidth,
+  borderRightColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 let obj3 = {
   User(arg0) {
     ({ user, nick } = arg0);
@@ -69,8 +97,11 @@ let obj3 = {
     obj = { onPress, children: null };
     const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
     obj = { status, statusStyle: tmp.status, user, size: Button.AvatarSizes.SMALL, guildId, animate: !stateFromStores };
-    const items1 = [callback(Button.Avatar, obj), ];
-    obj1 = { style: { marginLeft: 8, height: 56, flex: 1, flexDirection: "column", justifyContent: "center" }, children: null };
+    const items1 = [callback(Button.Avatar, obj)];
+    obj1 = {
+      style: { marginLeft: 8, height: 56, flex: 1, flexDirection: "column", justifyContent: "center" },
+      children: null,
+    };
     const obj2 = { style: items2, variant: "text-sm/semibold", children: null };
     items2 = [tmp.nickname];
     if (nick == null) {
@@ -78,7 +109,7 @@ let obj3 = {
       const obj6 = nameFromUserDefault;
     }
     obj2[2] = nick;
-    const items3 = [callback(Text.Text, obj2), ];
+    const items3 = [callback(Text.Text, obj2)];
     const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const items4 = ["@", nameFromUserDefault.getUserTag(user, { decoration: "never" })];
     obj3[2] = items4;
@@ -119,8 +150,8 @@ let obj3 = {
       const tmp10 = closure_4;
       const tmp12 = RoleIconDefault;
     }
-    const items1 = [tmp9Result, ];
-    const items2 = [tmp.nickname, ];
+    const items1 = [tmp9Result];
+    const items2 = [tmp.nickname];
     let tmp15;
     if (null != colorString) {
       const obj3 = { color: null };
@@ -145,7 +176,7 @@ let obj3 = {
     const tmp = callback3();
     tmp2Result = tmp2(4674);
     let obj = { onPress: channel.onPress, children: null };
-    const items = [callback(channel(1297).Icon, { source: channelIconWithGuild }), ];
+    const items = [callback(channel(1297).Icon, { source: channelIconWithGuild })];
     const channelName = tmp2Result.computeChannelName(channel, closure_9, closure_8);
     obj = { style: tmp.channelName, variant: "text-sm/semibold", children: channelName };
     items[1] = callback(channel(4474).Text, obj);
@@ -158,7 +189,7 @@ let obj3 = {
     const tmp = callback3();
     if ("" !== url) {
       let obj = { style: null, source: null };
-      const items = [, ];
+      const items = [,];
       ({ emoji: arr2[0], emojiImage: arr2[1] } = tmp);
       obj[0] = items;
       obj = { uri: null };
@@ -168,7 +199,7 @@ let obj3 = {
       let tmp6 = callback;
     } else {
       obj = { style: null, allowFontScaling: false, children: null };
-      const items1 = [, ];
+      const items1 = [,];
       ({ emoji: arr[0], emojiText: arr[1] } = tmp);
       obj[0] = items1;
       obj[2] = surrogates;
@@ -176,11 +207,16 @@ let obj3 = {
       tmp6 = callback;
     }
     obj1 = { onPress, children: null };
-    const items2 = [tmp6(closure_4, { children: tmp5 }), tmp6(Text.Text, { style: tmp.emojiName, variant: "text-sm/semibold", children: ":" + name + ":" })];
+    const items2 = [
+      tmp6(closure_4, { children: tmp5 }),
+      tmp6(Text.Text, { style: tmp.emojiName, variant: "text-sm/semibold", children: ":" + name + ":" }),
+    ];
     obj1[1] = items2;
     return callback2(HorizontalAutocompleteOption, obj1);
-  }
+  },
 };
-let result = require("set").fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocomplete.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocomplete.tsx",
+);
 
 export default obj3;

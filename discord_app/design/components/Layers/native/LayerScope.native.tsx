@@ -38,7 +38,7 @@ function Layer(zIndex) {
     },
     onLayout: NOOP,
     pointerEvents: "box-none",
-    children: items1.map((children) => callback(React.Fragment, { children: children.component }, children.key))
+    children: items1.map((children) => callback(React.Fragment, { children: children.component }, children.key)),
   });
 }
 ({ View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
@@ -52,7 +52,7 @@ export const LayerScope = function LayerScope(arg0) {
       const layerContextManager = new callback(table[6]).LayerContextManager();
       return layerContextManager;
     }),
-    children: null
+    children: null,
   };
   const items = [children, callback2(Layer, { zIndex })];
   obj[1] = items;

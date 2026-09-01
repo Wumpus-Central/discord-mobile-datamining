@@ -10,7 +10,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx",
+);
 
 export default function GuildRoleSubscriptionGroupGatingModal(arg0) {
   [tmp2, tmp3] = callback(closure_4.useGroupIsFullGateState(), 2);
@@ -24,4 +26,4 @@ export default function GuildRoleSubscriptionGroupGatingModal(arg0) {
   const merged = Object.assign(arg0);
   obj.children = jsx(FormGuildGatingModeSelectorDefault, { isFullServerGating: tmp2, onChange: tmp3 });
   return jsx(HeaderDefault, { title: null, description: null, canProceedToNextStep: true, nextStep: null });
-};
+}

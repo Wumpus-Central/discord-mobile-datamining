@@ -15,7 +15,9 @@ createCacheKey[1] = { alignItems: "center", marginTop: 8, marginBottom: 32, gap:
 createCacheKey[2] = { height: 1, width: 48, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { height: 1, width: 48, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
-const result = require("set").fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsEditLinkedLobby.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/integration_settings/native/IntegrationsSettingsEditLinkedLobby.tsx",
+);
 
 export default function EditLinkedLobby(channel) {
   channel = channel.channel;
@@ -30,7 +32,9 @@ export default function EditLinkedLobby(channel) {
   const tmp5 = callback();
   obj1 = channel(navigation[7]);
   navigation = obj1.useNavigation();
-  analyticsLocations = numScreensToPop(navigation[8])(numScreensToPop(navigation[9]).EDIT_CHANNEL_SYNCING).analyticsLocations;
+  analyticsLocations = numScreensToPop(navigation[8])(
+    numScreensToPop(navigation[9]).EDIT_CHANNEL_SYNCING,
+  ).analyticsLocations;
   let obj2 = channel(navigation[10]);
   let linkedLobby = channel.linkedLobby;
   let application_id;
@@ -90,7 +94,11 @@ export default function EditLinkedLobby(channel) {
         let obj = { username: null, usernameHook: null, linkedAtDate: null };
         obj[0] = tmp17.username;
         obj[1] = function usernameHook(children) {
-          return closure_1_6(closure_1_0(closure_1_2[16]).Text, { onPress: closure_6, variant: "text-sm/semibold", color: "text-strong", children }, arg1);
+          return closure_1_6(
+            closure_1_0(closure_1_2[16]).Text,
+            { onPress: closure_6, variant: "text-sm/semibold", color: "text-strong", children },
+            arg1,
+          );
         };
         obj[2] = date;
         let formatResult = intl2.format(channel(navigation[15]).t.uV2AkA, obj);
@@ -121,7 +129,7 @@ export default function EditLinkedLobby(channel) {
     ({ id: obj12[0], icon: obj12[1] } = getOrFetchApplication);
     obj3[0] = tmp3Result.getApplicationIconSource(obj4);
     obj3[1] = tmp(tmp2[19]).AvatarSizes.XXLARGE;
-    const items4 = [callback1(tmp(tmp2[19]).Avatar, obj3), , ];
+    const items4 = [callback1(tmp(tmp2[19]).Avatar, obj3), ,];
     const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
     obj5[2] = getOrFetchApplication.name;
     items4[1] = callback1(tmp(tmp2[16]).Text, obj5);
@@ -130,7 +138,7 @@ export default function EditLinkedLobby(channel) {
       const obj6 = { children: null };
       const obj7 = { style: null };
       obj7[0] = tmp5.divider;
-      const items5 = [tmp19(tmp21, obj7), ];
+      const items5 = [tmp19(tmp21, obj7)];
       const obj8 = { variant: "text-sm/medium", color: "text-subtle", children: null };
       obj8[2] = memo;
       items5[1] = tmp19(tmp(tmp2[16]).Text, obj8);
@@ -139,7 +147,7 @@ export default function EditLinkedLobby(channel) {
     }
     items4[2] = tmp20Result;
     obj2[1] = items4;
-    const items6 = [closure_8(linked_at, obj2), , ];
+    const items6 = [closure_8(linked_at, obj2), ,];
     const obj9 = { variant: "text-sm/normal", color: "text-default", children: null };
     let intl = tmp(tmp2[15]).intl;
     const obj10 = { channelName: null };
@@ -158,4 +166,4 @@ export default function EditLinkedLobby(channel) {
     tmp19Result = tmp19(tmp(tmp2[17]).Form, obj);
   }
   return tmp19Result;
-};
+}

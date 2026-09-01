@@ -87,6 +87,9 @@ export const useJoinOrStartButtonState = function useJoinOrStartButtonState(embe
   const currentEmbeddedActivity = embeddedActivity.currentEmbeddedActivity;
   const channel = embeddedActivity.channel;
   const items = [embeddedActivity, joinability, currentEmbeddedActivity, channel];
-  return currentEmbeddedActivity.useMemo(() => channel({ embeddedActivity, joinability, currentEmbeddedActivity, channel }), items);
+  return currentEmbeddedActivity.useMemo(
+    () => channel({ embeddedActivity, joinability, currentEmbeddedActivity, channel }),
+    items,
+  );
 };
 export { getJoinOrStartButtonState };

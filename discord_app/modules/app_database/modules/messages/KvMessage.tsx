@@ -10,7 +10,14 @@ prototype = function KvMessage() {
 }.prototype;
 prototype["fromMessage"] = function fromMessage(c0, closure_1, nextResult, result) {
   const tmp = callback(prototype.deriveMemberUsers(c0, nextResult), 2);
-  return { id: nextResult.id, channelId: closure_1, message: nextResult, members: tmp[0], users: tmp[1], connectionId: result };
+  return {
+    id: nextResult.id,
+    channelId: closure_1,
+    message: nextResult,
+    members: tmp[0],
+    users: tmp[1],
+    connectionId: result,
+  };
 };
 prototype["deriveMemberUsers"] = function deriveMemberUsers(c0, author) {
   author = author.author;
@@ -18,7 +25,7 @@ prototype["deriveMemberUsers"] = function deriveMemberUsers(c0, author) {
   if (author != null) {
     id = author.id;
   }
-  const items = [id, ];
+  const items = [id];
   const interaction = author.interaction;
   let id1;
   if (interaction != null) {

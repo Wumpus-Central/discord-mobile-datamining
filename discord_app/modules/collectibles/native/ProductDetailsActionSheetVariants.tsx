@@ -23,7 +23,15 @@ function VariantOption(onPress) {
   } else {
     name = variant.name;
   }
-  obj = { accessibilityRole: "button", accessibilityLabel: name, accessibilityState: { selected: isSelected, disabled }, disabled, onPress: onPress.onSelect, style: tmp.variantOption, children: null };
+  obj = {
+    accessibilityRole: "button",
+    accessibilityLabel: name,
+    accessibilityState: { selected: isSelected, disabled },
+    disabled,
+    onPress: onPress.onSelect,
+    style: tmp.variantOption,
+    children: null,
+  };
   obj1 = { style: items, children: null };
   items = [tmp.variantOptionInner, { backgroundColor: variant.variantValue }];
   if (isPurchased) {
@@ -39,29 +47,69 @@ function VariantCheckmark(variant) {
   const colors = ThemesDefault.colors;
   const tmp = useIsVariantColorLightDefault(variant.variant);
   const tmp2 = closure_4;
-  return tmp2(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: useIsVariantColorLightDefault(variant.variant) ? colors.BLACK : colors.WHITE, size: "md" });
+  return tmp2(CheckmarkSmallIcon.CheckmarkSmallIcon, {
+    color: useIsVariantColorLightDefault(variant.variant) ? colors.BLACK : colors.WHITE,
+    size: "md",
+  });
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, headerRow: null, variantsContainer: null, text: null };
-createCacheKey = { flex: 1, display: "flex", flexDirection: "column", marginTop: ThemesDefault.space.PX_16, marginHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  flex: 1,
+  display: "flex",
+  flexDirection: "column",
+  marginTop: ThemesDefault.space.PX_16,
+  marginHorizontal: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_8,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 let obj1 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
-createCacheKey[2] = { display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+createCacheKey[2] = {
+  display: "flex",
+  flexWrap: "wrap",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_12,
+};
 createCacheKey[3] = { flexGrow: 1, flexShrink: 1, minWidth: 28 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let closure_7 = createCacheKey.createStyles((arg0) => {
-  let obj = { width: 28, height: 28, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: null };
+  let obj = {
+    width: 28,
+    height: 28,
+    borderRadius: ThemesDefault.radii.round,
+    justifyContent: "center",
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: null,
+  };
   const colors = ThemesDefault.colors;
   obj = { variantOption: obj, variantOptionInner: null };
   obj[6] = arg0 ? colors.BUTTON_OUTLINE_PRIMARY_TEXT : colors.BORDER_STRONG;
-  obj = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: tmp(712).radii.round, borderWidth: 1, borderColor: tmp(712).colors.BACKGROUND_BASE_LOW };
+  obj = {
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: tmp(712).radii.round,
+    borderWidth: 1,
+    borderColor: tmp(712).colors.BACKGROUND_BASE_LOW,
+  };
   obj[1] = obj;
   return obj;
 });
-let obj2 = { display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
-const result = require("set").fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetVariants.tsx");
+let obj2 = {
+  display: "flex",
+  flexWrap: "wrap",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_12,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/ProductDetailsActionSheetVariants.tsx",
+);
 
 export default function ProductDetailsActionSheetVariants(disabled) {
   ({ product, selectedVariantIndex } = disabled);
@@ -81,7 +129,7 @@ export default function ProductDetailsActionSheetVariants(disabled) {
     obj1 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(tmp3[7]).intl;
     obj1[2] = intl.string(tmp2(tmp3[7]).t.wbgaj6);
-    const items = [callback(tmp2(tmp3[11]).Text, obj1), ];
+    const items = [callback(tmp2(tmp3[11]).Text, obj1)];
     let tmp7Result = product.variants.length > selectedVariantIndex;
     if (tmp7Result) {
       const obj2 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, style: null, children: null };
@@ -91,24 +139,28 @@ export default function ProductDetailsActionSheetVariants(disabled) {
     }
     items[1] = tmp7Result;
     obj[1] = items;
-    const items1 = [closure_5(View, obj), ];
+    const items1 = [closure_5(View, obj)];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.variantsContainer;
     const variants = product.variants;
     obj3[1] = variants.map((variant) => {
       closure_0 = arg1;
-      return closure_1_4(closure_1_8, {
-        variant,
-        isSelected: closure_0 === arg1,
-        disabled: flag,
-        onSelect() {
-          return closure_1_2(closure_0);
-        }
-      }, variant.variantValue);
+      return closure_1_4(
+        closure_1_8,
+        {
+          variant,
+          isSelected: closure_0 === arg1,
+          disabled: flag,
+          onSelect() {
+            return closure_1_2(closure_0);
+          },
+        },
+        variant.variantValue,
+      );
     });
     items1[1] = callback(View, obj3);
     obj[1] = items1;
     tmp5Result = tmp5(tmp6, obj);
   }
   return tmp5Result;
-};
+}

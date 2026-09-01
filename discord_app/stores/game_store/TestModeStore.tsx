@@ -20,8 +20,7 @@ let obj = { applicationId: null, originURL: null };
 let set = new Set();
 let c11 = false;
 const PersistedStore = initializeDefault.PersistedStore;
-class TestModeStore extends PersistedStore {
-}
+class TestModeStore extends PersistedStore {}
 const prototype = TestModeStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let tmp = arg0;
@@ -68,13 +67,13 @@ Object.defineProperty(prototype, "isTestMode", {
   get: function isTestMode() {
     return null != closure_2;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isFetchingAuthorization", {
   get: function isFetchingAuthorization() {
     return set.size > 0;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "testModeEmbeddedApplicationId", {
   get: function testModeEmbeddedApplicationId() {
@@ -84,25 +83,25 @@ Object.defineProperty(prototype, "testModeEmbeddedApplicationId", {
     }
     return tmp;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "testModeApplicationId", {
   get: function testModeApplicationId() {
     return closure_2;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "testModeOriginURL", {
   get: function testModeOriginURL() {
     return closure_3;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "error", {
   get: function error() {
     return closure_4;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["whenInitialized"] = function whenInitialized(arg0) {
   closure_0 = arg0;
@@ -139,7 +138,7 @@ obj = {
     c4 = null;
   },
   LOGOUT: reset,
-  DEVELOPER_TEST_MODE_RESET: reset
+  DEVELOPER_TEST_MODE_RESET: reset,
 };
 const testModeStore = new TestModeStore(dispatcherDefault, obj);
 let result = set.fileFinishedImporting("stores/game_store/TestModeStore.tsx");

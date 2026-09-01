@@ -8,7 +8,9 @@ import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../stores/AuthenticationStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx",
+);
 
 export default function getRequestToStreamCTAAndIsDisabled(id) {
   const tmp3 = callback(canFulfillStreamRequest.canFulfillStreamRequest(id, true), 2);
@@ -55,4 +57,4 @@ export default function getRequestToStreamCTAAndIsDisabled(id) {
     }
   }
   return { text, isDisabled };
-};
+}

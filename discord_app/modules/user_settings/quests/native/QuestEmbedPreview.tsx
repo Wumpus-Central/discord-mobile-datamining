@@ -13,7 +13,12 @@ export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
   let stateFromStores;
   const memo = React.useMemo(() => {
     const obj = new stateFromStores(table[5])();
-    obj.setOptions({ renderCodedLinks: true, renderEmbeds: true, renderComponents: true, shouldDisableInteractiveComponents: true });
+    obj.setOptions({
+      renderCodedLinks: true,
+      renderEmbeds: true,
+      renderComponents: true,
+      shouldDisableInteractiveComponents: true,
+    });
     return obj;
   }, []);
   let obj = questId(589);
@@ -25,7 +30,25 @@ export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
     if (null != questId) {
       tmp2 = null;
       if (null != stateFromStores) {
-        let obj = { id: "1000000000000000000", type: null, channel_id: "1000000000000000001", author: null, content: "", timestamp: null, edited_timestamp: null, tts: false, mention_everyone: false, mentions: null, mention_roles: null, attachments: null, embeds: null, reactions: null, pinned: false, webhook_id: null, codedLinks: null };
+        let obj = {
+          id: "1000000000000000000",
+          type: null,
+          channel_id: "1000000000000000001",
+          author: null,
+          content: "",
+          timestamp: null,
+          edited_timestamp: null,
+          tts: false,
+          mention_everyone: false,
+          mentions: null,
+          mention_roles: null,
+          attachments: null,
+          embeds: null,
+          reactions: null,
+          pinned: false,
+          webhook_id: null,
+          codedLinks: null,
+        };
         obj[1] = closure_1_6.DEFAULT;
         obj[3] = tmp3;
         const _Date = Date;
@@ -56,8 +79,18 @@ export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
     obj = { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" };
     obj[0] = memo;
     obj[1] = memo1;
-    obj[1] = jsx(stateFromStores(8779), { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" });
-    tmp6 = jsx(stateFromStores(14774), { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" });
+    obj[1] = jsx(stateFromStores(8779), {
+      rowGenerator: null,
+      message: null,
+      horizontalOffset: 0,
+      pointerEvents: "none",
+    });
+    tmp6 = jsx(stateFromStores(14774), {
+      rowGenerator: null,
+      message: null,
+      horizontalOffset: 0,
+      pointerEvents: "none",
+    });
     const tmp9 = stateFromStores(14774);
   }
   return tmp6;

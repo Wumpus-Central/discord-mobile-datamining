@@ -31,15 +31,22 @@ const memoResult = importAllResult.memo(function ThemedHeaderBackgroundGradient(
     str = "transparent";
   }
   obj = { style: null, pointerEvents: "none", children: null };
-  const items = [tmp3.container, ];
+  const items = [tmp3.container];
   obj = { height: Math.max(useSafeAreaInsetsDefault().top, num) };
   items[1] = obj;
   obj[0] = items;
   obj1 = { style: absoluteFill.absoluteFill, colors: items1, start: { x: 0, y: 0 }, end: { x: 0, y: 1 } };
   items1 = [token, str];
-  obj[2] = jsx(LinearGradientDefault, { style: absoluteFill.absoluteFill, colors: items1, start: { x: 0, y: 0 }, end: { x: 0, y: 1 } });
+  obj[2] = jsx(LinearGradientDefault, {
+    style: absoluteFill.absoluteFill,
+    colors: items1,
+    start: { x: 0, y: 0 },
+    end: { x: 0, y: 1 },
+  });
   return <closure_4 height={Math.max(useSafeAreaInsetsDefault().top, num)} />;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/ThemedHeaderBackgroundGradient.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/panels/ThemedHeaderBackgroundGradient.tsx",
+);
 
 export default memoResult;

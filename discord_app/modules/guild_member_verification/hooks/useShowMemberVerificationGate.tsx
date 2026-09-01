@@ -36,19 +36,25 @@ function shouldShowMembershipVerificationGate(guildId, items) {
     return flag;
   }
 }
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx",
+);
 
 export { shouldShowMembershipVerificationGate };
 export const useShowMemberVerificationGate = function useShowMemberVerificationGate(guild_id) {
   const _require = guild_id;
   let items = [closure_3, closure_4, closure_2];
   const items1 = [guild_id];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let tmp2 = null != closure_0;
-    if (tmp2) {
-      const items = [closure_1_3, closure_1_4, closure_1_2];
-      tmp2 = closure_1_5(tmp, items);
-    }
-    return tmp2;
-  }, items1);
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let tmp2 = null != closure_0;
+      if (tmp2) {
+        const items = [closure_1_3, closure_1_4, closure_1_2];
+        tmp2 = closure_1_5(tmp, items);
+      }
+      return tmp2;
+    },
+    items1,
+  );
 };

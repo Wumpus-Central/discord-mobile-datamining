@@ -12,4 +12,4 @@ const result = set.fileFinishedImporting("modules/guild_role_subscriptions/useIs
 export default function useIsViewingPremiumMemberships() {
   const RouteParam = RouteParam2.RouteParam;
   return null != _extends.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS));
-};
+}

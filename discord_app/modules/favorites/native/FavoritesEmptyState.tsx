@@ -15,7 +15,13 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, text: null };
-createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_48 };
+createCacheKey = {
+  flex: 1,
+  alignItems: "center",
+  justifyContent: "center",
+  gap: ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_48,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
@@ -30,14 +36,16 @@ export default function FavoritesEmptyState() {
   obj = { style: tmp.container, children: null };
   const callback1 = React.useCallback(() => {
     const obj = callback2(paths[7]);
-    obj.openLazy(callback(paths[9])(paths[8], paths.paths), callback(paths[10]).FAVORITES_UPSELL_SHEET_KEY, { source: "favorites_empty_sidebar" });
+    obj.openLazy(callback(paths[9])(paths[8], paths.paths), callback(paths[10]).FAVORITES_UPSELL_SHEET_KEY, {
+      source: "favorites_empty_sidebar",
+    });
   }, []);
-  const items = [callback(AccountAgeTier10LargeBadge.FavoritesSpotIllustration, { width: 192, height: 108 }), , ];
+  const items = [callback(AccountAgeTier10LargeBadge.FavoritesSpotIllustration, { width: 192, height: 108 }), ,];
   obj = { spacing: ThemesDefault.space.PX_8, align: "center", children: null };
   obj1 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = getSystemLocale.intl;
   obj1[3] = intl.string(messagesProxyDefault["wh+Rz1"]);
-  const items1 = [callback(Text.Heading, obj1), ];
+  const items1 = [callback(Text.Heading, obj1)];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = getSystemLocale.intl;
   obj2[3] = intl2.string(messagesProxyDefault["+SuGKb"]);
@@ -60,4 +68,4 @@ export default function FavoritesEmptyState() {
   items[2] = callback(Button.Button, obj4);
   obj[1] = items;
   return callback2(View, obj);
-};
+}

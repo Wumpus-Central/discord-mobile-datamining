@@ -9,18 +9,45 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ AnalyticEvents: c5, NOOP: closure_6 } = ME);
-({ EventActionLocation: error, EventActionType: closure_8, NotificationNudgeAnalyticsAction: c9, NotificationNudgeSurface: c10 } = EventActionType);
+({
+  EventActionLocation: error,
+  EventActionType: closure_8,
+  NotificationNudgeAnalyticsAction: c9,
+  NotificationNudgeSurface: c10,
+} = EventActionType);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 createCacheKey = { container: null, cardContent: null, iconCircle: null, body: null };
 createCacheKey = { paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center" };
-createCacheKey[2] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_8 };
-let obj1 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_8 };
-createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
+createCacheKey[2] = {
+  width: 48,
+  height: 48,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  alignItems: "center",
+  justifyContent: "center",
+  marginBottom: ThemesDefault.space.PX_8,
+};
+let obj1 = {
+  width: 48,
+  height: 48,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  alignItems: "center",
+  justifyContent: "center",
+  marginBottom: ThemesDefault.space.PX_8,
+};
+createCacheKey[3] = {
+  marginBottom: ThemesDefault.space.PX_12,
+  marginTop: ThemesDefault.space.PX_8,
+  textAlign: "center",
+};
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { marginBottom: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
-const result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/NotificationPermissionSettingsHeader.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/notifications/native/NotificationPermissionSettingsHeader.tsx",
+);
 
 export default function NotificationPermissionSettingsHeader() {
   const tmp = callback3();
@@ -48,7 +75,7 @@ export default function NotificationPermissionSettingsHeader() {
     const obj3 = { size: "md", color: null };
     obj3[1] = ThemesDefault.colors.ICON_STRONG;
     obj2[1] = callback(tmp2(10238).BellSlashIcon, obj3);
-    const items1 = [callback(View, obj2), , , ];
+    const items1 = [callback(View, obj2), , ,];
     const obj4 = { variant: "heading-lg/bold", color: "text-default", children: null };
     const intl = tmp2(1236).intl;
     obj4[2] = intl.string(tmp2(1236).t.MUwOvc);
@@ -72,4 +99,4 @@ export default function NotificationPermissionSettingsHeader() {
     tmp7 = callback(View, obj);
   }
   return tmp7;
-};
+}

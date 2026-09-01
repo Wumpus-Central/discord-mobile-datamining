@@ -5,8 +5,12 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-let closure_6 = createCacheKey.createStyles({ rowColorBlock: { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormRoleColorPicker.tsx");
+let closure_6 = createCacheKey.createStyles({
+  rowColorBlock: { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/FormRoleColorPicker.tsx",
+);
 
 export default function FormRoleColorPicker(color) {
   color = color.color;
@@ -33,4 +37,4 @@ export default function FormRoleColorPicker(color) {
   obj[2] = flag;
   obj[3] = callback;
   return <tmp3 color={color} style={tmp.rowColorBlock} onSelect={callback} />;
-};
+}

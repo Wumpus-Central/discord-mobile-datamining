@@ -69,7 +69,7 @@ function ChannelTypeRow(selected) {
     const obj6 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl12 = tmp2(tmp3[26]).intl;
     obj6[2] = intl12.string(tmp2(tmp3[26]).t.JyCrwS);
-    const items = [callback(tmp2(tmp3[27]).Text, obj6), ];
+    const items = [callback(tmp2(tmp3[27]).Text, obj6)];
     const obj7 = { variant: "text-xs/normal", children: null };
     const intl13 = tmp2(tmp3[26]).intl;
     obj8 = { hcArticleUrl: null };
@@ -90,10 +90,13 @@ function ChannelTypeRow(selected) {
     },
     accessibilityRole,
     accessibilityState,
-    icon: callback(closure_6, { style: tmp.flexRow, children: callback(isPrivate ? obj8 : obj1[channelType].IconComponent, {}) }),
+    icon: callback(closure_6, {
+      style: tmp.flexRow,
+      children: callback(isPrivate ? obj8 : obj1[channelType].IconComponent, {}),
+    }),
     trailing: callback(selected(onPress[31]).FormRadio, { selected }),
     label: null,
-    subLabel: null
+    subLabel: null,
   };
   let tmp9 = label;
   if (true === isBeta) {
@@ -101,7 +104,7 @@ function ChannelTypeRow(selected) {
     obj11[0] = tmp.horizontalContainer;
     const obj12 = { text: null };
     obj12[0] = label;
-    const items1 = [tmp7(tmp2(tmp3[32]).FormLabel, obj12), ];
+    const items1 = [tmp7(tmp2(tmp3[32]).FormLabel, obj12)];
     obj13 = { size: null };
     obj13[0] = tmp2(tmp3[33]).BetaSizes.SMALL;
     items1[1] = tmp7(tmp2(tmp3[33]).BetaTag, obj13);
@@ -200,7 +203,7 @@ class CreateChannel {
     effect = obj3.useEffect(() => {
       callback(createMode[42]).trackWithMetadata(constants.OPEN_MODAL, { type: "Create Channel" });
     }, []);
-    items2 = [, , , , , , , , , , , , ];
+    items2 = [, , , , , , , , , , , ,];
     items2[0] = navigation;
     items2[1] = first1;
     items2[2] = stateFromStores1;
@@ -245,7 +248,17 @@ class CreateChannel {
                 } else {
                   items = [];
                 }
-                obj = { overwrites: items, bitrate: null, userLimit: null, createMode: null, guildId: null, name: null, channelType: null, categoryId: null, onChannelCreated: null };
+                obj = {
+                  overwrites: items,
+                  bitrate: null,
+                  userLimit: null,
+                  createMode: null,
+                  guildId: null,
+                  name: null,
+                  channelType: null,
+                  categoryId: null,
+                  onChannelCreated: null,
+                };
                 let bitrate;
                 if (closure_5 != null) {
                   bitrate = tmp.bitrate;
@@ -283,7 +296,7 @@ class CreateChannel {
           }
           return tmpResult;
         },
-        headerTitle: null
+        headerTitle: null,
       };
       if (null != stateFromStores1) {
         const intl3 = tmp2(tmp3[26]).intl;
@@ -320,7 +333,10 @@ class CreateChannel {
     }, items2);
     tmp31 = jsx;
     obj = { keyboardShouldPersistTaps: "always", contentContainerStyle: null, children: null };
-    obj1 = { padding: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_16 + require("useSafeAreaInsetsKeyboardAware")().insets.bottom };
+    obj1 = {
+      padding: require("Themes").space.PX_16,
+      paddingBottom: require("Themes").space.PX_16 + require("useSafeAreaInsetsKeyboardAware")().insets.bottom,
+    };
     tmp32 = closure_5;
     obj[1] = obj1;
     tmp33 = jsxs;
@@ -333,7 +349,16 @@ class CreateChannel {
       intl = require("getSystemLocale").intl;
       stringResult = intl.string(require("getSystemLocale").t.PVbHDl);
     }
-    obj3 = { label: stringResult, errorMessage: null, description: null, autoFocus: true, enableAndroidSanitizedInputWorkaround: true, value: null, onChange: null, placeholder: null };
+    obj3 = {
+      label: stringResult,
+      errorMessage: null,
+      description: null,
+      autoFocus: true,
+      enableAndroidSanitizedInputWorkaround: true,
+      value: null,
+      onChange: null,
+      placeholder: null,
+    };
     name = tmp25.name;
     first4 = undefined;
     if (name != null) {
@@ -379,7 +404,7 @@ class CreateChannel {
       stringResult2 = intl5.string(require("getSystemLocale").t["bw/b8E"]);
     }
     obj3[7] = stringResult2;
-    items3 = [, , ];
+    items3 = [, ,];
     items3[0] = tmp31(require("TextInput").TextInput, obj3);
     tmp33Result2 = null;
     if (null == stateFromStores1) {
@@ -404,7 +429,7 @@ class CreateChannel {
         obj6[1] = first1 === tmp34.GUILD_TEXT;
         obj6[2] = first3;
         obj6[3] = handleTypeChange;
-        items4 = [, , , , , ];
+        items4 = [, , , , ,];
         items4[0] = tmp31(ChannelTypeRow, obj6);
         obj7 = { channelType: null, selected: null, isPrivate: null, onPress: null };
         obj7[0] = tmp34.GUILD_VOICE;
@@ -457,7 +482,7 @@ class CreateChannel {
         obj5[2] = items4;
         tmp33Result = tmp33(require("TableRowGroupTitle").TableRowGroup, obj5);
       }
-      items5 = [, , ];
+      items5 = [, ,];
       items5[0] = tmp33Result;
       obj12 = { guildId: null, channelType: null };
       obj12[0] = guildId;
@@ -499,7 +524,7 @@ class CreateChannel {
             callback2(arg0);
           };
           obj13[2] = tmp31(require("TableSwitchRow").TableSwitchRow, obj14);
-          items6 = [, ];
+          items6 = [,];
           items6[0] = tmp31(require("TableRowGroupTitle").TableRowGroup, obj13);
           tmp31Result3 = null;
           if (first3) {
@@ -618,7 +643,10 @@ function AddMembers(guildId) {
     guildId = intl.string(guildId(navigation[26]).t["5Wxrcd"]);
     if (Object.keys(first).length <= 0) {
       const obj = { headerRight: null };
-      obj[0] = first1 ? (() => callback(stringResult(table[43]).HeaderSubmittingIndicator, {})) : (() => closure_2_21(stringResult(navigation[45]).HeaderActionButton, { text: stringResult, onPress: closure_1_9 }));
+      obj[0] = first1
+        ? () => callback(stringResult(table[43]).HeaderSubmittingIndicator, {})
+        : () =>
+            closure_2_21(stringResult(navigation[45]).HeaderActionButton, { text: stringResult, onPress: closure_1_9 });
       navigation.setOptions(obj);
     } else {
       if (ref.current.channelType === closure_1_15.GUILD_STAGE_VOICE) {
@@ -646,7 +674,15 @@ function AddMembers(guildId) {
       tmp22 = callback(tmp21, obj);
     }
   }
-  const items2 = [tmp22, callback(_require(navigation[55]).AddMembersBody, { channel: null, guild, pendingAdditions: first, setPendingAdditions: tmp11[1] })];
+  const items2 = [
+    tmp22,
+    callback(_require(navigation[55]).AddMembersBody, {
+      channel: null,
+      guild,
+      pendingAdditions: first,
+      setPendingAdditions: tmp11[1],
+    }),
+  ];
   obj[1] = items2;
   return closure_23(first, obj);
 }
@@ -707,7 +743,7 @@ export default function CreateChannelModal(arg0) {
       render(arg0) {
         const merged = Object.assign(arg0);
         return callback2(closure_28, {});
-      }
+      },
     };
     obj1[closure_1_30.CREATE_CHANNEL] = obj2;
     const obj4 = { headerTitle: null, impressionName: null, impressionProperties: null, render: null };
@@ -733,6 +769,9 @@ export default function CreateChannelModal(arg0) {
     obj[1] = items;
     return obj;
   }));
-  return callback(require("../design/components/Navigator/native/Navigator.native.tsx").Navigator, { screens, initialRouteStack });
-};
+  return callback(require("../design/components/Navigator/native/Navigator.native.tsx").Navigator, {
+    screens,
+    initialRouteStack,
+  });
+}
 export { CreateChannel };

@@ -28,7 +28,12 @@ let c3 = importAllResult;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
 let obj = { label: { marginHorizontal: 16, marginBottom: 8 }, container: null, row: null, divider: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginHorizontal: 16, marginBottom: 12, borderRadius: ThemesDefault.radii.md };
+obj = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  marginHorizontal: 16,
+  marginBottom: 12,
+  borderRadius: ThemesDefault.radii.md,
+};
 obj[1] = obj;
 obj[2] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 16 };
 createCacheKey = { width: "100%", height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
@@ -40,7 +45,11 @@ const memoResult = importAllResult.memo((arg0) => {
   const tmp = callback3();
   _require = tmp;
   let obj = useOtherGuildJoinRequestsForUser;
-  const otherGuildJoinRequestsForUser = obj.useOtherGuildJoinRequestsForUser({ guildId, userId, selectedJoinRequestId });
+  const otherGuildJoinRequestsForUser = obj.useOtherGuildJoinRequestsForUser({
+    guildId,
+    userId,
+    selectedJoinRequestId,
+  });
   let tmp4 = null;
   if (0 !== otherGuildJoinRequestsForUser.length) {
     obj = { children: null };
@@ -48,7 +57,7 @@ const memoResult = importAllResult.memo((arg0) => {
     obj[2] = tmp.label;
     const intl = tmp2(1236).intl;
     obj[3] = intl.string(tmp2(1236).t["hxa+G3"]);
-    let items = [callback(tmp2(4474).Text, obj), ];
+    let items = [callback(tmp2(4474).Text, obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.container;
     obj1[1] = otherGuildJoinRequestsForUser.map((createdAt) => {
@@ -60,19 +69,22 @@ const memoResult = importAllResult.memo((arg0) => {
         tmp2 = closure_1_6(closure_1_5, obj);
       }
       obj = { children: null };
-      const items = [tmp2, ];
+      const items = [tmp2];
       obj = {
         accessibilityRole: "button",
         style: lib.row,
         onPress() {
           return closure_1_1(closure_1_2[11])(closure_0);
         },
-        children: null
+        children: null,
       };
       obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
       const obj5 = lib(closure_1_2[12]);
       obj1[2] = obj5.dateFormat(new Date(createdAt.createdAt), "LL");
-      const items1 = [closure_1_6(lib(closure_1_2[9]).Text, obj1), closure_1_6(closure_1_10, { status: createdAt.applicationStatus })];
+      const items1 = [
+        closure_1_6(lib(closure_1_2[9]).Text, obj1),
+        closure_1_6(closure_1_10, { status: createdAt.applicationStatus }),
+      ];
       obj[3] = items1;
       items[1] = closure_1_7(closure_1_4, obj);
       obj[0] = items;
@@ -84,6 +96,8 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   return tmp4;
 });
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestOtherApplications.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/JoinRequestOtherApplications.tsx",
+);
 
 export default memoResult;

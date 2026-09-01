@@ -74,7 +74,13 @@ export const fetchGameServerGlobalCatalog = function fetchGameServerGlobalCatalo
   if (flag == null) {
     flag = false;
   }
-  obj = { url: closure_8.STOREFRONT_COLLECTION_WITH_PRODUCTS(GAME_SERVER_COLLECTION_ID), query: obj, oldFormErrors: true, rejectWithError: null, retries: 2 };
+  obj = {
+    url: closure_8.STOREFRONT_COLLECTION_WITH_PRODUCTS(GAME_SERVER_COLLECTION_ID),
+    query: obj,
+    oldFormErrors: true,
+    rejectWithError: null,
+    retries: 2,
+  };
   obj = { locale: closure_3.locale, include_unpublished_products: flag, include_unpublished_collection: flag };
   const obj2 = _httpGetWithCountryCodeQuery;
   obj[3] = sendRequest.rejectWithMigratedError();
@@ -185,7 +191,12 @@ export const updateGameServerRegionPingState = function updateGameServerRegionPi
   obj = { type: "GAME_SERVER_REGION_PING_STATE_UPDATE", pingUrl, state };
   obj.dispatch(obj);
 };
-export const enableGameServerForGuild = function enableGameServerForGuild(arg0, arg1, game_server_name, game_server_region) {
+export const enableGameServerForGuild = function enableGameServerForGuild(
+  arg0,
+  arg1,
+  game_server_name,
+  game_server_region,
+) {
   const HTTP = sendRequest.HTTP;
   obj = { url: closure_8.GUILD_POWERUP_TOGGLE(arg0, arg1), body: obj, rejectWithError: true, oldFormErrors: true };
   obj = { game_server_name, game_server_region };
@@ -205,7 +216,12 @@ export const disableGameServerForGuild = function disableGameServerForGuild(arg0
 };
 export const fetchGameServerRegions = function fetchGameServerRegions(arg0) {
   const HTTP = sendRequest.HTTP;
-  const value = HTTP.get({ url: closure_8.GAME_SERVER_REGIONS(arg0), rejectWithError: true, oldFormErrors: true, retries: 3 });
+  const value = HTTP.get({
+    url: closure_8.GAME_SERVER_REGIONS(arg0),
+    rejectWithError: true,
+    oldFormErrors: true,
+    retries: 3,
+  });
   return value.then((body) => {
     let obj = callback(709);
     obj = { type: "GAME_SERVER_FETCH_REGIONS_SUCCESS", regions: null };
@@ -220,7 +236,12 @@ export const fetchGameServerRegions = function fetchGameServerRegions(arg0) {
 };
 export const fetchMyGameServerRegions = function fetchMyGameServerRegions() {
   const HTTP = sendRequest.HTTP;
-  const value = HTTP.get({ url: closure_8.GAME_SERVER_MY_REGIONS, rejectWithError: true, oldFormErrors: true, retries: 3 });
+  const value = HTTP.get({
+    url: closure_8.GAME_SERVER_MY_REGIONS,
+    rejectWithError: true,
+    oldFormErrors: true,
+    retries: 3,
+  });
   return value.then((body) => {
     let obj = callback(709);
     obj = { type: "GAME_SERVER_FETCH_REGIONS_SUCCESS", regions: null, creationDisabled: null };
@@ -244,7 +265,11 @@ export const fetchMyGameServers = function fetchMyGameServers() {
     if (game_servers == null) {
       game_servers = [];
     }
-    obj = { type: "GAME_SERVER_FETCH_MY_SERVERS_SUCCESS", gameServers: game_servers, maxServers: body.max_game_servers };
+    obj = {
+      type: "GAME_SERVER_FETCH_MY_SERVERS_SUCCESS",
+      gameServers: game_servers,
+      maxServers: body.max_game_servers,
+    };
     obj.dispatch(obj);
   });
 };
@@ -257,7 +282,8 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
     obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "default" };
     obj = {};
     const merged = Object.assign(found);
-    obj.status = require("../../../discord_common/js/shared/shared-constants/GameServerStatus.tsx").GameServerStatus.STARTING;
+    obj.status =
+      require("../../../discord_common/js/shared/shared-constants/GameServerStatus.tsx").GameServerStatus.STARTING;
     obj[2] = obj;
     obj.dispatch(obj);
   }
@@ -283,53 +309,82 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
     obj2[0] = name;
     obj1[1] = obj2;
     const patchResult = HTTP.patch(obj1);
-    resolved = HTTP.patch(obj1).then(() => {
-      const HTTP = callback(530).HTTP;
-      const value = HTTP.get({ url: constants.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
-      value.then((body) => {
-        body = body.body;
-        let obj = callback(table[5]);
-        let game_servers = body.game_servers;
-        if (game_servers == null) {
-          game_servers = [];
-        }
-        obj = { type: "GAME_SERVER_FETCH_MY_SERVERS_SUCCESS", gameServers: game_servers, maxServers: body.max_game_servers };
-        obj.dispatch(obj);
-      }).catch(() => {
-
+    resolved = HTTP.patch(obj1)
+      .then(() => {
+        const HTTP = callback(530).HTTP;
+        const value = HTTP.get({
+          url: constants.GAME_SERVERS_ME,
+          rejectWithError: true,
+          oldFormErrors: true,
+          retries: 3,
+        });
+        value
+          .then((body) => {
+            body = body.body;
+            let obj = callback(table[5]);
+            let game_servers = body.game_servers;
+            if (game_servers == null) {
+              game_servers = [];
+            }
+            obj = {
+              type: "GAME_SERVER_FETCH_MY_SERVERS_SUCCESS",
+              gameServers: game_servers,
+              maxServers: body.max_game_servers,
+            };
+            obj.dispatch(obj);
+          })
+          .catch(() => {});
+      })
+      .catch((arg0) => {
+        const HTTP = callback(530).HTTP;
+        const value = HTTP.get({
+          url: constants.GAME_SERVERS_ME,
+          rejectWithError: true,
+          oldFormErrors: true,
+          retries: 3,
+        });
+        value
+          .then((body) => {
+            body = body.body;
+            let obj = callback(table[5]);
+            let game_servers = body.game_servers;
+            if (game_servers == null) {
+              game_servers = [];
+            }
+            obj = {
+              type: "GAME_SERVER_FETCH_MY_SERVERS_SUCCESS",
+              gameServers: game_servers,
+              maxServers: body.max_game_servers,
+            };
+            obj.dispatch(obj);
+          })
+          .catch(() => {});
+        throw arg0;
       });
-    }).catch((arg0) => {
-      const HTTP = callback(530).HTTP;
-      const value = HTTP.get({ url: constants.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
-      value.then((body) => {
-        body = body.body;
-        let obj = callback(table[5]);
-        let game_servers = body.game_servers;
-        if (game_servers == null) {
-          game_servers = [];
-        }
-        obj = { type: "GAME_SERVER_FETCH_MY_SERVERS_SUCCESS", gameServers: game_servers, maxServers: body.max_game_servers };
-        obj.dispatch(obj);
-      }).catch(() => {
-
-      });
-      throw arg0;
-    });
     const nextPromise = HTTP.patch(obj1).then(() => {
       const HTTP = callback(530).HTTP;
-      const value = HTTP.get({ url: constants.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
-      value.then((body) => {
-        body = body.body;
-        let obj = callback(table[5]);
-        let game_servers = body.game_servers;
-        if (game_servers == null) {
-          game_servers = [];
-        }
-        obj = { type: "GAME_SERVER_FETCH_MY_SERVERS_SUCCESS", gameServers: game_servers, maxServers: body.max_game_servers };
-        obj.dispatch(obj);
-      }).catch(() => {
-
+      const value = HTTP.get({
+        url: constants.GAME_SERVERS_ME,
+        rejectWithError: true,
+        oldFormErrors: true,
+        retries: 3,
       });
+      value
+        .then((body) => {
+          body = body.body;
+          let obj = callback(table[5]);
+          let game_servers = body.game_servers;
+          if (game_servers == null) {
+            game_servers = [];
+          }
+          obj = {
+            type: "GAME_SERVER_FETCH_MY_SERVERS_SUCCESS",
+            gameServers: game_servers,
+            maxServers: body.max_game_servers,
+          };
+          obj.dispatch(obj);
+        })
+        .catch(() => {});
     });
   }
   return resolved;
@@ -343,43 +398,55 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
     obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "default" };
     obj = {};
     let merged = Object.assign(found);
-    obj.status = require("../../../discord_common/js/shared/shared-constants/GameServerStatus.tsx").GameServerStatus.STARTING;
+    obj.status =
+      require("../../../discord_common/js/shared/shared-constants/GameServerStatus.tsx").GameServerStatus.STARTING;
     obj[2] = obj;
     obj.dispatch(obj);
   }
   let HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj1 = { url: closure_8.GAME_SERVER_ME_WAKE(arg0), rejectWithError: true };
   const postResult = HTTP.post({ url: closure_8.GAME_SERVER_ME_WAKE(arg0), rejectWithError: true });
-  return HTTP.post({ url: closure_8.GAME_SERVER_ME_WAKE(arg0), rejectWithError: true }).then((body) => {
-    body = body.body;
-    let obj = callback2(709);
-    let tmp3 = body;
-    if (body.status === callback(12049).GameServerStatus.SLEEPING) {
-      obj = {};
-      const merged = Object.assign(body);
-      obj.status = callback(12049).GameServerStatus.STARTING;
-      tmp3 = obj;
-    }
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "default" };
-    obj[2] = tmp3;
-    obj.dispatch(obj);
-  }).catch((arg0) => {
-    const HTTP = callback(530).HTTP;
-    const value = HTTP.get({ url: constants.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
-    value.then((body) => {
+  return HTTP.post({ url: closure_8.GAME_SERVER_ME_WAKE(arg0), rejectWithError: true })
+    .then((body) => {
       body = body.body;
-      let obj = callback(table[5]);
-      let game_servers = body.game_servers;
-      if (game_servers == null) {
-        game_servers = [];
+      let obj = callback2(709);
+      let tmp3 = body;
+      if (body.status === callback(12049).GameServerStatus.SLEEPING) {
+        obj = {};
+        const merged = Object.assign(body);
+        obj.status = callback(12049).GameServerStatus.STARTING;
+        tmp3 = obj;
       }
-      obj = { type: "GAME_SERVER_FETCH_MY_SERVERS_SUCCESS", gameServers: game_servers, maxServers: body.max_game_servers };
+      obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "default" };
+      obj[2] = tmp3;
       obj.dispatch(obj);
-    }).catch(() => {
-
+    })
+    .catch((arg0) => {
+      const HTTP = callback(530).HTTP;
+      const value = HTTP.get({
+        url: constants.GAME_SERVERS_ME,
+        rejectWithError: true,
+        oldFormErrors: true,
+        retries: 3,
+      });
+      value
+        .then((body) => {
+          body = body.body;
+          let obj = callback(table[5]);
+          let game_servers = body.game_servers;
+          if (game_servers == null) {
+            game_servers = [];
+          }
+          obj = {
+            type: "GAME_SERVER_FETCH_MY_SERVERS_SUCCESS",
+            gameServers: game_servers,
+            maxServers: body.max_game_servers,
+          };
+          obj.dispatch(obj);
+        })
+        .catch(() => {});
+      throw arg0;
     });
-    throw arg0;
-  });
 };
 export const wakeGameServer = function wakeGameServer(arg0, arg1) {
   const _require = arg0;
@@ -387,7 +454,11 @@ export const wakeGameServer = function wakeGameServer(arg0, arg1) {
   let obj = { url: closure_8.GAME_SERVER_WAKE(arg0, arg1), rejectWithError: true };
   return HTTP.post({ url: closure_8.GAME_SERVER_WAKE(arg0, arg1), rejectWithError: true }).then((body) => {
     let obj = closure_1_1(closure_1_2[5]);
-    obj = { type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS", guildId: closure_0, instance: closure_1_1(closure_1_2[10])(body.body) };
+    obj = {
+      type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS",
+      guildId: closure_0,
+      instance: closure_1_1(closure_1_2[10])(body.body),
+    };
     obj.dispatch(obj);
   });
 };

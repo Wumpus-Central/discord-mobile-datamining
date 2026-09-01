@@ -3,7 +3,9 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import closure_4 from "../../a11y/AccessibilityStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesAccessibleColors.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/display_name_styles/hooks/useDisplayNameStylesAccessibleColors.tsx",
+);
 
 export const useDisplayNameStylesAccessibleColors = function useDisplayNameStylesAccessibleColors(displayNameStyles) {
   displayNameStyles = displayNameStyles.displayNameStyles;
@@ -28,7 +30,13 @@ export const useDisplayNameStylesAccessibleColors = function useDisplayNameStyle
   }
   let obj = displayNameStyles(stateFromStores[2]);
   displayNameStylesEffectConfig = displayNameStyles(stateFromStores[4]).useDisplayNameStylesEffectConfig(effectId);
-  const items1 = [displayNameStyles, effectId, displayNameStylesEffectConfig.minContrastRatio, stateFromStores, backgroundColor];
+  const items1 = [
+    displayNameStyles,
+    effectId,
+    displayNameStylesEffectConfig.minContrastRatio,
+    stateFromStores,
+    backgroundColor,
+  ];
   return effectId.useMemo(() => {
     if (null == displayNameStyles) {
       let items = [];

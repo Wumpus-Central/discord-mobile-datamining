@@ -3,8 +3,12 @@ import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG as closure_3 } from "../ChatInputConstants.tsx";
 
 const require = arg1;
-let closure_4 = { code: "function useChatInputFloatingWidthTsx1(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}" };
-let result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx");
+let closure_4 = {
+  code: "function useChatInputFloatingWidthTsx1(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx",
+);
 
 export default function useChatInputFloatingWidth(expanded) {
   expanded = expanded.expanded;
@@ -26,7 +30,9 @@ export default function useChatInputFloatingWidth(expanded) {
     if (expanded) {
       if (0 > 0) {
         const obj2 = expanded(collapsedWidth[2]);
-        const result = sharedValue.set(obj2.withDelay(tmp2, expanded(collapsedWidth[3]).withTiming(1, num, "respect-motion-settings")));
+        const result = sharedValue.set(
+          obj2.withDelay(tmp2, expanded(collapsedWidth[3]).withTiming(1, num, "respect-motion-settings")),
+        );
         const obj3 = expanded(collapsedWidth[3]);
       }
     }
@@ -45,4 +51,4 @@ export default function useChatInputFloatingWidth(expanded) {
   fn.__workletHash = 2289574047387;
   fn.__initData = sharedValue;
   return obj;
-};
+}

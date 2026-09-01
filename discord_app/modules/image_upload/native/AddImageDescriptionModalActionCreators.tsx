@@ -15,5 +15,5 @@ export default {
   },
   close() {
     _modDef4723.popWithKey(ADD_IMAGE_DESCRIPTION_MODAL_KEY);
-  }
+  },
 };

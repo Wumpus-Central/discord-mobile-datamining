@@ -135,11 +135,29 @@ function handleChannelDelete(arg0) {
   return false;
 }
 let closure_7 = require("ME").MAX_MESSAGE_LENGTH_PREMIUM + 500;
-let obj = { ChannelMessage: 0, [0]: "ChannelMessage", ThreadSettings: 1, [1]: "ThreadSettings", FirstThreadMessage: 2, [2]: "FirstThreadMessage", ApplicationLauncherCommand: 3, [3]: "ApplicationLauncherCommand", Poll: 4, [4]: "Poll", SlashCommand: 5, [5]: "SlashCommand", ForwardContextMessage: 6, [6]: "ForwardContextMessage", InteractionModal: 7, [7]: "InteractionModal", ScheduledMessage: 8, [8]: "ScheduledMessage" };
+let obj = {
+  ChannelMessage: 0,
+  [0]: "ChannelMessage",
+  ThreadSettings: 1,
+  [1]: "ThreadSettings",
+  FirstThreadMessage: 2,
+  [2]: "FirstThreadMessage",
+  ApplicationLauncherCommand: 3,
+  [3]: "ApplicationLauncherCommand",
+  Poll: 4,
+  [4]: "Poll",
+  SlashCommand: 5,
+  [5]: "SlashCommand",
+  ForwardContextMessage: 6,
+  [6]: "ForwardContextMessage",
+  InteractionModal: 7,
+  [7]: "InteractionModal",
+  ScheduledMessage: 8,
+  [8]: "ScheduledMessage",
+};
 let closure_9 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class DraftStore extends PersistedStore {
-}
+class DraftStore extends PersistedStore {}
 const prototype = DraftStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   obj = arg0;
@@ -238,30 +256,39 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
       }
       return tmp;
     });
-    const pickByResult = applyDefault(tmp3).mapValues((arg0) => {
-      let tmp;
-      if (arg0 != null) {
-        tmp = arg0[closure_0];
-      }
-      return tmp;
-    }).pickBy(require("../utils/GlobalUtils.tsx").isNotNullish);
-    const mapped = applyDefault(tmp3).mapValues((arg0) => {
-      let tmp;
-      if (arg0 != null) {
-        tmp = arg0[closure_0];
-      }
-      return tmp;
-    }).pickBy(require("../utils/GlobalUtils.tsx").isNotNullish).toPairs().map((arg0) => {
-      [tmp, ] = arg0;
-      return { channelId, timestamp, draft };
-    });
-    const toPairsResult = applyDefault(tmp3).mapValues((arg0) => {
-      let tmp;
-      if (arg0 != null) {
-        tmp = arg0[closure_0];
-      }
-      return tmp;
-    }).pickBy(require("../utils/GlobalUtils.tsx").isNotNullish).toPairs();
+    const pickByResult = applyDefault(tmp3)
+      .mapValues((arg0) => {
+        let tmp;
+        if (arg0 != null) {
+          tmp = arg0[closure_0];
+        }
+        return tmp;
+      })
+      .pickBy(require("../utils/GlobalUtils.tsx").isNotNullish);
+    const mapped = applyDefault(tmp3)
+      .mapValues((arg0) => {
+        let tmp;
+        if (arg0 != null) {
+          tmp = arg0[closure_0];
+        }
+        return tmp;
+      })
+      .pickBy(require("../utils/GlobalUtils.tsx").isNotNullish)
+      .toPairs()
+      .map((arg0) => {
+        [tmp] = arg0;
+        return { channelId, timestamp, draft };
+      });
+    const toPairsResult = applyDefault(tmp3)
+      .mapValues((arg0) => {
+        let tmp;
+        if (arg0 != null) {
+          tmp = arg0[closure_0];
+        }
+        return tmp;
+      })
+      .pickBy(require("../utils/GlobalUtils.tsx").isNotNullish)
+      .toPairs();
     return mapped.sortBy((timestamp) => -timestamp.timestamp).value();
   }
 };
@@ -375,7 +402,7 @@ const items = [
       }
     }
     return {};
-  }
+  },
 ];
 DraftStore.migrations = items;
 obj = {
@@ -644,7 +671,7 @@ obj = {
       }
     }
     return flag;
-  }
+  },
 };
 const draftStore = new DraftStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("stores/DraftStore.tsx");

@@ -11,7 +11,9 @@ createCacheKey = { card: null };
 createCacheKey = { padding: 0, paddingRight: ThemesDefault.space.PX_40, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserNameplateRow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/UserNameplateRow.tsx",
+);
 
 export const UserNameplateRow = function UserNameplateRow(onPressOut) {
   ({ icon, onPressIn } = onPressOut);
@@ -55,7 +57,18 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
   }, items1);
   const tmp2 = callback3();
   const token = onPressIn(4197).useToken(onPressOut(712).modules.mobile.TABLE_ROW_BORDER_RADIUS);
-  obj = { shadow: "none", border: "none", radius: token, start: null, end: null, onPress: null, onPressIn: null, onPressOut: null, disabled: null, style: null };
+  obj = {
+    shadow: "none",
+    border: "none",
+    radius: token,
+    start: null,
+    end: null,
+    onPress: null,
+    onPressIn: null,
+    onPressOut: null,
+    disabled: null,
+    style: null,
+  };
   let tmp13 = !context;
   if (!context) {
     tmp13 = true === start;
@@ -68,13 +81,35 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
   obj[8] = flag;
   obj[9] = tmp2.card;
   const merged1 = Object.assign(merged);
-  const items2 = [callback2(onPressOut(8522), { nameplate, isPressed: tmp7[0], invertPressOpacity: true, fullOpacity: isPreviewRow, animate: isPreviewRow }), callback2(onPressIn(5599).TableRowInner, { height: "100%", label, subLabel, icon, trailing, arrow, disabled: flag, labelLineClamp, subLabelLineClamp, variant, draggable, dragHandlePressableProps })];
+  const items2 = [
+    callback2(onPressOut(8522), {
+      nameplate,
+      isPressed: tmp7[0],
+      invertPressOpacity: true,
+      fullOpacity: isPreviewRow,
+      animate: isPreviewRow,
+    }),
+    callback2(onPressIn(5599).TableRowInner, {
+      height: "100%",
+      label,
+      subLabel,
+      icon,
+      trailing,
+      arrow,
+      disabled: flag,
+      labelLineClamp,
+      subLabelLineClamp,
+      variant,
+      draggable,
+      dragHandlePressableProps,
+    }),
+  ];
   obj.children = items2;
   let tmp12Result = tmp12(tmp3(5601).Card, obj);
   if (!context) {
     if (!tmp6) {
       obj = { children: null };
-      const items3 = [tmp12Result, ];
+      const items3 = [tmp12Result];
       obj1 = { adjustSpacingForIcon: null };
       obj1[0] = null != icon;
       items3[1] = tmp15(tmp3(5557).TableRowDivider, obj1);

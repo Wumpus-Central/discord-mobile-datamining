@@ -16,4 +16,4 @@ export default function InstantInviteUsesLabel(style) {
   }
   const children = ["Uses: ", combined];
   return jsxs(Text.Text, { variant: "text-md/semibold", color: "text-default", style: style.style, children });
-};
+}

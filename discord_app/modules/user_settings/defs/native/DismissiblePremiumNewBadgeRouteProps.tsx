@@ -5,7 +5,9 @@ import { ContentDismissActionType } from "../../../dismissible_content/Dismissib
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DismissiblePremiumNewBadgeRouteProps.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/DismissiblePremiumNewBadgeRouteProps.tsx",
+);
 
 export function createDismissiblePremiumNewBadgeRouteProps(CUSTOM_APP_ICONS_NEW_BADGE) {
   closure_0 = CUSTOM_APP_ICONS_NEW_BADGE;
@@ -25,6 +27,6 @@ export function createDismissiblePremiumNewBadgeRouteProps(CUSTOM_APP_ICONS_NEW_
         }
         return true;
       }, items1);
-    }
+    },
   };
 }

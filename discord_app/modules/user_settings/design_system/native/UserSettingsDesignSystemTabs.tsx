@@ -10,10 +10,20 @@ const require = arg1;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsxs: error, jsx: closure_8 } = jsxProd);
 createCacheKey = { container: { margin: 16, flex: 1, alignItems: "center" }, item: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: ThemesDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderWidth: 2,
+  borderColor: ThemesDefault.colors.BORDER_STRONG,
+  flex: 1,
+  alignItems: "center",
+  justifyContent: "center",
+  height: 400,
+};
 createCacheKey[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTabs.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/design_system/native/UserSettingsDesignSystemTabs.tsx",
+);
 
 export default function UserSettingsDesignSystemTabs() {
   const tmp = callback(React.useState(0), 2);
@@ -79,11 +89,11 @@ export default function UserSettingsDesignSystemTabs() {
   }, []);
   obj1 = first(4197);
   const token = obj1.useToken(first(712).colors.BACKGROUND_BASE_LOW);
-  let items1 = [token, ];
+  let items1 = [token];
   let obj2 = first(4326);
   items1[1] = obj2.hexWithOpacity(token, 0);
   obj = { style: callback3().container, onLayout: callback, children: null };
-  const items2 = [callback2(first(9266).Tabs, { state: segmentedControlState, grow: first1 }), ];
+  const items2 = [callback2(first(9266).Tabs, { state: segmentedControlState, grow: first1 })];
   let tmp20Result = first2;
   if (first2) {
     obj = { state: null, colors: null };
@@ -94,7 +104,11 @@ export default function UserSettingsDesignSystemTabs() {
   obj1 = { children: null };
   obj2 = { spacing: 24, children: null };
   items2[1] = tmp20Result;
-  const items3 = [closure_7(closure_5, { children: items2 }), callback2(first(9268).SegmentedControlPages, { state: segmentedControlState }), , ];
+  const items3 = [
+    closure_7(closure_5, { children: items2 }),
+    callback2(first(9268).SegmentedControlPages, { state: segmentedControlState }),
+    ,
+  ];
   const obj3 = { spacing: 8, direction: "horizontal", children: null };
   const items4 = [
     callback2(first(4928).Button, {
@@ -104,7 +118,7 @@ export default function UserSettingsDesignSystemTabs() {
       disabled: first >= 10,
       onPress() {
         return lib(first + 1);
-      }
+      },
     }),
     callback2(first(4928).Button, {
       text: "Remove Tab",
@@ -113,17 +127,26 @@ export default function UserSettingsDesignSystemTabs() {
       disabled: 2 === first,
       onPress() {
         return lib(first - 1);
-      }
-    })
+      },
+    }),
   ];
   obj3[2] = items4;
   items3[2] = closure_7(first(4926).Stack, obj3);
   const obj6 = { children: null };
-  const items5 = [callback2(first(5993).TableSwitchRow, { start: true, label: "Enable Grow", value: first1, onValueChange: tmp4[1] }), callback2(first(5993).TableSwitchRow, { label: "Enable Counts", value: tmp7, onValueChange: tmp8 }), callback2(first(5993).TableSwitchRow, { end: true, label: "Enable Overflow Gradient", value: first2, onValueChange: tmp9[1] })];
+  const items5 = [
+    callback2(first(5993).TableSwitchRow, { start: true, label: "Enable Grow", value: first1, onValueChange: tmp4[1] }),
+    callback2(first(5993).TableSwitchRow, { label: "Enable Counts", value: tmp7, onValueChange: tmp8 }),
+    callback2(first(5993).TableSwitchRow, {
+      end: true,
+      label: "Enable Overflow Gradient",
+      value: first2,
+      onValueChange: tmp9[1],
+    }),
+  ];
   obj6[0] = items5;
   items3[3] = closure_7(closure_5, obj6);
   obj2[1] = items3;
   obj[2] = closure_7(first(4926).Stack, obj2);
   obj1[0] = callback2(closure_5, obj);
   return callback2(closure_6, obj1);
-};
+}

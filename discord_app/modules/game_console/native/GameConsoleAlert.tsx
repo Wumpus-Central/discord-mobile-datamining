@@ -7,7 +7,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ errorCodeText: { marginTop: 16 }, alertBody: { marginTop: 0 }, container: { flex: 1 }, body: { marginTop: 16 } });
+let closure_7 = createCacheKey.createStyles({
+  errorCodeText: { marginTop: 16 },
+  alertBody: { marginTop: 0 },
+  container: { flex: 1 },
+  body: { marginTop: 16 },
+});
 const result = require("set").fileFinishedImporting("modules/game_console/native/GameConsoleAlert.tsx");
 
 export const SelfDismissibleAlertBody = function SelfDismissibleAlertBody(errorCodeMessage) {
@@ -29,13 +34,13 @@ export const SelfDismissibleAlertBody = function SelfDismissibleAlertBody(errorC
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj = { maxFontSizeMultiplier: 1, variant: "text-md/normal", style: null, children: null };
-    const items2 = [, ];
+    const items2 = [,];
     ({ body: arr3[0], alertBody: arr3[1] } = tmp);
     obj[2] = items2;
     obj[3] = body;
-    const items3 = [callback(tmp2(tmp3[6]).Text, obj), ];
+    const items3 = [callback(tmp2(tmp3[6]).Text, obj)];
     obj1 = { maxFontSizeMultiplier: 1, variant: "text-md/normal", style: null, children: null };
-    const items4 = [, ];
+    const items4 = [,];
     ({ body: arr5[0], errorCodeText: arr5[1] } = tmp);
     obj1[2] = items4;
     obj1[3] = errorCodeMessage;

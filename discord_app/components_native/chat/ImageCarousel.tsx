@@ -39,7 +39,10 @@ function Tile(onEdit) {
   isVideo = upload.isVideo;
   isImage = upload.isImage;
   isThumbnail = upload.isThumbnail;
-  onRemove(channelId[12])(item.platform === sharedValue(channelId[13]).UploadPlatform.REACT_NATIVE, "Upload must be a React Native upload item.");
+  onRemove(channelId[12])(
+    item.platform === sharedValue(channelId[13]).UploadPlatform.REACT_NATIVE,
+    "Upload must be a React Native upload item.",
+  );
   if (flag) {
     flag = true === isThumbnail;
   }
@@ -95,7 +98,7 @@ function Tile(onEdit) {
         }
         return tmpResult;
       },
-      upload
+      upload,
     });
   }, items3);
   let uri = item.id;
@@ -122,17 +125,26 @@ function Tile(onEdit) {
     obj[0] = sharedValue(channelId[9]).withTiming(value, obj, "respect-motion-settings");
     obj = { scale: null };
     const obj2 = sharedValue(channelId[9]);
-    obj[0] = sharedValue(channelId[11]).withSpring(sharedValue.get(), { stiffness: 80, damping: 6, mass: 0.3 }, "respect-motion-settings");
+    obj[0] = sharedValue(channelId[11]).withSpring(
+      sharedValue.get(),
+      { stiffness: 80, damping: 6, mass: 0.3 },
+      "respect-motion-settings",
+    );
     const items = [obj];
     obj[1] = items;
     return obj;
   };
-  let obj = { withTiming: tmp5(tmp3[9]).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: tmp5(tmp3[10]).STANDARD_EASING, withSpring: tmp5(tmp3[11]).withSpring };
+  let obj = {
+    withTiming: tmp5(tmp3[9]).withTiming,
+    animatedStylePropValue: sharedValue,
+    STANDARD_EASING: tmp5(tmp3[10]).STANDARD_EASING,
+    withSpring: tmp5(tmp3[11]).withSpring,
+  };
   fn.__closure = obj;
   fn.__workletHash = 14458898683767;
   fn.__initData = callback1;
   animatedStyle = sharedValue(channelId[8]).useAnimatedStyle(fn);
-  const items6 = [callback, animatedStyle, description, , , , , , , ];
+  const items6 = [callback, animatedStyle, description, , , , , , ,];
   ({ uri: arr7[3], filename: arr7[4] } = item);
   items6[5] = isImage;
   items6[6] = isThumbnail;
@@ -145,8 +157,17 @@ function Tile(onEdit) {
     ({ width, height } = tmp);
     let obj = { style: items, children: null };
     items = [tileContainer.tileContainer, { width, height }, animatedStyle];
-    obj = { uri: item.uri, isImage, isVideo, width, height, maxFileWidth: tmp.maxWidth, fileName: item.filename, borderRadius: onRemove(channelId[7]).radii.md };
-    const items1 = [flag(onRemove(channelId[16]), obj), , ];
+    obj = {
+      uri: item.uri,
+      isImage,
+      isVideo,
+      width,
+      height,
+      maxFileWidth: tmp.maxWidth,
+      fileName: item.filename,
+      borderRadius: onRemove(channelId[7]).radii.md,
+    };
+    const items1 = [flag(onRemove(channelId[16]), obj), ,];
     let tmp6Result = null;
     if (isThumbnail) {
       obj = { style: null, children: null };
@@ -165,7 +186,7 @@ function Tile(onEdit) {
       obj3[0] = tmp5.spoilerOverlay;
       tmp6Result = tmp6(tmp3(tmp4[18]), obj3);
     }
-    const items2 = [tmp6Result, , ];
+    const items2 = [tmp6Result, ,];
     let tmp6Result1 = null;
     if (null != description) {
       let length;
@@ -174,14 +195,20 @@ function Tile(onEdit) {
       }
       tmp6Result1 = null;
       if (length > 0) {
-        const obj4 = { variant: "text-xs/medium", color: "text-overlay-light", allowFontScaling: false, style: null, children: null };
+        const obj4 = {
+          variant: "text-xs/medium",
+          color: "text-overlay-light",
+          allowFontScaling: false,
+          style: null,
+          children: null,
+        };
         obj4[3] = tmp5.altTagText;
         const intl = sharedValue(tmp4[20]).intl;
         obj4[4] = intl.string(sharedValue(tmp4[20]).t.QEW81z);
         tmp6Result1 = tmp6(sharedValue(tmp4[19]).Text, obj4);
       }
     }
-    const items3 = [tmp6Result1, ];
+    const items3 = [tmp6Result1];
     let tmp6Result2 = null;
     if (isVideo) {
       const obj5 = { style: null, children: null };
@@ -212,7 +239,17 @@ function Tile(onEdit) {
   if (str == null) {
     str = "";
   }
-  obj1 = { accessibilityRole: "button", accessibilityLabel: intl2.formatToPlainString(tmp5(tmp3[20]).t.MJHFt9, { name: str }), accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, onPress: null, style: null, children: null };
+  obj1 = {
+    accessibilityRole: "button",
+    accessibilityLabel: intl2.formatToPlainString(tmp5(tmp3[20]).t.MJHFt9, { name: str }),
+    accessibilityHint: null,
+    accessibilityActions: null,
+    onAccessibilityAction: null,
+    disabled: null,
+    onPress: null,
+    style: null,
+    children: null,
+  };
   const intl3 = tmp5(tmp3[20]).intl;
   obj1[2] = intl3.string(sharedValue(channelId[20]).t.QtJ1c5);
   obj1[3] = items7;
@@ -223,27 +260,39 @@ function Tile(onEdit) {
   }
   obj1[5] = tmp19;
   obj1[6] = callback2;
-  const items8 = [tmp.pressableContainer, ];
+  const items8 = [tmp.pressableContainer];
   if (flag) {
     flag = tmp.highlightedTileContainer;
   }
   items8[1] = flag;
   obj1[7] = items8;
   obj1[8] = callback4();
-  const items9 = [flag(sharedValue(channelId[23]).PressableOpacity, obj1), ];
+  const items9 = [flag(sharedValue(channelId[23]).PressableOpacity, obj1)];
   const intl4 = tmp5(tmp3[20]).intl;
   let str2 = item.filename;
   if (str2 == null) {
     str2 = "";
   }
   let obj2 = { children: null };
-  let obj3 = { accessibilityRole: "button", accessibilityLabel: intl4.formatToPlainString(sharedValue(channelId[20]).t.FxKgb3, { name: str2 }), style: tmp.closeButton, onPress: callback1, hitSlop: { top: 4, bottom: 4, left: 4, right: 4 }, children: null };
+  let obj3 = {
+    accessibilityRole: "button",
+    accessibilityLabel: intl4.formatToPlainString(sharedValue(channelId[20]).t.FxKgb3, { name: str2 }),
+    style: tmp.closeButton,
+    onPress: callback1,
+    hitSlop: { top: 4, bottom: 4, left: 4, right: 4 },
+    children: null,
+  };
   let obj4 = { style: items10, children: null };
   items10 = [tmp.closeContainer, animatedStyle];
   const tmp16 = stateFromStores;
   const tmp17 = closure_4;
   const tmp5Result1 = sharedValue(channelId[8]);
-  obj4[1] = flag(sharedValue(channelId[10]).Icon, { source: onRemove(channelId[24]), size: sharedValue(channelId[10]).Icon.Sizes.MEDIUM, color: onRemove(channelId[7]).unsafe_rawColors.PRIMARY_500, style: tmp.closeButtonIcon });
+  obj4[1] = flag(sharedValue(channelId[10]).Icon, {
+    source: onRemove(channelId[24]),
+    size: sharedValue(channelId[10]).Icon.Sizes.MEDIUM,
+    color: onRemove(channelId[7]).unsafe_rawColors.PRIMARY_500,
+    style: tmp.closeButtonIcon,
+  });
   obj3[5] = flag(onRemove(channelId[8]).View, obj4);
   items9[1] = flag(sharedValue(channelId[23]).PressableOpacity, obj3);
   obj2[0] = items9;
@@ -282,8 +331,28 @@ const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = IMAGE_CAROUSEL_TILE_HEIGHT.IMAGE_C
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = IMAGE_CAROUSEL_TILE_HEIGHT.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = IMAGE_CAROUSEL_TILE_HEIGHT.IMAGE_CAROUSEL_TILE_HEIGHT;
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let obj = { container: { width: "100%" }, pressableContainer: { marginHorizontal: 4 }, tileContainer: null, decorationsContainer: null, highlightedTileContainer: null, closeButton: null, scrollview: null, closeContainer: null, closeButtonIcon: null, altTagText: null, iconContainer: null, spoilerOverlay: null, footerRightContainer: null };
-obj = { position: "relative", minWidth: 60, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: ThemesDefault.radii.md - 1 };
+let obj = {
+  container: { width: "100%" },
+  pressableContainer: { marginHorizontal: 4 },
+  tileContainer: null,
+  decorationsContainer: null,
+  highlightedTileContainer: null,
+  closeButton: null,
+  scrollview: null,
+  closeContainer: null,
+  closeButtonIcon: null,
+  altTagText: null,
+  iconContainer: null,
+  spoilerOverlay: null,
+  footerRightContainer: null,
+};
+obj = {
+  position: "relative",
+  minWidth: 60,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  overflow: "hidden",
+  borderRadius: ThemesDefault.radii.md - 1,
+};
 obj[2] = obj;
 createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -293,26 +362,102 @@ createCacheKey.justifyContent = "space-between";
 createCacheKey.alignItems = "flex-end";
 createCacheKey.padding = 4;
 obj[3] = createCacheKey;
-obj[4] = { borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, borderStyle: "solid", borderWidth: 2, borderRadius: 10 };
+obj[4] = {
+  borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+  borderStyle: "solid",
+  borderWidth: 2,
+  borderRadius: 10,
+};
 obj[5] = { position: "absolute", top: -1 * IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN, right: 2 };
 obj[6] = { paddingTop: IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING };
-let obj2 = { borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, borderStyle: "solid", borderWidth: 2, borderRadius: 10 };
+let obj2 = {
+  borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+  borderStyle: "solid",
+  borderWidth: 2,
+  borderRadius: 10,
+};
 let obj3 = { position: "absolute", top: -1 * IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN, right: 2 };
-obj[7] = { height: 20, width: 20, borderRadius: 20, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX };
-let obj4 = { height: 20, width: 20, borderRadius: 20, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX };
-obj[8] = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let obj5 = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj[9] = { paddingHorizontal: ThemesDefault.space.PX_4, lineHeight: 20, backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: ThemesDefault.radii.xs, textTransform: "uppercase" };
-let obj6 = { paddingHorizontal: ThemesDefault.space.PX_4, lineHeight: 20, backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: ThemesDefault.radii.xs, textTransform: "uppercase" };
-obj[10] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_4 };
+obj[7] = {
+  height: 20,
+  width: 20,
+  borderRadius: 20,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX,
+};
+let obj4 = {
+  height: 20,
+  width: 20,
+  borderRadius: 20,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX,
+};
+obj[8] = {
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+};
+let obj5 = {
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+};
+obj[9] = {
+  paddingHorizontal: ThemesDefault.space.PX_4,
+  lineHeight: 20,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX,
+  borderRadius: ThemesDefault.radii.xs,
+  textTransform: "uppercase",
+};
+let obj6 = {
+  paddingHorizontal: ThemesDefault.space.PX_4,
+  lineHeight: 20,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX,
+  borderRadius: ThemesDefault.radii.xs,
+  textTransform: "uppercase",
+};
+obj[10] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX,
+  borderRadius: ThemesDefault.radii.sm,
+  padding: ThemesDefault.space.PX_4,
+};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj[11] = {};
-const obj7 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_4 };
+const obj7 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX,
+  borderRadius: ThemesDefault.radii.sm,
+  padding: ThemesDefault.space.PX_4,
+};
 const obj8 = {};
-obj[12] = { position: "absolute", bottom: 4, right: 4, alignItems: "center", justifyContent: "center", alignContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 4, borderRadius: 20, opacity: 0.85 };
+obj[12] = {
+  position: "absolute",
+  bottom: 4,
+  right: 4,
+  alignItems: "center",
+  justifyContent: "center",
+  alignContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  padding: 4,
+  borderRadius: 20,
+  opacity: 0.85,
+};
 let closure_13 = createCacheKey.createStyles(obj);
-let closure_14 = { code: "function ImageCarouselTsx1(){const{withTiming,animatedStylePropValue,STANDARD_EASING,withSpring}=this.__closure;return{opacity:withTiming(animatedStylePropValue.get(),{duration:300,easing:STANDARD_EASING},'respect-motion-settings'),transform:[{scale:withSpring(animatedStylePropValue.get(),{stiffness:80,damping:6,mass:0.3},'respect-motion-settings')}]};}" };
-const obj9 = { position: "absolute", bottom: 4, right: 4, alignItems: "center", justifyContent: "center", alignContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 4, borderRadius: 20, opacity: 0.85 };
+let closure_14 = {
+  code: "function ImageCarouselTsx1(){const{withTiming,animatedStylePropValue,STANDARD_EASING,withSpring}=this.__closure;return{opacity:withTiming(animatedStylePropValue.get(),{duration:300,easing:STANDARD_EASING},'respect-motion-settings'),transform:[{scale:withSpring(animatedStylePropValue.get(),{stiffness:80,damping:6,mass:0.3},'respect-motion-settings')}]};}",
+};
+const obj9 = {
+  position: "absolute",
+  bottom: 4,
+  right: 4,
+  alignItems: "center",
+  justifyContent: "center",
+  alignContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  padding: 4,
+  borderRadius: 20,
+  opacity: 0.85,
+};
 const memoResult = importAllResult.memo((arg0) => {
   ({ attachments, channelId } = arg0);
   ({ headerElement, highlightThumbnails } = arg0);
@@ -340,7 +485,7 @@ const memoResult = importAllResult.memo((arg0) => {
     const items = [arg1];
     channelId(callback[27]).addImagesFromPicker(channelId, items, channelId(callback[13]).UploadOrigin.IMAGE_EDITOR);
   }, items1);
-  const items2 = [callback2().container, ];
+  const items2 = [callback2().container];
   let num2 = 0;
   if (tmp2) {
     num2 = closure_10 + IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
@@ -358,15 +503,28 @@ const memoResult = importAllResult.memo((arg0) => {
   obj = { style: items2, children: null };
   obj[2] = num5;
   items2[1] = obj;
-  obj = { horizontal: true, keyboardShouldPersistTaps: "always", showsHorizontalScrollIndicator: false, accessibilityRole: "list", accessibilityLabel: null, children: null };
+  obj = {
+    horizontal: true,
+    keyboardShouldPersistTaps: "always",
+    showsHorizontalScrollIndicator: false,
+    accessibilityRole: "list",
+    accessibilityLabel: null,
+    children: null,
+  };
   const intl = channelId(callback[20]).intl;
   obj[4] = intl.string(channelId(callback[20]).t.RhtzFe);
-  const items3 = [headerElement, ];
+  const items3 = [headerElement];
   let mapped = null;
   if (null != attachments) {
     const _Object = Object;
     const values = Object.values(attachments);
-    mapped = values.map((uniqueId) => closure_1_11(closure_1_15, { channelId, highlightThumbnails, onEdit: closure_3, onRemove: callback, upload: uniqueId }, uniqueId.uniqueId));
+    mapped = values.map((uniqueId) =>
+      closure_1_11(
+        closure_1_15,
+        { channelId, highlightThumbnails, onEdit: closure_3, onRemove: callback, upload: uniqueId },
+        uniqueId.uniqueId,
+      ),
+    );
   }
   items3[1] = mapped;
   obj[5] = items3;
@@ -391,12 +549,21 @@ export const useTileEntranceAnimatedStyle = function useTileEntranceAnimatedStyl
     obj[0] = sharedValue(channelId[9]).withTiming(value, obj, "respect-motion-settings");
     obj = { scale: null };
     const obj2 = sharedValue(channelId[9]);
-    obj[0] = sharedValue(channelId[11]).withSpring(sharedValue.get(), { stiffness: 80, damping: 6, mass: 0.3 }, "respect-motion-settings");
+    obj[0] = sharedValue(channelId[11]).withSpring(
+      sharedValue.get(),
+      { stiffness: 80, damping: 6, mass: 0.3 },
+      "respect-motion-settings",
+    );
     const items = [obj];
     obj[1] = items;
     return obj;
   };
-  obj = { withTiming: sharedValue(4479).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: sharedValue(1297).STANDARD_EASING, withSpring: sharedValue(4927).withSpring };
+  obj = {
+    withTiming: sharedValue(4479).withTiming,
+    animatedStylePropValue: sharedValue,
+    STANDARD_EASING: sharedValue(1297).STANDARD_EASING,
+    withSpring: sharedValue(4927).withSpring,
+  };
   fn.__closure = obj;
   fn.__workletHash = 14458898683767;
   fn.__initData = closure_14;

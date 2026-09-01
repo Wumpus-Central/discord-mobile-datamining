@@ -8,7 +8,7 @@ import { UPDATE_CONFIG } from "MobileNativeUpdateConstants.tsx";
 require = arg1;
 function _checkForNewerBuild() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -115,8 +115,7 @@ function openBuildInstallerUrl(install) {
         openURLExternally(str.toString());
       }
     }
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 let closure_4 = new timestampDefault("MobileNativeUpdateUtils");
 const tmp2 = new timestampDefault("MobileNativeUpdateUtils");

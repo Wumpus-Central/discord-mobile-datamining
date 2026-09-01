@@ -5,9 +5,18 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let items = [{ label: "Small", value: "sm" }, { label: "Medium", value: "md" }, { label: "Large", value: "lg" }];
-let items1 = [{ value: 6, label: "6" }, { value: 8, label: "8" }];
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemButtonActionSheet.tsx");
+let items = [
+  { label: "Small", value: "sm" },
+  { label: "Medium", value: "md" },
+  { label: "Large", value: "lg" },
+];
+let items1 = [
+  { value: 6, label: "6" },
+  { value: 8, label: "8" },
+];
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/design_system/native/UserSettingsDesignSystemButtonActionSheet.tsx",
+);
 
 export default function UserSettingsDesignSystemButtonActionSheet() {
   const tmp = keysDefault();
@@ -61,7 +70,12 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
     });
   }, []);
   let obj = { children: null };
-  items = [callback(require("../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx").BottomSheetTitleHeader, { title: "Button Settings" }), ];
+  items = [
+    callback(
+      require("../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx").BottomSheetTitleHeader,
+      { title: "Button Settings" },
+    ),
+  ];
   obj = { children: null };
   obj = {
     title: "Button Size",
@@ -76,17 +90,19 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
         label: label.label,
         onPress() {
           return closure_1_1(closure_0);
-        }
+        },
       };
       items = [callback(lib(8363).FormRadioRow, obj), callback(lib(8363).FormDivider, {})];
       obj[0] = items;
       return callback2(React.Fragment, obj, value);
-    })
+    }),
   };
-  items1 = [callback(require("../../../../design/void/Form/native/index.tsx").FormSection, obj), , , , , ];
+  items1 = [callback(require("../../../../design/void/Form/native/index.tsx").FormSection, obj), , , , ,];
   obj1 = { title: "Button Scale", accessibilityRole: "radiogroup", children: null };
   const items2 = [
-    callback(require("../../../../design/void/Form/native/index.tsx").FormHint, { children: "The amount in pixels that the button width will scale when pressed" }),
+    callback(require("../../../../design/void/Form/native/index.tsx").FormHint, {
+      children: "The amount in pixels that the button width will scale when pressed",
+    }),
     items1.map((label) => {
       const value = label.value;
       const lib = value;
@@ -97,20 +113,28 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
         label: label.label,
         onPress() {
           return closure_1_2(closure_0);
-        }
+        },
       };
       items = [callback(lib(8363).FormRadioRow, obj), callback(lib(8363).FormDivider, {})];
       obj[0] = items;
       return callback2(React.Fragment, obj, value);
-    })
+    }),
   ];
   obj1[2] = items2;
   items1[1] = callback2(require("../../../../design/void/Form/native/index.tsx").FormSection, obj1);
-  items1[2] = callback(require("../../../../design/void/Form/native/index.tsx").FormSection, { children: callback(require("../../../../design/void/Form/native/index.tsx").FormSwitchRow, obj3) });
+  items1[2] = callback(require("../../../../design/void/Form/native/index.tsx").FormSection, {
+    children: callback(require("../../../../design/void/Form/native/index.tsx").FormSwitchRow, obj3),
+  });
   const obj2 = { children: callback(require("../../../../design/void/Form/native/index.tsx").FormSwitchRow, obj3) };
-  items1[3] = callback(require("../../../../design/void/Form/native/index.tsx").FormSection, { children: callback(require("../../../../design/void/Form/native/index.tsx").FormSwitchRow, obj5) });
+  items1[3] = callback(require("../../../../design/void/Form/native/index.tsx").FormSection, {
+    children: callback(require("../../../../design/void/Form/native/index.tsx").FormSwitchRow, obj5),
+  });
   const obj6 = { title: "Icon Position", accessibilityRole: "radiogroup", children: null };
-  const items3 = [callback(require("../../../../design/void/Form/native/index.tsx").FormHint, { children: "Whether to show the example icon on the left (default) or right." }), ];
+  const items3 = [
+    callback(require("../../../../design/void/Form/native/index.tsx").FormHint, {
+      children: "Whether to show the example icon on the left (default) or right.",
+    }),
+  ];
   const items4 = ["start", "end"];
   items3[1] = items4.map((label) => {
     const lib = label;
@@ -121,7 +145,7 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
       label,
       onPress() {
         return closure_1_5(closure_0);
-      }
+      },
     };
     items = [callback(lib(8363).FormRadioRow, obj), callback(lib(8363).FormDivider, {})];
     obj[0] = items;
@@ -130,7 +154,11 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
   obj6[2] = items3;
   items1[4] = callback2(require("../../../../design/void/Form/native/index.tsx").FormSection, obj6);
   const obj7 = { title: "Loading state", accessibilityRole: "radiogroup", children: null };
-  const items5 = [callback(require("../../../../design/void/Form/native/index.tsx").FormHint, { children: "Whether or not to show a loading state when a button is pressed" }), ];
+  const items5 = [
+    callback(require("../../../../design/void/Form/native/index.tsx").FormHint, {
+      children: "Whether or not to show a loading state when a button is pressed",
+    }),
+  ];
   const items6 = [true, false];
   items5[1] = items6.map((arg0) => {
     const lib = arg0;
@@ -158,4 +186,4 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
   items[1] = callback2(require("../../../../design/void/Form/native/index.tsx").Form, obj);
   obj[0] = items;
   return callback2(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx").BottomSheet, obj);
-};
+}

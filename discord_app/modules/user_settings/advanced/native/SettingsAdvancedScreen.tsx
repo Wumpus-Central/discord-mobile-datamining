@@ -18,7 +18,7 @@ const memoResult = importAllResult.memo(() => {
     obj[1] = items;
     const intl2 = callback(1236).intl;
     obj[2] = intl2.format(callback(1236).t["CY6q/Q"], { apiDocsUrl: constants2.API_DOCS });
-    const items1 = [obj, , , ];
+    const items1 = [obj, , ,];
     const obj2 = { settings: items2, subLabel: null };
     items2 = [constants.LAUNCHPAD];
     const intl3 = callback(1236).intl;

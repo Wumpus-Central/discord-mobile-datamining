@@ -34,7 +34,7 @@ function WaveformBar(value) {
   const items = [sharedValue, value];
   const animatedStyle = require(sharedValue1[7]).useAnimatedStyle(fn);
   const effect = importAllResult.useEffect(() => {
-    const result = 20 * Math.min(1, closure_0 / closure_1_12 * 1.25);
+    const result = 20 * Math.min(1, (closure_0 / closure_1_12) * 1.25);
     const result1 = sharedValue.set(value(sharedValue1[11]).withSpring(Math.max(2, result)));
   }, items);
   const items1 = [sharedValue1, sharedValue2];
@@ -63,7 +63,7 @@ function Waveform() {
     children: substr.map((arg0) => {
       [tmp, tmp2] = arg0;
       return callback2(closure_18, { value }, tmp2);
-    })
+    }),
   });
 }
 function Duration(animationValue) {
@@ -78,20 +78,25 @@ function Duration(animationValue) {
   const tmp = callback3();
   const tmp2 = useVoiceMessagesUIStore((startTimeMillis) => startTimeMillis.startTimeMillis);
   importDefault = tmp2;
-  const tmp3 = callback(first1.useState(() => {
-    let num = 0;
-    if (null != closure_1) {
-      const _Date = Date;
-      num = Date.now() - tmp;
-    }
-    return num;
-  }), 2);
+  const tmp3 = callback(
+    first1.useState(() => {
+      let num = 0;
+      if (null != closure_1) {
+        const _Date = Date;
+        num = Date.now() - tmp;
+      }
+      return num;
+    }),
+    2,
+  );
   first = tmp3[0];
   callback = tmp3[1];
   const tmp5 = callback(first1.useState(undefined), 2);
   first1 = tmp5[0];
   closure_5 = tmp5[1];
-  const tmp7 = useVoiceMessagesUIStore((savedVoiceMessageUploadData) => null != savedVoiceMessageUploadData.savedVoiceMessageUploadData);
+  const tmp7 = useVoiceMessagesUIStore(
+    (savedVoiceMessageUploadData) => null != savedVoiceMessageUploadData.savedVoiceMessageUploadData,
+  );
   closure_6 = tmp7;
   let obj = animationValue(first[13]);
   const items = [tmp2, tmp7];
@@ -120,7 +125,10 @@ function Duration(animationValue) {
     }
   }, items);
   const items1 = [first];
-  const memo = first1.useMemo(() => animationValue(first[14]).getTimeFormat(first / 1000, { padMinutes: false }), items1);
+  const memo = first1.useMemo(
+    () => animationValue(first[14]).getTimeFormat(first / 1000, { padMinutes: false }),
+    items1,
+  );
   const tmp13 = callback(first1.useState(false), 2);
   useVoiceMessagesUIStore = tmp13[1];
   const items2 = [first1];
@@ -161,7 +169,7 @@ function Duration(animationValue) {
   const animatedStyle = animationValue(first[7]).useAnimatedStyle(fn);
   obj = { style: items3, children: null };
   items3 = [tmp.durationContainer, animatedStyle];
-  const items4 = [tmp.dot, ];
+  const items4 = [tmp.dot];
   let tmp19 = null != tmp2;
   if (tmp19) {
     tmp19 = !tmp7;
@@ -171,7 +179,7 @@ function Duration(animationValue) {
     dotDismissed = tmp.dotDismissed;
   }
   items4[1] = dotDismissed;
-  const items5 = [closure_13(closure_5, { style: items4 }), ];
+  const items5 = [closure_13(closure_5, { style: items4 })];
   obj = { style: tmp.duration, variant: token, color: null, tabularNumbers: true, children: null };
   let str = "text-default";
   if (tmp13[0]) {
@@ -185,23 +193,77 @@ function Duration(animationValue) {
 }
 let c4 = importAllResult;
 ({ View: c5, ActivityIndicator } = get_ActivityIndicator);
-({ VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8, VOICE_RECORDING_MAX_DURATION_OFFSET: c9, VOICE_RECORDING_REALLY_WARN_DURATION_MILLIS: c10, VOICE_RECORDING_WARN_DURATION_MILLIS: unpackModuleId, WAVEFORM_WAVE_MAX_VALUE: closure_12 } = VoiceMessageAnimationState);
+({
+  VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8,
+  VOICE_RECORDING_MAX_DURATION_OFFSET: c9,
+  VOICE_RECORDING_REALLY_WARN_DURATION_MILLIS: c10,
+  VOICE_RECORDING_WARN_DURATION_MILLIS: unpackModuleId,
+  WAVEFORM_WAVE_MAX_VALUE: closure_12,
+} = VoiceMessageAnimationState);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = importDefaultResult.createAnimatedComponent(ActivityIndicator);
-let obj = { container: null, loading: null, dot: null, dotDismissed: null, waveformContainer: null, waveformBar: null, durationContainer: null, duration: null };
-obj = { height: "100%", flexDirection: "row", alignItems: "center", paddingVertical: ThemesDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_VERTICAL, paddingHorizontal: ThemesDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_PADDING_HORIZONTAL, gap: ThemesDefault.modules.mobile.VOICE_MESSAGE_CHAT_GAP, borderRadius: ThemesDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_BORDER_RADIUS, backgroundColor: ThemesDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
+let obj = {
+  container: null,
+  loading: null,
+  dot: null,
+  dotDismissed: null,
+  waveformContainer: null,
+  waveformBar: null,
+  durationContainer: null,
+  duration: null,
+};
+obj = {
+  height: "100%",
+  flexDirection: "row",
+  alignItems: "center",
+  paddingVertical: ThemesDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_VERTICAL,
+  paddingHorizontal: ThemesDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_PADDING_HORIZONTAL,
+  gap: ThemesDefault.modules.mobile.VOICE_MESSAGE_CHAT_GAP,
+  borderRadius: ThemesDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_BORDER_RADIUS,
+  backgroundColor: ThemesDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT,
+  borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH,
+  borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE,
+};
 obj[0] = obj;
 obj[1] = { position: "absolute", left: 12 };
-obj[2] = { height: 6, width: 6, backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, borderRadius: ThemesDefault.radii.round };
+obj[2] = {
+  height: 6,
+  width: 6,
+  backgroundColor: ThemesDefault.unsafe_rawColors.RED_400,
+  borderRadius: ThemesDefault.radii.round,
+};
 obj[3] = { backgroundColor: "transparent" };
-obj[4] = { flex: 1, height: "100%", overflow: "hidden", justifyContent: "flex-end", flexDirection: "row", alignItems: "center" };
-createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_VOICE_MESSAGE_RECORDING_WAVEFORM_BAR_BACKGROUND, borderRadius: 1 };
+obj[4] = {
+  flex: 1,
+  height: "100%",
+  overflow: "hidden",
+  justifyContent: "flex-end",
+  flexDirection: "row",
+  alignItems: "center",
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.MOBILE_VOICE_MESSAGE_RECORDING_WAVEFORM_BAR_BACKGROUND,
+  borderRadius: 1,
+};
 obj[5] = createCacheKey;
-let obj1 = { height: 6, width: 6, backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, borderRadius: ThemesDefault.radii.round };
-obj[6] = { flexDirection: "row", alignItems: "center", gap: 4, marginLeft: ThemesDefault.modules.mobile.VOICE_MESSAGE_DURATION_MARGIN_LEFT };
+let obj1 = {
+  height: 6,
+  width: 6,
+  backgroundColor: ThemesDefault.unsafe_rawColors.RED_400,
+  borderRadius: ThemesDefault.radii.round,
+};
+obj[6] = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: 4,
+  marginLeft: ThemesDefault.modules.mobile.VOICE_MESSAGE_DURATION_MARGIN_LEFT,
+};
 set = set.isAndroid();
 const mobile = ThemesDefault.modules.mobile;
-let obj4 = { lineHeight: set ? mobile.VOICE_MESSAGE_DURATION_LINE_HEIGHT_ANDROID : mobile.VOICE_MESSAGE_DURATION_LINE_HEIGHT_IOS, textAlignVertical: null };
+let obj4 = {
+  lineHeight: set ? mobile.VOICE_MESSAGE_DURATION_LINE_HEIGHT_ANDROID : mobile.VOICE_MESSAGE_DURATION_LINE_HEIGHT_IOS,
+  textAlignVertical: null,
+};
 let str;
 if (set.isAndroid()) {
   str = "center";
@@ -209,14 +271,31 @@ if (set.isAndroid()) {
 obj4[1] = str;
 obj[7] = obj4;
 let closure_16 = createCacheKey.createStyles(obj);
-let closure_17 = { code: "function VoiceMessageChatTsx1(){const{animatedHeight,animatedWidth,animatedMargin}=this.__closure;return{height:animatedHeight.get(),width:animatedWidth.get(),marginRight:animatedMargin.get()};}" };
+let closure_17 = {
+  code: "function VoiceMessageChatTsx1(){const{animatedHeight,animatedWidth,animatedMargin}=this.__closure;return{height:animatedHeight.get(),width:animatedWidth.get(),marginRight:animatedMargin.get()};}",
+};
 let closure_20 = { WARN: 0, [0]: "WARN", REALLY_WARN: 1, [1]: "REALLY_WARN", ENDED: 2, [2]: "ENDED" };
-let closure_21 = { code: "function VoiceMessageChatTsx2(){const{animationValue}=this.__closure;return{opacity:animationValue.get()};}" };
-let closure_23 = { code: "function VoiceMessageChatTsx3(){const{initialAnimation,isRecording}=this.__closure;return initialAnimation.get()===1&&isRecording;}" };
-let closure_24 = { code: "function VoiceMessageChatTsx4(result,previous){const{animationValue,withTiming,Easing,loadingOpacity}=this.__closure;if(result&&result!==previous){animationValue.set(withTiming(1,{easing:Easing.quad,duration:200}));loadingOpacity.set(0);}}" };
-let closure_25 = { code: "function VoiceMessageChatTsx5(){const{backgroundColor}=this.__closure;return{width:'100%',...(backgroundColor!=null?{backgroundColor:backgroundColor.get()}:{})};}" };
-let closure_26 = { code: "function VoiceMessageChatTsx6(){const{loadingOpacity}=this.__closure;return{opacity:loadingOpacity.get()};}" };
-let obj3 = { flexDirection: "row", alignItems: "center", gap: 4, marginLeft: ThemesDefault.modules.mobile.VOICE_MESSAGE_DURATION_MARGIN_LEFT };
+let closure_21 = {
+  code: "function VoiceMessageChatTsx2(){const{animationValue}=this.__closure;return{opacity:animationValue.get()};}",
+};
+let closure_23 = {
+  code: "function VoiceMessageChatTsx3(){const{initialAnimation,isRecording}=this.__closure;return initialAnimation.get()===1&&isRecording;}",
+};
+let closure_24 = {
+  code: "function VoiceMessageChatTsx4(result,previous){const{animationValue,withTiming,Easing,loadingOpacity}=this.__closure;if(result&&result!==previous){animationValue.set(withTiming(1,{easing:Easing.quad,duration:200}));loadingOpacity.set(0);}}",
+};
+let closure_25 = {
+  code: "function VoiceMessageChatTsx5(){const{backgroundColor}=this.__closure;return{width:'100%',...(backgroundColor!=null?{backgroundColor:backgroundColor.get()}:{})};}",
+};
+let closure_26 = {
+  code: "function VoiceMessageChatTsx6(){const{loadingOpacity}=this.__closure;return{opacity:loadingOpacity.get()};}",
+};
+let obj3 = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: 4,
+  marginLeft: ThemesDefault.modules.mobile.VOICE_MESSAGE_DURATION_MARGIN_LEFT,
+};
 let result = set.fileFinishedImporting("modules/voice_messages/native/components/VoiceMessageChat.tsx");
 
 export default importAllResult.memo((isRecording) => {
@@ -276,7 +355,12 @@ export default importAllResult.memo((isRecording) => {
       return;
     }
   }
-  obj = { animationValue: sharedValue1, withTiming: isRecording(backgroundColor[12]).withTiming, Easing: isRecording(backgroundColor[7]).Easing, loadingOpacity: sharedValue };
+  obj = {
+    animationValue: sharedValue1,
+    withTiming: isRecording(backgroundColor[12]).withTiming,
+    Easing: isRecording(backgroundColor[7]).Easing,
+    loadingOpacity: sharedValue,
+  };
   A.__closure = obj;
   A.__workletHash = 7661977794788;
   A.__initData = closure_24;
@@ -319,7 +403,13 @@ export default importAllResult.memo((isRecording) => {
     obj1[1] = token;
     tmp10 = callback2(closure_15, obj1);
   }
-  const items3 = [tmp10, leftAccessory, callback2(Duration, { animationValue: sharedValue1 }), callback2(Waveform, {}), rightAccessory];
+  const items3 = [
+    tmp10,
+    leftAccessory,
+    callback2(Duration, { animationValue: sharedValue1 }),
+    callback2(Waveform, {}),
+    rightAccessory,
+  ];
   obj[1] = items3;
   return closure_14(initialAnimation(backgroundColor[7]).View, obj);
 });

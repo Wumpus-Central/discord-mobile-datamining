@@ -11,7 +11,15 @@ import importAllResult from "../../../../../../_runtime/00019_noop.js";
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles((marginLeft) => {
-  obj = { pressable: obj, body: { flexDirection: "row", alignItems: "center" }, labels: { justifyContent: "center", flex: 1 }, underlayColor: null, text: null, iconContainer: null, extrasContainer: null };
+  obj = {
+    pressable: obj,
+    body: { flexDirection: "row", alignItems: "center" },
+    labels: { justifyContent: "center", flex: 1 },
+    underlayColor: null,
+    text: null,
+    iconContainer: null,
+    extrasContainer: null,
+  };
   obj = { paddingHorizontal: 16, paddingVertical: closure_4 };
   obj = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
   obj[3] = obj;
@@ -30,22 +38,41 @@ const memoResult = importAllResult.memo((accessibilityRole) => {
   if (str === undefined) {
     str = "button";
   }
-  ({ accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, bodyStyle } = accessibilityRole);
+  ({ accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, bodyStyle } =
+    accessibilityRole);
   if (iconWidth == null) {
     iconWidth = 0;
   }
   const tmpResult = closure_7(iconWidth);
-  let obj = { accessible, accessibilityRole: str, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, style: items, onPress, unstable_pressDelay: 130, underlayColor: tmpResult.underlayColor.backgroundColor, children: null };
+  let obj = {
+    accessible,
+    accessibilityRole: str,
+    accessibilityLabel,
+    accessibilityHint,
+    accessibilityActions,
+    onAccessibilityAction,
+    style: items,
+    onPress,
+    unstable_pressDelay: 130,
+    underlayColor: tmpResult.underlayColor.backgroundColor,
+    children: null,
+  };
   items = [tmpResult.pressable, containerStyle];
-  const items1 = [header, , ];
+  const items1 = [header, ,];
   obj = { style: items2, children: null };
   items2 = [tmpResult.body, bodyStyle];
   const items3 = [tmpResult.iconContainer, iconContainerStyle];
-  const items4 = [callback(View, { style: items3, children: icon }), , ];
+  const items4 = [callback(View, { style: items3, children: icon }), ,];
   obj = { style: tmpResult.labels, children: null };
   let tmp7Result = label;
   if (typeof label === "string") {
-    obj1 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", style: null, children: null };
+    obj1 = {
+      lineClamp: 1,
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      style: null,
+      children: null,
+    };
     obj1[3] = tmpResult.text;
     obj1[4] = label;
     tmp7Result = tmp7(Text.Text, obj1);

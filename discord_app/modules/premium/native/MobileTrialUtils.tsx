@@ -8,23 +8,26 @@ import usePremiumTrialOffer from "../hooks/usePremiumTrialOffer.android.tsx";
 let closure_2 = GuildFeatures.PremiumSubscriptionSKUToPremiumType;
 let result = set.fileFinishedImporting("modules/premium/native/MobileTrialUtils.tsx");
 
-export const useShouldShowPremiumTrialUserSettingsAvatarBadge = function useShouldShowPremiumTrialUserSettingsAvatarBadge() {
-  const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
-  const obj = usePremiumTrialOffer;
-  let tmp3 = null != premiumTrialOffer;
-  const result = UNSAFE_isDismissibleContentDismissed.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE);
-  if (tmp3) {
-    let hasAcknowledged;
-    if (premiumTrialOffer != null) {
-      hasAcknowledged = premiumTrialOffer.hasAcknowledged;
+export const useShouldShowPremiumTrialUserSettingsAvatarBadge =
+  function useShouldShowPremiumTrialUserSettingsAvatarBadge() {
+    const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
+    const obj = usePremiumTrialOffer;
+    let tmp3 = null != premiumTrialOffer;
+    const result = UNSAFE_isDismissibleContentDismissed.useIsDismissibleContentDismissed_UNSAFE(
+      DismissibleContent.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE,
+    );
+    if (tmp3) {
+      let hasAcknowledged;
+      if (premiumTrialOffer != null) {
+        hasAcknowledged = premiumTrialOffer.hasAcknowledged;
+      }
+      tmp3 = true !== hasAcknowledged;
     }
-    tmp3 = true !== hasAcknowledged;
-  }
-  if (tmp3) {
-    tmp3 = !result;
-  }
-  return tmp3;
-};
+    if (tmp3) {
+      tmp3 = !result;
+    }
+    return tmp3;
+  };
 export const usePremiumTrialOfferPremiumType = function usePremiumTrialOfferPremiumType() {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let skuId;

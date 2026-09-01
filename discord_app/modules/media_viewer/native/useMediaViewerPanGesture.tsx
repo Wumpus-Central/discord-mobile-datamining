@@ -3,15 +3,36 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
-let closure_4 = { damping: 15, mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
-let closure_5 = { code: "function useMediaViewerPanGestureTsx1(){const{runOnJS,handleClose}=this.__closure;runOnJS(handleClose)();}" };
-let closure_6 = { code: "function useMediaViewerPanGestureTsx2(){const{isInteracting,velocity,swipeVelocityThreshold,runOnJS,dismiss,translatePos,withSpring,SPRING_CONFIG}=this.__closure;isInteracting.set(false);const willClose=Math.abs(velocity.get())>swipeVelocityThreshold;if(willClose){runOnJS(dismiss)();}else if(translatePos.get()!==0){translatePos.set(withSpring(0,{velocity:velocity.get(),...SPRING_CONFIG}));}}" };
-let closure_7 = { code: "function useMediaViewerPanGestureTsx3(_,manager){const{enabled}=this.__closure;if(!enabled.get()){manager.fail();}}" };
-let closure_8 = { code: "function useMediaViewerPanGestureTsx4({velocityY:velocityY,translationY:translationY}){const{translatePos,start,velocity}=this.__closure;translatePos.set(translationY+start.get().y);velocity.set(velocityY);}" };
-let closure_9 = { code: "function useMediaViewerPanGestureTsx5(){const{start,translatePos,isInteracting}=this.__closure;start.set({x:0,y:translatePos.get()});isInteracting.set(true);}" };
+let closure_4 = {
+  damping: 15,
+  mass: 1,
+  stiffness: 250,
+  overshootClamping: true,
+  restSpeedThreshold: 0.001,
+  restDisplacementThreshold: 0.001,
+};
+let closure_5 = {
+  code: "function useMediaViewerPanGestureTsx1(){const{runOnJS,handleClose}=this.__closure;runOnJS(handleClose)();}",
+};
+let closure_6 = {
+  code: "function useMediaViewerPanGestureTsx2(){const{isInteracting,velocity,swipeVelocityThreshold,runOnJS,dismiss,translatePos,withSpring,SPRING_CONFIG}=this.__closure;isInteracting.set(false);const willClose=Math.abs(velocity.get())>swipeVelocityThreshold;if(willClose){runOnJS(dismiss)();}else if(translatePos.get()!==0){translatePos.set(withSpring(0,{velocity:velocity.get(),...SPRING_CONFIG}));}}",
+};
+let closure_7 = {
+  code: "function useMediaViewerPanGestureTsx3(_,manager){const{enabled}=this.__closure;if(!enabled.get()){manager.fail();}}",
+};
+let closure_8 = {
+  code: "function useMediaViewerPanGestureTsx4({velocityY:velocityY,translationY:translationY}){const{translatePos,start,velocity}=this.__closure;translatePos.set(translationY+start.get().y);velocity.set(velocityY);}",
+};
+let closure_9 = {
+  code: "function useMediaViewerPanGestureTsx5(){const{start,translatePos,isInteracting}=this.__closure;start.set({x:0,y:translatePos.get()});isInteracting.set(true);}",
+};
 let result = require("set").fileFinishedImporting("modules/media_viewer/native/useMediaViewerPanGesture.tsx");
 
-export const useMediaViewerPanGestureConfig = function useMediaViewerPanGestureConfig(arg0, swipeVelocityThreshold, onClose) {
+export const useMediaViewerPanGestureConfig = function useMediaViewerPanGestureConfig(
+  arg0,
+  swipeVelocityThreshold,
+  onClose,
+) {
   const _require = arg0;
   closure_1 = swipeVelocityThreshold;
   dependencyMap = onClose;
@@ -55,8 +76,29 @@ export const useMediaViewerPanGestureConfig = function useMediaViewerPanGestureC
     fn.__initData = sharedValue2;
     const result1 = sharedValue2.set(callback(onClose[4]).withSpring(tmp2, obj, "respect-motion-settings", fn));
   }, items1);
-  const items2 = [sharedValue3, sharedValue, sharedValue1, sharedValue2, swipeVelocityThreshold, callback1, sharedValue4, sharedValue5];
-  return sharedValue.useMemo(() => ({ velocity: sharedValue3, isClosing: sharedValue, isInteracting: sharedValue1, overlayEnabled: sharedValue5, translatePos: sharedValue2, swipeVelocityThreshold: closure_1, dismiss: callback1, start: sharedValue4 }), items2);
+  const items2 = [
+    sharedValue3,
+    sharedValue,
+    sharedValue1,
+    sharedValue2,
+    swipeVelocityThreshold,
+    callback1,
+    sharedValue4,
+    sharedValue5,
+  ];
+  return sharedValue.useMemo(
+    () => ({
+      velocity: sharedValue3,
+      isClosing: sharedValue,
+      isInteracting: sharedValue1,
+      overlayEnabled: sharedValue5,
+      translatePos: sharedValue2,
+      swipeVelocityThreshold: closure_1,
+      dismiss: callback1,
+      start: sharedValue4,
+    }),
+    items2,
+  );
 };
 export const useMediaViewerPanGesture = function useMediaViewerPanGesture(panGestureConfig, derivedValue) {
   let swipeVelocityThreshold = panGestureConfig.swipeVelocityThreshold;
@@ -110,7 +152,12 @@ export const useMediaViewerPanGesture = function useMediaViewerPanGesture(panGes
     fn.__workletHash = 10675684732258;
     fn.__initData = callback;
     obj1 = { enabled: closure_5 };
-    const onUpdateResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]).onStart(V).onUpdate(S);
+    const onUpdateResult = Gesture.Pan()
+      .maxPointers(1)
+      .activeOffsetY([-10, 10])
+      .failOffsetX([-10, 10])
+      .onStart(V)
+      .onUpdate(S);
     const fn2 = function t() {
       const result = store2.set(false);
       let obj = store;
@@ -128,8 +175,23 @@ export const useMediaViewerPanGesture = function useMediaViewerPanGesture(panGes
         obj2 = store3;
       }
     };
-    const onTouchesDownResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]).onStart(V).onUpdate(S).onTouchesDown(fn);
-    fn2.__closure = { isInteracting, velocity, swipeVelocityThreshold, runOnJS: swipeVelocityThreshold(isInteracting[1]).runOnJS, dismiss: closure_6, translatePos, withSpring: swipeVelocityThreshold(isInteracting[4]).withSpring, SPRING_CONFIG: start };
+    const onTouchesDownResult = Gesture.Pan()
+      .maxPointers(1)
+      .activeOffsetY([-10, 10])
+      .failOffsetX([-10, 10])
+      .onStart(V)
+      .onUpdate(S)
+      .onTouchesDown(fn);
+    fn2.__closure = {
+      isInteracting,
+      velocity,
+      swipeVelocityThreshold,
+      runOnJS: swipeVelocityThreshold(isInteracting[1]).runOnJS,
+      dismiss: closure_6,
+      translatePos,
+      withSpring: swipeVelocityThreshold(isInteracting[4]).withSpring,
+      SPRING_CONFIG: start,
+    };
     fn2.__workletHash = 3185523772752;
     fn2.__initData = closure_6;
     return onTouchesDownResult.onEnd(fn2);
@@ -149,7 +211,7 @@ export const useMediaViewerPanGesture = function useMediaViewerPanGesture(panGes
           return tmp[index];
         }
       },
-      nativeGesture: NativeResult
+      nativeGesture: NativeResult,
     };
   }, items1);
 };

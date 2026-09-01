@@ -14,4 +14,4 @@ export default function getDefaultProviderDescription(arg0) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.TC0upt);
   }
-};
+}

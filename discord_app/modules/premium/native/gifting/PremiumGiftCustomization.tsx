@@ -15,9 +15,19 @@ createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BAS
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingBottom: ThemesDefault.space.PX_24 };
 let obj1 = { paddingBottom: ThemesDefault.space.PX_24 };
-createCacheKey[2] = { marginTop: ThemesDefault.space.PX_24, marginLeft: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8, fontSize: 14 };
+createCacheKey[2] = {
+  marginTop: ThemesDefault.space.PX_24,
+  marginLeft: ThemesDefault.space.PX_16,
+  marginBottom: ThemesDefault.space.PX_8,
+  fontSize: 14,
+};
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginTop: ThemesDefault.space.PX_24, marginLeft: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8, fontSize: 14 };
+let obj2 = {
+  marginTop: ThemesDefault.space.PX_24,
+  marginLeft: ThemesDefault.space.PX_16,
+  marginBottom: ThemesDefault.space.PX_8,
+  fontSize: 14,
+};
 const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftCustomization.tsx");
 
 export default function PremiumGiftCustomization() {
@@ -29,7 +39,10 @@ export default function PremiumGiftCustomization() {
   ({ recipientUser, premiumType, claimableRewards, selectedGiftingPromotionReward } = nativeGiftContext);
   let obj2 = navigation(ref[9]);
   let obj3 = React;
-  const giftingPromotionDefaultSelectionV2 = obj2.useGiftingPromotionDefaultSelectionV2(claimableRewards, selectedGiftingPromotionReward);
+  const giftingPromotionDefaultSelectionV2 = obj2.useGiftingPromotionDefaultSelectionV2(
+    claimableRewards,
+    selectedGiftingPromotionReward,
+  );
   const tmp7 = callback(React.useState(0), 2);
   const first = tmp7[0];
   ref = React.useRef(null);
@@ -64,7 +77,7 @@ export default function PremiumGiftCustomization() {
   }, items1);
   obj = { style: tmp4.container, children: null };
   obj = { ref, contentContainerStyle: tmp4.scrollViewContainer, showsVerticalScrollIndicator: false, children: null };
-  const items2 = [callback2(first(ref[11]), {}), callback2(first(ref[12]), {}), ];
+  const items2 = [callback2(first(ref[11]), {}), callback2(first(ref[12]), {})];
   let tmp13Result = null != recipientUser;
   if (tmp13Result) {
     obj1 = { children: null };
@@ -72,7 +85,7 @@ export default function PremiumGiftCustomization() {
     obj2[0] = tmp4.senderHeaderTitle;
     const intl3 = tmp(tmp2[10]).intl;
     obj2[2] = intl3.string(tmp(tmp2[10]).t.NlkxGS);
-    const items3 = [tmp15(tmp(tmp2[13]).Text, obj2), , ];
+    const items3 = [tmp15(tmp(tmp2[13]).Text, obj2), ,];
     obj3 = { user: null };
     obj3[0] = recipientUser;
     items3[1] = tmp15(tmp17(tmp2[14]), obj3);
@@ -85,7 +98,10 @@ export default function PremiumGiftCustomization() {
   }
   items2[2] = tmp13Result;
   obj[3] = closure_10(closure_5, { children: items2 });
-  const items4 = [callback2(closure_6, obj), callback2(first(ref[16]), { defaultSelection: giftingPromotionDefaultSelectionV2 })];
+  const items4 = [
+    callback2(closure_6, obj),
+    callback2(first(ref[16]), { defaultSelection: giftingPromotionDefaultSelectionV2 }),
+  ];
   obj[1] = items4;
   return closure_10(closure_5, obj);
-};
+}

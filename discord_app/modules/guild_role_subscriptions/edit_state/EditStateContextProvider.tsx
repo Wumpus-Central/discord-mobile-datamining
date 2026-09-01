@@ -4,7 +4,9 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 let c0 = importAllResult;
 let context = importAllResult.createContext(undefined);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/edit_state/EditStateContextProvider.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/edit_state/EditStateContextProvider.tsx",
+);
 
 export const useEditStateContext = function useEditStateContext() {
   const context = importAllResult.useContext(closure_2);

@@ -4,7 +4,9 @@ import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectibles
 import closure_2 from "../../devtools/dev_settings/DevSettingsStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx",
+);
 
 export default function useMaybeFetchCollectiblesCategories(paymentGateway) {
   paymentGateway = undefined;
@@ -13,7 +15,10 @@ export default function useMaybeFetchCollectiblesCategories(paymentGateway) {
   }
   let obj = initialize;
   const items = [closure_2];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ noCache: store.get("shop_disable_cache"), includeUnpublished: store.get("shop_include_unpublished") }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    noCache: store.get("shop_disable_cache"),
+    includeUnpublished: store.get("shop_include_unpublished"),
+  }));
   ({ noCache, includeUnpublished } = stateFromStoresObject);
   obj = { noCache, includeUnpublished, paymentGateway, countryCode: null, logPerf: null };
   let countryCode;
@@ -34,5 +39,10 @@ export default function useMaybeFetchCollectiblesCategories(paymentGateway) {
   if (paymentGateway != null) {
     skipFetch = paymentGateway.skipFetch;
   }
-  return useMaybeFetchCollectiblesCategoriesShared.useMaybeFetchCollectiblesCategoriesShared(obj, noOp, arg1, skipFetch);
-};
+  return useMaybeFetchCollectiblesCategoriesShared.useMaybeFetchCollectiblesCategoriesShared(
+    obj,
+    noOp,
+    arg1,
+    skipFetch,
+  );
+}

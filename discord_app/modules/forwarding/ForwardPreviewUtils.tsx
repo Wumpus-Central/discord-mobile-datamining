@@ -32,18 +32,20 @@ export const useForwardPreviewContent = function useForwardPreviewContent(messag
   const items = [];
   let obj = message(589);
   const items1 = [onlyAttachmentIds];
-  if (obj.useStateFromStores(items1, () => {
-    let shouldStripEmbedsResult = null != closure_1;
-    if (shouldStripEmbedsResult) {
-      shouldStripEmbedsResult = !message(closure_1_1[2]).canEmbedLinks(tmp, onlyAttachmentIds);
-      const obj = message(closure_1_1[2]);
-    }
-    if (shouldStripEmbedsResult) {
-      shouldStripEmbedsResult = message(closure_1_1[2]).shouldStripEmbeds(message);
-      const obj2 = message(closure_1_1[2]);
-    }
-    return shouldStripEmbedsResult;
-  })) {
+  if (
+    obj.useStateFromStores(items1, () => {
+      let shouldStripEmbedsResult = null != closure_1;
+      if (shouldStripEmbedsResult) {
+        shouldStripEmbedsResult = !message(closure_1_1[2]).canEmbedLinks(tmp, onlyAttachmentIds);
+        const obj = message(closure_1_1[2]);
+      }
+      if (shouldStripEmbedsResult) {
+        shouldStripEmbedsResult = message(closure_1_1[2]).shouldStripEmbeds(message);
+        const obj2 = message(closure_1_1[2]);
+      }
+      return shouldStripEmbedsResult;
+    })
+  ) {
     let tmp6 = null != onlyEmbedIndices;
     if (!tmp6) {
       let tmp7 = "" === message.content;

@@ -3,12 +3,9 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 
 const Store = initializeDefault.Store;
-class BrowserHandoffStore extends Store {
-}
+class BrowserHandoffStore extends Store {}
 const prototype = BrowserHandoffStore.prototype;
-prototype["initialize"] = function initialize() {
-
-};
+prototype["initialize"] = function initialize() {};
 prototype["isHandoffAvailable"] = function isHandoffAvailable() {
   return false;
 };
@@ -16,13 +13,13 @@ Object.defineProperty(prototype, "user", {
   get: function user(xuio0C) {
     return null;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "key", {
   get: function key() {
     return null;
   },
-  set: undefined
+  set: undefined,
 });
 BrowserHandoffStore.displayName = "BrowserHandoffStore";
 const browserHandoffStore = new BrowserHandoffStore(dispatcherDefault, {});

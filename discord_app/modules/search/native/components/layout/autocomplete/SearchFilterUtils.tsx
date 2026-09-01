@@ -165,7 +165,7 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(cl
                     closure_1_1(closure_1_2[18]).trackSearchFilterAdd(obj);
                     let obj2 = closure_1_1(closure_1_2[18]);
                     const initialMessages = closure_1_1(closure_1_2[14]).fetchInitialMessages(closure_0);
-                  }
+                  },
                 };
                 obj.openLazy(callback(paths[17])(paths[16], paths.paths), "DatePicker", obj);
               });

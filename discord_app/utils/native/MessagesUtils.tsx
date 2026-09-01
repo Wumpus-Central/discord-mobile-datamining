@@ -23,7 +23,19 @@ export default {
     closure_1 = props;
     let tmp = 0 !== codedLinks.codedLinks.length;
     if (tmp) {
-      let someResult = addResult.invites !== props.invites || addResult.appDirectoryEmbedApplications !== props.appDirectoryEmbedApplications || addResult.invalidAppDirectoryEmbedApplicationIds !== props.invalidAppDirectoryEmbedApplicationIds || addResult.invalidApplicationIds !== props.invalidApplicationIds || addResult.appDirectoryEmbedApplicationFetchStates !== props.appDirectoryEmbedApplicationFetchStates || addResult.guildTemplates !== props.guildTemplates || addResult.buildOverrides !== props.buildOverrides || addResult.activityParticipants !== props.activityParticipants || addResult.quests !== props.quests || addResult.isFetchingCurrentQuests !== props.isFetchingCurrentQuests || addResult.applicationAssetFetchingIds !== props.applicationAssetFetchingIds || addResult.experimentEmbeds !== props.experimentEmbeds;
+      let someResult =
+        addResult.invites !== props.invites ||
+        addResult.appDirectoryEmbedApplications !== props.appDirectoryEmbedApplications ||
+        addResult.invalidAppDirectoryEmbedApplicationIds !== props.invalidAppDirectoryEmbedApplicationIds ||
+        addResult.invalidApplicationIds !== props.invalidApplicationIds ||
+        addResult.appDirectoryEmbedApplicationFetchStates !== props.appDirectoryEmbedApplicationFetchStates ||
+        addResult.guildTemplates !== props.guildTemplates ||
+        addResult.buildOverrides !== props.buildOverrides ||
+        addResult.activityParticipants !== props.activityParticipants ||
+        addResult.quests !== props.quests ||
+        addResult.isFetchingCurrentQuests !== props.isFetchingCurrentQuests ||
+        addResult.applicationAssetFetchingIds !== props.applicationAssetFetchingIds ||
+        addResult.experimentEmbeds !== props.experimentEmbeds;
       if (someResult) {
         codedLinks = codedLinks.codedLinks;
         someResult = codedLinks.some((arg0) => {
@@ -141,22 +153,32 @@ export default {
                       const invalidAppDirectoryEmbedApplicationIds = addResult.invalidAppDirectoryEmbedApplicationIds;
                       const invalidAppDirectoryEmbedApplicationIds2 = props.invalidAppDirectoryEmbedApplicationIds;
                       const hasItem = invalidAppDirectoryEmbedApplicationIds.has(code);
-                      let tmp25 = addResult.appDirectoryEmbedApplications[code] !== props.appDirectoryEmbedApplications[code];
+                      let tmp25 =
+                        addResult.appDirectoryEmbedApplications[code] !== props.appDirectoryEmbedApplications[code];
                       if (!tmp25) {
                         tmp25 = hasItem !== invalidAppDirectoryEmbedApplicationIds2.has(code);
                       }
                       if (!tmp25) {
-                        tmp25 = addResult.appDirectoryEmbedApplicationFetchStates[code] !== props.appDirectoryEmbedApplicationFetchStates[code];
+                        tmp25 =
+                          addResult.appDirectoryEmbedApplicationFetchStates[code] !==
+                          props.appDirectoryEmbedApplicationFetchStates[code];
                       }
                       return tmp25;
                     } else if (tmp(tmp2[2]).CodedLinkType.ACTIVITY_BOOKMARK === type) {
-                      return addResult.activityParticipants !== props.activityParticipants || addResult.invalidApplicationIds !== props.invalidApplicationIds || addResult.applicationAssetFetchingIds !== props.applicationAssetFetchingIds;
+                      return (
+                        addResult.activityParticipants !== props.activityParticipants ||
+                        addResult.invalidApplicationIds !== props.invalidApplicationIds ||
+                        addResult.applicationAssetFetchingIds !== props.applicationAssetFetchingIds
+                      );
                     } else if (tmp(tmp2[2]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE === type) {
                       const invites = addResult.invites;
                       const value3 = invites.get(code);
                       const invites2 = props.invites;
                       const value4 = invites2.get(code);
-                      let tmp12 = addResult.activityParticipants !== props.activityParticipants || tmp8.invalidApplicationIds !== tmp10.invalidApplicationIds || tmp8.applicationAssetFetchingIds !== tmp10.applicationAssetFetchingIds;
+                      let tmp12 =
+                        addResult.activityParticipants !== props.activityParticipants ||
+                        tmp8.invalidApplicationIds !== tmp10.invalidApplicationIds ||
+                        tmp8.applicationAssetFetchingIds !== tmp10.applicationAssetFetchingIds;
                       if (!tmp12) {
                         let state6;
                         if (value3 != null) {
@@ -183,12 +205,18 @@ export default {
                           if (tmp(tmp2[2]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
                             if (tmp(tmp2[2]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
                               if (tmp(tmp2[2]).CodedLinkType.QUESTS_EMBED === type) {
-                                return addResult.quests !== props.quests || addResult.isFetchingCurrentQuests !== tmp6.isFetchingCurrentQuests;
+                                return (
+                                  addResult.quests !== props.quests ||
+                                  addResult.isFetchingCurrentQuests !== tmp6.isFetchingCurrentQuests
+                                );
                               } else {
                                 if (tmp(tmp2[2]).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
                                   if (tmp(tmp2[2]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
                                     if (tmp(tmp2[2]).CodedLinkType.APP_OAUTH2_LINK === type) {
-                                      return addResult.applicationAssetFetchingIds !== props.applicationAssetFetchingIds || addResult.invalidApplicationIds !== tmp4.invalidApplicationIds;
+                                      return (
+                                        addResult.applicationAssetFetchingIds !== props.applicationAssetFetchingIds ||
+                                        addResult.invalidApplicationIds !== tmp4.invalidApplicationIds
+                                      );
                                     } else {
                                       if (tmp(tmp2[2]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
                                         if (tmp(tmp2[2]).CodedLinkType.GAME_PROFILE !== type) {
@@ -262,13 +290,18 @@ export default {
     closure_1 = props;
     embeds = embeds.embeds;
     const found = embeds.filter((type) => type.type === constants.POST_PREVIEW);
-    return 0 !== found.length && found.some((url) => {
-      const mediaPostEmbedChannelId = addResult(props[4]).getMediaPostEmbedChannelId(url.url);
-      let tmp2 = null != mediaPostEmbedChannelId;
-      if (tmp2) {
-        tmp2 = addResult.mediaPostPreviewEmbeds[mediaPostEmbedChannelId] !== props.mediaPostPreviewEmbeds[mediaPostEmbedChannelId];
-      }
-      return tmp2;
-    });
-  }
+    return (
+      0 !== found.length &&
+      found.some((url) => {
+        const mediaPostEmbedChannelId = addResult(props[4]).getMediaPostEmbedChannelId(url.url);
+        let tmp2 = null != mediaPostEmbedChannelId;
+        if (tmp2) {
+          tmp2 =
+            addResult.mediaPostPreviewEmbeds[mediaPostEmbedChannelId] !==
+            props.mediaPostPreviewEmbeds[mediaPostEmbedChannelId];
+        }
+        return tmp2;
+      })
+    );
+  },
 };

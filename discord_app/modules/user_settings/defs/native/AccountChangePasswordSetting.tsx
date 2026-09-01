@@ -11,13 +11,13 @@ obj = {
     return intl.string(getSystemLocale.t["CIGa+7"]);
   },
   parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.ACCOUNT_CHANGE_PASSWORD,
   getComponent() {
     return require("../../account/native/AccountEditPassword.tsx").default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountChangePasswordSetting.tsx");

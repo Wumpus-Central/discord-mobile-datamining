@@ -57,7 +57,26 @@ function trackClose(QUICKSWITCHER_RESULT_SELECTED, type) {
   if (!tmp11) {
     tmp13 = channelId;
   }
-  obj = { current_channel_id: tmp13, current_channel_static_route: null, current_guild_id: null, query_mode: null, query_length: null, max_query_length: null, is_email_like: null, is_phone_like: null, is_username_like: null, query: null, top_result_type: null, top_result_score: null, num_results_total: null, num_results_users: null, num_results_text_channels: null, num_results_voice_channels: null, num_results_guilds: null, num_results_group_dms: null };
+  obj = {
+    current_channel_id: tmp13,
+    current_channel_static_route: null,
+    current_guild_id: null,
+    query_mode: null,
+    query_length: null,
+    max_query_length: null,
+    is_email_like: null,
+    is_phone_like: null,
+    is_username_like: null,
+    query: null,
+    top_result_type: null,
+    top_result_score: null,
+    num_results_total: null,
+    num_results_users: null,
+    num_results_text_channels: null,
+    num_results_voice_channels: null,
+    num_results_guilds: null,
+    num_results_group_dms: null,
+  };
   let tmp14;
   if (tmp11) {
     tmp14 = channelId;
@@ -285,7 +304,7 @@ function _openInviteFromQuickSwitcher() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, invite) {
+    return (function* (arg0, invite) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -359,15 +378,38 @@ function _openInviteFromQuickSwitcher() {
   }
   return applyArgumentsResult;
 }
-({ Layers, ME: closure_12, AppContext: map1, AnalyticEvents: closure_14, AnalyticsLocations: closure_15, AnalyticsPages: closure_16 } = ME);
+({
+  Layers,
+  ME: closure_12,
+  AppContext: map1,
+  AnalyticEvents: closure_14,
+  AnalyticsLocations: closure_15,
+  AnalyticsPages: closure_16,
+} = ME);
 let obj = {};
-obj[require("sortByMatchScore").AutocompleterQuerySymbols.USER] = require("sortByMatchScore").AutocompleterResultTypes.USER;
-obj[require("sortByMatchScore").AutocompleterQuerySymbols.TEXT_CHANNEL] = require("sortByMatchScore").AutocompleterResultTypes.TEXT_CHANNEL;
-obj[require("sortByMatchScore").AutocompleterQuerySymbols.VOICE_CHANNEL] = require("sortByMatchScore").AutocompleterResultTypes.VOICE_CHANNEL;
-obj[require("sortByMatchScore").AutocompleterQuerySymbols.GUILD] = require("sortByMatchScore").AutocompleterResultTypes.GUILD;
-obj[require("sortByMatchScore").AutocompleterQuerySymbols.GAME_PROFILE] = require("sortByMatchScore").AutocompleterResultTypes.GAME_PROFILE;
+obj[require("sortByMatchScore").AutocompleterQuerySymbols.USER] =
+  require("sortByMatchScore").AutocompleterResultTypes.USER;
+obj[require("sortByMatchScore").AutocompleterQuerySymbols.TEXT_CHANNEL] =
+  require("sortByMatchScore").AutocompleterResultTypes.TEXT_CHANNEL;
+obj[require("sortByMatchScore").AutocompleterQuerySymbols.VOICE_CHANNEL] =
+  require("sortByMatchScore").AutocompleterResultTypes.VOICE_CHANNEL;
+obj[require("sortByMatchScore").AutocompleterQuerySymbols.GUILD] =
+  require("sortByMatchScore").AutocompleterResultTypes.GUILD;
+obj[require("sortByMatchScore").AutocompleterQuerySymbols.GAME_PROFILE] =
+  require("sortByMatchScore").AutocompleterResultTypes.GAME_PROFILE;
 let closure_19 = Object.freeze(obj);
-const regExp = new RegExp("^" + require("sortByMatchScore").AutocompleterQuerySymbols.USER + "|" + require("sortByMatchScore").AutocompleterQuerySymbols.TEXT_CHANNEL + "|" + require("sortByMatchScore").AutocompleterQuerySymbols.VOICE_CHANNEL + "|\\" + require("sortByMatchScore").AutocompleterQuerySymbols.GUILD + "|\\" + require("sortByMatchScore").AutocompleterQuerySymbols.GAME_PROFILE);
+const regExp = new RegExp(
+  "^" +
+    require("sortByMatchScore").AutocompleterQuerySymbols.USER +
+    "|" +
+    require("sortByMatchScore").AutocompleterQuerySymbols.TEXT_CHANNEL +
+    "|" +
+    require("sortByMatchScore").AutocompleterQuerySymbols.VOICE_CHANNEL +
+    "|\\" +
+    require("sortByMatchScore").AutocompleterQuerySymbols.GUILD +
+    "|\\" +
+    require("sortByMatchScore").AutocompleterQuerySymbols.GAME_PROFILE,
+);
 const result = require("set").fileFinishedImporting("modules/quickswitcher/QuickSwitcherActionCreators.tsx");
 
 export { getQuickSwitcherOptions };
@@ -439,7 +481,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
             obj[1] = type;
             dispatcherDefault.dispatch(obj);
             let obj2 = dispatcherDefault;
-            callback(function*() {
+            callback(function* () {
               if (c3 === 2) {
                 c3 = 3;
                 HermesBuiltin.throwTypeError();
@@ -499,9 +541,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                   throw tmp16;
                 }
               }
-            })().catch(() => {
-
-            });
+            })().catch(() => {});
           } else {
             switchToResult(type);
           }

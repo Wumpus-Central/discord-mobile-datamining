@@ -8,4 +8,4 @@ export default function useRefreshSavedMessages() {
   const effect = React.useEffect(() => {
     const andUpdateSavedMessages = callback(table[1]).fetchAndUpdateSavedMessages();
   }, []);
-};
+}

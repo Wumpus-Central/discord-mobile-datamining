@@ -17,4 +17,4 @@ export default function useShouldBlockDMInputForQuarantinedUser(hasFlag, channel
     const tmp6 = hasFlag.hasFlag(UserFlags.QUARANTINED) && showConvoStarterInDM && !tmp3;
   }
   return tmp4;
-};
+}

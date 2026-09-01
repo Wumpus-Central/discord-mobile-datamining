@@ -17,13 +17,32 @@ function getTextStyles(disabled, text) {
   if (flag === undefined) {
     flag = false;
   }
-  const items = [text.text, , , , ];
-  let obj = { [closure_13.BRAND]: text.textBrand, [closure_13.RED]: text.textRed, [closure_13.GREEN]: text.textGreen, [closure_13.PRIMARY]: text.textPrimary, [closure_13.TRANSPARENT]: text.textTransparent, [closure_13.GREY]: text.textGrey, [closure_13.LIGHTGREY]: text.textLightgrey, [closure_13.WHITE]: text.textWhite, [closure_13.LINK]: text.textLink };
+  const items = [text.text, , , ,];
+  let obj = {
+    [closure_13.BRAND]: text.textBrand,
+    [closure_13.RED]: text.textRed,
+    [closure_13.GREEN]: text.textGreen,
+    [closure_13.PRIMARY]: text.textPrimary,
+    [closure_13.TRANSPARENT]: text.textTransparent,
+    [closure_13.GREY]: text.textGrey,
+    [closure_13.LIGHTGREY]: text.textLightgrey,
+    [closure_13.WHITE]: text.textWhite,
+    [closure_13.LINK]: text.textLink,
+  };
   items[1] = obj[color];
-  obj = { [closure_12.FILLED]: text.textFilled, [closure_12.LINK]: text.textLink, [closure_12.OUTLINED]: text.textOutlined };
+  obj = {
+    [closure_12.FILLED]: text.textFilled,
+    [closure_12.LINK]: text.textLink,
+    [closure_12.OUTLINED]: text.textOutlined,
+  };
   items[2] = obj[look];
   items[3] = flag ? text.textDisabled : text.textDefault;
-  obj = { [closure_15.XSMALL]: text.textXsmall, [closure_15.SMALL]: text.textSmall, [closure_15.MEDIUM]: text.textMedium, [closure_15.LARGE]: text.textLarge };
+  obj = {
+    [closure_15.XSMALL]: text.textXsmall,
+    [closure_15.SMALL]: text.textSmall,
+    [closure_15.MEDIUM]: text.textMedium,
+    [closure_15.LARGE]: text.textLarge,
+  };
   items[4] = obj[size];
   return items;
 }
@@ -54,7 +73,7 @@ function getButtonStyles(shrink, button) {
     }
     obj = set;
   }
-  const items = [button.button, , , , , , ];
+  const items = [button.button, , , , , ,];
   let buttonShrink = null;
   if (flag) {
     buttonShrink = button.buttonShrink;
@@ -97,7 +116,7 @@ class ButtonText {
       obj[3] = disabled;
       num = 0;
       tmp5 = require("../../LegacyText/native/LegacyText.tsx");
-      items = [, ];
+      items = [,];
       items[0] = getTextStyles(obj, tmp);
       items[1] = style;
       obj[2] = items;
@@ -115,7 +134,7 @@ class ButtonText {
       obj3[2] = size;
       obj3[3] = disabled;
       num2 = 0;
-      items1 = [, ];
+      items1 = [,];
       items1[0] = getTextStyles(obj3, tmp);
       items1[1] = style;
       obj2[0] = items1;
@@ -179,7 +198,17 @@ class Button {
     }
     ({ accessibilityLabel, accessibilityHint, accessibilityState } = global);
     ({ accessibilityActions, onAccessibilityAction, darkenOnPress } = global);
-    ({ renderIcon, renderRightIcon, renderShine, renderLinearGradient, onPress, onPressIn, onPressOut, onTouchStart, foregroundRipple } = global);
+    ({
+      renderIcon,
+      renderRightIcon,
+      renderShine,
+      renderLinearGradient,
+      onPress,
+      onPressIn,
+      onPressOut,
+      onTouchStart,
+      foregroundRipple,
+    } = global);
     cornerRadius = global.cornerRadius;
     closure_15 = undefined;
     theme = undefined;
@@ -190,7 +219,7 @@ class Button {
     tmp10 = MEDIUM;
     obj = require("AccessibilityAnnouncer");
     theme = obj.useThemeContext().theme;
-    items = [, , , , , , , , , ];
+    items = [, , , , , , , , ,];
     items[0] = BRAND;
     items[1] = flag2;
     items[2] = flag3;
@@ -201,7 +230,7 @@ class Button {
     items[7] = WHITE;
     items[8] = PRIMARY_500;
     items[9] = theme;
-    items1 = [, ];
+    items1 = [,];
     items1[0] = flag2;
     items1[1] = accessibilityState;
     memo = closure_3.useMemo(() => {
@@ -222,7 +251,7 @@ class Button {
         return tmp(closure_1_18, obj);
       }
     }, items);
-    items2 = [, , , , , , , ];
+    items2 = [, , , , , , ,];
     items2[0] = BRAND;
     items2[1] = darkenOnPress;
     items2[2] = MEDIUM;
@@ -237,10 +266,26 @@ class Button {
       obj.disabled = flag2;
       return obj;
     }, items1);
-    items3 = [, ];
+    items3 = [,];
     items3[0] = foregroundRipple;
     items3[1] = cornerRadius;
-    callback = closure_3.useCallback((pressed) => closure_1_17({ color: BRAND, size: MEDIUM, disabled: flag2, look: FILLED, shrink: flag, pressed: pressed.pressed, darkenOnPress, style }, closure_15), items2);
+    callback = closure_3.useCallback(
+      (pressed) =>
+        closure_1_17(
+          {
+            color: BRAND,
+            size: MEDIUM,
+            disabled: flag2,
+            look: FILLED,
+            shrink: flag,
+            pressed: pressed.pressed,
+            darkenOnPress,
+            style,
+          },
+          closure_15,
+        ),
+      items2,
+    );
     memo2 = closure_3.useMemo(() => {
       const obj = { foreground: foregroundRipple, cornerRadius: null };
       let num = cornerRadius;
@@ -257,7 +302,23 @@ class Button {
         obj = { style: null, children: null };
         obj[0] = style;
         tmp25 = c6;
-        obj1 = { text: null, variant: null, size: null, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, onPress: null, onPressIn: null, onPressOut: null, onTouchStart: null, disabled: null, icon: null, iconPosition: null, grow: null };
+        obj1 = {
+          text: null,
+          variant: null,
+          size: null,
+          accessibilityLabel: null,
+          accessibilityHint: null,
+          accessibilityActions: null,
+          onAccessibilityAction: null,
+          onPress: null,
+          onPressIn: null,
+          onPressOut: null,
+          onTouchStart: null,
+          disabled: null,
+          icon: null,
+          iconPosition: null,
+          grow: null,
+        };
         obj1[0] = text;
         tmp26 = foregroundRipple;
         str2 = "active";
@@ -335,7 +396,26 @@ class Button {
       }
       return tmp24Result;
     }
-    obj2 = { accessibilityRole: str, accessibilityState: memo1, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, accessibilityValue, onPress, onPressIn, onPressOut, onTouchStart, onTouchEnd, onLongPress, disabled: null, android_ripple: null, testID: null, style: null, children: null };
+    obj2 = {
+      accessibilityRole: str,
+      accessibilityState: memo1,
+      accessibilityLabel,
+      accessibilityHint,
+      accessibilityActions,
+      onAccessibilityAction,
+      accessibilityValue,
+      onPress,
+      onPressIn,
+      onPressOut,
+      onTouchStart,
+      onTouchEnd,
+      onLongPress,
+      disabled: null,
+      android_ripple: null,
+      testID: null,
+      style: null,
+      children: null,
+    };
     tmp18 = flag2;
     tmp16 = style;
     tmp17 = c5;
@@ -353,7 +433,7 @@ class Button {
     if (renderLinearGradientResult == null) {
       renderLinearGradientResult = null;
     }
-    items4 = [, , , , ];
+    items4 = [, , , ,];
     items4[0] = renderLinearGradientResult;
     renderIconResult1 = undefined;
     if (renderIcon != null) {
@@ -387,7 +467,75 @@ class Button {
 }
 ({ ActivityIndicator: c4, Pressable: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { button: { flexDirection: "row", flexGrow: 1, justifyContent: "center", alignItems: "center", alignSelf: "stretch", borderRadius: 3 }, buttonShrink: { flexGrow: 0, alignSelf: "flex-start", paddingHorizontal: 10 }, buttonBrandDefault: null, buttonBrandDarkDefault: null, buttonRedDefault: null, buttonRedDarkDefault: null, buttonGreenDefault: null, buttonGreenDarkDefault: null, buttonGreyDarkDefault: null, buttonLightgreyDefault: null, buttonLightgreyDarkDefault: null, buttonBrandDisabled: null, buttonBrandDarkDisabled: null, buttonRedDisabled: null, buttonRedDarkDisabled: null, buttonGreenDisabled: null, buttonGreenDarkDisabled: null, buttonGreyDarkDisabled: null, buttonLightgreyDisabled: null, buttonLightgreyDarkDisabled: null, buttonTransparentDefault: null, buttonTransparentDarkDefault: null, buttonTransparentDisabled: null, buttonTransparentDarkDisabled: null, buttonWhiteDefault: null, buttonWhiteDisabled: null, buttonFilled: null, buttonLink: null, buttonLinkDefault: null, buttonOutlined: null, buttonXsmall: null, buttonSmall: null, buttonMedium: null, buttonLarge: null, text: null, textXsmall: null, textSmall: null, textMedium: null, textLarge: null, textDisabled: null, textDefault: null, textBrand: null, textRed: null, textGreen: null, textGrey: null, textLightgrey: null, textWhite: null, textFilled: null, textOutlined: null, faded: null, buttonWhiteDarkDefault: null, textLink: null, buttonPrimaryDefault: null, buttonPrimaryDarkDefault: null, buttonGreyDefault: null, textPrimary: null, textTransparent: null, buttonPrimaryDisabled: null, buttonPrimaryDarkDisabled: null, buttonGreyDisabled: null };
+createCacheKey = {
+  button: {
+    flexDirection: "row",
+    flexGrow: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    alignSelf: "stretch",
+    borderRadius: 3,
+  },
+  buttonShrink: { flexGrow: 0, alignSelf: "flex-start", paddingHorizontal: 10 },
+  buttonBrandDefault: null,
+  buttonBrandDarkDefault: null,
+  buttonRedDefault: null,
+  buttonRedDarkDefault: null,
+  buttonGreenDefault: null,
+  buttonGreenDarkDefault: null,
+  buttonGreyDarkDefault: null,
+  buttonLightgreyDefault: null,
+  buttonLightgreyDarkDefault: null,
+  buttonBrandDisabled: null,
+  buttonBrandDarkDisabled: null,
+  buttonRedDisabled: null,
+  buttonRedDarkDisabled: null,
+  buttonGreenDisabled: null,
+  buttonGreenDarkDisabled: null,
+  buttonGreyDarkDisabled: null,
+  buttonLightgreyDisabled: null,
+  buttonLightgreyDarkDisabled: null,
+  buttonTransparentDefault: null,
+  buttonTransparentDarkDefault: null,
+  buttonTransparentDisabled: null,
+  buttonTransparentDarkDisabled: null,
+  buttonWhiteDefault: null,
+  buttonWhiteDisabled: null,
+  buttonFilled: null,
+  buttonLink: null,
+  buttonLinkDefault: null,
+  buttonOutlined: null,
+  buttonXsmall: null,
+  buttonSmall: null,
+  buttonMedium: null,
+  buttonLarge: null,
+  text: null,
+  textXsmall: null,
+  textSmall: null,
+  textMedium: null,
+  textLarge: null,
+  textDisabled: null,
+  textDefault: null,
+  textBrand: null,
+  textRed: null,
+  textGreen: null,
+  textGrey: null,
+  textLightgrey: null,
+  textWhite: null,
+  textFilled: null,
+  textOutlined: null,
+  faded: null,
+  buttonWhiteDarkDefault: null,
+  textLink: null,
+  buttonPrimaryDefault: null,
+  buttonPrimaryDarkDefault: null,
+  buttonGreyDefault: null,
+  textPrimary: null,
+  textTransparent: null,
+  buttonPrimaryDisabled: null,
+  buttonPrimaryDarkDisabled: null,
+  buttonGreyDisabled: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_600 };
@@ -444,14 +592,23 @@ createCacheKey[25] = obj19;
 createCacheKey[26] = {};
 createCacheKey[27] = {};
 createCacheKey[28] = {};
-hexToRgba = { backgroundColor: "transparent", borderWidth: 1, borderStyle: "solid", borderColor: require("result").BUTTON_OUTLINED_BORDER };
+hexToRgba = {
+  backgroundColor: "transparent",
+  borderWidth: 1,
+  borderStyle: "solid",
+  borderColor: require("result").BUTTON_OUTLINED_BORDER,
+};
 createCacheKey[29] = hexToRgba;
 createCacheKey[30] = { minHeight: 24 };
 createCacheKey[31] = { minHeight: 32 };
 createCacheKey[32] = { minHeight: 40 };
 createCacheKey[33] = { minHeight: 46 };
 const obj8 = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500 };
-createCacheKey[34] = { color: ThemesDefault.colors.WHITE, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, flexShrink: 1 };
+createCacheKey[34] = {
+  color: ThemesDefault.colors.WHITE,
+  fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD,
+  flexShrink: 1,
+};
 createCacheKey[35] = { fontSize: 12 };
 createCacheKey[36] = { fontSize: 14 };
 createCacheKey[37] = { fontSize: 14 };
@@ -496,7 +653,17 @@ const obj37 = { backgroundColor: require("result").BUTTON_PRIMARY_DISABLED_BACKG
 createCacheKey[59] = { backgroundColor: require("result").BUTTON_GREY_DISABLED_BACKGROUND };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 const obj39 = { FILLED: "filled", LINK: "link", OUTLINED: "outlined" };
-const obj40 = { BRAND: "brand", RED: "red", GREEN: "green", PRIMARY: "primary", TRANSPARENT: "transparent", GREY: "grey", LIGHTGREY: "lightgrey", WHITE: "white", LINK: "link" };
+const obj40 = {
+  BRAND: "brand",
+  RED: "red",
+  GREEN: "green",
+  PRIMARY: "primary",
+  TRANSPARENT: "transparent",
+  GREY: "grey",
+  LIGHTGREY: "lightgrey",
+  WHITE: "white",
+  LINK: "link",
+};
 let closure_14 = { DEFAULT: "Default", DISABLED: "Disabled" };
 let obj41 = { XSMALL: "xsmall", SMALL: "small", MEDIUM: "medium", LARGE: "large" };
 Button.Looks = obj39;

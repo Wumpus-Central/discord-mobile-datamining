@@ -12,7 +12,9 @@ const require = arg1;
 noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ slider: { marginTop: 4 }, text: { marginTop: 4 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsSoundboardVolume.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/voice/native/UserSettingsSoundboardVolume.tsx",
+);
 
 export default function SoundboardVolume() {
   const tmp = callback3();
@@ -33,12 +35,12 @@ export default function SoundboardVolume() {
     onValueChange(volume) {
       return analyticsLocations(closure_1_2[11]).updateUserSoundboardVolume(volume, analyticsLocations);
     },
-    accessibilityLabel: null
+    accessibilityLabel: null,
   };
   const intl3 = analyticsLocations(1236).intl;
   obj3[3] = intl3.string(analyticsLocations(1236).t.kbFsAD);
   obj2[1] = callback(VolumeSliderDefault, obj3);
-  const items = [callback(View, obj2), ];
+  const items = [callback(View, obj2)];
   const obj4 = { style: tmp.text, variant: "text-sm/medium", children: null };
   const intl4 = analyticsLocations(1236).intl;
   const obj5 = { helpCenterArticle: null };
@@ -50,4 +52,4 @@ export default function SoundboardVolume() {
   obj[1] = callback2(closure_6, obj1);
   obj[2] = callback(analyticsLocations(5599).TableRow, obj);
   return callback(analyticsLocations(10062).UserSettingsTableRowGroup, obj);
-};
+}

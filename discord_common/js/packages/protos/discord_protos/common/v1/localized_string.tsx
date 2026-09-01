@@ -6,7 +6,7 @@ import { MessageType, MessageType as MessageType2 } from "../../../../../../../_
 require = arg1;
 class LocalizedString$Type extends MessageType {
   constructor() {
-    items = [, ];
+    items = [,];
     items[0] = { no: 1, name: "default", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "localizations", kind: "map", K: 9, V: { kind: "scalar", T: 9 } };
     tmp = new tmp("discord_protos.common.v1.LocalizedString", items, new.target);
@@ -144,12 +144,24 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(localizations, t
   }
   return tag;
 };
-let items = [{ no: 1, name: "default", kind: "scalar", T: 9 }, { no: 2, name: "localizations", kind: "map", K: 9, V: { kind: "scalar", T: 9 } }];
-const object = new Object("discord_protos.common.v1.LocalizedString", items, tmp2, "create", "internalBinaryRead", "binaryReadMap2", tmp, "internalBinaryWrite");
+let items = [
+  { no: 1, name: "default", kind: "scalar", T: 9 },
+  { no: 2, name: "localizations", kind: "map", K: 9, V: { kind: "scalar", T: 9 } },
+];
+const object = new Object(
+  "discord_protos.common.v1.LocalizedString",
+  items,
+  tmp2,
+  "create",
+  "internalBinaryRead",
+  "binaryReadMap2",
+  tmp,
+  "internalBinaryWrite",
+);
 // ThrowIfThisInitialized (0x7c)
 class LocalizedSnowflake$Type extends MessageType2 {
   constructor() {
-    items = [, ];
+    items = [,];
     items[0] = { no: 1, name: "default", kind: "scalar", T: 6 };
     items[1] = { no: 2, name: "localizations", kind: "map", K: 9, V: { kind: "scalar", T: 6 } };
     tmp = new tmp("discord_protos.common.v1.LocalizedSnowflake", items, new.target);
@@ -288,10 +300,26 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(localizations, 
   }
   return tag;
 };
-const items1 = [{ no: 1, name: "default", kind: "scalar", T: 6 }, { no: 2, name: "localizations", kind: "map", K: 9, V: { kind: "scalar", T: 6 } }];
+const items1 = [
+  { no: 1, name: "default", kind: "scalar", T: 6 },
+  { no: 2, name: "localizations", kind: "map", K: 9, V: { kind: "scalar", T: 6 } },
+];
 // ThrowIfThisInitialized (0x7c)
-let tmp5 = new "internalBinaryWrite"("discord_protos.common.v1.LocalizedSnowflake", items1, tmp2, "create", "internalBinaryRead", "binaryReadMap2", LocalizedSnowflake$Type, "internalBinaryWrite", items1, undefined);
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/common/v1/localized_string.tsx");
+let tmp5 = new "internalBinaryWrite"(
+  "discord_protos.common.v1.LocalizedSnowflake",
+  items1,
+  tmp2,
+  "create",
+  "internalBinaryRead",
+  "binaryReadMap2",
+  LocalizedSnowflake$Type,
+  "internalBinaryWrite",
+  items1,
+  undefined,
+);
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/common/v1/localized_string.tsx",
+);
 
 export const LocalizedString = object;
 export const LocalizedSnowflake = tmp5;

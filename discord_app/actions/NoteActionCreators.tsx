@@ -12,5 +12,5 @@ export default {
     obj = { url: Endpoints.NOTE(closure_0), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { note: closure_5 };
     return HTTP.put(obj);
-  }
+  },
 };

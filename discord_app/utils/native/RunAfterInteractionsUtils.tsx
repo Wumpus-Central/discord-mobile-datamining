@@ -23,7 +23,7 @@ function runAfterInteractions(arg0, MINUTE) {
     cancel() {
       delayedCall.cancel();
       closure_1.cancel();
-    }
+    },
   };
 }
 const InteractionManager = get_ActivityIndicator.InteractionManager;

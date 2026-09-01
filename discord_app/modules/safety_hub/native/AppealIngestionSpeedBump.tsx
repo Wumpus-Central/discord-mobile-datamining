@@ -52,7 +52,12 @@ export default function AppealIngestionSpeedBump(arg0) {
   const tmp2Result = useEmitAppealIngestionEvent;
   const intl2 = tmp2(1236).intl;
   const stringResult = intl.string(require("../../../intl/index.native.tsx").t["C5q+pW"]);
-  const items1 = [callback(require("AppealIngestionModal.tsx").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(require("../../../intl/index.native.tsx").t.URt7VI) }), ];
+  const items1 = [
+    callback(require("AppealIngestionModal.tsx").AppealIngestionModalHeader, {
+      headerText: stringResult,
+      subHeaderText: intl2.string(require("../../../intl/index.native.tsx").t.URt7VI),
+    }),
+  ];
   obj = { style: tmp.container, children: null };
   let tmp9Result = flagged_content.length > 0;
   if (tmp9Result) {
@@ -60,7 +65,7 @@ export default function AppealIngestionSpeedBump(arg0) {
     obj[0] = flagged_content;
     tmp9Result = tmp9(AppealIngestionActivitySummaryDefault, obj);
   }
-  const items2 = [tmp9Result, , , , , , ];
+  const items2 = [tmp9Result, , , , , ,];
   obj1 = { classification: safetyHubClassification.classification };
   items2[1] = callback(AppealIngestionPolicySummaryDefault, obj1);
   tmp9Result = isCoppa;
@@ -128,4 +133,4 @@ export default function AppealIngestionSpeedBump(arg0) {
   items1[1] = closure_9(View, obj);
   obj7[0] = items1;
   return closure_9(require("AppealIngestionModal.tsx").AppealIngestionModalScreen, obj7);
-};
+}

@@ -17,7 +17,7 @@ createToggle = {
   parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue: useEnableSwitchIconsSettingValue,
   onValueChange: require("setFontSize").setSwitchIconsEnabled,
-  hasIcon: true
+  hasIcon: true,
 };
 createToggle = createToggle.createToggle(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx");

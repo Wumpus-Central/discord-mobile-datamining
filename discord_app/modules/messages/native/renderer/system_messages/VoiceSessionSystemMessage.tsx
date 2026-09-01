@@ -5,7 +5,9 @@ import { getSortedVoiceSessionParticipants } from "../../../VoiceSessionUtils.ts
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/VoiceSessionSystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/VoiceSessionSystemMessage.tsx",
+);
 
 export const createVoiceSessionSystemMessage = function createVoiceSessionSystemMessage(message) {
   ({ message, roleStyle } = message);
@@ -32,7 +34,17 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
     let formatToPartsResult = intl.formatToParts(tmp4(1236).t.HzBfIN, obj);
   } else {
     const intl2 = tmp4(1236).intl;
-    obj1 = { userCount: null, username: null, usernameOnClick: null, username2: null, username2OnClick: null, username3: null, username3OnClick: null, otherCount: null, duration: null };
+    obj1 = {
+      userCount: null,
+      username: null,
+      usernameOnClick: null,
+      username2: null,
+      username2OnClick: null,
+      username3: null,
+      username3OnClick: null,
+      otherCount: null,
+      duration: null,
+    };
     obj1[0] = mapped.length + 1;
     obj1[1] = messageAuthorWithProcessedColor.nick;
     const obj2 = { message: null, author: null, roleStyle: null };

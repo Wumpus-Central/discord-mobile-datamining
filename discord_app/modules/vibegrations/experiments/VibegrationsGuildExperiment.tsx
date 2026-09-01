@@ -31,7 +31,12 @@ function hasVibegrationsGuild(arg0, arg1) {
   }
   return false;
 }
-let closure_4 = ApexExperiment.createApexExperiment({ name: "2026-07-vibegrations-guild", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+let closure_4 = ApexExperiment.createApexExperiment({
+  name: "2026-07-vibegrations-guild",
+  kind: "guild",
+  defaultConfig: { enabled: false },
+  variations: { 0: { enabled: false }, 1: { enabled: true } },
+});
 const result = require("set").fileFinishedImporting("modules/vibegrations/experiments/VibegrationsGuildExperiment.tsx");
 
 export const useIsVibegrationsGuildEnabled = function useIsVibegrationsGuildEnabled(location) {
@@ -47,5 +52,9 @@ export const useHasVibegrationsGuild = function useHasVibegrationsGuild(arg0) {
   const _require = arg0;
   const items = [closure_2, require("../../experiments/apex/index.tsx").ApexExperimentStore];
   const items1 = [arg0];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_6(Object.values(closure_1_2.getGuilds()), closure_0), items1);
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_6(Object.values(closure_1_2.getGuilds()), closure_0),
+    items1,
+  );
 };

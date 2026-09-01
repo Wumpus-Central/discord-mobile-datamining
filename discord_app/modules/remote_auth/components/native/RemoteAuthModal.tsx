@@ -33,14 +33,16 @@ function RemoteAuthBody(remoteAuthFingerprint) {
     obj = { url: closure_1_8.REMOTE_AUTH_INITIALIZE, body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { fingerprint: remoteAuthFingerprint };
     const postResult = HTTP.post(obj);
-    HTTP.post(obj).then((body) => {
-      callback2(body.body.handshake_token);
-      callback(closure_1_13.LOADED);
-      const result = closure_1_0(closure_1_2[10]).DeprecatedLayoutAnimation();
-    }).catch(() => {
-      callback(closure_1_13.NOT_FOUND);
-      const result = closure_1_0(closure_1_2[10]).DeprecatedLayoutAnimation();
-    });
+    HTTP.post(obj)
+      .then((body) => {
+        callback2(body.body.handshake_token);
+        callback(closure_1_13.LOADED);
+        const result = closure_1_0(closure_1_2[10]).DeprecatedLayoutAnimation();
+      })
+      .catch(() => {
+        callback(closure_1_13.NOT_FOUND);
+        const result = closure_1_0(closure_1_2[10]).DeprecatedLayoutAnimation();
+      });
   }, items);
   if (constants.LOADING === tmp3) {
     return callback2(RemoteAuthLoading, {});
@@ -88,7 +90,7 @@ function RemoteAuthLogin(arg0) {
   }
   obj = { children: null };
   obj = { source: registerAssetDefault3, style: tmp.mainImage };
-  const items = [callback2(closure_6, obj), , , ];
+  const items = [callback2(closure_6, obj), , ,];
   obj1 = { variant: "heading-md/extrabold", children: null };
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t.jD2pqF);
@@ -101,20 +103,26 @@ function RemoteAuthLogin(arg0) {
   const obj4 = { text: null, onPress: null, disabled: null };
   const intl3 = getSystemLocale.intl;
   obj4[0] = intl3.string(getSystemLocale.t.N3qV8e);
-  obj4[1] = obj.throttle(() => {
-    _undefined2(true);
-    const HTTP = closure_1_0(_undefined[11]).HTTP;
-    obj = { url: closure_1_8.REMOTE_AUTH_FINISH, body: obj, oldFormErrors: true, rejectWithError: true };
-    obj = { handshake_token: closure_0 };
-    const postResult = HTTP.post(obj);
-    HTTP.post(obj).then(() => {
-      callback(closure_1_13.SUCCEEDED);
-    }).catch(() => {
-      callback(closure_1_13.NOT_FOUND);
-    });
-  }, 1000, { leading: true, trailing: false });
+  obj4[1] = obj.throttle(
+    () => {
+      _undefined2(true);
+      const HTTP = closure_1_0(_undefined[11]).HTTP;
+      obj = { url: closure_1_8.REMOTE_AUTH_FINISH, body: obj, oldFormErrors: true, rejectWithError: true };
+      obj = { handshake_token: closure_0 };
+      const postResult = HTTP.post(obj);
+      HTTP.post(obj)
+        .then(() => {
+          callback(closure_1_13.SUCCEEDED);
+        })
+        .catch(() => {
+          callback(closure_1_13.NOT_FOUND);
+        });
+    },
+    1000,
+    { leading: true, trailing: false },
+  );
   obj4[2] = tmp10;
-  const items1 = [callback2(Button2.Button, obj4, "" + tmp10), ];
+  const items1 = [callback2(Button2.Button, obj4, "" + tmp10)];
   const obj5 = { variant: "secondary", text: null, onPress: null };
   const intl4 = getSystemLocale.intl;
   obj5[1] = intl4.string(getSystemLocale.t["ETE/oC"]);
@@ -136,7 +144,7 @@ function RemoteAuthLoginSucceeded() {
   const tmp = callback4();
   let obj = { children: null };
   obj = { source: registerAssetDefault4, style: tmp.mainImage };
-  const items = [callback2(closure_6, obj), , , ];
+  const items = [callback2(closure_6, obj), , ,];
   obj = { variant: "heading-xl/extrabold", children: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.HbwTOZ);
@@ -159,7 +167,7 @@ function RemoteAuthNotFound() {
   const tmp = callback4();
   let obj = { children: null };
   obj = { source: registerAssetDefault5, style: tmp.mainImage };
-  const items = [callback2(closure_6, obj), , , ];
+  const items = [callback2(closure_6, obj), , ,];
   obj = { variant: "heading-xl/extrabold", children: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.NShI3Q);
@@ -179,20 +187,80 @@ function RemoteAuthNotFound() {
   return callback3(closure_11, obj);
 }
 function RemoteAuthLoading() {
-  return callback2(closure_7, { style: callback4().loadingContainer, children: callback2(ActivityIndicator.ActivityIndicator, {}) });
+  return callback2(closure_7, {
+    style: callback4().loadingContainer,
+    children: callback2(ActivityIndicator.ActivityIndicator, {}),
+  });
 }
 ({ ImageBackground: c5, Image: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-createCacheKey = { background: { width: "100%", height: "100%" }, container: { flex: 1, alignItems: "stretch", alignContent: "center" }, imageStyle: { resizeMode: "cover" }, logo: { position: "absolute", top: 16, alignSelf: "center", width: 32, height: 32 }, mainImage: { marginTop: 16, marginBottom: 32 }, warningCaption: null, caption: null, mainCard: null, buttonGroup: null, loadingContainer: null };
-createCacheKey = { fontSize: 16, lineHeight: 20, color: ThemesDefault.unsafe_rawColors.RED_400, textAlign: "center", marginTop: 8, marginBottom: 32 };
+createCacheKey = {
+  background: { width: "100%", height: "100%" },
+  container: { flex: 1, alignItems: "stretch", alignContent: "center" },
+  imageStyle: { resizeMode: "cover" },
+  logo: { position: "absolute", top: 16, alignSelf: "center", width: 32, height: 32 },
+  mainImage: { marginTop: 16, marginBottom: 32 },
+  warningCaption: null,
+  caption: null,
+  mainCard: null,
+  buttonGroup: null,
+  loadingContainer: null,
+};
+createCacheKey = {
+  fontSize: 16,
+  lineHeight: 20,
+  color: ThemesDefault.unsafe_rawColors.RED_400,
+  textAlign: "center",
+  marginTop: 8,
+  marginBottom: 32,
+};
 createCacheKey[5] = createCacheKey;
 createCacheKey[6] = { lineHeight: 20, textAlign: "center", marginTop: 8, marginBottom: 32 };
-createCacheKey[7] = { display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginTop: "auto", marginBottom: "auto", marginLeft: 16, marginRight: 16, borderRadius: ThemesDefault.radii.sm, padding: 16, shadowColor: ThemesDefault.colors.BLACK, shadowOpacity: 0.16, shadowRadius: 2, shadowOffset: { height: 2, width: 0 } };
+createCacheKey[7] = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  marginTop: "auto",
+  marginBottom: "auto",
+  marginLeft: 16,
+  marginRight: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  padding: 16,
+  shadowColor: ThemesDefault.colors.BLACK,
+  shadowOpacity: 0.16,
+  shadowRadius: 2,
+  shadowOffset: { height: 2, width: 0 },
+};
 createCacheKey[8] = { paddingVertical: 0 };
 createCacheKey[9] = { height: 300, justifyContent: "center" };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let closure_13 = { LOADING: 0, [0]: "LOADING", NOT_FOUND: 1, [1]: "NOT_FOUND", LOADED: 2, [2]: "LOADED", SUCCEEDED: 3, [3]: "SUCCEEDED" };
-let obj1 = { display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginTop: "auto", marginBottom: "auto", marginLeft: 16, marginRight: 16, borderRadius: ThemesDefault.radii.sm, padding: 16, shadowColor: ThemesDefault.colors.BLACK, shadowOpacity: 0.16, shadowRadius: 2, shadowOffset: { height: 2, width: 0 } };
+let closure_13 = {
+  LOADING: 0,
+  [0]: "LOADING",
+  NOT_FOUND: 1,
+  [1]: "NOT_FOUND",
+  LOADED: 2,
+  [2]: "LOADED",
+  SUCCEEDED: 3,
+  [3]: "SUCCEEDED",
+};
+let obj1 = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  marginTop: "auto",
+  marginBottom: "auto",
+  marginLeft: 16,
+  marginRight: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  padding: 16,
+  shadowColor: ThemesDefault.colors.BLACK,
+  shadowOpacity: 0.16,
+  shadowRadius: 2,
+  shadowOffset: { height: 2, width: 0 },
+};
 let result = require("set").fileFinishedImporting("modules/remote_auth/components/native/RemoteAuthModal.tsx");
 
 export default function RemoteAuth(arg0) {
@@ -201,7 +269,7 @@ export default function RemoteAuth(arg0) {
   ({ imageStyle: obj[1], background: obj[2] } = tmp);
   obj = { style: items, source: registerAssetDefault };
   items = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
-  const items1 = [callback2(closure_6, obj), ];
+  const items1 = [callback2(closure_6, obj)];
   obj = { style: tmp.container, children: null };
   obj1 = { style: tmp.mainCard, children: null };
   const merged = Object.assign(arg0);
@@ -210,4 +278,4 @@ export default function RemoteAuth(arg0) {
   items1[1] = callback2(closure_7, obj);
   obj[3] = items1;
   return callback3(closure_5, obj);
-};
+}

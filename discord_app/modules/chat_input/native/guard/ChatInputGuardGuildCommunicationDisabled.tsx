@@ -20,7 +20,13 @@ const memoResult = importAllResult.memo(function CommunicationDisabledNoticeForG
     const _Date = Date;
     date = new Date(communicationDisabledUntil);
   }
-  obj = { type: "simple-action", icon: jsx(ClockWarningIcon.ClockWarningIcon, {}), message: null, subtext: null, countdown: null };
+  obj = {
+    type: "simple-action",
+    icon: jsx(ClockWarningIcon.ClockWarningIcon, {}),
+    message: null,
+    subtext: null,
+    countdown: null,
+  };
   const intl = tmp(1236).intl;
   obj[2] = intl.string(getSystemLocale.t.VSpdzK);
   const intl2 = tmp(1236).intl;
@@ -29,6 +35,8 @@ const memoResult = importAllResult.memo(function CommunicationDisabledNoticeForG
   obj[4] = date;
   return jsx(ChatInputGuardDefault, { link: closure_3 });
 });
-const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildCommunicationDisabled.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/chat_input/native/guard/ChatInputGuardGuildCommunicationDisabled.tsx",
+);
 
 export default memoResult;

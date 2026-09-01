@@ -143,7 +143,8 @@ export const getMessage = function getMessage(str) {
       _require = undefined;
       const obj3 = tDefault;
       _require = tDefault.parserFor(require("markdownRules.tsx").rules);
-      const f116593 = (arg0, context, unsafeContext) => callback(arg0 + "\n\n", { inline: false, context, unsafeContext });
+      const f116593 = (arg0, context, unsafeContext) =>
+        callback(arg0 + "\n\n", { inline: false, context, unsafeContext });
       const obj4 = tDefault;
     }
     const str2 = str.replace(/^\n+|\n+$/g, "");

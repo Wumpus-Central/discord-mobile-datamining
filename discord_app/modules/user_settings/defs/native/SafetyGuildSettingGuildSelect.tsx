@@ -9,8 +9,13 @@ import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
-({ getSelectedGuildId: closure_6, GUILD_SELECT_ALL_SERVERS_OPTION_ID: error, setSelectedGuildId: closure_8, useUserSafetySettingsSelectedGuildStore: c9 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
-let items = [, ];
+({
+  getSelectedGuildId: closure_6,
+  GUILD_SELECT_ALL_SERVERS_OPTION_ID: error,
+  setSelectedGuildId: closure_8,
+  useUserSafetySettingsSelectedGuildStore: c9,
+} = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
+let items = [,];
 ({ GUILD_SETTING_ACTIVITY_STATUS: arr[0], GUILD_SETTING_ACTIVITY_JOINING: arr[1] } = MobileUserSettings);
 createToggle = {
   unsearchable: true,
@@ -34,11 +39,16 @@ createToggle = {
   },
   parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(15468, dependencyMap.paths), "SettingsPrivacyAndSafetyGuildSelectActionSheet");
-  }
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+      asyncRequireImpl(15468, dependencyMap.paths),
+      "SettingsPrivacyAndSafetyGuildSelectActionSheet",
+    );
+  },
 };
 createToggle = createToggle.createGuildSelector(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SafetyGuildSettingGuildSelect.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/SafetyGuildSettingGuildSelect.tsx",
+);
 
 export default createToggle;
 export const GUILD_SPECIFIC_SETTINGS = items;

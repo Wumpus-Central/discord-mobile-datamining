@@ -2,7 +2,18 @@
 import set from "../../_runtime/00002_set.js";
 import { getSystemLocale } from "../intl/index.native.tsx";
 
-let obj = { GENERAL: 0, [0]: "GENERAL", NO_FILE: 1, [1]: "NO_FILE", PROGRESS: 2, [2]: "PROGRESS", UPLOAD: 3, [3]: "UPLOAD", READ: 4, [4]: "READ" };
+let obj = {
+  GENERAL: 0,
+  [0]: "GENERAL",
+  NO_FILE: 1,
+  [1]: "NO_FILE",
+  PROGRESS: 2,
+  [2]: "PROGRESS",
+  UPLOAD: 3,
+  [3]: "UPLOAD",
+  READ: 4,
+  [4]: "READ",
+};
 class UploadVoiceDebugLogsError {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -31,7 +42,7 @@ Object.defineProperty(UploadVoiceDebugLogsError.prototype, "displayMessage", {
       return intl.string(getSystemLocale /* getSystemLocale */.t.VzHcSm);
     }
   },
-  set: undefined
+  set: undefined,
 });
 const result = set.fileFinishedImporting("errors/UploadVoiceDebugLogsError.tsx");
 

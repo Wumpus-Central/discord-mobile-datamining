@@ -20,7 +20,9 @@ createCacheKey = { flex: { flex: 1 }, form: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/UserSettingsConnections.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/UserSettingsConnections.tsx",
+);
 
 export const ADD_CONNECTIONS_SHEET_SENTINEL = -1;
 export const UserSettingsConnections = function UserSettingsConnections(selectedPlatformType) {
@@ -36,10 +38,16 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
   dependencyMap = obj.useStateFromStores(items, () => locale.locale);
   obj1 = selectedPlatformType(589);
   const items1 = [closure_8];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({ fetching: closure_8.isFetching(), accounts: closure_8.getAccounts() }));
+  const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({
+    fetching: closure_8.isFetching(),
+    accounts: closure_8.getAccounts(),
+  }));
   ({ accounts, fetching } = stateFromStoresObject);
   const items2 = [closure_5];
-  const stateFromStoresObject1 = selectedPlatformType(589).useStateFromStoresObject(items2, () => ({ authorizedAppsFetchState: authStore.getFetchState(), authorizedApps: authStore.getNewestTokensForNonChildrenApplications() }));
+  const stateFromStoresObject1 = selectedPlatformType(589).useStateFromStoresObject(items2, () => ({
+    authorizedAppsFetchState: authStore.getFetchState(),
+    authorizedApps: authStore.getNewestTokensForNonChildrenApplications(),
+  }));
   authorizedAppsFetchState = stateFromStoresObject1.authorizedAppsFetchState;
   authorizedApps = stateFromStoresObject1.authorizedApps;
   const obj3 = selectedPlatformType(589);
@@ -82,11 +90,20 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
       obj = { spacing: 16, children: null };
       const items5 = [
         prop.map((application_id) => {
-              closure_0 = application_id;
-              const obj = { identity: application_id, token: authorizedApps.find((application) => application.application.id === application_id.application_id) };
-              return closure_1_11(callback(paths[22]), obj, "" + application_id.application_id + "-" + application_id.provider_issued_user_id);
-            }),
-        accounts.map((account) => closure_1_11(callback(paths[23]), { theme: callback, locale: paths, account }, account.id))
+          closure_0 = application_id;
+          const obj = {
+            identity: application_id,
+            token: authorizedApps.find((application) => application.application.id === application_id.application_id),
+          };
+          return closure_1_11(
+            callback(paths[22]),
+            obj,
+            "" + application_id.application_id + "-" + application_id.provider_issued_user_id,
+          );
+        }),
+        accounts.map((account) =>
+          closure_1_11(callback(paths[23]), { theme: callback, locale: paths, account }, account.id),
+        ),
       ];
       obj[1] = items5;
       obj[1] = callback2(tmp4(4926).Stack, obj);

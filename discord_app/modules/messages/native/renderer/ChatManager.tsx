@@ -334,5 +334,5 @@ export const MockChatManager = {
   },
   getIgnored() {
     return false;
-  }
+  },
 };

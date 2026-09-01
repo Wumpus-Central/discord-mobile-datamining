@@ -6,19 +6,24 @@ import closure_6 from "../GuildRoleSubscriptionsStore.tsx";
 import { SubscriptionStatusTypes } from "../../../Constants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/manage_subscriptions/useManageSubscriptionCardData.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/manage_subscriptions/useManageSubscriptionCardData.tsx",
+);
 
 export default function useManageSubscriptionCardData(currentPeriodEnd) {
   let obj = _require(stateFromStores1[8]);
   _require = obj.getRoleSubscriptionPlanId(currentPeriodEnd);
   const items = [fetchSubscriptionsSettings];
-  const stateFromStores = _require(stateFromStores1[9]).useStateFromStores(items, () => fetchSubscriptionsSettings.getSubscriptionListingForPlan(closure_0));
+  const stateFromStores = _require(stateFromStores1[9]).useStateFromStores(items, () =>
+    fetchSubscriptionsSettings.getSubscriptionListingForPlan(closure_0),
+  );
   const obj2 = _require(stateFromStores1[9]);
   const items1 = [fetchSubscriptionsSettings];
   stateFromStores1 = _require(stateFromStores1[9]).useStateFromStores(items1, () => {
     let subscriptionGroupListingForSubscriptionListing = null;
     if (null != stateFromStores) {
-      subscriptionGroupListingForSubscriptionListing = fetchSubscriptionsSettings.getSubscriptionGroupListingForSubscriptionListing(tmp.id);
+      subscriptionGroupListingForSubscriptionListing =
+        fetchSubscriptionsSettings.getSubscriptionGroupListingForSubscriptionListing(tmp.id);
     }
     return subscriptionGroupListingForSubscriptionListing;
   });
@@ -35,7 +40,8 @@ export default function useManageSubscriptionCardData(currentPeriodEnd) {
   first = tmp6[0];
   closure_5 = tmp6[1];
   const obj4 = _require(stateFromStores1[9]);
-  fetchSubscriptionsSettings = _require(stateFromStores1[10]).useFetchSubscriptionsSettings().fetchSubscriptionsSettings;
+  fetchSubscriptionsSettings = _require(stateFromStores1[10]).useFetchSubscriptionsSettings()
+    .fetchSubscriptionsSettings;
   const items3 = [first, stateFromStores2, fetchSubscriptionsSettings];
   const effect = first.useEffect(() => {
     let tmp = first;
@@ -50,7 +56,14 @@ export default function useManageSubscriptionCardData(currentPeriodEnd) {
     }
   }, items3);
   if (null == stateFromStores) {
-    obj = { guild: null, expanded: null, handleToggleExpanded: null, listing: null, groupListing: null, subscriptionInfo: null };
+    obj = {
+      guild: null,
+      expanded: null,
+      handleToggleExpanded: null,
+      listing: null,
+      groupListing: null,
+      subscriptionInfo: null,
+    };
     obj[0] = stateFromStores2;
     obj[1] = first;
     obj[2] = function handleToggleExpanded() {
@@ -69,7 +82,15 @@ export default function useManageSubscriptionCardData(currentPeriodEnd) {
       const tmpResult = tmp(tmp2[6]);
     }
     const formatResult = stateFromStores(tmp2[5])(currentPeriodEnd.currentPeriodEnd).format("M/D/YY");
-    obj = { memberSince: null, nextRenewalDate: null, nextRenewalLabel: null, subscriptionPrice: null, isCancelled: null, isPastDue: null, isTrial: null };
+    obj = {
+      memberSince: null,
+      nextRenewalDate: null,
+      nextRenewalLabel: null,
+      subscriptionPrice: null,
+      isCancelled: null,
+      isPastDue: null,
+      isTrial: null,
+    };
     obj[0] = tmp9(tmp2[5])(currentPeriodEnd.createdAt).format("M/D/YY");
     obj[1] = formatResult;
     const intl = tmp(tmp2[7]).intl;
@@ -88,4 +109,4 @@ export default function useManageSubscriptionCardData(currentPeriodEnd) {
     obj[6] = currentPeriodEnd.hasActiveTrial;
     const obj8 = tmp9(tmp2[5])(currentPeriodEnd.createdAt);
   }
-};
+}

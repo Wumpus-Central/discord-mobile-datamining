@@ -21,7 +21,11 @@ export default function usePremiumGroupMembers(arg0) {
     flag2 = true;
   }
   const items = [closure_4];
-  const stateFromStoresObject = _require(flag2[2]).useStateFromStoresObject(items, () => ({ premiumGroupMembers: closure_4.getMembers(), isFetchingMembers: closure_4.isFetchingMembers(), isUpdatingMembers: closure_4.isUpdatingMembers() }));
+  const stateFromStoresObject = _require(flag2[2]).useStateFromStoresObject(items, () => ({
+    premiumGroupMembers: closure_4.getMembers(),
+    isFetchingMembers: closure_4.isFetchingMembers(),
+    isUpdatingMembers: closure_4.isUpdatingMembers(),
+  }));
   let isFetchingMembers = stateFromStoresObject.isFetchingMembers;
   const items1 = [flag2, arg0, flag];
   ({ premiumGroupMembers, isUpdatingMembers } = stateFromStoresObject);
@@ -47,4 +51,4 @@ export default function usePremiumGroupMembers(arg0) {
   }
   obj[1] = isFetchingMembers;
   return obj;
-};
+}

@@ -17,7 +17,14 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   if (arg0) {
     num = 32;
   }
-  let obj = { height: num, width: num, borderRadius: result, marginEnd: null, alignItems: "center", justifyContent: "center" };
+  let obj = {
+    height: num,
+    width: num,
+    borderRadius: result,
+    marginEnd: null,
+    alignItems: "center",
+    justifyContent: "center",
+  };
   result = num / 2;
   let num2 = 12;
   if (arg0) {
@@ -29,7 +36,15 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   obj[2] = obj;
   return obj;
 });
-let obj = { fallbackImage: null, fallbackImageV2: null, brandBackground: null, profileBackground: null, friendBackground: null, messageBackground: null, guildGridBackground: null };
+let obj = {
+  fallbackImage: null,
+  fallbackImageV2: null,
+  brandBackground: null,
+  profileBackground: null,
+  friendBackground: null,
+  messageBackground: null,
+  guildGridBackground: null,
+};
 obj = { color: ThemesDefault.colors.WHITE };
 obj[0] = obj;
 createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -60,7 +75,7 @@ const memoResult = importAllResult.memo((item) => {
   obj1 = item(obj[21]);
   const items = [closure_7];
   stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getUser(id));
-  const items1 = [stateFromStores, compactMode, , , , ];
+  const items1 = [stateFromStores, compactMode, , , ,];
   ({ acked: arr2[2], guild_id: arr2[3], message_id: arr2[4] } = item);
   items1[5] = analyticsLocations;
   const memo = id.useMemo(() => {
@@ -70,7 +85,12 @@ const memoResult = importAllResult.memo((item) => {
     } else {
       let tmpResult = { onPress: null, children: null };
       tmpResult[0] = function onPress() {
-        closure_1_1(closure_1_2[23])({ userId: id.id, localUser: id, messageId: message_id.message_id, sourceAnalyticsLocations: closure_2 });
+        closure_1_1(closure_1_2[23])({
+          userId: id.id,
+          localUser: id,
+          messageId: message_id.message_id,
+          sourceAnalyticsLocations: closure_2,
+        });
       };
       tmpResult = { source: null, size: null, avatarDecoration: null };
       const obj3 = item(analyticsLocations[24]);
@@ -144,7 +164,8 @@ const memoResult = importAllResult.memo((item) => {
           } else {
             if (item_enum2 !== tmp5(obj[9]).ItemEnum.FIND_FRIENDS) {
               if (item_enum2 !== tmp5(obj[9]).ItemEnum.ADD_FRIEND) {
-                profileBackground = item_enum2 === tmp5(obj[9]).ItemEnum.FIRST_MESSAGE ? tmp3.messageBackground : tmp3.brandBackground;
+                profileBackground =
+                  item_enum2 === tmp5(obj[9]).ItemEnum.FIRST_MESSAGE ? tmp3.messageBackground : tmp3.brandBackground;
               }
             }
             profileBackground = tmp3.friendBackground;
@@ -209,7 +230,7 @@ const memoResult = importAllResult.memo((item) => {
               }
               const obj11 = { variant: null, style: null, children: null };
               obj11[0] = str2;
-              const items2 = [, ];
+              const items2 = [,];
               ({ rowImage: arr3[0], guildFallbackImage: arr3[1] } = tmp);
               obj11[1] = items2;
               obj11[2] = tmp9;

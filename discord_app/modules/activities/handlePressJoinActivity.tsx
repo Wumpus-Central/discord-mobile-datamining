@@ -17,10 +17,14 @@ function handlePressJoinActivity(arg0) {
     if (handleCanJoin != null) {
       handleCanJoin();
     }
-  } else if (tmp(9443).EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === embeddedActivityJoinability) {
+  } else if (
+    tmp(9443).EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === embeddedActivityJoinability
+  ) {
     const result = tmp(9487).showActivitiesInvalidPermissionsAlert();
     const tmpResult = tmp(9487);
-  } else if (tmp(9443).EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS === embeddedActivityJoinability) {
+  } else if (
+    tmp(9443).EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS === embeddedActivityJoinability
+  ) {
     let obj = { title: null, body: null, hideActionSheet: false };
     const intl7 = tmp(1236).intl;
     obj[0] = intl7.string(tmp(1236).t.PtobXW);
@@ -60,7 +64,7 @@ function _maybeJoinEmbeddedActivity() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -97,14 +101,23 @@ function _maybeJoinEmbeddedActivity() {
               c5 = undefined;
               c6 = undefined;
               c7 = undefined;
-              ({ channelId: c0, applicationId: c1, launchId: c2, inputApplication: c3, analyticsLocations: c4, launchingComponentId: c5, sectionName: c6, inviterUserId: c7 } = callback);
+              ({
+                channelId: c0,
+                applicationId: c1,
+                launchId: c2,
+                inputApplication: c3,
+                analyticsLocations: c4,
+                launchingComponentId: c5,
+                sectionName: c6,
+                inviterUserId: c7,
+              } = callback);
               let currentUser;
               closure_9 = undefined;
               let embeddedActivitiesForChannel;
               let id;
               function _handleCanJoin() {
                 const self = this;
-                const tmp = v2(function*() {
+                const tmp = v2(function* () {
                   if (c0 === 2) {
                     c0 = 3;
                     HermesBuiltin.throwTypeError();
@@ -131,7 +144,15 @@ function _maybeJoinEmbeddedActivity() {
                           obj[0] = arg1;
                           return obj;
                         } else if (null != closure_1_8) {
-                          obj1 = { applicationId: null, activityChannelId: null, locationObject: null, analyticsLocations: null, componentId: null, sectionName: null, inviterUserId: null };
+                          obj1 = {
+                            applicationId: null,
+                            activityChannelId: null,
+                            locationObject: null,
+                            analyticsLocations: null,
+                            componentId: null,
+                            sectionName: null,
+                            inviterUserId: null,
+                          };
                           obj1[0] = closure_1_8.applicationId;
                           obj1[1] = c0;
                           obj1[2] = {};
@@ -225,7 +246,17 @@ function _maybeJoinEmbeddedActivity() {
                   id = id.id;
                 }
                 let obj3 = { embeddedActivityJoinability: null, handleCanJoin: null };
-                obj4 = { userId: null, application: null, channelId: null, currentUser: null, isActivitiesEnabledForCurrentPlatform: null, ChannelStore: null, VoiceStateStore: null, PermissionStore: null, GuildStore: null };
+                obj4 = {
+                  userId: null,
+                  application: null,
+                  channelId: null,
+                  currentUser: null,
+                  isActivitiesEnabledForCurrentPlatform: null,
+                  ChannelStore: null,
+                  VoiceStateStore: null,
+                  PermissionStore: null,
+                  GuildStore: null,
+                };
                 obj4[0] = id;
                 obj4[1] = closure_9;
                 obj4[2] = callback;

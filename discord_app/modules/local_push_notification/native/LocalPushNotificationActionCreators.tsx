@@ -8,7 +8,9 @@ import ME from "../../../Constants.tsx";
 const LocalNotificationTypes = LocalNotificationTypes2.LocalNotificationTypes;
 ({ AnalyticEvents: c4, Routes: c5 } = ME);
 const StaticChannelRoute = set2.StaticChannelRoute;
-let result = set.fileFinishedImporting("modules/local_push_notification/native/LocalPushNotificationActionCreators.tsx");
+let result = set.fileFinishedImporting(
+  "modules/local_push_notification/native/LocalPushNotificationActionCreators.tsx",
+);
 
 export const receiveLocalNotification = function receiveLocalNotification(getData) {
   if (null != getData.getData) {
@@ -39,13 +41,17 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
       } else if (tmp8.MESSAGE_SEND_FAILED === type) {
         data(tmp2[9])(tmp2[10], tmp2.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = closure_0);
-          return transitionToMessage.transitionToMessage(channelId, messageId, { jumpType: closure_1_0(closure_1_2[11]).JumpType.INSTANT });
+          return transitionToMessage.transitionToMessage(channelId, messageId, {
+            jumpType: closure_1_0(closure_1_2[11]).JumpType.INSTANT,
+          });
         });
         const promise = data(tmp2[9])(tmp2[10], tmp2.paths);
       } else if (tmp8.VIBEGRATIONS === type) {
         if (null != tmp4.guildId) {
           ({ guildId: data, projectId: closure_1 } = tmp4);
-          data(tmp2[9])(tmp2[12], tmp2.paths).then((transitionTo) => transitionTo.transitionTo(closure_2_5.CHANNEL(closure_0, closure_2_6.VIBEGRATIONS, closure_1)));
+          data(tmp2[9])(tmp2[12], tmp2.paths).then((transitionTo) =>
+            transitionTo.transitionTo(closure_2_5.CHANNEL(closure_0, closure_2_6.VIBEGRATIONS, closure_1)),
+          );
           const promise3 = data(tmp2[9])(tmp2[12], tmp2.paths);
         }
       }

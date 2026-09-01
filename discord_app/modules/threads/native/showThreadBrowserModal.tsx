@@ -18,4 +18,4 @@ export default function showThreadBrowserModal(id) {
     obj[1] = constants.THREADS;
     rootNavigationRef.navigate("sidebar", obj);
   }
-};
+}

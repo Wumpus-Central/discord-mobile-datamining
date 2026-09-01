@@ -7,11 +7,33 @@ import apply from "../../../_runtime/00012_apply.js";
 
 ({ ShakeLocation, ConfettiLocation } = ConfettiLocation);
 let c0 = false;
-let obj = { settingsVisible: false, enabled: false, combosEnabled: true, combosRequiredCount: 5, comboSoundsEnabled: true, screenshakeEnabled: true, screenshakeEnabledLocations: { [ShakeLocation.CHAT_INPUT]: true, [ShakeLocation.VOICE_USER]: false, [ShakeLocation.MENTION]: false }, shakeIntensity: 1, confettiEnabled: true, confettiEnabledLocations: { [ConfettiLocation.CHAT_INPUT]: true, [ConfettiLocation.REACTION]: true, [ConfettiLocation.MEMBER_USER]: true, [ConfettiLocation.CALL_TILE]: true }, confettiSize: 16, confettiCount: 5, warningSeen: false };
+let obj = {
+  settingsVisible: false,
+  enabled: false,
+  combosEnabled: true,
+  combosRequiredCount: 5,
+  comboSoundsEnabled: true,
+  screenshakeEnabled: true,
+  screenshakeEnabledLocations: {
+    [ShakeLocation.CHAT_INPUT]: true,
+    [ShakeLocation.VOICE_USER]: false,
+    [ShakeLocation.MENTION]: false,
+  },
+  shakeIntensity: 1,
+  confettiEnabled: true,
+  confettiEnabledLocations: {
+    [ConfettiLocation.CHAT_INPUT]: true,
+    [ConfettiLocation.REACTION]: true,
+    [ConfettiLocation.MEMBER_USER]: true,
+    [ConfettiLocation.CALL_TILE]: true,
+  },
+  confettiSize: 16,
+  confettiCount: 5,
+  warningSeen: false,
+};
 let closure_1 = apply.cloneDeep(obj);
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class PoggermodeSettingsStore extends DeviceSettingsStore {
-}
+class PoggermodeSettingsStore extends DeviceSettingsStore {}
 const prototype = PoggermodeSettingsStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   const obj = {};
@@ -25,7 +47,7 @@ Object.defineProperty(prototype, "settingsVisible", {
   get: function settingsVisible() {
     return closure_1.settingsVisible;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isEnabled"] = function isEnabled() {
   let obj = arg0;
@@ -72,7 +94,7 @@ Object.defineProperty(prototype, "shakeIntensity", {
     }
     return num;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "combosRequiredCount", {
   get: function combosRequiredCount() {
@@ -82,31 +104,31 @@ Object.defineProperty(prototype, "combosRequiredCount", {
     }
     return num;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "screenshakeEnabled", {
   get: function screenshakeEnabled() {
     return closure_1.screenshakeEnabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "screenshakeEnabledLocations", {
   get: function screenshakeEnabledLocations() {
     return closure_1.screenshakeEnabledLocations;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "combosEnabled", {
   get: function combosEnabled() {
     return closure_1.combosEnabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "comboSoundsEnabled", {
   get: function comboSoundsEnabled() {
     return closure_1.comboSoundsEnabled;
   },
-  set: undefined
+  set: undefined,
 });
 PoggermodeSettingsStore.displayName = "PoggermodeSettingsStore";
 PoggermodeSettingsStore.persistKey = "PoggermodeSettingsStore";
@@ -118,7 +140,7 @@ obj = {
   },
   POGGERMODE_TEMPORARILY_DISABLED: function handlePoggermodeTemporarilyDisabled() {
     c0 = true;
-  }
+  },
 };
 const poggermodeSettingsStore = new PoggermodeSettingsStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/poggermode/PoggermodeSettingsStore.tsx");

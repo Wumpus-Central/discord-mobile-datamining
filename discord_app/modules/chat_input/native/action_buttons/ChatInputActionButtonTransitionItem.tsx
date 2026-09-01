@@ -65,12 +65,22 @@ function FadeTransitionItem(state) {
   obj[2] = str2;
   const merged = Object.assign(obj);
   obj.children = state.children;
-  return jsx(cleanup(sharedValue[5]).View, { pointerEvents: str, accessibilityElementsHidden: !tmp8, importantForAccessibility: null });
+  return jsx(cleanup(sharedValue[5]).View, {
+    pointerEvents: str,
+    accessibilityElementsHidden: !tmp8,
+    importantForAccessibility: null,
+  });
 }
 function BounceTransitionItem(state) {
   state = state.state;
   ({ cleanup, bounceEnterDelayMs, children } = state);
-  let obj = { visible: state !== ManaContext.TransitionStates.YEETED, initiallyVisible: state !== ManaContext.TransitionStates.ENTERED, enterDelayMs: bounceEnterDelayMs, onExitComplete: cleanup, interactiveDuringEnter: true };
+  let obj = {
+    visible: state !== ManaContext.TransitionStates.YEETED,
+    initiallyVisible: state !== ManaContext.TransitionStates.ENTERED,
+    enterDelayMs: bounceEnterDelayMs,
+    onExitComplete: cleanup,
+    interactiveDuringEnter: true,
+  };
   const tmp = useChatInputFloatingBounceDefault;
   ({ isInteractive, animatedStyle } = useChatInputFloatingBounceDefault(obj));
   obj = { style: items };
@@ -87,12 +97,33 @@ function BounceTransitionItem(state) {
   obj[2] = str2;
   const merged = Object.assign(obj);
   obj.children = children;
-  return jsx(_modDef4217.View, { pointerEvents: str, accessibilityElementsHidden: !isInteractive, importantForAccessibility: null });
+  return jsx(_modDef4217.View, {
+    pointerEvents: str,
+    accessibilityElementsHidden: !isInteractive,
+    importantForAccessibility: null,
+  });
 }
-const styles = StyleSheet.create({ transitionItem: { position: "absolute" }, transitionItemCentered: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" } });
-let closure_7 = { code: "function ChatInputActionButtonTransitionItemTsx1(finished){const{runOnJS,cleanup}=this.__closure;if(finished===true){runOnJS(cleanup)();}}" };
-let closure_8 = { code: "function ChatInputActionButtonTransitionItemTsx2(){const{visible}=this.__closure;return{opacity:visible.get()};}" };
-let result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButtonTransitionItem.tsx");
+const styles = StyleSheet.create({
+  transitionItem: { position: "absolute" },
+  transitionItemCentered: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
+let closure_7 = {
+  code: "function ChatInputActionButtonTransitionItemTsx1(finished){const{runOnJS,cleanup}=this.__closure;if(finished===true){runOnJS(cleanup)();}}",
+};
+let closure_8 = {
+  code: "function ChatInputActionButtonTransitionItemTsx2(){const{visible}=this.__closure;return{opacity:visible.get()};}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/chat_input/native/action_buttons/ChatInputActionButtonTransitionItem.tsx",
+);
 
 export default function ChatInputActionButtonTransitionItem(bounceEnterDelayMs) {
   ({ state, cleanup, children, withBounce } = bounceEnterDelayMs);
@@ -118,7 +149,7 @@ export default function ChatInputActionButtonTransitionItem(bounceEnterDelayMs) 
     tmpResult = tmp(FadeTransitionItem, obj);
   }
   return tmpResult;
-};
+}
 export const interactivityProps = function interactivityProps(isInteractive) {
   let str = "none";
   if (isInteractive) {

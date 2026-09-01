@@ -78,12 +78,12 @@ function calculateAppliedBoosts(guildId) {
   }
   return sum;
 }
-({ GUILD_POWERUP_TIER_3_OVERRIDDEN_PURCHASABLE_FEATURES: obj1, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: c3 } = BoostedGuildTiers);
+({ GUILD_POWERUP_TIER_3_OVERRIDDEN_PURCHASABLE_FEATURES: obj1, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: c3 } =
+  BoostedGuildTiers);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: c4, BoostedGuildTiers: c5, GuildFeatures: closure_6 } = ME);
 let closure_7 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class GuildPowerupsStore extends PersistedStore {
-}
+class GuildPowerupsStore extends PersistedStore {}
 const prototype = GuildPowerupsStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   this.waitFor(closure_1);
@@ -162,32 +162,34 @@ let items = [
         [, tmp] = arg0;
         return null != tmp && typeof tmp === "object";
       });
-      fromEntriesResult = Object.fromEntries(found.map((arg0) => {
-        [tmp, tmp2] = arg0;
-        const items = [tmp, ];
-        const obj = {};
-        const merged = Object.assign(tmp2);
-        let allPowerups = tmp2.allPowerups;
-        if (allPowerups == null) {
-          allPowerups = {};
-        }
-        obj.allPowerups = allPowerups;
-        let powerupCatalog = tmp2.powerupCatalog;
-        if (powerupCatalog == null) {
-          powerupCatalog = {};
-        }
-        obj.powerupCatalog = powerupCatalog;
-        let unlockedPowerups = tmp2.unlockedPowerups;
-        if (unlockedPowerups == null) {
-          unlockedPowerups = {};
-        }
-        obj.unlockedPowerups = unlockedPowerups;
-        items[1] = obj;
-        return items;
-      }));
+      fromEntriesResult = Object.fromEntries(
+        found.map((arg0) => {
+          [tmp, tmp2] = arg0;
+          const items = [tmp];
+          const obj = {};
+          const merged = Object.assign(tmp2);
+          let allPowerups = tmp2.allPowerups;
+          if (allPowerups == null) {
+            allPowerups = {};
+          }
+          obj.allPowerups = allPowerups;
+          let powerupCatalog = tmp2.powerupCatalog;
+          if (powerupCatalog == null) {
+            powerupCatalog = {};
+          }
+          obj.powerupCatalog = powerupCatalog;
+          let unlockedPowerups = tmp2.unlockedPowerups;
+          if (unlockedPowerups == null) {
+            unlockedPowerups = {};
+          }
+          obj.unlockedPowerups = unlockedPowerups;
+          items[1] = obj;
+          return items;
+        }),
+      );
     }
     return fromEntriesResult;
-  }
+  },
 ];
 GuildPowerupsStore.migrations = items;
 const guildPowerupsStore = new GuildPowerupsStore(dispatcherDefault, {
@@ -318,7 +320,7 @@ const guildPowerupsStore = new GuildPowerupsStore(dispatcherDefault, {
     const merged = Object.assign(dependencyMap[guildId]);
     obj.appliedBoosts = calculateAppliedBoosts(guildId);
     dependencyMap[guildId] = obj;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/premium/powerups/GuildPowerupsStore.tsx");
 

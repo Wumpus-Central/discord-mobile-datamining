@@ -26,16 +26,19 @@ export default function useSavedMessagesForPage() {
   importDefault = undefined;
   dependencyMap = undefined;
   let callback;
-  [c1, c2] = callback(React.useState(() => {
-    if (ALL(_undefined2[3]).SavedMessageSortTypes.BOOKMARK === ALL) {
-      let messageBookmarks = closure_1_5.getMessageBookmarks();
-    } else if (ALL(_undefined2[3]).SavedMessageSortTypes.REMINDER === ALL) {
-      messageBookmarks = closure_1_5.getMessageReminders();
-    } else {
-      messageBookmarks = closure_1_5.getSavedMessages();
-    }
-    return messageBookmarks.map((saveData) => saveData.saveData);
-  }), 2);
+  [c1, c2] = callback(
+    React.useState(() => {
+      if (ALL(_undefined2[3]).SavedMessageSortTypes.BOOKMARK === ALL) {
+        let messageBookmarks = closure_1_5.getMessageBookmarks();
+      } else if (ALL(_undefined2[3]).SavedMessageSortTypes.REMINDER === ALL) {
+        messageBookmarks = closure_1_5.getMessageReminders();
+      } else {
+        messageBookmarks = closure_1_5.getSavedMessages();
+      }
+      return messageBookmarks.map((saveData) => saveData.saveData);
+    }),
+    2,
+  );
   callback = React.useRef(store.getIsStale());
   let items = [ALL];
   const effect = React.useEffect(() => {
@@ -57,10 +60,12 @@ export default function useSavedMessagesForPage() {
         }
         closure_1_2((arg0) => {
           let items = [...arg0];
-          const map = new Map(closure_1_6(lastChanged).map((saveData) => {
-            const items = [saveData.saveData.messageId, saveData];
-            return items;
-          }));
+          const map = new Map(
+            closure_1_6(lastChanged).map((saveData) => {
+              const items = [saveData.saveData.messageId, saveData];
+              return items;
+            }),
+          );
           const iter = arg0[Symbol.iterator]();
           const nextResult = iter.next();
           while (iter !== undefined) {
@@ -90,19 +95,24 @@ export default function useSavedMessagesForPage() {
     };
   }, items);
   useRefreshSavedMessagesDefault();
-  let tmp3 = callback(React.useState(() => {
-    if (ALL(_undefined2[3]).SavedMessageSortTypes.BOOKMARK === ALL) {
-      let messageBookmarks = closure_1_5.getMessageBookmarks();
-    } else if (ALL(_undefined2[3]).SavedMessageSortTypes.REMINDER === ALL) {
-      messageBookmarks = closure_1_5.getMessageReminders();
-    } else {
-      messageBookmarks = closure_1_5.getSavedMessages();
-    }
-    return messageBookmarks.map((saveData) => saveData.saveData);
-  }), 2);
+  let tmp3 = callback(
+    React.useState(() => {
+      if (ALL(_undefined2[3]).SavedMessageSortTypes.BOOKMARK === ALL) {
+        let messageBookmarks = closure_1_5.getMessageBookmarks();
+      } else if (ALL(_undefined2[3]).SavedMessageSortTypes.REMINDER === ALL) {
+        messageBookmarks = closure_1_5.getMessageReminders();
+      } else {
+        messageBookmarks = closure_1_5.getSavedMessages();
+      }
+      return messageBookmarks.map((saveData) => saveData.saveData);
+    }),
+    2,
+  );
   const items1 = [store];
   return ALL(589).useStateFromStoresArray(items1, () => {
-    const mapped = _undefined.map((channelId) => savedMessage.getSavedMessage(channelId.channelId, channelId.messageId));
+    const mapped = _undefined.map((channelId) =>
+      savedMessage.getSavedMessage(channelId.channelId, channelId.messageId),
+    );
     return mapped.filter(ALL(_undefined2[6]).isNotNullish);
   });
-};
+}

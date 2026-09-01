@@ -16,7 +16,9 @@ noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ image: { width: 254, height: 127, marginBottom: 32 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkError.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/TwoWayLinkError.tsx",
+);
 
 export const TwoWayLinkError = function TwoWayLinkError(arg0) {
   ({ onClose, title, body, onRetry } = arg0);
@@ -25,16 +27,30 @@ export const TwoWayLinkError = function TwoWayLinkError(arg0) {
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = callback3();
-  const items = [callback(closure_3, { source: registerAssetDefault, style: callback3().image }), callback(Text.Text, { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title }), callback(Text.Text, { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body })];
+  const items = [
+    callback(closure_3, { source: registerAssetDefault, style: callback3().image }),
+    callback(Text.Text, {
+      variant: "heading-xl/extrabold",
+      color: "mobile-text-heading-primary",
+      style: twoWayLinkStyles.title,
+      children: title,
+    }),
+    callback(Text.Text, {
+      variant: "text-md/normal",
+      color: "text-default",
+      style: twoWayLinkStyles.body,
+      children: body,
+    }),
+  ];
   obj[1] = items;
-  const items1 = [callback2(closure_4, obj), ];
+  const items1 = [callback2(closure_4, obj)];
   const obj4 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
   const obj5 = { spacing: 8, direction: "vertical", style: twoWayLinkStyles.footerButton, children: null };
   const obj6 = { size: "lg", variant: "primary", text: null, onPress: null };
   const intl = getSystemLocale.intl;
   obj6[2] = intl.string(getSystemLocale.t["5911Lb"]);
   obj6[3] = onRetry;
-  const items2 = [callback(Button.Button, obj6), ];
+  const items2 = [callback(Button.Button, obj6)];
   const obj7 = { size: "lg", variant: "secondary", text: null, onPress: null };
   const intl2 = getSystemLocale.intl;
   obj7[2] = intl2.string(getSystemLocale.t["ETE/oC"]);

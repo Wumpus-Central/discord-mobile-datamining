@@ -11,7 +11,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const GUILD_ITEM_HIT_SLOP = GUILD_ITEM_SIZE.GUILD_ITEM_HIT_SLOP;
 const jsx = jsxProd.jsx;
 let obj = { footerWrapper: null };
-obj = { display: "flex", alignSelf: "stretch", alignItems: "center", gap: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_PADDING };
+obj = {
+  display: "flex",
+  alignSelf: "stretch",
+  alignItems: "center",
+  gap: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
+};
 obj[0] = obj;
 let closure_5 = createCacheKey.createStyles(obj);
 const result = set.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFooterWrapper.tsx");
@@ -21,7 +26,7 @@ export default function GuildsBarFooterWrapper(children) {
   const token = obj.useToken(ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp2 = callback();
   const isHomeDrawerEnabled = context.useIsHomeDrawerEnabled();
-  const style = [tmp2.footerWrapper, ];
+  const style = [tmp2.footerWrapper];
   let tmp6 = null;
   const obj2 = context;
   const tmp4 = jsx;
@@ -32,4 +37,4 @@ export default function GuildsBarFooterWrapper(children) {
   }
   style[1] = tmp6;
   return tmp4(setDefault, { style, children: children.children });
-};
+}

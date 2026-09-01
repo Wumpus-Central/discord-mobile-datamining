@@ -45,7 +45,11 @@ export const useChannelDetailsSearchActiveSource = function useChannelDetailsSea
     return f81210(value);
   });
 };
-export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearchActive(arg0, isSearchActive, searchActiveSource) {
+export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearchActive(
+  arg0,
+  isSearchActive,
+  searchActiveSource,
+) {
   obj = { isSearchActive, searchActiveSource };
   const states = obj.getState().states;
   let value = states.get(arg0);

@@ -4,7 +4,11 @@ import GameTheme from "GameDetectionTypes.tsx";
 
 const result = set.fileFinishedImporting("modules/game_detection/calculateSteamReviewScoreDescription.tsx");
 
-export const calculateSteamReviewScoreDescription = function calculateSteamReviewScoreDescription(rating, ratingCount, isRecentRating) {
+export const calculateSteamReviewScoreDescription = function calculateSteamReviewScoreDescription(
+  rating,
+  ratingCount,
+  isRecentRating,
+) {
   let num = 50;
   let num2 = 50;
   if (isRecentRating) {

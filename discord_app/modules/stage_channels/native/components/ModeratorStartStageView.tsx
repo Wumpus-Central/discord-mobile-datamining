@@ -9,7 +9,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageView.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/components/ModeratorStartStageView.tsx",
+);
 
 export default function ModeratorStartStageView(channel) {
   channel = channel.channel;
@@ -48,7 +50,7 @@ export default function ModeratorStartStageView(channel) {
         tmp10Result = tmp10(tmp(9667).StartEventPrompt, obj);
       }
     }
-    const items2 = [tmp10Result, , , ];
+    const items2 = [tmp10Result, , ,];
     tmp10Result = null;
     if (useCurrentUserStageRolesDefault(channel.id, true).moderator) {
       obj1 = { channel: null, isLive: null };
@@ -78,4 +80,4 @@ export default function ModeratorStartStageView(channel) {
     const tmp5Result = stylesDefault;
   }
   return tmp10Result2;
-};
+}

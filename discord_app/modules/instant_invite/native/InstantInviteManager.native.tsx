@@ -9,7 +9,7 @@ let prototype = function InstantInviteManager() {
   applyArgumentsResult.actions = {
     NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED() {
       return applyArgumentsResult.shareInviteFailed();
-    }
+    },
   };
   applyArgumentsResult.shareInviteFailed = function shareInviteFailed() {
     let obj = callback(4194);
@@ -20,8 +20,7 @@ let prototype = function InstantInviteManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 const result = require("set").fileFinishedImporting("modules/instant_invite/native/InstantInviteManager.native.tsx");
 

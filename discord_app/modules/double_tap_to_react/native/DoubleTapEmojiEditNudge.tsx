@@ -49,7 +49,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (c4 === 2) {
           c4 = 3;
           HermesBuiltin.throwTypeError();
@@ -87,7 +87,12 @@ function DoubleTapEmojiEditNudgeInner(location) {
                 c3 = 1;
                 c4 = 1;
                 const obj3 = { value: null, done: false };
-                obj3[0] = DoubleTapReactionEmoji.updateSetting({ emojiId: null, emojiName: null, animated: null, disableDoubleTap: false });
+                obj3[0] = DoubleTapReactionEmoji.updateSetting({
+                  emojiId: null,
+                  emojiName: null,
+                  animated: null,
+                  disableDoubleTap: false,
+                });
                 return obj3;
               }
             } else if (arg0 === 1) {
@@ -113,7 +118,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
         }
       })();
     });
-    obj[1] = function() {
+    obj[1] = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -128,8 +133,14 @@ function DoubleTapEmojiEditNudgeInner(location) {
   obj = { color: "text-subtle", variant: "text-sm/normal", children: null };
   const intl = _location(1236).intl;
   obj[2] = intl.string(_location(1236).t["1EUr/W"]);
-  const items3 = [callback2(_location(4474).Text, obj), , ];
-  obj1 = { style: tmp5.doubleTapEmojiContainer, fastImageStyle: tmp5.doubleTapCustomEmoji, textEmojiStyle: tmp5.doubleTapTextEmoji, src: memo, name: null };
+  const items3 = [callback2(_location(4474).Text, obj), ,];
+  obj1 = {
+    style: tmp5.doubleTapEmojiContainer,
+    fastImageStyle: tmp5.doubleTapCustomEmoji,
+    textEmojiStyle: tmp5.doubleTapTextEmoji,
+    src: memo,
+    name: null,
+  };
   let str = "";
   const tmp3 = callback((arg0) => arg0.byAppEntry[closure_2].fontScale);
   const tmp8 = closure_12;
@@ -139,7 +150,13 @@ function DoubleTapEmojiEditNudgeInner(location) {
   }
   obj1[4] = str;
   items3[1] = callback2(emoji(5585), obj1);
-  const obj2 = { accessibilityRole: "button", onPress: callback, hitSlop: closure_13, style: tmp5.editButton, children: null };
+  const obj2 = {
+    accessibilityRole: "button",
+    onPress: callback,
+    hitSlop: closure_13,
+    style: tmp5.editButton,
+    children: null,
+  };
   let obj3 = { color: "text-brand", variant: "text-sm/normal", children: null };
   const intl2 = tmp(1236).intl;
   obj3[2] = intl2.string(_location(1236).t.bt75uw);
@@ -152,15 +169,33 @@ function DoubleTapEmojiEditNudgeInner(location) {
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = { left: 8, right: 8 };
 let closure_14 = createCacheKey.createStyles((arg0) => {
-  let obj = { doubleTapEmojiContainer: null, doubleTapTextEmoji: null, doubleTapCustomEmoji: null, doubleTapEmojiEditNudgeContainer: null, editButton: null };
+  let obj = {
+    doubleTapEmojiContainer: null,
+    doubleTapTextEmoji: null,
+    doubleTapCustomEmoji: null,
+    doubleTapEmojiEditNudgeContainer: null,
+    editButton: null,
+  };
   obj = { marginHorizontal: ThemesDefault.space.PX_4 };
   obj[0] = obj;
   obj = { fontSize: 12 * arg0, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   obj[1] = obj;
   obj[2] = { height: 16 * arg0, width: 16 * arg0 };
-  obj[3] = { marginTop: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
+  obj[3] = {
+    marginTop: ThemesDefault.space.PX_8,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    flexWrap: "wrap",
+  };
   obj1 = { height: 16 * arg0, width: 16 * arg0 };
-  const obj2 = { marginTop: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
+  const obj2 = {
+    marginTop: ThemesDefault.space.PX_8,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    flexWrap: "wrap",
+  };
   obj[4] = { marginHorizontal: ThemesDefault.space.PX_4 };
   return obj;
 });

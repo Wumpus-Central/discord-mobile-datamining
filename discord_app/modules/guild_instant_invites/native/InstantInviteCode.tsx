@@ -28,19 +28,19 @@ class InstantInviteDetails {
     tmp4 = jsxs;
     obj = { direction: "horizontal", align: "center", children: null };
     tmp5 = jsx;
-    items = [, ];
+    items = [,];
     items[0] = jsx(TextIcon, { color: "icon-subtle", size: "xs" });
     obj1 = { variant: "text-md/semibold", color: "text-subtle", style: tmp.channel, lineClamp: 1, children: null };
     tmp2Result = require("computeChannelName");
     obj1[4] = tmp2Result.computeChannelName(channel, closure_7, closure_6, false);
     items[1] = jsx(require("Text").Text, obj1);
     obj[2] = items;
-    items1 = [, ];
+    items1 = [,];
     items1[0] = jsxs(require("Stack").Stack, obj);
     tmp4Result = null != expiresAt;
     if (tmp4Result) {
       obj2 = { direction: "horizontal", align: "center", children: null };
-      items2 = [, , ];
+      items2 = [, ,];
       items2[0] = tmp5(require("ClockIcon").ClockIcon, { size: "xs", color: "icon-subtle" });
       obj3 = { variant: "text-md/semibold", color: "text-subtle", children: null };
       intl = require("getSystemLocale").intl;
@@ -72,11 +72,11 @@ export default function InstantInviteCode(invite) {
   const memo = React.useMemo(() => closure_1_5(invite.channel), items);
   obj = { children: null };
   obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
-  const items1 = [callback(invite(4474).Text, obj), ];
+  const items1 = [callback(invite(4474).Text, obj)];
   const tmp = callback3();
   items1[1] = callback(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj[0] = items1;
   obj[1] = callback2(invite(4926).Stack, obj);
   return callback(View, obj);
-};
+}
 export { InstantInviteDetails };

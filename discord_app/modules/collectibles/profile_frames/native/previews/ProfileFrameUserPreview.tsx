@@ -6,7 +6,9 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/native/previews/ProfileFrameUserPreview.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/profile_frames/native/previews/ProfileFrameUserPreview.tsx",
+);
 
 export default function ProfileFrameUserPreview(profileFrame) {
   profileFrame = profileFrame.profileFrame;
@@ -24,4 +26,4 @@ export default function ProfileFrameUserPreview(profileFrame) {
   obj[1] = formatToPlainStringResult;
   const merged1 = Object.assign(merged);
   return jsx(filterLayerDefault, { profileFrameOverride: profileFrame, accessibilityLabel: null });
-};
+}

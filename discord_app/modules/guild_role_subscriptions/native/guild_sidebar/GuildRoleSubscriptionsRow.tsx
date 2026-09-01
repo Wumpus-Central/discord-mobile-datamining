@@ -10,10 +10,16 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 createCacheKey = { container: null };
-createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL,
+  marginHorizontal: 8,
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsRow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsRow.tsx",
+);
 
 export default function GuildRoleSubscriptionsRow(selected) {
   selected = selected.selected;
@@ -32,7 +38,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
       guildId: id,
       onClose() {
         closure_1_1(closure_1_2[8]).hideActionSheet(closure_1);
-      }
+      },
     };
     obj.openLazy(id(closure_1_2[10])(closure_1_2[9], closure_1_2.paths), rolesubscriptionschannelactionsheet, obj);
   }, items1);
@@ -44,7 +50,17 @@ export default function GuildRoleSubscriptionsRow(selected) {
     DEFAULT = ChannelModes.DEFAULT;
     tmp6 = tmp4;
   }
-  let obj = { onPress: callback, onLongPress: callback1, style: callback().container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null };
+  let obj = {
+    onPress: callback,
+    onLongPress: callback1,
+    style: callback().container,
+    accessible: true,
+    accessibilityLabel: null,
+    accessibilityState: null,
+    mode: null,
+    name: null,
+    icon: null,
+  };
   const tmp = callback();
   const intl = tmp6(1236).intl;
   obj[4] = intl.string(tmp6(1236).t["KzCF/6"]);
@@ -58,4 +74,4 @@ export default function GuildRoleSubscriptionsRow(selected) {
   obj = { disableColor: true, mode: DEFAULT, source: registerAssetDefault };
   obj[8] = jsx(tmp6(11948).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: registerAssetDefault });
   return jsx(BaseChannelSubtitleDefault, { disableColor: true, mode: DEFAULT, source: registerAssetDefault });
-};
+}

@@ -34,10 +34,14 @@ function updateApplicationConfigs(configs) {
     const _Object = Object;
     const _Object2 = Object;
     const keys = Object.keys(configs);
-    const merged2 = Object.assign(Object.fromEntries(keys.map((arg0) => {
-      const items = [arg0, closure_1.SUCCESS];
-      return items;
-    })));
+    const merged2 = Object.assign(
+      Object.fromEntries(
+        keys.map((arg0) => {
+          const items = [arg0, closure_1.SUCCESS];
+          return items;
+        }),
+      ),
+    );
   }
 }
 function handleLogout() {
@@ -57,8 +61,7 @@ let closure_6 = [];
 NOT_FETCHED = obj.NOT_FETCHED;
 let closure_8 = [];
 const Store = initializeDefault.Store;
-class ApplicationWidgetConfigStoreClass extends Store {
-}
+class ApplicationWidgetConfigStoreClass extends Store {}
 const prototype = ApplicationWidgetConfigStoreClass.prototype;
 prototype["getConfig"] = function getConfig(arg0) {
   let first;
@@ -134,7 +137,7 @@ obj = {
     obj = {};
     const merged = Object.assign(obj);
     obj[applicationId.applicationId] = obj.FAILURE;
-  }
+  },
 };
 const applicationWidgetConfigStoreClass = new ApplicationWidgetConfigStoreClass(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/application_widget/ApplicationWidgetConfigStore.tsx");

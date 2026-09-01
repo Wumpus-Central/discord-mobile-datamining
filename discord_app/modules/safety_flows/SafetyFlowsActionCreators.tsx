@@ -5,7 +5,7 @@ import { Endpoints } from "../../Constants.tsx";
 const require = arg1;
 function _getCurrentTask() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     closure_0 = tmp4;
     obj1 = { url: null, trackedActionData: null, rejectWithError: true };
     obj1[0] = closure_1_4.SAFETY_FLOWS_TASK;
@@ -34,7 +34,7 @@ function _completeTask() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: true };
       obj1[0] = closure_1_4.SAFETY_FLOWS_TASK;
       obj1[1] = callback;
@@ -61,7 +61,7 @@ function _resendVerificationCode() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();

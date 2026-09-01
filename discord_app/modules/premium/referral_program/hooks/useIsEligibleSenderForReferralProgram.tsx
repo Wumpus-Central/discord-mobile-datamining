@@ -4,7 +4,9 @@ import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining.tsx
 import closure_2 from "../../ReferralTrialStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx",
+);
 
 export const useIsEligibleSenderForReferralProgram = function useIsEligibleSenderForReferralProgram(result) {
   let flag = result;

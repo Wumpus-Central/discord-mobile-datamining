@@ -9,12 +9,21 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 noopAll;
 createCacheKey = { cell: null, cellSelected: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.md, borderWidth: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderColor: ThemesDefault.colors.BORDER_MUTED };
+createCacheKey = {
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 2,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderColor: ThemesDefault.unsafe_rawColors.BRAND_500 };
 let closure_4 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { borderColor: ThemesDefault.unsafe_rawColors.BRAND_500 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagPickerCell.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/native/GuildSettingsServerTagPickerCell.tsx",
+);
 
 export default function GuildSettingsServerTagPickerCell(accessibilityLabel) {
   ({ size, selected, accessibilityRole } = accessibilityLabel);
@@ -32,8 +41,15 @@ export default function GuildSettingsServerTagPickerCell(accessibilityLabel) {
     obj[1] = obj;
     radioA11yNative = obj;
   }
-  obj1 = { accessibilityRole: radioA11yNative.accessibilityRole, accessibilityState: radioA11yNative.accessibilityState, accessibilityLabel: accessibilityLabel.accessibilityLabel, onPress, style: null, children: null };
-  const items = [tmp.cell, , ];
+  obj1 = {
+    accessibilityRole: radioA11yNative.accessibilityRole,
+    accessibilityState: radioA11yNative.accessibilityState,
+    accessibilityLabel: accessibilityLabel.accessibilityLabel,
+    onPress,
+    style: null,
+    children: null,
+  };
+  const items = [tmp.cell, ,];
   if (selected) {
     selected = tmp.cellSelected;
   }
@@ -41,5 +57,15 @@ export default function GuildSettingsServerTagPickerCell(accessibilityLabel) {
   items[2] = { width: size, height: size };
   obj1[4] = items;
   obj1[5] = children;
-  return <Pressable accessibilityRole={radioA11yNative.accessibilityRole} accessibilityState={radioA11yNative.accessibilityState} accessibilityLabel={arg0.accessibilityLabel} onPress={onPress} style={null}>{null}</Pressable>;
-};
+  return (
+    <Pressable
+      accessibilityRole={radioA11yNative.accessibilityRole}
+      accessibilityState={radioA11yNative.accessibilityState}
+      accessibilityLabel={arg0.accessibilityLabel}
+      onPress={onPress}
+      style={null}
+    >
+      {null}
+    </Pressable>
+  );
+}

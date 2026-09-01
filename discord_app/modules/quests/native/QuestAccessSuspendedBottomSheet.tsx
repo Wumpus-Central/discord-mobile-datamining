@@ -29,4 +29,4 @@ export default function QuestAccessSuspendedBottomSheet() {
   obj[4] = callback;
   obj[2] = jsx(Button.Button, { grow: true, size: "lg", variant: "primary", text: null, onPress: null });
   return jsx(PromoSheet.PromoSheet, { grow: true, size: "lg", variant: "primary", text: null, onPress: null });
-};
+}

@@ -7,8 +7,16 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { preview: { marginHorizontal: -16, marginTop: -9, overflow: "hidden" }, flushToCardBottom: null, footer: null };
-createCacheKey = { marginBottom: -16, borderBottomLeftRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS };
+createCacheKey = {
+  preview: { marginHorizontal: -16, marginTop: -9, overflow: "hidden" },
+  flushToCardBottom: null,
+  footer: null,
+};
+createCacheKey = {
+  marginBottom: -16,
+  borderBottomLeftRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS,
+  borderBottomRightRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { paddingHorizontal: 16, paddingTop: 8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
@@ -32,11 +40,25 @@ export const ForLaterMessageRow = function ForLaterMessageRow(arg0) {
   const InlineAttachmentMedia = require(setting[6]).InlineAttachmentMedia;
   setting2 = InlineAttachmentMedia.getSetting();
   const items = [setting, setting1, setting2];
-  const items1 = [tmp.preview, ];
+  const items1 = [tmp.preview];
   let flushToCardBottom = null;
   const memo = setting1.useMemo(() => {
     let obj = new lib(setting[7])();
-    obj = { renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReplies: false, renderExecutedCommands: false, animateEmoji: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, shouldDisableInteractiveComponents: true };
+    obj = {
+      renderEmbeds: setting,
+      inlineEmbedMedia: setting1,
+      inlineAttachmentMedia: setting2,
+      renderReplies: false,
+      renderExecutedCommands: false,
+      animateEmoji: false,
+      renderGiftCode: false,
+      renderActivityInstanceEmbed: false,
+      renderActivityInviteEmbed: false,
+      renderThreadEmbeds: false,
+      renderForumPostActions: false,
+      ignoreMentioned: true,
+      shouldDisableInteractiveComponents: true,
+    };
     obj.setOptions(obj);
     return obj;
   }, items);
@@ -67,9 +89,8 @@ export const ForLaterMessageRow = function ForLaterMessageRow(arg0) {
       },
       message,
       rowGenerator: memo,
-      maxHeight
+      maxHeight,
     }),
-
   ];
   let tmp12Result = null;
   if (null != footer) {

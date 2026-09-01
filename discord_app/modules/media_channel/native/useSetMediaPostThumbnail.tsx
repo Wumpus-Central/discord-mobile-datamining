@@ -69,4 +69,4 @@ export default function useSetMediaPostThumbnail(arg0, arg1) {
       const obj4 = callback(stateFromStores[6]);
     }
   }, items1);
-};
+}

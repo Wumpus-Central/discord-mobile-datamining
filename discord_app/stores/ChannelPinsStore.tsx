@@ -26,11 +26,15 @@ function handleRelationshipUpdate() {
     items.items = items1.slice();
   });
 }
-let obj = { LOADING: "LOADING", LOADED_HAS_MORE: "LOADED_HAS_MORE", LOADED_FINISHED: "LOADING_FINISHED", FAILED: "FAILED" };
+let obj = {
+  LOADING: "LOADING",
+  LOADED_HAS_MORE: "LOADED_HAS_MORE",
+  LOADED_FINISHED: "LOADING_FINISHED",
+  FAILED: "FAILED",
+};
 let closure_11 = {};
 const Store = initializeDefault.Store;
-class ChannelPinsStore extends Store {
-}
+class ChannelPinsStore extends Store {}
 const prototype = ChannelPinsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_5, closure_6, closure_3, closure_7, closure_8, closure_9);
@@ -136,7 +140,10 @@ obj = {
           items1.unshift(obj);
           const obj6 = id(4737);
         } else {
-          tmp20.items[findIndexResult].message = id(4737).updateMessageRecord(tmp20.items[findIndexResult].message, message.message);
+          tmp20.items[findIndexResult].message = id(4737).updateMessageRecord(
+            tmp20.items[findIndexResult].message,
+            message.message,
+          );
           const obj4 = id(4737);
         }
         const obj3 = applyDefault;
@@ -185,11 +192,13 @@ obj = {
       } else {
         const items = tmp.items;
         tmp.items = items.slice();
-        tmp.items[findIndexResult].message = messageId(7345).handleExplicitMediaScanTimeoutForMessage(tmp.items[findIndexResult].message);
+        tmp.items[findIndexResult].message = messageId(7345).handleExplicitMediaScanTimeoutForMessage(
+          tmp.items[findIndexResult].message,
+        );
       }
       const obj2 = applyDefault;
     }
-  }
+  },
 };
 const channelPinsStore = new ChannelPinsStore(dispatcherDefault, obj);
 let result = require("set").fileFinishedImporting("stores/ChannelPinsStore.tsx");

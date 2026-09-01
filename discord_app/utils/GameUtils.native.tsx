@@ -44,7 +44,5 @@ export default {
   isProtocolRegistered() {
     return Promise.resolve(false);
   },
-  setRecentGames() {
-
-  }
+  setRecentGames() {},
 };

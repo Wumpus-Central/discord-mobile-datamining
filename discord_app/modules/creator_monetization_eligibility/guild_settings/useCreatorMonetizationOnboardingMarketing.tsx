@@ -4,7 +4,9 @@ import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationOnboardingMarketing.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationOnboardingMarketing.tsx",
+);
 
 export default function useCreatorMonetizationOnboardingMarketing(arg0) {
   closure_0 = arg0;
@@ -19,7 +21,7 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -101,7 +103,7 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
       }
     })();
   });
-  callback = React.useCallback(function() {
+  callback = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -116,4 +118,4 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
     callback(closure_0);
   }, items);
   return { isLoading, error, creatorMonetizationOnboardingMarketing: creatorMonetizationOnboardingMarketing[0] };
-};
+}

@@ -28,7 +28,7 @@ initialize = {
   },
   retryConfig: initialize,
   staleAfter: 3600,
-  failureStaleAfter: 60
+  failureStaleAfter: 60,
 };
 initialize = {
   retryableErrors: function isRetryableError(status) {
@@ -46,7 +46,7 @@ initialize = {
       tmp = tmp2;
     }
     return tmp;
-  }
+  },
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult, initialize);
 let result = require("set").fileFinishedImporting("modules/games/autocomplete/useGameAutocomplete.tsx");

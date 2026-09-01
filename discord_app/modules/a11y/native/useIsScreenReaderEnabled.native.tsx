@@ -12,32 +12,36 @@ let closure_5 = keys.create((arg0) => {
   const _require = arg0;
   function updateScreenReaderEnabled(arg0) {
     const callback = arg0;
-    callback(closure_1_1[3]).batchUpdates(() => callback((screenReaderEnabled) => {
-      let tmp = screenReaderEnabled;
-      if (screenReaderEnabled.screenReaderEnabled !== closure_0) {
-        const Storage = callback(closure_2_1[1]).Storage;
-        const result = Storage.set(closure_2_4, tmp2);
-        const obj = { screenReaderEnabled: null };
-        obj[0] = tmp2;
-        tmp = obj;
-      }
-      return tmp;
-    }));
+    callback(closure_1_1[3]).batchUpdates(() =>
+      callback((screenReaderEnabled) => {
+        let tmp = screenReaderEnabled;
+        if (screenReaderEnabled.screenReaderEnabled !== closure_0) {
+          const Storage = callback(closure_2_1[1]).Storage;
+          const result = Storage.set(closure_2_4, tmp2);
+          const obj = { screenReaderEnabled: null };
+          obj[0] = tmp2;
+          tmp = obj;
+        }
+        return tmp;
+      }),
+    );
   }
   let result = AccessibilityInfo.isScreenReaderEnabled();
   result.then(updateScreenReaderEnabled).catch(() => {
     c0 = false;
-    callback(closure_1_1[3]).batchUpdates(() => callback((screenReaderEnabled) => {
-      let tmp = screenReaderEnabled;
-      if (screenReaderEnabled.screenReaderEnabled !== closure_0) {
-        const Storage = callback(closure_2_1[1]).Storage;
-        const result = Storage.set(closure_2_4, tmp2);
-        const obj = { screenReaderEnabled: null };
-        obj[0] = tmp2;
-        tmp = obj;
-      }
-      return tmp;
-    }));
+    callback(closure_1_1[3]).batchUpdates(() =>
+      callback((screenReaderEnabled) => {
+        let tmp = screenReaderEnabled;
+        if (screenReaderEnabled.screenReaderEnabled !== closure_0) {
+          const Storage = callback(closure_2_1[1]).Storage;
+          const result = Storage.set(closure_2_4, tmp2);
+          const obj = { screenReaderEnabled: null };
+          obj[0] = tmp2;
+          tmp = obj;
+        }
+        return tmp;
+      }),
+    );
   });
   const listener = AccessibilityInfo.addEventListener("screenReaderChanged", updateScreenReaderEnabled);
   let Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx").Storage;

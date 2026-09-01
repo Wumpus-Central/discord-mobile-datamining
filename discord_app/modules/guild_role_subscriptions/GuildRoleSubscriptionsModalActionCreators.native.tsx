@@ -5,12 +5,18 @@ import closure_3 from "native/components/GuildRoleSubscriptionBenefitEditorModal
 
 require = arg1;
 const GuildRoleSubscriptionBenefitEditorModal = "GuildRoleSubscriptionBenefitEditorModal";
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsModalActionCreators.native.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/GuildRoleSubscriptionsModalActionCreators.native.tsx",
+);
 
 export const showCreateBenefitModal = function showCreateBenefitModal(arg0) {
   ({ guildId, listingId, type, onSave } = arg0);
   closure_3.resetImperatively();
-  _modDef4723.pushLazy(asyncRequireImpl(17337, dependencyMap.paths), { benefitType: type, guildId, onSave, listingId }, GuildRoleSubscriptionBenefitEditorModal);
+  _modDef4723.pushLazy(
+    asyncRequireImpl(17337, dependencyMap.paths),
+    { benefitType: type, guildId, onSave, listingId },
+    GuildRoleSubscriptionBenefitEditorModal,
+  );
 };
 export const showEditBenefitModal = function showEditBenefitModal(benefit) {
   benefit = benefit.benefit;

@@ -117,7 +117,11 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
     tmp3 = closure_1_6;
   }, items1);
   obj = { items: memo, getItemKey: transitionGroupGetItemKey, renderItem: transitionGroupRenderItem };
-  const tmp11 = jsx(id(4204).TransitionGroup, { items: memo, getItemKey: transitionGroupGetItemKey, renderItem: transitionGroupRenderItem });
+  const tmp11 = jsx(id(4204).TransitionGroup, {
+    items: memo,
+    getItemKey: transitionGroupGetItemKey,
+    renderItem: transitionGroupRenderItem,
+  });
   if (flag) {
     obj = { children: null };
     obj[0] = tmp11;

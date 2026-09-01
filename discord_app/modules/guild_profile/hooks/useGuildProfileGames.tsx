@@ -91,7 +91,7 @@ export default function useGuildProfileGames(games) {
     return obj;
   }
   items1 = games.gameApplicationIds;
-};
+}
 export const useAllGuildProfileGames = function useAllGuildProfileGames(profile) {
   let games = profile;
   games = profile.games;

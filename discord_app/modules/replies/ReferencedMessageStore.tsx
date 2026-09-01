@@ -80,7 +80,9 @@ function handleLoadMessages(messages) {
   return anyChanged(messages.messages, (arg0) => callback(arg0));
 }
 function handleSearchMessagesSuccess(data) {
-  return anyChanged(data.data, (messages) => callback(messages.messages, (arg0) => callback(arg0, (arg0) => callback(arg0))));
+  return anyChanged(data.data, (messages) =>
+    callback(messages.messages, (arg0) => callback(arg0, (arg0) => callback(arg0))),
+  );
 }
 function handleChannelDelete(channel) {
   return obj.deleteChannelCache(channel.channel.id);
@@ -108,8 +110,8 @@ class ChannelReferencedMessageCache {
     obj = {
       max: 100,
       dispose(arg0, arg1) {
-            return obj.handleCacheDisposed(arg0, arg1);
-          }
+        return obj.handleCacheDisposed(arg0, arg1);
+      },
     };
     tmp2 = new require("priv")(obj);
     obj._cachedMessages = tmp2;
@@ -265,8 +267,7 @@ prototype2["clear"] = function clear() {
 obj = Object.create(ReferencedMessageCache.prototype);
 obj[0] = new Map();
 const Store = initializeDefault.Store;
-class ReferencedMessageStore extends Store {
-}
+class ReferencedMessageStore extends Store {}
 const prototype3 = ReferencedMessageStore.prototype;
 prototype3["initialize"] = function initialize() {
   this.waitFor(closure_6, closure_5, closure_4);
@@ -301,7 +302,9 @@ prototype3["getReplyIdsForChannel"] = function getReplyIdsForChannel(memo1) {
 ReferencedMessageStore.displayName = "ReferencedMessageStore";
 const referencedMessageStore = new ReferencedMessageStore(dispatcherDefault, {
   CACHE_LOADED: function handleCacheLoaded(messages) {
-    return anyChanged(Object.values(messages.messages), (arg0) => callback(Object.values(arg0), (arg0) => callback(arg0)));
+    return anyChanged(Object.values(messages.messages), (arg0) =>
+      callback(Object.values(arg0), (arg0) => callback(arg0)),
+    );
   },
   LOCAL_MESSAGES_LOADED: handleLoadMessages,
   LOAD_MESSAGES_SUCCESS: handleLoadMessages,
@@ -410,7 +413,7 @@ const referencedMessageStore = new ReferencedMessageStore(dispatcherDefault, {
     }
   },
   CONNECTION_OPEN: resetState,
-  LOGOUT: resetState
+  LOGOUT: resetState,
 });
 let result = set.fileFinishedImporting("modules/replies/ReferencedMessageStore.tsx");
 

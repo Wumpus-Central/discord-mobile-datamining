@@ -4,7 +4,9 @@ import closure_3 from "../../../../stores/GuildStore.tsx";
 import closure_4 from "../../../../stores/SortedGuildStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/getGuildsBarGuildAccessibilityActions.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guilds_bar/native/utils/getGuildsBarGuildAccessibilityActions.tsx",
+);
 
 export default function getGuildsBarGuildAccessibilityActions(arg0) {
   const _require = arg0;
@@ -295,4 +297,4 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
       name3 = containingFolder.name;
     }
   }
-};
+}

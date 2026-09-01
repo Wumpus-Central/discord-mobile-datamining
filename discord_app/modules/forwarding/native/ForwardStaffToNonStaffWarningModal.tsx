@@ -19,7 +19,7 @@ export default function ForwardStaffToNonStaffWarningModal(arg0) {
   const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t.X7eUJq);
   obj[1] = onConfirm;
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
+  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm")];
   obj1 = { variant: "secondary", text: null, onPress: null };
   const intl4 = getSystemLocale.intl;
   obj1[1] = intl4.string(getSystemLocale.t["13/7kX"]);
@@ -28,4 +28,4 @@ export default function ForwardStaffToNonStaffWarningModal(arg0) {
   obj[0] = items;
   obj[2] = callback2(closure_3, obj);
   return callback(getAlertModalItemKey.AlertModal, obj);
-};
+}

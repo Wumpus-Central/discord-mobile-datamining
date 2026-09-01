@@ -112,7 +112,10 @@ function performQuery() {
         const found2 = frequentlyWithoutFetchingLatest.filter((isDM) => isDM instanceof closure_6 && isDM.isDM());
         const _Math = Math;
         const items2 = [];
-        HermesBuiltin.arraySpread(found2.map((id) => scoreWithoutFetchingLatest.getScoreWithoutFetchingLatest(id.id)), 0);
+        HermesBuiltin.arraySpread(
+          found2.map((id) => scoreWithoutFetchingLatest.getScoreWithoutFetchingLatest(id.id)),
+          0,
+        );
         const _Math2 = Math;
         closure_0 = HermesBuiltin.apply(items2, Math);
         obj1 = {};
@@ -250,8 +253,7 @@ let c20 = false;
 let set = new Set();
 let c22 = null;
 const Store = initializeDefault.Store;
-class PrivateChannelRecipientsInviteStoreClass extends Store {
-}
+class PrivateChannelRecipientsInviteStoreClass extends Store {}
 const prototype = PrivateChannelRecipientsInviteStoreClass.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_7, closure_8, closure_4, closure_9, closure_10, closure_11, closure_12, closure_5, closure_13);
@@ -353,7 +355,7 @@ const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInv
   PRIVATE_CHANNEL_RECIPIENTS_REMOVE_USER: function handleRemoveUser(userId) {
     set.delete(userId.userId);
     set = new Set(set);
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/PrivateChannelRecipientsInviteStore.tsx");
 

@@ -9,9 +9,11 @@ export default function YouSettingsCoachmark(buttonRef) {
   const merged = Object.assign(buttonRef, Object.create(null));
   const coachmark = useCoachmark.useCoachmark(buttonRef.buttonRef, merged);
   return null;
-};
+}
 export const useYouSettingsCoachmark = function useYouSettingsCoachmark(disabled) {
-  let referralProgramCoachmark = ReferralProgramCoachmarkImg.useReferralProgramCoachmark({ disabled: disabled.disabled });
+  let referralProgramCoachmark = ReferralProgramCoachmarkImg.useReferralProgramCoachmark({
+    disabled: disabled.disabled,
+  });
   if (referralProgramCoachmark == null) {
     referralProgramCoachmark = null;
   }

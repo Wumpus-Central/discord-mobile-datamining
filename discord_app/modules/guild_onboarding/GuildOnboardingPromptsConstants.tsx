@@ -13,7 +13,14 @@ function serverPromptToClientPrompt(id) {
   return {
     id: id.id,
     options: options.map((id) => {
-      obj = { id: id.id, channelIds: id.channel_ids, roleIds: id.role_ids, emoji: id.emoji, title: id.title, description: null };
+      obj = {
+        id: id.id,
+        channelIds: id.channel_ids,
+        roleIds: id.role_ids,
+        emoji: id.emoji,
+        title: id.title,
+        description: null,
+      };
       let str = id.description;
       if (str == null) {
         str = "";
@@ -26,7 +33,7 @@ function serverPromptToClientPrompt(id) {
     disabled: id.disabled,
     required: id.required,
     inOnboarding: id.in_onboarding,
-    type: id.type
+    type: id.type,
   };
 }
 function validateOnboardingConnection(connection_type) {
@@ -72,8 +79,17 @@ let closure_3 = ["id"];
 let closure_4 = ["id"];
 let obj = { MULTIPLE_CHOICE: 0, [0]: "MULTIPLE_CHOICE", DROPDOWN: 1, [1]: "DROPDOWN" };
 obj = { APPLICATION: 0, [0]: "APPLICATION", PROVIDER_CONNECTED_ACCOUNT: 1, [1]: "PROVIDER_CONNECTED_ACCOUNT" };
-let items = [, , , , , , , ];
-({ PLAYSTATION_STAGING: arr[0], CONTACTS: arr[1], DOMAIN: arr[2], TWITTER_LEGACY: arr[3], MASTODON: arr[4], INSTAGRAM: arr[5], LEAGUE_OF_LEGENDS: arr[6], SKYPE: arr[7] } = PlatformTypes);
+let items = [, , , , , , ,];
+({
+  PLAYSTATION_STAGING: arr[0],
+  CONTACTS: arr[1],
+  DOMAIN: arr[2],
+  TWITTER_LEGACY: arr[3],
+  MASTODON: arr[4],
+  INSTAGRAM: arr[5],
+  LEAGUE_OF_LEGENDS: arr[6],
+  SKYPE: arr[7],
+} = PlatformTypes);
 let set = new Set(items);
 const values = Object.values(PlatformTypes);
 let closure_11 = values.filter((arg0) => !set.has(arg0));
@@ -93,13 +109,26 @@ export const NUM_DEFAULT_CHATTABLE_CHANNELS_MIN = 1;
 export const ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD = 13;
 export const GuildOnboardingTab = { CUSTOMIZE: 0, [0]: "CUSTOMIZE", BROWSE: 1, [1]: "BROWSE" };
 export const OnboardingPromptType = obj;
-export const GuildOnboardingMode = { ONBOARDING_DEFAULT: 0, [0]: "ONBOARDING_DEFAULT", ONBOARDING_ADVANCED: 1, [1]: "ONBOARDING_ADVANCED" };
+export const GuildOnboardingMode = {
+  ONBOARDING_DEFAULT: 0,
+  [0]: "ONBOARDING_DEFAULT",
+  ONBOARDING_ADVANCED: 1,
+  [1]: "ONBOARDING_ADVANCED",
+};
 export const OnboardingConnectionType = obj;
 export const isDefaultPrompt = function isDefaultPrompt(options) {
   if (options.options.length > 0) {
     return false;
   } else {
-    obj = { id: null, title: null, options: null, singleSelect: false, required: false, inOnboarding: true, type: null };
+    obj = {
+      id: null,
+      title: null,
+      options: null,
+      singleSelect: false,
+      required: false,
+      inOnboarding: true,
+      type: null,
+    };
     const _String = String;
     const _Date = Date;
     obj[0] = String(Date.now());
@@ -114,7 +143,15 @@ export const isDefaultPrompt = function isDefaultPrompt(options) {
   }
 };
 export const getDefaultPrompt = function getDefaultPrompt() {
-  obj = { id: String(Date.now()), title: null, options: null, singleSelect: false, required: false, inOnboarding: true, type: null };
+  obj = {
+    id: String(Date.now()),
+    title: null,
+    options: null,
+    singleSelect: false,
+    required: false,
+    inOnboarding: true,
+    type: null,
+  };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.vY91C9);
   obj[2] = [];
@@ -122,7 +159,15 @@ export const getDefaultPrompt = function getDefaultPrompt() {
   return obj;
 };
 export const getEmptyPrompt = function getEmptyPrompt(inOnboarding) {
-  obj = { id: String(Date.now()), title: "", options: [], singleSelect: false, required: false, inOnboarding, type: obj.MULTIPLE_CHOICE };
+  obj = {
+    id: String(Date.now()),
+    title: "",
+    options: [],
+    singleSelect: false,
+    required: false,
+    inOnboarding,
+    type: obj.MULTIPLE_CHOICE,
+  };
   return obj;
 };
 export const clientPromptToServerPrompt = function clientPromptToServerPrompt(id) {
@@ -130,7 +175,17 @@ export const clientPromptToServerPrompt = function clientPromptToServerPrompt(id
   return {
     id: id.id,
     options: options.map((id) => {
-      obj = { id: id.id, channel_ids: id.channelIds, role_ids: id.roleIds, emoji: id.emoji, emoji_id: null, emoji_name: null, emoji_animated: null, title: null, description: null };
+      obj = {
+        id: id.id,
+        channel_ids: id.channelIds,
+        role_ids: id.roleIds,
+        emoji: id.emoji,
+        emoji_id: null,
+        emoji_name: null,
+        emoji_animated: null,
+        title: null,
+        description: null,
+      };
       const emoji = id.emoji;
       id = undefined;
       if (emoji != null) {
@@ -157,12 +212,23 @@ export const clientPromptToServerPrompt = function clientPromptToServerPrompt(id
     disabled: id.disabled,
     required: id.required,
     in_onboarding: id.inOnboarding,
-    type: id.type
+    type: id.type,
   };
 };
 export { serverPromptToClientPrompt };
 export const serverApiResponseToClientState = function serverApiResponseToClientState(defaultChannelIds) {
-  obj = { prompts: prompts.map(serverPromptToClientPrompt), defaultChannelIds: defaultChannelIds.default_channel_ids, responses: null, mode: null, enabled: null, onboardingPromptsSeen: null, onboardingResponsesSeen: null, belowRequirements: null, connections: null, additionalConnections: null };
+  obj = {
+    prompts: prompts.map(serverPromptToClientPrompt),
+    defaultChannelIds: defaultChannelIds.default_channel_ids,
+    responses: null,
+    mode: null,
+    enabled: null,
+    onboardingPromptsSeen: null,
+    onboardingResponsesSeen: null,
+    belowRequirements: null,
+    connections: null,
+    additionalConnections: null,
+  };
   prompts = defaultChannelIds.prompts;
   let responses = defaultChannelIds.responses;
   if (responses == null) {

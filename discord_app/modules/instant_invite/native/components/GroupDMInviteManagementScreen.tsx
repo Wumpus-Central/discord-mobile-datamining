@@ -24,7 +24,7 @@ function GroupDMInviteManagement(channelId) {
   first(4945)(() => {
     function _fetchInvites() {
       const self = this;
-      const tmp = callback(function*() {
+      const tmp = callback(function* () {
         if (v02 === 2) {
           v02 = 3;
           HermesBuiltin.throwTypeError();
@@ -115,19 +115,23 @@ function GroupDMInviteManagement(channelId) {
   const tmp7 = callback(importAllResult.useState(21), 2);
   callback = tmp7[1];
   const items = [first];
-  const memo = importAllResult.useMemo(() => first(12).sortBy(first, (inviter) => {
-    inviter = inviter.inviter;
-    let str;
-    if (inviter != null) {
-      if (inviter.username != null) {
-        str = str2.toLowerCase();
-      }
-    }
-    if (str == null) {
-      str = "";
-    }
-    return str;
-  }), items);
+  const memo = importAllResult.useMemo(
+    () =>
+      first(12).sortBy(first, (inviter) => {
+        inviter = inviter.inviter;
+        let str;
+        if (inviter != null) {
+          if (inviter.username != null) {
+            str = str2.toLowerCase();
+          }
+        }
+        if (str == null) {
+          str = "";
+        }
+        return str;
+      }),
+    items,
+  );
   const effect = importAllResult.useEffect(() => {
     callback(21);
   }, []);
@@ -151,7 +155,16 @@ function GroupDMInviteManagement(channelId) {
     obj[2] = callback;
     obj[3] = tmp11;
     obj[5] = tmp7[0];
-    tmp14 = <closure_7 style={null} data={null} keyExtractor={null} renderItem={null} initialNumToRender={10} windowSize={null} />;
+    tmp14 = (
+      <closure_7
+        style={null}
+        data={null}
+        keyExtractor={null}
+        renderItem={null}
+        initialNumToRender={10}
+        windowSize={null}
+      />
+    );
   }
   return tmp14;
 }
@@ -178,6 +191,8 @@ const memoResult = importAllResult.memo(function GroupDMInviteManagementScreen(c
   }, items);
   return jsx(channelId(6008).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
 });
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/GroupDMInviteManagementScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/instant_invite/native/components/GroupDMInviteManagementScreen.tsx",
+);
 
 export default memoResult;

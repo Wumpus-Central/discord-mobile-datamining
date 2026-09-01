@@ -34,8 +34,15 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(style) {
     const result = obj.openRewardDetailsBottomSheet(obj);
   }, items);
   obj = { justify: "center", align: "center", spacing: ThemesDefault.space.PX_24, style: style.style, children: null };
-  obj = { hasConfetti: true, quest, size: str, progress: questTaskDetails.percentComplete, onPress: callback, withAnimation: withRewardTileAnimation };
-  const items1 = [callback(COMPLETION_GLOW_SHADOW_RADIUSDefault, obj), ];
+  obj = {
+    hasConfetti: true,
+    quest,
+    size: str,
+    progress: questTaskDetails.percentComplete,
+    onPress: callback,
+    withAnimation: withRewardTileAnimation,
+  };
+  const items1 = [callback(COMPLETION_GLOW_SHADOW_RADIUSDefault, obj)];
   obj1 = { align: "center", spacing: ThemesDefault.space.PX_4, onLayout: onTextBlockLayout, children: null };
   if (tmp) {
     const obj2 = { variant: "heading-lg/semibold", color: "text-strong", style: null, children: null };
@@ -46,7 +53,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(style) {
     obj2[3] = intl.formatToPlainString(tmp3(1236).t.EAYZAr, obj3);
     tmp = tmp9(tmp3(4474).Text, obj2);
   }
-  const items2 = [tmp, ];
+  const items2 = [tmp];
   if (tmp9Result) {
     const obj4 = { variant: "heading-sm/medium", color: "text-subtle", children: null };
     const intl2 = tmp3(1236).intl;

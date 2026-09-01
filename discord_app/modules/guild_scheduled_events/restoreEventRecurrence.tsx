@@ -16,4 +16,4 @@ export default function restoreEventRecurrence(arg0, guild_id, id, event_excepti
   let obj = _modDef9673;
   obj = { scheduled_start_time, scheduled_end_time, is_canceled: false };
   result = obj.updateGuildEventException(obj, guild_id, id, event_exception_id);
-};
+}

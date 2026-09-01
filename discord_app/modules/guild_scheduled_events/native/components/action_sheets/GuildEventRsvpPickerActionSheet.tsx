@@ -15,7 +15,9 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { marginTop: ThemesDefault.space.PX_24 };
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/action_sheets/GuildEventRsvpPickerActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/action_sheets/GuildEventRsvpPickerActionSheet.tsx",
+);
 
 export default function GuildEventRsvpPickerActionSheet(event) {
   event = event.event;
@@ -44,8 +46,10 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   obj = { bottom: true, style: tmp.container, children: null };
   obj1 = { defaultValue: first, onChange: tmp4[1], hasIcons: false, children: null };
   const responseOptions = event(9676).getResponseOptions();
-  obj1[3] = responseOptions.map((value) => callback2(event(table[13]).TableRadioRow, { value: value.value, label: value.name }, value.value));
-  const items = [callback2(event(7692).TableRadioGroup, obj1), ];
+  obj1[3] = responseOptions.map((value) =>
+    callback2(event(table[13]).TableRadioRow, { value: value.value, label: value.name }, value.value),
+  );
+  const items = [callback2(event(7692).TableRadioGroup, obj1)];
   const obj2 = { style: tmp.buttonWrapper, children: null };
   const obj3 = {
     onPress() {
@@ -61,7 +65,7 @@ export default function GuildEventRsvpPickerActionSheet(event) {
       const tmpResult = event(closure_1_2[15]);
       closure_1_1(closure_1_2[16]).hideActionSheet();
     },
-    text: null
+    text: null,
   };
   const intl3 = tmp2(1236).intl;
   obj3[1] = intl3.string(event(1236).t.TyCVIq);
@@ -70,4 +74,4 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   obj[2] = items;
   obj[1] = callback3(event(5553).SafeAreaPaddingView, obj);
   return callback2(event(5622).BottomSheet, obj);
-};
+}

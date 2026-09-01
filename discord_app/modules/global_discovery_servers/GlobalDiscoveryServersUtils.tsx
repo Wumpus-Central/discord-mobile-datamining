@@ -16,7 +16,7 @@ function _navigateToGuild() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -115,7 +115,15 @@ function _navigateToGuild() {
   }
   return applyArgumentsResult;
 }
-({ GlobalDiscoveryServerTab: error, FEATURED_GUILDS_CACHE_DURATION: closure_8, FEATURED_GUILDS_SEARCH_OPTIONS: c9, CategoryId: c10, DISCOVERY_ALL_CATEGORIES_ID: unpackModuleId, getLanguageOptions: closure_12, HUBS_CATEGORY_ID: map1 } = DEFAULT_DISCOVERY_CATEGORY_ID);
+({
+  GlobalDiscoveryServerTab: error,
+  FEATURED_GUILDS_CACHE_DURATION: closure_8,
+  FEATURED_GUILDS_SEARCH_OPTIONS: c9,
+  CategoryId: c10,
+  DISCOVERY_ALL_CATEGORIES_ID: unpackModuleId,
+  getLanguageOptions: closure_12,
+  HUBS_CATEGORY_ID: map1,
+} = DEFAULT_DISCOVERY_CATEGORY_ID);
 const result = require("set").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
 
 export const getGlobalDiscoveryServersTabTitle = function getGlobalDiscoveryServersTabTitle(arg0) {
@@ -251,12 +259,49 @@ export const isStaleFeaturedGuilds = function isStaleFeaturedGuilds(closure_2) {
   return tmp;
 };
 export const fromDiscoverableGuildServer = function fromDiscoverableGuildServer(id) {
-  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: null, preferredLocale: null, discoverySplash: null, emojis: null, emojiCount: null };
-  ({ approximate_presence_count: obj[7], approximate_member_count: obj[8], premium_subscription_count: obj[9], preferred_locale: obj[10], discovery_splash: obj[11], emojis: obj[12], emoji_count: obj[13] } = id);
+  const obj = {
+    id: id.id,
+    name: id.name,
+    description: id.description,
+    splash: id.splash,
+    banner: id.banner,
+    icon: id.icon,
+    features: new Set(id.features),
+    presenceCount: null,
+    memberCount: null,
+    premiumSubscriptionCount: null,
+    preferredLocale: null,
+    discoverySplash: null,
+    emojis: null,
+    emojiCount: null,
+  };
+  ({
+    approximate_presence_count: obj[7],
+    approximate_member_count: obj[8],
+    premium_subscription_count: obj[9],
+    preferred_locale: obj[10],
+    discovery_splash: obj[11],
+    emojis: obj[12],
+    emoji_count: obj[13],
+  } = id);
   return obj;
 };
 export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildSearchResult(id) {
-  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "accessible", discoverySplash: null, emojis: [] };
+  const obj = {
+    id: id.id,
+    name: id.name,
+    description: id.description,
+    splash: id.splash,
+    banner: id.banner,
+    icon: id.icon,
+    features: new Set(id.features),
+    presenceCount: null,
+    memberCount: null,
+    premiumSubscriptionCount: "r",
+    preferredLocale: "accessible",
+    discoverySplash: null,
+    emojis: [],
+  };
   ({ approximate_presence_count: obj[7], approximate_member_count: obj[8], discovery_splash: obj[11] } = id);
   return obj;
 };

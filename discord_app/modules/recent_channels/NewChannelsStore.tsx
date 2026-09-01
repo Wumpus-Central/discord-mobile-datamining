@@ -96,25 +96,27 @@ function initializeNewChannels(guildId) {
       const time = date.getTime();
       if (0 !== mapped.length) {
         const _Set = Set;
-        set1 = new Set(mapped.filter((channelId) => {
-          const extractTimestampResult = callback(closure_1_2[13]).extractTimestamp(channelId);
-          let tmp4 = null == closure_1_10.getTrackedAckMessageId(channelId);
-          if (tmp4) {
-            const _Date = Date;
-            const timestamp = Date.now();
-            tmp4 = extractTimestampResult > timestamp - callback(closure_1_2[9]).Millis.WEEK;
-          }
-          if (tmp4) {
-            tmp4 = extractTimestampResult > closure_1_3.getGuildRecentsDismissedAt(closure_0);
-          }
-          if (tmp4) {
-            tmp4 = extractTimestampResult > callback;
-          }
-          if (tmp4) {
-            tmp4 = !closure_1_11.isChannelOrParentOptedIn(closure_0, channelId);
-          }
-          return tmp4;
-        }));
+        set1 = new Set(
+          mapped.filter((channelId) => {
+            const extractTimestampResult = callback(closure_1_2[13]).extractTimestamp(channelId);
+            let tmp4 = null == closure_1_10.getTrackedAckMessageId(channelId);
+            if (tmp4) {
+              const _Date = Date;
+              const timestamp = Date.now();
+              tmp4 = extractTimestampResult > timestamp - callback(closure_1_2[9]).Millis.WEEK;
+            }
+            if (tmp4) {
+              tmp4 = extractTimestampResult > closure_1_3.getGuildRecentsDismissedAt(closure_0);
+            }
+            if (tmp4) {
+              tmp4 = extractTimestampResult > callback;
+            }
+            if (tmp4) {
+              tmp4 = !closure_1_11.isChannelOrParentOptedIn(closure_0, channelId);
+            }
+            return tmp4;
+          }),
+        );
         tmp[guildId] = set1;
         let _Date = Date;
         closure_17[guildId] = Date.now();
@@ -137,8 +139,7 @@ let closure_16 = {};
 let closure_17 = {};
 let set1 = new Set();
 const Store = initializeDefault.Store;
-class NewChannelsStore extends Store {
-}
+class NewChannelsStore extends Store {}
 const prototype = NewChannelsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_5, closure_6, closure_8, closure_9, closure_10, closure_11, closure_3);
@@ -285,7 +286,7 @@ const newChannelsStore = new NewChannelsStore(dispatcherDefault, {
         const _Set = Set;
         set = new Set();
         if (tmp14) {
-          const items = [, ];
+          const items = [,];
           ({ rulesChannelId: arr[0], publicUpdatesChannelId: arr[1] } = guild1);
           const item = items.forEach((arg0) => {
             let hasItem = null != arg0;
@@ -325,7 +326,7 @@ const newChannelsStore = new NewChannelsStore(dispatcherDefault, {
       dependencyMap[channel.guild_id].add(channel.id);
       const obj = dependencyMap[channel.guild_id];
     }
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/recent_channels/NewChannelsStore.tsx");
 

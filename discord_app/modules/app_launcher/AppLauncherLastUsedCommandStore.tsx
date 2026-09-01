@@ -6,8 +6,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 let closure_0 = 10 * setDefault.Millis.MINUTE;
 let closure_1 = { lastUsedCommandId: null, lastUsedTimeMs: null };
 const PersistedStore = initializeDefault.PersistedStore;
-class AppLauncherLastUsedCommandStore extends PersistedStore {
-}
+class AppLauncherLastUsedCommandStore extends PersistedStore {}
 const prototype = AppLauncherLastUsedCommandStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
@@ -37,7 +36,7 @@ const appLauncherLastUsedCommandStore = new AppLauncherLastUsedCommandStore(disp
   APPLICATION_COMMAND_USED: function handleApplicationCommandUsed(command) {
     closure_1.lastUsedCommandId = command.command.id;
     closure_1.lastUsedTimeMs = Date.now();
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/app_launcher/AppLauncherLastUsedCommandStore.tsx");
 

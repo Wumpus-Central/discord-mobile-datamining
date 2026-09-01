@@ -31,7 +31,10 @@ export default function useShouldOpenGameProfileModal(applicationId) {
   isLoading = gameId.isLoading;
   shouldOpenGameProfile = null != gameRecord;
   if (shouldOpenGameProfile) {
-    shouldOpenGameProfile = !importAll(tmp[4]).hasFlag(gameRecord.gameFlags, source(tmp[5]).GameFlags.GAME_PROFILE_DISABLED);
+    shouldOpenGameProfile = !importAll(tmp[4]).hasFlag(
+      gameRecord.gameFlags,
+      source(tmp[5]).GameFlags.GAME_PROFILE_DISABLED,
+    );
     const obj2 = importAll(tmp[4]);
   }
   let items = [gameRecord, shouldOpenGameProfile, isLoading, source, trackEntryPointImpression];
@@ -49,14 +52,19 @@ export default function useShouldOpenGameProfileModal(applicationId) {
     if (!current) {
       let track = trackEntryPointImpression;
       let GAME_PROFILE_ENTRY_POINT_AVAILABLE = gameRecord;
-      trackEntryPointImpression(gameRecord[8])(null != source, "Cannot track a Game Profile Entry Point Impressions without a source.");
+      trackEntryPointImpression(gameRecord[8])(
+        null != source,
+        "Cannot track a Game Profile Entry Point Impressions without a source.",
+      );
       let flag = shouldOpenGameProfile;
       if (null == gameRecord) {
         const items = [closure_1_7.NoMatch];
         let tmp11 = items;
       } else {
         const items1 = [];
-        if (obj3.hasFlag(tmp8.gameFlags, source(GAME_PROFILE_ENTRY_POINT_AVAILABLE[5]).GameFlags.GAME_PROFILE_DISABLED)) {
+        if (
+          obj3.hasFlag(tmp8.gameFlags, source(GAME_PROFILE_ENTRY_POINT_AVAILABLE[5]).GameFlags.GAME_PROFILE_DISABLED)
+        ) {
           items1.push(closure_1_7.Disabled);
         }
         obj3 = ref(GAME_PROFILE_ENTRY_POINT_AVAILABLE[4]);
@@ -83,7 +91,7 @@ export default function useShouldOpenGameProfileModal(applicationId) {
     }
   }, items);
   return { shouldOpenGameProfile, gameId: gameId.gameId };
-};
+}
 export const RejectionReason = obj;
 export const trackEntryPoint = function trackEntryPoint(game_profile_available, id, items, CallTile) {
   if (items === undefined) {

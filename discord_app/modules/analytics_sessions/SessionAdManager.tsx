@@ -11,7 +11,12 @@ let c3 = importDefaultResult;
 ({ AnalyticEvents: c4, AppStates: c5 } = ME);
 const ad = "ad";
 let token = importDefaultResult.getToken();
-let closure_8 = { DEFAULT: "DEFAULT", USER_LOGOUT: "USER_LOGOUT", WINDOW_FOCUS: "WINDOW_FOCUS", APP_STATE_UPDATE: "APP_STATE_UPDATE" };
+let closure_8 = {
+  DEFAULT: "DEFAULT",
+  USER_LOGOUT: "USER_LOGOUT",
+  WINDOW_FOCUS: "WINDOW_FOCUS",
+  APP_STATE_UPDATE: "APP_STATE_UPDATE",
+};
 initializeDefault;
 class SessionAdManager extends tmp3 {
   constructor() {
@@ -61,7 +66,11 @@ class SessionAdManager extends tmp3 {
       const diff = nowResult - tmp.lastHeartbeatTimestamp;
       const orRefreshAdSession = applyArgumentsResult(closure_1_2[8]).getOrRefreshAdSession();
       const obj3 = applyArgumentsResult(closure_1_2[8]);
-      obj = { client_ad_session_id: orRefreshAdSession.uuid, client_heartbeat_initialization_timestamp: orRefreshAdSession.createdAtTimestamp, client_heartbeat_version: 3 };
+      obj = {
+        client_ad_session_id: orRefreshAdSession.uuid,
+        client_heartbeat_initialization_timestamp: orRefreshAdSession.createdAtTimestamp,
+        client_heartbeat_version: 3,
+      };
       closure_1_1(closure_1_2[9]).track(closure_1_4.CLIENT_AD_HEARTBEAT, obj);
       applyArgumentsResult.lastHeartbeatTimestamp = nowResult;
     };

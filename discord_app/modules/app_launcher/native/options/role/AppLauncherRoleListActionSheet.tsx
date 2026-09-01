@@ -63,14 +63,19 @@ class RoleRow {
     }, items1);
     tmp7 = jsx;
     obj = { label: jsx(require("Text").Text, obj1), icon: jsx(RoleIcon, { role: guildRole }), trailing: null };
-    obj1 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guildRole.name };
+    obj1 = {
+      lineClamp: 1,
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      children: guildRole.name,
+    };
     tmp8 = null;
     if (!tmp5) {
       tmp8 = null;
       if (null != stateFromStores) {
         tmp9 = jsxs;
         obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
-        items2 = [, , ];
+        items2 = [, ,];
         items2[0] = tmp7(require("GroupIcon").GroupIcon, { size: "xxs", color: "text-muted" });
         str = " ";
         items2[1] = " ";
@@ -86,7 +91,9 @@ class RoleRow {
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 const AppLauncherRoleListActionSheet = "AppLauncherRoleListActionSheet";
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/role/AppLauncherRoleListActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/options/role/AppLauncherRoleListActionSheet.tsx",
+);
 
 export default function AppLauncherRoleListActionSheet(channel) {
   ({ onRolePress: require, onActionSheetDismiss } = channel);
@@ -105,16 +112,20 @@ export default function AppLauncherRoleListActionSheet(channel) {
   const items = [closure_8];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getSortedRoles(guild_id));
   const items1 = [stateFromStores, first];
-  memo = ref.useMemo(() => stateFromStores.filter((id) => {
-    let tmp = closure_3 === id.id;
-    if (!tmp) {
-      const trimmed = closure_3.trim();
-      tmp = closure_1_1(closure_1_3[14])(trimmed, id.name.toLowerCase());
-      const str2 = id.name;
-      const tmp4 = closure_1_1(closure_1_3[14]);
-    }
-    return tmp;
-  }), items1);
+  memo = ref.useMemo(
+    () =>
+      stateFromStores.filter((id) => {
+        let tmp = closure_3 === id.id;
+        if (!tmp) {
+          const trimmed = closure_3.trim();
+          tmp = closure_1_1(closure_1_3[14])(trimmed, id.name.toLowerCase());
+          const str2 = id.name;
+          const tmp4 = closure_1_1(closure_1_3[14]);
+        }
+        return tmp;
+      }),
+    items1,
+  );
   obj = { option: channel.option, onDismiss: onActionSheetDismiss, children: null };
   obj = {
     onChange(str) {
@@ -123,9 +134,9 @@ export default function AppLauncherRoleListActionSheet(channel) {
       if (current != null) {
         current.scrollToOffset({ offset: 0, animated: false });
       }
-    }
+    },
   };
-  const items2 = [callback2(require(first[17]).AppLauncherListSearchBar, obj), ];
+  const items2 = [callback2(require(first[17]).AppLauncherListSearchBar, obj)];
   if (0 === memo.length) {
     let tmp8Result = tmp8(tmp4(tmp5[17]).AppLauncherListEmptyState, {});
   } else {
@@ -144,7 +155,7 @@ export default function AppLauncherRoleListActionSheet(channel) {
           closure_1_1();
         },
         start: 0 === index,
-        end: index === memo.length - 1
+        end: index === memo.length - 1,
       });
     };
     tmp8Result = tmp8(tmp4(tmp5[17]).AppLauncherList, obj1);
@@ -152,7 +163,7 @@ export default function AppLauncherRoleListActionSheet(channel) {
   items2[1] = tmp8Result;
   obj[2] = items2;
   return closure_11(require(first[16]).AppLauncherCommandOptionActionSheet, obj);
-};
+}
 export const APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY = "AppLauncherRoleListActionSheet";
 export { RoleIcon };
 export { RoleRow };

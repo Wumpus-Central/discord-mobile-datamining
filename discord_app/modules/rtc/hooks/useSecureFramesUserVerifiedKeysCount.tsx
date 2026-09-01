@@ -21,14 +21,18 @@ export const useSecureFramesUserVerifiedKeysCount = function useSecureFramesUser
   }, items);
   const items1 = [closure_3];
   const items2 = [memo, userId];
-  return userId(keyToOmit[3]).useStateFromStores(items1, () => {
-    const userVerifiedKeys = closure_1_3.getUserVerifiedKeys(userId);
-    let num = 0;
-    if (null != userVerifiedKeys) {
-      const _Object = Object;
-      const keys = Object.keys(userVerifiedKeys);
-      num = keys.filter((arg0) => arg0 !== closure_2).length;
-    }
-    return num;
-  }, items2);
+  return userId(keyToOmit[3]).useStateFromStores(
+    items1,
+    () => {
+      const userVerifiedKeys = closure_1_3.getUserVerifiedKeys(userId);
+      let num = 0;
+      if (null != userVerifiedKeys) {
+        const _Object = Object;
+        const keys = Object.keys(userVerifiedKeys);
+        num = keys.filter((arg0) => arg0 !== closure_2).length;
+      }
+      return num;
+    },
+    items2,
+  );
 };

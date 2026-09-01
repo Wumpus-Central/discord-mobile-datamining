@@ -90,7 +90,10 @@ function YouBarAvatarLarge(transitionState) {
   const tmp2Result2 = transitionState(OFFLINE[16]);
   const items3 = [sharedValue3];
   const items4 = [OFFLINE];
-  const stateFromStores1 = transitionState(OFFLINE[12]).useStateFromStores(items3, () => sharedValue3.animateYouBarAvatarDeco);
+  const stateFromStores1 = transitionState(OFFLINE[12]).useStateFromStores(
+    items3,
+    () => sharedValue3.animateYouBarAvatarDeco,
+  );
   const memo = sharedValue.useMemo(() => {
     if (OFFLINE === closure_1_21.UNKNOWN) {
       OFFLINE = closure_1_21.OFFLINE;
@@ -98,7 +101,7 @@ function YouBarAvatarLarge(transitionState) {
     if (null != OFFLINE) {
       const result = closure_1_16 / 2;
       const sum = result + transitionState(OFFLINE[13]).STATUS_PADDING;
-      const diff = closure_1_20 - sum - closure_1_16 / 4 * 2;
+      const diff = closure_1_20 - sum - (closure_1_16 / 4) * 2;
       let obj = { nativeCutouts: null };
       obj = { shape: null, x: null, y: null, size: null };
       obj[0] = transitionState(OFFLINE[17]).CutoutShape.Circle;
@@ -136,7 +139,12 @@ function YouBarAvatarLarge(transitionState) {
           const obj = closure_1_0(closure_1_2[15]);
         }
       };
-      obj1 = { transitionState, TransitionStates: transitionState(closure_2[14]).TransitionStates, runOnJS: transitionState(closure_2[15]).runOnJS, cleanup };
+      obj1 = {
+        transitionState,
+        TransitionStates: transitionState(closure_2[14]).TransitionStates,
+        runOnJS: transitionState(closure_2[15]).runOnJS,
+        cleanup,
+      };
       fn.__closure = obj1;
       fn.__workletHash = 9945521131664;
       fn.__initData = closure_1_26;
@@ -144,7 +152,18 @@ function YouBarAvatarLarge(transitionState) {
       return obj;
     }
   }
-  obj = { withSpring: tmp2(tmp3[18]).withSpring, scale: sharedValue1, YOU_BAR_SPRING_CONFIG: closure_18, left: sharedValue2, top: sharedValue3, opacity: sharedValue, transitionState, TransitionStates: tmp2(tmp3[14]).TransitionStates, runOnJS: tmp2(tmp3[15]).runOnJS, cleanup };
+  obj = {
+    withSpring: tmp2(tmp3[18]).withSpring,
+    scale: sharedValue1,
+    YOU_BAR_SPRING_CONFIG: closure_18,
+    left: sharedValue2,
+    top: sharedValue3,
+    opacity: sharedValue,
+    transitionState,
+    TransitionStates: tmp2(tmp3[14]).TransitionStates,
+    runOnJS: tmp2(tmp3[15]).runOnJS,
+    cleanup,
+  };
   V.__closure = obj;
   V.__workletHash = 4621027458354;
   V.__initData = closure_25;
@@ -155,7 +174,7 @@ function YouBarAvatarLarge(transitionState) {
   let tmp28Result = null;
   if (null != stateFromStores) {
     obj = { style: null, children: null };
-    const items5 = [tmp.avatarShadow, , ];
+    const items5 = [tmp.avatarShadow, ,];
     obj1 = { position: "absolute", width: null, height: null };
     obj1[1] = tmp5;
     obj1[2] = tmp5;
@@ -181,8 +200,18 @@ function YouBarAvatarLarge(transitionState) {
     obj5[3] = token;
     obj4[0] = obj5;
     obj2[2] = closure_22(sharedValue1, obj4);
-    const items6 = [closure_22(tmp23Result, obj2), , , ];
-    const obj6 = { user: null, guildId: "Array", size: false, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "rgba(0, 0, 0, 0.5)" };
+    const items6 = [closure_22(tmp23Result, obj2), , ,];
+    const obj6 = {
+      user: null,
+      guildId: "Array",
+      size: false,
+      animate: true,
+      needsOffscreenAlphaCompositing: null,
+      status: null,
+      statusSizeOverride: null,
+      cutout: null,
+      statusStyle: "rgba(0, 0, 0, 0.5)",
+    };
     obj6[0] = stateFromStores;
     obj6[2] = closure_11;
     if (OFFLINE === StatusTypes.UNKNOWN) {
@@ -240,7 +269,10 @@ function YouBarAvatarLarge(transitionState) {
       obj12[3] = stateFromStores1 && "always";
       const tmp2Result9 = tmp2(tmp3[21]);
       const tmp2Result10 = tmp2(tmp3[21]);
-      obj12[4] = tmp2Result10.getDecorationCutoutForAvatarCutout(memo, (tmp2(tmp3[21]).getDecorationSizeForAvatarSize(tmp33) - tmp5) / 2);
+      obj12[4] = tmp2Result10.getDecorationCutoutForAvatarCutout(
+        memo,
+        (tmp2(tmp3[21]).getDecorationSizeForAvatarSize(tmp33) - tmp5) / 2,
+      );
       tmp29Result = tmp29(tmp23Result1, obj12, avatarDecoration.asset);
       const tmp2Result11 = tmp2(tmp3[21]);
     }
@@ -283,14 +315,27 @@ function YouBarAvatar(transitionState) {
         const obj = closure_1_0(closure_1_2[15]);
       }
     };
-    obj = { transitionState, TransitionStates: transitionState(sharedValue[14]).TransitionStates, runOnJS: transitionState(sharedValue[15]).runOnJS, cleanup };
+    obj = {
+      transitionState,
+      TransitionStates: transitionState(sharedValue[14]).TransitionStates,
+      runOnJS: transitionState(sharedValue[15]).runOnJS,
+      cleanup,
+    };
     fn.__closure = obj;
     fn.__workletHash = 1724804022422;
     fn.__initData = closure_1_29;
     obj[0] = transitionState(sharedValue[18]).withSpring(value, closure_1_18, "respect-motion-settings", fn);
     return obj;
   };
-  obj = { withSpring: tmp(tmp2[18]).withSpring, opacity: sharedValue, YOU_BAR_SPRING_CONFIG: closure_18, transitionState, TransitionStates: tmp(tmp2[14]).TransitionStates, runOnJS: tmp(tmp2[15]).runOnJS, cleanup };
+  obj = {
+    withSpring: tmp(tmp2[18]).withSpring,
+    opacity: sharedValue,
+    YOU_BAR_SPRING_CONFIG: closure_18,
+    transitionState,
+    TransitionStates: tmp(tmp2[14]).TransitionStates,
+    runOnJS: tmp(tmp2[15]).runOnJS,
+    cleanup,
+  };
   fn.__closure = obj;
   fn.__workletHash = 8237916771781;
   fn.__initData = closure_28;
@@ -313,7 +358,16 @@ function YouBarAvatar(transitionState) {
     obj1[2] = -result;
     const items3 = [obj1, animatedStyle];
     obj[0] = items3;
-    obj2 = { user: null, guildId: "Array", size: false, animate: true, needsOffscreenAlphaCompositing: null, avatarDecoration: null, status: true, autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi" };
+    obj2 = {
+      user: null,
+      guildId: "Array",
+      size: false,
+      animate: true,
+      needsOffscreenAlphaCompositing: null,
+      avatarDecoration: null,
+      status: true,
+      autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi",
+    };
     obj2[0] = stateFromStores;
     obj2[2] = closure_13;
     obj2[5] = avatarDecoration;
@@ -328,21 +382,48 @@ function YouBarAvatar(transitionState) {
 }
 let c5 = importAllResult;
 ({ View: closure_6, Pressable: error } = get_ActivityIndicator);
-({ YOU_BAR_AVATAR_LARGE_SIZE: unpackModuleId, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12, YOU_BAR_AVATAR_SIZE: map1, YOU_BAR_STATUS_INSET: closure_14, YOU_BAR_HEIGHT: closure_15, YOU_BAR_LARGE_STATUS_SIZE: closure_16, YOU_BAR_PADDING: closure_17, YOU_BAR_SPRING_CONFIG: closure_18, YOU_BAR_STATUS_OFFSET: closure_19, YOU_BAR_AVATAR_LARGE_PX: closure_20 } = CONNECTION_BANNER_HEIGHT);
+({
+  YOU_BAR_AVATAR_LARGE_SIZE: unpackModuleId,
+  YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12,
+  YOU_BAR_AVATAR_SIZE: map1,
+  YOU_BAR_STATUS_INSET: closure_14,
+  YOU_BAR_HEIGHT: closure_15,
+  YOU_BAR_LARGE_STATUS_SIZE: closure_16,
+  YOU_BAR_PADDING: closure_17,
+  YOU_BAR_SPRING_CONFIG: closure_18,
+  YOU_BAR_STATUS_OFFSET: closure_19,
+  YOU_BAR_AVATAR_LARGE_PX: closure_20,
+} = CONNECTION_BANNER_HEIGHT);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
 let obj = { avatarShadow: null };
 obj = {};
 let merged = Object.assign(ThemesDefault.shadows.SHADOW_MEDIUM);
 obj[0] = obj;
 let closure_24 = createCacheKey.createStyles(obj);
-let closure_25 = { code: "function YouBarAvatarTsx1(){const{withSpring,scale,YOU_BAR_SPRING_CONFIG,left,top,opacity,transitionState,TransitionStates,runOnJS,cleanup}=this.__closure;return{transform:[{scale:withSpring(scale.get(),YOU_BAR_SPRING_CONFIG)}],left:withSpring(left.get(),YOU_BAR_SPRING_CONFIG),top:withSpring(top.get(),YOU_BAR_SPRING_CONFIG),opacity:withSpring(opacity.get(),YOU_BAR_SPRING_CONFIG,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanup)();}})};}" };
-let closure_26 = { code: "function YouBarAvatarTsx2(finished){const{transitionState,TransitionStates,runOnJS,cleanup}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanup)();}}" };
-let closure_28 = { code: "function YouBarAvatarTsx3(){const{withSpring,opacity,YOU_BAR_SPRING_CONFIG,transitionState,TransitionStates,runOnJS,cleanup}=this.__closure;return{opacity:withSpring(opacity.get(),YOU_BAR_SPRING_CONFIG,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanup)();}})};}" };
-let closure_29 = { code: "function YouBarAvatarTsx4(finished){const{transitionState,TransitionStates,runOnJS,cleanup}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanup)();}}" };
-let closure_31 = { code: "function YouBarAvatarTsx5(){const{withSpring,isAvatarPressed,YOU_BAR_SPRING_CONFIG}=this.__closure;return{transform:[{scale:withSpring(isAvatarPressed?0.98:1,YOU_BAR_SPRING_CONFIG)}]};}" };
-let closure_32 = { code: "function YouBarAvatarTsx6(){const{runOnJS,setIsAvatarPressed}=this.__closure;runOnJS(setIsAvatarPressed)(false);}" };
-let closure_33 = { code: "function YouBarAvatarTsx7(){const{runOnJS,handleAvatarLongPress}=this.__closure;runOnJS(handleAvatarLongPress)();}" };
-let closure_34 = { code: "function YouBarAvatarTsx8(){const{runOnJS,setIsAvatarPressed}=this.__closure;runOnJS(setIsAvatarPressed)(true);}" };
+let closure_25 = {
+  code: "function YouBarAvatarTsx1(){const{withSpring,scale,YOU_BAR_SPRING_CONFIG,left,top,opacity,transitionState,TransitionStates,runOnJS,cleanup}=this.__closure;return{transform:[{scale:withSpring(scale.get(),YOU_BAR_SPRING_CONFIG)}],left:withSpring(left.get(),YOU_BAR_SPRING_CONFIG),top:withSpring(top.get(),YOU_BAR_SPRING_CONFIG),opacity:withSpring(opacity.get(),YOU_BAR_SPRING_CONFIG,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanup)();}})};}",
+};
+let closure_26 = {
+  code: "function YouBarAvatarTsx2(finished){const{transitionState,TransitionStates,runOnJS,cleanup}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanup)();}}",
+};
+let closure_28 = {
+  code: "function YouBarAvatarTsx3(){const{withSpring,opacity,YOU_BAR_SPRING_CONFIG,transitionState,TransitionStates,runOnJS,cleanup}=this.__closure;return{opacity:withSpring(opacity.get(),YOU_BAR_SPRING_CONFIG,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanup)();}})};}",
+};
+let closure_29 = {
+  code: "function YouBarAvatarTsx4(finished){const{transitionState,TransitionStates,runOnJS,cleanup}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanup)();}}",
+};
+let closure_31 = {
+  code: "function YouBarAvatarTsx5(){const{withSpring,isAvatarPressed,YOU_BAR_SPRING_CONFIG}=this.__closure;return{transform:[{scale:withSpring(isAvatarPressed?0.98:1,YOU_BAR_SPRING_CONFIG)}]};}",
+};
+let closure_32 = {
+  code: "function YouBarAvatarTsx6(){const{runOnJS,setIsAvatarPressed}=this.__closure;runOnJS(setIsAvatarPressed)(false);}",
+};
+let closure_33 = {
+  code: "function YouBarAvatarTsx7(){const{runOnJS,handleAvatarLongPress}=this.__closure;runOnJS(handleAvatarLongPress)();}",
+};
+let closure_34 = {
+  code: "function YouBarAvatarTsx8(){const{runOnJS,setIsAvatarPressed}=this.__closure;runOnJS(setIsAvatarPressed)(true);}",
+};
 const memoResult = importAllResult.memo(function YouBarAvatarAnimated(isLargeAvatar) {
   isLargeAvatar = isLargeAvatar.isLargeAvatar;
   const onPress = isLargeAvatar.onPress;
@@ -380,25 +461,44 @@ const memoResult = importAllResult.memo(function YouBarAvatarAnimated(isLargeAva
     }
     callback(false);
   }, items1);
-  callback1 = importAllResult.useCallback(callback(function*() {
-    if (paths === 2) {
-      paths = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  callback1 = importAllResult.useCallback(
+    callback(function* () {
+      if (paths === 2) {
+        paths = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        paths = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
+        try {
+          paths = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              paths = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              paths = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_0 = tmp4;
+              obj1 = closure_1_0(paths[22]);
+              const result = obj1.triggerHapticFeedback(closure_1_0(paths[22]).HapticFeedbackTypes.SOFT);
+              c1 = 1;
+              paths = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_0(paths[24])(paths[23], paths.paths);
+              return obj1;
+            }
+          } else if (arg0 === 1) {
             paths = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -407,35 +507,19 @@ const memoResult = importAllResult.memo(function YouBarAvatarAnimated(isLargeAva
             obj[0] = arg1;
             return obj;
           } else {
-            closure_0 = tmp4;
-            obj1 = closure_1_0(paths[22]);
-            const result = obj1.triggerHapticFeedback(closure_1_0(paths[22]).HapticFeedbackTypes.SOFT);
-            c1 = 1;
-            paths = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(paths[24])(paths[23], paths.paths);
-            return obj1;
+            arg1.openUserSettings();
+            callback(false);
+            paths = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          paths = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          paths = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          arg1.openUserSettings();
-          callback(false);
-          paths = 3;
-          return { value: "HermesInternal", done: null };
+        } catch (tmp12) {
+          paths = tmp;
+          throw tmp12;
         }
-      } catch (tmp12) {
-        paths = tmp;
-        throw tmp12;
       }
-    }
-  }), []);
+    }),
+    [],
+  );
   const items2 = [callback1];
   const memo = importAllResult.useMemo(() => {
     const Gesture = isLargeAvatar(first[25]).Gesture;
@@ -466,7 +550,11 @@ const memoResult = importAllResult.memo(function YouBarAvatarAnimated(isLargeAva
     return onStartResult.onFinalize(fn3);
   }, items2);
   [][0] = isLargeAvatar;
-  const callback2 = importAllResult.useCallback((arg0, arg1, transitionState, cleanup) => callback2(arg1 ? closure_27 : closure_30, { transitionState, cleanup }, arg0), []);
+  const callback2 = importAllResult.useCallback(
+    (arg0, arg1, transitionState, cleanup) =>
+      callback2(arg1 ? closure_27 : closure_30, { transitionState, cleanup }, arg0),
+    [],
+  );
   let tmp12 = null;
   if (null != stateFromStores) {
     obj = { gesture: null, children: null };

@@ -3,7 +3,9 @@ import closure_2 from "../../../../stores/GuildMemberCountStore.tsx";
 import { GuildFeatures } from "../../../../Constants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/hooks/useStickyServerHeaderSubtitle.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/channel_list_v2/native/hooks/useStickyServerHeaderSubtitle.tsx",
+);
 
 export default function useStickyServerHeaderSubtitle(arg0) {
   const _require = arg0;
@@ -16,4 +18,4 @@ export default function useStickyServerHeaderSubtitle(arg0) {
     }
     return memberCount;
   });
-};
+}

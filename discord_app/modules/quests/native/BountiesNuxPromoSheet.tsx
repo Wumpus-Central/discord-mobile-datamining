@@ -25,12 +25,19 @@ export default function BountiesNuxPromoSheet() {
   obj[1] = intl.string(getSystemLocale.t.DDpHZG);
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(getSystemLocale.t["LY+igv"]);
-  obj = { style: callback().illustrationContainer, children: jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 }) };
-  obj[3] = <View style={callback().illustrationContainer}>{jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 })}</View>;
+  obj = {
+    style: callback().illustrationContainer,
+    children: jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 }),
+  };
+  obj[3] = (
+    <View style={callback().illustrationContainer}>
+      {jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 })}
+    </View>
+  );
   obj = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj[3] = intl3.string(getSystemLocale.t.cpT0Cq);
   obj[4] = callback;
   obj[4] = jsx(Button.Button, { grow: true, size: "lg", variant: "primary", text: null, onPress: null });
   return jsx(PromoSheet.PromoSheet, { grow: true, size: "lg", variant: "primary", text: null, onPress: null });
-};
+}

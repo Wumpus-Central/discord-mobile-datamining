@@ -20,7 +20,7 @@ function getDeliveredNotifications() {
 }
 function _getDeliveredNotifications() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (table === 2) {
       table = 3;
       HermesBuiltin.throwTypeError();
@@ -97,7 +97,7 @@ function updateAndClearStaleNotifications() {
 }
 function _updateAndClearStaleNotifications() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c2 === 2) {
       c2 = 3;
       HermesBuiltin.throwTypeError();
@@ -224,7 +224,7 @@ let prototype = function NativeNotificationsManager() {
     }
   };
   require = applyArgumentsResult;
-  applyArgumentsResult.handlePostConnectionOpen = callback(function*() {
+  applyArgumentsResult.handlePostConnectionOpen = callback(function* () {
     if (logger === 2) {
       logger = 3;
       HermesBuiltin.throwTypeError();
@@ -285,7 +285,7 @@ let prototype = function NativeNotificationsManager() {
                 closure_1 = arg1;
                 c4 = 0;
                 c5 = 0;
-                return (function*(arg0, arg1) {
+                return (function* (arg0, arg1) {
                   closure_2 = tmp2;
                   yield callback(closure_1_2[11]).removeFile(callback, closure_1);
                   let obj5 = callback(closure_1_2[11]);
@@ -491,11 +491,17 @@ let prototype = function NativeNotificationsManager() {
   applyArgumentsResult.updateAndClearStaleNotifications = function updateAndClearStaleNotifications() {
     callback2();
   };
-  applyArgumentsResult.actions = { MESSAGE_ACK: applyArgumentsResult.handleAck, CHANNEL_SELECT: applyArgumentsResult.handleAck, POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen, EXPERIMENT_OVERRIDE_BUCKET: applyArgumentsResult.handleSetCallNotificationExperiment, EXPERIMENTS_FETCH_SUCCESS: applyArgumentsResult.handleSetCallNotificationExperiment, APP_STATE_UPDATE: applyArgumentsResult.updateAndClearStaleNotifications };
+  applyArgumentsResult.actions = {
+    MESSAGE_ACK: applyArgumentsResult.handleAck,
+    CHANNEL_SELECT: applyArgumentsResult.handleAck,
+    POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen,
+    EXPERIMENT_OVERRIDE_BUCKET: applyArgumentsResult.handleSetCallNotificationExperiment,
+    EXPERIMENTS_FETCH_SUCCESS: applyArgumentsResult.handleSetCallNotificationExperiment,
+    APP_STATE_UPDATE: applyArgumentsResult.updateAndClearStaleNotifications,
+  };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp3 {
-}
+class prototype extends tmp3 {}
 prototype = new prototype();
 const tmp2 = new timestampDefault("NativeNotificationsManager");
 let result = require("set").fileFinishedImporting("modules/notifications/native/NativeNotificationsManager.tsx");

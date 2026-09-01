@@ -24,7 +24,13 @@ export default function StreamFeedbackActionSheet(stream) {
   const stringResult = intl.string(stream(1236).t["5smP3R"]);
   const intl3 = stream(1236).intl;
   let stringResult2 = intl3.string(stream(1236).t.CqjnLN);
-  obj = { value: stateFromStores ? tmp7.STREAMING : tmp7.STREAM_WATCHING, label: null, problemsHeader: null, problemOptions: null, freeformConfig: null };
+  obj = {
+    value: stateFromStores ? tmp7.STREAMING : tmp7.STREAM_WATCHING,
+    label: null,
+    problemsHeader: null,
+    problemOptions: null,
+    freeformConfig: null,
+  };
   const intl4 = tmp(1236).intl;
   let tmp9 = analyticsData(2631);
   if (stateFromStores) {
@@ -43,7 +49,15 @@ export default function StreamFeedbackActionSheet(stream) {
   const intl6 = tmp(1236).intl;
   obj[1] = intl6.string(stream(1236).t.emlT91);
   obj[4] = obj;
-  obj1 = { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null };
+  obj1 = {
+    headerLabel: stringResult,
+    showHeaderCloseButton: true,
+    ratingBody: null,
+    categoriesHeader: null,
+    optionsTree: null,
+    trackOpen: null,
+    trackReport: null,
+  };
   const tmp11 = jsx;
   const tmpResult = stream(11214);
   if (stateFromStores) {
@@ -56,7 +70,13 @@ export default function StreamFeedbackActionSheet(stream) {
   obj1[4] = items1;
   obj1[5] = function trackOpen() {
     let obj = analyticsData(paths[11]);
-    obj = { type: "Stream Feedback Sheet", other_user_id: stream.ownerId, application_id: null, application_name: null, game_id: null };
+    obj = {
+      type: "Stream Feedback Sheet",
+      other_user_id: stream.ownerId,
+      application_id: null,
+      application_name: null,
+      game_id: null,
+    };
     let id = null;
     if (null != paths) {
       id = tmp.id;
@@ -83,7 +103,17 @@ export default function StreamFeedbackActionSheet(stream) {
       obj.processOptOut(obj);
     }
     if (null != rating) {
-      obj = { category: null, problem: null, variant: null, stream: null, feedback: null, streamApplication: null, analyticsData: null, location: "Stream End", rating: null };
+      obj = {
+        category: null,
+        problem: null,
+        variant: null,
+        stream: null,
+        feedback: null,
+        streamApplication: null,
+        analyticsData: null,
+        location: "Stream End",
+        rating: null,
+      };
       obj[0] = category;
       let value;
       if (reason != null) {
@@ -113,7 +143,10 @@ export default function StreamFeedbackActionSheet(stream) {
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
           ({ media_session_id: obj6[0], rtc_connection_id: obj6[1] } = tmp9);
-          tmp22(paths[14]).openLazy(stream(paths[16])(paths[15], paths.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
+          tmp22(paths[14]).openLazy(stream(paths[16])(paths[15], paths.paths), "UploadLogs", {
+            mediaSessionId: null,
+            rtcConnectionId: null,
+          });
           obj1 = { mediaSessionId: null, rtcConnectionId: null };
           const tmp22Result = tmp22(paths[14]);
         }
@@ -127,4 +160,4 @@ export default function StreamFeedbackActionSheet(stream) {
     }
   };
   return tmp11(tmp10(16932), obj1);
-};
+}

@@ -14,7 +14,9 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
     const ifUncached = FrecencyUserSettingsActionCreators.loadIfUncached(memo2.FRECENCY_AND_FAVORITES_SETTINGS);
   }, []);
   let items = [memo1];
-  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => memo1.getApplicationFrecencyWithoutLoadingLatest());
+  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () =>
+    memo1.getApplicationFrecencyWithoutLoadingLatest(),
+  );
   let items1 = [found, stateFromStoresArray];
   memo = memo.useMemo(() => {
     if (null != stateFromStoresArray) {

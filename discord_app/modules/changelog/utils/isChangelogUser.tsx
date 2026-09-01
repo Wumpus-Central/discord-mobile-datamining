@@ -11,4 +11,4 @@ export default function isChangelogUser(arg0) {
     tmp = arg0 === SYSTEM_UPDATES_USER_ID;
   }
   return tmp;
-};
+}

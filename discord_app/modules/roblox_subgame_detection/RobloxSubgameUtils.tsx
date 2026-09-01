@@ -12,7 +12,7 @@ function _openRobloxURLWithRootPlaceId() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const callback = tmp2;
       const obj4 = closure_1_1(closure_1_2[5]);
       closure_0 = yield obj4.getRobloxSubgameURL(closure_0);

@@ -40,29 +40,38 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
     }
   }, items);
   obj = { spacing: 16, style: tmp.content, children: null };
-  obj = { messageType: prop(1297).HelpMessageTypes.INFO, textColor: "text-feedback-info", textVariant: "text-sm/medium", children: null };
+  obj = {
+    messageType: prop(1297).HelpMessageTypes.INFO,
+    textColor: "text-feedback-info",
+    textVariant: "text-sm/medium",
+    children: null,
+  };
   const intl = prop(1236).intl;
   obj[3] = intl.string(prop(1236).t.El4aXl);
-  const items1 = [callback(prop(1297).HelpMessage, obj), ];
+  const items1 = [callback(prop(1297).HelpMessage, obj)];
   if (null != prop) {
     if (0 !== prop.length) {
       let mapped = prop.map((label) => {
         closure_0 = label;
-        return closure_1_6(prop(closure_1_2[18]).TableRow, {
-          label: label.title,
-          subLabel: label.description,
-          onPress() {
-            return label.onClick(closure_1_1);
+        return closure_1_6(
+          prop(closure_1_2[18]).TableRow,
+          {
+            label: label.title,
+            subLabel: label.description,
+            onPress() {
+              return label.onClick(closure_1_1);
+            },
+            arrow: true,
           },
-          arrow: true
-        }, label.id);
+          label.id,
+        );
       });
     }
     obj1 = { hasIcons: false, children: null };
     obj1[1] = mapped;
     items1[1] = tmp7(tmp8, obj1);
     obj[2] = items1;
-    const items2 = [tmp6(prop(4926).Stack, obj), ];
+    const items2 = [tmp6(prop(4926).Stack, obj)];
     let tmp7Result = isSuspendedUser;
     if (isSuspendedUser) {
       let obj2 = { variant: "text-xs/medium", children: null };
@@ -83,7 +92,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   const obj6 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.noMethodsText, children: null };
   const intl2 = tmp2(1236).intl;
   obj6[3] = intl2.string(modalSessionId(2919).cR6336);
-  const items3 = [callback(prop(4474).Text, obj6), ];
+  const items3 = [callback(prop(4474).Text, obj6)];
   const obj7 = { style: tmp.buttonGroup, children: null };
   const obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl3 = tmp2(1236).intl;

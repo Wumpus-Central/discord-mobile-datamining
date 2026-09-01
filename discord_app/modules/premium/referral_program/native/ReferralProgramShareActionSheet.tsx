@@ -16,16 +16,33 @@ function mapToUser(arg0) {
   return items;
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { searchBarContainer: null, searchBarRowContainer: null, header: null, subtitle: null, centeredContainer: null, errorImage: null, emptyImage: null, footer: null };
+createCacheKey = {
+  searchBarContainer: null,
+  searchBarRowContainer: null,
+  header: null,
+  subtitle: null,
+  centeredContainer: null,
+  errorImage: null,
+  emptyImage: null,
+  footer: null,
+};
 createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_8 };
 let obj1 = { paddingTop: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { height: ThemesDefault.space.PX_64 };
 let obj2 = { height: ThemesDefault.space.PX_64 };
-createCacheKey[3] = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
+createCacheKey[3] = {
+  textAlign: "center",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_8,
+};
 createCacheKey[4] = { alignItems: "center" };
-let obj3 = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
+let obj3 = {
+  textAlign: "center",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_8,
+};
 createCacheKey[5] = { height: 200, width: 180, marginVertical: ThemesDefault.space.PX_16 };
 let obj4 = { height: 200, width: 180, marginVertical: ThemesDefault.space.PX_16 };
 createCacheKey[6] = { height: 200, width: 240, marginTop: ThemesDefault.space.PX_16 };
@@ -33,7 +50,9 @@ let obj5 = { height: 200, width: 240, marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[7] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_48 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 let obj6 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_48 };
-const result = require("set").fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/referral_program/native/ReferralProgramShareActionSheet.tsx",
+);
 
 export default function ReferralProgramShareActionSheet() {
   let tmp = memo2();
@@ -72,7 +91,11 @@ export default function ReferralProgramShareActionSheet() {
     }
   }, items3);
   let obj2 = _require(first[15]);
-  const referralProgramEligibleUsers = obj2.useReferralProgramEligibleUsers({ searchQuery: arr3, selectedUsers: memo, limit: 15 });
+  const referralProgramEligibleUsers = obj2.useReferralProgramEligibleUsers({
+    searchQuery: arr3,
+    selectedUsers: memo,
+    limit: 15,
+  });
   const eligibleUsers = referralProgramEligibleUsers.eligibleUsers;
   fetchUsers = referralProgramEligibleUsers.fetchUsers;
   const isFetching = referralProgramEligibleUsers.isFetching;
@@ -127,18 +150,28 @@ export default function ReferralProgramShareActionSheet() {
   callback2 = memo.useCallback(() => ({ type: "section", props: { hideTitle: true } }), []);
   const callback3 = memo.useCallback((arg0, row) => {
     let obj = ref(first[18]);
-    obj = { eligibleUsers, row, selectedUserIds: first, resendUsers, referralsRemaining: stateFromStores, selectedNotResendUsers: memo2, onSelectUser: callback };
+    obj = {
+      eligibleUsers,
+      row,
+      selectedUserIds: first,
+      resendUsers,
+      referralsRemaining: stateFromStores,
+      selectedNotResendUsers: memo2,
+      onSelectUser: callback,
+    };
     return obj.buildReferralUserRow(obj);
   }, items8);
   let stringResult = intl.string(_require(first[16]).t.DXgoi2);
-  const analyticsLocations = stateFromStores(first[19])(stateFromStores(first[20]).PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL).analyticsLocations;
+  const analyticsLocations = stateFromStores(first[19])(
+    stateFromStores(first[20]).PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL,
+  ).analyticsLocations;
   _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_2 = tmp3;
       c3 = 1;
       v0(true);
@@ -163,7 +196,11 @@ export default function ReferralProgramShareActionSheet() {
         const obj3 = { selectedUsers: null, trialCreationResult: null };
         obj3[0] = lib;
         obj3[1] = closure_1;
-        stateFromStores(first[23]).openLazy(lib(first[25])(first[24], first.paths), "referral-program-share-action-sheet", obj3);
+        stateFromStores(first[23]).openLazy(
+          lib(first[25])(first[24], first.paths),
+          "referral-program-share-action-sheet",
+          obj3,
+        );
         c3 = 0;
         const obj6 = stateFromStores(first[23]);
       }
@@ -172,7 +209,7 @@ export default function ReferralProgramShareActionSheet() {
     })();
   });
   const items9 = [analyticsLocations];
-  closure_15 = memo.useCallback(function() {
+  closure_15 = memo.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -194,7 +231,7 @@ export default function ReferralProgramShareActionSheet() {
     }
     return stringResult;
   }, items10);
-  const items11 = [hasError(_require(first[27]).BottomSheetTitleHeader, { title: memo5 }), ];
+  const items11 = [hasError(_require(first[27]).BottomSheetTitleHeader, { title: memo5 })];
   obj = { variant: "text-xs/medium", color: "text-default", lineClamp: 2, style: tmp.subtitle, children: stringResult };
   items11[1] = hasError(_require(first[28]).Text, obj);
   obj[1] = items11;
@@ -207,7 +244,7 @@ export default function ReferralProgramShareActionSheet() {
     obj3[0] = tmp9(tmp4[30]);
     obj2[0] = obj3;
     obj2[2] = tmp.errorImage;
-    const items12 = [tmp29(tmp9Result, obj2), , ];
+    const items12 = [tmp29(tmp9Result, obj2), ,];
     const obj4 = { variant: "heading-xl/bold", style: null, children: null };
     obj4[1] = tmp.subtitle;
     const intl4 = tmp3(tmp4[16]).intl;
@@ -231,7 +268,7 @@ export default function ReferralProgramShareActionSheet() {
       obj8[0] = tmp9(tmp4[31]);
       obj7[0] = obj8;
       obj7[2] = tmp.emptyImage;
-      const items13 = [tmp29(tmp9Result, obj7), , ];
+      const items13 = [tmp29(tmp9Result, obj7), ,];
       const obj9 = { variant: "heading-xl/bold", style: null, children: null };
       obj9[1] = tmp.subtitle;
       let intl2 = tmp3(tmp4[16]).intl;
@@ -259,7 +296,10 @@ export default function ReferralProgramShareActionSheet() {
   const items14 = [fetchUsers];
   ({ renderHeader, headerSize } = userListActionsProps);
   const callback4 = obj.useCallback((nativeEvent) => {
-    if (nativeEvent.nativeEvent.contentOffset.y + nativeEvent.nativeEvent.layoutMeasurement.height >= nativeEvent.nativeEvent.contentSize.height - 150) {
+    if (
+      nativeEvent.nativeEvent.contentOffset.y + nativeEvent.nativeEvent.layoutMeasurement.height >=
+      nativeEvent.nativeEvent.contentSize.height - 150
+    ) {
       fetchUsers();
     }
   }, items14);
@@ -283,13 +323,23 @@ export default function ReferralProgramShareActionSheet() {
   const intl7 = tmp3(tmp4[16]).intl;
   obj16[3] = intl7.string(_require(first[16]).t.Kd5RaI);
   obj15[1] = hasError(stateFromStores(first[36]), obj16);
-  const items16 = [hasError(memo1, obj15), , ];
+  const items16 = [hasError(memo1, obj15), ,];
   let tmp42 = null;
   if (memo3) {
     tmp42 = tmp29Result;
   }
   items16[1] = tmp42;
-  items16[2] = hasError(_require(first[37]).UsersFastList, { ref, inActionSheet: true, sections: memo4, getItemProps: callback3, getSectionProps: callback2, renderListHeader: renderHeader, listHeaderSize: headerSize, insetEnd: 80, onScroll: callback4 });
+  items16[2] = hasError(_require(first[37]).UsersFastList, {
+    ref,
+    inActionSheet: true,
+    sections: memo4,
+    getItemProps: callback3,
+    getSectionProps: callback2,
+    renderListHeader: renderHeader,
+    listHeaderSize: headerSize,
+    insetEnd: 80,
+    onScroll: callback4,
+  });
   obj14[4] = items16;
   return resendUsers(_require(first[35]).BottomSheet, obj14);
-};
+}

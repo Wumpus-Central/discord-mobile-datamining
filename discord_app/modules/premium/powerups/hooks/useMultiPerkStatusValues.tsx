@@ -98,7 +98,16 @@ export default function useMultiPerkStatusValues(powerups) {
     if (someResult) {
       tmp10 = reduced1;
     }
-    obj1 = { isActive: null, status: null, cost: null, costDecorator: null, expiringAt: null, activeCost: null, minCost: null, totalCost: null };
+    obj1 = {
+      isActive: null,
+      status: null,
+      cost: null,
+      costDecorator: null,
+      expiringAt: null,
+      activeCost: null,
+      minCost: null,
+      totalCost: null,
+    };
     obj1[0] = someResult;
     obj1[1] = tmp4;
     obj1[2] = tmp10;
@@ -116,4 +125,4 @@ export default function useMultiPerkStatusValues(powerups) {
     return obj1;
   }
   let tmp = require;
-};
+}

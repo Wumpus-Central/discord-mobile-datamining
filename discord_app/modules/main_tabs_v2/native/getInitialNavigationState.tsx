@@ -26,7 +26,7 @@ function getInitialGuildState(closure_6, channelId, flag, flag2) {
     if (null != channelId) {
       if (!isChatLockedOpen) {
         if (!flag) {
-          let items = [true, ];
+          let items = [true];
           obj = { index: 0, routes: null };
           obj = { name: "tabs", state: null };
           obj1 = { routes: null, index: 0 };
@@ -38,7 +38,7 @@ function getInitialGuildState(closure_6, channelId, flag, flag2) {
           const items1 = [obj2];
           obj1[0] = items1;
           obj[1] = obj1;
-          const items2 = [obj, ];
+          const items2 = [obj];
           const obj4 = { name: "channel", params: null };
           const obj5 = { guildId: null, channelId: null };
           obj5[0] = closure_6;
@@ -58,7 +58,7 @@ function getInitialGuildState(closure_6, channelId, flag, flag2) {
       }
     }
   }
-  const items4 = [isChatLockedOpen && null != channelId, ];
+  const items4 = [isChatLockedOpen && null != channelId];
   const items5 = [{ name: "guilds", params: { guildId: closure_6, channelId, drawerOpen: flag } }];
   const items6 = [{ name: "tabs", state: { routes: items5, index: 0 } }];
   const items7 = [{ name: "main", state: { routes: items6, index: items6.length - 1 } }];
@@ -102,7 +102,7 @@ function computeInitialNavigationStateWithoutLogging() {
     }
     ({ channelId, guildId } = params);
     if (null == guildId) {
-      const items = [{ page: "private-channels" }, ];
+      const items = [{ page: "private-channels" }];
       let flag2 = tmp5;
       if (tmp5 === undefined) {
         flag2 = false;
@@ -138,7 +138,7 @@ function computeInitialNavigationStateWithoutLogging() {
     const guildIdResult = RouteParam.guildId();
     obj5 = closure_7;
   } else {
-    const items3 = [{ page: "other" }, ];
+    const items3 = [{ page: "other" }];
     obj = { routes: null, index: 0 };
     const items4 = [{ name: "auth" }];
     obj[0] = items4;
@@ -161,7 +161,7 @@ export default function getInitialNavigationState(arr) {
     });
   }
   return tmp;
-};
+}
 export const wrapRouteForRootNavigator = function wrapRouteForRootNavigator(items) {
   items = [{ name: "main", state: { routes: items, index: items.length - 1 } }];
   return items;

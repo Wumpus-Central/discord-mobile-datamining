@@ -4,8 +4,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 
 let closure_0 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class GuildBoostingProgressBarPersistedStore extends PersistedStore {
-}
+class GuildBoostingProgressBarPersistedStore extends PersistedStore {}
 const prototype = GuildBoostingProgressBarPersistedStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
@@ -29,8 +28,10 @@ const guildBoostingProgressBarPersistedStore = new GuildBoostingProgressBarPersi
   },
   APPLIED_GUILD_BOOST_COUNT_RESET: function handlePremiumCountReset() {
     closure_0 = {};
-  }
+  },
 });
-const result = require("set").fileFinishedImporting("modules/guild_boosting/GuildBoostingProgressBarPersistedStore.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_boosting/GuildBoostingProgressBarPersistedStore.tsx",
+);
 
 export default guildBoostingProgressBarPersistedStore;

@@ -33,10 +33,15 @@ function NavigationBar(onClose) {
 function StartEventHeader(children) {
   const tmp = callback3();
   let obj = { style: tmp.header, children: null };
-  obj = { style: tmp.headerPrivacyLevel, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
+  obj = {
+    style: tmp.headerPrivacyLevel,
+    variant: "heading-lg/bold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["q+fFJv"]);
-  const items = [callback(Text.Text, obj), ];
+  const items = [callback(Text.Text, obj)];
   obj = { style: tmp.headerTitle, variant: "text-md/medium", color: "text-default", children: children.event.name };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
@@ -51,8 +56,22 @@ class PreviewEventCard {
 }
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: c9, GuildScheduledEventEntityTypes: c10 } = GUILD_EVENT_MAX_NAME_LENGTH);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { mainContainer: null, container: null, headerContainer: null, footerContainer: null, header: null, headerTitle: null, buttonContainer: null, previewCard: null, headerPrivacyLevel: null };
-createCacheKey = { flex: 1, padding: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  mainContainer: null,
+  container: null,
+  headerContainer: null,
+  footerContainer: null,
+  header: null,
+  headerTitle: null,
+  buttonContainer: null,
+  previewCard: null,
+  headerPrivacyLevel: null,
+};
+createCacheKey = {
+  flex: 1,
+  padding: ThemesDefault.space.PX_16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, flexDirection: "column", justifyContent: "space-between", alignContent: "center" };
 createCacheKey[2] = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_24 };
@@ -61,13 +80,39 @@ let obj1 = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.
 createCacheKey[4] = { alignItems: "center", paddingTop: ThemesDefault.space.PX_24 };
 createCacheKey[5] = { lineHeight: 24, textAlign: "center" };
 let obj2 = { alignItems: "center", paddingTop: ThemesDefault.space.PX_24 };
-createCacheKey[6] = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_16 };
-let obj3 = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_16 };
-createCacheKey[7] = { borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, shadowColor: "#000", shadowOpacity: 0.2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 } };
+createCacheKey[6] = {
+  display: "flex",
+  flexDirection: "column",
+  gap: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_16,
+};
+let obj3 = {
+  display: "flex",
+  flexDirection: "column",
+  gap: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_16,
+};
+createCacheKey[7] = {
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  shadowColor: "#000",
+  shadowOpacity: 0.2,
+  shadowRadius: 16,
+  shadowOffset: { height: 8, width: 0 },
+};
 createCacheKey[8] = { textAlign: "center", lineHeight: 18 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, shadowColor: "#000", shadowOpacity: 0.2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 } };
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/StartEventModal.tsx");
+let obj4 = {
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  shadowColor: "#000",
+  shadowOpacity: 0.2,
+  shadowRadius: 16,
+  shadowOffset: { height: 8, width: 0 },
+};
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/StartEventModal.tsx",
+);
 
 export default function StartEventModal(event) {
   event = event.event;
@@ -89,7 +134,7 @@ export default function StartEventModal(event) {
   }
   function _handleStart() {
     const self = this;
-    const tmp = callback(function*() {
+    const tmp = callback(function* () {
       if (c0 === 2) {
         c0 = 3;
         HermesBuiltin.throwTypeError();
@@ -177,12 +222,12 @@ export default function StartEventModal(event) {
   [c6, tmp11] = first(onCloseActionSheet(guild_id[20])(), 2);
   ({ loading, error } = tmp11);
   obj = { top: true, bottom: true, style: tmp.mainContainer, children: null };
-  const items3 = [callback(NavigationBar, { onClose: onCloseModal }), ];
+  const items3 = [callback(NavigationBar, { onClose: onCloseModal })];
   obj = { style: tmp.container, children: null };
   obj1 = { style: tmp.headerContainer, children: null };
   const items4 = [callback(StartEventHeader, { event }), callback(PreviewEventCard, { event })];
   obj1[1] = items4;
-  const items5 = [callback2(c6, obj1), ];
+  const items5 = [callback2(c6, obj1)];
   obj2 = { style: tmp.footerContainer, children: null };
   let hasItem = set.has(event.entity_type);
   if (hasItem) {
@@ -190,7 +235,7 @@ export default function StartEventModal(event) {
     obj3[0] = event.channel_id;
     hasItem = tmp13(onCloseActionSheet(tmp3[22]), obj3);
   }
-  const items6 = [hasItem, , ];
+  const items6 = [hasItem, ,];
   let tmp13Result = null;
   if (event.entity_type === constants.STAGE_INSTANCE) {
     const obj4 = { sendStartNotification: null, onToggle: null };
@@ -208,7 +253,7 @@ export default function StartEventModal(event) {
     obj6[2] = error.getAnyErrorMessage();
     tmp13Result = tmp13(tmp2(tmp3[16]).Text, obj6);
   }
-  const items7 = [tmp13Result, ];
+  const items7 = [tmp13Result];
   const obj7 = { variant: "active", text: null, onPress: null, disabled: null, loading: null };
   const intl = tmp2(tmp3[13]).intl;
   obj7[1] = intl.string(event(guild_id[13]).t.cK1GGY);
@@ -233,5 +278,5 @@ export default function StartEventModal(event) {
   items3[1] = callback2(c6, obj);
   obj[3] = items3;
   return callback2(event(guild_id[21]).SafeAreaPaddingView, obj);
-};
+}
 export { PreviewEventCard };

@@ -9,8 +9,7 @@ prototype = function BaseCollectiblesItemRecord(skuId) {
   tmp.skuId = skuId.skuId;
   return tmp;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["fromServer"] = function fromServer(sku_id) {
   let obj = Object.create(null);
   const merged = Object.assign(sku_id, obj);

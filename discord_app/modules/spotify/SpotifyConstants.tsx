@@ -19,7 +19,14 @@ obj = {
       str = "desktop";
     }
     const encodeURIComponentResult = encodeURIComponent(ALBUM);
-    return "https://open.spotify.com/" + encodeURIComponentResult + "/" + encodeURIComponent(album_id) + "?utm_source=discord&utm_medium=" + str;
+    return (
+      "https://open.spotify.com/" +
+      encodeURIComponentResult +
+      "/" +
+      encodeURIComponent(album_id) +
+      "?utm_source=discord&utm_medium=" +
+      str
+    );
   },
   EMBED(arg0) {
     let str = arg1;
@@ -51,7 +58,7 @@ obj = {
     return "https://app.adjust.com/bdyga9?campaign=" + Identifier;
   },
   APP_STORE: null,
-  IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8"
+  IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
 };
 let str = "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
 if (set.isAndroid()) {
@@ -72,7 +79,11 @@ export const isSpotifyParty = function isSpotifyParty(id) {
   return startsWithResult;
 };
 export const SpotifyResourceTypes = obj;
-export const SpotifyActionTypes = { USER_ACTIVITY_PLAY: "user_activity_play", USER_ACTIVITY_SYNC: "user_activity_sync", EMBED_SYNC: "embed_sync" };
+export const SpotifyActionTypes = {
+  USER_ACTIVITY_PLAY: "user_activity_play",
+  USER_ACTIVITY_SYNC: "user_activity_sync",
+  EMBED_SYNC: "embed_sync",
+};
 export const SPOTIFY_HOSTNAMES = ["open.spotify.com", "www.spotify.com"];
 export const SpotifyEndpoints = frozen;
 export const getSpotifyResourceType = function getSpotifyResourceType(str) {

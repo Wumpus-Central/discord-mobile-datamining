@@ -15,7 +15,17 @@ require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { container: null, orbsLottieContainer: null, balanceCounterContainer: null, balanceText: null };
-createCacheKey = { minHeight: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, gap: 4 };
+createCacheKey = {
+  minHeight: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT,
+  borderRadius: ThemesDefault.radii.round,
+  justifyContent: "center",
+  alignItems: "center",
+  flexDirection: "row",
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  paddingVertical: ThemesDefault.space.PX_4,
+  backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
+  gap: 4,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "relative", height: 18, width: 18, justifyContent: "center", alignItems: "center" };
 createCacheKey[2] = { justifyContent: "center", alignItems: "flex-end" };
@@ -35,11 +45,21 @@ class BalanceWidgetPill {
     tmp3 = closure_0;
     tmp4 = closure_1;
     obj = require("useVirtualCurrencyBalanceAnimationData");
-    virtualCurrencyBalanceAnimationData = obj.useVirtualCurrencyBalanceAnimationData({ initialRenderedBalance: prop, balance });
-    ({ onValueChange, onValueReached, showInitialRenderedBalance, currentAnimationType, lottieRef } = virtualCurrencyBalanceAnimationData);
+    virtualCurrencyBalanceAnimationData = obj.useVirtualCurrencyBalanceAnimationData({
+      initialRenderedBalance: prop,
+      balance,
+    });
+    ({ onValueChange, onValueReached, showInitialRenderedBalance, currentAnimationType, lottieRef } =
+      virtualCurrencyBalanceAnimationData);
     tmp6 = closure_5();
     tmp8 = View;
-    obj = { style: tmp6.container, accessibilityLabel: null, accessibilityState: null, accessible: true, children: null };
+    obj = {
+      style: tmp6.container,
+      accessibilityLabel: null,
+      accessibilityState: null,
+      accessible: true,
+      children: null,
+    };
     tmp7 = jsxs;
     intl = require("getSystemLocale").intl;
     if (tmp2) {
@@ -52,14 +72,24 @@ class BalanceWidgetPill {
     obj[1] = stringResult;
     obj[2] = { busy: tmp2 };
     tmp10 = jsx;
-    obj2 = { style: tmp6.orbsLottieContainer, children: jsx(require("forwardRef").OrbLottieAnimation, { ref: lottieRef, animationType: currentAnimationType }) };
-    items = [, ];
+    obj2 = {
+      style: tmp6.orbsLottieContainer,
+      children: jsx(require("forwardRef").OrbLottieAnimation, { ref: lottieRef, animationType: currentAnimationType }),
+    };
+    items = [,];
     items[0] = jsx(tmp8, obj2);
     obj3 = { style: tmp6.balanceCounterContainer, children: null };
     if (showInitialRenderedBalance) {
       balance = prop;
     }
-    obj4 = { value: balance, onValueChange, onValueReached, targetTotalCounterTime: require("EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS").EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS, style: tmp6.balanceText };
+    obj4 = {
+      value: balance,
+      onValueChange,
+      onValueReached,
+      targetTotalCounterTime: require("EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS")
+        .EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS,
+      style: tmp6.balanceText,
+    };
     obj3[1] = tmp10(require("BalanceCounter").BalanceCounter, obj4);
     items[1] = tmp10(tmp8, obj3);
     obj[4] = items;

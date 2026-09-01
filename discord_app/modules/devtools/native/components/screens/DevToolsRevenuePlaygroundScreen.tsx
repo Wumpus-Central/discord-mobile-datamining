@@ -88,17 +88,20 @@ function FriendAnniversary() {
     let fn;
     if (tmp6) {
       fn = () => {
-        closure_1_10(() => {
-          const HTTP = callback(closure_1_2[15]).HTTP;
-          if (null != callback) {
-            const _HermesInternal2 = HermesInternal;
-            let url = "" + closure_1_21 + "/" + tmp + "/" + tmp2;
-          } else {
-            const _HermesInternal = HermesInternal;
-            url = "" + closure_1_21 + "/" + tmp;
-          }
-          return HTTP.del({ url, rejectWithError: true });
-        }, "Cleared server dismissal for " + username + ".");
+        closure_1_10(
+          () => {
+            const HTTP = callback(closure_1_2[15]).HTTP;
+            if (null != callback) {
+              const _HermesInternal2 = HermesInternal;
+              let url = "" + closure_1_21 + "/" + tmp + "/" + tmp2;
+            } else {
+              const _HermesInternal = HermesInternal;
+              url = "" + closure_1_21 + "/" + tmp;
+            }
+            return HTTP.del({ url, rejectWithError: true });
+          },
+          "Cleared server dismissal for " + username + ".",
+        );
       };
     }
     obj[4] = fn;
@@ -106,40 +109,45 @@ function FriendAnniversary() {
   }
   let obj = _require(stateFromStores2[14]);
   items = [closure_7, map, closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    function buildRow(userId) {
-      userAffinity = userAffinity.getUserAffinity(userId);
-      const obj = { userId, username: null, affinity: null };
-      user = user.getUser(userId);
-      let username;
-      if (user != null) {
-        username = user.username;
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      function buildRow(userId) {
+        userAffinity = userAffinity.getUserAffinity(userId);
+        const obj = { userId, username: null, affinity: null };
+        user = user.getUser(userId);
+        let username;
+        if (user != null) {
+          username = user.username;
+        }
+        if (username == null) {
+          const _HermesInternal = HermesInternal;
+          username = "Unknown User (" + userId + ")";
+        }
+        obj[1] = username;
+        let dmProbability;
+        if (userAffinity != null) {
+          dmProbability = userAffinity.dmProbability;
+        }
+        let str3 = "N/A";
+        if (null != dmProbability) {
+          const result = 100 * userAffinity.dmProbability;
+          const _HermesInternal2 = HermesInternal;
+          str3 = "" + result.toFixed(3) + "%";
+        }
+        obj[2] = str3;
+        return obj;
       }
-      if (username == null) {
-        const _HermesInternal = HermesInternal;
-        username = "Unknown User (" + userId + ")";
-      }
-      obj[1] = username;
-      let dmProbability;
-      if (userAffinity != null) {
-        dmProbability = userAffinity.dmProbability;
-      }
-      let str3 = "N/A";
-      if (null != dmProbability) {
-        const result = 100 * userAffinity.dmProbability;
-        const _HermesInternal2 = HermesInternal;
-        str3 = "" + result.toFixed(3) + "%";
-      }
-      obj[2] = str3;
+      let obj = { selected: uiStore.getDevToolTotalFriendAnniversaries(), highestAffinity: null, highAffinity: null };
+      const highestAffinityFriendAnniversaries = uiStore.getHighestAffinityFriendAnniversaries();
+      obj[1] = highestAffinityFriendAnniversaries.map(buildRow);
+      const highAffinityFriendAnniversaries = uiStore.getHighAffinityFriendAnniversaries();
+      obj[2] = highAffinityFriendAnniversaries.map(buildRow);
       return obj;
-    }
-    let obj = { selected: uiStore.getDevToolTotalFriendAnniversaries(), highestAffinity: null, highAffinity: null };
-    const highestAffinityFriendAnniversaries = uiStore.getHighestAffinityFriendAnniversaries();
-    obj[1] = highestAffinityFriendAnniversaries.map(buildRow);
-    const highAffinityFriendAnniversaries = uiStore.getHighAffinityFriendAnniversaries();
-    obj[2] = highAffinityFriendAnniversaries.map(buildRow);
-    return obj;
-  }, [], _require(stateFromStores2[14]).statesWillNeverBeEqual);
+    },
+    [],
+    _require(stateFromStores2[14]).statesWillNeverBeEqual,
+  );
   ({ selected: closure_0, highestAffinity, highAffinity } = stateFromStores);
   obj1 = _require(stateFromStores2[14]);
   const items1 = [closure_7];
@@ -186,101 +194,104 @@ function FriendAnniversary() {
   [tmp11, closure_7] = callback(first.useState(false), 2);
   const tmp12 = callback(first.useState(false), 2);
   closure_8 = tmp12[1];
-  callback = first.useCallback(stateFromStores3(function*() {
-    if (v02 === 2) {
-      v02 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v02 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            v02 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v02 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let status = tmp4;
-            closure_1 = tmp8;
-            let dismissals;
-            closure_1 = undefined;
-            closure_1_7(true);
-            let v0 = 2;
-            const HTTP = closure_1_0(closure_1_2[15]).HTTP;
-            c5 = 3;
-            v02 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = HTTP.get({ url: "/users/@me/gift-intent-dismissals", rejectWithError: true });
-            return obj1;
-          }
-        } else if (1 === tmp8) {
-          v0 = 0;
-          callback(false);
-          throw closure_3;
+  callback = first.useCallback(
+    stateFromStores3(function* () {
+      if (v02 === 2) {
+        v02 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          if (2 === tmp8) {
-            v0 = 1;
-            status = closure_3;
-            closure_1 = 403 === status.status;
-            v02(closure_1);
-            if (closure_1) {
-              v0([]);
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          v02 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              v02 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              v02 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
             } else {
-              obj1 = closure_1_1(closure_1_2[16]);
-              const obj2 = { key: "dev-tools-gift-intent-server", content: null };
-              obj2[1] = closure_1_23(status);
-              obj1.open(obj2);
+              let status = tmp4;
+              closure_1 = tmp8;
+              let dismissals;
+              closure_1 = undefined;
+              closure_1_7(true);
+              let v0 = 2;
+              const HTTP = closure_1_0(closure_1_2[15]).HTTP;
+              c5 = 3;
+              v02 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = HTTP.get({ url: "/users/@me/gift-intent-dismissals", rejectWithError: true });
+              return obj1;
+            }
+          } else if (1 === tmp8) {
+            v0 = 0;
+            callback(false);
+            throw closure_3;
+          } else {
+            if (2 === tmp8) {
+              v0 = 1;
+              status = closure_3;
+              closure_1 = 403 === status.status;
+              v02(closure_1);
+              if (closure_1) {
+                v0([]);
+              } else {
+                obj1 = closure_1_1(closure_1_2[16]);
+                const obj2 = { key: "dev-tools-gift-intent-server", content: null };
+                obj2[1] = closure_1_23(status);
+                obj1.open(obj2);
+              }
+              v0 = 0;
+              callback(false);
+              v02 = 3;
+            } else if (arg0 === 1) {
+              v02 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              dismissals = arg1.body;
+              dismissals = dismissals.dismissals;
+              if (dismissals == null) {
+                dismissals = [];
+              }
+              v0(dismissals);
+              v02(false);
+              v0 = 1;
+              const tmp11 = v0;
             }
             v0 = 0;
             callback(false);
             v02 = 3;
-          } else if (arg0 === 1) {
-            v02 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            dismissals = arg1.body;
-            dismissals = dismissals.dismissals;
-            if (dismissals == null) {
-              dismissals = [];
-            }
-            v0(dismissals);
-            v02(false);
-            v0 = 1;
-            const tmp11 = v0;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
           }
-          v0 = 0;
-          callback(false);
-          v02 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp52) {
-        closure_3 = tmp52;
-        if (tmp5 === v0) {
-          v02 = tmp3;
-          throw tmp52;
-        } else if (tmp2 === tmp54) {
-          c5 = tmp2;
-        } else {
-          c5 = tmp;
+        } catch (tmp52) {
+          closure_3 = tmp52;
+          if (tmp5 === v0) {
+            v02 = tmp3;
+            throw tmp52;
+          } else if (tmp2 === tmp54) {
+            c5 = tmp2;
+          } else {
+            c5 = tmp;
+          }
         }
       }
-    }
-  }), []);
+    }),
+    [],
+  );
   const items4 = [callback, stateFromStores3];
   const effect = first.useEffect(() => {
     callback();
@@ -292,7 +303,7 @@ function FriendAnniversary() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -395,7 +406,7 @@ function FriendAnniversary() {
     })();
   });
   const items5 = [callback];
-  closure_10 = first.useCallback(function() {
+  closure_10 = first.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -409,23 +420,31 @@ function FriendAnniversary() {
     first1 = tmp12[0];
   }
   const found = arr5.filter((intent_type) => intent_type.intent_type === closure_22);
-  map = new Map(found.map((target_id) => {
-    items = [target_id.target_id, Number(target_id.dismissed_at_ms)];
-    return items;
-  }));
+  map = new Map(
+    found.map((target_id) => {
+      items = [target_id.target_id, Number(target_id.dismissed_at_ms)];
+      return items;
+    }),
+  );
   const set = new Set(highestAffinity.map((userId) => userId.userId));
   const items6 = [...highAffinity];
   const tmp10 = callback(first.useState(false), 2);
-  let arr = Array.from(new Map(items6.map((userId) => {
-    items = [userId.userId, userId];
-    return items;
-  })).values());
+  let arr = Array.from(
+    new Map(
+      items6.map((userId) => {
+        items = [userId.userId, userId];
+        return items;
+      }),
+    ).values(),
+  );
   const set1 = new Set(arr.map((userId) => userId.userId));
   const items7 = [...Object.keys(stateFromStores1), ...Array.from(map.keys())];
-  map1 = new Map(items6.map((userId) => {
-    items = [userId.userId, userId];
-    return items;
-  }));
+  map1 = new Map(
+    items6.map((userId) => {
+      items = [userId.userId, userId];
+      return items;
+    }),
+  );
   arr = Array.from(new Set(items7));
   const found1 = arr.filter((arg0) => !set1.has(arg0));
   const found2 = items.find((value) => value.value === closure_0);
@@ -460,15 +479,15 @@ function FriendAnniversary() {
               let obj = closure_1_1(closure_1_2[13]);
               obj = { type: "DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT", total: closure_0 };
               obj.dispatch(obj);
-            }
+            },
           };
         }),
-        hasIcons: false
+        hasIcons: false,
       };
       const result = obj.showSimpleActionSheet(obj);
-    }
+    },
   };
-  const items8 = [callback2(_require(stateFromStores2[17]).TableRow, obj), , ];
+  const items8 = [callback2(_require(stateFromStores2[17]).TableRow, obj), ,];
   obj1 = {
     label: "Trigger Mobile FA message in current DM",
     subLabel: "Sends an ephemeral GIFTING_PROMPT into the selected channel",
@@ -489,17 +508,23 @@ function FriendAnniversary() {
           obj[1] = first;
           const result = stateFromStores1(stateFromStores2[21]).sendGiftingPromptSystemMessage(channelId, obj);
           const obj3 = stateFromStores1(stateFromStores2[21]);
-          stateFromStores1(stateFromStores2[16]).open({ key: "dev-tools-gift-intent-triggered", content: "Friendship anniversary card sent." });
+          stateFromStores1(stateFromStores2[16]).open({
+            key: "dev-tools-gift-intent-triggered",
+            content: "Friendship anniversary card sent.",
+          });
           const obj5 = stateFromStores1(stateFromStores2[16]);
         } else {
-          stateFromStores1(stateFromStores2[16]).open({ key: "dev-tools-gift-intent-no-recipient", content: "Selected channel has no other recipient." });
+          stateFromStores1(stateFromStores2[16]).open({
+            key: "dev-tools-gift-intent-no-recipient",
+            content: "Selected channel has no other recipient.",
+          });
           const obj2 = stateFromStores1(stateFromStores2[16]);
         }
       } else {
         obj = stateFromStores1(stateFromStores2[16]);
         obj.open({ key: "dev-tools-gift-intent-no-channel", content: "Open a DM first." });
       }
-    }
+    },
   };
   items8[1] = callback2(_require(stateFromStores2[17]).TableRow, obj1);
   items8[2] = arr.map((userId) => {
@@ -508,13 +533,13 @@ function FriendAnniversary() {
     return renderDismissalRow(userId, hasItem, "" + userId.affinity + " \u00B7 ", "gen");
   });
   obj[2] = items8;
-  const items9 = [callback3(_require(stateFromStores2[19]).TableRowGroup, obj), , , ];
+  const items9 = [callback3(_require(stateFromStores2[19]).TableRowGroup, obj), , ,];
   let tmp19Result = found1.length > 0;
   if (tmp19Result) {
     obj2 = { children: null };
     obj3 = { size: null };
     obj3[0] = stateFromStores1(tmp2[23]).space.PX_16;
-    const items10 = [tmp21(tmp(tmp2[22]).Spacer, obj3), ];
+    const items10 = [tmp21(tmp(tmp2[22]).Spacer, obj3)];
     let obj4 = { title: "Other Dismissals (not generated)", hasIcons: false, children: null };
     obj4[2] = found1.map((userId) => renderDismissalRow(userId, false, "", "other"));
     items10[1] = tmp21(tmp(tmp2[19]).TableRowGroup, obj4);
@@ -523,7 +548,9 @@ function FriendAnniversary() {
   }
   items9[1] = tmp19Result;
   const set2 = new Set(items7);
-  items9[2] = callback2(_require(stateFromStores2[22]).Spacer, { size: stateFromStores1(stateFromStores2[23]).space.PX_16 });
+  items9[2] = callback2(_require(stateFromStores2[22]).Spacer, {
+    size: stateFromStores1(stateFromStores2[23]).space.PX_16,
+  });
   let str2 = "ok";
   if (first) {
     str2 = "not enrolled (calls 403)";
@@ -533,7 +560,17 @@ function FriendAnniversary() {
     str3 = "yes";
   }
   let obj5 = { size: stateFromStores1(stateFromStores2[23]).space.PX_16 };
-  const items11 = [callback2(_require(stateFromStores2[17]).TableRow, { label: "Eligibility", subLabel: "Experiment: " + str2 + " \u00B7 Staff: " + str3 }), , , , , , ];
+  const items11 = [
+    callback2(_require(stateFromStores2[17]).TableRow, {
+      label: "Eligibility",
+      subLabel: "Experiment: " + str2 + " \u00B7 Staff: " + str3,
+    }),
+    ,
+    ,
+    ,
+    ,
+    ,
+  ];
   let str4 = "never";
   if (null != stateFromStores3) {
     let _Date = Date;
@@ -541,7 +578,10 @@ function FriendAnniversary() {
     str4 = `${obj15.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })} ${obj15.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", hour12: true })}`;
     let date = new Date(stateFromStores3);
   }
-  items11[1] = callback2(_require(stateFromStores2[17]).TableRow, { label: "Server last recorded dismissal", subLabel: str4 });
+  items11[1] = callback2(_require(stateFromStores2[17]).TableRow, {
+    label: "Server last recorded dismissal",
+    subLabel: str4,
+  });
   items11[2] = callback2(_require(stateFromStores2[17]).TableRow, {
     label: "Reconcile now",
     subLabel: "Fetch + merge server dismissals into the local store",
@@ -554,10 +594,21 @@ function FriendAnniversary() {
         }
         return closure_1_0(closure_1_2[24]).fetchAndReconcileGiftIntentDismissals(num);
       }, "Reconcile triggered.");
-    }
+    },
   });
-  items11[3] = callback2(_require(stateFromStores2[17]).TableRow, { label: "Refresh server dismissals", subLabel: "Re-fetch the per-friend server view above", disabled: first1, onPress: callback });
-  const obj8 = { label: "Dismiss a generated anniversary on the server", subLabel: "POST a server dismissal for a generated friend", trailing: callback2(_require(stateFromStores2[18]).TableRowArrow, {}), disabled: null, onPress: null };
+  items11[3] = callback2(_require(stateFromStores2[17]).TableRow, {
+    label: "Refresh server dismissals",
+    subLabel: "Re-fetch the per-friend server view above",
+    disabled: first1,
+    onPress: callback,
+  });
+  const obj8 = {
+    label: "Dismiss a generated anniversary on the server",
+    subLabel: "POST a server dismissal for a generated friend",
+    trailing: callback2(_require(stateFromStores2[18]).TableRowArrow, {}),
+    disabled: null,
+    onPress: null,
+  };
   let tmp29 = first1;
   if (!first1) {
     tmp29 = first;
@@ -576,15 +627,18 @@ function FriendAnniversary() {
         return {
           label: label.username,
           onPress() {
-            return closure_1_10(() => {
-              const HTTP = lib(closure_2_2[15]).HTTP;
-              const body = { intent_type: closure_2_22, target_id: lib.userId };
-              return HTTP.post({ url: "/users/@me/gift-intents/dismiss", body, rejectWithError: true });
-            }, "Dismissed " + label.username + " on the server.");
-          }
+            return closure_1_10(
+              () => {
+                const HTTP = lib(closure_2_2[15]).HTTP;
+                const body = { intent_type: closure_2_22, target_id: lib.userId };
+                return HTTP.post({ url: "/users/@me/gift-intents/dismiss", body, rejectWithError: true });
+              },
+              "Dismissed " + label.username + " on the server.",
+            );
+          },
         };
       }),
-      hasIcons: false
+      hasIcons: false,
     };
     const result = obj.showSimpleActionSheet(obj);
   };
@@ -610,7 +664,7 @@ function FriendAnniversary() {
         const HTTP = callback(table[15]).HTTP;
         return HTTP.del({ url: "" + closure_21 + "/" + closure_22, rejectWithError: true });
       }, "Cleared all server dismissals.");
-    }
+    },
   });
   items11[6] = callback2(_require(stateFromStores2[17]).TableRow, {
     variant: "danger",
@@ -619,8 +673,11 @@ function FriendAnniversary() {
     onPress() {
       stateFromStores1(stateFromStores2[13]).dispatch({ type: "DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET" });
       const obj = stateFromStores1(stateFromStores2[13]);
-      stateFromStores1(stateFromStores2[16]).open({ key: "dev-tools-gift-intent-local", content: "Cleared local message cooldown." });
-    }
+      stateFromStores1(stateFromStores2[16]).open({
+        key: "dev-tools-gift-intent-local",
+        content: "Cleared local message cooldown.",
+      });
+    },
   });
   obj10[2] = items11;
   items9[3] = callback3(_require(stateFromStores2[19]).TableRowGroup, obj10);
@@ -640,14 +697,16 @@ function TrialOfferSheetExample() {
         obj = { fallbackPremiumType: null, userTrialOffer: null, markAsDismissed: null };
         obj[0] = tmp;
         obj[1] = tmp2;
-        obj[2] = function markAsDismissed() {
-
-        };
-        obj.openLazy(premiumTrialOffer(closure_1_2[29])(closure_1_2[28], closure_1_2.paths), "PremiumTrialOfferActionSheet", obj);
+        obj[2] = function markAsDismissed() {};
+        obj.openLazy(
+          premiumTrialOffer(closure_1_2[29])(closure_1_2[28], closure_1_2.paths),
+          "PremiumTrialOfferActionSheet",
+          obj,
+        );
       }
-    }
+    },
   };
-  items = [closure_17(premiumTrialOffer(5599).TableRow, obj), ];
+  items = [closure_17(premiumTrialOffer(5599).TableRow, obj)];
   obj = { title: "Trial Offers", hasIcons: false, children: null };
   items[1] = closure_17(premiumTrialOffer(5599).TableRow, {
     label: "Trial Offer Nitro",
@@ -659,12 +718,14 @@ function TrialOfferSheetExample() {
         obj = { fallbackPremiumType: null, userTrialOffer: null, markAsDismissed: null };
         obj[0] = tmp;
         obj[1] = tmp2;
-        obj[2] = function markAsDismissed() {
-
-        };
-        obj.openLazy(premiumTrialOffer(closure_1_2[29])(closure_1_2[28], closure_1_2.paths), "PremiumTrialOfferActionSheet", obj);
+        obj[2] = function markAsDismissed() {};
+        obj.openLazy(
+          premiumTrialOffer(closure_1_2[29])(closure_1_2[28], closure_1_2.paths),
+          "PremiumTrialOfferActionSheet",
+          obj,
+        );
       }
-    }
+    },
   });
   obj[2] = items;
   return closure_18(premiumTrialOffer(5992).TableRowGroup, obj);
@@ -672,24 +733,34 @@ function TrialOfferSheetExample() {
 function PremiumToggles() {
   let obj = defaultAreStatesEqual;
   items = [closure_13];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_13.allByCategory(constants.PREMIUM).filter((arg0) => {
-    [tmp] = arg0;
-    return "force_mock_iap" !== tmp;
-  }), [], defaultAreStatesEqual.statesWillNeverBeEqual);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () =>
+      closure_13.allByCategory(constants.PREMIUM).filter((arg0) => {
+        [tmp] = arg0;
+        return "force_mock_iap" !== tmp;
+      }),
+    [],
+    defaultAreStatesEqual.statesWillNeverBeEqual,
+  );
   obj = {
     title: "Premium Toggles",
     hasIcons: false,
     children: stateFromStores.map((arg0) => {
-      [tmp, tmp2, ] = arg0;
-      return callback2(callback(table[30]).TableSwitchRow, {
-        label: tmp3,
-        subLabel: tmp,
-        value: tmp2,
-        onValueChange(arg0) {
-          return closure_1_0(closure_1_2[31]).toggle(closure_0, arg0);
-        }
-      }, tmp);
-    })
+      [tmp, tmp2] = arg0;
+      return callback2(
+        callback(table[30]).TableSwitchRow,
+        {
+          label: tmp3,
+          subLabel: tmp,
+          value: tmp2,
+          onValueChange(arg0) {
+            return closure_1_0(closure_1_2[31]).toggle(closure_0, arg0);
+          },
+        },
+        tmp,
+      );
+    }),
   };
   return callback2(TableRowGroupTitle.TableRowGroup, obj);
 }
@@ -725,7 +796,7 @@ function PaymentFlowTest() {
     onPress() {
       callback2(paths[34]).pushLazy(callback(paths[29])(paths[35], paths.paths));
     },
-    trailing: callback2(TableRowArrow.TableRowArrow, {})
+    trailing: callback2(TableRowArrow.TableRowArrow, {}),
   };
   obj[2] = callback2(TableRowInner.TableRow, obj);
   return callback2(TableRowGroupTitle.TableRowGroup, obj);
@@ -737,7 +808,7 @@ function Orbs() {
     onPress() {
       callback2(paths[34]).pushLazy(callback(paths[29])(paths[36], paths.paths));
     },
-    trailing: callback2(TableRowArrow.TableRowArrow, {})
+    trailing: callback2(TableRowArrow.TableRowArrow, {}),
   };
   obj[2] = callback2(TableRowInner.TableRow, obj);
   return callback2(TableRowGroupTitle.TableRowGroup, obj);
@@ -749,7 +820,7 @@ function RevenueSmokeTests() {
     onPress() {
       callback2(paths[34]).pushLazy(callback(paths[29])(paths[37], paths.paths));
     },
-    trailing: callback2(TableRowArrow.TableRowArrow, {})
+    trailing: callback2(TableRowArrow.TableRowArrow, {}),
   };
   obj[2] = callback2(TableRowInner.TableRow, obj);
   return callback2(TableRowGroupTitle.TableRowGroup, obj);
@@ -761,7 +832,7 @@ function GuildPowerups() {
     onPress() {
       callback2(paths[34]).pushLazy(callback(paths[29])(paths[38], paths.paths));
     },
-    trailing: callback2(TableRowArrow.TableRowArrow, {})
+    trailing: callback2(TableRowArrow.TableRowArrow, {}),
   };
   obj[2] = callback2(TableRowInner.TableRow, obj);
   return callback2(TableRowGroupTitle.TableRowGroup, obj);
@@ -774,14 +845,23 @@ function GuildTagBadges() {
     onPress() {
       callback2(paths[34]).pushLazy(callback(paths[29])(paths[39], paths.paths));
     },
-    trailing: callback2(TableRowArrow.TableRowArrow, {})
+    trailing: callback2(TableRowArrow.TableRowArrow, {}),
   };
   obj[2] = callback2(TableRowInner.TableRow, obj);
   return callback2(TableRowGroupTitle.TableRowGroup, obj);
 }
 ({ GiftIntentType: closure_15, PremiumTypes: closure_16 } = GuildFeatures);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-let items = [{ label: "None", value: null }, { label: "1", value: 1 }, { label: "2", value: 2 }, { label: "3", value: 3 }, { label: "4", value: 4 }, { label: "5", value: 5 }, { label: "10", value: 10 }, { label: "25", value: 25 }];
+let items = [
+  { label: "None", value: null },
+  { label: "1", value: 1 },
+  { label: "2", value: 2 },
+  { label: "3", value: 3 },
+  { label: "4", value: 4 },
+  { label: "5", value: 5 },
+  { label: "10", value: 10 },
+  { label: "25", value: 25 },
+];
 let c21 = "/users/@me/gift-intents/dismissals";
 const FRIEND_ANNIVERSARY = "FRIEND_ANNIVERSARY";
 createCacheKey = { container: null, scrollContainer: null };
@@ -790,12 +870,14 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
 let closure_25 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { padding: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsRevenuePlaygroundScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsRevenuePlaygroundScreen.tsx",
+);
 
 export default function DevToolsRevenuePlaygroundScreen() {
   const tmp = callback4();
   let obj = { style: tmp.container, contentContainerStyle: tmp.scrollContainer, children: null };
-  items = [callback2(TrialOfferSheetExample, {}), , , , , , , , , , , , , , , , ];
+  items = [callback2(TrialOfferSheetExample, {}), , , , , , , , , , , , , , , ,];
   obj = { size: ThemesDefault.space.PX_16 };
   items[1] = callback2(Button.Spacer, obj);
   items[2] = callback2(PremiumToggles, {});
@@ -821,4 +903,4 @@ export default function DevToolsRevenuePlaygroundScreen() {
   items[16] = callback2(FriendAnniversary, {});
   obj[2] = items;
   return callback3(ScrollView, obj);
-};
+}

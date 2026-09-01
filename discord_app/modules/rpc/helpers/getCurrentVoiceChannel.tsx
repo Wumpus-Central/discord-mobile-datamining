@@ -13,4 +13,4 @@ export default function getCurrentVoiceChannel() {
     channelId = voiceStateForSession.channelId;
   }
   return channel.getChannel(channelId);
-};
+}

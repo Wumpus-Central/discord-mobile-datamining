@@ -33,7 +33,7 @@ export default function MFAOptionScreen(arg0) {
   if (tmp9) {
     tmp9 = headerImage;
   }
-  const items = [tmp9, , , ];
+  const items = [tmp9, , ,];
   obj1 = { variant: "heading-xl/extrabold", style: screenStyles.mfaContainerHeaderText, children: headerText };
   items[1] = callback(Text.Heading, obj1);
   let tmp10Result = null != subtitle;
@@ -55,9 +55,9 @@ export default function MFAOptionScreen(arg0) {
   obj[2] = items;
   const items1 = [closure_5(Stack.Stack, obj), input];
   obj4[0] = items1;
-  const items2 = [closure_5(Stack.Stack, obj4), content, ];
+  const items2 = [closure_5(Stack.Stack, obj4), content];
   const obj5 = { style: screenStyles.submit, children: null };
-  const items3 = [submit, ];
+  const items3 = [submit];
   if (tmp10Result1) {
     tmp10Result1 = tmp10(tmp3(15272), {});
   }
@@ -66,7 +66,7 @@ export default function MFAOptionScreen(arg0) {
   items2[2] = closure_5(Stack.Stack, obj5);
   obj[3] = items2;
   const tmp8Result = closure_5(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-  const children = [callback(BackgroundImageDefault, { backgroundImageCover: false }), ];
+  const children = [callback(BackgroundImageDefault, { backgroundImageCover: false })];
   let tmp10Result2 = tmp8Result;
   if (tmp4) {
     const obj6 = { keyboardShouldPersistTaps: "handled", children: null };
@@ -75,4 +75,4 @@ export default function MFAOptionScreen(arg0) {
   }
   children[1] = tmp10Result2;
   return closure_5(closure_6, { children });
-};
+}

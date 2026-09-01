@@ -62,11 +62,28 @@ export default function useIsFavoritesGuildVisible() {
   const obj2 = flag(isExperimentEnabled[3]);
   const items = [hasAccess, isFreemium];
   const items1 = [isExperimentEnabled, isFreemium, hasAccess, isFavoritesIntroPopoverShown, flag];
-  return flag(isExperimentEnabled[5]).useStateFromStores(items, () => isFavoritesIntroPopoverShown(hasAccess, isFreemium, { isExperimentEnabled, isFreemium, hasAccess, isIntroPopoverShown: isFavoritesIntroPopoverShown, keepWhileViewing: flag }), items1);
-};
+  return flag(isExperimentEnabled[5]).useStateFromStores(
+    items,
+    () =>
+      isFavoritesIntroPopoverShown(hasAccess, isFreemium, {
+        isExperimentEnabled,
+        isFreemium,
+        hasAccess,
+        isIntroPopoverShown: isFavoritesIntroPopoverShown,
+        keepWhileViewing: flag,
+      }),
+    items1,
+  );
+}
 export const isFavoritesGuildVisible = function isFavoritesGuildVisible() {
   let obj = useFavoritesAccess;
   const favoritesAccess = obj.getFavoritesAccess();
-  obj = { isExperimentEnabled: favoritesAccess.isExperimentEnabled, isFreemium: favoritesAccess.isFreemium, hasAccess: favoritesAccess.hasAccess, isIntroPopoverShown: hasOfferedFavoritesGuildOnboarding.isFavoritesIntroPopoverShown(), keepWhileViewing: true };
+  obj = {
+    isExperimentEnabled: favoritesAccess.isExperimentEnabled,
+    isFreemium: favoritesAccess.isFreemium,
+    hasAccess: favoritesAccess.hasAccess,
+    isIntroPopoverShown: hasOfferedFavoritesGuildOnboarding.isFavoritesIntroPopoverShown(),
+    keepWhileViewing: true,
+  };
   return computeIsFavoritesGuildVisible(closure_3, closure_2, obj);
 };

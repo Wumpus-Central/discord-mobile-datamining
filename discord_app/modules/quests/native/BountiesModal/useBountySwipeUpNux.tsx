@@ -9,7 +9,8 @@ const result = require("set").fileFinishedImporting("modules/quests/native/Bount
 export const useBountySwipeUpNux = function useBountySwipeUpNux(location) {
   let isEligible = location.isEligible;
   const BountiesVerticalScrollExperiment = apexExperiment.BountiesVerticalScrollExperiment;
-  const tmp3 = "none" === BountiesVerticalScrollExperiment.useConfig({ location: location.location }).scrollAffordanceVariant;
+  const tmp3 =
+    "none" === BountiesVerticalScrollExperiment.useConfig({ location: location.location }).scrollAffordanceVariant;
   let obj = FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY;
   const first = callback(obj.useForceBountiesSwipeUpNux(), 1)[0];
   if (isEligible) {
@@ -36,7 +37,12 @@ export const useBountySwipeUpNux = function useBountySwipeUpNux(location) {
     }
     tmpResult = tmp(6251);
     tmp4Result = tmp4(tmpResult.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 86400000 }), 2);
-    obj = { hasSingleUseSwipeUpNux: null, dismissSingleUseSwipeUpNux: null, hasRecurringSwipeUpNux: null, dismissRecurringSwipeUpNux: null };
+    obj = {
+      hasSingleUseSwipeUpNux: null,
+      dismissSingleUseSwipeUpNux: null,
+      hasRecurringSwipeUpNux: null,
+      dismissRecurringSwipeUpNux: null,
+    };
     obj[0] = tmp10;
     obj[1] = tmp4Result[1];
     if (first) {

@@ -25,7 +25,7 @@ createToggle = {
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t["8K53DF"]);
       obj[1] = callback(4171).MessagePreviewTypes.ALL;
-      const items = [obj, , ];
+      const items = [obj, ,];
       obj = { label: null, value: null };
       const intl2 = callback(1236).intl;
       obj[0] = intl2.string(callback(1236).t.Gw11zg);
@@ -38,7 +38,7 @@ createToggle = {
       items[2] = obj;
       return items;
     }, []);
-  }
+  },
 };
 createToggle = createToggle.createRadio(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DmsMessagePreviewsSetting.tsx");

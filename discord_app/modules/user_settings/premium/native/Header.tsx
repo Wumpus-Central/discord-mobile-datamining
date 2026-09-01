@@ -11,7 +11,10 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { flexDirection: "column", alignItems: "center" }, headerText: { marginTop: 16, marginBottom: 24 } });
+let closure_6 = createCacheKey.createStyles({
+  container: { flexDirection: "column", alignItems: "center" },
+  headerText: { marginTop: 16, marginBottom: 24 },
+});
 const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/Header.tsx");
 
 export default function Header(style) {
@@ -31,11 +34,11 @@ export default function Header(style) {
     tmp2Result = tmp2(13130);
   }
   obj[3] = tmp2Result;
-  const items1 = [closure_4(tmp8, obj), ];
+  const items1 = [closure_4(tmp8, obj)];
   obj = { style: tmp.headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp9(1236).intl;
   obj[3] = intl2.string(getSystemLocale.t.SD5MJW);
   items1[1] = closure_4(Text.Text, obj);
   obj[1] = items1;
   return tmp5(tmp6, obj);
-};
+}

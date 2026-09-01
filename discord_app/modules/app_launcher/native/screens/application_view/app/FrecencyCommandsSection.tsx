@@ -13,11 +13,19 @@ createCacheKey = { marginBottom: require("PlaceholderCommandRow").BETWEEN_SECTIO
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx",
+);
 
 export default function FrecencyCommandsSection(commands) {
   const context = commands.context;
-  ({ onPressCommand: importDefault, section: dependencyMap, onExecuteCommand: closure_3, installOnDemand: View, sectionName } = commands);
+  ({
+    onPressCommand: importDefault,
+    section: dependencyMap,
+    onExecuteCommand: closure_3,
+    installOnDemand: View,
+    sectionName,
+  } = commands);
   let arr;
   const tmp = callback2();
   arr = useFilterAndSortToOnlyFrecentCommandsDefault({ context, commands: commands.allCommands, limit: 5 });
@@ -42,9 +50,30 @@ export default function FrecencyCommandsSection(commands) {
     const intl = context(1236).intl;
     obj[2] = intl.string(context(1236).t.acSE0h);
     obj[1] = arr(context(4474).Heading, obj);
-    const items1 = [arr(View, obj), arr.map((command) => arr(context(closure_1_2[5]).CommandRow, { command, onPressCommand: closure_1, isFirstRow: 0 === arg1, isLastRow: arg1 === arr.length - 1, context, onExecuteCommand: closure_3, installOnDemand: closure_4, section: closure_2, location: context(closure_1_2[11]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, sectionName }, command.id))];
+    const items1 = [
+      arr(View, obj),
+      arr.map((command) =>
+        arr(
+          context(closure_1_2[5]).CommandRow,
+          {
+            command,
+            onPressCommand: closure_1,
+            isFirstRow: 0 === arg1,
+            isLastRow: arg1 === arr.length - 1,
+            context,
+            onExecuteCommand: closure_3,
+            installOnDemand: closure_4,
+            section: closure_2,
+            location: context(closure_1_2[11]).ApplicationCommandTriggerLocations
+              .APP_LAUNCHER_APPLICATION_VIEW_FRECENCT,
+            sectionName,
+          },
+          command.id,
+        ),
+      ),
+    ];
     obj[1] = items1;
     tmp4 = callback(View, obj);
   }
   return tmp4;
-};
+}

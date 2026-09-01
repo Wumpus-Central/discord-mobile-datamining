@@ -22,4 +22,4 @@ export default function useRefreshLinkCodeOnExpiry(arg0, arg1) {
       }
     }
   }, items);
-};
+}

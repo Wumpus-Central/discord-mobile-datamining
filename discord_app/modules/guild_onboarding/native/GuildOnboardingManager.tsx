@@ -22,7 +22,7 @@ let prototype = function GuildOnboardingManager() {
     },
     POST_CONNECTION_OPEN() {
       return applyArgumentsResult.handleConnectionOpen();
-    }
+    },
   };
   applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
     if (guildId == null) {
@@ -89,8 +89,7 @@ let prototype = function GuildOnboardingManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 let result = require("set").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingManager.tsx");
 

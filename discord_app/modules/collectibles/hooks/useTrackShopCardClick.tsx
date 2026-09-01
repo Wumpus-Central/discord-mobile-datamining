@@ -46,7 +46,16 @@ export const useTrackShopCardClick = function useTrackShopCardClick(product) {
     } else {
       skuId = tmp3.skuId;
     }
-    obj = { sku_id: skuId, cta, shop_session_id: sessionId, card_id: cardId, product_sku_ids: null, location_stack: null, position_in_section: null, discount_source: null };
+    obj = {
+      sku_id: skuId,
+      cta,
+      shop_session_id: sessionId,
+      card_id: cardId,
+      product_sku_ids: null,
+      location_stack: null,
+      position_in_section: null,
+      discount_source: null,
+    };
     let tmpResult = tmp(tmp2[6]);
     obj[4] = tmpResult.getProductSkuIds(closure_0);
     obj[5] = analyticsLocations;

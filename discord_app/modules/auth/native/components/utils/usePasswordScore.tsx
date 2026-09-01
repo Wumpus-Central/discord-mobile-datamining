@@ -20,7 +20,7 @@ export const usePasswordScore = function usePasswordScore(first) {
       c5 = 0;
       c6 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (c6 === 2) {
           c6 = 3;
           HermesBuiltin.throwTypeError();
@@ -95,7 +95,7 @@ export const usePasswordScore = function usePasswordScore(first) {
         }
       })();
     });
-    closure_3.current = lib(closure_1_1[3]).throttle(function() {
+    closure_3.current = lib(closure_1_1[3]).throttle(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {

@@ -10,7 +10,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 noopAll;
 createCacheKey = { pill: null, text: null };
-createCacheKey = { paddingHorizontal: 10, paddingVertical: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.WHITE };
+createCacheKey = {
+  paddingHorizontal: 10,
+  paddingVertical: ThemesDefault.space.PX_4,
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.WHITE,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { color: ThemesDefault.colors.BLACK, textTransform: "uppercase", letterSpacing: 0.5 };
 let closure_4 = createCacheKey.createStyles(createCacheKey);
@@ -24,5 +29,9 @@ export default function ServerPreviewPill() {
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.KNhFgD);
   obj[2] = jsx(Text.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
-  return <View variant="text-xs/bold" style={tmp.text}>{null}</View>;
-};
+  return (
+    <View variant="text-xs/bold" style={tmp.text}>
+      {null}
+    </View>
+  );
+}

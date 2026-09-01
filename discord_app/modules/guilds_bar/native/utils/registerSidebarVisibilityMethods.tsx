@@ -56,7 +56,10 @@ export const registerGuildVisibilityMethod = function registerGuildVisibilityMet
     });
   }
 };
-export const registerFastListChannelVisibilityMethod = function registerFastListChannelVisibilityMethod(ref, guildChannels) {
+export const registerFastListChannelVisibilityMethod = function registerFastListChannelVisibilityMethod(
+  ref,
+  guildChannels,
+) {
   const callback = guildChannels;
   const current = ref.current;
   if (null != current) {
@@ -86,8 +89,7 @@ export const registerFastListChannelVisibilityMethod = function registerFastList
                   items1.push(tmp8.id);
                 }
               }
-            } catch (err) {
-            }
+            } catch (err) {}
           } catch (tmp17) {
             if (null == tmp2) {
               return tmp;

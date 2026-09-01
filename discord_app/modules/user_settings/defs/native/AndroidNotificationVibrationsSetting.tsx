@@ -7,7 +7,8 @@ import hasAndroidNotificationChannels from "../../notifications/native/SettingsN
 import _initializeAndroidNotificationSettingsStore from "../../notifications/native/stores/AndroidNotificationSettingsStore.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-({ useAndroidNotificationVibrationsEnabled: obj1, setAndroidNotificationVibrationsEnabled } = _initializeAndroidNotificationSettingsStore);
+({ useAndroidNotificationVibrationsEnabled: obj1, setAndroidNotificationVibrationsEnabled } =
+  _initializeAndroidNotificationSettingsStore);
 const toggle = createToggle.createToggle({
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -35,7 +36,7 @@ const toggle = createToggle.createToggle({
       tmp5 = null != tmp;
     }
     return tmp5;
-  }
+  },
 });
 const obj = {
   useTitle() {
@@ -64,7 +65,7 @@ const obj = {
       tmp5 = null != tmp;
     }
     return tmp5;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AndroidNotificationVibrationsSetting.tsx");
 

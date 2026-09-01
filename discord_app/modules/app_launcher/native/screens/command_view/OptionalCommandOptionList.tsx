@@ -6,7 +6,9 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/command_view/OptionalCommandOptionList.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/screens/command_view/OptionalCommandOptionList.tsx",
+);
 
 export default function OptionalCommandOptionList(arg0) {
   ({ options, onSelectOption: require } = arg0);
@@ -23,7 +25,7 @@ export default function OptionalCommandOptionList(arg0) {
         },
         label: displayName.displayName,
         subLabel: displayName.displayDescription,
-        trailing: null
+        trailing: null,
       };
       obj = { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null };
       const intl = closure_1_0(closure_1_1[6]).intl;
@@ -38,4 +40,4 @@ export default function OptionalCommandOptionList(arg0) {
     tmp2 = <View hasIcons={false}>{null}</View>;
   }
   return tmp2;
-};
+}

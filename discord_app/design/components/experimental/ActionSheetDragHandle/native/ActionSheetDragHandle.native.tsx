@@ -11,8 +11,18 @@ import importAllResult from "../../../../../../_runtime/00019_noop.js";
 require = arg1;
 ({ TouchableWithoutFeedback: c3, View: c4 } = get_ActivityIndicator);
 ({ DRAG_HANDLE_BAR_HEIGHT, DRAG_HANDLE_PADDING, DRAG_HANDLE_HEIGHT } = PX_4);
-let obj = { container: { height: DRAG_HANDLE_HEIGHT }, containerOverlay: { position: "absolute", top: 0, left: 0, right: 0 }, handle: { alignItems: "center", paddingVertical: DRAG_HANDLE_PADDING }, bar: null };
-obj = { backgroundColor: ThemesDefault.colors.ICON_MUTED, borderRadius: ThemesDefault.radii.xs, height: DRAG_HANDLE_BAR_HEIGHT, width: 31 };
+let obj = {
+  container: { height: DRAG_HANDLE_HEIGHT },
+  containerOverlay: { position: "absolute", top: 0, left: 0, right: 0 },
+  handle: { alignItems: "center", paddingVertical: DRAG_HANDLE_PADDING },
+  bar: null,
+};
+obj = {
+  backgroundColor: ThemesDefault.colors.ICON_MUTED,
+  borderRadius: ThemesDefault.radii.xs,
+  height: DRAG_HANDLE_BAR_HEIGHT,
+  width: 31,
+};
 obj[3] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((accessibilityLabel) => {
@@ -24,12 +34,19 @@ const memoResult = importAllResult.memo((accessibilityLabel) => {
   }
   const animatedBarStyles = accessibilityLabel.animatedBarStyles;
   const tmp3 = callback();
-  const items = [tmp3.container, ];
+  const items = [tmp3.container];
   let containerOverlay = null;
   if (null != overlay) {
     containerOverlay = tmp3.containerOverlay;
   }
-  let obj = { style: items, accessibilityLabel, accessibilityRole: "button", "aria-hidden": accessibilityLabel["aria-hidden"], onPress, children: null };
+  let obj = {
+    style: items,
+    accessibilityLabel,
+    accessibilityRole: "button",
+    "aria-hidden": accessibilityLabel["aria-hidden"],
+    onPress,
+    children: null,
+  };
   items[1] = containerOverlay;
   obj = { style: tmp3.handle, children: null };
   if (null != animatedBarStyles) {
@@ -46,6 +63,8 @@ const memoResult = importAllResult.memo((accessibilityLabel) => {
   obj[5] = <closure_4 style={tmp3.handle}>{null}</closure_4>;
   return <closure_3 style={tmp3.handle}>{null}</closure_3>;
 });
-const result = require("set").fileFinishedImporting("design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandle.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandle.native.tsx",
+);
 
 export const ActionSheetDragHandle = memoResult;

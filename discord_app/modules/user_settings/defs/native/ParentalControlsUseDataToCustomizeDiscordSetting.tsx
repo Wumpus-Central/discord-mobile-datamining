@@ -14,7 +14,8 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToCustomizeDiscordSettingValue() {
-    return useParentalControlledExplicitContentSettings.useParentalControlledConsent(Consents.PERSONALIZATION).hasConsented;
+    return useParentalControlledExplicitContentSettings.useParentalControlledConsent(Consents.PERSONALIZATION)
+      .hasConsented;
   },
   onValueChange: function handlePersonalizationChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
@@ -33,9 +34,11 @@ createToggle = {
       maybeFetchCollectiblesForInvoicesDefault.updateTeenConsents(selectedTeenId, items1, items2);
       const obj = maybeFetchCollectiblesForInvoicesDefault;
     }
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataToCustomizeDiscordSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/ParentalControlsUseDataToCustomizeDiscordSetting.tsx",
+);
 
 export default createToggle;

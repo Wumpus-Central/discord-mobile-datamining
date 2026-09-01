@@ -16,8 +16,7 @@ function getEffectiveVideoProvider(name, url) {
           } else if ("www.tiktok.com" === tmp9) {
             return "TikTok";
           }
-        } catch (err) {
-        }
+        } catch (err) {}
       }
       return name;
     }
@@ -32,18 +31,37 @@ const re9 = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vi
 const re10 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/;
 const re11 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/;
 const regExp = new RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop");
-const re13 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/;
+const re13 =
+  /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/;
 const re14 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/;
-const re15 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/shop\?(?=.*tab=game-shops)(?=.*applicationId=[0-9]+)(?=.*skuId=[0-9]+)/;
+const re15 =
+  /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/shop\?(?=.*tab=game-shops)(?=.*applicationId=[0-9]+)(?=.*skuId=[0-9]+)/;
 const re16 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/games\/[0-9]+(?:\/[A-Za-z0-9-]*)?\/?$/;
 const re17 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/users\/[0-9]+\/?$/;
 let result = set.fileFinishedImporting("utils/EmbedUtils.tsx");
 
 export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
-  let obj = { id: null, url: null, type: null, rawTitle: null, rawDescription: null, referenceId: null, flags: null, contentScanVersion: null };
+  let obj = {
+    id: null,
+    url: null,
+    type: null,
+    rawTitle: null,
+    rawDescription: null,
+    referenceId: null,
+    flags: null,
+    contentScanVersion: null,
+  };
   obj1 = str(12);
   obj[0] = obj1.uniqueId("embed_");
-  ({ url: obj[1], type: obj[2], title: obj[3], description: obj[4], reference_id: obj[5], flags: obj[6], content_scan_version: obj[7] } = footer);
+  ({
+    url: obj[1],
+    type: obj[2],
+    title: obj[3],
+    description: obj[4],
+    reference_id: obj[5],
+    flags: obj[6],
+    content_scan_version: obj[7],
+  } = footer);
   if (null != footer.footer) {
     obj = { text: null, iconURL: null, iconProxyURL: null };
     obj[0] = footer.footer.text;
@@ -83,8 +101,27 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
         if (constants2.IMAGE !== type) {
           const thumbnail3 = footer.thumbnail;
           ({ flags, content_type } = thumbnail3);
-          const obj2 = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
-          ({ url: obj18[0], proxy_url: obj18[1], width: obj18[2], height: obj18[3], placeholder: obj18[4], placeholder_version: obj18[5], description: obj18[6] } = thumbnail3);
+          const obj2 = {
+            url: null,
+            proxyURL: null,
+            width: null,
+            height: null,
+            placeholder: null,
+            placeholderVersion: null,
+            description: null,
+            srcIsAnimated: null,
+            flags: null,
+            contentType: null,
+          };
+          ({
+            url: obj18[0],
+            proxy_url: obj18[1],
+            width: obj18[2],
+            height: obj18[3],
+            placeholder: obj18[4],
+            placeholder_version: obj18[5],
+            description: obj18[6],
+          } = thumbnail3);
           let num = flags;
           if (flags == null) {
             num = 0;
@@ -101,8 +138,27 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
       }
       const thumbnail = footer.thumbnail;
       ({ flags: flags2, content_type: content_type2 } = thumbnail);
-      const obj3 = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
-      ({ url: obj7[0], proxy_url: obj7[1], width: obj7[2], height: obj7[3], placeholder: obj7[4], placeholder_version: obj7[5], description: obj7[6] } = thumbnail);
+      const obj3 = {
+        url: null,
+        proxyURL: null,
+        width: null,
+        height: null,
+        placeholder: null,
+        placeholderVersion: null,
+        description: null,
+        srcIsAnimated: null,
+        flags: null,
+        contentType: null,
+      };
+      ({
+        url: obj7[0],
+        proxy_url: obj7[1],
+        width: obj7[2],
+        height: obj7[3],
+        placeholder: obj7[4],
+        placeholder_version: obj7[5],
+        description: obj7[6],
+      } = thumbnail);
       let obj7 = obj6(1399);
       let num2 = flags2;
       if (flags2 == null) {
@@ -127,8 +183,27 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   if (tmp16) {
     const image2 = footer.image;
     ({ flags: flags3, content_type: content_type3 } = image2);
-    const obj4 = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
-    ({ url: obj9[0], proxy_url: obj9[1], width: obj9[2], height: obj9[3], placeholder: obj9[4], placeholder_version: obj9[5], description: obj9[6] } = image2);
+    const obj4 = {
+      url: null,
+      proxyURL: null,
+      width: null,
+      height: null,
+      placeholder: null,
+      placeholderVersion: null,
+      description: null,
+      srcIsAnimated: null,
+      flags: null,
+      contentType: null,
+    };
+    ({
+      url: obj9[0],
+      proxy_url: obj9[1],
+      width: obj9[2],
+      height: obj9[3],
+      placeholder: obj9[4],
+      placeholder_version: obj9[5],
+      description: obj9[6],
+    } = image2);
     let num4 = flags3;
     if (flags3 == null) {
       num4 = 0;
@@ -208,8 +283,27 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
     if (tmp27) {
       const video4 = footer.video;
       ({ flags: flags4, content_type: content_type4 } = video4);
-      obj7 = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
-      ({ url: obj15[0], proxy_url: obj15[1], width: obj15[2], height: obj15[3], placeholder: obj15[4], placeholder_version: obj15[5], description: obj15[6] } = video4);
+      obj7 = {
+        url: null,
+        proxyURL: null,
+        width: null,
+        height: null,
+        placeholder: null,
+        placeholderVersion: null,
+        description: null,
+        srcIsAnimated: null,
+        flags: null,
+        contentType: null,
+      };
+      ({
+        url: obj15[0],
+        proxy_url: obj15[1],
+        width: obj15[2],
+        height: obj15[3],
+        placeholder: obj15[4],
+        placeholder_version: obj15[5],
+        description: obj15[6],
+      } = video4);
       let num8 = flags4;
       if (flags4 == null) {
         num8 = 0;

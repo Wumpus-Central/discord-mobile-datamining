@@ -15,7 +15,7 @@ class InappropriateConversationBlockAndReportAlert {
     analyticsCancelContext = global.analyticsCancelContext;
     onDismiss = global.onDismiss;
     closure_8 = undefined;
-    items = [, , , ];
+    items = [, , ,];
     items[0] = channelId;
     items[1] = warningId;
     items[2] = senderId;
@@ -26,17 +26,17 @@ class InappropriateConversationBlockAndReportAlert {
       obj.trackCtaEvent(obj);
     }, items);
     closure_8 = callback;
-    items1 = [, ];
+    items1 = [,];
     items1[0] = callback;
     items1[1] = analyticsCancelContext;
-    items2 = [, , ];
+    items2 = [, ,];
     items2[0] = onDismiss;
     items2[1] = callback;
     items2[2] = analyticsBlockContext;
     callback1 = senderId.useCallback(() => {
       callback(analyticsCancelContext);
     }, items1);
-    items3 = [, , ];
+    items3 = [, ,];
     items3[0] = onDismiss;
     items3[1] = callback;
     items3[2] = analyticsBlockAndReportContext;
@@ -52,14 +52,25 @@ class InappropriateConversationBlockAndReportAlert {
       }
       callback(analyticsBlockAndReportContext);
     }, items3);
-    obj = { userId: senderId, channelId, onClose: global.onClose, onCancel: callback1, onBlock: callback2, onBlockAndReport: callback3, blockButtonVariant: "primary", description: null };
+    obj = {
+      userId: senderId,
+      channelId,
+      onClose: global.onClose,
+      onCancel: callback1,
+      onBlock: callback2,
+      onBlockAndReport: callback3,
+      blockButtonVariant: "primary",
+      description: null,
+    };
     tmp5 = require("ConfirmBlockUserAlert");
     intl = require("getSystemLocale").intl;
     obj[7] = intl.string(require("getSystemLocale").t["5NhTvu"]);
     return analyticsBlockContext(tmp5, obj);
   }
 }
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/InappropriateConversationBlockAndReportAlert.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/native/InappropriateConversationBlockAndReportAlert.tsx",
+);
 
 export default InappropriateConversationBlockAndReportAlert;
 export { InappropriateConversationBlockAndReportAlert };

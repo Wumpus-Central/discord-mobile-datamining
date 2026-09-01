@@ -8,7 +8,10 @@ const memoResult = importAllResult.memo((type) => {
   type = type.type;
   let obj = type(executeStateUpdate[2]);
   const componentStateContext = obj.useComponentStateContext();
-  state(executeStateUpdate[3])(null != componentStateContext, "CheckboxActionComponent must be rendered inside a ComponentStateContext");
+  state(executeStateUpdate[3])(
+    null != componentStateContext,
+    "CheckboxActionComponent must be rendered inside a ComponentStateContext",
+  );
   let tmp5;
   if (null != type.default) {
     obj = { type: null, value: null };
@@ -47,7 +50,7 @@ const memoResult = importAllResult.memo((type) => {
     checked: memo,
     onToggle(value) {
       executeStateUpdate({ type, value });
-    }
+    },
   };
   return jsx(type(executeStateUpdate[5]).Checkbox, {
     label: tmp11.label,
@@ -55,9 +58,11 @@ const memoResult = importAllResult.memo((type) => {
     checked: memo,
     onToggle(value) {
       executeStateUpdate({ type, value });
-    }
+    },
   });
 });
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/CheckboxActionComponent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/native/actions/CheckboxActionComponent.tsx",
+);
 
 export default memoResult;

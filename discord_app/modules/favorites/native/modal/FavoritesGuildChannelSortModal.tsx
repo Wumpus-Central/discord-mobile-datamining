@@ -7,7 +7,9 @@ import { FAVORITES } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/native/modal/FavoritesGuildChannelSortModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/favorites/native/modal/FavoritesGuildChannelSortModal.tsx",
+);
 
 export default function FavoritesGuildChannelSortModal() {
   const effect = React.useEffect(() => {
@@ -37,4 +39,4 @@ export default function FavoritesGuildChannelSortModal() {
     return obj;
   }, items);
   return jsx(bottom(6008).Navigator, { screens, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
-};
+}

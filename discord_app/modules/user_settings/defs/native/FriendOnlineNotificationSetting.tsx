@@ -17,7 +17,7 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: explicitContentFromProto.EnableFriendOnlineNotifications.useSetting,
-  onValueChange: onFriendOnlineNotificationSettingsChanged.onFriendOnlineNotificationSettingsChanged
+  onValueChange: onFriendOnlineNotificationSettingsChanged.onFriendOnlineNotificationSettingsChanged,
 });
 const obj = {
   useTitle() {
@@ -30,7 +30,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: explicitContentFromProto.EnableFriendOnlineNotifications.useSetting,
-  onValueChange: onFriendOnlineNotificationSettingsChanged.onFriendOnlineNotificationSettingsChanged
+  onValueChange: onFriendOnlineNotificationSettingsChanged.onFriendOnlineNotificationSettingsChanged,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/FriendOnlineNotificationSetting.tsx");
 

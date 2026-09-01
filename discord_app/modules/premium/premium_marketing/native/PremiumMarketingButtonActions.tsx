@@ -5,11 +5,25 @@ import { PremiumTypes } from "../../PremiumConstants.tsx";
 import ME from "../../../../Constants.tsx";
 
 require = arg1;
-({ AnalyticsSections: c5, AnalyticsObjects: closure_6, AnalyticsObjectTypes: error, UserSettingsSections: closure_8 } = ME);
-let result = require("set").fileFinishedImporting("modules/premium/premium_marketing/native/PremiumMarketingButtonActions.tsx");
+({
+  AnalyticsSections: c5,
+  AnalyticsObjects: closure_6,
+  AnalyticsObjectTypes: error,
+  UserSettingsSections: closure_8,
+} = ME);
+let result = require("set").fileFinishedImporting(
+  "modules/premium/premium_marketing/native/PremiumMarketingButtonActions.tsx",
+);
 
 export const getButtonActionHandler = function getButtonActionHandler(arg0) {
-  ({ buttonAction, applicationId: require, analyticsLocations: importDefault, analyticsPage: dependencyMap, onPaymentSuccess: closure_3, onPaymentDismiss: PremiumTypes } = arg0);
+  ({
+    buttonAction,
+    applicationId: require,
+    analyticsLocations: importDefault,
+    analyticsPage: dependencyMap,
+    onPaymentSuccess: closure_3,
+    onPaymentDismiss: PremiumTypes,
+  } = arg0);
   if (create.ButtonAction.OPEN_SOCIAL_LAYER_STOREFRONT === buttonAction) {
     return () => {
       if (null != closure_0) {
@@ -20,8 +34,19 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
     };
   } else if (tmp(8455).ButtonAction.OPEN_TIER_1_PAYMENT_MODAL === buttonAction) {
     return () => {
-      obj = { analyticsLocation: obj, analyticsLocations: closure_1, premiumType: closure_1_4.TIER_1, onPaymentSuccess: closure_3, onPaymentDismiss: closure_4 };
-      obj = { page: closure_2, section: closure_1_5.FOOTER, object: closure_1_6.BUTTON_CTA, objectType: closure_1_7.TIER_1 };
+      obj = {
+        analyticsLocation: obj,
+        analyticsLocations: closure_1,
+        premiumType: closure_1_4.TIER_1,
+        onPaymentSuccess: closure_3,
+        onPaymentDismiss: closure_4,
+      };
+      obj = {
+        page: closure_2,
+        section: closure_1_5.FOOTER,
+        object: closure_1_6.BUTTON_CTA,
+        objectType: closure_1_7.TIER_1,
+      };
       return closure_1_1(closure_1_2[5])(obj);
     };
   } else {
@@ -29,8 +54,18 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
       if (tmp(8455).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER !== buttonAction) {
         if (tmp(8455).ButtonAction.OPEN_PLAN_SELECTION_MODAL === buttonAction) {
           return () => {
-            obj = { analyticsLocation: obj, analyticsLocations: closure_1, onPaymentSuccess: closure_3, onPaymentDismiss: closure_4 };
-            obj = { page: closure_2, section: closure_1_5.FOOTER, object: closure_1_6.BUTTON_CTA, objectType: closure_1_7.BUY };
+            obj = {
+              analyticsLocation: obj,
+              analyticsLocations: closure_1,
+              onPaymentSuccess: closure_3,
+              onPaymentDismiss: closure_4,
+            };
+            obj = {
+              page: closure_2,
+              section: closure_1_5.FOOTER,
+              object: closure_1_6.BUTTON_CTA,
+              objectType: closure_1_7.BUY,
+            };
             return closure_1_1(closure_1_2[5])(obj);
           };
         } else {
@@ -68,9 +103,14 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
             const result = tmp3(tmp4[7]).showMarketingMomentRewardScreen(length[0]);
             const tmp3Result = tmp3(tmp4[7]);
           }
-        }
+        },
       };
-      obj = { page: closure_2, section: closure_1_5.FOOTER, object: closure_1_6.BUTTON_CTA, objectType: closure_1_7.TIER_2 };
+      obj = {
+        page: closure_2,
+        section: closure_1_5.FOOTER,
+        object: closure_1_6.BUTTON_CTA,
+        objectType: closure_1_7.TIER_2,
+      };
       closure_1_1(closure_1_2[5])(obj);
     };
   }

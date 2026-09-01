@@ -112,7 +112,14 @@ function renderTitle(channelName, channel, channel) {
     const _HermesInternal = HermesInternal;
     str = ", " + tmpResult.isolate(tmpResult.computeChannelName(channel, tmp4, tmp5));
   }
-  return "" + isolateResult + " (" + obj2.isolate(computeChannelName.computeChannelName(channel, closure_19, closure_13, true)) + str + ")";
+  return (
+    "" +
+    isolateResult +
+    " (" +
+    obj2.isolate(computeChannelName.computeChannelName(channel, closure_19, closure_13, true)) +
+    str +
+    ")"
+  );
 }
 function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
   type = type.type;
@@ -129,7 +136,15 @@ function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
   return _TD0la;
 }
 ({ GUILD_VOCAL_CHANNEL_TYPES: closure_8, THREAD_CHANNEL_TYPES: c9 } = createChannelRecord);
-({ ActivityActionTypes: closure_21, ChannelTypes: closure_22, MessageFlags: closure_23, MessageTypes: closure_24, MessageTypesSets: closure_25, StatusTypes: closure_26, UserFlags: closure_27 } = ME);
+({
+  ActivityActionTypes: closure_21,
+  ChannelTypes: closure_22,
+  MessageFlags: closure_23,
+  MessageTypes: closure_24,
+  MessageTypesSets: closure_25,
+  StatusTypes: closure_26,
+  UserFlags: closure_27,
+} = ME);
 let result = require("set").fileFinishedImporting("modules/notifications/NotificationTextUtils.tsx");
 
 export { shouldNotifyBase };
@@ -219,7 +234,8 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
                 if (muted.isMuted(channel1.id)) {
                   return false;
                 } else {
-                  const threadNotificationSetting = computeThreadNotificationSetting.computeThreadNotificationSetting(channel1);
+                  const threadNotificationSetting =
+                    computeThreadNotificationSetting.computeThreadNotificationSetting(channel1);
                   let tmp39 = threadNotificationSetting !== ThreadMemberFlags.NO_MESSAGES;
                   if (tmp39) {
                     result = threadNotificationSetting === ThreadMemberFlags.ALL_MESSAGES;
@@ -473,7 +489,15 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                     obj = { user: null, game: null };
                     obj[0] = name;
                     obj[1] = content.application.name;
-                    let str7 = intl7.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t.E8CgCh, getSystemLocale.t.c6KHWJ, getSystemLocale.t.Fy7rJN), obj);
+                    let str7 = intl7.formatToPlainString(
+                      getInviteEmbedFormatString(
+                        getGuildId,
+                        getSystemLocale.t.E8CgCh,
+                        getSystemLocale.t.c6KHWJ,
+                        getSystemLocale.t.Fy7rJN,
+                      ),
+                      obj,
+                    );
                   } else {
                     str7 = "";
                     if (content.activity.type === tmp44.JOIN_REQUEST) {
@@ -481,7 +505,15 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                       obj1 = { user: null, game: null };
                       obj1[0] = name;
                       obj1[1] = content.application.name;
-                      str7 = intl9.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t["/TD0la"], getSystemLocale.t["/TD0la"], getSystemLocale.t["/TD0la"]), obj1);
+                      str7 = intl9.formatToPlainString(
+                        getInviteEmbedFormatString(
+                          getGuildId,
+                          getSystemLocale.t["/TD0la"],
+                          getSystemLocale.t["/TD0la"],
+                          getSystemLocale.t["/TD0la"],
+                        ),
+                        obj1,
+                      );
                     }
                   }
                   stringResult = str7;
@@ -493,9 +525,22 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                   const intl6 = getSystemLocale.intl;
                   let obj2 = { user: null };
                   obj2[0] = name;
-                  stringResult = intl6.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t.SaDdmN, getSystemLocale.t.qsODhp, getSystemLocale.t.WeiMTW), obj2);
+                  stringResult = intl6.formatToPlainString(
+                    getInviteEmbedFormatString(
+                      getGuildId,
+                      getSystemLocale.t.SaDdmN,
+                      getSystemLocale.t.qsODhp,
+                      getSystemLocale.t.WeiMTW,
+                    ),
+                    obj2,
+                  );
                   tmp26 = items;
-                  const tmp43 = getInviteEmbedFormatString(getGuildId, getSystemLocale.t.SaDdmN, getSystemLocale.t.qsODhp, getSystemLocale.t.WeiMTW);
+                  const tmp43 = getInviteEmbedFormatString(
+                    getGuildId,
+                    getSystemLocale.t.SaDdmN,
+                    getSystemLocale.t.qsODhp,
+                    getSystemLocale.t.WeiMTW,
+                  );
                 }
               }
               if (null != sticker_items) {
@@ -528,7 +573,9 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                   if (first != null) {
                     const fields = first.fields;
                     if (fields != null) {
-                      found = fields.find((name) => "poll_question_text" === ("name" in name ? name.name : name.rawName));
+                      found = fields.find(
+                        (name) => "poll_question_text" === ("name" in name ? name.name : name.rawName),
+                      );
                     }
                   }
                 }
@@ -599,7 +646,11 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                     } else if (null != first.fields) {
                       if (first.fields.length > 0) {
                         const _HermesInternal = HermesInternal;
-                        return "" + "name" in first.fields[0] ? first.fields[0].name : first.fields[0].rawName + " " + "value" in first.fields[0] ? first.fields[0].value : first.fields[0].rawValue;
+                        return "" + "name" in first.fields[0]
+                          ? first.fields[0].name
+                          : first.fields[0].rawName + " " + "value" in first.fields[0]
+                            ? first.fields[0].value
+                            : first.fields[0].rawValue;
                       }
                     }
                   }

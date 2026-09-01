@@ -22,7 +22,10 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
   ({ hasAccess, isFreemium } = favoritesAccess);
   const obj = useFavoritesAccess;
   const items = [closure_8];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => false === obj.favoriteGuildVisibleSetting);
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => false === obj.favoriteGuildVisibleSetting,
+  );
   const obj2 = initialize;
   const tmp5 = useCanShowFavoritesGuildOnboardingDefault();
   useSelectedDismissibleContent;
@@ -41,7 +44,9 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
           } else {
             items3 = [];
           }
-          const tmp12 = callback(tmp(6251).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(1373).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+          const tmp12 =
+            callback(tmp(6251).useSelectedDismissibleContent(items3, undefined, true), 1)[0] ===
+            tmp(1373).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           importDefault = tmp12;
           const items4 = [tmp12];
           const effect = importAllResult.useEffect(() => {
@@ -53,7 +58,10 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
           const layoutEffect = importAllResult.useLayoutEffect(() => {
             closure_1_10.setState({ shouldShowPopover: closure_1, markPopoverAsDismissed: closure_0 });
           }, items5);
-          const layoutEffect1 = importAllResult.useLayoutEffect(() => () => state.setState({ shouldShowPopover: false, markPopoverAsDismissed: closure_9 }), []);
+          const layoutEffect1 = importAllResult.useLayoutEffect(
+            () => () => state.setState({ shouldShowPopover: false, markPopoverAsDismissed: closure_9 }),
+            [],
+          );
           return null;
         }
       }
@@ -71,11 +79,20 @@ export function resetHasOfferedFavoritesGuildOnboarding() {
   c11 = false;
 }
 export const useFavoritesIntroPopover = function useFavoritesIntroPopover() {
-  return { shouldShowPopover: callback5((shouldShowPopover) => shouldShowPopover.shouldShowPopover), markPopoverAsDismissed: callback5((markPopoverAsDismissed) => markPopoverAsDismissed.markPopoverAsDismissed) };
+  return {
+    shouldShowPopover: callback5((shouldShowPopover) => shouldShowPopover.shouldShowPopover),
+    markPopoverAsDismissed: callback5((markPopoverAsDismissed) => markPopoverAsDismissed.markPopoverAsDismissed),
+  };
 };
 export const isFavoritesIntroPopoverShown = function isFavoritesIntroPopoverShown(hasAccess, isFreemium, arg2) {
-  return callback2(DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) && callback2(DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
+  return (
+    callback2(DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) &&
+    callback2(DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM)
+  );
 };
 export const useIsFavoritesIntroPopoverShown = function useIsFavoritesIntroPopoverShown() {
-  return callback3(DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) && callback3(DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
+  return (
+    callback3(DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) &&
+    callback3(DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM)
+  );
 };

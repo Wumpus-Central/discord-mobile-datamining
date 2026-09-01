@@ -22,7 +22,7 @@ const memoResult = importAllResult.memo((arg0) => {
   ({ style, children } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   const tmp2 = callback();
-  const items = [tmp2.container, , ];
+  const items = [tmp2.container, ,];
   let disabled = merged.disabled;
   if (disabled) {
     disabled = tmp2.disabled;
@@ -32,9 +32,23 @@ const memoResult = importAllResult.memo((arg0) => {
   items[2] = style;
   const merged1 = Object.assign(merged);
   obj = { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children };
-  obj.children = jsx(isBlurDisabledDefault, { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children });
-  return jsx(PressableBase.PressableOpacity, { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children });
+  obj.children = jsx(isBlurDisabledDefault, {
+    style: tmp2.blur,
+    blurAmount: 0.2,
+    blurStyle: "default",
+    blurTheme: "dark",
+    children,
+  });
+  return jsx(PressableBase.PressableOpacity, {
+    style: tmp2.blur,
+    blurAmount: 0.2,
+    blurStyle: "default",
+    blurTheme: "dark",
+    children,
+  });
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayerControlButton.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/quests/native/VideoQuestModal/VideoQuestPlayerControlButton.tsx",
+);
 
 export const VideoQuestPlayerControlButton = memoResult;

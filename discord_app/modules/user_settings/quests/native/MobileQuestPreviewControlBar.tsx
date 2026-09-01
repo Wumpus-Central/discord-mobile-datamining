@@ -33,26 +33,34 @@ class MobileQuestPreviewControlBar {
     items[0] = closure_7;
     items1 = [];
     items1[0] = questId;
-    stateFromStores = obj2.useStateFromStores(items, () => {
-      let fetchQuestPreviewError = null;
-      if (null != questId) {
-        fetchQuestPreviewError = callback3.getFetchQuestPreviewError(tmp);
-      }
-      return fetchQuestPreviewError;
-    }, items1);
+    stateFromStores = obj2.useStateFromStores(
+      items,
+      () => {
+        let fetchQuestPreviewError = null;
+        if (null != questId) {
+          fetchQuestPreviewError = callback3.getFetchQuestPreviewError(tmp);
+        }
+        return fetchQuestPreviewError;
+      },
+      items1,
+    );
     obj3 = require("initialize");
     items2 = [];
     items2[0] = closure_7;
     items3 = [];
     items3[0] = questId;
-    stateFromStores1 = obj3.useStateFromStores(items2, () => {
-      let result = null != questId;
-      if (result) {
-        result = callback3.isFetchingQuestPreview(tmp);
-      }
-      return result;
-    }, items3);
-    items4 = [, ];
+    stateFromStores1 = obj3.useStateFromStores(
+      items2,
+      () => {
+        let result = null != questId;
+        if (result) {
+          result = callback3.isFetchingQuestPreview(tmp);
+        }
+        return result;
+      },
+      items3,
+    );
+    items4 = [,];
     items4[0] = questsWithPreviewAccess;
     items4[1] = questId;
     items5 = [];
@@ -85,231 +93,240 @@ class MobileQuestPreviewControlBar {
         tmp(arg0);
       }
     }, items5);
-    items6 = [, ];
+    items6 = [,];
     items6[0] = questId;
     items6[1] = refreshQuest;
-    callback1 = closure_5.useCallback(closure_3(function*() {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+    callback1 = closure_5.useCallback(
+      closure_3(function* () {
+        if (c4 === 2) {
+          c4 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
+          try {
+            c4 = 2;
+            if (0 === c1) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                closure_0 = tmp3;
+                if (null != closure_1_0) {
+                  v0(true);
+                  v0 = 1;
+                  obj1 = closure_1_0(closure_1_2[11]);
+                  c1 = 2;
+                  c4 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = obj1.completeQuestPreview(tmp22, 1);
+                  return obj1;
+                } else {
+                  c4 = 3;
+                }
+              }
+            } else if (1 === tmp7) {
+              v0 = 0;
+              v0(false);
+              throw callback;
+            } else if (arg0 === 1) {
               c4 = 3;
               throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_0 = tmp3;
-              if (null != closure_1_0) {
-                v0(true);
-                v0 = 1;
-                obj1 = closure_1_0(closure_1_2[11]);
-                c1 = 2;
-                c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj1.completeQuestPreview(tmp22, 1);
-                return obj1;
-              } else {
-                c4 = 3;
-              }
+            } else if (arg0 !== 2) {
+              callback();
+              v0 = 0;
+              v0(false);
             }
-          } else if (1 === tmp7) {
             v0 = 0;
             v0(false);
-            throw callback;
-          } else if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            callback();
-            v0 = 0;
-            v0(false);
-          }
-          v0 = 0;
-          v0(false);
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } catch (tmp27) {
-          callback = tmp27;
-          if (tmp4 === v0) {
-            c4 = tmp2;
-            throw tmp27;
-          } else {
-            c1 = tmp;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } catch (tmp27) {
+            callback = tmp27;
+            if (tmp4 === v0) {
+              c4 = tmp2;
+              throw tmp27;
+            } else {
+              c1 = tmp;
+            }
           }
         }
-      }
-    }), items6);
+      }),
+      items6,
+    );
     closure_5 = callback1;
-    items7 = [, ];
+    items7 = [,];
     items7[0] = questId;
     items7[1] = refreshQuest;
-    callback2 = closure_5.useCallback(closure_3(function*() {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+    callback2 = closure_5.useCallback(
+      closure_3(function* () {
+        if (c4 === 2) {
+          c4 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
+          try {
+            c4 = 2;
+            if (0 === c1) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                closure_0 = tmp3;
+                if (null != closure_1_0) {
+                  v0(true);
+                  v0 = 1;
+                  obj1 = closure_1_0(closure_1_2[11]);
+                  c1 = 2;
+                  c4 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = obj1.resetQuestPreviewStatus(tmp22);
+                  return obj1;
+                } else {
+                  c4 = 3;
+                }
+              }
+            } else if (1 === tmp7) {
+              v0 = 0;
+              v0(false);
+              throw callback;
+            } else if (arg0 === 1) {
               c4 = 3;
               throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_0 = tmp3;
-              if (null != closure_1_0) {
-                v0(true);
-                v0 = 1;
-                obj1 = closure_1_0(closure_1_2[11]);
-                c1 = 2;
-                c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj1.resetQuestPreviewStatus(tmp22);
-                return obj1;
-              } else {
-                c4 = 3;
-              }
+            } else if (arg0 !== 2) {
+              callback();
+              v0 = 0;
+              v0(false);
             }
-          } else if (1 === tmp7) {
             v0 = 0;
             v0(false);
-            throw callback;
-          } else if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            callback();
-            v0 = 0;
-            v0(false);
-          }
-          v0 = 0;
-          v0(false);
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } catch (tmp27) {
-          callback = tmp27;
-          if (tmp4 === v0) {
-            c4 = tmp2;
-            throw tmp27;
-          } else {
-            c1 = tmp;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } catch (tmp27) {
+            callback = tmp27;
+            if (tmp4 === v0) {
+              c4 = tmp2;
+              throw tmp27;
+            } else {
+              c1 = tmp;
+            }
           }
         }
-      }
-    }), items7);
+      }),
+      items7,
+    );
     closure_6 = callback2;
-    items8 = [, ];
+    items8 = [,];
     items8[0] = questId;
     items8[1] = refreshQuest;
-    callback3 = closure_5.useCallback(closure_3(function*() {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+    callback3 = closure_5.useCallback(
+      closure_3(function* () {
+        if (c4 === 2) {
+          c4 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
+          try {
+            c4 = 2;
+            if (0 === c1) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                closure_0 = tmp3;
+                if (null != closure_1_0) {
+                  v0(true);
+                  v0 = 1;
+                  const _Math = Math;
+                  const random = Math.random();
+                  obj1 = closure_1_0(closure_1_2[11]);
+                  c1 = 2;
+                  c4 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = obj1.completeQuestPreview(tmp22, random);
+                  return obj1;
+                } else {
+                  c4 = 3;
+                }
+              }
+            } else if (1 === tmp7) {
+              v0 = 0;
+              v0(false);
+              throw callback;
+            } else if (arg0 === 1) {
               c4 = 3;
               throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_0 = tmp3;
-              if (null != closure_1_0) {
-                v0(true);
-                v0 = 1;
-                const _Math = Math;
-                const random = Math.random();
-                obj1 = closure_1_0(closure_1_2[11]);
-                c1 = 2;
-                c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj1.completeQuestPreview(tmp22, random);
-                return obj1;
-              } else {
-                c4 = 3;
-              }
+            } else if (arg0 !== 2) {
+              callback();
+              v0 = 0;
+              v0(false);
             }
-          } else if (1 === tmp7) {
             v0 = 0;
             v0(false);
-            throw callback;
-          } else if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            callback();
-            v0 = 0;
-            v0(false);
-          }
-          v0 = 0;
-          v0(false);
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } catch (tmp28) {
-          callback = tmp28;
-          if (tmp4 === v0) {
-            c4 = tmp2;
-            throw tmp28;
-          } else {
-            c1 = tmp;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } catch (tmp28) {
+            callback = tmp28;
+            if (tmp4 === v0) {
+              c4 = tmp2;
+              throw tmp28;
+            } else {
+              c1 = tmp;
+            }
           }
         }
-      }
-    }), items8);
+      }),
+      items8,
+    );
     closure_7 = callback3;
-    items9 = [, , , ];
+    items9 = [, , ,];
     items9[0] = questId;
     items9[1] = callback1;
     items9[2] = callback2;
@@ -325,7 +342,7 @@ class MobileQuestPreviewControlBar {
       const intl = questId(refreshQuest[13]).intl;
       obj[0] = intl.string(questId(refreshQuest[13]).t.jQEfRT);
       obj[1] = callback1;
-      const items = [obj, , , ];
+      const items = [obj, , ,];
       obj1 = { label: null, onPress: null };
       const intl2 = questId(refreshQuest[13]).intl;
       obj1[0] = intl2.string(questId(refreshQuest[13]).t.taqkwK);
@@ -349,11 +366,18 @@ class MobileQuestPreviewControlBar {
       obj[1] = items;
       const result = obj.showSimpleActionSheet(obj);
     }, items9);
-    items10 = [, , ];
+    items10 = [, ,];
     items10[0] = jsx(require("QuestThemePicker"), {});
     obj1 = { style: tmp.questInputContainer, children: null };
     obj2 = { style: tmp.searchField, children: null };
-    obj3 = { options: memo, value: questId, onChange: callback, placeholder: null, allowCustomValue: true, isDisabled: null };
+    obj3 = {
+      options: memo,
+      value: questId,
+      onChange: callback,
+      placeholder: null,
+      allowCustomValue: true,
+      isDisabled: null,
+    };
     intl = require("getSystemLocale").intl;
     obj3[3] = intl.string(require("getSystemLocale").t.Zw8jxn);
     tmp18 = stateFromStores1;
@@ -362,10 +386,18 @@ class MobileQuestPreviewControlBar {
     }
     obj3[5] = tmp18;
     obj2[1] = tmp17(require("MobileSearchableSelect").MobileSearchableSelect, obj3);
-    items11 = [, ];
+    items11 = [,];
     items11[0] = tmp17(tmp16, obj2);
     obj4 = { style: tmp.iconsColumn, children: null };
-    obj5 = { icon: tmp17(require("RefreshIcon").RefreshIcon, {}), accessibilityLabel: null, onPress: null, disabled: null, loading: null, size: "sm", variant: "secondary" };
+    obj5 = {
+      icon: tmp17(require("RefreshIcon").RefreshIcon, {}),
+      accessibilityLabel: null,
+      onPress: null,
+      disabled: null,
+      loading: null,
+      size: "sm",
+      variant: "secondary",
+    };
     intl2 = require("getSystemLocale").intl;
     obj5[1] = intl2.string(require("getSystemLocale").t.wzzjk9);
     obj5[2] = refreshQuest;
@@ -376,7 +408,7 @@ class MobileQuestPreviewControlBar {
     }
     obj5[3] = tmp19;
     obj5[4] = stateFromStores1;
-    items12 = [, ];
+    items12 = [,];
     items12[0] = tmp17(require("IconButton").IconButton, obj5);
     tmp17Result = null != questId;
     if (tmp17Result) {
@@ -409,8 +441,21 @@ class MobileQuestPreviewControlBar {
   }
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: { overflow: "visible", zIndex: 1 }, questInputContainer: null, searchField: null, iconsColumn: null, errorText: null };
-createCacheKey = { flexDirection: "row", alignItems: "flex-start", justifyContent: "flex-start", gap: ThemesDefault.space.PX_8, zIndex: 2, overflow: "visible" };
+createCacheKey = {
+  container: { overflow: "visible", zIndex: 1 },
+  questInputContainer: null,
+  searchField: null,
+  iconsColumn: null,
+  errorText: null,
+};
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "flex-start",
+  justifyContent: "flex-start",
+  gap: ThemesDefault.space.PX_8,
+  zIndex: 2,
+  overflow: "visible",
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flex: 1, zIndex: 3, overflow: "visible" };
 createCacheKey[3] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingTop: ThemesDefault.space.PX_4 };
@@ -418,7 +463,9 @@ let obj1 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingTop: Th
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_4, zIndex: 1 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { marginTop: ThemesDefault.space.PX_4, zIndex: 1 };
-let result = require("set").fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewControlBar.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/quests/native/MobileQuestPreviewControlBar.tsx",
+);
 
 export default MobileQuestPreviewControlBar;
 export { MobileQuestPreviewControlBar };

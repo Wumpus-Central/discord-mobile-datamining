@@ -48,7 +48,7 @@ function _joinGuild() {
     closure_7 = 0;
     closure_8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (sessionId === 2) {
         sessionId = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -202,11 +202,24 @@ function _joinGuild() {
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = loadId;
                   const HTTP = callback(loadId[16]).HTTP;
-                  let obj4 = { url: null, query: null, context: null, oldFormErrors: true, body: null, rejectWithError: null };
+                  let obj4 = {
+                    url: null,
+                    query: null,
+                    context: null,
+                    oldFormErrors: true,
+                    body: null,
+                    rejectWithError: null,
+                  };
                   throwTypeErrorResult = closure_16;
                   throwTypeErrorResult = callback;
                   obj4[0] = closure_16.GUILD_JOIN(callback);
-                  const obj5 = { lurker: null, session_id: null, recommendation_load_id: null, location: null, from_directory: null };
+                  const obj5 = {
+                    lurker: null,
+                    session_id: null,
+                    recommendation_load_id: null,
+                    location: null,
+                    from_directory: null,
+                  };
                   throwTypeErrorResult = c7;
                   obj5[0] = c7;
                   throwTypeErrorResult = c7;
@@ -456,7 +469,16 @@ function waitForGuild(closure_0) {
   });
 }
 let closure_4 = ["icon", "unicodeEmoji"];
-({ AbortCodes: closure_15, Endpoints: closure_16, JoinGuildSources: closure_17, UserFlags: closure_18, MAX_USER_GUILDS: closure_19, MAX_USER_GUILDS_PREMIUM: closure_20, Routes: closure_21, AnalyticEvents: closure_22 } = ME);
+({
+  AbortCodes: closure_15,
+  Endpoints: closure_16,
+  JoinGuildSources: closure_17,
+  UserFlags: closure_18,
+  MAX_USER_GUILDS: closure_19,
+  MAX_USER_GUILDS_PREMIUM: closure_20,
+  Routes: closure_21,
+  AnalyticEvents: closure_22,
+} = ME);
 let result = require("set").fileFinishedImporting("actions/GuildActionCreators.tsx");
 
 export default {
@@ -475,7 +497,7 @@ export default {
     closure_1 = arg1;
     closure_2 = page;
     closure_3 = messageId;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -624,11 +646,35 @@ export default {
     });
   },
   setCommunicationDisabledUntil(moderator_report_id) {
-    ({ guildId, userId, communicationDisabledUntilTimestamp, duration, reason, location: _location } = moderator_report_id);
+    ({
+      guildId,
+      userId,
+      communicationDisabledUntilTimestamp,
+      duration,
+      reason,
+      location: _location,
+    } = moderator_report_id);
     let obj = _modDef4713;
-    obj = { url: closure_16.GUILD_MEMBER(guildId, userId), reason, body: { communication_disabled_until: communicationDisabledUntilTimestamp, moderator_report_id: moderator_report_id.moderatorReportId }, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    obj = {
+      url: closure_16.GUILD_MEMBER(guildId, userId),
+      reason,
+      body: {
+        communication_disabled_until: communicationDisabledUntilTimestamp,
+        moderator_report_id: moderator_report_id.moderatorReportId,
+      },
+      oldFormErrors: true,
+      trackedActionData: null,
+      rejectWithError: null,
+    };
     obj = { event: encodeProperties.NetworkActionNames.USER_COMMUNICATION_DISABLED_UPDATE, properties: null };
-    obj1 = { guild_id: guildId, target_user_id: userId, duration: null, reason: null, communication_disabled_until: null, location: null };
+    obj1 = {
+      guild_id: guildId,
+      target_user_id: userId,
+      duration: null,
+      reason: null,
+      communication_disabled_until: null,
+      location: null,
+    };
     let tmp3 = null;
     if (null != duration) {
       tmp3 = duration;
@@ -652,14 +698,24 @@ export default {
   },
   banUser(id, closure_1_3, value, c1) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: closure_16.GUILD_BAN(id, closure_1_3), reason: c1, body: obj, oldFormErrors: true, rejectWithError: null };
+    obj = {
+      url: closure_16.GUILD_BAN(id, closure_1_3),
+      reason: c1,
+      body: obj,
+      oldFormErrors: true,
+      rejectWithError: null,
+    };
     obj = { delete_message_seconds: value, moderator_report_id: arg4 };
     obj[4] = sendRequest.rejectWithMigratedError();
     return HTTP.put(obj);
   },
   unbanUser(id, id2) {
     const HTTP = sendRequest.HTTP;
-    const obj = { url: closure_16.GUILD_BAN(id, id2), oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
+    const obj = {
+      url: closure_16.GUILD_BAN(id, id2),
+      oldFormErrors: true,
+      rejectWithError: sendRequest.rejectWithMigratedError(),
+    };
     return HTTP.del(obj);
   },
   banMultipleUsers(closure_1_0, closure_1_1, closure_2, banned_users, usePubSub) {
@@ -689,7 +745,7 @@ export default {
       let failed_users = 0;
       c6 = 0;
       let items = 0;
-      return (function*() {
+      return (function* () {
         if (c6 === 2) {
           c6 = 3;
           HermesBuiltin.throwTypeError();
@@ -822,7 +878,7 @@ export default {
     if (flag === undefined) {
       flag = false;
     }
-    return callback(function*() {
+    return callback(function* () {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -938,7 +994,7 @@ export default {
     closure_0 = id;
     closure_1 = id2;
     closure_2 = arg2;
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
       const icon = c2.icon;
@@ -985,7 +1041,7 @@ export default {
   batchChannelUpdate(arg0, arg1) {
     closure_0 = arg0;
     closure_1 = arg1;
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
       const HTTP = closure_1_0(530).HTTP;
@@ -1002,7 +1058,7 @@ export default {
   batchRoleUpdate(arg0, arg1) {
     closure_0 = arg0;
     closure_1 = arg1;
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
       const HTTP = closure_1_0(530).HTTP;
@@ -1185,7 +1241,7 @@ export default {
   fetchApplications(arg0, arg1) {
     closure_0 = arg0;
     closure_1 = arg1;
-    return callback(function*() {
+    return callback(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -1266,7 +1322,7 @@ export default {
       tmp = null;
     }
     c2 = tmp;
-    return callback(function*() {
+    return callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -1342,7 +1398,7 @@ export default {
     if (arg3 === undefined) {
       num = 10;
     }
-    return callback(function*() {
+    return callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -1423,7 +1479,7 @@ export default {
   },
   fetchGuildBans(arg0) {
     closure_0 = arg0;
-    return callback(function*() {
+    return callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -1487,12 +1543,20 @@ export default {
   fetchGuildRoleConnectionsEligibility(guildId, id) {
     const _require = id;
     const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-    let obj = { url: closure_16.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id), oldFormErrors: true, rejectWithError: require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+    let obj = {
+      url: closure_16.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id),
+      oldFormErrors: true,
+      rejectWithError: require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+    };
     const value = HTTP.get(obj);
     return value.then((body) => {
       body = body.body;
       let obj = closure_1_1(closure_1_3[14]);
-      obj = { type: "GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS", roleId: closure_0, roleConnectionEligibility: body };
+      obj = {
+        type: "GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS",
+        roleId: closure_0,
+        roleConnectionEligibility: body,
+      };
       obj.dispatch(obj);
       return body;
     });
@@ -1500,7 +1564,7 @@ export default {
   assignGuildRoleConnection(c0, id) {
     closure_0 = c0;
     closure_1 = id;
-    return callback(function*() {
+    return callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -1559,7 +1623,7 @@ export default {
   unassignGuildRoleConnection(closure_1, id) {
     closure_0 = closure_1;
     closure_1 = id;
-    return callback(function*() {
+    return callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -1617,7 +1681,7 @@ export default {
   },
   getGuildRoleConnectionsConfigurations(guildId) {
     closure_0 = guildId;
-    return callback(function*() {
+    return callback(function* () {
       const HTTP = v0(closure_1_3[16]).HTTP;
       obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_16.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(v0);
@@ -1625,6 +1689,6 @@ export default {
       yield HTTP.get(obj1);
       return arg1.body;
     })();
-  }
+  },
 };
 export { waitForGuild };

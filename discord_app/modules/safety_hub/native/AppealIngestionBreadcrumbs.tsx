@@ -8,13 +8,47 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: { flex: 0, alignSelf: "stretch", marginBottom: 8 }, title: { lineHeight: 16, marginBottom: 8 }, breadCrumbItemContainer: { flexDirection: "row", justifyContent: "flex-start", marginBottom: 8, marginEnd: 32, overflow: "visible" }, breadCrumbDot: null, breadCrumbBar: null, breadCrumbText: null };
-createCacheKey = { marginStart: 2, marginTop: 8, width: 4, height: 4, borderRadius: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+createCacheKey = {
+  container: { flex: 0, alignSelf: "stretch", marginBottom: 8 },
+  title: { lineHeight: 16, marginBottom: 8 },
+  breadCrumbItemContainer: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    marginBottom: 8,
+    marginEnd: 32,
+    overflow: "visible",
+  },
+  breadCrumbDot: null,
+  breadCrumbBar: null,
+  breadCrumbText: null,
+};
+createCacheKey = {
+  marginStart: 2,
+  marginTop: 8,
+  width: 4,
+  height: 4,
+  borderRadius: 2,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
 createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { position: "absolute", width: 2, top: 10, bottom: -12, left: 3, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[4] = {
+  position: "absolute",
+  width: 2,
+  top: 10,
+  bottom: -12,
+  left: 3,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 createCacheKey[5] = { marginStart: 8, lineHeight: 20 };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { position: "absolute", width: 2, top: 10, bottom: -12, left: 3, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+const obj1 = {
+  position: "absolute",
+  width: 2,
+  top: 10,
+  bottom: -12,
+  left: 3,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionBreadcrumbs.tsx");
 
 export default function AppealIngestionBreadcrumbs(reasons) {
@@ -33,18 +67,24 @@ export default function AppealIngestionBreadcrumbs(reasons) {
     let items = [
       callback(require("../../../design/components/Text/native/Text.tsx").Text, obj),
       reasons.map((children) => {
-          let obj = { style: lib.breadCrumbItemContainer, children: null };
-          obj = { style: lib.breadCrumbBar };
-          const items = [closure_1_3(closure_1_2, obj), , ];
-          obj = { style: lib.breadCrumbDot };
-          items[1] = closure_1_3(closure_1_2, obj);
-          items[2] = closure_1_3(lib(closure_1_1[5]).Text, { lineClamp: 2, ellipsizeMode: "tail", style: lib.breadCrumbText, variant: "text-md/medium", children });
-          obj[1] = items;
-          return closure_1_4(closure_1_2, obj, "" + children + "+" + arg1);
-        })
+        let obj = { style: lib.breadCrumbItemContainer, children: null };
+        obj = { style: lib.breadCrumbBar };
+        const items = [closure_1_3(closure_1_2, obj), ,];
+        obj = { style: lib.breadCrumbDot };
+        items[1] = closure_1_3(closure_1_2, obj);
+        items[2] = closure_1_3(lib(closure_1_1[5]).Text, {
+          lineClamp: 2,
+          ellipsizeMode: "tail",
+          style: lib.breadCrumbText,
+          variant: "text-md/medium",
+          children,
+        });
+        obj[1] = items;
+        return closure_1_4(closure_1_2, obj, "" + children + "+" + arg1);
+      }),
     ];
     obj[1] = items;
     tmp2 = callback2(View, obj);
   }
   return tmp2;
-};
+}

@@ -10,7 +10,7 @@ closure_0 = importDefaultResult((arg0, arg1, arg2) => {
   closure_2 = arg2;
   c5 = 0;
   c6 = 0;
-  return (function*(arg0, arg1, arg2) {
+  return (function* (arg0, arg1, arg2) {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();
@@ -53,7 +53,11 @@ closure_0 = importDefaultResult((arg0, arg1, arg2) => {
               c5 = 1;
               c6 = 1;
               obj3 = { value: null, done: false };
-              obj3[0] = obj3.processSocketThrottlers(tmp33, tmp31.transport !== closure_1_3.POST_MESSAGE, tmp31.abortController.signal);
+              obj3[0] = obj3.processSocketThrottlers(
+                tmp33,
+                tmp31.transport !== closure_1_3.POST_MESSAGE,
+                tmp31.abortController.signal,
+              );
               return obj3;
             }
             const obj10 = callback(9508);
@@ -83,7 +87,7 @@ closure_0 = importDefaultResult((arg0, arg1, arg2) => {
 });
 let result = require("set").fileFinishedImporting("modules/rpc/native/server/NativeRPCHelpers.tsx");
 
-export const validateSocketClient = function() {
+export const validateSocketClient = function () {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

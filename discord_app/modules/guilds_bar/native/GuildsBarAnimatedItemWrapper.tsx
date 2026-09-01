@@ -41,7 +41,7 @@ class UnreadIndicator {
       }
     }
     c7 = num;
-    items = [, , ];
+    items = [, ,];
     items[0] = num;
     items[1] = MOUNTED;
     items[2] = tmp7.unreadIndicator;
@@ -69,8 +69,8 @@ class UnreadIndicator {
     };
     obj = { disableEntering: tmp8, sharedId, id, withSpring: null, BAR_SPRING_PHYSICS: null, guildItemSize: null };
     memo = cleanUp.useMemo(() => {
-      const items = [unreadIndicator.unreadIndicator, ];
-      const obj = { height: num, marginTop: num / 2 * -1, marginLeft: null };
+      const items = [unreadIndicator.unreadIndicator];
+      const obj = { height: num, marginTop: (num / 2) * -1, marginLeft: null };
       num = 0;
       if (MOUNTED === sharedId(MOUNTED[7]).TransitionStates.YEETED) {
         num = -4;
@@ -85,14 +85,18 @@ class UnreadIndicator {
     fn.__closure = obj;
     fn.__workletHash = 404454683979;
     fn.__initData = closure_14;
-    items1 = [, , , ];
+    items1 = [, , ,];
     items1[0] = tmp8;
     items1[1] = sharedId;
     items1[2] = id;
     items1[3] = token;
     fn2 = function p(height) {
       let obj = { animations: null, initialValues: null, callback: null };
-      obj = { originY: sharedId(MOUNTED[8]).withSpring(height.targetOriginY, closure_1_11, "animate-always"), originX: null, height: null };
+      obj = {
+        originY: sharedId(MOUNTED[8]).withSpring(height.targetOriginY, closure_1_11, "animate-always"),
+        originX: null,
+        height: null,
+      };
       const obj3 = sharedId(MOUNTED[8]);
       obj[1] = sharedId(MOUNTED[8]).withSpring(height.targetOriginX, closure_1_11, "animate-always");
       const obj4 = sharedId(MOUNTED[8]);
@@ -111,7 +115,14 @@ class UnreadIndicator {
       };
       return obj;
     };
-    obj1 = { withSpring: null, BAR_SPRING_PHYSICS: null, transitionState: null, TransitionStates: null, cleanUp: null, runOnJS: null };
+    obj1 = {
+      withSpring: null,
+      BAR_SPRING_PHYSICS: null,
+      transitionState: null,
+      TransitionStates: null,
+      cleanUp: null,
+      runOnJS: null,
+    };
     callback = cleanUp.useCallback(fn, items1);
     obj1[0] = require("CONFIG_NEVER_ANIMATE").withSpring;
     obj1[1] = closure_11;
@@ -122,15 +133,25 @@ class UnreadIndicator {
     fn2.__closure = obj1;
     fn2.__workletHash = 10632665703864;
     fn2.__initData = closure_15;
-    items2 = [, ];
+    items2 = [,];
     items2[0] = MOUNTED;
     items2[1] = cleanUp;
     callback1 = cleanUp.useCallback(fn2, items2);
-    return jsx(require("set"), { collapsable: false, entering: callback, layout: callback1, style: memo, pointerEvents: "none" });
+    return jsx(require("set"), {
+      collapsable: false,
+      entering: callback,
+      layout: callback1,
+      style: memo,
+      pointerEvents: "none",
+    });
   }
 }
 function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
-  return callback2(UnreadIndicator, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
+  return callback2(
+    UnreadIndicator,
+    { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp },
+    arg0,
+  );
 }
 ({ GUILD_ITEM_HIT_SLOP: c5, GUILD_ITEM_INSET_LEFT: closure_6, useGuildWrapperSize: error } = GUILD_ITEM_SIZE);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
@@ -141,18 +162,57 @@ let closure_12 = createCacheKey.createStyles(() => {
   if (arg0 === undefined) {
     num = 56;
   }
-  let obj = { draggedElement: { opacity: 0 }, selectedBackgroundOverlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, container: { position: "relative", overflow: "visible" }, unreadIndicator: null, expandedChildrenWrapper: null };
-  obj = { position: "absolute", top: num / 2, left: -4, height: 8, width: 8, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.TEXT_STRONG };
+  let obj = {
+    draggedElement: { opacity: 0 },
+    selectedBackgroundOverlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
+    container: { position: "relative", overflow: "visible" },
+    unreadIndicator: null,
+    expandedChildrenWrapper: null,
+  };
+  obj = {
+    position: "absolute",
+    top: num / 2,
+    left: -4,
+    height: 8,
+    width: 8,
+    borderRadius: ThemesDefault.radii.xs,
+    backgroundColor: ThemesDefault.colors.TEXT_STRONG,
+  };
   obj[3] = obj;
-  obj = { position: "absolute", left: num + 16, top: 0, right: 8, height: num, transformOrigin: "0% 50%", display: "flex", flexDirection: "row", alignItems: "center" };
+  obj = {
+    position: "absolute",
+    left: num + 16,
+    top: 0,
+    right: 8,
+    height: num,
+    transformOrigin: "0% 50%",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+  };
   obj[4] = obj;
   return obj;
 });
 let closure_13 = createCacheKey.createStyles((arg0, arg1, width, height) => {
   let obj = { pressableWrapper: null, itemShape: null, itemShapeSelected: null };
-  obj = { position: "relative", paddingTop: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingBottom: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingLeft: closure_6, height, width: width + closure_5.left + closure_5.right };
+  obj = {
+    position: "relative",
+    paddingTop: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN,
+    paddingBottom: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN,
+    paddingLeft: closure_6,
+    height,
+    width: width + closure_5.left + closure_5.right,
+  };
   obj[0] = obj;
-  obj = { position: "relative", width, height: width, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: null };
+  obj = {
+    position: "relative",
+    width,
+    height: width,
+    overflow: "hidden",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: null,
+  };
   let str = "transparent";
   let str2 = "transparent";
   if (!arg1) {
@@ -171,9 +231,15 @@ let closure_13 = createCacheKey.createStyles((arg0, arg1, width, height) => {
   obj[2] = { backgroundColor: BACKGROUND_BRAND };
   return obj;
 });
-let closure_14 = { code: "function GuildsBarAnimatedItemWrapperTsx1(values){const{disableEntering,sharedId,id,withSpring,BAR_SPRING_PHYSICS,guildItemSize}=this.__closure;if(disableEntering||sharedId!=null&&sharedId.get()!==id){return{animations:{},initialValues:{}};}return{animations:{originY:withSpring(values.targetOriginY,BAR_SPRING_PHYSICS,'animate-always'),originX:withSpring(values.targetOriginX,BAR_SPRING_PHYSICS,'animate-always'),height:withSpring(values.targetHeight,BAR_SPRING_PHYSICS,'animate-always')},initialValues:{height:8,originY:guildItemSize/2,originX:-12}};}" };
-let closure_15 = { code: "function GuildsBarAnimatedItemWrapperTsx2(values){const{withSpring,BAR_SPRING_PHYSICS,transitionState,TransitionStates,cleanUp,runOnJS}=this.__closure;return{animations:{originY:withSpring(values.targetOriginY,BAR_SPRING_PHYSICS,'animate-always'),originX:withSpring(values.targetOriginX,BAR_SPRING_PHYSICS,'animate-always'),height:withSpring(values.targetHeight,BAR_SPRING_PHYSICS,'animate-always')},initialValues:{height:values.currentHeight,originY:values.currentOriginY,originX:values.currentOriginX},callback:function(finished){if(transitionState===TransitionStates.YEETED&&finished&&cleanUp!=null){runOnJS(cleanUp)();}}};}" };
-let closure_18 = { code: "function GuildsBarAnimatedItemWrapperTsx3(){const{withSpring,circle,guildItemSelectedBorderRadius,guildItemSize,CORNER_SPRING_PHYSICS}=this.__closure;return{borderRadius:withSpring(!circle?guildItemSelectedBorderRadius:guildItemSize/2,CORNER_SPRING_PHYSICS,'animate-always')};}" };
+let closure_14 = {
+  code: "function GuildsBarAnimatedItemWrapperTsx1(values){const{disableEntering,sharedId,id,withSpring,BAR_SPRING_PHYSICS,guildItemSize}=this.__closure;if(disableEntering||sharedId!=null&&sharedId.get()!==id){return{animations:{},initialValues:{}};}return{animations:{originY:withSpring(values.targetOriginY,BAR_SPRING_PHYSICS,'animate-always'),originX:withSpring(values.targetOriginX,BAR_SPRING_PHYSICS,'animate-always'),height:withSpring(values.targetHeight,BAR_SPRING_PHYSICS,'animate-always')},initialValues:{height:8,originY:guildItemSize/2,originX:-12}};}",
+};
+let closure_15 = {
+  code: "function GuildsBarAnimatedItemWrapperTsx2(values){const{withSpring,BAR_SPRING_PHYSICS,transitionState,TransitionStates,cleanUp,runOnJS}=this.__closure;return{animations:{originY:withSpring(values.targetOriginY,BAR_SPRING_PHYSICS,'animate-always'),originX:withSpring(values.targetOriginX,BAR_SPRING_PHYSICS,'animate-always'),height:withSpring(values.targetHeight,BAR_SPRING_PHYSICS,'animate-always')},initialValues:{height:values.currentHeight,originY:values.currentOriginY,originX:values.currentOriginX},callback:function(finished){if(transitionState===TransitionStates.YEETED&&finished&&cleanUp!=null){runOnJS(cleanUp)();}}};}",
+};
+let closure_18 = {
+  code: "function GuildsBarAnimatedItemWrapperTsx3(){const{withSpring,circle,guildItemSelectedBorderRadius,guildItemSize,CORNER_SPRING_PHYSICS}=this.__closure;return{borderRadius:withSpring(!circle?guildItemSelectedBorderRadius:guildItemSize/2,CORNER_SPRING_PHYSICS,'animate-always')};}",
+};
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarAnimatedItemWrapper.tsx");
 
 export default function GuildsBarAnimatedItemWrapper(id) {
@@ -238,7 +304,13 @@ export default function GuildsBarAnimatedItemWrapper(id) {
       return obj;
     }
   }
-  obj = { withSpring: id(circle[8]).withSpring, circle, guildItemSelectedBorderRadius: token1, guildItemSize: token, CORNER_SPRING_PHYSICS: expanded };
+  obj = {
+    withSpring: id(circle[8]).withSpring,
+    circle,
+    guildItemSelectedBorderRadius: token1,
+    guildItemSize: token,
+    CORNER_SPRING_PHYSICS: expanded,
+  };
   X.__closure = obj;
   X.__workletHash = 15930523896348;
   X.__initData = closure_18;
@@ -295,7 +367,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   const items1 = [styles.pressableWrapper, isDragTarget, tmp6.draggedElement];
   let tmp13 = !unread;
   const memo1 = hint.useMemo(() => {
-    const items = [styles.pressableWrapper, , ];
+    const items = [styles.pressableWrapper, ,];
     let draggedElement;
     if (isDragTarget) {
       draggedElement = draggedElement.draggedElement;
@@ -386,7 +458,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   obj.collapsable = false;
   obj.accessibilityActions = accessibilityActions;
   obj.onAccessibilityAction = onAccessibilityAction;
-  const items5 = [externalChildren, , ];
+  const items5 = [externalChildren, ,];
   if (enableHome) {
     obj1 = { pointerEvents: "none", style: null, children: null };
     const items6 = [unreadStyle, guildsBarUnreadDrawerStyle];
@@ -412,13 +484,13 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   items5[1] = tmp21Result;
   const obj5 = { style: items7, cutouts, children: null };
   items7 = [styles.itemShape, animatedStyle];
-  const items8 = [tmp6.selectedBackgroundOverlay, ];
+  const items8 = [tmp6.selectedBackgroundOverlay];
   let itemShapeSelected = null;
   if (selected) {
     itemShapeSelected = styles.itemShapeSelected;
   }
   items8[1] = itemShapeSelected;
-  const items9 = [tmp25(selected(circle[15]), { pointerEvents: "none", style: items8 }), ];
+  const items9 = [tmp25(selected(circle[15]), { pointerEvents: "none", style: items8 })];
   let tmp30 = !isDragTarget;
   if (!isDragTarget) {
     tmp30 = children;
@@ -442,7 +514,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
     obj7[1] = tmp17Result;
     tmp25Result = tmp25(tmp4(tmp3[10]), obj7);
   }
-  const items11 = [tmp25Result, ];
+  const items11 = [tmp25Result];
   tmp25Result = null;
   if (enableHome) {
     const obj8 = {};
@@ -460,7 +532,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   items11[1] = tmp25Result;
   obj6[5] = items11;
   return styles(selected(circle[10]), obj6);
-};
+}
 export const useGuildsBarAnimatedWrapperStyles = function useGuildsBarAnimatedWrapperStyles(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {

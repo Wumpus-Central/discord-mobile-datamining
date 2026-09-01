@@ -12,7 +12,9 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
 
 export const useSoundButtonStyleConfig = function useSoundButtonStyleConfig() {
-  return { buttonWidth: (Math.min(ACTION_SHEET_MAX_WIDTH, useWindowDimensionsDefault().width) - closure_8) / closure_7 };
+  return {
+    buttonWidth: (Math.min(ACTION_SHEET_MAX_WIDTH, useWindowDimensionsDefault().width) - closure_8) / closure_7,
+  };
 };
 export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSounds(shouldFetch) {
   shouldFetch = shouldFetch.shouldFetch;
@@ -20,11 +22,15 @@ export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSou
   const stateFromStores = shouldFetch(589).useStateFromStores(items, () => saturation.saturation);
   let obj = shouldFetch(589);
   const items1 = [closure_6];
-  const items2 = [stateFromStores, shouldFetch(589).useStateFromStores(items1, () => shouldFetch(table[8]).isThemeDark(theme.theme)), shouldFetch];
+  const items2 = [
+    stateFromStores,
+    shouldFetch(589).useStateFromStores(items1, () => shouldFetch(table[8]).isThemeDark(theme.theme)),
+    shouldFetch,
+  ];
   const effect = React.useEffect(() => {
     function _fetchAndHydrateColors() {
       const self = this;
-      const tmp = closure_2_3(function*() {
+      const tmp = closure_2_3(function* () {
         if (c0 === 2) {
           c0 = 3;
           HermesBuiltin.throwTypeError();

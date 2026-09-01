@@ -6,8 +6,12 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 ({ View: c4, StyleSheet: c5 } = get_ActivityIndicator);
 let closure_7 = { platformStyles: { position: "absolute", width: "100%", height: "100%" } };
-let closure_8 = { code: "function MediaViewerItemPresenterTsx1(){const{entranceAnimationDriver,interpolate,Extrapolation,startHeight,sourceHeight,startWidth,sourceWidth,startTranslateY,startTranslateX,startScale}=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}return{height:interpolateProxy([0,1],[startHeight,sourceHeight]),width:interpolateProxy([0,1],[startWidth,sourceWidth]),top:interpolateProxy([0,1],[startTranslateY,0]),left:interpolateProxy([0,1],[startTranslateX,0]),borderRadius:interpolateProxy([0,0.25],[16,0]),transform:[{scale:interpolateProxy([0,1],[startScale,1])}]};}" };
-let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItemPresenter.tsx");
+let closure_8 = {
+  code: "function MediaViewerItemPresenterTsx1(){const{entranceAnimationDriver,interpolate,Extrapolation,startHeight,sourceHeight,startWidth,sourceWidth,startTranslateY,startTranslateX,startScale}=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}return{height:interpolateProxy([0,1],[startHeight,sourceHeight]),width:interpolateProxy([0,1],[startWidth,sourceWidth]),top:interpolateProxy([0,1],[startTranslateY,0]),left:interpolateProxy([0,1],[startTranslateX,0]),borderRadius:interpolateProxy([0,0.25],[16,0]),transform:[{scale:interpolateProxy([0,1],[startScale,1])}]};}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/media_viewer/native/components/MediaViewerItemPresenter.tsx",
+);
 
 export default function MediaViewerItemPresenter(windowHeight) {
   ({ source, originLayout, renderMedia, windowWidth } = windowHeight);
@@ -38,7 +42,18 @@ export default function MediaViewerItemPresenter(windowHeight) {
   let items1 = [];
   if (Array.isArray(source)) {
     if (loads <= 1) {
-      obj = { key: null, onLoadStart: null, onLoad: null, onError: null, source: null, style: null, index: null, hasSpoiler: null, visible: null, panGestureConfig: null };
+      obj = {
+        key: null,
+        onLoadStart: null,
+        onLoad: null,
+        onError: null,
+        source: null,
+        style: null,
+        index: null,
+        hasSpoiler: null,
+        visible: null,
+        panGestureConfig: null,
+      };
       const _HermesInternal2 = HermesInternal;
       obj[0] = "0:" + index + ":" + source[0].uri;
       obj[1] = handleLoadStart;
@@ -53,7 +68,20 @@ export default function MediaViewerItemPresenter(windowHeight) {
       items1.push(renderMedia(obj));
     }
     if (loads >= 1) {
-      obj = { key: null, source: null, style: null, onLoad: null, onError: null, pointerEvents: null, fadeDuration: 0, fade: false, index: null, hasSpoiler: null, visible: null, panGestureConfig: null };
+      obj = {
+        key: null,
+        source: null,
+        style: null,
+        onLoad: null,
+        onError: null,
+        pointerEvents: null,
+        fadeDuration: 0,
+        fade: false,
+        index: null,
+        hasSpoiler: null,
+        visible: null,
+        panGestureConfig: null,
+      };
       const _HermesInternal3 = HermesInternal;
       obj[0] = "1:" + index + ":" + source[0].uri;
       obj[1] = source[1];
@@ -72,7 +100,18 @@ export default function MediaViewerItemPresenter(windowHeight) {
       items1.push(renderMedia(obj));
     }
   } else {
-    obj1 = { key: null, onLoadStart: null, onLoad: null, onError: null, source: null, style: null, index: null, hasSpoiler: null, visible: null, panGestureConfig: null };
+    obj1 = {
+      key: null,
+      onLoadStart: null,
+      onLoad: null,
+      onError: null,
+      source: null,
+      style: null,
+      index: null,
+      hasSpoiler: null,
+      visible: null,
+      panGestureConfig: null,
+    };
     const _HermesInternal = HermesInternal;
     obj1[0] = "0:" + index + ":" + source.uri;
     obj1[1] = handleLoadStart;
@@ -110,7 +149,7 @@ export default function MediaViewerItemPresenter(windowHeight) {
     if (result > tmp15) {
       num2 = result;
     }
-    num3 = originLayout.width / width * num2;
+    num3 = (originLayout.width / width) * num2;
     tmp19 = height;
     tmp20 = width;
   }
@@ -118,22 +157,22 @@ export default function MediaViewerItemPresenter(windowHeight) {
     constructor() {
       value = entranceAnimationDriver.get();
       obj = { height: null, width: null, top: null, left: null, borderRadius: null, transform: null };
-      items = [, ];
+      items = [,];
       items[0] = height;
       items[1] = height;
       obj2 = windowWidth(entranceAnimationDriver[6]);
       obj[0] = obj2.interpolate(value, [0, 1], items, windowWidth(entranceAnimationDriver[6]).Extrapolation.CLAMP);
-      items1 = [, ];
+      items1 = [,];
       items1[0] = width;
       items1[1] = width;
       obj3 = windowWidth(entranceAnimationDriver[6]);
       obj[1] = obj3.interpolate(value, [0, 1], items1, windowWidth(entranceAnimationDriver[6]).Extrapolation.CLAMP);
-      items2 = [, ];
+      items2 = [,];
       items2[0] = closure_9;
       items2[1] = 0;
       obj4 = windowWidth(entranceAnimationDriver[6]);
       obj[2] = obj4.interpolate(value, [0, 1], items2, windowWidth(entranceAnimationDriver[6]).Extrapolation.CLAMP);
-      items3 = [, ];
+      items3 = [,];
       items3[0] = closure_8;
       items3[1] = 0;
       obj5 = windowWidth(entranceAnimationDriver[6]);
@@ -141,7 +180,7 @@ export default function MediaViewerItemPresenter(windowHeight) {
       obj6 = windowWidth(entranceAnimationDriver[6]);
       obj[4] = obj6.interpolate(value, [0, 0.25], [16, 0], windowWidth(entranceAnimationDriver[6]).Extrapolation.CLAMP);
       obj = { scale: null };
-      items4 = [, ];
+      items4 = [,];
       items4[0] = closure_7;
       items4[1] = 1;
       obj8 = windowWidth(entranceAnimationDriver[6]);
@@ -154,7 +193,18 @@ export default function MediaViewerItemPresenter(windowHeight) {
   }
   const tmp6 = windowHeight;
   const tmpResult = windowWidth(entranceAnimationDriver[6]);
-  O.__closure = { entranceAnimationDriver, interpolate: windowWidth(entranceAnimationDriver[6]).interpolate, Extrapolation: windowWidth(entranceAnimationDriver[6]).Extrapolation, startHeight: tmp19, sourceHeight: height, startWidth: tmp20, sourceWidth: width, startTranslateY: diff1, startTranslateX: diff, startScale: num3 };
+  O.__closure = {
+    entranceAnimationDriver,
+    interpolate: windowWidth(entranceAnimationDriver[6]).interpolate,
+    Extrapolation: windowWidth(entranceAnimationDriver[6]).Extrapolation,
+    startHeight: tmp19,
+    sourceHeight: height,
+    startWidth: tmp20,
+    sourceWidth: width,
+    startTranslateY: diff1,
+    startTranslateX: diff,
+    startScale: num3,
+  };
   O.__workletHash = 15052076990644;
   O.__initData = diff2;
   let items2 = [windowWidth, windowHeight, width, height];
@@ -165,8 +215,22 @@ export default function MediaViewerItemPresenter(windowHeight) {
     return width.create({ container, child, presenter: { position: "relative", overflow: "hidden", opacity: 1 } });
   }, items2);
   let obj3 = { collapsable: false, style: memo1.container, children: null };
-  let obj2 = { entranceAnimationDriver, interpolate: windowWidth(entranceAnimationDriver[6]).interpolate, Extrapolation: windowWidth(entranceAnimationDriver[6]).Extrapolation, startHeight: tmp19, sourceHeight: height, startWidth: tmp20, sourceWidth: width, startTranslateY: diff1, startTranslateX: diff, startScale: num3 };
+  let obj2 = {
+    entranceAnimationDriver,
+    interpolate: windowWidth(entranceAnimationDriver[6]).interpolate,
+    Extrapolation: windowWidth(entranceAnimationDriver[6]).Extrapolation,
+    startHeight: tmp19,
+    sourceHeight: height,
+    startWidth: tmp20,
+    sourceWidth: width,
+    startTranslateY: diff1,
+    startTranslateX: diff,
+    startScale: num3,
+  };
   let items3 = [memo1.presenter, animatedStyle];
-  obj3[2] = height(field, { style: memo1.child, children: height(tmp6(entranceAnimationDriver[7]), { style: items3, children: items1 }) });
+  obj3[2] = height(field, {
+    style: memo1.child,
+    children: height(tmp6(entranceAnimationDriver[7]), { style: items3, children: items1 }),
+  });
   return height(field, obj3);
-};
+}

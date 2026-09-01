@@ -7,10 +7,13 @@ const CameraPreviewPosition = "CameraPreviewPosition";
 let result = require("set").fileFinishedImporting("modules/video_calls/native/components/usePipPosition.tsx");
 
 export default function usePipPosition() {
-  const tmp = callback(React.useState(() => {
-    const Storage = callback(595).Storage;
-    return Storage.get(closure_4, callback(9537).DEFAULT_PIP_POSITION);
-  }), 2);
+  const tmp = callback(
+    React.useState(() => {
+      const Storage = callback(595).Storage;
+      return Storage.get(closure_4, callback(9537).DEFAULT_PIP_POSITION);
+    }),
+    2,
+  );
   closure_0 = tmp[1];
   const items = [
     tmp[0],
@@ -18,7 +21,7 @@ export default function usePipPosition() {
       const Storage = callback(closure_1_1[2]).Storage;
       const result = Storage.set(closure_1_4, arg0);
       callback(arg0);
-    }, [])
+    }, []),
   ];
   return items;
-};
+}

@@ -7,8 +7,7 @@ import MESSAGE_GROUP_SPACING from "MessageConstants.tsx";
 const MessageSendLocation = MESSAGE_GROUP_SPACING.MessageSendLocation;
 let closure_1 = {};
 const Store = initializeDefault.Store;
-class SendMessageOptionsStore extends Store {
-}
+class SendMessageOptionsStore extends Store {}
 SendMessageOptionsStore.prototype["getOptions"] = function getOptions(arg0) {
   return table[arg0];
 };
@@ -35,7 +34,7 @@ const sendMessageOptionsStore = new SendMessageOptionsStore(dispatcherDefault, {
       const nonce = message.nonce;
       delete tmp2[tmp];
     }
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/messages/SendMessageOptionsStore.tsx");
 

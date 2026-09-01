@@ -79,4 +79,4 @@ export default function parseUserProfileCollectibles(collectibles) {
     obj1[2] = tmp2;
     return obj1;
   }
-};
+}

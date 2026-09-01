@@ -46,7 +46,9 @@ function trackImpression(type, arg1, arg2) {
   obj = { impression_type: type, location: callback3() };
   tmpResult = tmp(4700);
   const merged = Object.assign(tmpResult.collectGuildAnalyticsMetadata(guild_id));
-  const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel.getChannel(channel_id)));
+  const merged1 = Object.assign(
+    collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel.getChannel(channel_id)),
+  );
   const merged2 = Object.assign(properties);
   const result = tmpResult.expandEventProperties(obj);
   if (flag) {
@@ -61,8 +63,18 @@ function trackImpression(type, arg1, arg2) {
     tmp15 = null != name && null != type;
   }
 }
-({ setCurrentImpression: error, cleanupImpression: closure_8, setDebugTrackedData: c9, getLocation: c10, getImpressionStack: unpackModuleId } = withEqualityFn);
-encodeProperties = { analyticEventConfigs: require("expandEventProperties").AnalyticEventConfigs, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
+({
+  setCurrentImpression: error,
+  cleanupImpression: closure_8,
+  setDebugTrackedData: c9,
+  getLocation: c10,
+  getImpressionStack: unpackModuleId,
+} = withEqualityFn);
+encodeProperties = {
+  analyticEventConfigs: require("expandEventProperties").AnalyticEventConfigs,
+  dispatcher: dispatcherDefault,
+  TRACK_ACTION_NAME: "TRACK",
+};
 let closure_12 = encodeProperties.trackMaker(encodeProperties);
 let result = require("set").fileFinishedImporting("modules/app_analytics/useTrackImpression.tsx");
 
@@ -125,5 +137,5 @@ export default function useTrackImpression(arg0) {
       return fn;
     }
   });
-};
+}
 export { trackImpression };

@@ -10,7 +10,7 @@ const memoResult = importAllResult.memo(() => {
   let obj = RaisedHandIcon;
   const audienceTileStyles = obj.useAudienceTileStyles();
   obj = { style: null };
-  const items = [audienceTileStyles.container, ];
+  const items = [audienceTileStyles.container];
   obj = { width: RaisedHandIcon.getTileWidthStyle(useWindowDimensionsDefault().width) };
   items[1] = obj;
   obj[0] = items;

@@ -13,13 +13,13 @@ obj = {
   },
   parent: null,
   IconComponent: PuzzlePieceIcon.PuzzlePieceIcon,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.CONNECTIONS,
   getComponent() {
     return onPress /* onPress */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ConnectionsSetting.tsx");

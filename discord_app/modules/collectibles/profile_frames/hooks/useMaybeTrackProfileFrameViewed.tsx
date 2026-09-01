@@ -51,7 +51,15 @@ export default function useMaybeTrackProfileFrameViewed(skuId) {
         if (!current) {
           ref4.current = true;
           let obj = skuId(openedAt[3]);
-          obj = { profileUi: "PROFILE_FRAME", timeToInteractiveMs: null, timeToLoadMs: null, timeToFetchMs: null, viewStartedAt: null, fetchStartedAt: null, analyticsLocations: null };
+          obj = {
+            profileUi: "PROFILE_FRAME",
+            timeToInteractiveMs: null,
+            timeToLoadMs: null,
+            timeToFetchMs: null,
+            viewStartedAt: null,
+            fetchStartedAt: null,
+            analyticsLocations: null,
+          };
           obj[1] = tmp9.current;
           obj[2] = timestamp - tmp22;
           let diff;
@@ -71,4 +79,4 @@ export default function useMaybeTrackProfileFrameViewed(skuId) {
       }
     }
   }, items1);
-};
+}

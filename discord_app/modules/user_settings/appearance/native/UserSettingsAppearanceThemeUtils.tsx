@@ -11,7 +11,9 @@ import { BACKGROUND_GRADIENT_PRESETS_MOBILE as closure_7 } from "../../../client
 import { AnalyticsPremiumFeatureNames as closure_8 } from "../../../premium/PremiumConstants.tsx";
 
 require = arg1;
-let result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx",
+);
 
 export const handleSaveTheme = function handleSaveTheme(found, analyticsLocations, isSynced) {
   if (found.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
@@ -123,7 +125,9 @@ export const getSyncedModeThemeIndex = function getSyncedModeThemeIndex(memo2, c
     prop = syncedClientTheme.customUserThemeSettings;
   }
   if (null != prop) {
-    const findIndexResult = memo2.findIndex((type) => type.type === syncedClientTheme(table[6]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
+    const findIndexResult = memo2.findIndex(
+      (type) => type.type === syncedClientTheme(table[6]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT,
+    );
     if (findIndexResult >= 0) {
       return findIndexResult;
     }
@@ -163,13 +167,21 @@ export const disableSameAsDeviceTheme = function disableSameAsDeviceTheme() {
 export const trackClientThemeUpdated = function trackClientThemeUpdated(arg0) {
   ({ isPersisted, isSynced, themeName, analyticsLocations } = arg0);
   let obj = expandEventPropertiesDefault;
-  obj = { feature_name: constants.CLIENT_THEME, theme_name: themeName, is_persisted: isPersisted, is_synced: isSynced, location_stack: analyticsLocations };
+  obj = {
+    feature_name: constants.CLIENT_THEME,
+    theme_name: themeName,
+    is_persisted: isPersisted,
+    is_synced: isSynced,
+    location_stack: analyticsLocations,
+  };
   obj.track(AnalyticEvents.CLIENT_THEME_UPDATED, obj);
 };
 export const getUserThemeIndex = function getUserThemeIndex(userPreset, c1, memo1, c3, c4) {
   closure_0 = userPreset;
   if (null != userPreset) {
-    const findIndexResult = memo1.findIndex((type) => type.type === userPreset(1349).ClientThemeType.BACKGROUND_GRADIENT_PRESET);
+    const findIndexResult = memo1.findIndex(
+      (type) => type.type === userPreset(1349).ClientThemeType.BACKGROUND_GRADIENT_PRESET,
+    );
     const findIndexResult1 = closure_7.findIndex((id) => id.id === userPreset.id);
     let num4 = 0;
     if (findIndexResult >= 0) {

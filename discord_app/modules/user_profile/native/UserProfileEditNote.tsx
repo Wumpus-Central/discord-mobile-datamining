@@ -8,7 +8,9 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ contentContainer: { paddingVertical: 24, paddingHorizontal: 16, gap: 8 } });
+let closure_9 = createCacheKey.createStyles({
+  contentContainer: { paddingVertical: 24, paddingHorizontal: 16, gap: 8 },
+});
 const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditNote.tsx");
 
 export default function UserProfileEditNote(userId) {
@@ -34,32 +36,35 @@ export default function UserProfileEditNote(userId) {
   const items = [navigation, userId, note, first, onSave, onClose];
   const layoutEffect = obj1.useLayoutEffect(() => {
     let obj = {
-      headerLeft: userId(onClose[8]).getHeaderConditionalBackButton(() => new Promise((arg0) => {
-        closure_0 = arg0;
-        let str = closure_4;
-        if (closure_4 == null) {
-          str = "";
-        }
-        const tmp = closure_1_2;
-        const tmp2 = closure_1_1(closure_1_2[9]);
-        tmp2({
-          hasEdits: str !== closure_5,
-          onHasEdits: closure_1_0(closure_1_2[10]).dismissKeyboard,
-          resetPending() {
+      headerLeft: userId(onClose[8]).getHeaderConditionalBackButton(
+        () =>
+          new Promise((arg0) => {
+            closure_0 = arg0;
             let str = closure_4;
             if (closure_4 == null) {
               str = "";
             }
-            return closure_6(str);
-          },
-          onConfirm() {
-            callback(true);
-            if (closure_1_2 != null) {
-              closure_1_2();
-            }
-          }
-        });
-      })),
+            const tmp = closure_1_2;
+            const tmp2 = closure_1_1(closure_1_2[9]);
+            tmp2({
+              hasEdits: str !== closure_5,
+              onHasEdits: closure_1_0(closure_1_2[10]).dismissKeyboard,
+              resetPending() {
+                let str = closure_4;
+                if (closure_4 == null) {
+                  str = "";
+                }
+                return closure_6(str);
+              },
+              onConfirm() {
+                callback(true);
+                if (closure_1_2 != null) {
+                  closure_1_2();
+                }
+              },
+            });
+          }),
+      ),
       headerRight(arg0) {
         const obj = {};
         const merged = Object.assign(arg0);
@@ -80,7 +85,7 @@ export default function UserProfileEditNote(userId) {
           }
         };
         return closure_1_7(closure_1_0(closure_1_2[11]).HeaderTextButton, obj);
-      }
+      },
     };
     navigation.setOptions(obj);
   }, items);
@@ -88,8 +93,17 @@ export default function UserProfileEditNote(userId) {
   obj = { variant: "text-sm/semibold", children: null };
   let intl = tmp2(tmp3[12]).intl;
   obj[1] = intl.string(userId(onClose[12]).t["mQKv+v"]);
-  const items1 = [callback(userId(onClose[14]).Text, obj), ];
-  obj1 = { value: first, onChange: tmp8, maxLength: closure_6, autoFocus: true, autoCorrect: false, autoCapitalize: "none", placeholder: null, accessibilityLabel: null };
+  const items1 = [callback(userId(onClose[14]).Text, obj)];
+  obj1 = {
+    value: first,
+    onChange: tmp8,
+    maxLength: closure_6,
+    autoFocus: true,
+    autoCorrect: false,
+    autoCapitalize: "none",
+    placeholder: null,
+    accessibilityLabel: null,
+  };
   const intl2 = tmp2(tmp3[12]).intl;
   const string = intl2.string;
   const t = tmp2(tmp3[12]).t;
@@ -104,4 +118,4 @@ export default function UserProfileEditNote(userId) {
   items1[1] = callback(userId(onClose[15]).TextArea, obj1);
   obj[2] = items1;
   return closure_8(first, obj);
-};
+}

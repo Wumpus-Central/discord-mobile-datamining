@@ -41,4 +41,4 @@ export default function serializePushNotificationLogs(arr) {
     const _HermesInternal3 = HermesInternal;
     return "" + str2 + "\n" + str3 + "\n\n" + mapped.join("\n");
   }
-};
+}

@@ -29,7 +29,9 @@ function BurstReactionAnimationContainerInner() {
       dependencyMap({ channelId: channelId.channelId, emoji: channelId.emoji, messageId: channelId.messageId });
       callback(true);
       closure_5.current = true;
-      const result = handleEffectReceived(closure_1_2[8]).triggerHapticFeedback(closure_1_1(closure_1_2[9]).IMPACT_HEAVY);
+      const result = handleEffectReceived(closure_1_2[8]).triggerHapticFeedback(
+        closure_1_1(closure_1_2[9]).IMPACT_HEAVY,
+      );
     }
     const subscription = first(709).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     return () => {
@@ -65,7 +67,13 @@ function BurstReactionAnimationContainerInner() {
     }
     return obj;
   };
-  obj = { animationData: first, showAnimation: first1, withTiming: require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, handleComponentFinish };
+  obj = {
+    animationData: first,
+    showAnimation: first1,
+    withTiming: require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming,
+    runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS,
+    handleComponentFinish,
+  };
   fn.__closure = obj;
   fn.__workletHash = 12044515783370;
   fn.__initData = closure_12;
@@ -73,7 +81,10 @@ function BurstReactionAnimationContainerInner() {
   let tmp8 = null;
   if (null != first) {
     obj = { contentTypes: null, children: null };
-    let items = [require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
+    let items = [
+      require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx")
+        .DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS,
+    ];
     obj[0] = items;
     obj[1] = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
@@ -88,13 +99,21 @@ function BurstReactionAnimationContainerInner() {
           markAsDismissed(constants.UNKNOWN);
         },
         style: markAsDismissed.fill,
-        children: null
+        children: null,
       };
-      const items1 = [closure_1_8(handleComponentFinish, { style: markAsDismissed.background }), , ];
+      const items1 = [closure_1_8(handleComponentFinish, { style: markAsDismissed.background }), ,];
       const obj2 = { style: markAsDismissed.fill, children: null };
       let tmpResult = null;
       if (first1) {
-        const obj3 = { isFullscreen: true, channelId: null, messageId: null, emoji: null, loop: false, withFadeOut: false, onComplete: null };
+        const obj3 = {
+          isFullscreen: true,
+          channelId: null,
+          messageId: null,
+          emoji: null,
+          loop: false,
+          withFadeOut: false,
+          onComplete: null,
+        };
         ({ channelId: obj6[1], messageId: obj6[2], emoji: obj6[3] } = first);
         obj3[6] = function onComplete(arg0) {
           if (!arg0) {
@@ -106,14 +125,16 @@ function BurstReactionAnimationContainerInner() {
       }
       obj2[1] = tmpResult;
       items1[1] = closure_1_8(handleComponentFinish, obj2);
-      let tmp6Result = markAsDismissed.visibleContent === tmp2(1373).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
+      let tmp6Result =
+        markAsDismissed.visibleContent ===
+        tmp2(1373).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
       if (tmp6Result) {
         const obj4 = { children: null };
         const obj5 = { style: null, variant: "text-sm/medium", children: null };
         obj5[0] = tmp4.dismissTextContainer;
         const intl = tmp2(1236).intl;
         obj5[2] = intl.string(tmp2(1236).t.QpPMih);
-        const items2 = [tmp(tmp2(4474).Text, obj5), ];
+        const items2 = [tmp(tmp2(4474).Text, obj5)];
         const obj6 = { style: null };
         obj6[0] = tmp4.dismissTextBackground;
         items2[1] = tmp(tmp8, obj6);
@@ -146,13 +167,36 @@ obj1.alignItems = "center";
 obj1.justifyContent = "center";
 createCacheKey[1] = obj1;
 createCacheKey[2] = { position: "absolute", bottom: 48, zIndex: 1 };
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: ThemesDefault.radii.round, position: "absolute", bottom: -600, height: 700, width: 700 };
+createCacheKey[3] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  borderRadius: ThemesDefault.radii.round,
+  position: "absolute",
+  bottom: -600,
+  height: 700,
+  width: 700,
+};
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let closure_12 = { code: "function BurstReactionAnimationContainerTsx1(){const{animationData,showAnimation,withTiming,runOnJS,handleComponentFinish}=this.__closure;if(animationData==null){return{opacity:0};}if(!showAnimation){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function(finished){if(finished)runOnJS(handleComponentFinish)();})};}return{opacity:withTiming(1,{duration:300})};}" };
-let closure_13 = { code: "function BurstReactionAnimationContainerTsx2(finished){const{runOnJS,handleComponentFinish}=this.__closure;if(finished)runOnJS(handleComponentFinish)();}" };
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: ThemesDefault.radii.round, position: "absolute", bottom: -600, height: 700, width: 700 };
-let result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimationContainer.tsx");
+let closure_12 = {
+  code: "function BurstReactionAnimationContainerTsx1(){const{animationData,showAnimation,withTiming,runOnJS,handleComponentFinish}=this.__closure;if(animationData==null){return{opacity:0};}if(!showAnimation){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function(finished){if(finished)runOnJS(handleComponentFinish)();})};}return{opacity:withTiming(1,{duration:300})};}",
+};
+let closure_13 = {
+  code: "function BurstReactionAnimationContainerTsx2(finished){const{runOnJS,handleComponentFinish}=this.__closure;if(finished)runOnJS(handleComponentFinish)();}",
+};
+let obj2 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  borderRadius: ThemesDefault.radii.round,
+  position: "absolute",
+  bottom: -600,
+  height: 700,
+  width: 700,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/messages/native/burst_reactions/BurstReactionAnimationContainer.tsx",
+);
 
 export default function BurstReactionAnimationContainer() {
-  return callback(ManaContext.ThemeContextProvider, { theme: ThemesDefault.themes.DARKER, children: callback(BurstReactionAnimationContainerInner, {}) });
-};
+  return callback(ManaContext.ThemeContextProvider, {
+    theme: ThemesDefault.themes.DARKER,
+    children: callback(BurstReactionAnimationContainerInner, {}),
+  });
+}

@@ -44,4 +44,4 @@ export default function useTooltipPosition(arg0, arg1, arg2, arg3) {
     }
     return { tooltipX: 0, tooltipY: 0, adjustmentX: 0 };
   }, items);
-};
+}

@@ -8,7 +8,16 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
-let closure_5 = createCacheKey.createStyles({ search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: require("MIN_HEADER_HEIGHT").MIN_HEADER_HEIGHT } });
+let closure_5 = createCacheKey.createStyles({
+  search: {
+    flex: 1,
+    flexShrink: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    paddingStart: 4,
+    height: require("MIN_HEADER_HEIGHT").MIN_HEADER_HEIGHT,
+  },
+});
 const memoResult = importAllResult.memo((arg0) => {
   ({ channelId, guildId } = arg0);
   ({ screenIndex, pressable, isGuildMemberCountVisible, isNavigationScreen, searchPlaceholder } = arg0);
@@ -23,7 +32,14 @@ const memoResult = importAllResult.memo((arg0) => {
     obj[1] = tmp4(ForumChannelCloseSearchButton.ForumChannelSearchInput, obj);
     let tmp4Result = tmp4(View, obj);
   } else {
-    obj1 = { channelId: null, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null };
+    obj1 = {
+      channelId: null,
+      guildId: null,
+      pressable: null,
+      isGuildMemberCountVisible: null,
+      isNavigationScreen: null,
+      screenIndex: null,
+    };
     obj1[0] = channelId;
     obj1[1] = guildId;
     obj1[2] = pressable;
@@ -34,6 +50,8 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   return tmp4Result;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx",
+);
 
 export default memoResult;

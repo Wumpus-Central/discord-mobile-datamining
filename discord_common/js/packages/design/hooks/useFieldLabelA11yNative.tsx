@@ -2,7 +2,9 @@
 import closure_0 from "../../../../../_runtime/00019_noop.js";
 import { Platform } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/hooks/useFieldLabelA11yNative.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/design/hooks/useFieldLabelA11yNative.tsx",
+);
 
 export const useFieldLabelA11yNative = function useFieldLabelA11yNative(size) {
   ({ label, accessibilityLabel } = size);

@@ -44,7 +44,7 @@ class SwipeableFastList extends Component {
         onSwipeableClose() {
           return closure_0.handleClose(closure_3);
         },
-        children: props.renderItem(arg0, arg1, arg2)
+        children: props.renderItem(arg0, arg1, arg2),
       };
       return closure_1_2(arg0(closure_1_1[2]), obj);
     };
@@ -109,7 +109,7 @@ SwipeableFastList.defaultProps = {
   bounceFirstRowOnMount: true,
   renderQuickActions(closure_0, closure_1) {
     return null;
-  }
+  },
 };
 const result = require("set").fileFinishedImporting("components_native/common/SwipeableFastList.tsx");
 

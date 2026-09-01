@@ -9,7 +9,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ itemContainer: { flexDirection: "row", paddingVertical: 12, paddingHorizontal: 16, alignItems: "center" }, itemLabel: { flexDirection: "column", alignItems: "flex-start", paddingLeft: 12 } });
+let closure_10 = createCacheKey.createStyles({
+  itemContainer: { flexDirection: "row", paddingVertical: 12, paddingHorizontal: 16, alignItems: "center" },
+  itemLabel: { flexDirection: "column", alignItems: "flex-start", paddingLeft: 12 },
+});
 const result = require("set").fileFinishedImporting("modules/applications/native/AppInteractionInfoActionSheet.tsx");
 
 export default function AppInteractionInfoActionSheet(message) {
@@ -27,13 +30,19 @@ export default function AppInteractionInfoActionSheet(message) {
   let tmp5;
   const memo = React.useMemo(() => closure_1_8(onBack(11305), { onBack }), items);
   if (interactionMetadata != null) {
-    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 8433).ApplicationIntegrationType.USER_INSTALL];
+    tmp5 =
+      interactionMetadata.authorizing_integration_owners[
+        message(undefined, 8433).ApplicationIntegrationType.USER_INSTALL
+      ];
   }
   dependencyMap = tmp5;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp7;
   if (interactionMetadata2 != null) {
-    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 8433).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp7 =
+      interactionMetadata2.authorizing_integration_owners[
+        message(undefined, 8433).ApplicationIntegrationType.GUILD_INSTALL
+      ];
   }
   React = tmp7;
   const interactionMetadata3 = message.interactionMetadata;
@@ -80,12 +89,12 @@ export default function AppInteractionInfoActionSheet(message) {
     obj = { guild: null, size: null };
     obj[0] = stateFromStores1;
     obj[1] = tmp10(6004).GuildIconSizes.SMALL_32;
-    const items5 = [callback(onBack(6004), obj), ];
+    const items5 = [callback(onBack(6004), obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.itemLabel;
     obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj2[2] = stateFromStores1.name;
-    const items6 = [callback(tmp10(4474).Text, obj2), ];
+    const items6 = [callback(tmp10(4474).Text, obj2)];
     obj3 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     const intl2 = tmp10(1236).intl;
     const obj4 = { application: null };
@@ -110,12 +119,12 @@ export default function AppInteractionInfoActionSheet(message) {
       obj7[0] = stateFromStores;
       obj7[1] = tmp10(1297).AvatarSizes.REFRESH_MEDIUM_32;
       obj7[2] = guildId;
-      const items7 = [callback(tmp10(1297).Avatar, obj7), ];
+      const items7 = [callback(tmp10(1297).Avatar, obj7)];
       const obj8 = { style: null, children: null };
       obj8[0] = tmp.itemLabel;
       const obj9 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       obj9[2] = stateFromStores.username;
-      const items8 = [callback(tmp10(4474).Text, obj9), ];
+      const items8 = [callback(tmp10(4474).Text, obj9)];
       const obj10 = { variant: "text-xs/medium", color: "text-subtle", children: null };
       const intl = tmp10(1236).intl;
       const obj11 = { application: null };
@@ -130,7 +139,7 @@ export default function AppInteractionInfoActionSheet(message) {
     }
   }
   const obj12 = { header: memo, bodyStyles: { paddingBottom: onBack(1628)().bottom }, children: null };
-  const items9 = [tmp26, ];
+  const items9 = [tmp26];
   let tmp32 = null;
   if (null != tmp15) {
     const obj13 = { onPress: null, children: null };
@@ -143,12 +152,12 @@ export default function AppInteractionInfoActionSheet(message) {
     obj15[0] = tmp15;
     obj15[1] = tmp10(1297).AvatarSizes.REFRESH_MEDIUM_32;
     obj15[2] = guildId;
-    const items10 = [callback(tmp10(1297).Avatar, obj15), ];
+    const items10 = [callback(tmp10(1297).Avatar, obj15)];
     const obj16 = { style: null, children: null };
     obj16[0] = tmp.itemLabel;
     const obj17 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj17[2] = tmp15.username;
-    const items11 = [callback(tmp10(4474).Text, obj17), ];
+    const items11 = [callback(tmp10(4474).Text, obj17)];
     const obj18 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     const intl3 = tmp10(1236).intl;
     obj18[2] = intl3.string(tmp10(1236).t["04gxNg"]);
@@ -162,4 +171,4 @@ export default function AppInteractionInfoActionSheet(message) {
   items9[1] = tmp32;
   obj12[2] = items9;
   return callback2(message(5622).BottomSheet, obj12);
-};
+}

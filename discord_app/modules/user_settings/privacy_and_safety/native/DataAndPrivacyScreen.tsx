@@ -8,7 +8,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 ({ HelpdeskArticles: closure_6, UserSettingsSections: error } = ME);
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/DataAndPrivacyScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/privacy_and_safety/native/DataAndPrivacyScreen.tsx",
+);
 
 export default function DataAndPrivacySettings() {
   let obj = stackNavigation(1499);
@@ -20,7 +22,7 @@ export default function DataAndPrivacySettings() {
   let obj3 = items1(1995);
   obj[0] = obj3.getArticleURL(constants.DATA_PRIVACY_CONTROLS);
   obj[1] = intl.format(stackNavigation(1236).t["igTSG/"], obj);
-  items1 = [obj, , , ];
+  items1 = [obj, , ,];
   obj1 = { settings: items2, subLabel: null };
   items2 = [MobileUserSettings.USE_DATA_TO_CUSTOMIZE_DISCORD];
   let intl2 = stackNavigation(1236).intl;
@@ -60,7 +62,7 @@ export default function DataAndPrivacySettings() {
   obj9[1] = intl7.format(stackNavigation(1236).t.N1P5gE, {
     onClick() {
       return stackNavigation.navigate(closure_1_7.CONTENT_AND_SOCIAL);
-    }
+    },
   });
   items1.push(obj9);
   const items7 = [MobileUserSettings.NOTIFY_FRIENDS_ON_PROFILE_UPDATE];
@@ -81,7 +83,7 @@ export default function DataAndPrivacySettings() {
     obj = { label: null, settings: null, subLabel: null };
     const intl = stackNavigation(closure_1_2[5]).intl;
     obj[0] = intl.string(stackNavigation(closure_1_2[5]).t.Me5lVK);
-    items1 = [, ];
+    items1 = [,];
     ({ DATA_AND_PRIVACY_SECURE_FRAMES_PERSISTENT_CODES: arr2[0], ENCRYPTION_VERIFIED_DEVICES: arr2[1] } = closure_1_5);
     obj[1] = items1;
     const intl2 = stackNavigation(closure_1_2[5]).intl;
@@ -91,14 +93,14 @@ export default function DataAndPrivacySettings() {
     const obj2 = { label: null, settings: null, subLabel: null };
     const intl3 = stackNavigation(closure_1_2[5]).intl;
     obj2[0] = intl3.string(stackNavigation(closure_1_2[5]).t["+uHbqE"]);
-    const items2 = [, ];
+    const items2 = [,];
     ({ SAFETY_TERMS_OF_SERVICE: arr3[0], SAFETY_PRIVACY_POLICY: arr3[1] } = closure_1_5);
     obj2[1] = items2;
     const intl4 = stackNavigation(closure_1_2[5]).intl;
     obj2[2] = intl4.format(stackNavigation(closure_1_2[5]).t.R5N31P, {
       onClick() {
         return navigation.navigate(closure_1_7.ACCOUNT);
-      }
+      },
     });
     const items3 = [obj2];
     HermesBuiltin.arraySpread(items3, tmp + 1);
@@ -109,11 +111,11 @@ export default function DataAndPrivacySettings() {
   const obj10 = {
     onClick() {
       return stackNavigation.navigate(closure_1_7.CONTENT_AND_SOCIAL);
-    }
+    },
   };
   const obj16 = items1(1995);
   obj12[0] = stackNavigation(14421).SettingsScreen.DATA_AND_PRIVACY;
   const items9 = [callback(items1(14421), obj12), callback(items1(14340), { node: memo })];
   obj11[0] = items9;
   return callback2(closure_9, obj11);
-};
+}

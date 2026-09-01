@@ -3,7 +3,9 @@ import getPlatformUserUrlDefault from "../../../lib/Platforms.tsx";
 import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 let c3 = "h:";
-const result = require("set").fileFinishedImporting("modules/user_profile/utils/parseProviderRouteHeadlessSessionId.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_profile/utils/parseProviderRouteHeadlessSessionId.tsx",
+);
 
 export default function parseProviderRouteHeadlessSessionId(str) {
   if (null != str) {
@@ -26,5 +28,5 @@ export default function parseProviderRouteHeadlessSessionId(str) {
     }
   }
   return null;
-};
+}
 export const HEADLESS_SESSION_ID_PREFIX = "h:";

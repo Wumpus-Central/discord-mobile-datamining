@@ -10,7 +10,13 @@ const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { applicationHeaderWrapper: null, applicationIcon: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", height: 32, backgroundColor: ThemesDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingHorizontal: 16 };
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  height: 32,
+  backgroundColor: ThemesDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND,
+  paddingHorizontal: 16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 16, height: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
@@ -54,8 +60,11 @@ export default function ApplicationSectionHeader(section) {
     obj[1] = applicationCommandsIconSource;
     tmp9 = callback(guildId(5493), obj);
   }
-  const items1 = [tmp9, callback(section(4474).Text, { variant: "eyebrow", color: "interactive-text-default", children: name })];
+  const items1 = [
+    tmp9,
+    callback(section(4474).Text, { variant: "eyebrow", color: "interactive-text-default", children: name }),
+  ];
   obj[2] = items1;
   return closure_6(View, obj);
-};
+}
 export const APPLICATION_SECTION_HEADER_HEIGHT = 32;

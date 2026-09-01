@@ -10,4 +10,4 @@ const result = require("set").fileFinishedImporting("design/void/Form/native/Fre
 export default function FreeFormLabel(arg0) {
   ({ children, style, nativeID } = arg0);
   return jsx(Text.Text, { style, variant: "text-sm/semibold", color: "text-muted", nativeID, children });
-};
+}

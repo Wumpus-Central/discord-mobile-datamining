@@ -51,7 +51,18 @@ UserDiscountOfferRecord["createFromServer"] = function createFromServer(discount
   if (typeof UserDiscountOfferRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp13 = new UserDiscountOfferRecord(str, _Date2, _Date, UserDiscountOfferRecord, new.target, id, discount_id, fromServer, user_id, date);
+  const tmp13 = new UserDiscountOfferRecord(
+    str,
+    _Date2,
+    _Date,
+    UserDiscountOfferRecord,
+    new.target,
+    id,
+    discount_id,
+    fromServer,
+    user_id,
+    date,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp13.id = id;
   tmp13.discountId = discount_id;

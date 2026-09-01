@@ -84,7 +84,7 @@ let obj = keys.create((arg0, arg1) => {
     reset() {
       const obj = { errorHintsByQuestId: new Map() };
       callback(obj);
-    }
+    },
   };
   return obj;
 });

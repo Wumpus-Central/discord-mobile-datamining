@@ -2,7 +2,9 @@
 import closure_2 from "../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityAnnouncer/useCharacterLimitAnnouncement.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/design/components/AccessibilityAnnouncer/useCharacterLimitAnnouncement.tsx",
+);
 
 export const useCharacterLimitAnnouncement = function useCharacterLimitAnnouncement(currentLength) {
   currentLength = currentLength.currentLength;

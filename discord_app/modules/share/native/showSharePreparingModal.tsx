@@ -21,14 +21,19 @@ export const showSharePreparingModal = function showSharePreparingModal(onCancel
           callback();
           const obj = closure_1_1(closure_1_2[1]);
         }
-      }
+      },
     };
-    obj.pushLazy(onCancel(paths[3])(paths[2], paths.paths), obj, closure_1_3, { animation: "fade", presentation: "transparentModal" }).then(() => {
-      if (closure_1) {
-        closure_1_1(closure_1_2[1]).popWithKey(closure_1_3);
-        const obj = closure_1_1(closure_1_2[1]);
-      }
-    });
+    obj
+      .pushLazy(onCancel(paths[3])(paths[2], paths.paths), obj, closure_1_3, {
+        animation: "fade",
+        presentation: "transparentModal",
+      })
+      .then(() => {
+        if (closure_1) {
+          closure_1_1(closure_1_2[1]).popWithKey(closure_1_3);
+          const obj = closure_1_1(closure_1_2[1]);
+        }
+      });
   }, 1000);
   return () => {
     if (!callback) {

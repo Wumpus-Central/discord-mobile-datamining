@@ -17,7 +17,7 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: explicitContentFromProto.ShowCurrentGame.useSetting,
-  onValueChange: explicitContentFromProto.ShowCurrentGame.updateSetting
+  onValueChange: explicitContentFromProto.ShowCurrentGame.updateSetting,
 });
 const obj = {
   useTitle() {
@@ -30,7 +30,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: explicitContentFromProto.ShowCurrentGame.useSetting,
-  onValueChange: explicitContentFromProto.ShowCurrentGame.updateSetting
+  onValueChange: explicitContentFromProto.ShowCurrentGame.updateSetting,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ActivityPrivacyShareMyActivitySetting.tsx");
 

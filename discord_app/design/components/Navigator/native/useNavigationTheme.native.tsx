@@ -18,7 +18,14 @@ export const useNavigationTheme = function useNavigationTheme(theme) {
   const items = [token1, token2, token4, token, token3, theme];
   return token2.useMemo(() => {
     let obj = { dark: theme(token1[3]).isThemeDark(theme), colors: null, fonts: null };
-    obj = { primary: token, background: "transparent", border: token1, card: token2, text: token3, notification: token4 };
+    obj = {
+      primary: token,
+      background: "transparent",
+      border: token1,
+      card: token2,
+      text: token3,
+      notification: token4,
+    };
     obj[1] = obj;
     obj[2] = theme(token1[4]).DefaultTheme.fonts;
     return obj;

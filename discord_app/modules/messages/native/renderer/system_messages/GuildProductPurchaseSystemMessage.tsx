@@ -9,7 +9,9 @@ import closure_4 from "../../../../../stores/ChannelStore.tsx";
 import { MessageTypes } from "../../../../../Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx",
+);
 
 export const createGuildProductPurchaseSystemMessage = function createGuildProductPurchaseSystemMessage(message) {
   let obj = {};

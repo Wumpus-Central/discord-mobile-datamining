@@ -11,7 +11,9 @@ import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsActionSheet.tsx",
+);
 
 export default function MuteSettings(guildId) {
   guildId = guildId.guildId;
@@ -56,7 +58,7 @@ export default function MuteSettings(guildId) {
       obj[1] = intl.format(guildId(onOptionPress[8]).t["eC+9rj"], obj2);
       obj[2] = callback;
       obj[1] = callback(guildId(onOptionPress[12]).TableRow, obj);
-      const items5 = [callback(guildId(onOptionPress[11]).TableRowGroup, obj), ];
+      const items5 = [callback(guildId(onOptionPress[11]).TableRowGroup, obj)];
       let obj3 = { muteConfig: null, type: null };
       obj3[0] = muteConfig;
       const tmp10 = callback2;
@@ -81,13 +83,17 @@ export default function MuteSettings(guildId) {
     hasIcons: false,
     children: muteOptions.map((arg0) => {
       ({ label, duration: guildId } = arg0);
-      return closure_1_9(guildId(onOptionPress[12]).TableRow, {
+      return closure_1_9(
+        guildId(onOptionPress[12]).TableRow,
+        {
+          label,
+          onPress() {
+            return closure_1_5(closure_0);
+          },
+        },
         label,
-        onPress() {
-          return closure_1_5(closure_0);
-        }
-      }, label);
-    })
+      );
+    }),
   };
   const tmp8 = callback;
   const obj5 = { children: null };
@@ -97,18 +103,22 @@ export default function MuteSettings(guildId) {
       hasIcons: false,
       children: muteOptions.map((arg0) => {
         ({ label, duration: guildId } = arg0);
-        return closure_1_9(guildId(onOptionPress[12]).TableRow, {
+        return closure_1_9(
+          guildId(onOptionPress[12]).TableRow,
+          {
+            label,
+            onPress() {
+              return closure_1_5(closure_0);
+            },
+          },
           label,
-          onPress() {
-            return closure_1_5(closure_0);
-          }
-        }, label);
-      })
-    })
+        );
+      }),
+    }),
   ];
   obj5[0] = items6;
   return callback2(guildId(onOptionPress[17]).ActionSheet, obj5);
-};
+}
 export const MuteSettingsHint = function MuteSettingsHint(guildMessageNotifications) {
   guildMessageNotifications = guildMessageNotifications.guildMessageNotifications;
   if (guildMessageNotifications.isMuted) {
@@ -121,7 +131,11 @@ export const MuteSettingsHint = function MuteSettingsHint(guildMessageNotificati
     const intl4 = getSystemLocale.intl;
     obj1 = { mutedHook: null };
     obj1[0] = function mutedHook(children) {
-      return callback2(callback(4474).Text, { variant: "text-sm/medium", color: "text-feedback-critical", children }, arg1);
+      return callback2(
+        callback(4474).Text,
+        { variant: "text-sm/medium", color: "text-feedback-critical", children },
+        arg1,
+      );
     };
     obj[2] = intl4.format(getSystemLocale.t.O34r15, obj1);
     tmp3 = callback(Text.Text, obj);
@@ -130,7 +144,11 @@ export const MuteSettingsHint = function MuteSettingsHint(guildMessageNotificati
     const intl3 = getSystemLocale.intl;
     const obj3 = { notificationHook: null };
     obj3[0] = function notificationHook(children) {
-      return callback2(callback(4474).Text, { variant: "text-sm/medium", color: "text-feedback-warning", children }, arg1);
+      return callback2(
+        callback(4474).Text,
+        { variant: "text-sm/medium", color: "text-feedback-warning", children },
+        arg1,
+      );
     };
     obj2[2] = intl3.format(getSystemLocale.t.nRwUIL, obj3);
     tmp3 = callback(Text.Text, obj2);

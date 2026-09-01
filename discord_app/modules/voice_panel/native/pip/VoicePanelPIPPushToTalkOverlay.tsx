@@ -14,19 +14,38 @@ let closure_9 = importDefaultResult.createAnimatedComponent(setDefault);
 let closure_10 = importDefaultResult.createAnimatedComponent(require("Button").Icon);
 let closure_11 = { top: 6, bottom: 6, left: 6, right: 6 };
 let obj = { iconContainer: null, overlay: null };
-obj = { position: "absolute", width: 32, height: 32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round };
+obj = {
+  position: "absolute",
+  width: 32,
+  height: 32,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.round,
+};
 obj[0] = obj;
 let obj1 = {};
 const merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
 obj1.backgroundColor = ThemesDefault.colors.BLACK;
 obj[1] = obj1;
 let closure_12 = createCacheKey.createStyles(obj);
-let closure_13 = { code: "function VoicePanelPIPPushToTalkOverlayTsx1(){const{isPushingToTalk,EXPANDED_ICON_SIZE,BASE_ICON_SIZE,withSpring,PUSH_TO_TALK_PIP_PHYSICS,white}=this.__closure;const padding=isPushingToTalk.get()?8*EXPANDED_ICON_SIZE/BASE_ICON_SIZE+8:8;return{right:withSpring(padding,PUSH_TO_TALK_PIP_PHYSICS),bottom:withSpring(padding,PUSH_TO_TALK_PIP_PHYSICS),transform:[{scale:withSpring(isPushingToTalk.get()?EXPANDED_ICON_SIZE/BASE_ICON_SIZE:1,PUSH_TO_TALK_PIP_PHYSICS)}],backgroundColor:withSpring(isPushingToTalk.get()?white:'rgba(0, 0, 0, 0.54)',PUSH_TO_TALK_PIP_PHYSICS)};}" };
-let closure_14 = { code: "function VoicePanelPIPPushToTalkOverlayTsx2(){const{withSpring,isPushingToTalk,black,white,PUSH_TO_TALK_PIP_PHYSICS}=this.__closure;return{tintColor:withSpring(isPushingToTalk.get()?black:white,PUSH_TO_TALK_PIP_PHYSICS)};}" };
-let closure_15 = { code: "function VoicePanelPIPPushToTalkOverlayTsx3(){const{withSpring,isPushingToTalk,PUSH_TO_TALK_PIP_PHYSICS,getVoicePanelPIPBorderRadius,pipState}=this.__closure;return{opacity:withSpring(isPushingToTalk.get()?0.5:0,PUSH_TO_TALK_PIP_PHYSICS),borderRadius:getVoicePanelPIPBorderRadius(pipState.width,pipState.height)};}" };
-let closure_16 = { code: "function VoicePanelPIPPushToTalkOverlayTsx4(event,success){const{runOnJS,handlePushToTalk}=this.__closure;if(!success){return;}runOnJS(handlePushToTalk)(false);}" };
-let closure_17 = { code: "function VoicePanelPIPPushToTalkOverlayTsx5(){const{runOnJS,handlePushToTalk}=this.__closure;runOnJS(handlePushToTalk)(false);}" };
-let closure_18 = { code: "function VoicePanelPIPPushToTalkOverlayTsx6(){const{runOnJS,handlePushToTalk}=this.__closure;runOnJS(handlePushToTalk)(true);}" };
+let closure_13 = {
+  code: "function VoicePanelPIPPushToTalkOverlayTsx1(){const{isPushingToTalk,EXPANDED_ICON_SIZE,BASE_ICON_SIZE,withSpring,PUSH_TO_TALK_PIP_PHYSICS,white}=this.__closure;const padding=isPushingToTalk.get()?8*EXPANDED_ICON_SIZE/BASE_ICON_SIZE+8:8;return{right:withSpring(padding,PUSH_TO_TALK_PIP_PHYSICS),bottom:withSpring(padding,PUSH_TO_TALK_PIP_PHYSICS),transform:[{scale:withSpring(isPushingToTalk.get()?EXPANDED_ICON_SIZE/BASE_ICON_SIZE:1,PUSH_TO_TALK_PIP_PHYSICS)}],backgroundColor:withSpring(isPushingToTalk.get()?white:'rgba(0, 0, 0, 0.54)',PUSH_TO_TALK_PIP_PHYSICS)};}",
+};
+let closure_14 = {
+  code: "function VoicePanelPIPPushToTalkOverlayTsx2(){const{withSpring,isPushingToTalk,black,white,PUSH_TO_TALK_PIP_PHYSICS}=this.__closure;return{tintColor:withSpring(isPushingToTalk.get()?black:white,PUSH_TO_TALK_PIP_PHYSICS)};}",
+};
+let closure_15 = {
+  code: "function VoicePanelPIPPushToTalkOverlayTsx3(){const{withSpring,isPushingToTalk,PUSH_TO_TALK_PIP_PHYSICS,getVoicePanelPIPBorderRadius,pipState}=this.__closure;return{opacity:withSpring(isPushingToTalk.get()?0.5:0,PUSH_TO_TALK_PIP_PHYSICS),borderRadius:getVoicePanelPIPBorderRadius(pipState.width,pipState.height)};}",
+};
+let closure_16 = {
+  code: "function VoicePanelPIPPushToTalkOverlayTsx4(event,success){const{runOnJS,handlePushToTalk}=this.__closure;if(!success){return;}runOnJS(handlePushToTalk)(false);}",
+};
+let closure_17 = {
+  code: "function VoicePanelPIPPushToTalkOverlayTsx5(){const{runOnJS,handlePushToTalk}=this.__closure;runOnJS(handlePushToTalk)(false);}",
+};
+let closure_18 = {
+  code: "function VoicePanelPIPPushToTalkOverlayTsx6(){const{runOnJS,handlePushToTalk}=this.__closure;runOnJS(handlePushToTalk)(true);}",
+};
 const importDefaultResult1 = importDefaultResult;
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPPushToTalkOverlay.tsx");
 
@@ -50,7 +69,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
         const result = sharedValue.set(current);
         const obj = sharedValue(9666);
       }
-    }, items)
+    }, items),
   ];
   const tmp4 = WHITE(items1, 2);
   first = tmp4[0];
@@ -64,7 +83,12 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     if (first.get()) {
       num = 20;
     }
-    obj = { right: sharedValue(4927).withSpring(num, closure_1_5), bottom: null, transform: null, backgroundColor: null };
+    obj = {
+      right: sharedValue(4927).withSpring(num, closure_1_5),
+      bottom: null,
+      transform: null,
+      backgroundColor: null,
+    };
     const obj3 = sharedValue(4927);
     const tmp = sharedValue;
     obj[1] = sharedValue(4927).withSpring(num, closure_1_5);
@@ -84,7 +108,14 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     obj[3] = tmp(4927).withSpring(str, closure_1_5);
     return obj;
   };
-  obj = { isPushingToTalk: first, EXPANDED_ICON_SIZE: 48, BASE_ICON_SIZE: 32, withSpring: sharedValue(4927).withSpring, PUSH_TO_TALK_PIP_PHYSICS, white: WHITE };
+  obj = {
+    isPushingToTalk: first,
+    EXPANDED_ICON_SIZE: 48,
+    BASE_ICON_SIZE: 32,
+    withSpring: sharedValue(4927).withSpring,
+    PUSH_TO_TALK_PIP_PHYSICS,
+    white: WHITE,
+  };
   fn.__closure = obj;
   fn.__workletHash = 3936373516983;
   fn.__initData = closure_13;
@@ -97,7 +128,13 @@ export default function VoicePanelPIPPushToTalkOverlay() {
       return obj;
     }
   }
-  obj = { withSpring: sharedValue(4927).withSpring, isPushingToTalk: first, black: BLACK, white: WHITE, PUSH_TO_TALK_PIP_PHYSICS };
+  obj = {
+    withSpring: sharedValue(4927).withSpring,
+    isPushingToTalk: first,
+    black: BLACK,
+    white: WHITE,
+    PUSH_TO_TALK_PIP_PHYSICS,
+  };
   P.__closure = obj;
   P.__workletHash = 11469896791985;
   P.__initData = closure_14;
@@ -117,7 +154,13 @@ export default function VoicePanelPIPPushToTalkOverlay() {
       return obj;
     }
   }
-  obj1 = { withSpring: sharedValue(4927).withSpring, isPushingToTalk: first, PUSH_TO_TALK_PIP_PHYSICS, getVoicePanelPIPBorderRadius: sharedValue(16668).getVoicePanelPIPBorderRadius, pipState: pIPState };
+  obj1 = {
+    withSpring: sharedValue(4927).withSpring,
+    isPushingToTalk: first,
+    PUSH_TO_TALK_PIP_PHYSICS,
+    getVoicePanelPIPBorderRadius: sharedValue(16668).getVoicePanelPIPBorderRadius,
+    pipState: pIPState,
+  };
   H.__closure = obj1;
   H.__workletHash = 450590017248;
   H.__initData = closure_15;
@@ -161,14 +204,19 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     fn3.__initData = closure_1_17;
     return Gesture.Exclusive(onEndResult, onBeginResult.onFinalize(fn3));
   }, items2);
-  const items4 = [callback(closure_9, { pointerEvents: "none", style: items3 }), ];
+  const items4 = [callback(closure_9, { pointerEvents: "none", style: items3 })];
   let obj3 = { gesture: memo, children: null };
   obj4 = { style: items5, hitSlop: closure_11, children: null };
   items5 = [tmp2.iconContainer, animatedStyle];
   const obj7 = sharedValue(4217);
-  obj4[2] = callback(closure_10, { style: animatedStyle1, size: sharedValue(1297).Icon.Sizes.SMALL_20, source: first(16749), disableColor: true });
+  obj4[2] = callback(closure_10, {
+    style: animatedStyle1,
+    size: sharedValue(1297).Icon.Sizes.SMALL_20,
+    source: first(16749),
+    disableColor: true,
+  });
   obj3[1] = callback(closure_9, obj4);
   items4[1] = callback(sharedValue(5652).GestureDetector, obj3);
   obj2[0] = items4;
   return callback2(closure_7, obj2);
-};
+}

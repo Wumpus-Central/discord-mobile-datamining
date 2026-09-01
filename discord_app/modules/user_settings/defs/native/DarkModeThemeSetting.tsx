@@ -21,13 +21,13 @@ createToggle = {
   useTrailing() {
     return useSyncedModeThemeName.useSyncedModeThemeName(SystemTheme.DARK);
   },
-  screen: createToggle
+  screen: createToggle,
 };
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_DARK_MODE_THEME_PICKER,
   getComponent() {
     return SettingsAppearanceDarkModeThemePickerScreen /* SettingsAppearanceDarkModeThemePickerScreen */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DarkModeThemeSetting.tsx");

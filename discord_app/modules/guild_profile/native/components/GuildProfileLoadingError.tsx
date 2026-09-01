@@ -15,7 +15,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileLoadingError.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_profile/native/components/GuildProfileLoadingError.tsx",
+);
 
 export default function GuildProfileLoadingError(onPress) {
   let obj = GuildProfileBackground;
@@ -29,7 +31,7 @@ export default function GuildProfileLoadingError(onPress) {
   obj[2] = GuildProfileBackground.DiagonalGradient.END;
   let obj4 = GuildProfileBackground;
   obj[3] = obj4.getBackgroundForProfile(tmp2, token);
-  const items = [callback(LinearGradientDefault, obj), , ];
+  const items = [callback(LinearGradientDefault, obj), ,];
   obj1 = { style: styles.header, children: null };
   const obj2 = { style: styles.avatarBackground, children: null };
   const obj3 = { style: styles.avatarBackground, children: null };
@@ -42,12 +44,18 @@ export default function GuildProfileLoadingError(onPress) {
   const obj6 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj6[2] = intl.string(getSystemLocale.t.DmIUGK);
-  const items1 = [callback(Text.Text, obj6), ];
-  const obj7 = { style: styles.error, onPress: onPress.onRetry, accessibilityRole: "button", accessibilityLabel: null, children: null };
+  const items1 = [callback(Text.Text, obj6)];
+  const obj7 = {
+    style: styles.error,
+    onPress: onPress.onRetry,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    children: null,
+  };
   const intl2 = getSystemLocale.intl;
   obj7[3] = intl2.string(getSystemLocale.t.s1fAEw);
   const tmp4 = LinearGradientDefault;
-  const items2 = [callback(WarningIcon.WarningIcon, { size: "sm", color: ThemesDefault.colors.TEXT_FEEDBACK_WARNING }), ];
+  const items2 = [callback(WarningIcon.WarningIcon, { size: "sm", color: ThemesDefault.colors.TEXT_FEEDBACK_WARNING })];
   const obj9 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
   const intl3 = getSystemLocale.intl;
   obj9[2] = intl3.string(getSystemLocale.t.tmGHjc);
@@ -58,4 +66,4 @@ export default function GuildProfileLoadingError(onPress) {
   items[2] = callback2(View, obj5);
   obj[1] = items;
   return callback2(View, obj);
-};
+}

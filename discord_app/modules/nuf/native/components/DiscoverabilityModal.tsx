@@ -79,38 +79,38 @@ class DiscoverabilityModal {
   constructor() {
     obj = {
       screens: closure_3.useMemo(() => {
-            let obj = {};
-            obj = {
-              ignoreKeyboard: true,
-              impressionName: callback(503).ImpressionNames.DISCOVERABILITY,
-              fullscreen: true,
-              headerLeft() {
-                return null;
-              },
-              headerTitle() {
-                return null;
-              },
-              render() {
-                return callback(closure_9, {});
-              }
-            };
-            obj[callback(691).DiscoverabilityScenes.LANDING] = obj;
-            obj = {
-              ignoreKeyboard: true,
-              impressionName: callback(503).ImpressionNames.DISCOVERABILITY,
-              fullscreen: true,
-              headerTitle() {
-                return null;
-              },
-              render() {
-                return callback(closure_10, {});
-              }
-            };
-            obj[callback(691).DiscoverabilityScenes.NAME] = obj;
-            return obj;
-          }, []),
+        let obj = {};
+        obj = {
+          ignoreKeyboard: true,
+          impressionName: callback(503).ImpressionNames.DISCOVERABILITY,
+          fullscreen: true,
+          headerLeft() {
+            return null;
+          },
+          headerTitle() {
+            return null;
+          },
+          render() {
+            return callback(closure_9, {});
+          },
+        };
+        obj[callback(691).DiscoverabilityScenes.LANDING] = obj;
+        obj = {
+          ignoreKeyboard: true,
+          impressionName: callback(503).ImpressionNames.DISCOVERABILITY,
+          fullscreen: true,
+          headerTitle() {
+            return null;
+          },
+          render() {
+            return callback(closure_10, {});
+          },
+        };
+        obj[callback(691).DiscoverabilityScenes.NAME] = obj;
+        return obj;
+      }, []),
       initialRouteName: require("keys").DiscoverabilityScenes.LANDING,
-      headerBackTitle: null
+      headerBackTitle: null,
     };
     intl = require("getSystemLocale").intl;
     obj[2] = intl.string(require("getSystemLocale").t["13/7kX"]);
@@ -118,7 +118,13 @@ class DiscoverabilityModal {
   }
 }
 createCacheKey = { container: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingBottom: 44, paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
+createCacheKey = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  justifyContent: "center",
+  paddingBottom: 44,
+  paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32,
+};
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 DiscoverabilityModal.modalConfig = { animation: require("ME").ModalAnimation.SLIDE_IN_OUT };

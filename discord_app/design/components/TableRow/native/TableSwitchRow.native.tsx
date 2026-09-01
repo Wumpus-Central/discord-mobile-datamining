@@ -11,7 +11,9 @@ import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles(() => ({ labelWithTrailing: { flexDirection: "row", alignItems: "center", gap: 8 } }));
+let closure_7 = createCacheKey.createStyles(() => ({
+  labelWithTrailing: { flexDirection: "row", alignItems: "center", gap: 8 },
+}));
 const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableSwitchRow.native.tsx");
 
 export const TableSwitchRow = function TableSwitchRow(value) {
@@ -93,6 +95,11 @@ export const TableSwitchRow = function TableSwitchRow(value) {
       }
     });
   };
-  obj.trailing = closure_5(FormSwitch.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled });
+  obj.trailing = closure_5(FormSwitch.FormSwitch, {
+    "aria-hidden": true,
+    value,
+    onValueChange: handleOnPress,
+    disabled,
+  });
   return closure_5(TableRowInner.TableRow, obj);
 };

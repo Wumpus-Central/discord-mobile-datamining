@@ -12,7 +12,11 @@ export const hideMediaKeyboardActionSheet = function hideMediaKeyboardActionShee
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(MEDIA_KEYBOARD_ACTION_SHEET);
 };
 export const showMediaKeyboardActionSheet = function showMediaKeyboardActionSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10430, dependencyMap.paths), MEDIA_KEYBOARD_ACTION_SHEET, arg0);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+    asyncRequireImpl(10430, dependencyMap.paths),
+    MEDIA_KEYBOARD_ACTION_SHEET,
+    arg0,
+  );
 };
 export const presentLimitedLibraryPicker = function presentLimitedLibraryPicker() {
   const NativePermissionManager = NativeModules.NativePermissionManager;

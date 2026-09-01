@@ -40,19 +40,19 @@ function Tags(tags) {
     let items = [
       callback(TagIcon.TagIcon, obj),
       tags.map((id) => {
-          let tmp2 = 0 !== arg1;
-          if (tmp2) {
-            let obj = { style: null };
-            obj[0] = { width: 4 };
-            tmp2 = callback2(closure_9, obj);
-          }
-          obj = { children: null };
-          const items = [tmp2, ];
-          obj = { tag: id };
-          items[1] = callback2(callback(table[69]).AppliedForumTagPill, obj);
-          obj[0] = items;
-          return closure_30(React.Fragment, obj, id.id);
-        })
+        let tmp2 = 0 !== arg1;
+        if (tmp2) {
+          let obj = { style: null };
+          obj[0] = { width: 4 };
+          tmp2 = callback2(closure_9, obj);
+        }
+        obj = { children: null };
+        const items = [tmp2];
+        obj = { tag: id };
+        items[1] = callback2(callback(table[69]).AppliedForumTagPill, obj);
+        obj[0] = items;
+        return closure_30(React.Fragment, obj, id.id);
+      }),
     ];
     obj[1] = items;
     tmp2 = callback2(closure_9, obj);
@@ -69,7 +69,9 @@ function ActionBar(channel) {
   const tmp = callback3();
   let obj = channel(589);
   const items = [closure_19];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_19.getUploads(channel.id, closure_1_13.ChannelMessage));
+  const stateFromStores = obj.useStateFromStores(items, () =>
+    closure_1_19.getUploads(channel.id, closure_1_13.ChannelMessage),
+  );
   obj1 = channel(589);
   const items1 = [closure_15];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
@@ -101,22 +103,31 @@ function ActionBar(channel) {
     tmp10 = length > 0;
   }
   obj = { onLayout, style: items2, children: null };
-  items2 = [tmp.actionsContainer, { marginBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom }];
+  items2 = [
+    tmp.actionsContainer,
+    { marginBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom },
+  ];
   if (isMediaChannelResult) {
     obj = { attachments: null, channelId: null, highlightThumbnails: true };
     obj[0] = stateFromStores;
     obj[1] = channel.id;
     isMediaChannelResult = callback(tmp5(10424), obj);
   }
-  const items3 = [isMediaChannelResult, ];
+  const items3 = [isMediaChannelResult];
   obj1 = { style: tmp.actions, children: null };
   if (!stateFromStores1) {
-    const items4 = [stateFromStores1, , , ];
+    const items4 = [stateFromStores1, , ,];
     if (tmp10) {
-      const obj2 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
+      const obj2 = {
+        accessibilityLabel: null,
+        style: null,
+        IconComponent: null,
+        onPress: null,
+        foregroundRipple: true,
+      };
       const intl2 = tmp2(1236).intl;
       obj2[0] = intl2.string(tmp2(1236).t["112vVE"]);
-      const items5 = [, ];
+      const items5 = [,];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj2[1] = items5;
       obj2[2] = tmp2(10420).TagIcon;
@@ -133,7 +144,7 @@ function ActionBar(channel) {
           },
           title: null,
           tags: null,
-          onClose: null
+          onClose: null,
         };
         const intl = channel(closure_1_2[43]).intl;
         obj[2] = intl.string(channel(closure_1_2[43]).t.HPu3kq);
@@ -150,7 +161,13 @@ function ActionBar(channel) {
     items4[1] = tmp10;
     let tmp18 = lastInput === tmp2(10336).PostComposerInputs.CONTENT;
     if (tmp18) {
-      const obj3 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
+      const obj3 = {
+        accessibilityLabel: null,
+        style: null,
+        IconComponent: null,
+        onPress: null,
+        foregroundRipple: true,
+      };
       const intl3 = tmp2(1236).intl;
       obj3[0] = intl3.string(tmp2(1236).t.iZ7Mz9);
       obj3[1] = tmp.actionButton;
@@ -194,7 +211,7 @@ function ActionBar(channel) {
     const obj7 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
     let intl = tmp2(1236).intl;
     obj7[0] = intl.string(tmp2(1236).t.aDZSuz);
-    const items6 = [, ];
+    const items6 = [,];
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj7[1] = items6;
     if (tmp8) {
@@ -222,17 +239,64 @@ function ActionBar(channel) {
 ({ NOOP: closure_28, Fonts } = sum);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = jsxProd);
 const re32 = /(#"[^"]*"|[@#]\S+|:[\w+-]+:)/g;
-createCacheKey = { container: null, scrollViewContentContainer: null, avatarContainer: null, avatar: null, titleInput: null, titleInputText: null, contentInput: null, mentionText: null, postButtonWrapper: null, tags: null, tagIcon: null, editor: null, editorBody: null, usernameToChannel: null, channelName: null, actionsContainer: null, actions: null, actionButton: null, mediaButton: null, horizontalAutocomplete: null, nameError: null, messageError: null };
+createCacheKey = {
+  container: null,
+  scrollViewContentContainer: null,
+  avatarContainer: null,
+  avatar: null,
+  titleInput: null,
+  titleInputText: null,
+  contentInput: null,
+  mentionText: null,
+  postButtonWrapper: null,
+  tags: null,
+  tagIcon: null,
+  editor: null,
+  editorBody: null,
+  usernameToChannel: null,
+  channelName: null,
+  actionsContainer: null,
+  actions: null,
+  actionButton: null,
+  mediaButton: null,
+  horizontalAutocomplete: null,
+  nameError: null,
+  messageError: null,
+};
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "relative" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingBottom: 16 };
 createCacheKey[2] = { height: 40 };
 createCacheKey[3] = { marginRight: 12 };
 createCacheKey[4] = { padding: 8 };
-createCacheKey[5] = { minHeight: 40, height: "auto", fontFamily: Fonts.DISPLAY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-let obj1 = { minHeight: 40, height: "auto", fontFamily: Fonts.DISPLAY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[6] = { width: "100%", height: "100%", padding: 0, lineHeight: 20, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlignVertical: "top" };
-let obj2 = { width: "100%", height: "100%", padding: 0, lineHeight: 20, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlignVertical: "top" };
+createCacheKey[5] = {
+  minHeight: 40,
+  height: "auto",
+  fontFamily: Fonts.DISPLAY_SEMIBOLD,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+};
+let obj1 = {
+  minHeight: 40,
+  height: "auto",
+  fontFamily: Fonts.DISPLAY_SEMIBOLD,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+};
+createCacheKey[6] = {
+  width: "100%",
+  height: "100%",
+  padding: 0,
+  lineHeight: 20,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  textAlignVertical: "top",
+};
+let obj2 = {
+  width: "100%",
+  height: "100%",
+  padding: 0,
+  lineHeight: 20,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  textAlignVertical: "top",
+};
 createCacheKey[7] = { color: ThemesDefault.unsafe_rawColors.BRAND_500 };
 createCacheKey[8] = { marginLeft: "auto" };
 createCacheKey[9] = { flexDirection: "row", alignItems: "center", padding: 8 };
@@ -250,15 +314,57 @@ obj4.top = undefined;
 createCacheKey[15] = obj4;
 createCacheKey[16] = { flex: 1, flexDirection: "row", alignItems: "center", padding: 8, width: "100%" };
 let obj3 = { color: ThemesDefault.unsafe_rawColors.BRAND_500 };
-createCacheKey[17] = { height: 40, minHeight: 40, maxHeight: 40, width: 40, minWidth: 40, maxWidth: 40, borderRadius: 20, color: ThemesDefault.colors.TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, marginLeft: 0, marginRight: 0, overflow: "hidden" };
+createCacheKey[17] = {
+  height: 40,
+  minHeight: 40,
+  maxHeight: 40,
+  width: 40,
+  minWidth: 40,
+  maxWidth: 40,
+  borderRadius: 20,
+  color: ThemesDefault.colors.TEXT_DEFAULT,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  marginLeft: 0,
+  marginRight: 0,
+  overflow: "hidden",
+};
 createCacheKey[18] = { marginRight: 8 };
-let obj5 = { height: 40, minHeight: 40, maxHeight: 40, width: 40, minWidth: 40, maxWidth: 40, borderRadius: 20, color: ThemesDefault.colors.TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, marginLeft: 0, marginRight: 0, overflow: "hidden" };
-createCacheKey[19] = { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 100, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj5 = {
+  height: 40,
+  minHeight: 40,
+  maxHeight: 40,
+  width: 40,
+  minWidth: 40,
+  maxWidth: 40,
+  borderRadius: 20,
+  color: ThemesDefault.colors.TEXT_DEFAULT,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  marginLeft: 0,
+  marginRight: 0,
+  overflow: "hidden",
+};
+createCacheKey[19] = {
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  right: 0,
+  zIndex: 100,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[20] = { marginBottom: 16, marginLeft: 16, marginRight: 16 };
 createCacheKey[21] = { marginTop: 8 };
 let closure_33 = createCacheKey.createStyles(createCacheKey);
-let closure_34 = { code: "function ForumComposerTsx1({contentOffset:{y:y}}){const{scrollTopValue}=this.__closure;return scrollTopValue.set(y);}" };
-let obj6 = { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 100, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let closure_34 = {
+  code: "function ForumComposerTsx1({contentOffset:{y:y}}){const{scrollTopValue}=this.__closure;return scrollTopValue.set(y);}",
+};
+let obj6 = {
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  right: 0,
+  zIndex: 100,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 let result = require("set").fileFinishedImporting("modules/forums/native/composer/ForumComposer.tsx");
 
 export default function ForumComposer(parentChannel) {
@@ -338,7 +444,9 @@ export default function ForumComposer(parentChannel) {
   let tmp10 = stateFromStores3 ? unsafe_rawColors.PRIMARY_330 : unsafe_rawColors.PRIMARY_460;
   let tmp5Result = tmp5(tmp3[23]);
   const items5 = [closure_17];
-  stateFromStores4 = tmp5Result.useStateFromStores(items5, () => slowmodeCooldownGuess.getSlowmodeCooldownGuess(lib.id, appliedTags.CreateThread));
+  stateFromStores4 = tmp5Result.useStateFromStores(items5, () =>
+    slowmodeCooldownGuess.getSlowmodeCooldownGuess(lib.id, appliedTags.CreateThread),
+  );
   tmp5Result = tmp5(tmp3[23]);
   const items6 = [first1];
   stateFromStores5 = tmp5Result.useStateFromStores(items6, () => first1.getUploads(lib.id, _undefined.ChannelMessage));
@@ -391,34 +499,39 @@ export default function ForumComposer(parentChannel) {
   closure_17 = tmp24;
   const tmp5Result1 = _require(threadSettingsDraft[28]);
   appliedTags = _require(threadSettingsDraft[30]).useAppliedTags(thread);
-  const tmp15Result1 = message(obj.useState(() => {
-    let found = appliedTags;
-    let availableTags = map.availableTags;
-    map = undefined;
-    if (!isEdit) {
-      appliedTags = undefined;
-      if (tmp != null) {
-        appliedTags = tmp.appliedTags;
-      }
-      if (null != appliedTags) {
-        if (0 !== appliedTags.size) {
-          if (availableTags == null) {
-            availableTags = [];
-          }
-          map = new Map(availableTags.map((id) => {
-            const items = [id.id, id];
-            return items;
-          }));
-          const _Array = Array;
-          const mapped = Array.from(appliedTags).map((arg0) => map.get(arg0));
-          found = mapped.filter((arg0) => null != arg0);
-          const arr = Array.from(appliedTags);
+  const tmp15Result1 = message(
+    obj.useState(() => {
+      let found = appliedTags;
+      let availableTags = map.availableTags;
+      map = undefined;
+      if (!isEdit) {
+        appliedTags = undefined;
+        if (tmp != null) {
+          appliedTags = tmp.appliedTags;
         }
+        if (null != appliedTags) {
+          if (0 !== appliedTags.size) {
+            if (availableTags == null) {
+              availableTags = [];
+            }
+            map = new Map(
+              availableTags.map((id) => {
+                const items = [id.id, id];
+                return items;
+              }),
+            );
+            const _Array = Array;
+            const mapped = Array.from(appliedTags).map((arg0) => map.get(arg0));
+            found = mapped.filter((arg0) => null != arg0);
+            const arr = Array.from(appliedTags);
+          }
+        }
+        found = [];
       }
-      found = [];
-    }
-    return found;
-  }), 2);
+      return found;
+    }),
+    2,
+  );
   first1 = tmp15Result1[0];
   closure_20 = tmp15Result1[1];
   const tmp5Result2 = _require(threadSettingsDraft[30]);
@@ -508,7 +621,7 @@ export default function ForumComposer(parentChannel) {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -604,7 +717,7 @@ export default function ForumComposer(parentChannel) {
     })();
   });
   const items12 = [thread, message, memo1, memo, first, callback3, onClose];
-  callback4 = obj.useCallback(function() {
+  callback4 = obj.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -661,14 +774,19 @@ export default function ForumComposer(parentChannel) {
   const tmp41 = onClose;
   tmp44 = null != name1 && threadSettingsDraft.name.length > 0;
   tmp45 = stateFromStores5.length > 0;
-  createForumPost = _require(threadSettingsDraft[40]).useCreateForumPost({ parentChannel, threadSettings: threadSettingsDraft, appliedTags: memo, onThreadCreated: callback3 });
+  createForumPost = _require(threadSettingsDraft[40]).useCreateForumPost({
+    parentChannel,
+    threadSettings: threadSettingsDraft,
+    appliedTags: memo,
+    onThreadCreated: callback3,
+  });
   _require = undefined;
   _require = tmp41((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -872,7 +990,7 @@ export default function ForumComposer(parentChannel) {
     return iter;
   });
   const items13 = [parentChannel, first1.length, isEdit, thread, str4, callback4, createForumPost, stateFromStores5];
-  callback5 = obj.useCallback(function() {
+  callback5 = obj.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -978,13 +1096,36 @@ export default function ForumComposer(parentChannel) {
     }
   }, []);
   const tmp15Result4 = message(obj.useState(obj), 2);
-  closure_35 = _require(threadSettingsDraft[47]).usePressEmojiHandler({ selection: tmp59, draftContent: str4, handleTextChange: callback7, focusTextInput: callback, setSelection: callback9 });
+  closure_35 = _require(threadSettingsDraft[47]).usePressEmojiHandler({
+    selection: tmp59,
+    draftContent: str4,
+    handleTextChange: callback7,
+    focusTextInput: callback,
+    setSelection: callback9,
+  });
   const tmp5Result7 = _require(threadSettingsDraft[47]);
-  closure_36 = _require(threadSettingsDraft[47]).usePressGIFHandler({ selection: tmp59, draftContent: str4, handleTextChange: callback7, focusTextInput: callback, setSelection: callback9 });
+  closure_36 = _require(threadSettingsDraft[47]).usePressGIFHandler({
+    selection: tmp59,
+    draftContent: str4,
+    handleTextChange: callback7,
+    focusTextInput: callback,
+    setSelection: callback9,
+  });
   const tmp5Result8 = _require(threadSettingsDraft[47]);
   const tmp5Result9 = _require(threadSettingsDraft[48]);
-  const pressHorizontalAutocompleteItemHandler = _require(threadSettingsDraft[48]).usePressHorizontalAutocompleteItemHandler({ draftContent: str4, handleTextChange: callback7, setSelection: callback9, channel: parentChannel });
-  closure_37 = _require(threadSettingsDraft[49]).useBackspaceHandler({ selection: tmp59, draftContent: str4, handleTextChange: callback7 });
+  const pressHorizontalAutocompleteItemHandler = _require(
+    threadSettingsDraft[48],
+  ).usePressHorizontalAutocompleteItemHandler({
+    draftContent: str4,
+    handleTextChange: callback7,
+    setSelection: callback9,
+    channel: parentChannel,
+  });
+  closure_37 = _require(threadSettingsDraft[49]).useBackspaceHandler({
+    selection: tmp59,
+    draftContent: str4,
+    handleTextChange: callback7,
+  });
   const tmp5Result10 = _require(threadSettingsDraft[49]);
   [tmp64, c38] = message(obj.useState(0), 2);
   obj22 = parentChannel;
@@ -1049,7 +1190,7 @@ export default function ForumComposer(parentChannel) {
       items19 = [];
     }
     obj2 = { style: null, children: null };
-    const items20 = [tmp.container, ];
+    const items20 = [tmp.container];
     obj3 = { paddingTop: null, paddingBottom: null };
     obj3[0] = insets.top;
     obj3[1] = insets.bottom + tmp64;
@@ -1065,17 +1206,45 @@ export default function ForumComposer(parentChannel) {
         channel: lib,
         onClose() {
           callback();
-        }
+        },
       };
       const result = obj.openForumGuidelinesActionSheet(obj);
     };
     obj4[4] = tmp17;
     obj4[5] = tmp68;
-    const items21 = [createForumPost(tmp2(tmp3[53]), obj4), ];
-    obj5 = { onScroll: null, scrollEventThrottle: 16, keyboardShouldPersistTaps: "always", nestedScrollEnabled: false, contentContainerStyle: null, keyboardDismissMode: "on-drag", children: null };
+    const items21 = [createForumPost(tmp2(tmp3[53]), obj4)];
+    obj5 = {
+      onScroll: null,
+      scrollEventThrottle: 16,
+      keyboardShouldPersistTaps: "always",
+      nestedScrollEnabled: false,
+      contentContainerStyle: null,
+      keyboardDismissMode: "on-drag",
+      children: null,
+    };
     obj5[0] = animatedScrollHandler;
     obj5[4] = tmp.scrollViewContentContainer;
-    let obj6 = { ref: null, style: null, inputTextStyle: null, showTopContainer: false, placeholder: null, placeholderTextColor: null, large: true, multiline: true, value: null, clearButtonVisibility: null, maxLength: null, onChange: null, onBlur: null, onFocus: null, autoFocus: true, autoCorrect: true, textContentType: "none", returnKeyType: "next", onNext: null };
+    let obj6 = {
+      ref: null,
+      style: null,
+      inputTextStyle: null,
+      showTopContainer: false,
+      placeholder: null,
+      placeholderTextColor: null,
+      large: true,
+      multiline: true,
+      value: null,
+      clearButtonVisibility: null,
+      maxLength: null,
+      onChange: null,
+      onBlur: null,
+      onFocus: null,
+      autoFocus: true,
+      autoCorrect: true,
+      textContentType: "none",
+      returnKeyType: "next",
+      onNext: null,
+    };
     obj6[0] = ref;
     ({ titleInput: obj28[1], titleInputText: obj28[2] } = tmp);
     let intl = tmp5(tmp3[43]).intl;
@@ -1125,7 +1294,7 @@ export default function ForumComposer(parentChannel) {
       _undefined2(lib(threadSettingsDraft[45]).PostComposerInputs.TITLE);
     };
     obj6[18] = callback;
-    const items22 = [createForumPost(tmp5(tmp3[55]).FormInput, obj6), , ];
+    const items22 = [createForumPost(tmp5(tmp3[55]).FormInput, obj6), ,];
     let tmp71Result = null;
     if (null != renderErrorResult) {
       const obj7 = { style: null, children: null };
@@ -1141,7 +1310,12 @@ export default function ForumComposer(parentChannel) {
       let obj9 = { style: null, onPress: null, children: null };
       obj9[0] = tmp.avatarContainer;
       obj9[1] = function onPress() {
-        const obj = { userId: stateFromStores.id, channelId: obj22.id, messageId: null, sourceAnalyticsLocations: null };
+        const obj = {
+          userId: stateFromStores.id,
+          channelId: obj22.id,
+          messageId: null,
+          sourceAnalyticsLocations: null,
+        };
         let id;
         if (message != null) {
           id = message.id;
@@ -1150,7 +1324,14 @@ export default function ForumComposer(parentChannel) {
         obj[3] = analyticsLocations;
         return content(threadSettingsDraft[61])(obj);
       };
-      const obj10 = { animate: null, style: null, user: null, guildId: null, avatarDecoration: null, accessibilityLabel: null };
+      const obj10 = {
+        animate: null,
+        style: null,
+        user: null,
+        guildId: null,
+        avatarDecoration: null,
+        accessibilityLabel: null,
+      };
       obj10[0] = !stateFromStores1;
       obj10[1] = tmp.avatar;
       obj10[2] = stateFromStores;
@@ -1168,7 +1349,7 @@ export default function ForumComposer(parentChannel) {
       tmp71Result = tmp71(analyticsLocations, obj9);
       const tmp76 = analyticsLocations;
     }
-    const items23 = [tmp71Result, ];
+    const items23 = [tmp71Result];
     const obj12 = { style: null, children: null };
     obj12[0] = tmp.editorBody;
     const obj13 = { style: null, accessibilityLabel: null, children: null };
@@ -1182,7 +1363,7 @@ export default function ForumComposer(parentChannel) {
     obj15[0] = str5;
     obj15[1] = colorString;
     obj15[2] = colorStrings;
-    const items24 = [createForumPost(tmp5(tmp3[62]).RoleLabel, obj15), ];
+    const items24 = [createForumPost(tmp5(tmp3[62]).RoleLabel, obj15)];
     const obj16 = { color: "text-default", variant: "text-xs/medium", style: null, lineClamp: 1, children: null };
     obj16[2] = tmp.channelName;
     let intl4 = tmp5(tmp3[43]).intl;
@@ -1192,7 +1373,7 @@ export default function ForumComposer(parentChannel) {
     obj16[4] = items25;
     items24[1] = callback5(tmp5(tmp3[63]).Text, obj16);
     obj13[2] = items24;
-    const items26 = [callback5(stateFromStores4, obj13), , ];
+    const items26 = [callback5(stateFromStores4, obj13), ,];
     let tmp71Result1 = null;
     if (null != renderErrorResult1) {
       const obj18 = { style: null, children: null };
@@ -1201,7 +1382,19 @@ export default function ForumComposer(parentChannel) {
       tmp71Result1 = tmp71(tmp2(tmp3[60]), obj18);
     }
     items26[1] = tmp71Result1;
-    const obj19 = { ref: null, style: null, multiline: true, scrollEnabled: false, placeholder: null, placeholderTextColor: null, onChangeText: null, onSelectionChange: null, onFocus: null, showSoftInputOnFocus: null, children: null };
+    const obj19 = {
+      ref: null,
+      style: null,
+      multiline: true,
+      scrollEnabled: false,
+      placeholder: null,
+      placeholderTextColor: null,
+      onChangeText: null,
+      onSelectionChange: null,
+      onFocus: null,
+      showSoftInputOnFocus: null,
+      children: null,
+    };
     obj19[0] = ref1;
     obj19[1] = tmp.contentInput;
     let intl5 = tmp5(tmp3[43]).intl;
@@ -1234,11 +1427,23 @@ export default function ForumComposer(parentChannel) {
     obj8[1] = items23;
     items22[2] = callback5(stateFromStores4, obj8);
     obj5[6] = items22;
-    const items27 = [callback5(tmp2(tmp3[33]).ScrollView, obj5), , , , ];
+    const items27 = [callback5(tmp2(tmp3[33]).ScrollView, obj5), , , ,];
     obj22 = { tags: null };
     obj22[0] = first1;
     items27[1] = createForumPost(closure_35, obj22);
-    const obj23 = { channel: null, tags: null, onTagsSave: null, canPost: null, submitting: null, onSubmit: null, onShowExpressionPicker: null, focusLastInput: null, lastInput: null, isEdit: null, onLayout: null };
+    const obj23 = {
+      channel: null,
+      tags: null,
+      onTagsSave: null,
+      canPost: null,
+      submitting: null,
+      onSubmit: null,
+      onShowExpressionPicker: null,
+      focusLastInput: null,
+      lastInput: null,
+      isEdit: null,
+      onLayout: null,
+    };
     obj23[0] = parentChannel;
     obj23[1] = first1;
     obj23[2] = callback2;
@@ -1248,8 +1453,15 @@ export default function ForumComposer(parentChannel) {
     obj23[6] = function onShowExpressionPicker() {
       closure_6.dismiss();
       let obj = lib(threadSettingsDraft[64]);
-      obj = { channelId: lib.id, onPressEmoji: closure_35, onPressSticker: callback4, onPressGIF: closure_36, onBackspace: closure_37, visibleTabs: items };
-      items = [, ];
+      obj = {
+        channelId: lib.id,
+        onPressEmoji: closure_35,
+        onPressSticker: callback4,
+        onPressGIF: closure_36,
+        onBackspace: closure_37,
+        visibleTabs: items,
+      };
+      items = [,];
       ({ EMOJI: arr[0], GIF: arr[1] } = memo);
       const result = obj.openExpressionPickerActionSheet(obj);
     };
@@ -1259,7 +1471,7 @@ export default function ForumComposer(parentChannel) {
     obj23[10] = callback10;
     items27[2] = createForumPost(closure_36, obj23);
     const obj24 = { style: null, onPressAutocompleteItem: null, text: null, selection: null, channel: null };
-    const items28 = [tmp.horizontalAutocomplete, ];
+    const items28 = [tmp.horizontalAutocomplete];
     const obj25 = { bottom: null };
     obj25[0] = insets.bottom;
     items28[1] = obj25;
@@ -1274,7 +1486,10 @@ export default function ForumComposer(parentChannel) {
     obj26[1] = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
       let tmp3 = null;
-      if (markAsDismissed.visibleContent === lib(threadSettingsDraft[50]).DismissibleContent.MEDIA_CHANNEL_MULTIPLE_THUMBNAIL_NOTICE) {
+      if (
+        markAsDismissed.visibleContent ===
+        lib(threadSettingsDraft[50]).DismissibleContent.MEDIA_CHANNEL_MULTIPLE_THUMBNAIL_NOTICE
+      ) {
         const obj = { markAsDismissed: null, actionSheetKey: "ThumbnailBottomSheet", importer: null };
         obj[0] = function markAsDismissed() {
           return markAsDismissed(closure_1_25.UNKNOWN);
@@ -1291,4 +1506,4 @@ export default function ForumComposer(parentChannel) {
     return callback5(stateFromStores4, obj2);
   }
   const tmp15Result5 = message(obj.useState(0), 2);
-};
+}

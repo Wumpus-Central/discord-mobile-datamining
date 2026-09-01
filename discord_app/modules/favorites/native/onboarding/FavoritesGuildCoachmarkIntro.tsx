@@ -7,9 +7,15 @@ import { ContentDismissActionType } from "../../../dismissible_content/Dismissib
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-let closure_9 = { code: "function FavoritesGuildCoachmarkIntroTsx1(){const{scrollPosition}=this.__closure;return scrollPosition.get()<=0;}" };
-let closure_10 = { code: "function FavoritesGuildCoachmarkIntroTsx2(atTop,wasAtTop){const{runOnJS,setScrolledToTop}=this.__closure;if(atTop===wasAtTop){return;}runOnJS(setScrolledToTop)(atTop);}" };
-let result = require("set").fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkIntro.tsx");
+let closure_9 = {
+  code: "function FavoritesGuildCoachmarkIntroTsx1(){const{scrollPosition}=this.__closure;return scrollPosition.get()<=0;}",
+};
+let closure_10 = {
+  code: "function FavoritesGuildCoachmarkIntroTsx2(atTop,wasAtTop){const{runOnJS,setScrolledToTop}=this.__closure;if(atTop===wasAtTop){return;}runOnJS(setScrolledToTop)(atTop);}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/favorites/native/onboarding/FavoritesGuildCoachmarkIntro.tsx",
+);
 
 export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -19,7 +25,10 @@ export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
   callback = undefined;
   let callback1;
   scrollPosition = callback1.getState().scrollPosition;
-  const tmp = callback(callback.useState(() => scrollPosition.get() <= 0), 2);
+  const tmp = callback(
+    callback.useState(() => scrollPosition.get() <= 0),
+    2,
+  );
   first = tmp[0];
   callback = tmp3;
   let obj = markAsDismissed(first[6]);
@@ -52,7 +61,16 @@ export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
   }, items1);
   const items2 = [first, callback, callback1];
   const memo = callback.useMemo(() => {
-    const obj = { visible: first, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: null, buttonLabel: null, onButtonPress: null };
+    const obj = {
+      visible: first,
+      position: "bottom",
+      title: null,
+      description: null,
+      onDismiss: null,
+      renderImgComponent: null,
+      buttonLabel: null,
+      onButtonPress: null,
+    };
     const intl = markAsDismissed(first[9]).intl;
     obj[2] = intl.string(scrollPosition(first[10])["bu/mLv"]);
     const intl2 = markAsDismissed(first[9]).intl;
@@ -68,4 +86,4 @@ export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
   }, items2);
   const coachmark = markAsDismissed(first[12]).useCoachmark(markAsDismissed.targetRef, memo);
   return null;
-};
+}

@@ -20,7 +20,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
     obj[0] = RPCErrors.INVALID_COMMAND;
     const _HermesInternal3 = HermesInternal;
     let tmp36 = prototypeDefault;
-    tmp36 = new tmp36(obj, "command not available from \"" + socket.source.type + "\" transport");
+    tmp36 = new tmp36(obj, 'command not available from "' + socket.source.type + '" transport');
     throw tmp36;
   } else {
     const tmp46 = callback(frameByIframeId.getFrameByIframeId(socket.source.iframeId));

@@ -4,6 +4,8 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 
 const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativeAudioRouteEmitterModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeAudioRouteEmitterModule.tsx");
+const result = set.fileFinishedImporting(
+  "../discord_common/js/packages/rtn-codegen/js/NativeAudioRouteEmitterModule.tsx",
+);
 
 export default enforcing;

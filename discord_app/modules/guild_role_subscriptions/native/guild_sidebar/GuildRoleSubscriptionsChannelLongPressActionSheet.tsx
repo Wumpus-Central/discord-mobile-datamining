@@ -20,7 +20,9 @@ createCacheKey = { headerIcon: null };
 createCacheKey = { marginRight: 16, tintColor: ThemesDefault.colors.CHANNEL_ICON, width: 20, height: 20 };
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsChannelLongPressActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsChannelLongPressActionSheet.tsx",
+);
 
 export default function GuildRoleSubscriptionsChannelLongPressActionSheet(arg0) {
   ({ guildId: require, onClose: importDefault } = arg0);
@@ -32,7 +34,7 @@ export default function GuildRoleSubscriptionsChannelLongPressActionSheet(arg0) 
   obj[0] = callback(View, obj);
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["KzCF/6"]);
-  const items = [callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), ];
+  const items = [callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj)];
   const obj2 = { leading: null, label: null, onPress: null };
   obj1 = { disableColor: true, source: registerAssetDefault };
   obj2[0] = callback(Button.Icon, { source: registerAssetDefault2 });
@@ -47,4 +49,4 @@ export default function GuildRoleSubscriptionsChannelLongPressActionSheet(arg0) 
   items[1] = callback(Form.FormRow, obj2);
   obj[0] = items;
   return callback2(ActionSheet.ActionSheet, obj);
-};
+}

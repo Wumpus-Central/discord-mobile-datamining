@@ -18,7 +18,7 @@ function FrameViewInner(frame) {
   const orientationLock = frame.data.orientationLock;
   const tmp3 = callback(importAllResult.useState(true), 2);
   let first = tmp3[0];
-  const items = [layoutMode, , ];
+  const items = [layoutMode, ,];
   ({ applicationId: arr[1], id: arr[2] } = frame);
   const layoutEffect = importAllResult.useLayoutEffect(() => {
     let obj = layoutMode(setIsResetting[7]);
@@ -30,14 +30,27 @@ function FrameViewInner(frame) {
   callback = importAllResult.useCallback(() => {
     layoutMode(setIsResetting[8]).leaveFrame(frame.id);
   }, items1);
-  const callback1 = importAllResult.useCallback((arg0, arg1) => frame(setIsResetting[9]).setOrientationLockState(frame.id, arg0, arg1), items2);
+  const callback1 = importAllResult.useCallback(
+    (arg0, arg1) => frame(setIsResetting[9]).setOrientationLockState(frame.id, arg0, arg1),
+    items2,
+  );
   if (!first) {
     first = null == data;
   }
   let tmpResult = tmp(tmp2[10]);
-  const baseActivityView = tmpResult.useBaseActivityView({ orientationLockState: orientationLock, showLoadingIndicator: first, setShowLoadingStateForLockingOrientation: tmp3[1], application: data, setOrientationLockState: callback1 });
+  const baseActivityView = tmpResult.useBaseActivityView({
+    orientationLockState: orientationLock,
+    showLoadingIndicator: first,
+    setShowLoadingStateForLockingOrientation: tmp3[1],
+    application: data,
+    setOrientationLockState: callback1,
+  });
   setIsResetting = baseActivityView.setIsResetting;
-  obj = { instance_id: "example-cl-instance", platform: ActivityPlatform.MOBILE, discord_proxy_ticket: frame.data.proxyTicket };
+  obj = {
+    instance_id: "example-cl-instance",
+    platform: ActivityPlatform.MOBILE,
+    discord_proxy_ticket: frame.data.proxyTicket,
+  };
   ({ isResetting, isLandscape } = baseActivityView);
   obj = { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null };
   obj1 = {
@@ -54,7 +67,7 @@ function FrameViewInner(frame) {
     referrerPolicy: "origin",
     isPipOrGridMode: null,
     webViewKey: null,
-    safeAreasConfig: null
+    safeAreasConfig: null,
   };
   tmpResult = tmp(tmp2[12]);
   obj1[6] = tmpResult.allowPopups(data);
@@ -78,9 +91,14 @@ function FrameViewInner(frame) {
     referrerPolicy: "origin",
     isPipOrGridMode: null,
     webViewKey: null,
-    safeAreasConfig: null
+    safeAreasConfig: null,
   });
-  return jsx(frame(setIsResetting[10]).BaseActivityView, { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null });
+  return jsx(frame(setIsResetting[10]).BaseActivityView, {
+    wakeLockKey: "FrameActivities",
+    showLoadingIndicator: first,
+    isResetting,
+    children: null,
+  });
 }
 let c4 = importAllResult;
 ({ asLaunched: closure_6, FrameLayoutModes: error } = FrameLayoutModes);

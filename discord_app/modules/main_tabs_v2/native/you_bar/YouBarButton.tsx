@@ -38,7 +38,7 @@ class YouBarButtonIcon {
     badgeWidth = obj.badgeWidth;
     borderWidth = obj.borderWidth;
     obj2 = c3;
-    items = [, , , , , ];
+    items = [, , , , ,];
     items[0] = badgeRadius;
     items[1] = borderWidth;
     items[2] = size;
@@ -52,7 +52,14 @@ class YouBarButtonIcon {
       if (null != badgeWidth) {
         sum1 = tmp4 + 2 * tmp;
       }
-      return { shape: size2(num3[6]).CutoutShape.RoundedRect, x: size2 - (result - borderWidth) + badgeSize, y: size2 - (result - borderWidth) + num3, width: sum1, height: result, cornerRadius: Math.min(sum, size2 / 2, sum1 / 2) };
+      return {
+        shape: size2(num3[6]).CutoutShape.RoundedRect,
+        x: size2 - (result - borderWidth) + badgeSize,
+        y: size2 - (result - borderWidth) + num3,
+        width: sum1,
+        height: result,
+        cornerRadius: Math.min(sum, size2 / 2, sum1 / 2),
+      };
     }, items);
     badgeSize = memo;
     obj = { size: tmp, badgeSize: 8 };
@@ -73,15 +80,26 @@ class YouBarButtonIcon {
       num4 = 0;
     }
     c3 = num4;
-    items1 = [, , , ];
+    items1 = [, , ,];
     items1[0] = size2;
     items1[1] = badgeSize;
     items1[2] = num4;
     items1[3] = num3;
-    items2 = [, ];
+    items2 = [,];
     items2[0] = memo;
     items2[1] = hasBadge;
-    memo1 = obj2.useMemo(() => ({ position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "id", bottom: "enabled", padding: "key", minWidth: "__packager_asset" }), items1);
+    memo1 = obj2.useMemo(
+      () => ({
+        position: "absolute",
+        left: size2 - badgeSize + num3,
+        top: size2 - badgeSize + num4,
+        right: "id",
+        bottom: "enabled",
+        padding: "key",
+        minWidth: "__packager_asset",
+      }),
+      items1,
+    );
     obj1 = { style: { position: "relative", height: tmp, width: tmp }, children: null };
     memo2 = obj2.useMemo(() => {
       if (size2) {
@@ -97,7 +115,7 @@ class YouBarButtonIcon {
     tmp7 = jsx;
     tmp8 = badgeSize;
     tmp9 = c2;
-    items3 = [, ];
+    items3 = [,];
     items3[0] = jsx(require("SolidCutout"), { cutouts: memo2, children: icon });
     if (hasBadge) {
       obj2 = { style: null, size: 8, badgeStyle: null };
@@ -125,7 +143,15 @@ obj[0] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function YouBarButton(arg0) {
   ({ hasNameplate, icon, hasBadge, badgeStyle, onPress, onLongPress, accessibilityLabel } = arg0);
-  let obj = { accessibilityLabel, variant: null, size: "sm", icon: null, onPress: null, onLongPress: null, hitSlop: null };
+  let obj = {
+    accessibilityLabel,
+    variant: null,
+    size: "sm",
+    icon: null,
+    onPress: null,
+    onLongPress: null,
+    hitSlop: null,
+  };
   let str = "tertiary";
   if (hasNameplate) {
     str = "secondary-overlay";

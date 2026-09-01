@@ -13,10 +13,22 @@ require = arg1;
 noopAll;
 ({ jsxs: c4, jsx: c5 } = jsxProd);
 createCacheKey = { container: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, flexShrink: 0 };
+createCacheKey = {
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  flexShrink: 0,
+};
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let items = [[64, "text-lg/semibold"], [48, "text-md/semibold"], [40, "text-md/semibold"], [30, "text-sm/semibold"], [24, "text-xs/semibold"], [16, "text-xxs/semibold"]];
+let items = [
+  [64, "text-lg/semibold"],
+  [48, "text-md/semibold"],
+  [40, "text-md/semibold"],
+  [30, "text-sm/semibold"],
+  [24, "text-xs/semibold"],
+  [16, "text-xxs/semibold"],
+];
 const map = new Map(items);
 const result = require("set").fileFinishedImporting("design/components/Pile/native/PileOverflow.native.tsx");
 
@@ -26,7 +38,7 @@ export const PileOverflow = function PileOverflow(size) {
   let obj = defaultAreStatesEqual;
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  const items1 = [callback().container, ];
+  const items1 = [callback().container];
   obj = { borderRadius, minWidth: size, height: size, paddingHorizontal: null };
   let num = 4;
   if (size >= 32) {

@@ -25,16 +25,20 @@ Object.defineProperty(prototype, "didTimeout", {
   get: function didTimeout() {
     return this._firedDueToMaxTimeout;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "timeSinceExpiration", {
   get: function timeSinceExpiration() {
     return performance.now() - (this._startMs + this._deadlineMs);
   },
-  set: undefined
+  set: undefined,
 });
 prototype["generateDeadlineMetrics"] = function generateDeadlineMetrics() {
-  const obj = { isDeadlineNotIdeal: this._browserDeadlineMs < c0, deadlineMs: _deadlineMs.toFixed(2), timeSinceStartMs: null };
+  const obj = {
+    isDeadlineNotIdeal: this._browserDeadlineMs < c0,
+    deadlineMs: _deadlineMs.toFixed(2),
+    timeSinceStartMs: null,
+  };
   _deadlineMs = this._deadlineMs;
   const diff = performance.now() - this._startMs;
   obj[2] = diff.toFixed(2);

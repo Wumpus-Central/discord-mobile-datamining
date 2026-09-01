@@ -30,7 +30,7 @@ function _handleThumbnailUpload() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -181,16 +181,24 @@ prototype["_initialize"] = function _initialize() {
       currentUserActiveStream = currentAppIntent.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
         const tmp2Result = callback2(4721);
-        const participant = tmp2Result.selectParticipant(channel.id, tmp9(4544).encodeStreamKey(currentUserActiveStream));
+        const participant = tmp2Result.selectParticipant(
+          channel.id,
+          tmp9(4544).encodeStreamKey(currentUserActiveStream),
+        );
         if ("android" === voiceEngine.platform) {
           closure_15.start(15000, () => {
             closure_1_1(closure_1_2[14])(null != closure_1_19, "Voice Engine should be initialized in callback");
             const size = currentUserActiveStream(closure_1_2[18]).getWindowDimensions();
             const bound = Math.min(512 / size.width, 288 / size.height);
-            const result = closure_1_19.setBroadcastThumbnailCallback(size.width * bound, size.height * bound, 300, (arg0) => {
-              closure_1_13.log("Broadcast thumbnail of size:", arg0.length);
-              closure_1_17(closure_1_0(closure_1_2[17]).encodeStreamKey(closure_0), arg0);
-            });
+            const result = closure_1_19.setBroadcastThumbnailCallback(
+              size.width * bound,
+              size.height * bound,
+              300,
+              (arg0) => {
+                closure_1_13.log("Broadcast thumbnail of size:", arg0.length);
+                closure_1_17(closure_1_0(closure_1_2[17]).encodeStreamKey(closure_0), arg0);
+              },
+            );
           });
         }
         if (null != currentAppIntent) {

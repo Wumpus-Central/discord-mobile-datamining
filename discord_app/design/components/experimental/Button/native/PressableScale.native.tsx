@@ -18,7 +18,13 @@ const forwardRefResult = importAllResult.forwardRef((scaleAmountInPx, ref) => {
   const merged = Object.assign(scaleAmountInPx, Object.create(null));
   let obj = _mod4217;
   const sharedValue = obj.useSharedValue(0);
-  const buttonPressAnimationProps = styleProperties.useButtonPressAnimationProps(sharedValue, num, scaleAmountInPx.onLayout, onPressIn, onPressOut);
+  const buttonPressAnimationProps = styleProperties.useButtonPressAnimationProps(
+    sharedValue,
+    num,
+    scaleAmountInPx.onLayout,
+    onPressIn,
+    onPressOut,
+  );
   obj = {};
   const merged1 = Object.assign(callback(buttonPressAnimationProps, closure_2));
   const merged2 = Object.assign(merged);
@@ -28,6 +34,8 @@ const forwardRefResult = importAllResult.forwardRef((scaleAmountInPx, ref) => {
   obj.style = items;
   return <closure_5 />;
 });
-const result = require("set").fileFinishedImporting("design/components/experimental/Button/native/PressableScale.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/experimental/Button/native/PressableScale.native.tsx",
+);
 
 export const PressableScale = forwardRefResult;

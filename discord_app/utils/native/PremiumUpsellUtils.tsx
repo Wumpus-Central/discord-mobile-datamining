@@ -20,7 +20,7 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
   dependencyMap = analyticsLocation;
   let obj = usePremiumTrialOffer;
   const premiumTrialOffer = obj.usePremiumTrialOffer();
-  let items = [, ];
+  let items = [,];
   ({ GLOBAL_EMOJI: arr[0], UPLOAD: arr[1] } = closure_7);
   const set = new Set(items);
   let hasItem = null != premiumTrialOffer;
@@ -120,7 +120,7 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
       }
       const intl2 = initialUpsellKey(analyticsLocation[6]).intl;
       return intl2.string(initialUpsellKey(analyticsLocation[6]).t.pj0XBN);
-    }, items3)
+    }, items3),
   };
   return obj;
 }
@@ -202,20 +202,22 @@ export default {
       if (!analyticsLocation(analyticsLocations[12])(initialUpsellKey)) {
         let obj = { importer: null };
         obj[0] = function importer() {
-          return initialUpsellKey(analyticsLocations[15])(analyticsLocations[14], analyticsLocations.paths).then((arg0) => {
-            closure_0 = arg0.default;
-            return (arg0) => {
-              const obj = {};
-              const merged = Object.assign(arg0);
-              obj.initialUpsellKey = closure_0;
-              obj.analyticsLocation = closure_1_1;
-              obj.analyticsProperties = closure_1_3;
-              obj.analyticsLocations = closure_1_2;
-              obj.largestFileSize = closure_1_4;
-              obj.imageSource = closure_1_5;
-              return closure_2_10(closure_0, obj);
-            };
-          });
+          return initialUpsellKey(analyticsLocations[15])(analyticsLocations[14], analyticsLocations.paths).then(
+            (arg0) => {
+              closure_0 = arg0.default;
+              return (arg0) => {
+                const obj = {};
+                const merged = Object.assign(arg0);
+                obj.initialUpsellKey = closure_0;
+                obj.analyticsLocation = closure_1_1;
+                obj.analyticsProperties = closure_1_3;
+                obj.analyticsLocations = closure_1_2;
+                obj.largestFileSize = closure_1_4;
+                obj.imageSource = closure_1_5;
+                return closure_2_10(closure_0, obj);
+              };
+            },
+          );
         };
         tmp30(tmp31[13]).openLazy(obj);
         const tmp30Result = tmp30(tmp31[13]);
@@ -224,18 +226,30 @@ export default {
       tmp31 = analyticsLocations;
     }
   },
-  usePremiumUpsellConfig
+  usePremiumUpsellConfig,
 };
 export const getUpsellItems = function getUpsellItems() {
-  let obj = { key: constants.GLOBAL_EMOJI, image: registerAssetDefault, activeTitle: null, passiveTitle: null, description: null };
+  let obj = {
+    key: constants.GLOBAL_EMOJI,
+    image: registerAssetDefault,
+    activeTitle: null,
+    passiveTitle: null,
+    description: null,
+  };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.gKtr8N);
   const intl2 = getSystemLocale.intl;
   obj[3] = intl2.string(getSystemLocale.t.N8ZRNb);
   const intl3 = getSystemLocale.intl;
   obj[4] = intl3.format(getSystemLocale.t.rf7Ixp, {});
-  const items = [obj, , , , , ];
-  obj = { key: constants.ANIMATED_EMOJI, image: registerAssetDefault2, activeTitle: null, passiveTitle: null, description: null };
+  const items = [obj, , , , ,];
+  obj = {
+    key: constants.ANIMATED_EMOJI,
+    image: registerAssetDefault2,
+    activeTitle: null,
+    passiveTitle: null,
+    description: null,
+  };
   const intl4 = getSystemLocale.intl;
   obj[2] = intl4.string(getSystemLocale.t.F6rmyq);
   const intl5 = getSystemLocale.intl;
@@ -243,7 +257,13 @@ export const getUpsellItems = function getUpsellItems() {
   const intl6 = getSystemLocale.intl;
   obj[4] = intl6.format(getSystemLocale.t.JxTzzb, {});
   items[1] = obj;
-  obj = { key: constants.ANIMATED_AVATAR, image: registerAssetDefault3, activeTitle: null, passiveTitle: null, description: null };
+  obj = {
+    key: constants.ANIMATED_AVATAR,
+    image: registerAssetDefault3,
+    activeTitle: null,
+    passiveTitle: null,
+    description: null,
+  };
   const intl7 = getSystemLocale.intl;
   obj[2] = intl7.string(getSystemLocale.t["tQh+gF"]);
   const intl8 = getSystemLocale.intl;
@@ -251,7 +271,13 @@ export const getUpsellItems = function getUpsellItems() {
   const intl9 = getSystemLocale.intl;
   obj[4] = intl9.format(getSystemLocale.t["Tso/Fn"], {});
   items[2] = obj;
-  obj1 = { key: constants.UPLOAD, image: registerAssetDefault4, activeTitle: null, passiveTitle: null, description: null };
+  obj1 = {
+    key: constants.UPLOAD,
+    image: registerAssetDefault4,
+    activeTitle: null,
+    passiveTitle: null,
+    description: null,
+  };
   const intl10 = getSystemLocale.intl;
   obj1[2] = intl10.string(getSystemLocale.t["1EOZqw"]);
   const intl11 = getSystemLocale.intl;
@@ -264,7 +290,13 @@ export const getUpsellItems = function getUpsellItems() {
   obj2[1] = intl14.string(getSystemLocale.t.EaBfeq);
   obj1[4] = intl12.format(getSystemLocale.t.DUT5IC, obj2);
   items[3] = obj1;
-  const obj3 = { key: constants.BADGE, image: registerAssetDefault5, activeTitle: null, passiveTitle: null, description: null };
+  const obj3 = {
+    key: constants.BADGE,
+    image: registerAssetDefault5,
+    activeTitle: null,
+    passiveTitle: null,
+    description: null,
+  };
   const intl15 = getSystemLocale.intl;
   obj3[2] = intl15.string(getSystemLocale.t["602BK4"]);
   const intl16 = getSystemLocale.intl;
@@ -272,7 +304,13 @@ export const getUpsellItems = function getUpsellItems() {
   const intl17 = getSystemLocale.intl;
   obj3[4] = intl17.format(getSystemLocale.t["p7i+li"], {});
   items[4] = obj3;
-  const obj4 = { key: constants.APP_ICONS, image: registerAssetDefault6, activeTitle: null, passiveTitle: null, description: null };
+  const obj4 = {
+    key: constants.APP_ICONS,
+    image: registerAssetDefault6,
+    activeTitle: null,
+    passiveTitle: null,
+    description: null,
+  };
   const intl18 = getSystemLocale.intl;
   obj4[2] = intl18.string(getSystemLocale.t["1B1Cyn"]);
   const intl19 = getSystemLocale.intl;

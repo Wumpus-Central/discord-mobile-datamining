@@ -11,7 +11,7 @@ export default function RefreshChatInputCoachmark(buttonRef) {
   const merged = Object.assign(buttonRef, Object.create(null));
   const coachmark = useCoachmark.useCoachmark(buttonRef.buttonRef, merged);
   return null;
-};
+}
 export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmark(disabled) {
   let _require;
   dependencyMap = undefined;
@@ -20,15 +20,29 @@ export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmar
   } else {
     items = [tmp(1373).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
   }
-  const tmp3 = callback(require("../../dismissible_content/hooks/useSelectedDismissibleContent.tsx").useSelectedDismissibleContent(items), 2);
+  const tmp3 = callback(
+    require("../../dismissible_content/hooks/useSelectedDismissibleContent.tsx").useSelectedDismissibleContent(items),
+    2,
+  );
   _require = tmp4;
-  const tmp5 = tmp3[0] === require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK;
+  const tmp5 =
+    tmp3[0] ===
+    require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx")
+      .DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK;
   dependencyMap = tmp5;
   const items1 = [tmp5, tmp3[1]];
   let memo = null;
   if (tmp5) {
     memo = React.useMemo(() => {
-      let obj = { title: null, description: null, position: "top", offsetY: 4, visible: null, onDismiss: null, graphic: null };
+      let obj = {
+        title: null,
+        description: null,
+        position: "top",
+        offsetY: 4,
+        visible: null,
+        onDismiss: null,
+        graphic: null,
+      };
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t.eqI1WA);
       const intl2 = callback(1236).intl;

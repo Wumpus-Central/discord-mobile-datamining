@@ -13,13 +13,13 @@ obj = {
   },
   parent: null,
   IconComponent: KeyIcon.KeyIcon,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.AUTHORIZED_APPS,
   getComponent() {
     return UserSettingsAuthedApps /* UserSettingsAuthedApps */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AuthorizedAppsSetting.tsx");

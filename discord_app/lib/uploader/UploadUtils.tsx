@@ -5,8 +5,7 @@ import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_s
 import cancel from "Upload.tsx";
 
 const result = set.fileFinishedImporting("lib/uploader/UploadUtils.tsx");
-class DefaultHttpClient {
-}
+class DefaultHttpClient {}
 const prototype = DefaultHttpClient.prototype;
 prototype["sliceBody"] = function sliceBody(body, start) {
   let substr = body;
@@ -105,7 +104,7 @@ export const calculateProgress = function calculateProgress(loaded, currentSize)
   if (0 !== currentSize) {
     const _Math = Math;
     const _Math2 = Math;
-    num = Math.min(Math.floor(loaded / currentSize * 100), 100);
+    num = Math.min(Math.floor((loaded / currentSize) * 100), 100);
   }
   return num;
 };

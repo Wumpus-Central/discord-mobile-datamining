@@ -18,9 +18,13 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
   const obj4 = getProductOrbPrice;
   const obj5 = getPremiumPlanItemDefault;
   const canUseShopDiscountsResult = getPremiumPlanItemDefault.canUseShopDiscounts(currentUser);
-  const defaultPriceSetAssignmentPurchaseType = getItemRecordsFromPurchases.getDefaultPriceSetAssignmentPurchaseType(canUseShopDiscountsResult);
+  const defaultPriceSetAssignmentPurchaseType =
+    getItemRecordsFromPurchases.getDefaultPriceSetAssignmentPurchaseType(canUseShopDiscountsResult);
   const obj6 = getItemRecordsFromPurchases;
-  const result3 = getItemRecordsFromPurchases.extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
+  const result3 = getItemRecordsFromPurchases.extractPriceByPurchaseTypes(
+    product,
+    defaultPriceSetAssignmentPurchaseType,
+  );
   if (!result) {
     result = result1;
   }

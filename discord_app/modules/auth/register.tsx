@@ -16,7 +16,7 @@ function _scorePassword() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -110,7 +110,7 @@ function _registerPhone() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -269,7 +269,20 @@ function registerFull(giftCodeSKUId) {
     tmp14 = constants;
   }
   obj1 = { url: constants3.REGISTER, body: null, trackedActionData: null, rejectWithError: false };
-  let obj2 = { fingerprint: fingerprint.getFingerprint(), email, username, global_name: globalName, password, invite, consent, phone_token: phoneToken, date_of_birth: null, gift_code_sku_id: null, guild_template_code: null, promotional_email_opt_in: null };
+  let obj2 = {
+    fingerprint: fingerprint.getFingerprint(),
+    email,
+    username,
+    global_name: globalName,
+    password,
+    invite,
+    consent,
+    phone_token: phoneToken,
+    date_of_birth: null,
+    gift_code_sku_id: null,
+    guild_template_code: null,
+    promotional_email_opt_in: null,
+  };
   let formatResult;
   if (birthday != null) {
     formatResult = birthday.format("YYYY-MM-DD");
@@ -284,7 +297,13 @@ function registerFull(giftCodeSKUId) {
   obj2[11] = checked;
   obj1[1] = obj2;
   let obj3 = { event: encodeProperties.NetworkActionNames.USER_REGISTER, properties: null };
-  const obj4 = { invite_code: invite, used_username_suggestion: prop, promotional_email_opt_in: null, promotional_email_pre_checked: null, was_unique_username: true };
+  const obj4 = {
+    invite_code: invite,
+    used_username_suggestion: prop,
+    promotional_email_opt_in: null,
+    promotional_email_pre_checked: null,
+    was_unique_username: true,
+  };
   let checked1;
   if (promoEmailConsent != null) {
     checked1 = promoEmailConsent.checked;
@@ -298,41 +317,62 @@ function registerFull(giftCodeSKUId) {
   obj3[1] = obj4;
   obj1[2] = obj3;
   const tmp4Result1 = _modDef4713;
-  return _modDef4713.post(obj1).then((body) => {
-    let obj = callback2(709);
-    obj = { type: "REGISTER_SUCCESS", token: body.body.token };
-    obj.dispatch(obj);
-    obj = { type: "GUARDIAN_CONNECT_REQUIRED", shouldShowGuardianConnect: true === body.body.show_guardian_connect };
-    callback2(709).dispatch(obj);
-    const obj3 = callback2(709);
-    callback2(698).track(constants.AGE_GATE_ACTION, { source: constants3.REGISTER, action: constants2.AGE_GATE_SUCCESS });
-  }, (arg0) => {
-    if (arg0 instanceof callback(10914).CaptchaCancelError) {
-      throw arg0;
-    } else {
-      let obj = new callback2(4377)(arg0);
-      if (null != obj.getFieldErrors("date_of_birth")) {
-        const result = callback3(15551).preventUnderageRegistration(constants3.REGISTER);
-        const obj2 = callback3(15551);
+  return _modDef4713.post(obj1).then(
+    (body) => {
+      let obj = callback2(709);
+      obj = { type: "REGISTER_SUCCESS", token: body.body.token };
+      obj.dispatch(obj);
+      obj = { type: "GUARDIAN_CONNECT_REQUIRED", shouldShowGuardianConnect: true === body.body.show_guardian_connect };
+      callback2(709).dispatch(obj);
+      const obj3 = callback2(709);
+      callback2(698).track(constants.AGE_GATE_ACTION, {
+        source: constants3.REGISTER,
+        action: constants2.AGE_GATE_SUCCESS,
+      });
+    },
+    (arg0) => {
+      if (arg0 instanceof callback(10914).CaptchaCancelError) {
+        throw arg0;
+      } else {
+        let obj = new callback2(4377)(arg0);
+        if (null != obj.getFieldErrors("date_of_birth")) {
+          const result = callback3(15551).preventUnderageRegistration(constants3.REGISTER);
+          const obj2 = callback3(15551);
+        }
+        obj = {
+          is_unique_username_registration: true,
+          email_error_reason: null,
+          phone_error_reason: null,
+          password_error_reason: null,
+          username_error_reason: null,
+          global_name_error_reason: null,
+          date_of_birth_error_reason: null,
+          promotional_email_opt_in_error_reason: null,
+          fingerprint_error_reason: null,
+          invite_error_reason: null,
+          gift_code_sku_id_error_reason: null,
+          guild_template_code_error_reason: null,
+          consent_error_reason: null,
+          generic_error_reason: null,
+        };
+        obj[1] = obj.getFirstFieldErrorMessage("email");
+        obj[2] = obj.getFirstFieldErrorMessage("phone_token");
+        obj[3] = obj.getFirstFieldErrorMessage("password");
+        obj[4] = obj.getFirstFieldErrorMessage("username");
+        obj[5] = obj.getFirstFieldErrorMessage("global_name");
+        obj[6] = obj.getFirstFieldErrorMessage("date_of_birth");
+        obj[7] = obj.getFirstFieldErrorMessage("promotional_email_opt_in");
+        obj[8] = obj.getFirstFieldErrorMessage("fingerprint");
+        obj[9] = obj.getFirstFieldErrorMessage("invite");
+        obj[10] = obj.getFirstFieldErrorMessage("gift_code_sku_id");
+        obj[11] = obj.getFirstFieldErrorMessage("guild_template_code");
+        obj[12] = obj.getFirstFieldErrorMessage("consent");
+        obj[13] = obj.getAnyErrorMessage();
+        callback2(698).track(constants.REGISTER_SUBMIT_ERRORED, obj);
+        throw obj;
       }
-      obj = { is_unique_username_registration: true, email_error_reason: null, phone_error_reason: null, password_error_reason: null, username_error_reason: null, global_name_error_reason: null, date_of_birth_error_reason: null, promotional_email_opt_in_error_reason: null, fingerprint_error_reason: null, invite_error_reason: null, gift_code_sku_id_error_reason: null, guild_template_code_error_reason: null, consent_error_reason: null, generic_error_reason: null };
-      obj[1] = obj.getFirstFieldErrorMessage("email");
-      obj[2] = obj.getFirstFieldErrorMessage("phone_token");
-      obj[3] = obj.getFirstFieldErrorMessage("password");
-      obj[4] = obj.getFirstFieldErrorMessage("username");
-      obj[5] = obj.getFirstFieldErrorMessage("global_name");
-      obj[6] = obj.getFirstFieldErrorMessage("date_of_birth");
-      obj[7] = obj.getFirstFieldErrorMessage("promotional_email_opt_in");
-      obj[8] = obj.getFirstFieldErrorMessage("fingerprint");
-      obj[9] = obj.getFirstFieldErrorMessage("invite");
-      obj[10] = obj.getFirstFieldErrorMessage("gift_code_sku_id");
-      obj[11] = obj.getFirstFieldErrorMessage("guild_template_code");
-      obj[12] = obj.getFirstFieldErrorMessage("consent");
-      obj[13] = obj.getAnyErrorMessage();
-      callback2(698).track(constants.REGISTER_SUBMIT_ERRORED, obj);
-      throw obj;
-    }
-  });
+    },
+  );
 }
 ({ AnalyticEvents: closure_6, AnalyticsSections: error, Endpoints: closure_8 } = ME);
 ({ AgeGateAnalyticAction: c9, AgeGateSource: c10 } = result);
@@ -352,7 +392,7 @@ export default function register(invite) {
   obj.invite = invite;
   obj.giftCodeSKUId = giftCodeSKUId;
   return registerFull(obj);
-};
+}
 export const scorePassword = function scorePassword(arr) {
   const self = this;
   const apply = _scorePassword.apply;

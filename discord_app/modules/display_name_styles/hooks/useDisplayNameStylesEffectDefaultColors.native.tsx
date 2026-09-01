@@ -6,8 +6,14 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import items3 from "../DisplayNameStylesConstants.tsx";
 
 require = arg1;
-({ DISPLAY_NAME_STYLES_GRADIENT_PRESETS: c4, DISPLAY_NAME_STYLES_GUMMY_PRESETS: c5, DISPLAY_NAME_STYLES_PRISM_PRESETS: closure_6 } = items3);
-const result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEffectDefaultColors.native.tsx");
+({
+  DISPLAY_NAME_STYLES_GRADIENT_PRESETS: c4,
+  DISPLAY_NAME_STYLES_GUMMY_PRESETS: c5,
+  DISPLAY_NAME_STYLES_PRISM_PRESETS: closure_6,
+} = items3);
+const result = require("set").fileFinishedImporting(
+  "modules/display_name_styles/hooks/useDisplayNameStylesEffectDefaultColors.native.tsx",
+);
 
 export default function useDisplayNameStylesEffectDefaultColors() {
   let obj = int2hslRaw;
@@ -42,4 +48,4 @@ export default function useDisplayNameStylesEffectDefaultColors() {
     obj[hex2intResult(closure_1_2[5]).DisplayNameEffect.TEST_4] = items8;
     return obj;
   }, items);
-};
+}

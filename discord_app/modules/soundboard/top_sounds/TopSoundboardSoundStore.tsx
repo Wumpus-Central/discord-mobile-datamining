@@ -5,8 +5,7 @@ import dispatcherDefault from "../../../Dispatcher.tsx";
 let obj = { topSoundboardSoundsByGuildId: {} };
 let closure_2 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class TopSoundboardSoundStore extends PersistedStore {
-}
+class TopSoundboardSoundStore extends PersistedStore {}
 const prototype = TopSoundboardSoundStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let tmp = arg0;
@@ -38,7 +37,7 @@ obj = {
     ({ guildId, topSoundsMetadata } = arg0);
     obj.topSoundboardSoundsByGuildId[guildId] = topSoundsMetadata.map((soundId) => soundId.soundId);
     closure_2[guildId] = false;
-  }
+  },
 };
 const topSoundboardSoundStore = new TopSoundboardSoundStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/soundboard/top_sounds/TopSoundboardSoundStore.tsx");

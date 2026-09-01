@@ -20,7 +20,7 @@ export default function openUserContextMenuCommands(analyticsLocations) {
       let obj = analyticsLocations(closure_1_2[0]);
       obj = { action: "PRESS_APP_COMMAND", analyticsLocations };
       return obj.trackUserProfileAction(obj);
-    }
+    },
   };
   const result1 = analyticsLocations(4332).navigateToContextMenuCommands(obj);
-};
+}

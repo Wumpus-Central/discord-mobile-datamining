@@ -13,13 +13,13 @@ obj = {
   },
   parent: null,
   IconComponent: BellIcon.BellIcon,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.NOTIFICATIONS,
   getComponent() {
     return SystemNotificationsSubLabel /* SystemNotificationsSubLabel */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/NotificationsSetting.tsx");

@@ -3,7 +3,7 @@ import set from "../../../../_runtime/00002_set.js";
 import StatusTypes from "../Constants.tsx";
 
 const ClearAfterValues = StatusTypes.ClearAfterValues;
-const items = [, , ];
+const items = [, ,];
 ({ MINUTES_30: arr[0], HOURS_1: arr[1], HOURS_4: arr[2] } = ClearAfterValues);
 const result = set.fileFinishedImporting("modules/custom_status/utils/computeInitialClearAfter.tsx");
 
@@ -50,4 +50,4 @@ export default function computeInitialClearAfter() {
     }
   }
   return ClearAfterValues.TODAY;
-};
+}

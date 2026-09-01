@@ -24,13 +24,13 @@ obj = {
       const result = obj.openCollectiblesShopMobile(obj);
       return false;
     };
-  }
+  },
 };
 obj = {
   route: ME.UserSettingsSections.COLLECTIBLES_SHOP,
   getComponent() {
     return CollectiblesShopScreen /* CollectiblesShopScreen */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 let result = set.fileFinishedImporting("modules/user_settings/defs/native/CollectiblesShopSetting.tsx");

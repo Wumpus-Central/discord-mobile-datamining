@@ -17,7 +17,13 @@ if (!set.isAndroid()) {
 }
 const result = set.fileFinishedImporting("modules/launchpad/native/LaunchPadConstants.tsx");
 
-export const LAUNCH_PAD_SPRING_CONFIG = { damping: 20, stiffness: 280, mass: 0.5, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
+export const LAUNCH_PAD_SPRING_CONFIG = {
+  damping: 20,
+  stiffness: 280,
+  mass: 0.5,
+  restSpeedThreshold: 0.001,
+  restDisplacementThreshold: 0.001,
+};
 export const LAUNCH_PAD_PULL_TAB_HEIGHT = 96;
 export const LAUNCH_PAD_PULL_TAB_WIDTH = 26;
 export const LAUNCH_PAD_PULL_TAB_MINIMIZED_OFFSET = 18;
@@ -32,4 +38,9 @@ export const LAUNCH_PAD_PULL_TAB_HIT_SLOP = 16;
 export const LAUNCH_PAD_END_TRANSLATION_THRESHOLD = 14;
 export const LAUNCH_PAD_END_VELOCITY_THRESHOLD = 100;
 export const LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE = num;
-export const LaunchPadTypes = { GESTURE_FULL: "gesture-full", GESTURE_EDGE: "gesture-edge", PULL_TAB: "pull-tab", DISABLED: "disabled" };
+export const LaunchPadTypes = {
+  GESTURE_FULL: "gesture-full",
+  GESTURE_EDGE: "gesture-edge",
+  PULL_TAB: "pull-tab",
+  DISABLED: "disabled",
+};

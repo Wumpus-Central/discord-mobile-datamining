@@ -14,18 +14,37 @@ const require = arg1;
 ({ Image: c4, View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: c10, Permissions: unpackModuleId } = ME);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-createCacheKey = { container: null, scrollView: null, scrollViewContentContainer: null, inner: null, text: null, footer: null, footerLandscape: null, footerPortrait: null };
+createCacheKey = {
+  container: null,
+  scrollView: null,
+  scrollViewContentContainer: null,
+  inner: null,
+  text: null,
+  footer: null,
+  footerLandscape: null,
+  footerPortrait: null,
+};
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { height: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
+createCacheKey[2] = {
+  height: "100%",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[3] = { flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: 16 };
 createCacheKey[4] = { marginTop: 24, paddingHorizontal: 40, textAlign: "center" };
 createCacheKey[5] = { flexDirection: "column", justifyContent: "space-between", padding: 16, gap: 16 };
 createCacheKey[6] = { flexDirection: "row-reverse", padding: 16 };
 createCacheKey[7] = { flexDirection: "column", padding: 16 };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { height: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
+let obj1 = {
+  height: "100%",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  alignItems: "center",
+  justifyContent: "center",
+};
 const result = require("set").fileFinishedImporting("modules/oauth2/native/SuccessResult.tsx");
 
 export default function SuccessResultModal(guild) {
@@ -71,7 +90,7 @@ export default function SuccessResultModal(guild) {
       return intl.string(guild(stateFromStores[11]).t["Dp+rgP"]);
     }
   }, items);
-  const items1 = [guild, ];
+  const items1 = [guild];
   let id;
   if (application != null) {
     id = application.id;
@@ -172,12 +191,14 @@ export default function SuccessResultModal(guild) {
     application(stateFromStores[14]).track(closure_1_10.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
   }, items6);
   const items7 = [closure_8];
-  const stateFromStores1 = guild(stateFromStores[15]).useStateFromStores(items7, () => closure_1_8.can(closure_1_11.SEND_MESSAGES, closure_3));
+  const stateFromStores1 = guild(stateFromStores[15]).useStateFromStores(items7, () =>
+    closure_1_8.can(closure_1_11.SEND_MESSAGES, closure_3),
+  );
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { style: tmp.scrollView, contentContainerStyle: tmp.scrollViewContentContainer, children: null };
   obj1 = { style: tmp.inner, children: null };
   const tmp2Result1 = guild(stateFromStores[15]);
-  const items8 = [callback(closure_4, { source: application(stateFromStores[20]) }), , ];
+  const items8 = [callback(closure_4, { source: application(stateFromStores[20]) }), ,];
   let obj3 = { style: tmp.text, variant: "text-lg/medium", children: null };
   let intl = tmp2(tmp3[11]).intl;
   obj3[2] = intl.string(guild(stateFromStores[11]).t.se5gLj);
@@ -192,10 +213,13 @@ export default function SuccessResultModal(guild) {
   items8[2] = tmp15Result;
   obj1[1] = items8;
   obj[2] = closure_14(closure_5, obj1);
-  const items9 = [callback(closure_6, obj), ];
-  const items10 = [tmp.footer, ];
+  const items9 = [callback(closure_6, obj)];
+  const items10 = [tmp.footer];
   const obj5 = { style: null, children: null };
-  items10[1] = obj.useStore().orientation === guild(stateFromStores[10]).OrientationType.LANDSCAPE ? tmp.footerLandscape : tmp.footerPortrait;
+  items10[1] =
+    obj.useStore().orientation === guild(stateFromStores[10]).OrientationType.LANDSCAPE
+      ? tmp.footerLandscape
+      : tmp.footerPortrait;
   obj5[0] = items10;
   tmp15Result = null;
   if (null != guild) {
@@ -211,7 +235,7 @@ export default function SuccessResultModal(guild) {
     obj6[2] = callback;
     tmp15Result = tmp15(tmp2(tmp3[22]).Button, obj6);
   }
-  const items11 = [tmp15Result, , ];
+  const items11 = [tmp15Result, ,];
   let tmp15Result1 = null;
   if (null != stateFromStores) {
     tmp15Result1 = null;
@@ -239,4 +263,4 @@ export default function SuccessResultModal(guild) {
   items9[1] = callback(closure_5, obj5);
   obj[2] = items9;
   return closure_14(guild(stateFromStores[19]).SafeAreaPaddingView, obj);
-};
+}

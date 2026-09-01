@@ -66,7 +66,15 @@ function AnimatedNativeCutoutAvatarImage(cutout) {
   fn.__workletHash = 12529564164821;
   fn.__initData = closure_15;
   const animatedProps = obj.useAnimatedProps(fn);
-  obj = { style, animatedProps, children: callback(preloadDefault, { style: items, source: getReactNativeSVGImageSourceDefault(source), usesSmallCache: true }) };
+  obj = {
+    style,
+    animatedProps,
+    children: callback(preloadDefault, {
+      style: items,
+      source: getReactNativeSVGImageSourceDefault(source),
+      usesSmallCache: true,
+    }),
+  };
   items = [obj.image, imageStyle];
   return callback(cutout(8098).ClipViewAnimated, obj);
 }
@@ -150,7 +158,7 @@ function CutoutAvatarImage(arg0) {
       tmp10Result = tmp10(inlineStyles.Rect, obj5);
     }
     const obj6 = { children: null };
-    const items = [tmp10Result, ];
+    const items = [tmp10Result];
     const obj7 = { cx: null, cy: null, r: null, fill: "black" };
     obj7[0] = diff;
     obj7[1] = diff1;
@@ -158,7 +166,7 @@ function CutoutAvatarImage(arg0) {
     items[1] = tmp10(inlineStyles.Circle, obj7);
     obj3[3] = items;
     obj6[0] = closure_8(inlineStyles.Mask, obj3);
-    const items1 = [tmp10(inlineStyles.Defs, obj6), tmp8, ];
+    const items1 = [tmp10(inlineStyles.Defs, obj6), tmp8];
     if (null == cutout.border) {
       const obj8 = { height: "100%", width: "100%", children: null };
       items1[2] = null;
@@ -190,7 +198,14 @@ function CutoutAvatarImage(arg0) {
     tmp15 = closure_5;
     tmp9Result = inlineStylesDefault;
   }
-  tmp8 = callback(inlineStyles.Image, { x: "0", y: "0", height: "100%", width: "100%", href: getReactNativeSVGImageSourceDefault(source), mask: "url(#" + v4Result + ")" });
+  tmp8 = callback(inlineStyles.Image, {
+    x: "0",
+    y: "0",
+    height: "100%",
+    width: "100%",
+    href: getReactNativeSVGImageSourceDefault(source),
+    mask: "url(#" + v4Result + ")",
+  });
   tmp9 = importDefault;
   tmp10 = callback;
 }
@@ -198,12 +213,96 @@ let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = new timestampDefault("UIKit - AvatarImage");
-let obj = { XXSMALL: "xxsmall", XSMALL: "xsmall", SMALL: "small", NORMAL: "normal", LARGE: "large", XLARGE: "xlarge", XLARGE_72: "xlarge72", XXLARGE: "xxlarge", PROFILE: "profile", REFRESH_MEDIUM_32: "refreshMedium32", XXSMALL_10: "xsmall10", XSMALL_20: "xsmall20", SIZE_16: "size16", LARGE_48: "large48", EDIT_AVATAR_DECORATION: "editAvatarDecoration", GIFT_START: "giftStart", GIFT_SUCCESS: "giftSuccess", YOUBAR_60: "youBar60", TABS_22: "tabs22" };
-const frozen = Object.freeze({ [obj.XXSMALL_10]: 10, [obj.SIZE_16]: 16, [obj.XXSMALL]: 18, [obj.XSMALL_20]: 20, [obj.XSMALL]: 24, [obj.SMALL]: 30, [obj.NORMAL]: 40, [obj.LARGE_48]: 48, [obj.LARGE]: 50, [obj.XLARGE]: 64, [obj.XLARGE_72]: 72, [obj.XXLARGE]: 80, [obj.PROFILE]: 128, [obj.EDIT_AVATAR_DECORATION]: 144, [obj.GIFT_START]: 184, [obj.GIFT_SUCCESS]: 236, [obj.REFRESH_MEDIUM_32]: 32, [obj.YOUBAR_60]: 60, [obj.TABS_22]: 22 });
-obj = { image: { width: "100%", height: "100%" }, xxsmall: obj1, xsmall10: obj2, xsmall20: obj3, xsmall: obj4, small: obj5, normal: obj6, large: obj7, xlarge: obj8, xlarge72: obj9, xxlarge: obj10, refreshMedium32: obj11, profile: obj12, size16: obj13, large48: obj14, editAvatarDecoration: obj15, giftStart: obj16, giftSuccess: obj17, youBar60: obj18, tabs22: obj19, borderRadii: { xxsmall: obj20, xsmall10: obj21, xsmall20: obj22, xsmall: obj23, small: obj24, normal: obj25, large: obj26, xlarge: obj27, xlarge72: obj28, xxlarge: obj29, refreshMedium32: obj30, profile: obj31, size16: obj32, large48: obj33, editAvatarDecoration: obj34, giftStart: obj35, giftSuccess: obj36, youBar60: obj37, tabs22: obj38 } };
+let obj = {
+  XXSMALL: "xxsmall",
+  XSMALL: "xsmall",
+  SMALL: "small",
+  NORMAL: "normal",
+  LARGE: "large",
+  XLARGE: "xlarge",
+  XLARGE_72: "xlarge72",
+  XXLARGE: "xxlarge",
+  PROFILE: "profile",
+  REFRESH_MEDIUM_32: "refreshMedium32",
+  XXSMALL_10: "xsmall10",
+  XSMALL_20: "xsmall20",
+  SIZE_16: "size16",
+  LARGE_48: "large48",
+  EDIT_AVATAR_DECORATION: "editAvatarDecoration",
+  GIFT_START: "giftStart",
+  GIFT_SUCCESS: "giftSuccess",
+  YOUBAR_60: "youBar60",
+  TABS_22: "tabs22",
+};
+const frozen = Object.freeze({
+  [obj.XXSMALL_10]: 10,
+  [obj.SIZE_16]: 16,
+  [obj.XXSMALL]: 18,
+  [obj.XSMALL_20]: 20,
+  [obj.XSMALL]: 24,
+  [obj.SMALL]: 30,
+  [obj.NORMAL]: 40,
+  [obj.LARGE_48]: 48,
+  [obj.LARGE]: 50,
+  [obj.XLARGE]: 64,
+  [obj.XLARGE_72]: 72,
+  [obj.XXLARGE]: 80,
+  [obj.PROFILE]: 128,
+  [obj.EDIT_AVATAR_DECORATION]: 144,
+  [obj.GIFT_START]: 184,
+  [obj.GIFT_SUCCESS]: 236,
+  [obj.REFRESH_MEDIUM_32]: 32,
+  [obj.YOUBAR_60]: 60,
+  [obj.TABS_22]: 22,
+});
+obj = {
+  image: { width: "100%", height: "100%" },
+  xxsmall: obj1,
+  xsmall10: obj2,
+  xsmall20: obj3,
+  xsmall: obj4,
+  small: obj5,
+  normal: obj6,
+  large: obj7,
+  xlarge: obj8,
+  xlarge72: obj9,
+  xxlarge: obj10,
+  refreshMedium32: obj11,
+  profile: obj12,
+  size16: obj13,
+  large48: obj14,
+  editAvatarDecoration: obj15,
+  giftStart: obj16,
+  giftSuccess: obj17,
+  youBar60: obj18,
+  tabs22: obj19,
+  borderRadii: {
+    xxsmall: obj20,
+    xsmall10: obj21,
+    xsmall20: obj22,
+    xsmall: obj23,
+    small: obj24,
+    normal: obj25,
+    large: obj26,
+    xlarge: obj27,
+    xlarge72: obj28,
+    xxlarge: obj29,
+    refreshMedium32: obj30,
+    profile: obj31,
+    size16: obj32,
+    large48: obj33,
+    editAvatarDecoration: obj34,
+    giftStart: obj35,
+    giftSuccess: obj36,
+    youBar60: obj37,
+    tabs22: obj38,
+  },
+};
 const obj39 = { RIGHT: 0, [0]: "RIGHT", BOTTOM_RIGHT: 1, [1]: "BOTTOM_RIGHT", BOTTOM_LEFT: 2, [2]: "BOTTOM_LEFT" };
 const obj40 = { RECTANGULAR: 0, [0]: "RECTANGULAR", CIRCULAR: 1, [1]: "CIRCULAR" };
-let closure_15 = { code: "function CutoutableAvatarImageTsx1(){const{cutout,CutoutShape,withSpring,CHANNEL_SPRING_CONFIG}=this.__closure;const animatedCutout=cutout.shape===CutoutShape.RoundedRect?{shape:CutoutShape.RoundedRect,x:withSpring(cutout.x,CHANNEL_SPRING_CONFIG),y:withSpring(cutout.y,CHANNEL_SPRING_CONFIG),width:withSpring(cutout.width,CHANNEL_SPRING_CONFIG),height:withSpring(cutout.height,CHANNEL_SPRING_CONFIG),cornerRadius:withSpring(cutout.cornerRadius,CHANNEL_SPRING_CONFIG)}:{shape:CutoutShape.Circle,x:withSpring(cutout.x,CHANNEL_SPRING_CONFIG),y:withSpring(cutout.y,CHANNEL_SPRING_CONFIG),size:withSpring(cutout.size,CHANNEL_SPRING_CONFIG)};return{cutouts:[animatedCutout]};}" };
+let closure_15 = {
+  code: "function CutoutableAvatarImageTsx1(){const{cutout,CutoutShape,withSpring,CHANNEL_SPRING_CONFIG}=this.__closure;const animatedCutout=cutout.shape===CutoutShape.RoundedRect?{shape:CutoutShape.RoundedRect,x:withSpring(cutout.x,CHANNEL_SPRING_CONFIG),y:withSpring(cutout.y,CHANNEL_SPRING_CONFIG),width:withSpring(cutout.width,CHANNEL_SPRING_CONFIG),height:withSpring(cutout.height,CHANNEL_SPRING_CONFIG),cornerRadius:withSpring(cutout.cornerRadius,CHANNEL_SPRING_CONFIG)}:{shape:CutoutShape.Circle,x:withSpring(cutout.x,CHANNEL_SPRING_CONFIG),y:withSpring(cutout.y,CHANNEL_SPRING_CONFIG),size:withSpring(cutout.size,CHANNEL_SPRING_CONFIG)};return{cutouts:[animatedCutout]};}",
+};
 obj1 = { width: frozen[obj.XXSMALL], height: frozen[obj.XXSMALL] };
 obj10 = { width: frozen[obj.XXLARGE], height: frozen[obj.XXLARGE] };
 obj11 = { width: frozen[obj.REFRESH_MEDIUM_32], height: frozen[obj.REFRESH_MEDIUM_32] };
@@ -243,134 +342,137 @@ obj7 = { width: frozen[obj.LARGE], height: frozen[obj.LARGE] };
 obj8 = { width: frozen[obj.XLARGE], height: frozen[obj.XLARGE] };
 obj9 = { width: frozen[obj.XLARGE_72], height: frozen[obj.XLARGE_72] };
 let tmp4 = new timestampDefault("UIKit - AvatarImage");
-const memoResult = importAllResult.memo((style) => {
-  ({ animate, cutout, size } = style);
-  const items = [obj[size], style.style];
-  obj = {};
-  const merged = Object.assign(style);
-  let tmp4 = true === animate;
-  if (tmp4) {
-    tmp4 = null == cutout;
-  }
-  obj.animate = tmp4;
-  obj.size = frozen[size];
-  ({ source, user, channel, animate: animate2, size: size2 } = obj);
-  if (null != source) {
-    let sourceResult = source;
-    if (typeof source === "function") {
-      sourceResult = source(animate2);
+const memoResult = importAllResult.memo(
+  (style) => {
+    ({ animate, cutout, size } = style);
+    const items = [obj[size], style.style];
+    obj = {};
+    const merged = Object.assign(style);
+    let tmp4 = true === animate;
+    if (tmp4) {
+      tmp4 = null == cutout;
     }
-    let avatarSource = sourceResult;
-  } else if (null != user) {
-    avatarSource = user.getAvatarSource(tmp6, animate2, size2);
-  } else if (null != channel) {
-    obj1 = getChannelIconURL;
-    const channelIconURL = obj1.getChannelIconURL(channel, size2);
-    let tmp13 = channelIconURL;
-    if (typeof channelIconURL !== "number") {
-      tmp13 = channelIconURL;
-      if (null != channelIconURL) {
-        obj = { uri: null };
-        obj[0] = channelIconURL;
-        tmp13 = obj;
+    obj.animate = tmp4;
+    obj.size = frozen[size];
+    ({ source, user, channel, animate: animate2, size: size2 } = obj);
+    if (null != source) {
+      let sourceResult = source;
+      if (typeof source === "function") {
+        sourceResult = source(animate2);
       }
-    }
-    avatarSource = tmp13;
-  } else {
-    logger.warn("No image found from provided data");
-  }
-  if (null == avatarSource) {
-    return null;
-  } else {
-    const user2 = obj.user;
-    if (null != user2) {
-      if (!tmp30) {
-        const obj4 = getAvatarURLDefault;
-        source = obj4.makeSource(getAvatarURLDefault.getDefaultAvatarURL(user2.id, user2.discriminator));
-        const obj5 = getAvatarURLDefault;
-      }
-    }
-    if (null != cutout) {
-      const nativeCutouts = cutout.nativeCutouts;
-      let length;
-      if (nativeCutouts != null) {
-        length = nativeCutouts.length;
-      }
-      if (1 === length) {
-        obj = { animate: null, cutout: null, source: null, style: null, imageStyle: null };
-        obj[0] = animate;
-        cutout = cutout.nativeCutouts[0];
-        obj[1] = cutout;
-        obj[2] = avatarSource;
-        obj[3] = items;
-        obj[4] = tmp2;
-        let tmp26 = callback(NativeCutoutAvatarImage, obj);
-      } else {
-        obj1 = { style: null, size: null, animate: null, cutout: null, source: null };
-        obj1[0] = items;
-        obj1[1] = tmp;
-        obj1[2] = animate;
-        obj1[3] = cutout;
-        obj1[4] = avatarSource;
-        tmp26 = callback(CutoutAvatarImage, obj1);
-      }
-    } else {
-      const obj2 = { style: null, source: null, placeholder: null, usesSmallCache: true };
-      const items1 = [items, tmp2];
-      obj2[0] = items1;
-      obj2[1] = avatarSource;
-      let tmp22;
-      if (typeof source === "number") {
-        tmp22 = source;
-      }
-      obj2[2] = tmp22;
-      return callback(preloadDefault, obj2, "image");
-    }
-  }
-}, function customShallowEqual(source, source2) {
-  if (shallowEqualDefault(source, source2, ["source"])) {
-    source = source.source;
-    const source1 = source2.source;
-    if (source === source1) {
-      return true;
-    } else {
-      if (typeof source1 !== "number") {
-        if (typeof source1 === typeof source) {
-          const _Array2 = Array;
-          if (Array.isArray(source1)) {
-            const _Array = Array;
-            if (Array.isArray(source)) {
-              if (source.length !== source1.length) {
-                return false;
-              } else {
-                let num = 0;
-                if (0 < source.length) {
-                  while (shallowEqualDefault(source[num], source1[num])) {
-                    num = num + 1;
-                  }
-                  return false;
-                }
-                return true;
-              }
-            }
-          }
-          let tmp3 = typeof source1 !== "object";
-          if (typeof source1 === "object") {
-            tmp3 = typeof source !== "object";
-          }
-          if (!tmp3) {
-            tmp3 = shallowEqualDefault(source1, source);
-          }
-          return tmp3;
+      let avatarSource = sourceResult;
+    } else if (null != user) {
+      avatarSource = user.getAvatarSource(tmp6, animate2, size2);
+    } else if (null != channel) {
+      obj1 = getChannelIconURL;
+      const channelIconURL = obj1.getChannelIconURL(channel, size2);
+      let tmp13 = channelIconURL;
+      if (typeof channelIconURL !== "number") {
+        tmp13 = channelIconURL;
+        if (null != channelIconURL) {
+          obj = { uri: null };
+          obj[0] = channelIconURL;
+          tmp13 = obj;
         }
       }
+      avatarSource = tmp13;
+    } else {
+      logger.warn("No image found from provided data");
+    }
+    if (null == avatarSource) {
+      return null;
+    } else {
+      const user2 = obj.user;
+      if (null != user2) {
+        if (!tmp30) {
+          const obj4 = getAvatarURLDefault;
+          source = obj4.makeSource(getAvatarURLDefault.getDefaultAvatarURL(user2.id, user2.discriminator));
+          const obj5 = getAvatarURLDefault;
+        }
+      }
+      if (null != cutout) {
+        const nativeCutouts = cutout.nativeCutouts;
+        let length;
+        if (nativeCutouts != null) {
+          length = nativeCutouts.length;
+        }
+        if (1 === length) {
+          obj = { animate: null, cutout: null, source: null, style: null, imageStyle: null };
+          obj[0] = animate;
+          cutout = cutout.nativeCutouts[0];
+          obj[1] = cutout;
+          obj[2] = avatarSource;
+          obj[3] = items;
+          obj[4] = tmp2;
+          let tmp26 = callback(NativeCutoutAvatarImage, obj);
+        } else {
+          obj1 = { style: null, size: null, animate: null, cutout: null, source: null };
+          obj1[0] = items;
+          obj1[1] = tmp;
+          obj1[2] = animate;
+          obj1[3] = cutout;
+          obj1[4] = avatarSource;
+          tmp26 = callback(CutoutAvatarImage, obj1);
+        }
+      } else {
+        const obj2 = { style: null, source: null, placeholder: null, usesSmallCache: true };
+        const items1 = [items, tmp2];
+        obj2[0] = items1;
+        obj2[1] = avatarSource;
+        let tmp22;
+        if (typeof source === "number") {
+          tmp22 = source;
+        }
+        obj2[2] = tmp22;
+        return callback(preloadDefault, obj2, "image");
+      }
+    }
+  },
+  function customShallowEqual(source, source2) {
+    if (shallowEqualDefault(source, source2, ["source"])) {
+      source = source.source;
+      const source1 = source2.source;
+      if (source === source1) {
+        return true;
+      } else {
+        if (typeof source1 !== "number") {
+          if (typeof source1 === typeof source) {
+            const _Array2 = Array;
+            if (Array.isArray(source1)) {
+              const _Array = Array;
+              if (Array.isArray(source)) {
+                if (source.length !== source1.length) {
+                  return false;
+                } else {
+                  let num = 0;
+                  if (0 < source.length) {
+                    while (shallowEqualDefault(source[num], source1[num])) {
+                      num = num + 1;
+                    }
+                    return false;
+                  }
+                  return true;
+                }
+              }
+            }
+            let tmp3 = typeof source1 !== "object";
+            if (typeof source1 === "object") {
+              tmp3 = typeof source !== "object";
+            }
+            if (!tmp3) {
+              tmp3 = shallowEqualDefault(source1, source);
+            }
+            return tmp3;
+          }
+        }
+        return false;
+      }
+    } else {
       return false;
     }
-  } else {
-    return false;
-  }
-  const tmp = importDefault;
-});
+    const tmp = importDefault;
+  },
+);
 let result = require("set").fileFinishedImporting("design/void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx");
 
 export default memoResult;

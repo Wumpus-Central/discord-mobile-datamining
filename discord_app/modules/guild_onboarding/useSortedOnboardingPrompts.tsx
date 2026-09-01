@@ -8,7 +8,9 @@ const result = require("set").fileFinishedImporting("modules/guild_onboarding/us
 export default function useSortedOnboardingPrompts(arg0) {
   const _require = arg0;
   let items = [closure_3];
-  stateFromStoresArray = _require(stateFromStoresArray[2]).useStateFromStoresArray(items, () => closure_1_3.getEnabledOnboardingPrompts(closure_0));
+  stateFromStoresArray = _require(stateFromStoresArray[2]).useStateFromStoresArray(items, () =>
+    closure_1_3.getEnabledOnboardingPrompts(closure_0),
+  );
   let items1 = [stateFromStoresArray];
   return React.useMemo(() => {
     let arr5;
@@ -46,6 +48,12 @@ export default function useSortedOnboardingPrompts(arg0) {
         tmp = arr5;
       } while (num < arr5.length);
     }
-    return { onboardingPromptsRaw: tmp, newOnboardingPrompts: items, onboardingPromptsWithNewAnswers: items1, newAnswersCount: num3, onboardingPrompts: items2.concat(items3) };
+    return {
+      onboardingPromptsRaw: tmp,
+      newOnboardingPrompts: items,
+      onboardingPromptsWithNewAnswers: items1,
+      newAnswersCount: num3,
+      onboardingPrompts: items2.concat(items3),
+    };
   }, items1);
-};
+}

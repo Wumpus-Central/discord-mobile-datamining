@@ -29,8 +29,35 @@ class ButtonBadge {
 let c3 = importAllResult;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles(() => {
-  let obj = { actionIconButtonPressable: { minWidth: 32, minHeight: 32, borderRadius: 20, marginEnd: 12, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 12 }, withoutMargin: { marginEnd: 0 }, filled: {}, outlined: null, roundButton: null, actionIcon: null, actionText: null, unreadBadgeLeft: null, unreadBadgeRight: null, unreadBadgeMask: null, countStyle: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT };
+  let obj = {
+    actionIconButtonPressable: {
+      minWidth: 32,
+      minHeight: 32,
+      borderRadius: 20,
+      marginEnd: 12,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexDirection: "row",
+      paddingRight: 12,
+      paddingLeft: 12,
+    },
+    withoutMargin: { marginEnd: 0 },
+    filled: {},
+    outlined: null,
+    roundButton: null,
+    actionIcon: null,
+    actionText: null,
+    unreadBadgeLeft: null,
+    unreadBadgeRight: null,
+    unreadBadgeMask: null,
+    countStyle: null,
+  };
+  obj = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    borderWidth: 1,
+    borderColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  };
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
   obj[3] = obj;
   obj[4] = { maxWidth: 32, maxHeight: 32 };
@@ -65,7 +92,9 @@ let closure_7 = importAllResult.memo((color) => {
   }
   return tmp2Result;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/IconActionButton.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/IconActionButton.tsx",
+);
 
 export default function IconActionButton(variant) {
   let str = variant.variant;
@@ -88,8 +117,17 @@ export default function IconActionButton(variant) {
   if (tmp10Result) {
     tmp10Result = tmp5 <= 1.2;
   }
-  let obj = { hitSlop, onPress, onLongPress, disabled, accessibilityRole: "button", accessibilityLabel, style: null, children: null };
-  const items = [tmp.actionIconButtonPressable, "outlined" === str ? tmp.outlined : tmp.filled, , , ];
+  let obj = {
+    hitSlop,
+    onPress,
+    onLongPress,
+    disabled,
+    accessibilityRole: "button",
+    accessibilityLabel,
+    style: null,
+    children: null,
+  };
+  const items = [tmp.actionIconButtonPressable, "outlined" === str ? tmp.outlined : tmp.filled, , ,];
   let roundButton;
   if (!tmp10Result) {
     roundButton = tmp.roundButton;
@@ -102,7 +140,7 @@ export default function IconActionButton(variant) {
   items[3] = withoutMargin;
   items[4] = style;
   obj[6] = items;
-  const items1 = [callback(closure_7, { IconComponent, color, source }), , , ];
+  const items1 = [callback(closure_7, { IconComponent, color, source }), , ,];
   if (tmp10Result) {
     obj = { variant: "text-sm/bold", color: null, style: null, children: null };
     obj[1] = buttonTextColor;
@@ -127,6 +165,6 @@ export default function IconActionButton(variant) {
   items1[3] = badge;
   obj[7] = items1;
   return closure_5(PressableBase.PressableOpacity, obj);
-};
+}
 export const ICON_ACTION_BUTTON_SIZE = 32;
 export { ButtonBadge };

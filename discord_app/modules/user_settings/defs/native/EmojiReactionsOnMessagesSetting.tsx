@@ -12,7 +12,7 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.CHAT,
   useValue: explicitContentFromProto.RenderReactions.useSetting,
-  onValueChange: explicitContentFromProto.RenderReactions.updateSetting
+  onValueChange: explicitContentFromProto.RenderReactions.updateSetting,
 });
 const obj = {
   useTitle() {
@@ -21,7 +21,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.CHAT,
   useValue: explicitContentFromProto.RenderReactions.useSetting,
-  onValueChange: explicitContentFromProto.RenderReactions.updateSetting
+  onValueChange: explicitContentFromProto.RenderReactions.updateSetting,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/EmojiReactionsOnMessagesSetting.tsx");
 

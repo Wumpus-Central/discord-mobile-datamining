@@ -12,7 +12,7 @@ export default function isForwardMessage(messageReference) {
     type = messageReference.type;
   }
   return type === MessageReferenceTypes.FORWARD;
-};
+}
 export const isForwardServerMessage = function isForwardServerMessage(message_reference) {
   message_reference = message_reference.message_reference;
   let type;

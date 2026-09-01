@@ -12,8 +12,7 @@ let closure_6 = {};
 let closure_7 = {};
 let closure_8 = {};
 const Store = initializeDefault.Store;
-class UploadStore extends Store {
-}
+class UploadStore extends Store {}
 const prototype = UploadStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_0);
@@ -277,7 +276,7 @@ const uploadStore = new UploadStore(dispatcherDefault, {
   },
   UPLOAD_RESTORE_FAILED_UPLOAD: function restoreFailedUpload(messageId) {
     closure_7[messageId.messageId] = messageId.file;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/UploadStore.tsx");
 

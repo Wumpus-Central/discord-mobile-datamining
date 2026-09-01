@@ -11,7 +11,7 @@ function _fetchUserEntitlements() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       let flag3 = tmp3;
       flag = flag.withSku;
       if (flag === undefined) {
@@ -73,7 +73,7 @@ function _fetchUserEntitlements() {
 }
 function _fetchGiftableEntitlements() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const callback = tmp3;
     closure_1_1(closure_1_2[2]).dispatch({ type: "ENTITLEMENTS_GIFTABLE_FETCH" });
     c3 = 1;
@@ -124,18 +124,25 @@ export const fetchUserEntitlementsForApplication = function fetchUserEntitlement
     obj.dispatch(obj);
   });
   const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-  obj = { url: Endpoints.ENTITLEMENTS_FOR_APPLICATION(closure_18), oldFormErrors: true, query: { exclude_consumed: flag }, rejectWithError: true };
+  obj = {
+    url: Endpoints.ENTITLEMENTS_FOR_APPLICATION(closure_18),
+    oldFormErrors: true,
+    query: { exclude_consumed: flag },
+    rejectWithError: true,
+  };
   const value = HTTP.get(obj);
-  return value.then((body) => {
-    let obj = closure_1_1(closure_1_2[2]);
-    obj = { type: "ENTITLEMENT_FETCH_APPLICATION_SUCCESS", applicationId: closure_0, entitlements: body.body };
-    obj.dispatch(obj);
-    return body.body;
-  }).catch(() => {
-    let obj = closure_1_1(closure_1_2[2]);
-    obj = { type: "ENTITLEMENT_FETCH_APPLICATION_FAIL", applicationId: closure_0 };
-    obj.dispatch(obj);
-  });
+  return value
+    .then((body) => {
+      let obj = closure_1_1(closure_1_2[2]);
+      obj = { type: "ENTITLEMENT_FETCH_APPLICATION_SUCCESS", applicationId: closure_0, entitlements: body.body };
+      obj.dispatch(obj);
+      return body.body;
+    })
+    .catch(() => {
+      let obj = closure_1_1(closure_1_2[2]);
+      obj = { type: "ENTITLEMENT_FETCH_APPLICATION_FAIL", applicationId: closure_0 };
+      obj.dispatch(obj);
+    });
 };
 export const fetchUserEntitlements = function fetchUserEntitlements(arg0) {
   const self = this;

@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/activities/utils/stopSyncingUs
 
 export default function stopSyncingUserActivity() {
   dispatcherDefault.dispatch({ type: "ACTIVITY_SYNC_STOP" });
-};
+}

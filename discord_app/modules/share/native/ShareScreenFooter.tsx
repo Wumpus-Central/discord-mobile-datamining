@@ -18,7 +18,8 @@ export default function ShareScreenFooter(arg0) {
   }
   let obj = useShareChatInputActions;
   const shareChatInputActions = obj.useShareChatInputActions(setText, undefined, appEntryKey);
-  ({ textInputRef, isInputFocused, handleSelectionChange, handleMessageFocus, handleMessageBlur, handlePressEmoji } = shareChatInputActions);
+  ({ textInputRef, isInputFocused, handleSelectionChange, handleMessageFocus, handleMessageBlur, handlePressEmoji } =
+    shareChatInputActions);
   obj = { preview, sendButton: null, chatInput: null, avoidKeyboard: null };
   obj = { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null };
   let tmp6 = !canSend;
@@ -32,8 +33,32 @@ export default function ShareScreenFooter(arg0) {
   }
   obj[4] = tmp7;
   obj[5] = isSending;
-  obj[1] = jsx(Button.Button, { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null });
-  obj[2] = jsx(ShareChatInputDefault, { inputRef: textInputRef, text, onChange: setText, onSelectionChange: handleSelectionChange, onFocus: handleMessageFocus, onBlur: handleMessageBlur, onPressEmoji: handlePressEmoji, onSend, disabled });
+  obj[1] = jsx(Button.Button, {
+    variant: "primary",
+    size: "md",
+    text: sendLabel,
+    disabled: null,
+    onPress: null,
+    loading: null,
+  });
+  obj[2] = jsx(ShareChatInputDefault, {
+    inputRef: textInputRef,
+    text,
+    onChange: setText,
+    onSelectionChange: handleSelectionChange,
+    onFocus: handleMessageFocus,
+    onBlur: handleMessageBlur,
+    onPressEmoji: handlePressEmoji,
+    onSend,
+    disabled,
+  });
   obj[3] = isInputFocused;
-  return jsx(ShareFooterLayoutDefault, { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null });
-};
+  return jsx(ShareFooterLayoutDefault, {
+    variant: "primary",
+    size: "md",
+    text: sendLabel,
+    disabled: null,
+    onPress: null,
+    loading: null,
+  });
+}

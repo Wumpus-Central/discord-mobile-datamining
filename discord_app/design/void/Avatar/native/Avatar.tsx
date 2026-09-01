@@ -50,11 +50,34 @@ let c3 = importAllResult;
 ({ STATUS_PADDING: closure_6, StatusSizes: error } = STATUS_PADDING);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles((NORMAL) => {
-  let obj = { status: { position: "absolute", right: -3, bottom: -3 }, speaking: null, stageSpeaking: null, voiceStatus: null, decoration: null, container: null };
-  obj = { position: "absolute", right: -2, bottom: -2, backgroundColor: "transparent", borderWidth: 4, borderColor: ThemesDefault.colors.STATUS_SPEAKING };
+  let obj = {
+    status: { position: "absolute", right: -3, bottom: -3 },
+    speaking: null,
+    stageSpeaking: null,
+    voiceStatus: null,
+    decoration: null,
+    container: null,
+  };
+  obj = {
+    position: "absolute",
+    right: -2,
+    bottom: -2,
+    backgroundColor: "transparent",
+    borderWidth: 4,
+    borderColor: ThemesDefault.colors.STATUS_SPEAKING,
+  };
   obj[1] = obj;
   obj[2] = { position: "absolute", right: -2, bottom: -2 };
-  obj = { width: 24, height: 24, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, borderRadius: ThemesDefault.radii.md, right: 0, bottom: 0 };
+  obj = {
+    width: 24,
+    height: 24,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: ThemesDefault.unsafe_rawColors.RED_400,
+    borderRadius: ThemesDefault.radii.md,
+    right: 0,
+    bottom: 0,
+  };
   obj[3] = obj;
   obj1 = { position: "absolute", top: null, left: null };
   const decorationSizeForAvatarSize = getDecorationSizeForAvatarSize.getDecorationSizeForAvatarSize(NORMAL);
@@ -208,7 +231,13 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
       return obj6;
     }
   }, items);
-  let merged = { style: null, needsOffscreenAlphaCompositing: null, accessible: null, accessibilityLabel: null, children: null };
+  let merged = {
+    style: null,
+    needsOffscreenAlphaCompositing: null,
+    accessible: null,
+    accessibilityLabel: null,
+    children: null,
+  };
   let StatusWithTyping = flag;
   ({ cutout: cutout2, decorationCutout } = memo);
   let items1 = [flag(status[7]).styles[NORMAL], tmp3.container, style];
@@ -217,7 +246,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
   merged[2] = accessible;
   merged[3] = accessibilityLabel;
   if (!flag4) {
-    let items2 = [null, , , , ];
+    let items2 = [null, , , ,];
     merged = { disablePlaceholder: null, style: null, cutout: null };
     merged[0] = disablePlaceholder;
     merged[1] = avatarStyle;
@@ -248,7 +277,14 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
               }
               let merged1 = null;
               if (null != statusSizeOverride) {
-                obj1 = { size: null, isMobileOnline: null, isVROnline: null, status: null, streaming: null, style: null };
+                obj1 = {
+                  size: null,
+                  isMobileOnline: null,
+                  isVROnline: null,
+                  status: null,
+                  streaming: null,
+                  style: null,
+                };
                 obj1[0] = statusSizeOverride;
                 obj1[1] = flag;
                 obj1[2] = flag2;
@@ -280,7 +316,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
           items2[3] = tmp37;
           if (deaf) {
             let obj4 = { style: null, children: null };
-            const items4 = [, ];
+            const items4 = [,];
             ({ status: arr8[0], voiceStatus: arr8[1] } = tmp3);
             obj4[0] = items4;
             let obj5 = { size: null, source: null, color: null };
@@ -292,7 +328,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
             const tmp59 = flag2(tmp7[15]);
           } else if (mute) {
             let obj6 = { style: null, children: null };
-            const items5 = [, ];
+            const items5 = [,];
             ({ status: arr7[0], voiceStatus: arr7[1] } = tmp3);
             obj6[0] = items5;
             const obj7 = { size: null, source: null, color: null };
@@ -339,7 +375,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
     let sum = StatusWithTyping(tmp7[7]).AVATAR_SIZE_MAP[NORMAL] + 4;
     const obj11 = { style: null };
     if (isStageCall) {
-      const items6 = [tmp3.stageSpeaking, ];
+      const items6 = [tmp3.stageSpeaking];
       let obj12 = { width: null, height: null, borderRadius: null };
       obj12[0] = sum;
       obj12[1] = sum;
@@ -348,7 +384,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
       obj11[0] = items6;
       let tmp9Result = tmp9(flag2(tmp7[12]), obj11);
     } else {
-      const items7 = [tmp3.speaking, ];
+      const items7 = [tmp3.speaking];
       const obj13 = { width: null, height: null, borderRadius: null };
       obj13[0] = sum;
       obj13[1] = sum;

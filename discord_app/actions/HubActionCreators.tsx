@@ -29,7 +29,7 @@ export default {
           is_edu_email = -1 !== parts.indexOf("edu");
         }
         return callback(table[4]).exact({ is_edu_email });
-      }
+      },
     };
     obj1 = {
       event: encodeProperties.NetworkActionNames.HUB_WAITLIST_SIGNUP,
@@ -47,7 +47,7 @@ export default {
           is_edu_email = -1 !== parts.indexOf("edu");
         }
         return callback(table[4]).exact({ is_edu_email });
-      }
+      },
     };
     obj[3] = sendRequest.rejectWithMigratedError();
     return obj.post(obj);
@@ -56,7 +56,7 @@ export default {
     closure_0 = closure_3;
     closure_1 = arg1;
     closure_2 = closure_0;
-    return callback(function*() {
+    return callback(function* () {
       const obj5 = v02(closure_1_2[2]);
       obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
       obj1[0] = closure_1_4.HUB_EMAIL_VERIFY_SEND;
@@ -85,7 +85,7 @@ export default {
   },
   verify(arg0) {
     closure_0 = arg0;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -180,7 +180,7 @@ export default {
   verifyCode(closure_0, closure_1_1, closure_02) {
     closure_1 = closure_1_1;
     closure_2 = closure_02;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -279,5 +279,5 @@ export default {
         }
       }
     })();
-  }
+  },
 };

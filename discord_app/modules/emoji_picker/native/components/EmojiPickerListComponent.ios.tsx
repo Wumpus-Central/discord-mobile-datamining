@@ -78,11 +78,25 @@ const forwardRefResult = importAllResult.forwardRef((paddingTop, ref) => {
         } while (num2 < arr.length);
       }
       const result = closure_0.set(num);
-    }
+    },
   }));
   const preventNativeModalDismiss = require(paddingTop[6]).useIsPortalKeyboardInModal();
-  return jsx(require(paddingTop[7]).BottomSheetFlashList, { contentContainerStyle, data: data.data, getItemType, keyboardShouldPersistTaps: "always", keyExtractor, onViewableItemsChanged: stickyHeaderIndices(paddingTop[5])(onViewableItemsChanged).onViewableItemsChanged, overrideItemLayout, preventNativeModalDismiss, ref, renderItem, stickyHeaderIndices });
+  return jsx(require(paddingTop[7]).BottomSheetFlashList, {
+    contentContainerStyle,
+    data: data.data,
+    getItemType,
+    keyboardShouldPersistTaps: "always",
+    keyExtractor,
+    onViewableItemsChanged: stickyHeaderIndices(paddingTop[5])(onViewableItemsChanged).onViewableItemsChanged,
+    overrideItemLayout,
+    preventNativeModalDismiss,
+    ref,
+    renderItem,
+    stickyHeaderIndices,
+  });
 });
-let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.ios.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/emoji_picker/native/components/EmojiPickerListComponent.ios.tsx",
+);
 
 export default forwardRefResult;

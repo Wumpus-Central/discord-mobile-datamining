@@ -12,7 +12,12 @@ import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 require = arg1;
 let c3 = importAllResult;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ label: { marginBottom: 8 }, input: { flexGrow: 1, marginBottom: 8 }, error: { marginBottom: 8 }, hint: { marginBottom: 8 } });
+let closure_7 = createCacheKey.createStyles({
+  label: { marginBottom: 8 },
+  input: { flexGrow: 1, marginBottom: 8 },
+  error: { marginBottom: 8 },
+  hint: { marginBottom: 8 },
+});
 const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) => {
   ({ style, label, error, value, hint, enableAndroidSanitizedInputWorkaround } = accessibilityLabel);
   if (enableAndroidSanitizedInputWorkaround === undefined) {
@@ -40,7 +45,19 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
   const id = importAllResult.useId();
   if (context) {
     ({ placeholder, onChangeText, clearButtonVisibility } = merged);
-    obj = { containerStyle: null, value: null, label: null, errorMessage: null, description: null, placeholder: null, onChange: null, isClearable: null, keyboardType: null, secureTextEntry: null, autoCapitalize: null };
+    obj = {
+      containerStyle: null,
+      value: null,
+      label: null,
+      errorMessage: null,
+      description: null,
+      placeholder: null,
+      onChange: null,
+      isClearable: null,
+      keyboardType: null,
+      secureTextEntry: null,
+      autoCapitalize: null,
+    };
     obj[0] = style;
     obj[1] = value;
     obj[2] = label;
@@ -64,7 +81,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
       obj1[2] = label;
       tmp14 = callback(FreeFormLabelDefault, obj1);
     }
-    const items = [tmp14, , , ];
+    const items = [tmp14, , ,];
     const obj2 = {};
     const merged1 = Object.assign(merged);
     if (accessibilityLabel == null) {

@@ -12,10 +12,35 @@ noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { width: "100%" }, card: null, image: null, bodyText: null, ctaButton: null };
-createCacheKey = { display: "flex", width: "100%", flexDirection: "column", justifyContent: "flex-start", padding: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_SECONDARY_ALT, overflow: "hidden" };
+createCacheKey = {
+  display: "flex",
+  width: "100%",
+  flexDirection: "column",
+  justifyContent: "flex-start",
+  padding: ThemesDefault.space.PX_16,
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SECONDARY_ALT,
+  overflow: "hidden",
+};
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { width: "100%", maxWidth: 317, height: 144, borderRadius: ThemesDefault.radii.md, marginBottom: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_8, alignSelf: "center" };
-const obj1 = { width: "100%", maxWidth: 317, height: 144, borderRadius: ThemesDefault.radii.md, marginBottom: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_8, alignSelf: "center" };
+createCacheKey[2] = {
+  width: "100%",
+  maxWidth: 317,
+  height: 144,
+  borderRadius: ThemesDefault.radii.md,
+  marginBottom: ThemesDefault.space.PX_16,
+  padding: ThemesDefault.space.PX_8,
+  alignSelf: "center",
+};
+const obj1 = {
+  width: "100%",
+  maxWidth: 317,
+  height: 144,
+  borderRadius: ThemesDefault.radii.md,
+  marginBottom: ThemesDefault.space.PX_16,
+  padding: ThemesDefault.space.PX_8,
+  alignSelf: "center",
+};
 createCacheKey[3] = { marginTop: ThemesDefault.space.PX_4 };
 let obj2 = { marginTop: ThemesDefault.space.PX_4 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_16 };
@@ -34,7 +59,14 @@ export default function MarketingPageBannerTile(bannerFields) {
   if (button != null) {
     buttonAction = button.buttonAction;
   }
-  obj = { buttonAction, applicationId: null, analyticsLocations: null, analyticsPage: null, onPaymentSuccess: null, onPaymentDismiss: null };
+  obj = {
+    buttonAction,
+    applicationId: null,
+    analyticsLocations: null,
+    analyticsPage: null,
+    onPaymentSuccess: null,
+    onPaymentDismiss: null,
+  };
   const button2 = bannerFields.button;
   let value;
   if (button2 != null) {
@@ -52,7 +84,11 @@ export default function MarketingPageBannerTile(bannerFields) {
   obj[0] = helpArticleLinkProps(503).ImpressionTypes.VIEW;
   obj[1] = helpArticleLinkProps(503).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
   const tmp2Result = trackImpressionDefault;
-  obj[2] = { component_type: helpArticleLinkProps(10515).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
+  obj[2] = {
+    component_type: helpArticleLinkProps(10515).MarketingComponentType.MARKETING_PAGE_BANNER,
+    component_id: componentId,
+    promotion_id: promotionId,
+  };
   tmp2Result(obj);
   let tmp4Result = tmp4(13063);
   const formatStringWithCommonPremiumParams = tmp4Result.useFormatStringWithCommonPremiumParams(bannerFields.body);
@@ -71,12 +107,26 @@ export default function MarketingPageBannerTile(bannerFields) {
     obj4[1] = tmp.image;
     tmp12Result = tmp12(closure_3, obj4);
   }
-  const items2 = [tmp12Result, closure_5(helpArticleLinkProps(4474).Text, { color: "mobile-text-heading-primary", variant: "text-lg/bold", children: bannerFields.header }), , ];
+  const items2 = [
+    tmp12Result,
+    closure_5(helpArticleLinkProps(4474).Text, {
+      color: "mobile-text-heading-primary",
+      variant: "text-lg/bold",
+      children: bannerFields.header,
+    }),
+    ,
+  ];
   const obj7 = { color: "mobile-text-heading-primary", variant: "text-sm/medium", style: tmp.bodyText, children: null };
-  const items3 = [formatStringWithCommonPremiumParams, " ", ];
+  const items3 = [formatStringWithCommonPremiumParams, " "];
   tmp12Result = null != helpArticleLinkProps;
   if (tmp12Result) {
-    const obj8 = { color: "text-link", variant: "text-sm/medium", accessibilityRole: "link", onPress: null, children: null };
+    const obj8 = {
+      color: "text-link",
+      variant: "text-sm/medium",
+      accessibilityRole: "link",
+      onPress: null,
+      children: null,
+    };
     obj8[3] = function onPress() {
       return closure_1_1(closure_1_2[12]).openURL(helpArticleLinkProps.url);
     };
@@ -100,4 +150,4 @@ export default function MarketingPageBannerTile(bannerFields) {
   obj3[1] = items2;
   obj2[1] = closure_6(closure_4, obj3);
   return closure_5(closure_4, obj2);
-};
+}

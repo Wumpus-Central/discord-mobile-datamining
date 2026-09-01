@@ -15,7 +15,7 @@ export default function useBaseAppContainerDimensions() {
   const right = rect.right;
   const items = [width, height, left, right];
   return right.useMemo(() => ({ width: width - left - right, height }), items);
-};
+}
 export const getBaseAppContainerDimensions = function getBaseAppContainerDimensions() {
   let obj = useWindowDimensions;
   const windowDimensions = obj.getWindowDimensions();

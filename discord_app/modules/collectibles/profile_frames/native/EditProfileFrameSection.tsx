@@ -13,11 +13,23 @@ let c3 = importAllResult;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 const PX_8 = ThemesDefault.space.PX_8;
 let obj = { row: null, rowSpacer: null, previewContainer: null };
-obj = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: require("useCollectibleListLayout").GUTTER_SIZE };
+obj = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  paddingHorizontal: require("useCollectibleListLayout").GUTTER_SIZE,
+};
 obj[0] = obj;
 createCacheKey = { height: require("useCollectibleListLayout").GUTTER_SIZE };
 obj[1] = createCacheKey;
-obj[2] = { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" };
+obj[2] = {
+  width: "100%",
+  height: "100%",
+  paddingVertical: PX_8,
+  overflow: "hidden",
+  alignItems: "center",
+  justifyContent: "center",
+};
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((arg0) => {
   ({ items, selectedSkuId: require, setSelectedProfileFrame } = arg0);
@@ -61,7 +73,7 @@ const memoResult = importAllResult.memo((arg0) => {
       return closure_1_7(closure_4, obj, arg1);
     }
   });
-  const items2 = [callback(closure_4, obj), ];
+  const items2 = [callback(closure_4, obj)];
   obj = { style: tmp.rowSpacer };
   items2[1] = callback(closure_4, obj);
   obj[0] = items2;
@@ -76,7 +88,14 @@ const memoResult1 = importAllResult.memo((isSelected) => {
   const callback = importAllResult.useCallback(() => {
     setSelectedProfileFrame({ skuId: profileFrame.skuId, type: profileFrame.type });
   }, items);
-  let obj = { skuId: profileFrame.skuId, isSelected: isSelected.isSelected, onPress: callback, size, accessibilityLabel: profileFrame.label, children: null };
+  let obj = {
+    skuId: profileFrame.skuId,
+    isSelected: isSelected.isSelected,
+    onPress: callback,
+    size,
+    accessibilityLabel: profileFrame.label,
+    children: null,
+  };
   obj = { style: callback3().previewContainer, children: null };
   obj = { profileFrame, previewWidth: size * closure_6, previewHeight: size - 2 * PX_8, profileBackgroundColor: null };
   const tmp = callback3();
@@ -86,6 +105,8 @@ const memoResult1 = importAllResult.memo((isSelected) => {
   return callback(profileFrame(8091).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditProfileFrameItem";
-const result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/native/EditProfileFrameSection.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/profile_frames/native/EditProfileFrameSection.tsx",
+);
 
 export const EditProfileFrameRow = memoResult;

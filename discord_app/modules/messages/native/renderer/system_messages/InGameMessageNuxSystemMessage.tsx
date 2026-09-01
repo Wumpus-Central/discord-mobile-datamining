@@ -6,7 +6,9 @@ import closure_3 from "../../../../applications/ApplicationStore.tsx";
 import { HelpdeskArticles } from "../../../../../Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx",
+);
 
 export const createInGameMessageNuxSystemMessage = function createInGameMessageNuxSystemMessage(message) {
   message = message.message;

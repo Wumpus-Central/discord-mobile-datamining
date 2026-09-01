@@ -31,14 +31,13 @@ let c11;
 let CLOSED = FormStates.CLOSED;
 let closure_13 = {};
 const Store = initializeDefault.Store;
-class UserProfileSettingsStore extends Store {
-}
+class UserProfileSettingsStore extends Store {}
 const prototype = UserProfileSettingsStore.prototype;
 Object.defineProperty(prototype, "selectedGuildId", {
   get: function selectedGuildId(arg0) {
     return c11;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getFormState"] = function getFormState() {
   return CLOSED;
@@ -219,16 +218,19 @@ obj = {
     const merged = Object.assign(obj);
     obj.tryItOutThemeColors = themeColors.themeColors;
   },
-  USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES: function handleSetTryItOutDisplayNameStyles(displayNameStyles) {
+  USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES: function handleSetTryItOutDisplayNameStyles(
+    displayNameStyles,
+  ) {
     obj = {};
     const merged = Object.assign(obj);
     obj.tryItOutDisplayNameStyles = displayNameStyles.displayNameStyles;
   },
-  USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE: function handleSetTryItOutCustomTypingIndicatorStyle(customTypingIndicatorStyle) {
-    obj = {};
-    const merged = Object.assign(obj);
-    obj.tryItOutCustomTypingIndicatorStyle = customTypingIndicatorStyle.customTypingIndicatorStyle;
-  },
+  USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE:
+    function handleSetTryItOutCustomTypingIndicatorStyle(customTypingIndicatorStyle) {
+      obj = {};
+      const merged = Object.assign(obj);
+      obj.tryItOutCustomTypingIndicatorStyle = customTypingIndicatorStyle.customTypingIndicatorStyle;
+    },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function handleSetTryItOutPreset(avatarDecoration) {
     let tryItOutAvatarDecoration = avatarDecoration.avatarDecoration;
     obj = {};
@@ -247,39 +249,43 @@ obj = {
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: function handleResetPendingAccountChanges() {
     const entries = Object.entries(closure_9);
-    closure_9 = Object.fromEntries(entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
-      const items = [tmp, ];
-      obj = {};
-      const merged = Object.assign(tmp2);
-      obj.pendingGlobalName = undefined;
-      obj.pendingNickname = undefined;
-      obj.pendingDisplayNameStyles = undefined;
-      obj.pendingCustomTypingIndicatorStyle = undefined;
-      obj.pendingAvatar = undefined;
-      obj.pendingAvatarDecoration = undefined;
-      obj.pendingNameplate = undefined;
-      items[1] = obj;
-      return items;
-    }));
+    closure_9 = Object.fromEntries(
+      entries.map((arg0) => {
+        [tmp, tmp2] = arg0;
+        const items = [tmp];
+        obj = {};
+        const merged = Object.assign(tmp2);
+        obj.pendingGlobalName = undefined;
+        obj.pendingNickname = undefined;
+        obj.pendingDisplayNameStyles = undefined;
+        obj.pendingCustomTypingIndicatorStyle = undefined;
+        obj.pendingAvatar = undefined;
+        obj.pendingAvatarDecoration = undefined;
+        obj.pendingNameplate = undefined;
+        items[1] = obj;
+        return items;
+      }),
+    );
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES: function handleResetPendingProfileChanges() {
     const entries = Object.entries(closure_9);
-    closure_9 = Object.fromEntries(entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
-      const items = [tmp, ];
-      obj = {};
-      const merged = Object.assign(tmp2);
-      obj.pendingPronouns = undefined;
-      obj.pendingProfileEffect = undefined;
-      obj.pendingProfileFrame = undefined;
-      obj.pendingBanner = undefined;
-      obj.pendingAccentColor = undefined;
-      obj.pendingThemeColors = undefined;
-      obj.pendingBio = undefined;
-      items[1] = obj;
-      return items;
-    }));
+    closure_9 = Object.fromEntries(
+      entries.map((arg0) => {
+        [tmp, tmp2] = arg0;
+        const items = [tmp];
+        obj = {};
+        const merged = Object.assign(tmp2);
+        obj.pendingPronouns = undefined;
+        obj.pendingProfileEffect = undefined;
+        obj.pendingProfileFrame = undefined;
+        obj.pendingBanner = undefined;
+        obj.pendingAccentColor = undefined;
+        obj.pendingThemeColors = undefined;
+        obj.pendingBio = undefined;
+        items[1] = obj;
+        return items;
+      }),
+    );
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: function handleResetPendingChanges() {
     closure_9 = {};
@@ -335,7 +341,7 @@ obj = {
     }
     closure_13[guildId] = errors;
   },
-  LOGOUT: handleReset
+  LOGOUT: handleReset,
 };
 const userProfileSettingsStore = new UserProfileSettingsStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/user_profile/UserProfileSettingsStore.tsx");

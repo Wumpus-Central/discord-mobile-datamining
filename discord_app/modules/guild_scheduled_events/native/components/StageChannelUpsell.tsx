@@ -23,7 +23,14 @@ noopAll;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";
 createCacheKey = { container: null, image: null, closeContainer: null, header: null, description: null, button: null };
-createCacheKey = { flexDirection: "column", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16, margin: 16, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = {
+  flexDirection: "column",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  padding: 16,
+  margin: 16,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: 16 };
 createCacheKey[2] = { position: "absolute", top: 14, right: 14 };
@@ -31,7 +38,9 @@ createCacheKey[3] = { lineHeight: 20, marginBottom: 4 };
 createCacheKey[4] = { textAlign: "center", marginBottom: 4 };
 createCacheKey[5] = { marginTop: 12, alignSelf: "stretch" };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/StageChannelUpsell.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/StageChannelUpsell.tsx",
+);
 
 export default function StageChannelUpsell(arg0) {
   ({ guildId: require, onCreate: importDefault } = arg0);
@@ -49,7 +58,7 @@ export default function StageChannelUpsell(arg0) {
     obj = { source: null };
     obj[0] = registerAssetDefault;
     obj[3] = callback3(Button.Icon, obj);
-    const items = [callback3(PressableBase.PressableOpacity, obj), , , , , ];
+    const items = [callback3(PressableBase.PressableOpacity, obj), , , , ,];
     obj1 = { source: null, style: null };
     obj1[0] = registerAssetDefault2;
     obj1[1] = tmp.image;
@@ -69,7 +78,11 @@ export default function StageChannelUpsell(arg0) {
     const intl3 = getSystemLocale.intl;
     const obj5 = { suggestionsHook: null };
     obj5[0] = function suggestionsHook(children) {
-      return callback2(callback(lib[14]).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
+      return callback2(
+        callback(lib[14]).Text,
+        { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children },
+        arg1,
+      );
     };
     obj4[3] = intl3.format(getSystemLocale.t.Vh7rP7, obj5);
     items[4] = callback3(Text.Text, obj4);
@@ -92,7 +105,7 @@ export default function StageChannelUpsell(arg0) {
         },
         onClose() {
           callback(table[17]).popWithKey(closure_12);
-        }
+        },
       };
       closure_1_1(lib[17]).pushLazy(closure_1_0(lib[19])(lib[18], lib.paths), obj, closure_1_12);
       lib();
@@ -105,4 +118,4 @@ export default function StageChannelUpsell(arg0) {
     tmp4 = callback4(closure_5, obj);
   }
   return tmp4;
-};
+}

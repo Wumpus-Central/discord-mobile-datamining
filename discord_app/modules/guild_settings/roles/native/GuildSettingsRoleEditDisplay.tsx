@@ -14,11 +14,32 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ DEFAULT_ROLE_COLOR: c9, MAX_ROLE_LENGTH: c10 } = ME);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { roleIcon: { paddingTop: 2, opacity: 0.5 }, trailingColorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, colorBlock: { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 }, holographicInfo: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, padding: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_12, marginTop: -1 * ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_12, display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO };
+createCacheKey = {
+  roleIcon: { paddingTop: 2, opacity: 0.5 },
+  trailingColorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
+  colorBlock: { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 },
+  holographicInfo: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO,
+  padding: ThemesDefault.space.PX_8,
+  marginHorizontal: ThemesDefault.space.PX_12,
+  marginTop: -1 * ThemesDefault.space.PX_12,
+  marginBottom: ThemesDefault.space.PX_12,
+  display: "flex",
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_8,
+  justifyContent: "center",
+  alignItems: "center",
+  borderRadius: ThemesDefault.radii.sm,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO,
+};
 createCacheKey[3] = createCacheKey;
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditDisplay.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/roles/native/GuildSettingsRoleEditDisplay.tsx",
+);
 
 export default function GuildSettingsRoleEditDisplay(guild) {
   guild = guild.guild;
@@ -27,7 +48,17 @@ export default function GuildSettingsRoleEditDisplay(guild) {
   let SOLID;
   let primary_color;
   let concat;
-  ({ name, formErrors, mentionable, hoist, onNameChanged, onMentionableChanged, onHoistChanged, locked, autoFocusInput } = guild);
+  ({
+    name,
+    formErrors,
+    mentionable,
+    hoist,
+    onNameChanged,
+    onMentionableChanged,
+    onHoistChanged,
+    locked,
+    autoFocusInput,
+  } = guild);
   const tmp = callback2();
   const tmp2 = concat(role);
   let tmp3 = tmp2;
@@ -108,11 +139,19 @@ export default function GuildSettingsRoleEditDisplay(guild) {
         roleStyle: SOLID,
         onStyleChanged(currentStyle) {
           closure_1_0(closure_1_2[19]).updateRoleStyles(closure_2, currentStyle);
-        }
+        },
       };
       obj.openLazy(guild(id[18])(id[21], id.paths), "EnhancedRoleColorsSelectStyleModal", obj);
     }, items2);
-    obj1 = { label: null, value: null, isDisabled: null, onChange: null, maxLength: null, autoFocus: null, errorMessage: null };
+    obj1 = {
+      label: null,
+      value: null,
+      isDisabled: null,
+      onChange: null,
+      maxLength: null,
+      autoFocus: null,
+      errorMessage: null,
+    };
     const intl = tmp4(tmp5[23]).intl;
     obj1[0] = intl.string(tmp4(tmp5[23]).t.dLbkBk);
     obj1[1] = name;
@@ -126,7 +165,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
       first = name2[0];
     }
     obj1[6] = first;
-    const items3 = [callback(tmp4(tmp5[22]).TextInput, obj1), , , , , ];
+    const items3 = [callback(tmp4(tmp5[22]).TextInput, obj1), , , , ,];
     const obj2 = { role: null };
     obj2[0] = role;
     items3[1] = callback(role(tmp5[24]), obj2);
@@ -145,7 +184,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
     }
     obj3[3] = str;
     obj3[4] = tmp3;
-    const items4 = [callback(tmp4(tmp5[26]).TableRow, obj3), ];
+    const items4 = [callback(tmp4(tmp5[26]).TableRow, obj3)];
     if (SOLID === RoleColorsStyle.HOLOGRAPHIC) {
       const obj4 = { hasIcons: false, children: null };
       items4[1] = tmp28;
@@ -157,7 +196,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
         obj5[0] = tmp.holographicInfo;
         const obj6 = { size: "sm", color: null };
         obj6[1] = tmp25(tmp5[9]).colors.ICON_FEEDBACK_INFO;
-        const items5 = [tmp22(tmp4(tmp5[31]).CircleInformationIcon, obj6), ];
+        const items5 = [tmp22(tmp4(tmp5[31]).CircleInformationIcon, obj6)];
         const obj7 = { variant: "text-sm/normal", children: null };
         const intl5 = tmp4(tmp5[23]).intl;
         obj7[1] = intl5.string(tmp25(tmp5[33]).tBhCyr);
@@ -195,7 +234,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
       obj11[3] = onHoistChanged;
       const intl9 = tmp4(tmp5[23]).intl;
       obj11[4] = intl9.string(tmp4(tmp5[23]).t.vceJPk);
-      const items6 = [tmp22(tmp4(tmp5[34]).TableSwitchRow, obj11), ];
+      const items6 = [tmp22(tmp4(tmp5[34]).TableSwitchRow, obj11)];
       if (!tmp3) {
         tmp3 = tmp2;
       }
@@ -224,7 +263,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
         if (concat != null) {
           primary_color1 = concat.primary_color;
         }
-        const items7 = [primary_color1, , ];
+        const items7 = [primary_color1, ,];
         let secondary_color1;
         if (concat != null) {
           secondary_color1 = concat.secondary_color;
@@ -285,4 +324,4 @@ export default function GuildSettingsRoleEditDisplay(guild) {
     tmp21 = closure_14;
   }
   SOLID = RoleColorsStyle.SOLID;
-};
+}

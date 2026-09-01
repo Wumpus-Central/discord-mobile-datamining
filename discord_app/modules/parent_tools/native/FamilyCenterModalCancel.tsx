@@ -33,7 +33,7 @@ function FamilyCenterModalCancelScreen(otherUser) {
   const obj2 = { otherUser, iconSrc: null };
   const tmp2 = cancelLinkRequest(8773)();
   obj2[1] = cancelLinkRequest(7764);
-  const items1 = [callback(cancelLinkRequest(14528), obj2), , ];
+  const items1 = [callback(cancelLinkRequest(14528), obj2), ,];
   const obj3 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
   let intl = otherUser(1236).intl;
   obj3[2] = intl.string(cancelLinkRequest(2369).HynllX);
@@ -41,14 +41,20 @@ function FamilyCenterModalCancelScreen(otherUser) {
   items1[2] = callback(cancelLinkRequest(14498), { user: otherUser });
   obj1[1] = items1;
   obj[0] = callback2(View, obj1);
-  const items2 = [callback(otherUser(8693).ModalContent, obj), ];
+  const items2 = [callback(otherUser(8693).ModalContent, obj)];
   const obj4 = { children: null };
   const obj5 = { children: null };
-  const obj6 = { variant: "destructive", disabled: isCancelLoading, loading: isCancelLoading, text: null, onPress: null };
+  const obj6 = {
+    variant: "destructive",
+    disabled: isCancelLoading,
+    loading: isCancelLoading,
+    text: null,
+    onPress: null,
+  };
   const intl2 = otherUser(1236).intl;
   obj6[3] = intl2.string(cancelLinkRequest(2369).mK40bk);
   obj6[4] = callback2;
-  const items3 = [callback(otherUser(4928).Button, obj6), ];
+  const items3 = [callback(otherUser(4928).Button, obj6)];
   const obj7 = { variant: "tertiary", text: null, onPress: null };
   const intl3 = otherUser(1236).intl;
   obj7[1] = intl3.string(cancelLinkRequest(2369).czincX);
@@ -62,7 +68,12 @@ function FamilyCenterModalCancelScreen(otherUser) {
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { header: null, headerText: null };
-createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginBottom: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
@@ -82,7 +93,7 @@ export default function FamilyCenterModalCancel(otherUser) {
       },
       render() {
         return closure_1_5(closure_1_8, { otherUser: closure_0 });
-      }
+      },
     };
     obj[0] = obj;
     return obj;
@@ -91,4 +102,4 @@ export default function FamilyCenterModalCancel(otherUser) {
   const intl = otherUser(1236).intl;
   obj[2] = intl.string(otherUser(1236).t["13/7kX"]);
   return callback(otherUser(11501).Modal, obj);
-};
+}

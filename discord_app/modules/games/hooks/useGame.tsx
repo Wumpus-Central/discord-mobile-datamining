@@ -27,13 +27,13 @@ initialize = {
   },
   load: null,
   getIsLoading: null,
-  getError: null
+  getError: null,
 };
 let closure_2 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c2 = 0;
   c1 = 0;
-  return (function*(arg0) {
+  return (function* (arg0) {
     if (table === 2) {
       table = 3;
       HermesBuiltin.throwTypeError();
@@ -86,7 +86,7 @@ let closure_2 = importDefaultResult((arg0) => {
     }
   })();
 });
-initialize[3] = function() {
+initialize[3] = function () {
   const self = this;
   const apply = closure_2.apply;
   if (typeof apply === "unknown") {
@@ -126,7 +126,7 @@ export const useGames = function useGames(memo) {
       ...closure_0.map((arg0) => {
         const items = [arg0];
         return items;
-      })
+      }),
     ];
     closure_1_5.fetchMany.apply(items);
   }, items);

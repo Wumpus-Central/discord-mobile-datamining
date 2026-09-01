@@ -14,7 +14,9 @@ export const accountLinkAuthorizationCompleted = function accountLinkAuthorizati
   obj = { type: "ACCOUNT_LINK_AUTHORIZATION_COMPLETED", applicationId };
   obj.dispatch(obj);
 };
-export const devtoolsSetGloballyDisabledAuthorizationFlows = function devtoolsSetGloballyDisabledAuthorizationFlows(flows) {
+export const devtoolsSetGloballyDisabledAuthorizationFlows = function devtoolsSetGloballyDisabledAuthorizationFlows(
+  flows,
+) {
   let obj = dispatcherDefault;
   obj = { type: "ACCOUNT_LINK_DEVTOOLS_SET_GLOBALLY_DISBLED_FLOWS", flows };
   obj.dispatch(obj);

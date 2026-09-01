@@ -22,22 +22,24 @@ function hasExceededThreshold(name) {
   return tmp;
 }
 function flushViolators() {
-  if (!(function hasViolator() {
-    const obj = dependencyMap[Symbol.iterator]();
-    while (obj !== undefined) {
-      let tmp3 = callback;
-      let tmp4 = callback(tmp2, 2);
-      let first = tmp4[0];
-      let tmp6 = callback2;
-      if (callback2(tmp4[1])) {
-        let tmp7 = obj;
-        obj.return();
-        let flag = true;
-        return true;
+  if (
+    !(function hasViolator() {
+      const obj = dependencyMap[Symbol.iterator]();
+      while (obj !== undefined) {
+        let tmp3 = callback;
+        let tmp4 = callback(tmp2, 2);
+        let first = tmp4[0];
+        let tmp6 = callback2;
+        if (callback2(tmp4[1])) {
+          let tmp7 = obj;
+          obj.return();
+          let flag = true;
+          return true;
+        }
       }
-    }
-    return false;
-  })()) {
+      return false;
+    })()
+  ) {
     if ("" === c7) {
       logger.log("No violators found");
     }
@@ -57,7 +59,15 @@ function flushViolators() {
     logger.log(`${"| Consumers of `useStateFromStores` exceeding warning thresholds:".padEnd(tmp, " ")}|`);
     logger.log(`${"|".padEnd(tmp, "-")}|`);
     const padEndResult = "Function/Component Name".padEnd(num, " ");
-    logger.log("| " + padEndResult + "| " + "Total Exec Time".padEnd(num2, " ") + "| " + "Total Exec Count".padEnd(num3, " ") + "|");
+    logger.log(
+      "| " +
+        padEndResult +
+        "| " +
+        "Total Exec Time".padEnd(num2, " ") +
+        "| " +
+        "Total Exec Count".padEnd(num3, " ") +
+        "|",
+    );
     logger.log(`${"|".padEnd(tmp, "-")}|`);
     const padEndResult1 = "Total Exec Time".padEnd(num2, " ");
     while (tmp10 !== undefined) {
@@ -105,7 +115,9 @@ let c7 = "";
 let c8 = false;
 let c9;
 const map = new Map();
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStoresPerformanceDebugging.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/flux/useStateFromStoresPerformanceDebugging.tsx",
+);
 
 export function getUseStateFromStoresExecutionWindowThresholdMs() {
   let num = arg0;
@@ -114,7 +126,9 @@ export function getUseStateFromStoresExecutionWindowThresholdMs() {
   }
   return num;
 }
-export const setUseStateFromStoresExecutionWindowThresholdMs = function setUseStateFromStoresExecutionWindowThresholdMs(arg0) {
+export const setUseStateFromStoresExecutionWindowThresholdMs = function setUseStateFromStoresExecutionWindowThresholdMs(
+  arg0,
+) {
   closure_4 = arg0;
   const Storage = Storage2.Storage;
   const result = Storage.set("useStateFromStoresExecutionWindowThresholdMs", arg0);
@@ -131,11 +145,12 @@ export function getUseStateFromStoresExecutionTimeWarningThresholdMs() {
   }
   return num;
 }
-export const setUseStateFromStoresExecutionTimeWarningThresholdMs = function setUseStateFromStoresExecutionTimeWarningThresholdMs(arg0) {
-  closure_5 = arg0;
-  const Storage = Storage2.Storage;
-  const result = Storage.set("useStateFromStoresExecutionTimeWarningThresholdMs", arg0);
-};
+export const setUseStateFromStoresExecutionTimeWarningThresholdMs =
+  function setUseStateFromStoresExecutionTimeWarningThresholdMs(arg0) {
+    closure_5 = arg0;
+    const Storage = Storage2.Storage;
+    const result = Storage.set("useStateFromStoresExecutionTimeWarningThresholdMs", arg0);
+  };
 export function getUseStateFromStoresExecutionCountWarningThreshold() {
   let num = arg0;
   if (arg0 === undefined) {
@@ -143,11 +158,12 @@ export function getUseStateFromStoresExecutionCountWarningThreshold() {
   }
   return num;
 }
-export const setUseStateFromStoresExecutionCountWarningThreshold = function setUseStateFromStoresExecutionCountWarningThreshold(arg0) {
-  closure_6 = arg0;
-  const Storage = Storage2.Storage;
-  const result = Storage.set("useStateFromStoresExecutionCountWarningThreshold", arg0);
-};
+export const setUseStateFromStoresExecutionCountWarningThreshold =
+  function setUseStateFromStoresExecutionCountWarningThreshold(arg0) {
+    closure_6 = arg0;
+    const Storage = Storage2.Storage;
+    const result = Storage.set("useStateFromStoresExecutionCountWarningThreshold", arg0);
+  };
 export const setUseStateFromStoresSpecificHookFilter = function setUseStateFromStoresSpecificHookFilter(first1) {
   closure_7 = first1;
   const Storage = Storage2.Storage;
@@ -254,7 +270,15 @@ export const trackGetStateFromStoresPerformance = function trackGetStateFromStor
         if (tmp9) {
           execTime.warned = true;
           const _HermesInternal = HermesInternal;
-          logger.log("" + execTime.name + " cumulatively used " + execTime.execTime + "ms of execution time and ran " + execTime.execCount + " times.");
+          logger.log(
+            "" +
+              execTime.name +
+              " cumulatively used " +
+              execTime.execTime +
+              "ms of execution time and ran " +
+              execTime.execCount +
+              " times.",
+          );
         }
       }
       return arg1();

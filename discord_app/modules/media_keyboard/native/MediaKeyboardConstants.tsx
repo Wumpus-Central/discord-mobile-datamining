@@ -20,8 +20,25 @@ const result = set.fileFinishedImporting("modules/media_keyboard/native/MediaKey
 
 export const DRAG_HANDLE = obj;
 export const HEADER_HANDLE_HEIGHT = obj.slotHeight;
-export const MediaKeyboardTarget = { CHAT: 0, [0]: "CHAT", COMMAND: 1, [1]: "COMMAND", APP_LAUNCHER: 2, [2]: "APP_LAUNCHER", INTERACTION_MODAL: 3, [3]: "INTERACTION_MODAL" };
+export const MediaKeyboardTarget = {
+  CHAT: 0,
+  [0]: "CHAT",
+  COMMAND: 1,
+  [1]: "COMMAND",
+  APP_LAUNCHER: 2,
+  [2]: "APP_LAUNCHER",
+  INTERACTION_MODAL: 3,
+  [3]: "INTERACTION_MODAL",
+};
 export const InAppCameraUsedViews = { FULLY_EXPANDED: "fully expanded" };
-export const InAppCameraUsedCameraPreviewTypes = { CAMERA_TILE: "camera tile", CAMERA_BUTTON: "camera button", TAKE_A_PHOTO_BUTTON: "take a photo button" };
-export const MediaPickerActionSheetEngagedActions = { FULLY_EXPANDED: "fully expanded", VIEW_ALL_CLICKED: "view all clicked", MEDIA_SELECTED: "media selected" };
+export const InAppCameraUsedCameraPreviewTypes = {
+  CAMERA_TILE: "camera tile",
+  CAMERA_BUTTON: "camera button",
+  TAKE_A_PHOTO_BUTTON: "take a photo button",
+};
+export const MediaPickerActionSheetEngagedActions = {
+  FULLY_EXPANDED: "fully expanded",
+  VIEW_ALL_CLICKED: "view all clicked",
+  MEDIA_SELECTED: "media selected",
+};
 export const MEDIA_PICKER_SEND_BUTTON_SPRING = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };

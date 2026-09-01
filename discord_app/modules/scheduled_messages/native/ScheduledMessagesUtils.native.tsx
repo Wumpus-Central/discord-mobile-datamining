@@ -26,7 +26,7 @@ function _editScheduledMessage() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -117,7 +117,7 @@ function _cancelScheduledMessage() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       dependencyMap = tmp3;
       c4 = 1;
       yield lib(closure_1_2[10]).deleteScheduledMessage(lib);
@@ -155,7 +155,7 @@ function _sendScheduledMessageNow() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       dependencyMap = tmp3;
       c4 = 1;
       yield lib(closure_1_2[10]).sendScheduledMessageNow(lib);
@@ -207,7 +207,7 @@ function openSendTimeActionSheet(title) {
   const intl = title(1236).intl;
   obj[0] = intl.string(title(1236).t.tjIn9i);
   obj[1] = result1;
-  const items = [obj, , ];
+  const items = [obj, ,];
   obj = { label: null, value: null };
   const intl2 = title(1236).intl;
   obj[0] = intl2.string(title(1236).t.EMRZyS);
@@ -227,9 +227,9 @@ function openSendTimeActionSheet(title) {
         label: label.label,
         onPress() {
           return closure_1_3(closure_0);
-        }
+        },
       };
-    })
+    }),
   ];
   const obj3 = { label: null, onPress: null };
   const intl4 = title(1236).intl;
@@ -238,7 +238,15 @@ function openSendTimeActionSheet(title) {
     let obj = closure_1_1(closure_1_2[13]);
     obj.hideActionSheet();
     const obj2 = closure_1_1(closure_1_2[5]);
-    obj = { title, defaultValue: closure_1, minimumDate: null, maximumDate: null, getError: null, createReminder: null, onClose: null };
+    obj = {
+      title,
+      defaultValue: closure_1,
+      minimumDate: null,
+      maximumDate: null,
+      getError: null,
+      createReminder: null,
+      onClose: null,
+    };
     const tmp2 = title(closure_1_2[7])(closure_1_2[14], closure_1_2.paths);
     obj[2] = title(closure_1_2[4]).getEarliestScheduledTime();
     const obj4 = title(closure_1_2[4]);
@@ -267,9 +275,15 @@ function openSendTimeActionSheet(title) {
   obj2[3] = items1;
   const result4 = title(5986).showSimpleActionSheet(obj2);
 }
-let result = require("set").fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessagesUtils.native.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/scheduled_messages/native/ScheduledMessagesUtils.native.tsx",
+);
 
-export const openScheduleMessageActionSheet = function openScheduleMessageActionSheet(id, ATTACH_MENU, scheduledTimestamp) {
+export const openScheduleMessageActionSheet = function openScheduleMessageActionSheet(
+  id,
+  ATTACH_MENU,
+  scheduledTimestamp,
+) {
   const _require = id;
   let obj = {
     onSelect(scheduledTimestamp) {
@@ -279,10 +293,19 @@ export const openScheduleMessageActionSheet = function openScheduleMessageAction
     },
     currentTimestamp: scheduledTimestamp,
     entryPoint: ATTACH_MENU,
-    channelId: id
+    channelId: id,
   };
   ({ onSelect: closure_0, currentTimestamp } = obj);
-  obj = { key: "schedule-message", title: null, startDate: null, onSelect: null, onClear: null, entryPoint: null, isEditing: null, channelId: null };
+  obj = {
+    key: "schedule-message",
+    title: null,
+    startDate: null,
+    onSelect: null,
+    onClear: null,
+    entryPoint: null,
+    isEditing: null,
+    channelId: null,
+  };
   ({ onClear, entryPoint, channelId } = obj);
   const intl = require("../../../intl/index.native.tsx").intl;
   obj[1] = intl.string(require("../../../intl/index.native.tsx").t["3+ii4F"]);
@@ -304,7 +327,16 @@ export const openScheduleMessageActionSheet = function openScheduleMessageAction
 };
 export const pickScheduledMessageTime = function pickScheduledMessageTime(arg0) {
   ({ onSelect: require, currentTimestamp } = arg0);
-  const obj = { key: "schedule-message", title: null, startDate: null, onSelect: null, onClear: null, entryPoint: null, isEditing: null, channelId: null };
+  const obj = {
+    key: "schedule-message",
+    title: null,
+    startDate: null,
+    onSelect: null,
+    onClear: null,
+    entryPoint: null,
+    isEditing: null,
+    channelId: null,
+  };
   ({ onClear, entryPoint, channelId } = arg0);
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["3+ii4F"]);
@@ -325,16 +357,33 @@ export const pickScheduledMessageTime = function pickScheduledMessageTime(arg0) 
   openSendTimeActionSheet(obj);
 };
 export const showScheduledMessagesModal = function showScheduledMessagesModal() {
-  _modDef4723.pushLazy(asyncRequireImpl(11779, dependencyMap.paths), {}, "scheduled-messages-modal", { presentation: "modal" });
+  _modDef4723.pushLazy(asyncRequireImpl(11779, dependencyMap.paths), {}, "scheduled-messages-modal", {
+    presentation: "modal",
+  });
 };
 export const openScheduledMessageEditContentModal = function openScheduledMessageEditContentModal(closure_0) {
   let obj = _modDef4723;
   obj = { scheduledMessage: closure_0 };
-  obj.pushLazy(asyncRequireImpl(11789, dependencyMap.paths), obj, "scheduled-message-edit-content", { presentation: "modal" });
+  obj.pushLazy(asyncRequireImpl(11789, dependencyMap.paths), obj, "scheduled-message-edit-content", {
+    presentation: "modal",
+  });
 };
-export const openRescheduleMessageActionSheet = function openRescheduleMessageActionSheet(scheduledMessageId, sendAtTimestamp, channelId) {
+export const openRescheduleMessageActionSheet = function openRescheduleMessageActionSheet(
+  scheduledMessageId,
+  sendAtTimestamp,
+  channelId,
+) {
   const _require = scheduledMessageId;
-  const obj = { key: "reschedule-message", title: null, startDate: null, scheduledMessageId: null, onSelect: null, entryPoint: null, isEditing: true, channelId: null };
+  const obj = {
+    key: "reschedule-message",
+    title: null,
+    startDate: null,
+    scheduledMessageId: null,
+    onSelect: null,
+    entryPoint: null,
+    isEditing: true,
+    channelId: null,
+  };
   const intl = require("../../../intl/index.native.tsx").intl;
   obj[1] = intl.string(require("../../../intl/index.native.tsx").t.jbdHj3);
   obj[2] = hooksDefault(sendAtTimestamp);

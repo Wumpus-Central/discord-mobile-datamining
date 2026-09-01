@@ -23,7 +23,9 @@ createCacheKey.backgroundColor = "rgba(38, 39, 50, 0.3)";
 createCacheKey.height = QUEST_DOCK_EXPANDED_HEIGHT;
 obj[1] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
-let closure_11 = { code: "function QuestDockBlurredHeaderPlaceholderTsx1(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED,questDockWrapperSpecs}=this.__closure;return{left:activeQuestDockMode.get()===QuestDockMode.EXPANDED?-QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,width:questDockWrapperSpecs.get().width+QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED};}" };
+let closure_11 = {
+  code: "function QuestDockBlurredHeaderPlaceholderTsx1(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED,questDockWrapperSpecs}=this.__closure;return{left:activeQuestDockMode.get()===QuestDockMode.EXPANDED?-QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,width:questDockWrapperSpecs.get().width+QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED};}",
+};
 const memoResult = importAllResult.memo(function QuestDockBlurredContentBackground(placeholder) {
   placeholder = placeholder.placeholder;
   ({ animatedLayout, animatedStyle } = placeholder);
@@ -32,7 +34,11 @@ const memoResult = importAllResult.memo(function QuestDockBlurredContentBackgrou
   activeQuestDockMode = context.activeQuestDockMode;
   const items = [placeholder];
   const memo = importAllResult.useMemo(() => {
-    const obj = { uri: placeholder(activeQuestDockMode[7]).thumbHashToDataURL(Uint8Array.from(atob(placeholder), (str) => str.charCodeAt(0))) };
+    const obj = {
+      uri: placeholder(activeQuestDockMode[7]).thumbHashToDataURL(
+        Uint8Array.from(atob(placeholder), (str) => str.charCodeAt(0)),
+      ),
+    };
     return obj;
   }, items);
   const tmp3 = callback3();
@@ -55,10 +61,19 @@ const memoResult = importAllResult.memo(function QuestDockBlurredContentBackgrou
   obj = { children: null };
   animatedStyle = obj.useAnimatedStyle(D);
   const items1 = [tmp3.image, animatedStyle, animatedStyle];
-  const items2 = [callback(questDockWrapperSpecs(activeQuestDockMode[8]).Image, { source: memo, style: items1, layout: animatedLayout }), callback(closure_4, { style: tmp3.overlay })];
+  const items2 = [
+    callback(questDockWrapperSpecs(activeQuestDockMode[8]).Image, {
+      source: memo,
+      style: items1,
+      layout: animatedLayout,
+    }),
+    callback(closure_4, { style: tmp3.overlay }),
+  ];
   obj[0] = items2;
   return callback2(closure_8, obj);
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx",
+);
 
 export default memoResult;

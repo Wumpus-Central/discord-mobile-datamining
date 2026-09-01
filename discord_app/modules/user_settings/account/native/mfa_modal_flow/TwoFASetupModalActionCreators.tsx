@@ -4,7 +4,9 @@ import asyncRequireImpl from "../../../../../../_runtime/02009_asyncRequireImpl.
 import _modDef4723 from "../../../../../actions/ModalActionCreators.tsx";
 
 const TWO_FA_SETUP_MODAL_KEY = "TWO_FA_SETUP_MODAL_KEY";
-const result = set.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx");
+const result = set.fileFinishedImporting(
+  "modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx",
+);
 
 export default {
   open(initialRouteName) {
@@ -14,5 +16,5 @@ export default {
   },
   close() {
     _modDef4723.popWithKey(TWO_FA_SETUP_MODAL_KEY);
-  }
+  },
 };

@@ -8,9 +8,21 @@ import importDefaultResult from "../../modules/rebrand/native/TextStyles.tsx";
 
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { item: { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 8, flexDirection: "row", alignItems: "center" }, label: null, iconMargin: null };
+createCacheKey = {
+  item: {
+    backgroundColor: "transparent",
+    paddingHorizontal: 0,
+    paddingVertical: 8,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  label: null,
+  iconMargin: null,
+};
 createCacheKey = {};
-const merged = Object.assign(importDefaultResult(require("ME").Fonts.PRIMARY_NORMAL, ThemesDefault.colors.TEXT_DEFAULT, 14));
+const merged = Object.assign(
+  importDefaultResult(require("ME").Fonts.PRIMARY_NORMAL, ThemesDefault.colors.TEXT_DEFAULT, 14),
+);
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginEnd: ThemesDefault.space.PX_16 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
@@ -27,14 +39,22 @@ export default function PremiumFeatureList(style) {
     children: found.map((IconComponent) => {
       let obj = { style: items, children: null };
       items = [lib.item, closure_3];
-      obj = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: lib(IconComponent.IconComponent, obj) };
+      obj = {
+        accessibilityElementsHidden: true,
+        importantForAccessibility: "no-hide-descendants",
+        children: lib(IconComponent.IconComponent, obj),
+      };
       obj = { size: "md", color: IconComponent.color, style: items1 };
       items1 = [lib.iconMargin, closure_1];
-      const items2 = [lib(closure_1_3, obj), ];
+      const items2 = [lib(closure_1_3, obj)];
       const items3 = [lib.label, closure_2];
-      items2[1] = lib(closure_1_0(closure_1_1[7]).FormRow.Label, { numberOfLines: 2, style: items3, text: IconComponent.label });
+      items2[1] = lib(closure_1_0(closure_1_1[7]).FormRow.Label, {
+        numberOfLines: 2,
+        style: items3,
+        text: IconComponent.label,
+      });
       obj[1] = items2;
-      const children = [closure_1_5(closure_1_3, obj, arg1), ];
+      const children = [closure_1_5(closure_1_3, obj, arg1)];
       let tmp3 = null;
       if (null != closure_0) {
         tmp3 = null;
@@ -47,6 +67,6 @@ export default function PremiumFeatureList(style) {
       }
       children[1] = tmp3;
       return closure_1_5(closure_1_2.Fragment, { children }, arg1);
-    })
+    }),
   });
-};
+}

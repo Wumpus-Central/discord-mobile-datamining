@@ -2,16 +2,36 @@
 import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
-let closure_3 = { [arg1(17042).AgeSignalsStatus.SHARED]: "SHARED", [arg1(17042).AgeSignalsStatus.NOT_SHARED]: "NOT_SHARED", [arg1(17042).AgeSignalsStatus.VERIFICATION_REQUIRED]: "VERIFICATION_REQUIRED" };
-let closure_4 = { [arg1(17042).AgeRangeSource.TIER_A]: "TIER_A", [arg1(17042).AgeRangeSource.TIER_B]: "TIER_B", [arg1(17042).AgeRangeSource.TIER_C]: "TIER_C", [arg1(17042).AgeRangeSource.TIER_D]: "TIER_D" };
-let closure_5 = { [arg1(17042).SignificantChangeStatus.APPROVED]: "APPROVED", [arg1(17042).SignificantChangeStatus.PENDING]: "PENDING", [arg1(17042).SignificantChangeStatus.DECLINED]: "DECLINED" };
+let closure_3 = {
+  [arg1(17042).AgeSignalsStatus.SHARED]: "SHARED",
+  [arg1(17042).AgeSignalsStatus.NOT_SHARED]: "NOT_SHARED",
+  [arg1(17042).AgeSignalsStatus.VERIFICATION_REQUIRED]: "VERIFICATION_REQUIRED",
+};
+let closure_4 = {
+  [arg1(17042).AgeRangeSource.TIER_A]: "TIER_A",
+  [arg1(17042).AgeRangeSource.TIER_B]: "TIER_B",
+  [arg1(17042).AgeRangeSource.TIER_C]: "TIER_C",
+  [arg1(17042).AgeRangeSource.TIER_D]: "TIER_D",
+};
+let closure_5 = {
+  [arg1(17042).SignificantChangeStatus.APPROVED]: "APPROVED",
+  [arg1(17042).SignificantChangeStatus.PENDING]: "PENDING",
+  [arg1(17042).SignificantChangeStatus.DECLINED]: "DECLINED",
+};
 const result = require("set").fileFinishedImporting("modules/age_assurance/native/AppStoreAgeAssurance.android.tsx");
 
 export default {
   getAgeSignals() {
-    return callback(function*() {
+    return callback(function* () {
       function toAppStoreAgeCheck(ageLower) {
-        const obj = { platform: "android", ageLower: ageLower.ageLower, ageUpper: ageLower.ageUpper, googleAgeSignalsStatus: null, googleAgeRangeSource: null, googleSignificantChangeStatus: null };
+        const obj = {
+          platform: "android",
+          ageLower: ageLower.ageLower,
+          ageUpper: ageLower.ageUpper,
+          googleAgeSignalsStatus: null,
+          googleAgeRangeSource: null,
+          googleSignificantChangeStatus: null,
+        };
         const ageSignalsStatus = ageLower.ageSignalsStatus;
         let tmp;
         if (null != ageSignalsStatus) {
@@ -36,5 +56,5 @@ export default {
       yield obj2.getAgeSignals();
       return toAppStoreAgeCheck(arg1);
     })();
-  }
+  },
 };

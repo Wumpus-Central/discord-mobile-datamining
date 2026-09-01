@@ -16,4 +16,4 @@ export default function useCanSeeEventsInChannelList(arg0) {
     tmp3 = tmp;
   }
   return tmp3;
-};
+}

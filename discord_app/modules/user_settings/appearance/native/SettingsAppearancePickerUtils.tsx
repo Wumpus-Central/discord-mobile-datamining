@@ -122,7 +122,13 @@ function convertStandardThemeToAnimatedTheme(theme, items, BACKGROUND_SURFACE_HI
   let obj = { enabledExperiments: items };
   const semanticColor = internal.resolveSemanticColor(str, BACKGROUND_SURFACE_HIGH, obj);
   obj = { theme: theme.theme, name: theme.getName(), midpointPercentage: 50, angle: 0, colors: null };
-  items = [{ hex: semanticColor, stop: 20 }, { hex: semanticColor, stop: 40 }, { hex: semanticColor, stop: 60 }, { hex: semanticColor, stop: 80 }, { hex: semanticColor, stop: 100 }];
+  items = [
+    { hex: semanticColor, stop: 20 },
+    { hex: semanticColor, stop: 40 },
+    { hex: semanticColor, stop: 60 },
+    { hex: semanticColor, stop: 80 },
+    { hex: semanticColor, stop: 100 },
+  ];
   let num = getMaxColors();
   if (num === undefined) {
     num = 5;
@@ -200,9 +206,17 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
   obj[4] = items;
   return obj;
 }
-const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearancePickerUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/appearance/native/SettingsAppearancePickerUtils.tsx",
+);
 
-export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThemes(arg0, prop, prop1, memo, BACKGROUND_SURFACE_HIGH) {
+export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThemes(
+  arg0,
+  prop,
+  prop1,
+  memo,
+  BACKGROUND_SURFACE_HIGH,
+) {
   let num = prop;
   if (prop === undefined) {
     num = 0.7;
@@ -260,7 +274,13 @@ export const useLaunchWelcomeSystemTheme = function useLaunchWelcomeSystemTheme(
     const intl = token(closure_1_2[9]).intl;
     obj[1] = intl.string(token(closure_1_2[9]).t.zlvNOj);
     obj = { hex: token, stop: 20 };
-    const items = [obj, { hex: token, stop: 40 }, { hex: token, stop: 60 }, { hex: token, stop: 80 }, { hex: token, stop: 100 }];
+    const items = [
+      obj,
+      { hex: token, stop: 40 },
+      { hex: token, stop: 60 },
+      { hex: token, stop: 80 },
+      { hex: token, stop: 100 },
+    ];
     let num = closure_1_5();
     if (num === undefined) {
       num = 5;

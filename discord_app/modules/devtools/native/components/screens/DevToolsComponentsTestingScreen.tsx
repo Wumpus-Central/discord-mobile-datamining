@@ -34,7 +34,14 @@ function Select(children) {
   obj1 = isInteractionComponent;
   let state = obj1.useComponentState(obj).state;
   obj = { style: { gap: 8 }, children: null };
-  const items = [callback(require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-lg/medium", children: children.title }), , , ];
+  const items = [
+    callback(require("../../../../../design/components/Text/native/Text.tsx").Text, {
+      variant: "heading-lg/medium",
+      children: children.title,
+    }),
+    ,
+    ,
+  ];
   if (obj.type === require("../../../../../flow/Server.tsx").ComponentType.STRING_SELECT) {
     obj = {};
     const merged1 = Object.assign(obj);
@@ -88,28 +95,62 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { padding: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
-let items = [{ label: "test with a long label", value: "test" }, { label: "test 2 with a long label", value: "test2", description: "with description!" }, { label: "star with a long label", value: "star", emoji: { name: "\u2B50" } }, { label: "advaith", value: "advaith", emoji: { id: "889887673425199124", name: "advaith_anim", animated: true } }];
-let items1 = [{ type: require("PermissionOverwriteType").ComponentType.STRING_SELECT, custom_id: "test", max_values: 1, min_values: 1, placeholder: "Choose...", options: items }, ];
-let obj2 = { type: require("PermissionOverwriteType").ComponentType.STRING_SELECT, custom_id: "test", max_values: 1, min_values: 1, placeholder: "Choose...", options: items };
-items1[1] = { type: require("PermissionOverwriteType").ComponentType.TEXT_DISPLAY, content: "hello world! :eyes: **bold** `code` https://cdn.discordapp.com/attachments/1408191424968523819/1408191500277387274/advaith.webp\nhttps://discord.com [google](https://google.com) ||spoiler|| <t:1755730638:t> <a:wumpus_party:393564669765353483>" };
+let items = [
+  { label: "test with a long label", value: "test" },
+  { label: "test 2 with a long label", value: "test2", description: "with description!" },
+  { label: "star with a long label", value: "star", emoji: { name: "\u2B50" } },
+  { label: "advaith", value: "advaith", emoji: { id: "889887673425199124", name: "advaith_anim", animated: true } },
+];
+let items1 = [
+  {
+    type: require("PermissionOverwriteType").ComponentType.STRING_SELECT,
+    custom_id: "test",
+    max_values: 1,
+    min_values: 1,
+    placeholder: "Choose...",
+    options: items,
+  },
+];
+let obj2 = {
+  type: require("PermissionOverwriteType").ComponentType.STRING_SELECT,
+  custom_id: "test",
+  max_values: 1,
+  min_values: 1,
+  placeholder: "Choose...",
+  options: items,
+};
+items1[1] = {
+  type: require("PermissionOverwriteType").ComponentType.TEXT_DISPLAY,
+  content:
+    "hello world! :eyes: **bold** `code` https://cdn.discordapp.com/attachments/1408191424968523819/1408191500277387274/advaith.webp\nhttps://discord.com [google](https://google.com) ||spoiler|| <t:1755730638:t> <a:wumpus_party:393564669765353483>",
+};
 const transformComponentsResult = flattenComponents.transformComponents(items1);
 let c10 = transformComponentsResult;
-let obj3 = { type: require("PermissionOverwriteType").ComponentType.TEXT_DISPLAY, content: "hello world! :eyes: **bold** `code` https://cdn.discordapp.com/attachments/1408191424968523819/1408191500277387274/advaith.webp\nhttps://discord.com [google](https://google.com) ||spoiler|| <t:1755730638:t> <a:wumpus_party:393564669765353483>" };
+let obj3 = {
+  type: require("PermissionOverwriteType").ComponentType.TEXT_DISPLAY,
+  content:
+    "hello world! :eyes: **bold** `code` https://cdn.discordapp.com/attachments/1408191424968523819/1408191500277387274/advaith.webp\nhttps://discord.com [google](https://google.com) ||spoiler|| <t:1755730638:t> <a:wumpus_party:393564669765353483>",
+};
 [unpackModuleId, closure_12] = importDefaultResult(transformComponentsResult, 2);
 const modal = "modal";
 const importDefaultResultResult = importDefaultResult(transformComponentsResult, 2);
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsComponentsTestingScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsComponentsTestingScreen.tsx",
+);
 
 export default function DevToolsComponentsTestingScreen() {
   const tmp = callback3();
   let obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: null };
   obj = { spacing: 16, children: null };
-  const items = [callback(Text.Text, { variant: "text-md/normal", children: "Test screen for embedding native components in RN" }), , ];
+  const items = [
+    callback(Text.Text, { variant: "text-md/normal", children: "Test screen for embedding native components in RN" }),
+    ,
+  ];
   obj = { modal: { customId: modal, channelId: channelId.getChannelId(), components: closure_10 }, children: null };
   obj1 = { customId: modal, channelId: channelId.getChannelId(), components: closure_10 };
   const obj2 = {};
   const merged = Object.assign(closure_12);
-  const items1 = [callback(TextDisplayComponentDefault, obj2), , , , , ];
+  const items1 = [callback(TextDisplayComponentDefault, obj2), , , , ,];
   const tmp2 = TextDisplayComponentDefault;
   items1[1] = callback(Select, { title: "String Select", type: PermissionOverwriteType.ComponentType.STRING_SELECT });
   const obj3 = { title: "String Select", type: PermissionOverwriteType.ComponentType.STRING_SELECT };
@@ -117,7 +158,10 @@ export default function DevToolsComponentsTestingScreen() {
   const obj4 = { title: "User Select", type: PermissionOverwriteType.ComponentType.USER_SELECT };
   items1[3] = callback(Select, { title: "Role Select", type: PermissionOverwriteType.ComponentType.ROLE_SELECT });
   const obj5 = { title: "Role Select", type: PermissionOverwriteType.ComponentType.ROLE_SELECT };
-  items1[4] = callback(Select, { title: "Mentionable Select", type: PermissionOverwriteType.ComponentType.MENTIONABLE_SELECT });
+  items1[4] = callback(Select, {
+    title: "Mentionable Select",
+    type: PermissionOverwriteType.ComponentType.MENTIONABLE_SELECT,
+  });
   const obj6 = { title: "Mentionable Select", type: PermissionOverwriteType.ComponentType.MENTIONABLE_SELECT };
   items1[5] = callback(Select, { title: "Channel Select", type: PermissionOverwriteType.ComponentType.CHANNEL_SELECT });
   obj[1] = items1;
@@ -128,9 +172,9 @@ export default function DevToolsComponentsTestingScreen() {
       obj = { type: "CLEAR_INTERACTION_MODAL_STATE", customId: closure_13 };
       return obj.dispatch(obj);
     },
-    text: "Reset Modal State"
+    text: "Reset Modal State",
   });
   obj[1] = items;
   obj[2] = callback2(Stack.Stack, obj);
   return callback(ScrollView, obj);
-};
+}

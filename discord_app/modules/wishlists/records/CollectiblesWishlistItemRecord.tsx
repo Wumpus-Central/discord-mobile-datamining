@@ -66,8 +66,7 @@ prototype = function CollectiblesWishlistItemRecord(bundle_items) {
   }
   return tmp2;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["fromServer"] = function fromServer(sku) {
   const obj = {};
   const merged = Object.assign(sku);

@@ -55,7 +55,29 @@ class VideoComponent {
         };
       }
     }, items);
-    obj = { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null };
+    obj = {
+      style,
+      source,
+      importantForAccessibility,
+      poster,
+      muted: flag2,
+      paused: null,
+      posterResizeMode: null,
+      resizeMode: null,
+      repeat: true,
+      playInBackground: null,
+      pictureInPicture: false,
+      playWhenInactive: false,
+      onLoadStart: null,
+      onLoad: null,
+      onError: null,
+      onEnd: null,
+      disableFocus: null,
+      "aria-hidden": null,
+      mixWithOthers: null,
+      preventsDisplaySleepDuringVideoPlayback: null,
+      httpEngine: null,
+    };
     tmp3 = jsx;
     if (!flag) {
       if (pauseWhileAppInactive) {
@@ -87,7 +109,14 @@ class VideoComponent {
 let c3 = importAllResult;
 ({ TouchableWithoutFeedback: c4, View: c5, Image: closure_6, AppState: error } = get_ActivityIndicator);
 createCacheKey = { container: null, video: null };
-createCacheKey = { flex: 1, shadowColor: ThemesDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+createCacheKey = {
+  flex: 1,
+  shadowColor: ThemesDefault.unsafe_rawColors.BLACK,
+  shadowOpacity: 0.5,
+  shadowOffset: { height: 1, width: 0 },
+  shadowRadius: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 let closure_9 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
@@ -153,8 +182,19 @@ prototype["renderVideo"] = function renderVideo() {
       const videoURI = src.videoURI;
       let tmp13;
       if (null != videoURI) {
-        let obj = { style: null, source: null, poster: null, muted: null, paused: null, resizeMode: null, posterResizeMode: null, ariaHidden: null, disableFocus: null, httpEngine: null };
-        const items = [tmp.video, , ];
+        let obj = {
+          style: null,
+          source: null,
+          poster: null,
+          muted: null,
+          paused: null,
+          resizeMode: null,
+          posterResizeMode: null,
+          ariaHidden: null,
+          disableFocus: null,
+          httpEngine: null,
+        };
+        const items = [tmp.video, ,];
         obj = { width: null, height: null };
         obj[0] = tmp3;
         obj[1] = tmp4;
@@ -277,12 +317,12 @@ export const createVideoControls = function createVideoControls(NOOP) {
         }
       }, []);
     },
-    props: obj
+    props: obj,
   };
   obj = {
     ref,
     onPlaybackRateChange(nativeEvent) {
-      if (closure_8 !== 0 === nativeEvent.playbackRate) {
+      if ((closure_8 !== 0) === nativeEvent.playbackRate) {
         closure_8 = tmp;
         if (closure_2 != null) {
           tmp2(closure_8);
@@ -300,7 +340,7 @@ export const createVideoControls = function createVideoControls(NOOP) {
       if (closure_3 != null) {
         tmp(progressPercent);
       }
-    }
+    },
   };
   return obj;
 };

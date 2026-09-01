@@ -26,6 +26,11 @@ export const CARD_ROWS_COLUMN_GAP = 16;
 export const WISHLIST_SUGGESTION_CARD_GAP = 8;
 export const FLOATING_UPSELL_HEIGHT = 140;
 export const COLLECTIBLES_PREVIEW_SIZE = 48;
-export const UserProfileThemeTypes = { ACTION_SHEET: "action_sheet", YOU_SCREEN: "you_screen", PREVIEW: "preview", EDIT_FORM: "edit_form" };
+export const UserProfileThemeTypes = {
+  ACTION_SHEET: "action_sheet",
+  YOU_SCREEN: "you_screen",
+  PREVIEW: "preview",
+  EDIT_FORM: "edit_form",
+};
 export const PROFILE_TOP_LAYER_Z_INDEX = 2;
 export const DIVIDER_DOT = " \u2219 ";

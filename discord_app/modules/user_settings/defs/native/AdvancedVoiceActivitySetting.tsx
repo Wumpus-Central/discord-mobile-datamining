@@ -28,10 +28,14 @@ createToggle = {
   },
   usePredicate: function useHasAdvancedVoiceActivitySetting() {
     const items = [closure_3];
-    return initialize.useStateFromStores(items, () => advancedVoiceActivitySupported.isAdvancedVoiceActivitySupported());
-  }
+    return initialize.useStateFromStores(items, () =>
+      advancedVoiceActivitySupported.isAdvancedVoiceActivitySupported(),
+    );
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AdvancedVoiceActivitySetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/AdvancedVoiceActivitySetting.tsx",
+);
 
 export default createToggle;

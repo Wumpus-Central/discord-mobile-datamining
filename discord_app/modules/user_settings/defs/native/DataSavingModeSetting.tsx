@@ -19,13 +19,18 @@ createToggle = {
   },
   onValueChange: function onDataSavingModeSettingValueChange(arg0) {
     let obj = UserSettingsText;
-    obj = { videoUploadQuality: closure_2.videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
+    obj = {
+      videoUploadQuality: closure_2.videoUploadQuality,
+      viewImageDescriptions: null,
+      lowQualityImageMode: null,
+      dataSavingMode: null,
+    };
     const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
     obj[1] = ViewImageDescriptions.getSetting();
     obj[2] = closure_2.lowQualityImageMode;
     obj[3] = arg0;
     obj.setDataSavingMode(obj);
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DataSavingModeSetting.tsx");

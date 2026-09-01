@@ -6,7 +6,13 @@ import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/billing/native/subscription/BillingInformation.tsx");
 
-export const getBillingInformationStringNative = function getBillingInformationStringNative(subscription, first, first1, flag, fractionalPremiumInfo) {
+export const getBillingInformationStringNative = function getBillingInformationStringNative(
+  subscription,
+  first,
+  first1,
+  flag,
+  fractionalPremiumInfo,
+) {
   let tmp = first1;
   if (first1 === undefined) {
     tmp = null;
@@ -17,7 +23,9 @@ export const getBillingInformationStringNative = function getBillingInformationS
   let _require;
   let obj = getPremiumPlanItem;
   let billingInformationString = obj.getBillingInformationString(subscription, first, tmp, flag, fractionalPremiumInfo);
-  let tmp5 = require("../../../../../discord_common/js/shared/utils/PlatformUtils.tsx").isIOS() && subscription.isPurchasedViaApple;
+  let tmp5 =
+    require("../../../../../discord_common/js/shared/utils/PlatformUtils.tsx").isIOS() &&
+    subscription.isPurchasedViaApple;
   if (tmp5) {
     tmp5 = subscription.status === SubscriptionStatusTypes.ACTIVE;
   }
@@ -25,7 +33,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
     const intl = tmp2(1236).intl;
     obj = { renewalDate: null, onSubscriptionManagementClick: null };
     obj[0] = first.subscriptionPeriodStart;
-    _require = callback(function*() {
+    _require = callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -77,7 +85,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
         }
       }
     });
-    obj[1] = function() {
+    obj[1] = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {

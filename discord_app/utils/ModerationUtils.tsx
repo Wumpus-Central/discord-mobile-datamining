@@ -40,7 +40,13 @@ const result = set.fileFinishedImporting("utils/ModerationUtils.tsx");
 
 export { mapColorToHighlightColor };
 export const mapOptionToHighlightedRowOptions = function mapOptionToHighlightedRowOptions(arr) {
-  return arr.map((name) => ({ title: name.name, description: name.desc, highlightColor: callback(name.color), value: name.value, disabled: name.disabled }));
+  return arr.map((name) => ({
+    title: name.name,
+    description: name.desc,
+    highlightColor: callback(name.color),
+    value: name.value,
+    disabled: name.disabled,
+  }));
 };
 export const generateVerificationLevelOptions = function generateVerificationLevelOptions(features) {
   let flag = features;
@@ -65,7 +71,7 @@ export const generateVerificationLevelOptions = function generateVerificationLev
   obj[1] = stringResult;
   obj[2] = constants.NONE;
   obj[3] = flag;
-  const items = [obj, , , , ];
+  const items = [obj, , , ,];
   obj = { name: null, desc: null, value: null, color: null };
   const intl3 = tmp(1236).intl;
   obj[0] = intl3.string(getSystemLocale.t.SsCK8I);
@@ -132,7 +138,7 @@ export const generateContentFilterHighlightedOptions = function generateContentF
   obj[1] = intl2.string(getSystemLocale.t["Z+yUWF"]);
   obj[2] = constants3.ALL_MEMBERS;
   obj[3] = unsafe_getRawColor.unsafe_getRawColor("RED_400");
-  const items = [obj, , ];
+  const items = [obj, ,];
   obj = { name: null, desc: null, value: null, disabled: null, color: null };
   const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t.ynfFaI);
@@ -180,7 +186,7 @@ export const generateContentFilterOptions = function generateContentFilterOption
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t["Z+yUWF"]);
   obj[2] = constants3.ALL_MEMBERS;
-  const items = [obj, , ];
+  const items = [obj, ,];
   obj = { name: null, desc: null, value: null, disabled: null };
   const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t.ynfFaI);
@@ -220,7 +226,7 @@ export const generateDmSpamOptions = function generateDmSpamOptions() {
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.TgipjE);
   obj[2] = create.DmSpamFilterV2.FRIENDS_AND_NON_FRIENDS;
-  const items = [obj, , ];
+  const items = [obj, ,];
   obj = { name: null, desc: null, value: null };
   const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t["6NnX6F"]);
@@ -245,7 +251,7 @@ export const generateExplicitImageOptions = function generateExplicitImageOption
   obj[1] = intl2.string(getSystemLocale.t["Fw+Lvp"]);
   obj[2] = constants4.FRIENDS_AND_NON_FRIENDS;
   obj[3] = unsafe_getRawColor.unsafe_getRawColor("GREEN_360");
-  const items = [obj, , ];
+  const items = [obj, ,];
   obj = { name: null, desc: null, value: null, color: null };
   const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t["8ioJ4S"]);

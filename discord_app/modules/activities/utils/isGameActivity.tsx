@@ -11,4 +11,4 @@ export default function isGameActivity(type) {
     tmp = type.type === ActivityTypes.PLAYING;
   }
   return tmp;
-};
+}

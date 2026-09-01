@@ -47,8 +47,13 @@ export default function useAnalyticsLocations() {
       callback(items);
     }
   }, items3);
-  return { analyticsLocations: memo, sourceAnalyticsLocations: memo1, parentAnalyticsLocation: memo1[memo1.length - 1], newestAnalyticsLocation: memo[memo.length - 1] };
-};
+  return {
+    analyticsLocations: memo,
+    sourceAnalyticsLocations: memo1,
+    parentAnalyticsLocation: memo1[memo1.length - 1],
+    newestAnalyticsLocation: memo[memo.length - 1],
+  };
+}
 export const LocationContext = context;
 export const AnalyticsLocationProvider = function AnalyticsLocationProvider(value) {
   return <context.Provider value={arg0.value}>{arg0.children}</context.Provider>;

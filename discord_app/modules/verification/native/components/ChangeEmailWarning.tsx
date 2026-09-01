@@ -38,18 +38,30 @@ export default function ChangeEmailWarning(changeEmailReason) {
     obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const items2 = [callback(tmp2(6256).TrafficConeSpotIllustration, {}), , , ];
-    obj1 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    const items2 = [callback(tmp2(6256).TrafficConeSpotIllustration, {}), , ,];
+    obj1 = {
+      style: null,
+      accessibilityRole: "header",
+      variant: "heading-xl/extrabold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj1[0] = tmp.title;
     const intl = tmp2(1236).intl;
     obj1[4] = intl.string(tmp2(1236).t.hhR7gX);
     items2[1] = callback(tmp2(4474).Text, obj1);
-    const obj2 = { style: null, accessibilityRole: "header", variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
+    const obj2 = {
+      style: null,
+      accessibilityRole: "header",
+      variant: "text-md/normal",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj2[0] = tmp.body;
     const intl2 = tmp2(1236).intl;
     const obj3 = { hcArticle: null };
     obj3[0] = closure_7;
-    const items3 = [intl2.format(tmp2(1236).t.rqWXUf, obj3), "\n\n", ];
+    const items3 = [intl2.format(tmp2(1236).t.rqWXUf, obj3), "\n\n"];
     const intl3 = tmp2(1236).intl;
     items3[2] = intl3.string(tmp2(1236).t["3LW10C"]);
     obj2[4] = items3;
@@ -60,7 +72,7 @@ export default function ChangeEmailWarning(changeEmailReason) {
     const intl4 = tmp2(1236).intl;
     obj5[2] = intl4.string(tmp2(1236).t.rwTBFs);
     obj5[3] = tmp6;
-    const items4 = [callback(tmp2(4928).Button, obj5), ];
+    const items4 = [callback(tmp2(4928).Button, obj5)];
     const obj6 = { size: "md", variant: "primary", text: null, onPress: null, shrink: true };
     const intl5 = tmp2(1236).intl;
     obj6[2] = intl5.string(tmp2(1236).t["ETE/oC"]);
@@ -75,4 +87,4 @@ export default function ChangeEmailWarning(changeEmailReason) {
     tmp7 = callback(closure_5, obj);
   }
   return tmp7;
-};
+}

@@ -3,11 +3,10 @@ import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js
 import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 let closure_3 = {};
-class AndroidRemoteAuthCrypto {
-}
+class AndroidRemoteAuthCrypto {}
 const prototype = AndroidRemoteAuthCrypto.prototype;
 prototype["generateRsaKeyPair"] = function generateRsaKeyPair() {
-  return callback(function*() {
+  return callback(function* () {
     closure_0 = tmp4;
     const obj2 = closure_1_0(table[1]);
     yield obj2.generateKeyPair();
@@ -22,7 +21,7 @@ prototype["publicKeyFingerprint"] = function publicKeyFingerprint(c3) {
 };
 prototype["decryptEncodedCiphertext"] = function decryptEncodedCiphertext(closure_0, closure_02) {
   closure_0 = closure_02;
-  return callback(function*() {
+  return callback(function* () {
     closure_0 = tmp2;
     const obj3 = closure_1_0(table[1]);
     closure_0 = yield obj3.decrypt(closure_1_0);
@@ -35,7 +34,7 @@ prototype["decryptEncodedCiphertext"] = function decryptEncodedCiphertext(closur
 };
 prototype["decryptNonce"] = function decryptNonce(arg0, encrypted_nonce) {
   closure_0 = encrypted_nonce;
-  return callback(function*() {
+  return callback(function* () {
     const obj2 = v0(table[1]);
     yield obj2.decrypt(v0).then((str) => str.replace(/\//g, "_").replace(/\+/g, "-"));
     return arg1;

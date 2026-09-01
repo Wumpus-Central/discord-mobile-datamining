@@ -20,5 +20,5 @@ export default {
   },
   fetchStoreFront() {
     return Promise.resolve({ country: "US", currency: "usd" });
-  }
+  },
 };

@@ -15,7 +15,9 @@ createCacheKey = { container: null };
 createCacheKey = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx",
+);
 
 export default function MediaViewerAltTextSheet(children) {
   let obj = useMessagePreviewHeightStore;
@@ -34,4 +36,4 @@ export default function MediaViewerAltTextSheet(children) {
   obj[1] = items;
   obj[2] = jsx(Text.Text, { accessibilityRole: "text", variant: "text-md/normal", children: children.description });
   return jsx(Background.BottomSheet, { title: null });
-};
+}

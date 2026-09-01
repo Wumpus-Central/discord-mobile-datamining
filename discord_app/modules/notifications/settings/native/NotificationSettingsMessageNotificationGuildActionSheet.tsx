@@ -9,7 +9,9 @@ import { updateGuildPreset } from "../utils/notificationSettingsGuildFlagUtils.t
 
 const require = arg1;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotificationGuildActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/notifications/settings/native/NotificationSettingsMessageNotificationGuildActionSheet.tsx",
+);
 
 export default function NotificationSettingsMessageNotificationGuildActionSheet(guildId) {
   const _require = guildId;
@@ -33,11 +35,18 @@ export default function NotificationSettingsMessageNotificationGuildActionSheet(
       tmp = unread !== closure_1_5.ALL_MESSAGES;
     }
     if (tmp) {
-      obj.flags = guildId(closure_1_2[9]).withGuildUnreadFlags(closure_1_3.getGuildFlags(guildId.guildId), closure_1_6.UNREADS_ALL_MESSAGES);
+      obj.flags = guildId(closure_1_2[9]).withGuildUnreadFlags(
+        closure_1_3.getGuildFlags(guildId.guildId),
+        closure_1_6.UNREADS_ALL_MESSAGES,
+      );
       const obj2 = guildId(closure_1_2[9]);
     }
     const NotificationLabel = guildId(closure_1_2[11]).NotificationLabel;
-    const result = unread(closure_1_2[10]).updateGuildNotificationSettings(guildId.guildId, obj, NotificationLabel.notifications(message_notifications));
+    const result = unread(closure_1_2[10]).updateGuildNotificationSettings(
+      guildId.guildId,
+      obj,
+      NotificationLabel.notifications(message_notifications),
+    );
   };
   return jsx(unread(10246), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
-};
+}

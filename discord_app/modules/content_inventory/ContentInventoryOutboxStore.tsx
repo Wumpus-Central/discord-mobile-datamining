@@ -11,8 +11,7 @@ let c4 = null;
 let c5 = false;
 let c6 = false;
 const Store = initializeDefault.Store;
-class ContentInventoryOutboxStore extends Store {
-}
+class ContentInventoryOutboxStore extends Store {}
 const prototype = ContentInventoryOutboxStore.prototype;
 prototype["getMatchingOutboxEntry"] = function getMatchingOutboxEntry(activity) {
   activity = activity.activity;
@@ -33,19 +32,19 @@ Object.defineProperty(prototype, "deleteOutboxEntryError", {
   get: function deleteOutboxEntryError() {
     return c4;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isDeletingEntryHistory", {
   get: function isDeletingEntryHistory() {
     return c5;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasInitialized", {
   get: function hasInitialized() {
     return c6;
   },
-  set: undefined
+  set: undefined,
 });
 ContentInventoryOutboxStore.displayName = "ContentInventoryOutboxStore";
 const contentInventoryOutboxStore = new ContentInventoryOutboxStore(dispatcherDefault, {
@@ -103,7 +102,7 @@ const contentInventoryOutboxStore = new ContentInventoryOutboxStore(dispatcherDe
   CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: function handleClearError() {
     c4 = null;
     c5 = false;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryOutboxStore.tsx");
 

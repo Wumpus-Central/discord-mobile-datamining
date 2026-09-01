@@ -17,7 +17,7 @@ let prototype = function RedesignNewUserManager() {
     },
     ONBOARDING_START() {
       return applyArgumentsResult.handleOnboardingStart();
-    }
+    },
   };
   applyArgumentsResult.startOnboarding = function startOnboarding() {
     callback(applyArgumentsResult(table[3]).hasDeferredInvite() ? closure_4.ONBOARDING_INVITE : closure_4.ONBOARDING);
@@ -60,8 +60,7 @@ let prototype = function RedesignNewUserManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp3 {
-}
+class prototype extends tmp3 {}
 prototype = new prototype();
 const result = set.fileFinishedImporting("modules/nuf/native/RedesignNewUserManager.tsx");
 

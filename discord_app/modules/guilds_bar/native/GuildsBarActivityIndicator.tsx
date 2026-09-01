@@ -60,9 +60,26 @@ function getMediaIcon(closure_3) {
 }
 let c3 = importAllResult;
 let obj = { activityWrapper: null, activityIconWrapper: null, activityIconWrapperActive: null, activityIcon: null };
-obj = { position: "absolute", top: -3, right: -3, justifyContent: "center", width: 22, height: 22, padding: 3, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+obj = {
+  position: "absolute",
+  top: -3,
+  right: -3,
+  justifyContent: "center",
+  width: 22,
+  height: 22,
+  padding: 3,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 obj[0] = obj;
-createCacheKey = { justifyContent: "center", width: 16, height: 16, padding: 2, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
+createCacheKey = {
+  justifyContent: "center",
+  width: 16,
+  height: 16,
+  padding: 2,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+};
 obj[1] = createCacheKey;
 obj[2] = { backgroundColor: ThemesDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT };
 let obj2 = { backgroundColor: ThemesDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT };
@@ -76,7 +93,7 @@ const memoResult = importAllResult.memo((arg0) => {
   let WHITE = obj.useToken(ThemesDefault.colors.ICON_DEFAULT);
   obj = { style: items, children: null };
   items = [activityIcon.activityWrapper, style];
-  const items1 = [activityIcon.activityIconWrapper, ];
+  const items1 = [activityIcon.activityIconWrapper];
   let prop = null;
   const tmp = require;
   const tmp5 = setDefault;
@@ -119,7 +136,7 @@ const memoResult1 = importAllResult.memo(function GuildsBarGuildActivityIndicato
   if (tmp2 != null) {
     icon = tmp2.icon;
   }
-  const items = [icon, , ];
+  const items = [icon, ,];
   let source;
   if (tmp2 != null) {
     source = tmp2.source;
@@ -169,7 +186,7 @@ export const useActivityIndicatorState = function useActivityIndicatorState(guil
   if (tmp2 != null) {
     icon = tmp2.icon;
   }
-  const items = [icon, , ];
+  const items = [icon, ,];
   let source;
   if (tmp2 != null) {
     source = tmp2.source;

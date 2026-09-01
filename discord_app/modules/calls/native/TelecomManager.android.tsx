@@ -48,14 +48,14 @@ class TelecomManager extends tmp5 {
     applyArgumentsResult.stores = result2.set(closure_8, () => applyArgumentsResult.handleIncomingCallStoreChange());
     applyArgumentsResult.actions = {
       CALL_CREATE(arg0) {
-            return applyArgumentsResult.handleCallCreate(arg0);
-          },
+        return applyArgumentsResult.handleCallCreate(arg0);
+      },
       CALL_UPDATE(arg0) {
-            return applyArgumentsResult.handleCallUpdate(arg0);
-          },
+        return applyArgumentsResult.handleCallUpdate(arg0);
+      },
       CALL_DELETE(arg0) {
-            return applyArgumentsResult.handleCallDelete(arg0);
-          }
+        return applyArgumentsResult.handleCallDelete(arg0);
+      },
     };
     applyArgumentsResult.currentCall = null;
     applyArgumentsResult.isInitialized = false;
@@ -149,7 +149,9 @@ class TelecomManager extends tmp5 {
                     tmp5(tmp6[24]).startStream();
                     const tmp5Result = tmp5(tmp6[24]);
                   } else {
-                    obj.warn("Cannot start screen share from Call Bar: user lacks streaming permission in this channel");
+                    obj.warn(
+                      "Cannot start screen share from Call Bar: user lacks streaming permission in this channel",
+                    );
                   }
                 } else {
                   obj.warn("Cannot start screen share from Call Bar: OS version does not meet requirements");
@@ -232,9 +234,11 @@ class TelecomManager extends tmp5 {
       const registeredIncomingCallIds = applyArgumentsResult.registeredIncomingCallIds;
       registeredIncomingCallIds.delete(callId.callId);
       obj = closure_1_1(closure_1_2[18]);
-      closure_1_1(closure_1_2[18]).endCall(callId.callId).catch((arg0) => {
-        logger.warn("Failed to end answered telecom call:", arg0);
-      });
+      closure_1_1(closure_1_2[18])
+        .endCall(callId.callId)
+        .catch((arg0) => {
+          logger.warn("Failed to end answered telecom call:", arg0);
+        });
       const endCallResult = closure_1_1(closure_1_2[18]).endCall(callId.callId);
       const voiceChannel = closure_1_1(closure_1_2[19]).selectVoiceChannel(callId.callId);
     };
@@ -243,9 +247,11 @@ class TelecomManager extends tmp5 {
       const registeredIncomingCallIds = applyArgumentsResult.registeredIncomingCallIds;
       registeredIncomingCallIds.delete(callId.callId);
       obj = closure_1_1(closure_1_2[20]);
-      closure_1_1(closure_1_2[20]).stopRinging(callId.callId).catch((arg0) => {
-        logger.warn("Failed to stop ringing after telecom reject:", arg0);
-      });
+      closure_1_1(closure_1_2[20])
+        .stopRinging(callId.callId)
+        .catch((arg0) => {
+          logger.warn("Failed to stop ringing after telecom reject:", arg0);
+        });
     };
     return applyArgumentsResult;
   }
@@ -352,7 +358,10 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
     if (tmp3) {
       self.cancelIncomingCall(self.currentCall.channelId);
     }
-    tmp3 = null != self.currentCall && self.currentCall.channelId !== channelId && self.isPendingIncomingCall(self.currentCall);
+    tmp3 =
+      null != self.currentCall &&
+      self.currentCall.channelId !== channelId &&
+      self.isPendingIncomingCall(self.currentCall);
     channelName = require("../../channel/useChannelName.tsx").computeChannelName(channel, closure_15, closure_13);
     let guildId = channel.getGuildId();
     if (guildId == null) {
@@ -375,21 +384,26 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
     }
     const obj4 = self(17077);
     const reportIncomingCallResult = self(17077).reportIncomingCall(channelId, channelName, tmp19);
-    self(17077).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
-      if (!arg0) {
-        closure_1_25.warn("Failed to report incoming call: resolved false");
+    self(17077)
+      .reportIncomingCall(channelId, channelName, tmp19)
+      .then((arg0) => {
+        if (!arg0) {
+          closure_1_25.warn("Failed to report incoming call: resolved false");
+          self.clearCall(closure_0);
+        }
+      })
+      .catch((arg0) => {
+        closure_1_25.warn("Failed to report incoming call:", arg0);
         self.clearCall(closure_0);
-      }
-    }).catch((arg0) => {
-      closure_1_25.warn("Failed to report incoming call:", arg0);
-      self.clearCall(closure_0);
-    });
-    const nextPromise = self(17077).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
-      if (!arg0) {
-        closure_1_25.warn("Failed to report incoming call: resolved false");
-        self.clearCall(closure_0);
-      }
-    });
+      });
+    const nextPromise = self(17077)
+      .reportIncomingCall(channelId, channelName, tmp19)
+      .then((arg0) => {
+        if (!arg0) {
+          closure_1_25.warn("Failed to report incoming call: resolved false");
+          self.clearCall(closure_0);
+        }
+      });
   } else {
     obj.warn("Cannot report incoming call: channel not found:", channelId);
   }
@@ -400,14 +414,17 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   obj.info("Cancelling incoming call:", channelId);
   obj = self(17077);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
-  return obj.cancelIncomingCall(channelId).then(() => {
-    self.clearCall(closure_0);
-    return true;
-  }).catch((arg0) => {
-    closure_1_25.warn("Failed to cancel incoming call:", arg0);
-    self.clearCall(closure_0);
-    return false;
-  });
+  return obj
+    .cancelIncomingCall(channelId)
+    .then(() => {
+      self.clearCall(closure_0);
+      return true;
+    })
+    .catch((arg0) => {
+      closure_1_25.warn("Failed to cancel incoming call:", arg0);
+      self.clearCall(closure_0);
+      return false;
+    });
 };
 prototype["isPendingIncomingCall"] = function isPendingIncomingCall(currentCall) {
   return currentCall.state === closure_26.Ringing || currentCall.state === tmp.Connecting;
@@ -437,7 +454,7 @@ prototype["reconcileTelecomState"] = function reconcileTelecomState() {
 };
 prototype["doReconcile"] = function doReconcile() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c4 === 2) {
       c4 = 3;
       let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -497,7 +514,18 @@ prototype["doReconcile"] = function doReconcile() {
               if (currentCall3 != null) {
                 state = currentCall3.state;
               }
-              closure_1_25.info("Reconcile: rtc=", throwTypeErrorResult, "connected=", throwTypeErrorResult, "target=", tmp38, "current=", channelId, "state=", state);
+              closure_1_25.info(
+                "Reconcile: rtc=",
+                throwTypeErrorResult,
+                "connected=",
+                throwTypeErrorResult,
+                "target=",
+                tmp38,
+                "current=",
+                channelId,
+                "state=",
+                state,
+              );
               if (null != tmp38) {
                 const currentCall4 = closure_1_0.currentCall;
                 let channelId1;
@@ -752,24 +780,29 @@ prototype["handleIncomingCallStoreChange"] = function handleIncomingCallStoreCha
           registeredIncomingCallIds2.add(iter);
           obj = closure_1_1(closure_1_2[18]);
           const registerIncomingCallResult = closure_1_1(closure_1_2[18]).registerIncomingCall(iter);
-          closure_1_1(closure_1_2[18]).registerIncomingCall(iter).then((arg0) => {
-            if (!arg0) {
-              closure_2_25.warn("Failed to register incoming call with telecom: resolved false");
+          closure_1_1(closure_1_2[18])
+            .registerIncomingCall(iter)
+            .then((arg0) => {
+              if (!arg0) {
+                closure_2_25.warn("Failed to register incoming call with telecom: resolved false");
+                const registeredIncomingCallIds = iter.registeredIncomingCallIds;
+                registeredIncomingCallIds.delete(iter);
+              }
+            })
+            .catch((arg0) => {
+              closure_2_25.warn("Failed to register incoming call with telecom:", arg0);
               const registeredIncomingCallIds = iter.registeredIncomingCallIds;
               registeredIncomingCallIds.delete(iter);
-            }
-          }).catch((arg0) => {
-            closure_2_25.warn("Failed to register incoming call with telecom:", arg0);
-            const registeredIncomingCallIds = iter.registeredIncomingCallIds;
-            registeredIncomingCallIds.delete(iter);
-          });
-          const nextPromise = closure_1_1(closure_1_2[18]).registerIncomingCall(iter).then((arg0) => {
-            if (!arg0) {
-              closure_2_25.warn("Failed to register incoming call with telecom: resolved false");
-              const registeredIncomingCallIds = iter.registeredIncomingCallIds;
-              registeredIncomingCallIds.delete(iter);
-            }
-          });
+            });
+          const nextPromise = closure_1_1(closure_1_2[18])
+            .registerIncomingCall(iter)
+            .then((arg0) => {
+              if (!arg0) {
+                closure_2_25.warn("Failed to register incoming call with telecom: resolved false");
+                const registeredIncomingCallIds = iter.registeredIncomingCallIds;
+                registeredIncomingCallIds.delete(iter);
+              }
+            });
         }
       }
       const iter = set[Symbol.iterator]();
@@ -783,7 +816,7 @@ prototype["handleIncomingCallStoreChange"] = function handleIncomingCallStoreCha
 prototype["startCall"] = function startCall(channelId, arg1) {
   closure_0 = channelId;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -888,14 +921,17 @@ prototype["endCall"] = function endCall(currentCall) {
   obj.info("Ending call:", currentCall.channelId);
   obj = self(17077);
   const endCallResult = obj.endCall(currentCall.channelId);
-  return obj.endCall(currentCall.channelId).then((arg0) => {
-    self.clearCall(currentCall.channelId);
-    return arg0;
-  }).catch((arg0) => {
-    closure_1_25.warn("Failed to end call:", arg0);
-    self.clearCall(currentCall.channelId);
-    return false;
-  });
+  return obj
+    .endCall(currentCall.channelId)
+    .then((arg0) => {
+      self.clearCall(currentCall.channelId);
+      return arg0;
+    })
+    .catch((arg0) => {
+      closure_1_25.warn("Failed to end call:", arg0);
+      self.clearCall(currentCall.channelId);
+      return false;
+    });
 };
 prototype["reportCallEnded"] = function reportCallEnded() {
   const self = this;

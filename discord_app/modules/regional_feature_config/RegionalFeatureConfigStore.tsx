@@ -9,8 +9,7 @@ import DEFAULT_COUNTRY_CODE_NAME from "../i18n/CountryCodeUtils.tsx";
 let c4 = null;
 let c5 = null;
 const Store = initializeDefault.Store;
-class RegionalFeatureConfigStore extends Store {
-}
+class RegionalFeatureConfigStore extends Store {}
 const prototype = RegionalFeatureConfigStore.prototype;
 prototype["getRegionalFeatureConfig"] = function getRegionalFeatureConfig() {
   return c4;
@@ -96,7 +95,7 @@ const regionalFeatureConfigStore = new RegionalFeatureConfigStore(dispatcherDefa
       closure_5 = tmp2;
     }
     return false;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigStore.tsx");
 

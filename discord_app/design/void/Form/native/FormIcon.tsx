@@ -29,4 +29,4 @@ export default function FormIcon(color) {
     tmp9 = jsx(Button.Icon, { style: null, color: null });
   }
   return tmp9;
-};
+}

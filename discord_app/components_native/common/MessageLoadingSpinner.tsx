@@ -33,4 +33,4 @@ export default function MessageLoadingSpinner(color) {
     tmp8 = jsx(ActivityIndicator.ActivityIndicator, { animating: null });
   }
   return tmp8;
-};
+}

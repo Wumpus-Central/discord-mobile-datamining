@@ -16,7 +16,7 @@ export default function usePendingFolderGuildIds() {
     guilds = obj2.getGuilds();
     return guildIds.filter((arg0) => null == table[arg0]);
   });
-};
+}
 export const getPendingFolderGuildIds = function getPendingFolderGuildIds() {
   let tmp = arg0;
   if (arg0 === undefined) {

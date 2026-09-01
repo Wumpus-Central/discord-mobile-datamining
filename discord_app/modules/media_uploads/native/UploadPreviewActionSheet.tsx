@@ -12,9 +12,18 @@ const require = arg1;
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { contentContainer: { padding: 16 }, imageWrap: null, imageContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, width: "100%" };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  padding: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.md,
+  width: "100%",
+};
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { overflow: "hidden", alignSelf: "center", borderRadius: ThemesDefault.radii.md - ThemesDefault.space.PX_4 };
+createCacheKey[2] = {
+  overflow: "hidden",
+  alignSelf: "center",
+  borderRadius: ThemesDefault.radii.md - ThemesDefault.space.PX_4,
+};
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { overflow: "hidden", alignSelf: "center", borderRadius: ThemesDefault.radii.md - ThemesDefault.space.PX_4 };
 let result = require("set").fileFinishedImporting("modules/media_uploads/native/UploadPreviewActionSheet.tsx");
@@ -43,7 +52,10 @@ export default function UploadPreviewActionSheet(onAdd) {
   ({ isImage, isThumbnail } = upload);
   item = upload.item;
   spoiler = upload.spoiler;
-  onEdit(onRemove[8])(item.platform === onAdd(onRemove[9]).UploadPlatform.REACT_NATIVE, "Upload must be a React Native upload item.");
+  onEdit(onRemove[8])(
+    item.platform === onAdd(onRemove[9]).UploadPlatform.REACT_NATIVE,
+    "Upload must be a React Native upload item.",
+  );
   width = onEdit(onRemove[10])().width;
   const bottom = onEdit(onRemove[11])().bottom;
   onEdit(onRemove[12])(() => () => {
@@ -106,20 +118,23 @@ export default function UploadPreviewActionSheet(onAdd) {
     obj[3] = tmp3;
     const obj2 = onEdit(onRemove[14]);
     const launchCropperResult = onEdit(onRemove[14]).launchCropper(obj);
-    onEdit(onRemove[14]).launchCropper(obj).then((path) => {
-      if (closure_1 != null) {
-        tmp(closure_1_0(closure_1_2[15]).cropResultToUploadItem(path));
-        const obj = closure_1_0(closure_1_2[15]);
-      }
-    }).catch((code) => {
-      if ("E_PICKER_CANCELLED" !== code.code) {
-        let obj = callback2(4194);
-        obj = { key: "CROP_ERROR", IconComponent: null, content: null };
-        obj[1] = callback(7708).CircleErrorIcon;
-        obj[2] = code.message;
-        obj.open(obj);
-      }
-    });
+    onEdit(onRemove[14])
+      .launchCropper(obj)
+      .then((path) => {
+        if (closure_1 != null) {
+          tmp(closure_1_0(closure_1_2[15]).cropResultToUploadItem(path));
+          const obj = closure_1_0(closure_1_2[15]);
+        }
+      })
+      .catch((code) => {
+        if ("E_PICKER_CANCELLED" !== code.code) {
+          let obj = callback2(4194);
+          obj = { key: "CROP_ERROR", IconComponent: null, content: null };
+          obj[1] = callback(7708).CircleErrorIcon;
+          obj[2] = code.message;
+          obj.open(obj);
+        }
+      });
   }, items3);
   const memo = React.useMemo(() => {
     const obj = onAdd(onRemove[18]);
@@ -155,9 +170,9 @@ export default function UploadPreviewActionSheet(onAdd) {
     onLayout(nativeEvent) {
       _undefined(nativeEvent.nativeEvent.layout.height);
     },
-    children: null
+    children: null,
   };
-  const items5 = [spoiler(onAdd(onRemove[24]).Text, { variant: "text-md/semibold", children: item.filename }), , , ];
+  const items5 = [spoiler(onAdd(onRemove[24]).Text, { variant: "text-md/semibold", children: item.filename }), , ,];
   const obj4 = { style: tmp.imageWrap, children: null };
   const obj5 = { style: items6, children: null };
   items6 = [tmp.imageContainer, { width: size.width, height: size.height }];
@@ -167,7 +182,13 @@ export default function UploadPreviewActionSheet(onAdd) {
     if (isVideo) {
       const uri = item.uri;
       if (uri.startsWith("file://")) {
-        const obj6 = { style: null, source: null, muted: true, paused: true, preventsDisplaySleepDuringVideoPlayback: false };
+        const obj6 = {
+          style: null,
+          source: null,
+          muted: true,
+          paused: true,
+          preventsDisplaySleepDuringVideoPlayback: false,
+        };
         ({ width: obj12[0], height: obj12[1] } = size);
         obj6[0] = { width: null, height: null };
         const obj8 = { uri: null };
@@ -176,7 +197,7 @@ export default function UploadPreviewActionSheet(onAdd) {
         let tmp22Result = tmp22(tmp6(tmp4[26]).VideoComponent, obj6);
         const obj7 = { width: null, height: null };
       }
-      const items7 = [tmp22Result, ];
+      const items7 = [tmp22Result];
       tmp22Result = null != memo;
       if (tmp22Result) {
         tmp22Result = "" !== memo;
@@ -234,7 +255,7 @@ export default function UploadPreviewActionSheet(onAdd) {
         obj12[2] = intl.string(tmp6(tmp4[32]).t["5S2AK+"]);
         tmp22Result2 = tmp22(tmp6(tmp4[29]).TableRow, obj12);
       }
-      const items8 = [tmp22Result2, , , ];
+      const items8 = [tmp22Result2, , ,];
       let tmp22Result3 = null;
       if (tmp14) {
         const obj13 = { icon: null, onPress: null, label: null, checked: null };
@@ -277,4 +298,4 @@ export default function UploadPreviewActionSheet(onAdd) {
     }
   }
   tmp22Result = tmp22(closure_5, { style: { width: size.width, height: size.height }, source: item });
-};
+}

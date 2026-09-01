@@ -47,14 +47,18 @@ class WelcomeChannelRow {
     items2[0] = closure_6;
     items3 = [];
     items3[0] = welcomeChannel.emoji_id;
-    stateFromStores2 = obj3.useStateFromStores(items2, () => {
-      let customEmojiById = null;
-      if (null != welcomeChannel.emoji_id) {
-        customEmojiById = closure_1_6.getCustomEmojiById(tmp.emoji_id);
-      }
-      return customEmojiById;
-    }, items3);
-    items4 = [, ];
+    stateFromStores2 = obj3.useStateFromStores(
+      items2,
+      () => {
+        let customEmojiById = null;
+        if (null != welcomeChannel.emoji_id) {
+          customEmojiById = closure_1_6.getCustomEmojiById(tmp.emoji_id);
+        }
+        return customEmojiById;
+      },
+      items3,
+    );
+    items4 = [,];
     items4[0] = stateFromStores;
     items4[1] = trackOptionSelect;
     tmp11Result1 = null;
@@ -124,8 +128,25 @@ class WelcomeChannelRow {
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ AnalyticEvents: map1, Fonts, Routes: closure_14 } = ME);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-createCacheKey = { container: null, guildIcon: null, header: null, headerGuildName: null, guildDescription: null, welcomeChannel: null, channelsTitle: null, emoji: null, placeholderEmojiWrapper: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", paddingHorizontal: 16, width: "100%", paddingVertical: 32, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  container: null,
+  guildIcon: null,
+  header: null,
+  headerGuildName: null,
+  guildDescription: null,
+  welcomeChannel: null,
+  channelsTitle: null,
+  emoji: null,
+  placeholderEmojiWrapper: null,
+};
+createCacheKey = {
+  alignItems: "center",
+  justifyContent: "center",
+  paddingHorizontal: 16,
+  width: "100%",
+  paddingVertical: 32,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderRadius: ThemesDefault.radii.sm, width: 64, height: 64, marginBottom: 16 };
 let obj2 = {};
@@ -135,17 +156,35 @@ obj2.marginBottom = 8;
 obj2.textAlign = "center";
 createCacheKey[2] = obj2;
 let obj3 = {};
-const merged1 = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+const merged1 = Object.assign(
+  importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
+);
 createCacheKey[3] = obj3;
 createCacheKey[4] = { textAlign: "center", marginBottom: 30 };
 const importDefaultResult1 = importDefaultResult;
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 8, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[5] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  marginTop: 8,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[6] = { alignSelf: "flex-start" };
 createCacheKey[7] = { width: 24, height: 24 };
-let obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 8, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[8] = { padding: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs };
+let obj4 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  marginTop: 8,
+  borderRadius: ThemesDefault.radii.sm,
+};
+createCacheKey[8] = {
+  padding: 4,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.xs,
+};
 let closure_19 = createCacheKey.createStyles(createCacheKey);
-let obj5 = { padding: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs };
+let obj5 = {
+  padding: 4,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.xs,
+};
 const result = require("set").fileFinishedImporting("modules/welcome_screen/native/GuildWelcomeActionSheet.tsx");
 
 export default function GuildWelcomeActionSheet(guildId) {
@@ -163,7 +202,11 @@ export default function GuildWelcomeActionSheet(guildId) {
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getGuild(guildId));
   obj1 = guildId(589);
   let items1 = [closure_10];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({ welcomeScreen: closure_1_10.get(guildId), fetching: closure_1_10.isFetching(), hasError: closure_1_10.hasError() }));
+  const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({
+    welcomeScreen: closure_1_10.get(guildId),
+    fetching: closure_1_10.isFetching(),
+    hasError: closure_1_10.hasError(),
+  }));
   welcomeScreen = stateFromStoresObject.welcomeScreen;
   fetching = stateFromStoresObject.fetching;
   hasError = stateFromStoresObject.hasError;
@@ -206,11 +249,14 @@ export default function GuildWelcomeActionSheet(guildId) {
     obj.track(closure_1_13.OPEN_MODAL, obj);
   }, items6);
   const items7 = [onHide];
-  const effect5 = welcomeScreen.useEffect(() => () => {
-    if (closure_1 != null) {
-      tmp();
-    }
-  }, items7);
+  const effect5 = welcomeScreen.useEffect(
+    () => () => {
+      if (closure_1 != null) {
+        tmp();
+      }
+    },
+    items7,
+  );
   const items8 = [guildId, welcomeScreen];
   closure_6 = welcomeScreen.useCallback((arg0) => {
     if (null != welcomeScreen) {
@@ -226,7 +272,14 @@ export default function GuildWelcomeActionSheet(guildId) {
         }
       });
       let obj = onHide(headerGuildName[28]);
-      obj = { index: null, guild_id: null, options: null, options_channel_ids: null, guild_description: null, has_custom_emojis: null };
+      obj = {
+        index: null,
+        guild_id: null,
+        options: null,
+        options_channel_ids: null,
+        guild_description: null,
+        has_custom_emojis: null,
+      };
       obj[0] = arg0;
       obj[1] = items;
       obj[2] = items;
@@ -247,14 +300,23 @@ export default function GuildWelcomeActionSheet(guildId) {
       obj1[0] = tmp.guildIcon;
       obj1[1] = stateFromStores;
       obj1[2] = onHide(12197).Sizes.MEDIUM;
-      const items9 = [callback(onHide(12197), obj1), , , , ];
+      const items9 = [callback(onHide(12197), obj1), , , ,];
       const obj2 = { style: null, variant: "heading-xl/extrabold", color: "text-default", children: null };
       obj2[0] = tmp.header;
       const intl = tmp2(1236).intl;
       const obj3 = { guildName: null, guildNameHook: null };
       obj3[0] = stateFromStores.name;
       obj3[1] = function guildNameHook(children) {
-        return closure_1_17(guildId(headerGuildName[22]).Text, { style: headerGuildName.headerGuildName, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children }, arg1);
+        return closure_1_17(
+          guildId(headerGuildName[22]).Text,
+          {
+            style: headerGuildName.headerGuildName,
+            variant: "heading-xl/extrabold",
+            color: "mobile-text-heading-primary",
+            children,
+          },
+          arg1,
+        );
       };
       obj2[3] = intl.format(tmp2(1236).t["0aydCN"], obj3);
       items9[1] = callback(tmp2(4474).Text, obj2);
@@ -271,12 +333,16 @@ export default function GuildWelcomeActionSheet(guildId) {
       let welcome_channels = welcomeScreen.welcome_channels;
       items9[4] = welcome_channels.map((welcomeChannel) => {
         closure_0 = arg1;
-        return closure_1_17(closure_1_20, {
-          welcomeChannel,
-          trackOptionSelect(arg0) {
-            return closure_1_6(closure_0);
-          }
-        }, arg1);
+        return closure_1_17(
+          closure_1_20,
+          {
+            welcomeChannel,
+            trackOptionSelect(arg0) {
+              return closure_1_6(closure_0);
+            },
+          },
+          arg1,
+        );
       });
       obj[1] = items9;
       obj[1] = callback2(hasError, obj);
@@ -285,5 +351,5 @@ export default function GuildWelcomeActionSheet(guildId) {
     }
   }
   return tmp12;
-};
+}
 export { WelcomeChannelRow };

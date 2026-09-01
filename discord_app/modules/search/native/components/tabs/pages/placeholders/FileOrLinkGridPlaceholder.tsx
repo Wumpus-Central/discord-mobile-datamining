@@ -4,7 +4,9 @@ import closure_3 from "../../../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx",
+);
 
 export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   imageStyle = imageStyle.imageStyle;
@@ -17,7 +19,15 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   importDefault = sum;
   const items = [width, sum];
   const memo = React.useMemo(() => ({ width, height: c1 }), items);
-  obj = { style: items1, pointerEvents: "none", children: jsx(width(16251).SearchListCardContainer, { containerStyle: memo }) };
+  obj = {
+    style: items1,
+    pointerEvents: "none",
+    children: jsx(width(16251).SearchListCardContainer, { containerStyle: memo }),
+  };
   items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
-  return jsx(_modDef4217.View, { style: items1, pointerEvents: "none", children: jsx(width(16251).SearchListCardContainer, { containerStyle: memo }) });
-};
+  return jsx(_modDef4217.View, {
+    style: items1,
+    pointerEvents: "none",
+    children: jsx(width(16251).SearchListCardContainer, { containerStyle: memo }),
+  });
+}

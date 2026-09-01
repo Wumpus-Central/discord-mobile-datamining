@@ -19,8 +19,23 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: { paddingHorizontal: 16 }, title: null, description: null, scrollViewContainer: null, input: null, redesignTextInput: null, redesignGrowSpacing: null, redesignSubmit: null };
-createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 };
+createCacheKey = {
+  container: { paddingHorizontal: 16 },
+  title: null,
+  description: null,
+  scrollViewContainer: null,
+  input: null,
+  redesignTextInput: null,
+  redesignGrowSpacing: null,
+  redesignSubmit: null,
+};
+createCacheKey = {
+  fontFamily: require("ME").Fonts.PRIMARY_BOLD,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  fontSize: 24,
+  textAlign: "center",
+  marginBottom: 8,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { textAlign: "center", marginBottom: 24 };
 createCacheKey[3] = { flexGrow: 2 };
@@ -43,7 +58,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
   let first;
   function _submitWaitlist() {
     const self = this;
-    const tmp = callback(function*() {
+    const tmp = callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -144,7 +159,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
   const tmp7 = callback(ref.useState(""), 2);
   first = tmp7[0];
   obj = { ref, contentContainerStyle: null, children: null };
-  const items = [tmp.scrollViewContainer, ];
+  const items = [tmp.scrollViewContainer];
   obj = { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault().insets.bottom + ThemesDefault.space.PX_16 };
   items[1] = obj;
   obj[1] = items;
@@ -152,12 +167,23 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
   obj2 = { style: tmp.title, accessibilityRole: "header", children: null };
   const intl = getSystemLocale.intl;
   obj2[2] = intl.string(getSystemLocale.t["2FNWBG"]);
-  const items1 = [callback2(Button.LegacyText, obj2), , ];
+  const items1 = [callback2(Button.LegacyText, obj2), ,];
   const obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = getSystemLocale.intl;
   obj3[3] = intl2.string(getSystemLocale.t["/4y6ox"]);
   items1[1] = callback2(Text.Text, obj3);
-  const obj4 = { label: null, placeholder: null, value: null, onChangeText: null, style: null, textStyle: null, clearButtonVisibility: null, error: null, onFocus: null, onBlur: null };
+  const obj4 = {
+    label: null,
+    placeholder: null,
+    value: null,
+    onChangeText: null,
+    style: null,
+    textStyle: null,
+    clearButtonVisibility: null,
+    error: null,
+    onFocus: null,
+    onBlur: null,
+  };
   const tmp11 = _submitWaitlist;
   const tmp5 = callback(ref.useState(null), 2);
   const intl3 = getSystemLocale.intl;
@@ -192,7 +218,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
   };
   items1[2] = callback2(_modDef7704, obj4);
   obj1[1] = items1;
-  const items2 = [closure_10(first, obj1), callback2(first, { style: tmp.redesignGrowSpacing }), ];
+  const items2 = [closure_10(first, obj1), callback2(first, { style: tmp.redesignGrowSpacing })];
   const obj7 = { style: tmp.redesignSubmit, children: null };
   const obj8 = { size: "lg", loading: tmp4[0], text: null, onPress: null };
   const intl5 = tmp2(1236).intl;
@@ -212,4 +238,4 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
   obj[2] = items2;
   obj5[0] = closure_10(tmp11, obj);
   return callback2(HubEmailConnectionModal.HubEmailConnectionScreen, obj5);
-};
+}

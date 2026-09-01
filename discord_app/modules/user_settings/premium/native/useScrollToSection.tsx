@@ -26,6 +26,6 @@ export default function useScrollToSection(arg0, arg1) {
           }
         }
       };
-    }, items)
+    }, items),
   };
-};
+}

@@ -24,7 +24,9 @@ function useBaseActivityView(orientationLockState) {
   let isLandscape;
   const setIsResetting = isResetting(defaultOrientationLockState.useState(false), 2);
   isResetting = setIsResetting[0];
-  defaultOrientationLockState = orientationLockState(setShowLoadingStateForLockingOrientation[9]).getDefaultOrientationLockState(application);
+  defaultOrientationLockState = orientationLockState(
+    setShowLoadingStateForLockingOrientation[9],
+  ).getDefaultOrientationLockState(application);
   let id;
   if (application != null) {
     id = application.id;
@@ -36,17 +38,30 @@ function useBaseActivityView(orientationLockState) {
   isLandscape = size.width > size.height;
   const items = [isLandscape];
   const layoutEffect = obj.useLayoutEffect(() => {
-    showLoadingIndicator(setShowLoadingStateForLockingOrientation[11]).dispatch({ type: "ACTIVITY_SCREEN_ORIENTATION_UPDATE", screenOrientation: isLandscape ? closure_1_11.LANDSCAPE : closure_1_11.PORTRAIT });
+    showLoadingIndicator(setShowLoadingStateForLockingOrientation[11]).dispatch({
+      type: "ACTIVITY_SCREEN_ORIENTATION_UPDATE",
+      screenOrientation: isLandscape ? closure_1_11.LANDSCAPE : closure_1_11.PORTRAIT,
+    });
   }, items);
   const items1 = [id];
   const layoutEffect1 = obj.useLayoutEffect(() => {
     callback(false);
   }, items1);
-  const items2 = [defaultOrientationLockState, application, orientationLockState, isLandscape, first1, setShowLoadingStateForLockingOrientation, setOrientationLockState];
+  const items2 = [
+    defaultOrientationLockState,
+    application,
+    orientationLockState,
+    isLandscape,
+    first1,
+    setShowLoadingStateForLockingOrientation,
+    setOrientationLockState,
+  ];
   const layoutEffect2 = obj.useLayoutEffect(() => {
     if (!first1) {
       if (null == orientationLockState) {
-        if (!showLoadingIndicator(setShowLoadingStateForLockingOrientation[12])(isLandscape, defaultOrientationLockState)) {
+        if (
+          !showLoadingIndicator(setShowLoadingStateForLockingOrientation[12])(isLandscape, defaultOrientationLockState)
+        ) {
           setShowLoadingStateForLockingOrientation(true);
         }
         if (null != application) {
@@ -97,7 +112,7 @@ class BaseActivityView {
         tmp9 = closure_2;
         obj = { wakeLockKey: null };
         obj[0] = tmp2;
-        items = [, ];
+        items = [,];
         items[0] = jsx(require("WakeLock"), obj);
         items[1] = tmp;
         obj[0] = items;
@@ -125,13 +140,17 @@ const memoResult = importAllResult.memo(function EmbeddedActivityViewInner(portr
   const items = [currentEmbeddedActivity];
   const items1 = [tmp4];
   obj1 = importAllResult;
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    let orientationLockStateForApp;
-    if (null != closure_2) {
-      orientationLockStateForApp = closure_1_9.getOrientationLockStateForApp(tmp.id);
-    }
-    return orientationLockStateForApp;
-  }, items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let orientationLockStateForApp;
+      if (null != closure_2) {
+        orientationLockStateForApp = closure_1_9.getOrientationLockStateForApp(tmp.id);
+      }
+      return orientationLockStateForApp;
+    },
+    items1,
+  );
   [tmp8, tmp9] = callback2(importAllResult.useState(true), 2);
   if (null == currentEmbeddedActivity) {
     obj = { instance_id: "" };
@@ -230,7 +249,13 @@ const memoResult = importAllResult.memo(function EmbeddedActivityViewInner(portr
   if (!tmp22) {
     tmp22 = null == tmp4;
   }
-  obj1 = { orientationLockState: stateFromStores, showLoadingIndicator: tmp22, setShowLoadingStateForLockingOrientation: tmp9, application: tmp4, setOrientationLockState: tmp5(9603).setOrientationLockState };
+  obj1 = {
+    orientationLockState: stateFromStores,
+    showLoadingIndicator: tmp22,
+    setShowLoadingStateForLockingOrientation: tmp9,
+    application: tmp4,
+    setOrientationLockState: tmp5(9603).setOrientationLockState,
+  };
   const tmp7 = callback2(importAllResult.useState(true), 2);
   setIsResetting = useBaseActivityView(obj1).setIsResetting;
   let tmp28Result = null;
@@ -240,7 +265,23 @@ const memoResult = importAllResult.memo(function EmbeddedActivityViewInner(portr
       const obj2 = { wakeLockKey: "EmbeddedActivities", showLoadingIndicator: null, isResetting: null, children: null };
       obj2[1] = tmp22;
       obj2[2] = tmp25;
-      const obj3 = { onActivityCrash: null, applicationId: null, channelId: null, guildId: null, activityUrl: null, currentEmbeddedActivity: null, activitySessionId: null, queryParams: null, onLoadError: null, allowPopups: null, referrerPolicy: "origin", isPipOrGridMode: null, webViewKey: null, safeAreasConfig: null, ignoreSilentHardwareSwitch: null };
+      const obj3 = {
+        onActivityCrash: null,
+        applicationId: null,
+        channelId: null,
+        guildId: null,
+        activityUrl: null,
+        currentEmbeddedActivity: null,
+        activitySessionId: null,
+        queryParams: null,
+        onLoadError: null,
+        allowPopups: null,
+        referrerPolicy: "origin",
+        isPipOrGridMode: null,
+        webViewKey: null,
+        safeAreasConfig: null,
+        ignoreSilentHardwareSwitch: null,
+      };
       obj3[0] = function onActivityCrash() {
         setIsResetting(true);
         const timerId = setTimeout(() => callback(false), 0);

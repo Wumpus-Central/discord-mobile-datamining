@@ -44,7 +44,10 @@ export const getURLForExperiment = function getURLForExperiment(id) {
   }
   return combined;
 };
-export const getExperimentServerAssignmentLabel = function getExperimentServerAssignmentLabel(system, experimentServerAssignment) {
+export const getExperimentServerAssignmentLabel = function getExperimentServerAssignmentLabel(
+  system,
+  experimentServerAssignment,
+) {
   if (null != experimentServerAssignment) {
     if (null != system) {
       const system2 = system.system;

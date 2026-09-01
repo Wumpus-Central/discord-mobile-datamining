@@ -59,8 +59,14 @@ export const getNonePlanIdForSubscription = function getNonePlanIdForSubscriptio
 export const getBaseSubscriptionItemForSubscriptionItems = function getBaseSubscriptionItemForSubscriptionItems(items) {
   return items.find((arg0) => null != intervalCount[arg0.planId] && null != intervalCount[arg0.planId].premiumType);
 };
-export const getBasePlanIdForSubscriptionItems = function getBasePlanIdForSubscriptionItems(items, interval, intervalCount) {
-  const found = items.find((arg0) => null != intervalCount[arg0.planId] && null != intervalCount[arg0.planId].premiumType);
+export const getBasePlanIdForSubscriptionItems = function getBasePlanIdForSubscriptionItems(
+  items,
+  interval,
+  intervalCount,
+) {
+  const found = items.find(
+    (arg0) => null != intervalCount[arg0.planId] && null != intervalCount[arg0.planId].premiumType,
+  );
   if (null == found) {
     if (items.length > 0) {
       ({ interval, intervalCount } = intervalCount[items[0].planId]);

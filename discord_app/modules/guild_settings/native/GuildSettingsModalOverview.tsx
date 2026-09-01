@@ -32,7 +32,15 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c5, GUILD_VOCAL_CHANNELS_KEY: closure_6 } = comparator);
-({ UserNotificationSettings: closure_12, ChannelTypes: map1, Permissions: closure_14, GuildFeatures: closure_15, HelpdeskArticles: closure_16, SystemChannelFlags: closure_17, MAX_MEMBERS_NOTIFY_ALL_MESSAGES: closure_18 } = ME);
+({
+  UserNotificationSettings: closure_12,
+  ChannelTypes: map1,
+  Permissions: closure_14,
+  GuildFeatures: closure_15,
+  HelpdeskArticles: closure_16,
+  SystemChannelFlags: closure_17,
+  MAX_MEMBERS_NOTIFY_ALL_MESSAGES: closure_18,
+} = ME);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
 createCacheKey = { overview: { flex: 1 }, overviewContent: { paddingTop: 16 }, stackPadding: null };
 createCacheKey = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -44,36 +52,36 @@ let items = [
     label() {
       const intl = getSystemLocale.intl;
       return intl.formatToPlainString(getSystemLocale.t.iXLF9W, { minutes: 1 });
-    }
+    },
   },
   {
     value: 300,
     label() {
       const intl = getSystemLocale.intl;
       return intl.formatToPlainString(getSystemLocale.t.iXLF9W, { minutes: 5 });
-    }
+    },
   },
   {
     value: 900,
     label() {
       const intl = getSystemLocale.intl;
       return intl.formatToPlainString(getSystemLocale.t.iXLF9W, { minutes: 15 });
-    }
+    },
   },
   {
     value: 1800,
     label() {
       const intl = getSystemLocale.intl;
       return intl.formatToPlainString(getSystemLocale.t.iXLF9W, { minutes: 30 });
-    }
+    },
   },
   {
     value: 3600,
     label() {
       const intl = getSystemLocale.intl;
       return intl.formatToPlainString(getSystemLocale.t.xCjYxK, { hours: 1 });
-    }
-  }
+    },
+  },
 ];
 let closure_23 = Object.freeze(items);
 const PureComponent = importAllResult.PureComponent;
@@ -92,7 +100,14 @@ class GuildSettingsModalOverview extends PureComponent {
       obj.updateGuild(obj);
     };
     applyArgumentsResult.handleAfkChannelChange = function handleAfkChannelChange() {
-      const obj = { guildId: applyArgumentsResult.props.guild.id, channelType: closure_1_6, noChannelOptionLabel: null, onSelect: null, filterFn: null, selectedChannel: null };
+      const obj = {
+        guildId: applyArgumentsResult.props.guild.id,
+        channelType: closure_1_6,
+        noChannelOptionLabel: null,
+        onSelect: null,
+        filterFn: null,
+        selectedChannel: null,
+      };
       const intl = applyArgumentsResult(closure_1_2[13]).intl;
       obj[2] = intl.string(applyArgumentsResult(closure_1_2[13]).t.wGiHkK);
       obj[3] = function onSelect(id) {
@@ -121,7 +136,7 @@ class GuildSettingsModalOverview extends PureComponent {
         },
         noChannelOptionLabel: null,
         onSelect: null,
-        selectedChannel: null
+        selectedChannel: null,
       };
       const intl = applyArgumentsResult(closure_1_2[13]).intl;
       obj[3] = intl.string(applyArgumentsResult(closure_1_2[13]).t.ibUhoa);
@@ -140,25 +155,48 @@ class GuildSettingsModalOverview extends PureComponent {
       closure_1_1(closure_1_2[19])(obj);
     };
     applyArgumentsResult.handleSystemJoinMessages = function handleSystemJoinMessages(arg0) {
-      const result = applyArgumentsResult.handleSystemChannelFlagsChange(closure_1_17.SUPPRESS_JOIN_NOTIFICATIONS, !arg0);
+      const result = applyArgumentsResult.handleSystemChannelFlagsChange(
+        closure_1_17.SUPPRESS_JOIN_NOTIFICATIONS,
+        !arg0,
+      );
     };
     applyArgumentsResult.handleSystemJoinMessageReplies = function handleSystemJoinMessageReplies(arg0) {
-      const result = applyArgumentsResult.handleSystemChannelFlagsChange(closure_1_17.SUPPRESS_JOIN_NOTIFICATION_REPLIES, !arg0);
+      const result = applyArgumentsResult.handleSystemChannelFlagsChange(
+        closure_1_17.SUPPRESS_JOIN_NOTIFICATION_REPLIES,
+        !arg0,
+      );
     };
     applyArgumentsResult.handleSystemPremiumSubscribe = function handleSystemPremiumSubscribe(arg0) {
-      const result = applyArgumentsResult.handleSystemChannelFlagsChange(closure_1_17.SUPPRESS_PREMIUM_SUBSCRIPTIONS, !arg0);
+      const result = applyArgumentsResult.handleSystemChannelFlagsChange(
+        closure_1_17.SUPPRESS_PREMIUM_SUBSCRIPTIONS,
+        !arg0,
+      );
     };
     applyArgumentsResult.handleSystemReminderNotifications = function handleSystemReminderNotifications(arg0) {
-      const result = applyArgumentsResult.handleSystemChannelFlagsChange(closure_1_17.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, !arg0);
+      const result = applyArgumentsResult.handleSystemChannelFlagsChange(
+        closure_1_17.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS,
+        !arg0,
+      );
     };
-    applyArgumentsResult.handleSystemGuildRoleSubscriptionPurchaseMessages = function handleSystemGuildRoleSubscriptionPurchaseMessages(arg0) {
-      const result = applyArgumentsResult.handleSystemChannelFlagsChange(closure_1_17.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS, !arg0);
-    };
-    applyArgumentsResult.handleSystemGuildRoleSubscriptionPurchaseMessageReplies = function handleSystemGuildRoleSubscriptionPurchaseMessageReplies(arg0) {
-      const result = applyArgumentsResult.handleSystemChannelFlagsChange(closure_1_17.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES, !arg0);
-    };
+    applyArgumentsResult.handleSystemGuildRoleSubscriptionPurchaseMessages =
+      function handleSystemGuildRoleSubscriptionPurchaseMessages(arg0) {
+        const result = applyArgumentsResult.handleSystemChannelFlagsChange(
+          closure_1_17.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS,
+          !arg0,
+        );
+      };
+    applyArgumentsResult.handleSystemGuildRoleSubscriptionPurchaseMessageReplies =
+      function handleSystemGuildRoleSubscriptionPurchaseMessageReplies(arg0) {
+        const result = applyArgumentsResult.handleSystemChannelFlagsChange(
+          closure_1_17.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES,
+          !arg0,
+        );
+      };
     applyArgumentsResult.handleSystemVoiceSessionMessages = function handleSystemVoiceSessionMessages(arg0) {
-      const result = applyArgumentsResult.handleSystemChannelFlagsChange(closure_1_17.SUPPRESS_VOICE_SESSION_NOTIFICATIONS, !arg0);
+      const result = applyArgumentsResult.handleSystemChannelFlagsChange(
+        closure_1_17.SUPPRESS_VOICE_SESSION_NOTIFICATIONS,
+        !arg0,
+      );
     };
     applyArgumentsResult.handleAFKTimeoutChange = function handleAFKTimeoutChange() {
       let obj = applyArgumentsResult(5986);
@@ -172,10 +210,10 @@ class GuildSettingsModalOverview extends PureComponent {
               let obj = closure_1_1(closure_1_2[18]);
               obj = { afkTimeout: label.value };
               obj.updateGuild(obj);
-            }
+            },
           };
         }),
-        hasIcons: false
+        hasIcons: false,
       };
       const result = obj.showSimpleActionSheet(obj);
     };
@@ -218,10 +256,41 @@ class GuildSettingsModalOverview extends PureComponent {
       obj.updateGuild(obj);
     };
     applyArgumentsResult.handleOverviewSaveChanges = function handleOverviewSaveChanges() {
-      ({ id, name, icon, afkChannelId, afkTimeout, systemChannelId, safetyAlertsChannelId, systemChannelFlags, defaultMessageNotifications, splash, banner, description, features, premiumProgressBarEnabled } = applyArgumentsResult.props.guild);
-      closure_1_1(closure_1_2[18]).saveGuild(id, { name, icon, afkChannelId, afkTimeout, systemChannelId, systemChannelFlags, safetyAlertsChannelId, defaultMessageNotifications, splash, banner, description, features, premiumProgressBarEnabled });
+      ({
+        id,
+        name,
+        icon,
+        afkChannelId,
+        afkTimeout,
+        systemChannelId,
+        safetyAlertsChannelId,
+        systemChannelFlags,
+        defaultMessageNotifications,
+        splash,
+        banner,
+        description,
+        features,
+        premiumProgressBarEnabled,
+      } = applyArgumentsResult.props.guild);
+      closure_1_1(closure_1_2[18]).saveGuild(id, {
+        name,
+        icon,
+        afkChannelId,
+        afkTimeout,
+        systemChannelId,
+        systemChannelFlags,
+        safetyAlertsChannelId,
+        defaultMessageNotifications,
+        splash,
+        banner,
+        description,
+        features,
+        premiumProgressBarEnabled,
+      });
     };
-    applyArgumentsResult.handleBoostProgressBarToggle = function handleBoostProgressBarToggle(premiumProgressBarEnabled) {
+    applyArgumentsResult.handleBoostProgressBarToggle = function handleBoostProgressBarToggle(
+      premiumProgressBarEnabled,
+    ) {
       let obj = callback(9728);
       obj = { premiumProgressBarEnabled };
       obj.updateGuild(obj);
@@ -284,9 +353,16 @@ prototype["getError"] = function getError(arg0) {
   }
   return first;
 };
-prototype["handleSystemChannelFlagsChange"] = function handleSystemChannelFlagsChange(SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, arg1) {
+prototype["handleSystemChannelFlagsChange"] = function handleSystemChannelFlagsChange(
+  SUPPRESS_GUILD_REMINDER_NOTIFICATIONS,
+  arg1,
+) {
   const obj = hasFlag;
-  const setFlagResult = hasFlag.setFlag(this.props.guild.systemChannelFlags, SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, arg1);
+  const setFlagResult = hasFlag.setFlag(
+    this.props.guild.systemChannelFlags,
+    SUPPRESS_GUILD_REMINDER_NOTIFICATIONS,
+    arg1,
+  );
   _modDef9728.updateGuild({ systemChannelFlags: setFlagResult });
 };
 prototype["handleDefaultNotificationsChange"] = function handleDefaultNotificationsChange(defaultMessageNotifications) {
@@ -340,7 +416,7 @@ prototype["renderAFKSettings"] = function renderAFKSettings() {
   obj[1] = !canManage;
   obj[2] = callback2(tmp4(5599).TableRow.TrailingText, { text: channelName });
   obj[4] = self.handleAfkChannelChange;
-  const items = [callback2(tmp4(5599).TableRow, obj), ];
+  const items = [callback2(tmp4(5599).TableRow, obj)];
   obj1 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
   const intl5 = tmp4(1236).intl;
   obj1[0] = intl5.string(tmp4(1236).t.brhYaR);
@@ -372,11 +448,17 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
   let hasFlagResult = result;
   if (!result) {
     tmpResult = tmp(1399);
-    hasFlagResult = tmpResult.hasFlag(guild.systemChannelFlags, constants4.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS);
+    hasFlagResult = tmpResult.hasFlag(
+      guild.systemChannelFlags,
+      constants4.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS,
+    );
   }
   let hasFlagResult1 = result;
   if (!result) {
-    hasFlagResult1 = tmp(1399).hasFlag(guild.systemChannelFlags, constants4.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
+    hasFlagResult1 = tmp(1399).hasFlag(
+      guild.systemChannelFlags,
+      constants4.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES,
+    );
     const tmpResult1 = tmp(1399);
   }
   let result1 = tmp(16914).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
@@ -395,7 +477,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
   obj[1] = !canManage;
   obj[2] = callback2(tmp(5599).TableRow.TrailingText, { text: channelName });
   obj[4] = self.handleSystemChannelChange;
-  const items = [callback2(tmp(5599).TableRow, obj), , , , , , , ];
+  const items = [callback2(tmp(5599).TableRow, obj), , , , , , ,];
   obj1 = { label: null, disabled: null, value: null, onValueChange: null };
   const intl5 = tmp(1236).intl;
   obj1[0] = intl5.string(tmp(1236).t["+f0bXQ"]);
@@ -445,7 +527,10 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     const intl10 = tmp(1236).intl;
     obj6[0] = intl10.string(tmp(1236).t["IhF5d+"]);
     obj6[1] = !canManage;
-    obj6[2] = !tmp(1399).hasFlag(guild.systemChannelFlags, tmp17.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
+    obj6[2] = !tmp(1399).hasFlag(
+      guild.systemChannelFlags,
+      tmp17.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES,
+    );
     obj6[3] = self.handleSystemGuildRoleSubscriptionPurchaseMessageReplies;
     hasFlagResult1 = tmp16(tmp(5993).TableSwitchRow, obj6);
     const tmpResult9 = tmp(1399);
@@ -490,7 +575,7 @@ prototype["renderDefaultNotificationSettings"] = function renderDefaultNotificat
   }
   obj[2] = stringResult;
   obj[3] = !canManage;
-  const items = [closure_19(self(7693).TableRadioRow, obj), ];
+  const items = [closure_19(self(7693).TableRadioRow, obj)];
   obj = { value: constants.ONLY_MENTIONS, label: null, disabled: null };
   const intl5 = tmp2(1236).intl;
   obj[1] = intl5.format(self(1236).t.L2hmYy, {});
@@ -525,7 +610,14 @@ prototype["renderSplash"] = function renderSplash() {
   const features = guild.features;
   let tmp = null;
   if (features.has(constants2.INVITE_SPLASH)) {
-    let obj = { title: null, description: null, helperText: null, hasIcons: false, hasTrailingText: null, children: null };
+    let obj = {
+      title: null,
+      description: null,
+      helperText: null,
+      hasIcons: false,
+      hasTrailingText: null,
+      children: null,
+    };
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t.tzGY0q);
     const intl2 = getSystemLocale.intl;
@@ -582,7 +674,15 @@ prototype["renderSummaries"] = function renderSummaries() {
 };
 prototype["renderDescription"] = function renderDescription() {
   ({ guild, canManage } = this.props);
-  const obj = { label: null, description: null, maxLength: null, value: null, isDisabled: null, onChange: null, placeholder: null };
+  const obj = {
+    label: null,
+    description: null,
+    maxLength: null,
+    value: null,
+    isDisabled: null,
+    onChange: null,
+    placeholder: null,
+  };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["RSfm+i"]);
   const intl2 = getSystemLocale.intl;
@@ -603,7 +703,14 @@ prototype["renderBanner"] = function renderBanner() {
   ({ guild, canManage } = this.props);
   let features = guild.features;
   if (features.has(constants2.BANNER)) {
-    let obj = { title: null, description: null, helperText: null, hasIcons: false, hasTrailingText: null, children: null };
+    let obj = {
+      title: null,
+      description: null,
+      helperText: null,
+      hasIcons: false,
+      hasTrailingText: null,
+      children: null,
+    };
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t["0r0AzF"]);
     const intl2 = getSystemLocale.intl;
@@ -653,7 +760,18 @@ prototype["render"] = function render() {
   obj = { style: tmp.overview, contentContainerStyle: items, children: null };
   items = [tmp.overviewContent, this.props.contentContainerStyle];
   obj = { style: tmp.stackPadding, spacing: ThemesDefault.space.PX_24, children: null };
-  const items1 = [this.renderGuildName(), this.renderSummaries(), this.renderAFKSettings(), this.renderSystemMessageSettings(), this.renderDefaultNotificationSettings(), this.renderBoostProgressBar(), this.renderDescription(), this.renderBanner(), this.renderSplash(), this.renderDeleteGuild()];
+  const items1 = [
+    this.renderGuildName(),
+    this.renderSummaries(),
+    this.renderAFKSettings(),
+    this.renderSystemMessageSettings(),
+    this.renderDefaultNotificationSettings(),
+    this.renderBoostProgressBar(),
+    this.renderDescription(),
+    this.renderBanner(),
+    this.renderSplash(),
+    this.renderDeleteGuild(),
+  ];
   obj[2] = items1;
   obj[2] = callback3(Stack.Stack, obj);
   const items2 = [callback2(Form.Form, obj), callback2(NavScrim.NavScrim, {})];
@@ -666,7 +784,7 @@ let obj1 = {
   label() {
     const intl = getSystemLocale.intl;
     return intl.formatToPlainString(getSystemLocale.t.iXLF9W, { minutes: 1 });
-  }
+  },
 };
 let result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalOverview.tsx");
 
@@ -675,13 +793,26 @@ export default function ConnectedGuildSettingsModalOverview(contentContainerStyl
   let obj = guild(1499);
   const navigation = obj.useNavigation();
   const items = [closure_11];
-  const stateFromStoresObject = guild(589).useStateFromStoresObject(items, () => ({ guild: store.getGuild(), submitting: store.isSubmitting(), hasChanges: store.hasChanges(), errors: store.getErrors() }), []);
+  const stateFromStoresObject = guild(589).useStateFromStoresObject(
+    items,
+    () => ({
+      guild: store.getGuild(),
+      submitting: store.isSubmitting(),
+      hasChanges: store.hasChanges(),
+      errors: store.getErrors(),
+    }),
+    [],
+  );
   guild = stateFromStoresObject.guild;
   ({ submitting, hasChanges, errors } = stateFromStoresObject);
   const obj2 = guild(589);
   const items1 = [closure_8];
   const items2 = [guild];
-  const stateFromStores = guild(589).useStateFromStores(items1, () => closure_1_8.can(closure_1_14.MANAGE_GUILD, guild), items2);
+  const stateFromStores = guild(589).useStateFromStores(
+    items1,
+    () => closure_1_8.can(closure_1_14.MANAGE_GUILD, guild),
+    items2,
+  );
   const obj3 = guild(589);
   const items3 = [closure_4];
   const stateFromStores1 = guild(589).useStateFromStores(items3, () => {
@@ -704,7 +835,18 @@ export default function ConnectedGuildSettingsModalOverview(contentContainerStyl
   [][0] = closure_7;
   let tmp8 = null;
   if (null != guild) {
-    obj = { navigation: null, guild: null, submitting: null, hasChanges: null, canManage: null, afkChannel: null, systemChannel: null, guildMemberCount: null, errors: null, contentContainerStyle: null };
+    obj = {
+      navigation: null,
+      guild: null,
+      submitting: null,
+      hasChanges: null,
+      canManage: null,
+      afkChannel: null,
+      systemChannel: null,
+      guildMemberCount: null,
+      errors: null,
+      contentContainerStyle: null,
+    };
     obj[0] = navigation;
     obj[1] = guild;
     obj[2] = submitting;
@@ -718,4 +860,4 @@ export default function ConnectedGuildSettingsModalOverview(contentContainerStyl
     tmp8 = callback2(GuildSettingsModalOverview, obj);
   }
   return tmp8;
-};
+}

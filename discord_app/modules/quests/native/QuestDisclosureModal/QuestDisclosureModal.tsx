@@ -12,7 +12,7 @@ function CloseButton() {
     onPress() {
       return callback(table[3]).hideModal();
     },
-    accessibilityLabel: null
+    accessibilityLabel: null,
   };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
@@ -21,7 +21,7 @@ function CloseButton() {
     onPress() {
       return callback(table[3]).hideModal();
     },
-    accessibilityLabel: null
+    accessibilityLabel: null,
   });
 }
 const jsx = jsxProd.jsx;
@@ -29,7 +29,13 @@ let closure_4 = { DISCLOSURE: "disclosure" };
 const result = set.fileFinishedImporting("modules/quests/native/QuestDisclosureModal/QuestDisclosureModal.tsx");
 
 export default function QuestDisclosureModal(arg0) {
-  ({ isTargetedDisclosure: require, gamePublisher: importDefault, gameTitle: dependencyMap, cosponsorName: jsx, isVideoQuest: closure_4 } = arg0);
+  ({
+    isTargetedDisclosure: require,
+    gamePublisher: importDefault,
+    gameTitle: dependencyMap,
+    cosponsorName: jsx,
+    isVideoQuest: closure_4,
+  } = arg0);
   function onClose() {
     return callback2(14714).hideModal();
   }
@@ -45,11 +51,22 @@ export default function QuestDisclosureModal(arg0) {
       return callback3(callback(5495).NavigatorHeader, obj);
     },
     render() {
-      return closure_1_3(closure_1_1(closure_1_2[6]), { isTargetedDisclosure: closure_0, gamePublisher: closure_1, gameTitle: closure_2, onClose, cosponsorName: closure_3, isVideoQuest: closure_4 });
-    }
+      return closure_1_3(closure_1_1(closure_1_2[6]), {
+        isTargetedDisclosure: closure_0,
+        gamePublisher: closure_1,
+        gameTitle: closure_2,
+        onClose,
+        cosponsorName: closure_3,
+        isVideoQuest: closure_4,
+      });
+    },
   };
   obj = { screens: { [closure_4.DISCLOSURE]: obj }, initialRouteName: constants.DISCLOSURE, headerBackTitle: null };
   let intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
-  return jsx(NavigationStack.Navigator, { screens: { [closure_4.DISCLOSURE]: obj }, initialRouteName: constants.DISCLOSURE, headerBackTitle: null });
-};
+  return jsx(NavigationStack.Navigator, {
+    screens: { [closure_4.DISCLOSURE]: obj },
+    initialRouteName: constants.DISCLOSURE,
+    headerBackTitle: null,
+  });
+}

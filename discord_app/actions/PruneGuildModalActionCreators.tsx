@@ -14,7 +14,7 @@ export default {
       num = 7;
     }
     const callback = arg2;
-    return callback(function*() {
+    return callback(function* () {
       const HTTP = v0(530).HTTP;
       obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = closure_1_3.GUILD_PRUNE(v0);
@@ -34,7 +34,7 @@ export default {
       num = 7;
     }
     const callback = arg2;
-    return callback(function*() {
+    return callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -100,5 +100,5 @@ export default {
     obj = { days, compute_prune_count: false, include_roles };
     obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
-  }
+  },
 };

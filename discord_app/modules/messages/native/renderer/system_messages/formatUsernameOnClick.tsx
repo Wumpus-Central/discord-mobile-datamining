@@ -4,7 +4,9 @@ import createDisplayNameStylesMobile from "../../../../display_name_styles/nativ
 import closure_2 from "../../../../../stores/UserStore.tsx";
 
 require = arg1;
-let result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx",
+);
 
 export default function formatUsernameOnClick(arg0) {
   ({ userId, message, author, roleStyle, messageChannelId } = arg0);
@@ -23,7 +25,16 @@ export default function formatUsernameOnClick(arg0) {
     user = author;
   }
   const displayNameFontIdForMobileUser = createDisplayNameStylesMobile.getDisplayNameFontIdForMobileUser(user, guildId);
-  obj = { action: "bindUserMenu", userId, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, messageChannelId: null, medium: true };
+  obj = {
+    action: "bindUserMenu",
+    userId,
+    linkColor: null,
+    roleColor: null,
+    roleColors: null,
+    shouldShowRoleDot: null,
+    messageChannelId: null,
+    medium: true,
+  };
   let tmp7 = null;
   if ("username" === roleStyle) {
     tmp7 = colorString;
@@ -49,4 +60,4 @@ export default function formatUsernameOnClick(arg0) {
   }
   const merged = Object.assign(obj1);
   return obj;
-};
+}

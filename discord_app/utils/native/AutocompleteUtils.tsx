@@ -32,5 +32,5 @@ export default {
   },
   findAutoInsertOnSpaceMentionInlineAutocompleteType(trigger) {
     return map.get(trigger.toLowerCase());
-  }
+  },
 };

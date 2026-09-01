@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/StreamEnded.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/StreamEnded.tsx",
+);
 
 export const getStreamEndedSource = function getStreamEndedSource(theme) {
   let obj = getIllustrationSource;
@@ -17,7 +19,7 @@ export const getStreamEndedSource = function getStreamEndedSource(theme) {
     },
     darker() {
       return callback(9569);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -29,7 +31,7 @@ export const useStreamEndedSource = function useStreamEndedSource() {
     },
     darker() {
       return callback(9569);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -41,7 +43,7 @@ export const StreamEnded = function StreamEnded(arg0) {
     },
     darker() {
       return callback(9569);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

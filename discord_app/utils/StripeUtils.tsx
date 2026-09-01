@@ -28,7 +28,7 @@ function _authenticatePaymentIntentForPaymentId() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (error2 === 2) {
         error2 = 3;
         HermesBuiltin.throwTypeError();
@@ -241,70 +241,96 @@ function _authenticatePaymentIntentForPaymentId() {
 }
 ({ Endpoints: closure_6, PaymentSettings: error } = ME);
 let closure_8 = new timestampDefault("StripeUtils");
-let closure_9 = { REQUIRES_PAYMENT_METHOD: "requires_payment_method", REQUIRES_CONFIRMATION: "requires_confirmation", REQUIRES_ACTION: "requires_action", PROCESSING: "processing", CANCELED: "canceled", SUCCEEDED: "succeeded" };
+let closure_9 = {
+  REQUIRES_PAYMENT_METHOD: "requires_payment_method",
+  REQUIRES_CONFIRMATION: "requires_confirmation",
+  REQUIRES_ACTION: "requires_action",
+  PROCESSING: "processing",
+  CANCELED: "canceled",
+  SUCCEEDED: "succeeded",
+};
 let closure_12 = { "en-US": "en", "zh-CN": "zh", "sv-SE": "sv" };
 let tmp3 = new timestampDefault("StripeUtils");
 const result = require("set").fileFinishedImporting("utils/StripeUtils.tsx");
 
 export const validateExpiry = function validateExpiry(arg0) {
   try {
-    [tmp4, tmp5] = callback2((function parseExpString(str) {
-      closure_0 = str;
-      const parts = str.split(/[.\-/\s]+/g);
-      if (2 !== parts.length) {
-        let _HermesInternal = HermesInternal;
-        let combined = "You passed an invalid expiration date " + str + "" + "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
-      }
-      const mapped = parts.map((joined) => {
-        const parsed = parseInt(joined);
-        if (isNaN(parsed)) {
-          const _HermesInternal = HermesInternal;
-          let str3 = "" + parts + " is not a number.";
-          if (str3 == null) {
-            str3 = "";
+    [tmp4, tmp5] = callback2(
+      (function parseExpString(str) {
+        closure_0 = str;
+        const parts = str.split(/[.\-/\s]+/g);
+        if (2 !== parts.length) {
+          let _HermesInternal = HermesInternal;
+          let combined =
+            "You passed an invalid expiration date " +
+            str +
+            "" +
+            "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
+        }
+        const mapped = parts.map((joined) => {
+          const parsed = parseInt(joined);
+          if (isNaN(parsed)) {
+            const _HermesInternal = HermesInternal;
+            let str3 = "" + parts + " is not a number.";
+            if (str3 == null) {
+              str3 = "";
+            }
+            const _HermesInternal2 = HermesInternal;
+            const combined =
+              "You passed an invalid expiration date " +
+              closure_0 +
+              str3 +
+              "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
+            const tmp3 = closure_0;
           }
-          const _HermesInternal2 = HermesInternal;
-          const combined = "You passed an invalid expiration date " + closure_0 + str3 + "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
-          const tmp3 = closure_0;
-        }
-        if (parsed < 1) {
-          const _HermesInternal3 = HermesInternal;
-          const combined1 = "" + parsed + " is less than one.";
-          let str8 = combined1;
-          if (combined1 == null) {
-            str8 = "";
+          if (parsed < 1) {
+            const _HermesInternal3 = HermesInternal;
+            const combined1 = "" + parsed + " is less than one.";
+            let str8 = combined1;
+            if (combined1 == null) {
+              str8 = "";
+            }
+            const _HermesInternal4 = HermesInternal;
+            const combined2 =
+              "You passed an invalid expiration date " +
+              closure_0 +
+              str8 +
+              "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
+            const tmp7 = closure_0;
           }
-          const _HermesInternal4 = HermesInternal;
-          const combined2 = "You passed an invalid expiration date " + closure_0 + str8 + "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
-          const tmp7 = closure_0;
+          return parsed;
+        });
+        if (mapped[0] > 12) {
+          const items = [,];
+          [arr3[1], arr3[0]] = mapped;
+          let items1 = items;
+        } else {
+          items1 = [,];
+          [arr2[0], arr2[1]] = mapped;
         }
-        return parsed;
-      });
-      if (mapped[0] > 12) {
-        const items = [, ];
-        [arr3[1], arr3[0]] = mapped;
-        let items1 = items;
-      } else {
-        items1 = [, ];
-        [arr2[0], arr2[1]] = mapped;
-      }
-      [tmp5, tmp6] = callback(items1, 2);
-      if (tmp5 > 12) {
-        let _HermesInternal2 = HermesInternal;
-        let str6 = "Month must be a number 1-12, not " + tmp5 + ".";
-        if (str6 == null) {
-          str6 = "";
+        [tmp5, tmp6] = callback(items1, 2);
+        if (tmp5 > 12) {
+          let _HermesInternal2 = HermesInternal;
+          let str6 = "Month must be a number 1-12, not " + tmp5 + ".";
+          if (str6 == null) {
+            str6 = "";
+          }
+          let _HermesInternal3 = HermesInternal;
+          let combined1 =
+            "You passed an invalid expiration date " +
+            str +
+            str6 +
+            "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
         }
-        let _HermesInternal3 = HermesInternal;
-        let combined1 = "You passed an invalid expiration date " + str + str6 + "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
-      }
-      let sum = tmp6;
-      if (tmp6 < 100) {
-        sum = tmp6 + 2000;
-      }
-      const items2 = [tmp5, sum];
-      return items2;
-    })(arg0), 2);
+        let sum = tmp6;
+        if (tmp6 < 100) {
+          sum = tmp6 + 2000;
+        }
+        const items2 = [tmp5, sum];
+        return items2;
+      })(arg0),
+      2,
+    );
     const _Date = Date;
     const date = new Date(tmp5, tmp4);
     const _Date2 = Date;
@@ -380,9 +406,18 @@ export const parseStripePaymentMethod = function parseStripePaymentMethod(billin
   obj = { token: billing_details.id, billingAddressInfo: obj };
   return obj;
 };
-export const parseBillingAddressInfoToStripeBillingDetails = function parseBillingAddressInfoToStripeBillingDetails(closure_2) {
+export const parseBillingAddressInfoToStripeBillingDetails = function parseBillingAddressInfoToStripeBillingDetails(
+  closure_2,
+) {
   obj = { name: closure_2.name, address: obj };
-  obj = { line1: closure_2.line1, line2: closure_2.line2, city: closure_2.city, state: closure_2.state, postal_code: closure_2.postalCode, country: closure_2.country };
+  obj = {
+    line1: closure_2.line1,
+    line2: closure_2.line2,
+    city: closure_2.city,
+    state: closure_2.state,
+    postal_code: closure_2.postalCode,
+    country: closure_2.country,
+  };
   return obj;
 };
 export const authenticatePaymentIntentForPaymentId = function authenticatePaymentIntentForPaymentId() {

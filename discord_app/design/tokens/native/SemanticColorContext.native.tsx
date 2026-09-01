@@ -33,7 +33,15 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
       }
       obj = { theme: null, colors: null };
       obj[0] = str;
-      obj = { "gradient.start": null, "gradient.mid": null, "gradient.end": null, "gradient.top": null, "gradient.bottom": null, "gradient.primary": null, "gradient.secondary": null };
+      obj = {
+        "gradient.start": null,
+        "gradient.mid": null,
+        "gradient.end": null,
+        "gradient.top": null,
+        "gradient.bottom": null,
+        "gradient.primary": null,
+        "gradient.secondary": null,
+      };
       obj[0] = int2hexResult;
       obj[1] = hexResult;
       obj[2] = int2hexResult1;

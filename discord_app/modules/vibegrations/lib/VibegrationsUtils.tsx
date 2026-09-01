@@ -33,7 +33,10 @@ const re11 = /^\d{17,20}$/;
 let result = require("set").fileFinishedImporting("modules/vibegrations/lib/VibegrationsUtils.tsx");
 
 export const getVibegrationsProjectAccessSettings = function getVibegrationsProjectAccessSettings(first1) {
-  return { isPublic: first1 & frozen.VibegrationsProjectFlags.PUBLIC, isShared: first1 & frozen.VibegrationsProjectFlags.SHAREABLE };
+  return {
+    isPublic: first1 & frozen.VibegrationsProjectFlags.PUBLIC,
+    isShared: first1 & frozen.VibegrationsProjectFlags.SHAREABLE,
+  };
 };
 export { vibegrationsAppIdFromTopic };
 export const vibegrationsTopicForApp = function vibegrationsTopicForApp(arg0) {
@@ -254,7 +257,8 @@ export const useIsVibegrationsChannelCandidate = function useIsVibegrationsChann
   }
   obj = { guildId: guild_id, location: ChannelActions };
   let tmp4 = null != channel;
-  const isVibegrationsGuildEnabled = require("../experiments/VibegrationsGuildExperiment.tsx").useIsVibegrationsGuildEnabled(obj);
+  const isVibegrationsGuildEnabled =
+    require("../experiments/VibegrationsGuildExperiment.tsx").useIsVibegrationsGuildEnabled(obj);
   if (tmp4) {
     tmp4 = channel.type === constants2.GUILD_TEXT;
   }

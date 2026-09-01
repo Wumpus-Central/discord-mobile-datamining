@@ -55,7 +55,7 @@ function buildModerationLabel(arr) {
     const _HermesInternal = HermesInternal;
     combined = "" + severity + " severity";
   }
-  const items = [combined, ];
+  const items = [combined];
   let combined1 = null;
   if (null != confidence) {
     const _HermesInternal2 = HermesInternal;
@@ -68,7 +68,7 @@ function buildModerationLabel(arr) {
   if (found.length > 0) {
     joined1 = found.join(", ");
   }
-  const items1 = [joined1, ];
+  const items1 = [joined1];
   let tmp9 = null;
   if (joined.length > 0) {
     tmp9 = joined;
@@ -273,19 +273,23 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-({ CONVERSATION_COLORS: c9, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10, MAX_CONVERSATIONS_PER_CHANNEL: unpackModuleId, MAX_CHANNELS_WITH_CONVERSATIONS } = CONVERSATION_COLORS);
+({
+  CONVERSATION_COLORS: c9,
+  CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10,
+  MAX_CONVERSATIONS_PER_CHANNEL: unpackModuleId,
+  MAX_CHANNELS_WITH_CONVERSATIONS,
+} = CONVERSATION_COLORS);
 let obj = {
   max: MAX_CHANNELS_WITH_CONVERSATIONS,
   dispose: function cleanupChannelSideState(arg0) {
     return map.delete(arg0);
-  }
+  },
 };
 let closure_12 = new privDefault(obj);
 let map = new Map();
 let map1 = new Map();
 const Store = initializeDefault.Store;
-class ConversationsStore extends Store {
-}
+class ConversationsStore extends Store {}
 const prototype = ConversationsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_4, closure_8, closure_5, closure_6, closure_7);
@@ -628,7 +632,9 @@ obj = {
               continue;
             }
             const arr = Array.from(map.values());
-            const sorted = arr.sort((startMessageId, startMessageId2) => callback(table[8]).compare(startMessageId.startMessageId, startMessageId2.startMessageId));
+            const sorted = arr.sort((startMessageId, startMessageId2) =>
+              callback(table[8]).compare(startMessageId.startMessageId, startMessageId2.startMessageId),
+            );
             return arr;
           })(conversations, found);
           let tmp29 = timestamp;
@@ -649,7 +655,10 @@ obj = {
                 if (null == anchor) {
                   return 0;
                 } else {
-                  let length = arr5.findIndex((startMessageId) => closure_1_1(closure_1_2[8]).compare(startMessageId.startMessageId, closure_0) >= 0);
+                  let length = arr5.findIndex(
+                    (startMessageId) =>
+                      closure_1_1(closure_1_2[8]).compare(startMessageId.startMessageId, closure_0) >= 0,
+                  );
                   if (-1 === length) {
                     length = arr5.length;
                   }
@@ -912,7 +921,17 @@ obj = {
                 tmp84 = prop1;
               }
             }
-            const obj2 = { guildId, conversations: substr, conversationMetadataById: map, messageMetadataByMessageId: map1, recentFeedbackRatingsByConversationId: prop, reachedOldest: null, reachedNewest: null, selectedConversationId: null, colorIndex: null };
+            const obj2 = {
+              guildId,
+              conversations: substr,
+              conversationMetadataById: map,
+              messageMetadataByMessageId: map1,
+              recentFeedbackRatingsByConversationId: prop,
+              reachedOldest: null,
+              reachedNewest: null,
+              selectedConversationId: null,
+              colorIndex: null,
+            };
             let reachedOldest;
             if (peekResult != null) {
               reachedOldest = peekResult.reachedOldest;
@@ -1307,7 +1326,7 @@ obj = {
     navigation.reset();
     map.clear();
     map1.clear();
-  }
+  },
 };
 const conversationsStore = new ConversationsStore(dispatcherDefault, obj);
 let tmp3 = new privDefault(obj);

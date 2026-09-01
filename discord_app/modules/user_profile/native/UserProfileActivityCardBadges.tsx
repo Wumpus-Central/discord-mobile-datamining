@@ -30,4 +30,4 @@ export default function UserProfileActivityCardBadges(activity) {
     tmp8 = <View style={null}>{null}</View>;
   }
   return tmp8;
-};
+}

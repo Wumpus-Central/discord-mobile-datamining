@@ -34,7 +34,9 @@ function AddFriendModalScene(onSkip) {
       const tmp = closure_1_9;
       const tmp2 = closure_1_0;
       const tmp3 = closure_1_2;
-      let tmp5 = arg0 === closure_1_9.NOT_DETERMINED || closure_1_0(closure_1_2[13]).isAndroid() && arg0 === closure_1_9.UNAUTHORIZED;
+      let tmp5 =
+        arg0 === closure_1_9.NOT_DETERMINED ||
+        (closure_1_0(closure_1_2[13]).isAndroid() && arg0 === closure_1_9.UNAUTHORIZED);
       if (!tmp5) {
         tmp5 = !tmp2(tmp3[10]).isContactSyncEnabled(closure_2);
         const tmp2Result = tmp2(tmp3[10]);
@@ -59,10 +61,16 @@ function AddFriendModalScene(onSkip) {
       userTag = sourceMetadata(contactSyncAccount[16]).getUserTag(currentUser);
       const obj = sourceMetadata(contactSyncAccount[16]);
     }
-    sourceMetadata(contactSyncAccount[12]).track(constants.FRIEND_ADD_VIEWED, { friend_add_type: "Invite", source_page: "Add Friend Modal" });
+    sourceMetadata(contactSyncAccount[12]).track(constants.FRIEND_ADD_VIEWED, {
+      friend_add_type: "Invite",
+      source_page: "Add Friend Modal",
+    });
     const intl = onSkip(contactSyncAccount[17]).intl;
     const obj2 = sourceMetadata(contactSyncAccount[12]);
-    const formatToPlainStringResult = intl.formatToPlainString(onSkip(contactSyncAccount[17]).t["6E9a1J"], { url: "https://discord.com/", username: userTag });
+    const formatToPlainStringResult = intl.formatToPlainString(onSkip(contactSyncAccount[17]).t["6E9a1J"], {
+      url: "https://discord.com/",
+      username: userTag,
+    });
     onSkip(contactSyncAccount[18]).showShareActionSheet({ message: formatToPlainStringResult }, "Add Friend Modal");
   }, []);
   const items1 = [callback, callback1, navigation];
@@ -74,14 +82,20 @@ function AddFriendModalScene(onSkip) {
         obj[2] = intl.string(closure_1_0(closure_1_2[17]).t.RDE0Sc);
         return closure_1_10(closure_1_0(closure_1_2[19]).HeaderActionButton, obj);
       },
-      headerLeft: onSkip(contactSyncAccount[21]).getHeaderCloseButton(callback)
+      headerLeft: onSkip(contactSyncAccount[21]).getHeaderCloseButton(callback),
     };
     navigation.setOptions(obj);
   }, items1);
-  obj = { style: tmp.headerText, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  obj = {
+    style: tmp.headerText,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   let intl = onSkip(contactSyncAccount[17]).intl;
   obj[4] = intl.string(onSkip(contactSyncAccount[17]).t.GWMTSE);
-  const items2 = [callback2(onSkip(contactSyncAccount[22]).Text, obj), , , ];
+  const items2 = [callback2(onSkip(contactSyncAccount[22]).Text, obj), , ,];
   obj = { style: tmp.subheaderText, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = onSkip(contactSyncAccount[17]).intl;
   obj[3] = intl2.string(onSkip(contactSyncAccount[17]).t["Rn/sLl"]);
@@ -92,7 +106,7 @@ function AddFriendModalScene(onSkip) {
   const obj3 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
   const intl3 = onSkip(contactSyncAccount[17]).intl;
   obj3[3] = intl3.string(onSkip(contactSyncAccount[17]).t.dukg0Z);
-  const items3 = [callback2(onSkip(contactSyncAccount[22]).Text, obj3), ];
+  const items3 = [callback2(onSkip(contactSyncAccount[22]).Text, obj3)];
   let tmp14Result = null;
   if (tmp5) {
     const obj4 = { style: null, location: "Add Friend Modal" };
@@ -109,9 +123,17 @@ function AddFriendModalScene(onSkip) {
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_8, Fonts } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { headerText: null, subheaderText: null, input: null, otherOptionsContainer: null, rowContainer: null };
+createCacheKey = {
+  headerText: null,
+  subheaderText: null,
+  input: null,
+  otherOptionsContainer: null,
+  rowContainer: null,
+};
 createCacheKey = {};
-let merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+let merged = Object.assign(
+  importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
+);
 createCacheKey.marginTop = 32;
 createCacheKey.marginHorizontal = 16;
 createCacheKey.textAlign = "center";
@@ -140,5 +162,9 @@ export default function AddFriendModal(arg0) {
     obj[0] = obj;
     return obj;
   }, items);
-  return callback2(require("../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { screens, initialRouteName: "ADD_FRIEND", headerStatusBarHeight: useSafeAreaInsetsDefault().top });
-};
+  return callback2(require("../../design/components/Navigator/native/Navigator.native.tsx").Navigator, {
+    screens,
+    initialRouteName: "ADD_FRIEND",
+    headerStatusBarHeight: useSafeAreaInsetsDefault().top,
+  });
+}

@@ -7,7 +7,15 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ container: { paddingHorizontal: 12, justifyContent: "center", alignItems: "center", flexDirection: "row", position: "relative" } });
+let closure_8 = createCacheKey.createStyles({
+  container: {
+    paddingHorizontal: 12,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    position: "relative",
+  },
+});
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   let canModerateRequestToSpeak;
@@ -63,7 +71,7 @@ const memoResult = importAllResult.memo((channel) => {
           obj[1] = tmp21;
           tmp24 = _undefined(channel(actionBarPrimaryButton[5]).VideoButton, obj);
         }
-        const items = [tmp24, , , , ];
+        const items = [tmp24, , , ,];
         obj = { channel: null, isSmallSize: null };
         obj[0] = channel;
         obj[1] = _undefined;
@@ -73,7 +81,10 @@ const memoResult = importAllResult.memo((channel) => {
         const obj2 = { channel: null, isSmallSize: null };
         obj2[0] = channel;
         obj2[1] = _undefined;
-        items[2] = _undefined(canModerateRequestToSpeak ? obj1.RequestToSpeakListButton : obj1.MoveToAudienceButton, obj2);
+        items[2] = _undefined(
+          canModerateRequestToSpeak ? obj1.RequestToSpeakListButton : obj1.MoveToAudienceButton,
+          obj2,
+        );
         const obj3 = { channel: null, isSmallSize: null };
         obj3[0] = channel;
         obj3[1] = _undefined;
@@ -97,7 +108,7 @@ const memoResult = importAllResult.memo((channel) => {
           obj[1] = tmp2;
           tmp = _undefined(channel(actionBarPrimaryButton[10]).MusicMuteButton, obj);
         }
-        const items1 = [tmp, , , , ];
+        const items1 = [tmp, , , ,];
         const obj4 = { channel: null, isSmallSize: null };
         obj4[0] = channel;
         obj4[1] = tmp2;
@@ -119,7 +130,7 @@ const memoResult = importAllResult.memo((channel) => {
         obj6[0] = items1;
         return closure_1_7(callback, obj6);
       }
-    }, items1)
+    }, items1),
   };
   items2 = [tmp.container, { height: getActionBarHeight }];
   return callback(closure_4, obj);

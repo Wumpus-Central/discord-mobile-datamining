@@ -29,7 +29,7 @@ const memoResult = importAllResult.memo((user) => {
   if (globalName == null) {
     username = user.username;
   }
-  const children = [closure_7(Text.Text, { variant: "text-md/semibold", children: username }), ];
+  const children = [closure_7(Text.Text, { variant: "text-md/semibold", children: username })];
   let tmp5Result = null != globalName;
   if (tmp5Result) {
     obj = { variant: "text-xs/medium", children: null };
@@ -81,7 +81,11 @@ const memoResult1 = importAllResult.memo(function GuildSettingsModalMemberApplic
   let tmp = callback2();
   importDefault = tmp;
   let obj = applicationStatus(guildJoinRequests[13]);
-  obj = { guildId, applicationStatus, sortOrder: applicationStatus(guildJoinRequests[14]).GuildJoinRequestSortOrders.TIMESTAMP_DESC };
+  obj = {
+    guildId,
+    applicationStatus,
+    sortOrder: applicationStatus(guildJoinRequests[14]).GuildJoinRequestSortOrders.TIMESTAMP_DESC,
+  };
   guildJoinRequests = obj.useSortedMemberApplications(obj).guildJoinRequests;
   let obj2 = applicationStatus(guildJoinRequests[15]);
   fetchNextPage = obj2.usePaginatedMemberApplications({ guildId, guildJoinRequests }).fetchNextPage;
@@ -90,7 +94,10 @@ const memoResult1 = importAllResult.memo(function GuildSettingsModalMemberApplic
   stateFromStores = obj3.useStateFromStores(items, () => fetching.isFetching());
   const items1 = [applicationStatus, fetchNextPage];
   callback = fetchNextPage.useCallback(() => {
-    fetchNextPage(applicationStatus(guildJoinRequests[14]).GuildJoinRequestSortOrders.TIMESTAMP_DESC, applicationStatus);
+    fetchNextPage(
+      applicationStatus(guildJoinRequests[14]).GuildJoinRequestSortOrders.TIMESTAMP_DESC,
+      applicationStatus,
+    );
   }, items1);
   const items2 = [callback, guildJoinRequests.length];
   const effect = fetchNextPage.useEffect(() => {
@@ -101,7 +108,11 @@ const memoResult1 = importAllResult.memo(function GuildSettingsModalMemberApplic
   const items3 = [guildJoinRequests.length];
   const callback1 = fetchNextPage.useCallback((index) => {
     index = index.index;
-    return closure_1_7(closure_1_12, { joinRequest: index.item, start: 0 === index, end: index === guildJoinRequests.length - 1 });
+    return closure_1_7(closure_1_12, {
+      joinRequest: index.item,
+      start: 0 === index,
+      end: index === guildJoinRequests.length - 1,
+    });
   }, items3);
   callback2 = fetchNextPage.useCallback((joinRequestId) => joinRequestId.joinRequestId, []);
   if (stateFromStores) {
@@ -126,7 +137,14 @@ const memoResult1 = importAllResult.memo(function GuildSettingsModalMemberApplic
   }
   obj2 = { style: tmp.containerInner, children: null };
   if (0 !== guildJoinRequests.length) {
-    obj3 = { keyExtractor: null, data: null, renderItem: null, contentContainerStyle: null, onEndReached: null, ListFooterComponent: null };
+    obj3 = {
+      keyExtractor: null,
+      data: null,
+      renderItem: null,
+      contentContainerStyle: null,
+      onEndReached: null,
+      ListFooterComponent: null,
+    };
     obj3[0] = callback2;
     obj3[1] = guildJoinRequests;
     obj3[2] = callback1;
@@ -159,7 +177,9 @@ const memoResult1 = importAllResult.memo(function GuildSettingsModalMemberApplic
   obj6[0] = items4;
   return closure_8(closure_9, obj6);
 });
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberApplications.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/native/GuildSettingsModalMemberApplications.tsx",
+);
 
 export default memoResult1;
 export const MemberApplicationUser = memoResult;

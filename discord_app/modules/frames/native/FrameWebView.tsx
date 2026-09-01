@@ -44,7 +44,7 @@ export default function FrameWebView(applicationId) {
     hasInvalidUrlError,
     setHasInvalidUrlError: hasInvalidUrlErrorState.setHasInvalidUrlError,
     hadInvalidUrlError,
-    applicationId: applicationId.applicationId
+    applicationId: applicationId.applicationId,
   };
   const merged1 = Object.assign(merged);
   return jsx(frameId(hadInvalidUrlError[2]).BaseActivityWebView, {
@@ -66,6 +66,6 @@ export default function FrameWebView(applicationId) {
     hasInvalidUrlError,
     setHasInvalidUrlError: hasInvalidUrlErrorState.setHasInvalidUrlError,
     hadInvalidUrlError,
-    applicationId: applicationId.applicationId
+    applicationId: applicationId.applicationId,
   });
-};
+}

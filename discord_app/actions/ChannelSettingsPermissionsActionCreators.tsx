@@ -12,7 +12,7 @@ function _updatePermission() {
     closure_3 = arg3;
     c6 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -50,7 +50,11 @@ function _updatePermission() {
                   c6 = 1;
                   c7 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = guildId(9709).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp22, tmp25, tmp24);
+                  obj1[0] = guildId(9709).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
+                    tmp22,
+                    tmp25,
+                    tmp24,
+                  );
                   return obj1;
                 }
               }

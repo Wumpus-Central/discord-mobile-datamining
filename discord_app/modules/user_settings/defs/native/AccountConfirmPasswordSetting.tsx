@@ -13,13 +13,13 @@ obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
   unsearchable: true,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.ACCOUNT_CONFIRM_PASSWORD,
   getComponent() {
     return UserSettingsConfirmPasswordWrapped.UserSettingsConfirmPasswordWrapped;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountConfirmPasswordSetting.tsx");

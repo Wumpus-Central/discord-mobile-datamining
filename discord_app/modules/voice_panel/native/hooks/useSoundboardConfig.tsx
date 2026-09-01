@@ -50,7 +50,11 @@ export default function useSoundboardConfig(arg0, arg1) {
     stringResult = intl.string(tmp3(1236).t.X1lQli);
   }
   obj[3] = stringResult;
-  obj[4] = !require("../../../dismissible_content/DismissibleContentUnsafeUtils.tsx").useIsDismissibleContentDismissed_UNSAFE(require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
+  obj[4] =
+    !require("../../../dismissible_content/DismissibleContentUnsafeUtils.tsx").useIsDismissibleContentDismissed_UNSAFE(
+      require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx")
+        .DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE,
+    );
   return obj;
-};
+}
 export const SoundboardButtonLocation = obj;

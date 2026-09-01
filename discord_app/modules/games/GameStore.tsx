@@ -85,8 +85,7 @@ let set = new Set();
 let set1 = new Set();
 let set2 = new Set();
 const Store = initializeDefault.Store;
-class GameStore extends Store {
-}
+class GameStore extends Store {}
 const prototype = GameStore.prototype;
 prototype["isFetching"] = function isFetching(arg0) {
   let hasItem = null != arg0;
@@ -356,7 +355,9 @@ const gameStore = new GameStore(dispatcherDefault, {
     });
     return c0;
   },
-  LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: function handleLoadMessageRequestsSupplementalDataSuccess(supplementalData) {
+  LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: function handleLoadMessageRequestsSupplementalDataSuccess(
+    supplementalData,
+  ) {
     supplementalData = supplementalData.supplementalData;
     c0 = false;
     let item = supplementalData.forEach((message_preview) => {
@@ -414,7 +415,7 @@ const gameStore = new GameStore(dispatcherDefault, {
       }
     });
     return c0;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/games/GameStore.tsx");
 

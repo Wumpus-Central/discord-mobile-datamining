@@ -26,7 +26,7 @@ function FailedGroupDMRow(channel) {
   const tmp2 = computeChannelNameDefault(channel);
   obj[0] = Button.AvatarSizes.REFRESH_MEDIUM_32;
   obj[1] = channel;
-  const items = [callback(FacepileGroupDMAvatarDefault, obj), ];
+  const items = [callback(FacepileGroupDMAvatarDefault, obj)];
   obj = { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp2 };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
@@ -40,13 +40,26 @@ function FailedUserRow(user) {
   let stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getNickname(user.id));
   obj1 = user(589);
   const items1 = [closure_6];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({ isMobileOnline: closure_1_6.isMobileOnline(user.id), status: closure_1_6.getStatus(user.id), isVROnline: closure_1_6.isVROnline(user.id) }));
+  const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({
+    isMobileOnline: closure_1_6.isMobileOnline(user.id),
+    status: closure_1_6.getStatus(user.id),
+    isVROnline: closure_1_6.isVROnline(user.id),
+  }));
   const status = stateFromStoresObject.status;
   let tmp9Result = null;
   if (null != user) {
     obj = { style: null, children: null };
     obj[0] = tmp.row;
-    obj = { user: null, guildId: "Boolean", status: true, isMobileOnline: null, isVROnline: null, size: null, avatarDecoration: null, autoStatusCutout: false };
+    obj = {
+      user: null,
+      guildId: "Boolean",
+      status: true,
+      isMobileOnline: null,
+      isVROnline: null,
+      size: null,
+      avatarDecoration: null,
+      autoStatusCutout: false,
+    };
     obj[0] = user;
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
@@ -57,7 +70,7 @@ function FailedUserRow(user) {
     obj[4] = tmp7;
     obj[5] = tmp2(1297).AvatarSizes.XSMALL;
     obj[6] = user.avatarDecoration;
-    const items2 = [closure_10(tmp2(1297).Avatar, obj), ];
+    const items2 = [closure_10(tmp2(1297).Avatar, obj)];
     obj1 = { style: null, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
     obj1[0] = tmp.label;
     if (stateFromStores == null) {
@@ -86,10 +99,21 @@ function FailedChannelRow(channel) {
     return closure_1_5.getGuild(guild_id);
   });
   obj = { style: tmp.row, children: null };
-  obj = { "aria-label": "", guild: stateFromStores, channel, size: channel(10736).GuildIconWithChannelTypeSizes.SMALL_32 };
-  const items1 = [callback(channel(10736).GuildIconWithChannelType, obj), ];
+  obj = {
+    "aria-label": "",
+    guild: stateFromStores,
+    channel,
+    size: channel(10736).GuildIconWithChannelTypeSizes.SMALL_32,
+  };
+  const items1 = [callback(channel(10736).GuildIconWithChannelType, obj)];
   const tmp3 = computeChannelNameDefault(channel);
-  items1[1] = callback(channel(4474).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: computeChannelNameDefault(channel) });
+  items1[1] = callback(channel(4474).Text, {
+    style: tmp.label,
+    variant: "text-md/medium",
+    lineClamp: 1,
+    ellipsizeMode: "tail",
+    children: computeChannelNameDefault(channel),
+  });
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -136,19 +160,41 @@ function FailedDestinationRow(destination) {
 noopAll;
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 createCacheKey = { container: null, row: null, label: null };
-createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG, borderRadius: ThemesDefault.radii.lg, paddingVertical: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_STRONG,
+  borderRadius: ThemesDefault.radii.lg,
+  paddingVertical: ThemesDefault.space.PX_8,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12, height: 40, marginHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[1] = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_12,
+  height: 40,
+  marginHorizontal: ThemesDefault.space.PX_16,
+};
 createCacheKey[2] = { flexShrink: 1 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12, height: 40, marginHorizontal: ThemesDefault.space.PX_16 };
+let obj1 = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_12,
+  height: 40,
+  marginHorizontal: ThemesDefault.space.PX_16,
+};
 const result = require("set").fileFinishedImporting("modules/share/native/DestinationFailedAlertModal.tsx");
 
 export default function DestinationFailedAlertModal(arg0) {
   ({ failedDestinations, onRetry } = arg0);
   ({ title, content } = arg0);
   let obj = { title, content, extraContent: null, actions: null };
-  obj = { style: callback3().container, children: failedDestinations.map((destination) => callback(closure_17, { destination }, arg1)) };
+  obj = {
+    style: callback3().container,
+    children: failedDestinations.map((destination) => callback(closure_17, { destination }, arg1)),
+  };
   obj[2] = callback(View, obj);
   if (null != onRetry) {
     obj = { children: null };
@@ -156,7 +202,7 @@ export default function DestinationFailedAlertModal(arg0) {
     obj1[1] = onRetry;
     const intl2 = tmp3(1236).intl;
     obj1[2] = intl2.string(tmp3(1236).t["5911Lb"]);
-    const items = [tmp2(tmp3(4863).AlertActionButton, obj1, "confirm"), ];
+    const items = [tmp2(tmp3(4863).AlertActionButton, obj1, "confirm")];
     const obj2 = { variant: "secondary", text: null };
     const intl3 = tmp3(1236).intl;
     obj2[1] = intl3.string(tmp3(1236).t.WAI6xu);
@@ -171,4 +217,4 @@ export default function DestinationFailedAlertModal(arg0) {
   }
   obj[3] = callback(getAlertModalItemKey.AlertActions, { children: tmp2Result });
   return callback(getAlertModalItemKey.AlertModal, obj);
-};
+}

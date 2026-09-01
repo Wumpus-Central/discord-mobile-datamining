@@ -11,14 +11,10 @@ inject.inject({
     const voiceEngine = this.getVoiceEngine();
     return voiceEngine.supportsFeature(arg0);
   },
-  setProcessPriority() {
-
-  },
+  setProcessPriority() {},
   getVoiceEngine() {
     return logger /* logger */.default;
   },
-  getOpenH264LibraryPath() {
-
-  }
+  getOpenH264LibraryPath() {},
 });
 const result = set.fileFinishedImporting("lib/injectMediaEngine.native.tsx");

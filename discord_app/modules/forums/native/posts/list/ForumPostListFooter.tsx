@@ -13,8 +13,17 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 require = arg1;
 noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start" }, dot: null };
-createCacheKey = { height: 4, width: 4, borderRadius: 2, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginHorizontal: 8 };
+createCacheKey = {
+  footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start" },
+  dot: null,
+};
+createCacheKey = {
+  height: 4,
+  width: 4,
+  borderRadius: 2,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginHorizontal: 8,
+};
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/forums/native/posts/list/ForumPostListFooter.tsx");
@@ -28,7 +37,7 @@ export default function ForumPostListFooter(parentChannel) {
   obj1 = GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME;
   let isGameInvitesPost = obj1.useIsGameInvitesPost(thread);
   obj = { style: tmp.footer, children: null };
-  const items = [callback(num2Default, { thread, hasUnreads }), , , ];
+  const items = [callback(num2Default, { thread, hasUnreads }), , ,];
   if (isGameInvitesPost) {
     obj = { channel: null };
     obj[0] = thread;
@@ -39,7 +48,7 @@ export default function ForumPostListFooter(parentChannel) {
     obj1 = { children: null };
     const obj2 = { style: null };
     obj2[0] = tmp.dot;
-    const items1 = [tmp8(tmp7, obj2), ];
+    const items1 = [tmp8(tmp7, obj2)];
     const obj3 = { thread: null, typingUserIds: null, hasUnreads: null };
     obj3[0] = thread;
     obj3[1] = typingUserIds;
@@ -61,4 +70,4 @@ export default function ForumPostListFooter(parentChannel) {
   items[3] = tmp8Result;
   obj[1] = items;
   return closure_7(View, obj);
-};
+}

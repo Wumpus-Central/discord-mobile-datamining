@@ -51,9 +51,12 @@ export const useHasExpiredShopBlocks = (arg0, arg1, arg2) => {
             callback(false);
             const _setTimeout = setTimeout;
             const _Math = Math;
-            timeout = setTimeout(() => {
-              callback2(true);
-            }, Math.min(closure_1_5, diff));
+            timeout = setTimeout(
+              () => {
+                callback2(true);
+              },
+              Math.min(closure_1_5, diff),
+            );
             return () => clearTimeout(closure_0);
           }
         }

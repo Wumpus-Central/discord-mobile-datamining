@@ -14,7 +14,7 @@ function SearchFreezeContainer(visible) {
   ({ children, containerStyle } = visible);
   const tmp = callback3();
   let obj = { manualFreeze: !visible, placeholder: null, children: null };
-  const items = [containerStyle, ];
+  const items = [containerStyle];
   obj = { style: items, "aria-hidden": !visible, children };
   items[1] = visible ? tmp.visible : tmp.hidden;
   obj[2] = closure_5(View, obj);
@@ -30,8 +30,19 @@ const memoResult = importAllResult.memo((width) => {
   const items1 = [searchContext];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.isAutocompleteVisible(searchContext), items1);
   obj = { children: null };
-  obj = { visible: !stateFromStores, containerStyle, children: callback(NoSearchResultsScreenDefault, { searchContext, width: width.width }) };
-  const items2 = [callback(SearchFreezeContainer, obj), callback(SearchFreezeContainer, { visible: stateFromStores, containerStyle, children: callback(_modDef16305, { searchContext }) })];
+  obj = {
+    visible: !stateFromStores,
+    containerStyle,
+    children: callback(NoSearchResultsScreenDefault, { searchContext, width: width.width }),
+  };
+  const items2 = [
+    callback(SearchFreezeContainer, obj),
+    callback(SearchFreezeContainer, {
+      visible: stateFromStores,
+      containerStyle,
+      children: callback(_modDef16305, { searchContext }),
+    }),
+  ];
   obj[0] = items2;
   return callback2(closure_6, obj);
 });

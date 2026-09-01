@@ -17,10 +17,62 @@ if (constants != null) {
   supportedFeatures = constants.supportedFeatures;
 }
 if (supportedFeatures == null) {
-  supportedFeatures = ["voice_sound_stop_loop", "voice_relative_sounds", "voice_legacy_subsystem", "voice_experimental_subsystem", "elevated_hook", "soundshare", "soundshare_loopback", "set_audio_device_by_id", "set_video_device_by_id", "loopback", "wumpus_video", "hybrid_video", "experiment_config", "remote_locus_network_control", "screen_previews", "window_previews", "audio_debug_state", "connection_replay", "simulcast_bugfix", "RTC_REGION_RANKING", "video_effects", "electron_video", "mediapipe", "fixed_keyframe_interval"];
+  supportedFeatures = [
+    "voice_sound_stop_loop",
+    "voice_relative_sounds",
+    "voice_legacy_subsystem",
+    "voice_experimental_subsystem",
+    "elevated_hook",
+    "soundshare",
+    "soundshare_loopback",
+    "set_audio_device_by_id",
+    "set_video_device_by_id",
+    "loopback",
+    "wumpus_video",
+    "hybrid_video",
+    "experiment_config",
+    "remote_locus_network_control",
+    "screen_previews",
+    "window_previews",
+    "audio_debug_state",
+    "connection_replay",
+    "simulcast_bugfix",
+    "RTC_REGION_RANKING",
+    "video_effects",
+    "electron_video",
+    "mediapipe",
+    "fixed_keyframe_interval",
+  ];
 }
 constants2.VoiceEngine.supportsFeature = (arg0) => supportedFeatures.includes(arg0);
-let closure_4 = ["configureConnectionRetries", "getEncryptionModes", "setTransportOptions", "mergeUsers", "destroyUser", "setLocalPan", "setLocalVolume", "setLocalMute", "fastUdpReconnect", "setUdpEndpoint", "wasRemoteDisconnected", "setMinimumOutputDelay", "setSelfMute", "setSelfDeafen", "setNoInputThreshold", "setPTTActive", "setVideoBroadcast", "triggerOnVideoCallback", "getStats", "getFilteredStats", "setPingInterval", "setDesktopSource", "prepareSecureFramesTransition", "executeSecureFramesTransition", "prepareSecureFramesEpoch", "triggerOnSpeakingCallback"];
+let closure_4 = [
+  "configureConnectionRetries",
+  "getEncryptionModes",
+  "setTransportOptions",
+  "mergeUsers",
+  "destroyUser",
+  "setLocalPan",
+  "setLocalVolume",
+  "setLocalMute",
+  "fastUdpReconnect",
+  "setUdpEndpoint",
+  "wasRemoteDisconnected",
+  "setMinimumOutputDelay",
+  "setSelfMute",
+  "setSelfDeafen",
+  "setNoInputThreshold",
+  "setPTTActive",
+  "setVideoBroadcast",
+  "triggerOnVideoCallback",
+  "getStats",
+  "getFilteredStats",
+  "setPingInterval",
+  "setDesktopSource",
+  "prepareSecureFramesTransition",
+  "executeSecureFramesTransition",
+  "prepareSecureFramesEpoch",
+  "triggerOnSpeakingCallback",
+];
 if (null != constants2.VoiceEngine.consoleLog) {
   const _module = log;
   _module.setNativeLogFn((arg0, arg1, arg2) => {
@@ -55,7 +107,7 @@ class VoiceConnection {
       return items;
     });
     obj.setOnFirstFrameCallback = obj.callbackSetter("on-first-frame-callback", (arg0) => {
-      const items = [, , ];
+      const items = [, ,];
       ({ userId: arr[0], ssrc: arr[1], streamId: arr[2] } = arg0);
       return items;
     });
@@ -64,17 +116,17 @@ class VoiceConnection {
       return items;
     });
     obj.setPingCallback = obj.callbackSetter("ping-callback", (arg0) => {
-      const items = [, , , ];
+      const items = [, , ,];
       ({ ping: arr[0], server: arr[1], port: arr[2], seq: arr[3] } = arg0);
       return items;
     });
     obj.setPingTimeoutCallback = obj.callbackSetter("ping-timeout-callback", (arg0) => {
-      const items = [, , ];
+      const items = [, ,];
       ({ server: arr[0], port: arr[1], seq: arr[2] } = arg0);
       return items;
     });
     obj.setOnSpeakingCallback_ = obj.callbackSetter("user-speaking", (arg0) => {
-      const items = [, , ];
+      const items = [, ,];
       ({ userId: arr[0], isSpeaking: arr[1], voiceDb: arr[2] } = arg0);
       return items;
     });
@@ -84,8 +136,14 @@ class VoiceConnection {
     };
     obj.setOnSpeakingWhileMutedCallback = obj.callbackSetter("speaking-while-muted", () => []);
     obj.setOnVideoCallback_ = obj.callbackSetter("on-video-callback", (arg0) => {
-      const items = [, , , , ];
-      ({ userId: arr[0], ssrc: arr[1], streamId: arr[2], videoStreamParameters: arr[3], videoStreamParametersJSON: arr[4] } = arg0);
+      const items = [, , , ,];
+      ({
+        userId: arr[0],
+        ssrc: arr[1],
+        streamId: arr[2],
+        videoStreamParameters: arr[3],
+        videoStreamParametersJSON: arr[4],
+      } = arg0);
       return items;
     });
     obj.setOnVideoCallback = function setOnVideoCallback(handleVideo) {
@@ -144,7 +202,7 @@ class VoiceConnection {
       });
     };
     obj.setOnMLSFailureCallback = obj.callbackSetter("mls-failure-callback", (arg0) => {
-      const items = [, ];
+      const items = [,];
       ({ source: arr[0], reason: arr[1] } = arg0);
       return items;
     });
@@ -152,15 +210,18 @@ class VoiceConnection {
       const items = [reason.reason];
       return items;
     });
-    obj.setSecureFramesStateUpdateCallback = obj.callbackSetter("secure-frames-state-update-callback", (stateUpdate) => {
-      stateUpdate = stateUpdate.stateUpdate;
-      if (stateUpdate == null) {
-        const _JSON = JSON;
-        stateUpdate = JSON.parse(tmp);
-      }
-      const items = [stateUpdate];
-      return items;
-    });
+    obj.setSecureFramesStateUpdateCallback = obj.callbackSetter(
+      "secure-frames-state-update-callback",
+      (stateUpdate) => {
+        stateUpdate = stateUpdate.stateUpdate;
+        if (stateUpdate == null) {
+          const _JSON = JSON;
+          stateUpdate = JSON.parse(tmp);
+        }
+        const items = [stateUpdate];
+        return items;
+      },
+    );
     item = closure_4.forEach((getMLSKeyPackageB64) => {
       obj[getMLSKeyPackageB64] = obj.boundConnectionMethod(getMLSKeyPackageB64);
     });
@@ -202,16 +263,16 @@ prototype["getId"] = function getId() {
 prototype["boundConnectionMethod"] = function boundConnectionMethod(getMLSKeyPackageB64) {
   try {
     const self = this;
-    return f31705(_null[2]).VoiceEngine[(function connectionInstanceMethod(arr) {
-      const formatted = arr[0].toUpperCase();
-      return "connectionInstance" + formatted + arr.slice(1);
-    })(0, getMLSKeyPackageB64)].bind(f31705(_null[2]).VoiceEngine, this.id);
+    return f31705(_null[2]).VoiceEngine[
+      (function connectionInstanceMethod(arr) {
+        const formatted = arr[0].toUpperCase();
+        return "connectionInstance" + formatted + arr.slice(1);
+      })(0, getMLSKeyPackageB64)
+    ].bind(f31705(_null[2]).VoiceEngine, this.id);
   } catch (err) {
     const _HermesInternal = HermesInternal;
     logger.warn("VoiceConnection(...): " + tmp + " does not exist.");
-    return () => {
-
-    };
+    return () => {};
   }
 };
 prototype["callbackSetter"] = function callbackSetter(arg0, arg1) {
@@ -220,13 +281,15 @@ prototype["callbackSetter"] = function callbackSetter(arg0, arg1) {
   const callback = null;
   const subscriptions = this.subscriptions;
   const VoiceEngineEmitter = callback(_null[2]).VoiceEngineEmitter;
-  subscriptions.push(VoiceEngineEmitter.addListener(arg0, (connectionId) => {
-    if (tmp) {
-      const items = [];
-      HermesBuiltin.arraySpread(callback(connectionId), 0);
-      HermesBuiltin.apply(items, undefined);
-    }
-  }));
+  subscriptions.push(
+    VoiceEngineEmitter.addListener(arg0, (connectionId) => {
+      if (tmp) {
+        const items = [];
+        HermesBuiltin.arraySpread(callback(connectionId), 0);
+        HermesBuiltin.apply(items, undefined);
+      }
+    }),
+  );
   return (arg0) => {
     closure_0 = arg0;
     return arg0;
@@ -265,7 +328,7 @@ constants2.VoiceEngine.setNoInputCallback = (arg0) => {
   return arg0;
 };
 f31705 = (arg0) => {
-  const items = [, ];
+  const items = [,];
   ({ level: arr[0], speaking: arr[1] } = arg0);
   return items;
 };
@@ -304,7 +367,7 @@ constants2.VoiceEngine.setOnNativeMuteChangedCallback = (arg0) => {
   return arg0;
 };
 f31705 = (arg0) => {
-  const items = [, , ];
+  const items = [, ,];
   ({ inputDevices: arr[0], outputDevices: arr[1], videoInputDevices: arr[2] } = arg0);
   return items;
 };
@@ -324,7 +387,7 @@ constants2.VoiceEngine.setDeviceChangeCallback = (arg0) => {
   return arg0;
 };
 f31705 = (arg0) => {
-  const items = [, ];
+  const items = [,];
   ({ inputVolume: arr[0], outputVolume: arr[1] } = arg0);
   return items;
 };
@@ -344,7 +407,7 @@ constants2.VoiceEngine.setVolumeChangeCallback = (arg0) => {
   return arg0;
 };
 f31705 = (arg0) => {
-  const items = [, ];
+  const items = [,];
   ({ streamId: arr[0], active: arr[1] } = arg0);
   return items;
 };

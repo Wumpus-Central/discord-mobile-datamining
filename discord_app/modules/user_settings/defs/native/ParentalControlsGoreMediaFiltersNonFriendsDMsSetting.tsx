@@ -7,7 +7,8 @@ import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx"
 
 require = arg1;
 function useGoreContentNonFriendsDmSettingValue() {
-  const parentalControlledGoreContentSettings = useParentalControlledExplicitContentSettings.useParentalControlledGoreContentSettings();
+  const parentalControlledGoreContentSettings =
+    useParentalControlledExplicitContentSettings.useParentalControlledGoreContentSettings();
   let prop;
   if (parentalControlledGoreContentSettings != null) {
     prop = parentalControlledGoreContentSettings.goreContentNonFriendDm;
@@ -48,10 +49,12 @@ createToggle = {
   parent: require("MobileUserSettings").MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: useGoreContentNonFriendsDmSettingValue,
   onPress: onGoreContentNonFriendsDmOnPress,
-  unsearchable: true
+  unsearchable: true,
 };
 createToggle = createToggle.createPressable(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersNonFriendsDMsSetting.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersNonFriendsDMsSetting.tsx",
+);
 
 export default createToggle;
 export { useGoreContentNonFriendsDmSettingValue };

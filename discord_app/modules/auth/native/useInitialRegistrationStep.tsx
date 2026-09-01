@@ -10,7 +10,10 @@ const result = require("set").fileFinishedImporting("modules/auth/native/useInit
 export default function useInitialRegistrationStep(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => authenticationConsentRequired.getAuthenticationConsentRequired());
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => authenticationConsentRequired.getAuthenticationConsentRequired(),
+  );
   const items1 = [stateFromStores, arg0];
   const effect = React.useEffect(() => {
     let tmp2 = callback === callback(closure_1_2[4]).getRegistrationSteps()[1];
@@ -35,4 +38,4 @@ export default function useInitialRegistrationStep(arg0) {
     }
     obj = callback(closure_1_2[4]);
   }, items2);
-};
+}

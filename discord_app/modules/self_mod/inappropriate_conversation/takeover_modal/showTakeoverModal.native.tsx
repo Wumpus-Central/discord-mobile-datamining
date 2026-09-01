@@ -6,7 +6,9 @@ import InappropriateConversationExperiment from "../SelfModInappropriateConversa
 import LOCATION_CONTEXT_MOBILE from "../../Constants.tsx";
 
 const TAKEOVER_MODAL_KEY = LOCATION_CONTEXT_MOBILE.TAKEOVER_MODAL_KEY;
-const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/takeover_modal/showTakeoverModal.native.tsx");
+const result = set.fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/takeover_modal/showTakeoverModal.native.tsx",
+);
 
 export const showTakeoverModal = function showTakeoverModal(arg0) {
   ({ warningId, warningType, senderId, channelId } = arg0);

@@ -220,7 +220,7 @@ export default function getNotificationCenterItemBody(arg0) {
     }
     return str;
   }
-};
+}
 export const getFriendRequestSentBody = function getFriendRequestSentBody(user) {
   const intl = getSystemLocale.intl;
   return intl.format(getSystemLocale.t.gZVTy2, { user });

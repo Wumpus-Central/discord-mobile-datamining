@@ -19,7 +19,9 @@ export const getChannelsAllowedToUnlink = function getChannelsAllowedToUnlink(ar
   if (null == arg0) {
     let items = [];
   } else {
-    const found = obj.getChannels(arg0)[closure_3].filter((channel) => callback(closure_1_1[2]).canUnlinkLobbyChannel(channel.channel, callback));
+    const found = obj
+      .getChannels(arg0)
+      [closure_3].filter((channel) => callback(closure_1_1[2]).canUnlinkLobbyChannel(channel.channel, callback));
     items = found.map((channel) => channel.channel);
     const arr = obj.getChannels(arg0)[closure_3];
   }
@@ -35,7 +37,11 @@ export const useChannelsAllowedToUnlink = function useChannelsAllowedToUnlink(id
         if (null == tmp) {
           let items = [];
         } else {
-          const found = closure_1_2.getChannels(tmp)[closure_1_3].filter((channel) => callback(closure_1_1[2]).canUnlinkLobbyChannel(channel.channel, callback));
+          const found = closure_1_2
+            .getChannels(tmp)
+            [closure_1_3].filter((channel) =>
+              callback(closure_1_1[2]).canUnlinkLobbyChannel(channel.channel, callback),
+            );
           items = found.map((channel) => channel.channel);
           const arr = closure_1_2.getChannels(tmp)[closure_1_3];
         }

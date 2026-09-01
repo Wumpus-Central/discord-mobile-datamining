@@ -19,7 +19,10 @@ export default function QuestRewardTile(quest) {
     name = tmp3.messages.name;
   }
   const items1 = [quest];
-  const tmp2Result = useMemo(() => quest(closure_1_2[3]).getQuestAsset(quest, quest(closure_1_2[3]).QuestAssetType.REWARD, undefined, true), items1);
+  const tmp2Result = useMemo(
+    () => quest(closure_1_2[3]).getQuestAsset(quest, quest(closure_1_2[3]).QuestAssetType.REWARD, undefined, true),
+    items1,
+  );
   const items2 = [quest.accessibilityLabelPrefix, name];
   const found = items2.filter(Boolean);
   const joined = found.join(", ");
@@ -30,5 +33,9 @@ export default function QuestRewardTile(quest) {
   }
   obj[2] = tmp8;
   const merged1 = Object.assign(merged);
-  return jsx(_modDef11338, { assetUrl: tmp2Result.url, isAnimatedAsset: tmp2Result.isAnimated, accessibilityLabel: null });
-};
+  return jsx(_modDef11338, {
+    assetUrl: tmp2Result.url,
+    isAnimatedAsset: tmp2Result.isAnimated,
+    accessibilityLabel: null,
+  });
+}

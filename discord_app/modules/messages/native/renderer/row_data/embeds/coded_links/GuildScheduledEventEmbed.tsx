@@ -54,9 +54,20 @@ function createGuildScheduledEventEmbed(type) {
   }
   const eventTimeData = getRRule.getEventTimeData(toISOStringResult);
   let tmp7Result = tmp7(9752);
-  const guildScheduledEventHeaderProps = tmp7Result.getGuildScheduledEventHeaderProps({ eventTimeData, isStage: entity_type === constants.STAGE_INSTANCE, theme, event: guildEvent });
+  const guildScheduledEventHeaderProps = tmp7Result.getGuildScheduledEventHeaderProps({
+    eventTimeData,
+    isStage: entity_type === constants.STAGE_INSTANCE,
+    theme,
+    event: guildEvent,
+  });
   const color = guildScheduledEventHeaderProps.color;
-  obj = { titleColor: colors.titleColor, borderColor: colors.borderColor, backgroundColor: colors.backgroundColor, thumbnailCornerRadius: 15, embedCanBeTapped: tmp16 };
+  obj = {
+    titleColor: colors.titleColor,
+    borderColor: colors.borderColor,
+    backgroundColor: colors.backgroundColor,
+    thumbnailCornerRadius: 15,
+    embedCanBeTapped: tmp16,
+  };
   ({ icon, shouldChangeTextColor, text } = guildScheduledEventHeaderProps);
   const intl = tmp7(1236).intl;
   const stringResult = intl.string(getSystemLocale.t.DlcqlU);
@@ -129,7 +140,9 @@ function createGuildScheduledEventEmbed(type) {
   }
   const guildEventUserCounts = tmpResult.getGuildEventUserCounts(guild_id, id2, items1);
   const tmp7Result6 = getEventLocationIconSource;
-  const guildEventsForCurrentUser = getGuildEventsForCurrentUserDefault.getGuildEventsForCurrentUser(guildEvent.guild_id);
+  const guildEventsForCurrentUser = getGuildEventsForCurrentUserDefault.getGuildEventsForCurrentUser(
+    guildEvent.guild_id,
+  );
   obj1 = {};
   const merged = Object.assign(obj);
   obj1.acceptLabelBackgroundColor = acceptLabelActiveBackgroundColor;
@@ -197,7 +210,9 @@ function createGuildScheduledEventEmbed(type) {
 }
 ({ isGuildEventEnded: c5, isGuildScheduledEventActive: closure_6 } = scheduledEventSort);
 let closure_17 = {};
-let result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/GuildScheduledEventEmbed.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/coded_links/GuildScheduledEventEmbed.tsx",
+);
 
 export const createGuildScheduledEventInviteEmbed = function createGuildScheduledEventInviteEmbed(invite, closure_2) {
   let channel = invite.channel;
@@ -275,13 +290,25 @@ export const createGuildScheduledEventLinkEmbed = function createGuildScheduledE
       } else {
         items1 = [];
       }
-      const guildEventUserCounts = getGuildEventsForCurrentUserDefault.getGuildEventUserCounts(first, guildScheduledEvent.id, items1);
+      const guildEventUserCounts = getGuildEventsForCurrentUserDefault.getGuildEventUserCounts(
+        first,
+        guildScheduledEvent.id,
+        items1,
+      );
       let channel_id;
       const userCount = obj.getUserCount(guildScheduledEvent.id, nextRecurrenceIdInEvent);
       if (guildScheduledEvent != null) {
         channel_id = guildScheduledEvent.channel_id;
       }
-      obj = { channel: null, guildEvent: null, userCount: null, guild: null, theme: null, type: null, recurrenceId: null };
+      obj = {
+        channel: null,
+        guildEvent: null,
+        userCount: null,
+        guild: null,
+        theme: null,
+        type: null,
+        recurrenceId: null,
+      };
       obj[0] = store2.getChannel(channel_id);
       obj[1] = guildScheduledEvent;
       obj[2] = userCount;
@@ -295,13 +322,15 @@ export const createGuildScheduledEventLinkEmbed = function createGuildScheduledE
   if (!table[first]) {
     const guildEventsForGuild = _modDef9673.fetchGuildEventsForGuild(first);
     const obj5 = _modDef9673;
-    guildEventsForGuild.then(() => {
-      delete tmp3[tmp2];
-      return tmp;
-    }).catch(() => {
-      delete tmp3[tmp2];
-      return tmp;
-    });
+    guildEventsForGuild
+      .then(() => {
+        delete tmp3[tmp2];
+        return tmp;
+      })
+      .catch(() => {
+        delete tmp3[tmp2];
+        return tmp;
+      });
     tmp17[first] = true;
     const nextPromise = guildEventsForGuild.then(() => {
       delete tmp3[tmp2];

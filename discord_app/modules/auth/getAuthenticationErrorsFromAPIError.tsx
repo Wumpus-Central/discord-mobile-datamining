@@ -22,7 +22,9 @@ export const getAuthenticationErrorsFromAPIError = function getAuthenticationErr
     return obj;
   }
 };
-export const getAuthenticationErrorsFromV6OrEarlierAPIError = function getAuthenticationErrorsFromV6OrEarlierAPIError(closure_2) {
+export const getAuthenticationErrorsFromV6OrEarlierAPIError = function getAuthenticationErrorsFromV6OrEarlierAPIError(
+  closure_2,
+) {
   if (Object.keys(closure_2.fields).length > 0) {
     return closure_2.fields;
   } else {

@@ -32,8 +32,7 @@ let closure_13 = THEME_PREFERENCES_MOBILE[tmp3];
 let closure_14 = {};
 let c15 = false;
 const PersistedStore = initializeDefault.PersistedStore;
-class ThemeStore extends PersistedStore {
-}
+class ThemeStore extends PersistedStore {}
 const prototype = ThemeStore.prototype;
 prototype["initialize"] = function initialize(theme) {
   theme = undefined;
@@ -57,19 +56,25 @@ prototype["initialize"] = function initialize(theme) {
   this.waitFor(closure_4, closure_3, closure_5);
 };
 prototype["getState"] = function getState() {
-  return { theme: this.theme, preferences: THEME_PREFERENCES_MOBILE, syncedClientThemes: closure_14, syncedThemesEnabled: c15, status: UNSET };
+  return {
+    theme: this.theme,
+    preferences: THEME_PREFERENCES_MOBILE,
+    syncedClientThemes: closure_14,
+    syncedThemesEnabled: c15,
+    status: UNSET,
+  };
 };
 Object.defineProperty(prototype, "theme", {
   get: function theme(arg0, items) {
     return closure_13;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "systemTheme", {
   get: function systemTheme() {
     return closure_12;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["themePreferenceForSystemTheme"] = function themePreferenceForSystemTheme(closure_0) {
   return THEME_PREFERENCES_MOBILE[closure_0];
@@ -108,7 +113,7 @@ const items = [
       }
     }
     return tmp;
-  }
+  },
 ];
 ThemeStore.migrations = items;
 obj = {
@@ -122,9 +127,13 @@ obj = {
       }
       if (!darkSidebar) {
         const PreloadedUserSettingsActionCreators = updateUserGuildSettings.PreloadedUserSettingsActionCreators;
-        PreloadedUserSettingsActionCreators.updateAsync("appearance", (arg0) => {
-          arg0.darkSidebar = true;
-        }, UserSettingsDelay.INFREQUENT_USER_ACTION);
+        PreloadedUserSettingsActionCreators.updateAsync(
+          "appearance",
+          (arg0) => {
+            arg0.darkSidebar = true;
+          },
+          UserSettingsDelay.INFREQUENT_USER_ACTION,
+        );
       }
       dispatcherDefault.wait(() => {
         callback(table[11]).dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: false } });
@@ -251,7 +260,7 @@ obj = {
       flag = true;
     }
     return flag;
-  }
+  },
 };
 const themeStore = new ThemeStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/user_settings/ThemeStore.tsx");

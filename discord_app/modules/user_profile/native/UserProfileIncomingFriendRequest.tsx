@@ -7,7 +7,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { rowGap: 16, flexDirection: "column" }, buttons: { flexDirection: "row", columnGap: 12 }, gameIcon: { paddingTop: 2 }, friendRequestNote: null };
+createCacheKey = {
+  container: { rowGap: 16, flexDirection: "column" },
+  buttons: { flexDirection: "row", columnGap: 12 },
+  gameIcon: { paddingTop: 2 },
+  friendRequestNote: null,
+};
 createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[3] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
@@ -31,7 +36,14 @@ export default function UserProfileIncomingFriendRequest(style) {
   let obj = isGameRelationship(trackUserProfileAction[6]);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   obj1 = isGameRelationship(trackUserProfileAction[8]);
-  obj = { userId: user.id, applicationId, isGameRelationship, location: items4(trackUserProfileAction[7])().newestAnalyticsLocation, onConfirm: showUserProfile, onCancel: showUserProfile };
+  obj = {
+    userId: user.id,
+    applicationId,
+    isGameRelationship,
+    location: items4(trackUserProfileAction[7])().newestAnalyticsLocation,
+    onConfirm: showUserProfile,
+    onCancel: showUserProfile,
+  };
   const friendRequestActions = obj1.useFriendRequestActions(obj);
   acceptFriendRequest = friendRequestActions.acceptFriendRequest;
   cancelFriendRequest = friendRequestActions.cancelFriendRequest;
@@ -102,7 +114,7 @@ export default function UserProfileIncomingFriendRequest(style) {
     obj1[2] = format(intl2.uIomXw, obj3);
     tmp15 = obj1;
   }
-  const items3 = [getOrFetchApplication(Text, tmp15), , ];
+  const items3 = [getOrFetchApplication(Text, tmp15), ,];
   obj4 = { userId: user.id, styles: items4.friendRequestNote, analyticsLocation: "User Profile" };
   items3[1] = getOrFetchApplication(tmp(userResult[15]), obj4);
   const obj5 = { style: items4.buttons, children: null };
@@ -110,7 +122,7 @@ export default function UserProfileIncomingFriendRequest(style) {
   intl2 = tmp4(userResult[12]).intl;
   obj6[2] = intl2.string(isGameRelationship(userResult[12]).t.Zcibdf);
   obj6[3] = Button;
-  items4 = [getOrFetchApplication(isGameRelationship(userResult[16]).Button, obj6), ];
+  items4 = [getOrFetchApplication(isGameRelationship(userResult[16]).Button, obj6)];
   Button = tmp4(userResult[16]).Button;
   const obj7 = { size: "sm", variant: "secondary", text: null, onPress: null };
   obj1 = tmp4(userResult[12]).intl;
@@ -125,4 +137,4 @@ export default function UserProfileIncomingFriendRequest(style) {
   items3[2] = Text;
   obj[1] = items3;
   closure_6(cancelFriendRequest, obj);
-};
+}

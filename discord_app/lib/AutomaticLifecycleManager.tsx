@@ -61,11 +61,7 @@ prototype["terminate"] = function terminate(arg0) {
     }
   }
 };
-prototype["_initialize"] = function _initialize() {
-
-};
-prototype["_terminate"] = function _terminate() {
-
-};
+prototype["_initialize"] = function _initialize() {};
+prototype["_terminate"] = function _terminate() {};
 
 export default AutomaticLifecycleManager;

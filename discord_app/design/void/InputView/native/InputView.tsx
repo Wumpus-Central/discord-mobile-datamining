@@ -15,23 +15,79 @@ import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
-let closure_3 = ["numberOfLines", "disableConstantNumberOfLines", "inputTextColor", "placeholder", "placeholderTextColor", "editable", "large", "accessibilityHint", "maxLength", "inActionSheet", "trailingButton", "clearButtonVisibility", "disabled", "style", "inputTextStyle", "onChangeText", "onFocus", "value"];
+let closure_3 = [
+  "numberOfLines",
+  "disableConstantNumberOfLines",
+  "inputTextColor",
+  "placeholder",
+  "placeholderTextColor",
+  "editable",
+  "large",
+  "accessibilityHint",
+  "maxLength",
+  "inActionSheet",
+  "trailingButton",
+  "clearButtonVisibility",
+  "disabled",
+  "style",
+  "inputTextStyle",
+  "onChangeText",
+  "onFocus",
+  "value",
+];
 ({ View: c5, Pressable: closure_6, TouchableWithoutFeedback: error, Platform } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { disabled: { opacity: 0.5 }, topContainer: { minHeight: 16, alignItems: "center", flexDirection: "row", marginBottom: 5, flexWrap: "wrap" }, inputViewTitle: { marginRight: 5 }, inputViewError: null, inputBorder: null, inputView: null, inputViewBorder: null, inputViewBorderActive: null, inputContainer: null, bottomContainer: null, charactersLength: null, closeIcon: null, clearButton: null, required: null };
+createCacheKey = {
+  disabled: { opacity: 0.5 },
+  topContainer: { minHeight: 16, alignItems: "center", flexDirection: "row", marginBottom: 5, flexWrap: "wrap" },
+  inputViewTitle: { marginRight: 5 },
+  inputViewError: null,
+  inputBorder: null,
+  inputView: null,
+  inputViewBorder: null,
+  inputViewBorderActive: null,
+  inputContainer: null,
+  bottomContainer: null,
+  charactersLength: null,
+  closeIcon: null,
+  clearButton: null,
+  required: null,
+};
 createCacheKey = { fontSize: 10, color: ThemesDefault.unsafe_rawColors.RED_400 };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.TEXT_MUTED };
 let obj1 = { backgroundColor: ThemesDefault.colors.TEXT_MUTED };
-createCacheKey[5] = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: require("result").DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+createCacheKey[5] = {
+  fontSize: 16,
+  paddingBottom: 0,
+  paddingTop: 0,
+  textAlignVertical: "top",
+  flex: 1,
+  color: require("result").DARK_PRIMARY_100_LIGHT_PRIMARY_500,
+};
 createCacheKey[6] = { marginTop: 8, height: 2 };
-let obj2 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: require("result").DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+let obj2 = {
+  fontSize: 16,
+  paddingBottom: 0,
+  paddingTop: 0,
+  textAlignVertical: "top",
+  flex: 1,
+  color: require("result").DARK_PRIMARY_100_LIGHT_PRIMARY_500,
+};
 createCacheKey[7] = { backgroundColor: ThemesDefault.unsafe_rawColors.TRANSPARENT };
 createCacheKey[8] = { flexDirection: "row", alignItems: "center", position: "relative" };
 createCacheKey[9] = { marginTop: 5 };
 let obj3 = { backgroundColor: ThemesDefault.unsafe_rawColors.TRANSPARENT };
-createCacheKey[10] = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: require("result").DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
-let obj4 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: require("result").DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+createCacheKey[10] = {
+  alignSelf: "flex-end",
+  fontFamily: Fonts.CODE_BOLD,
+  color: require("result").DARK_PRIMARY_400_LIGHT_PRIMARY_300,
+};
+let obj4 = {
+  alignSelf: "flex-end",
+  fontFamily: Fonts.CODE_BOLD,
+  color: require("result").DARK_PRIMARY_400_LIGHT_PRIMARY_300,
+};
 createCacheKey[11] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[12] = { position: "absolute", right: 6 };
 let obj5 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -43,7 +99,11 @@ class InputView extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
-    applyArgumentsResult.state = { active: false, value: applyArgumentsResult.props.value, valueProp: applyArgumentsResult.props.value };
+    applyArgumentsResult.state = {
+      active: false,
+      value: applyArgumentsResult.props.value,
+      valueProp: applyArgumentsResult.props.value,
+    };
     applyArgumentsResult._ref = undefined;
     applyArgumentsResult.handleFocus = function handleFocus() {
       const onFocus = applyArgumentsResult.props.onFocus;
@@ -156,7 +216,7 @@ prototype["renderBorder"] = function renderBorder() {
     if (backgroundColor == null) {
       backgroundColor = tmp.inputBorder.backgroundColor;
     }
-    const items = [tmp.inputViewBorder, , ];
+    const items = [tmp.inputViewBorder, ,];
     let obj = { backgroundColor: null };
     obj[0] = backgroundColor;
     items[1] = obj;
@@ -223,7 +283,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
     tmp16 = callback2(Text.Text, obj);
   }
   obj1 = { style: tmp.topContainer, children: null };
-  const items3 = [tmp12Result, tmp16, , ];
+  const items3 = [tmp12Result, tmp16, ,];
   let tmp22 = null == tmp3;
   if (tmp22) {
     tmp22 = required;
@@ -267,7 +327,15 @@ prototype["renderTrailingButton"] = function renderTrailingButton() {
   ({ trailingButton, clearButtonVisibility, clearButtonAccessibilityLabel } = this.props);
   if (null == trailingButton) {
     if (clearButtonVisibility === obj7.ALWAYS) {
-      const obj = { hitSlop: 16, style: null, onPress: null, accessible: true, accessibilityRole: "button", accessibilityLabel: null, children: null };
+      const obj = {
+        hitSlop: 16,
+        style: null,
+        onPress: null,
+        accessible: true,
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        children: null,
+      };
       obj[1] = tmp.clearButton;
       obj[2] = self.handleClear;
       if (clearButtonAccessibilityLabel == null) {
@@ -291,10 +359,23 @@ prototype["renderTrailingButton"] = function renderTrailingButton() {
 prototype["renderTextView"] = function renderTextView() {
   const self = this;
   const props = this.props;
-  ({ numberOfLines, inputTextColor, placeholder, placeholderTextColor, large, maxLength, trailingButton, clearButtonVisibility, style, onChangeText, onFocus, value } = props);
+  ({
+    numberOfLines,
+    inputTextColor,
+    placeholder,
+    placeholderTextColor,
+    large,
+    maxLength,
+    trailingButton,
+    clearButtonVisibility,
+    style,
+    onChangeText,
+    onFocus,
+    value,
+  } = props);
   ({ disableConstantNumberOfLines, editable, accessibilityHint, inActionSheet, disabled, inputTextStyle } = props);
   const tmp2 = callback(props, closure_3);
-  const items = [callback4(this.context).inputView, , , , ];
+  const items = [callback4(this.context).inputView, , , ,];
   if (disableConstantNumberOfLines) {
     let num2 = 21;
     if (large) {
@@ -345,12 +426,35 @@ prototype["renderTextView"] = function renderTextView() {
     } else {
       TextInput = Button.TextInput;
     }
-    const obj5 = { accessibilityState: null, style: null, ref: null, onChangeText: null, onFocus: null, onBlur: null, onEndEditing: null, onSubmitEditing: null, value: null, clearButtonMode: "never", placeholder: null, placeholderTextColor: null, editable: null, maxLength: null, accessibilityHint: null };
+    const obj5 = {
+      accessibilityState: null,
+      style: null,
+      ref: null,
+      onChangeText: null,
+      onFocus: null,
+      onBlur: null,
+      onEndEditing: null,
+      onSubmitEditing: null,
+      value: null,
+      clearButtonMode: "never",
+      placeholder: null,
+      placeholderTextColor: null,
+      editable: null,
+      maxLength: null,
+      accessibilityHint: null,
+    };
     let obj6 = { disabled: null };
     obj6[0] = disabled;
     obj5[0] = obj6;
     obj5[1] = items;
-    ({ setRef: obj10[2], handleChangeText: obj10[3], handleFocus: obj10[4], handleBlur: obj10[5], handleEndEditing: obj10[6], handleSubmitEditing: obj10[7] } = self);
+    ({
+      setRef: obj10[2],
+      handleChangeText: obj10[3],
+      handleFocus: obj10[4],
+      handleBlur: obj10[5],
+      handleEndEditing: obj10[6],
+      handleSubmitEditing: obj10[7],
+    } = self);
     obj5[8] = this.state.value;
     obj5[10] = placeholder;
     obj5[11] = placeholderTextColor;
@@ -371,7 +475,7 @@ prototype["render"] = function render() {
   const props = this.props;
   const disabled = props.disabled;
   let obj = { accessible: false, onPress: this.focus, children: null };
-  const items = [props.style, ];
+  const items = [props.style];
   let disabled2 = disabled;
   if (disabled) {
     disabled2 = tmp.disabled;
@@ -383,7 +487,7 @@ prototype["render"] = function render() {
     str = "none";
   }
   obj[1] = str;
-  const items1 = [self.renderTopContainer(), , , , ];
+  const items1 = [self.renderTopContainer(), , , ,];
   obj = { style: items2, children: null };
   items2 = [tmp.inputContainer, props.inputContainerStyle];
   const items3 = [self.renderTextView(), self.renderTrailingButton()];
@@ -407,7 +511,19 @@ prototype["render"] = function render() {
   return tmp2(tmp3, obj);
 };
 InputView.contextType = require("ManaContext").ThemeContext;
-InputView.defaultProps = { showBorder: true, value: "", returnKeyType: "next", disabled: false, autoFocus: false, multiline: false, numberOfLines: 1, showTopContainer: true, showCharactersRemaining: false, clearButtonVisibility: "never", inActionSheet: false };
+InputView.defaultProps = {
+  showBorder: true,
+  value: "",
+  returnKeyType: "next",
+  disabled: false,
+  autoFocus: false,
+  multiline: false,
+  numberOfLines: 1,
+  showTopContainer: true,
+  showCharactersRemaining: false,
+  clearButtonVisibility: "never",
+  inActionSheet: false,
+};
 let obj6 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
 const result = require("set").fileFinishedImporting("design/void/InputView/native/InputView.tsx");
 

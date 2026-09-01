@@ -284,11 +284,55 @@ function transformAvailableForumTagChange(arg0) {
 }
 ({ AuditLogActions: closure_15, AuditLogChangeKeys } = ME);
 const AuditLogTargetTypes = ME.AuditLogTargetTypes;
-({ MFALevels: closure_18, VerificationLevels: closure_19, UserNotificationSettings: closure_20, GuildExplicitContentFilterTypes: closure_21, ChannelTypes: closure_22, Permissions: closure_23, NOOP_NULL: closure_24, VideoQualityMode: closure_25, ApplicationCommandPermissionTypes: closure_26, AuditLogSubtargetTypes: closure_27, SystemChannelFlags: closure_28, AuditLogActionTypes: closure_29 } = ME);
-({ GuildScheduledEventEntityTypes: closure_33, GuildScheduledEventStatus: closure_34, GuildScheduledEventPrivacyLevel: closure_35 } = GUILD_EVENT_MAX_NAME_LENGTH);
+({
+  MFALevels: closure_18,
+  VerificationLevels: closure_19,
+  UserNotificationSettings: closure_20,
+  GuildExplicitContentFilterTypes: closure_21,
+  ChannelTypes: closure_22,
+  Permissions: closure_23,
+  NOOP_NULL: closure_24,
+  VideoQualityMode: closure_25,
+  ApplicationCommandPermissionTypes: closure_26,
+  AuditLogSubtargetTypes: closure_27,
+  SystemChannelFlags: closure_28,
+  AuditLogActionTypes: closure_29,
+} = ME);
+({
+  GuildScheduledEventEntityTypes: closure_33,
+  GuildScheduledEventStatus: closure_34,
+  GuildScheduledEventPrivacyLevel: closure_35,
+} = GUILD_EVENT_MAX_NAME_LENGTH);
 let closure_36 = new timestampDefault("AuditLogUtils");
-let items = [require("sleep").TimeUnits.DAYS, require("sleep").TimeUnits.HOURS, require("sleep").TimeUnits.MINUTES, require("sleep").TimeUnits.SECONDS];
-let closure_38 = { [AuditLogTargetTypes.CHANNEL]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true }, [AuditLogTargetTypes.CHANNEL_OVERWRITE]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true }, [AuditLogTargetTypes.INVITE]: { [AuditLogChangeKeys.INVITER_ID]: true, [AuditLogChangeKeys.USES]: true }, [AuditLogTargetTypes.WEBHOOK]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.APPLICATION_ID]: true }, [AuditLogTargetTypes.INTEGRATION]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.NAME]: true }, [AuditLogTargetTypes.THREAD]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.TYPE]: true }, [AuditLogTargetTypes.STICKER]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.ASSET]: true, [AuditLogChangeKeys.FORMAT_TYPE]: true, [AuditLogChangeKeys.AVAILABLE]: true, [AuditLogChangeKeys.GUILD_ID]: true }, [AuditLogTargetTypes.GUILD_HOME]: { [AuditLogChangeKeys.ENTITY_TYPE]: true }, [AuditLogTargetTypes.GUILD_ONBOARDING]: { [AuditLogChangeKeys.PROMPTS]: true }, [AuditLogTargetTypes.GUILD_SOUNDBOARD]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.SOUND_ID]: true } };
+let items = [
+  require("sleep").TimeUnits.DAYS,
+  require("sleep").TimeUnits.HOURS,
+  require("sleep").TimeUnits.MINUTES,
+  require("sleep").TimeUnits.SECONDS,
+];
+let closure_38 = {
+  [AuditLogTargetTypes.CHANNEL]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true },
+  [AuditLogTargetTypes.CHANNEL_OVERWRITE]: {
+    [AuditLogChangeKeys.TYPE]: true,
+    [AuditLogChangeKeys.ID]: true,
+    [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true,
+  },
+  [AuditLogTargetTypes.INVITE]: { [AuditLogChangeKeys.INVITER_ID]: true, [AuditLogChangeKeys.USES]: true },
+  [AuditLogTargetTypes.WEBHOOK]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.APPLICATION_ID]: true },
+  [AuditLogTargetTypes.INTEGRATION]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.NAME]: true },
+  [AuditLogTargetTypes.THREAD]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.TYPE]: true },
+  [AuditLogTargetTypes.STICKER]: {
+    [AuditLogChangeKeys.ID]: true,
+    [AuditLogChangeKeys.TYPE]: true,
+    [AuditLogChangeKeys.ASSET]: true,
+    [AuditLogChangeKeys.FORMAT_TYPE]: true,
+    [AuditLogChangeKeys.AVAILABLE]: true,
+    [AuditLogChangeKeys.GUILD_ID]: true,
+  },
+  [AuditLogTargetTypes.GUILD_HOME]: { [AuditLogChangeKeys.ENTITY_TYPE]: true },
+  [AuditLogTargetTypes.GUILD_ONBOARDING]: { [AuditLogChangeKeys.PROMPTS]: true },
+  [AuditLogTargetTypes.GUILD_SOUNDBOARD]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.SOUND_ID]: true },
+};
 class ACTION_FILTER_ITEMS {
   constructor() {
     obj = { value: AuditLogActions.ALL, label: null, valueLabel: null };
@@ -296,7 +340,74 @@ class ACTION_FILTER_ITEMS {
     obj[1] = intl.string(require("getSystemLocale").t.QxEVcv);
     intl2 = require("getSystemLocale").intl;
     obj[2] = intl2.string(require("getSystemLocale").t.an9Ry3);
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
+    items = [
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+    ];
     items[0] = obj;
     obj = { value: AuditLogActions.GUILD_UPDATE, label: null };
     intl3 = require("getSystemLocale").intl;
@@ -581,7 +692,7 @@ let obj = {
   [arg1(4558).TimeUnits.DAYS]: (days) => {
     const intl = getSystemLocale.intl;
     return intl.formatToPlainString(getSystemLocale.t["k2UNz+"], { days });
-  }
+  },
 };
 let tmp4 = new timestampDefault("AuditLogUtils");
 let result = require("set").fileFinishedImporting("modules/guild_settings/audit_log/AuditLogUtils.tsx");
@@ -596,24 +707,24 @@ export const getChangeStrings = function getChangeStrings(targetType) {
     merged = __3TkD;
     merged = dependencyMap;
     __3TkD = __3TkD(1236).t.RP3Ey3;
-    obj[AuditLogChangeKeys.DESCRIPTION] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+    obj[AuditLogChangeKeys.DESCRIPTION] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
     obj[AuditLogChangeKeys.ICON_HASH] = () => __3TkD(1236).t.iLZ8Q9;
     obj[AuditLogChangeKeys.SPLASH_HASH] = () => __3TkD(1236).t["4VV6dn"];
     obj[AuditLogChangeKeys.DISCOVERY_SPLASH_HASH] = () => __3TkD(1236).t["2pds6p"];
     __3TkD = __3TkD(1236).t.Cxq4zO;
-    obj[AuditLogChangeKeys.BANNER_HASH] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+    obj[AuditLogChangeKeys.BANNER_HASH] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
     obj[AuditLogChangeKeys.OWNER_ID] = () => __3TkD(1236).t["8ltsLT"];
     obj[AuditLogChangeKeys.REGION] = () => __3TkD(1236).t.X9r5Kf;
     obj[AuditLogChangeKeys.PREFERRED_LOCALE] = () => __3TkD(1236).t.UnXuDS;
     __3TkD = __3TkD(1236).t.ClBuA4;
-    obj[AuditLogChangeKeys.AFK_CHANNEL_ID] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+    obj[AuditLogChangeKeys.AFK_CHANNEL_ID] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
     obj[AuditLogChangeKeys.AFK_TIMEOUT] = () => __3TkD(1236).t.q21fHa;
     __3TkD = __3TkD(1236).t.H1VXaa;
-    obj[AuditLogChangeKeys.SYSTEM_CHANNEL_ID] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+    obj[AuditLogChangeKeys.SYSTEM_CHANNEL_ID] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
     __3TkD = __3TkD(1236).t.OI6MG2;
-    obj[AuditLogChangeKeys.RULES_CHANNEL_ID] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+    obj[AuditLogChangeKeys.RULES_CHANNEL_ID] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
     __3TkD = __3TkD(1236).t.YxBKrY;
-    obj[AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+    obj[AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
     obj = {};
     merged = constants2;
     obj[constants2.NONE] = __3TkD(1236).t.voaCCQ;
@@ -621,9 +732,9 @@ export const getChangeStrings = function getChangeStrings(targetType) {
     __3TkD = obj;
     obj[AuditLogChangeKeys.MFA_LEVEL] = (arg0) => __3TkD[arg0.newValue];
     __3TkD = __3TkD(1236).t.ADIty8;
-    obj[AuditLogChangeKeys.WIDGET_ENABLED] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+    obj[AuditLogChangeKeys.WIDGET_ENABLED] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
     __3TkD = __3TkD(1236).t["6SBsDc"];
-    obj[AuditLogChangeKeys.WIDGET_CHANNEL_ID] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+    obj[AuditLogChangeKeys.WIDGET_CHANNEL_ID] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
     obj1 = {};
     merged = constants3;
     obj1[constants3.NONE] = __3TkD(1236).t.W27rsc;
@@ -640,7 +751,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
     __3TkD = obj2;
     obj[AuditLogChangeKeys.DEFAULT_MESSAGE_NOTIFICATIONS] = (arg0) => __3TkD[arg0.newValue];
     __3TkD = __3TkD(1236).t.Zplsov;
-    obj[AuditLogChangeKeys.VANITY_URL_CODE] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+    obj[AuditLogChangeKeys.VANITY_URL_CODE] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
     const obj3 = {};
     merged = constants5;
     obj3[constants5.DISABLED] = __3TkD(1236).t.fmOeL3;
@@ -649,7 +760,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
     __3TkD = obj3;
     obj[AuditLogChangeKeys.EXPLICIT_CONTENT_FILTER] = (arg0) => __3TkD[arg0.newValue];
     __3TkD = __3TkD(1236).t.rBT0sn;
-    obj[AuditLogChangeKeys.PREMIUM_PROGRESS_BAR_ENABLED] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+    obj[AuditLogChangeKeys.PREMIUM_PROGRESS_BAR_ENABLED] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
     obj[AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME] = () => __3TkD(1236).t.YbouFH;
     obj[AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS] = () => __3TkD(1236).t.g3DMjB;
     obj[AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS] = () => __3TkD(1236).t["+fQAel"];
@@ -685,9 +796,9 @@ export const getChangeStrings = function getChangeStrings(targetType) {
             }
           };
           __3TkD = __3TkD(1236).t.mArLlW;
-          obj5[AuditLogChangeKeys.DEAF] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj5[AuditLogChangeKeys.DEAF] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t["bxs/lS"];
-          obj5[AuditLogChangeKeys.MUTE] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj5[AuditLogChangeKeys.MUTE] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           obj5[AuditLogChangeKeys.ROLES_REMOVE] = () => __3TkD(1236).t["+2SDWV"];
           obj5[AuditLogChangeKeys.ROLES_ADD] = () => __3TkD(1236).t["B3/3IJ"];
           obj5[AuditLogChangeKeys.PRUNE_DELETE_DAYS] = () => __3TkD(1236).t["+Cvc+D"];
@@ -707,7 +818,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
             }
           };
           __3TkD = __3TkD(1236).t.NBPBui;
-          obj5[AuditLogChangeKeys.BYPASSES_VERIFICATION] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj5[AuditLogChangeKeys.BYPASSES_VERIFICATION] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           obj5[AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME] = () => __3TkD(1236).t.YbouFH;
           const obj6 = {};
           obj6[AuditLogChangeKeys.REASON] = () => __3TkD(1236).t["2IW3C5"];
@@ -721,9 +832,9 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           merged = __3TkD;
           merged = dependencyMap;
           __3TkD = __3TkD(1236).t.QBmlaD;
-          obj7[AuditLogChangeKeys.NAME] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj7[AuditLogChangeKeys.NAME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.XeYKWJ;
-          obj7[AuditLogChangeKeys.DESCRIPTION] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj7[AuditLogChangeKeys.DESCRIPTION] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           obj7[AuditLogChangeKeys.PERMISSIONS_GRANTED] = () => __3TkD(1236).t["9i/DvE"];
           obj7[AuditLogChangeKeys.PERMISSIONS_DENIED] = () => __3TkD(1236).t.pa1ZVh;
           const obj8 = { "#000000": null };
@@ -745,9 +856,9 @@ export const getChangeStrings = function getChangeStrings(targetType) {
             return WnSwL_;
           };
           __3TkD = __3TkD(1236).t.gWfe24;
-          obj7[AuditLogChangeKeys.HOIST] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj7[AuditLogChangeKeys.HOIST] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.LL8VFF;
-          obj7[AuditLogChangeKeys.MENTIONABLE] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj7[AuditLogChangeKeys.MENTIONABLE] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           obj7[AuditLogChangeKeys.ICON_HASH] = () => __3TkD(1236).t["iEE79/"];
           obj7[AuditLogChangeKeys.UNICODE_EMOJI] = () => __3TkD(1236).t.KiLMM0;
           const obj9 = {};
@@ -764,14 +875,14 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           merged = __3TkD;
           merged = dependencyMap;
           __3TkD = __3TkD(1236).t["sNpuy/"];
-          obj10[AuditLogChangeKeys.TITLE] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj10[AuditLogChangeKeys.TITLE] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.PP1q0x;
-          obj10[AuditLogChangeKeys.DESCRIPTION] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj10[AuditLogChangeKeys.DESCRIPTION] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           obj10[AuditLogChangeKeys.OPTIONS] = () => __3TkD(1236).t["3G5C9+"];
           __3TkD = __3TkD(1236).t.v4WnR3;
-          obj10[AuditLogChangeKeys.SINGLE_SELECT] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj10[AuditLogChangeKeys.SINGLE_SELECT] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t["0MPAM6"];
-          obj10[AuditLogChangeKeys.REQUIRED] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj10[AuditLogChangeKeys.REQUIRED] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           return obj10;
         } else if (merged.GUILD_ONBOARDING === targetType) {
           const obj12 = {};
@@ -780,11 +891,11 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           const merged1 = Object.assign(obj13);
           obj12[AuditLogChangeKeys.DEFAULT_CHANNEL_IDS] = () => __3TkD(1236).t["8M+D2s"];
           __3TkD = __3TkD(1236).t["EYd/ls"];
-          obj12[AuditLogChangeKeys.ENABLE_DEFAULT_CHANNELS] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj12[AuditLogChangeKeys.ENABLE_DEFAULT_CHANNELS] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.V3u8PV;
-          obj12[AuditLogChangeKeys.ENABLE_ONBOARDING_PROMPTS] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj12[AuditLogChangeKeys.ENABLE_ONBOARDING_PROMPTS] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.SODVIs;
-          obj12[AuditLogChangeKeys.ENABLED] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj12[AuditLogChangeKeys.ENABLED] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           const obj14 = {};
           obj14[GuildOnboardingMode.ONBOARDING_ADVANCED] = __3TkD(1236).t.JbzVsh;
           obj14[GuildOnboardingMode.ONBOARDING_DEFAULT] = __3TkD(1236).t.aCgU0S;
@@ -826,7 +937,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
             return tmp;
           };
           __3TkD = __3TkD(1236).t.MWp6H7;
-          obj17[AuditLogChangeKeys.TEMPORARY] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj17[AuditLogChangeKeys.TEMPORARY] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           const obj20 = {};
           obj20[__3TkD(8663).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1236).t.XYZMbL;
           __3TkD = obj20;
@@ -839,16 +950,16 @@ export const getChangeStrings = function getChangeStrings(targetType) {
         } else if (merged.WEBHOOK === targetType) {
           const obj22 = {};
           __3TkD = __3TkD(1236).t.jhPprR;
-          obj22[AuditLogChangeKeys.CHANNEL_ID] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj22[AuditLogChangeKeys.CHANNEL_ID] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.ZVGrzU;
-          obj22[AuditLogChangeKeys.NAME] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj22[AuditLogChangeKeys.NAME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           obj22[AuditLogChangeKeys.AVATAR_HASH] = () => __3TkD(1236).t.KB52Uj;
           obj22[AuditLogChangeKeys.REASON] = () => __3TkD(1236).t["2IW3C5"];
           return obj22;
         } else if (merged.EMOJI === targetType) {
           const obj23 = {};
           __3TkD = __3TkD(1236).t.ahU1o5;
-          obj23[AuditLogChangeKeys.NAME] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj23[AuditLogChangeKeys.NAME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           const obj24 = {};
           obj24[AuditLogChangeKeys.REASON] = () => __3TkD(1236).t["2IW3C5"];
           const merged4 = Object.assign(obj24);
@@ -856,11 +967,11 @@ export const getChangeStrings = function getChangeStrings(targetType) {
         } else if (merged.STICKER === targetType) {
           const obj25 = {};
           __3TkD = __3TkD(1236).t.cdl0Yo;
-          obj25[AuditLogChangeKeys.NAME] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj25[AuditLogChangeKeys.NAME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t["zwL+S2"];
-          obj25[AuditLogChangeKeys.TAGS] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj25[AuditLogChangeKeys.TAGS] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.XeYKWJ;
-          obj25[AuditLogChangeKeys.DESCRIPTION] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj25[AuditLogChangeKeys.DESCRIPTION] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           const obj26 = {};
           obj26[AuditLogChangeKeys.REASON] = () => __3TkD(1236).t["2IW3C5"];
           const merged5 = Object.assign(obj26);
@@ -868,7 +979,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
         } else if (merged.INTEGRATION === targetType) {
           const obj27 = {};
           __3TkD = __3TkD(1236).t.FI0m5x;
-          obj27[AuditLogChangeKeys.ENABLE_EMOTICONS] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj27[AuditLogChangeKeys.ENABLE_EMOTICONS] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           const obj28 = { 0: null, 1: null };
           obj28[0] = __3TkD(1236).t["1Bb1+u"];
           obj28[1] = __3TkD(1236).t.vjlW6m;
@@ -882,7 +993,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
         } else if (merged.STAGE_INSTANCE === targetType) {
           const obj30 = {};
           __3TkD = __3TkD(1236).t["m+veAn"];
-          obj30[AuditLogChangeKeys.TOPIC] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj30[AuditLogChangeKeys.TOPIC] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           const obj31 = {};
           obj31[constants11.GUILD_ONLY] = __3TkD(1236).t["EC+CDt"];
           obj31[constants11.PUBLIC] = __3TkD(1236).t["pK/WG0"];
@@ -916,11 +1027,11 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           __3TkD = obj36;
           obj33[AuditLogChangeKeys.ENTITY_TYPE] = (arg0) => __3TkD[arg0.newValue];
           __3TkD = __3TkD(1236).t.yJBIcX;
-          obj33[AuditLogChangeKeys.CHANNEL_ID] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+          obj33[AuditLogChangeKeys.CHANNEL_ID] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.GaMBHy;
-          obj33[AuditLogChangeKeys.LOCATION] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+          obj33[AuditLogChangeKeys.LOCATION] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.S3vcRK;
-          obj33[AuditLogChangeKeys.IMAGE_HASH] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+          obj33[AuditLogChangeKeys.IMAGE_HASH] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
           const obj37 = {};
           obj37[AuditLogChangeKeys.REASON] = () => __3TkD(1236).t["2IW3C5"];
           const merged8 = Object.assign(obj37);
@@ -928,9 +1039,9 @@ export const getChangeStrings = function getChangeStrings(targetType) {
         } else if (merged.GUILD_SCHEDULED_EVENT_EXCEPTION === targetType) {
           const obj38 = {};
           __3TkD = __3TkD(1236).t.zMIYVg;
-          obj38[AuditLogChangeKeys.SCHEDULED_START_TIME] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+          obj38[AuditLogChangeKeys.SCHEDULED_START_TIME] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.vONSQA;
-          obj38[AuditLogChangeKeys.SCHEDULED_END_TIME] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+          obj38[AuditLogChangeKeys.SCHEDULED_END_TIME] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
           obj38[AuditLogChangeKeys.IS_CANCELED] = (oldValue) => {
             if (null != oldValue.oldValue) {
               if (!oldValue.oldValue) {
@@ -952,17 +1063,18 @@ export const getChangeStrings = function getChangeStrings(targetType) {
         } else if (merged.THREAD === targetType) {
           const obj40 = {};
           __3TkD = __3TkD(1236).t.tUKRzX;
-          obj40[AuditLogChangeKeys.NAME] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj40[AuditLogChangeKeys.NAME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.jDi9FK;
-          obj40[AuditLogChangeKeys.ARCHIVED] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj40[AuditLogChangeKeys.ARCHIVED] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.JSy1QW;
-          obj40[AuditLogChangeKeys.LOCKED] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj40[AuditLogChangeKeys.LOCKED] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.dxNUs9;
-          obj40[AuditLogChangeKeys.INVITABLE] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+          obj40[AuditLogChangeKeys.INVITABLE] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.LuaG3y;
-          obj40[AuditLogChangeKeys.AUTO_ARCHIVE_DURATION] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj40[AuditLogChangeKeys.AUTO_ARCHIVE_DURATION] = (oldValue) =>
+            null == oldValue.oldValue ? __3TkD : _5kDYS3;
           __3TkD = __3TkD(1236).t["7lirhF"];
-          obj40[AuditLogChangeKeys.RATE_LIMIT_PER_USER] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj40[AuditLogChangeKeys.RATE_LIMIT_PER_USER] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           obj40[AuditLogChangeKeys.FLAGS] = () => __3TkD(1236).t.sSAQtj;
           obj40[AuditLogChangeKeys.AVAILABLE_TAG_ADD] = () => __3TkD(1236).t.H86QQU;
           obj40[AuditLogChangeKeys.AVAILABLE_TAG_DELETE] = () => __3TkD(1236).t["8QOseg"];
@@ -1026,9 +1138,9 @@ export const getChangeStrings = function getChangeStrings(targetType) {
         } else if (merged.GUILD_SOUNDBOARD === targetType) {
           const obj46 = {};
           __3TkD = __3TkD(1236).t.VOtRSO;
-          obj46[AuditLogChangeKeys.NAME] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj46[AuditLogChangeKeys.NAME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.igrDB9;
-          obj46[AuditLogChangeKeys.VOLUME] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+          obj46[AuditLogChangeKeys.VOLUME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
           __3TkD = __3TkD(1236).t.IIanaY;
           lj_A4u = __3TkD(1236).t.V8TfyU;
           obj46[AuditLogChangeKeys.EMOJI_NAME] = (newValue) => {
@@ -1101,7 +1213,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           obj52[AuditLogChangeKeys.GAME_APPLICATION_IDS] = () => __3TkD(1236).t["8BOT3x"];
           obj52[AuditLogChangeKeys.VISIBILITY] = () => __3TkD(1236).t.bCl1Ep;
           __3TkD = __3TkD(1236).t.ix1dnX;
-          obj52[AuditLogChangeKeys.SERVER_TAG] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+          obj52[AuditLogChangeKeys.SERVER_TAG] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
           return obj52;
         } else {
           obj = {};
@@ -1115,9 +1227,9 @@ export const getChangeStrings = function getChangeStrings(targetType) {
     merged = __3TkD;
     merged = dependencyMap;
     __3TkD = __3TkD(1236).t.f8Rh0U;
-    obj53[AuditLogChangeKeys.NAME] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+    obj53[AuditLogChangeKeys.NAME] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
     __3TkD = __3TkD(1236).t.isS8te;
-    obj53[AuditLogChangeKeys.POSITION] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+    obj53[AuditLogChangeKeys.POSITION] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
     __3TkD = __3TkD(1236).t.esQcxn;
     lj_A4u = __3TkD(1236).t["ws/1FA"];
     obj53[AuditLogChangeKeys.TOPIC] = (newValue) => {
@@ -1134,7 +1246,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
       }
     };
     __3TkD = __3TkD(1236).t.fw81ak;
-    obj53[AuditLogChangeKeys.BITRATE] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+    obj53[AuditLogChangeKeys.BITRATE] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
     __3TkD = __3TkD(1236).t["6kajxx"];
     lj_A4u = __3TkD(1236).t["0JMZdz"];
     obj53[AuditLogChangeKeys.RTC_REGION_OVERRIDE] = (newValue) => {
@@ -1151,21 +1263,22 @@ export const getChangeStrings = function getChangeStrings(targetType) {
       }
     };
     __3TkD = __3TkD(1236).t.wk5t7p;
-    obj53[AuditLogChangeKeys.USER_LIMIT] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+    obj53[AuditLogChangeKeys.USER_LIMIT] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
     __3TkD = __3TkD(1236).t["7lirhF"];
-    obj53[AuditLogChangeKeys.RATE_LIMIT_PER_USER] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+    obj53[AuditLogChangeKeys.RATE_LIMIT_PER_USER] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
     obj53[AuditLogChangeKeys.PERMISSIONS_RESET] = () => __3TkD(1236).t["+vSBFY"];
     obj53[AuditLogChangeKeys.PERMISSIONS_GRANTED] = () => __3TkD(1236).t.EKLJv8;
     obj53[AuditLogChangeKeys.PERMISSIONS_DENIED] = () => __3TkD(1236).t.U3rO5X;
     obj53[AuditLogChangeKeys.REASON] = () => __3TkD(1236).t["2IW3C5"];
     __3TkD = __3TkD(1236).t.H8Ri2Y;
-    obj53[AuditLogChangeKeys.NSFW] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
+    obj53[AuditLogChangeKeys.NSFW] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
     __3TkD = __3TkD(1236).t.Vn5zn2;
-    obj53[AuditLogChangeKeys.TYPE] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+    obj53[AuditLogChangeKeys.TYPE] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
     __3TkD = __3TkD(1236).t.e68fAU;
-    obj53[AuditLogChangeKeys.VIDEO_QUALITY_MODE] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+    obj53[AuditLogChangeKeys.VIDEO_QUALITY_MODE] = (oldValue) => (null == oldValue.oldValue ? __3TkD : _5kDYS3);
     __3TkD = __3TkD(1236).t.nYz2mg;
-    obj53[AuditLogChangeKeys.DEFAULT_AUTO_ARCHIVE_DURATION] = (oldValue) => null == oldValue.oldValue ? __3TkD : _5kDYS3;
+    obj53[AuditLogChangeKeys.DEFAULT_AUTO_ARCHIVE_DURATION] = (oldValue) =>
+      null == oldValue.oldValue ? __3TkD : _5kDYS3;
     __3TkD = __3TkD(1236).t.tOJ8h7;
     lj_A4u = __3TkD(1236).t["lj+A4u"];
     obj53[AuditLogChangeKeys.DEFAULT_THREAD_RATE_LIMIT_PER_USER] = (newValue) => {
@@ -1186,7 +1299,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
     obj53[AuditLogChangeKeys.AVAILABLE_TAG_EDIT] = () => __3TkD(1236).t.YtUzls;
     obj53[AuditLogChangeKeys.AVAILABLE_TAG_DELETE] = () => __3TkD(1236).t["8QOseg"];
     __3TkD = __3TkD(1236).t["+/3TkD"];
-    obj53[AuditLogChangeKeys.LINKED_LOBBY] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
+    obj53[AuditLogChangeKeys.LINKED_LOBBY] = (newValue) => (null == newValue.newValue ? __3TkD : _5kDYS3);
     return obj53;
   }
 };
@@ -1209,22 +1322,25 @@ export const shouldNotRenderChangeDetail = function shouldNotRenderChangeDetail(
 export const checkChangesToRender = function checkChangesToRender(log) {
   closure_0 = log;
   const changes = log.changes;
-  return null != changes && changes.some((key) => {
-    if (log.actionType === closure_1_29.DELETE) {
-      if (tmp.action !== closure_1_15.MEMBER_BAN_ADD) {
-        if (tmp.action !== tmp2.MEMBER_KICK) {
-          if (tmp.action !== tmp2.MEMBER_PRUNE) {
-            let tmp4 = key.key !== closure_1_16.REASON;
+  return (
+    null != changes &&
+    changes.some((key) => {
+      if (log.actionType === closure_1_29.DELETE) {
+        if (tmp.action !== closure_1_15.MEMBER_BAN_ADD) {
+          if (tmp.action !== tmp2.MEMBER_KICK) {
+            if (tmp.action !== tmp2.MEMBER_PRUNE) {
+              let tmp4 = key.key !== closure_1_16.REASON;
+            }
+            return !tmp4;
           }
-          return !tmp4;
         }
       }
-    }
-    tmp4 = null != tmp3;
-    if (tmp4) {
-      tmp4 = true === tmp3[key.key];
-    }
-  });
+      tmp4 = null != tmp3;
+      if (tmp4) {
+        tmp4 = true === tmp3[key.key];
+      }
+    })
+  );
 };
 export { ACTION_FILTER_ITEMS };
 export const findChangeByKey = function findChangeByKey(arg0, changes) {
@@ -2289,7 +2405,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                         if (tmp99) {
                           tmp96 = tmp98[targetId7];
                         }
-                        tmp99 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId7];
+                        tmp99 =
+                          null != closure_1_14.deletedTargets[targetType.targetType] &&
+                          null != closure_1_14.deletedTargets[targetType.targetType][targetId7];
                       }
                       found = tmp96;
                       if (null == tmp96) {
@@ -2329,7 +2447,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               if (tmp75) {
                                 tmp72 = tmp74[targetId5];
                               }
-                              tmp75 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId5];
+                              tmp75 =
+                                null != closure_1_14.deletedTargets[targetType.targetType] &&
+                                null != closure_1_14.deletedTargets[targetType.targetType][targetId5];
                             }
                             let tmp76 = tmp72;
                             if (null == tmp72) {
@@ -2394,7 +2514,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                 if (tmp60) {
                                   tmp57 = tmp59[targetId18];
                                 }
-                                tmp60 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId18];
+                                tmp60 =
+                                  null != closure_1_14.deletedTargets[targetType.targetType] &&
+                                  null != closure_1_14.deletedTargets[targetType.targetType][targetId18];
                               }
                               let tmp61 = tmp57;
                               if (null == tmp57) {
@@ -2433,7 +2555,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               if (tmp51) {
                                 tmp48 = tmp50[targetId4];
                               }
-                              tmp51 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId4];
+                              tmp51 =
+                                null != closure_1_14.deletedTargets[targetType.targetType] &&
+                                null != closure_1_14.deletedTargets[targetType.targetType][targetId4];
                             }
                             let tmp52 = tmp48;
                             if (null == tmp48) {
@@ -2467,7 +2591,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               if (tmp39) {
                                 tmp36 = tmp38[targetId3];
                               }
-                              tmp39 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId3];
+                              tmp39 =
+                                null != closure_1_14.deletedTargets[targetType.targetType] &&
+                                null != closure_1_14.deletedTargets[targetType.targetType][targetId3];
                             }
                             let tmp40 = tmp36;
                             if (null == tmp36) {
@@ -2511,7 +2637,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               if (tmp26) {
                                 tmp23 = tmp25[targetId2];
                               }
-                              tmp26 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId2];
+                              tmp26 =
+                                null != closure_1_14.deletedTargets[targetType.targetType] &&
+                                null != closure_1_14.deletedTargets[targetType.targetType][targetId2];
                             }
                             let tmp27 = tmp23;
                             if (null == tmp23) {
@@ -2536,7 +2664,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             let tmp7 = ((targetId) => store.getChannel(targetId))(targetId);
                             let tmp10 = null;
                             if (tmp9) {
-                              tmp10 = ((channel) => found(4674).computeChannelName(channel, closure_13, closure_12, true))(tmp7);
+                              tmp10 = ((channel) =>
+                                found(4674).computeChannelName(channel, closure_13, closure_12, true))(tmp7);
                             }
                             let tmp11 = tmp10;
                             if (null == tmp10) {
@@ -2544,7 +2673,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               if (tmp14) {
                                 tmp11 = tmp13[targetId];
                               }
-                              tmp14 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId];
+                              tmp14 =
+                                null != closure_1_14.deletedTargets[targetType.targetType] &&
+                                null != closure_1_14.deletedTargets[targetType.targetType][targetId];
                             }
                             let tmp15 = tmp11;
                             if (null == tmp11) {
@@ -2587,7 +2718,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                         if (tmp87) {
                           tmp84 = tmp86[targetId6];
                         }
-                        tmp87 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId6];
+                        tmp87 =
+                          null != closure_1_14.deletedTargets[targetType.targetType] &&
+                          null != closure_1_14.deletedTargets[targetType.targetType][targetId6];
                       }
                       let tmp88 = tmp84;
                       if (null == tmp84) {
@@ -2729,7 +2862,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
           found = undefined;
           if (found != null) {
             const prop = found.guild_scheduled_event_exceptions;
-            found = prop.find((event_exception_id) => event_exception_id.event_exception_id === found.options.event_exception_id);
+            found = prop.find(
+              (event_exception_id) => event_exception_id.event_exception_id === found.options.event_exception_id,
+            );
           }
           found = callback;
           found = closure_1_3;
@@ -3186,13 +3321,26 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                 lib = newValue;
                                 obj = {};
                                 role = closure_2_28;
-                                ({ SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS: obj9[closure_2_28.SUPPRESS_JOIN_NOTIFICATIONS], SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS: obj9[closure_2_28.SUPPRESS_PREMIUM_SUBSCRIPTIONS], SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS: obj9[closure_2_28.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS], SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES: obj9[closure_2_28.SUPPRESS_JOIN_NOTIFICATION_REPLIES] } = role);
+                                ({
+                                  SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS: obj9[
+                                    closure_2_28.SUPPRESS_JOIN_NOTIFICATIONS
+                                  ],
+                                  SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS: obj9[
+                                    closure_2_28.SUPPRESS_PREMIUM_SUBSCRIPTIONS
+                                  ],
+                                  SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS: obj9[
+                                    closure_2_28.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS
+                                  ],
+                                  SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES: obj9[
+                                    closure_2_28.SUPPRESS_JOIN_NOTIFICATION_REPLIES
+                                  ],
+                                } = role);
                                 const items4 = [];
                                 role = globalThis;
                                 const _Object = Object;
                                 const values = Object.values(closure_2_28);
                                 role = values.forEach((arg0) => {
-                                  if ((newValue.oldValue & arg0) === arg0 !== (newValue.newValue & arg0) === arg0) {
+                                  if ((((newValue.oldValue & arg0) === arg0) !== (newValue.newValue & arg0)) === arg0) {
                                     const tmp7 = new closure_1_9(obj[arg0], !tmp, !tmp2);
                                     items4.push(tmp7);
                                   }
@@ -3385,7 +3533,14 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                                   role = closure_2_10;
                                                   const mapped6 = newValue1.map(closure_2_10.getChannel);
                                                   found = mapped6.filter((arg0) => null != arg0);
-                                                  const mapped7 = found.map((channel) => newValue(table[24]).computeChannelName(channel, closure_13, closure_12, true));
+                                                  const mapped7 = found.map((channel) =>
+                                                    newValue(table[24]).computeChannelName(
+                                                      channel,
+                                                      closure_13,
+                                                      closure_12,
+                                                      true,
+                                                    ),
+                                                  );
                                                   role = mapped7;
                                                   if (null == mapped7) {
                                                     newValue5 = mapped7;
@@ -3402,14 +3557,23 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                                   role = closure_2_10;
                                                   const mapped8 = oldValue1.map(closure_2_10.getChannel);
                                                   const found1 = mapped8.filter((arg0) => null != arg0);
-                                                  const mapped9 = found1.map((channel) => newValue(table[24]).computeChannelName(channel, closure_13, closure_12, true));
+                                                  const mapped9 = found1.map((channel) =>
+                                                    newValue(table[24]).computeChannelName(
+                                                      channel,
+                                                      closure_13,
+                                                      closure_12,
+                                                      true,
+                                                    ),
+                                                  );
                                                   role = mapped9;
                                                   if (null == mapped9) {
                                                     oldValue5 = mapped9;
                                                   } else {
                                                     if (null == mapped9) {
                                                       const intl4 = lib(closure_2_3[18]).intl;
-                                                      let stringResult1 = intl4.string(lib(closure_2_3[18]).t["K/EdV8"]);
+                                                      let stringResult1 = intl4.string(
+                                                        lib(closure_2_3[18]).t["K/EdV8"],
+                                                      );
                                                     }
                                                     stringResult1 = mapped9.join(", ");
                                                   }
@@ -3431,7 +3595,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                                 role = null;
                                                 if (null != newValue.newValue) {
                                                   let newValue2 = newValue.newValue;
-                                                  const mapped10 = newValue2.map((arg0) => closure_1_11.getRole(newValue.id, arg0));
+                                                  const mapped10 = newValue2.map((arg0) =>
+                                                    closure_1_11.getRole(newValue.id, arg0),
+                                                  );
                                                   const found2 = mapped10.filter((arg0) => null != arg0);
                                                   const mapped11 = found2.map((name) => name.name);
                                                   role = mapped11;
@@ -3447,7 +3613,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                                 }
                                                 if (null != newValue.oldValue) {
                                                   let oldValue2 = newValue.oldValue;
-                                                  const mapped12 = oldValue2.map((arg0) => closure_1_11.getRole(newValue.id, arg0));
+                                                  const mapped12 = oldValue2.map((arg0) =>
+                                                    closure_1_11.getRole(newValue.id, arg0),
+                                                  );
                                                   const found3 = mapped12.filter((arg0) => null != arg0);
                                                   const mapped13 = found3.map((name) => name.name);
                                                   role = mapped13;
@@ -3456,7 +3624,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                                   } else {
                                                     if (null == mapped13) {
                                                       const intl2 = lib(closure_2_3[18]).intl;
-                                                      let stringResult3 = intl2.string(lib(closure_2_3[18]).t["K/EdV8"]);
+                                                      let stringResult3 = intl2.string(
+                                                        lib(closure_2_3[18]).t["K/EdV8"],
+                                                      );
                                                     }
                                                     stringResult3 = mapped13.join(", ");
                                                   }
@@ -3478,13 +3648,17 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                                 role = null;
                                                 if (null != newValue.newValue) {
                                                   newValue3 = newValue.newValue;
-                                                  const mapped14 = newValue3.map((arg0) => closure_1_11.getRole(newValue.id, arg0));
+                                                  const mapped14 = newValue3.map((arg0) =>
+                                                    closure_1_11.getRole(newValue.id, arg0),
+                                                  );
                                                   const found4 = mapped14.filter((arg0) => null != arg0);
                                                   newValue3 = found4.map((id) => ({ id: id.id, name: id.name }));
                                                 }
                                                 if (null != newValue.oldValue) {
                                                   oldValue3 = newValue.oldValue;
-                                                  const mapped15 = oldValue3.map((arg0) => closure_1_11.getRole(newValue.id, arg0));
+                                                  const mapped15 = oldValue3.map((arg0) =>
+                                                    closure_1_11.getRole(newValue.id, arg0),
+                                                  );
                                                   const found5 = mapped15.filter((arg0) => null != arg0);
                                                   oldValue3 = found5.map((id) => ({ id: id.id, name: id.name }));
                                                 }
@@ -3666,8 +3840,14 @@ export const transformLogs = function transformLogs(arr, arg1) {
       found = items.push(found);
     } else {
       found = closure_1_15;
-      let items1 = [, , , , ];
-      ({ MEMBER_PRUNE: arr19[0], MEMBER_DISCONNECT: arr19[1], MEMBER_MOVE: arr19[2], CREATOR_MONETIZATION_REQUEST_CREATED: arr19[3], CREATOR_MONETIZATION_TERMS_ACCEPTED: arr19[4] } = closure_1_15);
+      let items1 = [, , , ,];
+      ({
+        MEMBER_PRUNE: arr19[0],
+        MEMBER_DISCONNECT: arr19[1],
+        MEMBER_MOVE: arr19[2],
+        CREATOR_MONETIZATION_REQUEST_CREATED: arr19[3],
+        CREATOR_MONETIZATION_TERMS_ACCEPTED: arr19[4],
+      } = closure_1_15);
     }
   });
   return items;

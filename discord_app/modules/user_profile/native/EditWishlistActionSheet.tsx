@@ -20,7 +20,14 @@ import dampingResult from "../../../../_runtime/00100_getConstants.js";
 require = arg1;
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-createCacheKey = { container: null, loadingContainer: null, toggleRow: null, itemsContainer: null, itemWrapper: null, deleteButton: null };
+createCacheKey = {
+  container: null,
+  loadingContainer: null,
+  toggleRow: null,
+  itemsContainer: null,
+  itemWrapper: null,
+  deleteButton: null,
+};
 createCacheKey = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, justifyContent: "center", alignItems: "center", paddingTop: ThemesDefault.space.PX_48 };
@@ -49,7 +56,9 @@ function exitingAnimation() {
 }
 exitingAnimation.__closure = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming };
 exitingAnimation.__workletHash = 17293915965800;
-exitingAnimation.__initData = { code: "function exitingAnimation_EditWishlistActionSheetTsx1(_values){const{withTiming}=this.__closure;return{animations:{opacity:withTiming(0,{duration:150}),transform:[{scale:withTiming(0.8,{duration:150})}]},initialValues:{opacity:1,transform:[{scale:1}]}};}" };
+exitingAnimation.__initData = {
+  code: "function exitingAnimation_EditWishlistActionSheetTsx1(_values){const{withTiming}=this.__closure;return{animations:{opacity:withTiming(0,{duration:150}),transform:[{scale:withTiming(0.8,{duration:150})}]},initialValues:{opacity:1,transform:[{scale:1}]}};}",
+};
 let obj4 = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming };
 let result = require("set").fileFinishedImporting("modules/user_profile/native/EditWishlistActionSheet.tsx");
 
@@ -74,7 +83,10 @@ export default function EditWishlistActionSheet(wishlistId) {
   if (analyticsLocations == null) {
     analyticsLocations = [];
   }
-  analyticsLocations = analyticsContext(5953)(analyticsLocations, tmp4(5973).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET).analyticsLocations;
+  analyticsLocations = analyticsContext(5953)(
+    analyticsLocations,
+    tmp4(5973).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
+  ).analyticsLocations;
   obj = { maxWidth: ACTION_SHEET_MAX_WIDTH };
   let tmp5 = analyticsContext(5953);
   ({ cardWidth: c5, rowWidth } = analyticsContext(12522)(obj));
@@ -135,7 +147,10 @@ export default function EditWishlistActionSheet(wishlistId) {
     const WishlistVisibility = wishlistId(itemWrapper[20]).WishlistVisibility;
     callback(!first);
     let obj = analyticsContext(itemWrapper[22]);
-    const result = obj.updateWishlistVisibility(wishlistId, first ? WishlistVisibility.PRIVATE : WishlistVisibility.PUBLIC);
+    const result = obj.updateWishlistVisibility(
+      wishlistId,
+      first ? WishlistVisibility.PRIVATE : WishlistVisibility.PUBLIC,
+    );
     obj = {};
     const merged = Object.assign(analyticsContext);
     obj.analyticsLocations = analyticsLocations;
@@ -168,7 +183,7 @@ export default function EditWishlistActionSheet(wishlistId) {
   obj6[3] = callback;
   obj5[1] = callback2(wishlistId(5993).TableSwitchRow, obj6);
   obj4[1] = callback2(wishlistId(5992).TableRowGroup, obj5);
-  const items8 = [callback2(stateFromStores, obj4), ];
+  const items8 = [callback2(stateFromStores, obj4)];
   if (stateFromStores1) {
     if (null == stateFromStores) {
       const obj7 = { style: null, children: null };
@@ -209,7 +224,7 @@ export default function EditWishlistActionSheet(wishlistId) {
         obj = { sku: null, isOwned: null, size: null, accessibilityHidden: true };
         ({ sku: obj2[0], isOwned: obj2[1] } = skuId);
         obj[2] = c5;
-        const items = [closure_1_14(analyticsContext(str[30]), obj), ];
+        const items = [closure_1_14(analyticsContext(str[30]), obj)];
         obj = { style: null, children: null };
         obj[0] = itemWrapper.deleteButton;
         let stringResult = wishlistId;
@@ -250,4 +265,4 @@ export default function EditWishlistActionSheet(wishlistId) {
     });
     tmp16Result = tmp16(tmp19, obj8);
   }
-};
+}

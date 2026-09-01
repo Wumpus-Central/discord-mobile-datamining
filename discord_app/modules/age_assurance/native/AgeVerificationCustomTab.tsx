@@ -13,13 +13,16 @@ function withTimeout(arg0) {
       error = new Error("Custom Tab launch timed out");
       return callback2(error);
     }, 5000);
-    arg0.then((arg0) => {
-      clearTimeout(closure_2);
-      callback(arg0);
-    }, (arg0) => {
-      clearTimeout(closure_2);
-      callback2(arg0);
-    });
+    arg0.then(
+      (arg0) => {
+        clearTimeout(closure_2);
+        callback(arg0);
+      },
+      (arg0) => {
+        clearTimeout(closure_2);
+        callback2(arg0);
+      },
+    );
   });
 }
 function subscribeToClose() {
@@ -42,7 +45,7 @@ function _openAgeVerificationCustomTab() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -146,7 +149,7 @@ function _openAgeVerificationCustomTab() {
 }
 function _resumeAgeVerificationCustomTab() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();

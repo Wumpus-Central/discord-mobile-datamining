@@ -2,12 +2,8 @@
 import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
-function log() {
-
-}
-function nativeLog() {
-
-}
+function log() {}
+function nativeLog() {}
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/logger/Logger.tsx");
 class Logger {
   constructor() {
@@ -135,7 +131,7 @@ class Logger {
       closure_1 = arg1;
       c4 = 0;
       c5 = 0;
-      return (function*(arg0, arg1) {
+      return (function* (arg0, arg1) {
         closure_3 = tmp5;
         closure_2 = tmp2;
         const _Date2 = Date;
@@ -146,7 +142,7 @@ class Logger {
         return closure_2;
       })();
     });
-    obj.timeAsync = function() {
+    obj.timeAsync = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {

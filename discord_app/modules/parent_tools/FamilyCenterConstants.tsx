@@ -8,7 +8,24 @@ require = arg1;
 const result = 30 * setDefault.Millis.SECOND;
 const result1 = 5 * setDefault.Millis.MINUTE;
 const result2 = 5 * setDefault.Millis.MINUTE;
-getAuthenticationPath = { USER_ADD: 1, [1]: "USER_ADD", GUILD_ADD: 2, [2]: "GUILD_ADD", USER_INTERACTION: 3, [3]: "USER_INTERACTION", GUILD_INTERACTION: 4, [4]: "GUILD_INTERACTION", USER_CALLED: 5, [5]: "USER_CALLED", TOTAL_VOICE_MINUTES: 6, [6]: "TOTAL_VOICE_MINUTES", PURCHASES: 7, [7]: "PURCHASES", GIFTS: 8, [8]: "GIFTS" };
+getAuthenticationPath = {
+  USER_ADD: 1,
+  [1]: "USER_ADD",
+  GUILD_ADD: 2,
+  [2]: "GUILD_ADD",
+  USER_INTERACTION: 3,
+  [3]: "USER_INTERACTION",
+  GUILD_INTERACTION: 4,
+  [4]: "GUILD_INTERACTION",
+  USER_CALLED: 5,
+  [5]: "USER_CALLED",
+  TOTAL_VOICE_MINUTES: 6,
+  [6]: "TOTAL_VOICE_MINUTES",
+  PURCHASES: 7,
+  [7]: "PURCHASES",
+  GIFTS: 8,
+  [8]: "GIFTS",
+};
 const items = [
   getAuthenticationPath.USER_INTERACTION,
   {
@@ -51,10 +68,10 @@ const items = [
       obj[1] = intl2.string(messagesProxyDefault.cHHgxI);
       obj[2] = messagesProxyDefault.qvKjp8;
       return obj;
-    }
-  }
+    },
+  },
 ];
-const items1 = [items, , , , , , , ];
+const items1 = [items, , , , , , ,];
 const items2 = [
   getAuthenticationPath.USER_CALLED,
   {
@@ -97,8 +114,8 @@ const items2 = [
       obj[1] = intl2.string(messagesProxyDefault.wOsfxv);
       obj[2] = messagesProxyDefault.oCk8c4;
       return obj;
-    }
-  }
+    },
+  },
 ];
 items1[1] = items2;
 const items3 = [
@@ -143,8 +160,8 @@ const items3 = [
       obj[1] = intl2.string(messagesProxyDefault.GiswUW);
       obj[2] = messagesProxyDefault["fwQgE/"];
       return obj;
-    }
-  }
+    },
+  },
 ];
 items1[2] = items3;
 const items4 = [
@@ -180,8 +197,8 @@ const items4 = [
         stringResult = string(tmp.TA8GFt);
       }
       return stringResult;
-    }
-  }
+    },
+  },
 ];
 items1[3] = items4;
 const items5 = [
@@ -217,8 +234,8 @@ const items5 = [
         stringResult = string(tmp.sSJauZ);
       }
       return stringResult;
-    }
-  }
+    },
+  },
 ];
 items1[4] = items5;
 const items6 = [
@@ -240,8 +257,8 @@ const items6 = [
     sectionDescription() {
       const intl = getSystemLocale.intl;
       return intl.string(messagesProxyDefault["O/AElu"]);
-    }
-  }
+    },
+  },
 ];
 items1[5] = items6;
 const items7 = [
@@ -277,8 +294,8 @@ const items7 = [
         stringResult = string(tmp["85PtWu"]);
       }
       return stringResult;
-    }
-  }
+    },
+  },
 ];
 items1[6] = items7;
 const items8 = [
@@ -300,14 +317,33 @@ const items8 = [
     sectionDescription() {
       const intl = getSystemLocale.intl;
       return intl.string(messagesProxyDefault.nH8vlc);
-    }
-  }
+    },
+  },
 ];
 items1[7] = items8;
-const wrapPathsResult = getAuthenticationPath.wrapPaths(Object.freeze({ FAMILY_CENTER_SETTINGS: "/family-center/settings", FAMILY_CENTER_MY_FAMILY: "/family-center/my-family" }), [":", "?", "@"]);
+const wrapPathsResult = getAuthenticationPath.wrapPaths(
+  Object.freeze({
+    FAMILY_CENTER_SETTINGS: "/family-center/settings",
+    FAMILY_CENTER_MY_FAMILY: "/family-center/my-family",
+  }),
+  [":", "?", "@"],
+);
 getAuthenticationPath = { CHECK: 0, [0]: "CHECK", X: 1, [1]: "X" };
-const obj1 = { GENERIC_ERROR: 0, [0]: "GENERIC_ERROR", INELIGIBLE_FOR_FAMILY_CENTER: 1, [1]: "INELIGIBLE_FOR_FAMILY_CENTER", PENDING_REQUEST_EXISTS: 2, [2]: "PENDING_REQUEST_EXISTS", MAX_CONNECTIONS_REACHED: 3, [3]: "MAX_CONNECTIONS_REACHED" };
-({ INELIGIBLE_FOR_FAMILY_CENTER: obj5[290000], MAX_CONNECTIONS_REACHED: obj5[290002], PENDING_REQUEST_EXISTS: obj5[290005] } = obj1);
+const obj1 = {
+  GENERIC_ERROR: 0,
+  [0]: "GENERIC_ERROR",
+  INELIGIBLE_FOR_FAMILY_CENTER: 1,
+  [1]: "INELIGIBLE_FOR_FAMILY_CENTER",
+  PENDING_REQUEST_EXISTS: 2,
+  [2]: "PENDING_REQUEST_EXISTS",
+  MAX_CONNECTIONS_REACHED: 3,
+  [3]: "MAX_CONNECTIONS_REACHED",
+};
+({
+  INELIGIBLE_FOR_FAMILY_CENTER: obj5[290000],
+  MAX_CONNECTIONS_REACHED: obj5[290002],
+  PENDING_REQUEST_EXISTS: obj5[290005],
+} = obj1);
 const obj5 = {
   header(isAdult) {
     const intl = getSystemLocale.intl;
@@ -331,7 +367,7 @@ const obj5 = {
     }
     return formatResult;
   },
-  icon: getAuthenticationPath.X
+  icon: getAuthenticationPath.X,
 };
 const map = new Map(items1);
 const obj2 = { 290000: null, 290002: null, 290005: null };
@@ -344,7 +380,7 @@ const obj3 = {
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxyDefault.Uss2dn);
   },
-  icon: getAuthenticationPath.X
+  icon: getAuthenticationPath.X,
 };
 const obj4 = {
   header() {
@@ -364,7 +400,7 @@ const obj4 = {
     }
     return formatToPlainStringResult;
   },
-  icon: getAuthenticationPath.CHECK
+  icon: getAuthenticationPath.CHECK,
 };
 const obj6 = {
   header() {
@@ -373,9 +409,11 @@ const obj6 = {
   },
   description() {
     const intl = getSystemLocale.intl;
-    return intl.format(messagesProxyDefault.On5iRI, { link: "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731" });
+    return intl.format(messagesProxyDefault.On5iRI, {
+      link: "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731",
+    });
   },
-  icon: getAuthenticationPath.X
+  icon: getAuthenticationPath.X,
 };
 const result3 = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterConstants.tsx");
 
@@ -387,25 +425,112 @@ export const MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS = 3;
 export const FAMILY_CENTER_REQUEST_SECTION_HEIGHT = 26;
 export const FAMILY_CENTER_REQUEST_ROW_HEIGHT = 64;
 export const FAMILY_CENTER_LINK_REQUEST_REGEX = /\/feature\/family-center\/my-family\/(\w+)\/(\w+)/;
-export const FAMILY_CENTER_REQUEST_QR_CODE_URL = (arg0, arg1) => "https://discord.com/feature/family-center/my-family/" + arg0 + "/" + arg1;
+export const FAMILY_CENTER_REQUEST_QR_CODE_URL = (arg0, arg1) =>
+  "https://discord.com/feature/family-center/my-family/" + arg0 + "/" + arg1;
 export const FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS = 4;
 export const QR_CODE_AUTO_HIDE_TIMEOUT = result2;
 export const PLACEHOLDER_QR_CODE_URL = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 export const FAMILY_CENTER_SUB_ROUTES = wrapPathsResult;
-export const TeenActionType = { DM_MESSAGE_SEND: 1, [1]: "DM_MESSAGE_SEND", GDM_MESSAGE_SEND: 2, [2]: "GDM_MESSAGE_SEND", MESSAGE_REACT: 3, [3]: "MESSAGE_REACT", ADD_FRIEND: 4, [4]: "ADD_FRIEND", SEND_CALL: 5, [5]: "SEND_CALL", CALL_JOIN: 6, [6]: "CALL_JOIN", GUILD_JOIN: 7, [7]: "GUILD_JOIN", GUILD_MESSAGE_SEND: 8, [8]: "GUILD_MESSAGE_SEND", GUILD_VC_JOIN: 9, [9]: "GUILD_VC_JOIN", GUILD_VOICE_CHANNEL_LEAVE: 10, [10]: "GUILD_VOICE_CHANNEL_LEAVE", CALL_LEAVE: 11, [11]: "CALL_LEAVE", CALL_START: 12, [12]: "CALL_START", INVOICE_COMPLETE: 13, [13]: "INVOICE_COMPLETE" };
+export const TeenActionType = {
+  DM_MESSAGE_SEND: 1,
+  [1]: "DM_MESSAGE_SEND",
+  GDM_MESSAGE_SEND: 2,
+  [2]: "GDM_MESSAGE_SEND",
+  MESSAGE_REACT: 3,
+  [3]: "MESSAGE_REACT",
+  ADD_FRIEND: 4,
+  [4]: "ADD_FRIEND",
+  SEND_CALL: 5,
+  [5]: "SEND_CALL",
+  CALL_JOIN: 6,
+  [6]: "CALL_JOIN",
+  GUILD_JOIN: 7,
+  [7]: "GUILD_JOIN",
+  GUILD_MESSAGE_SEND: 8,
+  [8]: "GUILD_MESSAGE_SEND",
+  GUILD_VC_JOIN: 9,
+  [9]: "GUILD_VC_JOIN",
+  GUILD_VOICE_CHANNEL_LEAVE: 10,
+  [10]: "GUILD_VOICE_CHANNEL_LEAVE",
+  CALL_LEAVE: 11,
+  [11]: "CALL_LEAVE",
+  CALL_START: 12,
+  [12]: "CALL_START",
+  INVOICE_COMPLETE: 13,
+  [13]: "INVOICE_COMPLETE",
+};
 export const UserLinkType = { PARENT: 1, [1]: "PARENT", CHILD: 2, [2]: "CHILD" };
-export const UserLinkStatus = { PENDING: 1, [1]: "PENDING", ACTIVE: 2, [2]: "ACTIVE", INACTIVE: 3, [3]: "INACTIVE", DECLINED: 4, [4]: "DECLINED", EXPIRED: 5, [5]: "EXPIRED" };
+export const UserLinkStatus = {
+  PENDING: 1,
+  [1]: "PENDING",
+  ACTIVE: 2,
+  [2]: "ACTIVE",
+  INACTIVE: 3,
+  [3]: "INACTIVE",
+  DECLINED: 4,
+  [4]: "DECLINED",
+  EXPIRED: 5,
+  [5]: "EXPIRED",
+};
 export const TeenActionDisplayType = getAuthenticationPath;
-export const FamilyCenterSubPages = { ACTIVITY: "ACTIVITY", REQUESTS: "REQUESTS", SETTINGS: "SETTINGS", CONTENT_AND_SOCIAL: "CONTENT_AND_SOCIAL", DATA_AND_PRIVACY: "DATA_AND_PRIVACY", SCREEN_TIME_CONTROLS: "SCREEN_TIME_CONTROLS" };
-export const FamilyCenterSubPageAnalyticsIds = { ACTIVITY: 0, [0]: "ACTIVITY", REQUESTS: 1, [1]: "REQUESTS", SETTINGS: 2, [2]: "SETTINGS", CONTENT_AND_SOCIAL: 3, [3]: "CONTENT_AND_SOCIAL", DATA_AND_PRIVACY: 4, [4]: "DATA_AND_PRIVACY", SCREEN_TIME_CONTROLS: 5, [5]: "SCREEN_TIME_CONTROLS" };
+export const FamilyCenterSubPages = {
+  ACTIVITY: "ACTIVITY",
+  REQUESTS: "REQUESTS",
+  SETTINGS: "SETTINGS",
+  CONTENT_AND_SOCIAL: "CONTENT_AND_SOCIAL",
+  DATA_AND_PRIVACY: "DATA_AND_PRIVACY",
+  SCREEN_TIME_CONTROLS: "SCREEN_TIME_CONTROLS",
+};
+export const FamilyCenterSubPageAnalyticsIds = {
+  ACTIVITY: 0,
+  [0]: "ACTIVITY",
+  REQUESTS: 1,
+  [1]: "REQUESTS",
+  SETTINGS: 2,
+  [2]: "SETTINGS",
+  CONTENT_AND_SOCIAL: 3,
+  [3]: "CONTENT_AND_SOCIAL",
+  DATA_AND_PRIVACY: 4,
+  [4]: "DATA_AND_PRIVACY",
+  SCREEN_TIME_CONTROLS: 5,
+  [5]: "SCREEN_TIME_CONTROLS",
+};
 export const FamilyCenterPageLocation = { SIDENAV: "SIDENAV", SETTINGS: "SETTINGS" };
 export const FamilyCenterPageLocationAnalyticsIds = { SIDENAV: 0, [0]: "SIDENAV", SETTINGS: 1, [1]: "SETTINGS" };
-export const FamilyCenterAction = { TabChange: 0, [0]: "TabChange", ShowQRCodeModal: 1, [1]: "ShowQRCodeModal", RevealQRCode: 2, [2]: "RevealQRCode", ScanQRCodeButton: 3, [3]: "ScanQRCodeButton", ScanQRCode: 4, [4]: "ScanQRCode", LoadMore: 5, [5]: "LoadMore", SelectTeen: 6, [6]: "SelectTeen", HideQRCode: 7, [7]: "HideQRCode", NufConsentGateLinkCodeError: 8, [8]: "NufConsentGateLinkCodeError", ShareLink: 9, [9]: "ShareLink", CopyLink: 10, [10]: "CopyLink" };
+export const FamilyCenterAction = {
+  TabChange: 0,
+  [0]: "TabChange",
+  ShowQRCodeModal: 1,
+  [1]: "ShowQRCodeModal",
+  RevealQRCode: 2,
+  [2]: "RevealQRCode",
+  ScanQRCodeButton: 3,
+  [3]: "ScanQRCodeButton",
+  ScanQRCode: 4,
+  [4]: "ScanQRCode",
+  LoadMore: 5,
+  [5]: "LoadMore",
+  SelectTeen: 6,
+  [6]: "SelectTeen",
+  HideQRCode: 7,
+  [7]: "HideQRCode",
+  NufConsentGateLinkCodeError: 8,
+  [8]: "NufConsentGateLinkCodeError",
+  ShareLink: 9,
+  [9]: "ShareLink",
+  CopyLink: 10,
+  [10]: "CopyLink",
+};
 export const ACTION_TO_TEXT = map;
 export const FamilyCenterIconType = getAuthenticationPath;
 export const FamilyCenterFailureCode = obj1;
 export const FAMILY_CENTER_ERROR_CODE_TO_FAILURE = obj2;
-export const FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES = { [obj1.GENERIC_ERROR]: obj3, [obj1.PENDING_REQUEST_EXISTS]: obj4, [obj1.MAX_CONNECTIONS_REACHED]: obj5, [obj1.INELIGIBLE_FOR_FAMILY_CENTER]: obj6 };
+export const FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES = {
+  [obj1.GENERIC_ERROR]: obj3,
+  [obj1.PENDING_REQUEST_EXISTS]: obj4,
+  [obj1.MAX_CONNECTIONS_REACHED]: obj5,
+  [obj1.INELIGIBLE_FOR_FAMILY_CENTER]: obj6,
+};
 export const CONNECT_GUARDIAN_BOTTOM_SHEET_KEY = "ConnectGuardianBottomSheet";
 export const PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER = () => {
   const obj = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };

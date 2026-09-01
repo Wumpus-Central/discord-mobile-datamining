@@ -84,8 +84,7 @@ prototype["getIsFetching"] = function getIsFetching() {
 };
 const map = new Map();
 const Store = initializeDefault.Store;
-class SearchGuildMemberTabStoreImpl extends Store {
-}
+class SearchGuildMemberTabStoreImpl extends Store {}
 const prototype2 = SearchGuildMemberTabStoreImpl.prototype;
 prototype2["initialize"] = function initialize() {
   this.waitFor(closure_4);
@@ -188,7 +187,7 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(dispatch
       value.teardown();
     }
     map.delete(id);
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/search/native/stores/SearchMemberTabStore.tsx");
 

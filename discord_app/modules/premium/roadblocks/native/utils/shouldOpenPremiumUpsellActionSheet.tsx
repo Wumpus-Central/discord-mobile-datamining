@@ -3,7 +3,9 @@ import set from "../../../../../../_runtime/00002_set.js";
 import keys from "../../../../../ConstantsIOS.tsx";
 import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet.tsx";
 
-const result = set.fileFinishedImporting("modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx");
+const result = set.fileFinishedImporting(
+  "modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx",
+);
 
 export default function maybeOpenPremiumUpsellActionSheet(initialUpsellKey) {
   initialUpsellKey = initialUpsellKey.initialUpsellKey;
@@ -25,4 +27,4 @@ export default function maybeOpenPremiumUpsellActionSheet(initialUpsellKey) {
   } else {
     return false;
   }
-};
+}

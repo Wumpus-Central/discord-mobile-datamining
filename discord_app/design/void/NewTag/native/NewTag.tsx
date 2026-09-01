@@ -13,7 +13,15 @@ require = arg1;
 noopAll;
 ({ View: c3, Platform } = get_ActivityIndicator);
 createCacheKey = { tagContainer: null, tagText: null };
-createCacheKey = { height: "auto", backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, justifyContent: "center", alignItems: "center", paddingHorizontal: 4, marginBottom: 2, borderRadius: ThemesDefault.radii.round };
+createCacheKey = {
+  height: "auto",
+  backgroundColor: ThemesDefault.unsafe_rawColors.RED_400,
+  justifyContent: "center",
+  alignItems: "center",
+  paddingHorizontal: 4,
+  marginBottom: 2,
+  borderRadius: ThemesDefault.radii.round,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textTransform: "uppercase" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
@@ -38,7 +46,10 @@ export default function NewTag(color) {
   }
   let colors = color.colors;
   if (colors === undefined) {
-    const items = [ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE, ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK];
+    const items = [
+      ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE,
+      ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK,
+    ];
     colors = items;
   }
   const merged = Object.assign(color, Object.create(null));
@@ -82,4 +93,4 @@ export default function NewTag(color) {
     tmp7Result = tmp7(closure_3, obj);
   }
   return tmp7Result;
-};
+}

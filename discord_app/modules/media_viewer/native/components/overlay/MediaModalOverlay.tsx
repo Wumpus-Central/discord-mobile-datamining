@@ -19,7 +19,15 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 require = arg1;
 function OverlayMuteButton(arg0) {
   ({ isMuted, onToggleMute } = arg0);
-  let obj = { accessibilityRole: "button", accessibilityLabel: null, source: null, color: null, onPress: null, style: null, iconStyle: null };
+  let obj = {
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    source: null,
+    color: null,
+    onPress: null,
+    style: null,
+    iconStyle: null,
+  };
   const tmp = callback3();
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.w4m945);
@@ -32,7 +40,15 @@ function OverlayMuteButton(arg0) {
 }
 function OverlayObscureToggleButton(arg0) {
   ({ spoilerActive, onToggleObscure } = arg0);
-  let obj = { accessibilityRole: "button", accessibilityLabel: null, source: null, color: null, onPress: null, style: null, iconStyle: null };
+  let obj = {
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    source: null,
+    color: null,
+    onPress: null,
+    style: null,
+    iconStyle: null,
+  };
   const tmp = callback3();
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.UIsxUw);
@@ -70,7 +86,13 @@ let c4 = importAllResult;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-let obj = { portraitFooterButtons: null, invisibleFooter: null, overlayIcons: null, overlayButtonIcon: null, overlayButton: null };
+let obj = {
+  portraitFooterButtons: null,
+  invisibleFooter: null,
+  overlayIcons: null,
+  overlayButtonIcon: null,
+  overlayButton: null,
+};
 obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.top = undefined;
@@ -78,13 +100,30 @@ obj.backgroundColor = "transparent";
 obj[0] = obj;
 createCacheKey = { paddingBottom: ThemesDefault.space.PX_8 };
 obj[1] = createCacheKey;
-obj[2] = { position: "absolute", top: -40, right: 8, display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4 };
+obj[2] = {
+  position: "absolute",
+  top: -40,
+  right: 8,
+  display: "flex",
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_4,
+};
 obj[3] = { width: 20, height: 20 };
 obj[4] = { width: 32, height: 32, backgroundColor: "rgba(0, 0, 0, 0.7)", borderRadius: 16 };
 let closure_10 = createCacheKey.createStyles(obj);
 let closure_13 = importAllResult.memo((arg0) => {
   ({ slider, onClose, syncer, source, obscure } = arg0);
-  ({ overlayEnabled, disableDownload, disableMediaOverlayButton, disableMediaOverlayFooter, shareable, contextName, contextIcon, spoilerActive, toggleObscure } = arg0);
+  ({
+    overlayEnabled,
+    disableDownload,
+    disableMediaOverlayButton,
+    disableMediaOverlayFooter,
+    shareable,
+    contextName,
+    contextIcon,
+    spoilerActive,
+    toggleObscure,
+  } = arg0);
   const tmp = callback3();
   let obj = useOverlayLayoutDriver;
   const overlayLayoutDriver = obj.useOverlayLayoutDriver();
@@ -103,7 +142,7 @@ let closure_13 = importAllResult.memo((arg0) => {
       obj[1] = StyleSheet.absoluteFill;
       isIOSResult = callback2(isBlurDisabledDefault, obj);
     }
-    const items = [isIOSResult, slider, ];
+    const items = [isIOSResult, slider];
     let tmp16 = null;
     if (syncer.sources.length > 1) {
       obj1 = { syncer: null };
@@ -118,8 +157,18 @@ let closure_13 = importAllResult.memo((arg0) => {
     tmp21Result2 = null;
   }
   tmp2Result = tmp2(8588);
-  obj2 = { animationDriver: overlayLayoutDriver, disableDownload, disableMediaOverlayButton, source, shareable, contextName, contextIcon, onClose, channelId: source.channelId };
-  const items1 = [callback2(MediaModalOverlayHeader.MediaModalOverlayHeader, obj2), ];
+  obj2 = {
+    animationDriver: overlayLayoutDriver,
+    disableDownload,
+    disableMediaOverlayButton,
+    source,
+    shareable,
+    contextName,
+    contextIcon,
+    onClose,
+    channelId: source.channelId,
+  };
+  const items1 = [callback2(MediaModalOverlayHeader.MediaModalOverlayHeader, obj2)];
   const obj3 = { style: items2, children: null };
   items2 = [tmp.portraitFooterButtons, footerLayoutAnimation];
   let tmp21Result = !tmp7;
@@ -128,7 +177,7 @@ let closure_13 = importAllResult.memo((arg0) => {
     obj4[0] = source.description;
     tmp21Result = tmp21(_modDef12833, obj4);
   }
-  const items3 = [tmp21Result, , ];
+  const items3 = [tmp21Result, ,];
   if (null != slider) {
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.overlayIcons;
@@ -139,7 +188,7 @@ let closure_13 = importAllResult.memo((arg0) => {
       obj6[1] = tmp2(8574).toggleMuted;
       tmp21Result = tmp21(OverlayMuteButton, obj6);
     }
-    const items4 = [tmp21Result, ];
+    const items4 = [tmp21Result];
     let tmp21Result1 = null;
     if (obscure) {
       const obj7 = { spoilerActive: null, onToggleObscure: null };
@@ -160,7 +209,16 @@ let closure_13 = importAllResult.memo((arg0) => {
     obj8[1] = tmp.invisibleFooter;
     tmp21Result2 = tmp21(tmp2(5553).SafeAreaPaddingView, obj8);
   } else if (tmp2Result.useMediaViewerDimensions().height >= 600) {
-    const obj9 = { sliderElement: null, syncer: null, guildId: null, channelId: null, messageId: null, onClose: null, onFullViewToggled: null, overlayEnabled: null };
+    const obj9 = {
+      sliderElement: null,
+      syncer: null,
+      guildId: null,
+      channelId: null,
+      messageId: null,
+      onClose: null,
+      onFullViewToggled: null,
+      overlayEnabled: null,
+    };
     obj9[0] = slider;
     obj9[1] = syncer;
     ({ guildId: obj15[2], channelId: obj15[3], messageId: obj15[4] } = source);
@@ -176,8 +234,17 @@ let closure_13 = importAllResult.memo((arg0) => {
   obj10[0] = items1;
   return closure_8(closure_9, obj10);
 });
-let obj2 = { position: "absolute", top: -40, right: 8, display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4 };
-let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlay.tsx");
+let obj2 = {
+  position: "absolute",
+  top: -40,
+  right: 8,
+  display: "flex",
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_4,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/media_viewer/native/components/overlay/MediaModalOverlay.tsx",
+);
 
 export default function MediaModalOverlayGuard(onIndexChange) {
   onIndexChange = onIndexChange.onIndexChange;
@@ -201,4 +268,4 @@ export default function MediaModalOverlayGuard(onIndexChange) {
     tmp = callback2(MediaModalOverlay, obj);
   }
   return tmp;
-};
+}

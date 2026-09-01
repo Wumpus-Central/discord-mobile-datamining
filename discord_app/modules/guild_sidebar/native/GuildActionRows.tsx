@@ -11,7 +11,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 createCacheKey = { container: null, channelInfoContainer: null };
-createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL,
+  marginHorizontal: 8,
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingStart: 4 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
@@ -25,13 +29,20 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   const tmp4 = id(6179)(guild);
   id = guild.id;
   let obj = guild(4298);
-  const result = obj.useIsDismissibleContentDismissed_UNSAFE(guild(1373).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX);
+  const result = obj.useIsDismissibleContentDismissed_UNSAFE(
+    guild(1373).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX,
+  );
   obj1 = guild(647);
   const items = [closure_6];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_6.hasUnread(guild.id, closure_1_8.GUILD_ONBOARDING_QUESTION));
+  const stateFromStores = obj1.useStateFromStores(items, () =>
+    closure_1_6.hasUnread(guild.id, closure_1_8.GUILD_ONBOARDING_QUESTION),
+  );
   const items1 = [closure_5];
   const items2 = [id];
-  const stateFromStores1 = guild(647).useStateFromStores(items1, () => closure_1_5.getNewChannelIds(guild.id).size > guild(closure_1_2[14]).MAX_NEW_CHANNELS_TO_SHOW);
+  const stateFromStores1 = guild(647).useStateFromStores(
+    items1,
+    () => closure_1_5.getNewChannelIds(guild.id).size > guild(closure_1_2[14]).MAX_NEW_CHANNELS_TO_SHOW,
+  );
   callback = React.useCallback(() => {
     let obj = id(closure_1_2[15]);
     obj = { guildId: id };
@@ -55,7 +66,17 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
     obj[1] = jsx(tmp5(11858).NewBadge, {});
     tmp11 = <View style={null}>{null}</View>;
   }
-  obj = { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null };
+  obj = {
+    onPress: callback,
+    style: tmp.container,
+    accessible: true,
+    accessibilityLabel: null,
+    accessibilityState: null,
+    mode: null,
+    name: null,
+    icon: null,
+    channelInfo: null,
+  };
   const obj3 = guild(647);
   const tmp2 = id;
   const intl = tmp5(1236).intl;
@@ -79,7 +100,20 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   }
   obj[6] = jsx(guild(11948).BaseChannelName, { name: string2Result, mode: SELECTED });
   obj1 = { mode: SELECTED, IconComponent: tmp5(13582).ChannelListMagnifyingGlassIcon };
-  obj[7] = jsx(guild(11948).BaseChannelIcon, { mode: SELECTED, IconComponent: tmp5(13582).ChannelListMagnifyingGlassIcon });
+  obj[7] = jsx(guild(11948).BaseChannelIcon, {
+    mode: SELECTED,
+    IconComponent: tmp5(13582).ChannelListMagnifyingGlassIcon,
+  });
   obj[8] = tmp11;
-  return jsx(id(11948), { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null });
+  return jsx(id(11948), {
+    onPress: callback,
+    style: tmp.container,
+    accessible: true,
+    accessibilityLabel: null,
+    accessibilityState: null,
+    mode: null,
+    name: null,
+    icon: null,
+    channelInfo: null,
+  });
 };

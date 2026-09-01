@@ -19,7 +19,7 @@ export default function useResettingValue(arg0, arg1) {
   callback = tmp2;
   const items = [tmp2];
   callback4(() => () => closure_3.stop(), items);
-  const items1 = [tmp[0], ];
+  const items1 = [tmp[0]];
   const items2 = [arg1, arg0, tmp2];
   items1[1] = callback3((arg0) => {
     dependencyMap(arg0);
@@ -28,4 +28,4 @@ export default function useResettingValue(arg0, arg1) {
     }
   }, items2);
   return items1;
-};
+}

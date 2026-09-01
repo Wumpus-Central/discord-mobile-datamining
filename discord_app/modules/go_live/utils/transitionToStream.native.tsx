@@ -17,4 +17,4 @@ export default function transitionToStream(channelId) {
     openChannelCallModal.openGuildVoiceModal(channel, "Go Live");
     const obj3 = openChannelCallModal;
   }
-};
+}

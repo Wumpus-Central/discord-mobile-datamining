@@ -12,13 +12,53 @@ const require = arg1;
 createCacheKey = { container: null, nameplateContainer: null, nameplateWrapper: null, singleAvatarContainer: null };
 createCacheKey = { flexDirection: "column", alignItems: "center", gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: 234, height: 40, flexDirection: "row", alignItems: "center", position: "relative", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-let obj1 = { width: 234, height: 40, flexDirection: "row", alignItems: "center", position: "relative", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-createCacheKey[2] = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-createCacheKey[3] = { flexDirection: "row", paddingRight: 15, justifyContent: "center", alignItems: "center", marginLeft: 5 };
+createCacheKey[1] = {
+  width: 234,
+  height: 40,
+  flexDirection: "row",
+  alignItems: "center",
+  position: "relative",
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+};
+let obj1 = {
+  width: 234,
+  height: 40,
+  flexDirection: "row",
+  alignItems: "center",
+  position: "relative",
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+};
+createCacheKey[2] = {
+  position: "absolute",
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+};
+createCacheKey[3] = {
+  flexDirection: "row",
+  paddingRight: 15,
+  justifyContent: "center",
+  alignItems: "center",
+  marginLeft: 5,
+};
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx");
+let obj2 = {
+  position: "absolute",
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx",
+);
 
 export default function PremiumGiftingPromotionSuccessActions(purchase) {
   purchase = purchase.purchase;
@@ -86,7 +126,7 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
     const tmp20 = prePurchaseGiftingBadgeProgress(tmp3[15]);
     obj2[0] = tmp2(tmp3[16]).getNameplateData(first);
     obj1[1] = callback(tmp20, obj2);
-    const items3 = [callback(tmp12, obj1), ];
+    const items3 = [callback(tmp12, obj1)];
     obj3 = { style: null, children: null };
     obj3[0] = tmp.singleAvatarContainer;
     const obj4 = { user: null, guildId: "Array", size: true, "aria-hidden": null };
@@ -104,7 +144,7 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
     tmp11Result = callback(prePurchaseGiftingBadgeProgress(tmp3[18]), obj5);
     const tmp17 = prePurchaseGiftingBadgeProgress(tmp3[18]);
   }
-  const items4 = [tmp11Result, ];
+  const items4 = [tmp11Result];
   const obj6 = { grow: true, text: null, loading: null, onPress: null };
   const intl = tmp2(tmp3[20]).intl;
   obj6[1] = intl.string(onClose(navigation[20]).t.kMYVwv);
@@ -113,4 +153,4 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
   items4[1] = callback(onClose(navigation[19]).Button, obj6);
   obj[1] = items4;
   return closure_9(c4, obj);
-};
+}

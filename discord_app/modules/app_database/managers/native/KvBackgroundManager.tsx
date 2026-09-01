@@ -11,7 +11,8 @@ import closure_8 from "../../modules/messages/SaveableChannelsStore.tsx";
 import closure_9 from "../../stores/FileSystemStore.tsx";
 
 let require = arg1;
-({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: closure_6, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: error } = handleSelectedChannelStoreChanged);
+({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: closure_6, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: error } =
+  handleSelectedChannelStoreChanged);
 let closure_10 = 5 * setDefault.Millis.MINUTE;
 let closure_11 = new timestampDefault("KvBackgroundManager");
 initializeDefault;
@@ -25,379 +26,379 @@ class KvBackgroundManager extends tmp4 {
     applyArgumentsResult.applicationActive = false;
     applyArgumentsResult.actions = {
       APP_STATE_UPDATE(arg0) {
-            return applyArgumentsResult.handleAppStateUpdate(arg0);
-          },
+        return applyArgumentsResult.handleAppStateUpdate(arg0);
+      },
       LOGOUT(arg0) {
-            return applyArgumentsResult.handleLogout(arg0);
-          },
+        return applyArgumentsResult.handleLogout(arg0);
+      },
       POST_CONNECTION_OPEN(arg0) {
-            return applyArgumentsResult.handlePostConnectionOpen(arg0);
-          }
+        return applyArgumentsResult.handlePostConnectionOpen(arg0);
+      },
     };
     applyArgumentsResult.steps = {
       trimOrphanedChannels(closure_1_0) {
-            closure_0 = closure_1_0;
-            return callback(function*() {
-              if (c0 === 2) {
-                c0 = 3;
-                HermesBuiltin.throwTypeError();
-              } else if (tmp3 === 3) {
+        closure_0 = closure_1_0;
+        return callback(function* () {
+          if (c0 === 2) {
+            c0 = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              c0 = 2;
+              if (0 === v0) {
                 if (arg0 === 1) {
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  return { value: "HermesInternal", done: null };
-                }
-              } else {
-                try {
-                  c0 = 2;
-                  if (0 === v0) {
-                    if (arg0 === 1) {
-                      c0 = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      c0 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    } else {
-                      c0 = v0(closure_1_2[11]).channels(c0);
-                      const obj5 = v0(closure_1_2[11]);
-                      const obj6 = c0;
-                      v0 = v0(closure_1_2[11]).messages(c0);
-                      const obj7 = v0(closure_1_2[11]);
-                      closure_2 = v0(closure_1_2[11]).channelsTemp(c0);
-                      if (closure_1_8.canEvictOrphans()) {
-                        v0 = 1;
-                        c0 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = obj6.transaction((arg0) => {
-                          const upgradeTransactionResult = c1.upgradeTransaction(arg0);
-                          const upgradeTransactionResult1 = closure_2.upgradeTransaction(arg0);
-                          const saveableChannels = closure_1_8.getSaveableChannels();
-                          const iter = saveableChannels[Symbol.iterator]();
-                          const nextResult = iter.next();
-                          while (iter !== undefined) {
-                            let putResult = upgradeTransactionResult1.put(nextResult.guildId, nextResult.channelId, null);
-                            continue;
-                          }
-                          upgradeTransactionResult.trimOrphans(prefix.prefix);
-                          upgradeTransactionResult.trimChannelsIn(closure_2.prefix, closure_1_7);
-                          upgradeTransactionResult.trimChannelsNotIn(closure_2.prefix, closure_1_6);
-                          upgradeTransactionResult1.delete();
-                        }, "trimOrphanedChannels");
-                        return obj1;
-                      }
-                      const obj8 = v0(closure_1_2[11]);
-                    }
-                  } else if (arg0 === 1) {
-                    c0 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c0 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  }
                   c0 = 3;
-                  return { value: "HermesInternal", done: null };
-                } catch (tmp5) {
-                  c0 = tmp;
-                  throw tmp5;
-                }
-              }
-            })();
-          },
-      deleteDeprecatedKeyspaces(closure_0) {
-            return callback(function*() {
-              if (c0 === 2) {
-                c0 = 3;
-                HermesBuiltin.throwTypeError();
-              } else if (tmp3 === 3) {
-                if (arg0 === 1) {
                   throw arg1;
                 } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  return { value: "HermesInternal", done: null };
-                }
-              } else {
-                try {
-                  c0 = 2;
-                  if (0 === c1) {
-                    if (arg0 === 1) {
-                      c0 = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      c0 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    } else {
-                      c1 = 1;
-                      c0 = 1;
-                      obj1 = { value: null, done: false };
-                      obj1[0] = c0.transaction((arg0) => {
-                        while (tmp !== undefined) {
-                          let tmp3 = closure_1_3;
-                          let tmp4 = closure_1_3(tmp2, 2);
-                          let tmp7 = v3;
-                          let tmp8 = closure_1_2;
-                          [tmp5, tmp6] = tmp4;
-                          let items = [tmp6];
-                          let tmp9 = v3;
-                          let tmp10 = new.target;
-                          let tmp11 = new.target;
-                          let tmp12 = items;
-                          let flag = true;
-                          let table = new v3(closure_1_2[12]).Table(items, tmp5, v3, true);
-                          let tmp13 = table;
-                          let upgradeTransactionResult = table.upgradeTransaction(arg0);
-                          let deleteResult = upgradeTransactionResult.delete();
-                          continue;
-                        }
-                      }, "deleteDeprecatedKeyspaces");
-                      return obj1;
-                    }
-                  } else if (arg0 === 1) {
-                    c0 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c0 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  } else {
-                    c0 = 3;
-                    return { value: "HermesInternal", done: null };
-                  }
-                } catch (tmp6) {
-                  c0 = tmp;
-                  throw tmp6;
-                }
-              }
-            })();
-          },
-      trimLowDisk(closure_0) {
-            return callback(function*() {
-              if (c0 === 2) {
-                c0 = 3;
-                HermesBuiltin.throwTypeError();
-              } else if (tmp3 === 3) {
-                if (arg0 === 1) {
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  return { value: "HermesInternal", done: null };
-                }
-              } else {
-                try {
-                  c0 = 2;
-                  if (0 === c1) {
-                    if (arg0 === 1) {
-                      c0 = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      c0 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    } else if (closure_1_9.isLowDisk) {
-                      c1 = 1;
-                      c0 = 1;
-                      obj1 = { value: null, done: false };
-                      obj1[0] = c0.incrementalVacuum().catch((arg0) => logger.warn(arg0));
-                      return obj1;
-                    }
-                  } else if (arg0 === 1) {
-                    c0 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c0 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  }
                   c0 = 3;
-                  return { value: "HermesInternal", done: null };
-                } catch (tmp7) {
-                  c0 = tmp;
-                  throw tmp7;
-                }
-              }
-            })();
-          },
-      deleteExtraDatabases() {
-            return closure_1_4(function*() {
-              if (c7 === 2) {
-                c7 = 3;
-                HermesBuiltin.throwTypeError();
-              } else if (tmp4 === 3) {
-                if (arg0 === 1) {
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
+                  obj = { value: null, done: true };
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: null };
-                }
-              } else {
-                while (true) {
-                  let num = 2;
-                  c7 = 2;
-                  if (0 === c6) {
-                    if (arg0 === 1) {
-                      let num6 = 3;
-                      c7 = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      let num5 = 3;
-                      c7 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    } else {
-                      closure_3 = tmp;
-                      closure_2 = tmp2;
-                      let set;
-                      closure_1 = undefined;
-                      let tmp30 = users;
-                      users = users.getUsers();
-                      let _Set = Set;
-                      let tmp31 = new.target;
-                      let tmp32 = new.target;
-                      set = new Set(users.map((id) => callback(tmp2[13]).databaseName(id.id)));
-                      let tmp34 = set;
-                      let tmp35 = closure_1_0;
-                      let tmp36 = closure_1_2;
-                      let Kv = closure_1_0(closure_1_2[12]).Kv;
-                      c6 = 1;
-                      let num12 = 1;
-                      c7 = 1;
-                      obj1 = { value: null, done: false };
-                      obj1[0] = Kv.databases();
-                      return obj1;
-                    }
-                  } else if (1 === tmp5) {
-                    if (arg0 === 1) {
-                      let num4 = 3;
-                      c7 = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      let num3 = 3;
-                      c7 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    } else {
-                      closure_1 = arg1;
-                      let tmp26 = arg1;
-                      closure_1 = arg1;
-                      set = arg1[Symbol.iterator]();
-                      let tmp9 = closure_1;
-                      let tmp10 = set;
-                      while (set !== undefined) {
-                        let tmp27 = closure_2;
-                        users = 1;
-                        closure_1 = tmp11;
-                        let tmp28 = set;
-                        let tmp29 = closure_1;
-                        if (!set.has(closure_1)) {
-                          let tmp12 = closure_2;
-                          let tmp13 = closure_3;
-                          let tmp14 = closure_1_11;
-                          let tmp15 = closure_1;
-                          let _HermesInternal = HermesInternal;
-                          let logResult = closure_1_11.log("deleting orphaned database: " + closure_1);
-                          let tmp17 = closure_1_0;
-                          let tmp18 = closure_1_2;
-                          let Database = closure_1_0(closure_1_2[12]).Database;
-                          let tmp19 = closure_1;
-                          let deleteResult = Database.delete(closure_1);
-                          let catchPromise = deleteResult.catch(() => null);
-                        }
-                        users = 0;
+                  c0 = v0(closure_1_2[11]).channels(c0);
+                  const obj5 = v0(closure_1_2[11]);
+                  const obj6 = c0;
+                  v0 = v0(closure_1_2[11]).messages(c0);
+                  const obj7 = v0(closure_1_2[11]);
+                  closure_2 = v0(closure_1_2[11]).channelsTemp(c0);
+                  if (closure_1_8.canEvictOrphans()) {
+                    v0 = 1;
+                    c0 = 1;
+                    obj1 = { value: null, done: false };
+                    obj1[0] = obj6.transaction((arg0) => {
+                      const upgradeTransactionResult = c1.upgradeTransaction(arg0);
+                      const upgradeTransactionResult1 = closure_2.upgradeTransaction(arg0);
+                      const saveableChannels = closure_1_8.getSaveableChannels();
+                      const iter = saveableChannels[Symbol.iterator]();
+                      const nextResult = iter.next();
+                      while (iter !== undefined) {
+                        let putResult = upgradeTransactionResult1.put(nextResult.guildId, nextResult.channelId, null);
                         continue;
                       }
-                      let num2 = 3;
-                      c7 = 3;
-                      return { value: "HermesInternal", done: null };
-                    }
-                  } else {
-                    let tmp6 = closure_4;
-                    let tmp7 = closure_4;
-                    users = 0;
-                    let tmp8 = set;
-                    set.return();
-                    throw closure_4;
+                      upgradeTransactionResult.trimOrphans(prefix.prefix);
+                      upgradeTransactionResult.trimChannelsIn(closure_2.prefix, closure_1_7);
+                      upgradeTransactionResult.trimChannelsNotIn(closure_2.prefix, closure_1_6);
+                      upgradeTransactionResult1.delete();
+                    }, "trimOrphanedChannels");
+                    return obj1;
                   }
+                  const obj8 = v0(closure_1_2[11]);
                 }
+              } else if (arg0 === 1) {
+                c0 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c0 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
               }
-            })();
-          },
-      optimize() {
-            return closure_1_4(function*() {
-              if (v0 === 2) {
-                v0 = 3;
-                HermesBuiltin.throwTypeError();
-              } else if (tmp3 === 3) {
+              c0 = 3;
+              return { value: "HermesInternal", done: null };
+            } catch (tmp5) {
+              c0 = tmp;
+              throw tmp5;
+            }
+          }
+        })();
+      },
+      deleteDeprecatedKeyspaces(closure_0) {
+        return callback(function* () {
+          if (c0 === 2) {
+            c0 = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              c0 = 2;
+              if (0 === c1) {
                 if (arg0 === 1) {
+                  c0 = 3;
                   throw arg1;
                 } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
+                  c0 = 3;
+                  obj = { value: null, done: true };
                   obj[0] = arg1;
                   return obj;
                 } else {
+                  c1 = 1;
+                  c0 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = c0.transaction((arg0) => {
+                    while (tmp !== undefined) {
+                      let tmp3 = closure_1_3;
+                      let tmp4 = closure_1_3(tmp2, 2);
+                      let tmp7 = v3;
+                      let tmp8 = closure_1_2;
+                      [tmp5, tmp6] = tmp4;
+                      let items = [tmp6];
+                      let tmp9 = v3;
+                      let tmp10 = new.target;
+                      let tmp11 = new.target;
+                      let tmp12 = items;
+                      let flag = true;
+                      let table = new v3(closure_1_2[12]).Table(items, tmp5, v3, true);
+                      let tmp13 = table;
+                      let upgradeTransactionResult = table.upgradeTransaction(arg0);
+                      let deleteResult = upgradeTransactionResult.delete();
+                      continue;
+                    }
+                  }, "deleteDeprecatedKeyspaces");
+                  return obj1;
+                }
+              } else if (arg0 === 1) {
+                c0 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c0 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                c0 = 3;
+                return { value: "HermesInternal", done: null };
+              }
+            } catch (tmp6) {
+              c0 = tmp;
+              throw tmp6;
+            }
+          }
+        })();
+      },
+      trimLowDisk(closure_0) {
+        return callback(function* () {
+          if (c0 === 2) {
+            c0 = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              c0 = 2;
+              if (0 === c1) {
+                if (arg0 === 1) {
+                  c0 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c0 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else if (closure_1_9.isLowDisk) {
+                  c1 = 1;
+                  c0 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = c0.incrementalVacuum().catch((arg0) => logger.warn(arg0));
+                  return obj1;
+                }
+              } else if (arg0 === 1) {
+                c0 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c0 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              }
+              c0 = 3;
+              return { value: "HermesInternal", done: null };
+            } catch (tmp7) {
+              c0 = tmp;
+              throw tmp7;
+            }
+          }
+        })();
+      },
+      deleteExtraDatabases() {
+        return closure_1_4(function* () {
+          if (c7 === 2) {
+            c7 = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp4 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            while (true) {
+              let num = 2;
+              c7 = 2;
+              if (0 === c6) {
+                if (arg0 === 1) {
+                  let num6 = 3;
+                  c7 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  let num5 = 3;
+                  c7 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  closure_3 = tmp;
+                  closure_2 = tmp2;
+                  let set;
+                  closure_1 = undefined;
+                  let tmp30 = users;
+                  users = users.getUsers();
+                  let _Set = Set;
+                  let tmp31 = new.target;
+                  let tmp32 = new.target;
+                  set = new Set(users.map((id) => callback(tmp2[13]).databaseName(id.id)));
+                  let tmp34 = set;
+                  let tmp35 = closure_1_0;
+                  let tmp36 = closure_1_2;
+                  let Kv = closure_1_0(closure_1_2[12]).Kv;
+                  c6 = 1;
+                  let num12 = 1;
+                  c7 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = Kv.databases();
+                  return obj1;
+                }
+              } else if (1 === tmp5) {
+                if (arg0 === 1) {
+                  let num4 = 3;
+                  c7 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  let num3 = 3;
+                  c7 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  closure_1 = arg1;
+                  let tmp26 = arg1;
+                  closure_1 = arg1;
+                  set = arg1[Symbol.iterator]();
+                  let tmp9 = closure_1;
+                  let tmp10 = set;
+                  while (set !== undefined) {
+                    let tmp27 = closure_2;
+                    users = 1;
+                    closure_1 = tmp11;
+                    let tmp28 = set;
+                    let tmp29 = closure_1;
+                    if (!set.has(closure_1)) {
+                      let tmp12 = closure_2;
+                      let tmp13 = closure_3;
+                      let tmp14 = closure_1_11;
+                      let tmp15 = closure_1;
+                      let _HermesInternal = HermesInternal;
+                      let logResult = closure_1_11.log("deleting orphaned database: " + closure_1);
+                      let tmp17 = closure_1_0;
+                      let tmp18 = closure_1_2;
+                      let Database = closure_1_0(closure_1_2[12]).Database;
+                      let tmp19 = closure_1;
+                      let deleteResult = Database.delete(closure_1);
+                      let catchPromise = deleteResult.catch(() => null);
+                    }
+                    users = 0;
+                    continue;
+                  }
+                  let num2 = 3;
+                  c7 = 3;
                   return { value: "HermesInternal", done: null };
                 }
               } else {
-                try {
-                  v0 = 2;
-                  if (0 === c1) {
-                    if (arg0 === 1) {
-                      v0 = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      v0 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    } else {
-                      const Kv = v0(closure_1_2[12]).Kv;
-                      c1 = 1;
-                      v0 = 1;
-                      obj1 = { value: null, done: false };
-                      obj1[0] = Kv.optimize(true);
-                      return obj1;
-                    }
-                  } else if (arg0 === 1) {
-                    v0 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    v0 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  } else {
-                    v0 = 3;
-                    return { value: "HermesInternal", done: null };
-                  }
-                } catch (tmp7) {
-                  v0 = tmp;
-                  throw tmp7;
-                }
+                let tmp6 = closure_4;
+                let tmp7 = closure_4;
+                users = 0;
+                let tmp8 = set;
+                set.return();
+                throw closure_4;
               }
-            })();
+            }
           }
+        })();
+      },
+      optimize() {
+        return closure_1_4(function* () {
+          if (v0 === 2) {
+            v0 = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              v0 = 2;
+              if (0 === c1) {
+                if (arg0 === 1) {
+                  v0 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  v0 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  const Kv = v0(closure_1_2[12]).Kv;
+                  c1 = 1;
+                  v0 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = Kv.optimize(true);
+                  return obj1;
+                }
+              } else if (arg0 === 1) {
+                v0 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                v0 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                v0 = 3;
+                return { value: "HermesInternal", done: null };
+              }
+            } catch (tmp7) {
+              v0 = tmp;
+              throw tmp7;
+            }
+          }
+        })();
+      },
     };
     return applyArgumentsResult;
   }
@@ -425,7 +426,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
 };
 prototype["maybeCleanup"] = function maybeCleanup() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -554,7 +555,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
 prototype["cleanupAsync"] = function cleanupAsync(closure_1_1) {
   closure_0 = closure_1_1;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (table === 2) {
       table = 3;
       HermesBuiltin.throwTypeError();
@@ -651,7 +652,7 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
   closure_0 = databaseResult;
   closure_1 = arg1;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();

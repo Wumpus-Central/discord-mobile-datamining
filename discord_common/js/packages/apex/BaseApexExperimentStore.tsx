@@ -97,7 +97,13 @@ prototype["loadStoredState"] = function loadStoredState(version, buildOverrideEx
         tmp9 = v3Result;
       }
       let tmp10 = closure_13;
-      obj = { hashedName: null, variantId: null, isOverride: true, exposureTrackingEnabled: false, useAsEligibility: false };
+      obj = {
+        hashedName: null,
+        variantId: null,
+        isOverride: true,
+        exposureTrackingEnabled: false,
+        useAsEligibility: false,
+      };
       obj[0] = tmp9;
       obj[1] = arg1[key10020];
       closure_13[key10020] = obj;
@@ -172,7 +178,16 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
               }
               let tmp23 = obj;
               let tmp24 = tmp17;
-              obj = { hashedName: null, variantId: null, trackedVariantId: null, isOverride: null, revision: null, exposureTrackingEnabled: null, useAsEligibility: null, config: null };
+              obj = {
+                hashedName: null,
+                variantId: null,
+                trackedVariantId: null,
+                isOverride: null,
+                revision: null,
+                exposureTrackingEnabled: null,
+                useAsEligibility: null,
+                config: null,
+              };
               obj[0] = tmp17;
               let tmp25 = tmp18;
               obj[1] = tmp18;
@@ -231,7 +246,15 @@ prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignme
       if (tmp17 == null) {
         num = 0;
       }
-      obj = { hashedName: null, variantId: null, trackedVariantId: null, isOverride: null, revision: null, exposureTrackingEnabled: null, useAsEligibility: null };
+      obj = {
+        hashedName: null,
+        variantId: null,
+        trackedVariantId: null,
+        isOverride: null,
+        revision: null,
+        exposureTrackingEnabled: null,
+        useAsEligibility: null,
+      };
       let tmp20 = tmp15;
       obj[0] = tmp15;
       let tmp21 = tmp16;
@@ -289,10 +312,14 @@ prototype["deleteSessionOverride"] = function deleteSessionOverride(experimentNa
 prototype["setExperimentsMetadata"] = function setExperimentsMetadata(experiments) {
   const obj = {};
   const merged = Object.assign(obj);
-  const merged1 = Object.assign(Object.fromEntries(experiments.map((name) => {
-    items = [name.name, name];
-    return items;
-  })));
+  const merged1 = Object.assign(
+    Object.fromEntries(
+      experiments.map((name) => {
+        items = [name.name, name];
+        return items;
+      }),
+    ),
+  );
 };
 prototype["getExperimentsMetadata"] = function getExperimentsMetadata() {
   return closure_14;
@@ -354,7 +381,11 @@ prototype["getEvaluation"] = function getEvaluation(arg0, arg1) {
   }
   return evaluationId;
 };
-prototype["getEvaluationAndAssignmentInner"] = function getEvaluationAndAssignmentInner(user, LOGGED_OUT_USER_ID_SENTINEL, closure_4) {
+prototype["getEvaluationAndAssignmentInner"] = function getEvaluationAndAssignmentInner(
+  user,
+  LOGGED_OUT_USER_ID_SENTINEL,
+  closure_4,
+) {
   const override = this.getOverride(closure_4);
   if (null != override) {
     items = [undefined, override];
@@ -364,7 +395,7 @@ prototype["getEvaluationAndAssignmentInner"] = function getEvaluationAndAssignme
       const items1 = [undefined, undefined];
       let items2 = items1;
     } else {
-      items2 = [tmp10.evaluationId, ];
+      items2 = [tmp10.evaluationId];
       let tmp3 = dependencyMap5[closure_4];
       if (null == tmp3) {
         const v3Result = MurmurHashV3Default.v3(closure_4);
@@ -377,7 +408,12 @@ prototype["getEvaluationAndAssignmentInner"] = function getEvaluationAndAssignme
     return items2;
   }
 };
-prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(revision, closure_1, closure_4, closure_2) {
+prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(
+  revision,
+  closure_1,
+  closure_4,
+  closure_2,
+) {
   const self = this;
   [tmp3, tmp4] = callback2(this.getEvaluationAndAssignmentInner(revision, closure_1, closure_4), 2);
   if ("guild" !== revision) {
@@ -413,7 +449,15 @@ prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(re
   tmp = callback2;
   const tmp2 = callback2(this.getEvaluationAndAssignmentInner(revision, closure_1, closure_4), 2);
 };
-prototype["trackExperimentExposure"] = function trackExperimentExposure(arg0, trackedVariantId, location, revision, revision2, trackedVariantId2, closure_1) {
+prototype["trackExperimentExposure"] = function trackExperimentExposure(
+  arg0,
+  trackedVariantId,
+  location,
+  revision,
+  revision2,
+  trackedVariantId2,
+  closure_1,
+) {
   let self = this;
   self = this;
   importDefault = arg0;
@@ -423,7 +467,8 @@ prototype["trackExperimentExposure"] = function trackExperimentExposure(arg0, tr
   closure_5 = revision2;
   closure_6 = trackedVariantId2;
   closure_0 = closure_1;
-  const combined = "" + trackedVariantId + "|" + revision2 + "|" + trackedVariantId2 + "|" + location + "|" + closure_1 + "|1";
+  const combined =
+    "" + trackedVariantId + "|" + revision2 + "|" + trackedVariantId2 + "|" + location + "|" + closure_1 + "|1";
   let tmp3 = dependencyMap5[combined];
   if (null == tmp3) {
     const v3Result = MurmurHashV3Default.v3(combined);
@@ -432,11 +477,50 @@ prototype["trackExperimentExposure"] = function trackExperimentExposure(arg0, tr
     const obj = MurmurHashV3Default;
   }
   if ("user" === revision) {
-    self.withExposureTracking(tmp3, () => self.track(constants.EXPERIMENT_USER_EVALUATION_EXPOSED, { evaluation_id: closure_1, experiment: closure_2, exposure_location: closure_3, unit_type: closure_4, tracked_variation_id: closure_6 }, { flush: true }));
+    self.withExposureTracking(tmp3, () =>
+      self.track(
+        constants.EXPERIMENT_USER_EVALUATION_EXPOSED,
+        {
+          evaluation_id: closure_1,
+          experiment: closure_2,
+          exposure_location: closure_3,
+          unit_type: closure_4,
+          tracked_variation_id: closure_6,
+        },
+        { flush: true },
+      ),
+    );
   } else if ("installation" === revision) {
-    self.withExposureTracking(tmp3, () => self.track(constants.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED, { evaluation_id: closure_1, installation_id: closure_0, experiment: closure_2, exposure_location: closure_3, unit_type: closure_4, tracked_variation_id: closure_6 }, { flush: true }));
+    self.withExposureTracking(tmp3, () =>
+      self.track(
+        constants.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED,
+        {
+          evaluation_id: closure_1,
+          installation_id: closure_0,
+          experiment: closure_2,
+          exposure_location: closure_3,
+          unit_type: closure_4,
+          tracked_variation_id: closure_6,
+        },
+        { flush: true },
+      ),
+    );
   } else if ("guild" === revision) {
-    self.withExposureTracking(tmp3, () => self.track(constants.EXPERIMENT_GUILD_EVALUATION_EXPOSED, { evaluation_id: closure_1, guild_id: closure_0, experiment: closure_2, exposure_location: closure_3, unit_type: closure_4, tracked_variation_id: closure_6, revision: constants }, { flush: true }));
+    self.withExposureTracking(tmp3, () =>
+      self.track(
+        constants.EXPERIMENT_GUILD_EVALUATION_EXPOSED,
+        {
+          evaluation_id: closure_1,
+          guild_id: closure_0,
+          experiment: closure_2,
+          exposure_location: closure_3,
+          unit_type: closure_4,
+          tracked_variation_id: closure_6,
+          revision: constants,
+        },
+        { flush: true },
+      ),
+    );
   }
 };
 prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPointExposures(location) {
@@ -453,7 +537,13 @@ prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPoint
       tmp3 = v3Result;
       const obj = self(closure_1_2[6]);
     }
-    self.withExposureTracking(tmp3, () => closure_1_1.track(closure_2_5.EXPERIMENT_USER_EVALUATION_EXPOSED, { evaluation_id: closure_0, exposure_location: closure_0, unit_type: "user" }, { flush: true }));
+    self.withExposureTracking(tmp3, () =>
+      closure_1_1.track(
+        closure_2_5.EXPERIMENT_USER_EVALUATION_EXPOSED,
+        { evaluation_id: closure_0, exposure_location: closure_0, unit_type: "user" },
+        { flush: true },
+      ),
+    );
   }
   const result = this.evaluationsWithUnitIds("user");
   const iter = result[Symbol.iterator]();
@@ -472,7 +562,13 @@ prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPoint
       tmp3 = v3Result;
       const obj = self(closure_1_2[6]);
     }
-    _self.withExposureTracking(tmp3, () => unitId.track(closure_2_5.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED, { evaluation_id: closure_0, exposure_location: closure_0, unit_type: "installation", installation_id: unitId }, { flush: true }));
+    _self.withExposureTracking(tmp3, () =>
+      unitId.track(
+        closure_2_5.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED,
+        { evaluation_id: closure_0, exposure_location: closure_0, unit_type: "installation", installation_id: unitId },
+        { flush: true },
+      ),
+    );
   }
   const result1 = self.evaluationsWithUnitIds("installation");
   for (const item10023 of result1) {

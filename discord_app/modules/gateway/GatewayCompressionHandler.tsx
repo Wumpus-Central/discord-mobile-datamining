@@ -22,12 +22,8 @@ const prototype = BaseGatewayCompressionHandler.prototype;
 BaseGatewayCompressionHandler["canUse"] = function canUse() {
   return false;
 };
-prototype["bindWebSocket"] = function bindWebSocket() {
-
-};
-prototype["feed"] = function feed() {
-
-};
+prototype["bindWebSocket"] = function bindWebSocket() {};
+prototype["feed"] = function feed() {};
 prototype["dataReady"] = function dataReady(_onDataReady) {
   this._onDataReady = _onDataReady;
 };
@@ -47,8 +43,7 @@ const fn = (arg0) => {
   return tmp;
 };
 const prototype2 = fn.prototype;
-class fn extends BaseGatewayCompressionHandler {
-}
+class fn extends BaseGatewayCompressionHandler {}
 fn["canUse"] = function canUse() {
   return false;
 };
@@ -84,9 +79,7 @@ prototype2["feed"] = function feed(dataView) {
     }
   }
 };
-prototype2["close"] = function close() {
-
-};
+prototype2["close"] = function close() {};
 items.push(fn);
 const fn2 = (arg0) => {
   tmp = new tmp(arg0, new.target, tmp, new.target);
@@ -107,8 +100,7 @@ const fn2 = (arg0) => {
   return tmp;
 };
 const prototype3 = fn2.prototype;
-class fn2 extends BaseGatewayCompressionHandler {
-}
+class fn2 extends BaseGatewayCompressionHandler {}
 fn2["canUse"] = function canUse() {
   return false;
 };
@@ -223,8 +215,7 @@ const fn3 = () => {
   return applyArgumentsResult;
 };
 const prototype4 = fn3.prototype;
-class fn3 extends BaseGatewayCompressionHandler {
-}
+class fn3 extends BaseGatewayCompressionHandler {}
 fn3["canUse"] = function canUse() {
   return false;
 };
@@ -254,9 +245,7 @@ prototype4["feed"] = function feed(arg0) {
     self._onDataReady(inflateResult);
   }
 };
-prototype4["close"] = function close() {
-
-};
+prototype4["close"] = function close() {};
 items.push(fn3);
 const fn4 = (arg0) => {
   tmp = new tmp(arg0, new.target, tmp);
@@ -265,8 +254,7 @@ const fn4 = (arg0) => {
   return tmp;
 };
 const prototype5 = fn4.prototype;
-class fn4 extends BaseGatewayCompressionHandler {
-}
+class fn4 extends BaseGatewayCompressionHandler {}
 fn4["canUse"] = function canUse() {
   if (obj.isAndroid()) {
     let tmp5 = null != enforcing.default;
@@ -340,8 +328,7 @@ prototype5["close"] = function close() {
   }
 };
 items.push(fn4);
-class NullGatewayCompressionHandler extends BaseGatewayCompressionHandler {
-}
+class NullGatewayCompressionHandler extends BaseGatewayCompressionHandler {}
 const prototype6 = NullGatewayCompressionHandler.prototype;
 NullGatewayCompressionHandler["canUse"] = function canUse() {
   return true;
@@ -362,9 +349,7 @@ prototype6["feed"] = function feed(arg0) {
     self._onDataReady(arg0);
   }
 };
-prototype6["close"] = function close() {
-
-};
+prototype6["close"] = function close() {};
 items.push(NullGatewayCompressionHandler);
 let result = set.fileFinishedImporting("modules/gateway/GatewayCompressionHandler.tsx");
 

@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/WhatYouLoseProfileTier1.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/WhatYouLoseProfileTier1.tsx",
+);
 
 export const getWhatYouLoseProfileTier1Source = function getWhatYouLoseProfileTier1Source(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getWhatYouLoseProfileTier1Source = function getWhatYouLoseProfileTi
     },
     light() {
       return callback(12999);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useWhatYouLoseProfileTier1Source = function useWhatYouLoseProfileTi
     },
     light() {
       return callback(12999);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const WhatYouLoseProfileTier1 = function WhatYouLoseProfileTier1(arg0) {
     },
     light() {
       return callback(12999);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

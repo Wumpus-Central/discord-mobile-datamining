@@ -7,4 +7,4 @@ const result = set.fileFinishedImporting("modules/search/native/hooks/useSearchM
 
 export default function useSearchMediaSize(arg0) {
   return Math.floor((arg0 - 2 * closure_0 - closure_2 * (closure_1 - 1)) / closure_1);
-};
+}

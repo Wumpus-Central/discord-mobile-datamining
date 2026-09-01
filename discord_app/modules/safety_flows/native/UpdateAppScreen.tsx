@@ -25,7 +25,7 @@ export default function UpdateAppScreen() {
   obj = { variant: "heading-lg/semibold", children: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(messagesProxyDefault.yxqMCD);
-  const items = [callback(Text.Text, obj), , ];
+  const items = [callback(Text.Text, obj), ,];
   obj = { variant: "text-md/normal", color: "text-muted", children: null };
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(messagesProxyDefault.VBZJJg);
@@ -38,7 +38,7 @@ export default function UpdateAppScreen() {
     },
     text: null,
     variant: "primary",
-    size: "md"
+    size: "md",
   };
   const intl3 = getSystemLocale.intl;
   obj2[1] = intl3.string(messagesProxyDefault.o4D6fm);
@@ -46,4 +46,4 @@ export default function UpdateAppScreen() {
   items[2] = callback(closure_4, obj1);
   obj[1] = items;
   return callback2(closure_4, obj);
-};
+}

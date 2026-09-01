@@ -45,8 +45,16 @@ export const canViewMobileServerTag = function canViewMobileServerTag(id) {
 export const isServerTagDraftDirty = function isServerTagDraftDirty(closure_9, closure_8) {
   let tmp = null != closure_9 && null != closure_8;
   if (tmp) {
-    tmp = closure_9.tag !== closure_8.tag || closure_9.badge !== closure_8.badge || closure_9.badgeColorPrimary !== closure_8.badgeColorPrimary || closure_9.badgeColorSecondary !== closure_8.badgeColorSecondary;
-    const tmp2 = closure_9.tag !== closure_8.tag || closure_9.badge !== closure_8.badge || closure_9.badgeColorPrimary !== closure_8.badgeColorPrimary || closure_9.badgeColorSecondary !== closure_8.badgeColorSecondary;
+    tmp =
+      closure_9.tag !== closure_8.tag ||
+      closure_9.badge !== closure_8.badge ||
+      closure_9.badgeColorPrimary !== closure_8.badgeColorPrimary ||
+      closure_9.badgeColorSecondary !== closure_8.badgeColorSecondary;
+    const tmp2 =
+      closure_9.tag !== closure_8.tag ||
+      closure_9.badge !== closure_8.badge ||
+      closure_9.badgeColorPrimary !== closure_8.badgeColorPrimary ||
+      closure_9.badgeColorSecondary !== closure_8.badgeColorSecondary;
   }
   return tmp;
 };

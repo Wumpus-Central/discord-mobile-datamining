@@ -18,7 +18,27 @@ const XSMALL = require("Button").AvatarSizes.XSMALL;
 const themedRippleConfig = require("semanticColor").getThemedRippleConfig({ foreground: true });
 let obj = { width: 32, height: 32, marginRight: 16, borderRadius: 4 };
 let c14 = 1.7777777777777777;
-obj = { voiceMemberItemRow: { paddingTop: 12, paddingBottom: 16, flexDirection: "column", display: "flex", justifyContent: "flex-start" }, innerRow: { paddingHorizontal: 16, alignItems: "center" }, activityDetails: { marginBottom: 8, flexDirection: "row", display: "flex" }, appIcon: obj, appIconPlaceholder: null, centerGroup: null, applicationName: null, joinButton: null, joinButtonPill: null, joinButtonContainer: null, overflow: null, overflowBackgroundColor: null, overflowBackgroundColorActionSheet: null };
+obj = {
+  voiceMemberItemRow: {
+    paddingTop: 12,
+    paddingBottom: 16,
+    flexDirection: "column",
+    display: "flex",
+    justifyContent: "flex-start",
+  },
+  innerRow: { paddingHorizontal: 16, alignItems: "center" },
+  activityDetails: { marginBottom: 8, flexDirection: "row", display: "flex" },
+  appIcon: obj,
+  appIconPlaceholder: null,
+  centerGroup: null,
+  applicationName: null,
+  joinButton: null,
+  joinButtonPill: null,
+  joinButtonContainer: null,
+  overflow: null,
+  overflowBackgroundColor: null,
+  overflowBackgroundColorActionSheet: null,
+};
 obj = {};
 const merged = Object.assign(obj);
 obj.tintColor = ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT;
@@ -35,7 +55,9 @@ let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
 obj[12] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 let closure_15 = createCacheKey.createStyles(obj);
 let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-let result = require("set").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceMemberEmbeddedActivity.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/voice_calls/native/action_sheet/VoiceMemberEmbeddedActivity.tsx",
+);
 
 export default function VoiceMemberEmbeddedActivity(onItemPress) {
   ({ embeddedActivity, channelId } = onItemPress);
@@ -91,7 +113,13 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
       const name = first.name;
       const diff = bound - 32;
       const sum = 40 + tmp11 / tmp12 + 12 + 16;
-      let obj = { accessibilityRole: "button", accessibilityLabel: null, androidRippleConfig: null, onPress: null, children: null };
+      let obj = {
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        androidRippleConfig: null,
+        onPress: null,
+        children: null,
+      };
       const intl = tmp4(tmp3[21]).intl;
       obj = { applicationName: null };
       obj[0] = name;
@@ -101,19 +129,19 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
         onItemPress(first[19])({ embeddedActivityJoinability, handleCanJoin });
       };
       obj1 = { style: null, children: null };
-      const items3 = [tmp.voiceMemberItemRow, ];
+      const items3 = [tmp.voiceMemberItemRow];
       obj2 = { height: null };
       obj2[0] = sum;
       items3[1] = obj2;
       obj1[0] = items3;
       obj3 = { style: null, children: null };
-      const items4 = [, ];
+      const items4 = [,];
       ({ innerRow: arr7[0], activityDetails: arr7[1] } = tmp);
       obj3[0] = items4;
       obj4 = { style: null, source: null };
       obj4[0] = iconSource === tmp2(tmp3[18]) ? tmp.appIconPlaceholder : tmp.appIcon;
       obj4[1] = iconSource;
-      const items5 = [closure_10(stateFromStores, obj4), , ];
+      const items5 = [closure_10(stateFromStores, obj4), ,];
       const obj5 = { style: null, children: null };
       obj5[0] = tmp.centerGroup;
       const obj6 = { style: null, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
@@ -121,9 +149,16 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
       obj6[3] = name;
       obj5[1] = closure_10(tmp4(tmp3[22]).Text, obj6);
       items5[1] = closure_10(embeddedActivityLocationGuildId, obj5);
-      const items6 = [tmp.overflow, ];
+      const items6 = [tmp.overflow];
       const result = diff / tmp12;
-      const obj7 = { offsetAmount: -6, overflowStyle: null, overflowComponent: null, items: null, max: 5, renderItem: null };
+      const obj7 = {
+        offsetAmount: -6,
+        overflowStyle: null,
+        overflowComponent: null,
+        items: null,
+        max: 5,
+        renderItem: null,
+      };
       items6[1] = onItemPress.isActionSheet ? tmp.overflowBackgroundColorActionSheet : tmp.overflowBackgroundColor;
       obj7[1] = items6;
       obj7[2] = tmp4(tmp3[9]).OverflowText;
@@ -142,9 +177,9 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
       };
       items5[2] = closure_10(tmp4(tmp3[9]).SummarizedIconRow, obj7);
       obj3[1] = items5;
-      const items7 = [closure_11(embeddedActivityLocationGuildId, obj3), ];
+      const items7 = [closure_11(embeddedActivityLocationGuildId, obj3)];
       const obj8 = { style: null, children: null };
-      const items8 = [tmp.innerRow, ];
+      const items8 = [tmp.innerRow];
       const obj9 = { height: null, justifyContent: "center" };
       obj9[0] = result;
       items8[1] = obj9;
@@ -155,12 +190,20 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
       obj11[1] = diff;
       obj11[2] = result;
       obj10[1] = obj11;
-      const items9 = [closure_10(tmp2(tmp3[23]), obj10), ];
+      const items9 = [closure_10(tmp2(tmp3[23]), obj10)];
       const obj12 = { style: null, children: null };
       obj12[0] = tmp.joinButtonContainer;
       let tmp16Result = null;
       if (embeddedActivityJoinability === tmp4(tmp3[16]).EmbeddedActivityJoinability.CAN_JOIN) {
-        const obj13 = { onPress: null, style: null, pillStyle: null, text: null, variant: "secondary", size: "sm", shrink: true };
+        const obj13 = {
+          onPress: null,
+          style: null,
+          pillStyle: null,
+          text: null,
+          variant: "secondary",
+          size: "sm",
+          shrink: true,
+        };
         obj13[0] = function onPress() {
           onItemPress(first[19])({ embeddedActivityJoinability, handleCanJoin });
         };
@@ -179,7 +222,7 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
     }
   }
   return null;
-};
+}
 export const calculateActivityRowHeight = function calculateActivityRowHeight(arg0) {
   return 40 + (arg0 - 32) / c14 + 12 + 16;
 };

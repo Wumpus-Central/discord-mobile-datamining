@@ -10,4 +10,4 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/
 export default function useIsInRestrictedHours() {
   const items = [closure_2, closure_3];
   return initialize.useStateFromStores(items, scheduleUpcomingWarning.getCurrentRestrictedHoursState);
-};
+}

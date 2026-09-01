@@ -38,7 +38,16 @@ function QuestBottomSheet(initialStep) {
   let tmp9Result = null;
   if (!isInGameQuestResult) {
     if (!hasWatchVideoTasksResult) {
-      obj2 = { quest: null, sourceQuestContent: null, step: null, isDefibrilating: null, onLayout: null, onBack: null, onDefib: null, onConnectConsoleNext: null };
+      obj2 = {
+        quest: null,
+        sourceQuestContent: null,
+        step: null,
+        isDefibrilating: null,
+        onLayout: null,
+        onBack: null,
+        onDefib: null,
+        onConnectConsoleNext: null,
+      };
       obj2[0] = quest;
       obj2[1] = sourceQuestContent;
       obj2[2] = step;
@@ -55,7 +64,7 @@ function QuestBottomSheet(initialStep) {
     }
   }
   obj[1] = tmp9Result;
-  const items = [tmp.contentContainer, ];
+  const items = [tmp.contentContainer];
   let num = 0;
   if (step !== obj.TASK_SELECT) {
     num = tmp8[0];
@@ -114,10 +123,12 @@ function useEnrolledQuestContentProps(quest) {
   let items = [quest, xboxAndPlaystationAccounts];
   const memo = importDefaultResult.useMemo(() => {
     obj = quest(11096);
-    return quest(11096).supportedConsoles(quest).filter((arg0) => {
-      closure_0 = arg0;
-      return null != closure_1.find((type) => type.type === closure_0);
-    });
+    return quest(11096)
+      .supportedConsoles(quest)
+      .filter((arg0) => {
+        closure_0 = arg0;
+        return null != closure_1.find((type) => type.type === closure_0);
+      });
   }, items);
   tmpResult = tmp(11083);
   const questTaskDetails1 = tmpResult.useQuestTaskDetails(quest);
@@ -161,7 +172,7 @@ function useEnrolledQuestContentProps(quest) {
   const items2 = [first1, isQuestProgressing1];
   memo2 = obj8.useMemo(() => {
     obj = { type: memo3.CONSOLE_CONNECT, shouldShow: first1, onNext: hideConsoleSelect };
-    const items = [obj, ];
+    const items = [obj];
     obj = { type: memo3.TASK_STATUS, shouldShow: true, onBack: null };
     let tmp;
     if (!isQuestProgressing1) {
@@ -174,8 +185,13 @@ function useEnrolledQuestContentProps(quest) {
   const items3 = [first, first1, isQuestProgressing1, callback];
   memo3 = obj8.useMemo(() => {
     obj = { type: memo3.TASK_SELECT, shouldShow: dependencyMap === quest(5390).TaskPlatformScreen.SELECT };
-    const items = [obj, , ];
-    obj = { type: memo3.CONSOLE_CONNECT, shouldShow: dependencyMap === quest(5390).TaskPlatformScreen.CONSOLE && first1, onBack: callback, onNext: hideConsoleSelect };
+    const items = [obj, ,];
+    obj = {
+      type: memo3.CONSOLE_CONNECT,
+      shouldShow: dependencyMap === quest(5390).TaskPlatformScreen.CONSOLE && first1,
+      onBack: callback,
+      onNext: hideConsoleSelect,
+    };
     let tmp6 = callback;
     items[1] = obj;
     obj = { type: memo3.TASK_STATUS, shouldShow: true, onBack: null };
@@ -221,7 +237,7 @@ function useEnrolledQuestContentProps(quest) {
     }
     arr2 = memo1;
   }, items4);
-  const items5 = [memo4.type, ];
+  const items5 = [memo4.type];
   let onBack;
   if (memo4 != null) {
     onBack = memo4.onBack;
@@ -254,17 +270,20 @@ function useEnrolledQuestContentProps(quest) {
       const result = quest(10913).manuallyStartConsoleQuest(quest.id);
       obj = quest(10913);
       const nextPromise = result.then((errorHints) => callback(errorHints.errorHints));
-      result.then((errorHints) => callback(errorHints.errorHints)).catch((arg0) => {
-        callback([]);
-        logger.error("Failed to start console quest", arg0);
-        obj = closure_1_1(closure_1_2[10]);
-        obj = { key: "START_DEFIBRILLATOR_ERROR", content: null, icon: null };
-        const intl = closure_1_0(closure_1_2[11]).intl;
-        obj[1] = intl.string(closure_1_0(closure_1_2[11]).t.CKsXk3);
-        obj[2] = closure_1_1(closure_1_2[12]);
-        obj.open(obj);
-      }).finally(() => callback2(false));
-    }, items6)
+      result
+        .then((errorHints) => callback(errorHints.errorHints))
+        .catch((arg0) => {
+          callback([]);
+          logger.error("Failed to start console quest", arg0);
+          obj = closure_1_1(closure_1_2[10]);
+          obj = { key: "START_DEFIBRILLATOR_ERROR", content: null, icon: null };
+          const intl = closure_1_0(closure_1_2[11]).intl;
+          obj[1] = intl.string(closure_1_0(closure_1_2[11]).t.CKsXk3);
+          obj[2] = closure_1_1(closure_1_2[12]);
+          obj.open(obj);
+        })
+        .finally(() => callback2(false));
+    }, items6),
   };
   const userStatus2 = quest.userStatus;
   let completedAt1;
@@ -277,7 +296,11 @@ function useEnrolledQuestContentProps(quest) {
     defibrillator: obj1,
     step: tmp32,
     stepActions: tmp33,
-    showMicrophone: null == completedAt1 && !isQuestProgressing && tmp6[0] === quest(5390).TaskPlatformScreen.CONSOLE && !hasWatchVideoOnMobileTasks,
+    showMicrophone:
+      null == completedAt1 &&
+      !isQuestProgressing &&
+      tmp6[0] === quest(5390).TaskPlatformScreen.CONSOLE &&
+      !hasWatchVideoOnMobileTasks,
     handleTaskSelect(arg0) {
       if (arg0 === showConsoleSelect.CONSOLE) {
         let DESELECT_PLATFORM = quest(7473).QuestContentCTA.SELECT_CONSOLE_PLATFORM;
@@ -290,9 +313,22 @@ function useEnrolledQuestContentProps(quest) {
         tmp4 = quest;
       }
       let tmp4Result = tmp4(8998);
-      if (tmp4Result.shouldMigrateToAdAnalyticsInterface(tmp4(8998).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet")) {
+      if (
+        tmp4Result.shouldMigrateToAdAnalyticsInterface(
+          tmp4(8998).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+          "quest_bottom_sheet",
+        )
+      ) {
         tmp4Result = tmp4(8999);
-        obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null };
+        obj = {
+          type: null,
+          adCreativeType: null,
+          adCreativeId: null,
+          questContentCTA: null,
+          surfaceId: null,
+          sourceQuestContent: null,
+          impressionId: null,
+        };
         obj[0] = tmp4(9003).AdUserActionType.CLICK_INTERNAL;
         obj[1] = tmp4(7446).AdCreativeType.QUEST;
         obj[2] = quest.id;
@@ -310,7 +346,7 @@ function useEnrolledQuestContentProps(quest) {
         dependencyMap(obj);
       }
       callback(arg0);
-    }
+    },
   };
   return obj2;
 }
@@ -328,7 +364,7 @@ class QuestBottomSheetContent {
     obj = require("useDeliveredDockCreative");
     hasWatchVideoOnMobileTasks = obj.useHasWatchVideoOnMobileTasks(quest.config);
     closure_2 = hasWatchVideoOnMobileTasks;
-    items = [, , ];
+    items = [, ,];
     items[0] = quest;
     items[1] = hasWatchVideoOnMobileTasks;
     items[2] = sourceQuestContent;
@@ -367,7 +403,7 @@ class QuestBottomSheetContent {
       obj[0] = global.handleTaskSelect;
       tmp7 = jsx(require("QuestBottomSheetTaskSelect"), obj);
     }
-    items1 = [, , ];
+    items1 = [, ,];
     items1[0] = tmp7;
     tmp10 = step === tmp6.CONSOLE_CONNECT;
     if (tmp10) {
@@ -382,7 +418,7 @@ class QuestBottomSheetContent {
     items1[1] = tmp10;
     tmp4Result = step === tmp6.TASK_STATUS;
     if (tmp4Result) {
-      items2 = [, ];
+      items2 = [,];
       items2[0] = memo;
       tmp14 = View;
       if (flag) {
@@ -424,7 +460,12 @@ function MicrophoneUnit(arg0) {
   if (num > 0) {
     if (null != errorHints) {
       const items = [];
-      items[HermesBuiltin.arraySpread(errorHints.map((message) => message.message), 0)] = obj.useQuestHowToHelpArticle().message;
+      items[
+        HermesBuiltin.arraySpread(
+          errorHints.map((message) => message.message),
+          0,
+        )
+      ] = obj.useQuestHowToHelpArticle().message;
       let items3 = items;
     }
     obj = { style: null, children: null };
@@ -437,7 +478,7 @@ function MicrophoneUnit(arg0) {
     }
     obj1 = { color: null };
     obj1[0] = str;
-    const items1 = [closure_10(tmp2(8736).WarningIcon, obj1), ];
+    const items1 = [closure_10(tmp2(8736).WarningIcon, obj1)];
     const intl2 = tmp2(1236).intl;
     if (tmp4) {
       const obj2 = { gameTitle: null };
@@ -450,7 +491,10 @@ function MicrophoneUnit(arg0) {
     obj3[2] = formatToPlainStringResult;
     items1[1] = closure_10(tmp2(4474).Text, obj3);
     obj[1] = items1;
-    const items2 = [closure_11(View, obj), items3.map((children) => callback2(callback(table[35]).Text, { variant: "text-sm/normal", children }, arg1))];
+    const items2 = [
+      closure_11(View, obj),
+      items3.map((children) => callback2(callback(table[35]).Text, { variant: "text-sm/normal", children }, arg1)),
+    ];
     obj[1] = items2;
     return closure_11(View, obj);
   }
@@ -469,8 +513,21 @@ let c4 = importDefaultResult;
 ({ QuestsExperimentLocations: closure_8, QuestTaskPlatform: c9 } = QuestsExperimentLocations);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 let obj = { TASK_SELECT: "TASK_SELECT", CONSOLE_CONNECT: "CONSOLE_CONNECT", TASK_STATUS: "TASK_STATUS" };
-obj = { contentContainer: { display: "flex", paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 }, microphoneUnit: null, microphoneUnitHeader: null };
-createCacheKey = { display: "flex", gap: ThemesDefault.space.PX_8, marginHorizontal: -ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+obj = {
+  contentContainer: { display: "flex", paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 },
+  microphoneUnit: null,
+  microphoneUnitHeader: null,
+};
+createCacheKey = {
+  display: "flex",
+  gap: ThemesDefault.space.PX_8,
+  marginHorizontal: -ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  marginTop: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_16,
+  borderTopWidth: 1,
+  borderTopColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 obj[1] = createCacheKey;
 let obj1 = { display: "flex", paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 };
 obj[2] = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
@@ -487,7 +544,14 @@ export default function QuestBottomSheetConnected(questContentPosition) {
   stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getQuest(closure_0));
   let tmp4 = null;
   if (null != stateFromStores) {
-    obj = { overrideVisibility: true, questOrQuests: null, questContent: null, questContentPosition: null, sourceQuestContent: null, children: null };
+    obj = {
+      overrideVisibility: true,
+      questOrQuests: null,
+      questContent: null,
+      questContentPosition: null,
+      sourceQuestContent: null,
+      children: null,
+    };
     obj[1] = stateFromStores;
     obj[2] = tmp(tmp2[15]).QuestContent.QUEST_BOTTOM_SHEET;
     obj[3] = questContentPosition.questContentPosition;
@@ -498,7 +562,7 @@ export default function QuestBottomSheetConnected(questContentPosition) {
     tmp4 = callback2(tmp(tmp2[18]).QuestContentImpressionTrackerNative, obj);
   }
   return tmp4;
-};
+}
 export const QuestBottomSheetStep = obj;
 export { useEnrolledQuestContentProps };
 export { QuestBottomSheetContent };

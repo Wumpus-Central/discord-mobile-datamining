@@ -21,10 +21,12 @@ function handleMutationFailure() {
   closure_7.membersData.isUpdating = false;
 }
 ({ PremiumGroupAPIErrorCodes: c4, TOTAL_PREMIUM_GROUP_MEMBER_SEATS: c5 } = SubscriptionStatusTypes);
-let closure_7 = { membersData: { data: null, isFetching: false, isUpdating: false }, membershipData: { data: null, isFetching: false, hasFetched: false } };
+let closure_7 = {
+  membersData: { data: null, isFetching: false, isUpdating: false },
+  membershipData: { data: null, isFetching: false, hasFetched: false },
+};
 const Store = initializeDefault.Store;
-class PremiumGroupStore extends Store {
-}
+class PremiumGroupStore extends Store {}
 const prototype = PremiumGroupStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3);
@@ -62,7 +64,10 @@ prototype["getNumAvailableInvites"] = function getNumAvailableInvites() {
     return closure_5;
   } else {
     const _Math = Math;
-    return Math.max(0, closure_5 - (closure_7.membersData.data.members.length + closure_7.membersData.data.invitedUsers.length));
+    return Math.max(
+      0,
+      closure_5 - (closure_7.membersData.data.members.length + closure_7.membersData.data.invitedUsers.length),
+    );
   }
 };
 prototype["getNumTotalSeats"] = function getNumTotalSeats() {
@@ -145,8 +150,11 @@ const premiumGroupStore = new PremiumGroupStore(dispatcherDefault, {
     }
   },
   LOGOUT: function reset() {
-    closure_7 = { membersData: { data: null, isFetching: false, isUpdating: false }, membershipData: { data: null, isFetching: false, hasFetched: false } };
-  }
+    closure_7 = {
+      membersData: { data: null, isFetching: false, isUpdating: false },
+      membershipData: { data: null, isFetching: false, hasFetched: false },
+    };
+  },
 });
 const result = require("set").fileFinishedImporting("modules/premium/premium_group/PremiumGroupStore.tsx");
 

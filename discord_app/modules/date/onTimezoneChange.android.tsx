@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/date/onTimezoneChange.android.
 
 export default function onTimezoneChange(arg0) {
   enforcingDefault.onTimezoneChange(arg0);
-};
+}

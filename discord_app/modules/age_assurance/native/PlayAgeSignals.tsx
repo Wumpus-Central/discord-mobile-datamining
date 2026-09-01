@@ -4,7 +4,7 @@ import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 const require = arg1;
 function _getAgeSignals() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();
@@ -38,7 +38,9 @@ function _getAgeSignals() {
             } else {
               (function applyFakeAgeSignalsScenarioFromExperiment() {
                 if (null != v1(table[1])) {
-                  const fakePlayAgeSignalsConfig = v3(tmp2[2]).getFakePlayAgeSignalsConfig("PlayAgeSignals.getAgeSignals");
+                  const fakePlayAgeSignalsConfig = v3(tmp2[2]).getFakePlayAgeSignalsConfig(
+                    "PlayAgeSignals.getAgeSignals",
+                  );
                   ({ enabled, scenario } = fakePlayAgeSignalsConfig);
                   const obj = v3(tmp2[2]);
                   let str2 = "";

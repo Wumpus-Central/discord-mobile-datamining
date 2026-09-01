@@ -8,12 +8,20 @@ const result = require("set").fileFinishedImporting("modules/activities/useDevel
 
 export const useDeveloperActivityShelfItems = function useDeveloperActivityShelfItems() {
   const items = [closure_3];
-  const stateFromStoresObject = isEnabled(lastUsedObject[3]).useStateFromStoresObject(items, () => ({ isEnabled: store.getIsEnabled(), lastUsedObject: store.getLastUsedObject() }), []);
+  const stateFromStoresObject = isEnabled(lastUsedObject[3]).useStateFromStoresObject(
+    items,
+    () => ({ isEnabled: store.getIsEnabled(), lastUsedObject: store.getLastUsedObject() }),
+    [],
+  );
   isEnabled = stateFromStoresObject.isEnabled;
   lastUsedObject = stateFromStoresObject.lastUsedObject;
   let obj = isEnabled(lastUsedObject[3]);
   const items1 = [closure_3];
-  const stateFromStoresArray = isEnabled(lastUsedObject[3]).useStateFromStoresArray(items1, () => store.getDeveloperShelfItems(), []);
+  const stateFromStoresArray = isEnabled(lastUsedObject[3]).useStateFromStoresArray(
+    items1,
+    () => store.getDeveloperShelfItems(),
+    [],
+  );
   const items2 = [stateFromStoresArray, isEnabled, lastUsedObject];
   return stateFromStoresArray.useMemo(() => {
     if (isEnabled) {

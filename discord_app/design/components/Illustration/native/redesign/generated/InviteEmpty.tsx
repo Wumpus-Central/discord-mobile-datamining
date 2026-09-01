@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/InviteEmpty.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/InviteEmpty.tsx",
+);
 
 export const getInviteEmptySource = function getInviteEmptySource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getInviteEmptySource = function getInviteEmptySource(theme) {
     },
     light() {
       return callback(10686);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useInviteEmptySource = function useInviteEmptySource() {
     },
     light() {
       return callback(10686);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const InviteEmpty = function InviteEmpty(arg0) {
     },
     light() {
       return callback(10686);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

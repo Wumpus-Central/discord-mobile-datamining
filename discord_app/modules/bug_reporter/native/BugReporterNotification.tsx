@@ -51,7 +51,7 @@ export const BugReporterNotification = function BugReporterNotification(notifica
       obj = { screen: constants.OVERVIEW };
       obj.openUserSettings(obj);
     },
-    notification
+    notification,
   };
   return jsx(notification(10255).NotificationPressable, {
     header: memo,
@@ -80,6 +80,6 @@ export const BugReporterNotification = function BugReporterNotification(notifica
       obj = { screen: constants.OVERVIEW };
       obj.openUserSettings(obj);
     },
-    notification
+    notification,
   });
 };

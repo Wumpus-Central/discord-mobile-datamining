@@ -15,19 +15,52 @@ function UserRow(user) {
   let obj = user(8904);
   const avatarDecoration = obj.useAvatarDecoration(user, channel.guild_id);
   const items = [closure_3];
-  const stateFromStoresObject = user(589).useStateFromStoresObject(items, () => ({ status: closure_1_3.getStatus(user.id), isMobileOnline: closure_1_3.isMobileOnline(user.id), isVROnline: closure_1_3.isVROnline(user.id) }));
+  const stateFromStoresObject = user(589).useStateFromStoresObject(items, () => ({
+    status: closure_1_3.getStatus(user.id),
+    isMobileOnline: closure_1_3.isMobileOnline(user.id),
+    isVROnline: closure_1_3.isVROnline(user.id),
+  }));
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   obj = { onPress, label: null, icon: null, start: null, end: null };
   const obj2 = user(589);
   obj[1] = getNicknameDefault.getName(channel.guild_id, channel.id, user);
-  obj = { user, avatarDecoration, size: user(1297).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true };
-  obj[2] = jsx(user(1297).Avatar, { user, avatarDecoration, size: user(1297).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
+  obj = {
+    user,
+    avatarDecoration,
+    size: user(1297).AvatarSizes.REFRESH_MEDIUM_32,
+    guildId: channel.guild_id,
+    status,
+    isMobileOnline,
+    isVROnline,
+    autoStatusCutout: true,
+  };
+  obj[2] = jsx(user(1297).Avatar, {
+    user,
+    avatarDecoration,
+    size: user(1297).AvatarSizes.REFRESH_MEDIUM_32,
+    guildId: channel.guild_id,
+    status,
+    isMobileOnline,
+    isVROnline,
+    autoStatusCutout: true,
+  });
   obj[3] = start;
   obj[4] = end;
-  return jsx(user(5599).TableRow, { user, avatarDecoration, size: user(1297).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
+  return jsx(user(5599).TableRow, {
+    user,
+    avatarDecoration,
+    size: user(1297).AvatarSizes.REFRESH_MEDIUM_32,
+    guildId: channel.guild_id,
+    status,
+    isMobileOnline,
+    isVROnline,
+    autoStatusCutout: true,
+  });
 }
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileActivityVoiceChannelUsers.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_profile/native/UserProfileActivityVoiceChannelUsers.tsx",
+);
 
 export default function UserProfileActivityVoiceChannelUsers(arg0) {
   ({ channel: require, onPressUser: importDefault } = arg0);
@@ -43,16 +76,20 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
     },
     renderItem(item) {
       item = item.item;
-      return closure_1_4(closure_1_5, {
-        user: item,
-        channel: item,
-        onPress() {
-          return closure_1_1(item.id);
+      return closure_1_4(
+        closure_1_5,
+        {
+          user: item,
+          channel: item,
+          onPress() {
+            return closure_1_1(item.id);
+          },
+          start: item.start,
+          end: item.end,
         },
-        start: item.start,
-        end: item.end
-      }, item.id);
-    }
+        item.id,
+      );
+    },
   };
   obj[3] = jsx(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, {
     data: users,
@@ -61,16 +98,20 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
     },
     renderItem(item) {
       item = item.item;
-      return closure_1_4(closure_1_5, {
-        user: item,
-        channel: item,
-        onPress() {
-          return closure_1_1(item.id);
+      return closure_1_4(
+        closure_1_5,
+        {
+          user: item,
+          channel: item,
+          onPress() {
+            return closure_1_1(item.id);
+          },
+          start: item.start,
+          end: item.end,
         },
-        start: item.start,
-        end: item.end
-      }, item.id);
-    }
+        item.id,
+      );
+    },
   });
   return jsx(UserProfileStackedActionSheetDefault, {
     data: users,
@@ -79,15 +120,19 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
     },
     renderItem(item) {
       item = item.item;
-      return closure_1_4(closure_1_5, {
-        user: item,
-        channel: item,
-        onPress() {
-          return closure_1_1(item.id);
+      return closure_1_4(
+        closure_1_5,
+        {
+          user: item,
+          channel: item,
+          onPress() {
+            return closure_1_1(item.id);
+          },
+          start: item.start,
+          end: item.end,
         },
-        start: item.start,
-        end: item.end
-      }, item.id);
-    }
+        item.id,
+      );
+    },
   });
-};
+}

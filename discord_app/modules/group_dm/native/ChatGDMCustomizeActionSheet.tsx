@@ -21,4 +21,4 @@ export default function ChatGDMCustomizeActionSheet(channelId) {
     return closure_1_3(_undefined(_undefined2[5]), { ref: _undefined2, onFinish: _undefined, channelId });
   };
   return jsx(_modDef10661, { screenKey: "kick", title: null, render: null });
-};
+}

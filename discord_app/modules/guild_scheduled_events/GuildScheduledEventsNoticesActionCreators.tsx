@@ -2,7 +2,9 @@
 import set from "../../../_runtime/00002_set.js";
 import dispatcherDefault from "../../Dispatcher.tsx";
 
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventsNoticesActionCreators.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_scheduled_events/GuildScheduledEventsNoticesActionCreators.tsx",
+);
 
 export const hideLiveChannelNotice = function hideLiveChannelNotice(arg0) {
   ({ eventId, stageId } = arg0);

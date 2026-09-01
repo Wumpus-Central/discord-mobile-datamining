@@ -25,11 +25,15 @@ function ViewDebugLogsActionSheetRow(icon) {
       obj.hideActionSheet(closure_1_7);
       obj = {
         default() {
-          return closure_1_5(closure_1_1(closure_1_2[6]), { title: closure_0, render: closure_2, screenKey: closure_1 });
-        }
+          return closure_1_5(closure_1_1(closure_1_2[6]), {
+            title: closure_0,
+            render: closure_2,
+            screenKey: closure_1,
+          });
+        },
       };
       closure_1_1(closure_1_2[5]).pushLazy(Promise.resolve(obj));
-    }
+    },
   });
 }
 function ViewDebugLogsActionSheet() {
@@ -44,7 +48,7 @@ function ViewDebugLogsActionSheet() {
   obj[3] = function render() {
     return callback2(callback(15163), {});
   };
-  const items = [callback(ViewDebugLogsActionSheetRow, obj), , ];
+  const items = [callback(ViewDebugLogsActionSheetRow, obj), ,];
   obj1 = { icon: callback(ClockIcon.ClockIcon, {}), title: null, screenKey: "startupTiming", render: null };
   const intl3 = getSystemLocale.intl;
   obj1[1] = intl3.string(getSystemLocale.t.b0nJvk);
@@ -85,7 +89,7 @@ const pressable = createToggle.createPressable({
     obj = { default: ViewDebugLogsActionSheet };
     obj.openLazy(Promise.resolve(obj), ViewDebugLogsActionSheet);
   },
-  withArrow: true
+  withArrow: true,
 });
 let obj = {
   useTitle() {
@@ -101,7 +105,7 @@ let obj = {
     obj = { default: ViewDebugLogsActionSheet };
     obj.openLazy(Promise.resolve(obj), ViewDebugLogsActionSheet);
   },
-  withArrow: true
+  withArrow: true,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ViewDebugLogsSetting.tsx");
 

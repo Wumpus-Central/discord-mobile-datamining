@@ -95,7 +95,7 @@ let obj = {
     if (!obj.isIOS()) {
       logger.warn("Marking potential bad state from user, check logs above.");
     }
-  }
+  },
 };
 const tmp2 = new timestampDefault("KeyboardStateDebugging");
 const result = require("set").fileFinishedImporting("modules/keyboard/KeyboardStateDebugging.tsx");

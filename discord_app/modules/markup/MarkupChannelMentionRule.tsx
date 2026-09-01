@@ -18,7 +18,13 @@ require = arg1;
 function getChannel(id, arr) {
   const _require = id;
   const channel = store.getChannel(id);
-  const isSubscriptionGated = require("../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx").getChannelRoleSubscriptionStatus(id, store, closure_3, closure_6).isSubscriptionGated;
+  const isSubscriptionGated =
+    require("../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx").getChannelRoleSubscriptionStatus(
+      id,
+      store,
+      closure_3,
+      closure_6,
+    ).isSubscriptionGated;
   const obj2 = getChannelRoleSubscriptionStatus;
   let str = require("../../utils/ChannelUtils.tsx").getMentionIconType(channel);
   if (str == null) {
@@ -27,7 +33,19 @@ function getChannel(id, arr) {
   if (null != arr) {
     const found = arr.find((id) => id.id === closure_0);
     if (null != found) {
-      let obj = { type: null, id: null, guildId: null, name: null, isDm: null, isForumPost: null, isMentionable: true, canViewChannel: true, roleSubscriptionGated: null, iconType: null, parentId: null };
+      let obj = {
+        type: null,
+        id: null,
+        guildId: null,
+        name: null,
+        isDm: null,
+        isForumPost: null,
+        isMentionable: true,
+        canViewChannel: true,
+        roleSubscriptionGated: null,
+        iconType: null,
+        parentId: null,
+      };
       ({ type: obj8[0], id: obj8[1], guild_id: obj8[2], name: obj8[3] } = found);
       obj[4] = null != channel && channel.isPrivate();
       const tmp7 = null != channel && channel.isPrivate();
@@ -44,7 +62,19 @@ function getChannel(id, arr) {
   }
   let tmp4 = null;
   if (null != channel) {
-    obj = { type: null, id: null, guildId: null, name: null, isDm: null, isForumPost: null, isMentionable: null, canViewChannel: null, roleSubscriptionGated: null, iconType: null, parentId: null };
+    obj = {
+      type: null,
+      id: null,
+      guildId: null,
+      name: null,
+      isDm: null,
+      isForumPost: null,
+      isMentionable: null,
+      canViewChannel: null,
+      roleSubscriptionGated: null,
+      iconType: null,
+      parentId: null,
+    };
     ({ type: obj4[0], id: obj4[1], guild_id: obj4[2] } = channel);
     let tmpResult = tmp(4674);
     obj[3] = tmpResult.computeChannelName(channel, closure_8, closure_7);
@@ -260,7 +290,14 @@ function parseChannel(canViewChannel) {
       UNKNOWN = constants.UNKNOWN;
     }
     obj[2] = UNKNOWN;
-    const obj22 = { type: "channelMention", guildId: null, channelId: null, messageId: null, inContent: null, content: null };
+    const obj22 = {
+      type: "channelMention",
+      guildId: null,
+      channelId: null,
+      messageId: null,
+      inContent: null,
+      content: null,
+    };
     ({ guildId: obj3[1], id: obj3[2] } = canViewChannel);
     obj22[3] = arg1;
     const items18 = [obj];
@@ -302,7 +339,7 @@ obj = {
       }
       return tmp5Result;
     }
-  }
+  },
 };
 obj[0] = obj;
 obj = {
@@ -358,7 +395,7 @@ obj = {
       }
       return tmp5Result;
     }
-  }
+  },
 };
 obj[1] = obj;
 obj[2] = {
@@ -406,7 +443,7 @@ obj[2] = {
     }
     const content = [{ type: "text", content: target }];
     return { type: "link", content, target, title: "category" };
-  }
+  },
 };
 let obj1 = {
   order: tDefault.defaultRules.url.order - 0.5,
@@ -453,7 +490,7 @@ let obj1 = {
     }
     const content = [{ type: "text", content: target }];
     return { type: "link", content, target, title: "category" };
-  }
+  },
 };
 const result = require("set").fileFinishedImporting("modules/markup/MarkupChannelMentionRule.tsx");
 

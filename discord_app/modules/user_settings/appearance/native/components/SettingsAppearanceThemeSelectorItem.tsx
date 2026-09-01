@@ -26,7 +26,7 @@ function GradientThemeBackground(arg0) {
   let obj = isThemeLight;
   const isThemeDarkResult = obj.isThemeDark(item.theme);
   const tmp4 = callback3(isThemeDarkResult);
-  const items = [tmp4.themeSelectorGradientBackground, ];
+  const items = [tmp4.themeSelectorGradientBackground];
   obj = isThemeLocked;
   if (isThemeLocked) {
     obj = { opacity: 0.5 };
@@ -38,7 +38,7 @@ function GradientThemeBackground(arg0) {
   obj1[0] = obj2;
   obj1[1] = item;
   obj1[3] = isThemeDarkResult ? closure_10 : closure_11;
-  const items1 = [closure_6(getMixedGradientColorDefault, obj1), ];
+  const items1 = [closure_6(getMixedGradientColorDefault, obj1)];
   if (isThemeLocked) {
     const obj3 = { source: null, style: null };
     obj3[0] = registerAssetDefault;
@@ -64,7 +64,14 @@ function DefaultThemeBackground(item) {
   tmpResult = tmp(4197);
   const token1 = tmpResult.useToken(ThemesDefault.colors.BORDER_STRONG, theme);
   obj = { style: null, children: null };
-  obj = { width: "100%", height: "100%", backgroundColor: token, borderColor: token1, borderWidth: 1, borderRadius: null };
+  obj = {
+    width: "100%",
+    height: "100%",
+    backgroundColor: token,
+    borderColor: token1,
+    borderWidth: 1,
+    borderRadius: null,
+  };
   const token2 = map.useToken(ThemesDefault.colors.ICON_STRONG, theme);
   obj[5] = ThemesDefault.radii.sm;
   obj[0] = obj;
@@ -85,15 +92,20 @@ function CustomThemeBackground(arg0) {
   let obj = isThemeLight;
   const isThemeDarkResult = obj.isThemeDark(item.theme);
   const tmp4 = callback3(isThemeDarkResult);
-  const items = [tmp4.themeSelectorGradientBackground, ];
+  const items = [tmp4.themeSelectorGradientBackground];
   obj = isThemeLocked;
   if (isThemeLocked) {
     obj = { opacity: 0.5 };
   }
   obj = { style: items, children: null };
   items[1] = obj;
-  obj1 = { componentStyles: { borderRadius: ThemesDefault.radii.sm }, mix: true, mixColorOverride: isThemeDarkResult ? closure_10 : closure_11, customTheme: item };
-  const items1 = [closure_6(getMixedGradientColor.CustomThemedGradient, obj1), ];
+  obj1 = {
+    componentStyles: { borderRadius: ThemesDefault.radii.sm },
+    mix: true,
+    mixColorOverride: isThemeDarkResult ? closure_10 : closure_11,
+    customTheme: item,
+  };
+  const items1 = [closure_6(getMixedGradientColor.CustomThemedGradient, obj1)];
   if (isThemeLocked) {
     const obj3 = { source: null, style: null };
     obj3[0] = registerAssetDefault;
@@ -112,10 +124,21 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: importDefaultResult.THEME_ITEM_WIDTH, height: importDefaultResult.THEME_ITEM_HEIGHT };
 createCacheKey[2] = { borderRadius: ThemesDefault.radii.sm, padding: importDefaultResult.THEME_ITEM_PADDING };
 let obj1 = { borderRadius: ThemesDefault.radii.sm, padding: importDefaultResult.THEME_ITEM_PADDING };
-createCacheKey[3] = { backgroundColor: ThemesDefault.unsafe_rawColors.RED_430, width: 12, height: 12, borderRadius: ThemesDefault.radii.sm, position: "absolute", top: 0, right: 0 };
+createCacheKey[3] = {
+  backgroundColor: ThemesDefault.unsafe_rawColors.RED_430,
+  width: 12,
+  height: 12,
+  borderRadius: ThemesDefault.radii.sm,
+  position: "absolute",
+  top: 0,
+  right: 0,
+};
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  const obj = { themeSelectorGradientBackground: { justifyContent: "center", width: "100%", height: "100%" }, lock: null };
+  const obj = {
+    themeSelectorGradientBackground: { justifyContent: "center", width: "100%", height: "100%" },
+    lock: null,
+  };
   const internal = ThemesDefault.internal;
   const resolveSemanticColor = internal.resolveSemanticColor;
   if (arg0) {
@@ -126,12 +149,22 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   obj[1] = { position: "absolute", alignSelf: "center", opacity: 0.6, tintColor: semanticColor };
   return obj;
 });
-let obj2 = { backgroundColor: ThemesDefault.unsafe_rawColors.RED_430, width: 12, height: 12, borderRadius: ThemesDefault.radii.sm, position: "absolute", top: 0, right: 0 };
+let obj2 = {
+  backgroundColor: ThemesDefault.unsafe_rawColors.RED_430,
+  width: 12,
+  height: 12,
+  borderRadius: ThemesDefault.radii.sm,
+  position: "absolute",
+  top: 0,
+  right: 0,
+};
 let closure_10 = new hslToRgbDefault(0, 0, 0, 0.2);
 const tmp5 = new hslToRgbDefault(0, 0, 0, 0.2);
 let closure_11 = new hslToRgbDefault(255, 255, 255, 0.5);
 const tmp6 = new hslToRgbDefault(255, 255, 255, 0.5);
-const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceThemeSelectorItem.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/appearance/native/components/SettingsAppearanceThemeSelectorItem.tsx",
+);
 
 export default function ThemeSelectorItem(onPress) {
   ({ themePreset, isPreview, isSelected, isNew } = onPress);
@@ -159,7 +192,16 @@ export default function ThemeSelectorItem(onPress) {
   }
   const radioA11yNative = useCheckboxA11yNative.useRadioA11yNative({ selected: isSelected, disabled: isPreview });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  obj1 = { style: tmp.themeSelectorItemContainer, androidRippleConfig: tmp.rippleColor, onPress: onPress.onPress, accessibilityRole, accessibilityLabel: themePreset.getName(), accessibilityState, accessibilityHint: null, children: null };
+  obj1 = {
+    style: tmp.themeSelectorItemContainer,
+    androidRippleConfig: tmp.rippleColor,
+    onPress: onPress.onPress,
+    accessibilityRole,
+    accessibilityLabel: themePreset.getName(),
+    accessibilityState,
+    accessibilityHint: null,
+    children: null,
+  };
   let stringResult;
   if (isPreview) {
     const intl = tmp4(1236).intl;
@@ -167,7 +209,7 @@ export default function ThemeSelectorItem(onPress) {
   }
   obj1[6] = stringResult;
   const obj2 = { style: tmp.themeSelectorItem, children: null };
-  const items = [tmp8, ];
+  const items = [tmp8];
   if (isNew) {
     isNew = !isSelected;
   }
@@ -180,4 +222,4 @@ export default function ThemeSelectorItem(onPress) {
   obj2[1] = items;
   obj1[7] = closure_7(View, obj2);
   return tmp9(PressableBase.PressableOpacity, obj1);
-};
+}

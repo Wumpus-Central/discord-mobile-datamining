@@ -21,7 +21,7 @@ const toggle = createToggle.createToggle({
   onValueChange: onFriendAnniversaryNotificationSettingsChanged.onFriendAnniversaryNotificationSettingsChanged,
   usePredicate() {
     return apexExperimentDefault.useConfig({ location: "FriendAnniversaryNotificationSetting" }).enabled;
-  }
+  },
 });
 const obj = {
   useTitle() {
@@ -37,7 +37,7 @@ const obj = {
   onValueChange: onFriendAnniversaryNotificationSettingsChanged.onFriendAnniversaryNotificationSettingsChanged,
   usePredicate() {
     return apexExperimentDefault.useConfig({ location: "FriendAnniversaryNotificationSetting" }).enabled;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/FriendAnniversaryNotificationSetting.tsx");
 

@@ -5,7 +5,9 @@ import RegistrationTransitionActionTypes from "../../../RegistrationConstants.ts
 
 const require = arg1;
 ({ RegisterTransitionSteps: c4, RegistrationTransitionActionTypes: c5 } = RegistrationTransitionActionTypes);
-const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx",
+);
 
 export const useIsHCaptchaModalOpenTracking = function useIsHCaptchaModalOpenTracking() {
   context = React.useContext(context(15534).TrackRegistrationContext);

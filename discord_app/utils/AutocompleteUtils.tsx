@@ -76,14 +76,16 @@ function getMatchValue(toLocaleLowerCaseResult1, nextResult, flag) {
       return num5;
     } else if (containQuery.test(toLocaleLowerCaseResult1)) {
       return 5;
-    } else if ((function multiTokenMatch(queryLower, toLocaleLowerCaseResult1) {
-      closure_0 = toLocaleLowerCaseResult1;
-      const parts = queryLower.split(/(?:,| )+/);
-      return parts.every((arg0) => {
-        const regExp = new RegExp(closure_1_1(closure_1_3[31]).escape(arg0), "i");
-        return regExp.test(closure_0);
-      });
-    })(queryLower, toLocaleLowerCaseResult1)) {
+    } else if (
+      (function multiTokenMatch(queryLower, toLocaleLowerCaseResult1) {
+        closure_0 = toLocaleLowerCaseResult1;
+        const parts = queryLower.split(/(?:,| )+/);
+        return parts.every((arg0) => {
+          const regExp = new RegExp(closure_1_1(closure_1_3[31]).escape(arg0), "i");
+          return regExp.test(closure_0);
+        });
+      })(queryLower, toLocaleLowerCaseResult1)
+    ) {
       return 3;
     } else {
       if (flag) {
@@ -160,7 +162,7 @@ function queryMemberList(arg0) {
           } else {
             let tmp16Result = tmp16(1902);
             let stripDiacriticsResult = tmp16Result.stripDiacritics(str);
-            items2 = [stripDiacriticsResult, ];
+            items2 = [stripDiacriticsResult];
             tmp16Result = tmp16(1902);
             items2[1] = tmp16Result.normalize(stripDiacriticsResult);
           }
@@ -172,7 +174,7 @@ function queryMemberList(arg0) {
           } else {
             let tmp16Result1 = tmp16(1902);
             let stripDiacriticsResult1 = tmp16Result1.stripDiacritics(str2);
-            items3 = [stripDiacriticsResult1, ];
+            items3 = [stripDiacriticsResult1];
             let tmp16Result2 = tmp16(1902);
             items3[1] = tmp16Result2.normalize(stripDiacriticsResult1);
           }
@@ -214,7 +216,8 @@ function queryMemberList(arg0) {
                             if (substr5 !== normalizeResult) {
                               let tmp33 = num < 50;
                               if (num < 50) {
-                                let tmp28 = tmp12(5454)(toLocaleLowerCaseResult, str4) || tmp12(5454)(normalizeResult, str5);
+                                let tmp28 =
+                                  tmp12(5454)(toLocaleLowerCaseResult, str4) || tmp12(5454)(normalizeResult, str5);
                                 if (!tmp28) {
                                   let tmp29 = null != str6 && tmp12(5454)(toLocaleLowerCaseResult, str6);
                                   tmp28 = tmp29;
@@ -441,7 +444,15 @@ function getCategoryName(parent_id) {
   }
 }
 ({ InAppNavigationRecord: c5, InAppNavigationType: closure_6 } = fromType);
-({ ChannelRecordBase: map1, isGuildChannelType: closure_14, isGuildSelectableChannelType: closure_15, isGuildVocalChannelType: closure_16, isThread: closure_17, PrivateChannelRecord: closure_18, UnknownChannelRecord: closure_19 } = createChannelRecord);
+({
+  ChannelRecordBase: map1,
+  isGuildChannelType: closure_14,
+  isGuildSelectableChannelType: closure_15,
+  isGuildVocalChannelType: closure_16,
+  isThread: closure_17,
+  PrivateChannelRecord: closure_18,
+  UnknownChannelRecord: closure_19,
+} = createChannelRecord);
 const GUILD_SELECTABLE_CHANNELS_KEY = comparator.GUILD_SELECTABLE_CHANNELS_KEY;
 const GUILD_VOCAL_CHANNELS_KEY = comparator.GUILD_VOCAL_CHANNELS_KEY;
 ({ Permissions: closure_38, GuildFeatures: closure_39, ChannelTypes } = ME);
@@ -488,7 +499,10 @@ prototype["isStale"] = function isStale() {
   const version = store.getVersion();
   const version1 = store6.getVersion();
   const privateChannelsVersion = authStore.getPrivateChannelsVersion();
-  let flag = this.lastFrecencyVersion !== version || self.lastRelationshipVersion !== version1 || self.lastPrivateChannelsVersion !== privateChannelsVersion;
+  let flag =
+    this.lastFrecencyVersion !== version ||
+    self.lastRelationshipVersion !== version1 ||
+    self.lastPrivateChannelsVersion !== privateChannelsVersion;
   if (flag) {
     self.lastFrecencyVersion = version;
     self.lastRelationshipVersion = version1;
@@ -519,11 +533,15 @@ prototype["build"] = function build(arg0) {
     });
   } else {
     if (tmp3.GROUP_DM === arg0) {
-      found = frequentlyWithoutFetchingLatest.filter((isMultiUserDM) => isMultiUserDM instanceof closure_13 && isMultiUserDM.isMultiUserDM());
+      found = frequentlyWithoutFetchingLatest.filter(
+        (isMultiUserDM) => isMultiUserDM instanceof closure_13 && isMultiUserDM.isMultiUserDM(),
+      );
     } else if (tmp3.TEXT_CHANNEL !== arg0) {
       found = [];
       if (tmp3.VOICE_CHANNEL === arg0) {
-        found = frequentlyWithoutFetchingLatest.filter((isGuildVocal) => isGuildVocal instanceof closure_13 && isGuildVocal.isGuildVocal());
+        found = frequentlyWithoutFetchingLatest.filter(
+          (isGuildVocal) => isGuildVocal instanceof closure_13 && isGuildVocal.isGuildVocal(),
+        );
       }
     }
     found = frequentlyWithoutFetchingLatest.filter((type) => {
@@ -547,24 +565,27 @@ let closure_66 = areArraysShallowlyEqual.cachedFunction(() => {
   const tmp3 = recipientsById(12);
   const tmp3Result = recipientsById(12)(authStore.getMutablePrivateChannels());
   const iter = recipientsById(12)(authStore.getMutablePrivateChannels()).values();
-  const item = recipientsById(12)(authStore.getMutablePrivateChannels()).values().value().forEach((isDM) => {
-    if (isDM.isDM()) {
-      const recipientId = isDM.getRecipientId();
-      const user = closure_1_36.getUser(recipientId);
-      let hasItem = null == recipientId || null == user;
-      if (!hasItem) {
-        hasItem = channelsByRecipientId.has(recipientId);
+  const item = recipientsById(12)(authStore.getMutablePrivateChannels())
+    .values()
+    .value()
+    .forEach((isDM) => {
+      if (isDM.isDM()) {
+        const recipientId = isDM.getRecipientId();
+        const user = closure_1_36.getUser(recipientId);
+        let hasItem = null == recipientId || null == user;
+        if (!hasItem) {
+          hasItem = channelsByRecipientId.has(recipientId);
+        }
+        if (!hasItem) {
+          const result = channelsByRecipientId.set(recipientId, isDM);
+          const obj = { userId: null, nick: null };
+          obj[0] = recipientId;
+          obj[1] = closure_1_33.getNickname(recipientId);
+          recipients.push(obj);
+          const result1 = recipientsById.set(recipientId, user);
+        }
       }
-      if (!hasItem) {
-        const result = channelsByRecipientId.set(recipientId, isDM);
-        const obj = { userId: null, nick: null };
-        obj[0] = recipientId;
-        obj[1] = closure_1_33.getNickname(recipientId);
-        recipients.push(obj);
-        const result1 = recipientsById.set(recipientId, user);
-      }
-    }
-  });
+    });
   return { channelsByRecipientId, recipientsById, recipients };
 });
 areArraysShallowlyEqual = {
@@ -659,7 +680,9 @@ areArraysShallowlyEqual = {
                   const tmp16 = applyDefault;
                   const reversed = applyDefault(messages.toArray()).reverse();
                   const tmp16Result = applyDefault(messages.toArray());
-                  const mapped1 = reversed.uniqBy((author) => author.author.id).map((author) => user.getUser(author.author.id));
+                  const mapped1 = reversed
+                    .uniqBy((author) => author.author.id)
+                    .map((author) => user.getUser(author.author.id));
                   const found = mapped1.filter((isNonUserBot) => {
                     if (null == isNonUserBot) {
                       return false;
@@ -767,7 +790,9 @@ areArraysShallowlyEqual = {
               const tmp14 = applyDefault;
               const reversed = applyDefault(messages.toArray()).reverse();
               const tmp14Result = applyDefault(messages.toArray());
-              const mapped = reversed.uniqBy((author) => author.author.id).map((author) => user.getUser(author.author.id));
+              const mapped = reversed
+                .uniqBy((author) => author.author.id)
+                .map((author) => user.getUser(author.author.id));
               const found = mapped.filter((isNonUserBot) => {
                 if (null == isNonUserBot) {
                   return false;
@@ -841,7 +866,14 @@ areArraysShallowlyEqual = {
     if (num === undefined) {
       num = 10;
     }
-    return queryMemberList({ query, members: limit.users, limit: num, filter, allowSnowflake: limit.allowSnowflake, boosters });
+    return queryMemberList({
+      query,
+      members: limit.users,
+      limit: num,
+      filter,
+      allowSnowflake: limit.allowSnowflake,
+      boosters,
+    });
   },
   queryAllUsers(request) {
     ({ query, limit } = request);
@@ -1037,11 +1069,20 @@ areArraysShallowlyEqual = {
     items = undefined;
     const privateChannelsVersion = authStore.getPrivateChannelsVersion();
     const version = store6.getVersion();
-    ({ channelsByRecipientId: c0, recipientsById: c1, recipients } = callback3(privateChannelsVersion, version, authStore2.getUserStoreVersion()));
+    ({
+      channelsByRecipientId: c0,
+      recipientsById: c1,
+      recipients,
+    } = callback3(privateChannelsVersion, version, authStore2.getUserStoreVersion()));
     let obj = { query: limit.query, members: recipients, limit: recipients.length, boosters };
     const tmp3 = callback3(privateChannelsVersion, version, authStore2.getUserStoreVersion());
     items = [];
-    const item = queryMemberList({ query: limit.query, members: recipients, limit: recipients.length, boosters }).forEach((record) => {
+    const item = queryMemberList({
+      query: limit.query,
+      members: recipients,
+      limit: recipients.length,
+      boosters,
+    }).forEach((record) => {
       const value = _undefined.get(record.record.id);
       if (null != value) {
         const obj = { type: null, record: null, score: null, comparator: null, sortable: null };
@@ -1162,7 +1203,10 @@ areArraysShallowlyEqual = {
             let obj14 = isNullOrEmpty;
             let _Math = Math;
             let tmp39 = getMatchValue;
-            let bound = Math.min(5, getMatchValue(obj13.stripDiacritics(obj14.normalize(item10133.toLocaleLowerCase())), obj, flag));
+            let bound = Math.min(
+              5,
+              getMatchValue(obj13.stripDiacritics(obj14.normalize(item10133.toLocaleLowerCase())), obj, flag),
+            );
             let tmp41 = bound;
             let tmp42 = tmp17;
             if (bound > tmp17) {
@@ -1278,14 +1322,14 @@ areArraysShallowlyEqual = {
     items = [intl.string(getSystemLocale.t.pWG4ze)];
     obj[constants.SHOP] = items;
     const intl2 = getSystemLocale.intl;
-    const items1 = [intl2.string(getSystemLocale.t.ElYQFS), , ];
+    const items1 = [intl2.string(getSystemLocale.t.ElYQFS), ,];
     const intl3 = getSystemLocale.intl;
     items1[1] = intl3.string(getSystemLocale.t.pWG4ze);
     const intl4 = getSystemLocale.intl;
     items1[2] = intl4.string(getSystemLocale.t.EBYkzk);
     obj[constants.SHOP_ORBS_TAB] = items1;
     const intl5 = getSystemLocale.intl;
-    const items2 = [intl5.string(getSystemLocale.t.ElYQFS), , ];
+    const items2 = [intl5.string(getSystemLocale.t.ElYQFS), ,];
     const intl6 = getSystemLocale.intl;
     items2[1] = intl6.string(getSystemLocale.t["v/R2aC"]);
     const intl7 = getSystemLocale.intl;
@@ -1298,7 +1342,7 @@ areArraysShallowlyEqual = {
     const items4 = [intl9.string(getSystemLocale.t.JALI2K)];
     obj[constants.QUEST_HOME] = items4;
     const intl10 = getSystemLocale.intl;
-    const items5 = [intl10.string(getSystemLocale.t.PHjkRE), ];
+    const items5 = [intl10.string(getSystemLocale.t.PHjkRE)];
     const intl11 = getSystemLocale.intl;
     items5[1] = intl11.string(getSystemLocale.t.AKcFUj);
     obj[constants.APPS_HOME] = items5;
@@ -1514,7 +1558,13 @@ areArraysShallowlyEqual = {
     if (flag3) {
       const self = this;
       if (!flag6) {
-        let obj = { channelId: null, query: null, limit: null, checkRecentlyTalkedOnEmptyQuery: null, allowSnowflake: null };
+        let obj = {
+          channelId: null,
+          query: null,
+          limit: null,
+          checkRecentlyTalkedOnEmptyQuery: null,
+          allowSnowflake: null,
+        };
         obj[0] = channel.id;
         obj[1] = query;
         obj[2] = limit;
@@ -1523,10 +1573,23 @@ areArraysShallowlyEqual = {
         let queryChannelUsersResult = self.queryChannelUsers(obj);
         const mapped = queryChannelUsersResult.map((record) => {
           record = record.record;
-          return { user: record, score: record.score, comparator: record.comparator, nick: closure_1_27.getNick(channel.guild_id, record.id), status: closure_1_32.getStatus(record.id) };
+          return {
+            user: record,
+            score: record.score,
+            comparator: record.comparator,
+            nick: closure_1_27.getNick(channel.guild_id, record.id),
+            status: closure_1_32.getStatus(record.id),
+          };
         });
       }
-      obj = { guildId: null, query: null, limit: null, checkRecentlyTalkedOnEmptyQuery: null, request: null, allowSnowflake: null };
+      obj = {
+        guildId: null,
+        query: null,
+        limit: null,
+        checkRecentlyTalkedOnEmptyQuery: null,
+        request: null,
+        allowSnowflake: null,
+      };
       obj[0] = channel.guild_id;
       obj[1] = query;
       obj[2] = limit;
@@ -1577,37 +1640,41 @@ areArraysShallowlyEqual = {
               }
               return mentionable;
             });
-            const valueResult = flag(flag7[37])(store3.getSortedRoles(guild.id)).filter((arg0) => {
-              ({ mentionable, name, id } = arg0);
-              if (!mentionable) {
-                mentionable = flag;
-              }
-              if (!mentionable) {
-                mentionable = flag7;
-              }
-              if (mentionable) {
-                let tmp3Result = flag(flag7[32])(formatted, name.toLowerCase());
-                if (!tmp3Result) {
-                  let tmp6 = allowSnowflake;
-                  if (allowSnowflake) {
-                    tmp6 = tmp4 === id;
-                  }
-                  tmp3Result = tmp6;
+            const valueResult = flag(flag7[37])(store3.getSortedRoles(guild.id))
+              .filter((arg0) => {
+                ({ mentionable, name, id } = arg0);
+                if (!mentionable) {
+                  mentionable = flag;
                 }
-                mentionable = tmp3Result;
-                const tmp3 = flag(flag7[32]);
-                tmp4 = formatted;
-              }
-              if (mentionable) {
-                mentionable = id !== flag(flag7[44]).castGuildIdAsEveryoneGuildRoleId(guildId);
-                const obj = flag(flag7[44]);
-              }
-              return mentionable;
-            }).value();
+                if (!mentionable) {
+                  mentionable = flag7;
+                }
+                if (mentionable) {
+                  let tmp3Result = flag(flag7[32])(formatted, name.toLowerCase());
+                  if (!tmp3Result) {
+                    let tmp6 = allowSnowflake;
+                    if (allowSnowflake) {
+                      tmp6 = tmp4 === id;
+                    }
+                    tmp3Result = tmp6;
+                  }
+                  mentionable = tmp3Result;
+                  const tmp3 = flag(flag7[32]);
+                  tmp4 = formatted;
+                }
+                if (mentionable) {
+                  mentionable = id !== flag(flag7[44]).castGuildIdAsEveryoneGuildRoleId(guildId);
+                  const obj = flag(flag7[44]);
+                }
+                return mentionable;
+              })
+              .value();
             obj = { keys: null };
             obj[0] = ["name"];
             const obj4 = channel(flag7[45]);
-            substr = channel(flag7[45]).matchSorter(valueResult, query, obj).slice(0, limit - closure_7);
+            substr = channel(flag7[45])
+              .matchSorter(valueResult, query, obj)
+              .slice(0, limit - closure_7);
             closure_7 = closure_7 + substr.length;
             tmp5 = substr;
             const matchSorterResult = channel(flag7[45]).matchSorter(valueResult, query, obj);
@@ -1859,7 +1926,7 @@ areArraysShallowlyEqual = {
     obj = { id: StaticChannelId.SERVER_GUIDE, name: null };
     const intl = tmp5(1236).intl;
     obj[1] = intl.string(getSystemLocale.t.VbpLyU);
-    items = [obj, , ];
+    items = [obj, ,];
     obj = { id: StaticChannelId.CHANNEL_BROWSER, name: null };
     const intl2 = tmp5(1236).intl;
     obj[1] = intl2.string(getSystemLocale.t.et6wav);
@@ -1914,7 +1981,15 @@ areArraysShallowlyEqual = {
     }
     channelTypes = channelTypes.channelTypes;
     let obj = { channels: null };
-    obj = { query: channelTypes.query, guildId: channel.getGuildId(), limit: "r", fuzzy: "HermesInternal", filter: 20, type: true, allowEmptyQueries: "/assets/.cache/intl/bW9kdWxlcy9hZHM=" };
+    obj = {
+      query: channelTypes.query,
+      guildId: channel.getGuildId(),
+      limit: "r",
+      fuzzy: "HermesInternal",
+      filter: 20,
+      type: true,
+      allowEmptyQueries: "/assets/.cache/intl/bW9kdWxlcy9hZHM=",
+    };
     obj[4] = function filter(type) {
       let hasItem = null == channelTypes;
       if (!hasItem) {
@@ -1945,7 +2020,17 @@ areArraysShallowlyEqual = {
       let items1 = [];
       for (const item10012 of items) {
         let tmp4 = items1;
-        obj = { query: null, guildId: null, limit: null, fuzzy: true, filter: null, type: null, allowEmptyQueries: true, requireVocalConnectAccess: false, allowSnowflake: null };
+        obj = {
+          query: null,
+          guildId: null,
+          limit: null,
+          fuzzy: true,
+          filter: null,
+          type: null,
+          allowEmptyQueries: true,
+          requireVocalConnectAccess: false,
+          allowSnowflake: null,
+        };
         obj[0] = tmp;
         obj[1] = channel.guild_id;
         obj[2] = limit;
@@ -1989,7 +2074,15 @@ areArraysShallowlyEqual = {
     }
     const FrecencyUserSettingsActionCreators = updateUserGuildSettings.FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
-    return { emojis: closure_7.searchWithoutFetchingLatest({ channel, query, count: maxCount, intention, matchComparator: matchComparator.matchComparator }) };
+    return {
+      emojis: closure_7.searchWithoutFetchingLatest({
+        channel,
+        query,
+        count: maxCount,
+        intention,
+        matchComparator: matchComparator.matchComparator,
+      }),
+    };
   },
   queryStickers(items, arg1, items1) {
     let flag = arg1;
@@ -2001,7 +2094,7 @@ areArraysShallowlyEqual = {
       items = [null, NOOP];
       tmp = items;
     }
-    [importDefault, ] = tmp;
+    [importDefault] = tmp;
     dependencyMap = undefined;
     let set;
     closure_5 = undefined;
@@ -2136,7 +2229,9 @@ areArraysShallowlyEqual = {
       continue;
     }
     let obj = applyDefault(items1);
-    let valueResult = applyDefault(items1).sortBy((score) => -1 * score.score).value();
+    let valueResult = applyDefault(items1)
+      .sortBy((score) => -1 * score.score)
+      .value();
     closure_5 = valueResult;
     if (0 === valueResult.length) {
       closure_5 = closure_49;
@@ -2156,7 +2251,8 @@ areArraysShallowlyEqual = {
       const result = require("../modules/soundboard/SoundboardActionCreators.tsx").maybeFetchSoundboardSounds();
       const obj2 = _fetchDefaultSoundsFromApi2;
     }
-    const FrecencyUserSettingsActionCreators = require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators =
+      require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     const sounds = obj.getSounds();
     const reduced = Array.from(sounds.values()).reduce((arg0, arr) => {
@@ -2200,7 +2296,7 @@ areArraysShallowlyEqual = {
       return false;
     }
   },
-  queryMemberList
+  queryMemberList,
 };
 const map = new Map();
 let result = require("set").fileFinishedImporting("utils/AutocompleteUtils.tsx");

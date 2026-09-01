@@ -5,8 +5,17 @@ import apexExperiment from "ServerThemeApexShadowExperiment.tsx";
 import createExperiment from "../../../experiments/index.tsx";
 
 const EMPTY_STRING_SNOWFLAKE_ID = ME.EMPTY_STRING_SNOWFLAKE_ID;
-const items = [{ id: 0, label: "Control", config: { enabled: false, inExperiment: true, gatesApex: false } }, { id: 1, label: "Enable Server Theme", config: { enabled: true, inExperiment: true, gatesApex: false } }];
-let experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-04_server_theme", label: "Server Theme", defaultConfig: { enabled: false, inExperiment: false, gatesApex: false }, treatments: items });
+const items = [
+  { id: 0, label: "Control", config: { enabled: false, inExperiment: true, gatesApex: false } },
+  { id: 1, label: "Enable Server Theme", config: { enabled: true, inExperiment: true, gatesApex: false } },
+];
+let experiment = createExperiment.createExperiment({
+  kind: "guild",
+  id: "2026-04_server_theme",
+  label: "Server Theme",
+  defaultConfig: { enabled: false, inExperiment: false, gatesApex: false },
+  treatments: items,
+});
 const result = set.fileFinishedImporting("modules/premium/powerups/experiments/ServerThemeExperiment.tsx");
 
 export const ServerThemeExperiment = experiment;

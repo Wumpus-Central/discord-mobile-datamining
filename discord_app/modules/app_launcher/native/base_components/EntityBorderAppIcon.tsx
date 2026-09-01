@@ -12,7 +12,12 @@ const sm = ThemesDefault.radii.sm;
 let closure_5 = createCacheKey.createStyles((width, borderRadius) => {
   obj = { appIcon: obj, entityWrapper: null };
   obj = { width, height: width, borderRadius };
-  obj = { padding: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", borderRadius: borderRadius + 1 };
+  obj = {
+    padding: 1,
+    backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+    overflow: "hidden",
+    borderRadius: borderRadius + 1,
+  };
   obj[1] = obj;
   return obj;
 });
@@ -32,4 +37,4 @@ export default function EntityBorderAppIcon(iconSize) {
   const items = [tmp.entityWrapper, wrapperStyle];
   const items1 = [tmp.appIcon, iconStyle];
   return <View style={items}>{jsx(preloadDefault, { style: items1, source: iconSource })}</View>;
-};
+}

@@ -12,12 +12,22 @@ require = arg1;
 ({ View: c4, StyleSheet: c5, Platform } = get_ActivityIndicator);
 let closure_7 = createCacheKey.createStyles(() => {
   let obj = { divider: {}, dividerOuter: null, dividerHasIcon: null };
-  obj = { marginLeft: 0, height: closure_5.hairlineWidth, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: -1 * closure_5.hairlineWidth };
+  obj = {
+    marginLeft: 0,
+    height: closure_5.hairlineWidth,
+    backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+    marginTop: -1 * closure_5.hairlineWidth,
+  };
   obj[1] = obj;
   obj[2] = { marginLeft: 56 };
   return obj;
 });
-createCacheKey = { [LIGHT]: ThemesDefault.unsafe_rawColors.BLACK, [DARK]: ThemesDefault.unsafe_rawColors.WHITE, [DARKER]: ThemesDefault.unsafe_rawColors.WHITE, [MIDNIGHT]: ThemesDefault.unsafe_rawColors.WHITE };
+createCacheKey = {
+  [LIGHT]: ThemesDefault.unsafe_rawColors.BLACK,
+  [DARK]: ThemesDefault.unsafe_rawColors.WHITE,
+  [DARKER]: ThemesDefault.unsafe_rawColors.WHITE,
+  [MIDNIGHT]: ThemesDefault.unsafe_rawColors.WHITE,
+};
 ({ LIGHT, DARK, DARKER, MIDNIGHT } = require("ME").ThemeTypes);
 const result = require("set").fileFinishedImporting("design/void/Form/native/FormDivider.tsx");
 
@@ -44,7 +54,7 @@ export default function Divider(outer) {
   }
   let tmp10Result = null;
   if (!React.useContext(context.RedesignCompatContext)) {
-    const items = [flag ? tmp.dividerOuter : tmp.divider, , , ];
+    const items = [flag ? tmp.dividerOuter : tmp.divider, , ,];
     if (flag2) {
       flag2 = tmp.dividerHasIcon;
     }
@@ -58,5 +68,5 @@ export default function Divider(outer) {
     const tmp11 = closure_4;
   }
   return tmp10Result;
-};
+}
 export const DIVIDER_COLORS = createCacheKey;

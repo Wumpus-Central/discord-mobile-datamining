@@ -12,4 +12,4 @@ export default function useBottomVoiceControlsSheetWidth() {
     width = closure_2;
   }
   return width;
-};
+}

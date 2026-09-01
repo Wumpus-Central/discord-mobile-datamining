@@ -11,6 +11,8 @@ const result = require("set").fileFinishedImporting("modules/markup/MarkupTextRu
 export default obj;
 export const textRegexp = tmp2;
 export const textMarkupPatternWithExclusions = function textMarkupPatternWithExclusions(textExclusions) {
-  const regExp = new RegExp("^[\\s\\S]+?(?=" + textExclusions + "|[^0-9A-Za-z\\s\\u00ff-\\uffff]|\\n\\n| {2,}\\n|\\w+:\\S|[0-9]+\\.|$)");
+  const regExp = new RegExp(
+    "^[\\s\\S]+?(?=" + textExclusions + "|[^0-9A-Za-z\\s\\u00ff-\\uffff]|\\n\\n| {2,}\\n|\\w+:\\S|[0-9]+\\.|$)",
+  );
   return regExp;
 };

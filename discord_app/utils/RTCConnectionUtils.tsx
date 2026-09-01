@@ -69,5 +69,5 @@ export default {
       str = hostname.split(".")[0];
     }
     return str;
-  }
+  },
 };

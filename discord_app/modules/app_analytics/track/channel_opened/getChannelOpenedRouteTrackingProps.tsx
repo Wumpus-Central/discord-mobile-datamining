@@ -4,7 +4,9 @@ import collectThreadMetadata from "../../ThreadAnalyticsUtils.tsx";
 import closure_2 from "../../../../stores/ChannelStore.tsx";
 
 require = arg1;
-let result = require("set").fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx",
+);
 
 export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRouteTrackingProps(selectedChannelId) {
   let obj = collectThreadMetadata;

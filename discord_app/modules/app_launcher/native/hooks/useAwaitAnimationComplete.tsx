@@ -9,7 +9,11 @@ const result = require("set").fileFinishedImporting("modules/app_launcher/native
 export const AwaitAnimationContext = function AwaitAnimationContext(children) {
   const handleQueuedCallback = children.handleQueuedCallback;
   const items = [handleQueuedCallback];
-  return <redux.Provider value={handleQueuedCallback.useMemo(() => ({ handleQueuedCallback }), items)}>{arg0.children}</redux.Provider>;
+  return (
+    <redux.Provider value={handleQueuedCallback.useMemo(() => ({ handleQueuedCallback }), items)}>
+      {arg0.children}
+    </redux.Provider>
+  );
 };
 export const useAwaitAnimationCompletion = function useAwaitAnimationCompletion() {
   const context = importAllResult.useContext(closure_2);

@@ -4,6 +4,8 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 
 const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativeDateFormatUtilsModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeDateFormatUtilsModule.tsx");
+const result = set.fileFinishedImporting(
+  "../discord_common/js/packages/rtn-codegen/js/NativeDateFormatUtilsModule.tsx",
+);
 
 export default enforcing;

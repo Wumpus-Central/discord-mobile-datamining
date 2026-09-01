@@ -4,7 +4,31 @@ import get_defaultRulesDefault from "../markup/MarkupUtils.tsx";
 
 function getInitialParserState(channelId) {
   const renderOptions = channelId.renderOptions;
-  return { channelId: channelId.channelId, messageId: channelId.messageId, authorId: channelId.authorId, allowLinks: Boolean(renderOptions.allowLinks), allowDevLinks: Boolean(renderOptions.allowDevLinks), allowGameMentions: Boolean(renderOptions.allowGameMentions), allowTimeMentionInput: Boolean(renderOptions.allowTimeMentionInput), formatInline: Boolean(renderOptions.formatInline), noStyleAndInteraction: Boolean(renderOptions.noStyleAndInteraction), allowHeading: Boolean(renderOptions.allowHeading), allowList: Boolean(renderOptions.allowList), previewLinkTarget: Boolean(renderOptions.previewLinkTarget), disableAnimatedEmoji: Boolean(renderOptions.disableAnimatedEmoji), allowEmojiLinks: false, disableAutoBlockNewlines: true, mentionChannels: [], soundboardSounds: [], muted: false, unknownUserMentionPlaceholder: true, viewingChannelId: renderOptions.viewingChannelId, forceWhite: Boolean(renderOptions.forceWhite), textColor: renderOptions.textColor, disablePressableChannelMention: Boolean(renderOptions.disablePressableChannelMention) };
+  return {
+    channelId: channelId.channelId,
+    messageId: channelId.messageId,
+    authorId: channelId.authorId,
+    allowLinks: Boolean(renderOptions.allowLinks),
+    allowDevLinks: Boolean(renderOptions.allowDevLinks),
+    allowGameMentions: Boolean(renderOptions.allowGameMentions),
+    allowTimeMentionInput: Boolean(renderOptions.allowTimeMentionInput),
+    formatInline: Boolean(renderOptions.formatInline),
+    noStyleAndInteraction: Boolean(renderOptions.noStyleAndInteraction),
+    allowHeading: Boolean(renderOptions.allowHeading),
+    allowList: Boolean(renderOptions.allowList),
+    previewLinkTarget: Boolean(renderOptions.previewLinkTarget),
+    disableAnimatedEmoji: Boolean(renderOptions.disableAnimatedEmoji),
+    allowEmojiLinks: false,
+    disableAutoBlockNewlines: true,
+    mentionChannels: [],
+    soundboardSounds: [],
+    muted: false,
+    unknownUserMentionPlaceholder: true,
+    viewingChannelId: renderOptions.viewingChannelId,
+    forceWhite: Boolean(renderOptions.forceWhite),
+    textColor: renderOptions.textColor,
+    disablePressableChannelMention: Boolean(renderOptions.disablePressableChannelMention),
+  };
 }
 function render(arg0, channelId, toAST) {
   closure_0 = channelId;
@@ -52,7 +76,17 @@ function render(arg0, channelId, toAST) {
         flag = false;
       }
       let obj = channelId(table[0]);
-      obj = { ast, inline, hasBailedAst: flag, message: channelId, contentMessage, messageContent: content, hideSimpleEmbedContent: table, formatInline: closure_3, toAST: closure_1 };
+      obj = {
+        ast,
+        inline,
+        hasBailedAst: flag,
+        message: channelId,
+        contentMessage,
+        messageContent: content,
+        hideSimpleEmbedContent: table,
+        formatInline: closure_3,
+        toAST: closure_1,
+      };
       const result = obj.runMessageMarkupPostProcessors(obj);
       ({ ast, hasSpoilerEmbeds: c6 } = result);
       let tmp2 = ast;
@@ -60,7 +94,7 @@ function render(arg0, channelId, toAST) {
         tmp2 = callback(ast, inline);
       }
       return tmp2;
-    })
+    }),
   };
   return obj;
 }
@@ -73,7 +107,7 @@ export default function renderMessageMarkup(arg0) {
   }
   const tmp2 = get_defaultRulesDefault;
   return render(obj.formatInline ? tmp2.parseInlineReply : tmp2.parse, arg0, obj);
-};
+}
 export const getInitialParserStateFromMessage = function getInitialParserStateFromMessage(message, closure_7) {
   let obj = { channelId: message.channel_id, messageId: message.id, authorId: null, renderOptions: null };
   const author = message.author;
@@ -100,7 +134,11 @@ export const getInitialParserStateFromMessage = function getInitialParserStateFr
   return obj;
 };
 export { getInitialParserState };
-export const renderMessageMarkupWithParser = function renderMessageMarkupWithParser(NativeSearchResultLinkPreviewParser, arg1, arg2) {
+export const renderMessageMarkupWithParser = function renderMessageMarkupWithParser(
+  NativeSearchResultLinkPreviewParser,
+  arg1,
+  arg2,
+) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -118,7 +156,11 @@ export const renderMessageMarkupToAST = function renderMessageMarkupToAST(messag
   obj.toAST = true;
   return render(obj.formatInline ? tmp2.parseInlineReplyToAST : tmp2.parseToAST, message, obj);
 };
-export const renderMessageContentMarkup = function renderMessageContentMarkup(notifCenterV2MessagePreviewParser, guildId, arg2) {
+export const renderMessageContentMarkup = function renderMessageContentMarkup(
+  notifCenterV2MessagePreviewParser,
+  guildId,
+  arg2,
+) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -126,7 +168,28 @@ export const renderMessageContentMarkup = function renderMessageContentMarkup(no
   if (obj === undefined) {
     obj = {};
   }
-  obj = { allowLinks: false, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: true, noStyleAndInteraction: false, allowHeading: false, allowList: false, disableAutoBlockNewlines: true, previewLinkTarget: false, disableAnimatedEmoji: true, guildId: guildId.guildId, channelId: guildId.channelId, messageId: guildId.messageId, authorId: guildId.authorId, muted: false, disablePressableChannelMention: true, textColor: obj.textColor };
+  obj = {
+    allowLinks: false,
+    allowDevLinks: false,
+    allowEmojiLinks: false,
+    allowGameMentions: false,
+    mentionChannels: [],
+    soundboardSounds: [],
+    formatInline: true,
+    noStyleAndInteraction: false,
+    allowHeading: false,
+    allowList: false,
+    disableAutoBlockNewlines: true,
+    previewLinkTarget: false,
+    disableAnimatedEmoji: true,
+    guildId: guildId.guildId,
+    channelId: guildId.channelId,
+    messageId: guildId.messageId,
+    authorId: guildId.authorId,
+    muted: false,
+    disablePressableChannelMention: true,
+    textColor: obj.textColor,
+  };
   return notifCenterV2MessagePreviewParser(guildId.content, true, obj, (arg0) => {
     let tmp = arg0;
     if (!Array.isArray(arg0)) {
@@ -137,22 +200,68 @@ export const renderMessageContentMarkup = function renderMessageContentMarkup(no
   });
 };
 export const renderAutomodMessageMarkup = function renderAutomodMessageMarkup(arg0, highlightWord, channelId) {
-  return get_defaultRulesDefault.parseAutoModerationSystemMessage(arg0, true, { allowLinks: false, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: false, noStyleAndInteraction: false, allowHeading: false, allowList: false, disableAutoBlockNewlines: true, highlightWord, disableAnimatedEmoji: false, channelId, muted: false }, (arg0) => {
-    let tmp = arg0;
-    if (!Array.isArray(arg0)) {
-      const items = [arg0];
-      tmp = items;
-    }
-    return tmp;
-  });
+  return get_defaultRulesDefault.parseAutoModerationSystemMessage(
+    arg0,
+    true,
+    {
+      allowLinks: false,
+      allowDevLinks: false,
+      allowEmojiLinks: false,
+      allowGameMentions: false,
+      mentionChannels: [],
+      soundboardSounds: [],
+      formatInline: false,
+      noStyleAndInteraction: false,
+      allowHeading: false,
+      allowList: false,
+      disableAutoBlockNewlines: true,
+      highlightWord,
+      disableAnimatedEmoji: false,
+      channelId,
+      muted: false,
+    },
+    (arg0) => {
+      let tmp = arg0;
+      if (!Array.isArray(arg0)) {
+        const items = [arg0];
+        tmp = items;
+      }
+      return tmp;
+    },
+  );
 };
-export const renderAutomodMessageMarkupToAST = function renderAutomodMessageMarkupToAST(arg0, highlightWord, channelId) {
-  return get_defaultRulesDefault.parseAutoModerationSystemMessageToAST(arg0, true, { allowLinks: false, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: false, noStyleAndInteraction: false, allowHeading: false, allowList: false, disableAutoBlockNewlines: true, highlightWord, disableAnimatedEmoji: false, channelId, muted: false }, (arg0) => {
-    let tmp = arg0;
-    if (!Array.isArray(arg0)) {
-      const items = [arg0];
-      tmp = items;
-    }
-    return tmp;
-  });
+export const renderAutomodMessageMarkupToAST = function renderAutomodMessageMarkupToAST(
+  arg0,
+  highlightWord,
+  channelId,
+) {
+  return get_defaultRulesDefault.parseAutoModerationSystemMessageToAST(
+    arg0,
+    true,
+    {
+      allowLinks: false,
+      allowDevLinks: false,
+      allowEmojiLinks: false,
+      allowGameMentions: false,
+      mentionChannels: [],
+      soundboardSounds: [],
+      formatInline: false,
+      noStyleAndInteraction: false,
+      allowHeading: false,
+      allowList: false,
+      disableAutoBlockNewlines: true,
+      highlightWord,
+      disableAnimatedEmoji: false,
+      channelId,
+      muted: false,
+    },
+    (arg0) => {
+      let tmp = arg0;
+      if (!Array.isArray(arg0)) {
+        const items = [arg0];
+        tmp = items;
+      }
+      return tmp;
+    },
+  );
 };

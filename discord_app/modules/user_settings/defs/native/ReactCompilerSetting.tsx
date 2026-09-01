@@ -14,7 +14,7 @@ const obj = {
   },
   usePredicate() {
     return false;
-  }
+  },
 };
 const createStaticResult = createToggle.createStatic({
   useTitle() {
@@ -27,7 +27,7 @@ const createStaticResult = createToggle.createStatic({
   },
   usePredicate() {
     return false;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ReactCompilerSetting.tsx");
 

@@ -58,4 +58,4 @@ export default function getPowerupEntitlementPrice(tenant_metadata) {
     boost_price = boost_price3;
   }
   return boost_price;
-};
+}

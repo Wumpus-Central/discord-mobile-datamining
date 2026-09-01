@@ -10,8 +10,7 @@ let obj = { STARTED: "started", READY: "ready", COMPLETED: "completed", NOT_APPL
 let closure_4 = {};
 let closure_5 = {};
 const Store = initializeDefault.Store;
-class GuildOnboardingStore extends Store {
-}
+class GuildOnboardingStore extends Store {}
 const prototype = GuildOnboardingStore.prototype;
 prototype["shouldShowOnboarding"] = function shouldShowOnboarding(c0) {
   let tmp = c0 !== ME;
@@ -22,7 +21,7 @@ prototype["shouldShowOnboarding"] = function shouldShowOnboarding(c0) {
   if (tmp) {
     let hasItem = null != tmp5;
     if (hasItem) {
-      const items = [, ];
+      const items = [,];
       ({ STARTED: arr[0], READY: arr[1] } = obj);
       hasItem = items.includes(tmp5);
     }
@@ -77,7 +76,7 @@ obj = {
   },
   CONNECTION_OPEN: function handleResetOnboardingStep() {
     closure_5 = {};
-  }
+  },
 };
 const guildOnboardingStore = new GuildOnboardingStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingStore.tsx");
@@ -87,7 +86,7 @@ export const GuildOnboardingStatus = obj;
 export const isOnboarding = function isOnboarding(arg0) {
   let hasItem = null != arg0;
   if (hasItem) {
-    const items = [, ];
+    const items = [,];
     ({ STARTED: arr[0], READY: arr[1] } = obj);
     hasItem = items.includes(arg0);
   }

@@ -50,7 +50,13 @@ function updateFromThreadMessages(type) {
     if (null != channel) {
       if (set.has(channel.type)) {
         if (!(channel.id in dependencyMap)) {
-          const obj = { guildId: null, parentId: null, count: null, mostRecentRawMessage: null, mostRecentMessage: null };
+          const obj = {
+            guildId: null,
+            parentId: null,
+            count: null,
+            mostRecentRawMessage: null,
+            mostRecentMessage: null,
+          };
           ({ guild_id: obj[0], parent_id: obj[1], messageCount } = channel);
           if (messageCount == null) {
             messageCount = 0;
@@ -120,7 +126,13 @@ function updateFromServerThread(id) {
       if (null != channel) {
         if (set.has(channel.type)) {
           if (!(channel.id in dependencyMap)) {
-            const obj = { guildId: null, parentId: null, count: null, mostRecentRawMessage: null, mostRecentMessage: null };
+            const obj = {
+              guildId: null,
+              parentId: null,
+              count: null,
+              mostRecentRawMessage: null,
+              mostRecentMessage: null,
+            };
             ({ guild_id: obj[0], parent_id: obj[1], messageCount } = channel);
             if (messageCount == null) {
               messageCount = 0;
@@ -220,7 +232,13 @@ function handleSearchMessagesSuccess(data) {
             if (null != channel) {
               if (set.has(channel.type)) {
                 if (!(channel.id in table)) {
-                  const obj = { guildId: null, parentId: null, count: null, mostRecentRawMessage: null, mostRecentMessage: null };
+                  const obj = {
+                    guildId: null,
+                    parentId: null,
+                    count: null,
+                    mostRecentRawMessage: null,
+                    mostRecentMessage: null,
+                  };
                   ({ guild_id: obj[0], parent_id: obj[1], messageCount } = channel);
                   if (messageCount == null) {
                     messageCount = 0;
@@ -297,8 +315,7 @@ let set = new Set();
 let closure_12 = {};
 let closure_13 = {};
 const Store = initializeDefault.Store;
-class ThreadMessageStore extends Store {
-}
+class ThreadMessageStore extends Store {}
 const prototype = ThreadMessageStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_7, closure_8);
@@ -417,7 +434,13 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
         if (tmp2) {
           if (set.has(channel.type)) {
             if (!(channel.id in table)) {
-              const obj = { guildId: null, parentId: null, count: null, mostRecentRawMessage: null, mostRecentMessage: null };
+              const obj = {
+                guildId: null,
+                parentId: null,
+                count: null,
+                mostRecentRawMessage: null,
+                mostRecentMessage: null,
+              };
               ({ guild_id: obj[0], parent_id: obj[1], messageCount } = channel);
               if (messageCount == null) {
                 messageCount = 0;
@@ -480,7 +503,13 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
             if (tmp7) {
               if (set.has(channel.type)) {
                 if (!(channel.id in dependencyMap)) {
-                  obj = { guildId: null, parentId: null, count: null, mostRecentRawMessage: null, mostRecentMessage: null };
+                  obj = {
+                    guildId: null,
+                    parentId: null,
+                    count: null,
+                    mostRecentRawMessage: null,
+                    mostRecentMessage: null,
+                  };
                   ({ guild_id: obj2[0], parent_id: obj2[1], messageCount } = channel);
                   if (messageCount == null) {
                     messageCount = 0;
@@ -535,7 +564,10 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
             const obj = createMinimalMessageRecord;
           }
           if (null != tmp.mostRecentRawMessage) {
-            tmp.mostRecentRawMessage = createMinimalMessageRecord.updateServerMessage(tmp.mostRecentRawMessage, message);
+            tmp.mostRecentRawMessage = createMinimalMessageRecord.updateServerMessage(
+              tmp.mostRecentRawMessage,
+              message,
+            );
             const obj2 = createMinimalMessageRecord;
           }
         }
@@ -655,7 +687,7 @@ const threadMessageStore = new ThreadMessageStore(dispatcherDefault, {
       }
     }
     return flag;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/threads/ThreadMessageStore.tsx");
 

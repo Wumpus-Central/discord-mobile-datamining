@@ -18,51 +18,51 @@ class GuildVersions {
     obj.committed = map1;
     obj.actions = {
       BACKGROUND_SYNC(arg0, arg1) {
-            return obj.handleBackgroundSync(arg0, arg1);
-          },
+        return obj.handleBackgroundSync(arg0, arg1);
+      },
       CHANNEL_CREATE(arg0, arg1) {
-            return obj.handleChannelCreate(arg0, arg1);
-          },
+        return obj.handleChannelCreate(arg0, arg1);
+      },
       CHANNEL_DELETE(arg0, arg1) {
-            return obj.handleChannelDelete(arg0, arg1);
-          },
+        return obj.handleChannelDelete(arg0, arg1);
+      },
       CHANNEL_UPDATES(arg0, arg1) {
-            return obj.handleChannelUpdates(arg0, arg1);
-          },
+        return obj.handleChannelUpdates(arg0, arg1);
+      },
       CONNECTION_OPEN(arg0, arg1) {
-            return obj.handleConnectionOpen(arg0, arg1);
-          },
+        return obj.handleConnectionOpen(arg0, arg1);
+      },
       GUILD_CREATE(arg0, arg1) {
-            return obj.handleGuildCreate(arg0, arg1);
-          },
+        return obj.handleGuildCreate(arg0, arg1);
+      },
       GUILD_DELETE(arg0, arg1) {
-            return obj.handleGuildDelete(arg0, arg1);
-          },
+        return obj.handleGuildDelete(arg0, arg1);
+      },
       GUILD_EMOJIS_UPDATE(arg0, arg1) {
-            return obj.handleGuildEmojisUpdate(arg0, arg1);
-          },
+        return obj.handleGuildEmojisUpdate(arg0, arg1);
+      },
       GUILD_ROLE_CREATE(arg0, arg1) {
-            return obj.handleGuildRoleChange(arg0, arg1);
-          },
+        return obj.handleGuildRoleChange(arg0, arg1);
+      },
       GUILD_ROLE_DELETE(arg0, arg1) {
-            return obj.handleGuildRoleDelete(arg0, arg1);
-          },
+        return obj.handleGuildRoleDelete(arg0, arg1);
+      },
       GUILD_ROLE_UPDATE(arg0, arg1) {
-            return obj.handleGuildRoleChange(arg0, arg1);
-          },
+        return obj.handleGuildRoleChange(arg0, arg1);
+      },
       GUILD_STICKERS_UPDATE(arg0, arg1) {
-            return obj.handleGuildStickersUpdate(arg0, arg1);
-          },
+        return obj.handleGuildStickersUpdate(arg0, arg1);
+      },
       GUILD_UPDATE(arg0, arg1) {
-            return obj.handleGuildUpdate(arg0, arg1);
-          }
+        return obj.handleGuildUpdate(arg0, arg1);
+      },
     };
     return obj;
   }
 }
 const prototype = GuildVersions.prototype;
 prototype["getCommittedVersions"] = function getCommittedVersions() {
-  return callback2(function*() {
+  return callback2(function* () {
     if (logger === 2) {
       logger = 3;
       HermesBuiltin.throwTypeError();
@@ -128,7 +128,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
           return obj4;
         } else {
           closure_0 = arg1.map((arg0) => {
-            const items = [, ];
+            const items = [,];
             ({ id: arr[0], version: arr[1] } = arg0);
             return items;
           });
@@ -428,7 +428,7 @@ set.actions = {
   },
   GUILD_UPDATE(arg0, arg1) {
     return obj.handleGuildUpdate(arg0, arg1);
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/app_database/modules/GuildVersions.tsx");
 

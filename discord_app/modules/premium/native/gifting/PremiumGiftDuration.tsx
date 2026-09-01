@@ -27,7 +27,7 @@ function PremiumGiftDurationButton(arg0) {
   const tmp5 = SubscriptionIntervalTypes;
   const tmp9 = setPlanInterval(10525)(nativeGiftContext.premiumType, planInterval);
   const radioA11yNative = planInterval(4205).useRadioA11yNative({ selected });
-  items = [tmp4.container, ];
+  items = [tmp4.container];
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   if (selected) {
     selected = tmp4.containerSelected;
@@ -42,7 +42,7 @@ function PremiumGiftDurationButton(arg0) {
     const intl = tmp(1236).intl;
     stringResult = intl.string(tmp(1236).t.DRgqMo);
   }
-  const items1 = [closure_6(planInterval(4474).Text, { variant: "text-md/semibold", children: stringResult }), ];
+  const items1 = [closure_6(planInterval(4474).Text, { variant: "text-md/semibold", children: stringResult })];
   let tmp11Result = null != combined;
   if (tmp11Result) {
     obj1 = { style: null, children: null };
@@ -70,25 +70,39 @@ function PremiumGiftDurationButton(arg0) {
     accessibilityRole,
     accessibilityState,
     start: true,
-    end: true
+    end: true,
   });
   return closure_6(View, obj);
 }
 noopAll;
 ({ PREMIUM_YEARLY_DISCOUNT_PERCENT: c4, SubscriptionIntervalTypes } = GuildFeatures);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let items = [, ];
+let items = [,];
 ({ YEAR: arr[0], MONTH: arr[1] } = SubscriptionIntervalTypes);
 createCacheKey = { container: null, containerSelected: null, labelContainer: null, labelPromo: null };
 createCacheKey = { marginTop: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.lg, borderWidth: 2 };
+createCacheKey[1] = {
+  borderColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderRadius: ThemesDefault.radii.lg,
+  borderWidth: 2,
+};
 createCacheKey[2] = { flexDirection: "row" };
 let obj1 = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.lg, borderWidth: 2 };
-createCacheKey[3] = { marginStart: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round };
+createCacheKey[3] = {
+  marginStart: ThemesDefault.space.PX_8,
+  backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.round,
+};
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { durationContainer: null, durationTitle: null };
-let obj2 = { marginStart: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round };
+let obj2 = {
+  marginStart: ThemesDefault.space.PX_8,
+  backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.round,
+};
 obj3[0] = { marginHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey = { marginTop: ThemesDefault.space.PX_24 };
 obj3[1] = createCacheKey;
@@ -104,8 +118,10 @@ export default function PremiumGiftDuration() {
   obj = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };
   const intl = planInterval(1236).intl;
   obj[2] = intl.string(planInterval(1236).t["8XT6Nf"]);
-  items = [callback(planInterval(4474).Text, obj), ];
-  items[1] = items.map((planInterval) => closure_1_6(closure_1_10, { selected: planInterval === planInterval, planInterval }, arg1));
+  items = [callback(planInterval(4474).Text, obj)];
+  items[1] = items.map((planInterval) =>
+    closure_1_6(closure_1_10, { selected: planInterval === planInterval, planInterval }, arg1),
+  );
   obj[1] = items;
   return callback2(View, obj);
-};
+}

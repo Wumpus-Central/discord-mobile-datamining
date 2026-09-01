@@ -30,8 +30,7 @@ if (set.isDesktop()) {
   window.popupBridge = obj;
 }
 const Store = initializeDefault.Store;
-class BraintreeStore extends Store {
-}
+class BraintreeStore extends Store {}
 const prototype = BraintreeStore.prototype;
 prototype["getClient"] = function getClient() {
   return c7;
@@ -79,7 +78,7 @@ obj = {
   },
   BRAINTREE_TEARDOWN_VENMO_CLIENT: function handleBraintreeTeardownVenmoClient() {
     c9 = null;
-  }
+  },
 };
 const braintreeStore = new BraintreeStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("stores/billing/BraintreeStore.tsx");

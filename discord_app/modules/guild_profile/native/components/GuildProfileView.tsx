@@ -51,7 +51,7 @@ function GuildProfileGradient(guildProfile) {
   const tmp2 = useThemeDefault();
   const profilePrimaryColor = useProfilePrimaryColor.useProfilePrimaryColor(guildProfile.guildProfile, token);
   obj = { style: tmp.colorBanner, start: frozen.START, end: frozen.END, colors: null };
-  const items = [profilePrimaryColor, ];
+  const items = [profilePrimaryColor];
   const obj2 = useProfilePrimaryColor;
   const tmp5 = closure_8;
   const tmp6 = LinearGradientDefault;
@@ -68,7 +68,17 @@ function GuildProfileGradient(guildProfile) {
 }
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, colorBanner: null, imageBanner: null, body: null, error: null, buttonContainer: null, header: null, avatarBackground: null, restrictedAcronym: null };
+createCacheKey = {
+  container: null,
+  colorBanner: null,
+  imageBanner: null,
+  body: null,
+  error: null,
+  buttonContainer: null,
+  header: null,
+  avatarBackground: null,
+  restrictedAcronym: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 140, width: "100%" };
@@ -77,11 +87,29 @@ createCacheKey[3] = { marginTop: 12, paddingHorizontal: 16, gap: 16 };
 createCacheKey[4] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 };
 createCacheKey[5] = { marginTop: 160 };
 createCacheKey[6] = { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 };
-createCacheKey[7] = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
+createCacheKey[7] = {
+  width: 86,
+  height: 86,
+  borderRadius: 28.666666666666668,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+};
 createCacheKey[8] = { fontSize: 24 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 const frozen = Object.freeze({ START: { x: 0, y: 1 }, END: { x: 1.5, y: 0 } });
-const obj1 = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
+const obj1 = {
+  width: 86,
+  height: 86,
+  borderRadius: 28.666666666666668,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+};
 const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileView.tsx");
 
 export default function GuildProfileView(guildProfile) {
@@ -105,7 +133,10 @@ export default function GuildProfileView(guildProfile) {
     }
     tmp = guildProfile;
   }, items);
-  const items1 = [callback(GuildProfileBackground, { guildProfile }), callback(stylesDefault, { profile: guildProfile, guildIconSource: memo }), ];
+  const items1 = [
+    callback(GuildProfileBackground, { guildProfile }),
+    callback(stylesDefault, { profile: guildProfile, guildIconSource: memo }),
+  ];
   obj = { style: tmp.body, children: null };
   let tmp5Result = null != guildProfile.description;
   if (tmp5Result) {
@@ -116,14 +147,18 @@ export default function GuildProfileView(guildProfile) {
     obj[2] = guildProfile.description;
     tmp5Result = tmp5(guildProfile(4474).Text, obj);
   }
-  const items2 = [tmp5Result, callback(ClickableGameIconDefault, { profile: guildProfile }), callback(TraitEmojiDefault, { profile: guildProfile })];
+  const items2 = [
+    tmp5Result,
+    callback(ClickableGameIconDefault, { profile: guildProfile }),
+    callback(TraitEmojiDefault, { profile: guildProfile }),
+  ];
   obj[1] = items2;
   items1[2] = closure_9(closure_4, obj);
   obj[1] = items1;
   return closure_9(closure_4, obj);
-};
+}
 export const getBackgroundForProfile = function getBackgroundForProfile(closure_2, token) {
-  const items = [token, ];
+  const items = [token];
   const obj = isThemeLight;
   const obj2 = ManaContext;
   if (isThemeDarkResult) {

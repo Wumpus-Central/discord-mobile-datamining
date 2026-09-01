@@ -10,7 +10,10 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { paddingTop: 24, justifyContent: "center", alignItems: "center" }, textContainer: { marginTop: 24 } });
+let closure_6 = createCacheKey.createStyles({
+  container: { paddingTop: 24, justifyContent: "center", alignItems: "center" },
+  textContainer: { marginTop: 24 },
+});
 const memoResult = importAllResult.memo(function SettingsSearchEmptyState() {
   const tmp = callback3();
   const effect = importAllResult.useEffect(() => {
@@ -19,12 +22,12 @@ const memoResult = importAllResult.memo(function SettingsSearchEmptyState() {
     AccessibilityAnnouncer.announce(intl.string(callback(1236).t.zihbmv), "polite");
   }, []);
   let obj = { style: tmp.container, children: null };
-  const items = [callback(getNoResultsAltSource.NoResultsAlt, { resizeMode: "contain" }), ];
+  const items = [callback(getNoResultsAltSource.NoResultsAlt, { resizeMode: "contain" })];
   obj = { style: tmp.textContainer, align: "center", justify: "center", children: null };
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.zihbmv);
-  const items1 = [callback(Text.Text, obj), ];
+  const items1 = [callback(Text.Text, obj)];
   obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl2 = getSystemLocale.intl;
   obj1[2] = intl2.string(getSystemLocale.t.XclvsB);
@@ -34,6 +37,8 @@ const memoResult = importAllResult.memo(function SettingsSearchEmptyState() {
   obj[1] = items;
   return callback2(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/settings/native/search/components/SettingsSearchEmptyState.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/settings/native/search/components/SettingsSearchEmptyState.tsx",
+);
 
 export default memoResult;

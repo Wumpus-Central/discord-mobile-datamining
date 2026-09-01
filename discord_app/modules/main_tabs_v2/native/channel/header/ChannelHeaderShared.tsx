@@ -39,7 +39,16 @@ function TitleWrapper(headerAccessibilityLabel) {
     if (obj.isAndroid()) {
       tmp9 = callback;
     }
-    obj = { onLayout: null, onPress: null, androidRippleConfig: null, accessibilityRole: "header", accessibilityLabel: null, hitSlop: null, style: null, children: null };
+    obj = {
+      onLayout: null,
+      onPress: null,
+      androidRippleConfig: null,
+      accessibilityRole: "header",
+      accessibilityLabel: null,
+      hitSlop: null,
+      style: null,
+      children: null,
+    };
     obj[0] = tmp9;
     obj[1] = onPress;
     obj[2] = tmp3;
@@ -65,9 +74,21 @@ function ChannelTitle(guildId) {
   if (null != icon) {
     tmp4 = icon;
   }
-  const items = [tmp4, , ];
+  const items = [tmp4, ,];
   if (null != userId) {
-    obj = { userId: null, guildId: null, userName: null, variant: "redesign/heading-18/semibold", defaultColor: "mobile-text-heading-primary", lineClamp: 1, style: null, containerStyle: null, accessibilityLabel: null, accessibilityRole: "header", maxFontSizeMultiplier: 2 };
+    obj = {
+      userId: null,
+      guildId: null,
+      userName: null,
+      variant: "redesign/heading-18/semibold",
+      defaultColor: "mobile-text-heading-primary",
+      lineClamp: 1,
+      style: null,
+      containerStyle: null,
+      accessibilityLabel: null,
+      accessibilityRole: "header",
+      maxFontSizeMultiplier: 2,
+    };
     obj[0] = userId;
     obj[1] = guildId.guildId;
     obj[2] = title;
@@ -77,7 +98,16 @@ function ChannelTitle(guildId) {
     let tmp5 = callback2;
   } else {
     tmp5 = callback2;
-    obj1 = { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, accessibilityLabel: null, accessibilityRole: "header", maxFontSizeMultiplier: 2, children: null };
+    obj1 = {
+      variant: "redesign/heading-18/semibold",
+      color: "mobile-text-heading-primary",
+      lineClamp: 1,
+      style: null,
+      accessibilityLabel: null,
+      accessibilityRole: "header",
+      maxFontSizeMultiplier: 2,
+      children: null,
+    };
     obj1[3] = tmp.channelName;
     obj1[4] = accessibleTitle;
     obj1[7] = title;
@@ -94,7 +124,7 @@ function ChannelTitle(guildId) {
   }
   items[2] = tmp5Result;
   obj[1] = items;
-  const items1 = [closure_9(View, obj), ];
+  const items1 = [closure_9(View, obj)];
   tmp5Result = null != subtitle;
   if (tmp5Result) {
     const obj3 = { style: null, children: null };
@@ -117,7 +147,17 @@ function GroupDMIcon(channel) {
 function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: true, status: false, isMobileOnline: "done", isVROnline: "flowing", style: "hourglass", autoStatusCutout: "hours" };
+  const obj = {
+    user,
+    avatarDecoration: user.avatarDecoration,
+    guildId: "Boolean",
+    size: true,
+    status: false,
+    isMobileOnline: "done",
+    isVROnline: "flowing",
+    style: "hourglass",
+    autoStatusCutout: "hours",
+  };
   obj[3] = Button.AvatarSizes.REFRESH_MEDIUM_32;
   let tmp3 = null;
   if (!user.isSystemUser()) {
@@ -163,7 +203,7 @@ function MemberCountText(arg0) {
   }
   obj[1] = memberCount;
   obj[3] = leadingAccessoryWidth;
-  const children = [closure_8(_modDef12935, obj), ];
+  const children = [closure_8(_modDef12935, obj)];
   let tmp4Result = null;
   if (withSeparator) {
     tmp4Result = tmp4(Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "\u2022" });
@@ -173,7 +213,15 @@ function MemberCountText(arg0) {
 }
 function ParentChannelSubTitle(channel) {
   channel = channel.channel;
-  let obj = { lineClamp: 1, accessibilityLabel: null, maxFontSizeMultiplier: 2, variant: "text-sm/medium", color: "text-subtle", style: null, children: null };
+  let obj = {
+    lineClamp: 1,
+    accessibilityLabel: null,
+    maxFontSizeMultiplier: 2,
+    variant: "text-sm/medium",
+    color: "text-subtle",
+    style: null,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj = { channelName: null };
   const tmp = callback3();
@@ -189,8 +237,26 @@ function EmptyIcon() {
 }
 ({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles(() => {
-  let obj = { wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 }, channelContent: { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: 4 }, nameWithArrow: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, channelNameContainer: { flexShrink: 1 }, channelName: { flexShrink: 1 }, arrowIcon: null, channelIcon: null, channelIconWrapper: null, guildChannelIcon: null, subTitleContainer: null, parentChannelName: null };
-  obj = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 };
+  let obj = {
+    wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 },
+    channelContent: { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: 4 },
+    nameWithArrow: { flexDirection: "row", alignItems: "center", flexShrink: 1 },
+    channelNameContainer: { flexShrink: 1 },
+    channelName: { flexShrink: 1 },
+    arrowIcon: null,
+    channelIcon: null,
+    channelIconWrapper: null,
+    guildChannelIcon: null,
+    subTitleContainer: null,
+    parentChannelName: null,
+  };
+  obj = {
+    tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+    flexShrink: 0,
+    flexGrow: 0,
+    marginTop: 2,
+    marginLeft: 2,
+  };
   obj[5] = obj;
   obj[6] = { marginRight: 12, flexShrink: 0 };
   obj[7] = { width: 32, height: 32, justifyContent: "center", alignItems: "center" };
@@ -200,10 +266,17 @@ let closure_11 = createCacheKey.createStyles(() => {
   obj[10] = { lineHeight: 20, flexShrink: 1 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeaderShared.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/channel/header/ChannelHeaderShared.tsx",
+);
 
 export const renderTitleWrapper = function renderTitleWrapper(tmp28Result, callback, combined, titleContentHeight) {
-  return callback2(TitleWrapper, { onPress: callback, headerAccessibilityLabel: combined, titleContentHeight, children: tmp28Result });
+  return callback2(TitleWrapper, {
+    onPress: callback,
+    headerAccessibilityLabel: combined,
+    titleContentHeight,
+    children: tmp28Result,
+  });
 };
 export const renderChannelTitle = function renderChannelTitle(channelName, arg1) {
   let obj = arg1;
@@ -216,7 +289,15 @@ export const renderChannelTitle = function renderChannelTitle(channelName, arg1)
   if (tmp) {
     tmp = disableArrow;
   }
-  obj = { title: channelName, accessibleTitle, subtitle, disableArrow: tmp, userId: obj.userId, guildId: obj.guildId, icon: obj.icon };
+  obj = {
+    title: channelName,
+    accessibleTitle,
+    subtitle,
+    disableArrow: tmp,
+    userId: obj.userId,
+    guildId: obj.guildId,
+    icon: obj.icon,
+  };
   return callback2(ChannelTitle, obj);
 };
 export const renderGroupDMIcon = function renderGroupDMIcon(stateFromStores) {

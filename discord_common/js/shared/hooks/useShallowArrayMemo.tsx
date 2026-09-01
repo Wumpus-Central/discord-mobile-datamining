@@ -6,5 +6,9 @@ const result = set.fileFinishedImporting("../discord_common/js/shared/hooks/useS
 
 export default function useShallowArrayMemo(arg0) {
   const _require = arg0;
-  return useMemoWithEqualityFunctionDefault(() => closure_0, arg0, require("../../packages/shallow-equal/shallowEqual.tsx").areArraysShallowEqual);
-};
+  return useMemoWithEqualityFunctionDefault(
+    () => closure_0,
+    arg0,
+    require("../../packages/shallow-equal/shallowEqual.tsx").areArraysShallowEqual,
+  );
+}

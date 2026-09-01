@@ -7,8 +7,7 @@ function handleReset() {
 }
 let closure_0 = {};
 const Store = initializeDefault.Store;
-class StorefrontPromotionStore extends Store {
-}
+class StorefrontPromotionStore extends Store {}
 const prototype = StorefrontPromotionStore.prototype;
 prototype["getFetchState"] = function getFetchState(arg0) {
   let state;
@@ -121,7 +120,7 @@ const storefrontPromotionStore = new StorefrontPromotionStore(dispatcherDefault,
       continue;
     }
   },
-  STOREFRONT_PROMOTION_ID_OVERRIDE_SET: handleReset
+  STOREFRONT_PROMOTION_ID_OVERRIDE_SET: handleReset,
 });
 const result = require("set").fileFinishedImporting("modules/storefront/StorefrontPromotionStore.tsx");
 

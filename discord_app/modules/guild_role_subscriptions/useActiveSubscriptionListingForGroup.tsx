@@ -6,7 +6,9 @@ import closure_5 from "GuildRoleSubscriptionsStore.tsx";
 import { SubscriptionTypes } from "../../Constants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useActiveSubscriptionListingForGroup.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/useActiveSubscriptionListingForGroup.tsx",
+);
 
 export default function useActiveSubscriptionListingForGroup(arg0) {
   const _require = arg0;
@@ -121,5 +123,9 @@ export default function useActiveSubscriptionListingForGroup(arg0) {
       const subscriptionPlansForSKU = obj.fetchSubscriptionPlansForSKU(sku_id, undefined, undefined, soft_deleted);
     }
   }, items4);
-  return { activeSubscription: activeSubscription.activeSubscription, activeSubscriptionListing, activeSubscriptionPlanFromStore };
-};
+  return {
+    activeSubscription: activeSubscription.activeSubscription,
+    activeSubscriptionListing,
+    activeSubscriptionPlanFromStore,
+  };
+}

@@ -28,24 +28,30 @@ const memoResult = importAllResult.memo(function ThreadChannelUserList(channelId
   threadMemberListSections = channelId(onUserPress[9]).useThreadMemberListSections(channelId, stateFromStores);
   const obj2 = channelId(onUserPress[9]);
   const items1 = [threadMemberListSections];
-  stateFromStores1 = channelId(onUserPress[8]).useStateFromStores(items1, () => threadMemberListSections.getChannel(channelId));
+  stateFromStores1 = channelId(onUserPress[8]).useStateFromStores(items1, () =>
+    threadMemberListSections.getChannel(channelId),
+  );
   const tmp3 = guildId(onUserPress[10])();
   closure_6 = tmp3;
   closure_7 = analyticsLocations.useRef(0);
   closure_8 = analyticsLocations.useRef(0);
   const items2 = [channelId, guildId, tmp3];
-  memo = analyticsLocations.useMemo(() => guildId(onUserPress[11])(() => {
-    if (null != closure_1_4.getChannel(closure_0)) {
-      let obj = closure_1_0(closure_1_2[12]);
-      obj = { guildId: null, channelId: null, y: null, height: null, rowHeight: null };
-      obj[0] = closure_1;
-      obj[1] = closure_0;
-      obj[2] = ref2.current;
-      obj[3] = ref.current;
-      obj[4] = closure_6;
-      const result = obj.subscribeChannelDimensions(obj);
-    }
-  }, 50), items2);
+  memo = analyticsLocations.useMemo(
+    () =>
+      guildId(onUserPress[11])(() => {
+        if (null != closure_1_4.getChannel(closure_0)) {
+          let obj = closure_1_0(closure_1_2[12]);
+          obj = { guildId: null, channelId: null, y: null, height: null, rowHeight: null };
+          obj[0] = closure_1;
+          obj[1] = closure_0;
+          obj[2] = ref2.current;
+          obj[3] = ref.current;
+          obj[4] = closure_6;
+          const result = obj.subscribeChannelDimensions(obj);
+        }
+      }, 50),
+    items2,
+  );
   const items3 = [memo];
   const items4 = [memo];
   const callback = analyticsLocations.useCallback((nativeEvent) => {
@@ -86,7 +92,19 @@ const memoResult = importAllResult.memo(function ThreadChannelUserList(channelId
       const member = stateFromStores1.getMember(guildId, user.id);
     }
     if (null != user) {
-      let obj = { type: null, user: null, guildId: null, nickname: null, usernameColor: null, roleColors: null, isNameplatedRow: true, canShowDisplayNameStylesFont: true, onPress: null, start: null, end: null };
+      let obj = {
+        type: null,
+        user: null,
+        guildId: null,
+        nickname: null,
+        usernameColor: null,
+        roleColors: null,
+        isNameplatedRow: true,
+        canShowDisplayNameStylesFont: true,
+        onPress: null,
+        start: null,
+        end: null,
+      };
       obj[0] = constants.NONE;
       obj[1] = user;
       obj[2] = guildId;
@@ -128,9 +146,22 @@ const memoResult = importAllResult.memo(function ThreadChannelUserList(channelId
     }
     return obj;
   }, items7);
-  obj = { sections: threadMemberListSections.map((userIds) => userIds.userIds.length), getItemProps: callback3, getSectionProps: callback2, onLayout: callback, onScroll: callback1, disableStickySections, disableBackgroundOverlay: true, listStyleOverride, disableBottomSafeZone, insetEnd };
+  obj = {
+    sections: threadMemberListSections.map((userIds) => userIds.userIds.length),
+    getItemProps: callback3,
+    getSectionProps: callback2,
+    onLayout: callback,
+    onScroll: callback1,
+    disableStickySections,
+    disableBackgroundOverlay: true,
+    listStyleOverride,
+    disableBottomSafeZone,
+    insetEnd,
+  };
   return memo(channelId(onUserPress[15]).UsersFastList, obj);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/ThreadChannelUserList.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/ThreadChannelUserList.tsx",
+);
 
 export default memoResult;

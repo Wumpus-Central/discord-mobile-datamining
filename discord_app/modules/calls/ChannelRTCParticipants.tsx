@@ -65,7 +65,14 @@ function sortKey(type) {
 ({ ActivityTypes: closure_15, ChannelTypes: closure_16 } = ME);
 ({ MediaEngineContextTypes: closure_17, Features: closure_18 } = DesktopSources);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
-let obj = { VIDEO: "VIDEO", STREAM: "STREAM", FILTERED: "FILTERED", SPEAKING: "SPEAKING", ACTIVITY: "ACTIVITY", NOT_POPPED_OUT: "NOT_POPPED_OUT" };
+let obj = {
+  VIDEO: "VIDEO",
+  STREAM: "STREAM",
+  FILTERED: "FILTERED",
+  SPEAKING: "SPEAKING",
+  ACTIVITY: "ACTIVITY",
+  NOT_POPPED_OUT: "NOT_POPPED_OUT",
+};
 let result = require("set").fileFinishedImporting("modules/calls/ChannelRTCParticipants.tsx");
 class ChannelRTCParticipants {
   constructor(arg0) {
@@ -128,7 +135,7 @@ Object.defineProperty(prototype, "version", {
   get: function version() {
     return this.participantByIndex.version;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["size"] = function size(arg0) {
   const participantByIndex = this.participantByIndex;
@@ -304,7 +311,9 @@ prototype["updateParticipantPoppedOut"] = function updateParticipantPoppedOut(pa
   }
 };
 prototype["_getEmbeddedActivities"] = function _getEmbeddedActivities() {
-  const embeddedActivitiesForChannelIncludingHidden = store.getEmbeddedActivitiesForChannelIncludingHidden(this.channelId);
+  const embeddedActivitiesForChannelIncludingHidden = store.getEmbeddedActivitiesForChannelIncludingHidden(
+    this.channelId,
+  );
   const selfEmbeddedActivityForChannel = store.getSelfEmbeddedActivityForChannel(this.channelId);
   let uniqByResult = embeddedActivitiesForChannelIncludingHidden;
   if (null != selfEmbeddedActivityForChannel) {
@@ -313,7 +322,8 @@ prototype["_getEmbeddedActivities"] = function _getEmbeddedActivities() {
     uniqByResult = apply.uniqBy(items, (compositeInstanceId) => compositeInstanceId.compositeInstanceId);
     obj = apply;
   }
-  const ContentClassificationEmbeddedActivityFilterExperiment = apexExperiment.ContentClassificationEmbeddedActivityFilterExperiment;
+  const ContentClassificationEmbeddedActivityFilterExperiment =
+    apexExperiment.ContentClassificationEmbeddedActivityFilterExperiment;
   const currentUser = authStore2.getCurrentUser();
   let nsfwAllowed;
   if (currentUser != null) {
@@ -323,7 +333,10 @@ prototype["_getEmbeddedActivities"] = function _getEmbeddedActivities() {
   if (!nsfwAllowed) {
     found = uniqByResult;
     if (ContentClassificationEmbeddedActivityFilterExperiment.getConfig({ location: "rtc_participants" }).enabled) {
-      found = uniqByResult.filter((contentClassification) => !callback(table[18]).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
+      found = uniqByResult.filter(
+        (contentClassification) =>
+          !callback(table[18]).isAgeRestrictedClassificationReference(contentClassification.contentClassification),
+      );
     }
   }
   return found;
@@ -332,7 +345,16 @@ prototype["_getParticipantsForEmbeddedActivities"] = function _getParticipantsFo
   const self = this;
   const result = this._getEmbeddedActivities();
   return result.map((applicationId) => {
-    obj = { type: closure_1_14.ACTIVITY, id: null, applicationId: null, activityType: null, activityUrl: null, participants: null, guildId: null, sortKey: null };
+    obj = {
+      type: closure_1_14.ACTIVITY,
+      id: null,
+      applicationId: null,
+      activityType: null,
+      activityUrl: null,
+      participants: null,
+      guildId: null,
+      sortKey: null,
+    };
     ({ applicationId, compositeInstanceId } = applicationId);
     if (null != compositeInstanceId) {
       const _HermesInternal2 = HermesInternal;
@@ -451,7 +473,10 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
           const obj2 = {};
           const merged2 = Object.assign(authStore3.getUserStreamData(userId, guildId, constants3.STREAM));
           const merged3 = Object.assign(tmp20);
-          obj2.type = streamForUser.ownerId === store2.getId() && obj6.isSelfStreamHidden(self.channelId) ? constants.HIDDEN_STREAM : constants.STREAM;
+          obj2.type =
+            streamForUser.ownerId === store2.getId() && obj6.isSelfStreamHidden(self.channelId)
+              ? constants.HIDDEN_STREAM
+              : constants.STREAM;
           obj2.id = encodeStreamKeyResult;
           let flag2;
           if (voiceStateForChannel != null) {

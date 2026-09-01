@@ -35,7 +35,11 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
           type = messageReference.type;
         }
       }
-      if (type === require("../../../../../../discord_common/js/shared/shared-constants/MessageReferenceTypes.tsx").MessageReferenceTypes.FORWARD) {
+      if (
+        type ===
+        require("../../../../../../discord_common/js/shared/shared-constants/MessageReferenceTypes.tsx")
+          .MessageReferenceTypes.FORWARD
+      ) {
         let messageSnapshots;
         if (message != null) {
           messageSnapshots = message.messageSnapshots;
@@ -83,4 +87,4 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
       tmp3 = _require;
     }
   }
-};
+}

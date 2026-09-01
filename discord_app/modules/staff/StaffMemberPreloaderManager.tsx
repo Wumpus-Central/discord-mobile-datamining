@@ -9,15 +9,14 @@ let prototype = function StaffMemberPreloaderManager() {
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       return applyArgumentsResult.handlePostConnectionOpen();
-    }
+    },
   };
   applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
     applyArgumentsResult(table[1]).preloadStaffMembers();
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 const result = require("set").fileFinishedImporting("modules/staff/StaffMemberPreloaderManager.tsx");
 

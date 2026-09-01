@@ -24,7 +24,13 @@ function EmojiItemLockedOverlay() {
 }
 function EmojiItem(emoji) {
   emoji = emoji.emoji;
-  ({ category: importDefault, disabled, onPressEmoji: dependencyMap, onLongPressEmoji: closure_3, animateEmoji } = emoji);
+  ({
+    category: importDefault,
+    disabled,
+    onPressEmoji: dependencyMap,
+    onLongPressEmoji: closure_3,
+    animateEmoji,
+  } = emoji);
   const tmp = callback2();
   if (null == emoji.id) {
     let str = emoji.url;
@@ -47,8 +53,15 @@ function EmojiItem(emoji) {
     disabled = !emoji.isSectionNitroLocked;
   }
   let tmp8 = dependencyMap;
-  obj = { accessibilityRole: "button", accessibilityLabel: emoji.name, style: null, onPress: null, onLongPress: null, children: null };
-  const items = [tmp.surrogatesFrame, ];
+  obj = {
+    accessibilityRole: "button",
+    accessibilityLabel: emoji.name,
+    style: null,
+    onPress: null,
+    onLongPress: null,
+    children: null,
+  };
+  const items = [tmp.surrogatesFrame];
   let disabledOverlay = disabled;
   if (disabled) {
     disabledOverlay = tmp.disabledOverlay;
@@ -82,7 +95,7 @@ function EmojiItem(emoji) {
     obj3[1] = tmp.surrogates;
     obj3[2] = emoji.surrogates;
     const tmp10 = callback(tmp7(1297).LegacyText, obj3);
-    const items1 = [tmp10, ];
+    const items1 = [tmp10];
     if (disabled) {
       disabled = callback(EmojiItemLockedOverlay, {});
     }
@@ -94,7 +107,15 @@ function EmojiItem(emoji) {
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 IMAGE_SIZE = IMAGE_SIZE.IMAGE_SIZE;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { image: { height: IMAGE_SIZE, width: IMAGE_SIZE }, surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" }, disabledOverlay: null, surrogates: null, row: null, lockContainer: null, lock: null };
+let obj = {
+  image: { height: IMAGE_SIZE, width: IMAGE_SIZE },
+  surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" },
+  disabledOverlay: null,
+  surrogates: null,
+  row: null,
+  lockContainer: null,
+  lock: null,
+};
 obj = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[2] = obj;
 let num = 28;
@@ -113,7 +134,14 @@ obj[6] = { width: 16, height: 16, tintColor: "white" };
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_12 = importAllResult.memo((emojis) => {
   emojis = emojis.emojis;
-  ({ emojisDisabled, category: importDefault, rowSize, onPressEmoji: dependencyMap, onLongPressEmoji: closure_3, animateEmoji } = emojis);
+  ({
+    emojisDisabled,
+    category: importDefault,
+    rowSize,
+    onPressEmoji: dependencyMap,
+    onLongPressEmoji: closure_3,
+    animateEmoji,
+  } = emojis);
   ({ containerWidth, row, isSectionNitroLocked } = emojis);
   const items = [];
   const result = row * rowSize;
@@ -182,9 +210,15 @@ let closure_12 = importAllResult.memo((emojis) => {
       if (null != found) {
         callback2(found);
       }
-    }
+    },
   };
-  obj1 = { rowContentWidth: containerWidth, rowContentPaddingVertical: PADDING_VERTICAL, itemSize: IMAGE_SIZE, items, isSectionNitroLocked };
+  obj1 = {
+    rowContentWidth: containerWidth,
+    rowContentPaddingVertical: PADDING_VERTICAL,
+    itemSize: IMAGE_SIZE,
+    items,
+    isSectionNitroLocked,
+  };
   return callback(ViewDefault, obj);
 });
 let closure_13 = importAllResult.memo((arg0) => {
@@ -205,7 +239,15 @@ let closure_13 = importAllResult.memo((arg0) => {
         obj[0] = tmp.image;
         let arr = items.push(callback(closure_3, obj, sum));
       } else {
-        obj = { emoji: null, category: null, animateEmoji: null, disabled: null, onPressEmoji: null, onLongPressEmoji: null, isSectionNitroLocked: null };
+        obj = {
+          emoji: null,
+          category: null,
+          animateEmoji: null,
+          disabled: null,
+          onPressEmoji: null,
+          onLongPressEmoji: null,
+          isSectionNitroLocked: null,
+        };
         obj[0] = tmp4;
         obj[1] = category;
         obj[2] = animateEmoji;

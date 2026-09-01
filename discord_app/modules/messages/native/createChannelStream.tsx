@@ -12,9 +12,22 @@ let result = require("set").fileFinishedImporting("modules/messages/native/creat
 
 export default function createChannelStream(forceRender) {
   ({ channel: require, messages } = forceRender);
-  ({ uploads, oldestUnreadMessageId: dependencyMap, replyingMessageId: closure_3, currentUserId: closure_4, canAddNewReactions: closure_5, selectedSummary: closure_6, chatManager: closure_7, roleStyle } = forceRender);
+  ({
+    uploads,
+    oldestUnreadMessageId: dependencyMap,
+    replyingMessageId: closure_3,
+    currentUserId: closure_4,
+    canAddNewReactions: closure_5,
+    selectedSummary: closure_6,
+    chatManager: closure_7,
+    roleStyle,
+  } = forceRender);
   forceRender = forceRender.forceRender;
-  ({ updateMessageIds: MessageFlags, isResourceChannel: closure_11, unloadableContentEntryMessageIds: closure_12 } = forceRender);
+  ({
+    updateMessageIds: MessageFlags,
+    isResourceChannel: closure_11,
+    unloadableContentEntryMessageIds: closure_12,
+  } = forceRender);
   let items1;
   function unreadFilter(id) {
     if (closure_0.isForumPost()) {
@@ -158,7 +171,15 @@ export default function createChannelStream(forceRender) {
             merged.changeType = tmp4.UPDATE;
           }
           let content = merged.content;
-          obj = { rowType: null, changeType: null, roleStyle: null, message: null, isSystemDM: null, isFirst: null, canAddNewReactions: null };
+          obj = {
+            rowType: null,
+            changeType: null,
+            roleStyle: null,
+            message: null,
+            isSystemDM: null,
+            isFirst: null,
+            canAddNewReactions: null,
+          };
           let tmp6 = roleStyle;
           obj[0] = roleStyle.MESSAGE;
           obj[1] = tmp4.NOOP;
@@ -365,7 +386,23 @@ export default function createChannelStream(forceRender) {
           }
           let tmp78 = items;
           let arr2 = items;
-          obj7 = { roleStyle: null, message: null, isSystemDM: null, isFirst: null, isEditing: null, separatorBefore: null, canAddNewReactions: null, alwaysShowAddReaction: null, renderContentOnly: null, pushFeedbackType: null, canReply: null, canEdit: null, rowType: null, changeType: null, showContentInventoryEntryFallbackEmbed: null };
+          obj7 = {
+            roleStyle: null,
+            message: null,
+            isSystemDM: null,
+            isFirst: null,
+            isEditing: null,
+            separatorBefore: null,
+            canAddNewReactions: null,
+            alwaysShowAddReaction: null,
+            renderContentOnly: null,
+            pushFeedbackType: null,
+            canReply: null,
+            canEdit: null,
+            rowType: null,
+            changeType: null,
+            showContentInventoryEntryFallbackEmbed: null,
+          };
           obj7[0] = roleStyle;
           let tmp81 = nextResult;
           obj7[1] = obj5;
@@ -578,4 +615,4 @@ export default function createChannelStream(forceRender) {
     arr[4] = messages(getSystemLocale.t.XBlaiC);
     arr = items.push(arr);
   }
-};
+}

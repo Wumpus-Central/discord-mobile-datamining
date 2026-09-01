@@ -22,7 +22,7 @@ function _redeemGiftCode() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (paymentSource === 2) {
         paymentSource = 3;
         HermesBuiltin.throwTypeError();

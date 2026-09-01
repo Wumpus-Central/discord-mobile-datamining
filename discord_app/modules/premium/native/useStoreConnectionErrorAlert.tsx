@@ -20,4 +20,4 @@ export default function useStoreConnectionErrorAlert() {
       obj.show(obj);
     }
   }, items1);
-};
+}

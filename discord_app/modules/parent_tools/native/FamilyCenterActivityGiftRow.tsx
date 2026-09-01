@@ -12,7 +12,14 @@ require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, textContainer: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
+createCacheKey = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderBottomWidth: 1,
+  paddingVertical: 12,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "column", flexShrink: 1 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
@@ -65,12 +72,18 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj1[1] = product;
     obj1[2] = isSubscription;
     obj1[3] = subscriptionPlanId;
-    const items = [closure_4(tmp2Result, obj1), ];
+    const items = [closure_4(tmp2Result, obj1)];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.textContainer;
-    const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
+    const obj3 = {
+      variant: "text-md/semibold",
+      color: "interactive-text-active",
+      ellipsizeMode: "tail",
+      lineClamp: 1,
+      children: null,
+    };
     obj3[4] = displayName;
-    const items1 = [closure_4(tmp5(4474).Text, obj3), ];
+    const items1 = [closure_4(tmp5(4474).Text, obj3)];
     const obj4 = { variant: "text-xs/medium", color: "text-muted", children: null };
     obj4[2] = giftSubtext;
     items1[1] = closure_4(tmp5(4474).Text, obj4);
@@ -79,4 +92,4 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj[1] = items;
     return closure_5(View, obj);
   }
-};
+}

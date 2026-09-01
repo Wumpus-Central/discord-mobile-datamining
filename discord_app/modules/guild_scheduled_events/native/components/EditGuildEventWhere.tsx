@@ -13,8 +13,14 @@ const require = arg1;
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: c9, GuildScheduledEventEntityTypes: c10 } = GUILD_EVENT_MAX_NAME_LENGTH);
 ({ Permissions: unpackModuleId, GuildSettingsSections: closure_12 } = ME);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-let closure_16 = createCacheKey.createStyles({ channelSelection: { marginTop: 16 }, error: { paddingVertical: 8 }, text: { marginTop: 24 } });
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventWhere.tsx");
+let closure_16 = createCacheKey.createStyles({
+  channelSelection: { marginTop: 16 },
+  error: { paddingVertical: 8 },
+  text: { marginTop: 24 },
+});
+let result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/EditGuildEventWhere.tsx",
+);
 
 export default function EditGuildEventWhere(guild) {
   guild = guild.guild;
@@ -33,7 +39,11 @@ export default function EditGuildEventWhere(guild) {
   obj1 = guild(ref[11]);
   const items2 = [closure_7];
   const items3 = [guild];
-  let stateFromStores1 = obj1.useStateFromStores(items2, () => closure_1_7.can(closure_1_11.MANAGE_ROLES, guild), items3);
+  let stateFromStores1 = obj1.useStateFromStores(
+    items2,
+    () => closure_1_7.can(closure_1_11.MANAGE_ROLES, guild),
+    items3,
+  );
   [tmp8, c4] = callback(React.useState(null), 2);
   let obj2 = guild(ref[12]);
   React = obj2.useNavigation();
@@ -82,7 +92,7 @@ export default function EditGuildEventWhere(guild) {
     tmp10Result = tmp10(tmp3(tmp4[15]).Text, obj1);
   }
   obj2 = { children: null };
-  const items4 = [tmp10Result, ];
+  const items4 = [tmp10Result];
   const obj3 = { text: null, variant: "primary", onPress: null, disabled: null };
   let intl = tmp3(tmp4[9]).intl;
   obj3[0] = intl.string(guild(ref[9]).t.PDTjLN);
@@ -157,11 +167,10 @@ export default function EditGuildEventWhere(guild) {
         }
         onChange(obj);
       },
-      disabled: tmp9
+      disabled: tmp9,
     }),
     tmp10Result,
-  ,
-
+    ,
   ];
   const obj6 = {
     guild,
@@ -181,7 +190,7 @@ export default function EditGuildEventWhere(guild) {
       }
       onChange(obj);
     },
-    disabled: tmp9
+    disabled: tmp9,
   };
   const tmp15Result = closure_15(closure_14, obj2);
   items5[3] = set.has(guildEvent.entityType) && closure_13(guildEvent(ref[23]), {});
@@ -199,4 +208,4 @@ export default function EditGuildEventWhere(guild) {
   items5[4] = stateFromStores1;
   obj4[2] = items5;
   return closure_15(tmp11Result, obj4);
-};
+}

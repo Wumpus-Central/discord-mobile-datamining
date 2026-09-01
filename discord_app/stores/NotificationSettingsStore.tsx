@@ -7,13 +7,21 @@ import ME from "../Constants.tsx";
 
 const DesktopNotificationTypes = ME.DesktopNotificationTypes;
 ({ NotificationPermissionTypes: c3, TTSNotificationTypes } = ME);
-let obj = { desktopType: set2.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER, disableAllSounds: false, disabledSounds: [], ttsType: TTSNotificationTypes.NEVER, disableUnreadBadge: false, taskbarFlash: true, notifyMessagesInSelectedChannel: false, screenDowntimeReminder: true };
+let obj = {
+  desktopType: set2.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER,
+  disableAllSounds: false,
+  disabledSounds: [],
+  ttsType: TTSNotificationTypes.NEVER,
+  disableUnreadBadge: false,
+  taskbarFlash: true,
+  notifyMessagesInSelectedChannel: false,
+  screenDowntimeReminder: true,
+};
 function handleSetDesktopType(desktopType) {
   obj.desktopType = desktopType.desktopType;
 }
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class NotificationSettingsStore extends DeviceSettingsStore {
-}
+class NotificationSettingsStore extends DeviceSettingsStore {}
 const prototype = NotificationSettingsStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   obj = {};
@@ -45,13 +53,13 @@ Object.defineProperty(prototype, "taskbarFlash", {
   get: function taskbarFlash() {
     return obj.taskbarFlash;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "screenDowntimeReminder", {
   get: function screenDowntimeReminder() {
     return obj.screenDowntimeReminder;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isSoundDisabled"] = function isSoundDisabled(message1) {
   let disableAllSounds = obj.disableAllSounds;
@@ -80,7 +88,7 @@ const items = [
     } else {
       obj.desktopType = set2.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER;
     }
-  }
+  },
 ];
 NotificationSettingsStore.migrations = items;
 obj = {
@@ -113,7 +121,7 @@ obj = {
   },
   NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: function handleSetScreenDowntimeReminder(screenDowntimeReminder) {
     obj.screenDowntimeReminder = screenDowntimeReminder.screenDowntimeReminder;
-  }
+  },
 };
 const notificationSettingsStore = new NotificationSettingsStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("stores/NotificationSettingsStore.tsx");

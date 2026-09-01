@@ -4,7 +4,9 @@ import asyncRequireImpl from "../../../../../../../_runtime/02009_asyncRequireIm
 import _modDef4723 from "../../../../../../actions/ModalActionCreators.tsx";
 
 let c3 = "USER_SETTINGS_CONNECTIONS_CRUNCHYROLL_LINK_MODAL_KEY";
-const result = set.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkModalActionCreators.tsx");
+const result = set.fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkModalActionCreators.tsx",
+);
 
 export default {
   showModal(locationStack) {
@@ -14,5 +16,5 @@ export default {
   },
   hideModal() {
     _modDef4723.popWithKey(c3);
-  }
+  },
 };

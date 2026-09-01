@@ -9,7 +9,9 @@ import closure_8 from "../../stores/UserStore.tsx";
 import closure_9 from "LocalInteractionComponentStateStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/interaction_components/SearchableSelectActionComponentUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/SearchableSelectActionComponentUtils.tsx",
+);
 
 export const MIN_REREQUEST_TIME = 1000;
 export const queryMentionables = function queryMentionables(type, arg1, channelId) {
@@ -18,30 +20,53 @@ export const queryMentionables = function queryMentionables(type, arg1, channelI
   if (null == channel) {
     return [];
   } else {
-    const tmp2 = type === require("../../flow/Server.tsx").ComponentType.USER_SELECT || type === require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
+    const tmp2 =
+      type === require("../../flow/Server.tsx").ComponentType.USER_SELECT ||
+      type === require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
     let obj = channel(5385);
-    obj = { query: null, channel: null, canMentionEveryone: false, canMentionHere: false, canMentionUsers: null, canMentionRoles: null, includeAllGuildUsers: true, includeNonMentionableRoles: true, checkRecentlyTalkedOnEmptyQuery: false, limit: 15 };
+    obj = {
+      query: null,
+      channel: null,
+      canMentionEveryone: false,
+      canMentionHere: false,
+      canMentionUsers: null,
+      canMentionRoles: null,
+      includeAllGuildUsers: true,
+      includeNonMentionableRoles: true,
+      checkRecentlyTalkedOnEmptyQuery: false,
+      limit: 15,
+    };
     obj[0] = arg1;
     obj[1] = channel;
     obj[4] = tmp2;
-    obj[5] = type === require("../../flow/Server.tsx").ComponentType.ROLE_SELECT || type === require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
-    const tmp3 = type === require("../../flow/Server.tsx").ComponentType.ROLE_SELECT || type === require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
+    obj[5] =
+      type === require("../../flow/Server.tsx").ComponentType.ROLE_SELECT ||
+      type === require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
+    const tmp3 =
+      type === require("../../flow/Server.tsx").ComponentType.ROLE_SELECT ||
+      type === require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
     ({ users, roles } = obj.queryMentionResults(obj));
     const items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(users.map((user) => {
-      let obj = channel(closure_1_2[9]);
-      let username = obj.getNickname(channel.getGuildId(), channelId, user.user);
-      obj = { type: channelId(closure_1_2[10]).SelectOptionType.USER, value: user.user.id, label: null };
-      if (username == null) {
-        username = user.user.globalName;
-      }
-      if (username == null) {
-        username = user.user.username;
-      }
-      obj[2] = username;
-      return obj;
-    }), 0);
-    arraySpreadResult = HermesBuiltin.arraySpread(roles.map((id) => ({ type: channelId(table[10]).SelectOptionType.ROLE, value: id.id, label: id.name })), arraySpreadResult);
+    let arraySpreadResult = HermesBuiltin.arraySpread(
+      users.map((user) => {
+        let obj = channel(closure_1_2[9]);
+        let username = obj.getNickname(channel.getGuildId(), channelId, user.user);
+        obj = { type: channelId(closure_1_2[10]).SelectOptionType.USER, value: user.user.id, label: null };
+        if (username == null) {
+          username = user.user.globalName;
+        }
+        if (username == null) {
+          username = user.user.username;
+        }
+        obj[2] = username;
+        return obj;
+      }),
+      0,
+    );
+    arraySpreadResult = HermesBuiltin.arraySpread(
+      roles.map((id) => ({ type: channelId(table[10]).SelectOptionType.ROLE, value: id.id, label: id.name })),
+      arraySpreadResult,
+    );
     return items;
   }
 };
@@ -57,14 +82,25 @@ export const queryChannels = function queryChannels(arg0, arg1, arg2) {
     obj[2] = arg2;
     const channels = obj.queryApplicationCommandChannelResults(obj).channels;
     items = channels.map((id) => {
-      const obj = { type: callback(4745).SelectOptionType.CHANNEL, value: id.id, label: callback(4674).computeChannelName(id, closure_8, closure_7) };
+      const obj = {
+        type: callback(4745).SelectOptionType.CHANNEL,
+        value: id.id,
+        label: callback(4674).computeChannelName(id, closure_8, closure_7),
+      };
       return obj;
     });
   }
   return items;
 };
-export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSelectOptions(selectActionComponent, containerId, guildId) {
-  interactionComponentState = interactionComponentState.getInteractionComponentState(containerId, selectActionComponent.id);
+export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSelectOptions(
+  selectActionComponent,
+  containerId,
+  guildId,
+) {
+  interactionComponentState = interactionComponentState.getInteractionComponentState(
+    containerId,
+    selectActionComponent.id,
+  );
   const defaultValues = selectActionComponent.defaultValues;
   let channelTypes;
   if (selectActionComponent.type === channelTypes(1955).ComponentType.CHANNEL_SELECT) {

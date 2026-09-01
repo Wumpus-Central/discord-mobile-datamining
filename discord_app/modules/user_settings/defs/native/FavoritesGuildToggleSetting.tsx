@@ -20,7 +20,7 @@ const toggle = createToggle.createToggle({
   useValue() {
     return computeIsFavoritesGuildVisibleDefault(false);
   },
-  onValueChange: getNextPositionFromChannels.setFavoritesGuildVisibilityFromSettings
+  onValueChange: getNextPositionFromChannels.setFavoritesGuildVisibilityFromSettings,
 });
 const obj = {
   useTitle() {
@@ -34,7 +34,7 @@ const obj = {
   useValue() {
     return computeIsFavoritesGuildVisibleDefault(false);
   },
-  onValueChange: getNextPositionFromChannels.setFavoritesGuildVisibilityFromSettings
+  onValueChange: getNextPositionFromChannels.setFavoritesGuildVisibilityFromSettings,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/FavoritesGuildToggleSetting.tsx");
 

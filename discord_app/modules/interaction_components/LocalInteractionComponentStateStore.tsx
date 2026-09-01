@@ -10,8 +10,7 @@ let closure_2 = new LimitedMapDefault(196606);
 const tmp3 = new LimitedMapDefault(196606);
 let closure_3 = new LimitedMapDefault(196606);
 const Store = initializeDefault.Store;
-class LocalInteractionComponentStateStore extends Store {
-}
+class LocalInteractionComponentStateStore extends Store {}
 const prototype = LocalInteractionComponentStateStore.prototype;
 prototype["getInteractionComponentStates"] = function getInteractionComponentStates() {
   return closure_0;
@@ -138,7 +137,7 @@ const localInteractionComponentStateStore = new LocalInteractionComponentStateSt
   CLEAR_INTERACTION_MODAL_STATE: function handleClearInteractionModalState(customId) {
     store.delete(customId.customId);
     closure_1 = closure_1 + 1;
-  }
+  },
 });
 let obj = {
   LOGOUT: function handleInit() {
@@ -246,9 +245,11 @@ let obj = {
   CLEAR_INTERACTION_MODAL_STATE: function handleClearInteractionModalState(customId) {
     store.delete(customId.customId);
     closure_1 = closure_1 + 1;
-  }
+  },
 };
 const tmp4 = new LimitedMapDefault(196606);
-let result = require("set").fileFinishedImporting("modules/interaction_components/LocalInteractionComponentStateStore.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/interaction_components/LocalInteractionComponentStateStore.tsx",
+);
 
 export default localInteractionComponentStateStore;

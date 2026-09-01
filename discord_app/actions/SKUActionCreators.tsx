@@ -13,7 +13,7 @@ function _fetchSKU() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -119,7 +119,7 @@ function _fetchPublishedSKU() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       if (c9 === 2) {
         c9 = 3;
         HermesBuiltin.throwTypeError();
@@ -257,7 +257,7 @@ function _fetchTestSKUsForApplication() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       body = tmp2;
       if (flag === undefined) {
         flag = true;
@@ -302,7 +302,7 @@ function _previewPurchaseSku() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (promotionIdOverride2 === 2) {
         promotionIdOverride2 = 3;
         HermesBuiltin.throwTypeError();
@@ -444,7 +444,7 @@ function _grantChannelBranchEntitlement() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -558,7 +558,7 @@ function _orderSKU() {
     c9 = 0;
     c10 = 0;
     c8 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c10 === 2) {
         c10 = 3;
         HermesBuiltin.throwTypeError();
@@ -604,10 +604,34 @@ function _orderSKU() {
               obj1[2] = obj4;
               if (closure_3) {
                 const obj5 = { is_gift: true, gift_customization: null };
-                ({ recipient_id: obj7[0], gift_style: obj7[1], emoji_id: obj7[2], emoji_name: obj7[3], sound_id: obj7[4], reward_sku_ids: obj7[5], custom_message: obj7[6] } = closure_4);
-                obj5[1] = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
+                ({
+                  recipient_id: obj7[0],
+                  gift_style: obj7[1],
+                  emoji_id: obj7[2],
+                  emoji_name: obj7[3],
+                  sound_id: obj7[4],
+                  reward_sku_ids: obj7[5],
+                  custom_message: obj7[6],
+                } = closure_4);
+                obj5[1] = {
+                  recipient_id: null,
+                  gift_style: null,
+                  emoji_id: null,
+                  emoji_name: null,
+                  sound_id: null,
+                  reward_sku_ids: null,
+                  custom_message_contents: null,
+                };
                 obj1.gifting_facet = obj5;
-                const obj6 = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
+                const obj6 = {
+                  recipient_id: null,
+                  gift_style: null,
+                  emoji_id: null,
+                  emoji_name: null,
+                  sound_id: null,
+                  reward_sku_ids: null,
+                  custom_message_contents: null,
+                };
               }
               const HTTP = callback(530).HTTP;
               const obj7 = { url: null, body: null, rejectWithError: null };
@@ -682,7 +706,7 @@ function _purchaseSKU() {
     c10 = 0;
     c11 = 0;
     c8 = 0;
-    return (function*(arg0, gateway_checkout_context) {
+    return (function* (arg0, gateway_checkout_context) {
       if (c11 === 2) {
         c11 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -840,7 +864,9 @@ function _purchaseSKU() {
                   throwTypeErrorResult = c7;
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = paymentSource;
-                  throw callback(paymentSource[13]).dispatchConfirmationError("payment id cannot be null on redirected confirmations.");
+                  throw callback(paymentSource[13]).dispatchConfirmationError(
+                    "payment id cannot be null on redirected confirmations.",
+                  );
                 }
               }
               const obj18 = callback2(paymentSource[4]);
@@ -927,7 +953,8 @@ function _purchaseSKU() {
                   if (closure_14 == null) {
                     c3 = "";
                   }
-                  closure_12.return_url = aPIBaseURL + c7.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(paymentSource.type, c3, "success");
+                  closure_12.return_url =
+                    aPIBaseURL + c7.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(paymentSource.type, c3, "success");
                   const tmp33 = closure_12;
                 }
               } else if (4 === tmp8) {
@@ -968,7 +995,13 @@ function _purchaseSKU() {
                 throwTypeErrorResult = paymentSource;
                 throwTypeErrorResult = callback2(paymentSource[4]);
                 let dispatch = throwTypeErrorResult.dispatch;
-                obj = { type: "SKU_PURCHASE_SUCCESS", skuId: null, libraryApplications: null, entitlements: null, giftCode: null };
+                obj = {
+                  type: "SKU_PURCHASE_SUCCESS",
+                  skuId: null,
+                  libraryApplications: null,
+                  entitlements: null,
+                  giftCode: null,
+                };
                 throwTypeErrorResult = callback2;
                 obj[1] = callback2;
                 throwTypeErrorResult = closure_15;
@@ -1022,7 +1055,7 @@ function _purchaseSKU() {
 }
 function _resendPaymentVerificationEmail() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();

@@ -29,7 +29,7 @@ function _syncLocalState() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -136,7 +136,7 @@ let prototype = function GameConsoleManager() {
     },
     REMOTE_SESSION_DISCONNECT() {
       return applyArgumentsResult.handleRemoteSessionDisconnect();
-    }
+    },
   };
   applyArgumentsResult.maybeConnect = function maybeConnect(mapped) {
     applyArgumentsResult = closure_1_9.getAwaitingRemoteSessionInfo();
@@ -189,7 +189,8 @@ let prototype = function GameConsoleManager() {
                 closure_1_14(voiceStateForSession);
               });
             }
-            tmp3 = voiceStateForSession.selfDeaf === isSelfDeafResult && voiceStateForSession.selfMute === isSelfMuteResult;
+            tmp3 =
+              voiceStateForSession.selfDeaf === isSelfDeafResult && voiceStateForSession.selfMute === isSelfMuteResult;
           }
         }
       }
@@ -306,8 +307,7 @@ let prototype = function GameConsoleManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp4 {
-}
+class prototype extends tmp4 {}
 prototype = new prototype();
 let tmp3 = new timestampDefault("GameConsoleManager");
 let result = require("set").fileFinishedImporting("modules/game_console/GameConsoleManager.tsx");

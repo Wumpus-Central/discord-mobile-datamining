@@ -3,7 +3,14 @@ import set from "../../../../../../_runtime/00002_set.js";
 import ME from "../../../../../Constants.tsx";
 
 const AnalyticsSections = ME.AnalyticsSections;
-const frozen = Object.freeze({ LANDING: AnalyticsSections.IOS_TWO_FA_LANDING, SCAN: AnalyticsSections.IOS_TWO_FA_SCAN, ENTER_CODE: AnalyticsSections.IOS_TWO_FA_ENTER_CODE, SUCCESS: AnalyticsSections.IOS_TWO_FA_SUCCESS, ADD_SMS: AnalyticsSections.IOS_TWO_FA_ADD_SMS, VERIFY_SMS: AnalyticsSections.IOS_TWO_FA_VERIFY_SMS });
+const frozen = Object.freeze({
+  LANDING: AnalyticsSections.IOS_TWO_FA_LANDING,
+  SCAN: AnalyticsSections.IOS_TWO_FA_SCAN,
+  ENTER_CODE: AnalyticsSections.IOS_TWO_FA_ENTER_CODE,
+  SUCCESS: AnalyticsSections.IOS_TWO_FA_SUCCESS,
+  ADD_SMS: AnalyticsSections.IOS_TWO_FA_ADD_SMS,
+  VERIFY_SMS: AnalyticsSections.IOS_TWO_FA_VERIFY_SMS,
+});
 const result = set.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFAConstants.tsx");
 
 export const TwoFAModalSetupSections = frozen;

@@ -11,7 +11,9 @@ import { UserSettingsSections } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
-let result = require("set").fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeModal.tsx");
+let result = require("set").fileFinishedImporting(
+  "components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeModal.tsx",
+);
 
 export default function PremiumGuildSubscribeModal(arg0) {
   ({ guildId: require, guildBoostSlots: importDefault, intent: dependencyMap, onResult: closure_3 } = arg0);
@@ -51,7 +53,13 @@ export default function PremiumGuildSubscribeModal(arg0) {
           } else {
             tmp4Result = tmp4(6239);
           }
-          obj = { source: tmp4Result, IconComponent: tmp2(6240).SettingsIcon, accessibilityLabel: null, accessibilityHint: null, onPress: null };
+          obj = {
+            source: tmp4Result,
+            IconComponent: tmp2(6240).SettingsIcon,
+            accessibilityLabel: null,
+            accessibilityHint: null,
+            onPress: null,
+          };
           const intl = tmp2(1236).intl;
           obj[2] = intl.string(callback(1236).t["3D5yo/"]);
           const intl2 = tmp2(1236).intl;
@@ -126,15 +134,17 @@ export default function PremiumGuildSubscribeModal(arg0) {
   first = tmp2[0];
   closure_5 = tmp2[1];
   let items = [first];
-  useBackPressHandlerDefault(first.useCallback(() => {
-    let flag = first === closure_1_6.GUILD_SELECT;
-    if (flag) {
-      closure_1_0(closure_1_2[8]).closeApplyBoostModal();
-      flag = true;
-      const obj = closure_1_0(closure_1_2[8]);
-    }
-    return flag;
-  }, items));
+  useBackPressHandlerDefault(
+    first.useCallback(() => {
+      let flag = first === closure_1_6.GUILD_SELECT;
+      if (flag) {
+        closure_1_0(closure_1_2[8]).closeApplyBoostModal();
+        flag = true;
+        const obj = closure_1_0(closure_1_2[8]);
+      }
+      return flag;
+    }, items),
+  );
   let obj = { screens: tmp.screens, initialRouteStack: initialStack, headerBackTitle: null, onStateChange: null };
   let intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
@@ -147,5 +157,10 @@ export default function PremiumGuildSubscribeModal(arg0) {
       callback(tmp.name);
     }
   };
-  return jsx(NavigationStack.Navigator, { screens: tmp.screens, initialRouteStack: initialStack, headerBackTitle: null, onStateChange: null });
-};
+  return jsx(NavigationStack.Navigator, {
+    screens: tmp.screens,
+    initialRouteStack: initialStack,
+    headerBackTitle: null,
+    onStateChange: null,
+  });
+}

@@ -868,14 +868,16 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
   }
   let tmp23 = localChannel.parent_id !== parentId;
   if (tmp23) {
-    tmp23 = null == ChannelTypes.find((id) => {
-      let flag = id.id === localChannel2.id;
-      if (flag) {
-        id.parent_id = c1;
-        flag = true;
-      }
-      return flag;
-    });
+    tmp23 =
+      null ==
+      ChannelTypes.find((id) => {
+        let flag = id.id === localChannel2.id;
+        if (flag) {
+          id.parent_id = c1;
+          flag = true;
+        }
+        return flag;
+      });
   }
   if (tmp23) {
     let obj = { id: null, parent_id: null };

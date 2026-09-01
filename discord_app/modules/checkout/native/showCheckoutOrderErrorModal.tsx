@@ -16,7 +16,7 @@ function SyncedLoadingAlertModal(onConfirm) {
   obj = {
     variant: "primary",
     text: confirmText,
-    onPress: callback(function*() {
+    onPress: callback(function* () {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -83,9 +83,9 @@ function SyncedLoadingAlertModal(onConfirm) {
         }
       }
     }),
-    loading: tmp2
+    loading: tmp2,
   };
-  const items = [callback3(onConfirm(4863).AlertActionButton, obj), ];
+  const items = [callback3(onConfirm(4863).AlertActionButton, obj)];
   obj1 = { variant: "secondary", text: null, onPress: null, loading: null };
   const intl = onConfirm(1236).intl;
   obj1[1] = intl.string(onConfirm(1236).t["ETE/oC"]);
@@ -113,14 +113,22 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
   closure_1 = c6;
   return new Promise((arg0) => {
     let callback = arg0;
-    let obj = { key: "checkout-order-error", title: null, content: null, confirmText: null, onConfirm: null, onCancel: null, dismissable: false };
+    let obj = {
+      key: "checkout-order-error",
+      title: null,
+      content: null,
+      confirmText: null,
+      onConfirm: null,
+      onCancel: null,
+      dismissable: false,
+    };
     const intl = callback(1236).intl;
     obj[1] = intl.string(callback(1236).t.zrhHH3);
     const intl2 = callback(1236).intl;
     obj[2] = intl2.string(callback(1236).t.PjfUXe);
     const intl3 = callback(1236).intl;
     obj[3] = intl3.string(callback(1236).t["7NqTJn"]);
-    dependencyMap = closure_1_2(function*() {
+    dependencyMap = closure_1_2(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -176,7 +184,7 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
         }
       }
     });
-    obj[4] = function() {
+    obj[4] = function () {
       const self = this;
       const apply = closure_1.apply;
       if (typeof apply === "unknown") {

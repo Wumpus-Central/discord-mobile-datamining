@@ -17,8 +17,10 @@ export default function useSystemKeyboardHeight() {
   }
   importDefault = undefined;
   importDefault = flag(1496).useAppEntryKey();
-  return computeEntryStateDefault((arg0) => flag ? arg0.byAppEntry[closure_1].keyboardHeightExcludingSafeAreaInsets : arg0.byAppEntry[closure_1].keyboardHeight);
-};
+  return computeEntryStateDefault((arg0) =>
+    flag ? arg0.byAppEntry[closure_1].keyboardHeightExcludingSafeAreaInsets : arg0.byAppEntry[closure_1].keyboardHeight,
+  );
+}
 export const getSystemKeyboardHeight = function getSystemKeyboardHeight(arg0) {
   let tmp = arg0;
   if (arg0 === undefined) {

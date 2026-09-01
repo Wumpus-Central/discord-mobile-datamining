@@ -117,7 +117,9 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/NewMessageUserList.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/NewMessageUserList.tsx",
+);
 
 export default function NewMessageUserList(selectedUserIds) {
   selectedUserIds = selectedUserIds.selectedUserIds;
@@ -194,7 +196,18 @@ export default function NewMessageUserList(selectedUserIds) {
     }
   }, items);
   trimmed = str.trim();
-  let tmp8 = selectedUserIds(trimmed[14])({ query: trimmed, withGuildMembers: flag, withAffinitySuggestions: flag2, withFriends: flag3, withGameFriends: flag4, withFriendSuggestions: flag8, withFriendRequests: flag5, withFriendRequestsIncoming: flag6, withFriendRequestsOutgoing: flag7, excludeCurrentUser: true });
+  let tmp8 = selectedUserIds(trimmed[14])({
+    query: trimmed,
+    withGuildMembers: flag,
+    withAffinitySuggestions: flag2,
+    withFriends: flag3,
+    withGameFriends: flag4,
+    withFriendSuggestions: flag8,
+    withFriendRequests: flag5,
+    withFriendRequestsIncoming: flag6,
+    withFriendRequestsOutgoing: flag7,
+    excludeCurrentUser: true,
+  });
   closure_6 = tmp8;
   callback = undefined;
   let tmp3 = callback(rowMode.useState(""), 2);
@@ -216,13 +229,17 @@ export default function NewMessageUserList(selectedUserIds) {
           return tmp > 0;
         });
         const obj2 = selectedUserIds(trimmed[13]);
-        _undefined(selectedUserIds(trimmed[13]).sortBy(found1, (arg0) => {
-          [, tmp] = arg0;
-          return -tmp;
-        }).map((arg0) => {
-          [tmp] = arg0;
-          return tmp;
-        }));
+        _undefined(
+          selectedUserIds(trimmed[13])
+            .sortBy(found1, (arg0) => {
+              [, tmp] = arg0;
+              return -tmp;
+            })
+            .map((arg0) => {
+              [tmp] = arg0;
+              return tmp;
+            }),
+        );
         const sortByResult = selectedUserIds(trimmed[13]).sortBy(found1, (arg0) => {
           [, tmp] = arg0;
           return -tmp;
@@ -283,7 +300,19 @@ export default function NewMessageUserList(selectedUserIds) {
       const data = tmp.data;
       ({ user, firstMatch } = data);
       const hasItem = flag9.includes(user.id);
-      let obj = { type: null, user: null, nickname: null, onPress: null, disabled: null, selected: null, mode: null, subLabel: null, arrow: null, start: null, end: null };
+      let obj = {
+        type: null,
+        user: null,
+        nickname: null,
+        onPress: null,
+        disabled: null,
+        selected: null,
+        mode: null,
+        subLabel: null,
+        arrow: null,
+        start: null,
+        end: null,
+      };
       obj[0] = data.type;
       obj[1] = user;
       let tmp8;
@@ -365,7 +394,17 @@ export default function NewMessageUserList(selectedUserIds) {
       autoFocusSearch = someResult;
     }
     obj = { children: null };
-    obj1 = { autoFocus: null, hasQuery: null, onChangeText: null, onFocus: null, onForceSearchResults: null, onSelectUser: null, selectedUserIds: null, forceSearchResults: null, tagListInputRef: null };
+    obj1 = {
+      autoFocus: null,
+      hasQuery: null,
+      onChangeText: null,
+      onFocus: null,
+      onForceSearchResults: null,
+      onSelectUser: null,
+      selectedUserIds: null,
+      forceSearchResults: null,
+      tagListInputRef: null,
+    };
     obj1[0] = autoFocusSearch;
     obj1[1] = tmp5;
     obj1[2] = callback;
@@ -380,7 +419,17 @@ export default function NewMessageUserList(selectedUserIds) {
     return closure_12(closure_11, obj);
   } else if (someResult) {
     UsersFastList = UsersFastList(tmp7[18]).UsersFastList;
-    obj2 = { ref: null, sections: null, getItemProps: null, getSectionProps: null, listHeaderSize: null, renderListHeader: null, insetStart: 0, insetEnd: 12, disableThemedGradient: true };
+    obj2 = {
+      ref: null,
+      sections: null,
+      getItemProps: null,
+      getSectionProps: null,
+      listHeaderSize: null,
+      renderListHeader: null,
+      insetStart: 0,
+      insetEnd: 12,
+      disableThemedGradient: true,
+    };
     obj2[0] = ref;
     obj2[1] = memo1;
     obj2[2] = callback2;
@@ -391,7 +440,7 @@ export default function NewMessageUserList(selectedUserIds) {
   } else {
     const obj3 = { style: null, children: null };
     if (tmp21) {
-      const items8 = [noResults, ];
+      const items8 = [noResults];
       let prop1;
       if (flag3) {
         prop1 = tmp2.searchBarRowContainer;
@@ -417,7 +466,7 @@ export default function NewMessageUserList(selectedUserIds) {
     tmp32Result = tmp32(c5, tmp24);
     const tmp22 = c5;
   }
-};
+}
 export { matchGroupDM };
 export { filterGroupDMs };
 export const useSearchGDMNames = function useSearchGDMNames(arg0, arg1, arg2) {
@@ -443,13 +492,17 @@ export const useSearchGDMNames = function useSearchGDMNames(arg0, arg1, arg2) {
           return tmp > 0;
         });
         const obj2 = selectedUserIds(trimmed[13]);
-        _undefined(selectedUserIds(trimmed[13]).sortBy(found1, (arg0) => {
-          [, tmp] = arg0;
-          return -tmp;
-        }).map((arg0) => {
-          [tmp] = arg0;
-          return tmp;
-        }));
+        _undefined(
+          selectedUserIds(trimmed[13])
+            .sortBy(found1, (arg0) => {
+              [, tmp] = arg0;
+              return -tmp;
+            })
+            .map((arg0) => {
+              [tmp] = arg0;
+              return tmp;
+            }),
+        );
         const sortByResult = selectedUserIds(trimmed[13]).sortBy(found1, (arg0) => {
           [, tmp] = arg0;
           return -tmp;

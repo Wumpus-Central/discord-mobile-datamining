@@ -7,7 +7,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx",
+);
 
 export default function ConnectedApplicationIdentity(identity) {
   identity = identity.identity;
@@ -47,7 +49,7 @@ export default function ConnectedApplicationIdentity(identity) {
   let icon;
   callback = obj1.useCallback(() => {
     let obj = { children: null };
-    const items = [closure_1_7(lib(application[8]).Spacer, { size: 8 }), , , ];
+    const items = [closure_1_7(lib(application[8]).Spacer, { size: 8 }), , ,];
     obj = { variant: "text-md/medium", children: null };
     const intl = lib(application[7]).intl;
     obj = { provider: str };
@@ -62,7 +64,15 @@ export default function ConnectedApplicationIdentity(identity) {
     const obj2 = { platformName: str };
     const tmp = token(application[10]);
     const tmp2 = closure_1_8(closure_1_6, obj);
-    const obj3 = { title: null, body: null, cancelText: null, children: null, confirmText: null, onConfirm: null, confirmColor: null };
+    const obj3 = {
+      title: null,
+      body: null,
+      cancelText: null,
+      children: null,
+      confirmText: null,
+      onConfirm: null,
+      confirmColor: null,
+    };
     const intl3 = lib(application[7]).intl;
     obj3[0] = intl3.formatToPlainString(lib(application[7]).t.U5x12f, { name: str });
     obj3[1] = c5;
@@ -101,7 +111,7 @@ export default function ConnectedApplicationIdentity(identity) {
     c2 = 0;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_1 = tmp3;
       v0(closure_0);
       c3 = 1;
@@ -134,21 +144,28 @@ export default function ConnectedApplicationIdentity(identity) {
   if (profile2 != null) {
     connection_visible = profile2.connection_visible;
   }
-  const items2 = [connection_visible, , ];
+  const items2 = [connection_visible, ,];
   ({ provider_issued_user_id: arr3[1], application_id: arr3[2] } = identity);
   if (null == application) {
     return null;
   } else {
     obj = { accessible: true, accessibilityLabel: null, style: null, size: null, source: null, disableColor: true };
     obj[1] = application.name;
-    const items3 = [, ];
+    const items3 = [,];
     ({ connectedApplicationIdentityIcon: arr4[0], platformIcon: arr4[1] } = legacyClassComponentStyles);
     obj[2] = items3;
     obj[3] = token(tmp3[15]).Sizes.LARGE;
     obj[4] = memo;
     const tmp15 = token(tmp3[15]);
     obj = { spacing: 8, direction: "horizontal", align: "center", children: null };
-    obj1 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, disabled: null, children: null };
+    obj1 = {
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      onPress: null,
+      hitSlop: null,
+      disabled: null,
+      children: null,
+    };
     let intl2 = tmp2(tmp3[7]).intl;
     obj1[1] = intl2.string(tmp2(tmp3[7]).t["DT39A+"]);
     obj1[2] = callback;
@@ -172,7 +189,7 @@ export default function ConnectedApplicationIdentity(identity) {
     obj6[1] = tmp16;
     obj6[2] = callback2(tmp2(tmp3[17]).Stack, obj);
     obj5[1] = callback2(tmp2(tmp3[20]).TableRow, obj6);
-    const items4 = [callback2(View, obj5), ];
+    const items4 = [callback2(View, obj5)];
     const obj7 = { style: null, children: null };
     obj7[0] = legacyClassComponentStyles.connectedAccountContentContainer;
     const obj8 = { hasIcons: false, children: null };
@@ -189,4 +206,4 @@ export default function ConnectedApplicationIdentity(identity) {
     return callback2(View, obj3);
   }
   const tmp5 = callback(React.useState(flag), 2);
-};
+}

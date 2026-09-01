@@ -32,8 +32,7 @@ const delayedCall = new require("start").DelayedCall(3000, function flush() {
   }
 });
 const Store = initializeDefault.Store;
-class PresenceSubscriptionsStore extends Store {
-}
+class PresenceSubscriptionsStore extends Store {}
 const prototype = PresenceSubscriptionsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3);
@@ -97,7 +96,14 @@ const presenceSubscriptionsStore = new PresenceSubscriptionsStore(dispatcherDefa
         const _HermesInternal = HermesInternal;
         const _Date2 = Date;
         const combined1 = "" + applicationId + ":" + partyId;
-        const obj = { userId: null, applicationId: null, partyId: null, messageId: null, channelId: null, expiresAt: null };
+        const obj = {
+          userId: null,
+          applicationId: null,
+          partyId: null,
+          messageId: null,
+          channelId: null,
+          expiresAt: null,
+        };
         obj[0] = userId;
         obj[1] = applicationId;
         obj[2] = partyId;
@@ -116,7 +122,7 @@ const presenceSubscriptionsStore = new PresenceSubscriptionsStore(dispatcherDefa
   LOGOUT: function handleLogout() {
     closure_5 = {};
     closure_6 = {};
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/presence_subscriptions/PresenceSubscriptionsStore.tsx");
 

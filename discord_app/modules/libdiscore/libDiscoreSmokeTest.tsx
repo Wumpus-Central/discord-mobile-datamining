@@ -17,7 +17,7 @@ function libDiscoreSmokeTest() {
 }
 function _libDiscoreSmokeTest() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (logger === 2) {
       logger = 3;
       HermesBuiltin.throwTypeError();

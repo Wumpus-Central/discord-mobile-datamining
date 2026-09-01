@@ -10,7 +10,13 @@ import showUserProfileActionSheetDefault from "../user_profile/native/showUserPr
 import MAX_STAGE_TOPIC_LENGTH from "StageChannelsConstants.tsx";
 
 const setIsOnStartStageScreen = setIsOnStartStageScreen2.setIsOnStartStageScreen;
-({ STAGE_AUDIENCE_NOTICE_SHEET_KEY: c4, START_STAGE_CHANNEL_EVENT_SHEET_KEY: c5, STAGE_BLOCKED_USERS_SHEET_KEY: closure_6, STAGE_SETTINGS_SHEET_KEY: error, EXPLICIT_END_STAGE_SHEET_KEY: closure_8 } = MAX_STAGE_TOPIC_LENGTH);
+({
+  STAGE_AUDIENCE_NOTICE_SHEET_KEY: c4,
+  START_STAGE_CHANNEL_EVENT_SHEET_KEY: c5,
+  STAGE_BLOCKED_USERS_SHEET_KEY: closure_6,
+  STAGE_SETTINGS_SHEET_KEY: error,
+  EXPLICIT_END_STAGE_SHEET_KEY: closure_8,
+} = MAX_STAGE_TOPIC_LENGTH);
 const result = set.fileFinishedImporting("modules/stage_channels/StageChannelActionCreatorExtras.native.tsx");
 
 export const openStageChannelSettings = function openStageChannelSettings(closure_0) {
@@ -18,9 +24,7 @@ export const openStageChannelSettings = function openStageChannelSettings(closur
   obj = { channel: closure_0 };
   obj.openLazy(asyncRequireImpl(8668, dependencyMap.paths), closure_5, obj);
 };
-export function openEndGuildEventConfirmationModal() {
-
-}
+export function openEndGuildEventConfirmationModal() {}
 export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(channelId) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channelId };

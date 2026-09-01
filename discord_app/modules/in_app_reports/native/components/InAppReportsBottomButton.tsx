@@ -9,14 +9,41 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { flex: 0, alignSelf: "stretch", paddingBottom: 12 }, paddingHorizontal: { paddingHorizontal: 16 }, divider: null, descriptionText: null, errorText: null };
-createCacheKey = { height: 1, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: 16 };
+createCacheKey = {
+  container: { flex: 0, alignSelf: "stretch", paddingBottom: 12 },
+  paddingHorizontal: { paddingHorizontal: 16 },
+  divider: null,
+  descriptionText: null,
+  errorText: null,
+};
+createCacheKey = {
+  height: 1,
+  alignSelf: "stretch",
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginBottom: 16,
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { lineHeight: 16, textAlign: "center", marginBottom: 12 };
-createCacheKey[4] = { color: ThemesDefault.unsafe_rawColors.RED_400, fontSize: 12, lineHeight: 16, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, textAlign: "center", marginTop: 12 };
+createCacheKey[4] = {
+  color: ThemesDefault.unsafe_rawColors.RED_400,
+  fontSize: 12,
+  lineHeight: 16,
+  fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD,
+  textAlign: "center",
+  marginTop: 12,
+};
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: ThemesDefault.unsafe_rawColors.RED_400, fontSize: 12, lineHeight: 16, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, textAlign: "center", marginTop: 12 };
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBottomButton.tsx");
+let obj1 = {
+  color: ThemesDefault.unsafe_rawColors.RED_400,
+  fontSize: 12,
+  lineHeight: 16,
+  fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD,
+  textAlign: "center",
+  marginTop: 12,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsBottomButton.tsx",
+);
 
 export default function InAppReportsBottomButton(button) {
   button = button.button;
@@ -60,7 +87,7 @@ export default function InAppReportsBottomButton(button) {
       obj[0] = tmp.container;
       obj = { style: null };
       obj[0] = tmp.divider;
-      const items = [callback(View, obj), ];
+      const items = [callback(View, obj)];
       obj = { style: null, children: null };
       obj[0] = tmp.paddingHorizontal;
       let tmp14Result = null;
@@ -70,7 +97,7 @@ export default function InAppReportsBottomButton(button) {
         obj1[3] = tmp3;
         tmp14Result = tmp14(tmp17(4474).Text, obj1);
       }
-      const items1 = [tmp14Result, , ];
+      const items1 = [tmp14Result, ,];
       const obj2 = { disabled: null, onPress: null, text: null, variant: null };
       obj2[0] = disabled;
       obj2[1] = function onPress() {
@@ -93,4 +120,4 @@ export default function InAppReportsBottomButton(button) {
       return closure_5(View, obj);
     }
   }
-};
+}

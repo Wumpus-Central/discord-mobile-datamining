@@ -5,7 +5,9 @@ import dispatcherDefault from "../../../../toast/native/ToastActionCreators.tsx"
 import CircleInformationIcon from "../../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import CircleErrorIcon from "../../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 
-const result = set.fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/guildSettingsStickerToasts.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_settings/server_monetization/stickers/native/guildSettingsStickerToasts.tsx",
+);
 
 export const showGuildSettingsStickerError = function showGuildSettingsStickerError() {
   let obj = dispatcherDefault;
@@ -16,7 +18,11 @@ export const showGuildSettingsStickerError = function showGuildSettingsStickerEr
 };
 export const showGuildSettingsStickerSuccess = function showGuildSettingsStickerSuccess() {
   let obj = dispatcherDefault;
-  obj = { key: "GUILD_SETTINGS_STICKER_SUCCESS", IconComponent: CircleInformationIcon.CircleInformationIcon, content: null };
+  obj = {
+    key: "GUILD_SETTINGS_STICKER_SUCCESS",
+    IconComponent: CircleInformationIcon.CircleInformationIcon,
+    content: null,
+  };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["+c5xtT"]);
   obj.open(obj);

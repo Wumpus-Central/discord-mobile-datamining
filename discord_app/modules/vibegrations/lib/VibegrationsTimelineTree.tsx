@@ -35,7 +35,17 @@ function buildTimelineTree(steps, arg1) {
         if (null != value) {
           return value;
         } else {
-          obj = { id: null, kind: "step", detail: null, detailDrivenBy: null, status: "running", screenshots: null, attachments: null, touched: 0, segment: null };
+          obj = {
+            id: null,
+            kind: "step",
+            detail: null,
+            detailDrivenBy: null,
+            status: "running",
+            screenshots: null,
+            attachments: null,
+            touched: 0,
+            segment: null,
+          };
           obj[0] = arg1;
           obj[2] = [];
           obj[3] = [];
@@ -49,7 +59,17 @@ function buildTimelineTree(steps, arg1) {
             if (null == value) {
               obj = { taskId: null, task: null, steps: null };
               obj[0] = steps;
-              obj1 = { id: "task", kind: "task", detail: null, detailDrivenBy: null, status: "running", screenshots: null, attachments: null, touched: 0, segment: null };
+              obj1 = {
+                id: "task",
+                kind: "task",
+                detail: null,
+                detailDrivenBy: null,
+                status: "running",
+                screenshots: null,
+                attachments: null,
+                touched: 0,
+                segment: null,
+              };
               obj1[2] = [];
               obj1[3] = [];
               obj1[5] = [];
@@ -74,7 +94,17 @@ function buildTimelineTree(steps, arg1) {
       if (null == value1) {
         const obj2 = { taskId: null, task: null, steps: null };
         obj2[0] = steps;
-        const obj3 = { id: "task", kind: "task", detail: null, detailDrivenBy: null, status: "running", screenshots: null, attachments: null, touched: 0, segment: null };
+        const obj3 = {
+          id: "task",
+          kind: "task",
+          detail: null,
+          detailDrivenBy: null,
+          status: "running",
+          screenshots: null,
+          attachments: null,
+          touched: 0,
+          segment: null,
+        };
         obj3[2] = [];
         obj3[3] = [];
         obj3[5] = [];
@@ -88,7 +118,17 @@ function buildTimelineTree(steps, arg1) {
       let task = value1.task;
       obj6 = map;
     } else if (task == null) {
-      const obj4 = { id: "task", kind: "task", detail: null, detailDrivenBy: null, status: "running", screenshots: null, attachments: null, touched: 0, segment: null };
+      const obj4 = {
+        id: "task",
+        kind: "task",
+        detail: null,
+        detailDrivenBy: null,
+        status: "running",
+        screenshots: null,
+        attachments: null,
+        touched: 0,
+        segment: null,
+      };
       obj4[2] = [];
       obj4[3] = [];
       obj4[5] = [];
@@ -204,12 +244,18 @@ function buildTimelineTree(steps, arg1) {
               driven_by = null;
             }
             items = [];
-            let arraySpreadResult = HermesBuiltin.arraySpread(node.append_detail, HermesBuiltin.arraySpread(tmp14Result.detail, 0));
+            let arraySpreadResult = HermesBuiltin.arraySpread(
+              node.append_detail,
+              HermesBuiltin.arraySpread(tmp14Result.detail, 0),
+            );
             tmp14Result.detail = items;
             const items1 = [];
             const append_detail = node.append_detail;
             arraySpreadResult = HermesBuiltin.arraySpread(tmp14Result.detailDrivenBy, 0);
-            HermesBuiltin.arraySpread(append_detail.map(() => driven_by), arraySpreadResult);
+            HermesBuiltin.arraySpread(
+              append_detail.map(() => driven_by),
+              arraySpreadResult,
+            );
             tmp14Result.detailDrivenBy = items1;
           }
           if (null != node.status) {
@@ -446,7 +492,23 @@ function isTurnWorkFrame(task_id) {
   }
   return tmp;
 }
-let obj = { assembling: messagesProxyDefault["9G3ZmA"], installing_deps: messagesProxyDefault.VZuRug, building: messagesProxyDefault["s+ylXP"], bundling: messagesProxyDefault.rEQlMx, committing: messagesProxyDefault.Yvyw1H, built: messagesProxyDefault.hOcVAj, build_error: messagesProxyDefault["6L9Vwt"], healthchecking: messagesProxyDefault.sz8yAj, awaiting_auth: messagesProxyDefault["orD+xo"], healthcheck_passed: messagesProxyDefault["x+sqTG"], healthcheck_failed: messagesProxyDefault.FUWbq1, deploying: messagesProxyDefault.wcXX8Z, preview_ready: messagesProxyDefault["78YNh7"], working: messagesProxyDefault.nv6pUM, error: messagesProxyDefault.j3hBoA };
+let obj = {
+  assembling: messagesProxyDefault["9G3ZmA"],
+  installing_deps: messagesProxyDefault.VZuRug,
+  building: messagesProxyDefault["s+ylXP"],
+  bundling: messagesProxyDefault.rEQlMx,
+  committing: messagesProxyDefault.Yvyw1H,
+  built: messagesProxyDefault.hOcVAj,
+  build_error: messagesProxyDefault["6L9Vwt"],
+  healthchecking: messagesProxyDefault.sz8yAj,
+  awaiting_auth: messagesProxyDefault["orD+xo"],
+  healthcheck_passed: messagesProxyDefault["x+sqTG"],
+  healthcheck_failed: messagesProxyDefault.FUWbq1,
+  deploying: messagesProxyDefault.wcXX8Z,
+  preview_ready: messagesProxyDefault["78YNh7"],
+  working: messagesProxyDefault.nv6pUM,
+  error: messagesProxyDefault.j3hBoA,
+};
 let result = require("set").fileFinishedImporting("modules/vibegrations/lib/VibegrationsTimelineTree.tsx");
 
 export const describeNode = function describeNode(labelText) {

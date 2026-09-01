@@ -50,20 +50,26 @@ export default {
     obj = { nick };
     obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     const obj4 = sendRequest;
-    HTTP.patch(obj).then(() => {
-      callback2(table[1]).dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_SUCCESS" });
-    }, (status) => {
-      const intl = callback(closure_1_2[3]).intl;
-      let stringResult = intl.string(callback(closure_1_2[3]).t["5LO/Ss"]);
-      if (null != callback) {
-        const intl2 = tmp(tmp2[3]).intl;
-        stringResult = intl2.string(tmp(tmp2[3]).t.rJfW6S);
-      }
-      if (403 === status.status) {
-        const intl3 = tmp(tmp2[3]).intl;
-        stringResult = intl3.formatToMarkdownString(tmp(tmp2[3]).t.Izf9jO, {});
-      }
-      closure_1_1(closure_1_2[1]).dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_FAILURE", error: stringResult });
-    });
-  }
+    HTTP.patch(obj).then(
+      () => {
+        callback2(table[1]).dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_SUCCESS" });
+      },
+      (status) => {
+        const intl = callback(closure_1_2[3]).intl;
+        let stringResult = intl.string(callback(closure_1_2[3]).t["5LO/Ss"]);
+        if (null != callback) {
+          const intl2 = tmp(tmp2[3]).intl;
+          stringResult = intl2.string(tmp(tmp2[3]).t.rJfW6S);
+        }
+        if (403 === status.status) {
+          const intl3 = tmp(tmp2[3]).intl;
+          stringResult = intl3.formatToMarkdownString(tmp(tmp2[3]).t.Izf9jO, {});
+        }
+        closure_1_1(closure_1_2[1]).dispatch({
+          type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_FAILURE",
+          error: stringResult,
+        });
+      },
+    );
+  },
 };

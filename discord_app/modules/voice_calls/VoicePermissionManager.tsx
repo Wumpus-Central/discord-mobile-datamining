@@ -15,7 +15,10 @@ initializeDefault;
 class VoicePermissionManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    applyArgumentsResult.actions = { VOICE_STATE_UPDATES: applyArgumentsResult.handleVoiceStateUpdates, VOICE_CHANNEL_SELECT: applyArgumentsResult.handleVoiceChannelSelect };
+    applyArgumentsResult.actions = {
+      VOICE_STATE_UPDATES: applyArgumentsResult.handleVoiceStateUpdates,
+      VOICE_CHANNEL_SELECT: applyArgumentsResult.handleVoiceChannelSelect,
+    };
     return applyArgumentsResult;
   }
 }
@@ -56,7 +59,10 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceSta
             } else {
               const tmp8 = new closure_4(arg0);
               const audienceRequestToSpeakState = callback(4668).getAudienceRequestToSpeakState(tmp8);
-              if (audienceRequestToSpeakState === callback(4668).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
+              if (
+                audienceRequestToSpeakState ===
+                callback(4668).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
+              ) {
                 const permission2 = callback2(5083).requestPermission(constants2.AUDIO);
                 permission2.then((arg0) => {
                   if (arg0) {

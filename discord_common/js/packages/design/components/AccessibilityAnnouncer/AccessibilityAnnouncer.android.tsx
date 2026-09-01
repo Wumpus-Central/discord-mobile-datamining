@@ -4,7 +4,9 @@ import get_ActivityIndicator from "../../../../../../_runtime/00017_get_Activity
 import updateAccessibilityAnnouncerLiveRegionMessage from "AccessibilityAnnouncerLiveRegion.native.tsx";
 
 const AccessibilityInfo = get_ActivityIndicator.AccessibilityInfo;
-let result = set.fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx");
+let result = set.fileFinishedImporting(
+  "../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx",
+);
 
 export const AccessibilityAnnouncer = {
   announce(intl, polite) {
@@ -17,5 +19,5 @@ export const AccessibilityAnnouncer = {
   },
   clearAnnouncements() {
     return null;
-  }
+  },
 };

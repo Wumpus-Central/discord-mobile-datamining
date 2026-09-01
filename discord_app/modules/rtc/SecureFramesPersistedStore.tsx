@@ -5,8 +5,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 let items = [];
 let c1 = false;
 const PersistedStore = initializeDefault.PersistedStore;
-class SecureFramesPersistedStore extends PersistedStore {
-}
+class SecureFramesPersistedStore extends PersistedStore {}
 const prototype = SecureFramesPersistedStore.prototype;
 prototype["initialize"] = function initialize(persistentCodesEnabled) {
   let flag;
@@ -55,7 +54,7 @@ const secureFramesPersistedStore = new SecureFramesPersistedStore(dispatcherDefa
   },
   SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: function handleSecureFramesUploadedKeyVersionsClear() {
     closure_2 = items;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/rtc/SecureFramesPersistedStore.tsx");
 

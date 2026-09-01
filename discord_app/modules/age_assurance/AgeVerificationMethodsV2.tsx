@@ -7,7 +7,15 @@ const require = arg1;
 function mapMethodsV2Response(methods) {
   let obj = {
     methods: methods.map((method) => {
-      let obj = { method: method.method, vendor: method.vendor, title: method.title, description: method.description, providedBy: null, icon: null, externalWindow: null };
+      let obj = {
+        method: method.method,
+        vendor: method.vendor,
+        title: method.title,
+        description: method.description,
+        providedBy: null,
+        icon: null,
+        externalWindow: null,
+      };
       let provided_by = method.provided_by;
       if (provided_by == null) {
         provided_by = null;
@@ -41,7 +49,7 @@ function mapMethodsV2Response(methods) {
       return obj;
     }),
     footerMessage: null,
-    outageBannerMessage: null
+    outageBannerMessage: null,
   };
   methods = methods.methods;
   let footer_message = methods.footer_message;
@@ -58,7 +66,7 @@ function mapMethodsV2Response(methods) {
 }
 function _fetchAgeVerificationMethodsV() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const callback = closure_1_5;
     const HTTP = closure_1_0(table[3]).HTTP;
     obj1 = { url: null, rejectWithError: true };
@@ -77,7 +85,7 @@ function _fetchAgeVerificationMethodsV() {
 }
 function _fetchAgeVerificationMethodsV2SuspendedUser() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const callback = closure_1_5;
     const suspendedUserToken = closure_1_3.getSuspendedUserToken();
     const HTTP = closure_1_0(table[3]).HTTP;

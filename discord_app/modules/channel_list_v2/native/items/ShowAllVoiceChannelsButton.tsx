@@ -45,9 +45,23 @@ const memoResult = importAllResult.memo((guildId) => {
   } else {
     stringResult = string(t.Q2gPWl);
   }
-  obj = { text: stringResult, icon: tmp5(guildId(section[8]).VoiceNormalIcon, { size: "sm" }), onPress: callback, variant: "secondary", size: "sm" };
-  return jsx(guildId(section[6]).Button, { text: stringResult, icon: tmp5(guildId(section[8]).VoiceNormalIcon, { size: "sm" }), onPress: callback, variant: "secondary", size: "sm" });
+  obj = {
+    text: stringResult,
+    icon: tmp5(guildId(section[8]).VoiceNormalIcon, { size: "sm" }),
+    onPress: callback,
+    variant: "secondary",
+    size: "sm",
+  };
+  return jsx(guildId(section[6]).Button, {
+    text: stringResult,
+    icon: tmp5(guildId(section[8]).VoiceNormalIcon, { size: "sm" }),
+    onPress: callback,
+    variant: "secondary",
+    size: "sm",
+  });
 });
-let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/items/ShowAllVoiceChannelsButton.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/channel_list_v2/native/items/ShowAllVoiceChannelsButton.tsx",
+);
 
 export default memoResult;

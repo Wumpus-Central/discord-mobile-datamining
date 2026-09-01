@@ -11,4 +11,4 @@ export default function getDevicePixelRatio() {
     num = 1;
   }
   return num;
-};
+}

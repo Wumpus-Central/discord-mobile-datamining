@@ -38,25 +38,53 @@ export default function ProviderConnectionCard(connection) {
     ({ hasConnection, canConnect, loading } = startProviderConnection);
     const items = [startConnection, guildId, connection.provider_id, _location];
     const items1 = [connection.provider_id, tmp3];
-    callback = startConnection.useCallback(callback(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+    callback = startConnection.useCallback(
+      callback(function* () {
+        if (v0 === 2) {
+          v0 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
+          try {
+            v0 = 2;
+            if (0 === dependencyMap) {
+              if (arg0 === 1) {
+                v0 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                v0 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                obj1 = {};
+                const obj5 = v0(698);
+                const merged = Object.assign(closure_1_0(4700).collectGuildAnalyticsMetadata(v0));
+                obj1.connection_type = "provider";
+                const provider_id = closure_1_0.provider_id;
+                c0 = provider_id;
+                if (provider_id == null) {
+                  c0 = undefined;
+                }
+                obj1.provider_id = c0;
+                obj1.location = dependencyMap;
+                obj5.track(closure_1_5.GUILD_ONBOARDING_CONNECTION_CLICKED, obj1);
+                dependencyMap = 1;
+                v0 = 1;
+                const obj2 = { value: null, done: false };
+                obj2[0] = closure_1_4("Guild Onboarding");
+                return obj2;
+              }
+            } else if (arg0 === 1) {
               v0 = 3;
               throw arg1;
             } else if (arg0 === 2) {
@@ -65,42 +93,17 @@ export default function ProviderConnectionCard(connection) {
               obj[0] = arg1;
               return obj;
             } else {
-              obj1 = {};
-              const obj5 = v0(698);
-              const merged = Object.assign(closure_1_0(4700).collectGuildAnalyticsMetadata(v0));
-              obj1.connection_type = "provider";
-              const provider_id = closure_1_0.provider_id;
-              c0 = provider_id;
-              if (provider_id == null) {
-                c0 = undefined;
-              }
-              obj1.provider_id = c0;
-              obj1.location = dependencyMap;
-              obj5.track(closure_1_5.GUILD_ONBOARDING_CONNECTION_CLICKED, obj1);
-              dependencyMap = 1;
-              v0 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = closure_1_4("Guild Onboarding");
-              return obj2;
+              v0 = 3;
+              return { value: "HermesInternal", done: null };
             }
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            v0 = 3;
-            return { value: "HermesInternal", done: null };
+          } catch (tmp9) {
+            v0 = tmp;
+            throw tmp9;
           }
-        } catch (tmp9) {
-          v0 = tmp;
-          throw tmp9;
         }
-      }
-    }), items);
+      }),
+      items,
+    );
     const memo = startConnection.useMemo(() => {
       if (null != connection.provider_id) {
         let obj = guildId(_location[5]);
@@ -125,7 +128,15 @@ export default function ProviderConnectionCard(connection) {
         return closure_1_6(connection(_location[14]).LinkIcon, { size: "lg", color: "text-subtle" });
       }
     }, items1);
-    let obj = { displayName: null, description: null, icon: null, isLoading: null, isConnected: null, canConnect: null, onConnect: null };
+    let obj = {
+      displayName: null,
+      description: null,
+      icon: null,
+      isLoading: null,
+      isConnected: null,
+      canConnect: null,
+      onConnect: null,
+    };
     obj[0] = stringResult;
     obj[1] = description;
     obj[2] = memo;
@@ -133,7 +144,15 @@ export default function ProviderConnectionCard(connection) {
     obj[4] = hasConnection;
     obj[5] = canConnect;
     obj[6] = callback;
-    return jsx(tmp(tmp2[15]), { displayName: null, description: null, icon: null, isLoading: null, isConnected: null, canConnect: null, onConnect: null });
+    return jsx(tmp(tmp2[15]), {
+      displayName: null,
+      description: null,
+      icon: null,
+      isLoading: null,
+      isConnected: null,
+      canConnect: null,
+      onConnect: null,
+    });
   }
   description = tmp(tmp2[7])(connection.provider_id);
-};
+}

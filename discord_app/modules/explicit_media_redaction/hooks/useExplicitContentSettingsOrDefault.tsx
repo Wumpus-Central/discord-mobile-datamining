@@ -5,7 +5,9 @@ import resolveGoreSettingWithDefaults from "../SensitiveMediaGoreRedactionSettin
 import closure_2 from "../../user_settings/UserSettingsProtoStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx",
+);
 
 export const useExplicitContentSettingOrDefault = function useExplicitContentSettingOrDefault() {
   let obj = defaultAreStatesEqual;
@@ -26,7 +28,13 @@ export const useExplicitContentSettingOrDefault = function useExplicitContentSet
   if (stateFromStoresObject != null) {
     prop = stateFromStoresObject.explicitContentGuilds;
   }
-  obj = { explicitContentGuilds: resolveExplicitContentSettingWithDefaults.resolveExplicitContentSettingWithDefaults({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
+  obj = {
+    explicitContentGuilds: resolveExplicitContentSettingWithDefaults.resolveExplicitContentSettingWithDefaults({
+      setting: prop,
+    }),
+    explicitContentNonFriendDm: null,
+    explicitContentFriendDm: null,
+  };
   let tmpResult = tmp(6144);
   let prop1;
   if (stateFromStoresObject != null) {
@@ -60,7 +68,11 @@ export const useGoreContentSettingOrDefault = function useGoreContentSettingOrDe
   if (stateFromStoresObject != null) {
     goreContentGuilds = stateFromStoresObject.goreContentGuilds;
   }
-  obj = { goreContentGuilds: resolveGoreSettingWithDefaults.resolveGoreSettingWithDefaults({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
+  obj = {
+    goreContentGuilds: resolveGoreSettingWithDefaults.resolveGoreSettingWithDefaults({ setting: goreContentGuilds }),
+    goreContentNonFriendDm: null,
+    goreContentFriendDm: null,
+  };
   let tmpResult = tmp(6146);
   let prop;
   if (stateFromStoresObject != null) {

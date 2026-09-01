@@ -13,13 +13,13 @@ obj = {
   },
   parent: null,
   IconComponent: BoostGemIcon.BoostGemIcon,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.GUILD_BOOSTING,
   getComponent() {
     return componentDidMount /* componentDidMount */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/PremiumGuildBoostingSetting.tsx");

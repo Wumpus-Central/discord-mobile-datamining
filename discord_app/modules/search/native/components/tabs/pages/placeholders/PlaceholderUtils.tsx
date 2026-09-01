@@ -1,13 +1,15 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/PlaceholderUtils.tsx
 import set from "../../../../../../../../_runtime/00002_set.js";
 
-const result = set.fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/PlaceholderUtils.tsx");
+const result = set.fileFinishedImporting(
+  "modules/search/native/components/tabs/pages/placeholders/PlaceholderUtils.tsx",
+);
 
 export const getAdjustedPlaceholderCount = function getAdjustedPlaceholderCount(numResults) {
   ({ numColumns, placeholderCount } = numResults);
   let num = 0;
   if (0 !== placeholderCount) {
-    num = placeholderCount + (numColumns - numResults.numResults % numColumns);
+    num = placeholderCount + (numColumns - (numResults.numResults % numColumns));
   }
   return num;
 };

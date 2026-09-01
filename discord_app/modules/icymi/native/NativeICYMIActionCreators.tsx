@@ -8,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/icymi/native/Native
 export default {
   customScoreGuild(arg0) {
     ({ guildId: require, channelScores: importDefault, guildScore: dependencyMap } = arg0);
-    return callback(function*() {
+    return callback(function* () {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -70,7 +70,12 @@ export default {
               constants = 3;
               throw arg1;
             } else if (arg0 !== 2) {
-              const obj5 = { type: "ICYMI_CUSTOM_SCORES_UPDATED", guildId: null, channelScores: null, guildScore: null };
+              const obj5 = {
+                type: "ICYMI_CUSTOM_SCORES_UPDATED",
+                guildId: null,
+                channelScores: null,
+                guildScore: null,
+              };
               obj5[1] = closure_0;
               obj5[2] = v0;
               obj5[3] = closure_2;
@@ -101,5 +106,5 @@ export default {
         }
       }
     })();
-  }
+  },
 };

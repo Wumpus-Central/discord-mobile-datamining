@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/HandRequestSpeakListIcon.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Icon/native/redesign/generated/HandRequestSpeakListIcon.tsx",
+);
 
 export const HandRequestSpeakListIcon = function HandRequestSpeakListIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
@@ -16,5 +18,9 @@ export const HandRequestSpeakListIcon = function HandRequestSpeakListIcon(color)
   }
   const merged = Object.assign(color, Object.create(null));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, {
+    source: registerAsset,
+    color: INTERACTIVE_ICON_DEFAULT,
+    style: color.style,
+  });
 };

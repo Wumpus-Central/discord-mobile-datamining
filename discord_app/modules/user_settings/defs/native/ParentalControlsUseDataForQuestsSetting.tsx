@@ -22,9 +22,11 @@ createToggle = {
     const ParentalControlledDropsOptedOut = result2.ParentalControlledDropsOptedOut;
     const result = ParentalControlledDropsOptedOut.updateControlledSetting(selectedTeenId, !arg0);
   },
-  unsearchable: true
+  unsearchable: true,
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataForQuestsSetting.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/ParentalControlsUseDataForQuestsSetting.tsx",
+);
 
 export default createToggle;

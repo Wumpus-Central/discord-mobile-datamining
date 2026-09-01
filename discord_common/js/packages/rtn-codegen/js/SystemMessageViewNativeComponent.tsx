@@ -4,7 +4,9 @@ import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeCo
 
 const obj = { uiViewClassName: "DCDSystemMessageView", validAttributes: { row: true } };
 const value = setRuntimeConfigProvider.get("DCDSystemMessageView", () => obj);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/SystemMessageViewNativeComponent.tsx");
+const result = set.fileFinishedImporting(
+  "../discord_common/js/packages/rtn-codegen/js/SystemMessageViewNativeComponent.tsx",
+);
 
 export default value;
 export const __INTERNAL_VIEW_CONFIG = obj;

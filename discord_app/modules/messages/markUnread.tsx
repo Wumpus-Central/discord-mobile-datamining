@@ -16,7 +16,7 @@ function _markUnread() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (channel === 2) {
         channel = 3;
         HermesBuiltin.throwTypeError();
@@ -157,4 +157,4 @@ export default function markUnread() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

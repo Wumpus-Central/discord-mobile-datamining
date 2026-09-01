@@ -78,8 +78,7 @@ const map1 = new Map();
 let c10 = false;
 let c11 = null;
 const Store = initializeDefault.Store;
-class SecureFramesVerifiedStore extends Store {
-}
+class SecureFramesVerifiedStore extends Store {}
 const prototype = SecureFramesVerifiedStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3, closure_4, closure_5, closure_6);
@@ -163,7 +162,7 @@ const secureFramesVerifiedStore = new SecureFramesVerifiedStore(dispatcherDefaul
   SECURE_FRAMES_TRANSIENT_KEY_DELETE: handleUserUpdate,
   SECURE_FRAMES_VERIFIED_KEY_CREATE: handleUserUpdate,
   SECURE_FRAMES_VERIFIED_KEY_DELETE: handleUserUpdate,
-  SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: handleUserUpdate
+  SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: handleUserUpdate,
 });
 let result = require("set").fileFinishedImporting("modules/rtc/SecureFramesVerifiedStore.tsx");
 

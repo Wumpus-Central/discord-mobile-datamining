@@ -58,32 +58,35 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
         key = survey.key;
       }
       return callback(1400).exact({ key });
-    }
+    },
   };
   obj[2] = obj;
   const obj2 = _modDef4713;
   obj[3] = sendRequest.rejectWithMigratedError();
   const value = obj2.get(obj);
-  return value.then((body) => {
-    let survey;
-    if (body != null) {
-      body = body.body;
+  return value.then(
+    (body) => {
+      let survey;
       if (body != null) {
-        survey = body.survey;
+        body = body.body;
+        if (body != null) {
+          survey = body.survey;
+        }
       }
-    }
-    callback2(709).dispatch({ type: "SURVEY_FETCHED", survey });
-    let survey1;
-    if (body != null) {
-      const body2 = body.body;
-      if (body2 != null) {
-        survey1 = body2.survey;
+      callback2(709).dispatch({ type: "SURVEY_FETCHED", survey });
+      let survey1;
+      if (body != null) {
+        const body2 = body.body;
+        if (body2 != null) {
+          survey1 = body2.survey;
+        }
       }
-    }
-    return survey1;
-  }, () => {
-    callback2(709).dispatch({ type: "SURVEY_FETCHED", survey: null });
-  });
+      return survey1;
+    },
+    () => {
+      callback2(709).dispatch({ type: "SURVEY_FETCHED", survey: null });
+    },
+  );
 };
 export const surveySeen = function surveySeen(key) {
   const _require = key;
@@ -99,20 +102,22 @@ export const surveySeen = function surveySeen(key) {
   obj = { url: closure_7.USER_SURVEY_SEEN(key), trackedActionData: null, rejectWithError: null };
   const obj3 = _modDef4713;
   obj[1] = {
-    event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames.USER_SURVEY_SEEN,
+    event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames
+      .USER_SURVEY_SEEN,
     properties() {
       let obj = key(closure_1_2[6]);
       obj = { key };
       return obj.exact(obj);
-    }
+    },
   };
   obj1 = {
-    event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames.USER_SURVEY_SEEN,
+    event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames
+      .USER_SURVEY_SEEN,
     properties() {
       let obj = key(closure_1_2[6]);
       obj = { key };
       return obj.exact(obj);
-    }
+    },
   };
   obj[2] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
   return obj3.post(obj);

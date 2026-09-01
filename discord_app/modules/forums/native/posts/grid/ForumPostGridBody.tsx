@@ -15,7 +15,12 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 require = arg1;
 function GIFIcon() {
   const tmp = callback3();
-  return callback(Button.Icon, { size: Button.Icon.Sizes.CUSTOM, source: registerAssetDefault2, disableColor: true, style: callback3().gifIcon });
+  return callback(Button.Icon, {
+    size: Button.Icon.Sizes.CUSTOM,
+    source: registerAssetDefault2,
+    disableColor: true,
+    style: callback3().gifIcon,
+  });
 }
 function PlayIcon() {
   return callback(Button.Icon, { size: Button.Icon.Sizes.SMALL_20, source: registerAssetDefault3, disableColor: true });
@@ -24,8 +29,14 @@ function ExtraMediaIcon(extraMediaCount) {
   const tmp = callback3();
   let obj = { style: tmp.extraMediaCountContainer, children: null };
   obj = { source: registerAssetDefault, color: tmp.icon.color, size: Button.Icon.Sizes.REFRESH_SMALL_16 };
-  items = [callback(Button.Icon, obj), ];
-  obj = { style: tmp.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: "+" + extraMediaCount.extraMediaCount };
+  items = [callback(Button.Icon, obj)];
+  obj = {
+    style: tmp.extraMediaCount,
+    lineClamp: 1,
+    variant: "text-xs/normal",
+    color: "text-default",
+    children: "+" + extraMediaCount.extraMediaCount,
+  };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
@@ -46,28 +57,71 @@ function MediaGridColumn(arg0) {
         tmp2 = closure_1_6(closure_1_5, obj);
       }
       obj = { children: null };
-      items = [tmp2, ];
+      items = [tmp2];
       obj = { channel: id, media: media.media, targetWidth: media.targetWidth, targetHeight: media.targetHeight };
       items[1] = closure_1_6(closure_1_0(closure_1_2[13]).ForumPostGridMedia, obj);
       obj[0] = items;
       return closure_1_7(closure_1_4.Fragment, obj, "" + id.id + "-" + arg1);
-    })
+    }),
   });
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { gifIcon: null, container: null, wideAspectRatioContainer: null, mediaIconContainer: null, headerLeftContainer: null, footerLeftContainer: null, footerRightContainer: null, extraMediaCountContainer: null, extraMediaCount: null, grid: null, wideAspectRatioGrid: null, column: null, columnSpacer: null, rowSpacer: null, icon: null };
-createCacheKey = { height: 20, width: 33, backgroundColor: "black", borderRadius: ThemesDefault.radii.xs, resizeMode: "cover" };
+createCacheKey = {
+  gifIcon: null,
+  container: null,
+  wideAspectRatioContainer: null,
+  mediaIconContainer: null,
+  headerLeftContainer: null,
+  footerLeftContainer: null,
+  footerRightContainer: null,
+  extraMediaCountContainer: null,
+  extraMediaCount: null,
+  grid: null,
+  wideAspectRatioGrid: null,
+  column: null,
+  columnSpacer: null,
+  rowSpacer: null,
+  icon: null,
+};
+createCacheKey = {
+  height: 20,
+  width: 33,
+  backgroundColor: "black",
+  borderRadius: ThemesDefault.radii.xs,
+  resizeMode: "cover",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "relative", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: 225 };
 createCacheKey[2] = { height: 192 };
 createCacheKey[3] = { paddingLeft: 6 };
 createCacheKey[4] = { flexDirection: "row", position: "absolute", top: 4, left: 4 };
-createCacheKey[5] = { flexDirection: "row", position: "absolute", bottom: 4, left: 4, alignItems: "center", justifyContent: "flex-start" };
+createCacheKey[5] = {
+  flexDirection: "row",
+  position: "absolute",
+  bottom: 4,
+  left: 4,
+  alignItems: "center",
+  justifyContent: "flex-start",
+};
 createCacheKey[6] = { position: "absolute", bottom: 4, right: 4, alignItems: "center", justifyContent: "flex-start" };
 let obj1 = { position: "relative", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: 225 };
-createCacheKey[7] = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, height: 24, paddingHorizontal: 8, borderRadius: 20 };
+createCacheKey[7] = {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  height: 24,
+  paddingHorizontal: 8,
+  borderRadius: 20,
+};
 createCacheKey[8] = { marginLeft: 2 };
-let obj2 = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, height: 24, paddingHorizontal: 8, borderRadius: 20 };
+let obj2 = {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  height: 24,
+  paddingHorizontal: 8,
+  borderRadius: 20,
+};
 createCacheKey[9] = { height: 225, flexDirection: "row", borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[10] = { height: 192 };
 createCacheKey[11] = { flex: 1, flexDirection: "column" };
@@ -76,7 +130,10 @@ createCacheKey[13] = { flex: 0, height: 2, width: "100%" };
 let obj3 = { height: 225, flexDirection: "row", borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[14] = { color: ThemesDefault.colors.TEXT_SUBTLE };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let items = [[0, 3], [1, 2]];
+let items = [
+  [0, 3],
+  [1, 2],
+];
 let obj4 = { color: ThemesDefault.colors.TEXT_SUBTLE };
 let result = require("set").fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridBody.tsx");
 
@@ -117,7 +174,7 @@ export default function ForumPostGridBody(thread) {
     return memo1.map((arr) => {
       arr.filter(memo(width[12]).isNotNullish).length;
       return arr.map((media) => {
-        const diff = (closure_2_2 - 48) / length - 2 * (length - 1) / length;
+        const diff = (closure_2_2 - 48) / length - (2 * (length - 1)) / length;
         const obj = { media, targetWidth: diff, targetHeight: null };
         if (closure_2_1) {
           if (length < 2) {
@@ -126,21 +183,21 @@ export default function ForumPostGridBody(thread) {
           obj[2] = result;
           return obj;
         }
-        result = length / length - 2 * (length - 1) / length;
+        result = length / length - (2 * (length - 1)) / length;
       });
     });
   }, items2);
   const items3 = [media];
   const memo3 = React.useMemo(() => memo(width[15]).messageContainsGifOrVideo(media), items3);
   ({ containsVideo, containsGif } = memo3);
-  const items4 = [tmp.container, ];
+  const items4 = [tmp.container];
   let wideAspectRatioContainer = isMediaPostResult;
   if (isMediaPostResult) {
     wideAspectRatioContainer = tmp.wideAspectRatioContainer;
   }
   obj = { style: items4, children: null };
   items4[1] = wideAspectRatioContainer;
-  const items5 = [tmp.grid, ];
+  const items5 = [tmp.grid];
   let wideAspectRatioGrid = isMediaPostResult;
   if (isMediaPostResult) {
     wideAspectRatioGrid = tmp.wideAspectRatioGrid;
@@ -155,15 +212,15 @@ export default function ForumPostGridBody(thread) {
         tmp2 = closure_1_6(closure_1_5, obj);
       }
       obj = { children: null };
-      items = [tmp2, ];
+      items = [tmp2];
       obj = { column, thread: memo };
       items[1] = closure_1_6(closure_1_13, obj);
       obj[0] = items;
       return closure_1_7(closure_1_4.Fragment, obj, "" + column + "-" + arg1);
-    })
+    }),
   };
   items5[1] = wideAspectRatioGrid;
-  const items6 = [closure_6(View, obj), , , ];
+  const items6 = [closure_6(View, obj), , ,];
   if (tmp13Result) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.footerLeftContainer;
@@ -188,7 +245,7 @@ export default function ForumPostGridBody(thread) {
       obj4[1] = tmp13(GIFIcon, {});
       containsGif = tmp13(tmp12, obj4);
     }
-    const items7 = [containsGif, ];
+    const items7 = [containsGif];
     if (containsVideo) {
       const obj5 = { style: null, children: null };
       obj5[0] = tmp.mediaIconContainer;
@@ -212,5 +269,5 @@ export default function ForumPostGridBody(thread) {
   items6[3] = tmp13Result;
   obj[1] = items6;
   return closure_7(View, obj);
-};
+}
 export const GRID_HORIZONTAL_PADDING = 48;

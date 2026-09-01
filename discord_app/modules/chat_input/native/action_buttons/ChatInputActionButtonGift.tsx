@@ -40,7 +40,9 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonGift(arg0)
   let obj2 = require(stateFromStores[10]);
   const items1 = [closure_7];
   stateFromStores1 = obj2.useStateFromStores(items1, () => {
-    const marketingComponentByType = store.getMarketingComponentByType(callback(stateFromStores[11]).MarketingComponentType.GIFT_ICON);
+    const marketingComponentByType = store.getMarketingComponentByType(
+      callback(stateFromStores[11]).MarketingComponentType.GIFT_ICON,
+    );
     let giftIcon = null;
     if (null != marketingComponentByType) {
       giftIcon = null;
@@ -101,7 +103,10 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonGift(arg0)
     prop = null;
   }
   const tmp2Result1 = require(stateFromStores[13]);
-  [tmp21, c6] = tmp15(require(stateFromStores[13]).useSelectedSnowflakeBoundDismissibleContent(prop, stateFromStores2, undefined, true), 2);
+  [tmp21, c6] = tmp15(
+    require(stateFromStores[13]).useSelectedSnowflakeBoundDismissibleContent(prop, stateFromStores2, undefined, true),
+    2,
+  );
   const tmp22 = tmp21 === require(stateFromStores[14]).DismissibleContent.GIFTING_PROMOTION_ICON;
   if (!isNullOrEmptyResult) {
     tmp12 = tmp22;
@@ -136,7 +141,18 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonGift(arg0)
   }, items3);
   obj = { style, children: null };
   if (tmp12) {
-    obj = { channelId: null, animationDataUrl: null, disabled: null, active: false, loop: false, onPress: null, onAnimationFinished: null, IconComponent: null, accessible: null, accessibilityLabel: null };
+    obj = {
+      channelId: null,
+      animationDataUrl: null,
+      disabled: null,
+      active: false,
+      loop: false,
+      onPress: null,
+      onAnimationFinished: null,
+      IconComponent: null,
+      accessible: null,
+      accessibilityLabel: null,
+    };
     obj[0] = channel.id;
     obj[1] = boxAnimationUrl;
     obj[2] = disabled;
@@ -167,11 +183,20 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonGift(arg0)
       const tmp27 = callback;
       const tmp29 = ref(tmp3[18]);
     }
-    const items4 = [tmp27Result, ];
+    const items4 = [tmp27Result];
     tmp30 = callback;
-    obj2 = { ref: null, style: null, disabled: null, accessible: null, accessibilityLabel: null, active: false, IconComponent: null, onPress: null };
+    obj2 = {
+      ref: null,
+      style: null,
+      disabled: null,
+      accessible: null,
+      accessibilityLabel: null,
+      active: false,
+      IconComponent: null,
+      onPress: null,
+    };
     obj2[0] = ref;
-    const items5 = [styleButton, ];
+    const items5 = [styleButton];
     if (transparentBackground) {
       transparentBackground = tmp5.transparentBackground;
     }
@@ -188,7 +213,11 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonGift(arg0)
         let obj = closure_1_0(stateFromStores[20]);
         obj = { dismissAction: null };
         obj[0] = closure_1_9.TAKE_ACTION;
-        const result = obj.markSnowflakeBoundDismissibleContentAsDismissed(closure_1_0(stateFromStores[14]).DismissibleContent.GIFTING_PROMOTION_ICON, stateFromStores2, obj);
+        const result = obj.markSnowflakeBoundDismissibleContentAsDismissed(
+          closure_1_0(stateFromStores[14]).DismissibleContent.GIFTING_PROMOTION_ICON,
+          stateFromStores2,
+          obj,
+        );
       }
       callback(arg0, constants.NITRO_GIFT, ref);
     };
@@ -197,7 +226,7 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonGift(arg0)
     tmp24Result = tmp24(tmp25, obj3);
     const tmp32 = ref(tmp3[19]);
   }
-  const items6 = [tmp24Result, ];
+  const items6 = [tmp24Result];
   if (tmp30Result) {
     const obj4 = { trinketsAnimationUrl: null };
     obj4[0] = trinketAnimationUrl;
@@ -207,6 +236,8 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonGift(arg0)
   obj[1] = items6;
   return closure_11(c5, obj);
 });
-let result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButtonGift.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/chat_input/native/action_buttons/ChatInputActionButtonGift.tsx",
+);
 
 export default memoResult;

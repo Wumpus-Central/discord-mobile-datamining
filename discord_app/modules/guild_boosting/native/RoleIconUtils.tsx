@@ -19,17 +19,21 @@ export const useRoleIcon = function useRoleIcon(guildId) {
   let role;
   const items = [closure_5, role];
   const items1 = [guildId, roleId];
-  const stateFromStoresObject = guildId(num[4]).useStateFromStoresObject(items, () => {
-    const obj = { guild: closure_1_5.getGuild(guildId), role: null };
-    role = undefined;
-    if (null != guildId) {
-      if (null != roleId) {
-        role = role.getRole(guildId, tmp3);
+  const stateFromStoresObject = guildId(num[4]).useStateFromStoresObject(
+    items,
+    () => {
+      const obj = { guild: closure_1_5.getGuild(guildId), role: null };
+      role = undefined;
+      if (null != guildId) {
+        if (null != roleId) {
+          role = role.getRole(guildId, tmp3);
+        }
       }
-    }
-    obj[1] = role;
-    return obj;
-  }, items1);
+      obj[1] = role;
+      return obj;
+    },
+    items1,
+  );
   guild = stateFromStoresObject.guild;
   role = stateFromStoresObject.role;
   const items2 = [guild, role, roleId, num];

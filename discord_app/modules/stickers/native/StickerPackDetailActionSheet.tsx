@@ -11,7 +11,21 @@ const require = arg1;
 let c4 = importAllResult;
 ({ MIN_MARGIN: c5, STICKER_SIZE: closure_6 } = PADDING_HORIZONTAL);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles({ focusedStickerPreviewContainer: { position: "absolute", left: 0, top: 0, height: "100%", width: "100%", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0.85)" }, header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "a" }, stickers: { paddingHorizontal: 16, marginBottom: 16 }, popoutContainer: { position: "absolute", bottom: 50 } });
+let closure_12 = createCacheKey.createStyles({
+  focusedStickerPreviewContainer: {
+    position: "absolute",
+    left: 0,
+    top: 0,
+    height: "100%",
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.85)",
+  },
+  header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "a" },
+  stickers: { paddingHorizontal: 16, marginBottom: 16 },
+  popoutContainer: { position: "absolute", bottom: 50 },
+});
 const memoResult = importAllResult.memo(function StickerPackDetailActionSheet(stickerPack) {
   stickerPack = stickerPack.stickerPack;
   const analyticsPopoutType = stickerPack.analyticsPopoutType;
@@ -50,14 +64,17 @@ const memoResult = importAllResult.memo(function StickerPackDetailActionSheet(st
   const effect = first.useEffect(() => {
     closure_8.current = onClose;
   }, items);
-  const effect1 = first.useEffect(() => () => {
-    const current = ref.current;
-    let currentResult;
-    if (current != null) {
-      currentResult = current();
-    }
-    return currentResult;
-  }, []);
+  const effect1 = first.useEffect(
+    () => () => {
+      const current = ref.current;
+      let currentResult;
+      if (current != null) {
+        currentResult = current();
+      }
+      return currentResult;
+    },
+    [],
+  );
   const items1 = [analyticsPopoutType, stickerPack.id];
   const effect2 = first.useEffect(() => {
     let obj = analyticsPopoutType(onClose[10]);
@@ -74,14 +91,23 @@ const memoResult = importAllResult.memo(function StickerPackDetailActionSheet(st
   obj = { scrollable: true, startExpanded: true, handleDisabled: true, header: null, children: null };
   obj1 = { children: null };
   obj[2] = tmp17;
-  const items2 = [onPressSticker(analyticsPopoutType(onClose[12]), obj), onPressSticker(stickerPack(onClose[14]).ActionSheetHeaderBar, { variant: "floating" })];
+  const items2 = [
+    onPressSticker(analyticsPopoutType(onClose[12]), obj),
+    onPressSticker(stickerPack(onClose[14]).ActionSheetHeaderBar, { variant: "floating" }),
+  ];
   obj1[0] = items2;
   obj[3] = closure_11(closure_10, obj1);
   obj2 = { style: tmp.stickers, contentContainerStyle: obj3, children: null };
   const tmp16 = analyticsPopoutType(onClose[12]);
-  obj2[2] = chunkResult.map((stickers) => onPressSticker(analyticsPopoutType(onClose[16]), { containerWidth: rounded, stickers, rowSize: rounded, onPressSticker, nativeRow: false }, arg1));
+  obj2[2] = chunkResult.map((stickers) =>
+    onPressSticker(
+      analyticsPopoutType(onClose[16]),
+      { containerWidth: rounded, stickers, rowSize: rounded, onPressSticker, nativeRow: false },
+      arg1,
+    ),
+  );
   obj[4] = onPressSticker(stickerPack(onClose[15]).BottomSheetScrollView, obj2);
-  const children = [onPressSticker(stickerPack(onClose[11]).BottomSheet, obj), , ];
+  const children = [onPressSticker(stickerPack(onClose[11]).BottomSheet, obj), ,];
   let tmp14Result = null != tmp5;
   if (tmp14Result) {
     const obj4 = { accessibilityRole: "none", style: null, onPress: null, children: null };

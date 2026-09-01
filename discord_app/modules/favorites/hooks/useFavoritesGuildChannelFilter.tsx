@@ -49,4 +49,4 @@ export default function useFavoritesGuildChannelFilter() {
       return canResult;
     }
   }, items1);
-};
+}

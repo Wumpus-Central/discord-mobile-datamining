@@ -18,12 +18,14 @@ createToggle = {
   },
   onValueChange: function onNoiseSuppressionSettingValueChange(arg0) {
     const NoiseSuppressionOpt = handleAutomaticGainControlChange.NoiseSuppressionOpt;
-    const result = handleAutomaticGainControlChange.handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
+    const result = handleAutomaticGainControlChange.handleNoiseSuppressionChange(
+      arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE,
+    );
   },
   usePredicate: function useHasNoiseSuppressionSetting() {
     const items = [closure_2];
     return initialize.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
 let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionSetting.tsx");

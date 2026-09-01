@@ -4,13 +4,27 @@ import AutomodTriggerType from "../../../discord_common/js/shared/shared-constan
 import AutomodEventType from "../../../discord_common/js/shared/shared-constants/AutomodEventType.tsx";
 import AutomodActionType from "../../../discord_common/js/shared/shared-constants/AutomodActionType.tsx";
 
-const items = [AutomodTriggerType.AutomodTriggerType.USER_PROFILE, AutomodTriggerType.AutomodTriggerType.SERVER_POLICY, AutomodTriggerType.AutomodTriggerType.MENTION_SPAM, AutomodTriggerType.AutomodTriggerType.ML_SPAM, AutomodTriggerType.AutomodTriggerType.DEFAULT_KEYWORD_LIST, AutomodTriggerType.AutomodTriggerType.KEYWORD];
+const items = [
+  AutomodTriggerType.AutomodTriggerType.USER_PROFILE,
+  AutomodTriggerType.AutomodTriggerType.SERVER_POLICY,
+  AutomodTriggerType.AutomodTriggerType.MENTION_SPAM,
+  AutomodTriggerType.AutomodTriggerType.ML_SPAM,
+  AutomodTriggerType.AutomodTriggerType.DEFAULT_KEYWORD_LIST,
+  AutomodTriggerType.AutomodTriggerType.KEYWORD,
+];
 const result = set.fileFinishedImporting("modules/guild_automod/Constants.tsx");
 
 export const AutomodEventType = AutomodEventType.AutomodEventType;
 export const AutomodTriggerType = AutomodTriggerType.AutomodTriggerType;
 export const AutomodActionType = AutomodActionType.AutomodActionType;
-export const KeywordPreset = { PROFANITY: 1, [1]: "PROFANITY", SEXUAL_CONTENT: 2, [2]: "SEXUAL_CONTENT", SLURS: 3, [3]: "SLURS" };
+export const KeywordPreset = {
+  PROFANITY: 1,
+  [1]: "PROFANITY",
+  SEXUAL_CONTENT: 2,
+  [2]: "SEXUAL_CONTENT",
+  SLURS: 3,
+  [3]: "SLURS",
+};
 export const AUTOMOD_TRIGGER_TYPES = items;
 export const MAX_KEYWORDS_PER_KEYWORD_FILTER = 1000;
 export const MAX_KEYWORDS_PER_ALLOWLIST_KEYWORD_FILTER_RULE = 100;

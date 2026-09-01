@@ -2,7 +2,9 @@
 import closure_0 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_1 from "../../../../../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/useMountTimer.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/performance/useMountTimer.tsx",
+);
 
 export default function useMountTimer() {
   const tmp = callback(React.useState(null), 2);
@@ -32,6 +34,6 @@ export default function useMountTimer() {
       if (arg0 === ref3.current) {
         tmp.current = null;
       }
-    }, [])
+    }, []),
   };
-};
+}

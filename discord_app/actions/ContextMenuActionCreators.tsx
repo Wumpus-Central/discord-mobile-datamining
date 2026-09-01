@@ -142,9 +142,7 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
 const AppContext = ME.AppContext;
 const result = set.fileFinishedImporting("actions/ContextMenuActionCreators.tsx");
 
-export function closeContextMenu() {
-
-}
+export function closeContextMenu() {}
 export { openContextMenu };
 export const openContextMenuLazy = function openContextMenuLazy(stopPropagation, arg1, enableSpellCheck) {
   openContextMenu(stopPropagation, undefined, enableSpellCheck, arg1);

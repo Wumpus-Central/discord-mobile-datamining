@@ -18,4 +18,4 @@ export default function shouldRemoveSelfMention(type) {
     tmp2 = id === arg1;
   }
   return tmp2;
-};
+}

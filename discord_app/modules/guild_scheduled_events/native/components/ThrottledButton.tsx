@@ -3,7 +3,9 @@ import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/ThrottledButton.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/ThrottledButton.tsx",
+);
 
 export default function ThrottledButton(throttleMs) {
   let num = throttleMs.throttleMs;
@@ -64,7 +66,7 @@ export default function ThrottledButton(throttleMs) {
     }
   };
   return jsx(onPressOut(4928).Button, {});
-};
+}
 export const useThrottledActionHandler = function useThrottledActionHandler() {
   let num = arg0;
   if (arg0 === undefined) {

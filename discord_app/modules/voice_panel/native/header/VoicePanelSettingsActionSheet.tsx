@@ -13,11 +13,29 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsActionSheet(a
   ({ guildId, channelId } = arg0);
   let obj = { startExpanded: true, scrollable: true, children: null };
   obj = { children: null };
-  obj = { bottom: true, style: callback().wrapper, children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }) };
-  obj[0] = jsx(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, style: callback().wrapper, children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }) });
-  obj[2] = jsx(BottomSheetModal.BottomSheetScrollView, { bottom: true, style: callback().wrapper, children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }) });
-  return jsx(Background.BottomSheet, { bottom: true, style: callback().wrapper, children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }) });
+  obj = {
+    bottom: true,
+    style: callback().wrapper,
+    children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }),
+  };
+  obj[0] = jsx(SafeAreaPaddingView.SafeAreaPaddingView, {
+    bottom: true,
+    style: callback().wrapper,
+    children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }),
+  });
+  obj[2] = jsx(BottomSheetModal.BottomSheetScrollView, {
+    bottom: true,
+    style: callback().wrapper,
+    children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }),
+  });
+  return jsx(Background.BottomSheet, {
+    bottom: true,
+    style: callback().wrapper,
+    children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }),
+  });
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/header/VoicePanelSettingsActionSheet.tsx",
+);
 
 export default memoResult;

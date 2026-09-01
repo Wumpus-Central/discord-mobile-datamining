@@ -6,7 +6,15 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-let closure_4 = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "children", height: "c" }, refresh_sm: { width: 18, height: 18 } };
+let closure_4 = {
+  xxs: { width: 12, height: 12 },
+  xs: { width: 16, height: 16 },
+  sm: { width: 18, height: 18 },
+  md: { width: 24, height: 24 },
+  lg: { width: 32, height: 32 },
+  custom: { width: "children", height: "c" },
+  refresh_sm: { width: 18, height: 18 },
+};
 const result = require("set").fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
 
 export const BaseIconImage = function BaseIconImage(source) {
@@ -30,7 +38,16 @@ export const BaseIconImage = function BaseIconImage(source) {
     }
     tmp2 = null != color && typeof color === "string";
   }
-  style = [table[str], tmp3, ];
+  style = [table[str], tmp3];
   style[2] = style;
-  return <Image fadeDuration={0} source={arg0.source} resizeMode={resizeMode} style={style} accessible={accessible} accessibilityLabel={accessibilityLabel} />;
+  return (
+    <Image
+      fadeDuration={0}
+      source={arg0.source}
+      resizeMode={resizeMode}
+      style={style}
+      accessible={accessible}
+      accessibilityLabel={accessibilityLabel}
+    />
+  );
 };

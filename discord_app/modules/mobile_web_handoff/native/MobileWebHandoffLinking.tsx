@@ -18,7 +18,11 @@ function createHandoffTokenWithLoadingModal(arg0) {
       obj[1] = arg0;
       obj[2] = function onRejected(arg0) {
         let obj = closure_2_1(closure_2_2[6]);
-        obj = { reason: "handoff_token_fetch_failure", fingerprint: closure_2_0(closure_2_2[7]).maybeExtractId(closure_1_1), handoff_source: closure_1_2 };
+        obj = {
+          reason: "handoff_token_fetch_failure",
+          fingerprint: closure_2_0(closure_2_2[7]).maybeExtractId(closure_1_1),
+          handoff_source: closure_1_2,
+        };
         obj = { fingerprint: closure_1_1 };
         obj.track(closure_2_5.MOBILE_WEB_HANDOFF_FAILURE, obj, obj);
         callback("null");
@@ -45,7 +49,7 @@ function _redirectWithHandoffToken() {
     closure_1 = arg1;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -182,7 +186,7 @@ function _redirectDeveloperPortalWithHandoffToken() {
     closure_1 = arg1;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -308,5 +312,5 @@ export default {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  }
+  },
 };

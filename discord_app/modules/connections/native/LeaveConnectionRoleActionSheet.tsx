@@ -11,7 +11,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({ container: { padding: 12 }, marginTop: { marginTop: 8 }, button: { marginTop: 8, marginBottom: 16 } });
+let closure_5 = createCacheKey.createStyles({
+  container: { padding: 12 },
+  marginTop: { marginTop: 8 },
+  button: { marginTop: 8, marginBottom: 16 },
+});
 const result = require("set").fileFinishedImporting("modules/connections/native/LeaveConnectionRoleActionSheet.tsx");
 
 export default function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
@@ -21,7 +25,7 @@ export default function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
   obj = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.vytvJF);
-  const items = [callback(Text.Text, obj), , ];
+  const items = [callback(Text.Text, obj), ,];
   obj1 = { style: tmp.marginTop, variant: "text-md/normal", color: "text-default", children: null };
   const intl2 = getSystemLocale.intl;
   obj1[3] = intl2.string(getSystemLocale.t.caJwb5);
@@ -35,4 +39,4 @@ export default function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
   obj[1] = items;
   obj[0] = callback2(View, obj);
   return callback(Background.BottomSheet, obj);
-};
+}

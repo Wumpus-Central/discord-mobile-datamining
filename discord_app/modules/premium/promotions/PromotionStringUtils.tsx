@@ -22,8 +22,7 @@ export const useFormatStringWithCommonPremiumParams = function useFormatStringWi
         const obj2 = getPremiumPlanItemDefault;
         str = formatSingleCurrencyPrice.formatPrice(defaultPrice.amount, defaultPrice.currency);
         const tmpResult = formatSingleCurrencyPrice;
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }
   return body.replace(/\{price\}/g, str);

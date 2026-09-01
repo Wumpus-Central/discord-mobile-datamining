@@ -30,11 +30,17 @@ const memoResult = importAllResult.memo(function ChannelsScreen(searchContext) {
   let items = [closure_5];
   stateFromStores = obj1.useStateFromStores(items, () => store.getTextChannels(closure_1));
   const items1 = [closure_5];
-  stateFromStores1 = searchContext(stateFromStores[8]).useStateFromStores(items1, () => store.getVoiceChannels(closure_1));
+  stateFromStores1 = searchContext(stateFromStores[8]).useStateFromStores(items1, () =>
+    store.getVoiceChannels(closure_1),
+  );
   let obj3 = searchContext(stateFromStores[8]);
   const items2 = [stateFromStores2];
   const items3 = [searchContext.guildId];
-  stateFromStores2 = searchContext(stateFromStores[8]).useStateFromStores(items2, () => stateFromStores2.getVoiceStates(searchContext.guildId), items3);
+  stateFromStores2 = searchContext(stateFromStores[8]).useStateFromStores(
+    items2,
+    () => stateFromStores2.getVoiceStates(searchContext.guildId),
+    items3,
+  );
   const tmp6 = importDefault(stateFromStores[9])(searchContext.guildId);
   closure_5 = tmp6;
   const obj4 = searchContext(stateFromStores[8]);
@@ -43,11 +49,17 @@ const memoResult = importAllResult.memo(function ChannelsScreen(searchContext) {
   onPressGuildVoiceChannel = searchContext(stateFromStores[10]).useOnPressGuildVoiceChannel({ searchContext });
   const obj6 = searchContext(stateFromStores[10]);
   const items4 = [onPressGuildTextChannel];
-  stateFromStores3 = searchContext(stateFromStores[8]).useStateFromStores(items4, () => onPressGuildTextChannel.isInitialSearchQuery(searchContext));
+  stateFromStores3 = searchContext(stateFromStores[8]).useStateFromStores(items4, () =>
+    onPressGuildTextChannel.isInitialSearchQuery(searchContext),
+  );
   const obj7 = searchContext(stateFromStores[8]);
   const items5 = [onPressGuildTextChannel];
   const items6 = [searchContext];
-  stateFromStores4 = searchContext(stateFromStores[8]).useStateFromStores(items5, () => onPressGuildTextChannel.getQueryString(searchContext), items6);
+  stateFromStores4 = searchContext(stateFromStores[8]).useStateFromStores(
+    items5,
+    () => onPressGuildTextChannel.getQueryString(searchContext),
+    items6,
+  );
   const items7 = [stateFromStores, stateFromStores1, stateFromStores4];
   const effect = stateFromStores1.useEffect(() => {
     if ("" !== stateFromStores4.trim()) {
@@ -82,7 +94,16 @@ const memoResult = importAllResult.memo(function ChannelsScreen(searchContext) {
     obj = { searchContext, channelId, index, entityType: fullscreenPlaceholderCount.CHANNEL };
     const result = obj.trackSearchResultClicked(obj);
   }, items9);
-  const items10 = [fullscreenPlaceholderCount, callback, callback1, stateFromStores3, tmp6, stateFromStores, stateFromStores1, stateFromStores2];
+  const items10 = [
+    fullscreenPlaceholderCount,
+    callback,
+    callback1,
+    stateFromStores3,
+    tmp6,
+    stateFromStores,
+    stateFromStores1,
+    stateFromStores2,
+  ];
   const memo = stateFromStores1.useMemo(() => {
     const items = [];
     closure_0 = items;
@@ -104,7 +125,7 @@ const memoResult = importAllResult.memo(function ChannelsScreen(searchContext) {
           lastMessageId: channel.lastMessageId,
           onPress(arg0) {
             return closure_1_11(arg0, closure_0);
-          }
+          },
         };
         arr = arr.push(obj);
       });

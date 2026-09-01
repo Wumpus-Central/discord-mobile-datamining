@@ -7,7 +7,9 @@ import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallSingleController.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/video_calls/native/components/ChannelCallSingleController.tsx",
+);
 
 export const ChannelCallSingleController = function ChannelCallSingleController(selectedParticipant) {
   selectedParticipant = selectedParticipant.selectedParticipant;

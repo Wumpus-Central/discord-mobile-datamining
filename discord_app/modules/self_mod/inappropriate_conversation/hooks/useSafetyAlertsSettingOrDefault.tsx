@@ -5,7 +5,9 @@ import closure_2 from "../../../user_settings/UserSettingsProtoStore.tsx";
 import closure_3 from "../../../../stores/UserStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx",
+);
 
 export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOrDefault() {
   currentUser = currentUser.getCurrentUser();

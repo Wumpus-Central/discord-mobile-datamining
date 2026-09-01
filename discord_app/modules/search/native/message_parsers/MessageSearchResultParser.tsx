@@ -56,25 +56,35 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
           return tmp18;
         } else {
           const obj5 = lib(closure_1_1[5]);
-          const mapped = lib(closure_1_1[5]).chain(content.embeds).map((rawTitle) => {
-            let obj = closure_0;
-            const truncateMessageResult = closure_0.truncateMessage(rawTitle.rawTitle, closure_0.tokenizedQueryContent, closure_0.lineClamp);
-            if (null != truncateMessageResult) {
-              obj = { truncated: null, index: null, contentType: "title" };
-              obj[0] = truncateMessageResult;
-              obj[1] = arg1;
-            } else {
-              let rawDescription;
-              if (!closure_1_3.has(rawTitle.type)) {
-                rawDescription = rawTitle.rawDescription;
+          const mapped = lib(closure_1_1[5])
+            .chain(content.embeds)
+            .map((rawTitle) => {
+              let obj = closure_0;
+              const truncateMessageResult = closure_0.truncateMessage(
+                rawTitle.rawTitle,
+                closure_0.tokenizedQueryContent,
+                closure_0.lineClamp,
+              );
+              if (null != truncateMessageResult) {
+                obj = { truncated: null, index: null, contentType: "title" };
+                obj[0] = truncateMessageResult;
+                obj[1] = arg1;
+              } else {
+                let rawDescription;
+                if (!closure_1_3.has(rawTitle.type)) {
+                  rawDescription = rawTitle.rawDescription;
+                }
+                const truncateMessageResult1 = obj.truncateMessage(
+                  rawDescription,
+                  obj.tokenizedQueryContent,
+                  obj.lineClamp,
+                );
+                obj = { truncated: null, index: null, contentType: "description" };
+                obj[0] = truncateMessageResult1;
+                obj[1] = arg1;
               }
-              const truncateMessageResult1 = obj.truncateMessage(rawDescription, obj.tokenizedQueryContent, obj.lineClamp);
-              obj = { truncated: null, index: null, contentType: "description" };
-              obj[0] = truncateMessageResult1;
-              obj[1] = arg1;
-            }
-            return obj;
-          });
+              return obj;
+            });
           const chainResult = lib(closure_1_1[5]).chain(content.embeds);
           const valueResult = mapped.find((truncated) => null != truncated.truncated).value();
           if (null != valueResult) {
@@ -120,8 +130,9 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
   tmp4.lineClamp = lineClamp;
   return tmp4;
 }.prototype;
-class prototype extends CachedSearchResultParser {
-}
-const result = require("set").fileFinishedImporting("modules/search/native/message_parsers/MessageSearchResultParser.tsx");
+class prototype extends CachedSearchResultParser {}
+const result = require("set").fileFinishedImporting(
+  "modules/search/native/message_parsers/MessageSearchResultParser.tsx",
+);
 
 export default prototype;

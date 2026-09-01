@@ -63,4 +63,4 @@ export default function createAutocompleterResultForChannelId(arg0, arg1, closur
     }
     const obj8 = computeChannelName;
   }
-};
+}

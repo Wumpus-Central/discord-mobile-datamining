@@ -19,8 +19,8 @@ class NUFChannelsManager extends tmp2 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       LOGOUT() {
-            return applyArgumentsResult.clear();
-          }
+        return applyArgumentsResult.clear();
+      },
     };
     applyArgumentsResult.handleNavigationStateChanged = function handleNavigationStateChanged() {
       if ("guilds" === obj.getCurrentNavigationRouteName()) {

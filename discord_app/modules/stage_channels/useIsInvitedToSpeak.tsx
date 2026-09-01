@@ -15,5 +15,8 @@ export default function useIsInvitedToSpeak() {
   const items1 = [closure_3];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => id.getId());
   const obj2 = initialize;
-  return useAudienceRequestToSpeakStateDefault(stateFromStores1, stateFromStores) === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-};
+  return (
+    useAudienceRequestToSpeakStateDefault(stateFromStores1, stateFromStores) ===
+    useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
+  );
+}

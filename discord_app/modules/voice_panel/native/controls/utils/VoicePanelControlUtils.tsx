@@ -8,7 +8,9 @@ function getDrawerSpec(height, top) {
 }
 getDrawerSpec.__closure = { roundToNearestPixel: tDefault };
 getDrawerSpec.__workletHash = 3647675988513;
-getDrawerSpec.__initData = { code: "function getDrawerSpec_VoicePanelControlUtilsTsx1(height,top){const{roundToNearestPixel}=this.__closure;const maxHeight=height-top;return{minHeight:roundToNearestPixel(maxHeight*0.65),maxHeight:maxHeight};}" };
+getDrawerSpec.__initData = {
+  code: "function getDrawerSpec_VoicePanelControlUtilsTsx1(height,top){const{roundToNearestPixel}=this.__closure;const maxHeight=height-top;return{minHeight:roundToNearestPixel(maxHeight*0.65),maxHeight:maxHeight};}",
+};
 const obj = { roundToNearestPixel: tDefault };
 const result = set.fileFinishedImporting("modules/voice_panel/native/controls/utils/VoicePanelControlUtils.tsx");
 

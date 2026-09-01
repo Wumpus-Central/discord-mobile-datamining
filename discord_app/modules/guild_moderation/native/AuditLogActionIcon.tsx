@@ -44,8 +44,8 @@ function AuditIcons(action) {
   }
   let obj = { style: tmp.actionImageContainer, children: null };
   obj = { size: "custom", style: tmp.iconComponent };
-  const items = [callback2(RobotIcon, obj), , ];
-  const items1 = [, ];
+  const items = [callback2(RobotIcon, obj), ,];
+  const items1 = [,];
   ({ actionImageOverlay: arr2[0], actionImage: arr2[1] } = tmp);
   items[1] = callback2(View, { style: items1 });
   obj = { style: tmp.actionImage, source: tmp4, disableColor: true };
@@ -57,18 +57,84 @@ noopAll;
 ({ getTargetType: c4, getActionType: c5 } = getTargetType);
 ({ AuditLogTargetTypes, AuditLogActionTypes: closure_6, AuditLogActions: error } = ME);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { actionImageContainer: { height: 24, width: 24 }, actionImageOverlay: null, iconComponent: null, actionImage: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.round, width: 13, height: 13, bottom: 0, right: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = {
+  actionImageContainer: { height: 24, width: 24 },
+  actionImageOverlay: null,
+  iconComponent: null,
+  actionImage: null,
+};
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.round,
+  width: 13,
+  height: 13,
+  bottom: 0,
+  right: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { width: 22, height: 22 };
 createCacheKey[3] = { position: "absolute" };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { [ALL]: require("ListBulletsIcon").ListBulletsIcon, [CHANNEL]: require("ChannelListIcon").ChannelListIcon, [CHANNEL_OVERWRITE]: require("ChannelListIcon").ChannelListIcon, [EMOJI]: require("ReactionIcon").ReactionIcon, [GUILD]: require("CircleInformationIcon").CircleInformationIcon, [GUILD_PROFILE]: require("CircleInformationIcon").CircleInformationIcon, [INTEGRATION]: require("PuzzlePieceIcon").PuzzlePieceIcon, [INVITE]: require("LinkIcon").LinkIcon, [ROLE]: require("FlagIcon").FlagIcon, [USER]: require("GroupIcon").GroupIcon, [WEBHOOK]: require("WebhookIcon").WebhookIcon, [STAGE_INSTANCE]: require("StageIcon").StageIcon, [GUILD_SCHEDULED_EVENT]: require("CalendarIcon").CalendarIcon, [GUILD_SCHEDULED_EVENT_EXCEPTION]: require("CalendarIcon").CalendarIcon, [THREAD]: require("ThreadIcon").ThreadIcon, [STICKER]: require("StickerIcon").StickerIcon, [APPLICATION_COMMAND]: require("SlashBoxIcon").SlashBoxIcon, [AUTO_MODERATION_RULE]: require("WebhookIcon").WebhookIcon, [GUILD_SOUNDBOARD]: require("SoundboardIcon").SoundboardIcon, [ONBOARDING_PROMPT]: require("GroupIcon").GroupIcon, [GUILD_ONBOARDING]: require("GroupIcon").GroupIcon, [HOME_SETTINGS]: require("GroupIcon").GroupIcon, [GUILD_MEMBER_VERIFICATION]: require("GroupIcon").GroupIcon, [VOICE_CHANNEL_STATUS]: require("ChannelListIcon").ChannelListIcon, [GUILD_HOME]: require("HomeIcon").HomeIcon, [UNKNOWN]: require("CircleQuestionIcon").CircleQuestionIcon };
-({ ALL, CHANNEL, CHANNEL_OVERWRITE, EMOJI, GUILD, GUILD_PROFILE, INTEGRATION, INVITE, ROLE, USER, WEBHOOK, STAGE_INSTANCE, GUILD_SCHEDULED_EVENT, GUILD_SCHEDULED_EVENT_EXCEPTION, THREAD, STICKER, APPLICATION_COMMAND, AUTO_MODERATION_RULE, GUILD_SOUNDBOARD, ONBOARDING_PROMPT, GUILD_ONBOARDING, HOME_SETTINGS, GUILD_MEMBER_VERIFICATION, VOICE_CHANNEL_STATUS, GUILD_HOME, UNKNOWN } = AuditLogTargetTypes);
+const obj1 = {
+  [ALL]: require("ListBulletsIcon").ListBulletsIcon,
+  [CHANNEL]: require("ChannelListIcon").ChannelListIcon,
+  [CHANNEL_OVERWRITE]: require("ChannelListIcon").ChannelListIcon,
+  [EMOJI]: require("ReactionIcon").ReactionIcon,
+  [GUILD]: require("CircleInformationIcon").CircleInformationIcon,
+  [GUILD_PROFILE]: require("CircleInformationIcon").CircleInformationIcon,
+  [INTEGRATION]: require("PuzzlePieceIcon").PuzzlePieceIcon,
+  [INVITE]: require("LinkIcon").LinkIcon,
+  [ROLE]: require("FlagIcon").FlagIcon,
+  [USER]: require("GroupIcon").GroupIcon,
+  [WEBHOOK]: require("WebhookIcon").WebhookIcon,
+  [STAGE_INSTANCE]: require("StageIcon").StageIcon,
+  [GUILD_SCHEDULED_EVENT]: require("CalendarIcon").CalendarIcon,
+  [GUILD_SCHEDULED_EVENT_EXCEPTION]: require("CalendarIcon").CalendarIcon,
+  [THREAD]: require("ThreadIcon").ThreadIcon,
+  [STICKER]: require("StickerIcon").StickerIcon,
+  [APPLICATION_COMMAND]: require("SlashBoxIcon").SlashBoxIcon,
+  [AUTO_MODERATION_RULE]: require("WebhookIcon").WebhookIcon,
+  [GUILD_SOUNDBOARD]: require("SoundboardIcon").SoundboardIcon,
+  [ONBOARDING_PROMPT]: require("GroupIcon").GroupIcon,
+  [GUILD_ONBOARDING]: require("GroupIcon").GroupIcon,
+  [HOME_SETTINGS]: require("GroupIcon").GroupIcon,
+  [GUILD_MEMBER_VERIFICATION]: require("GroupIcon").GroupIcon,
+  [VOICE_CHANNEL_STATUS]: require("ChannelListIcon").ChannelListIcon,
+  [GUILD_HOME]: require("HomeIcon").HomeIcon,
+  [UNKNOWN]: require("CircleQuestionIcon").CircleQuestionIcon,
+};
+({
+  ALL,
+  CHANNEL,
+  CHANNEL_OVERWRITE,
+  EMOJI,
+  GUILD,
+  GUILD_PROFILE,
+  INTEGRATION,
+  INVITE,
+  ROLE,
+  USER,
+  WEBHOOK,
+  STAGE_INSTANCE,
+  GUILD_SCHEDULED_EVENT,
+  GUILD_SCHEDULED_EVENT_EXCEPTION,
+  THREAD,
+  STICKER,
+  APPLICATION_COMMAND,
+  AUTO_MODERATION_RULE,
+  GUILD_SOUNDBOARD,
+  ONBOARDING_PROMPT,
+  GUILD_ONBOARDING,
+  HOME_SETTINGS,
+  GUILD_MEMBER_VERIFICATION,
+  VOICE_CHANNEL_STATUS,
+  GUILD_HOME,
+  UNKNOWN,
+} = AuditLogTargetTypes);
 const result = require("set").fileFinishedImporting("modules/guild_moderation/native/AuditLogActionIcon.tsx");
 
 export default function AuditLogActionIcon(action) {
   obj = { style: callback4().actionImageContainer, children: callback2(AuditIcons, obj) };
   obj = { action: action.action };
   return callback2(View, obj);
-};
+}

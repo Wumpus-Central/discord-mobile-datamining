@@ -39,7 +39,16 @@ export default {
         }
         const result1 = callback(impressionName[7]).dismissGlobalKeyboard();
         const obj2 = callback(impressionName[7]);
-        obj = { type: "SHOW_ACTION_SHEET", content: callback, key: callback2, impressionName, impressionProperties, backdropKind, stackingBehavior: closure_5, appEntryKey };
+        obj = {
+          type: "SHOW_ACTION_SHEET",
+          content: callback,
+          key: callback2,
+          impressionName,
+          impressionProperties,
+          backdropKind,
+          stackingBehavior: closure_5,
+          appEntryKey,
+        };
         callback2(impressionName[4]).dispatch(obj);
       });
     });
@@ -64,12 +73,21 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "RESET_ACTION_SHEETS_FOR_APP_ENTRY_KEY", appEntryKey: closure_0 };
     obj.dispatch(obj);
-  }
+  },
 };
 export const ACTION_SHEET_HEIGHT_HALF = "start";
 export const ACTION_SHEET_HEIGHT_EXPANDED = "expanded";
 export const showActionSheet = function showActionSheet(arg0) {
-  ({ content: require, key: importDefault, impressionName: dependencyMap, impressionProperties: closure_3, backdropKind: closure_4, stackingBehavior: closure_5, disableHapticOnOpen: jsx, appEntryKey: closure_7 } = arg0);
+  ({
+    content: require,
+    key: importDefault,
+    impressionName: dependencyMap,
+    impressionProperties: closure_3,
+    backdropKind: closure_4,
+    stackingBehavior: closure_5,
+    disableHapticOnOpen: jsx,
+    appEntryKey: closure_7,
+  } = arg0);
   dispatcherDefault.wait(() => {
     if (!disableHapticOnOpen) {
       let obj = callback(impressionName[5]);
@@ -77,7 +95,16 @@ export const showActionSheet = function showActionSheet(arg0) {
     }
     const result1 = callback(impressionName[7]).dismissGlobalKeyboard();
     const obj2 = callback(impressionName[7]);
-    obj = { type: "SHOW_ACTION_SHEET", content: callback, key: callback2, impressionName, impressionProperties, backdropKind, stackingBehavior: closure_5, appEntryKey };
+    obj = {
+      type: "SHOW_ACTION_SHEET",
+      content: callback,
+      key: callback2,
+      impressionName,
+      impressionProperties,
+      backdropKind,
+      stackingBehavior: closure_5,
+      appEntryKey,
+    };
     callback2(impressionName[4]).dispatch(obj);
   });
 };

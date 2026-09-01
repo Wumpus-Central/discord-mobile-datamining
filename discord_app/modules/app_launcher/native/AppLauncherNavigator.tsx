@@ -20,13 +20,27 @@ let c5 = importAllResult;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createNativeStackNavigator.createNativeStackNavigator();
 let obj = { navigator: null };
-obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingTop: 16, overflow: "visible", flex: 1 };
+obj = {
+  backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
+  paddingTop: 16,
+  overflow: "visible",
+  flex: 1,
+};
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
   ({ context, entrypoint } = arg0);
   ({ expandBottomSheet, overrideParams } = arg0);
-  ({ bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, contentStyle, keyboardCloseReasonRef, onActivityItemSelected, width } = arg0);
+  ({
+    bottomSheetExpandReasonRef,
+    bottomSheetIndex,
+    bottomSheetPosition,
+    chatInputRef,
+    contentStyle,
+    keyboardCloseReasonRef,
+    onActivityItemSelected,
+    width,
+  } = arg0);
   const tmp3 = contextDefault;
   let obj = entrypoint(4342);
   if (overrideParams == null) {
@@ -55,8 +69,12 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
   }
   obj3[1] = initialSearchQuery;
   obj2[2] = obj3;
-  const items2 = [closure_8(closure_10.Screen, obj2), , , ];
-  const obj4 = { name: AppLauncherRouteName.APPLICATION_VIEW, component: AppLauncherApplicationViewScreenInnerDefault, initialParams: null };
+  const items2 = [closure_8(closure_10.Screen, obj2), , ,];
+  const obj4 = {
+    name: AppLauncherRouteName.APPLICATION_VIEW,
+    component: AppLauncherApplicationViewScreenInnerDefault,
+    initialParams: null,
+  };
   const obj5 = { context };
   let obj6 = obj12;
   if (initialRouteName !== AppLauncherRouteName.APPLICATION_VIEW) {
@@ -66,7 +84,11 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
   obj5.expandBottomSheet = expandBottomSheet;
   obj4[2] = obj5;
   items2[1] = closure_8(closure_10.Screen, obj4);
-  const obj7 = { name: AppLauncherRouteName.COMMAND_VIEW, component: AppLauncherCommandViewFooterDefault, initialParams: null };
+  const obj7 = {
+    name: AppLauncherRouteName.COMMAND_VIEW,
+    component: AppLauncherCommandViewFooterDefault,
+    initialParams: null,
+  };
   let tmp15;
   if ("channel" === context.type) {
     tmp15 = context;
@@ -80,7 +102,11 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
   obj8.expandBottomSheet = expandBottomSheet;
   obj7[2] = obj8;
   items2[2] = closure_8(closure_10.Screen, obj7);
-  const obj10 = { name: AppLauncherRouteName.APP_LIST_VIEW, component: DEFAULT_CONTENT_PADDINGDefault, initialParams: null };
+  const obj10 = {
+    name: AppLauncherRouteName.APP_LIST_VIEW,
+    component: DEFAULT_CONTENT_PADDINGDefault,
+    initialParams: null,
+  };
   if (overrideParams.initialRouteName !== AppLauncherRouteName.APP_LIST_VIEW) {
     obj12 = {};
   }
@@ -104,7 +130,20 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
     entrypointParams = { customId: null, referrerId: null };
     const obj15 = { customId: null, referrerId: null };
   }
-  return closure_8(entrypoint(9049).AppLauncherContext.Provider, { value: { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams, keyboardCloseReasonRef, onActivityItemSelected, width }, children });
+  return closure_8(entrypoint(9049).AppLauncherContext.Provider, {
+    value: {
+      bottomSheetExpandReasonRef,
+      bottomSheetIndex,
+      bottomSheetPosition,
+      chatInputRef,
+      entrypoint,
+      entrypointParams,
+      keyboardCloseReasonRef,
+      onActivityItemSelected,
+      width,
+    },
+    children,
+  });
 });
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherNavigator.tsx");
 

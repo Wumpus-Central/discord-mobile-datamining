@@ -52,7 +52,11 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                     const isSameDayResult = resetCache.isSameDay(content.timestamp, type.timestamp);
                     let tmp20 = !isSameDayResult;
                     if (isSameDayResult) {
-                      const isWithinIntervalResult = tmp18(4163).isWithinInterval(content.timestamp, type.timestamp, closure_6);
+                      const isWithinIntervalResult = tmp18(4163).isWithinInterval(
+                        content.timestamp,
+                        type.timestamp,
+                        closure_6,
+                      );
                       let tmp23 = !isWithinIntervalResult;
                       if (isWithinIntervalResult) {
                         const hasFlagResult3 = type.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
@@ -68,8 +72,13 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                             hasFlagResult6 = type.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
                           }
                           if (!hasFlagResult6) {
-                            hasFlagResult6 = !(type.mentions.length > 0 || type.mentionRoles.length > 0 || type.mentionEveryone);
-                            const tmp29 = type.mentions.length > 0 || type.mentionRoles.length > 0 || type.mentionEveryone;
+                            hasFlagResult6 = !(
+                              type.mentions.length > 0 ||
+                              type.mentionRoles.length > 0 ||
+                              type.mentionEveryone
+                            );
+                            const tmp29 =
+                              type.mentions.length > 0 || type.mentionRoles.length > 0 || type.mentionEveryone;
                           }
                           let tmp30 = !hasFlagResult6;
                           if (hasFlagResult6) {

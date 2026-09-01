@@ -33,7 +33,16 @@ export default function GuildPowerupsGameServerCard(guildId) {
   if (null != stateFromStores) {
     tmp10 = null;
     if (null != tmp7) {
-      obj = { title: null, description: null, cost: null, costDecorator: "+", riveComponent: null, badge: "beta", status: null, onPress: null };
+      obj = {
+        title: null,
+        description: null,
+        cost: null,
+        costDecorator: "+",
+        riveComponent: null,
+        badge: "beta",
+        status: null,
+        onPress: null,
+      };
       ({ title: obj3[0], description: obj3[1], cost: obj3[2] } = tmp7);
       obj = { style: null, children: null };
       obj[0] = tmp.riveContainer;
@@ -50,4 +59,4 @@ export default function GuildPowerupsGameServerCard(guildId) {
     }
   }
   return tmp10;
-};
+}

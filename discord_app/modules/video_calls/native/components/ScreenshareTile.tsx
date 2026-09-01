@@ -17,7 +17,13 @@ noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, image: null, label: null, liveContainer: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BLACK, overflow: "hidden", flex: 1 };
+createCacheKey = {
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BLACK,
+  overflow: "hidden",
+  flex: 1,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: 8, width: 60, height: 40 };
 createCacheKey[2] = { lineHeight: 18, textAlign: "center" };
@@ -35,10 +41,13 @@ export default function ScreenShareTile(onSingleTap) {
     onDoubleTap = NOOP;
   }
   const tmp = callback3();
-  let obj = { gesture: useParticipantTileTapGestureDefault({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap }), children: null };
+  let obj = {
+    gesture: useParticipantTileTapGestureDefault({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap }),
+    children: null,
+  };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.liveContainer, children: callback(Button.LiveTag, {}) };
-  const items = [callback(closure_3, obj), , ];
+  const items = [callback(closure_3, obj), ,];
   const tmp2 = useParticipantTileTapGestureDefault({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap });
   items[1] = callback(closure_4, { source: registerAssetDefault, style: tmp.image, resizeMode: "contain" });
   const obj2 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };
@@ -48,4 +57,4 @@ export default function ScreenShareTile(onSingleTap) {
   obj[1] = items;
   obj[1] = callback2(closure_3, obj);
   return callback(LegacyBaseButton.GestureDetector, obj);
-};
+}

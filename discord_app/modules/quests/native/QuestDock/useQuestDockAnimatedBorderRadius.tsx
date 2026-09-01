@@ -2,8 +2,12 @@
 import closure_2 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-let closure_3 = { code: "function useQuestDockAnimatedBorderRadiusTsx1(){const{interpolate,questDockOffset,minBorder,maxBorder,Extrapolation}=this.__closure;return interpolate(questDockOffset.get(),[0,50],[minBorder,maxBorder],Extrapolation.CLAMP);}" };
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx");
+let closure_3 = {
+  code: "function useQuestDockAnimatedBorderRadiusTsx1(){const{interpolate,questDockOffset,minBorder,maxBorder,Extrapolation}=this.__closure;return interpolate(questDockOffset.get(),[0,50],[minBorder,maxBorder],Extrapolation.CLAMP);}",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx",
+);
 
 export default function useQuestDockAnimatedBorderRadius(maxBorder) {
   const _require = maxBorder;
@@ -19,9 +23,15 @@ export default function useQuestDockAnimatedBorderRadius(maxBorder) {
     const items = [num, maxBorder];
     return maxBorder(num[2]).interpolate(value, [0, 50], items, maxBorder(num[2]).Extrapolation.CLAMP);
   };
-  obj = { interpolate: _require(num[2]).interpolate, questDockOffset, minBorder: num, maxBorder, Extrapolation: _require(num[2]).Extrapolation };
+  obj = {
+    interpolate: _require(num[2]).interpolate,
+    questDockOffset,
+    minBorder: num,
+    maxBorder,
+    Extrapolation: _require(num[2]).Extrapolation,
+  };
   fn.__closure = obj;
   fn.__workletHash = 17005846780112;
   fn.__initData = closure_3;
   return obj.useDerivedValue(fn);
-};
+}

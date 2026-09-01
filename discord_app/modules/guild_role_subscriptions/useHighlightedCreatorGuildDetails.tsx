@@ -2,7 +2,9 @@
 import closure_2 from "../../../_runtime/00019_noop.js";
 import { MarketingURLs } from "../../Constants.tsx";
 
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx",
+);
 
 export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
   importDefault = arg1;
@@ -110,7 +112,15 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
     obj = { hasAllImperativeDetails: null, isLoading: null, details: null };
     obj[0] = tmp13;
     obj[1] = isLoading;
-    obj1 = { guildName: null, guildIcon: null, guildAvatarUrl: null, storePageUrl: null, subscriberCount: null, emojisToShow: null, notShownEmojiCount: null };
+    obj1 = {
+      guildName: null,
+      guildIcon: null,
+      guildAvatarUrl: null,
+      storePageUrl: null,
+      subscriberCount: null,
+      emojisToShow: null,
+      notShownEmojiCount: null,
+    };
     obj1[0] = name;
     obj1[1] = icon_hash;
     obj1[2] = guildIconURL;
@@ -127,4 +137,4 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
     obj2[2] = tmp3.error;
   }
   return obj2;
-};
+}

@@ -27,4 +27,4 @@ export default function ConnectionCard(arg0) {
     const connection_type2 = connection.connection_type;
     return null;
   }
-};
+}

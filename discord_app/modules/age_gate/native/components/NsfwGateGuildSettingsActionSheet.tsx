@@ -5,7 +5,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/age_gate/native/components/NsfwGateGuildSettingsActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/age_gate/native/components/NsfwGateGuildSettingsActionSheet.tsx",
+);
 
 export default function NsfwGateGuildSettingsActionSheet(guild) {
   guild = guild.guild;
@@ -22,7 +24,11 @@ export default function NsfwGateGuildSettingsActionSheet(guild) {
     const obj = closure_1_1(closure_1_2[7]);
     closure_1_1(closure_1_2[8]).open(guild.id);
   };
-  const items = [callback(guild(5991).ActionSheetRow, obj2), callback(guild(13649).RestrictedGuildPrivacyOption, { guild }), messageRequestPrivacyOption, ];
+  const items = [
+    callback(guild(5991).ActionSheetRow, obj2),
+    callback(guild(13649).RestrictedGuildPrivacyOption, { guild }),
+    messageRequestPrivacyOption,
+  ];
   const obj3 = { variant: "danger", label: null, onPress: null };
   const intl2 = guild(1236).intl;
   obj3[1] = intl2.string(guild(1236).t.J2TBi3);
@@ -33,4 +39,4 @@ export default function NsfwGateGuildSettingsActionSheet(guild) {
   obj1[1] = items;
   obj[1] = callback2(guild(5991).ActionSheetRow.Group, obj1);
   return callback(guild(5989).ActionSheet, obj);
-};
+}

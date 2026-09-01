@@ -14,14 +14,18 @@ export const useCheckoutPlanPriceString = function useCheckoutPlanPriceString(pr
   if (priceString == null) {
     priceString = null;
   }
-  const tmp3 = useNativeCheckoutStore((getCheckoutContextRecord) => getCheckoutContextRecord.getCheckoutContextRecord());
+  const tmp3 = useNativeCheckoutStore((getCheckoutContextRecord) =>
+    getCheckoutContextRecord.getCheckoutContextRecord(),
+  );
   dependencyMap = tmp3;
   const items = [tmp3, productId];
   const memo = React.useMemo(() => {
     if (null == table) {
       return null;
     } else {
-      const availablePlanForItems = obj.getAvailablePlanForItems(productId(table[2]).getSubscriptionItemsForProduct(productId));
+      const availablePlanForItems = obj.getAvailablePlanForItems(
+        productId(table[2]).getSubscriptionItemsForProduct(productId),
+      );
       let priceString = null;
       if (null != availablePlanForItems) {
         priceString = availablePlanForItems.getPriceString();

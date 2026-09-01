@@ -4,7 +4,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventSchedule.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/GuildEventSchedule.tsx",
+);
 
 export default function GuildEventSchedule(schedule) {
   schedule = schedule.schedule;
@@ -31,13 +33,13 @@ export default function GuildEventSchedule(schedule) {
     minimumDate: tmp2,
     maximumDate: addResult,
     dateLabel: null,
-    timeLabel: null
+    timeLabel: null,
   };
   const intl = tmp3(1236).intl;
   obj[4] = intl.string(schedule(1236).t.kKOIwJ);
   const intl2 = tmp3(1236).intl;
   obj[5] = intl2.string(schedule(1236).t["6dGmCD"]);
-  const children = [callback(schedule(9680).GuildEventDatetime, obj), ];
+  const children = [callback(schedule(9680).GuildEventDatetime, obj)];
   let tmp9Result = null != guildEvent.scheduled_end_time;
   if (tmp9Result) {
     obj = { date: null, onChange: null, minimumDate: null, maximumDate: null, dateLabel: null, timeLabel: null };
@@ -58,4 +60,4 @@ export default function GuildEventSchedule(schedule) {
   }
   children[1] = tmp9Result;
   return closure_6(closure_5, { children });
-};
+}

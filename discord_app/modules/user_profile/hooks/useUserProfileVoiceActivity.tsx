@@ -36,12 +36,14 @@ export default function useUserProfileVoiceActivity(guildId) {
           return findActivityResult;
         }
       }
-    })
+    }),
   };
   items = [closure_3, closure_4];
   return obj;
-};
-export const isUserProfileVoiceActivityForChannel = function isUserProfileVoiceActivityForChannel(voiceStateForSession) {
+}
+export const isUserProfileVoiceActivityForChannel = function isUserProfileVoiceActivityForChannel(
+  voiceStateForSession,
+) {
   voiceStateForSession = voiceStateForSession.voiceStateForSession;
   ({ activity, voiceChannelId } = voiceStateForSession);
   let tmp = isEmbeddedActivityDefault(activity);

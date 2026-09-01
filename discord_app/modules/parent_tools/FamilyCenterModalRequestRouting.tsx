@@ -37,7 +37,7 @@ function _resolveConnectionPrereqTarget() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -116,7 +116,17 @@ function _resolveConnectionPrereqTarget() {
   }
   return applyArgumentsResult;
 }
-const frozen = Object.freeze({ PREREQ_LOADING: "PREREQ_LOADING", CONFIRM_AGE: "CONFIRM_AGE", VERIFYING: "VERIFYING", REQUEST: "REQUEST", SENT: "SENT", ERROR: "ERROR", INVALID_CODE: "INVALID_CODE", MUST_BE_ADULT: "MUST_BE_ADULT", TEEN_SCAN: "TEEN_SCAN" });
+const frozen = Object.freeze({
+  PREREQ_LOADING: "PREREQ_LOADING",
+  CONFIRM_AGE: "CONFIRM_AGE",
+  VERIFYING: "VERIFYING",
+  REQUEST: "REQUEST",
+  SENT: "SENT",
+  ERROR: "ERROR",
+  INVALID_CODE: "INVALID_CODE",
+  MUST_BE_ADULT: "MUST_BE_ADULT",
+  TEEN_SCAN: "TEEN_SCAN",
+});
 obj = { section: frozen.ERROR, params: obj };
 obj = { failureCode: require("items").FamilyCenterFailureCode.GENERIC_ERROR };
 const result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterModalRequestRouting.tsx");

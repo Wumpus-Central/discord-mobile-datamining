@@ -23,7 +23,11 @@ export default function DevToolsLoggingFlagsScreen() {
   const tmp = callback3();
   let obj = initialize;
   const items = [closure_3];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isLoggingGatewayEvents: closure_3.isLoggingGatewayEvents, isLoggingAnalyticsEvents: closure_3.isLoggingAnalyticsEvents, isTracingRequests: closure_3.isTracingRequests }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    isLoggingGatewayEvents: closure_3.isLoggingGatewayEvents,
+    isLoggingAnalyticsEvents: closure_3.isLoggingAnalyticsEvents,
+    isTracingRequests: closure_3.isTracingRequests,
+  }));
   obj = { style: tmp.container, contentContainerStyle: tmp.content, children: null };
   ({ isLoggingGatewayEvents, isLoggingAnalyticsEvents, isTracingRequests } = stateFromStoresObject);
   obj = { title: "Logging", hasIcons: false, children: null };
@@ -36,7 +40,7 @@ export default function DevToolsLoggingFlagsScreen() {
         let obj = callback(708);
         obj = { logGatewayEvents };
         return obj.setDeveloperOptionSettings(obj);
-      }
+      },
     }),
     callback(TableSwitchRow.TableSwitchRow, {
       label: "Analytics Events",
@@ -46,7 +50,7 @@ export default function DevToolsLoggingFlagsScreen() {
         let obj = callback(708);
         obj = { logAnalyticsEvents };
         return obj.setDeveloperOptionSettings(obj);
-      }
+      },
     }),
     callback(TableSwitchRow.TableSwitchRow, {
       label: "Tracing Requests",
@@ -56,10 +60,10 @@ export default function DevToolsLoggingFlagsScreen() {
         let obj = callback(708);
         obj = { trace };
         return obj.setDeveloperOptionSettings(obj);
-      }
-    })
+      },
+    }),
   ];
   obj[2] = items1;
   obj[2] = callback2(TableRowGroupTitle.TableRowGroup, obj);
   return callback(ScrollView, obj);
-};
+}

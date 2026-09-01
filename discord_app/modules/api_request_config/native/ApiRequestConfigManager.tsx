@@ -27,14 +27,14 @@ const NativeModules = get_ActivityIndicator.NativeModules;
 initializeDefault;
 let prototype = function ApiRequestConfigManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.handleUpdate = set2.isAndroid() ? updateApiRequestConfig : (() => {
-
-  });
-  applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate, APP_STATE_UPDATE: applyArgumentsResult.handleUpdate };
+  applyArgumentsResult.handleUpdate = set2.isAndroid() ? updateApiRequestConfig : () => {};
+  applyArgumentsResult.actions = {
+    POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate,
+    APP_STATE_UPDATE: applyArgumentsResult.handleUpdate,
+  };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 let result = set.fileFinishedImporting("modules/api_request_config/native/ApiRequestConfigManager.tsx");
 

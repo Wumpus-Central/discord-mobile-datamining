@@ -16,13 +16,36 @@ import set from "../../../../../../utils/PlatformUtils.tsx";
 const require = arg1;
 ({ AnalyticsSections: error, AnalyticsObjects: closure_8, AnalyticsPages: c9 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: null, textContainer: null, text: null, countdownBadge: null, countdownBadgeText: null, imageShared: null, imageWrapperAndroid: null };
+createCacheKey = {
+  container: null,
+  textContainer: null,
+  text: null,
+  countdownBadge: null,
+  countdownBadgeText: null,
+  imageShared: null,
+  imageWrapperAndroid: null,
+};
 createCacheKey = { alignItems: "center", padding: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_24 };
+createCacheKey[1] = {
+  gap: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_24,
+};
 createCacheKey[2] = { textAlign: "center" };
-let obj1 = { gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_24 };
-createCacheKey[3] = { flexDirection: "row", alignSelf: "center", borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_24, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+let obj1 = {
+  gap: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_24,
+};
+createCacheKey[3] = {
+  flexDirection: "row",
+  alignSelf: "center",
+  borderRadius: ThemesDefault.radii.round,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_24,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
 set = set.isAndroid();
 const space = ThemesDefault.space;
 let obj3 = { lineHeight: set ? space.PX_12 : space.PX_16, paddingVertical: null };
@@ -32,11 +55,20 @@ if (set.isAndroid()) {
 }
 obj3[1] = PX_4;
 createCacheKey[4] = obj3;
-let obj2 = { flexDirection: "row", alignSelf: "center", borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_24, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+let obj2 = {
+  flexDirection: "row",
+  alignSelf: "center",
+  borderRadius: ThemesDefault.radii.round,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_24,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
 createCacheKey[5] = { height: 188, width: 335, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[6] = { overflow: "hidden" };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingPromotionCoachmark.tsx");
+const result = set.fileFinishedImporting(
+  "modules/premium/gifting/native/views/promotions/GiftingPromotionCoachmark.tsx",
+);
 
 export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   ({ coachmarkComponent, markAsDismissed } = arg0);
@@ -99,7 +131,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     if (null == themeAndReducedMotionAwareAssetUrl) {
-      const items4 = [tmp22, , , ];
+      const items4 = [tmp22, , ,];
       tmp18Result = null != str;
       if (tmp18Result) {
         obj1 = { style: null, children: null };
@@ -113,10 +145,15 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       items4[1] = tmp18Result;
       const obj3 = { style: null, children: null };
       obj3[0] = tmp.textContainer;
-      const obj4 = { style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+      const obj4 = {
+        style: null,
+        variant: "heading-xl/extrabold",
+        color: "mobile-text-heading-primary",
+        children: null,
+      };
       obj4[0] = tmp.text;
       obj4[3] = coachmarkComponent.header;
-      const items5 = [tmp18(tmp2(4474).Text, obj4), ];
+      const items5 = [tmp18(tmp2(4474).Text, obj4)];
       const obj5 = { style: null, variant: "text-md/normal", color: "text-default", children: null };
       obj5[0] = tmp.text;
       obj5[3] = coachmarkComponent.body;
@@ -138,7 +175,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       if (tmp2Result1.isAndroid()) {
         if (!stateFromStores) {
           const obj8 = { style: null, children: null };
-          const items6 = [, ];
+          const items6 = [,];
           ({ imageShared: arr5[0], imageWrapperAndroid: arr5[1] } = tmp);
           obj8[0] = items6;
           const obj9 = { url: null, style: null, autoplay: true };
@@ -158,4 +195,4 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
     }
   }
   return tmp18Result;
-};
+}

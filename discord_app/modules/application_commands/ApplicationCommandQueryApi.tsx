@@ -53,9 +53,18 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-({ useContextIndexState: closure_6, useDiscoveryState: error, useQueryState: closure_8, useUserIndexState: c9 } = getIndexKey);
+({
+  useContextIndexState: closure_6,
+  useDiscoveryState: error,
+  useQueryState: closure_8,
+  useUserIndexState: c9,
+} = getIndexKey);
 let items = [require("PermissionOverwriteType").ApplicationCommandType.CHAT];
-let obj = { id: "placeholder-section", type: require("ApplicationCommandSectionType").ApplicationCommandSectionType.APPLICATION, name: "" };
+let obj = {
+  id: "placeholder-section",
+  type: require("ApplicationCommandSectionType").ApplicationCommandSectionType.APPLICATION,
+  name: "",
+};
 let result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
 export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
@@ -176,7 +185,7 @@ export const getChangeKeys = function getChangeKeys(type) {
   if (userState != null) {
     result = userState.result;
   }
-  items = [result, ];
+  items = [result];
   let result1;
   if (contextState != null) {
     result1 = contextState.result;
@@ -192,9 +201,12 @@ export const useCachedResults = function useCachedResults(arg0, CHAT, text) {
       items = [closure_0];
       return items;
     }, items),
-    text
+    text,
   };
-  obj = { scoreMethod: require("ApplicationCommandQueryTypes.tsx").ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false };
+  obj = {
+    scoreMethod: require("ApplicationCommandQueryTypes.tsx").ScoreMethod.COMMAND_OR_APPLICATION,
+    allowFetch: false,
+  };
   const tmp = callback2(arg0, obj, obj);
   obj = { commands: tmp.commands, sections: tmp.descriptors };
   return obj;
@@ -237,7 +249,17 @@ export const useDiscovery = function useDiscovery(options) {
     }
     items = [];
     for (let num2 = 0; num2 < num; num2 = num2 + 1) {
-      obj = { type: null, inputType: null, id: null, untranslatedName: "", displayName: "", untranslatedDescription: "", displayDescription: "", applicationId: "", section: null };
+      obj = {
+        type: null,
+        inputType: null,
+        id: null,
+        untranslatedName: "",
+        displayName: "",
+        untranslatedDescription: "",
+        displayDescription: "",
+        applicationId: "",
+        section: null,
+      };
       obj[0] = tmp;
       let tmp2 = filters;
       let tmp3 = guild_id;
@@ -264,7 +286,7 @@ export const useDiscovery = function useDiscovery(options) {
       filterSection(id) {
         callback(id);
       },
-      scrollDown: closure_1_12
+      scrollDown: closure_1_12,
     };
     if (null == first) {
       if (!loading) {
@@ -328,7 +350,17 @@ export const executeQuery = function executeQuery(type, commandTypes, placeholde
   }
   items = [];
   for (let num3 = 0; num3 < num; num3 = num3 + 1) {
-    obj = { type: null, inputType: null, id: null, untranslatedName: "", displayName: "", untranslatedDescription: "", displayDescription: "", applicationId: "", section: null };
+    obj = {
+      type: null,
+      inputType: null,
+      id: null,
+      untranslatedName: "",
+      displayName: "",
+      untranslatedDescription: "",
+      displayDescription: "",
+      applicationId: "",
+      section: null,
+    };
     obj[0] = tmp3;
     let tmp4 = require;
     let tmp5 = dependencyMap;
@@ -375,7 +407,17 @@ export const useQuery = function useQuery(arg0, commandTypes, placeholderCount) 
     }
     items = [];
     for (let num2 = 0; num2 < num; num2 = num2 + 1) {
-      obj = { type: null, inputType: null, id: null, untranslatedName: "", displayName: "", untranslatedDescription: "", displayDescription: "", applicationId: "", section: null };
+      obj = {
+        type: null,
+        inputType: null,
+        id: null,
+        untranslatedName: "",
+        displayName: "",
+        untranslatedDescription: "",
+        displayDescription: "",
+        applicationId: "",
+        section: null,
+      };
       obj[0] = tmp;
       let tmp2 = commandTypes;
       let tmp3 = descriptors;
@@ -466,7 +508,7 @@ export const useCommandsForApplication = function useCommandsForApplication(arg0
   if (tmp != null) {
     result = tmp.result;
   }
-  items = [result, , , ];
+  items = [result, , ,];
   let result1;
   if (tmp2 != null) {
     result1 = tmp2.result;
@@ -566,7 +608,7 @@ export const useAccessibleCommandsForApplication = function useAccessibleCommand
   if (tmp2 != null) {
     result = tmp2.result;
   }
-  const items1 = [result, , , ];
+  const items1 = [result, , ,];
   let result1;
   if (tmp3 != null) {
     result1 = tmp3.result;
@@ -666,7 +708,13 @@ export const useAccessibleCommandsForApplication = function useAccessibleCommand
           allowedForUser = null;
           if (null != permissions) {
             obj = commands(sectionDescriptor[13]);
-            allowedForUser = obj.computeAllowedForUser(tmp3.permissions, tmp.guild_id, permissionContext.userId, permissionContext.roleIds, permissionContext.isImpersonating);
+            allowedForUser = obj.computeAllowedForUser(
+              tmp3.permissions,
+              tmp.guild_id,
+              permissionContext.userId,
+              permissionContext.roleIds,
+              permissionContext.isImpersonating,
+            );
           }
         }
         allowedForChannel = null;
@@ -677,23 +725,35 @@ export const useAccessibleCommandsForApplication = function useAccessibleCommand
           }
           allowedForChannel = null;
           if (null != permissions1) {
-            allowedForChannel = commands(sectionDescriptor[13]).computeAllowedForChannel(tmp10.permissions, tmp, tmp.guild_id);
+            allowedForChannel = commands(sectionDescriptor[13]).computeAllowedForChannel(
+              tmp10.permissions,
+              tmp,
+              tmp.guild_id,
+            );
             const obj2 = commands(sectionDescriptor[13]);
           }
         }
         return arr.filter((arg0) => {
           obj = commands(sectionDescriptor[13]);
-          obj = { applicationAllowedForUser: allowedForUser, applicationAllowedForChannel: allowedForChannel, isGuildInstalled: closure_1_3, isUserInstalled: closure_1_4, commandBotId: null };
+          obj = {
+            applicationAllowedForUser: allowedForUser,
+            applicationAllowedForChannel: allowedForChannel,
+            isGuildInstalled: closure_1_3,
+            isUserInstalled: closure_1_4,
+            commandBotId: null,
+          };
           let botId;
           if (closure_1_2 != null) {
             botId = closure_1_2.botId;
           }
           obj[4] = botId;
-          return obj.hasAccess(arg0, closure_1_5, obj) === allowedForUser(sectionDescriptor[13]).HasAccessResult.ALLOWED;
+          return (
+            obj.hasAccess(arg0, closure_1_5, obj) === allowedForUser(sectionDescriptor[13]).HasAccessResult.ALLOWED
+          );
         });
       }
       arr = allowedForChannel;
-    }, items2)
+    }, items2),
   };
   items2 = [commands, permissionContext, sectionDescriptor, isGuildInstalled, isUserInstalled, channel];
   return obj;

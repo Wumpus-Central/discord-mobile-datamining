@@ -4,7 +4,9 @@ import closure_3 from "../../records/ProfileFrameRecord.tsx";
 import { useFramePreviewOverrideStore as closure_4 } from "../native/tooling/FramePreviewOverrideStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useFramePreviewOverrideFrame.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/profile_frames/hooks/useFramePreviewOverrideFrame.native.tsx",
+);
 
 export default function useFramePreviewOverrideFrame() {
   const tmp = callback((override) => override.override);
@@ -13,11 +15,27 @@ export default function useFramePreviewOverrideFrame() {
   return React.useMemo(() => {
     let tmp2 = null;
     if (null != callback) {
-      const obj = { type: null, skuId: "frame-preview-override", label: null, layers: null, innerWidth: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null };
+      const obj = {
+        type: null,
+        skuId: "frame-preview-override",
+        label: null,
+        layers: null,
+        innerWidth: null,
+        overflowTop: null,
+        overflowBottom: null,
+        overflowHorizontal: null,
+      };
       obj[0] = callback(closure_1_1[3]).CollectiblesItemType.PROFILE_FRAME;
-      ({ frameKey: obj[2], layers: obj[3], innerWidth: obj[4], overflowTop: obj[5], overflowBottom: obj[6], overflowHorizontal: obj[7] } = callback);
+      ({
+        frameKey: obj[2],
+        layers: obj[3],
+        innerWidth: obj[4],
+        overflowTop: obj[5],
+        overflowBottom: obj[6],
+        overflowHorizontal: obj[7],
+      } = callback);
       tmp2 = new closure_1_3(obj);
     }
     return tmp2;
   }, items);
-};
+}

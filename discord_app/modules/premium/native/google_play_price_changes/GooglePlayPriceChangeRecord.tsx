@@ -2,13 +2,28 @@
 import toJSDefault from "../../../../lib/Record.tsx";
 
 toJSDefault;
-const obj = { PRICE_CHANGE_MODE_UNSPECIFIED: "PRICE_CHANGE_MODE_UNSPECIFIED", PRICE_DECREASE: "PRICE_DECREASE", PRICE_INCREASE: "PRICE_INCREASE", OPT_OUT_PRICE_INCREASE: "OPT_OUT_PRICE_INCREASE" };
+const obj = {
+  PRICE_CHANGE_MODE_UNSPECIFIED: "PRICE_CHANGE_MODE_UNSPECIFIED",
+  PRICE_DECREASE: "PRICE_DECREASE",
+  PRICE_INCREASE: "PRICE_INCREASE",
+  OPT_OUT_PRICE_INCREASE: "OPT_OUT_PRICE_INCREASE",
+};
 let GooglePlayPriceChangeRecord;
 class GooglePlayPriceChangeRecord extends tmp2 {
   constructor(arg0) {
     tmp = new GooglePlayPriceChangeRecord(new.target, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ userId: tmp.userId, subscriptionId: tmp.subscriptionId, oldCurrency: tmp.oldCurrency, oldPrice: tmp.oldPrice, newCurrency: tmp.newCurrency, newPrice: tmp.newPrice, priceChangeMode: tmp.priceChangeMode, expectedChargeTime: tmp.expectedChargeTime, priceChangeId: tmp.priceChangeId } = global);
+    ({
+      userId: tmp.userId,
+      subscriptionId: tmp.subscriptionId,
+      oldCurrency: tmp.oldCurrency,
+      oldPrice: tmp.oldPrice,
+      newCurrency: tmp.newCurrency,
+      newPrice: tmp.newPrice,
+      priceChangeMode: tmp.priceChangeMode,
+      expectedChargeTime: tmp.expectedChargeTime,
+      priceChangeId: tmp.priceChangeId,
+    } = global);
     return tmp;
   }
 }
@@ -19,7 +34,18 @@ GooglePlayPriceChangeRecord["createFromServer"] = function createFromServer(arg0
   if (typeof GooglePlayPriceChangeRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp2 = new GooglePlayPriceChangeRecord("Trying to call a non-function", GooglePlayPriceChangeRecord, new.target, user_id, subscription_id, old_currency, old_price, new_currency, new_price, price_change_mode);
+  const tmp2 = new GooglePlayPriceChangeRecord(
+    "Trying to call a non-function",
+    GooglePlayPriceChangeRecord,
+    new.target,
+    user_id,
+    subscription_id,
+    old_currency,
+    old_price,
+    new_currency,
+    new_price,
+    price_change_mode,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp2.userId = user_id;
   tmp2.subscriptionId = subscription_id;
@@ -36,27 +62,29 @@ Object.defineProperty(prototype, "isPriceIncrease", {
   get: function isPriceIncrease() {
     return this.priceChangeMode === obj.PRICE_INCREASE || this.priceChangeMode === tmp.OPT_OUT_PRICE_INCREASE;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isOptOutPriceIncrease", {
   get: function isOptOutPriceIncrease() {
     return this.priceChangeMode === obj.OPT_OUT_PRICE_INCREASE;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isPriceDecrease", {
   get: function isPriceDecrease() {
     return this.priceChangeMode === obj.PRICE_DECREASE;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isInFuture", {
   get: function isInFuture() {
     return this.expectedChargeTime > new Date().toISOString();
   },
-  set: undefined
+  set: undefined,
 });
-const result = require("set").fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeRecord.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/native/google_play_price_changes/GooglePlayPriceChangeRecord.tsx",
+);
 
 export default GooglePlayPriceChangeRecord;
 export const GooglePlayPriceChangeMode = obj;

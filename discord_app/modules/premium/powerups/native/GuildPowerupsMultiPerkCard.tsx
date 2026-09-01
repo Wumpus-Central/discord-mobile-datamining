@@ -20,7 +20,16 @@ export default function GuildPowerupsMultiPerkCard(guildId) {
   if (null != costDecorator) {
     tmp5 = null;
     if (null != badge) {
-      obj = { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null };
+      obj = {
+        title: null,
+        description: null,
+        cost: null,
+        imageUrl: null,
+        status: null,
+        costDecorator: null,
+        onPress: null,
+        badge: null,
+      };
       ({ title: obj3[0], description: obj3[1] } = badge);
       obj[2] = costDecorator.cost;
       const image = badge.image;
@@ -30,9 +39,18 @@ export default function GuildPowerupsMultiPerkCard(guildId) {
       obj[6] = tmp4;
       badge = badge.badge;
       obj[7] = badge;
-      jsx(listing(12135), { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null });
+      jsx(listing(12135), {
+        title: null,
+        description: null,
+        cost: null,
+        imageUrl: null,
+        status: null,
+        costDecorator: null,
+        onPress: null,
+        badge: null,
+      });
       const tmp6 = jsx;
     }
   }
   return tmp5;
-};
+}

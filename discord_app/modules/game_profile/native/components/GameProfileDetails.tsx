@@ -21,20 +21,51 @@ function GameProfileWebsiteButton(action) {
       trackAction(action);
     }, items),
     hitSlop: trackAction(712).space.PX_4,
-    children: icon
+    children: icon,
   });
 }
 ({ View: c5, Pressable: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, headerText: null, detailsContainer: null, detailsRow: null, detailsRowValue: null, detailsRowBottomBorder: null, platformsContainer: null, linksContainer: null };
+createCacheKey = {
+  container: null,
+  headerText: null,
+  detailsContainer: null,
+  detailsRow: null,
+  detailsRowValue: null,
+  detailsRowBottomBorder: null,
+  platformsContainer: null,
+  linksContainer: null,
+};
 createCacheKey = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_8 };
 let obj1 = { paddingHorizontal: ThemesDefault.space.PX_8 };
-createCacheKey[2] = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let obj2 = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: ThemesDefault.space.PX_12 };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: ThemesDefault.space.PX_12 };
+createCacheKey[2] = {
+  borderRadius: ThemesDefault.radii.lg,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
+let obj2 = {
+  borderRadius: ThemesDefault.radii.lg,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
+createCacheKey[3] = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  padding: ThemesDefault.space.PX_12,
+};
+let obj3 = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  padding: ThemesDefault.space.PX_12,
+};
 createCacheKey[4] = { flexDirection: "column", flexShrink: 1, paddingLeft: ThemesDefault.space.PX_32 };
 let obj4 = { flexDirection: "column", flexShrink: 1, paddingLeft: ThemesDefault.space.PX_32 };
 createCacheKey[5] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
@@ -53,7 +84,7 @@ export default function GameProfileDetails(game) {
   let memo;
   const tmp = callback3();
   closure_2 = tmp;
-  let items = [, , , ];
+  let items = [, , ,];
   ({ linksContainer: arr[0], platformsContainer: arr[1] } = tmp);
   items[2] = game;
   items[3] = trackAction;
@@ -146,7 +177,11 @@ export default function GameProfileDetails(game) {
                 obj1[0] = lib.linksContainer;
                 obj1[1] = found.map((icon) => {
                   const url = icon.url;
-                  return closure_1_8(closure_1_11, { icon: icon.icon, action: icon.action, title: icon.title, url, trackAction: closure_1 }, url);
+                  return closure_1_8(
+                    closure_1_11,
+                    { icon: icon.icon, action: icon.action, title: icon.title, url, trackAction: closure_1 },
+                    url,
+                  );
                 });
                 obj[1] = closure_1_8(closure_1_5, obj1);
                 items.push(obj);
@@ -174,7 +209,13 @@ export default function GameProfileDetails(game) {
               obj4[0] = stringResult;
               const obj5 = { style: null, children: null };
               obj5[0] = lib.platformsContainer;
-              obj5[1] = platforms.map((platform) => callback3(callback(12635).GameUpdatePlatformIcon, { platform, size: "md", color: callback2(712).colors.ICON_SUBTLE }, platform));
+              obj5[1] = platforms.map((platform) =>
+                callback3(
+                  callback(12635).GameUpdatePlatformIcon,
+                  { platform, size: "md", color: callback2(712).colors.ICON_SUBTLE },
+                  platform,
+                ),
+              );
               obj4[1] = closure_1_8(closure_1_5, obj5);
               items.push(obj4);
             }
@@ -227,11 +268,11 @@ export default function GameProfileDetails(game) {
     obj[2] = tmp.headerText;
     let intl = game(memo[8]).intl;
     obj[3] = intl.string(game(memo[8]).t["7OjmmH"]);
-    let items1 = [callback(game(memo[13]).Text, obj), ];
+    let items1 = [callback(game(memo[13]).Text, obj)];
     obj = { style: null, children: null };
     obj[0] = tmp.detailsContainer;
     obj[1] = memo.map((children) => {
-      const items = [lib.detailsRow, ];
+      const items = [lib.detailsRow];
       let prop = null;
       if (memo.length > 1) {
         prop = null;
@@ -242,7 +283,7 @@ export default function GameProfileDetails(game) {
       let obj = { style: items, children: null };
       items[1] = prop;
       obj = { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, children: children.label };
-      const items1 = [closure_1_8(game(memo[13]).Text, obj), ];
+      const items1 = [closure_1_8(game(memo[13]).Text, obj)];
       if (typeof children.value === "string") {
         obj = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, style: null, children: null };
         obj[3] = tmp3.detailsRowValue;
@@ -260,4 +301,4 @@ export default function GameProfileDetails(game) {
     tmp2 = callback2(closure_5, obj);
   }
   return tmp2;
-};
+}

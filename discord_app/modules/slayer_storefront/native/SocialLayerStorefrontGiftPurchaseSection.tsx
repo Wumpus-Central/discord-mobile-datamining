@@ -14,14 +14,22 @@ const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, legalCopy: null };
-  obj = { paddingBottom: ThemesDefault.space.PX_12 + arg0, paddingTop: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+  obj = {
+    paddingBottom: ThemesDefault.space.PX_12 + arg0,
+    paddingTop: ThemesDefault.space.PX_12,
+    paddingHorizontal: ThemesDefault.space.PX_16,
+    gap: ThemesDefault.space.PX_8,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  };
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_TOP_HIGH);
   obj[0] = obj;
   obj = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_4 };
   obj[1] = obj;
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontGiftPurchaseSection.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/slayer_storefront/native/SocialLayerStorefrontGiftPurchaseSection.tsx",
+);
 
 export default function SocialLayerStorefrontGiftPurchaseSection(disabled) {
   const skuId = disabled.skuId;
@@ -65,7 +73,18 @@ export default function SocialLayerStorefrontGiftPurchaseSection(disabled) {
   sku(giftOptions[14])(tmp12, giftOptions);
   const items2 = [giftOptions];
   const memo = analyticsLocations.useMemo(() => ({ isGift: true, options: giftOptions }), items2);
-  obj = { skuId, sku, giftParams: memo, analyticsLoadId: tmp7.load_id, analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null };
+  obj = {
+    skuId,
+    sku,
+    giftParams: memo,
+    analyticsLoadId: tmp7.load_id,
+    analyticsLocations,
+    orderId: null,
+    analyticsData: null,
+    onPurchaseComplete: null,
+    onPurchaseError: null,
+    onPurchasePending: null,
+  };
   let id;
   let tmp9 = callback(analyticsLocations.useState(false), 2);
   if (tmp12 != null) {
@@ -105,17 +124,21 @@ export default function SocialLayerStorefrontGiftPurchaseSection(disabled) {
     result.then(skuId(giftOptions[18]).closeSocialLayerStorefrontGiftModal);
   };
   obj[8] = callback;
-  obj[9] = function onPurchasePending() {
-
-  };
+  obj[9] = function onPurchasePending() {};
   closure_11 = sku(giftOptions[15])(obj);
   const intl = tmp4(tmp2[19]).intl;
   const stringResult = intl.string(skuId(giftOptions[19]).t.ouo4FK);
   obj = { style: tmp3.container, children: null };
   obj1 = { style: tmp3.legalCopy, children: null };
   tmp4Result = tmp4(tmp2[20]);
-  const mobileFinePrintMessageForApplication = tmp4Result.getMobileFinePrintMessageForApplication(getOrFetchApplication, stringResult, { shouldAppendDisclaimer: true });
-  obj1[1] = mobileFinePrintMessageForApplication.map((children) => callback(skuId(giftOptions[21]).Text, { variant: "text-xs/normal", color: "text-muted", children }, arg1));
+  const mobileFinePrintMessageForApplication = tmp4Result.getMobileFinePrintMessageForApplication(
+    getOrFetchApplication,
+    stringResult,
+    { shouldAppendDisclaimer: true },
+  );
+  obj1[1] = mobileFinePrintMessageForApplication.map((children) =>
+    callback(skuId(giftOptions[21]).Text, { variant: "text-xs/normal", color: "text-muted", children }, arg1),
+  );
   const items3 = [
     callback(closure_5, obj1),
     callback(skuId(giftOptions[22]).Button, {
@@ -127,9 +150,9 @@ export default function SocialLayerStorefrontGiftPurchaseSection(disabled) {
         closure_9.current = true;
         _undefined(true);
         callback().catch(callback);
-      }
-    })
+      },
+    }),
   ];
   obj[1] = items3;
   return closure_11(closure_5, obj);
-};
+}

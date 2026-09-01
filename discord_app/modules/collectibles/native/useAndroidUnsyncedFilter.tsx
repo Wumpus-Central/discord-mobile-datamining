@@ -9,10 +9,14 @@ const result = set.fileFinishedImporting("modules/collectibles/native/useAndroid
 
 export const useAndroidUnsyncedFilter = function useAndroidUnsyncedFilter() {
   const items = [closure_4];
-  stateFromStores = stateFromStores(stateFromStores1[3]).useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
+  stateFromStores = stateFromStores(stateFromStores1[3]).useStateFromStores(items, () =>
+    fetchingGoogleSkus.isFetchingGoogleSkus(),
+  );
   const obj = stateFromStores(stateFromStores1[3]);
   const items1 = [closure_3];
-  stateFromStores1 = stateFromStores(stateFromStores1[3]).useStateFromStores(items1, () => closure_3.get("bypass_google_sku_sync"));
+  stateFromStores1 = stateFromStores(stateFromStores1[3]).useStateFromStores(items1, () =>
+    closure_3.get("bypass_google_sku_sync"),
+  );
   const items2 = [stateFromStores, stateFromStores1];
   return useCallback((arr) => {
     let found = arr;

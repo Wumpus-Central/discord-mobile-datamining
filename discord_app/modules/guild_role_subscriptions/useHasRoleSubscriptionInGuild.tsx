@@ -53,7 +53,9 @@ function computeHasRoleSubscriptionsInGuild(c0, closure_3) {
   }
   return false;
 }
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useHasRoleSubscriptionInGuild.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/useHasRoleSubscriptionInGuild.tsx",
+);
 
 export default function useHasRoleSubscriptionInGuild(arg0) {
   const _require = arg0;
@@ -68,13 +70,17 @@ export default function useHasRoleSubscriptionInGuild(arg0) {
   const obj = _require(stateFromStores[5]);
   const items1 = [closure_5, closure_4];
   const items2 = [arg0, stateFromStores];
-  return _require(stateFromStores[5]).useStateFromStores(items1, () => {
-    let rolesSnapshot;
-    if (null != closure_0) {
-      rolesSnapshot = closure_1_4.getRolesSnapshot(tmp2);
-    }
-    const items = [closure_1_5];
-    return closure_1_7(closure_0, rolesSnapshot, stateFromStores, items);
-  }, items2);
-};
+  return _require(stateFromStores[5]).useStateFromStores(
+    items1,
+    () => {
+      let rolesSnapshot;
+      if (null != closure_0) {
+        rolesSnapshot = closure_1_4.getRolesSnapshot(tmp2);
+      }
+      const items = [closure_1_5];
+      return closure_1_7(closure_0, rolesSnapshot, stateFromStores, items);
+    },
+    items2,
+  );
+}
 export { computeHasRoleSubscriptionsInGuild };

@@ -20,4 +20,4 @@ export default function showChannelBadge(isNewChannel) {
     isNewChannel = tmp;
   }
   return isNewChannel;
-};
+}

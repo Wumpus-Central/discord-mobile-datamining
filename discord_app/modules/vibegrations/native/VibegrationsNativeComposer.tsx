@@ -22,28 +22,128 @@ function tooLargeText(contentType) {
 ({ ActivityIndicator: closure_6, View: error } = get_ActivityIndicator);
 ({ deleteStagedAttachment: closure_8, uploadAttachmentBytes: c9 } = rejectPendingPublish);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { container: null, box: null, boxFocused: null, boxContents: null, input: null, inputText: null, inputPlaceholder: null, draftRow: null, draftPill: null, draftName: null, trailingButton: null, sendButtonActive: null, sendIconActive: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  container: null,
+  box: null,
+  boxFocused: null,
+  boxContents: null,
+  input: null,
+  inputText: null,
+  inputPlaceholder: null,
+  draftRow: null,
+  draftPill: null,
+  draftName: null,
+  trailingButton: null,
+  sendButtonActive: null,
+  sendIconActive: null,
+};
+createCacheKey = {
+  paddingHorizontal: ThemesDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING,
+  paddingVertical: ThemesDefault.space.PX_8,
+  gap: ThemesDefault.space.PX_8,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, overflow: "hidden" };
-let obj1 = { backgroundColor: ThemesDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, overflow: "hidden" };
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.MOBILE_CHATINPUT_BACKGROUND_ACTIVE, borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
-let obj2 = { backgroundColor: ThemesDefault.colors.MOBILE_CHATINPUT_BACKGROUND_ACTIVE, borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
-createCacheKey[3] = { flexDirection: "row", alignItems: "flex-end", paddingHorizontal: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL, paddingVertical: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL, gap: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_GAP };
-let obj3 = { flexDirection: "row", alignItems: "flex-end", paddingHorizontal: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL, paddingVertical: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL, gap: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_GAP };
-createCacheKey[4] = { flex: 1, paddingVertical: 0, paddingHorizontal: ThemesDefault.space.PX_4, minHeight: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE, maxHeight: 120, justifyContent: "center" };
-let obj4 = { flex: 1, paddingVertical: 0, paddingHorizontal: ThemesDefault.space.PX_4, minHeight: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE, maxHeight: 120, justifyContent: "center" };
-createCacheKey[5] = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_NORMAL, color: ThemesDefault.colors.TEXT_DEFAULT, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8 };
-let obj5 = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_NORMAL, color: ThemesDefault.colors.TEXT_DEFAULT, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8 };
+createCacheKey[1] = {
+  backgroundColor: ThemesDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT,
+  borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH,
+  borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT,
+  borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS,
+  overflow: "hidden",
+};
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT,
+  borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH,
+  borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT,
+  borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS,
+  overflow: "hidden",
+};
+createCacheKey[2] = {
+  backgroundColor: ThemesDefault.colors.MOBILE_CHATINPUT_BACKGROUND_ACTIVE,
+  borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE,
+};
+let obj2 = {
+  backgroundColor: ThemesDefault.colors.MOBILE_CHATINPUT_BACKGROUND_ACTIVE,
+  borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE,
+};
+createCacheKey[3] = {
+  flexDirection: "row",
+  alignItems: "flex-end",
+  paddingHorizontal: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL,
+  paddingVertical: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL,
+  gap: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_GAP,
+};
+let obj3 = {
+  flexDirection: "row",
+  alignItems: "flex-end",
+  paddingHorizontal: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL,
+  paddingVertical: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL,
+  gap: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_GAP,
+};
+createCacheKey[4] = {
+  flex: 1,
+  paddingVertical: 0,
+  paddingHorizontal: ThemesDefault.space.PX_4,
+  minHeight: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
+  maxHeight: 120,
+  justifyContent: "center",
+};
+let obj4 = {
+  flex: 1,
+  paddingVertical: 0,
+  paddingHorizontal: ThemesDefault.space.PX_4,
+  minHeight: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
+  maxHeight: 120,
+  justifyContent: "center",
+};
+createCacheKey[5] = {
+  fontSize: 16,
+  lineHeight: 20,
+  fontFamily: require("ME").Fonts.PRIMARY_NORMAL,
+  color: ThemesDefault.colors.TEXT_DEFAULT,
+  paddingTop: ThemesDefault.space.PX_8,
+  paddingBottom: ThemesDefault.space.PX_8,
+};
+let obj5 = {
+  fontSize: 16,
+  lineHeight: 20,
+  fontFamily: require("ME").Fonts.PRIMARY_NORMAL,
+  color: ThemesDefault.colors.TEXT_DEFAULT,
+  paddingTop: ThemesDefault.space.PX_8,
+  paddingBottom: ThemesDefault.space.PX_8,
+};
 createCacheKey[6] = { color: ThemesDefault.colors.TEXT_MUTED };
 let obj6 = { color: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[7] = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_4 };
 let obj7 = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_4 };
-createCacheKey[8] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, paddingLeft: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_4, paddingVertical: ThemesDefault.space.PX_4 };
+createCacheKey[8] = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_4,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: ThemesDefault.radii.round,
+  paddingLeft: ThemesDefault.space.PX_8,
+  paddingRight: ThemesDefault.space.PX_4,
+  paddingVertical: ThemesDefault.space.PX_4,
+};
 createCacheKey[9] = { flexShrink: 1 };
-let obj8 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, paddingLeft: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_4, paddingVertical: ThemesDefault.space.PX_4 };
-createCacheKey[10] = { width: ThemesDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH, height: ThemesDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT };
-let obj9 = { width: ThemesDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH, height: ThemesDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT };
+let obj8 = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_4,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: ThemesDefault.radii.round,
+  paddingLeft: ThemesDefault.space.PX_8,
+  paddingRight: ThemesDefault.space.PX_4,
+  paddingVertical: ThemesDefault.space.PX_4,
+};
+createCacheKey[10] = {
+  width: ThemesDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH,
+  height: ThemesDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT,
+};
+let obj9 = {
+  width: ThemesDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH,
+  height: ThemesDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT,
+};
 createCacheKey[11] = { backgroundColor: ThemesDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND };
 const obj10 = { backgroundColor: ThemesDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND };
 createCacheKey[12] = { tintColor: ThemesDefault.colors.CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE_TINT };
@@ -134,9 +234,7 @@ export default function VibegrationsNativeComposer(projectId) {
           let tmp6 = current;
           let tmp7 = nextResult;
           let promise = callback(current, tmp2.ref.id);
-          let catchPromise = promise.catch(() => {
-
-          });
+          let catchPromise = promise.catch(() => {});
         }
         continue;
       }
@@ -151,7 +249,7 @@ export default function VibegrationsNativeComposer(projectId) {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, blob) {
+    return (function* (arg0, blob) {
       closure_5 = tmp3;
       closure_1 = closure_2;
       closure_2 = size;
@@ -244,14 +342,12 @@ export default function VibegrationsNativeComposer(projectId) {
           c6 = 0;
         }
       }
-      v0(callback, id.id).catch(() => {
-
-      });
+      v0(callback, id.id).catch(() => {});
       c6 = 0;
     })();
   });
   let items1 = [callback2, projectId];
-  callback3 = obj.useCallback(function() {
+  callback3 = obj.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -271,7 +367,9 @@ export default function VibegrationsNativeComposer(projectId) {
       if (map.length > diff) {
         let intl = tmp16(VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE[9]).intl;
         let obj = { count: null };
-        VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = tmp16(VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE[11]).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
+        VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = tmp16(
+          VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE[11],
+        ).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
         obj[0] = VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
         _undefined3(intl.formatToPlainString(onSend(VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE[10]).DlX57a, obj));
         const _Math = Math;
@@ -299,7 +397,9 @@ export default function VibegrationsNativeComposer(projectId) {
           const intl = closure_1_0(closure_1_2[9]).intl;
           obj = { size: null };
           const obj4 = closure_1_0(closure_1_2[11]);
-          obj[0] = obj4.formatVibegrationsAttachmentLimit(closure_1_0(closure_1_2[11]).vibegrationsAttachmentLimit(name.contentType));
+          obj[0] = obj4.formatVibegrationsAttachmentLimit(
+            closure_1_0(closure_1_2[11]).vibegrationsAttachmentLimit(name.contentType),
+          );
           formatToPlainStringResult = intl.formatToPlainString(closure_1_1(closure_1_2[10]).cI7t94, obj);
           const obj5 = closure_1_0(closure_1_2[11]);
         }
@@ -309,7 +409,10 @@ export default function VibegrationsNativeComposer(projectId) {
       const items = [];
       map = mapped.map;
       let arraySpreadResult = HermesBuiltin.arraySpread(tmp15.current, 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(map((draft) => draft.draft), arraySpreadResult);
+      arraySpreadResult = HermesBuiltin.arraySpread(
+        map((draft) => draft.draft),
+        arraySpreadResult,
+      );
       callback1(items);
       tmp15 = mapped[Symbol.iterator]();
     }
@@ -326,34 +429,54 @@ export default function VibegrationsNativeComposer(projectId) {
       ref = found.ref;
     }
     if (null != ref) {
-      lib(closure_0, found.ref.id).catch(() => {
-
-      });
+      lib(closure_0, found.ref.id).catch(() => {});
       const promise = lib(closure_0, found.ref.id);
     }
     const current1 = closure_9.current;
     callback1(current1.filter((localId) => localId.localId !== closure_0));
   }, items3);
   const items4 = [callback4];
-  callback5 = obj.useCallback(callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  callback5 = obj.useCallback(
+    callback(function* () {
+      if (c3 === 2) {
+        c3 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === dependencyMap) {
-          if (arg0 === 1) {
+        try {
+          c3 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_1 = tmp5;
+              closure_0 = tmp2;
+              closure_0 = undefined;
+              obj1 = closure_1_1(5094);
+              obj1 = { mediaType: "any", selectionLimit: null, skipProcessing: true };
+              obj1[1] = closure_1_0(6095).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
+              dependencyMap = 1;
+              c3 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = obj1.launchImageLibraryAsync(obj1);
+              return obj2;
+            }
+          } else if (arg0 === 1) {
             c3 = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -362,89 +485,92 @@ export default function VibegrationsNativeComposer(projectId) {
             obj[0] = arg1;
             return obj;
           } else {
-            closure_1 = tmp5;
-            closure_0 = tmp2;
-            closure_0 = undefined;
-            obj1 = closure_1_1(5094);
-            obj1 = { mediaType: "any", selectionLimit: null, skipProcessing: true };
-            obj1[1] = closure_1_0(6095).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
-            dependencyMap = 1;
-            c3 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = obj1.launchImageLibraryAsync(obj1);
-            return obj2;
+            closure_0 = arg1;
+            let didCancel = closure_0.didCancel;
+            if (!didCancel) {
+              didCancel = null == closure_0.assets;
+            }
+            if (!didCancel) {
+              const assets = closure_0.assets;
+              callback(
+                assets.map((uri) => {
+                  const obj = { uri: uri.uri, name: null, contentType: null, size: null };
+                  ({ uri, fileName } = uri);
+                  if (null == fileName) {
+                    const parts = uri.split("/");
+                    let str3 = parts.at(-1);
+                    if (str3 == null) {
+                      str3 = "attachment";
+                    }
+                    fileName = str3;
+                  }
+                  obj[1] = fileName;
+                  let str4 = uri.mimeType;
+                  if (str4 == null) {
+                    str4 = uri.fileType;
+                  }
+                  if (str4 == null) {
+                    str4 = uri.type;
+                  }
+                  if (str4 == null) {
+                    str4 = "application/octet-stream";
+                  }
+                  obj[2] = str4;
+                  return obj;
+                }),
+              );
+            }
+            c3 = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          closure_0 = arg1;
-          let didCancel = closure_0.didCancel;
-          if (!didCancel) {
-            didCancel = null == closure_0.assets;
-          }
-          if (!didCancel) {
-            const assets = closure_0.assets;
-            callback(assets.map((uri) => {
-              const obj = { uri: uri.uri, name: null, contentType: null, size: null };
-              ({ uri, fileName } = uri);
-              if (null == fileName) {
-                const parts = uri.split("/");
-                let str3 = parts.at(-1);
-                if (str3 == null) {
-                  str3 = "attachment";
-                }
-                fileName = str3;
-              }
-              obj[1] = fileName;
-              let str4 = uri.mimeType;
-              if (str4 == null) {
-                str4 = uri.fileType;
-              }
-              if (str4 == null) {
-                str4 = uri.type;
-              }
-              if (str4 == null) {
-                str4 = "application/octet-stream";
-              }
-              obj[2] = str4;
-              return obj;
-            }));
-          }
-          c3 = 3;
-          return { value: "HermesInternal", done: null };
+        } catch (tmp19) {
+          c3 = tmp;
+          throw tmp19;
         }
-      } catch (tmp19) {
-        c3 = tmp;
-        throw tmp19;
       }
-    }
-  }), items4);
+    }),
+    items4,
+  );
   const items5 = [callback4];
-  callback6 = obj.useCallback(callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  callback6 = obj.useCallback(
+    callback(function* () {
+      if (c3 === 2) {
+        c3 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === table) {
-          if (arg0 === 1) {
+        try {
+          c3 = 2;
+          if (0 === table) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_1 = tmp5;
+              closure_0 = tmp2;
+              closure_0 = undefined;
+              obj1 = closure_1_0(table[13]);
+              table = 1;
+              c3 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = obj1.handleDocumentSelection({ pickMultiple: true });
+              return obj1;
+            }
+          } else if (arg0 === 1) {
             c3 = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -453,68 +579,53 @@ export default function VibegrationsNativeComposer(projectId) {
             obj[0] = arg1;
             return obj;
           } else {
-            closure_1 = tmp5;
-            closure_0 = tmp2;
-            closure_0 = undefined;
-            obj1 = closure_1_0(table[13]);
-            table = 1;
-            c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = obj1.handleDocumentSelection({ pickMultiple: true });
-            return obj1;
+            closure_0 = arg1;
+            if (null != closure_0) {
+              callback(
+                closure_0.map((uri) => {
+                  const obj = { uri: uri.uri, name: null, contentType: null, size: null };
+                  ({ uri, name } = uri);
+                  if (null == name) {
+                    const parts = uri.split("/");
+                    let str3 = parts.at(-1);
+                    if (str3 == null) {
+                      str3 = "attachment";
+                    }
+                    name = str3;
+                  }
+                  obj[1] = name;
+                  let str4 = uri.type;
+                  if (str4 == null) {
+                    str4 = "application/octet-stream";
+                  }
+                  obj[2] = str4;
+                  let size = uri.size;
+                  if (size == null) {
+                    size = null;
+                  }
+                  obj[3] = size;
+                  return obj;
+                }),
+              );
+            }
+            c3 = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          closure_0 = arg1;
-          if (null != closure_0) {
-            callback(closure_0.map((uri) => {
-              const obj = { uri: uri.uri, name: null, contentType: null, size: null };
-              ({ uri, name } = uri);
-              if (null == name) {
-                const parts = uri.split("/");
-                let str3 = parts.at(-1);
-                if (str3 == null) {
-                  str3 = "attachment";
-                }
-                name = str3;
-              }
-              obj[1] = name;
-              let str4 = uri.type;
-              if (str4 == null) {
-                str4 = "application/octet-stream";
-              }
-              obj[2] = str4;
-              let size = uri.size;
-              if (size == null) {
-                size = null;
-              }
-              obj[3] = size;
-              return obj;
-            }));
-          }
-          c3 = 3;
-          return { value: "HermesInternal", done: null };
+        } catch (tmp16) {
+          c3 = tmp;
+          throw tmp16;
         }
-      } catch (tmp16) {
-        c3 = tmp;
-        throw tmp16;
       }
-    }
-  }), items5);
+    }),
+    items5,
+  );
   const items6 = [callback6, callback5];
   const memo = obj.useMemo(() => {
     let obj = { label: null, action: null };
     const intl = callback(str[9]).intl;
     obj[0] = intl.string(onSend(str[10]).xE6M2k);
     obj[1] = callback5;
-    const items = [obj, ];
+    const items = [obj];
     obj = { label: null, action: null };
     const intl2 = callback(str[9]).intl;
     obj[0] = intl2.string(onSend(str[10]).DN7KeU);
@@ -561,7 +672,7 @@ export default function VibegrationsNativeComposer(projectId) {
     obj[2] = tmp6;
     tmp29 = callback3(_require(str[14]).Text, obj);
   }
-  const items8 = [tmp29, , ];
+  const items8 = [tmp29, ,];
   let tmp33 = null;
   if (arr.length > 0) {
     obj1 = { style: null, children: null };
@@ -578,13 +689,20 @@ export default function VibegrationsNativeComposer(projectId) {
         obj[1] = intl.formatToPlainString(onSend(str[10]).sFX7H4, obj);
         tmp4 = callback3(c6, obj);
       }
-      const items = [tmp4, , ];
+      const items = [tmp4, ,];
       obj1 = { style: lib.draftName, children: null };
       str = "text-default";
       if ("error" === children.status) {
         str = "text-feedback-critical";
       }
-      const items1 = [callback3(callback(str[14]).Text, { variant: "text-xs/medium", color: str, lineClamp: 1, children: children.name }), ];
+      const items1 = [
+        callback3(callback(str[14]).Text, {
+          variant: "text-xs/medium",
+          color: str,
+          lineClamp: 1,
+          children: children.name,
+        }),
+      ];
       let tmp10Result = null;
       if (null != children.errorText) {
         const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
@@ -594,7 +712,13 @@ export default function VibegrationsNativeComposer(projectId) {
       items1[1] = tmp10Result;
       obj1[1] = items1;
       items[1] = closure_11(c7, obj1);
-      const obj4 = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: 12, onPress: null, children: null };
+      const obj4 = {
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        hitSlop: 12,
+        onPress: null,
+        children: null,
+      };
       const intl2 = tmp11(tmp12[9]).intl;
       obj4[1] = intl2.string(onSend(str[10])["3HWvgk"]);
       obj4[3] = function onPress() {
@@ -608,7 +732,7 @@ export default function VibegrationsNativeComposer(projectId) {
     tmp33 = callback3(tmp28, obj1);
   }
   items8[1] = tmp33;
-  const items9 = [tmp12.box, ];
+  const items9 = [tmp12.box];
   if (boxFocused) {
     boxFocused = tmp12.boxFocused;
   }
@@ -621,32 +745,62 @@ export default function VibegrationsNativeComposer(projectId) {
       align: "above",
       children(arg0) {
         ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-        const obj = { ref, IconComponent: callback(str[19]).PlusLargeIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
+        const obj = {
+          ref,
+          IconComponent: callback(str[19]).PlusLargeIcon,
+          onPress,
+          accessibilityLabel: null,
+          accessibilityActions: null,
+          onAccessibilityAction: null,
+        };
         const intl = callback(str[9]).intl;
         obj[3] = intl.string(onSend(str[10]).gUn10I);
         obj[4] = accessibilityActions;
         obj[5] = onAccessibilityAction;
         return callback3(onSend(str[18]), obj);
-      }
+      },
     }),
-  ,
-  ,
-
+    ,
+    ,
   ];
-  let obj5 = { multiline: true, allowRedesignTextInput: false, showBorder: false, showTopContainer: false, style: tmp12.input, inputTextStyle: tmp12.inputText, textAlignVertical: "center", placeholder: null, placeholderTextColor: null, accessibilityLabel: null, value: null, onChange: null, onFocus: null, onBlur: null, onContentSizeChange: null, scrollEnabled: null };
+  let obj5 = {
+    multiline: true,
+    allowRedesignTextInput: false,
+    showBorder: false,
+    showTopContainer: false,
+    style: tmp12.input,
+    inputTextStyle: tmp12.inputText,
+    textAlignVertical: "center",
+    placeholder: null,
+    placeholderTextColor: null,
+    accessibilityLabel: null,
+    value: null,
+    onChange: null,
+    onFocus: null,
+    onBlur: null,
+    onContentSizeChange: null,
+    scrollEnabled: null,
+  };
   everyResult = arr.every((status) => "ready" === status.status);
   let obj4 = {
     items: memo,
     align: "above",
     children(arg0) {
       ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-      const obj = { ref, IconComponent: callback(str[19]).PlusLargeIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
+      const obj = {
+        ref,
+        IconComponent: callback(str[19]).PlusLargeIcon,
+        onPress,
+        accessibilityLabel: null,
+        accessibilityActions: null,
+        onAccessibilityAction: null,
+      };
       const intl = callback(str[9]).intl;
       obj[3] = intl.string(onSend(str[10]).gUn10I);
       obj[4] = accessibilityActions;
       obj[5] = onAccessibilityAction;
       return callback3(onSend(str[18]), obj);
-    }
+    },
   };
   let intl = _require(str[9]).intl;
   const tmp40 = onSend(str[10]);
@@ -674,7 +828,16 @@ export default function VibegrationsNativeComposer(projectId) {
     tmp35Result = tmp35(tmp38Result, obj6);
   }
   items10[2] = tmp35Result;
-  let obj7 = { active: true, style: tmp12.trailingButton, activeStyle: tmp12.sendButtonActive, activeIconStyle: tmp12.sendIconActive, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null };
+  let obj7 = {
+    active: true,
+    style: tmp12.trailingButton,
+    activeStyle: tmp12.sendButtonActive,
+    activeIconStyle: tmp12.sendIconActive,
+    IconComponent: null,
+    accessibilityLabel: null,
+    onPress: null,
+    disabled: null,
+  };
   tmp38Result = tmp38(tmp37[18]);
   obj7[4] = _require(str[22]).SendMessageIcon;
   const intl4 = tmp36(tmp37[9]).intl;
@@ -687,4 +850,4 @@ export default function VibegrationsNativeComposer(projectId) {
   items8[2] = callback3(c7, obj2);
   obj[1] = items8;
   return closure_11(c7, obj);
-};
+}

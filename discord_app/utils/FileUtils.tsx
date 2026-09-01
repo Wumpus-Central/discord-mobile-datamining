@@ -19,9 +19,28 @@ function getUploadFileSizeSum(arg0) {
 let GuildFeatures = ME.GuildFeatures;
 const MAX_ATTACHMENT_SIZE = ME.MAX_ATTACHMENT_SIZE;
 let closure_7 = GuildFeatures.MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE;
-let items = [{ reType: /^image\/vnd.adobe.photoshop/, klass: "photoshop" }, { reType: /^image\/svg\+xml/, klass: "webcode" }, { reType: /^image\//, klass: "image" }, { reType: /^video\//, klass: "video" }, { reName: /\.pdf$/, klass: "acrobat" }, { reName: /\.ae/, klass: "ae" }, { reName: /\.sketch$/, klass: "sketch" }, { reName: /\.ai$/, klass: "ai" }, { reName: /\.(?:rar|zip|7z|tar|tar\.gz)$/, klass: "archive" }, { reName: /\.(?:c\+\+|cpp|cc|c|h|hpp|mm|m|json|js|ts|rb|rake|py|asm|fs|pyc|dtd|cgi|bat|rss|java|graphml|idb|lua|o|gml|prl|sls|conf|cmake|make|sln|vbe|cxx|wbf|vbs|r|wml|php|bash|applescript|fcgi|yaml|ex|exs|sh|ml|actionscript)$/, klass: "code" }, { reName: /\.(?:txt|rtf|doc|docx|md|pages|ppt|pptx|pptm|key|log)$/, klass: "document" }, { reName: /\.(?:xls|xlsx|numbers|csv)$/, klass: "spreadsheet" }, { reName: /\.(?:html|xhtml|htm|xml|xsd|css|styl)$/, klass: "webcode" }, { reName: /\.(?:mp3|ogg|opus|wav|aiff|flac)$/, klass: "audio" }];
+let items = [
+  { reType: /^image\/vnd.adobe.photoshop/, klass: "photoshop" },
+  { reType: /^image\/svg\+xml/, klass: "webcode" },
+  { reType: /^image\//, klass: "image" },
+  { reType: /^video\//, klass: "video" },
+  { reName: /\.pdf$/, klass: "acrobat" },
+  { reName: /\.ae/, klass: "ae" },
+  { reName: /\.sketch$/, klass: "sketch" },
+  { reName: /\.ai$/, klass: "ai" },
+  { reName: /\.(?:rar|zip|7z|tar|tar\.gz)$/, klass: "archive" },
+  {
+    reName:
+      /\.(?:c\+\+|cpp|cc|c|h|hpp|mm|m|json|js|ts|rb|rake|py|asm|fs|pyc|dtd|cgi|bat|rss|java|graphml|idb|lua|o|gml|prl|sls|conf|cmake|make|sln|vbe|cxx|wbf|vbs|r|wml|php|bash|applescript|fcgi|yaml|ex|exs|sh|ml|actionscript)$/,
+    klass: "code",
+  },
+  { reName: /\.(?:txt|rtf|doc|docx|md|pages|ppt|pptx|pptm|key|log)$/, klass: "document" },
+  { reName: /\.(?:xls|xlsx|numbers|csv)$/, klass: "spreadsheet" },
+  { reName: /\.(?:html|xhtml|htm|xml|xsd|css|styl)$/, klass: "webcode" },
+  { reName: /\.(?:mp3|ogg|opus|wav|aiff|flac)$/, klass: "audio" },
+];
 const items1 = [GuildFeatures.MAX_FILE_SIZE_250_MB, GuildFeatures.MAX_GUILD_FILE_SIZE_250_MB];
-const items2 = [items1, , ];
+const items2 = [items1, ,];
 const items3 = [GuildFeatures.MAX_FILE_SIZE_100_MB, GuildFeatures.MAX_GUILD_FILE_SIZE_100_MB];
 items2[1] = items3;
 const items4 = [GuildFeatures.MAX_FILE_SIZE_50_MB, GuildFeatures.MAX_GUILD_FILE_SIZE_50_MB];

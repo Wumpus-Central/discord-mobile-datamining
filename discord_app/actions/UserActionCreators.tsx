@@ -22,7 +22,7 @@ function _fetchProfile() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (logger === 2) {
         logger = 3;
         HermesBuiltin.throwTypeError();
@@ -67,7 +67,16 @@ function _fetchProfile() {
                 if (callback2 === undefined) {
                   obj1 = {};
                 }
-                ({ type: c1, withMutualGuilds: c2, withMutualFriendsCount: c3, withMutualFriends: c4, guildId: c5, connectionsRoleId: c6, joinRequestId: c7, abortSignal: c8 } = obj1);
+                ({
+                  type: c1,
+                  withMutualGuilds: c2,
+                  withMutualFriendsCount: c3,
+                  withMutualFriends: c4,
+                  guildId: c5,
+                  connectionsRoleId: c6,
+                  joinRequestId: c7,
+                  abortSignal: c8,
+                } = obj1);
                 closure_9 = dependencyMap;
                 closure_10 = undefined;
                 closure_11 = undefined;
@@ -113,7 +122,15 @@ function _fetchProfile() {
                 const HTTP = callback(530).HTTP;
                 let obj4 = { url: null, query: null, signal: null, rejectWithError: true };
                 obj4[0] = c6.USER_PROFILE(callback);
-                const obj5 = { type: null, with_mutual_guilds: null, with_mutual_friends: null, with_mutual_friends_count: null, guild_id: null, connections_role_id: null, join_request_id: null };
+                const obj5 = {
+                  type: null,
+                  with_mutual_guilds: null,
+                  with_mutual_friends: null,
+                  with_mutual_friends_count: null,
+                  guild_id: null,
+                  connections_role_id: null,
+                  join_request_id: null,
+                };
                 obj5[0] = callback2;
                 obj5[1] = dependencyMap;
                 obj5[2] = c4;
@@ -153,7 +170,13 @@ function _fetchProfile() {
                 logger.warn("fetchProfile error: " + closure_13.body.code + " - " + closure_13.body.message);
               }
               let obj7 = callback2(709);
-              obj7 = { type: "USER_PROFILE_FETCH_FAILURE", apiError: null, fetchStartedAt: null, userId: null, guildId: null };
+              obj7 = {
+                type: "USER_PROFILE_FETCH_FAILURE",
+                apiError: null,
+                fetchStartedAt: null,
+                userId: null,
+                guildId: null,
+              };
               const aPIError = new callback(4376).APIError(closure_13);
               obj7[1] = aPIError;
               obj7[2] = closure_10;
@@ -181,7 +204,12 @@ function _fetchProfile() {
               obj9[1] = closure_12.body.user;
               obj.dispatch(obj9);
               obj2 = callback2(709);
-              const obj10 = { type: "USER_PROFILE_FETCH_SUCCESS", userProfile: null, fetchStartedAt: null, guildId: null };
+              const obj10 = {
+                type: "USER_PROFILE_FETCH_SUCCESS",
+                userProfile: null,
+                fetchStartedAt: null,
+                guildId: null,
+              };
               obj10[1] = closure_12.body;
               obj10[2] = closure_10;
               obj10[3] = c5;
@@ -233,7 +261,7 @@ function _fetchMutualFriends() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -349,7 +377,12 @@ export const fetchCurrentUser = function fetchCurrentUser() {
   const withAnalyticsToken = obj.withAnalyticsToken;
   _require = tmp;
   const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-  obj = { url: Endpoints.ME, query: { with_analytics_token: tmp }, oldFormErrors: true, rejectWithError: require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+  obj = {
+    url: Endpoints.ME,
+    query: { with_analytics_token: tmp },
+    oldFormErrors: true,
+    rejectWithError: require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+  };
   const value = HTTP.get(obj);
   return value.then((body) => {
     let obj = closure_1_1(closure_1_2[7]);
@@ -373,13 +406,22 @@ export const acceptAgreements = function acceptAgreements() {
     flag2 = true;
   }
   let obj = _modDef4713;
-  obj = { url: Endpoints.USER_AGREEMENTS, trackedActionData: null, body: null, oldFormErrors: true, rejectWithError: null };
+  obj = {
+    url: Endpoints.USER_AGREEMENTS,
+    trackedActionData: null,
+    body: null,
+    oldFormErrors: true,
+    rejectWithError: null,
+  };
   obj = { event: ImpressionNames.NetworkActionNames.USER_ACCEPT_AGREEMENTS };
   obj[1] = obj;
   obj[2] = { terms: flag, privacy: flag2 };
   obj[4] = sendRequest.rejectWithMigratedError();
   const obj4 = sendRequest;
-  return obj.patch(obj).then(() => true, () => false);
+  return obj.patch(obj).then(
+    () => true,
+    () => false,
+  );
 };
 export const setFlag = function setFlag(arg0, arg1) {
   const currentUser = authStore.getCurrentUser();
@@ -391,7 +433,12 @@ export const setFlag = function setFlag(arg0, arg1) {
     tmp4 = flags & ~arg0;
   }
   const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.ME, oldFormErrors: true, body: { flags: tmp4 }, rejectWithError: sendRequest.rejectWithMigratedError() };
+  const obj = {
+    url: Endpoints.ME,
+    oldFormErrors: true,
+    body: { flags: tmp4 },
+    rejectWithError: sendRequest.rejectWithMigratedError(),
+  };
   return HTTP.patch(obj);
 };
 export const getUser = function getUser(arg0) {

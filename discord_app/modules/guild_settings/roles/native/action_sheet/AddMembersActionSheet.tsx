@@ -49,7 +49,17 @@ function MemberRow(arg0) {
   let obj = useCheckboxA11yNative;
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked, disabled });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-  obj = { start, end, guildId, userId, onPress, disabled, trailing: callback2(FormCheckbox.FormCheckbox, { checked }), accessibilityRole, accessibilityState };
+  obj = {
+    start,
+    end,
+    guildId,
+    userId,
+    onPress,
+    disabled,
+    trailing: callback2(FormCheckbox.FormCheckbox, { checked }),
+    accessibilityRole,
+    accessibilityState,
+  };
   return callback2(memoResult1Default, obj);
 }
 class AddMembersBody {
@@ -71,23 +81,27 @@ class AddMembersBody {
     tmp4 = role;
     obj = members;
     obj = { isKeyboardAwareOnAndroid: !inActionSheet };
-    items = [, ];
+    items = [,];
     items[0] = members;
     items[1] = first;
-    memo = maxCount.useMemo(() => members.filter((name) => {
-      const regExp = new RegExp(closure_1_1(closure_1_2[12]).escape(closure_7), "i");
-      let isMatch = regExp.test(name.name);
-      if (!isMatch) {
-        const _RegExp = RegExp;
-        const regExp1 = new RegExp(closure_1_1(closure_1_2[12]).escape(closure_7), "i");
-        isMatch = regExp1.test(name.userTag);
-        const tmpResult = closure_1_1(closure_1_2[12]);
-      }
-      return isMatch;
-    }), items);
+    memo = maxCount.useMemo(
+      () =>
+        members.filter((name) => {
+          const regExp = new RegExp(closure_1_1(closure_1_2[12]).escape(closure_7), "i");
+          let isMatch = regExp.test(name.name);
+          if (!isMatch) {
+            const _RegExp = RegExp;
+            const regExp1 = new RegExp(closure_1_1(closure_1_2[12]).escape(closure_7), "i");
+            isMatch = regExp1.test(name.userTag);
+            const tmpResult = closure_1_1(closure_1_2[12]);
+          }
+          return isMatch;
+        }),
+      items,
+    );
     closure_9 = memo;
     length = memo.length;
-    items1 = [, ];
+    items1 = [,];
     items1[0] = length;
     items1[1] = first;
     effect = maxCount.useEffect(() => {
@@ -126,7 +140,11 @@ class AddMembersBody {
     obj2[2] = function onChangeText(str) {
       const formatted = str.trim().toLowerCase();
       str = str.trim();
-      members = closure_1_1(members[18]).requestMembers(id.id, formatted, closure_1_0(members[19]).ADD_MEMBER_QUERY_LIMIT);
+      members = closure_1_1(members[18]).requestMembers(
+        id.id,
+        formatted,
+        closure_1_0(members[19]).ADD_MEMBER_QUERY_LIMIT,
+      );
       callback2(formatted);
     };
     obj2[3] = function onRemove(arg0) {
@@ -139,7 +157,7 @@ class AddMembersBody {
     obj2[4] = global.autoFocusSearch;
     obj2[5] = inActionSheet;
     obj1[1] = closure_8(tmp4Result, obj2);
-    items2 = [, ];
+    items2 = [,];
     items2[0] = closure_8(closure_6, obj1);
     if (0 === memo.length) {
       obj3 = { Illustration: null, bodyStyle: null, body: null };
@@ -165,7 +183,13 @@ class AddMembersBody {
       if (inActionSheet) {
         num = require("useSafeAreaInsetsKeyboardAware")(obj).insets.bottom;
       }
-      obj5 = { contentContainerStyle: null, renderItem: null, data: null, extraData: null, keyboardShouldPersistTaps: "always" };
+      obj5 = {
+        contentContainerStyle: null,
+        renderItem: null,
+        data: null,
+        extraData: null,
+        keyboardShouldPersistTaps: "always",
+      };
       obj4[2] = require("Themes").space.PX_12 + num;
       obj5[0] = obj4;
       obj5[1] = function renderItem(item) {
@@ -213,7 +237,7 @@ class AddMembersBody {
             }
           },
           disabled: null,
-          checked: null
+          checked: null,
         };
         if (!hasItem) {
           if (tmp5) {
@@ -236,7 +260,13 @@ class AddMembersBody {
   }
 }
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, inputContainer: null, tagAvatar: null, emptyStateText: null, addMembersDescription: null };
+createCacheKey = {
+  container: null,
+  inputContainer: null,
+  tagAvatar: null,
+  emptyStateText: null,
+  addMembersDescription: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12 };
@@ -248,7 +278,9 @@ let obj3 = { color: ThemesDefault.colors.TEXT_DEFAULT };
 createCacheKey[4] = { marginHorizontal: ThemesDefault.space.PX_16 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { marginHorizontal: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/action_sheet/AddMembersActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/roles/native/action_sheet/AddMembersActionSheet.tsx",
+);
 
 export default function AddMembersActionSheet(guild) {
   guild = guild.guild;
@@ -298,9 +330,21 @@ export default function AddMembersActionSheet(guild) {
   const obj4 = { variant: "text-sm/normal", style: tmp.addMembersDescription, children: null };
   const intl3 = tmp5(tmp6[15]).intl;
   obj4[2] = intl3.format(guild(first[15]).t["3OxP4q"], { numMembers: MAX_BULK_ROLE_MEMBERS_ADD });
-  const items1 = [closure_8(guild(first[28]).Text, obj4), closure_8(AddMembersBody, { guild, role, members: guildMembers, pendingAdditions: first, setPendingAdditions: tmp2[1], autoFocusSearch: true, maxCount: MAX_BULK_ROLE_MEMBERS_ADD, inActionSheet: true })];
+  const items1 = [
+    closure_8(guild(first[28]).Text, obj4),
+    closure_8(AddMembersBody, {
+      guild,
+      role,
+      members: guildMembers,
+      pendingAdditions: first,
+      setPendingAdditions: tmp2[1],
+      autoFocusSearch: true,
+      maxCount: MAX_BULK_ROLE_MEMBERS_ADD,
+      inActionSheet: true,
+    }),
+  ];
   obj3[1] = items1;
   obj2[3] = callback3(View, obj3);
   return closure_8(guild(first[23]).BottomSheet, obj2);
-};
+}
 export { AddMembersBody };

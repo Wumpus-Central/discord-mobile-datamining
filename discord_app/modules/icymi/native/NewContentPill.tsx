@@ -33,14 +33,27 @@ function CutoutGuildIcon(guild) {
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { container: null, guildIconBG: null, refreshMorePillContainer: null };
-createCacheKey = { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+createCacheKey = {
+  alignSelf: "center",
+  alignItems: "center",
+  flexDirection: "row",
+  paddingRight: 12,
+  paddingLeft: 8,
+  paddingVertical: 6,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[2] = { position: "absolute", top: 0, left: 0, height: 32, width: "100%", zIndex: 100 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let closure_12 = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
-let closure_14 = { code: "function NewContentPillTsx1(){const{withSpring,showingPill,springConfig}=this.__closure;return{transform:[{translateY:withSpring(showingPill?12:0,springConfig)}],opacity:withSpring(showingPill?1:0,springConfig,'respect-motion-settings')};}" };
-let closure_15 = { code: "function NewContentPillTsx2(){const{showingPill}=this.__closure;return{pointerEvents:showingPill?'box-none':'none'};}" };
+let closure_14 = {
+  code: "function NewContentPillTsx1(){const{withSpring,showingPill,springConfig}=this.__closure;return{transform:[{translateY:withSpring(showingPill?12:0,springConfig)}],opacity:withSpring(showingPill?1:0,springConfig,'respect-motion-settings')};}",
+};
+let closure_15 = {
+  code: "function NewContentPillTsx2(){const{showingPill}=this.__closure;return{pointerEvents:showingPill?'box-none':'none'};}",
+};
 let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 const result = require("set").fileFinishedImporting("modules/icymi/native/NewContentPill.tsx");
 
@@ -177,7 +190,7 @@ export default function NewContentPill(onPress) {
     obj1 = { onPress: null, style: null, children: null };
     obj1[0] = callback;
     obj1[1] = tmp.container;
-    const items8 = [isFocused(tmp2(tmp3[18]).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), ];
+    const items8 = [isFocused(tmp2(tmp3[18]).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" })];
     obj2 = { style: null, variant: "heading-md/bold", color: "interactive-text-active", children: null };
     obj2[0] = { marginLeft: 4 };
     const intl = tmp2(tmp3[20]).intl;
@@ -204,7 +217,7 @@ export default function NewContentPill(onPress) {
       tmp30Result = tmp30(tmp21, unsafe_rawColors);
       const tmp23 = tmp2(tmp3[21]).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
     } else {
-      const items10 = [tmp30(tmp2(tmp3[18]).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), , ];
+      const items10 = [tmp30(tmp2(tmp3[18]).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), ,];
       const substr = stateFromStoresArray1.slice(0, stateFromStoresArray1.length - 1);
       items10[1] = substr.map((guild) => {
         let num = 4;
@@ -238,4 +251,4 @@ export default function NewContentPill(onPress) {
     tmp31 = first2;
   }
   return tmp30Result;
-};
+}

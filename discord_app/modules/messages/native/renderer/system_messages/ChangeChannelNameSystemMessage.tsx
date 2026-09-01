@@ -6,7 +6,9 @@ import createCommonMessageDefault from "createCommonMessage.tsx";
 import closure_3 from "../../../../../stores/ChannelStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChangeChannelNameSystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/ChangeChannelNameSystemMessage.tsx",
+);
 
 export const createChangeChannelNameSystemMessage = function createChangeChannelNameSystemMessage(message) {
   message = message.message;

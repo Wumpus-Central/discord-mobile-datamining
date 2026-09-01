@@ -6,7 +6,9 @@ import { AnalyticEvents } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx",
+);
 
 export default function IgnoreUserElement(user) {
   user = user.user;
@@ -16,7 +18,11 @@ export default function IgnoreUserElement(user) {
   let obj = user(reportId[5]);
   const items = [closure_5];
   const items1 = [user];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isIgnored: closure_1_5.isIgnored(user.id), isBlocked: closure_1_5.isBlocked(user.id) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => ({ isIgnored: closure_1_5.isIgnored(user.id), isBlocked: closure_1_5.isBlocked(user.id) }),
+    items1,
+  );
   ({ isIgnored, isBlocked } = stateFromStoresObject);
   obj1 = user(reportId[5]);
   const items2 = [closure_4];
@@ -58,4 +64,4 @@ export default function IgnoreUserElement(user) {
     const tmp10 = channelId(tmp2[9]);
   }
   return tmp8Result;
-};
+}

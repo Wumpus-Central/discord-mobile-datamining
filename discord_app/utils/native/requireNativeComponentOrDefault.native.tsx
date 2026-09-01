@@ -35,4 +35,4 @@ export default function requireNativeComponentOrDefault(warnWhenMissing) {
     }
   }
   return value;
-};
+}

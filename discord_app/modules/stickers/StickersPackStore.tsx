@@ -7,7 +7,15 @@ import { LibdiscoreStore } from "../libdiscore/stores/LibdiscoreStore.tsx";
 
 require = arg1;
 function parseServerPackSticker(id) {
-  const obj = { id: id.id, tags: id.tags, type: id.type, name: id.name, description: id.description, format_type: id.format_type, pack_id: id.pack_id };
+  const obj = {
+    id: id.id,
+    tags: id.tags,
+    type: id.type,
+    name: id.name,
+    description: id.description,
+    format_type: id.format_type,
+    pack_id: id.pack_id,
+  };
   obj[TypeTag] = "PackSticker";
   return obj;
 }
@@ -28,17 +36,20 @@ function deriveStickerMetadata(name, name2) {
 function ingestStickerPack(item10017, packStickersDatabase, packsDatabase, premiumPacksDatabase, arg4) {
   const result = packsDatabase.set(item10017.id, item10017);
   const result1 = premiumPacksDatabase.set(item10017.id, item10017);
-  packStickersDatabase.setPartition(item10017.id, (function parsePackStickers(stickers) {
-    const obj = {};
-    const iter = stickers[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp2 = callback;
-      obj[nextResult.id] = callback(nextResult);
-      continue;
-    }
-    return obj;
-  })(item10017.stickers));
+  packStickersDatabase.setPartition(
+    item10017.id,
+    (function parsePackStickers(stickers) {
+      const obj = {};
+      const iter = stickers[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let tmp2 = callback;
+        obj[nextResult.id] = callback(nextResult);
+        continue;
+      }
+      return obj;
+    })(item10017.stickers),
+  );
 }
 let c4 = false;
 let c5 = null;
@@ -102,14 +113,14 @@ prototype["stateWrapper"] = function stateWrapper() {
     },
     clearAllDBs() {
       return self.clearAllDatabases();
-    }
+    },
   };
 };
 Object.defineProperty(prototype, "isFetchingStickerPacks", {
   get: function isFetchingStickerPacks() {
     return c4;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasLoadedStickerPacks", {
   get: function hasLoadedStickerPacks() {
@@ -121,7 +132,7 @@ Object.defineProperty(prototype, "hasLoadedStickerPacks", {
     }
     return tmp;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getStickerById"] = function getStickerById(arg0) {
   const packStickerByIdIndex = this.packStickerByIdIndex;
@@ -144,17 +155,20 @@ const stickersPackStore = new StickersPackStore({
     pack = pack.pack;
     ({ packStickersDatabase, packsDatabase, premiumPacksDatabase } = arg1);
     const result = packsDatabase.set(pack.id, pack);
-    packStickersDatabase.setPartition(pack.id, (function parsePackStickers(stickers) {
-      const obj = {};
-      const iter = stickers[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        let tmp2 = callback;
-        obj[nextResult.id] = callback(nextResult);
-        continue;
-      }
-      return obj;
-    })(pack.stickers));
+    packStickersDatabase.setPartition(
+      pack.id,
+      (function parsePackStickers(stickers) {
+        const obj = {};
+        const iter = stickers[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp2 = callback;
+          obj[nextResult.id] = callback(nextResult);
+          continue;
+        }
+        return obj;
+      })(pack.stickers),
+    );
   },
   STICKER_PACKS_FETCH_START(arg0, markDirty) {
     c4 = true;
@@ -180,10 +194,18 @@ const stickersPackStore = new StickersPackStore({
   PACK_STICKER_FETCH_SUCCESS(sticker, packStickersDatabase) {
     sticker = sticker.sticker;
     packStickersDatabase = packStickersDatabase.packStickersDatabase;
-    const obj = { id: sticker.id, tags: sticker.tags, type: sticker.type, name: sticker.name, description: sticker.description, format_type: sticker.format_type, pack_id: sticker.pack_id };
+    const obj = {
+      id: sticker.id,
+      tags: sticker.tags,
+      type: sticker.type,
+      name: sticker.name,
+      description: sticker.description,
+      format_type: sticker.format_type,
+      pack_id: sticker.pack_id,
+    };
     obj[TypeTag] = "PackSticker";
     packStickersDatabase.setRecord(sticker.pack_id, sticker.id, obj);
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/stickers/StickersPackStore.tsx");
 

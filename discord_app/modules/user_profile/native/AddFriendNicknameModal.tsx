@@ -16,7 +16,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { container: null, title: null, description: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" };
+createCacheKey = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM,
+  justifyContent: "center",
+  alignItems: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { marginTop: 8, marginBottom: 16, textAlign: "center", lineHeight: 18 };
@@ -32,7 +37,7 @@ export default function AddFriendNicknameModal(arg0) {
   let callback1;
   function _handleSubmit() {
     const self = this;
-    const tmp = _undefined2(function*() {
+    const tmp = _undefined2(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -197,15 +202,38 @@ export default function AddFriendNicknameModal(arg0) {
   const intl4 = tmp5(1236).intl;
   obj1[2] = intl4.string(getSystemLocale.t["ETE/oC"]);
   obj1[3] = callback1;
-  const items3 = [callback2(Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult }), , ];
+  const items3 = [
+    callback2(Text.Text, {
+      style: tmp.title,
+      accessibilityRole: "header",
+      variant: "heading-lg/extrabold",
+      color: "mobile-text-heading-primary",
+      children: stringResult,
+    }),
+    ,
+  ];
   let obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl5 = tmp5(1236).intl;
   obj3[3] = intl5.string(getSystemLocale.t["NdQ+lP"]);
   items3[1] = callback2(Text.Text, obj3);
-  const obj4 = { onChange: callback, autoFocus: true, accessibilityLabel: null, placeholder: null, defaultValue: null, maxLength: 32, isClearable: true };
+  const obj4 = {
+    onChange: callback,
+    autoFocus: true,
+    accessibilityLabel: null,
+    placeholder: null,
+    defaultValue: null,
+    maxLength: 32,
+    isClearable: true,
+  };
   const intl6 = tmp5(1236).intl;
   obj4[2] = intl6.string(getSystemLocale.t.pqG6GS);
-  let obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult };
+  let obj2 = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-lg/extrabold",
+    color: "mobile-text-heading-primary",
+    children: stringResult,
+  };
   const tmp5Result = initialize;
   obj4[3] = showUserProfile(4322).getName(stateFromStores1);
   obj4[4] = stateFromStores;
@@ -214,4 +242,4 @@ export default function AddFriendNicknameModal(arg0) {
   obj[0] = callback3(tmp3Result, obj1);
   obj[1] = callback2(tmp3Result, obj);
   return callback2(callback1, obj);
-};
+}

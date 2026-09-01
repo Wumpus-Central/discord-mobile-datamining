@@ -8,7 +8,9 @@ import ME from "../../../../Constants.tsx";
 
 require = arg1;
 ({ InputModes: c5, RTCConnectionStates: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoAudioInputDetected.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/errors/av_errors/definitions/AVErrorNoAudioInputDetected.tsx",
+);
 
 export const AVErrorNoAudioInputDetectedDefinition = {
   getActiveErrors(voiceState) {
@@ -51,5 +53,5 @@ export const AVErrorNoAudioInputDetectedDefinition = {
   },
   makeErrorContextKey(mediaSessionId) {
     return "" + mediaSessionId.mediaSessionId + ":" + mediaSessionId.audioInputDeviceName;
-  }
+  },
 };

@@ -25,7 +25,7 @@ export default function openQuarantineModeInfoModal() {
           return closure_1_4(closure_0, {});
         };
       });
-    }
+    },
   };
   _modDef4858.openLazy(obj);
-};
+}

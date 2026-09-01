@@ -43,10 +43,16 @@ export default function GIFPickerCategoryView(onSelectCategory) {
   const intl = onSelectCategory(1236).intl;
   let obj = { categoryName: item.name };
   const formatToPlainStringResult = intl.formatToPlainString(onSelectCategory(1236).t["j+63pw"], obj);
-  obj = { style: tmp.container, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult };
+  obj = {
+    style: tmp.container,
+    onPress: callback,
+    accessible: true,
+    accessibilityRole: "button",
+    accessibilityLabel: formatToPlainStringResult,
+  };
   const merged = Object.assign(item(9720)(callback, formatToPlainStringResult));
   obj = { style: tmp.gifImage, source: obj1 };
-  const items1 = [callback(item(5493), obj), callback(closure_4, { style: tmp.gifOverlay }), ];
+  const items1 = [callback(item(5493), obj), callback(closure_4, { style: tmp.gifOverlay })];
   const obj3 = { style: tmp.categoryName, accessible: false, children: null };
   if (item.type === GIFPickerResultTypes.TRENDING_GIFS) {
     const obj4 = { size: "sm", style: null, color: null };
@@ -62,9 +68,18 @@ export default function GIFPickerCategoryView(onSelectCategory) {
       tmp10Result = tmp10(tmp3(9181).StarIcon, obj5);
     }
   }
-  const items2 = [tmp10Result, callback(onSelectCategory(4474).Text, { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name })];
+  const items2 = [
+    tmp10Result,
+    callback(onSelectCategory(4474).Text, {
+      variant: "text-sm/semibold",
+      color: "text-overlay-light",
+      maxFontSizeMultiplier: 2,
+      accessible: false,
+      children: item.name,
+    }),
+  ];
   obj3[2] = items2;
   items1[2] = closure_8(closure_4, obj3);
   obj.children = items1;
   return closure_8(closure_5, obj);
-};
+}

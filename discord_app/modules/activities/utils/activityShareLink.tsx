@@ -6,7 +6,11 @@ import getPathsFromURL from "../../coded_links/findCodedLinks.tsx";
 const items = [getPathsFromURL.parseQuestsEmbedCode];
 const result = set.fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");
 
-export const resolveActivityShareMessageContent = function resolveActivityShareMessageContent(c3, closure_14, closure_12) {
+export const resolveActivityShareMessageContent = function resolveActivityShareMessageContent(
+  c3,
+  closure_14,
+  closure_12,
+) {
   const _require = false;
   const replaced = c3.replaceAll(isDiscordProxiedAssetUrlDefault.URL_REGEX, (arg0) => {
     c0 = arg0;
@@ -28,7 +32,8 @@ export const resolveActivityShareMessageContent = function resolveActivityShareM
     obj[0] = closure_14.name;
     obj[1] = closure_12;
     let _HermesInternal = HermesInternal;
-    combined = "" + replaced + "\n\n" + intl.formatToMarkdownString(require("../../../intl/index.native.tsx").t.dZJpdG, obj);
+    combined =
+      "" + replaced + "\n\n" + intl.formatToMarkdownString(require("../../../intl/index.native.tsx").t.dZJpdG, obj);
   }
   return combined;
 };

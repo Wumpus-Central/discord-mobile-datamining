@@ -9,8 +9,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 const UserSettingsSections = ME.UserSettingsSections;
 let closure_4 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class SelectivelySyncedUserSettingsStore extends PersistedStore {
-}
+class SelectivelySyncedUserSettingsStore extends PersistedStore {}
 const prototype = SelectivelySyncedUserSettingsStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let obj = arg0;
@@ -63,7 +62,16 @@ const items = [
     obj = {};
     if (false === obj[UserSettingsSections.TEXT]) {
       obj1 = { shouldSync: false, settings: null };
-      obj1[1] = applyDefault.pick(value, ["inlineAttachmentMedia", "inlineEmbedMedia", "renderEmbeds", "renderReactions", "animateEmoji", "animateStickers", "gifAutoPlay", "defaultReactionEmoji"]);
+      obj1[1] = applyDefault.pick(value, [
+        "inlineAttachmentMedia",
+        "inlineEmbedMedia",
+        "renderEmbeds",
+        "renderReactions",
+        "animateEmoji",
+        "animateStickers",
+        "gifAutoPlay",
+        "defaultReactionEmoji",
+      ]);
       obj.text = obj1;
       const obj5 = applyDefault;
     }
@@ -98,7 +106,7 @@ const items = [
       obj.appearance = obj;
       return obj;
     }
-  }
+  },
 ];
 SelectivelySyncedUserSettingsStore.migrations = items;
 const selectivelySyncedUserSettingsStore = new SelectivelySyncedUserSettingsStore(dispatcherDefault, {
@@ -150,7 +158,7 @@ const selectivelySyncedUserSettingsStore = new SelectivelySyncedUserSettingsStor
   },
   LOGOUT: function handleLogOut() {
     closure_4 = {};
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/user_settings/SelectivelySyncedUserSettingsStore.tsx");
 

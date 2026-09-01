@@ -11,7 +11,14 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { header: null, headerText: null, roleDot: null, memberCount: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_4,
+  paddingTop: ThemesDefault.space.PX_12,
+  paddingBottom: ThemesDefault.space.PX_4,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { paddingTop: 0 };
@@ -73,7 +80,15 @@ export default function RoleMembersActionSheet(guildId) {
   if (null != stateFromStores) {
     obj = { scrollable: true, header: null, children: null };
     obj[1] = tmp14;
-    obj = { guildId: null, channelId: null, roleId: null, headerShown: false, inActionSheet: true, disableStickySections: true, disableThemedGradient: true };
+    obj = {
+      guildId: null,
+      channelId: null,
+      roleId: null,
+      headerShown: false,
+      inActionSheet: true,
+      disableStickySections: true,
+      disableThemedGradient: true,
+    };
     obj[0] = guildId;
     if (channelId == null) {
       channelId = EVERYONE_CHANNEL_ID;
@@ -85,4 +100,4 @@ export default function RoleMembersActionSheet(guildId) {
     let tmp9Result = tmp9(11187);
   }
   return tmp16Result;
-};
+}

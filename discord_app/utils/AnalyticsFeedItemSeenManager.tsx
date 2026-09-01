@@ -2,7 +2,14 @@
 import _modDef38 from "../../_runtime/metro/00038__.js";
 import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
 
-let obj = { IMMEDIATE: 0, [0]: "IMMEDIATE", IMMEDIATE_WITH_COOLDOWN: 1, [1]: "IMMEDIATE_WITH_COOLDOWN", IMMEDIATE_WITH_DELAY: 2, [2]: "IMMEDIATE_WITH_DELAY" };
+let obj = {
+  IMMEDIATE: 0,
+  [0]: "IMMEDIATE",
+  IMMEDIATE_WITH_COOLDOWN: 1,
+  [1]: "IMMEDIATE_WITH_COOLDOWN",
+  IMMEDIATE_WITH_DELAY: 2,
+  [2]: "IMMEDIATE_WITH_DELAY",
+};
 class TrackedFeedItem {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -168,13 +175,15 @@ class AnalyticsFeedItemSeenManager {
     };
     obj.getVisibleFeedItemIds = function getVisibleFeedItemIds() {
       const keys = Object.keys(obj.trackedFeedItems);
-      return new Set(keys.filter((arg0) => {
-        let isVisibleResult;
-        if (trackedFeedItems.trackedFeedItems[arg0] != null) {
-          isVisibleResult = obj.isVisible();
-        }
-        return isVisibleResult;
-      }));
+      return new Set(
+        keys.filter((arg0) => {
+          let isVisibleResult;
+          if (trackedFeedItems.trackedFeedItems[arg0] != null) {
+            isVisibleResult = obj.isVisible();
+          }
+          return isVisibleResult;
+        }),
+      );
     };
     obj.handleAppStateUpdate = function handleAppStateUpdate(state) {
       state = state.state;
@@ -200,7 +209,12 @@ class AnalyticsFeedItemSeenManager {
       if (!obj._paused) {
         const visibleFeedItemIds = obj.getVisibleFeedItemIds();
         const item = visibleFeedItemIds.forEach((feedItemId) => {
-          closure_0.handleFeedItemUnseen({ id: closure_0._id, feedItemId, timestampMillis: Date.now(), type: "ANALYTICS_FEED_ITEM_UNSEEN" });
+          closure_0.handleFeedItemUnseen({
+            id: closure_0._id,
+            feedItemId,
+            timestampMillis: Date.now(),
+            type: "ANALYTICS_FEED_ITEM_UNSEEN",
+          });
         });
         obj._paused = true;
         obj._pausedFeedItemIds = visibleFeedItemIds;
@@ -211,7 +225,12 @@ class AnalyticsFeedItemSeenManager {
         obj._paused = false;
         const _pausedFeedItemIds = obj._pausedFeedItemIds;
         const item = _pausedFeedItemIds.forEach((feedItemId) => {
-          closure_0.handleFeedItemSeen({ id: closure_0._id, feedItemId, timestampMillis: Date.now(), type: "ANALYTICS_FEED_ITEM_SEEN" });
+          closure_0.handleFeedItemSeen({
+            id: closure_0._id,
+            feedItemId,
+            timestampMillis: Date.now(),
+            type: "ANALYTICS_FEED_ITEM_SEEN",
+          });
         });
         const result = obj.clearPausedFeedItemIds();
       }
@@ -272,25 +291,42 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
       if (IMMEDIATE !== tmp2.IMMEDIATE_WITH_COOLDOWN) {
         resolved = new Promise((arg0) => {
           closure_0 = arg0;
-          const timerId = setTimeout(closure_1_2(function*() {
-            if (c2 === 2) {
-              c2 = 3;
-              HermesBuiltin.throwTypeError();
-            } else if (tmp3 === 3) {
-              if (arg0 === 1) {
-                throw arg1;
-              } else if (arg0 === 2) {
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+          const timerId = setTimeout(
+            closure_1_2(function* () {
+              if (c2 === 2) {
+                c2 = 3;
+                HermesBuiltin.throwTypeError();
+              } else if (tmp3 === 3) {
+                if (arg0 === 1) {
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  return { value: "HermesInternal", done: null };
+                }
               } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c2 = 2;
-                if (0 === c1) {
-                  if (arg0 === 1) {
+                try {
+                  c2 = 2;
+                  if (0 === c1) {
+                    if (arg0 === 1) {
+                      c2 = 3;
+                      throw arg1;
+                    } else if (arg0 === 2) {
+                      c2 = 3;
+                      obj = { value: null, done: true };
+                      obj[0] = arg1;
+                      return obj;
+                    } else {
+                      const callback = tmp4;
+                      c1 = 1;
+                      c2 = 1;
+                      obj1 = { value: null, done: false };
+                      obj1[0] = closure_1_0();
+                      return obj1;
+                    }
+                  } else if (arg0 === 1) {
                     c2 = 3;
                     throw arg1;
                   } else if (arg0 === 2) {
@@ -299,32 +335,18 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    const callback = tmp4;
-                    c1 = 1;
-                    c2 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = closure_1_0();
-                    return obj1;
+                    callback();
+                    c2 = 3;
+                    return { value: "HermesInternal", done: null };
                   }
-                } else if (arg0 === 1) {
-                  c2 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c2 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  callback();
-                  c2 = 3;
-                  return { value: "HermesInternal", done: null };
+                } catch (tmp9) {
+                  c2 = tmp;
+                  throw tmp9;
                 }
-              } catch (tmp9) {
-                c2 = tmp;
-                throw tmp9;
               }
-            }
-          }), 100);
+            }),
+            100,
+          );
         });
       }
     }
@@ -333,7 +355,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
       closure_0 = arg0;
       c2 = 0;
       c3 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (c3 === 2) {
           c3 = 3;
           HermesBuiltin.throwTypeError();
@@ -387,7 +409,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
         }
       })();
     });
-    resolved = new Promise(function() {
+    resolved = new Promise(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {

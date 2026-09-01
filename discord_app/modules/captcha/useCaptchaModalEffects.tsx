@@ -36,4 +36,4 @@ export default function useCaptchaModalEffects(arg0) {
   return () => {
     closure_2.current = false;
   };
-};
+}

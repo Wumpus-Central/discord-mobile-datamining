@@ -44,12 +44,12 @@ export default function UserProfileNote(style) {
         onBack,
         onSave() {
           return callback({ action: "SET_NOTE" });
-        }
+        },
       };
       onBack(trackUserProfileAction[10])(obj);
     },
     activeOpacity: 0.8,
-    children: null
+    children: null,
   };
   obj = { style: style.style, title: null, titleStyle: null, titleIcon: null, children: null };
   const tmp = callback();
@@ -57,7 +57,7 @@ export default function UserProfileNote(style) {
   const tmp8 = note;
   const intl2 = tmp2(tmp3[8]).intl;
   obj[1] = intl2.string(userId(trackUserProfileAction[8]).t["mQKv+v"]);
-  const items = [tmp.title, ];
+  const items = [tmp.title];
   obj1 = !tmp6Result;
   if (!tmp6Result) {
     obj1 = { marginBottom: 0 };
@@ -71,6 +71,18 @@ export default function UserProfileNote(style) {
     tmp6Result = tmp6(tmp2(tmp3[12]).Text, obj2);
   }
   obj[4] = tmp6Result;
-  obj[5] = jsx(onBack(trackUserProfileAction[11]), { style: style.style, title: null, titleStyle: null, titleIcon: null, children: null });
-  return jsx(userId(trackUserProfileAction[7]).PressableOpacity, { style: style.style, title: null, titleStyle: null, titleIcon: null, children: null });
-};
+  obj[5] = jsx(onBack(trackUserProfileAction[11]), {
+    style: style.style,
+    title: null,
+    titleStyle: null,
+    titleIcon: null,
+    children: null,
+  });
+  return jsx(userId(trackUserProfileAction[7]).PressableOpacity, {
+    style: style.style,
+    title: null,
+    titleStyle: null,
+    titleIcon: null,
+    children: null,
+  });
+}

@@ -10,15 +10,46 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { header: null, reactionPill: null, emoji: null, emojiText: null, reactionText: null, starIcon: null, starIconSelected: null, starIconUnselected: null };
+createCacheKey = {
+  header: null,
+  reactionPill: null,
+  emoji: null,
+  emojiText: null,
+  reactionText: null,
+  starIcon: null,
+  starIconSelected: null,
+  starIconUnselected: null,
+};
 createCacheKey = { alignItems: "center", paddingTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.xl, borderWidth: 4, borderColor: ThemesDefault.colors.BORDER_STRONG, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
+createCacheKey[1] = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT,
+  borderRadius: ThemesDefault.radii.xl,
+  borderWidth: 4,
+  borderColor: ThemesDefault.colors.BORDER_STRONG,
+  paddingVertical: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_8,
+};
 createCacheKey[2] = { width: 50, height: 50 };
 createCacheKey[3] = { fontSize: 24, lineHeight: 50, textAlign: "center" };
 createCacheKey[4] = { fontSize: 24, lineHeight: 50 };
 createCacheKey[5] = { height: 24, width: 24 };
-let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.xl, borderWidth: 4, borderColor: ThemesDefault.colors.BORDER_STRONG, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
+let obj1 = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT,
+  borderRadius: ThemesDefault.radii.xl,
+  borderWidth: 4,
+  borderColor: ThemesDefault.colors.BORDER_STRONG,
+  paddingVertical: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_8,
+};
 createCacheKey[6] = { tintColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING };
 let obj2 = { tintColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING };
 createCacheKey[7] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -49,13 +80,17 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
   let obj2 = channelId(emoji[10]);
   const items1 = [callback];
   const items2 = [emoji.id];
-  stateFromStores1 = obj2.useStateFromStores(items1, () => {
-    let customEmojiById = null;
-    if (null != emoji.id) {
-      customEmojiById = callback.getCustomEmojiById(tmp.id);
-    }
-    return customEmojiById;
-  }, items2);
+  stateFromStores1 = obj2.useStateFromStores(
+    items1,
+    () => {
+      let customEmojiById = null;
+      if (null != emoji.id) {
+        customEmojiById = callback.getCustomEmojiById(tmp.id);
+      }
+      return customEmojiById;
+    },
+    items2,
+  );
   let obj3 = channelId(emoji[11]);
   isFavoriteEmoji = obj3.useIsFavoriteEmoji(stateFromStores, stateFromStores1);
   let obj4 = channelId(emoji[10]);
@@ -171,25 +206,34 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
   obj = { style: tmp.header, children: null };
   obj1 = { style: tmp.reactionPill, children: null };
   obj2 = { src: emojiURL, name: str, textEmojiStyle: tmp.emojiText, fastImageStyle: tmp.emoji };
-  const items9 = [callback(messageId(emoji[24]), obj2), ];
-  obj3 = { variant: "text-lg/bold", color: "text-default", style: tmp.reactionText, children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count };
+  const items9 = [callback(messageId(emoji[24]), obj2)];
+  obj3 = {
+    variant: "text-lg/bold",
+    color: "text-default",
+    style: tmp.reactionText,
+    children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count,
+  };
   items9[1] = callback(channelId(emoji[16]).Text, obj3);
   obj1[1] = items9;
-  const items10 = [callback2(isFavoriteEmoji, obj1), ];
+  const items10 = [callback2(isFavoriteEmoji, obj1)];
   let combined = str;
   if (null != emoji.id) {
     const _HermesInternal = HermesInternal;
     combined = ":" + str + ":";
   }
-  items10[1] = callback(channelId(emoji[16]).Text, { variant: "text-lg/semibold", color: "text-default", children: combined });
+  items10[1] = callback(channelId(emoji[16]).Text, {
+    variant: "text-lg/semibold",
+    color: "text-default",
+    children: combined,
+  });
   obj[1] = items10;
-  const items11 = [callback2(isFavoriteEmoji, obj), ];
+  const items11 = [callback2(isFavoriteEmoji, obj)];
   let tmp24 = tmp2;
   if (null != emoji.id) {
     tmp24 = null != stateFromStores1;
   }
   if (!tmp24) {
-    const items12 = [tmp24, , , ];
+    const items12 = [tmp24, , ,];
     let tmp21Result = tidaWebformEnabled;
     if (tidaWebformEnabled) {
       tmp21Result = tmp2;
@@ -203,7 +247,10 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     }
     items12[1] = tmp21Result;
     if (tidaWebformEnabled) {
-      tidaWebformEnabled = obj.useExperiment({ location: "ReactionEmojiOptionsActionSheet" }, { autoTrackExposure: false }).tidaWebformEnabled;
+      tidaWebformEnabled = obj.useExperiment(
+        { location: "ReactionEmojiOptionsActionSheet" },
+        { autoTrackExposure: false },
+      ).tidaWebformEnabled;
     }
     if (tidaWebformEnabled) {
       tidaWebformEnabled = tmp2;
@@ -249,4 +296,4 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     t[1] = callback2;
     tmp21Result = tmp21(tmp3(tmp4[26]).TableRow, t);
   }
-};
+}

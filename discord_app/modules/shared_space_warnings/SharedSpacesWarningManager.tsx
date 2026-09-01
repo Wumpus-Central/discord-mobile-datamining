@@ -55,7 +55,10 @@ function handleAppStateChanged(state) {
         if (callback4()) {
           const _Set = Set;
           const items = [];
-          HermesBuiltin.arraySpread(ignoredUsersForVoiceChannel, HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0));
+          HermesBuiltin.arraySpread(
+            ignoredUsersForVoiceChannel,
+            HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0),
+          );
           const set = new Set(items);
           let num3 = callback3();
           if (num3 == null) {
@@ -81,7 +84,10 @@ function handleAppStateChanged(state) {
           }
           if (!everyResult) {
             const items1 = [];
-            HermesBuiltin.arraySpread(ignoredUsersForVoiceChannel, HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0));
+            HermesBuiltin.arraySpread(
+              ignoredUsersForVoiceChannel,
+              HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0),
+            );
             const result = showVoiceChannelBlockedUserWarning.showVoiceChannelBlockedUserWarning(channelId, items1[0]);
             const tmpResult = showVoiceChannelBlockedUserWarning;
           }
@@ -93,7 +99,13 @@ function handleAppStateChanged(state) {
     }
   }
 }
-({ getChannelDismissTimestamp: c5, getUserDismissTimestamp: closure_6, getGlobalDismissTimestamp: error, isBlockedWarningQueued: closure_8, dequeueBlockWarning: c9 } = useSharedSpacesWarningStore);
+({
+  getChannelDismissTimestamp: c5,
+  getUserDismissTimestamp: closure_6,
+  getGlobalDismissTimestamp: error,
+  isBlockedWarningQueued: closure_8,
+  dequeueBlockWarning: c9,
+} = useSharedSpacesWarningStore);
 let closure_11 = 3 * setDefault.Millis.DAY;
 let closure_12 = 2 * setDefault.Millis.DAY;
 const HOUR = setDefault.Millis.HOUR;
@@ -106,32 +118,33 @@ class SharedSpacesWarningManager extends tmp3 {
     return applyArgumentsResult;
   }
 }
-SharedSpacesWarningManager.prototype["handleBlockedOrIgnoredUserVoiceChannelJoin"] = function handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, id) {
-  channelId = store2.getChannelId();
-  if (channelId === channelId) {
-    if (null != store.getChannel(channelId)) {
-      let num = callback3();
-      if (num == null) {
-        num = 0;
-      }
-      const _Date = Date;
-      const tmp5 = num <= Date.now() - HOUR;
-      let tmp6 = !tmp5;
-      if (tmp5) {
-        let num2 = callback2(id);
-        if (num2 == null) {
-          num2 = 0;
+SharedSpacesWarningManager.prototype["handleBlockedOrIgnoredUserVoiceChannelJoin"] =
+  function handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, id) {
+    channelId = store2.getChannelId();
+    if (channelId === channelId) {
+      if (null != store.getChannel(channelId)) {
+        let num = callback3();
+        if (num == null) {
+          num = 0;
         }
-        const _Date2 = Date;
-        tmp6 = num2 > Date.now() - closure_12;
-      }
-      if (!tmp6) {
-        const result = showVoiceChannelBlockedUserWarning.showVoiceChannelBlockedUserWarning(channelId, id);
-        const obj = showVoiceChannelBlockedUserWarning;
+        const _Date = Date;
+        const tmp5 = num <= Date.now() - HOUR;
+        let tmp6 = !tmp5;
+        if (tmp5) {
+          let num2 = callback2(id);
+          if (num2 == null) {
+            num2 = 0;
+          }
+          const _Date2 = Date;
+          tmp6 = num2 > Date.now() - closure_12;
+        }
+        if (!tmp6) {
+          const result = showVoiceChannelBlockedUserWarning.showVoiceChannelBlockedUserWarning(channelId, id);
+          const obj = showVoiceChannelBlockedUserWarning;
+        }
       }
     }
-  }
-};
+  };
 const sharedSpacesWarningManager = new SharedSpacesWarningManager();
 let result = require("set").fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningManager.tsx");
 

@@ -13,7 +13,7 @@ const pressable = createToggle.createPressable({
   parent: null,
   IconComponent: CircleQuestionIcon.CircleQuestionIcon,
   onPress: _emailSupport.emailSupport,
-  withArrow: true
+  withArrow: true,
 });
 const obj = {
   useTitle() {
@@ -23,7 +23,7 @@ const obj = {
   parent: null,
   IconComponent: CircleQuestionIcon.CircleQuestionIcon,
   onPress: _emailSupport.emailSupport,
-  withArrow: true
+  withArrow: true,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/SupportSetting.tsx");
 

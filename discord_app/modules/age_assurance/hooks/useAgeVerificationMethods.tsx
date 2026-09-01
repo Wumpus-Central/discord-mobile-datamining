@@ -18,10 +18,20 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
   ({ onClose, classificationId } = onGoogleWalletSelect);
   let obj = onGoogleWalletSelect(initiateAgeVerification[5]);
   let items = [closure_6];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ methods: closure_6.methods, loading: closure_6.loading }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    methods: closure_6.methods,
+    loading: closure_6.loading,
+  }));
   methods = stateFromStoresObject.methods;
-  obj = { onComplete: onClose, entryPoint: onGoogleWalletSelect(initiateAgeVerification[7]).AgeVerificationModalEntryPoint.EXPRESSIVE_GET_STARTED, shouldShowExpressiveModal: true, classificationId };
-  initiateAgeVerification = onGoogleWalletSelect(initiateAgeVerification[6]).useInitiateAgeVerification(obj).initiateAgeVerification;
+  obj = {
+    onComplete: onClose,
+    entryPoint: onGoogleWalletSelect(initiateAgeVerification[7]).AgeVerificationModalEntryPoint.EXPRESSIVE_GET_STARTED,
+    shouldShowExpressiveModal: true,
+    classificationId,
+  };
+  initiateAgeVerification = onGoogleWalletSelect(initiateAgeVerification[6]).useInitiateAgeVerification(
+    obj,
+  ).initiateAgeVerification;
   const tmp2 = callback(React.useState(false), 2);
   first = tmp2[0];
   callback = tmp2[1];
@@ -81,7 +91,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
               closure_0 = arg0;
               c2 = 0;
               c1 = 0;
-              return (function*(arg0) {
+              return (function* (arg0) {
                 if (c1 === 2) {
                   c1 = 3;
                   HermesBuiltin.throwTypeError();
@@ -109,7 +119,12 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                         return obj;
                       } else {
                         const obj5 = callback(closure_2_2[7]);
-                        const result = obj5.trackAgeVerificationModalClicked(callback, callback(closure_2_2[7]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, callback(closure_2_2[7]).AgeVerificationModalCta.METHOD_SELECT, callback);
+                        const result = obj5.trackAgeVerificationModalClicked(
+                          callback,
+                          callback(closure_2_2[7]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                          callback(closure_2_2[7]).AgeVerificationModalCta.METHOD_SELECT,
+                          callback,
+                        );
                         v0 = 1;
                         c1 = 1;
                         obj1 = { value: null, done: false };
@@ -135,7 +150,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                 }
               })();
             });
-            obj[3] = function() {
+            obj[3] = function () {
               const self = this;
               const apply = closure_1.apply;
               if (typeof apply === "unknown") {
@@ -166,7 +181,12 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
               let obj = closure_1_1(closure_1_2[9]);
               obj = { name: closure_1_0(closure_1_2[10]).MetricEvents.GOOGLE_WALLET_METHOD_SELECTED };
               obj.increment(obj);
-              const result = closure_1_0(closure_1_2[7]).trackAgeVerificationModalClicked(modalSessionId, closure_1_0(closure_1_2[7]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, closure_1_0(closure_1_2[7]).AgeVerificationModalCta.METHOD_SELECT, closure_1_8.GOOGLE_WALLET);
+              const result = closure_1_0(closure_1_2[7]).trackAgeVerificationModalClicked(
+                modalSessionId,
+                closure_1_0(closure_1_2[7]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                closure_1_0(closure_1_2[7]).AgeVerificationModalCta.METHOD_SELECT,
+                closure_1_8.GOOGLE_WALLET,
+              );
               callback();
             };
             const items = [];
@@ -177,7 +197,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
       }
       return found1;
     }, items2),
-    loading: stateFromStoresObject.loading
+    loading: stateFromStoresObject.loading,
   };
   return obj;
-};
+}

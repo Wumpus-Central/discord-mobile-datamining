@@ -14,16 +14,27 @@ require = arg1;
 let closure_3 = ["error"];
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 }, error: null, label: null, iconUploaderWrapper: null, text: null };
-createCacheKey = { fontSize: 12, textAlign: "center", alignSelf: "center", marginBottom: 10, color: ThemesDefault.unsafe_rawColors.RED_400 };
+createCacheKey = {
+  wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 },
+  error: null,
+  label: null,
+  iconUploaderWrapper: null,
+  text: null,
+};
+createCacheKey = {
+  fontSize: 12,
+  textAlign: "center",
+  alignSelf: "center",
+  marginBottom: 10,
+  color: ThemesDefault.unsafe_rawColors.RED_400,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { fontSize: 12, marginTop: 20, color: ThemesDefault.colors.TEXT_SUBTLE };
 createCacheKey[3] = { alignSelf: "stretch", alignItems: "center" };
 createCacheKey[4] = { marginTop: 9 };
 let closure_9 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
-class IconLabelBlock extends PureComponent {
-}
+class IconLabelBlock extends PureComponent {}
 const prototype = IconLabelBlock.prototype;
 prototype["renderLabel"] = function renderLabel() {
   const label = this.props.label;
@@ -41,7 +52,13 @@ prototype["renderText"] = function renderText() {
   const text = this.props.text;
   let tmp4 = null;
   if (null != text) {
-    const obj = { variant: "heading-md/medium", color: "text-default", style: null, accessibilityRole: null, children: null };
+    const obj = {
+      variant: "heading-md/medium",
+      color: "text-default",
+      style: null,
+      accessibilityRole: null,
+      children: null,
+    };
     const items = [tmp.text, tmp2];
     obj[2] = items;
     obj[3] = tmp3;
@@ -63,7 +80,7 @@ prototype["renderIcon"] = function renderIcon() {
     const tmp13 = closure_5;
     const tmp14 = callback2;
     const merged = Object.assign(tmp11);
-    const items = [callback2(IconUploaderDefault, obj), ];
+    const items = [callback2(IconUploaderDefault, obj)];
     let tmp14Result = null;
     if (null != error) {
       obj1 = { style: null };

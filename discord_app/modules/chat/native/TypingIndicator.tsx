@@ -40,41 +40,50 @@ function TypingIndicatorInner(channel) {
   let tmpResult = tmp(tmp2[10]);
   const items1 = [closure_9, closure_10, sharedValue1];
   const items2 = [first, canView, stateFromStores, channel];
-  const stateFromStoresObject = tmpResult.useStateFromStoresObject(items1, () => {
-    if (null != first) {
-      if (canView) {
-        const user = closure_1_10.getUser(tmp);
-        if (stateFromStores) {
-          let typingIndicatorStyle;
-          if (user != null) {
-            typingIndicatorStyle = user.typingIndicatorStyle;
-          }
-          if (typingIndicatorStyle == null) {
-            typingIndicatorStyle = null;
-          }
-          let customTypingIndicatorConfig = typingIndicatorStyle;
-        } else {
-          customTypingIndicatorConfig = closure_1_9.getCustomTypingIndicatorConfig(tmp);
-        }
-        if (null != customTypingIndicatorConfig) {
-          if (null != user) {
-            const guildId = channel.getGuildId();
-            let guildEmojis = null;
-            if (null != guildId) {
-              guildEmojis = sharedValue1.getGuildEmojis(guildId);
+  const stateFromStoresObject = tmpResult.useStateFromStoresObject(
+    items1,
+    () => {
+      if (null != first) {
+        if (canView) {
+          const user = closure_1_10.getUser(tmp);
+          if (stateFromStores) {
+            let typingIndicatorStyle;
+            if (user != null) {
+              typingIndicatorStyle = user.typingIndicatorStyle;
             }
-            const obj = { config: null, name: null };
-            const obj2 = channel(cleanUp[16]);
-            obj[0] = obj2.getViewableCustomTypingIndicatorConfig(customTypingIndicatorConfig, channel, tmp, guildEmojis);
-            obj[1] = transitionState(cleanUp[17]).getName(guildId, channel.id, user);
-            return obj;
+            if (typingIndicatorStyle == null) {
+              typingIndicatorStyle = null;
+            }
+            let customTypingIndicatorConfig = typingIndicatorStyle;
+          } else {
+            customTypingIndicatorConfig = closure_1_9.getCustomTypingIndicatorConfig(tmp);
           }
+          if (null != customTypingIndicatorConfig) {
+            if (null != user) {
+              const guildId = channel.getGuildId();
+              let guildEmojis = null;
+              if (null != guildId) {
+                guildEmojis = sharedValue1.getGuildEmojis(guildId);
+              }
+              const obj = { config: null, name: null };
+              const obj2 = channel(cleanUp[16]);
+              obj[0] = obj2.getViewableCustomTypingIndicatorConfig(
+                customTypingIndicatorConfig,
+                channel,
+                tmp,
+                guildEmojis,
+              );
+              obj[1] = transitionState(cleanUp[17]).getName(guildId, channel.id, user);
+              return obj;
+            }
+          }
+          return { config: null, name: null };
         }
-        return { config: null, name: null };
       }
-    }
-    return { config: null, name: null };
-  }, items2);
+      return { config: null, name: null };
+    },
+    items2,
+  );
   tmpResult = tmp(tmp2[18]);
   sharedValue = tmpResult.useSharedValue(undefined);
   const items3 = [sharedValue];
@@ -82,7 +91,9 @@ function TypingIndicatorInner(channel) {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout);
   }, items3);
   let tmp7 = transitionState(cleanUp[15]);
-  const tmp13 = callback3(channel(cleanUp[19]).useToken(transitionState(cleanUp[12]).modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING));
+  const tmp13 = callback3(
+    channel(cleanUp[19]).useToken(transitionState(cleanUp[12]).modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING),
+  );
   const tmpResult1 = channel(cleanUp[19]);
   sharedValue1 = channel(cleanUp[18]).useSharedValue(0);
   const items4 = [cleanUp, transitionState, sharedValue1];
@@ -113,12 +124,18 @@ function TypingIndicatorInner(channel) {
       const toFixedResult = y.toFixed(2);
     }
     if (tmp) {
-      const result = sharedValue1.set(channel(cleanUp[21]).withSpring(-arg0.height, channel(cleanUp[22]).springStandard, "respect-motion-settings"));
+      const result = sharedValue1.set(
+        channel(cleanUp[21]).withSpring(-arg0.height, channel(cleanUp[22]).springStandard, "respect-motion-settings"),
+      );
       const obj = channel(cleanUp[21]);
       const tmp7 = -arg0.height;
     }
   };
-  obj = { translateYValue: sharedValue1, withSpring: tmp(tmp2[21]).withSpring, springStandard: tmp(tmp2[22]).springStandard };
+  obj = {
+    translateYValue: sharedValue1,
+    withSpring: tmp(tmp2[21]).withSpring,
+    springStandard: tmp(tmp2[22]).springStandard,
+  };
   fn.__closure = obj;
   fn.__workletHash = 14874351700395;
   fn.__initData = closure_16;
@@ -143,7 +160,12 @@ function TypingIndicatorInner(channel) {
     obj[2] = items;
     return obj;
   };
-  obj1 = { typingIndicatorLayout: sharedValue, translateYValue: sharedValue1, transitionState, TransitionStates: tmp(tmp2[20]).TransitionStates };
+  obj1 = {
+    typingIndicatorLayout: sharedValue,
+    translateYValue: sharedValue1,
+    transitionState,
+    TransitionStates: tmp(tmp2[20]).TransitionStates,
+  };
   fn2.__closure = obj1;
   fn2.__workletHash = 15240163018691;
   fn2.__initData = closure_17;
@@ -168,8 +190,17 @@ function TypingIndicatorInner(channel) {
       tmp18Result = tmp18(tmp(tmp2[24]).Ellipsis, {});
     }
     const obj6 = { children: null };
-    const items6 = [tmp18Result, ];
-    const obj7 = { style: null, lineClamp: 1, maxFontSizeMultiplier: 2, variant: "text-xs/medium", color: "interactive-text-default", includeFontPadding: true, ellipsizeMode: "tail", children: null };
+    const items6 = [tmp18Result];
+    const obj7 = {
+      style: null,
+      lineClamp: 1,
+      maxFontSizeMultiplier: 2,
+      variant: "text-xs/medium",
+      color: "interactive-text-default",
+      includeFontPadding: true,
+      ellipsizeMode: "tail",
+      children: null,
+    };
     obj7[0] = tmp13.text;
     obj7[7] = tmp7Result;
     items6[1] = tmp18(tmp(tmp2[25]).Text, obj7);
@@ -178,7 +209,7 @@ function TypingIndicatorInner(channel) {
     const tmp21 = closure_12;
   }
   obj4[1] = tmp19Result;
-  const items7 = [closure_11(stateFromStores, obj4), ];
+  const items7 = [closure_11(stateFromStores, obj4)];
   let tmp18Result1 = null;
   if (channel.rateLimitPerUser > 0) {
     const obj8 = { channel: null, hasTypingText: null, slowmodeType: null };
@@ -203,7 +234,15 @@ let c3 = importAllResult;
 ({ jsx: unpackModuleId, Fragment: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = createCacheKey.createStyles((arg0) => {
   let obj = { typingWrapper: null, wrapperHoriz: null, horiz: null, text: null };
-  obj = { paddingTop: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: ThemesDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 };
+  obj = {
+    paddingTop: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP,
+    paddingBottom: 4,
+    paddingHorizontal: 16,
+    alignSelf: "stretch",
+    backgroundColor: "transparent",
+    paddingRight: ThemesDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING,
+    paddingLeft: 2 * arg0,
+  };
   obj[0] = obj;
   obj[1] = { justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
   obj = { marginRight: ThemesDefault.space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 };
@@ -211,9 +250,15 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
   obj[3] = { flex: 1 };
   return obj;
 });
-let closure_15 = { code: "function TypingIndicatorTsx1(){const{typingIndicatorLayout}=this.__closure;return typingIndicatorLayout.get();}" };
-let closure_16 = { code: "function TypingIndicatorTsx2(current,prev){const{translateYValue,withSpring,springStandard}=this.__closure;if(current===prev)return;if(current==null)return;if(current.y.toFixed(2)!==current.height.toFixed(2))return;translateYValue.set(withSpring(-current.height,springStandard,'respect-motion-settings'));}" };
-let closure_17 = { code: "function TypingIndicatorTsx3(){const{typingIndicatorLayout,translateYValue,transitionState,TransitionStates}=this.__closure;const layout=typingIndicatorLayout.get();return{opacity:translateYValue.get()===0||transitionState===TransitionStates.YEETED?0:1,top:layout===null||layout===void 0?void 0:layout.height,transform:[{translateY:translateYValue.get()}]};}" };
+let closure_15 = {
+  code: "function TypingIndicatorTsx1(){const{typingIndicatorLayout}=this.__closure;return typingIndicatorLayout.get();}",
+};
+let closure_16 = {
+  code: "function TypingIndicatorTsx2(current,prev){const{translateYValue,withSpring,springStandard}=this.__closure;if(current===prev)return;if(current==null)return;if(current.y.toFixed(2)!==current.height.toFixed(2))return;translateYValue.set(withSpring(-current.height,springStandard,'respect-motion-settings'));}",
+};
+let closure_17 = {
+  code: "function TypingIndicatorTsx3(){const{typingIndicatorLayout,translateYValue,transitionState,TransitionStates}=this.__closure;const layout=typingIndicatorLayout.get();return{opacity:translateYValue.get()===0||transitionState===TransitionStates.YEETED?0:1,top:layout===null||layout===void 0?void 0:layout.height,transform:[{translateY:translateYValue.get()}]};}",
+};
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   let typingUserIds = channel;
@@ -227,7 +272,9 @@ const memoResult = importAllResult.memo((channel) => {
   let obj = typingUserIds(memo[9]);
   typingUserIds = obj.useTypingUserIds(channel.id, 4);
   let items = [closure_6];
-  stateFromStores = typingUserIds(memo[10]).useStateFromStores(items, () => closure_6.get("preview_own_typing_indicator"));
+  stateFromStores = typingUserIds(memo[10]).useStateFromStores(items, () =>
+    closure_6.get("preview_own_typing_indicator"),
+  );
   const obj2 = typingUserIds(memo[10]);
   const items1 = [closure_10];
   const stateFromStores1 = typingUserIds(memo[10]).useStateFromStores(items1, () => {
@@ -288,7 +335,9 @@ export const useTypingUserIdsForDisplay = function useTypingUserIdsForDisplay(id
   typingUserIds = typingUserIds(stateFromStores1[9]).useTypingUserIds(id, arg1);
   const obj = typingUserIds(stateFromStores1[9]);
   const items = [closure_6];
-  const stateFromStores = typingUserIds(stateFromStores1[10]).useStateFromStores(items, () => closure_6.get("preview_own_typing_indicator"));
+  const stateFromStores = typingUserIds(stateFromStores1[10]).useStateFromStores(items, () =>
+    closure_6.get("preview_own_typing_indicator"),
+  );
   const obj2 = typingUserIds(stateFromStores1[10]);
   const items1 = [closure_10];
   stateFromStores1 = typingUserIds(stateFromStores1[10]).useStateFromStores(items1, () => {

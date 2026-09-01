@@ -27,12 +27,20 @@ function validateSavedTheme(colors) {
   }
 }
 ({ PROTO_THEME_MAP_WEB_REFRESH, PROTO_THEME_MAP_MOBILE: obj1 } = SystemThemeState);
-let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", IS_FETCHING: 1, [1]: "IS_FETCHING", HAS_FETCHED: 2, [2]: "HAS_FETCHED", ERROR: 3, [3]: "ERROR" };
+let obj = {
+  NOT_FETCHED: 0,
+  [0]: "NOT_FETCHED",
+  IS_FETCHING: 1,
+  [1]: "IS_FETCHING",
+  HAS_FETCHED: 2,
+  [2]: "HAS_FETCHED",
+  ERROR: 3,
+  [3]: "ERROR",
+};
 let closure_4 = [];
 let NOT_FETCHED = obj.NOT_FETCHED;
 const PersistedStore = initializeDefault.PersistedStore;
-class SavedCustomThemeStore extends PersistedStore {
-}
+class SavedCustomThemeStore extends PersistedStore {}
 const prototype = SavedCustomThemeStore.prototype;
 prototype["initialize"] = function initialize(savedCustomThemes) {
   if (null != savedCustomThemes) {
@@ -90,13 +98,18 @@ obj = {
     themes = themes.themes;
     const HAS_FETCHED = obj.HAS_FETCHED;
     const found = themes.filter(validateSavedTheme);
-    closure_4 = found.map((colors) => ({ colors: colors.colors, gradient_angle: colors.gradient_angle, base_mix: colors.base_mix, base_theme: table[colors.base_theme] }));
+    closure_4 = found.map((colors) => ({
+      colors: colors.colors,
+      gradient_angle: colors.gradient_angle,
+      base_mix: colors.base_mix,
+      base_theme: table[colors.base_theme],
+    }));
   },
   SAVED_CUSTOM_THEMES_FETCH_FAILURE: function handleCustomThemesFetchFailure(error) {
     const ERROR = obj.ERROR;
     obj = _modDef1208;
     obj.captureException(error.error, { tags: { app_context: "SavedCustomThemeStore" } });
-  }
+  },
 };
 const savedCustomThemeStore = new SavedCustomThemeStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/client_themes/SavedCustomThemeStore.tsx");

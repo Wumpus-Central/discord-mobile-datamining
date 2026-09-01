@@ -33,15 +33,13 @@ function updateEnabledState() {
         enforcingDefault.disableTouchLogging();
         c4 = false;
         const obj4 = enforcingDefault;
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }
 }
 let c4 = false;
 initializeDefault;
-class TouchEventAnalyticsManager extends tmp2 {
-}
+class TouchEventAnalyticsManager extends tmp2 {}
 const prototype = TouchEventAnalyticsManager.prototype;
 prototype["_initialize"] = function _initialize() {
   updateEnabledState();
@@ -54,8 +52,7 @@ prototype["_terminate"] = function _terminate() {
       enforcingDefault.disableTouchLogging();
       c4 = false;
       const obj = enforcingDefault;
-    } catch (err) {
-    }
+    } catch (err) {}
   }
 };
 const touchEventAnalyticsManager = new TouchEventAnalyticsManager();

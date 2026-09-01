@@ -20,20 +20,23 @@ function fetchOnboardingPrompts(guildId) {
   const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj = { url: closure_10.GUILD_ONBOARDING(guildId), rejectWithError: false };
   const value = HTTP.get(obj);
-  return value.then((body) => {
-    closure_0 = undefined;
-    const tmp = closure_1_8(body.body);
-    closure_0 = tmp;
-    let obj = closure_1_1(closure_1_2[10]);
-    obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS", guildId: closure_0 };
-    const merged = Object.assign(tmp);
-    return obj.dispatch(obj).then(() => prompts.prompts);
-  }, (arg0) => {
-    let obj = closure_1_1(closure_1_2[10]);
-    obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE", guildId: closure_0 };
-    obj.dispatch(obj);
-    return arg0;
-  });
+  return value.then(
+    (body) => {
+      closure_0 = undefined;
+      const tmp = closure_1_8(body.body);
+      closure_0 = tmp;
+      let obj = closure_1_1(closure_1_2[10]);
+      obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS", guildId: closure_0 };
+      const merged = Object.assign(tmp);
+      return obj.dispatch(obj).then(() => prompts.prompts);
+    },
+    (arg0) => {
+      let obj = closure_1_1(closure_1_2[10]);
+      obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE", guildId: closure_0 };
+      obj.dispatch(obj);
+      return arg0;
+    },
+  );
 }
 function _maybeFetchOnboardingPrompts() {
   const self = this;
@@ -41,7 +44,7 @@ function _maybeFetchOnboardingPrompts() {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (member === 2) {
         member = 3;
         HermesBuiltin.throwTypeError();
@@ -176,7 +179,9 @@ function _trackOnboardingDirectJoin(guildId) {
 }
 ({ AnalyticEvents: c9, Endpoints: c10, GuildFeatures: unpackModuleId } = ME);
 let c16 = -2;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx",
+);
 
 export const loadOnboardingPrompts = function loadOnboardingPrompts(guildId) {
   let obj = expandEventPropertiesDefault;

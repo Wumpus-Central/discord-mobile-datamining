@@ -10,7 +10,8 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ AnalyticEvents: closure_8, ApplicationFlags: c9, ChannelTypesSets: c10, RelationshipTypes: unpackModuleId } = ME);
-({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_12, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: map1 } = IGNORE_CONFIRMATION_ACTION_SHEET_KEY);
+({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_12, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: map1 } =
+  IGNORE_CONFIRMATION_ACTION_SHEET_KEY);
 let result = require("set").fileFinishedImporting("modules/user_profile/native/BotUserProfileOverflowMenu.tsx");
 
 export default function BotUserProfileOverflowMenu(application) {
@@ -30,7 +31,10 @@ export default function BotUserProfileOverflowMenu(application) {
   let installAppPropsFromProfileApplication;
   let obj = application(channel[8]);
   const items = [trackUserProfileAction];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ relationshipType: trackUserProfileAction.getRelationshipType(user.id), isIgnored: trackUserProfileAction.isIgnored(user.id) }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    relationshipType: trackUserProfileAction.getRelationshipType(user.id),
+    isIgnored: trackUserProfileAction.isIgnored(user.id),
+  }));
   ({ relationshipType, isIgnored } = stateFromStoresObject);
   obj1 = application(channel[8]);
   const items1 = [analyticsLocations, context];
@@ -47,7 +51,7 @@ export default function BotUserProfileOverflowMenu(application) {
   analyticsLocations = tmp9Result.analyticsLocations;
   newestAnalyticsLocation = tmp9Result.newestAnalyticsLocation;
   currentUser = newestAnalyticsLocation.getCurrentUser();
-  const items2 = [user.id, , , ];
+  const items2 = [user.id, , ,];
   id = undefined;
   if (channel != null) {
     id = channel.id;
@@ -154,7 +158,12 @@ export default function BotUserProfileOverflowMenu(application) {
             id = channel.id;
           }
           obj[3] = id;
-          obj2.openLazy(application(channel[19])(channel[23], channel.paths), application(channel[24]).BOT_REPORT_CHOOSER_KEY, obj, "replaceAll");
+          obj2.openLazy(
+            application(channel[19])(channel[23], channel.paths),
+            application(channel[24]).BOT_REPORT_CHOOSER_KEY,
+            obj,
+            "replaceAll",
+          );
         };
         items3.push(obj2);
       } else {
@@ -247,7 +256,12 @@ export default function BotUserProfileOverflowMenu(application) {
       const intl9 = tmp(tmp2[15]).intl;
       obj7[0] = intl9.string(tmp(tmp2[15]).t.PHjkRE);
       obj7[1] = function action() {
-        return user(channel[35])({ userId: id, selectedChannel: stateFromStores, showUserProfile: closure_9, analyticsLocations });
+        return user(channel[35])({
+          userId: id,
+          selectedChannel: stateFromStores,
+          showUserProfile: closure_9,
+          analyticsLocations,
+        });
       };
       items4.push(obj7);
     }
@@ -292,10 +306,10 @@ export default function BotUserProfileOverflowMenu(application) {
         onSuccess() {
           callback();
         },
-        impressionName: application(channel[20]).ImpressionNames.IGNORE_USER_CONFIRMATION
+        impressionName: application(channel[20]).ImpressionNames.IGNORE_USER_CONFIRMATION,
       };
       obj2.openLazy(application(channel[19])(channel[18], channel.paths), closure_13, obj, "stack");
     };
     items3.push(obj11);
   }
-};
+}

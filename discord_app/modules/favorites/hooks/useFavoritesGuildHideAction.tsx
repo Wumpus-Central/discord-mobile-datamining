@@ -37,4 +37,4 @@ export default function useFavoritesGuildHideAction() {
   obj[2] = stringResult;
   obj[3] = callback;
   return obj;
-};
+}

@@ -12,7 +12,12 @@ require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { promptRow: null, promptText: null, icon: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
+createCacheKey = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_4,
+  flexDirection: "row",
+  alignItems: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginLeft: ThemesDefault.space.PX_4 };
 createCacheKey[2] = { height: 16, width: 16 };
@@ -37,7 +42,7 @@ export default function InRolePromptNotice(role) {
       obj[0] = string.icon;
       obj[1] = registerAssetDefault;
       obj[2] = ThemesDefault.unsafe_rawColors.YELLOW_300;
-      const items = [tmp6(Icon, obj), ];
+      const items = [tmp6(Icon, obj)];
       obj1 = { style: null, variant: "text-sm/medium", children: null };
       obj1[0] = string.promptText;
       const intl2 = tmp(1236).intl;
@@ -52,7 +57,7 @@ export default function InRolePromptNotice(role) {
       const obj2 = { style: null, source: null };
       obj2[0] = string.icon;
       obj2[1] = registerAssetDefault;
-      const items1 = [tmp6(Icon, obj2), ];
+      const items1 = [tmp6(Icon, obj2)];
       const obj3 = { style: null, variant: "text-sm/medium", children: null };
       obj3[0] = string.promptText;
       const intl = tmp(1236).intl;
@@ -63,4 +68,4 @@ export default function InRolePromptNotice(role) {
     }
     isRolePowerfulResult = tmp(17215).isRolePowerful(role);
   }
-};
+}

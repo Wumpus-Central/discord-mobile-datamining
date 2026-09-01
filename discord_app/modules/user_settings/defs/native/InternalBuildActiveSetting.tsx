@@ -15,8 +15,11 @@ createToggle = {
   },
   usePredicate: function useHasCheckNativeUpdateSetting() {
     const obj = useStaffOrDeveloperSettingPredicate;
-    return hasUpdatesConfigured.hasUpdatesConfigured && useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
-  }
+    return (
+      hasUpdatesConfigured.hasUpdatesConfigured &&
+      useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate()
+    );
+  },
 };
 createToggle = createToggle.createStatic(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InternalBuildActiveSetting.tsx");

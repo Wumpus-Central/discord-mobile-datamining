@@ -12,7 +12,14 @@ import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 require = arg1;
 ({ View: c4, StyleSheet, Platform } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { titledSectionHeader: null, titledSectionNoBorder: null, titledSectionNoBorderOrMargin: null, emptySectionHeader: null, sectionBody: null, sectionBodyIOSBorder: null };
+createCacheKey = {
+  titledSectionHeader: null,
+  titledSectionNoBorder: null,
+  titledSectionNoBorderOrMargin: null,
+  emptySectionHeader: null,
+  sectionBody: null,
+  sectionBodyIOSBorder: null,
+};
 createCacheKey = { borderTopWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: 24 };
@@ -73,7 +80,7 @@ export default function FormSection(arg0) {
     obj1[2] = flag;
     obj1[3] = found;
     obj[1] = callback(tmp3(5992).TableRowGroup, obj1);
-    const items = [callback(closure_4, obj), ];
+    const items = [callback(closure_4, obj)];
     let tmp20Result = null;
     if (null != hint) {
       const obj2 = { style: null, children: null };
@@ -92,7 +99,16 @@ export default function FormSection(arg0) {
         const _HermesInternal = HermesInternal;
         str2 = "(" + error + ")";
       }
-      const obj3 = { textStyle: null, viewStyle: null, title: null, icon: null, error: null, thinTitle: null, uppercaseTitle: null, inset: null };
+      const obj3 = {
+        textStyle: null,
+        viewStyle: null,
+        title: null,
+        icon: null,
+        error: null,
+        thinTitle: null,
+        uppercaseTitle: null,
+        inset: null,
+      };
       obj3[0] = titleTextStyle;
       obj3[1] = titleViewStyle;
       const _HermesInternal2 = HermesInternal;
@@ -131,8 +147,8 @@ export default function FormSection(arg0) {
       accessibilityLabel = title;
     }
     obj4[2] = accessibilityLabel;
-    const items2 = [tmp6, description, , ];
-    const items3 = [tmp2.sectionBody, , ];
+    const items2 = [tmp6, description, ,];
+    const items3 = [tmp2.sectionBody, ,];
     let sectionBodyIOSBorder = !inset;
     if (!inset) {
       sectionBodyIOSBorder = tmp2.sectionBodyIOSBorder;
@@ -147,4 +163,4 @@ export default function FormSection(arg0) {
     obj4[3] = items2;
     return closure_7(closure_4, obj4);
   }
-};
+}

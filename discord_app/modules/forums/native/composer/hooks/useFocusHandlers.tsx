@@ -39,6 +39,6 @@ export const useFocusHandlers = function useFocusHandlers(arg0) {
         }
       }
     },
-    focusedInput: first
+    focusedInput: first,
   };
 };

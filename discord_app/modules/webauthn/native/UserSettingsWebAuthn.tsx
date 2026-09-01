@@ -21,4 +21,4 @@ export default function UserSettingsWebAuthn(showNav) {
   });
   const initialRouteStack = [{ name: initialRouteName }];
   return jsx(require(flag[4]).Navigator, { screens, initialRouteName, initialRouteStack, useContainer: false });
-};
+}

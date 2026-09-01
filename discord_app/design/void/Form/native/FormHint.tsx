@@ -33,7 +33,7 @@ export default function FormHint(inset) {
     obj[3] = children;
     let tmp4Result = tmp4(tmp2(4474).Text, obj);
   } else {
-    const items1 = [tmp.formHintText, , ];
+    const items1 = [tmp.formHintText, ,];
     let horizonatalPadding = !flag;
     if (!flag) {
       horizonatalPadding = tmp.horizonatalPadding;
@@ -46,4 +46,4 @@ export default function FormHint(inset) {
     tmp4Result = tmp4(tmp2(1297).LegacyText, obj);
   }
   return tmp4Result;
-};
+}

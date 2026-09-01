@@ -22,4 +22,4 @@ export default function useMyCurrentStageChannel() {
     }
     return null;
   });
-};
+}

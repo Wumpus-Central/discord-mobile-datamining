@@ -16,8 +16,7 @@ prototype = function WishlistRecord(arg0) {
   tmp.applications = applications;
   return tmp;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["fromServer"] = function fromServer(arg0) {
   ({ user_id, wishlist_items } = arg0);
   let obj = Object.create(null);

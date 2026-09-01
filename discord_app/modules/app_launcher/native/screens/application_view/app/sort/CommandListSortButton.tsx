@@ -13,10 +13,26 @@ noopAll;
 createCacheKey = { container: null, button: null };
 createCacheKey = { overflow: "hidden", borderRadius: ThemesDefault.radii.xxl };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { gap: 4, flexDirection: "row", alignItems: "center", paddingHorizontal: 12, paddingVertical: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
+createCacheKey[1] = {
+  gap: 4,
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 12,
+  paddingVertical: 4,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+};
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { gap: 4, flexDirection: "row", alignItems: "center", paddingHorizontal: 12, paddingVertical: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/sort/CommandListSortButton.tsx");
+const obj1 = {
+  gap: 4,
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 12,
+  paddingVertical: 4,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/screens/application_view/app/sort/CommandListSortButton.tsx",
+);
 
 export default function CommandListSortButton(sortOrder) {
   sortOrder = sortOrder.sortOrder;
@@ -41,17 +57,19 @@ export default function CommandListSortButton(sortOrder) {
         onSortOptionPress,
         onClose() {
           callback(table[9]).hideActionSheet("CommandListSortActionSheet");
-        }
+        },
       };
       obj.openLazy(sortOrder(closure_1_2[11])(closure_1_2[10], closure_1_2.paths), "CommandListSortActionSheet", obj);
     },
-    children: null
+    children: null,
   };
   obj = { style: tmp.button, children: null };
-  const items = [callback(sortOrder(4474).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }), ];
+  const items = [
+    callback(sortOrder(4474).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }),
+  ];
   obj = { size: "xs", color: onSortOptionPress(712).colors.TEXT_DEFAULT };
   items[1] = callback(sortOrder(8935).ChevronSmallDownIcon, obj);
   obj[1] = items;
   obj[5] = callback2(View, obj);
   return callback(sortOrder(5068).PressableOpacity, obj);
-};
+}

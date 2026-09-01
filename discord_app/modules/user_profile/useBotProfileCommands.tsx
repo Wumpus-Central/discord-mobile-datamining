@@ -22,7 +22,10 @@ export default function useBotProfileCommands(channel) {
             if (options != null) {
               found = options.find((type) => {
                 type = type.type;
-                return type === callback(table[2]).ApplicationCommandOptionType.SUB_COMMAND || type === callback(table[2]).ApplicationCommandOptionType.SUB_COMMAND_GROUP;
+                return (
+                  type === callback(table[2]).ApplicationCommandOptionType.SUB_COMMAND ||
+                  type === callback(table[2]).ApplicationCommandOptionType.SUB_COMMAND_GROUP
+                );
               });
             }
             tmp = null == found;
@@ -31,8 +34,8 @@ export default function useBotProfileCommands(channel) {
         });
       }
       return found;
-    }, items)
+    }, items),
   };
   items = [commands];
   return obj;
-};
+}

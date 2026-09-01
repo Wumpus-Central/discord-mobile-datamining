@@ -8,5 +8,5 @@ export default {
   scheduleOnUI(fn) {
     const substr = [...arguments].slice();
     return _mod4217.runOnUI(fn)(...substr);
-  }
+  },
 };

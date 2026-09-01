@@ -10,7 +10,7 @@ function _setAppLocale() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -45,25 +45,59 @@ function _setAppLocale() {
               const intl = callback(table[3]).intl;
               intl.setLocale(callback);
               items.push();
-              items.push(v0(function*() {
-                if (dependencyMap === 2) {
-                  dependencyMap = 3;
-                  HermesBuiltin.throwTypeError();
-                } else if (tmp3 === 3) {
-                  if (arg0 === 1) {
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    let obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+              items.push(
+                v0(function* () {
+                  if (dependencyMap === 2) {
+                    dependencyMap = 3;
+                    HermesBuiltin.throwTypeError();
+                  } else if (tmp3 === 3) {
+                    if (arg0 === 1) {
+                      throw arg1;
+                    } else if (arg0 === 2) {
+                      let obj = { value: null, done: true };
+                      obj[0] = arg1;
+                      return obj;
+                    } else {
+                      return { value: "HermesInternal", done: null };
+                    }
                   } else {
-                    return { value: "HermesInternal", done: null };
-                  }
-                } else {
-                  try {
-                    dependencyMap = 2;
-                    if (0 === c1) {
-                      if (arg0 === 1) {
+                    try {
+                      dependencyMap = 2;
+                      if (0 === c1) {
+                        if (arg0 === 1) {
+                          dependencyMap = 3;
+                          throw arg1;
+                        } else if (arg0 === 2) {
+                          dependencyMap = 3;
+                          obj = { value: null, done: true };
+                          obj[0] = arg1;
+                          return obj;
+                        } else {
+                          closure_0 = tmp4;
+                          c1 = 1;
+                          dependencyMap = 1;
+                          obj1 = { value: null, done: false };
+                          obj1[0] = closure_1_0(2008).preloadAllIntlMessageFiles();
+                          return obj1;
+                        }
+                      } else if (1 === tmp4) {
+                        if (arg0 === 1) {
+                          dependencyMap = 3;
+                          throw arg1;
+                        } else if (arg0 === 2) {
+                          dependencyMap = 3;
+                          const obj2 = { value: null, done: true };
+                          obj2[0] = arg1;
+                          return obj2;
+                        } else {
+                          obj1 = closure_1_0(1274);
+                          c1 = 2;
+                          dependencyMap = 1;
+                          const obj3 = { value: null, done: false };
+                          obj3[0] = obj1.loadAllMessagesInLocale(closure_0);
+                          return obj3;
+                        }
+                      } else if (arg0 === 1) {
                         dependencyMap = 3;
                         throw arg1;
                       } else if (arg0 === 2) {
@@ -72,82 +106,58 @@ function _setAppLocale() {
                         obj[0] = arg1;
                         return obj;
                       } else {
-                        closure_0 = tmp4;
-                        c1 = 1;
-                        dependencyMap = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = closure_1_0(2008).preloadAllIntlMessageFiles();
-                        return obj1;
-                      }
-                    } else if (1 === tmp4) {
-                      if (arg0 === 1) {
                         dependencyMap = 3;
-                        throw arg1;
-                      } else if (arg0 === 2) {
-                        dependencyMap = 3;
-                        const obj2 = { value: null, done: true };
-                        obj2[0] = arg1;
-                        return obj2;
-                      } else {
-                        obj1 = closure_1_0(1274);
-                        c1 = 2;
-                        dependencyMap = 1;
-                        const obj3 = { value: null, done: false };
-                        obj3[0] = obj1.loadAllMessagesInLocale(closure_0);
-                        return obj3;
+                        return { value: "HermesInternal", done: null };
                       }
-                    } else if (arg0 === 1) {
-                      dependencyMap = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      dependencyMap = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    } else {
-                      dependencyMap = 3;
-                      return { value: "HermesInternal", done: null };
+                    } catch (tmp11) {
+                      dependencyMap = tmp;
+                      throw tmp11;
                     }
-                  } catch (tmp11) {
-                    dependencyMap = tmp;
-                    throw tmp11;
                   }
-                }
-              })());
-              items.push((function loadDateFnsLocale(closure_0) {
-                const self = this;
-                const apply = closure_6.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(callback));
-              items.push((function loadFormatJsLocale(closure_0) {
-                const self = this;
-                const apply = closure_7.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(callback));
-              items.push((function setMomentLocale(closure_0) {
-                const self = this;
-                const apply = closure_8.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(callback));
-              items.push((function sentryLocale(closure_0) {
-                callback(table[10]).default.setTags({ locale: closure_0 });
-                return Promise.resolve();
-              })(callback));
+                })(),
+              );
+              items.push(
+                (function loadDateFnsLocale(closure_0) {
+                  const self = this;
+                  const apply = closure_6.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(callback),
+              );
+              items.push(
+                (function loadFormatJsLocale(closure_0) {
+                  const self = this;
+                  const apply = closure_7.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(callback),
+              );
+              items.push(
+                (function setMomentLocale(closure_0) {
+                  const self = this;
+                  const apply = closure_8.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(callback),
+              );
+              items.push(
+                (function sentryLocale(closure_0) {
+                  callback(table[10]).default.setTags({ locale: closure_0 });
+                  return Promise.resolve();
+                })(callback),
+              );
               table = 1;
               v0 = 1;
               obj1 = { value: null, done: false };
@@ -189,7 +199,7 @@ function _loadDateFnsLocale() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -266,7 +276,7 @@ function _loadFormatJsLocale() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -335,7 +345,7 @@ function _setMomentLocale() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       let length;
       if (c4 === 2) {
         c4 = 3;
@@ -428,7 +438,16 @@ function _setMomentLocale() {
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   importDefault = arg1;
-  let obj = { isLoading: false, inProgressLocale: "Boolean", error: "accessible", localeData: false, setLoadingStarted: false, setLoadingSucceeded: false, setLoadingFailed: false, setLocaleData: false };
+  let obj = {
+    isLoading: false,
+    inProgressLocale: "Boolean",
+    error: "accessible",
+    localeData: false,
+    setLoadingStarted: false,
+    setLoadingSucceeded: false,
+    setLoadingFailed: false,
+    setLocaleData: false,
+  };
   obj[3] = codeDefault;
   obj[4] = function setLoadingStarted(closure_0) {
     return callback({ isLoading: true, inProgressLocale: closure_0 });

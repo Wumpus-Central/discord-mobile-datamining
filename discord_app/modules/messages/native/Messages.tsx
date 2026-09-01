@@ -60,7 +60,13 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 let c4 = importAllResult;
 ({ useChannelPollInteractions: closure_27, useMessagePollInteractions: closure_28 } = useMessagePollInteractions);
-({ ActivityActionTypes: closure_58, ChannelTypesSets: closure_59, ME: closure_60, MessageTypes: closure_61, Permissions: closure_62 } = ME);
+({
+  ActivityActionTypes: closure_58,
+  ChannelTypesSets: closure_59,
+  ME: closure_60,
+  MessageTypes: closure_61,
+  Permissions: closure_62,
+} = ME);
 ({ PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_63, PremiumTypes: closure_64 } = GuildFeatures);
 ({ jsx: closure_65, jsxs: closure_66 } = jsxProd);
 const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
@@ -78,7 +84,9 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const guildId = channel.getGuildId();
   let callback = guildId;
   const items2 = [closure_43];
-  const stateFromStores1 = stateFromStores(memo1[57]).useStateFromStores(items2, () => closure_1_43.getGuild(closure_3));
+  const stateFromStores1 = stateFromStores(memo1[57]).useStateFromStores(items2, () =>
+    closure_1_43.getGuild(closure_3),
+  );
   let systemChannelFlags;
   if (stateFromStores1 != null) {
     systemChannelFlags = stateFromStores1.systemChannelFlags;
@@ -126,7 +134,11 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const items7 = [memo];
   const linkedLobby = channel.linkedLobby;
   application_id = undefined;
-  const stateFromStoresObject = result3.useStateFromStoresObject(items6, () => application_id(memo1[58]).mapValues(application_id, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items7);
+  const stateFromStoresObject = result3.useStateFromStoresObject(
+    items6,
+    () => application_id(memo1[58]).mapValues(application_id, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)),
+    items7,
+  );
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
@@ -166,25 +178,40 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const fetchVoiceChannelInviteStartTimes = result5.useFetchVoiceChannelInviteStartTimes(stateFromStores4);
   const result6 = shouldDisableInteractiveComponents(tmp2[57]);
   const items11 = [closure_16];
-  const stateFromStoresObject1 = result6.useStateFromStoresObject(items11, () => ({ appDirectoryEmbedApplications: store2.getApplications(), invalidAppDirectoryEmbedApplicationIds: store2.getInvalidApplicationIds(), appDirectoryEmbedApplicationFetchStates: store2.getApplicationFetchStates() }), []);
-  ({ appDirectoryEmbedApplications, invalidAppDirectoryEmbedApplicationIds, appDirectoryEmbedApplicationFetchStates } = stateFromStoresObject1);
+  const stateFromStoresObject1 = result6.useStateFromStoresObject(
+    items11,
+    () => ({
+      appDirectoryEmbedApplications: store2.getApplications(),
+      invalidAppDirectoryEmbedApplicationIds: store2.getInvalidApplicationIds(),
+      appDirectoryEmbedApplicationFetchStates: store2.getApplicationFetchStates(),
+    }),
+    [],
+  );
+  ({ appDirectoryEmbedApplications, invalidAppDirectoryEmbedApplicationIds, appDirectoryEmbedApplicationFetchStates } =
+    stateFromStoresObject1);
   const result7 = shouldDisableInteractiveComponents(tmp2[57]);
   const items12 = [items68];
   const stateFromStoresArray = result7.useStateFromStoresArray(items12, () => items68.getFetchingOrFailedFetchingIds());
   const result8 = shouldDisableInteractiveComponents(tmp2[57]);
   const items13 = [channelSummariesExperiment];
-  const stateFromStoresArray1 = result8.useStateFromStoresArray(items13, () => channelSummariesExperiment.getFetchingIds());
+  const stateFromStoresArray1 = result8.useStateFromStoresArray(items13, () =>
+    channelSummariesExperiment.getFetchingIds(),
+  );
   const result9 = shouldDisableInteractiveComponents(tmp2[57]);
   const items14 = [closure_55];
   const stateFromStoresArray2 = result9.useStateFromStoresArray(items14, () => fetchingSkuIds.getFetchingSkuIds());
   const result10 = shouldDisableInteractiveComponents(tmp2[57]);
   const items15 = [closure_6];
   const items16 = [id];
-  const stateFromStoresArray3 = result10.useStateFromStoresArray(items15, () => {
-    const embeddedActivitiesForChannel = store.getEmbeddedActivitiesForChannel(memo1);
-    const mapped = embeddedActivitiesForChannel.map((launchId) => launchId.launchId);
-    return mapped.filter(stateFromStores(memo1[61]).isNotNullish);
-  }, items16);
+  const stateFromStoresArray3 = result10.useStateFromStoresArray(
+    items15,
+    () => {
+      const embeddedActivitiesForChannel = store.getEmbeddedActivitiesForChannel(memo1);
+      const mapped = embeddedActivitiesForChannel.map((launchId) => launchId.launchId);
+      return mapped.filter(stateFromStores(memo1[61]).isNotNullish);
+    },
+    items16,
+  );
   const result11 = shouldDisableInteractiveComponents(tmp2[57]);
   const items17 = [closure_6, tmp19];
   const stateFromStoresArray4 = result11.useStateFromStoresArray(items17, () => {
@@ -193,7 +220,10 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     function _loop(iter) {
       items = iter;
       const userIds = iter.userIds;
-      const findActivityResult = closure_1_48.findActivity(userIds.values().next().value, (application_id) => application_id.application_id === iter.applicationId);
+      const findActivityResult = closure_1_48.findActivity(
+        userIds.values().next().value,
+        (application_id) => application_id.application_id === iter.applicationId,
+      );
       let details;
       if (findActivityResult != null) {
         details = findActivityResult.details;
@@ -261,7 +291,11 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const stateFromStores6 = result15.useStateFromStores(items21, () => guildTemplates.getGuildTemplates(), []);
   const result16 = shouldDisableInteractiveComponents(tmp2[57]);
   const items22 = [shouldDisableInteractiveComponents];
-  const stateFromStores7 = result16.useStateFromStores(items22, () => shouldDisableInteractiveComponents.getBuildOverrides(), []);
+  const stateFromStores7 = result16.useStateFromStores(
+    items22,
+    () => shouldDisableInteractiveComponents.getBuildOverrides(),
+    [],
+  );
   const result17 = shouldDisableInteractiveComponents(tmp2[66]);
   const codedLinksExperimentEmbeds = result17.useCodedLinksExperimentEmbeds();
   const result18 = shouldDisableInteractiveComponents(tmp2[67]);
@@ -287,7 +321,9 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const trialOffer = result20.useTrialOffer(closure_63);
   const result21 = shouldDisableInteractiveComponents(tmp2[57]);
   const items24 = [closure_53];
-  const stateFromStores8 = result21.useStateFromStores(items24, () => application_id(memo1[69]).isPremiumExactly(authStore2.getCurrentUser(), TIER_2.TIER_2));
+  const stateFromStores8 = result21.useStateFromStores(items24, () =>
+    application_id(memo1[69]).isPremiumExactly(authStore2.getCurrentUser(), TIER_2.TIER_2),
+  );
   const result22 = shouldDisableInteractiveComponents(tmp2[57]);
   const items25 = [closure_40];
   const items26 = [id];
@@ -295,66 +331,102 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const result23 = shouldDisableInteractiveComponents(tmp2[57]);
   const items27 = [closure_31];
   const items28 = [id];
-  const stateFromStores10 = result23.useStateFromStores(items27, () => {
-    const pendingReply = closure_1_31.getPendingReply(memo1);
-    let id;
-    if (pendingReply != null) {
-      id = pendingReply.message.id;
-    }
-    return id;
-  }, items28);
+  const stateFromStores10 = result23.useStateFromStores(
+    items27,
+    () => {
+      const pendingReply = closure_1_31.getPendingReply(memo1);
+      let id;
+      if (pendingReply != null) {
+        id = pendingReply.message.id;
+      }
+      return id;
+    },
+    items28,
+  );
   const result24 = shouldDisableInteractiveComponents(tmp2[57]);
   const items29 = [closure_50];
   const items30 = [id];
-  const stateFromStores11 = result24.useStateFromStores(items29, () => closure_1_50.getOldestUnreadMessageId(memo1), items30);
+  const stateFromStores11 = result24.useStateFromStores(
+    items29,
+    () => closure_1_50.getOldestUnreadMessageId(memo1),
+    items30,
+  );
   const result25 = shouldDisableInteractiveComponents(tmp2[57]);
   const items31 = [closure_44];
   const items32 = [guildId];
-  const stateFromStores12 = result25.useStateFromStores(items31, () => {
-    let canChatInGuildResult = null != closure_3;
-    if (canChatInGuildResult) {
-      canChatInGuildResult = closure_1_44.canChatInGuild(tmp);
-    }
-    return canChatInGuildResult;
-  }, items32);
+  const stateFromStores12 = result25.useStateFromStores(
+    items31,
+    () => {
+      let canChatInGuildResult = null != closure_3;
+      if (canChatInGuildResult) {
+        canChatInGuildResult = closure_1_44.canChatInGuild(tmp);
+      }
+      return canChatInGuildResult;
+    },
+    items32,
+  );
   const result26 = shouldDisableInteractiveComponents(tmp2[57]);
   const items33 = [closure_47];
   const items34 = [channel];
-  const stateFromStores13 = result26.useStateFromStores(items33, () => closure_1_47.can(closure_1_62.SEND_MESSAGES, stateFromStores), items34);
+  const stateFromStores13 = result26.useStateFromStores(
+    items33,
+    () => closure_1_47.can(closure_1_62.SEND_MESSAGES, stateFromStores),
+    items34,
+  );
   const tmp26 = callback(application_id(tmp2[64])(stateFromStores, channel), 2);
   const tmp28 = closure_45;
   const tmp52 = closure_47;
   const result27 = shouldDisableInteractiveComponents(tmp2[57]);
   const items35 = [closure_54];
   const items36 = [stateFromStores2];
-  const stateFromStores14 = result27.useStateFromStores(items35, () => closure_1_54.getUserVoiceChannelId(closure_1_60, stateFromStores2), items36);
+  const stateFromStores14 = result27.useStateFromStores(
+    items35,
+    () => closure_1_54.getUserVoiceChannelId(closure_1_60, stateFromStores2),
+    items36,
+  );
   const result28 = shouldDisableInteractiveComponents(tmp2[57]);
   const items37 = [closure_49];
   const stateFromStores15 = result28.useStateFromStores(items37, () => channelId.getChannelId(), []);
   const result29 = shouldDisableInteractiveComponents(tmp2[57]);
   const items38 = [closure_32];
   const items39 = [channel];
-  const stateFromStores16 = result29.useStateFromStores(items38, () => {
-    const THREADS = closure_1_59.THREADS;
-    let message = null;
-    if (THREADS.has(stateFromStores.type)) {
-      message = null;
-      if (null != tmp.parent_id) {
-        const obj = { channel_id: null, message_id: null, guild_id: null };
-        ({ parent_id: obj[0], id: obj[1], guild_id: obj[2] } = tmp);
-        message = closure_1_32.getMessageByReference(obj).message;
+  const stateFromStores16 = result29.useStateFromStores(
+    items38,
+    () => {
+      const THREADS = closure_1_59.THREADS;
+      let message = null;
+      if (THREADS.has(stateFromStores.type)) {
+        message = null;
+        if (null != tmp.parent_id) {
+          const obj = { channel_id: null, message_id: null, guild_id: null };
+          ({ parent_id: obj[0], id: obj[1], guild_id: obj[2] } = tmp);
+          message = closure_1_32.getMessageByReference(obj).message;
+        }
       }
-    }
-    return message;
-  }, items39);
+      return message;
+    },
+    items39,
+  );
   const result30 = shouldDisableInteractiveComponents(tmp2[57]);
   const items40 = [closure_41];
-  const stateFromStoresObject2 = result30.useStateFromStoresObject(items40, () => ({ resolvingGiftCodes: store4.getResolvingCodes(), resolvedGiftCodes: store4.getResolvedCodes(), acceptingGiftCodes: store4.getAcceptingCodes() }), []);
+  const stateFromStoresObject2 = result30.useStateFromStoresObject(
+    items40,
+    () => ({
+      resolvingGiftCodes: store4.getResolvingCodes(),
+      resolvedGiftCodes: store4.getResolvedCodes(),
+      acceptingGiftCodes: store4.getAcceptingCodes(),
+    }),
+    [],
+  );
   ({ resolvingGiftCodes, resolvedGiftCodes, acceptingGiftCodes } = stateFromStoresObject2);
   const result31 = shouldDisableInteractiveComponents(tmp2[57]);
   const items41 = [closure_11];
   const items42 = [id];
-  const stateFromStores17 = result31.useStateFromStores(items41, () => closure_1_11.getParticipants(memo1).length, items42);
+  const stateFromStores17 = result31.useStateFromStores(
+    items41,
+    () => closure_1_11.getParticipants(memo1).length,
+    items42,
+  );
   const result32 = shouldDisableInteractiveComponents(tmp2[57]);
   const items43 = [closure_52];
   const items44 = [id];
@@ -362,26 +434,55 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const result33 = shouldDisableInteractiveComponents(tmp2[57]);
   const items45 = [closure_32];
   const items46 = [id];
-  const stateFromStores19 = result33.useStateFromStores(items45, () => closure_1_32.getReplyIdsForChannel(memo1), items46);
+  const stateFromStores19 = result33.useStateFromStores(
+    items45,
+    () => closure_1_32.getReplyIdsForChannel(memo1),
+    items46,
+  );
   const result34 = shouldDisableInteractiveComponents(tmp2[57]);
   const items47 = [stateFromStores2];
-  const stateFromStoresObject3 = result34.useStateFromStoresObject(items47, () => ({ useReducedMotion: stateFromStores2.useReducedMotion, roleStyle: stateFromStores2.roleStyle, officialMessageStyle: stateFromStores2.officialMessageStyle, saturation: stateFromStores2.saturation, displayNameStylesEnabled: stateFromStores2.displayNameStylesEnabled }), []);
-  ({ useReducedMotion, roleStyle, officialMessageStyle, saturation, displayNameStylesEnabled } = stateFromStoresObject3);
+  const stateFromStoresObject3 = result34.useStateFromStoresObject(
+    items47,
+    () => ({
+      useReducedMotion: stateFromStores2.useReducedMotion,
+      roleStyle: stateFromStores2.roleStyle,
+      officialMessageStyle: stateFromStores2.officialMessageStyle,
+      saturation: stateFromStores2.saturation,
+      displayNameStylesEnabled: stateFromStores2.displayNameStylesEnabled,
+    }),
+    [],
+  );
+  ({ useReducedMotion, roleStyle, officialMessageStyle, saturation, displayNameStylesEnabled } =
+    stateFromStoresObject3);
   const result35 = shouldDisableInteractiveComponents(tmp2[57]);
   const items48 = [closure_35];
   const items49 = [id];
-  const stateFromStores20 = result35.useStateFromStores(items48, () => closure_1_35.getChannelThreadsVersion(memo1), items49);
+  const stateFromStores20 = result35.useStateFromStores(
+    items48,
+    () => closure_1_35.getChannelThreadsVersion(memo1),
+    items49,
+  );
   const result36 = shouldDisableInteractiveComponents(tmp2[57]);
   const items50 = [closure_22];
-  const stateFromStoresObject4 = result36.useStateFromStoresObject(items50, () => messageInteractionStates.getMessageInteractionStates());
+  const stateFromStoresObject4 = result36.useStateFromStoresObject(items50, () =>
+    messageInteractionStates.getMessageInteractionStates(),
+  );
   const result37 = shouldDisableInteractiveComponents(tmp2[57]);
   const items51 = [closure_21];
   const tmp54 = application_id(tmp2[70])(id);
   const tmp55 = closure_54;
-  [tmp67, tmp68] = callback(result37.useStateFromStores(items51, () => {
-    const items = [store3.getInteractionComponentStates(), store3.getInteractionComponentStateVersion()];
-    return items;
-  }, [], shouldDisableInteractiveComponents(tmp2[71]).isVersionEqual), 2);
+  [tmp67, tmp68] = callback(
+    result37.useStateFromStores(
+      items51,
+      () => {
+        const items = [store3.getInteractionComponentStates(), store3.getInteractionComponentStateVersion()];
+        return items;
+      },
+      [],
+      shouldDisableInteractiveComponents(tmp2[71]).isVersionEqual,
+    ),
+    2,
+  );
   const result38 = shouldDisableInteractiveComponents(tmp2[57]);
   const items52 = [closure_14];
   let stateFromStores21 = result38.useStateFromStores(items52, () => hasLoadedExperiments.hasLoadedExperiments);
@@ -402,36 +503,44 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const stateFromStores23 = result42.useStateFromStores(items54, () => messagesVersion.getMessagesVersion());
   const result43 = shouldDisableInteractiveComponents(tmp2[57]);
   const items55 = [closure_42];
-  const stateFromStores24 = result43.useStateFromStores(items55, () => communicationDisabledVersion.getCommunicationDisabledVersion());
+  const stateFromStores24 = result43.useStateFromStores(items55, () =>
+    communicationDisabledVersion.getCommunicationDisabledVersion(),
+  );
   const result44 = shouldDisableInteractiveComponents(tmp2[57]);
   const items56 = [closure_42];
   const items57 = [guildId, stateFromStores];
-  const stateFromStoresObject5 = result44.useStateFromStoresObject(items56, () => {
-    if (null != closure_3) {
-      if (null != application_id) {
-        const obj = {};
-        const item = arr.forEach((author) => {
-          author = author.author;
-          let id;
-          if (author != null) {
-            id = author.id;
-          }
-          if (null != id) {
-            const member = closure_2_42.getMember(closure_1_3, author.author.id);
-            if (null != member) {
-              obj[author.author.id] = member;
+  const stateFromStoresObject5 = result44.useStateFromStoresObject(
+    items56,
+    () => {
+      if (null != closure_3) {
+        if (null != application_id) {
+          const obj = {};
+          const item = arr.forEach((author) => {
+            author = author.author;
+            let id;
+            if (author != null) {
+              id = author.id;
             }
-          }
-        });
-        return obj;
+            if (null != id) {
+              const member = closure_2_42.getMember(closure_1_3, author.author.id);
+              if (null != member) {
+                obj[author.author.id] = member;
+              }
+            }
+          });
+          return obj;
+        }
+        arr = application_id;
       }
-      arr = application_id;
-    }
-    return {};
-  }, items57);
+      return {};
+    },
+    items57,
+  );
   const result45 = shouldDisableInteractiveComponents(tmp2[57]);
   const items58 = [tmp52];
-  const stateFromStores25 = result45.useStateFromStores(items58, () => closure_1_47.can(closure_1_62.MODERATE_MEMBERS, stateFromStores1));
+  const stateFromStores25 = result45.useStateFromStores(items58, () =>
+    closure_1_47.can(closure_1_62.MODERATE_MEMBERS, stateFromStores1),
+  );
   const result46 = shouldDisableInteractiveComponents(tmp2[74]);
   id = undefined;
   if (stateFromStores1 != null) {
@@ -462,10 +571,18 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const stateFromStores30 = result52.useStateFromStores(items63, () => lazyCacheStatus.getLazyCacheStatus());
   const result53 = shouldDisableInteractiveComponents(tmp2[76]);
   const messageJumpAndroidKeyboardHeight = result53.useMessageJumpAndroidKeyboardHeight();
-  const tmp66 = callback(result37.useStateFromStores(items51, () => {
-    const items = [store3.getInteractionComponentStates(), store3.getInteractionComponentStateVersion()];
-    return items;
-  }, [], shouldDisableInteractiveComponents(tmp2[71]).isVersionEqual), 2);
+  const tmp66 = callback(
+    result37.useStateFromStores(
+      items51,
+      () => {
+        const items = [store3.getInteractionComponentStates(), store3.getInteractionComponentStateVersion()];
+        return items;
+      },
+      [],
+      shouldDisableInteractiveComponents(tmp2[71]).isVersionEqual,
+    ),
+    2,
+  );
   const tmp74 = null != stateFromStores && stateFromStores.cached;
   const tmp75 = null != stateFromStores && stateFromStores.ready && !stateFromStores.loadingMore;
   const result54 = shouldDisableInteractiveComponents(tmp2[78]);
@@ -473,15 +590,19 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const result55 = shouldDisableInteractiveComponents(tmp2[57]);
   const items64 = [closure_33];
   const items65 = [channelSummariesExperiment, channel.id];
-  const items66 = [channel.id, , , , ];
+  const items66 = [channel.id, , , ,];
   ({ hasMoreAfter: arr70[1], hasMoreBefore: arr70[2], length: arr70[3], ready: arr70[4] } = stateFromStores);
-  const stateFromStores31 = result55.useStateFromStores(items64, () => {
-    let selectedSummaryResult = null;
-    if (channelSummariesExperiment) {
-      selectedSummaryResult = closure_1_33.selectedSummary(stateFromStores.id);
-    }
-    return selectedSummaryResult;
-  }, items65);
+  const stateFromStores31 = result55.useStateFromStores(
+    items64,
+    () => {
+      let selectedSummaryResult = null;
+      if (channelSummariesExperiment) {
+        selectedSummaryResult = closure_1_33.selectedSummary(stateFromStores.id);
+      }
+      return selectedSummaryResult;
+    },
+    items65,
+  );
   const effect1 = obj6.useEffect(() => {
     const ready = application_id.ready;
     let hasMoreAfter = !ready;
@@ -501,13 +622,28 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     }
   }, items66);
   const result56 = shouldDisableInteractiveComponents(tmp2[80]);
-  const shouldTrackAnnouncementMessageViews = result56.useShouldTrackAnnouncementMessageViews({ guild: stateFromStores1, channel, messages: stateFromStores, isMessagesReady: tmp72 });
+  const shouldTrackAnnouncementMessageViews = result56.useShouldTrackAnnouncementMessageViews({
+    guild: stateFromStores1,
+    channel,
+    messages: stateFromStores,
+    isMessagesReady: tmp72,
+  });
   const result57 = shouldDisableInteractiveComponents(tmp2[80]);
-  const shouldTrackRichPresenceInviteEmbedViews = result57.useShouldTrackRichPresenceInviteEmbedViews({ messages: stateFromStores, isMessagesReady: tmp72 });
+  const shouldTrackRichPresenceInviteEmbedViews = result57.useShouldTrackRichPresenceInviteEmbedViews({
+    messages: stateFromStores,
+    isMessagesReady: tmp72,
+  });
   const result58 = shouldDisableInteractiveComponents(tmp2[80]);
-  const shouldTrackOfficialMessageViews = result58.useShouldTrackOfficialMessageViews({ guild: stateFromStores1, messages: stateFromStores, isMessagesReady: tmp72 });
+  const shouldTrackOfficialMessageViews = result58.useShouldTrackOfficialMessageViews({
+    guild: stateFromStores1,
+    messages: stateFromStores,
+    isMessagesReady: tmp72,
+  });
   const result59 = shouldDisableInteractiveComponents(tmp2[80]);
-  const shouldTrackVoiceInviteEmbedViews = result59.useShouldTrackVoiceInviteEmbedViews({ messages: stateFromStores, isMessagesReady: tmp72 });
+  const shouldTrackVoiceInviteEmbedViews = result59.useShouldTrackVoiceInviteEmbedViews({
+    messages: stateFromStores,
+    isMessagesReady: tmp72,
+  });
   const result60 = shouldDisableInteractiveComponents(tmp2[81]);
   const shouldDisplaySpoilerObscurity = result60.useShouldDisplaySpoilerObscurity(channel);
   const result61 = shouldDisableInteractiveComponents(tmp2[82]);
@@ -537,10 +673,16 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const result63 = shouldDisableInteractiveComponents(tmp2[57]);
   const items69 = [closure_15];
   const items70 = [id];
-  shouldDisableInteractiveComponents = result63.useStateFromStores(items69, () => closure_1_15.getChannelFpInfo(memo1), items70);
+  shouldDisableInteractiveComponents = result63.useStateFromStores(
+    items69,
+    () => closure_1_15.getChannelFpInfo(memo1),
+    items70,
+  );
   const result64 = shouldDisableInteractiveComponents(tmp2[57]);
   const items71 = [closure_26];
-  shouldDisableInteractiveComponents = result64.useStateFromStores(items71, () => pendingConnection.getPendingConnection());
+  shouldDisableInteractiveComponents = result64.useStateFromStores(items71, () =>
+    pendingConnection.getPendingConnection(),
+  );
   shouldDisableInteractiveComponents = tmp24(tmp2[85])();
   shouldDisableInteractiveComponents = tmp24(tmp2[86])(stateFromStores);
   ({ unloadedContentEntryMessageIds, unloadableContentEntryMessageIds } = shouldDisableInteractiveComponents);
@@ -564,18 +706,24 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   shouldDisableInteractiveComponents = result67.useColorStore((palette) => Object.keys(palette.palette).length);
   const result68 = shouldDisableInteractiveComponents(tmp2[57]);
   const items74 = [closure_13];
-  shouldDisableInteractiveComponents = result68.useStateFromStores(items74, () => closure_1_13.getGuildEmoji(closure_3));
+  shouldDisableInteractiveComponents = result68.useStateFromStores(items74, () =>
+    closure_1_13.getGuildEmoji(closure_3),
+  );
   const result69 = shouldDisableInteractiveComponents(tmp2[57]);
   const items75 = [tmp55];
   const items76 = [guildId];
-  shouldDisableInteractiveComponents = result69.useStateFromStores(items75, () => {
-    if (null == closure_3) {
-      return null;
-    } else {
-      const voiceStates = closure_1_54.getVoiceStates(tmp);
-      return stateFromStores(memo1[88]).getVoiceStateChannelSummaryFromVoiceStates(voiceStates);
-    }
-  }, items76);
+  shouldDisableInteractiveComponents = result69.useStateFromStores(
+    items75,
+    () => {
+      if (null == closure_3) {
+        return null;
+      } else {
+        const voiceStates = closure_1_54.getVoiceStates(tmp);
+        return stateFromStores(memo1[88]).getVoiceStateChannelSummaryFromVoiceStates(voiceStates);
+      }
+    },
+    items76,
+  );
   const result70 = shouldDisableInteractiveComponents(tmp2[57]);
   const items77 = [closure_57, closure_12, tmp28, closure_39];
   shouldDisableInteractiveComponents = result70.useStateFromStoresObject(items77, () => {
@@ -637,17 +785,19 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   });
   const result72 = shouldDisableInteractiveComponents(tmp2[57]);
   const items79 = [closure_56];
-  shouldDisableInteractiveComponents = result72.useStateFromStoresObject(items79, () => shouldDisableInteractiveComponents.reduce((arg0, application_id) => {
-    if (null == application_id.application_id) {
-      return arg0;
-    } else {
-      state = state.getState(application_id.application_id, constants.JOIN);
-      if (null != state) {
-        arg0[application_id.application_id] = state;
+  shouldDisableInteractiveComponents = result72.useStateFromStoresObject(items79, () =>
+    shouldDisableInteractiveComponents.reduce((arg0, application_id) => {
+      if (null == application_id.application_id) {
+        return arg0;
+      } else {
+        state = state.getState(application_id.application_id, constants.JOIN);
+        if (null != state) {
+          arg0[application_id.application_id] = state;
+        }
+        return arg0;
       }
-      return arg0;
-    }
-  }, {}));
+    }, {}),
+  );
   const result73 = shouldDisableInteractiveComponents(tmp2[57]);
   const items80 = [closure_25];
   shouldDisableInteractiveComponents = result73.useStateFromStoresArray(items80, () => {
@@ -675,9 +825,119 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     shouldDisableInteractiveComponents = callback4;
     shouldDisableInteractiveComponents = callback4(tmp24(tmp2[92]), { absolute: true });
   }
-  const items82 = [shouldDisableInteractiveComponents, ];
+  const items82 = [shouldDisableInteractiveComponents];
   shouldDisableInteractiveComponents = callback4;
-  obj = { ref, theme: stateFromStores3, saturation, isStaff: shouldDisableInteractiveComponents, animateEmoji: setting5, animateStickers: setting6, containerWidth: shouldDisableInteractiveComponents, gifAutoPlay: setting7, timestampHourCycle: setting8, inlineAttachmentMedia: setting, inlineEmbedMedia: setting1, renderEmbeds: setting2, renderReactions: setting3, developerMode: setting4, roleStyle, officialMessageStyle, guildId, currentUserId: stateFromStores2, channelId: id, isMessagesReady: tmp72, isMessagesCached: tmp74, isMessagesAckable: tmp75, isMessageRequest, isSpamMessageRequest, messageAuthorActivities: stateFromStoresObject, invites: stateFromStores4, appDirectoryEmbedApplications, invalidAppDirectoryEmbedApplicationIds, invalidApplicationIds: stateFromStoresArray, applicationAssetFetchingIds: stateFromStoresArray1, messages: stateFromStores, messagesWithActivitiesLaunching: stateFromStoresArray6, activityInstanceIds: stateFromStoresArray3, activityParticipants: stateFromStoresArray5, activityInstancePresenceDetails: stateFromStoresArray4, appDirectoryEmbedApplicationFetchStates, mediaPostPreviewEmbeds: stateFromStores5, guildTemplates: stateFromStores6, buildOverrides: stateFromStores7, fetchingSkuIds: stateFromStoresArray2, experimentEmbeds: codedLinksExperimentEmbeds, quests, isFetchingCurrentQuests, editingMessageId: stateFromStores9, replyingMessageId: stateFromStores10, oldestUnreadMessageId: stateFromStores11, canChat: stateFromStores12, canSendMessages: stateFromStores13, isCallActive: tmp54, voiceStatePrivateChannelId: stateFromStores14, currentClientVoiceChannelId: stateFromStores15, voiceStateChannelIdSummaryForGuild: shouldDisableInteractiveComponents, resolvingGiftCodes, resolvedGiftCodes, acceptingGiftCodes, participantsLength: stateFromStores17, uploads: stateFromStores18, repliedIds: stateFromStores19, useReducedMotion, displayNameStylesEnabled, channelThreadsVersion: stateFromStores20, rsvpVersion: stateFromStores22, failedMessagesVersion: stateFromStores23, communicationDisabledVersion: stateFromStores24, messageAuthorMembers: stateFromStoresObject5, forwardGuildsVersion: shouldDisableInteractiveComponents, interactionStates: stateFromStoresObject4, interactionComponentStates: tmp67, interactionComponentStatesVersion: tmp68, hasLoadedExperiments: null, guildSystemChannelFlags: null, currentUserCommunicationDisabled: null, renderCommunicationDisabled: null, userSettingsLocale: null, paymentsBlocked: null, isFollowingForumPost: null, showMediaPostSharePrompt: null, showPushFeedback: null, cacheStoreLoaded: null, androidKeyboardHeight: null, selectedSummary: null, keyboardType: null, shouldTrackAnnouncementMessageViews: null, shouldTrackRichPresenceInviteEmbedViews: null, shouldTrackOfficialMessageViews: null, shouldTrackVoiceInviteEmbedViews: null, shouldObscureSpoiler: null, shouldDisableInteractiveComponents: null, channelPolls: null, messageReferencePolls: null, explicitMediaFalsePositiveInfo: null, familyCenterPendingConnection: null, threadStartingReferenceMessage: null, unloadedContentEntryMessageIds: null, unloadableContentEntryMessageIds: null, resolvedReferralTrialOfferIds: null, referralTrialOfferId: null, isPremiumTier2User: null, activityInviteMessageIds: null, guildInviteColorsFetched: null, isAgeVerified: null, guildEmojis: null, enableSwipeActions: null, selfActivities: null, activityLaunchJoinStates: null, authorizedAppsTokens: null, currentUserDisplayNameStyles: null, voiceInviteDataByChannelId: null, officialMessageColor: null };
+  obj = {
+    ref,
+    theme: stateFromStores3,
+    saturation,
+    isStaff: shouldDisableInteractiveComponents,
+    animateEmoji: setting5,
+    animateStickers: setting6,
+    containerWidth: shouldDisableInteractiveComponents,
+    gifAutoPlay: setting7,
+    timestampHourCycle: setting8,
+    inlineAttachmentMedia: setting,
+    inlineEmbedMedia: setting1,
+    renderEmbeds: setting2,
+    renderReactions: setting3,
+    developerMode: setting4,
+    roleStyle,
+    officialMessageStyle,
+    guildId,
+    currentUserId: stateFromStores2,
+    channelId: id,
+    isMessagesReady: tmp72,
+    isMessagesCached: tmp74,
+    isMessagesAckable: tmp75,
+    isMessageRequest,
+    isSpamMessageRequest,
+    messageAuthorActivities: stateFromStoresObject,
+    invites: stateFromStores4,
+    appDirectoryEmbedApplications,
+    invalidAppDirectoryEmbedApplicationIds,
+    invalidApplicationIds: stateFromStoresArray,
+    applicationAssetFetchingIds: stateFromStoresArray1,
+    messages: stateFromStores,
+    messagesWithActivitiesLaunching: stateFromStoresArray6,
+    activityInstanceIds: stateFromStoresArray3,
+    activityParticipants: stateFromStoresArray5,
+    activityInstancePresenceDetails: stateFromStoresArray4,
+    appDirectoryEmbedApplicationFetchStates,
+    mediaPostPreviewEmbeds: stateFromStores5,
+    guildTemplates: stateFromStores6,
+    buildOverrides: stateFromStores7,
+    fetchingSkuIds: stateFromStoresArray2,
+    experimentEmbeds: codedLinksExperimentEmbeds,
+    quests,
+    isFetchingCurrentQuests,
+    editingMessageId: stateFromStores9,
+    replyingMessageId: stateFromStores10,
+    oldestUnreadMessageId: stateFromStores11,
+    canChat: stateFromStores12,
+    canSendMessages: stateFromStores13,
+    isCallActive: tmp54,
+    voiceStatePrivateChannelId: stateFromStores14,
+    currentClientVoiceChannelId: stateFromStores15,
+    voiceStateChannelIdSummaryForGuild: shouldDisableInteractiveComponents,
+    resolvingGiftCodes,
+    resolvedGiftCodes,
+    acceptingGiftCodes,
+    participantsLength: stateFromStores17,
+    uploads: stateFromStores18,
+    repliedIds: stateFromStores19,
+    useReducedMotion,
+    displayNameStylesEnabled,
+    channelThreadsVersion: stateFromStores20,
+    rsvpVersion: stateFromStores22,
+    failedMessagesVersion: stateFromStores23,
+    communicationDisabledVersion: stateFromStores24,
+    messageAuthorMembers: stateFromStoresObject5,
+    forwardGuildsVersion: shouldDisableInteractiveComponents,
+    interactionStates: stateFromStoresObject4,
+    interactionComponentStates: tmp67,
+    interactionComponentStatesVersion: tmp68,
+    hasLoadedExperiments: null,
+    guildSystemChannelFlags: null,
+    currentUserCommunicationDisabled: null,
+    renderCommunicationDisabled: null,
+    userSettingsLocale: null,
+    paymentsBlocked: null,
+    isFollowingForumPost: null,
+    showMediaPostSharePrompt: null,
+    showPushFeedback: null,
+    cacheStoreLoaded: null,
+    androidKeyboardHeight: null,
+    selectedSummary: null,
+    keyboardType: null,
+    shouldTrackAnnouncementMessageViews: null,
+    shouldTrackRichPresenceInviteEmbedViews: null,
+    shouldTrackOfficialMessageViews: null,
+    shouldTrackVoiceInviteEmbedViews: null,
+    shouldObscureSpoiler: null,
+    shouldDisableInteractiveComponents: null,
+    channelPolls: null,
+    messageReferencePolls: null,
+    explicitMediaFalsePositiveInfo: null,
+    familyCenterPendingConnection: null,
+    threadStartingReferenceMessage: null,
+    unloadedContentEntryMessageIds: null,
+    unloadableContentEntryMessageIds: null,
+    resolvedReferralTrialOfferIds: null,
+    referralTrialOfferId: null,
+    isPremiumTier2User: null,
+    activityInviteMessageIds: null,
+    guildInviteColorsFetched: null,
+    isAgeVerified: null,
+    guildEmojis: null,
+    enableSwipeActions: null,
+    selfActivities: null,
+    activityLaunchJoinStates: null,
+    authorizedAppsTokens: null,
+    currentUserDisplayNameStyles: null,
+    voiceInviteDataByChannelId: null,
+    officialMessageColor: null,
+  };
   shouldDisableInteractiveComponents = tmp24(tmp2[93]);
   if (stateFromStores21) {
     stateFromStores21 = tmp72;

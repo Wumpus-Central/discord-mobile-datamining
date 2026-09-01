@@ -2,7 +2,11 @@
 import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 
-let obj = { COULD_NOT_FIND: "I couldn't find what I was looking for", CONFUSING_LANGUAGE: "I found the language confusing", OTHER: "Other" };
+let obj = {
+  COULD_NOT_FIND: "I couldn't find what I was looking for",
+  CONFUSING_LANGUAGE: "I found the language confusing",
+  OTHER: "Other",
+};
 const result = set.fileFinishedImporting("modules/in_app_reports/getInAppReportsFeedbackOptions.tsx");
 
 export default function getInAppReportsFeedbackOptions() {
@@ -10,7 +14,7 @@ export default function getInAppReportsFeedbackOptions() {
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.cigGCe);
   obj[2] = obj.COULD_NOT_FIND;
-  const items = [obj, , ];
+  const items = [obj, ,];
   obj = { label: null, code: 3, value: null };
   const intl2 = getSystemLocale.intl;
   obj[0] = intl2.string(getSystemLocale.t.ZyXA0q);
@@ -22,5 +26,5 @@ export default function getInAppReportsFeedbackOptions() {
   obj[2] = obj.OTHER;
   items[2] = obj;
   return items;
-};
+}
 export const InAppReportsFeedbackReasonOption = obj;

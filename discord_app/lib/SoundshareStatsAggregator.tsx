@@ -5,7 +5,35 @@ const result = set2.fileFinishedImporting("lib/SoundshareStatsAggregator.tsx");
 class SoundshareStatsAggregator {
   constructor() {
     obj = Object.create(new.target.prototype);
-    obj._report = { soundshare_attach_requested_count: 0, soundshare_capturing_count: 0, soundshare_capture_stopped_count: 0, soundshare_hooked_count: 0, soundshare_recv_connect_count: 0, soundshare_recv_disconnect_count: 0, soundshare_recv_started_count: 0, soundshare_recv_stopped_count: 0, soundshare_recv_failed_count: 0, soundshare_recv_format_count: 0, soundshare_send_announce_count: 0, soundshare_send_start_count: 0, soundshare_send_stop_count: 0, soundshare_malformed_trace_count: 0, soundshare_audio_detected_count: 0, soundshare_state_transition_detached_count: 0, soundshare_state_transition_waiting_count: 0, soundshare_state_transition_attached_count: 0, soundshare_state_transition_started_count: 0, soundshare_state_transition_playing_count: 0, soundshare_state_transition_silence_count: 0, soundshare_unknown_event_count: 0, soundshare_first_pid: 0, soundshare_last_pid: 0, soundshare_unique_pids: 0, soundshare_first_session: null, soundshare_last_session: null };
+    obj._report = {
+      soundshare_attach_requested_count: 0,
+      soundshare_capturing_count: 0,
+      soundshare_capture_stopped_count: 0,
+      soundshare_hooked_count: 0,
+      soundshare_recv_connect_count: 0,
+      soundshare_recv_disconnect_count: 0,
+      soundshare_recv_started_count: 0,
+      soundshare_recv_stopped_count: 0,
+      soundshare_recv_failed_count: 0,
+      soundshare_recv_format_count: 0,
+      soundshare_send_announce_count: 0,
+      soundshare_send_start_count: 0,
+      soundshare_send_stop_count: 0,
+      soundshare_malformed_trace_count: 0,
+      soundshare_audio_detected_count: 0,
+      soundshare_state_transition_detached_count: 0,
+      soundshare_state_transition_waiting_count: 0,
+      soundshare_state_transition_attached_count: 0,
+      soundshare_state_transition_started_count: 0,
+      soundshare_state_transition_playing_count: 0,
+      soundshare_state_transition_silence_count: 0,
+      soundshare_unknown_event_count: 0,
+      soundshare_first_pid: 0,
+      soundshare_last_pid: 0,
+      soundshare_unique_pids: 0,
+      soundshare_first_session: null,
+      soundshare_last_session: null,
+    };
     set = new Set();
     obj._pids = set;
     return obj;
@@ -16,7 +44,10 @@ prototype["traceEvent"] = function traceEvent(soundshareSession, type) {
   const _report = this._report;
   if ("soundshare_state_transition" === type.type) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "soundshare_state_transition_" + ["detached", "waiting", "attached", "started", "playing", "silence"][type.newState] + "_count";
+    let combined =
+      "soundshare_state_transition_" +
+      ["detached", "waiting", "attached", "started", "playing", "silence"][type.newState] +
+      "_count";
   } else {
     const _HermesInternal = HermesInternal;
     combined = "" + type.type + "_count";

@@ -11,7 +11,7 @@ function _uploadRtcLogFiles() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -77,7 +77,9 @@ function _uploadRtcLogFiles() {
             let tmp47 = closure_1;
             let tmp48 = new.target;
             let tmp49 = new.target;
-            let uploadVoiceDebugLogsError = new callback(closure_1[4]).UploadVoiceDebugLogsError(callback(closure_1[4]).UploadErrorCodes.READ);
+            let uploadVoiceDebugLogsError = new callback(closure_1[4]).UploadVoiceDebugLogsError(
+              callback(closure_1[4]).UploadErrorCodes.READ,
+            );
             let tmp51 = uploadVoiceDebugLogsError;
             throw uploadVoiceDebugLogsError;
           } else if (3 === tmp4) {
@@ -91,7 +93,12 @@ function _uploadRtcLogFiles() {
             let tmp15 = closure_4;
             let tmp16 = closure_4;
             let _HermesInternal = HermesInternal;
-            let errorResult1 = logger.error("uploadRtcLogFiles: Log file upload error: status: " + closure_4.status + ", message: " + closure_4.message);
+            let errorResult1 = logger.error(
+              "uploadRtcLogFiles: Log file upload error: status: " +
+                closure_4.status +
+                ", message: " +
+                closure_4.message,
+            );
             let tmp18 = closure_4;
             if (429 === closure_4.status) {
               let tmp28 = closure_4;
@@ -101,7 +108,9 @@ function _uploadRtcLogFiles() {
               let tmp32 = closure_1;
               let tmp33 = new.target;
               let tmp34 = new.target;
-              let uploadVoiceDebugLogsError1 = new callback(closure_1[4]).UploadVoiceDebugLogsError(callback(closure_1[4]).UploadErrorCodes.PROGRESS);
+              let uploadVoiceDebugLogsError1 = new callback(closure_1[4]).UploadVoiceDebugLogsError(
+                callback(closure_1[4]).UploadErrorCodes.PROGRESS,
+              );
               let tmp36 = uploadVoiceDebugLogsError1;
               throw uploadVoiceDebugLogsError1;
             } else {
@@ -112,7 +121,9 @@ function _uploadRtcLogFiles() {
               let tmp23 = closure_1;
               let tmp24 = new.target;
               let tmp25 = new.target;
-              let uploadVoiceDebugLogsError2 = new callback(closure_1[4]).UploadVoiceDebugLogsError(callback(closure_1[4]).UploadErrorCodes.UPLOAD);
+              let uploadVoiceDebugLogsError2 = new callback(closure_1[4]).UploadVoiceDebugLogsError(
+                callback(closure_1[4]).UploadErrorCodes.UPLOAD,
+              );
               let tmp27 = uploadVoiceDebugLogsError2;
               throw uploadVoiceDebugLogsError2;
             }

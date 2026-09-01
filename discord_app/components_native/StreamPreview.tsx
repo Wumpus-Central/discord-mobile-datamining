@@ -21,12 +21,17 @@ createCacheKey.justifyContent = "center";
 createCacheKey.paddingLeft = 20;
 createCacheKey.paddingRight = 20;
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: ThemesDefault.colors.TEXT_MUTED };
+createCacheKey[1] = {
+  textAlign: "center",
+  fontSize: 14,
+  lineHeight: 18,
+  marginTop: 16,
+  color: ThemesDefault.colors.TEXT_MUTED,
+};
 createCacheKey[2] = { width: "100%" };
 let closure_8 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
-class DefaultFallback extends PureComponent {
-}
+class DefaultFallback extends PureComponent {}
 DefaultFallback.prototype["render"] = function render() {
   const tmp = callback3(this.context);
   let obj = { style: tmp.wrapper, children: null };
@@ -88,7 +93,15 @@ StreamPreview.prototype["render"] = function render() {
         ({ handleLoadStart: obj[3], handleLoad: obj[4], handleError: obj[5] } = this);
         const tmp12 = callback(closure_3, obj);
       }
-      obj = { accessibilityRole: "button", accessibilityLabel: null, activeOpacity: 0.6, style: null, disabled: null, onPress: null, children: null };
+      obj = {
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        activeOpacity: 0.6,
+        style: null,
+        disabled: null,
+        onPress: null,
+        children: null,
+      };
       obj[1] = tmp2;
       const items = [tmp.touchable, tmp3];
       obj[3] = items;
@@ -123,7 +136,7 @@ StreamPreview.defaultProps = {
     }
     obj[1] = stringResult;
     return closure_6(DefaultFallback, obj);
-  }
+  },
 };
 let obj1 = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: ThemesDefault.colors.TEXT_MUTED };
 const result = require("set").fileFinishedImporting("components_native/StreamPreview.tsx");
@@ -140,4 +153,4 @@ export default function ConnectedStreamPreview(stream) {
   obj.isFetching = isLoading;
   obj.theme = stateFromStores;
   return callback(StreamPreview, obj);
-};
+}

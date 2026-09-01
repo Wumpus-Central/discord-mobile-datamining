@@ -6,14 +6,16 @@ import ReadStateTypes from "../../../read_states/ReadStateConstants.tsx";
 
 const UserNotificationSettings = ME.UserNotificationSettings;
 const UnreadSetting = ReadStateTypes.UnreadSetting;
-const result = set.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsPresetOptionUtils.tsx");
+const result = set.fileFinishedImporting(
+  "modules/notifications/settings/utils/notificationSettingsPresetOptionUtils.tsx",
+);
 
 export const getPushNotificationSelectOptions = function getPushNotificationSelectOptions() {
   let obj = { label: null, value: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["HVah/3"]);
   obj[1] = UserNotificationSettings.ALL_MESSAGES;
-  const items = [obj, , ];
+  const items = [obj, ,];
   obj = { label: null, value: null };
   const intl2 = getSystemLocale.intl;
   obj[0] = intl2.string(getSystemLocale.t["tu+ZWJ"]);
@@ -31,7 +33,7 @@ export const getUnreadSelectOptions = function getUnreadSelectOptions(notificati
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["HVah/3"]);
   obj[1] = UnreadSetting.ALL_MESSAGES;
-  const items = [obj, ];
+  const items = [obj];
   obj = { value: UnreadSetting.ONLY_MENTIONS, label: null, disabled: null };
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t["tu+ZWJ"]);

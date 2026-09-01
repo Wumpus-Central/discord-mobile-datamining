@@ -8,7 +8,9 @@ import ParticipantTypes from "../../../calls/CallConstants.tsx";
 
 const require = arg1;
 ({ isStreamParticipant: error, ParticipantTypes: closure_8 } = ParticipantTypes);
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/video_calls/native/components/useShouldForcePipOrientation.tsx",
+);
 
 export const useShouldForcePipOrientation = function useShouldForcePipOrientation(channel) {
   channel = channel.channel;

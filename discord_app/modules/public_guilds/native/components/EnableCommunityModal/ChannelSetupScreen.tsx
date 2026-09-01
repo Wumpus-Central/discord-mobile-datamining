@@ -14,7 +14,9 @@ import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/ChannelSetupScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/public_guilds/native/components/EnableCommunityModal/ChannelSetupScreen.tsx",
+);
 
 export default function ChannelSetupScreen() {
   let obj = callback;
@@ -73,7 +75,10 @@ export default function ChannelSetupScreen() {
       const found = channels[closure_1_9].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
       items = found.map((channel) => {
         channel = channel.channel;
-        const obj = { value: channel.id, label: callback(table[14]).computeChannelName(channel, closure_11, closure_10, true) };
+        const obj = {
+          value: channel.id,
+          label: callback(table[14]).computeChannelName(channel, closure_11, closure_10, true),
+        };
         return obj;
       });
       const arr2 = channels[closure_1_9];
@@ -103,7 +108,11 @@ export default function ChannelSetupScreen() {
       id = closure_1_12;
     }
     obj[3] = id;
-    obj.openLazy(guild(publicUpdatesChannel[19])(publicUpdatesChannel[18], publicUpdatesChannel.paths), "SelectRulesChannel", obj);
+    obj.openLazy(
+      guild(publicUpdatesChannel[19])(publicUpdatesChannel[18], publicUpdatesChannel.paths),
+      "SelectRulesChannel",
+      obj,
+    );
   }, items3);
   const callback2 = obj.useCallback(() => {
     let obj = rulesChannel(publicUpdatesChannel[17]);
@@ -125,26 +134,45 @@ export default function ChannelSetupScreen() {
       id = closure_1_12;
     }
     obj[3] = id;
-    obj.openLazy(guild(publicUpdatesChannel[19])(publicUpdatesChannel[18], publicUpdatesChannel.paths), "SelectUpdatesChannel", obj);
+    obj.openLazy(
+      guild(publicUpdatesChannel[19])(publicUpdatesChannel[18], publicUpdatesChannel.paths),
+      "SelectUpdatesChannel",
+      obj,
+    );
   }, items4);
-  obj = { headerRef: ref, disableNextStep: false, currentStep: tmp2(tmp3[21]).EnableCommunityModalSteps.STEP_2, children: null };
+  obj = {
+    headerRef: ref,
+    disableNextStep: false,
+    currentStep: tmp2(tmp3[21]).EnableCommunityModalSteps.STEP_2,
+    children: null,
+  };
   obj = { style: enableCommunitySharedStyles.content, children: null };
   obj1 = { ref, accessibilityRole: "header", variant: "text-md/semibold", color: "text-subtle", children: null };
   const intl3 = tmp2(tmp3[15]).intl;
   obj1[4] = intl3.formatToPlainString(guild(publicUpdatesChannel[15]).t.tInpJj, { number: 2, total: 3 });
-  const items5 = [callback(guild(publicUpdatesChannel[22]).Text, obj1), , , ];
+  const items5 = [callback(guild(publicUpdatesChannel[22]).Text, obj1), , ,];
   obj2 = { resizeMode: "contain", source: rulesChannel(publicUpdatesChannel[16])().channelSetup };
   items5[1] = callback(closure_4, obj2);
-  obj3 = { style: enableCommunitySharedStyles.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  obj3 = {
+    style: enableCommunitySharedStyles.header,
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl4 = tmp2(tmp3[15]).intl;
   obj3[3] = intl4.string(guild(publicUpdatesChannel[15]).t.YtXpEh);
   items5[2] = callback(guild(publicUpdatesChannel[22]).Heading, obj3);
-  obj4 = { style: enableCommunitySharedStyles.description, variant: "text-md/medium", color: "text-subtle", children: null };
+  obj4 = {
+    style: enableCommunitySharedStyles.description,
+    variant: "text-md/medium",
+    color: "text-subtle",
+    children: null,
+  };
   const intl5 = tmp2(tmp3[15]).intl;
   obj4[3] = intl5.string(guild(publicUpdatesChannel[15]).t["J/fYR8"]);
   items5[3] = callback(guild(publicUpdatesChannel[22]).Text, obj4);
   obj[1] = items5;
-  const items6 = [callback2(closure_5, obj), ];
+  const items6 = [callback2(closure_5, obj)];
   const obj5 = { spacing: 24, style: { paddingHorizontal: token }, children: null };
   const obj6 = { helperText: null, hasIcons: false, children: null };
   const intl6 = tmp2(tmp3[15]).intl;
@@ -155,7 +183,7 @@ export default function ChannelSetupScreen() {
   obj7[1] = callback(guild(publicUpdatesChannel[25]).TableRow.TrailingText, { text: stringResult });
   obj7[3] = callback1;
   obj6[2] = callback(guild(publicUpdatesChannel[25]).TableRow, obj7);
-  const items7 = [callback(guild(publicUpdatesChannel[24]).TableRowGroup, obj6), ];
+  const items7 = [callback(guild(publicUpdatesChannel[24]).TableRowGroup, obj6)];
   const obj8 = { helperText: null, hasIcons: false, children: null };
   const intl8 = tmp2(tmp3[15]).intl;
   obj8[0] = intl8.string(guild(publicUpdatesChannel[15]).t.ZFeonu);
@@ -170,4 +198,4 @@ export default function ChannelSetupScreen() {
   items6[1] = callback2(guild(publicUpdatesChannel[23]).Stack, obj5);
   obj[3] = items6;
   return callback2(guild(publicUpdatesChannel[21]).EnableCommunityModalScreen, obj);
-};
+}

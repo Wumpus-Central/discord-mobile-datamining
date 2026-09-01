@@ -35,10 +35,18 @@ export const usePlayInContext = function usePlayInContext(arg0) {
   }
   let tmpResult = tmp(tmp2[2]);
   const items2 = [closure_2];
-  const stateFromStores2 = tmpResult.useStateFromStores(items2, () => currentEmbeddedActivity.getCurrentEmbeddedActivity());
+  const stateFromStores2 = tmpResult.useStateFromStores(items2, () =>
+    currentEmbeddedActivity.getCurrentEmbeddedActivity(),
+  );
   tmpResult = tmp(tmp2[3]);
   const embeddedActivityLaunchability = tmpResult.useEmbeddedActivityLaunchability(stateFromStores);
-  obj = { currentChannelId: stateFromStores, instanceId: compositeInstanceId, instanceLocation: _location, isCurrentlyInInstance: null, canLaunchInChannel: null };
+  obj = {
+    currentChannelId: stateFromStores,
+    instanceId: compositeInstanceId,
+    instanceLocation: _location,
+    isCurrentlyInInstance: null,
+    canLaunchInChannel: null,
+  };
   let tmp10 = null != compositeInstanceId;
   if (tmp10) {
     let compositeInstanceId1;
@@ -58,7 +66,13 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
     channelId = channelId.getChannelId();
   }
   if (null == channelId) {
-    return { currentChannelId: null, instanceId: null, instanceLocation: null, isCurrentlyInInstance: false, canLaunchInChannel: false };
+    return {
+      currentChannelId: null,
+      instanceId: null,
+      instanceLocation: null,
+      isCurrentlyInInstance: false,
+      canLaunchInChannel: false,
+    };
   } else {
     if (null != channelId) {
       let obj = getEmbeddedActivityLaunchability;
@@ -66,7 +80,8 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
       let tmp3 = _require;
     } else {
       tmp3 = _require;
-      NO_CHANNEL = require("../../../activities/utils/getEmbeddedActivityLaunchability.tsx").EmbeddedActivityLaunchability.NO_CHANNEL;
+      NO_CHANNEL = require("../../../activities/utils/getEmbeddedActivityLaunchability.tsx")
+        .EmbeddedActivityLaunchability.NO_CHANNEL;
     }
     embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(channelId);
     const found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_0);
@@ -83,7 +98,13 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
       _location = first.location;
     }
     const currentEmbeddedActivity = embeddedActivitiesForChannel.getCurrentEmbeddedActivity();
-    obj = { currentChannelId: null, instanceId: null, instanceLocation: null, isCurrentlyInInstance: null, canLaunchInChannel: null };
+    obj = {
+      currentChannelId: null,
+      instanceId: null,
+      instanceLocation: null,
+      isCurrentlyInInstance: null,
+      canLaunchInChannel: null,
+    };
     obj[0] = channelId;
     obj[1] = compositeInstanceId;
     obj[2] = _location;

@@ -11,7 +11,11 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-({ GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET: closure_6, GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET: error, GuildPowerupType: closure_8 } = BoostedGuildTiers);
+({
+  GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET: closure_6,
+  GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET: error,
+  GuildPowerupType: closure_8,
+} = BoostedGuildTiers);
 ({ AnalyticsPages: c9, AnalyticsSections: c10 } = ME);
 let closure_14 = createCacheKey.createStyles((arg0) => {
   let obj = { coachmarkImage: null, coachmarkCover: null, boostGemBackground: null };
@@ -25,7 +29,9 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
   obj[2] = { width: 50, height: 50, backgroundColor: str };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupsCoachmark.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/powerups/native/hooks/useGuildPowerupsCoachmark.tsx",
+);
 
 export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
   const _require = arg1;
@@ -33,14 +39,18 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
   let obj = _require(stateFromStores[10]);
   let items = [closure_5];
   const items1 = [arg1];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    guild = guild.getGuild(closure_0);
-    let name;
-    if (guild != null) {
-      name = guild.name;
-    }
-    return name;
-  }, items1);
+  stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      guild = guild.getGuild(closure_0);
+      let name;
+      if (guild != null) {
+        name = guild.name;
+      }
+      return name;
+    },
+    items1,
+  );
   const tmp5 = callback(importDefault(stateFromStores[11])());
   const React = tmp5;
   const items2 = [stateFromStores1];
@@ -69,9 +79,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
       description: "",
       position: "bottom",
       visible: false,
-      onDismiss() {
-
-      }
+      onDismiss() {},
     };
     if (null == guildPowerupBannerImage) {
       return obj;
@@ -97,7 +105,11 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
         const merged = Object.assign(obj);
         obj.visible = true;
         obj.renderImgComponent = function renderImgComponent() {
-          return closure_1_13(guildPowerupBannerImage(found1[17]), { style: powerup.boostGemBackground, gemWidth: 30, gemHeight: 30 });
+          return closure_1_13(guildPowerupBannerImage(found1[17]), {
+            style: powerup.boostGemBackground,
+            gemWidth: 30,
+            gemHeight: 30,
+          });
         };
         const intl24 = tmp50(tmp51[18]).intl;
         obj = { perkName: null };
@@ -118,7 +130,11 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
         const merged1 = Object.assign(obj);
         obj2.visible = true;
         obj2.renderImgComponent = function renderImgComponent() {
-          return closure_1_13(guildPowerupBannerImage(found1[17]), { style: powerup.boostGemBackground, gemWidth: 30, gemHeight: 30 });
+          return closure_1_13(guildPowerupBannerImage(found1[17]), {
+            style: powerup.boostGemBackground,
+            gemWidth: 30,
+            gemHeight: 30,
+          });
         };
         const intl21 = tmp50(tmp51[18]).intl;
         obj2.title = intl21.string(type(tmp51[19]).QpQBPQ);
@@ -171,7 +187,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
               }
             }
             obj = { imageUrl: str, isAnimated: 1 === arr.length, style: items };
-            items = [, ];
+            items = [,];
             ({ coachmarkImage: arr2[0], coachmarkCover: arr2[1] } = powerup);
             return closure_2_13(guildPowerupBannerImage(stateFromStores[20]), obj);
           };
@@ -201,7 +217,11 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
             const merged3 = Object.assign(obj);
             obj8.visible = true;
             obj8.renderImgComponent = function renderImgComponent() {
-              return closure_2_13(guildPowerupBannerImage(stateFromStores[20]), { imageUrl: guildPowerupBannerImage, isAnimated: !closure_1_4, style: powerup.coachmarkImage });
+              return closure_2_13(guildPowerupBannerImage(stateFromStores[20]), {
+                imageUrl: guildPowerupBannerImage,
+                isAnimated: !closure_1_4,
+                style: powerup.coachmarkImage,
+              });
             };
             const intl13 = tmp50(tmp51[18]).intl;
             obj8.title = intl13.string(type(tmp51[19]).GcEkAP);
@@ -228,7 +248,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
               guildPowerupBannerImage = guildPowerupBannerImage(stateFromStores[24]);
             }
             obj = { imageUrl: guildPowerupBannerImage, isAnimated: !closure_1_4, style: items };
-            items = [, ];
+            items = [,];
             ({ coachmarkImage: arr[0], coachmarkCover: arr[1] } = powerup);
             return closure_2_13(guildPowerupBannerImage(stateFromStores[20]), obj);
           };
@@ -300,12 +320,19 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
           return obj12;
         } else {
           let tmp52 = obj;
-          if (null != powerups1.find((skuId) => skuId.skuId === powerups(found1[23]).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID)) {
+          if (
+            null !=
+            powerups1.find((skuId) => skuId.skuId === powerups(found1[23]).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID)
+          ) {
             const obj13 = {};
             const merged8 = Object.assign(obj);
             obj13.visible = true;
             obj13.renderImgComponent = function renderImgComponent() {
-              const obj = { imageUrl: guildPowerupBannerImage(found1[28]), isAnimated: false, style: powerup.coachmarkImage };
+              const obj = {
+                imageUrl: guildPowerupBannerImage(found1[28]),
+                isAnimated: false,
+                style: powerup.coachmarkImage,
+              };
               return closure_1_13(guildPowerupBannerImage(found1[20]), obj);
             };
             const intl27 = tmp50(tmp51[18]).intl;
@@ -374,7 +401,8 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
       } else {
         if (tmp50(tmp51[14]).GuildPowerupNotificationPopoutType.GAME_SERVER_HOSTING_AVAILABLE !== type) {
           if (tmp50(tmp51[14]).GuildPowerupNotificationPopoutType.GAME_SERVER_HOSTING_GUILD_ELIGIBLE !== type) {
-            const GAME_SERVER_HOSTING_ENABLED = tmp50(tmp51[14]).GuildPowerupNotificationPopoutType.GAME_SERVER_HOSTING_ENABLED;
+            const GAME_SERVER_HOSTING_ENABLED = tmp50(tmp51[14]).GuildPowerupNotificationPopoutType
+              .GAME_SERVER_HOSTING_ENABLED;
           }
         }
         return obj;
@@ -384,4 +412,4 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
   let obj2 = _require(stateFromStores[10]);
   const tmp4 = importDefault;
   const coachmark = _require(stateFromStores[29]).useCoachmark(targetRef, memo);
-};
+}

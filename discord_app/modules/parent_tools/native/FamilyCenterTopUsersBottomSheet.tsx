@@ -43,9 +43,12 @@ export default function FamilyCenterTopUsersBottomSheet(topUserActivities) {
   obj = { variant: "text-md/bold", style: callback3().header, children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault.BxbvS7);
-  const items = [callback(Text.Text, obj), ];
-  obj = { hasIcons: true, children: topUserActivities.map((userActivity) => callback(closure_7, { userActivity }, userActivity.user_id)) };
+  const items = [callback(Text.Text, obj)];
+  obj = {
+    hasIcons: true,
+    children: topUserActivities.map((userActivity) => callback(closure_7, { userActivity }, userActivity.user_id)),
+  };
   items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);
   obj[0] = items;
   return callback2(ActionSheet.ActionSheet, obj);
-};
+}

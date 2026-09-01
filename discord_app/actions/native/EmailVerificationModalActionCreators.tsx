@@ -20,11 +20,15 @@ export default {
       expandEventPropertiesDefault.track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED);
       const obj = expandEventPropertiesDefault;
     }
-    _modDef4723.pushLazy(asyncRequireImpl(7688, dependencyMap.paths), { isChangeEmail: flag }, EMAIL_VERIFICATION_MODAL_KEY);
+    _modDef4723.pushLazy(
+      asyncRequireImpl(7688, dependencyMap.paths),
+      { isChangeEmail: flag },
+      EMAIL_VERIFICATION_MODAL_KEY,
+    );
   },
   close() {
     dispatcherDefault.wait(() => {
       callback(table[2]).popWithKey(closure_4);
     });
-  }
+  },
 };

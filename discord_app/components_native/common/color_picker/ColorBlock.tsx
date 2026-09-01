@@ -7,7 +7,15 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let obj = { colorBlock: null };
-obj = { minWidth: 44, height: 44, borderRadius: ThemesDefault.radii.xl, marginHorizontal: 12, marginVertical: 8, justifyContent: "center", alignItems: "center" };
+obj = {
+  minWidth: 44,
+  height: 44,
+  borderRadius: ThemesDefault.radii.xl,
+  marginHorizontal: 12,
+  marginVertical: 8,
+  justifyContent: "center",
+  alignItems: "center",
+};
 obj[0] = obj;
 const styles = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((color) => {
@@ -22,7 +30,14 @@ const memoResult = importAllResult.memo((color) => {
   let obj = color(688);
   const v = obj.int2hsv(color).v;
   if (null != onSelect) {
-    obj = { accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, style: null, children: null };
+    obj = {
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      accessibilityState: null,
+      onPress: null,
+      style: null,
+      children: null,
+    };
     let tmp2Result = tmp2(4326);
     tmp2Result = tmp2(688);
     obj[1] = tmp2Result.hexToColorName(tmp2Result.int2hex(color), true);
@@ -32,7 +47,7 @@ const memoResult = importAllResult.memo((color) => {
     obj[3] = function onPress() {
       return onSelect(color);
     };
-    const items = [tmp.colorBlock, style, ];
+    const items = [tmp.colorBlock, style];
     obj1 = { backgroundColor: null };
     obj1[0] = tmp2(688).int2hex(color);
     items[2] = obj1;
@@ -55,7 +70,7 @@ const memoResult = importAllResult.memo((color) => {
     const tmp2Result1 = tmp2(688);
   } else {
     const obj3 = { style: null, children: null };
-    const items1 = [tmp.colorBlock, style, ];
+    const items1 = [tmp.colorBlock, style];
     const obj4 = { backgroundColor: null };
     obj4[0] = tmp2(688).int2hex(color);
     items1[2] = obj4;

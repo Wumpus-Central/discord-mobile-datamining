@@ -25,7 +25,11 @@ function LimitAndDurationInfo(channel) {
       let obj = channel(closure_1_2[19]);
       isGuildStageVoiceResult = obj.getStageHasMedia(tmp.id);
     }
-    obj = { isLocked: !closure_1_5.can(closure_1_9.CONNECT, tmp), hasVideo: closure_1_7.hasVideo(channel.id), hasMedia: isGuildStageVoiceResult };
+    obj = {
+      isLocked: !closure_1_5.can(closure_1_9.CONNECT, tmp),
+      hasVideo: closure_1_7.hasVideo(channel.id),
+      hasMedia: isGuildStageVoiceResult,
+    };
     return obj;
   });
   ({ hasVideo, hasMedia } = stateFromStoresObject);
@@ -74,16 +78,35 @@ const result = require("set").fileFinishedImporting("modules/guild_sidebar/nativ
 
 export default function ChannelInfo(channel) {
   channel = channel.channel;
-  ({ isChannelCollapsed, voiceStates, enableConnectedUserLimit, enableActivities, muted, isSubscriptionGated, needSubscriptionToAccess } = channel);
+  ({
+    isChannelCollapsed,
+    voiceStates,
+    enableConnectedUserLimit,
+    enableActivities,
+    muted,
+    isSubscriptionGated,
+    needSubscriptionToAccess,
+  } = channel);
   let obj = channel(589);
   const items = [closure_4, closure_6, closure_3];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ guild: closure_1_4.getGuild(channel.guild_id), mentionsCount: closure_1_6.getMentionCount(channel.id), isMentionLowImportance: closure_1_6.getIsMentionLowImportance(channel.id), isNewChannel: closure_1_3.shouldIndicateNewChannel(channel.guild_id, channel.id) }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    guild: closure_1_4.getGuild(channel.guild_id),
+    mentionsCount: closure_1_6.getMentionCount(channel.id),
+    isMentionLowImportance: closure_1_6.getIsMentionLowImportance(channel.id),
+    isNewChannel: closure_1_3.shouldIndicateNewChannel(channel.guild_id, channel.id),
+  }));
   ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
   const tmp5 = useEmbeddedAppsDefault(channel);
   obj1 = channel(7628);
   const postsWithUnreadsCount = obj1.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
   if (showChannelBadgeDefault({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
-    obj = { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null };
+    obj = {
+      mentionCount: null,
+      isMentionLowImportance: null,
+      isNewChannel: null,
+      postsWithUnreadsCount: null,
+      muted: null,
+    };
     obj[0] = mentionsCount;
     obj[1] = stateFromStoresObject.isMentionLowImportance;
     obj[2] = isNewChannel;
@@ -93,7 +116,13 @@ export default function ChannelInfo(channel) {
     }
     obj[3] = tmp18;
     obj[4] = muted;
-    let tmp11Result = jsx(tmp4(15817), { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null });
+    let tmp11Result = jsx(tmp4(15817), {
+      mentionCount: null,
+      isMentionLowImportance: null,
+      isNewChannel: null,
+      postsWithUnreadsCount: null,
+      muted: null,
+    });
     const tmp16 = jsx;
     const tmp4Result = tmp4(15817);
   } else {
@@ -154,4 +183,4 @@ export default function ChannelInfo(channel) {
     }
   }
   return tmp11Result;
-};
+}

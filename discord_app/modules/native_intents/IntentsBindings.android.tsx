@@ -10,22 +10,10 @@ export default {
   hasUserActivity() {
     return false;
   },
-  clearSearchIndex() {
-
-  },
-  deleteSearchDomains(items) {
-
-  },
-  deleteSearchItems(items) {
-
-  },
-  indexDomains(items) {
-
-  },
-  resignActivity() {
-
-  },
-  setActivity(arg0) {
-
-  }
+  clearSearchIndex() {},
+  deleteSearchDomains(items) {},
+  deleteSearchItems(items) {},
+  indexDomains(items) {},
+  resignActivity() {},
+  setActivity(arg0) {},
 };

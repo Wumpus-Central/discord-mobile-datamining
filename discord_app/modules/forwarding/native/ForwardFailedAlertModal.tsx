@@ -24,4 +24,4 @@ export default function ForwardFailedAlertModal(message) {
   obj[2] = failedDestinations;
   obj[3] = callback;
   return jsx(failedDestinations(forwardOptions[3]), { count: failedDestinations.length });
-};
+}

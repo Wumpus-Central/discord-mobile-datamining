@@ -9,7 +9,13 @@ import createCacheKey from "../../Styles/native/createStyles.tsx";
 const require = arg1;
 let closure_3 = ["title", "description", "illustration", "graphic", "gradientColor", "actions"];
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { content: { paddingHorizontal: 20, position: "relative" }, title: { textAlign: "center" }, description: { textAlign: "center" }, illustration: { alignSelf: "stretch", alignItems: "center" }, graphic: null };
+createCacheKey = {
+  content: { paddingHorizontal: 20, position: "relative" },
+  title: { textAlign: "center" },
+  description: { textAlign: "center" },
+  illustration: { alignSelf: "stretch", alignItems: "center" },
+  graphic: null,
+};
 createCacheKey = { alignSelf: "center", maxWidth: ThemesDefault.modules.mobile.PROMO_SHEET_GRAPHIC_MAX_WIDTH };
 createCacheKey[4] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
@@ -20,13 +26,23 @@ export const PromoSheet = function PromoSheet(arg0) {
   ({ title, actions } = arg0);
   const tmp2 = callback2();
   const items = [gradientColor];
-  const memo = React.useMemo(() => null != gradientColor ? ((arg0) => {
-    let obj = {};
-    const merged = Object.assign(arg0);
-    obj = { offsetBottom: 0.25, color: closure_0, backgroundColor: closure_1_1(closure_1_2[5]).colors.MOBILE_ACTIONSHEET_BACKGROUND };
-    obj.children = closure_1_7(closure_1_0(closure_1_2[6]).ExpressiveGradient, obj);
-    return closure_1_7(closure_1_6, obj);
-  }) : undefined, items);
+  const memo = React.useMemo(
+    () =>
+      null != gradientColor
+        ? (arg0) => {
+            let obj = {};
+            const merged = Object.assign(arg0);
+            obj = {
+              offsetBottom: 0.25,
+              color: closure_0,
+              backgroundColor: closure_1_1(closure_1_2[5]).colors.MOBILE_ACTIONSHEET_BACKGROUND,
+            };
+            obj.children = closure_1_7(closure_1_0(closure_1_2[6]).ExpressiveGradient, obj);
+            return closure_1_7(closure_1_6, obj);
+          }
+        : undefined,
+    items,
+  );
   let obj = {};
   let merged = Object.assign(callback(arg0, closure_3));
   obj.startExpanded = true;
@@ -46,8 +62,15 @@ export const PromoSheet = function PromoSheet(arg0) {
       tmp4Result = tmp4(View, obj);
     }
   }
-  const items1 = [tmp4Result, , ];
-  const items2 = [closure_7(gradientColor(4474).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp2.title, children: title }), ];
+  const items1 = [tmp4Result, ,];
+  const items2 = [
+    closure_7(gradientColor(4474).Text, {
+      variant: "heading-xl/semibold",
+      color: "mobile-text-heading-primary",
+      style: tmp2.title,
+      children: title,
+    }),
+  ];
   tmp4Result = null;
   if (null != description) {
     const obj2 = { variant: "redesign/heading-18/medium", color: "text-subtle", style: null, children: null };

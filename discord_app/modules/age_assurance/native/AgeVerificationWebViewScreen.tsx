@@ -10,15 +10,37 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-({ AgeVerificationIncodeResultStatus: error, buildIncodeFallbackSessionInjection: closure_8, parseIncodeWebViewMessage: c9 } = AGE_VERIFICATION_INCODE_PATH);
+({
+  AgeVerificationIncodeResultStatus: error,
+  buildIncodeFallbackSessionInjection: closure_8,
+  parseIncodeWebViewMessage: c9,
+} = AGE_VERIFICATION_INCODE_PATH);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = new timestampDefault("AgeVerificationWebViewScreen");
 createCacheKey = { container: null, loadingOverlay: null, webView: null };
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 const tmp4 = new timestampDefault("AgeVerificationWebViewScreen");
-createCacheKey[1] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-let obj1 = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[1] = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
+let obj1 = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 createCacheKey[2] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 const obj2 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -92,46 +114,50 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
         if ("capture_complete" === tmp4.kind) {
           const result = webviewUrl(onClose[11]).registerIncodeInterview(tmp3.interviewId);
           const obj3 = webviewUrl(onClose[11]);
-          result.then(() => {
-            const current = ref.current;
-            let isAgeVerifiedResult = !current;
-            if (!current) {
-              isAgeVerifiedResult = closure_1_0(closure_1_2[10]).isAgeVerified();
-              const obj = closure_1_0(closure_1_2[10]);
-            }
-            if (isAgeVerifiedResult) {
-              callback2();
-            }
-          }).catch((error) => {
-            closure_1_12.warn("Failed to register Incode interview from WebView", { error });
-            if (!ref.current) {
-              tmp2.current = true;
-              callback();
-            }
-          });
+          result
+            .then(() => {
+              const current = ref.current;
+              let isAgeVerifiedResult = !current;
+              if (!current) {
+                isAgeVerifiedResult = closure_1_0(closure_1_2[10]).isAgeVerified();
+                const obj = closure_1_0(closure_1_2[10]);
+              }
+              if (isAgeVerifiedResult) {
+                callback2();
+              }
+            })
+            .catch((error) => {
+              closure_1_12.warn("Failed to register Incode interview from WebView", { error });
+              if (!ref.current) {
+                tmp2.current = true;
+                callback();
+              }
+            });
         } else if ("fallback_request" === tmp4.kind) {
           let obj = webviewUrl(onClose[11]);
           obj = { previousInterviewId: null };
           obj[0] = tmp4.previousInterviewId;
           const incodeSessionBootstrap = obj.requestIncodeSessionBootstrap(obj);
-          incodeSessionBootstrap.then((incode_parameters) => {
-            incode_parameters = incode_parameters.incode_parameters;
-            let session_token;
-            if (incode_parameters != null) {
-              session_token = incode_parameters.session_token;
-            }
-            if (null != session_token) {
-              if (null != incode_parameters.interview_id) {
-                const obj = { sessionToken: null, interviewId: null };
-                ({ session_token: obj[0], interview_id: obj[1] } = incode_parameters);
-                callback3(obj);
+          incodeSessionBootstrap
+            .then((incode_parameters) => {
+              incode_parameters = incode_parameters.incode_parameters;
+              let session_token;
+              if (incode_parameters != null) {
+                session_token = incode_parameters.session_token;
               }
-            }
-            callback3({ error: true });
-          }).catch((error) => {
-            closure_1_12.warn("Failed to bootstrap Incode fallback session from WebView", { error });
-            callback3({ error: true });
-          });
+              if (null != session_token) {
+                if (null != incode_parameters.interview_id) {
+                  const obj = { sessionToken: null, interviewId: null };
+                  ({ session_token: obj[0], interview_id: obj[1] } = incode_parameters);
+                  callback3(obj);
+                }
+              }
+              callback3({ error: true });
+            })
+            .catch((error) => {
+              closure_1_12.warn("Failed to bootstrap Incode fallback session from WebView", { error });
+              callback3({ error: true });
+            });
         } else if (tmp4.status === callback.COMPLETED) {
           callback1();
         } else if (!ref.current) {
@@ -166,12 +192,24 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
         const obj = onComplete(onClose[12]);
       }
       return flag2;
-    } catch (err) {
-    }
+    } catch (err) {}
   }, items5);
   const tmp15 = callback();
   obj = { style: tmp15.container, children: null };
-  obj = { ref, allowsInlineMediaPlayback: true, mediaCapturePermissionGrantType: "grant", javaScriptEnabled: true, source: { uri: webviewUrl }, onShouldStartLoadWithRequest: null, onMessage: null, onError: null, onLoadEnd: null, injectedJavaScriptBeforeContentLoaded: null, style: null, containerStyle: null };
+  obj = {
+    ref,
+    allowsInlineMediaPlayback: true,
+    mediaCapturePermissionGrantType: "grant",
+    javaScriptEnabled: true,
+    source: { uri: webviewUrl },
+    onShouldStartLoadWithRequest: null,
+    onMessage: null,
+    onError: null,
+    onLoadEnd: null,
+    injectedJavaScriptBeforeContentLoaded: null,
+    style: null,
+    containerStyle: null,
+  };
   const tmp16 = closure_11;
   const tmp2 = ref(React.useState(true), 2);
   const tmp8 = webviewUrl;
@@ -192,7 +230,7 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
   };
   obj[9] = webviewUrl.injectedJavaScriptBeforeContentLoaded;
   ({ webView: obj3[10], webView: obj3[11] } = tmp15);
-  const items6 = [memo(tmp19, obj), ];
+  const items6 = [memo(tmp19, obj)];
   if (tmp18Result) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp15.loadingOverlay;
@@ -202,4 +240,4 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
   items6[1] = tmp18Result;
   obj[1] = items6;
   return tmp16(closure_5, obj);
-};
+}

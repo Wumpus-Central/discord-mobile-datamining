@@ -23,19 +23,21 @@ createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWE
 createCacheKey[3] = { marginTop: 8, marginBottom: 16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 };
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnreadActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/notifications/settings/native/NotificationSettingsMessageUnreadActionSheet.tsx",
+);
 
 export default function NotificationSettingsMessageUnreadActionSheet(defaultValue) {
   const tmp = callback3();
   let obj = { startExpanded: true, backgroundStyles: tmp.sheet, children: null };
   obj = { style: tmp.header, children: callback(NotificationSettingsMockChannelsDefault, obj) };
   obj = { unreadSetting: defaultValue.value };
-  const items = [callback(View, obj), ];
+  const items = [callback(View, obj)];
   obj1 = { style: tmp.content, children: null };
   const obj2 = { variant: "text-sm/semibold", children: null };
   const intl = getSystemLocale.intl;
   obj2[1] = intl.string(getSystemLocale.t.Tqd1Af);
-  const items1 = [callback(Text.Text, obj2), , ];
+  const items1 = [callback(Text.Text, obj2), ,];
   const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl2 = getSystemLocale.intl;
   obj3[2] = intl2.string(getSystemLocale.t.RpQgm5);
@@ -46,8 +48,13 @@ export default function NotificationSettingsMessageUnreadActionSheet(defaultValu
   const intl3 = getSystemLocale.intl;
   obj6[0] = intl3.string(getSystemLocale.t["HVah/3"]);
   obj6[1] = UnreadSetting.ALL_MESSAGES;
-  const items2 = [callback(TableRadioRow.TableRadioRow, obj6), ];
-  const obj7 = { subLabel: defaultValue.disabledMentionOnlyWithReason, disabled: null != defaultValue.disabledMentionOnlyWithReason, label: null, value: null };
+  const items2 = [callback(TableRadioRow.TableRadioRow, obj6)];
+  const obj7 = {
+    subLabel: defaultValue.disabledMentionOnlyWithReason,
+    disabled: null != defaultValue.disabledMentionOnlyWithReason,
+    label: null,
+    value: null,
+  };
   const intl4 = getSystemLocale.intl;
   obj7[2] = intl4.string(getSystemLocale.t["tu+ZWJ"]);
   obj7[3] = UnreadSetting.ONLY_MENTIONS;
@@ -59,4 +66,4 @@ export default function NotificationSettingsMessageUnreadActionSheet(defaultValu
   items[1] = callback2(View, obj1);
   obj[2] = items;
   return callback2(Background.BottomSheet, obj);
-};
+}

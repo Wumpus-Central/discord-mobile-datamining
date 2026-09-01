@@ -27,4 +27,4 @@ export default function getActivityPlatformDisplayName(type) {
   } else {
     return type.name;
   }
-};
+}

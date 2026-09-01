@@ -22,33 +22,37 @@ export const useGameMentionsAsPlainText = function useGameMentionsAsPlainText(st
   const obj = _require(memo[4]);
   const items1 = [closure_3, closure_4];
   const items2 = [state, memo];
-  return _require(memo[5]).useStateFromStores(items1, () => {
-    if (!obj.isNullOrEmpty(nsfwAllowed)) {
-      if (0 !== memo.length) {
-        const currentUser = closure_1_4.getCurrentUser();
-        nsfwAllowed = undefined;
-        if (currentUser != null) {
-          nsfwAllowed = currentUser.nsfwAllowed;
-        }
-        return str.replace(closure_1_6, (arg0, closure_0) => {
-          const game = closure_1_3.getGame(closure_0);
-          if (obj.isGameProfileObscured(game, nsfwAllowed)) {
-            const intl2 = tmp2(tmp3[8]).intl;
-            let stringResult = intl2.string(tmp2(tmp3[8]).t["11pdXZ"]);
-          } else {
-            stringResult = undefined;
-            if (game != null) {
-              stringResult = game.name;
-            }
-            if (stringResult == null) {
-              const intl = tmp2(tmp3[8]).intl;
-              stringResult = intl.string(tmp2(tmp3[8]).t["11pdXZ"]);
-            }
+  return _require(memo[5]).useStateFromStores(
+    items1,
+    () => {
+      if (!obj.isNullOrEmpty(nsfwAllowed)) {
+        if (0 !== memo.length) {
+          const currentUser = closure_1_4.getCurrentUser();
+          nsfwAllowed = undefined;
+          if (currentUser != null) {
+            nsfwAllowed = currentUser.nsfwAllowed;
           }
-          return stringResult;
-        });
+          return str.replace(closure_1_6, (arg0, closure_0) => {
+            const game = closure_1_3.getGame(closure_0);
+            if (obj.isGameProfileObscured(game, nsfwAllowed)) {
+              const intl2 = tmp2(tmp3[8]).intl;
+              let stringResult = intl2.string(tmp2(tmp3[8]).t["11pdXZ"]);
+            } else {
+              stringResult = undefined;
+              if (game != null) {
+                stringResult = game.name;
+              }
+              if (stringResult == null) {
+                const intl = tmp2(tmp3[8]).intl;
+                stringResult = intl.string(tmp2(tmp3[8]).t["11pdXZ"]);
+              }
+            }
+            return stringResult;
+          });
+        }
       }
-    }
-    return nsfwAllowed;
-  }, items2);
+      return nsfwAllowed;
+    },
+    items2,
+  );
 };

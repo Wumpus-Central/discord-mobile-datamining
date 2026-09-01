@@ -49,16 +49,33 @@ function eachTraceCall(calls, arg1) {
     }
   }
 }
-let closure_2 = ["guilds", "merged_presences", "merged_members", "read_state", "private_channels", "user_guild_settings", "user_settings", "user_settings_proto", "experiments", "guild_experiments", "relationships", "users"];
+let closure_2 = [
+  "guilds",
+  "merged_presences",
+  "merged_members",
+  "read_state",
+  "private_channels",
+  "user_guild_settings",
+  "user_settings",
+  "user_settings_proto",
+  "experiments",
+  "guild_experiments",
+  "relationships",
+  "users",
+];
 let closure_3 = ["features"];
 let closure_4 = ["threads", "guild_scheduled_events"];
 ({ AnalyticEvents: error, ChannelTypes: closure_8 } = ME);
 let result = require("set").fileFinishedImporting("modules/gateway/GatewaySocketAnalytics.tsx");
 
-export function reportDevtoolsEvent() {
-
-}
-export const logReadyPayloadReceived = function logReadyPayloadReceived(socket, data, nowResult, compressionAnalytics, readyPayloadByteSizeAnalytics) {
+export function reportDevtoolsEvent() {}
+export const logReadyPayloadReceived = function logReadyPayloadReceived(
+  socket,
+  data,
+  nowResult,
+  compressionAnalytics,
+  readyPayloadByteSizeAnalytics,
+) {
   const tmp = (function getReadyPayloadTraceAnalytics(data) {
     const obj = {};
     try {
@@ -96,8 +113,7 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(socket, 
         }
       });
       return obj;
-    } catch (err) {
-    }
+    } catch (err) {}
   })(data);
   if (null != compressionAnalytics) {
     let obj = isTracingDefault;
@@ -139,7 +155,13 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(socket, 
   obj.duration_ms_since_identify_start = nowResult - socket.identifyStartTime;
   obj.duration_ms_since_connection_start = nowResult - socket.connectionStartTime;
   obj.duration_ms_since_emit_start = Date.now() - nowResult;
-  ({ hasConnectedOnce: obj3.is_reconnect, isFastConnect: obj3.is_fast_connect, didForceClearGuildHashes: obj3.did_force_clear_guild_hashes, identifyUncompressedByteSize: obj3.identify_uncompressed_byte_size, identifyCompressedByteSize: obj3.identify_compressed_byte_size } = socket);
+  ({
+    hasConnectedOnce: obj3.is_reconnect,
+    isFastConnect: obj3.is_fast_connect,
+    didForceClearGuildHashes: obj3.did_force_clear_guild_hashes,
+    identifyUncompressedByteSize: obj3.identify_uncompressed_byte_size,
+    identifyCompressedByteSize: obj3.identify_compressed_byte_size,
+  } = socket);
   let flag = socket.analytics.hadCacheAtStartup;
   if (flag == null) {
     flag = false;
@@ -225,13 +247,13 @@ export const getConnectionPath = function getConnectionPath(_trace) {
       }
       return str;
     }
-  } catch (err) {
-  }
+  } catch (err) {}
 };
 export const getReadyPayloadByteSizeAnalytics = function getReadyPayloadByteSizeAnalytics(data) {
   if (Math.random() <= 0.01) {
     const _Date2 = Date;
-    ({ guilds, merged_presences, merged_members, user_settings, user_settings_proto, experiments, guild_experiments } = data);
+    ({ guilds, merged_presences, merged_members, user_settings, user_settings_proto, experiments, guild_experiments } =
+      data);
     const timestamp = Date.now();
     ({ read_state, private_channels, user_guild_settings, relationships, users } = data);
     let obj = items5(data, items2);
@@ -292,7 +314,28 @@ export const getReadyPayloadByteSizeAnalytics = function getReadyPayloadByteSize
     if (friends == null) {
       friends = [];
     }
-    obj = { presences_size: null, users_size: null, read_states_size: null, private_channels_size: null, user_settings_size: null, experiments_size: null, user_guild_settings_size: null, relationships_size: null, remaining_data_size: null, guild_channels_size: null, guild_members_size: null, guild_presences_size: null, guild_roles_size: null, guild_emojis_size: null, guild_threads_size: null, guild_stickers_size: null, guild_events_size: null, guild_features_size: null, guild_remaining_data_size: null, size_metrics_duration_ms: null };
+    obj = {
+      presences_size: null,
+      users_size: null,
+      read_states_size: null,
+      private_channels_size: null,
+      user_settings_size: null,
+      experiments_size: null,
+      user_guild_settings_size: null,
+      relationships_size: null,
+      remaining_data_size: null,
+      guild_channels_size: null,
+      guild_members_size: null,
+      guild_presences_size: null,
+      guild_roles_size: null,
+      guild_emojis_size: null,
+      guild_threads_size: null,
+      guild_stickers_size: null,
+      guild_events_size: null,
+      guild_features_size: null,
+      guild_remaining_data_size: null,
+      size_metrics_duration_ms: null,
+    };
     obj[0] = JSON.stringify(friends).length;
     const _JSON = JSON;
     obj[1] = JSON.stringify(users).length;
@@ -358,7 +401,16 @@ export const getReadyPayloadByteSizeAnalytics = function getReadyPayloadByteSize
 export const logGatewayConnected = function logGatewayConnected(gatewayUrl) {
   ({ socket, altGateway, now } = gatewayUrl);
   let obj = expandEventPropertiesDefault;
-  obj = { num_failed_connect_attempts: socket.failedConnectAttempts, gateway_url: gatewayUrl.gatewayUrl, assigned_to_alt_gateway: altGateway.isAssignedToAltGateway(), did_fall_back_from_alt_gateway: altGateway.getDidFallBack(), is_reconnect: socket.hasConnectedOnce, is_fast_connect: socket.isFastConnect, duration_ms_since_first_connect_attempt: now - socket.firstConnectAttemptStartTime, duration_ms_since_connect_attempt_start: now - socket.connectionStartTime };
+  obj = {
+    num_failed_connect_attempts: socket.failedConnectAttempts,
+    gateway_url: gatewayUrl.gatewayUrl,
+    assigned_to_alt_gateway: altGateway.isAssignedToAltGateway(),
+    did_fall_back_from_alt_gateway: altGateway.getDidFallBack(),
+    is_reconnect: socket.hasConnectedOnce,
+    is_fast_connect: socket.isFastConnect,
+    duration_ms_since_first_connect_attempt: now - socket.firstConnectAttemptStartTime,
+    duration_ms_since_connect_attempt_start: now - socket.connectionStartTime,
+  };
   obj.track(constants.GATEWAY_CONNECTED, obj, { logEventProperties: true });
 };
 export const createResumeAnalytics = function createResumeAnalytics(arg0) {
@@ -366,7 +418,16 @@ export const createResumeAnalytics = function createResumeAnalytics(arg0) {
   if (arg0 == null) {
     num = 0;
   }
-  return { connectTime: num, numEvents: 0, largestWaitTime: 0, dispatchTime: 0, totalWaitTime: 0, initialWaitTime: 0, startTime: performance.now(), lastUpdateTime: performance.now() };
+  return {
+    connectTime: num,
+    numEvents: 0,
+    largestWaitTime: 0,
+    dispatchTime: 0,
+    totalWaitTime: 0,
+    initialWaitTime: 0,
+    startTime: performance.now(),
+    lastUpdateTime: performance.now(),
+  };
 };
 export const logResumeAnalytics = function logResumeAnalytics(resumeAnalytics) {
   currentUser = currentUser.getCurrentUser();
@@ -380,7 +441,15 @@ export const logResumeAnalytics = function logResumeAnalytics(resumeAnalytics) {
     tmp2 = Math.random() < 0.5;
   }
   if (!tmp2) {
-    const obj = { connect_time_ms: null, resume_time_ms: null, num_events: null, largest_wait_time_ms: null, initial_wait_time_ms: null, total_wait_time_ms: null, total_dispatch_time_ms: null };
+    const obj = {
+      connect_time_ms: null,
+      resume_time_ms: null,
+      num_events: null,
+      largest_wait_time_ms: null,
+      initial_wait_time_ms: null,
+      total_wait_time_ms: null,
+      total_dispatch_time_ms: null,
+    };
     obj[0] = resumeAnalytics.connectTime;
     const _Math2 = Math;
     const _performance = performance;

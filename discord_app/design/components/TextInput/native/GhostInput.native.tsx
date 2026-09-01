@@ -22,7 +22,9 @@ let closure_6 = createCacheKey.createStyles(() => {
     str2 = "default";
   }
   const input = {};
-  const merged = Object.assign({ md: Text.TextStyleSheet["text-md/semibold"], lg: Text.TextStyleSheet["text-lg/semibold"] }[str]);
+  const merged = Object.assign(
+    { md: Text.TextStyleSheet["text-md/semibold"], lg: Text.TextStyleSheet["text-lg/semibold"] }[str],
+  );
   if ("error" === str2) {
     let TEXT_DEFAULT = ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL;
   } else {
@@ -48,7 +50,7 @@ export const GhostInput = function GhostInput(size) {
   obj = {};
   const merged = Object.assign(size);
   obj.labelId = fieldLabelA11yNative.labelId;
-  const items = [size.containerStyle, ];
+  const items = [size.containerStyle];
   let prop;
   if (tmp5) {
     prop = tmp4.centeredContainerStyle;

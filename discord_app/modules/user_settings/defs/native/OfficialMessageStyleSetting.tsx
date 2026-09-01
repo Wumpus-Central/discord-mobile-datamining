@@ -19,7 +19,7 @@ function useOfficialMessageStyleSettingOptions() {
     let obj = { label: null, value: "default" };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.ERaS6f);
-    const items = [obj, , , ];
+    const items = [obj, , ,];
     obj = { label: null, value: "no_text_color" };
     const intl2 = callback(1236).intl;
     obj[0] = intl2.string(callback(1236).t.JKfipk);
@@ -43,7 +43,7 @@ createToggle = {
   parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue: useOfficialMessageStyleSettingValue,
   onValueChange: onOfficialMessageStyleSettingValueChange,
-  useOptions: useOfficialMessageStyleSettingOptions
+  useOptions: useOfficialMessageStyleSettingOptions,
 };
 createToggle = createToggle.createRadio(createToggle);
 let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/OfficialMessageStyleSetting.tsx");

@@ -15,7 +15,20 @@ let c4 = importAllResult;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let c12 = 188;
 let closure_13 = createCacheKey.createStyles(() => {
-  let obj = { tile: null, card: null, cardImage: null, previewVideo: null, badge: null, badgeContent: null, badgeText: null, startButton: null, cardFooter: null, advertiserRow: null, advertiserName: null, advertiserIcon: null };
+  let obj = {
+    tile: null,
+    card: null,
+    cardImage: null,
+    previewVideo: null,
+    badge: null,
+    badgeContent: null,
+    badgeText: null,
+    startButton: null,
+    cardFooter: null,
+    advertiserRow: null,
+    advertiserName: null,
+    advertiserIcon: null,
+  };
   obj = { gap: ThemesDefault.space.PX_12 };
   obj[0] = obj;
   obj = { width: c12, height: 313, overflow: "hidden", padding: 0 };
@@ -24,17 +37,45 @@ let closure_13 = createCacheKey.createStyles(() => {
   obj[2] = {};
   const merged1 = Object.assign(closure_6.absoluteFillObject);
   obj[3] = {};
-  obj[4] = { position: "absolute", top: ThemesDefault.space.PX_12, left: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, color: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
+  obj[4] = {
+    position: "absolute",
+    top: ThemesDefault.space.PX_12,
+    left: ThemesDefault.space.PX_12,
+    backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT,
+    borderRadius: ThemesDefault.radii.round,
+    paddingHorizontal: ThemesDefault.space.PX_8,
+    paddingVertical: ThemesDefault.space.PX_4,
+    color: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT,
+  };
   obj1 = {};
   const obj2 = {};
-  const obj3 = { position: "absolute", top: ThemesDefault.space.PX_12, left: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, color: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
+  const obj3 = {
+    position: "absolute",
+    top: ThemesDefault.space.PX_12,
+    left: ThemesDefault.space.PX_12,
+    backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT,
+    borderRadius: ThemesDefault.radii.round,
+    paddingHorizontal: ThemesDefault.space.PX_8,
+    paddingVertical: ThemesDefault.space.PX_4,
+    color: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT,
+  };
   obj[5] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
   const obj4 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
   obj[6] = { textTransform: "uppercase", color: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
   const obj5 = { textTransform: "uppercase", color: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
-  obj[7] = { position: "absolute", bottom: ThemesDefault.space.PX_8, left: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8 };
+  obj[7] = {
+    position: "absolute",
+    bottom: ThemesDefault.space.PX_8,
+    left: ThemesDefault.space.PX_8,
+    right: ThemesDefault.space.PX_8,
+  };
   obj[8] = { flexDirection: "column", alignItems: "flex-start", maxWidth: c12 };
-  const obj6 = { position: "absolute", bottom: ThemesDefault.space.PX_8, left: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8 };
+  const obj6 = {
+    position: "absolute",
+    bottom: ThemesDefault.space.PX_8,
+    left: ThemesDefault.space.PX_8,
+    right: ThemesDefault.space.PX_8,
+  };
   obj[9] = { flexDirection: "row", gap: ThemesDefault.space.PX_4, alignItems: "center" };
   obj[10] = { flexShrink: 1 };
   obj[11] = { flexShrink: 0, opacity: 0.7 };
@@ -168,13 +209,16 @@ const memoResult = importAllResult.memo((bounty) => {
       closure_8.current = null;
     }
   }, items4);
-  const effect2 = obj1.useEffect(() => () => {
-    if (null != ref.current) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
-    }
-  }, []);
+  const effect2 = obj1.useEffect(
+    () => () => {
+      if (null != ref.current) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(tmp.current);
+        tmp.current = null;
+      }
+    },
+    [],
+  );
   const tmp2Result2 = bounty(isActive[11]);
   [tmp35, c10] = tmp10(obj1.useState("active" === currentState.currentState), 2);
   const effect3 = obj1.useEffect(() => {
@@ -222,9 +266,27 @@ const memoResult = importAllResult.memo((bounty) => {
     }
     return { opacity };
   }, items5);
-  const obj2 = { style: tmp.card, radius: token, onPress: callback, android_ripple: { color: "transparent" }, children: null };
+  const obj2 = {
+    style: tmp.card,
+    radius: token,
+    onPress: callback,
+    android_ripple: { color: "transparent" },
+    children: null,
+  };
   if (tmp42Result) {
-    const obj3 = { accessible: false, importantForAccessibility: "no-hide-descendants", accessibilityRole: "none", onReadyForDisplay: null, source: null, style: null, resizeMode: "cover", repeat: true, muted: true, disableFocus: true, paused: null };
+    const obj3 = {
+      accessible: false,
+      importantForAccessibility: "no-hide-descendants",
+      accessibilityRole: "none",
+      onReadyForDisplay: null,
+      source: null,
+      style: null,
+      resizeMode: "cover",
+      repeat: true,
+      muted: true,
+      disableFocus: true,
+      paused: null,
+    };
     obj3[3] = callback2;
     const obj4 = { uri: null };
     obj4[0] = videoPreview;
@@ -239,7 +301,7 @@ const memoResult = importAllResult.memo((bounty) => {
     tmp42Result = c10(tmp21Result, obj3);
     const tmp42 = c10;
   }
-  const items6 = [tmp42Result, , , ];
+  const items6 = [tmp42Result, , ,];
   const obj5 = { style: items7, onLoad: callback1, source: null, resizeMode: "cover" };
   items7 = [tmp.cardImage, memo];
   tmp21Result = tmp21(tmp3[14]);
@@ -253,7 +315,7 @@ const memoResult = importAllResult.memo((bounty) => {
     obj8[1] = tmp21(tmp3[7]).colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT;
     tmp45Result = tmp45(tmp2(tmp3[15]).CheckmarkSmallBoldIcon, obj8);
   }
-  const items8 = [tmp45Result, ];
+  const items8 = [tmp45Result];
   const obj9 = { variant: "text-xs/bold", style: tmp.badgeText, children: null };
   const intl = tmp2(tmp3[17]).intl;
   const t = tmp2(tmp3[17]).t;
@@ -274,20 +336,30 @@ const memoResult = importAllResult.memo((bounty) => {
   obj10[1] = c10(bounty(isActive[18]).Button, { variant: "secondary-overlay", text: stringResult, onPress: callback });
   items6[3] = c10(closure_7, obj10);
   obj2[4] = items6;
-  const items9 = [c11(bounty(isActive[12]).Card, obj2), ];
+  const items9 = [c11(bounty(isActive[12]).Card, obj2)];
   const obj11 = { style: tmp.cardFooter, children: null };
   const obj12 = { style: tmp.advertiserRow, children: null };
-  const obj13 = { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, style: tmp.advertiserName, children: null };
+  const obj13 = {
+    variant: "text-sm/medium",
+    color: "text-subtle",
+    lineClamp: 1,
+    style: tmp.advertiserName,
+    children: null,
+  };
   let str = bounty.advertiserName;
   if (str == null) {
     str = "";
   }
   obj13[4] = str;
-  const items10 = [c10(bounty(isActive[16]).Text, obj13), ];
+  const items10 = [c10(bounty(isActive[16]).Text, obj13)];
   const tmp10Result = tmp10(obj1.useState("active" === currentState.currentState), 2);
-  items10[1] = c10(bounty(isActive[19]).CircleCheckIcon, { size: "xxs", style: tmp.advertiserIcon, color: index(isActive[7]).colors.ICON_SUBTLE });
+  items10[1] = c10(bounty(isActive[19]).CircleCheckIcon, {
+    size: "xxs",
+    style: tmp.advertiserIcon,
+    color: index(isActive[7]).colors.ICON_SUBTLE,
+  });
   obj12[1] = items10;
-  const items11 = [c11(closure_7, obj12), ];
+  const items11 = [c11(closure_7, obj12)];
   const obj15 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl3 = tmp2(tmp3[17]).intl;
   obj15[2] = intl3.string(bounty(isActive[17]).t.o6FLcF);

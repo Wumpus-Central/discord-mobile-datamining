@@ -25,7 +25,7 @@ const radio = createToggle.createRadio({
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t["9x/RtT"]);
     obj[1] = create.ReactionNotificationType.NOTIFICATIONS_ENABLED;
-    const items = [obj, , ];
+    const items = [obj, ,];
     obj = { label: null, value: null };
     const intl2 = getSystemLocale.intl;
     obj[0] = intl2.string(getSystemLocale.t.fJAbQd);
@@ -37,7 +37,7 @@ const radio = createToggle.createRadio({
     obj[1] = create.ReactionNotificationType.NOTIFICATIONS_DISABLED;
     items[2] = obj;
     return items;
-  }
+  },
 });
 let obj = {
   useTitle() {
@@ -52,7 +52,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t["9x/RtT"]);
     obj[1] = create.ReactionNotificationType.NOTIFICATIONS_ENABLED;
-    const items = [obj, , ];
+    const items = [obj, ,];
     obj = { label: null, value: null };
     const intl2 = getSystemLocale.intl;
     obj[0] = intl2.string(getSystemLocale.t.fJAbQd);
@@ -64,7 +64,7 @@ let obj = {
     obj[1] = create.ReactionNotificationType.NOTIFICATIONS_DISABLED;
     items[2] = obj;
     return items;
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/user_settings/defs/native/ReactionNotificationsSettings.tsx");
 

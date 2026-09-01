@@ -9,7 +9,10 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 require = arg1;
 noopAll;
-let closure_5 = createCacheKey.createStyles({ rocketIconContainer: { position: "absolute", top: -20 }, rocketIcon: { width: 90, height: 90 } });
+let closure_5 = createCacheKey.createStyles({
+  rocketIconContainer: { position: "absolute", top: -20 },
+  rocketIcon: { width: 90, height: 90 },
+});
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppsBanner.tsx");
 
 export default function AppsBaner() {
@@ -21,4 +24,4 @@ export default function AppsBaner() {
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.sjRwMJ);
   return jsx(BannerBaseDefault, { image: <View style={tmp.rocketIcon} />, text: null });
-};
+}

@@ -20,7 +20,7 @@ function _finishMFACheck() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -147,7 +147,7 @@ function _trySubmit() {
     closure_1 = arg1;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, token) {
+    return (function* (arg0, token) {
       closure_2 = tmp4;
       closure_0 = token;
       yield v0(closure_0);

@@ -13,7 +13,12 @@ const View = get_ActivityIndicator.View;
 const VideoToggleState = ME.VideoToggleState;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let obj = { container: null, placeholderImage: null, button: null };
-obj = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_700, padding: 8 };
+obj = {
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_700,
+  padding: 8,
+};
 obj[0] = obj;
 obj[1] = { marginBottom: 8, width: "100%", resizeMode: "contain" };
 obj[2] = { marginTop: 16, alignSelf: "center" };
@@ -37,13 +42,13 @@ export default function UserVideoFailed(arg0) {
     tmp9 = callback(tmp3(9570).StreamFailed, obj);
   }
   obj1 = { children: null };
-  const items1 = [tmp9, ];
+  const items1 = [tmp9];
   const obj2 = { variant: "text-md/semibold", color: "text-strong", children: null };
   const intl = tmp3(1236).intl;
   obj2[2] = intl.string(getSystemLocale.t["z+mxvo"]);
   items1[1] = callback(Text.Text, obj2);
   obj1[0] = items1;
-  const items2 = [closure_7(closure_6, obj1), , ];
+  const items2 = [closure_7(closure_6, obj1), ,];
   const obj3 = { variant: "text-sm/semibold", color: "text-muted", selectable: true, children: null };
   const intl2 = tmp3(1236).intl;
   obj3[3] = intl2.formatToPlainString(getSystemLocale.t.ejOT95, { errorCode: obj.getErrorInfo(avError).errorCode });
@@ -55,11 +60,24 @@ export default function UserVideoFailed(arg0) {
     const intl3 = tmp3(1236).intl;
     obj5[1] = intl3.string(tmp3(1236).t["hxmQ/e"]);
     obj5[2] = function onPress() {
-      const result = closure_1_0(closure_1_2[10]).clearVideoStreamTimeout(closure_1_0(closure_1_2[11]).MediaEngineContextTypes.DEFAULT, closure_0);
+      const result = closure_1_0(closure_1_2[10]).clearVideoStreamTimeout(
+        closure_1_0(closure_1_2[11]).MediaEngineContextTypes.DEFAULT,
+        closure_0,
+      );
       const obj = closure_1_0(closure_1_2[10]);
-      closure_1_1(closure_1_2[12]).setDisableLocalVideo(closure_0, closure_1_4.DISABLED, closure_1_0(closure_1_2[11]).MediaEngineContextTypes.DEFAULT, false);
+      closure_1_1(closure_1_2[12]).setDisableLocalVideo(
+        closure_0,
+        closure_1_4.DISABLED,
+        closure_1_0(closure_1_2[11]).MediaEngineContextTypes.DEFAULT,
+        false,
+      );
       const timerId = setTimeout(() => {
-        closure_1_1(closure_1_2[12]).setDisableLocalVideo(closure_0, closure_1_4.MANUAL_ENABLED, closure_1_0(closure_1_2[11]).MediaEngineContextTypes.DEFAULT, false);
+        closure_1_1(closure_1_2[12]).setDisableLocalVideo(
+          closure_0,
+          closure_1_4.MANUAL_ENABLED,
+          closure_1_0(closure_1_2[11]).MediaEngineContextTypes.DEFAULT,
+          false,
+        );
       }, 1000);
     };
     tmp11Result = tmp11(tmp3(4928).Button, obj5);
@@ -68,4 +86,4 @@ export default function UserVideoFailed(arg0) {
   items2[2] = callback(View, obj4);
   obj.children = items2;
   return closure_7(View, obj);
-};
+}

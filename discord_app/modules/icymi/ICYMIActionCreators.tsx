@@ -11,7 +11,7 @@ export default {
   fetchPopularGuildsFromCategories(stateFromStoresArray1, sum) {
     closure_0 = stateFromStoresArray1;
     closure_1 = sum;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -101,7 +101,7 @@ export default {
       obj = {};
     }
     ({ isInitialLoad: require, isReloading: importDefault, forceRefresh: dependencyMap } = obj);
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -172,7 +172,14 @@ export default {
                 return obj4;
               } else {
                 closure_1 = arg1;
-                const obj5 = { type: "LOAD_ICYMI_DEHYDRATED", items: null, loadId: null, startTime: null, isReloading: null, isInitialLoad: null };
+                const obj5 = {
+                  type: "LOAD_ICYMI_DEHYDRATED",
+                  items: null,
+                  loadId: null,
+                  startTime: null,
+                  isReloading: null,
+                  isInitialLoad: null,
+                };
                 obj5[1] = closure_1.body.items;
                 obj5[2] = closure_1.body.load_id;
                 obj5[3] = closure_0;
@@ -212,7 +219,7 @@ export default {
   gravityJoinGuild(items, icymi_info_modal) {
     closure_0 = items;
     closure_1 = icymi_info_modal;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -297,7 +304,7 @@ export default {
   fetchForNotification(channel_id, message_id) {
     closure_0 = channel_id;
     closure_1 = message_id;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -404,7 +411,7 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -443,7 +450,15 @@ export default {
                 if (0 === messageItems.length) {
                   if (0 === activityItems.length) {
                     let obj5 = closure_1_1(closure_1_2[3]);
-                    obj1 = { type: "LOAD_ICYMI_HYDRATED", requestMessageItems: null, requestActivityItems: null, messageItems: null, activityItems: null, startingIndex: null, endingIndex: null };
+                    obj1 = {
+                      type: "LOAD_ICYMI_HYDRATED",
+                      requestMessageItems: null,
+                      requestActivityItems: null,
+                      messageItems: null,
+                      activityItems: null,
+                      startingIndex: null,
+                      endingIndex: null,
+                    };
                     obj1[1] = [];
                     obj1[2] = [];
                     obj1[3] = [];
@@ -486,7 +501,15 @@ export default {
               throw arg1;
             } else if (arg0 !== 2) {
               closure_2 = arg1;
-              const obj6 = { type: "LOAD_ICYMI_HYDRATED", requestMessageItems: null, requestActivityItems: null, messageItems: null, activityItems: null, startingIndex: null, endingIndex: null };
+              const obj6 = {
+                type: "LOAD_ICYMI_HYDRATED",
+                requestMessageItems: null,
+                requestActivityItems: null,
+                messageItems: null,
+                activityItems: null,
+                startingIndex: null,
+                endingIndex: null,
+              };
               obj6[1] = messageItems;
               obj6[2] = activityItems;
               obj6[3] = closure_2.body.message_items;
@@ -517,7 +540,7 @@ export default {
     })();
   },
   getGuildChannelScores() {
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -598,7 +621,7 @@ export default {
     })();
   },
   getRecommendedGuilds() {
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -679,7 +702,7 @@ export default {
     })();
   },
   getMediaForCurrentStatus() {
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -859,5 +882,5 @@ export default {
     obj = { type: "ICYMI_FEED_PAGE_ACTIONED" };
     const merged = Object.assign(arg0);
     obj.dispatch(obj);
-  }
+  },
 };

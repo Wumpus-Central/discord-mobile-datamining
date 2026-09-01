@@ -46,7 +46,8 @@ function addGuildEventUser(guild_scheduled_event_id) {
   if (null == dependencyMap[guild_scheduled_event_id][guild_scheduled_event_exception_id]) {
     dependencyMap[guild_scheduled_event_id][guild_scheduled_event_exception_id] = {};
   }
-  dependencyMap[guild_scheduled_event_id][guild_scheduled_event_exception_id][guild_scheduled_event_id.user_id] = guild_scheduled_event_id;
+  dependencyMap[guild_scheduled_event_id][guild_scheduled_event_exception_id][guild_scheduled_event_id.user_id] =
+    guild_scheduled_event_id;
   if (flag) {
     let guild_scheduled_event_exception_id2 = guild_scheduled_event_id.guild_scheduled_event_exception_id;
     if (guild_scheduled_event_exception_id2 == null) {
@@ -64,7 +65,10 @@ function addGuildEventUser(guild_scheduled_event_id) {
       if (null == guild_scheduled_event_id.guild_scheduled_event_exception_id) {
         num3 = -1;
       }
-      ({ guild_scheduled_event_id: guild_scheduled_event_id2, guild_scheduled_event_exception_id: guild_scheduled_event_exception_id3 } = guild_scheduled_event_id);
+      ({
+        guild_scheduled_event_id: guild_scheduled_event_id2,
+        guild_scheduled_event_exception_id: guild_scheduled_event_exception_id3,
+      } = guild_scheduled_event_id);
       const sum = num + num3;
       if (guild_scheduled_event_exception_id3 == null) {
         guild_scheduled_event_exception_id3 = SERIES;
@@ -122,7 +126,8 @@ function removeGuildEventUser(guild_scheduled_event_exception_id, arg1) {
       if (null == guild_scheduled_event_exception_id.guild_scheduled_event_exception_id) {
         num3 = 1;
       }
-      ({ guild_scheduled_event_id, guild_scheduled_event_exception_id: guild_scheduled_event_exception_id3 } = guild_scheduled_event_exception_id);
+      ({ guild_scheduled_event_id, guild_scheduled_event_exception_id: guild_scheduled_event_exception_id3 } =
+        guild_scheduled_event_exception_id);
       const sum = num + num3;
       if (guild_scheduled_event_exception_id3 == null) {
         guild_scheduled_event_exception_id3 = SERIES;
@@ -152,7 +157,9 @@ function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
     return false;
   } else {
     const guild_scheduled_event_exceptions = value.guild_scheduled_event_exceptions;
-    const findIndexResult = guild_scheduled_event_exceptions.findIndex((event_exception_id) => event_exception_id.event_exception_id === eventException.event_exception_id);
+    const findIndexResult = guild_scheduled_event_exceptions.findIndex(
+      (event_exception_id) => event_exception_id.event_exception_id === eventException.event_exception_id,
+    );
     const items = [];
     HermesBuiltin.arraySpread(value.guild_scheduled_event_exceptions, 0);
     if (findIndexResult < 0) {
@@ -168,7 +175,11 @@ function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
     return true;
   }
 }
-({ GuildScheduledEventStatus: c4, GuildScheduledEventStatusDone: c5, GuildScheduledEventUserResponses: closure_6 } = GUILD_EVENT_MAX_NAME_LENGTH);
+({
+  GuildScheduledEventStatus: c4,
+  GuildScheduledEventStatusDone: c5,
+  GuildScheduledEventUserResponses: closure_6,
+} = GUILD_EVENT_MAX_NAME_LENGTH);
 let obj = {
   EVENT: "event",
   EVENT_ACTIVE: "active",
@@ -190,7 +201,7 @@ let obj = {
   },
   CHANNEL_EVENT_UPCOMING(channel_id) {
     return "" + channel_id + "-" + obj.EVENT_UPCOMING;
-  }
+  },
 };
 const secondaryIndexMap = new require("version").SecondaryIndexMap(function scheduledEventIndex(status) {
   ({ guild_id, entity_id, channel_id } = status);
@@ -233,8 +244,7 @@ const SERIES = "SERIES";
 let closure_12 = {};
 let closure_13 = {};
 const Store = initializeDefault.Store;
-class GuildScheduledEventStore extends Store {
-}
+class GuildScheduledEventStore extends Store {}
 const prototype = GuildScheduledEventStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3);
@@ -300,7 +310,9 @@ prototype["isInterestedInEventRecurrence"] = function isInterestedInEventRecurre
   if (rsvp1 != null) {
     response2 = rsvp1.response;
   }
-  return response === constants2.INTERESTED && response2 !== constants2.UNINTERESTED || response1 === constants2.INTERESTED;
+  return (
+    (response === constants2.INTERESTED && response2 !== constants2.UNINTERESTED) || response1 === constants2.INTERESTED
+  );
 };
 prototype["getUserCount"] = function getUserCount(arg0, arg1) {
   if (null == arg0) {
@@ -477,7 +489,13 @@ obj = {
     if (null != tmp3) {
       removeGuildEventUser(tmp3, false);
     }
-    obj = { user_id: userId, guild_scheduled_event_id: guildEventId, member: null, guild_scheduled_event_exception_id: null, response: null };
+    obj = {
+      user_id: userId,
+      guild_scheduled_event_id: guildEventId,
+      member: null,
+      guild_scheduled_event_exception_id: null,
+      response: null,
+    };
     member = member.getMember(guildId, userId);
     obj[2] = member;
     obj[3] = guildEventExceptionId;
@@ -486,7 +504,12 @@ obj = {
     return true;
   },
   GUILD_SCHEDULED_EVENT_USER_REMOVE: function handleRsvpDelete(userId) {
-    removeGuildEventUser({ user_id: userId.userId, guild_scheduled_event_id: userId.guildEventId, guild_scheduled_event_exception_id: userId.guildEventExceptionId, response: userId.response });
+    removeGuildEventUser({
+      user_id: userId.userId,
+      guild_scheduled_event_id: userId.guildEventId,
+      guild_scheduled_event_exception_id: userId.guildEventExceptionId,
+      response: userId.response,
+    });
   },
   GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS: function handleFetchGuildEventsForUser(guildScheduledEventUsers) {
     const prop = guildScheduledEventUsers.guildScheduledEventUsers;
@@ -544,7 +567,9 @@ obj = {
     } else {
       const prop = value.guild_scheduled_event_exceptions;
       obj = {};
-      const found = prop.filter((event_exception_id) => event_exception_id.event_exception_id !== eventException.event_exception_id);
+      const found = prop.filter(
+        (event_exception_id) => event_exception_id.event_exception_id !== eventException.event_exception_id,
+      );
       const merged = Object.assign(value);
       obj.guild_scheduled_event_exceptions = found;
       const result = obj.set(obj.id, obj);
@@ -569,7 +594,7 @@ obj = {
   LOGOUT: function handleLogout() {
     secondaryIndexMap.clear();
     return true;
-  }
+  },
 };
 const guildScheduledEventStore = new GuildScheduledEventStore(dispatcherDefault, obj);
 let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventStore.tsx");

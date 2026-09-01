@@ -31,14 +31,20 @@ createToggle = {
       if (arg0) {
         let addFlagResult = obj.addFlag(controlledSetting, FriendSourceFlags.MUTUAL_GUILDS);
       } else {
-        addFlagResult = obj.removeFlags(controlledSetting, FriendSourceFlags.MUTUAL_GUILDS, FriendSourceFlags.NO_RELATION);
+        addFlagResult = obj.removeFlags(
+          controlledSetting,
+          FriendSourceFlags.MUTUAL_GUILDS,
+          FriendSourceFlags.NO_RELATION,
+        );
       }
       const result = ParentalControlledFriendSourceFlags2.updateControlledSetting(selectedTeenId, addFlagResult);
     }
   },
-  unsearchable: true
+  unsearchable: true,
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsFriendRequestsMutualGuildsSetting.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/ParentalControlsFriendRequestsMutualGuildsSetting.tsx",
+);
 
 export default createToggle;

@@ -23,8 +23,7 @@ let c1 = false;
 let c2 = false;
 let closure_3 = {};
 const Store = initializeDefault.Store;
-class GuildBoostSlotStore extends Store {
-}
+class GuildBoostSlotStore extends Store {}
 const prototype = GuildBoostSlotStore.prototype;
 prototype["initialize"] = function initialize() {
   const items = [closure_0];
@@ -34,19 +33,19 @@ Object.defineProperty(prototype, "hasFetched", {
   get: function hasFetched() {
     return c1;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isFetching", {
   get: function isFetching() {
     return c2;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "boostSlots", {
   get: function boostSlots() {
     return closure_3;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getGuildBoostSlot"] = function getGuildBoostSlot(arg0) {
   return table[arg0];
@@ -72,7 +71,7 @@ const guildBoostSlotStore = new GuildBoostSlotStore(dispatcherDefault, {
     closure_3 = {};
     c1 = false;
     c2 = false;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/billing/GuildBoostSlotStore.tsx");
 

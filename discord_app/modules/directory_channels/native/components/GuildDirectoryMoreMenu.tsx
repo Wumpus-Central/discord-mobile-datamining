@@ -5,7 +5,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryMoreMenu.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/directory_channels/native/components/GuildDirectoryMoreMenu.tsx",
+);
 
 export default function GuildDirectoryMoreMenu(entry) {
   entry = entry.entry;
@@ -31,7 +33,15 @@ export default function GuildDirectoryMoreMenu(entry) {
     obj[1] = entry(4436).TrashIcon;
     obj[3] = function handleRemove() {
       let obj = closure_1_1(closure_1_3[4]);
-      obj = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null };
+      obj = {
+        title: null,
+        body: null,
+        onConfirm: null,
+        confirmColor: null,
+        confirmText: null,
+        cancelText: null,
+        onCancel: null,
+      };
       const intl = entry(closure_1_3[5]).intl;
       obj[0] = intl.string(entry(closure_1_3[5]).t.KUxYWH);
       const intl2 = entry(closure_1_3[5]).intl;
@@ -81,4 +91,4 @@ export default function GuildDirectoryMoreMenu(entry) {
     tmp9 = jsx(entry(8792).ContextMenu, { items: null, children: null });
   }
   return tmp9;
-};
+}

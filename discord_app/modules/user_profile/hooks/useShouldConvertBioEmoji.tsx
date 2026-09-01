@@ -12,7 +12,7 @@ export default function useShouldConvertBioEmoji() {
     setting = !UseRichChatInput.useSetting();
   }
   return setting;
-};
+}
 export const getShouldConvertBioEmoji = function getShouldConvertBioEmoji() {
   const UseLegacyChatInput = explicitContentFromProto.UseLegacyChatInput;
   let setting = UseLegacyChatInput.getSetting();

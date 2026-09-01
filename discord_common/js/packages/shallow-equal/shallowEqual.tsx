@@ -43,7 +43,7 @@ export default function shallowEqual(arg0, arg1, arr) {
     }
     return tmp2;
   }
-};
+}
 export const areArraysShallowEqual = function areArraysShallowEqual(items, current) {
   closure_0 = current;
   let tmp = arg2;

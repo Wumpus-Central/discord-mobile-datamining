@@ -23,13 +23,13 @@ createToggle = {
       return globalName;
     });
   },
-  screen: createToggle
+  screen: createToggle,
 };
 createToggle = {
   route: require("ME").UserSettingsSections.PROFILE_CUSTOMIZATION,
   getComponent() {
     return ProfileCustomizationSubsection /* ProfileCustomizationSubsection */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountDisplayNameSetting.tsx");

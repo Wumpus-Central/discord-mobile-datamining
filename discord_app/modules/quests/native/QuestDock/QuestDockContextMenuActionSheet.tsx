@@ -13,11 +13,20 @@ function QuestDockPreviewTools(quest) {
   c4 = undefined;
   let obj = quest(11083);
   const questPreviewActions = obj.useQuestPreviewActions(quest.id);
-  ({ handleComplete: c1, handleProgress: c2, handleResetDismissibilityClick: c3, handleResetStatusClick: c4 } = questPreviewActions);
+  ({
+    handleComplete: c1,
+    handleProgress: c2,
+    handleResetDismissibilityClick: c3,
+    handleResetStatusClick: c4,
+  } = questPreviewActions);
   obj = { title: null, hasIcons: true, children: null };
   const intl = quest(1236).intl;
   obj[0] = intl.string(quest(1236).t["Ape+mm"]);
-  obj = { icon: callback(quest(5991).ActionSheetRow.Icon, { IconComponent: quest(8843).TrophyIcon }), label: null, onPress: null };
+  obj = {
+    icon: callback(quest(5991).ActionSheetRow.Icon, { IconComponent: quest(8843).TrophyIcon }),
+    label: null,
+    onPress: null,
+  };
   const obj2 = { text: null };
   const intl2 = quest(1236).intl;
   obj2[0] = intl2.string(quest(1236).t.jQEfRT);
@@ -26,7 +35,7 @@ function QuestDockPreviewTools(quest) {
     _undefined();
     _undefined(_undefined2[18]).hideActionSheet();
   };
-  let items = [callback(quest(5991).ActionSheetRow, obj), , , , , , ];
+  let items = [callback(quest(5991).ActionSheetRow, obj), , , , , ,];
   const obj3 = { icon: null, label: null, onPress: null };
   obj1 = { IconComponent: quest(8843).TrophyIcon };
   obj3[0] = callback(quest(5991).ActionSheetRow.Icon, { IconComponent: quest(14708).RedoIcon });
@@ -119,7 +128,11 @@ function QuestDockShareRow(quest) {
   obj[1] = callback(quest(8363).FormLabel, obj);
   obj[2] = function onPress() {
     let obj = quest(closure_1_2[6]);
-    obj = { content: quest(closure_1_2[8]).QuestContent.QUEST_BAR_MOBILE, ctaContent: quest(closure_1_2[9]).QuestContentCTA.CONTEXT_MENU_COPY_LINK, sourceQuestContent: quest(closure_1_2[8]).QuestContent.QUEST_BAR_MOBILE };
+    obj = {
+      content: quest(closure_1_2[8]).QuestContent.QUEST_BAR_MOBILE,
+      ctaContent: quest(closure_1_2[9]).QuestContentCTA.CONTEXT_MENU_COPY_LINK,
+      sourceQuestContent: quest(closure_1_2[8]).QuestContent.QUEST_BAR_MOBILE,
+    };
     obj.copyShareLink(quest.id, obj);
     closure_1_1(closure_1_2[18]).hideActionSheet();
   };
@@ -137,7 +150,11 @@ function QuestDockDisclosureRow(quest) {
   obj[2] = function onPress() {
     let obj = closure_1_1(closure_1_2[37]);
     obj = { quest, isTargetedDisclosure: true, trackingCtx: null };
-    obj = { content: quest(closure_1_2[8]).QuestContent.QUEST_BAR_MOBILE, ctaContent: quest(closure_1_2[9]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE, sourceQuestContent: quest(closure_1_2[8]).QuestContent.QUEST_BAR_MOBILE };
+    obj = {
+      content: quest(closure_1_2[8]).QuestContent.QUEST_BAR_MOBILE,
+      ctaContent: quest(closure_1_2[9]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE,
+      sourceQuestContent: quest(closure_1_2[8]).QuestContent.QUEST_BAR_MOBILE,
+    };
     obj[2] = obj;
     obj.showModal(obj);
     closure_1_1(closure_1_2[18]).hideActionSheet();
@@ -146,7 +163,9 @@ function QuestDockDisclosureRow(quest) {
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockContextMenuActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/quests/native/QuestDock/QuestDockContextMenuActionSheet.tsx",
+);
 
 export default function QuestDockContextMenuActionSheet(creative) {
   creative = creative.creative;
@@ -154,7 +173,12 @@ export default function QuestDockContextMenuActionSheet(creative) {
   let obj;
   function trackInternalClick(CONTEXT_MENU_LEARN_MORE) {
     obj = creative(obj[10]);
-    if (obj.shouldMigrateToAdAnalyticsInterface(creative(obj[10]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_dock_context_menu")) {
+    if (
+      obj.shouldMigrateToAdAnalyticsInterface(
+        creative(obj[10]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+        "quest_dock_context_menu",
+      )
+    ) {
       let tmpResult = tmp(tmp2[11]);
       obj = { type: null };
       obj[0] = tmp(tmp2[12]).AdUserActionType.CLICK_INTERNAL;
@@ -172,7 +196,13 @@ export default function QuestDockContextMenuActionSheet(creative) {
       obj[3] = tmp(tmp2[8]).QuestContent.QUEST_BAR_MOBILE;
       const result = tmpResult.trackQuestContentClicked(obj);
     } else {
-      obj1 = { adContentId: null, adCreativeType: null, questContent: null, questContentCTA: null, sourceQuestContent: null };
+      obj1 = {
+        adContentId: null,
+        adCreativeType: null,
+        questContent: null,
+        questContentCTA: null,
+        sourceQuestContent: null,
+      };
       ({ adCreativeId: obj3[0], adCreativeType: obj3[1] } = tmp3);
       obj1[2] = tmp(tmp2[8]).QuestContent.QUEST_BAR_MOBILE;
       obj1[3] = CONTEXT_MENU_LEARN_MORE;
@@ -194,7 +224,12 @@ export default function QuestDockContextMenuActionSheet(creative) {
     const intl4 = tmp(tmp2[7]).intl;
     stringResult = intl4.string(tmp(tmp2[7]).t.QUe9zz);
   }
-  obj = { content: tmp(tmp2[8]).QuestContent.QUEST_BAR_MOBILE, ctaContent: tmp(tmp2[9]).QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK, impressionId: creative.impressionId, sourceQuestContent: tmp(tmp2[8]).QuestContent.QUEST_BAR_MOBILE };
+  obj = {
+    content: tmp(tmp2[8]).QuestContent.QUEST_BAR_MOBILE,
+    ctaContent: tmp(tmp2[9]).QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK,
+    impressionId: creative.impressionId,
+    sourceQuestContent: tmp(tmp2[8]).QuestContent.QUEST_BAR_MOBILE,
+  };
   obj = {
     icon: callback(creative(obj[14]).ActionSheetRow.Icon, { IconComponent: creative(obj[15]).LinkExternalMediumIcon }),
     label: callback(creative(obj[16]).FormLabel, { text: buttonLabel }),
@@ -212,10 +247,10 @@ export default function QuestDockContextMenuActionSheet(creative) {
         const result = tmp2Result.openAdGameLinkDirectly(obj, obj);
       }
       lib(obj[18]).hideActionSheet();
-    }
+    },
   };
   obj1 = { IconComponent: creative(obj[15]).LinkExternalMediumIcon };
-  const items = [callback(creative(obj[14]).ActionSheetRow, obj), ];
+  const items = [callback(creative(obj[14]).ActionSheetRow, obj)];
   let tmp4Result = null;
   if (creative.type === creative(obj[5]).AdCreativeType.QUEST) {
     tmpResult = tmp(tmp2[20]);
@@ -227,7 +262,7 @@ export default function QuestDockContextMenuActionSheet(creative) {
     }
   }
   items[1] = tmp4Result;
-  const children = [closure_6(creative(obj[14]).ActionSheetRow.Group, { hasIcons: true, children: items }), , ];
+  const children = [closure_6(creative(obj[14]).ActionSheetRow.Group, { hasIcons: true, children: items }), ,];
   const obj3 = { icon: null, label: null, onPress: null };
   const tmp5 = callback(creative(obj[14]).ActionSheetRow, obj);
   obj3[0] = callback(creative(obj[14]).ActionSheetRow.Icon, { IconComponent: importDefault(obj[21]) });
@@ -249,7 +284,7 @@ export default function QuestDockContextMenuActionSheet(creative) {
     }
     lib(obj[18]).hideActionSheet();
   };
-  const items2 = [callback(creative(obj[14]).ActionSheetRow, obj3), , ];
+  const items2 = [callback(creative(obj[14]).ActionSheetRow, obj3), ,];
   tmp4Result = null;
   if (creative.type === creative(obj[5]).AdCreativeType.QUEST) {
     let obj5 = { quest: null };
@@ -267,7 +302,7 @@ export default function QuestDockContextMenuActionSheet(creative) {
   obj7[1] = callback(creative(obj[16]).FormLabel, obj9);
   const intl3 = tmp(tmp2[7]).intl;
   obj7[2] = intl3.string(creative(obj[7]).t.V6htN5);
-  obj7[3] = trackInternalClick(function*() {
+  obj7[3] = trackInternalClick(function* () {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       HermesBuiltin.throwTypeError();
@@ -299,7 +334,10 @@ export default function QuestDockContextMenuActionSheet(creative) {
             const type = closure_1_0.type;
             if (closure_1_0(7446).AdCreativeType.QUEST === type) {
               const obj5 = closure_1_0(10913);
-              const dismissQuestContentResult = closure_1_0(10913).dismissQuestContent(tmp37.quest.id, closure_1_0(5390).QuestContent.QUEST_BAR_MOBILE);
+              const dismissQuestContentResult = closure_1_0(10913).dismissQuestContent(
+                tmp37.quest.id,
+                closure_1_0(5390).QuestContent.QUEST_BAR_MOBILE,
+              );
               v0(4445).hideActionSheet();
               v0 = 1;
               dependencyMap = 1;
@@ -348,4 +386,4 @@ export default function QuestDockContextMenuActionSheet(creative) {
   }
   children[2] = tmp4Result1;
   return closure_6(creative(obj[19]).ActionSheet, { children });
-};
+}

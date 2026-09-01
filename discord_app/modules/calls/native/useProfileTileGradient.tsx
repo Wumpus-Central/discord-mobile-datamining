@@ -28,4 +28,4 @@ export default function useProfileTileGradient(userId) {
   const tmp3 = closure_3;
   const tmp3Result = closure_3(themeColors, 2);
   return userId(8119).useVideoTileGradientColors(tmp5, tmp6);
-};
+}

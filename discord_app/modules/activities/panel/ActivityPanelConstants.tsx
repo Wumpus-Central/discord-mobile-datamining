@@ -3,7 +3,13 @@ import set from "../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/activities/panel/ActivityPanelConstants.tsx");
 
-export const ActivityPanelModes = { DISCONNECTED: "disconnected", LAUNCHING_WITH_ORIENTATION_CHANGE: "launching_with_orientation_change", PANEL: "panel", PIP: "pip", ACTIVITY_POPOUT_WINDOW: "activity_popout_window" };
+export const ActivityPanelModes = {
+  DISCONNECTED: "disconnected",
+  LAUNCHING_WITH_ORIENTATION_CHANGE: "launching_with_orientation_change",
+  PANEL: "panel",
+  PIP: "pip",
+  ACTIVITY_POPOUT_WINDOW: "activity_popout_window",
+};
 export const SCREEN_HEADER_HEIGHT = 64;
 export const ACTIVITY_PANEL_LAYOUT_PHYSICS = { stiffness: 320, mass: 0.25, damping: 15, overshootClamping: true };
 export const FocusedActivityLayouts = { NO_CHAT: 0, [0]: "NO_CHAT", RESIZABLE: 1, [1]: "RESIZABLE" };

@@ -9,7 +9,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkError.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/xbox/XboxLinkError.tsx",
+);
 
 export default function XboxLinkDiscordError(onClose) {
   let obj = useNavigation;
@@ -23,4 +25,4 @@ export default function XboxLinkDiscordError(onClose) {
   obj[2] = onClose.onClose;
   obj[3] = connectRetry;
   return jsx(TwoWayLinkError.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
-};
+}

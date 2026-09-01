@@ -15,7 +15,7 @@ function AndroidPasskeyRadioGroup(onChange) {
   let obj = { value: obj1.PASSKEY_CREDENTIAL_MANAGER, name: null };
   const intl = onChange(1236).intl;
   obj[1] = intl.string(onChange(1236).t.JQbo8L);
-  const items = [obj, , ];
+  const items = [obj, ,];
   obj = { value: obj1.PASSKEY_DEVICE, name: null };
   const intl2 = onChange(1236).intl;
   obj[1] = intl2.string(onChange(1236).t.GjBNMg);
@@ -33,17 +33,44 @@ function AndroidPasskeyRadioGroup(onChange) {
     value: authenticatorSelection,
     disabled: registering,
     size: onChange(1297).RadioGroup.Sizes.LARGE,
-    withSpacing: true
+    withSpacing: true,
   };
   return callback(onChange(1297).RadioGroup, obj1);
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { flexContainer: { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "space-between", marginLeft: 16, marginRight: 16, marginTop: 16 }, centerFlex: { display: "flex", alignItems: "center" }, margin: { marginTop: 16, textAlign: "center" }, radioItem: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  flexContainer: {
+    flex: 1,
+    flexDirection: "column",
+    alignItems: "stretch",
+    justifyContent: "space-between",
+    marginLeft: 16,
+    marginRight: 16,
+    marginTop: 16,
+  },
+  centerFlex: { display: "flex", alignItems: "center" },
+  margin: { marginTop: 16, textAlign: "center" },
+  radioItem: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[3] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { PASSKEY_CREDENTIAL_MANAGER: 0, [0]: "PASSKEY_CREDENTIAL_MANAGER", PASSKEY_DEVICE: 1, [1]: "PASSKEY_DEVICE", OTHER_AND_ANDROID_NONDISCOVERABLE: 2, [2]: "OTHER_AND_ANDROID_NONDISCOVERABLE" };
-let obj2 = { [PASSKEY_CREDENTIAL_MANAGER]: _promptForRegisterCredentialDefault.registerPasskey, [PASSKEY_DEVICE]: _promptForRegisterCredentialDefault.registerAndroidDevicePasskey, [OTHER_AND_ANDROID_NONDISCOVERABLE]: _promptForRegisterCredentialDefault.registerSecurityKey };
+let obj1 = {
+  PASSKEY_CREDENTIAL_MANAGER: 0,
+  [0]: "PASSKEY_CREDENTIAL_MANAGER",
+  PASSKEY_DEVICE: 1,
+  [1]: "PASSKEY_DEVICE",
+  OTHER_AND_ANDROID_NONDISCOVERABLE: 2,
+  [2]: "OTHER_AND_ANDROID_NONDISCOVERABLE",
+};
+let obj2 = {
+  [PASSKEY_CREDENTIAL_MANAGER]: _promptForRegisterCredentialDefault.registerPasskey,
+  [PASSKEY_DEVICE]: _promptForRegisterCredentialDefault.registerAndroidDevicePasskey,
+  [OTHER_AND_ANDROID_NONDISCOVERABLE]: _promptForRegisterCredentialDefault.registerSecurityKey,
+};
 ({ PASSKEY_CREDENTIAL_MANAGER, PASSKEY_DEVICE, OTHER_AND_ANDROID_NONDISCOVERABLE } = obj1);
 const result = require("set").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnRegisterStep.tsx");
 
@@ -59,7 +86,10 @@ export default function WebAuthnRegisterStep() {
   [tmp10, tmp11] = first(callback.useState(""), 2);
   dependencyMap = tmp11;
   obj2 = navigation(500);
-  const tmp5Result = tmp5(obj1.useState(obj2.isAndroid() ? obj1.PASSKEY_CREDENTIAL_MANAGER : obj1.OTHER_AND_ANDROID_NONDISCOVERABLE), 2);
+  const tmp5Result = tmp5(
+    obj1.useState(obj2.isAndroid() ? obj1.PASSKEY_CREDENTIAL_MANAGER : obj1.OTHER_AND_ANDROID_NONDISCOVERABLE),
+    2,
+  );
   first = tmp5Result[0];
   const items = [navigation];
   callback = obj1.useCallback((arg0) => {
@@ -68,12 +98,15 @@ export default function WebAuthnRegisterStep() {
   const items1 = [first];
   closure_5 = obj1.useMemo(() => closure_1_11[first], items1);
   const items2 = [callback, tmp11, tmp8];
-  closure_6 = obj1.useMemo(() => ({ onRegisterSuccess: callback, setError: closure_2, setRegistering: closure_1 }), items2);
+  closure_6 = obj1.useMemo(
+    () => ({ onRegisterSuccess: callback, setError: closure_2, setRegistering: closure_1 }),
+    items2,
+  );
   const tmp9 = first(callback.useState(""), 2);
   const announceError = navigation(14329).useAnnounceError(tmp10);
   obj = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj = { style: tmp4.centerFlex, children: null };
-  const items3 = [callback(navigation(14330).KeyImage, {}), , ];
+  const items3 = [callback(navigation(14330).KeyImage, {}), ,];
   obj1 = { style: tmp4.margin, variant: "text-md/normal", children: null };
   const intl = tmp(1236).intl;
   const string = intl.string;
@@ -93,7 +126,7 @@ export default function WebAuthnRegisterStep() {
   }
   items3[2] = tmp19Result;
   obj[1] = items3;
-  const items4 = [closure_8(closure_5, obj), , ];
+  const items4 = [closure_8(closure_5, obj), ,];
   let shouldDisplayAndroidFidoSelector = _promptForRegisterCredentialDefault.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     const obj3 = { authenticatorSelection: null, registering: null, onChange: null };
@@ -116,4 +149,4 @@ export default function WebAuthnRegisterStep() {
   items4[2] = callback(navigation(5376).ButtonGroup, { children: callback(navigation(4928).Button, obj5) });
   obj[4] = items4;
   return closure_8(navigation(5553).SafeAreaPaddingView, obj);
-};
+}

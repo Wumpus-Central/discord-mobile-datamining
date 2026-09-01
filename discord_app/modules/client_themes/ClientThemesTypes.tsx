@@ -20,7 +20,9 @@ export const getProtoThemeFromBaseTheme = function getProtoThemeFromBaseTheme(ar
     const _HermesInternal = HermesInternal;
     error = new Error("No ProtoTheme found for base theme: " + arg0);
     _modDef1208.captureException(error);
-    let UNSET = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx").Theme.UNSET;
+    let UNSET =
+      require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx")
+        .Theme.UNSET;
     const obj = _modDef1208;
   } else {
     const _parseInt = parseInt;

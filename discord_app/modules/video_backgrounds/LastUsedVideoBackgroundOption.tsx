@@ -14,7 +14,10 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
   if (voiceAndVideo != null) {
     prop = voiceAndVideo.videoBackgroundFilterDesktop;
   }
-  const videoBackgroundOptionFromProto = isAnimatedBackgroundOption.getVideoBackgroundOptionFromProto(prop, currentUser.id);
+  const videoBackgroundOptionFromProto = isAnimatedBackgroundOption.getVideoBackgroundOptionFromProto(
+    prop,
+    currentUser.id,
+  );
   const obj = isAnimatedBackgroundOption;
   const tmp2 = require;
   if (!obj2.isCustomBackgroundOption(videoBackgroundOptionFromProto)) {
@@ -46,7 +49,10 @@ export const useLastUsedVideoBackgroundOption = function useLastUsedVideoBackgro
   return React.useMemo(() => {
     let tmp2 = null;
     if (null != stateFromStores1) {
-      const videoBackgroundOptionFromProto = stateFromStores1(closure_1_2[3]).getVideoBackgroundOptionFromProto(prop, tmp.id);
+      const videoBackgroundOptionFromProto = stateFromStores1(closure_1_2[3]).getVideoBackgroundOptionFromProto(
+        prop,
+        tmp.id,
+      );
       const obj = stateFromStores1(closure_1_2[3]);
       const tmp4 = stateFromStores1;
       if (!obj2.isCustomBackgroundOption(videoBackgroundOptionFromProto)) {

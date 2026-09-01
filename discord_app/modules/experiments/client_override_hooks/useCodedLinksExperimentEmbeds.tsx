@@ -13,7 +13,9 @@ let closure_9 = {};
 let closure_10 = {};
 let closure_11 = {};
 let closure_12 = { legacyExperiments: {}, legacyOverridesInfo: {}, apexExperiments: {}, apexOverridesInfo: {} };
-const result = require("set").fileFinishedImporting("modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx",
+);
 
 export const canSeeExperimentEmbeds = function canSeeExperimentEmbeds() {
   let tmp = arg0;
@@ -128,10 +130,22 @@ export const useCodedLinksExperimentEmbeds = function useCodedLinksExperimentEmb
     }
     return clientOverrides;
   });
-  const items6 = [stateFromStores, stateFromStoresObject, stateFromStoresObject1, stateFromStores1, stateFromStores2, stateFromStores3];
+  const items6 = [
+    stateFromStores,
+    stateFromStoresObject,
+    stateFromStoresObject1,
+    stateFromStores1,
+    stateFromStores2,
+    stateFromStores3,
+  ];
   return stateFromStores1.useMemo(() => {
     if (stateFromStores) {
-      const obj = { legacyExperiments: null, legacyOverridesInfo: null, apexExperiments: null, apexOverridesInfo: null };
+      const obj = {
+        legacyExperiments: null,
+        legacyOverridesInfo: null,
+        apexExperiments: null,
+        apexOverridesInfo: null,
+      };
       obj[0] = stateFromStores(stateFromStoresObject[6]).parseRegisteredExperiments(stateFromStoresObject);
       const obj2 = stateFromStores(stateFromStoresObject[6]);
       obj[1] = stateFromStores(stateFromStoresObject[6]).getLegacyOverridesInfo(stateFromStoresObject1);

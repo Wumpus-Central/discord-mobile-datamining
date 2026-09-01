@@ -13,7 +13,13 @@ import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 require = arg1;
 noopAll;
 createCacheKey = { container: null, text: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.lg, marginLeft: 8, paddingHorizontal: 8, justifyContent: "center" };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderRadius: ThemesDefault.radii.lg,
+  marginLeft: 8,
+  paddingHorizontal: 8,
+  justifyContent: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textTransform: "uppercase" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
@@ -66,5 +72,5 @@ export default function BetaTag(gradient) {
     tmp3Result = tmp3(View, obj);
   }
   return tmp3Result;
-};
+}
 export const BetaSizes = obj1;

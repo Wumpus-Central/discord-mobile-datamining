@@ -15,7 +15,10 @@ export const useSearchMessageTimestamp = function useSearchMessageTimestamp(mess
       id = channel.id;
     }
     const extractTimestampResult = obj.extractTimestamp(id);
-    obj = { timestamp: message(closure_1_2[2]).getRelativeTimestamp(extractTimestampResult, true), timestampAccessibilityLabel: null };
+    obj = {
+      timestamp: message(closure_1_2[2]).getRelativeTimestamp(extractTimestampResult, true),
+      timestampAccessibilityLabel: null,
+    };
     const obj3 = message(closure_1_2[2]);
     obj[1] = message(closure_1_2[2]).getRelativeTimestamp(extractTimestampResult, false);
     return obj;

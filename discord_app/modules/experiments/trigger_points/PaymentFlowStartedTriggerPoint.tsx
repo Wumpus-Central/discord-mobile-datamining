@@ -6,11 +6,17 @@ import ExperimentBuckets from "../ExperimentConstants.tsx";
 import registeredExperimentIds from "Helpers.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
-const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration([], ExperimentBuckets.CommonTriggerPoints.PAYMENT_FLOW_STARTED, { location: "payment flow started" });
+const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration(
+  [],
+  ExperimentBuckets.CommonTriggerPoints.PAYMENT_FLOW_STARTED,
+  { location: "payment flow started" },
+);
 const result = set.fileFinishedImporting("modules/experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx");
 
 export const PaymentFlowStartedTriggerPoint = commonTriggerPointConfiguration;
-export const trackPaymentFlowStartedAnalyticsAndCTP = function trackPaymentFlowStartedAnalyticsAndCTP(basePurchaseAnalytics) {
+export const trackPaymentFlowStartedAnalyticsAndCTP = function trackPaymentFlowStartedAnalyticsAndCTP(
+  basePurchaseAnalytics,
+) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};

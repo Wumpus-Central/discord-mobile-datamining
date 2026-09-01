@@ -12,7 +12,7 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.CHAT,
   useValue: explicitContentFromProto.InlineEmbedMedia.useSetting,
-  onValueChange: explicitContentFromProto.InlineEmbedMedia.updateSetting
+  onValueChange: explicitContentFromProto.InlineEmbedMedia.updateSetting,
 });
 const obj = {
   useTitle() {
@@ -21,7 +21,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.CHAT,
   useValue: explicitContentFromProto.InlineEmbedMedia.useSetting,
-  onValueChange: explicitContentFromProto.InlineEmbedMedia.updateSetting
+  onValueChange: explicitContentFromProto.InlineEmbedMedia.updateSetting,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DisplayMediaLinksSetting.tsx");
 

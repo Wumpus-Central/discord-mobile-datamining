@@ -7,9 +7,16 @@ import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-({ AnalyticEvents: closure_8, AnalyticsObjects: c9, AnalyticsSections: c10, InstantInviteSources: unpackModuleId } = ME);
+({
+  AnalyticEvents: closure_8,
+  AnalyticsObjects: c9,
+  AnalyticsSections: c10,
+  InstantInviteSources: unpackModuleId,
+} = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetTabItems.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_action_sheet/native/components/GuildActionSheetTabItems.tsx",
+);
 
 export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
@@ -56,7 +63,7 @@ export default function GuildActionSheetTabItems(guild) {
     const obj3 = stateFromStores(closure_1_3[17]);
     callback(closure_1_3[18]).openApplyBoostModal(guild.id);
   };
-  const items2 = [closure_12(guild(8006).IconButton, obj1), , , ];
+  const items2 = [closure_12(guild(8006).IconButton, obj1), , ,];
   if (shouldRenderInviteResult) {
     let obj3 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
     const intl3 = tmp(1236).intl;
@@ -94,4 +101,4 @@ export default function GuildActionSheetTabItems(guild) {
   items2[3] = canAccessSettings;
   obj[2] = items2;
   return closure_13(guild(5376).ButtonGroup, obj);
-};
+}

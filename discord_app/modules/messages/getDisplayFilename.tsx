@@ -17,4 +17,4 @@ export default function getDisplayFilename(title) {
     }
   }
   return title.filename;
-};
+}

@@ -2,11 +2,13 @@
 import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx",
+);
 
 export default {
   getRobloxSubgameURL(closure_0) {
-    return callback(function*() {
+    return callback(function* () {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();
@@ -64,5 +66,5 @@ export default {
         }
       }
     })();
-  }
+  },
 };

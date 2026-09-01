@@ -39,7 +39,7 @@ function ChannelPermissionSettingsBasicView(channel) {
   }
   function _togglePrivateChannel() {
     const self = this;
-    const tmp = sortedGuildRoles(function*() {
+    const tmp = sortedGuildRoles(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -137,7 +137,7 @@ function ChannelPermissionSettingsBasicView(channel) {
   }
   function _onPrivateChannelSwitchChange() {
     const self = this;
-    const tmp = sortedGuildRoles(function*() {
+    const tmp = sortedGuildRoles(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -175,7 +175,10 @@ function ChannelPermissionSettingsBasicView(channel) {
                   v0 = 1;
                   dependencyMap = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = obj1.checkChattableChannelThresholdMetAfterChannelPermissionDeny(stringResult, closure_1_19.VIEW_CHANNEL);
+                  obj1[0] = obj1.checkChattableChannelThresholdMetAfterChannelPermissionDeny(
+                    stringResult,
+                    closure_1_19.VIEW_CHANNEL,
+                  );
                   return obj1;
                 }
               }
@@ -217,7 +220,15 @@ function ChannelPermissionSettingsBasicView(channel) {
           v0 = onCancelResult;
           v0(!c1);
           show = callback(4857).show;
-          const obj4 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, onCancel: null };
+          const obj4 = {
+            title: null,
+            body: null,
+            cancelText: null,
+            confirmText: null,
+            onConfirm: null,
+            hideActionSheet: false,
+            onCancel: null,
+          };
           obj4[0] = c0;
           obj4[1] = v0;
           const intl3 = stringResult(1236).intl;
@@ -336,7 +347,7 @@ function ChannelPermissionSettingsBasicView(channel) {
         return applyArgumentsResult;
       };
       obj1[2] = closure_23(tmp2(tmp3[29]).TableSwitchRow, obj2);
-      const items3 = [closure_23(tmp2(tmp3[28]).TableRowGroup, obj1), , , , , ];
+      const items3 = [closure_23(tmp2(tmp3[28]).TableRowGroup, obj1), , , , ,];
       let tmp23Result = canEveryoneRoleResult1;
       if (canEveryoneRoleResult1) {
         obj3 = { style: null, children: null };
@@ -383,10 +394,22 @@ function ChannelPermissionSettingsBasicView(channel) {
       let obj9 = { title: null, hasIcons: true, children: null };
       const intl7 = tmp2(tmp3[22]).intl;
       obj9[0] = intl7.string(tmp2(tmp3[22]).t.ES4CC6);
-      obj9[2] = memo.map((id) => closure_1_23(privateToggleState(navigation[25]), { item: id, channelId: channel.id, showType: true, showRemove: true, guildId: channel.guild_id }, id.id));
+      obj9[2] = memo.map((id) =>
+        closure_1_23(
+          privateToggleState(navigation[25]),
+          { item: id, channelId: channel.id, showType: true, showRemove: true, guildId: channel.guild_id },
+          id.id,
+        ),
+      );
       items3[4] = closure_23(tmp2(tmp3[28]).TableRowGroup, obj9);
       let obj10 = { hasIcons: true, children: null };
-      obj10[1] = existingMembersRows.map((id) => closure_1_23(privateToggleState(navigation[25]), { item: id, channelId: channel.id, showType: true, showRemove: true, guildId: channel.guild_id }, id.id));
+      obj10[1] = existingMembersRows.map((id) =>
+        closure_1_23(
+          privateToggleState(navigation[25]),
+          { item: id, channelId: channel.id, showType: true, showRemove: true, guildId: channel.guild_id },
+          id.id,
+        ),
+      );
       items3[5] = closure_23(tmp2(tmp3[28]).TableRowGroup, obj10);
       obj[2] = items3;
       return closure_24(tmp2(tmp3[27]).Stack, obj);
@@ -399,7 +422,13 @@ function onBack() {
   return false;
 }
 ({ View: error, ScrollView: closure_8 } = get_ActivityIndicator);
-({ ChannelTypes: closure_18, Permissions: closure_19, AnalyticEvents: closure_20, ChannelSettingsSections: closure_21, SettingsPaneTypes: closure_22 } = ME);
+({
+  ChannelTypes: closure_18,
+  Permissions: closure_19,
+  AnalyticEvents: closure_20,
+  ChannelSettingsSections: closure_21,
+  SettingsPaneTypes: closure_22,
+} = ME);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 let closure_25 = { BASIC: 0, [0]: "BASIC", ADVANCED: 1, [1]: "ADVANCED", MODERATORS: 2, [2]: "MODERATORS" };
 createCacheKey = { container: null, content: null, adminWarning: null };
@@ -409,7 +438,9 @@ createCacheKey[1] = { marginTop: 16, flex: 1 };
 createCacheKey[2] = { marginTop: ThemesDefault.space.PX_12 };
 let closure_26 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { marginTop: ThemesDefault.space.PX_12 };
-let result = require("set").fileFinishedImporting("modules/channel_permissions/native/components/EasyChannelPermissionSettings.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/channel_permissions/native/components/EasyChannelPermissionSettings.tsx",
+);
 
 export default function EasyChannelPermissionSettings(arg0) {
   ({ channelId: require, origin } = arg0);
@@ -471,7 +502,7 @@ export default function EasyChannelPermissionSettings(arg0) {
     callback(arg0);
   }, items3);
   const intl = tmp(tmp2[22]).intl;
-  const items4 = [intl.string(require(first[22]).t["Mw/UDN"]), ];
+  const items4 = [intl.string(require(first[22]).t["Mw/UDN"])];
   const intl2 = tmp(tmp2[22]).intl;
   items4[1] = intl2.string(require(first[22]).t["0a6awf"]);
   let isGuildStageVoiceResult1;
@@ -482,7 +513,12 @@ export default function EasyChannelPermissionSettings(arg0) {
     const intl3 = tmp(tmp2[22]).intl;
     items4.push(intl3.string(tmp(tmp2[22]).t.YIIUJ3));
   }
-  obj = { pageWidth: 0, defaultIndex: first, onSetActiveIndex: callback, items: items4.map((id) => ({ id, label: id, page: null })) };
+  obj = {
+    pageWidth: 0,
+    defaultIndex: first,
+    onSetActiveIndex: callback,
+    items: items4.map((id) => ({ id, label: id, page: null })),
+  };
   const items5 = [stateFromStores, first];
   const segmentedControlState = require(first[36]).useSegmentedControlState(obj);
   const effect1 = obj4.useEffect(() => {
@@ -507,7 +543,7 @@ export default function EasyChannelPermissionSettings(arg0) {
     obj3 = { state: null };
     obj3[0] = segmentedControlState;
     obj1[1] = callback2(tmp(tmp2[37]).SegmentedControl, obj3);
-    const items6 = [callback2(closure_7, obj1), ];
+    const items6 = [callback2(closure_7, obj1)];
     obj4 = { style: null, children: null };
     obj4[0] = tmp4.content;
     if (first === tmp8.BASIC) {
@@ -534,4 +570,4 @@ export default function EasyChannelPermissionSettings(arg0) {
     const tmp20 = closure_7;
     const tmp23 = closure_8;
   }
-};
+}

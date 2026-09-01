@@ -23,7 +23,19 @@ function messageAttachmentToUnfurledMediaItem(flags) {
   if (tmpResult.hasFlag(num3, MessageAttachmentFlags.IS_ANIMATED)) {
     num4 = obj.IS_ANIMATED | 0;
   }
-  obj = { url: flags.url, proxyUrl: flags.proxy_url, height: flags.height, width: flags.width, contentType: flags.content_type, originalContentType: flags.original_content_type, placeholder: flags.placeholder, placeholderVersion: flags.placeholder_version, loadingState: tmp(1955).UnfurledMediaLoadingState.LOADED_SUCCESS, contentScanMetadata: null, flags: null };
+  obj = {
+    url: flags.url,
+    proxyUrl: flags.proxy_url,
+    height: flags.height,
+    width: flags.width,
+    contentType: flags.content_type,
+    originalContentType: flags.original_content_type,
+    placeholder: flags.placeholder,
+    placeholderVersion: flags.placeholder_version,
+    loadingState: tmp(1955).UnfurledMediaLoadingState.LOADED_SUCCESS,
+    contentScanMetadata: null,
+    flags: null,
+  };
   let tmp6;
   if (null != flags.content_scan_version) {
     obj = { version: null, flags: null };
@@ -47,7 +59,19 @@ export const toContentScanMetadata = function toContentScanMetadata(version) {
 };
 export const UnfurledMediaItemFlags = obj;
 export const toUnfurledMediaItem = function toUnfurledMediaItem(media) {
-  obj = { url: media.url, proxyUrl: media.proxy_url, height: media.height, width: media.width, placeholder: media.placeholder, placeholderVersion: media.placeholder_version, contentType: media.content_type, originalContentType: media.original_content_type, loadingState: media.loading_state, contentScanMetadata: null, flags: null };
+  obj = {
+    url: media.url,
+    proxyUrl: media.proxy_url,
+    height: media.height,
+    width: media.width,
+    placeholder: media.placeholder,
+    placeholderVersion: media.placeholder_version,
+    contentType: media.content_type,
+    originalContentType: media.original_content_type,
+    loadingState: media.loading_state,
+    contentScanMetadata: null,
+    flags: null,
+  };
   let tmp;
   if (null != media.content_scan_metadata) {
     obj = { version: null, flags: null };
@@ -97,12 +121,28 @@ export const messageAttachmentToMediaItem = function messageAttachmentToMediaIte
   obj.type = str;
   obj.alt = found2.description;
   obj = { message: tmp2Result, identifier: obj };
-  obj = { type: "attachment", attachmentId: found2.id, filename: found2.filename, title: found2.title, size: found2.size };
+  obj = {
+    type: "attachment",
+    attachmentId: found2.id,
+    filename: found2.filename,
+    title: found2.title,
+    size: found2.size,
+  };
   obj.sourceMetadata = obj;
   return obj;
 };
 export const embedMediaToMediaItem = function embedMediaToMediaItem(thumbnail, sourceMetadata, IMAGE) {
-  return { type: IMAGE, url: thumbnail.url, proxyUrl: thumbnail.proxyURL, width: thumbnail.width, height: thumbnail.height, placeholder: thumbnail.placeholder, placeholderVersion: thumbnail.placeholderVersion, sourceMetadata, contentType: thumbnail.contentType };
+  return {
+    type: IMAGE,
+    url: thumbnail.url,
+    proxyUrl: thumbnail.proxyURL,
+    width: thumbnail.width,
+    height: thumbnail.height,
+    placeholder: thumbnail.placeholder,
+    placeholderVersion: thumbnail.placeholderVersion,
+    sourceMetadata,
+    contentType: thumbnail.contentType,
+  };
 };
 export const isVisualUnfurledMediaItem = function isVisualUnfurledMediaItem(width) {
   let tmp = null != width.width;

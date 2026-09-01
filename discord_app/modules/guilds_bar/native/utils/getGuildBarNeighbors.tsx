@@ -51,4 +51,4 @@ export default function getGuildBarNeighbors(arg0) {
     }
   }
   return null;
-};
+}

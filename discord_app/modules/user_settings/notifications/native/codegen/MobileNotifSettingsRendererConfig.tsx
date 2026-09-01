@@ -14,6 +14,8 @@ obj[require("MobileNotifSettings").MobileNotifSettings.NOTIF_VOICE_ACTIVITY_LOW]
 obj[require("MobileNotifSettings").MobileNotifSettings.NOTIF_VOICE_ACTIVITY_DEFAULT] = toggleAll.VoiceActivityDefault;
 obj[require("MobileNotifSettings").MobileNotifSettings.NOTIF_GAMING_LOW] = toggleAll.GamingLow;
 obj[require("MobileNotifSettings").MobileNotifSettings.NOTIF_GAMING_DEFAULT] = toggleAll.GamingDefault;
-const result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/codegen/MobileNotifSettingsRendererConfig.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/notifications/native/codegen/MobileNotifSettingsRendererConfig.tsx",
+);
 
 export const MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG = obj;

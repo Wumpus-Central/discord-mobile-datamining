@@ -9,8 +9,7 @@ let DeclarativeSettings = create.DeclarativeSettings;
 let closure_2 = DeclarativeSettings.create();
 let c3 = false;
 const PersistedStore = initializeDefault.PersistedStore;
-class NotifSettingsProtoStore extends PersistedStore {
-}
+class NotifSettingsProtoStore extends PersistedStore {}
 const prototype = NotifSettingsProtoStore.prototype;
 prototype["initialize"] = function initialize(proto) {
   proto = undefined;
@@ -33,13 +32,13 @@ Object.defineProperty(prototype, "hasLoaded", {
   get: function hasLoaded() {
     return c3;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "settings", {
   get: function settings() {
     return closure_2;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getSetting"] = function getSetting(arg0) {
   return values.values[arg0];
@@ -61,7 +60,7 @@ const notifSettingsProtoStore = new NotifSettingsProtoStore(dispatcherDefault, {
     const DeclarativeSettings = create.DeclarativeSettings;
     closure_2 = DeclarativeSettings.create();
     c3 = false;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/notifications/settings/NotifSettingsProtoStore.tsx");
 

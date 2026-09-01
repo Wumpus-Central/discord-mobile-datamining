@@ -16,7 +16,7 @@ export default function PermissionsAlertModal(arg0) {
   obj = { onPress: onConfirm, text: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.jVcuVY);
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
+  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm")];
   obj1 = { variant: "secondary", text: null };
   const intl2 = getSystemLocale.intl;
   obj1[1] = intl2.string(getSystemLocale.t.cpT0Cq);
@@ -24,4 +24,4 @@ export default function PermissionsAlertModal(arg0) {
   obj[0] = items;
   obj[2] = callback2(getAlertModalItemKey.AlertActions, obj);
   return callback(getAlertModalItemKey.AlertModal, obj);
-};
+}

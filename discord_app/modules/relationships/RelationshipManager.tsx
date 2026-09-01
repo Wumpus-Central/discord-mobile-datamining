@@ -29,11 +29,13 @@ const RelationshipTypes = ME.RelationshipTypes;
 initializeDefault;
 let prototype = function RelationshipManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.actions = { RELATIONSHIP_ADD: handleRelationshipAdd, FRIEND_REQUEST_ACCEPTED: handleFriendRequestAccepted };
+  applyArgumentsResult.actions = {
+    RELATIONSHIP_ADD: handleRelationshipAdd,
+    FRIEND_REQUEST_ACCEPTED: handleFriendRequestAccepted,
+  };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 let result = set.fileFinishedImporting("modules/relationships/RelationshipManager.tsx");
 

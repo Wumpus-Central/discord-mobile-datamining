@@ -20,4 +20,4 @@ export default function useLoadGuildPowerups(guildId) {
     const obj = guildId(gameServerEnabled[3]);
     const guildBoostEntitlements = guildId(gameServerEnabled[3]).fetchGuildBoostEntitlements(guildId);
   }, items1);
-};
+}

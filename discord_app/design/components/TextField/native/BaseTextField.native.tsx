@@ -61,7 +61,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
   obj1 = {};
   const merged = Object.assign(size);
   obj1.isFocused = isFocused;
-  const items1 = [size.leading, , ];
+  const items1 = [size.leading, ,];
   obj2 = {};
   const merged1 = Object.assign(tmp6);
   const merged2 = Object.assign(ref(onChangeText[6]).mergeProps(size, focusProps));
@@ -81,7 +81,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
   const tmp9 = closure_4;
   const tmpResult2 = ref(onChangeText[6]);
   obj2.ref = ref(onChangeText[6]).mergeRefs(ref, ref2);
-  const items2 = [, , ];
+  const items2 = [, ,];
   ({ padding: arr3[0], text: arr3[1] } = inputStyles);
   items2[2] = size.inputStyle;
   obj2.style = items2;

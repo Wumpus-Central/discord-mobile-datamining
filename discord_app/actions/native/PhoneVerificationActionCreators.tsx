@@ -10,5 +10,5 @@ export default {
   },
   setCountrySelectorClosed() {
     dispatcherDefault.dispatch({ type: "VERIFICATION_CLOSE_COUNTRY_SELECTOR" });
-  }
+  },
 };

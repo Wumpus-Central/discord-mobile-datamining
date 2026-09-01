@@ -19,19 +19,28 @@ function ReferralProgramCoachmarkImg() {
   obj[1] = jsx(preloadDefault, { source: registerAssetDefault, style: tmp.coachmarkImage });
   return <View source={registerAssetDefault} style={tmp.coachmarkImage} />;
 }
-let closure_9 = createCacheKey.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" }, coachmarkImage: { width: 200, height: 112 } });
-let result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx");
+let closure_9 = createCacheKey.createStyles({
+  coachmarkImageContainer: { alignItems: "center", justifyContent: "center" },
+  coachmarkImage: { width: 200, height: 112 },
+});
+let result = require("set").fileFinishedImporting(
+  "modules/premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx",
+);
 
 export const useReferralProgramCoachmark = function useReferralProgramCoachmark(disabled) {
   disabled = disabled.disabled;
   let _require;
   closure_1 = undefined;
   let obj = UNSAFE_isDismissibleContentDismissed;
-  let result = obj.useIsDismissibleContentDismissed_UNSAFE(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK);
+  let result = obj.useIsDismissibleContentDismissed_UNSAFE(
+    require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx")
+      .DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK,
+  );
   if (!result) {
     result = disabled;
   }
-  const isEligibleSenderForReferralProgram = require("../useIsEligibleSenderForReferralProgram.tsx").useIsEligibleSenderForReferralProgram(result);
+  const isEligibleSenderForReferralProgram =
+    require("../useIsEligibleSenderForReferralProgram.tsx").useIsEligibleSenderForReferralProgram(result);
   useSelectedDismissibleContent;
   if (isEligibleSenderForReferralProgram) {
     if (!disabled) {

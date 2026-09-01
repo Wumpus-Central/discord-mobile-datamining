@@ -9,7 +9,12 @@ if (set.isAndroid()) {
 } else {
   customFontScale = { fontScale: 1, isClassicChatFontScaleEnabled: false };
 }
-const obj = { persistedFontScale: customFontScale.fontScale, persistedIsClassicChatFontScaleEnabled: customFontScale.isClassicChatFontScaleEnabled, fontScale: customFontScale.fontScale, isClassicChatFontScaleEnabled: customFontScale.isClassicChatFontScaleEnabled };
+const obj = {
+  persistedFontScale: customFontScale.fontScale,
+  persistedIsClassicChatFontScaleEnabled: customFontScale.isClassicChatFontScaleEnabled,
+  fontScale: customFontScale.fontScale,
+  isClassicChatFontScaleEnabled: customFontScale.isClassicChatFontScaleEnabled,
+};
 const withEqualityFn = identity.createWithEqualityFn(() => obj);
 const result = set.fileFinishedImporting("modules/user_settings/appearance/native/FontScaleStore.tsx");
 

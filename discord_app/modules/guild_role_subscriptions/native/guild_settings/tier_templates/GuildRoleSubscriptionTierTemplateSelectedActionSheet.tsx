@@ -16,7 +16,9 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderRadius: ThemesDefault.radii.xs };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { borderRadius: ThemesDefault.radii.xs };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateSelectedActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateSelectedActionSheet.tsx",
+);
 
 export default function GuildRoleSubscriptionTierTemplateSelectedActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -26,14 +28,14 @@ export default function GuildRoleSubscriptionTierTemplateSelectedActionSheet(mar
     onDismiss() {
       return markAsDismissed(closure_1_4.UNKNOWN);
     },
-    children: null
+    children: null,
   };
   obj = { style: tmp.container, children: null };
   obj = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
   obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1236).intl;
   obj1[2] = intl.string(markAsDismissed(1236).t.Y0PTc0);
-  const items = [callback(markAsDismissed(4474).Text, obj1), callback(markAsDismissed(1297).Spacer, { size: 12 }), , , ];
+  const items = [callback(markAsDismissed(4474).Text, obj1), callback(markAsDismissed(1297).Spacer, { size: 12 }), , ,];
   const obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = markAsDismissed(1236).intl;
   obj2[2] = intl2.string(markAsDismissed(1236).t["YSI/1/"]);
@@ -51,4 +53,4 @@ export default function GuildRoleSubscriptionTierTemplateSelectedActionSheet(mar
   obj[1] = callback2(markAsDismissed(5624).BottomSheetScrollView, obj);
   obj[2] = callback(View, obj);
   return callback(markAsDismissed(5622).BottomSheet, obj);
-};
+}

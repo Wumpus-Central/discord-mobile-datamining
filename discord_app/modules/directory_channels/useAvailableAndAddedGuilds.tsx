@@ -21,26 +21,30 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
   stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getAdminGuildEntryIds(closure_1));
   const items1 = [closure_9, closure_7, closure_8];
   const items2 = [arg0];
-  const stateFromStoresArray = _require(stateFromStores[8]).useStateFromStoresArray(items1, () => {
-    const flattenedGuildIds = closure_1_9.getFlattenedGuildIds();
-    const items = [];
-    const item = flattenedGuildIds.forEach((arg0) => {
-      const guild = closure_2_7.getGuild(arg0);
-      let canResult = null != guild;
-      if (canResult) {
-        canResult = closure_2_8.can(closure_2_11.ADMINISTRATOR, guild);
-      }
-      if (canResult) {
-        canResult = guild.id !== items;
-      }
-      if (canResult) {
-        items.push(guild);
-      }
-    });
-    return items;
-  }, items2);
+  const stateFromStoresArray = _require(stateFromStores[8]).useStateFromStoresArray(
+    items1,
+    () => {
+      const flattenedGuildIds = closure_1_9.getFlattenedGuildIds();
+      const items = [];
+      const item = flattenedGuildIds.forEach((arg0) => {
+        const guild = closure_2_7.getGuild(arg0);
+        let canResult = null != guild;
+        if (canResult) {
+          canResult = closure_2_8.can(closure_2_11.ADMINISTRATOR, guild);
+        }
+        if (canResult) {
+          canResult = guild.id !== items;
+        }
+        if (canResult) {
+          items.push(guild);
+        }
+      });
+      return items;
+    },
+    items2,
+  );
   importDefault(stateFromStores[9])(() => {
-    stateFromStoresArray(function*() {
+    stateFromStoresArray(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -73,7 +77,10 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
               c1 = 1;
               v0 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj1.fetchGuildEntriesForIds(c1, closure_1_4.map((id) => id.id));
+              obj1[0] = obj1.fetchGuildEntriesForIds(
+                c1,
+                closure_1_4.map((id) => id.id),
+              );
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -97,23 +104,31 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
     })();
   });
   obj = {
-    availableGuilds: React.useMemo(() => stateFromStoresArray.filter((id) => {
-      let hasItem;
-      if (closure_3 != null) {
-        hasItem = closure_3.has(id.id);
-      }
-      return !hasItem;
-    }), items3),
-    addedGuilds: React.useMemo(() => stateFromStoresArray.filter((id) => {
-      let hasItem;
-      if (closure_3 != null) {
-        hasItem = closure_3.has(id.id);
-      }
-      return hasItem;
-    }), items4),
-    loading: tmp[0]
+    availableGuilds: React.useMemo(
+      () =>
+        stateFromStoresArray.filter((id) => {
+          let hasItem;
+          if (closure_3 != null) {
+            hasItem = closure_3.has(id.id);
+          }
+          return !hasItem;
+        }),
+      items3,
+    ),
+    addedGuilds: React.useMemo(
+      () =>
+        stateFromStoresArray.filter((id) => {
+          let hasItem;
+          if (closure_3 != null) {
+            hasItem = closure_3.has(id.id);
+          }
+          return hasItem;
+        }),
+      items4,
+    ),
+    loading: tmp[0],
   };
   items3 = [stateFromStoresArray, stateFromStores];
   items4 = [stateFromStoresArray, stateFromStores];
   return obj;
-};
+}

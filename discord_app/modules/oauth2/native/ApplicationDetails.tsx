@@ -25,7 +25,7 @@ function ApplicationDetailsEntry(children) {
     obj[0] = tmp.entryIcon;
     iconComponentResult = iconComponent(obj);
   }
-  const items = [iconComponentResult, ];
+  const items = [iconComponentResult];
   obj = { variant: "text-sm/normal", color: "text-default", style: tmp.entryText, children: children.text };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
@@ -33,7 +33,12 @@ function ApplicationDetailsEntry(children) {
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { applicationDetails: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 8 }, entryText: { flex: 1 }, entryIcon: null };
+createCacheKey = {
+  applicationDetails: { flexDirection: "column", gap: 16 },
+  entry: { flexDirection: "row", alignItems: "center", gap: 8 },
+  entryText: { flex: 1 },
+  entryIcon: null,
+};
 createCacheKey = { width: 16, height: 16, tintColor: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[3] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
@@ -72,7 +77,7 @@ export default function ApplicationDetails(arg0) {
     obj[1] = intl.format(tmp5(1236).t["5k5OKD"], obj1);
     tmp15 = callback(ApplicationDetailsEntry, obj);
   }
-  const items = [tmp15, , , , , , ];
+  const items = [tmp15, , , , , ,];
   const obj2 = { iconComponent: LockIcon.LockIcon, text: null };
   const date = new Date(obj.extractTimestamp(application.id));
   const tmp13 = closure_5;
@@ -141,4 +146,4 @@ export default function ApplicationDetails(arg0) {
   items[6] = mapped;
   obj[1] = items;
   return tmp13(tmp14, obj);
-};
+}

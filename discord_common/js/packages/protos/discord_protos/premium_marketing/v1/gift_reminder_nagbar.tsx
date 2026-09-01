@@ -7,15 +7,15 @@ import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 require = arg1;
 class GiftReminderNagbar$Type extends MessageType {
   constructor() {
-    items = [, ];
+    items = [,];
     items[0] = { no: 1, name: "body", kind: "scalar", T: 9 };
     items[1] = {
       no: 2,
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(table[2]).LocalizedString;
-          }
+        return callback(table[2]).LocalizedString;
+      },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.GiftReminderNagbar", items, new.target);
     // ThrowIfThisInitialized (0x7c)
@@ -100,8 +100,16 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(body, tag, write
   if (body.bodyLocalized) {
     const LocalizedString = create.LocalizedString;
     const tagResult1 = tag.tag(2, _mod1307.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(body.bodyLocalized, tag.tag(2, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(body.bodyLocalized, tag.tag(2, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = LocalizedString.internalBinaryWrite(
+      body.bodyLocalized,
+      tag.tag(2, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(
+      body.bodyLocalized,
+      tag.tag(2, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -121,11 +129,21 @@ let items = [
     kind: "message",
     T() {
       return callback(table[2]).LocalizedString;
-    }
-  }
+    },
+  },
 ];
-prototype = new prototype("discord_protos.premium_marketing.v1.GiftReminderNagbar", items, tmp, GiftReminderNagbar$Type, prototype, items, arg1);
+prototype = new prototype(
+  "discord_protos.premium_marketing.v1.GiftReminderNagbar",
+  items,
+  tmp,
+  GiftReminderNagbar$Type,
+  prototype,
+  items,
+  arg1,
+);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_reminder_nagbar.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_reminder_nagbar.tsx",
+);
 
 export const GiftReminderNagbar = prototype;

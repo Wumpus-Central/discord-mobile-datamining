@@ -9,7 +9,9 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ actionContainer: { flexDirection: "row", alignItems: "center", justifyContent: "flex-end", height: "100%" } });
+let closure_6 = createCacheKey.createStyles({
+  actionContainer: { flexDirection: "row", alignItems: "center", justifyContent: "flex-end", height: "100%" },
+});
 const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkRow.tsx");
 
 export default function FamilyCenterLinkRow(children) {
@@ -17,9 +19,9 @@ export default function FamilyCenterLinkRow(children) {
   let obj = { userId: otherUser.id, children: null };
   const tmp = callback3();
   obj = { otherUser, status: UserLinkStatus.PENDING };
-  const items = [callback(FamilyCenterRequestorDetailsDefault, obj), ];
+  const items = [callback(FamilyCenterRequestorDetailsDefault, obj)];
   obj = { style: tmp.actionContainer, children: children.actions };
   items[1] = callback(View, obj);
   obj[1] = items;
   return callback2(FamilyCenterLinkRowWrapperDefault, obj);
-};
+}

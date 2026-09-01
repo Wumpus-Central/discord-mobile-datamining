@@ -9,7 +9,9 @@ import { PremiumSubscriptionSKUs } from "../../../../../premium/PremiumConstants
 
 require = arg1;
 let closure_6 = 10 * setDefault.Millis.SECOND;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx",
+);
 
 export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpiringTrialOfferCard() {
   const items = [closure_3];
@@ -31,8 +33,12 @@ export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpirin
     tmp5 = null != stateFromStores;
   }
   if (tmp5) {
-    tmp5 = stateFromStores === NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING || stateFromStores === NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING;
-    const tmp6 = stateFromStores === NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING || stateFromStores === NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING;
+    tmp5 =
+      stateFromStores === NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING ||
+      stateFromStores === NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING;
+    const tmp6 =
+      stateFromStores === NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING ||
+      stateFromStores === NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING;
   }
   if (!tmp5) {
     if (tmp5) {

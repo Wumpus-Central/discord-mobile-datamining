@@ -25,23 +25,35 @@ function DevToolsPersistedStoresActionSheet(store) {
 }
 let c4 = importAllResult;
 let obj = { container: null, sectionHeader: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_12, flex: 1 };
+obj = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  flex: 1,
+};
 obj[0] = obj;
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, verticalAlign: "middle", flexDirection: "row", alignItems: "center", flex: 1 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  verticalAlign: "middle",
+  flexDirection: "row",
+  alignItems: "center",
+  flex: 1,
+};
 obj[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(obj);
-let closure_10 = importAllResult.memo(() => jsx(TableRowInner.TableRow, {
-  label: "Disable Database",
-  start: true,
-  onPress() {
-    const databaseResult = callback(table[9]).database();
-    if (null != databaseResult) {
-      databaseResult.disable("via UserSettingsDatabaseControls");
-      callback(table[10]).open({ key: "disable_database", content: "Database has been disabled." });
-      const tmpResult = callback(table[10]);
-    }
-  }
-}));
+let closure_10 = importAllResult.memo(() =>
+  jsx(TableRowInner.TableRow, {
+    label: "Disable Database",
+    start: true,
+    onPress() {
+      const databaseResult = callback(table[9]).database();
+      if (null != databaseResult) {
+        databaseResult.disable("via UserSettingsDatabaseControls");
+        callback(table[10]).open({ key: "disable_database", content: "Database has been disabled." });
+        const tmpResult = callback(table[10]);
+      }
+    },
+  }),
+);
 let closure_11 = importAllResult.memo(() => {
   let obj = initialize;
   const items = [databaseNameDefault, closure_7];
@@ -59,14 +71,16 @@ let closure_11 = importAllResult.memo(() => {
   obj[3] = combined;
   return jsx(TableRowInner.TableRow, { label: str, start: true, end: true, subLabel: null });
 });
-let closure_12 = importAllResult.memo(() => jsx(TableRowInner.TableRow, {
-  label: "Disable + Remove Database",
-  onPress() {
-    const result = callback(1973).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
-    const obj = callback(1973);
-    callback(4194).open({ key: "disable_database_and_remove", content: "Database has been removed." });
-  }
-}));
+let closure_12 = importAllResult.memo(() =>
+  jsx(TableRowInner.TableRow, {
+    label: "Disable + Remove Database",
+    onPress() {
+      const result = callback(1973).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
+      const obj = callback(1973);
+      callback(4194).open({ key: "disable_database_and_remove", content: "Database has been removed." });
+    },
+  }),
+);
 let closure_13 = importAllResult.memo(() => {
   let obj = createStandardNavigationFactories;
   _require = obj.useNavigation();
@@ -75,18 +89,27 @@ let closure_13 = importAllResult.memo(() => {
     end: true,
     onPress() {
       navigation.navigate("cacheStats");
-    }
+    },
   };
   return jsx(require("../../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, {
     label: "View Cache Stats",
     end: true,
     onPress() {
       navigation.navigate("cacheStats");
-    }
+    },
   });
 });
-let closure_14 = { DATABASE_CONTROLS: 0, [0]: "DATABASE_CONTROLS", DATABASE_CURRENT: 1, [1]: "DATABASE_CURRENT", PERSISTED_STORES: 2, [2]: "PERSISTED_STORES" };
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDataStorageScreen.tsx");
+let closure_14 = {
+  DATABASE_CONTROLS: 0,
+  [0]: "DATABASE_CONTROLS",
+  DATABASE_CURRENT: 1,
+  [1]: "DATABASE_CURRENT",
+  PERSISTED_STORES: 2,
+  [2]: "PERSISTED_STORES",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsDataStorageScreen.tsx",
+);
 
 export default function DevToolsDataStorageScreen() {
   const tmp = callback2();
@@ -106,7 +129,7 @@ export default function DevToolsDataStorageScreen() {
       }
       return hasItem;
     });
-    const items = [, , ];
+    const items = [, ,];
     ({ DATABASE_CONTROLS: arr2[0], DATABASE_CURRENT: arr2[1], PERSISTED_STORES: arr2[2] } = closure_14);
     return {
       sections: items.map((arg0) => {
@@ -122,10 +145,13 @@ export default function DevToolsDataStorageScreen() {
           return 1 + num3;
         }
       }),
-      persistedStores: found
+      persistedStores: found,
     };
   }, []);
-  const tmp6 = callback(importAllResult.useState(() => callback("")), 2);
+  const tmp6 = callback(
+    importAllResult.useState(() => callback("")),
+    2,
+  );
   const first = tmp6[0];
   persistedStores = first.persistedStores;
   callback = tmp6[1];
@@ -174,7 +200,7 @@ export default function DevToolsDataStorageScreen() {
             store: closure_1_2[closure_0 - 1],
             close() {
               return callback(table[19]).hideActionSheet("DevToolsPersistedStoresActionSheet");
-            }
+            },
           };
           obj.openLazy(Promise.resolve(obj), "DevToolsPersistedStoresActionSheet", obj);
         };
@@ -198,12 +224,51 @@ export default function DevToolsDataStorageScreen() {
     obj[3] = str;
     return closure_1_8(lib(persistedStores[20]).Text, obj);
   }, items1);
-  let obj = { sections: first.sections, renderItem: callback1, renderSectionHeader: callback2, insetEnd: null, itemSize: null, sectionHeaderSize: null, estimatedListSize: "windowSize", placeholderConfig: null, wrapChildren: true };
+  let obj = {
+    sections: first.sections,
+    renderItem: callback1,
+    renderSectionHeader: callback2,
+    insetEnd: null,
+    itemSize: null,
+    sectionHeaderSize: null,
+    estimatedListSize: "windowSize",
+    placeholderConfig: null,
+    wrapChildren: true,
+  };
   const tmp4 = callback(persistedStores[17])();
-  obj[3] = callback(persistedStores[14])({ includeKeyboardHeight: true }).insets.bottom + callback(persistedStores[7]).space.PX_16;
+  obj[3] =
+    callback(persistedStores[14])({ includeKeyboardHeight: true }).insets.bottom +
+    callback(persistedStores[7]).space.PX_16;
   obj[4] = tmp2;
   obj[5] = tmp3;
   obj[7] = tmp4;
-  obj = { style: tmp.container, children: jsx(callback(persistedStores[21]), { sections: first.sections, renderItem: callback1, renderSectionHeader: callback2, insetEnd: null, itemSize: null, sectionHeaderSize: null, estimatedListSize: "windowSize", placeholderConfig: null, wrapChildren: true }) };
-  return <View style={tmp.container}>{jsx(callback(persistedStores[21]), { sections: first.sections, renderItem: callback1, renderSectionHeader: callback2, insetEnd: null, itemSize: null, sectionHeaderSize: null, estimatedListSize: "windowSize", placeholderConfig: null, wrapChildren: true })}</View>;
-};
+  obj = {
+    style: tmp.container,
+    children: jsx(callback(persistedStores[21]), {
+      sections: first.sections,
+      renderItem: callback1,
+      renderSectionHeader: callback2,
+      insetEnd: null,
+      itemSize: null,
+      sectionHeaderSize: null,
+      estimatedListSize: "windowSize",
+      placeholderConfig: null,
+      wrapChildren: true,
+    }),
+  };
+  return (
+    <View style={tmp.container}>
+      {jsx(callback(persistedStores[21]), {
+        sections: first.sections,
+        renderItem: callback1,
+        renderSectionHeader: callback2,
+        insetEnd: null,
+        itemSize: null,
+        sectionHeaderSize: null,
+        estimatedListSize: "windowSize",
+        placeholderConfig: null,
+        wrapChildren: true,
+      })}
+    </View>
+  );
+}

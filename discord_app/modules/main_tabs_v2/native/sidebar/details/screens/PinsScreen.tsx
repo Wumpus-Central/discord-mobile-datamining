@@ -31,6 +31,8 @@ const memoResult = importAllResult.memo(() => {
   obj = { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS };
   return <View searchContext={channelDetailsSearchContext} isFocused tab={SearchTabs.PINS} />;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/PinsScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/sidebar/details/screens/PinsScreen.tsx",
+);
 
 export default memoResult;

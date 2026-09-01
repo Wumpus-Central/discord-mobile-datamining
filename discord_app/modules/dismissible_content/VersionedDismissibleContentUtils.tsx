@@ -6,9 +6,13 @@ import closure_3 from "../collectibles/CollectiblesMarketingsStore.tsx";
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/dismissible_content/VersionedDismissibleContentUtils.tsx");
 
-export const getVersionedDismissibleContentCurrentVersion = function getVersionedDismissibleContentCurrentVersion(closure_0) {
+export const getVersionedDismissibleContentCurrentVersion = function getVersionedDismissibleContentCurrentVersion(
+  closure_0,
+) {
   if (DismissibleContent.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING === closure_0) {
-    marketingBySurface = marketingBySurface.getMarketingBySurface(tmp(13725).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON);
+    marketingBySurface = marketingBySurface.getMarketingBySurface(
+      tmp(13725).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON,
+    );
     let num5;
     if (marketingBySurface != null) {
       num5 = marketingBySurface.version;

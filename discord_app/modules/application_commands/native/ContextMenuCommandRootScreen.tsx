@@ -14,10 +14,20 @@ const require = arg1;
 createCacheKey = { content: null, sectionHeader: null };
 createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey[1] = {
+  paddingTop: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_8,
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+};
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("set").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandRootScreen.tsx");
+let obj1 = {
+  paddingTop: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_8,
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/application_commands/native/ContextMenuCommandRootScreen.tsx",
+);
 
 export default function ContextMenuCommandRootScreen(navigation) {
   navigation = navigation.navigation;
@@ -51,13 +61,17 @@ export default function ContextMenuCommandRootScreen(navigation) {
   const first = tmp4[0];
   closure_7 = tmp6;
   let items1 = [navigation, onClose];
-  const effect = stateFromStores.useEffect(() => navigation.addListener("beforeRemove", () => {
-    if (!ref.current) {
-      if (closure_4 != null) {
-        tmp();
-      }
-    }
-  }), items1);
+  const effect = stateFromStores.useEffect(
+    () =>
+      navigation.addListener("beforeRemove", () => {
+        if (!ref.current) {
+          if (closure_4 != null) {
+            tmp();
+          }
+        }
+      }),
+    items1,
+  );
   let obj2 = commandTargetId(onPressAppCommand[9]);
   obj = { context: { channel, type: "channel" }, filters: null, options: null, allowFetch: true };
   let tmp8;
@@ -196,7 +210,14 @@ export default function ContextMenuCommandRootScreen(navigation) {
     }
     return null;
   }, items9);
-  const items11 = [loading, commands.length, "" !== first, scaledTextLineHeight, tmp18.sectionHeader.paddingTop, tmp18.sectionHeader.paddingBottom];
+  const items11 = [
+    loading,
+    commands.length,
+    "" !== first,
+    scaledTextLineHeight,
+    tmp18.sectionHeader.paddingTop,
+    tmp18.sectionHeader.paddingBottom,
+  ];
   const callback3 = obj1.useCallback((arg0, arg1) => {
     closure_0 = tmp;
     const type = tmp.type;
@@ -253,7 +274,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
     tmp27Result = tmp26;
   }
   if (tmp27Result) {
-    const items12 = [tmp18.content, ];
+    const items12 = [tmp18.content];
     let num2 = 0;
     if (tmp6) {
       num2 = tmp15(tmp2[7]).space.PX_16;
@@ -272,11 +293,20 @@ export default function ContextMenuCommandRootScreen(navigation) {
     const tmp28 = closure_6;
   }
   const obj4 = { children: null };
-  const items13 = [tmp27Result, ];
+  const items13 = [tmp27Result];
   const tmp23 = sections;
   const tmp24 = loading;
   const tmpResult = navigation(onPressAppCommand[14]);
-  items13[1] = sectionDescriptors(channel(onPressAppCommand[19]), { sections: memo2, estimatedListSize: "windowSize", itemSize: tmp16, insetEnd: channel(onPressAppCommand[12])({ includeKeyboardHeight: true }).insets.bottom, renderItem: callback3, renderSectionHeader: callback2, sectionHeaderSize: memo3, style: tmp18.content });
+  items13[1] = sectionDescriptors(channel(onPressAppCommand[19]), {
+    sections: memo2,
+    estimatedListSize: "windowSize",
+    itemSize: tmp16,
+    insetEnd: channel(onPressAppCommand[12])({ includeKeyboardHeight: true }).insets.bottom,
+    renderItem: callback3,
+    renderSectionHeader: callback2,
+    sectionHeaderSize: memo3,
+    style: tmp18.content,
+  });
   obj4[0] = items13;
   return tmp23(tmp24, obj4);
-};
+}

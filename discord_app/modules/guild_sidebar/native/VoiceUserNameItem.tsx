@@ -9,7 +9,11 @@ import { DISPLAY_NAME_STYLES_FONT_FAMILY_MAP } from "../../display_name_styles/n
 
 const require = arg1;
 ({ jsxs: closure_6, jsx: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ container: { marginLeft: 8, flex: 1, flexDirection: "row" }, tag: { flexDirection: "row", alignItems: "center", paddingLeft: 8 }, measuringTag: { opacity: 0 } });
+let closure_8 = createCacheKey.createStyles({
+  container: { marginLeft: 8, flex: 1, flexDirection: "row" },
+  tag: { flexDirection: "row", alignItems: "center", paddingLeft: 8 },
+  measuringTag: { opacity: 0 },
+});
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUserNameItem.tsx");
 
 export default function VoiceUserNameItem(arg0) {
@@ -38,7 +42,7 @@ export default function VoiceUserNameItem(arg0) {
     _undefined2(nativeEvent.nativeEvent.layout.width);
   }, []);
   obj = { onLayout: callback, style: null, children: null };
-  const items = [tmp.container, ];
+  const items = [tmp.container];
   let measuringTag = tmp12;
   const callback2 = React.useCallback((nativeEvent) => {
     _undefined4(nativeEvent.nativeEvent.layout.width);
@@ -65,7 +69,7 @@ export default function VoiceUserNameItem(arg0) {
     nick = tmp2(4322).getName(user);
     const tmp2Result = tmp2(4322);
   }
-  const items1 = [nick, ];
+  const items1 = [nick];
   if (isGuest) {
     const obj2 = { variant: "text-sm/normal", lineClamp: 1, color: "status-positive", children: null };
     const intl = tmp5(1236).intl;
@@ -75,7 +79,7 @@ export default function VoiceUserNameItem(arg0) {
   }
   items1[1] = isGuest;
   obj[5] = items1;
-  const items3 = [closure_6(require("../../../design/components/Text/native/Text.tsx").Text, obj), ];
+  const items3 = [closure_6(require("../../../design/components/Text/native/Text.tsx").Text, obj)];
   if (!tmp12) {
     tmp12 = 0 !== tmp8 && 0 !== tmp10 && 0 !== tmp14 && tmp8 >= tmp10 + tmp14;
     const tmp22 = 0 !== tmp8 && 0 !== tmp10 && 0 !== tmp14 && tmp8 >= tmp10 + tmp14;
@@ -92,4 +96,4 @@ export default function VoiceUserNameItem(arg0) {
   items3[1] = tmp12;
   obj[2] = items3;
   return closure_6(View, obj);
-};
+}

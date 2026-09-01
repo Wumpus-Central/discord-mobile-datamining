@@ -7,8 +7,7 @@ let c1 = false;
 let closure_2 = {};
 let c3 = null;
 const Store = initializeDefault.Store;
-class ConsentStore extends Store {
-}
+class ConsentStore extends Store {}
 const prototype = ConsentStore.prototype;
 prototype["hasConsented"] = function hasConsented(arg0) {
   let consented = null != dependencyMap[arg0];
@@ -21,19 +20,19 @@ Object.defineProperty(prototype, "consents", {
   get: function consents() {
     return closure_2;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "fetchedConsents", {
   get: function fetchedConsents() {
     return c0;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "receivedConsentsInConnectionOpen", {
   get: function receivedConsentsInConnectionOpen() {
     return c1;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getAuthenticationConsentRequired"] = function getAuthenticationConsentRequired() {
   return c3;
@@ -64,7 +63,7 @@ const consentStore = new ConsentStore(dispatcherDefault, {
   },
   LOGOUT: function handleLogout() {
     c3 = null;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/ConsentStore.tsx");
 

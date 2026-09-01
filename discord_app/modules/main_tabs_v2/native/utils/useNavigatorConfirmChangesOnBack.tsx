@@ -3,7 +3,9 @@ import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { Keyboard } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { NOOP } from "../../../../Constants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx",
+);
 
 export default function useNavigatorConfirmChangesOnBack() {
   const ref = React.useRef(null);
@@ -33,7 +35,7 @@ export default function useNavigatorConfirmChangesOnBack() {
           ref(ref2[4])(obj);
         }
       }
-    }
+    },
   };
   return obj;
-};
+}

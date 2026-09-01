@@ -13,11 +13,11 @@ class UserGuildSettings {
     closure_0 = obj;
     obj.actions = {
       CONNECTION_OPEN(arg0, arg1) {
-            return obj.handleConnectionOpen(arg0, arg1);
-          },
+        return obj.handleConnectionOpen(arg0, arg1);
+      },
       USER_GUILD_SETTINGS_FULL_UPDATE(arg0, arg1) {
-            return obj.handleUserGuildSettingsUpdate(arg0, arg1);
-          }
+        return obj.handleUserGuildSettingsUpdate(arg0, arg1);
+      },
     };
     return obj;
   }
@@ -25,7 +25,7 @@ class UserGuildSettings {
 const prototype = UserGuildSettings.prototype;
 prototype["getAll"] = function getAll(arg0) {
   closure_0 = arg0;
-  return callback(function*() {
+  return callback(function* () {
     let length = tmp5;
     closure_0 = tmp2;
     const _performance2 = performance;
@@ -34,13 +34,13 @@ prototype["getAll"] = function getAll(arg0) {
     length = yield closure_1_0(closure_1_1[3]).userGuildSettings(closure_1_0).getMany();
     const _performance = performance;
     const _HermesInternal = HermesInternal;
-    closure_1_5.log("asynchronously loaded in " + closure_2 - closure_0 + "ms (userGuildSettings: " + length.length + ")");
+    closure_1_5.log(
+      "asynchronously loaded in " + closure_2 - closure_0 + "ms (userGuildSettings: " + length.length + ")",
+    );
     return length;
   })();
 };
-prototype["resetInMemoryState"] = function resetInMemoryState() {
-
-};
+prototype["resetInMemoryState"] = function resetInMemoryState() {};
 prototype["handleConnectionOpen"] = function handleConnectionOpen(userGuildSettings, database) {
   if (!userGuildSettings.userGuildSettings.partial) {
     const result = set(1956).userGuildSettingsTransaction(database);
@@ -51,13 +51,15 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(userGuildSetti
 };
 prototype["handleUserGuildSettingsUpdate"] = function handleUserGuildSettingsUpdate(userGuildSettings) {
   userGuildSettings = userGuildSettings.userGuildSettings;
-  const maxResult = set(12).max(userGuildSettings.map((version) => {
-    let num = version.version;
-    if (num == null) {
-      num = -1;
-    }
-    return num;
-  }));
+  const maxResult = set(12).max(
+    userGuildSettings.map((version) => {
+      let num = version.version;
+      if (num == null) {
+        num = -1;
+      }
+      return num;
+    }),
+  );
   if (null != maxResult) {
     const self = this;
     this.write(userGuildSettings.userGuildSettings, maxResult, arg1);
@@ -98,7 +100,7 @@ set.actions = {
   },
   USER_GUILD_SETTINGS_FULL_UPDATE(arg0, arg1) {
     return obj.handleUserGuildSettingsUpdate(arg0, arg1);
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/app_database/modules/UserGuildSettings.tsx");
 

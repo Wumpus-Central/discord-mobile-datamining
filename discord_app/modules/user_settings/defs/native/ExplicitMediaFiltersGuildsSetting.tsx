@@ -21,7 +21,9 @@ const pressable = createToggle.createPressable({
   },
   useTrailing: function useObscuredContentGuildsSettingValue() {
     const obj = useExplicitContentSettingOrDefault;
-    return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentGuilds)();
+    return redactionSettingToRenderedString.redactionSettingToRenderedString(
+      obj.useExplicitContentSettingOrDefault().explicitContentGuilds,
+    )();
   },
   onPress: function onObscuredContentGuildsOnPress() {
     let obj = resolveExplicitContentSettingWithDefaults;
@@ -42,7 +44,7 @@ const pressable = createToggle.createPressable({
   },
   useSearchTerms: function getSearchTerms() {
     const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
+    const items = [intl.string(getSystemLocale.t["N/oRI+"]), ,];
     const intl2 = getSystemLocale.intl;
     items[1] = intl2.string(getSystemLocale.t.QVdYsK);
     const intl3 = getSystemLocale.intl;
@@ -56,7 +58,7 @@ const pressable = createToggle.createPressable({
       userIsTeen = obj2.useIsParentallyControlled();
     }
     return userIsTeen;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersGuildsSetting.tsx");
 

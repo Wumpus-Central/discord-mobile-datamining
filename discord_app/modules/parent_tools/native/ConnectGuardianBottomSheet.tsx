@@ -17,7 +17,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, info: null, centered: null, cardContainer: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_24, paddingVertical: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_24 };
+createCacheKey = {
+  paddingHorizontal: ThemesDefault.space.PX_24,
+  paddingVertical: ThemesDefault.space.PX_24,
+  gap: ThemesDefault.space.PX_24,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { textAlign: "center" };
@@ -42,13 +46,19 @@ export default function ConnectGuardianBottomSheet(arg0) {
   useOnNewPendingRequestDefault(callback);
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.info, children: null };
-  obj1 = { style: tmp.centered, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+  obj1 = {
+    style: tmp.centered,
+    accessibilityRole: "header",
+    variant: "heading-xl/bold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   if (title == null) {
     const intl = tmp2(1236).intl;
     title = intl.string(tmp7(2369).aCUVfL);
   }
   obj1[4] = title;
-  const items2 = [closure_7(Text.Text, obj1), ];
+  const items2 = [closure_7(Text.Text, obj1)];
   const obj2 = { style: tmp.centered, variant: "text-md/medium", color: "text-default", children: null };
   if (body == null) {
     const intl2 = tmp2(1236).intl;
@@ -57,7 +67,7 @@ export default function ConnectGuardianBottomSheet(arg0) {
   obj2[3] = body;
   items2[1] = closure_7(Text.Text, obj2);
   obj[1] = items2;
-  const items3 = [closure_8(View, obj), , ];
+  const items3 = [closure_8(View, obj), ,];
   const obj3 = { style: tmp.cardContainer, children: null };
   if (stateFromStores == null) {
     stateFromStores = linkCode;
@@ -79,4 +89,4 @@ export default function ConnectGuardianBottomSheet(arg0) {
   obj[1] = items3;
   obj5[1] = closure_8(View, obj);
   return closure_7(Background.BottomSheet, obj5);
-};
+}

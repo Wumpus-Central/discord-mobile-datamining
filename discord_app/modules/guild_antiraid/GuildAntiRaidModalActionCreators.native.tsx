@@ -13,7 +13,7 @@ export const openReportRaidModal = function openReportRaidModal(id) {
     onCloseModal() {
       callback(table[1]).popWithKey(closure_3);
     },
-    guildId: id
+    guildId: id,
   };
   obj.pushLazy(asyncRequireImpl(13703, dependencyMap.paths), obj, closure_3);
 };

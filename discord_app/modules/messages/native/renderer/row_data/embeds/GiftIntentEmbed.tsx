@@ -10,9 +10,16 @@ import { GiftIntentType } from "../../../../../premium/PremiumConstants.tsx";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
-createCacheKey = { headerTextColor: ThemesDefault.colors.TEXT_STRONG, subHeaderTextColor: ThemesDefault.colors.TEXT_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_MUTED };
+createCacheKey = {
+  headerTextColor: ThemesDefault.colors.TEXT_STRONG,
+  subHeaderTextColor: ThemesDefault.colors.TEXT_SUBTLE,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+};
 let closure_6 = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx",
+);
 
 export const createGiftIntentEmbed = function createGiftIntentEmbed(message, theme) {
   const giftingPrompt = message.giftingPrompt;
@@ -56,14 +63,36 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
           const _HermesInternal = HermesInternal;
           combined1 = "" + currentUser.getAvatarURL(undefined, 40);
         }
-        obj1 = { recipientAvatarUrl: null, currentUserAvatarUrl: null, recipientName: null, headerText: null, subHeaderParts: null, recipientUserId: null, giftIntentType: null, headerTextColor: null, subHeaderTextColor: null, backgroundColor: null, borderColor: null, subHeaderIconUrl: null, primaryCtaLabel: null, primaryCtaIconUrl: null, secondaryCtaIconUrl: null, secondaryCtaAccessibilityLabel: null };
+        obj1 = {
+          recipientAvatarUrl: null,
+          currentUserAvatarUrl: null,
+          recipientName: null,
+          headerText: null,
+          subHeaderParts: null,
+          recipientUserId: null,
+          giftIntentType: null,
+          headerTextColor: null,
+          subHeaderTextColor: null,
+          backgroundColor: null,
+          borderColor: null,
+          subHeaderIconUrl: null,
+          primaryCtaLabel: null,
+          primaryCtaIconUrl: null,
+          secondaryCtaIconUrl: null,
+          secondaryCtaAccessibilityLabel: null,
+        };
         obj1[0] = combined;
         obj1[1] = combined1;
         obj1[2] = name;
         ({ headerText: obj4[3], subHeaderParts: obj4[4] } = tmp);
         obj1[5] = recipientUserId;
         obj1[6] = giftIntentType;
-        ({ headerTextColor: obj4[7], subHeaderTextColor: obj4[8], backgroundColor: obj4[9], borderColor: obj4[10] } = callback(theme));
+        ({
+          headerTextColor: obj4[7],
+          subHeaderTextColor: obj4[8],
+          backgroundColor: obj4[9],
+          borderColor: obj4[10],
+        } = callback(theme));
         const tmp6 = callback(theme);
         obj1[11] = frozen.getAssetUriForEmbed(tmp8(4414));
         const intl3 = getSystemLocale.intl;

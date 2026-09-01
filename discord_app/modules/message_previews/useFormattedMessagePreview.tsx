@@ -410,14 +410,26 @@ export const useFormattedMessagePreview = function useFormattedMessagePreview(me
   let obj = initialize;
   const items = [closure_4];
   const items1 = [message.author.id];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isBlocked: closure_1_4.isBlocked(message.author.id), isIgnored: closure_1_4.isIgnored(message.author.id) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => ({
+      isBlocked: closure_1_4.isBlocked(message.author.id),
+      isIgnored: closure_1_4.isIgnored(message.author.id),
+    }),
+    items1,
+  );
   ({ isBlocked, isIgnored } = stateFromStoresObject);
   const tmp4 = useIsCallActiveDefault(channel.id, message.id);
   const items2 = [closure_3];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => id.getId());
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () =>
+    id.getId(),
+  );
   const nick = useNullableMessageAuthorDefault(message).nick;
   let stringResult = nick;
-  if (message.type !== require("../../../discord_common/js/shared/shared-constants/MessageTypes.tsx").MessageTypes.USER_JOIN) {
+  if (
+    message.type !==
+    require("../../../discord_common/js/shared/shared-constants/MessageTypes.tsx").MessageTypes.USER_JOIN
+  ) {
     stringResult = nick;
     if (message.author.id === stateFromStores) {
       const intl = tmp(1236).intl;
@@ -434,7 +446,17 @@ export const useFormattedMessagePreview = function useFormattedMessagePreview(me
     return user;
   });
   tmpResult = tmp(4746);
-  obj = { message, channel, currentUserId: stateFromStores, authorNick: stringResult, otherUser: stateFromStores1, otherUserNick: tmpResult.useNullableUserAuthor(stateFromStores1, channel).nick, isBlocked, isIgnored, isCallActive: tmp4 };
+  obj = {
+    message,
+    channel,
+    currentUserId: stateFromStores,
+    authorNick: stringResult,
+    otherUser: stateFromStores1,
+    otherUserNick: tmpResult.useNullableUserAuthor(stateFromStores1, channel).nick,
+    isBlocked,
+    isIgnored,
+    isCallActive: tmp4,
+  };
   return formatMessagePreview(message, obj);
 };
 export { formatMessagePreview };

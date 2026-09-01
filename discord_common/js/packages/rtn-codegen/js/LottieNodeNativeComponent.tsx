@@ -8,7 +8,7 @@ obj = {
   setup(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
     const items = [arg1, arg2, arg3, arg4, arg5, arg6, arg7];
     renderElement.dispatchCommand(arg0, "setup", items);
-  }
+  },
 };
 const value = setRuntimeConfigProvider.get("NativeLottieNode", () => obj);
 const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/LottieNodeNativeComponent.tsx");

@@ -14,4 +14,4 @@ export default function activityPlatformToConnectedAccountType(arg0) {
     }
   }
   return constants.PLAYSTATION;
-};
+}

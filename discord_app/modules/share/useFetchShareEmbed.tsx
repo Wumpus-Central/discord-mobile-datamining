@@ -20,7 +20,7 @@ export default function useFetchShareEmbed(arg0) {
   const effect = React.useEffect(() => {
     function _unfurl(arg0) {
       const self = this;
-      const tmp = callback(function*() {
+      const tmp = callback(function* () {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -210,4 +210,4 @@ export default function useFetchShareEmbed(arg0) {
     _unfurl(false);
   }, items);
   return { embed: embed[0], isLoading, hasTriedResolving: hasTriedResolving[0] };
-};
+}

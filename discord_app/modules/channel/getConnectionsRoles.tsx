@@ -5,8 +5,15 @@ import ME from "../../Constants.tsx";
 import importAllResult from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 ({ ChannelTypes, Permissions } = ME);
-let items = [, , , , , ];
-({ GUILD_TEXT: arr[0], GUILD_VOICE: arr[1], GUILD_ANNOUNCEMENT: arr[2], GUILD_FORUM: arr[3], PUBLIC_THREAD: arr[4], PRIVATE_THREAD: arr[5] } = ChannelTypes);
+let items = [, , , , ,];
+({
+  GUILD_TEXT: arr[0],
+  GUILD_VOICE: arr[1],
+  GUILD_ANNOUNCEMENT: arr[2],
+  GUILD_FORUM: arr[3],
+  PUBLIC_THREAD: arr[4],
+  PRIVATE_THREAD: arr[5],
+} = ChannelTypes);
 let closure_5 = importAllResult.combine(Permissions.VIEW_CHANNEL, Permissions.SEND_MESSAGES);
 const result = require("set").fileFinishedImporting("modules/channel/getConnectionsRoles.tsx");
 
@@ -45,4 +52,4 @@ export default function getConnectionsRoles(type) {
     }
   }
   return [];
-};
+}

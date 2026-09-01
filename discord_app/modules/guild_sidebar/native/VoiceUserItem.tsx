@@ -17,15 +17,34 @@ let c3 = importAllResult;
 let c9 = "text-sm/medium";
 let c10 = "redesign-channel-name-muted-text";
 const XSMALL_20 = require("Button").AvatarSizes.XSMALL_20;
-let obj = { voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 }, disabled: { opacity: 0.5 }, voiceStateCollapsed: null, voiceStateIcon: null, legacyVoiceStateIcon: null, gameIcon: null };
-obj = { marginTop: 4, marginRight: 8, width: 32, height: 32, borderRadius: ThemesDefault.radii.lg, borderWidth: 4, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", overflow: "hidden" };
+let obj = {
+  voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 },
+  disabled: { opacity: 0.5 },
+  voiceStateCollapsed: null,
+  voiceStateIcon: null,
+  legacyVoiceStateIcon: null,
+  gameIcon: null,
+};
+obj = {
+  marginTop: 4,
+  marginRight: 8,
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.lg,
+  borderWidth: 4,
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  alignItems: "center",
+  overflow: "hidden",
+};
 obj[2] = obj;
 createCacheKey = { marginLeft: 6 };
 obj[3] = createCacheKey;
 obj[4] = { tintColor: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
 obj[5] = { marginLeft: 6 };
 let closure_12 = createCacheKey.createStyles(obj);
-let closure_13 = { code: "function VoiceUserItemTsx1(){const{ringing,shouldAnimate,PULSE_ENDING_OPACITY,withRepeat,withSequence,withDelay,INNER_PULSE_DELAY,withTiming,PULSE_DURATION,Easing,PULSE_STARTING_OPACITY,FADE_DURATION}=this.__closure;if(!ringing){return{opacity:1.0};}else if(!shouldAnimate){return{opacity:PULSE_ENDING_OPACITY};}return{opacity:withRepeat(withSequence(withDelay(INNER_PULSE_DELAY,withTiming(PULSE_ENDING_OPACITY,{duration:PULSE_DURATION,easing:Easing.bezier(0.4,0.0,1,1)})),withDelay(PULSE_DURATION,withTiming(PULSE_STARTING_OPACITY,{duration:FADE_DURATION}))),-1)};}" };
+let closure_13 = {
+  code: "function VoiceUserItemTsx1(){const{ringing,shouldAnimate,PULSE_ENDING_OPACITY,withRepeat,withSequence,withDelay,INNER_PULSE_DELAY,withTiming,PULSE_DURATION,Easing,PULSE_STARTING_OPACITY,FADE_DURATION}=this.__closure;if(!ringing){return{opacity:1.0};}else if(!shouldAnimate){return{opacity:PULSE_ENDING_OPACITY};}return{opacity:withRepeat(withSequence(withDelay(INNER_PULSE_DELAY,withTiming(PULSE_ENDING_OPACITY,{duration:PULSE_DURATION,easing:Easing.bezier(0.4,0.0,1,1)})),withDelay(PULSE_DURATION,withTiming(PULSE_STARTING_OPACITY,{duration:FADE_DURATION}))),-1)};}",
+};
 let obj2 = { tintColor: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
 const memoResult = importAllResult.memo(function VoiceUserItem(guildId) {
   ({ member: require, user } = guildId);
@@ -89,7 +108,10 @@ const memoResult = importAllResult.memo(function VoiceUserItem(guildId) {
           num8 = 0.1;
           num9 = 250;
           num10 = -1;
-          obj[0] = obj3.withRepeat(obj4.withSequence(withDelayResult, obj8.withDelay(250, obj9.withTiming(0.1, { duration: 500 }))), -1);
+          obj[0] = obj3.withRepeat(
+            obj4.withSequence(withDelayResult, obj8.withDelay(250, obj9.withTiming(0.1, { duration: 500 }))),
+            -1,
+          );
         } else {
           obj = { opacity: 0.4 };
         }
@@ -100,7 +122,20 @@ const memoResult = importAllResult.memo(function VoiceUserItem(guildId) {
       return;
     }
   }
-  obj = { ringing, shouldAnimate: stateFromStores, PULSE_ENDING_OPACITY: 0.4, withRepeat: tmp2(tmp3[15]).withRepeat, withSequence: tmp2(tmp3[15]).withSequence, withDelay: tmp2(tmp3[15]).withDelay, INNER_PULSE_DELAY: 100, withTiming: tmp2(tmp3[16]).withTiming, PULSE_DURATION: 250, Easing: tmp2(tmp3[15]).Easing, PULSE_STARTING_OPACITY: 0.1, FADE_DURATION: 500 };
+  obj = {
+    ringing,
+    shouldAnimate: stateFromStores,
+    PULSE_ENDING_OPACITY: 0.4,
+    withRepeat: tmp2(tmp3[15]).withRepeat,
+    withSequence: tmp2(tmp3[15]).withSequence,
+    withDelay: tmp2(tmp3[15]).withDelay,
+    INNER_PULSE_DELAY: 100,
+    withTiming: tmp2(tmp3[16]).withTiming,
+    PULSE_DURATION: 250,
+    Easing: tmp2(tmp3[15]).Easing,
+    PULSE_STARTING_OPACITY: 0.1,
+    FADE_DURATION: 500,
+  };
   A.__closure = obj;
   A.__workletHash = 9430639809025;
   A.__initData = closure_13;
@@ -113,7 +148,7 @@ const memoResult = importAllResult.memo(function VoiceUserItem(guildId) {
     obj[1] = callback(tmp2(tmp3[5]).Avatar, obj1);
     let tmp12Result = callback(ringing, obj);
   } else {
-    const items2 = [tmp.voiceState, , ];
+    const items2 = [tmp.voiceState, ,];
     let disabled2 = disabled;
     if (disabled) {
       disabled2 = tmp.disabled;
@@ -125,7 +160,7 @@ const memoResult = importAllResult.memo(function VoiceUserItem(guildId) {
     let obj3 = { source: null, size: null };
     obj3[0] = getSource;
     obj3[1] = XSMALL_20;
-    const items3 = [callback(tmp2(tmp3[5]).Avatar, obj3), , , , , , , , ];
+    const items3 = [callback(tmp2(tmp3[5]).Avatar, obj3), , , , , , , ,];
     let obj4 = { variant: null, color: null };
     obj4[0] = c9;
     obj4[1] = c10;

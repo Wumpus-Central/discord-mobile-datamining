@@ -5,7 +5,14 @@ import ME from "../../Constants.tsx";
 
 const require = arg1;
 function newMemberActionFromServer(channelId) {
-  let obj = { channelId: channelId.channel_id, actionType: channelId.action_type, title: channelId.title, description: channelId.description, emoji: null, icon: null };
+  let obj = {
+    channelId: channelId.channel_id,
+    actionType: channelId.action_type,
+    title: channelId.title,
+    description: channelId.description,
+    emoji: null,
+    icon: null,
+  };
   let tmp = null;
   if (null != channelId.emoji) {
     obj = { id: null, name: null, animated: null };
@@ -112,9 +119,13 @@ export const settingsFromServer = function settingsFromServer(body) {
     obj = { authorIds: null, message: null };
     ({ author_ids: obj2[0], message: obj2[1] } = welcome_message);
     obj[0] = obj;
-    const found = new_member_actions.filter((channel_id) => callback(1471).isNotNullish(store.getChannel(channel_id.channel_id)));
+    const found = new_member_actions.filter((channel_id) =>
+      callback(1471).isNotNullish(store.getChannel(channel_id.channel_id)),
+    );
     obj[1] = found.map(newMemberActionFromServer);
-    const found1 = resource_channels.filter((channel_id) => callback(1471).isNotNullish(store.getChannel(channel_id.channel_id)));
+    const found1 = resource_channels.filter((channel_id) =>
+      callback(1471).isNotNullish(store.getChannel(channel_id.channel_id)),
+    );
     obj[2] = found1.map(resourceChannelFromServer);
     obj[3] = body.enabled;
     return obj;
@@ -125,7 +136,13 @@ export const settingsToServer = function settingsToServer(arg0, enabled) {
     return null;
   } else {
     ({ welcomeMessage, newMemberActions, resourceChannels } = enabled);
-    let obj = { guild_id: null, welcome_message: null, new_member_actions: null, resource_channels: null, enabled: null };
+    let obj = {
+      guild_id: null,
+      welcome_message: null,
+      new_member_actions: null,
+      resource_channels: null,
+      enabled: null,
+    };
     obj[0] = arg0;
     let authorIds;
     if (welcomeMessage != null) {
@@ -148,9 +165,18 @@ export const settingsToServer = function settingsToServer(arg0, enabled) {
     if (newMemberActions == null) {
       newMemberActions = [];
     }
-    const found = newMemberActions.filter((channelId) => callback(1471).isNotNullish(store.getChannel(channelId.channelId)));
+    const found = newMemberActions.filter((channelId) =>
+      callback(1471).isNotNullish(store.getChannel(channelId.channelId)),
+    );
     obj[2] = found.map((channelId) => {
-      let obj = { channel_id: channelId.channelId, action_type: channelId.actionType, title: channelId.title, description: channelId.description, emoji: null, icon: null };
+      let obj = {
+        channel_id: channelId.channelId,
+        action_type: channelId.actionType,
+        title: channelId.title,
+        description: channelId.description,
+        emoji: null,
+        icon: null,
+      };
       const emoji = channelId.emoji;
       let id;
       if (emoji != null) {
@@ -177,9 +203,17 @@ export const settingsToServer = function settingsToServer(arg0, enabled) {
     if (resourceChannels == null) {
       resourceChannels = [];
     }
-    const found1 = resourceChannels.filter((channelId) => callback(1471).isNotNullish(store.getChannel(channelId.channelId)));
+    const found1 = resourceChannels.filter((channelId) =>
+      callback(1471).isNotNullish(store.getChannel(channelId.channelId)),
+    );
     obj[3] = found1.map((channelId) => {
-      let obj = { channel_id: channelId.channelId, title: channelId.title, description: channelId.description, emoji: null, icon: null };
+      let obj = {
+        channel_id: channelId.channelId,
+        title: channelId.title,
+        description: channelId.description,
+        emoji: null,
+        icon: null,
+      };
       const emoji = channelId.emoji;
       let id;
       if (emoji != null) {
@@ -317,4 +351,15 @@ export const isChannelValidForNewMemberAction = function isChannelValidForNewMem
   }
   return applyOverwritesAll.canEveryoneRole(constants2.VIEW_CHANNEL, type);
 };
-export const ChannelEditBlockTypes = { DEFAULT: 0, [0]: "DEFAULT", TODO: 1, [1]: "TODO", RESOURCE: 2, [2]: "RESOURCE", RULES: 3, [3]: "RULES", UPDATES: 4, [4]: "UPDATES" };
+export const ChannelEditBlockTypes = {
+  DEFAULT: 0,
+  [0]: "DEFAULT",
+  TODO: 1,
+  [1]: "TODO",
+  RESOURCE: 2,
+  [2]: "RESOURCE",
+  RULES: 3,
+  [3]: "RULES",
+  UPDATES: 4,
+  [4]: "UPDATES",
+};

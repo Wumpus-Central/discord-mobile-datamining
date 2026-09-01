@@ -29,7 +29,9 @@ function loadThread(channelId) {
   const _require = channelId;
   if (null == channelId) {
     return Promise.resolve();
-  } else if (channelId === require("../channel/FakePlaceholderPrivateChannel.tsx").FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+  } else if (
+    channelId === require("../channel/FakePlaceholderPrivateChannel.tsx").FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID
+  ) {
     return Promise.resolve();
   } else if (isStaticChannelRoute(channelId)) {
     return Promise.resolve();
@@ -70,38 +72,40 @@ function loadThread(channelId) {
         obj[1] = tmp13Result.rejectWithMigratedError();
         const value = HTTP.get(obj);
         const guildIdResult = RouteParam.guildId();
-        const catchPromise = value.then((body) => {
-          body = body.body;
-          closure_1_11[closure_0] = { type: "LOADED" };
-          if (closure_1_5.has(body.type)) {
-            let messageId;
+        const catchPromise = value
+          .then((body) => {
+            body = body.body;
+            closure_1_11[closure_0] = { type: "LOADED" };
+            if (closure_1_5.has(body.type)) {
+              let messageId;
+              if (lib != null) {
+                const params = lib.params;
+                if (params != null) {
+                  messageId = params.messageId;
+                }
+              }
+              let obj = lib(closure_1_2[6]);
+              obj = { type: "THREAD_CREATE", channel: null, messageId: null };
+              obj[1] = closure_1_4(body);
+              obj[2] = messageId;
+              obj.dispatch(obj);
+              const tmp4 = closure_1_4(body);
+            }
+          })
+          .catch(() => {
+            closure_1_11[closure_0] = { type: "NOT_FOUND" };
+            let obj = lib(closure_1_2[6]);
+            obj = { id: closure_0, guild_id: null, parent_id: "r" };
+            let guildId;
             if (lib != null) {
               const params = lib.params;
               if (params != null) {
-                messageId = params.messageId;
+                guildId = params.guildId;
               }
             }
-            let obj = lib(closure_1_2[6]);
-            obj = { type: "THREAD_CREATE", channel: null, messageId: null };
-            obj[1] = closure_1_4(body);
-            obj[2] = messageId;
-            obj.dispatch(obj);
-            const tmp4 = closure_1_4(body);
-          }
-        }).catch(() => {
-          closure_1_11[closure_0] = { type: "NOT_FOUND" };
-          let obj = lib(closure_1_2[6]);
-          obj = { id: closure_0, guild_id: null, parent_id: "r" };
-          let guildId;
-          if (lib != null) {
-            const params = lib.params;
-            if (params != null) {
-              guildId = params.guildId;
-            }
-          }
-          obj[1] = guildId;
-          obj.dispatch({ type: "CHANNEL_DELETE", channel: obj });
-        });
+            obj[1] = guildId;
+            obj.dispatch({ type: "CHANNEL_DELETE", channel: obj });
+          });
         obj1 = { type: "LOADING", promise: null };
         obj1[1] = catchPromise;
         dependencyMap[channelId] = obj1;
@@ -165,9 +169,7 @@ export default {
         continue;
       }
       if (0 === items1.length) {
-        return Promise.all(items).then(() => {
-
-        });
+        return Promise.all(items).then(() => {});
       } else {
         const HTTP = items1(530).HTTP;
         let obj = { url: null, body: null, rejectWithError: null };
@@ -178,35 +180,37 @@ export default {
         obj[2] = items1(530).rejectWithMigratedError();
         const obj4 = items1(530);
         const postResult = HTTP.post(obj);
-        const catchPromise = HTTP.post(obj).then((arg0) => {
-          const set = new Set();
-          const iter = arg0.body.items[Symbol.iterator]();
-          const nextResult = iter.next();
-          while (iter !== undefined) {
-            let id = nextResult.id;
-            let addResult = set.add(id);
-            let tmp3 = closure_1_11;
-            closure_1_11[id] = { type: "LOADED" };
-            let tmp4 = closure_1_14;
-            let tmp5 = closure_1_14(nextResult);
-            continue;
-          }
-          for (const item10029 of items1) {
-            let tmp6 = item10029;
-            if (!set.has(item10029)) {
-              let tmp7 = closure_1_11;
-              let tmp8 = item10029;
-              closure_1_11[tmp6] = { type: "NOT_FOUND" };
+        const catchPromise = HTTP.post(obj)
+          .then((arg0) => {
+            const set = new Set();
+            const iter = arg0.body.items[Symbol.iterator]();
+            const nextResult = iter.next();
+            while (iter !== undefined) {
+              let id = nextResult.id;
+              let addResult = set.add(id);
+              let tmp3 = closure_1_11;
+              closure_1_11[id] = { type: "LOADED" };
+              let tmp4 = closure_1_14;
+              let tmp5 = closure_1_14(nextResult);
+              continue;
             }
-            continue;
-          }
-        }).catch(() => {
-          for (const item10005 of items1) {
-            let tmp3 = closure_1_11;
-            delete tmp[tmp2];
-            continue;
-          }
-        });
+            for (const item10029 of items1) {
+              let tmp6 = item10029;
+              if (!set.has(item10029)) {
+                let tmp7 = closure_1_11;
+                let tmp8 = item10029;
+                closure_1_11[tmp6] = { type: "NOT_FOUND" };
+              }
+              continue;
+            }
+          })
+          .catch(() => {
+            for (const item10005 of items1) {
+              let tmp3 = closure_1_11;
+              delete tmp[tmp2];
+              continue;
+            }
+          });
         for (const item10052 of items1) {
           let tmp26 = dependencyMap;
           obj = { type: "LOADING", promise: null };
@@ -218,9 +222,7 @@ export default {
         if (0 !== items.length) {
           const items2 = [];
           items2[HermesBuiltin.arraySpread(items, 0)] = catchPromise;
-          nextPromise1 = Promise.all(items2).then(() => {
-
-          });
+          nextPromise1 = Promise.all(items2).then(() => {});
           const allPromises1 = Promise.all(items2);
         }
         return nextPromise1;
@@ -228,5 +230,5 @@ export default {
     } else {
       return Promise.resolve();
     }
-  }
+  },
 };

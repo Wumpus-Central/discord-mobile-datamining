@@ -27,7 +27,7 @@ createToggle = {
   useDescription() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["+tBsvs"]);
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
 let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SameAsDeviceThemeSetting.tsx");

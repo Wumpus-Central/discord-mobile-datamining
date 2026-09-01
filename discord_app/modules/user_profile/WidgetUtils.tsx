@@ -163,19 +163,30 @@ export const addWidgetToPending = function addWidgetToPending(type) {
       widgets = [];
     }
   }
-  if (null == widgets.find((getUniqueKey) => {
-    const uniqueKey = getUniqueKey.getUniqueKey();
-    return uniqueKey === type.getUniqueKey();
-  })) {
-    if (type.type === require("../../../discord_common/js/shared/shared-constants/WidgetType.tsx").WidgetType.PERSONAL) {
+  if (
+    null ==
+    widgets.find((getUniqueKey) => {
+      const uniqueKey = getUniqueKey.getUniqueKey();
+      return uniqueKey === type.getUniqueKey();
+    })
+  ) {
+    if (
+      type.type === require("../../../discord_common/js/shared/shared-constants/WidgetType.tsx").WidgetType.PERSONAL
+    ) {
       let tmp13Result = tmp13(4298);
       obj = { dismissAction: null };
       obj[0] = ContentDismissActionType.INDIRECT_ACTION;
-      const result = tmp13Result.UNSAFE_markDismissibleContentAsDismissed(tmp13(1373).DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, obj);
+      const result = tmp13Result.UNSAFE_markDismissibleContentAsDismissed(
+        tmp13(1373).DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK,
+        obj,
+      );
       tmp13Result = tmp13(4298);
       obj = { dismissAction: null };
       obj[0] = ContentDismissActionType.INDIRECT_ACTION;
-      const result1 = tmp13Result.UNSAFE_markDismissibleContentAsDismissed(tmp13(1373).DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, obj);
+      const result1 = tmp13Result.UNSAFE_markDismissibleContentAsDismissed(
+        tmp13(1373).DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE,
+        obj,
+      );
     }
     const items = [type];
     HermesBuiltin.arraySpread(tmp7, 1);
@@ -360,7 +371,10 @@ export const reorderClipsInClipsGalleryWidget = function reorderClipsInClipsGall
 export const updateClipTagsInClipsGalleryWidget = function updateClipTagsInClipsGalleryWidget(arg0, arg1) {
   const _require = arg0;
   importDefault = arg1;
-  if (arg1.length <= require("../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx").USER_WIDGET_GAME_TAGS_MAX_LENGTH) {
+  if (
+    arg1.length <=
+    require("../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx").USER_WIDGET_GAME_TAGS_MAX_LENGTH
+  ) {
     if (closure_6.hasPendingChanges()) {
       let pendingWidgets = obj3.getPendingWidgets();
       if (pendingWidgets == null) {
@@ -452,7 +466,11 @@ export const removeTagFromClip = function removeTagFromClip(arg0, arg1) {
       const tags1 = found1.tags;
       found2 = tags1.filter((arg0) => arg0 !== found2);
       _require = arg0;
-      if (found2.length <= require("../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx").USER_WIDGET_GAME_TAGS_MAX_LENGTH) {
+      if (
+        found2.length <=
+        require("../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx")
+          .USER_WIDGET_GAME_TAGS_MAX_LENGTH
+      ) {
         if (obj.hasPendingChanges()) {
           let pendingWidgets1 = obj.getPendingWidgets();
           if (pendingWidgets1 == null) {
@@ -575,7 +593,10 @@ export const updatePersonalWidget = function updatePersonalWidget(arg0) {
 };
 export const updatePendingGameTags = function updatePendingGameTags(widgetType, arg1, tags) {
   const _require = arg1;
-  if (tags.length <= Object.values(require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag).length) {
+  if (
+    tags.length <=
+    Object.values(require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag).length
+  ) {
     const tmp5 = findGameWidget(widgetType);
     if (null != tmp5) {
       const games = tmp5.games;
@@ -620,7 +641,11 @@ export const removeTagFromGame = function removeTagFromGame(widgetType) {
           }
           _require = arg1;
           const _Object = Object;
-          if (found1.length <= Object.values(require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag).length) {
+          if (
+            found1.length <=
+            Object.values(require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag)
+              .length
+          ) {
             const tmpResult = findGameWidget(tmp2.type);
             if (null != tmpResult) {
               const games1 = tmpResult.games;
@@ -828,92 +853,97 @@ export const isGameLimitReached = function isGameLimitReached(type) {
 export const areWidgetGamesEqual = function areWidgetGamesEqual(games, games2, type) {
   closure_0 = games2;
   closure_1 = type;
-  return games.length === games2.length && games.every((gameId) => {
-    games2 = undefined;
-    let flag = false;
-    if (gameId.gameId === games2[arg1].gameId) {
-      if (!closure_1_8.includes(tmp2)) {
-        flag = true;
-        if (closure_1_9.includes(tmp2)) {
-          const tags = gameId.tags;
-          let tmp10 = null;
-          if (null != tags) {
-            tmp10 = null;
-            if ("" !== tags) {
-              const _Array3 = Array;
-              if (!Array.isArray(tags)) {
-                tmp10 = tags;
-              } else {
-                tmp10 = null;
+  return (
+    games.length === games2.length &&
+    games.every((gameId) => {
+      games2 = undefined;
+      let flag = false;
+      if (gameId.gameId === games2[arg1].gameId) {
+        if (!closure_1_8.includes(tmp2)) {
+          flag = true;
+          if (closure_1_9.includes(tmp2)) {
+            const tags = gameId.tags;
+            let tmp10 = null;
+            if (null != tags) {
+              tmp10 = null;
+              if ("" !== tags) {
+                const _Array3 = Array;
+                if (!Array.isArray(tags)) {
+                  tmp10 = tags;
+                } else {
+                  tmp10 = null;
+                }
               }
             }
-          }
-          const tags1 = tmp.tags;
-          let tmp12 = null;
-          if (null != tags1) {
-            tmp12 = null;
-            if ("" !== tags1) {
-              const _Array4 = Array;
-              if (!Array.isArray(tags1)) {
-                tmp12 = tags1;
-              } else {
-                tmp12 = null;
+            const tags1 = tmp.tags;
+            let tmp12 = null;
+            if (null != tags1) {
+              tmp12 = null;
+              if ("" !== tags1) {
+                const _Array4 = Array;
+                if (!Array.isArray(tags1)) {
+                  tmp12 = tags1;
+                } else {
+                  tmp12 = null;
+                }
               }
             }
-          }
-          games2 = tmp12;
-          flag = false;
-          if (null === tmp10 === null === tmp12) {
-            flag = true;
-            if (null !== tmp10) {
+            games2 = tmp12;
+            flag = false;
+            if (((null === tmp10) === null) === tmp12) {
               flag = true;
-              if (null !== tmp12) {
-                flag = false;
-                if (tmp10.length === tmp12.length) {
-                  flag = true;
-                  if (!tmp10.every((arg0, arg1) => arg0 === _null[arg1])) {
-                    flag = false;
+              if (null !== tmp10) {
+                flag = true;
+                if (null !== tmp12) {
+                  flag = false;
+                  if (tmp10.length === tmp12.length) {
+                    flag = true;
+                    if (!tmp10.every((arg0, arg1) => arg0 === _null[arg1])) {
+                      flag = false;
+                    }
                   }
                 }
               }
             }
           }
-        }
-      } else {
-        const comment = gameId.comment;
-        let tmp4 = null;
-        if (null != comment) {
-          tmp4 = null;
-          if ("" !== comment) {
-            const _Array = Array;
-            if (!Array.isArray(comment)) {
-              tmp4 = comment;
-            } else {
-              tmp4 = null;
+        } else {
+          const comment = gameId.comment;
+          let tmp4 = null;
+          if (null != comment) {
+            tmp4 = null;
+            if ("" !== comment) {
+              const _Array = Array;
+              if (!Array.isArray(comment)) {
+                tmp4 = comment;
+              } else {
+                tmp4 = null;
+              }
             }
           }
-        }
-        const comment1 = tmp.comment;
-        let tmp6 = null;
-        if (null != comment1) {
-          tmp6 = null;
-          if ("" !== comment1) {
-            const _Array2 = Array;
-            if (!Array.isArray(comment1)) {
-              tmp6 = comment1;
-            } else {
-              tmp6 = null;
+          const comment1 = tmp.comment;
+          let tmp6 = null;
+          if (null != comment1) {
+            tmp6 = null;
+            if ("" !== comment1) {
+              const _Array2 = Array;
+              if (!Array.isArray(comment1)) {
+                tmp6 = comment1;
+              } else {
+                tmp6 = null;
+              }
             }
           }
+          flag = false;
         }
-        flag = false;
       }
-    }
-    return flag;
-  });
+      return flag;
+    })
+  );
 };
 export const isGameAllowedInGameWidgets = function isGameAllowedInGameWidgets(contentClassification) {
-  const result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(contentClassification.contentClassification);
+  const result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(
+    contentClassification.contentClassification,
+  );
   let tmp4 = !result;
   if (!result) {
     const GAME_WIDGET_BANNED_APPLICATION_IDS = GAME_WIDGET_LIMITS_BY_TYPE.GAME_WIDGET_BANNED_APPLICATION_IDS;

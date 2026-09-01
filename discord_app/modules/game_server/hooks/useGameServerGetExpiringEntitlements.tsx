@@ -3,12 +3,16 @@ import closure_2 from "../../../../_runtime/00019_noop.js";
 import closure_3 from "../GameServerStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx",
+);
 
 export default function useGameServerGetExpiringEntitlements(arg0) {
   const _require = arg0;
   let items = [closure_3];
-  stateFromStores = _require(stateFromStores[2]).useStateFromStores(items, () => closure_1_3.getStateForGuild(closure_0));
+  stateFromStores = _require(stateFromStores[2]).useStateFromStores(items, () =>
+    closure_1_3.getStateForGuild(closure_0),
+  );
   let entitlements;
   if (stateFromStores != null) {
     entitlements = stateFromStores.entitlements;
@@ -31,4 +35,4 @@ export default function useGameServerGetExpiringEntitlements(arg0) {
     }
     return items;
   }, items1);
-};
+}

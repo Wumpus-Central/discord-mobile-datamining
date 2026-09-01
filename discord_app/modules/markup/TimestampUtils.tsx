@@ -56,9 +56,8 @@ let obj = {
         const tmpResult4Result = tmp(4075)(toDate.toDate());
       }
       return fromNowResult;
-    } catch (err) {
-    }
-  }
+    } catch (err) {}
+  },
 };
 Object.setPrototypeOf(obj, null);
 const keys = Object.keys(obj);

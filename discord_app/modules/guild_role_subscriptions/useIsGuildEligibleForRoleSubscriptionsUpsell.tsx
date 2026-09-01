@@ -8,12 +8,16 @@ import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
 const GuildFeatures = ME.GuildFeatures;
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx",
+);
 
 export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_3.getGuild(closure_0));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_3.getGuild(closure_0),
+  );
   initialize;
   [][0] = closure_4;
   let tmp6 = null != stateFromStores;
@@ -22,7 +26,8 @@ export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
   }
   const obj = initialize;
   const tmp = _require;
-  const isUserInCreatorMonetizationEligibleCountry = require("../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx").useIsUserInCreatorMonetizationEligibleCountry();
+  const isUserInCreatorMonetizationEligibleCountry =
+    require("../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx").useIsUserInCreatorMonetizationEligibleCountry();
   if (tmp6) {
     let flag;
     if (stateFromStores != null) {
@@ -62,4 +67,4 @@ export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
     tmp6 = !hasItem;
   }
   return tmp6;
-};
+}

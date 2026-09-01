@@ -4,8 +4,7 @@ import get from "../../utils/ProcessArgs.tsx";
 import getErlpackEncoding from "GatewayEncodingErlpackEncoding.native.tsx";
 
 getErlpackEncoding = getErlpackEncoding.getErlpackEncoding();
-class JSONEncoding {
-}
+class JSONEncoding {}
 const prototype = JSONEncoding.prototype;
 prototype["pack"] = function pack(arg0) {
   return JSON.stringify(arg0);

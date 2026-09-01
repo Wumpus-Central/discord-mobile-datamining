@@ -10,7 +10,13 @@ import Changeset from "RowGeneratorConstants.tsx";
 
 require = arg1;
 ({ RowType: c4, SeparatorType: c5, LoadingType: closure_6 } = Changeset);
-let obj = { constrainedWidth: 0, animatingStickerMessageId: null, forcedTheme: null, shouldObscureSpoiler: true, shouldDisableInteractiveComponents: true };
+let obj = {
+  constrainedWidth: 0,
+  animatingStickerMessageId: null,
+  forcedTheme: null,
+  shouldObscureSpoiler: true,
+  shouldDisableInteractiveComponents: true,
+};
 const merged = Object.assign(require("UserOption").DEFAULT_OPTIONS);
 class RowManager {
   constructor() {

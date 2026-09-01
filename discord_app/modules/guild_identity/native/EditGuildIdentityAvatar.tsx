@@ -47,13 +47,21 @@ export default function EditGuildIdentityAvatar(userId) {
     return member;
   });
   let tmp = callback();
-  analyticsLocations = stateFromStores(stateFromStores1[8])(stateFromStores(stateFromStores1[9]).EDIT_AVATAR).analyticsLocations;
+  analyticsLocations = stateFromStores(stateFromStores1[8])(
+    stateFromStores(stateFromStores1[9]).EDIT_AVATAR,
+  ).analyticsLocations;
   const tmp7 = stateFromStores(stateFromStores1[8]);
-  ({ pendingAvatar, pendingAvatarDecoration, setPendingAvatar } = stateFromStores(stateFromStores1[10])({ guildId, analyticsLocations }));
+  ({ pendingAvatar, pendingAvatarDecoration, setPendingAvatar } = stateFromStores(stateFromStores1[10])({
+    guildId,
+    analyticsLocations,
+  }));
   const tmp9 = stateFromStores(stateFromStores1[11])({ guildId, analyticsLocations });
   closure_5 = tmp9;
   const tmp8 = stateFromStores(stateFromStores1[10])({ guildId, analyticsLocations });
-  const pendingAvatarSrc = guildId(stateFromStores1[12]).getPendingAvatarSrc({ userId: userId.userId, image: pendingAvatar });
+  const pendingAvatarSrc = guildId(stateFromStores1[12]).getPendingAvatarSrc({
+    userId: userId.userId,
+    image: pendingAvatar,
+  });
   const obj3 = guildId(stateFromStores1[12]);
   let result = stateFromStores(stateFromStores1[13]).canUsePremiumGuildMemberProfile(stateFromStores);
   c6 = result;
@@ -76,16 +84,42 @@ export default function EditGuildIdentityAvatar(userId) {
     tmp15 = avatarDecoration;
   }
   avatarDecoration = tmp15;
-  const items2 = [guildId, stateFromStores1, stateFromStores, result, tmp12, showRemoveAvatarResult, tmp15, analyticsLocations, tmp9, setPendingAvatar];
+  const items2 = [
+    guildId,
+    stateFromStores1,
+    stateFromStores,
+    result,
+    tmp12,
+    showRemoveAvatarResult,
+    tmp15,
+    analyticsLocations,
+    tmp9,
+    setPendingAvatar,
+  ];
   let tmp19Result = null;
   if (null != stateFromStores) {
-    obj = { style: null, disabled: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
+    obj = {
+      style: null,
+      disabled: null,
+      onPress: null,
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      children: null,
+    };
     obj[0] = style;
     obj[1] = disabled;
     obj[2] = tmp17;
     const intl = tmp2(tmp3[23]).intl;
     obj[4] = intl.string(tmp2(tmp3[23]).t["70lEQe"]);
-    obj = { user: null, guildId: null, pendingAvatarSrc: null, pendingAvatarDecoration: null, statusStyle: null, disableStatus: null, style: null };
+    obj = {
+      user: null,
+      guildId: null,
+      pendingAvatarSrc: null,
+      pendingAvatarDecoration: null,
+      statusStyle: null,
+      disableStatus: null,
+      style: null,
+    };
     obj[0] = stateFromStores;
     let tmp23;
     if (null !== pendingAvatar) {
@@ -101,7 +135,7 @@ export default function EditGuildIdentityAvatar(userId) {
     obj[4] = statusStyle;
     obj[5] = disableStatus;
     obj[6] = avatarStyle;
-    const items3 = [closure_10(tmp6(tmp3[24]), obj), ];
+    const items3 = [closure_10(tmp6(tmp3[24]), obj)];
     let tmp20Result = !disabled;
     if (!disabled) {
       obj1 = { style: null };
@@ -115,4 +149,4 @@ export default function EditGuildIdentityAvatar(userId) {
     const tmp6Result = tmp6(tmp3[24]);
   }
   return tmp19Result;
-};
+}

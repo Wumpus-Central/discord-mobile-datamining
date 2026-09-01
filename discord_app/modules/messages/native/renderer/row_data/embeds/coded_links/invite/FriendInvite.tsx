@@ -8,7 +8,9 @@ import closure_4 from "../../../../../../../../stores/RelationshipStore.tsx";
 
 const Image = get_ActivityIndicator.Image;
 const InviteTypes = InviteSendStates.InviteTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx",
+);
 
 export const createFriendInvite = function createFriendInvite(inviter) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(arg3));

@@ -63,7 +63,7 @@ function AnimatedContainer(children) {
       let tmpResult = tmp(tmp2[11]);
       withSpringResult = tmpResult.withSpring(sharedValue2.get(), closure_1_11);
     }
-    const items = [{ translateX: withSpringResult }, , ];
+    const items = [{ translateX: withSpringResult }, ,];
     if (stateFromStores) {
       let value = sharedValue1.get();
     } else {
@@ -81,7 +81,17 @@ function AnimatedContainer(children) {
     obj[1] = items;
     return obj;
   };
-  obj = { withTiming: tmp2(tmp3[10]).withTiming, opacityAnimation: sharedValue, useReducedMotion: stateFromStores, translateXAnimation: sharedValue2, withSpring: tmp2(tmp3[11]).withSpring, SPRING_OPTIONS_POSITION: closure_11, translateYAnimation: sharedValue1, scaleAnimation: sharedValue3, SPRING_OPTIONS_SCALE: closure_10 };
+  obj = {
+    withTiming: tmp2(tmp3[10]).withTiming,
+    opacityAnimation: sharedValue,
+    useReducedMotion: stateFromStores,
+    translateXAnimation: sharedValue2,
+    withSpring: tmp2(tmp3[11]).withSpring,
+    SPRING_OPTIONS_POSITION: closure_11,
+    translateYAnimation: sharedValue1,
+    scaleAnimation: sharedValue3,
+    SPRING_OPTIONS_SCALE: closure_10,
+  };
   fn.__closure = obj;
   fn.__workletHash = 8800301056148;
   fn.__initData = closure_14;
@@ -137,33 +147,107 @@ let c9 = 38;
 let closure_10 = { damping: 30, stiffness: 400 };
 let closure_11 = { damping: 30, stiffness: 400 };
 let closure_12 = createCacheKey.createStyles(() => {
-  let obj = { groupContainer: { position: "relative" }, shadowContainer: null, shadowContainerBackground: null, shadowContainerBackgroundLight: null, shadowContainerBackgroundDark: null, gradientContainer: null, gradientDimOverlay: null, gradientImageBorder: null, avatarContainer: null, avatar: null, avatarWrapper: null, overflowCount: null };
+  let obj = {
+    groupContainer: { position: "relative" },
+    shadowContainer: null,
+    shadowContainerBackground: null,
+    shadowContainerBackgroundLight: null,
+    shadowContainerBackgroundDark: null,
+    gradientContainer: null,
+    gradientDimOverlay: null,
+    gradientImageBorder: null,
+    avatarContainer: null,
+    avatar: null,
+    avatarWrapper: null,
+    overflowCount: null,
+  };
   obj = { borderRadius: ThemesDefault.radii.sm };
   obj[1] = obj;
   obj[2] = {};
   obj[3] = { opacity: 0.4 };
   obj[4] = { opacity: 0.15 };
-  obj = { width: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE, height: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE, overflow: "hidden", borderRadius: ThemesDefault.radii.sm };
+  obj = {
+    width: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE,
+    height: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE,
+    overflow: "hidden",
+    borderRadius: ThemesDefault.radii.sm,
+  };
   obj[5] = obj;
   obj[6] = { position: "absolute", left: 0, top: 0, right: 0, bottom: 0 };
-  obj[7] = { width: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE, height: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE, borderRadius: ThemesDefault.radii.sm, position: "absolute" };
+  obj[7] = {
+    width: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE,
+    height: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE,
+    borderRadius: ThemesDefault.radii.sm,
+    position: "absolute",
+  };
   obj[8] = { position: "absolute", top: "50%", left: "50%", width: c9, height: c9, marginTop: -19, marginLeft: -19 };
   obj[9] = { width: 32, height: 32, position: "absolute", borderRadius: 16 };
-  obj[10] = { position: "absolute", width: c9, height: c9, justifyContent: "center", alignItems: "center", borderRadius: 19 };
-  obj1 = { width: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE, height: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE, borderRadius: ThemesDefault.radii.sm, position: "absolute" };
-  const obj2 = { position: "absolute", top: "50%", left: "50%", width: c9, height: c9, marginTop: -19, marginLeft: -19 };
-  obj[11] = { width: c9, height: c9, position: "absolute", borderRadius: 19, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, display: "flex", alignItems: "center", justifyContent: "center" };
+  obj[10] = {
+    position: "absolute",
+    width: c9,
+    height: c9,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 19,
+  };
+  obj1 = {
+    width: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE,
+    height: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE,
+    borderRadius: ThemesDefault.radii.sm,
+    position: "absolute",
+  };
+  const obj2 = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    width: c9,
+    height: c9,
+    marginTop: -19,
+    marginLeft: -19,
+  };
+  obj[11] = {
+    width: c9,
+    height: c9,
+    position: "absolute",
+    borderRadius: 19,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  };
   return obj;
 });
-let items = [{ translateY: 0, translateX: 0, scale: 1 }, { translateY: 0, translateX: 0, scale: 0 }, { translateY: 0, translateX: 0, scale: 0 }, { translateY: 0, translateX: 0, scale: 0 }];
-let items1 = [items, , , ];
-let items2 = [{ translateY: -14, translateX: -14, scale: 0.75 }, { translateY: 12, translateX: 12, scale: 0.875 }, { translateY: 0, translateX: 0, scale: 0 }, { translateY: 0, translateX: 0, scale: 0 }];
+let items = [
+  { translateY: 0, translateX: 0, scale: 1 },
+  { translateY: 0, translateX: 0, scale: 0 },
+  { translateY: 0, translateX: 0, scale: 0 },
+  { translateY: 0, translateX: 0, scale: 0 },
+];
+let items1 = [items, , ,];
+let items2 = [
+  { translateY: -14, translateX: -14, scale: 0.75 },
+  { translateY: 12, translateX: 12, scale: 0.875 },
+  { translateY: 0, translateX: 0, scale: 0 },
+  { translateY: 0, translateX: 0, scale: 0 },
+];
 items1[1] = items2;
-const items3 = [{ translateY: -4, translateX: 16, scale: 0.75 }, { translateY: 14, translateX: -14, scale: 0.875 }, { translateY: -18, translateX: -12, scale: 0.625 }, { translateY: 0, translateX: 0, scale: 0 }];
+const items3 = [
+  { translateY: -4, translateX: 16, scale: 0.75 },
+  { translateY: 14, translateX: -14, scale: 0.875 },
+  { translateY: -18, translateX: -12, scale: 0.625 },
+  { translateY: 0, translateX: 0, scale: 0 },
+];
 items1[2] = items3;
-const items4 = [{ translateY: -14, translateX: -14, scale: 0.875 }, { translateY: 14, translateX: 14, scale: 0.875 }, { translateY: -18, translateX: 18, scale: 0.625 }, { translateY: 18, translateX: -18, scale: 0.625 }];
+const items4 = [
+  { translateY: -14, translateX: -14, scale: 0.875 },
+  { translateY: 14, translateX: 14, scale: 0.875 },
+  { translateY: -18, translateX: 18, scale: 0.625 },
+  { translateY: 18, translateX: -18, scale: 0.625 },
+];
 items1[3] = items4;
-let closure_14 = { code: "function GroupAvatarTsx1(){const{withTiming,opacityAnimation,useReducedMotion,translateXAnimation,withSpring,SPRING_OPTIONS_POSITION,translateYAnimation,scaleAnimation,SPRING_OPTIONS_SCALE}=this.__closure;return{opacity:withTiming(opacityAnimation.get()),transform:[{translateX:useReducedMotion?translateXAnimation.get():withSpring(translateXAnimation.get(),SPRING_OPTIONS_POSITION)},{translateY:useReducedMotion?translateYAnimation.get():withSpring(translateYAnimation.get(),SPRING_OPTIONS_POSITION)},{scale:useReducedMotion?scaleAnimation.get():withSpring(scaleAnimation.get(),SPRING_OPTIONS_SCALE)}]};}" };
+let closure_14 = {
+  code: "function GroupAvatarTsx1(){const{withTiming,opacityAnimation,useReducedMotion,translateXAnimation,withSpring,SPRING_OPTIONS_POSITION,translateYAnimation,scaleAnimation,SPRING_OPTIONS_SCALE}=this.__closure;return{opacity:withTiming(opacityAnimation.get()),transform:[{translateX:useReducedMotion?translateXAnimation.get():withSpring(translateXAnimation.get(),SPRING_OPTIONS_POSITION)},{translateY:useReducedMotion?translateYAnimation.get():withSpring(translateYAnimation.get(),SPRING_OPTIONS_POSITION)},{scale:useReducedMotion?scaleAnimation.get():withSpring(scaleAnimation.get(),SPRING_OPTIONS_SCALE)}]};}",
+};
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx");
 
 export default function GroupAvatar(users) {
@@ -179,7 +263,9 @@ export default function GroupAvatar(users) {
   const themeContext = obj.useThemeContext();
   ({ primaryColor, theme } = themeContext);
   obj1 = users(ref[6]);
-  let shadowContainerBackground = obj1.isThemeLight(theme) ? tmp.shadowContainerBackgroundLight : tmp.shadowContainerBackgroundDark;
+  let shadowContainerBackground = obj1.isThemeLight(theme)
+    ? tmp.shadowContainerBackgroundLight
+    : tmp.shadowContainerBackgroundDark;
   ref = React.useRef(false);
   const effect = React.useEffect(() => {
     ref.current = true;
@@ -193,7 +279,7 @@ export default function GroupAvatar(users) {
   }
   closure_6 = guildId(ref[7])(ref);
   obj = { style: tmp.groupContainer, children: null };
-  const items = [tmp.shadowContainer, ];
+  const items = [tmp.shadowContainer];
   const mapped = items1[Math.max(Math, 0, Math.min(Math, items1.length - 1, users.length - 1))].map((arg0, arg1) => {
     if (null == users[arg1]) {
       return null;
@@ -234,4 +320,4 @@ export default function GroupAvatar(users) {
   const items2 = [closure_7(c4, obj), mapped];
   obj[1] = items2;
   return closure_7(c4, obj);
-};
+}

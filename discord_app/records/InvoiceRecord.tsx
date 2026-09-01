@@ -20,11 +20,23 @@ class BaseInvoiceRecord extends tmp2 {
 const prototype = BaseInvoiceRecord.prototype;
 BaseInvoiceRecord["createFromServer"] = function createFromServer(currency) {
   ({ total, subtotal, tax, invoice_items } = currency);
-  let mapped = invoice_items.map((skuId) => ({ skuId: skuId.sku_id, quantity: skuId.quantity, description: skuId.description }));
+  let mapped = invoice_items.map((skuId) => ({
+    skuId: skuId.sku_id,
+    quantity: skuId.quantity,
+    description: skuId.description,
+  }));
   if (typeof BaseInvoiceRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp2 = new BaseInvoiceRecord("Trying to call a non-function", invoice_items, BaseInvoiceRecord, new.target, total, subtotal, tax);
+  const tmp2 = new BaseInvoiceRecord(
+    "Trying to call a non-function",
+    invoice_items,
+    BaseInvoiceRecord,
+    new.target,
+    total,
+    subtotal,
+    tax,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp2.total = total;
   tmp2.subtotal = subtotal;
@@ -69,7 +81,16 @@ BaseInvoiceRecord["createInvoiceFromOrder"] = function createInvoiceFromOrder(bi
     if (typeof BaseInvoiceRecord !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const tmp5 = new BaseInvoiceRecord("Trying to call a non-function", BaseInvoiceRecord, new.target, total, subtotal, tax, currency, found);
+    const tmp5 = new BaseInvoiceRecord(
+      "Trying to call a non-function",
+      BaseInvoiceRecord,
+      new.target,
+      total,
+      subtotal,
+      tax,
+      currency,
+      found,
+    );
     // ThrowIfThisInitialized (0x7c)
     tmp5.total = total;
     tmp5.subtotal = subtotal;
@@ -112,13 +133,33 @@ class InvoiceRecord extends BaseInvoiceRecord {
       invoiceItems = [];
     }
     tmp.invoiceItems = invoiceItems;
-    ({ taxInclusive: tmp.taxInclusive, subscriptionPeriodStart: tmp.subscriptionPeriodStart, subscriptionPeriodEnd: tmp.subscriptionPeriodEnd, status: tmp.status, orbsReward: tmp.orbsReward, checkoutContext: tmp.checkoutContext } = global);
+    ({
+      taxInclusive: tmp.taxInclusive,
+      subscriptionPeriodStart: tmp.subscriptionPeriodStart,
+      subscriptionPeriodEnd: tmp.subscriptionPeriodEnd,
+      status: tmp.status,
+      orbsReward: tmp.orbsReward,
+      checkoutContext: tmp.checkoutContext,
+    } = global);
     return tmp;
   }
 }
 const prototype2 = InvoiceRecord.prototype;
 InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body) {
-  const obj = { id: body.id, invoiceItems: null, total: null, subtotal: null, currency: null, tax: null, taxInclusive: null, subscriptionPeriodStart: null, subscriptionPeriodEnd: null, status: null, orbsReward: null, checkoutContext: null };
+  const obj = {
+    id: body.id,
+    invoiceItems: null,
+    total: null,
+    subtotal: null,
+    currency: null,
+    tax: null,
+    taxInclusive: null,
+    subscriptionPeriodStart: null,
+    subscriptionPeriodEnd: null,
+    status: null,
+    orbsReward: null,
+    checkoutContext: null,
+  };
   const invoice_items = body.invoice_items;
   let mapped;
   if (invoice_items != null) {
@@ -143,7 +184,14 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
     invoiceItems = [];
   }
   tmp8.invoiceItems = invoiceItems;
-  ({ taxInclusive: tmp8.taxInclusive, subscriptionPeriodStart: tmp8.subscriptionPeriodStart, subscriptionPeriodEnd: tmp8.subscriptionPeriodEnd, status: tmp8.status, orbsReward: tmp8.orbsReward, checkoutContext: tmp8.checkoutContext } = obj);
+  ({
+    taxInclusive: tmp8.taxInclusive,
+    subscriptionPeriodStart: tmp8.subscriptionPeriodStart,
+    subscriptionPeriodEnd: tmp8.subscriptionPeriodEnd,
+    status: tmp8.status,
+    orbsReward: tmp8.orbsReward,
+    checkoutContext: tmp8.checkoutContext,
+  } = obj);
   return tmp8;
 };
 InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_items) {
@@ -153,7 +201,19 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
     mapped = invoice_items.map(coalesceInvoiceItems.createInvoiceItemFromServer);
     const tmp3 = require;
   }
-  const obj = { id: "", invoiceItems: mapped, total: invoice_items.amount, subtotal: invoice_items.subtotal, currency: invoice_items.currency, tax: invoice_items.tax, taxInclusive: invoice_items.tax_inclusive, subscriptionPeriodStart: new Date(0), subscriptionPeriodEnd: null, orbsReward: null, checkoutContext: null };
+  const obj = {
+    id: "",
+    invoiceItems: mapped,
+    total: invoice_items.amount,
+    subtotal: invoice_items.subtotal,
+    currency: invoice_items.currency,
+    tax: invoice_items.tax,
+    taxInclusive: invoice_items.tax_inclusive,
+    subscriptionPeriodStart: new Date(0),
+    subscriptionPeriodEnd: null,
+    orbsReward: null,
+    checkoutContext: null,
+  };
   const date = new Date(0);
   const tmp5 = new.target;
   const tmp7 = new.target;
@@ -171,7 +231,14 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
     invoiceItems = [];
   }
   tmp9.invoiceItems = invoiceItems;
-  ({ taxInclusive: tmp9.taxInclusive, subscriptionPeriodStart: tmp9.subscriptionPeriodStart, subscriptionPeriodEnd: tmp9.subscriptionPeriodEnd, status: tmp9.status, orbsReward: tmp9.orbsReward, checkoutContext: tmp9.checkoutContext } = obj);
+  ({
+    taxInclusive: tmp9.taxInclusive,
+    subscriptionPeriodStart: tmp9.subscriptionPeriodStart,
+    subscriptionPeriodEnd: tmp9.subscriptionPeriodEnd,
+    status: tmp9.status,
+    orbsReward: tmp9.orbsReward,
+    checkoutContext: tmp9.checkoutContext,
+  } = obj);
   return tmp9;
 };
 prototype2["findInvoiceItemByPlanId"] = function findInvoiceItemByPlanId(id) {

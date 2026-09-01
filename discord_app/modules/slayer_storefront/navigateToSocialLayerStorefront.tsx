@@ -24,7 +24,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       const lib = tmp2;
       ({ guildId: id, invite: c1, pageIndex: c2, skuId: c3, slug: c4 } = id);
       yield "PX_16";
@@ -142,7 +142,11 @@ export default function navigateToSocialLayerStorefront(arg0) {
     }
   }
   if (null != applicationIdFromGuildId) {
-    resolved = Promise.resolve(transitionTo.transitionTo(closure_7.COLLECTIBLES_SHOP_GAME_SHOP(applicationIdFromGuildId, pageIndex, skuId, slug)));
+    resolved = Promise.resolve(
+      transitionTo.transitionTo(
+        closure_7.COLLECTIBLES_SHOP_GAME_SHOP(applicationIdFromGuildId, pageIndex, skuId, slug),
+      ),
+    );
     const obj3 = transitionTo;
   } else {
     obj = { guildId: null, pageIndex: null, invite: null, skuId: null, slug: null };
@@ -153,7 +157,7 @@ export default function navigateToSocialLayerStorefront(arg0) {
     obj[4] = slug;
     resolved = navigateToSocialLayerStorefrontWithGuildPreview(obj);
   }
-};
+}
 export const eagerNavigateToSocialLayerStorefront = function eagerNavigateToSocialLayerStorefront(forceFetch) {
   ({ guildId, invite } = forceFetch);
   if (null != invite) {
@@ -171,8 +175,12 @@ export const eagerNavigateToSocialLayerStorefront = function eagerNavigateToSoci
     const socialLayerStorefront = obj.fetchSocialLayerStorefront(guildId, obj);
   }
 };
-export const eagerNavigateToSocialLayerStorefrontForApplication = function eagerNavigateToSocialLayerStorefrontForApplication(arg0) {
-  ({ applicationId, forceFetch } = arg0);
-  const socialLayerStorefrontForApplication = _fetchSocialLayerStorefront.fetchSocialLayerStorefrontForApplication(applicationId, { eager: true, forceFetch });
-};
+export const eagerNavigateToSocialLayerStorefrontForApplication =
+  function eagerNavigateToSocialLayerStorefrontForApplication(arg0) {
+    ({ applicationId, forceFetch } = arg0);
+    const socialLayerStorefrontForApplication = _fetchSocialLayerStorefront.fetchSocialLayerStorefrontForApplication(
+      applicationId,
+      { eager: true, forceFetch },
+    );
+  };
 export { navigateToSocialLayerStorefrontWithGuildPreview };

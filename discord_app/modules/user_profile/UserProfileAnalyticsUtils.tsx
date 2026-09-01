@@ -130,7 +130,22 @@ function getTrackUserProfileProperties(userId) {
         member = member.getMember(guildId, id1);
       }
     }
-    let obj = { profile_layout: null, profile_session_id: null, source_profile_session_id: null, profile_properties: null, guild_profile_properties: null, profile_activity_types: null, profile_badges: null, avatar_decoration_sku_id: null, profile_effect_sku_id: null, profile_frame_sku_id: null, user_status: null, is_guild_profile: null, is_bot_profile: null, is_private_to_viewer: null };
+    let obj = {
+      profile_layout: null,
+      profile_session_id: null,
+      source_profile_session_id: null,
+      profile_properties: null,
+      guild_profile_properties: null,
+      profile_activity_types: null,
+      profile_badges: null,
+      avatar_decoration_sku_id: null,
+      profile_effect_sku_id: null,
+      profile_frame_sku_id: null,
+      user_status: null,
+      is_guild_profile: null,
+      is_bot_profile: null,
+      is_private_to_viewer: null,
+    };
     obj[0] = layout;
     obj[1] = sessionId;
     obj[2] = sourceSessionId;
@@ -234,7 +249,15 @@ function trackUserProfileAction(applicationId) {
     obj = {};
   } else {
     const userAffinity = authStore.getUserAffinity(userId);
-    obj = { related_user_id: null, relationship_type: null, related_since: null, num_mutual_friends: null, num_mutual_guilds: null, communication_probability: null, communication_rank: null };
+    obj = {
+      related_user_id: null,
+      relationship_type: null,
+      related_since: null,
+      num_mutual_friends: null,
+      num_mutual_guilds: null,
+      communication_probability: null,
+      communication_rank: null,
+    };
     obj[0] = userId;
     obj[1] = store3.getRelationshipType(userId);
     obj[2] = store3.getSince(userId);
@@ -316,7 +339,15 @@ export const getTrackUserRelationshipProperties = function getTrackUserRelations
     return {};
   } else {
     const userAffinity = authStore.getUserAffinity(userId);
-    const obj = { related_user_id: null, relationship_type: null, related_since: null, num_mutual_friends: null, num_mutual_guilds: null, communication_probability: null, communication_rank: null };
+    const obj = {
+      related_user_id: null,
+      relationship_type: null,
+      related_since: null,
+      num_mutual_friends: null,
+      num_mutual_guilds: null,
+      communication_probability: null,
+      communication_rank: null,
+    };
     obj[0] = userId;
     obj[1] = store3.getRelationshipType(userId);
     obj[2] = store3.getSince(userId);
@@ -377,7 +408,15 @@ export const maybeTrackUserProfileUiViewed = function maybeTrackUserProfileUiVie
         let obj = {};
       } else {
         const userAffinity = authStore.getUserAffinity(userId);
-        obj = { related_user_id: null, relationship_type: null, related_since: null, num_mutual_friends: null, num_mutual_guilds: null, communication_probability: null, communication_rank: null };
+        obj = {
+          related_user_id: null,
+          relationship_type: null,
+          related_since: null,
+          num_mutual_friends: null,
+          num_mutual_guilds: null,
+          communication_probability: null,
+          communication_rank: null,
+        };
         obj[0] = userId;
         obj[1] = store3.getRelationshipType(userId);
         obj[2] = store3.getSince(userId);
@@ -414,7 +453,8 @@ export const maybeTrackUserProfileUiViewed = function maybeTrackUserProfileUiVie
 };
 export const trackUserProfileActivityJoined = function trackUserProfileActivityJoined(userId) {
   ({ activityType, voiceChannelId } = userId);
-  ({ guildId, channelId, analyticsLocations, activityName, activityPlatform, activitySessionId, applicationId } = userId);
+  ({ guildId, channelId, analyticsLocations, activityName, activityPlatform, activitySessionId, applicationId } =
+    userId);
   let obj = expandEventPropertiesDefault;
   obj = {};
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
@@ -426,7 +466,15 @@ export const trackUserProfileActivityJoined = function trackUserProfileActivityJ
     obj = {};
   } else {
     const userAffinity = authStore.getUserAffinity(userId);
-    obj = { related_user_id: null, relationship_type: null, related_since: null, num_mutual_friends: null, num_mutual_guilds: null, communication_probability: null, communication_rank: null };
+    obj = {
+      related_user_id: null,
+      relationship_type: null,
+      related_since: null,
+      num_mutual_friends: null,
+      num_mutual_guilds: null,
+      communication_probability: null,
+      communication_rank: null,
+    };
     obj[0] = userId;
     obj[1] = store3.getRelationshipType(userId);
     obj[2] = store3.getSince(userId);
@@ -488,7 +536,15 @@ export const trackUserProfileActivityAction = function trackUserProfileActivityA
     obj = {};
   } else {
     const userAffinity = authStore.getUserAffinity(userId);
-    obj = { related_user_id: null, relationship_type: null, related_since: null, num_mutual_friends: null, num_mutual_guilds: null, communication_probability: null, communication_rank: null };
+    obj = {
+      related_user_id: null,
+      relationship_type: null,
+      related_since: null,
+      num_mutual_friends: null,
+      num_mutual_guilds: null,
+      communication_probability: null,
+      communication_rank: null,
+    };
     obj[0] = userId;
     obj[1] = store3.getRelationshipType(userId);
     obj[2] = store3.getSince(userId);
@@ -602,7 +658,15 @@ export const trackUserProfileBadgeAction = function trackUserProfileBadgeAction(
     obj = {};
   } else {
     const userAffinity = authStore.getUserAffinity(userId2);
-    obj = { related_user_id: null, relationship_type: null, related_since: null, num_mutual_friends: null, num_mutual_guilds: null, communication_probability: null, communication_rank: null };
+    obj = {
+      related_user_id: null,
+      relationship_type: null,
+      related_since: null,
+      num_mutual_friends: null,
+      num_mutual_guilds: null,
+      communication_probability: null,
+      communication_rank: null,
+    };
     obj[0] = userId2;
     obj[1] = store3.getRelationshipType(userId2);
     obj[2] = store3.getSince(userId2);
@@ -727,7 +791,8 @@ export const trackUserProfileEditAction = function trackUserProfileEditAction(us
 };
 export const trackUserProfileEditSaved = function trackUserProfileEditSaved(userId) {
   let obj = {};
-  ({ guildId, channelId, analyticsLocations, widgetEdited, gameIds, tags, numCharactersCommentary, isWidgetRemoved } = userId);
+  ({ guildId, channelId, analyticsLocations, widgetEdited, gameIds, tags, numCharactersCommentary, isWidgetRemoved } =
+    userId);
   const merged = Object.assign(userId);
   obj.action = "EDIT_SAVED";
   trackUserProfileAction(obj);

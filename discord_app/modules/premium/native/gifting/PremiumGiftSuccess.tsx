@@ -11,9 +11,22 @@ const require = arg1;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles((arg0) => {
   let obj = { bodyContainer: null, actionContainer: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_16, flex: 1, alignContent: "center", justifyContent: "center", flexGrow: 1 };
+  obj = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    paddingHorizontal: ThemesDefault.space.PX_16,
+    flex: 1,
+    alignContent: "center",
+    justifyContent: "center",
+    flexGrow: 1,
+  };
   obj[0] = obj;
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingTop: ThemesDefault.space.PX_16, paddingBottom: arg0 + ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
+  obj = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    paddingTop: ThemesDefault.space.PX_16,
+    paddingBottom: arg0 + ThemesDefault.space.PX_16,
+    paddingHorizontal: ThemesDefault.space.PX_16,
+    gap: ThemesDefault.space.PX_8,
+  };
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_TOP_LOW);
   obj[1] = obj;
   return obj;
@@ -54,7 +67,11 @@ export default function PremiumGiftSuccess() {
       let obj = lib(stateFromStores[16]);
       obj = { dismissAction: null };
       obj[0] = closure_1_6.INDIRECT_ACTION;
-      const result = obj.markSnowflakeBoundDismissibleContentAsDismissed(lib(stateFromStores[17]).DismissibleContent.GIFTING_PROMOTION_REMINDER, stateFromStores, obj);
+      const result = obj.markSnowflakeBoundDismissibleContentAsDismissed(
+        lib(stateFromStores[17]).DismissibleContent.GIFTING_PROMOTION_REMINDER,
+        stateFromStores,
+        obj,
+      );
     }
   }, items1);
   if (null == recipientUser) {
@@ -68,7 +85,10 @@ export default function PremiumGiftSuccess() {
   }
   if (tmp8) {
     if (config.enabled) {
-      if (selectedGiftingPromotionReward === _require(stateFromStores[15]).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID) {
+      if (
+        selectedGiftingPromotionReward ===
+        _require(stateFromStores[15]).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID
+      ) {
         let code;
         if (null == recipientUser) {
           code = giftCodeRecord.code;
@@ -82,7 +102,7 @@ export default function PremiumGiftSuccess() {
       obj2 = { style: null, children: null };
       obj2[0] = tmp3.bodyContainer;
       obj2[1] = tmp14;
-      const items2 = [tmp13(View, obj2), ];
+      const items2 = [tmp13(View, obj2)];
       obj3 = { style: null, children: null };
       obj3[0] = tmp3.actionContainer;
       obj3[1] = tmp13Result;
@@ -102,4 +122,4 @@ export default function PremiumGiftSuccess() {
   } else {
     tmp13Result = tmp13(tmp4(tmp2[19]).PremiumGiftDMSuccessActions, {});
   }
-};
+}

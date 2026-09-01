@@ -27,8 +27,15 @@ export const useTrackPollCreationEvents = function useTrackPollCreationEvents(an
         }
       });
       let obj = allowMultiSelect(closure_1_2[2]);
-      obj = { answers_count: answers.length, attachments_count: answers, emojis_count: c1, stickers_count: c2, allow_multiselect: c1, layout_type: answers(closure_1_2[3]).PollLayoutTypes.DEFAULT };
+      obj = {
+        answers_count: answers.length,
+        attachments_count: answers,
+        emojis_count: c1,
+        stickers_count: c2,
+        allow_multiselect: c1,
+        layout_type: answers(closure_1_2[3]).PollLayoutTypes.DEFAULT,
+      };
       obj.trackWithMetadata(closure_1_4.POLL_CREATION_CANCELLED, obj);
-    }, items)
+    }, items),
   };
 };

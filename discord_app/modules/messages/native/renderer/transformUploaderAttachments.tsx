@@ -123,4 +123,4 @@ export default function createUploaderAttachments(uploaderFile) {
     mapped = [];
   }
   return mapped;
-};
+}

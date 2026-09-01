@@ -11,10 +11,22 @@ const require = arg1;
 let c3 = importAllResult;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { container: null, label: null, button: null, buttonText: null };
-obj = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
+obj = {
+  width: "100%",
+  height: "100%",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: 16,
+  backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND,
+};
 obj[0] = obj;
 obj[1] = { marginBottom: 16, textAlign: "center" };
-createCacheKey = { paddingHorizontal: 20, paddingVertical: 12, backgroundColor: "white", borderRadius: ThemesDefault.radii.round };
+createCacheKey = {
+  paddingHorizontal: 20,
+  paddingVertical: 12,
+  backgroundColor: "white",
+  borderRadius: ThemesDefault.radii.round,
+};
 obj[2] = createCacheKey;
 obj[3] = { color: ThemesDefault.unsafe_rawColors.PRIMARY_860 };
 let closure_7 = createCacheKey.createStyles(obj);
@@ -30,7 +42,7 @@ const memoResult = importAllResult.memo(function VoicePanelNoVideoParticipantsCa
   obj = { style: tmp.label, variant: "text-md/semibold", color: "text-overlay-light", children: null };
   const intl = channelId(1236).intl;
   obj[3] = intl.string(channelId(1236).t["8eBJ73"]);
-  const items1 = [callback(channelId(4474).Text, obj), ];
+  const items1 = [callback(channelId(4474).Text, obj)];
   obj = { style: tmp.button, onPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl2 = channelId(1236).intl;
   obj[3] = intl2.string(channelId(1236).t.kLQySL);
@@ -42,6 +54,8 @@ const memoResult = importAllResult.memo(function VoicePanelNoVideoParticipantsCa
   obj[1] = items1;
   return callback2(setDefault, obj);
 });
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelNoVideoParticipantsCard.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/card/VoicePanelNoVideoParticipantsCard.tsx",
+);
 
 export default memoResult;

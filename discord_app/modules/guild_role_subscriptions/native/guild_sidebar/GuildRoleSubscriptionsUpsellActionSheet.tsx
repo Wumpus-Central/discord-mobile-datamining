@@ -15,8 +15,14 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ title: { marginTop: 24, textAlign: "center" }, description: { marginTop: 8, marginBottom: 24, textAlign: "center" }, dismissButton: { marginTop: 4 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsUpsellActionSheet.tsx");
+let closure_8 = createCacheKey.createStyles({
+  title: { marginTop: 24, textAlign: "center" },
+  description: { marginTop: 8, marginBottom: 24, textAlign: "center" },
+  dismissButton: { marginTop: 4 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsUpsellActionSheet.tsx",
+);
 
 export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed: importDefault } = arg0);
@@ -26,11 +32,17 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     onDismiss() {
       return callback(closure_1_5.UNKNOWN);
     },
-    children: null
+    children: null,
   };
   obj = { source: registerAssetDefault };
-  const items = [callback(preloadDefault, obj), , , , ];
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const items = [callback(preloadDefault, obj), , , ,];
+  obj = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t.C0m4rQ);
   items[1] = callback(Text.Text, obj);
@@ -43,7 +55,7 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
       callback(closure_1_5.UNKNOWN);
       closure_1_1(closure_1_2[12]).open(closure_0, closure_1_4.ROLE_SUBSCRIPTIONS);
     },
-    text: null
+    text: null,
   };
   const intl3 = getSystemLocale.intl;
   obj2[1] = intl3.string(getSystemLocale.t.OgQQbG);
@@ -54,7 +66,7 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
       return callback(closure_1_5.UNKNOWN);
     },
     text: null,
-    variant: "secondary"
+    variant: "secondary",
   };
   const intl4 = getSystemLocale.intl;
   obj4[1] = intl4.string(getSystemLocale.t.WAI6xu);
@@ -62,4 +74,4 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
   items[4] = callback(View, obj3);
   obj[2] = items;
   return callback2(Background.BottomSheet, obj);
-};
+}

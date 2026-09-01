@@ -26,7 +26,15 @@ function _rewardRedemptionInstructionsFromServer(redemption_instructions_by_plat
 function _questRewardV2FromServer(type) {
   type = type.type;
   if (QuestRewardTypes.QuestRewardTypes.REWARD_CODE === type) {
-    let obj = { type: null, skuId: null, asset: null, assetVideo: null, messages: null, approximateCount: null, redemptionLink: null };
+    let obj = {
+      type: null,
+      skuId: null,
+      asset: null,
+      assetVideo: null,
+      messages: null,
+      approximateCount: null,
+      redemptionLink: null,
+    };
     obj[0] = tmp(7453).QuestRewardTypes.REWARD_CODE;
     ({ sku_id: obj9[1], asset: obj9[2], asset_video: obj9[3] } = type);
     obj = { redemptionInstructionsByPlatform: null, name: null, nameWithArticle: null };
@@ -37,7 +45,16 @@ function _questRewardV2FromServer(type) {
     ({ approximate_count: obj9[5], redemption_link: obj9[6] } = type);
     return obj;
   } else if (tmp(7453).QuestRewardTypes.COLLECTIBLE === type) {
-    obj1 = { type: null, skuId: null, asset: null, assetVideo: null, messages: null, expiresAt: null, expirationMode: null, expiresAtPremium: null };
+    obj1 = {
+      type: null,
+      skuId: null,
+      asset: null,
+      assetVideo: null,
+      messages: null,
+      expiresAt: null,
+      expirationMode: null,
+      expiresAtPremium: null,
+    };
     obj1[0] = tmp(7453).QuestRewardTypes.COLLECTIBLE;
     ({ sku_id: obj7[1], asset: obj7[2], asset_video: obj7[3] } = type);
     const obj2 = { redemptionInstructionsByPlatform: null, name: null, nameWithArticle: null };
@@ -84,5 +101,10 @@ const result = set.fileFinishedImporting("modules/quests/types/v2/Reward.tsx");
 
 export const questRewardsConfigV2FromServer = function questRewardsConfigV2FromServer(rewards_config) {
   const rewards = rewards_config.rewards;
-  return { assignmentMethod: rewards_config.assignment_method, rewards: rewards.map(_questRewardV2FromServer), rewardsExpireAt: rewards_config.rewards_expire_at, platforms: rewards_config.platforms };
+  return {
+    assignmentMethod: rewards_config.assignment_method,
+    rewards: rewards.map(_questRewardV2FromServer),
+    rewardsExpireAt: rewards_config.rewards_expire_at,
+    platforms: rewards_config.platforms,
+  };
 };

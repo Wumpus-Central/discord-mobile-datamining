@@ -13,8 +13,12 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 const require = arg1;
 ({ Permissions: c10, AnalyticsSections: unpackModuleId, InstantInviteSources: closure_12 } = ME);
 let closure_14 = { listActionRenderer: "children", listActionHeight: "c" };
-let closure_15 = createCacheKey.createStyles({ wrapper: { paddingTop: require("PX_24").USERS_LIST_PADDING_BETWEEN_SECTIONS } });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
+let closure_15 = createCacheKey.createStyles({
+  wrapper: { paddingTop: require("PX_24").USERS_LIST_PADDING_BETWEEN_SECTIONS },
+});
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx",
+);
 
 export default function useMemberListAction(channel) {
   channel = channel.channel;
@@ -140,7 +144,11 @@ export default function useMemberListAction(channel) {
             obj[3] = function handlePress() {
               if (null != closure_1_6.getChannel(closure_7)) {
                 let obj = callback(closure_1_2[20]);
-                if (obj.UNSAFE_isDismissibleContentDismissed(callback(closure_1_2[21]).DismissibleContent.GDM_INVITE_REMINDER)) {
+                if (
+                  obj.UNSAFE_isDismissibleContentDismissed(
+                    callback(closure_1_2[21]).DismissibleContent.GDM_INVITE_REMINDER,
+                  )
+                ) {
                   callback3();
                 } else {
                   obj = { onClick: null };
@@ -214,4 +222,4 @@ export default function useMemberListAction(channel) {
     }
     return closure_1_14;
   }, items2);
-};
+}

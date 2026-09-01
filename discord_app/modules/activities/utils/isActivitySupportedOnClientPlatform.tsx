@@ -20,4 +20,4 @@ export default function isActivitySupportedOnClientPlatform(arr) {
     flag = false;
   }
   return flag;
-};
+}

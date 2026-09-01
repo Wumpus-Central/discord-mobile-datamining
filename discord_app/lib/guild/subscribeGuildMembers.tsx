@@ -45,9 +45,13 @@ export default function subscribeGuildMembers(arg0) {
         if (!isEqualResult) {
           if (null != self._subscriptions) {
             tmpResult = tmp(tmp2[3]);
-            const item = tmpResult.forEach(self._subscriptions, (userIds, guildId) => callback(6157).unsubscribeMembers(guildId, userIds));
+            const item = tmpResult.forEach(self._subscriptions, (userIds, guildId) =>
+              callback(6157).unsubscribeMembers(guildId, userIds),
+            );
           }
-          const item1 = tmp(tmp2[3]).forEach(tmp4, (userIds, guildId) => callback(6157).subscribeMembers(guildId, userIds));
+          const item1 = tmp(tmp2[3]).forEach(tmp4, (userIds, guildId) =>
+            callback(6157).subscribeMembers(guildId, userIds),
+          );
           self._subscriptions = tmp4;
           const tmpResult1 = tmp(tmp2[3]);
         }
@@ -55,7 +59,9 @@ export default function subscribeGuildMembers(arg0) {
     };
     prototype["componentWillUnmount"] = function componentWillUnmount() {
       if (null != this._subscriptions) {
-        const item = WrappedComponent(WrappedComponent[3]).forEach(tmp._subscriptions, (userIds, guildId) => callback(table[4]).unsubscribeMembers(guildId, userIds));
+        const item = WrappedComponent(WrappedComponent[3]).forEach(tmp._subscriptions, (userIds, guildId) =>
+          callback(table[4]).unsubscribeMembers(guildId, userIds),
+        );
         const arr = WrappedComponent(WrappedComponent[3]);
       }
     };
@@ -74,7 +80,7 @@ export default function subscribeGuildMembers(arg0) {
     forwardRefResult.displayName = "ForwardRef(" + combined + ")";
     return forwardRefResult;
   };
-};
+}
 export const MAX_GUILD_MEMBER_SUBSCRIPTIONS = 50;
 export const useSubscribeGuildMembers = function useSubscribeGuildMembers(memo, AddMembersActionSheet) {
   closure_0 = memo;
@@ -100,7 +106,9 @@ export const useSubscribeGuildMembers = function useSubscribeGuildMembers(memo, 
       closure_1_0(closure_1_2[4]).subscribeMembers(guildId, userIds);
     });
     return () => {
-      const item = closure_1_1(closure_1_2[3]).forEach(closure_0, (userIds, guildId) => callback(table[4]).unsubscribeMembers(guildId, userIds));
+      const item = closure_1_1(closure_1_2[3]).forEach(closure_0, (userIds, guildId) =>
+        callback(table[4]).unsubscribeMembers(guildId, userIds),
+      );
     };
   }, items);
 };

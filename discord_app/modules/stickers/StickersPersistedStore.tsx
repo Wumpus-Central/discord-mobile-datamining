@@ -23,14 +23,17 @@ function handleUserSettingsProtoStoreChange() {
     return false;
   } else {
     obj = applyDefault;
-    closure_6.overwriteHistory(obj.mapValues(stickers, (recentUses) => {
-      const obj = {};
-      const merged = Object.assign(recentUses);
-      recentUses = recentUses.recentUses;
-      const mapped = recentUses.map(Number);
-      obj.recentUses = mapped.filter((arg0) => arg0 > 0);
-      return obj;
-    }), closure_5.pendingUsages);
+    closure_6.overwriteHistory(
+      obj.mapValues(stickers, (recentUses) => {
+        const obj = {};
+        const merged = Object.assign(recentUses);
+        recentUses = recentUses.recentUses;
+        const mapped = recentUses.map(Number);
+        obj.recentUses = mapped.filter((arg0) => arg0 > 0);
+        return obj;
+      }),
+      closure_5.pendingUsages,
+    );
   }
 }
 let closure_5 = { pendingUsages: [] };
@@ -41,15 +44,12 @@ let obj = {
   lookupKey(arg0) {
     return stickerById.getStickerById(arg0);
   },
-  afterCompute() {
-
-  },
-  numFrequentlyItems: 20
+  afterCompute() {},
+  numFrequentlyItems: 20,
 };
 let closure_6 = new DEFAULT_FRECENCYDefault(obj);
 const PersistedStore = initializeDefault.PersistedStore;
-class StickersPersistedStore extends PersistedStore {
-}
+class StickersPersistedStore extends PersistedStore {}
 const prototype = StickersPersistedStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   const self = this;
@@ -72,7 +72,7 @@ Object.defineProperty(prototype, "stickerFrecencyWithoutFetchingLatest", {
   get: function stickerFrecencyWithoutFetchingLatest() {
     return closure_6;
   },
-  set: undefined
+  set: undefined,
 });
 StickersPersistedStore.displayName = "StickersPersistedStore";
 StickersPersistedStore.persistKey = "StickersPersistedStoreV2";
@@ -97,7 +97,7 @@ obj = {
       }
     }
     return false;
-  }
+  },
 };
 const stickersPersistedStore = new StickersPersistedStore(dispatcherDefault, obj);
 const tmp2 = new DEFAULT_FRECENCYDefault(obj);

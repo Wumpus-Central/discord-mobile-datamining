@@ -10,7 +10,7 @@ const require = arg1;
 function showNotification(uri) {
   function _getAndroidScreenshot() {
     const self = this;
-    const tmp = closure_1_4(function*() {
+    const tmp = closure_1_4(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -90,109 +90,119 @@ function showNotification(uri) {
   if (uri != null) {
     uri = uri.uri;
   }
-  const timerId = setTimeout(callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp5 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  const timerId = setTimeout(
+    callback(function* () {
+      if (c3 === 2) {
+        c3 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp5 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
+        try {
+          c3 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              c1 = tmp3;
+              c0 = tmp2;
+              c0 = undefined;
+              c1 = undefined;
+              c2 = undefined;
+              if (null != BUG_REPORTER) {
+                obj1 = { uri: null };
+                obj1[0] = tmp36;
+                let tmp7 = obj1;
+              } else {
+                obj1 = obj1(500);
+                if (!obj1.isIOS()) {
+                  c2 = 1;
+                  c3 = 1;
+                  const obj2 = { value: null, done: false };
+                  obj2[0] = (function getAndroidScreenshot() {
+                    const self = this;
+                    const apply = c0.apply;
+                    if (typeof apply === "unknown") {
+                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                    } else {
+                      applyArgumentsResult = apply(self, arguments);
+                    }
+                    return applyArgumentsResult;
+                  })();
+                  return obj2;
+                }
+              }
+              obj1 = tmp7;
+              BUG_REPORTER = closure_1_7.BUG_REPORTER;
+              dependencyMap = obj1(10177).getNotificationDuration(BUG_REPORTER);
+              const obj5 = obj1(10177);
+              const obj3 = {
+                type: null,
+                duration: null,
+                key: null,
+                image: null,
+                imageUri: null,
+                onDismiss: null,
+                inAppNotificationId: null,
+              };
+              obj3[0] = BUG_REPORTER;
+              obj3[1] = dependencyMap;
+              const obj6 = BUG_REPORTER(10179);
+              obj3[2] = obj1(514).v4();
+              obj3[3] = obj1;
+              uri = undefined;
+              if (obj1 != null) {
+                uri = obj1.uri;
+              }
+              obj3[4] = uri;
+              obj3[5] = function onDismiss() {
+                _undefined(table[7]).clearNotification();
+              };
+              const obj8 = obj1(514);
+              obj3[6] = obj1(514).v4();
+              obj6.enqueueNotification(obj3);
+              c3 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          } else if (arg0 === 1) {
             c3 = 3;
             throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
           } else {
-            c1 = tmp3;
-            c0 = tmp2;
-            c0 = undefined;
-            c1 = undefined;
-            c2 = undefined;
-            if (null != BUG_REPORTER) {
-              obj1 = { uri: null };
-              obj1[0] = tmp36;
-              let tmp7 = obj1;
-            } else {
-              obj1 = obj1(500);
-              if (!obj1.isIOS()) {
-                c2 = 1;
-                c3 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = (function getAndroidScreenshot() {
-                  const self = this;
-                  const apply = c0.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                })();
-                return obj2;
-              }
+            tmp7 = arg1;
+            if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
             }
-            obj1 = tmp7;
-            BUG_REPORTER = closure_1_7.BUG_REPORTER;
-            dependencyMap = obj1(10177).getNotificationDuration(BUG_REPORTER);
-            const obj5 = obj1(10177);
-            const obj3 = { type: null, duration: null, key: null, image: null, imageUri: null, onDismiss: null, inAppNotificationId: null };
-            obj3[0] = BUG_REPORTER;
-            obj3[1] = dependencyMap;
-            const obj6 = BUG_REPORTER(10179);
-            obj3[2] = obj1(514).v4();
-            obj3[3] = obj1;
-            uri = undefined;
-            if (obj1 != null) {
-              uri = obj1.uri;
-            }
-            obj3[4] = uri;
-            obj3[5] = function onDismiss() {
-              _undefined(table[7]).clearNotification();
-            };
-            const obj8 = obj1(514);
-            obj3[6] = obj1(514).v4();
-            obj6.enqueueNotification(obj3);
-            c3 = 3;
-            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else {
-          tmp7 = arg1;
-          if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
+        } catch (tmp30) {
+          c3 = tmp;
+          throw tmp30;
         }
-      } catch (tmp30) {
-        c3 = tmp;
-        throw tmp30;
       }
-    }
-  }), 1200);
+    }),
+    1200,
+  );
 }
 const NativeModules = get_ActivityIndicator.NativeModules;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.ScreenshotHelper);
 initializeDefault;
-class BugReportManager extends tmp4 {
-}
+class BugReportManager extends tmp4 {}
 const prototype = BugReportManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const bugReporter = this.initBugReporter();
@@ -204,7 +214,7 @@ prototype["_terminate"] = function _terminate() {
   c3 = undefined;
 };
 prototype["initBugReporter"] = function initBugReporter() {
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -255,7 +265,9 @@ prototype["initBugReporter"] = function initBugReporter() {
         } else {
           callback = arg1 === constants.AUTHORIZED;
           isBugReporterEnabled = isBugReporterEnabled.isBugReporterEnabled;
-          hasBugReporterAccess = isBugReporterEnabled(hasBugReporterAccess[10]).getConfig({ location: "native-BugReportManager" }).hasBugReporterAccess;
+          hasBugReporterAccess = isBugReporterEnabled(hasBugReporterAccess[10]).getConfig({
+            location: "native-BugReportManager",
+          }).hasBugReporterAccess;
           const obj5 = isBugReporterEnabled(hasBugReporterAccess[10]);
           let isIOSResult = callback(hasBugReporterAccess[5]).isIOS();
           if (!isIOSResult) {

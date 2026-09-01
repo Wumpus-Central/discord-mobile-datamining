@@ -24,7 +24,7 @@ function fetchCurrentAppIcon() {
 }
 function _fetchCurrentAppIcon() {
   const self = this;
-  const tmp = callback2(function*() {
+  const tmp = callback2(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -118,7 +118,7 @@ function _setAppIcon() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_3 = tmp3;
       dependencyMap = tmp5;
       c5 = 1;
@@ -180,25 +180,44 @@ if (set.isAndroid()) {
 function useCurrentAppIcon() {
   const tmp = callback(React.useState(require("../AppIconTypes.tsx").FreemiumAppIconIds.DEFAULT), 2);
   _require = tmp[1];
-  importDefault = React.useCallback(callback2(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  importDefault = React.useCallback(
+    callback2(function* () {
+      if (c3 === 2) {
+        c3 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
+        try {
+          c3 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_1 = tmp5;
+              let callback = tmp2;
+              callback = undefined;
+              c2 = 1;
+              c3 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_14();
+              return obj1;
+            }
+          } else if (arg0 === 1) {
             c3 = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -207,35 +226,19 @@ function useCurrentAppIcon() {
             obj[0] = arg1;
             return obj;
           } else {
-            closure_1 = tmp5;
-            let callback = tmp2;
-            callback = undefined;
-            c2 = 1;
-            c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_14();
-            return obj1;
+            callback = arg1;
+            callback(callback);
+            c3 = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          callback = arg1;
-          callback(callback);
-          c3 = 3;
-          return { value: "HermesInternal", done: null };
+        } catch (tmp12) {
+          c3 = tmp;
+          throw tmp12;
         }
-      } catch (tmp12) {
-        c3 = tmp;
-        throw tmp12;
       }
-    }
-  }), []);
+    }),
+    [],
+  );
   useMountLayoutEffectDefault(() => {
     callback();
     const subscription = callback(709).subscribe("APP_ICON_UPDATED", callback);
@@ -262,25 +265,44 @@ export const setAppIcon = function setAppIcon(DEFAULT, premiumType) {
 export const useAppIcons = function useAppIcons() {
   const currentAppIcon = callback(React.useState(require("../AppIconTypes.tsx").FreemiumAppIconIds.DEFAULT), 2);
   _require = currentAppIcon[1];
-  importDefault = React.useCallback(callback2(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  importDefault = React.useCallback(
+    callback2(function* () {
+      if (c3 === 2) {
+        c3 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
+        try {
+          c3 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_1 = tmp5;
+              let callback = tmp2;
+              callback = undefined;
+              c2 = 1;
+              c3 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_14();
+              return obj1;
+            }
+          } else if (arg0 === 1) {
             c3 = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -289,35 +311,19 @@ export const useAppIcons = function useAppIcons() {
             obj[0] = arg1;
             return obj;
           } else {
-            closure_1 = tmp5;
-            let callback = tmp2;
-            callback = undefined;
-            c2 = 1;
-            c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_14();
-            return obj1;
+            callback = arg1;
+            callback(callback);
+            c3 = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          callback = arg1;
-          callback(callback);
-          c3 = 3;
-          return { value: "HermesInternal", done: null };
+        } catch (tmp12) {
+          c3 = tmp;
+          throw tmp12;
         }
-      } catch (tmp12) {
-        c3 = tmp;
-        throw tmp12;
       }
-    }
-  }), []);
+    }),
+    [],
+  );
   useMountLayoutEffectDefault(() => {
     callback();
     const subscription = callback(709).subscribe("APP_ICON_UPDATED", callback);
@@ -328,44 +334,47 @@ export const useAppIcons = function useAppIcons() {
   [tmp4, closure_0] = callback(React.useState([]), 2);
   const tmp3 = callback(React.useState([]), 2);
   [tmp6, closure_1] = callback(React.useState([]), 2);
-  dependencyMap = React.useCallback(callback2(function*() {
-    closure_2 = tmp3;
-    c4 = 1;
-    if (closure_1_13 != null) {
-      const availableIcons = closure_1_13.getAvailableIcons();
-    }
-    yield availableIcons;
-    if (1 === tmp7) {
+  dependencyMap = React.useCallback(
+    callback2(function* () {
+      closure_2 = tmp3;
+      c4 = 1;
+      if (closure_1_13 != null) {
+        const availableIcons = closure_1_13.getAvailableIcons();
+      }
+      yield availableIcons;
+      if (1 === tmp7) {
+        c4 = 0;
+        obj1 = closure_1_1(closure_1_2[14]);
+        const obj2 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
+        const intl = closure_1_0(closure_1_2[15]).intl;
+        obj2[1] = intl.string(closure_1_0(closure_1_2[15]).t["c76eo/"]);
+        obj1.open(obj2);
+        const _HermesInternal = HermesInternal;
+        closure_1_12.warn("Error fetching available app icons: " + closure_3);
+        let v0 = 3;
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        let callback = arg1.map((id) => id.id);
+        const callback2 = closure_1_7().filter((id) => closure_0.includes(id.id));
+        const arr = closure_1_7();
+        closure_2 = closure_1_8().filter((id) => closure_0.includes(id.id));
+        callback2(closure_2);
+        callback = 0;
+        const items = [v0()];
+        const sum = callback + 1;
+        callback = sum;
+        callback = HermesBuiltin.arraySpread(callback2, sum);
+        callback(items);
+        c4 = 0;
+        const arr2 = closure_1_8();
+      }
       c4 = 0;
-      obj1 = closure_1_1(closure_1_2[14]);
-      const obj2 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
-      const intl = closure_1_0(closure_1_2[15]).intl;
-      obj2[1] = intl.string(closure_1_0(closure_1_2[15]).t["c76eo/"]);
-      obj1.open(obj2);
-      const _HermesInternal = HermesInternal;
-      closure_1_12.warn("Error fetching available app icons: " + closure_3);
-      let v0 = 3;
-    } else if (arg0 === 1) {
-      v0 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      let callback = arg1.map((id) => id.id);
-      const callback2 = closure_1_7().filter((id) => closure_0.includes(id.id));
-      const arr = closure_1_7();
-      closure_2 = closure_1_8().filter((id) => closure_0.includes(id.id));
-      callback2(closure_2);
-      callback = 0;
-      const items = [v0()];
-      const sum = callback + 1;
-      callback = sum;
-      callback = HermesBuiltin.arraySpread(callback2, sum);
-      callback(items);
-      c4 = 0;
-      const arr2 = closure_1_8();
-    }
-    c4 = 0;
-    return arg1;
-  }), []);
+      return arg1;
+    }),
+    [],
+  );
   useMountLayoutEffectDefault(() => {
     dependencyMap();
     const subscription = callback(709).subscribe("APP_ICON_UPDATED", dependencyMap);

@@ -11,7 +11,11 @@ import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SecureFramesConstants.tsx";
 import ME from "../../Constants.tsx";
 
 require = arg1;
-({ SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY: c5, SECURE_FRAMES_STREAM_VERIFICATION_BOTTOM_SHEET_KEY: closure_6, SECURE_FRAMES_USER_VERIFICATION_MODAL_KEY: error } = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
+({
+  SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY: c5,
+  SECURE_FRAMES_STREAM_VERIFICATION_BOTTOM_SHEET_KEY: closure_6,
+  SECURE_FRAMES_USER_VERIFICATION_MODAL_KEY: error,
+} = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
 ({ ME: closure_8, Routes: c9 } = ME);
 const result = require("set").fileFinishedImporting("modules/rtc/SecureFramesPlatformUtils.native.tsx");
 
@@ -79,5 +83,5 @@ export default {
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t["v1eXp/"]);
     _modDef4858.show(obj);
-  }
+  },
 };

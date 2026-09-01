@@ -35,7 +35,7 @@ let obj = {
     } else if ("error" === level) {
       closure_3.error(combined);
     }
-  }
+  },
 };
 const tmp3 = new timestampDefault(RPC_APPLICATION_LOGGING_CATEGORY);
 let result = set.fileFinishedImporting("modules/rpc/server/commands/logs.tsx");

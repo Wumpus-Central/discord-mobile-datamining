@@ -9,7 +9,7 @@ function _showMarketingMomentRewardScreen() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (product === 2) {
         product = 3;
         HermesBuiltin.throwTypeError();
@@ -81,7 +81,9 @@ function _showMarketingMomentRewardScreen() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/premium/premium_marketing/native/showMarketingMomentRewardScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/premium_marketing/native/showMarketingMomentRewardScreen.tsx",
+);
 
 export const showMarketingMomentRewardScreen = function showMarketingMomentRewardScreen(arg0) {
   const self = this;

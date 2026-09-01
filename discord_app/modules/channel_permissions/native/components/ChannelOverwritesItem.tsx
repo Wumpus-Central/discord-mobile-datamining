@@ -66,8 +66,31 @@ function RemoveIcon(item) {
 }
 function RoleItem(arg0) {
   ({ item, subLabel, trailing } = arg0);
-  ({ disabled, channelId, showType, showRemove, start, end, onPress, accessibilityRole, accessibilityState, accessible } = arg0);
-  let obj = { icon: null, label: null, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
+  ({
+    disabled,
+    channelId,
+    showType,
+    showRemove,
+    start,
+    end,
+    onPress,
+    accessibilityRole,
+    accessibilityState,
+    accessible,
+  } = arg0);
+  let obj = {
+    icon: null,
+    label: null,
+    subLabel: null,
+    start: null,
+    end: null,
+    trailing: null,
+    onPress: null,
+    disabled: null,
+    accessibilityRole: null,
+    accessibilityState: null,
+    accessible: null,
+  };
   obj = { size: "lg", color: item.colorString };
   obj[0] = callback(ShieldUserIcon.ShieldUserIcon, obj);
   obj[1] = item.name;
@@ -94,13 +117,31 @@ function RoleItem(arg0) {
 }
 function MemberItem(arg0) {
   ({ item, trailing } = arg0);
-  ({ channelId, showRemove, onRemove, guildId, start, end, onPress, disabled, accessibilityRole, accessibilityState, accessible } = arg0);
+  ({
+    channelId,
+    showRemove,
+    onRemove,
+    guildId,
+    start,
+    end,
+    onPress,
+    disabled,
+    accessibilityRole,
+    accessibilityState,
+    accessible,
+  } = arg0);
   const tmp = callback2();
   let obj = { style: tmp.nameWrapper, children: null };
-  obj = { style: items, lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: item.name };
-  items = [, ];
+  obj = {
+    style: items,
+    lineClamp: 1,
+    variant: "text-md/semibold",
+    color: "interactive-text-active",
+    children: item.name,
+  };
+  items = [,];
   ({ name: arr[0], memberName: arr[1] } = tmp);
-  const items1 = [callback(Text.Text, obj), ];
+  const items1 = [callback(Text.Text, obj)];
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
     obj = { size: null, source: null, disableColor: true, style: null };
@@ -116,7 +157,19 @@ function MemberItem(arg0) {
   if (user != null) {
     avatarSource = user.getAvatarSource(guildId);
   }
-  obj1 = { icon: null, label: null, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
+  obj1 = {
+    icon: null,
+    label: null,
+    subLabel: null,
+    start: null,
+    end: null,
+    trailing: null,
+    onPress: null,
+    disabled: null,
+    accessibilityRole: null,
+    accessibilityState: null,
+    accessible: null,
+  };
   const tmp2 = closure_8;
   const tmp2Result = closure_8(View, obj);
   const tmp3 = View;
@@ -143,7 +196,12 @@ function MemberItem(arg0) {
 function EmptyRoleItem(item) {
   item = item.item;
   let obj = { icon: null, label: null };
-  obj = { source: registerAssetDefault2, color: item.colorString, size: Button.IconSizes.MEDIUM, style: callback2().roleIcon };
+  obj = {
+    source: registerAssetDefault2,
+    color: item.colorString,
+    size: Button.IconSizes.MEDIUM,
+    style: callback2().roleIcon,
+  };
   obj[0] = callback(Button.Icon, obj);
   obj[1] = item.name;
   return callback(TableRowInner.TableRow, obj);
@@ -189,8 +247,17 @@ class ChannelOverwritesItem {
 }
 noopAll;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ nameWrapper: { flexDirection: "row", alignItems: "flex-end", marginRight: 16 }, name: { paddingRight: 4 }, memberName: { flexShrink: 1 }, ownerIcon: { alignSelf: "center" }, roleIcon: { height: 30, width: 30 }, rowRemoveIconDisabled: { opacity: 0.3 } });
-let result = require("set").fileFinishedImporting("modules/channel_permissions/native/components/ChannelOverwritesItem.tsx");
+let closure_9 = createCacheKey.createStyles({
+  nameWrapper: { flexDirection: "row", alignItems: "flex-end", marginRight: 16 },
+  name: { paddingRight: 4 },
+  memberName: { flexShrink: 1 },
+  ownerIcon: { alignSelf: "center" },
+  roleIcon: { height: 30, width: 30 },
+  rowRemoveIconDisabled: { opacity: 0.3 },
+});
+let result = require("set").fileFinishedImporting(
+  "modules/channel_permissions/native/components/ChannelOverwritesItem.tsx",
+);
 
 export default ChannelOverwritesItem;
 export const ChannelOverwritesCheckboxItem = function ChannelOverwritesCheckboxItem(checked) {

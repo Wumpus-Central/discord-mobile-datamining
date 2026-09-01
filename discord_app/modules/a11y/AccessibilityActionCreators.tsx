@@ -50,7 +50,9 @@ export const forcedColorsModalSeen = function forcedColorsModalSeen() {
 export const keyboardNavigationExplainerModalSeen = function keyboardNavigationExplainerModalSeen() {
   dispatcherDefault.dispatch({ type: "KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN" });
 };
-export const systemPrefersReducedMotionChanged = function systemPrefersReducedMotionChanged(systemPrefersReducedMotion) {
+export const systemPrefersReducedMotionChanged = function systemPrefersReducedMotionChanged(
+  systemPrefersReducedMotion,
+) {
   let obj = dispatcherDefault;
   obj = { type: "ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED", systemPrefersReducedMotion };
   obj.dispatch(obj);

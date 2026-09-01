@@ -13,7 +13,16 @@ require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { exclusiveBadge: null, exclusiveBadgeText: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", textAlignVertical: "center", alignSelf: "flex-start", gap: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  textAlignVertical: "center",
+  alignSelf: "flex-start",
+  gap: ThemesDefault.space.PX_4,
+  borderRadius: ThemesDefault.radii.round,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
 createCacheKey[0] = createCacheKey;
 const obj1 = { textTransform: "uppercase", fontSize: ThemesDefault.space.PX_12, lineHeight: null };
 set = set.isAndroid();
@@ -27,7 +36,7 @@ export const ExclusiveBadge = function ExclusiveBadge() {
   const tmp = callback3();
   let obj = { style: tmp.exclusiveBadge, children: null };
   obj = { size: "xs", color: ThemesDefault.colors.WHITE };
-  const items = [callback(ClydeIcon.ClydeIcon, obj), ];
+  const items = [callback(ClydeIcon.ClydeIcon, obj)];
   obj = { variant: "text-xs/bold", color: "text-overlay-light", style: tmp.exclusiveBadgeText, children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.RiDMFz);

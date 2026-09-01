@@ -11,11 +11,17 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, title: { lineHeight: 16, marginBottom: 8 }, card: null };
+createCacheKey = {
+  container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
+  title: { lineHeight: 16, marginBottom: 8 },
+  card: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.USER_PROFILE_CONTAINER_BACKGROUND };
 createCacheKey[2] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx",
+);
 
 export default function WidgetPreview(arg0) {
   ({ widget, userId } = arg0);
@@ -57,4 +63,4 @@ export default function WidgetPreview(arg0) {
     const str = intl.string(tmp5(1236).t.SpsnDY);
   }
   return tmp9;
-};
+}

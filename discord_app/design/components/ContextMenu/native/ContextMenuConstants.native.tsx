@@ -15,4 +15,10 @@ export const CONTEXT_MENU_EDGE_OFFSET = 12;
 export const CONTEXT_MENU_MIN_WIDTH = 220;
 export const CONTEXT_MENU_OFFSET = 10;
 export const CONTEXT_MENU_MIN_SCALE = 0.5;
-export const CONTEXT_MENU_SPRING = { mass: 0.3, damping: 20, stiffness: 200, overshootClamping: true, restDisplacementThreshold: 0.001 };
+export const CONTEXT_MENU_SPRING = {
+  mass: 0.3,
+  damping: 20,
+  stiffness: 200,
+  overshootClamping: true,
+  restDisplacementThreshold: 0.001,
+};

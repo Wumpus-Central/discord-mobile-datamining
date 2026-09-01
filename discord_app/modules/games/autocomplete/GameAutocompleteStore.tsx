@@ -11,8 +11,7 @@ let set = new Set();
 const tmp2 = new privDefault({ max: 100 });
 let closure_4 = new privDefault({ max: 500 });
 const Store = initializeDefault.Store;
-class GameAutocompleteStore extends Store {
-}
+class GameAutocompleteStore extends Store {}
 const prototype = GameAutocompleteStore.prototype;
 prototype["getResults"] = function getResults(c0) {
   const result = GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH.normalizeGameAutocompleteQuery(c0);
@@ -50,7 +49,9 @@ prototype["shouldSuppressFetch"] = function shouldSuppressFetch(result) {
       result1 = !set.has(result);
     }
     if (result1) {
-      result1 = GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH.shouldSuppressAutocompleteFetch(result, (arg0) => closure_2.peek(arg0));
+      result1 = GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH.shouldSuppressAutocompleteFetch(result, (arg0) =>
+        closure_2.peek(arg0),
+      );
       const tmpResult = GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH;
     }
     tmp4 = result1;
@@ -90,7 +91,7 @@ const gameAutocompleteStore = new GameAutocompleteStore(dispatcherDefault, {
   },
   GAME_AUTOCOMPLETE_FETCH_FAILURE: function handleFetchFailure(query) {
     set.delete(query.query);
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/games/autocomplete/GameAutocompleteStore.tsx");
 

@@ -10,7 +10,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 require = arg1;
 function renderSuccessIcon() {
-  return callback(CircleCheckIcon.CircleCheckIcon, { size: "sm", color: ThemesDefault.colors.STATUS_POSITIVE, secondaryColor: ThemesDefault.colors.WHITE });
+  return callback(CircleCheckIcon.CircleCheckIcon, {
+    size: "sm",
+    color: ThemesDefault.colors.STATUS_POSITIVE,
+    secondaryColor: ThemesDefault.colors.WHITE,
+  });
 }
 function StoreGuildIcon(guildId) {
   guildId = guildId.guildId;
@@ -57,28 +61,41 @@ function GuildCard(guildIds) {
   const items3 = [substr];
   obj = { style: tmp.card, onPress, children: null };
   obj = { style: tmp.cardInfo, children: null };
-  const stateFromStoresArray = guildIds(substr[7]).useStateFromStoresArray(items2, () => substr.map((arg0) => {
-    guild = guild.getGuild(arg0);
-    let str;
-    if (guild != null) {
-      str = guild.name;
-    }
-    if (str == null) {
-      str = "";
-    }
-    return str;
-  }), items3);
+  const stateFromStoresArray = guildIds(substr[7]).useStateFromStoresArray(
+    items2,
+    () =>
+      substr.map((arg0) => {
+        guild = guild.getGuild(arg0);
+        let str;
+        if (guild != null) {
+          str = guild.name;
+        }
+        if (str == null) {
+          str = "";
+        }
+        return str;
+      }),
+    items3,
+  );
   obj1 = { variant: "text-md/semibold", color: "text-strong", children: null };
   const intl3 = tmp2(tmp3[10]).intl;
   obj1[2] = intl3.format(guildIds(substr[10]).t["0fkj8J"], { count: guildIds.length });
-  const items4 = [callback(guildIds(substr[11]).Text, obj1), ];
+  const items4 = [callback(guildIds(substr[11]).Text, obj1)];
   const obj3 = { style: tmp.statusRow, children: null };
   let str2 = "text-muted";
   if (direction === guildIds(substr[9]).ChangeDirection.RESTRICTING) {
     str2 = "text-feedback-positive";
   }
-  const items5 = [callback(guildIds(substr[11]).Text, { variant: "text-sm/medium", color: str2, children: stringResult }), ];
-  const obj4 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, style: tmp.guildSummary, children: null };
+  const items5 = [
+    callback(guildIds(substr[11]).Text, { variant: "text-sm/medium", color: str2, children: stringResult }),
+  ];
+  const obj4 = {
+    variant: "text-sm/medium",
+    color: "text-muted",
+    lineClamp: 1,
+    style: tmp.guildSummary,
+    children: null,
+  };
   const intl4 = tmp2(tmp3[10]).intl;
   const t = tmp2(tmp3[10]).t;
   obj4[4] = intl4.format(tmp7 ? t["8ZLbvR"] : t["+NoTYm"], { guildName: str });
@@ -86,12 +103,17 @@ function GuildCard(guildIds) {
   obj3[1] = items5;
   items4[1] = closure_8(closure_5, obj3);
   obj[1] = items4;
-  const items6 = [closure_8(closure_5, obj), , ];
+  const items6 = [closure_8(closure_5, obj), ,];
   const obj2 = { count: guildIds.length };
   const tmp10 = null != onPress ? closure_4 : closure_5;
   const tmp2Result = guildIds(substr[7]);
   const tmp4 = closure_6;
-  items6[1] = callback(guildIds(substr[12]).GuildIconPile, { size: guildIds(substr[8]).GuildIconSizes.XSMALL, names: stateFromStoresArray, totalCount: memo.length, children: substr.map((guildId) => callback(closure_11, { guildId }, guildId)) });
+  items6[1] = callback(guildIds(substr[12]).GuildIconPile, {
+    size: guildIds(substr[8]).GuildIconSizes.XSMALL,
+    names: stateFromStoresArray,
+    totalCount: memo.length,
+    children: substr.map((guildId) => callback(closure_11, { guildId }, guildId)),
+  });
   let tmp12Result = null != onPress;
   if (tmp12Result) {
     const obj6 = { style: null, children: null };
@@ -107,18 +129,49 @@ function GuildCard(guildIds) {
 }
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, title: null, description: null, card: null, cardInfo: null, statusRow: null, guildSummary: null, chevron: null, buttonsContainer: null };
+createCacheKey = {
+  container: null,
+  title: null,
+  description: null,
+  card: null,
+  cardInfo: null,
+  statusRow: null,
+  guildSummary: null,
+  chevron: null,
+  buttonsContainer: null,
+};
 createCacheKey = { paddingVertical: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_8 };
 let obj1 = { marginBottom: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_24 };
 let obj2 = { marginBottom: ThemesDefault.space.PX_24 };
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_24, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_24, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+createCacheKey[3] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: ThemesDefault.radii.md,
+  padding: ThemesDefault.space.PX_16,
+  marginBottom: ThemesDefault.space.PX_24,
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+};
+let obj3 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: ThemesDefault.radii.md,
+  padding: ThemesDefault.space.PX_16,
+  marginBottom: ThemesDefault.space.PX_24,
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+};
 createCacheKey[4] = { flex: 1, marginRight: ThemesDefault.space.PX_12 };
 let obj4 = { flex: 1, marginRight: ThemesDefault.space.PX_12 };
-createCacheKey[5] = { flexDirection: "row", alignItems: "center", marginTop: ThemesDefault.space.PX_4, paddingBottom: 2 };
+createCacheKey[5] = {
+  flexDirection: "row",
+  alignItems: "center",
+  marginTop: ThemesDefault.space.PX_4,
+  paddingBottom: 2,
+};
 createCacheKey[6] = { flexShrink: 1 };
 const obj5 = { flexDirection: "row", alignItems: "center", marginTop: ThemesDefault.space.PX_4, paddingBottom: 2 };
 createCacheKey[7] = { marginLeft: ThemesDefault.space.PX_8 };
@@ -146,10 +199,27 @@ export default function BaseUpsellActionSheet(toastContent) {
   }, []);
   let obj = { startExpanded: true, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", color: "text-strong", children: title };
-  const items1 = [callback(toastContent(4474).Text, obj), callback(toastContent(4474).Text, { style: tmp.description, variant: "text-md/medium", color: "text-default", children: subtitle }), callback(GuildCard, { guildIds: affectedGuildIds, direction, onPress: onCardPress }), ];
+  obj = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/bold",
+    color: "text-strong",
+    children: title,
+  };
+  const items1 = [
+    callback(toastContent(4474).Text, obj),
+    callback(toastContent(4474).Text, {
+      style: tmp.description,
+      variant: "text-md/medium",
+      color: "text-default",
+      children: subtitle,
+    }),
+    callback(GuildCard, { guildIds: affectedGuildIds, direction, onPress: onCardPress }),
+  ];
   const obj2 = { style: tmp.buttonsContainer, children: null };
-  const items2 = [callback(toastContent(4928).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }), ];
+  const items2 = [
+    callback(toastContent(4928).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }),
+  ];
   const obj3 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl = toastContent(1236).intl;
   obj3[2] = intl.string(toastContent(1236).t.X1rGEm);
@@ -160,4 +230,4 @@ export default function BaseUpsellActionSheet(toastContent) {
   obj[1] = items1;
   obj[1] = callback2(closure_5, obj);
   return callback(toastContent(5622).BottomSheet, obj);
-};
+}

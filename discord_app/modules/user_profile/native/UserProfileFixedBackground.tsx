@@ -16,10 +16,17 @@ const memoResult = importAllResult.memo((style) => {
   let obj = ManaContext;
   const themeContext = obj.useThemeContext();
   ({ primaryColor, secondaryColor, theme } = themeContext);
-  const gradientFallbackBackground = useUserProfileColors.useUserProfileColors({ theme, primaryColor, secondaryColor }).gradientFallbackBackground;
+  const gradientFallbackBackground = useUserProfileColors.useUserProfileColors({
+    theme,
+    primaryColor,
+    secondaryColor,
+  }).gradientFallbackBackground;
   const obj2 = useUserProfileColors;
   const obj3 = useUserProfileGradientColors;
-  const first = callback(useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, gradientFallbackBackground), 2)[0];
+  const first = callback(
+    useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, gradientFallbackBackground),
+    2,
+  )[0];
   if (null != primaryColor) {
     if (null != secondaryColor) {
       const _Math = Math;
@@ -35,7 +42,7 @@ const memoResult = importAllResult.memo((style) => {
       return jsx(LinearGradientDefault, { colors: null, locations: null, style: null, pointerEvents: "none" });
     }
   }
-  style = [closure_4.absoluteFill, { backgroundColor: gradientFallbackBackground }, ];
+  style = [closure_4.absoluteFill, { backgroundColor: gradientFallbackBackground }];
   style[2] = style;
   return <closure_5 style={style} pointerEvents="none" />;
 });

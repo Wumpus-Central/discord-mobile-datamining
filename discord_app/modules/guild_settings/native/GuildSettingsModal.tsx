@@ -428,7 +428,10 @@ export default function GuildSettingsModal() {
       const obj = callback(stateFromStores[7]);
     }
   }, items2);
-  const first = callback(React.useState(() => store.getSavedRouteState()), 1)[0];
+  const first = callback(
+    React.useState(() => store.getSavedRouteState()),
+    1,
+  )[0];
   let tmp10Result = null;
   if (null != memo) {
     obj = { onWillFocus: null, initialRouteName: null, initialRouteState: null, screens: null };
@@ -444,8 +447,13 @@ export default function GuildSettingsModal() {
     }
     obj[2] = tmp13;
     obj[3] = memo;
-    tmp10Result = jsx(bottom(stateFromStores[52]).Navigator, { onWillFocus: null, initialRouteName: null, initialRouteState: null, screens: null });
+    tmp10Result = jsx(bottom(stateFromStores[52]).Navigator, {
+      onWillFocus: null,
+      initialRouteName: null,
+      initialRouteState: null,
+      screens: null,
+    });
     const tmp10 = jsx;
   }
   return tmp10Result;
-};
+}

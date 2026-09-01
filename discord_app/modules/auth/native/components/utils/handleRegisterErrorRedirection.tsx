@@ -24,9 +24,17 @@ function getRedirectStepForErrorKey(arg0) {
   }
   return keys.AuthStates.REGISTER_IDENTITY;
 }
-({ RegisterTransitionSteps: c3, RegistrationTransitionActionTypes: c4, authStateToRegisterTransitionStep: c5 } = RegistrationTransitionActionTypes);
+({
+  RegisterTransitionSteps: c3,
+  RegistrationTransitionActionTypes: c4,
+  authStateToRegisterTransitionStep: c5,
+} = RegistrationTransitionActionTypes);
 const AbortCodes = ME.AbortCodes;
-let closure_7 = { [keys.AuthStates.REGISTER_IDENTITY]: ["email", "phoneToken"], [keys.AuthStates.REGISTER_DISPLAY_NAME]: ["global_name"], [keys.AuthStates.REGISTER_ACCOUNT_INFORMATION]: ["username", "password"] };
+let closure_7 = {
+  [keys.AuthStates.REGISTER_IDENTITY]: ["email", "phoneToken"],
+  [keys.AuthStates.REGISTER_DISPLAY_NAME]: ["global_name"],
+  [keys.AuthStates.REGISTER_ACCOUNT_INFORMATION]: ["username", "password"],
+};
 const result = set.fileFinishedImporting("modules/auth/native/components/utils/handleRegisterErrorRedirection.tsx");
 
 export default function handleRegisterErrorRedirection(navigate, arg1, code) {
@@ -62,7 +70,7 @@ export default function handleRegisterErrorRedirection(navigate, arg1, code) {
               let tmp21 = constants2;
               obj[1] = constants2.RESPONSE_ERROR;
               let tmp22 = tmp13;
-              let items1 = [tmp14, ];
+              let items1 = [tmp14];
               let tmp23 = require;
               let tmp24 = tmp11;
               let obj3 = trackRegTransition;
@@ -93,4 +101,4 @@ export default function handleRegisterErrorRedirection(navigate, arg1, code) {
   }
   arg1({ step: constants.AGE_GATE_UNDERAGE, actionType: constants2.VIEWED });
   navigate.push(keys.AuthStates.AGE_GATE_UNDERAGE, { fromRegister: true, disableSwipe: true });
-};
+}

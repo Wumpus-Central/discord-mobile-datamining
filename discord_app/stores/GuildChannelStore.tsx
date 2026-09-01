@@ -132,38 +132,40 @@ function rebuildGuildChannels(guildId) {
     }
     obj2[channel.id] = { id: channel.id, name: sum };
   });
-  if ((function calculateGuildHasElevatedPermissions(currentUser, guildId) {
-    guild = guild.getGuild(guildId);
-    if (null != guild) {
-      if (callback2(currentUser, guild)) {
-        return true;
+  if (
+    (function calculateGuildHasElevatedPermissions(currentUser, guildId) {
+      guild = guild.getGuild(guildId);
+      if (null != guild) {
+        if (callback2(currentUser, guild)) {
+          return true;
+        }
       }
-    }
-    let tmp3 = table[guildId];
-    if (null == tmp3) {
-      tmp3 = callback(guildId);
-    }
-    obj = tmp3[closure_21][Symbol.iterator]();
-    while (obj !== undefined) {
-      let tmp7 = callback2;
-      if (callback2(currentUser, tmp6.channel)) {
-        let tmp8 = obj;
-        obj.return();
-        let flag = true;
-        return true;
+      let tmp3 = table[guildId];
+      if (null == tmp3) {
+        tmp3 = callback(guildId);
       }
-    }
-    for (const item10033 of tmp5) {
-      let tmp9 = callback2;
-      if (callback2(arg0, item10033.channel)) {
-        let tmp10 = obj2;
-        obj2.return();
-        let flag2 = true;
-        return true;
+      obj = tmp3[closure_21][Symbol.iterator]();
+      while (obj !== undefined) {
+        let tmp7 = callback2;
+        if (callback2(currentUser, tmp6.channel)) {
+          let tmp8 = obj;
+          obj.return();
+          let flag = true;
+          return true;
+        }
       }
-    }
-    return false;
-  })(currentUser.getCurrentUser(), guildId)) {
+      for (const item10033 of tmp5) {
+        let tmp9 = callback2;
+        if (callback2(arg0, item10033.channel)) {
+          let tmp10 = obj2;
+          obj2.return();
+          let flag2 = true;
+          return true;
+        }
+      }
+      return false;
+    })(currentUser.getCurrentUser(), guildId)
+  ) {
     tmp23[guildId] = true;
   } else {
     delete tmp2[tmp3];
@@ -207,7 +209,12 @@ function hasElevatedPermissions(user, context) {
 function handleFavoritesUpdate() {
   rebuildGuildChannels(closure_17);
 }
-({ isGuildSelectableChannelType: error, GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8, isGuildVocalChannelType: c9, createChannelRecord } = createChannelRecord);
+({
+  isGuildSelectableChannelType: error,
+  GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8,
+  isGuildVocalChannelType: c9,
+  createChannelRecord,
+} = createChannelRecord);
 ({ FAVORITES: closure_17, ChannelTypes } = ME);
 ({ Permissions: closure_19, ElevatedPermissions: closure_20 } = ME);
 const SELECTABLE = "SELECTABLE";
@@ -227,8 +234,7 @@ obj.count = 0;
 let closure_31 = [];
 let closure_32 = {};
 const Store = initializeDefault.Store;
-class GuildChannelStore extends Store {
-}
+class GuildChannelStore extends Store {}
 const prototype = GuildChannelStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_10, closure_11, closure_5, closure_4, closure_12, closure_13, closure_14, closure_16);
@@ -291,7 +297,11 @@ prototype["getSFWDefaultChannel"] = function getSFWDefaultChannel(id, flag) {
   if (arg2 === undefined) {
     VIEW_CHANNEL = constants.VIEW_CHANNEL;
   }
-  return this.getFirstChannel(id, (channel) => closure_1_14.can(VIEW_CHANNEL, channel.channel) && !channel.channel.nsfw, flag);
+  return this.getFirstChannel(
+    id,
+    (channel) => closure_1_14.can(VIEW_CHANNEL, channel.channel) && !channel.channel.nsfw,
+    flag,
+  );
 };
 prototype["getSelectableChannelIds"] = function getSelectableChannelIds(closure_0) {
   return this.getChannels(closure_0)[SELECTABLE].map((channel) => channel.channel.id);
@@ -488,7 +498,7 @@ const guildChannelStore = new GuildChannelStore(dispatcherDefault, {
       }
       return tmp;
     }, false);
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/GuildChannelStore.tsx");
 

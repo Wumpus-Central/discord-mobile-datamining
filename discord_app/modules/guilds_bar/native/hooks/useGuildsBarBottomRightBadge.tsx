@@ -5,7 +5,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-let closure_6 = createCacheKey.createStyles({ bottomRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
+let closure_6 = createCacheKey.createStyles({
+  bottomRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" },
+});
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBottomRightBadge.tsx");
 
 export default function useGuildsBarBottomRightBadge(mentionCount) {
@@ -24,22 +26,32 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
   let memo;
   const tmp = callback();
   React = tmp;
-  const tmp2 = flag(React.useState(() => {
-    if (mentionCount > 0) {
-      let BADGE_MASK_UNREAD_SIZE = mentionCount(joinRequestState[4]).BADGE_MASK_SIZE;
-    } else {
-      BADGE_MASK_UNREAD_SIZE = mentionCount(joinRequestState[4]).BADGE_MASK_UNREAD_SIZE;
-    }
-    return BADGE_MASK_UNREAD_SIZE;
-  }), 2);
+  const tmp2 = flag(
+    React.useState(() => {
+      if (mentionCount > 0) {
+        let BADGE_MASK_UNREAD_SIZE = mentionCount(joinRequestState[4]).BADGE_MASK_SIZE;
+      } else {
+        BADGE_MASK_UNREAD_SIZE = mentionCount(joinRequestState[4]).BADGE_MASK_UNREAD_SIZE;
+      }
+      return BADGE_MASK_UNREAD_SIZE;
+    }),
+    2,
+  );
   first = tmp2[0];
   callback = tmp2[1];
-  token = mentionCount(joinRequestState[5]).useToken(isMentionLowImportance(joinRequestState[6]).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  token = mentionCount(joinRequestState[5]).useToken(
+    isMentionLowImportance(joinRequestState[6]).modules.mobile.GUILD_BAR_ITEM_SIZE,
+  );
   let obj = mentionCount(joinRequestState[5]);
-  token1 = mentionCount(joinRequestState[5]).useToken(isMentionLowImportance(joinRequestState[6]).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+  token1 = mentionCount(joinRequestState[5]).useToken(
+    isMentionLowImportance(joinRequestState[6]).modules.mobile.GUILD_BAR_ITEM_MARGIN,
+  );
   let items = [tmp.bottomRightBadge, token1];
   memo = React.useMemo(() => {
-    const items = [bottomRightBadge.bottomRightBadge, { bottom: token1 - mentionCount(joinRequestState[4]).BADGE_PADDING }];
+    const items = [
+      bottomRightBadge.bottomRightBadge,
+      { bottom: token1 - mentionCount(joinRequestState[4]).BADGE_PADDING },
+    ];
     return items;
   }, items);
   let items1 = [first, flag, joinRequestState, mentionCount, isMentionLowImportance, memo, token];
@@ -50,7 +62,14 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
       obj[2] = first - 2 * mentionCount(joinRequestState[4]).BADGE_PADDING;
       const tmp20Result = isMentionLowImportance(joinRequestState[7])(obj);
       obj = { badge: null, cutout: null, cutouts: null };
-      obj1 = { maskStyle: null, value: null, isMentionLowImportance: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", onLayout: null };
+      obj1 = {
+        maskStyle: null,
+        value: null,
+        isMentionLowImportance: null,
+        accessibilityElementsHidden: true,
+        importantForAccessibility: "no-hide-descendants",
+        onLayout: null,
+      };
       obj1[0] = memo;
       obj1[1] = tmp;
       obj1[2] = isMentionLowImportance;
@@ -94,4 +113,4 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
       return { badge: null, cutout: "Array", cutouts: "accessible" };
     }
   }, items1);
-};
+}

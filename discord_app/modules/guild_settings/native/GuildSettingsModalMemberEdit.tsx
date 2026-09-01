@@ -49,7 +49,10 @@ class GuildSettingsModalMemberEditScene {
     items3[0] = closure_14;
     stateFromStoresObject = obj5.useStateFromStoresObject(items3, () => {
       const currentUser = closure_1_14.getCurrentUser();
-      userId(stateFromStores[38])(null != currentUser, "GuildSettingsModalMemberEditScene: current user cannot be undefined");
+      userId(stateFromStores[38])(
+        null != currentUser,
+        "GuildSettingsModalMemberEditScene: current user cannot be undefined",
+      );
       return { user: closure_1_14.getUser(userId), currentUser };
     });
     user = stateFromStoresObject.user;
@@ -61,14 +64,25 @@ class GuildSettingsModalMemberEditScene {
       };
     }, []);
     obj6 = require("initialize");
-    items4 = [, , , , ];
+    items4 = [, , , ,];
     items4[0] = closure_15;
     items4[1] = closure_10;
     items4[2] = closure_13;
     items4[3] = closure_14;
     items4[4] = closure_12;
     stateFromStoresObject1 = obj6.useStateFromStoresObject(items4, () => {
-      const obj = { member: closure_1_10.getMember(guildId, userId), nicknameError: closure_1_15.nicknameError, editRoles: closure_1_15.roles, isEditing: closure_1_15.isEditing, submitting: closure_1_15.isSubmitting, canChangeNick: null, canManageRoles: null, canKick: null, canBan: null, canDisableCommunication: null };
+      const obj = {
+        member: closure_1_10.getMember(guildId, userId),
+        nicknameError: closure_1_15.nicknameError,
+        editRoles: closure_1_15.roles,
+        isEditing: closure_1_15.isEditing,
+        submitting: closure_1_15.isSubmitting,
+        canChangeNick: null,
+        canManageRoles: null,
+        canKick: null,
+        canBan: null,
+        canDisableCommunication: null,
+      };
       let canManageUserResult = null != stateFromStores;
       if (canManageUserResult) {
         canManageUserResult = null != user;
@@ -135,7 +149,7 @@ class GuildSettingsModalMemberEditScene {
           obj1.user = user;
           obj1.navigation = navigation;
           obj1.contentContainerStyle = contentContainerStyle;
-          items6 = [, ];
+          items6 = [,];
           items6[0] = jsx(GuildSettingsModalMemberEdit, obj1);
           items6[1] = jsx(require("NavScrim").NavScrim, {});
           obj[0] = items6;
@@ -151,7 +165,18 @@ let c4 = importAllResult;
 ({ isGuildOwner: error, isGuildOwnerWithRequiredMfaLevel: closure_8 } = GuildNSFWContentLevel);
 ({ Permissions: closure_16, GuildFeatures: closure_17, GuildSettingsSections: closure_18 } = ME);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
-createCacheKey = { form: { flex: 1 }, formContent: { paddingTop: 16 }, stackPadding: null, userInfo: null, avatar: null, rowLabel: null, ctaButton: null, actionButtonLeft: null, actionButtonRight: null, actionButtonContainer: null };
+createCacheKey = {
+  form: { flex: 1 },
+  formContent: { paddingTop: 16 },
+  stackPadding: null,
+  userInfo: null,
+  avatar: null,
+  rowLabel: null,
+  ctaButton: null,
+  actionButtonLeft: null,
+  actionButtonRight: null,
+  actionButtonContainer: null,
+};
 createCacheKey = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { height: 63 };
@@ -162,7 +187,10 @@ createCacheKey[7] = { marginRight: 0, marginLeft: 0, paddingRight: 0, paddingLef
 createCacheKey[8] = { marginRight: 0, marginLeft: 0, paddingRight: 16, paddingLeft: 0 };
 createCacheKey[9] = { flexBasis: "auto" };
 let closure_22 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
-const styles = StyleSheet.create({ labelContainer: { flexDirection: "row", alignItems: "center" }, roleDot: { marginEnd: 4 } });
+const styles = StyleSheet.create({
+  labelContainer: { flexDirection: "row", alignItems: "center" },
+  roleDot: { marginEnd: 4 },
+});
 const PureComponent = importAllResult.PureComponent;
 class RolesList extends PureComponent {
   constructor(arg0) {
@@ -192,41 +220,49 @@ RolesList.prototype["render"] = function render() {
     let obj2 = importAll(currentUserId[15]);
     const found = importDefault(currentUserId[16])(sortedGuildRoles).filter((arg0) => !callback(arg0));
     const found1 = found.filter((managed) => !managed.managed);
-    const found2 = found1.filter((arg0) => closure_1_2(currentUserId[15]).isRoleHigher(guild, currentUserId, closure_5, arg0));
+    const found2 = found1.filter((arg0) =>
+      closure_1_2(currentUserId[15]).isRoleHigher(guild, currentUserId, closure_5, arg0),
+    );
     const arr4 = importDefault(currentUserId[16])(sortedGuildRoles);
-    let valueResult = found2.map((children) => {
-      closure_0 = children;
-      const tmp = -1 !== closure_1.indexOf(children.id);
-      closure_1 = tmp;
-      let obj = { checked: tmp, label: null, onPress: null };
-      obj = { style: closure_1_23.labelContainer, children: null };
-      let tmp2Result = "dot" === closure_2;
-      if (tmp2Result) {
-        tmp2Result = null != children.colorString;
-      }
-      if (tmp2Result) {
-        obj = { color: null, colors: null, containerStyles: null };
-        ({ colorString: obj3[0], colorStrings: obj3[1] } = children);
-        obj[2] = closure_1_23.roleDot;
-        tmp2Result = tmp2(tmp3(tmp4[18]).RoleDot, obj);
-      }
-      const items = [tmp2Result, ];
-      let tmp11;
-      if (null != children.colorString) {
-        if ("username" === closure_2) {
-          obj1 = { color: null };
-          obj1[0] = children.colorString;
-          tmp11 = obj1;
+    let valueResult = found2
+      .map((children) => {
+        closure_0 = children;
+        const tmp = -1 !== closure_1.indexOf(children.id);
+        closure_1 = tmp;
+        let obj = { checked: tmp, label: null, onPress: null };
+        obj = { style: closure_1_23.labelContainer, children: null };
+        let tmp2Result = "dot" === closure_2;
+        if (tmp2Result) {
+          tmp2Result = null != children.colorString;
         }
-      }
-      items[1] = closure_1_19(guild(currentUserId[19]).Text, { variant: "text-md/semibold", style: tmp11, children: children.name });
-      obj[1] = items;
-      obj[1] = closure_1_20(closure_5, obj);
-      obj[2] = function onPress() {
-        return closure_1_4(id.id, !closure_1);
-      };
-      return closure_1_19(guild(currentUserId[17]).TableCheckboxRow, obj, children.id);
-    }).value();
+        if (tmp2Result) {
+          obj = { color: null, colors: null, containerStyles: null };
+          ({ colorString: obj3[0], colorStrings: obj3[1] } = children);
+          obj[2] = closure_1_23.roleDot;
+          tmp2Result = tmp2(tmp3(tmp4[18]).RoleDot, obj);
+        }
+        const items = [tmp2Result];
+        let tmp11;
+        if (null != children.colorString) {
+          if ("username" === closure_2) {
+            obj1 = { color: null };
+            obj1[0] = children.colorString;
+            tmp11 = obj1;
+          }
+        }
+        items[1] = closure_1_19(guild(currentUserId[19]).Text, {
+          variant: "text-md/semibold",
+          style: tmp11,
+          children: children.name,
+        });
+        obj[1] = items;
+        obj[1] = closure_1_20(closure_5, obj);
+        obj[2] = function onPress() {
+          return closure_1_4(id.id, !closure_1);
+        };
+        return closure_1_19(guild(currentUserId[17]).TableCheckboxRow, obj, children.id);
+      })
+      .value();
     let tmp3 = currentUserId;
     const iter2 = found2.map((children) => {
       closure_0 = children;
@@ -244,7 +280,7 @@ RolesList.prototype["render"] = function render() {
         obj[2] = closure_1_23.roleDot;
         tmp2Result = tmp2(tmp3(tmp4[18]).RoleDot, obj);
       }
-      const items = [tmp2Result, ];
+      const items = [tmp2Result];
       let tmp11;
       if (null != children.colorString) {
         if ("username" === closure_2) {
@@ -253,7 +289,11 @@ RolesList.prototype["render"] = function render() {
           tmp11 = obj1;
         }
       }
-      items[1] = closure_1_19(guild(currentUserId[19]).Text, { variant: "text-md/semibold", style: tmp11, children: children.name });
+      items[1] = closure_1_19(guild(currentUserId[19]).Text, {
+        variant: "text-md/semibold",
+        style: tmp11,
+        children: children.name,
+      });
       obj[1] = items;
       obj[1] = closure_1_20(closure_5, obj);
       obj[2] = function onPress() {
@@ -265,34 +305,36 @@ RolesList.prototype["render"] = function render() {
     tmp3 = currentUserId;
     let arr = importDefault(currentUserId[16])(sortedGuildRoles);
     const found3 = arr.filter((id) => closure_1.includes(id.id));
-    valueResult = found3.map((children) => {
-      let obj = { style: closure_1_23.labelContainer, children: null };
-      let tmpResult = "dot" === closure_2;
-      if (tmpResult) {
-        tmpResult = null != children.colorString;
-      }
-      if (tmpResult) {
-        obj = { color: null, colors: null, containerStyles: null };
-        ({ colorString: obj2[0], colorStrings: obj2[1] } = children);
-        obj[2] = closure_1_23.roleDot;
-        tmpResult = tmp(tmp2(tmp3[18]).RoleDot, obj);
-      }
-      const items = [tmpResult, ];
-      let tmp10;
-      if (null != children.colorString) {
-        if ("username" === closure_2) {
-          obj = { color: null };
-          obj[0] = children.colorString;
-          tmp10 = obj;
+    valueResult = found3
+      .map((children) => {
+        let obj = { style: closure_1_23.labelContainer, children: null };
+        let tmpResult = "dot" === closure_2;
+        if (tmpResult) {
+          tmpResult = null != children.colorString;
         }
-      }
-      obj1 = { label: null };
-      const obj2 = { variant: "text-md/semibold", style: tmp10, children: children.name };
-      items[1] = closure_1_19(guild(currentUserId[19]).Text, obj2);
-      obj[1] = items;
-      obj1[0] = closure_1_20(closure_5, obj);
-      return closure_1_19(guild(currentUserId[20]).TableRow, obj1, children.id);
-    }).value();
+        if (tmpResult) {
+          obj = { color: null, colors: null, containerStyles: null };
+          ({ colorString: obj2[0], colorStrings: obj2[1] } = children);
+          obj[2] = closure_1_23.roleDot;
+          tmpResult = tmp(tmp2(tmp3[18]).RoleDot, obj);
+        }
+        const items = [tmpResult];
+        let tmp10;
+        if (null != children.colorString) {
+          if ("username" === closure_2) {
+            obj = { color: null };
+            obj[0] = children.colorString;
+            tmp10 = obj;
+          }
+        }
+        obj1 = { label: null };
+        const obj2 = { variant: "text-md/semibold", style: tmp10, children: children.name };
+        items[1] = closure_1_19(guild(currentUserId[19]).Text, obj2);
+        obj[1] = items;
+        obj1[0] = closure_1_20(closure_5, obj);
+        return closure_1_19(guild(currentUserId[20]).TableRow, obj1, children.id);
+      })
+      .value();
     let obj = { label: null, onPress: null };
     const intl = guild(currentUserId[21]).intl;
     obj[0] = intl.string(guild(currentUserId[21]).t["+riKdA"]);
@@ -310,7 +352,7 @@ RolesList.prototype["render"] = function render() {
         obj[2] = closure_1_23.roleDot;
         tmpResult = tmp(tmp2(tmp3[18]).RoleDot, obj);
       }
-      const items = [tmpResult, ];
+      const items = [tmpResult];
       let tmp10;
       if (null != children.colorString) {
         if ("username" === closure_2) {
@@ -359,7 +401,10 @@ class GuildSettingsModalMemberEdit extends PureComponent2 {
       }
     };
     applyArgumentsResult.handleStartEditingRoles = function handleStartEditingRoles() {
-      closure_1_1(closure_1_3[32]).startEditingRoles(applyArgumentsResult.props.guild.id, applyArgumentsResult.props.user.id);
+      closure_1_1(closure_1_3[32]).startEditingRoles(
+        applyArgumentsResult.props.guild.id,
+        applyArgumentsResult.props.user.id,
+      );
     };
     applyArgumentsResult.handleToggleRole = function handleToggleRole(roleId, state) {
       callback(11411).toggleRole(roleId, state);
@@ -464,7 +509,19 @@ prototype["render"] = function render() {
   const self = this;
   const tmp = callback5(this.context);
   let str = this.state.nick;
-  ({ user, guild, member, editRoles, currentUser, isEditing, canChangeNick, canManageRoles, canKick, canBan, canDisableCommunication } = this.props);
+  ({
+    user,
+    guild,
+    member,
+    editRoles,
+    currentUser,
+    isEditing,
+    canChangeNick,
+    canManageRoles,
+    canKick,
+    canBan,
+    canDisableCommunication,
+  } = this.props);
   if (null == member) {
     return null;
   } else {
@@ -472,7 +529,7 @@ prototype["render"] = function render() {
     obj[0] = tmp.rowLabel;
     obj = { variant: "text-sm/medium", children: null };
     obj[1] = nameFromUserDefault.getUserTag(user);
-    const items = [callback3(Text.Text, obj), ];
+    const items = [callback3(Text.Text, obj)];
     let tmp18Result = null;
     if (user.bot) {
       obj = { verified: null };
@@ -516,12 +573,20 @@ prototype["render"] = function render() {
       obj6[0] = tmp18(tmp19(1297).Avatar, obj7);
       obj6[1] = tmp7;
       obj5[1] = tmp18(tmp19(5599).TableRow, obj6);
-      const items2 = [tmp18(tmp19(5992).TableRowGroup, obj5), , , , , , ];
+      const items2 = [tmp18(tmp19(5992).TableRowGroup, obj5), , , , , ,];
       if (!canChangeNick) {
         canChangeNick = currentUser.id === user.id;
       }
       if (canChangeNick) {
-        const obj8 = { label: null, value: null, placeholder: null, onChange: null, onBlur: null, maxLength: 32, errorMessage: null };
+        const obj8 = {
+          label: null,
+          value: null,
+          placeholder: null,
+          onChange: null,
+          onBlur: null,
+          maxLength: 32,
+          errorMessage: null,
+        };
         const intl3 = tmp19(1236).intl;
         obj8[0] = intl3.string(tmp19(1236).t["621LJD"]);
         if (str == null) {
@@ -536,7 +601,16 @@ prototype["render"] = function render() {
       }
       items2[1] = canChangeNick;
       if (canManageRoles) {
-        const obj9 = { guild: null, sortedGuildRoles: null, roles: null, roleStyle: null, currentUserId: null, isEditing: null, onToggleRole: null, onStartEditing: null };
+        const obj9 = {
+          guild: null,
+          sortedGuildRoles: null,
+          roles: null,
+          roleStyle: null,
+          currentUserId: null,
+          isEditing: null,
+          onToggleRole: null,
+          onStartEditing: null,
+        };
         obj9[0] = guild;
         obj9[1] = tmp2;
         if (!isEditing) {
@@ -644,7 +718,7 @@ export default function MemberModalEdit(onClose) {
         obj.onClose = closure_1;
         obj.guildId = closure_0;
         return closure_1_19(closure_1_26, obj);
-      }
+      },
     };
     obj = {
       headerTitle() {
@@ -656,7 +730,7 @@ export default function MemberModalEdit(onClose) {
         obj.guildId = closure_0;
         obj.onKick = closure_2;
         return closure_1_19(callback(closure_1_3[42]), obj);
-      }
+      },
     };
     obj = {
       headerTitle() {
@@ -668,7 +742,7 @@ export default function MemberModalEdit(onClose) {
         obj.guildId = closure_0;
         obj.onBan = closure_2;
         return closure_1_19(callback(closure_1_3[43]), obj);
-      }
+      },
     };
     return { [closure_1_18.MEMBER_EDIT]: obj, [closure_1_18.MEMBER_KICK]: obj, [closure_1_18.MEMBER_BAN]: obj };
   }, items);
@@ -676,5 +750,5 @@ export default function MemberModalEdit(onClose) {
   obj = { name: constants.MEMBER_EDIT, params: { userId } };
   items1 = [obj];
   return callback3(onClose(6008).Navigator, obj);
-};
+}
 export { GuildSettingsModalMemberEditScene };

@@ -33,4 +33,4 @@ export default function useRoleSubscriptionFormat(arg0) {
   }, items1);
   obj = { format: memo, isFullServerGating: memo === constants.ALL_CHANNELS };
   return obj;
-};
+}

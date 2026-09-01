@@ -13,16 +13,46 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { guildDetailsContainer: { flexDirection: "column" }, guildDetailsContent: { flexDirection: "row", marginTop: 8, alignItems: "center" }, guildIcon: null, guildNameAndOnlineMembers: null, guildNameWrapper: null, guildPartnerIcon: null, guildDescriptionSection: null, dotSeparator: null, joinGuildButton: null };
+createCacheKey = {
+  guildDetailsContainer: { flexDirection: "column" },
+  guildDetailsContent: { flexDirection: "row", marginTop: 8, alignItems: "center" },
+  guildIcon: null,
+  guildNameAndOnlineMembers: null,
+  guildNameWrapper: null,
+  guildPartnerIcon: null,
+  guildDescriptionSection: null,
+  dotSeparator: null,
+  joinGuildButton: null,
+};
 createCacheKey = { width: 40, height: 40, borderRadius: ThemesDefault.radii.sm, marginRight: 12 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flexDirection: "column" };
 createCacheKey[4] = { flexDirection: "row", alignItems: "center", marginRight: 32 };
 createCacheKey[5] = { marginRight: 8 };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", marginTop: 4 };
-createCacheKey[7] = { width: 4, height: 4, borderRadius: ThemesDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-let obj1 = { width: 4, height: 4, borderRadius: ThemesDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-createCacheKey[8] = { borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, paddingHorizontal: 4, paddingBottom: 2 };
+createCacheKey[7] = {
+  width: 4,
+  height: 4,
+  borderRadius: ThemesDefault.radii.xs,
+  marginRight: 8,
+  marginLeft: 8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
+let obj1 = {
+  width: 4,
+  height: 4,
+  borderRadius: ThemesDefault.radii.xs,
+  marginRight: 8,
+  marginLeft: 8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
+createCacheKey[8] = {
+  borderRadius: ThemesDefault.radii.sm,
+  borderColor: ThemesDefault.colors.BORDER_STRONG,
+  borderWidth: 1,
+  paddingHorizontal: 4,
+  paddingBottom: 2,
+};
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 class ExpressionGuildDetails {
   constructor(arg0) {
@@ -55,11 +85,11 @@ class ExpressionGuildDetails {
       tmp13 = guild;
       obj3 = { variant: "eyebrow", color: "text-default", children: null };
       obj3[2] = title;
-      items = [, ];
+      items = [,];
       items[0] = tmp9(require("Text").Text, obj3);
       obj4 = { style: null, children: null };
       obj4[0] = tmp.guildDetailsContent;
-      items1 = [, ];
+      items1 = [,];
       items1[0] = tmp7;
       obj5 = { style: null, children: null };
       obj5[0] = tmp.guildNameAndOnlineMembers;
@@ -70,13 +100,13 @@ class ExpressionGuildDetails {
       obj7[1] = tmp.guildPartnerIcon;
       tmp8Result = require("getGuildBadgeSource");
       obj7[2] = require("Button").Icon.Sizes.REFRESH_SMALL_16;
-      items2 = [, ];
+      items2 = [,];
       items2[0] = tmp9(tmp8Result, obj7);
       obj8 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
       obj8[2] = guild.name;
       items2[1] = tmp9(require("Text").Text, obj8);
       obj6[1] = items2;
-      items3 = [, ];
+      items3 = [,];
       items3[0] = jsxs(View, obj6);
       obj9 = { style: null, children: null };
       obj9[0] = tmp.guildDescriptionSection;
@@ -89,7 +119,7 @@ class ExpressionGuildDetails {
           obj11 = { membersOnline: null };
           obj11[0] = fromGuildType.presenceCount;
           obj10[2] = intl2.format(require("getSystemLocale").t["LC+S+m"], obj11);
-          items4 = [, , ];
+          items4 = [, ,];
           items4[0] = tmp9(require("Text").Text, obj10);
           obj12 = { style: null };
           obj12[0] = tmp.dotSeparator;
@@ -141,7 +171,13 @@ class ExpressionGuildDetails {
     return;
   }
 }
-let obj2 = { borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, paddingHorizontal: 4, paddingBottom: 2 };
+let obj2 = {
+  borderRadius: ThemesDefault.radii.sm,
+  borderColor: ThemesDefault.colors.BORDER_STRONG,
+  borderWidth: 1,
+  paddingHorizontal: 4,
+  paddingBottom: 2,
+};
 const result = require("set").fileFinishedImporting("modules/messages/native/emoji/ExpressionGuildDetails.tsx");
 
 export default ExpressionGuildDetails;

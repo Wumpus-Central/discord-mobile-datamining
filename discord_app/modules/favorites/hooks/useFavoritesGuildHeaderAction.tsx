@@ -24,4 +24,4 @@ export default function useFavoritesGuildHeaderAction() {
   obj[1] = intl.string(ojM1xJ);
   obj[2] = callback;
   return obj;
-};
+}

@@ -867,7 +867,13 @@ prototype4["executeDatabaseChange"] = function executeDatabaseChange(arg0, arg1)
         let tmp13 = obj2;
         let tmp14 = value;
         let tmp15 = nextVersionResult;
-        let updateRecordResult = obj2.updateRecord(iter.partitionKey, iter.clusteringKey, iter.value, value, nextVersionResult);
+        let updateRecordResult = obj2.updateRecord(
+          iter.partitionKey,
+          iter.clusteringKey,
+          iter.value,
+          value,
+          nextVersionResult,
+        );
       } else if ("setRecord" === opcode) {
         let tmp7 = nextResult;
         let partitionKey = iter.partitionKey;

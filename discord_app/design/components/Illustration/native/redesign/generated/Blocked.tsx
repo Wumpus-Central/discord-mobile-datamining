@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/Blocked.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/Blocked.tsx",
+);
 
 export const getBlockedSource = function getBlockedSource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getBlockedSource = function getBlockedSource(theme) {
     },
     light() {
       return callback(14411);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useBlockedSource = function useBlockedSource() {
     },
     light() {
       return callback(14411);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const Blocked = function Blocked(arg0) {
     },
     light() {
       return callback(14411);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

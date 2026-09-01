@@ -35,7 +35,7 @@ export default function transformStickers(message) {
         const intl = id(closure_1_1[3]).intl;
         return intl.formatToPlainString(id(closure_1_1[3]).t.rk6pOw, { stickerName: id.name });
       },
-      cheap: null
+      cheap: null,
     };
     let intl = tmp(tmp2[3]).intl;
     obj1[1] = intl.string(closure_1_0(closure_1_1[3]).t["fT+Yjp"]);
@@ -44,4 +44,4 @@ export default function transformStickers(message) {
     obj.accessibilityHint = intl2.string(closure_1_0(closure_1_1[3]).t.GCEruV);
     return obj;
   });
-};
+}

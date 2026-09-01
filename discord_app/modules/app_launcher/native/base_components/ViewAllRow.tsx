@@ -30,4 +30,4 @@ export default function ViewAllRow(title) {
   obj[1] = <View style={callback().expandCTALabelContainer}>{null}</View>;
   obj[2] = title.onPress;
   return jsx(TableRowInner.TableRow, { style: callback().expandCTALabelContainer, children: null });
-};
+}

@@ -10,7 +10,7 @@ import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx"
 require = arg1;
 function _handleEnableSystemNotification() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -61,7 +61,11 @@ function _handleEnableSystemNotification() {
             let obj3 = callback(11987);
             const permission = obj3.requestPermission((permission_granted) => {
               let obj = tmp2(table[7]);
-              obj = { action_type: constants2.ALLOW_TO_REQUEST, action_location: constants3.NOTIFICATION_SETTING, permission_granted };
+              obj = {
+                action_type: constants2.ALLOW_TO_REQUEST,
+                action_location: constants3.NOTIFICATION_SETTING,
+                permission_granted,
+              };
               obj.track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
               if (!permission_granted) {
                 const result = tmp2(tmp2[8]).openNotificationSettings();
@@ -114,7 +118,7 @@ createToggle = {
     }
     return applyArgumentsResult;
   },
-  withArrow: true
+  withArrow: true,
 };
 createToggle = createToggle.createPressable(createToggle);
 let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SystemNotificationsSetting.tsx");

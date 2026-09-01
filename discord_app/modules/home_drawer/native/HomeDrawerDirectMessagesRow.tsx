@@ -28,7 +28,7 @@ function HomeDrawerDMsRow() {
     obj[0] = tmp.subtitle;
     obj = { style: null };
     obj[0] = tmp.onlineDot;
-    const items1 = [callback(View, obj), ];
+    const items1 = [callback(View, obj)];
     obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
     const intl = tmp2(1236).intl;
     const obj2 = { numFriends: null };
@@ -49,7 +49,12 @@ function HomeDrawerDMsRow() {
 noopAll;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
-createCacheKey = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.TEXT_STATUS_ONLINE };
+createCacheKey = {
+  width: 8,
+  height: 8,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.TEXT_STATUS_ONLINE,
+};
 createCacheKey[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerDirectMessagesRow.tsx");
@@ -64,4 +69,4 @@ export default function HomeDrawerDMsRowWrapper() {
     }
   }
   return tmp2;
-};
+}

@@ -76,10 +76,12 @@ export default function participantHasVideo(type) {
     }
   }
   return tmp;
-};
+}
 export { canRenderParticipantVideo };
 export const useCanRenderParticipantVideo = function useCanRenderParticipantVideo(stateFromStores) {
   const _require = stateFromStores;
   const items = [closure_3];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8(closure_0, closure_1_3));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_8(closure_0, closure_1_3),
+  );
 };

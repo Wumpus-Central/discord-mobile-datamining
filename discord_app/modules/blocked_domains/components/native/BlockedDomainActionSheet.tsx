@@ -20,15 +20,23 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { textAlign: "center" };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx",
+);
 
 export default function BlockedDomainActionSheet(url) {
   const tmp = callback3();
   let obj = { startExpanded: true, children: null };
   obj = { spacing: 16, justify: "center", align: "center", style: tmp.container, children: null };
   obj = { spacing: 8, justify: "center", align: "center", children: null };
-  const items = [callback(AccountAgeTier10LargeBadge.TrafficConeSpotIllustration, {}), , ];
-  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const items = [callback(AccountAgeTier10LargeBadge.TrafficConeSpotIllustration, {}), ,];
+  obj1 = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-lg/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj1[4] = intl.string(getSystemLocale.t["2B3wj8"]);
   items[1] = callback(Text.Text, obj1);
@@ -37,7 +45,7 @@ export default function BlockedDomainActionSheet(url) {
   obj2[2] = intl2.format(getSystemLocale.t.jnHyYU, {});
   items[2] = callback(Text.Text, obj2);
   obj[3] = items;
-  const items1 = [callback2(Stack.Stack, obj), callback(URLCallout.URLCallout, { url: url.url }), ];
+  const items1 = [callback2(Stack.Stack, obj), callback(URLCallout.URLCallout, { url: url.url })];
   const obj3 = { grow: true, text: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj3[1] = intl3.string(getSystemLocale.t["/g10LC"]);
@@ -48,4 +56,4 @@ export default function BlockedDomainActionSheet(url) {
   obj[4] = items1;
   obj[1] = callback2(Stack.Stack, obj);
   return callback(Background.BottomSheet, obj);
-};
+}

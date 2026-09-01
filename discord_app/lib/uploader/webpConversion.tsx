@@ -21,7 +21,7 @@ function _shouldConvertToWebP2() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -235,7 +235,7 @@ function _performWebPConversion() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -442,7 +442,26 @@ function _performWebPConversion() {
               const _Math = Math;
               ({ width, height } = context);
               const _HermesInternal = HermesInternal;
-              c4.verbose("[WebP] Pixel hash results: fileName=" + name + " fileLength={" + closure_0.size + "} width=" + width + " height=" + height + " pixelHash=" + closure_11 + " mezzanineFileLength={" + context.size + "} mezzaninePixelHash=" + closure_12 + " match=" + closure_13 + " elapsed_ms=" + Math.round(closure_14));
+              c4.verbose(
+                "[WebP] Pixel hash results: fileName=" +
+                  name +
+                  " fileLength={" +
+                  closure_0.size +
+                  "} width=" +
+                  width +
+                  " height=" +
+                  height +
+                  " pixelHash=" +
+                  closure_11 +
+                  " mezzanineFileLength={" +
+                  context.size +
+                  "} mezzaninePixelHash=" +
+                  closure_12 +
+                  " match=" +
+                  closure_13 +
+                  " elapsed_ms=" +
+                  Math.round(closure_14),
+              );
               if (closure_13) {
                 const obj9 = { success: true, webpBlob: null, pixelHashTimeMs: null };
                 obj9[1] = context;
@@ -504,7 +523,7 @@ function _maybeConvertToWebP() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -544,7 +563,15 @@ function _maybeConvertToWebP() {
                 if (size === undefined) {
                   size = closure_0.size;
                 }
-                obj = { success: false, originalFile: closure_0, sizeBefore: closure_0.size, sizeAfter: size, compressionRatio: null, reason: null, compressTimeMs: null };
+                obj = {
+                  success: false,
+                  originalFile: closure_0,
+                  sizeBefore: closure_0.size,
+                  sizeAfter: size,
+                  compressionRatio: null,
+                  reason: null,
+                  compressTimeMs: null,
+                };
                 let num = 1;
                 if (closure_0.size > 0) {
                   num = size / closure_0.size;
@@ -640,7 +667,15 @@ function _maybeConvertToWebP() {
                 if (closure_8 < 0) {
                   const _Math = Math;
                   const _HermesInternal = HermesInternal;
-                  closure_4.verbose("[WebP] Insufficient savings: " + Math.round(100 * closure_8) + "% < 0% (" + user.size + " -> " + webpBlob.size + " bytes)");
+                  closure_4.verbose(
+                    "[WebP] Insufficient savings: " +
+                      Math.round(100 * closure_8) +
+                      "% < 0% (" +
+                      user.size +
+                      " -> " +
+                      webpBlob.size +
+                      " bytes)",
+                  );
                   createFailedResult(c5.INSUFFICIENT_SAVINGS, webpBlob.size);
                 } else {
                   const _performance2 = performance;
@@ -648,8 +683,19 @@ function _maybeConvertToWebP() {
                   const name = user.name;
                   const _Math2 = Math;
                   const _HermesInternal5 = HermesInternal;
-                  closure_4.verbose("[WebP] Conversion successful: " + name + " to WebP in " + Math.round(UNKNOWN_ERROR) + "ms");
-                  const obj7 = { success: true, originalFile: null, convertedBlob: null, sizeBefore: null, sizeAfter: null, compressionRatio: null, hashTimeMs: null, compressTimeMs: null };
+                  closure_4.verbose(
+                    "[WebP] Conversion successful: " + name + " to WebP in " + Math.round(UNKNOWN_ERROR) + "ms",
+                  );
+                  const obj7 = {
+                    success: true,
+                    originalFile: null,
+                    convertedBlob: null,
+                    sizeBefore: null,
+                    sizeAfter: null,
+                    compressionRatio: null,
+                    hashTimeMs: null,
+                    compressTimeMs: null,
+                  };
                   obj7[1] = user;
                   obj7[2] = webpBlob;
                   obj7[3] = user.size;
@@ -696,7 +742,20 @@ function _maybeConvertToWebP() {
   return applyArgumentsResult;
 }
 let closure_4 = new timestampDefault("WebP");
-let obj = { ALREADY_WEBP: "already_webp", UNSUPPORTED_FORMAT: "unsupported_format", ANIMATED_IMAGE: "animated_image", HAS_TRANSPARENCY: "has_transparency", PNG8_FORMAT: "png8_format", INSUFFICIENT_SAVINGS: "insufficient_savings", CONVERSION_FAILED: "conversion_failed", CORRUPTED_FILE: "corrupted_file", PIXEL_HASH_MISMATCH: "pixel_hash_mismatch", ICC_NON_SRGB_PROFILE: "icc_non_srgb_profile", ICC_DETECTION_FAILED: "icc_detection_failed", UNKNOWN_ERROR: "unknown_error" };
+let obj = {
+  ALREADY_WEBP: "already_webp",
+  UNSUPPORTED_FORMAT: "unsupported_format",
+  ANIMATED_IMAGE: "animated_image",
+  HAS_TRANSPARENCY: "has_transparency",
+  PNG8_FORMAT: "png8_format",
+  INSUFFICIENT_SAVINGS: "insufficient_savings",
+  CONVERSION_FAILED: "conversion_failed",
+  CORRUPTED_FILE: "corrupted_file",
+  PIXEL_HASH_MISMATCH: "pixel_hash_mismatch",
+  ICC_NON_SRGB_PROFILE: "icc_non_srgb_profile",
+  ICC_DETECTION_FAILED: "icc_detection_failed",
+  UNKNOWN_ERROR: "unknown_error",
+};
 const tmp2 = new timestampDefault("WebP");
 const result = require("set").fileFinishedImporting("lib/uploader/webpConversion.tsx");
 

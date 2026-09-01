@@ -65,9 +65,27 @@ const memoResult = importAllResult.memo((onLoad) => {
     completedAt = userStatus.completedAt;
   }
   const items = [quest];
-  memo = contentInsets.useMemo(() => onLoad(onToggleFullscreen[7]).getQuestAsset(quest, onLoad(onToggleFullscreen[7]).QuestAssetType.VIDEO_PLAYER_VIDEO, undefined, true), items);
+  memo = contentInsets.useMemo(
+    () =>
+      onLoad(onToggleFullscreen[7]).getQuestAsset(
+        quest,
+        onLoad(onToggleFullscreen[7]).QuestAssetType.VIDEO_PLAYER_VIDEO,
+        undefined,
+        true,
+      ),
+    items,
+  );
   const items1 = [quest];
-  memo1 = contentInsets.useMemo(() => onLoad(onToggleFullscreen[7]).getQuestAsset(quest, onLoad(onToggleFullscreen[7]).QuestAssetType.VIDEO_PLAYER_VIDEO_HLS, undefined, true), items1);
+  memo1 = contentInsets.useMemo(
+    () =>
+      onLoad(onToggleFullscreen[7]).getQuestAsset(
+        quest,
+        onLoad(onToggleFullscreen[7]).QuestAssetType.VIDEO_PLAYER_VIDEO_HLS,
+        undefined,
+        true,
+      ),
+    items1,
+  );
   let url;
   if (memo1 != null) {
     url = memo1.url;
@@ -98,7 +116,15 @@ const memoResult = importAllResult.memo((onLoad) => {
   }, onLoad(onToggleFullscreen[8]).shallow);
   [tmp16, c15] = orientation(contentInsets.useState(onLoad(onToggleFullscreen[9]).PlayerState.LOADING), 2);
   closure_16 = obj3.useRef(questTaskDetails.progressSeconds);
-  obj = { duration: first, isQuestCompleted: tmp6, playerState: tmp16, questId: quest.id, videoSessionId: videoQuestModalContext.videoSessionId, videoAssetId: VIDEO_PLAYER_VIDEO, sourceQuestContent };
+  obj = {
+    duration: first,
+    isQuestCompleted: tmp6,
+    playerState: tmp16,
+    questId: quest.id,
+    videoSessionId: videoQuestModalContext.videoSessionId,
+    videoAssetId: VIDEO_PLAYER_VIDEO,
+    sourceQuestContent,
+  };
   const tmp17 = onEnd(onToggleFullscreen[10])(obj);
   handleBufferAnalytics = tmp17.handleBufferAnalytics;
   handleEndAnalytics = tmp17.handleEndAnalytics;
@@ -151,7 +177,15 @@ const memoResult = importAllResult.memo((onLoad) => {
             obj = { videoRef: null, feature: "quests", appVersion: null, releaseChannel: null, contentMetadata: null };
             obj[0] = tmp.current;
             ({ Version: obj4[2], ReleaseChannel: obj4[3] } = constants);
-            obj1 = { contentId: null, videoStreamType: null, contentType: "quests", durationMs: null, title: null, questId: null, gameName: null };
+            obj1 = {
+              contentId: null,
+              videoStreamType: null,
+              contentType: "quests",
+              durationMs: null,
+              title: null,
+              questId: null,
+              gameName: null,
+            };
             obj1[0] = arr;
             obj1[1] = str;
             obj1[3] = 1000 * targetSeconds;
@@ -254,7 +288,11 @@ const memoResult = importAllResult.memo((onLoad) => {
       const obj2 = onLoad(onToggleFullscreen[14]);
     }
     if (currentTime.currentTime >= ref2.current) {
-      const result = onLoad(onToggleFullscreen[15]).updateOptimisticProgress(quest.id, questTaskDetails.taskType, currentTime.currentTime);
+      const result = onLoad(onToggleFullscreen[15]).updateOptimisticProgress(
+        quest.id,
+        questTaskDetails.taskType,
+        currentTime.currentTime,
+      );
       tmp2.current = currentTime.currentTime + 1;
       const obj = onLoad(onToggleFullscreen[15]);
     }
@@ -421,7 +459,41 @@ const memoResult = importAllResult.memo((onLoad) => {
   if (null == memo2) {
     return null;
   } else {
-    obj = { source: null, initialProgress: null, contentDuration: null, allowUnrestrictedSeeking: null, disableResumeOnLoad: null, style: null, isFullscreen: null, externallyPaused: null, contentInsets: null, renderCaptions: null, onLoadStart: null, onLoad: null, onReadyForDisplay: null, onSeek: null, onBuffer: null, onError: null, onEnd: null, onPlayerStateChange: null, onResumePlayback: null, onPausePlayback: null, onProgress: null, onVideoTracks: null, onVideoLayout: null, videoRef: null, bufferingSpinnerPlacement: null, captionsEnabled: null, showCaptionsButton: null, showTranscriptButton: null, showFullscreenButton: null, showProgress: null, onToggleCaptions: null, onOpenTranscript: null, onToggleFullscreen: null };
+    obj = {
+      source: null,
+      initialProgress: null,
+      contentDuration: null,
+      allowUnrestrictedSeeking: null,
+      disableResumeOnLoad: null,
+      style: null,
+      isFullscreen: null,
+      externallyPaused: null,
+      contentInsets: null,
+      renderCaptions: null,
+      onLoadStart: null,
+      onLoad: null,
+      onReadyForDisplay: null,
+      onSeek: null,
+      onBuffer: null,
+      onError: null,
+      onEnd: null,
+      onPlayerStateChange: null,
+      onResumePlayback: null,
+      onPausePlayback: null,
+      onProgress: null,
+      onVideoTracks: null,
+      onVideoLayout: null,
+      videoRef: null,
+      bufferingSpinnerPlacement: null,
+      captionsEnabled: null,
+      showCaptionsButton: null,
+      showTranscriptButton: null,
+      showFullscreenButton: null,
+      showProgress: null,
+      onToggleCaptions: null,
+      onOpenTranscript: null,
+      onToggleFullscreen: null,
+    };
     obj[0] = memo2;
     obj[1] = tmp13;
     obj[2] = targetSeconds;

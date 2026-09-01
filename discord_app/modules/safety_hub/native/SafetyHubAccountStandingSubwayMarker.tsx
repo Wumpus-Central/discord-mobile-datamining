@@ -9,16 +9,53 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { width: 56, display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", rowGap: 8, flex: 1 }, marker: null, empty: null, label: null, firstOption: null, lastOption: null };
-createCacheKey = { display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1, padding: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = {
+  container: {
+    width: 56,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "center",
+    rowGap: 8,
+    flex: 1,
+  },
+  marker: null,
+  empty: null,
+  label: null,
+  firstOption: null,
+  lastOption: null,
+};
+createCacheKey = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  zIndex: 1,
+  padding: ThemesDefault.space.PX_4,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { display: "flex", borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, width: "100%", height: "100%" };
+createCacheKey[2] = {
+  display: "flex",
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  width: "100%",
+  height: "100%",
+};
 createCacheKey[3] = { textAlign: "center" };
 createCacheKey[4] = { alignItems: "flex-start", textAlign: "left" };
 createCacheKey[5] = { alignItems: "flex-end", textAlign: "right" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { display: "flex", borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, width: "100%", height: "100%" };
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/SafetyHubAccountStandingSubwayMarker.tsx");
+let obj1 = {
+  display: "flex",
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  width: "100%",
+  height: "100%",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/safety_hub/native/SafetyHubAccountStandingSubwayMarker.tsx",
+);
 
 export default function SafetyHubAccountStandingSubwayMarker(arg0) {
   ({ selectedIcon, style: require, isSelected } = arg0);
@@ -53,7 +90,7 @@ export default function SafetyHubAccountStandingSubwayMarker(arg0) {
     obj1[1] = closure_4(tmp9, obj2);
     selectedIcon = tmp10(tmp9, obj1);
   }
-  const items = [selectedIcon, ];
+  const items = [selectedIcon];
   const intl = getSystemLocale.intl;
   items[1] = intl.format(status, {
     hook(arg0, arg1) {
@@ -69,9 +106,9 @@ export default function SafetyHubAccountStandingSubwayMarker(arg0) {
         obj[3] = arg0;
       }
       return closure_1_4(closure_1_0(label[6]).Text, obj, arg1);
-    }
+    },
   });
   obj[2] = items;
   return closure_5(View, obj);
-};
+}
 export const SUBWAY_MARKER_WIDTH = 56;

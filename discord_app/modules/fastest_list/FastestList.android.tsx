@@ -12,7 +12,10 @@ let c3 = importAllResult;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 const animatedComponent = importDefaultResult1.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault);
 let closure_7 = importDefaultResult1.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault);
-let closure_8 = BottomSheetModal.createBottomSheetScrollableComponent(require("BottomSheetModal").SCROLLABLE_TYPE.SCROLLVIEW, animatedComponent);
+let closure_8 = BottomSheetModal.createBottomSheetScrollableComponent(
+  require("BottomSheetModal").SCROLLABLE_TYPE.SCROLLVIEW,
+  animatedComponent,
+);
 let c9 = 0;
 const importDefaultResult2 = importDefaultResult1;
 const forwardRefResult = importAllResult.forwardRef(function FastestList(estimatedListSize, ref) {
@@ -45,7 +48,15 @@ const forwardRefResult = importAllResult.forwardRef(function FastestList(estimat
   const listId = estimatedListSize.listId;
   ({ placeholderConfig, renderAhead } = estimatedListSize);
   let str = "nominal";
-  ({ itemSize, listFooterSize, listFooterAlwaysMounted, listHeaderSize, listHeaderAlwaysMounted, onLayout, placeholdersForceEnabled } = estimatedListSize);
+  ({
+    itemSize,
+    listFooterSize,
+    listFooterAlwaysMounted,
+    listHeaderSize,
+    listHeaderAlwaysMounted,
+    onLayout,
+    placeholdersForceEnabled,
+  } = estimatedListSize);
   if (undefined !== renderAhead) {
     str = renderAhead;
   }
@@ -95,7 +106,7 @@ const forwardRefResult = importAllResult.forwardRef(function FastestList(estimat
         const Commands = closure_1_0(closure_1_2[4]).Commands;
         Commands.scrollToLocation(tmp.current, section, item, animated, num);
       }
-    }
+    },
   }));
   const items1 = [ref1];
   const tmp12 = listId(ref[6])({ style });
@@ -118,7 +129,16 @@ const forwardRefResult = importAllResult.forwardRef(function FastestList(estimat
     return "" + str + "-" + +closure_9;
   }, items2);
   const tmp17 = listId(ref[9])(placeholderConfig);
-  const tmp19 = listId(ref[10])({ fastestListId: memo, itemSize, keyExtractor: estimatedListSize.keyExtractor, listFooterSize, listHeaderSize, sections, sectionHeaderSize, sectionFooterSize });
+  const tmp19 = listId(ref[10])({
+    fastestListId: memo,
+    itemSize,
+    keyExtractor: estimatedListSize.keyExtractor,
+    listFooterSize,
+    listHeaderSize,
+    sections,
+    sectionHeaderSize,
+    sectionFooterSize,
+  });
   ({ onScroll, onScrollBeginDrag, onScrollEndDrag } = listId(ref[11])(estimatedListSize, tmp2));
   if (tmp3) {
     let tmp10Result = closure_8;
@@ -130,7 +150,27 @@ const forwardRefResult = importAllResult.forwardRef(function FastestList(estimat
     }
     tmp10Result = closure_7;
   }
-  let obj = { accessibilityLabel: estimatedListSize.accessibilityLabel, horizontal: tmp2, insetStart: num, insetEnd: num2, keyboardDismissOnDrag: null, onUnexpectedItemSize: null, onLayout: null, onScroll: null, onScrollBeginDrag: null, onScrollEndDrag: null, onVisibleItemsChanged: null, placeholderConfig: null, ref: null, renderAhead: null, scrollEventThrottle: null, sectionsVersioned: null, showsHorizontalScrollIndicator: null, showsVerticalScrollIndicator: null, style: null };
+  let obj = {
+    accessibilityLabel: estimatedListSize.accessibilityLabel,
+    horizontal: tmp2,
+    insetStart: num,
+    insetEnd: num2,
+    keyboardDismissOnDrag: null,
+    onUnexpectedItemSize: null,
+    onLayout: null,
+    onScroll: null,
+    onScrollBeginDrag: null,
+    onScrollEndDrag: null,
+    onVisibleItemsChanged: null,
+    placeholderConfig: null,
+    ref: null,
+    renderAhead: null,
+    scrollEventThrottle: null,
+    sectionsVersioned: null,
+    showsHorizontalScrollIndicator: null,
+    showsVerticalScrollIndicator: null,
+    style: null,
+  };
   let tmp23 = "on-drag" === keyboardDismissMode;
   if (!tmp23) {
     tmp23 = "interactive" === keyboardDismissMode;

@@ -42,7 +42,7 @@ export default function AddPhone(reason) {
   closure_12 = undefined;
   function _handleSubmit() {
     const self = this;
-    const tmp = stateFromStores(function*() {
+    const tmp = stateFromStores(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -225,8 +225,22 @@ export default function AddPhone(reason) {
   items4 = [tmp.background, reason.style];
   obj = { style: tmp.container, children: null };
   if (header != null) {
-    const items5 = [header, , , ];
-    obj1 = { style: null, textInputStyle: null, label: null, alpha2: null, countryCode: null, value: null, onChangeText: null, forceMode: null, returnKeyType: "done", onSubmitEditing: null, error: null, onPressCountrySelector: null, autoFocus: true };
+    const items5 = [header, , ,];
+    obj1 = {
+      style: null,
+      textInputStyle: null,
+      label: null,
+      alpha2: null,
+      countryCode: null,
+      value: null,
+      onChangeText: null,
+      forceMode: null,
+      returnKeyType: "done",
+      onSubmitEditing: null,
+      error: null,
+      onPressCountrySelector: null,
+      autoFocus: true,
+    };
     ({ input: obj8[0], redesignInput: obj8[1] } = tmp);
     if (null != phone) {
       if (!result) {
@@ -317,7 +331,13 @@ export default function AddPhone(reason) {
     const intl4 = tmp2(tmp3[17]).intl;
     stringResult = intl4.string(tmp2(tmp3[17]).t["64bX0M"]);
   } else {
-    const obj6 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    const obj6 = {
+      style: null,
+      accessibilityRole: "header",
+      variant: "heading-xl/extrabold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj6[0] = tmp.title;
     if (null != phone) {
       if (!result) {
@@ -330,4 +350,4 @@ export default function AddPhone(reason) {
     const intl2 = tmp2(tmp3[17]).intl;
     stringResult1 = intl2.string(tmp2(tmp3[17]).t.hY8QTR);
   }
-};
+}

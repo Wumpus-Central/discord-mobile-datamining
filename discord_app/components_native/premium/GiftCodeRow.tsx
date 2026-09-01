@@ -10,19 +10,60 @@ import importAllResult from "../../../_runtime/00019_noop.js";
 let require = arg1;
 ({ View: c3, TouchableWithoutFeedback: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { giftCodeRow: { paddingHorizontal: 16 }, giftCodeRowLegacy: null, giftCodeShare: null, giftCodeInput: null, giftCodeInputContent: null, giftCodeShareButton: null, codeText: null, subTextRow: null, expiryText: null, revokeHint: null, firstRow: null, buttonContainer: null };
+createCacheKey = {
+  giftCodeRow: { paddingHorizontal: 16 },
+  giftCodeRowLegacy: null,
+  giftCodeShare: null,
+  giftCodeInput: null,
+  giftCodeInputContent: null,
+  giftCodeShareButton: null,
+  codeText: null,
+  subTextRow: null,
+  expiryText: null,
+  revokeHint: null,
+  firstRow: null,
+  buttonContainer: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, padding: 8, borderRadius: ThemesDefault.radii.xs, borderWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT };
-let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, padding: 8, borderRadius: ThemesDefault.radii.xs, borderWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT };
+createCacheKey[2] = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  marginVertical: 8,
+  padding: 8,
+  borderRadius: ThemesDefault.radii.xs,
+  borderWidth: StyleSheet.hairlineWidth,
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+};
+let obj1 = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  marginVertical: 8,
+  padding: 8,
+  borderRadius: ThemesDefault.radii.xs,
+  borderWidth: StyleSheet.hairlineWidth,
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+};
 createCacheKey[3] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
 let obj2 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: ThemesDefault.space.PX_8 };
+createCacheKey[4] = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  padding: ThemesDefault.space.PX_8,
+};
 createCacheKey[5] = { marginLeft: 12 };
 createCacheKey[6] = { flexShrink: 1 };
 createCacheKey[7] = { marginBottom: 8, flexDirection: "row", alignItems: "center" };
 createCacheKey[8] = { fontSize: 12, lineHeight: 16 };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: ThemesDefault.space.PX_8 };
+let obj3 = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  padding: ThemesDefault.space.PX_8,
+};
 createCacheKey[9] = { color: ThemesDefault.unsafe_rawColors.BLUE_345 };
 createCacheKey[10] = { borderWidth: 0 };
 createCacheKey[11] = { flexShrink: 0, flexGrow: 1 };
@@ -57,7 +98,7 @@ prototype["render"] = function render() {
   importDefault = tmp;
   const props = this.props;
   const giftCode = props.giftCode;
-  let items = [tmp.giftCodeRow, ];
+  let items = [tmp.giftCodeRow];
   let firstRow = null;
   if (props.isFirst) {
     firstRow = tmp.firstRow;
@@ -70,9 +111,9 @@ prototype["render"] = function render() {
   const obj2 = { variant: "text-sm/normal", style: tmp.codeText, lineClamp: 1, children: null };
   let obj5 = giftCode(self[8]);
   obj2[3] = obj5.getGiftCodeURL(giftCode.code);
-  const items1 = [callback(giftCode(self[11]).Text, obj2), ];
+  const items1 = [callback(giftCode(self[11]).Text, obj2)];
   const obj3 = { style: items2, children: null };
-  items2 = [, ];
+  items2 = [,];
   ({ buttonContainer: arr3[0], giftCodeShareButton: arr3[1] } = tmp);
   const obj4 = { size: "sm", text: null, onPress: null };
   const intl = giftCode(self[13]).intl;
@@ -83,7 +124,7 @@ prototype["render"] = function render() {
   obj1[1] = items1;
   obj[0] = closure_7(closure_3, obj1);
   obj[1] = callback(giftCode(self[10]).InputFieldContainer, obj);
-  const items3 = [callback(closure_3, obj), ];
+  const items3 = [callback(closure_3, obj)];
   obj5 = { style: tmp.subTextRow, children: null };
   let tmp5Result = null;
   if (null != giftCode.expiresAt) {
@@ -98,10 +139,10 @@ prototype["render"] = function render() {
         onPress() {
           return closure_2.handleRevoke(code.code);
         },
-        children: closure_1_6(giftCode(self[15]).LegacyText, obj)
+        children: closure_1_6(giftCode(self[15]).LegacyText, obj),
       };
       obj = { style: items, children };
-      items = [, ];
+      items = [,];
       ({ expiryText: arr[0], revokeHint: arr[1] } = closure_1);
       return closure_1_6(closure_1_4, obj, arg1);
     };

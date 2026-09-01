@@ -8,7 +8,7 @@ prototype = function DiscordMd5() {
 }.prototype;
 prototype["fromBlob"] = function fromBlob(arg0) {
   closure_0 = arg0;
-  return callback(function*() {
+  return callback(function* () {
     yield closure_1_0.arrayBuffer();
     return fromArrayBuffer(arg1);
   })();

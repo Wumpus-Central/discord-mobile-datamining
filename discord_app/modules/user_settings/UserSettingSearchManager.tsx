@@ -92,7 +92,7 @@ prototype["getScoredSearchResults"] = function getScoredSearchResults(str) {
       const items = [];
       const preprocessed = self.preprocessed;
       let item = preprocessed.forEach((arg0) => {
-        [tmp, ] = arg0;
+        [tmp] = arg0;
         c0 = 0;
         if (arr.some((arg0) => arg0 === c0)) {
           c0 = 1;

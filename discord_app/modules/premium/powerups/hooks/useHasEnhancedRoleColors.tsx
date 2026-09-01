@@ -17,7 +17,7 @@ export default function useHasEnhancedRoleColors(arg0) {
     }
     return hasItem;
   });
-};
+}
 export const getHasEnhancedRoleColors = function getHasEnhancedRoleColors(guildId, id) {
   if (null == guildId) {
     return false;

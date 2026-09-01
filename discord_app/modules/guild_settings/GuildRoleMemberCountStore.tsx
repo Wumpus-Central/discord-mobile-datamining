@@ -5,8 +5,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 let closure_0 = {};
 let closure_1 = {};
 const Store = initializeDefault.Store;
-class GuildRoleMemberCountStore extends Store {
-}
+class GuildRoleMemberCountStore extends Store {}
 const prototype = GuildRoleMemberCountStore.prototype;
 prototype["getRoleMemberCount"] = function getRoleMemberCount(id) {
   let tmp = null;
@@ -86,7 +85,7 @@ const guildRoleMemberCountStore = new GuildRoleMemberCountStore(dispatcherDefaul
     guild = guild.guild;
     delete tmp4[tmp3];
     delete tmp2[tmp];
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/guild_settings/GuildRoleMemberCountStore.tsx");
 

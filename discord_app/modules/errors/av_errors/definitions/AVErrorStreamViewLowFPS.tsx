@@ -26,7 +26,10 @@ export const AVErrorStreamViewLowFPSDefinition = {
           if (ownerId.ownerId !== id.getId()) {
             if (ownerId.state !== constants.PAUSED) {
               let tmpResult = tmp(tmp2[5]);
-              const accumulatedStatsWithMinDatapoints = tmpResult.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId.ownerId);
+              const accumulatedStatsWithMinDatapoints = tmpResult.getAccumulatedStatsWithMinDatapoints(
+                mediaEngineConnectionId,
+                ownerId.ownerId,
+              );
               if (null == accumulatedStatsWithMinDatapoints) {
                 return arr;
               } else {
@@ -37,11 +40,16 @@ export const AVErrorStreamViewLowFPSDefinition = {
                 } else {
                   const maxQuality = tmp(tmp2[7]).getMaxQuality(participant);
                   if (null != maxQuality) {
-                    if (accumulatedStatsWithMinDatapoints.short.frameRate < tmpResult2.getWarningFrameRate(maxQuality.maxFrameRate)) {
+                    if (
+                      accumulatedStatsWithMinDatapoints.short.frameRate <
+                      tmpResult2.getWarningFrameRate(maxQuality.maxFrameRate)
+                    ) {
                       obj = { type: null };
                       obj[0] = tmp(tmp2[8]).AVError.STREAM_VIEW_LOW_FPS;
                       const tmpResult3 = tmp(tmp2[9]);
-                      const merged = Object.assign(tmpResult3.getStreamErrorContext(tmp(tmp2[6]).encodeStreamKey(ownerId)));
+                      const merged = Object.assign(
+                        tmpResult3.getStreamErrorContext(tmp(tmp2[6]).encodeStreamKey(ownerId)),
+                      );
                       arr.push(obj);
                       const tmpResult4 = tmp(tmp2[6]);
                     } else {
@@ -62,5 +70,5 @@ export const AVErrorStreamViewLowFPSDefinition = {
   },
   makeErrorContextKey(streamKey) {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;
-  }
+  },
 };

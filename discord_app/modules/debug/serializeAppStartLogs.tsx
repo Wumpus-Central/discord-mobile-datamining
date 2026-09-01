@@ -241,4 +241,4 @@ export default function serializeAppStartLogs(arg0) {
     return sum2;
   });
   return mapped.join("\n\n");
-};
+}

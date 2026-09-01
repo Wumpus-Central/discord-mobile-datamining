@@ -85,15 +85,19 @@ export const useShouldDisplayGuildTag = function useShouldDisplayGuildTag(arg0, 
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getUser(closure_0), items1);
   const items2 = [closure_2];
   const items3 = [arg1, arg0];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
-    if (null != table) {
-      if (null != callback) {
-        const member = closure_1_2.getMember(tmp, tmp2);
-        return callback(table[6]).hasAutomodQuarantinedProfile(member);
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items2,
+    () => {
+      if (null != table) {
+        if (null != callback) {
+          const member = closure_1_2.getMember(tmp, tmp2);
+          return callback(table[6]).hasAutomodQuarantinedProfile(member);
+        }
       }
-    }
-    return null;
-  }, items3);
+      return null;
+    },
+    items3,
+  );
   if (undefined === arg2) {
     let primaryGuild;
     if (stateFromStores != null) {

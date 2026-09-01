@@ -32,7 +32,7 @@ export default function useKeyboardIsOpen() {
     }
     return tmp2;
   });
-};
+}
 export const subscribeToKeyboardIsOpen = function subscribeToKeyboardIsOpen(arg0) {
   const _require = arg0;
   let tmp = arg1;

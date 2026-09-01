@@ -10,20 +10,32 @@ export default function useLiveStageChannels(arg0) {
   let stateFromStoresArray = arg0;
   const items = [closure_5];
   const items1 = [arg0];
-  stateFromStoresArray = stateFromStoresArray(589).useStateFromStoresArray(items, () => stateFromStoresArray1(closure_1_2[6]).keys(closure_1_5.getStageInstancesByGuild(stateFromStoresArray)), items1);
+  stateFromStoresArray = stateFromStoresArray(589).useStateFromStoresArray(
+    items,
+    () => stateFromStoresArray1(closure_1_2[6]).keys(closure_1_5.getStageInstancesByGuild(stateFromStoresArray)),
+    items1,
+  );
   let stateFromStoresArray1;
   const obj = stateFromStoresArray(589);
   const items2 = [closure_3];
   const items3 = [stateFromStoresArray];
-  stateFromStoresArray1 = stateFromStoresArray(589).useStateFromStoresArray(items2, () => {
-    const mapped = stateFromStores.map((arg0) => channel.getChannel(arg0));
-    return mapped.filter(stateFromStores(closure_1_2[5]).isNotNullish);
-  }, items3);
+  stateFromStoresArray1 = stateFromStoresArray(589).useStateFromStoresArray(
+    items2,
+    () => {
+      const mapped = stateFromStores.map((arg0) => channel.getChannel(arg0));
+      return mapped.filter(stateFromStores(closure_1_2[5]).isNotNullish);
+    },
+    items3,
+  );
   const obj2 = stateFromStoresArray(589);
   const items4 = [closure_4];
   const items5 = [stateFromStoresArray1];
-  return stateFromStoresArray(589).useStateFromStoresArray(items4, () => stateFromStoresArray.filter((arg0) => closure_4.can(callback(table[3]).JOIN_VOCAL_CHANNEL_PERMISSIONS, arg0)), items5);
-};
+  return stateFromStoresArray(589).useStateFromStoresArray(
+    items4,
+    () => stateFromStoresArray.filter((arg0) => closure_4.can(callback(table[3]).JOIN_VOCAL_CHANNEL_PERMISSIONS, arg0)),
+    items5,
+  );
+}
 export const getAllLiveStageChannels = function getAllLiveStageChannels() {
   allStageInstances = allStageInstances.getAllStageInstances();
   return allStageInstances.reduce((arr, channel_id) => {
@@ -48,12 +60,20 @@ export const useAllLiveStageChannels = function useAllLiveStageChannels() {
   const obj = stateFromStores(589);
   const items1 = [closure_3];
   const items2 = [stateFromStores];
-  stateFromStoresArray = stateFromStores(589).useStateFromStoresArray(items1, () => {
-    const mapped = stateFromStores.map((arg0) => channel.getChannel(arg0));
-    return mapped.filter(stateFromStores(closure_1_2[5]).isNotNullish);
-  }, items2);
+  stateFromStoresArray = stateFromStores(589).useStateFromStoresArray(
+    items1,
+    () => {
+      const mapped = stateFromStores.map((arg0) => channel.getChannel(arg0));
+      return mapped.filter(stateFromStores(closure_1_2[5]).isNotNullish);
+    },
+    items2,
+  );
   const obj2 = stateFromStores(589);
   const items3 = [closure_4];
   const items4 = [stateFromStoresArray];
-  return stateFromStores(589).useStateFromStoresArray(items3, () => stateFromStoresArray.filter((arg0) => closure_4.can(callback(table[3]).JOIN_VOCAL_CHANNEL_PERMISSIONS, arg0)), items4);
+  return stateFromStores(589).useStateFromStoresArray(
+    items3,
+    () => stateFromStoresArray.filter((arg0) => closure_4.can(callback(table[3]).JOIN_VOCAL_CHANNEL_PERMISSIONS, arg0)),
+    items4,
+  );
 };

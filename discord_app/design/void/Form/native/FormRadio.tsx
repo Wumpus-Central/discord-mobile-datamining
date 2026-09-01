@@ -10,4 +10,4 @@ const result = require("set").fileFinishedImporting("design/void/Form/native/For
 
 export default function FormRadio(selected) {
   return <Image style={callback().radio} source={importDefault(arg0.selected ? 5616 : 5617)} />;
-};
+}

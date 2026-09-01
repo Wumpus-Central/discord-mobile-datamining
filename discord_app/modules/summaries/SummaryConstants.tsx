@@ -3,19 +3,31 @@ import setDefault from "../../utils/Durations.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 
 require = arg1;
-let obj = { DUPLICATED: "DUPLICATED", TOO_GENERIC: "TOO_GENERIC", TOO_MANY: "TOO_MANY", INACCURATE: "INACCURATE", NOT_USEFUL: "NOT_USEFUL", OTHER: "OTHER" };
+let obj = {
+  DUPLICATED: "DUPLICATED",
+  TOO_GENERIC: "TOO_GENERIC",
+  TOO_MANY: "TOO_MANY",
+  INACCURATE: "INACCURATE",
+  NOT_USEFUL: "NOT_USEFUL",
+  OTHER: "OTHER",
+};
 const result = 5 * setDefault.Millis.SECOND;
 const result1 = require("set").fileFinishedImporting("modules/summaries/SummaryConstants.tsx");
 
 export const SUMMARY_POLL_INTERVAL = result;
 export const SummariesSidebarToggledSource = { TOOLBAR_BUTTON: "toolbar button", PILL: "pill" };
-export const SummariesTopicClickedSource = { SIDEBAR: "sidebar", PILL_DROPDOWN: "pill dropdown", PILL_NEXT_ARROW: "pill next arrow", PILL_PREVIOUS_ARROW: "pill previous arrow" };
+export const SummariesTopicClickedSource = {
+  SIDEBAR: "sidebar",
+  PILL_DROPDOWN: "pill dropdown",
+  PILL_NEXT_ARROW: "pill next arrow",
+  PILL_PREVIOUS_ARROW: "pill previous arrow",
+};
 export const SummaryFeedbackReasons = obj;
 export const getSummaryFeedbackReasons = function getSummaryFeedbackReasons() {
   obj = { value: obj.DUPLICATED, label: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.wwXl5h);
-  const items = [obj, , , , , ];
+  const items = [obj, , , , ,];
   obj = { value: obj.TOO_GENERIC, label: null };
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t["t+6knu"]);

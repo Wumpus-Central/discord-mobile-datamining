@@ -37,8 +37,7 @@ if ("production" !== window.GLOBAL_ENV.PROJECT_ENV) {
   }
   str8 = str9;
 }
-class NewGamesCoachmarkContent {
-}
+class NewGamesCoachmarkContent {}
 let str11 = "1497097140001046528";
 if ("production" === window.GLOBAL_ENV.PROJECT_ENV) {
   str11 = "1497100850261131334";
@@ -61,7 +60,12 @@ obj1[GameServerProviderType.GameServerProviderType.SHOCKBYTE] = str13;
 const result = set.fileFinishedImporting("modules/game_server/GameServerConstants.tsx");
 
 export const GameServerSetupStep = obj;
-export const GAME_SERVER_DEFAULT_STEP_CONFIG = { steps: { [obj.SELECT_GAME]: { onBack: { type: "close" }, onNext: obj }, [obj.SERVER_SETTINGS]: { onBack: obj, onNext: { type: "save" } } } };
+export const GAME_SERVER_DEFAULT_STEP_CONFIG = {
+  steps: {
+    [obj.SELECT_GAME]: { onBack: { type: "close" }, onNext: obj },
+    [obj.SERVER_SETTINGS]: { onBack: obj, onNext: { type: "save" } },
+  },
+};
 export const GAME_SERVER_SLIDE_PADDING = 24;
 export const GAME_SERVER_SLIDE_WIDTH = 680;
 export const GAME_SERVER_SLIDE_CONTENT_WIDTH = 632;
@@ -76,6 +80,9 @@ export const HYTALE_GAME_ID = str8;
 export { NewGamesCoachmarkContent };
 export const GameServerGameProvider = { SHOCKBYTE: 0, [0]: "SHOCKBYTE" };
 export const GAME_SERVER_SUPPORT_URLS = obj1;
-export const GAME_SERVER_TOS = { [GameServerProviderType.GameServerProviderType.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" };
-export const GAME_SERVER_SURVEY_URL = (arg0, arg1) => "https://discord.sjc1.qualtrics.com/jfe/form/SV_2h34PnQLPTCjTTM?user_id=" + arg0 + "&guild_id=" + arg1;
+export const GAME_SERVER_TOS = {
+  [GameServerProviderType.GameServerProviderType.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy",
+};
+export const GAME_SERVER_SURVEY_URL = (arg0, arg1) =>
+  "https://discord.sjc1.qualtrics.com/jfe/form/SV_2h34PnQLPTCjTTM?user_id=" + arg0 + "&guild_id=" + arg1;
 export const GAME_SERVER_POWERUP_SKU_ID = "0";

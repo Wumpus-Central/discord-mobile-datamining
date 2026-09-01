@@ -5,7 +5,9 @@ import set from "../../creator_monetization_eligibility/CreatorMonetizationEligi
 import closure_2 from "../../../stores/UserStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx",
+);
 
 export const canUserSeeMonetizationOnboarding = function canUserSeeMonetizationOnboarding(closure_2) {
   currentUser = currentUser.getCurrentUser();
@@ -14,10 +16,19 @@ export const canUserSeeMonetizationOnboarding = function canUserSeeMonetizationO
     id = currentUser.id;
   }
   let obj = computeGuildRoleSubscriptionSettingsVisibility;
-  obj = { guild: closure_2, isOwner: closure_2.ownerId === id, canManageGuildRoleSubscriptions: computeGuildRoleSubscriptionSettingsVisibility.canManageGuildRoleSubscriptions(closure_2), isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
+  obj = {
+    guild: closure_2,
+    isOwner: closure_2.ownerId === id,
+    canManageGuildRoleSubscriptions:
+      computeGuildRoleSubscriptionSettingsVisibility.canManageGuildRoleSubscriptions(closure_2),
+    isUserInCreatorMonetizationEligibleCountry: null,
+    shouldRestrictUpdatingRoleSubscriptionSettings: null,
+  };
   const obj3 = computeGuildRoleSubscriptionSettingsVisibility;
   obj[3] = set.isUserInCreatorMonetizationEligibleCountry();
   const obj4 = set;
-  obj[4] = isRestrictedFromShowingGuildPurchaseEntryPoints.shouldRestrictUpdatingCreatorMonetizationSettings(closure_2.id);
+  obj[4] = isRestrictedFromShowingGuildPurchaseEntryPoints.shouldRestrictUpdatingCreatorMonetizationSettings(
+    closure_2.id,
+  );
   return obj.canSeeGuildRoleSubscriptionSettings(obj);
 };

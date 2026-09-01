@@ -28,7 +28,7 @@ function LaunchpadChannelIcon(channel) {
   const stateFromStores = obj1.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id));
   obj = { guild: stateFromStores, size: layoutStyles.icon.guildBadgeIconSize };
   obj[1] = callback(GuildIconSizesDefault, obj);
-  const items1 = [callback(View, obj), ];
+  const items1 = [callback(View, obj)];
   obj1 = { channel, size: null, wrapperSize: null };
   const tmp = callback2(layout);
   const tmp2 = channel;
@@ -54,7 +54,15 @@ function LaunchpadChannelIcon(channel) {
 noopAll;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles((layout) => {
-  const guildBadgeIcon = { position: "absolute", zIndex: 1, bottom: -4, right: -4, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 2, borderRadius: null };
+  const guildBadgeIcon = {
+    position: "absolute",
+    zIndex: 1,
+    bottom: -4,
+    right: -4,
+    borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    borderWidth: 2,
+    borderRadius: null,
+  };
   let num = 6;
   if (obj2.isLayoutCozy(layout)) {
     num = 9;
@@ -62,11 +70,23 @@ let closure_11 = createCacheKey.createStyles((layout) => {
   guildBadgeIcon[6] = num;
   return { guildBadgeIcon };
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelItem.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/guild_channels/ChannelItem.tsx",
+);
 
 export const getChannelAccessibilityProps = function getChannelAccessibilityProps(channel) {
   channel = channel.channel;
-  let obj = { accessible: true, accessibilityRole: "button", accessibilityLabel: getChannelA11yLabelDefault({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount }) };
+  let obj = {
+    accessible: true,
+    accessibilityRole: "button",
+    accessibilityLabel: getChannelA11yLabelDefault({
+      channel,
+      unread,
+      mentionCount,
+      voiceStates,
+      embeddedActivitiesCount,
+    }),
+  };
   ({ unread, mentionCount, voiceStates, embeddedActivitiesCount } = channel);
   if (channel.isGuildVoice()) {
     obj = { accessibilityHint: null };
@@ -99,7 +119,17 @@ export const renderChannelItem = function renderChannelItem(unread) {
   if (flag3 === undefined) {
     flag3 = false;
   }
-  ({ latestMessageTimestamp, layout, end, channelName, isSubscriptionGated, connected, mentionCount, launchpad, fontScale } = unread);
+  ({
+    latestMessageTimestamp,
+    layout,
+    end,
+    channelName,
+    isSubscriptionGated,
+    connected,
+    mentionCount,
+    launchpad,
+    fontScale,
+  } = unread);
   if (isSubscriptionGated === undefined) {
     isSubscriptionGated = false;
   }
@@ -122,9 +152,16 @@ export const renderChannelItem = function renderChannelItem(unread) {
   obj1 = getLayoutStyles;
   const layoutStyles = obj1.getLayoutStyles(layout);
   let obj2 = renderChannelWrapper;
-  const children = [unreadBadge, , , ];
+  const children = [unreadBadge, , ,];
   obj = { style: null, children: null };
-  obj = { position: "relative", borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0 };
+  obj = {
+    position: "relative",
+    borderRadius: ThemesDefault.radii.round,
+    justifyContent: "center",
+    alignItems: "center",
+    flexShrink: 0,
+    flexGrow: 0,
+  };
   const merged = Object.assign(getLayoutStyles.makeSizeStyle(layoutStyles.icon.wrapper.size));
   const merged1 = Object.assign(layoutStyles.icon.margin);
   obj[0] = obj;
@@ -142,7 +179,23 @@ export const renderChannelItem = function renderChannelItem(unread) {
   obj[1] = tmp10Result;
   children[1] = closure_8(View, obj);
   let tmp5Result = tmp5(16244);
-  const obj3 = { layout, name: null, subtitle: null, unread: null, resolvedUnreadSetting: null, muted: null, lastMessageTimestampString: null, channel: null, locked: null, connected: null, live: null, mentionCount: null, mentionBadge: null, isSubscriptionGated: null, needSubscriptionToAccess: null };
+  const obj3 = {
+    layout,
+    name: null,
+    subtitle: null,
+    unread: null,
+    resolvedUnreadSetting: null,
+    muted: null,
+    lastMessageTimestampString: null,
+    channel: null,
+    locked: null,
+    connected: null,
+    live: null,
+    mentionCount: null,
+    mentionBadge: null,
+    isSubscriptionGated: null,
+    needSubscriptionToAccess: null,
+  };
   if (channelName == null) {
     tmp5Result = tmp5(4674);
     channelName = tmp5Result.computeChannelName(channel, closure_6, closure_5);
@@ -170,5 +223,11 @@ export const renderChannelItem = function renderChannelItem(unread) {
     tmp10Result = tmp10(tmp11, obj4);
   }
   children[3] = tmp10Result;
-  return obj2.renderChannelWrapper(closure_10(closure_9, { children }), { channel, layout, launchpad, fontScale, panelVariant });
+  return obj2.renderChannelWrapper(closure_10(closure_9, { children }), {
+    channel,
+    layout,
+    launchpad,
+    fontScale,
+    panelVariant,
+  });
 };

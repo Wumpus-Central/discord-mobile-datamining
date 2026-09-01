@@ -15,12 +15,27 @@ let c4 = importAllResult;
 let obj = { container: null, iconLabelBlock: null, iconStyles: null, redText: null, blurb: null, errorText: null };
 obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
-createCacheKey = { marginTop: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_16, alignItems: "center" };
+createCacheKey = {
+  marginTop: ThemesDefault.space.PX_16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.lg,
+  paddingTop: ThemesDefault.space.PX_8,
+  paddingBottom: ThemesDefault.space.PX_16,
+  alignItems: "center",
+};
 obj[1] = createCacheKey;
 obj[2] = { height: 1.25 * ThemesDefault.space.PX_96 };
 let obj2 = { height: 1.25 * ThemesDefault.space.PX_96 };
-obj[3] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
-let obj3 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
+obj[3] = {
+  marginTop: ThemesDefault.space.PX_12,
+  marginBottom: ThemesDefault.space.PX_4,
+  color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL,
+};
+let obj3 = {
+  marginTop: ThemesDefault.space.PX_12,
+  marginBottom: ThemesDefault.space.PX_4,
+  color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL,
+};
 obj[4] = { marginVertical: ThemesDefault.space.PX_16 };
 let obj4 = { marginVertical: ThemesDefault.space.PX_16 };
 obj[5] = { marginBottom: ThemesDefault.space.PX_16 };
@@ -45,7 +60,10 @@ const memoResult = importAllResult.memo(function KickConfirm(arg0) {
   const items2 = [closure_9];
   stateFromStores1 = obj1.useStateFromStores(items2, () => closure_1_9.getUser(closure_1));
   closure_5 = stateFromStores1.useRef("");
-  [tmp11, c6] = stateFromStores(stateFromStores1.useState(() => ({ kicking: false, kickError: false })), 2);
+  [tmp11, c6] = stateFromStores(
+    stateFromStores1.useState(() => ({ kicking: false, kickError: false })),
+    2,
+  );
   const items3 = [stateFromStores, onKick, stateFromStores1];
   let tmp14Result = null;
   if (null != stateFromStores1) {
@@ -63,7 +81,7 @@ const memoResult = importAllResult.memo(function KickConfirm(arg0) {
       const obj2 = { style: null, source: null, resizeMode: "contain" };
       obj2[0] = tmp.iconStyles;
       obj2[1] = tmp4(tmp5[12]);
-      const items4 = [callback(closure_5, obj2), , ];
+      const items4 = [callback(closure_5, obj2), ,];
       const obj3 = { style: null, variant: "text-md/semibold", children: null };
       obj3[0] = tmp.redText;
       const intl = tmp7(tmp5[14]).intl;
@@ -76,7 +94,7 @@ const memoResult = importAllResult.memo(function KickConfirm(arg0) {
       obj5[2] = stateFromStores.name;
       items4[2] = callback(tmp7(tmp5[13]).Text, obj5);
       obj1[1] = items4;
-      const items5 = [callback2(c6, obj1), , , , ];
+      const items5 = [callback2(c6, obj1), , , ,];
       const obj6 = { style: null, variant: "heading-md/normal", color: "text-feedback-warning", children: null };
       obj6[0] = tmp.blurb;
       const intl2 = tmp7(tmp5[14]).intl;

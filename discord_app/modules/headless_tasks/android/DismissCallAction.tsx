@@ -17,7 +17,11 @@ export default (arg0) => {
         obj.track(closure_2_3.CALLKIT_CLICKED, obj);
         const obj3 = lib(closure_2_2[3]);
       }
-      obj = { location: closure_2_1(closure_2_2[4]).PUSH_NOTIFICATION, guild_id: tmp.guildId, ringer_user_id: tmp.userId };
+      obj = {
+        location: closure_2_1(closure_2_2[4]).PUSH_NOTIFICATION,
+        guild_id: tmp.guildId,
+        ringer_user_id: tmp.userId,
+      };
       const obj4 = closure_2_1(closure_2_2[2]);
       const merged1 = Object.assign(lib(closure_2_2[3]).collectChannelAnalyticsMetadataFromId(tmp.channelId));
       obj4.track(closure_2_3.RING_CALL_DECLINED, obj);

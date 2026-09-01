@@ -8,8 +8,7 @@ import closure_5 from "../../../../../stores/UserStore.tsx";
 
 require = arg1;
 const Store = initializeDefault.Store;
-class AppLauncherOnboardingStore extends Store {
-}
+class AppLauncherOnboardingStore extends Store {}
 const prototype = AppLauncherOnboardingStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_5);
@@ -65,8 +64,10 @@ const appLauncherOnboardingStore = new AppLauncherOnboardingStore(dispatcherDefa
         }
       }
     }
-  }
+  },
 });
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingStore.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingStore.tsx",
+);
 
 export default appLauncherOnboardingStore;

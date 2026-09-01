@@ -41,7 +41,7 @@ export default function FavoritesGuildActionSheet(onClose) {
     obj1[1] = tmp8(tmp5(5991).ActionSheetSwitchRow, obj2);
     tmp8Result = tmp8(tmp5(5991).ActionSheetRow.Group, obj1);
   }
-  const items1 = [tmp8Result, , ];
+  const items1 = [tmp8Result, ,];
   tmp8Result = null;
   if (obj.useFavoritesAccess("FavoritesGuildActionSheet").hasAccess) {
     tmp8Result = null;
@@ -78,7 +78,7 @@ export default function FavoritesGuildActionSheet(onClose) {
     onClose();
     lib.perform();
   };
-  const items2 = [callback(onClose(5991).ActionSheetRow, obj7), ];
+  const items2 = [callback(onClose(5991).ActionSheetRow, obj7)];
   let tmp8Result1 = null;
   if (tmp3.isAvailable) {
     const obj8 = { label: null, subLabel: null, icon: null, variant: "danger", onPress: null };
@@ -96,4 +96,4 @@ export default function FavoritesGuildActionSheet(onClose) {
   items1[2] = closure_5(onClose(5991).ActionSheetRow.Group, { hasIcons: true, children: items2 });
   obj[1] = items1;
   return closure_5(onClose(5989).ActionSheet, obj);
-};
+}

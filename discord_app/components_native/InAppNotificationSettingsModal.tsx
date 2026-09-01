@@ -27,7 +27,7 @@ function ConnectedInAppNotificationSettingsScreen(channel) {
         }
       }
       return isChannelMutedResult;
-    })
+    }),
   };
   return callback(InAppNotificationSettingsScreen, obj);
 }
@@ -109,7 +109,7 @@ prototype["renderChannelNotificationSettings"] = function renderChannelNotificat
 };
 prototype["render"] = function render() {
   let obj = { children: null };
-  const items = [this.renderChannelNotificationSettings(), , ];
+  const items = [this.renderChannelNotificationSettings(), ,];
   obj = { title: null, children: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.clE4PU);
@@ -150,7 +150,7 @@ const memoResult = importAllResult.memo((channelId) => {
       headerLeft: channelId(closure_1_2[16]).getHeaderCloseButton(onClose),
       render() {
         return closure_1_11(closure_1_14, { channel: closure_0 });
-      }
+      },
     };
     obj[0] = obj;
     return obj;

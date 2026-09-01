@@ -76,9 +76,10 @@ export function shouldShowPrimaryReminderNagbar() {
 export function useIsEligibleForPremiumGroupPurchase() {
   return false;
 }
-export const useCheckoutInstancePremiumGroupPurchaseEligibility = function useCheckoutInstancePremiumGroupPurchaseEligibility(arg0) {
-  return false;
-};
+export const useCheckoutInstancePremiumGroupPurchaseEligibility =
+  function useCheckoutInstancePremiumGroupPurchaseEligibility(arg0) {
+    return false;
+  };
 export function useIsEligibleForPremiumGroupMarketingMaterials() {
   return false;
 }

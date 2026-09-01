@@ -9,12 +9,43 @@ const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { gameIcon: { width: 32, height: 32 }, gameIconImage: null, gameIconMask: null, fireIcon: null };
-createCacheKey = { width: 32, height: 32, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_STRONG };
+createCacheKey = {
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.xs,
+  borderWidth: 1,
+  borderStyle: "solid",
+  borderColor: ThemesDefault.colors.BORDER_STRONG,
+};
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { position: "absolute", top: -4, right: -4, display: "flex", justifyContent: "center", alignItems: "center", padding: 2, width: 18, height: 18, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[2] = {
+  position: "absolute",
+  top: -4,
+  right: -4,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: 2,
+  width: 18,
+  height: 18,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[3] = { marginTop: -1, width: 14, height: 14 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { position: "absolute", top: -4, right: -4, display: "flex", justifyContent: "center", alignItems: "center", padding: 2, width: 18, height: 18, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.sm };
+let obj1 = {
+  position: "absolute",
+  top: -4,
+  right: -4,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: 2,
+  width: 18,
+  height: 18,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  borderRadius: ThemesDefault.radii.sm,
+};
 const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GameIcon.tsx");
 
 export default function GameIcon(arg0) {
@@ -51,7 +82,7 @@ export default function GameIcon(arg0) {
       obj = { style: null, source: null };
       obj[0] = fireIcon.gameIconImage;
       obj[1] = source;
-      callback = [, ];
+      callback = [,];
       callback[0] = callback(closure_5, obj);
       if (style) {
         source = closure_4;
@@ -77,7 +108,7 @@ export default function GameIcon(arg0) {
       const obj4 = { style: null, source: null };
       obj4[0] = fireIcon.gameIconImage;
       obj4[1] = source;
-      const items3 = [callback(closure_5, obj4), ];
+      const items3 = [callback(closure_5, obj4)];
       let tmp16Result = style;
       if (style) {
         const obj5 = { style: null, children: null };
@@ -94,5 +125,5 @@ export default function GameIcon(arg0) {
       const tmp14 = closure_7;
     }
   }
-};
+}
 export const useStyles = createCacheKey;

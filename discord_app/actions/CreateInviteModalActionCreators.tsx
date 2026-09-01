@@ -60,7 +60,17 @@ export default {
       }
       const obj4 = dispatcherDefault;
       const tmp7 = importDefault;
-      obj = { temporary: null, validate: null, max_age: null, max_uses: null, target_type: null, target_user_id: null, target_application_id: null, flags: null, role_ids: null };
+      obj = {
+        temporary: null,
+        validate: null,
+        max_age: null,
+        max_uses: null,
+        target_type: null,
+        target_user_id: null,
+        target_application_id: null,
+        flags: null,
+        role_ids: null,
+      };
       obj[0] = temporary;
       obj[1] = code;
       const _parseInt = parseInt;
@@ -73,22 +83,25 @@ export default {
       obj[7] = flags;
       obj[8] = roleIds;
       const invite1 = generateAcceptInviteOptionsDefault.createInvite(channelId, obj, arg0);
-      invite1.then(() => {
-        let obj = closure_1_1(closure_1_2[2]);
-        obj = { type: "CREATE_INVITE_MODAL_GENERATE_INVITE_SUCCESS", channelId };
-        obj.dispatch(obj);
-      }, (message) => {
-        const intl = channelId(1236).intl;
-        message = intl.string(channelId(1236).t.WB1ip6);
-        message = undefined;
-        if (message != null) {
-          message = message.message;
-        }
-        if (null != message) {
-          message = message.message;
-        }
-        callback(709).dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE", message });
-      });
+      invite1.then(
+        () => {
+          let obj = closure_1_1(closure_1_2[2]);
+          obj = { type: "CREATE_INVITE_MODAL_GENERATE_INVITE_SUCCESS", channelId };
+          obj.dispatch(obj);
+        },
+        (message) => {
+          const intl = channelId(1236).intl;
+          message = intl.string(channelId(1236).t.WB1ip6);
+          message = undefined;
+          if (message != null) {
+            message = message.message;
+          }
+          if (null != message) {
+            message = message.message;
+          }
+          callback(709).dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE", message });
+        },
+      );
       const tmp7Result = generateAcceptInviteOptionsDefault;
     }
   },
@@ -98,5 +111,5 @@ export default {
     if (onClose != null) {
       onClose();
     }
-  }
+  },
 };

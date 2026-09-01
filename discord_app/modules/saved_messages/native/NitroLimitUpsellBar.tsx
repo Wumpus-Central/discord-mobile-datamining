@@ -13,7 +13,16 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { container: null, icon: null, text: null };
-obj = { alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.md, flexDirection: "row", gap: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_16, marginHorizontal: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_12 };
+obj = {
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.md,
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_8,
+  marginBottom: ThemesDefault.space.PX_16,
+  marginHorizontal: ThemesDefault.space.PX_16,
+  padding: ThemesDefault.space.PX_12,
+};
 obj[0] = obj;
 obj[1] = { height: 20, width: 20 };
 obj[2] = { flex: 1 };
@@ -37,7 +46,7 @@ export default function NitroLimitUpsellBar(isAtLimit) {
     tmp4Result = tmp4(closure_3, obj);
     tmp9 = tmp4;
   }
-  const items = [tmp4Result, , ];
+  const items = [tmp4Result, ,];
   obj1 = { variant: "text-xs/medium", color: "text-default", style: tmp.text, children: null };
   const obj2 = { variant: "text-xs/bold", color: "text-brand", children: null };
   const intl = getSystemLocale.intl;
@@ -58,4 +67,4 @@ export default function NitroLimitUpsellBar(isAtLimit) {
   items[2] = tmp9(Button, obj3);
   obj[1] = items;
   return closure_6(closure_4, obj);
-};
+}

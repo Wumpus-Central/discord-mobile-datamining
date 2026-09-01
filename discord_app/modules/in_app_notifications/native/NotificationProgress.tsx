@@ -8,11 +8,17 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 createCacheKey = { progress: null, progressContainerBottom: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, height: 4 };
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  height: 4,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: "100%", position: "absolute", bottom: -1 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let closure_8 = { code: "function NotificationProgressTsx1(){const{percent,width}=this.__closure;const percentRemaining=(typeof percent==='number'?percent:percent.get())/100;return{transform:[{translateX:-width+width*percentRemaining}]};}" };
+let closure_8 = {
+  code: "function NotificationProgressTsx1(){const{percent,width}=this.__closure;const percentRemaining=(typeof percent==='number'?percent:percent.get())/100;return{transform:[{translateX:-width+width*percentRemaining}]};}",
+};
 const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/NotificationProgress.tsx");
 
 export default function NotificationProgress(percent) {
@@ -42,5 +48,9 @@ export default function NotificationProgress(percent) {
   const animatedStyle = obj.useAnimatedStyle(fn);
   const items = [tmp.progress, animatedStyle];
   obj[2] = jsx(first(4217).View, { style: items });
-  return <View onLayout={callback} style={tmp.progressContainerBottom}>{null}</View>;
-};
+  return (
+    <View onLayout={callback} style={tmp.progressContainerBottom}>
+      {null}
+    </View>
+  );
+}

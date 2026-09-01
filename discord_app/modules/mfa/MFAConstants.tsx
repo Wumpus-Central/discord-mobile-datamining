@@ -8,35 +8,35 @@ Object.defineProperty(obj, "webauthn", {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.gTH4Dp);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj, "totp", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.nXKmyf);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj, "sms", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.ZbVwZW);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj, "password", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t["8F6hKS"]);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj, "backup", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.vhSRKf);
   },
-  set: undefined
+  set: undefined,
 });
 const result = set.fileFinishedImporting("modules/mfa/MFAConstants.tsx");
 

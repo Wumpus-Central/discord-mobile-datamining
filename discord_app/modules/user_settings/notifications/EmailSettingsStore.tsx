@@ -9,8 +9,7 @@ function reset() {
 let closure_0 = {};
 let c1 = null;
 const Store = initializeDefault.Store;
-class EmailSettingsStore extends Store {
-}
+class EmailSettingsStore extends Store {}
 EmailSettingsStore.prototype["getEmailSettings"] = function getEmailSettings() {
   return { categories: closure_0, initialized: c1 };
 };
@@ -28,7 +27,7 @@ const emailSettingsStore = new EmailSettingsStore(dispatcherDefault, {
     const obj = {};
     const merged = Object.assign(obj);
     const merged1 = Object.assign(updates.updates);
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/notifications/EmailSettingsStore.tsx");
 

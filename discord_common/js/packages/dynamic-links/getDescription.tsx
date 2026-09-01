@@ -5,4 +5,4 @@ const result = set.fileFinishedImporting("../discord_common/js/packages/dynamic-
 
 export default function _default() {
   return "";
-};
+}

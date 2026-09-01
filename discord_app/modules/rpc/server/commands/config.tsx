@@ -26,7 +26,7 @@ export default {
         obj[0] = RPCErrors.INVALID_COMMAND;
         const _HermesInternal = HermesInternal;
         let tmp15 = prototypeDefault;
-        tmp15 = new tmp15(obj, "command not available from \"" + socket.transport + " transport");
+        tmp15 = new tmp15(obj, 'command not available from "' + socket.transport + " transport");
         throw tmp15;
       } else if (null == socket.application.id) {
         obj = { errorCode: null };
@@ -45,6 +45,6 @@ export default {
         obj3[0] = use_interactive_pip;
         return Promise.resolve(obj3);
       }
-    }
-  }
+    },
+  },
 };

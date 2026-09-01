@@ -11,7 +11,17 @@ class WindowProxySocket extends tmp2 {
   constructor(arg0) {
     ({ postMessageToRPCClient, encoding, logger } = global);
     ({ postClose, onSendingToRPCClient } = global);
-    tmp3 = new WindowProxySocket(global.source, global.version, encoding, tmp2, tmp, new.target, new.target, postMessageToRPCClient, logger);
+    tmp3 = new WindowProxySocket(
+      global.source,
+      global.version,
+      encoding,
+      tmp2,
+      tmp,
+      new.target,
+      new.target,
+      postMessageToRPCClient,
+      logger,
+    );
     // ThrowIfThisInitialized (0x7c)
     items = ["etf", "json"];
     if (-1 === items.indexOf(encoding)) {

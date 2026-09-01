@@ -10,7 +10,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { error: null };
-createCacheKey = { paddingVertical: ThemesDefault.space.PX_24, alignItems: "center", rowGap: ThemesDefault.space.PX_12 };
+createCacheKey = {
+  paddingVertical: ThemesDefault.space.PX_24,
+  alignItems: "center",
+  rowGap: ThemesDefault.space.PX_12,
+};
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/guild_settings/native/ServerTagPreviewActionSheet.tsx");
@@ -25,7 +29,16 @@ export default function ServerTagPreviewActionSheet(guildId) {
     const guildProfile = guildId(closure_1_2[7]).getGuildProfile(guildId, false, { respectBackoff: true });
   }, items);
   if (null != guildProfile) {
-    obj = { guildId: null, tag: null, badge: null, primaryColor: null, secondaryColor: null, isDirty: false, variant: "plain", onAdopted: null };
+    obj = {
+      guildId: null,
+      tag: null,
+      badge: null,
+      primaryColor: null,
+      secondaryColor: null,
+      isDirty: false,
+      variant: "plain",
+      onAdopted: null,
+    };
     obj[0] = guildId;
     ({ tag: obj5[1], badge: obj5[2], badgeColorPrimary: obj5[3], badgeColorSecondary: obj5[4] } = guildProfile);
     obj[7] = function onAdopted(arg0) {
@@ -39,7 +52,7 @@ export default function ServerTagPreviewActionSheet(guildId) {
     obj1 = { variant: "text-md/medium", color: "text-muted", children: null };
     const intl = tmp2(1236).intl;
     obj1[2] = intl.string(tmp2(1236).t.tmGHjc);
-    const items1 = [callback(tmp2(4474).Text, obj1), ];
+    const items1 = [callback(tmp2(4474).Text, obj1)];
     const obj2 = { variant: "secondary", text: null, onPress: null };
     const intl2 = tmp2(1236).intl;
     obj2[1] = intl2.string(tmp2(1236).t["5911Lb"]);
@@ -61,4 +74,4 @@ export default function ServerTagPreviewActionSheet(guildId) {
   const items2 = [tmp8(guildId(5621).BottomSheetTitleHeader, obj4), tmp7];
   obj3[0] = items2;
   return callback2(guildId(5989).ActionSheet, obj3);
-};
+}

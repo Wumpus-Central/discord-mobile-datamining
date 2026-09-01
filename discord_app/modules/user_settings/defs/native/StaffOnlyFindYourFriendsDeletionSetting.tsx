@@ -9,11 +9,13 @@ import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx"
 require = arg1;
 function setFindYourFriendsDeletionIsLoading(arg0) {
   const _require = arg0;
-  require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_6.setState({ isLoading: closure_0 }));
+  require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
+    closure_1_6.setState({ isLoading: closure_0 }),
+  );
 }
 function _onFindYourFriendsDeletionPress() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -43,9 +45,11 @@ function _onFindYourFriendsDeletionPress() {
             let callback2 = tmp4;
             let callback = tmp8;
             callback = undefined;
-            if ((function getFindYourFriendsDeletionIsLoading() {
-              return state.getState().isLoading;
-            })()) {
+            if (
+              (function getFindYourFriendsDeletionIsLoading() {
+                return state.getState().isLoading;
+              })()
+            ) {
               c5 = 3;
             } else {
               closure_1_7(true);
@@ -136,9 +140,11 @@ identity = {
       tmp = <ActivityIndicator />;
     }
     return tmp;
-  }
+  },
 };
 identity = createToggle.createPressable(identity);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx",
+);
 
 export default identity;

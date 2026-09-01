@@ -31,7 +31,7 @@ export default function WishlistViewMoreCard(recipientName) {
   let obj = { onPress, accessibilityLabel: null, children: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.formatToPlainString(getSystemLocale.t["8uYD+I"], { username: recipientName });
-  const items = [callback(WishlistItemCardDefault, { accessibilityHidden: true, sku, size, recipientName }), ];
+  const items = [callback(WishlistItemCardDefault, { accessibilityHidden: true, sku, size, recipientName })];
   obj = { style: callback3().moreOverlay, children: null };
   obj = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
   const intl2 = getSystemLocale.intl;
@@ -40,4 +40,4 @@ export default function WishlistViewMoreCard(recipientName) {
   items[1] = callback(closure_5, obj);
   obj[2] = items;
   return callback2(closure_3, obj);
-};
+}

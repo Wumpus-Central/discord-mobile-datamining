@@ -19,5 +19,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "HIDE_NATIVE_MENU", key };
     obj.dispatch(obj);
-  }
+  },
 };

@@ -19,7 +19,13 @@ createCacheKey[3] = { backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_260 
 const obj3 = { backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_260 };
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.CONTROL_EXPRESSIVE_BACKGROUND_DEFAULT };
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const obj5 = { text: { textAlign: "center", textTransform: "uppercase" }, dangerText: null, infoText: null, brandText: null, expressiveText: null };
+const obj5 = {
+  text: { textAlign: "center", textTransform: "uppercase" },
+  dangerText: null,
+  infoText: null,
+  brandText: null,
+  expressiveText: null,
+};
 const obj4 = { backgroundColor: ThemesDefault.colors.CONTROL_EXPRESSIVE_BACKGROUND_DEFAULT };
 obj5[1] = { color: ThemesDefault.colors.WHITE };
 createCacheKey = { color: ThemesDefault.colors.WHITE };

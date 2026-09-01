@@ -150,4 +150,4 @@ export default function useFastestListComputedStyles(style) {
     const error1 = new Error("FastestList: marginStart and marginEnd must be numbers.");
     throw error1;
   }, items);
-};
+}

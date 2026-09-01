@@ -16,7 +16,13 @@ const require = arg1;
 ({ updateRegistrationOptions: error, useRegistrationUIStore: closure_8 } = useRegistrationUIStore);
 ({ RegisterTransitionSteps: c9, RegistrationTransitionActionTypes: c10 } = RegistrationTransitionActionTypes);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { inputGroup: { marginTop: 24, marginBottom: 24 }, flexGrow: { flexGrow: 1 }, button: { flexGrow: 0, marginBottom: 4, marginTop: 16, flexDirection: "column" }, datePickerButton: null, page: null };
+createCacheKey = {
+  inputGroup: { marginTop: 24, marginBottom: 24 },
+  flexGrow: { flexGrow: 1 },
+  button: { flexGrow: 0, marginBottom: 4, marginTop: 16, flexDirection: "column" },
+  datePickerButton: null,
+  page: null,
+};
 createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { flex: 1 };
@@ -66,7 +72,9 @@ export default function RegisterAgeGate() {
   let obj4Result = obj3((submitting) => submitting.submitting);
   let tmp2Result = tmp2(tmp3[15]);
   const items1 = [closure_6];
-  const stateFromStores = tmp2Result.useStateFromStores(items1, () => authenticationConsentRequired.getAuthenticationConsentRequired());
+  const stateFromStores = tmp2Result.useStateFromStores(items1, () =>
+    authenticationConsentRequired.getAuthenticationConsentRequired(),
+  );
   obj4Result = obj3((errors) => errors.errors);
   let message = context(tmp3[16])("consent", obj4Result);
   if (message == null) {
@@ -110,7 +118,7 @@ export default function RegisterAgeGate() {
       return authenticationConsentRequired(true);
     },
     accessibilityLabel: null,
-    accessibilityHint: null
+    accessibilityHint: null,
   };
   const intl4 = tmp2(tmp3[21]).intl;
   obj3[3] = intl4.string(_require(first[21]).t.xNpFJ6);
@@ -118,13 +126,13 @@ export default function RegisterAgeGate() {
   obj3[4] = intl5.string(_require(first[21]).t["hZaF/O"]);
   obj2[2] = closure_12(_require(first[23]).InputButton, obj3);
   obj1[1] = closure_12(_require(first[22]).Input, obj2);
-  const items3 = [closure_12(closure_5, obj1), , , ];
+  const items3 = [closure_12(closure_5, obj1), , ,];
   const obj4 = {
     consentRequired: Boolean(stateFromStores),
     consent: first1,
     onToggleConsent() {
       return callback3((arg0) => !arg0);
-    }
+    },
   };
   items3[1] = closure_12(context(first[24]), obj4);
   const obj5 = { style: tmp.button, children: null };
@@ -145,7 +153,7 @@ export default function RegisterAgeGate() {
       context(obj);
       const result = callback(first[18]).handleRegistrationSubmit(closure_1_11.AGE_GATE, callback, context);
     },
-    text: null
+    text: null,
   };
   const intl6 = tmp2(tmp3[21]).intl;
   obj6[4] = intl6.string(_require(first[21]).t["825cFy"]);
@@ -163,8 +171,21 @@ export default function RegisterAgeGate() {
   items3[3] = tmp26Result;
   obj[2] = items3;
   obj[1] = closure_13(tmp18Result, obj);
-  const items4 = [closure_12(closure_5, obj), ];
-  const obj8 = { modal: true, open: tmp14, title: null, mode: "date", theme: null, date: null, maximumDate: null, minimumDate: null, onConfirm: null, onDateChange: null, onCancel: null, buttonColor: null };
+  const items4 = [closure_12(closure_5, obj)];
+  const obj8 = {
+    modal: true,
+    open: tmp14,
+    title: null,
+    mode: "date",
+    theme: null,
+    date: null,
+    maximumDate: null,
+    minimumDate: null,
+    onConfirm: null,
+    onDateChange: null,
+    onCancel: null,
+    buttonColor: null,
+  };
   const tmp18Result1 = context(first[24]);
   const tmp23 = !tmp22;
   const tmp25 = closure_14;
@@ -199,4 +220,4 @@ export default function RegisterAgeGate() {
   items4[1] = closure_12(tmp18Result2, obj8);
   obj9[0] = items4;
   return closure_13(tmp25, obj9);
-};
+}

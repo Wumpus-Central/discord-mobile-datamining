@@ -16,7 +16,7 @@ function ProgressBar(percent) {
   const tmp = callback3();
   let obj = { style: tmp.progressBackground, children: null };
   obj = { style: null, colors: null, useAngle: true, angle: -90 };
-  const items = [tmp.progressForeground, ];
+  const items = [tmp.progressForeground];
   obj = { width: "" + percent.percent + "%" };
   items[1] = obj;
   obj[0] = items;
@@ -25,13 +25,34 @@ function ProgressBar(percent) {
   return callback(View, obj);
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { container: { padding: 16 }, horizontal: { flexDirection: "row", alignItems: "center" }, spaceBetween: { justifyContent: "space-between" }, spaceBelow: { marginBottom: 8 }, progressBackground: null, progressForeground: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.round, height: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
+createCacheKey = {
+  container: { padding: 16 },
+  horizontal: { flexDirection: "row", alignItems: "center" },
+  spaceBetween: { justifyContent: "space-between" },
+  spaceBelow: { marginBottom: 8 },
+  progressBackground: null,
+  progressForeground: null,
+};
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.round,
+  height: 8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+};
 createCacheKey[4] = createCacheKey;
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND, borderRadius: ThemesDefault.radii.round, height: 8 };
+createCacheKey[5] = {
+  backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND,
+  borderRadius: ThemesDefault.radii.round,
+  height: 8,
+};
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND, borderRadius: ThemesDefault.radii.round, height: 8 };
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx");
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND,
+  borderRadius: ThemesDefault.radii.round,
+  height: 8,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx",
+);
 
 export const NewMemberActionsProgress = function NewMemberActionsProgress(guildId) {
   guildId = guildId.guildId;
@@ -89,18 +110,22 @@ export const NewMemberActionsProgress = function NewMemberActionsProgress(guildI
           guildId(stateFromStores1[14]).transitionTo(constants.GUILD_HOME);
         };
         obj = { style: null, children: null };
-        const items5 = [, , ];
+        const items5 = [, ,];
         ({ horizontal: arr7[0], spaceBetween: arr7[1], spaceBelow: arr7[2] } = tmp);
         obj[0] = items5;
         obj1 = { variant: "text-xs/bold", color: "mobile-text-heading-primary", children: null };
         const intl = tmp2(tmp3[16]).intl;
         obj1[2] = intl.string(tmp2(tmp3[16]).t.LhlgY9);
-        const items6 = [callback(tmp2(tmp3[15]).Text, obj1), ];
+        const items6 = [callback(tmp2(tmp3[15]).Text, obj1)];
         obj2 = { style: null, children: null };
         obj2[0] = tmp.horizontal;
         const obj3 = { variant: "text-xs/bold", color: "mobile-text-heading-primary", children: null };
         obj3[2] = memo;
-        const items7 = [callback(tmp2(tmp3[15]).Text, obj3), callback(tmp2(tmp3[15]).Text, { variant: "text-xs/medium", color: "text-default", children: "/" }), , ];
+        const items7 = [
+          callback(tmp2(tmp3[15]).Text, obj3),
+          callback(tmp2(tmp3[15]).Text, { variant: "text-xs/medium", color: "text-default", children: "/" }),
+          ,
+        ];
         const obj4 = { variant: "text-xs/bold", color: "mobile-text-heading-primary", children: null };
         obj4[2] = num;
         items7[2] = callback(tmp2(tmp3[15]).Text, obj4);
@@ -111,9 +136,9 @@ export const NewMemberActionsProgress = function NewMemberActionsProgress(guildI
         obj2[1] = items7;
         items6[1] = callback2(View, obj2);
         obj[1] = items6;
-        const items8 = [callback2(View, obj), ];
+        const items8 = [callback2(View, obj)];
         const obj6 = { percent: null };
-        obj6[0] = memo / num * 100 + 3;
+        obj6[0] = (memo / num) * 100 + 3;
         items8[1] = callback(ProgressBar, obj6);
         obj[4] = items8;
         tmp7 = callback2(tmp2(tmp3[13]).PressableOpacity, obj);

@@ -10,7 +10,15 @@ const result = require("set").fileFinishedImporting("modules/collectibles/native
 export default function FeaturedFirstCardCoachmarkAnchor(children) {
   const ref = React.useRef(null);
   const obj = { collapsable: false, children: null };
-  const items = [callback(View, { ref, style: { position: "absolute", top: 0, right: 6, width: 32, height: 32 }, collapsable: false }), children.children, callback(WishlistButtonCoachmarkDefault, { anchorRef: ref })];
+  const items = [
+    callback(View, {
+      ref,
+      style: { position: "absolute", top: 0, right: 6, width: 32, height: 32 },
+      collapsable: false,
+    }),
+    children.children,
+    callback(WishlistButtonCoachmarkDefault, { anchorRef: ref }),
+  ];
   obj[1] = items;
   return callback2(View, obj);
-};
+}

@@ -21,16 +21,18 @@ createToggle = {
     return intl.string(getSystemLocale.t["Vw/Xn8"]);
   },
   usePredicate: useHighlightNotifications,
-  screen: createToggle
+  screen: createToggle,
 };
 createToggle = {
   route: require("ME").UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
   getComponent() {
     return Row /* Row */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/HighlightNotificationsSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/HighlightNotificationsSetting.tsx",
+);
 
 export default createToggle;
 export { useHighlightNotifications };

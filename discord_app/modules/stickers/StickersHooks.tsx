@@ -29,30 +29,37 @@ function useStickerPackCategories(channel) {
   let tmpResult = tmp(tmp2[10]);
   let items = [closure_11];
   const items1 = [stickerIds];
-  const stateFromStoresArray = tmpResult.useStateFromStoresArray(items, () => {
-    const mapped = channel.map((arg0) => stickerById.getStickerById(arg0));
-    return mapped.filter((body) => {
-      let tmp = null != body;
-      if (tmp) {
-        const isGuildStickerResult = callback(table[13]).isGuildSticker(body);
-        let result = !isGuildStickerResult;
-        if (isGuildStickerResult) {
-          result = tmp2(tmp3[13]).isAvailableGuildSticker(body);
-          const tmp2Result = tmp2(tmp3[13]);
+  const stateFromStoresArray = tmpResult.useStateFromStoresArray(
+    items,
+    () => {
+      const mapped = channel.map((arg0) => stickerById.getStickerById(arg0));
+      return mapped.filter((body) => {
+        let tmp = null != body;
+        if (tmp) {
+          const isGuildStickerResult = callback(table[13]).isGuildSticker(body);
+          let result = !isGuildStickerResult;
+          if (isGuildStickerResult) {
+            result = tmp2(tmp3[13]).isAvailableGuildSticker(body);
+            const tmp2Result = tmp2(tmp3[13]);
+          }
+          tmp = result;
+          const obj = callback(table[13]);
+          tmp2 = callback;
+          tmp3 = table;
         }
-        tmp = result;
-        const obj = callback(table[13]);
-        tmp2 = callback;
-        tmp3 = table;
-      }
-      return tmp;
-    });
-  }, items1);
+        return tmp;
+      });
+    },
+    items1,
+  );
   let stateFromStores1 = stateFromStoresArray;
   tmpResult = tmp(tmp2[10]);
   const items2 = [closure_11, closure_10];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items2, () => {
-    obj = { packs: store.getPremiumPacks(), frequentlyUsedStickers: obj.stickerFrecencyWithoutFetchingLatest.frequently };
+    obj = {
+      packs: store.getPremiumPacks(),
+      frequentlyUsedStickers: obj.stickerFrecencyWithoutFetchingLatest.frequently,
+    };
     return obj;
   }, []);
   const packs = stateFromStoresObject.packs;
@@ -61,7 +68,9 @@ function useStickerPackCategories(channel) {
   let stateFromStores2 = frequentlyUsedStickers;
   let obj = _require(stateFromStoresArray1[19]);
   const items3 = [closure_9];
-  const stateFromStores = _require(stateFromStoresArray1[10]).useStateFromStores(items3, () => authStore.getCurrentUser());
+  const stateFromStores = _require(stateFromStoresArray1[10]).useStateFromStores(items3, () =>
+    authStore.getCurrentUser(),
+  );
   _require = channel;
   stateFromStores1 = undefined;
   stateFromStoresArray1 = undefined;
@@ -132,7 +141,8 @@ function useStickerPackCategories(channel) {
           obj[3] = [];
           arr1 = items.unshift(obj);
         }
-        tmp15 = -1 === findIndexResult && null != guild && obj6.getManageResourcePermissions(guild).canManageAllExpressions;
+        tmp15 =
+          -1 === findIndexResult && null != guild && obj6.getManageResourcePermissions(guild).canManageAllExpressions;
       }
       if (null != stateFromStores2) {
         obj = { permission: null, user: null, context: null };
@@ -149,12 +159,22 @@ function useStickerPackCategories(channel) {
   const items8 = [packs, stateFromStoresArray, frequentlyUsedStickers, memo, stateFromStores, channel];
   return memo.useMemo(() => {
     const mapped = stateFromStoresArray1.map(channel(stateFromStoresArray1[13]).createStickerPackCategory);
-    let obj = { type: channel(stateFromStoresArray1[15]).StickerCategoryTypes.FAVORITE, id: channel(stateFromStoresArray1[15]).StickerCategoryTypes.FAVORITE, name: null, stickers: null };
+    let obj = {
+      type: channel(stateFromStoresArray1[15]).StickerCategoryTypes.FAVORITE,
+      id: channel(stateFromStoresArray1[15]).StickerCategoryTypes.FAVORITE,
+      name: null,
+      stickers: null,
+    };
     const intl = channel(stateFromStoresArray1[17]).intl;
     obj[2] = intl.string(channel(stateFromStoresArray1[17]).t.y3LQCG);
     obj[3] = stateFromStores1;
-    const items = [obj, ];
-    obj = { type: channel(stateFromStoresArray1[15]).StickerCategoryTypes.RECENT, id: channel(stateFromStoresArray1[15]).StickerCategoryTypes.RECENT, name: null, stickers: null };
+    const items = [obj];
+    obj = {
+      type: channel(stateFromStoresArray1[15]).StickerCategoryTypes.RECENT,
+      id: channel(stateFromStoresArray1[15]).StickerCategoryTypes.RECENT,
+      name: null,
+      stickers: null,
+    };
     const intl2 = channel(stateFromStoresArray1[17]).intl;
     obj[2] = intl2.string(channel(stateFromStoresArray1[17]).t["6hjpXW"]);
     let found;
@@ -203,7 +223,10 @@ export const useFetchStickerPack = function useFetchStickerPack(pack_id) {
     const stickerPacks = pack_id(table[11]).fetchStickerPacks();
   }, []);
   const items = [closure_11];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => obj.hasLoadedStickerPacks);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => obj.hasLoadedStickerPacks,
+  );
   const items1 = [pack_id, stateFromStores];
   const effect1 = React.useEffect(() => {
     let tmp = stateFromStores;
@@ -263,7 +286,9 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         let tmpResult = tmp(tmp2[14]);
         const guildId = closure_2_7.getGuildId();
         let canCreateExpressions = null != guild;
-        const findIndexResult = c6.findIndex((type) => type.type === SEARCH_RESULTS(5212).StickerCategoryTypes.FAVORITE);
+        const findIndexResult = c6.findIndex(
+          (type) => type.type === SEARCH_RESULTS(5212).StickerCategoryTypes.FAVORITE,
+        );
         if (canCreateExpressions) {
           canCreateExpressions = guildId === guild.id;
         }
@@ -289,7 +314,16 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
           let result = num2 * closure_0;
           let substr = sendable.slice(result, result + closure_0);
           let mapped = substr.map((pack_id) => {
-            const obj = { type: collapsedStickersCategories(num[15]).StickerGridItemTypes.STICKER, sticker: pack_id, packId: null, gridSectionIndex: null, rowIndex: null, columnIndex: null, visibleRowIndex: null, category: null };
+            const obj = {
+              type: collapsedStickersCategories(num[15]).StickerGridItemTypes.STICKER,
+              sticker: pack_id,
+              packId: null,
+              gridSectionIndex: null,
+              rowIndex: null,
+              columnIndex: null,
+              visibleRowIndex: null,
+              category: null,
+            };
             let str = "TODO - fix";
             if (obj2.isStandardSticker(pack_id)) {
               str = pack_id.pack_id;
@@ -316,7 +350,15 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
             tmp15 = sum > sendable.length;
           }
           if (tmp15) {
-            obj = { type: null, guild_id: null, name: null, gridSectionIndex: null, rowIndex: null, columnIndex: null, visibleRowIndex: null };
+            obj = {
+              type: null,
+              guild_id: null,
+              name: null,
+              gridSectionIndex: null,
+              rowIndex: null,
+              columnIndex: null,
+              visibleRowIndex: null,
+            };
             let tmp18 = collapsedStickersCategories;
             let tmp19 = num;
             obj[0] = collapsedStickersCategories(num[15]).StickerGridItemTypes.CREATE_STICKER;
@@ -381,11 +423,20 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
           addGridSection(tmp22.sendable, collapsedStickersCategories(num[15]).StickerCategoryTypes.SEARCH_RESULTS);
         }
         if (tmp22.sendableWithPremium.length > 0) {
-          addGridSection(tmp22.sendableWithPremium, collapsedStickersCategories(num[15]).StickerCategoryTypes.SEARCH_RESULTS);
+          addGridSection(
+            tmp22.sendableWithPremium,
+            collapsedStickersCategories(num[15]).StickerCategoryTypes.SEARCH_RESULTS,
+          );
         }
       }
     }
-    obj = { rowCount: closure_4, rowCountBySection: items1, stickersGrid: items2, gutterWidth: rounded1, columnCounts: items };
+    obj = {
+      rowCount: closure_4,
+      rowCountBySection: items1,
+      stickersGrid: items2,
+      gutterWidth: rounded1,
+      columnCounts: items,
+    };
     return obj;
   }, items);
 };
@@ -421,25 +472,29 @@ export const useFavoriteStickers = function useFavoriteStickers() {
   const tmp = stickerIds;
   const items = [closure_11];
   const items1 = [stickerIds];
-  return stickerIds(589).useStateFromStoresArray(items, () => {
-    const mapped = channel.map((arg0) => stickerById.getStickerById(arg0));
-    return mapped.filter((body) => {
-      let tmp = null != body;
-      if (tmp) {
-        const isGuildStickerResult = callback(table[13]).isGuildSticker(body);
-        let result = !isGuildStickerResult;
-        if (isGuildStickerResult) {
-          result = tmp2(tmp3[13]).isAvailableGuildSticker(body);
-          const tmp2Result = tmp2(tmp3[13]);
+  return stickerIds(589).useStateFromStoresArray(
+    items,
+    () => {
+      const mapped = channel.map((arg0) => stickerById.getStickerById(arg0));
+      return mapped.filter((body) => {
+        let tmp = null != body;
+        if (tmp) {
+          const isGuildStickerResult = callback(table[13]).isGuildSticker(body);
+          let result = !isGuildStickerResult;
+          if (isGuildStickerResult) {
+            result = tmp2(tmp3[13]).isAvailableGuildSticker(body);
+            const tmp2Result = tmp2(tmp3[13]);
+          }
+          tmp = result;
+          const obj = callback(table[13]);
+          tmp2 = callback;
+          tmp3 = table;
         }
-        tmp = result;
-        const obj = callback(table[13]);
-        tmp2 = callback;
-        tmp3 = table;
-      }
-      return tmp;
-    });
-  }, items1);
+        return tmp;
+      });
+    },
+    items1,
+  );
 };
 export const useLatestFrecentStickerIds = function useLatestFrecentStickerIds() {
   const frecencySettings = useFrecencySettings.useFrecencySettings();
@@ -487,10 +542,14 @@ export const useLatestFrecentStickers = function useLatestFrecentStickers() {
   const tmp = keys;
   const items = [closure_11];
   const items1 = [keys];
-  return keys(589).useStateFromStoresArray(items, () => {
-    const mapped = keys.map((arg0) => stickerById.getStickerById(arg0));
-    return mapped.filter((arg0) => undefined !== arg0);
-  }, items1);
+  return keys(589).useStateFromStoresArray(
+    items,
+    () => {
+      const mapped = keys.map((arg0) => stickerById.getStickerById(arg0));
+      return mapped.filter((arg0) => undefined !== arg0);
+    },
+    items1,
+  );
 };
 export { useStickerPackCategories };
 export const useStickerForRenderableSticker = function useStickerForRenderableSticker(renderableSticker, arg1) {
@@ -516,14 +575,20 @@ export const useStickerForRenderableSticker = function useStickerForRenderableSt
     isGuildStickerResult = tmp(4852).isStandardSticker(renderableSticker);
     const tmpResult = tmp(4852);
   }
-  obj = { hasFetched: tmp6, isReturnable: isGuildStickerResult, renderableSticker, shouldFetch: tmp4[0], stickersStoreDefinition: stateFromStores };
+  obj = {
+    hasFetched: tmp6,
+    isReturnable: isGuildStickerResult,
+    renderableSticker,
+    shouldFetch: tmp4[0],
+    stickersStoreDefinition: stateFromStores,
+  };
   React = obj2.useRef(obj);
   const effect = obj2.useEffect(() => {
     closure_5.current = obj;
   });
   const items1 = [flag];
   const effect1 = obj2.useEffect(() => {
-    _undefined(function*() {
+    _undefined(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -616,11 +681,15 @@ export const useFilteredStickerPackCategories = function useFilteredStickerPackC
   let tmp = useStickerPackCategories(channel);
   closure_0 = tmp;
   const items = [tmp];
-  return React.useMemo(() => closure_0.filter((type) => {
-    let tmp = type.type === callback(table[15]).StickerCategoryTypes.EMPTY_GUILD_UPSELL;
-    if (!tmp) {
-      tmp = type.stickers.length > 0;
-    }
-    return tmp;
-  }, []), items);
+  return React.useMemo(
+    () =>
+      closure_0.filter((type) => {
+        let tmp = type.type === callback(table[15]).StickerCategoryTypes.EMPTY_GUILD_UPSELL;
+        if (!tmp) {
+          tmp = type.stickers.length > 0;
+        }
+        return tmp;
+      }, []),
+    items,
+  );
 };

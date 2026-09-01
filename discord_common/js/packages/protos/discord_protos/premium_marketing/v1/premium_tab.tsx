@@ -7,7 +7,7 @@ import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 require = arg1;
 class PremiumTab$Type extends MessageType {
   constructor() {
-    items = [, , , , , ];
+    items = [, , , , ,];
     items[0] = { no: 1, name: "badge_label", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "acknowledged_badge_label", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "show_hover_gradient", kind: "scalar", T: 8 };
@@ -25,8 +25,8 @@ class PremiumTab$Type extends MessageType {
       name: "acknowledged_badge_label_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
-          }
+        return callback(8453).LocalizedString;
+      },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.PremiumTab", items, T);
     // ThrowIfThisInitialized (0x7c)
@@ -72,7 +72,12 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         let tmp29 = LocalizedString2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
-        obj.badgeLabelLocalized = LocalizedString2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.badgeLabelLocalized);
+        obj.badgeLabelLocalized = LocalizedString2.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.badgeLabelLocalized,
+        );
       } else if (6 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
@@ -80,7 +85,12 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         let tmp24 = LocalizedString;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
-        obj.acknowledgedBadgeLabelLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.acknowledgedBadgeLabelLocalized);
+        obj.acknowledgedBadgeLabelLocalized = LocalizedString.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.acknowledgedBadgeLabelLocalized,
+        );
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -137,14 +147,30 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(badgeLabel, tag,
   if (badgeLabel.badgeLabelLocalized) {
     const LocalizedString = create.LocalizedString;
     const tagResult4 = tag.tag(5, _mod1307.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(badgeLabel.badgeLabelLocalized, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(badgeLabel.badgeLabelLocalized, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = LocalizedString.internalBinaryWrite(
+      badgeLabel.badgeLabelLocalized,
+      tag.tag(5, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(
+      badgeLabel.badgeLabelLocalized,
+      tag.tag(5, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (badgeLabel.acknowledgedBadgeLabelLocalized) {
     const LocalizedString2 = create.LocalizedString;
     const tagResult5 = tag.tag(6, _mod1307.WireType.LengthDelimited);
-    const joined1 = LocalizedString2.internalBinaryWrite(badgeLabel.acknowledgedBadgeLabelLocalized, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(badgeLabel.acknowledgedBadgeLabelLocalized, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = LocalizedString2.internalBinaryWrite(
+      badgeLabel.acknowledgedBadgeLabelLocalized,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(
+      badgeLabel.acknowledgedBadgeLabelLocalized,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -156,7 +182,13 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(badgeLabel, tag,
   }
   return tag;
 };
-let items = [{ no: 1, name: "badge_label", kind: "scalar", T: 9 }, { no: 2, name: "acknowledged_badge_label", kind: "scalar", T: 9 }, { no: 3, name: "show_hover_gradient", kind: "scalar", T: 8 }, { no: 4, name: "deeplink_section", kind: "scalar", T: 9 }, , ];
+let items = [
+  { no: 1, name: "badge_label", kind: "scalar", T: 9 },
+  { no: 2, name: "acknowledged_badge_label", kind: "scalar", T: 9 },
+  { no: 3, name: "show_hover_gradient", kind: "scalar", T: 8 },
+  { no: 4, name: "deeplink_section", kind: "scalar", T: 9 },
+  ,
+];
 let obj = { no: 5, name: "badge_label_localized", kind: "message", T: null };
 class T {
   constructor() {
@@ -171,10 +203,20 @@ items[5] = {
   kind: "message",
   T() {
     return callback(8453).LocalizedString;
-  }
+  },
 };
-prototype = new prototype("discord_protos.premium_marketing.v1.PremiumTab", items, tmp, T, PremiumTab$Type, prototype, items);
+prototype = new prototype(
+  "discord_protos.premium_marketing.v1.PremiumTab",
+  items,
+  tmp,
+  T,
+  PremiumTab$Type,
+  prototype,
+  items,
+);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_tab.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_tab.tsx",
+);
 
 export const PremiumTab = prototype;

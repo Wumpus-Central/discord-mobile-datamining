@@ -6,4 +6,4 @@ const result = require("set").fileFinishedImporting("modules/rpc/helpers/getCurr
 
 export default function getCurrentEmbeddedActivityChannel() {
   return channel.getChannel(connectedActivityChannelId.getConnectedActivityChannelId());
-};
+}

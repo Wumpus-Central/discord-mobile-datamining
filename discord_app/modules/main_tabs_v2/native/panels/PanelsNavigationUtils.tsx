@@ -95,7 +95,7 @@ export const convertLandscapeToPortraitScreens = function convertLandscapeToPort
               obj = {};
               const merged = Object.assign(state2);
               obj.index = state2.index + 1;
-              const items = [state2.routes[0], ];
+              const items = [state2.routes[0]];
               const params3 = coerceGuildsRouteResult.params;
               let channelId;
               if (params3 != null) {

@@ -15,13 +15,16 @@ function BackdropCard(arg0) {
   ({ buttonLabel, title, description } = arg0);
   let obj = { children: null };
   obj = { spacing: 12, children: null };
-  const items = [callback2(Text.Text, { variant: "heading-lg/bold", children: title }), callback2(Text.Text, { variant: "text-md/normal", color: "text-subtle", children: description }), ];
+  const items = [
+    callback2(Text.Text, { variant: "heading-lg/bold", children: title }),
+    callback2(Text.Text, { variant: "text-md/normal", color: "text-subtle", children: description }),
+  ];
   obj = {
     text: buttonLabel,
     onPress() {
       callback2(closure_0);
       callback(true);
-    }
+    },
   };
   items[2] = callback2(Button.Button, obj);
   obj[1] = items;
@@ -38,8 +41,12 @@ createCacheKey.justifyContent = "center";
 createCacheKey.padding = 16;
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let closure_10 = { code: "function UserSettingsDesignSystemBackdropTsx1(){const{withSpring,showBackdrop,SUBTLE_SPRING}=this.__closure;return{opacity:withSpring(showBackdrop?1:0,SUBTLE_SPRING,'animate-always')};}" };
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemBackdrop.tsx");
+let closure_10 = {
+  code: "function UserSettingsDesignSystemBackdropTsx1(){const{withSpring,showBackdrop,SUBTLE_SPRING}=this.__closure;return{opacity:withSpring(showBackdrop?1:0,SUBTLE_SPRING,'animate-always')};}",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/design_system/native/UserSettingsDesignSystemBackdrop.tsx",
+);
 
 export default function UserSettingsDesignSystemBackdrop() {
   const tmp = callback4();
@@ -64,9 +71,37 @@ export default function UserSettingsDesignSystemBackdrop() {
   obj = { contentContainerStyle: tmp.container, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj1 = { spacing: 24, children: null };
-  const items = [callback2(BackdropCard, { title: "Backdrop", description: "A backdrop is an overlay that appears behind a component to provide separation between the component and the rest of the interface. By default it is a semi-transparent overlay.", buttonLabel: "Show Backdrop", blur: "none", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 }), callback2(BackdropCard, { title: "Subtle Blur", description: "Backdrop also supports blur. You can use a subtle blur for a lite-touch obfuscation, like for Context Menus that help create seperation but don't completly lift you out of the context", buttonLabel: "Show Subtle Blur Backdrop", blur: "subtle", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 }), callback2(BackdropCard, { title: "Strong Blur", description: "You can use a strong blur for places where you want to completly lift the user out of the context, like for modals", buttonLabel: "Show Strong Blur Backdrop", blur: "strong", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 })];
+  const items = [
+    callback2(BackdropCard, {
+      title: "Backdrop",
+      description:
+        "A backdrop is an overlay that appears behind a component to provide separation between the component and the rest of the interface. By default it is a semi-transparent overlay.",
+      buttonLabel: "Show Backdrop",
+      blur: "none",
+      setShowBackdrop: tmp2[1],
+      setBlurAmount: tmp7,
+    }),
+    callback2(BackdropCard, {
+      title: "Subtle Blur",
+      description:
+        "Backdrop also supports blur. You can use a subtle blur for a lite-touch obfuscation, like for Context Menus that help create seperation but don't completly lift you out of the context",
+      buttonLabel: "Show Subtle Blur Backdrop",
+      blur: "subtle",
+      setShowBackdrop: tmp2[1],
+      setBlurAmount: tmp7,
+    }),
+    callback2(BackdropCard, {
+      title: "Strong Blur",
+      description:
+        "You can use a strong blur for places where you want to completly lift the user out of the context, like for modals",
+      buttonLabel: "Show Strong Blur Backdrop",
+      blur: "strong",
+      setShowBackdrop: tmp2[1],
+      setBlurAmount: tmp7,
+    }),
+  ];
   obj1[1] = items;
-  const items1 = [callback3(first(4926).Stack, obj1), ];
+  const items1 = [callback3(first(4926).Stack, obj1)];
   if (first) {
     function handleClose() {
       dependencyMap(false);
@@ -77,7 +112,7 @@ export default function UserSettingsDesignSystemBackdrop() {
     obj3[0] = animatedStyle;
     obj3[1] = tmp6;
     obj3[2] = handleClose;
-    const items2 = [tmp13(tmp8(4916).Backdrop, obj3), ];
+    const items2 = [tmp13(tmp8(4916).Backdrop, obj3)];
     const obj4 = { style: null, pointerEvents: "box-none", children: null };
     obj4[0] = tmp.backdropContent;
     const obj5 = { children: null };
@@ -93,4 +128,4 @@ export default function UserSettingsDesignSystemBackdrop() {
   items1[1] = first;
   obj[1] = items1;
   return callback3(closure_4, obj);
-};
+}

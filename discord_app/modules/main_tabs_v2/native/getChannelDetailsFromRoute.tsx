@@ -21,7 +21,7 @@ export default function getChannelDetailsFromRoute(currentRoute) {
       if (params != null) {
         guildId = params.guildId;
       }
-      const items1 = [guildId, ];
+      const items1 = [guildId];
       const params2 = coerceGuildsRouteResult.params;
       let channelId;
       if (params2 != null) {
@@ -39,4 +39,4 @@ export default function getChannelDetailsFromRoute(currentRoute) {
   }
   const obj = coerceMainRoute;
   const tmp = require;
-};
+}

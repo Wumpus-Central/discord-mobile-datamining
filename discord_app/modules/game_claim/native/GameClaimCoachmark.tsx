@@ -24,7 +24,16 @@ let closure_12 = 2 * ThemesDefault.space.PX_12;
 let obj = { card: null, closeButton: null, centeredText: null, body: null, cta: null };
 obj = { padding: ThemesDefault.space.PX_12 };
 obj[0] = obj;
-createCacheKey = { position: "absolute", top: ThemesDefault.space.PX_12, right: ThemesDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
+createCacheKey = {
+  position: "absolute",
+  top: ThemesDefault.space.PX_12,
+  right: ThemesDefault.space.PX_12,
+  width: 24,
+  height: 24,
+  alignItems: "center",
+  justifyContent: "center",
+  zIndex: 1,
+};
 obj[1] = createCacheKey;
 obj[2] = { textAlign: "center" };
 obj[3] = { marginTop: ThemesDefault.space.PX_4 };
@@ -65,7 +74,7 @@ const memoResult = importAllResult.memo((arg0) => {
     };
     obj[2] = tmp.closeButton;
     obj[3] = callback2(tmp2(5551).XSmallIcon, { size: "sm", color: "text-default" });
-    const items = [callback2(tmp2(5068).PressableOpacity, obj), , , , ];
+    const items = [callback2(tmp2(5068).PressableOpacity, obj), , , ,];
     obj1 = { imageSrc: null };
     obj1[0] = coverImageUrl;
     items[1] = callback2(importDefaultResult1Default, obj1);
@@ -77,7 +86,7 @@ const memoResult = importAllResult.memo((arg0) => {
     obj2[3] = intl2.format(tmp2(1236).t.Q11WTQ, obj3);
     items[2] = callback2(tmp2(4474).Text, obj2);
     const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", style: null, children: null };
-    const items1 = [, ];
+    const items1 = [,];
     ({ body: arr2[0], centeredText: arr2[1] } = tmp);
     obj4[2] = items1;
     obj4[3] = stringResult;
@@ -88,7 +97,7 @@ const memoResult = importAllResult.memo((arg0) => {
     const intl3 = tmp2(1236).intl;
     obj6[2] = intl3.string(tmp2(1236).t["2u6ZlY"]);
     obj6[3] = callback2(tmp2(8728).LinkExternalSmallIcon, { size: "xs", color: "white" });
-    obj6[5] = callback(function*() {
+    obj6[5] = callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -120,7 +129,9 @@ const memoResult = importAllResult.memo((arg0) => {
               v02 = 1;
               v0 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj1.redirectDeveloperPortalWithHandoffToken(closure_1_6.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY);
+              obj1[0] = obj1.redirectDeveloperPortalWithHandoffToken(
+                closure_1_6.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
+              );
               return obj1;
             }
           } else if (arg0 === 1) {

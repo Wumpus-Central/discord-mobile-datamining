@@ -10,21 +10,25 @@ export default function useActivityUsers(arg0, arg1) {
   dependencyMap = arg1;
   let items = [closure_3, closure_2];
   const items1 = [arg1, arg0];
-  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items, () => {
-    if (null == closure_1) {
-      return [];
-    } else {
-      const embeddedActivitiesForChannel = closure_1_3.getEmbeddedActivitiesForChannel(tmp);
-      const found = embeddedActivitiesForChannel.find((applicationId) => applicationId.applicationId === closure_0);
-      if (null == found) {
-        let items = [];
+  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(
+    items,
+    () => {
+      if (null == closure_1) {
+        return [];
       } else {
-        const _Array = Array;
-        const mapped = Array.from(found.userIds).map((arg0) => user.getUser(arg0));
-        items = mapped.filter((arg0) => null != arg0);
-        const arr = Array.from(found.userIds);
+        const embeddedActivitiesForChannel = closure_1_3.getEmbeddedActivitiesForChannel(tmp);
+        const found = embeddedActivitiesForChannel.find((applicationId) => applicationId.applicationId === closure_0);
+        if (null == found) {
+          let items = [];
+        } else {
+          const _Array = Array;
+          const mapped = Array.from(found.userIds).map((arg0) => user.getUser(arg0));
+          items = mapped.filter((arg0) => null != arg0);
+          const arr = Array.from(found.userIds);
+        }
+        return items;
       }
-      return items;
-    }
-  }, items1);
-};
+    },
+    items1,
+  );
+}

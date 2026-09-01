@@ -22,7 +22,17 @@ function GradientBackground(arg0) {
 }
 let c4 = importAllResult;
 ({ StyleSheet: c5, View: closure_6, Platform } = get_ActivityIndicator);
-({ ACTION_SHEET_START_HEIGHT_RATIO: error, ACTION_SHEET_MAX_WIDTH: closure_8, ACTION_SHEET_SPRING_CONFIG: c9, ACTION_SHEET_SPRING_CONFIG_REDUCED_MOTION: c10, ACTION_SHEET_GRADIENT_BORDER_WIDTH: unpackModuleId, ACTION_SHEET_GRADIENT_BORDER_RADIUS: closure_12, ACTION_SHEET_BORDER_RADIUS: map1, ACTION_SHEET_INNER_BORDER_RADIUS: closure_14, ACTION_SHEET_MINIMUM_BOTTOM_PADDING: closure_15 } = ACTION_SHEET_START_HEIGHT_RATIO);
+({
+  ACTION_SHEET_START_HEIGHT_RATIO: error,
+  ACTION_SHEET_MAX_WIDTH: closure_8,
+  ACTION_SHEET_SPRING_CONFIG: c9,
+  ACTION_SHEET_SPRING_CONFIG_REDUCED_MOTION: c10,
+  ACTION_SHEET_GRADIENT_BORDER_WIDTH: unpackModuleId,
+  ACTION_SHEET_GRADIENT_BORDER_RADIUS: closure_12,
+  ACTION_SHEET_BORDER_RADIUS: map1,
+  ACTION_SHEET_INNER_BORDER_RADIUS: closure_14,
+  ACTION_SHEET_MINIMUM_BOTTOM_PADDING: closure_15,
+} = ACTION_SHEET_START_HEIGHT_RATIO);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = createCacheKey.createStyles((arg0) => {
   let num = arg1;
@@ -33,11 +43,33 @@ let closure_18 = createCacheKey.createStyles((arg0) => {
   if (arg2 === undefined) {
     flag = false;
   }
-  let obj = { background: null, wrapper: null, wrapperWithBorder: null, content: null, gradient: null, handleIndicator: null, backgroundOverlay: null, header: null, body: null };
-  obj = { overflow: "hidden", borderTopLeftRadius: closure_13, borderTopRightRadius: closure_13, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+  let obj = {
+    background: null,
+    wrapper: null,
+    wrapperWithBorder: null,
+    content: null,
+    gradient: null,
+    handleIndicator: null,
+    backgroundOverlay: null,
+    header: null,
+    body: null,
+  };
+  obj = {
+    overflow: "hidden",
+    borderTopLeftRadius: closure_13,
+    borderTopRightRadius: closure_13,
+    backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  };
   obj[0] = obj;
   obj[1] = { overflow: "hidden", flex: 1 };
-  obj = { overflow: "hidden", marginTop: closure_11, marginHorizontal: closure_11, borderTopLeftRadius: closure_12, borderTopRightRadius: closure_12, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+  obj = {
+    overflow: "hidden",
+    marginTop: closure_11,
+    marginHorizontal: closure_11,
+    borderTopLeftRadius: closure_12,
+    borderTopRightRadius: closure_12,
+    backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  };
   obj[2] = obj;
   let tmp4;
   if (arg0) {
@@ -126,7 +158,8 @@ let closure_19 = importAllResult.forwardRef((windowDimensions, ref) => {
     obj.enableDynamicSizing = true;
     obj.snapPoints = tmp9[0];
     if (maxDynamicContentSize == null) {
-      maxDynamicContentSize = height - tmp4(tmp3[11]).NAV_BAR_HEIGHT_MULTILINE - onExpand(isScreenReaderEnabled[8])().top;
+      maxDynamicContentSize =
+        height - tmp4(tmp3[11]).NAV_BAR_HEIGHT_MULTILINE - onExpand(isScreenReaderEnabled[8])().top;
     }
     obj.maxDynamicContentSize = maxDynamicContentSize;
     obj.ref = ref;
@@ -221,9 +254,15 @@ let closure_20 = importAllResult.forwardRef((windowDimensions, ref) => {
   obj.children = items3;
   return closure_17(tmp3Result, obj);
 });
-let closure_23 = { code: "function BottomSheetNativeTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()<=-1;}" };
-let closure_24 = { code: "function BottomSheetNativeTsx2(){const{animatedIsVisuallyClosed}=this.__closure;return animatedIsVisuallyClosed.get();}" };
-let closure_25 = { code: "function BottomSheetNativeTsx3(isVisuallyClosed){const{transitionState,runOnJS,onLeave}=this.__closure;if(isVisuallyClosed&&transitionState==='exiting'){runOnJS(onLeave)();}}" };
+let closure_23 = {
+  code: "function BottomSheetNativeTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()<=-1;}",
+};
+let closure_24 = {
+  code: "function BottomSheetNativeTsx2(){const{animatedIsVisuallyClosed}=this.__closure;return animatedIsVisuallyClosed.get();}",
+};
+let closure_25 = {
+  code: "function BottomSheetNativeTsx3(isVisuallyClosed){const{transitionState,runOnJS,onLeave}=this.__closure;if(isVisuallyClosed&&transitionState==='exiting'){runOnJS(onLeave)();}}",
+};
 const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
   let flag = scrollable.scrollable;
   if (flag === undefined) {
@@ -245,7 +284,8 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
   const onExpand = scrollable.onExpand;
   const onDismiss = scrollable.onDismiss;
   ({ borderGradient, showGradient } = scrollable);
-  ({ keyboardShouldPersistTaps, children, backgroundStyles, contentStyles, bodyStyles, extraContent, contentHeight } = scrollable);
+  ({ keyboardShouldPersistTaps, children, backgroundStyles, contentStyles, bodyStyles, extraContent, contentHeight } =
+    scrollable);
   let merged = Object.assign(scrollable, Object.create(null));
   let transitionState;
   let close;
@@ -335,7 +375,10 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
       onExpand();
     }
   }, items3);
-  const tmp9 = onExpand.useContext(width(dismissAccessibilityLabel[16]).AccessibilityPreferencesContext).reducedMotion.enabled ? ref : registerDismissHandler;
+  const tmp9 = onExpand.useContext(width(dismissAccessibilityLabel[16]).AccessibilityPreferencesContext).reducedMotion
+    .enabled
+    ? ref
+    : registerDismissHandler;
   if (animatedIndex == null) {
     animatedIndex = tmp8Result1.useSharedValue(-1);
   }
@@ -371,15 +414,19 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
   const animatedReaction = width(dismissAccessibilityLabel[14]).useAnimatedReaction(_e, he);
   const items4 = [dismissAccessibilityLabel];
   const items5 = [backdropOpacity, backdropChildren];
-  callback2 = obj.useCallback(() => closure_1_16(width(dismissAccessibilityLabel[19]).ActionSheetHeaderBar, {
-    accessibilityLabel: dismissAccessibilityLabel,
-    onPress() {
-      const current = ref.current;
-      if (current != null) {
-        current.close();
-      }
-    }
-  }), items4);
+  callback2 = obj.useCallback(
+    () =>
+      closure_1_16(width(dismissAccessibilityLabel[19]).ActionSheetHeaderBar, {
+        accessibilityLabel: dismissAccessibilityLabel,
+        onPress() {
+          const current = ref.current;
+          if (current != null) {
+            current.close();
+          }
+        },
+      }),
+    items4,
+  );
   const items6 = [footer];
   const callback3 = obj.useCallback((animatedIndex) => {
     let obj = { style: items, children: null };
@@ -407,7 +454,41 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
   const tmp24 = backdropChildren(dismissAccessibilityLabel[23])();
   const backgroundComponent = merged.backgroundComponent;
   if (backgroundComponent != null) {
-    obj = { ref: null, accessible: null, accessibilityRole: "none", accessibilityLabel: "", startHeight: null, contentHeight: null, maxHeight: null, containerHeight: null, startExpanded: null, hasEverExpanded: null, windowDimensions: null, wrapperStyle: null, onExpand: null, enablePanDownToClose: true, containerStyle: null, backgroundStyle: null, topInset: null, keyboardBehavior: null, keyboardBlurBehavior: "restore", keyboardShouldPersistTaps: null, animationConfigs: null, overrideReduceMotion: null, handleIndicatorStyle: null, handleComponent: null, backdropComponent: null, backgroundComponent: null, renderFooter: null, animatedIndex: null, onAnimate: null, onClose: null, borderGradient: null, extraContent: null, children: null };
+    obj = {
+      ref: null,
+      accessible: null,
+      accessibilityRole: "none",
+      accessibilityLabel: "",
+      startHeight: null,
+      contentHeight: null,
+      maxHeight: null,
+      containerHeight: null,
+      startExpanded: null,
+      hasEverExpanded: null,
+      windowDimensions: null,
+      wrapperStyle: null,
+      onExpand: null,
+      enablePanDownToClose: true,
+      containerStyle: null,
+      backgroundStyle: null,
+      topInset: null,
+      keyboardBehavior: null,
+      keyboardBlurBehavior: "restore",
+      keyboardShouldPersistTaps: null,
+      animationConfigs: null,
+      overrideReduceMotion: null,
+      handleIndicatorStyle: null,
+      handleComponent: null,
+      backdropComponent: null,
+      backgroundComponent: null,
+      renderFooter: null,
+      animatedIndex: null,
+      onAnimate: null,
+      onClose: null,
+      borderGradient: null,
+      extraContent: null,
+      children: null,
+    };
     obj[0] = ref;
     const isIOSResult = tmp8(tmp3[7]).isIOS();
     obj[1] = !isIOSResult;
@@ -461,7 +542,7 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
       tmp26Result = tmp26(tmp31, obj2);
     }
     const obj3 = { children: null };
-    const items11 = [tmp26Result, ];
+    const items11 = [tmp26Result];
     const obj4 = { style: null, children: null };
     const items12 = [tmp5.body, bodyStyles];
     obj4[0] = items12;

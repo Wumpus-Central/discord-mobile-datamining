@@ -8,7 +8,7 @@ function _launchActivityInBotDM() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -43,7 +43,14 @@ function _launchActivityInBotDM() {
               c3 = undefined;
               c4 = undefined;
               c5 = undefined;
-              ({ appId: c0, botId: c1, analyticsLocations: c2, customId: c3, referrerId: c4, commandOrigin: c5 } = callback);
+              ({
+                appId: c0,
+                botId: c1,
+                analyticsLocations: c2,
+                customId: c3,
+                referrerId: c4,
+                commandOrigin: c5,
+              } = callback);
               closure_6 = undefined;
               c3 = 1;
               c4 = 1;
@@ -91,7 +98,14 @@ function _launchActivityInBotDM() {
               return obj6;
             } else {
               closure_6 = arg1;
-              obj7 = { targetApplicationId: null, channelId: null, analyticsLocations: null, customId: null, referrerId: null, commandOrigin: null };
+              obj7 = {
+                targetApplicationId: null,
+                channelId: null,
+                analyticsLocations: null,
+                customId: null,
+                referrerId: null,
+                commandOrigin: null,
+              };
               obj7[0] = callback;
               obj7[1] = closure_6;
               obj7[2] = dependencyMap;

@@ -10,8 +10,7 @@ obj[2] = set;
 obj[3] = new Set();
 obj[4] = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class MobileGameCommunitiesStore extends PersistedStore {
-}
+class MobileGameCommunitiesStore extends PersistedStore {}
 const prototype = MobileGameCommunitiesStore.prototype;
 prototype["initialize"] = function initialize(guilds) {
   if (null != guilds) {
@@ -49,7 +48,7 @@ prototype["getState"] = function getState() {
     lastFetchedAt: obj.lastFetchedAt,
     lastFetchedGameIds: items,
     dismissedGuildIds: [...obj.dismissedGuildIds],
-    guildGameIds: obj.guildGameIds
+    guildGameIds: obj.guildGameIds,
   };
   guilds = obj.guilds;
   items = [...obj.lastFetchedGameIds];
@@ -135,7 +134,7 @@ obj = {
     const set = new Set();
     obj[3] = new Set();
     obj[4] = {};
-  }
+  },
 };
 const mobileGameCommunitiesStore = new MobileGameCommunitiesStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesStore.tsx");

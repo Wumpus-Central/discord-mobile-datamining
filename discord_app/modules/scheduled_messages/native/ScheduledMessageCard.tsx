@@ -17,7 +17,13 @@ function ScheduledMessageCardStatusHeader(isPendingRemoval) {
   let obj = ScheduledMessagesConfig;
   const messageForState = obj.getMessageForState(scheduledMessage.state);
   ({ isError, stateMessage } = messageForState);
-  obj = { IconComponent: CalendarPlusIcon.CalendarPlusIcon, label: null, isCritical: null, lineClamp: 2, actions: null };
+  obj = {
+    IconComponent: CalendarPlusIcon.CalendarPlusIcon,
+    label: null,
+    isCritical: null,
+    lineClamp: 2,
+    actions: null,
+  };
   if (!isError) {
     const intl = tmp(1236).intl;
     obj = { timestamp: null };
@@ -28,13 +34,21 @@ function ScheduledMessageCardStatusHeader(isPendingRemoval) {
   }
   obj[1] = stateMessage;
   obj[2] = isError;
-  obj[4] = closure_7(ScheduledMessageCardActionButtonsDefault, { scheduledMessage, isPendingRemoval: isPendingRemoval.isPendingRemoval });
+  obj[4] = closure_7(ScheduledMessageCardActionButtonsDefault, {
+    scheduledMessage,
+    isPendingRemoval: isPendingRemoval.isPendingRemoval,
+  });
   return closure_7(ForLaterCardStatusHeader.ForLaterCardStatusHeader, obj);
 }
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let obj = { card: { gap: 16, marginBottom: 16 }, cardDivider: null, attachmentCount: null, pendingRemoval: null };
-obj = { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+obj = {
+  marginHorizontal: -16,
+  height: 1,
+  alignSelf: "stretch",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 obj[1] = obj;
 obj[2] = { flexDirection: "row", alignItems: "center", gap: 4 };
 obj[3] = { alignItems: "center", paddingVertical: 16 };
@@ -57,7 +71,7 @@ const memoResult = importAllResult.memo(function ScheduledMessageCard(scheduledM
     obj = { scheduledMessage: null, isPendingRemoval: null };
     obj[0] = scheduledMessage;
     obj[1] = isPendingRemoval;
-    const items1 = [callback(ScheduledMessageCardStatusHeader, obj), , , ];
+    const items1 = [callback(ScheduledMessageCardStatusHeader, obj), , ,];
     obj1 = { channel: null, actions: null };
     obj1[0] = stateFromStores;
     items1[1] = callback(tmp2(11782).ForLaterCardHeader, obj1);
@@ -78,7 +92,7 @@ const memoResult = importAllResult.memo(function ScheduledMessageCard(scheduledM
         obj5[0] = tmp.attachmentCount;
         const obj6 = { size: "xxs", color: null };
         obj6[1] = stateFromStores(712).colors.TEXT_MUTED;
-        const items2 = [tmp10(tmp2(10195).AttachmentIcon, obj6), ];
+        const items2 = [tmp10(tmp2(10195).AttachmentIcon, obj6)];
         const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl = tmp2(1236).intl;
         const obj8 = { count: null };

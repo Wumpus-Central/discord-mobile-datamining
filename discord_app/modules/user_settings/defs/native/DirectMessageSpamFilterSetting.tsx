@@ -24,13 +24,15 @@ createToggle = {
   },
   useSearchTerms() {
     const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t.H9XOl3), ];
+    const items = [intl.string(getSystemLocale.t.H9XOl3)];
     const intl2 = getSystemLocale.intl;
     items[1] = intl2.string(getSystemLocale.t.k4W40P);
     return items;
-  }
+  },
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DirectMessageSpamFilterSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/DirectMessageSpamFilterSetting.tsx",
+);
 
 export default createToggle;

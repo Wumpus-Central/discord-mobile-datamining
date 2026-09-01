@@ -66,8 +66,8 @@ export const createDiscordEnvironmentEvents = function createDiscordEnvironmentE
           }
           return tmp2;
         };
-      }
-    }
+      },
+    },
   };
 };
 export const discordEnvironmentEvents = {
@@ -117,6 +117,6 @@ export const discordEnvironmentEvents = {
         }
         return tmp2;
       };
-    }
-  }
+    },
+  },
 };

@@ -11,7 +11,7 @@ export default function openFavoritesGuildActionSheet() {
   obj = {
     onClose() {
       callback(table[0]).hideActionSheet(closure_3);
-    }
+    },
   };
   obj.openLazy(asyncRequireImpl(15726, dependencyMap.paths), FavoritesGuildActionSheet, obj);
-};
+}

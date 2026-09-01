@@ -10,36 +10,50 @@ import { experiment } from "../experiments/ServerThemeExperiment.tsx";
 import { apexExperiment } from "../experiments/ServerThemeUserExperiment.tsx";
 
 const require = arg1;
-({ GuildPowerupNewPerkMarketingVersion: c5, NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: closure_6 } = BoostedGuildTiers);
+({ GuildPowerupNewPerkMarketingVersion: c5, NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: closure_6 } =
+  BoostedGuildTiers);
 ({ GuildFeatures: error, Permissions: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx",
+);
 
 export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
   const _require = guildId;
   dependencyMap = arg1;
-  const gameServerEnabled = require("../../../game_server/GameServerExperiment.tsx").useGameServerEnabled(guildId, "useGuildPowerupNewPerkMarketingVersion");
+  const gameServerEnabled = require("../../../game_server/GameServerExperiment.tsx").useGameServerEnabled(
+    guildId,
+    "useGuildPowerupNewPerkMarketingVersion",
+  );
   let obj = experiment;
   let tmp = _require;
   const items = [stateFromStores];
-  stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const guild = stateFromStores.getGuild(closure_0);
-    let hasItem;
-    if (guild != null) {
-      const features = guild.features;
-      hasItem = features.has(closure_1_7.GAME_SERVERS);
-    }
-    return hasItem;
-  });
+  stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const guild = stateFromStores.getGuild(closure_0);
+      let hasItem;
+      if (guild != null) {
+        const features = guild.features;
+        hasItem = features.has(closure_1_7.GAME_SERVERS);
+      }
+      return hasItem;
+    },
+  );
   const obj2 = initialize;
   const tmp4 = stateFromStores;
-  let serverThemeEnabled = require("../experiments/ServerThemeExperiment.tsx").useServerThemeEnabled(guildId, "useGuildPowerupNewPerkMarketingVersion");
+  let serverThemeEnabled = require("../experiments/ServerThemeExperiment.tsx").useServerThemeEnabled(
+    guildId,
+    "useGuildPowerupNewPerkMarketingVersion",
+  );
   const obj3 = experiment;
   if (serverThemeEnabled) {
     serverThemeEnabled = obj4.useServerThemeUserEnabled("useGuildPowerupNewPerkMarketingVersion");
   }
   obj4 = apexExperiment;
   const items1 = [serverThemeEnabled, tmp4];
-  const stateFromStores1 = tmp(589).useStateFromStores(items1, () => serverThemeEnabled.can(closure_1_8.MANAGE_GUILD, stateFromStores.getGuild(closure_0)));
+  const stateFromStores1 = tmp(589).useStateFromStores(items1, () =>
+    serverThemeEnabled.can(closure_1_8.MANAGE_GUILD, stateFromStores.getGuild(closure_0)),
+  );
   const items2 = [arg1, gameServerEnabled, stateFromStores, serverThemeEnabled, guildId, stateFromStores1];
   return gameServerEnabled.useMemo(() => {
     let tmp2;
@@ -104,16 +118,18 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
       }
     }
     let someResult = globalThis;
-    if (!arr.some((arg0) => {
-      let tmp;
-      if (closure_1 != null) {
-        const unlockedPowerups = closure_1.unlockedPowerups;
-        if (unlockedPowerups != null) {
-          tmp = unlockedPowerups[arg0];
+    if (
+      !arr.some((arg0) => {
+        let tmp;
+        if (closure_1 != null) {
+          const unlockedPowerups = closure_1.unlockedPowerups;
+          if (unlockedPowerups != null) {
+            tmp = unlockedPowerups[arg0];
+          }
         }
-      }
-      return null != tmp;
-    })) {
+        return null != tmp;
+      })
+    ) {
       const GUILD_TAG_BADGE_PACKS_WAVE_TWO = stateFromStores1.GUILD_TAG_BADGE_PACKS_WAVE_TWO;
     }
     if (gameServerEnabled) {
@@ -143,4 +159,4 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
     }
     GAME_SERVER_HOSTING = num;
   }, items2);
-};
+}

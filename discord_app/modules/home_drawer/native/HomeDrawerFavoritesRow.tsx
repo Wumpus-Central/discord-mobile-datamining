@@ -15,5 +15,10 @@ export const HomeDrawerFavoritesRowExpandedChildren = function HomeDrawerFavorit
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.wMWyci);
   obj[0] = jsx(Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
-  return jsx(HomeDrawerSharedItem.HomeDrawerSharedItem, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
+  return jsx(HomeDrawerSharedItem.HomeDrawerSharedItem, {
+    variant: "text-md/medium",
+    color: "text-default",
+    lineClamp: 1,
+    children: null,
+  });
 };

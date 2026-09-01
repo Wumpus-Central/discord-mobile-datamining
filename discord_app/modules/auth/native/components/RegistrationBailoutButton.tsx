@@ -19,5 +19,13 @@ export default function RegistrationBailoutButton(onBail) {
   obj[4] = Button.ButtonColors.LINK;
   obj[5] = callback().bail;
   obj[6] = onBail.onBail;
-  return jsx(Button.Button, { shrink: true, text: null, size: null, look: null, color: null, style: null, onPress: null });
-};
+  return jsx(Button.Button, {
+    shrink: true,
+    text: null,
+    size: null,
+    look: null,
+    color: null,
+    style: null,
+    onPress: null,
+  });
+}

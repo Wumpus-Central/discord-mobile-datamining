@@ -21,7 +21,7 @@ function MoreTipsModalScreen(learnMore) {
   let obj = { keyboardShouldPersistTaps: "handled", style: tmp.scroll, children: null };
   obj = { style: tmp.contentContainer, children: null };
   obj = { style: tmp.tipsContainer, children: null };
-  const items = [callback(SafetyTipsContainerDefault, { description, safetyTips, showHeader: true }), ];
+  const items = [callback(SafetyTipsContainerDefault, { description, safetyTips, showHeader: true })];
   let tmp2Result = null;
   if (null != learnMore) {
     obj1 = { style: null, children: null };
@@ -31,7 +31,7 @@ function MoreTipsModalScreen(learnMore) {
   }
   items[1] = tmp2Result;
   obj[1] = items;
-  const items1 = [closure_9(closure_4, obj), , ];
+  const items1 = [closure_9(closure_4, obj), ,];
   const obj2 = { children: null };
   const obj3 = { variant: "eyebrow", color: "text-default", style: tmp.header, children: null };
   const intl = getSystemLocale.intl;
@@ -49,15 +49,25 @@ function MoreTipsModalScreen(learnMore) {
 createCacheKey = { scroll: null, contentContainer: null, tipsContainer: null, learnMore: null, header: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
-let obj1 = { marginHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+createCacheKey[1] = {
+  marginHorizontal: ThemesDefault.space.PX_16,
+  marginBottom: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_16,
+};
+let obj1 = {
+  marginHorizontal: ThemesDefault.space.PX_16,
+  marginBottom: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_16,
+};
 createCacheKey[2] = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { alignItems: "center" };
 let obj2 = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreTipsModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreTipsModal.tsx",
+);
 
 export default function MoreTipsModal(channelId) {
   channelId = channelId.channelId;
@@ -91,7 +101,16 @@ export default function MoreTipsModal(channelId) {
   c5 = undefined;
   c6 = undefined;
   c7 = undefined;
-  ({ modalKey: c0, channelId: c1, warningId: c2, senderId: c3, description: c4, safetyTips: c5, actionItems: c6, learnMore: c7 } = channelId);
+  ({
+    modalKey: c0,
+    channelId: c1,
+    warningId: c2,
+    senderId: c3,
+    description: c4,
+    safetyTips: c5,
+    actionItems: c6,
+    learnMore: c7,
+  } = channelId);
   MORE_TIPS = {
     headerRight() {
       const obj = {
@@ -100,7 +119,7 @@ export default function MoreTipsModal(channelId) {
         },
         source: _undefined2(_undefined3[13]),
         iconSize: _undefined(_undefined3[14]).IconSizes.MEDIUM,
-        accessibilityLabel: null
+        accessibilityLabel: null,
       };
       const intl = _undefined(_undefined3[9]).intl;
       obj[3] = intl.string(_undefined(_undefined3[9]).t.cpT0Cq);
@@ -114,8 +133,20 @@ export default function MoreTipsModal(channelId) {
     },
     headerStyle: channelId.headerStyle,
     render() {
-      return closure_1_8(closure_1_11, { channelId: c1, warningId: c2, senderId: c3, description: c4, safetyTips: c5, actionItems: c6, learnMore: c7 });
-    }
+      return closure_1_8(closure_1_11, {
+        channelId: c1,
+        warningId: c2,
+        senderId: c3,
+        description: c4,
+        safetyTips: c5,
+        actionItems: c6,
+        learnMore: c7,
+      });
+    },
   };
-  return callback(require("../../../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { screens: { MORE_TIPS }, initialRouteName: "MORE_TIPS", headerStatusBarHeight: useSafeAreaInsetsDefault().top });
-};
+  return callback(require("../../../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, {
+    screens: { MORE_TIPS },
+    initialRouteName: "MORE_TIPS",
+    headerStatusBarHeight: useSafeAreaInsetsDefault().top,
+  });
+}

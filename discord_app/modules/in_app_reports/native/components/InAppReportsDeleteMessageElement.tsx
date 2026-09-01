@@ -6,7 +6,9 @@ import { AnalyticEvents } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsDeleteMessageElement.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsDeleteMessageElement.tsx",
+);
 
 export default function DeleteMessageElement(message) {
   message = message.message;
@@ -18,7 +20,11 @@ export default function DeleteMessageElement(message) {
   let obj = message(589);
   const items = [closure_5];
   const items1 = [message];
-  stateFromStores = obj.useStateFromStores(items, () => null == closure_1_5.getMessage(message.getChannelId(), message.id), items1);
+  stateFromStores = obj.useStateFromStores(
+    items,
+    () => null == closure_1_5.getMessage(message.getChannelId(), message.id),
+    items1,
+  );
   const items2 = [stateFromStores];
   const effect = React.useEffect(() => {
     dependencyMap(stateFromStores);
@@ -31,7 +37,15 @@ export default function DeleteMessageElement(message) {
     obj.trackWithMetadata(closure_1_6.IAR_DELETE_MESSAGE_BUTTON_CLICKED, obj);
     reportId(7201).deleteMessage(message.getChannelId(), message.id);
   }, items3);
-  obj = { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null };
+  obj = {
+    title: null,
+    disabledTitle: null,
+    description: null,
+    disabled: null,
+    variant: "danger",
+    onPress: null,
+    icon: null,
+  };
   const intl = message(1236).intl;
   obj[0] = intl.string(message(1236).t.c9BHL9);
   const intl2 = message(1236).intl;
@@ -41,5 +55,13 @@ export default function DeleteMessageElement(message) {
   obj[3] = tmp[0];
   obj[5] = callback;
   obj[6] = jsx(message(4436).TrashIcon, { color: "text-feedback-critical" });
-  return jsx(reportId(12777), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
-};
+  return jsx(reportId(12777), {
+    title: null,
+    disabledTitle: null,
+    description: null,
+    disabled: null,
+    variant: "danger",
+    onPress: null,
+    icon: null,
+  });
+}

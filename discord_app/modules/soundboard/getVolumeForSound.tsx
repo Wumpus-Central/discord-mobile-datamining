@@ -22,7 +22,7 @@ export default function getVolumeForSound(arg0, USER) {
   }
   const result = perceptualToAmplitude.amplitudeToPerceptual(tmp) / 100;
   return Math.min(arg0 * result * Math.min(outputVolume.getOutputVolume() / 100, 1), 1);
-};
+}
 export const getPerceptualSoundboardVolume = function getPerceptualSoundboardVolume(USER) {
   let num = USER;
   if (USER == null) {

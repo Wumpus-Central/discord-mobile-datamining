@@ -14,7 +14,13 @@ import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 let closure_6 = new timestampDefault("DispatcherBridge");
-let items = [importDefaultResult2, importDefaultResult4, importDefaultResult3, importDefaultResult, importDefaultResult1];
+let items = [
+  importDefaultResult2,
+  importDefaultResult4,
+  importDefaultResult3,
+  importDefaultResult,
+  importDefaultResult1,
+];
 let closure_7 = {
   GUILD_MEMBER_ADD(arg0) {
     const obj = {};
@@ -33,10 +39,10 @@ let closure_7 = {
   },
   BACKGROUND_SYNC(guilds) {
     return { guilds: guilds.guilds };
-  }
+  },
 };
 let set = new Set(["libdiscore", "typescript-libdiscore-dual-read"]);
-_instance_members_initializer_DispatcherBridge_ = function() {
+_instance_members_initializer_DispatcherBridge_ = function () {
   this.tokenToStore = new Map();
   this.disabledFromFatalError = false;
 };
@@ -97,7 +103,9 @@ class DispatcherBridge {
           str15 = " bridged action(s): ";
           str16 = "Registering ";
           tmp20 = length2;
-          infoResult1 = closure_6.info("Registering " + length2 + " bridged action(s): " + registeredActionTypes.join(", ") + ".");
+          infoResult1 = closure_6.info(
+            "Registering " + length2 + " bridged action(s): " + registeredActionTypes.join(", ") + ".",
+          );
           actionHandler = function actionHandler(actionHandler) {
             closure_0 = actionHandler;
             if (!obj.disabledFromFatalError) {
@@ -162,7 +170,7 @@ class DispatcherBridge {
                     if (_default.get("libdiscore_verbose_telemetry_logging")) {
                       let mapped = items1.map((kind) => " - " + kind.kind + ": " + kind.durationMillis + "ms");
                       const items2 = ["Timings", mapped.join("\n")];
-                      const items3 = [items2, , ];
+                      const items3 = [items2, ,];
                       const mutations = metrics.mutations;
                       const mapped1 = mutations.map((metrics) => {
                         const entries = Object.entries(metrics.metrics);
@@ -198,9 +206,17 @@ class DispatcherBridge {
                         return "" + tmp + ":\n" + tmp2;
                       });
                       const _HermesInternal = HermesInternal;
-                      closure_1_6.info("Handling action " + actionHandler.type + " took " + diff + "ms\n" + mapped3.join("\n\n"));
+                      closure_1_6.info(
+                        "Handling action " + actionHandler.type + " took " + diff + "ms\n" + mapped3.join("\n\n"),
+                      );
                     }
-                    obj1 = { action_type: null, total_duration_millis: null, timings: null, mutations: null, memory_usage: null };
+                    obj1 = {
+                      action_type: null,
+                      total_duration_millis: null,
+                      timings: null,
+                      mutations: null,
+                      memory_usage: null,
+                    };
                     obj1[0] = actionHandler.type;
                     obj1[1] = diff;
                     const _JSON3 = JSON;
@@ -225,15 +241,20 @@ class DispatcherBridge {
           obj2 = require("dispatcher");
           _Object = Object;
           tmp25 = closure_0;
-          fromEntriesResult = Object.fromEntries(registeredActionTypes.map((arg0) => {
-            const items = [arg0, actionHandler];
-            return items;
-          }));
+          fromEntriesResult = Object.fromEntries(
+            registeredActionTypes.map((arg0) => {
+              const items = [arg0, actionHandler];
+              return items;
+            }),
+          );
           str17 = "LibDiscoreDispatcherBridge";
           tmp26 = obj2;
-          registerResult = obj2.register("LibDiscoreDispatcherBridge", fromEntriesResult, () => {
-
-          }, require("dispatcher").DispatchBand.Database);
+          registerResult = obj2.register(
+            "LibDiscoreDispatcherBridge",
+            fromEntriesResult,
+            () => {},
+            require("dispatcher").DispatchBand.Database,
+          );
           _default = require("getState").default;
           closure_3 = _default;
           addChangeListenerResult = _default.addChangeListener(() => {
@@ -311,7 +332,10 @@ prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
   }
   error = new Error(str3);
   logger.error("Store", name, "failed to handle action", type, "mode:", mode, error);
-  _modDef1208.captureException(error, { extra: { actionType: type, storeName: name, storeMode: mode }, tags: { source: "libdiscore", errorKind: "store_dispatch" } });
+  _modDef1208.captureException(error, {
+    extra: { actionType: type, storeName: name, storeMode: mode },
+    tags: { source: "libdiscore", errorKind: "store_dispatch" },
+  });
   if ("typescript-libdiscore-dual-read" !== mode) {
     if ("libdiscore" === mode) {
       const result = items6.clearLibdiscoreExperimentCache();

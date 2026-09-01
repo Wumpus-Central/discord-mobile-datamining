@@ -42,7 +42,7 @@ function _fetchAuthorizedApps() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -79,20 +79,27 @@ function _fetchAuthorizedApps() {
               table = 1;
               c1 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = value.then((body) => {
-                let obj = v3(709);
-                obj = { type: "USER_AUTHORIZED_APPS_UPDATE", isFullFetch: null == closure_0, tokens: closure_1_8(body.body, closure_0) };
-                return obj.dispatch(obj);
-              }, () => {
-                let request = v3(709);
-                if (null == closure_0) {
-                  request = { type: "full" };
-                } else {
-                  request = { type: "partial", applicationIds: null };
-                  request[1] = tmp;
-                }
-                return request.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST_FAILED", request });
-              });
+              obj3[0] = value.then(
+                (body) => {
+                  let obj = v3(709);
+                  obj = {
+                    type: "USER_AUTHORIZED_APPS_UPDATE",
+                    isFullFetch: null == closure_0,
+                    tokens: closure_1_8(body.body, closure_0),
+                  };
+                  return obj.dispatch(obj);
+                },
+                () => {
+                  let request = v3(709);
+                  if (null == closure_0) {
+                    request = { type: "full" };
+                  } else {
+                    request = { type: "partial", applicationIds: null };
+                    request[1] = tmp;
+                  }
+                  return request.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST_FAILED", request });
+                },
+              );
               return obj3;
             }
           } else if (arg0 === 1) {
@@ -136,7 +143,7 @@ let obj = {
     let obj = dispatcherDefault;
     obj = { type: "USER_AUTHORIZED_APPS_REQUEST_CANCELLED", applicationIds };
     return obj.dispatch(obj);
-  }
+  },
 };
 const batchInvocationManager = new require("start").BatchInvocationManager(fetchAuthorizedApps, obj);
 obj = {
@@ -166,7 +173,7 @@ obj = {
     HTTP.del({ url: Endpoints.OAUTH2_TOKEN(arg0), oldFormErrors: true, rejectWithError: true }).then(() => {
       const response = self.fetch();
     });
-  }
+  },
 };
 const result = require("set").fileFinishedImporting("modules/oauth2/AuthorizedAppsActionCreators.tsx");
 

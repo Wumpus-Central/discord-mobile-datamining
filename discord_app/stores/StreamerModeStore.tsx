@@ -7,13 +7,21 @@ import closure_3 from "AuthenticationStore.tsx";
 import { AnalyticEvents } from "../Constants.tsx";
 
 require = arg1;
-let obj = { enabled: false, autoToggle: true, hideInstantInvites: true, hidePersonalInformation: true, disableSounds: true, disableNotifications: true, disabledOverlayWidgets: [], enableContentProtection: false };
+let obj = {
+  enabled: false,
+  autoToggle: true,
+  hideInstantInvites: true,
+  hidePersonalInformation: true,
+  disableSounds: true,
+  disableNotifications: true,
+  disabledOverlayWidgets: [],
+  enableContentProtection: false,
+};
 let closure_6 = {};
 obj = {};
 let merged = Object.assign(obj);
 const PersistedStore = initializeDefault.PersistedStore;
-class StreamerModeStore extends PersistedStore {
-}
+class StreamerModeStore extends PersistedStore {}
 const prototype = StreamerModeStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let merged = Object.assign(closure_6, arg0);
@@ -45,13 +53,13 @@ Object.defineProperty(prototype, "enabled", {
   get: function enabled() {
     return obj.enabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "autoToggle", {
   get: function autoToggle() {
     return obj.autoToggle;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hideInstantInvites", {
   get: function hideInstantInvites() {
@@ -61,7 +69,7 @@ Object.defineProperty(prototype, "hideInstantInvites", {
     }
     return hideInstantInvites;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hidePersonalInformation", {
   get: function hidePersonalInformation() {
@@ -71,7 +79,7 @@ Object.defineProperty(prototype, "hidePersonalInformation", {
     }
     return hidePersonalInformation;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "disableSounds", {
   get: function disableSounds() {
@@ -81,7 +89,7 @@ Object.defineProperty(prototype, "disableSounds", {
     }
     return disableSounds;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "disableNotifications", {
   get: function disableNotifications() {
@@ -91,7 +99,7 @@ Object.defineProperty(prototype, "disableNotifications", {
     }
     return disableNotifications;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "enableContentProtection", {
   get: function enableContentProtection() {
@@ -101,7 +109,7 @@ Object.defineProperty(prototype, "enableContentProtection", {
     }
     return enableContentProtection;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isOverlayWidgetDisabled"] = function isOverlayWidgetDisabled(arg0) {
   obj = apexExperiment;
@@ -135,7 +143,7 @@ let items = [
       return obj;
     }
     obj = {};
-  }
+  },
 ];
 StreamerModeStore.migrations = items;
 obj = {
@@ -164,7 +172,24 @@ obj = {
       }
       return true;
     }
-    obj1 = { enabled: obj.enabled, automatic: obj.autoToggle, disable_notifications: obj.disableNotifications, disable_sounds: obj.disableSounds, hide_instant_invites: obj.hideInstantInvites, hide_personal_info: obj.hidePersonalInformation, enable_content_protection: obj.enableContentProtection, disabled_overlay_widgets: null, old_enabled: null, old_automatic: null, old_disable_notifications: null, old_disable_sounds: null, old_hide_instant_invites: null, old_hide_personal_info: null, old_enable_content_protection: null, old_disabled_overlay_widgets: null };
+    obj1 = {
+      enabled: obj.enabled,
+      automatic: obj.autoToggle,
+      disable_notifications: obj.disableNotifications,
+      disable_sounds: obj.disableSounds,
+      hide_instant_invites: obj.hideInstantInvites,
+      hide_personal_info: obj.hidePersonalInformation,
+      enable_content_protection: obj.enableContentProtection,
+      disabled_overlay_widgets: null,
+      old_enabled: null,
+      old_automatic: null,
+      old_disable_notifications: null,
+      old_disable_sounds: null,
+      old_hide_instant_invites: null,
+      old_hide_personal_info: null,
+      old_enable_content_protection: null,
+      old_disabled_overlay_widgets: null,
+    };
     const disabledOverlayWidgets = obj.disabledOverlayWidgets;
     let str;
     if (disabledOverlayWidgets != null) {
@@ -174,7 +199,16 @@ obj = {
       str = "";
     }
     obj1[7] = str;
-    ({ enabled: obj4[8], autoToggle: obj4[9], disableNotifications: obj4[10], disableSounds: obj4[11], hideInstantInvites: obj4[12], hidePersonalInformation: obj4[13], enableContentProtection: obj4[14], disabledOverlayWidgets: disabledOverlayWidgets2 } = obj);
+    ({
+      enabled: obj4[8],
+      autoToggle: obj4[9],
+      disableNotifications: obj4[10],
+      disableSounds: obj4[11],
+      hideInstantInvites: obj4[12],
+      hidePersonalInformation: obj4[13],
+      enableContentProtection: obj4[14],
+      disabledOverlayWidgets: disabledOverlayWidgets2,
+    } = obj);
     let str3;
     if (disabledOverlayWidgets2 != null) {
       str3 = disabledOverlayWidgets2.join(",");
@@ -196,7 +230,7 @@ obj = {
     } else {
       return false;
     }
-  }
+  },
 };
 const streamerModeStore = new StreamerModeStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("stores/StreamerModeStore.tsx");

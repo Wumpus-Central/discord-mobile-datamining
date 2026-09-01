@@ -36,7 +36,7 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
             callback();
           }
         },
-        children
+        children,
       });
     };
     let formatResult = format(t.iWGjcg, obj);
@@ -55,7 +55,7 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
             callback();
           }
         },
-        children
+        children,
       });
     };
     formatResult = format(t.edpbxy, obj);
@@ -80,7 +80,7 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
     obj = { size: "refresh_sm", color: null, style: null };
     obj[1] = ThemesDefault.colors.TEXT_DEFAULT;
     obj[2] = tmp.icon;
-    const items = [closure_5(WarningIcon, obj), ];
+    const items = [closure_5(WarningIcon, obj)];
     Text = Text2.Text;
     obj1 = { variant: "text-sm/medium", color: "text-subtle", style: null, children: null };
     obj1[2] = tmp.contentText;
@@ -106,21 +106,41 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-createCacheKey = { container: null, containerWithDivider: null, divider: null, noticeContainer: null, icon: null, linkText: null, contentText: null };
+createCacheKey = {
+  container: null,
+  containerWithDivider: null,
+  divider: null,
+  noticeContainer: null,
+  icon: null,
+  linkText: null,
+  contentText: null,
+};
 createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_16 };
 let obj1 = { paddingVertical: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
 let obj2 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[3] = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[4] = { flexShrink: 0 };
 createCacheKey[5] = { textDecorationLine: "underline" };
 createCacheKey[6] = { flex: 1 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { TOP: 0, [0]: "TOP", BOTTOM: 1, [1]: "BOTTOM" };
-let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.sm };
-let result = require("set").fileFinishedImporting("modules/stage_channels/native/StageChannelAgeVerificationNotice.tsx");
+let obj3 = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.sm,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/StageChannelAgeVerificationNotice.tsx",
+);
 
 export default function StageChannelAgeVerificationNotice(arg0) {
   ({ divider, channelId } = arg0);
@@ -137,7 +157,7 @@ export default function StageChannelAgeVerificationNotice(arg0) {
         obj[0] = tmp.divider;
         tmp9 = callback(View, obj);
       }
-      const items = [tmp9, , ];
+      const items = [tmp9, ,];
       obj = { style: null, children: null };
       const items1 = [arr.length > 0 ? tmp.containerWithDivider : tmp.container, style];
       obj[0] = items1;
@@ -165,5 +185,5 @@ export default function StageChannelAgeVerificationNotice(arg0) {
   } else {
     return null;
   }
-};
+}
 export const DividerPosition = obj4;

@@ -3,7 +3,14 @@ import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import getAutomodErrorMessageFromErrorResponse from "../guild_automod/AutomodErrorUtils.tsx";
 
-let obj = { EmptyContent: 0, [0]: "EmptyContent", AutomodViolation: 1, [1]: "AutomodViolation", ApiValidation: 2, [2]: "ApiValidation" };
+let obj = {
+  EmptyContent: 0,
+  [0]: "EmptyContent",
+  AutomodViolation: 1,
+  [1]: "AutomodViolation",
+  ApiValidation: 2,
+  [2]: "ApiValidation",
+};
 const result = set.fileFinishedImporting("modules/threads/FormError.tsx");
 
 export const FormSubmitErrorType = obj;

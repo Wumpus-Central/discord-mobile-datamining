@@ -11,7 +11,7 @@ function _installApplicationOnDemandIfNeeded() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       dependencyMap = tmp2;
       ({ applicationId: c0, channel: c1, commandIntegrationTypes: c2, appLauncherContext: c3 } = callback);
       yield "PX_16";
@@ -102,7 +102,7 @@ function _installApplicationOnDemandIfNeeded() {
             } else {
               callback({ isAuthorized: false });
             }
-          }
+          },
         };
         _undefined(_undefined2[9]).openOAuth2Modal(obj);
       });
@@ -120,7 +120,9 @@ function _installApplicationOnDemandIfNeeded() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/applications/installApplicationOnDemandIfNeeded.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/applications/installApplicationOnDemandIfNeeded.native.tsx",
+);
 
 export const installApplicationOnDemandIfNeeded = function installApplicationOnDemandIfNeeded(arg0) {
   const self = this;

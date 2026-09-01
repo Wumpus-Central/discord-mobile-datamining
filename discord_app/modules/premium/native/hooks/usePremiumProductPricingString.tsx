@@ -13,7 +13,10 @@ export default function usePremiumProductPricingString(closure_0, YEAR) {
   _require = require("../ProductIds.android.tsx").getProductIdForGift(planIdForPremiumType);
   const obj2 = SubscriptionPlans;
   const items = [closure_2];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.getProduct(closure_0));
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_2.getProduct(closure_0),
+  );
   let priceString;
   if (stateFromStores != null) {
     priceString = stateFromStores.priceString;
@@ -22,4 +25,4 @@ export default function usePremiumProductPricingString(closure_0, YEAR) {
     priceString = PRICE_PLACEHOLDER;
   }
   return priceString;
-};
+}

@@ -16,7 +16,11 @@ initializeDefault;
 class SelectedChannelManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    applyArgumentsResult.actions = { GUILD_CREATE: applyArgumentsResult.handleGuildCreate, CHANNEL_CREATE: applyArgumentsResult.handleChannelCreate, LOGOUT: applyArgumentsResult.handleLogout };
+    applyArgumentsResult.actions = {
+      GUILD_CREATE: applyArgumentsResult.handleGuildCreate,
+      CHANNEL_CREATE: applyArgumentsResult.handleChannelCreate,
+      LOGOUT: applyArgumentsResult.handleLogout,
+    };
     return applyArgumentsResult;
   }
 }
@@ -60,7 +64,14 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   }
 };
 prototype["handleLogout"] = function handleLogout() {
-  dispatcherDefault.dispatch({ type: "VOICE_CHANNEL_SELECT", channelId: null, guildId: null, video: false, currentVoiceChannelId: null, joinVoiceId: null });
+  dispatcherDefault.dispatch({
+    type: "VOICE_CHANNEL_SELECT",
+    channelId: null,
+    guildId: null,
+    video: false,
+    currentVoiceChannelId: null,
+    joinVoiceId: null,
+  });
 };
 const selectedChannelManager = new SelectedChannelManager();
 const result = require("set").fileFinishedImporting("modules/channel/SelectedChannelManager.tsx");

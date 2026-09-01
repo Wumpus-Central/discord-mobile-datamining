@@ -8,20 +8,38 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ HelpdeskArticles: error, UserSettingsSections: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/user_settings/accessibility/native/SettingsAccessibilityScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/accessibility/native/SettingsAccessibilityScreen.tsx",
+);
 
 export default function SettingsAccessibilityScreen() {
   stackNavigation = stackNavigation(animateEmojiOverrideReason[12]).useStackNavigation();
   let obj = stackNavigation(animateEmojiOverrideReason[12]);
   let items = [closure_5];
-  const stateFromStoresObject = stackNavigation(animateEmojiOverrideReason[13]).useStateFromStoresObject(items, () => ({ gifAutoPlayOverrideReason: store.getAppliedOverrideReasonKey("gifAutoPlay"), animateEmojiOverrideReason: store.getAppliedOverrideReasonKey("animateEmoji"), animateStickersOverrideReason: store.getAppliedOverrideReasonKey("animateStickers") }));
+  const stateFromStoresObject = stackNavigation(animateEmojiOverrideReason[13]).useStateFromStoresObject(items, () => ({
+    gifAutoPlayOverrideReason: store.getAppliedOverrideReasonKey("gifAutoPlay"),
+    animateEmojiOverrideReason: store.getAppliedOverrideReasonKey("animateEmoji"),
+    animateStickersOverrideReason: store.getAppliedOverrideReasonKey("animateStickers"),
+  }));
   const gifAutoPlayOverrideReason = stateFromStoresObject.gifAutoPlayOverrideReason;
   animateEmojiOverrideReason = stateFromStoresObject.animateEmojiOverrideReason;
   const animateStickersOverrideReason = stateFromStoresObject.animateStickersOverrideReason;
   let obj2 = stackNavigation(animateEmojiOverrideReason[13]);
   let items1 = [stateFromStores];
-  stateFromStores = stackNavigation(animateEmojiOverrideReason[13]).useStateFromStores(items1, () => ("respect-motion-settings" === stateFromStores.youBarNameplateAnimation || "respect-motion-settings" === stateFromStores.youBarAvatarDecoAnimation) && stateFromStores.useReducedMotion);
-  let items2 = [animateEmojiOverrideReason, animateStickersOverrideReason, gifAutoPlayOverrideReason, stackNavigation, stateFromStores];
+  stateFromStores = stackNavigation(animateEmojiOverrideReason[13]).useStateFromStores(
+    items1,
+    () =>
+      ("respect-motion-settings" === stateFromStores.youBarNameplateAnimation ||
+        "respect-motion-settings" === stateFromStores.youBarAvatarDecoAnimation) &&
+      stateFromStores.useReducedMotion,
+  );
+  let items2 = [
+    animateEmojiOverrideReason,
+    animateStickersOverrideReason,
+    gifAutoPlayOverrideReason,
+    stackNavigation,
+    stateFromStores,
+  ];
   const node = animateStickersOverrideReason.useMemo(() => {
     let obj = stackNavigation(animateEmojiOverrideReason[14]);
     obj = { settings: items, subLabel: null };
@@ -31,7 +49,7 @@ export default function SettingsAccessibilityScreen() {
     let obj3 = gifAutoPlayOverrideReason(animateEmojiOverrideReason[7]);
     obj[0] = obj3.getArticleURL(closure_1_7.ROLE_STYLES);
     obj[1] = intl.format(stackNavigation(animateEmojiOverrideReason[6]).t["ksVr5/"], obj);
-    const items1 = [obj, , , , , , , , , , , , ];
+    const items1 = [obj, , , , , , , , , , , ,];
     obj1 = { settings: items2, subLabel: null };
     items2 = [closure_1_6.OFFICIAL_MESSAGE_STYLE];
     const intl2 = stackNavigation(animateEmojiOverrideReason[6]).intl;
@@ -51,7 +69,7 @@ export default function SettingsAccessibilityScreen() {
             obj.openUserSettings(obj);
           });
         });
-      }
+      },
     };
     obj2[1] = intl3.format(gifAutoPlayOverrideReason(animateEmojiOverrideReason[8]).L8U56h, obj3);
     items1[2] = obj2;
@@ -82,15 +100,13 @@ export default function SettingsAccessibilityScreen() {
     obj8[1] = items8;
     const intl9 = stackNavigation(animateEmojiOverrideReason[6]).intl;
     obj8[2] = intl9.format(stackNavigation(animateEmojiOverrideReason[6]).t.u6UjrL, {
-      onThemeClick() {
-
-      }
+      onThemeClick() {},
     });
     items1[7] = obj8;
     const obj10 = { label: null, settings: null, subLabel: null };
     const intl10 = stackNavigation(animateEmojiOverrideReason[6]).intl;
     obj10[0] = intl10.string(stackNavigation(animateEmojiOverrideReason[6]).t.e3TR1b);
-    const items9 = [, ];
+    const items9 = [,];
     ({ ENABLE_REDUCED_MOTION: arr10[0], SYNC_REDUCED_MOTION_WITH_DEVICE: arr10[1] } = closure_1_6);
     obj10[1] = items9;
     const intl11 = stackNavigation(animateEmojiOverrideReason[6]).intl;
@@ -99,28 +115,39 @@ export default function SettingsAccessibilityScreen() {
     obj11[0] = obj15.getArticleURL(closure_1_7.REDUCED_MOTION);
     obj10[2] = intl11.format(stackNavigation(animateEmojiOverrideReason[6]).t["2l9U2j"], obj11);
     items1[8] = obj10;
-    const obj12 = { settings: items10, subLabel: null != gifAutoPlayOverrideReason && gifAutoPlayOverrideReason(animateEmojiOverrideReason[11])(gifAutoPlayOverrideReason) };
+    const obj12 = {
+      settings: items10,
+      subLabel:
+        null != gifAutoPlayOverrideReason &&
+        gifAutoPlayOverrideReason(animateEmojiOverrideReason[11])(gifAutoPlayOverrideReason),
+    };
     items10 = [closure_1_6.AUTOPLAY_GIF];
     items1[9] = obj12;
     const obj13 = { settings: items11, subLabel: null };
     items11 = [closure_1_6.ANIMATE_EMOJI];
     const obj9 = {
-      onThemeClick() {
-
-      }
+      onThemeClick() {},
     };
     const tmp3 = gifAutoPlayOverrideReason;
     const tmp6 = stateFromStores;
-    const tmp9 = null != gifAutoPlayOverrideReason && gifAutoPlayOverrideReason(animateEmojiOverrideReason[11])(gifAutoPlayOverrideReason);
-    obj13[1] = null != animateEmojiOverrideReason && gifAutoPlayOverrideReason(animateEmojiOverrideReason[11])(animateEmojiOverrideReason);
+    const tmp9 =
+      null != gifAutoPlayOverrideReason &&
+      gifAutoPlayOverrideReason(animateEmojiOverrideReason[11])(gifAutoPlayOverrideReason);
+    obj13[1] =
+      null != animateEmojiOverrideReason &&
+      gifAutoPlayOverrideReason(animateEmojiOverrideReason[11])(animateEmojiOverrideReason);
     items1[10] = obj13;
     const obj14 = { settings: items12, subLabel: null };
     items12 = [closure_1_6.ANIMATE_STICKERS];
-    const tmp10 = null != animateEmojiOverrideReason && gifAutoPlayOverrideReason(animateEmojiOverrideReason[11])(animateEmojiOverrideReason);
-    obj14[1] = null != animateStickersOverrideReason && gifAutoPlayOverrideReason(animateEmojiOverrideReason[11])(animateStickersOverrideReason);
+    const tmp10 =
+      null != animateEmojiOverrideReason &&
+      gifAutoPlayOverrideReason(animateEmojiOverrideReason[11])(animateEmojiOverrideReason);
+    obj14[1] =
+      null != animateStickersOverrideReason &&
+      gifAutoPlayOverrideReason(animateEmojiOverrideReason[11])(animateStickersOverrideReason);
     items1[11] = obj14;
     obj15 = { settings: items13, label: null, subLabel: null };
-    items13 = [, ];
+    items13 = [,];
     ({ YOU_BAR_NAMEPLATE_ACCESSIBILITY: arr14[0], YOU_BAR_AVATAR_DECO_ACCESSSIBILITY: arr14[1] } = closure_1_6);
     const intl12 = tmp(tmp2[6]).intl;
     obj15[1] = intl12.string(stackNavigation(animateEmojiOverrideReason[6]).t.Loi61N);
@@ -133,4 +160,4 @@ export default function SettingsAccessibilityScreen() {
     return obj.createList(obj16);
   }, items2);
   return jsx(gifAutoPlayOverrideReason(animateEmojiOverrideReason[15]), { node });
-};
+}

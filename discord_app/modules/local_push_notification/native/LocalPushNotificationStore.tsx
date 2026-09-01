@@ -14,8 +14,7 @@ require = arg1;
 ({ LocalNotificationTypes: c5, FIRE_DATE_FORMAT: closure_6 } = LocalNotificationTypes);
 let set = new Set();
 const Store = initializeDefault.Store;
-class LocalPushNotificationStore extends Store {
-}
+class LocalPushNotificationStore extends Store {}
 const prototype = LocalPushNotificationStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_4);
@@ -96,7 +95,7 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
   LOGOUT: function handleCancelAll() {
     set.clear();
     const result = NativeModulesDefault.cancelAllLocalNotifications();
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/local_push_notification/native/LocalPushNotificationStore.tsx");
 

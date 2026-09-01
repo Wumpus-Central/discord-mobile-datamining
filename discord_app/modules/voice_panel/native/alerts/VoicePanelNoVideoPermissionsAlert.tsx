@@ -6,7 +6,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNoVideoPermissionsAlert.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/alerts/VoicePanelNoVideoPermissionsAlert.tsx",
+);
 
 export default function VoicePanelNoVideoPermissionsAlert() {
   let obj = getAlertModalItemKey;
@@ -21,5 +23,5 @@ export default function VoicePanelNoVideoPermissionsAlert() {
   obj[2] = obj.useDismissModalCallback();
   obj[2] = jsx(getAlertModalItemKey.AlertActionButton, { variant: "secondary", text: null, onPress: null });
   return jsx(getAlertModalItemKey.AlertModal, { variant: "secondary", text: null, onPress: null });
-};
+}
 export const VOICE_PANEL_NO_VIDEO_PERMS_KEY = "voice-panel-no-video-perms";

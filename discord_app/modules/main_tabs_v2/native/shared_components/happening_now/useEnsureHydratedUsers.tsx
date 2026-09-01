@@ -4,7 +4,9 @@ import closure_3 from "../../../../../stores/GuildMemberRequesterStore.tsx";
 import closure_4 from "../../../../../stores/UserStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useEnsureHydratedUsers.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/useEnsureHydratedUsers.tsx",
+);
 
 export const useEnsureHydratedUsers = function useEnsureHydratedUsers(guild_id, items1) {
   const _require = guild_id;
@@ -27,5 +29,8 @@ export const useEnsureHydratedUsers = function useEnsureHydratedUsers(guild_id, 
       }
     });
   }, items1);
-  const subscribeGuildMembers = require("../../../../../lib/guild/subscribeGuildMembers.tsx").useSubscribeGuildMembers(memo, "useEnsureHydratedUsers");
+  const subscribeGuildMembers = require("../../../../../lib/guild/subscribeGuildMembers.tsx").useSubscribeGuildMembers(
+    memo,
+    "useEnsureHydratedUsers",
+  );
 };

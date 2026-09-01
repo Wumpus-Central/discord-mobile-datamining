@@ -5,7 +5,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx",
+);
 
 export default function ScrollHandlingActionSheet(children) {
   const merged = Object.assign(children, Object.create(null));
@@ -13,4 +15,4 @@ export default function ScrollHandlingActionSheet(children) {
   const merged1 = Object.assign(merged);
   obj.children = children.children;
   return jsx(Background.BottomSheet, { startExpanded: true });
-};
+}

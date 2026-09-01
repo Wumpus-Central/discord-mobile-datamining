@@ -8,7 +8,12 @@ import createCacheKey from "../../Styles/native/createStyles.tsx";
 const require = arg1;
 function ImageGraphic(source) {
   const tmp = callback();
-  return jsx(preloadDefault, { source: source.src, style: callback().image, resizeMode: "contain", accessibilityElementsHidden: true });
+  return jsx(preloadDefault, {
+    source: source.src,
+    style: callback().image,
+    resizeMode: "contain",
+    accessibilityElementsHidden: true,
+  });
 }
 function RiveGraphic(riveProps) {
   riveProps = riveProps.riveProps;
@@ -24,7 +29,10 @@ function RiveGraphic(riveProps) {
   return <View />;
 }
 let closure_6 = { "21/9": 2.3333333333333335, "16/9": 1.7777777777777777, "6/4": 1.5, "2/1": 2, "1/1": 1 };
-let closure_7 = createCacheKey.createStyles({ container: { width: "100%", justifyContent: "center", alignItems: "center", overflow: "hidden" }, image: { width: "100%", height: "100%" } });
+let closure_7 = createCacheKey.createStyles({
+  container: { width: "100%", justifyContent: "center", alignItems: "center", overflow: "hidden" },
+  image: { width: "100%", height: "100%" },
+});
 const result = require("set").fileFinishedImporting("design/components/Graphic/native/Graphic.native.tsx");
 
 export const Graphic = function Graphic(aspectRatio) {
@@ -52,9 +60,9 @@ export const Graphic = function Graphic(aspectRatio) {
         tmpResult = merged(closure_1_2[6]);
       }
       return tmp4;
-    }, items)
+    }, items),
   };
-  items1 = [callback().container, , ];
+  items1 = [callback().container, ,];
   obj = { aspectRatio: table[str] };
   items1[1] = obj;
   items1[2] = aspectRatio.style;

@@ -17,4 +17,4 @@ export default function BackButton() {
     arr = arr.push(arr(closure_1_2[4]).MfaScreens.SELECT);
   };
   return jsx(MFAButtonDefault, { variant: "secondary", text: null, onPress: null });
-};
+}

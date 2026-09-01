@@ -8,8 +8,7 @@ let closure_3 = [];
 let closure_4 = [];
 let c5 = 0;
 const Store = initializeDefault.Store;
-class ICYMIPopularGuildsStore extends Store {
-}
+class ICYMIPopularGuildsStore extends Store {}
 const prototype = ICYMIPopularGuildsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2);
@@ -54,7 +53,7 @@ const iCYMIPopularGuildsStore = new ICYMIPopularGuildsStore(dispatcherDefault, {
     closure_3 = [];
     closure_4 = [];
     c5 = 0;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/icymi/ICYMIPopularGuildsStore.tsx");
 

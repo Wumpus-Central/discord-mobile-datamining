@@ -23,7 +23,10 @@ function ThreadLongPressActionSheetConnected(channel) {
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getGuild(closure_2));
   obj1 = channel(589);
   const items1 = [closure_8];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({ isMuted: closure_1_8.isMuted(channel.id), hasJoined: closure_1_8.hasJoined(channel.id) }));
+  const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({
+    isMuted: closure_1_8.isMuted(channel.id),
+    hasJoined: closure_1_8.hasJoined(channel.id),
+  }));
   ({ isMuted, hasJoined } = stateFromStoresObject);
   let obj2 = channel(589);
   const items2 = [closure_6];
@@ -43,7 +46,10 @@ function ThreadLongPressActionSheetConnected(channel) {
   const stateFromStores2 = obj8.useStateFromStores(items3, () => closure_1_7.isInChannel(channel.id));
   let obj9 = channel(589);
   const items4 = [closure_7];
-  const stateFromStores3 = obj9.useStateFromStores(items4, () => !isMuted(paths[36]).isEmpty(closure_1_7.getVoiceStatesForChannel(channel.id)));
+  const stateFromStores3 = obj9.useStateFromStores(
+    items4,
+    () => !isMuted(paths[36]).isEmpty(closure_1_7.getVoiceStatesForChannel(channel.id)),
+  );
   const tmp14 = isMuted(7645)(channel);
   const DeveloperMode = channel(4166).DeveloperMode;
   setting = DeveloperMode.useSetting();
@@ -280,29 +286,35 @@ function ThreadLongPressActionSheetConnected(channel) {
               obj14[0] = tmp18(tmp(10735).ActionSheetIconHeader, obj15);
               const items8 = [
                 items5.map((buttons) => {
-                              buttons = buttons.buttons;
-                              return closure_1_13(channel(paths[45]).ActionSheetRow.Group, {
-                                hasIcons: true,
-                                children: buttons.map((onPress) => {
-                                  onPress = onPress.onPress;
-                                  ({ label, IconComponent, trailing, isDestructive, disableColor } = onPress);
-                                  const obj = { label, variant: null, icon: null, trailing: null, onPress: null };
-                                  let str = "default";
-                                  if (isDestructive) {
-                                    str = "danger";
-                                  }
-                                  obj[1] = str;
-                                  obj[2] = closure_1_13(closure_1_0(closure_1_2[45]).ActionSheetRow.Icon, { IconComponent, disableColor });
-                                  obj[3] = trailing;
-                                  obj[4] = function onPress() {
-                                    closure_1_1();
-                                    onPress();
-                                  };
-                                  return closure_1_13(closure_1_0(closure_1_2[45]).ActionSheetRow, obj, arg1);
-                                })
-                              }, buttons.sectionKey);
-                            }),
-
+                  buttons = buttons.buttons;
+                  return closure_1_13(
+                    channel(paths[45]).ActionSheetRow.Group,
+                    {
+                      hasIcons: true,
+                      children: buttons.map((onPress) => {
+                        onPress = onPress.onPress;
+                        ({ label, IconComponent, trailing, isDestructive, disableColor } = onPress);
+                        const obj = { label, variant: null, icon: null, trailing: null, onPress: null };
+                        let str = "default";
+                        if (isDestructive) {
+                          str = "danger";
+                        }
+                        obj[1] = str;
+                        obj[2] = closure_1_13(closure_1_0(closure_1_2[45]).ActionSheetRow.Icon, {
+                          IconComponent,
+                          disableColor,
+                        });
+                        obj[3] = trailing;
+                        obj[4] = function onPress() {
+                          closure_1_1();
+                          onPress();
+                        };
+                        return closure_1_13(closure_1_0(closure_1_2[45]).ActionSheetRow, obj, arg1);
+                      }),
+                    },
+                    buttons.sectionKey,
+                  );
+                }),
               ];
               if (setting) {
                 const obj16 = { hasIcons: true, children: null };
@@ -371,12 +383,21 @@ function ThreadLongPressActionSheetConnected(channel) {
   obj21[1] = tmp(7743).EyeIcon;
   obj21[2] = function onPress() {
     let obj = channel(paths[13]);
-    obj = { section: closure_1_11.THREAD_ACTION_SHEET, object: closure_1_10.MARK_THREAD_AS_READ_BUTTON, objectType: closure_1_9.ACK_MANUAL };
+    obj = {
+      section: closure_1_11.THREAD_ACTION_SHEET,
+      object: closure_1_10.MARK_THREAD_AS_READ_BUTTON,
+      objectType: closure_1_9.ACK_MANUAL,
+    };
     obj.ack(channel.id, obj, true, true);
   };
   buttons10.push(obj21);
 }
-({ AnalyticsObjectTypes: c9, AnalyticsObjects: c10, AnalyticsSections: unpackModuleId, ChannelSettingsSections: closure_12 } = ME);
+({
+  AnalyticsObjectTypes: c9,
+  AnalyticsObjects: c10,
+  AnalyticsSections: unpackModuleId,
+  ChannelSettingsSections: closure_12,
+} = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let result = require("set").fileFinishedImporting("modules/threads/native/components/ThreadLongPressActionSheet.tsx");
 
@@ -400,4 +421,4 @@ export default function ThreadLongPressActionSheet(arg0) {
     tmp3 = callback(ThreadLongPressActionSheetConnected, obj);
   }
   return tmp3;
-};
+}

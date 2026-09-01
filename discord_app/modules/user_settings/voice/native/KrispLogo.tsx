@@ -30,7 +30,16 @@ noopAll;
 ({ Image: c3, View: c4, Pressable: c5 } = get_ActivityIndicator);
 ({ AnalyticEvents: error, AnalyticsPages: closure_8, AnalyticsSections: c9, HelpdeskArticles: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let closure_13 = { logo: { marginLeft: 20, height: 30, width: 67 }, detailsView: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingBottom: 12, gap: 12 } };
+let closure_13 = {
+  logo: { marginLeft: 20, height: 30, width: 67 },
+  detailsView: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingBottom: 12,
+    gap: 12,
+  },
+};
 const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/KrispLogo.tsx");
 
 export default function KrispLogo() {
@@ -47,7 +56,7 @@ export default function KrispLogo() {
   obj = { style: closure_13.logo, source: tmp4Result, accessibilityLabel: null };
   const intl = tmp(1236).intl;
   obj[2] = intl.string(getSystemLocale.t.vFiCSx);
-  const items1 = [callback(closure_3, obj), ];
+  const items1 = [callback(closure_3, obj)];
   obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = tmp(1236).intl;
   obj1[1] = intl2.string(getSystemLocale.t.hvVgAZ);
@@ -59,5 +68,5 @@ export default function KrispLogo() {
   items1[1] = callback(closure_5, obj1);
   obj[1] = items1;
   return callback2(closure_4, obj);
-};
+}
 export { handleKrispLinkPressed };

@@ -14,7 +14,26 @@ let set = new Set(["INITIAL_GUILD", "READY"]);
 const set1 = new Set(["READY", "INITIAL_GUILD"]);
 const set2 = new Set(["VOICE_SERVER_UPDATE", "STREAM_SERVER_UPDATE"]);
 const set3 = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]);
-const set4 = new Set(["READY", "INITIAL_GUILD", "READY_SUPPLEMENTAL", "RESUMED", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATE", "VOICE_SERVER_UPDATE", "RTC_CONNECTION_STATE", "RTC_CONNECTION_VIDEO", "RTC_CONNECTION_CLIENT_CONNECT", "RTC_CONNECTION_PING", "MEDIA_SESSION_JOINED", "MEDIA_ENGINE_PERMISSION", "SESSIONS_REPLACE", "STREAM_CREATE", "STREAM_SERVER_UPDATE", "STREAM_DELETE", "STREAM_UPDATE"]);
+const set4 = new Set([
+  "READY",
+  "INITIAL_GUILD",
+  "READY_SUPPLEMENTAL",
+  "RESUMED",
+  "VOICE_CHANNEL_SELECT",
+  "VOICE_STATE_UPDATE",
+  "VOICE_SERVER_UPDATE",
+  "RTC_CONNECTION_STATE",
+  "RTC_CONNECTION_VIDEO",
+  "RTC_CONNECTION_CLIENT_CONNECT",
+  "RTC_CONNECTION_PING",
+  "MEDIA_SESSION_JOINED",
+  "MEDIA_ENGINE_PERMISSION",
+  "SESSIONS_REPLACE",
+  "STREAM_CREATE",
+  "STREAM_SERVER_UPDATE",
+  "STREAM_DELETE",
+  "STREAM_UPDATE",
+]);
 let closure_11 = { NotStarted: 0, [0]: "NotStarted", Loading: 1, [1]: "Loading", Loaded: 2, [2]: "Loaded" };
 let closure_12 = {};
 let result = set.fileFinishedImporting("modules/gateway/GatewaySocketDispatcher.tsx");
@@ -125,7 +144,15 @@ prototype["receiveDispatch"] = function receiveDispatch(d, type, arg2) {
     const _Error = Error;
     throw Error("getDispatchHandler needs to be passed in first!");
   } else {
-    const obj = { data: null, type: null, compressionAnalytics: null, status: null, preloadPromise: null, preloadedData: null, receivedAt: null };
+    const obj = {
+      data: null,
+      type: null,
+      compressionAnalytics: null,
+      status: null,
+      preloadPromise: null,
+      preloadedData: null,
+      receivedAt: null,
+    };
     obj[0] = d;
     obj[1] = type;
     obj[2] = arg2;
@@ -156,14 +183,16 @@ prototype["maybePreload"] = function maybePreload(item10007) {
     item10007.status = null == preloadResult ? tmp2.Loaded : tmp2.Loading;
     item10007.preloadPromise = preloadResult;
     if (null != preloadResult) {
-      preloadResult.then((preloadedData) => {
-        item10007.preloadedData = preloadedData;
-        item10007.status = closure_1_11.Loaded;
-        self.scheduleFlush(item10007.type);
-      }).catch((error) => {
-        const socket = self.socket;
-        return socket.resetSocketOnDispatchError({ error, action: item10007.type });
-      });
+      preloadResult
+        .then((preloadedData) => {
+          item10007.preloadedData = preloadedData;
+          item10007.status = closure_1_11.Loaded;
+          self.scheduleFlush(item10007.type);
+        })
+        .catch((error) => {
+          const socket = self.socket;
+          return socket.resetSocketOnDispatchError({ error, action: item10007.type });
+        });
       return true;
     }
   }
@@ -225,7 +254,10 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
     const none = "none";
     c4 = false;
     const telemetry2 = self.scheduler.telemetry;
-    telemetry2.measure(require("WorkSchedulerTelemetry.tsx").WorkSchedulerTelemetryMeasurement.COUNT_INITIAL_DISPATCHS_LENGTH, items.length);
+    telemetry2.measure(
+      require("WorkSchedulerTelemetry.tsx").WorkSchedulerTelemetryMeasurement.COUNT_INITIAL_DISPATCHS_LENGTH,
+      items.length,
+    );
     try {
       closure_5 = [];
       if (self.socket.connectionState === CLOSEDDefault.RESUMING) {
@@ -312,7 +344,10 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
       }
       if (closure_5.length > 0) {
         let telemetry = self.scheduler.telemetry;
-        telemetry.measure(tmp21(13298).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, closure_5.length);
+        telemetry.measure(
+          tmp21(13298).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD,
+          closure_5.length,
+        );
         const queue = self.queue;
         const unshift = queue.unshift;
         items = [];
@@ -347,7 +382,13 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
         dispatchHandler.dispatch(data, type, preloadedData, receivedAt);
       }
       const tmp16Result = prettyPrintTrace_;
-      const result = tmp16Result.logReadyPayloadReceived(self.socket, data, nowResult, compressionAnalytics, readyPayloadByteSizeAnalytics);
+      const result = tmp16Result.logReadyPayloadReceived(
+        self.socket,
+        data,
+        nowResult,
+        compressionAnalytics,
+        readyPayloadByteSizeAnalytics,
+      );
       const obj6 = prettyPrintTrace_;
       const tmp16 = require;
     } else if ("RESUMED" === type) {

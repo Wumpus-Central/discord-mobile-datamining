@@ -13,20 +13,32 @@ const require = arg1;
 ({ AnalyticsPages: c9, UserSettingsSections: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PX_24 = ThemesDefault.space.PX_24;
-createCacheKey = { spinner: { padding: 16 }, emptyText: { marginTop: 24 }, emptyContainer: { padding: 16 }, container: null, headerDescription: null, appListHeader: null };
+createCacheKey = {
+  spinner: { padding: 16 },
+  emptyText: { marginTop: 24 },
+  emptyContainer: { padding: 16 },
+  container: null,
+  headerDescription: null,
+  appListHeader: null,
+};
 createCacheKey = { paddingHorizontal: 16, paddingTop: ThemesDefault.space.PX_24 };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { marginTop: 12 };
 createCacheKey[5] = { marginTop: 24 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedApps.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/authorized_apps/native/UserSettingsAuthedApps.tsx",
+);
 
 export default function UserSettingsAuthedApps() {
   const tmp = callback3();
   const _require = tmp;
   let obj = _require(navigation[12]);
   let items = [closure_7];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ fetchState: authStore.getFetchState(), appAuthTokens: authStore.getNewestTokensForNonChildrenApplications() }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    fetchState: authStore.getFetchState(),
+    appAuthTokens: authStore.getNewestTokensForNonChildrenApplications(),
+  }));
   const appAuthTokens = stateFromStoresObject.appAuthTokens;
   obj1 = _require(navigation[13]);
   navigation = obj1.useNavigation();
@@ -54,7 +66,7 @@ export default function UserSettingsAuthedApps() {
       },
       arrow: true,
       start: 0 === index,
-      end: index === item.numItems - 1
+      end: index === item.numItems - 1,
     };
     return closure_1_11(lib(navigation[20]).TableRow, obj, item.id);
   }, items1);
@@ -66,13 +78,13 @@ export default function UserSettingsAuthedApps() {
         obj = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: null };
         const intl = lib(navigation[17]).intl;
         obj[2] = intl.string(lib(navigation[17]).t.HU3RFw);
-        const items = [closure_1_11(lib(navigation[16]).Text, obj), ];
+        const items = [closure_1_11(lib(navigation[16]).Text, obj)];
         obj1 = { style: lib.headerDescription, variant: "heading-sm/medium", children: null };
         const intl2 = lib(navigation[17]).intl;
         obj1[2] = intl2.string(lib(navigation[17]).t.Nu5Yi0);
         items[1] = closure_1_11(lib(navigation[16]).Text, obj1);
         obj[0] = items;
-        const items1 = [closure_1_12(closure_1_4, obj), ];
+        const items1 = [closure_1_12(closure_1_4, obj)];
         const obj2 = { style: lib.appListHeader, children: null };
         const obj3 = { title: null };
         const intl3 = lib(navigation[17]).intl;
@@ -85,7 +97,7 @@ export default function UserSettingsAuthedApps() {
       if (0 === appAuthTokens.length) {
         obj = { style: null, children: null };
         obj[0] = tmp.emptyContainer;
-        const items2 = [renderHeader(), ];
+        const items2 = [renderHeader()];
         obj = { color: "mobile-text-heading-primary", style: null, variant: "heading-md/extrabold", children: null };
         obj[1] = tmp.emptyText;
         let intl = tmp3(tmp2[17]).intl;
@@ -95,7 +107,7 @@ export default function UserSettingsAuthedApps() {
         let tmp10 = callback2(closure_4, obj);
       } else {
         obj1 = { contentContainerStyle: null, ListHeaderComponent: null, renderItem: null, data: null };
-        const items3 = [tmp.container, ];
+        const items3 = [tmp.container];
         obj2 = { paddingBottom: null };
         obj2[0] = appAuthTokens(navigation[11])().bottom + PX_24;
         items3[1] = obj2;
@@ -111,7 +123,7 @@ export default function UserSettingsAuthedApps() {
     return tmp10;
   }
   tmp10 = callback(closure_5, { style: tmp.spinner, animating: true, size: "large" });
-};
+}
 export const DisclosureIcon = function DisclosureIcon(disclosure) {
   disclosure = disclosure.disclosure;
   const style = disclosure.style;

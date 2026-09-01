@@ -15,7 +15,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ container: { flex: 1, paddingHorizontal: 16 }, detailsAction: { marginBottom: 16 } });
+let closure_8 = createCacheKey.createStyles({
+  container: { flex: 1, paddingHorizontal: 16 },
+  detailsAction: { marginBottom: 16 },
+});
 const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionConfirmSubmission.tsx");
 
 export default function AppealIngestionConfirmSubmission(isDsaEligible) {
@@ -46,7 +49,12 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
   const intl = tmp2(1236).intl;
   const intl2 = tmp2(1236).intl;
   const stringResult = intl.string(getSystemLocale.t["C5q+pW"]);
-  const items3 = [callback(AppealIngestionModal.AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(getSystemLocale.t["G2g/g5"]) }), ];
+  const items3 = [
+    callback(AppealIngestionModal.AppealIngestionModalHeader, {
+      headerText: stringResult,
+      subHeaderText: intl2.string(getSystemLocale.t["G2g/g5"]),
+    }),
+  ];
   obj = { style: tmp.container, children: null };
   obj = { reasons: null };
   const stringResult1 = intl2.string(getSystemLocale.t["G2g/g5"]);
@@ -54,7 +62,7 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
   const tmp14 = AppealIngestionBreadcrumbsDefault;
   const items4 = [parseMessageEmbedForProps.getAppealSignalDisplayText(stateFromStores1), stateFromStores2];
   obj[0] = items4.filter((arg0) => arg0.length > 0);
-  const items5 = [callback(tmp14, obj), , , ];
+  const items5 = [callback(tmp14, obj), , ,];
   if (!isDsaEligible) {
     items5[1] = isDsaEligible;
     let tmp11Result = flagged_content.length > 0;
@@ -86,9 +94,13 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
         },
         onClose() {
           return callback(4445).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
-        }
+        },
       };
-      return obj.openLazy(callback(paths[15])(paths[14], paths.paths), "AppealIngestionFreeTextAppealReasonActionSheet", obj);
+      return obj.openLazy(
+        callback(paths[15])(paths[14], paths.paths),
+        "AppealIngestionFreeTextAppealReasonActionSheet",
+        obj,
+      );
     };
     if (stateFromStores2.length > 0) {
       const intl4 = tmp2(1236).intl;
@@ -100,4 +112,4 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
     obj4[4] = stringResult2;
     tmp11Result = tmp11(tmp2(4474).Text, obj4);
   }
-};
+}

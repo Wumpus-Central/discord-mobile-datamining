@@ -91,4 +91,4 @@ export default function getGameProfileWebsiteData(category) {
   } else {
     return null;
   }
-};
+}

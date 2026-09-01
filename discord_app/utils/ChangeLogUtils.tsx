@@ -203,7 +203,7 @@ export default {
     obj.subtext = _modDef4979;
     const merged2 = Object.assign(obj);
     return obj;
-  }
+  },
 };
 export const renderChangelogMessageMarkup = function renderChangelogMessageMarkup(content, uri) {
   let obj = get_defaultRulesDefault;
@@ -217,5 +217,9 @@ export const renderChangelogMessageMarkup = function renderChangelogMessageMarku
     obj1 = {};
   }
   const reactParserForResult = obj.reactParserFor(obj);
-  return { hasSpoilerEmbeds: false, hasBailedAst: false, content: obj.reactParserFor(obj)(content.content, false, obj1) };
+  return {
+    hasSpoilerEmbeds: false,
+    hasBailedAst: false,
+    content: obj.reactParserFor(obj)(content.content, false, obj1),
+  };
 };

@@ -3,7 +3,9 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsTopicGradient.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/sidebar/details/ChannelDetailsTopicGradient.tsx",
+);
 
 export const useChannelTopicGradientBackground = function useChannelTopicGradientBackground() {
   token = token(4197).useToken(ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);

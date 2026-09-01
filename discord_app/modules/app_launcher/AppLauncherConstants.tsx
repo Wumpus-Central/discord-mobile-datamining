@@ -13,4 +13,7 @@ export const APP_LAUNCHER_PROFILE_FRIEND_ACTIVITY_ENTRY = "app-launcher-profile-
 export const APP_LAUNCHER_WIDTH = 500;
 export const APP_LAUNCHER_MAX_HEIGHT = 680;
 export const APP_LAUNCHER_HEIGHT = "min(100vh, 680px)";
-export const APP_LAUNCHER_SIZE_CSS_VARS = { "--custom-app-launcher-width": "500px", "--custom-app-launcher-height": "min(100vh, 680px)" };
+export const APP_LAUNCHER_SIZE_CSS_VARS = {
+  "--custom-app-launcher-width": "500px",
+  "--custom-app-launcher-height": "min(100vh, 680px)",
+};

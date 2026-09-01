@@ -75,7 +75,11 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
     channels.map((id) => {
       let obj = noChannelOptionLabel(channels[14]);
       const channelIconWithGuild = obj.getChannelIconWithGuild(id, closure_1);
-      obj = { value: id.id, label: noChannelOptionLabel(channels[15]).computeChannelName(id, onClose, closure_1_3), icon: null };
+      obj = {
+        value: id.id,
+        label: noChannelOptionLabel(channels[15]).computeChannelName(id, onClose, closure_1_3),
+        icon: null,
+      };
       let tmp4Result = null;
       if (null != channelIconWithGuild) {
         obj = { source: null };
@@ -84,10 +88,10 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
       }
       obj[2] = tmp4Result;
       return closure_1_5(noChannelOptionLabel(channels[8]).TableRadioRow, obj, id.id);
-    })
+    }),
   ];
   obj4[4] = items;
   obj3[1] = closure_6(_require(channels[13]).TableRadioGroup, obj4);
   obj2[2] = callback(_require(channels[12]).BottomSheetScrollView, obj3);
   return callback(_require(channels[11]).ActionSheet, obj2);
-};
+}

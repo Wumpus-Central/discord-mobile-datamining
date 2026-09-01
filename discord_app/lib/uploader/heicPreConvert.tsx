@@ -26,7 +26,7 @@ function _maybePreConvertHeicItem() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -74,7 +74,11 @@ function _maybePreConvertHeicItem() {
               tmp = lib;
               if (closure_1_4(lib)) {
                 constants = 1;
-                const items = [lib(closure_1_1[5])(closure_1_1[4], closure_1_1.paths), lib(closure_1_1[5])(closure_1_1[6], closure_1_1.paths), lib(closure_1_1[5])(closure_1_1[7], closure_1_1.paths)];
+                const items = [
+                  lib(closure_1_1[5])(closure_1_1[4], closure_1_1.paths),
+                  lib(closure_1_1[5])(closure_1_1[6], closure_1_1.paths),
+                  lib(closure_1_1[5])(closure_1_1[7], closure_1_1.paths),
+                ];
                 config = 2;
                 c8 = 1;
                 obj1 = { value: null, done: false };

@@ -21,7 +21,21 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
       if (null != index) {
         tmp13 = index;
       }
-      obj = { id: null, type: null, index: null, name: null, originalName: null, originalId: null, facing: null, hardwareId: null, containerId: null, effects: null, macosTransportType: null, windowsEndpointFormFactor: null, windowsDeviceService: null };
+      obj = {
+        id: null,
+        type: null,
+        index: null,
+        name: null,
+        originalName: null,
+        originalId: null,
+        facing: null,
+        hardwareId: null,
+        containerId: null,
+        effects: null,
+        macosTransportType: null,
+        windowsEndpointFormFactor: null,
+        windowsDeviceService: null,
+      };
       obj[0] = tmp12;
       obj[1] = tmp10;
       obj[2] = tmp13;
@@ -98,7 +112,21 @@ export const getAudioInputDevices = function getAudioInputDevices() {
           if (null != index) {
             tmp13 = index;
           }
-          obj = { id: null, type: null, index: null, name: null, originalName: null, originalId: null, facing: null, hardwareId: null, containerId: null, effects: null, macosTransportType: null, windowsEndpointFormFactor: null, windowsDeviceService: null };
+          obj = {
+            id: null,
+            type: null,
+            index: null,
+            name: null,
+            originalName: null,
+            originalId: null,
+            facing: null,
+            hardwareId: null,
+            containerId: null,
+            effects: null,
+            macosTransportType: null,
+            windowsEndpointFormFactor: null,
+            windowsDeviceService: null,
+          };
           obj[0] = tmp12;
           obj[1] = tmp10;
           obj[2] = tmp13;
@@ -177,7 +205,21 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
           if (null != index) {
             tmp13 = index;
           }
-          obj = { id: null, type: null, index: null, name: null, originalName: null, originalId: null, facing: null, hardwareId: null, containerId: null, effects: null, macosTransportType: null, windowsEndpointFormFactor: null, windowsDeviceService: null };
+          obj = {
+            id: null,
+            type: null,
+            index: null,
+            name: null,
+            originalName: null,
+            originalId: null,
+            facing: null,
+            hardwareId: null,
+            containerId: null,
+            effects: null,
+            macosTransportType: null,
+            windowsEndpointFormFactor: null,
+            windowsDeviceService: null,
+          };
           obj[0] = tmp12;
           obj[1] = tmp10;
           obj[2] = tmp13;
@@ -256,7 +298,21 @@ export const getVideoInputDevices = function getVideoInputDevices() {
           if (null != index) {
             tmp13 = index;
           }
-          obj = { id: null, type: null, index: null, name: null, originalName: null, originalId: null, facing: null, hardwareId: null, containerId: null, effects: null, macosTransportType: null, windowsEndpointFormFactor: null, windowsDeviceService: null };
+          obj = {
+            id: null,
+            type: null,
+            index: null,
+            name: null,
+            originalName: null,
+            originalId: null,
+            facing: null,
+            hardwareId: null,
+            containerId: null,
+            effects: null,
+            macosTransportType: null,
+            windowsEndpointFormFactor: null,
+            windowsDeviceService: null,
+          };
           obj[0] = tmp12;
           obj[1] = tmp10;
           obj[2] = tmp13;

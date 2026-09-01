@@ -24,25 +24,45 @@ function resolveMessageCodedLinks(content) {
       ({ type, code } = arg0);
       if (code(table[5]).CodedLinkType.INVITE === type) {
         let tmpResult = tmp(tmp2[6]);
-        const result = tmpResult.queueMessageLinkFetch(callback(function*() {
-          if (c0 === 2) {
-            c0 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+        const result = tmpResult.queueMessageLinkFetch(
+          callback(function* () {
+            if (c0 === 2) {
+              c0 = 3;
+              HermesBuiltin.throwTypeError();
+            } else if (tmp3 === 3) {
+              if (arg0 === 1) {
+                throw arg1;
+              } else if (arg0 === 2) {
+                let obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                return { value: "HermesInternal", done: null };
+              }
             } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              c0 = 2;
-              if (0 === v0) {
-                if (arg0 === 1) {
+              try {
+                c0 = 2;
+                if (0 === v0) {
+                  if (arg0 === 1) {
+                    c0 = 3;
+                    throw arg1;
+                  } else if (arg0 === 2) {
+                    c0 = 3;
+                    obj = { value: null, done: true };
+                    obj[0] = arg1;
+                    return obj;
+                  } else {
+                    if (null == closure_1_5.getInvite(c0)) {
+                      obj1 = v0(closure_1_2[7]);
+                      v0 = 1;
+                      c0 = 1;
+                      obj1 = { value: null, done: false };
+                      obj1[0] = obj1.resolveInvite(tmp6);
+                      return obj1;
+                    }
+                    tmp6 = c0;
+                  }
+                } else if (arg0 === 1) {
                   c0 = 3;
                   throw arg1;
                 } else if (arg0 === 2) {
@@ -50,55 +70,57 @@ function resolveMessageCodedLinks(content) {
                   obj = { value: null, done: true };
                   obj[0] = arg1;
                   return obj;
-                } else {
-                  if (null == closure_1_5.getInvite(c0)) {
-                    obj1 = v0(closure_1_2[7]);
-                    v0 = 1;
-                    c0 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = obj1.resolveInvite(tmp6);
-                    return obj1;
-                  }
-                  tmp6 = c0;
                 }
-              } else if (arg0 === 1) {
                 c0 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c0 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                return { value: "HermesInternal", done: null };
+              } catch (tmp10) {
+                c0 = tmp;
+                throw tmp10;
               }
-              c0 = 3;
-              return { value: "HermesInternal", done: null };
-            } catch (tmp10) {
-              c0 = tmp;
-              throw tmp10;
             }
-          }
-        }));
+          }),
+        );
       } else if (tmp(tmp2[5]).CodedLinkType.TEMPLATE === type) {
         tmpResult = tmp(tmp2[6]);
-        const result1 = tmpResult.queueMessageLinkFetch(callback(function*() {
-          if (c0 === 2) {
-            c0 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+        const result1 = tmpResult.queueMessageLinkFetch(
+          callback(function* () {
+            if (c0 === 2) {
+              c0 = 3;
+              HermesBuiltin.throwTypeError();
+            } else if (tmp3 === 3) {
+              if (arg0 === 1) {
+                throw arg1;
+              } else if (arg0 === 2) {
+                let obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                return { value: "HermesInternal", done: null };
+              }
             } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              c0 = 2;
-              if (0 === v0) {
-                if (arg0 === 1) {
+              try {
+                c0 = 2;
+                if (0 === v0) {
+                  if (arg0 === 1) {
+                    c0 = 3;
+                    throw arg1;
+                  } else if (arg0 === 2) {
+                    c0 = 3;
+                    obj = { value: null, done: true };
+                    obj[0] = arg1;
+                    return obj;
+                  } else {
+                    if (null == closure_1_4.getGuildTemplate(c0)) {
+                      obj1 = v0(closure_1_2[8]);
+                      v0 = 1;
+                      c0 = 1;
+                      obj1 = { value: null, done: false };
+                      obj1[0] = obj1.resolveGuildTemplate(tmp6);
+                      return obj1;
+                    }
+                    tmp6 = c0;
+                  }
+                } else if (arg0 === 1) {
                   c0 = 3;
                   throw arg1;
                 } else if (arg0 === 2) {
@@ -106,34 +128,16 @@ function resolveMessageCodedLinks(content) {
                   obj = { value: null, done: true };
                   obj[0] = arg1;
                   return obj;
-                } else {
-                  if (null == closure_1_4.getGuildTemplate(c0)) {
-                    obj1 = v0(closure_1_2[8]);
-                    v0 = 1;
-                    c0 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = obj1.resolveGuildTemplate(tmp6);
-                    return obj1;
-                  }
-                  tmp6 = c0;
                 }
-              } else if (arg0 === 1) {
                 c0 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c0 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                return { value: "HermesInternal", done: null };
+              } catch (tmp10) {
+                c0 = tmp;
+                throw tmp10;
               }
-              c0 = 3;
-              return { value: "HermesInternal", done: null };
-            } catch (tmp10) {
-              c0 = tmp;
-              throw tmp10;
             }
-          }
-        }));
+          }),
+        );
       } else if (tmp(tmp2[5]).CodedLinkType.BUILD_OVERRIDE !== type) {
         if (tmp(tmp2[5]).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
           if (tmp(tmp2[5]).CodedLinkType.EVENT !== type) {
@@ -195,25 +199,45 @@ function resolveMessageCodedLinks(content) {
           ({ type, code } = arg0);
           if (code(table[5]).CodedLinkType.INVITE === type) {
             let tmpResult = tmp(tmp2[6]);
-            const result = tmpResult.queueMessageLinkFetch(callback(function*() {
-              if (c0 === 2) {
-                c0 = 3;
-                HermesBuiltin.throwTypeError();
-              } else if (tmp3 === 3) {
-                if (arg0 === 1) {
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
+            const result = tmpResult.queueMessageLinkFetch(
+              callback(function* () {
+                if (c0 === 2) {
+                  c0 = 3;
+                  HermesBuiltin.throwTypeError();
+                } else if (tmp3 === 3) {
+                  if (arg0 === 1) {
+                    throw arg1;
+                  } else if (arg0 === 2) {
+                    let obj = { value: null, done: true };
+                    obj[0] = arg1;
+                    return obj;
+                  } else {
+                    return { value: "HermesInternal", done: null };
+                  }
                 } else {
-                  return { value: "HermesInternal", done: null };
-                }
-              } else {
-                try {
-                  c0 = 2;
-                  if (0 === v0) {
-                    if (arg0 === 1) {
+                  try {
+                    c0 = 2;
+                    if (0 === v0) {
+                      if (arg0 === 1) {
+                        c0 = 3;
+                        throw arg1;
+                      } else if (arg0 === 2) {
+                        c0 = 3;
+                        obj = { value: null, done: true };
+                        obj[0] = arg1;
+                        return obj;
+                      } else {
+                        if (null == closure_1_5.getInvite(c0)) {
+                          obj1 = v0(closure_1_2[7]);
+                          v0 = 1;
+                          c0 = 1;
+                          obj1 = { value: null, done: false };
+                          obj1[0] = obj1.resolveInvite(tmp6);
+                          return obj1;
+                        }
+                        tmp6 = c0;
+                      }
+                    } else if (arg0 === 1) {
                       c0 = 3;
                       throw arg1;
                     } else if (arg0 === 2) {
@@ -221,55 +245,57 @@ function resolveMessageCodedLinks(content) {
                       obj = { value: null, done: true };
                       obj[0] = arg1;
                       return obj;
-                    } else {
-                      if (null == closure_1_5.getInvite(c0)) {
-                        obj1 = v0(closure_1_2[7]);
-                        v0 = 1;
-                        c0 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = obj1.resolveInvite(tmp6);
-                        return obj1;
-                      }
-                      tmp6 = c0;
                     }
-                  } else if (arg0 === 1) {
                     c0 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c0 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    return { value: "HermesInternal", done: null };
+                  } catch (tmp10) {
+                    c0 = tmp;
+                    throw tmp10;
                   }
-                  c0 = 3;
-                  return { value: "HermesInternal", done: null };
-                } catch (tmp10) {
-                  c0 = tmp;
-                  throw tmp10;
                 }
-              }
-            }));
+              }),
+            );
           } else if (tmp(tmp2[5]).CodedLinkType.TEMPLATE === type) {
             tmpResult = tmp(tmp2[6]);
-            const result1 = tmpResult.queueMessageLinkFetch(callback(function*() {
-              if (c0 === 2) {
-                c0 = 3;
-                HermesBuiltin.throwTypeError();
-              } else if (tmp3 === 3) {
-                if (arg0 === 1) {
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
+            const result1 = tmpResult.queueMessageLinkFetch(
+              callback(function* () {
+                if (c0 === 2) {
+                  c0 = 3;
+                  HermesBuiltin.throwTypeError();
+                } else if (tmp3 === 3) {
+                  if (arg0 === 1) {
+                    throw arg1;
+                  } else if (arg0 === 2) {
+                    let obj = { value: null, done: true };
+                    obj[0] = arg1;
+                    return obj;
+                  } else {
+                    return { value: "HermesInternal", done: null };
+                  }
                 } else {
-                  return { value: "HermesInternal", done: null };
-                }
-              } else {
-                try {
-                  c0 = 2;
-                  if (0 === v0) {
-                    if (arg0 === 1) {
+                  try {
+                    c0 = 2;
+                    if (0 === v0) {
+                      if (arg0 === 1) {
+                        c0 = 3;
+                        throw arg1;
+                      } else if (arg0 === 2) {
+                        c0 = 3;
+                        obj = { value: null, done: true };
+                        obj[0] = arg1;
+                        return obj;
+                      } else {
+                        if (null == closure_1_4.getGuildTemplate(c0)) {
+                          obj1 = v0(closure_1_2[8]);
+                          v0 = 1;
+                          c0 = 1;
+                          obj1 = { value: null, done: false };
+                          obj1[0] = obj1.resolveGuildTemplate(tmp6);
+                          return obj1;
+                        }
+                        tmp6 = c0;
+                      }
+                    } else if (arg0 === 1) {
                       c0 = 3;
                       throw arg1;
                     } else if (arg0 === 2) {
@@ -277,34 +303,16 @@ function resolveMessageCodedLinks(content) {
                       obj = { value: null, done: true };
                       obj[0] = arg1;
                       return obj;
-                    } else {
-                      if (null == closure_1_4.getGuildTemplate(c0)) {
-                        obj1 = v0(closure_1_2[8]);
-                        v0 = 1;
-                        c0 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = obj1.resolveGuildTemplate(tmp6);
-                        return obj1;
-                      }
-                      tmp6 = c0;
                     }
-                  } else if (arg0 === 1) {
                     c0 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c0 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    return { value: "HermesInternal", done: null };
+                  } catch (tmp10) {
+                    c0 = tmp;
+                    throw tmp10;
                   }
-                  c0 = 3;
-                  return { value: "HermesInternal", done: null };
-                } catch (tmp10) {
-                  c0 = tmp;
-                  throw tmp10;
                 }
-              }
-            }));
+              }),
+            );
           } else if (tmp(tmp2[5]).CodedLinkType.BUILD_OVERRIDE !== type) {
             if (tmp(tmp2[5]).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
               if (tmp(tmp2[5]).CodedLinkType.EVENT !== type) {

@@ -10,21 +10,55 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
-  let obj = { content: null, examples: null, betaBadge: null, title: null, body: null, actions: null, row: null, outerRow: null, innerRow: null, outerStack: null, innerStack: null };
+  let obj = {
+    content: null,
+    examples: null,
+    betaBadge: null,
+    title: null,
+    body: null,
+    actions: null,
+    row: null,
+    outerRow: null,
+    innerRow: null,
+    outerStack: null,
+    innerStack: null,
+  };
   obj = { alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
   obj[0] = obj;
   obj = { width: "100%", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_16 };
   obj[1] = obj;
-  obj[2] = { marginTop: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round, paddingVertical: 0 };
-  obj1 = { marginTop: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round, paddingVertical: 0 };
+  obj[2] = {
+    marginTop: ThemesDefault.space.PX_24,
+    paddingHorizontal: ThemesDefault.space.PX_8,
+    borderRadius: ThemesDefault.radii.round,
+    paddingVertical: 0,
+  };
+  obj1 = {
+    marginTop: ThemesDefault.space.PX_24,
+    paddingHorizontal: ThemesDefault.space.PX_8,
+    borderRadius: ThemesDefault.radii.round,
+    paddingVertical: 0,
+  };
   obj[3] = { textAlign: "center", marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
   const obj2 = { textAlign: "center", marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
   obj[4] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_24 };
   const obj3 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_24 };
   obj[5] = { gap: ThemesDefault.space.PX_12, width: "100%" };
   const obj4 = { gap: ThemesDefault.space.PX_12, width: "100%" };
-  obj[6] = { alignSelf: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderColor: ThemesDefault.colors.BORDER_NORMAL, borderWidth: 1, borderRadius: ThemesDefault.radii.md };
-  const obj5 = { alignSelf: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderColor: ThemesDefault.colors.BORDER_NORMAL, borderWidth: 1, borderRadius: ThemesDefault.radii.md };
+  obj[6] = {
+    alignSelf: "center",
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+    borderColor: ThemesDefault.colors.BORDER_NORMAL,
+    borderWidth: 1,
+    borderRadius: ThemesDefault.radii.md,
+  };
+  const obj5 = {
+    alignSelf: "center",
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+    borderColor: ThemesDefault.colors.BORDER_NORMAL,
+    borderWidth: 1,
+    borderRadius: ThemesDefault.radii.md,
+  };
   obj[7] = { padding: ThemesDefault.space.PX_8, opacity: 0.75 };
   const obj6 = { padding: ThemesDefault.space.PX_8, opacity: 0.75 };
   obj[8] = { padding: ThemesDefault.space.PX_10 };
@@ -32,7 +66,9 @@ let closure_9 = createCacheKey.createStyles(() => {
   obj[10] = { width: "auto", maxWidth: "100%", overflow: "hidden" };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorAnnounceActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/custom_typing_indicator/native/CustomTypingIndicatorAnnounceActionSheet.tsx",
+);
 
 export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -66,28 +102,47 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
           current.closeActionSheet();
         }
         markAsDismissed(closure_1_6.USER_DISMISS);
-      }
+      },
     }),
-  ,
-  ,
-  ,
-  ,
-
+    ,
+    ,
+    ,
+    ,
   ];
   const obj2 = { style: tmp2.examples, children: null };
   const obj3 = { style: items4, children: null };
-  items4 = [, ];
+  items4 = [,];
   ({ row: arr5[0], outerRow: arr5[1] } = tmp2);
-  const obj4 = { name: "Cap", suggestion: markAsDismissed(1930).TypingSuggestion.UNSPECIFIED, emojiSize: 24, spacing: 8, textVariant: "text-md/medium", textColor: "text-subtle", lineClamp: 1, emojiSource: null, style: null };
+  const obj4 = {
+    name: "Cap",
+    suggestion: markAsDismissed(1930).TypingSuggestion.UNSPECIFIED,
+    emojiSize: 24,
+    spacing: 8,
+    textVariant: "text-md/medium",
+    textColor: "text-subtle",
+    lineClamp: 1,
+    emojiSource: null,
+    style: null,
+  };
   const items5 = [ref(11544), ref(11545), ref(11544)];
   obj4[7] = items5;
   obj4[8] = tmp2.outerStack;
   obj3[1] = callback(ref(11542), obj4);
-  const items6 = [callback(View, obj3), , ];
+  const items6 = [callback(View, obj3), ,];
   const obj5 = { style: items7, children: null };
-  items7 = [, ];
+  items7 = [,];
   ({ row: arr8[0], innerRow: arr8[1] } = tmp2);
-  const obj6 = { name: "Rose", suggestion: null, emojiSize: 28, spacing: 10, textVariant: "text-lg/medium", textColor: "text-default", lineClamp: 1, style: null, emojiSource: null };
+  const obj6 = {
+    name: "Rose",
+    suggestion: null,
+    emojiSize: 28,
+    spacing: 10,
+    textVariant: "text-lg/medium",
+    textColor: "text-default",
+    lineClamp: 1,
+    style: null,
+    emojiSource: null,
+  };
   obj1 = {
     onPress() {
       const current = ref.current;
@@ -95,7 +150,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
         current.closeActionSheet();
       }
       markAsDismissed(closure_1_6.USER_DISMISS);
-    }
+    },
   };
   const tmp6 = ref(11542);
   obj6[1] = markAsDismissed(1930).TypingSuggestion.YAPPING;
@@ -105,9 +160,19 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   obj5[1] = callback(ref(11542), obj6);
   items6[1] = callback(View, obj5);
   const obj7 = { style: items9, children: null };
-  items9 = [, ];
+  items9 = [,];
   ({ row: arr10[0], outerRow: arr10[1] } = tmp2);
-  const obj8 = { name: "Loky", suggestion: null, emojiSize: 24, spacing: 8, textVariant: "text-md/medium", textColor: "text-subtle", lineClamp: 1, style: null, emojiSource: null };
+  const obj8 = {
+    name: "Loky",
+    suggestion: null,
+    emojiSize: 24,
+    spacing: 8,
+    textVariant: "text-md/medium",
+    textColor: "text-subtle",
+    lineClamp: 1,
+    style: null,
+    emojiSource: null,
+  };
   const tmp7 = ref(11542);
   obj8[1] = markAsDismissed(1930).TypingSuggestion.OVERSHARING;
   obj8[7] = tmp2.outerStack;
@@ -136,7 +201,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   const intl4 = markAsDismissed(1236).intl;
   obj13[0] = intl4.string(ref(3503).TswY68);
   obj13[3] = callback;
-  const items11 = [callback(markAsDismissed(4928).Button, obj13), ];
+  const items11 = [callback(markAsDismissed(4928).Button, obj13)];
   const obj14 = { text: null, variant: "secondary", size: "lg", onPress: null };
   const intl5 = markAsDismissed(1236).intl;
   obj14[0] = intl5.string(markAsDismissed(1236).t.TulDPl);
@@ -148,4 +213,4 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   obj[1] = callback2(View, obj);
   obj[4] = callback(markAsDismissed(5553).SafeAreaPaddingView, obj);
   return callback(markAsDismissed(5622).BottomSheet, obj);
-};
+}

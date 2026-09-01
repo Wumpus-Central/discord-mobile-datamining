@@ -14,7 +14,10 @@ initializeDefault;
 class StageBoostUpsellManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    applyArgumentsResult.actions = { VOICE_CHANNEL_SELECT: applyArgumentsResult.handleVoiceChannelSelect, VOICE_STATE_UPDATES: applyArgumentsResult.handleVoiceStateUpdates };
+    applyArgumentsResult.actions = {
+      VOICE_CHANNEL_SELECT: applyArgumentsResult.handleVoiceChannelSelect,
+      VOICE_STATE_UPDATES: applyArgumentsResult.handleVoiceStateUpdates,
+    };
     return applyArgumentsResult;
   }
 }

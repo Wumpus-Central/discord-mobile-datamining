@@ -29,4 +29,4 @@ export default function useInterval(arg0, arg1) {
       tmp2.current = null;
     }
   }, items1);
-};
+}

@@ -10,7 +10,7 @@ function _fetchAdUser() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -46,7 +46,13 @@ function _fetchAdUser() {
               if (null != closure_1_3.adUser) {
                 if (null != tmp82.adUser.advertisingId) {
                   let obj8 = callback(closure_1_1[3]);
-                  obj1 = { has_advertising_id: true, android_advertising_id: null, location: null, success: true, last_fetched_timestamp: null };
+                  obj1 = {
+                    has_advertising_id: true,
+                    android_advertising_id: null,
+                    location: null,
+                    success: true,
+                    last_fetched_timestamp: null,
+                  };
                   obj1[1] = tmp82.adUser.advertisingId;
                   obj1[2] = tmp81;
                   obj1[4] = tmp82.lastFetchedAt;
@@ -96,7 +102,13 @@ function _fetchAdUser() {
             closure_2 = arg1;
             const _performance3 = performance;
             closure_3 = performance.now() - dependencyMap;
-            obj5 = { platform: null, success: true, duration_ms: null, has_advertising_id: null, is_limit_ad_tracking_enabled: null };
+            obj5 = {
+              platform: null,
+              success: true,
+              duration_ms: null,
+              has_advertising_id: null,
+              is_limit_ad_tracking_enabled: null,
+            };
             obj5[0] = c5.ANDROID;
             obj5[2] = closure_3;
             obj5[3] = null != closure_2.googleAdvertisingId;

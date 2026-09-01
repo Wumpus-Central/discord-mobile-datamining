@@ -14,7 +14,9 @@ noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { header: null, text: null };
 createCacheKey = {};
-const merged = Object.assign(importDefaultResult(require("ME").Fonts.PRIMARY_BOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+const merged = Object.assign(
+  importDefaultResult(require("ME").Fonts.PRIMARY_BOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
+);
 createCacheKey.textAlign = "center";
 createCacheKey.marginVertical = 12;
 createCacheKey[0] = createCacheKey;
@@ -28,11 +30,11 @@ export default function QuarantineModeInfoAlert(onClose) {
   obj = { style: tmp.header, children: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.EouHwv);
-  const items = [callback(Button.LegacyText, obj), ];
+  const items = [callback(Button.LegacyText, obj)];
   obj = { style: tmp.text, variant: "text-md/medium", children: null };
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(getSystemLocale.t.zNPBMA);
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(componentDidMountDefault, obj);
-};
+}

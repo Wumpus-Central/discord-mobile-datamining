@@ -9,10 +9,18 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 require = arg1;
 function CoachmarkImage() {
-  return <View style={callback().coachmarkImageContainer}>{jsx(AccountAgeTier10LargeBadge.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" })}</View>;
+  return (
+    <View style={callback().coachmarkImageContainer}>
+      {jsx(AccountAgeTier10LargeBadge.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" })}
+    </View>
+  );
 }
-let closure_8 = createCacheKey.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
-let result = require("set").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx");
+let closure_8 = createCacheKey.createStyles({
+  coachmarkImageContainer: { alignItems: "center", justifyContent: "center" },
+});
+let result = require("set").fileFinishedImporting(
+  "modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx",
+);
 
 export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   visible = visible.visible;
@@ -48,17 +56,20 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
     markAsDismissed(closure_1_6.USER_DISMISS);
   }, items1);
   const items2 = [stringResult, string2Result, visible, callback];
-  const memo = React.useMemo(() => ({
-    title: c2,
-    description: c3,
-    visible,
-    position: "bottom",
-    onDismiss: callback,
-    renderImgComponent() {
-      return callback(closure_9, {});
-    }
-  }), items2);
+  const memo = React.useMemo(
+    () => ({
+      title: c2,
+      description: c3,
+      visible,
+      position: "bottom",
+      onDismiss: callback,
+      renderImgComponent() {
+        return callback(closure_9, {});
+      },
+    }),
+    items2,
+  );
   const obj2 = markAsDismissed(4139);
   const coachmark = visible(8973).useCoachmark(visible.targetRef, memo);
   return null;
-};
+}

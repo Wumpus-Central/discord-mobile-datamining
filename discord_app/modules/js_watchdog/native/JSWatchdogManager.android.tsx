@@ -24,11 +24,11 @@ class JSWatchdogManager extends tmp4 {
     applyArgumentsResult._pingCompleted = true;
     applyArgumentsResult.actions = {
       APP_STATE_UPDATE(arg0) {
-            applyArgumentsResult.handleAppStateUpdate(arg0);
-          },
+        applyArgumentsResult.handleAppStateUpdate(arg0);
+      },
       CONNECTION_OPEN_SUPPLEMENTAL() {
-            const result = applyArgumentsResult.handleConnectionOpenSupplemental();
-          }
+        const result = applyArgumentsResult.handleConnectionOpenSupplemental();
+      },
     };
     return applyArgumentsResult;
   }
@@ -54,7 +54,7 @@ prototype["ping"] = function ping() {
     flag = false;
   }
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -159,9 +159,15 @@ prototype["ping"] = function ping() {
                   checkForStallReportResult._lastSessionId = c0;
                   checkForStallReportResult._analyticsReportsRemaining = 3;
                 }
-                checkForStallReportResult._analyticsReportsRemaining = +checkForStallReportResult._analyticsReportsRemaining - 1;
+                checkForStallReportResult._analyticsReportsRemaining =
+                  +checkForStallReportResult._analyticsReportsRemaining - 1;
                 if (+checkForStallReportResult._analyticsReportsRemaining > 0) {
-                  checkForStallReportResult.reportStall(_lastSessionId, c0, false, checkForStallReportResult._analyticsReportsRemaining);
+                  checkForStallReportResult.reportStall(
+                    _lastSessionId,
+                    c0,
+                    false,
+                    checkForStallReportResult._analyticsReportsRemaining,
+                  );
                 }
                 if (0 === checkForStallReportResult._analyticsReportsRemaining) {
                   checkForStallReportResult.stopWatchdog();
@@ -201,7 +207,7 @@ prototype["ping"] = function ping() {
 };
 prototype["startWatchdog"] = function startWatchdog() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -301,7 +307,7 @@ prototype["reportStall"] = function reportStall(c1, c0, is_previous, _analyticsR
 };
 prototype["getCurrentSessionId"] = function getCurrentSessionId() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();

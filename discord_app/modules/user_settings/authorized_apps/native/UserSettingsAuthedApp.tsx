@@ -24,7 +24,10 @@ function WarningLabel(children) {
   const tmp = callback3();
   let obj = { style: tmp.warningContainer, children: null };
   obj = { size: "xs", color: ThemesDefault.colors.TEXT_MUTED, style: tmp.warningIcon };
-  const items = [callback(CircleInformationIcon.CircleInformationIcon, obj), callback(Text.Text, { color: "text-default", variant: "text-sm/medium", children: children.text })];
+  const items = [
+    callback(CircleInformationIcon.CircleInformationIcon, obj),
+    callback(Text.Text, { color: "text-default", variant: "text-sm/medium", children: children.text }),
+  ];
   obj[1] = items;
   return callback2(closure_5, obj);
 }
@@ -53,13 +56,22 @@ function ParentApp(application) {
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = ME);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-createCacheKey = { container: { paddingHorizontal: 16, paddingVertical: 24 }, section: { marginBottom: 24 }, header: { flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12 }, appAboutDescription: { width: "100%" }, warningContainer: null, warningIcon: null };
+createCacheKey = {
+  container: { paddingHorizontal: 16, paddingVertical: 24 },
+  section: { marginBottom: 24 },
+  header: { flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12 },
+  appAboutDescription: { width: "100%" },
+  warningContainer: null,
+  warningIcon: null,
+};
 createCacheKey = { marginTop: ThemesDefault.space.PX_12, display: "flex", flexDirection: "row" };
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { width: 16, height: 16, marginRight: 8, color: ThemesDefault.colors.TEXT_MUTED };
 let closure_19 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { width: 16, height: 16, marginRight: 8, color: ThemesDefault.colors.TEXT_MUTED };
-let result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedApp.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/authorized_apps/native/UserSettingsAuthedApp.tsx",
+);
 
 export default function UserSettingsAuthedApp(oauth2Token) {
   oauth2Token = oauth2Token.oauth2Token;
@@ -123,7 +135,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
         }
         obj = { location: _location, applicationId: application.id };
         closure_1_1(closure_1_2[20]).leaveActivity(obj);
-      }
+      },
     };
     obj.openAlert("confirm-delete-authed-app", closure_1_17(application(stateFromStores[26]), obj));
   }, items4);
@@ -151,29 +163,36 @@ export default function UserSettingsAuthedApp(oauth2Token) {
   let obj8 = id(stateFromStores[22]);
   const items6 = [closure_10];
   const items7 = [stateFromStores3];
-  const stateFromStoresObject = obj8.useStateFromStoresObject(items6, () => {
-    if (null == stateFromStores3) {
-      let obj = { appDMChannelMuteConfig: null, muted: false };
-    } else {
-      obj = { appDMChannelMuteConfig: null, muted: null };
-      obj[0] = closure_1_10.getChannelMuteConfig(null, tmp);
-      obj[1] = closure_1_10.isChannelMuted(null, tmp);
-    }
-    return obj;
-  }, items7);
+  const stateFromStoresObject = obj8.useStateFromStoresObject(
+    items6,
+    () => {
+      if (null == stateFromStores3) {
+        let obj = { appDMChannelMuteConfig: null, muted: false };
+      } else {
+        obj = { appDMChannelMuteConfig: null, muted: null };
+        obj[0] = closure_1_10.getChannelMuteConfig(null, tmp);
+        obj[1] = closure_1_10.isChannelMuted(null, tmp);
+      }
+      return obj;
+    },
+    items7,
+  );
   const appDMChannelMuteConfig = stateFromStoresObject.appDMChannelMuteConfig;
   obj = { contentContainerStyle: tmp.container, children: null };
   const description = application.description;
   let obj10 = application(stateFromStores[39]);
   obj1 = { style: items8, children: null };
-  items8 = [, ];
+  items8 = [,];
   ({ header: arr9[0], section: arr9[1] } = tmp);
   const date = new Date(obj10.extractTimestamp(oauth2Token.id));
   const tmp16 = closure_4;
   obj2 = { iconSource: applicationIconSource, iconBorderRadius: null, iconSize: 64 };
-  const toLocaleDateStringResult = new Date(obj10.extractTimestamp(oauth2Token.id)).toLocaleDateString(stateFromStores1, { year: "numeric", month: "short", day: "numeric" });
+  const toLocaleDateStringResult = new Date(obj10.extractTimestamp(oauth2Token.id)).toLocaleDateString(
+    stateFromStores1,
+    { year: "numeric", month: "short", day: "numeric" },
+  );
   obj2[1] = application(stateFromStores[13]).radii.md;
-  const items9 = [callback(application(stateFromStores[40]), obj2), , ];
+  const items9 = [callback(application(stateFromStores[40]), obj2), ,];
   obj3 = { variant: "text-sm/normal", color: "text-muted", children: null };
   const intl = id(stateFromStores[18]).intl;
   obj3[2] = intl.format(id(stateFromStores[18]).t.yOApCK, { date: toLocaleDateStringResult });
@@ -191,7 +210,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
   }
   items9[2] = tmp19Result;
   obj1[1] = items9;
-  const items10 = [closure_18(closure_5, obj1), , , , , , ];
+  const items10 = [closure_18(closure_5, obj1), , , , , ,];
   tmp19Result = null;
   if (null != stateFromStores3) {
     obj5 = { style: null, children: null };
@@ -206,7 +225,12 @@ export default function UserSettingsAuthedApp(oauth2Token) {
       const obj6 = { endTime: null };
       const _Date = Date;
       const date1 = new Date(appDMChannelMuteConfig.end_time);
-      obj6[0] = date1.toLocaleString(tmp4(stringResult[18]).intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
+      obj6[0] = date1.toLocaleString(tmp4(stringResult[18]).intl.currentLocale, {
+        month: "numeric",
+        day: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+      });
       formatResult = intl2.format(tmp4(stringResult[18]).t.j7h4AJ, obj6);
     }
     obj7 = { title: "Notifications", hasIcons: false, children: null };
@@ -219,7 +243,12 @@ export default function UserSettingsAuthedApp(oauth2Token) {
           const rootNavigationRef = id(stateFromStores[36]).getRootNavigationRef();
           if (null != rootNavigationRef) {
             if (rootNavigationRef.isReady()) {
-              let obj = { channelId: null, applicationId: null, initialRouteName: null, source: "authorized-apps-settings" };
+              let obj = {
+                channelId: null,
+                applicationId: null,
+                initialRouteName: null,
+                source: "authorized-apps-settings",
+              };
               obj[0] = tmp;
               obj[1] = application.id;
               obj[2] = closure_1_15.MUTE;
@@ -228,7 +257,13 @@ export default function UserSettingsAuthedApp(oauth2Token) {
           }
         } else {
           obj = application(stateFromStores[37]);
-          const result = obj.updateAppDMOverrideSettings(null, tmp, application.id, { muted: false }, id(stateFromStores[38]).NotificationLabels.Unmuted);
+          const result = obj.updateAppDMOverrideSettings(
+            null,
+            tmp,
+            application.id,
+            { muted: false },
+            id(stateFromStores[38]).NotificationLabels.Unmuted,
+          );
         }
       }
     };
@@ -255,7 +290,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
   const intl4 = tmp4(stringResult[18]).intl;
   obj11[0] = intl4.string(id(stringResult[18]).t.xrmhRX);
   obj11[1] = handleClickPermissions;
-  const items11 = [callback(id(stringResult[44]).TableRow, obj11), , ];
+  const items11 = [callback(id(stringResult[44]).TableRow, obj11), ,];
   let tmp19Result1 = null != application.terms_of_service_url;
   if (tmp19Result1) {
     function handleClickToS() {
@@ -352,7 +387,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
     obj19[2] = tmp19(tmp4(stringResult[44]).TableRow, obj21);
     tmp19(tmp4(stringResult[42]).TableRowGroup, obj19);
   }
-};
+}
 export const handleDeleteApp = function handleDeleteApp(application) {
   application = application.application;
   let obj = tokensToAppTokensMapDefault;

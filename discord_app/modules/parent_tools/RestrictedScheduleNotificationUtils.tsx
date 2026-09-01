@@ -30,9 +30,23 @@ function isOnlyDayLoss(label, label2) {
     tmp7 = importDefault;
   }
 }
-let obj = { Created: "created", Enabled: "enabled", Disabled: "disabled", Updated: "updated", Removed: "removed", Multiple: "multiple" };
+let obj = {
+  Created: "created",
+  Enabled: "enabled",
+  Disabled: "disabled",
+  Updated: "updated",
+  Removed: "removed",
+  Multiple: "multiple",
+};
 let map = new Map();
-obj = { [Created]: messagesProxyDefault["5V7eBH"], [Enabled]: messagesProxyDefault.iefrVg, [Disabled]: messagesProxyDefault["k+s9cM"], [Updated]: messagesProxyDefault.Nm6hZV, [Multiple]: messagesProxyDefault.Nm6hZV, [Removed]: messagesProxyDefault.jR6uOs };
+obj = {
+  [Created]: messagesProxyDefault["5V7eBH"],
+  [Enabled]: messagesProxyDefault.iefrVg,
+  [Disabled]: messagesProxyDefault["k+s9cM"],
+  [Updated]: messagesProxyDefault.Nm6hZV,
+  [Multiple]: messagesProxyDefault.Nm6hZV,
+  [Removed]: messagesProxyDefault.jR6uOs,
+};
 ({ Created, Enabled, Disabled, Updated, Multiple, Removed } = obj);
 let result = set2.fileFinishedImporting("modules/parent_tools/RestrictedScheduleNotificationUtils.tsx");
 
@@ -43,10 +57,12 @@ export const toScheduleSnapshot = function toScheduleSnapshot(rules) {
     if (0 !== rules.rules.length) {
       const _Map = Map;
       rules = rules.rules;
-      map = new Map(rules.map((ruleId) => {
-        const items = [ruleId.ruleId, ruleId];
-        return items;
-      }));
+      map = new Map(
+        rules.map((ruleId) => {
+          const items = [ruleId.ruleId, ruleId];
+          return items;
+        }),
+      );
     }
     return map;
   }
@@ -67,7 +83,7 @@ export const diffSchedules = function diffSchedules(arr, toScheduleSnapshotResul
       closure_3 = value;
       closure_7 = closure_7 + 1;
     } else {
-      const items = [, ];
+      const items = [,];
       ({ Enabled: arr[0], Disabled: arr[1] } = tmp2);
       if (items.includes(Created)) {
         closure_8 = closure_8 + 1;

@@ -6,7 +6,9 @@ import GuildFeatures from "../../PremiumConstants.tsx";
 
 const require = arg1;
 ({ PremiumTypes: closure_6, FractionalPremiumStates: error } = GuildFeatures);
-let result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx",
+);
 
 export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRemaining(flag) {
   if (flag === undefined) {

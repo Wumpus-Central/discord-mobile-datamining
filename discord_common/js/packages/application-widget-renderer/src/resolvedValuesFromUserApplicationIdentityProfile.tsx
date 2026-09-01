@@ -145,7 +145,9 @@ function resolvedValuesFromDynamic(data) {
     return obj;
   }
 }
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValuesFromUserApplicationIdentityProfile.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/application-widget-renderer/src/resolvedValuesFromUserApplicationIdentityProfile.tsx",
+);
 
 export default function resolvedValuesFromUserApplicationIdentityProfile(profile) {
   if (null == profile) {
@@ -164,5 +166,14 @@ export default function resolvedValuesFromUserApplicationIdentityProfile(profile
     const merged2 = Object.assign(resolvedValuesFromDynamic(profile));
   }
   return obj;
+}
+export const UnfurledMediaLoadingState = {
+  UNKNOWN: 0,
+  [0]: "UNKNOWN",
+  LOADING: 1,
+  [1]: "LOADING",
+  LOADED_SUCCESS: 2,
+  [2]: "LOADED_SUCCESS",
+  LOADED_NOT_FOUND: 3,
+  [3]: "LOADED_NOT_FOUND",
 };
-export const UnfurledMediaLoadingState = { UNKNOWN: 0, [0]: "UNKNOWN", LOADING: 1, [1]: "LOADING", LOADED_SUCCESS: 2, [2]: "LOADED_SUCCESS", LOADED_NOT_FOUND: 3, [3]: "LOADED_NOT_FOUND" };

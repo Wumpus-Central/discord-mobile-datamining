@@ -18,8 +18,7 @@ function init() {
 }
 let closure_5 = tmp2;
 const Store = initializeDefault.Store;
-class DeveloperExperimentStore extends Store {
-}
+class DeveloperExperimentStore extends Store {}
 const prototype = DeveloperExperimentStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
@@ -30,10 +29,8 @@ prototype["initialize"] = function initialize() {
       get() {
         return closure_5;
       },
-      set() {
-
-      }
-    }
+      set() {},
+    },
   });
   closure_5 = self(1933).isStaffEnv(authStore.getCurrentUser());
   const timerId = setTimeout(() => Object.freeze(self));
@@ -48,7 +45,11 @@ prototype["getExperimentDescriptor"] = function getExperimentDescriptor() {
   return tmp;
 };
 DeveloperExperimentStore.displayName = "DeveloperExperimentStore";
-const developerExperimentStore = new DeveloperExperimentStore(dispatcherDefault, { CONNECTION_OPEN: init, OVERLAY_INITIALIZE: init, CURRENT_USER_UPDATE: init });
+const developerExperimentStore = new DeveloperExperimentStore(dispatcherDefault, {
+  CONNECTION_OPEN: init,
+  OVERLAY_INITIALIZE: init,
+  CURRENT_USER_UPDATE: init,
+});
 const result = require("set").fileFinishedImporting("stores/DeveloperExperimentStore.tsx");
 
 export default developerExperimentStore;

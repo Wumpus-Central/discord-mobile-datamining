@@ -15,7 +15,7 @@ function HiddenMedia(length) {
   let items = [
     Array.from({ length: length.count }, (arg0, arg1) => {
       let obj = { style: lib.mediaPlaceholderCard, children: null };
-      const items = [closure_1_6(lib(closure_1_2[7]).ImageWarningIcon, { size: "lg", color: "text-muted" }), ];
+      const items = [closure_1_6(lib(closure_1_2[7]).ImageWarningIcon, { size: "lg", color: "text-muted" })];
       obj = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl = lib(closure_1_2[9]).intl;
       obj[2] = intl.string(lib(closure_1_2[9]).t.B2xSxL);
@@ -23,10 +23,15 @@ function HiddenMedia(length) {
       obj[1] = items;
       return closure_1_7(closure_1_4, obj, arg1);
     }),
-
   ];
   obj = { style: tmp.mediaHiddenRow, children: null };
-  const items1 = [callback(require("../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx").CircleInformationIcon, { size: "sm", color: "text-muted" }), ];
+  const items1 = [
+    callback(
+      require("../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx")
+        .CircleInformationIcon,
+      { size: "sm", color: "text-muted" },
+    ),
+  ];
   obj = { variant: "text-sm/normal", color: "text-muted", children: null };
   let intl = require("../../../intl/index.native.tsx").intl;
   obj[2] = intl.string(require("../../../intl/index.native.tsx").t["VGf+K3"]);
@@ -37,22 +42,108 @@ function HiddenMedia(length) {
   return callback2(View, obj);
 }
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-let closure_9 = { renderEmbeds: false, renderReactions: false, inlineEmbedMedia: false, inlineAttachmentMedia: false, animateEmoji: false, gifAutoPlay: false, timestampHourCycle: 0, renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderThreadEmbeds: false, renderReplies: false, renderCommunicationDisabled: false, renderAttachments: false, renderExecutedCommands: false, renderPolls: false, renderSharedClientTheme: false, renderForumPostActions: false, ignoreMentioned: false, ignoreEmbedDescriptionCache: false, forceHideSimpleEmbedContent: false, enableSwipeActions: false, useAlternateEmbedColors: false, restrictedPreview: true };
-createCacheKey = { container: { flexDirection: "column" }, hiddenMedia: null, messageRow: null, avatarHitbox: null, dateDivider: null, dividerLine: null, mediaPlaceholderCard: null, mediaHiddenRow: null };
+let closure_9 = {
+  renderEmbeds: false,
+  renderReactions: false,
+  inlineEmbedMedia: false,
+  inlineAttachmentMedia: false,
+  animateEmoji: false,
+  gifAutoPlay: false,
+  timestampHourCycle: 0,
+  renderCodedLinks: false,
+  renderGiftCode: false,
+  renderActivityInstanceEmbed: false,
+  renderActivityInviteEmbed: false,
+  renderComponents: false,
+  renderThreadEmbeds: false,
+  renderReplies: false,
+  renderCommunicationDisabled: false,
+  renderAttachments: false,
+  renderExecutedCommands: false,
+  renderPolls: false,
+  renderSharedClientTheme: false,
+  renderForumPostActions: false,
+  ignoreMentioned: false,
+  ignoreEmbedDescriptionCache: false,
+  forceHideSimpleEmbedContent: false,
+  enableSwipeActions: false,
+  useAlternateEmbedColors: false,
+  restrictedPreview: true,
+};
+createCacheKey = {
+  container: { flexDirection: "column" },
+  hiddenMedia: null,
+  messageRow: null,
+  avatarHitbox: null,
+  dateDivider: null,
+  dividerLine: null,
+  mediaPlaceholderCard: null,
+  mediaHiddenRow: null,
+};
 createCacheKey = { marginLeft: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { position: "relative" };
-createCacheKey[3] = { position: "absolute", top: 0, left: 0, width: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET, height: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_AVATAR_SIZE };
-let obj1 = { position: "absolute", top: 0, left: 0, width: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET, height: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_AVATAR_SIZE };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_12 };
-let obj2 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_12 };
+createCacheKey[3] = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET,
+  height: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_AVATAR_SIZE,
+};
+let obj1 = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET,
+  height: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_AVATAR_SIZE,
+};
+createCacheKey[4] = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  marginVertical: ThemesDefault.space.PX_12,
+};
+let obj2 = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  marginVertical: ThemesDefault.space.PX_12,
+};
 createCacheKey[5] = { flex: 1, height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 let obj3 = { flex: 1, height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[6] = { alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_8, height: 160, marginTop: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-let obj4 = { alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_8, height: 160, marginTop: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[7] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_4 };
+createCacheKey[6] = {
+  alignItems: "center",
+  justifyContent: "center",
+  gap: ThemesDefault.space.PX_8,
+  height: 160,
+  marginTop: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
+let obj4 = {
+  alignItems: "center",
+  justifyContent: "center",
+  gap: ThemesDefault.space.PX_8,
+  height: 160,
+  marginTop: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
+createCacheKey[7] = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_8,
+  marginBottom: ThemesDefault.space.PX_4,
+};
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const obj5 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_4 };
+const obj5 = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_8,
+  marginBottom: ThemesDefault.space.PX_4,
+};
 const result = require("set").fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewList.tsx");
 
 export default function RestrictedMessagePreviewList(channelId) {
@@ -70,10 +161,14 @@ export default function RestrictedMessagePreviewList(channelId) {
   let items = [closure_5];
   let items1 = [channelId];
   const items2 = [channelId, analyticsLocations];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
-    messages = messages.getMessages(channelId);
-    return messages.toArray();
-  }, items1);
+  const stateFromStoresArray = obj.useStateFromStoresArray(
+    items,
+    () => {
+      messages = messages.getMessages(channelId);
+      return messages.toArray();
+    },
+    items1,
+  );
   callback = callback.useCallback((userId) => {
     lib(analyticsLocations[14])({ userId, channelId, sourceAnalyticsLocations: analyticsLocations });
   }, items2);
@@ -88,7 +183,7 @@ export default function RestrictedMessagePreviewList(channelId) {
     const tmp = lib(analyticsLocations[16])(message);
     let obj = { style: lib.messageRow, children: null };
     obj = { pointerEvents: "none", message, rowGenerator: memo };
-    const items = [arr5(lib(analyticsLocations[17]), obj), ];
+    const items = [arr5(lib(analyticsLocations[17]), obj)];
     obj = { style: lib.avatarHitbox, accessibilityRole: "button", accessibilityLabel: null, onPress: null };
     const intl = channelId(analyticsLocations[9]).intl;
     obj[2] = intl.string(channelId(analyticsLocations[9]).t.iXAna6);
@@ -97,7 +192,7 @@ export default function RestrictedMessagePreviewList(channelId) {
     };
     items[1] = arr5(channelId(analyticsLocations[18]).PressableOpacity, obj);
     obj[1] = items;
-    const children = [closure_1_7(memo, obj), ];
+    const children = [closure_1_7(memo, obj)];
     let tmp6Result = tmp > 0;
     if (tmp6Result) {
       obj1 = { style: null, children: null };
@@ -174,7 +269,7 @@ export default function RestrictedMessagePreviewList(channelId) {
           obj[0] = lib.dateDivider;
           obj = { style: null };
           obj[0] = lib.dividerLine;
-          const items = [arr5(tmp7, obj), , ];
+          const items = [arr5(tmp7, obj), ,];
           obj1 = { variant: "text-xs/semibold", color: "text-muted", children: null };
           let obj4 = channelId(analyticsLocations[11]);
           obj1[2] = obj4.dateFormat(message.timestamp, "LL");
@@ -185,7 +280,7 @@ export default function RestrictedMessagePreviewList(channelId) {
           obj[1] = items;
           tmp6Result = tmp6(tmp7, obj);
         }
-        const items1 = [tmp6Result, ];
+        const items1 = [tmp6Result];
         if ("message" === type.type) {
           let tmp18 = messages(type.message);
         } else {
@@ -209,7 +304,7 @@ export default function RestrictedMessagePreviewList(channelId) {
       } else {
         message2 = tmp.messages[tmp.messages.length - 1];
       }
-    })
+    }),
   };
   return arr5(memo, obj);
-};
+}

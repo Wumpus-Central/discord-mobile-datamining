@@ -5,8 +5,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 let c1 = null;
 let c2 = null;
 const Store = initializeDefault.Store;
-class DisplayedInviteStore extends Store {
-}
+class DisplayedInviteStore extends Store {}
 const prototype = DisplayedInviteStore.prototype;
 prototype["getDisplayedInviteCode"] = function getDisplayedInviteCode() {
   return closure_0;
@@ -25,7 +24,7 @@ const displayedInviteStore = new DisplayedInviteStore(dispatcherDefault, {
   DISPLAYED_INVITE_CLEAR: function handleClearDisplayedInvite() {
     c0 = null;
     c2 = null;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/native/DisplayedInviteStore.tsx");
 

@@ -31,7 +31,7 @@ function trackHeartbeat() {
 }
 function _trackHeartbeat() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c4 === 2) {
       c4 = 3;
       HermesBuiltin.throwTypeError();
@@ -103,7 +103,13 @@ function _trackHeartbeat() {
             const idleSince = store.getIdleSince();
             num2 = idleSince;
             closure_3 = num2;
-            const obj6 = { is_idle: null, idle_duration_ms: null, is_afk: null, is_system_suspended: null, is_system_locked: null };
+            const obj6 = {
+              is_idle: null,
+              idle_duration_ms: null,
+              is_afk: null,
+              is_system_suspended: null,
+              is_system_locked: null,
+            };
             obj6[0] = store.isIdle();
             const _Date = tmp40.Date;
             obj6[1] = _Date.now() - closure_3;
@@ -123,7 +129,9 @@ function _trackHeartbeat() {
             obj = lib(1208);
             const _Error = Error;
             const _HermesInternal = HermesInternal;
-            obj.captureException(Error("Null session when tracking session heartbeat. Waited " + dependencyMap - num2 + "ms"));
+            obj.captureException(
+              Error("Null session when tracking session heartbeat. Waited " + dependencyMap - num2 + "ms"),
+            );
           }
           c4 = 3;
         }
@@ -156,7 +164,9 @@ function isActive() {
 }
 function scheduleHeartbeatTracking() {
   let obj = _modDef1208;
-  obj = { message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}` };
+  obj = {
+    message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}`,
+  };
   obj.addBreadcrumb(obj);
   const items = [];
   if (tmp4) {
@@ -176,7 +186,10 @@ function scheduleHeartbeatTracking() {
       }
       obj = { message: null };
       const _HermesInternal = HermesInternal;
-      obj[0] = "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: " + num / 1000 + " seconds. Scheduling Heartbeat";
+      obj[0] =
+        "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: " +
+        num / 1000 +
+        " seconds. Scheduling Heartbeat";
       _modDef1208.addBreadcrumb(obj);
       obj1 = { type: "timeout", id: null };
       const _setTimeout = setTimeout;
@@ -186,7 +199,7 @@ function scheduleHeartbeatTracking() {
           type: "interval",
           id: setInterval(() => {
             callback();
-          }, closure_11)
+          }, closure_11),
         };
       }, num);
       _null = obj1;
@@ -233,7 +246,12 @@ function validateClientSession(version) {
     let tmp4 = version;
     if (version.version !== result2.CLIENT_SESSION_STORAGE_VERSION) {
       const _HermesInternal = HermesInternal;
-      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(7217).CLIENT_SESSION_STORAGE_VERSION);
+      logger.warn(
+        "Throwing away client session with invalid version: " +
+          version.version +
+          ", expected " +
+          tmp2(7217).CLIENT_SESSION_STORAGE_VERSION,
+      );
       tmp4 = null;
     }
     tmp = tmp4;
@@ -253,7 +271,7 @@ function forceDispatchSessionIdUpdate() {
 }
 function _forceDispatchSessionIdUpdate() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -303,7 +321,11 @@ function _forceDispatchSessionIdUpdate() {
             socket = socket.getSocket();
             if (socket != null) {
               ({ createdAtTimestamp, uuid } = callback);
-              const result = socket.handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, callback(table[18]).clientLaunchId);
+              const result = socket.handleUpdateTimeSpentSessionId(
+                createdAtTimestamp,
+                uuid,
+                callback(table[18]).clientLaunchId,
+              );
             }
           }
           c3 = 3;
@@ -367,7 +389,7 @@ function handleLocationChange() {
   }
 }
 function handleAppStateUpdate(state) {
-  if (closure_22 !== state.state === constants.ACTIVE) {
+  if ((closure_22 !== state.state) === constants.ACTIVE) {
     closure_22 = tmp;
     scheduleHeartbeatTracking();
   }
@@ -396,7 +418,7 @@ function _getSession() {
     c6 = 0;
     c7 = 0;
     c4 = 0;
-    const iter = (function*() {
+    const iter = (function* () {
       uuid = tmp3;
       if (flag === undefined) {
         flag = true;
@@ -497,7 +519,11 @@ function _getSession() {
           socket = socket.getSocket();
           if (socket != null) {
             ({ createdAtTimestamp, uuid } = uuid);
-            let result = socket.handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, callback(closure_1_2[18]).clientLaunchId);
+            let result = socket.handleUpdateTimeSpentSessionId(
+              createdAtTimestamp,
+              uuid,
+              callback(closure_1_2[18]).clientLaunchId,
+            );
           }
         }
         c7 = 3;
@@ -589,7 +615,12 @@ export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
       let tmp8 = value;
       if (value.version !== tmp2(7217).CLIENT_SESSION_STORAGE_VERSION) {
         const _HermesInternal = HermesInternal;
-        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(7217).CLIENT_SESSION_STORAGE_VERSION);
+        logger.warn(
+          "Throwing away client session with invalid version: " +
+            value.version +
+            ", expected " +
+            tmp2(7217).CLIENT_SESSION_STORAGE_VERSION,
+        );
         tmp8 = null;
       }
       tmp7 = tmp8;

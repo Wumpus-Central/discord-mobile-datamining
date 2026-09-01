@@ -9,7 +9,15 @@ import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import DesktopSources from "Constants.tsx";
 
 require = arg1;
-({ ConnectionStates: c4, DEFAULT_VOICE_BITRATE: c5, MediaTypes: closure_6, ResolutionTypes: error, MediaEngineContextTypes: closure_8, VIDEO_QUALITY_FRAMERATE: c9, SIMULCAST_HQ_QUALITY: c10 } = DesktopSources);
+({
+  ConnectionStates: c4,
+  DEFAULT_VOICE_BITRATE: c5,
+  MediaTypes: closure_6,
+  ResolutionTypes: error,
+  MediaEngineContextTypes: closure_8,
+  VIDEO_QUALITY_FRAMERATE: c9,
+  SIMULCAST_HQ_QUALITY: c10,
+} = DesktopSources);
 let c11 = 0;
 onDefault;
 class BaseConnection extends tmp3 {
@@ -43,9 +51,7 @@ class BaseConnection extends tmp3 {
     tmp4.remoteVideoSinkWants = { any: 100 };
     tmp4.localVideoSinkWants = { any: 100 };
     tmp4.connectionState = ConnectionStates.CONNECTING;
-    tmp4.onDesktopEncodingOptionsSet = function onDesktopEncodingOptionsSet(arg0, arg1, arg2) {
-
-    };
+    tmp4.onDesktopEncodingOptionsSet = function onDesktopEncodingOptionsSet(arg0, arg1, arg2) {};
     set1 = new Set();
     tmp4.experimentFlags = set1;
     tmp4.calcMaxBitrateFunc = function calcMaxBitrateFunc(arg0) {
@@ -120,24 +126,12 @@ prototype["getActiveOutputSinkTrackingEnabled"] = function getActiveOutputSinkTr
 prototype["setUseElectronVideo"] = function setUseElectronVideo(mediaEngine) {
   this.useElectronVideo = mediaEngine;
 };
-prototype["setClipRecordUser"] = function setClipRecordUser(arg0, arg1, arg2) {
-
-};
-prototype["setViewerSideClip"] = function setViewerSideClip(arg0) {
-
-};
-prototype["setRemoteAudioHistory"] = function setRemoteAudioHistory(arg0) {
-
-};
-prototype["setClipsKeyFrameInterval"] = function setClipsKeyFrameInterval(arg0) {
-
-};
-prototype["setQualityDecoupling"] = function setQualityDecoupling(arg0) {
-
-};
-prototype["presentDesktopSourcePicker"] = function presentDesktopSourcePicker(arg0) {
-
-};
+prototype["setClipRecordUser"] = function setClipRecordUser(arg0, arg1, arg2) {};
+prototype["setViewerSideClip"] = function setViewerSideClip(arg0) {};
+prototype["setRemoteAudioHistory"] = function setRemoteAudioHistory(arg0) {};
+prototype["setClipsKeyFrameInterval"] = function setClipsKeyFrameInterval(arg0) {};
+prototype["setQualityDecoupling"] = function setQualityDecoupling(arg0) {};
+prototype["presentDesktopSourcePicker"] = function presentDesktopSourcePicker(arg0) {};
 prototype["getStreamParameters"] = function getStreamParameters() {
   return cloneDeepDefault(this.videoStreamParameters);
 };
@@ -193,7 +187,11 @@ prototype["updateVideoQuality"] = function updateVideoQuality(closure_8) {
         let result1 = self.applyQualityConstraints({}, self.videoStreamParameters[num2].ssrc);
         ({ quality: quality2, constraints: constraints2 } = result1);
         if (null != quality2) {
-          ({ bitrateMax: self.videoStreamParameters[num2].maxBitrate, bitrateMin: self.videoStreamParameters[num2].minBitrate, bitrateTarget: bitrateTarget2 } = quality2);
+          ({
+            bitrateMax: self.videoStreamParameters[num2].maxBitrate,
+            bitrateMin: self.videoStreamParameters[num2].minBitrate,
+            bitrateTarget: bitrateTarget2,
+          } = quality2);
           if (bitrateTarget2 == null) {
             bitrateTarget2 = 0;
           }
@@ -226,7 +224,7 @@ prototype["updateVideoQuality"] = function updateVideoQuality(closure_8) {
         num = 0;
       }
       return num;
-    })
+    }),
   ];
   tmp5.remoteSinkWantsPixelCount = Math.max.apply(items);
   if (null != closure_8) {
@@ -262,11 +260,23 @@ prototype["applyQualityConstraints"] = function applyQualityConstraints() {
 };
 prototype["initializeStreamParameters"] = function initializeStreamParameters(items) {
   const self = this;
-  const found = items.filter((type) => (type.type === constants.VIDEO || type.type === tmp.SCREEN) && typeof type.rid === "string");
+  const found = items.filter(
+    (type) => (type.type === constants.VIDEO || type.type === tmp.SCREEN) && typeof type.rid === "string",
+  );
   this.videoStreamParameters = found.map((ssrc) => {
     const videoQualityManager = self.videoQualityManager;
     const quality = videoQualityManager.getQuality(ssrc.ssrc);
-    let obj = { type: ssrc.type, active: ssrc.active, rid: ssrc.rid, ssrc: ssrc.ssrc, rtxSsrc: ssrc.rtxSsrc, quality: ssrc.quality, maxBitrate: null, maxFrameRate: null, maxResolution: null };
+    let obj = {
+      type: ssrc.type,
+      active: ssrc.active,
+      rid: ssrc.rid,
+      ssrc: ssrc.ssrc,
+      rtxSsrc: ssrc.rtxSsrc,
+      quality: ssrc.quality,
+      maxBitrate: null,
+      maxFrameRate: null,
+      maxResolution: null,
+    };
     let num = ssrc.quality;
     if (num == null) {
       num = 100;
@@ -362,7 +372,7 @@ prototype["getRemoteVideoSinkPixelCount"] = function getRemoteVideoSinkPixelCoun
 };
 prototype["emitStats"] = function emitStats() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     closure_1 = tmp5;
     closure_0 = tmp2;
     closure_0 = yield closure_1_0.getStats();

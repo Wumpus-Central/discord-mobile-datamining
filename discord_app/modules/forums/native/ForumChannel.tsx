@@ -137,7 +137,7 @@ function SortAndViewOptions(channel) {
       channelId: combined,
       onClose() {
         closure_1_1(closure_1_2[28]).hideActionSheet(combined);
-      }
+      },
     };
     obj.openLazy(id(closure_1_2[30])(closure_1_2[29], closure_1_2.paths), combined, obj);
   }, items);
@@ -151,7 +151,13 @@ function SortAndViewOptions(channel) {
   }
   isMediaChannelResult = channel.isMediaChannel();
   const tmp4 = id;
-  return closure_14(id(4928).Button, { variant: "secondary", text: stringResult, onPress: callback, size: "sm", icon: closure_14(id(11721).ArrowsUpDownIcon, { size: "xxs" }) });
+  return closure_14(id(4928).Button, {
+    variant: "secondary",
+    text: stringResult,
+    onPress: callback,
+    size: "sm",
+    icon: closure_14(id(11721).ArrowsUpDownIcon, { size: "xxs" }),
+  });
 }
 function TagFilter(channel) {
   channel = channel.channel;
@@ -232,7 +238,13 @@ function ForumChannelContent(channel) {
   activeThreadIds = undefined;
   archivedThreadIds = undefined;
   let obj3 = channel(stateFromStores[17]);
-  const forumActiveThreadIds = obj3.useForumActiveThreadIds({ channel, sortOrder, tagFilter, tagSetting, shouldAutomaticallyAck: true });
+  const forumActiveThreadIds = obj3.useForumActiveThreadIds({
+    channel,
+    sortOrder,
+    tagFilter,
+    tagSetting,
+    shouldAutomaticallyAck: true,
+  });
   const substr = forumActiveThreadIds.slice(0, channel(stateFromStores[18]).BATCH_SIZE);
   joined = substr.join();
   let items1 = [channel, joined];
@@ -264,9 +276,18 @@ function ForumChannelContent(channel) {
   const archivedThreads = channel(stateFromStores[20]).useArchivedThreads(channel, sortOrder, tagFilter, tagSetting);
   ({ canLoadMore, loadMore, loading, threadIds } = archivedThreads);
   const obj11 = channel(stateFromStores[20]);
-  const loadForumUnreadCounts = channel(stateFromStores[17]).useLoadForumUnreadCounts(channel, sortOrder, tagFilter, tagSetting);
+  const loadForumUnreadCounts = channel(stateFromStores[17]).useLoadForumUnreadCounts(
+    channel,
+    sortOrder,
+    tagFilter,
+    tagSetting,
+  );
   const obj12 = channel(stateFromStores[17]);
-  const gameInvitesActiveAndArchivedThreads = channel(stateFromStores[21]).useGameInvitesActiveAndArchivedThreads(channel, forumActiveThreadIds, threadIds);
+  const gameInvitesActiveAndArchivedThreads = channel(stateFromStores[21]).useGameInvitesActiveAndArchivedThreads(
+    channel,
+    forumActiveThreadIds,
+    threadIds,
+  );
   activeThreadIds = gameInvitesActiveAndArchivedThreads.activeThreadIds;
   archivedThreadIds = gameInvitesActiveAndArchivedThreads.archivedThreadIds;
   let tmp18 = null == searchResults && canViewArchivedPosts;
@@ -312,7 +333,16 @@ function ForumChannelContent(channel) {
       loadMore();
     }
   }, items4);
-  const items6 = [searchResults, canViewArchivedPosts1, canSearchForumPosts, activeThreadIds, stateFromStores, archivedThreadIds, loading, isSearchLoading];
+  const items6 = [
+    searchResults,
+    canViewArchivedPosts1,
+    canSearchForumPosts,
+    activeThreadIds,
+    stateFromStores,
+    archivedThreadIds,
+    loading,
+    isSearchLoading,
+  ];
   const callback1 = obj.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     let tmp = null == searchResults;
@@ -398,7 +428,19 @@ function ForumChannelContent(channel) {
     const obj2 = { style: null, children: null };
     const items8 = [tmp.list, clientThemesOverride];
     obj2[0] = items8;
-    obj3 = { ref: null, contentContainerStyle: null, getItemType: null, keyExtractor: null, renderItem: null, data: null, onScroll: null, onScrollBeginDrag: null, onEndReached: null, onViewableItemsChanged: null, viewabilityConfig: null };
+    obj3 = {
+      ref: null,
+      contentContainerStyle: null,
+      getItemType: null,
+      keyExtractor: null,
+      renderItem: null,
+      data: null,
+      onScroll: null,
+      onScrollBeginDrag: null,
+      onEndReached: null,
+      onViewableItemsChanged: null,
+      viewabilityConfig: null,
+    };
     obj3[0] = ref;
     let num = 0;
     if (0 !== activeThreadIds.length) {
@@ -444,12 +486,36 @@ const search_section = "search_section";
 const missing_permission_search = "missing_permission_search";
 const missing_permission_archived_threads = "missing_permission_archived_threads";
 const loading_section = "loading_section";
-let items = ["archived_section", "search_section", "missing_permission_search", "missing_permission_archived_threads", "loading_section"];
+let items = [
+  "archived_section",
+  "search_section",
+  "missing_permission_search",
+  "missing_permission_archived_threads",
+  "loading_section",
+];
 let set = new Set(items);
-createCacheKey = { background: null, headerRow: null, headerLeftContainer: null, headerDivider: null, container: null, noHeight: null, list: null, section: null, divider: null, missingPermissionContainer: null, missingPermissionText: null };
+createCacheKey = {
+  background: null,
+  headerRow: null,
+  headerLeftContainer: null,
+  headerDivider: null,
+  container: null,
+  noHeight: null,
+  list: null,
+  section: null,
+  divider: null,
+  missingPermissionContainer: null,
+  missingPermissionText: null,
+};
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", flexDirection: "row", justifyContent: "space-between", paddingHorizontal: 12, paddingVertical: 8 };
+createCacheKey[1] = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  paddingHorizontal: 12,
+  paddingVertical: 8,
+};
 createCacheKey[2] = { flexDirection: "row", alignItems: "center", gap: 8 };
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, width: "100%", height: 1 };
 createCacheKey[4] = { flex: 1, alignSelf: "stretch", alignItems: "center", position: "relative" };
@@ -458,10 +524,24 @@ createCacheKey[6] = { flex: 1, paddingTop: 8, paddingHorizontal: 12, alignSelf: 
 createCacheKey[7] = { alignItems: "flex-start", justifyContent: "flex-end" };
 let obj1 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, width: "100%", height: 1 };
 let obj2 = { marginTop: 12, paddingStart: 4 };
-const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_BOLD, ThemesDefault.colors.TEXT_MUTED, 12, { marginBottom: 12, uppercase: true }));
+const merged = Object.assign(
+  importDefaultResult(Fonts.PRIMARY_BOLD, ThemesDefault.colors.TEXT_MUTED, 12, { marginBottom: 12, uppercase: true }),
+);
 createCacheKey[8] = obj2;
-createCacheKey[9] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, alignItems: "center", justifyContent: "center", height: 48, borderRadius: ThemesDefault.radii.xs };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, alignItems: "center", justifyContent: "center", height: 48, borderRadius: ThemesDefault.radii.xs };
+createCacheKey[9] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  alignItems: "center",
+  justifyContent: "center",
+  height: 48,
+  borderRadius: ThemesDefault.radii.xs,
+};
+let obj3 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  alignItems: "center",
+  justifyContent: "center",
+  height: 48,
+  borderRadius: ThemesDefault.radii.xs,
+};
 let obj4 = {};
 const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_NORMAL, ThemesDefault.colors.TEXT_MUTED, 12));
 createCacheKey[10] = obj4;
@@ -497,15 +577,22 @@ export default function ForumChannel(channel) {
   let tmp8 = importDefault(analyticsLocations[47]);
   const items1 = [closure_8];
   const items2 = [channel.id];
-  stateFromStores1 = channel(analyticsLocations[19]).useStateFromStores(items1, () => closure_1_8.getThreadSettings(channel.id), items2);
+  stateFromStores1 = channel(analyticsLocations[19]).useStateFromStores(
+    items1,
+    () => closure_1_8.getThreadSettings(channel.id),
+    items2,
+  );
   const items3 = [channel.id];
   const tmp2Result1 = channel(analyticsLocations[19]);
-  const effect = searchQuery.useEffect(() => () => {
-    if (null != id.id) {
-      closure_1_1(closure_1_2[51]).clearForumSearch(tmp.id);
-      const obj = closure_1_1(closure_1_2[51]);
-    }
-  }, items3);
+  const effect = searchQuery.useEffect(
+    () => () => {
+      if (null != id.id) {
+        closure_1_1(closure_1_2[51]).clearForumSearch(tmp.id);
+        const obj = closure_1_1(closure_1_2[51]);
+      }
+    },
+    items3,
+  );
   const items4 = [channel, analyticsLocations, searchQuery, stateFromStores1];
   callback = searchQuery.useCallback((arg0) => {
     if (channel.isGameInvitesChannel()) {
@@ -565,21 +652,32 @@ export default function ForumChannel(channel) {
           obj = { channel: null, onPress: null };
           obj[0] = id;
           obj[1] = function onPress() {
-            return callback({ page: closure_1_12.GUILD_CHANNEL, section: closure_1_13.FORUM_CHANNEL_GUIDELINES, object: closure_1_11.BUTTON_CTA });
+            return callback({
+              page: closure_1_12.GUILD_CHANNEL,
+              section: closure_1_13.FORUM_CHANNEL_GUIDELINES,
+              object: closure_1_11.BUTTON_CTA,
+            });
           };
           const result = closure_1_0(closure_1_2[58]).openForumGuidelinesActionSheet(obj);
           const obj2 = closure_1_0(closure_1_2[58]);
         }
       }
       const result1 = closure_1_0(closure_1_2[56]).triggerHapticFeedback(closure_1_1(closure_1_2[57]).IMPACT_LIGHT);
-      obj = { page: closure_1_12.GUILD_CHANNEL, section: closure_1_13.FORUM_CHANNEL_FOOTER, object: closure_1_11.BUTTON_CTA };
+      obj = {
+        page: closure_1_12.GUILD_CHANNEL,
+        section: closure_1_13.FORUM_CHANNEL_FOOTER,
+        object: closure_1_11.BUTTON_CTA,
+      };
       callback(obj);
     }
     let obj = channel(analyticsLocations[42]);
     obj = { guildId: channel.guild_id, channelId: channel.id };
     let result = obj.trackForumCreateNewPostClick(obj);
     if (showMemberVerificationGate) {
-      let result1 = channel(analyticsLocations[59]).openMemberVerificationModal(channel.guild_id, startCreateForumPostFlow);
+      let result1 = channel(analyticsLocations[59]).openMemberVerificationModal(
+        channel.guild_id,
+        startCreateForumPostFlow,
+      );
       const tmpResult = channel(analyticsLocations[59]);
     } else {
       const result2 = startCreateForumPostFlow();
@@ -603,7 +701,7 @@ export default function ForumChannel(channel) {
     obj1[1] = { variant: "secondary" };
     tmp20 = callback(tmp2(tmp3[61]).OptInChannelBanner, obj1);
   }
-  const items6 = [tmp20, , , , , ];
+  const items6 = [tmp20, , , , ,];
   let obj2 = { style: tmp.headerRow, children: null };
   const obj3 = { style: tmp.headerLeftContainer, children: null };
   let isGameInvitesChannelResult = channel.isGameInvitesChannel();
@@ -614,7 +712,7 @@ export default function ForumChannel(channel) {
   }
   const items7 = [isGameInvitesChannelResult, callback(SortAndViewOptions, { channel })];
   obj3[1] = items7;
-  const items8 = [closure_16(showMemberVerificationGate, obj3), ];
+  const items8 = [closure_16(showMemberVerificationGate, obj3)];
   let tmp25Result = channel.availableTags.length > 0;
   if (tmp25Result) {
     const obj5 = { channel: null };
@@ -627,8 +725,19 @@ export default function ForumChannel(channel) {
   const items9 = [tmp.headerDivider, clientThemesOverride];
   items6[2] = callback(showMemberVerificationGate, { style: items9 });
   const tmp2Result2 = channel(analyticsLocations[14]);
-  items6[3] = callback(showMemberVerificationGate, { style: tmp.container, children: callback(ForumChannelContent, { channel, insets, searchQuery }) });
-  const obj7 = { accessibilityLabel: null, icon: null, disabled: null, positionBottom: null, onPress: null, onPressDisabled: null, accessibilityHint: null };
+  items6[3] = callback(showMemberVerificationGate, {
+    style: tmp.container,
+    children: callback(ForumChannelContent, { channel, insets, searchQuery }),
+  });
+  const obj7 = {
+    accessibilityLabel: null,
+    icon: null,
+    disabled: null,
+    positionBottom: null,
+    onPress: null,
+    onPressDisabled: null,
+    accessibilityHint: null,
+  };
   const intl = tmp2(tmp3[16]).intl;
   obj7[0] = intl.string(channel(analyticsLocations[16]).t.TyAuoT);
   obj7[1] = importDefault(analyticsLocations[63]);
@@ -652,4 +761,4 @@ export default function ForumChannel(channel) {
   items6[5] = tmp25Result;
   obj[1] = items6;
   return closure_16(showMemberVerificationGate, obj);
-};
+}

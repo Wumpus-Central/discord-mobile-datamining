@@ -2,7 +2,9 @@
 import set from "../../../../../../../_runtime/00002_set.js";
 
 let c0 = 16.666666666666668;
-const result = set.fileFinishedImporting("modules/devtools/native/components/screens/performance/startFrameMonitor.tsx");
+const result = set.fileFinishedImporting(
+  "modules/devtools/native/components/screens/performance/startFrameMonitor.tsx",
+);
 
 export const FRAME_BUDGET_MS = 16.666666666666668;
 export const startFrameMonitor = function startFrameMonitor() {
@@ -47,6 +49,6 @@ export const startFrameMonitor = function startFrameMonitor() {
       obj[2] = num;
       obj[3] = c5;
       return obj;
-    }
+    },
   };
 };

@@ -19,7 +19,7 @@ function fetchUnclaimedGames() {
 }
 function _fetchUnclaimedGames() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -107,7 +107,7 @@ initialize = {
     return fetchUnclaimedGames();
   },
   staleAfter: setDefault.Seconds.DAY,
-  retryConfig: initialize
+  retryConfig: initialize,
 };
 initialize = {
   backoff() {
@@ -115,7 +115,7 @@ initialize = {
     tmp = new tmp(5 * setDefault.Millis.MINUTE);
     return tmp;
   },
-  maxRetries: 10
+  maxRetries: 10,
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult, initialize);
 const result = require("set").fileFinishedImporting("modules/game_claim/UnclaimedGamesActionCreators.tsx");

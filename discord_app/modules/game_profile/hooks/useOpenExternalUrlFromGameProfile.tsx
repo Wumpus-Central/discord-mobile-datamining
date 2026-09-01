@@ -10,7 +10,7 @@ function _getDeepLinkUrl() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -142,7 +142,7 @@ export default function useOpenExternalUrlFromGameProfile(arg0) {
     c4 = 0;
     c5 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -243,7 +243,7 @@ export default function useOpenExternalUrlFromGameProfile(arg0) {
     })();
   });
   const items = [arg0, first];
-  return React.useCallback(function() {
+  return React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -253,4 +253,4 @@ export default function useOpenExternalUrlFromGameProfile(arg0) {
     }
     return applyArgumentsResult;
   }, items);
-};
+}

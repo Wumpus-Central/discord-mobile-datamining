@@ -4,7 +4,9 @@ import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { ChannelTypes } from "../../../../Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx",
+);
 
 export default function useFavoritesGuildCategoryLongPress(getGuildId) {
   let isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(getGuildId.getGuildId());
@@ -27,4 +29,4 @@ export default function useFavoritesGuildCategoryLongPress(getGuildId) {
     }
     return tmp;
   }, items);
-};
+}

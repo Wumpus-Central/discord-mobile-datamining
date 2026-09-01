@@ -21,7 +21,9 @@ const memoResult = importAllResult.memo(function SlowModeIndicator(channel) {
   const tmp = callback3();
   let obj = channel(slowmodeType[5]);
   const items = [canBypassSlowmode];
-  stateFromStores = obj.useStateFromStores(items, () => canBypassSlowmode.getSlowmodeCooldownGuess(channel.id, slowmodeType));
+  stateFromStores = obj.useStateFromStores(items, () =>
+    canBypassSlowmode.getSlowmodeCooldownGuess(channel.id, slowmodeType),
+  );
   canBypassSlowmode = channel(slowmodeType[6]).useCanBypassSlowmode(channel);
   const items1 = [hasTypingText, canBypassSlowmode, stateFromStores];
   const items2 = [channel.rateLimitPerUser];
@@ -36,11 +38,23 @@ const memoResult = importAllResult.memo(function SlowModeIndicator(channel) {
   }, items1);
   const callback = stateFromStores.useCallback(() => {
     let obj = hasTypingText(slowmodeType[7]);
-    obj = { key: "CHANNEL_SLOWMODE_INFO", IconComponent: channel(slowmodeType[8]).TimerIcon, content: channel(slowmodeType[6]).getSlowmodeDescription(channel.rateLimitPerUser) };
+    obj = {
+      key: "CHANNEL_SLOWMODE_INFO",
+      IconComponent: channel(slowmodeType[8]).TimerIcon,
+      content: channel(slowmodeType[6]).getSlowmodeDescription(channel.rateLimitPerUser),
+    };
     obj.open(obj);
   }, items2);
   obj = { onPress: callback, style: tmp.container, children: null };
-  const items3 = [callback(channel(slowmodeType[10]).Text, { lineClamp: 1, allowFontScaling: false, variant: "text-xs/medium", color: "interactive-text-default", children: memo }), ];
+  const items3 = [
+    callback(channel(slowmodeType[10]).Text, {
+      lineClamp: 1,
+      allowFontScaling: false,
+      variant: "text-xs/medium",
+      color: "interactive-text-default",
+      children: memo,
+    }),
+  ];
   obj = { style: tmp.icon, size: "xxs" };
   items3[1] = callback(channel(slowmodeType[8]).TimerIcon, obj);
   obj[2] = items3;

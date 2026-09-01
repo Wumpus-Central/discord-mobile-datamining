@@ -23,9 +23,11 @@ createToggle = {
       str = obj.systemPrefersReducedMotion;
     }
     const result = obj.setPrefersReducedMotion(str);
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SyncReducedMotionWithDeviceSetting.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/SyncReducedMotionWithDeviceSetting.tsx",
+);
 
 export default createToggle;

@@ -4,8 +4,7 @@ import dispatcherDefault from "../../../Dispatcher.tsx";
 
 let closure_0 = { giftOptionsReceiptMap: {} };
 const PersistedStore = initializeDefault.PersistedStore;
-class GiftPromotionStore extends PersistedStore {
-}
+class GiftPromotionStore extends PersistedStore {}
 const prototype = GiftPromotionStore.prototype;
 prototype["initialize"] = function initialize(giftOptionsReceiptMap) {
   if (null != giftOptionsReceiptMap) {
@@ -35,7 +34,7 @@ const items = [
       tmp = obj;
     }
     return tmp;
-  }
+  },
 ];
 GiftPromotionStore.migrations = items;
 const giftPromotionStore = new GiftPromotionStore(dispatcherDefault, {
@@ -47,7 +46,7 @@ const giftPromotionStore = new GiftPromotionStore(dispatcherDefault, {
   },
   GIFT_PROMOTION_GIFT_OPTIONS_CLEAR_CACHE_ACTION: function handleClearCachedGiftOptions(arg0) {
     delete tmp[tmp2];
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/premium/gifting/GiftPromotionStore.tsx");
 

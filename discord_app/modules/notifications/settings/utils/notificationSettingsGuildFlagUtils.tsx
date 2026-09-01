@@ -7,7 +7,9 @@ import { GuildNotificationSettingsFlags as closure_5 } from "../../../user_setti
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 require = arg1;
-let result = require("set").fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsGuildFlagUtils.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/notifications/settings/utils/notificationSettingsGuildFlagUtils.tsx",
+);
 
 export const updateGuildPreset = function updateGuildPreset(guildId, arg1) {
   guildFlags = guildFlags.getGuildFlags(guildId);
@@ -40,7 +42,10 @@ export const useGuildPresetSettings = function useGuildPresetSettings(guildId) {
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuildUnreadSetting(closure_0));
   const items1 = [closure_3];
-  const stateFromStores1 = require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => closure_1_3.getMessageNotifications(closure_0));
+  const stateFromStores1 =
+    require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () =>
+      closure_1_3.getMessageNotifications(closure_0),
+    );
   obj = { unread: stateFromStores, notification: stateFromStores1, preset: null };
   const obj2 = defaultAreStatesEqual;
   obj[2] = require("notificationSettingsPresetUtils.tsx").presetFromSettings(stateFromStores, stateFromStores1);

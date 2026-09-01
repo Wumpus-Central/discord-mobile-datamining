@@ -7,8 +7,7 @@ function handlePopAllLayers() {
 }
 let closure_0 = [];
 const Store = initializeDefault.Store;
-class LayerStore extends Store {
-}
+class LayerStore extends Store {}
 const prototype = LayerStore.prototype;
 prototype["hasLayers"] = function hasLayers() {
   return arr.length > 0;
@@ -36,7 +35,7 @@ const layerStore = new LayerStore(dispatcherDefault, {
   },
   LAYER_POP_ALL: handlePopAllLayers,
   LOGOUT: handlePopAllLayers,
-  NOTIFICATION_CLICK: handlePopAllLayers
+  NOTIFICATION_CLICK: handlePopAllLayers,
 });
 const result = require("set").fileFinishedImporting("stores/LayerStore.tsx");
 

@@ -12,9 +12,14 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/Restri
 export const openRestrictedHoursModal = function openRestrictedHoursModal() {
   let obj = _modDef4723;
   obj = { onClose: closeRestrictedHoursModal };
-  obj.pushLazy(callback(function*() {
-    yield v0(closure_1_2[3])(closure_1_2[2], closure_1_2.paths);
-    return arg1.default;
-  }), obj, RESTRICTED_HOURS_MODAL_KEY, { animation: "none", presentation: "fullScreenModal" });
+  obj.pushLazy(
+    callback(function* () {
+      yield v0(closure_1_2[3])(closure_1_2[2], closure_1_2.paths);
+      return arg1.default;
+    }),
+    obj,
+    RESTRICTED_HOURS_MODAL_KEY,
+    { animation: "none", presentation: "fullScreenModal" },
+  );
 };
 export { closeRestrictedHoursModal };

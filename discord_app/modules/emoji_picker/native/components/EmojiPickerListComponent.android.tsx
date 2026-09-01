@@ -16,10 +16,17 @@ let c3 = importAllResult;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ container: { flex: 1 } });
 const animatedComponent = importDefaultResult.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault);
-let closure_12 = BottomSheetModal.createBottomSheetScrollableComponent(require("BottomSheetModal").SCROLLABLE_TYPE.SCROLLVIEW, animatedComponent);
+let closure_12 = BottomSheetModal.createBottomSheetScrollableComponent(
+  require("BottomSheetModal").SCROLLABLE_TYPE.SCROLLVIEW,
+  animatedComponent,
+);
 let closure_13 = isMetaQuest.isMetaQuest();
-let closure_14 = { code: "function EmojiPickerListComponentAndroidTsx1(){const{bottomSheetIndex}=this.__closure;return bottomSheetIndex.get();}" };
-let closure_15 = { code: "function EmojiPickerListComponentAndroidTsx2(index){const{inPortalKeyboard,IS_META_QUEST,runOnJS,scrollingEnabled}=this.__closure;if(!inPortalKeyboard||index<0||IS_META_QUEST){return;}if(index===0){runOnJS(scrollingEnabled)(false);}else if(index===1){runOnJS(scrollingEnabled)(true);}}" };
+let closure_14 = {
+  code: "function EmojiPickerListComponentAndroidTsx1(){const{bottomSheetIndex}=this.__closure;return bottomSheetIndex.get();}",
+};
+let closure_15 = {
+  code: "function EmojiPickerListComponentAndroidTsx2(index){const{inPortalKeyboard,IS_META_QUEST,runOnJS,scrollingEnabled}=this.__closure;if(!inPortalKeyboard||index<0||IS_META_QUEST){return;}if(index===0){runOnJS(scrollingEnabled)(false);}else if(index===1){runOnJS(scrollingEnabled)(true);}}",
+};
 const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) => {
   analyticsLocations = analyticsLocations.analyticsLocations;
   const bottomSheetIndex = analyticsLocations.bottomSheetIndex;
@@ -97,7 +104,12 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
       return;
     }
   }
-  obj = { inPortalKeyboard, IS_META_QUEST: callback1, runOnJS: analyticsLocations(categoryIndexActive[7]).runOnJS, scrollingEnabled: callback };
+  obj = {
+    inPortalKeyboard,
+    IS_META_QUEST: callback1,
+    runOnJS: analyticsLocations(categoryIndexActive[7]).runOnJS,
+    scrollingEnabled: callback,
+  };
   D.__closure = obj;
   D.__workletHash = 2460528828147;
   D.__initData = closure_15;
@@ -147,15 +159,33 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
         Commands.scrollToHeaderIndex(tmp.current, animated.index, flag);
       }
     },
-    forceUpdate() {
-
-    },
-    onStickyHeaderRendered() {
-
-    }
+    forceUpdate() {},
+    onStickyHeaderRendered() {},
   }));
   const items6 = [animateEmoji];
-  obj = { config: data.useMemo(() => ({ animateEmoji, scrollFastOptimizationEnabled: true, scrollFastVelocity: 8000, disableAnimationsOnScroll: true }), items6), emojiData: data, emojiMargin: onPressEmoji, emojiSize: inPortalKeyboard, onPressEmoji: callback2, onLongPressEmoji: callback3, onStickyHeaderRender: callback4, onShowNitroUpsell: callback5, paddingTop, paddingBottom, useTier0UpsellContent, ref, style: ref().container };
+  obj = {
+    config: data.useMemo(
+      () => ({
+        animateEmoji,
+        scrollFastOptimizationEnabled: true,
+        scrollFastVelocity: 8000,
+        disableAnimationsOnScroll: true,
+      }),
+      items6,
+    ),
+    emojiData: data,
+    emojiMargin: onPressEmoji,
+    emojiSize: inPortalKeyboard,
+    onPressEmoji: callback2,
+    onLongPressEmoji: callback3,
+    onStickyHeaderRender: callback4,
+    onShowNitroUpsell: callback5,
+    paddingTop,
+    paddingBottom,
+    useTier0UpsellContent,
+    ref,
+    style: ref().container,
+  };
   const items7 = [guildId, analyticsLocations, useTier0UpsellContent, data.hasSearchUpsell];
   let tmp = ref();
   obj1 = { children: null };
@@ -175,11 +205,13 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
         const tmp5 = bottomSheetIndex(categoryIndexActive[12]);
       }
       return tmp;
-    }, items7)
+    }, items7),
   ];
   obj1[0] = items8;
   return useTier0UpsellContent(onShowNitroUpsell, obj1);
 });
-let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.android.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/emoji_picker/native/components/EmojiPickerListComponent.android.tsx",
+);
 
 export default forwardRefResult;

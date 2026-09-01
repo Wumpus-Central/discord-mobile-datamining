@@ -14,4 +14,4 @@ export default function useUserProfileBannerHeight(arg0) {
     bound = Math.min(width, arg0);
   }
   return Math.round(bound / BANNER_ASPECT_RATIO);
-};
+}

@@ -7,14 +7,20 @@ const result = require("set").fileFinishedImporting("modules/collectibles/hooks/
 
 export const useDefaultVariantIndex = function useDefaultVariantIndex(product) {
   const items = [closure_2];
-  _require = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => purchases.purchases);
+  _require = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => purchases.purchases,
+  );
   let num = 0;
   if (null != product) {
     num = 0;
     if (tmpResult.getIsVariantProduct(product)) {
       const _Math = Math;
       const variants = product.variants;
-      num = Math.max(0, variants.findIndex((skuId) => !set.has(skuId.skuId)));
+      num = Math.max(
+        0,
+        variants.findIndex((skuId) => !set.has(skuId.skuId)),
+      );
     }
     tmpResult = getProductOrbPrice;
   }

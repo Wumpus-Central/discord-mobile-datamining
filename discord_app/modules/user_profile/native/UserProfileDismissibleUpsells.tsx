@@ -12,12 +12,30 @@ const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let items = [...require("items").Gradients.PREMIUM_GUILD];
 let closure_10 = items.reverse();
-createCacheKey = { upsellContainer: null, customProfileThemeUpsellContainer: null, header: null, upsellButtonsContainer: null, upsellButton: null };
-createCacheKey = { paddingVertical: 16, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = {
+  upsellContainer: null,
+  customProfileThemeUpsellContainer: null,
+  header: null,
+  upsellButtonsContainer: null,
+  upsellButton: null,
+};
+createCacheKey = {
+  paddingVertical: 16,
+  paddingHorizontal: 12,
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME };
 createCacheKey[2] = { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" };
-createCacheKey[3] = { display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap", gap: 10, marginTop: 12 };
+createCacheKey[3] = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  flexWrap: "wrap",
+  gap: 10,
+  marginTop: 12,
+};
 createCacheKey[4] = { flex: 1 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { backgroundColor: ThemesDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME };
@@ -36,11 +54,14 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
   React = callback();
   let obj = navigateToShop(hasCustomProfileTheme[9]);
   const isPrivacyNoticeVisible = obj.useIsPrivacyNoticeVisible();
-  trackUserProfileAction = navigateToShop(hasCustomProfileTheme[10]).useUserProfileAnalyticsContext().trackUserProfileAction;
+  trackUserProfileAction = navigateToShop(hasCustomProfileTheme[10]).useUserProfileAnalyticsContext()
+    .trackUserProfileAction;
   let obj2 = navigateToShop(hasCustomProfileTheme[10]);
   let tmp = navigateToShop;
   let items = [closure_5];
-  const stateFromStores = navigateToShop(hasCustomProfileTheme[11]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = navigateToShop(hasCustomProfileTheme[11]).useStateFromStores(items, () =>
+    currentUser.getCurrentUser(),
+  );
   let obj3 = navigateToShop(hasCustomProfileTheme[11]);
   closure_5 = navigateToShop(hasCustomProfileTheme[12]).isPremium(stateFromStores);
   let items1 = [navigateToShop, trackUserProfileAction];
@@ -68,7 +89,10 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
       markAsDismissed = markAsDismissed.markAsDismissed;
       let ShopIcon = navigateToShop;
       let tmp = hasCustomProfileTheme;
-      if (markAsDismissed.visibleContent !== navigateToShop(hasCustomProfileTheme[14]).DismissibleContent.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS) {
+      if (
+        markAsDismissed.visibleContent !==
+        navigateToShop(hasCustomProfileTheme[14]).DismissibleContent.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS
+      ) {
         return null;
       } else {
         let obj = { borderWidth: 2, direction: null, colors: null, borderRadius: null, children: null };
@@ -87,7 +111,7 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
         const obj3 = { accessibilityRole: "header", variant: "text-sm/semibold", children: null };
         const intl = ShopIcon(tmp[17]).intl;
         obj3[2] = intl.string(ShopIcon(tmp[17]).t.EIYbj6);
-        const items = [closure_8(ShopIcon(tmp[16]).Text, obj3), ];
+        const items = [closure_8(ShopIcon(tmp[16]).Text, obj3)];
         const obj4 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
         const intl2 = ShopIcon(tmp[17]).intl;
         obj4[1] = intl2.string(ShopIcon(tmp[17]).t["6Xcq+Y"]);
@@ -97,7 +121,7 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
         obj4[3] = closure_8(ShopIcon(tmp[19]).XSmallIcon, { size: "sm" });
         items[1] = closure_8(ShopIcon(tmp[18]).PressableOpacity, obj4);
         obj2[1] = items;
-        const items1 = [closure_1_9(trackUserProfileAction, obj2), ];
+        const items1 = [closure_1_9(trackUserProfileAction, obj2)];
         let obj5 = { style: null, children: null };
         obj5[0] = tmp12Result.upsellButtonsContainer;
         let obj6 = { style: null, children: null };
@@ -117,7 +141,7 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
         obj7[2] = closure_8(ShopIcon(tmp[21]).NitroWheelIcon, { size: "sm" });
         obj6[1] = closure_8(Button, obj7);
         tmp12Result = tmp12(tmp16, obj6);
-        obj6 = [tmp12Result, ];
+        obj6 = [tmp12Result];
         const obj8 = { style: null, children: null };
         obj8[0] = tmp12Result.upsellButton;
         Button = ShopIcon(tmp[20]).Button;
@@ -146,4 +170,4 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
     const tmp6Result = tmp6(tmp2[13]);
   }
   return tmp5Result;
-};
+}

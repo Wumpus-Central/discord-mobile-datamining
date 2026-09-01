@@ -5,14 +5,34 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function ChatPanelNativeStackNavigator(arg0) {
-  ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
+  ({
+    id,
+    initialRouteName,
+    UNSTABLE_routeNamesChangeBehavior,
+    children,
+    layout,
+    screenListeners,
+    screenOptions,
+    screenLayout,
+    UNSTABLE_router,
+  } = arg0);
   let merged = Object.assign(arg0, Object.create(null));
   let state;
   let descriptors;
   let navigation;
   let state2;
   let obj = state(descriptors[2]);
-  const navigationBuilder = obj.useNavigationBuilder(state(descriptors[2]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
+  const navigationBuilder = obj.useNavigationBuilder(state(descriptors[2]).StackRouter, {
+    id,
+    initialRouteName,
+    UNSTABLE_routeNamesChangeBehavior,
+    children,
+    layout,
+    screenListeners,
+    screenOptions,
+    screenLayout,
+    UNSTABLE_router,
+  });
   state = navigationBuilder.state;
   descriptors = navigationBuilder.descriptors;
   navigation = navigationBuilder.navigation;
@@ -66,9 +86,11 @@ function ChatPanelNativeStackNavigator(arg0) {
     return { state, filteredDescriptors };
   }, items);
   state2 = memo.state;
-  let items1 = [navigation, , ];
+  let items1 = [navigation, ,];
   ({ index: arr2[1], key: arr2[2] } = state2);
-  const accessibilityPatchedDescriptors = state(descriptors[4]).useAccessibilityPatchedDescriptors(memo.filteredDescriptors);
+  const accessibilityPatchedDescriptors = state(descriptors[4]).useAccessibilityPatchedDescriptors(
+    memo.filteredDescriptors,
+  );
   const effect = navigation.useEffect(() => {
     let addListenerResult;
     if (navigation != null) {
@@ -108,8 +130,10 @@ function ChatPanelNativeStackNavigator(arg0) {
   obj[0] = state2(state(descriptors[5]).NativeStackView, obj);
   return state2(NavigationContent, obj);
 }
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/createChatPanelNativeStackNavigator.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/panels/createChatPanelNativeStackNavigator.tsx",
+);
 
 export default function createChatPanelNativeStackNavigator(arg0) {
   return createStandardNavigationFactories.createNavigatorFactory(ChatPanelNativeStackNavigator)(arg0);
-};
+}

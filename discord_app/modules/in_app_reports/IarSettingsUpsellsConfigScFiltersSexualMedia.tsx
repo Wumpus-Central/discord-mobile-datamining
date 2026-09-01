@@ -20,13 +20,20 @@ let obj = {
   },
   eligibleReportSubtypes: null,
   onApply: null,
-  predicate: null
+  predicate: null,
 };
-const items = [ReportNames.ReportSubType.SUB_CSAM, ReportNames.ReportSubType.SUB_LOLI, ReportNames.ReportSubType.SUB_NCP, ReportNames.ReportSubType.SUB_SEXUALLY_DEGRADING_CONTENT, ReportNames.ReportSubType.SUB_UNSOLICITED_PORN];
+const items = [
+  ReportNames.ReportSubType.SUB_CSAM,
+  ReportNames.ReportSubType.SUB_LOLI,
+  ReportNames.ReportSubType.SUB_NCP,
+  ReportNames.ReportSubType.SUB_SEXUALLY_DEGRADING_CONTENT,
+  ReportNames.ReportSubType.SUB_UNSOLICITED_PORN,
+];
 obj[3] = items;
 obj[4] = function onApply() {
   let obj = resolveExplicitContentSettingWithDefaults;
-  const explicitContentSettingOrDefault = resolveExplicitContentSettingWithDefaults.getExplicitContentSettingOrDefault();
+  const explicitContentSettingOrDefault =
+    resolveExplicitContentSettingWithDefaults.getExplicitContentSettingOrDefault();
   obj = {};
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
   if (explicitContentGuilds === create.ExplicitContentRedaction.SHOW) {
@@ -41,10 +48,15 @@ obj[4] = function onApply() {
   return obj.updateExplicitContentSetting(obj);
 };
 obj[5] = function predicate() {
-  const explicitContentSettingOrDefault = resolveExplicitContentSettingWithDefaults.getExplicitContentSettingOrDefault();
+  const explicitContentSettingOrDefault =
+    resolveExplicitContentSettingWithDefaults.getExplicitContentSettingOrDefault();
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
   const obj = resolveExplicitContentSettingWithDefaults;
-  return explicitContentGuilds === create.ExplicitContentRedaction.SHOW || explicitContentFriendDm === create.ExplicitContentRedaction.SHOW || explicitContentNonFriendDm === create.ExplicitContentRedaction.SHOW;
+  return (
+    explicitContentGuilds === create.ExplicitContentRedaction.SHOW ||
+    explicitContentFriendDm === create.ExplicitContentRedaction.SHOW ||
+    explicitContentNonFriendDm === create.ExplicitContentRedaction.SHOW
+  );
 };
 const result = set.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersSexualMedia.tsx");
 

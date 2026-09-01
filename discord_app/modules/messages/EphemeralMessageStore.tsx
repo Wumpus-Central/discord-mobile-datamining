@@ -23,8 +23,7 @@ function clearAll() {
 let closure_4 = [];
 let map = new Map();
 const Store = initializeDefault.Store;
-class EphemeralMessageStore extends Store {
-}
+class EphemeralMessageStore extends Store {}
 const prototype = EphemeralMessageStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2);
@@ -171,7 +170,7 @@ const ephemeralMessageStore = new EphemeralMessageStore(dispatcherDefault, {
   CACHE_LOADED: clearAll,
   CONNECTION_OPEN: clearAll,
   OVERLAY_INITIALIZE: clearAll,
-  LOGOUT: clearAll
+  LOGOUT: clearAll,
 });
 let result = require("set").fileFinishedImporting("modules/messages/EphemeralMessageStore.tsx");
 

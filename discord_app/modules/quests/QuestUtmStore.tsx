@@ -10,11 +10,16 @@ const obj = keys.create((arg0) => {
     utmCampaignCurrent: "resizeMode",
     utmContentCurrent: "isArray",
     setUtmCurrentContext(utmSourceCurrent) {
-      return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });
+      return state({
+        utmSourceCurrent: utmSourceCurrent.utmSourceCurrent,
+        utmMediumCurrent: utmSourceCurrent.utmMediumCurrent,
+        utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent,
+        utmContentCurrent: utmSourceCurrent.utmContentCurrent,
+      });
     },
     getUtmCurrentContext() {
       return state.getState();
-    }
+    },
   };
 });
 const result = set.fileFinishedImporting("modules/quests/QuestUtmStore.tsx");

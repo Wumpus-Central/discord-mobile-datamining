@@ -17,11 +17,11 @@ class JankStatsManager extends tmp3 {
     applyArgumentsResult._isStartup = true;
     applyArgumentsResult.actions = {
       APP_STATE_UPDATE(arg0) {
-            applyArgumentsResult.handleAppStateUpdate(arg0);
-          },
+        applyArgumentsResult.handleAppStateUpdate(arg0);
+      },
       CONNECTION_OPEN_SUPPLEMENTAL() {
-            const result = applyArgumentsResult.handleConnectionOpenSupplemental();
-          }
+        const result = applyArgumentsResult.handleConnectionOpenSupplemental();
+      },
     };
     return applyArgumentsResult;
   }
@@ -83,7 +83,12 @@ prototype["sendReport"] = function sendReport(background) {
     const tmpResult = expandEventPropertiesDefault;
     const merged = Object.assign(getDeviceMetadata.getDeviceMetadata());
     obj.version = 2;
-    ({ totalFrameCount: obj3.total_frame_count, jankFrameCount: obj3.jank_frame_count, frameMetricsTotalFrameCount: obj3.frame_metrics_total_frame_count, frameMetricsJankFrameCount: obj3.frame_metrics_jank_frame_count } = report);
+    ({
+      totalFrameCount: obj3.total_frame_count,
+      jankFrameCount: obj3.jank_frame_count,
+      frameMetricsTotalFrameCount: obj3.frame_metrics_total_frame_count,
+      frameMetricsJankFrameCount: obj3.frame_metrics_jank_frame_count,
+    } = report);
     obj.trigger = background;
     tmpResult.track(constants2.ANDROID_JANK_STATS, obj);
     const obj4 = getDeviceMetadata;

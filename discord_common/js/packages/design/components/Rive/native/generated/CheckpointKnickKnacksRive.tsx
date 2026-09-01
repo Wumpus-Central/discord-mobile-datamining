@@ -6,14 +6,57 @@ import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
-let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
+let closure_3 = [
+  "fallback",
+  "artboard",
+  "stateMachine",
+  "defaultViewModelInstance",
+  "dataBinding",
+  "onDataBindingChange",
+];
 let c5 = importAllResult;
-let closure_7 = { Preview: { reducedMotion: "boolean", iconColor: "color" }, Friends: { reducedMotion: "boolean", iconColor: "color" }, Globe: { reducedMotion: "boolean", iconColor: "color" }, "Globe Single Line": {}, Emojis: { reducedMotion: "boolean", iconColor: "color" }, "Wave Line": { reducedMotion: "boolean", iconColor: "color" }, Games: { reducedMotion: "boolean", iconColor: "color" }, Voice: { reducedMotion: "boolean", iconColor: "color" }, "Looping Checkboard": { reducedMotion: "boolean", iconColor: "color" }, CheckRow: { reducedMotion: "boolean", iconColor: "color" }, Quests: { reducedMotion: "boolean", iconColor: "color" }, Entry: { reducedMotion: "boolean", iconColor: "color" }, Messages: { reducedMotion: "boolean", iconColor: "color" }, Servers: { reducedMotion: "boolean", iconColor: "color" } };
-let closure_8 = { Preview: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"], Friends: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"], Globe: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"], "Globe Single Line": [], Emojis: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"], "Wave Line": ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"], Games: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"], Voice: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"], "Looping Checkboard": ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"], CheckRow: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"], Quests: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"], Entry: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"], Messages: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"], Servers: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"] };
+let closure_7 = {
+  Preview: { reducedMotion: "boolean", iconColor: "color" },
+  Friends: { reducedMotion: "boolean", iconColor: "color" },
+  Globe: { reducedMotion: "boolean", iconColor: "color" },
+  "Globe Single Line": {},
+  Emojis: { reducedMotion: "boolean", iconColor: "color" },
+  "Wave Line": { reducedMotion: "boolean", iconColor: "color" },
+  Games: { reducedMotion: "boolean", iconColor: "color" },
+  Voice: { reducedMotion: "boolean", iconColor: "color" },
+  "Looping Checkboard": { reducedMotion: "boolean", iconColor: "color" },
+  CheckRow: { reducedMotion: "boolean", iconColor: "color" },
+  Quests: { reducedMotion: "boolean", iconColor: "color" },
+  Entry: { reducedMotion: "boolean", iconColor: "color" },
+  Messages: { reducedMotion: "boolean", iconColor: "color" },
+  Servers: { reducedMotion: "boolean", iconColor: "color" },
+};
+let closure_8 = {
+  Preview: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"],
+  Friends: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"],
+  Globe: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"],
+  "Globe Single Line": [],
+  Emojis: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"],
+  "Wave Line": ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"],
+  Games: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"],
+  Voice: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"],
+  "Looping Checkboard": ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"],
+  CheckRow: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"],
+  Quests: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"],
+  Entry: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"],
+  Messages: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"],
+  Servers: ["Pink", "Orange", "Green", "Lavender", "Yellow", "Cyan"],
+};
 let closure_9 = {
   Preview: function PreviewBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
@@ -28,7 +71,13 @@ let closure_9 = {
   },
   Friends: function FriendsBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
@@ -43,7 +92,13 @@ let closure_9 = {
   },
   Globe: function GlobeBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
@@ -58,7 +113,13 @@ let closure_9 = {
   },
   Emojis: function EmojisBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
@@ -73,7 +134,13 @@ let closure_9 = {
   },
   "Wave Line": function WaveLineBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
@@ -88,7 +155,13 @@ let closure_9 = {
   },
   Games: function GamesBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
@@ -103,7 +176,13 @@ let closure_9 = {
   },
   Voice: function VoiceBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
@@ -118,7 +197,13 @@ let closure_9 = {
   },
   "Looping Checkboard": function LoopingCheckboardBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
@@ -133,7 +218,13 @@ let closure_9 = {
   },
   CheckRow: function CheckRowBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
@@ -148,7 +239,13 @@ let closure_9 = {
   },
   Quests: function QuestsBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
@@ -163,7 +260,13 @@ let closure_9 = {
   },
   Entry: function EntryBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
@@ -178,7 +281,13 @@ let closure_9 = {
   },
   Messages: function MessagesBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
@@ -193,7 +302,13 @@ let closure_9 = {
   },
   Servers: function ServersBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
@@ -205,7 +320,7 @@ let closure_9 = {
     }
     const colorBinding = BaseRive.useColorBinding("iconColor", instance, iconColor, iconColor1, playIfNeeded);
     return null;
-  }
+  },
 };
 let closure_10 = importAllResult.forwardRef(function CheckpointKnickKnacksRiveInner(defaultViewModelInstance, ref) {
   ({ fallback, artboard } = defaultViewModelInstance);
@@ -234,7 +349,16 @@ let closure_10 = importAllResult.forwardRef(function CheckpointKnickKnacksRiveIn
   }, items);
   const tmp = callback(defaultViewModelInstance, closure_3);
   let merged = Object.assign(tmp);
-  return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: dataBinding(onDataBindingChange[4]), artboard: str, artboardProperties: closure_7, artboardViewModelInstances: closure_8, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
+  return jsx(str(onDataBindingChange[3]).BaseRive, {
+    ref,
+    src: dataBinding(onDataBindingChange[4]),
+    artboard: str,
+    artboardProperties: closure_7,
+    artboardViewModelInstances: closure_8,
+    defaultViewModelInstance: str2,
+    stateMachine: defaultViewModelInstance.stateMachine,
+    renderDataBinding: callback,
+  });
 });
 const forwardRefResult = importAllResult.forwardRef(function CheckpointKnickKnacksRiveWithBoundary(fallback, ref) {
   let obj = { fallback: fallback.fallback, children: null };
@@ -243,6 +367,8 @@ const forwardRefResult = importAllResult.forwardRef(function CheckpointKnickKnac
   obj[1] = <closure_10 ref={arg1} />;
   return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CheckpointKnickKnacksRive.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/design/components/Rive/native/generated/CheckpointKnickKnacksRive.tsx",
+);
 
 export const CheckpointKnickKnacksRive = forwardRefResult;

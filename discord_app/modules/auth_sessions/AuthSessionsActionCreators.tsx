@@ -6,7 +6,7 @@ import { Endpoints } from "../../Constants.tsx";
 const require = arg1;
 function _fetchAuthSessions() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const callback = tmp2;
     closure_0 = tmp5;
     const HTTP = closure_1_0(530).HTTP;
@@ -40,7 +40,7 @@ function _logOutSessions() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();

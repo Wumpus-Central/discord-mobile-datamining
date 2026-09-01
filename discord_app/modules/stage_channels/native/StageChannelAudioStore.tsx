@@ -38,8 +38,7 @@ const NativeModules = get_ActivityIndicator.NativeModules;
 let c7 = null;
 let c8 = false;
 const Store = initializeDefault.Store;
-class StageChannelAudioStore extends Store {
-}
+class StageChannelAudioStore extends Store {}
 const prototype = StageChannelAudioStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_5, closure_6);
@@ -67,7 +66,9 @@ const stageChannelAudioStore = new StageChannelAudioStore(dispatcherDefault, {
             if (!isGuildStageVoiceResult) {
               let defaultSpeakerForGuildCall = channel.isGuildVoice();
               if (defaultSpeakerForGuildCall) {
-                defaultSpeakerForGuildCall = apexExperimentDefault.getConfig({ location: "StageChannelAudioStore" }).defaultSpeakerForGuildCall;
+                defaultSpeakerForGuildCall = apexExperimentDefault.getConfig({
+                  location: "StageChannelAudioStore",
+                }).defaultSpeakerForGuildCall;
                 const obj2 = apexExperimentDefault;
               }
               isGuildStageVoiceResult = defaultSpeakerForGuildCall;
@@ -75,7 +76,9 @@ const stageChannelAudioStore = new StageChannelAudioStore(dispatcherDefault, {
             if (!isGuildStageVoiceResult) {
               let defaultSpeakerForDMCall = channel.isDM();
               if (defaultSpeakerForDMCall) {
-                defaultSpeakerForDMCall = apexExperimentDefault.getConfig({ location: "StageChannelAudioStore" }).defaultSpeakerForDMCall;
+                defaultSpeakerForDMCall = apexExperimentDefault.getConfig({
+                  location: "StageChannelAudioStore",
+                }).defaultSpeakerForDMCall;
                 const obj3 = apexExperimentDefault;
               }
               isGuildStageVoiceResult = defaultSpeakerForDMCall;
@@ -108,7 +111,7 @@ const stageChannelAudioStore = new StageChannelAudioStore(dispatcherDefault, {
       flag = true;
     }
     return flag;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/stage_channels/native/StageChannelAudioStore.tsx");
 

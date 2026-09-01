@@ -23,7 +23,10 @@ function handleSyncedStoresUpdate() {
     if (voiceAndVideo != null) {
       prop = voiceAndVideo.videoBackgroundFilterDesktop;
     }
-    const videoBackgroundOptionFromProto = isAnimatedBackgroundOption.getVideoBackgroundOptionFromProto(prop, currentUser.id);
+    const videoBackgroundOptionFromProto = isAnimatedBackgroundOption.getVideoBackgroundOptionFromProto(
+      prop,
+      currentUser.id,
+    );
     let isVideoEnabledResult = null != obj.getVoiceChannelId();
     if (isVideoEnabledResult) {
       isVideoEnabledResult = closure_3.isVideoEnabled();
@@ -46,8 +49,7 @@ let closure_9 = {};
 let c10 = false;
 let c11 = false;
 const Store = initializeDefault.Store;
-class VideoBackgroundStore extends Store {
-}
+class VideoBackgroundStore extends Store {}
 const prototype = VideoBackgroundStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_4, closure_2, closure_5);
@@ -58,31 +60,31 @@ Object.defineProperty(prototype, "videoFilterAssets", {
   get: function videoFilterAssets() {
     return closure_9;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasBeenApplied", {
   get: function hasBeenApplied() {
     return c6;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasUsedBackgroundInCall", {
   get: function hasUsedBackgroundInCall() {
     return c8;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "videoBackgroundUnavailable", {
   get: function videoBackgroundUnavailable() {
     return c10;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "videoBackgroundPreviewUnavailable", {
   get: function videoBackgroundPreviewUnavailable() {
     return c11;
   },
-  set: undefined
+  set: undefined,
 });
 VideoBackgroundStore.displayName = "VideoBackgroundStore";
 const videoBackgroundStore = new VideoBackgroundStore(dispatcherDefault, {
@@ -157,7 +159,7 @@ const videoBackgroundStore = new VideoBackgroundStore(dispatcherDefault, {
     closure_9 = {};
     c10 = false;
     c11 = false;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/video_backgrounds/VideoBackgroundStore.tsx");
 

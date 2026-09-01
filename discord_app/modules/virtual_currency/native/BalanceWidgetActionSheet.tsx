@@ -13,10 +13,36 @@ require = arg1;
 ({ AnalyticEvents: closure_6, Fonts: error, HelpdeskArticles: closure_8 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((color) => {
-  let obj = { actions: null, balanceHeader: null, balanceText: null, content: null, header: null, infoIconBackground: null, infoIconContainer: null, promotionalBackground: null, promotionalBackgroundContainer: null, promotionalBannerAsset: null, promotionalBannerContainer: null, promotionalBannerText: null };
-  obj = { flex: 1, flexDirection: "column", gap: ThemesDefault.space.PX_12, minWidth: "100%", paddingTop: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
+  let obj = {
+    actions: null,
+    balanceHeader: null,
+    balanceText: null,
+    content: null,
+    header: null,
+    infoIconBackground: null,
+    infoIconContainer: null,
+    promotionalBackground: null,
+    promotionalBackgroundContainer: null,
+    promotionalBannerAsset: null,
+    promotionalBannerContainer: null,
+    promotionalBannerText: null,
+  };
+  obj = {
+    flex: 1,
+    flexDirection: "column",
+    gap: ThemesDefault.space.PX_12,
+    minWidth: "100%",
+    paddingTop: ThemesDefault.space.PX_12,
+    paddingHorizontal: ThemesDefault.space.PX_16,
+  };
   obj[0] = obj;
-  obj = { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_8, flexWrap: "wrap" };
+  obj = {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: ThemesDefault.space.PX_8,
+    flexWrap: "wrap",
+  };
   obj[1] = obj;
   obj1 = { color, fontSize: 36, lineHeight: null, textAlignVertical: "center" };
   let obj4 = set;
@@ -27,11 +53,38 @@ let closure_12 = createCacheKey.createStyles((color) => {
   obj1[2] = num;
   obj[2] = obj1;
   obj[3] = { width: "100%", height: "100%", alignItems: "center", flex: 1, marginBottom: ThemesDefault.space.PX_16 };
-  const obj2 = { width: "100%", height: "100%", alignItems: "center", flex: 1, marginBottom: ThemesDefault.space.PX_16 };
-  obj[4] = { width: "100%", paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_16, alignItems: "center", position: "relative", flexDirection: "column" };
-  obj4 = { width: 32, height: 32, backgroundColor: tmp(712).colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: tmp(712).radii.round, justifyContent: "center", alignItems: "center" };
+  const obj2 = {
+    width: "100%",
+    height: "100%",
+    alignItems: "center",
+    flex: 1,
+    marginBottom: ThemesDefault.space.PX_16,
+  };
+  obj[4] = {
+    width: "100%",
+    paddingTop: ThemesDefault.space.PX_12,
+    paddingBottom: ThemesDefault.space.PX_16,
+    alignItems: "center",
+    position: "relative",
+    flexDirection: "column",
+  };
+  obj4 = {
+    width: 32,
+    height: 32,
+    backgroundColor: tmp(712).colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND,
+    borderRadius: tmp(712).radii.round,
+    justifyContent: "center",
+    alignItems: "center",
+  };
   obj[5] = obj4;
-  const obj3 = { width: "100%", paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_16, alignItems: "center", position: "relative", flexDirection: "column" };
+  const obj3 = {
+    width: "100%",
+    paddingTop: ThemesDefault.space.PX_12,
+    paddingBottom: ThemesDefault.space.PX_16,
+    alignItems: "center",
+    position: "relative",
+    flexDirection: "column",
+  };
   obj[6] = { position: "absolute", left: ThemesDefault.space.PX_16, top: ThemesDefault.space.PX_16, zIndex: 10 };
   const obj5 = { position: "absolute", left: ThemesDefault.space.PX_16, top: ThemesDefault.space.PX_16, zIndex: 10 };
   obj[7] = { position: "absolute", top: 0, left: 0, right: 0, borderRadius: ThemesDefault.radii.xl, bottom: -100 };
@@ -39,7 +92,14 @@ let closure_12 = createCacheKey.createStyles((color) => {
   obj[9] = { width: "100%", height: "100%" };
   const obj6 = { position: "absolute", top: 0, left: 0, right: 0, borderRadius: ThemesDefault.radii.xl, bottom: -100 };
   obj[10] = { width: "100%", height: 144, gap: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_64 };
-  obj[11] = { color, fontFamily: constants.PRIMARY_BOLD, fontWeight: "600", fontSize: 16, lineHeight: 20, textAlign: "center" };
+  obj[11] = {
+    color,
+    fontFamily: constants.PRIMARY_BOLD,
+    fontWeight: "600",
+    fontSize: 16,
+    lineHeight: 20,
+    textAlign: "center",
+  };
   return obj;
 });
 let result = require("set").fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetActionSheet.tsx");
@@ -81,10 +141,17 @@ export default function _default(balance) {
     let obj = closure_1_1(ref[14]);
     obj = { type: "VIEW", source: closure_1, balance: num };
     obj.track(closure_1_6.ORB_BALANCE_ACTION_SHEET_ACTION, obj);
-    if (!obj3.UNSAFE_isDismissibleContentDismissed(num(ref[16]).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL)) {
+    if (
+      !obj3.UNSAFE_isDismissibleContentDismissed(
+        num(ref[16]).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL,
+      )
+    ) {
       obj = { dismissAction: null };
       obj[0] = closure_1_9.AUTO_DISMISS;
-      const result = tmp3(tmp[15]).UNSAFE_markDismissibleContentAsDismissed(tmp3(tmp[16]).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL, obj);
+      const result = tmp3(tmp[15]).UNSAFE_markDismissibleContentAsDismissed(
+        tmp3(tmp[16]).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL,
+        obj,
+      );
       const tmp3Result = tmp3(tmp[15]);
     }
   }, []);
@@ -96,9 +163,9 @@ export default function _default(balance) {
       return callback2(closure_4, {});
     },
     handleDisabled: false,
-    children: null
+    children: null,
   };
-  const items1 = [tmp9.content, ];
+  const items1 = [tmp9.content];
   let promotionalBackgroundContainer = null != memo;
   if (promotionalBackgroundContainer) {
     promotionalBackgroundContainer = null != memo.backgroundVideo;
@@ -112,7 +179,7 @@ export default function _default(balance) {
   obj1 = { style: items1, children: null };
   items1[1] = promotionalBackgroundContainer;
   if (!(null != memo && null != memo.backgroundVideo && null != memo.backgroundImage)) {
-    const items2 = [tmp14, , , , , ];
+    const items2 = [tmp14, , , , ,];
     const obj2 = { onPress: null };
     obj2[0] = function onPress() {
       const current = ref.current;
@@ -141,7 +208,7 @@ export default function _default(balance) {
     obj8[0] = tmp9.balanceHeader;
     const obj9 = { size: "lg", color: null };
     obj9[1] = token;
-    const items3 = [tmp11(tmp3(tmp4[23]).OrbsIcon, obj9), ];
+    const items3 = [tmp11(tmp3(tmp4[23]).OrbsIcon, obj9)];
     const obj10 = { variant: "display-md", style: null, accessibilityLabel: null, children: null };
     obj10[1] = tmp9.balanceText;
     const intl2 = tmp3(tmp4[8]).intl;
@@ -169,7 +236,7 @@ export default function _default(balance) {
       obj14[0] = memo.bannerImage;
       obj13[0] = obj14;
       obj13[1] = tmp9.promotionalBannerAsset;
-      const items4 = [tmp11(tmp7(tmp4[19]), obj13), ];
+      const items4 = [tmp11(tmp7(tmp4[19]), obj13)];
       let tmp11Result = null != memo.bannerText;
       if (tmp11Result) {
         tmp11Result = "" !== memo.bannerText;
@@ -188,7 +255,7 @@ export default function _default(balance) {
     const obj16 = { style: null, children: null };
     obj16[0] = tmp9.actions;
     ({ buttonText: obj25[0], onButtonPress: obj25[3] } = primaryButtonConfig);
-    const items5 = [tmp11(tmp3(tmp4[25]).Button, { text: null, variant: "primary", size: "lg", onPress: null }), ];
+    const items5 = [tmp11(tmp3(tmp4[25]).Button, { text: null, variant: "primary", size: "lg", onPress: null })];
     ({ buttonText: obj26[0], onButtonPress: obj26[3] } = secondaryButtonConfig);
     items5[1] = tmp11(tmp3(tmp4[25]).Button, { text: null, variant: "tertiary", size: "lg", onPress: null });
     obj16[1] = items5;
@@ -205,7 +272,18 @@ export default function _default(balance) {
     obj19[1] = tmp9.promotionalBackground;
     tmp11Result = tmp11(tmp7(tmp4[19]), obj19);
   } else {
-    const obj21 = { source: null, poster: null, style: null, muted: true, disableFocus: true, pauseWhileAppInactive: true, paused: null, posterResizeMode: "cover", resizeMode: "cover", preventsDisplaySleepDuringVideoPlayback: false };
+    const obj21 = {
+      source: null,
+      poster: null,
+      style: null,
+      muted: true,
+      disableFocus: true,
+      pauseWhileAppInactive: true,
+      paused: null,
+      posterResizeMode: "cover",
+      resizeMode: "cover",
+      preventsDisplaySleepDuringVideoPlayback: false,
+    };
     const obj22 = { uri: null };
     obj22[0] = memo.backgroundVideo;
     obj21[0] = obj22;
@@ -214,4 +292,4 @@ export default function _default(balance) {
     obj21[6] = enabled;
     tmp11Result = tmp11(tmp3(tmp4[20]).VideoComponent, obj21);
   }
-};
+}

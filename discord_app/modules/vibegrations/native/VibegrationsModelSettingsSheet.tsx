@@ -15,15 +15,35 @@ function TierSection(arg0) {
   ({ title, modelChoices, thinkingChoices, value } = arg0);
   ({ onPickModel, onPickThinking } = arg0);
   let obj = { direction: "vertical", spacing: ThemesDefault.space.PX_8, children: null };
-  const items = [callback(Text.Text, { variant: "text-sm/semibold", color: "text-muted", children: title }), , ];
-  obj = { hasIcons: false, defaultValue: value.model, onChange: onPickModel, title: null, accessibilityLabel: null, children: null };
+  const items = [callback(Text.Text, { variant: "text-sm/semibold", color: "text-muted", children: title }), ,];
+  obj = {
+    hasIcons: false,
+    defaultValue: value.model,
+    onChange: onPickModel,
+    title: null,
+    accessibilityLabel: null,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(messagesProxyDefault["9FRudW"]);
   const intl2 = getSystemLocale.intl;
   obj[4] = "" + title + " \u2014 " + intl2.string(messagesProxyDefault["9FRudW"]);
-  obj[5] = modelChoices.map((label) => callback2(callback(7693).TableRadioRow, { label: label.label, subLabel: callback(16185).PROVIDER_LABELS[label.provider], value: label.id }, label.id));
+  obj[5] = modelChoices.map((label) =>
+    callback2(
+      callback(7693).TableRadioRow,
+      { label: label.label, subLabel: callback(16185).PROVIDER_LABELS[label.provider], value: label.id },
+      label.id,
+    ),
+  );
   items[1] = callback(context.TableRadioGroup, obj);
-  obj = { hasIcons: false, defaultValue: value.thinking, onChange: onPickThinking, title: null, accessibilityLabel: null, children: null };
+  obj = {
+    hasIcons: false,
+    defaultValue: value.thinking,
+    onChange: onPickThinking,
+    title: null,
+    accessibilityLabel: null,
+    children: null,
+  };
   const intl3 = getSystemLocale.intl;
   obj[3] = intl3.string(messagesProxyDefault["4AsQHS"]);
   const intl4 = getSystemLocale.intl;
@@ -59,8 +79,7 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     if (null != settings) {
       try {
         closure_1_5(projectId, arg0(settings));
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }, items2);
   if (null == stateFromStores) {
@@ -75,7 +94,14 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     obj1 = { children: null };
     const obj2 = { direction: "vertical", spacing: null, children: null };
     obj2[1] = ThemesDefault.space.PX_16;
-    const obj3 = { title: null, modelChoices: null, thinkingChoices: null, value: null, onPickModel: null, onPickThinking: null };
+    const obj3 = {
+      title: null,
+      modelChoices: null,
+      thinkingChoices: null,
+      value: null,
+      onPickModel: null,
+      onPickThinking: null,
+    };
     const intl2 = tmp(1236).intl;
     obj3[0] = intl2.string(messagesProxyDefault.ISmynF);
     ({ main: obj6[1], thinking: obj6[2] } = choices);
@@ -104,8 +130,15 @@ export default function VibegrationsModelSettingsSheet(projectId) {
         return obj;
       });
     };
-    const items3 = [callback(TierSection, obj3), , ];
-    const obj4 = { title: null, modelChoices: null, thinkingChoices: null, value: null, onPickModel: null, onPickThinking: null };
+    const items3 = [callback(TierSection, obj3), ,];
+    const obj4 = {
+      title: null,
+      modelChoices: null,
+      thinkingChoices: null,
+      value: null,
+      onPickModel: null,
+      onPickThinking: null,
+    };
     const intl3 = tmp(1236).intl;
     obj4[0] = intl3.string(messagesProxyDefault.hdt1ph);
     ({ subagent: obj7[1], thinking: obj7[2] } = choices);
@@ -144,5 +177,5 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     obj[2] = callback(tmp(5624).BottomSheetScrollView, obj1);
     return callback(tmp(5989).ActionSheet, obj);
   }
-};
+}
 export const VIBEGRATIONS_MODEL_SETTINGS_SHEET_KEY = "VibegrationsModelSettingsSheet";

@@ -117,8 +117,7 @@ let map = new Map();
 let map1 = new Map();
 let map2 = new Map();
 const Store = initializeDefault.Store;
-class SearchMessageStore extends Store {
-}
+class SearchMessageStore extends Store {}
 const prototype2 = SearchMessageStore.prototype;
 prototype2["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3, closure_4);
@@ -318,17 +317,22 @@ const searchMessageStore = new SearchMessageStore(dispatcherDefault, {
       }
       let result = store.set(id, value);
       const messages = id.messages;
-      const item = value.handleSearchSuccess(id, messages.map((arg0) => {
-        [tmp] = arg0;
-        return callback(table[5]).createMessageRecord(tmp);
-      })).forEach((id) => {
-        const result = closure_8.set(id.id, id);
-        let num = store.get(id.id);
-        if (num == null) {
-          num = 0;
-        }
-        const result1 = store.set(id.id, num + 1);
-      });
+      const item = value
+        .handleSearchSuccess(
+          id,
+          messages.map((arg0) => {
+            [tmp] = arg0;
+            return callback(table[5]).createMessageRecord(tmp);
+          }),
+        )
+        .forEach((id) => {
+          const result = closure_8.set(id.id, id);
+          let num = store.get(id.id);
+          if (num == null) {
+            num = 0;
+          }
+          const result1 = store.set(id.id, num + 1);
+        });
     });
   },
   SEARCH_MESSAGES_INDEXING: function handleSearchMessagesIndexing(ids) {
@@ -446,7 +450,7 @@ const searchMessageStore = new SearchMessageStore(dispatcherDefault, {
     map = new Map();
     map1 = new Map();
     map2 = new Map();
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/search/SearchMessageStore.tsx");
 

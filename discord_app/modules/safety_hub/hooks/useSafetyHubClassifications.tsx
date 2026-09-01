@@ -23,14 +23,23 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getClassification(closure_0));
   const items1 = [closure_5];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_5.getClassificationRequestState(closure_0));
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => closure_1_5.getClassificationRequestState(closure_0),
+  );
   const obj2 = initialize;
   let tmp = _require;
   const items2 = [closure_5];
-  const stateFromStores2 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => store.getIsDsaEligible());
+  const stateFromStores2 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items2,
+    () => store.getIsDsaEligible(),
+  );
   const obj3 = initialize;
   const items3 = [closure_5];
-  let stateFromStores3 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => store.getIsAppealEligible());
+  let stateFromStores3 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items3,
+    () => store.getIsAppealEligible(),
+  );
   const obj4 = initialize;
   if (obj5.isGuildClassification(stateFromStores)) {
     const guild_metadata = stateFromStores.guild_metadata;
@@ -51,11 +60,19 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
         tmp = null == stateFromStores1;
       }
       if (tmp) {
-        const safetyHubDataForClassification = stateFromStores1(closure_1_3[7]).getSafetyHubDataForClassification(closure_0);
+        const safetyHubDataForClassification = stateFromStores1(closure_1_3[7]).getSafetyHubDataForClassification(
+          closure_0,
+        );
         const obj = stateFromStores1(closure_1_3[7]);
       }
     }, items4);
-    obj = { classification: null, classificationRequestState: null, isDsaEligible: null, isAppealEligible: null, violationType: null };
+    obj = {
+      classification: null,
+      classificationRequestState: null,
+      isDsaEligible: null,
+      isAppealEligible: null,
+      violationType: null,
+    };
     obj[0] = stateFromStores;
     obj[1] = stateFromStores1;
     obj[2] = stateFromStores2;

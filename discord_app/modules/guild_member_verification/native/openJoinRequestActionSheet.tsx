@@ -9,4 +9,4 @@ export default function openJoinRequestActionSheet(joinRequest) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { joinRequest };
   obj.openLazy(asyncRequireImpl(16167, dependencyMap.paths), "joinRequestActionSheet" + joinRequest.joinRequestId, obj);
-};
+}

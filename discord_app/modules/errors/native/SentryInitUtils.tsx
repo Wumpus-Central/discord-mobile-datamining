@@ -17,7 +17,7 @@ function _maybeBackfillMissingBreadcrumbsFromTelemetryRing() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (table === 2) {
         table = 3;
         HermesBuiltin.throwTypeError();
@@ -54,7 +54,7 @@ function _maybeBackfillMissingBreadcrumbsFromTelemetryRing() {
                 }
               }
               const SentryTelemetry = lib(table[6]).SentryTelemetry;
-              items = [SentryTelemetry.snapshotForBreadcrumbs(), ];
+              items = [SentryTelemetry.snapshotForBreadcrumbs()];
               const promise = new Promise((arg0, arg1) => {
                 closure_0 = arg1;
                 return setTimeout(() => {
@@ -199,12 +199,12 @@ function filterError(event_id, originalException) {
       }
       trackCrash(event_id, originalException, false);
     }
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp3;
       closure_0 = tmp3;
       c2 = 1;
       const ZoomedInTelemetry = closure_1_0(table[6]).ZoomedInTelemetry;
-      items = [ZoomedInTelemetry.flushNow(), ];
+      items = [ZoomedInTelemetry.flushNow()];
       const promise = new Promise((arg0) => setTimeout(arg0, 200));
       items[1] = promise;
       yield Promise.race(items);
@@ -444,7 +444,22 @@ function trackCrash(event, hint, arg2) {
     if (extra == null) {
       extra = {};
     }
-    obj = { did_crash: true, sentry_issue_id: null, client_track_timestamp: null, exit_reason: null, exit_description: null, tombstone_hash: null, tombstone_cause: null, tombstone: null, call_stack_tree: null, binary_name: null, exception_message: null, exception_stacktrace: null, js_error_message: null, js_error_stacktrace: null };
+    obj = {
+      did_crash: true,
+      sentry_issue_id: null,
+      client_track_timestamp: null,
+      exit_reason: null,
+      exit_description: null,
+      tombstone_hash: null,
+      tombstone_cause: null,
+      tombstone: null,
+      call_stack_tree: null,
+      binary_name: null,
+      exception_message: null,
+      exception_stacktrace: null,
+      js_error_message: null,
+      js_error_stacktrace: null,
+    };
     obj[1] = tmp13;
     obj[2] = result;
     const native_exit_reason = extra.native_exit_reason;
@@ -534,7 +549,15 @@ function trackCrash(event, hint, arg2) {
     let tmp25 = tmp18;
     let tmp26 = tmp18;
   } else {
-    obj = { path: null, client_track_timestamp: null, sentry_issue_id: null, extra: null, error_message: null, error_level: null, error_stack: null };
+    obj = {
+      path: null,
+      client_track_timestamp: null,
+      sentry_issue_id: null,
+      extra: null,
+      error_message: null,
+      error_level: null,
+      error_stack: null,
+    };
     obj[0] = obj3.getHistory().location.pathname;
     obj[1] = result;
     obj[2] = tmp13;
@@ -560,7 +583,7 @@ function trackCrash(event, hint, arg2) {
   const tmp19 = expandEventPropertiesDefault;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
   obj1 = { name: tmp11(7352).MetricEvents.APP_CRASHED, tags: null };
-  items = ["reason:" + tmp41, ];
+  items = ["reason:" + tmp41];
   if (level == null) {
     level = "unknown";
   }
@@ -571,13 +594,19 @@ function trackCrash(event, hint, arg2) {
 ({ AnalyticEvents: closure_6, Endpoints } = ME);
 addBreadcrumb = addBreadcrumb.reactNavigationIntegration();
 const regExp = new RegExp("/v" + window.GLOBAL_ENV.API_VERSION + Endpoints.METRICS, "g");
-let items = [regExp, , ];
+let items = [regExp, ,];
 const regExp1 = new RegExp("/v" + window.GLOBAL_ENV.API_VERSION + Endpoints.METRICS_V2, "g");
 items[1] = regExp1;
 const regExp2 = new RegExp("/v" + window.GLOBAL_ENV.API_VERSION + Endpoints.TRACK, "g");
 items[2] = regExp2;
 let closure_10 = new timestampDefault("Sentry");
-let closure_11 = ["The operation couldn\u2019t be completed. (com.apple.CallKit.error.requesttransaction", "Request has been terminated", "couldn't execute statement: database is disabled", "couldn't delete database: database is currently open", "database is no longer open"];
+let closure_11 = [
+  "The operation couldn\u2019t be completed. (com.apple.CallKit.error.requesttransaction",
+  "Request has been terminated",
+  "couldn't execute statement: database is disabled",
+  "couldn't delete database: database is currently open",
+  "database is no longer open",
+];
 let c12 = 0.05;
 let c13 = 0.005;
 let c14 = false;
@@ -628,13 +657,15 @@ export const initSentry = function initSentry() {
           obj15 = callback(tmp[16]);
           const lastCrashReport = callback2(tmp[13]).getLastCrashReport();
           const obj4 = callback2(tmp[13]);
-          lastCrashReport.then((arg0) => {
-            if (null != arg0) {
-              callback2(arg0, { crash_event_source: "startup_reconcile" });
-            }
-          }).catch((arg0) => {
-            logger.warn("Failed to replay pending crash report", arg0);
-          });
+          lastCrashReport
+            .then((arg0) => {
+              if (null != arg0) {
+                callback2(arg0, { crash_event_source: "startup_reconcile" });
+              }
+            })
+            .catch((arg0) => {
+              logger.warn("Failed to replay pending crash report", arg0);
+            });
           const nextPromise = lastCrashReport.then((arg0) => {
             if (null != arg0) {
               callback2(arg0, { crash_event_source: "startup_reconcile" });
@@ -645,7 +676,21 @@ export const initSentry = function initSentry() {
           if (tmp14Result2.isAndroid()) {
             str2 = "android";
           }
-          obj = { tunnel: null, autoInitializeNativeSdk: false, beforeSend: null, dist: "6327", dsn: null, environment: null, tracesSampleRate: 0, sampleRate: 1, ignoreErrors: null, release: "discord_android@345.1.0-2+345201", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          obj = {
+            tunnel: null,
+            autoInitializeNativeSdk: false,
+            beforeSend: null,
+            dist: "6327",
+            dsn: null,
+            environment: null,
+            tracesSampleRate: 0,
+            sampleRate: 1,
+            ignoreErrors: null,
+            release: "discord_android@345.1.0-2+345201",
+            tracePropagationTargets: null,
+            integrations: null,
+            beforeBreadcrumb: null,
+          };
           obj[0] = `/error-reporting-proxy/${str2}`;
           obj[2] = closure_16;
           obj[4] = SentryStaffDsn;
@@ -653,7 +698,7 @@ export const initSentry = function initSentry() {
           obj[8] = closure_11;
           items = [closure_7];
           obj[10] = items;
-          const items1 = [closure_8, , ];
+          const items1 = [closure_8, ,];
           tmp14Result2 = callback(tmp[16]);
           items1[1] = callback(tmp[4]).featureFlagsIntegration();
           const tmp14Result3 = callback(tmp[4]);

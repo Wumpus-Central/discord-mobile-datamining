@@ -40,10 +40,10 @@ function ConnectedAcceptGuildTemplate(code) {
     icon: first1,
     errors: tmp7[0],
     chooseIcon: null,
-    createServer: null
+    createServer: null,
   };
   let obj2 = first(5456);
-  obj[6] = first1(function*() {
+  obj[6] = first1(function* () {
     if (table === 2) {
       table = 3;
       HermesBuiltin.throwTypeError();
@@ -107,7 +107,12 @@ function ConnectedAcceptGuildTemplate(code) {
   obj[7] = function createServer() {
     if (null != stateFromStores) {
       const obj = stateFromStores(11378);
-      stateFromStores(11378).acceptGuildTemplate(tmp.code, first, first1).then(() => callback(table[15]).hideModal(), (arg0) => callback2(arg0));
+      stateFromStores(11378)
+        .acceptGuildTemplate(tmp.code, first, first1)
+        .then(
+          () => callback(table[15]).hideModal(),
+          (arg0) => callback2(arg0),
+        );
       const acceptGuildTemplateResult = stateFromStores(11378).acceptGuildTemplate(tmp.code, first, first1);
     }
   };
@@ -121,7 +126,7 @@ function ConnectedAcceptGuildTemplate(code) {
     icon: first1,
     errors: tmp7[0],
     chooseIcon: null,
-    createServer: null
+    createServer: null,
   });
   return jsx(code(5553).SafeAreaPaddingView, {
     code,
@@ -133,7 +138,7 @@ function ConnectedAcceptGuildTemplate(code) {
     icon: first1,
     errors: tmp7[0],
     chooseIcon: null,
-    createServer: null
+    createServer: null,
   });
 }
 createCacheKey = { container: null };
@@ -157,10 +162,10 @@ export default function AcceptGuildTemplateModal(code) {
         obj = {};
         const merged = Object.assign(obj);
         return closure_1_9(closure_1_11, obj);
-      }
+      },
     };
     obj[closure_1_12] = obj;
     return obj;
   }, items);
   return jsx(code(6008).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });
-};
+}

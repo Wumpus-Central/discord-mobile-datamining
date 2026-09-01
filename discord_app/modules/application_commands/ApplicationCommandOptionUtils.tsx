@@ -353,7 +353,10 @@ export const normalizeNumericString = function normalizeNumericString(locale, tr
   }
   return trimmed.replace(regExp, "").replace(regExp1, ".");
 };
-export const getInitialValuesFromInteractionOptions = function getInitialValuesFromInteractionOptions(command, interactionOptions) {
+export const getInitialValuesFromInteractionOptions = function getInitialValuesFromInteractionOptions(
+  command,
+  interactionOptions,
+) {
   closure_0 = command;
   const obj = {};
   function _loop(iter) {

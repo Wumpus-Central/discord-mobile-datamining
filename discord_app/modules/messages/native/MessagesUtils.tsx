@@ -40,7 +40,13 @@ import ME from "../../../Constants.tsx";
 
 require = arg1;
 function getVisibleMessages(arg0) {
-  ({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, chatManager } = arg0);
+  ({
+    firstVisibleMessageRowIndex,
+    lastVisibleMessageRowIndex,
+    firstVisibleMessagePercentVisible,
+    lastVisibleMessagePercentVisible,
+    chatManager,
+  } = arg0);
   if (null != firstVisibleMessageRowIndex) {
     if (null != lastVisibleMessageRowIndex) {
       if (firstVisibleMessageRowIndex >= 0) {
@@ -105,7 +111,7 @@ function _handleTapNavBar() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -225,10 +231,22 @@ function parseVoiceStateChannelIdSummary(prop) {
   return map;
 }
 ({ RowType: closure_15, Changeset: closure_16 } = Changeset);
-({ AnalyticEvents: closure_17, MessageEmbedTypes: closure_18, MessageTypes: closure_19, Permissions: closure_20, MAX_MESSAGES_PER_CHANNEL: closure_21 } = ME);
+({
+  AnalyticEvents: closure_17,
+  MessageEmbedTypes: closure_18,
+  MessageTypes: closure_19,
+  Permissions: closure_20,
+  MAX_MESSAGES_PER_CHANNEL: closure_21,
+} = ME);
 let result = require("set").fileFinishedImporting("modules/messages/native/MessagesUtils.tsx");
 
-export const getLongPressSelectedMedia = function getLongPressSelectedMedia(message, mediaIndex, mediaType, tmpResult, componentMediaIndex) {
+export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
+  message,
+  mediaIndex,
+  mediaType,
+  tmpResult,
+  componentMediaIndex,
+) {
   let obj = message;
   if (message.type === constants5.THREAD_STARTER_MESSAGE) {
     obj = message;
@@ -387,7 +405,13 @@ export const toObscuredMedia = function toObscuredMedia(sourceType) {
   }
   return tmp;
 };
-export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(messageId, channel, reaction, isBurst, MESSAGE) {
+export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(
+  messageId,
+  channel,
+  reaction,
+  isBurst,
+  MESSAGE,
+) {
   let flag = isBurst;
   if (isBurst === undefined) {
     flag = false;
@@ -558,7 +582,9 @@ export const shouldJumpToOriginalPost = function shouldJumpToOriginalPost(isForu
   }
   return isForumPostResult;
 };
-export const startOrCancelChannelLatestMessagesLoad = function startOrCancelChannelLatestMessagesLoad(hasJumpedToOriginalPost) {
+export const startOrCancelChannelLatestMessagesLoad = function startOrCancelChannelLatestMessagesLoad(
+  hasJumpedToOriginalPost,
+) {
   if (null == hasJumpedToOriginalPost.jumpTargetId) {
     if (null == hasJumpedToOriginalPost.oldestUnreadMessageId) {
       if (!hasJumpedToOriginalPost.shouldJumpToOriginalPost) {
@@ -621,7 +647,22 @@ export const handleTapTableView = function handleTapTableView(current) {
 };
 export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinishedAnalytics(playWallTimeMs) {
   let obj = expandEventPropertiesDefault;
-  obj = { play_time_sec: playWallTimeMs.playWallTimeMs / 1000, play_wall_time_ms: playWallTimeMs.playWallTimeMs, first_play_waiting_ms: Math.min(playWallTimeMs.firstPlayWaitingMs, 600000), stall_count: playWallTimeMs.stallCount, stall_ms: playWallTimeMs.stallMs, seek_count: playWallTimeMs.seekCount, seek_waiting_ms: null, media_source: playWallTimeMs.mediaSource, mime_type: null, file_size: null, file_duration_sec: null, connection_type: null, effective_connection_speed: null, service_provider: null };
+  obj = {
+    play_time_sec: playWallTimeMs.playWallTimeMs / 1000,
+    play_wall_time_ms: playWallTimeMs.playWallTimeMs,
+    first_play_waiting_ms: Math.min(playWallTimeMs.firstPlayWaitingMs, 600000),
+    stall_count: playWallTimeMs.stallCount,
+    stall_ms: playWallTimeMs.stallMs,
+    seek_count: playWallTimeMs.seekCount,
+    seek_waiting_ms: null,
+    media_source: playWallTimeMs.mediaSource,
+    mime_type: null,
+    file_size: null,
+    file_duration_sec: null,
+    connection_type: null,
+    effective_connection_speed: null,
+    service_provider: null,
+  };
   let mimeType = null;
   if (null != playWallTimeMs.mimeType) {
     mimeType = null;
@@ -718,16 +759,52 @@ export const loadMoreAfter = function loadMoreAfter(arg0, hasMoreAfter) {
   }
 };
 export const clearRows = function clearRows(current, clear) {
-  arg4({ animated: false, hasHandledScroll: false, isNearBottom: false, isAtBottom: false, isNearTop: false, decelerating: false, dragging: false, hasMoreMessagesAfterForLastUpdate: false, pendingUpdatesQueue: [], _loaded: false, animatingStickerMessageId: null });
+  arg4({
+    animated: false,
+    hasHandledScroll: false,
+    isNearBottom: false,
+    isAtBottom: false,
+    isNearTop: false,
+    decelerating: false,
+    dragging: false,
+    hasMoreMessagesAfterForLastUpdate: false,
+    pendingUpdatesQueue: [],
+    _loaded: false,
+    animatingStickerMessageId: null,
+  });
   clear.clear();
   callback3(arg2, arg3, false);
   ChatScrollPositionDefault.clearRows(current.current);
 };
-export const handleFirstLayout = function handleFirstLayout(arg0, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible) {
-  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: QuestsVisibleMessagesChangedSource.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT });
+export const handleFirstLayout = function handleFirstLayout(
+  arg0,
+  firstVisibleMessageRowIndex,
+  lastVisibleMessageRowIndex,
+  firstVisibleMessagePercentVisible,
+  lastVisibleMessagePercentVisible,
+) {
+  arg0({
+    firstVisibleMessageRowIndex,
+    lastVisibleMessageRowIndex,
+    firstVisibleMessagePercentVisible,
+    lastVisibleMessagePercentVisible,
+    source: QuestsVisibleMessagesChangedSource.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT,
+  });
 };
-export const handleMessageVisibilityChanged = function handleMessageVisibilityChanged(arg0, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible) {
-  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: QuestsVisibleMessagesChangedSource.QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED });
+export const handleMessageVisibilityChanged = function handleMessageVisibilityChanged(
+  arg0,
+  firstVisibleMessageRowIndex,
+  lastVisibleMessageRowIndex,
+  firstVisibleMessagePercentVisible,
+  lastVisibleMessagePercentVisible,
+) {
+  arg0({
+    firstVisibleMessageRowIndex,
+    lastVisibleMessageRowIndex,
+    firstVisibleMessagePercentVisible,
+    lastVisibleMessagePercentVisible,
+    source: QuestsVisibleMessagesChangedSource.QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED,
+  });
 };
 export const handleLongPressSticker = function handleLongPressSticker(arg0, arg1, arg2) {
   const items = [arg0];
@@ -802,7 +879,15 @@ export const syncMessageDisplay = function syncMessageDisplay(messages) {
       scrollToMessageId(obj);
     } else if (null != oldestUnreadMessageId) {
       const _setTimeout = setTimeout;
-      const timerId = setTimeout(() => scrollToMessageId({ scrollToMessageId: oldestUnreadMessageId, jumpTargetId: messages.jumpTargetId, jumpType: messages(scrollToMessageId[47]).JumpType.INSTANT }), 50);
+      const timerId = setTimeout(
+        () =>
+          scrollToMessageId({
+            scrollToMessageId: oldestUnreadMessageId,
+            jumpTargetId: messages.jumpTargetId,
+            jumpType: messages(scrollToMessageId[47]).JumpType.INSTANT,
+          }),
+        50,
+      );
     }
     tmp2 = messages;
     tmp3 = scrollToMessageId;
@@ -815,7 +900,12 @@ export const syncMessageDisplay = function syncMessageDisplay(messages) {
     hasFetched = messages.ready && !messages.cached;
     const tmp10 = messages.ready && !messages.cached;
   }
-  oldestUnreadMessageId(scrollToMessageId[39]).recordMessageRender(channelId, mapped, hasFetched, messages.hasMoreAfter);
+  oldestUnreadMessageId(scrollToMessageId[39]).recordMessageRender(
+    channelId,
+    mapped,
+    hasFetched,
+    messages.hasMoreAfter,
+  );
 };
 export function getChatRef(arg0) {
   return arg0;
@@ -836,7 +926,14 @@ export const maybeRescrollToMessageId = function maybeRescrollToMessageId(arg0, 
         if (null != chatRef.current) {
           let flag = false;
           if (c4) {
-            let obj = { scrollToMessageId: null, jumpTargetId: null, jumpType: null, focusTargetId: null, overrideScrollJumpType: null, isRescrolling: true };
+            let obj = {
+              scrollToMessageId: null,
+              jumpTargetId: null,
+              jumpType: null,
+              focusTargetId: null,
+              overrideScrollJumpType: null,
+              isRescrolling: true,
+            };
             obj[0] = tmp;
             obj[1] = tmp;
             obj[2] = INSTANT;
@@ -898,7 +995,14 @@ export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescr
             if (null != chatRef.current) {
               let flag = false;
               if (c4) {
-                let obj = { scrollToMessageId: null, jumpTargetId: null, jumpType: null, focusTargetId: null, overrideScrollJumpType: null, isRescrolling: true };
+                let obj = {
+                  scrollToMessageId: null,
+                  jumpTargetId: null,
+                  jumpType: null,
+                  focusTargetId: null,
+                  overrideScrollJumpType: null,
+                  isRescrolling: true,
+                };
                 obj[0] = tmp;
                 obj[1] = tmp;
                 obj[2] = INSTANT;
@@ -940,12 +1044,30 @@ export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescr
   }
 };
 export const handleVisibleMessagesChange = function handleVisibleMessagesChange(arg0) {
-  ({ firstVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessageRowIndex, lastVisibleMessagePercentVisible, shouldTrackAnnouncementMessageViews, shouldTrackOfficialMessageViews, shouldTrackRichPresenceInviteEmbedViews, shouldTrackVoiceInviteEmbedViews, guildId, channel } = arg0);
+  ({
+    firstVisibleMessageRowIndex,
+    firstVisibleMessagePercentVisible,
+    lastVisibleMessageRowIndex,
+    lastVisibleMessagePercentVisible,
+    shouldTrackAnnouncementMessageViews,
+    shouldTrackOfficialMessageViews,
+    shouldTrackRichPresenceInviteEmbedViews,
+    shouldTrackVoiceInviteEmbedViews,
+    guildId,
+    channel,
+  } = arg0);
   if (null != firstVisibleMessageRowIndex) {
     if (null != lastVisibleMessageRowIndex) {
       if (null != firstVisibleMessagePercentVisible) {
         if (null != lastVisibleMessagePercentVisible) {
-          let obj = { firstVisibleMessageRowIndex: null, lastVisibleMessageRowIndex: null, firstVisibleMessagePercentVisible: null, lastVisibleMessagePercentVisible: null, chatManager: null, channelId: null };
+          let obj = {
+            firstVisibleMessageRowIndex: null,
+            lastVisibleMessageRowIndex: null,
+            firstVisibleMessagePercentVisible: null,
+            lastVisibleMessagePercentVisible: null,
+            chatManager: null,
+            channelId: null,
+          };
           obj[0] = firstVisibleMessageRowIndex;
           obj[1] = lastVisibleMessageRowIndex;
           obj[2] = firstVisibleMessagePercentVisible;
@@ -959,13 +1081,33 @@ export const handleVisibleMessagesChange = function handleVisibleMessagesChange(
             obj[1] = tmp;
             const result = _manuallyStartConsoleQuest.questsVisibleMobileMessagesChanged(obj);
             const obj4 = getVoiceInviteEmbedRenderInfo;
-            const result1 = obj4.handleAnnouncementMessageViewTracking(arr, shouldTrackAnnouncementMessageViews, guildId, channel);
+            const result1 = obj4.handleAnnouncementMessageViewTracking(
+              arr,
+              shouldTrackAnnouncementMessageViews,
+              guildId,
+              channel,
+            );
             const obj5 = getVoiceInviteEmbedRenderInfo;
-            const result2 = obj5.handleOfficialMessageViewTracking(arr, shouldTrackOfficialMessageViews, guildId, channel);
+            const result2 = obj5.handleOfficialMessageViewTracking(
+              arr,
+              shouldTrackOfficialMessageViews,
+              guildId,
+              channel,
+            );
             const obj6 = getVoiceInviteEmbedRenderInfo;
-            const result3 = obj6.handleRichPresenceInviteEmbedViewTracking(arr, shouldTrackRichPresenceInviteEmbedViews, guildId, channel);
+            const result3 = obj6.handleRichPresenceInviteEmbedViewTracking(
+              arr,
+              shouldTrackRichPresenceInviteEmbedViews,
+              guildId,
+              channel,
+            );
             const obj7 = getVoiceInviteEmbedRenderInfo;
-            const result4 = obj7.handleVoiceInviteEmbedViewTracking(arr, shouldTrackVoiceInviteEmbedViews, guildId, channel);
+            const result4 = obj7.handleVoiceInviteEmbedViewTracking(
+              arr,
+              shouldTrackVoiceInviteEmbedViews,
+              guildId,
+              channel,
+            );
             const obj2 = _manuallyStartConsoleQuest;
           }
         }
@@ -973,7 +1115,9 @@ export const handleVisibleMessagesChange = function handleVisibleMessagesChange(
     }
   }
 };
-export const getVoiceStateChannelSummaryFromVoiceStates = function getVoiceStateChannelSummaryFromVoiceStates(voiceStates) {
+export const getVoiceStateChannelSummaryFromVoiceStates = function getVoiceStateChannelSummaryFromVoiceStates(
+  voiceStates,
+) {
   const entries = Object.entries(voiceStates);
   const found = entries.filter((arg0) => {
     [, tmp] = arg0;

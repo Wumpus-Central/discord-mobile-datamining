@@ -11,7 +11,7 @@ function _fetchMessageInteractionData() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       closure_3 = tmp2;
       body = tmp5;
       const HTTP = callback(closure_1_2[3]).HTTP;
@@ -21,7 +21,12 @@ function _fetchMessageInteractionData() {
       yield HTTP.get(obj1);
       body = body.body;
       const obj = callback2(body[2]);
-      const obj4 = { type: "LOAD_MESSAGE_INTERACTION_DATA_SUCCESS", channelId: null, messageId: null, interactionData: null };
+      const obj4 = {
+        type: "LOAD_MESSAGE_INTERACTION_DATA_SUCCESS",
+        channelId: null,
+        messageId: null,
+        interactionData: null,
+      };
       obj4[1] = callback;
       obj4[2] = callback2;
       obj4[3] = body;

@@ -14,7 +14,7 @@ function _fetchNotificationCenterItems() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -193,7 +193,7 @@ function _markNotificationCenterRemoteItemAcked() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const table = tmp3;
       c4 = 1;
       obj1 = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
@@ -238,7 +238,7 @@ function _bulkMarkNotificationCenterItemsAcked() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const table = tmp3;
       mapped = mapped.map((id) => id.id);
       c4 = 1;
@@ -294,7 +294,7 @@ function _deleteNotificationCenterItem() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();

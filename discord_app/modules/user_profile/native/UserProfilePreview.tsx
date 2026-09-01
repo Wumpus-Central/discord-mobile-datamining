@@ -19,7 +19,13 @@ let closure_12 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   if (arg2 == null) {
     num = 263;
   }
-  let obj = { profileContainer: { position: "relative", width: "100%", maxWidth: num }, profileContentContainer: null, profileInnerContent: null, aboutMeCard: null, profileEffect: null };
+  let obj = {
+    profileContainer: { position: "relative", width: "100%", maxWidth: num },
+    profileContentContainer: null,
+    profileInnerContent: null,
+    aboutMeCard: null,
+    profileEffect: null,
+  };
   obj = { overflow: "hidden", minHeight: num2, borderWidth: 1, borderColor: null, borderRadius: null };
   const colors = ThemesDefault.colors;
   if (arg1) {
@@ -42,7 +48,8 @@ const result = require("set").fileFinishedImporting("modules/user_profile/native
 
 export default function UserProfilePreview(hideFrame) {
   ({ user, displayName, guildId } = hideFrame);
-  ({ profileEffectOverride, profileEffectRestartKey, profileFrameOverride, displayNameStylesOverride, compact } = hideFrame);
+  ({ profileEffectOverride, profileEffectRestartKey, profileFrameOverride, displayNameStylesOverride, compact } =
+    hideFrame);
   ({ accessibilityLabel, style } = hideFrame);
   if (compact === undefined) {
     compact = false;
@@ -62,10 +69,22 @@ export default function UserProfilePreview(hideFrame) {
   let obj = guildId(set[8]);
   const items = [closure_6];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => closure_1_6.getPendingChanges(guildId));
-  ({ pendingAccentColor, pendingThemeColors, pendingProfileEffect, pendingProfileFrame, pendingDisplayNameStyles, pendingPronouns } = stateFromStoresObject);
-  ({ pendingAvatar, pendingBanner, pendingAvatarDecoration, pendingGlobalName, pendingLegacyUsernameDisabled } = stateFromStoresObject);
+  ({
+    pendingAccentColor,
+    pendingThemeColors,
+    pendingProfileEffect,
+    pendingProfileFrame,
+    pendingDisplayNameStyles,
+    pendingPronouns,
+  } = stateFromStoresObject);
+  ({ pendingAvatar, pendingBanner, pendingAvatarDecoration, pendingGlobalName, pendingLegacyUsernameDisabled } =
+    stateFromStoresObject);
   const tmp5 = importDefault(set[9])(user.id, guildId);
-  ({ theme, primaryColor, secondaryColor } = importDefault(set[10])({ user, displayProfile: tmp5, pendingThemeColors }));
+  ({ theme, primaryColor, secondaryColor } = importDefault(set[10])({
+    user,
+    displayProfile: tmp5,
+    pendingThemeColors,
+  }));
   const tmp8 = callback(compact, null != primaryColor, maxWidth);
   const tmp9 = importDefault(set[11])();
   obj1 = guildId(set[12]);
@@ -140,33 +159,40 @@ export default function UserProfilePreview(hideFrame) {
   React = tmp23[1];
   const items2 = [tmp4ResultResult, first.width];
   callback = React.useCallback((nativeEvent) => {
-    callback2({ width: Math.floor(nativeEvent.nativeEvent.layout.width), height: Math.floor(nativeEvent.nativeEvent.layout.height) });
+    callback2({
+      width: Math.floor(nativeEvent.nativeEvent.layout.width),
+      height: Math.floor(nativeEvent.nativeEvent.layout.height),
+    });
   }, []);
   const memo = React.useMemo(() => {
     if (null != callback) {
       const layers = tmp.layers;
       ({ overflowTop, overflowBottom, overflowHorizontal } = callback(set[18])(tmp, first.width));
       let num = 0;
-      if (layers.some((type) => {
-        let tmp = "staple" === type.type;
-        if (tmp) {
-          tmp = "top" === type.anchor;
-        }
-        return tmp;
-      })) {
+      if (
+        layers.some((type) => {
+          let tmp = "staple" === type.type;
+          if (tmp) {
+            tmp = "top" === type.anchor;
+          }
+          return tmp;
+        })
+      ) {
         num = overflowTop;
       }
       const obj = { marginTop: null, marginBottom: null, marginHorizontal: null };
       obj[0] = num;
       const layers2 = tmp.layers;
       let num2 = 0;
-      if (layers2.some((type) => {
-        let tmp = "staple" === type.type;
-        if (tmp) {
-          tmp = "bottom" === type.anchor;
-        }
-        return tmp;
-      })) {
+      if (
+        layers2.some((type) => {
+          let tmp = "staple" === type.type;
+          if (tmp) {
+            tmp = "bottom" === type.anchor;
+          }
+          return tmp;
+        })
+      ) {
         num2 = overflowBottom;
       }
       obj[1] = num2;
@@ -175,12 +201,31 @@ export default function UserProfilePreview(hideFrame) {
     }
   }, items2);
   const obj2 = { theme, primaryColor, secondaryColor, children: null };
-  const obj3 = { style: items3, pointerEvents: "none", accessibilityLabel, accessibilityRole: "image", accessible: true, children: null };
+  const obj3 = {
+    style: items3,
+    pointerEvents: "none",
+    accessibilityLabel,
+    accessibilityRole: "image",
+    accessible: true,
+    children: null,
+  };
   items3 = [tmp8.profileContainer, memo, style];
-  const obj4 = { importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, style: { flexShrink: 1 }, children: null };
+  const obj4 = {
+    importantForAccessibility: "no-hide-descendants",
+    accessibilityElementsHidden: true,
+    style: { flexShrink: 1 },
+    children: null,
+  };
   tmp27Result = null != tmp4ResultResult;
   if (tmp27Result) {
-    const obj5 = { frame: null, filterLayer: null, profileThemeType: null, frameOrder: null, containerWidth: null, containerHeight: null };
+    const obj5 = {
+      frame: null,
+      filterLayer: null,
+      profileThemeType: null,
+      frameOrder: null,
+      containerWidth: null,
+      containerHeight: null,
+    };
     obj5[0] = tmp4ResultResult;
     obj5[1] = filterLayer;
     obj5[2] = constants.PREVIEW;
@@ -189,9 +234,18 @@ export default function UserProfilePreview(hideFrame) {
     ({ width: obj13[4], height: obj13[5] } = first);
     tmp27Result = tmp27(tmp4Result, obj5);
   }
-  const items4 = [tmp27Result, , ];
+  const items4 = [tmp27Result, ,];
   const obj6 = { onLayout: callback, style: tmp8.profileContentContainer, children: null };
-  const obj7 = { user, displayProfile: tmp5, bannerHeight: null, pendingBanner: null, pendingAvatarSrc: null, pendingAccentColor: null, pendingThemeColors: null, disableInteraction: true };
+  const obj7 = {
+    user,
+    displayProfile: tmp5,
+    bannerHeight: null,
+    pendingBanner: null,
+    pendingAvatarSrc: null,
+    pendingAccentColor: null,
+    pendingThemeColors: null,
+    disableInteraction: true,
+  };
   const tmpResult2 = guildId(set[16]);
   obj7[2] = guildId(set[23]).PFX_MOBILE_ACTION_SHEET_BANNER_HEIGHT;
   obj7[3] = pendingBanner;
@@ -206,11 +260,26 @@ export default function UserProfilePreview(hideFrame) {
     tmp36 = pendingThemeColors;
   }
   obj7[6] = tmp36;
-  const items5 = [closure_9(importDefault(set[22]), obj7), , ];
+  const items5 = [closure_9(importDefault(set[22]), obj7), ,];
   const obj8 = { style: tmp8.profileInnerContent, children: null };
-  const items6 = [closure_9(importDefault(set[24]), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration, backgroundColor: avatarBackground, disableStatus: true }), ];
-  const obj9 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor, containerStyle: null, children: null };
-  const items7 = [, , ];
+  const items6 = [
+    closure_9(importDefault(set[24]), {
+      user,
+      guildId,
+      pendingAvatarSrc,
+      pendingAvatarDecoration,
+      backgroundColor: avatarBackground,
+      disableStatus: true,
+    }),
+  ];
+  const obj9 = {
+    fallbackBackground: gradientFallbackBackground,
+    primaryColor,
+    secondaryColor,
+    containerStyle: null,
+    children: null,
+  };
+  const items7 = [, ,];
   ({ profileContentWrapper: arr9[0], profileContent: arr9[1] } = tmp9);
   let tmp38 = !tmp27Result;
   const tmp4Result1 = importDefault(set[22]);
@@ -222,15 +291,31 @@ export default function UserProfilePreview(hideFrame) {
   items7[2] = tmp38;
   obj9[3] = items7;
   if (tmp27Result) {
-    const obj11 = { customStatusActivity: null, themeType: null, hasCustomProfileTheme: null, style: null, emojiOnlyStyle: null };
+    const obj11 = {
+      customStatusActivity: null,
+      themeType: null,
+      hasCustomProfileTheme: null,
+      style: null,
+      emojiOnlyStyle: null,
+    };
     obj11[0] = customStatusActivity;
     obj11[1] = constants.PREVIEW;
     obj11[2] = tmp7;
     ({ customStatusBubble: obj19[3], emojiOnlyCustomStatusBubble: obj19[4] } = tmp9);
     tmp27Result = tmp27(tmp4(tmp2[26]), obj11);
   }
-  const items8 = [tmp27Result, , ];
-  const obj12 = { user, themeType: constants.PREVIEW, displayName: null, pronouns: null, badges: null, badgeContainerBackground: null, showBadgeToastOnPress: false, pendingDisplayNameStyles: null, guildId: null };
+  const items8 = [tmp27Result, ,];
+  const obj12 = {
+    user,
+    themeType: constants.PREVIEW,
+    displayName: null,
+    pronouns: null,
+    badges: null,
+    badgeContainerBackground: null,
+    showBadgeToastOnPress: false,
+    pendingDisplayNameStyles: null,
+    guildId: null,
+  };
   const tmp4Result2 = importDefault(set[25]);
   if (displayName == null) {
     displayName = pendingGlobalName;
@@ -255,7 +340,7 @@ export default function UserProfilePreview(hideFrame) {
     obj13[0] = user.id;
     obj13[1] = tmp5;
     obj13[2] = tmp42.PREVIEW;
-    const items9 = [tmp9.card, tmp8.aboutMeCard, ];
+    const items9 = [tmp9.card, tmp8.aboutMeCard];
     const obj14 = { backgroundColor: null };
     obj14[0] = containerBackground;
     items9[2] = obj14;
@@ -273,7 +358,14 @@ export default function UserProfilePreview(hideFrame) {
     items4[1] = tmp29(tmp28, obj6);
     let tmp27Result2 = null != tmp4ResultResult;
     if (tmp27Result2) {
-      const obj15 = { frame: null, filterLayer: null, profileThemeType: null, frameOrder: null, containerWidth: null, containerHeight: null };
+      const obj15 = {
+        frame: null,
+        filterLayer: null,
+        profileThemeType: null,
+        frameOrder: null,
+        containerWidth: null,
+        containerHeight: null,
+      };
       obj15[0] = tmp4ResultResult;
       obj15[1] = filterLayer;
       obj15[2] = tmp42.PREVIEW;
@@ -301,4 +393,4 @@ export default function UserProfilePreview(hideFrame) {
     tmp27(tmp4(tmp2[29]), obj16, skuId);
     const tmp4Result5 = tmp4(tmp2[29]);
   }
-};
+}

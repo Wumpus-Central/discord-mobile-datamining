@@ -4,7 +4,9 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups.tsx";
 import useGameServerGetExpiringEntitlementsDefault from "../../../game_server/hooks/useGameServerGetExpiringEntitlements.tsx";
 
-const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx");
+const result = set.fileFinishedImporting(
+  "modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx",
+);
 
 export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
   let arr = useGetExpiringGuildPowerupsDefault(arg0);
@@ -16,7 +18,10 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
       stringResult = intl.string(tmp(2823)["B3OfL/"]);
     }
     const items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(arr.map((title) => title.title), 0);
+    let arraySpreadResult = HermesBuiltin.arraySpread(
+      arr.map((title) => title.title),
+      0,
+    );
     if (null != stringResult) {
       const items1 = [stringResult];
       let items2 = items1;
@@ -46,4 +51,4 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     obj[3] = [];
     return obj;
   }
-};
+}

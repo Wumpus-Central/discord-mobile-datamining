@@ -22,7 +22,7 @@ function _getOrFetchApplicationForLaunch() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       closure_4 = tmp3;
       ({ applicationId: c0, channelId: c1, guildId: c2 } = callback);
       yield "PX_16";
@@ -36,7 +36,15 @@ function _getOrFetchApplicationForLaunch() {
         PRIVATE_CHANNEL = callback(9473).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
       }
       const obj2 = callback2(709);
-      const obj3 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: "", applicationId: null, channelId: null, guildId: null, error: null, locationKind: null };
+      const obj3 = {
+        type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
+        nonce: "",
+        applicationId: null,
+        channelId: null,
+        guildId: null,
+        error: null,
+        locationKind: null,
+      };
       obj3[2] = callback;
       if (callback2 == null) {
         callback2 = null;
@@ -72,9 +80,13 @@ function _confirmActivityChange() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       c1 = tmp2;
-      ({ currentEmbeddedApplication: c0, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: c1, onConfirmActivityLaunchChecksAlertOpen: c2 } = c0);
+      ({
+        currentEmbeddedApplication: c0,
+        shouldClosePopoutOnLeaveCurrentEmbeddedApplication: c1,
+        onConfirmActivityLaunchChecksAlertOpen: c2,
+      } = c0);
       yield "PX_16";
       if (1 === tmp5) {
         if (arg0 === 1) {
@@ -101,12 +113,17 @@ function _confirmActivityChange() {
                 if (dependencyMap != null) {
                   dependencyMap();
                 }
-                _undefined2(9481)(tmp, channel, () => {
-                  let obj = value(table[10])();
-                  obj = { location: value.location, applicationId: lib.id, shouldClosePopout: value };
-                  obj.leaveActivity(obj);
-                  lib(true);
-                }, () => lib(false));
+                _undefined2(9481)(
+                  tmp,
+                  channel,
+                  () => {
+                    let obj = value(table[10])();
+                    obj = { location: value.location, applicationId: lib.id, shouldClosePopout: value };
+                    obj.leaveActivity(obj);
+                    lib(true);
+                  },
+                  () => lib(false),
+                );
               }
             }
             arg0(true);
@@ -149,7 +166,7 @@ function _confirmActivityAgeGate() {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -183,7 +200,13 @@ function _confirmActivityAgeGate() {
               let id;
               nsfwAllowed = undefined;
               c4 = undefined;
-              ({ application: c0, applicationId: closure_1, channel: c2, user: c3, onConfirmActivityLaunchChecksAlertOpen: c4 } = c0);
+              ({
+                application: c0,
+                applicationId: closure_1,
+                channel: c2,
+                user: c3,
+                onConfirmActivityLaunchChecksAlertOpen: c4,
+              } = c0);
               obj = undefined;
               obj = 1;
               c6 = 1;
@@ -319,9 +342,14 @@ function _confirmExternalAppLaunch() {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       c3 = tmp2;
-      ({ application: c0, applicationId: closure_1, channel: c2, onConfirmActivityLaunchChecksAlertOpen: c3 } = callback);
+      ({
+        application: c0,
+        applicationId: closure_1,
+        channel: c2,
+        onConfirmActivityLaunchChecksAlertOpen: c3,
+      } = callback);
       yield "PX_16";
       if (1 === tmp5) {
         if (arg0 === 1) {
@@ -396,7 +424,7 @@ function _confirmExternalAppLaunch() {
                 },
                 onCancel() {
                   return callback(false);
-                }
+                },
               };
               const result = obj.confirmExternalAppLaunchAlert(obj);
             });
@@ -425,9 +453,13 @@ function _confirmActivityLaunchChecks() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       c1 = tmp2;
-      ({ currentEmbeddedApplication: obj7[0], shouldClosePopoutOnLeaveCurrentEmbeddedApplication: obj7[1], onConfirmActivityLaunchChecksAlertOpen: obj7[2] } = closure_0);
+      ({
+        currentEmbeddedApplication: obj7[0],
+        shouldClosePopoutOnLeaveCurrentEmbeddedApplication: obj7[1],
+        onConfirmActivityLaunchChecksAlertOpen: obj7[2],
+      } = closure_0);
       closure_1 = yield (function confirmActivityChange(arg0) {
         const self = this;
         const apply = closure_9.apply;
@@ -437,7 +469,11 @@ function _confirmActivityLaunchChecks() {
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })({ currentEmbeddedApplication: null, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: null, onConfirmActivityLaunchChecksAlertOpen: null });
+      })({
+        currentEmbeddedApplication: null,
+        shouldClosePopoutOnLeaveCurrentEmbeddedApplication: null,
+        onConfirmActivityLaunchChecksAlertOpen: null,
+      });
       if (!closure_1) {
         return false;
       }

@@ -54,11 +54,17 @@ export default function GameProfileSummary(arg0) {
     const stringResult = intl.string(first ? t["6MwJo/"] : t.lBeKY2);
     let obj = { style: null, children: null };
     obj[0] = tmp.container;
-    obj = { variant: "text-md/normal", color: "interactive-text-active", lineClamp: null, onTextLayout: null, children: null };
+    obj = {
+      variant: "text-md/normal",
+      color: "interactive-text-active",
+      lineClamp: null,
+      onTextLayout: null,
+      children: null,
+    };
     obj[2] = num;
     obj[3] = callback;
     obj[4] = summaryLocalized;
-    const items2 = [closure_6(trackAction(first[7]).Text, obj), ];
+    const items2 = [closure_6(trackAction(first[7]).Text, obj)];
     let tmp13Result = null;
     if (first1) {
       obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -74,4 +80,4 @@ export default function GameProfileSummary(arg0) {
     return closure_7(closure_4, obj);
   }
   tmp = callback2();
-};
+}

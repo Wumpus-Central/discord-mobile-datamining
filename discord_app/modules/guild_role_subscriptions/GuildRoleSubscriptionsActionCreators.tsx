@@ -10,7 +10,7 @@ function _fetchSubscriptionsSettings() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -87,7 +87,7 @@ function _updateSubscriptionsSettings() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -165,7 +165,7 @@ function _fetchAllSubscriptionListingsDataForGuild() {
     c11 = 0;
     c12 = 0;
     c10 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c12 === 2) {
         c12 = 3;
         HermesBuiltin.throwTypeError();
@@ -257,7 +257,7 @@ function _fetchAllSubscriptionListingsDataForGuild() {
               obj4[0] = flag;
               let tmp73 = lib;
               obj4[1] = lib;
-              let items = [obj15.getGuildRoleSubscriptionGroupListingsForGuild(callback, obj4), , , ];
+              let items = [obj15.getGuildRoleSubscriptionGroupListingsForGuild(callback, obj4), , ,];
               let tmp74 = dependencyMap;
               let obj17 = lib(6103);
               let tmp75 = callback;
@@ -367,7 +367,14 @@ function _fetchAllSubscriptionListingsDataForGuild() {
                 let tmp29 = flag;
                 let tmp30 = dependencyMap;
                 obj2 = flag(709);
-                let obj8 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS", guildId: null, groupListings: null, benefitChannels: null, settings: null, subscriptionTrials: null };
+                let obj8 = {
+                  type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS",
+                  guildId: null,
+                  groupListings: null,
+                  benefitChannels: null,
+                  settings: null,
+                  subscriptionTrials: null,
+                };
                 let tmp31 = callback;
                 obj8[1] = callback;
                 let tmp32 = lib2;
@@ -425,7 +432,7 @@ function _createSubscriptionGroupListing() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       const table = tmp5;
       closure_2 = tmp2;
       const obj4 = closure_1_2(closure_1_3[3]);
@@ -454,7 +461,7 @@ function _updateSubscriptionGroupListing() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       closure_4 = tmp5;
       const table = tmp2;
       const obj4 = callback2(closure_1_3[3]);
@@ -482,7 +489,7 @@ function _deleteSubscriptionGroupListing() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       const table = tmp5;
       closure_2 = tmp2;
       closure_0 = callback;
@@ -511,7 +518,7 @@ function _fetchSubscriptionListingForPlan() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c9 === 2) {
         c9 = 3;
         HermesBuiltin.throwTypeError();
@@ -675,7 +682,7 @@ function _deleteSubscriptionListing() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -752,7 +759,7 @@ function _archiveSubscriptionListing() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -830,7 +837,7 @@ function _updateSubscriptionTrial() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -918,7 +925,7 @@ function _fetchGuildRoleSubscriptionGroupListing() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       dependencyMap = tmp2;
       if (obj1 === undefined) {
         obj1 = {};
@@ -950,13 +957,18 @@ function _createSubscriptionListing() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       const callback2 = tmp2;
       ({ guildId: c0, groupListingId: c1, data: c2, analyticsContext: c3, onBeforeDispatchNewListing: c4 } = callback);
       yield "PX_16";
       const obj6 = callback3(c3[3]);
       const id = yield obj6.createGuildRoleSubscriptionListing(callback, callback2, callback3);
-      const obj4 = { role_subscription_listing_id: null, role_subscription_group_listing_id: null, template_name: null, has_change_from_template: null };
+      const obj4 = {
+        role_subscription_listing_id: null,
+        role_subscription_group_listing_id: null,
+        template_name: null,
+        has_change_from_template: null,
+      };
       obj4[0] = id.id;
       obj4[1] = callback2;
       obj4[2] = c3.templateCategory;
@@ -992,7 +1004,7 @@ function _updateSubscriptionListing() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       const callback = tmp2;
       ({ guildId: c0, listingId: c1, groupListingId: c2, data: c3 } = c0);
       yield "PX_16";
@@ -1025,7 +1037,7 @@ function _fetchMonetizationRestrictions() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0, restrictions) {
+    const iter = (function* (arg0, restrictions) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -1123,7 +1135,11 @@ function _fetchMonetizationRestrictions() {
             } else {
               restrictions = restrictions.restrictions;
               obj = signal(709);
-              const obj7 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS", guildId: null, restrictions: null };
+              const obj7 = {
+                type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS",
+                guildId: null,
+                restrictions: null,
+              };
               obj7[1] = callback;
               callback2 = restrictions;
               if (restrictions == null) {
@@ -1187,7 +1203,9 @@ function _fetchMonetizationRestrictions() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsActionCreators.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/GuildRoleSubscriptionsActionCreators.tsx",
+);
 
 export const fetchSubscriptionsSettings = function fetchSubscriptionsSettings(closure_0) {
   const self = this;

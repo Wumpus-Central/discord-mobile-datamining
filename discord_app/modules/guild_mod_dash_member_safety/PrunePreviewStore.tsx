@@ -49,7 +49,7 @@ keys = keys.create((arg0) => {
     },
     clear() {
       callback({ entries: {} });
-    }
+    },
   };
 });
 const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/PrunePreviewStore.tsx");

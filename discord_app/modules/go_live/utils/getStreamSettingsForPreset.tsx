@@ -9,7 +9,15 @@ function getApplicationStreamPresetValues() {
   obj = { [closure_3.PRESET_DOCUMENTS]: items };
   obj = { resolution: closure_4.RESOLUTION_SOURCE, fps: closure_2.FPS_15 };
   items = [obj, { resolution: closure_4.RESOLUTION_SOURCE, fps: closure_2.FPS_5 }];
-  const items1 = [{ resolution: obj.getConfig({ location: "getApplicationStreamPresetValues" }).videoPresetResolutionMax, fps: closure_2.FPS_60 }, { resolution: closure_4.RESOLUTION_1080, fps: closure_2.FPS_60 }, { resolution: closure_4.RESOLUTION_720, fps: closure_2.FPS_60 }, { resolution: closure_4.RESOLUTION_720, fps: closure_2.FPS_30 }];
+  const items1 = [
+    {
+      resolution: obj.getConfig({ location: "getApplicationStreamPresetValues" }).videoPresetResolutionMax,
+      fps: closure_2.FPS_60,
+    },
+    { resolution: closure_4.RESOLUTION_1080, fps: closure_2.FPS_60 },
+    { resolution: closure_4.RESOLUTION_720, fps: closure_2.FPS_60 },
+    { resolution: closure_4.RESOLUTION_720, fps: closure_2.FPS_30 },
+  ];
   obj[constants.PRESET_VIDEO] = items1;
   obj[constants.PRESET_AUTO] = [];
   obj[constants.PRESET_CUSTOM] = [];
@@ -35,7 +43,7 @@ function getStreamSettingsForPreset(arg0, user, guildPremiumTier) {
       let tmp9 = arg2;
       if (canStreamWithSettingsDefault(arg0, item10012.resolution, item10012.fps, arg1, arg2)) {
         let tmp10 = item10012;
-        let items = [, ];
+        let items = [,];
         ({ resolution: arr[0], fps: arr[1] } = tmp4);
         let tmp11 = obj;
         obj.return();

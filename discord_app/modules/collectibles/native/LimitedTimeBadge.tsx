@@ -61,7 +61,7 @@ export default function LimitedTimeBadge(unpublishedAt) {
       }
       sum = sum1;
     }
-    const items3 = [tmp.root, , ];
+    const items3 = [tmp.root, ,];
     obj1 = { style: null, children: null };
     items3[1] = stateFromStores ? tmp.backgroundDarkMode : tmp.backgroundLightMode;
     items3[2] = unpublishedAt.style;
@@ -70,14 +70,26 @@ export default function LimitedTimeBadge(unpublishedAt) {
     if (stateFromStores) {
       str2 = "text-overlay-dark";
     }
-    const obj2 = { color: null, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null };
+    const obj2 = {
+      color: null,
+      variant: "text-xs/bold",
+      accessibilityLabel: null,
+      allowFontScaling: false,
+      children: null,
+    };
     obj2[0] = str2;
     const intl7 = tmp2(1236).intl;
     const obj3 = { daysLeft: null };
     obj3[0] = days;
     obj2[2] = intl7.formatToPlainString(tmp2(1236).t.TlZULM, obj3);
     obj2[4] = sum;
-    obj1[1] = jsx(tmp2(4474).Text, { color: null, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null });
+    obj1[1] = jsx(tmp2(4474).Text, {
+      color: null,
+      variant: "text-xs/bold",
+      accessibilityLabel: null,
+      allowFontScaling: false,
+      children: null,
+    });
     return <View style={null}>{null}</View>;
   }
-};
+}

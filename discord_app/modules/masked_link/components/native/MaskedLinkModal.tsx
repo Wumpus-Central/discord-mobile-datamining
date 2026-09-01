@@ -45,7 +45,7 @@ export default function MaskedLinkModal(isProtocol) {
   }
   obj1 = { children: null };
   obj[2] = stringResult;
-  const items = [closure_4(shouldTrustUrl(setShouldTrustUrl[5]).AlertActionButton, obj, "confirm"), ];
+  const items = [closure_4(shouldTrustUrl(setShouldTrustUrl[5]).AlertActionButton, obj, "confirm")];
   const obj2 = { onPress: handleCancel, variant: "secondary", text: null };
   const intl4 = tmp2(tmp3[6]).intl;
   obj2[2] = intl4.string(shouldTrustUrl(setShouldTrustUrl[6]).t["/g10LC"]);
@@ -66,7 +66,7 @@ export default function MaskedLinkModal(isProtocol) {
   obj5[1] = str2;
   const items1 = [protocol, authorityPrefix];
   obj5[2] = items1;
-  const items2 = [closure_5(shouldTrustUrl(setShouldTrustUrl[10]).Text, obj5), , ];
+  const items2 = [closure_5(shouldTrustUrl(setShouldTrustUrl[10]).Text, obj5), ,];
   let str3 = "text-md/semibold";
   if (isProtocol) {
     str3 = "text-md/normal";
@@ -81,12 +81,16 @@ export default function MaskedLinkModal(isProtocol) {
   obj6[1] = str4;
   obj6[2] = hostname;
   items2[1] = closure_4(shouldTrustUrl(setShouldTrustUrl[10]).Text, obj6);
-  items2[2] = closure_4(shouldTrustUrl(setShouldTrustUrl[10]).Text, { variant: "text-md/normal", color: "text-muted", children: theRestOfTheUrl });
+  items2[2] = closure_4(shouldTrustUrl(setShouldTrustUrl[10]).Text, {
+    variant: "text-md/normal",
+    color: "text-muted",
+    children: theRestOfTheUrl,
+  });
   obj8[1] = items2;
   obj4[1] = closure_5(shouldTrustUrl(setShouldTrustUrl[10]).Text, obj8);
   obj7[2] = closure_4(closure_3, obj4);
   obj3[1] = closure_4(shouldTrustUrl(setShouldTrustUrl[9]).FormRow, obj7);
-  const items3 = [closure_4(closure_2, obj3), ];
+  const items3 = [closure_4(closure_2, obj3)];
   const obj9 = {
     start: true,
     end: true,
@@ -94,7 +98,7 @@ export default function MaskedLinkModal(isProtocol) {
     onPress() {
       return setShouldTrustUrl(!shouldTrustUrl);
     },
-    label: null
+    label: null,
   };
   const intl5 = tmp2(tmp3[6]).intl;
   const format = intl5.format;
@@ -109,9 +113,12 @@ export default function MaskedLinkModal(isProtocol) {
     formatResult1 = format(t2.ZgXDsI, obj11);
   }
   const obj12 = { spacing: 16, children: null };
-  obj9[4] = closure_4(shouldTrustUrl(setShouldTrustUrl[10]).Text, { variant: "text-md/medium", children: formatResult1 });
+  obj9[4] = closure_4(shouldTrustUrl(setShouldTrustUrl[10]).Text, {
+    variant: "text-md/medium",
+    children: formatResult1,
+  });
   items3[1] = closure_4(shouldTrustUrl(setShouldTrustUrl[9]).FormCheckboxRow, obj9);
   obj12[1] = items3;
   obj[3] = closure_5(shouldTrustUrl(setShouldTrustUrl[8]).Stack, obj12);
   return closure_4(shouldTrustUrl(setShouldTrustUrl[5]).AlertModal, obj);
-};
+}

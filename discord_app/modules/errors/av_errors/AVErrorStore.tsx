@@ -11,8 +11,7 @@ function isAVErrorContextOfType(type, CAMERA_SEND_LOW_FPS) {
 let map = new Map();
 let map1 = new Map();
 const Store = initializeDefault.Store;
-class AVErrorStore extends Store {
-}
+class AVErrorStore extends Store {}
 const prototype = AVErrorStore.prototype;
 prototype["hasActiveErrorOfType"] = function hasActiveErrorOfType(arg0) {
   let items = map1.get(arg0);
@@ -98,7 +97,7 @@ const aVErrorStore = new AVErrorStore(dispatcherDefault, {
     } else {
       return false;
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorStore.tsx");
 

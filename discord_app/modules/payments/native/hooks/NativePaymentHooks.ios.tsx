@@ -15,10 +15,18 @@ import ME from "../../../../Constants.tsx";
 const require = arg1;
 function useNativeIAPPayments() {
   const items = [closure_6, closure_9];
-  const tmp2 = nativePaymentsConnected(nativePaymentsConnected(storeFront[9]).useStateFromStoresArray(items, () => {
-    const items = [closure_6.isGenericIapConnected(), closure_6.genericProductsLoaded(), closure_6.getStoreFront(), products.getProducts()];
-    return items;
-  }), 4);
+  const tmp2 = nativePaymentsConnected(
+    nativePaymentsConnected(storeFront[9]).useStateFromStoresArray(items, () => {
+      const items = [
+        closure_6.isGenericIapConnected(),
+        closure_6.genericProductsLoaded(),
+        closure_6.getStoreFront(),
+        products.getProducts(),
+      ];
+      return items;
+    }),
+    4,
+  );
   nativePaymentsConnected = tmp2[0];
   importDefault = tmp4;
   storeFront = tmp2[2];
@@ -85,10 +93,18 @@ function useCreateSubscription(planId) {
   first = undefined;
   let obj = first(589);
   const items = [closure_6, closure_9];
-  const tmp3 = first(obj.useStateFromStoresArray(items, () => {
-    const items = [closure_6.isGenericIapConnected(), closure_6.genericProductsLoaded(), closure_6.getStoreFront(), products.getProducts()];
-    return items;
-  }), 4);
+  const tmp3 = first(
+    obj.useStateFromStoresArray(items, () => {
+      const items = [
+        closure_6.isGenericIapConnected(),
+        closure_6.genericProductsLoaded(),
+        closure_6.getStoreFront(),
+        products.getProducts(),
+      ];
+      return items;
+    }),
+    4,
+  );
   first = tmp3[0];
   importDefault = tmp5;
   dependencyMap = tmp6;
@@ -143,64 +159,77 @@ function useCreateSubscription(planId) {
   const items4 = [tmp12, analyticsLocation, applicationId, planId, skuId];
   callback = React.useCallback(() => {
     let obj = first(10582);
-    obj = { load_id: closure_6, payment_type: closure_1_10[closure_1_11.SUBSCRIPTION], subscription_plan_gateway_plan_id: first(6087).ProductIds.GENERIC_SUBSCRIPTION, subscription_type: closure_1_12.GUILD, is_gift: false, location: closure_3, application_id: dependencyMap, subscription_plan_id: first, sku_id: closure_1 };
+    obj = {
+      load_id: closure_6,
+      payment_type: closure_1_10[closure_1_11.SUBSCRIPTION],
+      subscription_plan_gateway_plan_id: first(6087).ProductIds.GENERIC_SUBSCRIPTION,
+      subscription_type: closure_1_12.GUILD,
+      is_gift: false,
+      location: closure_3,
+      application_id: dependencyMap,
+      subscription_plan_id: first,
+      sku_id: closure_1,
+    };
     const result = obj.trackPaymentFlowStartedAnalyticsAndCTP(obj);
   }, items4);
   obj = {
-    createSubscription: React.useCallback(callback(function*() {
-      closure_0 = tmp3;
-      v0(closure_1_2[18])(c4, "cannot connect to IAP API");
-      v0(closure_1_2[18])(null != closure_1_5, "plan not found");
-      c3 = 1;
-      yield v0(closure_1_2[10]).restoreAndApplyPurchases();
-      if (1 === tmp7) {
-        c3 = 0;
-        closure_1_13.error("error consuming pending purchases but we'll try to let user purchase");
-        closure_1_7();
-        const genericSubscription = closure_1_0(closure_1_2[10]).createGenericSubscription(closure_1_5);
-        v0 = 2;
-        c4 = 1;
-        const obj6 = closure_1_0(closure_1_2[10]);
-      } else if (2 === tmp7) {
-        if (arg0 === 1) {
+    createSubscription: React.useCallback(
+      callback(function* () {
+        closure_0 = tmp3;
+        v0(closure_1_2[18])(c4, "cannot connect to IAP API");
+        v0(closure_1_2[18])(null != closure_1_5, "plan not found");
+        c3 = 1;
+        yield v0(closure_1_2[10]).restoreAndApplyPurchases();
+        if (1 === tmp7) {
+          c3 = 0;
+          closure_1_13.error("error consuming pending purchases but we'll try to let user purchase");
+          closure_1_7();
+          const genericSubscription = closure_1_0(closure_1_2[10]).createGenericSubscription(closure_1_5);
+          v0 = 2;
+          c4 = 1;
+          const obj6 = closure_1_0(closure_1_2[10]);
+        } else if (2 === tmp7) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            let obj2 = { value: null, done: true };
+            obj2[0] = arg1;
+            return obj2;
+          } else {
+            obj2 = closure_1_0(closure_1_2[19]);
+            v0 = 4;
+            c4 = 1;
+            const obj3 = { value: null, done: false };
+            obj3[0] = obj2.fetchSubscriptions();
+            return obj3;
+          }
+        } else if (3 === tmp7) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 !== 2) {
+            c3 = 0;
+          }
+        } else if (arg0 === 1) {
           c4 = 3;
           throw arg1;
         } else if (arg0 === 2) {
           c4 = 3;
-          let obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
+          const obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          obj2 = closure_1_0(closure_1_2[19]);
-          v0 = 4;
-          c4 = 1;
-          const obj3 = { value: null, done: false };
-          obj3[0] = obj2.fetchSubscriptions();
-          return obj3;
-        }
-      } else if (3 === tmp7) {
-        if (arg0 === 1) {
           c4 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          c3 = 0;
+          return { value: "HermesInternal", done: null };
         }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw arg1;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        c4 = 3;
-        return { value: "HermesInternal", done: null };
-      }
-      c3 = 0;
-      return arg1;
-    }), items5),
-    nativePaymentsConnected: first
+        c3 = 0;
+        return arg1;
+      }),
+      items5,
+    ),
+    nativePaymentsConnected: first,
   };
   items5 = [tmp11, first, callback];
   return obj;
@@ -210,10 +239,18 @@ function useCancelSubscription(arg0, arg1) {
   importDefault = arg1;
   let obj = first(first[9]);
   const items = [closure_6, closure_9];
-  let tmp3 = stateFromStores(obj.useStateFromStoresArray(items, () => {
-    const items = [closure_6.isGenericIapConnected(), closure_6.genericProductsLoaded(), closure_6.getStoreFront(), products.getProducts()];
-    return items;
-  }), 4);
+  let tmp3 = stateFromStores(
+    obj.useStateFromStoresArray(items, () => {
+      const items = [
+        closure_6.isGenericIapConnected(),
+        closure_6.genericProductsLoaded(),
+        closure_6.getStoreFront(),
+        products.getProducts(),
+      ];
+      return items;
+    }),
+    4,
+  );
   first = tmp3[0];
   importDefault = tmp5;
   first = tmp6;
@@ -277,17 +314,24 @@ function useCancelSubscription(arg0, arg1) {
   const tmp12 = importDefault(first[20])(arg0);
   closure_6 = tmp12;
   obj = {
-    cancelSubscription: memo.useCallback(callback(function*() {
-      closure_0 = tmp2;
-      closure_1_1(38)(closure_1_5, "Cannot update subscription");
-      closure_1_1(38)(dependencyMap, "Cannot connect to IAP API");
-      closure_1_1(38)(null != closure_1_6, "Subscription not found");
-      closure_0 = yield closure_1_0(7164).cancelGenericSubscription(closure_1_6.requestIdentifier, closure_1_6.subscriptionId, closure_1_1);
-      const obj2 = closure_1_0(4837);
-      yield obj2.fetchSubscriptions();
-      return closure_0;
-    }), items5),
-    nativePaymentsConnected: first
+    cancelSubscription: memo.useCallback(
+      callback(function* () {
+        closure_0 = tmp2;
+        closure_1_1(38)(closure_1_5, "Cannot update subscription");
+        closure_1_1(38)(dependencyMap, "Cannot connect to IAP API");
+        closure_1_1(38)(null != closure_1_6, "Subscription not found");
+        closure_0 = yield closure_1_0(7164).cancelGenericSubscription(
+          closure_1_6.requestIdentifier,
+          closure_1_6.subscriptionId,
+          closure_1_1,
+        );
+        const obj2 = closure_1_0(4837);
+        yield obj2.fetchSubscriptions();
+        return closure_0;
+      }),
+      items5,
+    ),
+    nativePaymentsConnected: first,
   };
   items5 = [memo, tmp12, first, arg1];
   return obj;
@@ -296,10 +340,18 @@ function useResubscribeSubscription(arg0) {
   let first = arg0;
   let obj = first(589);
   let items = [closure_6, closure_9];
-  let tmp3 = memo(obj.useStateFromStoresArray(items, () => {
-    const items = [closure_6.isGenericIapConnected(), closure_6.genericProductsLoaded(), closure_6.getStoreFront(), products.getProducts()];
-    return items;
-  }), 4);
+  let tmp3 = memo(
+    obj.useStateFromStoresArray(items, () => {
+      const items = [
+        closure_6.isGenericIapConnected(),
+        closure_6.genericProductsLoaded(),
+        closure_6.getStoreFront(),
+        products.getProducts(),
+      ];
+      return items;
+    }),
+    4,
+  );
   first = tmp3[0];
   first = tmp5;
   dependencyMap = tmp6;
@@ -363,18 +415,21 @@ function useResubscribeSubscription(arg0) {
   const tmp12 = first(10585)(arg0);
   React = tmp12;
   obj = {
-    resubscribeSubscription: React.useCallback(stateFromStores(function*() {
-      closure_0 = tmp2;
-      closure_1_1(38)(closure_1_4, "Cannot update subscription");
-      closure_1_1(38)(closure_1_1, "Cannot connect to IAP API");
-      closure_1_1(38)(null != closure_1_5, "Subscription not found");
-      closure_1_1(38)(null != isACOM, "Subscription not found");
-      closure_0 = yield closure_1_0(7164).resubscribeGenericSubscription(closure_1_5, isACOM.isACOM);
-      const obj2 = closure_1_0(4837);
-      yield obj2.fetchSubscriptions();
-      return closure_0;
-    }), items5),
-    nativePaymentsConnected: first
+    resubscribeSubscription: React.useCallback(
+      stateFromStores(function* () {
+        closure_0 = tmp2;
+        closure_1_1(38)(closure_1_4, "Cannot update subscription");
+        closure_1_1(38)(closure_1_1, "Cannot connect to IAP API");
+        closure_1_1(38)(null != closure_1_5, "Subscription not found");
+        closure_1_1(38)(null != isACOM, "Subscription not found");
+        closure_0 = yield closure_1_0(7164).resubscribeGenericSubscription(closure_1_5, isACOM.isACOM);
+        const obj2 = closure_1_0(4837);
+        yield obj2.fetchSubscriptions();
+        return closure_0;
+      }),
+      items5,
+    ),
+    nativePaymentsConnected: first,
   };
   items5 = [memo, first, tmp12, stateFromStores];
   return obj;
@@ -389,7 +444,13 @@ let c15 = false;
 let tmp3 = new timestampDefault("NativePaymentHooks.ios.tsx");
 let result = require("set").fileFinishedImporting("modules/payments/native/hooks/NativePaymentHooks.ios.tsx");
 
-export default { useNativeIAPPayments, useGoogleSkuIds, useCreateSubscription, useCancelSubscription, useResubscribeSubscription };
+export default {
+  useNativeIAPPayments,
+  useGoogleSkuIds,
+  useCreateSubscription,
+  useCancelSubscription,
+  useResubscribeSubscription,
+};
 export { useNativeIAPPayments };
 export { useCreateSubscription };
 export { useCancelSubscription };

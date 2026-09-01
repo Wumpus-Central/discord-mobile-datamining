@@ -11,12 +11,18 @@ export const resetGuildUnreadFlags = function resetGuildUnreadFlags(setting) {
 };
 export const withGuildUnreadFlags = function withGuildUnreadFlags(guildFlags, UNREADS_ONLY_MENTIONS) {
   const obj = hasFlagAll;
-  return obj.addFlag(hasFlagAll.removeFlags(guildFlags, constants.UNREADS_ALL_MESSAGES, constants.UNREADS_ONLY_MENTIONS), UNREADS_ONLY_MENTIONS);
+  return obj.addFlag(
+    hasFlagAll.removeFlags(guildFlags, constants.UNREADS_ALL_MESSAGES, constants.UNREADS_ONLY_MENTIONS),
+    UNREADS_ONLY_MENTIONS,
+  );
 };
 export const resetChannelUnreadFlags = function resetChannelUnreadFlags(channelIdFlags) {
   return hasFlagAll.removeFlags(channelIdFlags, constants2.UNREADS_ALL_MESSAGES, constants2.UNREADS_ONLY_MENTIONS);
 };
 export const withChannelUnreadFlags = function withChannelUnreadFlags(channelIdFlags, UNREADS_ONLY_MENTIONS) {
   const obj = hasFlagAll;
-  return obj.addFlag(hasFlagAll.removeFlags(channelIdFlags, constants2.UNREADS_ALL_MESSAGES, constants2.UNREADS_ONLY_MENTIONS), UNREADS_ONLY_MENTIONS);
+  return obj.addFlag(
+    hasFlagAll.removeFlags(channelIdFlags, constants2.UNREADS_ALL_MESSAGES, constants2.UNREADS_ONLY_MENTIONS),
+    UNREADS_ONLY_MENTIONS,
+  );
 };

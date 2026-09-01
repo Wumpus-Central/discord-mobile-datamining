@@ -40,7 +40,20 @@ function trackRegTransition(overrideRegistrationOptions) {
     }
   }
   let obj = expandEventPropertiesDefault;
-  obj = { step, identity_type: str2, action_type: actionType, action_details: details, registration_source: str, invite_code: null, invite_channel_id: null, invite_channel_type: null, invite_guild_id: null, invite_inviter_id: null, from_step: null, to_step: null };
+  obj = {
+    step,
+    identity_type: str2,
+    action_type: actionType,
+    action_details: details,
+    registration_source: str,
+    invite_code: null,
+    invite_channel_id: null,
+    invite_channel_type: null,
+    invite_guild_id: null,
+    invite_inviter_id: null,
+    from_step: null,
+    to_step: null,
+  };
   let code;
   if (invite != null) {
     code = invite.code;

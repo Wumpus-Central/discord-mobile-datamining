@@ -17,4 +17,4 @@ export default function applyActivityOrientationLock(arg0) {
     applyOrientationLock.applyOrientationLock("LANDSCAPE");
     const obj = applyOrientationLock;
   }
-};
+}

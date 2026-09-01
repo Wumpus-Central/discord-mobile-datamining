@@ -14,7 +14,13 @@ noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { cardShadow: null, flaggedContent: null, sectionContainer: null };
 createCacheKey[0] = Button.generateBoxShadowStyle(require("Button").FOUR_DP_ELEVATION_SHADOW_PARAMS);
-createCacheKey = { borderWidth: 1, borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: ThemesDefault.colors.CHANNELTEXTAREA_BACKGROUND, padding: 20 };
+createCacheKey = {
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.sm,
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  backgroundColor: ThemesDefault.colors.CHANNELTEXTAREA_BACKGROUND,
+  padding: 20,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { display: "flex", gap: ThemesDefault.space.PX_8 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
@@ -31,9 +37,9 @@ export default function ClassificationEvidence(flaggedContent) {
     obj = { variant: "eyebrow", color: "text-default", children: null };
     const intl = getSystemLocale.intl;
     obj[2] = intl.string(getSystemLocale.t.s64CMg);
-    const items = [callback(Text.Text, obj), ];
+    const items = [callback(Text.Text, obj)];
     obj = { style: null, children: null };
-    const items1 = [, ];
+    const items1 = [,];
     ({ flaggedContent: arr3[0], cardShadow: arr3[1] } = tmp);
     obj[0] = items1;
     obj1 = { flaggedContent: null };
@@ -44,4 +50,4 @@ export default function ClassificationEvidence(flaggedContent) {
     tmp2 = callback2(View, obj);
   }
   return tmp2;
-};
+}

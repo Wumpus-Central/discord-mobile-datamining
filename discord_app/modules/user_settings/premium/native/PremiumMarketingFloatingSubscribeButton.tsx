@@ -9,13 +9,29 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 1 }, gradient: { position: "absolute", left: 0, right: 0, bottom: 0, top: -64 }, buttonContainer: null };
-createCacheKey = { marginLeft: "auto", marginRight: "auto", width: "100%", paddingHorizontal: 12, paddingTop: ThemesDefault.space.PX_12 };
+createCacheKey = {
+  container: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 1 },
+  gradient: { position: "absolute", left: 0, right: 0, bottom: 0, top: -64 },
+  buttonContainer: null,
+};
+createCacheKey = {
+  marginLeft: "auto",
+  marginRight: "auto",
+  width: "100%",
+  paddingHorizontal: 12,
+  paddingTop: ThemesDefault.space.PX_12,
+};
 createCacheKey[2] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let closure_10 = { code: "function PremiumMarketingFloatingSubscribeButtonTsx1(){const{withTiming,isVisible,useReducedMotion,FADE_DURATION_MS,ENTER_TRANSLATE_PX}=this.__closure;return{opacity:withTiming(isVisible.get()?1:0,{duration:useReducedMotion?0:FADE_DURATION_MS}),transform:[{translateY:withTiming(isVisible.get()?0:ENTER_TRANSLATE_PX,{duration:useReducedMotion?0:FADE_DURATION_MS})}]};}" };
-let closure_11 = { code: "function PremiumMarketingFloatingSubscribeButtonTsx2(){const{isVisible}=this.__closure;return{pointerEvents:isVisible.get()?'box-none':'none',accessibilityElementsHidden:!isVisible.get(),importantForAccessibility:isVisible.get()?'auto':'no-hide-descendants'};}" };
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumMarketingFloatingSubscribeButton.tsx");
+let closure_10 = {
+  code: "function PremiumMarketingFloatingSubscribeButtonTsx1(){const{withTiming,isVisible,useReducedMotion,FADE_DURATION_MS,ENTER_TRANSLATE_PX}=this.__closure;return{opacity:withTiming(isVisible.get()?1:0,{duration:useReducedMotion?0:FADE_DURATION_MS}),transform:[{translateY:withTiming(isVisible.get()?0:ENTER_TRANSLATE_PX,{duration:useReducedMotion?0:FADE_DURATION_MS})}]};}",
+};
+let closure_11 = {
+  code: "function PremiumMarketingFloatingSubscribeButtonTsx2(){const{isVisible}=this.__closure;return{pointerEvents:isVisible.get()?'box-none':'none',accessibilityElementsHidden:!isVisible.get(),importantForAccessibility:isVisible.get()?'auto':'no-hide-descendants'};}",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/premium/native/PremiumMarketingFloatingSubscribeButton.tsx",
+);
 
 export default function PremiumMarketingFloatingSubscribeButton(isVisible) {
   isVisible = isVisible.isVisible;
@@ -27,10 +43,16 @@ export default function PremiumMarketingFloatingSubscribeButton(isVisible) {
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp3 = backgroundColor(stateFromStores[9]);
   const items1 = [backgroundColor];
-  ({ openPayment, buttonText } = backgroundColor(stateFromStores[9])(backgroundColor(stateFromStores[10]).PREMIUM_MARKETING_FLOATING_CTA));
+  ({ openPayment, buttonText } = backgroundColor(stateFromStores[9])(
+    backgroundColor(stateFromStores[10]).PREMIUM_MARKETING_FLOATING_CTA,
+  ));
   const memo = React.useMemo(() => {
     const obj = backgroundColor(stateFromStores[11])(backgroundColor);
-    const items = [backgroundColor(stateFromStores[11])(backgroundColor).alpha(0).hex(), backgroundColor, backgroundColor];
+    const items = [
+      backgroundColor(stateFromStores[11])(backgroundColor).alpha(0).hex(),
+      backgroundColor,
+      backgroundColor,
+    ];
     return items;
   }, items1);
   obj1 = isVisible(stateFromStores[12]);
@@ -66,7 +88,13 @@ export default function PremiumMarketingFloatingSubscribeButton(isVisible) {
       return obj;
     }
   }
-  obj = { withTiming: isVisible(stateFromStores[13]).withTiming, isVisible, useReducedMotion: stateFromStores, FADE_DURATION_MS: 150, ENTER_TRANSLATE_PX: 12 };
+  obj = {
+    withTiming: isVisible(stateFromStores[13]).withTiming,
+    isVisible,
+    useReducedMotion: stateFromStores,
+    FADE_DURATION_MS: 150,
+    ENTER_TRANSLATE_PX: 12,
+  };
   A.__closure = obj;
   A.__workletHash = 4035217753570;
   A.__initData = closure_10;
@@ -94,11 +122,23 @@ export default function PremiumMarketingFloatingSubscribeButton(isVisible) {
   const animatedProps = obj3.useAnimatedProps(E);
   obj = { animatedProps, style: items2, children: null };
   items2 = [tmp.container, animatedStyle];
-  obj1 = { pointerEvents: "none", style: tmp.gradient, colors: memo, locations: [0, 0.75, 1], start: VerticalGradient.START, end: VerticalGradient.END };
-  const items3 = [callback(backgroundColor(stateFromStores[14]), obj1), ];
+  obj1 = {
+    pointerEvents: "none",
+    style: tmp.gradient,
+    colors: memo,
+    locations: [0, 0.75, 1],
+    start: VerticalGradient.START,
+    end: VerticalGradient.END,
+  };
+  const items3 = [callback(backgroundColor(stateFromStores[14]), obj1)];
   const obj2 = { style: null, children: null };
-  const items4 = [tmp.buttonContainer, , ];
-  obj3 = { paddingBottom: Math.max(backgroundColor(stateFromStores[7])().bottom, backgroundColor(stateFromStores[6]).space.PX_16) };
+  const items4 = [tmp.buttonContainer, ,];
+  obj3 = {
+    paddingBottom: Math.max(
+      backgroundColor(stateFromStores[7])().bottom,
+      backgroundColor(stateFromStores[6]).space.PX_16,
+    ),
+  };
   items4[1] = obj3;
   items4[2] = isVisible.style;
   obj2[0] = items4;
@@ -106,4 +146,4 @@ export default function PremiumMarketingFloatingSubscribeButton(isVisible) {
   items3[1] = callback(View, obj2);
   obj[2] = items3;
   return callback2(backgroundColor(stateFromStores[12]).View, obj);
-};
+}

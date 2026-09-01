@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkStepHeader.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/TwoWayLinkStepHeader.tsx",
+);
 
 export const TwoWayLinkStepHeader = function TwoWayLinkStepHeader(arg0) {
   ({ idx, total } = arg0);
@@ -16,5 +18,10 @@ export const TwoWayLinkStepHeader = function TwoWayLinkStepHeader(arg0) {
   obj = { variant: "text-xs/bold", color: "text-default", style: twoWayLinkStyles.stepHeader, children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.format(getSystemLocale.t.fHz6eR, { number: idx, total });
-  return jsx(Text.Text, { variant: "text-xs/bold", color: "text-default", style: twoWayLinkStyles.stepHeader, children: null });
+  return jsx(Text.Text, {
+    variant: "text-xs/bold",
+    color: "text-default",
+    style: twoWayLinkStyles.stepHeader,
+    children: null,
+  });
 };

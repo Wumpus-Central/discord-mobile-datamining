@@ -19,5 +19,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "GUILD_SETTINGS_MODAL_LOCAL_SORT_CHANGE", updates: found };
     obj.dispatch(obj);
-  }
+  },
 };

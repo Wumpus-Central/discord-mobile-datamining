@@ -9,9 +9,13 @@ export default function useFrameBySurface(arg0, arg1) {
   dependencyMap = arg1;
   const items = [closure_2];
   const items1 = [arg0, arg1];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    if (null != closure_0) {
-      return closure_1_2.getFrameBySurface(tmp, closure_1);
-    }
-  }, items1);
-};
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      if (null != closure_0) {
+        return closure_1_2.getFrameBySurface(tmp, closure_1);
+      }
+    },
+    items1,
+  );
+}

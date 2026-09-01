@@ -59,7 +59,7 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
         const obj = callback2(byWeekday[9]);
       }
     }, items2);
-    const items3 = [byWeekday, first, ];
+    const items3 = [byWeekday, first];
     let scheduled_start_time;
     if (stateFromStores != null) {
       scheduled_start_time = stateFromStores.scheduled_start_time;
@@ -94,7 +94,10 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
           const items = [];
           let arraySpreadResult = HermesBuiltin.arraySpread(first, 0);
           const obj2 = callback(byWeekday[5]);
-          arraySpreadResult = HermesBuiltin.arraySpread(obj2.generateNextRecurrences(4, rRule, tmp7, true), arraySpreadResult);
+          arraySpreadResult = HermesBuiltin.arraySpread(
+            obj2.generateNextRecurrences(4, rRule, tmp7, true),
+            arraySpreadResult,
+          );
           callback3(items);
           const obj = callback(byWeekday[5]);
         }
@@ -102,4 +105,4 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
     };
     return obj;
   }
-};
+}

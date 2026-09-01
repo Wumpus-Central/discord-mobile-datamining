@@ -22,7 +22,14 @@ export default function getChannelA11yLabel(mentionCount) {
   if (num === undefined) {
     num = 0;
   }
-  ({ voiceStates, embeddedActivitiesCount, activityNames, isIncomingCall, isSubscriptionGated, needSubscriptionToAccess } = mentionCount);
+  ({
+    voiceStates,
+    embeddedActivitiesCount,
+    activityNames,
+    isIncomingCall,
+    isSubscriptionGated,
+    needSubscriptionToAccess,
+  } = mentionCount);
   if (isIncomingCall === undefined) {
     isIncomingCall = false;
   }
@@ -71,7 +78,7 @@ export default function getChannelA11yLabel(mentionCount) {
       obj = { channelName: null, mentionCount: null };
       obj[0] = channelName;
       obj[1] = num;
-      const items = [intl10.formatToPlainString(Lo0dCa, obj), ];
+      const items = [intl10.formatToPlainString(Lo0dCa, obj)];
       const intl11 = tmp(1236).intl;
       obj = { members: null };
       obj[0] = channel.recipients.length + 1;
@@ -220,7 +227,7 @@ export default function getChannelA11yLabel(mentionCount) {
       }
     }
   }
-};
+}
 export const getStatusLabel = function getStatusLabel(status) {
   if (constants2.ONLINE === status) {
     return nameFromUser.humanizeStatus(tmp.ONLINE);

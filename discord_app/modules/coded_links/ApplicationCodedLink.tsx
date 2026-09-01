@@ -3,9 +3,19 @@ import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import CodedLinkType from "CodedLink.tsx";
 import set from "../../../_runtime/00002_set.js";
 
-const items = [CodedLinkType.CodedLinkType.APP_DIRECTORY_PROFILE, CodedLinkType.CodedLinkType.ACTIVITY_BOOKMARK, CodedLinkType.CodedLinkType.APP_DIRECTORY_STOREFRONT, CodedLinkType.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU, CodedLinkType.CodedLinkType.APP_OAUTH2_LINK];
+const items = [
+  CodedLinkType.CodedLinkType.APP_DIRECTORY_PROFILE,
+  CodedLinkType.CodedLinkType.ACTIVITY_BOOKMARK,
+  CodedLinkType.CodedLinkType.APP_DIRECTORY_STOREFRONT,
+  CodedLinkType.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU,
+  CodedLinkType.CodedLinkType.APP_OAUTH2_LINK,
+];
 let set = new Set(items);
-const items1 = [CodedLinkType.CodedLinkType.APP_DIRECTORY_PROFILE, CodedLinkType.CodedLinkType.ACTIVITY_BOOKMARK, CodedLinkType.CodedLinkType.APP_OAUTH2_LINK];
+const items1 = [
+  CodedLinkType.CodedLinkType.APP_DIRECTORY_PROFILE,
+  CodedLinkType.CodedLinkType.ACTIVITY_BOOKMARK,
+  CodedLinkType.CodedLinkType.APP_OAUTH2_LINK,
+];
 const set1 = new Set(items1);
 let result = set.fileFinishedImporting("modules/coded_links/ApplicationCodedLink.tsx");
 

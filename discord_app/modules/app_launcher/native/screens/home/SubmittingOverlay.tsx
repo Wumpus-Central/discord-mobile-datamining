@@ -10,7 +10,9 @@ let obj = { ellipsis: null };
 obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" };
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
-let closure_5 = { code: "function SubmittingOverlayTsx1(){const{withSpring,submitting,SUBTLE_SPRING}=this.__closure;return{opacity:withSpring(submitting?1:0,SUBTLE_SPRING,'animate-always')};}" };
+let closure_5 = {
+  code: "function SubmittingOverlayTsx1(){const{withSpring,submitting,SUBTLE_SPRING}=this.__closure;return{opacity:withSpring(submitting?1:0,SUBTLE_SPRING,'animate-always')};}",
+};
 const result = set.fileFinishedImporting("modules/app_launcher/native/screens/home/SubmittingOverlay.tsx");
 
 export const SubmittingOverlay = function SubmittingOverlay(submitting) {

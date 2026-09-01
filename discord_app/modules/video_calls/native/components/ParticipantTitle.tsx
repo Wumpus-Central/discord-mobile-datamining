@@ -18,5 +18,9 @@ export default function ParticipantTitle(arg0) {
   ({ channel, participant, style } = arg0);
   const tmp = callback();
   const items = [tmp.usernameText, style];
-  return jsx(Button.LegacyText, { style: items, numberOfLines: 1, children: getParticipantTitleDefault(channel, participant) });
-};
+  return jsx(Button.LegacyText, {
+    style: items,
+    numberOfLines: 1,
+    children: getParticipantTitleDefault(channel, participant),
+  });
+}

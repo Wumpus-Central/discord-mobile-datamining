@@ -32,7 +32,16 @@ let c3 = importAllResult;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ HelpdeskArticles: unpackModuleId, UserSettingsSections: closure_12 } = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-createCacheKey = { upsellSection: { position: "relative" }, background: { position: "absolute", width: "100%" }, scroller: null, subscriptionHeader: null, blurb: null, blurbNotLast: null, boostingUnavailablePill: null, externalManagement: null };
+createCacheKey = {
+  upsellSection: { position: "relative" },
+  background: { position: "absolute", width: "100%" },
+  scroller: null,
+  subscriptionHeader: null,
+  blurb: null,
+  blurbNotLast: null,
+  boostingUnavailablePill: null,
+  externalManagement: null,
+};
 createCacheKey = { flex: 1, backgroundColor: require("result").DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { paddingHorizontal: 16, paddingBottom: 32 };
@@ -89,12 +98,12 @@ prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscr
     let obj = { style: null, children: null };
     obj[0] = tmp.subscriptionHeader;
     obj = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
-    const items = [, ];
+    const items = [,];
     ({ blurb: arr[0], blurbNotLast: arr[1] } = tmp);
     obj[0] = items;
     const intl = getSystemLocale.intl;
     obj[3] = intl.string(getSystemLocale.t.GwnFO5);
-    const items1 = [callback(Text.Text, obj), , ];
+    const items1 = [callback(Text.Text, obj), ,];
     obj = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
     obj[0] = tmp.blurb;
     const intl2 = getSystemLocale.intl;
@@ -143,9 +152,9 @@ prototype["render"] = function render() {
     }
   }
   obj = { style: tmp.scroller, children: null };
-  const items = [tmp5, self.renderPremiumGuildSubscriptions(), ];
+  const items = [tmp5, self.renderPremiumGuildSubscriptions()];
   obj1 = { style: tmp.upsellSection, children: null };
-  const items1 = [callback(getTopPatternSource.TopPattern, { style: tmp.background }), ];
+  const items1 = [callback(getTopPatternSource.TopPattern, { style: tmp.background })];
   let tmp13Result = null;
   if (hasFetchedSubscriptionPlans) {
     const obj3 = { onLearnMorePremium: null, fractionalState: null, isInReverseTrial: null, hasAvailableSlots: null };
@@ -162,7 +171,9 @@ prototype["render"] = function render() {
   return closure_15(closure_5, obj);
 };
 UserSettingsPremiumGuildSubscriptions.contextType = require("ManaContext").ThemeContext;
-let result = require("set").fileFinishedImporting("modules/user_settings/premium/native/UserSettingsPremiumGuildSubscriptions.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/premium/native/UserSettingsPremiumGuildSubscriptions.tsx",
+);
 
 export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   route = route.route;
@@ -191,7 +202,19 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   tmpResult = tmp(589);
   const items = [closure_8, closure_7, closure_9, closure_6];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items, () => {
-    const obj = { hasFetchedSlots: closure_1_8.hasFetched, hasSlots: Object.keys(closure_1_8.boostSlots).length > 0, hasAvailableSlots: null, hasFetchedSubscriptionPlans: null, isFetchingSubscriptionPlans: null, isFetchingPaymentSources: null, shouldFetchSubscriptionPlans: null, fractionalState: null, isInReverseTrial: null, fpDurationText: null, premiumGroupRole: null };
+    const obj = {
+      hasFetchedSlots: closure_1_8.hasFetched,
+      hasSlots: Object.keys(closure_1_8.boostSlots).length > 0,
+      hasAvailableSlots: null,
+      hasFetchedSubscriptionPlans: null,
+      isFetchingSubscriptionPlans: null,
+      isFetchingPaymentSources: null,
+      shouldFetchSubscriptionPlans: null,
+      fractionalState: null,
+      isInReverseTrial: null,
+      fpDurationText: null,
+      premiumGroupRole: null,
+    };
     const values = Object.values(closure_1_8.boostSlots);
     let premiumGroupRole;
     obj[2] = values.filter((isAvailable) => isAvailable.isAvailable()).length > 0;
@@ -211,12 +234,18 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   });
   const tmp4 = flag(13118);
   const items1 = [closure_10];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => premiumTypeSubscription.getPremiumTypeSubscription(),
+  );
   const tmpResult1 = initialize;
   const navigation = require("../../../../design/components/Navigator/native/useNavigation.native.tsx").useNavigation();
   const tmpResult2 = useNavigation;
   obj = { navigation, externalManagementMessage: null };
-  const externalManagementMessage = require("../../../premium/native/utils/PremiumManagementUtils.tsx").getExternalManagementMessage(stateFromStores, { shouldAllowExternalManagement: true });
+  const externalManagementMessage =
+    require("../../../premium/native/utils/PremiumManagementUtils.tsx").getExternalManagementMessage(stateFromStores, {
+      shouldAllowExternalManagement: true,
+    });
   const tmp10 = UserSettingsPremiumGuildSubscriptions;
   const tmp9 = closure_14;
   const tmpResult3 = defaultMobileWebNitroManagementSuccessCallback;
@@ -227,4 +256,4 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   obj[1] = tmp11;
   const merged = Object.assign(stateFromStoresObject);
   return tmp9(tmp10, obj);
-};
+}

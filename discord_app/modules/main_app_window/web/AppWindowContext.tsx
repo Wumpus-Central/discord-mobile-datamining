@@ -9,7 +9,12 @@ import getWindowId from "../../../utils/web/WindowIdUtils.tsx";
 require = arg1;
 let c3 = importAllResult;
 let componentDispatcher = new require("ComponentDispatcher").ComponentDispatcher();
-const obj = { appContext: require("ME").AppContext.APP, renderWindow: window, windowDispatch: componentDispatcher, windowId: null };
+const obj = {
+  appContext: require("ME").AppContext.APP,
+  renderWindow: window,
+  windowDispatch: componentDispatcher,
+  windowId: null,
+};
 obj[3] = getWindowId.getMainWindowId();
 const context = importAllResult.createContext(obj);
 const map = new Map();
@@ -98,7 +103,10 @@ export const AppWindowContextProvider = function AppWindowContextProvider(childr
     return componentDispatcher;
   }, []);
   const items = [appContext, renderWindow, memo, first];
-  const value = importAllResult.useMemo(() => ({ appContext, renderWindow, windowDispatch: memo, windowId: first }), items);
+  const value = importAllResult.useMemo(
+    () => ({ appContext, renderWindow, windowDispatch: memo, windowId: first }),
+    items,
+  );
   redux = value;
   const items1 = [renderWindow, first];
   const effect = importAllResult.useEffect(() => {

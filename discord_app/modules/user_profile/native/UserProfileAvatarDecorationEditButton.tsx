@@ -11,12 +11,23 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
 createCacheKey = { previewContainer: null, noneIcon: null };
-createCacheKey = { position: "relative", height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
+createCacheKey = {
+  position: "relative",
+  height: COLLECTIBLES_PREVIEW_SIZE,
+  width: COLLECTIBLES_PREVIEW_SIZE,
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: ThemesDefault.radii.xs,
+  overflow: "hidden",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileAvatarDecorationEditButton.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_profile/native/UserProfileAvatarDecorationEditButton.tsx",
+);
 
 export default function UserProfileAvatarDecorationEditButton(user) {
   user = user.user;
@@ -81,7 +92,15 @@ export default function UserProfileAvatarDecorationEditButton(user) {
     }
   }
   if (isFetching) {
-    obj1 = { label: null, buttonText: null, onPress: null, leading: null, loading: true, disabled: true, hideArrow: true };
+    obj1 = {
+      label: null,
+      buttonText: null,
+      onPress: null,
+      leading: null,
+      loading: true,
+      disabled: true,
+      hideArrow: true,
+    };
     const intl4 = tmp3(tmp4[13]).intl;
     obj1[0] = intl4.string(tmp3(tmp4[13]).t["7v0T9P"]);
     const intl5 = tmp3(tmp4[13]).intl;
@@ -116,4 +135,4 @@ export default function UserProfileAvatarDecorationEditButton(user) {
     obj2[4] = tmp16Result;
   }
   return jsx(user(isTryItOut[14]).UserProfileEditFormButton, obj2);
-};
+}

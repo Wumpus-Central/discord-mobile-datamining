@@ -8,7 +8,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { selectorGroup: { display: "flex", flexDirection: "column", gap: 8 }, select: null, label: null, error: null };
+createCacheKey = {
+  selectorGroup: { display: "flex", flexDirection: "column", gap: 8 },
+  select: null,
+  label: null,
+  error: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { color: ThemesDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
@@ -30,7 +35,9 @@ export default function GuildSelector(disabled) {
     obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
     const intl = selectedGuildId(closure_1_3[9]).intl;
     obj[0] = intl.string(selectedGuildId(closure_1_3[9]).t.oM4E1A);
-    const found = guilds.filter((permissions) => callback2(table[10]).has(permissions.permissions, constants.MANAGE_GUILD));
+    const found = guilds.filter((permissions) =>
+      callback2(table[10]).has(permissions.permissions, constants.MANAGE_GUILD),
+    );
     obj[1] = found.map((label) => ({ label: label.name, value: label.id }));
     obj[2] = function onItemSelect(arg0) {
       callback(arg0);
@@ -44,7 +51,7 @@ export default function GuildSelector(disabled) {
   obj = { variant: "eyebrow", color: "text-default", children: null };
   let intl = selectedGuildId(1236).intl;
   obj[2] = intl.string(selectedGuildId(1236).t["1DXFFd"]);
-  const items1 = [callback(selectedGuildId(4474).Text, obj), , , ];
+  const items1 = [callback(selectedGuildId(4474).Text, obj), , ,];
   let tmp6Result = null;
   if (null != error) {
     tmp6Result = null;
@@ -64,12 +71,18 @@ export default function GuildSelector(disabled) {
     const intl2 = tmp7(1236).intl;
     name = intl2.string(tmp7(1236).t.oM4E1A);
   }
-  items1[2] = callback(selectedGuildId(8363).FormRow, { label: name, disabled: disabled.disabled, trailing: callback(selectedGuildId(8363).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback });
+  items1[2] = callback(selectedGuildId(8363).FormRow, {
+    label: name,
+    disabled: disabled.disabled,
+    trailing: callback(selectedGuildId(8363).FormRow.Arrow, {}),
+    DEPRECATED_style: tmp.select,
+    onPress: callback,
+  });
   const obj2 = { style: tmp.label, children: null };
   const intl3 = tmp7(1236).intl;
   obj2[1] = intl3.format(selectedGuildId(1236).t.t9Jm9o, {});
   items1[3] = callback(selectedGuildId(1297).LegacyText, obj2);
   obj[1] = items1;
   return closure_8(View, obj);
-};
+}
 export const useStyles = createCacheKey;

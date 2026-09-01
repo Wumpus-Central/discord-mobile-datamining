@@ -4,7 +4,9 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import ME from "../../../../Constants.tsx";
 
 ({ AbortCodes: obj1, GuildFeatures: c3 } = ME);
-const result = set.fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLUtils.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLUtils.tsx",
+);
 
 export const getErrorMessageFromErrorCode = function getErrorMessageFromErrorCode(code) {
   if (constants.UNKNOWN_CHANNEL === code) {

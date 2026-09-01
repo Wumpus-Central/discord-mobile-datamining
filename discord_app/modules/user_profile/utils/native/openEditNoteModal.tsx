@@ -7,4 +7,4 @@ const result = set.fileFinishedImporting("modules/user_profile/utils/native/open
 
 export default function openEditNoteModal(closure_0) {
   _modDef4723.pushLazy(asyncRequireImpl(12488, dependencyMap.paths), closure_0, undefined, { presentation: "modal" });
-};
+}

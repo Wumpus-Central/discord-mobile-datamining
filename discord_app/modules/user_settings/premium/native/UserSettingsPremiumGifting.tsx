@@ -20,13 +20,38 @@ let c4 = importAllResult;
 ({ UserSettingsSections: c10, AnalyticsPages: unpackModuleId } = ME);
 ({ PremiumTypes: closure_12, SubscriptionPlans: map1 } = GuildFeatures);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-let obj = { scrollView: null, giftingSettingsContainer: null, inventorySectionWrapper: null, giftPurchaseSectionWrapper: null, emptyGiftLinks: null, emptyImage: null, emptyGiftHeader: null, emptyGiftDescription: null, emptyGiftInformation: null, titleWrapper: null, cardText: null, tierCard: null, giftPurchaseButton: null, buttonWrapper: null, loading: null, warningMargins: null };
+let obj = {
+  scrollView: null,
+  giftingSettingsContainer: null,
+  inventorySectionWrapper: null,
+  giftPurchaseSectionWrapper: null,
+  emptyGiftLinks: null,
+  emptyImage: null,
+  emptyGiftHeader: null,
+  emptyGiftDescription: null,
+  emptyGiftInformation: null,
+  titleWrapper: null,
+  cardText: null,
+  tierCard: null,
+  giftPurchaseButton: null,
+  buttonWrapper: null,
+  loading: null,
+  warningMargins: null,
+};
 obj = { paddingHorizontal: ThemesDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL };
 obj[0] = obj;
 obj[1] = { flex: 1 };
 obj[2] = { flex: 1 };
 obj[3] = { flex: 1, paddingTop: 36, paddingBottom: 16 };
-createCacheKey = { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 16, borderWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
+createCacheKey = {
+  flex: 1,
+  flexDirection: "row",
+  alignItems: "center",
+  paddingVertical: 16,
+  borderWidth: StyleSheet.hairlineWidth,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+};
 obj[4] = createCacheKey;
 obj[5] = { marginRight: 18 };
 obj[6] = { lineHeight: 20 };
@@ -61,12 +86,23 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
   const items = [closure_9];
   stateFromStoresArray = obj2.useStateFromStoresArray(items, () => giftable.getGiftable());
   const items1 = [stateFromStoresArray];
-  memo = enabled.useMemo(() => stateFromStoresArray(memo[15]).groupBy(stateFromStoresArray, (skuId) => callback(table[16]).makeComboId(skuId.skuId, skuId.subscriptionPlanId, skuId.giftStyle)), items1);
+  memo = enabled.useMemo(
+    () =>
+      stateFromStoresArray(memo[15]).groupBy(stateFromStoresArray, (skuId) =>
+        callback(table[16]).makeComboId(skuId.skuId, skuId.subscriptionPlanId, skuId.giftStyle),
+      ),
+    items1,
+  );
   let obj3 = _require(memo[17]);
   const isPaymentsBlocked = obj3.useIsPaymentsBlocked();
   let obj4 = _require(memo[18]);
   const outboundPromotions = obj4.useOutboundPromotions();
-  ({ activeOutboundPromotions, claimedEndedOutboundPromotions, claimedOutboundPromotionCodeMap: c3, promotionsLoaded } = outboundPromotions);
+  ({
+    activeOutboundPromotions,
+    claimedEndedOutboundPromotions,
+    claimedOutboundPromotionCodeMap: c3,
+    promotionsLoaded,
+  } = outboundPromotions);
   const GiftingBadgeExperiment = _require(memo[19]).GiftingBadgeExperiment;
   enabled = GiftingBadgeExperiment.useConfig({ location: "gift_inventory" }).enabled;
   let obj5 = _require(memo[14]);
@@ -105,7 +141,7 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
   } else {
     obj2 = { style: null, children: null };
     obj2[0] = tmp2.giftingSettingsContainer;
-    const items4 = [callback2(tmp3(tmp4[38]), {}), ];
+    const items4 = [callback2(tmp3(tmp4[38]), {})];
     obj3 = { ref: null, style: null, contentContainerStyle: null, children: null };
     obj3[0] = arg1;
     obj3[1] = tmp2.scrollView;
@@ -121,14 +157,14 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
       const intl = tmp6(tmp4[31]).intl;
       obj6[0] = intl.string(tmp3(tmp4[39]).sFokBp);
       obj5[1] = tmp19(GiftingSectionTitle, obj6);
-      const items5 = [tmp19(tmp18, obj5), ];
+      const items5 = [tmp19(tmp18, obj5)];
       const obj7 = { analyticsLocation: null };
       obj7[0] = analyticsLocation;
       items5[1] = tmp19(tmp3(tmp4[40]), obj7);
       obj4[0] = items5;
       enabled = tmp17(closure_16, obj4);
     }
-    const items6 = [enabled, , ];
+    const items6 = [enabled, ,];
     if (tmp13) {
       if (promotionsLoaded) {
         if (subscriptionPlansLoaded) {
@@ -140,14 +176,19 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
             const obj9 = { style: null, source: null };
             obj9[0] = tmp2.emptyImage;
             obj9[1] = tmp3(tmp4[29]);
-            const items7 = [tmp19(c5, obj9), ];
+            const items7 = [tmp19(c5, obj9)];
             const obj10 = { style: null, accessible: true, children: null };
             obj10[0] = tmp2.emptyGiftDescription;
-            const obj11 = { style: null, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+            const obj11 = {
+              style: null,
+              variant: "text-md/semibold",
+              color: "mobile-text-heading-primary",
+              children: null,
+            };
             obj11[0] = tmp2.emptyGiftHeader;
             const intl3 = tmp6(tmp4[31]).intl;
             obj11[3] = intl3.string(tmp6(tmp4[31]).t.B1qgZn);
-            const items8 = [tmp19(tmp6(tmp4[30]).Text, obj11), ];
+            const items8 = [tmp19(tmp6(tmp4[30]).Text, obj11)];
             const obj12 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
             obj12[0] = tmp2.emptyGiftInformation;
             const intl4 = tmp6(tmp4[31]).intl;
@@ -172,15 +213,21 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
             const items9 = [
               tmp19(tmp18, obj15),
               claimedEndedOutboundPromotions.map((code) => {
-                          const outboundPromotion = code.promotion;
-                          return callback(stateFromStoresArray(memo[32]), { outboundPromotion, code: code.code }, outboundPromotion.id);
-                        }),
-              activeOutboundPromotions.map((id) => closure_1_14(stateFromStoresArray(memo[32]), { outboundPromotion: id, code: _undefined[id.id] }, id.id))
+                const outboundPromotion = code.promotion;
+                return callback(
+                  stateFromStoresArray(memo[32]),
+                  { outboundPromotion, code: code.code },
+                  outboundPromotion.id,
+                );
+              }),
+              activeOutboundPromotions.map((id) =>
+                closure_1_14(stateFromStoresArray(memo[32]), { outboundPromotion: id, code: _undefined[id.id] }, id.id),
+              ),
             ];
             obj14[0] = items9;
             tmp17Result = tmp17(closure_16, obj14);
           }
-          const items10 = [tmp17Result, ];
+          const items10 = [tmp17Result];
           let tmp17Result1 = null;
           if (keys.length > 0) {
             const obj17 = { children: null };
@@ -193,11 +240,11 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
             const items11 = [
               tmp19(tmp18, obj18),
               keys.map((arg0) => {
-                          let obj = arr(memo[16]);
-                          ({ skuId, subscriptionPlanId, giftStyle } = obj.parseComboId(arg0));
-                          obj = { skuId, subscriptionPlanId, entitlements: memo[arg0], giftStyle };
-                          return closure_1_14(stateFromStoresArray(memo[33]), obj, arg0);
-                        })
+                let obj = arr(memo[16]);
+                ({ skuId, subscriptionPlanId, giftStyle } = obj.parseComboId(arg0));
+                obj = { skuId, subscriptionPlanId, entitlements: memo[arg0], giftStyle };
+                return closure_1_14(stateFromStoresArray(memo[33]), obj, arg0);
+              }),
             ];
             obj17[0] = items11;
             tmp17Result1 = tmp17(closure_16, obj17);
@@ -235,7 +282,7 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
       }
       const intl5 = tmp6(tmp4[31]).intl;
       obj23[0] = intl5.string(tmp6(tmp4[31]).t["55Ccy0"]);
-      const items12 = [tmp19(GiftingSectionTitle, obj23), , , ];
+      const items12 = [tmp19(GiftingSectionTitle, obj23), , ,];
       const obj24 = { premiumType: null, style: null, children: null };
       obj24[0] = closure_12.TIER_2;
       obj24[1] = tmp2.tierCard;
@@ -246,7 +293,7 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
       const obj26 = { onClick: null };
       obj26[0] = handleLearnMorePremiumClick;
       obj25[3] = intl6.format(tmp6(tmp4[31]).t.thORji, obj26);
-      const items13 = [tmp19(tmp6(tmp4[30]).Text, obj25), ];
+      const items13 = [tmp19(tmp6(tmp4[30]).Text, obj25)];
       const obj27 = { style: null, children: null };
       obj27[0] = tmp2.buttonWrapper;
       const obj28 = { recipientUserId: null, style: null, variant: "active", planId: null, analyticsLocation: null };
@@ -254,7 +301,7 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
       obj28[1] = tmp2.giftPurchaseButton;
       obj28[3] = closure_13.PREMIUM_YEAR_TIER_2;
       obj28[4] = analyticsLocation;
-      const items14 = [tmp19(tmp3(tmp4[35]), obj28), ];
+      const items14 = [tmp19(tmp3(tmp4[35]), obj28)];
       const obj29 = { recipientUserId: null, style: null, variant: "secondary", planId: null, analyticsLocation: null };
       obj29[0] = recipientUserId;
       obj29[1] = tmp2.giftPurchaseButton;
@@ -279,7 +326,7 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
       const obj34 = { onClick: null };
       obj34[0] = handleLearnMoreNitroBasicClick;
       obj33[3] = intl7.format(tmp6(tmp4[31]).t.NmpnsP, obj34);
-      const items15 = [tmp19(tmp6(tmp4[30]).Text, obj33), ];
+      const items15 = [tmp19(tmp6(tmp4[30]).Text, obj33)];
       const obj35 = { style: null, children: null };
       obj35[0] = tmp2.buttonWrapper;
       const obj36 = { recipientUserId: null, style: null, variant: "active", planId: null, analyticsLocation: null };
@@ -287,7 +334,7 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
       obj36[1] = tmp2.giftPurchaseButton;
       obj36[3] = closure_13.PREMIUM_YEAR_TIER_0;
       obj36[4] = analyticsLocation;
-      const items16 = [tmp19(tmp3(tmp4[35]), obj36), ];
+      const items16 = [tmp19(tmp3(tmp4[35]), obj36)];
       const obj37 = { recipientUserId: null, style: null, variant: "secondary", planId: null, analyticsLocation: null };
       obj37[0] = recipientUserId;
       obj37[1] = tmp2.giftPurchaseButton;
@@ -297,7 +344,7 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
       obj35[1] = items16;
       items15[1] = tmp17(tmp18, obj35);
       obj32[2] = items15;
-      const items17 = [tmp17(tmp3Result, obj32), ];
+      const items17 = [tmp17(tmp3Result, obj32)];
       const obj38 = { style: null };
       obj38[0] = tmp2.warningMargins;
       items17[1] = tmp19(tmp3(tmp4[36]), obj38);
@@ -315,6 +362,8 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
   }
   return tmp17Result3;
 });
-let result = require("set").fileFinishedImporting("modules/user_settings/premium/native/UserSettingsPremiumGifting.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/premium/native/UserSettingsPremiumGifting.tsx",
+);
 
 export default forwardRefResult;

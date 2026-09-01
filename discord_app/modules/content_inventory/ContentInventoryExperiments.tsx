@@ -4,10 +4,32 @@ import ExperimentBuckets from "../experiments/ExperimentConstants.tsx";
 import ApexExperiment from "../experiments/apex/index.tsx";
 import createExperiment from "../experiments/index.tsx";
 
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-content-inventory-memberlist-and-ranker", defaultConfig: { enabled: true, impressionCappingEnabled: true }, variations: { 0: { enabled: false, impressionCappingEnabled: false } } });
-const items = [{ id: 16, label: "ML model V3 - Nvidia small boost", config: {} }, { id: 17, label: "ML model V3 - Nvidia big boost", config: {} }];
-const experiment = createExperiment.createExperiment({ kind: "user", id: "2025-09_hotwheels_nvidia_boost", label: "Next iteration of the activity feed ranking model.", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.CONNECTION_OPEN, defaultConfig: {}, treatments: items });
-const obj = { kind: "user", id: "2025-09_hotwheels_nvidia_boost", label: "Next iteration of the activity feed ranking model.", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.CONNECTION_OPEN, defaultConfig: {}, treatments: items };
+const apexExperiment = ApexExperiment.createApexExperiment({
+  kind: "user",
+  name: "2026-03-content-inventory-memberlist-and-ranker",
+  defaultConfig: { enabled: true, impressionCappingEnabled: true },
+  variations: { 0: { enabled: false, impressionCappingEnabled: false } },
+});
+const items = [
+  { id: 16, label: "ML model V3 - Nvidia small boost", config: {} },
+  { id: 17, label: "ML model V3 - Nvidia big boost", config: {} },
+];
+const experiment = createExperiment.createExperiment({
+  kind: "user",
+  id: "2025-09_hotwheels_nvidia_boost",
+  label: "Next iteration of the activity feed ranking model.",
+  commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.CONNECTION_OPEN,
+  defaultConfig: {},
+  treatments: items,
+});
+const obj = {
+  kind: "user",
+  id: "2025-09_hotwheels_nvidia_boost",
+  label: "Next iteration of the activity feed ranking model.",
+  commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.CONNECTION_OPEN,
+  defaultConfig: {},
+  treatments: items,
+};
 const result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryExperiments.tsx");
 
 export const MemberlistRankerExperiment = apexExperiment;

@@ -37,4 +37,4 @@ export default function getApplicationIdForActivity(party) {
   if (isOnXboxDefault(party)) {
     id = closure_4 + party.name;
   }
-};
+}

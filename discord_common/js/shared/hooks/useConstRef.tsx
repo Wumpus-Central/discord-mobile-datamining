@@ -7,4 +7,4 @@ export default function useConstRef(current) {
   const ref = React.useRef(current);
   ref.current = current;
   return ref;
-};
+}

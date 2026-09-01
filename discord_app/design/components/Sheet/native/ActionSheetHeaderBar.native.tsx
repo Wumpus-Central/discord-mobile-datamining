@@ -36,7 +36,13 @@ let closure_10 = createCacheKey.createStyles((arg0, height, marginBottom) => {
     tmp4 = obj4;
   }
   const merged2 = Object.assign(tmp4);
-  obj[1] = { alignSelf: "center", width: ThemesDefault.modules.mobile.SHEET_HANDLE_WIDTH, height: ThemesDefault.modules.mobile.SHEET_HANDLE_HEIGHT, borderRadius: ThemesDefault.radii.sm, top: ThemesDefault.modules.mobile.SHEET_HANDLE_MARGIN_TOP };
+  obj[1] = {
+    alignSelf: "center",
+    width: ThemesDefault.modules.mobile.SHEET_HANDLE_WIDTH,
+    height: ThemesDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
+    borderRadius: ThemesDefault.radii.sm,
+    top: ThemesDefault.modules.mobile.SHEET_HANDLE_MARGIN_TOP,
+  };
   const obj5 = {};
   const merged3 = Object.assign(absoluteFillObject.absoluteFillObject);
   obj5.height = height;
@@ -57,7 +63,11 @@ export const ActionSheetHeaderBar = function ActionSheetHeaderBar(accessibilityL
     variant = "default";
   }
   let obj = map;
-  const tmp3 = callback3(variant, useWindowDimensionsDefault().height, obj.useToken(ThemesDefault.modules.mobile.SHEET_HANDLE_MARGIN_BOTTOM));
+  const tmp3 = callback3(
+    variant,
+    useWindowDimensionsDefault().height,
+    obj.useToken(ThemesDefault.modules.mobile.SHEET_HANDLE_MARGIN_BOTTOM),
+  );
   obj1 = SCREEN_READER_ENABLED_GETTER;
   obj = { onPress, onAccessibilityEscape: onPress, "aria-hidden": true, children: null };
   obj = { style: items, children: null };
@@ -70,7 +80,13 @@ export const ActionSheetHeaderBar = function ActionSheetHeaderBar(accessibilityL
   let tmp7 = tmp6;
   if (isScreenReaderEnabled) {
     obj1 = { children: null };
-    const obj2 = { style: null, accessible: true, accessibilityLabel: null, accessibilityRole: "button", onPress: null };
+    const obj2 = {
+      style: null,
+      accessible: true,
+      accessibilityLabel: null,
+      accessibilityRole: "button",
+      onPress: null,
+    };
     obj2[0] = tmp3.accessibleDismiss;
     obj2[2] = accessibilityLabel;
     obj2[4] = onPress;

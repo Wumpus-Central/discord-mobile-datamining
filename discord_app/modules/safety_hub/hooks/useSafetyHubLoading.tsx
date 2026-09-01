@@ -8,4 +8,4 @@ const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/us
 export default function useIsSafetyHubLoading() {
   const items = [closure_2];
   return initialize.useStateFromStores(items, () => fetching.isFetching());
-};
+}

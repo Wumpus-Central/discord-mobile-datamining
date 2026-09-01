@@ -22,13 +22,17 @@ export default function usePremiumPlanPrice(arg0) {
   const tmp2 = storeFront;
   const items1 = [closure_4];
   const items2 = [arg0];
-  const stateFromStores1 = _require(priceState[5]).useStateFromStores(items1, () => {
-    let value = null;
-    if (null != closure_0) {
-      value = isIOSResult.get(tmp);
-    }
-    return value;
-  }, items2);
+  const stateFromStores1 = _require(priceState[5]).useStateFromStores(
+    items1,
+    () => {
+      let value = null;
+      if (null != closure_0) {
+        value = isIOSResult.get(tmp);
+      }
+      return value;
+    },
+    items2,
+  );
   const obj3 = _require(priceState[5]);
   ({ price, priceState } = storeFront(priceState[8])(stateFromStores1, storeFront));
   let tmp5 = null;
@@ -40,13 +44,17 @@ export default function usePremiumPlanPrice(arg0) {
   const tmp4 = storeFront(priceState[8])(stateFromStores1, storeFront);
   const items3 = [closure_6];
   const items4 = [tmp6];
-  const stateFromStores2 = formatPrice(amount[5]).useStateFromStores(items3, () => {
-    let product = null;
-    if (null != closure_3) {
-      product = closure_1_6.getProduct(tmp);
-    }
-    return product;
-  }, items4);
+  const stateFromStores2 = formatPrice(amount[5]).useStateFromStores(
+    items3,
+    () => {
+      let product = null;
+      if (null != closure_3) {
+        product = closure_1_6.getProduct(tmp);
+      }
+      return product;
+    },
+    items4,
+  );
   const formatPriceResult = formatPrice(amount[5]);
   let isIOSResult = formatPrice(amount[10]).isIOS();
   if (isIOSResult) {
@@ -79,10 +87,13 @@ export default function usePremiumPlanPrice(arg0) {
                   obj.fail(() => {
                     if (!isIOSResult.isFetchingForPremiumSKUs()) {
                       const obj = country(priceState[13]);
-                      const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(country, undefined, undefined, closure_2_7.APPLE_ADVANCED_COMMERCE);
-                      premiumSubscriptionPlans.catch(() => {
-
-                      });
+                      const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(
+                        country,
+                        undefined,
+                        undefined,
+                        closure_2_7.APPLE_ADVANCED_COMMERCE,
+                      );
+                      premiumSubscriptionPlans.catch(() => {});
                     }
                   });
                   return () => {
@@ -139,4 +150,4 @@ export default function usePremiumPlanPrice(arg0) {
       tmp12 = obj;
     }
   }
-};
+}

@@ -27,4 +27,4 @@ export default function isListeningOnSpotify(type) {
     tmp = isSpotifyParty(type.party.id);
   }
   return tmp;
-};
+}

@@ -25,9 +25,23 @@ const View = get_ActivityIndicator.View;
 let obj = { container: null, staffContainer: null };
 obj = { gap: ThemesDefault.space.PX_12, margin: ThemesDefault.space.PX_16 };
 obj[0] = obj;
-obj[1] = { padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+obj[1] = {
+  padding: ThemesDefault.space.PX_12,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 1,
+  borderStyle: "solid",
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 let closure_6 = createCacheKey.createStyles(obj);
-let obj1 = { padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj1 = {
+  padding: ThemesDefault.space.PX_12,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 1,
+  borderStyle: "solid",
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsNotificationContainer.tsx");
 
 export default function GuildPowerupsNotificationContainer(guildId) {
@@ -52,7 +66,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
     obj[1] = str2;
     const intl = tmp6(1236).intl;
     obj[2] = intl.string(tmp2(2401)["3FRirU"]);
-    const items = [closure_4(tmp6(4474).Text, obj), , ];
+    const items = [closure_4(tmp6(4474).Text, obj), ,];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {
       obj1 = { text: null };
@@ -76,4 +90,4 @@ export default function GuildPowerupsNotificationContainer(guildId) {
     tmp9Result = null;
   }
   return tmp9Result;
-};
+}

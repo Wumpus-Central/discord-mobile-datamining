@@ -36,16 +36,20 @@ function FavoritesGuildAddActionSheet() {
   const obj2 = { label: null, icon: null, onPress: null };
   const intl2 = shouldShowUpsell(favoriteLimit[9]).intl;
   obj2[0] = intl2.string(isAtLimit(favoriteLimit[11]).G9fGlP);
-  obj2[1] = callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Icon, { IconComponent: shouldShowUpsell(favoriteLimit[12]).PlusMediumIcon });
+  obj2[1] = callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Icon, {
+    IconComponent: shouldShowUpsell(favoriteLimit[12]).PlusMediumIcon,
+  });
   obj2[2] = callback;
   obj1[1] = callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow, obj2);
-  const items1 = [callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Group, obj1), ];
+  const items1 = [callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Group, obj1)];
   const obj4 = { hasIcons: true, children: null };
   const obj5 = { label: null, icon: null, onPress: null };
   const intl3 = shouldShowUpsell(favoriteLimit[9]).intl;
   obj5[0] = intl3.string(shouldShowUpsell(favoriteLimit[9]).t["ISN+NM"]);
   const obj3 = { IconComponent: shouldShowUpsell(favoriteLimit[12]).PlusMediumIcon };
-  obj5[1] = callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Icon, { IconComponent: shouldShowUpsell(favoriteLimit[13]).FolderPlusIcon });
+  obj5[1] = callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Icon, {
+    IconComponent: shouldShowUpsell(favoriteLimit[13]).FolderPlusIcon,
+  });
   obj5[2] = handleCreateCategory;
   obj4[1] = callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow, obj5);
   items1[1] = callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Group, obj4);

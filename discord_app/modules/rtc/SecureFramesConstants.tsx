@@ -14,8 +14,19 @@ export const USER_VERIFICATION_CHUNK_SIZE = 5;
 export const USER_VERIFICATION_LENGTH = 45;
 export const USER_VERIFICATION_NUM_COLUMNS = 3;
 export const USER_VERIFIED_TOAST_KEY = "user_verified_toast_key";
-export const AnalyticsSecureFramesUserVerification = { MATCH: "match", OTHER_USER_ALREADY_VERIFIED: "other_user_already_verified", OTHER_USER_INCONSISTENT_KEYS: "other_user_inconsistent_keys", FINGERPRINT_MISMATCH: "fingerprint_mismatch", UNABLE_TO_VERIFY: "unable_to_verify", OTHER_USER_DISCONNECTED: "other_user_disconnected", CURRENT_USER_DISCONNECTED: "current_user_disconnected" };
+export const AnalyticsSecureFramesUserVerification = {
+  MATCH: "match",
+  OTHER_USER_ALREADY_VERIFIED: "other_user_already_verified",
+  OTHER_USER_INCONSISTENT_KEYS: "other_user_inconsistent_keys",
+  FINGERPRINT_MISMATCH: "fingerprint_mismatch",
+  UNABLE_TO_VERIFY: "unable_to_verify",
+  OTHER_USER_DISCONNECTED: "other_user_disconnected",
+  CURRENT_USER_DISCONNECTED: "current_user_disconnected",
+};
 export const END_TO_END_ENCRYPTION_DISABLED = 0;
-export const AnalyticsRTCConnectionPanelTab = { RTC_DEBUG_PANEL: "rtc_debug_panel", RTC_SECURE_FRAMES: "rtc_secure_frames" };
+export const AnalyticsRTCConnectionPanelTab = {
+  RTC_DEBUG_PANEL: "rtc_debug_panel",
+  RTC_SECURE_FRAMES: "rtc_secure_frames",
+};
 export const SECURE_FRAMES_PUBLIC_KEY_VERSION = 1;
 export const SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION = 0;

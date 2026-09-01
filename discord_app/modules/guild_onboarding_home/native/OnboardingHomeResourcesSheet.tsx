@@ -7,7 +7,9 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx",
+);
 
 export default function OnboardingHomeResourcesSheet(guildId) {
   guildId = guildId.guildId;
@@ -41,7 +43,7 @@ export default function OnboardingHomeResourcesSheet(guildId) {
         callback(closure_2_2[7]).hideActionSheet(closure_2_3);
       };
       return closure_1_4(guildId(closure_1_2[9]).ActionSheetRow, obj, label.channelId);
-    })
+    }),
   };
   obj[0] = jsx(guildId(5991).ActionSheetRow.Group, {
     hasIcons: true,
@@ -69,7 +71,7 @@ export default function OnboardingHomeResourcesSheet(guildId) {
         callback(closure_2_2[7]).hideActionSheet(closure_2_3);
       };
       return closure_1_4(guildId(closure_1_2[9]).ActionSheetRow, obj, label.channelId);
-    })
+    }),
   });
   return jsx(guildId(5989).ActionSheet, {
     hasIcons: true,
@@ -97,6 +99,6 @@ export default function OnboardingHomeResourcesSheet(guildId) {
         callback(closure_2_2[7]).hideActionSheet(closure_2_3);
       };
       return closure_1_4(guildId(closure_1_2[9]).ActionSheetRow, obj, label.channelId);
-    })
+    }),
   });
-};
+}

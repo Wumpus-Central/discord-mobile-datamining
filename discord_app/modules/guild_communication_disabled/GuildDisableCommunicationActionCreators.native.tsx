@@ -8,7 +8,9 @@ import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/GuildDisableCommunicationActionCreators.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_communication_disabled/GuildDisableCommunicationActionCreators.native.tsx",
+);
 
 export const openDisableCommunication = function openDisableCommunication(userId) {
   ({ guildId, cancelButtonCallback } = userId);
@@ -38,7 +40,7 @@ export const openEnableCommunication = function openEnableCommunication(arg0) {
           return closure_2_4(closure_0, obj);
         };
       });
-    }
+    },
   };
   obj.openLazy(obj);
 };

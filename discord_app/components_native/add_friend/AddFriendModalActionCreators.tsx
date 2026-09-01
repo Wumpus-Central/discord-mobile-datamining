@@ -17,5 +17,5 @@ export default {
       obj[0] = arg0;
       obj.pushLazy(asyncRequireImpl(13592, dependencyMap.paths), obj);
     }
-  }
+  },
 };

@@ -28,7 +28,12 @@ function EmptyDisplay(arg0) {
 }
 function FetchErrorDisplay(style) {
   let obj = { style: style.style, children: null };
-  obj = { style: callback3().emptyDisplayTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  obj = {
+    style: callback3().emptyDisplayTitle,
+    variant: "heading-lg/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.obChXk);
   obj[1] = callback(Text.Text, obj);
@@ -36,7 +41,12 @@ function FetchErrorDisplay(style) {
 }
 function NoUsersDisplay(style) {
   let obj = { style: style.style, children: null };
-  obj = { style: callback3().emptyDisplayTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  obj = {
+    style: callback3().emptyDisplayTitle,
+    variant: "heading-lg/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.hW0mBR);
   obj[1] = callback(Text.Text, obj);
@@ -50,7 +60,9 @@ function RemainingUsersRow(remainingUsersGroup) {
   obj[1] = callback(preloadDefault, obj);
   obj[1] = callback(View, obj);
   const intl = getSystemLocale.intl;
-  obj[2] = intl.formatToPlainString(getSystemLocale.t.BdQTfR, { userRemainCount: remainingUsersGroup.remainingUsersGroup.count });
+  obj[2] = intl.formatToPlainString(getSystemLocale.t.BdQTfR, {
+    userRemainCount: remainingUsersGroup.remainingUsersGroup.count,
+  });
   return callback(Form.FormRow, obj, "userRemaining");
 }
 function keyExtractor(count) {
@@ -70,7 +82,7 @@ class EventDetailRsvpSheet {
       constructor(arg0) {
         tmp = closure_1_9();
         obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
-        items = [, ];
+        items = [,];
         items[0] = tmp.staticMessageContentContainer;
         obj = { minHeight: contentHeight };
         items[1] = obj;
@@ -105,12 +117,12 @@ class EventDetailRsvpSheet {
         tmp14 = guildId;
         tmp15 = closure_2;
         obj1 = { style: null };
-        items1 = [, ];
+        items1 = [,];
         class StaticMessageContainer {
           constructor(arg0) {
             tmp = closure_1_9();
             obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
-            items = [, ];
+            items = [,];
             items[0] = tmp.staticMessageContentContainer;
             obj = { minHeight: contentHeight };
             items[1] = obj;
@@ -130,13 +142,13 @@ class EventDetailRsvpSheet {
       obj2 = { children: null };
       tmp12 = FetchErrorDisplay;
       obj3 = { style: null };
-      items2 = [, ];
+      items2 = [,];
       items2[0] = tmp.staticMessageContent;
       class StaticMessageContainer {
         constructor(arg0) {
           tmp = closure_1_9();
           obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
-          items = [, ];
+          items = [,];
           items[0] = tmp.staticMessageContentContainer;
           obj = { minHeight: contentHeight };
           items[1] = obj;
@@ -154,13 +166,13 @@ class EventDetailRsvpSheet {
         obj4 = { children: null };
         tmp10 = NoUsersDisplay;
         obj5 = { style: null };
-        items3 = [, ];
+        items3 = [,];
         items3[0] = tmp.staticMessageContent;
         class StaticMessageContainer {
           constructor(arg0) {
             tmp = closure_1_9();
             obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
-            items = [, ];
+            items = [,];
             items[0] = tmp.staticMessageContentContainer;
             obj = { minHeight: contentHeight };
             items[1] = obj;
@@ -175,14 +187,20 @@ class EventDetailRsvpSheet {
         tmp3 = jsx;
         tmp4 = guildId;
         tmp5 = closure_2;
-        obj = { contentContainerStyle: null, data: null, renderItem: null, ItemSeparatorComponent: null, keyExtractor: null };
-        items4 = [, ];
+        obj = {
+          contentContainerStyle: null,
+          data: null,
+          renderItem: null,
+          ItemSeparatorComponent: null,
+          keyExtractor: null,
+        };
+        items4 = [,];
         items4[0] = tmp.userList;
         class StaticMessageContainer {
           constructor(arg0) {
             tmp = closure_1_9();
             obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
-            items = [, ];
+            items = [,];
             items[0] = tmp.staticMessageContentContainer;
             obj = { minHeight: contentHeight };
             items[1] = obj;
@@ -206,18 +224,39 @@ class EventDetailRsvpSheet {
 }
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { staticMessageContentContainer: { flex: 1, padding: 16 }, userList: { paddingTop: 16 }, userListRow: { paddingVertical: 8 }, userName: null, emptyDisplayContainer: null, staticMessageContent: null, emptyDisplayTitle: null, remainingUsersIcon: null, remainingUsersIconContainer: null };
+let obj = {
+  staticMessageContentContainer: { flex: 1, padding: 16 },
+  userList: { paddingTop: 16 },
+  userListRow: { paddingVertical: 8 },
+  userName: null,
+  emptyDisplayContainer: null,
+  staticMessageContent: null,
+  emptyDisplayTitle: null,
+  remainingUsersIcon: null,
+  remainingUsersIconContainer: null,
+};
 obj = { color: ThemesDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 16 };
 obj[3] = obj;
 obj[4] = { alignItems: "center", justifyContent: "center", minHeight: 200 };
 obj[5] = { height: "100%" };
 createCacheKey = { paddingTop: 24 };
-const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 20, { marginBottom: 8 }));
+const merged = Object.assign(
+  importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 20, {
+    marginBottom: 8,
+  }),
+);
 createCacheKey.textAlign = "center";
 obj[6] = createCacheKey;
 obj[7] = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, height: 18, width: 18 };
 let obj2 = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, height: 18, width: 18 };
-obj[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 16, height: 32, width: 32, alignItems: "center", justifyContent: "center" };
+obj[8] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: 16,
+  height: 32,
+  width: 32,
+  alignItems: "center",
+  justifyContent: "center",
+};
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((eventUser) => {
   eventUser = eventUser.eventUser;
@@ -230,12 +269,28 @@ const memoResult = importAllResult.memo((eventUser) => {
   obj1 = eventUser(589);
   const items1 = [closure_5];
   const items2 = [eventUser.user_id];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({ isMobileOnline: closure_1_5.isMobileOnline(eventUser.user_id), isVROnline: closure_1_5.isVROnline(eventUser.user_id), status: closure_1_5.getStatus(eventUser.user_id) }), items2);
+  const stateFromStoresObject = obj1.useStateFromStoresObject(
+    items1,
+    () => ({
+      isMobileOnline: closure_1_5.isMobileOnline(eventUser.user_id),
+      isVROnline: closure_1_5.isVROnline(eventUser.user_id),
+      status: closure_1_5.getStatus(eventUser.user_id),
+    }),
+    items2,
+  );
   ({ isMobileOnline, isVROnline, status } = stateFromStoresObject);
   obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null, onPress: null };
   let tmp7Result = null;
   if (null != stateFromStores) {
-    obj = { user: null, guildId: null, isMobileOnline: null, isVROnline: null, status: null, size: null, autoStatusCutout: true };
+    obj = {
+      user: null,
+      guildId: null,
+      isMobileOnline: null,
+      isVROnline: null,
+      status: null,
+      size: null,
+      autoStatusCutout: true,
+    };
     obj[0] = stateFromStores;
     obj[1] = eventUser.guildId;
     obj[2] = isMobileOnline;
@@ -265,8 +320,17 @@ const memoResult = importAllResult.memo((eventUser) => {
   return closure_7(eventUser(8363).FormRow, obj, eventUser.user_id);
 });
 EventDetailRsvpSheet.displayName = "EventDetailRsvpSheet";
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 16, height: 32, width: 32, alignItems: "center", justifyContent: "center" };
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/event_detail/EventDetailRsvpSheet.tsx");
+let obj3 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: 16,
+  height: 32,
+  width: 32,
+  alignItems: "center",
+  justifyContent: "center",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/event_detail/EventDetailRsvpSheet.tsx",
+);
 
 export default EventDetailRsvpSheet;
 export const UserRow = memoResult;

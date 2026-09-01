@@ -26,7 +26,9 @@ export default {
   },
   requestPermission(arg0) {
     const _require = arg0;
-    let result = require("../../actions/native/PushNotificationActionCreators.tsx").setPushPermissionState(PermissionStateType.REQUESTED);
+    let result = require("../../actions/native/PushNotificationActionCreators.tsx").setPushPermissionState(
+      PermissionStateType.REQUESTED,
+    );
     let obj = getOrRefreshPushSyncToken;
     expandEventPropertiesDefault.track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
     const obj2 = expandEventPropertiesDefault;
@@ -60,7 +62,7 @@ export default {
     });
   },
   showNotification() {
-    return callback(function*() {
+    return callback(function* () {
       if (c0 === 2) {
         c0 = 3;
         HermesBuiltin.throwTypeError();
@@ -103,5 +105,5 @@ export default {
       num = 1;
     }
     createSoundForPack.playSound(arg0, num, undefined, arg2);
-  }
+  },
 };

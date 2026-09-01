@@ -4,7 +4,14 @@ import getPricesFromServerDefault from "../../skus/utils/getPricesFromServer.tsx
 
 let prototype;
 prototype = function CollectiblesBundledProductRecord(arg0) {
-  ({ prices: tmp.prices, type: tmp.type, premiumType: tmp.premiumType, name: tmp.name, skuId: tmp.skuId, summary: tmp.summary } = arg0);
+  ({
+    prices: tmp.prices,
+    type: tmp.type,
+    premiumType: tmp.premiumType,
+    name: tmp.name,
+    skuId: tmp.skuId,
+    summary: tmp.summary,
+  } = arg0);
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["fromServer"] = function fromServer(arg0) {

@@ -5,7 +5,9 @@ import closure_5 from "../../../../stores/views/SortedVoiceStateStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/items/RedesignVoiceUserSummary.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/channel_list_v2/native/items/RedesignVoiceUserSummary.tsx",
+);
 
 export default function RedesignVoiceUserSummary(channels) {
   channels = channels.channels;
@@ -19,7 +21,10 @@ export default function RedesignVoiceUserSummary(channels) {
   const items2 = [closure_4];
   stateFromStores1 = channels(stateFromStores[4]).useStateFromStores(items2, () => voiceChannelId.getVoiceChannelId());
   const items3 = [channels, stateFromStores1, stateFromStores];
-  const stageIcon = stateFromStores1.useMemo(() => channels(stateFromStores[5]).isAnyVoiceStateStage(channels, stateFromStores1, stateFromStores), items3);
+  const stageIcon = stateFromStores1.useMemo(
+    () => channels(stateFromStores[5]).isAnyVoiceStateStage(channels, stateFromStores1, stateFromStores),
+    items3,
+  );
   const obj2 = channels(stateFromStores[4]);
   obj = { channels, selectedChannelId: "r", selectedVoiceChannelId: "PX_16", voiceStates: null };
   obj[2] = stateFromStores1;
@@ -27,4 +32,4 @@ export default function RedesignVoiceUserSummary(channels) {
   const summarizedVoiceUsers = channels(stateFromStores[5]).computeSummarizedVoiceUsers(obj);
   const users = summarizedVoiceUsers.filter((arg0) => null != arg0);
   return jsx(guildId(stateFromStores[6]), { users, max: 8, renderIcon: true, guildId, stageIcon });
-};
+}

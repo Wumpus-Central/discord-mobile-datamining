@@ -50,13 +50,13 @@ createToggle = {
   parent: null,
   IconComponent: require("PaintPaletteIcon").PaintPaletteIcon,
   useTrailing: useAppearanceSettingTrailing,
-  screen: createToggle
+  screen: createToggle,
 };
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE,
   getComponent() {
     return require("../../appearance/native/SettingsAppearanceScreen.tsx").default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AppearanceSetting.tsx");

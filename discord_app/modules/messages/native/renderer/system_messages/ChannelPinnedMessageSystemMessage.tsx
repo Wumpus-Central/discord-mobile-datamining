@@ -6,13 +6,23 @@ import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import MessageAccessibilityAction from "../../MessageAccessibilityActions.tsx";
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx",
+);
 
 export const createChannelPinnedMessageSystemMessage = function createChannelPinnedMessageSystemMessage(roleStyle) {
   const message = roleStyle.message;
   let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), pinsOnClick: obj };
+  obj = {
+    username: messageAuthorWithProcessedColor.nick,
+    usernameOnClick: formatUsernameOnClickDefault({
+      message,
+      author: messageAuthorWithProcessedColor,
+      roleStyle: roleStyle.roleStyle,
+    }),
+    pinsOnClick: obj,
+  };
   obj = { action: "bindOpenPins", messageChannelId: message.channel_id, medium: true };
   const messageReference = message.messageReference;
   if (null != messageReference) {

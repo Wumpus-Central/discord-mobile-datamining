@@ -4,7 +4,14 @@ import noop from "../../../../_runtime/00019_noop.js";
 import closure_3 from "../CollectiblesPurchaseStore.tsx";
 
 let useMemo = noop.useMemo;
-let closure_4 = { NOT_PURCHASED: 0, [0]: "NOT_PURCHASED", PARTIAL_OWNED_BUNDLE: 1, [1]: "PARTIAL_OWNED_BUNDLE", PURCHASED: 2, [2]: "PURCHASED" };
+let closure_4 = {
+  NOT_PURCHASED: 0,
+  [0]: "NOT_PURCHASED",
+  PARTIAL_OWNED_BUNDLE: 1,
+  [1]: "PARTIAL_OWNED_BUNDLE",
+  PURCHASED: 2,
+  [2]: "PURCHASED",
+};
 const result = set.fileFinishedImporting("modules/collectibles/hooks/usePurchasedProductsSort.tsx");
 
 export const usePurchasedProductsSort = function usePurchasedProductsSort(memo) {

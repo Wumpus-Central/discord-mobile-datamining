@@ -13,4 +13,4 @@ export default function useStableCallback(stateFromStores) {
     const items = [...HermesBuiltin.copyRestArgs()];
     return ref.current.apply(items);
   }, []);
-};
+}

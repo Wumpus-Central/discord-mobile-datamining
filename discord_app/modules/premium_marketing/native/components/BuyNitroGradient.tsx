@@ -9,7 +9,9 @@ const require = arg1;
 noopAll;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = importDefaultResult.createAnimatedComponent(LinearGradientDefault);
-let closure_8 = { code: "function BuyNitroGradientTsx1(){const{withTiming,selectedTier,PremiumTypes,timingStandard}=this.__closure;return{opacity:withTiming(selectedTier===PremiumTypes.TIER_0?1:0,timingStandard)};}" };
+let closure_8 = {
+  code: "function BuyNitroGradientTsx1(){const{withTiming,selectedTier,PremiumTypes,timingStandard}=this.__closure;return{opacity:withTiming(selectedTier===PremiumTypes.TIER_0?1:0,timingStandard)};}",
+};
 const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroGradient.tsx");
 
 export default function BuyNitroGradient(selectedTier) {
@@ -26,15 +28,20 @@ export default function BuyNitroGradient(selectedTier) {
     obj = { opacity: obj.withTiming(num, selectedTier(closure_1_2[6]).timingStandard) };
     return obj;
   };
-  obj = { withTiming: selectedTier(4479).withTiming, selectedTier, PremiumTypes, timingStandard: selectedTier(4482).timingStandard };
+  obj = {
+    withTiming: selectedTier(4479).withTiming,
+    selectedTier,
+    PremiumTypes,
+    timingStandard: selectedTier(4482).timingStandard,
+  };
   fn.__closure = obj;
   fn.__workletHash = 14014615431537;
   fn.__initData = closure_8;
   obj = { children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const items = [callback(LinearGradientDefault, { style, colors: nitroColors, start, end }), ];
+  const items = [callback(LinearGradientDefault, { style, colors: nitroColors, start, end })];
   const items1 = [style, animatedStyle];
   items[1] = callback(closure_7, { style: items1, colors: basicColors, start, end });
   obj[0] = items;
   return callback2(closure_5, obj);
-};
+}

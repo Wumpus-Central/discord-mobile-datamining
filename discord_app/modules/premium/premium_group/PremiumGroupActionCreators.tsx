@@ -7,7 +7,7 @@ import { Endpoints } from "../../../Constants.tsx";
 const require = arg1;
 function _fetchPremiumGroupMembership() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -113,7 +113,7 @@ function _fetchEligibleUsers() {
     closure_3 = arg3;
     c8 = 0;
     c9 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       c7 = 0;
       const HTTP = callback(table[5]).HTTP;
       obj1 = { url: null, query: null, rejectWithError: true };
@@ -134,13 +134,19 @@ function _fetchEligibleUsers() {
       ineligible_users = body.ineligible_users;
       closure_5 = 0;
       const items = [];
-      closure_5 = HermesBuiltin.arraySpread(users.map((arg0) => Object.assign(new c4(arg0), { eligible: true })), closure_5);
+      closure_5 = HermesBuiltin.arraySpread(
+        users.map((arg0) => Object.assign(new c4(arg0), { eligible: true })),
+        closure_5,
+      );
       closure_6 = ineligible_users;
       if (ineligible_users == null) {
         closure_6 = [];
       }
       const obj = { users: null, nextIndex: null };
-      closure_5 = HermesBuiltin.arraySpread(closure_6.map((arg0) => Object.assign(new c4(arg0), { eligible: false })), closure_5);
+      closure_5 = HermesBuiltin.arraySpread(
+        closure_6.map((arg0) => Object.assign(new c4(arg0), { eligible: false })),
+        closure_5,
+      );
       obj[0] = items;
       obj[1] = next_index;
       return obj;
@@ -163,7 +169,7 @@ function _inviteUsersToSubscriptionGroup() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -266,7 +272,7 @@ function _removeUserFromSubscriptionGroup() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -365,7 +371,7 @@ function _fetchSubscriptionGroupMembers() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -474,7 +480,7 @@ function _acceptSubscriptionGroupInvite() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -580,7 +586,7 @@ function _removeSubscriptionGroupInvite() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -628,7 +634,12 @@ function _removeSubscriptionGroupInvite() {
             c6 = 0;
             body = closure_5;
             let obj4 = callback2(709);
-            obj4 = { type: "PREMIUM_GROUP_REMOVE_INVITE_FAILURE", subscriptionGroupMemberId: null, errorCode: null, subscriptionId: null };
+            obj4 = {
+              type: "PREMIUM_GROUP_REMOVE_INVITE_FAILURE",
+              subscriptionGroupMemberId: null,
+              errorCode: null,
+              subscriptionId: null,
+            };
             obj4[1] = callback2;
             body = body.body;
             let code;
@@ -654,7 +665,11 @@ function _removeSubscriptionGroupInvite() {
           } else {
             dependencyMap = arg1;
             obj = callback2(709);
-            const obj7 = { type: "PREMIUM_GROUP_REMOVE_INVITE_SUCCESS", subscriptionId: null, subscriptionGroupMemberId: null };
+            const obj7 = {
+              type: "PREMIUM_GROUP_REMOVE_INVITE_SUCCESS",
+              subscriptionId: null,
+              subscriptionGroupMemberId: null,
+            };
             obj7[1] = callback;
             obj7[2] = callback2;
             obj.dispatch(obj7);
@@ -687,7 +702,7 @@ function _removeSubscriptionGroupInvite() {
 }
 function _fetchPremiumGroupInvites() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const callback = tmp3;
     closure_1_1(closure_1_2[4]).dispatch({ type: "PREMIUM_GROUP_INVITES_FETCH_START" });
     c3 = 1;
@@ -730,7 +745,7 @@ function _fetchPremiumGroupInvite() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       closure_3 = tmp3;
       obj1 = { type: "PREMIUM_GROUP_INVITE_FETCH_START", subscriptionGroupMemberId: null };
       obj1[1] = callback;

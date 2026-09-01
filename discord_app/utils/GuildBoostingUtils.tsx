@@ -34,19 +34,106 @@ function getGuildTierFromGuild(arg0) {
 }
 ({ AnalyticsObjectTypes: closure_8, AppliedGuildBoostsRequiredForBoostedGuildTier } = ME);
 const BoostedGuildTiers = ME.BoostedGuildTiers;
-({ GuildFeatures: unpackModuleId, HelpdeskArticles: closure_12, MAX_STAGE_VIDEO_USER_LIMIT_TIER2: map1, MAX_STAGE_VIDEO_USER_LIMIT_TIER3: closure_14, SubscriptionStatusTypes: closure_15 } = ME);
+({
+  GuildFeatures: unpackModuleId,
+  HelpdeskArticles: closure_12,
+  MAX_STAGE_VIDEO_USER_LIMIT_TIER2: map1,
+  MAX_STAGE_VIDEO_USER_LIMIT_TIER3: closure_14,
+  SubscriptionStatusTypes: closure_15,
+} = ME);
 ({ DEFAULT_EMOJI_SLOTS: closure_16, EMOJI_MAX_SLOTS_MORE: closure_17 } = set);
-({ BoostedGuildFeatures: closure_18, DEFAULT_SOUND_SLOTS: closure_19, MORE_SOUNDBOARD_SOUNDS: closure_20, FractionalPremiumStates: closure_21, IncrementalStickerCountsByTier: closure_22, TotalSoundboardSoundCountsByTier: closure_23, TotalStickerCountsByTier: closure_24 } = GuildFeatures);
-let obj = { LEVEL_1: 1, [1]: "LEVEL_1", LEVEL_2: 2, [2]: "LEVEL_2", LEVEL_3: 3, [3]: "LEVEL_3", LEVEL_4: 4, [4]: "LEVEL_4", LEVEL_5: 5, [5]: "LEVEL_5", LEVEL_6: 6, [6]: "LEVEL_6", LEVEL_7: 7, [7]: "LEVEL_7", LEVEL_8: 8, [8]: "LEVEL_8", LEVEL_9: 9, [9]: "LEVEL_9" };
-let closure_26 = Object.freeze({ [obj.LEVEL_1]: 1, [obj.LEVEL_2]: 2, [obj.LEVEL_3]: 3, [obj.LEVEL_4]: 6, [obj.LEVEL_5]: 9, [obj.LEVEL_6]: 12, [obj.LEVEL_7]: 15, [obj.LEVEL_8]: 18, [obj.LEVEL_9]: 24 });
-obj = { EMOJI: 1, [1]: "EMOJI", AUDIO: 2, [2]: "AUDIO", ANIMATED: 3, [3]: "ANIMATED", CUSTOMIZATION: 4, [4]: "CUSTOMIZATION", UPLOAD: 5, [5]: "UPLOAD", VANITY: 6, [6]: "VANITY", STREAM: 7, [7]: "STREAM", STICKER: 8, [8]: "STICKER", CUSTOM_ROLE_ICON: 11, [11]: "CUSTOM_ROLE_ICON", STAGE_VIDEO: 12, [12]: "STAGE_VIDEO", SOUNDBOARD: 13, [13]: "SOUNDBOARD" };
-let items = [, , , ];
+({
+  BoostedGuildFeatures: closure_18,
+  DEFAULT_SOUND_SLOTS: closure_19,
+  MORE_SOUNDBOARD_SOUNDS: closure_20,
+  FractionalPremiumStates: closure_21,
+  IncrementalStickerCountsByTier: closure_22,
+  TotalSoundboardSoundCountsByTier: closure_23,
+  TotalStickerCountsByTier: closure_24,
+} = GuildFeatures);
+let obj = {
+  LEVEL_1: 1,
+  [1]: "LEVEL_1",
+  LEVEL_2: 2,
+  [2]: "LEVEL_2",
+  LEVEL_3: 3,
+  [3]: "LEVEL_3",
+  LEVEL_4: 4,
+  [4]: "LEVEL_4",
+  LEVEL_5: 5,
+  [5]: "LEVEL_5",
+  LEVEL_6: 6,
+  [6]: "LEVEL_6",
+  LEVEL_7: 7,
+  [7]: "LEVEL_7",
+  LEVEL_8: 8,
+  [8]: "LEVEL_8",
+  LEVEL_9: 9,
+  [9]: "LEVEL_9",
+};
+let closure_26 = Object.freeze({
+  [obj.LEVEL_1]: 1,
+  [obj.LEVEL_2]: 2,
+  [obj.LEVEL_3]: 3,
+  [obj.LEVEL_4]: 6,
+  [obj.LEVEL_5]: 9,
+  [obj.LEVEL_6]: 12,
+  [obj.LEVEL_7]: 15,
+  [obj.LEVEL_8]: 18,
+  [obj.LEVEL_9]: 24,
+});
+obj = {
+  EMOJI: 1,
+  [1]: "EMOJI",
+  AUDIO: 2,
+  [2]: "AUDIO",
+  ANIMATED: 3,
+  [3]: "ANIMATED",
+  CUSTOMIZATION: 4,
+  [4]: "CUSTOMIZATION",
+  UPLOAD: 5,
+  [5]: "UPLOAD",
+  VANITY: 6,
+  [6]: "VANITY",
+  STREAM: 7,
+  [7]: "STREAM",
+  STICKER: 8,
+  [8]: "STICKER",
+  CUSTOM_ROLE_ICON: 11,
+  [11]: "CUSTOM_ROLE_ICON",
+  STAGE_VIDEO: 12,
+  [12]: "STAGE_VIDEO",
+  SOUNDBOARD: 13,
+  [13]: "SOUNDBOARD",
+};
+let items = [, , ,];
 ({ NONE: arr[0], TIER_1: arr[1], TIER_2: arr[2], TIER_3: arr[3] } = BoostedGuildTiers);
 const substr = items.slice();
 const reversed = substr.reverse();
-obj = { tier: BoostedGuildTiers.TIER_3, amount: AppliedGuildBoostsRequiredForBoostedGuildTier[BoostedGuildTiers.TIER_3], nextTier: null };
-let items1 = [obj, { tier: BoostedGuildTiers.TIER_2, amount: AppliedGuildBoostsRequiredForBoostedGuildTier[BoostedGuildTiers.TIER_2], nextTier: BoostedGuildTiers.TIER_3 }, { tier: BoostedGuildTiers.TIER_1, amount: AppliedGuildBoostsRequiredForBoostedGuildTier[BoostedGuildTiers.TIER_1], nextTier: BoostedGuildTiers.TIER_2 }];
-let obj1 = { [BoostedGuildTiers.NONE]: 0, [BoostedGuildTiers.TIER_1]: 0.3333333333333333, [BoostedGuildTiers.TIER_2]: 0.6666666666666666, [BoostedGuildTiers.TIER_3]: 1 };
+obj = {
+  tier: BoostedGuildTiers.TIER_3,
+  amount: AppliedGuildBoostsRequiredForBoostedGuildTier[BoostedGuildTiers.TIER_3],
+  nextTier: null,
+};
+let items1 = [
+  obj,
+  {
+    tier: BoostedGuildTiers.TIER_2,
+    amount: AppliedGuildBoostsRequiredForBoostedGuildTier[BoostedGuildTiers.TIER_2],
+    nextTier: BoostedGuildTiers.TIER_3,
+  },
+  {
+    tier: BoostedGuildTiers.TIER_1,
+    amount: AppliedGuildBoostsRequiredForBoostedGuildTier[BoostedGuildTiers.TIER_1],
+    nextTier: BoostedGuildTiers.TIER_2,
+  },
+];
+let obj1 = {
+  [BoostedGuildTiers.NONE]: 0,
+  [BoostedGuildTiers.TIER_1]: 0.3333333333333333,
+  [BoostedGuildTiers.TIER_2]: 0.6666666666666666,
+  [BoostedGuildTiers.TIER_3]: 1,
+};
 const result = set.fileFinishedImporting("utils/GuildBoostingUtils.tsx");
 
 export const PerkIcons = obj;
@@ -103,15 +190,21 @@ export const getTiers = (arg0) => {
   obj[1] = intl.string(getSystemLocale.t["lK+WOT"]);
   obj = { title: null, description: null, icon: null };
   const intl2 = getSystemLocale.intl;
-  obj = { adding: dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji - dependencyMap[BoostedGuildTiers.NONE].limits.emoji, total: dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji };
+  obj = {
+    adding: dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji - dependencyMap[BoostedGuildTiers.NONE].limits.emoji,
+    total: dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji,
+  };
   obj[0] = intl2.formatToPlainString(getSystemLocale.t.dnLAwl, obj);
   const intl3 = getSystemLocale.intl;
   obj[1] = intl3.string(getSystemLocale.t["/Guvxs"]);
   obj[2] = obj.EMOJI;
-  items = [obj, , , , , , ];
+  items = [obj, , , , , ,];
   obj1 = { title: null, description: null, icon: null };
   const intl4 = getSystemLocale.intl;
-  obj1[0] = intl4.formatToPlainString(getSystemLocale.t["/9p2/g"], { adding: dependencyMap2[BoostedGuildTiers.TIER_1], total: dependencyMap4[BoostedGuildTiers.TIER_1] });
+  obj1[0] = intl4.formatToPlainString(getSystemLocale.t["/9p2/g"], {
+    adding: dependencyMap2[BoostedGuildTiers.TIER_1],
+    total: dependencyMap4[BoostedGuildTiers.TIER_1],
+  });
   const intl5 = getSystemLocale.intl;
   obj1[1] = intl5.string(getSystemLocale.t.JfsnDQ);
   obj1[2] = obj.STICKER;
@@ -132,7 +225,9 @@ export const getTiers = (arg0) => {
   items[2] = obj3;
   const obj5 = { title: null, description: null, icon: null };
   const intl8 = getSystemLocale.intl;
-  obj5[0] = intl8.formatToPlainString(getSystemLocale.t.zoT1ZE, { bitrate: dependencyMap[BoostedGuildTiers.TIER_1].limits.bitrate / 1000 });
+  obj5[0] = intl8.formatToPlainString(getSystemLocale.t.zoT1ZE, {
+    bitrate: dependencyMap[BoostedGuildTiers.TIER_1].limits.bitrate / 1000,
+  });
   const intl9 = getSystemLocale.intl;
   obj5[1] = intl9.string(getSystemLocale.t["8a03jk"]);
   obj5[2] = obj.AUDIO;
@@ -159,20 +254,26 @@ export const getTiers = (arg0) => {
   obj9[2] = obj.STREAM;
   items[6] = obj9;
   obj[2] = items.filter(isDiscordFrontendDevelopment.isNotNullish);
-  items1 = [obj, , ];
+  items1 = [obj, ,];
   const obj10 = { tier: BoostedGuildTiers.TIER_2, title: null, perks: null };
   const intl16 = getSystemLocale.intl;
   obj10[1] = intl16.string(getSystemLocale.t["34GpBc"]);
   const obj11 = { title: null, description: null, icon: null };
   const intl17 = getSystemLocale.intl;
-  obj11[0] = intl17.formatToPlainString(getSystemLocale.t.dnLAwl, { adding: dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji - dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji, total: dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji });
+  obj11[0] = intl17.formatToPlainString(getSystemLocale.t.dnLAwl, {
+    adding: dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji - dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji,
+    total: dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji,
+  });
   const intl18 = getSystemLocale.intl;
   obj11[1] = intl18.string(getSystemLocale.t.fRiNhw);
   obj11[2] = obj.EMOJI;
-  const items2 = [obj11, , , , , , , , ];
+  const items2 = [obj11, , , , , , , ,];
   const obj13 = { title: null, description: null, icon: null };
   const intl19 = getSystemLocale.intl;
-  obj13[0] = intl19.formatToPlainString(getSystemLocale.t["/9p2/g"], { adding: dependencyMap2[BoostedGuildTiers.TIER_2], total: dependencyMap4[BoostedGuildTiers.TIER_2] });
+  obj13[0] = intl19.formatToPlainString(getSystemLocale.t["/9p2/g"], {
+    adding: dependencyMap2[BoostedGuildTiers.TIER_2],
+    total: dependencyMap4[BoostedGuildTiers.TIER_2],
+  });
   const intl20 = getSystemLocale.intl;
   obj13[1] = intl20.string(getSystemLocale.t.t4TM28);
   obj13[2] = obj.STICKER;
@@ -191,7 +292,9 @@ export const getTiers = (arg0) => {
   items2[2] = obj15;
   const obj17 = { title: null, description: null, icon: null };
   const intl23 = getSystemLocale.intl;
-  obj17[0] = intl23.formatToPlainString(getSystemLocale.t.zoT1ZE, { bitrate: dependencyMap[BoostedGuildTiers.TIER_2].limits.bitrate / 1000 });
+  obj17[0] = intl23.formatToPlainString(getSystemLocale.t.zoT1ZE, {
+    bitrate: dependencyMap[BoostedGuildTiers.TIER_2].limits.bitrate / 1000,
+  });
   const intl24 = getSystemLocale.intl;
   obj17[1] = intl24.string(getSystemLocale.t["nzRo/I"]);
   obj17[2] = obj.AUDIO;
@@ -207,7 +310,9 @@ export const getTiers = (arg0) => {
   const intl27 = getSystemLocale.intl;
   const obj21 = { fileSize: null };
   let tmp2Result = formatSize;
-  obj21[0] = tmp2Result.formatSize(dependencyMap[BoostedGuildTiers.TIER_2].limits.fileSize / 1024, { useKibibytes: true });
+  obj21[0] = tmp2Result.formatSize(dependencyMap[BoostedGuildTiers.TIER_2].limits.fileSize / 1024, {
+    useKibibytes: true,
+  });
   obj20[0] = intl27.formatToPlainString(getSystemLocale.t.t95LnM, obj21);
   const intl28 = getSystemLocale.intl;
   obj20[1] = intl28.format(getSystemLocale.t.yvht65, {});
@@ -249,14 +354,20 @@ export const getTiers = (arg0) => {
   obj27[1] = intl35.string(getSystemLocale.t.P7LdcQ);
   const obj28 = { title: null, description: null, icon: null };
   const intl36 = getSystemLocale.intl;
-  obj28[0] = intl36.formatToPlainString(getSystemLocale.t.dnLAwl, { adding: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji - dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji, total: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji });
+  obj28[0] = intl36.formatToPlainString(getSystemLocale.t.dnLAwl, {
+    adding: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji - dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji,
+    total: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji,
+  });
   const intl37 = getSystemLocale.intl;
   obj28[1] = intl37.string(getSystemLocale.t.AfJxnV);
   obj28[2] = obj.EMOJI;
-  const items3 = [obj28, , , , , , , ];
+  const items3 = [obj28, , , , , , ,];
   const obj30 = { title: null, description: null, icon: null };
   const intl38 = getSystemLocale.intl;
-  obj30[0] = intl38.formatToPlainString(getSystemLocale.t["/9p2/g"], { adding: dependencyMap2[BoostedGuildTiers.TIER_3], total: dependencyMap4[BoostedGuildTiers.TIER_3] });
+  obj30[0] = intl38.formatToPlainString(getSystemLocale.t["/9p2/g"], {
+    adding: dependencyMap2[BoostedGuildTiers.TIER_3],
+    total: dependencyMap4[BoostedGuildTiers.TIER_3],
+  });
   const intl39 = getSystemLocale.intl;
   obj30[1] = intl39.string(getSystemLocale.t["+ZI4QZ"]);
   obj30[2] = obj.STICKER;
@@ -275,7 +386,9 @@ export const getTiers = (arg0) => {
   items3[2] = obj32;
   const obj34 = { title: null, description: null, icon: null };
   const intl42 = getSystemLocale.intl;
-  obj34[0] = intl42.formatToPlainString(getSystemLocale.t.zoT1ZE, { bitrate: dependencyMap[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 });
+  obj34[0] = intl42.formatToPlainString(getSystemLocale.t.zoT1ZE, {
+    bitrate: dependencyMap[BoostedGuildTiers.TIER_3].limits.bitrate / 1000,
+  });
   const intl43 = getSystemLocale.intl;
   obj34[1] = intl43.string(getSystemLocale.t["cOkbp/"]);
   obj34[2] = obj.AUDIO;
@@ -294,7 +407,9 @@ export const getTiers = (arg0) => {
   const intl46 = getSystemLocale.intl;
   const obj39 = { fileSize: null };
   tmp2Result = formatSize;
-  obj39[0] = tmp2Result.formatSize(dependencyMap[BoostedGuildTiers.TIER_3].limits.fileSize / 1024, { useKibibytes: true });
+  obj39[0] = tmp2Result.formatSize(dependencyMap[BoostedGuildTiers.TIER_3].limits.fileSize / 1024, {
+    useKibibytes: true,
+  });
   obj38[0] = intl46.formatToPlainString(getSystemLocale.t.t95LnM, obj39);
   const intl47 = getSystemLocale.intl;
   obj38[1] = intl47.format(getSystemLocale.t.IwDqSL, {});
@@ -462,7 +577,9 @@ export const getAvailableGuildBoostSlots = function getAvailableGuildBoostSlots(
   const values = importDefaultResult.values(boostSlots);
   return values.filter((isAvailable) => isAvailable.isAvailable());
 };
-export const generateBlockGuildSubscriptionPurchasesNode = function generateBlockGuildSubscriptionPurchasesNode(fractionalState) {
+export const generateBlockGuildSubscriptionPurchasesNode = function generateBlockGuildSubscriptionPurchasesNode(
+  fractionalState,
+) {
   premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
   currentUser = currentUser.getCurrentUser();
   if (!tmp3) {
@@ -495,20 +612,25 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
   } else {
     const _Object = Object;
     values = Object.values(tmp2.boostSlots);
-    const reduced = values.reduce((numCanceledGuildBoostSlots, subscription) => {
-      subscription = subscription.subscription;
-      let status;
-      if (subscription != null) {
-        status = subscription.status;
-      }
-      if (tmp2) {
-        numCanceledGuildBoostSlots.numCanceledGuildBoostSlots = numCanceledGuildBoostSlots.numCanceledGuildBoostSlots + 1;
-      }
-      if (subscription.isAvailable()) {
-        numCanceledGuildBoostSlots.numAvailableGuildBoostSlots = numCanceledGuildBoostSlots.numAvailableGuildBoostSlots + 1;
-      }
-      return numCanceledGuildBoostSlots;
-    }, { numAvailableGuildBoostSlots: 0, numCanceledGuildBoostSlots: 0 });
+    const reduced = values.reduce(
+      (numCanceledGuildBoostSlots, subscription) => {
+        subscription = subscription.subscription;
+        let status;
+        if (subscription != null) {
+          status = subscription.status;
+        }
+        if (tmp2) {
+          numCanceledGuildBoostSlots.numCanceledGuildBoostSlots =
+            numCanceledGuildBoostSlots.numCanceledGuildBoostSlots + 1;
+        }
+        if (subscription.isAvailable()) {
+          numCanceledGuildBoostSlots.numAvailableGuildBoostSlots =
+            numCanceledGuildBoostSlots.numAvailableGuildBoostSlots + 1;
+        }
+        return numCanceledGuildBoostSlots;
+      },
+      { numAvailableGuildBoostSlots: 0, numCanceledGuildBoostSlots: 0 },
+    );
     if (null != premiumTypeSubscription) {
       if (reduced.numAvailableGuildBoostSlots <= 0) {
         if (premiumTypeSubscription.status === constants2.PAST_DUE) {
@@ -523,9 +645,13 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
         } else if (null == premiumTypeSubscription.renewalMutations) {
           return null;
         } else {
-          const numPremiumGuildSubscriptions = getPremiumPlanItemAll.getNumPremiumGuildSubscriptions(premiumTypeSubscription.renewalMutations.additionalPlans);
+          const numPremiumGuildSubscriptions = getPremiumPlanItemAll.getNumPremiumGuildSubscriptions(
+            premiumTypeSubscription.renewalMutations.additionalPlans,
+          );
           const obj5 = getPremiumPlanItemAll;
-          if (obj6.getNumPremiumGuildSubscriptions(premiumTypeSubscription.additionalPlans) > numPremiumGuildSubscriptions) {
+          if (
+            obj6.getNumPremiumGuildSubscriptions(premiumTypeSubscription.additionalPlans) > numPremiumGuildSubscriptions
+          ) {
             const intl3 = getSystemLocale.intl;
             let stringResult = intl3.string(getSystemLocale.t.x25mZR);
           } else {
@@ -574,7 +700,9 @@ export const isInGracePeriod = function isInGracePeriod(arr) {
     if (premiumTier == null) {
       premiumTier = BoostedGuildTiers.NONE;
     }
-    num = AppliedGuildBoostsRequiredForBoostedGuildTier[premiumTier] - (arr.length - arr.filter((endsAt) => null != endsAt.endsAt).length);
+    num =
+      AppliedGuildBoostsRequiredForBoostedGuildTier[premiumTier] -
+      (arr.length - arr.filter((endsAt) => null != endsAt.endsAt).length);
   }
   return num > 0;
 };
@@ -596,7 +724,10 @@ export const appliedGuildBoostsRequiredForPerks = function appliedGuildBoostsReq
     if (premiumTier == null) {
       premiumTier = BoostedGuildTiers.NONE;
     }
-    return AppliedGuildBoostsRequiredForBoostedGuildTier[premiumTier] - (arr.length - arr.filter((endsAt) => null != endsAt.endsAt).length);
+    return (
+      AppliedGuildBoostsRequiredForBoostedGuildTier[premiumTier] -
+      (arr.length - arr.filter((endsAt) => null != endsAt.endsAt).length)
+    );
   }
   obj = store;
 };
@@ -619,7 +750,9 @@ export const getGracePeriodEndingDate = function getGracePeriodEndingDate(arr) {
     if (premiumTier == null) {
       premiumTier = BoostedGuildTiers.NONE;
     }
-    num = AppliedGuildBoostsRequiredForBoostedGuildTier[premiumTier] - (arr.length - arr.filter((endsAt) => null != endsAt.endsAt).length);
+    num =
+      AppliedGuildBoostsRequiredForBoostedGuildTier[premiumTier] -
+      (arr.length - arr.filter((endsAt) => null != endsAt.endsAt).length);
   }
   if (num > 0) {
     const sorted = arr.sort((endsAt, endsAt2) => {
@@ -738,7 +871,11 @@ export const getMaxEmojiSlots = function getMaxEmojiSlots(stateFromStores) {
   return Math.max(tmp, sum);
 };
 export const getNumberOfAppliedBoostsNeededForTier = function getNumberOfAppliedBoostsNeededForTier(id) {
-  return Math.max(0, AppliedGuildBoostsRequiredForBoostedGuildTier[arg1] - useGuildAppliedBoostCount.getGuildPowerupsBoostCount(id.id).available);
+  return Math.max(
+    0,
+    AppliedGuildBoostsRequiredForBoostedGuildTier[arg1] -
+      useGuildAppliedBoostCount.getGuildPowerupsBoostCount(id.id).available,
+  );
 };
 export const isGuildBoostSlotCanceled = function isGuildBoostSlotCanceled(subscription) {
   subscription = subscription.subscription;
@@ -777,7 +914,7 @@ export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingPr
   }
   let fillFactor = 1;
   if (NONE !== BoostedGuildTiers.TIER_3) {
-    fillFactor = (totalAvailableBoostsCount - tmp4) / (tmp5 - tmp4) * (tmp7 - tmp6) + tmp6;
+    fillFactor = ((totalAvailableBoostsCount - tmp4) / (tmp5 - tmp4)) * (tmp7 - tmp6) + tmp6;
   }
   return { fillFactor, totalAvailableBoostsCount };
 };

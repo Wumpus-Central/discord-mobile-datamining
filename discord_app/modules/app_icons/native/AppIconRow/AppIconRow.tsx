@@ -27,7 +27,7 @@ const items = [
   () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.RnMLvl);
-  }
+  },
 ];
 createCacheKey = { icon: null };
 createCacheKey = { borderRadius: ThemesDefault.radii.md };
@@ -57,7 +57,15 @@ export default function AppIconRow(arg0) {
   }
   tmp10Result = null;
   if (!icon.isHidden) {
-    obj = { icon: null, label: null, onLongPress: null, onPress: null, accessibilityRole: null, accessibilityState: null, trailing: null };
+    obj = {
+      icon: null,
+      label: null,
+      onLongPress: null,
+      onPress: null,
+      accessibilityRole: null,
+      accessibilityState: null,
+      trailing: null,
+    };
     obj = { id: null, style: null };
     obj[0] = id;
     obj[1] = tmp.icon;
@@ -82,4 +90,4 @@ export default function AppIconRow(arg0) {
     obj1[0] = tmp7;
     tmp10Result = tmp10(tmp3(tmp4[11]).FormRadio, obj1);
   }
-};
+}

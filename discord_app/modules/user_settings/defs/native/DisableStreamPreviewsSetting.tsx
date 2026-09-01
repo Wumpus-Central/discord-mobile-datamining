@@ -23,7 +23,7 @@ const toggle = createToggle.createToggle({
     }
     return flag;
   },
-  onValueChange: explicitContentFromProto.DisableStreamPreviews.updateSetting
+  onValueChange: explicitContentFromProto.DisableStreamPreviews.updateSetting,
 });
 const obj = {
   useTitle() {
@@ -43,7 +43,7 @@ const obj = {
     }
     return flag;
   },
-  onValueChange: explicitContentFromProto.DisableStreamPreviews.updateSetting
+  onValueChange: explicitContentFromProto.DisableStreamPreviews.updateSetting,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DisableStreamPreviewsSetting.tsx");
 

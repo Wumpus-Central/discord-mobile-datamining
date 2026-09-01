@@ -36,19 +36,63 @@ function Loading() {
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-createCacheKey = { placeholderHeader: null, placeholderLabel: null, errorEmptyState: null, searchAndShareContainer: null, inviteAgeText: null, shareApps: null };
-createCacheKey = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+createCacheKey = {
+  placeholderHeader: null,
+  placeholderLabel: null,
+  errorEmptyState: null,
+  searchAndShareContainer: null,
+  inviteAgeText: null,
+  shareApps: null,
+};
+createCacheKey = {
+  height: 16,
+  width: "80%",
+  margin: 16,
+  marginBottom: 8,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 16, width: "40%", margin: 16, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+createCacheKey[1] = {
+  height: 16,
+  width: "40%",
+  margin: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 createCacheKey[2] = { backgroundColor: "transparent" };
-let obj1 = { height: 16, width: "40%", margin: 16, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-createCacheKey[3] = { borderTopWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, flexDirection: "column", gap: ThemesDefault.space.PX_12 };
-let obj2 = { borderTopWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, flexDirection: "column", gap: ThemesDefault.space.PX_12 };
+let obj1 = {
+  height: 16,
+  width: "40%",
+  margin: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
+createCacheKey[3] = {
+  borderTopWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginTop: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  flexDirection: "column",
+  gap: ThemesDefault.space.PX_12,
+};
+let obj2 = {
+  borderTopWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginTop: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  flexDirection: "column",
+  gap: ThemesDefault.space.PX_12,
+};
 createCacheKey[4] = { paddingBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_4 };
 createCacheKey[5] = { paddingVertical: 0 };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { paddingBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_4 };
-let result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/instant_invite/native/components/InstantInviteActionSheet.tsx",
+);
 
 export default function InstantInviteActionSheet(channel) {
   channel = channel.channel;
@@ -148,19 +192,31 @@ export default function InstantInviteActionSheet(channel) {
       obj[3] = source;
       arg0(obj);
       const guildId = channel.getGuildId();
-      const result = channel(vanityURLCode[23]).setHubProgressActionComplete(guildId, channel(vanityURLCode[24]).HubProgressStep.INVITE_USER);
+      const result = channel(vanityURLCode[23]).setHubProgressActionComplete(
+        guildId,
+        channel(vanityURLCode[24]).HubProgressStep.INVITE_USER,
+      );
       const obj2 = channel(vanityURLCode[23]);
     }
   }, items5);
   const items7 = [stateFromStores, channel, source];
   const callback2 = code.useCallback(() => {
     const guildId = channel.getGuildId();
-    const result = channel(vanityURLCode[23]).setHubProgressActionComplete(guildId, channel(vanityURLCode[24]).HubProgressStep.INVITE_USER);
+    const result = channel(vanityURLCode[23]).setHubProgressActionComplete(
+      guildId,
+      channel(vanityURLCode[24]).HubProgressStep.INVITE_USER,
+    );
   }, items6);
   const items8 = [stateFromStores, channel, str, source];
-  const callback3 = code.useCallback(() => channel(vanityURLCode[20]).handleCopy(stateFromStores, channel, source), items7);
+  const callback3 = code.useCallback(
+    () => channel(vanityURLCode[20]).handleCopy(stateFromStores, channel, source),
+    items7,
+  );
   const items9 = [channel];
-  callback4 = code.useCallback(() => channel(vanityURLCode[20]).handleOpenShareSheet(stateFromStores, channel, str, source), items8);
+  callback4 = code.useCallback(
+    () => channel(vanityURLCode[20]).handleOpenShareSheet(stateFromStores, channel, str, source),
+    items8,
+  );
   const callback5 = code.useCallback(() => channel(vanityURLCode[20]).handlePressSettings(channel), items9);
   const tmp5 = source(vanityURLCode[16]);
   const tmp6 = callback;
@@ -227,7 +283,7 @@ export default function InstantInviteActionSheet(channel) {
       const obj7 = { contentContainerStyle: null, onItemPressed: null };
       obj7[0] = tmp.shareApps;
       obj7[1] = callback1;
-      const items10 = [tmp24(tmp2(tmp3[32]), obj7), ];
+      const items10 = [tmp24(tmp2(tmp3[32]), obj7)];
       const obj8 = { style: null, children: null };
       obj8[0] = tmp.searchAndShareContainer;
       const obj9 = { size: "md", isRound: true, onChange: null, placeholder: null };
@@ -247,7 +303,7 @@ export default function InstantInviteActionSheet(channel) {
         stringResult = intl4.formatToPlainString(tmp7(tmp3[28]).t["1UgGdm"], obj10);
       }
       obj9[3] = stringResult;
-      const items11 = [tmp24(tmp7(tmp3[33]).SearchField, obj9), ];
+      const items11 = [tmp24(tmp7(tmp3[33]).SearchField, obj9)];
       let tmp24Result = null == vanityURLCode;
       if (tmp24Result) {
         const obj11 = { style: null, channel: null, canEditInvite: null };
@@ -261,7 +317,7 @@ export default function InstantInviteActionSheet(channel) {
       obj8[1] = items11;
       items10[1] = closure_15(analyticsLocations, obj8);
       obj12[0] = items10;
-      const items12 = [closure_15(analyticsLocations, obj12), ];
+      const items12 = [closure_15(analyticsLocations, obj12)];
       const obj13 = { data: null, code: null, source: null, onPressAvatar: null, onInviteSent: null };
       obj13[0] = rows;
       obj13[1] = stateFromStores;
@@ -280,4 +336,4 @@ export default function InstantInviteActionSheet(channel) {
     obj[1] = tmp24(tmp7(tmp3[26]).BottomSheet, obj);
     return tmp24(tmp7(tmp3[14]).AnalyticsLocationProvider, obj);
   }
-};
+}

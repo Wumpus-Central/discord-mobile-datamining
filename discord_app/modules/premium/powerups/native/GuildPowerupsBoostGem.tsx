@@ -9,7 +9,15 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;
 let obj = { boostGemContainer: null };
-obj = { width: 100, height: 100, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SECONDARY_ALT, alignItems: "center", justifyContent: "center", alignSelf: "center" };
+obj = {
+  width: 100,
+  height: 100,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SECONDARY_ALT,
+  alignItems: "center",
+  justifyContent: "center",
+  alignSelf: "center",
+};
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
 const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostGem.tsx");
@@ -21,4 +29,4 @@ export default function GuildPowerupsBoostGem(arg0) {
   obj[0] = items;
   obj[1] = jsx(BoostGemDefault, { width: gemWidth, height: gemHeight });
   return <View style={null}>{null}</View>;
-};
+}

@@ -13,7 +13,7 @@ function _getMetadata() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       closure_3 = tmp3;
       const table = tmp2;
       const lib = body;
@@ -67,17 +67,22 @@ export const sync = function sync(activity, userId) {
 };
 export const play = function play(closure_0, closure_1) {
   const _require = closure_0;
-  const spotifyMetadataFromActivity = require("../modules/spotify/SpotifyUtils.tsx").getSpotifyMetadataFromActivity(closure_0, closure_1);
+  const spotifyMetadataFromActivity = require("../modules/spotify/SpotifyUtils.tsx").getSpotifyMetadataFromActivity(
+    closure_0,
+    closure_1,
+  );
   let obj = asString;
-  spotifyMetadataFromActivity.then((metadata) => {
-    let obj = callback(closure_1_2[3]);
-    obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback, metadata };
-    return obj.dispatch(obj);
-  }).catch(() => {
-    let obj = callback(closure_1_2[3]);
-    obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback };
-    return obj.dispatch(obj);
-  });
+  spotifyMetadataFromActivity
+    .then((metadata) => {
+      let obj = callback(closure_1_2[3]);
+      obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback, metadata };
+      return obj.dispatch(obj);
+    })
+    .catch(() => {
+      let obj = callback(closure_1_2[3]);
+      obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback };
+      return obj.dispatch(obj);
+    });
 };
 export const getMetadata = function getMetadata() {
   const self = this;

@@ -16,18 +16,66 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 require = arg1;
 ({ View: closure_6, Image: error } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: { alignSelf: "stretch", flex: 1, alignItems: "center", justifyContent: "flex-start", flexDirection: "column" }, flex: { flex: 1 }, image: { width: 190, height: 70 }, success: { marginTop: 33 }, successBody: null, divider: null, buttonWrapper: null, ctaDescription: null, errorText: null };
-createCacheKey = { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: ThemesDefault.colors.TEXT_STRONG };
+createCacheKey = {
+  container: {
+    alignSelf: "stretch",
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "flex-start",
+    flexDirection: "column",
+  },
+  flex: { flex: 1 },
+  image: { width: 190, height: 70 },
+  success: { marginTop: 33 },
+  successBody: null,
+  divider: null,
+  buttonWrapper: null,
+  ctaDescription: null,
+  errorText: null,
+};
+createCacheKey = {
+  fontSize: 14,
+  textAlign: "center",
+  marginHorizontal: 20,
+  marginTop: 4,
+  color: ThemesDefault.colors.TEXT_STRONG,
+};
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { height: 2, width: 48, margin: 32, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[6] = { alignSelf: "stretch", margin: 16, marginTop: 0 };
 let obj1 = { height: 2, width: 48, margin: 32, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
-createCacheKey[7] = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: ThemesDefault.colors.TEXT_STRONG };
-let obj2 = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: ThemesDefault.colors.TEXT_STRONG };
-createCacheKey[8] = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
+createCacheKey[7] = {
+  fontSize: 14,
+  textAlign: "center",
+  marginTop: 4,
+  marginHorizontal: 16,
+  color: ThemesDefault.colors.TEXT_STRONG,
+};
+let obj2 = {
+  fontSize: 14,
+  textAlign: "center",
+  marginTop: 4,
+  marginHorizontal: 16,
+  color: ThemesDefault.colors.TEXT_STRONG,
+};
+createCacheKey[8] = {
+  fontSize: 14,
+  textAlign: "center",
+  marginHorizontal: 16,
+  marginTop: 8,
+  color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL,
+};
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const obj3 = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupSuccess.tsx");
+const obj3 = {
+  fontSize: 14,
+  textAlign: "center",
+  marginHorizontal: 16,
+  marginTop: 8,
+  color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/account/native/mfa_modal_flow/TwoFASetupSuccess.tsx",
+);
 
 export default function TwoFASetupSuccess() {
   let tmp = callback3();
@@ -42,14 +90,18 @@ export default function TwoFASetupSuccess() {
         c5 = 0;
         c6 = 0;
         c4 = 0;
-        const iter = (function*(arg0) {
+        const iter = (function* (arg0) {
           closure_2 = tmp3;
           c1 = tmp5;
           ({ ticket: c0, credential: c1 } = c0);
           yield "PX_16";
           c4 = 1;
           const intl = callback(closure_2_2[8]).intl;
-          yield callback(closure_2_2[7]).finishRegisterWebAuthnCredential(intl.string(callback(closure_2_2[8]).t["8H5RmH"]), callback, closure_2_1);
+          yield callback(closure_2_2[7]).finishRegisterWebAuthnCredential(
+            intl.string(callback(closure_2_2[8]).t["8H5RmH"]),
+            callback,
+            closure_2_1,
+          );
           if (2 === tmp8) {
             c4 = 0;
             closure_1_1(body.body.message);
@@ -91,13 +143,13 @@ export default function TwoFASetupSuccess() {
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      }
+      },
     };
     obj.registerPasskey(obj);
   }, []);
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.flex };
-  const items = [callback2(closure_6, obj), , , , , , , ];
+  const items = [callback2(closure_6, obj), , , , , , ,];
   obj = { source: registerAsset, style: tmp.image };
   items[1] = callback2(closure_7, obj);
   obj1 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
@@ -122,7 +174,9 @@ export default function TwoFASetupSuccess() {
   } else {
     stringResult = string(t.NIFmCJ);
   }
-  const items1 = [callback2(Button2.Button, { text: stringResult, onPress: callback, disabled: tmp3, loading: tmp3, grow: true }), ];
+  const items1 = [
+    callback2(Button2.Button, { text: stringResult, onPress: callback, disabled: tmp3, loading: tmp3, grow: true }),
+  ];
   let tmp7Result = "" !== tmp5;
   if (tmp7Result) {
     const obj6 = { style: null, children: null };
@@ -138,4 +192,4 @@ export default function TwoFASetupSuccess() {
   obj[1] = items;
   obj7[0] = closure_9(closure_6, obj);
   return callback2(TwoFAModalSetupSections.TwoFASetupModalScreen, obj7);
-};
+}

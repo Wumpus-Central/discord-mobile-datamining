@@ -14,10 +14,14 @@ export const useLikelyAtoWarning = function useLikelyAtoWarning(channelId) {
   const obj = useIsSpamMessageRequest;
   const isMessageRequest = useIsMessageRequest.useIsMessageRequest(channelId);
   const obj2 = useIsMessageRequest;
-  const channelSafetyWarning = useChannelSafetyWarning.useChannelSafetyWarning(channelId, SafetyWarningTypes.LIKELY_ATO);
+  const channelSafetyWarning = useChannelSafetyWarning.useChannelSafetyWarning(
+    channelId,
+    SafetyWarningTypes.LIKELY_ATO,
+  );
   const obj3 = useChannelSafetyWarning;
   const obj4 = useInappropriateConversationWarningsForChannel;
-  const tmp4 = useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(channelId).length > 0;
+  const tmp4 =
+    useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(channelId).length > 0;
   if (!isSpamMessageRequest) {
     if (!isMessageRequest) {
       if (!tmp4) {

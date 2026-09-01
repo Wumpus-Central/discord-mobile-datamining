@@ -18,5 +18,8 @@ export const useYouBarHorizontalMargin = function useYouBarHorizontalMargin() {
   tmp3 = closure_4;
 };
 export const useYouBarBottomMargin = function useYouBarBottomMargin() {
-  return Math.max(map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_OFFSET_MINIMUM), useSafeAreaInsetsDefault().bottom);
+  return Math.max(
+    map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_OFFSET_MINIMUM),
+    useSafeAreaInsetsDefault().bottom,
+  );
 };

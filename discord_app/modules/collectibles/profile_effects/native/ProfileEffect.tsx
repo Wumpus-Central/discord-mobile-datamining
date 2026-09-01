@@ -43,11 +43,15 @@ function StaticEffect(useThumbnail) {
   const items = [reducedMotionSrc, thumbnailUrlOverride, tmp3, useThumbnail];
   const effect = obj.useEffect(() => {
     if (0 !== c2) {
-      const size = closure_1_6.getSize(c0 ? thumbnailUrlOverride : reducedMotionSrc, (arg0, arg1) => {
-        callback(arg1 * (closure_2 / arg0));
-      }, () => {
-        callback(closure_2 / closure_1_0(closure_1_2[15]).DEFAULT_PROFILE_EFFECT_WH_RATIO);
-      });
+      const size = closure_1_6.getSize(
+        c0 ? thumbnailUrlOverride : reducedMotionSrc,
+        (arg0, arg1) => {
+          callback(arg1 * (closure_2 / arg0));
+        },
+        () => {
+          callback(closure_2 / closure_1_0(closure_1_2[15]).DEFAULT_PROFILE_EFFECT_WH_RATIO);
+        },
+      );
     }
   }, items);
   if (0 === tmp8) {
@@ -61,14 +65,23 @@ function StaticEffect(useThumbnail) {
     if (useThumbnail) {
       reducedMotionSrc = thumbnailUrlOverride;
     }
-    obj1 = { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, alt: null, height: null, width: null, style: null };
+    obj1 = {
+      resizeMode: "cover",
+      resizeMethod: "resize",
+      enableAnimation: true,
+      source: null,
+      alt: null,
+      height: null,
+      width: null,
+      style: null,
+    };
     const obj2 = { uri: null };
     obj2[0] = reducedMotionSrc;
     obj1[3] = obj2;
     obj1[4] = accessibilityLabel;
     obj1[5] = tmp8;
     obj1[6] = tmp3;
-    const items1 = [tmp.effect, ];
+    const items1 = [tmp.effect];
     const obj3 = { width: null, height: null, top: null };
     obj3[0] = tmp3;
     obj3[1] = tmp8;
@@ -81,7 +94,19 @@ function StaticEffect(useThumbnail) {
   return <closure_5 {...obj} />;
 }
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
-let closure_10 = createCacheKey.createStyles({ profileEffects: { position: "absolute", width: "100%", top: 0, bottom: 0, left: 0, right: 0, flex: 1, justifyContent: "flex-start" }, effect: { position: "absolute" } });
+let closure_10 = createCacheKey.createStyles({
+  profileEffects: {
+    position: "absolute",
+    width: "100%",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    flex: 1,
+    justifyContent: "flex-start",
+  },
+  effect: { position: "absolute" },
+});
 function ProfileEffect(profileEffect) {
   profileEffect = profileEffect.profileEffect;
   let memo = profileEffect;
@@ -155,31 +180,33 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(React.useState([]), 2);
-  const tmp9Result = memo1(8515)(React.useCallback((arg0) => {
-    if (ref.current) {
-      if (!ref4.current) {
-        tmp.current = true;
-        ref2.current = -memo(ref[9]).PROFILE_EFFECT_INTRO_DELAY;
-        ref3.current = [];
-      }
-      ref2.current = ref2.current + arg0;
-      const current = ref5.current;
-      const current1 = ref3.current;
-      closure_1 = current.length !== current1.length;
-      const mapped = current.map((start) => {
-        const shouldAnimateResult = memo(table[10]).shouldAnimate(start, closure_1_9.current);
-        if (shouldAnimateResult !== current1[arg1]) {
-          c1 = true;
+  const tmp9Result = memo1(8515)(
+    React.useCallback((arg0) => {
+      if (ref.current) {
+        if (!ref4.current) {
+          tmp.current = true;
+          ref2.current = -memo(ref[9]).PROFILE_EFFECT_INTRO_DELAY;
+          ref3.current = [];
         }
-        return shouldAnimateResult;
-      });
-      if (closure_1) {
-        tmp9.current = mapped;
-        _undefined2(mapped);
+        ref2.current = ref2.current + arg0;
+        const current = ref5.current;
+        const current1 = ref3.current;
+        closure_1 = current.length !== current1.length;
+        const mapped = current.map((start) => {
+          const shouldAnimateResult = memo(table[10]).shouldAnimate(start, closure_1_9.current);
+          if (shouldAnimateResult !== current1[arg1]) {
+            c1 = true;
+          }
+          return shouldAnimateResult;
+        });
+        if (closure_1) {
+          tmp9.current = mapped;
+          _undefined2(mapped);
+        }
+        tmp9 = ref3;
       }
-      tmp9 = ref3;
-    }
-  }, items4));
+    }, items4),
+  );
   stop = tmp9Result.stop;
   reset = tmp9Result.reset;
   let obj = memo(589);
@@ -223,20 +250,52 @@ function ProfileEffect(profileEffect) {
       if (flag == null) {
         flag = false;
       }
-      return ref2(memo1(ref[14]), { layerConfig, animate: flag, paused: ref, width: closure_4, accessibilityLabel, onLoad: closure_8, loaded: ref.current }, sum);
-    })
+      return ref2(
+        memo1(ref[14]),
+        {
+          layerConfig,
+          animate: flag,
+          paused: ref,
+          width: closure_4,
+          accessibilityLabel,
+          onLoad: closure_8,
+          loaded: ref.current,
+        },
+        sum,
+      );
+    }),
   };
-  return <accessibilityLabel style={React.useMemo(() => {
-    const items = [ref.profileEffects, memo1];
-    return items;
-  }, items8)} pointerEvents="none" onLayout={callback}>{memo.map((layerConfig) => {
-    let flag = _undefined[arg1];
-    const sum = layerConfig.src + arg1;
-    if (flag == null) {
-      flag = false;
-    }
-    return ref2(memo1(ref[14]), { layerConfig, animate: flag, paused: ref, width: closure_4, accessibilityLabel, onLoad: closure_8, loaded: ref.current }, sum);
-  })}</accessibilityLabel>;
+  return (
+    <accessibilityLabel
+      style={React.useMemo(() => {
+        const items = [ref.profileEffects, memo1];
+        return items;
+      }, items8)}
+      pointerEvents="none"
+      onLayout={callback}
+    >
+      {memo.map((layerConfig) => {
+        let flag = _undefined[arg1];
+        const sum = layerConfig.src + arg1;
+        if (flag == null) {
+          flag = false;
+        }
+        return ref2(
+          memo1(ref[14]),
+          {
+            layerConfig,
+            animate: flag,
+            paused: ref,
+            width: closure_4,
+            accessibilityLabel,
+            onLoad: closure_8,
+            loaded: ref.current,
+          },
+          sum,
+        );
+      })}
+    </accessibilityLabel>
+  );
 }
 const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffect.tsx");
 
@@ -264,9 +323,11 @@ export default function WrappedProfileEffect(skuId) {
     obj[2] = useThumbnail;
     thumbnailUrlOverride = thumbnailUrlOverride.thumbnailUrlOverride;
     obj[3] = thumbnailUrlOverride;
-    tmp8 = <StaticEffect profileEffect={null} bannerAdjustment={null} useThumbnail={null} thumbnailUrlOverride={null} />;
+    tmp8 = (
+      <StaticEffect profileEffect={null} bannerAdjustment={null} useThumbnail={null} thumbnailUrlOverride={null} />
+    );
   }
-};
+}
 export const usePreloadProfileEffect = function usePreloadProfileEffect(arg0) {
   closure_0 = arg0;
   const items = [arg0];
@@ -288,6 +349,6 @@ export const usePreloadProfileEffect = function usePreloadProfileEffect(arg0) {
           tmp.current = true;
         }
       }
-    }, [])
+    }, []),
   };
 };

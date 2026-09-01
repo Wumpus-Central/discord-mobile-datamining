@@ -23,4 +23,4 @@ export default function findCodedLinkUrls(content) {
     const tmpResult = tmp(7898);
   }
   return items;
-};
+}

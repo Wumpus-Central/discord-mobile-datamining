@@ -8,7 +8,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ bannerContainer: { position: "relative" }, gifTag: { position: "absolute", left: 12, top: 12, right: "auto", bottom: "auto" } });
+let closure_9 = createCacheKey.createStyles({
+  bannerContainer: { position: "relative" },
+  gifTag: { position: "absolute", left: 12, top: 12, right: "auto", bottom: "auto" },
+});
 const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileBanner.tsx");
 
 export default function UserProfileBanner(displayProfile) {
@@ -21,7 +24,13 @@ export default function UserProfileBanner(displayProfile) {
   if (bannerHeight === undefined) {
     bannerHeight = first;
   }
-  ({ pendingBanner, pendingAccentColor: closure_4, pendingThemeColors: View, disableInteraction, pendingAvatarSrc } = displayProfile);
+  ({
+    pendingBanner,
+    pendingAccentColor: closure_4,
+    pendingThemeColors: View,
+    disableInteraction,
+    pendingAvatarSrc,
+  } = displayProfile);
   if (disableInteraction === undefined) {
     disableInteraction = false;
   }
@@ -66,7 +75,13 @@ export default function UserProfileBanner(displayProfile) {
     source = tmp2Result.makeSource(bannerURL);
   }
   function renderBanner() {
-    const obj = { style: closure_1, bannerSource: source, backgroundColor: null, bannerSafeArea: null, bannerHeight: null };
+    const obj = {
+      style: closure_1,
+      bannerSource: source,
+      backgroundColor: null,
+      bannerSafeArea: null,
+      bannerHeight: null,
+    };
     first = undefined;
     if (table != null) {
       first = table[0];
@@ -103,7 +118,7 @@ export default function UserProfileBanner(displayProfile) {
         };
         const intl = tmp2(tmp3[11]).intl;
         obj2[2] = intl.string(tmp2(tmp3[11]).t["3fzj/l"]);
-        const items = [renderBanner(), ];
+        const items = [renderBanner()];
         let tmp12Result = null;
         if (!tmp7) {
           const obj3 = { style: null };
@@ -120,4 +135,4 @@ export default function UserProfileBanner(displayProfile) {
     }
   }
   renderBannerResult = renderBanner();
-};
+}

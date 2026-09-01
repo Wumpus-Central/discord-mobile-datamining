@@ -4,8 +4,7 @@ import dispatcherDefault from "../Dispatcher.tsx";
 
 let c0 = false;
 const Store = initializeDefault.Store;
-class PhoneVerificationStore extends Store {
-}
+class PhoneVerificationStore extends Store {}
 PhoneVerificationStore.prototype["getCountrySelectorOpened"] = function getCountrySelectorOpened() {
   return c0;
 };
@@ -16,7 +15,7 @@ const phoneVerificationStore = new PhoneVerificationStore(dispatcherDefault, {
   },
   VERIFICATION_CLOSE_COUNTRY_SELECTOR: function handleCloseCountrySelector() {
     c0 = false;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/PhoneVerificationStore.tsx");
 

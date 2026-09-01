@@ -3,10 +3,12 @@ import closure_2 from "../CollectiblesShopHomeStore.tsx";
 import { CollectibleShopTab } from "../CollectiblesShopConstants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx",
+);
 
 export const getWideBannerDismissibleContentVersion = function getWideBannerDismissibleContentVersion() {
-  const items = [, , ];
+  const items = [, ,];
   ({ HOME: arr[0], ORBS: arr[1], CATALOG: arr[2] } = CollectibleShopTab);
   const obj = items[Symbol.iterator]();
   while (obj !== undefined) {

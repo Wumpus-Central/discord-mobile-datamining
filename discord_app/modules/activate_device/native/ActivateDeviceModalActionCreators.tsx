@@ -14,5 +14,5 @@ export default {
   },
   hideModal() {
     _modDef4723.popWithKey(ACTIVATE_DEVICE_MODAL_KEY);
-  }
+  },
 };

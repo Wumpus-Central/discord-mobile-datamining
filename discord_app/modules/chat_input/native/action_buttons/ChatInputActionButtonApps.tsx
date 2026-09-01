@@ -28,7 +28,7 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
     canShowOnboarding = !tmp4.fromTriggeredOnboarding;
   }
   closure_7 = obj.useRef(-1);
-  const items = [canShowOnboarding, canShowAppsOrActivitiesBanner, canShowBotsBanner, , , ];
+  const items = [canShowOnboarding, canShowAppsOrActivitiesBanner, canShowBotsBanner, , ,];
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
@@ -39,7 +39,14 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
   const effect = obj.useEffect(() => {
     if (canShowOnboarding) {
       if (canShowBotsBanner) {
-        let obj = { channelId: null, timeMs: null, guildId: null, canShowBotsBanner: true, canShowAppsOrActivitiesBanner: false, willShowGlobalSearchOnboarding: null };
+        let obj = {
+          channelId: null,
+          timeMs: null,
+          guildId: null,
+          canShowBotsBanner: true,
+          canShowAppsOrActivitiesBanner: false,
+          willShowGlobalSearchOnboarding: null,
+        };
         obj[0] = channel.id;
         const _Date2 = Date;
         obj[1] = Date.now();
@@ -54,7 +61,14 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
         tmp13 = channel;
       } else if (canShowAppsOrActivitiesBanner) {
         obj = channel(ref[5]);
-        obj = { channelId: null, timeMs: null, guildId: null, canShowBotsBanner: false, canShowAppsOrActivitiesBanner: true, willShowGlobalSearchOnboarding: null };
+        obj = {
+          channelId: null,
+          timeMs: null,
+          guildId: null,
+          canShowBotsBanner: false,
+          canShowAppsOrActivitiesBanner: true,
+          willShowGlobalSearchOnboarding: null,
+        };
         obj[0] = channel.id;
         const _Date = Date;
         obj[1] = Date.now();
@@ -68,7 +82,14 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
         tmp5 = channel;
       }
       if (willShowGlobalSearchOnboarding) {
-        obj1 = { channelId: null, timeMs: null, guildId: null, canShowAppsOrActivitiesBanner: null, canShowBotsBanner: null, willShowGlobalSearchOnboarding: true };
+        obj1 = {
+          channelId: null,
+          timeMs: null,
+          guildId: null,
+          canShowAppsOrActivitiesBanner: null,
+          canShowBotsBanner: null,
+          willShowGlobalSearchOnboarding: true,
+        };
         obj1[0] = channel.id;
         const _Date3 = Date;
         obj1[1] = Date.now();
@@ -100,7 +121,7 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
     }
   }
   obj1 = { children: null };
-  const items1 = [tmp9, ];
+  const items1 = [tmp9];
   const obj2 = {
     ref,
     accessible,
@@ -118,7 +139,7 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
     },
     IconComponent: channel(ref[9]).AppLauncherButtonIcon,
     accessibilityLabel: null,
-    accessibilityState: null
+    accessibilityState: null,
   };
   const intl = channel(tmp3[10]).intl;
   obj2[9] = intl.string(channel(ref[10]).t.rugBPp);
@@ -127,6 +148,8 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
   obj1[0] = items1;
   return closure_7(canShowAppsOrActivitiesBanner, obj1);
 });
-let result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButtonApps.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/chat_input/native/action_buttons/ChatInputActionButtonApps.tsx",
+);
 
 export default memoResult;

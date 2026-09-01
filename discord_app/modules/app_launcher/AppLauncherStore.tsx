@@ -26,14 +26,19 @@ function handleSetActiveCommand() {
   obj.initialState = undefined;
   obj.activeChannelId = null;
 }
-let obj = { show: false, entrypoint: require("AppLauncherEntrypoint").AppLauncherEntrypoint.NONE, lastShownEntrypoint: require("AppLauncherEntrypoint").AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: require("AppLauncherEntrypoint").AppLauncherCloseReason.DISMISSED, initialState: "accessible" };
-const Store = initializeDefault.Store;
-class AppLauncherStore extends Store {
-}
-const prototype = AppLauncherStore.prototype;
-prototype["initialize"] = function initialize() {
-
+let obj = {
+  show: false,
+  entrypoint: require("AppLauncherEntrypoint").AppLauncherEntrypoint.NONE,
+  lastShownEntrypoint: require("AppLauncherEntrypoint").AppLauncherEntrypoint.NONE,
+  activeViewType: null,
+  activeChannelId: null,
+  closeReason: require("AppLauncherEntrypoint").AppLauncherCloseReason.DISMISSED,
+  initialState: "accessible",
 };
+const Store = initializeDefault.Store;
+class AppLauncherStore extends Store {}
+const prototype = AppLauncherStore.prototype;
+prototype["initialize"] = function initialize() {};
 prototype["shouldShowPopup"] = function shouldShowPopup() {
   let show = obj.show;
   if (show) {
@@ -100,7 +105,7 @@ obj = {
   LOGOUT: handleDismissWithDismissed,
   CHANNEL_SELECT: handleDismissWithDismissed,
   APPLICATION_COMMAND_SET_ACTIVE_COMMAND: handleSetActiveCommand,
-  APP_LAUNCHER_SET_ACTIVE_COMMAND: handleSetActiveCommand
+  APP_LAUNCHER_SET_ACTIVE_COMMAND: handleSetActiveCommand,
 };
 const appLauncherStore = new AppLauncherStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/app_launcher/AppLauncherStore.tsx");

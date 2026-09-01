@@ -30,11 +30,14 @@ let obj = {
   fetch() {
     const HTTP = sendRequest.HTTP;
     const value = HTTP.get({ url: closure_6.CONNECTIONS, oldFormErrors: true, rejectWithError: true });
-    return value.then((accounts) => {
-      let obj = callback(709);
-      obj = { type: "USER_CONNECTIONS_UPDATE", local: true, accounts: accounts.body };
-      return obj.dispatch(obj);
-    }, () => callback(709).dispatch({ type: "USER_CONNECTIONS_UPDATE", local: true, accounts: [] }));
+    return value.then(
+      (accounts) => {
+        let obj = callback(709);
+        obj = { type: "USER_CONNECTIONS_UPDATE", local: true, accounts: accounts.body };
+        return obj.dispatch(obj);
+      },
+      () => callback(709).dispatch({ type: "USER_CONNECTIONS_UPDATE", local: true, accounts: [] }),
+    );
   },
   authorize(arg0) {
     closure_0 = arg0;
@@ -42,8 +45,15 @@ let obj = {
     if (arg1 === undefined) {
       obj = {};
     }
-    ({ location: importDefault, twoWayLinkType: dependencyMap, userCode: closure_3, twoWayLink: closure_4, successRedirect: closure_5, handle: closure_6 } = obj);
-    return callback(function*() {
+    ({
+      location: importDefault,
+      twoWayLinkType: dependencyMap,
+      userCode: closure_3,
+      twoWayLink: closure_4,
+      successRedirect: closure_5,
+      handle: closure_6,
+    } = obj);
+    return callback(function* () {
       closure_2 = tmp2;
       let state = tmp5;
       obj1 = { platform_type: null, location: null };
@@ -92,7 +102,14 @@ let obj = {
   callback,
   connect(arg0, arg1, name, location, friend_sync) {
     let obj = _modDef4713;
-    obj = { url: closure_6.CONNECTION(arg0, arg1), body: null, context: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    obj = {
+      url: closure_6.CONNECTION(arg0, arg1),
+      body: null,
+      context: null,
+      oldFormErrors: true,
+      trackedActionData: null,
+      rejectWithError: null,
+    };
     obj = { name, friend_sync: null };
     friend_sync = undefined;
     if (friend_sync != null) {
@@ -104,7 +121,10 @@ let obj = {
     obj[1] = friend_sync;
     obj[1] = obj;
     obj[2] = { location };
-    obj1 = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: { name, friend_sync: set.has(arg0) } };
+    obj1 = {
+      event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE,
+      properties: { name, friend_sync: set.has(arg0) },
+    };
     obj[4] = obj1;
     const obj2 = { name, friend_sync: set.has(arg0) };
     obj[5] = sendRequest.rejectWithMigratedError();
@@ -112,12 +132,20 @@ let obj = {
   },
   disconnect(arg0, arg1) {
     const HTTP = sendRequest.HTTP;
-    const obj = { url: closure_6.CONNECTION(arg0, arg1), oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
+    const obj = {
+      url: closure_6.CONNECTION(arg0, arg1),
+      oldFormErrors: true,
+      rejectWithError: sendRequest.rejectWithMigratedError(),
+    };
     return HTTP.del(obj);
   },
   refresh(arg0, arg1) {
     const HTTP = sendRequest.HTTP;
-    const obj = { url: closure_6.CONNECTION_REFRESH(arg0, arg1), oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
+    const obj = {
+      url: closure_6.CONNECTION_REFRESH(arg0, arg1),
+      oldFormErrors: true,
+      rejectWithError: sendRequest.rejectWithMigratedError(),
+    };
     return HTTP.post(obj);
   },
   setVisibility(type, id, inProgressVisibility) {
@@ -134,7 +162,13 @@ let obj = {
   },
   update(arg0, arg1, body) {
     let obj = _modDef4713;
-    obj = { url: closure_6.CONNECTION(arg0, arg1), body, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    obj = {
+      url: closure_6.CONNECTION(arg0, arg1),
+      body,
+      oldFormErrors: true,
+      trackedActionData: null,
+      rejectWithError: null,
+    };
     obj = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
     const merged = Object.assign(body);
     obj[1] = {};
@@ -149,7 +183,11 @@ let obj = {
     obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: id, joining: true };
     obj.dispatch(obj);
     const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-    obj = { url: closure_6.INTEGRATION_JOIN(id), oldFormErrors: true, rejectWithError: require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+    obj = {
+      url: closure_6.INTEGRATION_JOIN(id),
+      oldFormErrors: true,
+      rejectWithError: require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+    };
     HTTP.post(obj, (ok) => {
       let obj = callback(closure_1_2[5]);
       obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: closure_0, joining: false };
@@ -173,7 +211,7 @@ let obj = {
   refreshAccessToken(type, id) {
     closure_0 = type;
     closure_1 = id;
-    return callback(function*() {
+    return callback(function* () {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -262,7 +300,12 @@ let obj = {
   },
   linkDispatchAuthCallback(arg0, arg1) {
     const HTTP = sendRequest.HTTP;
-    let obj = { url: closure_6.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(arg0), body: null, oldFormErrors: true, rejectWithError: null };
+    let obj = {
+      url: closure_6.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(arg0),
+      body: null,
+      oldFormErrors: true,
+      rejectWithError: null,
+    };
     obj = {};
     const merged = Object.assign(arg1);
     obj[1] = obj;
@@ -275,7 +318,7 @@ let obj = {
     closure_2 = closure_0;
     callback = closure_1_1;
     closure_4 = arg4;
-    return callback(function*() {
+    return callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -366,7 +409,7 @@ let obj = {
     const HTTP = sendRequest.HTTP;
     const body = { state };
     return HTTP.get({ url, body, rejectWithError: true });
-  }
+  },
 };
 const tmp3 = new timestampDefault("ConnectedAccounts");
 let result = require("set").fileFinishedImporting("actions/ConnectedAccountsActionCreators.tsx");

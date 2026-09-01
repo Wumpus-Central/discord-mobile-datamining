@@ -12,7 +12,7 @@ function _getAttachmentFile() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -44,7 +44,10 @@ function _getAttachmentFile() {
               dependencyMap = undefined;
               closure_3 = undefined;
               logger = undefined;
-              callback(closure_1_2[2])(lib.item.platform === lib(closure_1_2[3]).UploadPlatform.REACT_NATIVE, "Upload must be in the React Native format");
+              callback(closure_1_2[2])(
+                lib.item.platform === lib(closure_1_2[3]).UploadPlatform.REACT_NATIVE,
+                "Upload must be in the React Native format",
+              );
               c6 = 1;
               const tmp49 = callback(closure_1_2[2]);
               c7 = 2;
@@ -142,7 +145,7 @@ function _cancelGetAttachmentFile() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();

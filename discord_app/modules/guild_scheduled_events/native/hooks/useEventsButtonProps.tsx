@@ -7,17 +7,29 @@ import { ReadStateTypes } from "../../../read_states/ReadStateConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx",
+);
 
 export default function useEventsButtonProps(id) {
   const _require = id;
   let obj = initialize;
   const items = [closure_4];
   const items1 = [id.id];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ hasUnread: closure_1_4.hasUnread(id.id, closure_1_6.GUILD_EVENT), mentionCount: closure_1_4.getMentionCount(id.id, closure_1_6.GUILD_EVENT) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => ({
+      hasUnread: closure_1_4.hasUnread(id.id, closure_1_6.GUILD_EVENT),
+      mentionCount: closure_1_4.getMentionCount(id.id, closure_1_6.GUILD_EVENT),
+    }),
+    items1,
+  );
   ({ hasUnread, mentionCount } = stateFromStoresObject);
   const items2 = [closure_5];
-  const eventsMuted = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => closure_1_5.isMuteScheduledEventsEnabled(id.id));
+  const eventsMuted = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items2,
+    () => closure_1_5.isMuteScheduledEventsEnabled(id.id),
+  );
   const arr4 = useGuildEventsDefault(id.id);
   const items3 = [id];
   const items4 = [id.id];
@@ -54,4 +66,4 @@ export default function useEventsButtonProps(id) {
     mode = tmp(11948).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
-};
+}

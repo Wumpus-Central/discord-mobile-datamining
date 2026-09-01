@@ -40,7 +40,14 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
   [tmp3, c7] = initialPageSize(stateFromStores.useState(false), 2);
   let tmp2 = initialPageSize(stateFromStores.useState(false), 2);
   const items1 = [c7];
-  const stateFromStoresObject = _require(isDesktop[7]).useStateFromStoresObject(items1, () => ({ initialized: _undefined.initialized, loading: _undefined.loading, items: _undefined.items, hasMore: _undefined.hasMore, cursor: _undefined.cursor, errored: _undefined.errored }));
+  const stateFromStoresObject = _require(isDesktop[7]).useStateFromStoresObject(items1, () => ({
+    initialized: _undefined.initialized,
+    loading: _undefined.loading,
+    items: _undefined.items,
+    hasMore: _undefined.hasMore,
+    cursor: _undefined.cursor,
+    errored: _undefined.errored,
+  }));
   initialized = stateFromStoresObject.initialized;
   items = stateFromStoresObject.items;
   hasMore = stateFromStoresObject.hasMore;
@@ -48,7 +55,10 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
   errored = stateFromStoresObject.errored;
   let obj2 = _require(isDesktop[7]);
   const items2 = [closure_6];
-  const stateFromStoresObject1 = _require(isDesktop[7]).useStateFromStoresObject(items2, () => ({ everyoneFilter: closure_6.everyoneFilter, roleFilter: closure_6.roleFilter }));
+  const stateFromStoresObject1 = _require(isDesktop[7]).useStateFromStoresObject(items2, () => ({
+    everyoneFilter: closure_6.everyoneFilter,
+    roleFilter: closure_6.roleFilter,
+  }));
   roleFilter = stateFromStoresObject1.roleFilter;
   everyoneFilter = stateFromStoresObject1.everyoneFilter;
   const effect = stateFromStores.useEffect(() => {
@@ -69,32 +79,35 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
   let tmp8 = navigatedAway(isDesktop[10])();
   closure_15 = tmp8;
   const items4 = [navigatedAway, items, isDesktop, tmp8, errored];
-  const effect2 = stateFromStores.useEffect(() => () => {
-    if (closure_2) {
-      const tmp7 = callback();
-      let tmp8 = !tmp7;
-      if (!tmp7) {
-        let tmp9 = closure_12;
-        if (!closure_12) {
-          tmp9 = closure_9.length > 100;
+  const effect2 = stateFromStores.useEffect(
+    () => () => {
+      if (closure_2) {
+        const tmp7 = callback();
+        let tmp8 = !tmp7;
+        if (!tmp7) {
+          let tmp9 = closure_12;
+          if (!closure_12) {
+            tmp9 = closure_9.length > 100;
+          }
+          tmp8 = tmp9;
         }
-        tmp8 = tmp9;
+        if (tmp8) {
+          const result = closure_1_0(closure_1_2[8]).resetNotificationCenter();
+          const obj2 = closure_1_0(closure_1_2[8]);
+        }
+      } else {
+        let tmp = closure_1;
+        if (closure_1) {
+          tmp = closure_9.length > 100;
+        }
+        if (tmp) {
+          const result1 = closure_1_0(closure_1_2[8]).resetNotificationCenter();
+          const obj = closure_1_0(closure_1_2[8]);
+        }
       }
-      if (tmp8) {
-        const result = closure_1_0(closure_1_2[8]).resetNotificationCenter();
-        const obj2 = closure_1_0(closure_1_2[8]);
-      }
-    } else {
-      let tmp = closure_1;
-      if (closure_1) {
-        tmp = closure_9.length > 100;
-      }
-      if (tmp) {
-        const result1 = closure_1_0(closure_1_2[8]).resetNotificationCenter();
-        const obj = closure_1_0(closure_1_2[8]);
-      }
-    }
-  }, items4);
+    },
+    items4,
+  );
   const items5 = [initialized, stateFromStores, isFocused, flag, roleFilter, everyoneFilter, initialPageSize];
   const effect3 = stateFromStores.useEffect(() => {
     let tmp = !initialized;
@@ -128,7 +141,7 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -222,7 +235,7 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
     loading: stateFromStoresObject.loading,
     items,
     hasMore,
-    loadMore: stateFromStores.useCallback(function() {
+    loadMore: stateFromStores.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -238,7 +251,7 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
         acked.acked = true;
       }
     },
-    errored
+    errored,
   };
   return obj;
 };

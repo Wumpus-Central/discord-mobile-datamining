@@ -23,24 +23,29 @@ let obj = {
     obj = dispatcherDefault;
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     obj = { onClose };
-    _modDef4723.pushLazy(callback(function*() {
-      closure_0 = tmp2;
-      yield closure_1_0(paths[7])(paths[9], paths.paths);
-      closure_0 = arg1.default;
-      return () => closure_2_7(closure_0, {
-        classificationId: closure_0,
-        entryPoint: closure_2_0(table[10]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS,
-        isRetry: false,
-        useEmbeddedMethods: true,
-        onComplete() {
-          closure_1_8.success();
-          if (closure_1 != null) {
-            closure_1();
-          }
-          const result = closure_1_8.start_verification_check();
-        }
-      });
-    }), obj, closure_6);
+    _modDef4723.pushLazy(
+      callback(function* () {
+        closure_0 = tmp2;
+        yield closure_1_0(paths[7])(paths[9], paths.paths);
+        closure_0 = arg1.default;
+        return () =>
+          closure_2_7(closure_0, {
+            classificationId: closure_0,
+            entryPoint: closure_2_0(table[10]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS,
+            isRetry: false,
+            useEmbeddedMethods: true,
+            onComplete() {
+              closure_1_8.success();
+              if (closure_1 != null) {
+                closure_1();
+              }
+              const result = closure_1_8.start_verification_check();
+            },
+          });
+      }),
+      obj,
+      closure_6,
+    );
   },
   close() {
     dispatcherDefault.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE" });
@@ -51,8 +56,10 @@ let obj = {
   start_verification_check() {
     dispatcherDefault.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" });
     const timerId = setTimeout(() => callback(table[11]).checkSuspendedUserAgeVerification(), closure_5);
-  }
+  },
 };
-let result = require("set").fileFinishedImporting("modules/safety_hub/AutomatedUnderageAppealModalActionCreators.native.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/safety_hub/AutomatedUnderageAppealModalActionCreators.native.tsx",
+);
 
 export default obj;

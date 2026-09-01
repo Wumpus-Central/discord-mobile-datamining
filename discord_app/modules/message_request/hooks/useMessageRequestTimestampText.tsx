@@ -12,7 +12,11 @@ export const useMessageRequestTimestampText = function useMessageRequestTimestam
   const _require = channel;
   let obj = loadMessageRequestData;
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
-  obj = { lastMessageId: require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_3.lastMessageId(id.id)) };
+  obj = {
+    lastMessageId: require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+      closure_1_3.lastMessageId(id.id),
+    ),
+  };
   items = [closure_3];
   const merged = Object.assign(messageRequestPreview);
   ({ lastMessageId, message } = obj);
@@ -38,7 +42,11 @@ export const useMessageRequestRelativeTimestampText = function useMessageRequest
   const _require = channel;
   let obj = loadMessageRequestData;
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
-  obj = { lastMessageId: require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_3.lastMessageId(id.id)) };
+  obj = {
+    lastMessageId: require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+      closure_1_3.lastMessageId(id.id),
+    ),
+  };
   items = [closure_3];
   const merged = Object.assign(messageRequestPreview);
   ({ lastMessageId, message } = obj);

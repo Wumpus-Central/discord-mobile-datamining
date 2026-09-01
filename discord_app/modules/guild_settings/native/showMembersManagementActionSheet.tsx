@@ -33,7 +33,7 @@ export default function showMembersManagementActionSheet(guild) {
   }
   tmpResult = tmp(5986);
   const result = tmpResult.showSimpleActionSheet({ key: "GuildSettingsMembersMore", options: items, hasIcons: false });
-};
+}
 export const getMembersManagementActions = function getMembersManagementActions(guild) {
   guild = guild.guild;
   ({ canPrune, selectedRoleId: importDefault, onFilterRoleId: dependencyMap } = guild);

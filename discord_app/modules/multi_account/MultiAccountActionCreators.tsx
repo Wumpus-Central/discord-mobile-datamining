@@ -23,7 +23,7 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       c3 = tmp3;
       id = id.id;
       yield "PX_16";
@@ -142,7 +142,7 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
     iter.next();
     return iter;
   });
-  const item = users.forEach(function() {
+  const item = users.forEach(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

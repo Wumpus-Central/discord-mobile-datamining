@@ -66,4 +66,4 @@ export default function useAndroidOrientationSheetResync(animatedIndex) {
       obj = animatedIndex(bottomSheetRef[1]);
     }
   }, items);
-};
+}

@@ -50,17 +50,23 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
   const memo1 = React.useMemo(tmp(tmp2[7]).getNextRenewalDateLabel, []);
   let obj2 = _require(controlledSetting[5]);
   const tmp10 = num;
-  [tmp12, closure_4] = num(React.useState(() => {
-    let str = "";
-    if (null != controlledSetting) {
-      const _String = String;
-      str = String(tmp.amount / 10 ** num);
-    }
-    return str;
-  }), 2);
+  [tmp12, closure_4] = num(
+    React.useState(() => {
+      let str = "";
+      if (null != controlledSetting) {
+        const _String = String;
+        str = String(tmp.amount / 10 ** num);
+      }
+      return str;
+    }),
+    2,
+  );
   const items3 = [num];
   let tmp14 = "" === tmp12;
-  const callback = React.useCallback((arg0) => callback(teenId(controlledSetting[7]).sanitizeAmountInput(arg0, num)), items3);
+  const callback = React.useCallback(
+    (arg0) => callback(teenId(controlledSetting[7]).sanitizeAmountInput(arg0, num)),
+    items3,
+  );
   if (tmp14) {
     tmp14 = null != controlledSetting;
   }
@@ -84,101 +90,117 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
   const tmp10Result = tmp10(React.useState(false), 2);
   closure_8 = tmp10Result[1];
   const items4 = [tmp18, tmp14, rounded, teenId, formatted];
-  obj = { amountInput: tmp12, handleAmountChange: callback, currency: formatted, currencySymbol: memo, exponent: num, isClearingCap: tmp14, isOverspending: null, canSave: null, isSubmitting: null, renewalDate: null, monthlySpend: null, save: null };
+  obj = {
+    amountInput: tmp12,
+    handleAmountChange: callback,
+    currency: formatted,
+    currencySymbol: memo,
+    exponent: num,
+    isClearingCap: tmp14,
+    isOverspending: null,
+    canSave: null,
+    isSubmitting: null,
+    renewalDate: null,
+    monthlySpend: null,
+    save: null,
+  };
   let tmp23 = null != stateFromStores1;
-  const callback1 = obj3.useCallback(formatted(function*() {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  const callback1 = obj3.useCallback(
+    formatted(function* () {
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === dependencyMap) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_0 = tmp3;
-            if (closure_1_6) {
-              closure_1_8(true);
-              c3 = 1;
-              if (closure_1_5) {
-                const ParentalControlledSpendingLimit2 = closure_1_0(14431).ParentalControlledSpendingLimit;
-                dependencyMap = 2;
-                c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = ParentalControlledSpendingLimit2.updateControlledSetting(closure_1_0, null);
-                return obj1;
-              } else if (null != closure_1_7) {
-                const ParentalControlledSpendingLimit = closure_1_0(14431).ParentalControlledSpendingLimit;
-                const obj2 = { amount: null, currency: null };
-                obj2[0] = tmp16;
-                obj2[1] = closure_1_2;
-                dependencyMap = 3;
-                c4 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = ParentalControlledSpendingLimit.updateControlledSetting(closure_1_0, obj2);
-                return obj3;
+        try {
+          c4 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_0 = tmp3;
+              if (closure_1_6) {
+                closure_1_8(true);
+                c3 = 1;
+                if (closure_1_5) {
+                  const ParentalControlledSpendingLimit2 = closure_1_0(14431).ParentalControlledSpendingLimit;
+                  dependencyMap = 2;
+                  c4 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = ParentalControlledSpendingLimit2.updateControlledSetting(closure_1_0, null);
+                  return obj1;
+                } else if (null != closure_1_7) {
+                  const ParentalControlledSpendingLimit = closure_1_0(14431).ParentalControlledSpendingLimit;
+                  const obj2 = { amount: null, currency: null };
+                  obj2[0] = tmp16;
+                  obj2[1] = closure_1_2;
+                  dependencyMap = 3;
+                  c4 = 1;
+                  const obj3 = { value: null, done: false };
+                  obj3[0] = ParentalControlledSpendingLimit.updateControlledSetting(closure_1_0, obj2);
+                  return obj3;
+                }
               }
+              c4 = 3;
+              return { value: "HermesInternal", done: null };
             }
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } else if (1 === tmp7) {
-          c3 = 0;
-          callback(false);
-          throw closure_2;
-        } else if (2 === tmp7) {
-          if (arg0 === 1) {
+          } else if (1 === tmp7) {
+            c3 = 0;
+            callback(false);
+            throw closure_2;
+          } else if (2 === tmp7) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              callback(false);
+              c4 = 3;
+              const obj4 = { value: null, done: true };
+              obj4[0] = arg1;
+              return obj4;
+            }
+          } else if (arg0 === 1) {
             c4 = 3;
             throw arg1;
           } else if (arg0 === 2) {
             c3 = 0;
             callback(false);
             c4 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
           }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
           c3 = 0;
           callback(false);
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-        c3 = 0;
-        callback(false);
-      } catch (tmp27) {
-        closure_2 = tmp27;
-        if (tmp4 === c3) {
-          c4 = tmp2;
-          throw tmp27;
-        } else {
-          dependencyMap = tmp;
+        } catch (tmp27) {
+          closure_2 = tmp27;
+          if (tmp4 === c3) {
+            c4 = tmp2;
+            throw tmp27;
+          } else {
+            dependencyMap = tmp;
+          }
         }
       }
-    }
-  }), items4);
+    }),
+    items4,
+  );
   if (tmp23) {
     tmp23 = stateFromStores1 > 0;
   }

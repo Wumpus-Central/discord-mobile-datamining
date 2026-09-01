@@ -16,4 +16,4 @@ export default function getSoundboardSoundURL(arg0) {
     combined = "" + location.protocol + window.GLOBAL_ENV.API_ENDPOINT + Endpoints.SOUNDBOARD_SOUND(arg0);
   }
   return combined;
-};
+}

@@ -50,14 +50,37 @@ noopAll;
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: c4, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: c5 } = items);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: { marginTop: 24 }, content: null, empty: null, header: null };
-createCacheKey = { display: "flex", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  display: "flex",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { padding: 20, alignSelf: "center" };
 createCacheKey[3] = { marginBottom: 10 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { actionButton: { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 } };
+let obj1 = {
+  actionButton: {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+    tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+    borderRadius: ThemesDefault.radii.round,
+    alignItems: "center",
+    justifyContent: "center",
+    height: 32,
+    width: 32,
+  },
+};
 let closure_9 = createCacheKey.createStyles(obj1);
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
+let obj2 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+  height: 32,
+  width: 32,
+};
 const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterAcceptedLinks.tsx");
 
 export default function FamilyCenterAcceptedLinks() {
@@ -70,8 +93,13 @@ export default function FamilyCenterAcceptedLinks() {
   const tmp5Result = useAgeSpecificText;
   const intl2 = tmp5(1236).intl;
   obj = { style: tmp.container, children: null };
-  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(messagesProxyDefault["+tnO34"], obj), intl2.formatToPlainString(tmp2(2369)["pu6/U0"], obj));
-  const items = [callback(Text.Text, { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText }), ];
+  const ageSpecificText = tmp5Result.useAgeSpecificText(
+    intl.formatToPlainString(messagesProxyDefault["+tnO34"], obj),
+    intl2.formatToPlainString(tmp2(2369)["pu6/U0"], obj),
+  );
+  const items = [
+    callback(Text.Text, { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText }),
+  ];
   const obj2 = { style: tmp.content, children: null };
   if (0 === activeLinkUsers.length) {
     const obj3 = { style: null, children: null };
@@ -89,4 +117,4 @@ export default function FamilyCenterAcceptedLinks() {
   items[1] = callback(View, obj2);
   obj[1] = items;
   return closure_7(View, obj);
-};
+}

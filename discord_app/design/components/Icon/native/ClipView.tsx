@@ -35,7 +35,11 @@ function SolidCutout(arg0) {
 }
 function SolidCutoutOverlay(arg0) {
   ({ backgroundColor: require, cutouts } = arg0);
-  return callback(closure_3, { pointerEvents: "none", style: closure_10.solidCutoutContainer, children: cutouts.map((cutout) => closure_1_4(closure_1_8, { backgroundColor: closure_0, cutout }, arg1)) });
+  return callback(closure_3, {
+    pointerEvents: "none",
+    style: closure_10.solidCutoutContainer,
+    children: cutouts.map((cutout) => closure_1_4(closure_1_8, { backgroundColor: closure_0, cutout }, arg1)),
+  });
 }
 noopAll;
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);
@@ -82,6 +86,6 @@ export default function ClipView(cutouts) {
   const items = [children, tmp4];
   obj.children = items;
   return callback2(__INTERNAL_VIEW_CONFIGDefault, obj);
-};
+}
 export const ClipViewAnimated = animatedComponent;
 export const CutoutShape = obj;

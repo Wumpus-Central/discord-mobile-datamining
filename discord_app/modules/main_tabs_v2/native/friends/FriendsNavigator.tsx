@@ -45,7 +45,7 @@ function FriendsNavigator() {
         },
         headerTitleAlign: "center",
         headerLeft: null,
-        fullScreenGestureEnabled: null
+        fullScreenGestureEnabled: null,
       };
       if (navigation.getState().routes[0].key === route.key) {
         const params2 = route.params;
@@ -69,7 +69,7 @@ function FriendsNavigator() {
       }
       renderModalCloseImage = lib(closure_1_2[7]).getRenderModalBackImage(navigation);
     },
-    children: null
+    children: null,
   };
   obj = {
     name: "root",
@@ -92,9 +92,9 @@ function FriendsNavigator() {
     },
     getComponent() {
       return lib(16327).default;
-    }
+    },
   };
-  const items = [callback(closure_7.Screen, obj), , , , , , , , , , ];
+  const items = [callback(closure_7.Screen, obj), , , , , , , , , ,];
   obj1 = { name: "new-message", options: null, getComponent: null };
   const obj2 = { title: null };
   let intl = require("../../../../intl/index.native.tsx").intl;
@@ -169,14 +169,14 @@ function FriendsNavigator() {
         return closure_1_5(closure_1_9, {
           onPress() {
             return navigation.navigate("requests-settings");
-          }
+          },
         });
       };
       return obj;
     },
     getComponent() {
       return lib(16360).default;
-    }
+    },
   });
   const obj16 = { name: "spam-requests", options: null, getComponent: null };
   const obj17 = { title: null };
@@ -204,7 +204,11 @@ let closure_7 = createNativeStackNavigator.createNativeStackNavigator();
 createNativeStackNavigator = { container: null, header: null };
 createNativeStackNavigator = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createNativeStackNavigator[0] = createNativeStackNavigator;
-createCacheKey = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, shadowColor: "transparent" };
+createCacheKey = {
+  borderBottomWidth: 0,
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  shadowColor: "transparent",
+};
 createNativeStackNavigator[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createNativeStackNavigator);
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/FriendsNavigator.tsx");
@@ -218,4 +222,4 @@ export default function ThemedFriendsNavigator() {
   items = [callback3().container, { paddingLeft: left, paddingRight: right }];
   obj[1] = callback(View, obj);
   return callback(ManaContext.ThemeContextProvider, obj);
-};
+}

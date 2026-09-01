@@ -14,7 +14,11 @@ const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let c6 = 160;
 let closure_7 = 2 * Math.PI * 77;
-let closure_8 = createCacheKey.createStyles({ progressCircleContainer: { width: 160, height: 160, alignItems: "center", justifyContent: "center", marginTop: 24 }, progressCircleImage: { position: "absolute", width: 93, height: 93, borderRadius: 46.5 }, glowImage: { position: "absolute", width: 180, height: 180 } });
+let closure_8 = createCacheKey.createStyles({
+  progressCircleContainer: { width: 160, height: 160, alignItems: "center", justifyContent: "center", marginTop: 24 },
+  progressCircleImage: { position: "absolute", width: 93, height: 93, borderRadius: 46.5 },
+  glowImage: { position: "absolute", width: 180, height: 180 },
+});
 const result = set.fileFinishedImporting("modules/premium/referral_program/native/ProgressWheel.tsx");
 
 export default function ProgressWheel(nReferralsSent) {
@@ -33,10 +37,25 @@ export default function ProgressWheel(nReferralsSent) {
     obj[1] = tmp.glowImage;
     tmp9 = callback(tmp4Result, obj);
   }
-  const items = [tmp9, , ];
+  const items = [tmp9, ,];
   obj1 = { width: c6, height: c6, children: null };
   tmp4Result = tmp4(8241);
-  const items1 = [callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 }), callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: "#53ac66", strokeWidth: 6, fill: "transparent", strokeDasharray: closure_7, strokeDashoffset: closure_7 * (1 - 33.3 * nReferralsSent / 100), strokeLinecap: "round", rotation: -90, origin: "80, 80" })];
+  const items1 = [
+    callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 }),
+    callback(inlineStyles.Circle, {
+      cx: 80,
+      cy: 80,
+      r: 77,
+      stroke: "#53ac66",
+      strokeWidth: 6,
+      fill: "transparent",
+      strokeDasharray: closure_7,
+      strokeDashoffset: closure_7 * (1 - (33.3 * nReferralsSent) / 100),
+      strokeLinecap: "round",
+      rotation: -90,
+      origin: "80, 80",
+    }),
+  ];
   obj1[2] = items1;
   items[1] = closure_5(tmp4Result, obj1);
   const obj3 = { source: null, style: null };
@@ -46,4 +65,4 @@ export default function ProgressWheel(nReferralsSent) {
   items[2] = callback(preloadDefault, obj3);
   obj[1] = items;
   return closure_5(View, obj);
-};
+}

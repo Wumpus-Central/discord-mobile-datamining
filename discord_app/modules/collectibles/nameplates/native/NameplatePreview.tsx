@@ -15,7 +15,14 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
     num = ThemesDefault.radii.sm;
   }
   let obj = { container: null, nameplate: null, avatar: null, content: null };
-  obj = { borderRadius: num, padding: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center", width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+  obj = {
+    borderRadius: num,
+    padding: ThemesDefault.space.PX_8,
+    flexDirection: "row",
+    alignItems: "center",
+    width: "100%",
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  };
   obj[0] = obj;
   let num2 = 0;
   if (arg0) {
@@ -97,15 +104,36 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
   const tmp15 = guildId(4747)(obj);
   const items2 = [tmp.avatar, user, guildId, tmp14, stateFromStores];
   obj = { style: tmp.container, "aria-hidden": aria_hidden["aria-hidden"], children: null };
-  const memo = stateFromStores.useMemo(() => closure_1_7(user(user[13]).Avatar, { style: user.avatar, user, guildId, size: user(user[13]).AvatarSizes.NORMAL, avatarDecoration: pendingAvatarDecoration, animate: !stateFromStores, autoStatusCutout: true, "aria-hidden": true }), items2);
+  const memo = stateFromStores.useMemo(
+    () =>
+      closure_1_7(user(user[13]).Avatar, {
+        style: user.avatar,
+        user,
+        guildId,
+        size: user(user[13]).AvatarSizes.NORMAL,
+        avatarDecoration: pendingAvatarDecoration,
+        animate: !stateFromStores,
+        autoStatusCutout: true,
+        "aria-hidden": true,
+      }),
+    items2,
+  );
   obj1 = { nameplate: nameplateData, style: tmp.nameplate, fullOpacity: true, animate: flag2 };
-  const items3 = [callback(guildId(8522), obj1), , ];
+  const items3 = [callback(guildId(8522), obj1), ,];
   obj2 = { style: tmp.avatar, children: memo };
   items3[1] = callback(pendingAvatarDecoration, obj2);
   obj3 = { style: tmp.content, children: null };
   let tmp19Result = null != tmp15;
   if (tmp19Result) {
-    obj4 = { userId: null, guildId: null, userName: null, variant: "text-md/semibold", effectDisplayType: null, lineClamp: 1, pendingDisplayNameStyles: null };
+    obj4 = {
+      userId: null,
+      guildId: null,
+      userName: null,
+      variant: "text-md/semibold",
+      effectDisplayType: null,
+      lineClamp: 1,
+      pendingDisplayNameStyles: null,
+    };
     obj4[0] = user.id;
     obj4[1] = guildId;
     obj4[2] = pendingGlobalName;
@@ -114,7 +142,7 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
     tmp19Result = tmp19(tmp7(8923), obj4);
     const tmp7Result = tmp7(8923);
   }
-  const items4 = [tmp19Result, ];
+  const items4 = [tmp19Result];
   tmp19Result = null == tmp15;
   if (tmp19Result) {
     const obj5 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };

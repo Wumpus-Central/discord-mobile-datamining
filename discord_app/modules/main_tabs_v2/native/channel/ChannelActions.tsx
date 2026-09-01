@@ -42,7 +42,9 @@ function ChannelActionButtons(channel) {
   obj1 = channel(items1[18]);
   const items = [closure_4];
   items1 = [];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_4.hasThreadsForChannel(channel.guild_id, channel.id));
+  const stateFromStores = obj1.useStateFromStores(items, () =>
+    closure_1_4.hasThreadsForChannel(channel.guild_id, channel.id),
+  );
   let obj2 = channel(items1[19]);
   const canJoinThreadVoice = obj2.useCanJoinThreadVoice(channel);
   let obj3 = channel(items1[18]);
@@ -50,7 +52,10 @@ function ChannelActionButtons(channel) {
   const stateFromStores1 = obj3.useStateFromStores(items2, () => closure_1_7.isInChannel(channel.id));
   let obj4 = channel(items1[18]);
   const items3 = [closure_7];
-  const stateFromStores2 = obj4.useStateFromStores(items3, () => Object.keys(closure_1_7.getVoiceStatesForChannel(channel.id)).length);
+  const stateFromStores2 = obj4.useStateFromStores(
+    items3,
+    () => Object.keys(closure_1_7.getVoiceStatesForChannel(channel.id)).length,
+  );
   let fn = screenIndex(items1[20])(channel);
   let obj5 = channel(items1[21]);
   conversationsHeaderButton = obj5.useConversationsHeaderButton(channel);
@@ -70,8 +75,16 @@ function ChannelActionButtons(channel) {
     };
     const intl7 = tmp5(tmp3[27]).intl;
     obj[4] = intl7.string(tmp2(tmp3[28]).xKexN1);
-    obj[1] = jsx(tmp2(tmp3[24]), { noMargin: true, source: null, IconComponent: null, onPress: null, accessibilityLabel: null });
-    return <conversationsHeaderButton noMargin source={null} IconComponent={null} onPress={null} accessibilityLabel={null} />;
+    obj[1] = jsx(tmp2(tmp3[24]), {
+      noMargin: true,
+      source: null,
+      IconComponent: null,
+      onPress: null,
+      accessibilityLabel: null,
+    });
+    return (
+      <conversationsHeaderButton noMargin source={null} IconComponent={null} onPress={null} accessibilityLabel={null} />
+    );
   } else {
     if (canJoinThreadVoice) {
       if (isGameInvitesPost) {
@@ -80,7 +93,14 @@ function ChannelActionButtons(channel) {
           if (!stateFromStores1) {
             tmp19 = tmp12;
           }
-          obj1 = { source: null, IconComponent: null, buttonText: null, buttonTextColor: "text-feedback-positive", onPress: null, accessibilityLabel: null };
+          obj1 = {
+            source: null,
+            IconComponent: null,
+            buttonText: null,
+            buttonTextColor: "text-feedback-positive",
+            onPress: null,
+            accessibilityLabel: null,
+          };
           obj1[1] = tmp19 ? LfgVoiceActiveIcon : LfgVoiceInactiveIcon;
           let StringResult;
           if (tmp19) {
@@ -162,7 +182,11 @@ function ChannelActionButtons(channel) {
             }
             const guildId = obj.getGuildId();
             tmp2Result = tmp2(tmp3[36]);
-            const channelDetailsSearchContext = tmp2Result.getChannelDetailsSearchContext(obj.id, guildId, obj.isThread());
+            const channelDetailsSearchContext = tmp2Result.getChannelDetailsSearchContext(
+              obj.id,
+              guildId,
+              obj.isThread(),
+            );
             const isThreadResult = obj.isThread();
             obj = { searchContext: channelDetailsSearchContext, searchLocation: closure_1_12.CHANNEL_HEADER };
             screenIndex(items1[37]).trackSearchOpened(obj);
@@ -295,7 +319,9 @@ function WrappedChannelNavButtons(channelId) {
 }
 noopAll;
 ({ ChannelTypes: c9, ChannelTypesSets: c10, ComponentActions: unpackModuleId } = ME);
-let closure_15 = createCacheKey.createStyles({ actionWrapper: { flexShrink: 0, flexDirection: "row", alignItems: "center" } });
+let closure_15 = createCacheKey.createStyles({
+  actionWrapper: { flexShrink: 0, flexDirection: "row", alignItems: "center" },
+});
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelActions.tsx");
 
 export default function ChannelActions(channelId) {
@@ -350,4 +376,4 @@ export default function ChannelActions(channelId) {
   }
   obj[1] = tmp4Result;
   return <View style={containerStyle}>{null}</View>;
-};
+}

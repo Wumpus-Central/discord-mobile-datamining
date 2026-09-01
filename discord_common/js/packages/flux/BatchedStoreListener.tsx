@@ -28,7 +28,13 @@ prototype["attach"] = function attach(arg0) {
     if (null == addReactChangeListener) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      error = new Error("" + closure_0 + " tried to load a non-existent store. Either it isn't defined or there is a circular dependency. Loaded " + arg1 + " stores before error.");
+      error = new Error(
+        "" +
+          closure_0 +
+          " tried to load a non-existent store. Either it isn't defined or there is a circular dependency. Loaded " +
+          arg1 +
+          " stores before error.",
+      );
       throw error;
     } else {
       const result = addReactChangeListener.addReactChangeListener(self.handleStoreChange);
@@ -38,7 +44,9 @@ prototype["attach"] = function attach(arg0) {
 prototype["detach"] = function detach() {
   const self = this;
   const stores = this.stores;
-  const item = stores.forEach((removeReactChangeListener) => removeReactChangeListener.removeReactChangeListener(self.handleStoreChange));
+  const item = stores.forEach((removeReactChangeListener) =>
+    removeReactChangeListener.removeReactChangeListener(self.handleStoreChange),
+  );
 };
 
 export { BatchedStoreListener };

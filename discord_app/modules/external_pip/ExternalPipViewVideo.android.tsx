@@ -27,7 +27,7 @@ function ExternalPipViewVideoUnavailable(wasStream) {
     tmp8 = tmp4;
     tmp10 = tmp5;
   }
-  const items = [tmp4Result, ];
+  const items = [tmp4Result];
   obj = { variant: "text-md/semibold", style: tmp.unavailableText, lineClamp: 1, children: null };
   const intl = tmp10(1236).intl;
   if (wasStream) {
@@ -72,7 +72,9 @@ function ExternalPipViewVideoStream(streamId) {
   dependencyMap = undefined;
   callback = undefined;
   importAllResult = undefined;
-  const surfaceDirectRendererExperiment = obj.useSurfaceDirectRendererExperiment(streamId.userId, { location: "ExternalPipViewVideoStream" });
+  const surfaceDirectRendererExperiment = obj.useSurfaceDirectRendererExperiment(streamId.userId, {
+    location: "ExternalPipViewVideoStream",
+  });
   const tmp2 = callback(importAllResult.useState(undefined), 2);
   first = tmp2[0];
   dependencyMap = first;
@@ -99,7 +101,7 @@ function ExternalPipViewVideoStream(streamId) {
   dependencyMap = tmp7;
   const items2 = [tmp7, first];
   const memo = importAllResult.useMemo(() => {
-    const items = [video.video, ];
+    const items = [video.video];
     let num = 1;
     if (null == first) {
       num = 0;
@@ -121,7 +123,15 @@ function ExternalPipViewVideoStream(streamId) {
       obj.updateVideoSize(tmp, obj, 1);
     }
   }, items3);
-  const children = [callback2(first(9585), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: callback, onLayout: callback1 }), ];
+  const children = [
+    callback2(first(9585), {
+      useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
+      style: memo,
+      streamId,
+      onReady: callback,
+      onLayout: callback1,
+    }),
+  ];
   let tmp14Result = null;
   if (null == first) {
     tmp14Result = null;
@@ -141,7 +151,16 @@ function ExternalPipViewVideoStream(streamId) {
 let c4 = importAllResult;
 ({ ActivityIndicator: c5, StyleSheet, View: closure_6, PixelRatio: error } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let obj = { container: null, video: null, videoUnavailableWrap: null, videoUnavailableSpinner: null, unavailable: null, unavailableText: null, unavaiableImage: null, user: null };
+let obj = {
+  container: null,
+  video: null,
+  videoUnavailableWrap: null,
+  videoUnavailableSpinner: null,
+  unavailable: null,
+  unavailableText: null,
+  unavaiableImage: null,
+  user: null,
+};
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.backgroundColor = ThemesDefault.colors.BACKGROUND_SURFACE_HIGH;
@@ -162,8 +181,30 @@ obj2.flex = 1;
 obj[2] = obj2;
 obj[3] = { marginTop: ThemesDefault.space.PX_16 };
 const obj3 = { marginTop: ThemesDefault.space.PX_16 };
-obj[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_8, margin: ThemesDefault.space.PX_8, justifyContent: "center", alignContent: "center", alignItems: "center", flexDirection: "row", flexWrap: "wrap", flex: 1 };
-const obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_8, margin: ThemesDefault.space.PX_8, justifyContent: "center", alignContent: "center", alignItems: "center", flexDirection: "row", flexWrap: "wrap", flex: 1 };
+obj[4] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.sm,
+  padding: ThemesDefault.space.PX_8,
+  margin: ThemesDefault.space.PX_8,
+  justifyContent: "center",
+  alignContent: "center",
+  alignItems: "center",
+  flexDirection: "row",
+  flexWrap: "wrap",
+  flex: 1,
+};
+const obj4 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.sm,
+  padding: ThemesDefault.space.PX_8,
+  margin: ThemesDefault.space.PX_8,
+  justifyContent: "center",
+  alignContent: "center",
+  alignItems: "center",
+  flexDirection: "row",
+  flexWrap: "wrap",
+  flex: 1,
+};
 obj[5] = { marginLeft: ThemesDefault.space.PX_4, textAlign: "center" };
 const obj5 = { marginLeft: ThemesDefault.space.PX_4, textAlign: "center" };
 obj[6] = { marginBottom: ThemesDefault.space.PX_8, resizeMode: "contain", aspectRatio: 2.5, width: "80%" };

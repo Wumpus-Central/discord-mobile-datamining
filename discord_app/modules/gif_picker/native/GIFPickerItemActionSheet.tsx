@@ -30,12 +30,15 @@ export default function GIFPickerItemActionSheet(item) {
   const size = isFavoriteGIF(width[7])();
   width = size.width;
   height = size.height;
-  const items = [, , , ];
+  const items = [, , ,];
   ({ width: arr[0], height: arr[1] } = item);
   items[2] = width;
   items[3] = height;
   const memo = height.useMemo(() => {
-    const bound = Math.min((width - 2 * isFavoriteGIF(width[4]).space.PX_16) / item.width, 0.5 * height / item.height);
+    const bound = Math.min(
+      (width - 2 * isFavoriteGIF(width[4]).space.PX_16) / item.width,
+      (0.5 * height) / item.height,
+    );
     return { width: item.width * bound, height: item.height * bound };
   }, items);
   callback = height.useCallback(() => {
@@ -90,9 +93,9 @@ export default function GIFPickerItemActionSheet(item) {
   obj = { style: tmp.contentWrapper, children: null };
   obj1 = { style: tmp.gifContainer, children: null };
   const items4 = [tmp.gifImage, memo];
-  const items5 = [callback1(isFavoriteGIF(width[16]), { style: items4, source: { uri: item.src } }), ];
+  const items5 = [callback1(isFavoriteGIF(width[16]), { style: items4, source: { uri: item.src } })];
   const obj3 = { children: null };
-  const items6 = [callback3(), ];
+  const items6 = [callback3()];
   let obj4 = { variant: "secondary", onPress: callback2, text: null, grow: true };
   let intl = item(width[10]).intl;
   obj4[2] = intl.string(item(width[10]).t.WqhZss);
@@ -103,4 +106,4 @@ export default function GIFPickerItemActionSheet(item) {
   obj[1] = callback(callback, obj1);
   obj[1] = callback1(callback, obj);
   return callback1(item(width[15]).BottomSheet, obj);
-};
+}

@@ -13,5 +13,12 @@ export default function trackVoicePanelTabOpened(arg0, tab, source) {
   }
   obj = { tab, source, is_chat_badged: hasUnreadResult };
   expandEventPropertiesDefault.track(AnalyticEvents.VOICE_PANEL_TAB_OPENED, obj);
+}
+export const VoicePanelTabAnalyticsSources = {
+  STORE: "store",
+  GESTURE: "gesture",
+  PREJOIN_BUTTON: "prejoin button",
+  CONNECTED_BUTTON: "connected button",
+  VOICE_CONTROLS: "voice controls",
+  HEADER_BUTTON: "header button",
 };
-export const VoicePanelTabAnalyticsSources = { STORE: "store", GESTURE: "gesture", PREJOIN_BUTTON: "prejoin button", CONNECTED_BUTTON: "connected button", VOICE_CONTROLS: "voice controls", HEADER_BUTTON: "header button" };

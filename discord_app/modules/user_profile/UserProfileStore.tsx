@@ -46,7 +46,17 @@ function createUserWidgetFromServer(data) {
               if (null != id.id) {
                 tmp = null;
                 if (null != id.file_id) {
-                  const obj = { status: "saved", id: null, fileId: null, gameId: null, title: null, tags: null, localClipId: null, videoURL: null, thumbnailURL: null };
+                  const obj = {
+                    status: "saved",
+                    id: null,
+                    fileId: null,
+                    gameId: null,
+                    title: null,
+                    tags: null,
+                    localClipId: null,
+                    videoURL: null,
+                    thumbnailURL: null,
+                  };
                   ({ id: obj[1], file_id: obj[2], game_id: obj[3], title } = id);
                   obj[4] = title;
                   ({ tags: obj[5], local_clip_id } = id);
@@ -69,7 +79,11 @@ function createUserWidgetFromServer(data) {
   const mapped1 = games.map((gameId) => ({ gameId: gameId.game_id, comment: gameId.comment, tags: gameId.tags }));
   const obj5 = applyDefault;
   const uniqByResult = applyDefault.uniqBy(mapped1, "gameId");
-  const baseGameWidget = new tmp(7368).BaseGameWidget({ id: data.id, type, games: applyDefault.uniqBy(mapped1, "gameId") });
+  const baseGameWidget = new tmp(7368).BaseGameWidget({
+    id: data.id,
+    type,
+    games: applyDefault.uniqBy(mapped1, "gameId"),
+  });
   return baseGameWidget;
 }
 function createUserWidgetFromSnapshot(type) {
@@ -282,7 +296,10 @@ function handleProfileFetch(arg0) {
     });
     flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
     const found = flattenedGuildIds.filter((arg0) => null != set[arg0]);
-    const result = map5.set(userProfile.user.id, found.map((arg0) => ({ guild: set[arg0].guild, nick: set[arg0].nick })));
+    const result = map5.set(
+      userProfile.user.id,
+      found.map((arg0) => ({ guild: set[arg0].guild, nick: set[arg0].nick })),
+    );
   }
   if (null != userProfile.mutual_friends_count) {
     const mutual_friends_count = userProfile.mutual_friends_count;
@@ -449,8 +466,32 @@ function handleProfileFetch(arg0) {
   obj.legacyUsername = userProfile.legacy_username;
   let tmp42 = null;
   if (null != application) {
-    obj = { id: null, primarySkuId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, flags: null, popularApplicationCommandIds: null, storefront_available: null, name: null, termsOfServiceUrl: null, privacyPolicyUrl: null };
-    ({ id: obj3[0], primary_sku_id: obj3[1], custom_install_url: obj3[2], install_params: obj3[3], integration_types_config: obj3[4], flags: obj3[5], popular_application_command_ids: obj3[6], storefront_available: obj3[7], name: obj3[8], terms_of_service_url: obj3[9], privacy_policy_url: obj3[10] } = application);
+    obj = {
+      id: null,
+      primarySkuId: null,
+      customInstallUrl: null,
+      installParams: null,
+      integrationTypesConfig: null,
+      flags: null,
+      popularApplicationCommandIds: null,
+      storefront_available: null,
+      name: null,
+      termsOfServiceUrl: null,
+      privacyPolicyUrl: null,
+    };
+    ({
+      id: obj3[0],
+      primary_sku_id: obj3[1],
+      custom_install_url: obj3[2],
+      install_params: obj3[3],
+      integration_types_config: obj3[4],
+      flags: obj3[5],
+      popular_application_command_ids: obj3[6],
+      storefront_available: obj3[7],
+      name: obj3[8],
+      terms_of_service_url: obj3[9],
+      privacy_policy_url: obj3[10],
+    } = application);
     tmp42 = obj;
   }
   obj.application = tmp42;
@@ -534,7 +575,23 @@ function handleProfileFetchFailure(arg0) {
   set.delete(userId);
   value = map1.get(userId);
   if (value == null) {
-    const obj = { connectedAccounts: null, applicationRoleConnections: null, premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId: null, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "channel" };
+    const obj = {
+      connectedAccounts: null,
+      applicationRoleConnections: null,
+      premiumSince: null,
+      premiumGuildSince: null,
+      application: null,
+      legacyUsername: null,
+      userId: null,
+      banner: null,
+      accentColor: null,
+      bio: "",
+      pronouns: "",
+      premiumType: null,
+      fetchStartedAt: 0,
+      fetchEndedAt: 0,
+      fetchError: "channel",
+    };
     obj[0] = [];
     obj[1] = [];
     obj[6] = userId;
@@ -598,7 +655,15 @@ function handleProfileUpdateSuccess(guild_id) {
     }
   } else {
     const userId2 = guild_id.userId;
-    ({ accent_color: accent_color2, banner: banner2, bio: bio2, pronouns: pronouns2, popout_animation_particle_type: popout_animation_particle_type2, theme_colors: theme_colors2, collectibles: collectibles2 } = guild_id);
+    ({
+      accent_color: accent_color2,
+      banner: banner2,
+      bio: bio2,
+      pronouns: pronouns2,
+      popout_animation_particle_type: popout_animation_particle_type2,
+      theme_colors: theme_colors2,
+      collectibles: collectibles2,
+    } = guild_id);
     const value1 = map1.get(userId2);
     if (null != value1) {
       obj1 = {};
@@ -741,8 +806,8 @@ class UserProfileStore extends tmp2 {
     closure_0 = undefined;
     obj = {
       CACHE_LOADED_LAZY() {
-            return obj.loadCache();
-          },
+        return obj.loadCache();
+      },
       USER_PROFILE_FETCH_START: handleProfileFetchStart,
       USER_PROFILE_FETCH_FAILURE: handleProfileFetchFailure,
       USER_PROFILE_FETCH_SUCCESS: handleProfileFetch,
@@ -764,7 +829,7 @@ class UserProfileStore extends tmp2 {
       RELATIONSHIP_ADD: handleRelationshipStatusChange,
       RELATIONSHIP_REMOVE: handleRelationshipStatusChange,
       RELATIONSHIP_UPDATE: handleRelationshipStatusChange,
-      LOGOUT: handleLogout
+      LOGOUT: handleLogout,
     };
     tmp = new tmp(obj, handleRelationshipStatusChange, new.target, tmp);
     // ThrowIfThisInitialized (0x7c)
@@ -821,7 +886,7 @@ Object.defineProperty(prototype, "isSubmitting", {
   get: function isSubmitting() {
     return c23;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getUserProfile"] = function getUserProfile(id) {
   return map1.get(id);

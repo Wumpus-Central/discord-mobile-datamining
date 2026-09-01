@@ -16,7 +16,13 @@ noopAll;
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles((height) => {
-  obj = { headerBar: obj, headerBarContent: { flexDirection: "row", alignItems: "center", flex: 1 }, headerBarText: null, headerBarSeparator: null, button: null };
+  obj = {
+    headerBar: obj,
+    headerBarContent: { flexDirection: "row", alignItems: "center", flex: 1 },
+    headerBarText: null,
+    headerBarSeparator: null,
+    button: null,
+  };
   obj = { height, flexDirection: "row", alignItems: "center" };
   obj = { marginHorizontal: ThemesDefault.space.PX_16 };
   obj[2] = obj;
@@ -36,7 +42,14 @@ export default function ForumComposerHeader(height) {
   ({ submitting, onGuidelinesPress } = height);
   const tmp = callback2(height.height);
   let obj = { style: tmp.headerBar, children: null };
-  obj = { style: tmp.button, accessibilityRole: "button", accessibilityLabel: null, disabled: null, onPress: null, children: null };
+  obj = {
+    style: tmp.button,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    disabled: null,
+    onPress: null,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
   obj[3] = submitting;
@@ -44,15 +57,28 @@ export default function ForumComposerHeader(height) {
     return callback(false);
   };
   obj[5] = callback(XSmallIcon.XSmallIcon, {});
-  const items = [callback(PressableBase.PressableOpacity, obj), , , ];
+  const items = [callback(PressableBase.PressableOpacity, obj), , ,];
   obj = { style: tmp.headerBarContent, children: null };
-  const items1 = [callback(ForumIcon.ForumIcon, { size: "sm" }), ];
+  const items1 = [callback(ForumIcon.ForumIcon, { size: "sm" })];
   obj1 = { style: tmp.headerBarText, children: null };
   if ("" === title) {
     const intl2 = tmp7(1236).intl;
     title = intl2.string(tmp7(1236).t["7EjFCk"]);
   }
-  const items2 = [callback(Text.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), callback(Text.Text, { variant: "text-xs/medium", color: "text-default", children: computeChannelNameDefault(channel) })];
+  const items2 = [
+    callback(Text.Text, {
+      lineClamp: 1,
+      ellipsizeMode: "tail",
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      children: title,
+    }),
+    callback(Text.Text, {
+      variant: "text-xs/medium",
+      color: "text-default",
+      children: computeChannelNameDefault(channel),
+    }),
+  ];
   obj1[1] = items2;
   items1[1] = closure_6(closure_4, obj1);
   obj[1] = items1;
@@ -75,4 +101,4 @@ export default function ForumComposerHeader(height) {
   items[3] = callback(closure_4, { style: tmp.headerBarSeparator });
   obj[1] = items;
   return closure_6(closure_4, obj);
-};
+}

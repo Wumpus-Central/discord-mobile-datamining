@@ -31,8 +31,15 @@ function TabButton(selected) {
   selected = selected.selected;
   ({ onPress, icon, accessibilityLabel, style } = selected);
   const tmp = callback3();
-  const obj = { onPress, style: null, accessibilityLabel: null, accessibilityRole: "tab", accessibilityState: null, children: null };
-  items = [tmp.tab, style, ];
+  const obj = {
+    onPress,
+    style: null,
+    accessibilityLabel: null,
+    accessibilityRole: "tab",
+    accessibilityState: null,
+    children: null,
+  };
+  items = [tmp.tab, style];
   let tabSelected;
   if (selected) {
     tabSelected = tmp.tabSelected;
@@ -47,7 +54,13 @@ function TabButton(selected) {
 }
 function TabHeader(children) {
   const tmp = callback3();
-  return callback2(Text.Text, { style: callback3().subheader, variant: "heading-md/extrabold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: children.text });
+  return callback2(Text.Text, {
+    style: callback3().subheader,
+    variant: "heading-md/extrabold",
+    maxFontSizeMultiplier: 1.75,
+    accessibilityRole: "header",
+    children: children.text,
+  });
 }
 function createAndAppendChannel(arg0, has, arr) {
   if (!has.has(arg0)) {
@@ -64,20 +77,69 @@ let c4 = importAllResult;
 ({ AnalyticEvents: closure_25, GuildFeatures: closure_26 } = ME);
 ({ jsx: closure_27, jsxs: closure_28 } = jsxProd);
 const md = ThemesDefault.radii.md;
-let obj = { wrapper: null, launchPadContent: null, header: null, subheader: null, tabs: null, tab: null, tabSelected: null };
-obj = { flexGrow: 0, marginHorizontal: 16, marginBottom: 16, flexShrink: 1, borderRadius: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", justifyContent: "flex-start", alignItems: "stretch", overflow: "hidden" };
+let obj = {
+  wrapper: null,
+  launchPadContent: null,
+  header: null,
+  subheader: null,
+  tabs: null,
+  tab: null,
+  tabSelected: null,
+};
+obj = {
+  flexGrow: 0,
+  marginHorizontal: 16,
+  marginBottom: 16,
+  flexShrink: 1,
+  borderRadius: 24,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  flexDirection: "column",
+  justifyContent: "flex-start",
+  alignItems: "stretch",
+  overflow: "hidden",
+};
 obj[0] = obj;
 obj[1] = { flex: -1, overflow: "hidden", borderBottomLeftRadius: 24, borderBottomRightRadius: 24 };
 obj[2] = { paddingHorizontal: 16, paddingTop: 16, flexDirection: "row", flexShrink: 0, flexGrow: 0 };
-obj[3] = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", alignSelf: "center", paddingStart: 8 };
-createCacheKey = { marginStart: 8, flexDirection: "row", flexShrink: 0, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: md, padding: 5, alignItems: "stretch", justifyContent: "center", gap: 5, borderWidth: 1, borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT };
+obj[3] = {
+  flexGrow: 1,
+  flexShrink: 1,
+  flexDirection: "row",
+  alignItems: "center",
+  alignSelf: "center",
+  paddingStart: 8,
+};
+createCacheKey = {
+  marginStart: 8,
+  flexDirection: "row",
+  flexShrink: 0,
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  borderRadius: md,
+  padding: 5,
+  alignItems: "stretch",
+  justifyContent: "center",
+  gap: 5,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT,
+};
 obj[4] = createCacheKey;
 obj[5] = { width: 32, height: 32, borderRadius: md - 5, alignItems: "center", justifyContent: "center" };
 obj[6] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 let closure_29 = createCacheKey.createStyles(obj);
-let closure_32 = { SEARCH: 0, [0]: "SEARCH", MEMBERS: 1, [1]: "MEMBERS", NOTIFICATIONS: 2, [2]: "NOTIFICATIONS", DEV_TOOLS: 3, [3]: "DEV_TOOLS" };
+let closure_32 = {
+  SEARCH: 0,
+  [0]: "SEARCH",
+  MEMBERS: 1,
+  [1]: "MEMBERS",
+  NOTIFICATIONS: 2,
+  [2]: "NOTIFICATIONS",
+  DEV_TOOLS: 3,
+  [3]: "DEV_TOOLS",
+};
 let closure_33 = { code: "function LaunchPadTsx1(){const{sharedState}=this.__closure;return sharedState.get();}" };
-let closure_34 = { code: "function LaunchPadTsx2(sharedState){const{keyboardShown,runOnJS,setFocused}=this.__closure;if(!keyboardShown.get()&&sharedState>0.75){runOnJS(setFocused)(true);}else if(keyboardShown.get()&&sharedState<=0){runOnJS(setFocused)(false);}}" };
+let closure_34 = {
+  code: "function LaunchPadTsx2(sharedState){const{keyboardShown,runOnJS,setFocused}=this.__closure;if(!keyboardShown.get()&&sharedState>0.75){runOnJS(setFocused)(true);}else if(keyboardShown.get()&&sharedState<=0){runOnJS(setFocused)(false);}}",
+};
 let closure_35 = importAllResult.memo((tab) => {
   tab = tab.tab;
   ({ setTab: importDefault, sharedState } = tab);
@@ -189,7 +251,15 @@ let closure_35 = importAllResult.memo((tab) => {
   const animatedReaction = obj3.useAnimatedReaction(T, fn);
   obj = { style: tmp.header, children: null };
   if (tab === constants.SEARCH) {
-    obj1 = { size: "md", returnKeyType: "done", ref: null, onChange: null, autoComplete: "off", spellCheck: false, autoFocus: false };
+    obj1 = {
+      size: "md",
+      returnKeyType: "done",
+      ref: null,
+      onChange: null,
+      autoComplete: "off",
+      spellCheck: false,
+      autoFocus: false,
+    };
     obj1[2] = searchRef;
     obj1[3] = tab.updateQuery;
     let tmp18 = callback2(tmp2(tmp3[27]).SearchField, obj1);
@@ -210,7 +280,7 @@ let closure_35 = importAllResult.memo((tab) => {
     tmp17 = callback2;
     tmp18 = callback2(TabHeader, { text: "Dev Tools" });
   }
-  const items5 = [tmp18, ];
+  const items5 = [tmp18];
   const obj4 = { style: tmp.tabs, children: null };
   const obj5 = {
     icon(color) {
@@ -218,7 +288,7 @@ let closure_35 = importAllResult.memo((tab) => {
     },
     accessibilityLabel: null,
     onPress: null,
-    selected: null
+    selected: null,
   };
   const intl3 = tmp2(tmp3[28]).intl;
   obj5[1] = intl3.string(tab(sharedState[28]).t.JqV7IC);
@@ -230,14 +300,14 @@ let closure_35 = importAllResult.memo((tab) => {
     }
   };
   obj5[3] = tab === constants.SEARCH;
-  const items6 = [tmp17(TabButton, obj5), , ];
+  const items6 = [tmp17(TabButton, obj5), ,];
   const obj6 = {
     icon(color) {
       return callback2(tab(sharedState[30]).BellIcon, { size: "sm", color });
     },
     accessibilityLabel: null,
     onPress: null,
-    selected: null
+    selected: null,
   };
   const intl4 = tmp2(tmp3[28]).intl;
   obj6[1] = intl4.string(tab(sharedState[28]).t.HcoRu0);
@@ -279,9 +349,17 @@ let closure_35 = importAllResult.memo((tab) => {
   return closure_28(sharedValue, obj);
 });
 let closure_37 = [];
-let items = [require("sortByMatchScore").AutocompleterResultTypes.GUILD, require("sortByMatchScore").AutocompleterResultTypes.TEXT_CHANNEL, require("sortByMatchScore").AutocompleterResultTypes.GROUP_DM, require("sortByMatchScore").AutocompleterResultTypes.VOICE_CHANNEL, require("sortByMatchScore").AutocompleterResultTypes.USER];
+let items = [
+  require("sortByMatchScore").AutocompleterResultTypes.GUILD,
+  require("sortByMatchScore").AutocompleterResultTypes.TEXT_CHANNEL,
+  require("sortByMatchScore").AutocompleterResultTypes.GROUP_DM,
+  require("sortByMatchScore").AutocompleterResultTypes.VOICE_CHANNEL,
+  require("sortByMatchScore").AutocompleterResultTypes.USER,
+];
 let closure_39 = { code: "function LaunchPadTsx3(){const{sharedState}=this.__closure;return sharedState.get()===0;}" };
-let closure_40 = { code: "function LaunchPadTsx4(hidden,prevHidden){const{runOnJS,clearQuery,cancelTimeout}=this.__closure;if(hidden===prevHidden)return;if(hidden&&hidden!==prevHidden){runOnJS(clearQuery)();}else if(!hidden&&hidden!==prevHidden){runOnJS(cancelTimeout)();}}" };
+let closure_40 = {
+  code: "function LaunchPadTsx4(hidden,prevHidden){const{runOnJS,clearQuery,cancelTimeout}=this.__closure;if(hidden===prevHidden)return;if(hidden&&hidden!==prevHidden){runOnJS(clearQuery)();}else if(!hidden&&hidden!==prevHidden){runOnJS(cancelTimeout)();}}",
+};
 let obj2 = { width: 32, height: 32, borderRadius: md - 5, alignItems: "center", justifyContent: "center" };
 let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function LaunchPad(arg0) {
@@ -302,27 +380,41 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
   [str, ref] = callback(callback2.useState(""), 2);
   let tmp6 = callback(callback2.useState(""), 2);
   [tmp9, sharedState] = callback(callback2.useState(closure_37), 2);
-  const first = callback(callback2.useState(() => new ref(sharedState[41])((arg0, str) => {
-    if ("" === str.trim()) {
-      callback(closure_1_37);
-    } else {
-      callback(arg0);
-    }
-  }, closure_1_38, undefined, { frecencyBoosters: true })), 1)[0];
+  const first = callback(
+    callback2.useState(() =>
+      new ref(sharedState[41])(
+        (arg0, str) => {
+          if ("" === str.trim()) {
+            callback(closure_1_37);
+          } else {
+            callback(arg0);
+          }
+        },
+        closure_1_38,
+        undefined,
+        { frecencyBoosters: true },
+      ),
+    ),
+    1,
+  )[0];
   callback = first;
   items = [first];
   const effect = callback2.useEffect(() => () => closure_3.clean(), items);
   let items1 = [first];
-  const effect1 = callback2.useEffect(() => ref(sharedState[42]).addRouteChangeListener(() => {
-    items = ["user:" + closure_1_15.getId()];
-    const set = new Set(items);
-    const selectedGuildFromRoute = closure_1_0(closure_1_2[36]).getSelectedGuildFromRoute();
-    if (null != selectedGuildFromRoute) {
-      const _HermesInternal = HermesInternal;
-      set.add("guild:" + selectedGuildFromRoute);
-    }
-    options.setOptions({ blacklist: set }, true);
-  }), items1);
+  const effect1 = callback2.useEffect(
+    () =>
+      ref(sharedState[42]).addRouteChangeListener(() => {
+        items = ["user:" + closure_1_15.getId()];
+        const set = new Set(items);
+        const selectedGuildFromRoute = closure_1_0(closure_1_2[36]).getSelectedGuildFromRoute();
+        if (null != selectedGuildFromRoute) {
+          const _HermesInternal = HermesInternal;
+          set.add("guild:" + selectedGuildFromRoute);
+        }
+        options.setOptions({ blacklist: set }, true);
+      }),
+    items1,
+  );
   let items2 = [visible, first];
   const effect2 = callback2.useEffect(() => {
     if (callback1) {
@@ -389,58 +481,62 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
   let obj3 = callback1(sharedState[24]);
   let items6 = [closure_22, closure_18, closure_19];
   const items7 = [visible, selectedGuildFromRoute];
-  stateFromStoresArray = obj3.useStateFromStoresArray(items6, () => {
-    if (ref) {
-      items = [];
-      const items1 = [];
-      const flattenedGuildIds = closure_1_22.getFlattenedGuildIds();
-      const iter = flattenedGuildIds[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        let tmp9 = nextResult;
-        let tmp10 = sharedState;
-        if (nextResult !== sharedState) {
-          let obj = closure_1_18;
-          let tmp30 = nextResult;
-          let hasUnreadResult = closure_1_18.getMentionCount(tmp9) > 0;
-          let tmp31 = hasUnreadResult;
-          if (!hasUnreadResult) {
-            let tmp11 = nextResult;
-            hasUnreadResult = obj.hasUnread(tmp9);
-          }
-          if (hasUnreadResult) {
-            let tmp13 = closure_1_19;
-            let tmp14 = nextResult;
-            let guild = closure_1_19.getGuild(tmp9);
-            let hasItem;
-            if (guild != null) {
-              let features = guild.features;
-              let tmp17 = closure_1_26;
-              hasItem = features.has(closure_1_26.HUB);
+  stateFromStoresArray = obj3.useStateFromStoresArray(
+    items6,
+    () => {
+      if (ref) {
+        items = [];
+        const items1 = [];
+        const flattenedGuildIds = closure_1_22.getFlattenedGuildIds();
+        const iter = flattenedGuildIds[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp9 = nextResult;
+          let tmp10 = sharedState;
+          if (nextResult !== sharedState) {
+            let obj = closure_1_18;
+            let tmp30 = nextResult;
+            let hasUnreadResult = closure_1_18.getMentionCount(tmp9) > 0;
+            let tmp31 = hasUnreadResult;
+            if (!hasUnreadResult) {
+              let tmp11 = nextResult;
+              hasUnreadResult = obj.hasUnread(tmp9);
             }
-            if (!hasItem) {
-              let tmp18 = tmp31;
-              if (tmp31) {
-                let tmp21 = nextResult;
-                let arr = items.push(tmp9);
-              } else {
-                let tmp19 = nextResult;
-                arr = items1.push(tmp9);
+            if (hasUnreadResult) {
+              let tmp13 = closure_1_19;
+              let tmp14 = nextResult;
+              let guild = closure_1_19.getGuild(tmp9);
+              let hasItem;
+              if (guild != null) {
+                let features = guild.features;
+                let tmp17 = closure_1_26;
+                hasItem = features.has(closure_1_26.HUB);
+              }
+              if (!hasItem) {
+                let tmp18 = tmp31;
+                if (tmp31) {
+                  let tmp21 = nextResult;
+                  let arr = items.push(tmp9);
+                } else {
+                  let tmp19 = nextResult;
+                  arr = items1.push(tmp9);
+                }
               }
             }
           }
+          continue;
         }
-        continue;
+        const push = items.push;
+        const items2 = [];
+        HermesBuiltin.arraySpread(items1, 0);
+        HermesBuiltin.apply(items2, items);
+        return items;
+      } else {
+        return ref3.current;
       }
-      const push = items.push;
-      const items2 = [];
-      HermesBuiltin.arraySpread(items1, 0);
-      HermesBuiltin.apply(items2, items);
-      return items;
-    } else {
-      return ref3.current;
-    }
-  }, items7);
+    },
+    items7,
+  );
   const effect5 = callback2.useEffect(() => {
     closure_8.current = stateFromStoresArray;
   });
@@ -448,87 +544,97 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
   let obj4 = callback1(sharedState[24]);
   const items8 = [stateFromStores, closure_24, closure_21, closure_23, stateFromStores1];
   const items9 = [tmp15, selectedGuildFromRoute, visible, first1];
-  stateFromStoresArray1 = obj4.useStateFromStoresArray(items8, () => {
-    let tmp = callback2;
-    if (callback2 == null) {
-      tmp = items2;
-    }
-    if (!items) {
-      if (null != tmp) {
-        if (items1) {
-          items = [];
-          items1 = [];
-          items2 = [];
-          const items3 = [];
-          const _Object = Object;
-          const values = Object.values(stateFromStores1.getActiveJoinedUnreadThreadsForGuild(tmp));
-          for (const item10020 of values) {
-            let tmp8 = item10020;
-            for (const key10024 in item10020) {
-              let tmp33 = key10024;
-              let arr = items1.push(key10024);
+  stateFromStoresArray1 = obj4.useStateFromStoresArray(
+    items8,
+    () => {
+      let tmp = callback2;
+      if (callback2 == null) {
+        tmp = items2;
+      }
+      if (!items) {
+        if (null != tmp) {
+          if (items1) {
+            items = [];
+            items1 = [];
+            items2 = [];
+            const items3 = [];
+            const _Object = Object;
+            const values = Object.values(stateFromStores1.getActiveJoinedUnreadThreadsForGuild(tmp));
+            for (const item10020 of values) {
+              let tmp8 = item10020;
+              for (const key10024 in item10020) {
+                let tmp33 = key10024;
+                let arr = items1.push(key10024);
+                continue;
+              }
               continue;
             }
-            continue;
-          }
-          const guildChannels = stateFromStores.getGuild(tmp).guildChannels;
-          guildChannels.forEachChannel((type) => {
-            const tmp2 = closure_1_14(type.type);
-            if (tmp2) {
-              if (!closure_1_23.isChannelMuted(type.guild_id, type.id)) {
-                if (null == type.parent_id) {
-                  if (closure_1_21.getMentionCount(type.id) > 0) {
-                    items.push(type.id);
-                  } else {
-                    if (!tmp2) {
-                      if (obj3.getHasImportantUnread(type)) {
-                        items1.push(type.id);
-                      }
-                      obj3 = items(items2[37]);
-                    }
-                    if (tmp2) {
-                      const keys = Object.keys();
-                      if (keys !== undefined) {
-                        if (keys[tmp] !== undefined) {
-                          items3.push(type.id);
+            const guildChannels = stateFromStores.getGuild(tmp).guildChannels;
+            guildChannels.forEachChannel(
+              (type) => {
+                const tmp2 = closure_1_14(type.type);
+                if (tmp2) {
+                  if (!closure_1_23.isChannelMuted(type.guild_id, type.id)) {
+                    if (null == type.parent_id) {
+                      if (closure_1_21.getMentionCount(type.id) > 0) {
+                        items.push(type.id);
+                      } else {
+                        if (!tmp2) {
+                          if (obj3.getHasImportantUnread(type)) {
+                            items1.push(type.id);
+                          }
+                          obj3 = items(items2[37]);
+                        }
+                        if (tmp2) {
+                          const keys = Object.keys();
+                          if (keys !== undefined) {
+                            if (keys[tmp] !== undefined) {
+                              items3.push(type.id);
+                            }
+                          }
+                        } else if (obj2.hasUnread(type.id)) {
+                          items2.push(type.id);
                         }
                       }
-                    } else if (obj2.hasUnread(type.id)) {
-                      items2.push(type.id);
+                      obj2 = closure_1_21;
                     }
                   }
-                  obj2 = closure_1_21;
+                  const obj = closure_1_23;
                 }
-              }
-              const obj = closure_1_23;
-            }
-          }, { ignoreRecents: true, withThreads: true });
-          const push = items.push;
-          const items4 = [];
-          HermesBuiltin.arraySpread(items1, 0);
-          HermesBuiltin.apply(items4, items);
-          const push2 = items.push;
-          const items5 = [];
-          HermesBuiltin.arraySpread(items3, 0);
-          HermesBuiltin.apply(items5, items);
-          const push3 = items.push;
-          const items6 = [];
-          HermesBuiltin.arraySpread(items2, 0);
-          HermesBuiltin.apply(items6, items);
-          return items;
-        } else {
-          return ref4.current;
+              },
+              { ignoreRecents: true, withThreads: true },
+            );
+            const push = items.push;
+            const items4 = [];
+            HermesBuiltin.arraySpread(items1, 0);
+            HermesBuiltin.apply(items4, items);
+            const push2 = items.push;
+            const items5 = [];
+            HermesBuiltin.arraySpread(items3, 0);
+            HermesBuiltin.apply(items5, items);
+            const push3 = items.push;
+            const items6 = [];
+            HermesBuiltin.arraySpread(items2, 0);
+            HermesBuiltin.apply(items6, items);
+            return items;
+          } else {
+            return ref4.current;
+          }
         }
       }
-    }
-    return [];
-  }, items9);
+      return [];
+    },
+    items9,
+  );
   const effect6 = callback2.useEffect(() => {
     closure_10.current = stateFromStoresArray1;
   });
   let tmp8 = callback(callback2.useState(closure_37), 2);
   const items10 = [stateFromStoresArray1];
-  stateFromStores1 = callback1(sharedState[24]).useStateFromStores(items10, () => stateFromStoresArray1.getState().history);
+  stateFromStores1 = callback1(sharedState[24]).useStateFromStores(
+    items10,
+    () => stateFromStoresArray1.getState().history,
+  );
   closure_13 = callback2.useRef([]);
   const items11 = [tmp15, visible, selectedGuildFromRoute, stateFromStoresArray, stateFromStores1];
   memo = callback2.useMemo(() => {
@@ -756,10 +862,20 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
   const animatedReaction = callback1(sharedState[25]).useAnimatedReaction(fn, fn2);
   obj = { style: memo2, children: null };
   const obj7 = callback1(sharedState[25]);
-  const items16 = [callback2(closure_35, { tab: first3, setTab: tmp40[1], updateQuery: callback1, searchRef: ref, sharedState }), , ];
+  const items16 = [
+    callback2(closure_35, { tab: first3, setTab: tmp40[1], updateQuery: callback1, searchRef: ref, sharedState }),
+    ,
+  ];
   let tmp53Result = 0 === str.trim().length && first3 === tmp39.SEARCH;
   if (tmp53Result) {
-    obj1 = { selectedGuildId: null, setSelectedGuild: null, unreadPrivateChannelIds: null, unreadGuilds: null, guildHistory: null, visible: null };
+    obj1 = {
+      selectedGuildId: null,
+      setSelectedGuild: null,
+      unreadPrivateChannelIds: null,
+      unreadGuilds: null,
+      guildHistory: null,
+      visible: null,
+    };
     obj1[0] = first1;
     obj1[1] = tmp22;
     obj1[2] = stateFromStores;

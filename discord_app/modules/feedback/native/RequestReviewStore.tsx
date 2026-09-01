@@ -39,7 +39,11 @@ function showReviewRequestModal() {
     }
   }
   const obj = getRootNavigationRef;
-  expandEventPropertiesDefault.track(AnalyticEvents.REVIEW_REQUEST_DEFERRED, { is_keyboard_open: keyboardIsOpen, is_in_voice: tmp5, is_viewing_chat: tmp3 });
+  expandEventPropertiesDefault.track(AnalyticEvents.REVIEW_REQUEST_DEFERRED, {
+    is_keyboard_open: keyboardIsOpen,
+    is_in_voice: tmp5,
+    is_viewing_chat: tmp3,
+  });
   if (-1 !== timeout) {
     const _clearTimeout = clearTimeout;
     clearTimeout(timeout);
@@ -75,8 +79,7 @@ let closure_9 = { revision: 0 };
 let c10 = false;
 let c11 = -1;
 const Store = initializeDefault.Store;
-class RequestReviewStore extends Store {
-}
+class RequestReviewStore extends Store {}
 RequestReviewStore.prototype["initialize"] = function initialize() {
   const Storage = Storage2.Storage;
   let obj = Storage.get(RequestReviewStore);
@@ -214,7 +217,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
       clearTimeout(timeout);
       timeout = -1;
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/feedback/native/RequestReviewStore.tsx");
 

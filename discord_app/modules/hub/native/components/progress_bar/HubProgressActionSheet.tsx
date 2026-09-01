@@ -14,8 +14,13 @@ const require = arg1;
 ({ AnalyticEvents: closure_8, AnalyticsLocations: c9, InstantInviteSources: c10, Routes: unpackModuleId } = ME);
 ({ AnalyticsActions: map1, AnalyticsSetupTypes: closure_14 } = Steps);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-let closure_17 = createCacheKey.createStyles({ container: { padding: 16 }, footer: { marginTop: 12, display: "flex", alignItems: "center" } });
-let result = require("set").fileFinishedImporting("modules/hub/native/components/progress_bar/HubProgressActionSheet.tsx");
+let closure_17 = createCacheKey.createStyles({
+  container: { padding: 16 },
+  footer: { marginTop: 12, display: "flex", alignItems: "center" },
+});
+let result = require("set").fileFinishedImporting(
+  "modules/hub/native/components/progress_bar/HubProgressActionSheet.tsx",
+);
 
 export default function HubProgressActionSheet(guild) {
   guild = guild.guild;
@@ -27,7 +32,7 @@ export default function HubProgressActionSheet(guild) {
   let obj = guild(hubProgressBarCompletedSteps[10]);
   hubProgressBarCompletedSteps = obj.useHubProgressBarCompletedSteps(guild);
   size = hubProgressBarCompletedSteps.size;
-  const tmp5 = 100 === Math.max(guild(hubProgressBarCompletedSteps[11]).MIN_PROGRESS_PERCENT, 100 * size / closure_7);
+  const tmp5 = 100 === Math.max(guild(hubProgressBarCompletedSteps[11]).MIN_PROGRESS_PERCENT, (100 * size) / closure_7);
   closure_4 = size.useRef(analyticsSource);
   const effect = size.useEffect(() => {
     closure_4.current = analyticsSource;
@@ -48,7 +53,12 @@ export default function HubProgressActionSheet(guild) {
   }
   function handleFinishPress() {
     let obj = analyticsSource(hubProgressBarCompletedSteps[12]);
-    obj = { setup_type: closure_1_14.HUB_PROGRESS, action: closure_1_13.DISMISS, num_total_actions: closure_1_7, num_actions_completed: size };
+    obj = {
+      setup_type: closure_1_14.HUB_PROGRESS,
+      action: closure_1_13.DISMISS,
+      num_total_actions: closure_1_7,
+      num_actions_completed: size,
+    };
     obj.track(closure_1_8.SERVER_SETUP_CTA_CLICKED, obj);
     guild(hubProgressBarCompletedSteps[13]).skipHubProgress(guild.id);
     const obj3 = guild(hubProgressBarCompletedSteps[13]);
@@ -61,10 +71,14 @@ export default function HubProgressActionSheet(guild) {
     numFinished: size,
     total: closure_7,
     stepsHook(children) {
-      return callback(guild(hubProgressBarCompletedSteps[16]).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children }, arg1);
-    }
+      return callback(
+        guild(hubProgressBarCompletedSteps[16]).Text,
+        { variant: "text-sm/medium", color: "mobile-text-heading-primary", children },
+        arg1,
+      );
+    },
   });
-  const items1 = [callback(guild(hubProgressBarCompletedSteps[15]).GuildProgressHeader, obj), , , , ];
+  const items1 = [callback(guild(hubProgressBarCompletedSteps[15]).GuildProgressHeader, obj), , , ,];
   let obj2 = {
     onPress() {
       const defaultChannel = closure_1_5.getDefaultChannel(guild.id);
@@ -83,7 +97,7 @@ export default function HubProgressActionSheet(guild) {
     title: null,
     isCompleted: null,
     analyticsSetupType: null,
-    analyticsAction: null
+    analyticsAction: null,
   };
   const intl3 = tmp2(tmp3[14]).intl;
   obj2[2] = intl3.string(guild(hubProgressBarCompletedSteps[14]).t.iNR25n);
@@ -104,14 +118,18 @@ export default function HubProgressActionSheet(guild) {
     title: null,
     isCompleted: null,
     analyticsSetupType: null,
-    analyticsAction: null
+    analyticsAction: null,
   };
   obj1 = {
     numFinished: size,
     total: closure_7,
     stepsHook(children) {
-      return callback(guild(hubProgressBarCompletedSteps[16]).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children }, arg1);
-    }
+      return callback(
+        guild(hubProgressBarCompletedSteps[16]).Text,
+        { variant: "text-sm/medium", color: "mobile-text-heading-primary", children },
+        arg1,
+      );
+    },
   };
   const tmp12 = analyticsSource(hubProgressBarCompletedSteps[17]);
   const tmp4 = closure_7;
@@ -136,7 +154,7 @@ export default function HubProgressActionSheet(guild) {
     title: null,
     isCompleted: null,
     analyticsSetupType: null,
-    analyticsAction: null
+    analyticsAction: null,
   };
   const tmp13 = analyticsSource(hubProgressBarCompletedSteps[17]);
   obj4[1] = analyticsSource(hubProgressBarCompletedSteps[24]);
@@ -168,4 +186,4 @@ export default function HubProgressActionSheet(guild) {
   obj[1] = items1;
   const children = tmp9(tmp10, obj);
   return callback(guild(hubProgressBarCompletedSteps[27]).BottomSheet, { startExpanded: true, children });
-};
+}

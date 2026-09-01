@@ -12,5 +12,5 @@ export default {
   getTextInVoiceReadMessageHistoryChannelPermissionText(prop) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.cuMfH0);
-  }
+  },
 };

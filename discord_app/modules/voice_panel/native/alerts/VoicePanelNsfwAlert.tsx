@@ -43,18 +43,18 @@ export default function VoicePanelNsfwAlert(guildId) {
       const voiceChannel = channelId(5355).selectVoiceChannel(channelId);
       dependencyMap();
     },
-    text: null
+    text: null,
   };
   const intl3 = tmp(1236).intl;
   obj1[2] = intl3.string(guildId(1236).t.wVq7uo);
-  const items = [closure_5(guildId(4863).AlertActionButton, obj1, "confirm"), ];
+  const items = [closure_5(guildId(4863).AlertActionButton, obj1, "confirm")];
   const obj2 = {
     variant: "secondary",
     onPress() {
       channelId(5457).nsfwReturnToSafety(guildId);
       dependencyMap();
     },
-    text: null
+    text: null,
   };
   const intl4 = tmp(1236).intl;
   obj2[2] = intl4.string(guildId(1236).t["/g10LC"]);
@@ -62,5 +62,5 @@ export default function VoicePanelNsfwAlert(guildId) {
   obj[0] = items;
   obj[2] = callback(guildId(4863).AlertActions, obj);
   return closure_5(guildId(4863).AlertModal, obj);
-};
+}
 export const VOICE_PANEL_NSFW_KEY = "voice-panel-nsfw";

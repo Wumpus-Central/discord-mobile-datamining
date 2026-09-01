@@ -22,4 +22,4 @@ export default function useCurrentEmbeddedApplication() {
   }
   const first = callback(useGetOrFetchApplicationsDefault(items, flag), 1)[0];
   return first;
-};
+}

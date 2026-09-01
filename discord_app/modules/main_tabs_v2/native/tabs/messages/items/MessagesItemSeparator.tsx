@@ -19,7 +19,9 @@ const memoResult = importAllResult.memo(function MessagesItemSeperator() {
   obj = { style: tmp.separator };
   return <closure_0 style={tmp.separator} />;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSeparator.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSeparator.tsx",
+);
 
 export default memoResult;
 export const MESSAGES_ITEM_SEPERATOR_HEIGHT = PX_12;

@@ -15,7 +15,7 @@ createToggle = {
     const items = [closure_2];
     return initialize.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
   },
-  onValueChange: require("setFontSize").toggleSyncProfileThemeWithUserTheme
+  onValueChange: require("setFontSize").toggleSyncProfileThemeWithUserTheme,
 };
 createToggle = createToggle.createToggle(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SyncProfileColorsSetting.tsx");

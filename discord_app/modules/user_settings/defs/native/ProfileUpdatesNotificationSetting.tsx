@@ -21,7 +21,7 @@ const toggle = createToggle.createToggle({
   onValueChange: onProfileUpdatesNotificationSettingsChanged.onProfileUpdatesNotificationSettingsChanged,
   usePredicate: function useExperiment() {
     return apexExperiment.useProfileUpdatesNotificationExperiment("tabsV2Settings").showSettingsToggle;
-  }
+  },
 });
 const obj = {
   useTitle() {
@@ -37,7 +37,7 @@ const obj = {
   onValueChange: onProfileUpdatesNotificationSettingsChanged.onProfileUpdatesNotificationSettingsChanged,
   usePredicate: function useExperiment() {
     return apexExperiment.useProfileUpdatesNotificationExperiment("tabsV2Settings").showSettingsToggle;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ProfileUpdatesNotificationSetting.tsx");
 

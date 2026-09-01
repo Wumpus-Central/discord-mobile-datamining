@@ -22,7 +22,15 @@ prototype["snapshotForBreadcrumbs"] = function snapshotForBreadcrumbs() {
 };
 let items = [require("TelemetryChannel").TelemetryChannel.SENTRY];
 // ThrowIfThisInitialized (0x7c)
-const tmp5 = new "snapshotForBreadcrumbs"(importDefaultResult1, items, tmp, prototype, SentryTelemetryImpl, "snapshotForBreadcrumbs", importDefaultResult1);
+const tmp5 = new "snapshotForBreadcrumbs"(
+  importDefaultResult1,
+  items,
+  tmp,
+  prototype,
+  SentryTelemetryImpl,
+  "snapshotForBreadcrumbs",
+  importDefaultResult1,
+);
 const result = require("set").fileFinishedImporting("modules/telemetry_ring/native/channels/SentryTelemetry.tsx");
 
 export default tmp5;

@@ -25,7 +25,14 @@ const memoResult = importAllResult.memo(function ChatInputGuardReturnToGameProfi
     obj[1] = obj1.makeSource(pendingGameProfileReturn.gameIconUrl);
     tmp2Result = tmp2(Image, obj);
   }
-  obj = { type: "simple-action", icon: tmp2Result, message: null, actionLabel: null, actionIcon: null, actionOnPress: null };
+  obj = {
+    type: "simple-action",
+    icon: tmp2Result,
+    message: null,
+    actionLabel: null,
+    actionIcon: null,
+    actionOnPress: null,
+  };
   const intl = getSystemLocale.intl;
   obj = { gameName: pendingGameProfileReturn.gameName };
   obj[2] = intl.format(getSystemLocale.t.HRHaSF, obj);
@@ -36,6 +43,8 @@ const memoResult = importAllResult.memo(function ChatInputGuardReturnToGameProfi
   obj[5] = pendingGameProfileReturn.pendingGameProfileReturn.onReturnToGameProfile;
   return jsx(ChatInputGuardDefault, { gameName: pendingGameProfileReturn.gameName });
 });
-const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardReturnToGameProfile.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/chat_input/native/guard/ChatInputGuardReturnToGameProfile.tsx",
+);
 
 export default memoResult;

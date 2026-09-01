@@ -41,4 +41,4 @@ export default function confirmActivityChangeModal(name, channel) {
   obj[1] = str;
   obj[5] = intl4.format(getSystemLocale.t["5/Xort"], obj);
   obj2.show(obj);
-};
+}

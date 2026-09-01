@@ -9,7 +9,17 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { blockedIgnoredRedirect: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.colors.TEXT_LINK, borderWidth: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO };
+createCacheKey = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  padding: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.xs,
+  borderColor: ThemesDefault.colors.TEXT_LINK,
+  borderWidth: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO,
+};
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let result = require("set").fileFinishedImporting("modules/safety_common/native/SafetySettingsNotice.tsx");
@@ -29,13 +39,19 @@ export default function SafetySettingsNotice(noticeType) {
     const result = labelHook(noticeType[6]).trackSafetySettingsNoticeAnalytics(noticeType, closure_1_4.LEARN_MORE);
   }, items1);
   let obj = { style: callback2().blockedIgnoredRedirect, children: null };
-  const items2 = [callback(labelHook(noticeType[7]).CircleInformationIcon, { color: "text-link" }), ];
+  const items2 = [callback(labelHook(noticeType[7]).CircleInformationIcon, { color: "text-link" })];
   obj = { style: { flexShrink: 1 }, variant: "heading-sm/medium", children: null };
   if (null != count) {
     const intl2 = tmp6(tmp7[9]).intl;
     obj = { hook: null, count: null };
     obj[0] = function hook(children) {
-      return closure_1_5(labelHook(noticeType[8]).Text, { role: "link", variant: "heading-sm/medium", color: "text-link", onPress: closure_2, children });
+      return closure_1_5(labelHook(noticeType[8]).Text, {
+        role: "link",
+        variant: "heading-sm/medium",
+        color: "text-link",
+        onPress: closure_2,
+        children,
+      });
     };
     obj[1] = count;
     let formatResult = intl2.format(label, obj);
@@ -43,7 +59,13 @@ export default function SafetySettingsNotice(noticeType) {
     const intl = tmp6(tmp7[9]).intl;
     obj1 = { hook: null };
     obj1[0] = function hook(children) {
-      return closure_1_5(labelHook(noticeType[8]).Text, { role: "link", variant: "heading-sm/medium", color: "text-link", onPress: closure_2, children });
+      return closure_1_5(labelHook(noticeType[8]).Text, {
+        role: "link",
+        variant: "heading-sm/medium",
+        color: "text-link",
+        onPress: closure_2,
+        children,
+      });
     };
     formatResult = intl.format(label, obj1);
   }
@@ -51,4 +73,4 @@ export default function SafetySettingsNotice(noticeType) {
   items2[1] = callback(labelHook(noticeType[8]).Text, obj);
   obj[1] = items2;
   return closure_6(View, obj);
-};
+}

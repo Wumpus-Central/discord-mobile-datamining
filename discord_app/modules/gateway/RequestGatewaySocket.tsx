@@ -43,7 +43,7 @@ function _withRequest() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -135,7 +135,7 @@ export function recordStartHeadlessTask() {
   c6 = false;
 }
 export const describeConnectionReasons = function describeConnectionReasons() {
-  const items = [...c6 ? closure_5 : [], ...map.keys()];
+  const items = [...(c6 ? closure_5 : []), ...map.keys()];
   const sorted = items.sort();
   let str = "NO_REASONS";
   if (sorted.length > 0) {
@@ -153,28 +153,31 @@ export const startBridgeTo = function startBridgeTo(arg0) {
     num = 0;
   }
   let result = map.set(combined, num + 1);
-  combined(696).requestSafeIdleCallback(() => {
-    let obj = closure_1_7;
-    if (closure_1_7.has(combined)) {
-      obj = { bridge_token: null, cleared_after: null };
-      obj[0] = tmp;
-      const _performance = performance;
-      obj[1] = performance.now() - callback;
-      callback(closure_1_2[3]).track(closure_1_4.GATEWAY_BRIDGE_TIMEOUT, obj);
-      const obj2 = callback(closure_1_2[3]);
-    }
-    c6 = false;
-    let num = obj.get(tmp);
-    if (num == null) {
-      num = 0;
-    }
-    const diff = num - 1;
-    if (diff <= 0) {
-      obj.delete(tmp);
-    } else {
-      const result = obj.set(tmp, diff);
-    }
-  }, { timeout: 5000 });
+  combined(696).requestSafeIdleCallback(
+    () => {
+      let obj = closure_1_7;
+      if (closure_1_7.has(combined)) {
+        obj = { bridge_token: null, cleared_after: null };
+        obj[0] = tmp;
+        const _performance = performance;
+        obj[1] = performance.now() - callback;
+        callback(closure_1_2[3]).track(closure_1_4.GATEWAY_BRIDGE_TIMEOUT, obj);
+        const obj2 = callback(closure_1_2[3]);
+      }
+      c6 = false;
+      let num = obj.get(tmp);
+      if (num == null) {
+        num = 0;
+      }
+      const diff = num - 1;
+      if (diff <= 0) {
+        obj.delete(tmp);
+      } else {
+        const result = obj.set(tmp, diff);
+      }
+    },
+    { timeout: 5000 },
+  );
 };
 export { stopRequest };
 export const withRequest = function withRequest(combined, arg1) {

@@ -4,12 +4,18 @@ import create2 from "../../common/v1/localized_string.tsx";
 import create3 from "help_article.tsx";
 import create4 from "cta_button.tsx";
 import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5 } from "../../../../../../../_runtime/metro/01307__.js";
+import {
+  MessageType,
+  MessageType as MessageType2,
+  MessageType as MessageType3,
+  MessageType as MessageType4,
+  MessageType as MessageType5,
+} from "../../../../../../../_runtime/metro/01307__.js";
 
 require = arg1;
 class FeatureCard$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , ];
+    items = [, , , , , , , ,];
     items[0] = { no: 1, name: "header", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "pill", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "body", kind: "scalar", T: 9 };
@@ -20,16 +26,16 @@ class FeatureCard$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
-          }
+        return callback(8453).LocalizedString;
+      },
     };
     items[6] = {
       no: 7,
       name: "pill_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
-          }
+        return callback(8453).LocalizedString;
+      },
     };
     obj = { no: 8, name: "body_localized", kind: "message", T: null };
     class T {
@@ -44,8 +50,8 @@ class FeatureCard$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(8454).HelpArticle;
-          }
+        return callback(8454).HelpArticle;
+      },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.FeatureCard", items, T);
     // ThrowIfThisInitialized (0x7c)
@@ -93,7 +99,12 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         let tmp39 = LocalizedString3;
         let tmp40 = pos;
         let tmp41 = readUnknownField;
-        obj.headerLocalized = LocalizedString3.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.headerLocalized);
+        obj.headerLocalized = LocalizedString3.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.headerLocalized,
+        );
       } else if (7 === tmp5) {
         let tmp32 = require;
         let tmp33 = dependencyMap;
@@ -178,26 +189,58 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wri
   if (header.headerLocalized) {
     const LocalizedString = create2.LocalizedString;
     const tagResult5 = tag.tag(6, _mod1307.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = LocalizedString.internalBinaryWrite(
+      header.headerLocalized,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(
+      header.headerLocalized,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.pillLocalized) {
     const LocalizedString2 = create2.LocalizedString;
     const tagResult6 = tag.tag(7, _mod1307.WireType.LengthDelimited);
-    const joined1 = LocalizedString2.internalBinaryWrite(header.pillLocalized, tag.tag(7, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(header.pillLocalized, tag.tag(7, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = LocalizedString2.internalBinaryWrite(
+      header.pillLocalized,
+      tag.tag(7, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(
+      header.pillLocalized,
+      tag.tag(7, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.bodyLocalized) {
     const LocalizedString3 = create2.LocalizedString;
     const tagResult7 = tag.tag(8, _mod1307.WireType.LengthDelimited);
-    const joined2 = LocalizedString3.internalBinaryWrite(header.bodyLocalized, tag.tag(8, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = LocalizedString3.internalBinaryWrite(header.bodyLocalized, tag.tag(8, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined2 = LocalizedString3.internalBinaryWrite(
+      header.bodyLocalized,
+      tag.tag(8, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult2 = LocalizedString3.internalBinaryWrite(
+      header.bodyLocalized,
+      tag.tag(8, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.helpArticle) {
     const HelpArticle = create3.HelpArticle;
     const tagResult8 = tag.tag(9, _mod1307.WireType.LengthDelimited);
-    const joined3 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(9, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(9, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined3 = HelpArticle.internalBinaryWrite(
+      header.helpArticle,
+      tag.tag(9, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult3 = HelpArticle.internalBinaryWrite(
+      header.helpArticle,
+      tag.tag(9, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -221,7 +264,7 @@ let items = [
     kind: "message",
     T() {
       return callback(8453).LocalizedString;
-    }
+    },
   },
   {
     no: 7,
@@ -229,7 +272,7 @@ let items = [
     kind: "message",
     T() {
       return callback(8453).LocalizedString;
-    }
+    },
   },
   {
     no: 8,
@@ -237,7 +280,7 @@ let items = [
     kind: "message",
     T() {
       return callback(8453).LocalizedString;
-    }
+    },
   },
   {
     no: 9,
@@ -245,16 +288,28 @@ let items = [
     kind: "message",
     T() {
       return callback(8454).HelpArticle;
-    }
-  }
+    },
+  },
 ];
 const object = new Object("discord_protos.premium_marketing.v1.FeatureCard", items, tmp5, tmp4, tmp3);
 // ThrowIfThisInitialized (0x7c)
 class Variant1Storage$Type extends MessageType2 {
   constructor() {
-    items = [, , ];
-    items[0] = { no: 1, name: "hero_art_localized_video_links_dark_theme", kind: "map", K: 9, V: { kind: "scalar", T: 9 } };
-    items[1] = { no: 2, name: "hero_art_localized_video_links_light_theme", kind: "map", K: 9, V: { kind: "scalar", T: 9 } };
+    items = [, ,];
+    items[0] = {
+      no: 1,
+      name: "hero_art_localized_video_links_dark_theme",
+      kind: "map",
+      K: 9,
+      V: { kind: "scalar", T: 9 },
+    };
+    items[1] = {
+      no: 2,
+      name: "hero_art_localized_video_links_light_theme",
+      kind: "map",
+      K: 9,
+      V: { kind: "scalar", T: 9 },
+    };
     items[2] = { no: 3, name: "hero_art_video_subtitle_links", kind: "map", K: 9, V: { kind: "scalar", T: 9 } };
     tmp = new tmp("discord_protos.premium_marketing.v1.Variant1Storage", items, new.target);
     // ThrowIfThisInitialized (0x7c)
@@ -263,7 +318,11 @@ class Variant1Storage$Type extends MessageType2 {
 }
 const prototype2 = Variant1Storage$Type.prototype;
 prototype2["create"] = function create(arr) {
-  let obj = { heroArtLocalizedVideoLinksDarkTheme: {}, heroArtLocalizedVideoLinksLightTheme: {}, heroArtVideoSubtitleLinks: {} };
+  let obj = {
+    heroArtLocalizedVideoLinksDarkTheme: {},
+    heroArtLocalizedVideoLinksLightTheme: {},
+    heroArtVideoSubtitleLinks: {},
+  };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -352,7 +411,9 @@ prototype2["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       str2 = stringResult;
     }
     const _globalThis = globalThis;
-    error = new Error("unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_localized_video_links_dark_theme");
+    error = new Error(
+      "unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_localized_video_links_dark_theme",
+    );
     throw error;
   }
   if (str2 == null) {
@@ -388,7 +449,9 @@ prototype2["binaryReadMap2"] = function binaryReadMap2(arg0, pos) {
       str2 = stringResult;
     }
     const _globalThis = globalThis;
-    error = new Error("unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_localized_video_links_light_theme");
+    error = new Error(
+      "unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_localized_video_links_light_theme",
+    );
     throw error;
   }
   if (str2 == null) {
@@ -424,7 +487,9 @@ prototype2["binaryReadMap3"] = function binaryReadMap3(arg0, pos) {
       str2 = stringResult;
     }
     const _globalThis = globalThis;
-    error = new Error("unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_video_subtitle_links");
+    error = new Error(
+      "unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_video_subtitle_links",
+    );
     throw error;
   }
   if (str2 == null) {
@@ -435,7 +500,11 @@ prototype2["binaryReadMap3"] = function binaryReadMap3(arg0, pos) {
   }
   arg0[str2] = str;
 };
-prototype2["internalBinaryWrite"] = function internalBinaryWrite(heroArtLocalizedVideoLinksDarkTheme, tag, writeUnknownFields) {
+prototype2["internalBinaryWrite"] = function internalBinaryWrite(
+  heroArtLocalizedVideoLinksDarkTheme,
+  tag,
+  writeUnknownFields,
+) {
   const keys = Object.keys(heroArtLocalizedVideoLinksDarkTheme.heroArtLocalizedVideoLinksDarkTheme);
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
@@ -447,7 +516,9 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(heroArtLocalize
     let tagResult1 = forkResult.tag(1, _mod1307.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
     let tagResult2 = stringResult.tag(2, _mod1307.WireType.LengthDelimited);
-    let stringResult1 = tagResult2.string(heroArtLocalizedVideoLinksDarkTheme.heroArtLocalizedVideoLinksDarkTheme[nextResult]);
+    let stringResult1 = tagResult2.string(
+      heroArtLocalizedVideoLinksDarkTheme.heroArtLocalizedVideoLinksDarkTheme[nextResult],
+    );
     let joined = stringResult1.join();
     continue;
   }
@@ -489,13 +560,28 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(heroArtLocalize
   }
   return tag;
 };
-const items1 = [{ no: 1, name: "hero_art_localized_video_links_dark_theme", kind: "map", K: 9, V: { kind: "scalar", T: 9 } }, { no: 2, name: "hero_art_localized_video_links_light_theme", kind: "map", K: 9, V: { kind: "scalar", T: 9 } }, { no: 3, name: "hero_art_video_subtitle_links", kind: "map", K: 9, V: { kind: "scalar", T: 9 } }];
-tmp2 = new tmp2("discord_protos.premium_marketing.v1.Variant1Storage", items1, tmp5, tmp4, tmp3, "create", "internalBinaryRead", "internalBinaryWrite", Variant1Storage$Type, tmp2);
+const items1 = [
+  { no: 1, name: "hero_art_localized_video_links_dark_theme", kind: "map", K: 9, V: { kind: "scalar", T: 9 } },
+  { no: 2, name: "hero_art_localized_video_links_light_theme", kind: "map", K: 9, V: { kind: "scalar", T: 9 } },
+  { no: 3, name: "hero_art_video_subtitle_links", kind: "map", K: 9, V: { kind: "scalar", T: 9 } },
+];
+tmp2 = new tmp2(
+  "discord_protos.premium_marketing.v1.Variant1Storage",
+  items1,
+  tmp5,
+  tmp4,
+  tmp3,
+  "create",
+  "internalBinaryRead",
+  "internalBinaryWrite",
+  Variant1Storage$Type,
+  tmp2,
+);
 // ThrowIfThisInitialized (0x7c)
 let closure_4 = tmp2;
 class Subtitle$Type extends MessageType3 {
   constructor() {
-    items = [, , ];
+    items = [, ,];
     items[0] = { no: 1, name: "link", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "locale", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "is_default", kind: "scalar", T: 8 };
@@ -593,12 +679,31 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(link, tag, writ
   }
   return tag;
 };
-const items2 = [{ no: 1, name: "link", kind: "scalar", T: 9 }, { no: 2, name: "locale", kind: "scalar", T: 9 }, { no: 3, name: "is_default", kind: "scalar", T: 8 }];
-const variant1StorageType = new Variant1Storage$Type("discord_protos.premium_marketing.v1.Subtitle", items2, tmp5, tmp4, Subtitle$Type, "create", "internalBinaryRead", "internalBinaryWrite", Variant1Storage$Type, items2, tmp, arg1, dependencyMap, object);
+const items2 = [
+  { no: 1, name: "link", kind: "scalar", T: 9 },
+  { no: 2, name: "locale", kind: "scalar", T: 9 },
+  { no: 3, name: "is_default", kind: "scalar", T: 8 },
+];
+const variant1StorageType = new Variant1Storage$Type(
+  "discord_protos.premium_marketing.v1.Subtitle",
+  items2,
+  tmp5,
+  tmp4,
+  Subtitle$Type,
+  "create",
+  "internalBinaryRead",
+  "internalBinaryWrite",
+  Variant1Storage$Type,
+  items2,
+  tmp,
+  arg1,
+  dependencyMap,
+  object,
+);
 // ThrowIfThisInitialized (0x7c)
 class Disclaimer$Type extends MessageType4 {
   constructor() {
-    items = [, , ];
+    items = [, ,];
     items[0] = { no: 1, name: "disclaimer_text", kind: "scalar", T: 9 };
     obj = { no: 2, name: "disclaimer_help_article", kind: "message", T: null };
     class T {
@@ -613,8 +718,8 @@ class Disclaimer$Type extends MessageType4 {
       name: "disclaimer_text_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
-          }
+        return callback(8453).LocalizedString;
+      },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.Disclaimer", items, T);
     // ThrowIfThisInitialized (0x7c)
@@ -654,7 +759,12 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
         let tmp29 = HelpArticle;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
-        obj.disclaimerHelpArticle = HelpArticle.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.disclaimerHelpArticle);
+        obj.disclaimerHelpArticle = HelpArticle.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.disclaimerHelpArticle,
+        );
       } else if (3 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
@@ -662,7 +772,12 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
         let tmp24 = LocalizedString;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
-        obj.disclaimerTextLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.disclaimerTextLocalized);
+        obj.disclaimerTextLocalized = LocalizedString.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.disclaimerTextLocalized,
+        );
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -707,14 +822,30 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(disclaimerText,
   if (disclaimerText.disclaimerHelpArticle) {
     const HelpArticle = create3.HelpArticle;
     const tagResult1 = tag.tag(2, _mod1307.WireType.LengthDelimited);
-    const joined = HelpArticle.internalBinaryWrite(disclaimerText.disclaimerHelpArticle, tag.tag(2, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = HelpArticle.internalBinaryWrite(disclaimerText.disclaimerHelpArticle, tag.tag(2, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = HelpArticle.internalBinaryWrite(
+      disclaimerText.disclaimerHelpArticle,
+      tag.tag(2, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = HelpArticle.internalBinaryWrite(
+      disclaimerText.disclaimerHelpArticle,
+      tag.tag(2, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (disclaimerText.disclaimerTextLocalized) {
     const LocalizedString = create2.LocalizedString;
     const tagResult2 = tag.tag(3, _mod1307.WireType.LengthDelimited);
-    const joined1 = LocalizedString.internalBinaryWrite(disclaimerText.disclaimerTextLocalized, tag.tag(3, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(disclaimerText.disclaimerTextLocalized, tag.tag(3, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = LocalizedString.internalBinaryWrite(
+      disclaimerText.disclaimerTextLocalized,
+      tag.tag(3, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(
+      disclaimerText.disclaimerTextLocalized,
+      tag.tag(3, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -734,7 +865,7 @@ const items3 = [
     kind: "message",
     T() {
       return callback(8454).HelpArticle;
-    }
+    },
   },
   {
     no: 3,
@@ -742,14 +873,30 @@ const items3 = [
     kind: "message",
     T() {
       return callback(8453).LocalizedString;
-    }
-  }
+    },
+  },
 ];
-const subtitleType = new Subtitle$Type("discord_protos.premium_marketing.v1.Disclaimer", items3, tmp5, Disclaimer$Type, Subtitle$Type, "create", "internalBinaryRead", "internalBinaryWrite", items3, new.target, tmp, arg1, dependencyMap, object, tmp2);
+const subtitleType = new Subtitle$Type(
+  "discord_protos.premium_marketing.v1.Disclaimer",
+  items3,
+  tmp5,
+  Disclaimer$Type,
+  Subtitle$Type,
+  "create",
+  "internalBinaryRead",
+  "internalBinaryWrite",
+  items3,
+  new.target,
+  tmp,
+  arg1,
+  dependencyMap,
+  object,
+  tmp2,
+);
 // ThrowIfThisInitialized (0x7c)
 class AnnouncementModalVariant1Properties$Type extends MessageType5 {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , ];
+    items = [, , , , , , , , , , , , , , , , , ,];
     items[0] = { no: 1, name: "header", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "subheader", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "video_link", kind: "scalar", T: 9 };
@@ -760,16 +907,16 @@ class AnnouncementModalVariant1Properties$Type extends MessageType5 {
       kind: "message",
       repeat: 1,
       T() {
-            return closure_3;
-          }
+        return closure_3;
+      },
     };
     items[5] = {
       no: 6,
       name: "button",
       kind: "message",
       T() {
-            return callback(8455).CTAButton;
-          }
+        return callback(8455).CTAButton;
+      },
     };
     items[6] = { no: 8, name: "hero_art_video_link_light_theme", kind: "scalar", T: 9 };
     items[7] = { no: 9, name: "hero_art_image_link_dark_theme", kind: "scalar", T: 9 };
@@ -781,40 +928,40 @@ class AnnouncementModalVariant1Properties$Type extends MessageType5 {
       kind: "message",
       repeat: 1,
       T() {
-            return closure_5;
-          }
+        return closure_5;
+      },
     };
     items[11] = {
       no: 14,
       name: "storage",
       kind: "message",
       T() {
-            return closure_4;
-          }
+        return closure_4;
+      },
     };
     items[12] = {
       no: 15,
       name: "disclaimer",
       kind: "message",
       T() {
-            return closure_6;
-          }
+        return closure_6;
+      },
     };
     items[13] = {
       no: 18,
       name: "help_article",
       kind: "message",
       T() {
-            return callback(8454).HelpArticle;
-          }
+        return callback(8454).HelpArticle;
+      },
     };
     items[14] = {
       no: 19,
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
-          }
+        return callback(8453).LocalizedString;
+      },
     };
     obj = { no: 20, name: "subheader_localized", kind: "message", T: null };
     class T {
@@ -829,8 +976,8 @@ class AnnouncementModalVariant1Properties$Type extends MessageType5 {
       name: "modal_top_pill_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
-          }
+        return callback(8453).LocalizedString;
+      },
     };
     items[17] = { no: 7, name: "dismiss_key", kind: "scalar", T: 9 };
     items[18] = { no: 12, name: "body", kind: "scalar", T: 9 };
@@ -841,7 +988,20 @@ class AnnouncementModalVariant1Properties$Type extends MessageType5 {
 }
 const prototype5 = AnnouncementModalVariant1Properties$Type.prototype;
 prototype5["create"] = function create(arr) {
-  let obj = { header: "", subheader: "", videoLink: "", helpArticleId: "", featureCards: [], heroArtVideoLinkLightTheme: "", heroArtImageLinkDarkTheme: "", heroArtImageLinkLightTheme: "", modalTopPill: "", heroArtVideoSubtitles: [], dismissKey: "", body: "" };
+  let obj = {
+    header: "",
+    subheader: "",
+    videoLink: "",
+    helpArticleId: "",
+    featureCards: [],
+    heroArtVideoLinkLightTheme: "",
+    heroArtImageLinkDarkTheme: "",
+    heroArtImageLinkLightTheme: "",
+    modalTopPill: "",
+    heroArtVideoSubtitles: [],
+    dismissKey: "",
+    body: "",
+  };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -889,7 +1049,11 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
       let tmp14 = require;
       let tmp15 = dependencyMap;
       let tagResult4 = tag.tag(5, _mod1307.WireType.LengthDelimited);
-      let internalBinaryWriteResult = object.internalBinaryWrite(header.featureCards[num5], tagResult4.fork(), writeUnknownFields);
+      let internalBinaryWriteResult = object.internalBinaryWrite(
+        header.featureCards[num5],
+        tagResult4.fork(),
+        writeUnknownFields,
+      );
       let joined = internalBinaryWriteResult.join();
       num5 = num5 + 1;
       length = header.featureCards.length;
@@ -898,8 +1062,16 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
   if (header.button) {
     const CTAButton = create4.CTAButton;
     const tagResult5 = tag.tag(6, _mod1307.WireType.LengthDelimited);
-    const joined1 = CTAButton.internalBinaryWrite(header.button, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(header.button, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = CTAButton.internalBinaryWrite(
+      header.button,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(
+      header.button,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if ("" !== header.heroArtVideoLinkLightTheme) {
     tag.tag(8, _mod1307.WireType.LengthDelimited).string(header.heroArtVideoLinkLightTheme);
@@ -924,7 +1096,11 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
       let tmp33 = require;
       let tmp34 = dependencyMap;
       let tagResult10 = tag.tag(13, _mod1307.WireType.LengthDelimited);
-      let internalBinaryWriteResult2 = variant1StorageType.internalBinaryWrite(header.heroArtVideoSubtitles[num11], tagResult10.fork(), writeUnknownFields);
+      let internalBinaryWriteResult2 = variant1StorageType.internalBinaryWrite(
+        header.heroArtVideoSubtitles[num11],
+        tagResult10.fork(),
+        writeUnknownFields,
+      );
       let joined2 = internalBinaryWriteResult2.join();
       num11 = num11 + 1;
       length2 = header.heroArtVideoSubtitles.length;
@@ -932,37 +1108,81 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
   }
   if (header.storage) {
     const tagResult11 = tag.tag(14, _mod1307.WireType.LengthDelimited);
-    const joined3 = closure_4.internalBinaryWrite(header.storage, tag.tag(14, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = closure_4.internalBinaryWrite(header.storage, tag.tag(14, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined3 = closure_4
+      .internalBinaryWrite(header.storage, tag.tag(14, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields)
+      .join();
+    const internalBinaryWriteResult3 = closure_4.internalBinaryWrite(
+      header.storage,
+      tag.tag(14, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.disclaimer) {
     const tagResult12 = tag.tag(15, _mod1307.WireType.LengthDelimited);
-    const joined4 = subtitleType.internalBinaryWrite(header.disclaimer, tag.tag(15, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult4 = subtitleType.internalBinaryWrite(header.disclaimer, tag.tag(15, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined4 = subtitleType
+      .internalBinaryWrite(header.disclaimer, tag.tag(15, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields)
+      .join();
+    const internalBinaryWriteResult4 = subtitleType.internalBinaryWrite(
+      header.disclaimer,
+      tag.tag(15, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.helpArticle) {
     const HelpArticle = create3.HelpArticle;
     const tagResult13 = tag.tag(18, _mod1307.WireType.LengthDelimited);
-    const joined5 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(18, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult5 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(18, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined5 = HelpArticle.internalBinaryWrite(
+      header.helpArticle,
+      tag.tag(18, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult5 = HelpArticle.internalBinaryWrite(
+      header.helpArticle,
+      tag.tag(18, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.headerLocalized) {
     const LocalizedString = create2.LocalizedString;
     const tagResult14 = tag.tag(19, _mod1307.WireType.LengthDelimited);
-    const joined6 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(19, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult6 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(19, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined6 = LocalizedString.internalBinaryWrite(
+      header.headerLocalized,
+      tag.tag(19, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult6 = LocalizedString.internalBinaryWrite(
+      header.headerLocalized,
+      tag.tag(19, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.subheaderLocalized) {
     const LocalizedString2 = create2.LocalizedString;
     const tagResult15 = tag.tag(20, _mod1307.WireType.LengthDelimited);
-    const joined7 = LocalizedString2.internalBinaryWrite(header.subheaderLocalized, tag.tag(20, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult7 = LocalizedString2.internalBinaryWrite(header.subheaderLocalized, tag.tag(20, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined7 = LocalizedString2.internalBinaryWrite(
+      header.subheaderLocalized,
+      tag.tag(20, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult7 = LocalizedString2.internalBinaryWrite(
+      header.subheaderLocalized,
+      tag.tag(20, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.modalTopPillLocalized) {
     const LocalizedString3 = create2.LocalizedString;
     const tagResult16 = tag.tag(21, _mod1307.WireType.LengthDelimited);
-    const joined8 = LocalizedString3.internalBinaryWrite(header.modalTopPillLocalized, tag.tag(21, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult8 = LocalizedString3.internalBinaryWrite(header.modalTopPillLocalized, tag.tag(21, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined8 = LocalizedString3.internalBinaryWrite(
+      header.modalTopPillLocalized,
+      tag.tag(21, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult8 = LocalizedString3.internalBinaryWrite(
+      header.modalTopPillLocalized,
+      tag.tag(21, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if ("" !== header.dismissKey) {
     tag.tag(7, _mod1307.WireType.LengthDelimited).string(header.dismissKey);
@@ -983,7 +1203,9 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
   return tag;
 };
 const announcementModalVariant1PropertiesType = new AnnouncementModalVariant1Properties$Type();
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/announcement_modal_variant_1_properties.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/announcement_modal_variant_1_properties.tsx",
+);
 
 export const FeatureCard = object;
 export const Variant1Storage = tmp2;

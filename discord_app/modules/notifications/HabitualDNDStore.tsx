@@ -10,8 +10,7 @@ require = arg1;
 let closure_5 = [];
 let c6 = false;
 const PersistedStore = initializeDefault.PersistedStore;
-class HabitualDNDStore extends PersistedStore {
-}
+class HabitualDNDStore extends PersistedStore {}
 const prototype = HabitualDNDStore.prototype;
 prototype["initialize"] = function initialize(sessionStartsWithDND) {
   this.waitFor(closure_3);
@@ -77,7 +76,7 @@ const habitualDNDStore = new HabitualDNDStore(dispatcherDefault, {
     }
     c6 = someResult;
     arr = [];
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/notifications/HabitualDNDStore.tsx");
 

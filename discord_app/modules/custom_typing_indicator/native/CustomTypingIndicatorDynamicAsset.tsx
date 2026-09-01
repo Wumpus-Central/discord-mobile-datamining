@@ -12,7 +12,9 @@ let closure_6 = createCacheKey.createStyles((width, gap) => {
   const emoji = { width, height: width };
   return { emojiRow, emoji, text: { flexShrink: 1 } };
 });
-const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorDynamicAsset.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/custom_typing_indicator/native/CustomTypingIndicatorDynamicAsset.tsx",
+);
 
 export default function CustomTypingIndicatorDynamicAsset(arg0) {
   ({ spacing, emojiGap, emojiSource } = arg0);
@@ -30,14 +32,17 @@ export default function CustomTypingIndicatorDynamicAsset(arg0) {
       obj = { fadeDuration: 0, source: obj, style: emoji.emoji };
       obj = { uri };
       return closure_1_4(closure_1_1(closure_1_2[5]), obj, arg1);
-    })
+    }),
   };
-  const items = [callback(View, obj), ];
+  const items = [callback(View, obj)];
   obj = { variant: textVariant, color: textColor, lineClamp, includeFontPadding: true, style: items1, children: null };
   items1 = [tmpResult.text, textStyle];
   const intl = require("../../../intl/index.native.tsx").intl;
-  obj[5] = intl.format(require("../CustomTypingIndicatorUtils.tsx").getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), { name });
+  obj[5] = intl.format(
+    require("../CustomTypingIndicatorUtils.tsx").getCustomTypingIndicatorSuggestionWithNameMessage(suggestion),
+    { name },
+  );
   items[1] = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj);
   obj[5] = items;
   return callback2(require("../../../design/components/Stack/native/Stack.native.tsx").Stack, obj);
-};
+}

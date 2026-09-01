@@ -18,13 +18,32 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 noopAll;
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-createCacheKey = { nitroWheel: null, sublabel: null, label: null, remove: null, upsellButton: null, upsellTitleContainer: null, titleWrapper: null, titleContainer: null };
+createCacheKey = {
+  nitroWheel: null,
+  sublabel: null,
+  label: null,
+  remove: null,
+  upsellButton: null,
+  upsellTitleContainer: null,
+  titleWrapper: null,
+  titleContainer: null,
+};
 createCacheKey = { marginLeft: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { color: ThemesDefault.colors.TEXT_DEFAULT };
 let obj1 = { color: ThemesDefault.colors.TEXT_DEFAULT };
-createCacheKey[2] = { marginBottom: 4, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" };
-let obj2 = { marginBottom: 4, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" };
+createCacheKey[2] = {
+  marginBottom: 4,
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+  alignItems: "center",
+  flexDirection: "row",
+};
+let obj2 = {
+  marginBottom: 4,
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+  alignItems: "center",
+  flexDirection: "row",
+};
 createCacheKey[3] = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let obj3 = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
@@ -59,14 +78,14 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
   }
   obj[1] = isPremiumResult;
   ({ titleWrapper: obj3[2], titleContainer: obj3[3] } = tmp);
-  const items1 = [closure_6(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), ];
+  const items1 = [closure_6(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj)];
   obj = { label: null, subLabel: null, onPress: null };
   const intl2 = tmp2(1236).intl;
   obj[0] = intl2.string(getSystemLocale.t["MsUY/S"]);
   const intl3 = tmp2(1236).intl;
   obj[1] = intl3.string(getSystemLocale.t.r5hKOy);
   obj[2] = handleUploadAvatarSelect;
-  const items2 = [closure_6(TableRowInner.TableRow, obj), , , , ];
+  const items2 = [closure_6(TableRowInner.TableRow, obj), , , ,];
   let tmp8Result = null != handleUploadGIFAvatarSelect && !showAnimatedAvatarUpsell;
   if (tmp8Result) {
     obj1 = { label: null, onPress: null };
@@ -83,7 +102,7 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     const obj4 = { text: null };
     const intl5 = tmp2(1236).intl;
     obj4[0] = intl5.string(tmp2(1236).t.xZ0Wot);
-    const items3 = [tmp8(tmp2(8363).FormLabel, obj4), ];
+    const items3 = [tmp8(tmp2(8363).FormLabel, obj4)];
     const obj5 = { style: null, size: "sm" };
     obj5[0] = tmp.nitroWheel;
     items3[1] = tmp8(tmp2(8096).NitroWheelIcon, obj5);
@@ -94,7 +113,7 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     obj7[0] = tmp.sublabel;
     const intl6 = tmp2(1236).intl;
     obj7[2] = intl6.string(tmp2(1236).t.L3UPqR);
-    const items4 = [tmp8(tmp2(8363).FormSubLabel, obj7), ];
+    const items4 = [tmp8(tmp2(8363).FormSubLabel, obj7)];
     const obj8 = { style: null, children: null };
     obj8[0] = tmp.upsellButton;
     const obj9 = { analyticsObject: null, label: null };
@@ -126,7 +145,7 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
   if (flag) {
     const obj13 = { label: null, onPress: null };
     const obj14 = { style: null, text: null };
-    const items5 = [, ];
+    const items5 = [,];
     ({ label: arr6[0], remove: arr6[1] } = tmp);
     obj14[0] = items5;
     const intl9 = tmp2(1236).intl;
@@ -140,4 +159,4 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
   items1[1] = closure_7(TableRowGroupTitle.TableRowGroup, { hasIcons: false, children: items2 });
   obj15[0] = items1;
   return closure_7(ActionSheet.ActionSheet, obj15);
-};
+}

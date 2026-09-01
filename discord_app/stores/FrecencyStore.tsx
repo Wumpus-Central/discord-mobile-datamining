@@ -72,14 +72,17 @@ function initFrecency() {
     return false;
   } else {
     obj = applyDefault;
-    closure_9.overwriteHistory(obj.mapValues(guildAndChannels, (recentUses) => {
-      const obj = {};
-      const merged = Object.assign(recentUses);
-      recentUses = recentUses.recentUses;
-      const mapped = recentUses.map(Number);
-      obj.recentUses = mapped.filter((arg0) => arg0 > 0);
-      return obj;
-    }), closure_13.pendingUsages);
+    closure_9.overwriteHistory(
+      obj.mapValues(guildAndChannels, (recentUses) => {
+        const obj = {};
+        const merged = Object.assign(recentUses);
+        recentUses = recentUses.recentUses;
+        const mapped = recentUses.map(Number);
+        obj.recentUses = mapped.filter((arg0) => arg0 > 0);
+        return obj;
+      }),
+      closure_13.pendingUsages,
+    );
   }
 }
 let obj = {
@@ -118,19 +121,16 @@ let obj = {
     }
     return guild;
   },
-  afterCompute() {
-
-  },
+  afterCompute() {},
   numFrequentlyItems: 100,
-  maxSamples: 10
+  maxSamples: 10,
 };
 let closure_9 = new DEFAULT_FRECENCYDefault(obj);
 let c10 = null;
 let c11 = null;
 let closure_13 = { pendingUsages: [] };
 const PersistedStore = initializeDefault.PersistedStore;
-class FrecencyStore extends PersistedStore {
-}
+class FrecencyStore extends PersistedStore {}
 const prototype = FrecencyStore.prototype;
 prototype["initialize"] = function initialize(pendingUsages) {
   const self = this;
@@ -159,7 +159,7 @@ Object.defineProperty(prototype, "frecencyWithoutFetchingLatest", {
   get: function frecencyWithoutFetchingLatest() {
     return closure_9;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getFrequentlyWithoutFetchingLatest"] = function getFrequentlyWithoutFetchingLatest() {
   return closure_9.frequently;
@@ -201,7 +201,7 @@ obj = {
       flag = true;
     }
     return flag;
-  }
+  },
 };
 const frecencyStore = new FrecencyStore(dispatcherDefault, obj);
 let tmp2 = new DEFAULT_FRECENCYDefault(obj);

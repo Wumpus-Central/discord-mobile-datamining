@@ -16,4 +16,4 @@ export default function isOrientationLockSupported() {
     result = tmpResult.isOrientationLockSupported();
   }
   return result;
-};
+}

@@ -6,8 +6,7 @@ let c0 = null;
 let c1 = null;
 let c2 = null;
 const PersistedStore = initializeDefault.PersistedStore;
-class ParentalConsentWarningStore extends PersistedStore {
-}
+class ParentalConsentWarningStore extends PersistedStore {}
 const prototype = ParentalConsentWarningStore.prototype;
 prototype["initialize"] = function initialize(lastWarningFetchDayStart) {
   let prop;
@@ -87,7 +86,7 @@ const items = [
     }
     obj[2] = warning;
     return obj;
-  }
+  },
 ];
 ParentalConsentWarningStore.migrations = items;
 const parentalConsentWarningStore = new ParentalConsentWarningStore(dispatcherDefault, {
@@ -113,7 +112,7 @@ const parentalConsentWarningStore = new ParentalConsentWarningStore(dispatcherDe
     c1 = null;
     c2 = null;
     parentalConsentWarningStore.persist();
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/parent_tools/ParentalConsentWarningStore.tsx");
 

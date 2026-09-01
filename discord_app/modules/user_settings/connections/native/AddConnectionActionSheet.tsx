@@ -17,7 +17,9 @@ function AddApplicationIdentityTableRow(application) {
   analyticsLocations = analyticsLocations(5953)(analyticsLocations(5973).ACTION_SHEET).analyticsLocations;
   const tmp3 = analyticsLocations(5953);
   let obj = Button;
-  const iconSource = application.getIconSource(obj.getIconSize(require("../../../../design/void/native.tsx").IconSizes.LARGE));
+  const iconSource = application.getIconSource(
+    obj.getIconSize(require("../../../../design/void/native.tsx").IconSizes.LARGE),
+  );
   obj = {
     start,
     end,
@@ -30,7 +32,7 @@ function AddApplicationIdentityTableRow(application) {
     },
     icon: null,
     trailing: null,
-    disabled: null
+    disabled: null,
   };
   let tmp7Result = null;
   if (null != iconSource) {
@@ -42,7 +44,11 @@ function AddApplicationIdentityTableRow(application) {
   obj[4] = tmp7Result;
   obj[5] = closure_5(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow.Arrow, {});
   obj[6] = !canStartAuthorization;
-  return closure_5(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, obj, application.id);
+  return closure_5(
+    require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow,
+    obj,
+    application.id,
+  );
 }
 const AnalyticsLocations = ME.AnalyticsLocations;
 let closure_4 = items2.getMigratedApplicationIdentityConnectionsScreenApplications;
@@ -103,17 +109,20 @@ export default function AddConnectionActionSheet() {
           closure_1_1(closure_1_2[15])(obj);
         },
         icon: null,
-        trailing: null
+        trailing: null,
       };
       let tmp2Result = tmp2(tmp3[16]);
       tmp2Result = tmp2(tmp3[17]);
-      obj = { source: tmp2Result.makeSource(tmp2Result.isThemeDark(type) ? icon.darkPNG : icon.lightPNG), disableColor: true };
+      obj = {
+        source: tmp2Result.makeSource(tmp2Result.isThemeDark(type) ? icon.darkPNG : icon.lightPNG),
+        disableColor: true,
+      };
       obj[4] = closure_1_5(callback(found1[4]).Icon, obj);
       obj[5] = closure_1_5(callback(found1[13]).TableRow.Arrow, {});
       return closure_1_5(callback(found1[13]).TableRow, obj, type);
-    })
+    }),
   ];
   obj1[2] = items;
   obj[3] = callback3(_require(found1[12]).BottomSheetScrollView, obj1);
   return callback2(_require(found1[9]).BottomSheet, obj);
-};
+}

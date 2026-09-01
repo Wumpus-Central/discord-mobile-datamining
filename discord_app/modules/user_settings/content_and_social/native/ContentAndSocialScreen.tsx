@@ -17,34 +17,49 @@ require = arg1;
 createCacheKey = { loadingIndicator: null, emptyContainer: null };
 createCacheKey = { marginTop: ThemesDefault.space.PX_32 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, gap: ThemesDefault.space.PX_4, marginTop: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[1] = {
+  flex: 1,
+  gap: ThemesDefault.space.PX_4,
+  marginTop: ThemesDefault.space.PX_24,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flex: 1, gap: ThemesDefault.space.PX_4, marginTop: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/ContentAndSocialScreen.tsx");
+let obj1 = {
+  flex: 1,
+  gap: ThemesDefault.space.PX_4,
+  marginTop: ThemesDefault.space.PX_24,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/content_and_social/native/ContentAndSocialScreen.tsx",
+);
 
 export default function ContentAndSocialSettings(route) {
   route = route.route;
   let memo;
   let first;
   memo = React.useMemo(() => {
-    const items = [, ];
+    const items = [,];
     ({ CONTENT_AND_SOCIAL_DISCORD: arr[0], CONNECTED_GAMES: arr[1] } = closure_7);
     return items;
   }, []);
-  first = callback(React.useState(() => {
-    let tab;
-    if (route != null) {
-      const params = route.params;
-      if (params != null) {
-        tab = params.tab;
+  first = callback(
+    React.useState(() => {
+      let tab;
+      if (route != null) {
+        const params = route.params;
+        if (params != null) {
+          tab = params.tab;
+        }
       }
-    }
-    let num = 0;
-    if (tab === closure_1_7.CONNECTED_GAMES) {
-      num = 1;
-    }
-    return num;
-  }), 2)[0];
+      let num = 0;
+      if (tab === closure_1_7.CONNECTED_GAMES) {
+        num = 1;
+      }
+      return num;
+    }),
+    2,
+  )[0];
   let items = [first, memo];
   const node = React.useMemo(() => {
     let obj = route(first[14]);
@@ -52,7 +67,7 @@ export default function ContentAndSocialSettings(route) {
     return obj.createSegmentedControl(obj);
   }, items);
   return callback2(memo(first[16]), { node });
-};
+}
 export const DiscordPermissionsPage = function DiscordPermissionsPage() {
   let obj = allServersOptionSelected(memo[12]);
   allServersOptionSelected = obj.useAllServersOptionSelected();
@@ -66,7 +81,7 @@ export const DiscordPermissionsPage = function DiscordPermissionsPage() {
     let obj2 = sensitiveContentFilterHelpArticle(memo[9]);
     obj[0] = obj2.getArticleURL(sensitiveContentFilterHelpArticle);
     obj[1] = intl.format(allServersOptionSelected(memo[8]).t.dliU4j, obj);
-    const items1 = [obj, , , ];
+    const items1 = [obj, , ,];
     obj = { settings: items2, subLabel: null };
     items2 = [closure_1_7.DIRECT_MESSAGE_SPAM_FILTER];
     const intl2 = allServersOptionSelected(memo[8]).intl;
@@ -95,14 +110,18 @@ export const DiscordPermissionsPage = function DiscordPermissionsPage() {
     obj4[2] = intl6.string(allServersOptionSelected(memo[8]).t.R9fXyS);
     items1[3] = obj4;
     const items5 = [...items1];
-    const items6 = [, , ];
-    ({ SAFETY_GUILD_SETTING_GUILD_SELECT: arr7[0], SAFETY_GUILD_SETTING_DIRECT_MESSAGES: arr7[1], SAFETY_GUILD_SETTING_MESSAGE_REQUESTS: arr7[2] } = closure_1_7);
+    const items6 = [, ,];
+    ({
+      SAFETY_GUILD_SETTING_GUILD_SELECT: arr7[0],
+      SAFETY_GUILD_SETTING_DIRECT_MESSAGES: arr7[1],
+      SAFETY_GUILD_SETTING_MESSAGE_REQUESTS: arr7[2],
+    } = closure_1_7);
     obj5 = { label: null, settings: null };
     const intl7 = allServersOptionSelected(memo[8]).intl;
     obj5[0] = intl7.string(allServersOptionSelected(memo[8]).t["6x5uWQ"]);
     const items7 = [closure_1_7.ACTIVITY_PRIVACY_SHARE_MY_ACTIVITY];
     obj5[1] = items7;
-    const items8 = [obj5, , , , , , , , , ];
+    const items8 = [obj5, , , , , , , , ,];
     const items9 = [closure_1_7.ACTIVITY_PRIVACY_DEFAULT_SHARING];
     items8[1] = { settings: items9 };
     const items10 = [closure_1_7.NOTIFY_FRIENDS_ON_COME_ONLINE];
@@ -122,8 +141,12 @@ export const DiscordPermissionsPage = function DiscordPermissionsPage() {
     const obj7 = { label: null, settings: null };
     const intl9 = tmp2(tmp3[8]).intl;
     obj7[0] = intl9.string(allServersOptionSelected(memo[8]).t.XlGG9c);
-    const items12 = [, , ];
-    ({ SAFETY_SEND_FRIEND_REQUESTS_EVERYONE: arr13[0], SAFETY_SEND_FRIEND_REQUESTS_MUTUAL_FRIENDS: arr13[1], SAFETY_SEND_FRIEND_REQUESTS_MUTUAL_GUILDS: arr13[2] } = closure_1_7);
+    const items12 = [, ,];
+    ({
+      SAFETY_SEND_FRIEND_REQUESTS_EVERYONE: arr13[0],
+      SAFETY_SEND_FRIEND_REQUESTS_MUTUAL_FRIENDS: arr13[1],
+      SAFETY_SEND_FRIEND_REQUESTS_MUTUAL_GUILDS: arr13[2],
+    } = closure_1_7);
     obj7[1] = items12;
     items8[4] = obj7;
     const items13 = [closure_1_7.FRIEND_REQUEST_NOTES];
@@ -131,29 +154,39 @@ export const DiscordPermissionsPage = function DiscordPermissionsPage() {
     obj8 = { label: null, settings: null, subLabel: null };
     const intl10 = tmp2(tmp3[8]).intl;
     obj8[0] = intl10.string(allServersOptionSelected(memo[8]).t["3wRort"]);
-    const items14 = [, ];
+    const items14 = [,];
     ({ ACCOUNT_BLOCKED_USERS_V2: arr15[0], ACCOUNT_IGNORED_USERS: arr15[1] } = closure_1_7);
     obj8[1] = items14;
     const intl11 = tmp2(tmp3[8]).intl;
-    const obj9 = { helpArticle: sensitiveContentFilterHelpArticle(memo[9]).getArticleURL(closure_1_8.STEALTH_REMEDIATION_FEATURE_GUIDE) };
+    const obj9 = {
+      helpArticle: sensitiveContentFilterHelpArticle(memo[9]).getArticleURL(
+        closure_1_8.STEALTH_REMEDIATION_FEATURE_GUIDE,
+      ),
+    };
     obj8[2] = intl11.format(allServersOptionSelected(memo[8]).t["0aNQo9"], obj9);
     items8[6] = obj8;
     const obj10 = { label: null, settings: null, subLabel: null };
     const intl12 = tmp2(tmp3[8]).intl;
     obj10[0] = intl12.string(allServersOptionSelected(memo[8]).t.bGSsnc);
-    const items15 = [, , ];
-    ({ SYNC_CONTACTS: arr16[0], SYNC_CONTACTS_NAME: arr16[1], STAFF_ONLY_FIND_YOUR_FRIENDS_DELETION: arr16[2] } = closure_1_7);
+    const items15 = [, ,];
+    ({
+      SYNC_CONTACTS: arr16[0],
+      SYNC_CONTACTS_NAME: arr16[1],
+      STAFF_ONLY_FIND_YOUR_FRIENDS_DELETION: arr16[2],
+    } = closure_1_7);
     obj10[1] = items15;
     const intl13 = tmp2(tmp3[8]).intl;
     const tmp4 = sensitiveContentFilterHelpArticle;
     const tmp4Result = sensitiveContentFilterHelpArticle(memo[9]);
     const tmp5 = closure_1_8;
-    obj10[2] = intl13.format(allServersOptionSelected(memo[8]).t["TWz/S+"], { onClick: allServersOptionSelected(memo[11]).handleOpenLearnMoreLink });
+    obj10[2] = intl13.format(allServersOptionSelected(memo[8]).t["TWz/S+"], {
+      onClick: allServersOptionSelected(memo[11]).handleOpenLearnMoreLink,
+    });
     items8[7] = obj10;
     const obj12 = { label: null, settings: null };
     const intl14 = tmp2(tmp3[8]).intl;
     obj12[0] = intl14.string(allServersOptionSelected(memo[8]).t["aBZ/oQ"]);
-    const items16 = [, ];
+    const items16 = [,];
     ({ DISCOVERY_BY_PHONE: arr17[0], DISCOVERY_BY_EMAIL: arr17[1] } = closure_1_7);
     obj12[1] = items16;
     items8[8] = obj12;
@@ -176,7 +209,10 @@ export const DiscordPermissionsPage = function DiscordPermissionsPage() {
   obj = { screen: null };
   let obj2 = allServersOptionSelected(memo[13]);
   obj[0] = allServersOptionSelected(memo[15]).SettingsScreen.CONTENT_AND_SOCIAL;
-  let items2 = [callback2(sensitiveContentFilterHelpArticle(memo[15]), obj), callback2(sensitiveContentFilterHelpArticle(memo[16]), { node: memo1 })];
+  let items2 = [
+    callback2(sensitiveContentFilterHelpArticle(memo[15]), obj),
+    callback2(sensitiveContentFilterHelpArticle(memo[16]), { node: memo1 }),
+  ];
   obj[0] = items2;
   return callback3(closure_10, obj);
 };
@@ -193,7 +229,7 @@ export const ConnectedGamesPage = function ConnectedGamesPage() {
     obj1 = { variant: "text-md/semibold", color: "text-strong", children: null };
     let intl = getSystemLocale.intl;
     obj1[2] = intl.string(getSystemLocale.t["+0U77d"]);
-    let items = [callback2(Text.Text, obj1), ];
+    let items = [callback2(Text.Text, obj1)];
     let obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
     let intl2 = getSystemLocale.intl;
     const obj3 = { helpdeskArticle: null };

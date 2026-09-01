@@ -14,7 +14,9 @@ require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles(() => ({ text: { flexShrink: 1 }, pressable: { flex: 1 } }));
-const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorDisplay.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/custom_typing_indicator/native/CustomTypingIndicatorDisplay.tsx",
+);
 
 export default function CustomTypingIndicatorDisplay(showName) {
   ({ config, username, showEmojis } = showName);
@@ -41,7 +43,10 @@ export default function CustomTypingIndicatorDisplay(showName) {
       obj1 = items2;
       let obj = { name: null };
       obj[0] = username;
-      let formatResult = intl2.format(obj1.getCustomTypingIndicatorSuggestionWithNameMessage(config.typingSuggestion), obj);
+      let formatResult = intl2.format(
+        obj1.getCustomTypingIndicatorSuggestionWithNameMessage(config.typingSuggestion),
+        obj,
+      );
       let tmp3 = require;
     }
     let str = "flex-start";
@@ -57,8 +62,17 @@ export default function CustomTypingIndicatorDisplay(showName) {
       obj1[1] = num;
       tmp10 = callback(CustomTypingIndicatorGlyphDefault, obj1);
     }
-    const items = [tmp10, ];
-    const obj2 = { style: null, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, maxFontSizeMultiplier: 2, includeFontPadding: true, ellipsizeMode: "tail", children: null };
+    const items = [tmp10];
+    const obj2 = {
+      style: null,
+      variant: "text-xs/medium",
+      color: "interactive-text-default",
+      lineClamp: 1,
+      maxFontSizeMultiplier: 2,
+      includeFontPadding: true,
+      ellipsizeMode: "tail",
+      children: null,
+    };
     obj2[0] = tmp.text;
     obj2[7] = formatResult;
     items[1] = callback(Text.Text, obj2);
@@ -79,4 +93,4 @@ export default function CustomTypingIndicatorDisplay(showName) {
   const intl = getSystemLocale.intl;
   obj = items2;
   formatResult = intl.string(obj.getCustomTypingIndicatorSuggestionMessage(config.typingSuggestion));
-};
+}

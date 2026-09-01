@@ -5,4 +5,4 @@ const result = set.fileFinishedImporting("modules/guilds_bar/native/utils/areGui
 
 export default function areGuildsBarFastListStatesEqual(version, version2) {
   return version.version === version2.version;
-};
+}

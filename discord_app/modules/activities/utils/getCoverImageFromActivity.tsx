@@ -20,4 +20,4 @@ export default function getCoverImageFromActivity(assets, application_id) {
     }
   }
   return assetImage;
-};
+}

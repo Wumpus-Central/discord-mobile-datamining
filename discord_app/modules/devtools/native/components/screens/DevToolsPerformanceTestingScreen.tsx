@@ -21,27 +21,36 @@ const memoResult = importAllResult.memo(function DevToolsPerformanceTestingScree
   obj1 = { hasIcons: true, children: null };
   const entries = Object.entries(require("../DevToolsScreens.tsx").PerformanceTestingScreens);
   obj1[1] = entries.map((arg0) => {
-    [tmp, ] = arg0;
-    return closure_1_4(callback(closure_1_2[9]).TableRow, {
-      label: tmp2,
-      icon: closure_1_4(callback(closure_1_2[9]).TableRow.Icon, { IconComponent: tmp3 }),
-      arrow: true,
-      onPress() {
-        let arr = closure_1_0;
-        if (null != closure_1_0.push) {
-          arr = arr.push(callback);
-        } else {
-          let obj = callback(closure_2_2[10]);
-          obj = { screenKey: null };
-          obj[0] = callback;
-          obj.navigateToDevTools(obj);
-        }
-      }
-    }, tmp);
+    [tmp] = arg0;
+    return closure_1_4(
+      callback(closure_1_2[9]).TableRow,
+      {
+        label: tmp2,
+        icon: closure_1_4(callback(closure_1_2[9]).TableRow.Icon, { IconComponent: tmp3 }),
+        arrow: true,
+        onPress() {
+          let arr = closure_1_0;
+          if (null != closure_1_0.push) {
+            arr = arr.push(callback);
+          } else {
+            let obj = callback(closure_2_2[10]);
+            obj = { screenKey: null };
+            obj[0] = callback;
+            obj.navigateToDevTools(obj);
+          }
+        },
+      },
+      tmp,
+    );
   });
-  obj[2] = jsx(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, { hasIcons: true, children: null });
+  obj[2] = jsx(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, {
+    hasIcons: true,
+    children: null,
+  });
   return <ScrollView paddingBottom={useSafeAreaInsetsDefault().bottom + ThemesDefault.space.PX_16} />;
 });
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsPerformanceTestingScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsPerformanceTestingScreen.tsx",
+);
 
 export default memoResult;

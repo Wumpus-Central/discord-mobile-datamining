@@ -48,7 +48,7 @@ function LeftPanelContent(panelStyles) {
     return items;
   }, items1);
   const memo1 = obj1.useMemo(() => {
-    const items = [first.side, ];
+    const items = [first.side];
     let sideTablet = isChatBesideChannelList;
     if (isChatBesideChannelList) {
       sideTablet = first.sideTablet;
@@ -62,17 +62,20 @@ function LeftPanelContent(panelStyles) {
     num = 1;
   }
   obj = { activeIndex: num, children: null };
-  const items3 = [callback2(isChatBesideChannelList(top[13]), { style: memo1 }), callback2(isChatBesideChannelList(top[14]), { style: memo1, selectedGuildId: tmp11, selectedChannelId: tmp4[1] })];
+  const items3 = [
+    callback2(isChatBesideChannelList(top[13]), { style: memo1 }),
+    callback2(isChatBesideChannelList(top[14]), { style: memo1, selectedGuildId: tmp11, selectedChannelId: tmp4[1] }),
+  ];
   obj[1] = items3;
   const tmp15Result = closure_10(first(top[12]).NativeFreezeScreens, obj);
-  const items4 = [absoluteFill.absoluteFill, ];
+  const items4 = [absoluteFill.absoluteFill];
   let tmp19;
   if (isChatBesideChannelList) {
     tmp19 = sum;
   }
   obj = { style: items4, children: null };
   items4[1] = { width: tmp19 };
-  const items5 = [callback2(first(top[15]).HomePanelContent, {}), ];
+  const items5 = [callback2(first(top[15]).HomePanelContent, {})];
   if (null == panelStyles) {
     obj1 = { style: null, pointerEvents: "box-none", nativeID: "messages-parent-view", children: null };
     obj1[0] = memo;
@@ -104,7 +107,18 @@ const DM_WIDTH = ME.DM_WIDTH;
 ME = ME.ME;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let obj = { fill: { flex: 1 }, sideContainer: null, side: null, sideTablet: null };
-obj = { position: "absolute", top: 0, left: DM_WIDTH, bottom: 0, right: 0, flexDirection: "row", borderLeftWidth: 1, borderTopWidth: 1, borderColor: ThemesDefault.colors.APP_FRAME_BORDER, borderTopLeftRadius: ThemesDefault.radii.xl };
+obj = {
+  position: "absolute",
+  top: 0,
+  left: DM_WIDTH,
+  bottom: 0,
+  right: 0,
+  flexDirection: "row",
+  borderLeftWidth: 1,
+  borderTopWidth: 1,
+  borderColor: ThemesDefault.colors.APP_FRAME_BORDER,
+  borderTopLeftRadius: ThemesDefault.radii.xl,
+};
 obj[1] = obj;
 createCacheKey = { borderTopLeftRadius: ThemesDefault.radii.xl - 1, borderTopRightRadius: ThemesDefault.radii.none };
 obj[2] = createCacheKey;

@@ -58,7 +58,9 @@ function CameraPreview(arg0) {
   let isViewingActivity = obj3.useIsViewingActivity(obj);
   let obj5 = ref(589);
   const items1 = [closure_12];
-  const tmp13 = obj5.useStateFromStores(items1, () => lib.getVoiceCallOverlayLayoutStates())[constants.CAMERA_PREVIEW_PICTURE_IN_PICTURE];
+  const tmp13 = obj5.useStateFromStores(items1, () => lib.getVoiceCallOverlayLayoutStates())[
+    constants.CAMERA_PREVIEW_PICTURE_IN_PICTURE
+  ];
   const OrientationType = ref(8603).OrientationType;
   const tmp14 = isScreenLandscape ? OrientationType.LANDSCAPE : OrientationType.PORTRAIT;
   callback = tmp14;
@@ -156,11 +158,19 @@ function CameraPreview(arg0) {
     obj3[1] = callback2(closure_6, obj4);
     tmp32 = callback2(tmp(5652).GestureDetector, obj3);
   }
-  const items7 = [tmp32, ];
+  const items7 = [tmp32];
   obj5 = { style: closure_5.absoluteFill, pointerEvents: "box-none", children: null };
   const obj6 = { style: items8, pointerEvents: "box-none", children: null };
   items8 = [{ flex: 1, marginLeft: left + c15, marginRight: right + c15 }, animatedStyle];
-  const obj8 = { channel, preferredPosition: tmp6[0], onMove: tmp6[1], isInCallScreen: true, marginTop: first, marginBottom: first1, children: null };
+  const obj8 = {
+    channel,
+    preferredPosition: tmp6[0],
+    onMove: tmp6[1],
+    isInCallScreen: true,
+    marginTop: first,
+    marginBottom: first1,
+    children: null,
+  };
   let tmp4Result = tmp4(9537);
   const obj9 = { ref, disabled: null, trigger: null, rows: null, onOpen: null, onClose: null };
   tmp4Result = tmp4(9555);
@@ -189,13 +199,22 @@ function CameraPreview(arg0) {
   return closure_23(closure_22, obj10);
 }
 ({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
-({ VoiceChatDrawerState: closure_14, VOICE_CALL_OVERLAY_HORIZONTAL_MARGIN: closure_15, VOICE_CALL_OVERLAY_VERTICAL_MARGIN: closure_16, VoiceCallOverlayType: closure_17 } = BOX_MODE_ACTIONSHEET_WIDTH);
+({
+  VoiceChatDrawerState: closure_14,
+  VOICE_CALL_OVERLAY_HORIZONTAL_MARGIN: closure_15,
+  VOICE_CALL_OVERLAY_VERTICAL_MARGIN: closure_16,
+  VoiceCallOverlayType: closure_17,
+} = BOX_MODE_ACTIONSHEET_WIDTH);
 ({ ParticipantTypes: closure_19, isStreamParticipant: closure_20 } = ParticipantTypes);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
-let closure_24 = { code: "function CameraPreviewTsx1(){const{closeFunc,runOnJS}=this.__closure;if(closeFunc!=null){runOnJS(closeFunc)();}}" };
+let closure_24 = {
+  code: "function CameraPreviewTsx1(){const{closeFunc,runOnJS}=this.__closure;if(closeFunc!=null){runOnJS(closeFunc)();}}",
+};
 let obj = { duration: 250, easing: require("Button").STANDARD_EASING };
 let closure_26 = { HIDE_PIP: "HIDE_PIP", HANDLE_THERMAL_EVENT: "HANDLE_THERMAL_EVENT" };
-let closure_27 = { code: "function CameraPreviewTsx2(){const{withTiming,marginTopState,TIMING_CONFIG,marginBottomState}=this.__closure;return{marginTop:withTiming(marginTopState,TIMING_CONFIG),marginBottom:withTiming(marginBottomState,TIMING_CONFIG)};}" };
+let closure_27 = {
+  code: "function CameraPreviewTsx2(){const{withTiming,marginTopState,TIMING_CONFIG,marginBottomState}=this.__closure;return{marginTop:withTiming(marginTopState,TIMING_CONFIG),marginBottom:withTiming(marginBottomState,TIMING_CONFIG)};}",
+};
 let result = require("set").fileFinishedImporting("modules/video_calls/native/components/CameraPreview.tsx");
 
 export default function CameraPreviewContainer(channel) {
@@ -247,7 +266,10 @@ export default function CameraPreviewContainer(channel) {
       const participants = closure_1_8.getParticipants(currentEmbeddedActivity.id);
       found = participants.find((id) => {
         obj = currentEmbeddedActivity(closure_1_2[37]);
-        obj = { applicationId: currentEmbeddedActivity.applicationId, instanceId: currentEmbeddedActivity.compositeInstanceId };
+        obj = {
+          applicationId: currentEmbeddedActivity.applicationId,
+          instanceId: currentEmbeddedActivity.compositeInstanceId,
+        };
         return id.id === obj.getEmbeddedActivityParticipantId(obj);
       });
     }
@@ -387,7 +409,9 @@ export default function CameraPreviewContainer(channel) {
   });
   const tmp4Result3 = channel(589);
   const items5 = [closure_8];
-  const stateFromStores5 = channel(589).useStateFromStores(items5, () => closure_1_8.getSelectedParticipant(channel.id));
+  const stateFromStores5 = channel(589).useStateFromStores(items5, () =>
+    closure_1_8.getSelectedParticipant(channel.id),
+  );
   const tmp19 = flag(9539)(channel.id);
   let tmp20 = null;
   if (null != tmp19) {
@@ -422,7 +446,9 @@ export default function CameraPreviewContainer(channel) {
   }
   const tmp4Result4 = channel(589);
   const items6 = [closure_12];
-  const stateFromStores6 = channel(589).useStateFromStores(items6, () => pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream());
+  const stateFromStores6 = channel(589).useStateFromStores(items6, () =>
+    pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream(),
+  );
   if (flag2) {
     flag2 = channel.isGuildStageVoice();
   }
@@ -446,4 +472,4 @@ export default function CameraPreviewContainer(channel) {
   } else {
     tmp25 = null;
   }
-};
+}

@@ -14,7 +14,15 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
     num = 80;
   }
   let obj = { container: null, header: null, body: null, buttonWrapper: null };
-  obj = { alignItems: "center", justifyContent: "center", flex: 1, padding: 16, paddingTop: 0, paddingBottom: num, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+  obj = {
+    alignItems: "center",
+    justifyContent: "center",
+    flex: 1,
+    padding: 16,
+    paddingTop: 0,
+    paddingBottom: num,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  };
   obj[0] = obj;
   obj[1] = { marginTop: 16 };
   obj[2] = { marginTop: 8, lineHeight: 20, textAlign: "center" };
@@ -71,7 +79,13 @@ export default function AgeGateUnderage(onClose) {
   if (!tmp3) {
     tmp12 = callback(tmp(tmp2[11]), {});
   }
-  const items1 = [tmp12, callback(existingUser(flag2[12]), {}), callback(onClose(flag2[13]).ShieldSpotIllustration, {}), , , ];
+  const items1 = [
+    tmp12,
+    callback(existingUser(flag2[12]), {}),
+    callback(onClose(flag2[13]).ShieldSpotIllustration, {}),
+    ,
+    ,
+  ];
   obj = { style: tmp4.header, children: stringResult };
   items1[3] = callback(existingUser(flag2[14]), obj);
   obj1 = { style: tmp4.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
@@ -98,7 +112,7 @@ export default function AgeGateUnderage(onClose) {
     obj4[0] = tmp4.body;
     const intl4 = tmp5(tmp2[10]).intl;
     obj4[3] = intl4.format(tmp5(tmp2[10]).t["3axQdB"], { days: 30 });
-    const items2 = [tmp14(tmp5(tmp2[15]).Text, obj4), ];
+    const items2 = [tmp14(tmp5(tmp2[15]).Text, obj4)];
     const obj5 = { style: null, children: null };
     obj5[0] = tmp4.buttonWrapper;
     const obj6 = { onPress: null, text: null, grow: true };
@@ -113,4 +127,4 @@ export default function AgeGateUnderage(onClose) {
   items1[5] = tmp10Result;
   obj[1] = items1;
   return closure_8(View, obj);
-};
+}

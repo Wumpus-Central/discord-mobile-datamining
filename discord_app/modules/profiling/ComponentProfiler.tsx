@@ -2,8 +2,7 @@
 import closure_0 from "../../../_runtime/00019_noop.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
-class StatCollector {
-}
+class StatCollector {}
 const prototype = StatCollector.prototype;
 prototype["addValue"] = function addValue(arg0) {
   const self = this;
@@ -27,7 +26,7 @@ Object.defineProperty(prototype, "mean", {
   get: function mean() {
     return this.totalMicroseconds / this.count;
   },
-  set: undefined
+  set: undefined,
 });
 let closure_3 = {};
 let c4 = true;
@@ -35,38 +34,45 @@ const result = require("set").fileFinishedImporting("modules/profiling/Component
 
 export default function ComponentProfiler(arg0) {
   ({ id, children } = arg0);
-  return <React.Profiler id={id} onRender={React.useCallback((arg0, arg1, arg2) => {
-    if (closure_4) {
-      if (!(arg0 in dependencyMap)) {
-        if (typeof closure_2 !== "function") {
-          HermesBuiltin.throwTypeError();
+  return (
+    <React.Profiler
+      id={id}
+      onRender={React.useCallback((arg0, arg1, arg2) => {
+        if (closure_4) {
+          if (!(arg0 in dependencyMap)) {
+            if (typeof closure_2 !== "function") {
+              HermesBuiltin.throwTypeError();
+            }
+            const obj = { mount: null, update: null, nestedUpdate: null };
+            obj[0] = Object.create(closure_2.prototype);
+            if (typeof closure_2 !== "function") {
+              HermesBuiltin.throwTypeError();
+            }
+            obj[1] = Object.create(closure_2.prototype);
+            if (typeof closure_2 !== "function") {
+              HermesBuiltin.throwTypeError();
+            }
+            obj[2] = Object.create(closure_2.prototype);
+            dependencyMap[arg0] = obj;
+            const tmp3 = dependencyMap;
+          }
+          if ("mount" === arg1) {
+            const mount = dependencyMap[arg0].mount;
+            mount.addValue(arg2);
+          } else if ("update" === arg1) {
+            const update = dependencyMap[arg0].update;
+            update.addValue(arg2);
+          } else if ("nested-update" === arg1) {
+            const nestedUpdate = dependencyMap[arg0].nestedUpdate;
+            nestedUpdate.addValue(arg2);
+          }
         }
-        const obj = { mount: null, update: null, nestedUpdate: null };
-        obj[0] = Object.create(closure_2.prototype);
-        if (typeof closure_2 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        obj[1] = Object.create(closure_2.prototype);
-        if (typeof closure_2 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        obj[2] = Object.create(closure_2.prototype);
-        dependencyMap[arg0] = obj;
-        const tmp3 = dependencyMap;
-      }
-      if ("mount" === arg1) {
-        const mount = dependencyMap[arg0].mount;
-        mount.addValue(arg2);
-      } else if ("update" === arg1) {
-        const update = dependencyMap[arg0].update;
-        update.addValue(arg2);
-      } else if ("nested-update" === arg1) {
-        const nestedUpdate = dependencyMap[arg0].nestedUpdate;
-        nestedUpdate.addValue(arg2);
-      }
-    }
-  }, [])}>{children}</React.Profiler>;
-};
+      }, [])}
+    >
+      {children}
+    </React.Profiler>
+  );
+}
 export { StatCollector };
 export function clearComponentRenderStats() {
   closure_3 = {};
@@ -130,7 +136,8 @@ export const serializeComponentRenderAverages = function serializeComponentRende
   ${"|" + tmp + "|" + tmp2 + "|" + tmp3 + "|" + tmp4 + "|" + tmp5 + "|" + tmp6 + "|" + obj7.padEnd(20, " ") + "|\n"}`;
     const entries = Object.entries(closure_3);
     str = `Component Render Stats (microseconds):
-  ${"|" + tmp + "|" + tmp2 + "|" + tmp3 + "|" + tmp4 + "|" + tmp5 + "|" + tmp6 + "|" + obj7.padEnd(20, " ") + "|\n"}${arr.map((arg0) => {
+  ${"|" + tmp + "|" + tmp2 + "|" + tmp3 + "|" + tmp4 + "|" + tmp5 + "|" + tmp6 + "|" + obj7.padEnd(20, " ") + "|\n"}${arr.map(
+    (arg0) => {
       [arr, tmp] = arg0;
       let num = 20;
       if (arr.length <= 20) {
@@ -183,8 +190,25 @@ export const serializeComponentRenderAverages = function serializeComponentRende
         num7 = str5.length;
       }
       const substr6 = str5.substring(0, num7);
-      return "|" + padEndResult + "|" + padEndResult1 + "|" + padEndResult2 + "|" + padEndResult3 + "|" + padEndResult4 + "|" + substr5.padEnd(8, " ") + "|" + substr6.padEnd(20, " ") + "|\n";
-    })}`;
+      return (
+        "|" +
+        padEndResult +
+        "|" +
+        padEndResult1 +
+        "|" +
+        padEndResult2 +
+        "|" +
+        padEndResult3 +
+        "|" +
+        padEndResult4 +
+        "|" +
+        substr5.padEnd(8, " ") +
+        "|" +
+        substr6.padEnd(20, " ") +
+        "|\n"
+      );
+    },
+  )}`;
     const padEndResult5 = substr5.padEnd(8, " ");
   }
   return str;

@@ -16,4 +16,4 @@ export default function RowCheckmark(selected) {
     tmp = jsx(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: null });
   }
   return tmp;
-};
+}

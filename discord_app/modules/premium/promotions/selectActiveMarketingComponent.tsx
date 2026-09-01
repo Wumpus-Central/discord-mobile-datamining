@@ -103,4 +103,4 @@ export default function selectActiveMarketingComponent(arr) {
     tmp = first;
   }
   return tmp;
-};
+}

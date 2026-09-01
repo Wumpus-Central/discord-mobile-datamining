@@ -15,10 +15,13 @@ const pressable = createToggle.createPressable({
   onPress: navigateToDevTools.navigateToDevTools,
   usePredicate: useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate,
   useSearchTerms: function getAdditionalSearchTerms() {
-    const items = [...Object.values(DevToolsScreens.DevToolsScreens), ...Object.values(DevToolsScreens.PerformanceTestingScreens)];
+    const items = [
+      ...Object.values(DevToolsScreens.DevToolsScreens),
+      ...Object.values(DevToolsScreens.PerformanceTestingScreens),
+    ];
     return items.map((headerTitle) => headerTitle.headerTitle);
   },
-  withArrow: true
+  withArrow: true,
 });
 const obj = {
   useTitle() {
@@ -29,10 +32,13 @@ const obj = {
   onPress: navigateToDevTools.navigateToDevTools,
   usePredicate: useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate,
   useSearchTerms: function getAdditionalSearchTerms() {
-    const items = [...Object.values(DevToolsScreens.DevToolsScreens), ...Object.values(DevToolsScreens.PerformanceTestingScreens)];
+    const items = [
+      ...Object.values(DevToolsScreens.DevToolsScreens),
+      ...Object.values(DevToolsScreens.PerformanceTestingScreens),
+    ];
     return items.map((headerTitle) => headerTitle.headerTitle);
   },
-  withArrow: true
+  withArrow: true,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ShowDevToolsSetting.tsx");
 

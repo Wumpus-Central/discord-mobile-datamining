@@ -21,7 +21,7 @@ const toggle = createToggle.createToggle({
   onValueChange: onUpcomingServerEventNotificationSettingsChanged.onUpcomingServerEventNotificationSettingsChanged,
   usePredicate: function useExperiment() {
     return apexExperiment.useUpcomingServerEventExperiment("tabsV2Settings").showSettingsToggle;
-  }
+  },
 });
 const obj = {
   useTitle() {
@@ -37,8 +37,10 @@ const obj = {
   onValueChange: onUpcomingServerEventNotificationSettingsChanged.onUpcomingServerEventNotificationSettingsChanged,
   usePredicate: function useExperiment() {
     return apexExperiment.useUpcomingServerEventExperiment("tabsV2Settings").showSettingsToggle;
-  }
+  },
 };
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/UpcomingServerEventNotificationSetting.tsx");
+const result = set.fileFinishedImporting(
+  "modules/user_settings/defs/native/UpcomingServerEventNotificationSetting.tsx",
+);
 
 export default toggle;

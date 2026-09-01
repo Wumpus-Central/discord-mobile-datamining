@@ -33,8 +33,8 @@ function Row(arg0) {
   obj[3] = tmp7;
   obj[4] = onPress;
   obj = { size: tmp2(1297).Icon.Sizes.MEDIUM, source: icon };
-  const items = [callback(Button.Icon, obj), , ];
-  const items1 = [tmp.rowLabel, ];
+  const items = [callback(Button.Icon, obj), ,];
+  const items1 = [tmp.rowLabel];
   let rowLabelSelected = selected;
   if (selected) {
     rowLabelSelected = tmp.rowLabelSelected;
@@ -47,24 +47,44 @@ function Row(arg0) {
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, row: null, rowLabel: null, rowLabelSelected: null, rowIndicator: null, separator: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = {
+  container: null,
+  row: null,
+  rowLabel: null,
+  rowLabelSelected: null,
+  rowIndicator: null,
+  separator: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignSelf: "stretch", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", padding: 16 };
+createCacheKey[1] = {
+  alignSelf: "stretch",
+  alignItems: "center",
+  flexDirection: "row",
+  justifyContent: "flex-start",
+  padding: 16,
+};
 let obj1 = {};
 const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_SUBTLE, 16));
 obj1.flexShrink = 1;
 obj1.marginHorizontal = 16;
 createCacheKey[2] = obj1;
 const obj2 = {};
-const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16));
+const merged1 = Object.assign(
+  importDefaultResult(Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16),
+);
 createCacheKey[3] = obj2;
 createCacheKey[4] = { marginStart: "auto" };
 const importDefaultResult1 = importDefaultResult;
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1, marginStart: 56 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const obj3 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1, marginStart: 56 };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/AllChannelsSwitch.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/AllChannelsSwitch.tsx",
+);
 
 export default function AllChannelsSwitch(style) {
   ({ channelAccessFormat, setChannelAccessFormat: require, disabled } = style);
@@ -82,7 +102,7 @@ export default function AllChannelsSwitch(style) {
     return callback(closure_1_4.SOME_CHANNELS_ACCESS);
   };
   obj[4] = disabled;
-  const items1 = [callback(Row, obj), , ];
+  const items1 = [callback(Row, obj), ,];
   obj = { style: tmp.separator };
   items1[1] = callback(View, obj);
   obj1 = { icon: registerAssetDefault2, label: null, selected: null, onPress: null, disabled: null };
@@ -96,4 +116,4 @@ export default function AllChannelsSwitch(style) {
   items1[2] = callback(Row, obj1);
   obj[3] = items1;
   return callback2(View, obj);
-};
+}

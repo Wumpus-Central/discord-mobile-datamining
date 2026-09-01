@@ -1,7 +1,9 @@
 // discord_app/design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx
 import closure_2 from "../../../../_runtime/00019_noop.js";
 
-let result = require("set").fileFinishedImporting("design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx");
+let result = require("set").fileFinishedImporting(
+  "design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx",
+);
 
 export default function useAccessibilityViewIsModalToggle(accessibilityViewIsModal) {
   let flag = accessibilityViewIsModal.accessibilityViewIsModal;
@@ -46,4 +48,4 @@ export default function useAccessibilityViewIsModalToggle(accessibilityViewIsMod
       callback(false);
     };
   }, items1);
-};
+}

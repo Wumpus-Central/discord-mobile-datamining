@@ -10,7 +10,9 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = { videoURI: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.mp4" };
+let closure_10 = {
+  videoURI: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.mp4",
+};
 createCacheKey = { videoContainer: null, bottomSheetWrapper: null, contentContainer: null, title: null, body: null };
 createCacheKey = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
@@ -41,7 +43,7 @@ export default function VoiceControlsToggleActionSheet(markAsDismissed) {
     onDismiss() {
       return markAsDismissed(closure_1_7.UNKNOWN);
     },
-    children: null
+    children: null,
   };
   obj = { style: tmp.bottomSheetWrapper, children: null };
   obj1 = {
@@ -54,10 +56,28 @@ export default function VoiceControlsToggleActionSheet(markAsDismissed) {
       }
       c1(result);
     },
-    children: null
+    children: null,
   };
-  const items1 = [callback2(importDefault(isScreenLandscape[11]), { style: tmp.videoContainer, src: closure_10, poster: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.png", width: tmp3, height: tmp3 / num, muted: true, paused: stateFromStores }), , , ];
-  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const items1 = [
+    callback2(importDefault(isScreenLandscape[11]), {
+      style: tmp.videoContainer,
+      src: closure_10,
+      poster: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.png",
+      width: tmp3,
+      height: tmp3 / num,
+      muted: true,
+      paused: stateFromStores,
+    }),
+    ,
+    ,
+  ];
+  const obj3 = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = tmp4(tmp5[13]).intl;
   obj3[4] = intl.string(markAsDismissed(isScreenLandscape[13]).t.pT6hue);
   items1[1] = callback2(markAsDismissed(isScreenLandscape[12]).Text, obj3);
@@ -69,7 +89,7 @@ export default function VoiceControlsToggleActionSheet(markAsDismissed) {
     onPress() {
       return markAsDismissed(closure_1_7.UNKNOWN);
     },
-    text: null
+    text: null,
   };
   const intl3 = tmp4(tmp5[13]).intl;
   obj5[1] = intl3.string(markAsDismissed(isScreenLandscape[13]).t["NX+WJN"]);
@@ -78,4 +98,4 @@ export default function VoiceControlsToggleActionSheet(markAsDismissed) {
   obj[1] = callback3(View, obj1);
   obj[2] = callback2(View, obj);
   return callback2(markAsDismissed(isScreenLandscape[10]).BottomSheet, obj);
-};
+}

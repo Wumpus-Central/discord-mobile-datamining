@@ -8,12 +8,23 @@ import ME from "../../../../Constants.tsx";
 require = arg1;
 const RPC_LOCAL_SCOPE = RPC_SCOPE_CONFIG.RPC_LOCAL_SCOPE;
 ({ TransportTypes: c5, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = RPC_SCOPE_CONFIG);
-({ ActivityGamePlatforms: closure_6, ActivityPartyPrivacy: error, ActivityTypes: closure_8, AnalyticEvents: c9, RPCErrors: c10 } = ME);
+({
+  ActivityGamePlatforms: closure_6,
+  ActivityPartyPrivacy: error,
+  ActivityTypes: closure_8,
+  AnalyticEvents: c9,
+  RPCErrors: c10,
+} = ME);
 let closure_11 = ["1402418171662569542"];
 let obj = {};
 obj = { scope: null, validation: null, handler: null };
 obj = {};
-let items = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];
+let items = [
+  require("set").OAuth2Scopes.RPC,
+  require("set").OAuth2Scopes.RPC_ACTIVITIES_WRITE,
+  RPC_LOCAL_SCOPE,
+  RPC_EMBEDDED_APP_SCOPE,
+];
 obj[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function validation(number) {
@@ -22,7 +33,22 @@ obj[1] = function validation(number) {
   const requiredResult = obj.required();
   obj[0] = number.number().min(0);
   let obj4 = createRpcJoiSchemaObjectDefault(number);
-  obj = { name: null, state: null, state_url: null, details: null, details_url: null, timestamps: null, assets: null, party: null, secrets: null, buttons: null, instance: null, supported_platforms: null, type: null, status_display_type: null };
+  obj = {
+    name: null,
+    state: null,
+    state_url: null,
+    details: null,
+    details_url: null,
+    timestamps: null,
+    assets: null,
+    party: null,
+    secrets: null,
+    buttons: null,
+    instance: null,
+    supported_platforms: null,
+    type: null,
+    status_display_type: null,
+  };
   const numberResult = number.number();
   const stringResult = number.string();
   obj[0] = number.string().min(1).max(128);
@@ -48,7 +74,15 @@ obj[1] = function validation(number) {
   obj1[1] = number.number().min(1);
   obj[5] = obj19.keys(obj1);
   const numberResult2 = number.number();
-  const obj2 = { large_image: null, large_text: null, large_url: null, small_image: null, small_text: null, small_url: null, invite_cover_image: null };
+  const obj2 = {
+    large_image: null,
+    large_text: null,
+    large_url: null,
+    small_image: null,
+    small_text: null,
+    small_url: null,
+    invite_cover_image: null,
+  };
   const obj23 = createRpcJoiSchemaObjectDefault(number);
   const stringResult5 = number.string();
   obj2[0] = number.string().min(1).max(300);
@@ -84,7 +118,7 @@ obj[1] = function validation(number) {
   obj3[1] = arrayResult.items(number.number().min(0)).length(2);
   const itemsResult = arrayResult.items(number.number().min(0));
   const numberResult4 = number.number();
-  const items = [, ];
+  const items = [,];
   ({ PRIVATE: arr2[0], PUBLIC: arr2[1] } = constants);
   obj3[2] = number.number().default(constants.PRIVATE).valid(items);
   obj[7] = obj41.keys(obj3);
@@ -124,10 +158,20 @@ obj[1] = function validation(number) {
   obj[11] = arrayResult1.items(number.string().min(1).max(32)).min(1).max(10);
   const minResult20 = arrayResult1.items(number.string().min(1).max(32)).min(1);
   const numberResult5 = number.number();
-  obj[12] = number.number().default(constants2.PLAYING).valid(constants2.PLAYING, constants2.LISTENING, constants2.WATCHING, constants2.COMPETING);
+  obj[12] = number
+    .number()
+    .default(constants2.PLAYING)
+    .valid(constants2.PLAYING, constants2.LISTENING, constants2.WATCHING, constants2.COMPETING);
   const defaultResult1 = number.number().default(constants2.PLAYING);
   const numberResult6 = number.number();
-  obj[13] = number.number().optional().valid(StatusDisplayTypes.StatusDisplayTypes.NAME, StatusDisplayTypes.StatusDisplayTypes.STATE, StatusDisplayTypes.StatusDisplayTypes.DETAILS);
+  obj[13] = number
+    .number()
+    .optional()
+    .valid(
+      StatusDisplayTypes.StatusDisplayTypes.NAME,
+      StatusDisplayTypes.StatusDisplayTypes.STATE,
+      StatusDisplayTypes.StatusDisplayTypes.DETAILS,
+    );
   const keys = obj4.keys(obj);
   obj[1] = keys.allow(null);
   return requiredResult.keys(obj);
@@ -153,7 +197,7 @@ obj[2] = function handler(socket) {
   if (!hasItem) {
     pid(tmp6[6])(socket);
   }
-  const items = [, , ];
+  const items = [, ,];
   ({ IPC: arr[0], WEBSOCKET: arr[1], POST_MESSAGE: arr[2] } = assets);
   if (items.includes(socket.transport)) {
     if (null == pid) {
@@ -278,7 +322,7 @@ obj[2] = function handler(socket) {
       } else {
         if (null != socket.application) {
           if (null != socket.application.id) {
-            const items2 = [, , ];
+            const items2 = [, ,];
             ({ large_image: arr2[0], small_image: arr2[1], invite_cover_image: arr2[2] } = assets);
             resolved = socket(activity[13]).fetchAssetIds(socket.application.id, items2);
             const obj7 = socket(activity[13]);
@@ -316,7 +360,15 @@ obj[2] = function handler(socket) {
           obj[4] = privacy;
           obj.dispatch(obj);
           ({ secrets, party } = activity);
-          obj = { application_id: null, type: null, name: null, status_display_type: null, details: null, state: null, has_urls: null };
+          obj = {
+            application_id: null,
+            type: null,
+            name: null,
+            status_display_type: null,
+            details: null,
+            state: null,
+            has_urls: null,
+          };
           obj[0] = socket.application.id;
           ({ type: obj3[1], name: obj3[2], status_display_type: obj3[3], details } = activity);
           if (details == null) {
@@ -374,7 +426,7 @@ obj[2] = function handler(socket) {
     obj[0] = constants3.INVALID_COMMAND;
     const _HermesInternal = HermesInternal;
     let tmp18 = pid(tmp6[7]);
-    tmp18 = new tmp18(obj, "command not available from \"" + socket.transport + "\" transport");
+    tmp18 = new tmp18(obj, 'command not available from "' + socket.transport + '" transport');
     throw tmp18;
   }
 };

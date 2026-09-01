@@ -8,17 +8,47 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 }, lastTypingUser: { marginEnd: 0 }, typingUser: null, dots: null, typingText: null, borderColor: null, borderColorPressed: null };
+createCacheKey = {
+  container: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 },
+  lastTypingUser: { marginEnd: 0 },
+  typingUser: null,
+  dots: null,
+  typingText: null,
+  borderColor: null,
+  borderColorPressed: null,
+};
 createCacheKey = { marginEnd: -8, borderWidth: 2, borderRadius: ThemesDefault.radii.round };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingVertical: ThemesDefault.space.PX_4, paddingLeft: 4, borderRadius: ThemesDefault.radii.lg, marginStart: -8, borderWidth: 4, marginEnd: 8, marginTop: -1, marginBottom: -1 };
+createCacheKey[3] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  paddingVertical: ThemesDefault.space.PX_4,
+  paddingLeft: 4,
+  borderRadius: ThemesDefault.radii.lg,
+  marginStart: -8,
+  borderWidth: 4,
+  marginEnd: 8,
+  marginTop: -1,
+  marginBottom: -1,
+};
 createCacheKey[4] = { flexShrink: 1 };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingVertical: ThemesDefault.space.PX_4, paddingLeft: 4, borderRadius: ThemesDefault.radii.lg, marginStart: -8, borderWidth: 4, marginEnd: 8, marginTop: -1, marginBottom: -1 };
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  paddingVertical: ThemesDefault.space.PX_4,
+  paddingLeft: 4,
+  borderRadius: ThemesDefault.radii.lg,
+  marginStart: -8,
+  borderWidth: 4,
+  marginEnd: 8,
+  marginTop: -1,
+  marginBottom: -1,
+};
 createCacheKey[5] = { color: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT };
 let obj2 = { color: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT };
 createCacheKey[6] = { color: ThemesDefault.colors.CARD_PRIMARY_PRESSED_BG };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let closure_7 = { code: "function ForumPostTypingUsersTsx1(){const{forumPostPressedIn,borderColorPressed,borderColor}=this.__closure;return{borderColor:forumPostPressedIn.value?borderColorPressed:borderColor};}" };
+let closure_7 = {
+  code: "function ForumPostTypingUsersTsx1(){const{forumPostPressedIn,borderColorPressed,borderColor}=this.__closure;return{borderColor:forumPostPressedIn.value?borderColorPressed:borderColor};}",
+};
 const obj3 = { color: ThemesDefault.colors.CARD_PRIMARY_PRESSED_BG };
 const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostTypingUsers.tsx");
 
@@ -63,19 +93,18 @@ export default function ForumPostTypingUsers(hasUnreads) {
       obj[0] = tmp.container;
       let items = [
         facepileUsers.map((getAvatarSource) => {
-              const items = [lib.typingUser, animatedStyle, ];
-              let lastTypingUser = arg1 === facepileUsers.length - 1;
-              if (lastTypingUser) {
-                lastTypingUser = lib.lastTypingUser;
-              }
-              let obj = { style: items, children: null };
-              items[2] = lastTypingUser;
-              obj = { source: getAvatarSource.getAvatarSource(guildId), size: lib(tmp2[9]).AvatarSizes.SIZE_16 };
-              obj[1] = forumPostContainerPressedIn(lib(color[9]).Avatar, obj);
-              return forumPostContainerPressedIn(facepileUsers(color[8]).View, obj, getAvatarSource.id);
-            }),
-  ,
-
+          const items = [lib.typingUser, animatedStyle];
+          let lastTypingUser = arg1 === facepileUsers.length - 1;
+          if (lastTypingUser) {
+            lastTypingUser = lib.lastTypingUser;
+          }
+          let obj = { style: items, children: null };
+          items[2] = lastTypingUser;
+          obj = { source: getAvatarSource.getAvatarSource(guildId), size: lib(tmp2[9]).AvatarSizes.SIZE_16 };
+          obj[1] = forumPostContainerPressedIn(lib(color[9]).Avatar, obj);
+          return forumPostContainerPressedIn(facepileUsers(color[8]).View, obj, getAvatarSource.id);
+        }),
+        ,
       ];
       obj1 = { style: null, children: null };
       const items1 = [tmp.dots, animatedStyle];
@@ -92,4 +121,4 @@ export default function ForumPostTypingUsers(hasUnreads) {
     }
   }
   return tmp10;
-};
+}

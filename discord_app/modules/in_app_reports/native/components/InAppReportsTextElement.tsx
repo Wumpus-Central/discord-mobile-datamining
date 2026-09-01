@@ -8,8 +8,14 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { marginBottom: 16, paddingHorizontal: 16 }, header: { marginBottom: 8 }, body: { marginBottom: 16 } });
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsTextElement.tsx");
+let closure_7 = createCacheKey.createStyles({
+  container: { marginBottom: 16, paddingHorizontal: 16 },
+  header: { marginBottom: 8 },
+  body: { marginBottom: 16 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsTextElement.tsx",
+);
 
 export default function TextElement(element) {
   const data = element.element.data;
@@ -28,7 +34,7 @@ export default function TextElement(element) {
         obj[3] = header;
         tmp7 = callback(Text.Text, obj);
       }
-      const items = [tmp7, ];
+      const items = [tmp7];
       let tmp10 = null != body;
       if (tmp10) {
         obj1 = { style: null, variant: "text-md/medium", children: null };
@@ -47,4 +53,4 @@ export default function TextElement(element) {
     tmp3 = tmp5Result;
   }
   return tmp3;
-};
+}

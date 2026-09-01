@@ -29,7 +29,22 @@ class MobileCustomMuxIntegration {
     SessionManager = require("generateSessionId").SessionManager;
     obj.sessionId = SessionManager.generateSessionId();
     obj.playerId = "discord-mobile-" + obj.sessionId;
-    obj = { player_is_paused: true, player_width: 0, player_height: 0, player_autoplay_on: false, player_preload_on: true, video_cdn: Cloudflare, video_series: global.contentMetadata.questId, video_producer: global.contentMetadata.gameId, video_brand: global.contentMetadata.gameName, video_title: global.contentMetadata.title, video_stream_type: global.contentMetadata.videoStreamType, video_source_url: global.contentMetadata.contentId, video_source_mime_type: null, video_source_duration: null };
+    obj = {
+      player_is_paused: true,
+      player_width: 0,
+      player_height: 0,
+      player_autoplay_on: false,
+      player_preload_on: true,
+      video_cdn: Cloudflare,
+      video_series: global.contentMetadata.questId,
+      video_producer: global.contentMetadata.gameId,
+      video_brand: global.contentMetadata.gameName,
+      video_title: global.contentMetadata.title,
+      video_stream_type: global.contentMetadata.videoStreamType,
+      video_source_url: global.contentMetadata.contentId,
+      video_source_mime_type: null,
+      video_source_duration: null,
+    };
     str = "video/mp4";
     if ("hls" === global.contentMetadata.videoStreamType) {
       str = "application/x-mpegURL";
@@ -76,7 +91,10 @@ prototype["updateVideoDimensions"] = function updateVideoDimensions(player_width
   this.videoState.player_width = player_width;
   this.videoState.player_height = player_height;
 };
-prototype["updateVideoSourceDimensions"] = function updateVideoSourceDimensions(video_source_width, video_source_height) {
+prototype["updateVideoSourceDimensions"] = function updateVideoSourceDimensions(
+  video_source_width,
+  video_source_height,
+) {
   this.videoState.video_source_width = video_source_width;
   this.videoState.video_source_height = video_source_height;
 };
@@ -324,7 +342,28 @@ prototype["hasPlayStarted"] = function hasPlayStarted() {
 };
 prototype["mapConfigToMuxData"] = function mapConfigToMuxData(muxEnvKey) {
   const self = this;
-  const obj = { env_key: muxEnvKey, session_id: this.sessionId, player_name: "discord-mobile", player_version: c4, player_software_name: "react-native-video", player_software_version: "5.2.1-discord", player_mux_plugin_name: "discord-mobile-custom-integration", player_mux_plugin_version: c4, video_id: this.config.contentMetadata.contentId, video_title: this.config.contentMetadata.title, video_duration: this.config.contentMetadata.durationMs, video_content_type: this.config.contentMetadata.contentType, video_series: this.config.contentMetadata.questId, video_producer: this.config.contentMetadata.gameId, video_brand: null, video_cdn: null, video_stream_type: null, view_client_application_name: null, view_client_application_version: null, experiment_name: null };
+  const obj = {
+    env_key: muxEnvKey,
+    session_id: this.sessionId,
+    player_name: "discord-mobile",
+    player_version: c4,
+    player_software_name: "react-native-video",
+    player_software_version: "5.2.1-discord",
+    player_mux_plugin_name: "discord-mobile-custom-integration",
+    player_mux_plugin_version: c4,
+    video_id: this.config.contentMetadata.contentId,
+    video_title: this.config.contentMetadata.title,
+    video_duration: this.config.contentMetadata.durationMs,
+    video_content_type: this.config.contentMetadata.contentType,
+    video_series: this.config.contentMetadata.questId,
+    video_producer: this.config.contentMetadata.gameId,
+    video_brand: null,
+    video_cdn: null,
+    video_stream_type: null,
+    view_client_application_name: null,
+    view_client_application_version: null,
+    experiment_name: null,
+  };
   let str = this.config.contentMetadata.gameName;
   if (str == null) {
     str = "Discord";

@@ -7,8 +7,16 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 let c3 = importAllResult;
-let closure_6 = createCacheKey.createStyleProperties({ muted: ThemesDefault.colors.TEXT_MUTED, normal: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_TEXT });
-let obj = { muted: ThemesDefault.colors.TEXT_MUTED, normal: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_TEXT };
+let closure_6 = createCacheKey.createStyleProperties({
+  muted: ThemesDefault.colors.TEXT_MUTED,
+  normal: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT,
+  unreadOrConnected: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_TEXT,
+});
+let obj = {
+  muted: ThemesDefault.colors.TEXT_MUTED,
+  normal: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT,
+  unreadOrConnected: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_TEXT,
+};
 const memoResult = importAllResult.memo(function ChannelTitle(unread) {
   ({ title, muted } = unread);
   unread = unread.unread;
@@ -36,12 +44,24 @@ const memoResult = importAllResult.memo(function ChannelTitle(unread) {
     }
     return { color, paddingRight: 4, flexShrink: 1 };
   }, items);
-  const obj = { variant: unread(resolvedUnreadSetting[5])().channelName.text.variant, lineClamp: 1, maxFontSizeMultiplier: 1.75, style: memo, children: null };
+  const obj = {
+    variant: unread(resolvedUnreadSetting[5])().channelName.text.variant,
+    lineClamp: 1,
+    maxFontSizeMultiplier: 1.75,
+    style: memo,
+    children: null,
+  };
   if (title == null) {
     title = "";
   }
   obj[4] = title;
-  return jsx(muted(resolvedUnreadSetting[6]).Text, { variant: unread(resolvedUnreadSetting[5])().channelName.text.variant, lineClamp: 1, maxFontSizeMultiplier: 1.75, style: memo, children: null });
+  return jsx(muted(resolvedUnreadSetting[6]).Text, {
+    variant: unread(resolvedUnreadSetting[5])().channelName.text.variant,
+    lineClamp: 1,
+    maxFontSizeMultiplier: 1.75,
+    style: memo,
+    children: null,
+  });
 });
 const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/ChannelTitle.tsx");
 

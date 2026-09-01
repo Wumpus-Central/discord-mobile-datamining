@@ -14,8 +14,7 @@ function handleUpdate(sessions) {
 let closure_3 = Object.freeze([]);
 let closure_4 = {};
 const Store = initializeDefault.Store;
-class SessionsStore extends Store {
-}
+class SessionsStore extends Store {}
 const prototype = SessionsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2);
@@ -98,7 +97,10 @@ prototype["getRemoteApplicationActivity"] = function getRemoteApplicationActivit
   }
 };
 SessionsStore.displayName = "SessionsStore";
-const sessionsStore = new SessionsStore(dispatcherDefault, { CONNECTION_OPEN: handleUpdate, SESSIONS_REPLACE: handleUpdate });
+const sessionsStore = new SessionsStore(dispatcherDefault, {
+  CONNECTION_OPEN: handleUpdate,
+  SESSIONS_REPLACE: handleUpdate,
+});
 const result = require("set").fileFinishedImporting("stores/SessionsStore.tsx");
 
 export default sessionsStore;

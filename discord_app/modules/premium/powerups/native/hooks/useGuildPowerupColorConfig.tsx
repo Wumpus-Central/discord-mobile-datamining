@@ -13,4 +13,4 @@ export default function useGuildPowerupColorConfig(arg0) {
     obj[1] = ThemesDefault.colors.TEXT_MUTED;
   }
   return obj;
-};
+}

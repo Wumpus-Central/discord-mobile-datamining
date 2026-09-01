@@ -16,14 +16,16 @@ export default function reactAssetProvider() {
     closure_0 = arg0;
     closure_3.keysRequest((arr) => {
       const NATIVE_REQUIRED_ASSETS = callback(closure_1_1[3]).NATIVE_REQUIRED_ASSETS;
-      closure_1_3.valuesResult(arr.map((arg0) => {
-        let str = "";
-        if (null != NATIVE_REQUIRED_ASSETS[arg0]) {
-          str = closure_1_2.resolveAssetSource(tmp[arg0]).uri;
-        }
-        return str;
-      }));
+      closure_1_3.valuesResult(
+        arr.map((arg0) => {
+          let str = "";
+          if (null != NATIVE_REQUIRED_ASSETS[arg0]) {
+            str = closure_1_2.resolveAssetSource(tmp[arg0]).uri;
+          }
+          return str;
+        }),
+      );
       NATIVE_REQUIRED_ASSETS(true);
     });
   });
-};
+}

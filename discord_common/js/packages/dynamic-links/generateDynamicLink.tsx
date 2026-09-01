@@ -8,7 +8,9 @@ import closure_5 from "../../../../_runtime/metro/00032__slicedToArray.js";
 require = arg1;
 let closure_3 = ["utmSource", "androidFallbackLink", "iosFallbackLink"];
 let c6 = "https://discordapp.onelink.me";
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx",
+);
 
 export default function generateDynamicLink(arg0, arg1) {
   ({ utmSource, androidFallbackLink, iosFallbackLink } = arg1);
@@ -64,7 +66,19 @@ export default function generateDynamicLink(arg0, arg1) {
     const _encodeURIComponent2 = encodeURIComponent;
     encodeURIComponentResult4 = encodeURIComponent(iosFallbackLink);
   }
-  const combined = "" + c6 + "/Hs5r/?deep_link_value=" + encodeURIComponentResult + "&pid=" + utmSource + "&af_force_deeplink=" + str3 + "&af_og_description=" + encodeURIComponent(setDefault()) + "&af_dp=" + encodeURIComponentResult1;
+  const combined =
+    "" +
+    c6 +
+    "/Hs5r/?deep_link_value=" +
+    encodeURIComponentResult +
+    "&pid=" +
+    utmSource +
+    "&af_force_deeplink=" +
+    str3 +
+    "&af_og_description=" +
+    encodeURIComponent(setDefault()) +
+    "&af_dp=" +
+    encodeURIComponentResult1;
   let sum = combined;
   if (null != encodeURIComponentResult3) {
     const _HermesInternal = HermesInternal;
@@ -76,7 +90,7 @@ export default function generateDynamicLink(arg0, arg1) {
     sum1 = sum + "&af_ios_url=" + encodeURIComponentResult4;
   }
   return sum1;
-};
+}
 export const generateAttemptId = function generateAttemptId() {
   return v1.v4();
 };

@@ -10,7 +10,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ useCallback: c4, useState: c5 } = noop);
 createCacheKey = { previewContainer: { flex: 1 }, previewDivider: null };
-createCacheKey = { borderBottomColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, paddingBottom: ThemesDefault.space.PX_16, flex: 1 };
+createCacheKey = {
+  borderBottomColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderBottomWidth: 1,
+  paddingBottom: ThemesDefault.space.PX_16,
+  flex: 1,
+};
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetPreview.tsx");
@@ -26,9 +31,13 @@ export default function ProductDetailsActionSheetPreview(onBundleActiveItemChang
     onLayout: callback2((nativeEvent) => {
       _undefined(nativeEvent.nativeEvent.layout.width);
     }, []),
-    children: null
+    children: null,
   };
-  if (product.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.BUNDLE) {
+  if (
+    product.type ===
+    require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType
+      .BUNDLE
+  ) {
     obj = { product: null, width: null, handlePreviewPress: null, onTrackPress: null, onActiveItemChange: null };
     obj[0] = product;
     obj[1] = tmp3;
@@ -48,7 +57,14 @@ export default function ProductDetailsActionSheetPreview(onBundleActiveItemChang
     tmp7Result = tmp7(tmp8, obj);
   }
   obj[2] = tmp7Result;
-  return <View style={tmp.previewContainer} onLayout={callback2((nativeEvent) => {
-    _undefined(nativeEvent.nativeEvent.layout.width);
-  }, [])}>{null}</View>;
-};
+  return (
+    <View
+      style={tmp.previewContainer}
+      onLayout={callback2((nativeEvent) => {
+        _undefined(nativeEvent.nativeEvent.layout.width);
+      }, [])}
+    >
+      {null}
+    </View>
+  );
+}

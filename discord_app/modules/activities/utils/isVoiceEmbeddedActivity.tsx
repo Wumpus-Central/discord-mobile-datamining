@@ -32,4 +32,4 @@ export default function isVoiceEmbeddedActivity(arg0) {
     tmp3 = tmp6;
   }
   return tmp3;
-};
+}

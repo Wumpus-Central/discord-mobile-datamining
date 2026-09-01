@@ -7,8 +7,7 @@ import dispatcherDefault from "../Dispatcher.tsx";
 const MediaEngineHookTypes = ME.MediaEngineHookTypes;
 let closure_1 = {};
 const Store = initializeDefault.Store;
-class HookErrorStore extends Store {
-}
+class HookErrorStore extends Store {}
 HookErrorStore.prototype["getHookError"] = function getHookError(SOUND) {
   return table[SOUND];
 };
@@ -21,8 +20,11 @@ const hookErrorStore = new HookErrorStore(dispatcherDefault, {
     delete tmp2[tmp];
   },
   MEDIA_ENGINE_SOUNDSHARE_FAILED: function handleSoundshareFailed(errorMessage) {
-    closure_1[MediaEngineHookTypes.SOUND] = { errorMessage: errorMessage.errorMessage, errorCode: errorMessage.errorCode };
-  }
+    closure_1[MediaEngineHookTypes.SOUND] = {
+      errorMessage: errorMessage.errorMessage,
+      errorCode: errorMessage.errorCode,
+    };
+  },
 });
 const result = set.fileFinishedImporting("stores/HookErrorStore.tsx");
 

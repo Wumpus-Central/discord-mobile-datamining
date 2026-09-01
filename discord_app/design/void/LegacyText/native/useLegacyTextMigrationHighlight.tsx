@@ -8,7 +8,9 @@ createCacheKey = { highlight: null };
 createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.STATUS_DANGER };
 createCacheKey[0] = createCacheKey;
 let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/void/LegacyText/native/useLegacyTextMigrationHighlight.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/void/LegacyText/native/useLegacyTextMigrationHighlight.tsx",
+);
 
 export const useLegacyTextMigrationHighlight = function useLegacyTextMigrationHighlight() {
   const tmp = callback();

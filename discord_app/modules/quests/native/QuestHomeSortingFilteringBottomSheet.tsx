@@ -22,7 +22,7 @@ function FilterFooter(inline) {
   if (flag) {
     let footerInline = tmp.footerInline;
   } else {
-    footerInline = [, ];
+    footerInline = [,];
     ({ footer: arr[0], content: arr[1] } = tmp);
   }
   let obj = { style: footerInline, onLayout, children: null };
@@ -32,7 +32,7 @@ function FilterFooter(inline) {
   const intl = getSystemLocale.intl;
   obj1[2] = intl.string(getSystemLocale.t.i4jeWR);
   obj1[3] = onConfirm;
-  const items = [closure_7(Button.Button, obj1), ];
+  const items = [closure_7(Button.Button, obj1)];
   const obj2 = { size: "lg", grow: true, text: null, onPress: null, variant: "secondary" };
   const intl2 = getSystemLocale.intl;
   obj2[2] = intl2.string(getSystemLocale.t.yBZMsQ);
@@ -131,36 +131,42 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
     tmp19 = obj2;
   }
   const obj3 = { contentContainerStyle: tmp19, style: items1, children: null };
-  items1 = [, ];
+  items1 = [,];
   ({ content: arr4[0], bodyContainer: arr4[1] } = callback3());
   const obj4 = { spacing: onFiltersChange(first[6]).space.PX_32, children: null };
   const obj5 = { groupRef: ref, hasIcons: false, defaultValue: first, onChange: tmp5[1], title: null, children: null };
   const intl2 = tmp2(tmp3[10]).intl;
   obj5[4] = intl2.string(onSortMethodChange(first[10]).t.tZXJIS);
-  obj5[5] = questHomeSortOptions.map((label) => ref(onSortMethodChange(first[20]).TableRadioRow, { label: label.label, value: label.value }, arg1));
+  obj5[5] = questHomeSortOptions.map((label) =>
+    ref(onSortMethodChange(first[20]).TableRadioRow, { label: label.label, value: label.value }, arg1),
+  );
   const items2 = [
     ref(onSortMethodChange(first[19]).TableRadioGroup, obj5),
     questHomeFilterOptions.map((heading) => {
       const options = heading.options;
-      return ref(onSortMethodChange(first[21]).TableRowGroup, {
-        title: heading.heading,
-        hasIcons: false,
-        children: options.map((arg0, arg1) => {
-          closure_0 = arg0;
-          const obj = {
-            label: closure_1_0(closure_1_2[23]).getFilterTypeText(arg0.filter),
-            onPress(arg0) {
-              return closure_1_8(closure_0, arg0);
-            },
-            checked: closure_4.some((group) => group.group === group.group && group.filter === arr.filter)
-          };
-          return closure_1_7(closure_1_0(closure_1_2[22]).TableCheckboxRow, obj, arg1);
-        })
-      }, arg1);
-    })
+      return ref(
+        onSortMethodChange(first[21]).TableRowGroup,
+        {
+          title: heading.heading,
+          hasIcons: false,
+          children: options.map((arg0, arg1) => {
+            closure_0 = arg0;
+            const obj = {
+              label: closure_1_0(closure_1_2[23]).getFilterTypeText(arg0.filter),
+              onPress(arg0) {
+                return closure_1_8(closure_0, arg0);
+              },
+              checked: closure_4.some((group) => group.group === group.group && group.filter === arr.filter),
+            };
+            return closure_1_7(closure_1_0(closure_1_2[22]).TableCheckboxRow, obj, arg1);
+          }),
+        },
+        arg1,
+      );
+    }),
   ];
   obj4[1] = items2;
-  const items3 = [closure_8(onSortMethodChange(first[18]).Stack, obj4), ];
+  const items3 = [closure_8(onSortMethodChange(first[18]).Stack, obj4)];
   if (isScreenReaderEnabled) {
     const obj6 = { onConfirm: null, onReset: null, inline: true };
     obj6[0] = callback2;
@@ -171,4 +177,4 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
   obj3[2] = items3;
   obj[4] = closure_8(onSortMethodChange(first[17]).BottomSheetScrollView, obj3);
   return ref(onSortMethodChange(first[15]).BottomSheet, obj);
-};
+}

@@ -2,9 +2,17 @@
 import closure_3 from "../../parent_tools/FamilyCenterControlledSettingsStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/family_center/ParentalControlledUserSettingsDefinitions.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/family_center/ParentalControlledUserSettingsDefinitions.tsx",
+);
 
-export const defineParentalControlledSetting = function defineParentalControlledSetting(privacy, defaultGuildsRestricted, explicitContentFromProto, explicitContentToProto, arg4) {
+export const defineParentalControlledSetting = function defineParentalControlledSetting(
+  privacy,
+  defaultGuildsRestricted,
+  explicitContentFromProto,
+  explicitContentToProto,
+  arg4,
+) {
   closure_0 = privacy;
   closure_1 = defaultGuildsRestricted;
   closure_2 = explicitContentFromProto;
@@ -59,58 +67,69 @@ export const defineParentalControlledSetting = function defineParentalControlled
       privacy = arg0;
       const items = [closure_3];
       const items1 = [arg0];
-      return privacy(explicitContentFromProto[2]).useStateFromStores(items, () => {
-        const settings = closure_1_3.getSettings(closure_0);
-        let tmp3;
-        if (settings != null) {
-          if (settings[closure_0] != null) {
-            tmp3 = tmp5[closure_1_1];
+      return privacy(explicitContentFromProto[2]).useStateFromStores(
+        items,
+        () => {
+          const settings = closure_1_3.getSettings(closure_0);
+          let tmp3;
+          if (settings != null) {
+            if (settings[closure_0] != null) {
+              tmp3 = tmp5[closure_1_1];
+            }
           }
-        }
-        return closure_1_2(tmp3);
-      }, items1, fn);
-    }
+          return closure_1_2(tmp3);
+        },
+        items1,
+        fn,
+      );
+    },
   };
-  function S(arg0, arg1) {
-
-  }
+  function S(arg0, arg1) {}
   return obj;
 };
-export const wrapParentalControlledSettingWithExperimentDefaults = function wrapParentalControlledSettingWithExperimentDefaults(arg0) {
-  ({ baseSetting: require, isEligible: importDefault, useIsEligible: dependencyMap, eligibleDefault: closure_3, ineligibleDefault: closure_4, onUseDefault: closure_5 } = arg0);
-  return {
-    getControlledSetting(arg0) {
-      const controlledSetting = closure_0.getControlledSetting(arg0);
-      if (null != controlledSetting) {
-        return controlledSetting;
-      } else {
-        if (closure_5 != null) {
-          tmp2();
-        }
-        if (callback()) {
-          let tmp5 = callback2();
+export const wrapParentalControlledSettingWithExperimentDefaults =
+  function wrapParentalControlledSettingWithExperimentDefaults(arg0) {
+    ({
+      baseSetting: require,
+      isEligible: importDefault,
+      useIsEligible: dependencyMap,
+      eligibleDefault: closure_3,
+      ineligibleDefault: closure_4,
+      onUseDefault: closure_5,
+    } = arg0);
+    return {
+      getControlledSetting(arg0) {
+        const controlledSetting = closure_0.getControlledSetting(arg0);
+        if (null != controlledSetting) {
+          return controlledSetting;
         } else {
-          tmp5 = closure_4;
+          if (closure_5 != null) {
+            tmp2();
+          }
+          if (callback()) {
+            let tmp5 = callback2();
+          } else {
+            tmp5 = closure_4;
+          }
         }
-      }
-    },
-    useControlledSetting(arg0) {
-      const controlledSetting = closure_0.useControlledSetting(arg0);
-      if (null != controlledSetting) {
-        return controlledSetting;
-      } else {
-        if (callback3 != null) {
-          callback3();
-        }
-        if (tmp2) {
-          let tmp4 = callback2();
+      },
+      useControlledSetting(arg0) {
+        const controlledSetting = closure_0.useControlledSetting(arg0);
+        if (null != controlledSetting) {
+          return controlledSetting;
         } else {
-          tmp4 = closure_4;
+          if (callback3 != null) {
+            callback3();
+          }
+          if (tmp2) {
+            let tmp4 = callback2();
+          } else {
+            tmp4 = closure_4;
+          }
         }
-      }
-    },
-    updateControlledSetting(selectedTeenId, addFlagResult) {
-      return closure_0.updateControlledSetting(selectedTeenId, addFlagResult);
-    }
+      },
+      updateControlledSetting(selectedTeenId, addFlagResult) {
+        return closure_0.updateControlledSetting(selectedTeenId, addFlagResult);
+      },
+    };
   };
-};

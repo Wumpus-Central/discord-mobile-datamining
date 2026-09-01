@@ -25,10 +25,13 @@ function getUnitId(arg0, guildId) {
 }
 function useUnitId(arg0, guildId) {
   let items = [closure_4];
-  callback(initialize.useStateFromStoresArray(items, () => {
-    const items = [store.getId(), store.getInstallationForTracking()];
-    return items;
-  }), 2);
+  callback(
+    initialize.useStateFromStoresArray(items, () => {
+      const items = [store.getId(), store.getInstallationForTracking()];
+      return items;
+    }),
+    2,
+  );
   if ("guild" === arg0) {
     return guildId.guildId;
   } else if ("user" === arg0) {
@@ -50,6 +53,6 @@ const result = require("set").fileFinishedImporting("modules/experiments/apex/Ap
 
 export default function createApexExperiment(ApexExperiment) {
   return loggerDefault(ApexExperiment, closure_5, getUnitId, useUnitId);
-};
+}
 export const ApexExperiment = require("logger").ApexExperiment;
 export { getUnitId };

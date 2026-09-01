@@ -31,7 +31,29 @@ import importDefaultResult from "../../../_runtime/00012_apply.js";
 const require = arg1;
 ({ EMOJI_SIZE: c4, VoiceChannelEffectAnimationType } = VoiceChannelEffectAnimationType);
 const items = [_modDef6194];
-const items1 = [_modDef6195, _modDef6196, _modDef6197, _modDef6198, _modDef6199, _modDef6200, _modDef6201, _modDef6202, _modDef6203, _modDef6204, _modDef6205, _modDef6206, _modDef6207, _modDef6208, _modDef6209, _modDef6210, _modDef6211, _modDef6212, _modDef6213, _modDef6214, _modDef6215];
+const items1 = [
+  _modDef6195,
+  _modDef6196,
+  _modDef6197,
+  _modDef6198,
+  _modDef6199,
+  _modDef6200,
+  _modDef6201,
+  _modDef6202,
+  _modDef6203,
+  _modDef6204,
+  _modDef6205,
+  _modDef6206,
+  _modDef6207,
+  _modDef6208,
+  _modDef6209,
+  _modDef6210,
+  _modDef6211,
+  _modDef6212,
+  _modDef6213,
+  _modDef6214,
+  _modDef6215,
+];
 let obj = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const memoizeResult = importDefaultResult.memoize((arg0) => {
   closure_0 = arg0;

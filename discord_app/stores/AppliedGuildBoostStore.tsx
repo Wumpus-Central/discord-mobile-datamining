@@ -13,8 +13,7 @@ let c4 = false;
 let c5 = null;
 let c6 = null;
 const Store = initializeDefault.Store;
-class AppliedGuildBoostStore extends Store {
-}
+class AppliedGuildBoostStore extends Store {}
 const prototype = AppliedGuildBoostStore.prototype;
 prototype["getAppliedGuildBoostsForGuild"] = function getAppliedGuildBoostsForGuild(closure_0) {
   let subscriptions = null;
@@ -41,31 +40,31 @@ Object.defineProperty(prototype, "isModifyingAppliedBoost", {
   get: function isModifyingAppliedBoost() {
     return c4;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "applyBoostError", {
   get: function applyBoostError() {
     return c5;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "unapplyBoostError", {
   get: function unapplyBoostError() {
     return c6;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "cooldownEndsAt", {
   get: function cooldownEndsAt(arg0) {
     return c1;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isFetchingCurrentUserAppliedBoosts", {
   get: function isFetchingCurrentUserAppliedBoosts() {
     return c3;
   },
-  set: undefined
+  set: undefined,
 });
 AppliedGuildBoostStore.displayName = "AppliedGuildBoostStore";
 const appliedGuildBoostStore = new AppliedGuildBoostStore(dispatcherDefault, {
@@ -104,7 +103,7 @@ const appliedGuildBoostStore = new AppliedGuildBoostStore(dispatcherDefault, {
   },
   USER_APPLIED_BOOSTS_FETCH_START: function handleUserAppliedBoostsFetchStart() {
     c3 = true;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/AppliedGuildBoostStore.tsx");
 

@@ -59,8 +59,7 @@ function updateGuildIncident(id) {
 let closure_6 = {};
 let closure_7 = {};
 const Store = initializeDefault.Store;
-class GuildIncidentsStore extends Store {
-}
+class GuildIncidentsStore extends Store {}
 const prototype = GuildIncidentsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_4, closure_5, closure_2);
@@ -155,7 +154,7 @@ const guildIncidentsStore = new GuildIncidentsStore(dispatcherDefault, {
   },
   LOGOUT: function handleLogout() {
     closure_6 = {};
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/guild_antiraid/GuildIncidentsStore.tsx");
 

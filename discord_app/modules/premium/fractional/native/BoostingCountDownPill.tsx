@@ -18,15 +18,45 @@ function handlePress() {
 }
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { fractionalPremiumBanner: null, fpDurationPill: null, fpDurationText: null, fpUnavailable: null, fpUnavailableTextNoCountdown: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flexDirection: "row", gap: 12, padding: 12, justifyContent: "center", borderColor: ThemesDefault.colors.STATUS_WARNING, borderWidth: 1, borderRadius: ThemesDefault.radii.lg, marginBottom: 12 };
+let obj = {
+  fractionalPremiumBanner: null,
+  fpDurationPill: null,
+  fpDurationText: null,
+  fpUnavailable: null,
+  fpUnavailableTextNoCountdown: null,
+};
+obj = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  flexDirection: "row",
+  gap: 12,
+  padding: 12,
+  justifyContent: "center",
+  borderColor: ThemesDefault.colors.STATUS_WARNING,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.lg,
+  marginBottom: 12,
+};
 obj[0] = obj;
-obj[1] = { flex: 1, paddingVertical: 12, paddingHorizontal: 27, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.xxl, justifyContent: "center" };
+obj[1] = {
+  flex: 1,
+  paddingVertical: 12,
+  paddingHorizontal: 27,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  borderRadius: ThemesDefault.radii.xxl,
+  justifyContent: "center",
+};
 obj[2] = { textAlign: "center", color: "#FFEAA0" };
 obj[3] = { flex: 1, justifyContent: "center" };
 obj[4] = { textAlign: "center" };
 let closure_7 = createCacheKey.createStyles(obj);
-let obj1 = { flex: 1, paddingVertical: 12, paddingHorizontal: 27, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.xxl, justifyContent: "center" };
+let obj1 = {
+  flex: 1,
+  paddingVertical: 12,
+  paddingHorizontal: 27,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  borderRadius: ThemesDefault.radii.xxl,
+  justifyContent: "center",
+};
 const result = set.fileFinishedImporting("modules/premium/fractional/native/BoostingCountDownPill.tsx");
 
 export default function BoostingCountDownPill(style) {
@@ -49,7 +79,7 @@ export default function BoostingCountDownPill(style) {
     obj[1] = tmp2(Text.Text, obj1);
     tmp2Result = tmp2(tmp6, obj);
   }
-  const items1 = [tmp2Result, ];
+  const items1 = [tmp2Result];
   const obj2 = { style: tmp.fpUnavailable, children: null };
   let prop;
   if (isInReverseTrial) {
@@ -63,4 +93,4 @@ export default function BoostingCountDownPill(style) {
   obj[1] = items1;
   obj[2] = closure_6(closure_4, obj);
   return closure_5(closure_3, obj);
-};
+}

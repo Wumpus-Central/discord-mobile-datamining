@@ -39,7 +39,7 @@ export default function TouchableBackground(onPressOut) {
   const merged1 = Object.assign(merged);
   obj.onPressIn = callback;
   obj.onPressOut = callback1;
-  const items2 = [style, ];
+  const items2 = [style];
   if (tmp4) {
     if (activeBackgroundColor == null) {
       activeBackgroundColor = tmp2.default.backgroundColor;
@@ -50,4 +50,4 @@ export default function TouchableBackground(onPressOut) {
   items2[1] = tmp4;
   obj.children = <c2 style={items2}>{children}</c2>;
   return <closure_3 accessibilityRole="button" style={pressableStyle} />;
-};
+}

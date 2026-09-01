@@ -40,8 +40,7 @@ let closure_7 = {};
 let closure_8 = {};
 let closure_9 = {};
 const Store = initializeDefault.Store;
-class ActiveChannelsStore extends Store {
-}
+class ActiveChannelsStore extends Store {}
 const prototype = ActiveChannelsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3);
@@ -90,16 +89,20 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
           const found = applyDefault.chain(Array.from(arr)).filter((arg0) => arg0 in closure_7);
           const chainResult = applyDefault.chain(Array.from(arr));
           const _Set = Set;
-          const set = new Set(found.sortBy((arg0) => {
-            let num;
-            if (dependencyMap[arg0] != null) {
-              num = arr.length;
-            }
-            if (num == null) {
-              num = 0;
-            }
-            return -num;
-          }).value());
+          const set = new Set(
+            found
+              .sortBy((arg0) => {
+                let num;
+                if (dependencyMap[arg0] != null) {
+                  num = arr.length;
+                }
+                if (num == null) {
+                  num = 0;
+                }
+                return -num;
+              })
+              .value(),
+          );
           dependencyMap[guildId] = set;
         }
       }
@@ -236,7 +239,7 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
       closure_8 = {};
       dependencyMap3 = {};
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/guild_home/ActiveChannelsStore.tsx");
 

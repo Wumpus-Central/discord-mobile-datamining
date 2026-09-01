@@ -65,7 +65,11 @@ const memoResult = importAllResult.memo(function DMRow(user) {
   const tmp2 = type(guildId.useState(false), 2);
   closure_8 = tmp2[1];
   let items = [isMobileOnline];
-  const stateFromStoresObject = user(premiumSince[14]).useStateFromStoresObject(items, () => ({ isMobileOnline: isMobileOnline.isMobileOnline(user.id), isVROnline: isMobileOnline.isVROnline(user.id), status: isMobileOnline.getStatus(user.id) }));
+  const stateFromStoresObject = user(premiumSince[14]).useStateFromStoresObject(items, () => ({
+    isMobileOnline: isMobileOnline.isMobileOnline(user.id),
+    isVROnline: isMobileOnline.isVROnline(user.id),
+    status: isMobileOnline.getStatus(user.id),
+  }));
   isMobileOnline = stateFromStoresObject.isMobileOnline;
   isVROnline = stateFromStoresObject.isVROnline;
   status = stateFromStoresObject.status;
@@ -84,78 +88,81 @@ const memoResult = importAllResult.memo(function DMRow(user) {
   });
   const items3 = [onPress, user.id];
   name = stateFromStores1;
-  const callback = guildId.useCallback(isOwner(function*() {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  const callback = guildId.useCallback(
+    isOwner(function* () {
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
+        try {
+          c4 = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_0 = tmp3;
+              closure_1_8(true);
+              c3 = 1;
+              c1 = 2;
+              c4 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_6(closure_1_0.id);
+              return obj1;
+            }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            callback(false);
+            throw closure_2;
+          } else if (arg0 === 1) {
             c4 = 3;
             throw arg1;
           } else if (arg0 === 2) {
+            c3 = 0;
+            callback(false);
             c4 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           } else {
-            closure_0 = tmp3;
-            closure_1_8(true);
-            c3 = 1;
-            c1 = 2;
-            c4 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_6(closure_1_0.id);
-            return obj1;
+            c3 = 0;
+            callback(false);
+            c4 = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (1 === tmp7) {
-          c3 = 0;
-          callback(false);
-          throw closure_2;
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 0;
-          callback(false);
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          c3 = 0;
-          callback(false);
-          c4 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp23) {
-        closure_2 = tmp23;
-        if (tmp4 === c3) {
-          c4 = tmp2;
-          throw tmp23;
-        } else {
-          c1 = tmp;
+        } catch (tmp23) {
+          closure_2 = tmp23;
+          if (tmp4 === c3) {
+            c4 = tmp2;
+            throw tmp23;
+          } else {
+            c1 = tmp;
+          }
         }
       }
-    }
-  }), items3);
+    }),
+    items3,
+  );
   if (stateFromStores1 == null) {
     name = stateFromStores1(tmp4[12]).getName(user);
     const obj5 = stateFromStores1(tmp4[12]);
   }
-  const items4 = [, , , , , ];
+  const items4 = [, , , , ,];
   ({ title: arr5[0], tag: arr5[1] } = tmp);
   items4[2] = name;
   items4[3] = user;
@@ -165,7 +172,7 @@ const memoResult = importAllResult.memo(function DMRow(user) {
   const memo = obj.useMemo(() => {
     let obj = { style: title.title, children: null };
     obj = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
-    const items = [name(user(premiumSince[11]).Text, obj), , , ];
+    const items = [name(user(premiumSince[11]).Text, obj), , ,];
     let obj2 = user;
     const bot = user.bot;
     if (!bot) {
@@ -207,7 +214,16 @@ const memoResult = importAllResult.memo(function DMRow(user) {
   }, items4);
   const items6 = [user, guildId, type, stateFromStores];
   const memo1 = obj.useMemo(() => {
-    const obj = { user, guildId, status: null, isMobileOnline: null, isVROnline: null, size: null, avatarDecoration: null, autoStatusCutout: true };
+    const obj = {
+      user,
+      guildId,
+      status: null,
+      isMobileOnline: null,
+      isVROnline: null,
+      size: null,
+      avatarDecoration: null,
+      autoStatusCutout: true,
+    };
     let tmp5 = null;
     if (status.OFFLINE !== status) {
       tmp5 = status;
@@ -241,7 +257,15 @@ const memoResult = importAllResult.memo(function DMRow(user) {
     }
     tmp6 = tmp8;
   }, items6);
-  obj = { label: memo, subLabel: memo2, icon: memo1, onPress: callback, trailing: null, accessibilityActions: null, onAccessibilityAction: null };
+  obj = {
+    label: memo,
+    subLabel: memo2,
+    icon: memo1,
+    onPress: callback,
+    trailing: null,
+    accessibilityActions: null,
+    onAccessibilityAction: null,
+  };
   if (tmp2[0]) {
     trailing = tmp14(closure_7, {});
   }

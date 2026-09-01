@@ -69,9 +69,27 @@ function transformSKUToCollectiblesItem(productLine) {
           obj2[1] = tmp22;
           return obj2;
         } else if (tmp4(1950).CollectiblesItemType.PROFILE_EFFECT === type) {
-          const obj4 = { skuId: null, type: null, title: null, description: null, thumbnailPreviewSrc: null, reducedMotionSrc: null, effects: null, accessibilityLabel: null, animationType: null, staticFrameSrc: null };
+          const obj4 = {
+            skuId: null,
+            type: null,
+            title: null,
+            description: null,
+            thumbnailPreviewSrc: null,
+            reducedMotionSrc: null,
+            effects: null,
+            accessibilityLabel: null,
+            animationType: null,
+            staticFrameSrc: null,
+          };
           obj4[0] = productLine.id;
-          ({ type: obj3[1], title: obj3[2], description: obj3[3], thumbnailPreviewSrc: obj3[4], reducedMotionSrc: obj3[5], effects } = item);
+          ({
+            type: obj3[1],
+            title: obj3[2],
+            description: obj3[3],
+            thumbnailPreviewSrc: obj3[4],
+            reducedMotionSrc: obj3[5],
+            effects,
+          } = item);
           let tmp12 = closure_4;
           if (effects == null) {
             effects = [];
@@ -84,9 +102,26 @@ function transformSKUToCollectiblesItem(productLine) {
           return obj5;
         } else if (tmp4(1950).CollectiblesItemType.PROFILE_FRAME === type) {
           obj = { type: "single", item: null };
-          const obj6 = { skuId: null, type: null, label: null, layers: null, innerWidth: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null };
+          const obj6 = {
+            skuId: null,
+            type: null,
+            label: null,
+            layers: null,
+            innerWidth: null,
+            overflowTop: null,
+            overflowBottom: null,
+            overflowHorizontal: null,
+          };
           obj6[0] = productLine.id;
-          ({ type: obj2[1], label: obj2[2], layers: obj2[3], innerWidth: obj2[4], overflowTop: obj2[5], overflowBottom: obj2[6], overflowHorizontal: obj2[7] } = item);
+          ({
+            type: obj2[1],
+            label: obj2[2],
+            layers: obj2[3],
+            innerWidth: obj2[4],
+            overflowTop: obj2[5],
+            overflowBottom: obj2[6],
+            overflowHorizontal: obj2[7],
+          } = item);
           const tmp10 = new closure_5(obj6);
           obj[1] = tmp10;
           return obj;

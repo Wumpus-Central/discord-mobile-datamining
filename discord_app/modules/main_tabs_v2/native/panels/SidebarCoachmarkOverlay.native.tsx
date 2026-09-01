@@ -26,7 +26,7 @@ function SidebarCoachmarkOverlayLayer(manager) {
     },
     onLayout: NOOP,
     pointerEvents: "box-none",
-    children: items1.map((children) => callback(React.Fragment, { children: children.component }, children.key))
+    children: items1.map((children) => callback(React.Fragment, { children: children.component }, children.key)),
   });
 }
 let c4 = importAllResult;
@@ -39,7 +39,9 @@ const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.zIndex = 1;
 obj[0] = obj;
 const styles = StyleSheet.create(obj);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx",
+);
 
 export const SidebarCoachmarkOverlayContext = context;
 export const SidebarCoachmarkOverlay = function SidebarCoachmarkOverlay(enabled) {
@@ -53,7 +55,7 @@ export const SidebarCoachmarkOverlay = function SidebarCoachmarkOverlay(enabled)
     tmp3 = tmp;
   }
   let obj = { value: tmp3, children: null };
-  const items = [enabled.children, ];
+  const items = [enabled.children];
   let tmp4 = null;
   if (enabled) {
     obj = { manager: null };

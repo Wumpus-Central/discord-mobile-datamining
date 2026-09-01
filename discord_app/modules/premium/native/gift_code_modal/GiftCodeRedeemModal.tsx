@@ -87,5 +87,5 @@ export default function GiftCodeRedeemModal(code) {
     }
     const tmp2Result1 = tmp2(5495);
   }
-};
+}
 export const GiftCodeModalScreens = obj;

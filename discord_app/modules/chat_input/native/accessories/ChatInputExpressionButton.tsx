@@ -37,7 +37,16 @@ const memoResult = importAllResult.memo((active) => {
     onPress(undefined);
   }, items);
   const obj3 = onPress(4197);
-  obj = { ref: importAllResult.useRef(null), style: items1, hitSlop: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, children: null };
+  obj = {
+    ref: importAllResult.useRef(null),
+    style: items1,
+    hitSlop: null,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    accessibilityState: null,
+    onPress: null,
+    children: null,
+  };
   items1 = [tmp7.expressionButton, active.style];
   let tmp12;
   if (bound > 0) {
@@ -49,9 +58,19 @@ const memoResult = importAllResult.memo((active) => {
   obj[5] = { expanded: flag };
   obj[6] = callback;
   obj = { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 10885 : 8229) };
-  obj[7] = jsx(onPress(1297).Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 10885 : 8229) });
-  return jsx(onPress(5068).PressableOpacity, { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 10885 : 8229) });
+  obj[7] = jsx(onPress(1297).Icon, {
+    size: token1,
+    style: tmp7.expressionButtonIconTint,
+    source: tmp3(showKeyboardIcon ? 10885 : 8229),
+  });
+  return jsx(onPress(5068).PressableOpacity, {
+    size: token1,
+    style: tmp7.expressionButtonIconTint,
+    source: tmp3(showKeyboardIcon ? 10885 : 8229),
+  });
 });
-const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputExpressionButton.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/chat_input/native/accessories/ChatInputExpressionButton.tsx",
+);
 
 export default memoResult;

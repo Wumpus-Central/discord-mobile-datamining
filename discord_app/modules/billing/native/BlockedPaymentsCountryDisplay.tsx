@@ -27,7 +27,7 @@ export default function BlockedPaymentsCountryDisplay() {
   obj = { style: tmp.header, children: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.vwMEHS);
-  const items = [callback(Button.LegacyText, obj), , ];
+  const items = [callback(Button.LegacyText, obj), ,];
   obj = { children: null };
   const intl2 = getSystemLocale.intl;
   obj1 = { helpdeskArticle: null };
@@ -50,4 +50,4 @@ export default function BlockedPaymentsCountryDisplay() {
   items[2] = tmp7(tmp8, obj2);
   obj[1] = items;
   return tmp5(tmp6, obj);
-};
+}

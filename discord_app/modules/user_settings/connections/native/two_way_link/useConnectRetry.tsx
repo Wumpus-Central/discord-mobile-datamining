@@ -1,7 +1,9 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/useConnectRetry.tsx
 import closure_0 from "../../../../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/useConnectRetry.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/useConnectRetry.tsx",
+);
 
 export const useConnectRetry = function useConnectRetry(navigation, PRE_CONNECT) {
   const React = navigation;

@@ -47,7 +47,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -143,8 +143,17 @@ export default function useStartAuthorize(getOfficialApplicationId) {
     })();
   });
   const items = [authorizationApp];
-  obj = { fetched, hasAlreadyLinked: null, canStartAuthorization: null, startAuthorization: null, connectionApp: null, chosenFlow: null, token: null, debug: null };
-  callback = React.useCallback(function() {
+  obj = {
+    fetched,
+    hasAlreadyLinked: null,
+    canStartAuthorization: null,
+    startAuthorization: null,
+    connectionApp: null,
+    chosenFlow: null,
+    token: null,
+    debug: null,
+  };
+  callback = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -167,7 +176,12 @@ export default function useStartAuthorize(getOfficialApplicationId) {
     obj[7] = undefined;
     return obj;
   } else {
-    obj = { isSubscribedToAuthorizeRequest: false, oauth2Token: null, hasConnectionEntrypointUrl: null, validFlows: null };
+    obj = {
+      isSubscribedToAuthorizeRequest: false,
+      oauth2Token: null,
+      hasConnectionEntrypointUrl: null,
+      validFlows: null,
+    };
     obj[1] = token;
     let prop1;
     if (authorizationApp != null) {
@@ -182,4 +196,4 @@ export default function useStartAuthorize(getOfficialApplicationId) {
     }
     obj[3] = items2;
   }
-};
+}

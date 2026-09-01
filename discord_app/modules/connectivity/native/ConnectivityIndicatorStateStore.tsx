@@ -250,7 +250,12 @@ function handleAppStateUpdate() {
   return false;
 }
 let closure_8 = new timestampDefault("ConnectivityIndicatorStateStore");
-let obj = { HIDDEN: "hidden", WAITING_FOR_NETWORK: "waiting_for_network", NO_CONNECTION: "no_connection", BACK_ONLINE: "back_online" };
+let obj = {
+  HIDDEN: "hidden",
+  WAITING_FOR_NETWORK: "waiting_for_network",
+  NO_CONNECTION: "no_connection",
+  BACK_ONLINE: "back_online",
+};
 let closure_10 = { UNKNOWN: "unknown", ONLINE: "online", OFFLINE: "offline", CONNECTING: "connecting" };
 let c11 = 2000;
 let c12 = 1000;
@@ -266,8 +271,7 @@ let c21 = null;
 let c22 = null;
 let connectivityIndicatorStateStore = null;
 const Store = initializeDefault.Store;
-class ConnectivityIndicatorStateStore extends Store {
-}
+class ConnectivityIndicatorStateStore extends Store {}
 const prototype = ConnectivityIndicatorStateStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_2, closure_4, closure_5, closure_6);
@@ -307,7 +311,7 @@ obj = {
     return false;
   },
   CONNECTION_CLOSED: handleConnectionClosed,
-  CONNECTION_INTERRUPTED: handleConnectionClosed
+  CONNECTION_INTERRUPTED: handleConnectionClosed,
 };
 connectivityIndicatorStateStore = new ConnectivityIndicatorStateStore(dispatcherDefault, obj);
 const tmp2 = new timestampDefault("ConnectivityIndicatorStateStore");

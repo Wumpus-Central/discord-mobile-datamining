@@ -18,7 +18,9 @@ createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefaul
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 16, height: 16 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx",
+);
 
 export const formatDurationNarrow = function formatDurationNarrow(arg0) {
   let num = 0;
@@ -75,7 +77,7 @@ export const FieldText = function FieldText(arg0) {
     const obj2 = { linkVariant: null };
     obj2[0] = variant;
     obj1[3] = items2.parseApplicationWidgetText(field.text, obj2);
-    const items = [callback(Text.Text, obj1), ];
+    const items = [callback(Text.Text, obj1)];
     let tmp11Result = null != field.icon;
     if (tmp11Result) {
       obj = { source: null, style: null, resizeMode: "contain" };

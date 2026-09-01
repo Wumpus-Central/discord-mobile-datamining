@@ -18,7 +18,7 @@ const toggle = createToggle.createToggle({
   onValueChange(arg0) {
     const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
     return HideFriendRequestNotes.updateSetting(!arg0);
-  }
+  },
 });
 const obj = {
   useTitle() {
@@ -32,7 +32,7 @@ const obj = {
   onValueChange(arg0) {
     const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
     return HideFriendRequestNotes.updateSetting(!arg0);
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsNotesSetting.tsx");
 

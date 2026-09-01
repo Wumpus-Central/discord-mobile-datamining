@@ -5,7 +5,9 @@ import DesktopSources from "Constants.tsx";
 
 ({ SpeakingFlags: obj1, VIDEO_QUALITY_FRAMRATE_NOT_SPEAKING_TIMEOUT: c3 } = DesktopSources);
 const logger = new log.Logger("ConnectionEventFramerateReducer");
-let result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/ConnectionEventFramerateReducer.tsx");
+let result = set.fileFinishedImporting(
+  "../discord_common/js/packages/media-engine/ConnectionEventFramerateReducer.tsx",
+);
 class ConnectionEventFramerateReducer {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);

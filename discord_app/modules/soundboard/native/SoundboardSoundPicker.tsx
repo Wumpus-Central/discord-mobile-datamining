@@ -16,7 +16,11 @@ let c4 = importAllResult;
 ({ setSearchQuery: closure_6, useExpressionPickerStore: error } = withEqualityFn);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = { title: { marginBottom: 8 }, container: { flex: 1, alignItems: "center" }, header: null, body: null };
-obj = { paddingHorizontal: require("SOUND_BUTTON_HEIGHT").SOUND_ROW_HORIZONTAL_PADDING, padding: ThemesDefault.space.PX_8, width: "100%" };
+obj = {
+  paddingHorizontal: require("SOUND_BUTTON_HEIGHT").SOUND_ROW_HORIZONTAL_PADDING,
+  padding: ThemesDefault.space.PX_8,
+  width: "100%",
+};
 obj[2] = obj;
 obj[3] = { flex: 1, width: "100%" };
 let closure_14 = createCacheKey.createStyles(obj);
@@ -44,10 +48,16 @@ const memoResult = importAllResult.memo(function SoundboardSoundPicker(channel) 
   const tmp13 = callback((searchQuery) => searchQuery.searchQuery);
   let obj3 = channel(ref[15]);
   const tmp12 = initialScrollLocation(ref[14])(channel, { filterOutEmptyCurrentGuild: true });
-  [tmp15, c5] = stateFromStores(availableSounds.useState(obj3.searchSounds(tmp13, availableSounds, stateFromStores, channel)), 2);
+  [tmp15, c5] = stateFromStores(
+    availableSounds.useState(obj3.searchSounds(tmp13, availableSounds, stateFromStores, channel)),
+    2,
+  );
   let obj4 = channel(ref[14]);
   const searchCategories = obj4.useSearchCategories(categories, tmp15, tmp13);
-  const tmp14 = stateFromStores(availableSounds.useState(obj3.searchSounds(tmp13, availableSounds, stateFromStores, channel)), 2);
+  const tmp14 = stateFromStores(
+    availableSounds.useState(obj3.searchSounds(tmp13, availableSounds, stateFromStores, channel)),
+    2,
+  );
   const items2 = [channel, stateFromStores, availableSounds];
   callback = availableSounds.useCallback((arg0) => {
     ref(arg0);
@@ -57,7 +67,12 @@ const memoResult = importAllResult.memo(function SoundboardSoundPicker(channel) 
   const tmp17 = initialScrollLocation(ref[17]);
   obj[0] = channel(ref[20]).ImpressionTypes.HALFSHEET;
   obj[1] = channel(ref[20]).ImpressionNames.SOUNDBOARD_POPOUT;
-  obj = { source: channel.analyticsSource, guild_id: channel.guild_id, media_session_id: stateFromStores1, type: SoundboardPickerType.FULL_PICKER };
+  obj = {
+    source: channel.analyticsSource,
+    guild_id: channel.guild_id,
+    media_session_id: stateFromStores1,
+    type: SoundboardPickerType.FULL_PICKER,
+  };
   obj[2] = obj;
   initialScrollLocation(ref[19])(obj);
   let obj7 = channel(ref[12]);
@@ -89,8 +104,15 @@ const memoResult = importAllResult.memo(function SoundboardSoundPicker(channel) 
     obj2[0] = sharedValue1;
     isIOSResult = callback2(tmp11(tmp7[22]), obj2);
   }
-  const items4 = [isIOSResult, ];
-  obj3 = { animatedIndex: sharedValue1, scrollable: true, startExpanded: true, onExpand: callback1, footer: null, children: null };
+  const items4 = [isIOSResult];
+  obj3 = {
+    animatedIndex: sharedValue1,
+    scrollable: true,
+    startExpanded: true,
+    onExpand: callback1,
+    footer: null,
+    children: null,
+  };
   const tmp19 = initialScrollLocation(ref[19]);
   let tmp27;
   if (tmp6Result.isAndroid()) {
@@ -101,7 +123,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPicker(channel) 
   const obj5 = { accessibilityRole: "header", variant: "heading-lg/bold", style: tmp.title, children: null };
   const intl = tmp6(tmp7[26]).intl;
   obj5[3] = intl.string(channel(ref[26]).t.ABjMWI);
-  const items5 = [callback2(channel(ref[25]).Text, obj5), , , ];
+  const items5 = [callback2(channel(ref[25]).Text, obj5), , ,];
   const obj6 = { style: tmp.header, children: null };
   obj7 = { size: "md", placeholder: null, onChange: null };
   const intl2 = tmp6(tmp7[26]).intl;
@@ -110,8 +132,17 @@ const memoResult = importAllResult.memo(function SoundboardSoundPicker(channel) 
   obj6[1] = callback2(channel(ref[27]).SearchField, obj7);
   items5[1] = callback2(c5, obj6);
   obj8 = { style: tmp.body, children: null };
-  const obj9 = { listRef: ref, channel, insetBottom: null, scrollPosition: null, setCategoryIndex: null, categories: null, shouldShowPremiumUpsell: null };
-  const sum = EXPRESSION_FOOTER_HEIGHT + initialScrollLocation(ref[16])({ isKeyboardAwareOnAndroid: false }).insets.bottom;
+  const obj9 = {
+    listRef: ref,
+    channel,
+    insetBottom: null,
+    scrollPosition: null,
+    setCategoryIndex: null,
+    categories: null,
+    shouldShowPremiumUpsell: null,
+  };
+  const sum =
+    EXPRESSION_FOOTER_HEIGHT + initialScrollLocation(ref[16])({ isKeyboardAwareOnAndroid: false }).insets.bottom;
   obj9[2] = sum + initialScrollLocation(ref[11]).space.PX_16;
   obj9[3] = sharedValue;
   obj9[4] = tmp4;
@@ -121,7 +152,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPicker(channel) 
   items5[2] = callback2(c5, obj8);
   items5[3] = callback2(initialScrollLocation(ref[29]), { shouldShow: sharedValue2 });
   obj4[1] = items5;
-  const items6 = [closure_13(c5, obj4), ];
+  const items6 = [closure_13(c5, obj4)];
   obj10 = { guildId: channel.guild_id, listRef: ref, categories, categoryIndex: tmp3 };
   items6[1] = callback2(initialScrollLocation(ref[30]), obj10);
   obj3[5] = items6;

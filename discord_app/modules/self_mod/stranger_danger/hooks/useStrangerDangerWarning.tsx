@@ -8,7 +8,9 @@ import closure_2 from "../../../../stores/UserStore.tsx";
 import { SafetyWarningTypes } from "../../ChannelSafetyWarningsStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx",
+);
 
 export const useStrangerDangerWarning = function useStrangerDangerWarning(id) {
   const items = [closure_2];

@@ -14,7 +14,9 @@ createCacheKey = { textAlign: "center", alignItems: "center", gap: ThemesDefault
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/people/strangers/native/AcceptRequestConfirmationModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/people/strangers/native/AcceptRequestConfirmationModal.tsx",
+);
 
 export default function AcceptRequestConfirmationModal(onConfirm) {
   onConfirm = onConfirm.onConfirm;
@@ -33,7 +35,7 @@ export default function AcceptRequestConfirmationModal(onConfirm) {
   obj = { variant: "heading-lg/bold", color: "text-strong", style: tmp.text, children: null };
   const intl3 = onConfirm(1236).intl;
   obj[3] = intl3.string(onConfirm(1236).t.eJzSDT);
-  const items = [callback(onConfirm(4474).Text, obj), ];
+  const items = [callback(onConfirm(4474).Text, obj)];
   obj1 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl4 = onConfirm(1236).intl;
   obj1[3] = intl4.string(onConfirm(1236).t.GB4jUw);
@@ -41,4 +43,4 @@ export default function AcceptRequestConfirmationModal(onConfirm) {
   obj[1] = items;
   obj[4] = callback2(View, obj);
   return callback(componentDidMountDefault, obj);
-};
+}

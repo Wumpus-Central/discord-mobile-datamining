@@ -11,12 +11,19 @@ const styles = createCacheKey.createStyles(() => {
   obj = {};
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
   obj[0] = obj;
-  obj = { minWidth: MINIMUM_HIT_AREA.FAB_BUTTON_SIZE, minHeight: MINIMUM_HIT_AREA.FAB_BUTTON_SIZE, padding: 0, borderRadius: ThemesDefault.radii.lg };
+  obj = {
+    minWidth: MINIMUM_HIT_AREA.FAB_BUTTON_SIZE,
+    minHeight: MINIMUM_HIT_AREA.FAB_BUTTON_SIZE,
+    padding: 0,
+    borderRadius: ThemesDefault.radii.lg,
+  };
   obj[1] = obj;
   return obj;
 });
 let closure_6 = { mass: 0.5, damping: 80, stiffness: 320 };
-let closure_7 = { code: "function FloatingActionButtonNativeTsx1(){const{withSpring,positionBottom,DEFAULT_POSITION_OFFSET,SPRING_CONFIG,positionRight}=this.__closure;var _positionBottom,_positionRight;return{position:'absolute',bottom:withSpring((_positionBottom=positionBottom)!==null&&_positionBottom!==void 0?_positionBottom:DEFAULT_POSITION_OFFSET,SPRING_CONFIG),right:withSpring((_positionRight=positionRight)!==null&&_positionRight!==void 0?_positionRight:DEFAULT_POSITION_OFFSET,SPRING_CONFIG)};}" };
+let closure_7 = {
+  code: "function FloatingActionButtonNativeTsx1(){const{withSpring,positionBottom,DEFAULT_POSITION_OFFSET,SPRING_CONFIG,positionRight}=this.__closure;var _positionBottom,_positionRight;return{position:'absolute',bottom:withSpring((_positionBottom=positionBottom)!==null&&_positionBottom!==void 0?_positionBottom:DEFAULT_POSITION_OFFSET,SPRING_CONFIG),right:withSpring((_positionRight=positionRight)!==null&&_positionRight!==void 0?_positionRight:DEFAULT_POSITION_OFFSET,SPRING_CONFIG)};}",
+};
 const result = require("set").fileFinishedImporting("design/components/Button/native/FloatingActionButton.native.tsx");
 
 export const DEFAULT_POSITION_OFFSET = 16;
@@ -46,7 +53,13 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
       return obj;
     }
   }
-  obj = { withSpring: positionBottom(4927).withSpring, positionBottom, DEFAULT_POSITION_OFFSET: 16, SPRING_CONFIG: closure_6, positionRight };
+  obj = {
+    withSpring: positionBottom(4927).withSpring,
+    positionBottom,
+    DEFAULT_POSITION_OFFSET: 16,
+    SPRING_CONFIG: closure_6,
+    positionRight,
+  };
   F.__closure = obj;
   F.__workletHash = 10762818944671;
   F.__initData = closure_7;

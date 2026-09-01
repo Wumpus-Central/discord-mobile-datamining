@@ -13,7 +13,13 @@ import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let obj = { container: null, androidContainer: null, wrapper: null };
-obj = { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.xl };
+obj = {
+  flex: 1,
+  overflow: "hidden",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.xl,
+};
 obj[0] = obj;
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, borderRadius: ThemesDefault.radii.none };
 obj[1] = createCacheKey;
@@ -34,7 +40,7 @@ const memoResult = importAllResult.memo(function YouScreenContainer(route) {
     }
   }
   if (useChatLayoutDefault().isChatBesideChannelList) {
-    const items = [items1.container, ];
+    const items = [items1.container];
     let tmp3Result = tmp3(501);
     let tmp7;
     if (tmp3Result.isAndroid()) {
@@ -49,7 +55,7 @@ const memoResult = importAllResult.memo(function YouScreenContainer(route) {
     tmp3Result = tmp3(501);
     if (tmp3Result.isAndroid()) {
       obj1 = { style: null, children: null };
-      items1 = [, ];
+      items1 = [,];
       items1[0] = items1.wrapper;
       const obj2 = { maxWidth: null };
       obj2[0] = 0.6 * useWindowDimensionsDefault().width;

@@ -17,7 +17,14 @@ function getBaseProperties(merged) {
   }
   let obj = authStore;
   const roomUsers = authStore.getRoomUsers(channelId);
-  obj = { user_id: userId, guild_id: null, channel_id: null, guild_room_user_count: null, guild_room_user_connected: null, guild_room_background: null };
+  obj = {
+    user_id: userId,
+    guild_id: null,
+    channel_id: null,
+    guild_room_user_count: null,
+    guild_room_user_connected: null,
+    guild_room_background: null,
+  };
   if (null == guildId) {
     channel = channel.getChannel(channelId);
     guildId = undefined;
@@ -272,7 +279,7 @@ export const trackGuildRoomSeatSelected = function trackGuildRoomSeatSelected(ar
       str = "";
     }
     obj.seat_name = str;
-    const items = [, ];
+    const items = [,];
     ({ x: arr[0], y: arr[1] } = point);
     obj.seat_position_v2 = items;
     obj.seat_id = items2;
@@ -310,7 +317,12 @@ export const trackGuildRoomSeatSelected = function trackGuildRoomSeatSelected(ar
         items3.push(seat.position.x);
         items4.push(seat.position.y);
       });
-      obj = { seated_user_ids: null, seated_user_seat_names: null, seated_user_x_positions: null, seated_user_y_positions: null };
+      obj = {
+        seated_user_ids: null,
+        seated_user_seat_names: null,
+        seated_user_x_positions: null,
+        seated_user_y_positions: null,
+      };
       obj[0] = items1;
       obj[1] = items2;
       obj[2] = items3;
@@ -461,7 +473,9 @@ export const trackGuildRoomUserDisconnected = function trackGuildRoomUserDisconn
   obj.trackWithMetadata(AnalyticEvents.GUILD_ROOM_USER_DISCONNECTED, obj);
 };
 export const trackGuildRoomSettingsUpdate = function trackGuildRoomSettingsUpdate(remember_video_overlay_visibility) {
-  expandEventPropertiesDefault.track(AnalyticEvents.GUILD_ROOM_SETTINGS_UPDATE, { remember_video_overlay_visibility: remember_video_overlay_visibility.rememberVideoOverlayVisibility });
+  expandEventPropertiesDefault.track(AnalyticEvents.GUILD_ROOM_SETTINGS_UPDATE, {
+    remember_video_overlay_visibility: remember_video_overlay_visibility.rememberVideoOverlayVisibility,
+  });
 };
 export const trackGuildRoomUserUpdated = function trackGuildRoomUserUpdated(update) {
   let channelId = update.update;

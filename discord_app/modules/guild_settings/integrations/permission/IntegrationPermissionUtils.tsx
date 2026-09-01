@@ -21,7 +21,9 @@ function commandPermissions(arg0, items) {
   }
   return obj;
 }
-const result = require("set").fileFinishedImporting("modules/guild_settings/integrations/permission/IntegrationPermissionUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/integrations/permission/IntegrationPermissionUtils.tsx",
+);
 
 export const commandName = function commandName(arg0) {
   let text = arg1;
@@ -35,15 +37,20 @@ export const commandPermissionChannels = function commandPermissionChannels(arg0
   return commandPermissions(arg0, items);
 };
 export const commandPermissionMembersRoles = function commandPermissionMembersRoles(arg0) {
-  const items = [ApplicationCommandSectionType.ApplicationCommandPermissionType.ROLE, ApplicationCommandSectionType.ApplicationCommandPermissionType.USER];
+  const items = [
+    ApplicationCommandSectionType.ApplicationCommandPermissionType.ROLE,
+    ApplicationCommandSectionType.ApplicationCommandPermissionType.USER,
+  ];
   return commandPermissions(arg0, items);
 };
 export const toPermissionKey = function toPermissionKey(allChannelsSentinelResult, CHANNEL) {
   return "" + allChannelsSentinelResult + ":" + CHANNEL;
 };
 export const keyPermissions = function keyPermissions(permissions) {
-  return Object.fromEntries(permissions.map((id) => {
-    const items = ["" + id.id + ":" + id.type, id];
-    return items;
-  }));
+  return Object.fromEntries(
+    permissions.map((id) => {
+      const items = ["" + id.id + ":" + id.type, id];
+      return items;
+    }),
+  );
 };

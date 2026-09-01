@@ -20,7 +20,15 @@ export default {
     if (guildId !== closure_7) {
       tmp = guildId;
     }
-    dispatcherDefault.dispatch({ type: "CHANNEL_SELECT", guildId: tmp, channelId, messageId, jumpType, source, skipMessageFetch });
+    dispatcherDefault.dispatch({
+      type: "CHANNEL_SELECT",
+      guildId: tmp,
+      channelId,
+      messageId,
+      jumpType,
+      source,
+      skipMessageFetch,
+    });
   },
   selectPrivateChannel(id) {
     transitionTo.transitionTo(closure_8.CHANNEL(closure_7, id));
@@ -57,5 +65,5 @@ export default {
       const obj = disconnectRemoteAll;
     }
     const voiceChannel = this.selectVoiceChannel(null);
-  }
+  },
 };

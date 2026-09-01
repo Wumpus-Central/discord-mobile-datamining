@@ -9,8 +9,16 @@ import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages
 import { isStableVoiceStateEqual } from "../utils/VoiceStateIconUtils.tsx";
 
 const require = arg1;
-let obj = { STREAM_ICON: "STREAM_ICON", USER_VIDEO_ICON: "USER_VIDEO_ICON", MUTE_DEAFEN_ICON: "MUTE_DEAFEN_ICON", USER_DISCONNECTED_ICON: "DISCONNECTED_ICON", SPEAKER_MUTE_ICON: "SPEAKER_MUTE_ICON" };
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelCardUserStateIcons.tsx");
+let obj = {
+  STREAM_ICON: "STREAM_ICON",
+  USER_VIDEO_ICON: "USER_VIDEO_ICON",
+  MUTE_DEAFEN_ICON: "MUTE_DEAFEN_ICON",
+  USER_DISCONNECTED_ICON: "DISCONNECTED_ICON",
+  SPEAKER_MUTE_ICON: "SPEAKER_MUTE_ICON",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/hooks/useVoicePanelCardUserStateIcons.tsx",
+);
 
 export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
   const _require = arg0;
@@ -47,23 +55,30 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
   let obj2 = isStableVoiceStateEqual;
   let items1 = [videoIconState];
   const items2 = [tmp, id];
-  stateFromStores1 = require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
-    let voicePlatformForChannel = null;
-    if (null != c2) {
-      voicePlatformForChannel = null;
-      if (null != closure_1) {
-        voicePlatformForChannel = videoIconState.getVoicePlatformForChannel(tmp, tmp3);
-      }
-    }
-    return voicePlatformForChannel;
-  }, items2);
+  stateFromStores1 =
+    require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
+      items1,
+      () => {
+        let voicePlatformForChannel = null;
+        if (null != c2) {
+          voicePlatformForChannel = null;
+          if (null != closure_1) {
+            voicePlatformForChannel = videoIconState.getVoicePlatformForChannel(tmp, tmp3);
+          }
+        }
+        return voicePlatformForChannel;
+      },
+      items2,
+    );
   let tmp13;
   let tmp2Result = tmp2(10100);
   if (arg0 === stateFromStores.STREAM) {
     tmp13 = id;
   }
   tmp2Result = tmp2(10065);
-  showTileVolumeIndicator = tmp2Result.useConfig({ location: "useVoicePanelCardUserStateIcons" }).showTileVolumeIndicator;
+  showTileVolumeIndicator = tmp2Result.useConfig({
+    location: "useVoicePanelCardUserStateIcons",
+  }).showTileVolumeIndicator;
   if (showTileVolumeIndicator) {
     showTileVolumeIndicator = 0 === tmp2Result(tmp13, tmp4(4579).MediaEngineContextTypes.STREAM).effectiveVolume;
   }
@@ -71,7 +86,8 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
     showTileVolumeIndicator = arg0 === tmp5.STREAM;
   }
   const tmp4Result1 = defaultAreStatesEqual;
-  isRTCDisconnectedUIVisible = require("../../../voice_calls/RTCConnectionDesyncHooks.tsx").useIsRTCDisconnectedUIVisible(tmp, id);
+  isRTCDisconnectedUIVisible =
+    require("../../../voice_calls/RTCConnectionDesyncHooks.tsx").useIsRTCDisconnectedUIVisible(tmp, id);
   const items3 = [setShowFloatingCTA];
   callback = obj.useCallback(() => {
     setShowFloatingCTA(callback(_null[12]).OverrideFloatingCTA.BAD_CONNECTION);
@@ -83,13 +99,24 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
       icon() {
         return callback3(callback(7708).CircleErrorIcon, { size: "xs", color: callback2(712).colors.STATUS_WARNING });
       },
-      content: null
+      content: null,
     };
     const intl = callback(_null[16]).intl;
     obj[2] = intl.string(callback(_null[16]).t.HFwRpk);
     obj.open(obj);
   }, []);
-  const items4 = [stateFromStores, arg0, videoIconState, muteDeafenIconState, isRTCDisconnectedUIVisible, stateFromStores1, callback, id, callback1, showTileVolumeIndicator];
+  const items4 = [
+    stateFromStores,
+    arg0,
+    videoIconState,
+    muteDeafenIconState,
+    isRTCDisconnectedUIVisible,
+    stateFromStores1,
+    callback,
+    id,
+    callback1,
+    showTileVolumeIndicator,
+  ];
   return setShowFloatingCTA.useMemo(() => {
     if (stateFromStores) {
       if (callback === stateFromStores.STREAM) {
@@ -192,5 +219,5 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
       return [];
     }
   }, items4);
-};
+}
 export const VoicePanelCardUserStateIconType = obj;

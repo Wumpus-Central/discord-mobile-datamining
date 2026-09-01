@@ -16,10 +16,17 @@ export default function useColorThemeBackground() {
   const tmp = stateFromStores(4331)();
   const _require = tmp;
   let items = [closure_4];
-  stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => theme.theme);
+  stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
+    items,
+    () => theme.theme,
+  );
   let obj = defaultAreStatesEqual;
   const items1 = [closure_5];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => gradientPreset.gradientPreset);
+  const stateFromStores1 =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
+      items1,
+      () => gradientPreset.gradientPreset,
+    );
   const obj2 = defaultAreStatesEqual;
   const items2 = [tmp, stateFromStores];
   const customBackgroundGradient = require("MobileThemesUtils.tsx").useCustomBackgroundGradient();
@@ -34,7 +41,10 @@ export default function useColorThemeBackground() {
         obj[2] = tmp2;
         obj = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
         const items = [];
-        HermesBuiltin.arraySpread(callback(closure_1_2[5]).getSingleColorGuildThemeGradientColors(customUserThemeSettings.colors[0], tmp2), 0);
+        HermesBuiltin.arraySpread(
+          callback(closure_1_2[5]).getSingleColorGuildThemeGradientColors(customUserThemeSettings.colors[0], tmp2),
+          0,
+        );
         obj[0] = items;
         obj[1] = [];
         let num2 = customUserThemeSettings.gradientAngle;
@@ -76,4 +86,4 @@ export default function useColorThemeBackground() {
     memo = stateFromStores1;
   }
   return memo;
-};
+}

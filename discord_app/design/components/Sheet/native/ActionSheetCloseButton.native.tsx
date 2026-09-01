@@ -14,7 +14,14 @@ const result = require("set").fileFinishedImporting("design/components/Sheet/nat
 
 export const ActionSheetCloseButton = function ActionSheetCloseButton(arg0) {
   ({ onPress, variant } = arg0);
-  const obj = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, androidRippleConfig: null, onPress: null, children: null };
+  const obj = {
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    hitSlop: null,
+    androidRippleConfig: null,
+    onPress: null,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.cpT0Cq);
   obj[2] = closure_5;
@@ -26,5 +33,12 @@ export const ActionSheetCloseButton = function ActionSheetCloseButton(arg0) {
     ICON_STRONG = ThemesDefault.colors.ICON_STRONG;
   }
   obj[5] = jsx(XSmallIcon.XSmallIcon, { color: ICON_STRONG });
-  return jsx(PressableBase.PressableOpacity, { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, androidRippleConfig: null, onPress: null, children: null });
+  return jsx(PressableBase.PressableOpacity, {
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    hitSlop: null,
+    androidRippleConfig: null,
+    onPress: null,
+    children: null,
+  });
 };

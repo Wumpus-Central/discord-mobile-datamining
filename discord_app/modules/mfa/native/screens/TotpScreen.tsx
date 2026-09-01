@@ -34,7 +34,7 @@ export default function TotpScreen() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -125,7 +125,7 @@ export default function TotpScreen() {
     })();
   });
   const items = [finish];
-  callback = React.useCallback(function() {
+  callback = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -140,7 +140,18 @@ export default function TotpScreen() {
   const tmp8 = callback2(React.useState(false), 2);
   const intl = _require(first[7]).intl;
   obj[0] = intl.string(_require(first[7]).t.uc00u5);
-  obj = { label: null, placeholder: null, isValidClipboardCode: null, maxLength: null, onChangeCode: null, error: null, isDisabled: null, textContentType: "oneTimeCode", autoComplete: "one-time-code", keyboardType: "number-pad" };
+  obj = {
+    label: null,
+    placeholder: null,
+    isValidClipboardCode: null,
+    maxLength: null,
+    onChangeCode: null,
+    error: null,
+    isDisabled: null,
+    textContentType: "oneTimeCode",
+    autoComplete: "one-time-code",
+    keyboardType: "number-pad",
+  };
   const tmp13 = importDefault(first[6]);
   const intl2 = _require(first[7]).intl;
   obj[0] = intl2.string(_require(first[7]).t.HZPBOd);
@@ -177,4 +188,4 @@ export default function TotpScreen() {
   obj1[4] = tmp4;
   obj[2] = callback(tmp12(first[9]), obj1);
   return callback(tmp13, obj);
-};
+}

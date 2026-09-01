@@ -31,4 +31,4 @@ export default function isRoleRequired(guild_id) {
     }
     return false;
   }
-};
+}

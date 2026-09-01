@@ -14,66 +14,81 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
   let _require = arg0;
   dependencyMap = arg1;
   let items = [arg0, arg1];
-  let tmp = first(stateFromStoresArray.useMemo(() => {
-    if (_private.isPrivate()) {
-      const found = closure_0.filter((application) => {
-        application = application.application;
-        let id;
-        if (application != null) {
-          id = application.id;
-        }
-        let tmp2 = null != id;
-        if (tmp2) {
-          const activity = application.activity;
-          let party_id;
-          if (activity != null) {
-            party_id = activity.party_id;
+  let tmp = first(
+    stateFromStoresArray.useMemo(() => {
+      if (_private.isPrivate()) {
+        const found = closure_0.filter((application) => {
+          application = application.application;
+          let id;
+          if (application != null) {
+            id = application.id;
           }
-          tmp2 = null != party_id;
-        }
-        return tmp2;
-      });
-      const items = [found, found.map((id) => id.id)];
-      let items1 = items;
-    } else {
-      items1 = [closure_1_8, closure_1_7];
-    }
-    return items1;
-  }, items), 2);
+          let tmp2 = null != id;
+          if (tmp2) {
+            const activity = application.activity;
+            let party_id;
+            if (activity != null) {
+              party_id = activity.party_id;
+            }
+            tmp2 = null != party_id;
+          }
+          return tmp2;
+        });
+        const items = [found, found.map((id) => id.id)];
+        let items1 = items;
+      } else {
+        items1 = [closure_1_8, closure_1_7];
+      }
+      return items1;
+    }, items),
+    2,
+  );
   first = tmp[0];
   let items1 = [closure_5];
   const items2 = [first];
-  stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
-    let items = [];
-    const item = first.forEach((author) => {
-      items = author;
-      if (null != closure_1_5.findActivity(author.author.id, (application_id) => {
-        const application = author.application;
-        let id;
-        if (application != null) {
-          id = application.id;
+  stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+    items1,
+    () => {
+      let items = [];
+      const item = first.forEach((author) => {
+        items = author;
+        if (
+          null !=
+          closure_1_5.findActivity(
+            author.author.id,
+            (application_id) => {
+              const application = author.application;
+              let id;
+              if (application != null) {
+                id = application.id;
+              }
+              let tmp3 = application_id.application_id === id;
+              if (tmp3) {
+                const party = application_id.party;
+                let id1;
+                if (party != null) {
+                  id1 = party.id;
+                }
+                const activity = author.activity;
+                let party_id;
+                if (activity != null) {
+                  party_id = activity.party_id;
+                }
+                tmp3 = id1 === party_id;
+              }
+              return tmp3;
+            },
+            null,
+            true,
+          )
+        ) {
+          items.push(author.id);
         }
-        let tmp3 = application_id.application_id === id;
-        if (tmp3) {
-          const party = application_id.party;
-          let id1;
-          if (party != null) {
-            id1 = party.id;
-          }
-          const activity = author.activity;
-          let party_id;
-          if (activity != null) {
-            party_id = activity.party_id;
-          }
-          tmp3 = id1 === party_id;
-        }
-        return tmp3;
-      }, null, true)) {
-        items.push(author.id);
-      }
-    });
-    return items;
-  }, items2);
+      });
+      return items;
+    },
+    items2,
+  );
   const items3 = [first, stateFromStoresArray];
   const items4 = [
     tmp[1],
@@ -96,7 +111,14 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
             if (null != id) {
               if (null != party_id) {
                 const timestamp = application.timestamp;
-                const obj = { userId: null, applicationId: null, partyId: null, messageId: null, channelId: null, inviteTime: null };
+                const obj = {
+                  userId: null,
+                  applicationId: null,
+                  partyId: null,
+                  messageId: null,
+                  channelId: null,
+                  inviteTime: null,
+                };
                 obj[0] = application.author.id;
                 obj[1] = id;
                 obj[2] = party_id;
@@ -109,7 +131,7 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
         });
       }
       return items;
-    }, items3)
+    }, items3),
   ];
   let tmp4 = first(items4, 2);
   _require = tmp5;
@@ -130,4 +152,4 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
   }, items5);
   const items6 = [tmp4[0], tmp4[1]];
   return items6;
-};
+}

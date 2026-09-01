@@ -19,8 +19,7 @@ let c12 = false;
 let c13 = false;
 let c14 = null;
 const Store = initializeDefault.Store;
-class MultiAccountSwitchStore extends Store {
-}
+class MultiAccountSwitchStore extends Store {}
 const prototype = MultiAccountSwitchStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4);
@@ -83,7 +82,15 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(dispatcherDefault, {
         }
         if (null != token && null != token1 && token !== token1) {
           obj = {};
-          obj = { from_user_id: null, to_user_id: null, actual_user_id: null, fast_connect_user_id: null, linked_user_ids: null, has_ever_connected: null, switch_origin: null };
+          obj = {
+            from_user_id: null,
+            to_user_id: null,
+            actual_user_id: null,
+            fast_connect_user_id: null,
+            linked_user_ids: null,
+            has_ever_connected: null,
+            switch_origin: null,
+          };
           obj[0] = c8;
           obj[1] = c9;
           obj[2] = id;
@@ -104,7 +111,15 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(dispatcherDefault, {
         }
       }
       let tmp26 = c8 !== user.id;
-      obj1 = { from_user_id: null, to_user_id: null, actual_user_id: null, fast_connect_user_id: null, linked_user_ids: null, has_ever_connected: null, switch_origin: null };
+      obj1 = {
+        from_user_id: null,
+        to_user_id: null,
+        actual_user_id: null,
+        fast_connect_user_id: null,
+        linked_user_ids: null,
+        has_ever_connected: null,
+        switch_origin: null,
+      };
       obj1[0] = c8;
       obj1[1] = c9;
       obj1[2] = user.id;
@@ -172,7 +187,15 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(dispatcherDefault, {
             let tmp41Result = tmp41(707);
             let tmp46 = tmp41Result.getToken(id2) === token2;
             let obj3 = {};
-            obj4 = { from_user_id: null, to_user_id: null, actual_user_id: null, fast_connect_user_id: null, linked_user_ids: null, has_ever_connected: null, switch_origin: null };
+            obj4 = {
+              from_user_id: null,
+              to_user_id: null,
+              actual_user_id: null,
+              fast_connect_user_id: null,
+              linked_user_ids: null,
+              has_ever_connected: null,
+              switch_origin: null,
+            };
             obj4[0] = c8;
             obj4[1] = c9;
             obj4[2] = id2;
@@ -226,7 +249,15 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(dispatcherDefault, {
         const item1 = map.forEach((colliding_user_ids) => {
           if (colliding_user_ids.length >= 2) {
             let obj = {};
-            obj = { from_user_id: null, to_user_id: null, actual_user_id: null, fast_connect_user_id: null, linked_user_ids: null, has_ever_connected: null, switch_origin: null };
+            obj = {
+              from_user_id: null,
+              to_user_id: null,
+              actual_user_id: null,
+              fast_connect_user_id: null,
+              linked_user_ids: null,
+              has_ever_connected: null,
+              switch_origin: null,
+            };
             obj[0] = c8;
             obj[1] = c9;
             obj[2] = id;
@@ -252,7 +283,7 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(dispatcherDefault, {
       c12 = true;
       id = user.id;
     }
-  }
+  },
 });
 let obj = {
   MULTI_ACCOUNT_SWITCH_START: function handleSwitchStart(arg0) {
@@ -305,7 +336,15 @@ let obj = {
         }
         if (null != token && null != token1 && token !== token1) {
           obj = {};
-          obj = { from_user_id: null, to_user_id: null, actual_user_id: null, fast_connect_user_id: null, linked_user_ids: null, has_ever_connected: null, switch_origin: null };
+          obj = {
+            from_user_id: null,
+            to_user_id: null,
+            actual_user_id: null,
+            fast_connect_user_id: null,
+            linked_user_ids: null,
+            has_ever_connected: null,
+            switch_origin: null,
+          };
           obj[0] = c8;
           obj[1] = c9;
           obj[2] = id;
@@ -326,7 +365,15 @@ let obj = {
         }
       }
       let tmp26 = c8 !== user.id;
-      obj1 = { from_user_id: null, to_user_id: null, actual_user_id: null, fast_connect_user_id: null, linked_user_ids: null, has_ever_connected: null, switch_origin: null };
+      obj1 = {
+        from_user_id: null,
+        to_user_id: null,
+        actual_user_id: null,
+        fast_connect_user_id: null,
+        linked_user_ids: null,
+        has_ever_connected: null,
+        switch_origin: null,
+      };
       obj1[0] = c8;
       obj1[1] = c9;
       obj1[2] = user.id;
@@ -394,7 +441,15 @@ let obj = {
             let tmp41Result = tmp41(707);
             let tmp46 = tmp41Result.getToken(id2) === token2;
             let obj3 = {};
-            obj4 = { from_user_id: null, to_user_id: null, actual_user_id: null, fast_connect_user_id: null, linked_user_ids: null, has_ever_connected: null, switch_origin: null };
+            obj4 = {
+              from_user_id: null,
+              to_user_id: null,
+              actual_user_id: null,
+              fast_connect_user_id: null,
+              linked_user_ids: null,
+              has_ever_connected: null,
+              switch_origin: null,
+            };
             obj4[0] = c8;
             obj4[1] = c9;
             obj4[2] = id2;
@@ -448,7 +503,15 @@ let obj = {
         const item1 = map.forEach((colliding_user_ids) => {
           if (colliding_user_ids.length >= 2) {
             let obj = {};
-            obj = { from_user_id: null, to_user_id: null, actual_user_id: null, fast_connect_user_id: null, linked_user_ids: null, has_ever_connected: null, switch_origin: null };
+            obj = {
+              from_user_id: null,
+              to_user_id: null,
+              actual_user_id: null,
+              fast_connect_user_id: null,
+              linked_user_ids: null,
+              has_ever_connected: null,
+              switch_origin: null,
+            };
             obj[0] = c8;
             obj[1] = c9;
             obj[2] = id;
@@ -474,7 +537,7 @@ let obj = {
       c12 = true;
       id = user.id;
     }
-  }
+  },
 };
 const tmp2 = new timestampDefault("MultiAccountSwitchStore");
 let result = require("set").fileFinishedImporting("modules/multi_account/MultiAccountSwitchStore.tsx");

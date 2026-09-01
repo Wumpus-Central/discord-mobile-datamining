@@ -7,7 +7,10 @@ const result = require("set").fileFinishedImporting("modules/user_profile/hooks/
 export default function useIsUserProfileObfuscated(flags) {
   const _require = flags;
   const items = [closure_2];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.getUserProfile(id.id));
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_2.getUserProfile(id.id),
+  );
   let bio;
   if (stateFromStores != null) {
     bio = stateFromStores.bio;
@@ -56,4 +59,4 @@ export default function useIsUserProfileObfuscated(flags) {
     tmp3 = tmp8;
   }
   return tmp3;
-};
+}

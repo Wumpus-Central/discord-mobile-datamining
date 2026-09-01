@@ -6,7 +6,9 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ Modal: c3, View: c4 } = get_ActivityIndicator);
-let closure_6 = createCacheKey.createStyles({ modalBackground: { flex: 1, alignItems: "center", flexDirection: "column", justifyContent: "center" } });
+let closure_6 = createCacheKey.createStyles({
+  modalBackground: { flex: 1, alignItems: "center", flexDirection: "column", justifyContent: "center" },
+});
 let closure_7 = { OPENING: 0, [0]: "OPENING", SHOWN: 1, [1]: "SHOWN", DISMISSED: 2, [2]: "DISMISSED" };
 const result = require("set").fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModalUI.tsx");
 
@@ -72,7 +74,9 @@ export default function SimpleLoadingModal(operation) {
   const items3 = [operation, callback1, callback2];
   const effect = onRejected.useEffect(() => {
     const promise = operation();
-    operation().then((arg0) => callback(arg0)).catch((arg0) => callback2(arg0));
+    operation()
+      .then((arg0) => callback(arg0))
+      .catch((arg0) => callback2(arg0));
   }, items3);
   let obj = {
     transparent: true,
@@ -89,9 +93,13 @@ export default function SimpleLoadingModal(operation) {
         callback();
       }
     },
-    children: null
+    children: null,
   };
   obj = { style: callback().modalBackground, children: jsx(operation(onResolved[4]).ActivityIndicator, {}) };
-  obj[4] = <onDismissed style={callback().modalBackground}>{jsx(operation(onResolved[4]).ActivityIndicator, {})}</onDismissed>;
-  return <cancelable style={callback().modalBackground}>{jsx(operation(onResolved[4]).ActivityIndicator, {})}</cancelable>;
-};
+  obj[4] = (
+    <onDismissed style={callback().modalBackground}>{jsx(operation(onResolved[4]).ActivityIndicator, {})}</onDismissed>
+  );
+  return (
+    <cancelable style={callback().modalBackground}>{jsx(operation(onResolved[4]).ActivityIndicator, {})}</cancelable>
+  );
+}

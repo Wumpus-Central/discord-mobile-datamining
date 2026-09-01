@@ -61,7 +61,7 @@ function EmbedAnnouncementCard(message) {
       obj2[3] = embedSource.url;
       tmp12Result = tmp12(message(4474).Text, obj2);
     }
-    const items = [tmp12Result, ];
+    const items = [tmp12Result];
     const obj3 = { style: null, children: null };
     const items1 = [tmp.embedContentArea, tmp11];
     obj3[0] = items1;
@@ -78,14 +78,14 @@ function EmbedAnnouncementCard(message) {
         obj5[1] = tmp.embedAuthorIcon;
         tmp12Result = tmp12(closure_5, obj5);
       }
-      const items2 = [tmp12Result, ];
+      const items2 = [tmp12Result];
       const obj7 = { variant: "text-xs/semibold", color: "text-strong", lineClamp: 1, children: null };
       obj7[3] = embedSource.authorName;
       items2[1] = tmp12(message(4474).Text, obj7);
       obj4[1] = items2;
       tmp14Result = tmp14(tmp15, obj4);
     }
-    const items3 = [tmp14Result, , , , ];
+    const items3 = [tmp14Result, , , ,];
     let tmp12Result1 = null != message.media && null != posterUrl;
     if (tmp12Result1) {
       const obj8 = { style: null, children: null };
@@ -130,14 +130,14 @@ function EmbedAnnouncementCard(message) {
       obj15[1] = tmp.embedProviderIcon;
       tmp12Result4 = tmp12(closure_5, obj15);
     }
-    const items4 = [tmp12Result4, , ];
+    const items4 = [tmp12Result4, ,];
     let str2 = "";
     if (null != embedSource.providerName) {
       const _HermesInternal = HermesInternal;
       str2 = "" + embedSource.providerName + " \u00B7 ";
     }
     const obj17 = { variant: "text-xs/medium", color: "text-muted", children: null };
-    const items5 = [str2, ];
+    const items5 = [str2];
     const _Date = Date;
     const date = new Date(message.timestamp);
     items5[1] = message(4163).dateFormat(date, "LL");
@@ -149,7 +149,7 @@ function EmbedAnnouncementCard(message) {
       obj18[0] = tmp.reactionInfo;
       const obj19 = { size: "xs", color: null };
       obj19[1] = ThemesDefault.colors.TEXT_MUTED;
-      const items6 = [tmp12(tmp35(8228).ReactionIcon, obj19), ];
+      const items6 = [tmp12(tmp35(8228).ReactionIcon, obj19)];
       let tmp46 = null != obj20;
       if (tmp46) {
         tmp46 = obj20.locale === tmp35(1236).intl.currentLocale;
@@ -214,7 +214,7 @@ function MessageAnnouncementCard(message) {
     },
     accessibilityRole: "button",
     accessibilityLabel: message.title,
-    children: null
+    children: null,
   };
   let tmp13 = null != message.media;
   if (tmp13) {
@@ -231,7 +231,7 @@ function MessageAnnouncementCard(message) {
     obj[1] = callback(message(8880).ImageWithPlaceholder, obj1);
     tmp13 = callback(closure_6, obj);
   }
-  const items = [tmp13, ];
+  const items = [tmp13];
   const obj2 = { style: tmp.cardBody, children: null };
   let tmp19 = null != message.title;
   if (tmp19) {
@@ -242,7 +242,7 @@ function MessageAnnouncementCard(message) {
     obj3[3] = tmp4(message.title, true, obj4);
     tmp19 = callback(message(4474).Text, obj3);
   }
-  const items1 = [tmp19, , ];
+  const items1 = [tmp19, ,];
   let tmp23 = message.body.length > 0;
   if (tmp23) {
     const obj5 = { variant: "text-sm/medium", color: "text-default", lineClamp: 3, children: null };
@@ -257,14 +257,14 @@ function MessageAnnouncementCard(message) {
   const obj8 = { variant: "text-xs/medium", color: "text-muted", children: null };
   let obj12 = message(4163);
   obj8[2] = obj12.dateFormat(new Date(message.timestamp), "LL");
-  const items2 = [callback(message(4474).Text, obj8), ];
+  const items2 = [callback(message(4474).Text, obj8)];
   let tmp11Result = message.reactionCount > 0;
   if (tmp11Result) {
     const obj9 = { style: null, children: null };
     obj9[0] = tmp.reactionInfo;
     const obj10 = { size: "xs", color: null };
     obj10[1] = ThemesDefault.colors.TEXT_MUTED;
-    const items3 = [tmp27(tmp28(8228).ReactionIcon, obj10), ];
+    const items3 = [tmp27(tmp28(8228).ReactionIcon, obj10)];
     let tmp34 = null != obj11;
     if (tmp34) {
       tmp34 = obj11.locale === tmp28(1236).intl.currentLocale;
@@ -314,20 +314,24 @@ function PollAnnouncementCard(message) {
     obj[0] = tmp.cardBody;
     obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj1[2] = poll.question.text;
-    const items = [callback(message(4474).Text, obj1), , ];
+    const items = [callback(message(4474).Text, obj1), ,];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.pollAnswers;
     const items1 = [
       substr.map((poll_media) => {
-          const obj = { style: pollAnswerOption.pollAnswerOption, children: null };
-          let str = poll_media.poll_media.text;
-          if (str == null) {
-            str = "";
-          }
-          obj[1] = closure_1_10(message(closure_1_3[9]).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: str });
-          return closure_1_10(closure_1_6, obj, poll_media.answer_id);
-        }),
-
+        const obj = { style: pollAnswerOption.pollAnswerOption, children: null };
+        let str = poll_media.poll_media.text;
+        if (str == null) {
+          str = "";
+        }
+        obj[1] = closure_1_10(message(closure_1_3[9]).Text, {
+          variant: "text-sm/medium",
+          color: "text-default",
+          lineClamp: 1,
+          children: str,
+        });
+        return closure_1_10(closure_1_6, obj, poll_media.answer_id);
+      }),
     ];
     let tmp9Result = diff > 0;
     if (tmp9Result) {
@@ -365,28 +369,102 @@ let c4 = importAllResult;
 let c12 = 120;
 let c13 = null;
 let c14 = null;
-let obj = { container: null, smallCardsScroller: null, smallCardsContainer: null, sectionHeader: null, loadingContainer: null, card: null, cardBody: null, smallCardMedia: null, mediaImage: null, metadataRow: null, reactionInfo: null, embedContentArea: null, embedAuthorRow: null, embedAuthorIcon: null, embedProviderIcon: null, embedMedia: null, pollAnswers: null, pollAnswerOption: null, pollMoreOptions: null };
+let obj = {
+  container: null,
+  smallCardsScroller: null,
+  smallCardsContainer: null,
+  sectionHeader: null,
+  loadingContainer: null,
+  card: null,
+  cardBody: null,
+  smallCardMedia: null,
+  mediaImage: null,
+  metadataRow: null,
+  reactionInfo: null,
+  embedContentArea: null,
+  embedAuthorRow: null,
+  embedAuthorIcon: null,
+  embedProviderIcon: null,
+  embedMedia: null,
+  pollAnswers: null,
+  pollAnswerOption: null,
+  pollMoreOptions: null,
+};
 obj = { gap: ThemesDefault.space.PX_8 };
 obj[0] = obj;
 createCacheKey = { marginHorizontal: -ThemesDefault.space.PX_16, overflow: "visible" };
 obj[1] = createCacheKey;
 obj[2] = { flexDirection: "row", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
 let obj2 = { flexDirection: "row", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
-obj[3] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
+obj[3] = {
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+};
 obj[4] = { height: 120, alignItems: "center", justifyContent: "center" };
-let obj3 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
-obj[5] = { flexDirection: "column", borderRadius: ThemesDefault.radii.lg, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, width: 160 };
-let obj4 = { flexDirection: "column", borderRadius: ThemesDefault.radii.lg, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, width: 160 };
-obj[6] = { flex: 1, flexDirection: "column", gap: ThemesDefault.space.PX_4, overflow: "hidden", padding: ThemesDefault.space.PX_12 };
+let obj3 = {
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+};
+obj[5] = {
+  flexDirection: "column",
+  borderRadius: ThemesDefault.radii.lg,
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  width: 160,
+};
+let obj4 = {
+  flexDirection: "column",
+  borderRadius: ThemesDefault.radii.lg,
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  width: 160,
+};
+obj[6] = {
+  flex: 1,
+  flexDirection: "column",
+  gap: ThemesDefault.space.PX_4,
+  overflow: "hidden",
+  padding: ThemesDefault.space.PX_12,
+};
 obj[7] = { height: 120, overflow: "hidden", flexShrink: 0 };
 obj[8] = { width: "100%", height: "100%", resizeMode: "cover" };
-let obj5 = { flex: 1, flexDirection: "column", gap: ThemesDefault.space.PX_4, overflow: "hidden", padding: ThemesDefault.space.PX_12 };
+let obj5 = {
+  flex: 1,
+  flexDirection: "column",
+  gap: ThemesDefault.space.PX_4,
+  overflow: "hidden",
+  padding: ThemesDefault.space.PX_12,
+};
 obj[9] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginTop: "auto" };
 let obj6 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginTop: "auto" };
 obj[10] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 let obj7 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-obj[11] = { flex: 1, gap: ThemesDefault.space.PX_4, borderLeftWidth: 4, borderLeftColor: ThemesDefault.colors.BORDER_SUBTLE, borderTopLeftRadius: ThemesDefault.radii.xs, borderBottomLeftRadius: ThemesDefault.radii.xs, paddingLeft: ThemesDefault.space.PX_8 };
-let obj8 = { flex: 1, gap: ThemesDefault.space.PX_4, borderLeftWidth: 4, borderLeftColor: ThemesDefault.colors.BORDER_SUBTLE, borderTopLeftRadius: ThemesDefault.radii.xs, borderBottomLeftRadius: ThemesDefault.radii.xs, paddingLeft: ThemesDefault.space.PX_8 };
+obj[11] = {
+  flex: 1,
+  gap: ThemesDefault.space.PX_4,
+  borderLeftWidth: 4,
+  borderLeftColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderTopLeftRadius: ThemesDefault.radii.xs,
+  borderBottomLeftRadius: ThemesDefault.radii.xs,
+  paddingLeft: ThemesDefault.space.PX_8,
+};
+let obj8 = {
+  flex: 1,
+  gap: ThemesDefault.space.PX_4,
+  borderLeftWidth: 4,
+  borderLeftColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderTopLeftRadius: ThemesDefault.radii.xs,
+  borderBottomLeftRadius: ThemesDefault.radii.xs,
+  paddingLeft: ThemesDefault.space.PX_8,
+};
 obj[12] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 let obj9 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 obj[13] = { width: 20, height: 20, borderRadius: ThemesDefault.radii.round };
@@ -396,8 +474,18 @@ obj[15] = { overflow: "hidden", borderRadius: ThemesDefault.radii.sm, aspectRati
 let obj11 = { overflow: "hidden", borderRadius: ThemesDefault.radii.sm, aspectRatio: 1.7777777777777777 };
 obj[16] = { flexDirection: "column", gap: ThemesDefault.space.PX_4, flex: 1 };
 let obj12 = { flexDirection: "column", gap: ThemesDefault.space.PX_4, flex: 1 };
-obj[17] = { paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-let obj13 = { paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+obj[17] = {
+  paddingVertical: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
+let obj13 = {
+  paddingVertical: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 obj[18] = { paddingHorizontal: ThemesDefault.space.PX_12 };
 let closure_15 = createCacheKey.createStyles(obj);
 let closure_19 = importAllResult.memo((message) => {
@@ -417,7 +505,9 @@ let closure_19 = importAllResult.memo((message) => {
   return tmp6;
 });
 let obj14 = { paddingHorizontal: ThemesDefault.space.PX_12 };
-let result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileAnnouncements.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/game_profile/native/components/GameProfileAnnouncements.tsx",
+);
 
 export default function GameProfileAnnouncements(gameId) {
   gameId = gameId.gameId;
@@ -510,7 +600,7 @@ export default function GameProfileAnnouncements(gameId) {
     const intl = gameId(tmp3[5]).intl;
     obj[2] = intl.string(gameId(tmp3[5]).t.B0BV3Y);
     obj[1] = callback(gameId(tmp3[9]).Text, obj);
-    const items2 = [callback(channelId, obj), ];
+    const items2 = [callback(channelId, obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.loadingContainer;
     obj1[1] = callback(closure_8, {});
@@ -529,7 +619,7 @@ export default function GameProfileAnnouncements(gameId) {
         const obj4 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
         const intl2 = gameId(tmp3[5]).intl;
         obj4[2] = intl2.string(gameId(tmp3[5]).t.B0BV3Y);
-        const items3 = [callback(gameId(tmp3[9]).Text, obj4), ];
+        const items3 = [callback(gameId(tmp3[9]).Text, obj4)];
         const obj5 = { text: null, variant: "tertiary", size: "sm", icon: null, iconPosition: "end", onPress: null };
         const intl3 = gameId(tmp3[5]).intl;
         obj5[0] = intl3.string(gameId(tmp3[5]).t.budhsM);
@@ -537,10 +627,21 @@ export default function GameProfileAnnouncements(gameId) {
         obj5[5] = callback;
         items3[1] = callback(gameId(tmp3[18]).Button, obj5);
         obj3[1] = items3;
-        const items4 = [callback2(channelId, obj3), ];
-        const obj6 = { showsHorizontalScrollIndicator: false, style: null, contentContainerStyle: null, decelerationRate: "fast", snapToInterval: 172, snapToStart: false, snapToEnd: false, children: null };
+        const items4 = [callback2(channelId, obj3)];
+        const obj6 = {
+          showsHorizontalScrollIndicator: false,
+          style: null,
+          contentContainerStyle: null,
+          decelerationRate: "fast",
+          snapToInterval: 172,
+          snapToStart: false,
+          snapToEnd: false,
+          children: null,
+        };
         ({ smallCardsScroller: obj9[1], smallCardsContainer: obj9[2] } = tmp);
-        obj6[7] = messages.map((id) => closure_1_10(closure_1_19, { message: id, onPress: closure_8, guildId, channelId }, id.id));
+        obj6[7] = messages.map((id) =>
+          closure_1_10(closure_1_19, { message: id, onPress: closure_8, guildId, channelId }, id.id),
+        );
         items4[1] = callback(invite(tmp3[20]), obj6);
         obj2[1] = items4;
         tmp7 = callback2(channelId, obj2);
@@ -549,4 +650,4 @@ export default function GameProfileAnnouncements(gameId) {
     }
   }
   return tmp7;
-};
+}

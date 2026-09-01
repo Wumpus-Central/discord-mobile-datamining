@@ -76,7 +76,10 @@ function shouldTrackChannel(channelId) {
                 if (!tmp9) {
                   let tmp11 = null == tmp7.flags;
                   if (!tmp11) {
-                    tmp11 = !hasFlag.hasAnyFlag(tmp7.flags, constants.UNREADS_ALL_MESSAGES | constants.UNREADS_ONLY_MENTIONS);
+                    tmp11 = !hasFlag.hasAnyFlag(
+                      tmp7.flags,
+                      constants.UNREADS_ALL_MESSAGES | constants.UNREADS_ONLY_MENTIONS,
+                    );
                     const obj2 = hasFlag;
                   }
                   tmp9 = !tmp11;
@@ -101,7 +104,10 @@ function shouldTrackChannel(channelId) {
                   if (!tmp18) {
                     let tmp20 = null == tmp16.flags;
                     if (!tmp20) {
-                      tmp20 = !hasFlag.hasAnyFlag(tmp16.flags, constants.UNREADS_ALL_MESSAGES | constants.UNREADS_ONLY_MENTIONS);
+                      tmp20 = !hasFlag.hasAnyFlag(
+                        tmp16.flags,
+                        constants.UNREADS_ALL_MESSAGES | constants.UNREADS_ONLY_MENTIONS,
+                      );
                       const obj3 = hasFlag;
                     }
                     tmp18 = !tmp20;
@@ -114,7 +120,10 @@ function shouldTrackChannel(channelId) {
                 return false;
               } else {
                 const unreadSetting = obj.resolveUnreadSetting(basicChannel);
-                return obj.getChannelUnreadSetting(basicChannel.guild_id, basicChannel.id) === UnreadSetting.UNSET && unreadSetting !== UnreadSetting.ALL_MESSAGES;
+                return (
+                  obj.getChannelUnreadSetting(basicChannel.guild_id, basicChannel.id) === UnreadSetting.UNSET &&
+                  unreadSetting !== UnreadSetting.ALL_MESSAGES
+                );
               }
             }
           }
@@ -127,7 +136,7 @@ function shouldTrackChannel(channelId) {
   }
 }
 let obj = { timeSinceJoin: setDefault.Millis.HOUR, sends: 1, viewTime: setDefault.Millis.MINUTE };
-let items = [obj, , , ];
+let items = [obj, , ,];
 obj = { timeSinceJoin: setDefault.Millis.DAY, sends: 2, viewTime: 2 * setDefault.Millis.MINUTE };
 items[1] = obj;
 obj = { timeSinceJoin: setDefault.Millis.WEEK, sends: 5, viewTime: 5 * setDefault.Millis.MINUTE };
@@ -141,8 +150,7 @@ let c16 = null;
 let c17 = 0;
 let c18 = 0;
 const PersistedStore = initializeDefault.PersistedStore;
-class UnreadSettingNoticeStore2Class extends PersistedStore {
-}
+class UnreadSettingNoticeStore2Class extends PersistedStore {}
 const prototype = UnreadSettingNoticeStore2Class.prototype;
 prototype["initialize"] = function initialize(channels) {
   if (null != channels) {
@@ -212,7 +220,11 @@ prototype["maybeAutoUpgradeChannel"] = function maybeAutoUpgradeChannel(id) {
         const channels = closure_14.channels;
         delete tmp[tmp2];
         set.add(id);
-        const result = useChannelPresetSettings.updateChannelUnreadSetting(basicChannel.guild_id, basicChannel.id, UnreadSetting.ALL_MESSAGES);
+        const result = useChannelPresetSettings.updateChannelUnreadSetting(
+          basicChannel.guild_id,
+          basicChannel.id,
+          UnreadSetting.ALL_MESSAGES,
+        );
         flag2 = true;
         let obj = useChannelPresetSettings;
       }
@@ -320,7 +332,7 @@ const unreadSettingNoticeStore2Class = new UnreadSettingNoticeStore2Class(dispat
       }
     }
     return false;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/notifications/settings_unread_notice/UnreadSettingNoticeStore2.tsx");
 

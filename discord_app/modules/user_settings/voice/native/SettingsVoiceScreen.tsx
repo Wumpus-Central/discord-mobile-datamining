@@ -28,7 +28,7 @@ function KrispLogo() {
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
   const intl = tmp5(1236).intl;
   obj[2] = intl.string(getSystemLocale.t.vFiCSx);
-  const items = [callback(closure_5, obj), ];
+  const items = [callback(closure_5, obj)];
   obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = tmp5(1236).intl;
   obj1[1] = intl2.string(getSystemLocale.t.hvVgAZ);
@@ -59,8 +59,14 @@ function SystemProcessingSubLabel() {
 }
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-let closure_12 = "" + importDefaultResult.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
-let closure_13 = createCacheKey.createStyles({ krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" }, logo: { marginRight: 8, height: 30, width: 67 } });
+let closure_12 =
+  "" +
+  importDefaultResult.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) +
+  "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
+let closure_13 = createCacheKey.createStyles({
+  krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" },
+  logo: { marginRight: 8, height: 30, width: 67 },
+});
 let result = require("set").fileFinishedImporting("modules/user_settings/voice/native/SettingsVoiceScreen.tsx");
 
 export default function SettingsVoiceScreen() {
@@ -70,14 +76,14 @@ export default function SettingsVoiceScreen() {
     obj = { label: null, settings: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.LKCupB);
-    const items = [, , ];
+    const items = [, ,];
     ({ INPUT_MODE: arr[0], AUTO_VOICE_SENSITIVITY: arr[1], VOICE_SENSITIVITY: arr[2] } = constants);
     obj[1] = items;
-    const items1 = [obj, , , , , , , ];
+    const items1 = [obj, , , , , , ,];
     obj1 = { label: null, settings: null, subLabel: null };
     const intl2 = callback(1236).intl;
     obj1[0] = intl2.string(callback(1236).t.UXxPGB);
-    const items2 = [, ];
+    const items2 = [,];
     ({ OUTPUT_VOLUME: arr3[0], STREAM_OUTPUT_VOLUME: arr3[1] } = constants);
     obj1[1] = items2;
     const intl3 = callback(1236).intl;
@@ -116,8 +122,13 @@ export default function SettingsVoiceScreen() {
     const obj9 = { label: null, settings: null };
     const intl8 = callback(1236).intl;
     obj9[0] = intl8.string(callback(1236).t["6I6GUv"]);
-    const items8 = [, , , ];
-    ({ ECHO_CANCELLATION: arr9[0], SIDECHAIN_COMPRESSION: arr9[1], AUTOMATIC_GAIN_CONTROL: arr9[2], ADVANCED_VOICE_ACTIVITY: arr9[3] } = constants);
+    const items8 = [, , ,];
+    ({
+      ECHO_CANCELLATION: arr9[0],
+      SIDECHAIN_COMPRESSION: arr9[1],
+      AUTOMATIC_GAIN_CONTROL: arr9[2],
+      ADVANCED_VOICE_ACTIVITY: arr9[3],
+    } = constants);
     obj9[1] = items8;
     items1[6] = obj9;
     const obj10 = { label: null, settings: null };
@@ -130,4 +141,4 @@ export default function SettingsVoiceScreen() {
     return obj.createList(obj);
   }, []);
   return callback(_modDef14340, { node });
-};
+}

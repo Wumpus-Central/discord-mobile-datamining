@@ -6,7 +6,9 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx",
+);
 
 export const renderChannelPressableWrapper = function renderChannelPressableWrapper(children, panelVariant) {
   let flag = panelVariant.panelVariant;

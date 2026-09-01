@@ -22,7 +22,15 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "flexDirection", connectionState: "context", selfMute: false, deafened: "SensitivityType", isPushToTalk: null, embeddedActivity: "\u{1F1E6}\u{1F1E9}", isStreaming: 6 };
+    obj.state = {
+      channelId: "flexDirection",
+      connectionState: "context",
+      selfMute: false,
+      deafened: "SensitivityType",
+      isPushToTalk: null,
+      embeddedActivity: "\u{1F1E6}\u{1F1E9}",
+      isStreaming: 6,
+    };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = closure_1_9.getChannelId();
       const state = closure_1_9.getState();
@@ -146,7 +154,17 @@ class VoiceNotificationManager {
             const tmp16Result = tmp16(updateServiceHandler[15]);
           }
           const obj3 = closure_1_1(closure_1_2[14]);
-          obj = { title: null, content: null, priority: null, contentAction: null, auxiliaryActions: null, type: null, usesGateway: true, icon: null, color: null };
+          obj = {
+            title: null,
+            content: null,
+            priority: null,
+            contentAction: null,
+            auxiliaryActions: null,
+            type: null,
+            usesGateway: true,
+            icon: null,
+            color: null,
+          };
           const channelName = obj(updateServiceHandler[16]).computeChannelName(channel, closure_1_11, closure_1_10);
           const intl = obj(updateServiceHandler[17]).intl;
           obj = { callState: null };
@@ -157,7 +175,14 @@ class VoiceNotificationManager {
           obj[2] = obj(updateServiceHandler[12]).ServiceNotificationPriority.HIGH;
           obj[3] = updateServiceHandlerResult.createAction(channel, "SelectVoiceChannel", undefined);
           const intl2 = obj(updateServiceHandler[17]).intl;
-          const items = [updateServiceHandlerResult.createAction(channel, "Disconnect", intl2.string(obj(updateServiceHandler[17]).t["6vrfgt"])), , ];
+          const items = [
+            updateServiceHandlerResult.createAction(
+              channel,
+              "Disconnect",
+              intl2.string(obj(updateServiceHandler[17]).t["6vrfgt"]),
+            ),
+            ,
+          ];
           const intl3 = obj(updateServiceHandler[17]).intl;
           const string = intl3.string;
           const t = obj(updateServiceHandler[17]).t;
@@ -217,7 +242,15 @@ prototype["terminate"] = function terminate() {
 };
 set = Object.create(VoiceNotificationManager.prototype);
 set.voiceServiceHandlerId = 9000;
-set.state = { channelId: "flexDirection", connectionState: "context", selfMute: false, deafened: "SensitivityType", isPushToTalk: null, embeddedActivity: "\u{1F1E6}\u{1F1E9}", isStreaming: 6 };
+set.state = {
+  channelId: "flexDirection",
+  connectionState: "context",
+  selfMute: false,
+  deafened: "SensitivityType",
+  isPushToTalk: null,
+  embeddedActivity: "\u{1F1E6}\u{1F1E9}",
+  isStreaming: 6,
+};
 set.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = closure_1_9.getChannelId();
   const state = closure_1_9.getState();
@@ -341,7 +374,17 @@ set.handleUpdate = function handleUpdate(connectionState) {
         const tmp16Result = tmp16(updateServiceHandler[15]);
       }
       const obj3 = closure_1_1(closure_1_2[14]);
-      obj = { title: null, content: null, priority: null, contentAction: null, auxiliaryActions: null, type: null, usesGateway: true, icon: null, color: null };
+      obj = {
+        title: null,
+        content: null,
+        priority: null,
+        contentAction: null,
+        auxiliaryActions: null,
+        type: null,
+        usesGateway: true,
+        icon: null,
+        color: null,
+      };
       const channelName = obj(updateServiceHandler[16]).computeChannelName(channel, closure_1_11, closure_1_10);
       const intl = obj(updateServiceHandler[17]).intl;
       obj = { callState: null };
@@ -352,7 +395,14 @@ set.handleUpdate = function handleUpdate(connectionState) {
       obj[2] = obj(updateServiceHandler[12]).ServiceNotificationPriority.HIGH;
       obj[3] = updateServiceHandlerResult.createAction(channel, "SelectVoiceChannel", undefined);
       const intl2 = obj(updateServiceHandler[17]).intl;
-      const items = [updateServiceHandlerResult.createAction(channel, "Disconnect", intl2.string(obj(updateServiceHandler[17]).t["6vrfgt"])), , ];
+      const items = [
+        updateServiceHandlerResult.createAction(
+          channel,
+          "Disconnect",
+          intl2.string(obj(updateServiceHandler[17]).t["6vrfgt"]),
+        ),
+        ,
+      ];
       const intl3 = obj(updateServiceHandler[17]).intl;
       const string = intl3.string;
       const t = obj(updateServiceHandler[17]).t;
@@ -395,8 +445,7 @@ set.createAction = function createAction(channel, Disconnect, intl2) {
   return obj;
 };
 initializeDefault;
-class VoiceNotificationLifecycleManager extends tmp3 {
-}
+class VoiceNotificationLifecycleManager extends tmp3 {}
 const prototype2 = VoiceNotificationLifecycleManager.prototype;
 prototype2["_initialize"] = function _initialize() {
   set.initialize();

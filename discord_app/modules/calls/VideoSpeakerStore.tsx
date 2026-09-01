@@ -151,8 +151,7 @@ function handleChannelRTCUpdate() {
 }
 let closure_11 = importDefaultResult.throttle(updateSpeaker, 300, { trailing: true });
 const Store = initializeDefault.Store;
-class VideoSpeakerStoreClass extends Store {
-}
+class VideoSpeakerStoreClass extends Store {}
 const prototype = VideoSpeakerStoreClass.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_8, closure_5, closure_7, closure_4, closure_6);
@@ -172,7 +171,9 @@ prototype["getSpeaker"] = function getSpeaker(arg0) {
   return id;
 };
 VideoSpeakerStoreClass.displayName = "VideoSpeakerStore";
-const videoSpeakerStoreClass = new VideoSpeakerStoreClass(dispatcherDefault, { AUDIO_SET_LOCAL_VIDEO_DISABLED: handleChannelRTCUpdate });
+const videoSpeakerStoreClass = new VideoSpeakerStoreClass(dispatcherDefault, {
+  AUDIO_SET_LOCAL_VIDEO_DISABLED: handleChannelRTCUpdate,
+});
 let obj = { AUDIO_SET_LOCAL_VIDEO_DISABLED: handleChannelRTCUpdate };
 let result = require("set").fileFinishedImporting("modules/calls/VideoSpeakerStore.tsx");
 

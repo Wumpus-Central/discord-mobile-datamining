@@ -11,7 +11,7 @@ function _getDeviceState() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*() {
+    const iter = (function* () {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();

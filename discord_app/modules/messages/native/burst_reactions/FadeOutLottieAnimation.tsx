@@ -7,9 +7,15 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 let closure_7 = createCacheKey.createStyles({ content: { width: "100%" } });
-let closure_8 = { code: "function FadeOutLottieAnimationTsx1(){const{isAnimationComplete,isFadeOut,withTiming,runOnJS,setIsFadeOut}=this.__closure;if(!isAnimationComplete){return{opacity:1};}if(isFadeOut){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function(finished){if(finished)runOnJS(setIsFadeOut)(false);})};}return{opacity:0};}" };
-let closure_9 = { code: "function FadeOutLottieAnimationTsx2(finished){const{runOnJS,setIsFadeOut}=this.__closure;if(finished)runOnJS(setIsFadeOut)(false);}" };
-const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/FadeOutLottieAnimation.tsx");
+let closure_8 = {
+  code: "function FadeOutLottieAnimationTsx1(){const{isAnimationComplete,isFadeOut,withTiming,runOnJS,setIsFadeOut}=this.__closure;if(!isAnimationComplete){return{opacity:1};}if(isFadeOut){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function(finished){if(finished)runOnJS(setIsFadeOut)(false);})};}return{opacity:0};}",
+};
+let closure_9 = {
+  code: "function FadeOutLottieAnimationTsx2(finished){const{runOnJS,setIsFadeOut}=this.__closure;if(finished)runOnJS(setIsFadeOut)(false);}",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/burst_reactions/FadeOutLottieAnimation.tsx",
+);
 
 export default function FadeOutLottieAnimation(onComplete) {
   onComplete = onComplete.onComplete;
@@ -70,7 +76,13 @@ export default function FadeOutLottieAnimation(onComplete) {
       return;
     }
   }
-  obj = { isAnimationComplete: first, isFadeOut: first1, withTiming: onComplete(4479).withTiming, runOnJS: onComplete(4217).runOnJS, setIsFadeOut: tmp7 };
+  obj = {
+    isAnimationComplete: first,
+    isFadeOut: first1,
+    withTiming: onComplete(4479).withTiming,
+    runOnJS: onComplete(4217).runOnJS,
+    setIsFadeOut: tmp7,
+  };
   T.__closure = obj;
   T.__workletHash = 1137618554665;
   T.__initData = closure_8;
@@ -98,4 +110,4 @@ export default function FadeOutLottieAnimation(onComplete) {
     tmp14Result = null;
   }
   return tmp14Result;
-};
+}

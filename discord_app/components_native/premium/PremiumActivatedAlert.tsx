@@ -12,8 +12,21 @@ require = arg1;
 noopAll;
 ({ Image: c3, ImageBackground: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { alert: { overflow: "hidden", paddingBottom: 24 }, header: { alignSelf: "stretch", margin: -16, padding: 16, height: 100, position: "relative" }, headerImage: { position: "absolute", left: "50%" }, body: { paddingHorizontal: 16, marginTop: 40, maxWidth: 300, alignSelf: "center", alignItems: "center" }, logoPlusPremiumGuild: { marginTop: 3, width: 101, height: 19 }, description: null };
-createCacheKey = { fontSize: 14, lineHeight: 16, textAlign: "center", marginTop: 20, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
+createCacheKey = {
+  alert: { overflow: "hidden", paddingBottom: 24 },
+  header: { alignSelf: "stretch", margin: -16, padding: 16, height: 100, position: "relative" },
+  headerImage: { position: "absolute", left: "50%" },
+  body: { paddingHorizontal: 16, marginTop: 40, maxWidth: 300, alignSelf: "center", alignItems: "center" },
+  logoPlusPremiumGuild: { marginTop: 3, width: 101, height: 19 },
+  description: null,
+};
+createCacheKey = {
+  fontSize: 14,
+  lineHeight: 16,
+  textAlign: "center",
+  marginTop: 20,
+  color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_400,
+};
 createCacheKey[5] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = createCacheKey.createStyles((arg0) => {
@@ -138,7 +151,7 @@ export default function PremiumActivatedAlert(onClose) {
     }
     tmp4Result1 = tmp4(7977);
   }
-  const items = [closure_7(closure_3, { source: tmp4Result1, style: tmp9.logo }), , ];
+  const items = [closure_7(closure_3, { source: tmp4Result1, style: tmp9.logo }), ,];
   let tmp16Result = null;
   if (premiumBranding === getPremiumPlanItem.Branding.BUNDLE) {
     const obj6 = { source: null, style: null };
@@ -161,7 +174,7 @@ export default function PremiumActivatedAlert(onClose) {
   const items1 = [tmp10.headerImage, tmp.headerImage];
   items[2] = closure_7(closure_3, { source: tmp4Result2, style: items1 });
   obj4[2] = items;
-  const items2 = [closure_8(closure_4, obj4), ];
+  const items2 = [closure_8(closure_4, obj4)];
   const obj7 = { style: tmp.body, children: null };
   const obj5 = { source: tmp4Result1, style: tmp9.logo };
   const tmp11 = callback3(premiumBranding);
@@ -205,7 +218,7 @@ export default function PremiumActivatedAlert(onClose) {
     const obj8 = { source: null, style: null };
     obj8[0] = tmp4Result8;
     obj8[1] = tmp11.animation;
-    const items3 = [tmp16(tmp4Result3, obj8), ];
+    const items3 = [tmp16(tmp4Result3, obj8)];
     const obj9 = { style: null, children: null };
     obj9[0] = tmp.description;
     if (tmp7(4139).Branding.TIER_0 !== premiumBranding) {
@@ -233,4 +246,4 @@ export default function PremiumActivatedAlert(onClose) {
     const intl4 = tmp7(1236).intl;
     stringResult = intl4.string(tmp7(1236).t.knvOVz);
   }
-};
+}

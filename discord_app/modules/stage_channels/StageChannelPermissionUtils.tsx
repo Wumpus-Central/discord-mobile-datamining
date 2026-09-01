@@ -98,58 +98,70 @@ export const useCanCreateStageChannelByGuild = function useCanCreateStageChannel
   const _require = guildId;
   const items = [closure_8, closure_5, closure_7];
   const items1 = [guildId];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const id = closure_1_5.getId();
-    const guild = closure_1_7.getGuild(guildId);
-    let tmp3 = null != guild;
-    if (tmp3) {
-      const features = guild.features;
-      let hasItem = features.has(closure_1_10.COMMUNITY);
-      if (hasItem) {
-        let canResult = closure_1_4(guild, id);
-        if (!canResult) {
-          canResult = closure_1_8.can(guildId(closure_1_2[10]).CREATE_STAGE_CHANNEL_PERMISSIONS, guild);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const id = closure_1_5.getId();
+      const guild = closure_1_7.getGuild(guildId);
+      let tmp3 = null != guild;
+      if (tmp3) {
+        const features = guild.features;
+        let hasItem = features.has(closure_1_10.COMMUNITY);
+        if (hasItem) {
+          let canResult = closure_1_4(guild, id);
+          if (!canResult) {
+            canResult = closure_1_8.can(guildId(closure_1_2[10]).CREATE_STAGE_CHANNEL_PERMISSIONS, guild);
+          }
+          hasItem = canResult;
         }
-        hasItem = canResult;
+        tmp3 = hasItem;
       }
-      tmp3 = hasItem;
-    }
-    return tmp3;
-  }, items1);
+      return tmp3;
+    },
+    items1,
+  );
 };
 export const useCanUpdateStageChannelModerators = function useCanUpdateStageChannelModerators(id) {
   const _require = id;
   const items = [closure_8, closure_7, closure_6];
   const items1 = [id];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const channel = closure_1_6.getChannel(id);
-    let guildId;
-    if (channel != null) {
-      guildId = channel.getGuildId();
-    }
-    let canResult = closure_1_8.can(closure_1_11.ADMINISTRATOR, closure_1_7.getGuild(guildId));
-    let tmp5 = !canResult;
-    if (!canResult) {
-      tmp5 = !obj2.can(closure_1_11.MANAGE_ROLES, channel, undefined, undefined, true);
-    }
-    canResult = !tmp5;
-    if (tmp5) {
-      canResult = obj2.can(id(closure_1_2[10]).UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS, channel);
-    }
-    return canResult;
-  }, items1);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const channel = closure_1_6.getChannel(id);
+      let guildId;
+      if (channel != null) {
+        guildId = channel.getGuildId();
+      }
+      let canResult = closure_1_8.can(closure_1_11.ADMINISTRATOR, closure_1_7.getGuild(guildId));
+      let tmp5 = !canResult;
+      if (!canResult) {
+        tmp5 = !obj2.can(closure_1_11.MANAGE_ROLES, channel, undefined, undefined, true);
+      }
+      canResult = !tmp5;
+      if (tmp5) {
+        canResult = obj2.can(id(closure_1_2[10]).UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS, channel);
+      }
+      return canResult;
+    },
+    items1,
+  );
 };
 export const useCanModerateRequestToSpeak = function useCanModerateRequestToSpeak(id) {
   const _require = id;
   const items = [closure_6, closure_8];
   const items1 = [id];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let canResult = null != closure_0;
-    if (canResult) {
-      canResult = closure_1_8.can(closure_1_11.MUTE_MEMBERS, closure_1_6.getChannel(tmp));
-    }
-    return canResult;
-  }, items1);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let canResult = null != closure_0;
+      if (canResult) {
+        canResult = closure_1_8.can(closure_1_11.MUTE_MEMBERS, closure_1_6.getChannel(tmp));
+      }
+      return canResult;
+    },
+    items1,
+  );
 };
 export const canLurkerListen = function canLurkerListen(channel) {
   const tmp = null == channel || !channel.isGuildStageVoice();

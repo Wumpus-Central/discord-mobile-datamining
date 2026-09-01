@@ -20,7 +20,7 @@ let obj = {
   },
   eligibleReportSubtypes: null,
   onApply: null,
-  predicate: null
+  predicate: null,
 };
 const items = [ReportNames.ReportSubType.SUB_GORE, ReportNames.ReportSubType.SUB_GLORIFYING_VIOLENCE];
 obj[3] = items;
@@ -44,7 +44,11 @@ obj[5] = function predicate() {
   const goreContentSettingOrDefault = resolveGoreSettingWithDefaults.getGoreContentSettingOrDefault();
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
   const obj = resolveGoreSettingWithDefaults;
-  return goreContentGuilds === create.ExplicitContentRedaction.SHOW || goreContentFriendDm === create.ExplicitContentRedaction.SHOW || goreContentNonFriendDm === create.ExplicitContentRedaction.SHOW;
+  return (
+    goreContentGuilds === create.ExplicitContentRedaction.SHOW ||
+    goreContentFriendDm === create.ExplicitContentRedaction.SHOW ||
+    goreContentNonFriendDm === create.ExplicitContentRedaction.SHOW
+  );
 };
 const result = set.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx");
 

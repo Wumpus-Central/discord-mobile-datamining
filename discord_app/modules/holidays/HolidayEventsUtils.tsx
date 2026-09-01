@@ -10,7 +10,11 @@ export default {
     const timestamp = Date.now();
     const obj = HolidayEmojiAnimationTypeDefault;
     const tmp = importDefault;
-    return timestamp >= HolidayEmojiAnimationTypeDefault.startTimeMs && timestamp <= HolidayEmojiAnimationTypeDefault.endTimeMs && isExperimentEligible;
+    return (
+      timestamp >= HolidayEmojiAnimationTypeDefault.startTimeMs &&
+      timestamp <= HolidayEmojiAnimationTypeDefault.endTimeMs &&
+      isExperimentEligible
+    );
   },
   useHolidaySoundpack() {
     let obj = HolidayEmojiAnimationTypeDefault;
@@ -36,7 +40,11 @@ export default {
     const timestamp = Date.now();
     const obj = HolidayEmojiAnimationTypeDefault;
     const tmp = importDefault;
-    return timestamp >= HolidayEmojiAnimationTypeDefault.startTimeMs && timestamp <= HolidayEmojiAnimationTypeDefault.endTimeMs && isExperimentEligible;
+    return (
+      timestamp >= HolidayEmojiAnimationTypeDefault.startTimeMs &&
+      timestamp <= HolidayEmojiAnimationTypeDefault.endTimeMs &&
+      isExperimentEligible
+    );
   },
   getAppSpinnerSources() {
     const timestamp = Date.now();
@@ -72,5 +80,5 @@ export default {
       }
     }
     return soundpack;
-  }
+  },
 };

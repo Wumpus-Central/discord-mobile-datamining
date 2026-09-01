@@ -14,8 +14,24 @@ let c4 = importAllResult;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 const previous = "previous";
 const next = "next";
-let obj = { wrapper: { position: "relative" }, navigationButton: null, navigationButtonPrevious: null, navigationButtonNext: null };
-obj = { alignItems: "center", backgroundColor: null, borderRadius: null, height: 44, justifyContent: "center", position: "absolute", top: "50%", transform: null, width: 44, zIndex: 1 };
+let obj = {
+  wrapper: { position: "relative" },
+  navigationButton: null,
+  navigationButtonPrevious: null,
+  navigationButtonNext: null,
+};
+obj = {
+  alignItems: "center",
+  backgroundColor: null,
+  borderRadius: null,
+  height: 44,
+  justifyContent: "center",
+  position: "absolute",
+  top: "50%",
+  transform: null,
+  width: 44,
+  zIndex: 1,
+};
 obj[1] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.56);
 obj[2] = ThemesDefault.radii.round;
 let items = [{ translateY: -22 }];
@@ -54,7 +70,10 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
   ref = importAllResult.useRef(null);
   const sum = cardWidth + cardMarginRight;
   closure_5 = importAllResult.useRef(Math.max(0, Math.min(itemCount - 1, num)) * sum);
-  let tmp4 = ref(sum.useState(() => Math.max(0, Math.min(itemCount - 1, num))), 2);
+  let tmp4 = ref(
+    sum.useState(() => Math.max(0, Math.min(itemCount - 1, num))),
+    2,
+  );
   const first = tmp4[0];
   closure_7 = tmp4[1];
   [tmp7, closure_8] = ref(sum.useState(0), 2);
@@ -177,7 +196,7 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
     ref,
     scrollEnabled: null,
     snapToOffsets: null,
-    children: null
+    children: null,
   };
   if (tmp14) {
     tmp14 = !isScreenReaderEnabled;
@@ -201,7 +220,7 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
     obj[2] = arg0;
     return closure_1_8(first, obj);
   });
-  const items7 = [closure_8(closure_5, obj), , ];
+  const items7 = [closure_8(closure_5, obj), ,];
   if (tmp25Result) {
     function handleNavigatePrevious() {
       if (closure_13) {
@@ -212,7 +231,7 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
     let intl = tmp10(tmp11[10]).intl;
     obj1[0] = intl.string(tmp10(tmp11[10]).t.vgfxaA);
     obj1[2] = handleNavigatePrevious;
-    const items8 = [, ];
+    const items8 = [,];
     ({ navigationButton: arr10[0], navigationButtonPrevious: arr10[1] } = tmp);
     obj1[3] = items8;
     obj2 = { color: null, size: "sm" };
@@ -231,7 +250,7 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
     let intl2 = tmp10(tmp11[10]).intl;
     obj3[0] = intl2.string(tmp10(tmp11[10]).t.XiOHRX);
     obj3[2] = handleNavigateNext;
-    const items9 = [, ];
+    const items9 = [,];
     ({ navigationButton: arr11[0], navigationButtonNext: arr11[1] } = tmp);
     obj3[3] = items9;
     const obj4 = { color: null, size: "sm" };
@@ -243,6 +262,8 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
   obj[1] = items7;
   return closure_9(first, obj);
 });
-const result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx",
+);
 
 export const MarketingCardsScroller = forwardRefResult;

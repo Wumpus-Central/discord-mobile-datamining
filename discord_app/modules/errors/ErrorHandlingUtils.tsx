@@ -3,7 +3,7 @@ import ME from "../../Constants.tsx";
 import _modDef1208 from "../../utils/SentryUtils.native.tsx";
 import set from "../../../_runtime/00002_set.js";
 
-const items = [, , ];
+const items = [, ,];
 ({ UNAUTHORIZED: arr[0], EMAIL_VERIFICATION_REQUIRED: arr[1], USER_BANNED: arr[2] } = ME.AbortCodes);
 let set = new Set([500, 502, 503, 504]);
 const set1 = new Set([401, 403, 405, 409, 429]);
@@ -43,7 +43,11 @@ export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError
           }
           let tmp12 = !tmp10;
           if (tmp10) {
-            let hasItem = "body" in aPIError && null != aPIError.body && typeof aPIError.body === "object" && "code" in aPIError.body;
+            let hasItem =
+              "body" in aPIError &&
+              null != aPIError.body &&
+              typeof aPIError.body === "object" &&
+              "code" in aPIError.body;
             if (hasItem) {
               const body = aPIError.body;
               let code;

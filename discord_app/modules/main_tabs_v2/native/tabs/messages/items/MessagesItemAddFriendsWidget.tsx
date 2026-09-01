@@ -26,7 +26,7 @@ function getFriendInviteCode() {
 }
 function _getFriendInviteCode() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -121,7 +121,7 @@ function handleShare() {
 }
 function _handleShare() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -171,7 +171,12 @@ function _handleShare() {
           const intl = callback(1236).intl;
           const obj2 = { link: null };
           obj2[0] = callback2(7503)(callback);
-          obj5.handleOpenShareSheet(callback, null, intl.formatToPlainString(callback(1236).t.PJf9P9, obj2), constants.ADD_FRIENDS_WIDGET);
+          obj5.handleOpenShareSheet(
+            callback,
+            null,
+            intl.formatToPlainString(callback(1236).t.PJf9P9, obj2),
+            constants.ADD_FRIENDS_WIDGET,
+          );
           c3 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -202,7 +207,7 @@ function handleLink() {
 }
 function _handleLink() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -272,9 +277,21 @@ let c4 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 const sum = require("ButtonBadge").ICON_ACTION_BUTTON_SIZE + ThemesDefault.space.PX_16;
 let obj = { container: null, title: null, actions: null, actionIcon: null };
-obj = { height: sum, paddingHorizontal: ThemesDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
+obj = {
+  height: sum,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  justifyContent: "space-between",
+  flexDirection: "row",
+  alignItems: "center",
+};
 obj[0] = obj;
-createCacheKey = { flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.radii.md, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12 };
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  borderRadius: ThemesDefault.radii.md,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_12,
+};
 obj[1] = createCacheKey;
 obj[2] = { paddingHorizontal: ThemesDefault.space.PX_8, flexDirection: "row", justifyContent: "flex-end" };
 let obj2 = { paddingHorizontal: ThemesDefault.space.PX_8, flexDirection: "row", justifyContent: "flex-end" };
@@ -305,12 +322,18 @@ const memoResult = importAllResult.memo(function MessagesItemAddFriendsWidget() 
   const intl2 = getSystemLocale.intl;
   obj[4] = intl2.string(getSystemLocale.t.afcl67);
   obj[4] = callback2(Text.Text, obj);
-  const items = [callback2(PressableBase.PressableHighlight, obj), ];
+  const items = [callback2(PressableBase.PressableHighlight, obj)];
   obj1 = { style: tmp.actions, children: null };
-  const obj2 = { style: tmp.actionIcon, variant: "filled", source: registerAssetDefault, onPress: handleShare, accessibilityLabel: null };
+  const obj2 = {
+    style: tmp.actionIcon,
+    variant: "filled",
+    source: registerAssetDefault,
+    onPress: handleShare,
+    accessibilityLabel: null,
+  };
   const intl3 = getSystemLocale.intl;
   obj2[4] = intl3.string(getSystemLocale.t.Ej3B3Y);
-  const items1 = [callback2(ButtonBadgeDefault, obj2), ];
+  const items1 = [callback2(ButtonBadgeDefault, obj2)];
   const obj3 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
   const tmp3 = ButtonBadgeDefault;
   obj3[2] = registerAssetDefault2;
@@ -323,7 +346,9 @@ const memoResult = importAllResult.memo(function MessagesItemAddFriendsWidget() 
   obj[2] = items;
   return callback3(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemAddFriendsWidget.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/items/MessagesItemAddFriendsWidget.tsx",
+);
 
 export default memoResult;
 export const MESSAGES_ITEM_ADD_FRIENDS_WIDGET_HEIGHT = sum;

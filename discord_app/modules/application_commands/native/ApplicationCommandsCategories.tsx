@@ -13,13 +13,29 @@ let c3 = importAllResult;
 ({ View: c4, FlatList: c5 } = get_ActivityIndicator);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: error } = ICON_SIZE);
 let obj = { container: null, categoryImage: null, fadedItem: null, activeItem: null, item: null };
-obj = { backgroundColor: ThemesDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: ThemesDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" };
+obj = {
+  backgroundColor: ThemesDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND,
+  borderTopWidth: ThemesDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH,
+  borderTopColor: ThemesDefault.colors.BORDER_SUBTLE,
+  paddingHorizontal: 8,
+  paddingVertical: 4,
+  flexDirection: "row",
+  alignItems: "center",
+};
 obj[0] = obj;
 createCacheKey = { height: ICON_SIZE, width: ICON_SIZE, borderRadius: ICON_SIZE / 2 };
 obj[1] = createCacheKey;
 obj[2] = { opacity: 0.5 };
 obj[3] = { opacity: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-obj[4] = { marginVertical: NODE_MARGIN, marginHorizontal: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
+obj[4] = {
+  marginVertical: NODE_MARGIN,
+  marginHorizontal: NODE_MARGIN,
+  height: NODE_SIZE,
+  width: NODE_SIZE,
+  borderRadius: NODE_SIZE / 2,
+  alignItems: "center",
+  justifyContent: "center",
+};
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_10 = importAllResult.memo((section) => {
   section = section.section;
@@ -40,7 +56,10 @@ let closure_10 = importAllResult.memo((section) => {
     }
   });
   const items1 = [section, stateFromStores];
-  const memo = importAllResult.useMemo(() => section(closure_1_2[8]).getApplicationCommandsIconSource(section, stateFromStores), items1);
+  const memo = importAllResult.useMemo(
+    () => section(closure_1_2[8]).getApplicationCommandsIconSource(section, stateFromStores),
+    items1,
+  );
   let tmp6 = null != memo;
   if (tmp6) {
     obj = { style: null, source: null };
@@ -54,7 +73,7 @@ let closure_10 = importAllResult.memo((section) => {
     },
     accessibilityRole: "button",
     accessibilityLabel: null,
-    children: null
+    children: null,
   };
   const intl = tmp2(1236).intl;
   const formatToPlainString = intl.formatToPlainString;
@@ -71,17 +90,23 @@ let closure_10 = importAllResult.memo((section) => {
   obj[2] = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj[3] = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
-  return jsx(section(5068).PressableOpacity, {
-    onPress() {
-      return callback(closure_2);
+  return jsx(
+    section(5068).PressableOpacity,
+    {
+      onPress() {
+        return callback(closure_2);
+      },
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      children: null,
     },
-    accessibilityRole: "button",
-    accessibilityLabel: null,
-    children: null
-  }, section.name);
+    section.name,
+  );
 });
 let obj2 = { opacity: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-let result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategories.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/application_commands/native/ApplicationCommandsCategories.tsx",
+);
 
 export default function ApplicationCommandsCategories(onPressSection) {
   onPressSection = onPressSection.onPressSection;
@@ -134,7 +159,10 @@ export default function ApplicationCommandsCategories(onPressSection) {
     closure_5.current = layout.width;
   }, []);
   const items2 = [selectedIndex, callback, guildId];
-  const callback3 = importAllResult.useCallback((arg0, index) => ({ length: callback, offset: callback * index, index }), []);
+  const callback3 = importAllResult.useCallback(
+    (arg0, index) => ({ length: callback, offset: callback * index, index }),
+    [],
+  );
   let obj = { style: items3, children: null };
   items3 = [callback().container, style];
   obj = {
@@ -148,22 +176,66 @@ export default function ApplicationCommandsCategories(onPressSection) {
     },
     renderItem: importAllResult.useCallback((index) => {
       index = index.index;
-      return closure_1_8(closure_1_10, { active: index === selectedIndex, section: index.item, index, handlePressCategory: callback, guildId });
+      return closure_1_8(closure_1_10, {
+        active: index === selectedIndex,
+        section: index.item,
+        index,
+        handlePressCategory: callback,
+        guildId,
+      });
     }, items2),
     showsHorizontalScrollIndicator: false,
     onScroll: callback1,
-    onLayout: callback2
+    onLayout: callback2,
   };
-  obj[1] = <closure_5 ref={ref} getItemLayout={callback3} data={sections} keyboardShouldPersistTaps="always" horizontal keyExtractor={function keyExtractor(id) {
-    return id.id;
-  }} renderItem={importAllResult.useCallback((index) => {
-    index = index.index;
-    return closure_1_8(closure_1_10, { active: index === selectedIndex, section: index.item, index, handlePressCategory: callback, guildId });
-  }, items2)} showsHorizontalScrollIndicator={false} onScroll={callback1} onLayout={callback2} />;
-  return <closure_4 ref={ref} getItemLayout={callback3} data={sections} keyboardShouldPersistTaps="always" horizontal keyExtractor={function keyExtractor(id) {
-    return id.id;
-  }} renderItem={importAllResult.useCallback((index) => {
-    index = index.index;
-    return closure_1_8(closure_1_10, { active: index === selectedIndex, section: index.item, index, handlePressCategory: callback, guildId });
-  }, items2)} showsHorizontalScrollIndicator={false} onScroll={callback1} onLayout={callback2} />;
-};
+  obj[1] = (
+    <closure_5
+      ref={ref}
+      getItemLayout={callback3}
+      data={sections}
+      keyboardShouldPersistTaps="always"
+      horizontal
+      keyExtractor={function keyExtractor(id) {
+        return id.id;
+      }}
+      renderItem={importAllResult.useCallback((index) => {
+        index = index.index;
+        return closure_1_8(closure_1_10, {
+          active: index === selectedIndex,
+          section: index.item,
+          index,
+          handlePressCategory: callback,
+          guildId,
+        });
+      }, items2)}
+      showsHorizontalScrollIndicator={false}
+      onScroll={callback1}
+      onLayout={callback2}
+    />
+  );
+  return (
+    <closure_4
+      ref={ref}
+      getItemLayout={callback3}
+      data={sections}
+      keyboardShouldPersistTaps="always"
+      horizontal
+      keyExtractor={function keyExtractor(id) {
+        return id.id;
+      }}
+      renderItem={importAllResult.useCallback((index) => {
+        index = index.index;
+        return closure_1_8(closure_1_10, {
+          active: index === selectedIndex,
+          section: index.item,
+          index,
+          handlePressCategory: callback,
+          guildId,
+        });
+      }, items2)}
+      showsHorizontalScrollIndicator={false}
+      onScroll={callback1}
+      onLayout={callback2}
+    />
+  );
+}

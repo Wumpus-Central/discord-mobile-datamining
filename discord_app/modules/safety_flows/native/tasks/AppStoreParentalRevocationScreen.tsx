@@ -17,11 +17,19 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { content: { flexGrow: 1, width: "100%" }, upperHalf: { flex: 1, justifyContent: "flex-end", alignItems: "center" }, lowerHalf: { flex: 1 }, text: { textAlign: "center" }, body: null };
+createCacheKey = {
+  content: { flexGrow: 1, width: "100%" },
+  upperHalf: { flex: 1, justifyContent: "flex-end", alignItems: "center" },
+  lowerHalf: { flex: 1 },
+  text: { textAlign: "center" },
+  body: null,
+};
 createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[4] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/AppStoreParentalRevocationScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/safety_flows/native/tasks/AppStoreParentalRevocationScreen.tsx",
+);
 
 export default function AppStoreParentalRevocationScreen() {
   const tmp = callback3();
@@ -33,15 +41,21 @@ export default function AppStoreParentalRevocationScreen() {
   obj = { style: tmp.content, children: null };
   obj1 = { style: tmp.upperHalf, children: null };
   const obj2 = { align: "center", spacing: ThemesDefault.space.PX_16, children: null };
-  const obj3 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  const obj3 = {
+    accessibilityRole: "header",
+    variant: "heading-xl/bold",
+    color: "mobile-text-heading-primary",
+    style: tmp.text,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj3[4] = intl.string(messagesProxyDefault.Z87TFb);
-  const items = [callback(Text.Text, obj3), ];
+  const items = [callback(Text.Text, obj3)];
   const obj4 = { align: "center", spacing: ThemesDefault.space.PX_16, style: tmp.body, children: null };
   const obj5 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl2 = getSystemLocale.intl;
   obj5[3] = intl2.string(messagesProxyDefault.VS98dM);
-  const items1 = [callback(Text.Text, obj5), ];
+  const items1 = [callback(Text.Text, obj5)];
   const obj6 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl3 = getSystemLocale.intl;
   obj6[3] = intl3.string(messagesProxyDefault.BaI6L4);
@@ -53,9 +67,9 @@ export default function AppStoreParentalRevocationScreen() {
   const items2 = [callback(View, obj1), callback(View, { style: tmp.lowerHalf })];
   obj[1] = items2;
   obj[0] = callback2(View, obj);
-  const items3 = [callback(ModalContent.ModalContent, obj), ];
+  const items3 = [callback(ModalContent.ModalContent, obj)];
   const obj8 = { children: null };
-  const items4 = [callback(LogOutDisclaimerDefault, {}), ];
+  const items4 = [callback(LogOutDisclaimerDefault, {})];
   const obj9 = { variant: "primary", text: null, icon: null, iconPosition: "end", onPress: null };
   const intl4 = getSystemLocale.intl;
   obj9[1] = intl4.string(messagesProxyDefault["6FXIU6"]);
@@ -66,4 +80,4 @@ export default function AppStoreParentalRevocationScreen() {
   items3[1] = callback2(ModalFooter.ModalFooter, obj8);
   obj[0] = items3;
   return callback2(ModalScreen.ModalScreen, obj);
-};
+}

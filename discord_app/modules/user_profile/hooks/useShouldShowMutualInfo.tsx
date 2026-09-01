@@ -16,4 +16,4 @@ export default function useShouldShowMutualInfo(id) {
   }
   const tmp2 = useIsUserProfileObfuscatedDefault(id);
   return id !== id.id && !useIsUserProfileObfuscatedDefault(id);
-};
+}

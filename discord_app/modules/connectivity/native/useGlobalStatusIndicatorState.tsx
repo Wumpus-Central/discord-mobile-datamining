@@ -27,17 +27,21 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
   const tmp4 = importDefault;
   const items1 = [closure_3];
   const items2 = [stateFromStores, tmp7];
-  const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => {
-    const channel = closure_1_3.getChannel(stateFromStores);
-    let isGuildStageVoiceResult;
-    if (channel != null) {
-      isGuildStageVoiceResult = channel.isGuildStageVoice();
-    }
-    if (isGuildStageVoiceResult) {
-      isGuildStageVoiceResult = !closure_1;
-    }
-    return isGuildStageVoiceResult;
-  }, items2);
+  const stateFromStores1 = stateFromStores(589).useStateFromStores(
+    items1,
+    () => {
+      const channel = closure_1_3.getChannel(stateFromStores);
+      let isGuildStageVoiceResult;
+      if (channel != null) {
+        isGuildStageVoiceResult = channel.isGuildStageVoice();
+      }
+      if (isGuildStageVoiceResult) {
+        isGuildStageVoiceResult = !closure_1;
+      }
+      return isGuildStageVoiceResult;
+    },
+    items2,
+  );
   const obj3 = stateFromStores(589);
   let num = stateFromStores(9645).useGetStageRTCPanelHeight(stateFromStores);
   stateFromStores(4332);

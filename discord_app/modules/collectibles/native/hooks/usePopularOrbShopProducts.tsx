@@ -53,7 +53,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
   const effect = obj.useEffect(() => {
     function _fetchSearchResults() {
       const self = this;
-      const tmp = first1(function*() {
+      const tmp = first1(function* () {
         if (c6 === 2) {
           c6 = 3;
           HermesBuiltin.throwTypeError();
@@ -84,7 +84,17 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                 closure_1 = tmp8;
                 let skus;
                 let v0 = 2;
-                obj1 = { item_types: null, colors: null, themes: null, orbs_eligible: true, currency: null, offset: 0, limit: 10, sort_type: null, sort_direction: null };
+                obj1 = {
+                  item_types: null,
+                  colors: null,
+                  themes: null,
+                  orbs_eligible: true,
+                  currency: null,
+                  offset: 0,
+                  limit: 10,
+                  sort_type: null,
+                  sort_direction: null,
+                };
                 obj1[0] = [];
                 obj1[1] = [];
                 obj1[2] = [];
@@ -212,92 +222,139 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
   const getOrFetchStorefrontPricesForSkuIds = tmp5Result.useGetOrFetchStorefrontPricesForSkuIds({ skuIds: first });
   let obj3 = first(4139);
   const items4 = [c6];
-  stateFromStoresArray = enabled(589).useStateFromStoresArray(items4, () => first.map((closure_0) => productsForSku.getProductsForSku(closure_0)));
+  stateFromStoresArray = enabled(589).useStateFromStoresArray(items4, () =>
+    first.map((closure_0) => productsForSku.getProductsForSku(closure_0)),
+  );
   const tmp5Result1 = enabled(589);
   const items5 = [c6];
-  stateFromStoresArray1 = enabled(589).useStateFromStoresArray(items5, () => first.map((closure_0) => fetchStateForSku.getFetchStateForSku(closure_0)));
+  stateFromStoresArray1 = enabled(589).useStateFromStoresArray(items5, () =>
+    first.map((closure_0) => fetchStateForSku.getFetchStateForSku(closure_0)),
+  );
   const tmp17 = tmp8(14674)();
   constants = tmp17;
   const items6 = [tmp17, first, stateFromStoresArray, canUseShopDiscountsResult];
-  memo = obj.useMemo(() => callback3(first).map((product) => {
-    let obj = table[arg1];
-    closure_0 = product;
-    obj1 = closure_1_0(closure_1_2[9]);
-    obj = { product, hasShopDiscount: closure_6 };
-    let tmp = product;
-    if (null == obj1.getProductOrbPrice(obj)) {
-      const tmp13 = (function getStorefrontPricesForSkuId(skuId, arg1) {
-        closure_0 = skuId;
-        if (null == arg1) {
-          return null;
-        } else {
-          const iter = arg1[Symbol.iterator]();
-          while (iter !== undefined) {
-            let skus = iter.next().skus;
-            let found = skus.find((id) => id.id === closure_0);
-            if (null != found) {
-              let _Object = Object;
-              let tmp7 = found;
-              if (Object.keys(tmp6.prices).length > 0) {
-                let tmp8 = iter;
-                iter.return();
-                return found.prices;
+  memo = obj.useMemo(
+    () =>
+      callback3(first).map((product) => {
+        let obj = table[arg1];
+        closure_0 = product;
+        obj1 = closure_1_0(closure_1_2[9]);
+        obj = { product, hasShopDiscount: closure_6 };
+        let tmp = product;
+        if (null == obj1.getProductOrbPrice(obj)) {
+          const tmp13 = (function getStorefrontPricesForSkuId(skuId, arg1) {
+            closure_0 = skuId;
+            if (null == arg1) {
+              return null;
+            } else {
+              const iter = arg1[Symbol.iterator]();
+              while (iter !== undefined) {
+                let skus = iter.next().skus;
+                let found = skus.find((id) => id.id === closure_0);
+                if (null != found) {
+                  let _Object = Object;
+                  let tmp7 = found;
+                  if (Object.keys(tmp6.prices).length > 0) {
+                    let tmp8 = iter;
+                    iter.return();
+                    return found.prices;
+                  }
+                }
+                continue;
               }
+              return null;
             }
-            continue;
+          })(product.skuId, obj);
+          tmp = product;
+          if (null != tmp13) {
+            let found;
+            if (obj != null) {
+              found = obj.flatMap((skus) => skus.skus).find((id) => id.id === product.skuId);
+              const flatMapResult = obj.flatMap((skus) => skus.skus);
+            }
+            obj = {
+              storeListingId: null,
+              skuId: null,
+              name: null,
+              summary: null,
+              styles: null,
+              type: null,
+              premiumType: null,
+              items: null,
+              categorySkuId: null,
+              isCategoryReward: null,
+              prices: null,
+              bundledProducts: null,
+              previewAssets: null,
+              googleSkuIds: null,
+              variants: null,
+              eligibleOffers: null,
+              badgeOverride: null,
+              hideBadge: null,
+            };
+            ({
+              storeListingId: obj4[0],
+              skuId: obj4[1],
+              name: obj4[2],
+              summary: obj4[3],
+              styles: obj4[4],
+              type: obj4[5],
+              premiumType: obj4[6],
+              items: obj4[7],
+              categorySkuId: obj4[8],
+              isCategoryReward: obj4[9],
+            } = product);
+            obj1 = {};
+            const merged = Object.assign(product.prices);
+            const merged1 = Object.assign(tmp13);
+            obj[10] = obj1;
+            ({ bundledProducts: obj4[11], previewAssets: obj4[12] } = product);
+            let googleSkuIds;
+            if (found != null) {
+              googleSkuIds = found.googleSkuIds;
+            }
+            if (googleSkuIds == null) {
+              googleSkuIds = product.googleSkuIds;
+            }
+            obj[13] = googleSkuIds;
+            ({ variants: obj4[14], eligibleOffers: obj4[15], badgeOverride: obj4[16], hideBadge: obj4[17] } = product);
+            tmp = new closure_1_9(obj);
+            const tmp3 = closure_1_9;
           }
-          return null;
         }
-      })(product.skuId, obj);
-      tmp = product;
-      if (null != tmp13) {
-        let found;
-        if (obj != null) {
-          found = obj.flatMap((skus) => skus.skus).find((id) => id.id === product.skuId);
-          const flatMapResult = obj.flatMap((skus) => skus.skus);
-        }
-        obj = { storeListingId: null, skuId: null, name: null, summary: null, styles: null, type: null, premiumType: null, items: null, categorySkuId: null, isCategoryReward: null, prices: null, bundledProducts: null, previewAssets: null, googleSkuIds: null, variants: null, eligibleOffers: null, badgeOverride: null, hideBadge: null };
-        ({ storeListingId: obj4[0], skuId: obj4[1], name: obj4[2], summary: obj4[3], styles: obj4[4], type: obj4[5], premiumType: obj4[6], items: obj4[7], categorySkuId: obj4[8], isCategoryReward: obj4[9] } = product);
-        obj1 = {};
-        const merged = Object.assign(product.prices);
-        const merged1 = Object.assign(tmp13);
-        obj[10] = obj1;
-        ({ bundledProducts: obj4[11], previewAssets: obj4[12] } = product);
-        let googleSkuIds;
-        if (found != null) {
-          googleSkuIds = found.googleSkuIds;
-        }
-        if (googleSkuIds == null) {
-          googleSkuIds = product.googleSkuIds;
-        }
-        obj[13] = googleSkuIds;
-        ({ variants: obj4[14], eligibleOffers: obj4[15], badgeOverride: obj4[16], hideBadge: obj4[17] } = product);
-        tmp = new closure_1_9(obj);
-        const tmp3 = closure_1_9;
-      }
-    }
-    return tmp;
-  }), items6);
+        return tmp;
+      }),
+    items6,
+  );
   const items7 = [first, stateFromStoresArray1, canUseShopDiscountsResult];
   const items8 = [memo, canUseShopDiscountsResult];
-  const memo1 = obj.useMemo(() => 0 !== first.length && first.some((arg0, arg1) => {
-    const product = closure_1_8.getProduct(arg0);
-    if (null != product) {
-      let obj = closure_1_0(closure_1_2[9]);
-      obj = { product: null, hasShopDiscount: null };
-      obj[0] = product;
-      obj[1] = closure_6;
-      if (null != obj.getProductOrbPrice(obj)) {
-        return false;
-      }
-    }
-    return "loading" === table[arg1] || null == table[arg1];
-  }), items7);
-  const memo2 = obj.useMemo(() => memo.filter((product) => {
-    let obj = closure_1_0(closure_1_2[9]);
-    obj = { product, hasShopDiscount: closure_6 };
-    return null != obj.getProductOrbPrice(obj);
-  }), items8);
+  const memo1 = obj.useMemo(
+    () =>
+      0 !== first.length &&
+      first.some((arg0, arg1) => {
+        const product = closure_1_8.getProduct(arg0);
+        if (null != product) {
+          let obj = closure_1_0(closure_1_2[9]);
+          obj = { product: null, hasShopDiscount: null };
+          obj[0] = product;
+          obj[1] = closure_6;
+          if (null != obj.getProductOrbPrice(obj)) {
+            return false;
+          }
+        }
+        return "loading" === table[arg1] || null == table[arg1];
+      }),
+    items7,
+  );
+  const memo2 = obj.useMemo(
+    () =>
+      memo.filter((product) => {
+        let obj = closure_1_0(closure_1_2[9]);
+        obj = { product, hasShopDiscount: closure_6 };
+        return null != obj.getProductOrbPrice(obj);
+      }),
+    items8,
+  );
   const tmp5Result2 = enabled(589);
   obj = { products: memo2, screen: constants.ORBS, bypassAndroidUnsyncedFilter: true };
   filteredAndSortedProducts = enabled(14676).useFilteredAndSortedProducts(obj);

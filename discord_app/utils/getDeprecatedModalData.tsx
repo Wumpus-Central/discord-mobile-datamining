@@ -16,7 +16,19 @@ export default function getDeprecatedModalData(modal, key) {
   if (str == null) {
     str = "modal";
   }
-  const obj = { key: str, modal, animation: null, shouldPersistUnderModals: null, props: null, backdropStyle: null, backdropInstant: null, disableAnimation: null, closable: null, label: null, callbacks: null };
+  const obj = {
+    key: str,
+    modal,
+    animation: null,
+    shouldPersistUnderModals: null,
+    props: null,
+    backdropStyle: null,
+    backdropInstant: null,
+    disableAnimation: null,
+    closable: null,
+    label: null,
+    callbacks: null,
+  };
   const animation = key.animation;
   if (animation != null) {
     obj[2] = animation;
@@ -55,4 +67,4 @@ export default function getDeprecatedModalData(modal, key) {
     obj[10] = {};
     return obj;
   }
-};
+}

@@ -10,8 +10,7 @@ let closure_3 = {};
 let set = new Set();
 let closure_5 = {};
 const Store = initializeDefault.Store;
-class ApplicationDirectoryApplicationsStore extends Store {
-}
+class ApplicationDirectoryApplicationsStore extends Store {}
 const prototype = ApplicationDirectoryApplicationsStore.prototype;
 prototype["getApplication"] = function getApplication(arg0) {
   if (null != arg0) {
@@ -89,10 +88,12 @@ obj = {
       const _Set = Set;
       set = new Set(set);
     }
-  }
+  },
 };
 const applicationDirectoryApplicationsStore = new ApplicationDirectoryApplicationsStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryApplicationsStore.tsx");
+const result = set.fileFinishedImporting(
+  "modules/global_discovery_apps/stores/ApplicationDirectoryApplicationsStore.tsx",
+);
 
 export default applicationDirectoryApplicationsStore;
 export const FetchState = obj;

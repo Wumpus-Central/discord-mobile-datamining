@@ -20,11 +20,15 @@ class RedesignNotificationModal {
     items1 = [];
     items1[0] = onComplete;
     callback = closure_3.useCallback(() => {
-      const pushNotificationPermission = onComplete(closure_1_2[8]).requestPushNotificationPermission(closure_1_8.ALLOW_TO_REQUEST, closure_1_7.ALERT, () => {
-        if (closure_0 != null) {
-          tmp();
-        }
-      });
+      const pushNotificationPermission = onComplete(closure_1_2[8]).requestPushNotificationPermission(
+        closure_1_8.ALLOW_TO_REQUEST,
+        closure_1_7.ALERT,
+        () => {
+          if (closure_0 != null) {
+            tmp();
+          }
+        },
+      );
     }, items);
     obj = { style: tmp.container, children: null };
     callback1 = closure_3.useCallback(() => {
@@ -54,11 +58,17 @@ class RedesignNotificationModal {
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ EventActionLocation: error, EventActionType: closure_8 } = EventActionType);
 createCacheKey = { container: null, notificationHeaderImage: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginTop: -ThemesDefault.space.PX_48 };
+createCacheKey = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  marginTop: -ThemesDefault.space.PX_48,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", alignSelf: "center", zIndex: 2, top: -140, height: 156, width: 150 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/nuf/native/components/notification/RedesignNotificationModal.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/nuf/native/components/notification/RedesignNotificationModal.tsx",
+);
 
 export default RedesignNotificationModal;
 export const RedesignNotificationScreen = function RedesignNotificationScreen(onComplete) {

@@ -9,7 +9,9 @@ import createCacheKey from "../../../../../../design/components/Styles/native/cr
 const require = arg1;
 ({ HelpdeskArticles: c5, PlatformTypes: closure_6 } = ME);
 let closure_8 = createCacheKey.createStyles({ image: { width: 230, height: 160 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkLanding.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/xbox/XboxLinkLanding.tsx",
+);
 
 export default function XboxLinkLanding() {
   let obj = navigation(1499);
@@ -24,7 +26,7 @@ export default function XboxLinkLanding() {
     const intl = navigation(1236).intl;
     obj[0] = intl.string(navigation(1236).t.ihQXsb);
     obj[1] = navigation(5050).VoiceNormalIcon;
-    const items = [obj, , , ];
+    const items = [obj, , ,];
     obj = { label: null, icon: null };
     const intl2 = navigation(1236).intl;
     obj[0] = intl2.string(navigation(1236).t.Xt1n4P);
@@ -46,7 +48,16 @@ export default function XboxLinkLanding() {
     navigation.push(closure_1_4.PRE_CONNECT);
   }, items);
   const memo1 = React.useMemo(() => ({ uri: callback(9304) }), []);
-  obj = { platformType: constants2.XBOX, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null };
+  obj = {
+    platformType: constants2.XBOX,
+    img: memo1,
+    imgStyle: tmp.image,
+    headerConnect: null,
+    headerReconnect: null,
+    body: null,
+    onNext: null,
+    valueProps: null,
+  };
   let intl2 = navigation(1236).intl;
   obj[3] = intl2.string(navigation(1236).t.m8aahn);
   let intl3 = navigation(1236).intl;
@@ -54,5 +65,14 @@ export default function XboxLinkLanding() {
   obj[5] = intl.format(navigation(1236).t.CIc3IN, { helpdeskArticleUrl: articleURL });
   obj[6] = callback;
   obj[7] = memo;
-  return jsx(navigation(9305).TwoWayLinkLanding, { platformType: constants2.XBOX, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
-};
+  return jsx(navigation(9305).TwoWayLinkLanding, {
+    platformType: constants2.XBOX,
+    img: memo1,
+    imgStyle: tmp.image,
+    headerConnect: null,
+    headerReconnect: null,
+    body: null,
+    onNext: null,
+    valueProps: null,
+  });
+}

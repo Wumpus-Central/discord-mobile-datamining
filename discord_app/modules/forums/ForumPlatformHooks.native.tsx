@@ -56,5 +56,5 @@ export default {
       };
     }, items1);
     return ref.current;
-  }
+  },
 };

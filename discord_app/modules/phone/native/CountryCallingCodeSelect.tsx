@@ -10,7 +10,13 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: null, paddingTop: null, paddingBottom: null, flex: 1 };
+  let obj = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    paddingHorizontal: null,
+    paddingTop: null,
+    paddingBottom: null,
+    flex: 1,
+  };
   const space = ThemesDefault.space;
   obj[1] = arg0 ? space.PX_24 : space.PX_12;
   obj[2] = ThemesDefault.space.PX_16;
@@ -32,18 +38,22 @@ export default function CountryCallingCodeSelect(onCountrySelected) {
   let tmp3 = callback2(onClose(first[7])());
   const tmp4 = memo(rows.useState(""), 2);
   first = tmp4[0];
-  memo = rows.useMemo(() => onClose(first[8]).flatMap((alpha2) => {
-    alpha2 = alpha2.alpha2;
-    ({ phoneCountryCodes, name: closure_1 } = alpha2);
-    closure_2 = arg1;
-    closure_3 = undefined;
-    closure_3 = callback(alpha2);
-    return phoneCountryCodes.map((code) => {
-      obj = { translatedName: closure_3, key: "" + closure_2 + "-" + code, country: obj };
-      obj = { code, alpha2, name: closure_1 };
-      return obj;
-    });
-  }), []);
+  memo = rows.useMemo(
+    () =>
+      onClose(first[8]).flatMap((alpha2) => {
+        alpha2 = alpha2.alpha2;
+        ({ phoneCountryCodes, name: closure_1 } = alpha2);
+        closure_2 = arg1;
+        closure_3 = undefined;
+        closure_3 = callback(alpha2);
+        return phoneCountryCodes.map((code) => {
+          obj = { translatedName: closure_3, key: "" + closure_2 + "-" + code, country: obj };
+          obj = { code, alpha2, name: closure_1 };
+          return obj;
+        });
+      }),
+    [],
+  );
   const items = [memo, first];
   const memo1 = rows.useMemo(() => {
     rows = [];
@@ -92,7 +102,13 @@ export default function CountryCallingCodeSelect(onCountrySelected) {
   obj = { style: tmp3.searchFieldContainer, children: null };
   const callback = rows.useCallback((arg0, arg1) => {
     const country = tmp.country;
-    let obj = { start: 0 === arg1, end: arg1 === rows.length - 1, label: tmp.translatedName, trailing: null, onPress: null };
+    let obj = {
+      start: 0 === arg1,
+      end: arg1 === rows.length - 1,
+      label: tmp.translatedName,
+      trailing: null,
+      onPress: null,
+    };
     obj = { variant: "text-md/semibold", children: country.code };
     obj[3] = closure_1_7(onCountrySelected(first[12]).Text, obj);
     obj[4] = function onPress() {
@@ -104,7 +120,7 @@ export default function CountryCallingCodeSelect(onCountrySelected) {
     return closure_1_7(onCountrySelected(first[11]).TableRow, obj);
   }, items1);
   obj[1] = callback(onCountrySelected(first[13]).SearchField, { size: "md", onChange: tmp4[1] });
-  const items2 = [callback(View, obj), ];
+  const items2 = [callback(View, obj)];
   if ("" !== first) {
     if (0 === rows.length) {
       obj = { source: null, text: null };
@@ -118,5 +134,11 @@ export default function CountryCallingCodeSelect(onCountrySelected) {
     obj[1] = items2;
     return closure_8(View, obj);
   }
-  tmp12Result = tmp12(tmp(tmp2[17]), { sections: memo1.sections, renderItem: callback, itemSize: onClose(first[9])(), estimatedListSize: "windowSize", keyboardShouldPersistTaps: "always" });
-};
+  tmp12Result = tmp12(tmp(tmp2[17]), {
+    sections: memo1.sections,
+    renderItem: callback,
+    itemSize: onClose(first[9])(),
+    estimatedListSize: "windowSize",
+    keyboardShouldPersistTaps: "always",
+  });
+}

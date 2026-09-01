@@ -77,8 +77,7 @@ let closure_4 = {};
 let closure_5 = {};
 let set = new Set();
 const Store = initializeDefault.Store;
-class VoiceChannelBlockedUserStore extends Store {
-}
+class VoiceChannelBlockedUserStore extends Store {}
 const prototype = VoiceChannelBlockedUserStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3);
@@ -153,7 +152,7 @@ const voiceChannelBlockedUserStore = new VoiceChannelBlockedUserStore(dispatcher
   },
   RELATIONSHIP_ADD: handleRelationshipChange,
   RELATIONSHIP_REMOVE: handleRelationshipChange,
-  RELATIONSHIP_UPDATE: handleRelationshipChange
+  RELATIONSHIP_UPDATE: handleRelationshipChange,
 });
 let result = set.fileFinishedImporting("modules/shared_space_warnings/VoiceChannelBlockedUserStore.tsx");
 

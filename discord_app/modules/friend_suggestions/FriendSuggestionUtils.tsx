@@ -3,7 +3,10 @@ import set from "../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionUtils.tsx");
 
-export const getSuggestedContactNameForSuggestion = function getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend) {
+export const getSuggestedContactNameForSuggestion = function getSuggestedContactNameForSuggestion(
+  friendSuggestionName,
+  suggestedFriend,
+) {
   let contactNames;
   if (suggestedFriend != null) {
     contactNames = suggestedFriend.contactNames;

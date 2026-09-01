@@ -27,4 +27,4 @@ export default function useUploadDisabled(arg0) {
     }
     return tmp;
   });
-};
+}

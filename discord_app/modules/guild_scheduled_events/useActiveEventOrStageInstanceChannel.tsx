@@ -4,7 +4,9 @@ import useLiveStageChannelsDefault from "../stage_channels/useLiveStageChannels.
 import closure_3 from "../../stores/ChannelStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx",
+);
 
 export const useActiveEventOrStageInstanceChannel = function useActiveEventOrStageInstanceChannel(id) {
   let firstActiveEventChannel = useGuildEvents.useFirstActiveEventChannel(id);

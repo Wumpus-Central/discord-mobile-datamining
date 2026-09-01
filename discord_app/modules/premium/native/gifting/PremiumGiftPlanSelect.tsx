@@ -13,11 +13,28 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ ActivityIndicator: c5, Pressable: closure_6, View: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let items = [, ];
+let items = [,];
 ({ TIER_2: arr[0], TIER_0: arr[1] } = require("GuildFeatures").PremiumTypes);
 let c16 = 16;
 let closure_17 = createCacheKey.createStyles((width) => {
-  let obj = { container: null, headerBackground: null, headerBackgroundColor: null, headerImageContainer: null, headerImage: null, headerOverlay: null, avatar: null, title: null, description: null, carousel: null, dmGiftingContent: null, loadingContainer: null, closeButtonContainer: null, closeButton: null, closeButtonIcon: null, badgeBanner: null };
+  let obj = {
+    container: null,
+    headerBackground: null,
+    headerBackgroundColor: null,
+    headerImageContainer: null,
+    headerImage: null,
+    headerOverlay: null,
+    avatar: null,
+    title: null,
+    description: null,
+    carousel: null,
+    dmGiftingContent: null,
+    loadingContainer: null,
+    closeButtonContainer: null,
+    closeButton: null,
+    closeButtonIcon: null,
+    badgeBanner: null,
+  };
   obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
   obj[0] = obj;
   obj = { position: "absolute", width, height: 0.1 * arg1, top: arg1 / 1.75 - 0.1 * arg1 };
@@ -33,25 +50,45 @@ let closure_17 = createCacheKey.createStyles((width) => {
   obj[6] = { alignSelf: "center" };
   const space = ThemesDefault.space;
   const alphaResult = obj5.alpha(0.8);
-  obj[7] = { textAlign: "center", marginTop: arg2 ? space.PX_16 : space.PX_12, marginHorizontal: ThemesDefault.space.PX_24 };
+  obj[7] = {
+    textAlign: "center",
+    marginTop: arg2 ? space.PX_16 : space.PX_12,
+    marginHorizontal: ThemesDefault.space.PX_24,
+  };
   const space2 = tmp(712).space;
-  const obj3 = { textAlign: "center", marginTop: arg2 ? space.PX_16 : space.PX_12, marginHorizontal: ThemesDefault.space.PX_24 };
-  obj[8] = { textAlign: "center", marginTop: arg2 ? space2.PX_16 : space2.PX_12, marginHorizontal: ThemesDefault.space.PX_24 };
+  const obj3 = {
+    textAlign: "center",
+    marginTop: arg2 ? space.PX_16 : space.PX_12,
+    marginHorizontal: ThemesDefault.space.PX_24,
+  };
+  obj[8] = {
+    textAlign: "center",
+    marginTop: arg2 ? space2.PX_16 : space2.PX_12,
+    marginHorizontal: ThemesDefault.space.PX_24,
+  };
   const space3 = tmp(712).space;
   obj[9] = { marginTop: arg2 ? space3.PX_16 : space3.PX_32 };
   obj5 = { paddingTop: tmp(712).space.PX_16, paddingBottom: tmp(712).space.PX_48 };
   obj[10] = obj5;
   obj[11] = { flex: 1, alignItems: "center", justifyContent: "center" };
   obj[12] = { position: "absolute", top: 0, left: 0, zIndex: 1 };
-  const obj4 = { textAlign: "center", marginTop: arg2 ? space2.PX_16 : space2.PX_12, marginHorizontal: ThemesDefault.space.PX_24 };
+  const obj4 = {
+    textAlign: "center",
+    marginTop: arg2 ? space2.PX_16 : space2.PX_12,
+    marginHorizontal: ThemesDefault.space.PX_24,
+  };
   obj[13] = { padding: ThemesDefault.space.PX_16 };
   obj[14] = { width: 24, height: 24, tintColor: "white" };
   const obj6 = { padding: ThemesDefault.space.PX_16 };
   obj[15] = { marginTop: ThemesDefault.space.PX_16, marginHorizontal: ThemesDefault.space.PX_16 };
   return obj;
 });
-let closure_18 = { code: "function PremiumGiftPlanSelectTsx1(){const{STANDARD_EASING,withTiming,carouselVisibility}=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:500};return{opacity:withTiming(carouselVisibility.get()?1:0,animationSettings),transform:[{translateY:withTiming(carouselVisibility.get()?0:100,animationSettings)}]};}" };
-let closure_19 = { code: "function PremiumGiftPlanSelectTsx2(value,index){const{lastItemIndex,leftOffset,centerOffset,rightOffset,carouselStep}=this.__closure;const activeIndex=index-value;const leftT=Math.max(0,Math.min(1,activeIndex));const rightT=Math.max(0,Math.min(1,activeIndex-(lastItemIndex-1)));const offset=leftOffset+leftT*(centerOffset-leftOffset)+rightT*(rightOffset-centerOffset);return{transform:[{translateX:value*carouselStep+offset}]};}" };
+let closure_18 = {
+  code: "function PremiumGiftPlanSelectTsx1(){const{STANDARD_EASING,withTiming,carouselVisibility}=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:500};return{opacity:withTiming(carouselVisibility.get()?1:0,animationSettings),transform:[{translateY:withTiming(carouselVisibility.get()?0:100,animationSettings)}]};}",
+};
+let closure_19 = {
+  code: "function PremiumGiftPlanSelectTsx2(value,index){const{lastItemIndex,leftOffset,centerOffset,rightOffset,carouselStep}=this.__closure;const activeIndex=index-value;const leftT=Math.max(0,Math.min(1,activeIndex));const rightT=Math.max(0,Math.min(1,activeIndex-(lastItemIndex-1)));const offset=leftOffset+leftT*(centerOffset-leftOffset)+rightT*(rightOffset-centerOffset);return{transform:[{translateX:value*carouselStep+offset}]};}",
+};
 let result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPlanSelect.tsx");
 
 export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) {
@@ -103,7 +140,10 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
   const items1 = [closure_9];
   const stateFromStoresObject = obj7.useStateFromStoresObject(items1, () => {
     ({ getNextTier, getRemainingToNextTier } = closure_9);
-    return { nextTier: getNextTier(navigation(onClose[20]).BadgeId.GIFTING), giftsToNextTier: getRemainingToNextTier(navigation(onClose[20]).BadgeId.GIFTING) };
+    return {
+      nextTier: getNextTier(navigation(onClose[20]).BadgeId.GIFTING),
+      giftsToNextTier: getRemainingToNextTier(navigation(onClose[20]).BadgeId.GIFTING),
+    };
   });
   ({ nextTier, giftsToNextTier } = stateFromStoresObject);
   if (enabled) {
@@ -130,7 +170,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
   num = tmp20[0];
   closure_9 = tmp21;
   ref = enabled.useRef([]);
-  const items3 = [shouldUseDMWishlistGiftingDesign, ];
+  const items3 = [shouldUseDMWishlistGiftingDesign];
   let tmp65Result = enabled;
   let length;
   if (claimableRewards != null) {
@@ -193,7 +233,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         style: null,
         onLayout: null,
         claimableRewards: null,
-        isSelected: null
+        isSelected: null,
       };
       obj1 = { height: closure_1_8, width: closure_1_12, alignSelf: null };
       let str2;
@@ -262,7 +302,11 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     obj[1] = items;
     return obj;
   }
-  obj = { STANDARD_EASING: tmp(tmp2[26]).STANDARD_EASING, withTiming: tmp(tmp2[27]).withTiming, carouselVisibility: sharedValue };
+  obj = {
+    STANDARD_EASING: tmp(tmp2[26]).STANDARD_EASING,
+    withTiming: tmp(tmp2[27]).withTiming,
+    carouselVisibility: sharedValue,
+  };
   he.__closure = obj;
   he.__workletHash = 2946262965957;
   he.__initData = result1;
@@ -278,7 +322,10 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     const diff = arg1 - arg0;
     const bound = Math.max(0, Math.min(1, diff));
     let obj = { transform: null };
-    obj = { translateX: arg0 * c16 + (16 + bound * (result1 - 16) + Math.max(0, Math.min(1, diff - (c17 - 1))) * (diff1 - result1)) };
+    obj = {
+      translateX:
+        arg0 * c16 + (16 + bound * (result1 - 16) + Math.max(0, Math.min(1, diff - (c17 - 1))) * (diff1 - result1)),
+    };
     items = [obj];
     obj[0] = items;
     return obj;
@@ -289,7 +336,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
   const items10 = [sum, diff, 16, result1, diff1];
   const memo2 = obj8.useMemo(() => {
     const obj = claimableRewards(onClose[10])(closure_5.headerBackgroundColor.color);
-    items = [claimableRewards(onClose[10])(closure_5.headerBackgroundColor.color).alpha(0).hex(), ];
+    items = [claimableRewards(onClose[10])(closure_5.headerBackgroundColor.color).alpha(0).hex()];
     const alphaResult = claimableRewards(onClose[10])(closure_5.headerBackgroundColor.color).alpha(0);
     const obj3 = claimableRewards(onClose[10])(closure_5.headerBackgroundColor.color);
     items[1] = claimableRewards(onClose[10])(closure_5.headerBackgroundColor.color).alpha(1).hex();
@@ -298,7 +345,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
   const callback3 = obj8.useCallback(fe, items10);
   if (shouldUseDMWishlistGiftingDesign.isLoadingWishlist) {
     obj = { style: null, children: null };
-    const items11 = [, ];
+    const items11 = [,];
     ({ container: arr23[0], loadingContainer: arr23[1] } = tmp13);
     obj[0] = items11;
     obj[1] = callback(closure_5, { size: "large" });
@@ -330,7 +377,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
       tmp65Result = tmp65(tmp66, obj4);
       const tmp69 = first;
     }
-    const items12 = [tmp65Result, , ];
+    const items12 = [tmp65Result, ,];
     obj7 = { style: null, children: null };
     obj7[0] = tmp13.dmGiftingContent;
     if (0 !== stateFromStoresArray.length) {
@@ -350,7 +397,12 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
       }
     }
     if (isScreenReaderEnabled) {
-      const obj9 = { horizontal: true, showsHorizontalScrollIndicator: false, contentContainerStyle: null, children: null };
+      const obj9 = {
+        horizontal: true,
+        showsHorizontalScrollIndicator: false,
+        contentContainerStyle: null,
+        children: null,
+      };
       const obj10 = { gap: null, paddingHorizontal: null };
       obj10[0] = tmp38;
       obj10[1] = tmp38;
@@ -358,7 +410,19 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
       obj9[3] = arr12.map((item, index) => callback2(str, { forScreenReader: true })({ item, index }));
       let tmp65Result2 = tmp65(tmp68, obj9);
     } else {
-      const obj11 = { style: null, data: null, renderItem: null, width: null, windowSize: null, height: null, onConfigurePanGesture: null, loop: false, scrollAnimationDuration: 200, customAnimation: null, onSnapToItem: null };
+      const obj11 = {
+        style: null,
+        data: null,
+        renderItem: null,
+        width: null,
+        windowSize: null,
+        height: null,
+        onConfigurePanGesture: null,
+        loop: false,
+        scrollAnimationDuration: 200,
+        customAnimation: null,
+        onSnapToItem: null,
+      };
       obj11[0] = animatedStyle;
       obj11[1] = arr12;
       obj11[2] = memo;
@@ -381,9 +445,9 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     if (tmp18) {
       tmp18 = callback(tmp4(tmp2[32]), { animated: true, barStyle: "light-content" });
     }
-    const items13 = [tmp18, , , , , ];
+    const items13 = [tmp18, , , , ,];
     const obj12 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
-    const items14 = [tmp13.closeButtonContainer, ];
+    const items14 = [tmp13.closeButtonContainer];
     const obj13 = { paddingTop: null };
     obj13[0] = top;
     items14[1] = obj13;
@@ -399,13 +463,13 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     obj12[4] = callback(c7, obj14);
     items13[1] = callback(first, obj12);
     const obj16 = { resizeMode: "cover", style: null, source: null };
-    const items15 = [, ];
+    const items15 = [,];
     ({ headerImageContainer: arr16[0], headerImage: arr16[1] } = tmp13);
     obj16[1] = items15;
     obj16[2] = tmp4(tmp2[36]);
     items13[2] = callback(tmp4(tmp2[35]), obj16);
     const obj17 = { style: null };
-    const items16 = [, ];
+    const items16 = [,];
     ({ headerImageContainer: arr17[0], headerOverlay: arr17[1] } = tmp13);
     obj17[0] = items16;
     items13[3] = callback(c7, obj17);
@@ -424,7 +488,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     const items17 = [obj22];
     obj21[0] = items17;
     if (null == recipientUser) {
-      const items18 = [tmp53, , , , ];
+      const items18 = [tmp53, , , ,];
       const obj23 = { style: null, variant: null, color: "text-overlay-light", children: null };
       obj23[0] = tmp13.title;
       let str2 = "heading-xxl/extrabold";
@@ -483,7 +547,13 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         }
       }
       if (isScreenReaderEnabled) {
-        const obj29 = { horizontal: true, showsHorizontalScrollIndicator: false, style: null, contentContainerStyle: null, children: null };
+        const obj29 = {
+          horizontal: true,
+          showsHorizontalScrollIndicator: false,
+          style: null,
+          contentContainerStyle: null,
+          children: null,
+        };
         obj29[2] = tmp13.carousel;
         const obj30 = { gap: null, paddingHorizontal: null };
         obj30[0] = tmp38;
@@ -495,7 +565,20 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         });
         tmp47Result = tmp47(tmp52, obj29);
       } else {
-        const obj31 = { style: null, data: null, renderItem: null, width: null, height: null, onConfigurePanGesture: null, loop: false, scrollAnimationDuration: 200, customAnimation: null, mode: "parallax", modeConfig: null, onSnapToItem: null };
+        const obj31 = {
+          style: null,
+          data: null,
+          renderItem: null,
+          width: null,
+          height: null,
+          onConfigurePanGesture: null,
+          loop: false,
+          scrollAnimationDuration: 200,
+          customAnimation: null,
+          mode: "parallax",
+          modeConfig: null,
+          onSnapToItem: null,
+        };
         const items19 = [tmp13.carousel, animatedStyle];
         obj31[0] = items19;
         obj31[1] = arr12;
@@ -520,7 +603,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         obj31[8] = tmp61;
         obj31[10] = { parallaxScrollingScale: 1, parallaxScrollingOffset: 40 };
         obj31[11] = tmp16;
-        const items20 = [tmp47(tmp4(tmp2[30]), obj31), ];
+        const items20 = [tmp47(tmp4(tmp2[30]), obj31)];
         const obj33 = { numberOfItems: null, currentIndex: null };
         obj33[0] = arr12.length;
         obj33[1] = first;
@@ -542,4 +625,4 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
     const tmp4Result1 = tmp4(tmp2[35]);
   }
   return tmp65Result1;
-};
+}

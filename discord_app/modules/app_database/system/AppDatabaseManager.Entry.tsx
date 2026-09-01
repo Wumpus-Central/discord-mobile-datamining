@@ -16,7 +16,7 @@ Object.defineProperty(prototype, "actions", {
   get: function actions() {
     return this.definition.actions;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["load"] = function load() {
   const self = this;
@@ -40,8 +40,6 @@ prototype["execute"] = function execute(arg0, arg1) {
     }
   }
 };
-prototype["validateInDev"] = function validateInDev() {
-
-};
+prototype["validateInDev"] = function validateInDev() {};
 
 export { Entry };

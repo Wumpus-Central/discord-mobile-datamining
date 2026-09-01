@@ -100,7 +100,11 @@ function handleRelationshipAddOrUpdate(relationship) {
           if (null != user) {
             const items = [];
             obj = relationship(user[8]);
-            items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingFriendRequestLocalItem(user, since, tmp);
+            items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingFriendRequestLocalItem(
+              user,
+              since,
+              tmp,
+            );
             obj.notifCenterLocalItems = items;
             const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
           }
@@ -193,13 +197,25 @@ function handleRelationshipAddOrUpdate(relationship) {
     });
   }
 }
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "BACKGROUND_SYNC", notifCenterTabFocused: "CONNECTION_OPEN" };
+let obj = {
+  loading: false,
+  initialized: false,
+  errored: false,
+  isDataStale: false,
+  notifCenterItems: [],
+  staleNotifCenterItems: [],
+  notifCenterIds: null,
+  notifCenterLocalItems: null,
+  paginationHasMore: true,
+  paginationCursor: "flex",
+  notifCenterActive: "BACKGROUND_SYNC",
+  notifCenterTabFocused: "CONNECTION_OPEN",
+};
 let set = new Set();
 obj[6] = set;
 obj[7] = [];
 const PersistedStore = initializeDefault.PersistedStore;
-class NotificationCenterItemsStore extends PersistedStore {
-}
+class NotificationCenterItemsStore extends PersistedStore {}
 const prototype = NotificationCenterItemsStore.prototype;
 prototype["initialize"] = function initialize(notifCenterItems) {
   this.waitFor(closure_7, closure_6, closure_3);
@@ -249,55 +265,55 @@ Object.defineProperty(prototype, "loading", {
   get: function loading() {
     return obj.loading;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "initialized", {
   get: function initialized() {
     return obj.initialized;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "items", {
   get: function items() {
     return obj.isDataStale ? obj.staleNotifCenterItems : obj.notifCenterItems;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasMore", {
   get: function hasMore() {
     return obj.paginationHasMore;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "cursor", {
   get: function cursor() {
     return obj.paginationCursor;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "errored", {
   get: function errored() {
     return obj.errored;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "active", {
   get: function active(arg0) {
     return obj.notifCenterActive;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "localItems", {
   get: function localItems() {
     return obj.notifCenterLocalItems;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "tabFocused", {
   get: function tabFocused() {
     return obj.notifCenterTabFocused;
   },
-  set: undefined
+  set: undefined,
 });
 NotificationCenterItemsStore.displayName = "NotificationCenterItemsStore";
 NotificationCenterItemsStore.persistKey = "NotificationCenterItemsStore_v2";
@@ -370,7 +386,20 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "BACKGROUND_SYNC", notifCenterTabFocused: "CONNECTION_OPEN" };
+    obj = {
+      loading: false,
+      initialized: false,
+      errored: false,
+      isDataStale: false,
+      notifCenterItems: [],
+      staleNotifCenterItems: [],
+      notifCenterIds: new Set(),
+      notifCenterLocalItems: null,
+      paginationHasMore: true,
+      paginationCursor: "flex",
+      notifCenterActive: "BACKGROUND_SYNC",
+      notifCenterTabFocused: "CONNECTION_OPEN",
+    };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -480,10 +509,13 @@ obj = {
       items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterItems, 0);
       const mapped = items.map(toNotificationCenterItem);
-      arraySpreadResult = HermesBuiltin.arraySpread(mapped.filter((id) => {
-        const notifCenterIds = closure_9.notifCenterIds;
-        return !notifCenterIds.has(id.id);
-      }), arraySpreadResult);
+      arraySpreadResult = HermesBuiltin.arraySpread(
+        mapped.filter((id) => {
+          const notifCenterIds = closure_9.notifCenterIds;
+          return !notifCenterIds.has(id.id);
+        }),
+        arraySpreadResult,
+      );
       obj.notifCenterItems = items;
       const notifCenterItems = obj.notifCenterItems;
       const sorted = notifCenterItems.sort((id, id2) => callback(table[9]).compare(id2.id, id.id));
@@ -498,7 +530,20 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "BACKGROUND_SYNC", notifCenterTabFocused: "CONNECTION_OPEN" };
+    obj = {
+      loading: false,
+      initialized: false,
+      errored: false,
+      isDataStale: false,
+      notifCenterItems: [],
+      staleNotifCenterItems: [],
+      notifCenterIds: new Set(),
+      notifCenterLocalItems: null,
+      paginationHasMore: true,
+      paginationCursor: "flex",
+      notifCenterActive: "BACKGROUND_SYNC",
+      notifCenterTabFocused: "CONNECTION_OPEN",
+    };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -529,7 +574,8 @@ obj = {
       }
       let tmp7 = !tmp4;
       if (!tmp4) {
-        let tmp9 = type.type === callback(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
+        let tmp9 =
+          type.type === callback(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
         if (tmp9) {
           const other_user2 = type.other_user;
           let id1;
@@ -556,7 +602,11 @@ obj = {
       if (tmp6) {
         const items = [];
         obj = id(7386);
-        items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
+        items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
+          user,
+          since,
+          applicationId,
+        );
         obj.notifCenterLocalItems = items;
         const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
       }
@@ -611,7 +661,8 @@ obj = {
       }
       let tmp8 = !tmp5;
       if (!tmp5) {
-        let tmp9 = type.type === closure_1_0(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
+        let tmp9 =
+          type.type === closure_1_0(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
         if (tmp9) {
           const other_user2 = type.other_user;
           let id1;
@@ -649,7 +700,20 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "BACKGROUND_SYNC", notifCenterTabFocused: "CONNECTION_OPEN" };
+    obj = {
+      loading: false,
+      initialized: false,
+      errored: false,
+      isDataStale: false,
+      notifCenterItems: [],
+      staleNotifCenterItems: [],
+      notifCenterIds: new Set(),
+      notifCenterLocalItems: null,
+      paginationHasMore: true,
+      paginationCursor: "flex",
+      notifCenterActive: "BACKGROUND_SYNC",
+      notifCenterTabFocused: "CONNECTION_OPEN",
+    };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -668,7 +732,12 @@ obj = {
       if (undefined === prop.find((local_id) => local_id.local_id === _undefined.local_id)) {
         const prop1 = obj.notifCenterLocalItems;
         const items = [];
-        items[HermesBuiltin.arraySpread(prop1.filter((type) => type.type !== _undefined.type), 0)] = result;
+        items[
+          HermesBuiltin.arraySpread(
+            prop1.filter((type) => type.type !== _undefined.type),
+            0,
+          )
+        ] = result;
         obj.notifCenterLocalItems = items;
       }
     }
@@ -688,7 +757,7 @@ obj = {
         return tmp;
       });
     }
-  }
+  },
 };
 const notificationCenterItemsStore = new NotificationCenterItemsStore(dispatcherDefault, obj);
 let result = set.fileFinishedImporting("modules/notification_center/NotificationCenterItemsStore.tsx");

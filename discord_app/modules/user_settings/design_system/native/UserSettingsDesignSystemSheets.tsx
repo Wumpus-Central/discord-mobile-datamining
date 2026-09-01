@@ -65,13 +65,16 @@ function DemoActionSheet() {
       isClearable: true,
       onClear() {
         return tmp10("");
-      }
-    })
+      },
+    }),
   ];
   obj3[0] = items;
-  const items1 = [callback3(Stack.Stack, obj3), , ];
+  const items1 = [callback3(Stack.Stack, obj3), ,];
   const obj5 = { hasIcons: false, children: null };
-  const items2 = [closure_7(ActionSheetRowIcon.ActionSheetSwitchRow, { value: first, onValueChange: tmp4[1], label: "Show Leading" }), closure_7(ActionSheetRowIcon.ActionSheetSwitchRow, { value: tmp2, onValueChange: tmp3, label: "Show Trailing" })];
+  const items2 = [
+    closure_7(ActionSheetRowIcon.ActionSheetSwitchRow, { value: first, onValueChange: tmp4[1], label: "Show Leading" }),
+    closure_7(ActionSheetRowIcon.ActionSheetSwitchRow, { value: tmp2, onValueChange: tmp3, label: "Show Trailing" }),
+  ];
   obj5[1] = items2;
   items1[1] = callback3(ActionSheetRowIcon.ActionSheetRow.Group, obj5);
   items1[2] = closure_7(TextInput.TextInput, {
@@ -82,7 +85,7 @@ function DemoActionSheet() {
     isClearable: true,
     onClear() {
       return tmp13("");
-    }
+    },
   });
   obj2[1] = items1;
   obj1[1] = callback3(Stack.Stack, obj2);
@@ -97,11 +100,17 @@ function DemoPromoSheet() {
     onPress() {
       return callback(table[13]).hideActionSheet("promo-sheet-demo");
     },
-    text: null
+    text: null,
   };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.BddRzS);
-  obj = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
+  obj = {
+    graphic: null,
+    gradientColor: "purple",
+    title: "Here's a Promo Sheet",
+    description: "You can use this to promote new features, products, or anything else you'd like!",
+    actions: null,
+  };
   obj = { type: "image", src: null, aspectRatio: "16/9" };
   const tmp = callback2(Button.Button, obj);
   obj[1] = { uri: metadataDefault };
@@ -111,7 +120,9 @@ function DemoPromoSheet() {
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ container: { padding: 16, alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemSheets.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/design_system/native/UserSettingsDesignSystemSheets.tsx",
+);
 
 export default function UserSettingsDesignSystemSheets() {
   let obj = { contentContainerStyle: callback4().container, children: null };
@@ -120,24 +131,36 @@ export default function UserSettingsDesignSystemSheets() {
   obj1 = { children: null };
   const items = [
     callback2(Text.Text, { variant: "text-lg/bold", children: "Action Sheet with Title Header" }),
-    callback2(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "An action sheet with a centered title and subtitle, with optional leading and Trailing elements." }),
+    callback2(Text.Text, {
+      variant: "text-md/medium",
+      color: "text-subtle",
+      children: "An action sheet with a centered title and subtitle, with optional leading and Trailing elements.",
+    }),
     callback2(Button.Button, {
       onPress() {
         callback(table[13]).openLazy(() => Promise.resolve(closure_10), "demo-sheet");
       },
-      text: "Show Action Sheet"
-    })
+      text: "Show Action Sheet",
+    }),
   ];
   obj1[0] = items;
   obj[0] = callback3(Stack.Stack, obj1);
-  const items1 = [callback2(PressableCard.Card, obj), ];
+  const items1 = [callback2(PressableCard.Card, obj)];
   const obj3 = { children: null };
   const obj4 = { children: null };
-  const items2 = [callback2(Text.Text, { variant: "text-lg/bold", children: "Promo Sheet" }), callback2(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "A sheet with an illustration, title, description, and actions." }), callback2(Button.Button, { onPress: showDemoPromoSheet, text: "Show Promo Sheet" })];
+  const items2 = [
+    callback2(Text.Text, { variant: "text-lg/bold", children: "Promo Sheet" }),
+    callback2(Text.Text, {
+      variant: "text-md/medium",
+      color: "text-subtle",
+      children: "A sheet with an illustration, title, description, and actions.",
+    }),
+    callback2(Button.Button, { onPress: showDemoPromoSheet, text: "Show Promo Sheet" }),
+  ];
   obj4[0] = items2;
   obj3[0] = callback3(Stack.Stack, obj4);
   items1[1] = callback2(PressableCard.Card, obj3);
   obj[0] = items1;
   obj[1] = callback3(Stack.Stack, obj);
   return callback2(ScrollView, obj);
-};
+}

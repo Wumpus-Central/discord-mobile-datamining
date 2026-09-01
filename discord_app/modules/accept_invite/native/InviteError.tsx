@@ -42,8 +42,13 @@ function InviteErrorBase(invite) {
     }
   }
   obj = { style: tmp.expiredImage, source: tmp4Result };
-  const items = [callback(closure_3, obj), , , ];
-  obj = { style: tmp.expiredTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const items = [callback(closure_3, obj), , ,];
+  obj = {
+    style: tmp.expiredTitle,
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   let title;
   if (descriptiveInviteError != null) {
     title = descriptiveInviteError.title;
@@ -58,7 +63,12 @@ function InviteErrorBase(invite) {
     callback();
   }
   items[1] = callback(Text.Text, obj);
-  items[2] = callback(Text.Text, { style: tmp.expiredBody, variant: "text-sm/medium", color: "text-default", children: stringResult });
+  items[2] = callback(Text.Text, {
+    style: tmp.expiredBody,
+    variant: "text-sm/medium",
+    color: "text-default",
+    children: stringResult,
+  });
   const obj3 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl4 = tmp2(1236).intl;
   obj3[2] = intl4.string(getSystemLocale.t.wcqOoF);
@@ -87,14 +97,14 @@ function InviteDisabledError(onPressClose) {
     const obj2 = { style: null, source: null };
     obj2[0] = tmp.disabledPauseIcon;
     obj2[1] = registerAssetDefault;
-    const items = [callback(onPressClose(1297).Icon, obj2), ];
+    const items = [callback(onPressClose(1297).Icon, obj2)];
     const obj3 = { style: null, icon: null, size: null };
     obj3[0] = tmp.guildIcon;
     obj3[1] = guildIconURL;
     obj3[2] = onPressClose(6004).GuildIconSizes.XLARGE;
     items[1] = callback(GuildIconSizesDefault, obj3);
     obj1[1] = items;
-    const items1 = [callback2(closure_4, obj1), , , ];
+    const items1 = [callback2(closure_4, obj1), , ,];
     const obj4 = { style: null, variant: "heading-xl/semibold", color: "text-feedback-critical", children: null };
     obj4[0] = tmp.disabledTitle;
     const intl = onPressClose(1236).intl;
@@ -121,8 +131,23 @@ noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ AbortCodes: c5, HelpdeskArticles: closure_6, InviteStates: error } = ME);
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { expiredImage: { marginTop: 32, marginBottom: 32 }, expiredTitle: { marginBottom: 8, backgroundColor: "transparent", textAlign: "center" }, expiredBody: { backgroundColor: "transparent", marginBottom: 24 }, disabledView: { justifyContent: "center", alignItems: "center" }, disabledPauseIcon: null, guildIcon: null, disabledTitle: null, disabledBody: null };
-createCacheKey = { position: "absolute", alignSelf: "center", tintColor: ThemesDefault.colors.WHITE, width: 42, height: 42 };
+createCacheKey = {
+  expiredImage: { marginTop: 32, marginBottom: 32 },
+  expiredTitle: { marginBottom: 8, backgroundColor: "transparent", textAlign: "center" },
+  expiredBody: { backgroundColor: "transparent", marginBottom: 24 },
+  disabledView: { justifyContent: "center", alignItems: "center" },
+  disabledPauseIcon: null,
+  guildIcon: null,
+  disabledTitle: null,
+  disabledBody: null,
+};
+createCacheKey = {
+  position: "absolute",
+  alignSelf: "center",
+  tintColor: ThemesDefault.colors.WHITE,
+  width: 42,
+  height: 42,
+};
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { borderRadius: ThemesDefault.radii.lg, opacity: 0.2, zIndex: -999 };
 createCacheKey[6] = { marginTop: 16, marginBottom: 8, textAlign: "center" };
@@ -147,4 +172,4 @@ export default function InviteError(inviteError) {
     tmp7 = callback(InviteErrorBase, obj);
   }
   return tmp7;
-};
+}

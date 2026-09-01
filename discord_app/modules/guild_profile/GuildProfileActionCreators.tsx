@@ -17,7 +17,7 @@ function _fetchGuildTopGames() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const table = tmp2;
       closure_1 = tmp5;
       const HTTP = lib(closure_1_2[6]).HTTP;
@@ -96,19 +96,21 @@ export const getGuildProfile = function getGuildProfile(closure_1_0) {
     obj[1] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     const value = HTTP.get(obj);
     const obj5 = sendRequest;
-    resolved1 = value.then((body) => {
-      let obj = callback(closure_1_2[7]);
-      const guildProfileFromServer = obj.buildGuildProfileFromServer(body.body);
-      obj = { type: "GUILD_PROFILE_FETCH_SUCCESS", guildId: callback, profile: guildProfileFromServer };
-      closure_1_1(closure_1_2[5]).dispatch(obj);
-      return guildProfileFromServer;
-    }).catch((arg0) => {
-      const aPIError = new callback(closure_1_2[8]).APIError(arg0);
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { type: "GUILD_PROFILE_FETCH_FAILURE", guildId: callback, error: aPIError };
-      obj.dispatch(obj);
-      return null;
-    });
+    resolved1 = value
+      .then((body) => {
+        let obj = callback(closure_1_2[7]);
+        const guildProfileFromServer = obj.buildGuildProfileFromServer(body.body);
+        obj = { type: "GUILD_PROFILE_FETCH_SUCCESS", guildId: callback, profile: guildProfileFromServer };
+        closure_1_1(closure_1_2[5]).dispatch(obj);
+        return guildProfileFromServer;
+      })
+      .catch((arg0) => {
+        const aPIError = new callback(closure_1_2[8]).APIError(arg0);
+        let obj = closure_1_1(closure_1_2[5]);
+        obj = { type: "GUILD_PROFILE_FETCH_FAILURE", guildId: callback, error: aPIError };
+        obj.dispatch(obj);
+        return null;
+      });
     const nextPromise = value.then((body) => {
       let obj = callback(closure_1_2[7]);
       const guildProfileFromServer = obj.buildGuildProfileFromServer(body.body);
@@ -136,19 +138,21 @@ export const saveGuildProfile = function saveGuildProfile(closure_1_0, name) {
     obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     const obj5 = sendRequest;
     const patchResult = HTTP.patch(obj);
-    resolved = HTTP.patch(obj).then((body) => {
-      let obj = callback(closure_1_2[7]);
-      const guildProfileFromServer = obj.buildGuildProfileFromServer(body.body);
-      obj = { type: "GUILD_PROFILE_UPDATE_SUCCESS", guildId: callback, profile: guildProfileFromServer };
-      closure_1_1(closure_1_2[5]).dispatch(obj);
-      return guildProfileFromServer;
-    }).catch((arg0) => {
-      const aPIError = new callback(closure_1_2[8]).APIError(arg0);
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { type: "GUILD_PROFILE_UPDATE_FAILURE", guildId: callback, error: aPIError };
-      obj.dispatch(obj);
-      return null;
-    });
+    resolved = HTTP.patch(obj)
+      .then((body) => {
+        let obj = callback(closure_1_2[7]);
+        const guildProfileFromServer = obj.buildGuildProfileFromServer(body.body);
+        obj = { type: "GUILD_PROFILE_UPDATE_SUCCESS", guildId: callback, profile: guildProfileFromServer };
+        closure_1_1(closure_1_2[5]).dispatch(obj);
+        return guildProfileFromServer;
+      })
+      .catch((arg0) => {
+        const aPIError = new callback(closure_1_2[8]).APIError(arg0);
+        let obj = closure_1_1(closure_1_2[5]);
+        obj = { type: "GUILD_PROFILE_UPDATE_FAILURE", guildId: callback, error: aPIError };
+        obj.dispatch(obj);
+        return null;
+      });
     const nextPromise = HTTP.patch(obj).then((body) => {
       let obj = callback(closure_1_2[7]);
       const guildProfileFromServer = obj.buildGuildProfileFromServer(body.body);
@@ -178,19 +182,21 @@ export const setGuildProfileVisibility = function setGuildProfileVisibility(clos
     obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     const obj5 = sendRequest;
     const putResult = HTTP.put(obj);
-    resolved = HTTP.put(obj).then((body) => {
-      const visibility = body.body.visibility;
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { type: "GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS", guildId: closure_0, visibility };
-      obj.dispatch(obj);
-      return visibility;
-    }).catch((arg0) => {
-      const aPIError = new callback(closure_1_2[8]).APIError(arg0);
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { type: "GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE", guildId: callback, error: aPIError };
-      obj.dispatch(obj);
-      throw aPIError;
-    });
+    resolved = HTTP.put(obj)
+      .then((body) => {
+        const visibility = body.body.visibility;
+        let obj = closure_1_1(closure_1_2[5]);
+        obj = { type: "GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS", guildId: closure_0, visibility };
+        obj.dispatch(obj);
+        return visibility;
+      })
+      .catch((arg0) => {
+        const aPIError = new callback(closure_1_2[8]).APIError(arg0);
+        let obj = closure_1_1(closure_1_2[5]);
+        obj = { type: "GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE", guildId: callback, error: aPIError };
+        obj.dispatch(obj);
+        throw aPIError;
+      });
     const nextPromise = HTTP.put(obj).then((body) => {
       const visibility = body.body.visibility;
       let obj = closure_1_1(closure_1_2[5]);
@@ -214,6 +220,11 @@ export const fetchGuildTopGames = function fetchGuildTopGames() {
 export const trackGuildProfileViewed = function trackGuildProfileViewed(guildId, analyticsLocations) {
   const tmp = null != selfMember.getSelfMember(guildId);
   let obj = expandEventPropertiesDefault;
-  obj = { guild_id: guildId, location_stack: analyticsLocations, is_member: tmp, has_join_request: null != request.getRequest(guildId) };
+  obj = {
+    guild_id: guildId,
+    location_stack: analyticsLocations,
+    is_member: tmp,
+    has_join_request: null != request.getRequest(guildId),
+  };
   obj.track(constants.GUILD_PROFILE_VIEWED, obj);
 };

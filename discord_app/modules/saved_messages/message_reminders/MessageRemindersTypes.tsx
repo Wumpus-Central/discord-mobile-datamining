@@ -12,7 +12,7 @@ const items = [
     getLabel() {
       const intl = getSystemLocale.intl;
       return intl.string(getSystemLocale.t["OV8l/H"]);
-    }
+    },
   },
   {
     getDueAt() {
@@ -22,7 +22,7 @@ const items = [
     getLabel() {
       const intl = getSystemLocale.intl;
       return intl.string(getSystemLocale.t["zf0R+0"]);
-    }
+    },
   },
   {
     getDueAt() {
@@ -32,7 +32,7 @@ const items = [
     getLabel() {
       const intl = getSystemLocale.intl;
       return intl.string(getSystemLocale.t["5gztZN"]);
-    }
+    },
   },
   {
     getDueAt() {
@@ -56,7 +56,7 @@ const items = [
         stringResult = intl.string(getSystemLocale.t.FnFI3m);
       }
       return stringResult;
-    }
+    },
   },
   {
     getDueAt() {
@@ -81,8 +81,8 @@ const items = [
     getLabel() {
       const intl = getSystemLocale.intl;
       return intl.string(getSystemLocale.t["q+Ls05"]);
-    }
-  }
+    },
+  },
 ];
 const result = set.fileFinishedImporting("modules/saved_messages/message_reminders/MessageRemindersTypes.tsx");
 

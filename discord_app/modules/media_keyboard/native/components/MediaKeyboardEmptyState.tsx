@@ -19,7 +19,7 @@ class MediaKeyboardEmptyState {
     ({ actionIcon, actionLabel, actionPress, imageSource, label } = global);
     tmp = closure_8();
     obj = { style: tmp.container, children: null };
-    items = [, , ];
+    items = [, ,];
     items[0] = jsx(Image, { source: imageSource });
     obj = { variant: "text-sm/semibold", color: "text-muted", style: tmp.label, children: label };
     items[1] = jsx(require("Text").Text, obj);
@@ -32,12 +32,19 @@ noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, label: null };
-createCacheKey = { marginHorizontal: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
+createCacheKey = {
+  marginHorizontal: ThemesDefault.space.PX_8,
+  marginVertical: ThemesDefault.space.PX_32,
+  justifyContent: "center",
+  alignItems: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginVertical: ThemesDefault.space.PX_16 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 const obj1 = { textAlign: "center", marginVertical: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardEmptyState.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/media_keyboard/native/components/MediaKeyboardEmptyState.tsx",
+);
 
 export default MediaKeyboardEmptyState;
 export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComponentOrNull(photosEmpty) {
@@ -72,7 +79,13 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
       }
     }
   }
-  obj = { actionIcon: callback(SettingsIcon.SettingsIcon, { color: "white", size: "sm" }), actionLabel: null, actionPress: null, imageSource: null, label: null };
+  obj = {
+    actionIcon: callback(SettingsIcon.SettingsIcon, { color: "white", size: "sm" }),
+    actionLabel: null,
+    actionPress: null,
+    imageSource: null,
+    label: null,
+  };
   const intl5 = getSystemLocale.intl;
   obj[1] = intl5.string(getSystemLocale.t["457oeG"]);
   obj[2] = photosEmpty.onPressPrivacySettings;

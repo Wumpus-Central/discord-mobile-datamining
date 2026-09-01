@@ -22,7 +22,7 @@ export default function openForumExplicitMediaWarning(arg0, arg1) {
           return closure_2_3(closure_0, obj);
         };
       });
-    }
+    },
   };
   obj.openLazy(obj);
-};
+}

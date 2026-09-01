@@ -28,7 +28,12 @@ function EllipsisCircle(offset) {
     obj = offset(sharedValue1[2]);
     const tmp2 = closure_1_7;
     const obj2 = offset(sharedValue1[2]);
-    const result1 = sharedValue.set(obj.withDelay(result, obj2.withRepeat(offset(sharedValue1[5]).withTiming(1, closure_1_5, "animate-always"), -1, true)));
+    const result1 = sharedValue.set(
+      obj.withDelay(
+        result,
+        obj2.withRepeat(offset(sharedValue1[5]).withTiming(1, closure_1_5, "animate-always"), -1, true),
+      ),
+    );
     if (typeof tmp2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
@@ -37,7 +42,12 @@ function EllipsisCircle(offset) {
     tmp4Result = tmp4(tmp5[2]);
     const obj3 = offset(sharedValue1[5]);
     const tmp7 = closure_1_5;
-    const result3 = sharedValue1.set(tmp4Result.withDelay(result2, tmp4Result.withRepeat(offset(sharedValue1[5]).withTiming(1, tmp7, "animate-always"), -1, true)));
+    const result3 = sharedValue1.set(
+      tmp4Result.withDelay(
+        result2,
+        tmp4Result.withRepeat(offset(sharedValue1[5]).withTiming(1, tmp7, "animate-always"), -1, true),
+      ),
+    );
     return () => {
       closure_1_0(closure_1_2[2]).cancelAnimation(closure_1);
       obj = closure_1_0(closure_1_2[2]);
@@ -80,7 +90,13 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2) => {
     num = 4;
     num2 = 6;
   }
-  const circle = { width: num2, height: num2, borderRadius: ThemesDefault.radii.round, marginEnd: null, backgroundColor: null };
+  const circle = {
+    width: num2,
+    height: num2,
+    borderRadius: ThemesDefault.radii.round,
+    marginEnd: null,
+    backgroundColor: null,
+  };
   let num3 = 0;
   if (2 !== arg1) {
     num3 = num;
@@ -93,20 +109,33 @@ function withEllipsisAnimation(arg0, value) {
   obj = _mod4217;
   const result = 166.66666666666666 * arg0;
   const obj2 = _mod4217;
-  return obj.withDelay(result, obj2.withRepeat(CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, obj, "animate-always"), -1, true));
+  return obj.withDelay(
+    result,
+    obj2.withRepeat(CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, obj, "animate-always"), -1, true),
+  );
 }
-obj = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: require("../../../../modules/reanimated/ReanimatedRexport.tsx").withDelay, withRepeat: require("../../../../modules/reanimated/ReanimatedRexport.tsx").withRepeat, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, ELLIPSIS_APPEAR_TIMING: obj };
+obj = {
+  ELLIPSIS_APPEAR_DURATION: 500,
+  withDelay: require("../../../../modules/reanimated/ReanimatedRexport.tsx").withDelay,
+  withRepeat: require("../../../../modules/reanimated/ReanimatedRexport.tsx").withRepeat,
+  withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming,
+  ELLIPSIS_APPEAR_TIMING: obj,
+};
 withEllipsisAnimation.__closure = obj;
 withEllipsisAnimation.__workletHash = 2181731162311;
-withEllipsisAnimation.__initData = { code: "function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){const{ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING}=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));}" };
-let closure_8 = { code: "function ButtonEllipsisNativeTsx2(){const{opacity,scale}=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };
+withEllipsisAnimation.__initData = {
+  code: "function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){const{ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING}=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));}",
+};
+let closure_8 = {
+  code: "function ButtonEllipsisNativeTsx2(){const{opacity,scale}=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};}",
+};
 let result = require("set").fileFinishedImporting("design/components/Button/native/ButtonEllipsis.native.tsx");
 
 export const Ellipsis = function Ellipsis(arg0) {
   obj = { style: { flexDirection: "row" }, children: null };
   obj = { offset: 0 };
   const merged = Object.assign(arg0);
-  const items = [callback(EllipsisCircle, obj), , ];
+  const items = [callback(EllipsisCircle, obj), ,];
   obj = { offset: 1 };
   const merged1 = Object.assign(arg0);
   items[1] = callback(EllipsisCircle, obj);

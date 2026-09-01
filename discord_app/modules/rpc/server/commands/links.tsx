@@ -15,8 +15,15 @@ import set from "../../../../../_runtime/00002_set.js";
 
 require = arg1;
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = RPC_SCOPE_CONFIG);
-({ ApplicationFlags: closure_6, PopoutWindowKeys: error, RPCCommands, RPCErrors: closure_8, UserSettingsSections: c9, AnalyticEvents: c10 } = ME);
-const items = [, ];
+({
+  ApplicationFlags: closure_6,
+  PopoutWindowKeys: error,
+  RPCCommands,
+  RPCErrors: closure_8,
+  UserSettingsSections: c9,
+  AnalyticEvents: c10,
+} = ME);
+const items = [,];
 ({ AM_HARMONY_PRD_APPLICATION_ID: arr[0], AM_HARMONY_STG_APPLICATION_ID: arr[1] } = items3);
 let set = new Set(items);
 obj = { [RPCCommands.OPEN_EXTERNAL_LINK]: obj, [RPCCommands.NAVIGATE_TO_CONNECTIONS]: obj };
@@ -32,7 +39,7 @@ obj = {
   handler(socket) {
     socket = socket.socket;
     const url = socket.args.url;
-    return callback(function*() {
+    return callback(function* () {
       if (application === 2) {
         application = 3;
         HermesBuiltin.throwTypeError();
@@ -118,7 +125,9 @@ obj = {
               if (currentEmbeddedActivity != null) {
                 _location = currentEmbeddedActivity.location;
               }
-              embeddedActivityLocationChannelId = closure_1_0(closure_1_2[14]).getEmbeddedActivityLocationChannelId(_location);
+              embeddedActivityLocationChannelId = closure_1_0(closure_1_2[14]).getEmbeddedActivityLocationChannelId(
+                _location,
+              );
               const tmp86Result2 = closure_1_0(closure_1_2[14]);
               let id2;
               if (application != null) {
@@ -178,7 +187,11 @@ obj = {
                     if (application != null) {
                       id = application.id;
                     }
-                    closure_3_1(closure_3_2[12]).track(closure_3_10.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url: callback, opened: true });
+                    closure_3_1(closure_3_2[12]).track(closure_3_10.RPC_OPEN_EXTERNAL_LINK_CALLED, {
+                      application_id: id,
+                      url: callback,
+                      opened: true,
+                    });
                     callback({ opened: true });
                   },
                   onCancel() {
@@ -191,10 +204,15 @@ obj = {
                     obj = { application_id: id, url: callback, opened: false };
                     obj.track(closure_3_10.RPC_OPEN_EXTERNAL_LINK_CALLED, obj);
                     callback({ opened: false });
-                  }
+                  },
                 };
                 obj = { application, channelId: closure_2 };
-                return obj.handleClick(obj, undefined, undefined, closure_2_0(closure_2_2[18]).getActivitiesModalContextKey(obj));
+                return obj.handleClick(
+                  obj,
+                  undefined,
+                  undefined,
+                  closure_2_0(closure_2_2[18]).getActivitiesModalContextKey(obj),
+                );
               });
             }
             c3 = 0;
@@ -211,7 +229,7 @@ obj = {
         }
       }
     })();
-  }
+  },
 };
 items1 = [RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE];
 obj = {
@@ -235,7 +253,7 @@ obj = {
     }
     obj2 = recurseReplaceContentTree;
     const tmp = require;
-  }
+  },
 };
 items2 = [RPC_AUTHENTICATED_SCOPE];
 items3 = [RPC_AUTHENTICATED_SCOPE];
@@ -270,7 +288,7 @@ obj[RPCCommands.SHARE_LINK] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCComman
                 tmp2 = stateFromStores;
               }
               closure_0({ success: tmp2, didCopyLink: first, didSendMessage: stateFromStores });
-            }
+            },
           };
           const result = obj.openActivityShareLinkModal(obj);
         });
@@ -285,7 +303,7 @@ obj[RPCCommands.SHARE_LINK] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCComman
     }
     const obj2 = recurseReplaceContentTree;
     const tmp = require;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/rpc/server/commands/links.tsx");
 

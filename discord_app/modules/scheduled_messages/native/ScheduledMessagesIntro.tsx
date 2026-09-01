@@ -14,7 +14,7 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 function MenuRow(arg0) {
   ({ icon, label, highlighted } = arg0);
   const tmp = callback3();
-  const items = [tmp.menuRow, ];
+  const items = [tmp.menuRow];
   let menuRowHighlighted = null;
   if (highlighted) {
     menuRowHighlighted = tmp.menuRowHighlighted;
@@ -22,14 +22,37 @@ function MenuRow(arg0) {
   let obj = { style: items, children: null };
   items[1] = menuRowHighlighted;
   obj = { size: "sm", color: ThemesDefault.colors.TEXT_STRONG };
-  const items1 = [callback(icon, obj), callback(Text.Text, { variant: "text-sm/medium", color: "text-default", children: label })];
+  const items1 = [
+    callback(icon, obj),
+    callback(Text.Text, { variant: "text-sm/medium", color: "text-default", children: label }),
+  ];
   obj[1] = items1;
   return closure_7(closure_5, obj);
 }
 ({ Image: c3, ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { scrollView: { flex: 1 }, pageContainer: null, container: null, upsellImage: null, textContainer: null, text: null, demo: null, menu: null, menuRow: null, menuRowHighlighted: null, menuDivider: null, chatInput: null, plusButton: null };
-obj = { alignItems: "center", flexGrow: 1, justifyContent: "center", paddingBottom: ThemesDefault.space.PX_32, paddingHorizontal: ThemesDefault.space.PX_32 };
+let obj = {
+  scrollView: { flex: 1 },
+  pageContainer: null,
+  container: null,
+  upsellImage: null,
+  textContainer: null,
+  text: null,
+  demo: null,
+  menu: null,
+  menuRow: null,
+  menuRowHighlighted: null,
+  menuDivider: null,
+  chatInput: null,
+  plusButton: null,
+};
+obj = {
+  alignItems: "center",
+  flexGrow: 1,
+  justifyContent: "center",
+  paddingBottom: ThemesDefault.space.PX_32,
+  paddingHorizontal: ThemesDefault.space.PX_32,
+};
 obj[1] = obj;
 obj[2] = { alignItems: "center" };
 obj[3] = { height: 144, marginBottom: ThemesDefault.space.PX_16, width: 180 };
@@ -37,21 +60,93 @@ let obj1 = { height: 144, marginBottom: ThemesDefault.space.PX_16, width: 180 };
 obj[4] = { gap: ThemesDefault.space.PX_8 };
 obj[5] = { textAlign: "center" };
 let obj2 = { gap: ThemesDefault.space.PX_8 };
-obj[6] = { alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_NORMAL, borderRadius: ThemesDefault.radii.md, borderWidth: 1, gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_24, overflow: "hidden", padding: ThemesDefault.space.PX_12 };
-let obj3 = { alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_NORMAL, borderRadius: ThemesDefault.radii.md, borderWidth: 1, gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_24, overflow: "hidden", padding: ThemesDefault.space.PX_12 };
-obj[7] = { alignSelf: "flex-start", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
-let obj4 = { alignSelf: "flex-start", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
-obj[8] = { alignItems: "center", flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8 };
-let obj5 = { alignItems: "center", flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8 };
+obj[6] = {
+  alignSelf: "stretch",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderColor: ThemesDefault.colors.BORDER_NORMAL,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 1,
+  gap: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_24,
+  overflow: "hidden",
+  padding: ThemesDefault.space.PX_12,
+};
+let obj3 = {
+  alignSelf: "stretch",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderColor: ThemesDefault.colors.BORDER_NORMAL,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 1,
+  gap: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_24,
+  overflow: "hidden",
+  padding: ThemesDefault.space.PX_12,
+};
+obj[7] = {
+  alignSelf: "flex-start",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  borderRadius: ThemesDefault.radii.lg,
+  overflow: "hidden",
+};
+let obj4 = {
+  alignSelf: "flex-start",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  borderRadius: ThemesDefault.radii.lg,
+  overflow: "hidden",
+};
+obj[8] = {
+  alignItems: "center",
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  paddingVertical: ThemesDefault.space.PX_8,
+};
+let obj5 = {
+  alignItems: "center",
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  paddingVertical: ThemesDefault.space.PX_8,
+};
 obj[9] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 let obj6 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj[10] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1 };
 const obj7 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1 };
-obj[11] = { alignItems: "center", backgroundColor: ThemesDefault.colors.CHAT_INPUT_BACKGROUND, borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8 };
-let obj8 = { alignItems: "center", backgroundColor: ThemesDefault.colors.CHAT_INPUT_BACKGROUND, borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8 };
-obj[12] = { alignItems: "center", backgroundColor: ThemesDefault.colors.CHAT_INPUT_ACTION_BUTTON_BACKGROUND, borderRadius: ThemesDefault.radii.round, height: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE, justifyContent: "center", width: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE };
+obj[11] = {
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.CHAT_INPUT_BACKGROUND,
+  borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS,
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_8,
+};
+let obj8 = {
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.CHAT_INPUT_BACKGROUND,
+  borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS,
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_8,
+};
+obj[12] = {
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.CHAT_INPUT_ACTION_BUTTON_BACKGROUND,
+  borderRadius: ThemesDefault.radii.round,
+  height: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
+  justifyContent: "center",
+  width: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
+};
 let closure_8 = createCacheKey.createStyles(obj);
-let obj9 = { alignItems: "center", backgroundColor: ThemesDefault.colors.CHAT_INPUT_ACTION_BUTTON_BACKGROUND, borderRadius: ThemesDefault.radii.round, height: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE, justifyContent: "center", width: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE };
+let obj9 = {
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.CHAT_INPUT_ACTION_BUTTON_BACKGROUND,
+  borderRadius: ThemesDefault.radii.round,
+  height: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
+  justifyContent: "center",
+  width: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
+};
 const result = set.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessagesIntro.tsx");
 
 export default function ScheduledMessagesIntro() {
@@ -59,33 +154,55 @@ export default function ScheduledMessagesIntro() {
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
   obj = { source: registerAssetDefault, style: tmp.upsellImage };
-  const items = [callback(closure_3, obj), , ];
+  const items = [callback(closure_3, obj), ,];
   obj1 = { style: tmp.textContainer, children: null };
-  const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  const obj2 = {
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    style: tmp.text,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj2[3] = intl.string(getSystemLocale.t["C/j9NE"]);
-  const items1 = [callback(Text.Heading, obj2), ];
-  const obj3 = { variant: "text-sm/medium", color: "text-default", style: tmp.text, includeFontPadding: true, children: null };
+  const items1 = [callback(Text.Heading, obj2)];
+  const obj3 = {
+    variant: "text-sm/medium",
+    color: "text-default",
+    style: tmp.text,
+    includeFontPadding: true,
+    children: null,
+  };
   const intl2 = getSystemLocale.intl;
   obj3[4] = intl2.format(getSystemLocale.t.PqmI8J, {});
   items1[1] = callback(Text.Text, obj3);
   obj1[1] = items1;
   items[1] = callback2(closure_5, obj1);
-  const obj4 = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+  const obj4 = {
+    style: tmp.demo,
+    accessibilityElementsHidden: true,
+    importantForAccessibility: "no-hide-descendants",
+    children: null,
+  };
   const obj5 = { style: tmp.menu, children: null };
   const obj6 = { icon: AttachmentIcon.AttachmentIcon, label: null, highlighted: false };
   const intl3 = getSystemLocale.intl;
   obj6[1] = intl3.string(getSystemLocale.t["8Hvr3+"]);
-  const items2 = [callback(MenuRow, obj6), callback(closure_5, { style: tmp.menuDivider }), ];
+  const items2 = [callback(MenuRow, obj6), callback(closure_5, { style: tmp.menuDivider })];
   const obj8 = { icon: CalendarPlusIcon.CalendarPlusIcon, label: null, highlighted: true };
   const intl4 = getSystemLocale.intl;
   obj8[1] = intl4.string(getSystemLocale.t["3+ii4F"]);
   items2[2] = callback(MenuRow, obj8);
   obj5[1] = items2;
-  const items3 = [callback2(closure_5, obj5), ];
+  const items3 = [callback2(closure_5, obj5)];
   const obj9 = { style: tmp.chatInput, children: null };
-  const obj10 = { style: tmp.plusButton, children: callback(PlusLargeIcon.PlusLargeIcon, { size: "xs", color: ThemesDefault.colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT }) };
-  const items4 = [callback(closure_5, obj10), ];
+  const obj10 = {
+    style: tmp.plusButton,
+    children: callback(PlusLargeIcon.PlusLargeIcon, {
+      size: "xs",
+      color: ThemesDefault.colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT,
+    }),
+  };
+  const items4 = [callback(closure_5, obj10)];
   const obj12 = { variant: "text-sm/normal", color: "text-muted", children: null };
   const intl5 = getSystemLocale.intl;
   obj12[2] = intl5.string(getSystemLocale.t.fxxYiB);
@@ -97,4 +214,4 @@ export default function ScheduledMessagesIntro() {
   obj[1] = items;
   obj[2] = callback2(closure_5, obj);
   return callback(closure_4, obj);
-};
+}

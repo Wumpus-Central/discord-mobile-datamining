@@ -4,7 +4,9 @@ import ForLaterFreemiumConfig from "../../ForLaterExperiment.tsx";
 import closure_3 from "../../SavedMessagesStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/saved_messages/message_reminders/native/showOverdueRemindersToast.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/saved_messages/message_reminders/native/showOverdueRemindersToast.tsx",
+);
 
 export const showOverdueRemindersToast = function showOverdueRemindersToast() {
   let obj = ForLaterFreemiumConfig;
@@ -16,7 +18,13 @@ export const showOverdueRemindersToast = function showOverdueRemindersToast() {
       if (mostRecentOverdueDueAt > tmpResult.getRemindersLastSeenAt()) {
         tmpResult = tmp(7605);
         tmpResult.markRemindersSeen();
-        obj = { key: "overdue-message-reminders", IconComponent: null, content: null, position: "bottom", toastDurationMs: 5000 };
+        obj = {
+          key: "overdue-message-reminders",
+          IconComponent: null,
+          content: null,
+          position: "bottom",
+          toastDurationMs: 5000,
+        };
         obj[1] = tmp(4441).ClockIcon;
         const intl = tmp(1236).intl;
         obj = { count: null };

@@ -14,4 +14,4 @@ export default function useParticipantTileTapGesture(arg0) {
   const onStartResult1 = Gesture2.Tap().onStart(onDoubleTapStart);
   const Gesture3 = LegacyBaseButton.Gesture;
   return Gesture3.Exclusive(Gesture2.Tap().onStart(onDoubleTapStart).numberOfTaps(2), onStartResult);
-};
+}

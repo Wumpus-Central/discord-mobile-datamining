@@ -51,24 +51,31 @@ export const useHubProgressBarCompletedSteps = function useHubProgressBarComplet
   });
   stateFromStores1 = stateFromStores;
   const items1 = [stateFromStores];
-  memo = React.useMemo(() => (function convertHubProgressFlagSetToSet(stateFromStores1) {
-    const set = new Set();
-    for (const item10013 of closure_5) {
-      let tmp2 = callback;
-      let tmp3 = table;
-      let tmp = item10013;
-      let obj2 = callback(table[9]);
-      if (obj2.hasFlag(arg0, item10013)) {
-        let tmp4 = item10013;
-        let addResult = set.add(tmp);
-      }
-      continue;
-    }
-    return set;
-  })(stateFromStores1), items1);
+  memo = React.useMemo(
+    () =>
+      (function convertHubProgressFlagSetToSet(stateFromStores1) {
+        const set = new Set();
+        for (const item10013 of closure_5) {
+          let tmp2 = callback;
+          let tmp3 = table;
+          let tmp = item10013;
+          let obj2 = callback(table[9]);
+          if (obj2.hasFlag(arg0, item10013)) {
+            let tmp4 = item10013;
+            let addResult = set.add(tmp);
+          }
+          continue;
+        }
+        return set;
+      })(stateFromStores1),
+    items1,
+  );
   const obj = memo(stateFromStores1[5]);
   const items2 = [closure_4];
-  stateFromStores1 = memo(stateFromStores1[5]).useStateFromStores(items2, () => null != localAccount.getLocalAccount(constants.CONTACTS));
+  stateFromStores1 = memo(stateFromStores1[5]).useStateFromStores(
+    items2,
+    () => null != localAccount.getLocalAccount(constants.CONTACTS),
+  );
   const items3 = [memo, stateFromStores1];
   return React.useMemo(() => {
     if (stateFromStores1) {

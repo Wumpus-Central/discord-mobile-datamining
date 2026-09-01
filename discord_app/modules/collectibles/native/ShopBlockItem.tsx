@@ -57,7 +57,11 @@ export default function _default(block) {
     const obj3 = { featuredBlock: null };
     obj3[0] = block;
     obj2[1] = jsx(stateFromStores(tmp3[10]), { featuredBlock: null });
-    obj1[1] = <View key={memo} style={null}>{null}</View>;
+    obj1[1] = (
+      <View key={memo} style={null}>
+        {null}
+      </View>
+    );
     return jsx(tmp2(tmp3[8]).CollectiblesAnalyticsProvider, { newValue: null, children: null });
   } else if (tmp2(tmp3[7]).ShopBlockType.FEED === type) {
     const obj4 = { newValue: null, children: null };
@@ -68,7 +72,11 @@ export default function _default(block) {
     obj6[0] = block;
     obj6[1] = screen;
     obj6[2] = preferVCPrice;
-    obj5[1] = jsx(stateFromStores(tmp3[11]), { feedBlock: null, screen: null, preferVCPrice: null, disableBundleStaticBackground: true }, memo);
+    obj5[1] = jsx(
+      stateFromStores(tmp3[11]),
+      { feedBlock: null, screen: null, preferVCPrice: null, disableBundleStaticBackground: true },
+      memo,
+    );
     obj4[1] = <View style={null}>{null}</View>;
     return jsx(tmp2(tmp3[8]).CollectiblesAnalyticsProvider, { newValue: null, children: null });
   } else if (tmp2(tmp3[7]).ShopBlockType.SHELF === type) {
@@ -88,4 +96,4 @@ export default function _default(block) {
     const WIDE_BANNER = tmp2(tmp3[7]).ShopBlockType.WIDE_BANNER;
     return null;
   }
-};
+}

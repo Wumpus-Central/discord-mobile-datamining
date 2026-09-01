@@ -23,7 +23,7 @@ function getPurchaseToken() {
 }
 function _getPurchaseTokenHash() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     closure_1 = tmp2;
     const _Uint8Array2 = Uint8Array;
     const parts = closure_1_5().split("");

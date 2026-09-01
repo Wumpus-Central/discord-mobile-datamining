@@ -13,6 +13,8 @@ const forwardRefResult = importAllResult.forwardRef(() => {
   obj[1] = intl2.string(getSystemLocale.t.pRuzXJ);
   return jsx(UnavailableNoticeDefault, { title: null, description: null, brightTitle: true });
 });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsPayments.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsPayments.tsx",
+);
 
 export default forwardRefResult;

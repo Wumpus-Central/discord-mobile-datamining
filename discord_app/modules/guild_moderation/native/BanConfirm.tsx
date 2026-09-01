@@ -19,15 +19,15 @@ let obj = {
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["4obaMS"]);
-  }
+  },
 };
-let items = [obj, , , , , , ];
+let items = [obj, , , , , ,];
 obj = {
   value: setDefault.Seconds.HOUR,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.RKpitY);
-  }
+  },
 };
 items[1] = obj;
 items[2] = {
@@ -35,63 +35,63 @@ items[2] = {
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["8WfJZ8"]);
-  }
+  },
 };
 let obj1 = {
   value: 6 * setDefault.Seconds.HOUR,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["8WfJZ8"]);
-  }
+  },
 };
 items[3] = {
   value: 12 * setDefault.Seconds.HOUR,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.p1up7u);
-  }
+  },
 };
 let obj2 = {
   value: 12 * setDefault.Seconds.HOUR,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.p1up7u);
-  }
+  },
 };
 items[4] = {
   value: setDefault.Seconds.DAY,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.XuVkkD);
-  }
+  },
 };
 let obj3 = {
   value: setDefault.Seconds.DAY,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.XuVkkD);
-  }
+  },
 };
 items[5] = {
   value: 3 * setDefault.Seconds.DAY,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["gMcDS+"]);
-  }
+  },
 };
 let obj4 = {
   value: 3 * setDefault.Seconds.DAY,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["gMcDS+"]);
-  }
+  },
 };
 items[6] = {
   value: 7 * setDefault.Seconds.DAY,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.FA7IUk);
-  }
+  },
 };
 let obj6 = { container: null, iconLabelBlock: null, iconStyles: null, blurb: null, redText: null, errorText: null };
 let obj5 = {
@@ -99,18 +99,33 @@ let obj5 = {
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.FA7IUk);
-  }
+  },
 };
 obj6[0] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey = { marginTop: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_16, alignItems: "center" };
+createCacheKey = {
+  marginTop: ThemesDefault.space.PX_16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.lg,
+  paddingTop: ThemesDefault.space.PX_8,
+  paddingBottom: ThemesDefault.space.PX_16,
+  alignItems: "center",
+};
 obj6[1] = createCacheKey;
 let obj7 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj6[2] = { height: 1.25 * ThemesDefault.space.PX_96 };
 let obj9 = { height: 1.25 * ThemesDefault.space.PX_96 };
 obj6[3] = { marginVertical: ThemesDefault.space.PX_16 };
 let obj10 = { marginVertical: ThemesDefault.space.PX_16 };
-obj6[4] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
-let obj11 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
+obj6[4] = {
+  marginTop: ThemesDefault.space.PX_12,
+  marginBottom: ThemesDefault.space.PX_4,
+  color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL,
+};
+let obj11 = {
+  marginTop: ThemesDefault.space.PX_12,
+  marginBottom: ThemesDefault.space.PX_4,
+  color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL,
+};
 obj6[5] = { marginBottom: ThemesDefault.space.PX_16 };
 let closure_14 = createCacheKey.createStyles(obj6);
 let obj12 = { marginBottom: ThemesDefault.space.PX_16 };
@@ -135,7 +150,10 @@ const memoResult = importAllResult.memo(function BanConfirm(arg0) {
   stateFromStores1 = obj1.useStateFromStores(items2, () => closure_1_9.getUser(closure_1));
   closure_5 = stateFromStores1.useRef(0);
   closure_6 = stateFromStores1.useRef("");
-  [tmp11, c7] = stateFromStores(stateFromStores1.useState(() => ({ banning: false, banError: false })), 2);
+  [tmp11, c7] = stateFromStores(
+    stateFromStores1.useState(() => ({ banning: false, banError: false })),
+    2,
+  );
   const items3 = [stateFromStores, stateFromStores1, onBan];
   let tmp14Result = null;
   if (null != stateFromStores1) {
@@ -153,7 +171,7 @@ const memoResult = importAllResult.memo(function BanConfirm(arg0) {
       const obj2 = { style: null, source: null, resizeMode: "contain" };
       obj2[0] = tmp.iconStyles;
       obj2[1] = tmp4(tmp5[14]);
-      const items4 = [callback(closure_5, obj2), , ];
+      const items4 = [callback(closure_5, obj2), ,];
       const obj3 = { style: null, variant: "text-md/semibold", children: null };
       obj3[0] = tmp.redText;
       const intl = tmp7(tmp5[6]).intl;
@@ -166,7 +184,7 @@ const memoResult = importAllResult.memo(function BanConfirm(arg0) {
       obj5[2] = stateFromStores.name;
       items4[2] = callback(tmp7(tmp5[15]).Text, obj5);
       obj1[1] = items4;
-      const items5 = [callback2(closure_6, obj1), , , , , ];
+      const items5 = [callback2(closure_6, obj1), , , , ,];
       const obj6 = { style: null, variant: "heading-md/normal", color: "text-feedback-warning", children: null };
       obj6[0] = tmp.blurb;
       const intl2 = tmp7(tmp5[6]).intl;
@@ -182,7 +200,9 @@ const memoResult = importAllResult.memo(function BanConfirm(arg0) {
       obj8[2] = function onChange(current) {
         closure_5.current = current;
       };
-      obj8[4] = items.map((getLabel, value) => callback2(callback(onBan[18]).TableRadioRow, { value, label: getLabel.getLabel() }, value));
+      obj8[4] = items.map((getLabel, value) =>
+        callback2(callback(onBan[18]).TableRadioRow, { value, label: getLabel.getLabel() }, value),
+      );
       items5[2] = callback(tmp7(tmp5[17]).TableRadioGroup, obj8);
       const obj9 = { ref: null, containerStyle: null, label: null, maxLength: 512, onChange: null };
       obj9[0] = ref1;

@@ -26,13 +26,22 @@ export default function ForLaterCardActionButtons(savedMessage) {
       },
       removeReminder() {
         let obj = closure_1_0(closure_1_2[7]);
-        obj = { channelId: closure_0.saveData.channelId, messageId: closure_0.saveData.messageId, displayToast: true, isReminder: true };
+        obj = {
+          channelId: closure_0.saveData.channelId,
+          messageId: closure_0.saveData.messageId,
+          displayToast: true,
+          isReminder: true,
+        };
         return obj.removeSavedMessage(obj);
       },
       channelId: savedMessage.saveData.channelId,
-      messageId: savedMessage.saveData.messageId
+      messageId: savedMessage.saveData.messageId,
     };
-    return obj.openLazy(savedMessage(closure_1_2[6])(closure_1_2[5], closure_1_2.paths), "MessageReminderDurationActionSheet", obj);
+    return obj.openLazy(
+      savedMessage(closure_1_2[6])(closure_1_2[5], closure_1_2.paths),
+      "MessageReminderDurationActionSheet",
+      obj,
+    );
   }, items);
   let intl = savedMessage(1236).intl;
   obj[0] = intl.string(savedMessage(1236).t["+TSRGD"]);
@@ -40,7 +49,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   obj[2] = function action() {
     return jumpToMessage();
   };
-  const items1 = [obj, ];
+  const items1 = [obj];
   const intl2 = savedMessage(1236).intl;
   if (null != savedMessage.saveData.dueAt) {
     let SvXS1Z = tmp3(1236).t["a6gcZ/"];
@@ -53,7 +62,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
     action() {
       return savedMessage(closure_1_2[7]).removeSavedMessage(savedMessage.saveData);
     },
-    variant: "destructive"
+    variant: "destructive",
   };
   items1[1] = obj;
   if (null == savedMessage.saveData.dueAt) {
@@ -72,7 +81,12 @@ export default function ForLaterCardActionButtons(savedMessage) {
       obj.icon = jumpToMessage(8799);
       return callback(savedMessage(8006).IconButton, obj);
     };
-    obj[1] = jsx(tmp3(8792).ContextMenu, { items: null, keyboardShouldPersistTaps: "handled", triggerOnTap: true, children: null });
+    obj[1] = jsx(tmp3(8792).ContextMenu, {
+      items: null,
+      keyboardShouldPersistTaps: "handled",
+      triggerOnTap: true,
+      children: null,
+    });
     return <View style={null}>{null}</View>;
   } else {
     const intl3 = tmp3(1236).intl;
@@ -88,4 +102,4 @@ export default function ForLaterCardActionButtons(savedMessage) {
     obj2[2] = callback;
     obj2 = items1.unshift(obj2);
   }
-};
+}

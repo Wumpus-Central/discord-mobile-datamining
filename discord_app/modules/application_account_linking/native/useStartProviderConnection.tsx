@@ -4,7 +4,9 @@ import closure_4 from "../../../../_runtime/00019_noop.js";
 import { useProviderConnection } from "../hooks/useProviderConnection.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/application_account_linking/native/useStartProviderConnection.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/application_account_linking/native/useStartProviderConnection.tsx",
+);
 
 export const useStartProviderConnection = function useStartProviderConnection(provider_id) {
   let obj = useProviderConnection;
@@ -18,7 +20,7 @@ export const useStartProviderConnection = function useStartProviderConnection(pr
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -120,7 +122,7 @@ export const useStartProviderConnection = function useStartProviderConnection(pr
     loading,
     hasConnection,
     canConnect,
-    startConnection: React.useCallback(function() {
+    startConnection: React.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -130,7 +132,7 @@ export const useStartProviderConnection = function useStartProviderConnection(pr
       }
       return applyArgumentsResult;
     }, items),
-    account
+    account,
   };
   return obj;
 };

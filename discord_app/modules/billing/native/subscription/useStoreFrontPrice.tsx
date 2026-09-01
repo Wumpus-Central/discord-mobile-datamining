@@ -3,7 +3,13 @@ import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { PriceSetAssignmentPurchaseTypes as closure_3 } from "../../../../Constants.tsx";
 
 const require = arg1;
-let obj = { PRICE_AVAILABLE: "PRICE_AVAILABLE", SUBSCRIPTION_PLAN_UNAVAILABLE: "SUBSCRIPTION_PLAN_UNAVAILABLE", STOREFRONT_UNAVAILABLE: "STOREFRONT_UNAVAILABLE", MISMATCHING_COUNTRIES: "MISMATCHING_COUNTRIES", COUNTRY_PRICE_UNAVAILABLE: "COUNTRY_PRICE_UNAVAILABLE" };
+let obj = {
+  PRICE_AVAILABLE: "PRICE_AVAILABLE",
+  SUBSCRIPTION_PLAN_UNAVAILABLE: "SUBSCRIPTION_PLAN_UNAVAILABLE",
+  STOREFRONT_UNAVAILABLE: "STOREFRONT_UNAVAILABLE",
+  MISMATCHING_COUNTRIES: "MISMATCHING_COUNTRIES",
+  COUNTRY_PRICE_UNAVAILABLE: "COUNTRY_PRICE_UNAVAILABLE",
+};
 const result = require("set").fileFinishedImporting("modules/billing/native/subscription/useStoreFrontPrice.tsx");
 
 export default function useStoreFrontPrice(arg0, arg1) {
@@ -43,5 +49,5 @@ export default function useStoreFrontPrice(arg0, arg1) {
     }
     return { price, priceState };
   }, items);
-};
+}
 export const PriceStates = obj;

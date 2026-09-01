@@ -41,22 +41,25 @@ createToggle = {
     const obj = useStaffOrDeveloperSettingPredicate;
     const items = [closure_2];
     const obj2 = initialize;
-    return null != initialize.useStateFromStores(items, () => {
-      const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
-      let id;
-      if (overrides != null) {
-        const tmp4 = overrides[callback(undefined, table[4]).DEVICE_FIELD];
-        if (tmp4 != null) {
-          id = tmp4.id;
-        }
-      }
-      return id;
-    }) && staffOrDeveloperSettingPredicate;
+    return (
+      null !=
+        initialize.useStateFromStores(items, () => {
+          const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
+          let id;
+          if (overrides != null) {
+            const tmp4 = overrides[callback(undefined, table[4]).DEVICE_FIELD];
+            if (tmp4 != null) {
+              id = tmp4.id;
+            }
+          }
+          return id;
+        }) && staffOrDeveloperSettingPredicate
+    );
   },
   onPress: function handleBuildOverrideActivePress() {
     navigateToDevTools.navigateToDevTools({ screenKey: "buildOverride" });
   },
-  withArrow: true
+  withArrow: true,
 };
 createToggle = createToggle.createPressable(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/BuildOverrideActiveSetting.tsx");

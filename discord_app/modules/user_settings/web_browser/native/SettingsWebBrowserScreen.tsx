@@ -14,6 +14,8 @@ const memoResult = importAllResult.memo(function SettingsWebBrowserScreen() {
   }, []);
   return jsx(_modDef14340, { node });
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx",
+);
 
 export default memoResult;

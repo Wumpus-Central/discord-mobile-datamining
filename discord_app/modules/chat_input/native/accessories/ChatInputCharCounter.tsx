@@ -18,7 +18,9 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
   let callback;
   let obj = analyticsLocations(589);
   const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => stateFromStores(_undefined[8]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
+  stateFromStores = obj.useStateFromStores(items, () =>
+    stateFromStores(_undefined[8]).canUseIncreasedMessageLength(currentUser.getCurrentUser()),
+  );
   const tmp = callback4();
   [tmp6, c2] = callback(importAllResult.useState(0), 2);
   const tmp7 = stateFromStores(8160)();
@@ -26,7 +28,7 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
   const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({
     onMessageLengthChanged(length) {
       callback(Math.max(0, length - closure_3));
-    }
+    },
   }));
   const items1 = [analyticsLocations, stateFromStores, tmp7];
   let tmp10 = null;

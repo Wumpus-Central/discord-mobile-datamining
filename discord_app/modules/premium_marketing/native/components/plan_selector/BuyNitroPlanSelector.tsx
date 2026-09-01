@@ -12,12 +12,29 @@ const require = arg1;
 noopAll;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { header: null, hrkWarning: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  marginBottom: ThemesDefault.space.PX_8,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: require("result").DARK_PRIMARY_630_LIGHT_PRIMARY_230, marginTop: ThemesDefault.space.PX_8, overflow: "hidden" };
+createCacheKey[1] = {
+  borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+  backgroundColor: require("result").DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+  marginTop: ThemesDefault.space.PX_8,
+  overflow: "hidden",
+};
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: require("result").DARK_PRIMARY_630_LIGHT_PRIMARY_230, marginTop: ThemesDefault.space.PX_8, overflow: "hidden" };
-let result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/plan_selector/BuyNitroPlanSelector.tsx");
+let obj1 = {
+  borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+  backgroundColor: require("result").DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+  marginTop: ThemesDefault.space.PX_8,
+  overflow: "hidden",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/premium_marketing/native/components/plan_selector/BuyNitroPlanSelector.tsx",
+);
 
 export default function BuyNitroPlanSelector(planSelection) {
   planSelection = planSelection.planSelection;
@@ -48,17 +65,28 @@ export default function BuyNitroPlanSelector(planSelection) {
   obj = { title: null };
   const intl = planSelection(1236).intl;
   obj[0] = intl.string(planSelection(1236).t.u95Dt4);
-  const items1 = [callback(selection(13053), obj), ];
+  const items1 = [callback(selection(13053), obj)];
   obj1 = { selectedTier: selection.tier, setSelectedTier: selection.setTier, disabled: isBuyNitroPurchaseBlocked };
   items1[1] = callback(selection(13067), obj1);
   obj[1] = items1;
-  const children = [callback2(isBuyNitroPurchaseBlocked, obj), , ];
+  const children = [callback2(isBuyNitroPurchaseBlocked, obj), ,];
   let tmp8Result = null != selection.productId;
   if (tmp8Result) {
     obj2 = { hasIcons: false, value: null, onChange: null, children: null };
     ({ productId: obj8[1], setProductId: obj8[2] } = selection);
     const found = items.filter((productId) => !_undefined.has(productId.productId));
-    obj2[3] = found.map((productId) => closure_1_7(planSelection(_undefined[17]).TableRadioRow, { value: productId.productId, label: product(planSelection, productId), subLabel: callback(planSelection, productId), disabled: isBuyNitroPurchaseBlocked }, productId.productId));
+    obj2[3] = found.map((productId) =>
+      closure_1_7(
+        planSelection(_undefined[17]).TableRadioRow,
+        {
+          value: productId.productId,
+          label: product(planSelection, productId),
+          subLabel: callback(planSelection, productId),
+          disabled: isBuyNitroPurchaseBlocked,
+        },
+        productId.productId,
+      ),
+    );
     tmp8Result = tmp8(tmp2(7692).TableRadioGroup, obj2);
   }
   children[1] = tmp8Result;
@@ -89,4 +117,4 @@ export default function BuyNitroPlanSelector(planSelection) {
   }
   children[2] = tmp8Result;
   return callback2(isBuyNitroPurchaseBlocked, { children });
-};
+}

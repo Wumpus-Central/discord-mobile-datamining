@@ -16,13 +16,13 @@ obj = {
   },
   parent: null,
   IconComponent: GlobeEarthIcon.GlobeEarthIcon,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.BROWSER,
   getComponent() {
     return require("../../web_browser/native/SettingsWebBrowserScreen.tsx").default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/WebBrowserSetting.tsx");

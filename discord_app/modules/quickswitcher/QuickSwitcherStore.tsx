@@ -136,7 +136,9 @@ function generateInitialResults() {
                   }
                 }
                 const tmp6 = closure_1_26;
-                tmp8 = closure_1_26 === callback(tmp2[15]).AutocompleterResultTypes.USER || closure_1_26 === callback(tmp2[15]).AutocompleterResultTypes.USER_GLOBAL;
+                tmp8 =
+                  closure_1_26 === callback(tmp2[15]).AutocompleterResultTypes.USER ||
+                  closure_1_26 === callback(tmp2[15]).AutocompleterResultTypes.USER_GLOBAL;
               }
               if (null != tmp5) {
                 const obj = { record: null, channelId: null };
@@ -252,7 +254,9 @@ function generateInitialResults() {
                 }
               }
               const tmp4 = closure_26;
-              tmp6 = closure_26 === channelId(tmp[15]).AutocompleterResultTypes.USER || closure_26 === channelId(tmp[15]).AutocompleterResultTypes.USER_GLOBAL;
+              tmp6 =
+                closure_26 === channelId(tmp[15]).AutocompleterResultTypes.USER ||
+                closure_26 === channelId(tmp[15]).AutocompleterResultTypes.USER_GLOBAL;
             }
             return tmp3;
           });
@@ -352,7 +356,16 @@ function handleQuickSwitcherShow(arg0) {
   let tmp13 = store;
   if (store == null) {
     tmp13 = sortByMatchScoreDefault;
-    const items1 = [sortByMatchScore.AutocompleterResultTypes.USER, sortByMatchScore.AutocompleterResultTypes.GROUP_DM, sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL, sortByMatchScore.AutocompleterResultTypes.GUILD, sortByMatchScore.AutocompleterResultTypes.APPLICATION, sortByMatchScore.AutocompleterResultTypes.GAME_PROFILE, sortByMatchScore.AutocompleterResultTypes.LINK, sortByMatchScore.AutocompleterResultTypes.IN_APP_NAVIGATION];
+    const items1 = [
+      sortByMatchScore.AutocompleterResultTypes.USER,
+      sortByMatchScore.AutocompleterResultTypes.GROUP_DM,
+      sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL,
+      sortByMatchScore.AutocompleterResultTypes.GUILD,
+      sortByMatchScore.AutocompleterResultTypes.APPLICATION,
+      sortByMatchScore.AutocompleterResultTypes.GAME_PROFILE,
+      sortByMatchScore.AutocompleterResultTypes.LINK,
+      sortByMatchScore.AutocompleterResultTypes.IN_APP_NAVIGATION,
+    ];
     let num = 5;
     if (null != queryMode) {
       num = 100;
@@ -424,7 +437,13 @@ function handleUserSearchUpdate(arr, str) {
           const found = arr.filter((type) => type.type === callback(9924).AutocompleterResultTypes.GAME_PROFILE);
           const substr = found.slice(0, 3);
           items = [];
-          HermesBuiltin.arraySpread(substr, HermesBuiltin.arraySpread(arr.filter((type) => type.type !== callback(9924).AutocompleterResultTypes.GAME_PROFILE), 0));
+          HermesBuiltin.arraySpread(
+            substr,
+            HermesBuiltin.arraySpread(
+              arr.filter((type) => type.type !== callback(9924).AutocompleterResultTypes.GAME_PROFILE),
+              0,
+            ),
+          );
           arr = items;
         }
         if (str !== str) {
@@ -494,11 +513,25 @@ let closure_30 = [];
 let closure_31 = [];
 let c32 = null;
 const PersistedStore = initializeDefault.PersistedStore;
-class QuickSwitcherStoreClass extends PersistedStore {
-}
+class QuickSwitcherStoreClass extends PersistedStore {}
 const prototype = QuickSwitcherStoreClass.prototype;
 prototype["initialize"] = function initialize(channelHistory) {
-  this.waitFor(closure_5, closure_7, closure_8, closure_9, closure_4, closure_11, closure_13, closure_14, closure_15, closure_16, closure_17, closure_18, closure_6, closure_19);
+  this.waitFor(
+    closure_5,
+    closure_7,
+    closure_8,
+    closure_9,
+    closure_4,
+    closure_11,
+    closure_13,
+    closure_14,
+    closure_15,
+    closure_16,
+    closure_17,
+    closure_18,
+    closure_6,
+    closure_19,
+  );
   const items = [closure_6];
   this.syncWith(items, () => true);
   const Storage = Storage2.Storage;
@@ -569,7 +602,15 @@ prototype["getLastShowTimestamp"] = function getLastShowTimestamp() {
   return c32;
 };
 prototype["getProps"] = function getProps() {
-  const obj = { theme: theme.theme, query: null, queryMode: null, results: null, selectedIndex: null, seenTutorial: null, maxQueryLength: null };
+  const obj = {
+    theme: theme.theme,
+    query: null,
+    queryMode: null,
+    results: null,
+    selectedIndex: null,
+    seenTutorial: null,
+    maxQueryLength: null,
+  };
   let str = "";
   if (null != store) {
     str = store.query;
@@ -600,7 +641,16 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
     } else {
       if (queryMode !== queryMode) {
         if (null == queryMode) {
-          const items = [sortByMatchScore.AutocompleterResultTypes.USER, sortByMatchScore.AutocompleterResultTypes.GROUP_DM, sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL, sortByMatchScore.AutocompleterResultTypes.GUILD, sortByMatchScore.AutocompleterResultTypes.APPLICATION, sortByMatchScore.AutocompleterResultTypes.GAME_PROFILE, sortByMatchScore.AutocompleterResultTypes.LINK, sortByMatchScore.AutocompleterResultTypes.IN_APP_NAVIGATION];
+          const items = [
+            sortByMatchScore.AutocompleterResultTypes.USER,
+            sortByMatchScore.AutocompleterResultTypes.GROUP_DM,
+            sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL,
+            sortByMatchScore.AutocompleterResultTypes.GUILD,
+            sortByMatchScore.AutocompleterResultTypes.APPLICATION,
+            sortByMatchScore.AutocompleterResultTypes.GAME_PROFILE,
+            sortByMatchScore.AutocompleterResultTypes.LINK,
+            sortByMatchScore.AutocompleterResultTypes.IN_APP_NAVIGATION,
+          ];
           store.setResultTypes(items);
           let tmp6 = require;
         } else {
@@ -613,7 +663,9 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
             setResultTypes(items2);
             tmp6 = tmp31;
           }
-          tmp2 = queryMode === sortByMatchScore.AutocompleterResultTypes.USER || queryMode === sortByMatchScore.AutocompleterResultTypes.USER_GLOBAL;
+          tmp2 =
+            queryMode === sortByMatchScore.AutocompleterResultTypes.USER ||
+            queryMode === sortByMatchScore.AutocompleterResultTypes.USER_GLOBAL;
         }
         let num = 5;
         if (null != queryMode) {
@@ -672,7 +724,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
     }
   },
   GAME_AUTOCOMPLETE_FETCH_SUCCESS: handleGameAutocompleteSettled,
-  GAME_AUTOCOMPLETE_FETCH_FAILURE: handleGameAutocompleteSettled
+  GAME_AUTOCOMPLETE_FETCH_FAILURE: handleGameAutocompleteSettled,
 });
 let result = require("set").fileFinishedImporting("modules/quickswitcher/QuickSwitcherStore.tsx");
 

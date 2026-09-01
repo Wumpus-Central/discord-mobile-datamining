@@ -10,15 +10,17 @@ obj = {
     return "Blur";
   },
   parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_BACKGROUND_BLUR_VIEW,
   getComponent() {
     return DemoModal /* DemoModal */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsBackgroundBlurViewSetting.tsx");
+const result = set.fileFinishedImporting(
+  "modules/user_settings/defs/native/DesignSystemsBackgroundBlurViewSetting.tsx",
+);
 
 export default route;

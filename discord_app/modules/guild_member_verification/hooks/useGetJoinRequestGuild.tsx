@@ -4,21 +4,29 @@ import closure_4 from "../UserGuildJoinRequestStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestGuild.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/hooks/useGetJoinRequestGuild.tsx",
+);
 
 export default function useGetGuildJoinRequest(arg0) {
   const _require = arg0;
   const items = [closure_4];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let request = null;
-    if (null != closure_0) {
-      request = closure_1_4.getRequest(tmp);
-    }
-    return request;
-  });
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let request = null;
+      if (null != closure_0) {
+        request = closure_1_4.getRequest(tmp);
+      }
+      return request;
+    },
+  );
   let obj = initialize;
   const items1 = [closure_4];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => obj.hasFetchedRequestToJoinGuilds);
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => obj.hasFetchedRequestToJoinGuilds,
+  );
   const items2 = [stateFromStores1];
   const effect = React.useEffect(() => {
     if (!stateFromStores1) {
@@ -27,4 +35,4 @@ export default function useGetGuildJoinRequest(arg0) {
     }
   }, items2);
   return stateFromStores;
-};
+}

@@ -14,12 +14,15 @@ function FreezeAfterLayoutPipView() {
       const freezeLock = state.requestFreezeLock({ lockEnabled: true, key: "external-pip" });
     }
   }, []);
-  const effect = React.useEffect(() => () => {
-    if (ref.current) {
-      const state = closure_1_4.getState();
-      const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "external-pip" });
-    }
-  }, []);
+  const effect = React.useEffect(
+    () => () => {
+      if (ref.current) {
+        const state = closure_1_4.getState();
+        const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "external-pip" });
+      }
+    },
+    [],
+  );
   return jsx(ExternalPipViewVideoUnavailableDefault, { onLayout });
 }
 const result = require("set").fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
@@ -38,10 +41,13 @@ export default function ExternalPipView() {
       const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "external-pip" });
     }
   }, []);
-  const effect = React.useEffect(() => () => {
-    state = state.getState();
-    const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "external-pip" });
-  }, []);
+  const effect = React.useEffect(
+    () => () => {
+      state = state.getState();
+      const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "external-pip" });
+    },
+    [],
+  );
   const items = [tmp(obj).externalPipEnabled];
   const effect1 = React.useEffect(() => {
     _undefined(callback[5]).setEnabled(_undefined);
@@ -77,4 +83,4 @@ export default function ExternalPipView() {
     tmp9 = <FreezeAfterLayoutPipView />;
   }
   return tmp9;
-};
+}

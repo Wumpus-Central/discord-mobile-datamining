@@ -88,15 +88,15 @@ class SaveableChannelsStore extends tmp3 {
     obj = {
       CACHE_LOADED_LAZY_NO_CACHE: handleCacheLoadedLazyNoCache,
       CACHE_LOADED_LAZY() {
-            return obj.loadCache();
-          },
+        return obj.loadCache();
+      },
       CHANNEL_DELETE: handleChannelDelete,
       CHANNEL_UPDATES: handleChannelUpdates,
       CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpenSupplemental,
       GUILD_DELETE: handleGuildDelete,
       LOGIN_SUCCESS: handleLoginSuccess,
       THREAD_DELETE: handleThreadDelete,
-      THREAD_UPDATE: handleThreadUpdate
+      THREAD_UPDATE: handleThreadUpdate,
     };
     tmp = new tmp(obj, handleThreadDelete, new.target, tmp);
     // ThrowIfThisInitialized (0x7c)
@@ -168,7 +168,10 @@ prototype["takeSnapshot"] = function takeSnapshot() {
   return obj;
 };
 SaveableChannelsStore["mergeSnapshot"] = function mergeSnapshot(snapshot) {
-  extendedMemoryLru = new prototype(7225).ExtendedMemoryLru(extendedMemoryLru.primaryCapacity, extendedMemoryLru.extendedCapacity);
+  extendedMemoryLru = new prototype(7225).ExtendedMemoryLru(
+    extendedMemoryLru.primaryCapacity,
+    extendedMemoryLru.extendedCapacity,
+  );
   lru = new prototype(7226).Lru(lru.capacity);
   if (lastChannel == null) {
     lastChannel = snapshot.lastChannel;
@@ -280,7 +283,17 @@ SaveableChannelsStore["replaceLru"] = function replaceLru(arg0) {
 SaveableChannelsStore.displayName = "SaveableChannelsStore";
 SaveableChannelsStore.LATEST_SNAPSHOT_VERSION = 1;
 prototype = undefined;
-let obj = { CACHE_LOADED_LAZY_NO_CACHE: handleCacheLoadedLazyNoCache, CACHE_LOADED_LAZY: null, CHANNEL_DELETE: null, CHANNEL_UPDATES: null, CONNECTION_OPEN_SUPPLEMENTAL: null, GUILD_DELETE: null, LOGIN_SUCCESS: null, THREAD_DELETE: null, THREAD_UPDATE: null };
+let obj = {
+  CACHE_LOADED_LAZY_NO_CACHE: handleCacheLoadedLazyNoCache,
+  CACHE_LOADED_LAZY: null,
+  CHANNEL_DELETE: null,
+  CHANNEL_UPDATES: null,
+  CONNECTION_OPEN_SUPPLEMENTAL: null,
+  GUILD_DELETE: null,
+  LOGIN_SUCCESS: null,
+  THREAD_DELETE: null,
+  THREAD_UPDATE: null,
+};
 class CACHE_LOADED_LAZY {
   constructor() {
     return obj.loadCache();
@@ -294,7 +307,22 @@ obj[5] = handleGuildDelete;
 obj[6] = handleLoginSuccess;
 obj[7] = handleThreadDelete;
 obj[8] = handleThreadUpdate;
-prototype = new prototype(obj, 500, tmp, Object, CACHE_LOADED_LAZY, handleChannelDelete, handleChannelUpdates, handleConnectionOpenSupplemental, handleGuildDelete, handleLoginSuccess, handleThreadDelete, SaveableChannelsStore, prototype, new.target);
+prototype = new prototype(
+  obj,
+  500,
+  tmp,
+  Object,
+  CACHE_LOADED_LAZY,
+  handleChannelDelete,
+  handleChannelUpdates,
+  handleConnectionOpenSupplemental,
+  handleGuildDelete,
+  handleLoginSuccess,
+  handleThreadDelete,
+  SaveableChannelsStore,
+  prototype,
+  new.target,
+);
 // ThrowIfThisInitialized (0x7c)
 let result = require("set").fileFinishedImporting("modules/app_database/modules/messages/SaveableChannelsStore.tsx");
 

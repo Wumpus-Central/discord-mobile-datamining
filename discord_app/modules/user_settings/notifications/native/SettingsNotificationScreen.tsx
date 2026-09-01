@@ -34,7 +34,7 @@ function SystemNotificationsSubLabel() {
     result = callback(tmp2(4474).Text, obj);
     const tmp10 = callback;
   }
-  const children = [result, ];
+  const children = [result];
   if (showReactivationPrompt) {
     showReactivationPrompt = obj2.useConfig({ location: "SystemNotificationsSubLabel" }).inHoldout;
   }
@@ -46,7 +46,7 @@ function SystemNotificationsSubLabel() {
     obj2[0] = tmp.cardContent;
     obj3 = { color: null };
     obj3[0] = ThemesDefault.unsafe_rawColors.YELLOW_300;
-    const items1 = [callback(tmp2(7708).CircleErrorIcon, obj3), ];
+    const items1 = [callback(tmp2(7708).CircleErrorIcon, obj3)];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.text;
     const obj5 = { color: "text-default", variant: "text-sm/medium", children: null };
@@ -65,13 +65,20 @@ function SystemNotificationsSubLabel() {
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let obj = { card: null, cardContent: null, text: null };
-obj = { marginBottom: 8, borderColor: ThemesDefault.unsafe_rawColors.YELLOW_300, borderWidth: 1, borderRadius: ThemesDefault.radii.lg };
+obj = {
+  marginBottom: 8,
+  borderColor: ThemesDefault.unsafe_rawColors.YELLOW_300,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.lg,
+};
 obj[0] = obj;
 obj[1] = { flexDirection: "row", alignItems: "center", gap: 8 };
 obj[2] = { flex: 1 };
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
-  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7339).useIsFamilyCenterV3Enabled({ location: "SettingsNotificationsScreen" });
+  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7339).useIsFamilyCenterV3Enabled({
+    location: "SettingsNotificationsScreen",
+  });
   let obj = isFamilyCenterV3Enabled(7339);
   let tmp2 = !apexExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
   importDefault = tmp2;
@@ -82,10 +89,10 @@ const memoResult = importAllResult.memo(() => {
     obj = { label: null, settings: null };
     const intl = isFamilyCenterV3Enabled(closure_1_2[12]).intl;
     obj[0] = intl.string(isFamilyCenterV3Enabled(closure_1_2[12]).t.clE4PU);
-    const items = [, ];
+    const items = [,];
     ({ IN_APP_NOTIFICATIONS: arr[0], IN_APP_MESSAGE_SOUNDS: arr[1] } = closure_1_6);
     obj[1] = items;
-    const items1 = [obj, , , , , , , , , , , , , , , , , , ];
+    const items1 = [obj, , , , , , , , , , , , , , , , , ,];
     obj1 = { label: null, settings: null, subLabel: null };
     const intl2 = isFamilyCenterV3Enabled(closure_1_2[12]).intl;
     obj1[0] = intl2.string(isFamilyCenterV3Enabled(closure_1_2[12]).t["jcHF+3"]);
@@ -100,8 +107,12 @@ const memoResult = importAllResult.memo(() => {
     const obj2 = { label: null, settings: null };
     const intl3 = isFamilyCenterV3Enabled(closure_1_2[12]).intl;
     obj2[0] = intl3.string(isFamilyCenterV3Enabled(closure_1_2[12]).t.a2O7oY);
-    const items5 = [, , ];
-    ({ ANDROID_NOTIFICATION_LIGHTS: arr6[0], ANDROID_NOTIFICATION_VIBRATIONS: arr6[1], ANDROID_NOTIFICATION_SOUNDS: arr6[2] } = closure_1_6);
+    const items5 = [, ,];
+    ({
+      ANDROID_NOTIFICATION_LIGHTS: arr6[0],
+      ANDROID_NOTIFICATION_VIBRATIONS: arr6[1],
+      ANDROID_NOTIFICATION_SOUNDS: arr6[2],
+    } = closure_1_6);
     obj2[1] = items5;
     items1[4] = obj2;
     const obj3 = { settings: items6, subLabel: null };
@@ -140,8 +151,9 @@ const memoResult = importAllResult.memo(() => {
     const obj5 = { label: null, settings: null };
     const intl6 = isFamilyCenterV3Enabled(closure_1_2[12]).intl;
     obj5[0] = intl6.string(isFamilyCenterV3Enabled(closure_1_2[12]).t["0YtG+k"]);
-    const items19 = [, ];
-    ({ SCREEN_DOWNTIME_SCHEDULE_NOTIFICATIONS: arr20[0], SCREEN_DOWNTIME_REMINDER_NOTIFICATIONS: arr20[1] } = closure_1_6);
+    const items19 = [,];
+    ({ SCREEN_DOWNTIME_SCHEDULE_NOTIFICATIONS: arr20[0], SCREEN_DOWNTIME_REMINDER_NOTIFICATIONS: arr20[1] } =
+      closure_1_6);
     obj5[1] = items19;
     items1[18] = obj5;
     obj[0] = items1;
@@ -161,6 +173,8 @@ const memoResult = importAllResult.memo(() => {
   }, items1);
   return callback(_modDef14340, { node });
 });
-let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/notifications/native/SettingsNotificationScreen.tsx",
+);
 
 export default memoResult;

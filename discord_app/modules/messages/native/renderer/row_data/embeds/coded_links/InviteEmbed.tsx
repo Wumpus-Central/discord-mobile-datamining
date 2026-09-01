@@ -8,7 +8,9 @@ import { InviteTypes } from "../../../../../../instant_invite/Constants.tsx";
 
 require = arg1;
 ({ InviteStates: c4, AbortCodes: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/InviteEmbed.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/coded_links/InviteEmbed.tsx",
+);
 
 export const createInviteEmbed = function createInviteEmbed(closure_0, code, closure_2) {
   let obj = invite;
@@ -67,7 +69,10 @@ export const createInviteEmbed = function createInviteEmbed(closure_0, code, clo
                   obj = { guildId: null, location: "mobile_invite_embed" };
                   obj[0] = id;
                   if (tmp29Result5.getVoiceChannelListInviteExperiment(obj).enabled) {
-                    const voiceChannelListInviteEmbed = tmp29(10944).createVoiceChannelListInviteEmbed(invite, closure_2);
+                    const voiceChannelListInviteEmbed = tmp29(10944).createVoiceChannelListInviteEmbed(
+                      invite,
+                      closure_2,
+                    );
                     if (null != voiceChannelListInviteEmbed) {
                       return voiceChannelListInviteEmbed;
                     }

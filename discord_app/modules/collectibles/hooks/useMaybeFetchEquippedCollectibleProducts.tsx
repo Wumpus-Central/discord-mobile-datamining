@@ -42,7 +42,9 @@ function useEquippedCollectibleSkuIds(id, guildId) {
     return items.filter((arg0) => null != arg0);
   }, items2);
 }
-let result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchEquippedCollectibleProducts.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/collectibles/hooks/useMaybeFetchEquippedCollectibleProducts.tsx",
+);
 
 export default function useMaybeFetchEquippedCollectibleProducts(id, guildId) {
   closure_0 = arg2;
@@ -61,5 +63,5 @@ export default function useMaybeFetchEquippedCollectibleProducts(id, guildId) {
       const result = obj.maybeFetchProductsBySkuIds(obj);
     }
   }, items);
-};
+}
 export { useEquippedCollectibleSkuIds };

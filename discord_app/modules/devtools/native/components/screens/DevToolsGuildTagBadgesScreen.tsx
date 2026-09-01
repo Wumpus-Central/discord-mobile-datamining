@@ -20,7 +20,14 @@ let closure_9 = found.map((arg0) => {
   [tmp, tmp2] = arg0;
   return { name, value };
 });
-items = [{ label: "Untinted", primary: "dispatch", secondary: "i" }, ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary) => ({ label: "P" + arg1 + 1, primary: primary.primary, secondary: primary.secondary }))];
+items = [
+  { label: "Untinted", primary: "dispatch", secondary: "i" },
+  ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary) => ({
+    label: "P" + arg1 + 1,
+    primary: primary.primary,
+    secondary: primary.secondary,
+  })),
+];
 let closure_11 = [24, 48, 72];
 createCacheKey = { wrap: null, contentContainer: null, controlRow: null, grid: null, tile: null, badgeBox: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
@@ -31,11 +38,29 @@ createCacheKey[2] = { flexDirection: "row", gap: ThemesDefault.space.PX_8 };
 let obj2 = { flexDirection: "row", gap: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_8 };
 const obj3 = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_8 };
-createCacheKey[4] = { alignItems: "center", justifyContent: "flex-start", gap: ThemesDefault.space.PX_4, width: 96, padding: ThemesDefault.space.PX_8, backgroundColor: "#ffffff", borderRadius: 8 };
+createCacheKey[4] = {
+  alignItems: "center",
+  justifyContent: "flex-start",
+  gap: ThemesDefault.space.PX_4,
+  width: 96,
+  padding: ThemesDefault.space.PX_8,
+  backgroundColor: "#ffffff",
+  borderRadius: 8,
+};
 createCacheKey[5] = { height: 72, alignItems: "center", justifyContent: "center" };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const obj4 = { alignItems: "center", justifyContent: "flex-start", gap: ThemesDefault.space.PX_4, width: 96, padding: ThemesDefault.space.PX_8, backgroundColor: "#ffffff", borderRadius: 8 };
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildTagBadgesScreen.tsx");
+const obj4 = {
+  alignItems: "center",
+  justifyContent: "flex-start",
+  gap: ThemesDefault.space.PX_4,
+  width: 96,
+  padding: ThemesDefault.space.PX_8,
+  backgroundColor: "#ffffff",
+  borderRadius: 8,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsGuildTagBadgesScreen.tsx",
+);
 
 export default function DevToolsGuildTagBadgesScreen() {
   const tmp = callback4();
@@ -54,7 +79,7 @@ export default function DevToolsGuildTagBadgesScreen() {
   items[4] = " \u00B7 Size: ";
   items[5] = table[tmp4[0]];
   items[6] = "px. 2c = two-color badge.";
-  let items1 = [callback2(_require(first[8]).Text, { variant: "text-md/normal", children: items }), , , ];
+  let items1 = [callback2(_require(first[8]).Text, { variant: "text-md/normal", children: items }), , ,];
   obj = {
     horizontal: true,
     showsHorizontalScrollIndicator: false,
@@ -72,8 +97,8 @@ export default function DevToolsGuildTagBadgesScreen() {
           return closure_1_2(closure_0);
         };
         return closure_1_8(lib(first[9]).Button, obj, label.label);
-      })
-    })
+      }),
+    }),
   };
   items1[1] = callback3(closure_4, obj);
   obj1 = {
@@ -90,21 +115,21 @@ export default function DevToolsGuildTagBadgesScreen() {
         return closure_1_2(closure_0);
       };
       return closure_1_8(lib(first[9]).Button, obj, label.label);
-    })
+    }),
   };
   items1[2] = callback3(_require(first[9]).Button, {
     text: "Size: " + table[tmp4[0]] + "px (tap to cycle)",
     size: "sm",
     onPress() {
       return callback((arg0) => (arg0 + 1) % length.length);
-    }
+    },
   });
   const obj2 = {
     text: "Size: " + table[tmp4[0]] + "px (tap to cycle)",
     size: "sm",
     onPress() {
       return callback((arg0) => (arg0 + 1) % length.length);
-    }
+    },
   };
   items1[3] = callback3(closure_5, {
     style: tmp.grid,
@@ -112,10 +137,16 @@ export default function DevToolsGuildTagBadgesScreen() {
       value = value.value;
       let obj = { style: lib.tile, children: null };
       obj = { style: lib.badgeBox, children: closure_1_8(lib(first[10]).GuildBadge, obj) };
-      obj = { badge: value, primaryTintColor: closure_4.primary, secondaryTintColor: closure_4.secondary, width: closure_5, height: closure_5 };
-      items = [closure_1_8(closure_5, obj), ];
+      obj = {
+        badge: value,
+        primaryTintColor: closure_4.primary,
+        secondaryTintColor: closure_4.secondary,
+        width: closure_5,
+        height: closure_5,
+      };
+      items = [closure_1_8(closure_5, obj)];
       obj1 = { variant: "text-xs/normal", color: "text-muted", style: { textAlign: "center" }, children: null };
-      const items1 = [value.name, ];
+      const items1 = [value.name];
       let str = "";
       if (2 === closure_1_6[value]) {
         str = " \u00B7 2c";
@@ -125,9 +156,9 @@ export default function DevToolsGuildTagBadgesScreen() {
       items[1] = closure_1_7(lib(first[8]).Text, obj1);
       obj[1] = items;
       return closure_1_7(closure_5, obj, value);
-    })
+    }),
   });
   obj[1] = items1;
   obj[2] = callback2(_require(first[7]).Stack, obj);
   return callback3(closure_4, obj);
-};
+}

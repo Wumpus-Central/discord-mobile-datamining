@@ -23,8 +23,13 @@ const memoResult = importAllResult.memo((paused) => {
     aPNGPlayerControls.pause();
   }, items);
   obj = { ref, url: layerConfig.src, autoplay: false, style: null, ariaLabel: null, onLoad: null };
-  const items1 = [StyleSheet.absoluteFill, ];
-  obj = { position: "absolute", width, height: animate(paused[4]).calculateProfileEffectHeight(layerConfig, width), opacity: null };
+  const items1 = [StyleSheet.absoluteFill];
+  obj = {
+    position: "absolute",
+    width,
+    height: animate(paused[4]).calculateProfileEffectHeight(layerConfig, width),
+    opacity: null,
+  };
   let num = 0;
   if (animate) {
     num = 1;
@@ -34,8 +39,15 @@ const memoResult = importAllResult.memo((paused) => {
   obj[3] = items1;
   obj[4] = accessibilityLabel;
   obj[5] = onLoad;
-  return jsx(animate(paused[3]).APNGPlayer, { position: "absolute", width, height: animate(paused[4]).calculateProfileEffectHeight(layerConfig, width), opacity: null });
+  return jsx(animate(paused[3]).APNGPlayer, {
+    position: "absolute",
+    width,
+    height: animate(paused[4]).calculateProfileEffectHeight(layerConfig, width),
+    opacity: null,
+  });
 });
-const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx",
+);
 
 export default memoResult;

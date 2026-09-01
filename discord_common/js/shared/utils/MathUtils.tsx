@@ -17,7 +17,9 @@ function roundIfClose(result, arg1) {
 }
 roundIfClose.__closure = {};
 roundIfClose.__workletHash = 15933993422996;
-roundIfClose.__initData = { code: "function roundIfClose_MathUtilsTsx1(num,precision){const decimalPart=num-Math.floor(num);if(decimalPart>=1-precision){return Math.ceil(num);}if(decimalPart<=precision){return Math.floor(num);}return num;}" };
+roundIfClose.__initData = {
+  code: "function roundIfClose_MathUtilsTsx1(num,precision){const decimalPart=num-Math.floor(num);if(decimalPart>=1-precision){return Math.ceil(num);}if(decimalPart<=precision){return Math.floor(num);}return num;}",
+};
 const result = set.fileFinishedImporting("../discord_common/js/shared/utils/MathUtils.tsx");
 
 export { roundIfClose };

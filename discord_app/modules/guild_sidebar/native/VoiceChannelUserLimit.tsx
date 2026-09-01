@@ -13,15 +13,69 @@ require = arg1;
 let obj = { videoIcon: null, wrapper: null, left: null, mid: null, right: null };
 obj = { height: 16, width: 16, marginRight: 4, tintColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_ICON };
 obj[0] = obj;
-createCacheKey = { backgroundColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_BACKGROUND, alignItems: "center", flexDirection: "row", borderRadius: 10, borderWidth: ThemesDefault.modules.mobile.VOICE_CHANNEL_USER_LIMIT_BORDER_WIDTH, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_BACKGROUND,
+  alignItems: "center",
+  flexDirection: "row",
+  borderRadius: 10,
+  borderWidth: ThemesDefault.modules.mobile.VOICE_CHANNEL_USER_LIMIT_BORDER_WIDTH,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  overflow: "hidden",
+};
 obj[1] = createCacheKey;
-obj[2] = { height: 20, flexDirection: "row", paddingLeft: 6, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_BACKGROUND };
-let obj2 = { height: 20, flexDirection: "row", paddingLeft: 6, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_BACKGROUND };
-obj[3] = { borderTopWidth: 20, borderBottomWidth: 0, borderTopColor: "transparent", borderBottomColor: "transparent", borderRightWidth: 6, borderRightColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_ACCENT_BACKGROUND, paddingRight: 2 };
-let obj3 = { borderTopWidth: 20, borderBottomWidth: 0, borderTopColor: "transparent", borderBottomColor: "transparent", borderRightWidth: 6, borderRightColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_ACCENT_BACKGROUND, paddingRight: 2 };
-obj[4] = { height: 20, flexDirection: "row", paddingRight: 6, paddingLeft: 2, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_ACCENT_BACKGROUND };
+obj[2] = {
+  height: 20,
+  flexDirection: "row",
+  paddingLeft: 6,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_BACKGROUND,
+};
+let obj2 = {
+  height: 20,
+  flexDirection: "row",
+  paddingLeft: 6,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_BACKGROUND,
+};
+obj[3] = {
+  borderTopWidth: 20,
+  borderBottomWidth: 0,
+  borderTopColor: "transparent",
+  borderBottomColor: "transparent",
+  borderRightWidth: 6,
+  borderRightColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_ACCENT_BACKGROUND,
+  paddingRight: 2,
+};
+let obj3 = {
+  borderTopWidth: 20,
+  borderBottomWidth: 0,
+  borderTopColor: "transparent",
+  borderBottomColor: "transparent",
+  borderRightWidth: 6,
+  borderRightColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_ACCENT_BACKGROUND,
+  paddingRight: 2,
+};
+obj[4] = {
+  height: 20,
+  flexDirection: "row",
+  paddingRight: 6,
+  paddingLeft: 2,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_ACCENT_BACKGROUND,
+};
 let closure_6 = createCacheKey.createStyles(obj);
-let obj4 = { height: 20, flexDirection: "row", paddingRight: 6, paddingLeft: 2, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_ACCENT_BACKGROUND };
+let obj4 = {
+  height: 20,
+  flexDirection: "row",
+  paddingRight: 6,
+  paddingLeft: 2,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.VOICE_CHANNEL_USER_LIMIT_ACCENT_BACKGROUND,
+};
 const memoResult = importAllResult.memo(function VoiceChannelUserLimit(videoLimit) {
   ({ users, total } = videoLimit);
   const rect = callback2();
@@ -35,11 +89,16 @@ const memoResult = importAllResult.memo(function VoiceChannelUserLimit(videoLimi
     obj[2] = rect.videoIcon;
     tmp3 = callback(Button.Icon, obj);
   }
-  const items = [tmp3, ];
-  obj1 = { variant: "text-xs/medium", lineClamp: 1, color: "voice-channel-user-limit-text", children: users.toString().padStart(2, "0") };
+  const items = [tmp3];
+  obj1 = {
+    variant: "text-xs/medium",
+    lineClamp: 1,
+    color: "voice-channel-user-limit-text",
+    children: users.toString().padStart(2, "0"),
+  };
   items[1] = callback(Text.Text, obj1);
   obj[1] = items;
-  const items1 = [closure_5(View, obj), callback(View, { style: rect.mid }), ];
+  const items1 = [closure_5(View, obj), callback(View, { style: rect.mid })];
   const obj3 = { style: rect.right, children: null };
   const obj4 = { variant: "text-xs/medium", lineClamp: 1, color: "voice-channel-user-limit-text", children: null };
   const obj2 = { style: rect.mid };

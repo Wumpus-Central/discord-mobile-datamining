@@ -24,7 +24,13 @@ function ContextMenuBackdrop(onDismiss) {
   fn.__workletHash = 6862317967896;
   fn.__initData = closure_16;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = { blur: "none", style: animatedStyle, accessibleDismissStyle: callback3().accessibleDismiss, onDismiss: onDismiss.onPress, accessibilityLabel: null };
+  obj = {
+    blur: "none",
+    style: animatedStyle,
+    accessibleDismissStyle: callback3().accessibleDismiss,
+    onDismiss: onDismiss.onPress,
+    accessibilityLabel: null,
+  };
   const tmp = callback3();
   const tmp3 = closure_6;
   const obj4 = visible(500);
@@ -42,25 +48,48 @@ function ContextMenuBackdrop(onDismiss) {
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, titleContainer: null, divider: null };
-createCacheKey = { position: "absolute", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg, minWidth: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_MIN_WIDTH };
+createCacheKey = {
+  position: "absolute",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.lg,
+  minWidth: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_MIN_WIDTH,
+};
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_ITEM_PADDING };
 let obj1 = { padding: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_ITEM_PADDING };
-createCacheKey[2] = { borderBottomWidth: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_DIVIDER_HEIGHT, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[2] = {
+  borderBottomWidth: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_DIVIDER_HEIGHT,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let closure_10 = { code: "function ContextMenuPopoutNativeTsx1(){const{maxHeight,height,CONTEXT_MENU_MIN_WIDTH,positionY,positionX,CONTEXT_MENU_MIN_SCALE,withSpring,interpolate,visible,CONTEXT_MENU_SPRING,transitionState,TransitionStates,runOnJS,cleanUp,onClose}=this.__closure;const visibleHeight=Math.min(maxHeight,height);const halfHeight=visibleHeight/2;const halfWidth=CONTEXT_MENU_MIN_WIDTH/2;const translateYDirection=positionY==='below'?-1:1;const translateXDirection=positionX==='left'?-1:1;const translateY=translateYDirection*halfHeight+CONTEXT_MENU_MIN_SCALE*-translateYDirection*halfHeight;const translateX=translateXDirection*halfWidth+CONTEXT_MENU_MIN_SCALE*-translateXDirection*halfWidth;return{opacity:withSpring(interpolate(visible.get(),[0,1],[0,1]),CONTEXT_MENU_SPRING,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();runOnJS(onClose)();}}),transform:[{translateX:withSpring(interpolate(visible.get(),[0,1],[translateX,0]),CONTEXT_MENU_SPRING)},{translateY:withSpring(interpolate(visible.get(),[0,1],[translateY,0]),CONTEXT_MENU_SPRING)},{scale:withSpring(interpolate(visible.get(),[0,1],[CONTEXT_MENU_MIN_SCALE,1]),CONTEXT_MENU_SPRING)}]};}" };
-let closure_11 = { code: "function ContextMenuPopoutNativeTsx2(finished){const{transitionState,TransitionStates,runOnJS,cleanUp,onClose}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();runOnJS(onClose)();}}" };
-let closure_12 = { code: "function update_ContextMenuPopoutNativeTsx3(e){const{updateContextMenuState,state}=this.__closure;updateContextMenuState(e.absoluteX,e.absoluteY,state);}" };
-let closure_13 = { code: "function ContextMenuPopoutNativeTsx4(){const{state,runOnJS,requestClose}=this.__closure;const{activeIndex:activeIndex}=state;const isDismiss=activeIndex.get()===-1;runOnJS(requestClose)(isDismiss);}" };
+let closure_10 = {
+  code: "function ContextMenuPopoutNativeTsx1(){const{maxHeight,height,CONTEXT_MENU_MIN_WIDTH,positionY,positionX,CONTEXT_MENU_MIN_SCALE,withSpring,interpolate,visible,CONTEXT_MENU_SPRING,transitionState,TransitionStates,runOnJS,cleanUp,onClose}=this.__closure;const visibleHeight=Math.min(maxHeight,height);const halfHeight=visibleHeight/2;const halfWidth=CONTEXT_MENU_MIN_WIDTH/2;const translateYDirection=positionY==='below'?-1:1;const translateXDirection=positionX==='left'?-1:1;const translateY=translateYDirection*halfHeight+CONTEXT_MENU_MIN_SCALE*-translateYDirection*halfHeight;const translateX=translateXDirection*halfWidth+CONTEXT_MENU_MIN_SCALE*-translateXDirection*halfWidth;return{opacity:withSpring(interpolate(visible.get(),[0,1],[0,1]),CONTEXT_MENU_SPRING,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();runOnJS(onClose)();}}),transform:[{translateX:withSpring(interpolate(visible.get(),[0,1],[translateX,0]),CONTEXT_MENU_SPRING)},{translateY:withSpring(interpolate(visible.get(),[0,1],[translateY,0]),CONTEXT_MENU_SPRING)},{scale:withSpring(interpolate(visible.get(),[0,1],[CONTEXT_MENU_MIN_SCALE,1]),CONTEXT_MENU_SPRING)}]};}",
+};
+let closure_11 = {
+  code: "function ContextMenuPopoutNativeTsx2(finished){const{transitionState,TransitionStates,runOnJS,cleanUp,onClose}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();runOnJS(onClose)();}}",
+};
+let closure_12 = {
+  code: "function update_ContextMenuPopoutNativeTsx3(e){const{updateContextMenuState,state}=this.__closure;updateContextMenuState(e.absoluteX,e.absoluteY,state);}",
+};
+let closure_13 = {
+  code: "function ContextMenuPopoutNativeTsx4(){const{state,runOnJS,requestClose}=this.__closure;const{activeIndex:activeIndex}=state;const isDismiss=activeIndex.get()===-1;runOnJS(requestClose)(isDismiss);}",
+};
 let obj3 = { accessibleDismiss: null };
 let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj4.height = "auto";
 obj3[0] = obj4;
 let closure_15 = createCacheKey.createStyles(obj3);
-let closure_16 = { code: "function ContextMenuPopoutNativeTsx5(){const{withSpring,visible,CONTEXT_MENU_SPRING}=this.__closure;return{opacity:withSpring(visible.get(),CONTEXT_MENU_SPRING)};}" };
-let obj2 = { borderBottomWidth: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_DIVIDER_HEIGHT, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+let closure_16 = {
+  code: "function ContextMenuPopoutNativeTsx5(){const{withSpring,visible,CONTEXT_MENU_SPRING}=this.__closure;return{opacity:withSpring(visible.get(),CONTEXT_MENU_SPRING)};}",
+};
+let obj2 = {
+  borderBottomWidth: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_DIVIDER_HEIGHT,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 let result = require("set").fileFinishedImporting("design/components/ContextMenu/native/ContextMenuPopout.native.tsx");
 
 export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
@@ -129,7 +158,12 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
   if ("below" === positionY) {
     str2 = "top";
   }
-  obj = { [str2]: y, [positionX]: x, maxHeight: diff2, maxWidth: size.width - items(state[6]).CONTEXT_MENU_EDGE_OFFSET - x };
+  obj = {
+    [str2]: y,
+    [positionX]: x,
+    maxHeight: diff2,
+    maxWidth: size.width - items(state[6]).CONTEXT_MENU_EDGE_OFFSET - x,
+  };
   tmpResult = tmp(tmp2[7]);
   class R {
     constructor() {
@@ -161,27 +195,38 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
           const obj2 = closure_1_0(closure_1_2[7]);
         }
       };
-      obj = { transitionState: items, TransitionStates: tmp2(tmp3[8]).TransitionStates, runOnJS: tmp2(tmp3[7]).runOnJS, cleanUp: title, onClose };
+      obj = {
+        transitionState: items,
+        TransitionStates: tmp2(tmp3[8]).TransitionStates,
+        runOnJS: tmp2(tmp3[7]).runOnJS,
+        cleanUp: title,
+        onClose,
+      };
       fn.__closure = obj;
       fn.__workletHash = 4025068986009;
       fn.__initData = closure_11;
-      obj[0] = tmp2Result.withSpring(interpolateResult, tmp2(tmp3[6]).CONTEXT_MENU_SPRING, "respect-motion-settings", fn);
+      obj[0] = tmp2Result.withSpring(
+        interpolateResult,
+        tmp2(tmp3[6]).CONTEXT_MENU_SPRING,
+        "respect-motion-settings",
+        fn,
+      );
       obj1 = { translateX: null };
       tmp2Result2 = tmp2(tmp3[12]);
       tmp2Result3 = tmp2(tmp3[7]);
       value = closure_8.get();
-      items = [, ];
+      items = [,];
       items[0] = num2 * result1 + tmp2(tmp3[6]).CONTEXT_MENU_MIN_SCALE * -num2 * result1;
       items[1] = 0;
       interpolateResult1 = tmp2Result3.interpolate(value, [0, 1], items);
       obj1[0] = tmp2Result2.withSpring(interpolateResult1, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
-      items1 = [, , ];
+      items1 = [, ,];
       items1[0] = obj1;
       obj2 = { translateY: null };
       tmp2Result4 = tmp2(tmp3[12]);
       tmp2Result5 = tmp2(tmp3[7]);
       value1 = closure_8.get();
-      items2 = [, ];
+      items2 = [,];
       items2[0] = num * result + tmp2(tmp3[6]).CONTEXT_MENU_MIN_SCALE * -num * result;
       items2[1] = 0;
       interpolateResult2 = tmp2Result5.interpolate(value1, [0, 1], items2);
@@ -191,7 +236,7 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
       tmp2Result6 = tmp2(tmp3[12]);
       tmp2Result7 = tmp2(tmp3[7]);
       value2 = closure_8.get();
-      items3 = [, ];
+      items3 = [,];
       items3[0] = tmp2(tmp3[6]).CONTEXT_MENU_MIN_SCALE;
       items3[1] = 1;
       interpolateResult3 = tmp2Result7.interpolate(value2, [0, 1], items3);
@@ -201,7 +246,23 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
       return obj;
     }
   }
-  obj1 = { maxHeight: diff2, height, CONTEXT_MENU_MIN_WIDTH: tmp(tmp2[6]).CONTEXT_MENU_MIN_WIDTH, positionY, positionX, CONTEXT_MENU_MIN_SCALE: tmp(tmp2[6]).CONTEXT_MENU_MIN_SCALE, withSpring: tmp(tmp2[12]).withSpring, interpolate: tmp(tmp2[7]).interpolate, visible: sharedValue, CONTEXT_MENU_SPRING: tmp(tmp2[6]).CONTEXT_MENU_SPRING, transitionState, TransitionStates: tmp(tmp2[8]).TransitionStates, runOnJS: tmp(tmp2[7]).runOnJS, cleanUp, onClose };
+  obj1 = {
+    maxHeight: diff2,
+    height,
+    CONTEXT_MENU_MIN_WIDTH: tmp(tmp2[6]).CONTEXT_MENU_MIN_WIDTH,
+    positionY,
+    positionX,
+    CONTEXT_MENU_MIN_SCALE: tmp(tmp2[6]).CONTEXT_MENU_MIN_SCALE,
+    withSpring: tmp(tmp2[12]).withSpring,
+    interpolate: tmp(tmp2[7]).interpolate,
+    visible: sharedValue,
+    CONTEXT_MENU_SPRING: tmp(tmp2[6]).CONTEXT_MENU_SPRING,
+    transitionState,
+    TransitionStates: tmp(tmp2[8]).TransitionStates,
+    runOnJS: tmp(tmp2[7]).runOnJS,
+    cleanUp,
+    onClose,
+  };
   R.__closure = obj1;
   R.__workletHash = 16778623591634;
   R.__initData = first;
@@ -210,7 +271,11 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
   let items2 = [diff2];
   const memo = obj1.useMemo(() => {
     function update(absoluteX) {
-      const result = closure_1_0(closure_1_2[13]).updateContextMenuState(absoluteX.absoluteX, absoluteX.absoluteY, closure_5);
+      const result = closure_1_0(closure_1_2[13]).updateContextMenuState(
+        absoluteX.absoluteX,
+        absoluteX.absoluteY,
+        closure_5,
+      );
     }
     let obj = { updateContextMenuState: items(state[13]).updateContextMenuState, state };
     update.__closure = obj;
@@ -243,16 +308,28 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
   callback2 = obj1.useCallback(() => {
     requestClose(false);
   }, items4);
-  const items5 = [requestClose(ContextMenuBackdrop, { onPress: callback1, visible: sharedValue }), ];
+  const items5 = [requestClose(ContextMenuBackdrop, { onPress: callback1, visible: sharedValue })];
   let obj2 = { gesture: memo, children: null };
-  const obj3 = { onLayout: callback, bounces: false, style: items6, keyboardShouldPersistTaps: str, accessibilityRole: "list", children: null };
+  const obj3 = {
+    onLayout: callback,
+    bounces: false,
+    style: items6,
+    keyboardShouldPersistTaps: str,
+    accessibilityRole: "list",
+    children: null,
+  };
   items6 = [tmp5.container, obj, animatedStyle];
   let tmp20Result = null;
   if (null != title) {
     const obj4 = { children: null };
     const obj5 = { style: null, children: null };
     obj5[0] = tmp5.titleContainer;
-    const obj6 = { variant: "text-md/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+    const obj6 = {
+      variant: "text-md/bold",
+      color: "mobile-text-heading-primary",
+      accessibilityRole: "header",
+      children: null,
+    };
     obj6[3] = title;
     obj5[1] = tmp22(tmp(tmp2[15]).Text, obj6);
     const items7 = [tmp22(state, obj5), tmp22(ContextMenuDivider, {})];
@@ -260,13 +337,26 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
     tmp20Result = tmp20(tmp21, obj4);
   }
   const obj7 = { children: null };
-  const items8 = [tmp20Result, ];
+  const items8 = [tmp20Result];
   dividerIndexes = menu.dividerIndexes;
   items8[1] = items.map((arg0, index) => {
     ({ label, action: items } = arg0);
     ({ iconSource, IconComponent, trailingIndicator, variant, accessibilityRole } = arg0);
     const diff = items.length - 1;
-    let obj = { index, label, start: null, end: null, lastInSection: null, iconSource: null, IconComponent: null, trailingIndicator: null, state: null, onPress: null, variant: null, accessibilityRole: null };
+    let obj = {
+      index,
+      label,
+      start: null,
+      end: null,
+      lastInSection: null,
+      iconSource: null,
+      IconComponent: null,
+      trailingIndicator: null,
+      state: null,
+      onPress: null,
+      variant: null,
+      accessibilityRole: null,
+    };
     let tmp3 = 0 === index;
     if (tmp3) {
       tmp3 = null == title;

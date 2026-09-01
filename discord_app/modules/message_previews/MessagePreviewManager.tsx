@@ -27,222 +27,227 @@ class MessagePreviewManager extends tmp3 {
     applyArgumentsResult.localFetching = set;
     applyArgumentsResult.actions = {
       CONNECTION_OPEN_SUPPLEMENTAL() {
-            return applyArgumentsResult.handleConnectionOpenSupplemental();
-          },
+        return applyArgumentsResult.handleConnectionOpenSupplemental();
+      },
       CONNECTION_RESUMED() {
-            return applyArgumentsResult.handleConnectionResumed();
-          },
+        return applyArgumentsResult.handleConnectionResumed();
+      },
       GUILD_CREATE(arg0) {
-            return applyArgumentsResult.handleGuildCreate(arg0);
-          },
+        return applyArgumentsResult.handleGuildCreate(arg0);
+      },
       GUILD_DELETE(arg0) {
-            return applyArgumentsResult.handleGuildDelete(arg0);
-          },
+        return applyArgumentsResult.handleGuildDelete(arg0);
+      },
       LOAD_MESSAGES_SUCCESS(channelId) {
-            return applyArgumentsResult.handleMessagesLoaded(channelId);
-          },
+        return applyArgumentsResult.handleMessagesLoaded(channelId);
+      },
       LOCAL_MESSAGES_LOADED(channelId) {
-            return applyArgumentsResult.handleMessagesLoaded(channelId);
-          },
+        return applyArgumentsResult.handleMessagesLoaded(channelId);
+      },
       LOGOUT() {
-            return applyArgumentsResult.handleLogout();
-          },
+        return applyArgumentsResult.handleLogout();
+      },
       MESSAGE_CREATE(arg0) {
-            return applyArgumentsResult.handleMessageCreate(arg0);
-          },
+        return applyArgumentsResult.handleMessageCreate(arg0);
+      },
       MESSAGE_DELETE(arg0) {
-            return applyArgumentsResult.handleMessageDelete(arg0);
-          },
+        return applyArgumentsResult.handleMessageDelete(arg0);
+      },
       MESSAGE_UPDATE(arg0) {
-            return applyArgumentsResult.handleMessageUpdate(arg0);
-          },
+        return applyArgumentsResult.handleMessageUpdate(arg0);
+      },
       THREAD_LIST_SYNC(arg0) {
-            return applyArgumentsResult.handleThreadListSync(arg0);
-          }
+        return applyArgumentsResult.handleThreadListSync(arg0);
+      },
     };
     obj = require("apply");
     closure_0 = applyArgumentsResult;
-    applyArgumentsResult.remoteTick = obj.debounce(closure_4(() => {
-      closure_0 = arg0;
-      c7 = 0;
-      c8 = 0;
-      c6 = 0;
-      const iter = (function*() {
-        if (c8 === 2) {
-          c8 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          while (true) {
-            let num = 2;
-            c8 = 2;
-            let tmp4 = c7;
-            if (0 === c7) {
-              if (arg0 === 1) {
-                let num11 = 3;
-                c8 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                let num10 = 3;
-                c8 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                c4 = tmp;
-                c3 = tmp4;
-                let num8;
-                if (num8 === undefined) {
-                  num8 = 0;
-                }
-                let tmp25;
-                let remote;
-                c3 = undefined;
-                c4 = undefined;
-                c7 = 1;
-                let num9 = 1;
-                c8 = 1;
-                return { value: "PX_16", done: null };
-              }
+    applyArgumentsResult.remoteTick = obj.debounce(
+      closure_4(() => {
+        closure_0 = arg0;
+        c7 = 0;
+        c8 = 0;
+        c6 = 0;
+        const iter = (function* () {
+          if (c8 === 2) {
+            c8 = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
             } else {
-              if (1 === tmp4) {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            while (true) {
+              let num = 2;
+              c8 = 2;
+              let tmp4 = c7;
+              if (0 === c7) {
                 if (arg0 === 1) {
-                  let num7 = 3;
+                  let num11 = 3;
                   c8 = 3;
                   throw arg1;
                 } else if (arg0 === 2) {
-                  let num6 = 3;
+                  let num10 = 3;
                   c8 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1[0] = arg1;
-                  return obj1;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
                 } else {
-                  let tmp47 = c4;
-                  let tmp48 = closure_1_5;
-                  let tmp49 = c4;
-                  let tmp50 = closure_0;
-                  if (closure_1_5.isConnected()) {
-                    if (!tmp50.remoteTicking) {
-                      let tmp21 = c3;
-                      let tmp22 = closure_0;
-                      if (closure_0 <= 5) {
-                        let tmp51 = c4;
-                        let tmp52 = closure_0;
-                        closure_0.tickQueued = false;
-                        let tmp53 = c4;
-                        c6 = 1;
-                        let tmp54 = closure_0;
-                        closure_0.remoteTicking = true;
-                        let tmp55 = closure_0;
-                        remote = closure_0.remote;
-                        let tmp56 = remote;
-                        tmp25 = remote[Symbol.iterator]();
-                        let tmp23 = remote;
-                        let tmp24 = tmp25;
-                        if (tmp25 === undefined) {
-                          let tmp37 = c4;
-                          let tmp38 = closure_0;
-                          let cleanupResult = closure_0.cleanup();
-                          let tmp40 = closure_0;
-                          closure_0.remoteTicking = false;
-                          c6 = 0;
-                        } else {
-                          let tmp57 = c3;
-                          let tmp58 = c4;
-                          c6 = 2;
-                          let tmp59 = callback;
-                          let tmp60 = tmp25;
-                          dependencyMap = callback(tmp25, 2);
-                          let tmp61 = dependencyMap;
-                          callback = 32;
-                          let tmp62 = dependencyMap;
-                          closure_4 = 5;
-                          let tmp63 = callback;
-                          if (null == callback) {
-                            let tmp32 = c3;
-                            let tmp33 = c4;
-                            let tmp34 = closure_0;
-                            let tmp35 = closure_4;
-                            let dms = closure_0.fetchDms(closure_4);
+                  c4 = tmp;
+                  c3 = tmp4;
+                  let num8;
+                  if (num8 === undefined) {
+                    num8 = 0;
+                  }
+                  let tmp25;
+                  let remote;
+                  c3 = undefined;
+                  c4 = undefined;
+                  c7 = 1;
+                  let num9 = 1;
+                  c8 = 1;
+                  return { value: "PX_16", done: null };
+                }
+              } else {
+                if (1 === tmp4) {
+                  if (arg0 === 1) {
+                    let num7 = 3;
+                    c8 = 3;
+                    throw arg1;
+                  } else if (arg0 === 2) {
+                    let num6 = 3;
+                    c8 = 3;
+                    obj1 = { value: null, done: true };
+                    obj1[0] = arg1;
+                    return obj1;
+                  } else {
+                    let tmp47 = c4;
+                    let tmp48 = closure_1_5;
+                    let tmp49 = c4;
+                    let tmp50 = closure_0;
+                    if (closure_1_5.isConnected()) {
+                      if (!tmp50.remoteTicking) {
+                        let tmp21 = c3;
+                        let tmp22 = closure_0;
+                        if (closure_0 <= 5) {
+                          let tmp51 = c4;
+                          let tmp52 = closure_0;
+                          closure_0.tickQueued = false;
+                          let tmp53 = c4;
+                          c6 = 1;
+                          let tmp54 = closure_0;
+                          closure_0.remoteTicking = true;
+                          let tmp55 = closure_0;
+                          remote = closure_0.remote;
+                          let tmp56 = remote;
+                          tmp25 = remote[Symbol.iterator]();
+                          let tmp23 = remote;
+                          let tmp24 = tmp25;
+                          if (tmp25 === undefined) {
+                            let tmp37 = c4;
+                            let tmp38 = closure_0;
+                            let cleanupResult = closure_0.cleanup();
+                            let tmp40 = closure_0;
+                            closure_0.remoteTicking = false;
+                            c6 = 0;
                           } else {
-                            let tmp26 = c3;
-                            let tmp27 = c4;
-                            let tmp28 = closure_0;
-                            let tmp29 = callback;
-                            let tmp30 = closure_4;
-                            let guilds = closure_0.fetchGuilds(callback, closure_4);
+                            let tmp57 = c3;
+                            let tmp58 = c4;
+                            c6 = 2;
+                            let tmp59 = callback;
+                            let tmp60 = tmp25;
+                            dependencyMap = callback(tmp25, 2);
+                            let tmp61 = dependencyMap;
+                            callback = 32;
+                            let tmp62 = dependencyMap;
+                            closure_4 = 5;
+                            let tmp63 = callback;
+                            if (null == callback) {
+                              let tmp32 = c3;
+                              let tmp33 = c4;
+                              let tmp34 = closure_0;
+                              let tmp35 = closure_4;
+                              let dms = closure_0.fetchDms(closure_4);
+                            } else {
+                              let tmp26 = c3;
+                              let tmp27 = c4;
+                              let tmp28 = closure_0;
+                              let tmp29 = callback;
+                              let tmp30 = closure_4;
+                              let guilds = closure_0.fetchGuilds(callback, closure_4);
+                            }
+                            c7 = 4;
+                            let num4 = 1;
+                            c8 = 1;
                           }
-                          c7 = 4;
-                          let num4 = 1;
-                          c8 = 1;
                         }
                       }
+                    } else {
+                      tmp50.tickQueued = true;
                     }
-                  } else {
-                    tmp50.tickQueued = true;
                   }
+                } else if (2 === tmp4) {
+                  let tmp9 = c3;
+                  let tmp10 = c4;
+                  let tmp11 = closure_5;
+                  let tmp12 = closure_5;
+                  c6 = 0;
+                  let tmp13 = closure_1_11;
+                  let tmp14 = num8;
+                  let tmp15 = closure_5;
+                  let _HermesInternal = HermesInternal;
+                  let str = "couldn't fetch message previews (attempt: ";
+                  let str2 = ", error: ";
+                  let str3 = ")";
+                  let logResult = closure_1_11.log(
+                    "couldn't fetch message previews (attempt: " + num8 + ", error: " + closure_5 + ")",
+                  );
+                  let tmp17 = num8;
+                  num8.remoteTicking = false;
+                  let tmp18 = num8;
+                  let tmp19 = num8;
+                  let remoteTickResult = num8.remoteTick(num8 + 1);
+                } else if (3 === tmp4) {
+                  let tmp6 = closure_5;
+                  let tmp7 = closure_5;
+                  c6 = 1;
+                  let tmp8 = tmp25;
+                  tmp25.return();
+                  throw closure_5;
+                } else if (arg0 === 1) {
+                  let num3 = 3;
+                  c8 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c6 = 1;
+                  let tmp5 = tmp25;
+                  tmp25.return();
+                  c6 = 0;
+                  let num2 = 3;
+                  c8 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  c6 = 1;
                 }
-              } else if (2 === tmp4) {
-                let tmp9 = c3;
-                let tmp10 = c4;
-                let tmp11 = closure_5;
-                let tmp12 = closure_5;
-                c6 = 0;
-                let tmp13 = closure_1_11;
-                let tmp14 = num8;
-                let tmp15 = closure_5;
-                let _HermesInternal = HermesInternal;
-                let str = "couldn't fetch message previews (attempt: ";
-                let str2 = ", error: ";
-                let str3 = ")";
-                let logResult = closure_1_11.log("couldn't fetch message previews (attempt: " + num8 + ", error: " + closure_5 + ")");
-                let tmp17 = num8;
-                num8.remoteTicking = false;
-                let tmp18 = num8;
-                let tmp19 = num8;
-                let remoteTickResult = num8.remoteTick(num8 + 1);
-              } else if (3 === tmp4) {
-                let tmp6 = closure_5;
-                let tmp7 = closure_5;
-                c6 = 1;
-                let tmp8 = tmp25;
-                tmp25.return();
-                throw closure_5;
-              } else if (arg0 === 1) {
-                let num3 = 3;
+                let num5 = 3;
                 c8 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c6 = 1;
-                let tmp5 = tmp25;
-                tmp25.return();
-                c6 = 0;
-                let num2 = 3;
-                c8 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                c6 = 1;
               }
-              let num5 = 3;
-              c8 = 3;
             }
           }
-        }
-      })();
-      iter.next();
-      return iter;
-    }), 100);
+        })();
+        iter.next();
+        return iter;
+      }),
+      100,
+    );
     return applyArgumentsResult;
   }
 }
@@ -270,7 +275,7 @@ prototype["addWant"] = function addWant(arg0) {
 prototype["fetchLocal"] = function fetchLocal(guild_id) {
   closure_0 = guild_id;
   const self = this;
-  return callback2(function*() {
+  return callback2(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -390,7 +395,13 @@ prototype["fetchGuilds"] = function fetchGuilds(closure_3, closure_4) {
     let resolved = Promise.resolve();
   } else {
     resolved = closure_4.try(nextWantsResult, () => {
-      closure_1_11.verbose("fetching guild previews (via: gateway, guild_id: " + closure_0 + ", channel_ids: " + nextWantsResult.join(", ") + ")");
+      closure_1_11.verbose(
+        "fetching guild previews (via: gateway, guild_id: " +
+          closure_0 +
+          ", channel_ids: " +
+          nextWantsResult.join(", ") +
+          ")",
+      );
       const socket = closure_1_5.getSocket();
       const lastMessages = socket.requestLastMessages(closure_0, nextWantsResult);
       return Promise.resolve();
@@ -404,73 +415,76 @@ prototype["fetchDms"] = function fetchDms(closure_4) {
   if (0 === nextWantsResult.length) {
     let resolved = Promise.resolve();
   } else {
-    resolved = closure_4.try(nextWantsResult, callback2(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+    resolved = closure_4.try(
+      nextWantsResult,
+      callback2(function* () {
+        if (c3 === 2) {
+          c3 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
+          try {
+            c3 = 2;
+            if (0 === dependencyMap) {
+              if (arg0 === 1) {
+                c3 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c3 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                closure_1 = tmp5;
+                let body = tmp2;
+                body = undefined;
+                const _HermesInternal = HermesInternal;
+                closure_1_11.verbose("fetching dm previews (via: http, channel_ids: " + closure_1_0.join(", ") + ")");
+                const HTTP = closure_1_0(530).HTTP;
+                obj1 = { url: null, body: null, rejectWithError: false };
+                obj1[0] = closure_1_10.MESSAGE_PREVIEWS;
+                const obj2 = { channel_ids: null };
+                obj2[0] = closure_1_0;
+                obj1[1] = obj2;
+                dependencyMap = 1;
+                c3 = 1;
+                const obj3 = { value: null, done: false };
+                obj3[0] = HTTP.post(obj1);
+                return obj3;
+              }
+            } else if (arg0 === 1) {
               c3 = 3;
               throw arg1;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj4 = { value: null, done: true };
+              obj4[0] = arg1;
+              return obj4;
             } else {
-              closure_1 = tmp5;
-              let body = tmp2;
-              body = undefined;
-              const _HermesInternal = HermesInternal;
-              closure_1_11.verbose("fetching dm previews (via: http, channel_ids: " + closure_1_0.join(", ") + ")");
-              const HTTP = closure_1_0(530).HTTP;
-              obj1 = { url: null, body: null, rejectWithError: false };
-              obj1[0] = closure_1_10.MESSAGE_PREVIEWS;
-              const obj2 = { channel_ids: null };
-              obj2[0] = closure_1_0;
-              obj1[1] = obj2;
-              dependencyMap = 1;
-              c3 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
+              body = arg1.body;
+              obj = closure_1_1(709);
+              const obj5 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: null };
+              obj5[2] = body;
+              obj.dispatch(obj5);
+              c3 = 3;
+              return { value: "HermesInternal", done: null };
             }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            body = arg1.body;
-            obj = closure_1_1(709);
-            const obj5 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: null };
-            obj5[2] = body;
-            obj.dispatch(obj5);
-            c3 = 3;
-            return { value: "HermesInternal", done: null };
+          } catch (tmp12) {
+            c3 = tmp;
+            throw tmp12;
           }
-        } catch (tmp12) {
-          c3 = tmp;
-          throw tmp12;
         }
-      }
-    }));
+      }),
+    );
   }
   return resolved;
 };

@@ -12,7 +12,7 @@ function _fetchApexExperimentsMetadata() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       dependencyMap = tmp3;
       c4 = 1;
       const HTTP = callback(closure_1_2[4]).HTTP;
@@ -34,7 +34,14 @@ function _fetchApexExperimentsMetadata() {
         const experiments = body.body.experiments;
         callback = experiments.map((id) => {
           const variants = id.variants;
-          return { id: id.id, name: id.name, title: id.title, revision: id.revision, unitType: id.unit_type, variants: variants.map((id) => ({ id: id.id, label: id.label, type: id.type })) };
+          return {
+            id: id.id,
+            name: id.name,
+            title: id.title,
+            revision: id.revision,
+            unitType: id.unit_type,
+            variants: variants.map((id) => ({ id: id.id, label: id.label, type: id.type })),
+          };
         });
         const obj = callback2(709);
         const obj4 = { type: "APEX_EXPERIMENTS_METADATA_FETCH_SUCCESS", experiments: null };
@@ -62,7 +69,7 @@ function _fetchUserExperimentAssignments() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (fetching === 2) {
         fetching = 3;
         HermesBuiltin.throwTypeError();
@@ -176,7 +183,7 @@ function _fetchInstallationExperiments() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -261,7 +268,11 @@ function _fetchInstallationExperiments() {
                     obj[1] = installation;
                     obj.dispatch(obj);
                   }
-                  obj = { type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: callback(installation[7]).INSTALLATION_UNIT_ID, experiments: closure_3 };
+                  obj = {
+                    type: "APEX_EXPERIMENTS_FETCH_SUCCESS",
+                    unitId: callback(installation[7]).INSTALLATION_UNIT_ID,
+                    experiments: closure_3,
+                  };
                   body(installation[5]).dispatch(obj);
                 });
               } else {

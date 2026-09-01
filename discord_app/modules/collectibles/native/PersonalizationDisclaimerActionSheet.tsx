@@ -19,7 +19,9 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_8, alignSelf: "center", textAlign: "center" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { paddingVertical: ThemesDefault.space.PX_8, alignSelf: "center", textAlign: "center" };
-const result = require("set").fileFinishedImporting("modules/collectibles/native/PersonalizationDisclaimerActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/PersonalizationDisclaimerActionSheet.tsx",
+);
 
 export default function PersonalizationDisclaimerActionSheet() {
   const tmp = callback3();
@@ -28,17 +30,23 @@ export default function PersonalizationDisclaimerActionSheet() {
     obj.openURL(callback(1995).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
   }, []);
   let obj = { contentStyles: tmp.container, children: null };
-  obj = { variant: "heading-md/medium", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.header, children: null };
+  obj = {
+    variant: "heading-md/medium",
+    color: "mobile-text-heading-primary",
+    accessibilityRole: "header",
+    style: tmp.header,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t.euks4U);
-  const items = [callback(Text.Text, obj), ];
+  const items = [callback(Text.Text, obj)];
   obj = { children: null };
   obj1 = { size: "lg", text: null, onPress: null, icon: null, iconPosition: "end" };
   const intl2 = getSystemLocale.intl;
   obj1[1] = intl2.string(getSystemLocale.t.hvVgAZ);
   obj1[2] = callback;
   obj1[3] = callback(LinkExternalSmallIcon.LinkExternalSmallIcon, { color: ThemesDefault.colors.WHITE });
-  const items1 = [callback(Button.Button, obj1), ];
+  const items1 = [callback(Button.Button, obj1)];
   const obj3 = { variant: "tertiary", size: "lg", text: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj3[2] = intl3.string(getSystemLocale.t.WAI6xu);
@@ -50,4 +58,4 @@ export default function PersonalizationDisclaimerActionSheet() {
   items[1] = callback2(ButtonGroup.ButtonGroup, obj);
   obj[1] = items;
   return callback2(Background.BottomSheet, obj);
-};
+}

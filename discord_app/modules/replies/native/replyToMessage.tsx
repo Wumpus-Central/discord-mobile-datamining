@@ -20,7 +20,14 @@ export default function longPressMessageHandleReply(arg0) {
   editingMessage = editingMessage.getEditingMessage(channel.id);
   if (null != editingMessage) {
     const currentUser = authStore.getCurrentUser();
-    let obj = { message_id: null, channel_id: null, guild_id: null, context_action: "edit", reason: null, is_own_message: null };
+    let obj = {
+      message_id: null,
+      channel_id: null,
+      guild_id: null,
+      context_action: "edit",
+      reason: null,
+      is_own_message: null,
+    };
     obj[0] = message.id;
     ({ id: obj11[1], guild_id: obj11[2] } = channel);
     const obj10 = expandEventPropertiesDefault;
@@ -38,7 +45,14 @@ export default function longPressMessageHandleReply(arg0) {
         if (pendingReply.message.id === message.id) {
           const currentUser1 = authStore.getCurrentUser();
           let tmp3Result = tmp3(698);
-          obj = { message_id: null, channel_id: null, guild_id: null, context_action: "reply", reason: "swipe_reply_undo", is_own_message: null };
+          obj = {
+            message_id: null,
+            channel_id: null,
+            guild_id: null,
+            context_action: "reply",
+            reason: "swipe_reply_undo",
+            is_own_message: null,
+          };
           obj[0] = message.id;
           ({ id: obj8[1], guild_id: obj8[2] } = channel);
           let tmp18 = null != currentUser1;
@@ -85,11 +99,16 @@ export default function longPressMessageHandleReply(arg0) {
     tmp13 = message.author.id !== currentUser2.id;
   }
   const obj5 = collectGuildAnalyticsMetadata;
-  const pendingReply1 = createPendingReply.createPendingReply({ message, channel, shouldMention: tmp13, source: actionSource });
+  const pendingReply1 = createPendingReply.createPendingReply({
+    message,
+    channel,
+    shouldMention: tmp13,
+    source: actionSource,
+  });
   if (chatInputRef != null) {
     const current3 = chatInputRef.current;
     if (current3 != null) {
       current3.openSystemKeyboard();
     }
   }
-};
+}

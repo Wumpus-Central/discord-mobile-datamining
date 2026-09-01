@@ -29,13 +29,13 @@ let obj = {
   onTapMention: null,
   onTapTimestamp: null,
   onTapInlineCode: null,
-  onTapEmoji: null
+  onTapEmoji: null,
 };
 let closure_5 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
-  const iter = (function*(arg0) {
+  const iter = (function* (arg0) {
     let callback = tmp2;
     attachmentUrl = attachmentUrl.nativeEvent.data.attachmentUrl;
     yield "PX_16";
@@ -76,7 +76,7 @@ let closure_5 = importDefaultResult((arg0) => {
   iter.next();
   return iter;
 });
-obj[1] = function() {
+obj[1] = function () {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -90,7 +90,7 @@ let closure_4 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
-  const iter = (function*(arg0) {
+  const iter = (function* (arg0) {
     let callback = tmp2;
     attachmentUrl = attachmentUrl.nativeEvent.data.attachmentUrl;
     yield "PX_16";
@@ -130,7 +130,7 @@ let closure_4 = importDefaultResult((arg0) => {
   iter.next();
   return iter;
 });
-obj[2] = function() {
+obj[2] = function () {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -218,7 +218,9 @@ obj[5] = function onTapInlineCode(nativeEvent) {
   }
 };
 obj[6] = function onTapEmoji(emojiNode) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9171, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9171, dependencyMap.paths), "MessageEmojiActionSheet", {
+    emojiNode: emojiNode.nativeEvent.node,
+  });
 };
 let result = require("set").fileFinishedImporting("components_native/chat/contentHandlers.tsx");
 

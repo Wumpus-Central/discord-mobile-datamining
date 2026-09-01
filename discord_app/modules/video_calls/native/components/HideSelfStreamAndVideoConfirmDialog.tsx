@@ -9,8 +9,15 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, ctaLink: { paddingTop: 8, textAlign: "center", textDecorationLine: "underline" } });
-let result = require("set").fileFinishedImporting("modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx");
+let closure_7 = createCacheKey.createStyles({
+  wrapper: { padding: 16 },
+  body: { paddingTop: 16 },
+  description: { lineHeight: 18 },
+  ctaLink: { paddingTop: 8, textAlign: "center", textDecorationLine: "underline" },
+});
+let result = require("set").fileFinishedImporting(
+  "modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx",
+);
 
 export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   ({ type, onConfirm } = arg0);
@@ -48,18 +55,20 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   obj.onConfirm = onConfirm;
   obj = { style: tmp2.body, children: null };
   obj = { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 };
-  const items = [closure_5(tmp6(4474).Text, obj), ];
+  const items = [closure_5(tmp6(4474).Text, obj)];
   obj1 = {
     accessibilityRole: "link",
     style: items1,
     onPress() {
-      const result = closure_1_1(closure_1_2[8]).updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: true });
+      const result = closure_1_1(closure_1_2[8]).updatedUnsyncedSettings({
+        disableHideSelfStreamAndVideoConfirmationAlert: true,
+      });
       onConfirm();
     },
     variant: "text-sm/medium",
-    children: null
+    children: null,
   };
-  items1 = [, ];
+  items1 = [,];
   ({ ctaLink: arr2[0], description: arr2[1] } = tmp2);
   const intl7 = tmp6(1236).intl;
   obj1[4] = intl7.string(tmp6(1236).t["JdIQ/Y"]);
@@ -67,4 +76,4 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   obj[1] = items;
   obj.children = callback(View, obj);
   return closure_5(componentDidMountDefault, obj);
-};
+}

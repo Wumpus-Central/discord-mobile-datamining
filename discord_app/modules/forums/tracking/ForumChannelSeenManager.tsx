@@ -13,7 +13,13 @@ const prototype = function ForumChannelSeenManager(channelId) {
   // ThrowIfThisInitialized (0x7c)
   _require = tmp;
   tmp.createFlushSeenItemsFunction = function createFlushSeenItemsFunction(IMMEDIATE) {
-    obj = { guildId: obj.guildId, channelId: obj.channelId, sessionId: obj.sessionId, trackedFeedItems: obj.trackedFeedItems, isForcedFlush: null != IMMEDIATE };
+    obj = {
+      guildId: obj.guildId,
+      channelId: obj.channelId,
+      sessionId: obj.sessionId,
+      trackedFeedItems: obj.trackedFeedItems,
+      isForcedFlush: null != IMMEDIATE,
+    };
     return () => {
       (function flushSeenItems(trackedFeedItems) {
         trackedFeedItems = trackedFeedItems.trackedFeedItems;
@@ -53,8 +59,7 @@ const prototype = function ForumChannelSeenManager(channelId) {
   tmp.sessionId = require("TrackingUtils.tsx").getForumChannelSessionId(channelId);
   return tmp;
 }.prototype;
-class prototype extends AnalyticsFeedItemSeenManager {
-}
+class prototype extends AnalyticsFeedItemSeenManager {}
 let result = set.fileFinishedImporting("modules/forums/tracking/ForumChannelSeenManager.tsx");
 
 export default prototype;
@@ -62,8 +67,16 @@ export const getForumPostSeenManagerId = function getForumPostSeenManagerId(arg0
   return "" + maybeMarkSeen.AnalyticsFeedTypes.FORUM_CHANNEL + "_" + arg0;
 };
 export const markForumPostItemAsSeen = function markForumPostItemAsSeen(parent_id, item, timestampMillis) {
-  const result = markAnalyticsFeedItemSeen.markAnalyticsFeedItemSeen("" + maybeMarkSeen.AnalyticsFeedTypes.FORUM_CHANNEL + "_" + parent_id, item, timestampMillis);
+  const result = markAnalyticsFeedItemSeen.markAnalyticsFeedItemSeen(
+    "" + maybeMarkSeen.AnalyticsFeedTypes.FORUM_CHANNEL + "_" + parent_id,
+    item,
+    timestampMillis,
+  );
 };
 export const markForumPostItemAsUnseen = function markForumPostItemAsUnseen(parent_id, item, timestampMillis) {
-  const result = markAnalyticsFeedItemSeen.markAnalyticsFeedItemUnseen("" + maybeMarkSeen.AnalyticsFeedTypes.FORUM_CHANNEL + "_" + parent_id, item, timestampMillis);
+  const result = markAnalyticsFeedItemSeen.markAnalyticsFeedItemUnseen(
+    "" + maybeMarkSeen.AnalyticsFeedTypes.FORUM_CHANNEL + "_" + parent_id,
+    item,
+    timestampMillis,
+  );
 };

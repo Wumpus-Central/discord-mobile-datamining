@@ -48,7 +48,15 @@ export default {
   },
   fetchChangelogConfig() {
     const HTTP = sendRequest.HTTP;
-    const obj = { url: "https://cdn.discordapp.com/changelogs/config_" + ChangelogPlatforms.MOBILE + ".json?" + "x=" + Math.floor(new Date().getMinutes() / 5), rejectWithError: true };
+    const obj = {
+      url:
+        "https://cdn.discordapp.com/changelogs/config_" +
+        ChangelogPlatforms.MOBILE +
+        ".json?" +
+        "x=" +
+        Math.floor(new Date().getMinutes() / 5),
+      rejectWithError: true,
+    };
     return HTTP.get(obj);
   },
   fetchChangelog(closure_0, closure_1, arg2) {
@@ -61,7 +69,7 @@ export default {
       flag2 = false;
     }
     const self = this;
-    return flag2(function*() {
+    return flag2(function* () {
       closure_1 = tmp3;
       if (null != c4.getChangelog(closure_1_0, closure_1_1)) {
         return null;
@@ -80,7 +88,8 @@ export default {
       const HTTP = closure_1_0(530).HTTP;
       obj1 = { url: null, rejectWithError: true };
       const _HermesInternal2 = HermesInternal;
-      obj1[0] = "https://cdn.discordapp.com/changelogs/" + MOBILE + "/" + closure_1_0 + "/" + closure_1_1 + ".json" + str;
+      obj1[0] =
+        "https://cdn.discordapp.com/changelogs/" + MOBILE + "/" + closure_1_0 + "/" + closure_1_1 + ".json" + str;
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         dependencyMap = 0;
@@ -134,5 +143,5 @@ export default {
       }
       return tmp8;
     })();
-  }
+  },
 };

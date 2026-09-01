@@ -15,7 +15,7 @@ let items1 = [items];
 const map = new Map(items1);
 let closure_12 = 30 * setDefault.Millis.DAY;
 let items2 = [PlatformTypes.PLAYSTATION, 2];
-let items3 = [items2, , , , ];
+let items3 = [items2, , , ,];
 const items4 = [PlatformTypes.XBOX, 2];
 items3[1] = items4;
 const items5 = [PlatformTypes.SPOTIFY, 1];
@@ -139,7 +139,7 @@ export const usePlatforms = function usePlatforms() {
       (type) => set.has(type.type),
       (hasMetadata) => hasMetadata.hasMetadata,
       (type) => !set2.has(type.type),
-      (name) => name.name
+      (name) => name.name,
     ];
     return obj.sortBy(fn(memo[10]).filter(fn), items);
   }, items3);
@@ -193,7 +193,7 @@ export const useEmptyStatePlatforms = function useEmptyStatePlatforms() {
         }
         return -1 * num;
       },
-      (name) => name.name
+      (name) => name.name,
     ];
     return obj.sortBy(callback(allowPlayStationStaging[10]).filter(fn), items);
   }, items1);

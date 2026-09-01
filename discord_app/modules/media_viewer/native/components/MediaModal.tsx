@@ -53,7 +53,12 @@ export default function MediaModal(originLayout) {
   let MediaViewerSourcesStore = num(onCloseCallback[6]).MediaViewerSourcesStore;
   const field = MediaViewerSourcesStore.useField("sources");
   let obj = num(onCloseCallback[7]);
-  mediaViewerSyncer = obj.useMediaViewerSyncer({ sources: field, initialIndex: num, onEndReached, onEndReachedThreshold });
+  mediaViewerSyncer = obj.useMediaViewerSyncer({
+    sources: field,
+    initialIndex: num,
+    onEndReached,
+    onEndReachedThreshold,
+  });
   videoStateStore = num(onCloseCallback[8]).useVideoStateStore((paused) => paused.paused);
   const items = [onCloseCallback, onClose];
   let callback = flag2.useCallback(() => {
@@ -64,10 +69,13 @@ export default function MediaModal(originLayout) {
       tmp3();
     }
   }, items);
-  const effect = flag2.useEffect(() => () => {
-    const MediaViewerSourcesStore = callback(table[6]).MediaViewerSourcesStore;
-    MediaViewerSourcesStore.resetState();
-  }, []);
+  const effect = flag2.useEffect(
+    () => () => {
+      const MediaViewerSourcesStore = callback(table[6]).MediaViewerSourcesStore;
+      MediaViewerSourcesStore.resetState();
+    },
+    [],
+  );
   let obj2 = num(onCloseCallback[8]);
   const items1 = [onIndexChange];
   stateFromStores = num(onCloseCallback[9]).useStateFromStores(items1, () => onIndexChange.getState());
@@ -167,7 +175,17 @@ export default function MediaModal(originLayout) {
     return () => callback(table[17]).lockOrientationForiOS();
   }, []);
   const items5 = [disableDownload, flag2, mediaViewerSyncer];
-  const items6 = [mediaViewerSyncer, callback1, flag2, disableDownload, disableMediaOverlayButton, disableMediaOverlayFooter, contextName, contextIcon, onIndexChange];
+  const items6 = [
+    mediaViewerSyncer,
+    callback1,
+    flag2,
+    disableDownload,
+    disableMediaOverlayButton,
+    disableMediaOverlayFooter,
+    contextName,
+    contextIcon,
+    onIndexChange,
+  ];
   const callback3 = flag2.useCallback(() => {
     if (flag2) {
       let obj = num(onCloseCallback[11]);
@@ -179,12 +197,32 @@ export default function MediaModal(originLayout) {
         obj[0] = selectedMediaSource;
         obj[1] = disableDownload;
         obj[2] = tmp;
-        initialIndexVideoStartTime(tmp3[20]).openLazy(tmp2(tmp3[22])(tmp3[21], tmp3.paths), "MediaShareActionSheet", obj);
+        initialIndexVideoStartTime(tmp3[20]).openLazy(
+          tmp2(tmp3[22])(tmp3[21], tmp3.paths),
+          "MediaShareActionSheet",
+          obj,
+        );
         const obj3 = initialIndexVideoStartTime(tmp3[20]);
       }
     }
   }, items5);
-  const callback4 = flag2.useCallback((onClose, overlayEnabled) => ref(initialIndexVideoStartTime(onCloseCallback[23]), { syncer: mediaViewerSyncer, getVideoControls: callback1, onClose, shareable: flag2, disableDownload, disableMediaOverlayButton, disableMediaOverlayFooter, contextName, contextIcon, overlayEnabled, onIndexChange }), items6);
+  const callback4 = flag2.useCallback(
+    (onClose, overlayEnabled) =>
+      ref(initialIndexVideoStartTime(onCloseCallback[23]), {
+        syncer: mediaViewerSyncer,
+        getVideoControls: callback1,
+        onClose,
+        shareable: flag2,
+        disableDownload,
+        disableMediaOverlayButton,
+        disableMediaOverlayFooter,
+        contextName,
+        contextIcon,
+        overlayEnabled,
+        onIndexChange,
+      }),
+    items6,
+  );
   let obj3 = num(onCloseCallback[9]);
   mediaPlayerMutedStore = num(onCloseCallback[24]).useMediaPlayerMutedStore((isMuted) => isMuted.isMuted);
   const items7 = [callback1, callback2, mediaPlayerMutedStore, videoStateStore];
@@ -270,8 +308,32 @@ export default function MediaModal(originLayout) {
       obj6.muted = tmp2;
       obj6.index = index;
       obj6.onLoad = callback2(index, source, merged.onLoad);
-      const obj7 = { uri: null, width: null, height: null, videoURI: null, messageId: null, channelId: null, mediaIndex: null, description: null, obscure: null, accessoryType: null, attachmentId: null };
-      ({ videoURI: obj11[0], width: obj11[1], height: obj11[2], videoURI: obj11[3], messageId: obj11[4], channelId: obj11[5], mediaIndex: obj11[6], description: obj11[7], obscure: obj11[8], accessoryType: obj11[9], attachmentId: obj11[10] } = source);
+      const obj7 = {
+        uri: null,
+        width: null,
+        height: null,
+        videoURI: null,
+        messageId: null,
+        channelId: null,
+        mediaIndex: null,
+        description: null,
+        obscure: null,
+        accessoryType: null,
+        attachmentId: null,
+      };
+      ({
+        videoURI: obj11[0],
+        width: obj11[1],
+        height: obj11[2],
+        videoURI: obj11[3],
+        messageId: obj11[4],
+        channelId: obj11[5],
+        mediaIndex: obj11[6],
+        description: obj11[7],
+        obscure: obj11[8],
+        accessoryType: obj11[9],
+        attachmentId: obj11[10],
+      } = source);
       obj6.source = obj7;
       let tmp33 = ref2(initialIndexVideoStartTime(tmp4[26]), obj6);
       const tmp43 = initialIndexVideoStartTime(tmp4[26]);
@@ -306,10 +368,25 @@ export default function MediaModal(originLayout) {
     }
     return tmp33;
   }, items7);
-  const tmp18 = jsx(initialIndexVideoStartTime(onCloseCallback[28]), { originLayout: originLayout.originLayout, swipeVelocityThreshold: num2, onClose: callback, onLongPress: callback3, syncer: mediaViewerSyncer, renderMedia: callback5, renderOverlay: callback4 });
+  const tmp18 = jsx(initialIndexVideoStartTime(onCloseCallback[28]), {
+    originLayout: originLayout.originLayout,
+    swipeVelocityThreshold: num2,
+    onClose: callback,
+    onLongPress: callback3,
+    syncer: mediaViewerSyncer,
+    renderMedia: callback5,
+    renderOverlay: callback4,
+  });
   let tmp17Result = tmp18;
   if (flag) {
-    obj = { transparent: true, animationType: "none", visible: true, onRequestClose: null, statusBarTranslucent: true, children: null };
+    obj = {
+      transparent: true,
+      animationType: "none",
+      visible: true,
+      onRequestClose: null,
+      statusBarTranslucent: true,
+      children: null,
+    };
     obj[3] = callback;
     obj = { style: null, children: null };
     obj[0] = disableMediaOverlayFooter.absoluteFill;
@@ -318,4 +395,4 @@ export default function MediaModal(originLayout) {
     tmp17Result = tmp17(disableMediaOverlayButton, obj);
   }
   return tmp17Result;
-};
+}

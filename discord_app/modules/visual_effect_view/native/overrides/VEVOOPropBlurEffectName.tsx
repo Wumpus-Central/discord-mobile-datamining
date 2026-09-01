@@ -29,7 +29,14 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurEffectName() {
     obj.blurEffectNameOverride = blurEffectNameOverride;
     callback(obj);
   }, []);
-  obj = { style: items, label: "Blur Effect Name", disabled: !first1, leadingStyle: visualEffectViewOverrideSharedStyles.enabledSwitchStyle, leading: callback(_require(visualEffectViewOverrideSharedStyles[7]).FormSwitch, obj), subLabel: null };
+  obj = {
+    style: items,
+    label: "Blur Effect Name",
+    disabled: !first1,
+    leadingStyle: visualEffectViewOverrideSharedStyles.enabledSwitchStyle,
+    leading: callback(_require(visualEffectViewOverrideSharedStyles[7]).FormSwitch, obj),
+    subLabel: null,
+  };
   items = [visualEffectViewOverrideSharedStyles.zeroPaddingVertical];
   obj = {
     value: first1,
@@ -40,7 +47,7 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurEffectName() {
         tmp3 = closure_6;
       }
       closure_8(tmp3);
-    }
+    },
   };
   obj1 = { children: null };
   const tmp6 = first(tmp2[1].useState(first1().blurEffectNameOverride), 2);
@@ -56,30 +63,35 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurEffectName() {
           str = "Light";
         }
         closure_3(str);
-      }
+      },
     }),
-
   ];
   const BLUR_EFFECT_NAMES = _require(visualEffectViewOverrideSharedStyles[8]).BLUR_EFFECT_NAMES;
   const found = BLUR_EFFECT_NAMES.filter((arr) => -1 !== arr.indexOf(first));
   items1[1] = found.map((str) => {
     const lib = str;
     const items = [visualEffectViewOverrideSharedStyles.zeroPaddingHorizontal, { opacity: 1 }];
-    return closure_1_6(lib(visualEffectViewOverrideSharedStyles[6]).FormRadioRow, {
-      label: str.replace(first, ""),
-      labelStyle: lib.radio,
-      style: items,
-      selected: str === closure_6,
-      disabled: !first1,
-      onPress() {
-        closure_1_8(closure_0);
-      }
-    }, arg1);
+    return closure_1_6(
+      lib(visualEffectViewOverrideSharedStyles[6]).FormRadioRow,
+      {
+        label: str.replace(first, ""),
+        labelStyle: lib.radio,
+        style: items,
+        selected: str === closure_6,
+        disabled: !first1,
+        onPress() {
+          closure_1_8(closure_0);
+        },
+      },
+      arg1,
+    );
   });
   obj1[0] = items1;
   obj[5] = callback2(closure_7, obj1);
   return callback(_require(visualEffectViewOverrideSharedStyles[6]).FormRow, obj);
 });
-const result = require("set").fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurEffectName.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/visual_effect_view/native/overrides/VEVOOPropBlurEffectName.tsx",
+);
 
 export default memoResult;

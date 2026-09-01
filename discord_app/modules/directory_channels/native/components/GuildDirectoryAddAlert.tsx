@@ -20,7 +20,9 @@ createCacheKey[1] = { marginBottom: 8, textAlign: "center" };
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { alignItems: "center", justifyContent: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryAddAlert.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/directory_channels/native/components/GuildDirectoryAddAlert.tsx",
+);
 
 export default function GuildDirectoryAddAlert(arg0) {
   ({ onClose, guild, directoryGuildName } = arg0);
@@ -33,8 +35,14 @@ export default function GuildDirectoryAddAlert(arg0) {
   obj = { style: tmp.guildIcon, guild, size: null };
   const tmp2 = componentDidMountDefault;
   obj[2] = GuildIconSizes.GuildIconSizes.XLARGE;
-  const items = [callback(GuildIconSizesDefault, obj), , ];
-  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "text-lg/bold", color: "mobile-text-heading-primary", children: null };
+  const items = [callback(GuildIconSizesDefault, obj), ,];
+  obj1 = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "text-lg/bold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl2 = getSystemLocale.intl;
   obj1[4] = intl2.string(getSystemLocale.t.CueiPY);
   items[1] = callback(Text.Text, obj1);
@@ -45,4 +53,4 @@ export default function GuildDirectoryAddAlert(arg0) {
   obj[1] = items;
   obj[2] = callback2(View, obj);
   return callback(tmp2, obj);
-};
+}

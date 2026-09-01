@@ -52,4 +52,8 @@ export const getDevicePushProvider = function getDevicePushProvider() {
   }
   return str;
 };
-export const NotificationTypes = { REMINDER: "reminder", TOP_MESSAGE_PUSH: "top_messages_push", TRENDING_CONTENT_PUSH: "trending_content_push" };
+export const NotificationTypes = {
+  REMINDER: "reminder",
+  TOP_MESSAGE_PUSH: "top_messages_push",
+  TRENDING_CONTENT_PUSH: "trending_content_push",
+};

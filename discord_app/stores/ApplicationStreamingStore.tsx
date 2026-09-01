@@ -45,7 +45,13 @@ function handleStreamUpdate(streamKey) {
   const result = map.set(streamKey, obj);
   closure_5[streamKey] = { streamKey, region, viewerIds };
 }
-({ ApplicationStreamStates: closure_18, RTCConnectionStates: closure_19, ApplicationStreamDeleteReasons: closure_20, NULL_STRING_GUILD_ID: closure_21, BasicPermissions: closure_22 } = ME);
+({
+  ApplicationStreamStates: closure_18,
+  RTCConnectionStates: closure_19,
+  ApplicationStreamDeleteReasons: closure_20,
+  NULL_STRING_GUILD_ID: closure_21,
+  BasicPermissions: closure_22,
+} = ME);
 let c24 = null;
 let closure_25 = {};
 let c26 = null;
@@ -58,8 +64,7 @@ let map1 = new Map();
 let c28;
 let c29;
 const PersistedStore = initializeDefault.PersistedStore;
-class ApplicationStreamingStore extends PersistedStore {
-}
+class ApplicationStreamingStore extends PersistedStore {}
 const prototype = ApplicationStreamingStore.prototype;
 prototype["initialize"] = function initialize(selfStreamParticipantsHidden) {
   const items = [closure_14];
@@ -453,7 +458,12 @@ prototype["getCurrentAppIntent"] = function getCurrentAppIntent() {
   return c26;
 };
 prototype["getStreamingState"] = function getStreamingState() {
-  const obj = { activeStreams: null, streamsByUserAndGuild: null, rtcStreams: null, streamerActiveStreamMetadatas: null };
+  const obj = {
+    activeStreams: null,
+    streamsByUserAndGuild: null,
+    rtcStreams: null,
+    streamerActiveStreamMetadatas: null,
+  };
   if (canSpectateDefault(closure_13)) {
     const _Array = Array;
     obj[0] = Array.from(map.entries());
@@ -762,7 +772,9 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
       gameForPID = null;
       if (null != sourceId) {
         const runningGames = store.getRunningGames();
-        gameForPID = runningGames.find((windowHandle) => closure_1_1(closure_1_2[14])(sourceId, windowHandle.windowHandle));
+        gameForPID = runningGames.find((windowHandle) =>
+          closure_1_1(closure_1_2[14])(sourceId, windowHandle.windowHandle),
+        );
       }
     }
   },
@@ -931,7 +943,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
   },
   CONNECTION_OPEN: reset,
   CONNECTION_CLOSED: reset,
-  LOGOUT: reset
+  LOGOUT: reset,
 });
 let result = require("set").fileFinishedImporting("stores/ApplicationStreamingStore.tsx");
 

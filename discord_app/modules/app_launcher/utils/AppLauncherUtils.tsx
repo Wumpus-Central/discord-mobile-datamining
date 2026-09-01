@@ -147,7 +147,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
   let fn;
   channel = context.channel;
   _require = undefined;
-  _require = callback2(function*() {
+  _require = callback2(function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();
@@ -179,7 +179,16 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
             c0 = undefined;
             c1 = undefined;
             c4 = 1;
-            obj1 = { command: null, optionValues: null, context: null, commandTargetId: null, maxSizeCallback: null, commandOrigin: null, sectionName: null, source: null };
+            obj1 = {
+              command: null,
+              optionValues: null,
+              context: null,
+              commandTargetId: null,
+              maxSizeCallback: null,
+              commandOrigin: null,
+              sectionName: null,
+              source: null,
+            };
             obj1[0] = closure_1_0;
             obj1[1] = closure_1;
             obj1[2] = closure_2;
@@ -255,7 +264,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
       }
     }
   });
-  fn = function() {
+  fn = function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -326,44 +335,55 @@ export const formatPrimaryEntryPointCommandName = function formatPrimaryEntryPoi
   }
   return str;
 };
-export const ensureRecommendationSectionsOnlyContainActivities = function ensureRecommendationSectionsOnlyContainActivities(stateFromStores1) {
-  const items = [];
-  const iter = stateFromStores1[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let prop = nextResult.application_directory_collection_items;
-    let tmp2 = nextResult;
-    let found = prop.filter((type) => {
-      let tmp3 = type.type === callback(table[20]).ApplicationDirectoryCollectionItemType.APPLICATION;
-      if (tmp3) {
-        const application = type.application;
-        let hasApplicationFlagResult = application.id !== constants2.BUILT_IN;
-        if (hasApplicationFlagResult) {
-          hasApplicationFlagResult = callback(table[9]).hasApplicationFlag(application, constants.EMBEDDED);
-          const tmpResult = callback(table[9]);
+export const ensureRecommendationSectionsOnlyContainActivities =
+  function ensureRecommendationSectionsOnlyContainActivities(stateFromStores1) {
+    const items = [];
+    const iter = stateFromStores1[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let prop = nextResult.application_directory_collection_items;
+      let tmp2 = nextResult;
+      let found = prop.filter((type) => {
+        let tmp3 = type.type === callback(table[20]).ApplicationDirectoryCollectionItemType.APPLICATION;
+        if (tmp3) {
+          const application = type.application;
+          let hasApplicationFlagResult = application.id !== constants2.BUILT_IN;
+          if (hasApplicationFlagResult) {
+            hasApplicationFlagResult = callback(table[9]).hasApplicationFlag(application, constants.EMBEDDED);
+            const tmpResult = callback(table[9]);
+          }
+          tmp3 = hasApplicationFlagResult;
         }
-        tmp3 = hasApplicationFlagResult;
+        return tmp3;
+      });
+      if (0 !== found.length) {
+        let obj = {};
+        let tmp4 = nextResult;
+        let tmp5 = obj;
+        let merged = Object.assign(tmp2);
+        let tmp7 = found;
+        obj.application_directory_collection_items = tmp3;
+        let arr = items.push(obj);
       }
-      return tmp3;
-    });
-    if (0 !== found.length) {
-      let obj = {};
-      let tmp4 = nextResult;
-      let tmp5 = obj;
-      let merged = Object.assign(tmp2);
-      let tmp7 = found;
-      obj.application_directory_collection_items = tmp3;
-      let arr = items.push(obj);
+      continue;
     }
-    continue;
-  }
-  return items;
-};
+    return items;
+  };
 export const getInstallAppPropsFromProfileApplication = function getInstallAppPropsFromProfileApplication(application) {
-  return { applicationId: application.id, customInstallUrl: application.customInstallUrl, installParams: application.installParams, integrationTypesConfig: application.integrationTypesConfig };
+  return {
+    applicationId: application.id,
+    customInstallUrl: application.customInstallUrl,
+    installParams: application.installParams,
+    integrationTypesConfig: application.integrationTypesConfig,
+  };
 };
 export const getInstallAppProps = function getInstallAppProps(application) {
-  const obj = { applicationId: application.id, customInstallUrl: null, installParams: null, integrationTypesConfig: null };
+  const obj = {
+    applicationId: application.id,
+    customInstallUrl: null,
+    installParams: null,
+    integrationTypesConfig: null,
+  };
   if (application instanceof closure_7) {
     ({ customInstallUrl: obj[1], installParams: obj[2], integrationTypesConfig: obj[3] } = application);
     let tmp = obj;

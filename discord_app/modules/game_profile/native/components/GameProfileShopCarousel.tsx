@@ -41,7 +41,7 @@ function GameProfileShopCarouselContent(trackAction) {
     obj1 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1236).intl;
     obj1[2] = intl.string(tmp2(1236).t["5DYPT8"]);
-    const items2 = [callback(tmp2(4474).Text, obj1), ];
+    const items2 = [callback(tmp2(4474).Text, obj1)];
     obj2 = { text: null, variant: "tertiary", size: "sm", icon: null, iconPosition: "end", onPress: null };
     const intl2 = tmp2(1236).intl;
     obj2[0] = intl2.string(tmp2(1236).t.budhsM);
@@ -49,8 +49,19 @@ function GameProfileShopCarouselContent(trackAction) {
     obj2[5] = tmp6;
     items2[1] = callback(tmp2(4928).Button, obj2);
     obj[1] = items2;
-    const items3 = [callback2(View, obj), ];
-    const obj3 = { horizontal: true, renderScrollComponent: null, data: null, renderItem: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null, decelerationRate: "fast", snapToInterval: null };
+    const items3 = [callback2(View, obj)];
+    const obj3 = {
+      horizontal: true,
+      renderScrollComponent: null,
+      data: null,
+      renderItem: null,
+      showsHorizontalScrollIndicator: false,
+      ItemSeparatorComponent: null,
+      ListHeaderComponent: null,
+      ListFooterComponent: null,
+      decelerationRate: "fast",
+      snapToInterval: null,
+    };
     obj3[1] = trackAction(8846);
     obj3[2] = stateFromStoresArray;
     obj3[3] = function renderItem(item) {
@@ -71,7 +82,7 @@ function GameProfileShopCarouselContent(trackAction) {
           obj[1] = trackAction(5973).GAME_PROFILE;
           obj[2] = item.skuId;
           obj.openCollectiblesShop(obj);
-        }
+        },
       });
     };
     obj3[5] = HorizontalSpacing;
@@ -88,12 +99,26 @@ function GameProfileShopCarouselContent(trackAction) {
 createCacheKey = { container: null, header: null, card: null };
 createCacheKey = { gap: ThemesDefault.space.PX_8, marginHorizontal: -1 * ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_16 };
-let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[1] = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  marginHorizontal: ThemesDefault.space.PX_16,
+};
+let obj1 = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  marginHorizontal: ThemesDefault.space.PX_16,
+};
 createCacheKey[2] = { borderRadius: ThemesDefault.radii.lg };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { borderRadius: ThemesDefault.radii.lg };
-const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileShopCarousel.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/game_profile/native/components/GameProfileShopCarousel.tsx",
+);
 
 export default function GameProfileShopCarousel(game) {
   game = game.game;
@@ -114,4 +139,4 @@ export default function GameProfileShopCarousel(game) {
     tmp2 = callback(GameProfileShopCarouselContent, obj);
   }
   return tmp2;
-};
+}

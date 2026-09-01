@@ -23,4 +23,4 @@ export default function getNavigatorCurrentRoute() {
     tmp4 = currentRoute;
   }
   return tmp4;
-};
+}

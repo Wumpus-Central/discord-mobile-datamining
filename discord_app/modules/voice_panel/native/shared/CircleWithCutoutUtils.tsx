@@ -19,10 +19,13 @@ export default function CircleWithCutout(arg0) {
   let obj = { height: result, width: result, children: null };
   obj = { children: null };
   obj = { id: "mask", children: null };
-  const items = [callback(inlineStyles.Rect, { width: result, height: result, fill: "white" }), callback(inlineStyles.Circle, { cx: sum, cy: diff, r: cutoutRadius, fill: "black" })];
+  const items = [
+    callback(inlineStyles.Rect, { width: result, height: result, fill: "white" }),
+    callback(inlineStyles.Circle, { cx: sum, cy: diff, r: cutoutRadius, fill: "black" }),
+  ];
   obj[1] = items;
   obj[0] = callback2(inlineStyles.Mask, obj);
-  const items1 = [callback(inlineStyles.Defs, obj), ];
+  const items1 = [callback(inlineStyles.Defs, obj)];
   obj1 = { cx: circleRadius, cy: circleRadius, r: circleRadius, fill: circleFillColor, mask: null };
   let str;
   if (enableCutout) {
@@ -32,7 +35,7 @@ export default function CircleWithCutout(arg0) {
   items1[1] = callback(inlineStyles.Circle, obj1);
   obj[2] = items1;
   return callback2(inlineStylesDefault, obj);
-};
+}
 export const getBadgeTop = function getBadgeTop(badgeRadius, buttonRadius, arg2) {
   return buttonRadius - buttonRadius * Math.cos(arg2 * closure_5) - badgeRadius;
 };

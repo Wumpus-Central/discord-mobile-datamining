@@ -9,7 +9,10 @@ const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i"
 const result = set.fileFinishedImporting("modules/experiments/native/ExperimentEmbedPlatformUtils.tsx");
 
 export const EXPERIMENT_EMBED_URL_REGEX = regExp;
-export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperimentEmbedTap(experimentFromEmbedURL, experimentTreatmentFromEmbedURL) {
+export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperimentEmbedTap(
+  experimentFromEmbedURL,
+  experimentTreatmentFromEmbedURL,
+) {
   const _require = experimentTreatmentFromEmbedURL;
   if (null != experimentTreatmentFromEmbedURL) {
     const _Number = Number;
@@ -48,5 +51,9 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
     }
   }
   obj = { id: experimentFromEmbedURL };
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11380, dependencyMap.paths), "ExperimentOverrideSheet", obj);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+    asyncRequireImpl(11380, dependencyMap.paths),
+    "ExperimentOverrideSheet",
+    obj,
+  );
 };

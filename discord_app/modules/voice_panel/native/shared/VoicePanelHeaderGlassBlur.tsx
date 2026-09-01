@@ -11,13 +11,29 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { position: "absolute", left: 0, right: 0, bottom: -StyleSheet.hairlineWidth, height: StyleSheet.hairlineWidth };
+let obj = {
+  position: "absolute",
+  left: 0,
+  right: 0,
+  bottom: -StyleSheet.hairlineWidth,
+  height: StyleSheet.hairlineWidth,
+};
 obj = { height: StyleSheet.hairlineWidth, opacity: 0.15, backgroundColor: "white" };
 createCacheKey = { height: StyleSheet.hairlineWidth, opacity: 0.8, backgroundColor: "black" };
-let closure_6 = createCacheKey.createStyles({ blur: { position: "absolute", top: 0, left: 0, right: 0 }, strokeContainer: obj, stroke: obj, strokeAlt: createCacheKey, strokeAltLight: { height: StyleSheet.hairlineWidth, opacity: 0.2, backgroundColor: "black" } });
+let closure_6 = createCacheKey.createStyles({
+  blur: { position: "absolute", top: 0, left: 0, right: 0 },
+  strokeContainer: obj,
+  stroke: obj,
+  strokeAlt: createCacheKey,
+  strokeAltLight: { height: StyleSheet.hairlineWidth, opacity: 0.2, backgroundColor: "black" },
+});
 let closure_7 = set.isAndroid();
-let closure_8 = { code: "function VoicePanelHeaderGlassBlurTsx1(){const{shown,IS_ANDROID}=this.__closure;return{opacity:shown.get()?IS_ANDROID?0.7:1:0};}" };
-let closure_9 = { code: "function VoicePanelHeaderGlassBlurTsx2(){const{withSpring,shown}=this.__closure;return{blurAmount:withSpring(shown.get()?0.3:0)};}" };
+let closure_8 = {
+  code: "function VoicePanelHeaderGlassBlurTsx1(){const{shown,IS_ANDROID}=this.__closure;return{opacity:shown.get()?IS_ANDROID?0.7:1:0};}",
+};
+let closure_9 = {
+  code: "function VoicePanelHeaderGlassBlurTsx2(){const{withSpring,shown}=this.__closure;return{blurAmount:withSpring(shown.get()?0.3:0)};}",
+};
 let obj2 = { height: StyleSheet.hairlineWidth, opacity: 0.2, backgroundColor: "black" };
 const result = set.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelHeaderGlassBlur.tsx");
 
@@ -68,10 +84,10 @@ export default importAllResult.memo(function HeaderGlassBlur(shown) {
     str = "dark";
   }
   const items1 = [StyleSheet.absoluteFillObject, blurStyle];
-  const items2 = [closure_4(tmp11, { blurStyle: "ultra-thin", blurTheme: str, style: items1, animatedProps }), ];
+  const items2 = [closure_4(tmp11, { blurStyle: "ultra-thin", blurTheme: str, style: items1, animatedProps })];
   obj2 = { style: tmp.strokeContainer, children: null };
   let tmp6Result = tmp6(6006);
-  const items3 = [closure_4(setDefault, { style: tmp.stroke }), ];
+  const items3 = [closure_4(setDefault, { style: tmp.stroke })];
   tmp6Result = tmp6(6006);
   const obj3 = { style: tmp.stroke };
   obj6 = shown(1363);

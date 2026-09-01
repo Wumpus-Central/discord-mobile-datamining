@@ -2,14 +2,25 @@
 import closure_0 from "../../../../stores/RelationshipStore.tsx";
 import { UserRowModes } from "../../../main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx",
+);
 
 export const buildReferralUserRow = function buildReferralUserRow(selectedNotResendUsers) {
   ({ eligibleUsers, row, selectedUserIds, resendUsers } = selectedNotResendUsers);
   if (null != eligibleUsers[row]) {
     let tmp4 = selectedNotResendUsers.selectedNotResendUsers.length >= tmp;
     const hasItem = selectedUserIds.includes(tmp3.id);
-    let obj = { type: null, user: null, onPress: null, selected: null, disabled: null, mode: null, start: null, end: null };
+    let obj = {
+      type: null,
+      user: null,
+      onPress: null,
+      selected: null,
+      disabled: null,
+      mode: null,
+      start: null,
+      end: null,
+    };
     const hasItem1 = resendUsers.has(tmp3.id);
     obj[0] = relationshipType.getRelationshipType(tmp3.id);
     obj[1] = tmp3;

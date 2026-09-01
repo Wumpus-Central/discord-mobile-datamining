@@ -24,7 +24,7 @@ function MessagesItemChannelContentIcon(selected) {
     let obj = { source: null, size: null, style: null };
     obj[0] = registerAssetDefault2;
     obj[1] = Button.Icon.Sizes.EXTRA_SMALL;
-    const items = [, ];
+    const items = [,];
     ({ channelIcon: arr4[0], channelMutedIcon: arr4[1] } = tmp);
     obj[2] = items;
     let tmp2 = callback(Button.Icon, obj);
@@ -32,7 +32,7 @@ function MessagesItemChannelContentIcon(selected) {
     obj = { source: null, size: null, style: null };
     obj[0] = registerAssetDefault;
     obj[1] = Button.Icon.Sizes.EXTRA_SMALL;
-    const items1 = [, ];
+    const items1 = [,];
     ({ channelIcon: arr3[0], channelIgnoredIcon: arr3[1] } = tmp);
     obj[2] = items1;
     tmp2 = callback(Button.Icon, obj);
@@ -40,7 +40,7 @@ function MessagesItemChannelContentIcon(selected) {
     obj1 = { source: null, size: null, style: null };
     obj1[0] = registerAssetDefault3;
     obj1[1] = Button.Icon.Sizes.EXTRA_SMALL;
-    const items2 = [, ];
+    const items2 = [,];
     ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
     obj1[2] = items2;
     tmp2 = callback(Button.Icon, obj1);
@@ -50,7 +50,7 @@ function MessagesItemChannelContentIcon(selected) {
       obj = { source: null, size: null, style: null };
       obj[0] = registerAssetDefault4;
       obj[1] = Button.Icon.Sizes.EXTRA_SMALL;
-      const items3 = [, ];
+      const items3 = [,];
       ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
       obj[2] = items3;
       tmp2 = callback(Button.Icon, obj);
@@ -59,10 +59,27 @@ function MessagesItemChannelContentIcon(selected) {
   return tmp2;
 }
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-let obj = { content: { flex: 1 }, channelIcon: { alignSelf: "center" }, channelNameAndAccessories: { flexDirection: "row", alignItems: "center", width: "100%" }, channelIcons: { flexDirection: "row", alignItems: "center" }, channelAccessoriesContainer: null, channelAccessories: null, channelNameAndBadge: null, botTag: null, contentPadded: null };
+let obj = {
+  content: { flex: 1 },
+  channelIcon: { alignSelf: "center" },
+  channelNameAndAccessories: { flexDirection: "row", alignItems: "center", width: "100%" },
+  channelIcons: { flexDirection: "row", alignItems: "center" },
+  channelAccessoriesContainer: null,
+  channelAccessories: null,
+  channelNameAndBadge: null,
+  botTag: null,
+  contentPadded: null,
+};
 obj = { flexDirection: "row", justifyContent: "flex-end", marginLeft: ThemesDefault.space.PX_4 };
 obj[4] = obj;
-createCacheKey = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", borderRadius: ThemesDefault.radii.xs, paddingHorizontal: ThemesDefault.space.PX_4, paddingVertical: 1 };
+createCacheKey = {
+  flexDirection: "row",
+  justifyContent: "flex-end",
+  alignItems: "center",
+  borderRadius: ThemesDefault.radii.xs,
+  paddingHorizontal: ThemesDefault.space.PX_4,
+  paddingVertical: 1,
+};
 obj[5] = createCacheKey;
 obj[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, flex: 1, minWidth: 0 };
 let obj2 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, flex: 1, minWidth: 0 };
@@ -154,7 +171,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
   obj = { variant: null, style: null, lineClamp: 1, ellipsizeMode: "tail" };
   const isThemeLightResult = obj.isThemeLight(useThemeDefault());
   obj[0] = channel(4197).useToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
-  const items1 = [, ];
+  const items1 = [,];
   ({ channelText: arr2[0], channelName: arr2[1] } = tmp9);
   obj[1] = items1;
   obj1 = { style: tmp8.content, children: null };
@@ -177,7 +194,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
   const obj5 = {};
   const merged = Object.assign(obj);
   obj5.children = tmp16;
-  const items2 = [callback(channel(4474).Text, obj5), , ];
+  const items2 = [callback(channel(4474).Text, obj5), ,];
   let tmp20Result = null;
   if (tmp15) {
     const obj6 = { userId: null, disabledTooltip: true };
@@ -195,8 +212,8 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
   }
   items2[2] = tmp20Result;
   obj3[1] = items2;
-  const items3 = [closure_7(View, obj3), ];
-  const items4 = [tmp8.channelAccessoriesContainer, ];
+  const items3 = [closure_7(View, obj3)];
+  const items4 = [tmp8.channelAccessoriesContainer];
   let num4 = 0;
   if (hasNameplate) {
     num4 = 0;
@@ -206,7 +223,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
   }
   const obj8 = { style: items4, children: null };
   items4[1] = { minWidth: num4 };
-  const items5 = [tmp8.channelAccessories, , ];
+  const items5 = [tmp8.channelAccessories, ,];
   let obj9;
   if (waveShouldShow) {
     obj9 = { paddingVertical: 0 };
@@ -225,11 +242,11 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
     obj12[3] = blocked;
     obj12[4] = channelSelected;
     obj11[1] = tmp20(MessagesItemChannelContentIcon, obj12);
-    const items6 = [tmp20(tmp19, obj11), ];
+    const items6 = [tmp20(tmp19, obj11)];
     let tmp20Result1 = !waveShouldShow;
     if (!waveShouldShow) {
       const obj13 = { style: null, variant: "text-xs/medium", lineClamp: 1, children: null };
-      const items7 = [, ];
+      const items7 = [,];
       ({ channelText: arr8[0], timestamp: arr8[1] } = tmp9);
       obj13[0] = items7;
       obj13[3] = relativeTimestamp;
@@ -240,7 +257,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
     obj8[1] = tmp18(tmp19, obj10);
     items3[1] = tmp20(tmp19, obj8);
     obj2[1] = items3;
-    const items8 = [tmp18(tmp19, obj2), ];
+    const items8 = [tmp18(tmp19, obj2)];
     let contentPadded;
     if (hasNameplate) {
       if (!waveShouldShow) {
@@ -289,7 +306,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
     obj14[1] = tmp20Result2;
     items8[1] = tmp20(tmp19, obj14);
     obj1[1] = items8;
-    const items9 = [tmp18(tmp19, obj1), ];
+    const items9 = [tmp18(tmp19, obj1)];
     let tmp20Result3 = null;
     if (waveShouldShow) {
       const obj18 = { wavePressed: null, hasNameplate: null };
@@ -321,6 +338,8 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
     obj20[0] = combined;
   }
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelContent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelContent.tsx",
+);
 
 export default memoResult;

@@ -8,7 +8,12 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ AnalyticEvents: c5, LoginSuccessfulSources: closure_6 } = ME);
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ statusContainer: { alignItems: "center", marginTop: 32 }, avatar: { marginBottom: 16 }, statusText: { textAlign: "center", marginTop: 16, marginBottom: 24, paddingHorizontal: 32 }, buttonContainer: { width: "100%", paddingHorizontal: 16, marginTop: 16 } });
+let closure_10 = createCacheKey.createStyles({
+  statusContainer: { alignItems: "center", marginTop: 32 },
+  avatar: { marginBottom: 16 },
+  statusText: { textAlign: "center", marginTop: 16, marginBottom: 24, paddingHorizontal: 32 },
+  buttonContainer: { width: "100%", paddingHorizontal: 16, marginTop: 16 },
+});
 const result = require("set").fileFinishedImporting("modules/remote_auth/components/native/CompanionRemoteAuth.tsx");
 
 export const CompanionRemoteAuth = function CompanionRemoteAuth() {
@@ -20,7 +25,13 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
   const callback = React.useCallback((arg0) => {
     let tmp = arg0;
     let obj = fingerprint(table[14]);
-    obj = { source: constants2.QR_CODE, login_source: "companion_remote_auth", is_new_user: false, login_method: "quest_remote_auth", login_instance_id: null };
+    obj = {
+      source: constants2.QR_CODE,
+      login_source: "companion_remote_auth",
+      is_new_user: false,
+      login_method: "quest_remote_auth",
+      login_instance_id: null,
+    };
     if (arg0 == null) {
       tmp = null;
     }
@@ -42,10 +53,12 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
     if (null != fingerprint) {
       const _HermesInternal = HermesInternal;
       const obj = fingerprint(closure_1_2[16]);
-      fingerprint(closure_1_2[16]).sendAuthUrl("https://discord.com/ra/" + tmp).catch(() => {
-        error = new Error("Failed to initialize authentication");
-        throw error;
-      });
+      fingerprint(closure_1_2[16])
+        .sendAuthUrl("https://discord.com/ra/" + tmp)
+        .catch(() => {
+          error = new Error("Failed to initialize authentication");
+          throw error;
+        });
       const sendAuthUrlResult = fingerprint(closure_1_2[16]).sendAuthUrl("https://discord.com/ra/" + tmp);
     }
   }, items1);
@@ -65,7 +78,7 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
         obj2[1] = user;
         obj2[2] = tmp2(1297).AvatarSizes.LARGE;
         obj2[3] = context;
-        const items2 = [tmp11(tmp2(1297).Avatar, obj2), , , ];
+        const items2 = [tmp11(tmp2(1297).Avatar, obj2), , ,];
         const obj3 = { variant: "heading-lg/bold", children: null };
         const intl2 = tmp2(1236).intl;
         obj3[1] = intl2.string(tmp2(1236).t.apGCUT);
@@ -97,7 +110,7 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
     return tmp11(tmp5Result, obj);
   }
   const obj8 = { children: null };
-  const items3 = [closure_7(navigation(6048).ActivityIndicator, {}), , ];
+  const items3 = [closure_7(navigation(6048).ActivityIndicator, {}), ,];
   const obj9 = { style: tmp.statusText, variant: "text-md/medium", color: "text-muted", children: null };
   const intl5 = tmp2(1236).intl;
   obj9[3] = intl5.string(navigation(1236).t["7LkwqE"]);

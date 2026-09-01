@@ -15,8 +15,16 @@ createCacheKey = { width: 16, height: 16, borderRadius: ThemesDefault.radii.xs, 
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 let obj1 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-createCacheKey[2] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: ThemesDefault.space.PX_24 };
-let obj2 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: ThemesDefault.space.PX_24 };
+createCacheKey[2] = {
+  borderBottomWidth: 1,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginBottom: ThemesDefault.space.PX_24,
+};
+let obj2 = {
+  borderBottomWidth: 1,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginBottom: ThemesDefault.space.PX_24,
+};
 createCacheKey[3] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
@@ -53,11 +61,21 @@ export default function UserProfileApplicationWidgetCard(userId) {
   if (data != null) {
     id = data.id;
   }
-  obj = { location: "UserProfileApplicationWidgetCard", applicationId: id, source: tmp2(8812).GameProfileSources.UserProfileApplicationWidget, sourceUserId: userId, trackEntryPointImpression: true, stackingBehavior: "stack" };
+  obj = {
+    location: "UserProfileApplicationWidgetCard",
+    applicationId: id,
+    source: tmp2(8812).GameProfileSources.UserProfileApplicationWidget,
+    sourceUserId: userId,
+    trackEntryPointImpression: true,
+    stackingBehavior: "stack",
+  };
   const tmp10Result = stateFromStores(8801)(obj);
   dependencyMap = tmp10Result;
   const tmp10 = stateFromStores(8801);
-  ({ surfaceConfigs, resolutionContext, isLoading, hasIdentity } = stateFromStores(12764)(userId, widget.applicationId));
+  ({ surfaceConfigs, resolutionContext, isLoading, hasIdentity } = stateFromStores(12764)(
+    userId,
+    widget.applicationId,
+  ));
   const tmp14 = stateFromStores(5956)(getOrFetchApplication);
   token = tmp14.token;
   ({ fetched, canStartAuthorization } = tmp14);
@@ -109,7 +127,7 @@ export default function UserProfileApplicationWidgetCard(userId) {
         obj3[0] = tmp.stillSyncing;
         const obj4 = { size: "xs", color: null };
         obj4[1] = tmp9(712).colors.TEXT_MUTED;
-        const items3 = [callback(tmp2(9396).HourglassIcon, obj4), ];
+        const items3 = [callback(tmp2(9396).HourglassIcon, obj4)];
         const obj5 = { variant: "text-sm/medium", color: "text-muted", children: null };
         const intl = tmp2(1236).intl;
         obj5[2] = intl.string(tmp2(1236).t.z5K4Uv);
@@ -134,12 +152,12 @@ export default function UserProfileApplicationWidgetCard(userId) {
     disabled: null == tmp10Result,
     accessibilityRole: "button",
     accessibilityLabel: null,
-    children: null
+    children: null,
   };
   const tmp29 = callback2;
   const tmp2Result1 = userId(12669);
   obj6[4] = userId(7369).getWidgetTitle(widget);
-  const items4 = [tmp17, ];
+  const items4 = [tmp17];
   const obj7 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: null };
   const tmp2Result2 = userId(7369);
   obj7[3] = userId(7369).getWidgetTitle(widget);
@@ -202,7 +220,7 @@ export default function UserProfileApplicationWidgetCard(userId) {
     if (null != tmp30Result) {
       const obj13 = { style: null, children: null };
       obj13[0] = cardStyle;
-      const items5 = [tmp30Result, , ];
+      const items5 = [tmp30Result, ,];
       const obj14 = { style: null };
       obj14[0] = tmp.divider;
       tmp9Result = tmp9(6000);
@@ -213,4 +231,4 @@ export default function UserProfileApplicationWidgetCard(userId) {
     }
   }
   return tmp29Result;
-};
+}

@@ -19,7 +19,12 @@ export const trackUserAvatarUpdated = function trackUserAvatarUpdated(isGuildPro
     NEW_ASSET = AssetOriginTypes.AssetOriginTypes.NEW_ASSET;
   }
   let obj = expandEventPropertiesDefault;
-  obj = { animated: getAvatarURL.isAnimatedIconHash(avatarHash), is_guild_profile: flag, recent_avatar_id: null, is_edited_recent_avatar: null };
+  obj = {
+    animated: getAvatarURL.isAnimatedIconHash(avatarHash),
+    is_guild_profile: flag,
+    recent_avatar_id: null,
+    is_edited_recent_avatar: null,
+  };
   let NumberResult;
   if (NEW_ASSET === AssetOriginTypes.AssetOriginTypes.ARCHIVED_ASSET) {
     const _Number = Number;

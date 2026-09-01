@@ -31,4 +31,4 @@ export default function useFavoritesGuildResetAction() {
   obj[2] = intl2.string(messagesProxyDefault.ZzcwNk);
   obj[3] = callback;
   return obj;
-};
+}

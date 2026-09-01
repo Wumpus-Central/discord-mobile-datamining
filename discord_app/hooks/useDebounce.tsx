@@ -19,4 +19,4 @@ export default function useDebounce(arg0, arg1) {
     };
   }, items);
   return tmp[0];
-};
+}

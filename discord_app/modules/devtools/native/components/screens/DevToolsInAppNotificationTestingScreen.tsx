@@ -27,7 +27,12 @@ function getSelectedGuildChannel() {
   }
   if (null == channel) {
     obj1 = dispatcherDefault;
-    let obj = { key: "DEV_IN_APP_NOTIF_TEST_ERROR", icon: null, content: "Select a channel first", toastDurationMs: 4000 };
+    let obj = {
+      key: "DEV_IN_APP_NOTIF_TEST_ERROR",
+      icon: null,
+      content: "Select a channel first",
+      toastDurationMs: 4000,
+    };
     obj[1] = function icon() {
       return callback2(callback(table[14]).WarningIcon, {});
     };
@@ -46,7 +51,12 @@ function getSelectedGuildChannel() {
   if (null == obj) {
     return null;
   } else if (null == obj.guild) {
-    obj = { key: "DEV_IN_APP_NOTIF_TEST_ERROR", icon: null, content: "Select a guild channel first", toastDurationMs: 4000 };
+    obj = {
+      key: "DEV_IN_APP_NOTIF_TEST_ERROR",
+      icon: null,
+      content: "Select a guild channel first",
+      toastDurationMs: 4000,
+    };
     obj[1] = function icon() {
       return callback2(callback(table[14]).WarningIcon, {});
     };
@@ -69,7 +79,12 @@ function buildTestMessageData(arg0, items) {
   }
   if (null == channel) {
     obj1 = dispatcherDefault;
-    let obj = { key: "DEV_IN_APP_NOTIF_TEST_ERROR", icon: null, content: "Select a channel first", toastDurationMs: 4000 };
+    let obj = {
+      key: "DEV_IN_APP_NOTIF_TEST_ERROR",
+      icon: null,
+      content: "Select a channel first",
+      toastDurationMs: 4000,
+    };
     obj[1] = function icon() {
       return callback2(callback(table[14]).WarningIcon, {});
     };
@@ -116,8 +131,22 @@ function buildTestMessageData(arg0, items) {
         tmp20 = c17;
       } else {
         if ("text-and-media" === arg0) {
-          const obj4 = { content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..", attachments: null, stickerItems: null };
-          const obj5 = { id: null, url: null, proxy_url: null, filename: "og_img_discord_home.png", size: 54697, width: 1200, height: 630, content_type: "image/png" };
+          const obj4 = {
+            content:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..",
+            attachments: null,
+            stickerItems: null,
+          };
+          const obj5 = {
+            id: null,
+            url: null,
+            proxy_url: null,
+            filename: "og_img_discord_home.png",
+            size: 54697,
+            width: 1200,
+            height: 630,
+            content_type: "image/png",
+          };
           let obj7 = DISCORD_EPOCHDefault;
           let obj8 = DISCORD_EPOCHDefault;
           const _Date = Date;
@@ -129,7 +158,11 @@ function buildTestMessageData(arg0, items) {
           obj4[2] = [];
           let tmp14 = obj4;
         } else if ("text-only" === arg0) {
-          const obj6 = { content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", attachments: null, stickerItems: null };
+          const obj6 = {
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            attachments: null,
+            stickerItems: null,
+          };
           obj6[1] = [];
           obj6[2] = [];
           tmp14 = obj6;
@@ -149,7 +182,16 @@ function buildTestMessageData(arg0, items) {
         if (undefined === reactions) {
           reactions = [];
         }
-        obj8 = { id: null, channel_id: null, author: null, content: null, attachments: null, sticker_items: null, reactions: null, timestamp: null };
+        obj8 = {
+          id: null,
+          channel_id: null,
+          author: null,
+          content: null,
+          attachments: null,
+          sticker_items: null,
+          reactions: null,
+          timestamp: null,
+        };
         const _Date2 = Date;
         obj8[0] = DISCORD_EPOCHDefault.fromTimestamp(Date.now());
         obj8[1] = obj.channel.id;
@@ -183,7 +225,15 @@ function buildReactionNotification(arg0, items) {
     return null;
   } else {
     ({ channel, message } = tmp3);
-    let obj = { type: null, channel: null, guild: null, user: null, message: null, parentChannel: null, reaction: null };
+    let obj = {
+      type: null,
+      channel: null,
+      guild: null,
+      user: null,
+      message: null,
+      parentChannel: null,
+      reaction: null,
+    };
     obj[0] = InAppNotificationTypes.REACTION;
     obj[1] = channel;
     ({ guild: obj4[2], user: obj4[3] } = tmp3);
@@ -216,9 +266,29 @@ createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
 let c17 = "781324722394103808";
 let c18 = "https://cdn.discordapp.com/assets/og_img_discord_home.png";
-let closure_21 = { emoji: { id: null, name: "\u{1F389}", animated: false }, me: false, me_burst: false, count: 1, count_details: { normal: 1 }, burst_count: 0 };
-let items = [{ emoji: { id: null, name: "\u{1F389}", animated: false }, me: false, me_burst: false, count: 10, count_details: { normal: 10 }, burst_count: 0 }];
-let items1 = [{ variant: "text-only", label: "Text Only" }, { variant: "media-only", label: "Media Only" }, { variant: "text-and-media", label: "Message and Media" }];
+let closure_21 = {
+  emoji: { id: null, name: "\u{1F389}", animated: false },
+  me: false,
+  me_burst: false,
+  count: 1,
+  count_details: { normal: 1 },
+  burst_count: 0,
+};
+let items = [
+  {
+    emoji: { id: null, name: "\u{1F389}", animated: false },
+    me: false,
+    me_burst: false,
+    count: 10,
+    count_details: { normal: 10 },
+    burst_count: 0,
+  },
+];
+let items1 = [
+  { variant: "text-only", label: "Text Only" },
+  { variant: "media-only", label: "Media Only" },
+  { variant: "text-and-media", label: "Message and Media" },
+];
 let items2 = [
   {
     type: InAppNotificationTypes.MESSAGE,
@@ -251,7 +321,7 @@ let items2 = [
         const merged = Object.assign(obj);
         return obj;
       }
-    }
+    },
   },
   { type: InAppNotificationTypes.REACTION, label: "Reaction", build: buildReactionNotification },
   {
@@ -259,7 +329,7 @@ let items2 = [
     label: "Reaction Milestone",
     build: function buildReactionMilestoneNotification(arg0) {
       return buildReactionNotification(arg0, items);
-    }
+    },
   },
   {
     type: InAppNotificationTypes.MESSAGE_REMINDER,
@@ -295,8 +365,8 @@ let items2 = [
         const merged = Object.assign(obj1);
         return obj;
       }
-    }
-  }
+    },
+  },
 ];
 let closure_25 = items2.map((label) => {
   ({ type: require, build: importDefault } = label);
@@ -309,9 +379,9 @@ let closure_25 = items2.map((label) => {
         label: label.label,
         build() {
           return closure_1_1(variant);
-        }
+        },
       };
-    })
+    }),
   };
 });
 const items3 = [
@@ -327,7 +397,12 @@ const items3 = [
       }
       if (null == channel) {
         obj1 = dispatcherDefault;
-        let obj = { key: "DEV_IN_APP_NOTIF_TEST_ERROR", icon: null, content: "Select a channel first", toastDurationMs: 4000 };
+        let obj = {
+          key: "DEV_IN_APP_NOTIF_TEST_ERROR",
+          icon: null,
+          content: "Select a channel first",
+          toastDurationMs: 4000,
+        };
         obj[1] = function icon() {
           return callback2(callback(table[14]).WarningIcon, {});
         };
@@ -356,7 +431,9 @@ const items3 = [
         obj1 = { key: null, duration: null, onDismiss: null, inAppNotificationId: null };
         obj1[0] = castResult;
         const obj5 = DISCORD_EPOCHDefault;
-        obj1[1] = isReactionMilestoneNotification.getNotificationDuration(InAppNotificationTypes.MESSAGE_FAILED_TO_SEND);
+        obj1[1] = isReactionMilestoneNotification.getNotificationDuration(
+          InAppNotificationTypes.MESSAGE_FAILED_TO_SEND,
+        );
         obj1[2] = function onDismiss() {
           return callback(table[16]).clearNotification();
         };
@@ -365,7 +442,7 @@ const items3 = [
         const merged = Object.assign(obj1);
         return obj;
       }
-    }
+    },
   },
   {
     type: InAppNotificationTypes.FORUM_THREAD_CREATED,
@@ -376,7 +453,12 @@ const items3 = [
       let currentUser = authStore.getCurrentUser();
       if (null == currentUser) {
         let obj = dispatcherDefault;
-        obj = { key: "DEV_IN_APP_NOTIF_TEST_ERROR", icon: null, content: "Current user is null", toastDurationMs: 4000 };
+        obj = {
+          key: "DEV_IN_APP_NOTIF_TEST_ERROR",
+          icon: null,
+          content: "Current user is null",
+          toastDurationMs: 4000,
+        };
         obj[1] = function icon() {
           return callback2(callback(table[14]).WarningIcon, {});
         };
@@ -404,7 +486,9 @@ const items3 = [
           const obj2 = { key: null, duration: null, onDismiss: null, inAppNotificationId: null };
           obj2[0] = tmp11.id;
           const obj5 = DISCORD_EPOCHDefault;
-          obj2[1] = isReactionMilestoneNotification.getNotificationDuration(InAppNotificationTypes.FORUM_THREAD_CREATED);
+          obj2[1] = isReactionMilestoneNotification.getNotificationDuration(
+            InAppNotificationTypes.FORUM_THREAD_CREATED,
+          );
           obj2[2] = function onDismiss() {
             return callback(table[16]).clearNotification();
           };
@@ -415,7 +499,7 @@ const items3 = [
         }
       }
       return null;
-    }
+    },
   },
   {
     type: InAppNotificationTypes.BUG_REPORTER,
@@ -429,13 +513,13 @@ const items3 = [
         onDismiss() {
           return callback(table[16]).clearNotification();
         },
-        inAppNotificationId: null
+        inAppNotificationId: null,
       };
       const obj3 = isReactionMilestoneNotification;
       obj[3] = isReactionMilestoneNotification.generateInAppNotificationId();
       const merged = Object.assign(obj);
       return obj;
-    }
+    },
   },
   {
     type: InAppNotificationTypes.ALERT,
@@ -461,7 +545,7 @@ const items3 = [
         const obj4 = isReactionMilestoneNotification;
       }
       return tmp2;
-    }
+    },
   },
   {
     type: InAppNotificationTypes.MESSAGE_REQUEST,
@@ -471,7 +555,12 @@ const items3 = [
       let currentUser = authStore.getCurrentUser();
       if (null == currentUser) {
         let obj = dispatcherDefault;
-        obj = { key: "DEV_IN_APP_NOTIF_TEST_ERROR", icon: null, content: "Current user is null", toastDurationMs: 4000 };
+        obj = {
+          key: "DEV_IN_APP_NOTIF_TEST_ERROR",
+          icon: null,
+          content: "Current user is null",
+          toastDurationMs: 4000,
+        };
         obj[1] = function icon() {
           return callback2(callback(table[14]).WarningIcon, {});
         };
@@ -497,48 +586,60 @@ const items3 = [
         const obj6 = isReactionMilestoneNotification;
       }
       return tmp5;
-    }
+    },
   },
   {
     type: InAppNotificationTypes.RESTRICTED_HOURS_WARNING,
     label: "Restricted Hours Warning",
     subLabel: "Enqueues notification.",
     build: function buildRestrictedHoursWarningNotification() {
-      let obj = { type: InAppNotificationTypes.RESTRICTED_HOURS_WARNING, title: "Restricted Hours Warning", subtitle: "Test restricted hours warning." };
+      let obj = {
+        type: InAppNotificationTypes.RESTRICTED_HOURS_WARNING,
+        title: "Restricted Hours Warning",
+        subtitle: "Test restricted hours warning.",
+      };
       obj = {
         key: "dev-tools-restricted-hours-warning",
-        duration: isReactionMilestoneNotification.getNotificationDuration(InAppNotificationTypes.RESTRICTED_HOURS_WARNING),
+        duration: isReactionMilestoneNotification.getNotificationDuration(
+          InAppNotificationTypes.RESTRICTED_HOURS_WARNING,
+        ),
         onDismiss() {
           return callback(table[16]).clearNotification();
         },
-        inAppNotificationId: null
+        inAppNotificationId: null,
       };
       const obj3 = isReactionMilestoneNotification;
       obj[3] = isReactionMilestoneNotification.generateInAppNotificationId();
       const merged = Object.assign(obj);
       return obj;
-    }
+    },
   },
   {
     type: InAppNotificationTypes.RESTRICTED_SCHEDULE_UPDATED,
     label: "Restricted Schedule Updated",
     subLabel: "Enqueues notification.",
     build: function buildRestrictedScheduleUpdatedNotification() {
-      let obj = { type: InAppNotificationTypes.RESTRICTED_SCHEDULE_UPDATED, title: "Restricted Schedule Updated", subtitle: "Test restricted schedule update." };
+      let obj = {
+        type: InAppNotificationTypes.RESTRICTED_SCHEDULE_UPDATED,
+        title: "Restricted Schedule Updated",
+        subtitle: "Test restricted schedule update.",
+      };
       obj = {
         key: "dev-tools-restricted-schedule-updated",
-        duration: isReactionMilestoneNotification.getNotificationDuration(InAppNotificationTypes.RESTRICTED_SCHEDULE_UPDATED),
+        duration: isReactionMilestoneNotification.getNotificationDuration(
+          InAppNotificationTypes.RESTRICTED_SCHEDULE_UPDATED,
+        ),
         onDismiss() {
           return callback(table[16]).clearNotification();
         },
-        inAppNotificationId: null
+        inAppNotificationId: null,
       };
       const obj3 = isReactionMilestoneNotification;
       obj[3] = isReactionMilestoneNotification.generateInAppNotificationId();
       const merged = Object.assign(obj);
       return obj;
-    }
-  }
+    },
+  },
 ];
 let obj1 = { padding: ThemesDefault.space.PX_16 };
 let obj2 = {
@@ -572,7 +673,7 @@ let obj2 = {
       const merged = Object.assign(obj);
       return obj;
     }
-  }
+  },
 };
 let obj3 = {
   type: InAppNotificationTypes.MESSAGE_FAILED_TO_SEND,
@@ -586,7 +687,12 @@ let obj3 = {
     }
     if (null == channel) {
       obj1 = dispatcherDefault;
-      let obj = { key: "DEV_IN_APP_NOTIF_TEST_ERROR", icon: null, content: "Select a channel first", toastDurationMs: 4000 };
+      let obj = {
+        key: "DEV_IN_APP_NOTIF_TEST_ERROR",
+        icon: null,
+        content: "Select a channel first",
+        toastDurationMs: 4000,
+      };
       obj[1] = function icon() {
         return callback2(callback(table[14]).WarningIcon, {});
       };
@@ -624,9 +730,11 @@ let obj3 = {
       const merged = Object.assign(obj1);
       return obj;
     }
-  }
+  },
 };
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsInAppNotificationTestingScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsInAppNotificationTestingScreen.tsx",
+);
 
 export default function DevToolsInAppNotificationTestingScreen() {
   const tmp = callback3();
@@ -650,43 +758,53 @@ export default function DevToolsInAppNotificationTestingScreen() {
         hasIcons: true,
         children: options.map((label) => {
           closure_0 = label;
-          return closure_1_14(closure_1_0(closure_1_2[22]).TableRow, {
-            label: label.label,
-            subLabel: label.subLabel,
-            icon: closure_1_14(closure_1_0(closure_1_2[23]).BeakerIcon, {}),
-            onPress() {
-              return label(label);
+          return closure_1_14(
+            closure_1_0(closure_1_2[22]).TableRow,
+            {
+              label: label.label,
+              subLabel: label.subLabel,
+              icon: closure_1_14(closure_1_0(closure_1_2[23]).BeakerIcon, {}),
+              onPress() {
+                return label(label);
+              },
+              trailing: closure_1_14(closure_1_0(closure_1_2[24]).TableRowArrow, {}),
             },
-            trailing: closure_1_14(closure_1_0(closure_1_2[24]).TableRowArrow, {})
-          }, label.label);
-        })
+            label.label,
+          );
+        }),
       };
       options = title.options;
-      items = [closure_1_14(callback(closure_1_2[21]).TableRowGroup, obj), ];
+      items = [closure_1_14(callback(closure_1_2[21]).TableRowGroup, obj)];
       obj = { size: closure_1_1(closure_1_2[12]).space.PX_16 };
       items[1] = closure_1_14(callback(closure_1_2[20]).Spacer, obj);
       obj[0] = items;
       return closure_1_15(closure_1_3.Fragment, obj, title.title);
     }),
-
   ];
   obj = {
     title: "Other Notification Types",
     hasIcons: true,
     children: items3.map((label) => {
       const callback = label;
-      return closure_1_14(callback(closure_1_2[22]).TableRow, {
-        label: label.label,
-        subLabel: label.subLabel,
-        icon: closure_1_14(callback(closure_1_2[23]).BeakerIcon, {}),
-        onPress() {
-          return label(label);
+      return closure_1_14(
+        callback(closure_1_2[22]).TableRow,
+        {
+          label: label.label,
+          subLabel: label.subLabel,
+          icon: closure_1_14(callback(closure_1_2[23]).BeakerIcon, {}),
+          onPress() {
+            return label(label);
+          },
+          trailing: closure_1_14(callback(closure_1_2[24]).TableRowArrow, {}),
         },
-        trailing: closure_1_14(callback(closure_1_2[24]).TableRowArrow, {})
-      }, label.label);
-    })
+        label.label,
+      );
+    }),
   };
-  items1[2] = callback(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, obj);
+  items1[2] = callback(
+    require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup,
+    obj,
+  );
   obj[2] = items1;
   return callback2(ScrollView, obj);
-};
+}

@@ -26,7 +26,7 @@ function _savePersistentCodesEnabled() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -134,7 +134,7 @@ function _updatePersistentCodesEnabled() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -211,7 +211,7 @@ function _updatePersistentCodesEnabled() {
                 obj1[1] = string2Result;
                 intl3 = tmp10(1236).intl;
                 obj1[2] = intl3.string(tmp10(1236).t.aTuFYT);
-                v0 = closure_1_3(function*() {
+                v0 = closure_1_3(function* () {
                   if (c0 === 2) {
                     c0 = 3;
                     HermesBuiltin.throwTypeError();
@@ -266,7 +266,7 @@ function _updatePersistentCodesEnabled() {
                     }
                   }
                 });
-                obj1[3] = function() {
+                obj1[3] = function () {
                   const self = this;
                   const apply = c1.apply;
                   if (typeof apply === "unknown") {
@@ -358,5 +358,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "SECURE_FRAMES_TRANSIENT_KEY_DELETE", userId };
     obj.dispatch(obj);
-  }
+  },
 };

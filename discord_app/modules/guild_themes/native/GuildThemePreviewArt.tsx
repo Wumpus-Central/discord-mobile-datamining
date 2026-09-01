@@ -10,10 +10,21 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 function PreviewOverlay() {
-  return <View pointerEvents="none" style={callback().previewOverlay}>{jsx(GuildThemePreviewOverlayDefault, {})}</View>;
+  return (
+    <View pointerEvents="none" style={callback().previewOverlay}>
+      {jsx(GuildThemePreviewOverlayDefault, {})}
+    </View>
+  );
 }
 createCacheKey = { previewArt: null, previewOverlay: null };
-createCacheKey = { position: "relative", width: 256, aspectRatio: 1.5705521472392638, overflow: "hidden", borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = {
+  position: "relative",
+  width: 256,
+  aspectRatio: 1.5705521472392638,
+  overflow: "hidden",
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", top: 7.314, left: 7.461, width: 259.862, height: 154.514 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
@@ -34,7 +45,10 @@ export default function GuildThemePreviewArt(themeSettings) {
         if (null != first) {
           let obj = { colors: null, angle: null };
           const items = [];
-          HermesBuiltin.arraySpread(themeSettings(closure_1_2[5]).getSingleColorGuildThemeGradientColors(first, tmp2), 0);
+          HermesBuiltin.arraySpread(
+            themeSettings(closure_1_2[5]).getSingleColorGuildThemeGradientColors(first, tmp2),
+            0,
+          );
           obj[0] = items;
           let num2 = customUserThemeSettings.gradientAngle;
           if (num2 == null) {
@@ -49,7 +63,10 @@ export default function GuildThemePreviewArt(themeSettings) {
       const guildThemePreset = obj.getGuildThemePreset(tmp.presetId);
       tmp3 = null;
       if (null != guildThemePreset) {
-        const guildThemePresetAppearance = themeSettings(closure_1_2[5]).getGuildThemePresetAppearance(guildThemePreset, tmp2);
+        const guildThemePresetAppearance = themeSettings(closure_1_2[5]).getGuildThemePresetAppearance(
+          guildThemePreset,
+          tmp2,
+        );
         obj = { colors: null, locations: null, angle: null };
         const colors = guildThemePresetAppearance.colors;
         obj[0] = colors.map((hex) => hex.hex);
@@ -73,8 +90,15 @@ export default function GuildThemePreviewArt(themeSettings) {
     ({ colors: obj[0], locations: obj[1], angle: obj[3] } = memo);
     obj[4] = items1;
     obj[5] = <PreviewOverlay />;
-    tmp9 = jsx(LinearGradientDefault, { colors: null, locations: null, useAngle: true, angle: null, style: null, children: null });
+    tmp9 = jsx(LinearGradientDefault, {
+      colors: null,
+      locations: null,
+      useAngle: true,
+      angle: null,
+      style: null,
+      children: null,
+    });
     const tmp2Result = LinearGradientDefault;
   }
   return tmp9;
-};
+}

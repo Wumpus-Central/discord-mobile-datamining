@@ -8,8 +8,20 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 16 }, title: null, description: null, redesignButton: null };
-createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 };
+createCacheKey = {
+  container: { flex: 1, alignItems: "center", justifyContent: "center" },
+  header: { marginBottom: 16 },
+  title: null,
+  description: null,
+  redesignButton: null,
+};
+createCacheKey = {
+  fontFamily: require("ME").Fonts.PRIMARY_BOLD,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  fontSize: 24,
+  textAlign: "center",
+  marginBottom: 8,
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { textAlign: "center", marginBottom: 16 };
 createCacheKey[4] = { paddingHorizontal: 16, width: "100%" };
@@ -31,12 +43,12 @@ export default function HubEmailConnectionWaitlist(school) {
         obj[0] = intl.string(closure_1_0(closure_1_2[8]).t.cpT0Cq);
         obj[1] = closure_0;
         return closure_1_6(closure_1_0(closure_1_2[7]).HeaderActionButton, obj);
-      }
+      },
     });
   }, items);
   obj = { style: tmp.container, children: null };
   obj = { source: navigation(12273), style: tmp.header };
-  const items1 = [callback(closure_5, obj), , , ];
+  const items1 = [callback(closure_5, obj), , ,];
   obj1 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1236).intl;
   obj1[2] = intl.string(onClose(1236).t.OaloU5);
@@ -54,4 +66,4 @@ export default function HubEmailConnectionWaitlist(school) {
   items1[3] = callback(closure_4, obj3);
   obj[1] = items1;
   return callback2(closure_4, obj);
-};
+}

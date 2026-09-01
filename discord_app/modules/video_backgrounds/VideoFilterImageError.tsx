@@ -8,7 +8,18 @@ let closure_3 = { ASSET: "asset" };
 const V8APIError = sendRequest.V8APIError;
 const prototype = function VideoFilterImageError(arg0, arg1) {
   const intl = getSystemLocale.intl;
-  tmp3 = new tmp3(arg0, arg1, intl.string(getSystemLocale.t.Mt8yDB), new.target, tmp3, tmp2, intl, require, new.target, tmp);
+  tmp3 = new tmp3(
+    arg0,
+    arg1,
+    intl.string(getSystemLocale.t.Mt8yDB),
+    new.target,
+    tmp3,
+    tmp2,
+    intl,
+    require,
+    new.target,
+    tmp,
+  );
   // ThrowIfThisInitialized (0x7c)
   const fieldErrors = tmp3.getFieldErrors(constants2.ASSET);
   let tmp7 = null != fieldErrors;
@@ -26,8 +37,7 @@ const prototype = function VideoFilterImageError(arg0, arg1) {
   }
   return tmp3;
 }.prototype;
-class prototype extends V8APIError {
-}
+class prototype extends V8APIError {}
 const result = set.fileFinishedImporting("modules/video_backgrounds/VideoFilterImageError.tsx");
 
 export default prototype;

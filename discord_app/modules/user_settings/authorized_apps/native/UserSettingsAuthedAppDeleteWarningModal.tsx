@@ -7,7 +7,9 @@ import isAuthorizedAppTwoWayDefault from "../shouldWarnAuthorizedAppTwoWay.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-let result = set.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedAppDeleteWarningModal.tsx");
+let result = set.fileFinishedImporting(
+  "modules/user_settings/authorized_apps/native/UserSettingsAuthedAppDeleteWarningModal.tsx",
+);
 
 export default function UserSettingsAuthedAppDeleteWarningModal(application) {
   application = application.application;
@@ -44,7 +46,7 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
     obj2[0] = intl3.format(tmp(1236).t.KRnERi, obj3);
     tmp9 = callback(tmp8Result, obj2);
   }
-  const items = [tmp9, ];
+  const items = [tmp9];
   let tmp12 = result;
   if (result) {
     const obj4 = { look: null, children: null };
@@ -55,13 +57,18 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
     tmp12 = callback(tmp8Result, obj4);
   }
   items[1] = tmp12;
-  const obj5 = { title: formatToPlainStringResult, content: formatToPlainStringResult1, extraContent: closure_5(closure_4, { children: items }), actions: null };
+  const obj5 = {
+    title: formatToPlainStringResult,
+    content: formatToPlainStringResult1,
+    extraContent: closure_5(closure_4, { children: items }),
+    actions: null,
+  };
   const obj6 = { children: null };
   const obj7 = { variant: "destructive", text: null, onPress: null };
   const intl5 = tmp(1236).intl;
   obj7[1] = intl5.string(getSystemLocale.t.xUqheM);
   obj7[2] = onDelete;
-  const items1 = [callback(getAlertModalItemKey.AlertActionButton, obj7, "confirm"), ];
+  const items1 = [callback(getAlertModalItemKey.AlertActionButton, obj7, "confirm")];
   const obj8 = { variant: "secondary", text: null };
   const intl6 = tmp(1236).intl;
   obj8[1] = intl6.string(getSystemLocale.t["ETE/oC"]);
@@ -69,4 +76,4 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
   obj6[0] = items1;
   obj5[3] = closure_5(closure_4, obj6);
   return callback(getAlertModalItemKey.AlertModal, obj5);
-};
+}

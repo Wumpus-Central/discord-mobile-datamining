@@ -54,7 +54,7 @@ function SimilarGameCard(game) {
     }, items),
     accessibilityRole: "button",
     accessibilityLabel: null,
-    children: null
+    children: null,
   };
   items1 = [tmp.card, { width: cardWidth }];
   const intl = game(shouldOpenGameProfile[8]).intl;
@@ -83,7 +83,7 @@ function LoadingCard(cardWidth) {
   cardWidth = cardWidth.cardWidth;
   let obj = { style: { width: cardWidth }, children: null };
   obj = { style: null };
-  const items = [callback3().loadingArt, ];
+  const items = [callback3().loadingArt];
   obj = { width: cardWidth, height: 1.34 * cardWidth };
   items[1] = obj;
   obj[0] = items;
@@ -96,7 +96,14 @@ let PX_12 = ThemesDefault.space.PX_12;
 const PX_16 = ThemesDefault.space.PX_16;
 PX_12 = ThemesDefault.space.PX_12;
 let closure_12 = Array.from({ length: 3 }, (arg0, arg1) => arg1);
-createCacheKey = { container: null, header: null, card: null, coverArt: null, coverArtFallback: null, loadingArt: null };
+createCacheKey = {
+  container: null,
+  header: null,
+  card: null,
+  coverArt: null,
+  coverArtFallback: null,
+  loadingArt: null,
+};
 createCacheKey = { gap: ThemesDefault.space.PX_8, marginHorizontal: -1 * ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_16 };
@@ -105,9 +112,24 @@ createCacheKey[2] = { gap: ThemesDefault.space.PX_4 };
 let obj2 = { gap: ThemesDefault.space.PX_4 };
 createCacheKey[3] = { borderRadius: ThemesDefault.radii.sm };
 let obj3 = { borderRadius: ThemesDefault.radii.sm };
-createCacheKey[4] = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center", padding: ThemesDefault.space.PX_8 };
-let obj4 = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center", padding: ThemesDefault.space.PX_8 };
-createCacheKey[5] = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[4] = {
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  justifyContent: "center",
+  alignItems: "center",
+  padding: ThemesDefault.space.PX_8,
+};
+let obj4 = {
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  justifyContent: "center",
+  alignItems: "center",
+  padding: ThemesDefault.space.PX_8,
+};
+createCacheKey[5] = {
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj5 = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileSimilarGames.tsx");
@@ -128,8 +150,17 @@ export default function GameProfileSimilarGames(trackAction) {
     const intl = trackAction(1236).intl;
     obj[2] = intl.string(trackAction(1236).t["6rLyQB"]);
     obj[1] = callback(trackAction(4474).Text, obj);
-    const items = [callback(closure_6, obj), ];
-    obj1 = { horizontal: true, renderScrollComponent: null, data: null, renderItem: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null };
+    const items = [callback(closure_6, obj)];
+    obj1 = {
+      horizontal: true,
+      renderScrollComponent: null,
+      data: null,
+      renderItem: null,
+      showsHorizontalScrollIndicator: false,
+      ItemSeparatorComponent: null,
+      ListHeaderComponent: null,
+      ListFooterComponent: null,
+    };
     obj1[1] = tmp2(8846);
     obj1[2] = closure_12;
     obj1[3] = function renderItem() {
@@ -152,8 +183,19 @@ export default function GameProfileSimilarGames(trackAction) {
       const intl2 = trackAction(1236).intl;
       obj4[2] = intl2.string(trackAction(1236).t["6rLyQB"]);
       obj3[1] = callback(trackAction(4474).Text, obj4);
-      const items1 = [callback(closure_6, obj3), ];
-      const obj5 = { horizontal: true, renderScrollComponent: null, data: null, renderItem: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null, decelerationRate: "fast", snapToInterval: null };
+      const items1 = [callback(closure_6, obj3)];
+      const obj5 = {
+        horizontal: true,
+        renderScrollComponent: null,
+        data: null,
+        renderItem: null,
+        showsHorizontalScrollIndicator: false,
+        ItemSeparatorComponent: null,
+        ListHeaderComponent: null,
+        ListFooterComponent: null,
+        decelerationRate: "fast",
+        snapToInterval: null,
+      };
       obj5[1] = tmp2(8846);
       obj5[2] = similarGames;
       obj5[3] = function renderItem(game) {
@@ -169,4 +211,4 @@ export default function GameProfileSimilarGames(trackAction) {
     }
   }
   return tmp7;
-};
+}

@@ -8,7 +8,7 @@ import { Endpoints } from "../../Constants.tsx";
 const require = arg1;
 function _getSafetyHubData() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -63,63 +63,92 @@ function _getSafetyHubData() {
               const obj4 = v0(result[6]);
             }
             const obj9 = v02(closure_1_2[5]);
-            postResult.then((body) => {
-              ({ classifications, guild_classifications, appeal_eligibility, expressive_modal_v2_enabled, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
-              const mapped = classifications.map((flagged_content) => {
-                if (null != flagged_content.flagged_content) {
-                  if (flagged_content.flagged_content.length > 0) {
-                    const first = flagged_content.flagged_content[0];
-                    const attachments = first.attachments;
-                    first.attachments = attachments.filter((filename) => {
-                      filename = filename.filename;
-                      let isImageFileResult = callback(table[7]).isImageFile(filename);
-                      if (!isImageFileResult) {
-                        isImageFileResult = callback(table[7]).isVideoFile(filename);
-                        const tmpResult = callback(table[7]);
+            postResult
+              .then((body) => {
+                ({
+                  classifications,
+                  guild_classifications,
+                  appeal_eligibility,
+                  expressive_modal_v2_enabled,
+                  account_standing,
+                  is_dsa_eligible,
+                  username,
+                  is_appeal_eligible,
+                } = body.body);
+                const mapped = classifications.map((flagged_content) => {
+                  if (null != flagged_content.flagged_content) {
+                    if (flagged_content.flagged_content.length > 0) {
+                      const first = flagged_content.flagged_content[0];
+                      const attachments = first.attachments;
+                      first.attachments = attachments.filter((filename) => {
+                        filename = filename.filename;
+                        let isImageFileResult = callback(table[7]).isImageFile(filename);
+                        if (!isImageFileResult) {
+                          isImageFileResult = callback(table[7]).isVideoFile(filename);
+                          const tmpResult = callback(table[7]);
+                        }
+                        return isImageFileResult;
+                      });
+                      if (obj.isFlaggedContentEmpty(first)) {
+                        let items = [];
+                      } else {
+                        items = [first];
                       }
-                      return isImageFileResult;
-                    });
-                    if (obj.isFlaggedContentEmpty(first)) {
-                      let items = [];
-                    } else {
-                      items = [first];
+                      flagged_content.flagged_content = items;
+                      obj = callback(table[8]);
                     }
-                    flagged_content.flagged_content = items;
-                    obj = callback(table[8]);
+                  }
+                  return flagged_content;
+                });
+                if (guild_classifications == null) {
+                  guild_classifications = [];
+                }
+                let obj = {
+                  type: "SAFETY_HUB_FETCH_SUCCESS",
+                  classifications: mapped.concat(guild_classifications),
+                  accountStanding: account_standing,
+                  isDsaEligible: is_dsa_eligible,
+                  username,
+                  isAppealEligible: is_appeal_eligible,
+                  appealEligibility: null,
+                  expressiveModalV2Enabled: null,
+                };
+                if (appeal_eligibility == null) {
+                  appeal_eligibility = [];
+                }
+                obj[6] = appeal_eligibility;
+                if (expressive_modal_v2_enabled == null) {
+                  expressive_modal_v2_enabled = false;
+                }
+                obj[7] = expressive_modal_v2_enabled;
+                v1(709).dispatch(obj);
+              })
+              .catch((body) => {
+                let str;
+                if (body != null) {
+                  body = body.body;
+                  if (body != null) {
+                    str = body.message;
                   }
                 }
-                return flagged_content;
-              });
-              if (guild_classifications == null) {
-                guild_classifications = [];
-              }
-              let obj = { type: "SAFETY_HUB_FETCH_SUCCESS", classifications: mapped.concat(guild_classifications), accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible, appealEligibility: null, expressiveModalV2Enabled: null };
-              if (appeal_eligibility == null) {
-                appeal_eligibility = [];
-              }
-              obj[6] = appeal_eligibility;
-              if (expressive_modal_v2_enabled == null) {
-                expressive_modal_v2_enabled = false;
-              }
-              obj[7] = expressive_modal_v2_enabled;
-              v1(709).dispatch(obj);
-            }).catch((body) => {
-              let str;
-              if (body != null) {
-                body = body.body;
-                if (body != null) {
-                  str = body.message;
+                if (str == null) {
+                  str = "Unknown error";
                 }
-              }
-              if (str == null) {
-                str = "Unknown error";
-              }
-              v1(709).dispatch({ type: "SAFETY_HUB_FETCH_FAILURE", error: str });
-            });
+                v1(709).dispatch({ type: "SAFETY_HUB_FETCH_FAILURE", error: str });
+              });
             v02 = 1;
             v0 = 1;
             const nextPromise = postResult.then((body) => {
-              ({ classifications, guild_classifications, appeal_eligibility, expressive_modal_v2_enabled, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
+              ({
+                classifications,
+                guild_classifications,
+                appeal_eligibility,
+                expressive_modal_v2_enabled,
+                account_standing,
+                is_dsa_eligible,
+                username,
+                is_appeal_eligible,
+              } = body.body);
               const mapped = classifications.map((flagged_content) => {
                 if (null != flagged_content.flagged_content) {
                   if (flagged_content.flagged_content.length > 0) {
@@ -148,7 +177,16 @@ function _getSafetyHubData() {
               if (guild_classifications == null) {
                 guild_classifications = [];
               }
-              let obj = { type: "SAFETY_HUB_FETCH_SUCCESS", classifications: mapped.concat(guild_classifications), accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible, appealEligibility: null, expressiveModalV2Enabled: null };
+              let obj = {
+                type: "SAFETY_HUB_FETCH_SUCCESS",
+                classifications: mapped.concat(guild_classifications),
+                accountStanding: account_standing,
+                isDsaEligible: is_dsa_eligible,
+                username,
+                isAppealEligible: is_appeal_eligible,
+                appealEligibility: null,
+                expressiveModalV2Enabled: null,
+              };
               if (appeal_eligibility == null) {
                 appeal_eligibility = [];
               }
@@ -193,7 +231,7 @@ function _getSafetyHubDataForClassification() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -250,61 +288,74 @@ function _getSafetyHubDataForClassification() {
                 postResult = HTTP.get(obj3);
               }
               const obj9 = v0(table[5]);
-              postResult.then((body) => {
-                ({ classifications, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
-                const found = classifications.find((id) => id.id === closure_0);
-                if (null != found) {
-                  if (null != found.flagged_content) {
-                    if (found.flagged_content.length > 0) {
-                      const first = found.flagged_content[0];
-                      const attachments = first.attachments;
-                      first.attachments = attachments.filter((filename) => {
-                        filename = filename.filename;
-                        let isImageFileResult = callback(table[7]).isImageFile(filename);
-                        if (!isImageFileResult) {
-                          isImageFileResult = callback(table[7]).isVideoFile(filename);
-                          const tmpResult = callback(table[7]);
+              postResult
+                .then((body) => {
+                  ({ classifications, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
+                  const found = classifications.find((id) => id.id === closure_0);
+                  if (null != found) {
+                    if (null != found.flagged_content) {
+                      if (found.flagged_content.length > 0) {
+                        const first = found.flagged_content[0];
+                        const attachments = first.attachments;
+                        first.attachments = attachments.filter((filename) => {
+                          filename = filename.filename;
+                          let isImageFileResult = callback(table[7]).isImageFile(filename);
+                          if (!isImageFileResult) {
+                            isImageFileResult = callback(table[7]).isVideoFile(filename);
+                            const tmpResult = callback(table[7]);
+                          }
+                          return isImageFileResult;
+                        });
+                        if (obj3.isFlaggedContentEmpty(first)) {
+                          let items = [];
+                        } else {
+                          items = [first];
                         }
-                        return isImageFileResult;
-                      });
-                      if (obj3.isFlaggedContentEmpty(first)) {
-                        let items = [];
-                      } else {
-                        items = [first];
+                        found.flagged_content = items;
+                        obj3 = callback(8689);
                       }
-                      found.flagged_content = items;
-                      obj3 = callback(8689);
+                    }
+                    let obj = {
+                      type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
+                      classification: null,
+                      accountStanding: null,
+                      isDsaEligible: null,
+                      username: null,
+                      isAppealEligible: null,
+                    };
+                    obj[1] = found;
+                    obj[2] = account_standing;
+                    obj[3] = is_dsa_eligible;
+                    obj[4] = username;
+                    obj[5] = is_appeal_eligible;
+                    v3(709).dispatch(obj);
+                    const obj4 = v3(709);
+                  } else {
+                    obj = v3(709);
+                    obj = {
+                      type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
+                      error: "Classification not found.",
+                      classificationId: null,
+                    };
+                    obj[2] = callback;
+                    obj.dispatch(obj);
+                  }
+                })
+                .catch((body) => {
+                  let obj = v3(709);
+                  let str;
+                  if (body != null) {
+                    body = body.body;
+                    if (body != null) {
+                      str = body.message;
                     }
                   }
-                  let obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: null, accountStanding: null, isDsaEligible: null, username: null, isAppealEligible: null };
-                  obj[1] = found;
-                  obj[2] = account_standing;
-                  obj[3] = is_dsa_eligible;
-                  obj[4] = username;
-                  obj[5] = is_appeal_eligible;
-                  v3(709).dispatch(obj);
-                  const obj4 = v3(709);
-                } else {
-                  obj = v3(709);
-                  obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE", error: "Classification not found.", classificationId: null };
-                  obj[2] = callback;
-                  obj.dispatch(obj);
-                }
-              }).catch((body) => {
-                let obj = v3(709);
-                let str;
-                if (body != null) {
-                  body = body.body;
-                  if (body != null) {
-                    str = body.message;
+                  if (str == null) {
+                    str = "Unknown error";
                   }
-                }
-                if (str == null) {
-                  str = "Unknown error";
-                }
-                obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE", error: str, classificationId: closure_0 };
-                obj.dispatch(obj);
-              });
+                  obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE", error: str, classificationId: closure_0 };
+                  obj.dispatch(obj);
+                });
               table = 1;
               v0 = 1;
               const nextPromise = postResult.then((body) => {
@@ -333,7 +384,14 @@ function _getSafetyHubDataForClassification() {
                       obj3 = callback(8689);
                     }
                   }
-                  let obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: null, accountStanding: null, isDsaEligible: null, username: null, isAppealEligible: null };
+                  let obj = {
+                    type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
+                    classification: null,
+                    accountStanding: null,
+                    isDsaEligible: null,
+                    username: null,
+                    isAppealEligible: null,
+                  };
                   obj[1] = found;
                   obj[2] = account_standing;
                   obj[3] = is_dsa_eligible;
@@ -343,7 +401,11 @@ function _getSafetyHubDataForClassification() {
                   const obj4 = v3(709);
                 } else {
                   obj = v3(709);
-                  obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE", error: "Classification not found.", classificationId: null };
+                  obj = {
+                    type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
+                    error: "Classification not found.",
+                    classificationId: null,
+                  };
                   obj[2] = callback;
                   obj.dispatch(obj);
                 }
@@ -385,7 +447,7 @@ function _requestReview() {
     closure_2 = arg2;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -445,24 +507,26 @@ function _requestReview() {
               }
               callback2(709).dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_START" });
               const obj8 = callback2(709);
-              putResult.then(() => {
-                let obj = closure_1_1(closure_1_2[5]);
-                obj = { type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS", classificationId: closure_0 };
-                obj.dispatch(obj);
-              }).catch((body) => {
-                let str;
-                if (body != null) {
-                  body = body.body;
+              putResult
+                .then(() => {
+                  let obj = closure_1_1(closure_1_2[5]);
+                  obj = { type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS", classificationId: closure_0 };
+                  obj.dispatch(obj);
+                })
+                .catch((body) => {
+                  let str;
                   if (body != null) {
-                    str = body.message;
+                    body = body.body;
+                    if (body != null) {
+                      str = body.message;
+                    }
                   }
-                }
-                if (str == null) {
-                  str = "Unknown error";
-                }
-                callback(table[5]).dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_FAILURE", error: str });
-                throw body;
-              });
+                  if (str == null) {
+                    str = "Unknown error";
+                  }
+                  callback(table[5]).dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_FAILURE", error: str });
+                  throw body;
+                });
               suspendedUserToken = 1;
               c3 = 1;
               const nextPromise = putResult.then(() => {
@@ -505,7 +569,7 @@ function _requestSuspendedUserAgeVerification() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -548,22 +612,28 @@ function _requestSuspendedUserAgeVerification() {
               dependencyMap = 1;
               v0 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1).then((body) => {
-                ({ verification_request_id, verification_webview_url } = body.body);
-                v3(709).dispatch({ type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS", verificationRequestId: verification_request_id, verificationWebviewUrl: verification_webview_url });
-              }).catch((body) => {
-                let str;
-                if (body != null) {
-                  body = body.body;
+              obj3[0] = HTTP.post(obj1)
+                .then((body) => {
+                  ({ verification_request_id, verification_webview_url } = body.body);
+                  v3(709).dispatch({
+                    type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS",
+                    verificationRequestId: verification_request_id,
+                    verificationWebviewUrl: verification_webview_url,
+                  });
+                })
+                .catch((body) => {
+                  let str;
                   if (body != null) {
-                    str = body.message;
+                    body = body.body;
+                    if (body != null) {
+                      str = body.message;
+                    }
                   }
-                }
-                if (str == null) {
-                  str = "Unknown error";
-                }
-                v3(709).dispatch({ type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_FAILURE", error: str });
-              });
+                  if (str == null) {
+                    str = "Unknown error";
+                  }
+                  v3(709).dispatch({ type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_FAILURE", error: str });
+                });
               return obj3;
             }
           } else if (arg0 === 1) {
@@ -606,7 +676,7 @@ function checkSuspendedUserAgeVerification() {
 }
 function _checkSuspendedUserAgeVerification() {
   const self = this;
-  let tmp = callback(function*() {
+  let tmp = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -649,30 +719,32 @@ function _checkSuspendedUserAgeVerification() {
             v02 = 1;
             v0 = 1;
             const obj3 = { value: null, done: false };
-            obj3[0] = HTTP.post(obj1).then((body) => {
-              const success = body.body.success;
-              let tmp = !success;
-              if (!success) {
-                tmp = c0 < closure_1_7;
-              }
-              if (tmp) {
-                const _setTimeout = setTimeout;
-                const timerId = setTimeout(() => callback(), closure_1_6);
-              }
-              v1(closure_1_2[5]).dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS", success });
-            }).catch((body) => {
-              let str;
-              if (body != null) {
-                body = body.body;
-                if (body != null) {
-                  str = body.message;
+            obj3[0] = HTTP.post(obj1)
+              .then((body) => {
+                const success = body.body.success;
+                let tmp = !success;
+                if (!success) {
+                  tmp = c0 < closure_1_7;
                 }
-              }
-              if (str == null) {
-                str = "Unknown error";
-              }
-              v1(table[5]).dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_FAILURE", error: str });
-            });
+                if (tmp) {
+                  const _setTimeout = setTimeout;
+                  const timerId = setTimeout(() => callback(), closure_1_6);
+                }
+                v1(closure_1_2[5]).dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS", success });
+              })
+              .catch((body) => {
+                let str;
+                if (body != null) {
+                  body = body.body;
+                  if (body != null) {
+                    str = body.message;
+                  }
+                }
+                if (str == null) {
+                  str = "Unknown error";
+                }
+                v1(table[5]).dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_FAILURE", error: str });
+              });
             return obj3;
           }
         } else if (arg0 === 1) {

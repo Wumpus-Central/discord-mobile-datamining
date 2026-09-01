@@ -27,7 +27,11 @@ function VoiceSettingsActionSheet() {
 }
 function JoinMutedButton(channel) {
   const tmp = useThemeDefault();
-  return callback(ChannelCallMicButton.ChannelCallMicButton, { channel: channel.channel, disableTint: "light" === useThemeDefault(), isSmallSize: false });
+  return callback(ChannelCallMicButton.ChannelCallMicButton, {
+    channel: channel.channel,
+    disableTint: "light" === useThemeDefault(),
+    isSmallSize: false,
+  });
 }
 function JoinVoiceButton(channel) {
   channel = channel.channel;
@@ -38,7 +42,10 @@ function JoinVoiceButton(channel) {
   importDefault = importDefault(stateFromStores1[27])();
   let obj = channel(stateFromStores1[28]);
   const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo(),
+  );
   const items1 = [closure_8];
   stateFromStores1 = channel(stateFromStores1[28]).useStateFromStores(items1, () => {
     let str;
@@ -100,7 +107,16 @@ function JoinVoiceButton(channel) {
   if (!tmp13) {
     tmp13 = stateFromStores;
   }
-  obj = { disabled: tmp13, backgroundColor: tmp(tmp2[34]).unsafe_rawColors.GREEN_360, imageStyle: null, accessibilityLabel: null, source: null, onPress: null, label: null, iconPosition: null };
+  obj = {
+    disabled: tmp13,
+    backgroundColor: tmp(tmp2[34]).unsafe_rawColors.GREEN_360,
+    imageStyle: null,
+    accessibilityLabel: null,
+    source: null,
+    onPress: null,
+    label: null,
+    iconPosition: null,
+  };
   obj = { tintColor: tmp(tmp2[34]).unsafe_rawColors.WHITE };
   obj[2] = obj;
   const intl = tmp3(tmp2[22]).intl;
@@ -125,10 +141,19 @@ function JoinVoiceButton(channel) {
 }
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 createCacheKey = { spacer: { width: 8 }, actionBarContainer: null };
-createCacheKey = { paddingHorizontal: 12, paddingTop: 16, justifyContent: "center", alignItems: "flex-start", flexDirection: "row", height: require("sum").CALL_ACTION_BAR_HEIGHT };
+createCacheKey = {
+  paddingHorizontal: 12,
+  paddingTop: 16,
+  justifyContent: "center",
+  alignItems: "flex-start",
+  flexDirection: "row",
+  height: require("sum").CALL_ACTION_BAR_HEIGHT,
+};
 createCacheKey[1] = createCacheKey;
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallConnectingScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/video_calls/native/components/ChannelCallConnectingScreen.tsx",
+);
 
 export const showVoiceSettingsActionSheet = function showVoiceSettingsActionSheet(guildId) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
@@ -151,7 +176,7 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
       };
     }
   }
-  const items = [callback(View, { style: { width: 4 } }), , , ];
+  const items = [callback(View, { style: { width: 4 } }), , ,];
   let tmp9Result = null;
   if (null != fn) {
     obj = { source: null, onPress: null, accessibilityLabel: null };

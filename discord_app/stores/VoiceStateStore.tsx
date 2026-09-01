@@ -130,8 +130,36 @@ function mergeVoiceState(guildId, userId) {
     if (null == guildId.channelId) {
       return null;
     } else {
-      const obj = { channelId: null, deaf: null, mute: null, requestToSpeakTimestamp: null, selfDeaf: null, selfMute: null, selfStream: null, selfVideo: null, sessionId: null, suppress: null, userId: null, discoverable: null, connectedAt: null };
-      ({ channelId: obj[0], deaf: obj[1], mute: obj[2], requestToSpeakTimestamp: obj[3], selfDeaf: obj[4], selfMute: obj[5], selfStream: obj[6], selfVideo: obj[7], sessionId: obj[8], suppress: obj[9], userId: obj[10], discoverable: obj[11], connectedAt: obj[12] } = tmp);
+      const obj = {
+        channelId: null,
+        deaf: null,
+        mute: null,
+        requestToSpeakTimestamp: null,
+        selfDeaf: null,
+        selfMute: null,
+        selfStream: null,
+        selfVideo: null,
+        sessionId: null,
+        suppress: null,
+        userId: null,
+        discoverable: null,
+        connectedAt: null,
+      };
+      ({
+        channelId: obj[0],
+        deaf: obj[1],
+        mute: obj[2],
+        requestToSpeakTimestamp: obj[3],
+        selfDeaf: obj[4],
+        selfMute: obj[5],
+        selfStream: obj[6],
+        selfVideo: obj[7],
+        sessionId: obj[8],
+        suppress: obj[9],
+        userId: obj[10],
+        discoverable: obj[11],
+        connectedAt: obj[12],
+      } = tmp);
       if (null != merge) {
         let mergeResult = merge.merge(obj);
       } else {
@@ -159,8 +187,7 @@ let closure_15 = {};
 let closure_16 = {};
 let closure_17 = {};
 const Store = initializeDefault.Store;
-class VoiceStateStore extends Store {
-}
+class VoiceStateStore extends Store {}
 const prototype = VoiceStateStore.prototype;
 prototype["getAllVoiceStates"] = function getAllVoiceStates() {
   return closure_11;
@@ -363,7 +390,7 @@ Object.defineProperty(prototype, "userHasBeenMovedVersion", {
   get: function userHasBeenMovedVersion() {
     return c9;
   },
-  set: undefined
+  set: undefined,
 });
 VoiceStateStore.displayName = "VoiceStateStore";
 const voiceStateStore = new VoiceStateStore(dispatcherDefault, {
@@ -426,34 +453,68 @@ const voiceStateStore = new VoiceStateStore(dispatcherDefault, {
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
     channelId = channelId.channelId;
-    return callback(updateVoiceState(channelId.guildId, closure_3, (set) => {
-      let result;
-      if (set != null) {
-        result = set.set("channelId", channelId);
-      }
-      return result;
-    }), 1)[0];
+    return callback(
+      updateVoiceState(channelId.guildId, closure_3, (set) => {
+        let result;
+        if (set != null) {
+          result = set.set("channelId", channelId);
+        }
+        return result;
+      }),
+      1,
+    )[0];
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
     return voiceStates.reduce((arg0, guildId) => {
       let flag = arg0;
       closure_0 = guildId;
-      let tmp = callback(callback2(guildId.guildId, guildId.userId, (merge) => {
-        if (null == guildId.channelId) {
-          return null;
-        } else {
-          const obj = { channelId: null, deaf: null, mute: null, requestToSpeakTimestamp: null, selfDeaf: null, selfMute: null, selfStream: null, selfVideo: null, sessionId: null, suppress: null, userId: null, discoverable: null, connectedAt: null };
-          ({ channelId: obj[0], deaf: obj[1], mute: obj[2], requestToSpeakTimestamp: obj[3], selfDeaf: obj[4], selfMute: obj[5], selfStream: obj[6], selfVideo: obj[7], sessionId: obj[8], suppress: obj[9], userId: obj[10], discoverable: obj[11], connectedAt: obj[12] } = tmp);
-          if (null != merge) {
-            let mergeResult = merge.merge(obj);
+      let tmp = callback(
+        callback2(guildId.guildId, guildId.userId, (merge) => {
+          if (null == guildId.channelId) {
+            return null;
           } else {
-            mergeResult = new closure_1_6(obj);
+            const obj = {
+              channelId: null,
+              deaf: null,
+              mute: null,
+              requestToSpeakTimestamp: null,
+              selfDeaf: null,
+              selfMute: null,
+              selfStream: null,
+              selfVideo: null,
+              sessionId: null,
+              suppress: null,
+              userId: null,
+              discoverable: null,
+              connectedAt: null,
+            };
+            ({
+              channelId: obj[0],
+              deaf: obj[1],
+              mute: obj[2],
+              requestToSpeakTimestamp: obj[3],
+              selfDeaf: obj[4],
+              selfMute: obj[5],
+              selfStream: obj[6],
+              selfVideo: obj[7],
+              sessionId: obj[8],
+              suppress: obj[9],
+              userId: obj[10],
+              discoverable: obj[11],
+              connectedAt: obj[12],
+            } = tmp);
+            if (null != merge) {
+              let mergeResult = merge.merge(obj);
+            } else {
+              mergeResult = new closure_1_6(obj);
+            }
+            return mergeResult;
           }
-          return mergeResult;
-        }
-        tmp = guildId;
-      }), 3);
+          tmp = guildId;
+        }),
+        3,
+      );
       if (tmp[0]) {
         let tmp5 = guildId.sessionId === closure_4;
         if (tmp5) {
@@ -525,7 +586,7 @@ const voiceStateStore = new VoiceStateStore(dispatcherDefault, {
   },
   RTC_CONNECTION_PLATFORM: function handleRTCConnectionPlatform(userId) {
     closure_17["" + userId.userId + ":" + userId.channelId] = userId.platform;
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/VoiceStateStore.tsx");
 

@@ -49,7 +49,7 @@ const memoResult = importAllResult.memo((type) => {
           }
           closure_1_4({ type: value, values: found });
         },
-        disabled: null
+        disabled: null,
       };
       type = label.value;
       let tmp3 = closure_5.length >= maxValues;
@@ -58,10 +58,12 @@ const memoResult = importAllResult.memo((type) => {
       }
       obj[4] = tmp3;
       return state(type(options[4]).TableCheckboxRow, obj, label.value);
-    })
+    }),
   };
   return state(type(options[3]).TableRowGroup, obj);
 });
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/CheckboxGroupActionComponent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/native/actions/CheckboxGroupActionComponent.tsx",
+);
 
 export default memoResult;

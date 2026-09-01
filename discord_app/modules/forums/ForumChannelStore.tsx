@@ -5,7 +5,12 @@ import set from "../../../_runtime/00002_set.js";
 
 const require = arg1;
 let set = new Set();
-let obj = { layoutType: require("set").ForumLayout.LIST, sortOrder: require("set").ThreadSortOrder.CREATION_DATE, tagFilter: set, tagSetting: require("set").ThreadSearchTagSetting.MATCH_SOME };
+let obj = {
+  layoutType: require("set").ForumLayout.LIST,
+  sortOrder: require("set").ThreadSortOrder.CREATION_DATE,
+  tagFilter: set,
+  tagSetting: require("set").ThreadSearchTagSetting.MATCH_SOME,
+};
 let closure_6 = function ForumChannelStoreState(set, get) {
   obj = Object.create(new.target.prototype);
   obj.channelStates = {};

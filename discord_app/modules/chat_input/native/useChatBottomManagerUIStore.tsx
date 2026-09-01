@@ -4,7 +4,12 @@ import keys from "../../../../_runtime/00644_keys.js";
 
 let chatInputContainerHeight = "chatInputContainerHeight";
 let obj = keys.create(() => {
-  obj = { chatInputContainerHeight: new Map(), showingAutoComplete: null, showJumpToPresentButtonChannelId: null, isAtBottom: null };
+  obj = {
+    chatInputContainerHeight: new Map(),
+    showingAutoComplete: null,
+    showJumpToPresentButtonChannelId: null,
+    isAtBottom: null,
+  };
   const map = new Map();
   obj[1] = new Map();
   map1 = new Map();

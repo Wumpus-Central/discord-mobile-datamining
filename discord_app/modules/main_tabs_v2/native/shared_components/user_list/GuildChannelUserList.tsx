@@ -44,7 +44,15 @@ const memoResult = importAllResult.memo(function GuildChannelUserList(searchable
   let ref2 = flag3;
   const isNameplatedList = searchable.isNameplatedList;
   closure_6 = isNameplatedList;
-  ({ canShowDisplayNameStylesFont, disableStickySections, inActionSheet, disableThemedGradient, listStyleOverride, disableBottomSafeZone, insetEnd } = searchable);
+  ({
+    canShowDisplayNameStylesFont,
+    disableStickySections,
+    inActionSheet,
+    disableThemedGradient,
+    listStyleOverride,
+    disableBottomSafeZone,
+    insetEnd,
+  } = searchable);
   if (canShowDisplayNameStylesFont === undefined) {
     canShowDisplayNameStylesFont = false;
   }
@@ -87,20 +95,28 @@ const memoResult = importAllResult.memo(function GuildChannelUserList(searchable
   let tmp6 = ref3(ref2.useState(closure_20), 2);
   first = tmp6[0];
   closure_8 = tmp6[1];
-  const first1 = ref3(ref2.useState(() => {
-    let tmp = channelId(ref[11]);
-    const items = [guildId(ref[11]).AutocompleterResultTypes.USER];
-    obj = { userFilters: obj };
-    obj = { guild: guildId, strict: true };
-    tmp = new tmp((arg0, str) => {
-      if ("" === str.trim()) {
-        callback(closure_1_20);
-      } else {
-        callback(arg0);
-      }
-    }, items, undefined, obj);
-    return tmp;
-  }), 1)[0];
+  const first1 = ref3(
+    ref2.useState(() => {
+      let tmp = channelId(ref[11]);
+      const items = [guildId(ref[11]).AutocompleterResultTypes.USER];
+      obj = { userFilters: obj };
+      obj = { guild: guildId, strict: true };
+      tmp = new tmp(
+        (arg0, str) => {
+          if ("" === str.trim()) {
+            callback(closure_1_20);
+          } else {
+            callback(arg0);
+          }
+        },
+        items,
+        undefined,
+        obj,
+      );
+      return tmp;
+    }),
+    1,
+  )[0];
   closure_9 = first1;
   let items = [flag, first1];
   const effect = ref2.useEffect(() => {
@@ -205,26 +221,30 @@ const memoResult = importAllResult.memo(function GuildChannelUserList(searchable
   closure_2 = tmp10;
   closure_6 = tmp21;
   const items9 = [channelId, guildId, tmp10, tmp21, ref2, ref, ref3];
-  memo2 = ref2.useMemo(() => channelId(ref[13])(() => {
-    let tmp = null == ref.current || closure_2;
-    if (!tmp) {
-      let tmp4 = closure_1 !== closure_1_7;
-      if (tmp4) {
-        tmp4 = null == closure_1_10.getChannel(tmp2);
-      }
-      tmp = tmp4;
-    }
-    if (!tmp) {
-      let obj = closure_1_0(closure_1_3[14]);
-      obj = { guildId: null, channelId: null, y: null, height: null, rowHeight: null };
-      obj[0] = closure_0;
-      obj[1] = closure_1;
-      obj[2] = ref2.current;
-      obj[3] = ref3.current;
-      obj[4] = closure_6;
-      const result = obj.subscribeChannelDimensions(obj);
-    }
-  }, 50), items9);
+  memo2 = ref2.useMemo(
+    () =>
+      channelId(ref[13])(() => {
+        let tmp = null == ref.current || closure_2;
+        if (!tmp) {
+          let tmp4 = closure_1 !== closure_1_7;
+          if (tmp4) {
+            tmp4 = null == closure_1_10.getChannel(tmp2);
+          }
+          tmp = tmp4;
+        }
+        if (!tmp) {
+          let obj = closure_1_0(closure_1_3[14]);
+          obj = { guildId: null, channelId: null, y: null, height: null, rowHeight: null };
+          obj[0] = closure_0;
+          obj[1] = closure_1;
+          obj[2] = ref2.current;
+          obj[3] = ref3.current;
+          obj[4] = closure_6;
+          const result = obj.subscribeChannelDimensions(obj);
+        }
+      }, 50),
+    items9,
+  );
   const items10 = [memo2];
   const items11 = [memo2];
   const callback1 = ref2.useCallback((nativeEvent) => {
@@ -324,7 +344,24 @@ const memoResult = importAllResult.memo(function GuildChannelUserList(searchable
     found = first;
   }, items14);
   const items15 = [groups, memo3, tmp32];
-  const items16 = [tmp32, stateFromStoresArray, memo3, tmp10, guildId, rows, groups, memo1, onUserPress, flag3, channelId, stateFromStores1, onUserLongPress, analyticsLocations, isNameplatedList, canShowDisplayNameStylesFont];
+  const items16 = [
+    tmp32,
+    stateFromStoresArray,
+    memo3,
+    tmp10,
+    guildId,
+    rows,
+    groups,
+    memo1,
+    onUserPress,
+    flag3,
+    channelId,
+    stateFromStores1,
+    onUserLongPress,
+    analyticsLocations,
+    isNameplatedList,
+    canShowDisplayNameStylesFont,
+  ];
   const callback3 = obj.useCallback((arg0) => {
     if (memo3.length > 0) {
       let obj = { type: "section", props: null };
@@ -372,7 +409,22 @@ const memoResult = importAllResult.memo(function GuildChannelUserList(searchable
         user = tmp3.user;
         const memberListMember = tmp3.memberListMember;
         ({ guildMember, comparator } = tmp3);
-        obj = { type: null, user: null, nickname: null, usernameColor: null, roleColors: null, isNameplatedRow: null, premiumSince: null, isOwner: null, guildId: null, canShowDisplayNameStylesFont: null, onPress: null, onLongPress: null, start: null, end: null };
+        obj = {
+          type: null,
+          user: null,
+          nickname: null,
+          usernameColor: null,
+          roleColors: null,
+          isNameplatedRow: null,
+          premiumSince: null,
+          isOwner: null,
+          guildId: null,
+          canShowDisplayNameStylesFont: null,
+          onPress: null,
+          onLongPress: null,
+          start: null,
+          end: null,
+        };
         obj[0] = memo1.NONE;
         obj[1] = user;
         let nick;
@@ -565,8 +617,23 @@ const memoResult = importAllResult.memo(function GuildChannelUserList(searchable
     obj[0] = items17;
     tmp35Result = tmp35(tmp36, obj);
   }
-  const items18 = [tmp35Result, ];
-  let obj4 = { ref, sections: null, getItemProps: null, getSectionProps: null, renderListHeader: null, listHeaderSize: null, onLayout: null, onScroll: null, disableStickySections: null, inActionSheet: null, disableThemedGradient: null, listStyleOverride: null, disableBottomSafeZone: null, insetEnd: null };
+  const items18 = [tmp35Result];
+  let obj4 = {
+    ref,
+    sections: null,
+    getItemProps: null,
+    getSectionProps: null,
+    renderListHeader: null,
+    listHeaderSize: null,
+    onLayout: null,
+    onScroll: null,
+    disableStickySections: null,
+    inActionSheet: null,
+    disableThemedGradient: null,
+    listStyleOverride: null,
+    disableBottomSafeZone: null,
+    insetEnd: null,
+  };
   if (tmp32) {
     if (!tmp10) {
       const items19 = [stateFromStoresArray.length];
@@ -602,6 +669,8 @@ const memoResult = importAllResult.memo(function GuildChannelUserList(searchable
     mapped = groups.map((count) => count.count);
   }
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GuildChannelUserList.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/GuildChannelUserList.tsx",
+);
 
 export default memoResult;

@@ -20,11 +20,40 @@ require = arg1;
 let c3 = importAllResult;
 ({ CurrencyCodes: closure_6, VerticalGradient: error } = ME);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let obj = { regularMetadataContainer: null, assetName: null, priceVariantsContainer: null, priceDescription: null, text: null, discountPercentage: null, wheelIcon: null, androidTextPadding: null };
-obj = { position: "absolute", height: "45%", width: "100%", padding: 10, flex: 1, bottom: 0, overflow: "hidden", borderBottomLeftRadius: ThemesDefault.radii.sm, borderBottomRightRadius: ThemesDefault.radii.sm, display: "flex", flexDirection: "column", justifyContent: "flex-end" };
+let obj = {
+  regularMetadataContainer: null,
+  assetName: null,
+  priceVariantsContainer: null,
+  priceDescription: null,
+  text: null,
+  discountPercentage: null,
+  wheelIcon: null,
+  androidTextPadding: null,
+};
+obj = {
+  position: "absolute",
+  height: "45%",
+  width: "100%",
+  padding: 10,
+  flex: 1,
+  bottom: 0,
+  overflow: "hidden",
+  borderBottomLeftRadius: ThemesDefault.radii.sm,
+  borderBottomRightRadius: ThemesDefault.radii.sm,
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "flex-end",
+};
 obj[0] = obj;
 obj[1] = { marginBottom: 4 };
-createCacheKey = { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", width: "100%", gap: ThemesDefault.space.PX_4 };
+createCacheKey = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  width: "100%",
+  gap: ThemesDefault.space.PX_4,
+};
 obj[2] = createCacheKey;
 obj[3] = { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 };
 obj[4] = { flexShrink: 1 };
@@ -44,7 +73,11 @@ const memoResult = importAllResult.memo((arg0) => {
   obj1 = hasShopDiscount(memo[8]);
   selectedProduct = obj1.getSelectedProduct(product, defaultVariantIndex);
   let obj2 = hasShopDiscount(memo[9]);
-  const formattedPriceForCollectiblesProduct = obj2.getFormattedPriceForCollectiblesProduct(selectedProduct, hasShopDiscount, true);
+  const formattedPriceForCollectiblesProduct = obj2.getFormattedPriceForCollectiblesProduct(
+    selectedProduct,
+    hasShopDiscount,
+    true,
+  );
   const items = [selectedProduct, hasShopDiscount];
   memo = balance.useMemo(() => {
     let obj = hasShopDiscount(memo[8]);
@@ -52,9 +85,17 @@ const memoResult = importAllResult.memo((arg0) => {
     return obj.getProductOrbPrice(obj);
   }, items);
   const items1 = [selectedProduct, hasShopDiscount];
-  const memo1 = balance.useMemo(() => hasShopDiscount(memo[10]).getProductDiscount(selectedProduct, hasShopDiscount).discountPercentage, items1);
+  const memo1 = balance.useMemo(
+    () => hasShopDiscount(memo[10]).getProductDiscount(selectedProduct, hasShopDiscount).discountPercentage,
+    items1,
+  );
   const items2 = [selectedProduct, hasShopDiscount];
-  const memo2 = balance.useMemo(() => hasShopDiscount(memo[10]).getProductDiscount(selectedProduct, hasShopDiscount, closure_1_6.DISCORD_ORB).discountPercentage, items2);
+  const memo2 = balance.useMemo(
+    () =>
+      hasShopDiscount(memo[10]).getProductDiscount(selectedProduct, hasShopDiscount, closure_1_6.DISCORD_ORB)
+        .discountPercentage,
+    items2,
+  );
   let obj3 = hasShopDiscount(memo[11]);
   balance = obj3.useFetchVirtualCurrencyBalance().balance;
   const items3 = [balance, memo];
@@ -76,7 +117,13 @@ const memoResult = importAllResult.memo((arg0) => {
   if ("partiallyOwnedBundle" === collectibleProductState) {
     obj = { style: null, children: null };
     obj[0] = styles.priceDescription;
-    obj = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: null };
+    obj = {
+      variant: "text-xs/semibold",
+      color: "mobile-text-heading-primary",
+      lineClamp: 1,
+      style: null,
+      children: null,
+    };
     obj[3] = styles.text;
     const intl6 = tmp(tmp2[14]).intl;
     obj[4] = intl6.string(tmp(tmp2[14]).t.BEjTij);
@@ -85,7 +132,13 @@ const memoResult = importAllResult.memo((arg0) => {
   } else if ("purchased" === collectibleProductState) {
     obj1 = { style: null, children: null };
     obj1[0] = styles.priceDescription;
-    obj2 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: null };
+    obj2 = {
+      variant: "text-xs/semibold",
+      color: "mobile-text-heading-primary",
+      lineClamp: 1,
+      style: null,
+      children: null,
+    };
     obj2[3] = styles.text;
     const intl5 = tmp(tmp2[14]).intl;
     obj2[4] = intl5.string(tmp(tmp2[14]).t["6cfuDj"]);
@@ -94,7 +147,13 @@ const memoResult = importAllResult.memo((arg0) => {
   } else if ("nitroUpsell" === collectibleProductState) {
     obj3 = { style: null, children: null };
     obj3[0] = styles.priceDescription;
-    const obj4 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: null };
+    const obj4 = {
+      variant: "text-xs/semibold",
+      color: "mobile-text-heading-primary",
+      lineClamp: 1,
+      style: null,
+      children: null,
+    };
     obj4[3] = styles.text;
     const intl4 = tmp(tmp2[14]).intl;
     obj4[4] = intl4.string(tmp(tmp2[14]).t.sEAnVH);
@@ -103,7 +162,13 @@ const memoResult = importAllResult.memo((arg0) => {
   } else if ("nitroClaim" === collectibleProductState) {
     const obj5 = { style: null, children: null };
     obj5[0] = styles.priceDescription;
-    const obj6 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: null };
+    const obj6 = {
+      variant: "text-xs/semibold",
+      color: "mobile-text-heading-primary",
+      lineClamp: 1,
+      style: null,
+      children: null,
+    };
     obj6[3] = styles.text;
     const intl3 = tmp(tmp2[14]).intl;
     obj6[4] = intl3.string(tmp(tmp2[14]).t.rt69oo);
@@ -113,7 +178,13 @@ const memoResult = importAllResult.memo((arg0) => {
     if (isDisabled) {
       const obj7 = { style: null, children: null };
       obj7[0] = styles.priceDescription;
-      const obj8 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: null };
+      const obj8 = {
+        variant: "text-xs/semibold",
+        color: "mobile-text-heading-primary",
+        lineClamp: 1,
+        style: null,
+        children: null,
+      };
       obj8[3] = styles.text;
       const intl2 = tmp(tmp2[14]).intl;
       obj8[4] = intl2.string(tmp(tmp2[14]).t.wu4gyV);
@@ -127,7 +198,7 @@ const memoResult = importAllResult.memo((arg0) => {
               tmp11Result = tmp11(tmp12, obj9);
             }
           }
-          const items4 = [styles.priceDescription, ];
+          const items4 = [styles.priceDescription];
           let num = 1;
           if (false === memo3) {
             num = 0.5;
@@ -139,13 +210,20 @@ const memoResult = importAllResult.memo((arg0) => {
           obj9[0] = items4;
           const obj11 = { size: "xxs", color: "mobile-text-heading-primary", style: null };
           obj11[2] = styles.wheelIcon;
-          const items5 = [callback(tmp(tmp2[15]).OrbsIcon, obj11), , ];
-          const obj12 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityLabel: null, style: null, children: null };
+          const items5 = [callback(tmp(tmp2[15]).OrbsIcon, obj11), ,];
+          const obj12 = {
+            variant: "text-xs/semibold",
+            color: "mobile-text-heading-primary",
+            lineClamp: 1,
+            accessibilityLabel: null,
+            style: null,
+            children: null,
+          };
           const intl = tmp(tmp2[14]).intl;
           const obj13 = { orbAmount: null };
           obj13[0] = memo.amount;
           obj12[3] = intl.formatToPlainString(tmp(tmp2[14]).t.W4DfeF, obj13);
-          const items6 = [styles.text, ];
+          const items6 = [styles.text];
           let tmpResult = tmp(tmp2[16]);
           items6[1] = tmpResult.isAndroid() && styles.androidTextPadding;
           obj12[4] = items6;
@@ -153,14 +231,20 @@ const memoResult = importAllResult.memo((arg0) => {
           items5[1] = callback(tmp(tmp2[13]).Text, obj12);
           let tmp14Result = memo2 >= tmp(tmp2[10]).DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
           if (tmp14Result) {
-            const items7 = [, , ];
+            const items7 = [, ,];
             ({ discountPercentage: arr8[0], text: arr8[1] } = styles);
             tmpResult = tmp(tmp2[16]);
             let androidTextPadding;
             if (tmpResult.isAndroid()) {
               androidTextPadding = styles.androidTextPadding;
             }
-            const obj14 = { style: null, color: "text-feedback-positive", variant: "text-xs/semibold", lineClamp: 1, children: null };
+            const obj14 = {
+              style: null,
+              color: "text-feedback-positive",
+              variant: "text-xs/semibold",
+              lineClamp: 1,
+              children: null,
+            };
             items7[2] = androidTextPadding;
             obj14[0] = items7;
             const _HermesInternal = HermesInternal;
@@ -175,23 +259,35 @@ const memoResult = importAllResult.memo((arg0) => {
       const obj15 = { style: null, children: null };
       obj15[0] = styles.priceDescription;
       if (!hasShopDiscount) {
-        const items8 = [hasShopDiscount, , ];
-        const items9 = [styles.text, ];
+        const items8 = [hasShopDiscount, ,];
+        const items9 = [styles.text];
         const tmpResult1 = tmp(tmp2[16]);
-        const obj16 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: null };
+        const obj16 = {
+          variant: "text-xs/semibold",
+          color: "mobile-text-heading-primary",
+          lineClamp: 1,
+          style: null,
+          children: null,
+        };
         items9[1] = tmp(tmp2[16]).isAndroid() && styles.androidTextPadding;
         obj16[3] = items9;
         obj16[4] = formattedPriceForCollectiblesProduct;
         items8[1] = callback(tmp(tmp2[13]).Text, obj16);
         let tmp24Result = memo1 >= tmp(tmp2[10]).DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
         if (tmp24Result) {
-          const items10 = [, , ];
+          const items10 = [, ,];
           ({ discountPercentage: arr11[0], text: arr11[1] } = styles);
           let androidTextPadding1;
           if (tmpResult2.isAndroid()) {
             androidTextPadding1 = styles.androidTextPadding;
           }
-          const obj17 = { style: null, color: "text-feedback-positive", variant: "text-xs/semibold", lineClamp: 1, children: null };
+          const obj17 = {
+            style: null,
+            color: "text-feedback-positive",
+            variant: "text-xs/semibold",
+            lineClamp: 1,
+            children: null,
+          };
           items10[2] = androidTextPadding1;
           obj17[0] = items10;
           const _HermesInternal2 = HermesInternal;
@@ -247,17 +343,40 @@ const memoResult1 = importAllResult.memo(function CardDetailsV2(arg0) {
   const tmp2Result6 = getCardProductName;
   const items = [closure_5];
   const stateFromStores = initialize.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
-  obj = { style: items1, colors: items2, locations: [0, 0.4, 1], start: constants.START, end: constants.END, children: null };
+  obj = {
+    style: items1,
+    colors: items2,
+    locations: [0, 0.4, 1],
+    start: constants.START,
+    end: constants.END,
+    children: null,
+  };
   items1 = [tmp.regularMetadataContainer];
   items2 = [hexToRgbaStringResult1, hexToRgbaStringResult, token];
   const tmp2Result7 = initialize;
-  obj = { style: tmp.assetName, variant: "heading-sm/bold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityRole: "header", children: cardProductName };
-  const items3 = [callback(Text.Text, obj), ];
+  obj = {
+    style: tmp.assetName,
+    variant: "heading-sm/bold",
+    color: "mobile-text-heading-primary",
+    lineClamp: 1,
+    accessibilityRole: "header",
+    children: cardProductName,
+  };
+  const items3 = [callback(Text.Text, obj)];
   let tmp15Result = !hidePrice;
   if (!hidePrice) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.priceVariantsContainer;
-    const obj2 = { product: null, hasShopDiscount: null, discountSource: null, styles: null, collectibleProductState: null, isFetchingGoogleSkus: null, preferVCPrice: null, isDisabled: null };
+    const obj2 = {
+      product: null,
+      hasShopDiscount: null,
+      discountSource: null,
+      styles: null,
+      collectibleProductState: null,
+      isFetchingGoogleSkus: null,
+      preferVCPrice: null,
+      isDisabled: null,
+    };
     obj2[0] = product;
     obj2[1] = tmp8;
     obj2[2] = shopDiscountSource;
@@ -266,7 +385,7 @@ const memoResult1 = importAllResult.memo(function CardDetailsV2(arg0) {
     obj2[5] = stateFromStores;
     obj2[6] = preferVCPrice;
     obj2[7] = isDisabled;
-    const items4 = [tmp17(closure_11, obj2), ];
+    const items4 = [tmp17(closure_11, obj2)];
     obj3 = { product: null };
     obj3[0] = product;
     items4[1] = tmp17(tmp7(12624), obj3);
@@ -277,6 +396,8 @@ const memoResult1 = importAllResult.memo(function CardDetailsV2(arg0) {
   obj[5] = items3;
   return closure_9(LinearGradientDefault, obj);
 });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardCardDetailsV2.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/CollectiblesShopCardCardDetailsV2.tsx",
+);
 
 export default memoResult1;

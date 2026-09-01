@@ -10,27 +10,91 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ View: c5, Pressable: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { body: null, gradientContainer: null, dropperContainer: null, dropper: null, gradient: null, optionContainer: null, swatchWrapper: null, pressable: null, selected: null, option: null };
-createCacheKey = { paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  body: null,
+  gradientContainer: null,
+  dropperContainer: null,
+  dropper: null,
+  gradient: null,
+  optionContainer: null,
+  swatchWrapper: null,
+  pressable: null,
+  selected: null,
+  option: null,
+};
+createCacheKey = {
+  paddingVertical: ThemesDefault.space.PX_12,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  flexGrow: 1,
+  justifyContent: "center",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
-let obj1 = { flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
-createCacheKey[2] = { left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, position: "absolute", flexDirection: "row", justifyContent: "space-between" };
-let obj2 = { left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, position: "absolute", flexDirection: "row", justifyContent: "space-between" };
-createCacheKey[3] = { borderColor: "white", padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round, borderWidth: 1 };
-let obj3 = { borderColor: "white", padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round, borderWidth: 1 };
+createCacheKey[1] = {
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+};
+let obj1 = {
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+};
+createCacheKey[2] = {
+  left: ThemesDefault.space.PX_24,
+  right: ThemesDefault.space.PX_24,
+  position: "absolute",
+  flexDirection: "row",
+  justifyContent: "space-between",
+};
+let obj2 = {
+  left: ThemesDefault.space.PX_24,
+  right: ThemesDefault.space.PX_24,
+  position: "absolute",
+  flexDirection: "row",
+  justifyContent: "space-between",
+};
+createCacheKey[3] = {
+  borderColor: "white",
+  padding: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.round,
+  borderWidth: 1,
+};
+let obj3 = {
+  borderColor: "white",
+  padding: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.round,
+  borderWidth: 1,
+};
 createCacheKey[4] = { height: 50, width: "100%", borderRadius: ThemesDefault.radii.sm };
 let obj4 = { height: 50, width: "100%", borderRadius: ThemesDefault.radii.sm };
 createCacheKey[5] = { flexDirection: "row", flexWrap: "wrap", paddingHorizontal: ThemesDefault.space.PX_4 };
 createCacheKey[6] = { width: "25%", padding: 2 };
 let obj5 = { flexDirection: "row", flexWrap: "wrap", paddingHorizontal: ThemesDefault.space.PX_4 };
-createCacheKey[7] = { height: 40, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 2, borderColor: "transparent" };
-const obj6 = { height: 40, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 2, borderColor: "transparent" };
+createCacheKey[7] = {
+  height: 40,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+  borderWidth: 2,
+  borderColor: "transparent",
+};
+const obj6 = {
+  height: 40,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+  borderWidth: 2,
+  borderColor: "transparent",
+};
 createCacheKey[8] = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[9] = { flex: 1 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj7 = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
-let result = require("set").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesGradientPickerSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/display_name_styles/native/DisplayNameStylesGradientPickerSheet.tsx",
+);
 
 export default function DisplayNameStylesColorPickerSheet(selectedColors) {
   ({ selectedEffectId, onSelectColors } = selectedColors);
@@ -55,7 +119,9 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
   const items1 = [arr, displayNameStylesEffectConfig.defaultColors];
   const callback = first.useCallback(() => {
     let obj = onSelectColors(displayNameStylesEffectConfig[10]);
-    const result = obj.triggerHapticFeedback(onSelectColors(displayNameStylesEffectConfig[10]).HapticFeedbackTypes.IMPACT_MEDIUM);
+    const result = obj.triggerHapticFeedback(
+      onSelectColors(displayNameStylesEffectConfig[10]).HapticFeedbackTypes.IMPACT_MEDIUM,
+    );
     onSelectColors(first);
     obj = { default: false, colors: first };
     lib(displayNameStylesEffectConfig[11]).track(constants.DISPLAY_NAME_STYLES_COLOR_SELECTED, obj);
@@ -81,21 +147,28 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
     if (num == null) {
       num = 0;
     }
-    lib(displayNameStylesEffectConfig[13])({
-      color: num,
-      onSelect(arg0) {
-        closure_0 = arg0;
-        const result = onSelectColors(displayNameStylesEffectConfig[10]).triggerHapticFeedback(onSelectColors(displayNameStylesEffectConfig[10]).HapticFeedbackTypes.IMPACT_MEDIUM);
-        closure_1_5((arr) => arr.map((arg0, arg1) => {
-          let tmp = arg0;
-          if (arg1 === closure_1_0) {
-            tmp = closure_0;
-          }
-          return tmp;
-        }));
+    lib(displayNameStylesEffectConfig[13])(
+      {
+        color: num,
+        onSelect(arg0) {
+          closure_0 = arg0;
+          const result = onSelectColors(displayNameStylesEffectConfig[10]).triggerHapticFeedback(
+            onSelectColors(displayNameStylesEffectConfig[10]).HapticFeedbackTypes.IMPACT_MEDIUM,
+          );
+          closure_1_5((arr) =>
+            arr.map((arg0, arg1) => {
+              let tmp = arg0;
+              if (arg1 === closure_1_0) {
+                tmp = closure_0;
+              }
+              return tmp;
+            }),
+          );
+        },
+        actionButtonVariant: "primary",
       },
-      actionButtonVariant: "primary"
-    }, "stack");
+      "stack",
+    );
   }, items2);
   closure_7 = first.useCallback((arg0) => {
     const items = [...arg0];
@@ -111,8 +184,13 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
   obj[0] = callback(onSelectColors(displayNameStylesEffectConfig[15]).BottomSheetTitleHeader, obj);
   let obj2 = { style: tmp.body, children: null };
   const obj3 = { style: tmp.gradientContainer, children: null };
-  const obj4 = { style: tmp.gradient, colors: first.map((color) => onSelectColors(displayNameStylesEffectConfig[19]).int2hex(color)), start: { x: 0, y: 0 }, end: { x: 1, y: 0 } };
-  const items3 = [callback(importDefault(displayNameStylesEffectConfig[18]), obj4), ];
+  const obj4 = {
+    style: tmp.gradient,
+    colors: first.map((color) => onSelectColors(displayNameStylesEffectConfig[19]).int2hex(color)),
+    start: { x: 0, y: 0 },
+    end: { x: 1, y: 0 },
+  };
+  const items3 = [callback(importDefault(displayNameStylesEffectConfig[18]), obj4)];
   const obj5 = { style: tmp.dropperContainer, children: null };
   arr = Array.from({ length: effectColorCount });
   obj5[1] = arr.map((arg0, arg1) => {
@@ -124,17 +202,20 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
       },
       accessibilityLabel: null,
       accessibilityRole: "button",
-      children: null
+      children: null,
     };
     const intl = onSelectColors(displayNameStylesEffectConfig[17]).intl;
     obj = { number: arg1 + 1 };
     obj[2] = intl.formatToPlainString(onSelectColors(displayNameStylesEffectConfig[17]).t.n5Ve0L, obj);
-    obj[4] = closure_1_8(onSelectColors(displayNameStylesEffectConfig[20]).EyeDropperIcon, { color: "white", size: "sm" });
+    obj[4] = closure_1_8(onSelectColors(displayNameStylesEffectConfig[20]).EyeDropperIcon, {
+      color: "white",
+      size: "sm",
+    });
     return closure_1_8(closure_6, obj, arg1);
   });
   items3[1] = callback(closure_5, obj5);
   obj3[1] = items3;
-  const items4 = [callback2(closure_5, obj3), , ];
+  const items4 = [callback2(closure_5, obj3), ,];
   const tmp7 = importDefault(displayNameStylesEffectConfig[18]);
   items4[1] = callback(closure_5, {
     style: tmp.optionContainer,
@@ -143,7 +224,7 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
       let obj = lib(displayNameStylesEffectConfig[21]);
       const isEqualResult = obj.isEqual(colors, first);
       obj = { style: lib.swatchWrapper, children: null };
-      const items = [lib.pressable, ];
+      const items = [lib.pressable];
       let selected = isEqualResult;
       if (isEqualResult) {
         selected = tmp6.selected;
@@ -156,14 +237,19 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
         accessibilityRole: "button",
         accessibilityState: { selected: isEqualResult },
         accessibilityLabel: accessibilityLabel.a11yLabel,
-        children: null
+        children: null,
       };
       items[1] = selected;
-      obj1 = { style: lib.option, colors: colors.map((color) => colors(table[19]).int2hex(color)), start: { x: 0, y: 0 }, end: { x: 1, y: 0 } };
+      obj1 = {
+        style: lib.option,
+        colors: colors.map((color) => colors(table[19]).int2hex(color)),
+        start: { x: 0, y: 0 },
+        end: { x: 1, y: 0 },
+      };
       obj[5] = closure_1_8(lib(displayNameStylesEffectConfig[18]), obj1);
       obj[1] = closure_1_8(onSelectColors(displayNameStylesEffectConfig[22]).PressableOpacity, obj);
       return closure_1_8(closure_5, obj, arg1);
-    })
+    }),
   });
   const obj7 = { text: null, onPress: null, variant: "secondary" };
   const intl2 = onSelectColors(displayNameStylesEffectConfig[17]).intl;
@@ -173,4 +259,4 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
   obj2[1] = items4;
   obj[1] = callback2(closure_5, obj2);
   return callback(onSelectColors(displayNameStylesEffectConfig[14]).BottomSheet, obj);
-};
+}

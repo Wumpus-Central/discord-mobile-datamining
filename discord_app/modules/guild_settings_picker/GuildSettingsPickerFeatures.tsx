@@ -8,7 +8,10 @@ import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../../stores/PermissionStore.tsx";
 
 require = arg1;
-let obj = { "server-subscriptions-onboarding": _modDef13630, "server-subscriptions-create-tier-from-template": _modDef13631 };
+let obj = {
+  "server-subscriptions-onboarding": _modDef13630,
+  "server-subscriptions-create-tier-from-template": _modDef13631,
+};
 let closure_6 = {
   title() {
     const intl = getSystemLocale.intl;
@@ -33,8 +36,13 @@ let closure_6 = {
   canCreateGuild: true,
   useIsGuildSupported() {
     const items = [closure_4];
-    return initialize.useStateFromStores(items, () => (guild) => closure_4.canAccessGuildSettings(guild), [], initialize.statesWillNeverBeEqual);
-  }
+    return initialize.useStateFromStores(
+      items,
+      () => (guild) => closure_4.canAccessGuildSettings(guild),
+      [],
+      initialize.statesWillNeverBeEqual,
+    );
+  },
 };
 const result = require("set").fileFinishedImporting("modules/guild_settings_picker/GuildSettingsPickerFeatures.tsx");
 
@@ -75,7 +83,7 @@ export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeat
         tmp = false !== tmp3;
       }
       return tmp;
-    }
+    },
   };
   return obj;
 };

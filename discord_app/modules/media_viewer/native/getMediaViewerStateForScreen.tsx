@@ -54,4 +54,4 @@ export default function getMediaViewerStateForScreen(arg0, arg1, closure_1) {
       return obj2;
     }
   }
-};
+}

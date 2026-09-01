@@ -41,10 +41,17 @@ function SettingsButton() {
     onPress() {
       callback2(paths[16]).itemInteracted("filters_button", "filters_button", "press_info_button");
       const obj = callback2(paths[16]);
-      callback2(paths[16]).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "settings_button", actionIntentType: "open", actionDestinationType: null } });
+      callback2(paths[16]).feedPageActioned({
+        actionParameters: {
+          actionGestureType: "press",
+          actionTargetElement: "settings_button",
+          actionIntentType: "open",
+          actionDestinationType: null,
+        },
+      });
       const obj2 = callback2(paths[16]);
       callback2(paths[17]).openLazy(callback(paths[19])(paths[18], paths.paths), "ICYMISettingsActionSheet", {});
-    }
+    },
   });
 }
 function InfoButton() {
@@ -56,10 +63,17 @@ function InfoButton() {
     onPress() {
       callback2(8622).itemInteracted("info_button", "info_button", "press_info_button");
       const obj = callback2(8622);
-      callback2(8622).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
+      callback2(8622).feedPageActioned({
+        actionParameters: {
+          actionGestureType: "press",
+          actionTargetElement: "info_button",
+          actionIntentType: "open",
+          actionDestinationType: null,
+        },
+      });
       const obj2 = callback2(8622);
       callback(16053).pushICYMIInfoModal({ extendedOnboarding: true });
-    }
+    },
   });
 }
 function ICYMIHeaderTextWrapper() {
@@ -68,17 +82,23 @@ function ICYMIHeaderTextWrapper() {
     style: callback3().headerText,
     children: importAllResult.useMemo(() => {
       let obj = { children: null };
-      obj = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
+      obj = {
+        color: "mobile-text-heading-primary",
+        variant: "heading-lg/bold",
+        maxFontSizeMultiplier: 1.75,
+        accessibilityRole: "header",
+        children: null,
+      };
       const intl = callback(1236).intl;
       obj[4] = intl.string(callback(1236).t.SY4sdZ);
-      const items = [callback2(callback(4474).Text, obj), ];
+      const items = [callback2(callback(4474).Text, obj)];
       obj = { color: "text-brand", variant: "text-xs/bold", style: { marginTop: 4 }, children: null };
       const intl2 = callback(1236).intl;
       obj[3] = intl2.string(callback(1236).t.Ac2OZA);
       items[1] = callback2(callback(4474).Text, obj);
       obj[0] = items;
       return callback3(closure_15, obj);
-    }, [])
+    }, []),
   });
 }
 function handleEndReached() {
@@ -115,7 +135,10 @@ function ICYMI(inNestedNavigator) {
     stateFromStores(visibleItemIds[16]).setTabFocused(isFocused);
   }, items2);
   let obj3 = isFocused(visibleItemIds[39]);
-  const sharedICYMILogic = obj3.useSharedICYMILogic({ showDot: stateFromStores(visibleItemIds[38])().showDot, notificationItem: stateFromStores1 });
+  const sharedICYMILogic = obj3.useSharedICYMILogic({
+    showDot: stateFromStores(visibleItemIds[38])().showDot,
+    notificationItem: stateFromStores1,
+  });
   ({ loading, visibleItemIds } = sharedICYMILogic);
   endVisible = sharedICYMILogic.endVisible;
   ({ isRefreshing, handleOnRefresh } = sharedICYMILogic);
@@ -147,7 +170,11 @@ function ICYMI(inNestedNavigator) {
       hasOpenedEnoughTimesResult = lib.hasOpenedEnoughTimes();
     }
     if (hasOpenedEnoughTimesResult) {
-      stateFromStores(visibleItemIds[17]).openLazy(isFocused(visibleItemIds[19])(visibleItemIds[43], visibleItemIds.paths), "ICYMIFeedbackSheet", {});
+      stateFromStores(visibleItemIds[17]).openLazy(
+        isFocused(visibleItemIds[19])(visibleItemIds[43], visibleItemIds.paths),
+        "ICYMIFeedbackSheet",
+        {},
+      );
       const obj = stateFromStores(visibleItemIds[17]);
     }
   }, items6);
@@ -160,14 +187,16 @@ function ICYMI(inNestedNavigator) {
         obj[1] = !stateFromStores;
         current.scrollToOffset(obj);
       }
-    }
+    },
   };
   ref1 = handleOnRefresh.useRef(obj);
   const obj7 = isFocused(visibleItemIds[37]);
   const scrollToTop = isFocused(visibleItemIds[35]).useScrollToTop(ref1);
   const obj9 = isFocused(visibleItemIds[35]);
   const items7 = [stateFromStores3];
-  stateFromStores3 = isFocused(visibleItemIds[37]).useStateFromStores(items7, () => stateFromStores3.getDoubleTapBehavior());
+  stateFromStores3 = isFocused(visibleItemIds[37]).useStateFromStores(items7, () =>
+    stateFromStores3.getDoubleTapBehavior(),
+  );
   const obj10 = isFocused(visibleItemIds[37]);
   const items8 = [stateFromStores3, isFocused(visibleItemIds[44]).useNavigation(), stateFromStores];
   const effect3 = handleOnRefresh.useEffect(() => {
@@ -265,27 +294,55 @@ function ICYMI(inNestedNavigator) {
   const obj13 = isFocused(visibleItemIds[61]);
   const items11 = [closure_11];
   obj = { style: items12, children: null };
-  items12 = [, ];
+  items12 = [,];
   ({ containerInPanels: arr13[0], containerBackground: arr13[1] } = tmp);
   const stateFromStores4 = isFocused(visibleItemIds[37]).useStateFromStores(items11, () => lib.hasNewContent(), []);
-  const items13 = [callback(closure_22, { inNestedNavigator: inNestedNavigator.inNestedNavigator }), ];
+  const items13 = [callback(closure_22, { inNestedNavigator: inNestedNavigator.inNestedNavigator })];
   obj1 = { style: items14, children: null };
-  items14 = [tmp.flashListWrapper, , ];
-  obj2 = { height: height - stateFromStores(visibleItemIds[34])().top - 32 - 24 - mobileQuestDockHeight, width, marginHorizontal: "auto" };
+  items14 = [tmp.flashListWrapper, ,];
+  obj2 = {
+    height: height - stateFromStores(visibleItemIds[34])().top - 32 - 24 - mobileQuestDockHeight,
+    width,
+    marginHorizontal: "auto",
+  };
   items14[1] = obj2;
   items14[2] = clientThemesOverride;
   obj3 = {
     onPress() {
       stateFromStores(visibleItemIds[16]).itemInteracted("refresh_button", "refresh_button", "press_refresh_button");
       const obj = stateFromStores(visibleItemIds[16]);
-      stateFromStores(visibleItemIds[16]).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "new_content_pill", actionIntentType: "refresh", actionDestinationType: null } });
+      stateFromStores(visibleItemIds[16]).feedPageActioned({
+        actionParameters: {
+          actionGestureType: "press",
+          actionTargetElement: "new_content_pill",
+          actionIntentType: "refresh",
+          actionDestinationType: null,
+        },
+      });
       handleOnRefresh();
       lib();
     },
-    isRefreshing
+    isRefreshing,
   };
-  const items15 = [callback(stateFromStores(visibleItemIds[62]), obj3), , ];
-  obj4 = { ref, scrollEnabled: !loading, extraData: { endVisible }, contentContainerStyle: memo, accessibilityLabel: null, data: null, refreshing: null, refreshControl: null, onEndReachedThreshold: 3, onEndReached: null, keyExtractor: null, renderItem: null, getItemType: null, drawDistance: 100, stickyHeaderIndices: null, viewabilityConfigCallbackPairs: null };
+  const items15 = [callback(stateFromStores(visibleItemIds[62]), obj3), ,];
+  obj4 = {
+    ref,
+    scrollEnabled: !loading,
+    extraData: { endVisible },
+    contentContainerStyle: memo,
+    accessibilityLabel: null,
+    data: null,
+    refreshing: null,
+    refreshControl: null,
+    onEndReachedThreshold: 3,
+    onEndReached: null,
+    keyExtractor: null,
+    renderItem: null,
+    getItemType: null,
+    drawDistance: 100,
+    stickyHeaderIndices: null,
+    viewabilityConfigCallbackPairs: null,
+  };
   const intl = isFocused(visibleItemIds[23]).intl;
   obj4[4] = intl.string(isFocused(visibleItemIds[23]).t.OIgYlQ);
   obj4[5] = data;
@@ -325,13 +382,41 @@ let c4 = importAllResult;
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
 let closure_17 = createCacheKey.createStyles((paddingTop) => {
   let obj = { containerOuterTablet: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: ThemesDefault.space.PX_8, overflow: "hidden", flex: 1, paddingTop };
+  obj = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+    paddingHorizontal: ThemesDefault.space.PX_8,
+    overflow: "hidden",
+    flex: 1,
+    paddingTop,
+  };
   obj[0] = obj;
   return obj;
 });
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
-  let obj = { container: { flex: 1, flexShrink: 1, flexGrow: 1 }, containerInPanels: null, containerBackground: null, flashListWrapper: null, refreshing: null, header: null, headerLeft: null, headerClose: null, headerTitle: null, headerText: null, headerActions: null, notificationBadge: null, loading: null, headerBorder: null };
-  obj = { flex: 1, flexShrink: 1, flexGrow: 1, overflow: "hidden", borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
+  let obj = {
+    container: { flex: 1, flexShrink: 1, flexGrow: 1 },
+    containerInPanels: null,
+    containerBackground: null,
+    flashListWrapper: null,
+    refreshing: null,
+    header: null,
+    headerLeft: null,
+    headerClose: null,
+    headerTitle: null,
+    headerText: null,
+    headerActions: null,
+    notificationBadge: null,
+    loading: null,
+    headerBorder: null,
+  };
+  obj = {
+    flex: 1,
+    flexShrink: 1,
+    flexGrow: 1,
+    overflow: "hidden",
+    borderTopLeftRadius: ThemesDefault.radii.sm,
+    borderTopRightRadius: ThemesDefault.radii.sm,
+  };
   obj[1] = obj;
   obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
   obj[2] = obj;
@@ -339,21 +424,64 @@ let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
   obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, minHeight: 2, flex: 1 };
   obj[4] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   const obj2 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  obj[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "relative", overflow: "hidden", width: "100%" };
+  obj[5] = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    position: "relative",
+    overflow: "hidden",
+    width: "100%",
+  };
   obj[6] = { flexDirection: "row", alignItems: "center" };
-  const obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "relative", overflow: "hidden", width: "100%" };
-  obj[7] = { marginRight: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_32, width: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg };
-  obj[8] = { height: 56, marginHorizontal: margin.margin, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+  const obj3 = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    position: "relative",
+    overflow: "hidden",
+    width: "100%",
+  };
+  obj[7] = {
+    marginRight: ThemesDefault.space.PX_16,
+    height: ThemesDefault.space.PX_32,
+    width: ThemesDefault.space.PX_32,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: ThemesDefault.radii.lg,
+  };
+  obj[8] = {
+    height: 56,
+    marginHorizontal: margin.margin,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  };
   obj[9] = { flexDirection: "row", alignItems: "center", gap: 4 };
-  const obj4 = { marginRight: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_32, width: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg };
-  const obj5 = { height: 56, marginHorizontal: margin.margin, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+  const obj4 = {
+    marginRight: ThemesDefault.space.PX_16,
+    height: ThemesDefault.space.PX_32,
+    width: ThemesDefault.space.PX_32,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: ThemesDefault.radii.lg,
+  };
+  const obj5 = {
+    height: 56,
+    marginHorizontal: margin.margin,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  };
   obj[10] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
   const obj6 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
   obj[11] = { height: 18, width: 18, borderRadius: ThemesDefault.radii.round };
   const obj7 = { height: 18, width: 18, borderRadius: ThemesDefault.radii.round };
   obj[12] = { flex: 1, justifyContent: "center", paddingTop: ThemesDefault.space.PX_96 };
   const obj8 = { flex: 1, justifyContent: "center", paddingTop: ThemesDefault.space.PX_96 };
-  obj[13] = { position: "absolute", bottom: 0, left: 0, right: 0, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1 };
+  obj[13] = {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+    height: 1,
+  };
   return obj;
 });
 let closure_22 = importAllResult.memo((inNestedNavigator) => {
@@ -364,16 +492,19 @@ let closure_22 = importAllResult.memo((inNestedNavigator) => {
   let LeftBackIconWithBadge = require;
   obj = { top: !tmp2, style: tmp.header, children: null };
   obj = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
-  obj1 = { dark: getGradientColorByPercentage.OverlayOpacity.LEVEL_7, light: getGradientColorByPercentage.OverlayOpacity.LEVEL_8 };
+  obj1 = {
+    dark: getGradientColorByPercentage.OverlayOpacity.LEVEL_7,
+    light: getGradientColorByPercentage.OverlayOpacity.LEVEL_8,
+  };
   obj[4] = obj1;
-  const items = [callback(getMixedGradientColorDefault, obj), , ];
+  const items = [callback(getMixedGradientColorDefault, obj), ,];
   const obj2 = { style: tmp.headerTitle, children: null };
   const obj3 = { style: tmp.headerLeft, children: null };
   if (!tmp2) {
     if (!inNestedNavigator) {
       const items1 = [null, tmp4(ICYMIHeaderTextWrapper, {})];
       obj3[1] = items1;
-      const items2 = [tmp3(tmp6, obj3), ];
+      const items2 = [tmp3(tmp6, obj3)];
       const obj4 = { style: null, children: null };
       obj4[0] = tmp.headerActions;
       const items3 = [tmp4(InfoButton, {}), tmp4(SettingsButton, {})];
@@ -443,10 +574,13 @@ export const ICYMITab = function ICYMITab(route) {
   const obj2 = { children: null };
   const obj3 = {};
   const merged = Object.assign(obj);
-  const items2 = [closure_14(getMixedGradientColorDefault, { absolute: true }), ];
+  const items2 = [closure_14(getMixedGradientColorDefault, { absolute: true })];
   const tmp14 = closure_16;
   const tmpResult = jsxDefault;
-  items2[1] = closure_14(require("../../../../discord_common/js/packages/design/native.tsx").ThemeContextProvider, { gradient: tmp3, children: closure_14(ICYMI, { inNestedNavigator }, "" + stateFromStores) });
+  items2[1] = closure_14(require("../../../../discord_common/js/packages/design/native.tsx").ThemeContextProvider, {
+    gradient: tmp3,
+    children: closure_14(ICYMI, { inNestedNavigator }, "" + stateFromStores),
+  });
   obj3.children = items2;
   obj2[0] = tmp14(tmp11, obj3);
   obj1[0] = closure_14(require("ICYMIContext.tsx").ICYMIContextProvider, obj2);

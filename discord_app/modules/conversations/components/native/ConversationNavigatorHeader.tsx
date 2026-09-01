@@ -10,7 +10,13 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 noopAll;
 let closure_6 = createCacheKey.createStyles((arg0) => {
-  const container = { flex: 1, paddingVertical: ThemesDefault.space.PX_16, paddingRight: null, alignItems: "center", justifyContent: "center" };
+  const container = {
+    flex: 1,
+    paddingVertical: ThemesDefault.space.PX_16,
+    paddingRight: null,
+    alignItems: "center",
+    justifyContent: "center",
+  };
   let num = 0;
   if (!arg0) {
     num = ThemesDefault.space.PX_64;
@@ -18,7 +24,9 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
   container[2] = num;
   return { container };
 });
-const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorHeader.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/conversations/components/native/ConversationNavigatorHeader.tsx",
+);
 
 export default function ConversationNavigatorHeader(channelId) {
   channelId = channelId.channelId;
@@ -33,6 +41,11 @@ export default function ConversationNavigatorHeader(channelId) {
   const tmp3 = computeChannelNameDefault(stateFromStores, true);
   obj = { style: callback(flag).container, children: null };
   obj = { title: channelId.title, subtitle: tmp3, variant: "heading-lg/semibold", subtitleColor: "text-muted" };
-  obj[1] = jsx(channelId(7607).GenericHeaderTitle, { title: channelId.title, subtitle: tmp3, variant: "heading-lg/semibold", subtitleColor: "text-muted" });
+  obj[1] = jsx(channelId(7607).GenericHeaderTitle, {
+    title: channelId.title,
+    subtitle: tmp3,
+    variant: "heading-lg/semibold",
+    subtitleColor: "text-muted",
+  });
   return <View title={arg0.title} subtitle={tmp3} variant="heading-lg/semibold" subtitleColor="text-muted" />;
-};
+}

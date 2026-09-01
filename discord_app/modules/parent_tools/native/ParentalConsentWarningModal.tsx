@@ -74,13 +74,15 @@ export default function ParentalConsentWarningModal(daysRemaining) {
     let obj = ref(callback[20]);
     obj.hideActionSheet();
     const values = Object.values(closure_1_5.getLinkedUsers());
-    if (values.some((link_status) => {
-      let tmp = link_status.link_status === constants.PENDING;
-      if (tmp) {
-        tmp = link_status.link_type === constants2.PARENT;
-      }
-      return tmp;
-    })) {
+    if (
+      values.some((link_status) => {
+        let tmp = link_status.link_status === constants.PENDING;
+        if (tmp) {
+          tmp = link_status.link_type === constants2.PARENT;
+        }
+        return tmp;
+      })
+    ) {
       let tmp2Result = tmp2(tmp3[8]);
       const tab = tmp2Result.selectTab(closure_1_6.REQUESTS);
       const rootNavigationRef = daysRemaining(tmp3[9]).getRootNavigationRef();
@@ -125,13 +127,31 @@ export default function ParentalConsentWarningModal(daysRemaining) {
   const obj2 = { style: items3, children: null };
   items3 = [tmp.container, { paddingBottom: importDefault(callback[14])().bottom }];
   const obj3 = { spacing: importDefault(callback[13]).space.PX_16, children: null };
-  const items4 = [callback(View, { style: tmp.illustration, children: callback(daysRemaining(callback[26]).FamilyKeysSpotIllustration, { accessible: false }) }), callback(daysRemaining(callback[27]).Text, { variant: "heading-lg/bold", color: "text-default", style: tmp.title, accessibilityRole: "header", children: stringResult }), callback(daysRemaining(callback[27]).Text, { variant: "text-md/medium", color: "text-default", style: tmp.body, children: stringResult1 }), ];
+  const items4 = [
+    callback(View, {
+      style: tmp.illustration,
+      children: callback(daysRemaining(callback[26]).FamilyKeysSpotIllustration, { accessible: false }),
+    }),
+    callback(daysRemaining(callback[27]).Text, {
+      variant: "heading-lg/bold",
+      color: "text-default",
+      style: tmp.title,
+      accessibilityRole: "header",
+      children: stringResult,
+    }),
+    callback(daysRemaining(callback[27]).Text, {
+      variant: "text-md/medium",
+      color: "text-default",
+      style: tmp.body,
+      children: stringResult1,
+    }),
+  ];
   const obj7 = { spacing: importDefault(callback[13]).space.PX_8, children: null };
   const obj8 = { size: "lg", variant: "primary", grow: true, text: null, onPress: null };
   const intl3 = tmp4(tmp3[15]).intl;
   obj8[3] = intl3.string(importDefault(callback[16]).Kp7sjX);
   obj8[4] = callback3;
-  const items5 = [callback(daysRemaining(callback[28]).Button, obj8), ];
+  const items5 = [callback(daysRemaining(callback[28]).Button, obj8)];
   const obj9 = { size: "lg", variant: "secondary", grow: true, text: null, accessibilityHint: null, onPress: null };
   const intl4 = tmp4(tmp3[15]).intl;
   obj9[3] = intl4.string(importDefault(callback[16]).hST5o8);
@@ -145,4 +165,4 @@ export default function ParentalConsentWarningModal(daysRemaining) {
   obj2[1] = callback2(daysRemaining(callback[25]).Stack, obj3);
   obj1[2] = callback(View, obj2);
   return callback(daysRemaining(callback[24]).BottomSheet, obj1);
-};
+}

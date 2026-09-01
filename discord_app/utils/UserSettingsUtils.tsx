@@ -62,11 +62,24 @@ export const computeFlags = function computeFlags(setting) {
 export const trackUserSettingsPaneViewed = function trackUserSettingsPaneViewed(arg0) {
   ({ destinationPane, originPane, source, subsection, locationStack, applicationId } = arg0);
   obj = collectGuildAnalyticsMetadataDefault;
-  obj = { settings_type: "user", origin_pane: originPane, destination_pane: destinationPane, location_stack: locationStack, source, subsection, application_id: applicationId, search_session_id: getSearchSessionIdDefault.getSearchSessionId() };
+  obj = {
+    settings_type: "user",
+    origin_pane: originPane,
+    destination_pane: destinationPane,
+    location_stack: locationStack,
+    source,
+    subsection,
+    application_id: applicationId,
+    search_session_id: getSearchSessionIdDefault.getSearchSessionId(),
+  };
   obj.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj);
 };
 export const NonSpamRetrainingOptInOptions = obj;
-export const NonSpamRetrainingOptInOptionsToValue = { [obj.UNDECIDED]: undefined, [obj.OPTIN]: true, [obj.OPTOUT]: false };
+export const NonSpamRetrainingOptInOptionsToValue = {
+  [obj.UNDECIDED]: undefined,
+  [obj.OPTIN]: true,
+  [obj.OPTOUT]: false,
+};
 export const generateNonSpamRetrainingOptInSettingOptions = function generateNonSpamRetrainingOptInSettingOptions() {
   obj = { name: null, desc: null, value: null };
   const intl = getSystemLocale.intl;
@@ -74,7 +87,7 @@ export const generateNonSpamRetrainingOptInSettingOptions = function generateNon
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t["3fzkPq"]);
   obj[2] = obj.OPTIN;
-  const items = [obj, , ];
+  const items = [obj, ,];
   obj = { name: null, desc: null, value: null };
   const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t["21fP2b"]);

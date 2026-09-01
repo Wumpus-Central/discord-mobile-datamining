@@ -76,7 +76,9 @@ function resolveGoreSettingWithDefaults(isFriend) {
     }
   }
 }
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx",
+);
 
 export { resolveGoreSettingWithDefaults };
 export const resolveGoreSettingWithDefaultsForTeen = function resolveGoreSettingWithDefaultsForTeen(isDm) {
@@ -107,7 +109,11 @@ export const getGoreContentSettingOrDefault = function getGoreContentSettingOrDe
   if (setting != null) {
     goreContentGuilds = setting.goreContentGuilds;
   }
-  const obj = { goreContentGuilds: resolveGoreSettingWithDefaults({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
+  const obj = {
+    goreContentGuilds: resolveGoreSettingWithDefaults({ setting: goreContentGuilds }),
+    goreContentNonFriendDm: null,
+    goreContentFriendDm: null,
+  };
   let prop;
   if (setting != null) {
     prop = setting.goreContentNonFriendDm;
@@ -127,7 +133,11 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
   if (setting != null) {
     goreContentGuilds = setting.goreContentGuilds;
   }
-  let obj = { goreContentGuilds: tmp4({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
+  let obj = {
+    goreContentGuilds: tmp4({ setting: goreContentGuilds }),
+    goreContentNonFriendDm: null,
+    goreContentFriendDm: null,
+  };
   let prop;
   if (setting != null) {
     prop = setting.goreContentNonFriendDm;

@@ -49,7 +49,9 @@ function getChannels(getGuildId, arr) {
     dependencyMap = textChannelNameDisambiguations.getTextChannelNameDisambiguations(guildId);
     const tmp9 = guildId(12);
     const tmp9Result = guildId(12)(require("../../../utils/AutocompleteUtils.tsx").COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
-    const combined = guildId(12)(require("../../../utils/AutocompleteUtils.tsx").COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).flatMap((arg0) => closure_1_7.getChannels(guildId)[arg0].map((channel) => channel.channel)).concat(closure_5.computeAllActiveJoinedThreads(guildId));
+    const combined = guildId(12)(require("../../../utils/AutocompleteUtils.tsx").COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS)
+      .flatMap((arg0) => closure_1_7.getChannels(guildId)[arg0].map((channel) => channel.channel))
+      .concat(closure_5.computeAllActiveJoinedThreads(guildId));
     const found = combined.filter((type) => {
       let hasItem = null == closure_0;
       if (!hasItem) {
@@ -79,9 +81,7 @@ function getChannels(getGuildId, arr) {
   }
 }
 ({ MENTION_SENTINEL: closure_12, CHANNEL_SENTINEL: map1 } = regExp);
-function matchPrefix(arg0, arg1, arg2) {
-
-}
+function matchPrefix(arg0, arg1, arg2) {}
 const prototype = function ApplicationCommandOptionValueParser(channel) {
   const obj = Object.create(new.target.prototype);
   obj.parse = function parse(text, type) {
@@ -111,10 +111,12 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       let firstResult = null;
       if (arr[0] === arr) {
         closure_1 = str.substr(arr.length);
-        const found = obj.sortBy((text) => -text.text.length).filter((text) => {
-          const formatted = closure_1.toLowerCase();
-          return formatted === text.text.toLowerCase();
-        });
+        const found = obj
+          .sortBy((text) => -text.text.length)
+          .filter((text) => {
+            const formatted = closure_1.toLowerCase();
+            return formatted === text.text.toLowerCase();
+          });
         const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
         firstResult = mapped.first();
         const sortByResult = obj.sortBy((text) => -text.text.length);
@@ -134,10 +136,12 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
         let firstResult1 = null;
         if (str[0] === arr) {
           closure_1 = str.substr(arr.length);
-          const found1 = obj6.sortBy((text) => -text.text.length).filter((text) => {
-            const formatted = closure_1.toLowerCase();
-            return formatted === text.text.toLowerCase();
-          });
+          const found1 = obj6
+            .sortBy((text) => -text.text.length)
+            .filter((text) => {
+              const formatted = closure_1.toLowerCase();
+              return formatted === text.text.toLowerCase();
+            });
           const mapped1 = found1.map((id) => ({ text: arr + id.text, id: id.id }));
           firstResult1 = mapped1.first();
           const sortByResult1 = obj6.sortBy((text) => -text.text.length);
@@ -191,10 +195,12 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       let firstResult = null;
       if (arr[0] === arr) {
         closure_1 = str.substr(arr.length);
-        const found = obj.sortBy((text) => -text.text.length).filter((text) => {
-          const formatted = closure_1.toLowerCase();
-          return formatted === text.text.toLowerCase();
-        });
+        const found = obj
+          .sortBy((text) => -text.text.length)
+          .filter((text) => {
+            const formatted = closure_1.toLowerCase();
+            return formatted === text.text.toLowerCase();
+          });
         const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
         firstResult = mapped.first();
         const sortByResult = obj.sortBy((text) => -text.text.length);
@@ -225,10 +231,12 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       let firstResult = null;
       if (trimmed[0] === arr7) {
         closure_1 = trimmed.substr(arr7.length);
-        let found = obj8.sortBy((text) => -text.text.length).filter((text) => {
-          const formatted = closure_1.toLowerCase();
-          return formatted === text.text.toLowerCase();
-        });
+        let found = obj8
+          .sortBy((text) => -text.text.length)
+          .filter((text) => {
+            const formatted = closure_1.toLowerCase();
+            return formatted === text.text.toLowerCase();
+          });
         let mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
         firstResult = mapped.first();
         let sortByResult = obj8.sortBy((text) => -text.text.length);
@@ -280,7 +288,9 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
   obj.channel = channel;
   return obj;
 }.prototype;
-const result = require("set").fileFinishedImporting("modules/chat_input/native/ApplicationCommandOptionValueParser.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/chat_input/native/ApplicationCommandOptionValueParser.tsx",
+);
 
 export { getUsers };
 export const getRoles = function getRoles(guild_id) {
@@ -376,10 +386,12 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
         let firstResult = null;
         if (arr[0] === arr) {
           closure_1 = str.substr(arr.length);
-          const found = obj.sortBy((text) => -text.text.length).filter((text) => {
-            const formatted = closure_1.toLowerCase();
-            return formatted === text.text.toLowerCase();
-          });
+          const found = obj
+            .sortBy((text) => -text.text.length)
+            .filter((text) => {
+              const formatted = closure_1.toLowerCase();
+              return formatted === text.text.toLowerCase();
+            });
           const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
           firstResult = mapped.first();
           const sortByResult = obj.sortBy((text) => -text.text.length);
@@ -399,10 +411,12 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
           let firstResult1 = null;
           if (str[0] === arr) {
             closure_1 = str.substr(arr.length);
-            const found1 = obj6.sortBy((text) => -text.text.length).filter((text) => {
-              const formatted = closure_1.toLowerCase();
-              return formatted === text.text.toLowerCase();
-            });
+            const found1 = obj6
+              .sortBy((text) => -text.text.length)
+              .filter((text) => {
+                const formatted = closure_1.toLowerCase();
+                return formatted === text.text.toLowerCase();
+              });
             const mapped1 = found1.map((id) => ({ text: arr + id.text, id: id.id }));
             firstResult1 = mapped1.first();
             const sortByResult1 = obj6.sortBy((text) => -text.text.length);
@@ -456,10 +470,12 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
         let firstResult = null;
         if (arr[0] === arr) {
           closure_1 = str.substr(arr.length);
-          const found = obj.sortBy((text) => -text.text.length).filter((text) => {
-            const formatted = closure_1.toLowerCase();
-            return formatted === text.text.toLowerCase();
-          });
+          const found = obj
+            .sortBy((text) => -text.text.length)
+            .filter((text) => {
+              const formatted = closure_1.toLowerCase();
+              return formatted === text.text.toLowerCase();
+            });
           const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
           firstResult = mapped.first();
           const sortByResult = obj.sortBy((text) => -text.text.length);
@@ -490,10 +506,12 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
         let firstResult = null;
         if (trimmed[0] === arr7) {
           closure_1 = trimmed.substr(arr7.length);
-          let found = obj8.sortBy((text) => -text.text.length).filter((text) => {
-            const formatted = closure_1.toLowerCase();
-            return formatted === text.text.toLowerCase();
-          });
+          let found = obj8
+            .sortBy((text) => -text.text.length)
+            .filter((text) => {
+              const formatted = closure_1.toLowerCase();
+              return formatted === text.text.toLowerCase();
+            });
           let mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
           firstResult = mapped.first();
           let sortByResult = obj8.sortBy((text) => -text.text.length);

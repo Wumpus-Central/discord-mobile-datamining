@@ -15,7 +15,10 @@ export default function SafetyFlowsModal(initialRouteName) {
   let obj = first(6008);
   const items = [first];
   const navigatorScreens = obj.useNavigatorScreens(() => {
-    obj = { [closure_0(closure_2[4]).SafetyFlowScreens.OVERVIEW]: obj, [closure_0(closure_2[4]).SafetyFlowScreens.ENTER_EMAIL]: obj };
+    obj = {
+      [closure_0(closure_2[4]).SafetyFlowScreens.OVERVIEW]: obj,
+      [closure_0(closure_2[4]).SafetyFlowScreens.ENTER_EMAIL]: obj,
+    };
     obj = {
       headerLeft() {
         return null;
@@ -23,7 +26,7 @@ export default function SafetyFlowsModal(initialRouteName) {
       headerShown: false,
       render() {
         return callback3(callback2(17451), {});
-      }
+      },
     };
     obj = {
       headerLeft() {
@@ -34,7 +37,7 @@ export default function SafetyFlowsModal(initialRouteName) {
       },
       render() {
         return callback3(callback2(17455), {});
-      }
+      },
     };
     obj1 = {
       headerLeft: first(5495).getHeaderBackButton(),
@@ -43,7 +46,7 @@ export default function SafetyFlowsModal(initialRouteName) {
       },
       render() {
         return callback3(callback2(17457), {});
-      }
+      },
     };
     obj[first(17447).SafetyFlowScreens.VERIFY_EMAIL] = obj1;
     obj[first(17447).SafetyFlowScreens.UPDATE_APP] = {
@@ -55,7 +58,7 @@ export default function SafetyFlowsModal(initialRouteName) {
       },
       render() {
         return callback3(callback2(17459), {});
-      }
+      },
     };
     obj[first(17447).SafetyFlowScreens.AGE_VERIFICATION] = {
       headerLeft() {
@@ -66,7 +69,7 @@ export default function SafetyFlowsModal(initialRouteName) {
       },
       render() {
         return callback3(callback2(17460), {});
-      }
+      },
     };
     obj[first(17447).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
       headerShown: false,
@@ -75,13 +78,13 @@ export default function SafetyFlowsModal(initialRouteName) {
       },
       render() {
         return callback3(callback2(17462), {});
-      }
+      },
     };
     obj[first(17447).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION] = {
       headerShown: false,
       render() {
         return callback3(callback2(17467), {});
-      }
+      },
     };
     obj[first(17447).SafetyFlowScreens.ERROR] = {
       headerLeft() {
@@ -92,7 +95,7 @@ export default function SafetyFlowsModal(initialRouteName) {
       },
       render() {
         return callback3(callback2(17468), {});
-      }
+      },
     };
     return obj;
   }, []);
@@ -120,6 +123,20 @@ export default function SafetyFlowsModal(initialRouteName) {
     }
   }, items);
   const memo1 = React.useMemo(() => ({ task: first, setTask: closure_1 }), items1);
-  obj = { value: memo1, children: jsx(first(13817).StepModal, { initialRouteName: initialRouteName.initialScreen, screens: navigatorScreens, steps: memo }) };
-  return jsx(first(17452).SafetyFlowTaskContext.Provider, { value: memo1, children: jsx(first(13817).StepModal, { initialRouteName: initialRouteName.initialScreen, screens: navigatorScreens, steps: memo }) });
-};
+  obj = {
+    value: memo1,
+    children: jsx(first(13817).StepModal, {
+      initialRouteName: initialRouteName.initialScreen,
+      screens: navigatorScreens,
+      steps: memo,
+    }),
+  };
+  return jsx(first(17452).SafetyFlowTaskContext.Provider, {
+    value: memo1,
+    children: jsx(first(13817).StepModal, {
+      initialRouteName: initialRouteName.initialScreen,
+      screens: navigatorScreens,
+      steps: memo,
+    }),
+  });
+}

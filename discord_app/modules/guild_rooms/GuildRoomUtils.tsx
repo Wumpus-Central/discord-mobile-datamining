@@ -45,11 +45,14 @@ export const findSeat = function findSeat(items2, channelId, channelId2) {
     background = room.background;
   }
   if (background == null) {
-    background = require("../../../discord_common/js/shared/shared-constants/GuildRoomBackgrounds.tsx").GuildRoomBackgrounds.DEFAULT;
+    background = require("../../../discord_common/js/shared/shared-constants/GuildRoomBackgrounds.tsx")
+      .GuildRoomBackgrounds.DEFAULT;
   }
   const seats = table[background].seats;
   if (null != items2) {
-    if (items2 !== require("../../../discord_common/js/shared/shared-constants/GuildRoomSeats.tsx").GuildRoomSeats.UNSET) {
+    if (
+      items2 !== require("../../../discord_common/js/shared/shared-constants/GuildRoomSeats.tsx").GuildRoomSeats.UNSET
+    ) {
       let found = seats[items2];
     }
     return found;
@@ -61,11 +64,17 @@ export const serverGuildRoomToClient = function serverGuildRoomToClient(body) {
   const obj = {
     roomId: body.room_id,
     users: users.reduce((set, userId) => {
-      const result = set.set(userId.user_id, { userId: userId.user_id, seat: userId.seat, position: userId.position, statusId: userId.status_id, statusText: userId.status_text });
+      const result = set.set(userId.user_id, {
+        userId: userId.user_id,
+        seat: userId.seat,
+        position: userId.position,
+        statusId: userId.status_id,
+        statusText: userId.status_text,
+      });
       return set;
     }, new Map()),
     background: body.background,
-    objects: null
+    objects: null,
   };
   users = body.users;
   const entries = Object.entries(body.objects);

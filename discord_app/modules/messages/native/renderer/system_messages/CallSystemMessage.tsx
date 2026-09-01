@@ -9,7 +9,9 @@ import { ME } from "../../../../../Constants.tsx";
 import { ParticipantTypes } from "../../../../calls/CallConstants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/CallSystemMessage.tsx",
+);
 
 export const createCallSystemMessage = function createCallSystemMessage(message) {
   message = message.message;
@@ -71,7 +73,14 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
     mapped = [tmp7(1434).ensureAvatarSource(author.getAvatarSource(undefined)).uri];
     const tmp7Result1 = tmp7(1434);
   }
-  obj = { title: stringResult1, description: formatToPlainStringResult, isCallActive: checkIsCallActiveResult, missed: tmp9, avatarURLs: mapped, rawMilliseconds: timestamp.valueOf() };
+  obj = {
+    title: stringResult1,
+    description: formatToPlainStringResult,
+    isCallActive: checkIsCallActiveResult,
+    missed: tmp9,
+    avatarURLs: mapped,
+    rawMilliseconds: timestamp.valueOf(),
+  };
   timestamp = message.timestamp;
   const merged = Object.assign(createCommonMessageDefault(message));
   return obj;

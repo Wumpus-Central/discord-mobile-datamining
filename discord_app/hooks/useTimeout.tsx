@@ -22,4 +22,4 @@ export default function useTimeout(arg0, arg1) {
       return () => clearTimeout(closure_0);
     }
   }, items1);
-};
+}

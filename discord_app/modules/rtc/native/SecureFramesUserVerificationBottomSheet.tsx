@@ -12,10 +12,22 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
-({ AnalyticsSecureFramesUserVerification: c9, SECURE_FRAMES_PUBLIC_KEY_VERSION: c10, USER_VERIFIED_TOAST_KEY: unpackModuleId } = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
+({
+  AnalyticsSecureFramesUserVerification: c9,
+  SECURE_FRAMES_PUBLIC_KEY_VERSION: c10,
+  USER_VERIFIED_TOAST_KEY: unpackModuleId,
+} = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 createCacheKey = { iconContainer: null, icon: null, content: null, subtitle: null, buttons: null, helpMessage: null };
-createCacheKey = { height: 80, width: 80, borderRadius: 40, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, marginBottom: 16 };
+createCacheKey = {
+  height: 80,
+  width: 80,
+  borderRadius: 40,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  marginBottom: 16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 48, width: 48 };
 createCacheKey[2] = { padding: 16, justifyContent: "center", alignItems: "center" };
@@ -51,7 +63,10 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
   let obj2 = userId(fingerprint[12]);
   isUserSecureFramesVerified = obj2.useIsUserSecureFramesVerified({ userId, channelId, userKey: fingerprintUserKey });
   let obj3 = userId(fingerprint[13]);
-  const isPersistentSecureFramesFingerprint = obj3.useIsPersistentSecureFramesFingerprint({ userId, userKey: fingerprintUserKey });
+  const isPersistentSecureFramesFingerprint = obj3.useIsPersistentSecureFramesFingerprint({
+    userId,
+    userKey: fingerprintUserKey,
+  });
   isOtherUserKeyPersistent = isPersistentSecureFramesFingerprint.isOtherUserKeyPersistent;
   let loading = isPersistentSecureFramesFingerprint.loading;
   let obj4 = userId(fingerprint[14]);
@@ -62,7 +77,16 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
   stateFromStores1 = obj5.useStateFromStores(items1, () => isUserSecureFramesVerified.isUserConnected(userId));
   let obj6 = userId(fingerprint[15]);
   isSecureFramesKeyInconsistent = obj6.useIsSecureFramesKeyInconsistent({ userId });
-  const items2 = [fingerprint, channelId, fingerprint2, stateFromStores, isSecureFramesKeyInconsistent, stateFromStores1, isSecureFramesUIEnabled, isUserSecureFramesVerified];
+  const items2 = [
+    fingerprint,
+    channelId,
+    fingerprint2,
+    stateFromStores,
+    isSecureFramesKeyInconsistent,
+    stateFromStores1,
+    isSecureFramesUIEnabled,
+    isUserSecureFramesVerified,
+  ];
   memo = fingerprintUserKey.useMemo(() => {
     if (null != channelId) {
       if (stateFromStores) {
@@ -96,7 +120,10 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
   name = obj8.useName(userId.guildId, channelId, stateFromStores2);
   const items5 = [memo, name];
   const items6 = [channelId, memo, userId];
-  [tmp17, tmp18] = callback(fingerprintUserKey.useMemo(() => userId(fingerprint[18]).getUserVerifyStateText(memo, name), items5), 2);
+  [tmp17, tmp18] = callback(
+    fingerprintUserKey.useMemo(() => userId(fingerprint[18]).getUserVerifyStateText(memo, name), items5),
+    2,
+  );
   const effect1 = fingerprintUserKey.useEffect(() => {
     if (stateFromStores.OTHER_USER_ALREADY_VERIFIED !== memo) {
       if (stateFromStores.MATCH !== tmp) {
@@ -155,7 +182,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
   obj2 = { style: tmp.iconContainer, children: null };
   if (!loading) {
     obj2[1] = memo1;
-    const items9 = [tmp23(tmp25, obj2), , , , ];
+    const items9 = [tmp23(tmp25, obj2), , , ,];
     obj3 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
     obj3[2] = tmp17;
     items9[1] = tmp23(tmp2(tmp3[29]).Text, obj3);
@@ -178,7 +205,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
       loading = memo !== stateFromStores.MATCH;
     }
     obj7[3] = loading;
-    const items10 = [tmp23(tmp2(tmp3[32]).Button, obj7), ];
+    const items10 = [tmp23(tmp2(tmp3[32]).Button, obj7)];
     obj8 = { variant: "secondary", onPress: null, text: null };
     obj8[1] = callback;
     const intl2 = tmp2(tmp3[25]).intl;
@@ -191,4 +218,4 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     return tmp23(userId(fingerprint[26]).BottomSheet, obj);
   }
   memo1 = tmp23(fingerprint2, {});
-};
+}

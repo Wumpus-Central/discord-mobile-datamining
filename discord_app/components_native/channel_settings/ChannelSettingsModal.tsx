@@ -19,7 +19,11 @@ let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_B
 const result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsModal.tsx");
 
 export const useChannelSettingsScreensStyles = createCacheKey;
-export const getChannelSettingsScreens = function getChannelSettingsScreens(channelId, arg1, channelSettingsScreensStyles) {
+export const getChannelSettingsScreens = function getChannelSettingsScreens(
+  channelId,
+  arg1,
+  channelSettingsScreensStyles,
+) {
   const _require = channelId;
   closure_1 = arg1;
   dependencyMap = channelSettingsScreensStyles;
@@ -33,7 +37,7 @@ export const getChannelSettingsScreens = function getChannelSettingsScreens(chan
       }
       obj[1] = autoFocusElement;
       return closure_1_8(callback(pinsScreen[7]), obj);
-    }
+    },
   };
   obj = { title: null, render: null };
   const intl = require("../../intl/index.native.tsx").intl;
@@ -56,7 +60,7 @@ export const getChannelSettingsScreens = function getChannelSettingsScreens(chan
     postponeRender: true,
     render() {
       return closure_1_8(callback(pinsScreen[11]), { channelId: closure_0 });
-    }
+    },
   };
   const obj2 = { title: null, postponeRender: true, render: null };
   const intl3 = require("../../intl/index.native.tsx").intl;
@@ -147,7 +151,7 @@ export const getChannelSettingsScreens = function getChannelSettingsScreens(chan
     render(arg0) {
       const merged = Object.assign(arg0);
       return closure_1_8(callback(pinsScreen[22]), { channelId: closure_0 });
-    }
+    },
   };
   const obj13 = { title: null, render: null };
   const intl14 = require("../../intl/index.native.tsx").intl;

@@ -4,11 +4,51 @@ import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ME from "../../Constants.tsx";
 
 function transformSubscriptionListingToSku(id) {
-  return { id: id.id, type: constants2.SUBSCRIPTION, application_id: id.application_id, product_line: constants.APPLICATION, name: id.name, summary: "", description: id.description, flags: id.sku_flags, manifests: [], available_regions: [], legal_notice: "", deleted: id.soft_deleted, price_tier: 0, show_age_gate: false, restricted: false };
+  return {
+    id: id.id,
+    type: constants2.SUBSCRIPTION,
+    application_id: id.application_id,
+    product_line: constants.APPLICATION,
+    name: id.name,
+    summary: "",
+    description: id.description,
+    flags: id.sku_flags,
+    manifests: [],
+    available_regions: [],
+    legal_notice: "",
+    deleted: id.soft_deleted,
+    price_tier: 0,
+    show_age_gate: false,
+    restricted: false,
+  };
 }
 function transformSubscriptionListingToStoreListing(id) {
-  obj = { id: id.id, sku: obj, summary: id.description, description: id.description, benefits: null, thumbnail: null, published: null };
-  obj = { id: id.id, type: constants2.SUBSCRIPTION, application_id: id.application_id, product_line: constants.APPLICATION, name: id.name, summary: "", description: id.description, flags: id.sku_flags, manifests: [], available_regions: [], legal_notice: "", deleted: id.soft_deleted, price_tier: 0, show_age_gate: false, restricted: false };
+  obj = {
+    id: id.id,
+    sku: obj,
+    summary: id.description,
+    description: id.description,
+    benefits: null,
+    thumbnail: null,
+    published: null,
+  };
+  obj = {
+    id: id.id,
+    type: constants2.SUBSCRIPTION,
+    application_id: id.application_id,
+    product_line: constants.APPLICATION,
+    name: id.name,
+    summary: "",
+    description: id.description,
+    flags: id.sku_flags,
+    manifests: [],
+    available_regions: [],
+    legal_notice: "",
+    deleted: id.soft_deleted,
+    price_tier: 0,
+    show_age_gate: false,
+    restricted: false,
+  };
   let prop = id.store_listing_benefits;
   if (prop == null) {
     prop = [];
@@ -43,7 +83,7 @@ function _fetchAllSubscriptionListingsDataForApplication() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_4 = tmp3;
       obj1 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS", applicationId: null, groupListingId: null };
       obj1[1] = callback;
@@ -58,7 +98,11 @@ function _fetchAllSubscriptionListingsDataForApplication() {
       obj3[1] = callback;
       obj2.dispatch(obj3);
       lib = yield "HermesInternal";
-      const obj5 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS", applicationId: null, groupListing: null };
+      const obj5 = {
+        type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS",
+        applicationId: null,
+        groupListing: null,
+      };
       obj5[1] = callback;
       obj5[2] = lib;
       callback(709).dispatch(obj5);
@@ -88,7 +132,7 @@ function _fetchEntitlementsForGuild() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       dependencyMap = tmp3;
       obj1 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS", guildId: null };
       obj1[1] = callback;
@@ -109,7 +153,11 @@ function _fetchEntitlementsForGuild() {
       } else if (arg0 !== 2) {
         closure_1 = arg1;
         const obj = callback(709);
-        const obj4 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS", guildId: null, entitlements: null };
+        const obj4 = {
+          type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS",
+          guildId: null,
+          entitlements: null,
+        };
         obj4[1] = callback;
         obj4[2] = closure_1;
         obj.dispatch(obj4);
@@ -146,7 +194,7 @@ function _fetchSubscriptionListingForPlan() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -247,12 +295,14 @@ function _fetchSubscriptionListingForPlan() {
               c7 = 4;
               v0 = 1;
               const obj7 = { value: null, done: false };
-              obj7[0] = Promise.all(closure_3.map((id) => {
-                if (id.subscription_plans[0].id === closure_0) {
-                  const obj = num13(table[4]);
-                  return obj.fetchSubscriptionPlansForSKU(id.id, undefined, undefined, true);
-                }
-              }));
+              obj7[0] = Promise.all(
+                closure_3.map((id) => {
+                  if (id.subscription_plans[0].id === closure_0) {
+                    const obj = num13(table[4]);
+                    return obj.fetchSubscriptionPlansForSKU(id.id, undefined, undefined, true);
+                  }
+                }),
+              );
               return obj7;
             }
           } else {
@@ -308,7 +358,10 @@ function _fetchSubscriptionListingForPlan() {
 ({ SKUProductLines: c4, SKUTypes: c5 } = ME);
 const result = require("set").fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionsActionCreators.tsx");
 
-export const fetchAllSubscriptionListingsDataForApplication = function fetchAllSubscriptionListingsDataForApplication(closure_0, id) {
+export const fetchAllSubscriptionListingsDataForApplication = function fetchAllSubscriptionListingsDataForApplication(
+  closure_0,
+  id,
+) {
   const self = this;
   const apply = _fetchAllSubscriptionListingsDataForApplication.apply;
   if (typeof apply === "unknown") {
@@ -328,7 +381,9 @@ export const fetchEntitlementsForGuild = function fetchEntitlementsForGuild() {
   }
   return applyArgumentsResult;
 };
-export const dismissApplicationSubscriptionExpirationNotice = function dismissApplicationSubscriptionExpirationNotice(guildId) {
+export const dismissApplicationSubscriptionExpirationNotice = function dismissApplicationSubscriptionExpirationNotice(
+  guildId,
+) {
   let obj = dispatcherDefault;
   obj = { type: "APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED", guildId };
   obj.dispatch(obj);

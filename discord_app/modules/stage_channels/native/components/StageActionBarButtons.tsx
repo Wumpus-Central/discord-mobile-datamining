@@ -31,38 +31,49 @@ class AgeVerificationSpeakerActionSheet {
       closure_1_1(closure_1_3[30]).hideActionSheet();
     };
     tmp = closure_15();
-    obj = { startExpanded: true, onDismiss: handleDismiss, contentStyles: { paddingBottom: require("useSafeAreaInsets")().bottom }, header: null, children: null };
-    obj = { style: tmp.header, children: jsx(require("AccountAgeTier10LargeBadge").TrafficConeSpotIllustration, { width: 120, height: 120 }) };
+    obj = {
+      startExpanded: true,
+      onDismiss: handleDismiss,
+      contentStyles: { paddingBottom: require("useSafeAreaInsets")().bottom },
+      header: null,
+      children: null,
+    };
+    obj = {
+      style: tmp.header,
+      children: jsx(require("AccountAgeTier10LargeBadge").TrafficConeSpotIllustration, { width: 120, height: 120 }),
+    };
     obj[3] = jsx(View, obj);
     obj1 = { style: tmp.container, children: null };
     obj2 = { style: tmp.content, children: null };
     obj3 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
     intl = require("getSystemLocale").intl;
     obj3[3] = intl.string(require("getSystemLocale").t.zvubnM);
-    items = [, ];
+    items = [,];
     items[0] = jsx(require("Text").Text, obj3);
     obj4 = { variant: "text-md/normal", color: "text-default", style: tmp.body, children: null };
     intl2 = require("getSystemLocale").intl;
     obj4[3] = intl2.string(require("getSystemLocale").t["/wx+J2"]);
     items[1] = jsx(require("Text").Text, obj4);
     obj2[1] = items;
-    items1 = [, ];
+    items1 = [,];
     items1[0] = jsxs(View, obj2);
     obj5 = { style: tmp.footer, children: null };
     obj6 = {
       size: "lg",
       onPress() {
-            let obj = closure_1_1(closure_1_3[40]);
-            obj = { entryPoint: onClose(closure_1_3[41]).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT };
-            const result = obj.showAgeVerificationGetStartedModal(obj);
-            onClose();
-            closure_1_1(closure_1_3[30]).hideActionSheet();
-          },
-      text: null
+        let obj = closure_1_1(closure_1_3[40]);
+        obj = {
+          entryPoint: onClose(closure_1_3[41]).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
+        };
+        const result = obj.showAgeVerificationGetStartedModal(obj);
+        onClose();
+        closure_1_1(closure_1_3[30]).hideActionSheet();
+      },
+      text: null,
     };
     intl3 = require("getSystemLocale").intl;
     obj6[2] = intl3.string(require("getSystemLocale").t.KXVgjt);
-    items2 = [, ];
+    items2 = [,];
     items2[0] = jsx(require("Button").Button, obj6);
     obj7 = { size: "lg", onPress: handleDismiss, text: null, variant: "secondary" };
     intl4 = require("getSystemLocale").intl;
@@ -105,7 +116,7 @@ class AnimatedPrompt {
     fn.__initData = closure_18;
     animatedStyle = obj2.useAnimatedStyle(fn);
     tmp4 = jsx;
-    items1 = [, , ];
+    items1 = [, ,];
     items1[0] = tmp.actionBarCTAContainer;
     items1[1] = style;
     tmp5 = undefined;
@@ -122,18 +133,18 @@ class StartStagePrompt {
     tmp = closure_14();
     obj = {
       onPress() {
-            if (!isLive) {
-              const result = closure_1_0(closure_1_3[25]).openStageChannelSettings(closure_0);
-              const obj = closure_1_0(closure_1_3[25]);
-            }
-          },
+        if (!isLive) {
+          const result = closure_1_0(closure_1_3[25]).openStageChannelSettings(closure_0);
+          const obj = closure_1_0(closure_1_3[25]);
+        }
+      },
       iconSource: require("registerAsset"),
       iconStyle: null,
       iconContainerStyle: null,
       style: global.style,
       completed: isLive,
       title: null,
-      subtitle: null
+      subtitle: null,
     };
     ({ iconStyle: obj[2], iconContainerStyle: obj[3] } = tmp);
     intl = require("getSystemLocale").intl;
@@ -144,14 +155,30 @@ class StartStagePrompt {
   }
 }
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { actionBarCTAContainer: { position: "relative" }, imageStyle: null, iconStyle: null, iconContainerStyle: null, continueContainer: null, continueText: null, continueIcon: null };
+createCacheKey = {
+  actionBarCTAContainer: { position: "relative" },
+  imageStyle: null,
+  iconStyle: null,
+  iconContainerStyle: null,
+  continueContainer: null,
+  continueText: null,
+  continueIcon: null,
+};
 createCacheKey = { tintColor: ThemesDefault.colors.WHITE };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { tintColor: ThemesDefault.colors.WHITE, width: 20, height: 20 };
 let obj1 = { tintColor: ThemesDefault.colors.WHITE, width: 20, height: 20 };
-createCacheKey[3] = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, borderRadius: ThemesDefault.radii.lg, padding: 4 };
+createCacheKey[3] = {
+  backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360,
+  borderRadius: ThemesDefault.radii.lg,
+  padding: 4,
+};
 createCacheKey[4] = { flexDirection: "row", alignItems: "center", justifyContent: "center", padding: 16 };
-let obj2 = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, borderRadius: ThemesDefault.radii.lg, padding: 4 };
+let obj2 = {
+  backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360,
+  borderRadius: ThemesDefault.radii.lg,
+  padding: 4,
+};
 createCacheKey[5] = { color: ThemesDefault.unsafe_rawColors.BLUE_345, fontSize: 14, lineHeight: 18 };
 let obj3 = { color: ThemesDefault.unsafe_rawColors.BLUE_345, fontSize: 14, lineHeight: 18 };
 createCacheKey[6] = { tintColor: ThemesDefault.unsafe_rawColors.BLUE_345 };
@@ -167,8 +194,17 @@ obj5[4] = { textAlign: "center" };
 let obj6 = { paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_24 };
 obj5[5] = { gap: ThemesDefault.space.PX_12 };
 let closure_15 = createCacheKey.createStyles(obj5);
-let closure_17 = { mass: 1, stiffness: 100, damping: 30, overshootClamping: false, restSpeedThreshold: 0.01, restDisplacementThreshold: 0.01 };
-let closure_18 = { code: "function StageActionBarButtonsTsx1(){const{withSpring,show,actionBarAnimationConfig}=this.__closure;return{marginTop:withSpring(show?0:20,actionBarAnimationConfig),opacity:withSpring(show?1:0,actionBarAnimationConfig)};}" };
+let closure_17 = {
+  mass: 1,
+  stiffness: 100,
+  damping: 30,
+  overshootClamping: false,
+  restSpeedThreshold: 0.01,
+  restDisplacementThreshold: 0.01,
+};
+let closure_18 = {
+  code: "function StageActionBarButtonsTsx1(){const{withSpring,show,actionBarAnimationConfig}=this.__closure;return{marginTop:withSpring(show?0:20,actionBarAnimationConfig),opacity:withSpring(show?1:0,actionBarAnimationConfig)};}",
+};
 const obj8 = { gap: ThemesDefault.space.PX_12 };
 let result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageActionBarButtons.tsx");
 
@@ -203,7 +239,14 @@ export const MusicMuteButton = function MusicMuteButton(arg0) {
     } else {
       stringResult = string(t.zqxfrf);
     }
-    obj = { accessibilityLabel: null, source: null, IconComponent: null, imageStyle: null, onPress: null, isSmallSize: null };
+    obj = {
+      accessibilityLabel: null,
+      source: null,
+      IconComponent: null,
+      imageStyle: null,
+      onPress: null,
+      isSmallSize: null,
+    };
     obj[0] = stringResult;
     obj[1] = importDefault(stateFromStores ? 9998 : 9999);
     if (stateFromStores) {
@@ -253,9 +296,20 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
   }
   analyticsLocations = analyticsLocations(5953)().analyticsLocations;
   let obj = channel(5374);
-  const stageParticipantsCount = obj.useStageParticipantsCount(channel.id, channel(5368).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY);
+  const stageParticipantsCount = obj.useStageParticipantsCount(
+    channel.id,
+    channel(5368).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY,
+  );
   if (stageParticipantsCount > 0) {
-    obj = { accessibilityLabel: null, source: null, imageStyle: null, IconComponent: null, onPress: null, notifications: null, isSmallSize: null };
+    obj = {
+      accessibilityLabel: null,
+      source: null,
+      imageStyle: null,
+      IconComponent: null,
+      onPress: null,
+      notifications: null,
+      isSmallSize: null,
+    };
     const intl = tmp3(1236).intl;
     obj = { count: null };
     obj[0] = stageParticipantsCount;
@@ -270,7 +324,14 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
     obj[6] = isSmallSize;
     let tmp7 = callback2(ActionButtonAll.NotifiedActionButton, obj);
   } else {
-    const obj2 = { accessibilityLabel: null, source: null, imageStyle: null, IconComponent: null, onPress: null, isSmallSize: null };
+    const obj2 = {
+      accessibilityLabel: null,
+      source: null,
+      imageStyle: null,
+      IconComponent: null,
+      onPress: null,
+      isSmallSize: null,
+    };
     const intl2 = tmp3(1236).intl;
     obj2[0] = intl2.string(tmp3(1236).t.KJnyvh);
     obj2[1] = tmp(10018);
@@ -294,14 +355,21 @@ export const RequestToSpeakButton = function RequestToSpeakButton(channel) {
   let shouldShowAgeVerificationPopover;
   [tmp4, c0] = shouldShowAgeVerificationPopover(first(shouldAgeVerifyToSpeakForCurrentUser[42])(channel), 2);
   let obj = _require(shouldAgeVerifyToSpeakForCurrentUser[43]);
-  const tmp6 = shouldShowAgeVerificationPopover(obj.useLocalStorageState("age-verification-stage-popover-dismissed", false), 2);
+  const tmp6 = shouldShowAgeVerificationPopover(
+    obj.useLocalStorageState("age-verification-stage-popover-dismissed", false),
+    2,
+  );
   first = tmp6[0];
   importAll = tmp8;
   let tmp = first;
   const tmp3 = shouldShowAgeVerificationPopover(first(shouldAgeVerifyToSpeakForCurrentUser[42])(channel), 2);
-  shouldAgeVerifyToSpeakForCurrentUser = _require(shouldAgeVerifyToSpeakForCurrentUser[44]).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
+  shouldAgeVerifyToSpeakForCurrentUser = _require(
+    shouldAgeVerifyToSpeakForCurrentUser[44],
+  ).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
   const obj2 = _require(shouldAgeVerifyToSpeakForCurrentUser[44]);
-  shouldShowAgeVerificationPopover = _require(shouldAgeVerifyToSpeakForCurrentUser[44]).useShouldShowAgeVerificationPopover(channel.id);
+  shouldShowAgeVerificationPopover = _require(
+    shouldAgeVerifyToSpeakForCurrentUser[44],
+  ).useShouldShowAgeVerificationPopover(channel.id);
   const items = [shouldShowAgeVerificationPopover, first, tmp6[1]];
   const effect = React.useEffect(() => {
     let tmp = shouldShowAgeVerificationPopover;
@@ -333,23 +401,35 @@ export const RequestToSpeakButton = function RequestToSpeakButton(channel) {
   } else {
     stringResult = string(t.hLbG5N);
   }
-  obj = { accessibilityLabel: stringResult, isActive: tmp4, source: tmp(tmp2[46]), IconComponent: null, onPress: null, appearsDisabled: null, isSmallSize: null };
+  obj = {
+    accessibilityLabel: stringResult,
+    isActive: tmp4,
+    source: tmp(tmp2[46]),
+    IconComponent: null,
+    onPress: null,
+    appearsDisabled: null,
+    isSmallSize: null,
+  };
   if (shouldAgeVerifyToSpeakForCurrentUser) {
     let HandRequestSpeakIcon = tmp5(tmp2[47]).HandRequestDenyIcon;
   } else {
     HandRequestSpeakIcon = tmp5(tmp2[48]).HandRequestSpeakIcon;
   }
   obj[3] = HandRequestSpeakIcon;
-  obj[4] = tmp13 ? NOOP : (() => {
-    if (shouldAgeVerifyToSpeakForCurrentUser) {
-      let obj = first(shouldAgeVerifyToSpeakForCurrentUser[40]);
-      obj = { entryPoint: null };
-      obj[0] = _undefined(shouldAgeVerifyToSpeakForCurrentUser[41]).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
-      const result = obj.showAgeVerificationGetStartedModal(obj);
-    } else {
-      _undefined();
-    }
-  });
+  obj[4] = tmp13
+    ? NOOP
+    : () => {
+        if (shouldAgeVerifyToSpeakForCurrentUser) {
+          let obj = first(shouldAgeVerifyToSpeakForCurrentUser[40]);
+          obj = { entryPoint: null };
+          obj[0] = _undefined(
+            shouldAgeVerifyToSpeakForCurrentUser[41],
+          ).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
+          const result = obj.showAgeVerificationGetStartedModal(obj);
+        } else {
+          _undefined();
+        }
+      };
   obj[5] = tmp13;
   obj[6] = channel.isSmallSize;
   return closure_12(importAll(shouldAgeVerifyToSpeakForCurrentUser[11]).ToggledActionButton, obj);
@@ -362,7 +442,14 @@ export const ChatButton = function ChatButton(channel) {
   let obj = channel(589);
   const items = [closure_8];
   const items1 = [channel.id];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ unreadCount: closure_1_8.getUnreadCount(channel.id), mentionCount: closure_1_8.getMentionCount(channel.id) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => ({
+      unreadCount: closure_1_8.getUnreadCount(channel.id),
+      mentionCount: closure_1_8.getMentionCount(channel.id),
+    }),
+    items1,
+  );
   ({ unreadCount, mentionCount } = stateFromStoresObject);
   obj1 = channel(10028);
   isVoiceChannelLocked = obj1.useIsVoiceChannelLocked(channel);
@@ -381,7 +468,15 @@ export const ChatButton = function ChatButton(channel) {
   }
   if (mentionCount <= 0) {
     if (unreadCount <= 0) {
-      obj = { imageStyle: null, accessibilityLabel: null, IconComponent: null, source: null, onPress: null, appearsDisabled: null, isSmallSize: null };
+      obj = {
+        imageStyle: null,
+        accessibilityLabel: null,
+        IconComponent: null,
+        source: null,
+        onPress: null,
+        appearsDisabled: null,
+        isSmallSize: null,
+      };
       obj = { tintColor: null };
       obj[0] = isVoiceChannelLocked(712).unsafe_rawColors.WHITE;
       obj[0] = obj;
@@ -399,7 +494,17 @@ export const ChatButton = function ChatButton(channel) {
   if (mentionCount > 0) {
     unreadCount = mentionCount;
   }
-  obj1 = { notifications: unreadCount, isMentioned: mentionCount > 0, imageStyle: null, accessibilityLabel: null, IconComponent: null, source: null, onPress: null, appearsDisabled: null, isSmallSize: null };
+  obj1 = {
+    notifications: unreadCount,
+    isMentioned: mentionCount > 0,
+    imageStyle: null,
+    accessibilityLabel: null,
+    IconComponent: null,
+    source: null,
+    onPress: null,
+    appearsDisabled: null,
+    isSmallSize: null,
+  };
   obj2 = { tintColor: isVoiceChannelLocked(712).unsafe_rawColors.WHITE };
   obj1[2] = obj2;
   const intl = tmp(1236).intl;
@@ -498,7 +603,7 @@ export const JoinStagePrompt = function JoinStagePrompt(channel) {
     iconContainerStyle: null,
     style: channel.style,
     title: null,
-    subtitle: null
+    subtitle: null,
   };
   ({ iconStyle: obj[2], iconContainerStyle: obj[3] } = callback4());
   const intl = channel(1236).intl;
@@ -516,8 +621,15 @@ export const ContinueToStagePrompt = function ContinueToStagePrompt(onContinue) 
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t["jMLfp/"]);
   obj[0] = callback2(Button.LegacyText, obj1);
-  const items = [callback2(View, obj), ];
-  const obj2 = { children: callback2(Button.Icon, { style: tmp.continueIcon, source: registerAssetDefault4, size: Button.Icon.Sizes.SMALL, disableColor: true }) };
+  const items = [callback2(View, obj)];
+  const obj2 = {
+    children: callback2(Button.Icon, {
+      style: tmp.continueIcon,
+      source: registerAssetDefault4,
+      size: Button.Icon.Sizes.SMALL,
+      disableColor: true,
+    }),
+  };
   items[1] = callback2(View, obj2);
   obj[1] = items;
   obj[2] = callback3(View, obj);

@@ -12,14 +12,29 @@ function trackOpen() {
   expandEventPropertiesDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Call Session Feedback" });
 }
 noopAll;
-({ AudioFeedbackOption: c4, ConnectionFeedbackOption: c5, FeedbackCategory: closure_6, FeedbackType: error, PeopleFeedbackOption: closure_8, VideoFeedbackOption: c9 } = FeedbackRating);
-const result = require("set").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceFeedbackActionSheet.tsx");
+({
+  AudioFeedbackOption: c4,
+  ConnectionFeedbackOption: c5,
+  FeedbackCategory: closure_6,
+  FeedbackType: error,
+  PeopleFeedbackOption: closure_8,
+  VideoFeedbackOption: c9,
+} = FeedbackRating);
+const result = require("set").fileFinishedImporting(
+  "modules/voice_calls/native/action_sheet/VoiceFeedbackActionSheet.tsx",
+);
 
 export default function VoiceFeedbackActionSheet(analyticsData) {
   analyticsData = analyticsData.analyticsData;
   const intl = analyticsData(1236).intl;
   const intl2 = analyticsData(1236).intl;
-  let obj = { value: constants3.CONNECTION, label: null, problemsHeader: null, problemOptions: null, freeformConfig: null };
+  let obj = {
+    value: constants3.CONNECTION,
+    label: null,
+    problemsHeader: null,
+    problemOptions: null,
+    freeformConfig: null,
+  };
   const stringResult = intl.string(analyticsData(1236).t.Ss6tlb);
   const intl3 = analyticsData(1236).intl;
   obj[1] = intl3.string(messagesProxyDefault.FVhMw6);
@@ -42,7 +57,13 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
   const intl8 = analyticsData(1236).intl;
   obj1[1] = intl8.string(analyticsData(1236).t.emlT91);
   obj[4] = obj1;
-  const obj2 = { value: constants3.VIDEO, label: null, problemsHeader: null, problemOptions: null, freeformConfig: null };
+  const obj2 = {
+    value: constants3.VIDEO,
+    label: null,
+    problemsHeader: null,
+    problemOptions: null,
+    freeformConfig: null,
+  };
   const intl9 = analyticsData(1236).intl;
   obj2[1] = intl9.string(messagesProxyDefault["0WFzPh"]);
   const intl10 = analyticsData(1236).intl;
@@ -64,7 +85,15 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
   const intl14 = analyticsData(1236).intl;
   obj5[1] = intl14.string(analyticsData(1236).t.emlT91);
   obj4[4] = obj5;
-  const obj6 = { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: stringResult1, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null };
+  const obj6 = {
+    headerLabel: stringResult,
+    showHeaderCloseButton: true,
+    ratingBody: stringResult1,
+    categoriesHeader: null,
+    optionsTree: null,
+    trackOpen: null,
+    trackReport: null,
+  };
   const obj11 = analyticsData(11214);
   const intl15 = analyticsData(1236).intl;
   obj6[3] = intl15.string(messagesProxyDefault.tq8598);
@@ -80,7 +109,14 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
       obj.processOptOut(obj);
     }
     if (null != rating) {
-      obj = { rating: null, category: null, reasonDescription: null, variant: null, feedback: null, analyticsData: null };
+      obj = {
+        rating: null,
+        category: null,
+        reasonDescription: null,
+        variant: null,
+        feedback: null,
+        analyticsData: null,
+      };
       obj[0] = rating;
       obj[1] = category;
       let value;
@@ -108,7 +144,11 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
           ({ media_session_id: obj6[0], rtc_connection_id: obj6[1] } = tmp7);
-          tmp20(closure_1_2[11]).openLazy(analyticsData(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
+          tmp20(closure_1_2[11]).openLazy(
+            analyticsData(closure_1_2[13])(closure_1_2[12], closure_1_2.paths),
+            "UploadLogs",
+            { mediaSessionId: null, rtcConnectionId: null },
+          );
           obj1 = { mediaSessionId: null, rtcConnectionId: null };
           const tmp20Result = tmp20(closure_1_2[11]);
         }
@@ -121,5 +161,13 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
       const obj4 = analyticsData(closure_1_2[14]);
     }
   };
-  return jsx(closeActionSheetDefault, { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: stringResult1, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });
-};
+  return jsx(closeActionSheetDefault, {
+    headerLabel: stringResult,
+    showHeaderCloseButton: true,
+    ratingBody: stringResult1,
+    categoriesHeader: null,
+    optionsTree: null,
+    trackOpen: null,
+    trackReport: null,
+  });
+}

@@ -32,7 +32,10 @@ export const useAutoSearchPeopleTab = function useAutoSearchPeopleTab(searchCont
     }
   }, items1);
   const items2 = [searchContext];
-  const effect2 = React.useEffect(() => () => {
-    closure_1_1(closure_1_2[4]).cleanupPeopleTab(closure_0);
-  }, items2);
+  const effect2 = React.useEffect(
+    () => () => {
+      closure_1_1(closure_1_2[4]).cleanupPeopleTab(closure_0);
+    },
+    items2,
+  );
 };

@@ -15,41 +15,41 @@ class MessagePreviewStore extends Store {
     closure_0 = undefined;
     obj = {
       CONNECTION_OPEN(arg0) {
-            return obj.handleConnectionOpen(arg0);
-          },
+        return obj.handleConnectionOpen(arg0);
+      },
       GUILD_CREATE(arg0) {
-            return obj.handleGuildCreate(arg0);
-          },
+        return obj.handleGuildCreate(arg0);
+      },
       GUILD_DELETE(arg0) {
-            return obj.handleGuildDelete(arg0);
-          },
+        return obj.handleGuildDelete(arg0);
+      },
       LOAD_MESSAGES_SUCCESS(arg0) {
-            return obj.handleLoadMessagesSuccess(arg0);
-          },
+        return obj.handleLoadMessagesSuccess(arg0);
+      },
       LOCAL_MESSAGES_LOADED(arg0) {
-            return obj.handleLocalMessagesLoaded(arg0);
-          },
+        return obj.handleLocalMessagesLoaded(arg0);
+      },
       LOGOUT(arg0) {
-            return obj.handleLogout(arg0);
-          },
+        return obj.handleLogout(arg0);
+      },
       MESSAGE_CREATE(arg0) {
-            return obj.handleMessageCreate(arg0);
-          },
+        return obj.handleMessageCreate(arg0);
+      },
       MESSAGE_DELETE(arg0) {
-            return obj.handleMessageDelete(arg0);
-          },
+        return obj.handleMessageDelete(arg0);
+      },
       MESSAGE_PREVIEWS_LOADED(arg0) {
-            return obj.handleMessagePreviewsLoaded(arg0);
-          },
+        return obj.handleMessagePreviewsLoaded(arg0);
+      },
       MESSAGE_PREVIEWS_LOCALLY_LOADED(guildId) {
-            return obj.handleMessagePreviewsLocallyLoaded(guildId);
-          },
+        return obj.handleMessagePreviewsLocallyLoaded(guildId);
+      },
       MESSAGE_UPDATE(arg0) {
-            return obj.handleMessageUpdate(arg0);
-          },
+        return obj.handleMessageUpdate(arg0);
+      },
       THREAD_LIST_SYNC(arg0) {
-            return obj.handleThreadListSync(arg0);
-          }
+        return obj.handleThreadListSync(arg0);
+      },
     };
     tmp2 = new tmp2(require("dispatcher"), obj, new.target, tmp2, tmp, new.target, undefined);
     // ThrowIfThisInitialized (0x7c)
@@ -261,7 +261,9 @@ prototype["handleLocalMessagesLoaded"] = function handleLocalMessagesLoaded(chan
 };
 prototype["handleMessagePreviewsLoaded"] = function handleMessagePreviewsLoaded(guildId) {
   const self = this;
-  closure_7.verbose("adding remote previews (guildId: " + guildId.guildId + ", messages: " + guildId.messages.length + ")");
+  closure_7.verbose(
+    "adding remote previews (guildId: " + guildId.guildId + ", messages: " + guildId.messages.length + ")",
+  );
   const dataResult = this.data(guildId.guildId);
   for (const item10024 of tmp2) {
     let tmp3 = item10024;
@@ -273,7 +275,9 @@ prototype["handleMessagePreviewsLoaded"] = function handleMessagePreviewsLoaded(
   }
 };
 prototype["handleMessagePreviewsLocallyLoaded"] = function handleMessagePreviewsLocallyLoaded(guildId) {
-  closure_7.verbose("adding local previews (guildId: " + guildId.guildId + ", messages: " + guildId.messages.length + ")");
+  closure_7.verbose(
+    "adding local previews (guildId: " + guildId.guildId + ", messages: " + guildId.messages.length + ")",
+  );
   const dataResult = this.data(guildId.guildId);
   while (tmp2 !== undefined) {
     let tmp4 = callback;
@@ -296,44 +300,56 @@ function handleLogout() {
 }
 prototype["handleLogout"] = handleLogout;
 object = undefined;
-object = new Object(dispatcherDefault, {
-  CONNECTION_OPEN(arg0) {
-    return obj.handleConnectionOpen(arg0);
+object = new Object(
+  dispatcherDefault,
+  {
+    CONNECTION_OPEN(arg0) {
+      return obj.handleConnectionOpen(arg0);
+    },
+    GUILD_CREATE(arg0) {
+      return obj.handleGuildCreate(arg0);
+    },
+    GUILD_DELETE(arg0) {
+      return obj.handleGuildDelete(arg0);
+    },
+    LOAD_MESSAGES_SUCCESS(arg0) {
+      return obj.handleLoadMessagesSuccess(arg0);
+    },
+    LOCAL_MESSAGES_LOADED(arg0) {
+      return obj.handleLocalMessagesLoaded(arg0);
+    },
+    LOGOUT(arg0) {
+      return obj.handleLogout(arg0);
+    },
+    MESSAGE_CREATE(arg0) {
+      return obj.handleMessageCreate(arg0);
+    },
+    MESSAGE_DELETE(arg0) {
+      return obj.handleMessageDelete(arg0);
+    },
+    MESSAGE_PREVIEWS_LOADED(arg0) {
+      return obj.handleMessagePreviewsLoaded(arg0);
+    },
+    MESSAGE_PREVIEWS_LOCALLY_LOADED(guildId) {
+      return obj.handleMessagePreviewsLocallyLoaded(guildId);
+    },
+    MESSAGE_UPDATE(arg0) {
+      return obj.handleMessageUpdate(arg0);
+    },
+    THREAD_LIST_SYNC(arg0) {
+      return obj.handleThreadListSync(arg0);
+    },
   },
-  GUILD_CREATE(arg0) {
-    return obj.handleGuildCreate(arg0);
-  },
-  GUILD_DELETE(arg0) {
-    return obj.handleGuildDelete(arg0);
-  },
-  LOAD_MESSAGES_SUCCESS(arg0) {
-    return obj.handleLoadMessagesSuccess(arg0);
-  },
-  LOCAL_MESSAGES_LOADED(arg0) {
-    return obj.handleLocalMessagesLoaded(arg0);
-  },
-  LOGOUT(arg0) {
-    return obj.handleLogout(arg0);
-  },
-  MESSAGE_CREATE(arg0) {
-    return obj.handleMessageCreate(arg0);
-  },
-  MESSAGE_DELETE(arg0) {
-    return obj.handleMessageDelete(arg0);
-  },
-  MESSAGE_PREVIEWS_LOADED(arg0) {
-    return obj.handleMessagePreviewsLoaded(arg0);
-  },
-  MESSAGE_PREVIEWS_LOCALLY_LOADED(guildId) {
-    return obj.handleMessagePreviewsLocallyLoaded(guildId);
-  },
-  MESSAGE_UPDATE(arg0) {
-    return obj.handleMessageUpdate(arg0);
-  },
-  THREAD_LIST_SYNC(arg0) {
-    return obj.handleThreadListSync(arg0);
-  }
-}, tmp, MessagePreviewStore, Object, prototype, new.target, undefined, handleLogout, globalThis, arg1);
+  tmp,
+  MessagePreviewStore,
+  Object,
+  prototype,
+  new.target,
+  undefined,
+  handleLogout,
+  globalThis,
+  arg1,
+);
 // ThrowIfThisInitialized (0x7c)
 let obj = {
   CONNECTION_OPEN(arg0) {
@@ -371,7 +387,7 @@ let obj = {
   },
   THREAD_LIST_SYNC(arg0) {
     return obj.handleThreadListSync(arg0);
-  }
+  },
 };
 let tmp3 = new timestampDefault("MessagePreviewStore");
 object.guilds = new Map();

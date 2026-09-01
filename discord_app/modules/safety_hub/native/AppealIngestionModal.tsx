@@ -14,7 +14,16 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: c9, AppealIngestionSections: c10 } = SafetyHubView);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { container: null, headerContainer: null, header: null, subheader: null, separator: null, footerContainer: null, footerText: null, footerButton: null };
+createCacheKey = {
+  container: null,
+  headerContainer: null,
+  header: null,
+  subheader: null,
+  separator: null,
+  footerContainer: null,
+  footerText: null,
+  footerButton: null,
+};
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignSelf: "stretch", marginTop: 16, marginBottom: 8, paddingHorizontal: 16 };
@@ -70,7 +79,12 @@ export default function AppealIngestionModal(classificationId) {
         return callback3(callback(4474).Text, { variant: "text-md/normal", children: "accessible" });
       };
       obj[2] = function render() {
-        return closure_1_12(callback2(11470), { isDsaEligible: closure_0, isSpam: callback2, isCoppa: closure_2, isDeveloperClassification: dependencyMap });
+        return closure_1_12(callback2(11470), {
+          isDsaEligible: closure_0,
+          isSpam: callback2,
+          isCoppa: closure_2,
+          isDeveloperClassification: dependencyMap,
+        });
       };
       obj[3] = _undefined(flag3[23]).ImpressionNames.APPEAL_INGESTION_SPEED_BUMP;
       obj[4] = closure_1_9;
@@ -96,7 +110,7 @@ export default function AppealIngestionModal(classificationId) {
           return closure_1_12(callback2(11477), { isDsaEligible: closure_0 });
         },
         impressionName: _undefined(flag3[23]).ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION,
-        impressionProperties: closure_1_9
+        impressionProperties: closure_1_9,
       };
       obj[closure_1_10.CONFIRM_SUBMISSION] = obj1;
       obj2 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
@@ -111,7 +125,13 @@ export default function AppealIngestionModal(classificationId) {
       obj2[3] = _undefined(flag3[23]).ImpressionNames.APPEAL_INGESTION_REQUEST_SENT;
       obj2[4] = closure_1_9;
       obj[closure_1_10.REQUEST_SENT] = obj2;
-      const obj3 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
+      const obj3 = {
+        headerLeft: null,
+        headerTitle: null,
+        render: null,
+        impressionName: null,
+        impressionProperties: null,
+      };
       const obj9 = _undefined(flag3[21]);
       obj3[0] = _undefined(flag3[21]).getHeaderCloseButton(flag(flag3[15]).close);
       obj3[1] = function headerTitle() {
@@ -138,12 +158,12 @@ export default function AppealIngestionModal(classificationId) {
       return obj;
     }),
     headerBackTitle: null,
-    headerTitleAlign: "center"
+    headerTitleAlign: "center",
   };
   const intl = tmp(tmp2[19]).intl;
   obj[2] = intl.string(_require(flag3[19]).t["13/7kX"]);
   return callback2(_require(flag3[30]).Navigator, obj);
-};
+}
 export const AppealIngestionModalHeader = function AppealIngestionModalHeader(arg0) {
   ({ headerText, subHeaderText } = arg0);
   const tmp = callback3();
@@ -153,12 +173,18 @@ export const AppealIngestionModalHeader = function AppealIngestionModalHeader(ar
     tmp4 = "" !== headerText;
   }
   if (tmp4) {
-    obj = { style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+    obj = {
+      style: null,
+      variant: "heading-xl/extrabold",
+      color: "mobile-text-heading-primary",
+      accessibilityRole: "header",
+      children: null,
+    };
     obj[0] = tmp.header;
     obj[4] = headerText;
     tmp4 = callback2(Text.Text, obj);
   }
-  const items = [tmp4, ];
+  const items = [tmp4];
   let tmp8 = null;
   if (null != subHeaderText) {
     tmp8 = null;
@@ -223,7 +249,8 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
     prop = classification3.appeal_ingestion_type;
   }
   navigation = safetyHubAppealSignal(stringResult[13]).useNavigation();
-  const tmp11 = null != prop && prop !== safetyHubAppealSignal(stringResult[14]).AppealIngestionType.IN_APP || flag2 || flag;
+  const tmp11 =
+    (null != prop && prop !== safetyHubAppealSignal(stringResult[14]).AppealIngestionType.IN_APP) || flag2 || flag;
   let obj5 = "";
   const tmp12 = !tmp11;
   const tmpResult = safetyHubAppealSignal(stringResult[13]);
@@ -254,87 +281,90 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
     }
   }, items4);
   const items5 = [stateFromStores2, safetyHubAppealSignal, stateFromStores1, callback];
-  let string = React.useCallback(callback(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  let string = React.useCallback(
+    callback(function* () {
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
+        try {
+          c5 = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_1 = tmp3;
+              let body = tmp7;
+              if (null !== closure_1_2) {
+                dependencyMap = 1;
+                v0("");
+                v0 = 2;
+                c5 = 1;
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_2(11455).requestReview(tmp36, closure_1_0, closure_1_1);
+                return obj1;
+              }
+            }
+          } else {
+            if (1 === tmp7) {
+              dependencyMap = 0;
+              body = closure_2;
+              obj1 = closure_1_0(8689);
+              body = body.body;
+              let code;
+              if (body != null) {
+                code = body.code;
+              }
+              v0(obj1.getRequestReviewErrorFromCode(code));
+              const tmp15 = v0;
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              callback();
+              dependencyMap = 0;
+            }
+            dependencyMap = 0;
             c5 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
-          } else {
-            closure_1 = tmp3;
-            let body = tmp7;
-            if (null !== closure_1_2) {
-              dependencyMap = 1;
-              v0("");
-              v0 = 2;
-              c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_2(11455).requestReview(tmp36, closure_1_0, closure_1_1);
-              return obj1;
-            }
           }
-        } else {
-          if (1 === tmp7) {
-            dependencyMap = 0;
-            body = closure_2;
-            obj1 = closure_1_0(8689);
-            body = body.body;
-            let code;
-            if (body != null) {
-              code = body.code;
-            }
-            v0(obj1.getRequestReviewErrorFromCode(code));
-            const tmp15 = v0;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            callback();
-            dependencyMap = 0;
-          }
-          dependencyMap = 0;
           c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-        c5 = 3;
-      } catch (tmp27) {
-        closure_2 = tmp27;
-        if (tmp4 === dependencyMap) {
-          c5 = tmp2;
-          throw tmp27;
-        } else {
-          v0 = tmp;
+        } catch (tmp27) {
+          closure_2 = tmp27;
+          if (tmp4 === dependencyMap) {
+            c5 = tmp2;
+            throw tmp27;
+          } else {
+            v0 = tmp;
+          }
         }
       }
-    }
-  }), items5);
+    }),
+    items5,
+  );
   obj = { style: footerText.container, children: null };
-  const items6 = [children.children, ];
+  const items6 = [children.children];
   obj = { style: footerText.footerContainer, children: null };
   obj1 = { style: footerText.separator };
-  const items7 = [callback2(callback, obj1), ];
+  const items7 = [callback2(callback, obj1)];
   if (tmp11) {
     items7[1] = tmp12;
     obj[1] = items7;
@@ -349,7 +379,7 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
       obj3[2] = footerText.footerText;
       const intl4 = tmp(stringResult[19]).intl;
       obj3[3] = intl4.string(tmp(stringResult[19]).t["d6qgY/"]);
-      const items8 = [tmp20(tmp(stringResult[10]).Text, obj3), , ];
+      const items8 = [tmp20(tmp(stringResult[10]).Text, obj3), ,];
       let tmp20Result = `` !== intl;
       if (tmp20Result) {
         obj4 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null, children: null };

@@ -24,7 +24,9 @@ createToggle = {
     if (arg0) {
       let items = [Consents.PERSONALIZATION];
       const obj3 = handleRequestSuccess;
-      handleRequestSuccess.setConsents(items, []).catch((message) => callback(14462).showDataPrivacyRateLimitAlert(message.message));
+      handleRequestSuccess
+        .setConsents(items, [])
+        .catch((message) => callback(14462).showDataPrivacyRateLimitAlert(message.message));
       const setConsentsResult = handleRequestSuccess.setConsents(items, []);
     } else {
       let obj = setDefault;
@@ -47,9 +49,11 @@ createToggle = {
   },
   useIsDisabled() {
     return useParentalControlledExplicitContentSettings.useIsParentallyControlled();
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx",
+);
 
 export default createToggle;

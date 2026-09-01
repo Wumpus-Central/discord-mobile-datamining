@@ -14,12 +14,40 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 require = arg1;
 ({ View: c4, Image: c5, ImageBackground: closure_6, TouchableWithoutFeedback: error } = get_ActivityIndicator);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { assetWrapper: { width: "100%", alignItems: "center" }, asset: null, uploadIconWrapper: null, uploadIcon: null, remove: null };
-createCacheKey = { width: "100%", height: 192, borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  assetWrapper: { width: "100%", alignItems: "center" },
+  asset: null,
+  uploadIconWrapper: null,
+  uploadIcon: null,
+  remove: null,
+};
+createCacheKey = {
+  width: "100%",
+  height: 192,
+  borderRadius: ThemesDefault.radii.xs,
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { position: "absolute", bottom: 10, right: 10, shadowColor: ThemesDefault.unsafe_rawColors.BLACK, shadowRadius: 10, shadowOffset: { height: 8, width: 0 }, shadowOpacity: 0.2 };
+createCacheKey[2] = {
+  position: "absolute",
+  bottom: 10,
+  right: 10,
+  shadowColor: ThemesDefault.unsafe_rawColors.BLACK,
+  shadowRadius: 10,
+  shadowOffset: { height: 8, width: 0 },
+  shadowOpacity: 0.2,
+};
 createCacheKey[3] = { width: 16, height: 16 };
-let obj1 = { position: "absolute", bottom: 10, right: 10, shadowColor: ThemesDefault.unsafe_rawColors.BLACK, shadowRadius: 10, shadowOffset: { height: 8, width: 0 }, shadowOpacity: 0.2 };
+let obj1 = {
+  position: "absolute",
+  bottom: 10,
+  right: 10,
+  shadowColor: ThemesDefault.unsafe_rawColors.BLACK,
+  shadowRadius: 10,
+  shadowOffset: { height: 8, width: 0 },
+  shadowOpacity: 0.2,
+};
 createCacheKey[4] = { marginTop: 8, fontSize: 14, lineHeight: 18, color: ThemesDefault.unsafe_rawColors.BLUE_345 };
 let closure_12 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
@@ -27,7 +55,7 @@ class AssetChooser extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
-    applyArgumentsResult.handleChooseAsset = closure_3(function*() {
+    applyArgumentsResult.handleChooseAsset = closure_3(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -125,7 +153,14 @@ prototype["render"] = function render() {
   const tmp = callback2(this.context);
   const disabled = this.props.disabled;
   const source = this.getSource();
-  let obj = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, disabled: null, children: null };
+  let obj = {
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    style: null,
+    onPress: null,
+    disabled: null,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["MsUY/S"]);
   obj[2] = tmp.assetWrapper;
@@ -148,7 +183,7 @@ prototype["render"] = function render() {
   }
   obj[2] = tmp5Result;
   obj[5] = closure_9(closure_6, obj);
-  const children = [closure_9(PressableBase.PressableOpacity, obj), ];
+  const children = [closure_9(PressableBase.PressableOpacity, obj)];
   tmp5Result = null;
   if (null != source) {
     tmp5Result = null;

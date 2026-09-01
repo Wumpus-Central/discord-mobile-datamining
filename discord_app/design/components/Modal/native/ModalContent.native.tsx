@@ -4,10 +4,29 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-let closure_2 = createCacheKey.createStyles({ scrollContainer: { flex: 1 }, contentContainer: { flexDirection: "column", paddingTop: 24, paddingHorizontal: 16, alignItems: "center", flexGrow: 1 } });
+let closure_2 = createCacheKey.createStyles({
+  scrollContainer: { flex: 1 },
+  contentContainer: {
+    flexDirection: "column",
+    paddingTop: 24,
+    paddingHorizontal: 16,
+    alignItems: "center",
+    flexGrow: 1,
+  },
+});
 const forwardRefResult = importAllResult.forwardRef((children, ref) => {
   const tmp = callback();
-  return <ScrollView style={tmp.scrollContainer} contentContainerStyle={tmp.contentContainer} showsVerticalScrollIndicator={false} keyboardShouldPersistTaps="handled" ref={arg1}>{arg0.children}</ScrollView>;
+  return (
+    <ScrollView
+      style={tmp.scrollContainer}
+      contentContainerStyle={tmp.contentContainer}
+      showsVerticalScrollIndicator={false}
+      keyboardShouldPersistTaps="handled"
+      ref={arg1}
+    >
+      {arg0.children}
+    </ScrollView>
+  );
 });
 const result = require("set").fileFinishedImporting("design/components/Modal/native/ModalContent.native.tsx");
 

@@ -73,7 +73,26 @@ function transformInternalTextMessage(message) {
     userAuthor = useNullableMessageAuthor.getUserAuthor(tmp4, channel);
     const obj3 = useNullableMessageAuthor;
   }
-  obj = { id: message.id, blocked: message.blocked, bot: message.bot, content: message.content, content_parsed: null, nick: null, author_color: null, edited_timestamp: null, timestamp: null, tts: null, mentions: null, mention_everyone: null, mention_roles: null, embeds: null, attachments: null, author: null, pinned: null, type: null };
+  obj = {
+    id: message.id,
+    blocked: message.blocked,
+    bot: message.bot,
+    content: message.content,
+    content_parsed: null,
+    nick: null,
+    author_color: null,
+    edited_timestamp: null,
+    timestamp: null,
+    tts: null,
+    mentions: null,
+    mention_everyone: null,
+    mention_roles: null,
+    embeds: null,
+    attachments: null,
+    author: null,
+    pinned: null,
+    type: null,
+  };
   let tmp10;
   if (mapped.length) {
     tmp10 = mapped;
@@ -104,10 +123,18 @@ function transformInternalTextMessage(message) {
 }
 function fetchApplicationRPC(arg0) {
   const HTTP = sendRequest.HTTP;
-  const value = HTTP.get({ url: closure_19.APPLICATION_RPC(arg0), oldFormErrors: true, retries: 3, rejectWithError: true });
-  return value.then((body) => body.body, () => {
-    throw new callback(table[26])({ closeCode: constants.INVALID_CLIENTID }, "Invalid Client ID");
+  const value = HTTP.get({
+    url: closure_19.APPLICATION_RPC(arg0),
+    oldFormErrors: true,
+    retries: 3,
+    rejectWithError: true,
   });
+  return value.then(
+    (body) => body.body,
+    () => {
+      throw new callback(table[26])({ closeCode: constants.INVALID_CLIENTID }, "Invalid Client ID");
+    },
+  );
 }
 function _validateSocketApplication() {
   const self = this;
@@ -117,7 +144,7 @@ function _validateSocketApplication() {
     closure_2 = arg2;
     c7 = 0;
     c8 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (icon === 2) {
         icon = 3;
         HermesBuiltin.throwTypeError();
@@ -257,7 +284,7 @@ function _processSocketThrottlers() {
     c4 = 0;
     c7 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -344,7 +371,15 @@ function _processSocketThrottlers() {
   return applyArgumentsResult;
 }
 ({ RPC_LOCAL_SCOPE: closure_15, TransportTypes: closure_16 } = RPC_SCOPE_CONFIG);
-({ ActivityActionTypes: closure_17, ChannelTypes: closure_18, Endpoints: closure_19, MAX_MESSAGES_PER_CHANNEL: closure_20, RPCCloseCodes: closure_21, RPCErrors: closure_22, RTCConnectionStates: closure_23 } = ME);
+({
+  ActivityActionTypes: closure_17,
+  ChannelTypes: closure_18,
+  Endpoints: closure_19,
+  MAX_MESSAGES_PER_CHANNEL: closure_20,
+  RPCCloseCodes: closure_21,
+  RPCErrors: closure_22,
+  RTCConnectionStates: closure_23,
+} = ME);
 const toURLSafeResult = importDefaultResult.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT);
 let str;
 if (toURLSafeResult != null) {
@@ -405,7 +440,9 @@ function transformVoiceState(closure_2, id, userId) {
   }
 }
 const escapeResult = importDefaultResult1.escape("https://");
-const regExp = new RegExp("^" + escapeResult + "(?:[a-z]+\\.)?(" + importDefaultResult1.escape(tmp5) + "|discordapp.com|discord.com)$");
+const regExp = new RegExp(
+  "^" + escapeResult + "(?:[a-z]+\\.)?(" + importDefaultResult1.escape(tmp5) + "|discordapp.com|discord.com)$",
+);
 const MINUTE = setDefault.Millis.MINUTE;
 let obj = {};
 const importDefaultResult2 = importDefaultResult1;
@@ -446,7 +483,18 @@ export const transformChannel = function transformChannel(channel, arg1) {
       }
       const _Object = Object;
       const values = Object.values(closure_1_14.getVoiceStatesForChannel(tmp.id));
-      obj = { id: null, name: null, type: null, topic: null, bitrate: null, user_limit: null, guild_id: null, position: null, messages: null, voice_states: null };
+      obj = {
+        id: null,
+        name: null,
+        type: null,
+        topic: null,
+        bitrate: null,
+        user_limit: null,
+        guild_id: null,
+        position: null,
+        messages: null,
+        voice_states: null,
+      };
       ({ id: obj2[0], name: obj2[1], type: obj2[2], topic: obj2[3], bitrate: obj2[4], userLimit: obj2[5] } = tmp);
       obj[6] = closure_2;
       obj[7] = tmp.position;
@@ -610,7 +658,18 @@ export const validateOriginAndUpdateSocket = function validateOriginAndUpdateSoc
 };
 export const getDeprecatedVoiceSettingsWithShortcut = function getDeprecatedVoiceSettingsWithShortcut(arg0) {
   const settings = store.getSettings();
-  obj = { input: null, output: null, mode: null, automatic_gain_control: null, echo_cancellation: null, noise_suppression: null, qos: null, silence_warning: null, deaf: null, mute: null };
+  obj = {
+    input: null,
+    output: null,
+    mode: null,
+    automatic_gain_control: null,
+    echo_cancellation: null,
+    noise_suppression: null,
+    qos: null,
+    silence_warning: null,
+    deaf: null,
+    mute: null,
+  };
   obj = { available_devices: null, device_id: null, volume: null };
   let values = Object.values(store.getInputDevices());
   const sorted = values.sort((index, index2) => index.index - index2.index);
@@ -623,8 +682,22 @@ export const getDeprecatedVoiceSettingsWithShortcut = function getDeprecatedVoic
   obj[0] = sorted1.map((id) => ({ id: id.id, name: id.name }));
   ({ outputDeviceId: obj4[1], outputVolume: obj4[2] } = settings);
   obj[1] = obj;
-  obj[2] = { type: settings.mode, auto_threshold: settings.modeOptions.autoThreshold, threshold: settings.modeOptions.threshold, shortcut: arg0(settings), delay: settings.modeOptions.delay };
-  ({ automaticGainControl: obj[3], echoCancellation: obj[4], noiseSuppression: obj[5], qos: obj[6], silenceWarning: obj[7], deaf: obj[8], mute: obj[9] } = settings);
+  obj[2] = {
+    type: settings.mode,
+    auto_threshold: settings.modeOptions.autoThreshold,
+    threshold: settings.modeOptions.threshold,
+    shortcut: arg0(settings),
+    delay: settings.modeOptions.delay,
+  };
+  ({
+    automaticGainControl: obj[3],
+    echoCancellation: obj[4],
+    noiseSuppression: obj[5],
+    qos: obj[6],
+    silenceWarning: obj[7],
+    deaf: obj[8],
+    mute: obj[9],
+  } = settings);
   return obj;
 };
 export const getVoiceSettingsWithShortcut = function getVoiceSettingsWithShortcut(arg0, arg1) {
@@ -642,7 +715,7 @@ export const validatePostMessageTransport = function validatePostMessageTranspor
     obj[0] = constants4.INVALID_COMMAND;
     const _HermesInternal = HermesInternal;
     let tmp3 = prototypeDefault;
-    tmp3 = new tmp3(obj, "command not available from \"" + transport + " transport");
+    tmp3 = new tmp3(obj, 'command not available from "' + transport + " transport");
     throw tmp3;
   }
 };

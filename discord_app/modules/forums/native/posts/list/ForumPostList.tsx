@@ -14,12 +14,16 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 require = arg1;
 noopAll;
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ header: { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 }, content: { flex: 1, marginBottom: 12 } });
+let closure_9 = createCacheKey.createStyles({
+  header: { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 },
+  content: { flex: 1, marginBottom: 12 },
+});
 const result = require("set").fileFinishedImporting("modules/forums/native/posts/list/ForumPostList.tsx");
 
 export default function ForumPostList(arg0) {
   ({ firstMessage, hasUnreads, thread } = arg0);
-  ({ messageContent, firstMessageLoaded, isNew, media, isEmbed, isLocalDeviceMedia, parentChannel, senderModifier } = arg0);
+  ({ messageContent, firstMessageLoaded, isNew, media, isEmbed, isLocalDeviceMedia, parentChannel, senderModifier } =
+    arg0);
   const tmp = callback3();
   let obj = useAvailableTags;
   const tmp4 = callback(obj.useSomeAppliedTags(thread, 2), 2);
@@ -37,7 +41,7 @@ export default function ForumPostList(arg0) {
     if (hasFlagResult) {
       tmp10 = callback2(ForumPostPinIconDefault, {});
     }
-    const items = [tmp10, ];
+    const items = [tmp10];
     let tmp13 = 0 !== first.length;
     if (tmp13) {
       obj1 = { appliedTags: null, additionalTagsCount: null, hasUnreads: null };
@@ -51,9 +55,26 @@ export default function ForumPostList(arg0) {
     tmp6Result = tmp6(tmp8, obj);
   }
   const obj2 = { children: null };
-  const items1 = [tmp6Result, callback2(ForumPostListBodyDefault, { thread, firstMessage, hasUnreads, isNew, messageContent, media, isEmbed, isLocalDeviceMedia, firstMessageLoaded, senderModifier })];
+  const items1 = [
+    tmp6Result,
+    callback2(ForumPostListBodyDefault, {
+      thread,
+      firstMessage,
+      hasUnreads,
+      isNew,
+      messageContent,
+      media,
+      isEmbed,
+      isLocalDeviceMedia,
+      firstMessageLoaded,
+      senderModifier,
+    }),
+  ];
   obj[1] = items1;
-  const items2 = [closure_7(View, obj), callback2(ForumPostListFooterDefault, { thread, firstMessage, hasUnreads, parentChannel })];
+  const items2 = [
+    closure_7(View, obj),
+    callback2(ForumPostListFooterDefault, { thread, firstMessage, hasUnreads, parentChannel }),
+  ];
   obj2[0] = items2;
   return closure_7(closure_8, obj2);
-};
+}

@@ -14,24 +14,31 @@ export default function useTypingText(channelId) {
   let items = [closure_4];
   const items1 = [channelId, guildId, typingUserIds];
   const obj2 = channelId(typingUserIds[2]);
-  [tmp2, tmp3, tmp4] = callback(channelId(typingUserIds[2]).useStateFromStoresArray(items, () => {
-    const items = [];
-    while (tmp2 !== undefined) {
-      let tmp4 = closure_1_4;
-      let user = closure_1_4.getUser(tmp3);
-      if (null != user) {
-        let tmp7 = guildId;
-        let tmp8 = typingUserIds;
-        let obj = guildId(typingUserIds[3]);
-        let tmp9 = guildId;
-        let tmp10 = channelId;
-        let tmp11 = user;
-        let arr = items.push(obj.getName(guildId, channelId, tmp6));
-      }
-      continue;
-    }
-    return items;
-  }, items1), 4);
+  [tmp2, tmp3, tmp4] = callback(
+    channelId(typingUserIds[2]).useStateFromStoresArray(
+      items,
+      () => {
+        const items = [];
+        while (tmp2 !== undefined) {
+          let tmp4 = closure_1_4;
+          let user = closure_1_4.getUser(tmp3);
+          if (null != user) {
+            let tmp7 = guildId;
+            let tmp8 = typingUserIds;
+            let obj = guildId(typingUserIds[3]);
+            let tmp9 = guildId;
+            let tmp10 = channelId;
+            let tmp11 = user;
+            let arr = items.push(obj.getName(guildId, channelId, tmp6));
+          }
+          continue;
+        }
+        return items;
+      },
+      items1,
+    ),
+    4,
+  );
   if (null == tmp2) {
     return null;
   } else if (null == tmp3) {
@@ -57,4 +64,4 @@ export default function useTypingText(channelId) {
     const intl = lJ9sZX(obj[4]).intl;
     formatResult = intl.string(lJ9sZX(obj[4]).t.uVDhqZ);
   }
-};
+}

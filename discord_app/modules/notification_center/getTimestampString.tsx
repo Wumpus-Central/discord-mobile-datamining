@@ -50,11 +50,23 @@ export default function getTimestampString(arg0) {
   const obj = { seconds: hooksDefault().diff(hooksDefault(since), "s"), getFormatter };
   ({ since, getFormatter } = arg0);
   return getDurationString(obj);
-};
+}
 export const getAbbreviatedFormatter = function getAbbreviatedFormatter() {
-  return { minutes: getSystemLocale.t["XIGt+W"], hours: getSystemLocale.t.rhY1Rs, days: getSystemLocale.t.GBLpQ8, months: getSystemLocale.t.XzBNbS, years: getSystemLocale.t.I1E8p6 };
+  return {
+    minutes: getSystemLocale.t["XIGt+W"],
+    hours: getSystemLocale.t.rhY1Rs,
+    days: getSystemLocale.t.GBLpQ8,
+    months: getSystemLocale.t.XzBNbS,
+    years: getSystemLocale.t.I1E8p6,
+  };
 };
 export const getFullFormatter = function getFullFormatter() {
-  return { minutes: getSystemLocale.t["GqQ/Y9"], hours: getSystemLocale.t.c5zfWZ, days: getSystemLocale.t.amjnaI, months: getSystemLocale.t.SoON3V, years: getSystemLocale.t["12B3Re"] };
+  return {
+    minutes: getSystemLocale.t["GqQ/Y9"],
+    hours: getSystemLocale.t.c5zfWZ,
+    days: getSystemLocale.t.amjnaI,
+    months: getSystemLocale.t.SoON3V,
+    years: getSystemLocale.t["12B3Re"],
+  };
 };
 export { getDurationString };

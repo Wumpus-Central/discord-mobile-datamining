@@ -21,7 +21,7 @@ function _handleVoiceChannelPress() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0, openMemberVerificationModal) {
+    return (function* (arg0, openMemberVerificationModal) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -139,7 +139,15 @@ let closure_18 = importAllResult.memo((channel) => {
   let obj4 = channel(ensureSyncedChannelVoiceStates[20]);
   const items = [closure_8, closure_9];
   const items1 = [channel];
-  const stateFromStoresObject = obj4.useStateFromStoresObject(items, () => ({ hasUnread: closure_1_8.hasUnread(channel.id), mentionCount: closure_1_8.getMentionCount(channel.id), resolvedUnreadSetting: closure_1_9.resolveUnreadSetting(channel) }), items1);
+  const stateFromStoresObject = obj4.useStateFromStoresObject(
+    items,
+    () => ({
+      hasUnread: closure_1_8.hasUnread(channel.id),
+      mentionCount: closure_1_8.getMentionCount(channel.id),
+      resolvedUnreadSetting: closure_1_9.resolveUnreadSetting(channel),
+    }),
+    items1,
+  );
   hasUnread = stateFromStoresObject.hasUnread;
   ({ mentionCount: c4, resolvedUnreadSetting } = stateFromStoresObject);
   let obj5 = channel(ensureSyncedChannelVoiceStates[21]);
@@ -169,11 +177,17 @@ let closure_18 = importAllResult.memo((channel) => {
   tmpResult = tmp(tmp2[24]);
   obj = {
     expensive() {
-      return closure_1_1(ensureSyncedChannelVoiceStates[25])({ channel, unread: hasUnread, mentionCount: c4, voiceStates: ensureSyncedChannelVoiceStates, embeddedActivitiesCount: closure_1 });
+      return closure_1_1(ensureSyncedChannelVoiceStates[25])({
+        channel,
+        unread: hasUnread,
+        mentionCount: c4,
+        voiceStates: ensureSyncedChannelVoiceStates,
+        embeddedActivitiesCount: closure_1,
+      });
     },
-    cheap: channel.name
+    cheap: channel.name,
   };
-  const items2 = [, , ];
+  const items2 = [, ,];
   ({ id: arr4[0], guild_id: arr4[1] } = channel);
   items2[2] = gameMentionsAsPlainText;
   const accessibilityLabelOrCheapFallbackUnsafe = tmpResult.getAccessibilityLabelOrCheapFallbackUnsafe(obj);
@@ -221,9 +235,16 @@ let closure_18 = importAllResult.memo((channel) => {
     subtitle: null,
     isChannelLive: null,
     channelInfo: null,
-    children: null
+    children: null,
   };
-  const tmp19 = jsx(importDefault(ensureSyncedChannelVoiceStates[27]), { channel, isChannelSelected: selected, isChannelCollapsed: collapsed, voiceStates: ensureSyncedChannelVoiceStates, enableConnectedUserLimit: true, enableActivities: true });
+  const tmp19 = jsx(importDefault(ensureSyncedChannelVoiceStates[27]), {
+    channel,
+    isChannelSelected: selected,
+    isChannelCollapsed: collapsed,
+    voiceStates: ensureSyncedChannelVoiceStates,
+    enableConnectedUserLimit: true,
+    enableActivities: true,
+  });
   const intl = tmp(tmp2[30]).intl;
   obj1[6] = intl.string(channel(ensureSyncedChannelVoiceStates[30]).t["9C444m"]);
   obj1[7] = channel;
@@ -296,7 +317,7 @@ let closure_18 = importAllResult.memo((channel) => {
     subtitle: null,
     isChannelLive: null,
     channelInfo: null,
-    children: null
+    children: null,
   });
 });
 let obj1 = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
@@ -309,8 +330,21 @@ const memoResult = importAllResult.memo((channel) => {
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getVoiceStates(channel.guild_id), items1);
   const arr3 = useEmbeddedAppsDefault(channel);
   const items2 = [closure_7, closure_6];
-  const stateFromStoresObject = channel(589).useStateFromStoresObject(items2, () => ({ locked: !closure_1_7.can(closure_1_14.CONNECT, channel), bypassLimit: closure_1_7.can(closure_1_14.MOVE_MEMBERS, channel), collapsed: closure_1_6.isCollapsed(channel.id) }));
-  obj = { channel, embeddedActivitiesCount: null, collapsed: null, voiceStates: null, selected: null, locked: null, bypassLimit: null, subtitle: null };
+  const stateFromStoresObject = channel(589).useStateFromStoresObject(items2, () => ({
+    locked: !closure_1_7.can(closure_1_14.CONNECT, channel),
+    bypassLimit: closure_1_7.can(closure_1_14.MOVE_MEMBERS, channel),
+    collapsed: closure_1_6.isCollapsed(channel.id),
+  }));
+  obj = {
+    channel,
+    embeddedActivitiesCount: null,
+    collapsed: null,
+    voiceStates: null,
+    selected: null,
+    locked: null,
+    bypassLimit: null,
+    subtitle: null,
+  };
   let num;
   ({ locked, bypassLimit, collapsed } = stateFromStoresObject);
   if (arr3 != null) {
@@ -330,7 +364,18 @@ const memoResult = importAllResult.memo((channel) => {
   obj[5] = locked;
   obj[6] = bypassLimit;
   obj[7] = subtitle;
-  return <closure_18 channel={channel} embeddedActivitiesCount={null} collapsed={null} voiceStates={null} selected={null} locked={null} bypassLimit={null} subtitle={null} />;
+  return (
+    <closure_18
+      channel={channel}
+      embeddedActivitiesCount={null}
+      collapsed={null}
+      voiceStates={null}
+      selected={null}
+      locked={null}
+      bypassLimit={null}
+      subtitle={null}
+    />
+  );
 });
 let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/items/VoiceChannel.tsx");
 

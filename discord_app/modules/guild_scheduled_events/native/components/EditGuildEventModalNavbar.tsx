@@ -14,8 +14,21 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 4, paddingVertical: 8 }, headerTitle: { lineHeight: 28, textTransform: "uppercase" }, buttonContainer: { width: 60 }, rightButton: { marginLeft: 12 } });
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModalNavbar.tsx");
+let closure_7 = createCacheKey.createStyles({
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 4,
+    paddingVertical: 8,
+  },
+  headerTitle: { lineHeight: 28, textTransform: "uppercase" },
+  buttonContainer: { width: 60 },
+  rightButton: { marginLeft: 12 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/EditGuildEventModalNavbar.tsx",
+);
 
 export default function EditGuildEventModalNavbar(screen) {
   screen = screen.screen;
@@ -33,7 +46,7 @@ export default function EditGuildEventModalNavbar(screen) {
   [tmp6, tmp7] = callback(items, 2);
   let obj = { top: true, style: tmp.header, children: null };
   obj = { style: tmp.buttonContainer };
-  const items1 = [callback2(View, obj), , ];
+  const items1 = [callback2(View, obj), ,];
   obj1 = { style: tmp.headerTitle, variant: "text-xs/bold", color: "text-default", children: null };
   const intl = tmp2(1236).intl;
   obj1[3] = intl.format(getSystemLocale.t["42HaFY"], { step: tmp6, total: tmp7 });
@@ -49,4 +62,4 @@ export default function EditGuildEventModalNavbar(screen) {
   items1[2] = callback2(View, obj2);
   obj[2] = items1;
   return callback3(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-};
+}

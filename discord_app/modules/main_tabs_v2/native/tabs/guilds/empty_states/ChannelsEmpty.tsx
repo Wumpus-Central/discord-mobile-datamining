@@ -13,7 +13,15 @@ const require = arg1;
 let c3 = importAllResult;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let obj = { wrapper: { flex: 1, paddingTop: 12 }, content: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 48 }, headerText: null, text: null, buttonWrapper: null, buttonPill: null, personalizeButtonWrapper: null };
+let obj = {
+  wrapper: { flex: 1, paddingTop: 12 },
+  content: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 48 },
+  headerText: null,
+  text: null,
+  buttonWrapper: null,
+  buttonPill: null,
+  personalizeButtonWrapper: null,
+};
 obj = {};
 const merged = Object.assign(require("Text").TextStyleSheet["heading-md/bold"]);
 obj.fontSize = 18;
@@ -32,7 +40,14 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
   let obj = guild(647);
   const items = [closure_6];
   const items1 = [guild];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ canCustomizeGuild: closure_1_6.can(closure_1_7.MANAGE_GUILD, guild), canCreateChannel: closure_1_6.can(closure_1_7.MANAGE_CHANNELS, guild) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => ({
+      canCustomizeGuild: closure_1_6.can(closure_1_7.MANAGE_GUILD, guild),
+      canCreateChannel: closure_1_6.can(closure_1_7.MANAGE_CHANNELS, guild),
+    }),
+    items1,
+  );
   ({ canCustomizeGuild, canCreateChannel } = stateFromStoresObject);
   const items2 = [guild.id];
   const items3 = [guild.id];
@@ -44,7 +59,7 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
   }, items3);
   obj1 = guild(14701);
   obj = { style: null, children: null };
-  const items4 = [tmp.wrapper, ];
+  const items4 = [tmp.wrapper];
   obj = { paddingBottom: obj1.useYouBarTotalHeight(16) };
   items4[1] = obj;
   obj[0] = items4;
@@ -61,11 +76,11 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
     obj1[1] = callback(tmp2(8365).RowButton, obj2);
     canCustomizeGuild = callback(tmp8, obj1);
   }
-  const items5 = [canCustomizeGuild, ];
+  const items5 = [canCustomizeGuild];
   const obj4 = { style: tmp.content, children: null };
-  const items6 = [callback(closure_5, { source: registerAssetDefault2 }), , , ];
+  const items6 = [callback(closure_5, { source: registerAssetDefault2 }), , ,];
   const obj6 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: items7, children: null };
-  items7 = [, ];
+  items7 = [,];
   ({ text: arr8[0], headerText: arr8[1] } = tmp);
   const intl2 = tmp2(1236).intl;
   obj6[3] = intl2.string(guild(1236).t.o4s29v);
@@ -91,6 +106,8 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
   obj[1] = items5;
   return closure_9(closure_4, obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/empty_states/ChannelsEmpty.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/guilds/empty_states/ChannelsEmpty.tsx",
+);
 
 export default memoResult;

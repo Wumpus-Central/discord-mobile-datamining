@@ -32,7 +32,7 @@ function _saveUserGuildSettings() {
     closure_1 = arg1;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -146,7 +146,7 @@ function _saveUserGuildSettingsBulk() {
     closure_0 = arg0;
     c7 = 0;
     c6 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -321,13 +321,19 @@ let closure_10 = 15 * setDefault.Millis.SECOND;
 initializeDefault;
 let prototype = function UserGuildSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.actions = { CATEGORY_COLLAPSE: scheduleSync, CATEGORY_EXPAND: scheduleSync, CATEGORY_COLLAPSE_ALL: scheduleSync, CATEGORY_EXPAND_ALL: scheduleSync, POST_CONNECTION_OPEN: handleConnectionOpen, USER_GUILD_SETTINGS_FULL_UPDATE: handleUserGuildSettingsFullUpdate };
+  applyArgumentsResult.actions = {
+    CATEGORY_COLLAPSE: scheduleSync,
+    CATEGORY_EXPAND: scheduleSync,
+    CATEGORY_COLLAPSE_ALL: scheduleSync,
+    CATEGORY_EXPAND_ALL: scheduleSync,
+    POST_CONNECTION_OPEN: handleConnectionOpen,
+    USER_GUILD_SETTINGS_FULL_UPDATE: handleUserGuildSettingsFullUpdate,
+  };
   applyArgumentsResult.saveUserGuildSettings = saveUserGuildSettings;
   applyArgumentsResult.saveUserGuildSettingsBulk = saveUserGuildSettingsBulk;
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp3 {
-}
+class prototype extends tmp3 {}
 prototype = new prototype();
 const result = require("set").fileFinishedImporting("modules/user_settings/UserGuildSettingsManager.tsx");
 

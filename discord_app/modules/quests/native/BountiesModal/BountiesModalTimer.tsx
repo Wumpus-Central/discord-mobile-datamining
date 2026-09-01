@@ -17,8 +17,23 @@ let closure_10 = Easing.bezier(0.15, 0.21, 0.58, 1);
 let closure_11 = Easing2.bezier(0.61, 0, 0.58, 1);
 let closure_12 = Easing3.bezier(0.42, 0, 0.58, 1);
 let closure_13 = importDefaultResult.createAnimatedComponent(require("inlineStyles").Circle);
-let obj = { progress: null, ring: null, trackPath: null, countdownText: null, checkmarkLayer: null, checkmarkBackground: null, checkmarkIcon: null };
-obj = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, width: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, height: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT };
+let obj = {
+  progress: null,
+  ring: null,
+  trackPath: null,
+  countdownText: null,
+  checkmarkLayer: null,
+  checkmarkBackground: null,
+  checkmarkIcon: null,
+};
+obj = {
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
+  borderRadius: ThemesDefault.radii.round,
+  width: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT,
+  height: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT,
+};
 obj[0] = obj;
 let items = [{ rotate: "-90deg" }];
 obj[1] = { position: "absolute", transform: items };
@@ -35,9 +50,15 @@ obj[4] = { position: "absolute", inset: 6, alignItems: "center", justifyContent:
 obj[5] = { width: 20, height: 20, backgroundColor: "#2ECC71", borderRadius: ThemesDefault.radii.round };
 obj[6] = { width: 20, height: 20 };
 let closure_14 = createCacheKey.createStyles(obj);
-let closure_15 = { code: "function BountiesModalTimerTsx1(){const{PROGRESS_CIRCUMFERENCE,animatedProgress}=this.__closure;return{strokeDashoffset:PROGRESS_CIRCUMFERENCE-PROGRESS_CIRCUMFERENCE*animatedProgress.get()};}" };
-let closure_16 = { code: "function BountiesModalTimerTsx2(){const{checkmarkBackgroundScale}=this.__closure;return{transform:[{scale:checkmarkBackgroundScale.get()}]};}" };
-let closure_17 = { code: "function BountiesModalTimerTsx3(){const{checkmarkScale}=this.__closure;return{transform:[{scale:checkmarkScale.get()}]};}" };
+let closure_15 = {
+  code: "function BountiesModalTimerTsx1(){const{PROGRESS_CIRCUMFERENCE,animatedProgress}=this.__closure;return{strokeDashoffset:PROGRESS_CIRCUMFERENCE-PROGRESS_CIRCUMFERENCE*animatedProgress.get()};}",
+};
+let closure_16 = {
+  code: "function BountiesModalTimerTsx2(){const{checkmarkBackgroundScale}=this.__closure;return{transform:[{scale:checkmarkBackgroundScale.get()}]};}",
+};
+let closure_17 = {
+  code: "function BountiesModalTimerTsx3(){const{checkmarkScale}=this.__closure;return{transform:[{scale:checkmarkScale.get()}]};}",
+};
 let result1 = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalTimer.tsx");
 
 export default function BountiesModalTimer(arg0) {
@@ -103,7 +124,9 @@ export default function BountiesModalTimer(arg0) {
         const withTimingResult1 = callback(sharedValue[9]).withTiming(1.25, obj1);
         const obj2 = { duration: 333, easing: null };
         obj2[1] = closure_1_12;
-        result = sharedValue2.set(withDelay(167, obj6.withSequence(withTimingResult1, callback(sharedValue[9]).withTiming(1, obj2))));
+        result = sharedValue2.set(
+          withDelay(167, obj6.withSequence(withTimingResult1, callback(sharedValue[9]).withTiming(1, obj2))),
+        );
         const obj9 = callback(sharedValue[9]);
       } else {
         withDelay(1);
@@ -154,13 +177,35 @@ export default function BountiesModalTimer(arg0) {
   G.__initData = closure_17;
   obj = { style: tmp.progress, children: null };
   const animatedStyle1 = obj6.useAnimatedStyle(G);
-  obj1 = { height: _require(sharedValue[3]).SMALL_BUTTON_HEIGHT, width: _require(sharedValue[3]).SMALL_BUTTON_HEIGHT, style: tmp.ring, children: null };
-  obj2 = { cx: _require(sharedValue[3]).SMALL_BUTTON_HEIGHT / 2, cy: _require(sharedValue[3]).SMALL_BUTTON_HEIGHT / 2, r: closure_8, fill: "none", stroke: tmp.trackPath.color, strokeWidth: 4 };
-  const items2 = [callback(_require(sharedValue[5]).Circle, obj2), ];
-  obj3 = { cx: _require(sharedValue[3]).SMALL_BUTTON_HEIGHT / 2, cy: _require(sharedValue[3]).SMALL_BUTTON_HEIGHT / 2, r: closure_8, fill: "none", stroke: c7, strokeWidth: 4, strokeDasharray: closure_9, strokeLinecap: "round", animatedProps };
+  obj1 = {
+    height: _require(sharedValue[3]).SMALL_BUTTON_HEIGHT,
+    width: _require(sharedValue[3]).SMALL_BUTTON_HEIGHT,
+    style: tmp.ring,
+    children: null,
+  };
+  obj2 = {
+    cx: _require(sharedValue[3]).SMALL_BUTTON_HEIGHT / 2,
+    cy: _require(sharedValue[3]).SMALL_BUTTON_HEIGHT / 2,
+    r: closure_8,
+    fill: "none",
+    stroke: tmp.trackPath.color,
+    strokeWidth: 4,
+  };
+  const items2 = [callback(_require(sharedValue[5]).Circle, obj2)];
+  obj3 = {
+    cx: _require(sharedValue[3]).SMALL_BUTTON_HEIGHT / 2,
+    cy: _require(sharedValue[3]).SMALL_BUTTON_HEIGHT / 2,
+    r: closure_8,
+    fill: "none",
+    stroke: c7,
+    strokeWidth: 4,
+    strokeDasharray: closure_9,
+    strokeLinecap: "round",
+    animatedProps,
+  };
   items2[1] = callback(closure_13, obj3);
   obj1[3] = items2;
-  const items3 = [callback2(importDefault(sharedValue[5]), obj1), , , ];
+  const items3 = [callback2(importDefault(sharedValue[5]), obj1), , ,];
   let tmp19Result = !tmp2;
   if (!tmp2) {
     let obj4 = { variant: "text-sm/semibold", style: null, maxFontSizeMultiplier: 1, children: null };
@@ -177,8 +222,12 @@ export default function BountiesModalTimer(arg0) {
   items5 = [tmp.checkmarkLayer, animatedStyle1];
   const tmp15 = callback2;
   const tmp18 = importDefault(sharedValue[5]);
-  obj7[1] = callback(_require(sharedValue[11]).CheckmarkSmallBoldIcon, { size: "custom", color: importDefault(sharedValue[7]).colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, style: tmp.checkmarkIcon });
+  obj7[1] = callback(_require(sharedValue[11]).CheckmarkSmallBoldIcon, {
+    size: "custom",
+    color: importDefault(sharedValue[7]).colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT,
+    style: tmp.checkmarkIcon,
+  });
   items3[3] = callback(importDefault(sharedValue[4]).View, obj7);
   obj[1] = items3;
   return tmp15(sharedValue2, obj);
-};
+}

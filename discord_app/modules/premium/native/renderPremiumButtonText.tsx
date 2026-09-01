@@ -39,7 +39,7 @@ function PremiumText(basePlanId) {
     obj1[1] = text;
     obj[2] = intl3.formatToPlainString(getSystemLocale.t.E0lS2r, obj1);
     obj[3] = text;
-    const items = [closure_7(Button.LegacyText, obj), ];
+    const items = [closure_7(Button.LegacyText, obj)];
     let tmp16Result = null;
     if (null != combined) {
       const obj2 = { style: null, children: null };
@@ -103,4 +103,4 @@ const result = require("set").fileFinishedImporting("modules/premium/native/rend
 export default function renderPremiumText(arg0) {
   const merged = Object.assign(arg0);
   return callback(PremiumText, {});
-};
+}

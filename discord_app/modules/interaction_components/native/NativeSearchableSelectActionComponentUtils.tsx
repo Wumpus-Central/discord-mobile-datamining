@@ -9,9 +9,14 @@ import ME from "../../../Constants.tsx";
 
 require = arg1;
 ({ ChannelTypes: error, DEFAULT_ROLE_COLOR: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/NativeSearchableSelectActionComponentUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/native/NativeSearchableSelectActionComponentUtils.tsx",
+);
 
-export const transformSearchableSelectOptions = function transformSearchableSelectOptions(initialSnowflakeSelectOptions, guildId) {
+export const transformSearchableSelectOptions = function transformSearchableSelectOptions(
+  initialSnowflakeSelectOptions,
+  guildId,
+) {
   const _require = guildId;
   const guild2 = guild.getGuild(guildId);
   const mapped = initialSnowflakeSelectOptions.map((type) => {

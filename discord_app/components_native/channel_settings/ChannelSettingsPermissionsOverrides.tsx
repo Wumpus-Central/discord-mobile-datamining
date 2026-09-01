@@ -25,12 +25,22 @@ const require = arg1;
 createCacheKey = { container: null, containerContent: null, section: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_12 };
-let obj1 = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_12 };
+createCacheKey[1] = {
+  paddingTop: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+};
+let obj1 = {
+  paddingTop: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+};
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16 };
 let closure_21 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { marginBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsOverrides.tsx");
+const result = require("set").fileFinishedImporting(
+  "components_native/channel_settings/ChannelSettingsPermissionsOverrides.tsx",
+);
 
 export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   ({ channelId: closure_0, id } = fromCreate);
@@ -57,7 +67,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     closure_1 = arg1;
     let name = 0;
     c5 = 0;
-    return (function*(guild_id) {
+    return (function* (guild_id) {
       if (c5 === 2) {
         c5 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -135,7 +145,10 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                         c4 = 1;
                         c5 = 1;
                         const obj2 = { value: null, done: false };
-                        obj2[0] = callback(9709).checkChattableChannelThresholdMetAfterChannelPermissionDeny(c5, throwTypeErrorResult);
+                        obj2[0] = callback(9709).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
+                          c5,
+                          throwTypeErrorResult,
+                        );
                         return obj2;
                       }
                     }
@@ -243,7 +256,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     })();
   });
   const items1 = [stateFromStores, id];
-  React = React.useCallback(function() {
+  React = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -313,17 +326,20 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     }
     return ALLOW;
   }, items3);
-  first = callback(React.useState(() => id(section[29]).generateChannelPermissionSpec(closure_5.guild_id, closure_5, id === closure_5.guild_id)), 2)[0];
+  first = callback(
+    React.useState(() =>
+      id(section[29]).generateChannelPermissionSpec(closure_5.guild_id, closure_5, id === closure_5.guild_id),
+    ),
+    2,
+  )[0];
   const items4 = [fromCreate, navigation];
   const effect = React.useEffect(() => {
     if (fromCreate) {
       let obj = { headerRight: null };
       obj[0] = function headerRight() {
         const obj = {
-          onPress() {
-
-          },
-          label: null
+          onPress() {},
+          label: null,
         };
         const intl = closure_1_0(closure_1_3[25]).intl;
         obj[1] = intl.string(closure_1_0(closure_1_3[25]).t.i4jeWR);
@@ -377,12 +393,22 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
           if (flag2 == null) {
             flag2 = false;
           }
-          let obj = { variant: "text-xs/medium", color: "text-subtle", children: closure_1_0(closure_1_3[36]).renderDescription(description.description) };
+          let obj = {
+            variant: "text-xs/medium",
+            color: "text-subtle",
+            children: closure_1_0(closure_1_3[36]).renderDescription(description.description),
+          };
           const obj2 = closure_1_0(closure_1_3[36]);
           const tmp2 = closure_1_3;
           const tmp3 = closure_1_19(closure_1_0(closure_1_3[31]).Text, obj);
           const obj3 = closure_1_0(closure_1_3[37]);
-          obj = { accessible: closure_1_0(closure_1_3[37]).isAndroid() || undefined, disabled: tmp5, label: title, subLabel: tmp3, trailing: null };
+          obj = {
+            accessible: closure_1_0(closure_1_3[37]).isAndroid() || undefined,
+            disabled: tmp5,
+            label: title,
+            subLabel: tmp3,
+            trailing: null,
+          };
           obj = { permissionTitle: title, value: null, disabled: null, onValueChange: null };
           const tmp4 = closure_1_0(closure_1_3[37]).isAndroid() || undefined;
           obj[1] = callback2(flag);
@@ -392,12 +418,12 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
           };
           obj[4] = closure_1_19(closure_1_1(tmp2[38]), obj);
           return closure_1_19(closure_1_0(closure_1_3[34]).TableRow, obj, "row-" + arg1);
-        })
+        }),
       };
       obj[1] = closure_1_19(callback(section[35]).TableRowGroup, obj);
       return closure_1_19(closure_7, obj, "section-" + arg1);
-    })
+    }),
   ];
   obj2[2] = items6;
   return callback4(closure_8, obj2);
-};
+}

@@ -15,9 +15,7 @@ function discardIfCurrent(arg0, arg1) {
 function endImpressionToken(arg0) {
   if (null != arg0) {
     obj = getActiveIosAttributionFramework;
-    getActiveIosAttributionFramework.endImpression(arg0).catch(() => {
-
-    });
+    getActiveIosAttributionFramework.endImpression(arg0).catch(() => {});
     const endImpressionResult = getActiveIosAttributionFramework.endImpression(arg0);
   }
 }
@@ -27,7 +25,7 @@ function _startNativeImpression() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (logger === 2) {
         logger = 3;
         HermesBuiltin.throwTypeError();
@@ -93,7 +91,10 @@ function _startNativeImpression() {
               if (null == logger) {
                 const _HermesInternal = HermesInternal;
                 logger.warn("No strategy for " + c2 + "; impression " + callback + " is unattributed");
-                const result = callback(11092).trackIosAttributionImpression(callback(11092).IosAttributionImpressionResult.NO_FRAMEWORK, c2);
+                const result = callback(11092).trackIosAttributionImpression(
+                  callback(11092).IosAttributionImpressionResult.NO_FRAMEWORK,
+                  c2,
+                );
                 callback3(callback, signAbort);
                 logger = 3;
                 return { value: "HermesInternal", done: null };
@@ -150,7 +151,11 @@ function _startNativeImpression() {
                   callback2 = tmp38;
                   if (null == callback2) {
                     let obj6 = callback(11092);
-                    const result1 = obj6.trackIosAttributionImpression(callback(11092).IosAttributionImpressionResult.SIGN_FAILED, c2, callback);
+                    const result1 = obj6.trackIosAttributionImpression(
+                      callback(11092).IosAttributionImpressionResult.SIGN_FAILED,
+                      c2,
+                      callback,
+                    );
                     set.delete(callback);
                     logger = 3;
                     const obj5 = { value: null, done: true };
@@ -185,7 +190,11 @@ function _startNativeImpression() {
             }
             if (null == callback3) {
               obj1 = callback(11092);
-              const result2 = obj1.trackIosAttributionImpression(callback(11092).IosAttributionImpressionResult.NO_TOKEN, c2, callback);
+              const result2 = obj1.trackIosAttributionImpression(
+                callback(11092).IosAttributionImpressionResult.NO_TOKEN,
+                c2,
+                callback,
+              );
               set.delete(callback);
               logger = 3;
               const obj8 = { value: null, done: true };
@@ -193,7 +202,11 @@ function _startNativeImpression() {
               return obj8;
             } else {
               obj = callback(11092);
-              const result3 = obj.trackIosAttributionImpression(callback(11092).IosAttributionImpressionResult.REGISTERED, c2, callback);
+              const result3 = obj.trackIosAttributionImpression(
+                callback(11092).IosAttributionImpressionResult.REGISTERED,
+                c2,
+                callback,
+              );
               signAbort.token = callback3;
             }
           }
@@ -221,7 +234,7 @@ function _getImpressionToken() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (logger === 2) {
         logger = 3;
         HermesBuiltin.throwTypeError();
@@ -258,7 +271,11 @@ function _getImpressionToken() {
                 const _HermesInternal2 = HermesInternal;
                 logger.warn("No tracked impression for " + tmp57 + " at click time; store sheet will be unattributed");
                 const obj5 = callback(closure_1_1[4]);
-                const result = obj5.trackIosAttributionClick(callback(closure_1_1[4]).IosAttributionClickResult.NO_IMPRESSION, callback(closure_1_1[3]).getActiveIosAttributionFramework(), tmp57);
+                const result = obj5.trackIosAttributionClick(
+                  callback(closure_1_1[4]).IosAttributionClickResult.NO_IMPRESSION,
+                  callback(closure_1_1[3]).getActiveIosAttributionFramework(),
+                  tmp57,
+                );
                 logger = 3;
                 const obj6 = callback(closure_1_1[3]);
               }
@@ -278,7 +295,11 @@ function _getImpressionToken() {
           }
           if (callback2(callback, user)) {
             if (null != user.token) {
-              const result1 = callback(user[4]).trackIosAttributionClick(callback(user[4]).IosAttributionClickResult.ATTRIBUTED, user.framework, callback);
+              const result1 = callback(user[4]).trackIosAttributionClick(
+                callback(user[4]).IosAttributionClickResult.ATTRIBUTED,
+                user.framework,
+                callback,
+              );
               const token = user.token;
               const obj3 = callback(user[4]);
             }
@@ -286,7 +307,11 @@ function _getImpressionToken() {
           const _HermesInternal = HermesInternal;
           logger.warn("Impression " + callback + " not registered natively in time; store sheet will be unattributed");
           obj1 = callback(user[4]);
-          const result2 = obj1.trackIosAttributionClick(callback(user[4]).IosAttributionClickResult.NOT_READY, user.framework, callback);
+          const result2 = obj1.trackIosAttributionClick(
+            callback(user[4]).IosAttributionClickResult.NOT_READY,
+            user.framework,
+            callback,
+          );
         } catch (tmp51) {
           logger = tmp;
           throw tmp51;
@@ -309,7 +334,7 @@ function _getStoreKitCredential() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       let table = tmp2;
       impressionId = impressionId.impressionId;
       yield "PX_16";
@@ -405,9 +430,7 @@ export const endImpression = function endImpression(arg0) {
     const token = value.token;
     if (null != token) {
       const obj2 = getActiveIosAttributionFramework;
-      getActiveIosAttributionFramework.endImpression(token).catch(() => {
-
-      });
+      getActiveIosAttributionFramework.endImpression(token).catch(() => {});
       const endImpressionResult = getActiveIosAttributionFramework.endImpression(token);
     }
   }

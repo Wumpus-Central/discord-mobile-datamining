@@ -43,5 +43,9 @@ export const Stack = function Stack(spacing) {
   obj[0] = items;
   obj[1] = onLayout;
   obj[2] = children;
-  return <View style={null} onLayout={null}>{null}</View>;
+  return (
+    <View style={null} onLayout={null}>
+      {null}
+    </View>
+  );
 };

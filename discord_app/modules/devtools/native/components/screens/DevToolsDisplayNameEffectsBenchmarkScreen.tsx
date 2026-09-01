@@ -26,7 +26,7 @@ function effectName(arg0) {
 function OptionButtons(children) {
   ({ options, value: require, onChange: importDefault } = children);
   let obj = { spacing: 8, children: null };
-  items = [callback2(Text.Text, { variant: "text-sm/semibold", color: "text-subtle", children: children.caption }), ];
+  items = [callback2(Text.Text, { variant: "text-sm/semibold", color: "text-subtle", children: children.caption })];
   obj = {
     direction: "horizontal",
     spacing: 8,
@@ -43,7 +43,7 @@ function OptionButtons(children) {
         return closure_1_1(label.value);
       };
       return closure_1_8(closure_1_0(closure_1_2[15]).Button, obj, String(label.value));
-    })
+    }),
   };
   items[1] = callback2(Stack.Stack, obj);
   obj[1] = items;
@@ -54,7 +54,13 @@ function BenchmarkRow(arg0) {
   let obj = DISPLAY_NAME_STYLES_EFFECT_NAMES;
   obj = { style, children: null };
   const displayNameStylesEffectConfig = obj.useDisplayNameStylesEffectConfig(effect);
-  obj = { userId, userName, effectDisplayType: DisplayNameStyleColorPreset.EffectDisplayType.STATIC, pendingDisplayNameStyles: displayNameStylesEffectConfig.previewStyles, variant: "text-md/semibold" };
+  obj = {
+    userId,
+    userName,
+    effectDisplayType: DisplayNameStyleColorPreset.EffectDisplayType.STATIC,
+    pendingDisplayNameStyles: displayNameStylesEffectConfig.previewStyles,
+    variant: "text-md/semibold",
+  };
   obj[1] = callback2(AVERAGE_FONT_WIDTH_RATIODefault, obj);
   return callback2(closure_6, obj);
 }
@@ -62,16 +68,25 @@ function BenchmarkRow(arg0) {
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let items = [...require("items3").EFFECT_ORDER, require("DisplayNameEffect").DisplayNameEffect.GUMMY];
 let closure_12 = [10, 50, 100, 200];
-let items1 = [{ key: "short", label: "Short", name: "Pixel7" }, { key: "medium", label: "Medium", name: "NebulaWanderer" }, { key: "long", label: "Long", name: "GalacticOverlord2049" }];
+let items1 = [
+  { key: "short", label: "Short", name: "Pixel7" },
+  { key: "medium", label: "Medium", name: "NebulaWanderer" },
+  { key: "long", label: "Long", name: "GalacticOverlord2049" },
+];
 createCacheKey = { wrap: null, container: null, batchRow: null, optionButtons: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { paddingVertical: 2 };
 createCacheKey[3] = { flexWrap: "wrap" };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { paddingVertical: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx",
+);
 
 export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   let tmp = memo3();
@@ -86,10 +101,13 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
     }
     return id;
   });
-  const tmp5 = callback(first1.useState(() => {
-    items = [lib(first[6]).DisplayNameEffect.GUMMY];
-    return new Set(items);
-  }), 2);
+  const tmp5 = callback(
+    first1.useState(() => {
+      items = [lib(first[6]).DisplayNameEffect.GUMMY];
+      return new Set(items);
+    }),
+    2,
+  );
   first = tmp5[0];
   callback = tmp5[1];
   const tmp7 = callback(first1.useState(100), 2);
@@ -155,7 +173,16 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
     const tmp = measure(arg0);
     if (null != tmp) {
       const _HermesInternal = HermesInternal;
-      addMount("" + effectLabel.effectLabel + " \u00B7 " + effectLabel.rowCount + " rows \u00B7 " + effectLabel.graphemeCount + " graphemes", tmp);
+      addMount(
+        "" +
+          effectLabel.effectLabel +
+          " \u00B7 " +
+          effectLabel.rowCount +
+          " rows \u00B7 " +
+          effectLabel.graphemeCount +
+          " graphemes",
+        tmp,
+      );
     }
   }, items7);
   let tmp18 = null != stateFromStores;
@@ -167,7 +194,11 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   obj1 = { label: null };
   obj2 = { spacing: 8, children: null };
   const items8 = [
-    run(_require(first[14]).Text, { variant: "text-sm/semibold", color: "text-subtle", children: "Effects (checked render in rotation)" }),
+    run(_require(first[14]).Text, {
+      variant: "text-sm/semibold",
+      color: "text-subtle",
+      children: "Effects (checked render in rotation)",
+    }),
     run(_require(first[13]).Stack, {
       spacing: 4,
       children: measure.map((arg0) => {
@@ -177,19 +208,23 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         if (OpWJ3f == null) {
           OpWJ3f = stateFromStores(first[10]).OpWJ3f;
         }
-        return run(lib(first[22]).Checkbox, {
-          label: intl.string(OpWJ3f),
-          checked: first.has(arg0),
-          onToggle(arg0) {
-            return closure_1_15(closure_0, arg0);
-          }
-        }, arg0);
-      })
-    })
+        return run(
+          lib(first[22]).Checkbox,
+          {
+            label: intl.string(OpWJ3f),
+            checked: first.has(arg0),
+            onToggle(arg0) {
+              return closure_1_15(closure_0, arg0);
+            },
+          },
+          arg0,
+        );
+      }),
+    }),
   ];
   obj2[1] = items8;
   obj1[0] = begin(_require(first[13]).Stack, obj2);
-  const items9 = [run(_require(first[21]).TableRow, obj1), , ];
+  const items9 = [run(_require(first[21]).TableRow, obj1), ,];
   const obj4 = { label: null };
   const obj3 = {
     spacing: 4,
@@ -200,27 +235,58 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
       if (OpWJ3f == null) {
         OpWJ3f = stateFromStores(first[10]).OpWJ3f;
       }
-      return run(lib(first[22]).Checkbox, {
-        label: intl.string(OpWJ3f),
-        checked: first.has(arg0),
-        onToggle(arg0) {
-          return closure_1_15(closure_0, arg0);
-        }
-      }, arg0);
-    })
+      return run(
+        lib(first[22]).Checkbox,
+        {
+          label: intl.string(OpWJ3f),
+          checked: first.has(arg0),
+          onToggle(arg0) {
+            return closure_1_15(closure_0, arg0);
+          },
+        },
+        arg0,
+      );
+    }),
   };
   const tmp20 = first2;
   const tmp21 = begin;
-  obj4[0] = run(closure_15, { caption: "Rows", value: first1, onChange: tmp7[1], options: memo1.map((value) => ({ value, label: String(value) })) });
+  obj4[0] = run(closure_15, {
+    caption: "Rows",
+    value: first1,
+    onChange: tmp7[1],
+    options: memo1.map((value) => ({ value, label: String(value) })),
+  });
   items9[1] = run(_require(first[21]).TableRow, obj4);
   const obj6 = { label: null };
-  const obj5 = { caption: "Rows", value: first1, onChange: tmp7[1], options: memo1.map((value) => ({ value, label: String(value) })) };
-  obj6[0] = run(closure_15, { caption: "Name length (" + memo1 + " graphemes)", value: first2, onChange: tmp9[1], options: memo2.map((key) => ({ value: key.key, label: key.label })) });
+  const obj5 = {
+    caption: "Rows",
+    value: first1,
+    onChange: tmp7[1],
+    options: memo1.map((value) => ({ value, label: String(value) })),
+  };
+  obj6[0] = run(closure_15, {
+    caption: "Name length (" + memo1 + " graphemes)",
+    value: first2,
+    onChange: tmp9[1],
+    options: memo2.map((key) => ({ value: key.key, label: key.label })),
+  });
   items9[2] = run(_require(first[21]).TableRow, obj6);
   obj[2] = items9;
-  const items10 = [begin(_require(first[20]).TableRowGroup, obj), , , ];
+  const items10 = [begin(_require(first[20]).TableRowGroup, obj), , ,];
   const obj8 = { title: "Run", hasIcons: false, children: null };
-  const items11 = [run(_require(first[21]).TableRow, { label: "Measure mount + layout", subLabel: "Mounts the batch and times until native layout completes.", arrow: true, disabled: !tmp18, onPress: callback1 }), run(_require(first[19]).ScrollBenchmark, { onResult: callback, subLabel: "Records frame times while you scroll the batch below." })];
+  const items11 = [
+    run(_require(first[21]).TableRow, {
+      label: "Measure mount + layout",
+      subLabel: "Mounts the batch and times until native layout completes.",
+      arrow: true,
+      disabled: !tmp18,
+      onPress: callback1,
+    }),
+    run(_require(first[19]).ScrollBenchmark, {
+      onResult: callback,
+      subLabel: "Records frame times while you scroll the batch below.",
+    }),
+  ];
   obj8[2] = items11;
   items10[1] = begin(_require(first[20]).TableRowGroup, obj8);
   items10[2] = run(_require(first[19]).BenchmarkResultsList, { results, onClear: clear });
@@ -240,7 +306,12 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
       const obj12 = { length: null };
       obj12[0] = run.params.rowCount;
       obj11[3] = Array.from(obj12, (arg0, arg1) => {
-        const obj = { userId: stateFromStores, effect: run.params.effects[arg1 % run.params.effects.length], userName: null, style: null };
+        const obj = {
+          userId: stateFromStores,
+          effect: run.params.effects[arg1 % run.params.effects.length],
+          userName: null,
+          style: null,
+        };
         const length = String(Math.max(run.params.rowCount - 1, 0)).length;
         const padStartResult = String(arg1).padStart(length, "0");
         const StringResult = String(arg1);
@@ -263,4 +334,4 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   items10[3] = tmp19Result;
   obj[2] = tmp21(_require(first[13]).Stack, { spacing: 16, children: items10 });
   return run(tmp20, obj);
-};
+}

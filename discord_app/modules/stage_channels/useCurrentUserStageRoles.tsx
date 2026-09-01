@@ -13,5 +13,9 @@ export default function useCurrentUserStageRoles(arg0) {
   }
   const items = [closure_3, closure_2];
   const items1 = [arg0, flag];
-  return _require(flag[2]).useStateFromStoresObject(items, () => closure_1_3.getPermissionsForUser(closure_1_2.getId(), closure_0, flag), items1);
-};
+  return _require(flag[2]).useStateFromStoresObject(
+    items,
+    () => closure_1_3.getPermissionsForUser(closure_1_2.getId(), closure_0, flag),
+    items1,
+  );
+}

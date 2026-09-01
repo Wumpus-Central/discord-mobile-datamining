@@ -9,7 +9,11 @@ const result = require("set").fileFinishedImporting("modules/game_console/useGam
 export default function useGameConsoleAccounts() {
   let items = [closure_2];
   return initialize.useStateFromStoresArray(items, () => {
-    const items = [store.getAccount(null, constants.XBOX), store.getAccount(null, constants.PLAYSTATION), store.getAccount(null, constants.PLAYSTATION_STAGING)];
+    const items = [
+      store.getAccount(null, constants.XBOX),
+      store.getAccount(null, constants.PLAYSTATION),
+      store.getAccount(null, constants.PLAYSTATION_STAGING),
+    ];
     return items.filter(callback(table[3]).isNotNullish);
   });
-};
+}

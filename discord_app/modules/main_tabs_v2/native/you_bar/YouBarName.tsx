@@ -25,8 +25,18 @@ function Username(userId) {
   obj = { style: items, children: null };
   items = [tmp.usernameRow];
   const isYouBarGuildTagEnabled = obj.useIsYouBarGuildTagEnabled("YouBarName");
-  obj = { userId, userName: userId.username, defaultColor: "mobile-text-heading-primary", variant: "heading-md/semibold", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, containerStyle: tmp.username, style: tmp.username };
-  const items1 = [callback(AVERAGE_FONT_WIDTH_RATIODefault, obj), , ];
+  obj = {
+    userId,
+    userName: userId.username,
+    defaultColor: "mobile-text-heading-primary",
+    variant: "heading-md/semibold",
+    lineClamp: 1,
+    ellipsizeMode: "tail",
+    maxFontSizeMultiplier: 1.75,
+    containerStyle: tmp.username,
+    style: tmp.username,
+  };
+  const items1 = [callback(AVERAGE_FONT_WIDTH_RATIODefault, obj), ,];
   let tmp7Result = null;
   if (isYouBarGuildTagEnabled) {
     obj1 = { userId: null, disabledTooltip: true, containerStyles: null };
@@ -40,7 +50,15 @@ function Username(userId) {
   return closure_13(View, obj);
 }
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let obj = { userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 }, statusRow: null, statusEmoji: null, usernameRow: null, username: null, guildTag: null, statusText: null };
+let obj = {
+  userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 },
+  statusRow: null,
+  statusEmoji: null,
+  usernameRow: null,
+  username: null,
+  guildTag: null,
+  statusText: null,
+};
 obj = { flexDirection: "row", gap: ThemesDefault.space.PX_4 };
 obj[1] = obj;
 obj[2] = { width: 16, height: 16 };
@@ -88,7 +106,7 @@ const memoResult = importAllResult.memo(function YouName(username) {
     }
     return tmp6;
   });
-  const items2 = [callback(Username, { username: username.username, userId }), ];
+  const items2 = [callback(Username, { username: username.username, userId })];
   obj = { style: tmp.statusRow, children: null };
   if (stateFromStores1) {
     obj1 = { userId: null, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
@@ -106,8 +124,16 @@ const memoResult = importAllResult.memo(function YouName(username) {
       obj2[2] = customStatusActivity.emoji;
       tmp11Result = tmp11(importDefault(tmp3[25]), obj2);
     }
-    const items3 = [tmp11Result, ];
-    obj3 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, style: null, children: null };
+    const items3 = [tmp11Result];
+    obj3 = {
+      variant: "text-xs/medium",
+      color: "text-muted",
+      lineClamp: 1,
+      ellipsizeMode: "tail",
+      maxFontSizeMultiplier: 1.75,
+      style: null,
+      children: null,
+    };
     obj3[5] = tmp.statusText;
     let humanizeStatusResult = gameMentionsAsPlainText;
     if (gameMentionsAsPlainText == null) {

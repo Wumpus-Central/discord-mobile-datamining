@@ -61,24 +61,28 @@ export default function ForwardModal(message) {
   obj1 = _require(source[16]);
   const items1 = [closure_10, stateFromStores, trackForwardAddRecipientOnce, c7];
   const items2 = [channel_id, id, source, message];
-  stateFromStores = obj1.useStateFromStores(items1, () => {
-    if ("checkpoint" === source) {
-      let message = closure_0;
-    } else {
-      message = message.getMessage(channel_id, id);
-      if (message == null) {
-        message = trackForwardAddRecipientOnce.getMessage(tmp3);
+  stateFromStores = obj1.useStateFromStores(
+    items1,
+    () => {
+      if ("checkpoint" === source) {
+        let message = closure_0;
+      } else {
+        message = message.getMessage(channel_id, id);
+        if (message == null) {
+          message = trackForwardAddRecipientOnce.getMessage(tmp3);
+        }
+        if (message == null) {
+          message = stateFromStores.getMessage(tmp3);
+        }
+        if (message == null) {
+          message = _undefined.getMessage(tmp2, tmp3);
+        }
+        tmp2 = channel_id;
       }
-      if (message == null) {
-        message = stateFromStores.getMessage(tmp3);
-      }
-      if (message == null) {
-        message = _undefined.getMessage(tmp2, tmp3);
-      }
-      tmp2 = channel_id;
-    }
-    return message;
-  }, items2);
+      return message;
+    },
+    items2,
+  );
   let obj2 = _require(source[16]);
   const items3 = [stateFromStores1];
   const items4 = [channel_id];
@@ -153,7 +157,7 @@ export default function ForwardModal(message) {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, arr) {
+    return (function* (arg0, arr) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -195,7 +199,9 @@ export default function ForwardModal(message) {
                     c3 = 2;
                     c4 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = Promise.all(closure_1_18.map(callback(source[15]).getOrResolveChannelIdFromDestinationId));
+                    obj1[0] = Promise.all(
+                      closure_1_18.map(callback(source[15]).getOrResolveChannelIdFromDestinationId),
+                    );
                     return obj1;
                   } else {
                     openResult = forwardOptions;
@@ -261,7 +267,7 @@ export default function ForwardModal(message) {
                           },
                           onBack() {
                             return callback(false);
-                          }
+                          },
                         };
                         obj.openAlert("staff-to-non-staff-forward", callback2(_undefined(arr[26]), obj));
                       });
@@ -322,7 +328,15 @@ export default function ForwardModal(message) {
                     openResult = source;
                     openResult = closure_2.every((status) => "fulfilled" === status.status);
                     if (!openResult) {
-                      obj = { channelId: null, messageId: null, hasError: true, hasContextMessage: null, numDestinations: null, numDestinationChanges: null, numQueryChanges: null };
+                      obj = {
+                        channelId: null,
+                        messageId: null,
+                        hasError: true,
+                        hasContextMessage: null,
+                        numDestinations: null,
+                        numDestinationChanges: null,
+                        numQueryChanges: null,
+                      };
                       obj[0] = closure_1_5;
                       obj[1] = closure_1_6;
                       let tmp11 = null != callback;
@@ -362,7 +376,16 @@ export default function ForwardModal(message) {
                   return obj15;
                 }
               }
-              const obj16 = { channelId: null, messageId: null, hasError: false, hasContextMessage: null, numDestinations: null, numDestinationChanges: null, numQueryChanges: null, source: null };
+              const obj16 = {
+                channelId: null,
+                messageId: null,
+                hasError: false,
+                hasContextMessage: null,
+                numDestinations: null,
+                numDestinationChanges: null,
+                numQueryChanges: null,
+                source: null,
+              };
               obj16[0] = closure_1_5;
               obj16[1] = closure_1_6;
               let tmp31 = null != callback;
@@ -396,7 +419,7 @@ export default function ForwardModal(message) {
     })();
   });
   const items9 = [channel_id, forwardOptions, id, stateFromStores, first1, source, customSendHandler];
-  callback4 = obj.useCallback(function() {
+  callback4 = obj.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -468,11 +491,33 @@ export default function ForwardModal(message) {
     return tmp;
   };
   obj1[4] = callback2;
-  const items13 = [closure_14(forwardOptions(source[37]), obj1), ];
+  const items13 = [closure_14(forwardOptions(source[37]), obj1)];
   let obj3 = { style: tmp.container, children: null };
-  const items14 = [closure_14(forwardOptions(source[40]), { absolute: true }), closure_14(forwardOptions(source[41]), { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: prop, onSelectedDestinationChange: callback1, onSearchTextChange: callback, getRowIsUnavailable: callback3, originDestination: memo, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: first1.length >= trackForwardEditSearchOnce }), ];
+  const items14 = [
+    closure_14(forwardOptions(source[40]), { absolute: true }),
+    closure_14(forwardOptions(source[41]), {
+      rowMode: UserRowModes.TOGGLE,
+      initialSelectedDestinations: prop,
+      onSelectedDestinationChange: callback1,
+      onSearchTextChange: callback,
+      getRowIsUnavailable: callback3,
+      originDestination: memo,
+      insetEnd: 0,
+      disableGradient: true,
+      disableStickySections: true,
+      disableSelection: first1.length >= trackForwardEditSearchOnce,
+    }),
+  ];
   if (null != stateFromStores) {
-    let obj5 = { message: null, forwardOptions: null, sendLabel: null, canSend: null, selectedDestinations: null, isSending: null, onSend: null };
+    let obj5 = {
+      message: null,
+      forwardOptions: null,
+      sendLabel: null,
+      canSend: null,
+      selectedDestinations: null,
+      isSending: null,
+      onSend: null,
+    };
     obj5[0] = stateFromStores;
     obj5[1] = forwardOptions;
     obj5[2] = stringResult;
@@ -508,4 +553,4 @@ export default function ForwardModal(message) {
   items13[1] = first(id, obj3);
   obj[1] = items13;
   return first(id, obj);
-};
+}

@@ -42,7 +42,10 @@ export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuild
   } else {
     items1 = [];
   }
-  const tmp5 = callback(require("../dismissible_content/hooks/useSelectedDismissibleContent.tsx").useSelectedDismissibleContent(items1), 2);
+  const tmp5 = callback(
+    require("../dismissible_content/hooks/useSelectedDismissibleContent.tsx").useSelectedDismissibleContent(items1),
+    2,
+  );
   _require = tmp6;
   const items2 = [tmp5[1]];
   const layoutEffect = React.useLayoutEffect(() => {
@@ -50,7 +53,7 @@ export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuild
       dismiss() {
         callback(closure_1_6.USER_DISMISS);
         closure_1_8.setState({ suggestions: closure_1_7 });
-      }
+      },
     });
   }, items2);
   const layoutEffect1 = React.useLayoutEffect(() => () => state.setState({ dismiss: closure_5 }), []);

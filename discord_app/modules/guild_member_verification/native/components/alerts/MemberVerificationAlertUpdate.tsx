@@ -12,8 +12,14 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ headerImage: { marginLeft: "auto", marginRight: "auto", marginTop: 8 }, header: { marginTop: 24, textAlign: "center" }, text: { marginVertical: 8, lineHeight: 18, textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertUpdate.tsx");
+let closure_7 = createCacheKey.createStyles({
+  headerImage: { marginLeft: "auto", marginRight: "auto", marginTop: 8 },
+  header: { marginTop: 24, textAlign: "center" },
+  text: { marginVertical: 8, lineHeight: 18, textAlign: "center" },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/alerts/MemberVerificationAlertUpdate.tsx",
+);
 
 export default function MemberVerificationAlertUpdate(onClose) {
   const tmp = callback3();
@@ -28,7 +34,7 @@ export default function MemberVerificationAlertUpdate(onClose) {
   };
   obj.onCancel = onClose.onClose;
   obj = { source: registerAssetDefault, style: tmp.headerImage };
-  const items = [callback(Image, obj), , ];
+  const items = [callback(Image, obj), ,];
   obj = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl3 = getSystemLocale.intl;
   obj[3] = intl3.string(getSystemLocale.t.kkjNHU);
@@ -39,4 +45,4 @@ export default function MemberVerificationAlertUpdate(onClose) {
   items[2] = callback(Text.Text, obj1);
   obj.children = items;
   return callback2(componentDidMountDefault, obj);
-};
+}

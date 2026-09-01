@@ -80,13 +80,18 @@ class MarkupGameMention {
       if (!state.noStyleAndInteraction) {
         fn = () => {
           let obj = gameId(closure_1_2[10]);
-          obj = { gameId, gameProfileModalChecks: obj, source: state(closure_1_2[11]).GameProfileSources.GameMention, sourceUserId: state.authorId };
+          obj = {
+            gameId,
+            gameProfileModalChecks: obj,
+            source: state(closure_1_2[11]).GameProfileSources.GameMention,
+            sourceUserId: state.authorId,
+          };
           obj = { shouldOpenGameProfile: true, gameId };
           obj.openGameProfileModal(obj);
         };
       }
       obj4[3] = fn;
-      items1 = [, ];
+      items1 = [,];
       items1[0] = tmp17Result;
       obj5 = { variant: "text-sm/medium", style: null, children: null };
       obj5[1] = tmp.chipText;
@@ -107,8 +112,16 @@ noopAll;
 createCacheKey = { icon: null, chip: null, chipText: null };
 createCacheKey = { width: 16, height: 16, borderRadius: ThemesDefault.radii.xs, marginRight: 2 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, paddingHorizontal: 2 };
-let obj1 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, paddingHorizontal: 2 };
+createCacheKey[1] = {
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.xs,
+  paddingHorizontal: 2,
+};
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.xs,
+  paddingHorizontal: 2,
+};
 createCacheKey[2] = { color: ThemesDefault.unsafe_rawColors.BRAND_500 };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { color: ThemesDefault.unsafe_rawColors.BRAND_500 };
@@ -119,7 +132,7 @@ export function createFetchingGameMentionRule() {
   const gameMention = {
     react(node, arg1, key) {
       return callback(closure_7, { node, state: key }, key.key);
-    }
+    },
   };
   return { gameMention };
 }

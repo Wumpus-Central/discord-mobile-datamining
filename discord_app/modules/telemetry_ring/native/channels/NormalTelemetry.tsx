@@ -15,7 +15,15 @@ class NormalTelemetryImpl extends tmp3 {
   }
 }
 let items = [require("TelemetryChannel").TelemetryChannel.NORMAL];
-importDefaultResult = new importDefaultResult(importDefaultResult1, items, tmp, Object, NormalTelemetryImpl, importDefaultResult, importDefaultResult1);
+importDefaultResult = new importDefaultResult(
+  importDefaultResult1,
+  items,
+  tmp,
+  Object,
+  NormalTelemetryImpl,
+  importDefaultResult,
+  importDefaultResult1,
+);
 // ThrowIfThisInitialized (0x7c)
 const result = require("set").fileFinishedImporting("modules/telemetry_ring/native/channels/NormalTelemetry.tsx");
 

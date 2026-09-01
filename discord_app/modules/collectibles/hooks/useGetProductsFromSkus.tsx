@@ -22,6 +22,9 @@ export default function useGetProductsFromSkus() {
       }
       return productByStoreListingId;
     });
-    return closure_1_1(closure_1_2[3])(mapped.filter((arg0) => null != arg0), "storeListingId");
+    return closure_1_1(closure_1_2[3])(
+      mapped.filter((arg0) => null != arg0),
+      "storeListingId",
+    );
   }, items1);
-};
+}

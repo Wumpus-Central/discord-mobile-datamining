@@ -5,4 +5,4 @@ const result = set.fileFinishedImporting("modules/go_live/utils/getStreamSourceM
 
 export default function getStreamSourceMetadata() {
   return {};
-};
+}

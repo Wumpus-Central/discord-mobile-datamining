@@ -17,7 +17,19 @@ import createCacheKey from "../../Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
-let closure_3 = ["color", "fontSize", "fontFamily", "fontWeight", "fontStyle", "textAlign", "textAlignVertical", "verticalAlign", "textDecorationLine", "lineHeight", "letterSpacing"];
+let closure_3 = [
+  "color",
+  "fontSize",
+  "fontFamily",
+  "fontWeight",
+  "fontStyle",
+  "textAlign",
+  "textAlignVertical",
+  "verticalAlign",
+  "textDecorationLine",
+  "lineHeight",
+  "letterSpacing",
+];
 let c5 = importAllResult;
 const Text = get_ActivityIndicator.Text;
 let closure_7 = get_ActivityIndicator.unstable_TextAncestorContext;
@@ -25,12 +37,20 @@ let closure_9 = importDefaultResult.createAnimatedComponent(Text);
 let items = [{ includeFontPadding: true }];
 let closure_11 = [];
 const keys = Object.keys(ThemesDefault.colors);
-let closure_12 = Object.fromEntries(keys.map((arg0) => {
-  items = [applyDefault.kebabCase(arg0), arg0];
-  return items;
-}));
+let closure_12 = Object.fromEntries(
+  keys.map((arg0) => {
+    items = [applyDefault.kebabCase(arg0), arg0];
+    return items;
+  }),
+);
 let obj = { 400: null, 500: null, 600: null, 700: null, 800: null };
-({ PRIMARY_NORMAL: obj3[400], PRIMARY_MEDIUM: obj3[500], PRIMARY_SEMIBOLD: obj3[600], PRIMARY_BOLD: obj3[700], PRIMARY_EXTRABOLD: obj3[800] } = Fonts);
+({
+  PRIMARY_NORMAL: obj3[400],
+  PRIMARY_MEDIUM: obj3[500],
+  PRIMARY_SEMIBOLD: obj3[600],
+  PRIMARY_BOLD: obj3[700],
+  PRIMARY_EXTRABOLD: obj3[800],
+} = Fonts);
 obj = { 800: null };
 obj[800] = Fonts.GINTO_NORD_EXTRA_BOLD;
 let obj1 = { 400: null, 700: null };
@@ -38,8 +58,15 @@ let obj1 = { 400: null, 700: null };
 const mapped = TextVariantsFlat.map((name) => {
   let tmp = null;
   if ("code" !== name.name) {
-    items = [name.name, ];
-    obj = { fontSize: null, lineHeight: null, textTransform: null, fontFamily: null, includeFontPadding: false, letterSpacing: null };
+    items = [name.name];
+    obj = {
+      fontSize: null,
+      lineHeight: null,
+      textTransform: null,
+      fontFamily: null,
+      includeFontPadding: false,
+      letterSpacing: null,
+    };
     ({ size: obj2[0], lineHeight: obj2[1] } = name);
     let str = "none";
     if (name.uppercase) {
@@ -105,13 +132,26 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
   const typographyVariantRemap = obj1.useTypographyVariantRemap(animated.variant, false);
   const tmp2 = closure_17;
   const tmp2Result = closure_17(color, tabularNumbers);
-  items = [dependencyMap[typographyVariantRemap], tmp2Result.text, , ];
-  const manaTextMigrationHighlight = useManaTextMigrationHighlight2.useManaTextMigrationHighlight(dependencyMap[typographyVariantRemap], style);
+  items = [dependencyMap[typographyVariantRemap], tmp2Result.text, ,];
+  const manaTextMigrationHighlight = useManaTextMigrationHighlight2.useManaTextMigrationHighlight(
+    dependencyMap[typographyVariantRemap],
+    style,
+  );
   const arraySpreadResult = HermesBuiltin.arraySpread(includeFontPadding ? items : closure_11, 2);
   items[arraySpreadResult] = style;
   items[arraySpreadResult + 1] = manaTextMigrationHighlight;
   let tmp4Result = tmp4(4487);
-  obj = { animated: flag, children, enabled: plainTextExperimentEnabled, experimentalUseNativeText: flag2, hasRef: null != arg1, hasTextAncestor: context, isIOS: null, props: null, style: null };
+  obj = {
+    animated: flag,
+    children,
+    enabled: plainTextExperimentEnabled,
+    experimentalUseNativeText: flag2,
+    hasRef: null != arg1,
+    hasTextAncestor: context,
+    isIOS: null,
+    props: null,
+    style: null,
+  };
   tmp4Result = tmp4(501);
   obj[6] = tmp4Result.isIOS();
   obj[7] = merged;
@@ -121,8 +161,33 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
   const tmp10 = includeFontPadding ? items : closure_11;
   if (tmp4Result1.isPlainTextEligible(plainTextEligibility)) {
     ({ fontWeight, textAlignVertical, verticalAlign, letterSpacing } = plainTextEligibility);
-    ({ color: color2, fontSize, fontFamily, fontStyle, textAlign, textDecorationLine, lineHeight } = plainTextEligibility);
-    obj = { text: null, color: null, fontSize: null, fontFamily: null, fontWeight: null, fontStyle: null, textAlign: null, textAlignVertical: null, textDecorationLine: null, lineHeight: null, letterSpacing: null, hasLetterSpacing: null, style: null, numberOfLines: null, ellipsizeMode: null, allowFontScaling: true };
+    ({
+      color: color2,
+      fontSize,
+      fontFamily,
+      fontStyle,
+      textAlign,
+      textDecorationLine,
+      lineHeight,
+    } = plainTextEligibility);
+    obj = {
+      text: null,
+      color: null,
+      fontSize: null,
+      fontFamily: null,
+      fontWeight: null,
+      fontStyle: null,
+      textAlign: null,
+      textAlignVertical: null,
+      textDecorationLine: null,
+      lineHeight: null,
+      letterSpacing: null,
+      hasLetterSpacing: null,
+      style: null,
+      numberOfLines: null,
+      ellipsizeMode: null,
+      allowFontScaling: true,
+    };
     obj[0] = children;
     obj[1] = color2;
     obj[2] = fontSize;

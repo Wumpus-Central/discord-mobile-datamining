@@ -2,7 +2,9 @@
 import set from "../../../../../../_runtime/00002_set.js";
 import set2 from "../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUtils.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUtils.tsx",
+);
 
 export const getPrivateChannelIconComponent = function getPrivateChannelIconComponent(type) {
   if (set2.ChannelTypes.GUILD_TEXT === type) {

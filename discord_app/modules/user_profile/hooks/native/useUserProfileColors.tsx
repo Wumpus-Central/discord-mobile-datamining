@@ -16,7 +16,14 @@ export const useUserProfileColors = function useUserProfileColors(theme) {
   let obj = useProfileThemeValues;
   const profileThemeValues = obj.useProfileThemeValues(theme.theme);
   const items = [closure_3];
-  obj = { gradientFallbackBackground: null, gradientSecondaryBackground: null, containerBackground: null, containerBorderColor: null, avatarBackground: null, statusBackground: null };
+  obj = {
+    gradientFallbackBackground: null,
+    gradientSecondaryBackground: null,
+    containerBackground: null,
+    containerBorderColor: null,
+    avatarBackground: null,
+    statusBackground: null,
+  };
   const stateFromStores = initialize.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
   const obj2 = initialize;
   obj[0] = map.useToken(ThemesDefault.colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp2);
@@ -44,7 +51,9 @@ export const useUserProfileColors = function useUserProfileColors(theme) {
         const merged = Object.assign(obj);
         obj.containerBackground = tmp6;
         tmp3Result = tmp3(688);
-        obj.gradientSecondaryBackground = tmp3Result.int2hex(tmp3(8120).calculateOverlayedColor(secondaryColor, overlay));
+        obj.gradientSecondaryBackground = tmp3Result.int2hex(
+          tmp3(8120).calculateOverlayedColor(secondaryColor, overlay),
+        );
         const tmp3Result1 = tmp3(8120);
         obj.avatarBackground = tmp3(688).int2hex(result);
         const tmp3Result2 = tmp3(688);

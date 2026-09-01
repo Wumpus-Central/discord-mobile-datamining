@@ -47,8 +47,7 @@ function handleGuildRoleMemberUpdate(guildId) {
 let c10 = false;
 let closure_11 = {};
 const Store = initializeDefault.Store;
-class MemberSafetyStore extends Store {
-}
+class MemberSafetyStore extends Store {}
 const prototype = MemberSafetyStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_5, closure_6, closure_7);
@@ -352,12 +351,14 @@ const memberSafetyStore = new MemberSafetyStore(dispatcherDefault, {
           const tmp6 = new closure_8(guildId);
           tmp[guildId] = tmp6;
         }
-        return dependencyMap[guildId].updateMembersByMemberIds(members.reduce((arr, member) => {
-          if (null != member.member) {
-            arr.push(member.member.user.id);
-          }
-          return arr;
-        }, []));
+        return dependencyMap[guildId].updateMembersByMemberIds(
+          members.reduce((arr, member) => {
+            if (null != member.member) {
+              arr.push(member.member.user.id);
+            }
+            return arr;
+          }, []),
+        );
       }
     }
     return false;
@@ -370,10 +371,12 @@ const memberSafetyStore = new MemberSafetyStore(dispatcherDefault, {
           const tmp6 = new closure_8(guildId);
           tmp[guildId] = tmp6;
         }
-        return dependencyMap[guildId].updateMembersByMemberIds(addedMembers.reduce((arr, userId) => {
-          arr.push(userId.userId);
-          return arr;
-        }, []));
+        return dependencyMap[guildId].updateMembersByMemberIds(
+          addedMembers.reduce((arr, userId) => {
+            arr.push(userId.userId);
+            return arr;
+          }, []),
+        );
       }
     }
     return false;
@@ -386,10 +389,12 @@ const memberSafetyStore = new MemberSafetyStore(dispatcherDefault, {
           const tmp6 = new closure_8(guildId);
           tmp[guildId] = tmp6;
         }
-        return dependencyMap[guildId].updateMembersByMemberIds(members.reduce((arr, userId) => {
-          arr.push(userId.userId);
-          return arr;
-        }, []));
+        return dependencyMap[guildId].updateMembersByMemberIds(
+          members.reduce((arr, userId) => {
+            arr.push(userId.userId);
+            return arr;
+          }, []),
+        );
       }
     }
     return false;
@@ -404,12 +409,14 @@ const memberSafetyStore = new MemberSafetyStore(dispatcherDefault, {
         const tmp7 = new closure_8(guildId);
         tmp[guildId] = tmp7;
       }
-      return dependencyMap[guildId].updateMembersByMemberIds(values.reduce((arr, owner) => {
-        if (null != owner.owner) {
-          arr.push(owner.owner.user.id);
-        }
-        return arr;
-      }, []));
+      return dependencyMap[guildId].updateMembersByMemberIds(
+        values.reduce((arr, owner) => {
+          if (null != owner.owner) {
+            arr.push(owner.owner.user.id);
+          }
+          return arr;
+        }, []),
+      );
     }
   },
   INITIALIZE_MEMBER_SAFETY_STORE: function handleInitializeMemberSafetyStore(guildId) {
@@ -460,7 +467,9 @@ const memberSafetyStore = new MemberSafetyStore(dispatcherDefault, {
         const tmp8 = new closure_8(guildId);
         tmp2[guildId] = tmp8;
       }
-      const result1 = dependencyMap[guildId].updateMembersByMemberIds(memberSupplementals.map((userId) => userId.userId));
+      const result1 = dependencyMap[guildId].updateMembersByMemberIds(
+        memberSupplementals.map((userId) => userId.userId),
+      );
       const obj2 = dependencyMap[guildId];
     }
     return result;
@@ -472,15 +481,26 @@ const memberSafetyStore = new MemberSafetyStore(dispatcherDefault, {
       tmp[guildId] = tmp6;
     }
     let obj = tmp[guildId];
-    const reduced = members.reduce((memberIds, member) => {
-      const user = member.member.user;
-      memberIds = memberIds.memberIds;
-      ({ source_invite_code, join_source_type, join_source_application_id, join_source_channel_id, inviter_id } = member);
-      memberIds.push(user.id);
-      const memberSupplementals = memberIds.memberSupplementals;
-      memberSupplementals.push({ userId: user.id, sourceInviteCode: source_invite_code, joinSourceType: join_source_type, joinSourceApplicationId: join_source_application_id, joinSourceChannelId: join_source_channel_id, inviterId: inviter_id });
-      return memberIds;
-    }, { memberIds: [], memberSupplementals: [] });
+    const reduced = members.reduce(
+      (memberIds, member) => {
+        const user = member.member.user;
+        memberIds = memberIds.memberIds;
+        ({ source_invite_code, join_source_type, join_source_application_id, join_source_channel_id, inviter_id } =
+          member);
+        memberIds.push(user.id);
+        const memberSupplementals = memberIds.memberSupplementals;
+        memberSupplementals.push({
+          userId: user.id,
+          sourceInviteCode: source_invite_code,
+          joinSourceType: join_source_type,
+          joinSourceApplicationId: join_source_application_id,
+          joinSourceChannelId: join_source_channel_id,
+          inviterId: inviter_id,
+        });
+        return memberIds;
+      },
+      { memberIds: [], memberSupplementals: [] },
+    );
     let memberIds = reduced.memberIds;
     obj1 = hasMemberSupplemental;
     let result = obj1.syncMemberSupplemental(guildId, reduced.memberSupplementals);
@@ -552,7 +572,7 @@ const memberSafetyStore = new MemberSafetyStore(dispatcherDefault, {
       tmp[guildId] = tmp6;
     }
     return dependencyMap[guildId].updateMembersByMemberIds(guildId.userIds);
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyStore.tsx");
 

@@ -22,7 +22,9 @@ const getGuildIconSource = GuildNSFWContentLevel.getGuildIconSource;
 const CodedLinkExtendedType = CodedLinkExtendedType2.CodedLinkExtendedType;
 const BasicPermissions = ME.BasicPermissions;
 const InviteTypes = InviteSendStates.InviteTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/VoiceChannelListInviteEmbed.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/coded_links/invite/VoiceChannelListInviteEmbed.tsx",
+);
 
 export const canShowVoiceChannelListInviteEmbed = function canShowVoiceChannelListInviteEmbed(invite) {
   let tmp = null;
@@ -87,8 +89,14 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     }
     voiceStatesForChannelAlt = voiceStatesForChannelAlt.getVoiceStatesForChannelAlt(channel2.id, guild.id);
     const items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(voiceStatesForChannelAlt.filter((voiceState) => voiceState.voiceState.selfStream), 0);
-    arraySpreadResult = HermesBuiltin.arraySpread(voiceStatesForChannelAlt.filter((voiceState) => !voiceState.voiceState.selfStream), arraySpreadResult);
+    let arraySpreadResult = HermesBuiltin.arraySpread(
+      voiceStatesForChannelAlt.filter((voiceState) => voiceState.voiceState.selfStream),
+      0,
+    );
+    arraySpreadResult = HermesBuiltin.arraySpread(
+      voiceStatesForChannelAlt.filter((voiceState) => !voiceState.voiceState.selfStream),
+      arraySpreadResult,
+    );
     const substr = items.slice(0, 10);
     displayNameStylesEnabled = obj.displayNameStylesEnabled;
     const mapped = substr.map((member) => {
@@ -175,7 +183,10 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     obj.titleColor = voiceStatesForChannelAlt.length > 0 ? colors.voiceActiveColor : colors.voiceMutedColor;
     const intl = tmp30(1236).intl;
     obj.acceptLabelText = intl.string(guild(1236).t.gpqgah);
-    ({ acceptLabelGreenColor: obj3.acceptLabelColor, acceptLabelGreenBackgroundColor: obj3.acceptLabelBackgroundColor } = colors);
+    ({
+      acceptLabelGreenColor: obj3.acceptLabelColor,
+      acceptLabelGreenBackgroundColor: obj3.acceptLabelBackgroundColor,
+    } = colors);
     const tmp30Result = guild(4674);
     const tmp35 = currentClientVoiceChannelId === channel2.id;
     const items1 = [closure_8];

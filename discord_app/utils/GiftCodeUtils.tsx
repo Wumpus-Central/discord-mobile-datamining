@@ -22,7 +22,7 @@ function _resolveGiftCode() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -107,7 +107,15 @@ function _resolveGiftCode() {
             return obj6;
           } else {
             body = body.body;
-            const obj7 = { resolved: true, gift_code: null, gift_code_max_uses: null, sku_id: null, sku_type: null, application_id: null, store_title: null };
+            const obj7 = {
+              resolved: true,
+              gift_code: null,
+              gift_code_max_uses: null,
+              sku_id: null,
+              sku_type: null,
+              application_id: null,
+              store_title: null,
+            };
             obj7[1] = body.code;
             obj7[2] = body.max_uses;
             obj7[3] = body.store_listing.sku.id;
@@ -189,28 +197,51 @@ function getGiftCodeRedeemError(error, currentUser) {
     return intl.string(v5(1236).t["s9+XlB"]);
   }
 }
-({ Endpoints: error, AnalyticEvents: closure_8, AbortCodes: c9, GiftCodeModalStates: c10, MessageEmbedTypes: unpackModuleId, MessageTypes: closure_12 } = ME);
+({
+  Endpoints: error,
+  AnalyticEvents: closure_8,
+  AbortCodes: c9,
+  GiftCodeModalStates: c10,
+  MessageEmbedTypes: unpackModuleId,
+  MessageTypes: closure_12,
+} = ME);
 ({ PremiumTypes: map1, SubscriptionIntervalTypes: closure_14 } = GuildFeatures);
-let items = [importDefaultResult.escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...items1.map((arg0) => importDefaultResult.escape(arg0))];
+let items = [
+  importDefaultResult.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
+  ...items1.map((arg0) => importDefaultResult.escape(arg0)),
+];
 items1 = ["discordapp.com/gifts", "discord.com/gifts"];
 let regExp = new RegExp("(?: |^|https?://)(?:" + items.join("|") + ")/([a-z0-9-]+)", "gi");
 const items2 = ["discord.com/billing/promotions", "promos.discord.gg"];
 const items3 = [...items2.map((arg0) => importDefaultResult.escape(arg0))];
 const regExp1 = new RegExp("(?: |^|https?://)(?:" + items3.join("|") + ")(/|(/)?\\?code=)([a-z0-9-]+)", "gi");
 c0 = 4;
-let mapped = require("../../discord_common/js/packages/logger/Logger.tsx").fill(undefined).map(() => "[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{" + c0 + "}");
-const items4 = [mapped.join("-?"), , , ];
+let mapped = require("../../discord_common/js/packages/logger/Logger.tsx")
+  .fill(undefined)
+  .map(() => "[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{" + c0 + "}");
+const items4 = [mapped.join("-?"), , ,];
 c0 = 4;
 const fillResult = require("../../discord_common/js/packages/logger/Logger.tsx").fill(undefined);
-const mapped1 = require("../../discord_common/js/packages/logger/LoggerPIIRestrictedObjects.tsx").fill(undefined).map(() => "[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{" + c0 + "}");
+const mapped1 = require("../../discord_common/js/packages/logger/LoggerPIIRestrictedObjects.tsx")
+  .fill(undefined)
+  .map(() => "[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{" + c0 + "}");
 items4[1] = mapped1.join("-?");
 c0 = 5;
 const fillResult1 = require("../../discord_common/js/packages/logger/LoggerPIIRestrictedObjects.tsx").fill(undefined);
-const mapped2 = require("../modules/debug/Logger.tsx").fill(undefined).map(() => "[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{" + c0 + "}");
+const mapped2 = require("../modules/debug/Logger.tsx")
+  .fill(undefined)
+  .map(() => "[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{" + c0 + "}");
 items4[2] = mapped2.join("-?");
 items4[3] = "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}";
 const regExp2 = new RegExp("^(WUMP-?)?(" + items4.join("|") + ")$");
-let obj = { DEFAULT: 0, [0]: "DEFAULT", CUSTOM_STYLE: 1, [1]: "CUSTOM_STYLE", CUSTOM_MESSAGE_EMOJI_SOUNDBOARD: 2, [2]: "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD" };
+let obj = {
+  DEFAULT: 0,
+  [0]: "DEFAULT",
+  CUSTOM_STYLE: 1,
+  [1]: "CUSTOM_STYLE",
+  CUSTOM_MESSAGE_EMOJI_SOUNDBOARD: 2,
+  [2]: "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD",
+};
 const fillResult2 = require("../modules/debug/Logger.tsx").fill(undefined);
 const result = require("set").fileFinishedImporting("utils/GiftCodeUtils.tsx");
 
@@ -464,45 +495,79 @@ export const getSubscriptionGiftSuccessText = function getSubscriptionGiftSucces
   obj = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
   const withResult = match.with(obj, () => {
     const intl = subscriptionPlan(closure_1_2[12]).intl;
-    return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
+    return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, {
+      intervalCount: subscriptionPlan.intervalCount,
+    });
   });
   obj1 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 };
-  const withResult1 = match.with(obj, () => {
-    const intl = subscriptionPlan(closure_1_2[12]).intl;
-    return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
-  }).with(obj, () => {
-    const intl = subscriptionPlan(closure_1_2[12]).intl;
-    return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
-  });
+  const withResult1 = match
+    .with(obj, () => {
+      const intl = subscriptionPlan(closure_1_2[12]).intl;
+      return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, {
+        intervalCount: subscriptionPlan.intervalCount,
+      });
+    })
+    .with(obj, () => {
+      const intl = subscriptionPlan(closure_1_2[12]).intl;
+      return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t["ZEvHF+"], {
+        intervalCount: subscriptionPlan.intervalCount,
+      });
+    });
   const obj2 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_1 };
-  const withResult2 = match.with(obj, () => {
-    const intl = subscriptionPlan(closure_1_2[12]).intl;
-    return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
-  }).with(obj, () => {
-    const intl = subscriptionPlan(closure_1_2[12]).intl;
-    return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
-  }).with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 }, () => {
-    const intl = subscriptionPlan(closure_1_2[12]).intl;
-    return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.gjKbF4, { intervalCount: subscriptionPlan.intervalCount });
-  });
-  return match.with(obj, () => {
-    const intl = subscriptionPlan(closure_1_2[12]).intl;
-    return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
-  }).with(obj, () => {
-    const intl = subscriptionPlan(closure_1_2[12]).intl;
-    return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
-  }).with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 }, () => {
-    const intl = subscriptionPlan(closure_1_2[12]).intl;
-    return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.gjKbF4, { intervalCount: subscriptionPlan.intervalCount });
-  }).with({ interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_1 }, () => {
-    const intl = subscriptionPlan(closure_1_2[12]).intl;
-    return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.GIe7Bw, { intervalCount: subscriptionPlan.intervalCount });
-  }).otherwise(() => {
-    const intl = subscriptionPlan(1236).intl;
-    return intl.string(subscriptionPlan(1236).t["5ayf7w"]);
-  });
+  const withResult2 = match
+    .with(obj, () => {
+      const intl = subscriptionPlan(closure_1_2[12]).intl;
+      return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, {
+        intervalCount: subscriptionPlan.intervalCount,
+      });
+    })
+    .with(obj, () => {
+      const intl = subscriptionPlan(closure_1_2[12]).intl;
+      return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t["ZEvHF+"], {
+        intervalCount: subscriptionPlan.intervalCount,
+      });
+    })
+    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 }, () => {
+      const intl = subscriptionPlan(closure_1_2[12]).intl;
+      return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.gjKbF4, {
+        intervalCount: subscriptionPlan.intervalCount,
+      });
+    });
+  return match
+    .with(obj, () => {
+      const intl = subscriptionPlan(closure_1_2[12]).intl;
+      return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, {
+        intervalCount: subscriptionPlan.intervalCount,
+      });
+    })
+    .with(obj, () => {
+      const intl = subscriptionPlan(closure_1_2[12]).intl;
+      return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t["ZEvHF+"], {
+        intervalCount: subscriptionPlan.intervalCount,
+      });
+    })
+    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 }, () => {
+      const intl = subscriptionPlan(closure_1_2[12]).intl;
+      return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.gjKbF4, {
+        intervalCount: subscriptionPlan.intervalCount,
+      });
+    })
+    .with({ interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_1 }, () => {
+      const intl = subscriptionPlan(closure_1_2[12]).intl;
+      return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.GIe7Bw, {
+        intervalCount: subscriptionPlan.intervalCount,
+      });
+    })
+    .otherwise(() => {
+      const intl = subscriptionPlan(1236).intl;
+      return intl.string(subscriptionPlan(1236).t["5ayf7w"]);
+    });
 };
-export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftStartHeaderText(getOrFetchSubscriptionPlan, arg1, name) {
+export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftStartHeaderText(
+  getOrFetchSubscriptionPlan,
+  arg1,
+  name,
+) {
   const v5 = arg1;
   closure_1 = name;
   if (null == name) {
@@ -527,25 +592,50 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
       obj1[0] = constants6.YEAR;
       const withResult = match.with(obj, () => {
         const intl = callback(intervalCount[12]).intl;
-        return intl.formatToPlainString(callback(intervalCount[12]).t["/RDIEA"], { username: callback, skuName: closure_1, intervalCount });
+        return intl.formatToPlainString(callback(intervalCount[12]).t["/RDIEA"], {
+          username: callback,
+          skuName: closure_1,
+          intervalCount,
+        });
       });
-      let otherwiseResult = match.with(obj, () => {
-        const intl = callback(intervalCount[12]).intl;
-        return intl.formatToPlainString(callback(intervalCount[12]).t["/RDIEA"], { username: callback, skuName: closure_1, intervalCount });
-      }).with(obj1, () => {
-        const intl = callback(intervalCount[12]).intl;
-        return intl.formatToPlainString(callback(intervalCount[12]).t["3CX6Ev"], { username: callback, skuName: closure_1, intervalCount });
-      }).otherwise(() => {
-        const intl = callback(intervalCount[12]).intl;
-        return intl.formatToPlainString(callback(intervalCount[12]).t.td2m3W, { sender: callback });
-      });
-      const withResult1 = match.with(obj, () => {
-        const intl = callback(intervalCount[12]).intl;
-        return intl.formatToPlainString(callback(intervalCount[12]).t["/RDIEA"], { username: callback, skuName: closure_1, intervalCount });
-      }).with(obj1, () => {
-        const intl = callback(intervalCount[12]).intl;
-        return intl.formatToPlainString(callback(intervalCount[12]).t["3CX6Ev"], { username: callback, skuName: closure_1, intervalCount });
-      });
+      let otherwiseResult = match
+        .with(obj, () => {
+          const intl = callback(intervalCount[12]).intl;
+          return intl.formatToPlainString(callback(intervalCount[12]).t["/RDIEA"], {
+            username: callback,
+            skuName: closure_1,
+            intervalCount,
+          });
+        })
+        .with(obj1, () => {
+          const intl = callback(intervalCount[12]).intl;
+          return intl.formatToPlainString(callback(intervalCount[12]).t["3CX6Ev"], {
+            username: callback,
+            skuName: closure_1,
+            intervalCount,
+          });
+        })
+        .otherwise(() => {
+          const intl = callback(intervalCount[12]).intl;
+          return intl.formatToPlainString(callback(intervalCount[12]).t.td2m3W, { sender: callback });
+        });
+      const withResult1 = match
+        .with(obj, () => {
+          const intl = callback(intervalCount[12]).intl;
+          return intl.formatToPlainString(callback(intervalCount[12]).t["/RDIEA"], {
+            username: callback,
+            skuName: closure_1,
+            intervalCount,
+          });
+        })
+        .with(obj1, () => {
+          const intl = callback(intervalCount[12]).intl;
+          return intl.formatToPlainString(callback(intervalCount[12]).t["3CX6Ev"], {
+            username: callback,
+            skuName: closure_1,
+            intervalCount,
+          });
+        });
     } else {
       const match1 = v5(intervalCount[13]).match(getOrFetchSubscriptionPlan);
       const obj2 = { interval: null };
@@ -557,23 +647,40 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
         const intl = callback(intervalCount[12]).intl;
         return intl.formatToPlainString(callback(intervalCount[12]).t["2O4lo5"], { skuName: closure_1, intervalCount });
       });
-      otherwiseResult = match1.with(obj2, () => {
-        const intl = callback(intervalCount[12]).intl;
-        return intl.formatToPlainString(callback(intervalCount[12]).t["2O4lo5"], { skuName: closure_1, intervalCount });
-      }).with(obj3, () => {
-        const intl = callback(intervalCount[12]).intl;
-        return intl.formatToPlainString(callback(intervalCount[12]).t["+XjmsR"], { skuName: closure_1, intervalCount });
-      }).otherwise(() => {
-        const intl = callback(intervalCount[12]).intl;
-        return intl.string(callback(intervalCount[12]).t.hrnGng);
-      });
-      const withResult3 = match1.with(obj2, () => {
-        const intl = callback(intervalCount[12]).intl;
-        return intl.formatToPlainString(callback(intervalCount[12]).t["2O4lo5"], { skuName: closure_1, intervalCount });
-      }).with(obj3, () => {
-        const intl = callback(intervalCount[12]).intl;
-        return intl.formatToPlainString(callback(intervalCount[12]).t["+XjmsR"], { skuName: closure_1, intervalCount });
-      });
+      otherwiseResult = match1
+        .with(obj2, () => {
+          const intl = callback(intervalCount[12]).intl;
+          return intl.formatToPlainString(callback(intervalCount[12]).t["2O4lo5"], {
+            skuName: closure_1,
+            intervalCount,
+          });
+        })
+        .with(obj3, () => {
+          const intl = callback(intervalCount[12]).intl;
+          return intl.formatToPlainString(callback(intervalCount[12]).t["+XjmsR"], {
+            skuName: closure_1,
+            intervalCount,
+          });
+        })
+        .otherwise(() => {
+          const intl = callback(intervalCount[12]).intl;
+          return intl.string(callback(intervalCount[12]).t.hrnGng);
+        });
+      const withResult3 = match1
+        .with(obj2, () => {
+          const intl = callback(intervalCount[12]).intl;
+          return intl.formatToPlainString(callback(intervalCount[12]).t["2O4lo5"], {
+            skuName: closure_1,
+            intervalCount,
+          });
+        })
+        .with(obj3, () => {
+          const intl = callback(intervalCount[12]).intl;
+          return intl.formatToPlainString(callback(intervalCount[12]).t["+XjmsR"], {
+            skuName: closure_1,
+            intervalCount,
+          });
+        });
     }
     return otherwiseResult;
   }
@@ -615,60 +722,102 @@ export const getBodyText = function getBodyText(arg0) {
       obj1[1] = closure_13.TIER_2;
       const withResult = match.with(obj, () => {
         const intl = subscriptionPlan(closure_1_2[12]).intl;
-        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
+        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, {
+          intervalCount: subscriptionPlan.intervalCount,
+        });
       });
       const obj2 = { interval: null, premiumSubscriptionType: null };
       obj2[0] = constants6.MONTH;
       obj2[1] = closure_13.TIER_1;
-      const withResult1 = match.with(obj, () => {
-        const intl = subscriptionPlan(closure_1_2[12]).intl;
-        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
-      }).with(obj1, () => {
-        const intl = subscriptionPlan(closure_1_2[12]).intl;
-        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
-      });
+      const withResult1 = match
+        .with(obj, () => {
+          const intl = subscriptionPlan(closure_1_2[12]).intl;
+          return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, {
+            intervalCount: subscriptionPlan.intervalCount,
+          });
+        })
+        .with(obj1, () => {
+          const intl = subscriptionPlan(closure_1_2[12]).intl;
+          return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t["ZEvHF+"], {
+            intervalCount: subscriptionPlan.intervalCount,
+          });
+        });
       const obj3 = { interval: null, premiumSubscriptionType: null };
       obj3[0] = constants6.YEAR;
       obj3[1] = closure_13.TIER_1;
-      const withResult2 = match.with(obj, () => {
-        const intl = subscriptionPlan(closure_1_2[12]).intl;
-        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
-      }).with(obj1, () => {
-        const intl = subscriptionPlan(closure_1_2[12]).intl;
-        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
-      }).with(obj2, () => {
-        const intl = subscriptionPlan(closure_1_2[12]).intl;
-        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.gjKbF4, { intervalCount: subscriptionPlan.intervalCount });
-      });
-      let otherwiseResult = match.with(obj, () => {
-        const intl = subscriptionPlan(closure_1_2[12]).intl;
-        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
-      }).with(obj1, () => {
-        const intl = subscriptionPlan(closure_1_2[12]).intl;
-        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
-      }).with(obj2, () => {
-        const intl = subscriptionPlan(closure_1_2[12]).intl;
-        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.gjKbF4, { intervalCount: subscriptionPlan.intervalCount });
-      }).with(obj3, () => {
-        const intl = subscriptionPlan(closure_1_2[12]).intl;
-        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.GIe7Bw, { intervalCount: subscriptionPlan.intervalCount });
-      }).otherwise(() => {
-        const intl = subscriptionPlan(1236).intl;
-        return intl.string(subscriptionPlan(1236).t["5ayf7w"]);
-      });
-      const withResult3 = match.with(obj, () => {
-        const intl = subscriptionPlan(closure_1_2[12]).intl;
-        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
-      }).with(obj1, () => {
-        const intl = subscriptionPlan(closure_1_2[12]).intl;
-        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
-      }).with(obj2, () => {
-        const intl = subscriptionPlan(closure_1_2[12]).intl;
-        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.gjKbF4, { intervalCount: subscriptionPlan.intervalCount });
-      }).with(obj3, () => {
-        const intl = subscriptionPlan(closure_1_2[12]).intl;
-        return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.GIe7Bw, { intervalCount: subscriptionPlan.intervalCount });
-      });
+      const withResult2 = match
+        .with(obj, () => {
+          const intl = subscriptionPlan(closure_1_2[12]).intl;
+          return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, {
+            intervalCount: subscriptionPlan.intervalCount,
+          });
+        })
+        .with(obj1, () => {
+          const intl = subscriptionPlan(closure_1_2[12]).intl;
+          return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t["ZEvHF+"], {
+            intervalCount: subscriptionPlan.intervalCount,
+          });
+        })
+        .with(obj2, () => {
+          const intl = subscriptionPlan(closure_1_2[12]).intl;
+          return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.gjKbF4, {
+            intervalCount: subscriptionPlan.intervalCount,
+          });
+        });
+      let otherwiseResult = match
+        .with(obj, () => {
+          const intl = subscriptionPlan(closure_1_2[12]).intl;
+          return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, {
+            intervalCount: subscriptionPlan.intervalCount,
+          });
+        })
+        .with(obj1, () => {
+          const intl = subscriptionPlan(closure_1_2[12]).intl;
+          return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t["ZEvHF+"], {
+            intervalCount: subscriptionPlan.intervalCount,
+          });
+        })
+        .with(obj2, () => {
+          const intl = subscriptionPlan(closure_1_2[12]).intl;
+          return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.gjKbF4, {
+            intervalCount: subscriptionPlan.intervalCount,
+          });
+        })
+        .with(obj3, () => {
+          const intl = subscriptionPlan(closure_1_2[12]).intl;
+          return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.GIe7Bw, {
+            intervalCount: subscriptionPlan.intervalCount,
+          });
+        })
+        .otherwise(() => {
+          const intl = subscriptionPlan(1236).intl;
+          return intl.string(subscriptionPlan(1236).t["5ayf7w"]);
+        });
+      const withResult3 = match
+        .with(obj, () => {
+          const intl = subscriptionPlan(closure_1_2[12]).intl;
+          return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.O2bEOt, {
+            intervalCount: subscriptionPlan.intervalCount,
+          });
+        })
+        .with(obj1, () => {
+          const intl = subscriptionPlan(closure_1_2[12]).intl;
+          return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t["ZEvHF+"], {
+            intervalCount: subscriptionPlan.intervalCount,
+          });
+        })
+        .with(obj2, () => {
+          const intl = subscriptionPlan(closure_1_2[12]).intl;
+          return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.gjKbF4, {
+            intervalCount: subscriptionPlan.intervalCount,
+          });
+        })
+        .with(obj3, () => {
+          const intl = subscriptionPlan(closure_1_2[12]).intl;
+          return intl.formatToPlainString(subscriptionPlan(closure_1_2[12]).t.GIe7Bw, {
+            intervalCount: subscriptionPlan.intervalCount,
+          });
+        });
     } else {
       const intl3 = subscriptionPlan(1236).intl;
       const obj4 = { skuName: null };
@@ -776,7 +925,16 @@ export const trackStep = function trackStep(giftCode) {
   giftCode = giftCode.giftCode;
   ({ step, customMessage, emojiName, soundId, productLine } = giftCode);
   obj = expandEventPropertiesDefault;
-  obj = { to_step: step, has_custom_message: null != giftCode.giftStyle, is_custom_message_edited: null, gift_style: null, gift_code: null, emoji_name: null, sound_id: null, product_line: null };
+  obj = {
+    to_step: step,
+    has_custom_message: null != giftCode.giftStyle,
+    is_custom_message_edited: null,
+    gift_style: null,
+    gift_code: null,
+    emoji_name: null,
+    sound_id: null,
+    product_line: null,
+  };
   let tmp2 = null != giftCode.giftStyle;
   if (tmp2) {
     const intl = v5(1236).intl;

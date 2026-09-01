@@ -17,7 +17,9 @@ const require = arg1;
 ({ UserNotificationSettings: map1, ZERO_STRING_GUILD_ID: closure_14 } = ME);
 let c16 = "guild-open-notification-nudge-key";
 let closure_17 = { cooldownDurationMs: 5184000000 };
-let result = require("set").fileFinishedImporting("modules/nuf/native/components/notification/GuildOpenNotificationNudge.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/nuf/native/components/notification/GuildOpenNotificationNudge.tsx",
+);
 
 export default function GuildOpenNotificationNudge(guildId) {
   guildId = guildId.guildId;
@@ -44,8 +46,15 @@ export default function GuildOpenNotificationNudge(guildId) {
   obj[3] = constants2.GUILD_OPEN_BOTTOM_SHEET;
   obj[4] = markAsDismissed;
   obj[5] = onHide;
-  return jsx(NotificationNudgeBottomSheetDefault, { title: null, body: null, actionLocation: null, surface: null, markAsDismissed: null, onHide: null });
-};
+  return jsx(NotificationNudgeBottomSheetDefault, {
+    title: null,
+    body: null,
+    actionLocation: null,
+    surface: null,
+    markAsDismissed: null,
+    onHide: null,
+  });
+}
 export const GUILD_OPEN_NOTIFICATION_NUDGE_KEY = "guild-open-notification-nudge-key";
 export const useGuildOpenNudge = function useGuildOpenNudge() {
   const items = [closure_7];

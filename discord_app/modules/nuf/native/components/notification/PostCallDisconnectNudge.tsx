@@ -13,7 +13,9 @@ require = arg1;
 ({ EventActionLocation: closure_8, NotificationNudgeSurface: c9 } = EventActionType);
 let c11 = "post-call-disconnect-nudge-key";
 let closure_12 = { cooldownDurationMs: 604800000 };
-let result = require("set").fileFinishedImporting("modules/nuf/native/components/notification/PostCallDisconnectNudge.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/nuf/native/components/notification/PostCallDisconnectNudge.tsx",
+);
 
 export default function PostCallDisconnectNudge(arg0) {
   ({ markAsDismissed, onHide } = arg0);
@@ -26,8 +28,15 @@ export default function PostCallDisconnectNudge(arg0) {
   obj[3] = constants2.CALL_DISCONNECT_BOTTOM_SHEET;
   obj[4] = markAsDismissed;
   obj[5] = onHide;
-  return jsx(NotificationNudgeBottomSheetDefault, { title: null, body: null, actionLocation: null, surface: null, markAsDismissed: null, onHide: null });
-};
+  return jsx(NotificationNudgeBottomSheetDefault, {
+    title: null,
+    body: null,
+    actionLocation: null,
+    surface: null,
+    markAsDismissed: null,
+    onHide: null,
+  });
+}
 export const POST_CALL_DISCONNECT_NUDGE_KEY = "post-call-disconnect-nudge-key";
 export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() {
   let obj = stateFromStores1(15079);
@@ -35,7 +44,9 @@ export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() 
   const canSeePushNotificationNudge = stateFromStores(11980).useCanSeePushNotificationNudge();
   let obj2 = stateFromStores(11980);
   const items = [closure_6];
-  stateFromStores = stateFromStores(589).useStateFromStores(items, () => currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null));
+  stateFromStores = stateFromStores(589).useStateFromStores(items, () =>
+    currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null),
+  );
   const obj3 = stateFromStores(589);
   const items1 = [closure_5];
   stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => channelId.getChannelId());

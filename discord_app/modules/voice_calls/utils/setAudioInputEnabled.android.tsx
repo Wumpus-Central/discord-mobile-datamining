@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/voice_calls/utils/setAudioInpu
 
 export default function setAudioInputEnabled(arg0) {
   enforcingDefault.setAudioInputEnabled(arg0);
-};
+}

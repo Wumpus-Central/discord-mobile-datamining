@@ -27,7 +27,7 @@ function _emitClickEventWithCreative() {
     closure_0 = arg0;
     c7 = 0;
     c8 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -66,7 +66,14 @@ function _emitClickEventWithCreative() {
               dependencyMap = surfaceId;
               ({ sourceQuestContent: c3, trackGuildAndChannelMetadata: c4 } = lib);
               ({ questContentCTA, impressionId, clickId, questContentPosition, questContentRowIndex } = lib);
-              obj1 = { questContent: null, questContentPosition: null, questContentRowIndex: null, questContentCTA: null, impressionId: null, clickId: null };
+              obj1 = {
+                questContent: null,
+                questContentPosition: null,
+                questContentRowIndex: null,
+                questContentCTA: null,
+                impressionId: null,
+                clickId: null,
+              };
               obj1[0] = surfaceId;
               obj1[1] = questContentPosition;
               obj1[2] = questContentRowIndex;
@@ -91,7 +98,16 @@ function _emitClickEventWithCreative() {
             constants = arg1;
             if (c1 !== lib(7446).AdCreativeType.QUEST) {
               obj3 = lib(7463);
-              const obj4 = { adContentId: null, relatedQuestId: null, adCreativeType: null, event: null, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
+              const obj4 = {
+                adContentId: null,
+                relatedQuestId: null,
+                adCreativeType: null,
+                event: null,
+                properties: null,
+                trackGuildAndChannelMetadata: null,
+                shouldExtendSession: null,
+                sourceQuestContent: null,
+              };
               obj4[0] = lib.adCreativeId;
               obj4[1] = lib.relatedQuestId;
               obj4[2] = c1;
@@ -117,7 +133,14 @@ function _emitClickEventWithCreative() {
               obj3.trackAdContentEvent(obj4);
             } else {
               adCreativeId = lib.adCreativeId;
-              obj6 = { questId: null, event: null, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
+              obj6 = {
+                questId: null,
+                event: null,
+                properties: null,
+                trackGuildAndChannelMetadata: null,
+                shouldExtendSession: null,
+                sourceQuestContent: null,
+              };
               obj6[0] = adCreativeId;
               obj6[1] = constants.QUEST_CONTENT_CLICKED;
               obj7 = {};
@@ -179,7 +202,7 @@ function _handleClickInternalAction() {
     closure_0 = arg0;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -214,11 +237,25 @@ function _handleClickInternalAction() {
             } else {
               const clickId = tmp15.clickId;
               ({ surfaceId, questContentCTA, questContentPosition, questContentRowIndex } = tmp15);
-              const contentProperties = lib(closure_1_2[6]).getContentProperties(surfaceId, questContentPosition, questContentRowIndex);
+              const contentProperties = lib(closure_1_2[6]).getContentProperties(
+                surfaceId,
+                questContentPosition,
+                questContentRowIndex,
+              );
               const obj6 = lib(closure_1_2[6]);
               const tmp17 = lib;
               const tmp18 = closure_1_2;
-              const obj2 = { cta_name: null, click_id: null, is_targeted: null, content_id: null, content_name: null, content_position: null, row_index: null, ad_content_id: null, quest_id: null };
+              const obj2 = {
+                cta_name: null,
+                click_id: null,
+                is_targeted: null,
+                content_id: null,
+                content_name: null,
+                content_position: null,
+                row_index: null,
+                ad_content_id: null,
+                quest_id: null,
+              };
               obj2[0] = questContentCTA;
               closure_1 = clickId;
               if (clickId == null) {
@@ -232,7 +269,12 @@ function _handleClickInternalAction() {
                 c2 = false;
               }
               obj2[2] = c2;
-              ({ content_id: obj8[3], content_name: obj8[4], content_position: obj8[5], row_index: obj8[6] } = contentProperties);
+              ({
+                content_id: obj8[3],
+                content_name: obj8[4],
+                content_position: obj8[5],
+                row_index: obj8[6],
+              } = contentProperties);
               ({ adContentId: obj8[7], relatedQuestId: obj8[8] } = tmp15);
               closure_1_1(closure_1_2[8]).track(closure_1_5.QUEST_CONTENT_CLICKED, obj2);
               const obj7 = closure_1_1(closure_1_2[8]);
@@ -270,7 +312,7 @@ function _handleClickExternalAdvertiserCtaAction() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -333,7 +375,13 @@ function _handleClickExternalAdvertiserCtaAction() {
 }
 function handleViewImpression(minViewTimeSeconds) {
   ({ surfaceId, sourceQuestContent, shouldExtendSession, adUser, trackGuildAndChannelMetadata } = minViewTimeSeconds);
-  let obj = { min_view_time_seconds: minViewTimeSeconds.minViewTimeSeconds, min_viewport_percentage: minViewTimeSeconds.minViewportPercentage, triggered_by_status_change: minViewTimeSeconds.triggeredByStatusChange, apple_advertising_id: null, android_advertising_id: null };
+  let obj = {
+    min_view_time_seconds: minViewTimeSeconds.minViewTimeSeconds,
+    min_viewport_percentage: minViewTimeSeconds.minViewportPercentage,
+    triggered_by_status_change: minViewTimeSeconds.triggeredByStatusChange,
+    apple_advertising_id: null,
+    android_advertising_id: null,
+  };
   let advertisingId = null;
   ({ impressionId, isQuestEnrollmentBlocked, questContentPosition, questContentRowIndex } = minViewTimeSeconds);
   if (null != adUser) {
@@ -358,10 +406,21 @@ function handleViewImpression(minViewTimeSeconds) {
   obj.impression_id = impressionId;
   obj.is_quest_enrollment_blocked = isQuestEnrollmentBlocked;
   const obj4 = getBrandSafetyContext;
-  const merged2 = Object.assign(getQuestContentName.getContentProperties(surfaceId, questContentPosition, questContentRowIndex));
+  const merged2 = Object.assign(
+    getQuestContentName.getContentProperties(surfaceId, questContentPosition, questContentRowIndex),
+  );
   if (minViewTimeSeconds.adCreativeType !== AdCreativeType.AdCreativeType.QUEST) {
     let tmp9Result = tmp9(7463);
-    obj = { event: null, adContentId: null, relatedQuestId: null, adCreativeType: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null, properties: null };
+    obj = {
+      event: null,
+      adContentId: null,
+      relatedQuestId: null,
+      adCreativeType: null,
+      trackGuildAndChannelMetadata: null,
+      shouldExtendSession: null,
+      sourceQuestContent: null,
+      properties: null,
+    };
     obj[0] = AnalyticEvents.QUEST_CONTENT_VIEWED;
     ({ adCreativeId: obj9[1], relatedQuestId: obj9[2], adCreativeType: obj9[3] } = minViewTimeSeconds);
     obj[4] = trackGuildAndChannelMetadata;
@@ -374,7 +433,14 @@ function handleViewImpression(minViewTimeSeconds) {
   } else {
     const adCreativeId = minViewTimeSeconds.adCreativeId;
     tmp9Result = tmp9(7463);
-    obj1 = { event: null, questId: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null, properties: null };
+    obj1 = {
+      event: null,
+      questId: null,
+      trackGuildAndChannelMetadata: null,
+      shouldExtendSession: null,
+      sourceQuestContent: null,
+      properties: null,
+    };
     obj1[0] = AnalyticEvents.QUEST_CONTENT_VIEWED;
     obj1[1] = adCreativeId;
     obj1[2] = trackGuildAndChannelMetadata;
@@ -414,7 +480,7 @@ function _handleViewInternalSurfaceImpressionAction() {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -525,11 +591,27 @@ export const captureAdUserAction = function captureAdUserAction(type) {
         if (adCreativeType.adCreativeType === callback(table[3]).AdCreativeType.QUEST) {
           const adCreativeId = adCreativeType.adCreativeId;
           let tmp2Result = tmp2(tmp3[4]);
-          let obj = { event: null, questId: null, trackGuildAndChannelMetadata: null, sourceQuestContent: null, properties: null };
+          let obj = {
+            event: null,
+            questId: null,
+            trackGuildAndChannelMetadata: null,
+            sourceQuestContent: null,
+            properties: null,
+          };
           obj[0] = constants.QUEST_CONTENT_LOADED;
           obj[1] = adCreativeId;
           ({ trackGuildAndChannelMetadata: obj2[2], sourceQuestContent: obj2[3] } = adCreativeType);
-          obj = { triggered_by_status_change: null, metadata_sealed: null, traffic_metadata_sealed: null, impression_id: null, is_quest_enrollment_blocked: null, content_id: null, content_name: null, content_position: null, row_index: null };
+          obj = {
+            triggered_by_status_change: null,
+            metadata_sealed: null,
+            traffic_metadata_sealed: null,
+            impression_id: null,
+            is_quest_enrollment_blocked: null,
+            content_id: null,
+            content_name: null,
+            content_position: null,
+            row_index: null,
+          };
           obj[0] = adCreativeType.triggeredByStatusChange;
           tmp2Result = tmp2(tmp3[5]);
           let adMetadataSealed = tmp2Result.getAdMetadataSealed(adCreativeType.sourceQuestContent, adCreativeId);
@@ -537,7 +619,10 @@ export const captureAdUserAction = function captureAdUserAction(type) {
             adMetadataSealed = null;
           }
           obj[1] = adMetadataSealed;
-          let adTrafficMetadataSealed = tmp2(tmp3[5]).getAdTrafficMetadataSealed(adCreativeType.sourceQuestContent, adCreativeId);
+          let adTrafficMetadataSealed = tmp2(tmp3[5]).getAdTrafficMetadataSealed(
+            adCreativeType.sourceQuestContent,
+            adCreativeId,
+          );
           if (adTrafficMetadataSealed == null) {
             adTrafficMetadataSealed = null;
           }
@@ -552,10 +637,32 @@ export const captureAdUserAction = function captureAdUserAction(type) {
           tmp2Result.trackQuestEvent(obj);
           const tmp2Result2 = tmp2(tmp3[6]);
         } else {
-          obj1 = { event: null, adContentId: null, relatedQuestId: null, adCreativeType: null, trackGuildAndChannelMetadata: null, sourceQuestContent: null, properties: null };
+          obj1 = {
+            event: null,
+            adContentId: null,
+            relatedQuestId: null,
+            adCreativeType: null,
+            trackGuildAndChannelMetadata: null,
+            sourceQuestContent: null,
+            properties: null,
+          };
           obj1[0] = constants.QUEST_CONTENT_LOADED;
-          ({ adCreativeId: obj8[1], relatedQuestId: obj8[2], adCreativeType: obj8[3], trackGuildAndChannelMetadata: obj8[4], sourceQuestContent: obj8[5] } = adCreativeType);
-          const obj2 = { triggered_by_status_change: null, impression_id: null, is_quest_enrollment_blocked: null, content_id: null, content_name: null, content_position: null, row_index: null };
+          ({
+            adCreativeId: obj8[1],
+            relatedQuestId: obj8[2],
+            adCreativeType: obj8[3],
+            trackGuildAndChannelMetadata: obj8[4],
+            sourceQuestContent: obj8[5],
+          } = adCreativeType);
+          const obj2 = {
+            triggered_by_status_change: null,
+            impression_id: null,
+            is_quest_enrollment_blocked: null,
+            content_id: null,
+            content_name: null,
+            content_position: null,
+            row_index: null,
+          };
           ({ triggeredByStatusChange: obj9[0], impressionId: obj9[1] } = adCreativeType);
           obj2[2] = tmp;
           obj2[3] = adCreativeType.surfaceId;

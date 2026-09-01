@@ -72,7 +72,9 @@ function IconWithBadge(includeNotificationsCount) {
     items4 = [];
   }
   const tmp5Result = memo(8098);
-  const items5 = [closure_6(tmp5Result, { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, obj3) }), ];
+  const items5 = [
+    closure_6(tmp5Result, { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, obj3) }),
+  ];
   let tmp9Result = null;
   if (sum > 0) {
     const obj4 = { style: null, children: null };
@@ -88,11 +90,25 @@ function IconWithBadge(includeNotificationsCount) {
   return closure_6(View, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { badgeWrapper: { position: "absolute", top: 16, left: 12 }, backIcon: { height: 24, width: 24 }, iconWithBadge: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, padding: 7, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
+createCacheKey = {
+  badgeWrapper: { position: "absolute", top: 16, left: 12 },
+  backIcon: { height: 24, width: 24 },
+  iconWithBadge: null,
+};
+createCacheKey = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_4,
+  borderRadius: ThemesDefault.modules.button.BORDER_RADIUS,
+  padding: 7,
+  backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
+};
 createCacheKey[2] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/BackIconWithBadge.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/BackIconWithBadge.tsx",
+);
 
 export const BACK_ICON_WITH_BADGE_HIT_SLOP = { top: 8, bottom: 8, left: 8, right: 8 };
 export const SettingsLeftIconWithBadge = function SettingsLeftIconWithBadge(navigation) {
@@ -122,7 +138,7 @@ export const LeftBackIconWithBadge = function LeftBackIconWithBadge(includeNotif
 export const CloseIconWithBadgeOnSide = function CloseIconWithBadgeOnSide(count) {
   count = count.count;
   let obj = { style: callback2().iconWithBadge, children: null };
-  const items = [callback(XLargeIcon.XLargeIcon, { size: "sm", color: "white" }), ];
+  const items = [callback(XLargeIcon.XLargeIcon, { size: "sm", color: "white" })];
   let tmp3Result = null;
   if (count > 0) {
     obj = { value: null };

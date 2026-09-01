@@ -20,7 +20,13 @@ const item = keys.forEach((str) => {
   closure_8[replaced] = frozen[str];
   closure_9[frozen[str]] = replaced;
 });
-const items = [["YYYY-MM-DD", "MMMM DD, Y"], ["YYYY-MM", "MMMM Y"], ["MM-DD", "MMMM DD"], ["MM", "MMMM"], ["YYYY", "Y"]];
+const items = [
+  ["YYYY-MM-DD", "MMMM DD, Y"],
+  ["YYYY-MM", "MMMM Y"],
+  ["MM-DD", "MMMM DD"],
+  ["MM", "MMMM"],
+  ["YYYY", "Y"],
+];
 let result = require("set").fileFinishedImporting("utils/SKUUtils.tsx");
 
 export const getSKUIdFromURL = function getSKUIdFromURL(pathname) {

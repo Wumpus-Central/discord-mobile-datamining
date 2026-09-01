@@ -94,10 +94,12 @@ export const updateImpersonatedRoles = function updateImpersonatedRoles(guildId,
       set = selfMember;
       if (null == selfMember) {
         return false;
-      } else if (closure_2.some((arg0) => {
-        const roles = set.roles;
-        return !roles.includes(arg0);
-      })) {
+      } else if (
+        closure_2.some((arg0) => {
+          const roles = set.roles;
+          return !roles.includes(arg0);
+        })
+      ) {
         return true;
       } else {
         items = [];

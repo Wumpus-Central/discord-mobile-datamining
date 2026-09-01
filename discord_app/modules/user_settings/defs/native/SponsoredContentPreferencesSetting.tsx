@@ -16,13 +16,13 @@ obj = {
   parent: null,
   IconComponent: QuestsIcon.QuestsIcon,
   usePredicate: apexExperiment.useIsAdTopicOptOutClientEnabled,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.SPONSORED_CONTENT_PREFERENCES,
   getComponent() {
     return SponsoredContentPreferencesScreen /* SponsoredContentPreferencesScreen */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/SponsoredContentPreferencesSetting.tsx");

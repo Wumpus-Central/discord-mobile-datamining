@@ -11,7 +11,7 @@ function _transferToPlaystationWithAlert() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       closure_4 = tmp3;
       closure_3 = tmp5;
       const lib = lib2;

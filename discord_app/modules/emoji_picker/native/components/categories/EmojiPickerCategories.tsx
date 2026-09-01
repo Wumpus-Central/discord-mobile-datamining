@@ -11,17 +11,37 @@ const require = arg1;
 let c3 = importAllResult;
 ({ AnalyticEvents: c5, AnalyticsPages: closure_6, CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = ME);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, listPlaceholder: null, item: null, keyboardItem: null };
+let obj = {
+  list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
+  listPlaceholder: null,
+  item: null,
+  keyboardItem: null,
+};
 obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 obj[1] = obj;
-obj[2] = { height: EXPRESSION_FOOTER_HEIGHT, width: EXPRESSION_FOOTER_HEIGHT, justifyContent: "center", alignItems: "center" };
+obj[2] = {
+  height: EXPRESSION_FOOTER_HEIGHT,
+  width: EXPRESSION_FOOTER_HEIGHT,
+  justifyContent: "center",
+  alignItems: "center",
+};
 obj[3] = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE };
 let closure_12 = createCacheKey.createStyles(obj);
-let closure_13 = { code: "function EmojiPickerCategoriesTsx1(){const{categoryIndexActive}=this.__closure;return categoryIndexActive.get();}" };
-let closure_14 = { code: "function EmojiPickerCategoriesTsx2(categoryIndex,categoryIndexPrev){const{blockRef,EXPRESSION_FOOTER_HEIGHT,runOnJS,scrollToCategoryIndex}=this.__closure;const ref=blockRef.get();if(categoryIndexPrev==null||categoryIndex===categoryIndexPrev||ref==null){return;}const categoryScrollPos=categoryIndex*EXPRESSION_FOOTER_HEIGHT;if(categoryScrollPos>ref.end||categoryScrollPos<ref.start){runOnJS(scrollToCategoryIndex)(categoryIndex);}}" };
-let closure_15 = { code: "function EmojiPickerCategoriesTsx3(){const{inPortalKeyboard,bottomSheetIndex}=this.__closure;return inPortalKeyboard?bottomSheetIndex.get()===1:bottomSheetIndex.get()===0;}" };
-let closure_16 = { code: "function EmojiPickerCategoriesTsx4(){const{bottomSheetOpen}=this.__closure;return bottomSheetOpen.get();}" };
-let closure_17 = { code: "function EmojiPickerCategoriesTsx5(open){const{runOnJS,handleScrollToCategoryIndex}=this.__closure;if(!open){return;}runOnJS(handleScrollToCategoryIndex)();}" };
+let closure_13 = {
+  code: "function EmojiPickerCategoriesTsx1(){const{categoryIndexActive}=this.__closure;return categoryIndexActive.get();}",
+};
+let closure_14 = {
+  code: "function EmojiPickerCategoriesTsx2(categoryIndex,categoryIndexPrev){const{blockRef,EXPRESSION_FOOTER_HEIGHT,runOnJS,scrollToCategoryIndex}=this.__closure;const ref=blockRef.get();if(categoryIndexPrev==null||categoryIndex===categoryIndexPrev||ref==null){return;}const categoryScrollPos=categoryIndex*EXPRESSION_FOOTER_HEIGHT;if(categoryScrollPos>ref.end||categoryScrollPos<ref.start){runOnJS(scrollToCategoryIndex)(categoryIndex);}}",
+};
+let closure_15 = {
+  code: "function EmojiPickerCategoriesTsx3(){const{inPortalKeyboard,bottomSheetIndex}=this.__closure;return inPortalKeyboard?bottomSheetIndex.get()===1:bottomSheetIndex.get()===0;}",
+};
+let closure_16 = {
+  code: "function EmojiPickerCategoriesTsx4(){const{bottomSheetOpen}=this.__closure;return bottomSheetOpen.get();}",
+};
+let closure_17 = {
+  code: "function EmojiPickerCategoriesTsx5(open){const{runOnJS,handleScrollToCategoryIndex}=this.__closure;if(!open){return;}runOnJS(handleScrollToCategoryIndex)();}",
+};
 const memoResult = importAllResult.memo(function EmojiPickerCategories(bottomSheetRef) {
   bottomSheetRef = bottomSheetRef.bottomSheetRef;
   const bottomSheetIndex = bottomSheetRef.bottomSheetIndex;
@@ -109,7 +129,12 @@ const memoResult = importAllResult.memo(function EmojiPickerCategories(bottomShe
       }
     }
   };
-  obj = { blockRef: sharedValue, EXPRESSION_FOOTER_HEIGHT: onClearSearch, runOnJS: bottomSheetRef(categories[7]).runOnJS, scrollToCategoryIndex: callback };
+  obj = {
+    blockRef: sharedValue,
+    EXPRESSION_FOOTER_HEIGHT: onClearSearch,
+    runOnJS: bottomSheetRef(categories[7]).runOnJS,
+    scrollToCategoryIndex: callback,
+  };
   fn2.__closure = obj;
   fn2.__workletHash = 7148256102464;
   fn2.__initData = closure_14;
@@ -265,7 +290,19 @@ const memoResult = importAllResult.memo(function EmojiPickerCategories(bottomShe
     obj[1] = num2 + closure_10.current;
     const result = sharedValue.set(obj);
   }, items6);
-  const callback6 = categoryIndexActive.useCallback((arg0, index) => sharedValue(bottomSheetIndex(categories[11]), { category: categories[index], categoryIndexActive, index, handlePressCategory: callback3, loadingStyle: closure_8.listPlaceholder, locked: categories[index].isNitroLocked, style: closure_8.item }), items7);
+  const callback6 = categoryIndexActive.useCallback(
+    (arg0, index) =>
+      sharedValue(bottomSheetIndex(categories[11]), {
+        category: categories[index],
+        categoryIndexActive,
+        index,
+        handlePressCategory: callback3,
+        loadingStyle: closure_8.listPlaceholder,
+        locked: categories[index].isNitroLocked,
+        style: closure_8.item,
+      }),
+    items7,
+  );
   const memo1 = categoryIndexActive.useMemo(() => {
     const Gesture = bottomSheetRef(categories[13]).Gesture;
     return Gesture.Native().disallowInterruption(true);
@@ -275,8 +312,30 @@ const memoResult = importAllResult.memo(function EmojiPickerCategories(bottomShe
   const tmp21 = bottomSheetIndex(categories[14]);
   const tmp22 = ref;
   const tmp23 = closure_10;
-  obj3 = { estimatedListSize: "windowSize", horizontal: true, itemSize: onClearSearch, keyboardShouldPersistTaps: "always", listId: ExpressionPickerViewType.EMOJI, onLayout: callback5, onScroll: callback1, placeholderConfig: tmp18, ref, renderAhead, renderItem: callback6, scrollReporting: "callbacks", sections, showsHorizontalScrollIndicator: false, style: tmp.list };
-  const items8 = [sharedValue(bottomSheetRef(categories[13]).GestureDetector, { gesture: memo1, children: sharedValue(bottomSheetIndex(categories[15]), obj3) }), , ];
+  obj3 = {
+    estimatedListSize: "windowSize",
+    horizontal: true,
+    itemSize: onClearSearch,
+    keyboardShouldPersistTaps: "always",
+    listId: ExpressionPickerViewType.EMOJI,
+    onLayout: callback5,
+    onScroll: callback1,
+    placeholderConfig: tmp18,
+    ref,
+    renderAhead,
+    renderItem: callback6,
+    scrollReporting: "callbacks",
+    sections,
+    showsHorizontalScrollIndicator: false,
+    style: tmp.list,
+  };
+  const items8 = [
+    sharedValue(bottomSheetRef(categories[13]).GestureDetector, {
+      gesture: memo1,
+      children: sharedValue(bottomSheetIndex(categories[15]), obj3),
+    }),
+    ,
+  ];
   let tmp20Result = null;
   if (null != firstUnicodeCategory) {
     obj4 = { blockRef: null, category: null, categoryIndex: null, onPress: null, style: null };
@@ -299,6 +358,8 @@ const memoResult = importAllResult.memo(function EmojiPickerCategories(bottomShe
   obj1[2] = tmp22(tmp23, { children: items8 });
   return sharedValue(tmp21, obj1);
 });
-let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategories.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/emoji_picker/native/components/categories/EmojiPickerCategories.tsx",
+);
 
 export default memoResult;

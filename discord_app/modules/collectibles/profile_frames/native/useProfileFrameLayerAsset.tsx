@@ -6,7 +6,9 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 const require = arg1;
 ({ Image: c4, PixelRatio: c5 } = get_ActivityIndicator);
 const map = new Map();
-let result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/native/useProfileFrameLayerAsset.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/collectibles/profile_frames/native/useProfileFrameLayerAsset.tsx",
+);
 
 export default function useProfileFrameLayerAsset(width) {
   width = width.width;
@@ -16,7 +18,10 @@ export default function useProfileFrameLayerAsset(width) {
   let obj = collectiblesItemAssetUrl(1900);
   obj = { skuId, assetFormat: collectiblesItemAssetUrl(1900).CollectiblesItemAssetFormat.STATIC, assetId: layer.id };
   collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl(obj);
-  dependencyMap = callback(React.useReducer((arg0) => arg0 + 1, 0), 2)[1];
+  dependencyMap = callback(
+    React.useReducer((arg0) => arg0 + 1, 0),
+    2,
+  )[1];
   const items = [collectiblesItemAssetUrl];
   const effect = React.useEffect(() => {
     let hasItem = null == collectiblesItemAssetUrl;
@@ -27,14 +32,16 @@ export default function useProfileFrameLayerAsset(width) {
       hasItem = closure_1_6.has(tmp);
     }
     if (!hasItem) {
-      const size = closure_1_4.getSize(tmp, (arg0, arg1) => {
-        if (arg0 > 0) {
-          const result = closure_1_6.set(closure_0, arg1 / arg0);
-          callback();
-        }
-      }, () => {
-
-      });
+      const size = closure_1_4.getSize(
+        tmp,
+        (arg0, arg1) => {
+          if (arg0 > 0) {
+            const result = closure_1_6.set(closure_0, arg1 / arg0);
+            callback();
+          }
+        },
+        () => {},
+      );
     }
   }, items);
   let value;
@@ -57,4 +64,4 @@ export default function useProfileFrameLayerAsset(width) {
     }
   }
   return { assetUrl, imageHeight };
-};
+}

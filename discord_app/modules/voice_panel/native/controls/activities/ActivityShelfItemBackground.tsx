@@ -36,7 +36,9 @@ const memoResult = importAllResult.memo(function ActivityShelfItemBackground(asp
             accessibilityLabel = "";
           }
           obj[4] = accessibilityLabel;
-          obj[1] = <Image onError={null} source={null} style={null} accessibilityRole="image" accessibilityLabel={null} />;
+          obj[1] = (
+            <Image onError={null} source={null} style={null} accessibilityRole="image" accessibilityLabel={null} />
+          );
           let tmp9Result = tmp9(setDefault, obj);
           const tmp12 = setDefault;
           const tmp13 = Image;
@@ -51,6 +53,8 @@ const memoResult = importAllResult.memo(function ActivityShelfItemBackground(asp
   const obj2 = { style: tmp.previewImage, children: jsx(BrokenImageDefault, {}) };
   tmp9Result = jsx(setDefault, { style: tmp.previewImage, children: jsx(BrokenImageDefault, {}) });
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItemBackground.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/controls/activities/ActivityShelfItemBackground.tsx",
+);
 
 export default memoResult;

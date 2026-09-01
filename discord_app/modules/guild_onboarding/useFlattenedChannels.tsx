@@ -17,7 +17,9 @@ function getFlattenedChannels(guildId, set, found, arg3) {
   const tmpResult = importDefault(flag[1])(mutableGuildChannelsForGuild.getMutableGuildChannelsForGuild(guildId));
   mutableGuildChannelsForGuild = values.groupBy("parent_id").value();
   const iter = values.groupBy("parent_id");
-  const mapped = importDefault(flag[1])(found).map((isCategory) => isCategory.isCategory() ? isCategory.id : isCategory.parent_id);
+  const mapped = importDefault(flag[1])(found).map((isCategory) =>
+    isCategory.isCategory() ? isCategory.id : isCategory.parent_id,
+  );
   found = mapped.filter(_require(flag[2]).isNotNullish);
   const arr = importDefault(flag[1])(found);
   const mapped1 = found.uniq().map((arg0) => channel.getChannel(arg0));
@@ -68,7 +70,7 @@ function getFlattenedChannels(guildId, set, found, arg3) {
           sum = position;
         }
         return sum;
-      })
+      }),
     ];
     found2.push.apply(items);
   }

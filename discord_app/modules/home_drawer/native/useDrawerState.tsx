@@ -13,36 +13,39 @@ export const useDrawerOpen = function useDrawerOpen(enableHome) {
   let navigation;
   let callback;
   navigation = flag(navigation[2]).useNavigation();
-  const tmp2 = callback(React.useState(() => {
-    if (flag) {
-      const state = navigation.getState();
-      let tmp6;
-      if (state != null) {
-        const routes = state.routes;
-        if (routes != null) {
-          let num;
-          if (state != null) {
-            num = state.index;
+  const tmp2 = callback(
+    React.useState(() => {
+      if (flag) {
+        const state = navigation.getState();
+        let tmp6;
+        if (state != null) {
+          const routes = state.routes;
+          if (routes != null) {
+            let num;
+            if (state != null) {
+              num = state.index;
+            }
+            if (num == null) {
+              num = 0;
+            }
+            tmp6 = routes[num];
           }
-          if (num == null) {
-            num = 0;
+        }
+        const coerceGuildsRouteResult = flag(navigation[3]).coerceGuildsRoute(tmp6);
+        let drawerOpen;
+        if (coerceGuildsRouteResult != null) {
+          const params = coerceGuildsRouteResult.params;
+          if (params != null) {
+            drawerOpen = params.drawerOpen;
           }
-          tmp6 = routes[num];
         }
+        return true === drawerOpen;
+      } else {
+        return false;
       }
-      const coerceGuildsRouteResult = flag(navigation[3]).coerceGuildsRoute(tmp6);
-      let drawerOpen;
-      if (coerceGuildsRouteResult != null) {
-        const params = coerceGuildsRouteResult.params;
-        if (params != null) {
-          drawerOpen = params.drawerOpen;
-        }
-      }
-      return true === drawerOpen;
-    } else {
-      return false;
-    }
-  }), 2);
+    }),
+    2,
+  );
   callback = tmp2[1];
   const items = [navigation, flag];
   const effect = React.useEffect(() => {

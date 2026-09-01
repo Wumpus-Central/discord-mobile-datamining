@@ -23,7 +23,10 @@ function ReferredFriendAvatar(user) {
   return callback(View, obj);
 }
 function AvailableReferralSlot(children) {
-  return callback(View, { style: callback2().availableReferralSlot, children: callback(Text.Text, { variant: "text-xs/medium", color: "text-strong", children: children.slotIndex }) });
+  return callback(View, {
+    style: callback2().availableReferralSlot,
+    children: callback(Text.Text, { variant: "text-xs/medium", color: "text-strong", children: children.slotIndex }),
+  });
 }
 function ProgressIndicator(referralSentUsers) {
   referralSentUsers = referralSentUsers.referralSentUsers;
@@ -55,22 +58,77 @@ function ProgressIndicator(referralSentUsers) {
 }
 ({ AnalyticEvents: closure_6, HelpdeskArticles: error } = ME);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, progressIndicatorContainer: null, availableReferralSlot: null, referredFriendAvatar: null, contentContainer: null, heading: null, bodyText: null, buttonContainer: null };
-createCacheKey = { width: 320, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center" };
+createCacheKey = {
+  container: null,
+  progressIndicatorContainer: null,
+  availableReferralSlot: null,
+  referredFriendAvatar: null,
+  contentContainer: null,
+  heading: null,
+  bodyText: null,
+  buttonContainer: null,
+};
+createCacheKey = {
+  width: 320,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  alignItems: "center",
+};
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", gap: 8, marginTop: 16, marginLeft: 24 };
-createCacheKey[2] = { width: 24, height: 24, borderRadius: ThemesDefault.radii.xxl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, justifyContent: "center", alignItems: "center" };
-let obj1 = { width: 24, height: 24, borderRadius: ThemesDefault.radii.xxl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, justifyContent: "center", alignItems: "center" };
-createCacheKey[3] = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round };
+createCacheKey[1] = {
+  flexDirection: "row",
+  alignItems: "center",
+  alignSelf: "flex-start",
+  gap: 8,
+  marginTop: 16,
+  marginLeft: 24,
+};
+createCacheKey[2] = {
+  width: 24,
+  height: 24,
+  borderRadius: ThemesDefault.radii.xxl,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  justifyContent: "center",
+  alignItems: "center",
+};
+let obj1 = {
+  width: 24,
+  height: 24,
+  borderRadius: ThemesDefault.radii.xxl,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  justifyContent: "center",
+  alignItems: "center",
+};
+createCacheKey[3] = {
+  borderWidth: 2,
+  borderColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.round,
+};
 createCacheKey[4] = { alignItems: "flex-start", paddingHorizontal: 24, gap: 8, marginTop: 12 };
 createCacheKey[5] = { textAlign: "left" };
 createCacheKey[6] = { textAlign: "left" };
-let obj2 = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round };
-createCacheKey[7] = { paddingHorizontal: ThemesDefault.space.PX_16, width: "100%", marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_16 };
+let obj2 = {
+  borderWidth: 2,
+  borderColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.round,
+};
+createCacheKey[7] = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  width: "100%",
+  marginTop: ThemesDefault.space.PX_24,
+  marginBottom: ThemesDefault.space.PX_16,
+};
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { paddingHorizontal: ThemesDefault.space.PX_16, width: "100%", marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramPerkCard.tsx");
+let obj3 = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  width: "100%",
+  marginTop: ThemesDefault.space.PX_24,
+  marginBottom: ThemesDefault.space.PX_16,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/premium/referral_program/native/ReferralProgramPerkCard.tsx",
+);
 
 export const ReferralProgramPerkCard = function ReferralProgramPerkCard() {
   const tmp = callback2();
@@ -82,7 +140,9 @@ export const ReferralProgramPerkCard = function ReferralProgramPerkCard() {
   const items1 = [closure_5];
   const stateFromStores1 = obj3.useStateFromStores(items1, () => store.getHasEligibleFriends());
   let obj4 = importDefault;
-  analyticsLocations = contextDefault(QUICK_SWITCHERDefault.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR).analyticsLocations;
+  analyticsLocations = contextDefault(
+    QUICK_SWITCHERDefault.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR,
+  ).analyticsLocations;
   let everyResult = stateFromStores.size === analyticsLocations(13105).MAX_REFERRALS_SENT;
   if (everyResult) {
     const items2 = [];
@@ -95,15 +155,22 @@ export const ReferralProgramPerkCard = function ReferralProgramPerkCard() {
     let obj = closure_1_1(closure_1_2[16]);
     obj = { location_stack: analyticsLocations };
     obj.track(closure_1_6.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, obj);
-    closure_1_1(closure_1_2[17]).openLazy(analyticsLocations(closure_1_2[19])(closure_1_2[18], closure_1_2.paths), "referral-program-share-action-sheet");
+    closure_1_1(closure_1_2[17]).openLazy(
+      analyticsLocations(closure_1_2[19])(closure_1_2[18], closure_1_2.paths),
+      "referral-program-share-action-sheet",
+    );
   }, items3);
   obj = { nReferralsSent: stateFromStores.size };
-  const items4 = [callback(ProgressWheelDefault, obj), callback(ProgressIndicator, { referralSentUsers: obj.useReferralProgramBannerDetails().referralSentUsers }), , ];
+  const items4 = [
+    callback(ProgressWheelDefault, obj),
+    callback(ProgressIndicator, { referralSentUsers: obj.useReferralProgramBannerDetails().referralSentUsers }),
+    ,
+  ];
   obj1 = { style: tmp.contentContainer, children: null };
   const obj2 = { variant: "heading-lg/semibold", color: "text-strong", style: tmp.heading, children: null };
   const intl = tmp2(1236).intl;
   obj2[3] = intl.string(analyticsLocations(1236).t.USo4s7);
-  const items5 = [callback(analyticsLocations(4474).Text, obj2), ];
+  const items5 = [callback(analyticsLocations(4474).Text, obj2)];
   obj3 = { variant: "text-md/medium", color: "text-subtle", style: tmp.bodyText, children: null };
   if (false !== stateFromStores1) {
     if (tmp14 !== tmp2(13105).MAX_REFERRALS_SENT) {

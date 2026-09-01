@@ -3,7 +3,9 @@ import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useFetchHighlightedCreatorGuildDetails.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/useFetchHighlightedCreatorGuildDetails.tsx",
+);
 
 export default function useFetchHighlightedCreatorGuildDetails(arg0) {
   closure_0 = arg0;
@@ -18,7 +20,7 @@ export default function useFetchHighlightedCreatorGuildDetails(arg0) {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -98,7 +100,7 @@ export default function useFetchHighlightedCreatorGuildDetails(arg0) {
       }
     })();
   });
-  callback = callback.useCallback(function() {
+  callback = callback.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -113,4 +115,4 @@ export default function useFetchHighlightedCreatorGuildDetails(arg0) {
     callback(closure_0);
   }, items);
   return { isLoading, error, highlightedCreatorDetails: highlightedCreatorDetails[0] };
-};
+}

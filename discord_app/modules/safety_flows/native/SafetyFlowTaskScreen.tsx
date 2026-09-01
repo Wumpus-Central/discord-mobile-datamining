@@ -32,8 +32,14 @@ export default function SafetyFlowTaskScreen(action) {
   if (tmp6) {
     tmp6 = ImageComponent;
   }
-  const items = [tmp6, , ];
-  let obj = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp2.header, children: action.title };
+  const items = [tmp6, ,];
+  let obj = {
+    accessibilityRole: "header",
+    variant: "heading-xl/bold",
+    color: "mobile-text-heading-primary",
+    style: tmp2.header,
+    children: action.title,
+  };
   items[1] = callback(Text.Text, obj);
   let tmp7Result = null != subtitle;
   if (tmp7Result) {
@@ -45,14 +51,17 @@ export default function SafetyFlowTaskScreen(action) {
   }
   obj = { children: null };
   items[2] = tmp7Result;
-  const items1 = [closure_4(Stack.Stack, { align: "center", justify: "center", spacing: 8, children: items }), children];
+  const items1 = [
+    closure_4(Stack.Stack, { align: "center", justify: "center", spacing: 8, children: items }),
+    children,
+  ];
   obj[0] = items1;
-  children = [closure_4(ModalContent.ModalContent, obj), ];
+  children = [closure_4(ModalContent.ModalContent, obj)];
   if (undefined === footer) {
     if (withLogout) {
       withLogout = tmp7(LogOutDisclaimerDefault, {});
     }
-    const items3 = [withLogout, ];
+    const items3 = [withLogout];
     tmp7Result = null != action;
     if (tmp7Result) {
       obj1 = { variant: "primary", text: null, onPress: null, loading: null };
@@ -68,4 +77,4 @@ export default function SafetyFlowTaskScreen(action) {
   }
   children[1] = footer;
   return closure_4(ModalScreen.ModalScreen, { children });
-};
+}

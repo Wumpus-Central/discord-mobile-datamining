@@ -47,7 +47,7 @@ export default function ICYMISettingsActionSheet() {
       obj.setFilters(obj);
       const dehydrated = closure_1_1(closure_1_2[16]).fetchDehydrated();
     };
-    const items1 = [callback2(tmp(5993).TableSwitchRow, obj), , ];
+    const items1 = [callback2(tmp(5993).TableSwitchRow, obj), ,];
     let obj2 = { label: "Clear read states", onPress: null };
     obj2[1] = function onPress() {
       dehydratedItems = dehydratedItems.getDehydratedItems();
@@ -76,7 +76,7 @@ export default function ICYMISettingsActionSheet() {
     };
     items1[1] = callback2(tmp(5599).TableRow, obj2);
     let obj3 = { label: "Regenerate feed and clear read states", onPress: null };
-    obj3[1] = callback(function*() {
+    obj3[1] = callback(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -108,7 +108,9 @@ export default function ICYMISettingsActionSheet() {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj2.regenerateFeedAndClearReadStates(closure_1_9.ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON);
+              obj1[0] = obj2.regenerateFeedAndClearReadStates(
+                closure_1_9.ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON,
+              );
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -137,25 +139,41 @@ export default function ICYMISettingsActionSheet() {
     const tmp7 = closure_11;
   }
   let obj4 = { showGradient: true, startExpanded: true, children: null };
-  const items2 = [tmp5Result, ];
+  const items2 = [tmp5Result];
   const obj5 = { label: null, onPress: null };
   const intl3 = tmp(1236).intl;
   obj5[0] = intl3.string(stateFromStoresObject(1236).t.Eorjmy);
   obj5[1] = function onPress() {
-    callback(paths[16]).itemInteracted("icymi_settings_action_sheet", "icymi_settings_action_sheet", "custom_scoring_button");
+    callback(paths[16]).itemInteracted(
+      "icymi_settings_action_sheet",
+      "icymi_settings_action_sheet",
+      "custom_scoring_button",
+    );
     const obj = callback(paths[16]);
-    callback(paths[16]).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "tune_settings_button", actionIntentType: "open", actionDestinationType: null } });
+    callback(paths[16]).feedPageActioned({
+      actionParameters: {
+        actionGestureType: "press",
+        actionTargetElement: "tune_settings_button",
+        actionIntentType: "open",
+        actionDestinationType: null,
+      },
+    });
     const obj2 = callback(paths[16]);
     const obj3 = callback(paths[24]);
-    obj3.pushLazy(stateFromStoresObject(paths[26])(paths[25], paths.paths), {}, stateFromStoresObject(paths[27]).ICYMI_CUSTOM_SCORES_MODAL_KEY, { presentation: "modal" });
+    obj3.pushLazy(
+      stateFromStoresObject(paths[26])(paths[25], paths.paths),
+      {},
+      stateFromStoresObject(paths[27]).ICYMI_CUSTOM_SCORES_MODAL_KEY,
+      { presentation: "modal" },
+    );
     const tmp3 = stateFromStoresObject(paths[26])(paths[25], paths.paths);
     callback(paths[22]).hideActionSheet();
   };
   items2[1] = callback2(stateFromStoresObject(5599).TableRow, obj5);
   obj[2] = items2;
-  const items3 = [closure_12(stateFromStoresObject(5992).TableRowGroup, obj), ];
+  const items3 = [closure_12(stateFromStoresObject(5992).TableRowGroup, obj)];
   const tmp4 = callback3();
   items3[1] = callback2(View, { style: callback3().padding });
   obj4[2] = items3;
   return closure_12(stateFromStoresObject(5989).ActionSheet, obj4);
-};
+}

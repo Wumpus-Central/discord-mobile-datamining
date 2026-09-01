@@ -5,7 +5,11 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 import V6OrEarlierAPIError from "../../errors/index.tsx";
 import DEFAULT_DISCOVERY_CATEGORY_ID from "GlobalDiscoveryServersConstants.tsx";
 
-({ SEARCH_RESULTS_QUERY_PREFIX: obj1, SEARCH_RESULTS_CATEGORY_PREFIX: c3, SEARCH_RESULTS_LANGUAGE_CODE_PREFIX: c4 } = DEFAULT_DISCOVERY_CATEGORY_ID);
+({
+  SEARCH_RESULTS_QUERY_PREFIX: obj1,
+  SEARCH_RESULTS_CATEGORY_PREFIX: c3,
+  SEARCH_RESULTS_LANGUAGE_CODE_PREFIX: c4,
+} = DEFAULT_DISCOVERY_CATEGORY_ID);
 const map = new Map();
 const map1 = new Map();
 class SearchState {
@@ -44,8 +48,7 @@ prototype["handleSearchSuccess"] = function handleSearchSuccess(arg0) {
   self.offset = items.length;
 };
 const Store = initializeDefault.Store;
-class GlobalDiscoveryServersSearchResultsStore extends Store {
-}
+class GlobalDiscoveryServersSearchResultsStore extends Store {}
 const prototype2 = GlobalDiscoveryServersSearchResultsStore.prototype;
 prototype2["getGuild"] = function getGuild(arg0) {
   return map1.get(arg0);
@@ -78,7 +81,14 @@ prototype2["getIsInitialFetchComplete"] = function getIsInitialFetchComplete(que
   return prop;
 };
 prototype2["getOffset"] = function getOffset(nativeElementReference) {
-  const items = [closure_2, nativeElementReference.query, closure_3, nativeElementReference.categoryId, closure_4, nativeElementReference.languageCode];
+  const items = [
+    closure_2,
+    nativeElementReference.query,
+    closure_3,
+    nativeElementReference.categoryId,
+    closure_4,
+    nativeElementReference.languageCode,
+  ];
   const value = map.get(items.join("-"));
   let offset = null;
   if (null != value) {
@@ -229,7 +239,7 @@ const globalDiscoveryServersSearchResultsStore = new GlobalDiscoveryServersSearc
       obj.presenceCount = presenceCount;
       const result = obj.set(guildId, obj);
     }
-  }
+  },
 });
 let obj = {
   CONNECTION_OPEN: function handleConnectionOpen() {
@@ -332,8 +342,10 @@ let obj = {
       obj.presenceCount = presenceCount;
       const result = obj.set(guildId, obj);
     }
-  }
+  },
 };
-let result = set2.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersSearchResultsStore.tsx");
+let result = set2.fileFinishedImporting(
+  "modules/global_discovery_servers/GlobalDiscoveryServersSearchResultsStore.tsx",
+);
 
 export default globalDiscoveryServersSearchResultsStore;

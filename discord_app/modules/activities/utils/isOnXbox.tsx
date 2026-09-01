@@ -21,4 +21,4 @@ export default function isOnXbox(application_id) {
     tmp2 = platform === ActivityGamePlatforms.XBOX;
   }
   return tmp2;
-};
+}

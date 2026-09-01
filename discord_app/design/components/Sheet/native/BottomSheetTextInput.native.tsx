@@ -24,7 +24,7 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
       }
     },
     onFocus: onFocus2,
-    onBlur: onBlur2
+    onBlur: onBlur2,
   };
   const tmp3 = ref(6234)({ onFocus, onBlur });
   const merged1 = Object.assign(merged);
@@ -38,6 +38,6 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
       }
     },
     onFocus: onFocus2,
-    onBlur: onBlur2
+    onBlur: onBlur2,
   });
 };

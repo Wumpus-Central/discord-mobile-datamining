@@ -10,4 +10,4 @@ const result = require("set").fileFinishedImporting("design/void/Spacer/native/S
 
 export default function Spacer(pointerEvents) {
   return <View style={callback(arg0.size)} pointerEvents={arg0.pointerEvents} />;
-};
+}

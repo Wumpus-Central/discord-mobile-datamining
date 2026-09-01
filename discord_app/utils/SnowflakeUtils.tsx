@@ -59,7 +59,7 @@ export default {
   },
   cast(id) {
     return id;
-  }
+  },
 };
 export const DISCORD_EPOCH = extractTimestamp.DISCORD_EPOCH;
 export const SnowflakeSequence = extractTimestamp.SnowflakeSequence;

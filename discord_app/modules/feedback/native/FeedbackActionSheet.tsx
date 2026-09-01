@@ -152,7 +152,16 @@ export default function FeedbackActionSheet(feedbackReasons) {
     obj3[3] = ratingsBodyLabel;
     tmp21Result = tmp21(tmp15(tmp4[20]).Text, obj3);
   }
-  const items3 = [tmp21Result, closure_7(feedbackReasons(otherKey[21]), { ratingOptions, textLabels: ratingTextLabels, selectedRating: first, onChangeRating: callback }), , ];
+  const items3 = [
+    tmp21Result,
+    closure_7(feedbackReasons(otherKey[21]), {
+      ratingOptions,
+      textLabels: ratingTextLabels,
+      selectedRating: first,
+      onChangeRating: callback,
+    }),
+    ,
+  ];
   let tmp21Result1 = null;
   if (tmp18) {
     const obj4 = { style: null, children: null };
@@ -191,4 +200,4 @@ export default function FeedbackActionSheet(feedbackReasons) {
   obj2[1] = items3;
   obj[5] = c8(reasons(otherKey[19]).BottomSheetScrollView, obj2);
   return closure_7(reasons(otherKey[16]).BottomSheet, obj);
-};
+}

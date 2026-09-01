@@ -98,4 +98,4 @@ export default function useProfileTheme(arg0) {
     obj[2] = hex2intResult;
     return obj;
   }
-};
+}

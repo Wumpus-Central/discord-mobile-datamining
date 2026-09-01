@@ -20,25 +20,53 @@ function ActivityItemEmptyCard(activity) {
   ({ width, height } = targetDimensions);
   analyticsLocations = application(channelId[7])().analyticsLocations;
   const items = [activity.launchId, analyticsLocations, application, channelId];
-  const callback = importAllResult.useCallback(analyticsLocations(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  const callback = importAllResult.useCallback(
+    analyticsLocations(function* () {
+      if (v0 === 2) {
+        v0 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === id) {
-          if (arg0 === 1) {
+        try {
+          v0 = 2;
+          if (0 === id) {
+            if (arg0 === 1) {
+              v0 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              v0 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              obj1 = {
+                channelId: null,
+                applicationId: null,
+                launchId: null,
+                inputApplication: null,
+                analyticsLocations: null,
+              };
+              obj1[0] = closure_1_2;
+              obj1[1] = id.id;
+              obj1[2] = v0.launchId;
+              obj1[3] = id;
+              obj1[4] = closure_1_3;
+              id = 1;
+              v0 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = v0(closure_1_2[8]).maybeJoinEmbeddedActivity(obj1);
+              return obj2;
+            }
+          } else if (arg0 === 1) {
             v0 = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -47,48 +75,42 @@ function ActivityItemEmptyCard(activity) {
             obj[0] = arg1;
             return obj;
           } else {
-            obj1 = { channelId: null, applicationId: null, launchId: null, inputApplication: null, analyticsLocations: null };
-            obj1[0] = closure_1_2;
-            obj1[1] = id.id;
-            obj1[2] = v0.launchId;
-            obj1[3] = id;
-            obj1[4] = closure_1_3;
-            id = 1;
-            v0 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = v0(closure_1_2[8]).maybeJoinEmbeddedActivity(obj1);
-            return obj2;
+            v0 = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          v0 = 3;
-          return { value: "HermesInternal", done: null };
+        } catch (tmp5) {
+          v0 = tmp;
+          throw tmp5;
         }
-      } catch (tmp5) {
-        v0 = tmp;
-        throw tmp5;
       }
-    }
-  }), items);
+    }),
+    items,
+  );
   let obj = { applicationId: activity.applicationId, size: width, names: ["embedded_background"] };
   const tmp = callback3();
   obj = { activeOpacity: 0.7, onPress: callback, style: tmp.disabledActivity, children: null };
   obj = { imageBackground: application(channelId[9])(obj), aspectRatio: width / height };
-  const items1 = [callback(application(channelId[11]), obj), callback(application(channelId[12]), { channelId, applicationId: application.id, applicationName: application.name })];
+  const items1 = [
+    callback(application(channelId[11]), obj),
+    callback(application(channelId[12]), {
+      channelId,
+      applicationId: application.id,
+      applicationName: application.name,
+    }),
+  ];
   obj[3] = items1;
   return callback2(activity(channelId[10]).PressableOpacity, obj);
 }
 let c4 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let obj = { loadingActivity: null, disabledActivity: null };
-obj = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj = {
+  width: "100%",
+  height: "100%",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 obj[0] = obj;
 createCacheKey = { width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[1] = createCacheKey;
@@ -109,6 +131,8 @@ const memoResult = importAllResult.memo(function ActivityItemMissingCard(arg0) {
   obj[1] = callback(ActivityIndicator, { size: "large" });
   tmp4 = callback(setDefault, obj);
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityItemMissingCard.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/controls/activities/ActivityItemMissingCard.tsx",
+);
 
 export default memoResult;

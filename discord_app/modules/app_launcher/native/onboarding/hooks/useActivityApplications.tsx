@@ -2,7 +2,9 @@
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useActivityApplications.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/onboarding/hooks/useActivityApplications.tsx",
+);
 
 export const useActivityApplications = function useActivityApplications(guildId) {
   guildId = guildId.guildId;

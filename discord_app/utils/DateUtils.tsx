@@ -129,7 +129,12 @@ onTimezoneChangeDefault(resetCache);
 let tmp2 = new timestampDefault("DateUtils");
 const subscription = importDefaultResult1.subscribe("USER_SETTINGS_PROTO_UPDATE", syncHourCycleToIntlConfig);
 const subscription1 = importDefaultResult1.subscribe("CONNECTION_OPEN", syncHourCycleToIntlConfig);
-const items = [{ key: "days", millisecondsInUnit: 86400000 }, { key: "hours", millisecondsInUnit: 3600000 }, { key: "minutes", millisecondsInUnit: 60000 }, { key: "seconds", millisecondsInUnit: 1000 }];
+const items = [
+  { key: "days", millisecondsInUnit: 86400000 },
+  { key: "hours", millisecondsInUnit: 3600000 },
+  { key: "minutes", millisecondsInUnit: 60000 },
+  { key: "seconds", millisecondsInUnit: 1000 },
+];
 const importDefaultResult2 = importDefaultResult1;
 let result = require("set").fileFinishedImporting("utils/DateUtils.tsx");
 
@@ -325,7 +330,7 @@ export const getMonthlyProgressPercentage = function getMonthlyProgressPercentag
   const fullYear = date1.getFullYear();
   const date = new Date();
   const date2 = new Date(fullYear, date1.getMonth() + 1, 0);
-  return date1.getDate() / new Date(fullYear, date1.getMonth() + 1, 0).getDate() * 100;
+  return (date1.getDate() / new Date(fullYear, date1.getMonth() + 1, 0).getDate()) * 100;
 };
 export const getDaysRemainingInMonth = function getDaysRemainingInMonth() {
   const date1 = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));

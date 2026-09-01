@@ -6,7 +6,12 @@ import runAfterInteractions from "../../../utils/native/RunAfterInteractionsUtil
 const result = set.fileFinishedImporting("modules/keyboard/native/openCustomKeyboard.android.tsx");
 
 export default function openCustomKeyboard(secondaryTextFieldRef) {
-  ({ channelId: require, chatInputRef: importDefault, chatInputNativeRef: dependencyMap, keyboardParams } = secondaryTextFieldRef);
+  ({
+    channelId: require,
+    chatInputRef: importDefault,
+    chatInputNativeRef: dependencyMap,
+    keyboardParams,
+  } = secondaryTextFieldRef);
   secondaryTextFieldRef = secondaryTextFieldRef.secondaryTextFieldRef;
   computeEntryState.setKeyboardType(keyboardParams);
   let obj = computeEntryState;
@@ -24,4 +29,4 @@ export default function openCustomKeyboard(secondaryTextFieldRef) {
     const tmp = ref;
     closure_1_1(closure_1_2[3]).openCustomKeyboard(ref2.current);
   });
-};
+}

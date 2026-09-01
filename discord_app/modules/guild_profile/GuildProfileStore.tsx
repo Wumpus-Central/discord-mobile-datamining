@@ -68,10 +68,16 @@ const ChannelTypes = ME.ChannelTypes;
 let obj = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
 const map = new Map();
 const map1 = new Map();
-let closure_7 = { profile: null, lastSyncTimestamp: null, fetchStatus: obj.NOT_FETCHED, isUpdating: false, error: null, nextFetchAllowedAt: null };
+let closure_7 = {
+  profile: null,
+  lastSyncTimestamp: null,
+  fetchStatus: obj.NOT_FETCHED,
+  isUpdating: false,
+  error: null,
+  nextFetchAllowedAt: null,
+};
 const Store = initializeDefault.Store;
-class GuildProfileStore extends Store {
-}
+class GuildProfileStore extends Store {}
 const prototype = GuildProfileStore.prototype;
 prototype["getProfile"] = function getProfile(arg0) {
   let tmp = null;
@@ -357,7 +363,7 @@ obj = {
       const result = obj.set(guildId, obj);
     }
   },
-  GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: handleUpdateFailure
+  GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: handleUpdateFailure,
 };
 const guildProfileStore = new GuildProfileStore(dispatcherDefault, obj);
 let result = set.fileFinishedImporting("modules/guild_profile/GuildProfileStore.tsx");

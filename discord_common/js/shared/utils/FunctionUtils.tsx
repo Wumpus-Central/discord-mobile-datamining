@@ -109,28 +109,32 @@ prototype["many"] = function many(items) {
     let arr = push(tmp3);
   }
   if (items1.length <= 0) {
-    Promise.all(items.map((() => {
-      closure_0 = map((arg0) => {
-        closure_0 = arg0;
-        c2 = 0;
-        c3 = 0;
-        return (function*(arg0) {
-          const items = [closure_0, ];
-          items[1] = yield closure_1_1.get(closure_0);
-          return items;
-        })();
-      });
-      return function(arg0) {
-        self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      };
-    })())).then((arg0) => {
+    Promise.all(
+      items.map(
+        (() => {
+          closure_0 = map((arg0) => {
+            closure_0 = arg0;
+            c2 = 0;
+            c3 = 0;
+            return (function* (arg0) {
+              const items = [closure_0];
+              items[1] = yield closure_1_1.get(closure_0);
+              return items;
+            })();
+          });
+          return function (arg0) {
+            self = this;
+            const apply = closure_0.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+        })(),
+      ),
+    ).then((arg0) => {
       map = new Map();
       while (tmp !== undefined) {
         let tmp3 = self;
@@ -140,50 +144,56 @@ prototype["many"] = function many(items) {
       }
       return map;
     });
-    const allPromises = Promise.all(items.map((() => {
-      closure_0 = map((arg0) => {
-        closure_0 = arg0;
-        c2 = 0;
-        c3 = 0;
-        return (function*(arg0) {
-          const items = [closure_0, ];
-          items[1] = yield closure_1_1.get(closure_0);
-          return items;
-        })();
-      });
-      return function(arg0) {
-        self = this;
-        const apply = closure_0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      };
-    })()));
+    const allPromises = Promise.all(
+      items.map(
+        (() => {
+          closure_0 = map((arg0) => {
+            closure_0 = arg0;
+            c2 = 0;
+            c3 = 0;
+            return (function* (arg0) {
+              const items = [closure_0];
+              items[1] = yield closure_1_1.get(closure_0);
+              return items;
+            })();
+          });
+          return function (arg0) {
+            self = this;
+            const apply = closure_0.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+        })(),
+      ),
+    );
   } else {
     try {
       closure_2 = arg1(items1);
       function _loop(arg0) {
         const _self = arg0;
-        const cleanupPromise = promise.then((has) => {
-          if (has.has(closure_0)) {
-            return has.get(tmp);
-          } else {
-            const _Error = Error;
-            const _String = String;
-            const _HermesInternal = HermesInternal;
-            error = new Error("Promise deduper result missing key: " + String(tmp));
-            throw error;
-          }
-        }).finally(() => {
-          // GetOwnPrivateBySym (0x65)
-          if (obj.get(closure_0) === cleanupPromise) {
+        const cleanupPromise = promise
+          .then((has) => {
+            if (has.has(closure_0)) {
+              return has.get(tmp);
+            } else {
+              const _Error = Error;
+              const _String = String;
+              const _HermesInternal = HermesInternal;
+              error = new Error("Promise deduper result missing key: " + String(tmp));
+              throw error;
+            }
+          })
+          .finally(() => {
             // GetOwnPrivateBySym (0x65)
-            closure_0.delete(closure_0);
-          }
-        });
+            if (obj.get(closure_0) === cleanupPromise) {
+              // GetOwnPrivateBySym (0x65)
+              closure_0.delete(closure_0);
+            }
+          });
         // GetOwnPrivateBySym (0x65)
         const result = _self.set(arg0, cleanupPromise);
         const result1 = cleanupPromise.set(arg0, cleanupPromise);

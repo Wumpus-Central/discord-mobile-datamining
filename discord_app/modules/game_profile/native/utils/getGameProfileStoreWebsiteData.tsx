@@ -5,7 +5,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/game_profile/native/utils/getGameProfileStoreWebsiteData.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/game_profile/native/utils/getGameProfileStoreWebsiteData.tsx",
+);
 
 export default function getGameProfileStoreWebsiteData(category) {
   category = category.category;
@@ -68,4 +70,4 @@ export default function getGameProfileStoreWebsiteData(category) {
   } else {
     return null;
   }
-};
+}

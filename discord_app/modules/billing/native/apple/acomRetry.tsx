@@ -38,7 +38,7 @@ function _retryACOMRequest() {
     c6 = 0;
     c7 = 0;
     c4 = 0;
-    return (function*(arg0, value) {
+    return (function* (arg0, value) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -139,7 +139,7 @@ function _retryACOMRequest() {
               obj6[0] = value;
               return obj6;
             } else {
-              const items = [obj8(1473).awaitOnline(), ];
+              const items = [obj8(1473).awaitOnline()];
               const obj13 = obj8(1473);
               const _Math = Math;
               const _Date2 = Date;
@@ -191,7 +191,14 @@ function _retryACOMRequest() {
   }
   return applyArgumentsResult;
 }
-let closure_6 = { REPEATED_REQUEST_REFERENCE_ID: 4000097, [4000097]: "REPEATED_REQUEST_REFERENCE_ID", RATE_LIMIT_EXCEEDED: 4290000, [4290000]: "RATE_LIMIT_EXCEEDED", GENERAL_INTERNAL_RETRYABLE: 5000001, [5000001]: "GENERAL_INTERNAL_RETRYABLE" };
+let closure_6 = {
+  REPEATED_REQUEST_REFERENCE_ID: 4000097,
+  [4000097]: "REPEATED_REQUEST_REFERENCE_ID",
+  RATE_LIMIT_EXCEEDED: 4290000,
+  [4290000]: "RATE_LIMIT_EXCEEDED",
+  GENERAL_INTERNAL_RETRYABLE: 5000001,
+  [5000001]: "GENERAL_INTERNAL_RETRYABLE",
+};
 const re7 = /code:\s*(\d{7})(?!\d)/;
 const result = require("set").fileFinishedImporting("modules/billing/native/apple/acomRetry.tsx");
 

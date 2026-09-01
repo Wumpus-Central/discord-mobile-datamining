@@ -11,13 +11,35 @@ noopAll;
 ({ View: obj1, ActivityIndicator: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { card: null, leftContent: null, icon: null, textContent: null, connectedStatus: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, padding: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  padding: ThemesDefault.space.PX_16,
+  marginBottom: ThemesDefault.space.PX_12,
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", flex: 1, marginRight: ThemesDefault.space.PX_12 };
 obj1 = { flexDirection: "row", alignItems: "center", flex: 1, marginRight: ThemesDefault.space.PX_12 };
-createCacheKey[2] = { width: 32, height: 32, marginRight: ThemesDefault.space.PX_12, justifyContent: "center", alignItems: "center" };
+createCacheKey[2] = {
+  width: 32,
+  height: 32,
+  marginRight: ThemesDefault.space.PX_12,
+  justifyContent: "center",
+  alignItems: "center",
+};
 createCacheKey[3] = { flex: 1 };
-let obj2 = { width: 32, height: 32, marginRight: ThemesDefault.space.PX_12, justifyContent: "center", alignItems: "center" };
+let obj2 = {
+  width: 32,
+  height: 32,
+  marginRight: ThemesDefault.space.PX_12,
+  justifyContent: "center",
+  alignItems: "center",
+};
 createCacheKey[4] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
@@ -30,9 +52,9 @@ export default function ConnectionCardView(description) {
   let obj = { style: tmp.card, children: null };
   obj = { style: tmp.leftContent, children: null };
   obj = { style: tmp.icon, children: icon };
-  const items = [callback(closure_2, obj), ];
+  const items = [callback(closure_2, obj)];
   obj1 = { style: tmp.textContent, children: null };
-  const items1 = [callback(Text.Text, { variant: "text-md/medium", color: "text-strong", children: displayName }), ];
+  const items1 = [callback(Text.Text, { variant: "text-md/medium", color: "text-strong", children: displayName })];
   let tmp4Result = null != description;
   if (tmp4Result) {
     tmp4Result = description.length > 0;
@@ -46,7 +68,7 @@ export default function ConnectionCardView(description) {
   obj1[1] = items1;
   items[1] = closure_5(closure_2, obj1);
   obj[1] = items;
-  const items2 = [closure_5(closure_2, obj), ];
+  const items2 = [closure_5(closure_2, obj)];
   if (isLoading) {
     tmp4Result = tmp4(closure_3, { size: "small" });
   } else if (isConnected) {
@@ -55,7 +77,10 @@ export default function ConnectionCardView(description) {
     const obj4 = { variant: "text-sm/medium", color: "text-feedback-positive", children: null };
     const intl2 = tmp5(1236).intl;
     obj4[2] = intl2.string(tmp5(1236).t["LV+CXH"]);
-    const items3 = [tmp4(tmp5(4474).Text, obj4), tmp4(tmp5(4438).CircleCheckIcon, { size: "sm", color: "status-positive" })];
+    const items3 = [
+      tmp4(tmp5(4474).Text, obj4),
+      tmp4(tmp5(4438).CircleCheckIcon, { size: "sm", color: "status-positive" }),
+    ];
     obj3[1] = items3;
     tmp4Result = tmp2(tmp3, obj3);
   } else {
@@ -69,4 +94,4 @@ export default function ConnectionCardView(description) {
   items2[1] = tmp4Result;
   obj[1] = items2;
   return closure_5(closure_2, obj);
-};
+}

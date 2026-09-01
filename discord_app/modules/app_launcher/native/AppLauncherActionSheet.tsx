@@ -38,12 +38,22 @@ function AppLauncherActionSheet(arg0) {
       if (current != null) {
         current.expandActionSheet();
       }
-    }
+    },
   };
   const memo = React.useMemo(() => ({ channel, type: "channel" }), items);
   const ref2 = React.useRef(require(ref[5]).AppLauncherKeyboardCloseReason.DISMISSED);
   obj = { ref, animatedIndex: sharedValue, scrollable: true, startExpanded: true, children: null };
-  obj1 = { bottomSheetIndex: sharedValue, bottomSheetPosition: sharedValue1, bottomSheetExpandReasonRef: ref1, context: memo, chatInputRef: React.useRef(obj), entrypoint: TEXT, keyboardCloseReasonRef: ref2, width: defaultAppLauncherWidth, overrideParams: null };
+  obj1 = {
+    bottomSheetIndex: sharedValue,
+    bottomSheetPosition: sharedValue1,
+    bottomSheetExpandReasonRef: ref1,
+    context: memo,
+    chatInputRef: React.useRef(obj),
+    entrypoint: TEXT,
+    keyboardCloseReasonRef: ref2,
+    width: defaultAppLauncherWidth,
+    overrideParams: null,
+  };
   obj2 = { initialRouteName: AppLauncherRouteName.HOME, initialSearchQuery: null };
   const ref3 = React.useRef(obj);
   const tmp10 = channel(ref[9]);
@@ -54,8 +64,26 @@ function AppLauncherActionSheet(arg0) {
   }
   obj2[1] = name;
   obj1[8] = obj2;
-  obj[4] = <tmp10 bottomSheetIndex={sharedValue} bottomSheetPosition={sharedValue1} bottomSheetExpandReasonRef={ref1} context={memo} chatInputRef={React.useRef(obj)} entrypoint={TEXT} keyboardCloseReasonRef={ref2} width={defaultAppLauncherWidth} overrideParams={null} />;
-  return jsx(require(ref[8]).BottomSheet, { ref, animatedIndex: sharedValue, scrollable: true, startExpanded: true, children: null });
+  obj[4] = (
+    <tmp10
+      bottomSheetIndex={sharedValue}
+      bottomSheetPosition={sharedValue1}
+      bottomSheetExpandReasonRef={ref1}
+      context={memo}
+      chatInputRef={React.useRef(obj)}
+      entrypoint={TEXT}
+      keyboardCloseReasonRef={ref2}
+      width={defaultAppLauncherWidth}
+      overrideParams={null}
+    />
+  );
+  return jsx(require(ref[8]).BottomSheet, {
+    ref,
+    animatedIndex: sharedValue,
+    scrollable: true,
+    startExpanded: true,
+    children: null,
+  });
 }
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherActionSheet.tsx");
 
@@ -71,15 +99,11 @@ export const useAppLauncherActionSheet = function useAppLauncherActionSheet(arg0
       if (first) {
         let obj = { value: null, children: null };
         obj = { transitionState: "visible", close: null, onLeave: null, registerDismissHandler: null };
-        obj[1] = function close() {
-
-        };
+        obj[1] = function close() {};
         obj[2] = function onLeave() {
           callback(false);
         };
-        obj[3] = function registerDismissHandler(onDismiss) {
-
-        };
+        obj[3] = function registerDismissHandler(onDismiss) {};
         obj[0] = obj;
         obj = {};
         const merged = Object.assign(closure_0);
@@ -88,6 +112,6 @@ export const useAppLauncherActionSheet = function useAppLauncherActionSheet(arg0
       }
       return tmp;
     }, items),
-    setAppLauncherActionSheetEnabled: tmp[1]
+    setAppLauncherActionSheetEnabled: tmp[1],
   };
 };

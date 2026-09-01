@@ -13,7 +13,9 @@ const require = arg1;
 let closure_10 = new timestampDefault("TwoWayLinkDiscordConsentNative");
 let closure_11 = createCacheKey.createStyles({ scroller: { alignSelf: "stretch", flexShrink: 1 }, flex: { flex: 1 } });
 const tmp4 = new timestampDefault("TwoWayLinkDiscordConsentNative");
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx",
+);
 
 export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callbackCode) {
   callbackCode = callbackCode.callbackCode;
@@ -36,7 +38,7 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -119,7 +121,7 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
     })();
   });
   const items = [callbackCode, callbackState, platformType, onNext, onError];
-  const callback = React.useCallback(function() {
+  const callback = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -129,7 +131,16 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
     }
     return applyArgumentsResult;
   }, items);
-  const tmp7 = callbackState(platformType[9])({ clientId, scopes, responseType: "code", callback, isTrustedName: true, isEmbeddedFlow: true, redirectUri, withBackPressHandler: false });
+  const tmp7 = callbackState(platformType[9])({
+    clientId,
+    scopes,
+    responseType: "code",
+    callback,
+    isTrustedName: true,
+    isEmbeddedFlow: true,
+    redirectUri,
+    withBackPressHandler: false,
+  });
   sendAuthorize = tmp7.sendAuthorize;
   const items1 = [sendAuthorize];
   ({ header, body, appDetails } = tmp7);
@@ -142,11 +153,11 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
   obj = { style: tmp.flex, children: null };
   obj1 = { style: tmp.scroller, children: null };
   const obj2 = { style: twoWayLinkStyles.body, children: null };
-  const items2 = [header, ];
+  const items2 = [header];
   const items3 = [body, appDetails];
   items2[1] = callback(sendAuthorize, { style: twoWayLinkStyles.bodyContent, children: items3 });
   obj2[1] = items2;
-  const items4 = [callback(sendAuthorize, obj2), ];
+  const items4 = [callback(sendAuthorize, obj2)];
   const obj4 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
   let tmp9Result = null != sendAuthorize;
   if (tmp9Result) {

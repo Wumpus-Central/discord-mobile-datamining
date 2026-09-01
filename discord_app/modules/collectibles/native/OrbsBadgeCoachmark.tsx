@@ -18,14 +18,18 @@ function OrbsBadgeCoachmarkImg() {
   return <closure_4 uri={metadataDefault} />;
 }
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
-let closure_7 = createCacheKey.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" }, coachmarkImage: { width: 80, height: 80 }, coachmarkDescription: { marginBottom: -10 } });
+let closure_7 = createCacheKey.createStyles({
+  coachmarkImageContainer: { alignItems: "center", justifyContent: "center" },
+  coachmarkImage: { width: 80, height: 80 },
+  coachmarkDescription: { marginBottom: -10 },
+});
 const result = require("set").fileFinishedImporting("modules/collectibles/native/OrbsBadgeCoachmark.tsx");
 
 export default function OrbsBadgeCoachmark(badgeRef) {
   const merged = Object.assign(badgeRef, Object.create(null));
   const coachmark = useCoachmark.useCoachmark(badgeRef.badgeRef, merged);
   return null;
-};
+}
 export const useOrbsBadgeCoachmark = function useOrbsBadgeCoachmark(disabled) {
   disabled = disabled.disabled;
   closure_1 = undefined;

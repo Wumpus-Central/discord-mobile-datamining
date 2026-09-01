@@ -26,5 +26,5 @@ export default {
       tryOpenSchemeResult = DCDLinkingManager.tryOpenScheme(closure_0);
     }
     return tryOpenSchemeResult;
-  }
+  },
 };

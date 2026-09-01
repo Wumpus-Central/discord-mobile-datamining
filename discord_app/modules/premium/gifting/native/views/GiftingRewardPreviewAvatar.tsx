@@ -8,7 +8,9 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/GiftingRewardPreviewAvatar.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/gifting/native/views/GiftingRewardPreviewAvatar.tsx",
+);
 
 export default function GiftingRewardPreviewAvatar(asset) {
   let obj = initialize;
@@ -27,4 +29,4 @@ export default function GiftingRewardPreviewAvatar(asset) {
   obj[3] = !stateFromStores1;
   const merged = Object.assign(asset);
   return jsx(Button.Avatar, { user: stateFromStores, guildId: "r", avatarDecoration: "PX_16", animate: null });
-};
+}

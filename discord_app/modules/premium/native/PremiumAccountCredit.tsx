@@ -53,7 +53,7 @@ function AccountCreditTier(arg0) {
     obj[0] = tierDisplayNameByPlanId;
     stringResult = intl.formatToPlainString(tmp2(1236).t.eNXZ5O, obj);
   }
-  const items = [tmp.creditItem, ];
+  const items = [tmp.creditItem];
   let divider = null;
   if (shouldAddDivider) {
     divider = tmp.divider;
@@ -61,12 +61,17 @@ function AccountCreditTier(arg0) {
   obj1 = { style: items, children: null };
   items[1] = divider;
   obj2 = { size: GameIcon.GameIconSizes.SMALL, skuId: result };
-  const items1 = [callback(GameIconDefault, obj2), , ];
+  const items1 = [callback(GameIconDefault, obj2), ,];
   const obj3 = { style: tmp.textContainer, children: null };
-  const obj4 = { style: tmp.headerText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj4 = {
+    style: tmp.headerText,
+    variant: "text-md/semibold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl4 = tmp2(1236).intl;
   obj4[3] = intl4.format(getSystemLocale.t.LzobT9, { planName: tierDisplayNameByPlanId });
-  const items2 = [callback(Text.Text, obj4), ];
+  const items2 = [callback(Text.Text, obj4)];
   let tmp21Result = !tmp17;
   if (!(null != currentSubscription && currentSubscription.isPurchasedExternally)) {
     const obj5 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
@@ -86,8 +91,21 @@ function AccountCreditTier(arg0) {
 }
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { title: { marginBottom: 12 }, creditList: null, creditItem: null, textContainer: null, headerText: null, subText: null, timeText: null, divider: null, creditDescription: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = {
+  title: { marginBottom: 12 },
+  creditList: null,
+  creditItem: null,
+  textContainer: null,
+  headerText: null,
+  subText: null,
+  timeText: null,
+  divider: null,
+  creditDescription: null,
+};
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flexDirection: "row", alignItems: "center", padding: 16 };
 createCacheKey[3] = { marginLeft: 16, marginRight: 16, flexDirection: "column", flex: 1 };
@@ -109,7 +127,9 @@ export default function PremiumAccountCredit(currentSubscription) {
   let tmp = callback2();
   let obj = currentSubscription(589);
   const items = [closure_4];
-  dependencyMap = obj.useStateFromStoresArray(items, () => unactivatedFractionalPremiumUnits.getUnactivatedFractionalPremiumUnits());
+  dependencyMap = obj.useStateFromStoresArray(items, () =>
+    unactivatedFractionalPremiumUnits.getUnactivatedFractionalPremiumUnits(),
+  );
   if (null != entitlements) {
     if (obj8.hasAccountCredit(entitlements)) {
       const _Array = Array;
@@ -133,7 +153,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       obj[0] = tmp.title;
       const intl = tmp2(1236).intl;
       obj[4] = intl.string(tmp2(1236).t.YugZY0);
-      const items1 = [callback(tmp2(4474).Text, obj), , , ];
+      const items1 = [callback(tmp2(4474).Text, obj), , ,];
       obj1 = { style: null, children: null };
       const items2 = [tmp.creditList, creditListContainerStyle];
       obj1[0] = items2;
@@ -141,7 +161,18 @@ export default function PremiumAccountCredit(currentSubscription) {
       let keys = Object.keys(valueResult);
       obj1[1] = keys.map((planId) => {
         const keys = Object.keys(_undefined);
-        return closure_1_6(closure_1_9, { planId, months: _undefined[planId].length, currentSubscription, shouldAddDivider: planId !== keys[Object.keys(Object, _undefined).length - 1], unconsumedFractionalPremiumUnits: closure_2, hasPremiumGroup: closure_1 }, planId);
+        return closure_1_6(
+          closure_1_9,
+          {
+            planId,
+            months: _undefined[planId].length,
+            currentSubscription,
+            shouldAddDivider: planId !== keys[Object.keys(Object, _undefined).length - 1],
+            unconsumedFractionalPremiumUnits: closure_2,
+            hasPremiumGroup: closure_1,
+          },
+          planId,
+        );
       });
       items1[1] = callback(c3, obj1);
       const obj2 = { style: null, variant: "text-sm/medium", children: null };
@@ -168,4 +199,4 @@ export default function PremiumAccountCredit(currentSubscription) {
     tmp11 = importDefault;
   }
   return null;
-};
+}

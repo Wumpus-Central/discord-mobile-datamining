@@ -29,4 +29,4 @@ export default function shouldShowActivityStatus(arg0) {
     }
   }
   return false;
-};
+}

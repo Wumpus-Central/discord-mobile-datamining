@@ -6,7 +6,7 @@ import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.
 const require = arg1;
 function _showAndroidRatingRequest() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (logger === 2) {
       logger = 3;
       HermesBuiltin.throwTypeError();
@@ -120,4 +120,4 @@ export default function requestReviewModal() {
     resolved = Promise.resolve({ ok: true });
   }
   return resolved;
-};
+}

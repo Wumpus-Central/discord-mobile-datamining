@@ -17,8 +17,7 @@ function getFormatFromUrl(src) {
       }
     }
     return create.GIFType.VIDEO;
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 ME.GIFPickerResultTypes;
 const tinywebp = "tinywebp";
@@ -32,8 +31,7 @@ let closure_9 = [];
 let closure_10 = [];
 let closure_11 = [];
 const Store = initializeDefault.Store;
-class GIFPickerViewStore extends Store {
-}
+class GIFPickerViewStore extends Store {}
 const prototype = GIFPickerViewStore.prototype;
 prototype["getAnalyticsID"] = function getAnalyticsID() {
   return c5;
@@ -82,7 +80,15 @@ const gIFPickerViewStore = new GIFPickerViewStore(dispatcherDefault, {
       query = query.query;
     }
     const items = query.items;
-    closure_8 = items.map((width) => ({ width: width.width, height: width.height, src: width.src, gifSrc: width.gif_src, url: width.url, id: width.id, format: closure_4 }));
+    closure_8 = items.map((width) => ({
+      width: width.width,
+      height: width.height,
+      src: width.src,
+      gifSrc: width.gif_src,
+      url: width.url,
+      id: width.id,
+      format: closure_4,
+    }));
   },
   GIF_PICKER_QUERY_FAILURE: function handleQueryFailure(query) {
     query = query.query;
@@ -115,7 +121,7 @@ const gIFPickerViewStore = new GIFPickerViewStore(dispatcherDefault, {
         obj.type = constants.TRENDING_CATEGORY;
         obj.format = callback(src.src);
         return obj;
-      })
+      }),
     ];
   },
   GIF_PICKER_SUGGESTIONS_SUCCESS: function handleSuggestionsSuccess(items) {
@@ -123,7 +129,7 @@ const gIFPickerViewStore = new GIFPickerViewStore(dispatcherDefault, {
   },
   GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: function handleTrendingSearchSuccess(items) {
     items = items.items;
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/views/GIFPickerViewStore.tsx");
 

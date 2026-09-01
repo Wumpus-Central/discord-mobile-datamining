@@ -10,29 +10,32 @@ let result = require("set").fileFinishedImporting("modules/collectibles/profile_
 export default function useProfileEffect(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_4];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    if (null != closure_0) {
-      const product = closure_1_3.getProduct(tmp);
-      let first;
-      if (product != null) {
-        first = product.items[0];
-      }
-      if (closure_1_5(first)) {
-        return product.items[0];
-      } else {
-        const purchase = closure_1_4.getPurchase(tmp);
-        let first1;
-        if (purchase != null) {
-          first1 = purchase.items[0];
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      if (null != closure_0) {
+        const product = closure_1_3.getProduct(tmp);
+        let first;
+        if (product != null) {
+          first = product.items[0];
         }
-        let first2;
-        if (tmp4(first1)) {
-          first2 = purchase.items[0];
+        if (closure_1_5(first)) {
+          return product.items[0];
+        } else {
+          const purchase = closure_1_4.getPurchase(tmp);
+          let first1;
+          if (purchase != null) {
+            first1 = purchase.items[0];
+          }
+          let first2;
+          if (tmp4(first1)) {
+            first2 = purchase.items[0];
+          }
+          return first2;
         }
-        return first2;
       }
-    }
-  });
+    },
+  );
   dependencyMap = tmp2;
   const items1 = [null != arg0 && null == stateFromStores, arg0];
   const effect = React.useEffect(() => {
@@ -42,4 +45,4 @@ export default function useProfileEffect(arg0) {
     }
   }, items1);
   return stateFromStores;
-};
+}

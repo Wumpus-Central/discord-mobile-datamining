@@ -56,7 +56,9 @@ export const getVideoQuestWatchCtaText = function getVideoQuestWatchCtaText(ques
     return intl2.formatToPlainString(getSystemLocale.t.CHrvqg, obj);
   }
 };
-export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWatchCtaAccessibilityLabel(questTaskDetails) {
+export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWatchCtaAccessibilityLabel(
+  questTaskDetails,
+) {
   let obj = getApplicationIdsByTaskTypes;
   const remainingTaskTime = obj.getRemainingTaskTime(questTaskDetails);
   ({ minutes, seconds } = remainingTaskTime);

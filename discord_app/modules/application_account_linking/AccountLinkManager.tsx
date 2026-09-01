@@ -15,7 +15,7 @@ function _claimIncentivizedAccountLinkingReward() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       c2 = tmp3;
       dependencyMap = tmp5;
       ({ applicationId: c0, onSuccess: c1, onError: c2 } = callback);
@@ -67,17 +67,17 @@ class AccountLinkManager extends tmp3 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       OAUTH2_TOKEN_CREATE(arg0) {
-            return applyArgumentsResult.handleOAuth2TokenCreate(arg0);
-          },
+        return applyArgumentsResult.handleOAuth2TokenCreate(arg0);
+      },
       USER_AUTHORIZED_APPS_UPDATE() {
-            return applyArgumentsResult.handleAuthorizedAppsUpdate();
-          },
+        return applyArgumentsResult.handleAuthorizedAppsUpdate();
+      },
       APP_STATE_UPDATE(arg0) {
-            return applyArgumentsResult.handleAppStateUpdate(arg0);
-          },
+        return applyArgumentsResult.handleAppStateUpdate(arg0);
+      },
       ACCOUNT_LINK_AUTHORIZATION_COMPLETED(applicationId) {
-            return applyArgumentsResult.handleAccountLinkAuthorizationCompleted(applicationId);
-          }
+        return applyArgumentsResult.handleAccountLinkAuthorizationCompleted(applicationId);
+      },
     };
     return applyArgumentsResult;
   }

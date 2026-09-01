@@ -24,7 +24,9 @@ function NotificationsContainer() {
   return tmp4;
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles({ container: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8 } });
+let closure_12 = createCacheKey.createStyles({
+  container: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8 },
+});
 let result = require("set").fileFinishedImporting("components_native/ChannelContainer.tsx");
 
 export const ChannelContainer = function ChannelContainer(children) {
@@ -88,7 +90,10 @@ export const ChannelContainer = function ChannelContainer(children) {
       let obj = closure_1_0(_undefined[14]);
       obj = { dismissAction: null };
       obj[0] = closure_1_9.AUTO;
-      const result = obj.UNSAFE_markDismissibleContentAsDismissed(closure_1_0(_undefined[15]).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP, obj);
+      const result = obj.UNSAFE_markDismissibleContentAsDismissed(
+        closure_1_0(_undefined[15]).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP,
+        obj,
+      );
     }
   }, items2);
   tmpResult = tmp(10960);
@@ -108,7 +113,7 @@ export const ChannelContainer = function ChannelContainer(children) {
       tmp15 = callback(tmp4(10961), obj1);
     }
   }
-  const items3 = [tmp15, children.children, ];
+  const items3 = [tmp15, children.children];
   if (tmp5) {
     const obj2 = { style: null };
     obj2[0] = channelStyles.callPTTButton;

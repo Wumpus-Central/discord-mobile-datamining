@@ -34,47 +34,51 @@ export default function ConnectivityGlobalStatusContent() {
   let obj = initialize;
   const items = [closure_6, closure_5, closure_4, closure_7];
   const items1 = [tmp4];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    let channelId;
-    if (closure_0 != null) {
-      channelId = tmp2.channelId;
-    }
-    if (channelId == null) {
-      channelId = closure_1_6.getChannelId();
-    }
-    const channel = closure_1_4.getChannel(channelId);
-    if (null != closure_0) {
-      let guildId;
-      if (channel != null) {
-        guildId = channel.getGuildId();
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => {
+      let channelId;
+      if (closure_0 != null) {
+        channelId = tmp2.channelId;
       }
-      let guildId1 = guildId;
-    } else {
-      guildId1 = closure_1_6.getGuildId();
-    }
-    let str;
-    const guild = closure_1_5.getGuild(guildId1);
-    if (closure_0 != null) {
-      str = tmp2.sessionId;
-    }
-    if (str == null) {
-      str = "";
-    }
-    const sessionById = closure_1_7.getSessionById(str);
-    let os;
-    if (sessionById != null) {
-      os = sessionById.clientInfo.os;
-    }
-    const obj = { guild, channel, rtcConnectionState: null, remotePlatform: null };
-    if (null != closure_0) {
-      let RTC_CONNECTED = closure_1_9.RTC_CONNECTED;
-    } else {
-      RTC_CONNECTED = closure_1_6.getState();
-    }
-    obj[2] = RTC_CONNECTED;
-    obj[3] = os;
-    return obj;
-  }, items1);
+      if (channelId == null) {
+        channelId = closure_1_6.getChannelId();
+      }
+      const channel = closure_1_4.getChannel(channelId);
+      if (null != closure_0) {
+        let guildId;
+        if (channel != null) {
+          guildId = channel.getGuildId();
+        }
+        let guildId1 = guildId;
+      } else {
+        guildId1 = closure_1_6.getGuildId();
+      }
+      let str;
+      const guild = closure_1_5.getGuild(guildId1);
+      if (closure_0 != null) {
+        str = tmp2.sessionId;
+      }
+      if (str == null) {
+        str = "";
+      }
+      const sessionById = closure_1_7.getSessionById(str);
+      let os;
+      if (sessionById != null) {
+        os = sessionById.clientInfo.os;
+      }
+      const obj = { guild, channel, rtcConnectionState: null, remotePlatform: null };
+      if (null != closure_0) {
+        let RTC_CONNECTED = closure_1_9.RTC_CONNECTED;
+      } else {
+        RTC_CONNECTED = closure_1_6.getState();
+      }
+      obj[2] = RTC_CONNECTED;
+      obj[3] = os;
+      return obj;
+    },
+    items1,
+  );
   let channel = stateFromStoresObject.channel;
   let isGuildStageVoiceResult;
   ({ guild, rtcConnectionState, remotePlatform } = stateFromStoresObject);
@@ -111,16 +115,23 @@ export default function ConnectivityGlobalStatusContent() {
     num = tmp2(1628)().top;
   }
   obj = { style: items2, children: null };
-  items2 = [tmp14 ? tmp.bg : tmp.bgNeutral, tmp.container, ];
+  items2 = [tmp14 ? tmp.bg : tmp.bgNeutral, tmp.container];
   obj = { minHeight: RTC_PANEL_HEIGHT + num, paddingTop: num };
   items2[2] = obj;
   if (isScreenLandscape) {
     isScreenLandscape = callback(tmp2(9530), { hidden: true });
   }
-  const items3 = [isScreenLandscape, ];
+  const items3 = [isScreenLandscape];
   let tmp19 = null;
   if (isGuildStageVoiceResult) {
-    obj1 = { channel: null, guild: null, hasRTCConnectivity: null, isDarkTheme: null, rtcConnectionState: null, remotePlatform: null };
+    obj1 = {
+      channel: null,
+      guild: null,
+      hasRTCConnectivity: null,
+      isDarkTheme: null,
+      rtcConnectionState: null,
+      remotePlatform: null,
+    };
     obj1[0] = channel;
     obj1[1] = guild;
     obj1[2] = tmp12;
@@ -132,4 +143,4 @@ export default function ConnectivityGlobalStatusContent() {
   items3[1] = tmp19;
   obj[1] = items3;
   return closure_11(View, obj);
-};
+}

@@ -31,5 +31,5 @@ export default {
     let obj = _modDef4723;
     obj = { initialState: constants.JOIN_SERVER };
     obj.pushLazy(asyncRequireImpl(12247, dependencyMap.paths), obj, closure_4);
-  }
+  },
 };

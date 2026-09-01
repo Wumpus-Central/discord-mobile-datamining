@@ -11,7 +11,7 @@ function _fetchWelcomeScreen() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       dependencyMap = tmp3;
       closure_1_1(closure_1_2[2]).dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
       c4 = 1;
@@ -49,7 +49,7 @@ function _saveWelcomeScreen() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_3 = tmp3;
       lib(closure_1_2[2]).dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
       c5 = 1;

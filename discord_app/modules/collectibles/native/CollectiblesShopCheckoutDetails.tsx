@@ -32,7 +32,7 @@ function ProfileEffectAssetPreview(item) {
     obj[0] = obj;
     obj[1] = tmp4.accessibilityLabel;
     obj[2] = tmp.profileEffect;
-    const items = [callback(tmp2(5493), obj), ];
+    const items = [callback(tmp2(5493), obj)];
     obj1 = { style: null, source: null, alt: null, resizeMode: "cover" };
     obj1[0] = tmp.profileEffect;
     const obj2 = { uri: null };
@@ -83,7 +83,7 @@ function BundleAssetPreview(height) {
   }, items);
   const items2 = [width, height];
   const memo1 = bundleWidth.useMemo(() => {
-    const items = [closure_2.bundlePreviewScale, ];
+    const items = [closure_2.bundlePreviewScale];
     let obj = { width: bundleWidth, height: bundleWidth, transform: items1 };
     obj = { scale: c4 };
     items1 = [obj];
@@ -93,7 +93,15 @@ function BundleAssetPreview(height) {
   obj = { style: memo, children: null };
   obj = { style: memo1, children: null };
   const memo2 = bundleWidth.useMemo(() => ({ width, height }), items2);
-  obj[1] = callback(height(8506), { deco: firstAvatarDecoration, pfx: firstProfileEffect, nameplate: firstNameplate, previewAssets: product.previewAssets, disableStaticBackground: true, size: "small", targetSize: memo2 });
+  obj[1] = callback(height(8506), {
+    deco: firstAvatarDecoration,
+    pfx: firstProfileEffect,
+    nameplate: firstNameplate,
+    previewAssets: product.previewAssets,
+    disableStaticBackground: true,
+    size: "small",
+    targetSize: memo2,
+  });
   obj[1] = callback(c4, obj);
   return callback(c4, obj);
 }
@@ -117,7 +125,15 @@ function CollectibleProductPreview(arg0) {
   const tmp = callback3();
   const tmp2 = require;
   const items = [tmp.productPreviewContainer, { height: 55, width: num }];
-  return callback(View, { style: items, children: callback(CollectibleProductPreviewContent, { product, width: num, height: 55, userAvatarSource: avatarSource }) });
+  return callback(View, {
+    style: items,
+    children: callback(CollectibleProductPreviewContent, {
+      product,
+      width: num,
+      height: 55,
+      userAvatarSource: avatarSource,
+    }),
+  });
 }
 function CollectibleProductPreviewContent(userAvatarSource) {
   ({ product, width, height } = userAvatarSource);
@@ -173,7 +189,7 @@ function ProductDetails(product) {
   product = product.product;
   require = product;
   const tmp = callback3();
-  const items = [, ];
+  const items = [,];
   ({ type: arr[0], skuId: arr[1] } = product);
   const memo = React.useMemo(() => {
     const ALL = product(closure_1_2[17]).FractionalPremiumSKUsSets.ALL;
@@ -218,12 +234,12 @@ function ProductDetails(product) {
     obj1 = { product: null, recipientUser: null };
     obj1[0] = product;
     obj1[1] = product.recipientUser;
-    const items1 = [callback(CollectibleProductPreview, obj1), ];
+    const items1 = [callback(CollectibleProductPreview, obj1)];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.productDetailsTextContainer;
     const obj3 = { variant: "text-md/semibold", children: null };
     obj3[1] = product.name;
-    const items2 = [callback(Text.Text, obj3), ];
+    const items2 = [callback(Text.Text, obj3)];
     const obj4 = { variant: "text-sm/medium", children: null };
     obj4[1] = memo;
     items2[1] = callback(Text.Text, obj4);
@@ -272,20 +288,62 @@ function ProductPriceAmountTag(product) {
 }
 ({ BUNDLE_PREVIEW_CONFIG: closure_6, SAMPLE_PROFILE_ASPECT_RATIO } = SAMPLE_PROFILE_ASPECT_RATIO);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { externalProductImage: { width: 45, height: 45 }, bundlePreviewContainer: null, bundlePreviewScale: null, productContainer: null, productDetailsContainer: null, productPreviewContainer: null, productDetails: null, productDetailsTextContainer: null, errorContainer: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: ThemesDefault.radii.xs };
+createCacheKey = {
+  externalProductImage: { width: 45, height: 45 },
+  bundlePreviewContainer: null,
+  bundlePreviewScale: null,
+  productContainer: null,
+  productDetailsContainer: null,
+  productPreviewContainer: null,
+  productDetails: null,
+  productDetailsTextContainer: null,
+  errorContainer: null,
+};
+createCacheKey = {
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+  borderRadius: ThemesDefault.radii.xs,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { overflow: "hidden", alignItems: "center", justifyContent: "center" };
-createCacheKey[3] = { borderRadius: ThemesDefault.radii.lg, flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-let obj1 = { borderRadius: ThemesDefault.radii.lg, flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16 };
+createCacheKey[3] = {
+  borderRadius: ThemesDefault.radii.lg,
+  flexDirection: "column",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+};
+let obj1 = {
+  borderRadius: ThemesDefault.radii.lg,
+  flexDirection: "column",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+};
+createCacheKey[4] = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_16,
+};
 createCacheKey[5] = { justifyContent: "center", alignItems: "center" };
-let obj2 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16 };
+let obj2 = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_16,
+};
 createCacheKey[6] = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 createCacheKey[7] = { gap: ThemesDefault.space.PX_4 };
 let obj4 = { gap: ThemesDefault.space.PX_4 };
-createCacheKey[8] = { height: 36, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16, borderBottomLeftRadius: ThemesDefault.radii.lg, borderBottomRightRadius: ThemesDefault.radii.lg };
+createCacheKey[8] = {
+  height: 36,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  justifyContent: "center",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  borderBottomLeftRadius: ThemesDefault.radii.lg,
+  borderBottomRightRadius: ThemesDefault.radii.lg,
+};
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = createCacheKey.createStyles((arg0) => {
   const colors = ThemesDefault.colors;
@@ -297,20 +355,44 @@ let closure_10 = createCacheKey.createStyles((arg0) => {
     tmp4 = tmp;
   }
   let obj = { giftProductContainer: null };
-  obj = { borderWidth: 2, borderColor: BORDER_FEEDBACK_CRITICAL, marginHorizontal: tmp4(712).space.PX_16, backgroundColor: "accessible" };
+  obj = {
+    borderWidth: 2,
+    borderColor: BORDER_FEEDBACK_CRITICAL,
+    marginHorizontal: tmp4(712).space.PX_16,
+    backgroundColor: "accessible",
+  };
   obj[0] = obj;
   return obj;
 });
 const obj6 = { profileEffectContainer: null, profileEffect: null };
-let obj5 = { height: 36, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16, borderBottomLeftRadius: ThemesDefault.radii.lg, borderBottomRightRadius: ThemesDefault.radii.lg };
-obj6[0] = { position: "relative", width: "100%", height: "100%", borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
+let obj5 = {
+  height: 36,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  justifyContent: "center",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  borderBottomLeftRadius: ThemesDefault.radii.lg,
+  borderBottomRightRadius: ThemesDefault.radii.lg,
+};
+obj6[0] = {
+  position: "relative",
+  width: "100%",
+  height: "100%",
+  borderRadius: ThemesDefault.radii.xs,
+  overflow: "hidden",
+};
 obj6[1] = { position: "absolute", width: "100%", aspectRatio: SAMPLE_PROFILE_ASPECT_RATIO, top: 0 };
 let closure_11 = createCacheKey.createStyles(obj6);
 createCacheKey = { nameplate: null };
 createCacheKey = { borderRadius: ThemesDefault.radii.xs };
 createCacheKey[0] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const obj7 = { position: "relative", width: "100%", height: "100%", borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
+const obj7 = {
+  position: "relative",
+  width: "100%",
+  height: "100%",
+  borderRadius: ThemesDefault.radii.xs,
+  overflow: "hidden",
+};
 let result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopCheckoutDetails.tsx");
 
 export default function CollectiblesShopCheckoutDetails(recipientUser) {
@@ -336,7 +418,7 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
   const canUseShopDiscountsResult = obj1.canUseShopDiscounts(currentUser);
   dependencyMap = canUseShopDiscountsResult;
   const items = [product, flag2, canUseShopDiscountsResult];
-  const items1 = [tmp.productContainer, ];
+  const items1 = [tmp.productContainer];
   let giftProductContainer = flag3;
   const memo = React.useMemo(() => {
     let obj = product(_undefined[28]);
@@ -373,9 +455,12 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
   obj = { style: items1, children: null };
   items1[1] = giftProductContainer;
   obj = { style: tmp.productDetailsContainer, accessibilityLabel: memo, accessible: true, children: null };
-  const items2 = [callback(ProductDetails, { product, recipientUser: recipientUser.recipientUser }), callback(ProductPriceAmountTag, { product, hasShopDiscount: canUseShopDiscountsResult, useOrbPrice: flag2 })];
+  const items2 = [
+    callback(ProductDetails, { product, recipientUser: recipientUser.recipientUser }),
+    callback(ProductPriceAmountTag, { product, hasShopDiscount: canUseShopDiscountsResult, useOrbPrice: flag2 }),
+  ];
   obj[3] = items2;
-  const items3 = [closure_8(View, obj), ];
+  const items3 = [closure_8(View, obj)];
   if (flag3) {
     flag3 = !flag;
   }
@@ -391,4 +476,4 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
   items3[1] = flag3;
   obj[1] = items3;
   return closure_8(View, obj);
-};
+}

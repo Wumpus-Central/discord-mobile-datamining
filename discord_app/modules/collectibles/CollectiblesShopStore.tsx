@@ -9,26 +9,25 @@ let closure_4 = {};
 let set = new Set();
 let closure_6 = {};
 const Store = initializeDefault.Store;
-class CollectiblesShopStore extends Store {
-}
+class CollectiblesShopStore extends Store {}
 const prototype = CollectiblesShopStore.prototype;
 Object.defineProperty(prototype, "analyticsLocations", {
   get: function analyticsLocations(c4, arg1) {
     return items;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "analyticsSource", {
   get: function analyticsSource(id, arg1) {
     return c3;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "initialProductSkuId", {
   get: function initialProductSkuId(arg0) {
     return closure_0;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getAnalytics"] = function getAnalytics() {
   return { analyticsLocations: items, analyticsSource: c3 };
@@ -106,7 +105,7 @@ const collectiblesShopStore = new CollectiblesShopStore(dispatcherDefault, {
     closure_4 = {};
     set = new Set();
     closure_6 = {};
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/collectibles/CollectiblesShopStore.tsx");
 

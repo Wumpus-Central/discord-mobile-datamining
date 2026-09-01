@@ -9,7 +9,9 @@ import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
-let closure_6 = { code: "function ChannelSafeAreaBottomAnimatedAndroidTsx1(){const{heightSharedValue}=this.__closure;return{height:heightSharedValue.get()};}" };
+let closure_6 = {
+  code: "function ChannelSafeAreaBottomAnimatedAndroidTsx1(){const{heightSharedValue}=this.__closure;return{height:heightSharedValue.get()};}",
+};
 const memoResult = importAllResult.memo(function ChannelSafeAreaBottom(channelId) {
   let _require;
   const tmp = useChannelSafeAreaHeightSharedValueDefault();
@@ -26,6 +28,8 @@ const memoResult = importAllResult.memo(function ChannelSafeAreaBottom(channelId
   items = [absoluteFill.absoluteFill, useChannelSafeAreaBottomStylesDefault(channelId.channelId)];
   return jsx(_modDef4217.View, { style: animatedStyle, children: <closure_4 style={items} /> });
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomAnimated.android.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomAnimated.android.tsx",
+);
 
 export default memoResult;

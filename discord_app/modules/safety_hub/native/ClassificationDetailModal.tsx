@@ -72,9 +72,9 @@ export default function ClassificationDetailModal(classificationId) {
             obj = { screen: constants.ACCOUNT, params: obj };
             obj = { initialTab: constants2.STANDING };
             obj.openUserSettings(obj);
-          }
+          },
         });
-      }
+      },
     };
     obj[closure_1_8.CLASSIFICATION_DETAIL] = obj;
     return obj;
@@ -82,5 +82,9 @@ export default function ClassificationDetailModal(classificationId) {
   obj = { screens: memo, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: null };
   const intl = classificationId(1236).intl;
   obj[2] = intl.string(classificationId(1236).t["13/7kX"]);
-  return jsx(classificationId(6008).Navigator, { screens: memo, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: null });
-};
+  return jsx(classificationId(6008).Navigator, {
+    screens: memo,
+    initialRouteName: constants.CLASSIFICATION_DETAIL,
+    headerBackTitle: null,
+  });
+}

@@ -11,22 +11,46 @@ const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = importDefaultResult.createAnimatedComponent(LinearGradientDefault);
 let obj = { duration: 300, easing: require("Button").STANDARD_EASING };
-obj = { containerRevamp: null, attachmentPreviewContentContainer: null, attachmentPreviewContentContainerRevamp: null, attachmentPreview: null, leftGradient: null, rightGradient: null, gradient: null };
+obj = {
+  containerRevamp: null,
+  attachmentPreviewContentContainer: null,
+  attachmentPreviewContentContainerRevamp: null,
+  attachmentPreview: null,
+  leftGradient: null,
+  rightGradient: null,
+  gradient: null,
+};
 obj[0] = { marginHorizontal: -ThemesDefault.space.PX_16 };
 createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_8 };
 obj[1] = createCacheKey;
 let obj1 = { marginHorizontal: -ThemesDefault.space.PX_16 };
 obj[2] = { paddingHorizontal: ThemesDefault.space.PX_16 };
 let obj3 = { paddingHorizontal: ThemesDefault.space.PX_16 };
-obj[3] = { height: 60, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden", borderRadius: ThemesDefault.radii.sm };
+obj[3] = {
+  height: 60,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  overflow: "hidden",
+  borderRadius: ThemesDefault.radii.sm,
+};
 obj[4] = { width: 50, position: "absolute", left: 0, top: 0, bottom: 0, zIndex: 100 };
 obj[5] = { width: 50, position: "absolute", right: 0, top: 0, bottom: 0, zIndex: 100 };
-const obj4 = { height: 60, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden", borderRadius: ThemesDefault.radii.sm };
+const obj4 = {
+  height: 60,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  overflow: "hidden",
+  borderRadius: ThemesDefault.radii.sm,
+};
 obj[6] = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_9 = createCacheKey.createStyles(obj);
-let closure_10 = { code: "function ShareAttachmentsTsx1(){const{withTiming,contentOffset,GRADIENT_EASING_CONFIG}=this.__closure;return{opacity:withTiming(contentOffset.get()<=0?0:1,GRADIENT_EASING_CONFIG)};}" };
-let closure_11 = { code: "function ShareAttachmentsTsx2(){const{withTiming,contentOffset,layoutWidth,contentWidth,GRADIENT_EASING_CONFIG}=this.__closure;return{opacity:withTiming(contentOffset.get()+layoutWidth.get()>=contentWidth.get()?0:1,GRADIENT_EASING_CONFIG)};}" };
-let closure_12 = { code: "function ShareAttachmentsTsx3(event){const{contentOffset,contentWidth,layoutWidth}=this.__closure;contentOffset.set(event.contentOffset.x);contentWidth.set(event.contentSize.width);layoutWidth.set(event.layoutMeasurement.width);}" };
+let closure_10 = {
+  code: "function ShareAttachmentsTsx1(){const{withTiming,contentOffset,GRADIENT_EASING_CONFIG}=this.__closure;return{opacity:withTiming(contentOffset.get()<=0?0:1,GRADIENT_EASING_CONFIG)};}",
+};
+let closure_11 = {
+  code: "function ShareAttachmentsTsx2(){const{withTiming,contentOffset,layoutWidth,contentWidth,GRADIENT_EASING_CONFIG}=this.__closure;return{opacity:withTiming(contentOffset.get()+layoutWidth.get()>=contentWidth.get()?0:1,GRADIENT_EASING_CONFIG)};}",
+};
+let closure_12 = {
+  code: "function ShareAttachmentsTsx3(event){const{contentOffset,contentWidth,layoutWidth}=this.__closure;contentOffset.set(event.contentOffset.x);contentWidth.set(event.contentSize.width);layoutWidth.set(event.layoutMeasurement.width);}",
+};
 const obj5 = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let result = require("set").fileFinishedImporting("modules/share/native/ShareAttachments.tsx");
 
@@ -75,7 +99,13 @@ export default function ShareAttachments(arg0) {
       return obj;
     }
   }
-  obj = { withTiming: _require(sharedValue1[8]).withTiming, contentOffset: sharedValue, layoutWidth: sharedValue2, contentWidth: sharedValue1, GRADIENT_EASING_CONFIG: obj };
+  obj = {
+    withTiming: _require(sharedValue1[8]).withTiming,
+    contentOffset: sharedValue,
+    layoutWidth: sharedValue2,
+    contentWidth: sharedValue1,
+    GRADIENT_EASING_CONFIG: obj,
+  };
   S.__closure = obj;
   S.__workletHash = 13996707009656;
   S.__initData = closure_11;
@@ -115,7 +145,7 @@ export default function ShareAttachments(arg0) {
     obj2[2] = items3;
     const items4 = [tmp.leftGradient, animatedStyle];
     obj2[3] = items4;
-    const items5 = [callback(closure_7, obj2), , ];
+    const items5 = [callback(closure_7, obj2), ,];
     obj3 = { start: null, end: null, colors: null, style: null, pointerEvents: "box-none" };
     obj3[0] = { x: 0, y: 0 };
     obj3[1] = { x: 1, y: 0 };
@@ -124,7 +154,7 @@ export default function ShareAttachments(arg0) {
     const items7 = [tmp.rightGradient, animatedStyle1];
     obj3[3] = items7;
     items5[1] = callback(closure_7, obj3);
-    const items8 = [tmp.attachmentPreviewContentContainer, ];
+    const items8 = [tmp.attachmentPreviewContentContainer];
     let prop;
     if (isRevamp) {
       prop = tmp.attachmentPreviewContentContainerRevamp;
@@ -151,7 +181,15 @@ export default function ShareAttachments(arg0) {
     tmp19[8] = intl.string(tmp2(tmp3[10]).t.RhtzFe);
     tmp19[9] = attachments.map((uri) => {
       obj = { style: lib.attachmentPreview, children: null };
-      obj = { uri: uri.uri, width: 60, height: 60, isImage: null, isVideo: null, fileName: null, showPlayOnVideoPreview: true };
+      obj = {
+        uri: uri.uri,
+        width: 60,
+        height: 60,
+        isImage: null,
+        isVideo: null,
+        fileName: null,
+        showPlayOnVideoPreview: true,
+      };
       const tmp = sharedValue(sharedValue1[11]);
       obj[3] = lib(sharedValue1[12]).isImage(uri.uri, uri.mimeType);
       const obj3 = lib(sharedValue1[12]);
@@ -168,4 +206,4 @@ export default function ShareAttachments(arg0) {
     const tmp21 = View;
   }
   return tmp20Result;
-};
+}

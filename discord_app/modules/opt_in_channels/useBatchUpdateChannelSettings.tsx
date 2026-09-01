@@ -70,7 +70,7 @@ export default function useBatchUpdateChannelSettings(arg0) {
         obj1[0] = constants.CHANNEL_BROWSER;
         const result2 = tmp8Result1.updateOptInChannelsImmediate(closure_0, id, !isChannelOptedInResult, obj1);
       }
-    }, [])
+    }, []),
   };
   return obj;
-};
+}

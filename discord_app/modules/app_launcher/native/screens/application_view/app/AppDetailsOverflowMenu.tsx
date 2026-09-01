@@ -4,7 +4,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/AppDetailsOverflowMenu.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/screens/application_view/app/AppDetailsOverflowMenu.tsx",
+);
 
 export default function AppDetailsOverflowMenu(application) {
   application = application.application;
@@ -47,7 +49,12 @@ export default function AppDetailsOverflowMenu(application) {
     obj1[0] = items;
     obj1[1] = function children(ref) {
       const merged = Object.assign(ref, Object.create(null));
-      const obj = { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: onAddAppMenuClick(installAppProps[12]) };
+      const obj = {
+        ref: ref.ref,
+        size: "sm",
+        variant: "secondary-overlay",
+        icon: onAddAppMenuClick(installAppProps[12]),
+      };
       const merged1 = Object.assign(merged);
       const intl = application(installAppProps[4]).intl;
       obj.accessibilityLabel = intl.string(application(installAppProps[4]).t.PdRCRg);
@@ -57,4 +64,4 @@ export default function AppDetailsOverflowMenu(application) {
     tmp8 = jsx(tmp(tmp2[10]).ContextMenu, { items: null, children: null });
   }
   return tmp8;
-};
+}

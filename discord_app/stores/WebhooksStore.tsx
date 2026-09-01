@@ -13,8 +13,7 @@ function handleWebhookCreateUpdate(arg0) {
 let closure_3 = {};
 let closure_4 = {};
 const Store = initializeDefault.Store;
-class WebhooksStore extends Store {
-}
+class WebhooksStore extends Store {}
 const prototype = WebhooksStore.prototype;
 prototype["isFetching"] = function isFetching(arg0, arg1) {
   let str = arg1;
@@ -43,7 +42,7 @@ Object.defineProperty(prototype, "error", {
   get: function error() {
     return closure_2;
   },
-  set: undefined
+  set: undefined,
 });
 WebhooksStore.displayName = "WebhooksStore";
 const webhooksStore = new WebhooksStore(dispatcherDefault, {
@@ -114,7 +113,7 @@ const webhooksStore = new WebhooksStore(dispatcherDefault, {
       dependencyMap[guildId] = {};
     }
     delete tmp[tmp2];
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/WebhooksStore.tsx");
 

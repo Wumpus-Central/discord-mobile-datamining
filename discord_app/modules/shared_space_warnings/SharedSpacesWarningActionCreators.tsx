@@ -11,6 +11,9 @@ const result = set.fileFinishedImporting("modules/shared_space_warnings/SharedSp
 export const dismissGdmBlockedUserWarning = function dismissGdmBlockedUserWarning(channelId) {
   callback(channelId);
   const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.CHANNEL_BLOCKED_USER_WARNING_ACK(channelId), rejectWithError: sendRequest.rejectWithMigratedError() };
+  const obj = {
+    url: Endpoints.CHANNEL_BLOCKED_USER_WARNING_ACK(channelId),
+    rejectWithError: sendRequest.rejectWithMigratedError(),
+  };
   return HTTP.post(obj);
 };

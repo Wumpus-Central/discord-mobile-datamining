@@ -25,7 +25,9 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
     }
     if (EXPANDING(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== ACTIVITY_STATUS_OFF) {
       num2 = 1;
-      if (tmp8(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF) {
+      if (
+        tmp8(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF
+      ) {
         num2 = -1;
         if (tmp8(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === ACTIVITY_STATUS_OFF) {
           num2 = 0;
@@ -154,11 +156,20 @@ function getProfileVisibilitySettingName(NumberResult) {
   }
 }
 let obj = { RESTRICTING: "restricting", EXPANDING: "expanding" };
-let items = [require("create").ProfileVisibility.FRIENDS_AND_ALL_GUILDS, require("create").GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF];
-let items1 = [items, , ];
-let items2 = [require("create").ProfileVisibility.FRIENDS_AND_SMALL_GUILDS, require("create").GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS];
+let items = [
+  require("create").ProfileVisibility.FRIENDS_AND_ALL_GUILDS,
+  require("create").GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF,
+];
+let items1 = [items, ,];
+let items2 = [
+  require("create").ProfileVisibility.FRIENDS_AND_SMALL_GUILDS,
+  require("create").GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
+];
 items1[1] = items2;
-const items3 = [require("create").ProfileVisibility.FRIENDS_ONLY, require("create").GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON];
+const items3 = [
+  require("create").ProfileVisibility.FRIENDS_ONLY,
+  require("create").GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON,
+];
 items1[2] = items3;
 const map = new Map(items1);
 const result = require("set").fileFinishedImporting("modules/activity_privacy/ActivityPrivacyUpsellUtils.tsx");
@@ -249,7 +260,9 @@ export const computeProfileToActivityUpsell = function computeProfileToActivityU
     let num2 = 2;
     if (tmp3(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== ACTIVITY_STATUS_OFF2) {
       num2 = 1;
-      if (tmp3(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF2) {
+      if (
+        tmp3(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF2
+      ) {
         num2 = -1;
         if (tmp3(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === ACTIVITY_STATUS_OFF2) {
           num2 = 0;
@@ -259,7 +272,9 @@ export const computeProfileToActivityUpsell = function computeProfileToActivityU
     let num3 = num;
     if (tmp3(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== ACTIVITY_STATUS_OFF) {
       num3 = 1;
-      if (tmp3(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF) {
+      if (
+        tmp3(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF
+      ) {
         num3 = -1;
         if (tmp3(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === ACTIVITY_STATUS_OFF) {
           num3 = 0;
@@ -278,7 +293,9 @@ export const computeProfileToActivityUpsell = function computeProfileToActivityU
     }
     if (tmp3(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== ACTIVITY_STATUS_OFF) {
       num = 1;
-      if (tmp3(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF) {
+      if (
+        tmp3(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF
+      ) {
         num = -1;
         if (tmp3(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === ACTIVITY_STATUS_OFF) {
           num = 0;

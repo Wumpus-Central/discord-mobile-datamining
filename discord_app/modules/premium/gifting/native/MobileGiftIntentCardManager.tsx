@@ -12,8 +12,7 @@ import GuildFeatures from "../../PremiumConstants.tsx";
 require = arg1;
 ({ GiftIntentSecondaryAction: error, GiftIntentType: closure_8 } = GuildFeatures);
 onPostConnectionOpenDefault;
-class MobileGiftIntentCardManager extends tmp3 {
-}
+class MobileGiftIntentCardManager extends tmp3 {}
 const prototype = MobileGiftIntentCardManager.prototype;
 prototype["isChannelEligible"] = function isChannelEligible(channel) {
   return channel.type === set2.ChannelTypes.DM;
@@ -23,12 +22,15 @@ prototype["maybeSendCard"] = function maybeSendCard(id, closure_0) {
   self = this;
   dependencyMap = id;
   const _require = closure_0;
-  const EnableFriendAnniversaryNotifications = require("../../../user_settings/UserSettings.tsx").EnableFriendAnniversaryNotifications;
+  const EnableFriendAnniversaryNotifications =
+    require("../../../user_settings/UserSettings.tsx").EnableFriendAnniversaryNotifications;
   if (EnableFriendAnniversaryNotifications.getSetting()) {
     if (!closure_6.isGiftIntentMessageInCooldown(closure_0)) {
       if (id === store.getChannelId()) {
         if (ready.isReady(id)) {
-          if (self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, closure_0, constants.SEND_MESSAGE)) {
+          if (
+            self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, closure_0, constants.SEND_MESSAGE)
+          ) {
             let tmpResult = tmp(10517);
             const result = tmpResult.logMessageGiftIntentShown(closure_0);
             const userAffinity = self.getUserAffinity(closure_0);

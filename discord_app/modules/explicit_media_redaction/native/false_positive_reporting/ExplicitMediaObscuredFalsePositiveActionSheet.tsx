@@ -4,7 +4,9 @@ import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_4 } from "../
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaObscuredFalsePositiveActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaObscuredFalsePositiveActionSheet.tsx",
+);
 
 export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId) {
   channelId = channelId.channelId;
@@ -14,8 +16,14 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
   let reportFalsePositive;
   ({ attachmentId, embedId } = channelId);
   let obj = channelId(redactableMediaAttachmentsForMessage[3]);
-  redactableMediaAttachmentsForMessage = obj.useRedactableMediaAttachmentsForMessage(channelId, messageId, attachmentId);
-  redactableMediaEmbedsForMessage = channelId(redactableMediaAttachmentsForMessage[3]).useRedactableMediaEmbedsForMessage(channelId, messageId, embedId);
+  redactableMediaAttachmentsForMessage = obj.useRedactableMediaAttachmentsForMessage(
+    channelId,
+    messageId,
+    attachmentId,
+  );
+  redactableMediaEmbedsForMessage = channelId(
+    redactableMediaAttachmentsForMessage[3],
+  ).useRedactableMediaEmbedsForMessage(channelId, messageId, embedId);
   const obj2 = channelId(redactableMediaAttachmentsForMessage[3]);
   obj = {
     onSuccess() {
@@ -36,8 +44,13 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
       if (mapped1 == null) {
         mapped1 = [];
       }
-      return channelId(redactableMediaAttachmentsForMessage[6]).reportFalsePositive(channelId, messageId, mapped, mapped1);
-    }
+      return channelId(redactableMediaAttachmentsForMessage[6]).reportFalsePositive(
+        channelId,
+        messageId,
+        mapped,
+        mapped1,
+      );
+    },
   };
   const explicitMediaActions = channelId(redactableMediaAttachmentsForMessage[4]).useExplicitMediaActions(obj);
   reportFalsePositive = explicitMediaActions.reportFalsePositive;
@@ -67,7 +80,15 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
   const callback = redactableMediaEmbedsForMessage.useCallback(() => {
     reportFalsePositive();
   }, items);
-  obj = { channelId, messageId, isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading, attachmentPreview: null, embedPreview: null, onConfirmPress: null, analyticsContext: null };
+  obj = {
+    channelId,
+    messageId,
+    isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading,
+    attachmentPreview: null,
+    embedPreview: null,
+    onConfirmPress: null,
+    analyticsContext: null,
+  };
   let first;
   if (1 === redactableMediaAttachmentsForMessage.length) {
     first = redactableMediaAttachmentsForMessage[0];
@@ -79,6 +100,16 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
   }
   obj[4] = first1;
   obj[5] = callback;
-  obj[6] = channelId(redactableMediaAttachmentsForMessage[8]).TrackMediaRedactionContext.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW;
-  return jsx(channelId(redactableMediaAttachmentsForMessage[5]).ExplicitMediaFalsePositiveActionSheet, { channelId, messageId, isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading, attachmentPreview: null, embedPreview: null, onConfirmPress: null, analyticsContext: null });
-};
+  obj[6] = channelId(
+    redactableMediaAttachmentsForMessage[8],
+  ).TrackMediaRedactionContext.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW;
+  return jsx(channelId(redactableMediaAttachmentsForMessage[5]).ExplicitMediaFalsePositiveActionSheet, {
+    channelId,
+    messageId,
+    isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading,
+    attachmentPreview: null,
+    embedPreview: null,
+    onConfirmPress: null,
+    analyticsContext: null,
+  });
+}

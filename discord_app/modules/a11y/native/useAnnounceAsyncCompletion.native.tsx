@@ -7,13 +7,16 @@ const result = require("set").fileFinishedImporting("modules/a11y/native/useAnno
 
 export default function useAnnounceAsyncCompletion() {
   closure_0 = React.useRef(null);
-  const effect = React.useEffect(() => () => {
-    const current = ref.current;
-    if (current != null) {
-      current();
-    }
-    ref.current = null;
-  }, []);
+  const effect = React.useEffect(
+    () => () => {
+      const current = ref.current;
+      if (current != null) {
+        current();
+      }
+      ref.current = null;
+    },
+    [],
+  );
   return React.useCallback((intl, polite) => {
     let str = polite;
     if (polite === undefined) {
@@ -57,4 +60,4 @@ export default function useAnnounceAsyncCompletion() {
     }
     resolved = Promise.resolve();
   }, []);
-};
+}

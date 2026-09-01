@@ -86,7 +86,9 @@ prototype["enableAccessibilityFocusLock"] = function enableAccessibilityFocusLoc
         let tmp8 = logger;
         let tmp9 = item10024;
         let _HermesInternal = HermesInternal;
-        let errorResult1 = logger.error("Duplicate target view nativeID " + tmp7 + " already accessibility focus locked.");
+        let errorResult1 = logger.error(
+          "Duplicate target view nativeID " + tmp7 + " already accessibility focus locked.",
+        );
       }
       continue;
     }

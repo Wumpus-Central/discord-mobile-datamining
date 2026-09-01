@@ -2,7 +2,12 @@
 import set from "../../../_runtime/00002_set.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
 
-let closure_0 = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-10-force-sdr-emojis-stickers", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+let closure_0 = ApexExperiment.createApexExperiment({
+  kind: "user",
+  name: "2025-10-force-sdr-emojis-stickers",
+  defaultConfig: { enabled: false },
+  variations: { 0: { enabled: false }, 1: { enabled: true } },
+});
 const result = set.fileFinishedImporting("modules/image_upload/ForceSdrEmojisStickersExperiment.tsx");
 
 export const getForceSdrEmojisStickersConfig = function getForceSdrEmojisStickersConfig(location) {

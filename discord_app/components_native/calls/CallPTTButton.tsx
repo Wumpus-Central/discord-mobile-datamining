@@ -13,7 +13,14 @@ import hexToRgba from "../../utils/ColorUtils.tsx";
 const require = arg1;
 let c4 = importAllResult;
 let obj = { BRAND: "brand", BLUR: "blur" };
-obj = { button: { margin: 13 }, container: null, buttonBlur: null, buttonBlurPressed: null, textStyle: null, brandButtonContainer: null };
+obj = {
+  button: { margin: 13 },
+  container: null,
+  buttonBlur: null,
+  buttonBlurPressed: null,
+  textStyle: null,
+  brandButtonContainer: null,
+};
 let obj1 = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: null };
 obj1[2] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.WHITE, 0.24);
 obj[1] = obj1;
@@ -24,8 +31,12 @@ obj[3] = createCacheKey;
 obj[4] = { fontSize: 16 };
 obj[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 let closure_11 = createCacheKey.createStyles(obj);
-let closure_12 = { code: "function CallPTTButtonTsx1(){const{runOnJS,setDragging}=this.__closure;runOnJS(setDragging)(false);}" };
-let closure_13 = { code: "function CallPTTButtonTsx2(){const{runOnJS,setDragging,setPressed,setIsSwipeToChatDisabled}=this.__closure;runOnJS(setDragging)(true);runOnJS(setPressed)(false);if(setIsSwipeToChatDisabled!=null){runOnJS(setIsSwipeToChatDisabled)(false);}}" };
+let closure_12 = {
+  code: "function CallPTTButtonTsx1(){const{runOnJS,setDragging}=this.__closure;runOnJS(setDragging)(false);}",
+};
+let closure_13 = {
+  code: "function CallPTTButtonTsx2(){const{runOnJS,setDragging,setPressed,setIsSwipeToChatDisabled}=this.__closure;runOnJS(setDragging)(true);runOnJS(setPressed)(false);if(setIsSwipeToChatDisabled!=null){runOnJS(setIsSwipeToChatDisabled)(false);}}",
+};
 let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo((look) => {
   let BRAND = look.look;
@@ -110,7 +121,12 @@ const memoResult = importAllResult.memo((look) => {
       return;
     }
   }
-  obj = { runOnJS: tmp2(onTouchStart[15]).runOnJS, setDragging: tmp11, setPressed: tmp8, setIsSwipeToChatDisabled: prop };
+  obj = {
+    runOnJS: tmp2(onTouchStart[15]).runOnJS,
+    setDragging: tmp11,
+    setPressed: tmp8,
+    setIsSwipeToChatDisabled: prop,
+  };
   F.__closure = obj;
   F.__workletHash = 10056118853836;
   F.__initData = closure_13;
@@ -139,7 +155,7 @@ const memoResult = importAllResult.memo((look) => {
           let buttonBlurPressed = items6;
           let items7 = items5;
         } else {
-          items7 = [, , ];
+          items7 = [, ,];
           ({ button: arr6[0], container: arr6[1] } = string);
           items7[2] = style;
           if (!first) {
@@ -155,7 +171,14 @@ const memoResult = importAllResult.memo((look) => {
         obj2 = { style: null, children: null };
         obj2[0] = items7;
         style = tmp2(onTouchStart[16]).Button;
-        const obj3 = { style: null, textStyle: null, text: null, onTouchStart: null, onTouchEnd: null, darkenOnPress: true };
+        const obj3 = {
+          style: null,
+          textStyle: null,
+          text: null,
+          onTouchStart: null,
+          onTouchEnd: null,
+          darkenOnPress: true,
+        };
         obj3[0] = buttonBlurPressed;
         obj3[1] = string.textStyle;
         const intl = tmp2(onTouchStart[17]).intl;
@@ -175,7 +198,9 @@ const memoResult = importAllResult.memo((look) => {
             prop(false);
           }
         };
-        obj2[1] = <style style={null} textStyle={null} text={null} onTouchStart={null} onTouchEnd={null} darkenOnPress />;
+        obj2[1] = (
+          <style style={null} textStyle={null} text={null} onTouchStart={null} onTouchEnd={null} darkenOnPress />
+        );
         onEndResult = <View style={null}>{null}</View>;
         obj1[1] = onEndResult;
         jsx(tmp2(onTouchStart[14]).GestureDetector, { gesture: null, children: null });

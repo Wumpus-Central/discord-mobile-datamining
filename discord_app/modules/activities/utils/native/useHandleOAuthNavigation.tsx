@@ -26,4 +26,4 @@ export default function useHandleOAuthNavigation() {
       ComponentDispatch.unsubscribe(closure_1_4.SHOW_OAUTH2_MODAL, showOAuth2Modal);
     };
   }, []);
-};
+}

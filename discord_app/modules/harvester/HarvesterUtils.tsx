@@ -36,7 +36,10 @@ export const useRequestHarvestStatus = function useRequestHarvestStatus() {
   const items1 = [closure_5];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => harvestType.harvestType);
   const obj3 = initialize;
-  [tmp3, require] = callback(React.useState(() => Date.now()), 2);
+  [tmp3, require] = callback(
+    React.useState(() => Date.now()),
+    2,
+  );
   let sum = tmp3;
   if (null != stateFromStores1) {
     const _Date = Date;

@@ -20,9 +20,11 @@ createToggle = {
     let obj = saveGuildFoldersDefault;
     obj = { saveCameraUploadsToDevice };
     const result = obj.updatedUnsyncedSettings(obj);
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SaveCameraUploadsToDeviceSetting.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/SaveCameraUploadsToDeviceSetting.tsx",
+);
 
 export default createToggle;

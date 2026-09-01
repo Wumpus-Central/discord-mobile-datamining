@@ -7,8 +7,7 @@ import handleRTCConnectionStateDefault from "../ClipsManager.tsx";
 
 const CLIPS_TOAST_DURATION = result2.CLIPS_TOAST_DURATION;
 handleRTCConnectionStateDefault;
-class ClipsManager extends tmp2 {
-}
+class ClipsManager extends tmp2 {}
 const prototype = ClipsManager.prototype;
 prototype["showClipsToast"] = function showClipsToast() {
   let obj = dispatcherDefault;
@@ -18,24 +17,12 @@ prototype["showClipsToast"] = function showClipsToast() {
   obj[2] = CLIPS_TOAST_DURATION;
   obj.open(obj);
 };
-prototype["applyNativeClipsSettings"] = function applyNativeClipsSettings(arg0) {
-
-};
-prototype["handleClipsInitOnToggleDetection"] = function handleClipsInitOnToggleDetection(arg0) {
-
-};
-prototype["handleClipsInitOnGamesChange"] = function handleClipsInitOnGamesChange(arg0) {
-
-};
-prototype["fireClipsInitEvent"] = function fireClipsInitEvent(arg0) {
-
-};
-prototype["handleStreamEnded"] = function handleStreamEnded(arg0) {
-
-};
-prototype["maybeStartNtpClock"] = function maybeStartNtpClock() {
-
-};
+prototype["applyNativeClipsSettings"] = function applyNativeClipsSettings(arg0) {};
+prototype["handleClipsInitOnToggleDetection"] = function handleClipsInitOnToggleDetection(arg0) {};
+prototype["handleClipsInitOnGamesChange"] = function handleClipsInitOnGamesChange(arg0) {};
+prototype["fireClipsInitEvent"] = function fireClipsInitEvent(arg0) {};
+prototype["handleStreamEnded"] = function handleStreamEnded(arg0) {};
+prototype["maybeStartNtpClock"] = function maybeStartNtpClock() {};
 const clipsManager = new ClipsManager();
 const result = set.fileFinishedImporting("modules/clips/native/ClipsManager.tsx");
 

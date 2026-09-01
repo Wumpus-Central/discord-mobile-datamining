@@ -4,13 +4,28 @@ import getSystemLocale from "../../intl/index.native.tsx";
 import getEmojiSourceData from "../emojis/records/ExpressionSourceRecord.tsx";
 
 const EmojiSourceDataTypes = getEmojiSourceData.EmojiSourceDataTypes;
-let closure_3 = { DEFAULT: "Custom Emoji Popout", CROSS_SERVER: "Custom Emoji Popout (Cross-Server)", UPSELL_CURRENT_SERVER_JOINED: "Custom Emoji Popout (Upsell Joined Current-Server)", UPSELL_CROSS_SERVER_JOINED: "Custom Emoji Popout (Upsell Joined Cross-Server)", UPSELL_CROSS_SERVER_JOINABLE: "Custom Emoji Popout (Upsell Not-Joined Cross-Server)", UPSELL_CROSS_SERVER_UNJOINABLE: "Custom Emoji Popout (Soft Upsell)" };
+let closure_3 = {
+  DEFAULT: "Custom Emoji Popout",
+  CROSS_SERVER: "Custom Emoji Popout (Cross-Server)",
+  UPSELL_CURRENT_SERVER_JOINED: "Custom Emoji Popout (Upsell Joined Current-Server)",
+  UPSELL_CROSS_SERVER_JOINED: "Custom Emoji Popout (Upsell Joined Cross-Server)",
+  UPSELL_CROSS_SERVER_JOINABLE: "Custom Emoji Popout (Upsell Not-Joined Cross-Server)",
+  UPSELL_CROSS_SERVER_UNJOINABLE: "Custom Emoji Popout (Soft Upsell)",
+};
 let obj = { GET_PREMIUM: "GET_PREMIUM", JOIN_GUILD: "JOIN_GUILD", UNAVAILABLE: "UNAVAILABLE" };
 const result = set.fileFinishedImporting("modules/messages/getEmojiPopoutMessage.tsx");
 
 export const EmojiPopoutType = obj;
 export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
-  ({ expressionSourceApplication, hasJoinedEmojiSourceGuild, isUnusableRoleSubscriptionEmoji, isDiscoverable, emojiComesFromCurrentGuild, userIsRoleSubscriber, shouldHideRoleSubscriptionCTA } = sourceType);
+  ({
+    expressionSourceApplication,
+    hasJoinedEmojiSourceGuild,
+    isUnusableRoleSubscriptionEmoji,
+    isDiscoverable,
+    emojiComesFromCurrentGuild,
+    userIsRoleSubscriber,
+    shouldHideRoleSubscriptionCTA,
+  } = sourceType);
   ({ isPremium, isRoleSubscriptionEmoji, onOpenPremiumSettings } = sourceType);
   if (sourceType.sourceType === EmojiSourceDataTypes.APPLICATION) {
     if (null != expressionSourceApplication) {
@@ -20,8 +35,15 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
       let formatToPlainStringResult = intl8.formatToPlainString(getSystemLocale.t.uERlTd, obj);
       let tmp6 = require;
     }
-    ({ isPremium: isPremium2, hasJoinedEmojiSourceGuild: hasJoinedEmojiSourceGuild2, isDiscoverable: isDiscoverable2 } = sourceType);
-    ({ isUnusableRoleSubscriptionEmoji: isUnusableRoleSubscriptionEmoji2, emojiComesFromCurrentGuild: emojiComesFromCurrentGuild2 } = sourceType);
+    ({
+      isPremium: isPremium2,
+      hasJoinedEmojiSourceGuild: hasJoinedEmojiSourceGuild2,
+      isDiscoverable: isDiscoverable2,
+    } = sourceType);
+    ({
+      isUnusableRoleSubscriptionEmoji: isUnusableRoleSubscriptionEmoji2,
+      emojiComesFromCurrentGuild: emojiComesFromCurrentGuild2,
+    } = sourceType);
     if (isPremium2) {
       if (!hasJoinedEmojiSourceGuild2) {
         if (isDiscoverable2) {

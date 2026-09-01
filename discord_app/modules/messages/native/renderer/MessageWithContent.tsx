@@ -22,8 +22,38 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     tmp3 = alwaysShowAddReaction;
   }
   let overrideBackgroundHighlight = canShowImages.overrideBackgroundHighlight;
-  obj = { type: RowType.MESSAGE, message: createThreadEmbedDefault(obj), canAddNewReactions, addNewReactionAccessibilityLabel: null, reactionsTheme: null, highlightLabel: null, renderContentOnly: null, separatorBefore: null, changeType: null, truncation: null, alwaysShowAddReaction: null, backgroundHighlight: null, swipeActions: null, replyAccessibilityLabel: null, forwardAccessibilityLabel: null, threadAccessibilityLabel: null, forcedTheme: null };
-  obj = { options, message, roleStyle, isFirst, isEditing, canShowImages: undefined === canShowImages || canShowImages, isSystemDM: tmp, isInlineReplyPreview: false, pushFeedbackType, renderContentOnly, showContentInventoryEntryFallbackEmbed: canShowImages.showContentInventoryEntryFallbackEmbed };
+  obj = {
+    type: RowType.MESSAGE,
+    message: createThreadEmbedDefault(obj),
+    canAddNewReactions,
+    addNewReactionAccessibilityLabel: null,
+    reactionsTheme: null,
+    highlightLabel: null,
+    renderContentOnly: null,
+    separatorBefore: null,
+    changeType: null,
+    truncation: null,
+    alwaysShowAddReaction: null,
+    backgroundHighlight: null,
+    swipeActions: null,
+    replyAccessibilityLabel: null,
+    forwardAccessibilityLabel: null,
+    threadAccessibilityLabel: null,
+    forcedTheme: null,
+  };
+  obj = {
+    options,
+    message,
+    roleStyle,
+    isFirst,
+    isEditing,
+    canShowImages: undefined === canShowImages || canShowImages,
+    isSystemDM: tmp,
+    isInlineReplyPreview: false,
+    pushFeedbackType,
+    renderContentOnly,
+    showContentInventoryEntryFallbackEmbed: canShowImages.showContentInventoryEntryFallbackEmbed,
+  };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.lfIHs4);
   obj[4] = reactionsTheme;

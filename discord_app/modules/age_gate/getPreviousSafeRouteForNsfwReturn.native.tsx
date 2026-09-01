@@ -70,4 +70,4 @@ export default function getPreviousSafeRouteForNsfwReturn() {
     return obj;
   }
   return null;
-};
+}

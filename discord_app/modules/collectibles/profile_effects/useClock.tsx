@@ -75,7 +75,10 @@ export default function _default(arg0) {
         ref6.current = setTimeout(callback, num2);
         if (null != droppedFramesCallbackThreshold) {
           if (tmp21.current > tmp12) {
-            callback(num[1])(null != droppedFramesCallback, "useClock - If you set a dropped frames threshold, you must provide a droppedFramesCallback to do something when that threshold is hit");
+            callback(num[1])(
+              null != droppedFramesCallback,
+              "useClock - If you set a dropped frames threshold, you must provide a droppedFramesCallback to do something when that threshold is hit",
+            );
             if (droppedFramesCallback()) {
               tmp21.current = 0;
             }
@@ -108,4 +111,4 @@ export default function _default(arg0) {
     return () => callback();
   });
   return { stop, reset, ticking };
-};
+}

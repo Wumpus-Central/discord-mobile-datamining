@@ -9,14 +9,36 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 const tmp3 = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL];
 let obj = { row: null, rowInner: null, placeholderAvatar: null, placeholderText: null, placeholderBody: null };
-obj = { paddingLeft: ThemesDefault.space.PX_12, paddingTop: require("PX_24").CHAT_PLACEHOLDER_ROW_MARGIN_TOP, flexDirection: "row" };
+obj = {
+  paddingLeft: ThemesDefault.space.PX_12,
+  paddingTop: require("PX_24").CHAT_PLACEHOLDER_ROW_MARGIN_TOP,
+  flexDirection: "row",
+};
 obj[0] = obj;
 createCacheKey = { marginHorizontal: ThemesDefault.space.PX_12, flex: 1 };
 obj[1] = createCacheKey;
-obj[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: tmp3, width: tmp3, borderRadius: ThemesDefault.radii.round };
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: tmp3, width: tmp3, borderRadius: ThemesDefault.radii.round };
-obj[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: ThemesDefault.radii.sm };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: ThemesDefault.radii.sm };
+obj[2] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  height: tmp3,
+  width: tmp3,
+  borderRadius: ThemesDefault.radii.round,
+};
+let obj2 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  height: tmp3,
+  width: tmp3,
+  borderRadius: ThemesDefault.radii.round,
+};
+obj[3] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  height: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_HEIGHT,
+  borderRadius: ThemesDefault.radii.sm,
+};
+let obj3 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  height: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_HEIGHT,
+  borderRadius: ThemesDefault.radii.sm,
+};
 obj[4] = { marginTop: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
 let closure_5 = createCacheKey.createStyles(obj);
 const obj4 = { marginTop: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
@@ -34,7 +56,7 @@ const memoResult = importAllResult.memo(function ChatPlaceholderRow(lines) {
       let tmp6 = callback;
       let tmp7 = View;
       let obj = { style: null };
-      let items1 = [tmp.placeholderText, tmp.placeholderBody, ];
+      let items1 = [tmp.placeholderText, tmp.placeholderBody];
       obj = { width: null };
       let _HermesInternal = HermesInternal;
       obj[0] = "" + getChatPlaceholderRowWidthDefault(rounded + num) + "%";
@@ -45,7 +67,7 @@ const memoResult = importAllResult.memo(function ChatPlaceholderRow(lines) {
     } while (num < lines);
   }
   obj = { style: tmp.row, children: null };
-  const items2 = [callback(View, { style: tmp.placeholderAvatar }), ];
+  const items2 = [callback(View, { style: tmp.placeholderAvatar })];
   const obj2 = { style: tmp.rowInner, children: null };
   const obj3 = { style: null };
   const items3 = [tmp.placeholderText, { width: "" + sum + "%" }];

@@ -64,7 +64,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
       const tmp = callback(10207);
       obj[0] = num(8005).smartOutput(node, output, key);
       return callback2(tmp, obj, key.key);
-    }
+    },
   };
   const obj8 = {};
   const merged8 = Object.assign(parseLinkDefault.RULES[num(undefined, 4949).AST_KEY.BLOCK_QUOTE]);
@@ -78,14 +78,14 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(4949).AST_KEY.EMOJI] = {
     react(surrogate) {
       return surrogate.surrogate || surrogate.content;
-    }
+    },
   };
   obj[num(4949).AST_KEY.CUSTOM_EMOJI] = {
     react(src, arg1, muted) {
       if (src.src) {
         let obj = num(closure_1_2[5]);
         const sizeStyle = obj.makeSizeStyle(num);
-        const items = [sizeStyle, { resizeMode: "contain" }, , ];
+        const items = [sizeStyle, { resizeMode: "contain" }, ,];
         obj1 = num(closure_1_2[11]);
         let isAndroidResult = obj1.isAndroid();
         if (isAndroidResult) {
@@ -111,7 +111,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
       } else {
         return src.alt;
       }
-    }
+    },
   };
   obj[num(4949).AST_KEY.SPOILER] = {
     react(node, output, muted) {
@@ -119,7 +119,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
       const tmp = callback(10208);
       obj[2] = num(8005).smartOutput(node, output, muted);
       return callback2(tmp, obj, muted.key);
-    }
+    },
   };
   obj[num(4949).AST_KEY.STATIC_ROUTE_LINK] = {
     react(channelId, output, state) {
@@ -129,7 +129,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
         const tmpResult = num(8005);
       }
       return smartOutputResult;
-    }
+    },
   };
   const obj10 = {};
   const merged10 = Object.assign(parseLinkDefault.RULES[num(undefined, 4949).AST_KEY.INLINE_CODE]);
@@ -227,5 +227,5 @@ export default function createChannelListMessagePreviewReactRules(layout) {
   }
   obj = { customEmojiSize: num * bound };
   return createMessagePreviewReactRules(obj);
-};
+}
 export { createMessagePreviewReactRules };

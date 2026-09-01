@@ -42,10 +42,30 @@ function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
   }
   tmp15 = closure_3;
 }
-let obj = { DESKTOP: "desktop", MOBILE: "mobile", ANDROID: "android", IOS: "ios", PLAYSTATION: "playstation", XBOX: "xbox", VR: "vr" };
-obj = { [ActivityGamePlatforms.DESKTOP]: obj.DESKTOP, [ActivityGamePlatforms.ANDROID]: obj.ANDROID, [ActivityGamePlatforms.IOS]: obj.IOS, [ActivityGamePlatforms.XBOX]: obj.XBOX, [ActivityGamePlatforms.PS4]: obj.PLAYSTATION, [ActivityGamePlatforms.PS5]: obj.PLAYSTATION, [ActivityGamePlatforms.SAMSUNG]: null, [ActivityGamePlatforms.EMBEDDED]: null, [ActivityGamePlatforms.META_QUEST]: obj.VR };
+let obj = {
+  DESKTOP: "desktop",
+  MOBILE: "mobile",
+  ANDROID: "android",
+  IOS: "ios",
+  PLAYSTATION: "playstation",
+  XBOX: "xbox",
+  VR: "vr",
+};
+obj = {
+  [ActivityGamePlatforms.DESKTOP]: obj.DESKTOP,
+  [ActivityGamePlatforms.ANDROID]: obj.ANDROID,
+  [ActivityGamePlatforms.IOS]: obj.IOS,
+  [ActivityGamePlatforms.XBOX]: obj.XBOX,
+  [ActivityGamePlatforms.PS4]: obj.PLAYSTATION,
+  [ActivityGamePlatforms.PS5]: obj.PLAYSTATION,
+  [ActivityGamePlatforms.SAMSUNG]: null,
+  [ActivityGamePlatforms.EMBEDDED]: null,
+  [ActivityGamePlatforms.META_QUEST]: obj.VR,
+};
 let closure_3 = [];
-const result = require("set").fileFinishedImporting("modules/activities/utils/useJoinFromSupportedPlatformsIconKeys.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/activities/utils/useJoinFromSupportedPlatformsIconKeys.tsx",
+);
 
 export const IconKey = obj;
 export const ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = obj;

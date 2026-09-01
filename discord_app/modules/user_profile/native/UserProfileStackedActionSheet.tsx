@@ -30,7 +30,7 @@ export default function UserProfileStackedActionSheet(onBack) {
   let tmp4Result = null != onBack;
   let obj = {};
   const merged1 = Object.assign(merged);
-  const items = [tmp2.header, ];
+  const items = [tmp2.header];
   let str = "center";
   if (tmp4Result) {
     str = "space-between";
@@ -45,7 +45,15 @@ export default function UserProfileStackedActionSheet(onBack) {
     obj[3] = tmp4(tmp5(5499).ArrowLargeLeftIcon, { size: "md" });
     tmp4Result = tmp4(tmp5(5068).PressableOpacity, obj);
   }
-  const items1 = [tmp4Result, closure_4(Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title }), ];
+  const items1 = [
+    tmp4Result,
+    closure_4(Text.Text, {
+      variant: "redesign/heading-18/bold",
+      color: "mobile-text-heading-primary",
+      accessibilityRole: "header",
+      children: title,
+    }),
+  ];
   if (tmp4Result) {
     obj1 = { style: null };
     obj1[0] = tmp2.headerSpacer;
@@ -56,7 +64,7 @@ export default function UserProfileStackedActionSheet(onBack) {
   obj.header = closure_5(View, obj);
   obj.children = children;
   return closure_4(Background.BottomSheet, obj);
-};
+}
 export const UserProfileStackedActionSheetList = function UserProfileStackedActionSheetList(data) {
   data = data.data;
   const renderItem = data.renderItem;
@@ -71,7 +79,7 @@ export const UserProfileStackedActionSheetList = function UserProfileStackedActi
   obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
     return closure_1_4(data(divider[7]).FormDivider, { style: divider.divider });
   };
-  const items = [tmp2.contentContainer, , ];
+  const items = [tmp2.contentContainer, ,];
   let num = 0;
   if (obj2.isAndroid()) {
     num = renderItem(712).space.PX_16;

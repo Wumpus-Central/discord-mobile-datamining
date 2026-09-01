@@ -6,7 +6,9 @@ import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
 
 const require = arg1;
 let closure_6 = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
-let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useBountyVideoProgressPersistence.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/quests/native/BountiesModal/useBountyVideoProgressPersistence.tsx",
+);
 
 export const useBountyVideoProgressPersistence = function useBountyVideoProgressPersistence(bountyId) {
   bountyId = bountyId.bountyId;
@@ -19,23 +21,26 @@ export const useBountyVideoProgressPersistence = function useBountyVideoProgress
   let obj = bountyId(endMode[4]);
   const bountiesExperience = obj.useBountiesExperience(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
   callback = tmp2;
-  const first = callback(React.useState(() => {
-    if (closure_2) {
-      let bountyVideoProgress = ref2.getBountyVideoProgress(bountyId);
-      if (null == bountyVideoProgress) {
-        bountyVideoProgress = closure_6;
-      } else if (endMode === bountyId(endMode[5]).BountyVideoEndMode.LOOP) {
-        const duration = bountyVideoProgress.duration;
-        let tmp10 = duration > 0;
-        if (tmp10) {
-          tmp10 = tmp9 >= duration - 1;
+  const first = callback(
+    React.useState(() => {
+      if (closure_2) {
+        let bountyVideoProgress = ref2.getBountyVideoProgress(bountyId);
+        if (null == bountyVideoProgress) {
+          bountyVideoProgress = closure_6;
+        } else if (endMode === bountyId(endMode[5]).BountyVideoEndMode.LOOP) {
+          const duration = bountyVideoProgress.duration;
+          let tmp10 = duration > 0;
+          if (tmp10) {
+            tmp10 = tmp9 >= duration - 1;
+          }
         }
+        return bountyVideoProgress;
+      } else {
+        return closure_6;
       }
-      return bountyVideoProgress;
-    } else {
-      return closure_6;
-    }
-  }), 1)[0];
+    }),
+    1,
+  )[0];
   React = React.useRef(0);
   closure_4 = React.useRef(first.timestampSec);
   QuestsExperimentLocations = React.useRef(first.maxTimestampSec);
@@ -69,7 +74,7 @@ export const useBountyVideoProgressPersistence = function useBountyVideoProgress
         obj[2] = ref4.current;
         const result = obj.setBountyVideoProgress(bountyId, obj);
       }
-    }, items1)
+    }, items1),
   };
   items = [bountiesExperience.ownedByVerticalScrollExperiment || bountiesExperience.stage1Enabled, bountyId];
   items1 = [bountiesExperience.ownedByVerticalScrollExperiment || bountiesExperience.stage1Enabled, bountyId];

@@ -36,8 +36,13 @@ function CoachmarkImg(badge) {
   }
   return tmp5;
 }
-let closure_9 = createCacheKey.createStyles({ image: { width: "100%", height: "100%" }, imageContainer: { width: 110, height: 72, marginTop: 16 } });
-const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgeCoachmark.tsx");
+let closure_9 = createCacheKey.createStyles({
+  image: { width: "100%", height: "100%" },
+  imageContainer: { width: 110, height: 72, marginTop: 16 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/premium/tiered_tenure_badging/native/TieredTenureBadgeCoachmark.tsx",
+);
 
 export default function TieredTenureBadgeCoachmark(arg0) {
   let tieredTenureBadgeData;
@@ -62,7 +67,18 @@ export default function TieredTenureBadgeCoachmark(arg0) {
   dependencyMap = tmp7;
   const items2 = [tmp5[1], first, tieredTenureBadgeData];
   const memo = React.useMemo(() => {
-    let obj = { offsetY: 12, title: null, description: null, position: "bottom", visible: null, onDismiss: null, renderImgComponent: null, onButtonPress: null, buttonLabel: null, buttonVariant: "experimental_premium-primary" };
+    let obj = {
+      offsetY: 12,
+      title: null,
+      description: null,
+      position: "bottom",
+      visible: null,
+      onDismiss: null,
+      renderImgComponent: null,
+      onButtonPress: null,
+      buttonLabel: null,
+      buttonVariant: "experimental_premium-primary",
+    };
     const intl = tieredTenureBadgeData(1236).intl;
     obj[1] = intl.string(tieredTenureBadgeData(1236).t.Ajj8iG);
     const intl2 = tieredTenureBadgeData(1236).intl;
@@ -87,4 +103,4 @@ export default function TieredTenureBadgeCoachmark(arg0) {
   let obj = tieredTenureBadgeData(7379);
   const coachmark = tieredTenureBadgeData(8973).useCoachmark(targetRef, memo);
   return null;
-};
+}

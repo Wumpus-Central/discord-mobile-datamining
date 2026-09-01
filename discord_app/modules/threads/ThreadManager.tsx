@@ -8,7 +8,11 @@ initializeDefault;
 class ThreadManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    applyArgumentsResult.actions = { CHANNEL_DELETE: applyArgumentsResult.handleChannelDelete, MESSAGE_CREATE: applyArgumentsResult.handleMessageCreate, GUILD_DELETE: applyArgumentsResult.handleGuildDelete };
+    applyArgumentsResult.actions = {
+      CHANNEL_DELETE: applyArgumentsResult.handleChannelDelete,
+      MESSAGE_CREATE: applyArgumentsResult.handleMessageCreate,
+      GUILD_DELETE: applyArgumentsResult.handleGuildDelete,
+    };
     return applyArgumentsResult;
   }
 }

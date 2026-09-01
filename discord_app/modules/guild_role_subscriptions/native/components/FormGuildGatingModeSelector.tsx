@@ -6,8 +6,14 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ container: { padding: 16 }, space: { height: 8 }, alertHeader: { paddingBottom: 16 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormGuildGatingModeSelector.tsx");
+let closure_8 = createCacheKey.createStyles({
+  container: { padding: 16 },
+  space: { height: 8 },
+  alertHeader: { paddingBottom: 16 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/FormGuildGatingModeSelector.tsx",
+);
 
 export default function FormGuildGatingModeSelector(isFullServerGating) {
   isFullServerGating = isFullServerGating.isFullServerGating;
@@ -22,7 +28,12 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   const callback = React.useCallback(() => {
     onChange(false);
   }, items);
-  obj = { style: tmp.container, accessibilityRole: "radiogroup", accessibilityState: { disabled: roleSubscriptionSettingsDisabled }, children: null };
+  obj = {
+    style: tmp.container,
+    accessibilityRole: "radiogroup",
+    accessibilityState: { disabled: roleSubscriptionSettingsDisabled },
+    children: null,
+  };
   const callback1 = React.useCallback(() => {
     if (!isFullServerGating) {
       let obj = onChange(alertHeader[5]);
@@ -34,7 +45,7 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
       obj1[0] = alertHeader.alertHeader;
       const intl2 = isFullServerGating(alertHeader[6]).intl;
       obj1[3] = intl2.string(isFullServerGating(alertHeader[6]).t.dmVoOz);
-      const items = [closure_1_5(isFullServerGating(alertHeader[7]).Text, obj1), ];
+      const items = [closure_1_5(isFullServerGating(alertHeader[7]).Text, obj1)];
       const obj2 = { variant: "text-md/normal", children: null };
       const intl3 = isFullServerGating(alertHeader[6]).intl;
       obj2[1] = intl3.string(isFullServerGating(alertHeader[6]).t.mtwzdD);
@@ -53,7 +64,7 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   obj[3] = !isFullServerGating;
   obj[4] = callback;
   obj[5] = roleSubscriptionSettingsDisabled;
-  const items2 = [callback(onChange(17310), obj), callback(View, { style: tmp.space }), ];
+  const items2 = [callback(onChange(17310), obj), callback(View, { style: tmp.space })];
   let obj2 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
   obj1 = { style: tmp.space };
   const tmp5 = onChange(17310);
@@ -68,4 +79,4 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   items2[2] = callback(onChange(17310), obj2);
   obj[3] = items2;
   return callback2(View, obj);
-};
+}

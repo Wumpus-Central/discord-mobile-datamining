@@ -26,7 +26,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   closure_8 = undefined;
   function _submitGiftPurchase() {
     const self = this;
-    const tmp = currentUser(function*() {
+    const tmp = currentUser(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -58,7 +58,10 @@ function GiftPurchaseSKUView(selectedSkuId) {
               c3 = 1;
               if (null == c5) {
                 closure_1_13.error("Cannot proceed with purchase: collectibleProduct is undefined");
-                closure_1_1(closure_1_2[19]).show({ title: "Product Not Found", body: "The product information could not be loaded. Please try again." });
+                closure_1_1(closure_1_2[19]).show({
+                  title: "Product Not Found",
+                  body: "The product information could not be loaded. Please try again.",
+                });
                 c3 = 0;
                 c5 = 3;
                 obj1 = { value: null, done: true };
@@ -77,7 +80,10 @@ function GiftPurchaseSKUView(selectedSkuId) {
                 const _HermesInternal2 = HermesInternal;
                 closure_1_13.error("No Google SKU IDs available for product " + tmp43.skuId);
                 let obj4 = closure_1_1(closure_1_2[19]);
-                obj4.show({ title: "Product Not Available", body: "This product is not available for purchase on Google Play." });
+                obj4.show({
+                  title: "Product Not Available",
+                  body: "This product is not available for purchase on Google Play.",
+                });
                 c3 = 0;
                 c5 = 3;
                 const obj3 = { value: null, done: true };
@@ -192,7 +198,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   const effect1 = React.useEffect(() => {
     function _loadGoogleSkus() {
       const self = this;
-      const tmp = currentUser(function*() {
+      const tmp = currentUser(function* () {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -308,21 +314,27 @@ function GiftPurchaseSKUView(selectedSkuId) {
     onPurchasePending() {
       logger.info("Purchase is pending");
     },
-    giftParams: { isGift: true, options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle } }
+    giftParams: {
+      isGift: true,
+      options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle },
+    },
   };
   closure_8 = tmp(10758)(obj);
   const items5 = [product];
-  [tmp16, tmp17] = callback(obj.useMemo(() => {
-    if (null == c5) {
-      let items = ["Loading...", "Loading..."];
-    } else {
-      items = [selectedSkuId(7299).getFormattedPriceForCollectiblesProduct(tmp, true, true), ];
-      const obj = selectedSkuId(7299);
-      items[1] = selectedSkuId(7299).getFormattedPriceForCollectiblesProduct(tmp, false, true);
-      const obj2 = selectedSkuId(7299);
-    }
-    return items;
-  }, items5), 2);
+  [tmp16, tmp17] = callback(
+    obj.useMemo(() => {
+      if (null == c5) {
+        let items = ["Loading...", "Loading..."];
+      } else {
+        items = [selectedSkuId(7299).getFormattedPriceForCollectiblesProduct(tmp, true, true)];
+        const obj = selectedSkuId(7299);
+        items[1] = selectedSkuId(7299).getFormattedPriceForCollectiblesProduct(tmp, false, true);
+        const obj2 = selectedSkuId(7299);
+      }
+      return items;
+    }, items5),
+    2,
+  );
   if (!isFetching) {
     isFetching = first;
   }
@@ -335,7 +347,22 @@ function GiftPurchaseSKUView(selectedSkuId) {
   if (stateFromStores != null) {
     name = stateFromStores.name;
   }
-  const items6 = ["Gifting ", name, " to ", giftRecipientId, " ", "\n", "Regular price: ", tmp17, " ", "\n", "Premium price: ", tmp16, " ", "\n"];
+  const items6 = [
+    "Gifting ",
+    name,
+    " to ",
+    giftRecipientId,
+    " ",
+    "\n",
+    "Regular price: ",
+    tmp17,
+    " ",
+    "\n",
+    "Premium price: ",
+    tmp16,
+    " ",
+    "\n",
+  ];
   let str = "No message";
   if (null != giftMessage) {
     str = "No message";
@@ -345,7 +372,10 @@ function GiftPurchaseSKUView(selectedSkuId) {
     }
   }
   items6[14] = str;
-  const items7 = [closure_11(selectedSkuId(4474).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items6 }), , ];
+  const items7 = [
+    closure_11(selectedSkuId(4474).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items6 }),
+    ,
+  ];
   let str4 = "Send Gift";
   if (isFetching) {
     str4 = "Loading...";
@@ -354,7 +384,10 @@ function GiftPurchaseSKUView(selectedSkuId) {
   items7[1] = closure_12(selectedSkuId(5601).Card, obj3);
   const obj5 = { children: null };
   const items8 = ["Select style: ", giftStyle];
-  const items9 = [closure_11(selectedSkuId(4474).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items8 }), closure_12(first(10601), {})];
+  const items9 = [
+    closure_11(selectedSkuId(4474).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items8 }),
+    closure_12(first(10601), {}),
+  ];
   obj5[0] = items9;
   items7[2] = closure_11(selectedSkuId(5601).Card, obj5);
   obj1[2] = items7;
@@ -372,12 +405,8 @@ function SimpleRequestOTPActionSheet(giftMessage) {
       if (null != giftRecipientId) {
         obj = { basePurchaseAnalytics: null, onClose: null, setCurrentAnalyticsStep: null, children: null };
         obj[0] = tmp4;
-        obj[1] = function onClose() {
-
-        };
-        obj[2] = function setCurrentAnalyticsStep() {
-
-        };
+        obj[1] = function onClose() {};
+        obj[2] = function setCurrentAnalyticsStep() {};
         obj = { selectedSkuId: null, giftRecipientId: null, giftMessage: null };
         obj[0] = selectedSkuId;
         obj[1] = giftRecipientId;
@@ -392,14 +421,24 @@ function SimpleRequestOTPActionSheet(giftMessage) {
     }
   }
   tmp8 = callback2;
-  const items = [callback2(require("../../../../design/components/Text/native/Text.tsx").Text, { variant: "text-lg/bold", color: "text-feedback-warning", children: "Gift purchasing is the only supported feature on Android in this version." }), ];
+  const items = [
+    callback2(require("../../../../design/components/Text/native/Text.tsx").Text, {
+      variant: "text-lg/bold",
+      color: "text-feedback-warning",
+      children: "Gift purchasing is the only supported feature on Android in this version.",
+    }),
+  ];
   let str = "none";
   if (null != requestType) {
     str = requestType;
   }
   const obj2 = { children: null };
   const items1 = ["Request type: ", str];
-  items[1] = closure_11(require("../../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", color: "text-feedback-warning", children: items1 });
+  items[1] = closure_11(require("../../../../design/components/Text/native/Text.tsx").Text, {
+    variant: "text-md/normal",
+    color: "text-feedback-warning",
+    children: items1,
+  });
   obj2[0] = items;
   tmp6Result = tmp6(View, obj2);
 }
@@ -414,4 +453,4 @@ export default function SimpleCreateOTPActionSheetWrapper(arg0) {
   const merged = Object.assign(arg0);
   obj[2] = callback2(SimpleRequestOTPActionSheet, obj);
   return callback2(NativePaymentContextProvider.NativePaymentContextProvider, obj);
-};
+}

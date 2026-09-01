@@ -24,7 +24,14 @@ function FlatFriendButton(label) {
     CONTROL_SECONDARY_TEXT_DEFAULT = ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT;
   }
   const merged1 = Object.assign(merged);
-  return callback(Button.Button, { text: label, icon: callback(icon, { color: CONTROL_SECONDARY_TEXT_DEFAULT, size: "xs" }), accessibilityLabel: label, variant: str, size: "md", grow: true });
+  return callback(Button.Button, {
+    text: label,
+    icon: callback(icon, { color: CONTROL_SECONDARY_TEXT_DEFAULT, size: "xs" }),
+    accessibilityLabel: label,
+    variant: str,
+    size: "md",
+    grow: true,
+  });
 }
 function FriendRequestButton(user) {
   user = user.user;
@@ -74,7 +81,14 @@ function FriendRequestButton(user) {
         } else {
           string2Result = string2(t2.gc9aSx);
         }
-        obj = { icon: null, label: null, accessibilityHint: null, onPress: null, hasCustomProfileTheme: null, isPending: null };
+        obj = {
+          icon: null,
+          label: null,
+          accessibilityHint: null,
+          onPress: null,
+          hasCustomProfileTheme: null,
+          isPending: null,
+        };
         obj[0] = UserPlusIcon;
         obj[1] = stringResult;
         obj[2] = string2Result;
@@ -167,10 +181,18 @@ export default function UserProfileContactButtons(user) {
           obj1[2] = hasCustomProfileTheme;
           obj1[3] = FlatFriendButton;
           obj[1] = callback(FriendRequestButton, obj1);
-          const items2 = [callback(View, obj), ];
+          const items2 = [callback(View, obj)];
           obj2 = { style: null, children: null };
           obj2[0] = tmp3.iconButtonGroup;
-          const obj3 = { icon: null, accessibilityLabel: null, accessibilityHint: null, variant: null, size: "md", onPress: null, disabled: null };
+          const obj3 = {
+            icon: null,
+            accessibilityLabel: null,
+            accessibilityHint: null,
+            variant: null,
+            size: "md",
+            onPress: null,
+            disabled: null,
+          };
           const obj4 = { color: null, size: "xs" };
           obj4[0] = tmp7;
           obj3[0] = callback(tmp(tmp2[24]).ChatIcon, obj4);
@@ -184,8 +206,16 @@ export default function UserProfileContactButtons(user) {
           obj3[3] = str;
           obj3[5] = handleMessage;
           obj3[6] = disableMessage;
-          const items3 = [callback(tmp(tmp2[23]).IconButton, obj3), ];
-          const obj6 = { icon: null, accessibilityLabel: null, accessibilityHint: null, variant: null, size: "md", onPress: null, disabled: null };
+          const items3 = [callback(tmp(tmp2[23]).IconButton, obj3)];
+          const obj6 = {
+            icon: null,
+            accessibilityLabel: null,
+            accessibilityHint: null,
+            variant: null,
+            size: "md",
+            onPress: null,
+            disabled: null,
+          };
           const obj7 = { color: null, size: "xs" };
           obj7[0] = tmp7;
           obj6[0] = callback(tmp(tmp2[25]).PhoneCallIcon, obj7);
@@ -220,7 +250,17 @@ export default function UserProfileContactButtons(user) {
   const items4 = [{ flexDirection: "row", gap: trackUserProfileAction(fn[6]).space.PX_12 }, style];
   obj8[0] = items4;
   const obj10 = { style: { flex: 1 }, children: null };
-  const obj11 = { text: null, icon: null, accessibilityLabel: null, accessibilityHint: null, variant: null, size: "md", grow: true, onPress: null, disabled: null };
+  const obj11 = {
+    text: null,
+    icon: null,
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    variant: null,
+    size: "md",
+    grow: true,
+    onPress: null,
+    disabled: null,
+  };
   const intl = tmp(tmp2[15]).intl;
   obj11[0] = intl.string(user(fn[15]).t.zROXEV);
   obj11[1] = callback(user(fn[24]).ChatIcon, { color: tmp7, size: "xs" });
@@ -235,9 +275,19 @@ export default function UserProfileContactButtons(user) {
   obj11[7] = handleMessage;
   obj11[8] = disableMessage;
   obj10[1] = callback(user(fn[7]).Button, obj11);
-  const items5 = [callback(View, obj10), ];
+  const items5 = [callback(View, obj10)];
   const obj13 = { style: { flex: 1 }, children: null };
-  const obj14 = { text: null, icon: null, accessibilityLabel: null, accessibilityHint: null, variant: null, size: "md", grow: true, onPress: null, disabled: null };
+  const obj14 = {
+    text: null,
+    icon: null,
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    variant: null,
+    size: "md",
+    grow: true,
+    onPress: null,
+    disabled: null,
+  };
   const intl4 = tmp(tmp2[15]).intl;
   obj14[0] = intl4.string(user(fn[15]).t.JJogjm);
   obj14[1] = callback(user(fn[25]).PhoneCallIcon, { color: tmp7, size: "xs" });
@@ -264,4 +314,4 @@ export default function UserProfileContactButtons(user) {
   items5[1] = callback(View, obj13);
   obj8[1] = items5;
   tmp9Result = closure_7(tmp10, obj8, "two-button-group");
-};
+}

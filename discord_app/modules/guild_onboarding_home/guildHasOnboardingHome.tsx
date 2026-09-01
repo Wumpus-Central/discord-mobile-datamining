@@ -28,4 +28,4 @@ export default function guildHasOnboardingHome(id) {
     isFavoritesGuildIdResult = !features3.has(constants.GUILD_ONBOARDING);
   }
   return !isFavoritesGuildIdResult;
-};
+}

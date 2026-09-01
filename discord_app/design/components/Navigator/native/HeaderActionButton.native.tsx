@@ -11,7 +11,12 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { button: { alignSelf: "stretch", alignItems: "center", justifyContent: "center", flexDirection: "row" }, text: null, buttonFont: null, buttonDisabled: null };
+let obj = {
+  button: { alignSelf: "stretch", alignItems: "center", justifyContent: "center", flexDirection: "row" },
+  text: null,
+  buttonFont: null,
+  buttonDisabled: null,
+};
 obj = { color: ThemesDefault.colors.TEXT_BRAND, textTransform: "capitalize" };
 obj[1] = obj;
 obj[2] = { fontSize: 16, maxWidth: 80 };
@@ -19,11 +24,24 @@ obj[3] = { opacity: 0.6 };
 let closure_6 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   ({ text, source, accessibilityLabel, IconComponent, disabled } = arg0);
-  ({ style, textStyle, imageStyle, accessibilityHint, accessibilityActions, onAccessibilityAction, icon, IconComponentSize, onPress, foregroundRipple, iconSize, hitSlop } = arg0);
+  ({
+    style,
+    textStyle,
+    imageStyle,
+    accessibilityHint,
+    accessibilityActions,
+    onAccessibilityAction,
+    icon,
+    IconComponentSize,
+    onPress,
+    foregroundRipple,
+    iconSize,
+    hitSlop,
+  } = arg0);
   const tmp = callback2();
   if (null != text) {
     let obj = { style: null, variant: "text-md/semibold", lineClamp: 1, maxFontSizeMultiplier: null, children: null };
-    const items = [, , ];
+    const items = [, ,];
     ({ text: arr[0], buttonFont: arr[1] } = tmp);
     items[2] = textStyle;
     obj[0] = items;
@@ -41,7 +59,21 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj[2] = iconSize;
     tmp2 = callback(IconSizesDefault, obj);
   }
-  obj1 = { ref, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, accessibilityRole: "button", onPress: null, activeOpacity: 0.6, androidRippleConfig: null, style: null, hitSlop: null, disabled: null, children: null };
+  obj1 = {
+    ref,
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    accessibilityActions: null,
+    onAccessibilityAction: null,
+    accessibilityRole: "button",
+    onPress: null,
+    activeOpacity: 0.6,
+    androidRippleConfig: null,
+    style: null,
+    hitSlop: null,
+    disabled: null,
+    children: null,
+  };
   if (accessibilityLabel == null) {
     accessibilityLabel = text;
   }
@@ -55,7 +87,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     tmp11 = ANDROID_FOREGROUND_RIPPLE;
   }
   obj1[8] = tmp11;
-  const items1 = [tmp.button, style, ];
+  const items1 = [tmp.button, style];
   let buttonDisabled = disabled;
   if (disabled) {
     buttonDisabled = tmp.buttonDisabled;

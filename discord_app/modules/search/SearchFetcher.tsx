@@ -22,7 +22,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
   closure_1 = arg1;
   closure_2 = arg2;
   const self = this;
-  return self(function*() {
+  return self(function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();
@@ -152,8 +152,7 @@ prototype["retryLater"] = function retryLater(c0, closure_1, closure_2) {
   self.indexingPollId = setTimeout(_fetch.bind(self, c0, closure_1, closure_2), self.retryDelay);
 };
 const result = require("set").fileFinishedImporting("modules/search/SearchFetcher.tsx");
-class SearchFetcherImpl extends SearchFetcher {
-}
+class SearchFetcherImpl extends SearchFetcher {}
 const prototype2 = SearchFetcherImpl.prototype;
 prototype2["getEndpoint"] = function getEndpoint() {
   const self = this;

@@ -8,7 +8,9 @@ import closure_2 from "../../../stores/UserStore.tsx";
 import { ExplicitContentFilterToDmSpamFilterV2 as closure_3 } from "../privacy_and_safety/DMSafetyConstants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx",
+);
 
 export const useDerivedDmSpamFilterSettingValue = function useDerivedDmSpamFilterSettingValue() {
   let DmSpamFilterV2 = dependencyMap;
@@ -19,7 +21,9 @@ export const useDerivedDmSpamFilterSettingValue = function useDerivedDmSpamFilte
   const items = [closure_2];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = initialize;
-  const isSettingTeenByDefault = isFeatureAgeGated.useIsSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.SPAM_FILTERS);
+  const isSettingTeenByDefault = isFeatureAgeGated.useIsSettingTeenByDefault(
+    SettingsDefaultFeature.SettingsDefaultFeature.SPAM_FILTERS,
+  );
   if (setting !== create.DmSpamFilterV2.DEFAULT_UNSET) {
     return setting;
   } else {

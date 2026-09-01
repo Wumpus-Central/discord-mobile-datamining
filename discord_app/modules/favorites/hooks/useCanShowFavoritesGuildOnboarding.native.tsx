@@ -5,7 +5,9 @@ import closure_2 from "../../action_sheet/native/ActionSheetStore.tsx";
 import closure_3 from "../../../stores/SelectedChannelStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/hooks/useCanShowFavoritesGuildOnboarding.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/favorites/hooks/useCanShowFavoritesGuildOnboarding.native.tsx",
+);
 
 export default function useCanShowFavoritesGuildOnboarding() {
   const items = [closure_3];
@@ -23,4 +25,4 @@ export default function useCanShowFavoritesGuildOnboarding() {
     tmp4 = !isModalOpen;
   }
   return tmp4;
-};
+}

@@ -12,31 +12,39 @@ require = arg1;
 ({ AnalyticEvents: error, Endpoints: closure_8 } = ME);
 const result = require("set").fileFinishedImporting("modules/premium/gifting/PremiumGiftingIntentActionCreators.tsx");
 
-export const fetchAndReconcileGiftIntentDismissals = function fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs) {
+export const fetchAndReconcileGiftIntentDismissals = function fetchAndReconcileGiftIntentDismissals(
+  serverDismissalTimestampMs,
+) {
   const _require = serverDismissalTimestampMs;
   const id2 = id.getId();
   const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   const value = HTTP.get({ url: constants2.GIFT_INTENT_DISMISSALS, oldFormErrors: true, rejectWithError: true });
-  return value.then((body) => {
-    if (closure_1_4.getId() === callback) {
-      let dismissals = body.body.dismissals;
-      if (dismissals == null) {
-        dismissals = [];
+  return value.then(
+    (body) => {
+      if (closure_1_4.getId() === callback) {
+        let dismissals = body.body.dismissals;
+        if (dismissals == null) {
+          dismissals = [];
+        }
+        let obj = { type: "GIFT_INTENT_DISMISSALS_FETCH_SUCCESS", dismissals: null, settingsTimestampMs: null };
+        obj[1] = dismissals.map((targetId) => ({
+          targetId: targetId.target_id,
+          dismissedAtMs: Number(targetId.dismissed_at_ms),
+        }));
+        obj[2] = closure_0;
+        callback(closure_1_2[6]).dispatch(obj);
+        const obj2 = callback(closure_1_2[6]);
+      } else {
+        obj = callback(closure_1_2[6]);
+        obj.dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
       }
-      let obj = { type: "GIFT_INTENT_DISMISSALS_FETCH_SUCCESS", dismissals: null, settingsTimestampMs: null };
-      obj[1] = dismissals.map((targetId) => ({ targetId: targetId.target_id, dismissedAtMs: Number(targetId.dismissed_at_ms) }));
-      obj[2] = closure_0;
-      callback(closure_1_2[6]).dispatch(obj);
-      const obj2 = callback(closure_1_2[6]);
-    } else {
-      obj = callback(closure_1_2[6]);
-      obj.dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
-    }
-  }, (arg0) => {
-    callback(1208).captureException(arg0, { tags: { feature: "gift_intent" } });
-    const obj = callback(1208);
-    callback(709).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
-  });
+    },
+    (arg0) => {
+      callback(1208).captureException(arg0, { tags: { feature: "gift_intent" } });
+      const obj = callback(1208);
+      callback(709).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
+    },
+  );
 };
 export const logFriendsListGiftIntentsShown = function logFriendsListGiftIntentsShown() {
   dispatcherDefault.dispatch({ type: "FRIENDS_LIST_GIFT_INTENTS_SHOWN" });

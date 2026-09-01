@@ -14,7 +14,12 @@ noopAll;
 ({ Pressable: c3, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = {};
-createCacheKey = { fill: StyleSheet.absoluteFillObject, backdrop: null, backdropOpaque: null, accessibilityDismiss: null };
+createCacheKey = {
+  fill: StyleSheet.absoluteFillObject,
+  backdrop: null,
+  backdropOpaque: null,
+  accessibilityDismiss: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE };
@@ -50,7 +55,7 @@ export const Backdrop = function Backdrop(animatedProps) {
   let tmp4 = null != onDismiss;
   if (tmp4) {
     obj1 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, "aria-hidden": null };
-    const items1 = [backgroundColor.accessibilityDismiss, , ];
+    const items1 = [backgroundColor.accessibilityDismiss, ,];
     const obj2 = { top: null };
     obj2[0] = useSafeAreaInsetsDefault().top;
     items1[1] = obj2;
@@ -61,7 +66,7 @@ export const Backdrop = function Backdrop(animatedProps) {
     obj1[4] = animatedProps["aria-hidden"];
     tmp4 = callback(closure_3, obj1);
   }
-  const items2 = [tmp4, ];
+  const items2 = [tmp4];
   if ("none" !== str) {
     const obj3 = {};
     const merged = Object.assign(obj);

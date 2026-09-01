@@ -82,7 +82,11 @@ obj[importDefaultResult.v3("guild_age_range_days")] = (arg0) => {
   ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
   return (arg0) => {
     const obj = closure_1_0(closure_1_1[6]);
-    return closure_1_6(Math.floor(closure_1_0(closure_1_1[6]).age(arg0) / closure_1_0(closure_1_1[7]).Millis.DAY), closure_0, closure_1);
+    return closure_1_6(
+      Math.floor(closure_1_0(closure_1_1[6]).age(arg0) / closure_1_0(closure_1_1[7]).Millis.DAY),
+      closure_0,
+      closure_1,
+    );
   };
 };
 const importDefaultResult2 = importDefaultResult;

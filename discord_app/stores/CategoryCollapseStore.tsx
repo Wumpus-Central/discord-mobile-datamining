@@ -66,8 +66,7 @@ function syncFavoriteCategoryCollapse() {
 let closure_7 = {};
 let c8 = 0;
 const PersistedStore = initializeDefault.PersistedStore;
-class CategoryCollapseStore extends PersistedStore {
-}
+class CategoryCollapseStore extends PersistedStore {}
 const prototype = CategoryCollapseStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   const self = this;
@@ -105,7 +104,7 @@ Object.defineProperty(prototype, "version", {
   get: function version() {
     return c8;
   },
-  set: undefined
+  set: undefined,
 });
 CategoryCollapseStore.displayName = "CategoryCollapseStore";
 CategoryCollapseStore.persistKey = "collapsedCategories";
@@ -254,7 +253,7 @@ const categoryCollapseStore = new CategoryCollapseStore(dispatcherDefault, {
       delete tmp[tmp2];
     }
     return false;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/CategoryCollapseStore.tsx");
 

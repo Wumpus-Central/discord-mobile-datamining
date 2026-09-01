@@ -37,7 +37,10 @@ class ManageEmojisModal {
     obj = require("initialize");
     items = [];
     items[0] = closure_8;
-    stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ emojis: store.getEmojis(guild.id), revision: store.getEmojiRevision(guild.id) }));
+    stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+      emojis: store.getEmojis(guild.id),
+      revision: store.getEmojiRevision(guild.id),
+    }));
     emojis = stateFromStoresObject.emojis;
     revision = stateFromStoresObject.revision;
     obj2 = require("canManageResource");
@@ -57,7 +60,7 @@ class ManageEmojisModal {
     effect = emojis.useEffect(() => {
       closure_1_12(guild.id);
     }, items2);
-    items3 = [, ];
+    items3 = [,];
     items3[0] = guild.id;
     items3[1] = revision;
     effect1 = emojis.useEffect(() => {
@@ -66,14 +69,14 @@ class ManageEmojisModal {
       }
       ref.current = revision;
     }, items3);
-    items4 = [, , , , , ];
+    items4 = [, , , , ,];
     items4[0] = guild.id;
     items4[1] = flag;
     items4[2] = emojiItems;
     items4[3] = tmp5;
     items4[4] = onSelectRolesForEmoji;
     items4[5] = canManageGuildExpression;
-    items5 = [, , , , ];
+    items5 = [, , , ,];
     items5[0] = guild;
     length = undefined;
     callback = emojis.useCallback((arg0) => {
@@ -137,7 +140,12 @@ class ManageEmojisModal {
       return closure_9(flag(headerDescription[17]).ConnectedHeaderRow, obj);
     }, items5);
     callback2 = obj3.useCallback(() => {
-      const obj = { Illustration: flag(headerDescription[19]).EmptyServerSettingsEmoji, style: store.emptyState, title: null, body: null };
+      const obj = {
+        Illustration: flag(headerDescription[19]).EmptyServerSettingsEmoji,
+        style: store.emptyState,
+        title: null,
+        body: null,
+      };
       const intl = flag(headerDescription[10]).intl;
       obj[2] = intl.string(flag(headerDescription[10]).t.lxsmBd);
       const intl2 = flag(headerDescription[10]).intl;
@@ -150,7 +158,7 @@ class ManageEmojisModal {
       obj = { style: null, children: null };
       obj[0] = tmp5.loadingContainer;
       tmp18 = closure_9;
-      items7 = [, ];
+      items7 = [,];
       items7[0] = closure_9(require("ActivityIndicator").ActivityIndicator, {});
       items7[1] = closure_9(require("NavScrim").NavScrim, {});
       obj[1] = items7;
@@ -158,13 +166,22 @@ class ManageEmojisModal {
     } else {
       tmp13 = closure_9;
       tmp14 = canManageGuildExpression;
-      obj1 = { initialNumToRender: 12, ListHeaderComponent: null, ListEmptyComponent: null, windowSize: 4, data: null, keyExtractor: null, renderItem: null, contentContainerStyle: null };
+      obj1 = {
+        initialNumToRender: 12,
+        ListHeaderComponent: null,
+        ListEmptyComponent: null,
+        windowSize: 4,
+        data: null,
+        keyExtractor: null,
+        renderItem: null,
+        contentContainerStyle: null,
+      };
       obj1[1] = callback1;
       obj1[2] = callback2;
       obj1[4] = emojiItems;
       obj1[5] = tmp12;
       obj1[6] = callback;
-      items8 = [, ];
+      items8 = [,];
       items8[0] = contentContainerStyle;
       items8[1] = tmp5.list;
       obj1[7] = items8;
@@ -176,7 +193,13 @@ class ManageEmojisModal {
 ({ View: c5, FlatList: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let closure_12 = importDefaultResult.throttle(require("_updateEmoji").fetchEmoji, 1000);
-let obj = { loadingContainer: { flex: 1, paddingTop: 40 }, emptyState: { paddingTop: 30 }, list: null, section: null, titleContainer: null };
+let obj = {
+  loadingContainer: { flex: 1, paddingTop: 40 },
+  emptyState: { paddingTop: 30 },
+  list: null,
+  section: null,
+  titleContainer: null,
+};
 obj = { paddingHorizontal: ThemesDefault.space.PX_12 };
 obj[2] = obj;
 createCacheKey = { paddingVertical: ThemesDefault.space.PX_16 };
@@ -185,25 +208,45 @@ obj[4] = { paddingLeft: 16, paddingRight: 16 };
 let closure_13 = createCacheKey.createStyles(obj);
 let closure_15 = importDefaultResult.memoize((arr, stateFromStores) => {
   const _require = stateFromStores;
-  const found = arr.filter((roles) => !stateFromStores(closure_1_2[11]).isRoleSubscriptionEmoji(roles, stateFromStores.id));
+  const found = arr.filter(
+    (roles) => !stateFromStores(closure_1_2[11]).isRoleSubscriptionEmoji(roles, stateFromStores.id),
+  );
   const mapped = found.map(computeEmojiItem);
   const reversed = mapped.reverse();
   const maxEmojiSlots = require("../../../utils/GuildBoostingUtils.tsx").getMaxEmojiSlots(stateFromStores);
   const obj2 = getGuildTierFromGuild;
   const obj3 = importDefaultResult;
-  [arr2, arr3] = callback(importDefaultResult.partition(reversed, (emoji) => !emoji.emoji.animated), 2);
+  [arr2, arr3] = callback(
+    importDefaultResult.partition(reversed, (emoji) => !emoji.emoji.animated),
+    2,
+  );
   const intl = require("../../../intl/index.native.tsx").intl;
-  const tmp3 = callback(importDefaultResult.partition(reversed, (emoji) => !emoji.emoji.animated), 2);
+  const tmp3 = callback(
+    importDefaultResult.partition(reversed, (emoji) => !emoji.emoji.animated),
+    2,
+  );
   const bound = Math.max(maxEmojiSlots - arr2.length, 0);
   const intl2 = require("../../../intl/index.native.tsx").intl;
   const stringResult = intl.string(require("../../../intl/index.native.tsx").t.sMOuuS);
-  const formatted = "" + intl.string(require("../../../intl/index.native.tsx").t.sMOuuS) + " - " + intl2.formatToPlainString(require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound }).toUpperCase();
+  const formatted =
+    "" +
+    intl.string(require("../../../intl/index.native.tsx").t.sMOuuS) +
+    " - " +
+    intl2.formatToPlainString(require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound }).toUpperCase();
   const intl3 = require("../../../intl/index.native.tsx").intl;
-  const str = "" + intl.string(require("../../../intl/index.native.tsx").t.sMOuuS) + " - " + intl2.formatToPlainString(require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound });
+  const str =
+    "" +
+    intl.string(require("../../../intl/index.native.tsx").t.sMOuuS) +
+    " - " +
+    intl2.formatToPlainString(require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound });
   const bound1 = Math.max(maxEmojiSlots - arr3.length, 0);
   const intl4 = require("../../../intl/index.native.tsx").intl;
   const stringResult1 = intl3.string(require("../../../intl/index.native.tsx").t.wWjQye);
-  const formatted1 = "" + intl3.string(require("../../../intl/index.native.tsx").t.wWjQye) + " - " + intl4.formatToPlainString(require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound1 }).toUpperCase();
+  const formatted1 =
+    "" +
+    intl3.string(require("../../../intl/index.native.tsx").t.wWjQye) +
+    " - " +
+    intl4.formatToPlainString(require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound1 }).toUpperCase();
   if (arr2.length > 0) {
     const items = [{ type: "SECTION", key: formatted, section: formatted }];
     HermesBuiltin.arraySpread(arr2, 1);
@@ -246,7 +289,10 @@ export default function GuildSettingsModalEmoji(contentContainerStyle) {
     if (tmp) {
       let obj = { headerTitle: null };
       obj[0] = function headerTitle() {
-        obj = { style: titleContainer.titleContainer, children: closure_1_9(closure_1_0(closure_1_2[23]).NavigatorHeader, obj) };
+        obj = {
+          style: titleContainer.titleContainer,
+          children: closure_1_9(closure_1_0(closure_1_2[23]).NavigatorHeader, obj),
+        };
         obj = { title: name.name };
         return closure_1_9(closure_1_5, obj);
       };
@@ -270,7 +316,7 @@ export default function GuildSettingsModalEmoji(contentContainerStyle) {
     obj[0] = items2;
     return callback3(closure_11, obj);
   }
-};
+}
 export const computeSectionItem = function computeSectionItem(intl, length, arg2) {
   const bound = Math.max(arg2 - length, 0);
   intl = getSystemLocale.intl;

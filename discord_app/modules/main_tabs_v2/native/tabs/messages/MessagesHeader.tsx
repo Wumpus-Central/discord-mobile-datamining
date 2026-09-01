@@ -16,11 +16,25 @@ let c3 = importAllResult;
 const PX_16 = ThemesDefault.space.PX_16;
 const PX_8 = ThemesDefault.space.PX_8;
 let obj = { headerPanel: null, headerPanelTitle: null, headerPanelButtons: null, headerBorder: null };
-obj = { position: "relative", padding: PX_16, paddingBottom: ThemesDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM };
+obj = {
+  position: "relative",
+  padding: PX_16,
+  paddingBottom: ThemesDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM,
+};
 obj[0] = obj;
-createCacheKey = { paddingBottom: PX_8, flexDirection: "row", gap: ThemesDefault.space.PX_8, justifyContent: "space-between" };
+createCacheKey = {
+  paddingBottom: PX_8,
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_8,
+  justifyContent: "space-between",
+};
 obj[1] = createCacheKey;
-obj[2] = { height: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, gap: ThemesDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: ThemesDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
+obj[2] = {
+  height: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT,
+  gap: ThemesDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP,
+  flexDirection: ThemesDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT,
+  alignItems: "center",
+};
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.backgroundColor = ThemesDefault.colors.BORDER_SUBTLE;
@@ -28,8 +42,15 @@ obj3.top = undefined;
 obj3.height = 1;
 obj[3] = obj3;
 let closure_10 = createCacheKey.createStyles(obj);
-let closure_11 = { code: "function MessagesHeaderTsx1(){const{withSpring,scrollPosition}=this.__closure;return{opacity:withSpring(scrollPosition.get()>0?1:0)};}" };
-let obj2 = { height: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, gap: ThemesDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: ThemesDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
+let closure_11 = {
+  code: "function MessagesHeaderTsx1(){const{withSpring,scrollPosition}=this.__closure;return{opacity:withSpring(scrollPosition.get()>0?1:0)};}",
+};
+let obj2 = {
+  height: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT,
+  gap: ThemesDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP,
+  flexDirection: ThemesDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT,
+  alignItems: "center",
+};
 const memoResult = importAllResult.memo(function MessagesHeader(height) {
   height = height.height;
   const scrollPosition = height.scrollPosition;
@@ -112,14 +133,39 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
   } else {
     stringResult = string(t.OIgYlQ);
   }
-  obj3[1] = callback(height(4474).Text, { color: "mobile-text-heading-primary", variant: "heading-lg/semibold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: stringResult });
-  const items1 = [callback(closure_4, obj3), , , ];
+  obj3[1] = callback(height(4474).Text, {
+    color: "mobile-text-heading-primary",
+    variant: "heading-lg/semibold",
+    maxFontSizeMultiplier: 1.75,
+    accessibilityRole: "header",
+    children: stringResult,
+  });
+  const items1 = [callback(closure_4, obj3), , ,];
   const obj4 = { style: tmp.headerPanelButtons, children: null };
-  const obj5 = { onPress: callback2, variant: "secondary", size: "sm", icon: scrollPosition(6236), accessibilityLabel: null };
+  const obj5 = {
+    onPress: callback2,
+    variant: "secondary",
+    size: "sm",
+    icon: scrollPosition(6236),
+    accessibilityLabel: null,
+  };
   const intl3 = tmp3(1236).intl;
   obj5[4] = intl3.string(height(1236).t["5h0QOP"]);
-  const items2 = [callback(height(8006).IconButton, obj5), callback(scrollPosition(15619), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
-  const obj6 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: scrollPosition(4416), onPress: callback1, maxFontSizeMultiplier: 1, text: null };
+  const items2 = [
+    callback(height(8006).IconButton, obj5),
+    callback(scrollPosition(15619), { noMargin: true, onPress: callback, alternateVariant: true }),
+    ,
+  ];
+  const obj6 = {
+    variant: "secondary",
+    grow: true,
+    shrink: true,
+    size: "sm",
+    icon: scrollPosition(4416),
+    onPress: callback1,
+    maxFontSizeMultiplier: 1,
+    text: null,
+  };
   const intl4 = tmp3(1236).intl;
   obj6[7] = intl4.string(height(1236).t.zIJnA6);
   items2[2] = callback(height(4928).Button, obj6);
@@ -137,7 +183,9 @@ let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/t
 export default memoResult;
 export const getMessagesHeaderHeight = function getMessagesHeaderHeight(fontScale) {
   const bound = Math.min(fontScale, 1.75);
-  const refreshToken = useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM);
+  const refreshToken = useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(
+    ThemesDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM,
+  );
   const obj = useIsMobileVisualRefreshExperimentEnabled;
   const sum = map.scaleTextLineHeight("redesign/heading-18/bold", bound) + PX_8;
   return sum + MINIMUM_HIT_AREA.SMALL_BUTTON_HEIGHT + PX_16 + refreshToken;

@@ -61,14 +61,18 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
       const callback = arg0;
       ({ guildId: closure_1, channelId: closure_2 } = closure_1_4(arg0));
       const tmp = closure_1_4(arg0);
-      callback(closure_1_1[4]).batchUpdates(() => callback({ path: callback, guildId: closure_1, channelId: closure_2 }));
+      callback(closure_1_1[4]).batchUpdates(() =>
+        callback({ path: callback, guildId: closure_1, channelId: closure_2 }),
+      );
     },
     resetPath(pathname) {
       const callback = pathname;
       ({ guildId: closure_1, channelId: closure_2 } = closure_1_4(pathname));
       const tmp = closure_1_4(pathname);
-      callback(closure_1_1[4]).batchUpdates(() => pathname({ path: null, guildId: closure_1, channelId: closure_2, basePath: pathname }));
-    }
+      callback(closure_1_1[4]).batchUpdates(() =>
+        pathname({ path: null, guildId: closure_1, channelId: closure_2, basePath: pathname }),
+      );
+    },
   };
 });
 const result = set.fileFinishedImporting("modules/routing/KeybindRouterStore.tsx");

@@ -49,7 +49,7 @@ function _waitForDataOrConnection() {
     closure_1 = arg1;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -144,7 +144,7 @@ function waitForNavigationReady() {
 }
 function _waitForNavigationReady() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -236,7 +236,7 @@ function _connectToStage2() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       dependencyMap = tmp3;
       yield closure_1_20();
       c5 = 1;
@@ -274,7 +274,7 @@ function _handleStageNotification() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -341,7 +341,7 @@ function _handleGuildEventNotification() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -482,7 +482,7 @@ function _handleRelationshipAddNotification() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -600,7 +600,7 @@ function _handleCallRingNotification() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -671,7 +671,7 @@ function _handleCallConnectNotification() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -784,7 +784,7 @@ function _handleFriendSuggestionCreateNotification() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -883,7 +883,7 @@ function _maybeAckNotificationCenter() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -997,7 +997,16 @@ function receiveNotification_(type) {
   const result = obj.initializeRouteManagerIfNeeded();
   if ("MESSAGE_CREATE" === type.type) {
     const _HermesInternal2 = HermesInternal;
-    logger.log("Notification clicked of type " + type.type + " with guild:" + type.guild_id + " channel:" + type.channel_id + " message:" + type.message_id);
+    logger.log(
+      "Notification clicked of type " +
+        type.type +
+        " with guild:" +
+        type.guild_id +
+        " channel:" +
+        type.channel_id +
+        " message:" +
+        type.message_id,
+    );
     obj = { guildId: null, channelId: null, messageId: null, isPreload: true };
     ({ guild_id: obj10[0], channel_id: obj10[1], message_id: obj10[2] } = type);
     const messages = fetchMessagesDefault.fetchMessages(obj);
@@ -1088,7 +1097,11 @@ export default function receiveNotification(getData) {
           tmp7(5221);
           tmp7(13373);
           let receiving_user_id = data.receiving_user_id;
-          receiving_user_id = tmp7(11986).switchAccount(receiving_user_id, false, arg1 ? tmp5.PUSH_NOTIFICATION_INITIAL : tmp5.PUSH_NOTIFICATION);
+          receiving_user_id = tmp7(11986).switchAccount(
+            receiving_user_id,
+            false,
+            arg1 ? tmp5.PUSH_NOTIFICATION_INITIAL : tmp5.PUSH_NOTIFICATION,
+          );
           receiving_user_id.then(() => {
             const Emitter = closure_1_1(closure_1_3[40]).Emitter;
             Emitter.batched(() => closure_1_34(closure_0));
@@ -1101,4 +1114,4 @@ export default function receiveNotification(getData) {
     let Emitter = tmp11(589).Emitter;
     return Emitter.batched(() => closure_1_34(data));
   }
-};
+}

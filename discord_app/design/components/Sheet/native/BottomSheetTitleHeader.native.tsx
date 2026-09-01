@@ -16,7 +16,7 @@ function RedesignBottomSheetTitleHeaderBase(children) {
   const tmp = callback4();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.titles, children: null };
-  const items = [callback2(Title, { lineClamp: 2, children: children.title }), ];
+  const items = [callback2(Title, { lineClamp: 2, children: children.title })];
   let tmp2Result = null;
   if (null != subtitle) {
     obj = { children: null };
@@ -39,9 +39,9 @@ function RedesignBottomSheetTitleHeaderStacked(subtitle) {
   obj = { style: tmp2.item, children: leading };
   const items1 = [callback2(View, obj), callback2(View, { style: tmp2.item, children: trailing })];
   obj[1] = items1;
-  const items2 = [callback3(View, obj), ];
+  const items2 = [callback3(View, obj)];
   const obj2 = { style: tmp.titles, children: null };
-  const items3 = [callback2(Title, { children: title }), ];
+  const items3 = [callback2(Title, { children: title })];
   let tmp5Result = null;
   if (null != subtitle) {
     const obj3 = { children: null };
@@ -61,7 +61,8 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
   const tmp = callback4();
   const tmp2 = callback6();
   let obj = map;
-  const diff = useWindowDimensionsDefault().width - 2 * obj.useToken(ThemesDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL);
+  const diff =
+    useWindowDimensionsDefault().width - 2 * obj.useToken(ThemesDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL);
   [tmp5, c0] = callback(React.useState(undefined), 2);
   callback = React.useCallback((nativeEvent) => {
     const width = nativeEvent.nativeEvent.layout.width;
@@ -74,9 +75,9 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
     });
   }, []);
   obj = { style: tmp.container, children: null };
-  const items = [callback2(View, { style: { width: tmp5 } }), , , , ];
+  const items = [callback2(View, { style: { width: tmp5 } }), , , ,];
   obj = { style: tmp.titles, children: null };
-  const items1 = [callback2(Title, { onTextLayout: onTitleTextLayout, lineClamp: 3, children: title }), ];
+  const items1 = [callback2(Title, { onTextLayout: onTitleTextLayout, lineClamp: 3, children: title })];
   let tmp9Result = null;
   if (null != subtitle) {
     obj1 = { children: null };
@@ -88,11 +89,11 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
   obj[1] = items1;
   items[1] = closure_7(View, obj);
   items[2] = callback2(View, { style: { width: tmp5 } });
-  const items2 = [, , ];
+  const items2 = [, ,];
   ({ accessory: arr3[0], leading: arr3[1] } = tmp2);
   items2[2] = { maxWidth: result };
   items[3] = callback2(View, { onLayout: callback, style: items2, children: leading });
-  const items3 = [, , ];
+  const items3 = [, ,];
   ({ accessory: arr4[0], trailing: arr4[1] } = tmp2);
   items3[2] = { maxWidth: result };
   items[4] = callback2(View, { onLayout: callback, style: items3, children: trailing });
@@ -102,25 +103,49 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
 function Title(arg0) {
   const tmp = callback4();
   const merged = Object.assign(arg0);
-  return callback2(Text.Text, { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: callback4().title });
+  return callback2(Text.Text, {
+    variant: "redesign/heading-18/semibold",
+    color: "mobile-text-heading-primary",
+    accessibilityRole: "header",
+    style: callback4().title,
+  });
 }
 function Subtitle(children) {
   const tmp = callback4();
-  return callback2(Text.Text, { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, style: callback4().subtitle, children: children.children });
+  return callback2(Text.Text, {
+    variant: "text-sm/medium",
+    color: "text-muted",
+    lineClamp: 1,
+    style: callback4().subtitle,
+    children: children.children,
+  });
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles(() => {
   let obj = { container: null, titles: null, subtitle: null, title: null };
-  obj = { paddingHorizontal: ThemesDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL, flexDirection: "row", gap: 4, position: "relative" };
+  obj = {
+    paddingHorizontal: ThemesDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL,
+    flexDirection: "row",
+    gap: 4,
+    position: "relative",
+  };
   obj[0] = obj;
   obj[1] = { flexGrow: 1, flexShrink: 1, gap: 2 };
   obj[2] = { textAlign: "center" };
   obj[3] = { textAlign: "center" };
   return obj;
 });
-let closure_10 = createCacheKey.createStyles(() => ({ container: { flexDirection: "column" }, accessories: { flexDirection: "row", justifyContent: "space-between" }, item: { flexShrink: 0 } }));
+let closure_10 = createCacheKey.createStyles(() => ({
+  container: { flexDirection: "column" },
+  accessories: { flexDirection: "row", justifyContent: "space-between" },
+  item: { flexShrink: 0 },
+}));
 let closure_12 = createCacheKey.createStyles(() => {
-  let obj = { accessory: { position: "absolute", top: 0, bottom: 0, flexShrink: 0, flexDirection: "row", flexGrow: 1 }, leading: null, trailing: null };
+  let obj = {
+    accessory: { position: "absolute", top: 0, bottom: 0, flexShrink: 0, flexDirection: "row", flexGrow: 1 },
+    leading: null,
+    trailing: null,
+  };
   obj = { left: ThemesDefault.space.PX_16, justifyContent: "flex-start" };
   obj[1] = obj;
   obj = { right: ThemesDefault.space.PX_16, justifyContent: "flex-end" };

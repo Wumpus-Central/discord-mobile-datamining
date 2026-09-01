@@ -28,4 +28,4 @@ export default function BotsBanner(context) {
     }
   }
   return tmp4Result;
-};
+}

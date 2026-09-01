@@ -11,20 +11,24 @@ function measure(arg0) {
   return new Promise((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
-    const size = closure_1_4.getSize(closure_0, (width, height) => callback({ width, height }), (arg0) => {
-      error = arg0;
-      if (!(arg0 instanceof Error)) {
-        const _Error = Error;
-        const _String = String;
-        error = new Error(String(arg0));
-      }
-      return closure_1(error);
-    });
+    const size = closure_1_4.getSize(
+      closure_0,
+      (width, height) => callback({ width, height }),
+      (arg0) => {
+        error = arg0;
+        if (!(arg0 instanceof Error)) {
+          const _Error = Error;
+          const _String = String;
+          error = new Error(String(arg0));
+        }
+        return closure_1(error);
+      },
+    );
   });
 }
 function _readManifest() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     closure_0 = tmp2;
     const _HermesInternal = HermesInternal;
     closure_0 = yield closure_1_0(table[4]).readFile("documents", "" + closure_1_6 + "/" + closure_1_5, "utf8");
@@ -51,7 +55,7 @@ function _buildOverride() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -271,12 +275,12 @@ function _buildOverride() {
               let tmp38 = filename;
               let tmp39 = str2;
               let _HermesInternal2 = HermesInternal;
-              let str3 = "Bad layer file \"";
+              let str3 = 'Bad layer file "';
               let str4 = "/";
-              let str5 = "\": ";
+              let str5 = '": ';
               let tmp40 = new.target;
               let tmp41 = new.target;
-              let error2 = new Error("Bad layer file \"" + folder + "/" + filename + "\": " + str2);
+              let error2 = new Error('Bad layer file "' + folder + "/" + filename + '": ' + str2);
               let tmp43 = error2;
               throw error2;
             } else {
@@ -338,7 +342,7 @@ let c8 = 0;
 keys = keys.create((arg0) => {
   closure_0 = arg0;
   let obj = { override: null, status: "idle", error: null, loadFromDevice: null, clear: null };
-  closure_1 = callback(function*() {
+  closure_1 = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -429,7 +433,10 @@ keys = keys.create((arg0) => {
               c5 = 3;
               return { value: "HermesInternal", done: null };
             } else if (null == closure_2) {
-              closure_1_0({ status: "error", error: "No frame on device. Ask Cap to push one (or run pushFrameOverride.mjs)." });
+              closure_1_0({
+                status: "error",
+                error: "No frame on device. Ask Cap to push one (or run pushFrameOverride.mjs).",
+              });
               c3 = 0;
               c5 = 3;
               const obj4 = { value: null, done: true };
@@ -485,7 +492,7 @@ keys = keys.create((arg0) => {
       }
     }
   });
-  obj[3] = function() {
+  obj[3] = function () {
     const self = this;
     const apply = closure_1.apply;
     if (typeof apply === "unknown") {
@@ -502,6 +509,8 @@ keys = keys.create((arg0) => {
   return obj;
 });
 const tmp3 = new timestampDefault("FramePreviewOverrideStore");
-const result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideStore.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideStore.tsx",
+);
 
 export const useFramePreviewOverrideStore = keys;

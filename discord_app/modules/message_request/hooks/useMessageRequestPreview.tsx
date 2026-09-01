@@ -19,7 +19,7 @@ function loadMessageRequestData() {
 }
 function _loadMessageRequestData() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c4 === 2) {
       c4 = 3;
       HermesBuiltin.throwTypeError();
@@ -108,7 +108,7 @@ function loadMessageRequestDataHelper() {
 }
 function _loadMessageRequestDataHelper() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c11 === 2) {
       c11 = 3;
       HermesBuiltin.throwTypeError();
@@ -222,7 +222,11 @@ function _loadMessageRequestDataHelper() {
               let tmp16 = lib2;
               let tmp17 = closure_2;
               obj = lib2(closure_2[8]);
-              let obj5 = { type: "LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS", requestedChannelIds: null, supplementalData: null };
+              let obj5 = {
+                type: "LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS",
+                requestedChannelIds: null,
+                supplementalData: null,
+              };
               let tmp18 = lib;
               obj5[1] = lib;
               let tmp19 = lib2;
@@ -306,26 +310,34 @@ export const useMessageRequestPreview = function useMessageRequestPreview(channe
   }
   const items = [closure_6, closure_4, closure_5];
   const items1 = [id];
-  const stateFromStoresObject = id(589).useStateFromStoresObject(items, () => {
-    const lastMessageIdResult = closure_1_5.lastMessageId(id);
-    const messageRequestPreview = closure_1_6.getMessageRequestPreview(id);
-    if (null == messageRequestPreview.message) {
-      if (null != lastMessageIdResult) {
-        const message = closure_1_4.getMessage(id, lastMessageIdResult);
-        if (null != message) {
-          const obj = { loaded: true, error: false, message: null };
-          obj[2] = message;
-          return obj;
+  const stateFromStoresObject = id(589).useStateFromStoresObject(
+    items,
+    () => {
+      const lastMessageIdResult = closure_1_5.lastMessageId(id);
+      const messageRequestPreview = closure_1_6.getMessageRequestPreview(id);
+      if (null == messageRequestPreview.message) {
+        if (null != lastMessageIdResult) {
+          const message = closure_1_4.getMessage(id, lastMessageIdResult);
+          if (null != message) {
+            const obj = { loaded: true, error: false, message: null };
+            obj[2] = message;
+            return obj;
+          }
         }
       }
-    }
-    return messageRequestPreview;
-  }, items1);
+      return messageRequestPreview;
+    },
+    items1,
+  );
   ({ loaded, message, error } = stateFromStoresObject);
   const obj2 = id(589);
   const items2 = [closure_6];
   const items3 = [id];
-  const stateFromStores = id(589).useStateFromStores(items2, () => closure_1_6.shouldLoadMessageRequestPreview(id), items3);
+  const stateFromStores = id(589).useStateFromStores(
+    items2,
+    () => closure_1_6.shouldLoadMessageRequestPreview(id),
+    items3,
+  );
   if (flag) {
     flag = !loaded;
   }

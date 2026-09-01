@@ -16,8 +16,20 @@ const tmp2 = new setOptionsDefault();
 const result = set.fileFinishedImporting("modules/messages/native/long_press/LongPressMessageChatItemPreview.tsx");
 
 export default function LongPressMessageChatItemPreview(message) {
-  const obj = { rowGenerator: closure_4, message: message.message, maxHeight: callback().chatItem.maxHeight, backgroundColor: null, pointerEvents: "none" };
+  const obj = {
+    rowGenerator: closure_4,
+    message: message.message,
+    maxHeight: callback().chatItem.maxHeight,
+    backgroundColor: null,
+    pointerEvents: "none",
+  };
   const tmp = callback();
   obj[3] = ThemesDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT;
-  return jsx(DCDChatItemDefault, { rowGenerator: closure_4, message: message.message, maxHeight: callback().chatItem.maxHeight, backgroundColor: null, pointerEvents: "none" });
-};
+  return jsx(DCDChatItemDefault, {
+    rowGenerator: closure_4,
+    message: message.message,
+    maxHeight: callback().chatItem.maxHeight,
+    backgroundColor: null,
+    pointerEvents: "none",
+  });
+}

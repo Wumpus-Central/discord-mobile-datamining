@@ -32,7 +32,17 @@ function handleFetchStart() {
 }
 function handleInitialLoad(arg0) {
   ({ linkedUsers, familyCenterTeenActivity, ageGroup } = arg0);
-  ({ actions, guilds, totals, spendingLimit, monthlyPurchases, invoices, gifts, teenId: c10, rangeStartId: c11 } = familyCenterTeenActivity);
+  ({
+    actions,
+    guilds,
+    totals,
+    spendingLimit,
+    monthlyPurchases,
+    invoices,
+    gifts,
+    teenId: c10,
+    rangeStartId: c11,
+  } = familyCenterTeenActivity);
   closure_0 = undefined;
   ({ topUserActivities, topGuildActivities, totalSpendAmount, totalSpendCurrency } = familyCenterTeenActivity);
   const tmp = freshTeenActivityWithMap();
@@ -147,7 +157,17 @@ function handleTeenActivityFetch(familyCenterTeenActivity) {
   if (undefined === familyCenterTeenActivity) {
     return false;
   } else {
-    ({ actions, totals, guilds, invoices, gifts, spendingLimit, monthlyPurchases, teenId: c10, rangeStartId: c11 } = familyCenterTeenActivity);
+    ({
+      actions,
+      totals,
+      guilds,
+      invoices,
+      gifts,
+      spendingLimit,
+      monthlyPurchases,
+      teenId: c10,
+      rangeStartId: c11,
+    } = familyCenterTeenActivity);
     closure_0 = undefined;
     ({ topUserActivities, topGuildActivities, totalSpendAmount, totalSpendCurrency } = familyCenterTeenActivity);
     const tmp7 = freshTeenActivityWithMap();
@@ -163,7 +183,9 @@ function handleTeenActivityFetch(familyCenterTeenActivity) {
       let obj = {};
       const merged = Object.assign(arg0);
       obj = {};
-      const merged1 = Object.assign(lib(1426).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
+      const merged1 = Object.assign(
+        lib(1426).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
+      );
       let num = approximate_member_count.approximate_member_count;
       if (num == null) {
         num = 0;
@@ -340,7 +362,16 @@ function reset() {
   c16 = null;
   c17 = null;
   closure_14 = freshTeenActivityWithMap();
-  closure_15 = { [closure_9.USER_ADD]: 0, [closure_9.GUILD_ADD]: 0, [closure_9.USER_INTERACTION]: 0, [closure_9.GUILD_INTERACTION]: 0, [closure_9.USER_CALLED]: 0, [closure_9.TOTAL_VOICE_MINUTES]: 0, [closure_9.PURCHASES]: 0, [closure_9.GIFTS]: 0 };
+  closure_15 = {
+    [closure_9.USER_ADD]: 0,
+    [closure_9.GUILD_ADD]: 0,
+    [closure_9.USER_INTERACTION]: 0,
+    [closure_9.GUILD_INTERACTION]: 0,
+    [closure_9.USER_CALLED]: 0,
+    [closure_9.TOTAL_VOICE_MINUTES]: 0,
+    [closure_9.PURCHASES]: 0,
+    [closure_9.GIFTS]: 0,
+  };
   closure_32 = {};
   c20 = false;
   c21 = null;
@@ -389,7 +420,16 @@ let closure_12 = {};
 let c13 = false;
 let closure_14 = freshTeenActivityWithMap();
 const PURCHASES = TeenActionDisplayType.PURCHASES;
-let closure_15 = { [TeenActionDisplayType.USER_ADD]: 0, [TeenActionDisplayType.GUILD_ADD]: 0, [TeenActionDisplayType.USER_INTERACTION]: 0, [TeenActionDisplayType.GUILD_INTERACTION]: 0, [TeenActionDisplayType.USER_CALLED]: 0, [TeenActionDisplayType.TOTAL_VOICE_MINUTES]: 0, [PURCHASES]: 0, [TeenActionDisplayType.GIFTS]: 0 };
+let closure_15 = {
+  [TeenActionDisplayType.USER_ADD]: 0,
+  [TeenActionDisplayType.GUILD_ADD]: 0,
+  [TeenActionDisplayType.USER_INTERACTION]: 0,
+  [TeenActionDisplayType.GUILD_INTERACTION]: 0,
+  [TeenActionDisplayType.USER_CALLED]: 0,
+  [TeenActionDisplayType.TOTAL_VOICE_MINUTES]: 0,
+  [PURCHASES]: 0,
+  [TeenActionDisplayType.GIFTS]: 0,
+};
 let c16 = null;
 let c17 = null;
 let pathname;
@@ -411,7 +451,10 @@ if (pathname === _location2) {
       pathname1 = _location2.pathname;
     }
   }
-  REQUESTS = pathname1 === FAMILY_CENTER_SUB_ROUTES.FAMILY_CENTER_SETTINGS ? FamilyCenterSubPages.SETTINGS : FamilyCenterSubPages.ACTIVITY;
+  REQUESTS =
+    pathname1 === FAMILY_CENTER_SUB_ROUTES.FAMILY_CENTER_SETTINGS
+      ? FamilyCenterSubPages.SETTINGS
+      : FamilyCenterSubPages.ACTIVITY;
 }
 let c19 = false;
 let c20 = false;
@@ -435,8 +478,8 @@ class FamilyCenterStore extends tmp4 {
       CONNECTION_OPEN: handleConnectionOpen,
       CURRENT_USER_UPDATE: handleCurrentUserUpdate,
       CACHE_LOADED_LAZY() {
-            return obj.loadCache();
-          },
+        return obj.loadCache();
+      },
       FAMILY_CENTER_INITIAL_LOAD: handleInitialLoad,
       FAMILY_CENTER_FETCH_START: handleFetchStart,
       FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: handleLinkedUserFetch,
@@ -448,7 +491,7 @@ class FamilyCenterStore extends tmp4 {
       FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: handleLinkCodeFetch,
       FAMILY_CENTER_HANDLE_TAB_SELECT: handleTabSelect,
       SET_LOCATION_METADATA: handleSetLocationMetadata,
-      LOGOUT: reset
+      LOGOUT: reset,
     };
     tmp = new tmp(obj, handleSetLocationMetadata, new.target, tmp);
     // ThrowIfThisInitialized (0x7c)
@@ -483,7 +526,9 @@ prototype["loadCache"] = function loadCache() {
       let obj = {};
       const merged = Object.assign(arg0);
       obj = {};
-      const merged1 = Object.assign(lib(1426).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
+      const merged1 = Object.assign(
+        lib(1426).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
+      );
       let num = approximate_member_count.approximate_member_count;
       if (num == null) {
         num = 0;
@@ -707,7 +752,23 @@ prototype["isCurrentUserInRestrictedHours"] = function isCurrentUserInRestricted
 FamilyCenterStore.displayName = "FamilyCenterStore";
 FamilyCenterStore.LATEST_SNAPSHOT_VERSION = 3;
 prototype = undefined;
-let obj = { CONNECTION_OPEN: handleConnectionOpen, CURRENT_USER_UPDATE: handleCurrentUserUpdate, CACHE_LOADED_LAZY: null, FAMILY_CENTER_INITIAL_LOAD: null, FAMILY_CENTER_FETCH_START: null, FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: null, FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: null, FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: null, FAMILY_CENTER_REQUEST_LINK_SUCCESS: null, FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: null, FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: null, FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: null, FAMILY_CENTER_HANDLE_TAB_SELECT: null, SET_LOCATION_METADATA: null, LOGOUT: null };
+let obj = {
+  CONNECTION_OPEN: handleConnectionOpen,
+  CURRENT_USER_UPDATE: handleCurrentUserUpdate,
+  CACHE_LOADED_LAZY: null,
+  FAMILY_CENTER_INITIAL_LOAD: null,
+  FAMILY_CENTER_FETCH_START: null,
+  FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: null,
+  FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: null,
+  FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: null,
+  FAMILY_CENTER_REQUEST_LINK_SUCCESS: null,
+  FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: null,
+  FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: null,
+  FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: null,
+  FAMILY_CENTER_HANDLE_TAB_SELECT: null,
+  SET_LOCATION_METADATA: null,
+  LOGOUT: null,
+};
 class CACHE_LOADED_LAZY {
   constructor() {
     return obj.loadCache();
@@ -726,7 +787,20 @@ obj[11] = handleLinkCodeFetch;
 obj[12] = handleTabSelect;
 obj[13] = handleSetLocationMetadata;
 obj[14] = reset;
-prototype = new prototype(obj, tmp2, tmp, PURCHASES, pathname, _location2, handleConnectionOpen, CACHE_LOADED_LAZY, handleInitialLoad, handleFetchStart, handleLinkedUserFetch, handleTeenActivityFetch);
+prototype = new prototype(
+  obj,
+  tmp2,
+  tmp,
+  PURCHASES,
+  pathname,
+  _location2,
+  handleConnectionOpen,
+  CACHE_LOADED_LAZY,
+  handleInitialLoad,
+  handleFetchStart,
+  handleLinkedUserFetch,
+  handleTeenActivityFetch,
+);
 // ThrowIfThisInitialized (0x7c)
 let result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterStore.tsx");
 

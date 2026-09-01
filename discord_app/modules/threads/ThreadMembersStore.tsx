@@ -193,8 +193,7 @@ function updateFromServerThread(id) {
 const ALL_CHANNEL_TYPES = createChannelRecord.ALL_CHANNEL_TYPES;
 let closure_4 = {};
 const Store = initializeDefault.Store;
-class ThreadMembersStore extends Store {
-}
+class ThreadMembersStore extends Store {}
 const prototype = ThreadMembersStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3);
@@ -282,7 +281,7 @@ const threadMembersStore = new ThreadMembersStore(dispatcherDefault, {
       continue;
     }
     return flag;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/threads/ThreadMembersStore.tsx");
 

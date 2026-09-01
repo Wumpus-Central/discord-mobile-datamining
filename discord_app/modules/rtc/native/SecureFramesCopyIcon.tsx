@@ -16,8 +16,20 @@ export default function SecureFramesCopyIcon(chunks) {
     const obj = chunks(memo[2]);
     chunks(memo[3]).copy(memo);
   }, items1);
-  let obj = { icon: jsx(chunks(memo[5]).CopyIcon, { size: "sm" }), variant: "secondary", onPress: callback, accessibilityLabel: null, size: "sm" };
+  let obj = {
+    icon: jsx(chunks(memo[5]).CopyIcon, { size: "sm" }),
+    variant: "secondary",
+    onPress: callback,
+    accessibilityLabel: null,
+    size: "sm",
+  };
   const intl = chunks(memo[6]).intl;
   obj[3] = intl.string(chunks(memo[6]).t.e7GWjQ);
-  return jsx(chunks(memo[4]).IconButton, { icon: jsx(chunks(memo[5]).CopyIcon, { size: "sm" }), variant: "secondary", onPress: callback, accessibilityLabel: null, size: "sm" });
-};
+  return jsx(chunks(memo[4]).IconButton, {
+    icon: jsx(chunks(memo[5]).CopyIcon, { size: "sm" }),
+    variant: "secondary",
+    onPress: callback,
+    accessibilityLabel: null,
+    size: "sm",
+  });
+}

@@ -20,7 +20,7 @@ export const getResponseOptions = function getResponseOptions() {
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.uoorxi);
   obj[1] = obj.SERIES;
-  const items = [obj, ];
+  const items = [obj];
   obj = { name: null, value: null };
   const intl2 = getSystemLocale.intl;
   obj[0] = intl2.string(getSystemLocale.t.lwZCFT);
@@ -46,7 +46,11 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
         scheduled_start_time1 = guildScheduledEvent.scheduled_start_time;
       }
       const date = new Date(scheduled_start_time1);
-      recurrenceStatus = tmp33Result.getRecurrenceStatus(eventException, obj5.getEventSchedule(guildScheduledEvent, recurrenceId).startTime, date);
+      recurrenceStatus = tmp33Result.getRecurrenceStatus(
+        eventException,
+        obj5.getEventSchedule(guildScheduledEvent, recurrenceId).startTime,
+        date,
+      );
     }
     if (null == recurrenceStatus) {
       if (recurrenceId == null) {

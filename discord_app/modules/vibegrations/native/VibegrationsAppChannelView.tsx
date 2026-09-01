@@ -15,7 +15,13 @@ const require = arg1;
 let closure_13 = createCacheKey.createStyles((paddingBottom) => {
   obj = { container: obj, centered: null, copy: null };
   obj = { flex: 1, paddingBottom };
-  obj = { flex: 1, alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_12 };
+  obj = {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    padding: ThemesDefault.space.PX_24,
+    gap: ThemesDefault.space.PX_12,
+  };
   obj[1] = obj;
   obj[2] = { alignItems: "center", gap: ThemesDefault.space.PX_4 };
   return obj;
@@ -69,7 +75,9 @@ export default function VibegrationsAppChannelView(channel) {
           obj[0] = tmp;
           obj[1] = memo;
           const obj2 = disallowGesture(disallowGesture[13]);
-          disallowGesture(disallowGesture[13]).launchFrame(obj).catch(() => callback(true));
+          disallowGesture(disallowGesture[13])
+            .launchFrame(obj)
+            .catch(() => callback(true));
           const launchFrameResult = disallowGesture(disallowGesture[13]).launchFrame(obj);
         }
       }
@@ -87,12 +95,15 @@ export default function VibegrationsAppChannelView(channel) {
     }
     closure_7.current = id;
   }, items2);
-  const effect2 = obj1.useEffect(() => () => {
-    if (null != ref.current) {
-      closure_1_1(closure_1_2[12]).leaveFrame(tmp.current);
-      const obj = closure_1_1(closure_1_2[12]);
-    }
-  }, []);
+  const effect2 = obj1.useEffect(
+    () => () => {
+      if (null != ref.current) {
+        closure_1_1(closure_1_2[12]).leaveFrame(tmp.current);
+        const obj = closure_1_1(closure_1_2[12]);
+      }
+    },
+    [],
+  );
   _require = tmp13;
   disallowGesture = undefined;
   disallowGesture = undefined;
@@ -141,13 +152,13 @@ export default function VibegrationsAppChannelView(channel) {
     obj2[0] = container.copy;
     const obj3 = { variant: "heading-lg/bold", color: "text-default", children: null };
     obj3[2] = channel.name;
-    const items4 = [callback2(InlineFrameView(tmp2[15]).Text, obj3), ];
+    const items4 = [callback2(InlineFrameView(tmp2[15]).Text, obj3)];
     const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
     const intl = InlineFrameView(tmp2[16]).intl;
     obj4[2] = intl.string(tmp(tmp2[17]).QM4w4h);
     items4[1] = callback2(InlineFrameView(tmp2[15]).Text, obj4);
     obj2[1] = items4;
-    const items5 = [callback3(closure_6, obj2), ];
+    const items5 = [callback3(closure_6, obj2)];
     const obj5 = { variant: "primary", text: null, onPress: null };
     const intl2 = InlineFrameView(tmp2[16]).intl;
     obj5[1] = intl2.string(tmp(tmp2[17]).jLMpUv);
@@ -161,4 +172,4 @@ export default function VibegrationsAppChannelView(channel) {
     obj6[1] = callback2(memo, {});
     tmp21 = callback2(closure_6, obj6);
   }
-};
+}

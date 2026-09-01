@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ CRUNCHYROLL_CLIENT_ID: c5, CRUNCHYROLL_CLIENT_SCOPES: closure_6 } = CRUNCHYROLL_LINK_DEST_ORIGIN);
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkDiscordConsent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkDiscordConsent.tsx",
+);
 
 export default function CrunchyrollLinkDiscordConsent(arg0) {
   let navigation;
@@ -22,6 +24,22 @@ export default function CrunchyrollLinkDiscordConsent(arg0) {
   const callback1 = React.useCallback(() => {
     navigation.push(closure_1_3.ERROR);
   }, items1);
-  obj = { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId: closure_5, scopes: closure_6, onNext: callback, onError: callback1 };
-  return jsx(navigation(9314).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId: closure_5, scopes: closure_6, onNext: callback, onError: callback1 });
-};
+  obj = {
+    platformType: PlatformTypes.CRUNCHYROLL,
+    callbackCode,
+    callbackState,
+    clientId: closure_5,
+    scopes: closure_6,
+    onNext: callback,
+    onError: callback1,
+  };
+  return jsx(navigation(9314).TwoWayLinkDiscordConsent, {
+    platformType: PlatformTypes.CRUNCHYROLL,
+    callbackCode,
+    callbackState,
+    clientId: closure_5,
+    scopes: closure_6,
+    onNext: callback,
+    onError: callback1,
+  });
+}

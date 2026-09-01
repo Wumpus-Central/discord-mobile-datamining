@@ -17,7 +17,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
       closure_0 = arg0;
       c2 = 0;
       c3 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (c3 === 2) {
           c3 = 3;
           HermesBuiltin.throwTypeError();
@@ -88,7 +88,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
       closure_0 = arg0;
       c2 = 0;
       c1 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (c1 === 2) {
           c1 = 3;
           HermesBuiltin.throwTypeError();
@@ -152,10 +152,13 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
   }
   let obj = channel(1499);
   importDefault = obj.useNavigation();
-  const isMessageRequestRestrictedViewer = channel(12004).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
+  const isMessageRequestRestrictedViewer =
+    channel(12004).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
   let obj2 = channel(12004);
   const items = [_onAcceptClick];
-  const stateFromStores = channel(589).useStateFromStores(items, () => _onAcceptClick.getUser(channel.getRecipientId()));
+  const stateFromStores = channel(589).useStateFromStores(items, () =>
+    _onAcceptClick.getUser(channel.getRecipientId()),
+  );
   const obj3 = channel(589);
   obj = {
     user: stateFromStores,
@@ -167,12 +170,18 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
       obj[2] = arr(_undefined[10]);
       obj.open(obj);
     },
-    onRejectSuccess: function handleRejectSuccess() {
-
-    }
+    onRejectSuccess: function handleRejectSuccess() {},
   };
   const messageRequestActions = channel(12006).useMessageRequestActions(obj);
-  ({ acceptMessageRequest: c2, rejectMessageRequest: c3, isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected } = messageRequestActions);
+  ({
+    acceptMessageRequest: c2,
+    rejectMessageRequest: c3,
+    isAcceptLoading,
+    isRejectLoading,
+    isUserProfileLoading,
+    isOptimisticAccepted,
+    isOptimisticRejected,
+  } = messageRequestActions);
   let tmp6 = isAcceptLoading;
   if (!isAcceptLoading) {
     tmp6 = isRejectLoading;
@@ -186,7 +195,19 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
   if (!tmp6) {
     tmp6 = isOptimisticRejected;
   }
-  obj = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
+  obj = {
+    type: "button-action",
+    message: null,
+    subtext: null,
+    buttonPrimaryText: null,
+    buttonPrimaryOnPress: null,
+    buttonPrimaryDisabled: null,
+    buttonPrimaryLoading: null,
+    buttonSecondaryText: null,
+    buttonSecondaryOnPress: null,
+    buttonSecondaryDisabled: null,
+    buttonSecondaryLoading: null,
+  };
   const obj4 = channel(12006);
   const tmp7 = _onRejectClick;
   let intl = tmp(1236).intl;

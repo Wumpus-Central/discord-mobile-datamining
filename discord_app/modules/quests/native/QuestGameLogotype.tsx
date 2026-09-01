@@ -14,7 +14,9 @@ const merged = Object.assign(require("SUBTLE_SPRING").springSlow);
 obj.overshootClamping = true;
 obj = { logo: { marginBottom: ThemesDefault.space.PX_4 } };
 let closure_9 = createCacheKey.createStyles(obj);
-let closure_10 = { code: "function QuestGameLogotypeTsx1(){const{withSpring,logoDimensionStyles,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(logoDimensionStyles==null?0:1,SPRING_CONFIG,'animate-always')};}" };
+let closure_10 = {
+  code: "function QuestGameLogotypeTsx1(){const{withSpring,logoDimensionStyles,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(logoDimensionStyles==null?0:1,SPRING_CONFIG,'animate-always')};}",
+};
 let obj1 = { marginBottom: ThemesDefault.space.PX_4 };
 const memoResult = importAllResult.memo((assetUrl) => {
   assetUrl = assetUrl.assetUrl;

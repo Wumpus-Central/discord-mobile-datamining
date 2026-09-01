@@ -51,12 +51,19 @@ function ForumPostUsername(arg0) {
         obj2[1] = callback(tmp2(1297).RoleDot, obj3);
         tmp23 = callback(tmp20, obj2);
       }
-      const items3 = [tmp23, ];
+      const items3 = [tmp23];
       let tmp25;
       if (tmp17) {
         tmp25 = processColorStringsArray;
       }
-      const obj4 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", gradientColors: null, lineClamp: 1, style: null, children: null };
+      const obj4 = {
+        variant: "text-sm/semibold",
+        color: "mobile-text-heading-primary",
+        gradientColors: null,
+        lineClamp: 1,
+        style: null,
+        children: null,
+      };
       obj4[2] = tmp25;
       const items4 = [{}, textStyle, tmp.authorName];
       obj4[4] = items4;
@@ -71,7 +78,11 @@ function ForumPostUsername(arg0) {
 }
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 }, roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 }, authorName: { overflow: "hidden", flexWrap: "nowrap" } });
+let closure_8 = createCacheKey.createStyles({
+  authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 },
+  roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 },
+  authorName: { overflow: "hidden", flexWrap: "nowrap" },
+});
 const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostUsername.tsx");
 
 export const ForumPostAuthor = function ForumPostAuthor(thread) {
@@ -99,7 +110,18 @@ export const ForumPostAuthor = function ForumPostAuthor(thread) {
   }
   let tmp5Result = null;
   if (null != user) {
-    obj = { thread: null, authorId: null, authorName: null, authorColor: null, authorColors: null, suffix: null, containerStyle: null, roleDotStyle: null, textStyle: null, hasUnreads: null };
+    obj = {
+      thread: null,
+      authorId: null,
+      authorName: null,
+      authorColor: null,
+      authorColors: null,
+      suffix: null,
+      containerStyle: null,
+      roleDotStyle: null,
+      textStyle: null,
+      hasUnreads: null,
+    };
     obj[0] = thread;
     let id;
     if (user != null) {
@@ -126,7 +148,18 @@ export const ForumPostMessageAuthor = function ForumPostMessageAuthor(thread) {
   let obj = useLoadForumUnreadCounts;
   const forumPostMessageAuthor = obj.useForumPostMessageAuthor(message, thread);
   const user = forumPostMessageAuthor.user;
-  obj = { thread, authorId: null, authorName: null, authorColor: null, authorColors: null, suffix: null, containerStyle: null, roleDotStyle: null, textStyle: null, hasUnreads: null };
+  obj = {
+    thread,
+    authorId: null,
+    authorName: null,
+    authorColor: null,
+    authorColors: null,
+    suffix: null,
+    containerStyle: null,
+    roleDotStyle: null,
+    textStyle: null,
+    hasUnreads: null,
+  };
   let id;
   ({ authorName, authorColor, authorColors } = forumPostMessageAuthor);
   if (user != null) {

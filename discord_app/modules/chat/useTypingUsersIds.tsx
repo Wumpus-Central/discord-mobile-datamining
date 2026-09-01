@@ -15,41 +15,45 @@ export const useTypingUserIds = function useTypingUserIds(id, arg1) {
   }
   let items = [closure_4, closure_3, closure_2];
   const items1 = [id, MAX_SAFE_INTEGER];
-  return _require(MAX_SAFE_INTEGER[3]).useStateFromStoresArray(items, () => {
-    const currentUser = closure_1_4.getCurrentUser();
-    if (currentUser != null) {
-      id = currentUser.id;
-    }
-    const typingUsers = closure_1_3.getTypingUsers(closure_0);
-    const items = [];
-    for (const key10013 in typingUsers) {
-      let tmp7 = key10013;
-      let tmp8 = MAX_SAFE_INTEGER;
-      if (items.length >= MAX_SAFE_INTEGER) {
-        break;
-      } else {
-        let tmp3 = closure_1_4;
-        let user = closure_1_4.getUser(key10013);
-        if (null == user) {
-          continue;
+  return _require(MAX_SAFE_INTEGER[3]).useStateFromStoresArray(
+    items,
+    () => {
+      const currentUser = closure_1_4.getCurrentUser();
+      if (currentUser != null) {
+        id = currentUser.id;
+      }
+      const typingUsers = closure_1_3.getTypingUsers(closure_0);
+      const items = [];
+      for (const key10013 in typingUsers) {
+        let tmp7 = key10013;
+        let tmp8 = MAX_SAFE_INTEGER;
+        if (items.length >= MAX_SAFE_INTEGER) {
+          break;
         } else {
-          if (user.id === id) {
+          let tmp3 = closure_1_4;
+          let user = closure_1_4.getUser(key10013);
+          if (null == user) {
             continue;
           } else {
-            let tmp5 = closure_1_2;
-            if (closure_1_2.isBlockedOrIgnored(user.id)) {
+            if (user.id === id) {
               continue;
             } else {
-              let arr = items.push(user.id);
+              let tmp5 = closure_1_2;
+              if (closure_1_2.isBlockedOrIgnored(user.id)) {
+                continue;
+              } else {
+                let arr = items.push(user.id);
+                continue;
+              }
               continue;
             }
             continue;
           }
           continue;
         }
-        continue;
       }
-    }
-    return items;
-  }, items1);
+      return items;
+    },
+    items1,
+  );
 };

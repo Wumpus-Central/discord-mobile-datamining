@@ -26,8 +26,13 @@ function ExternalLinkItem(data) {
 }
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ linksContainer: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 }, headerText: { marginBottom: 8 } });
-const result = set.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsExternalLinkElement.tsx");
+let closure_6 = createCacheKey.createStyles({
+  linksContainer: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 },
+  headerText: { marginBottom: 8 },
+});
+const result = set.fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsExternalLinkElement.tsx",
+);
 
 export default function ExternalLinksElement(elements) {
   elements = elements.elements;
@@ -40,7 +45,13 @@ export default function ExternalLinksElement(elements) {
         obj[0] = tmp.linksContainer;
         let tmp5 = !someResult;
         if (!someResult) {
-          obj = { style: null, variant: "heading-deprecated-12/extrabold", color: "text-default", accessibilityRole: "header", children: null };
+          obj = {
+            style: null,
+            variant: "heading-deprecated-12/extrabold",
+            color: "text-default",
+            accessibilityRole: "header",
+            children: null,
+          };
           obj[0] = tmp.headerText;
           const intl = getSystemLocale.intl;
           obj[4] = intl.string(getSystemLocale.t.hvVgAZ).toUpperCase();
@@ -54,4 +65,4 @@ export default function ExternalLinksElement(elements) {
     }
   }
   return null;
-};
+}

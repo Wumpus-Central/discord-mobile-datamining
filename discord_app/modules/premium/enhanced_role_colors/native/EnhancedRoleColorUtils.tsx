@@ -57,14 +57,16 @@ function processColorStrings(colorStrings) {
     tmp10 = tmp12;
   }
 }
-const result = require("set").fileFinishedImporting("modules/premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx",
+);
 
 export { processColorStrings };
 export const processColorStringsArray = function processColorStringsArray(colorStrings) {
   if (null == colorStrings) {
     return [];
   } else {
-    const items = [, , ];
+    const items = [, ,];
     ({ primaryColor: arr[0], secondaryColor: arr[1], tertiaryColor: arr[2] } = processColorStrings(colorStrings));
     return items.filter(isDiscordFrontendDevelopment.isNotNullish);
   }
@@ -75,7 +77,7 @@ export const useProcessColorStringsArray = function useProcessColorStringsArray(
   if (colorStrings != null) {
     primaryColor = colorStrings.primaryColor;
   }
-  let items = [primaryColor, , ];
+  let items = [primaryColor, ,];
   let secondaryColor;
   if (colorStrings != null) {
     secondaryColor = colorStrings.secondaryColor;
@@ -90,7 +92,7 @@ export const useProcessColorStringsArray = function useProcessColorStringsArray(
     if (null == colorStrings) {
       let items = [];
     } else {
-      const items1 = [, , ];
+      const items1 = [, ,];
       ({ primaryColor: arr[0], secondaryColor: arr[1], tertiaryColor: arr[2] } = closure_1_8(tmp));
       items = items1.filter(colorStrings(closure_1_2[6]).isNotNullish);
       const tmp3 = closure_1_8(tmp);
@@ -98,10 +100,18 @@ export const useProcessColorStringsArray = function useProcessColorStringsArray(
     return items;
   }, items);
 };
-export const isNativeMessageEligibleForEnhancedRoleColors = function isNativeMessageEligibleForEnhancedRoleColors(guildId, id) {
+export const isNativeMessageEligibleForEnhancedRoleColors = function isNativeMessageEligibleForEnhancedRoleColors(
+  guildId,
+  id,
+) {
   return useHasEnhancedRoleColors.getHasEnhancedRoleColors(guildId, id);
 };
-export const useIsRoleStyleAndRoleColorsEligibleForERC = function useIsRoleStyleAndRoleColorsEligibleForERC(guildId, id, stateFromStores, processColorStringsArray) {
+export const useIsRoleStyleAndRoleColorsEligibleForERC = function useIsRoleStyleAndRoleColorsEligibleForERC(
+  guildId,
+  id,
+  stateFromStores,
+  processColorStringsArray,
+) {
   let tmp = useHasEnhancedRoleColorsDefault(guildId, id);
   if (tmp) {
     tmp = "username" === stateFromStores;

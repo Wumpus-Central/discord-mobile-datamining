@@ -16,23 +16,64 @@ let closure_11 = { mass: 0.3, damping: 30, stiffness: 400 };
 let obj = { mass: 0.4, damping: 100, stiffness: 250 };
 let c13 = 48;
 let closure_14 = { PEEK: "PEEK", OPEN: "OPEN" };
-let closure_15 = { code: "function useHomeDrawerGestureTsx1(){const{dragOffsetX,INITIAL_OPEN_WIDTH}=this.__closure;return dragOffsetX.get()>=INITIAL_OPEN_WIDTH;}" };
-let closure_16 = { code: "function useHomeDrawerGestureTsx2(isOpen,wasOpen){const{gestureState,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;if(!gestureState.get().active||wasOpen===null){return;}if(isOpen===wasOpen){return;}if(isOpen){runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_MEDIUM);}else{runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.SOFT);}}" };
-let closure_17 = { code: "function useHomeDrawerGestureTsx3(){const{panelX,peekX}=this.__closure;return panelX.get()+peekX.get();}" };
-let closure_18 = { code: "function useHomeDrawerGestureTsx4(){const{isDrawerInitialized,initialPanelX,withSpring,panelX,gestureState,HOME_GESTURE_DRAG_PHYSICS,HOME_DRAWER_FLING_PHYSICS}=this.__closure;if(!isDrawerInitialized.get()){return initialPanelX;}return withSpring(panelX.get(),gestureState.get().active?HOME_GESTURE_DRAG_PHYSICS:HOME_DRAWER_FLING_PHYSICS,'animate-always');}" };
-let closure_19 = { code: "function useHomeDrawerGestureTsx5(){const{panelGestureSpringX,peekX}=this.__closure;return panelGestureSpringX.get()+peekX.get();}" };
-let closure_20 = { code: "function useHomeDrawerGestureTsx6(){const{safeAreaInsets,panelSpringTranslateX}=this.__closure;return{flex:1,marginTop:safeAreaInsets.top,transform:[{translateX:panelSpringTranslateX.get()}]};}" };
-let closure_21 = { code: "function useHomeDrawerGestureTsx7(){const{drawerRevealX,MAX_HOME_DRAWER_ANIMATING_WIDTH,GUILD_DESCRIPTION_ANIMATION_DISTANCE,MIN_HOME_DRAWER_TEXT_OPACITY,MIN_HOME_DRAWER_OPEN_WIDTH,GUILD_LABEL_UNSNAPPED_SCALE,withSpring,HOME_DRAWER_FLING_PHYSICS,clamp}=this.__closure;let x=0;if(drawerRevealX.get()<MAX_HOME_DRAWER_ANIMATING_WIDTH){x=Math.min(GUILD_DESCRIPTION_ANIMATION_DISTANCE,drawerRevealX.get()/MAX_HOME_DRAWER_ANIMATING_WIDTH*GUILD_DESCRIPTION_ANIMATION_DISTANCE);}const opacity=MIN_HOME_DRAWER_TEXT_OPACITY+drawerRevealX.get()/MIN_HOME_DRAWER_OPEN_WIDTH*(1-MIN_HOME_DRAWER_TEXT_OPACITY);const scale=drawerRevealX.get()>=MAX_HOME_DRAWER_ANIMATING_WIDTH?1:GUILD_LABEL_UNSNAPPED_SCALE;return{transform:[{translateX:withSpring(x,HOME_DRAWER_FLING_PHYSICS)},{scale:withSpring(scale,HOME_DRAWER_FLING_PHYSICS)}],opacity:withSpring(clamp(opacity,0,1),HOME_DRAWER_FLING_PHYSICS)};}" };
-let closure_22 = { code: "function useHomeDrawerGestureTsx8(){const{drawerRevealX,MAX_HOME_DRAWER_ANIMATING_WIDTH,MAX_HOME_DRAWER_ICON_DISTANCE,withSpring,HOME_DRAWER_FLING_PHYSICS}=this.__closure;let x=0;if(drawerRevealX.get()<MAX_HOME_DRAWER_ANIMATING_WIDTH){x=Math.min(MAX_HOME_DRAWER_ICON_DISTANCE,drawerRevealX.get()/MAX_HOME_DRAWER_ANIMATING_WIDTH*MAX_HOME_DRAWER_ICON_DISTANCE);}return{transform:[{translateX:withSpring(x,HOME_DRAWER_FLING_PHYSICS)}]};}" };
-let closure_23 = { code: "function useHomeDrawerGestureTsx9(){const{drawerRevealX,MAX_HOME_DRAWER_ANIMATING_WIDTH,UNREAD_INDICATOR_ANIMATION_DISTANCE,withSpring,HOME_DRAWER_FLING_PHYSICS}=this.__closure;let left=0;if(drawerRevealX.get()<MAX_HOME_DRAWER_ANIMATING_WIDTH){left=-Math.min(UNREAD_INDICATOR_ANIMATION_DISTANCE,drawerRevealX.get()/MAX_HOME_DRAWER_ANIMATING_WIDTH*UNREAD_INDICATOR_ANIMATION_DISTANCE);}return{transform:[{translateX:withSpring(left,HOME_DRAWER_FLING_PHYSICS)}]};}" };
-let closure_24 = { code: "function settleDrawer_useHomeDrawerGestureTsx10(shouldOpen){const{panelX,maxX,runOnJS,setHomeDrawerState}=this.__closure;panelX.set(shouldOpen?maxX:0);runOnJS(setHomeDrawerState)(shouldOpen);}" };
-let closure_25 = { code: "function shouldOpenFromPosition_useHomeDrawerGestureTsx11(){const{panelX,FRACTION_OF_WIDTH_FOR_DRAWER_TO_REMAIN_OPEN,maxX,INITIAL_OPEN_WIDTH,dragOffsetX}=this.__closure;if(panelX.get()===0)return false;if(panelX.get()>FRACTION_OF_WIDTH_FOR_DRAWER_TO_REMAIN_OPEN*maxX)return true;if(panelX.get()>=INITIAL_OPEN_WIDTH&&dragOffsetX.get()>0)return true;return false;}" };
-let closure_26 = { code: "function useHomeDrawerGestureTsx12(){const{panelX,maxX,settleDrawer,shouldOpenFromPosition,isPanelTouchActive,runOnJS,noteInteraction,gestureState,dragOffsetX}=this.__closure;if(panelX.get()>0&&panelX.get()<maxX){settleDrawer(shouldOpenFromPosition());}isPanelTouchActive.set(false);runOnJS(noteInteraction)();gestureState.set({active:false,initialX:0,initialY:0,panelX:0});dragOffsetX.set(0);}" };
-let closure_27 = { code: "function useHomeDrawerGestureTsx13(event){const{FLING_MIN_VELOCITY,dragOffsetX,FLING_MIN_DISTANCE,INITIAL_OPEN_WIDTH,runOnJS,triggerHapticFeedback,HapticFeedbackTypes,shouldOpenFromPosition,settleDrawer,gestureState,trackServerDrawerInteract,ServerDrawerInteractAction}=this.__closure;let shouldOpen;if(event.velocityX>FLING_MIN_VELOCITY&&dragOffsetX.get()>FLING_MIN_DISTANCE){shouldOpen=true;if(dragOffsetX.get()<INITIAL_OPEN_WIDTH){runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_MEDIUM);}}else if(event.velocityX<-FLING_MIN_VELOCITY&&dragOffsetX.get()<-FLING_MIN_DISTANCE){shouldOpen=false;runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.SOFT);}else{shouldOpen=shouldOpenFromPosition();}settleDrawer(shouldOpen);const wasOpenAtStart=gestureState.get().panelX>0;if(shouldOpen&&!wasOpenAtStart){runOnJS(trackServerDrawerInteract)(ServerDrawerInteractAction.OPEN);}else if(!wasOpenAtStart){runOnJS(trackServerDrawerInteract)(ServerDrawerInteractAction.PEEK);}}" };
-let closure_28 = { code: "function useHomeDrawerGestureTsx14(event){const{gestureState,dragOffsetX,INITIAL_OPEN_WIDTH,panelX,DRAWER_RESISTANCE}=this.__closure;if(!gestureState.get().active)return;const newXOffset=event.absoluteX-gestureState.get().initialX;dragOffsetX.set(newXOffset);const basePosition=newXOffset+gestureState.get().panelX;if(gestureState.get().panelX===0&&newXOffset>=0&&newXOffset<INITIAL_OPEN_WIDTH){panelX.set(Math.max(basePosition/DRAWER_RESISTANCE,0));}else{panelX.set(Math.max(basePosition,0));}}" };
-let closure_29 = { code: "function useHomeDrawerGestureTsx15(event,manager){const{gestureState,panelX,ACTIVATION_MIN_DISTANCE}=this.__closure;if(gestureState.get().active)return;const touchX=event.changedTouches[0].absoluteX;const touchY=event.changedTouches[0].absoluteY;const absoluteXDiff=Math.abs(touchX-gestureState.get().initialX);const absoluteYDiff=Math.abs(touchY-gestureState.get().initialY);if(absoluteYDiff>absoluteXDiff||panelX.get()===0&&touchX<gestureState.get().initialX||panelX.get()>0&&touchX>gestureState.get().initialX){manager.fail();return;}if(absoluteXDiff<ACTIVATION_MIN_DISTANCE){return;}if(panelX.get()===0&&touchX>gestureState.get().initialX){gestureState.set({...gestureState.get(),active:true,initialX:touchX,panelX:panelX.get()});manager.activate();}else if(touchX<gestureState.get().initialX){gestureState.set({...gestureState.get(),active:true,initialX:touchX,panelX:panelX.get()});manager.activate();}}" };
-let closure_30 = { code: "function useHomeDrawerGestureTsx16(event){const{isPanelTouchActive,gestureState,panelX}=this.__closure;isPanelTouchActive.set(true);gestureState.set({active:false,initialX:event.absoluteX,initialY:event.absoluteY,panelX:panelX.get()});}" };
-obj = { gesture: null, panelStyles: null, gestureState: null, panelX: null, panelSpringTranslateX: null, guildsBarLabelDrawerStyle: null, guildsBarIconDrawerStyle: null, guildsBarUnreadDrawerStyle: null };
+let closure_15 = {
+  code: "function useHomeDrawerGestureTsx1(){const{dragOffsetX,INITIAL_OPEN_WIDTH}=this.__closure;return dragOffsetX.get()>=INITIAL_OPEN_WIDTH;}",
+};
+let closure_16 = {
+  code: "function useHomeDrawerGestureTsx2(isOpen,wasOpen){const{gestureState,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;if(!gestureState.get().active||wasOpen===null){return;}if(isOpen===wasOpen){return;}if(isOpen){runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_MEDIUM);}else{runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.SOFT);}}",
+};
+let closure_17 = {
+  code: "function useHomeDrawerGestureTsx3(){const{panelX,peekX}=this.__closure;return panelX.get()+peekX.get();}",
+};
+let closure_18 = {
+  code: "function useHomeDrawerGestureTsx4(){const{isDrawerInitialized,initialPanelX,withSpring,panelX,gestureState,HOME_GESTURE_DRAG_PHYSICS,HOME_DRAWER_FLING_PHYSICS}=this.__closure;if(!isDrawerInitialized.get()){return initialPanelX;}return withSpring(panelX.get(),gestureState.get().active?HOME_GESTURE_DRAG_PHYSICS:HOME_DRAWER_FLING_PHYSICS,'animate-always');}",
+};
+let closure_19 = {
+  code: "function useHomeDrawerGestureTsx5(){const{panelGestureSpringX,peekX}=this.__closure;return panelGestureSpringX.get()+peekX.get();}",
+};
+let closure_20 = {
+  code: "function useHomeDrawerGestureTsx6(){const{safeAreaInsets,panelSpringTranslateX}=this.__closure;return{flex:1,marginTop:safeAreaInsets.top,transform:[{translateX:panelSpringTranslateX.get()}]};}",
+};
+let closure_21 = {
+  code: "function useHomeDrawerGestureTsx7(){const{drawerRevealX,MAX_HOME_DRAWER_ANIMATING_WIDTH,GUILD_DESCRIPTION_ANIMATION_DISTANCE,MIN_HOME_DRAWER_TEXT_OPACITY,MIN_HOME_DRAWER_OPEN_WIDTH,GUILD_LABEL_UNSNAPPED_SCALE,withSpring,HOME_DRAWER_FLING_PHYSICS,clamp}=this.__closure;let x=0;if(drawerRevealX.get()<MAX_HOME_DRAWER_ANIMATING_WIDTH){x=Math.min(GUILD_DESCRIPTION_ANIMATION_DISTANCE,drawerRevealX.get()/MAX_HOME_DRAWER_ANIMATING_WIDTH*GUILD_DESCRIPTION_ANIMATION_DISTANCE);}const opacity=MIN_HOME_DRAWER_TEXT_OPACITY+drawerRevealX.get()/MIN_HOME_DRAWER_OPEN_WIDTH*(1-MIN_HOME_DRAWER_TEXT_OPACITY);const scale=drawerRevealX.get()>=MAX_HOME_DRAWER_ANIMATING_WIDTH?1:GUILD_LABEL_UNSNAPPED_SCALE;return{transform:[{translateX:withSpring(x,HOME_DRAWER_FLING_PHYSICS)},{scale:withSpring(scale,HOME_DRAWER_FLING_PHYSICS)}],opacity:withSpring(clamp(opacity,0,1),HOME_DRAWER_FLING_PHYSICS)};}",
+};
+let closure_22 = {
+  code: "function useHomeDrawerGestureTsx8(){const{drawerRevealX,MAX_HOME_DRAWER_ANIMATING_WIDTH,MAX_HOME_DRAWER_ICON_DISTANCE,withSpring,HOME_DRAWER_FLING_PHYSICS}=this.__closure;let x=0;if(drawerRevealX.get()<MAX_HOME_DRAWER_ANIMATING_WIDTH){x=Math.min(MAX_HOME_DRAWER_ICON_DISTANCE,drawerRevealX.get()/MAX_HOME_DRAWER_ANIMATING_WIDTH*MAX_HOME_DRAWER_ICON_DISTANCE);}return{transform:[{translateX:withSpring(x,HOME_DRAWER_FLING_PHYSICS)}]};}",
+};
+let closure_23 = {
+  code: "function useHomeDrawerGestureTsx9(){const{drawerRevealX,MAX_HOME_DRAWER_ANIMATING_WIDTH,UNREAD_INDICATOR_ANIMATION_DISTANCE,withSpring,HOME_DRAWER_FLING_PHYSICS}=this.__closure;let left=0;if(drawerRevealX.get()<MAX_HOME_DRAWER_ANIMATING_WIDTH){left=-Math.min(UNREAD_INDICATOR_ANIMATION_DISTANCE,drawerRevealX.get()/MAX_HOME_DRAWER_ANIMATING_WIDTH*UNREAD_INDICATOR_ANIMATION_DISTANCE);}return{transform:[{translateX:withSpring(left,HOME_DRAWER_FLING_PHYSICS)}]};}",
+};
+let closure_24 = {
+  code: "function settleDrawer_useHomeDrawerGestureTsx10(shouldOpen){const{panelX,maxX,runOnJS,setHomeDrawerState}=this.__closure;panelX.set(shouldOpen?maxX:0);runOnJS(setHomeDrawerState)(shouldOpen);}",
+};
+let closure_25 = {
+  code: "function shouldOpenFromPosition_useHomeDrawerGestureTsx11(){const{panelX,FRACTION_OF_WIDTH_FOR_DRAWER_TO_REMAIN_OPEN,maxX,INITIAL_OPEN_WIDTH,dragOffsetX}=this.__closure;if(panelX.get()===0)return false;if(panelX.get()>FRACTION_OF_WIDTH_FOR_DRAWER_TO_REMAIN_OPEN*maxX)return true;if(panelX.get()>=INITIAL_OPEN_WIDTH&&dragOffsetX.get()>0)return true;return false;}",
+};
+let closure_26 = {
+  code: "function useHomeDrawerGestureTsx12(){const{panelX,maxX,settleDrawer,shouldOpenFromPosition,isPanelTouchActive,runOnJS,noteInteraction,gestureState,dragOffsetX}=this.__closure;if(panelX.get()>0&&panelX.get()<maxX){settleDrawer(shouldOpenFromPosition());}isPanelTouchActive.set(false);runOnJS(noteInteraction)();gestureState.set({active:false,initialX:0,initialY:0,panelX:0});dragOffsetX.set(0);}",
+};
+let closure_27 = {
+  code: "function useHomeDrawerGestureTsx13(event){const{FLING_MIN_VELOCITY,dragOffsetX,FLING_MIN_DISTANCE,INITIAL_OPEN_WIDTH,runOnJS,triggerHapticFeedback,HapticFeedbackTypes,shouldOpenFromPosition,settleDrawer,gestureState,trackServerDrawerInteract,ServerDrawerInteractAction}=this.__closure;let shouldOpen;if(event.velocityX>FLING_MIN_VELOCITY&&dragOffsetX.get()>FLING_MIN_DISTANCE){shouldOpen=true;if(dragOffsetX.get()<INITIAL_OPEN_WIDTH){runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_MEDIUM);}}else if(event.velocityX<-FLING_MIN_VELOCITY&&dragOffsetX.get()<-FLING_MIN_DISTANCE){shouldOpen=false;runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.SOFT);}else{shouldOpen=shouldOpenFromPosition();}settleDrawer(shouldOpen);const wasOpenAtStart=gestureState.get().panelX>0;if(shouldOpen&&!wasOpenAtStart){runOnJS(trackServerDrawerInteract)(ServerDrawerInteractAction.OPEN);}else if(!wasOpenAtStart){runOnJS(trackServerDrawerInteract)(ServerDrawerInteractAction.PEEK);}}",
+};
+let closure_28 = {
+  code: "function useHomeDrawerGestureTsx14(event){const{gestureState,dragOffsetX,INITIAL_OPEN_WIDTH,panelX,DRAWER_RESISTANCE}=this.__closure;if(!gestureState.get().active)return;const newXOffset=event.absoluteX-gestureState.get().initialX;dragOffsetX.set(newXOffset);const basePosition=newXOffset+gestureState.get().panelX;if(gestureState.get().panelX===0&&newXOffset>=0&&newXOffset<INITIAL_OPEN_WIDTH){panelX.set(Math.max(basePosition/DRAWER_RESISTANCE,0));}else{panelX.set(Math.max(basePosition,0));}}",
+};
+let closure_29 = {
+  code: "function useHomeDrawerGestureTsx15(event,manager){const{gestureState,panelX,ACTIVATION_MIN_DISTANCE}=this.__closure;if(gestureState.get().active)return;const touchX=event.changedTouches[0].absoluteX;const touchY=event.changedTouches[0].absoluteY;const absoluteXDiff=Math.abs(touchX-gestureState.get().initialX);const absoluteYDiff=Math.abs(touchY-gestureState.get().initialY);if(absoluteYDiff>absoluteXDiff||panelX.get()===0&&touchX<gestureState.get().initialX||panelX.get()>0&&touchX>gestureState.get().initialX){manager.fail();return;}if(absoluteXDiff<ACTIVATION_MIN_DISTANCE){return;}if(panelX.get()===0&&touchX>gestureState.get().initialX){gestureState.set({...gestureState.get(),active:true,initialX:touchX,panelX:panelX.get()});manager.activate();}else if(touchX<gestureState.get().initialX){gestureState.set({...gestureState.get(),active:true,initialX:touchX,panelX:panelX.get()});manager.activate();}}",
+};
+let closure_30 = {
+  code: "function useHomeDrawerGestureTsx16(event){const{isPanelTouchActive,gestureState,panelX}=this.__closure;isPanelTouchActive.set(true);gestureState.set({active:false,initialX:event.absoluteX,initialY:event.absoluteY,panelX:panelX.get()});}",
+};
+obj = {
+  gesture: null,
+  panelStyles: null,
+  gestureState: null,
+  panelX: null,
+  panelSpringTranslateX: null,
+  guildsBarLabelDrawerStyle: null,
+  guildsBarIconDrawerStyle: null,
+  guildsBarUnreadDrawerStyle: null,
+};
 obj[0] = Gesture.Pan();
 obj[1] = {};
 obj[2] = createFakeSharedValue.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
@@ -109,7 +150,12 @@ export const useHomeGesture = function useHomeGesture() {
       return;
     }
   }
-  obj = { gestureState, runOnJS: panelX(updateMaxX[7]).runOnJS, triggerHapticFeedback: panelX(updateMaxX[10]).triggerHapticFeedback, HapticFeedbackTypes: panelX(updateMaxX[10]).HapticFeedbackTypes };
+  obj = {
+    gestureState,
+    runOnJS: panelX(updateMaxX[7]).runOnJS,
+    triggerHapticFeedback: panelX(updateMaxX[10]).triggerHapticFeedback,
+    HapticFeedbackTypes: panelX(updateMaxX[10]).HapticFeedbackTypes,
+  };
   F.__closure = obj;
   F.__workletHash = 11947599708940;
   F.__initData = derivedValue;
@@ -287,7 +333,15 @@ export const useHomeGesture = function useHomeGesture() {
       return;
     }
   }
-  obj1 = { isDrawerInitialized: sharedValue1, initialPanelX: num2, withSpring: tmp(tmp2[17]).withSpring, panelX, gestureState, HOME_GESTURE_DRAG_PHYSICS: closure_11, HOME_DRAWER_FLING_PHYSICS: closure_12 };
+  obj1 = {
+    isDrawerInitialized: sharedValue1,
+    initialPanelX: num2,
+    withSpring: tmp(tmp2[17]).withSpring,
+    panelX,
+    gestureState,
+    HOME_GESTURE_DRAG_PHYSICS: closure_11,
+    HOME_DRAWER_FLING_PHYSICS: closure_12,
+  };
   De.__closure = obj1;
   De.__workletHash = 11078734703352;
   De.__initData = num2;
@@ -324,7 +378,7 @@ export const useHomeGesture = function useHomeGesture() {
     let num = 0;
     if (derivedValue.get() < enableHome) {
       const _Math = Math;
-      num = Math.min(12, obj.get() / tmp * 12);
+      num = Math.min(12, (obj.get() / tmp) * 12);
     }
     const result = obj.get() / 150;
     let num3 = 0.98;
@@ -333,7 +387,7 @@ export const useHomeGesture = function useHomeGesture() {
     }
     obj = { transform: null, opacity: null };
     obj = { translateX: panelX(updateMaxX[17]).withSpring(num, closure_12) };
-    const items = [obj, ];
+    const items = [obj];
     obj1 = { scale: null };
     const obj4 = panelX(updateMaxX[17]);
     obj1[0] = panelX(updateMaxX[17]).withSpring(num3, closure_12);
@@ -344,7 +398,17 @@ export const useHomeGesture = function useHomeGesture() {
     obj[1] = obj7.withSpring(panelX(updateMaxX[7]).clamp(result, 0, 1), closure_12);
     return obj;
   }
-  obj2 = { drawerRevealX: derivedValue, MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome, GUILD_DESCRIPTION_ANIMATION_DISTANCE: 12, MIN_HOME_DRAWER_TEXT_OPACITY: 0, MIN_HOME_DRAWER_OPEN_WIDTH: 150, GUILD_LABEL_UNSNAPPED_SCALE: 0.98, withSpring: tmp(tmp2[17]).withSpring, HOME_DRAWER_FLING_PHYSICS: closure_12, clamp: tmp(tmp2[7]).clamp };
+  obj2 = {
+    drawerRevealX: derivedValue,
+    MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome,
+    GUILD_DESCRIPTION_ANIMATION_DISTANCE: 12,
+    MIN_HOME_DRAWER_TEXT_OPACITY: 0,
+    MIN_HOME_DRAWER_OPEN_WIDTH: 150,
+    GUILD_LABEL_UNSNAPPED_SCALE: 0.98,
+    withSpring: tmp(tmp2[17]).withSpring,
+    HOME_DRAWER_FLING_PHYSICS: closure_12,
+    clamp: tmp(tmp2[7]).clamp,
+  };
   pe.__closure = obj2;
   pe.__workletHash = 11639414708115;
   pe.__initData = derivedValue2;
@@ -358,7 +422,7 @@ export const useHomeGesture = function useHomeGesture() {
         tmp2 = globalThis;
         _Math = Math;
         num2 = 8;
-        num = Math.min(8, obj.get() / tmp * 8);
+        num = Math.min(8, (obj.get() / tmp) * 8);
       }
       obj = { transform: null };
       obj1 = { translateX: null };
@@ -371,11 +435,23 @@ export const useHomeGesture = function useHomeGesture() {
     }
   }
   const tmpResult8 = panelX(updateMaxX[7]);
-  Oe.__closure = { drawerRevealX: derivedValue, MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome, MAX_HOME_DRAWER_ICON_DISTANCE: 8, withSpring: panelX(updateMaxX[17]).withSpring, HOME_DRAWER_FLING_PHYSICS: closure_12 };
+  Oe.__closure = {
+    drawerRevealX: derivedValue,
+    MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome,
+    MAX_HOME_DRAWER_ICON_DISTANCE: 8,
+    withSpring: panelX(updateMaxX[17]).withSpring,
+    HOME_DRAWER_FLING_PHYSICS: closure_12,
+  };
   Oe.__workletHash = 16360618332998;
   Oe.__initData = animatedStyle;
   closure_24 = tmpResult8.useAnimatedStyle(Oe);
-  let obj3 = { drawerRevealX: derivedValue, MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome, MAX_HOME_DRAWER_ICON_DISTANCE: 8, withSpring: panelX(updateMaxX[17]).withSpring, HOME_DRAWER_FLING_PHYSICS: closure_12 };
+  let obj3 = {
+    drawerRevealX: derivedValue,
+    MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome,
+    MAX_HOME_DRAWER_ICON_DISTANCE: 8,
+    withSpring: panelX(updateMaxX[17]).withSpring,
+    HOME_DRAWER_FLING_PHYSICS: closure_12,
+  };
   class Te {
     constructor() {
       obj = closure_16;
@@ -384,7 +460,7 @@ export const useHomeGesture = function useHomeGesture() {
         tmp2 = globalThis;
         _Math = Math;
         num2 = 4;
-        num = -Math.min(4, obj.get() / tmp * 4);
+        num = -Math.min(4, (obj.get() / tmp) * 4);
       }
       obj = { transform: null };
       obj1 = { translateX: null };
@@ -396,7 +472,13 @@ export const useHomeGesture = function useHomeGesture() {
       return obj;
     }
   }
-  obj4 = { drawerRevealX: derivedValue, MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome, UNREAD_INDICATOR_ANIMATION_DISTANCE: 4, withSpring: tmp(tmp2[17]).withSpring, HOME_DRAWER_FLING_PHYSICS: closure_12 };
+  obj4 = {
+    drawerRevealX: derivedValue,
+    MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome,
+    UNREAD_INDICATOR_ANIMATION_DISTANCE: 4,
+    withSpring: tmp(tmp2[17]).withSpring,
+    HOME_DRAWER_FLING_PHYSICS: closure_12,
+  };
   Te.__closure = obj4;
   Te.__workletHash = 8561772429103;
   Te.__initData = closure_23;
@@ -411,7 +493,12 @@ export const useHomeGesture = function useHomeGesture() {
       const result = settleDrawer.set(num);
       settleDrawer(closure_1_2[7]).runOnJS(settleDrawer(closure_1_2[16]).setHomeDrawerState)(arg0);
     }
-    obj = { panelX: settleDrawer, maxX, runOnJS: panelX(updateMaxX[7]).runOnJS, setHomeDrawerState: panelX(updateMaxX[16]).setHomeDrawerState };
+    obj = {
+      panelX: settleDrawer,
+      maxX,
+      runOnJS: panelX(updateMaxX[7]).runOnJS,
+      setHomeDrawerState: panelX(updateMaxX[16]).setHomeDrawerState,
+    };
     settleDrawer.__closure = obj;
     settleDrawer.__workletHash = 8226756372642;
     settleDrawer.__initData = closure_24;
@@ -430,7 +517,13 @@ export const useHomeGesture = function useHomeGesture() {
       }
       return tmp;
     }
-    obj = { panelX: settleDrawer, FRACTION_OF_WIDTH_FOR_DRAWER_TO_REMAIN_OPEN: 0.5, maxX, INITIAL_OPEN_WIDTH: callback, dragOffsetX: sharedValue };
+    obj = {
+      panelX: settleDrawer,
+      FRACTION_OF_WIDTH_FOR_DRAWER_TO_REMAIN_OPEN: 0.5,
+      maxX,
+      INITIAL_OPEN_WIDTH: callback,
+      dragOffsetX: sharedValue,
+    };
     shouldOpenFromPosition.__closure = obj;
     shouldOpenFromPosition.__workletHash = 11654084007114;
     shouldOpenFromPosition.__initData = closure_25;
@@ -441,7 +534,12 @@ export const useHomeGesture = function useHomeGesture() {
     const manualActivationResult = Gesture.Pan().enabled(isFocused).manualActivation(true);
     const fn = function _(absoluteX) {
       const result = closure_5.set(true);
-      const result1 = shouldOpenFromPosition.set({ active: false, initialX: absoluteX.absoluteX, initialY: absoluteX.absoluteY, panelX: settleDrawer.get() });
+      const result1 = shouldOpenFromPosition.set({
+        active: false,
+        initialX: absoluteX.absoluteX,
+        initialY: absoluteX.absoluteY,
+        panelX: settleDrawer.get(),
+      });
     };
     obj = { isPanelTouchActive, gestureState: shouldOpenFromPosition, panelX: settleDrawer };
     fn.__closure = obj;
@@ -467,7 +565,7 @@ export const useHomeGesture = function useHomeGesture() {
                 const result = obj.set(obj);
                 activate.activate();
               }
-              tmp5 = 0 === obj3.get() && absoluteX > obj.get().initialX || absoluteX < obj.get().initialX;
+              tmp5 = (0 === obj3.get() && absoluteX > obj.get().initialX) || absoluteX < obj.get().initialX;
             }
           }
         }
@@ -495,7 +593,13 @@ export const useHomeGesture = function useHomeGesture() {
         const result2 = settleDrawer.set(Math.max(sum, 0));
       }
     };
-    fn3.__closure = { gestureState: shouldOpenFromPosition, dragOffsetX: sharedValue, INITIAL_OPEN_WIDTH: callback, panelX: settleDrawer, DRAWER_RESISTANCE: 3 };
+    fn3.__closure = {
+      gestureState: shouldOpenFromPosition,
+      dragOffsetX: sharedValue,
+      INITIAL_OPEN_WIDTH: callback,
+      panelX: settleDrawer,
+      DRAWER_RESISTANCE: 3,
+    };
     fn3.__workletHash = 15118338555898;
     fn3.__initData = closure_1_28;
     const onTouchesMoveResult = result.maxPointers(1).onBegin(fn).onTouchesMove(fn2);
@@ -505,7 +609,9 @@ export const useHomeGesture = function useHomeGesture() {
           let flag = true;
           if (closure_1_7.get() < callback) {
             const obj2 = panelX(updateMaxX[7]);
-            panelX(updateMaxX[7]).runOnJS(panelX(updateMaxX[10]).triggerHapticFeedback)(panelX(updateMaxX[10]).HapticFeedbackTypes.IMPACT_MEDIUM);
+            panelX(updateMaxX[7]).runOnJS(panelX(updateMaxX[10]).triggerHapticFeedback)(
+              panelX(updateMaxX[10]).HapticFeedbackTypes.IMPACT_MEDIUM,
+            );
             flag = true;
             const runOnJSResult = panelX(updateMaxX[7]).runOnJS(panelX(updateMaxX[10]).triggerHapticFeedback);
           }
@@ -535,7 +641,9 @@ export const useHomeGesture = function useHomeGesture() {
       if (velocityX.velocityX < -50) {
         if (closure_1_7.get() < -40) {
           obj = panelX(updateMaxX[7]);
-          panelX(updateMaxX[7]).runOnJS(panelX(updateMaxX[10]).triggerHapticFeedback)(panelX(updateMaxX[10]).HapticFeedbackTypes.SOFT);
+          panelX(updateMaxX[7]).runOnJS(panelX(updateMaxX[10]).triggerHapticFeedback)(
+            panelX(updateMaxX[10]).HapticFeedbackTypes.SOFT,
+          );
           flag = false;
           const runOnJSResult1 = panelX(updateMaxX[7]).runOnJS(panelX(updateMaxX[10]).triggerHapticFeedback);
         }
@@ -557,10 +665,36 @@ export const useHomeGesture = function useHomeGesture() {
       }
     };
     const onChangeResult = result.maxPointers(1).onBegin(fn).onTouchesMove(fn2).onChange(fn3);
-    fn4.__closure = { FLING_MIN_VELOCITY: 50, dragOffsetX: sharedValue, FLING_MIN_DISTANCE: 40, INITIAL_OPEN_WIDTH: callback, runOnJS: panelX(updateMaxX[7]).runOnJS, triggerHapticFeedback: panelX(updateMaxX[10]).triggerHapticFeedback, HapticFeedbackTypes: panelX(updateMaxX[10]).HapticFeedbackTypes, shouldOpenFromPosition, settleDrawer, gestureState: shouldOpenFromPosition, trackServerDrawerInteract: callback, ServerDrawerInteractAction: isFocused };
+    fn4.__closure = {
+      FLING_MIN_VELOCITY: 50,
+      dragOffsetX: sharedValue,
+      FLING_MIN_DISTANCE: 40,
+      INITIAL_OPEN_WIDTH: callback,
+      runOnJS: panelX(updateMaxX[7]).runOnJS,
+      triggerHapticFeedback: panelX(updateMaxX[10]).triggerHapticFeedback,
+      HapticFeedbackTypes: panelX(updateMaxX[10]).HapticFeedbackTypes,
+      shouldOpenFromPosition,
+      settleDrawer,
+      gestureState: shouldOpenFromPosition,
+      trackServerDrawerInteract: callback,
+      ServerDrawerInteractAction: isFocused,
+    };
     fn4.__workletHash = 10902226233549;
     fn4.__initData = first;
-    obj1 = { FLING_MIN_VELOCITY: 50, dragOffsetX: sharedValue, FLING_MIN_DISTANCE: 40, INITIAL_OPEN_WIDTH: callback, runOnJS: panelX(updateMaxX[7]).runOnJS, triggerHapticFeedback: panelX(updateMaxX[10]).triggerHapticFeedback, HapticFeedbackTypes: panelX(updateMaxX[10]).HapticFeedbackTypes, shouldOpenFromPosition, settleDrawer, gestureState: shouldOpenFromPosition, trackServerDrawerInteract: callback, ServerDrawerInteractAction: isFocused };
+    obj1 = {
+      FLING_MIN_VELOCITY: 50,
+      dragOffsetX: sharedValue,
+      FLING_MIN_DISTANCE: 40,
+      INITIAL_OPEN_WIDTH: callback,
+      runOnJS: panelX(updateMaxX[7]).runOnJS,
+      triggerHapticFeedback: panelX(updateMaxX[10]).triggerHapticFeedback,
+      HapticFeedbackTypes: panelX(updateMaxX[10]).HapticFeedbackTypes,
+      shouldOpenFromPosition,
+      settleDrawer,
+      gestureState: shouldOpenFromPosition,
+      trackServerDrawerInteract: callback,
+      ServerDrawerInteractAction: isFocused,
+    };
     const fn5 = function e() {
       let tmp = settleDrawer.get() > 0;
       if (tmp) {
@@ -600,14 +734,40 @@ export const useHomeGesture = function useHomeGesture() {
       const result3 = closure_1_7.set(0);
     };
     const onEndResult = onChangeResult.onEnd(fn4);
-    fn5.__closure = { panelX: settleDrawer, maxX, settleDrawer, shouldOpenFromPosition, isPanelTouchActive, runOnJS: panelX(updateMaxX[7]).runOnJS, noteInteraction, gestureState: shouldOpenFromPosition, dragOffsetX: sharedValue };
+    fn5.__closure = {
+      panelX: settleDrawer,
+      maxX,
+      settleDrawer,
+      shouldOpenFromPosition,
+      isPanelTouchActive,
+      runOnJS: panelX(updateMaxX[7]).runOnJS,
+      noteInteraction,
+      gestureState: shouldOpenFromPosition,
+      dragOffsetX: sharedValue,
+    };
     fn5.__workletHash = 15210416953749;
     fn5.__initData = memo;
     return onEndResult.onFinalize(fn5);
   }, items5);
-  const first = maxX(obj4.useState(() => ({ gesture: memo, panelStyles: animatedStyle, gestureState, panelX, panelSpringTranslateX: derivedValue2, guildsBarLabelDrawerStyle: closure_23, guildsBarIconDrawerStyle: closure_24, guildsBarUnreadDrawerStyle: closure_25 })), 1)[0];
+  const first = maxX(
+    obj4.useState(() => ({
+      gesture: memo,
+      panelStyles: animatedStyle,
+      gestureState,
+      panelX,
+      panelSpringTranslateX: derivedValue2,
+      guildsBarLabelDrawerStyle: closure_23,
+      guildsBarIconDrawerStyle: closure_24,
+      guildsBarUnreadDrawerStyle: closure_25,
+    })),
+    1,
+  )[0];
   const items6 = [first, enableHome];
-  obj5 = { gesture: memo, panelStyles: animatedStyle, homeDrawerContext: obj4.useMemo(() => ({ homeDrawerState: first, enableHome }), items6) };
+  obj5 = {
+    gesture: memo,
+    panelStyles: animatedStyle,
+    homeDrawerContext: obj4.useMemo(() => ({ homeDrawerState: first, enableHome }), items6),
+  };
   return obj5;
 };
 export const HomeDrawerStateContext = context;

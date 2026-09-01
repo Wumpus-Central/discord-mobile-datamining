@@ -3,7 +3,12 @@ import getUnitIdDefault from "../experiments/apex/ApexExperiment.tsx";
 
 let obj = { 1: null };
 obj[1] = { enabled: true };
-let closure_0 = getUnitIdDefault({ kind: "user", name: "2025-11-global-frame-pool-lock", defaultConfig: { enabled: false }, variations: obj });
+let closure_0 = getUnitIdDefault({
+  kind: "user",
+  name: "2025-11-global-frame-pool-lock",
+  defaultConfig: { enabled: false },
+  variations: obj,
+});
 const result = require("set").fileFinishedImporting("modules/media_engine/GlobalFramePoolLockExperiment.tsx");
 
 export const getGlobalFramePoolLockExperimentConfig = function getGlobalFramePoolLockExperimentConfig(disable) {

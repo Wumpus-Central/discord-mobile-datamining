@@ -4,7 +4,7 @@ import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadle
 import set from "../../../../_runtime/00002_set.js";
 
 const PlatformTypes = ME.PlatformTypes;
-const items = [, , , ];
+const items = [, , ,];
 ({ LEAGUE_OF_LEGENDS: arr[0], ROBLOX: arr[1], TWITCH: arr[2], YOUTUBE: arr[3] } = PlatformTypes);
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/user_profile/utils/getActivityPlatform.tsx");
@@ -40,4 +40,4 @@ export default function getActivityPlatform(session_id) {
     }
     return tmp(5227).get(PlatformTypes.META_QUEST_OR_HORIZON);
   }
-};
+}

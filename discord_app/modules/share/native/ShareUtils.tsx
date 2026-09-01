@@ -12,7 +12,7 @@ function _sendShareMessage() {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       dependencyMap = 0;
       ({ attachments: c0, channel: c1, comment: c2 } = lib);
       yield "PX_16";

@@ -17,7 +17,7 @@ function _addDirectoryGuildEntry() {
     closure_3 = arg3;
     c6 = 0;
     c7 = 0;
-    const iter = (function*(arg0, arg1, arg2) {
+    const iter = (function* (arg0, arg1, arg2) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -132,7 +132,7 @@ function _updateDirectoryEntry() {
     closure_3 = arg3;
     c6 = 0;
     c7 = 0;
-    const iter = (function*(arg0, arg1, arg2) {
+    const iter = (function* (arg0, arg1, arg2) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -238,7 +238,7 @@ function _fetchGuildEntriesForIds() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_3 = tmp3;
       c5 = 1;
       const HTTP = callback(closure_1_2[6]).HTTP;
@@ -284,7 +284,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
   c6 = 0;
   c7 = 0;
   c5 = 0;
-  return (function*(arg0, arg1) {
+  return (function* (arg0, arg1) {
     closure_3 = tmp3;
     c5 = 1;
     lib(closure_1_2[5]).dispatch({ type: "GUILD_DIRECTORY_FETCH_START" });
@@ -317,7 +317,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
   })();
 });
 closure_0 = undefined;
-const importDefaultResult1Result = importDefaultResult1(function() {
+const importDefaultResult1Result = importDefaultResult1(function () {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -332,7 +332,7 @@ closure_0 = importDefaultResult((arg0) => {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (function*(arg0) {
+  return (function* (arg0) {
     closure_2 = tmp3;
     c4 = 1;
     const HTTP = callback(closure_1_2[6]).HTTP;
@@ -360,7 +360,7 @@ closure_0 = importDefaultResult((arg0) => {
 });
 const importDefaultResult2 = importDefaultResult1;
 closure_0 = undefined;
-const importDefaultResult2Result = importDefaultResult1(function() {
+const importDefaultResult2Result = importDefaultResult1(function () {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -376,7 +376,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
   c6 = 0;
   c7 = 0;
   c5 = 0;
-  return (function*(arg0, arg1) {
+  return (function* (arg0, arg1) {
     if (c7 === 2) {
       c7 = 3;
       HermesBuiltin.throwTypeError();
@@ -470,7 +470,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
   })();
 });
 const importDefaultResult3 = importDefaultResult1;
-const importDefaultResult3Result = importDefaultResult1(function() {
+const importDefaultResult3Result = importDefaultResult1(function () {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

@@ -12,14 +12,33 @@ const require = arg1;
 createCacheKey = { container: null, formRow: null, syncRow: null, formText: null, info: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingBottom: 16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: 8, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[1] = {
+  marginTop: 8,
+  paddingVertical: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[2] = { marginTop: 24 };
 let obj1 = { marginTop: 8, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[3] = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+createCacheKey[3] = {
+  fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD,
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+};
 let obj2 = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-createCacheKey[4] = { marginTop: 8, fontSize: 14, lineHeight: 18, paddingHorizontal: 16, color: ThemesDefault.colors.TEXT_SUBTLE };
+createCacheKey[4] = {
+  marginTop: 8,
+  fontSize: 14,
+  lineHeight: 18,
+  paddingHorizontal: 16,
+  color: ThemesDefault.colors.TEXT_SUBTLE,
+};
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: 8, fontSize: 14, lineHeight: 18, paddingHorizontal: 16, color: ThemesDefault.colors.TEXT_SUBTLE };
+let obj3 = {
+  marginTop: 8,
+  fontSize: 14,
+  lineHeight: 18,
+  paddingHorizontal: 16,
+  color: ThemesDefault.colors.TEXT_SUBTLE,
+};
 const result = require("set").fileFinishedImporting("modules/nuf/native/components/DiscoverabilityActionSheet.tsx");
 
 export default function DiscoverabilityActionSheet() {
@@ -46,7 +65,7 @@ export default function DiscoverabilityActionSheet() {
     closure_1_7(!allowEmail);
   }, items2);
   obj = { DEPRECATED_style: items3, label: null, onPress: null, trailing: null };
-  items3 = [, ];
+  items3 = [,];
   ({ formRow: arr4[0], syncRow: arr4[1] } = tmp);
   obj = { style: tmp.formText, text: null };
   const intl = allowPhone(allowEmail[8]).intl;
@@ -54,7 +73,7 @@ export default function DiscoverabilityActionSheet() {
   obj[1] = callback2(allowPhone(allowEmail[7]).FormRow.Label, obj);
   obj[2] = callback;
   obj[3] = callback2(allowPhone(allowEmail[7]).FormRow.Checkbox, { selected: tmp3 });
-  const items4 = [callback2(allowPhone(allowEmail[7]).FormRow, obj), , , , , , ];
+  const items4 = [callback2(allowPhone(allowEmail[7]).FormRow, obj), , , , , ,];
   obj1 = { style: tmp.info, children: null };
   const intl2 = allowPhone(allowEmail[8]).intl;
   obj1[1] = intl2.string(allowPhone(allowEmail[8]).t.pfjsB5);
@@ -67,8 +86,17 @@ export default function DiscoverabilityActionSheet() {
   const intl4 = allowPhone(allowEmail[8]).intl;
   obj3[1] = intl4.format(allowPhone(allowEmail[8]).t.eswIfi, {
     learnMoreHook(children) {
-      return callback(allowPhone(allowEmail[9]).Text, { onPress: allowPhone(allowEmail[10]).handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children }, arg1);
-    }
+      return callback(
+        allowPhone(allowEmail[9]).Text,
+        {
+          onPress: allowPhone(allowEmail[10]).handleOpenLearnMoreLink,
+          variant: "text-sm/medium",
+          color: "text-link",
+          children,
+        },
+        arg1,
+      );
+    },
   });
   items4[3] = callback2(allowPhone(allowEmail[7]).FormText, obj3);
   const obj5 = { title: null, thinTitle: true };
@@ -102,4 +130,4 @@ export default function DiscoverabilityActionSheet() {
   obj[1] = items4;
   const children = callback3(View, obj);
   return callback2(allowPhone(allowEmail[11]).ActionSheet, { startExpanded: true, children });
-};
+}

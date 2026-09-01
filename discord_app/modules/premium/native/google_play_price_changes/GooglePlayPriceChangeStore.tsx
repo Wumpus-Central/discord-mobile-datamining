@@ -31,14 +31,13 @@ function onInitializeSync() {
     }
   }
 }
-let items = [, , ];
+let items = [, ,];
 ({ ACTIVE: arr[0], PAST_DUE: arr[1], UNPAID: arr[2] } = require("ME").SubscriptionStatusTypes);
 let set = new Set(items);
 let c4 = false;
 let c5 = null;
 const Store = initializeDefault.Store;
-class GooglePlayPriceChangeStore extends Store {
-}
+class GooglePlayPriceChangeStore extends Store {}
 const prototype = GooglePlayPriceChangeStore.prototype;
 prototype["initialize"] = function initialize() {
   const items = [closure_2];
@@ -49,16 +48,18 @@ Object.defineProperty(prototype, "shouldShowGooglePlayPriceChange", {
   get: function shouldShowGooglePlayPriceChange() {
     return c4;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "priceChangeRecord", {
   get: function priceChangeRecord() {
     return c5;
   },
-  set: undefined
+  set: undefined,
 });
 GooglePlayPriceChangeStore.displayName = "GooglePlayPriceChangeStore";
 const googlePlayPriceChangeStore = new GooglePlayPriceChangeStore(dispatcherDefault, {});
-const result = set.fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeStore.tsx");
+const result = set.fileFinishedImporting(
+  "modules/premium/native/google_play_price_changes/GooglePlayPriceChangeStore.tsx",
+);
 
 export default googlePlayPriceChangeStore;

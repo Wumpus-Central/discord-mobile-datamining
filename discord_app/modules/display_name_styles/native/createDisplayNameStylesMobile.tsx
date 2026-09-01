@@ -5,7 +5,9 @@ import closure_3 from "../../../stores/GuildMemberStore.tsx";
 import closure_4 from "../../../stores/UserStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/display_name_styles/native/createDisplayNameStylesMobile.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/display_name_styles/native/createDisplayNameStylesMobile.tsx",
+);
 
 export const createDisplayNameStylesMobile = function createDisplayNameStylesMobile(author, member) {
   const currentUser = authStore.getCurrentUser();

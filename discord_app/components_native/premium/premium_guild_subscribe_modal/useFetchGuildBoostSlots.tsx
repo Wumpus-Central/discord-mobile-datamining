@@ -6,7 +6,9 @@ import closure_6 from "../../../stores/billing/GuildBoostSlotStore.tsx";
 import closure_7 from "../../../stores/native/AppStateStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/useFetchGuildBoostSlots.tsx");
+const result = require("set").fileFinishedImporting(
+  "components_native/premium/premium_guild_subscribe_modal/useFetchGuildBoostSlots.tsx",
+);
 
 export default function useFetchGuildBoostSlots() {
   let tmp = callback(React.useState(true), 2);
@@ -23,7 +25,7 @@ export default function useFetchGuildBoostSlots() {
     if (_fetch) {
       _fetch = function _fetch() {
         const self = this;
-        const tmp = stateFromStores1(function*() {
+        const tmp = stateFromStores1(function* () {
           if (c2 === 2) {
             c2 = 3;
             HermesBuiltin.throwTypeError();
@@ -53,7 +55,7 @@ export default function useFetchGuildBoostSlots() {
                   const callback = tmp2;
                   let resolve = globalThis;
                   let appliedGuildBoostsForUser = closure_2_2;
-                  let items = [closure_2_1(closure_2_2[7]).init(), , ];
+                  let items = [closure_2_1(closure_2_2[7]).init(), ,];
                   if (c2) {
                     resolve = resolve.Promise.resolve;
                     let resolveResult = resolve();
@@ -113,4 +115,4 @@ export default function useFetchGuildBoostSlots() {
     }
   }, items2);
   return first;
-};
+}

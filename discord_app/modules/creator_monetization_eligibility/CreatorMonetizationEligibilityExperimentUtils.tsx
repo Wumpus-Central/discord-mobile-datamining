@@ -7,7 +7,9 @@ import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
 let set = new Set(["US"]);
-const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx");
+const result = set.fileFinishedImporting(
+  "modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx",
+);
 
 export const useIsUserInCreatorMonetizationEligibleCountry = function useIsUserInCreatorMonetizationEligibleCountry() {
   const items = [closure_2, closure_3];

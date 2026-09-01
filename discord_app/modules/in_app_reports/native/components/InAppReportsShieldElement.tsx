@@ -8,7 +8,9 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 noopAll;
 let closure_4 = createCacheKey.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsShieldElement.tsx",
+);
 
 export default function ShieldElement(element) {
   element = element.element;
@@ -23,4 +25,4 @@ export default function ShieldElement(element) {
     }
   }
   return tmp2;
-};
+}

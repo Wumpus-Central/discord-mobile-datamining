@@ -39,19 +39,16 @@ try {
       const obj = { navigationStart: null };
       obj[0] = tmp4;
       global.performance.timing = obj;
-    } catch (err) {
-    }
+    } catch (err) {}
   }
   if (null == global.performance.timeOrigin) {
     try {
       global.performance.timeOrigin = tmp5;
-    } catch (err) {
-    }
+    } catch (err) {}
   }
   const _module1 = set;
   const result = _module1.fileFinishedImporting("../discord_common/js/packages/performance-utils/index.js");
   exports.navigationStart = tmp4;
   exports.timeOrigin = tmp5;
   exports.performance = global.performance;
-} catch (err) {
-}
+} catch (err) {}

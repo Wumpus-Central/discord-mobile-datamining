@@ -11,7 +11,14 @@ const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, closeButton: null, buttonContainer: null };
-createCacheKey = { justifyContent: "center", alignItems: "center", gap: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xl };
+createCacheKey = {
+  justifyContent: "center",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.xl,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8 };
 let obj1 = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8 };
@@ -66,7 +73,16 @@ export default function ScreenRecordingActionSheet() {
     }
   }
   obj = { style: tmp.container, children: null };
-  const items = [callback(require("../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-xl/bold", children: str }), callback(require("../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", children: str2 }), ];
+  const items = [
+    callback(require("../../../design/components/Text/native/Text.tsx").Text, {
+      variant: "heading-xl/bold",
+      children: str,
+    }),
+    callback(require("../../../design/components/Text/native/Text.tsx").Text, {
+      variant: "text-md/normal",
+      children: str2,
+    }),
+  ];
   obj = {
     disabled: tmp2,
     text: "Done",
@@ -74,7 +90,7 @@ export default function ScreenRecordingActionSheet() {
     onPress() {
       callback2();
       callback2(closure_1_2[8]).hideActionSheet();
-    }
+    },
   };
   items[2] = callback(require("../../../design/components/Button/native/Button.native.tsx").Button, obj);
   obj[1] = items;
@@ -89,11 +105,16 @@ export default function ScreenRecordingActionSheet() {
         return callback2(table[8]).hideActionSheet();
       },
       accessibilityLabel: "close",
-      children: callback(require("../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx").XSmallIcon, { size: "md", color: "text-default" })
+      children: callback(
+        require("../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx").XSmallIcon,
+        { size: "md", color: "text-default" },
+      ),
     }),
-    callback(require("../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-xl/bold", children: tmp5.title }),
-  ,
-
+    callback(require("../../../design/components/Text/native/Text.tsx").Text, {
+      variant: "heading-xl/bold",
+      children: tmp5.title,
+    }),
+    ,
   ];
   const obj4 = { variant: "text-md/normal", children: null };
   const obj2 = {
@@ -102,7 +123,10 @@ export default function ScreenRecordingActionSheet() {
       return callback2(table[8]).hideActionSheet();
     },
     accessibilityLabel: "close",
-    children: callback(require("../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx").XSmallIcon, { size: "md", color: "text-default" })
+    children: callback(require("../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx").XSmallIcon, {
+      size: "md",
+      color: "text-default",
+    }),
   };
   const obj3 = { variant: "heading-xl/bold", children: tmp5.title };
   obj4[1] = get_defaultRulesDefault.parse(tmp5.instructions);
@@ -118,7 +142,7 @@ export default function ScreenRecordingActionSheet() {
     loading: tmp2,
     onPress() {
       callback();
-    }
+    },
   });
   items1[3] = callback(View, obj5);
   obj1[1] = items1;
@@ -127,4 +151,4 @@ export default function ScreenRecordingActionSheet() {
     children = tmp11;
   }
   return callback(tmp9(5989).ActionSheet, { children });
-};
+}

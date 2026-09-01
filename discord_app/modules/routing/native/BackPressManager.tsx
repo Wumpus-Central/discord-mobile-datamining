@@ -22,8 +22,7 @@ function handleBackPress() {
 }
 get_ActivityIndicator.BackHandler;
 initializeDefault;
-class BackPressManager extends tmp2 {
-}
+class BackPressManager extends tmp2 {}
 const prototype = BackPressManager.prototype;
 prototype["_initialize"] = function _initialize() {
   if (obj.isAndroid()) {

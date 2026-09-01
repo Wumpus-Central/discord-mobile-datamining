@@ -66,7 +66,15 @@ export const sortInviteRoles = function sortInviteRoles(position, position2) {
   return diff;
 };
 export const inviteRoleToDisplayData = function inviteRoleToDisplayData(id, id) {
-  const obj = { id: id.id, name: id.name, guildId: id, colorString: null, colorStrings: null, icon: null, unicodeEmoji: null };
+  const obj = {
+    id: id.id,
+    name: id.name,
+    guildId: id,
+    colorString: null,
+    colorStrings: null,
+    icon: null,
+    unicodeEmoji: null,
+  };
   let int2hexResult = null;
   if (0 !== id.color) {
     int2hexResult = int2hslRaw.int2hex(id.color);

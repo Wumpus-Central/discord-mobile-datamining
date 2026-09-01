@@ -56,11 +56,13 @@ function handleChannelSelect() {
   if (flag) {
     const items = [channelId, voiceChannelId, channelId, voiceChannelId];
     const obj = applyDefault(items);
-    const item = applyDefault(items).uniq().forEach((channelId) => {
-      if (null != channelId) {
-        const result = closure_20.nonPositionalChannelIdUpdate(channelId);
-      }
-    });
+    const item = applyDefault(items)
+      .uniq()
+      .forEach((channelId) => {
+        if (null != channelId) {
+          const result = closure_20.nonPositionalChannelIdUpdate(channelId);
+        }
+      });
     flag = true;
     const uniqResult = applyDefault(items).uniq();
   }
@@ -89,11 +91,25 @@ let c18 = null;
 let c19 = null;
 let closure_20 = new computeSubtitleDefault();
 const Store = initializeDefault.Store;
-class ChannelListStore extends Store {
-}
+class ChannelListStore extends Store {}
 const prototype = ChannelListStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_6, closure_9, closure_10, closure_11, closure_12, closure_3, closure_4, closure_5, closure_7, closure_13, closure_14, closure_15, closure_16, closure_8);
+  this.waitFor(
+    closure_6,
+    closure_9,
+    closure_10,
+    closure_11,
+    closure_12,
+    closure_3,
+    closure_4,
+    closure_5,
+    closure_7,
+    closure_13,
+    closure_14,
+    closure_15,
+    closure_16,
+    closure_8,
+  );
 };
 prototype["getGuild"] = function getGuild(arg0, guildActionRows) {
   guildActionRows = undefined;
@@ -200,9 +216,14 @@ const channelListStore = new ChannelListStore(dispatcherDefault, {
   },
   EMBEDDED_ACTIVITY_UPDATE_V2: function handleEmbeddedActivityUpdateV2(instance) {
     instance = instance.instance;
-    const embeddedActivityLocationGuildId = getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationGuildId(instance.location);
+    const embeddedActivityLocationGuildId = getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationGuildId(
+      instance.location,
+    );
     const obj = getEmbeddedActivityLocationChannelId;
-    return store3.updateSubtitles(embeddedActivityLocationGuildId, getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationChannelId(instance.location));
+    return store3.updateSubtitles(
+      embeddedActivityLocationGuildId,
+      getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationChannelId(instance.location),
+    );
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function handleEmbeddedActivityLaunchStart() {
     store3.updateSubtitles();
@@ -357,7 +378,7 @@ const channelListStore = new ChannelListStore(dispatcherDefault, {
       result = store3.nonPositionalChannelIdUpdate(c18);
     }
     return result;
-  }
+  },
 });
 let obj = {
   APPLICATION_FETCH_FAIL: handleRecomputeAllSubtitles,
@@ -432,9 +453,14 @@ let obj = {
   },
   EMBEDDED_ACTIVITY_UPDATE_V2: function handleEmbeddedActivityUpdateV2(instance) {
     instance = instance.instance;
-    const embeddedActivityLocationGuildId = getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationGuildId(instance.location);
+    const embeddedActivityLocationGuildId = getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationGuildId(
+      instance.location,
+    );
     const obj = getEmbeddedActivityLocationChannelId;
-    return store3.updateSubtitles(embeddedActivityLocationGuildId, getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationChannelId(instance.location));
+    return store3.updateSubtitles(
+      embeddedActivityLocationGuildId,
+      getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationChannelId(instance.location),
+    );
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function handleEmbeddedActivityLaunchStart() {
     store3.updateSubtitles();
@@ -589,7 +615,7 @@ let obj = {
       result = store3.nonPositionalChannelIdUpdate(c18);
     }
     return result;
-  }
+  },
 };
 let tmp2 = new computeSubtitleDefault();
 let result = require("set").fileFinishedImporting("modules/guild_sidebar/ChannelListStore.tsx");

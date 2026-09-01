@@ -67,18 +67,50 @@ function NotificationWrapper(notification) {
     return jsx(_modDef10956, { notification: null });
   }
 }
-({ DEFAULT_ANIMATION_TIMING: error, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: c9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: unpackModuleId, NOTIFICATION_CONTAINER_MARGIN } = set);
+({
+  DEFAULT_ANIMATION_TIMING: error,
+  extrapolateConfig: closure_8,
+  MIN_SWIPE_DISTANCE: c9,
+  MIN_SWIPE_VELOCITY: c10,
+  PAN_INPUT_RANGE: unpackModuleId,
+  NOTIFICATION_CONTAINER_MARGIN,
+} = set);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = ME);
 let obj = { duration: 200, easing: null };
 obj[1] = Easing.in(require("../../reanimated/ReanimatedRexport.tsx").Easing.ease);
-let closure_16 = createCacheKey.createStyles({ safeAreaContainer: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8, top: 0, bottom: 0 }, animatedContainer: { marginLeft: NOTIFICATION_CONTAINER_MARGIN, marginRight: NOTIFICATION_CONTAINER_MARGIN } });
-let closure_18 = { code: "function InAppNotificationContainerTsx1(){const{runOnJS,setInitialized}=this.__closure;return runOnJS(setInitialized)(true);}" };
-let closure_19 = { code: "function InAppNotificationContainerTsx2(){const{runOnJS,setPanning}=this.__closure;runOnJS(setPanning)(false);}" };
-let closure_20 = { code: "function InAppNotificationContainerTsx3(event){const{velocityY,MIN_SWIPE_VELOCITY,MIN_SWIPE_DISTANCE,notificationGestureY,withTiming,PAN_INPUT_RANGE,DEFAULT_ANIMATION_TIMING,runOnJS,handleDismissNotification,setPanning,withSpring}=this.__closure;const shouldDismiss=Math.abs(velocityY.get())>=MIN_SWIPE_VELOCITY||Math.abs(event.translationY)>=MIN_SWIPE_DISTANCE;if(shouldDismiss&&event.translationY<=0){notificationGestureY.set(withTiming(event.translationY>0?PAN_INPUT_RANGE[2]:PAN_INPUT_RANGE[0],DEFAULT_ANIMATION_TIMING,'animate-always',function(finished){if(finished){runOnJS(handleDismissNotification)('swipe');}}));}else{runOnJS(setPanning)(false);notificationGestureY.set(withSpring(0,{damping:10,mass:1,stiffness:100,velocity:velocityY.get()},'animate-always'));}}" };
-let closure_21 = { code: "function InAppNotificationContainerTsx4(event){const{startY,notificationGestureY,velocityY}=this.__closure;const rawY=startY.get()+event.translationY;const newY=Math.min(rawY,startY.get());notificationGestureY.set(newY);velocityY.set(event.velocityY);}" };
-let closure_22 = { code: "function InAppNotificationContainerTsx5(){const{startY,notificationGestureY,velocityY,runOnJS,setPanning}=this.__closure;startY.set(notificationGestureY.get());velocityY.set(0);runOnJS(setPanning)(true);}" };
-let closure_23 = { code: "function InAppNotificationContainerTsx6(finished){const{runOnJS,handleDismissNotification}=this.__closure;if(finished){runOnJS(handleDismissNotification)('swipe');}}" };
-let closure_24 = { code: "function InAppNotificationContainerTsx7(){const{notificationGestureY,scale,initialized,interpolate,PAN_INPUT_RANGE,extrapolateConfig}=this.__closure;const gestureY=notificationGestureY.get();const scaleValue=scale.get();const scaleTransform=initialized?interpolate(gestureY,PAN_INPUT_RANGE,[0.3,1,0.3],extrapolateConfig):scaleValue;const opacityTransform=initialized?interpolate(gestureY,PAN_INPUT_RANGE,[0,1,0],extrapolateConfig):scaleValue;return{transform:[{translateY:gestureY},{scale:scaleTransform}],opacity:opacityTransform};}" };
+let closure_16 = createCacheKey.createStyles({
+  safeAreaContainer: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    backgroundColor: "transparent",
+    marginTop: 8,
+    top: 0,
+    bottom: 0,
+  },
+  animatedContainer: { marginLeft: NOTIFICATION_CONTAINER_MARGIN, marginRight: NOTIFICATION_CONTAINER_MARGIN },
+});
+let closure_18 = {
+  code: "function InAppNotificationContainerTsx1(){const{runOnJS,setInitialized}=this.__closure;return runOnJS(setInitialized)(true);}",
+};
+let closure_19 = {
+  code: "function InAppNotificationContainerTsx2(){const{runOnJS,setPanning}=this.__closure;runOnJS(setPanning)(false);}",
+};
+let closure_20 = {
+  code: "function InAppNotificationContainerTsx3(event){const{velocityY,MIN_SWIPE_VELOCITY,MIN_SWIPE_DISTANCE,notificationGestureY,withTiming,PAN_INPUT_RANGE,DEFAULT_ANIMATION_TIMING,runOnJS,handleDismissNotification,setPanning,withSpring}=this.__closure;const shouldDismiss=Math.abs(velocityY.get())>=MIN_SWIPE_VELOCITY||Math.abs(event.translationY)>=MIN_SWIPE_DISTANCE;if(shouldDismiss&&event.translationY<=0){notificationGestureY.set(withTiming(event.translationY>0?PAN_INPUT_RANGE[2]:PAN_INPUT_RANGE[0],DEFAULT_ANIMATION_TIMING,'animate-always',function(finished){if(finished){runOnJS(handleDismissNotification)('swipe');}}));}else{runOnJS(setPanning)(false);notificationGestureY.set(withSpring(0,{damping:10,mass:1,stiffness:100,velocity:velocityY.get()},'animate-always'));}}",
+};
+let closure_21 = {
+  code: "function InAppNotificationContainerTsx4(event){const{startY,notificationGestureY,velocityY}=this.__closure;const rawY=startY.get()+event.translationY;const newY=Math.min(rawY,startY.get());notificationGestureY.set(newY);velocityY.set(event.velocityY);}",
+};
+let closure_22 = {
+  code: "function InAppNotificationContainerTsx5(){const{startY,notificationGestureY,velocityY,runOnJS,setPanning}=this.__closure;startY.set(notificationGestureY.get());velocityY.set(0);runOnJS(setPanning)(true);}",
+};
+let closure_23 = {
+  code: "function InAppNotificationContainerTsx6(finished){const{runOnJS,handleDismissNotification}=this.__closure;if(finished){runOnJS(handleDismissNotification)('swipe');}}",
+};
+let closure_24 = {
+  code: "function InAppNotificationContainerTsx7(){const{notificationGestureY,scale,initialized,interpolate,PAN_INPUT_RANGE,extrapolateConfig}=this.__closure;const gestureY=notificationGestureY.get();const scaleValue=scale.get();const scaleTransform=initialized?interpolate(gestureY,PAN_INPUT_RANGE,[0.3,1,0.3],extrapolateConfig):scaleValue;const opacityTransform=initialized?interpolate(gestureY,PAN_INPUT_RANGE,[0,1,0],extrapolateConfig):scaleValue;return{transform:[{translateY:gestureY},{scale:scaleTransform}],opacity:opacityTransform};}",
+};
 let result = set.fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationContainer.tsx");
 
 export default function InAppNotificationContainer(notification) {
@@ -98,7 +130,10 @@ export default function InAppNotificationContainer(notification) {
   let callback;
   const tmp = callback();
   let items = [notification];
-  const memo = channelType.useMemo(() => notification(channelId[18]).extractMetadataFromNotification(notification), items);
+  const memo = channelType.useMemo(
+    () => notification(channelId[18]).extractMetadataFromNotification(notification),
+    items,
+  );
   guildId = memo.guildId;
   channelId = memo.channelId;
   messageId = memo.messageId;
@@ -124,7 +159,14 @@ export default function InAppNotificationContainer(notification) {
   callback = channelType.useCallback((arg0) => {
     if (null != arg0) {
       obj = notification(channelId[18]);
-      obj = { type: null, guildId: null, channelId: null, dismissReason: null, inAppNotificationId: null, messageId: null };
+      obj = {
+        type: null,
+        guildId: null,
+        channelId: null,
+        dismissReason: null,
+        inAppNotificationId: null,
+        messageId: null,
+      };
       obj[0] = notification.type;
       obj[1] = guildId;
       obj[2] = channelId;
@@ -150,11 +192,26 @@ export default function InAppNotificationContainer(notification) {
     const result = sharedValue3.set(obj.withTiming(1, closure_1_15, "respect-motion-settings", fn));
     return () => closure_1_0(closure_1_2[7]).cancelAnimation(closure_8);
   });
-  const items3 = [first, notification.type, guildId, channelId, notification.inAppNotificationId, messageId, channelType];
+  const items3 = [
+    first,
+    notification.type,
+    guildId,
+    channelId,
+    notification.inAppNotificationId,
+    messageId,
+    channelType,
+  ];
   const effect = channelType.useEffect(() => {
     if (first) {
       obj = guildId(channelId[22]);
-      obj = { type: null, guild_id: null, channel_id: null, in_app_notification_id: null, message_id: null, channel_type: null };
+      obj = {
+        type: null,
+        guild_id: null,
+        channel_id: null,
+        in_app_notification_id: null,
+        message_id: null,
+        channel_type: null,
+      };
       obj[0] = notification.type;
       obj[1] = guildId;
       obj[2] = channelId;
@@ -174,7 +231,13 @@ export default function InAppNotificationContainer(notification) {
       return;
     }
   }
-  obj = { startY: sharedValue2, notificationGestureY: sharedValue, velocityY: sharedValue1, runOnJS: notification(channelId[7]).runOnJS, setPanning: tmp13 };
+  obj = {
+    startY: sharedValue2,
+    notificationGestureY: sharedValue,
+    velocityY: sharedValue1,
+    runOnJS: notification(channelId[7]).runOnJS,
+    setPanning: tmp13,
+  };
   X.__closure = obj;
   X.__workletHash = 16480026707740;
   X.__initData = closure_22;
@@ -227,7 +290,19 @@ export default function InAppNotificationContainer(notification) {
     obj = { damping: 10, mass: 1, stiffness: 100, velocity: obj.get() };
     const result1 = sharedValue.set(notification(channelId[24]).withSpring(0, obj, "animate-always"));
   };
-  obj = { velocityY: sharedValue1, MIN_SWIPE_VELOCITY: closure_10, MIN_SWIPE_DISTANCE: first, notificationGestureY: sharedValue, withTiming: notification(channelId[21]).withTiming, PAN_INPUT_RANGE: first1, DEFAULT_ANIMATION_TIMING: sharedValue2, runOnJS: notification(channelId[7]).runOnJS, handleDismissNotification: callback, setPanning: tmp13, withSpring: notification(channelId[24]).withSpring };
+  obj = {
+    velocityY: sharedValue1,
+    MIN_SWIPE_VELOCITY: closure_10,
+    MIN_SWIPE_DISTANCE: first,
+    notificationGestureY: sharedValue,
+    withTiming: notification(channelId[21]).withTiming,
+    PAN_INPUT_RANGE: first1,
+    DEFAULT_ANIMATION_TIMING: sharedValue2,
+    runOnJS: notification(channelId[7]).runOnJS,
+    handleDismissNotification: callback,
+    setPanning: tmp13,
+    withSpring: notification(channelId[24]).withSpring,
+  };
   fn.__closure = obj;
   fn.__workletHash = 12181654548715;
   fn.__initData = closure_20;
@@ -249,7 +324,7 @@ export default function InAppNotificationContainer(notification) {
     constructor() {
       value = closure_5.get();
       value1 = closure_8.get();
-      items = [, ];
+      items = [,];
       items[0] = { translateY: value };
       interpolateResult = value1;
       tmp3 = closure_9;
@@ -279,15 +354,40 @@ export default function InAppNotificationContainer(notification) {
       return obj;
     }
   }
-  obj2 = { notificationGestureY: sharedValue, scale: sharedValue3, initialized: first, interpolate: notification(channelId[7]).interpolate, PAN_INPUT_RANGE: first1, extrapolateConfig: sharedValue3 };
+  obj2 = {
+    notificationGestureY: sharedValue,
+    scale: sharedValue3,
+    initialized: first,
+    interpolate: notification(channelId[7]).interpolate,
+    PAN_INPUT_RANGE: first1,
+    extrapolateConfig: sharedValue3,
+  };
   Z.__closure = obj2;
   Z.__workletHash = 1564072865992;
   Z.__initData = closure_24;
   const items4 = [callback, first, sharedValue, sharedValue1, first1];
   const animatedStyle = notification(channelId[7]).useAnimatedStyle(Z);
-  const memo1 = channelType.useMemo(() => ({ notificationGestureY: sharedValue, velocityY: sharedValue1, initialized: first, handleDismissNotification: callback, panning: first1 }), items4);
+  const memo1 = channelType.useMemo(
+    () => ({
+      notificationGestureY: sharedValue,
+      velocityY: sharedValue1,
+      initialized: first,
+      handleDismissNotification: callback,
+      panning: first1,
+    }),
+    items4,
+  );
   obj3 = { style: sharedValue.absoluteFill, pointerEvents: "box-none", children: null };
-  obj4 = { top: true, bottom: true, left: true, right: true, style: tmp.safeAreaContainer, pointerEvents: "box-none", importantForAccessibility: null, children: null };
+  obj4 = {
+    top: true,
+    bottom: true,
+    left: true,
+    right: true,
+    style: tmp.safeAreaContainer,
+    pointerEvents: "box-none",
+    importantForAccessibility: null,
+    children: null,
+  };
   let str;
   if (stateFromStores) {
     str = "no-hide-descendants";
@@ -297,9 +397,26 @@ export default function InAppNotificationContainer(notification) {
   const obj6 = { gesture: onFinalizeResult, children: null };
   const obj13 = notification(channelId[7]);
   const items5 = [tmp.animatedContainer, animatedStyle];
-  obj6[1] = jsx(tmp16(channelId[7]).View, { style: items5, pointerEvents: "box-none", children: <NotificationWrapper notification={notification} /> });
+  obj6[1] = jsx(tmp16(channelId[7]).View, {
+    style: items5,
+    pointerEvents: "box-none",
+    children: <NotificationWrapper notification={notification} />,
+  });
   obj5[1] = jsx(notification(channelId[23]).GestureDetector, { gesture: onFinalizeResult, children: null });
   obj4[7] = jsx(notification(channelId[27]).InAppNotificationContext.Provider, { value: memo1, children: null });
-  obj3[2] = jsx(notification(channelId[26]).SafeAreaPaddingView, { top: true, bottom: true, left: true, right: true, style: tmp.safeAreaContainer, pointerEvents: "box-none", importantForAccessibility: null, children: null });
-  return jsx(notification(channelId[25]).OverlayView, { style: sharedValue.absoluteFill, pointerEvents: "box-none", children: null });
-};
+  obj3[2] = jsx(notification(channelId[26]).SafeAreaPaddingView, {
+    top: true,
+    bottom: true,
+    left: true,
+    right: true,
+    style: tmp.safeAreaContainer,
+    pointerEvents: "box-none",
+    importantForAccessibility: null,
+    children: null,
+  });
+  return jsx(notification(channelId[25]).OverlayView, {
+    style: sharedValue.absoluteFill,
+    pointerEvents: "box-none",
+    children: null,
+  });
+}

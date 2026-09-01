@@ -4,7 +4,9 @@ import closure_4 from "../../../../stores/UserStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/ato_alerts/native/components/LikelyAtoMoreTipsModalActionItems.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/ato_alerts/native/components/LikelyAtoMoreTipsModalActionItems.tsx",
+);
 
 export default function LikelyAtoMoreTipsModalActionItems(senderId) {
   senderId = senderId.senderId;
@@ -25,4 +27,4 @@ export default function LikelyAtoMoreTipsModalActionItems(senderId) {
   obj[3] = jsx(senderId(10238).BellSlashIcon, {});
   obj[1] = jsx(senderId(5599).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
   return jsx(senderId(5992).TableRowGroup, { label: null, subLabel: null, onPress: null, icon: null });
-};
+}

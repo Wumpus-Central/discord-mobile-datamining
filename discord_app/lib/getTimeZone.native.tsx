@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("lib/getTimeZone.native.tsx");
 
 export default function getTimeZone() {
   return DCDDeviceManager.getTimeZone();
-};
+}

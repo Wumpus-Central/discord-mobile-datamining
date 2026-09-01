@@ -24,7 +24,13 @@ function FlashListWrapper(scrollable) {
   return tmp2Result;
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { listItemContainer: { overflow: "hidden" }, listItem: null, firstItem: null, lastItem: null, divider: null };
+createCacheKey = {
+  listItemContainer: { overflow: "hidden" },
+  listItem: null,
+  firstItem: null,
+  lastItem: null,
+  divider: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { borderTopLeftRadius: ThemesDefault.radii.xl, borderTopRightRadius: ThemesDefault.radii.xl };
@@ -34,7 +40,9 @@ let obj2 = { borderBottomLeftRadius: ThemesDefault.radii.xl, borderBottomRightRa
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: 16 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: 16 };
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/options/choices/AppLauncherChoicesActionSheet.tsx",
+);
 
 export default function AppLauncherChoicesActionSheet(option) {
   option = option.option;
@@ -53,13 +61,16 @@ export default function AppLauncherChoicesActionSheet(option) {
   if (!obj.isIOS()) {
     sum = bottom + closure_6;
   }
-  const tmp6 = first(React.useState(() => {
-    let choices = option.choices;
-    if (choices == null) {
-      choices = [];
-    }
-    return choices.map((choice, originalIndex) => ({ choice, originalIndex }));
-  }), 2);
+  const tmp6 = first(
+    React.useState(() => {
+      let choices = option.choices;
+      if (choices == null) {
+        choices = [];
+      }
+      return choices.map((choice, originalIndex) => ({ choice, originalIndex }));
+    }),
+    2,
+  );
   first = tmp6[0];
   React = tmp6[1];
   const tmp7 = first(React.useState(initChoiceIndex), 2);
@@ -85,7 +96,7 @@ export default function AppLauncherChoicesActionSheet(option) {
     if (lastItem) {
       lastItem = index === first.length - 1;
     }
-    const items = [closure_2.listItemContainer, , ];
+    const items = [closure_2.listItemContainer, ,];
     let firstItem = 0 === index;
     if (firstItem) {
       firstItem = tmp4.firstItem;
@@ -105,12 +116,15 @@ export default function AppLauncherChoicesActionSheet(option) {
         closure_1_6(item.originalIndex);
         closure_1_1(item.choice, item.originalIndex);
         onChoiceSelect(table[12]).hideActionSheet();
-      }
+      },
     };
     items1 = [closure_2.listItem];
     return closure_1_7(first1, obj);
   }, items1);
-  callback2 = React.useCallback(() => closure_1_7(option(closure_2[11]).FormDivider, { style: closure_2.divider }), items2);
+  callback2 = React.useCallback(
+    () => closure_1_7(option(closure_2[11]).FormDivider, { style: closure_2.divider }),
+    items2,
+  );
   let tmp13 = null != option.choices;
   if (tmp13) {
     let choices = option.choices;
@@ -131,11 +145,20 @@ export default function AppLauncherChoicesActionSheet(option) {
     obj[0] = callback;
     tmp16 = callback(tmp3(11737).AppLauncherListSearchBar, obj);
   }
-  const items3 = [tmp16, ];
+  const items3 = [tmp16];
   if (0 === first.length) {
     let tmp20 = callback(tmp3(11737).AppLauncherListEmptyState, {});
   } else {
-    obj1 = { scrollable: null, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, data: null, renderItem: null, ItemSeparatorComponent: null, accessibilityRole: "radiogroup" };
+    obj1 = {
+      scrollable: null,
+      contentContainerStyle: null,
+      scrollIndicatorInsets: null,
+      keyExtractor: null,
+      data: null,
+      renderItem: null,
+      ItemSeparatorComponent: null,
+      accessibilityRole: "radiogroup",
+    };
     obj1[0] = tmp13;
     const obj2 = { paddingBottom: null };
     obj2[0] = sum;
@@ -154,4 +177,4 @@ export default function AppLauncherChoicesActionSheet(option) {
   items3[1] = tmp20;
   obj[4] = items3;
   return closure_8(option(11736).AppLauncherCommandOptionActionSheet, obj);
-};
+}

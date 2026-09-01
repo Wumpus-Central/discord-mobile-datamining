@@ -8,7 +8,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/layouts/LabelLayoutComponent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/native/layouts/LabelLayoutComponent.tsx",
+);
 
 export default function LabelLayoutComponent(arg0) {
   ({ component, renderComponent } = arg0);
@@ -30,4 +32,4 @@ export default function LabelLayoutComponent(arg0) {
     renderComponentResult = jsx(Input.Input, { style: null, children: null });
   }
   return renderComponentResult;
-};
+}

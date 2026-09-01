@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/a11y/native/markAccessibilityF
 
 export default function markAccessibilityFocus() {
   enforcingDefault.markCurrentFocus();
-};
+}

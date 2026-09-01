@@ -12,7 +12,7 @@ const obj = {
   pipState: null,
   pipAvoidanceSpecs: null,
   wrapperOffset: null,
-  useActivityWebViewLock: null
+  useActivityWebViewLock: null,
 };
 obj[3] = createFakeSharedValue.createFakeSharedValue({ x: -1, y: -1 });
 obj[4] = createFakeSharedValue.createFakeSharedValue({ top: 0, bottom: 0 });

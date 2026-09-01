@@ -5,7 +5,9 @@ import closure_4 from "../../../../../../../stores/GuildStore.tsx";
 import closure_5 from "../../../../../../../stores/UserStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinks.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinks.tsx",
+);
 
 export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, message2, channel, arg3) {
   closure_0 = message;

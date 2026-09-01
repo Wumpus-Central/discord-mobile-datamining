@@ -5,7 +5,9 @@ import closure_3 from "../../../../../../activities/EmbeddedActivitiesStore.tsx"
 import closure_4 from "../../../../../../../stores/UserStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/useEmbeddedActivityParticipantAvatarUris.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/coded_links/useEmbeddedActivityParticipantAvatarUris.tsx",
+);
 
 export default function useEmbeddedActivityParticipantAvatarUris(activity) {
   activity = activity.activity;
@@ -25,13 +27,17 @@ export default function useEmbeddedActivityParticipantAvatarUris(activity) {
   }, items);
   const items1 = [closure_4];
   const items2 = [memo];
-  stateFromStoresArray = activity(guildId[4]).useStateFromStoresArray(items1, () => memo.map((arg0) => user.getUser(arg0)), items2);
+  stateFromStoresArray = activity(guildId[4]).useStateFromStoresArray(
+    items1,
+    () => memo.map((arg0) => user.getUser(arg0)),
+    items2,
+  );
   const items3 = [guildId, stateFromStoresArray];
   return memo.useMemo(() => {
     const found = stateFromStoresArray.filter(activity(guildId[3]).isNotNullish);
     return found.map((getAvatarURL) => "" + getAvatarURL.getAvatarURL(closure_1, 64));
   }, items3);
-};
+}
 export const getEmbeddedActivityParticipantAvatarUris = function getEmbeddedActivityParticipantAvatarUris(arg0) {
   ({ guildId: require, applicationId: dependencyMap, activity } = arg0);
   if (null == activity) {

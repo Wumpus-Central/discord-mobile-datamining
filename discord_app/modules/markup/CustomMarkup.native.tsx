@@ -14,7 +14,7 @@ function createRules(arg0) {
     obj = {};
   }
   const tmp = MarkupTextDefault(arg0, obj);
-  items = [get_defaultRulesDefault.defaultRules, tmp, ];
+  items = [get_defaultRulesDefault.defaultRules, tmp];
   obj = {};
   obj = {};
   const merged = Object.assign(tDefault.defaultRules.link);
@@ -50,7 +50,7 @@ function createRulesWithoutLinks(arg0, arg1) {
 }
 function createNotifCenterV2MessagePreviewRules(closure_28, closure_28, roleStyle) {
   const tmp = MarkupTextDefault(closure_28, closure_28, roleStyle);
-  items = [get_defaultRulesDefault.notifCenterV2MessagePreviewRules, ];
+  items = [get_defaultRulesDefault.notifCenterV2MessagePreviewRules];
   let obj = {};
   obj = {};
   const merged = Object.assign(parseLinkDefault.RULES[AST_KEY.AST_KEY.MENTION]);
@@ -95,7 +95,11 @@ export const getParserWithoutLinks = function getParserWithoutLinks(arg0) {
   return get_defaultRulesDefault.reactParserFor(createRulesWithoutLinks(obj, obj));
 };
 export { createNotifCenterV2MessagePreviewRules };
-export const getNotifCenterV2MessagePreviewParser = function getNotifCenterV2MessagePreviewParser(arg0, closure_28, roleStyle) {
+export const getNotifCenterV2MessagePreviewParser = function getNotifCenterV2MessagePreviewParser(
+  arg0,
+  closure_28,
+  roleStyle,
+) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -107,7 +111,7 @@ export const getNotifCenterV2MessagePreviewParser = function getNotifCenterV2Mes
   return get_defaultRulesDefault.reactParserFor(createNotifCenterV2MessagePreviewRules(obj, obj, roleStyle));
 };
 export const createWidgetMessageRules = function createWidgetMessageRules() {
-  items = [get_defaultRulesDefault.lockscreenWidgetMessageRules, ];
+  items = [get_defaultRulesDefault.lockscreenWidgetMessageRules];
   let obj = {};
   obj = {};
   const merged = Object.assign(parseLinkDefault.RULES[AST_KEY.AST_KEY.MENTION]);
@@ -122,7 +126,7 @@ export const createWidgetMessageRules = function createWidgetMessageRules() {
 };
 export const getWidgetMessageRules = function getWidgetMessageRules() {
   let obj = get_defaultRulesDefault;
-  items = [get_defaultRulesDefault.lockscreenWidgetMessageRules, ];
+  items = [get_defaultRulesDefault.lockscreenWidgetMessageRules];
   obj = {};
   obj = {};
   const merged = Object.assign(parseLinkDefault.RULES[AST_KEY.AST_KEY.MENTION]);

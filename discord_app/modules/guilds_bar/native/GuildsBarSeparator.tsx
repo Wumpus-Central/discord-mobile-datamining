@@ -19,7 +19,12 @@ function GuildsBarHomeDrawerSeparator(guildItemSize) {
     obj[0] = guildItemSize(closure_1_2[6]).withSpring(bound, guildItemSize(closure_1_2[4]).HOME_DRAWER_FLING_PHYSICS);
     return obj;
   };
-  obj = { withSpring: guildItemSize(4927).withSpring, guildItemSize, panelX, HOME_DRAWER_FLING_PHYSICS: guildItemSize(15614).HOME_DRAWER_FLING_PHYSICS };
+  obj = {
+    withSpring: guildItemSize(4927).withSpring,
+    guildItemSize,
+    panelX,
+    HOME_DRAWER_FLING_PHYSICS: guildItemSize(15614).HOME_DRAWER_FLING_PHYSICS,
+  };
   fn.__closure = obj;
   fn.__workletHash = 1425261651828;
   fn.__initData = closure_5;
@@ -29,11 +34,21 @@ function GuildsBarHomeDrawerSeparator(guildItemSize) {
 }
 let closure_4 = createCacheKey.createStyles((maxWidth) => {
   let obj = { separator: null };
-  obj = { height: 1, maxWidth, marginTop: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginBottom: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginLeft: 12, marginRight: 12, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+  obj = {
+    height: 1,
+    maxWidth,
+    marginTop: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN,
+    marginBottom: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN,
+    marginLeft: 12,
+    marginRight: 12,
+    backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  };
   obj[0] = obj;
   return obj;
 });
-let closure_5 = { code: "function GuildsBarSeparatorTsx1(){const{withSpring,guildItemSize,panelX,HOME_DRAWER_FLING_PHYSICS}=this.__closure;return{maxWidth:withSpring(Math.max(guildItemSize,panelX.get()+guildItemSize),HOME_DRAWER_FLING_PHYSICS)};}" };
+let closure_5 = {
+  code: "function GuildsBarSeparatorTsx1(){const{withSpring,guildItemSize,panelX,HOME_DRAWER_FLING_PHYSICS}=this.__closure;return{maxWidth:withSpring(Math.max(guildItemSize,panelX.get()+guildItemSize),HOME_DRAWER_FLING_PHYSICS)};}",
+};
 const memoResult = importAllResult.memo(function GuildsBarSeparator() {
   let obj = map;
   const token = obj.useToken(ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);

@@ -8,26 +8,78 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, headerText: null, card: null, cardImagesContainer: null, ellipseGroup: null, ellipse: null, cardImageApplication: null, cardContent: null, cardText: null };
+createCacheKey = {
+  container: null,
+  headerText: null,
+  card: null,
+  cardImagesContainer: null,
+  ellipseGroup: null,
+  ellipse: null,
+  cardImageApplication: null,
+  cardContent: null,
+  cardText: null,
+};
 createCacheKey = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_8 };
 let obj1 = { paddingHorizontal: ThemesDefault.space.PX_8 };
-createCacheKey[2] = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
-let obj2 = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+createCacheKey[2] = {
+  borderRadius: ThemesDefault.radii.lg,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  padding: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_16,
+};
+let obj2 = {
+  borderRadius: ThemesDefault.radii.lg,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  padding: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_16,
+};
 createCacheKey[3] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "center", alignSelf: "center" };
 let obj3 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "center", alignSelf: "center" };
 createCacheKey[4] = { flexDirection: "row", justifyContent: "space-between", gap: ThemesDefault.space.PX_4 };
 let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: ThemesDefault.space.PX_4 };
-createCacheKey[5] = { width: 4, height: 4, backgroundColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, opacity: 0.3, borderRadius: ThemesDefault.radii.round };
-let obj5 = { width: 4, height: 4, backgroundColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, opacity: 0.3, borderRadius: ThemesDefault.radii.round };
+createCacheKey[5] = {
+  width: 4,
+  height: 4,
+  backgroundColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  opacity: 0.3,
+  borderRadius: ThemesDefault.radii.round,
+};
+let obj5 = {
+  width: 4,
+  height: 4,
+  backgroundColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  opacity: 0.3,
+  borderRadius: ThemesDefault.radii.round,
+};
 createCacheKey[6] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm };
 let obj6 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[7] = { gap: ThemesDefault.space.PX_4, alignSelf: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_24 };
+createCacheKey[7] = {
+  gap: ThemesDefault.space.PX_4,
+  alignSelf: "center",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  paddingHorizontal: ThemesDefault.space.PX_24,
+};
 createCacheKey[8] = { textAlign: "center" };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj7 = { gap: ThemesDefault.space.PX_4, alignSelf: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_24 };
-const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileLinkAccount.tsx");
+let obj7 = {
+  gap: ThemesDefault.space.PX_4,
+  alignSelf: "center",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  paddingHorizontal: ThemesDefault.space.PX_24,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/game_profile/native/components/GameProfileLinkAccount.tsx",
+);
 
 export default function GameProfileLinkAccount(trackAction) {
   trackAction = trackAction.trackAction;
@@ -54,7 +106,7 @@ export default function GameProfileLinkAccount(trackAction) {
             obj[2] = tmp.headerText;
             const intl4 = tmp5(tmp3[10]).intl;
             obj[3] = intl4.string(tmp5(tmp3[10]).t["VDAhr+"]);
-            const items2 = [callback(tmp5(tmp3[9]).Text, obj), ];
+            const items2 = [callback(tmp5(tmp3[9]).Text, obj)];
             obj1 = { style: null, children: null };
             obj1[0] = tmp.card;
             let tmp11Result = null;
@@ -64,12 +116,12 @@ export default function GameProfileLinkAccount(trackAction) {
               const obj3 = { source: null, style: null };
               obj3[0] = iconSource;
               obj3[1] = tmp.cardImageApplication;
-              const items3 = [tmp13(analyticsLocations(tmp3[11]), obj3), , ];
+              const items3 = [tmp13(analyticsLocations(tmp3[11]), obj3), ,];
               const obj4 = { style: null, children: null };
               obj4[0] = tmp.ellipseGroup;
               const obj5 = { style: null };
               obj5[0] = tmp.ellipse;
-              const items4 = [tmp13(tmp12, obj5), , ];
+              const items4 = [tmp13(tmp12, obj5), ,];
               const obj6 = { style: null };
               obj6[0] = tmp.ellipse;
               items4[1] = tmp13(tmp12, obj6);
@@ -85,16 +137,21 @@ export default function GameProfileLinkAccount(trackAction) {
               obj2[1] = items3;
               tmp11Result = tmp11(tmp12, obj2);
             }
-            const items5 = [tmp11Result, , ];
+            const items5 = [tmp11Result, ,];
             const obj9 = { style: null, children: null };
             obj9[0] = tmp.cardContent;
-            const obj10 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", style: null, children: null };
+            const obj10 = {
+              variant: "heading-md/semibold",
+              color: "mobile-text-heading-primary",
+              style: null,
+              children: null,
+            };
             obj10[2] = tmp.cardText;
             const intl = tmp5(tmp3[10]).intl;
             const obj11 = { gameName: null };
             obj11[0] = connectionApp.name;
             obj10[3] = intl.formatToPlainString(tmp5(tmp3[10]).t.hUbQT2, obj11);
-            const items6 = [callback(tmp5(tmp3[9]).Text, obj10), ];
+            const items6 = [callback(tmp5(tmp3[9]).Text, obj10)];
             const obj12 = { variant: "text-sm/medium", color: "text-default", style: null, children: null };
             obj12[2] = tmp.cardText;
             const intl2 = tmp5(tmp3[10]).intl;
@@ -118,4 +175,4 @@ export default function GameProfileLinkAccount(trackAction) {
     }
   }
   return null;
-};
+}

@@ -237,56 +237,61 @@ class UserRecord extends tmp2 {
       configurable: false,
       enumerable: false,
       value(arg0) {
-            if (arg0 <= 1073741824) {
-              return ((tmp3.flags | tmp2.publicFlags) & arg0) === arg0;
-            } else {
-              let tmp7Result = tmp7(tmp3[10]);
-              const tmp6Result = tmp6(tmp5.flags);
-              tmp7Result = tmp7(tmp3[10]);
-              const deserializeResult = tmp7Result.deserialize(tmp4.publicFlags);
-              const deserializeResult1 = tmp7Result.deserialize(arg0);
-              const tmp7Result1 = tmp7(tmp3[10]);
-              return tmp7Result1.has(tmp7(tmp3[10]).combine(tmp6Result, deserializeResult), deserializeResult1);
-            }
-          }
+        if (arg0 <= 1073741824) {
+          return ((tmp3.flags | tmp2.publicFlags) & arg0) === arg0;
+        } else {
+          let tmp7Result = tmp7(tmp3[10]);
+          const tmp6Result = tmp6(tmp5.flags);
+          tmp7Result = tmp7(tmp3[10]);
+          const deserializeResult = tmp7Result.deserialize(tmp4.publicFlags);
+          const deserializeResult1 = tmp7Result.deserialize(arg0);
+          const tmp7Result1 = tmp7(tmp3[10]);
+          return tmp7Result1.has(tmp7(tmp3[10]).combine(tmp6Result, deserializeResult), deserializeResult1);
+        }
+      },
     };
     obj1 = {
       writable: false,
       configurable: false,
       enumerable: false,
       value() {
-            return obj.hasFlag(closure_1_7.STAFF);
-          }
+        return obj.hasFlag(closure_1_7.STAFF);
+      },
     };
     obj2 = {
       writable: false,
       configurable: false,
       enumerable: false,
       value() {
-            const hasFlagResult = obj.hasFlag(closure_1_7.STAFF);
-            let tmp3 = !hasFlagResult;
-            if (!hasFlagResult) {
-              tmp3 = null != tmp.personalConnectionId;
-            }
-            return tmp3;
-          }
+        const hasFlagResult = obj.hasFlag(closure_1_7.STAFF);
+        let tmp3 = !hasFlagResult;
+        if (!hasFlagResult) {
+          tmp3 = null != tmp.personalConnectionId;
+        }
+        return tmp3;
+      },
     };
     obj3 = {
       writable: false,
       configurable: false,
       enumerable: false,
       value() {
-            let hasFlagResult = obj2.hasFlag(closure_1_7.STAFF);
-            if (!hasFlagResult) {
-              hasFlagResult = obj.hasFlag(tmp.COLLABORATOR);
-            }
-            if (!hasFlagResult) {
-              hasFlagResult = obj.hasFlag(tmp.RESTRICTED_COLLABORATOR);
-            }
-            return hasFlagResult;
-          }
+        let hasFlagResult = obj2.hasFlag(closure_1_7.STAFF);
+        if (!hasFlagResult) {
+          hasFlagResult = obj.hasFlag(tmp.COLLABORATOR);
+        }
+        if (!hasFlagResult) {
+          hasFlagResult = obj.hasFlag(tmp.RESTRICTED_COLLABORATOR);
+        }
+        return hasFlagResult;
+      },
     };
-    definePropertiesResult = Object.defineProperties(tmp6, { hasFlag: obj, isStaff: obj1, isStaffPersonal: obj2, hasAnyStaffLevel: obj3 });
+    definePropertiesResult = Object.defineProperties(tmp6, {
+      hasFlag: obj,
+      isStaff: obj1,
+      isStaffPersonal: obj2,
+      hasAnyStaffLevel: obj3,
+    });
     globalName = tmp6.globalName;
     length = undefined;
     if (globalName != null) {
@@ -304,7 +309,7 @@ Object.defineProperty(prototype, "createdAt", {
     const obj = DISCORD_EPOCH;
     return new Date(require("../utils/SnowflakeUtils.tsx").extractTimestamp(this.id));
   },
-  set: undefined
+  set: undefined,
 });
 prototype["hasVerifiedEmailOrPhone"] = function hasVerifiedEmailOrPhone() {
   let tmp = true === this.verified;
@@ -386,7 +391,9 @@ prototype["getAvatarSource"] = function getAvatarSource(arg0, flag) {
       });
     }
   }
-  return importDefault(self[12]).getAnimatableSourceWithFallback(flag, (flag) => callback(self[12]).getUserAvatarSource(self, flag, closure_2));
+  return importDefault(self[12]).getAnimatableSourceWithFallback(flag, (flag) =>
+    callback(self[12]).getUserAvatarSource(self, flag, closure_2),
+  );
 };
 prototype["isClaimed"] = function isClaimed() {
   return null != this.email || null != this.phone;
@@ -406,7 +413,7 @@ Object.defineProperty(prototype, "tag", {
     const combined = "" + this.discriminator;
     return "" + this.username + "#" + combined.padStart(4, "0");
   },
-  set: undefined
+  set: undefined,
 });
 prototype["hasPurchasedFlag"] = function hasPurchasedFlag(PREMIUM_TIER_2) {
   return hasFlag.hasFlag(this.purchasedFlags, PREMIUM_TIER_2);
@@ -627,19 +634,19 @@ Object.defineProperty(prototype, "isProvisional", {
   get: function isProvisional() {
     return this.hasFlag(constants.PROVISIONAL_ACCOUNT);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "avatarDecoration", {
   get: function avatarDecoration() {
     return this.avatarDecorationData;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "avatarDecoration", {
   get: undefined,
   set: function avatarDecoration(avatar_decoration_data) {
     this.avatarDecorationData = parseAvatarDecorationData.parseAvatarDecorationData(avatar_decoration_data);
-  }
+  },
 });
 Object.defineProperty(prototype, "nameplate", {
   get: function nameplate(arg0) {
@@ -648,9 +655,10 @@ Object.defineProperty(prototype, "nameplate", {
     if (collectibles != null) {
       nameplate = collectibles.nameplate;
     }
-    return getNameplateData /* getNameplateData */.getNameplateData(nameplate);
+    return getNameplateData /* getNameplateData */
+      .getNameplateData(nameplate);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "premiumGroupRole", {
   get: function premiumGroupRole() {
@@ -664,7 +672,7 @@ Object.defineProperty(prototype, "premiumGroupRole", {
     }
     return prop;
   },
-  set: undefined
+  set: undefined,
 });
 const userRecord = new UserRecord({ id: "0" });
 let result = require("set").fileFinishedImporting("records/UserRecord.tsx");

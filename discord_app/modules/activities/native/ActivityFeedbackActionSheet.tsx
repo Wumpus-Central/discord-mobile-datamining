@@ -9,19 +9,33 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;
-const items = [, , ];
+const items = [, ,];
 ({ OTHER: arr[0], ADS: arr[1], NOT_FUN: arr[2] } = ActivityFeedbackReasons);
 const result = require("set").fileFinishedImporting("modules/activities/native/ActivityFeedbackActionSheet.tsx");
 
 export default function ActivityFeedbackActionSheet(activityApplication) {
   activityApplication = activityApplication.activityApplication;
-  ({ channel: importDefault, embeddedActivityLocation: dependencyMap, analyticsData: ActivityFeedbackReasons } = activityApplication);
+  ({
+    channel: importDefault,
+    embeddedActivityLocation: dependencyMap,
+    analyticsData: ActivityFeedbackReasons,
+  } = activityApplication);
   const embeddedActivityConfig = activityApplication.embeddedActivityConfig;
   let prop;
   if (embeddedActivityConfig != null) {
     prop = embeddedActivityConfig.displays_advertisements;
   }
-  let obj = { headerLabel: null, showHeaderCloseButton: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null };
+  let obj = {
+    headerLabel: null,
+    showHeaderCloseButton: true,
+    ratingsBodyLabel: null,
+    reasonsHeaderLabel: null,
+    reasons: null,
+    feedbackReasons: null,
+    otherKey: null,
+    trackOpen: null,
+    trackReport: null,
+  };
   const tmp2 = getActivityReportOptionsDefault(true, true === prop);
   const intl = activityApplication(1236).intl;
   obj = { applicationName: activityApplication.name };
@@ -35,7 +49,13 @@ export default function ActivityFeedbackActionSheet(activityApplication) {
   obj[6] = ActivityFeedbackReasons.OTHER;
   obj[7] = function trackOpen() {
     let obj = closure_1_1(closure_1_2[5]);
-    obj = { type: "Activity Feedback Sheet", application_id: activityApplication.id, application_name: activityApplication.name, game_id: activityApplication.id, source: "Activity End" };
+    obj = {
+      type: "Activity Feedback Sheet",
+      application_id: activityApplication.id,
+      application_name: activityApplication.name,
+      game_id: activityApplication.id,
+      source: "Activity End",
+    };
     obj.track(closure_1_4.OPEN_POPOUT, obj);
   };
   obj[8] = function trackReport(dontShowAgain) {
@@ -57,7 +77,16 @@ export default function ActivityFeedbackActionSheet(activityApplication) {
     }
     if (null != rating) {
       activityApplication(closure_1_2[10]).presentFeedbackSent();
-      obj1 = { problem: null, channel: null, embeddedActivityLocation: null, feedback: null, activityApplication: null, analyticsData: null, location: "Activity End", rating: null };
+      obj1 = {
+        problem: null,
+        channel: null,
+        embeddedActivityLocation: null,
+        feedback: null,
+        activityApplication: null,
+        analyticsData: null,
+        location: "Activity End",
+        rating: null,
+      };
       obj1[0] = value;
       obj1[1] = closure_1;
       obj1[2] = closure_2;
@@ -74,4 +103,4 @@ export default function ActivityFeedbackActionSheet(activityApplication) {
     }
   };
   return jsx(closeActionSheetDefault, { applicationName: activityApplication.name });
-};
+}

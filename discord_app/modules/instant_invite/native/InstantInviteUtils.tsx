@@ -42,7 +42,14 @@ function showInstantInviteActionSheet(channel, source) {
     obj.targetUserId = stream.ownerId;
     const streamerApplication = _findPlayingActivity.getStreamerApplication(stream, closure_9);
     let tmpResult = tmp(698);
-    obj = { type: "Send Stream Invite", location: null, other_user_id: null, application_id: null, application_name: null, game_id: null };
+    obj = {
+      type: "Send Stream Invite",
+      location: null,
+      other_user_id: null,
+      application_id: null,
+      application_name: null,
+      game_id: null,
+    };
     obj[1] = obj.location;
     obj[2] = stream.ownerId;
     let id;
@@ -88,7 +95,15 @@ function showInstantInviteActionSheet(channel, source) {
     tmpResult = tmp(9915);
     tmpResult.init(channel.getGuildId(), channel.id, obj);
   }
-  obj1 = { channel, source: null, guildScheduledEventId: null, targetApplicationId: null, code: null, vanityURLCode: null, stackingBehavior: null };
+  obj1 = {
+    channel,
+    source: null,
+    guildScheduledEventId: null,
+    targetApplicationId: null,
+    code: null,
+    vanityURLCode: null,
+    stackingBehavior: null,
+  };
   let source1;
   if (source != null) {
     source1 = source.source;
@@ -119,7 +134,16 @@ function showInstantInviteActionSheet(channel, source) {
 function trackOptionClicked(code, channel, COPY, _location) {
   let obj = readSnowflake;
   const invite = store3.getInvite(obj.parseExtraDataFromInviteKey(code).baseCode);
-  obj = { invite_type: COPY, guild_id: null, channel_id: null, invite_code: null, invite_channel_type: null, invite_inviter_id: null, location: null, application_id: null };
+  obj = {
+    invite_type: COPY,
+    guild_id: null,
+    channel_id: null,
+    invite_code: null,
+    invite_channel_type: null,
+    invite_inviter_id: null,
+    location: null,
+    application_id: null,
+  };
   if (channel instanceof ChannelRecordBase) {
     let guild_id = channel.guild_id;
   } else {
@@ -173,12 +197,23 @@ export const showInstantInviteActionSheetForChannel = function showInstantInvite
   }
 };
 export { showInstantInviteActionSheet };
-export const showVanityUrlInviteActionSheet = function showVanityUrlInviteActionSheet(guild, channel, GUILD_SCHEDULED_EVENT, guildScheduledEventId) {
+export const showVanityUrlInviteActionSheet = function showVanityUrlInviteActionSheet(
+  guild,
+  channel,
+  GUILD_SCHEDULED_EVENT,
+  guildScheduledEventId,
+) {
   let obj = expandEventPropertiesDefault;
   obj = { type: "Vanity URL Invite", source: GUILD_SCHEDULED_EVENT };
   obj.track(constants.OPEN_POPOUT, obj);
   _modDef9915.init(guild.id, channel.id, { skipCreateInvite: true });
-  obj = { vanityURLCode: guild.vanityURLCode, channel, source: GUILD_SCHEDULED_EVENT, guildScheduledEventId: null, stackingBehavior: null };
+  obj = {
+    vanityURLCode: guild.vanityURLCode,
+    channel,
+    source: GUILD_SCHEDULED_EVENT,
+    guildScheduledEventId: null,
+    stackingBehavior: null,
+  };
   let prop;
   const obj3 = _modDef9915;
   if (guildScheduledEventId != null) {
@@ -219,7 +254,16 @@ export const handleOpenShareSheet = function handleOpenShareSheet(code, channel,
         guild_id = channel.getGuildId();
       }
     }
-    let obj = { guild_id: null, channel_id: null, invite_code: null, invite_channel_type: null, invite_inviter_id: null, invite_guild_scheduled_event_id: null, location: null, application_id: null };
+    let obj = {
+      guild_id: null,
+      channel_id: null,
+      invite_code: null,
+      invite_channel_type: null,
+      invite_inviter_id: null,
+      invite_guild_scheduled_event_id: null,
+      location: null,
+      application_id: null,
+    };
     obj[0] = guild_id;
     let id1;
     if (channel != null) {
@@ -299,7 +343,15 @@ export const handleCopy = function handleCopy(code, channel, GROUP_DM, arg3) {
         guild_id = channel.getGuildId();
       }
     }
-    const obj = { server: null, channel: null, channel_type: null, location: null, code: null, guild_scheduled_event_id: null, application_id: null };
+    const obj = {
+      server: null,
+      channel: null,
+      channel_type: null,
+      location: null,
+      code: null,
+      guild_scheduled_event_id: null,
+      application_id: null,
+    };
     obj[0] = guild_id;
     let id1;
     if (channel != null) {

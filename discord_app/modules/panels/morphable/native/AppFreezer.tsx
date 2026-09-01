@@ -32,4 +32,4 @@ export default function AppFreezer(children) {
     freeze = flag;
   }
   return jsx(lockKeys(4876).Freeze, { freeze, placeholder, children: children.children });
-};
+}

@@ -22,7 +22,11 @@ const memoResult = importAllResult.memo(function SubscriberNitroIcon(onPress) {
   let tmpResult = tmp(589);
   const items = [closure_5];
   const items1 = [showReferralNotificationDot];
-  const stateFromStores = tmpResult.useStateFromStores(items, () => closure_1_5.getReferralsRemaining({ bypassFetch: !showReferralNotificationDot }), items1);
+  const stateFromStores = tmpResult.useStateFromStores(
+    items,
+    () => closure_1_5.getReferralsRemaining({ bypassFetch: !showReferralNotificationDot }),
+    items1,
+  );
   tmpResult = tmp(6251);
   let prop = null;
   if (showReferralNotificationDot) {
@@ -54,8 +58,15 @@ const memoResult = importAllResult.memo(function SubscriberNitroIcon(onPress) {
   obj[1] = intl.string(onPress(1236).t.Ipxkog);
   obj[2] = callback;
   obj[3] = tmp7;
-  return jsx(showReferralNotificationDot(16377), { IconComponent: onPress(8096).NitroWheelIcon, accessibilityLabel: null, onPress: null, showRedDot: null });
+  return jsx(showReferralNotificationDot(16377), {
+    IconComponent: onPress(8096).NitroWheelIcon,
+    accessibilityLabel: null,
+    onPress: null,
+    showRedDot: null,
+  });
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIconNitroSubscriber.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/you/YouScreenNavIconNitroSubscriber.tsx",
+);
 
 export default memoResult;

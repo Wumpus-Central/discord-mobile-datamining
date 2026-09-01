@@ -33,21 +33,27 @@ function ExistingJoinRequestHandler(guildId) {
   let obj = guildId(stateFromStores1[11]);
   const items1 = [closure_6];
   const items2 = [stateFromStores];
-  stateFromStores1 = guildId(stateFromStores1[11]).useStateFromStores(items1, () => {
-    let tmp2 = null;
-    if (null != stateFromStores) {
-      const defaultChannel = closure_1_6.getDefaultChannel(tmp.id);
-      let id;
-      if (defaultChannel != null) {
-        id = defaultChannel.id;
+  stateFromStores1 = guildId(stateFromStores1[11]).useStateFromStores(
+    items1,
+    () => {
+      let tmp2 = null;
+      if (null != stateFromStores) {
+        const defaultChannel = closure_1_6.getDefaultChannel(tmp.id);
+        let id;
+        if (defaultChannel != null) {
+          id = defaultChannel.id;
+        }
+        tmp2 = id;
       }
-      tmp2 = id;
-    }
-    return tmp2;
-  }, items2);
+      return tmp2;
+    },
+    items2,
+  );
   const obj2 = guildId(stateFromStores1[11]);
   const items3 = [closure_8];
-  const stateFromStores2 = guildId(stateFromStores1[11]).useStateFromStores(items3, () => closure_1_8.getRequest(guildId));
+  const stateFromStores2 = guildId(stateFromStores1[11]).useStateFromStores(items3, () =>
+    closure_1_8.getRequest(guildId),
+  );
   const tmp6 = onClose(stateFromStores1[12])(stateFromStores2);
   React = tmp6;
   const items4 = [guildId, tmp6, onClose];
@@ -97,7 +103,12 @@ function ExistingJoinRequestHandler(guildId) {
 }
 ({ ME: c9, Routes: c10 } = ME);
 createCacheKey = { flex: { flex: 1 }, flexLoading: null };
-createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  flex: 1,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[1] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerificationRouteContainer(navigation) {
@@ -153,7 +164,7 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
     obj[0] = guildId;
     obj[1] = callback;
     obj = { style: null, children: null };
-    const items1 = [tmp.flex, ];
+    const items1 = [tmp.flex];
     obj = { marginLeft: null, marginRight: null };
     obj[0] = tmp6;
     obj[1] = tmp7;
@@ -169,6 +180,8 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
   }
   return tmp10;
 });
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/MemberVerificationScreen.tsx",
+);
 
 export default authenticated;

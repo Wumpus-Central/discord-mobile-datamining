@@ -26,5 +26,5 @@ export const AVErrorScreenshareOSErrorDefinition = {
   },
   makeErrorContextKey(streamKey) {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;
-  }
+  },
 };

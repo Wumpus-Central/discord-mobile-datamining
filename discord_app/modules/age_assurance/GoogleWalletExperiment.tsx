@@ -4,7 +4,12 @@ import ApexExperiment from "../experiments/apex/index.tsx";
 
 const obj = { 1: null };
 obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-age-verification-google-wallet", defaultConfig: { enabled: false }, variations: obj });
+let closure_0 = ApexExperiment.createApexExperiment({
+  kind: "user",
+  name: "2026-03-age-verification-google-wallet",
+  defaultConfig: { enabled: false },
+  variations: obj,
+});
 const result = set.fileFinishedImporting("modules/age_assurance/GoogleWalletExperiment.tsx");
 
 export const useIsGoogleWalletEnabled = function useIsGoogleWalletEnabled(location) {

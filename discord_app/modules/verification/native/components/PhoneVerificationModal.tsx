@@ -8,15 +8,24 @@ import { HeaderBackImage } from "../../../../design/components/Navigator/native/
 
 const require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/verification/native/components/PhoneVerificationModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/verification/native/components/PhoneVerificationModal.tsx",
+);
 
 export default function PhoneVerificationModal(onClose) {
   let obj = { screens: null, initialRouteName: null, headerBackTitle: null };
   const _require = onClose;
   obj = {};
-  obj = { headerTitle: require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle(), headerLeft: null, render: null };
+  obj = {
+    headerTitle:
+      require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle(),
+    headerLeft: null,
+    render: null,
+  };
   const obj4 = HeaderBackImage;
-  obj[1] = require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderCloseButton(onClose.onClose);
+  obj[1] = require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderCloseButton(
+    onClose.onClose,
+  );
   obj[2] = function render(reason) {
     onClose = reason;
     closure_1 = arg1;
@@ -35,14 +44,12 @@ export default function PhoneVerificationModal(onClose) {
         phone,
         onVerified(arg0) {
           closure_0 = arg0;
-        }
+        },
       });
     };
     let fn = null;
     if (onClose.allowDeletePhone) {
-      fn = () => {
-
-      };
+      fn = () => {};
     }
     obj.onDeletePhone = fn;
     return closure_1_6(closure_1_1(closure_1_2[6]), obj);
@@ -51,7 +58,8 @@ export default function PhoneVerificationModal(onClose) {
   obj1 = { headerTitle: null, impressionName: null, render: null };
   const obj5 = HeaderBackImage;
   obj1[0] = require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle();
-  obj1[1] = require("../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").ImpressionNames.USER_VERIFY_PHONE;
+  obj1[1] =
+    require("../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").ImpressionNames.USER_VERIFY_PHONE;
   obj1[2] = function render(arg0, arg1) {
     closure_0 = arg1;
     let obj = {};
@@ -65,7 +73,7 @@ export default function PhoneVerificationModal(onClose) {
         c2 = 0;
         c1 = 0;
         c4 = 0;
-        return (function*(arg0) {
+        return (function* (arg0) {
           if (c1 === 2) {
             c1 = 3;
             HermesBuiltin.throwTypeError();
@@ -134,7 +142,7 @@ export default function PhoneVerificationModal(onClose) {
           }
         })();
       });
-      obj[1] = function() {
+      obj[1] = function () {
         const self = this;
         const apply = closure_1.apply;
         if (typeof apply === "unknown") {
@@ -164,5 +172,10 @@ export default function PhoneVerificationModal(onClose) {
   obj[1] = VerificationModalScenes.ADD_PHONE;
   const intl = require("../../../../intl/index.native.tsx").intl;
   obj[2] = intl.string(require("../../../../intl/index.native.tsx").t["13/7kX"]);
-  return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { headerTitle: require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle(), headerLeft: null, render: null });
-};
+  return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, {
+    headerTitle:
+      require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle(),
+    headerLeft: null,
+    render: null,
+  });
+}

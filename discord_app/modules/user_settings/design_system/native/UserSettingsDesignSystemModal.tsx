@@ -30,7 +30,10 @@ function DemoModal() {
       return callback3(callback(6237).HeaderActionButton, obj);
     };
     obj[2] = function headerTitle() {
-      return callback3(callback(5495).NavigatorHeader, { title: constants.START, subtitle: "I said come on fhqwhgads" });
+      return callback3(callback(5495).NavigatorHeader, {
+        title: constants.START,
+        subtitle: "I said come on fhqwhgads",
+      });
     };
     obj[3] = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -43,7 +46,7 @@ function DemoModal() {
         },
         secondaryAction: "Maybe later",
         onSecondaryAction: callback2(4723).pop,
-        disclaimer: "I said come on fhqwhgads."
+        disclaimer: "I said come on fhqwhgads.",
       });
     };
     obj[constants.START] = obj;
@@ -62,7 +65,7 @@ function DemoModal() {
         onAction() {
           return arr.push(closure_1_10.EVERYBODY);
         },
-        children: callback3(callback(7705).TextInput, { placeholder: "My friend Jake" })
+        children: callback3(callback(7705).TextInput, { placeholder: "My friend Jake" }),
       });
     };
     obj[constants.WHO_DAT] = obj;
@@ -79,7 +82,7 @@ function DemoModal() {
       return callback3(closure_14, {
         onAction() {
           return arr.push(closure_1_10.JOCKIN);
-        }
+        },
       });
     };
     obj[constants.EVERYBODY] = obj1;
@@ -89,7 +92,10 @@ function DemoModal() {
     const obj11 = callback(5495);
     obj2[1] = callback(5495).getHeaderCloseButton(callback2(4723).pop);
     obj2[2] = function headerTitle() {
-      return callback3(callback(5495).NavigatorHeader, { title: constants.JOCKIN, subtitle: "Tryin' to play like, you know me" });
+      return callback3(callback(5495).NavigatorHeader, {
+        title: constants.JOCKIN,
+        subtitle: "Tryin' to play like, you know me",
+      });
     };
     obj2[3] = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -100,7 +106,7 @@ function DemoModal() {
         onAction() {
           return arr.push(closure_1_10.LIMIT);
         },
-        disclaimer: "Tryin' to play like, you know me."
+        disclaimer: "Tryin' to play like, you know me.",
       });
     };
     obj[constants.JOCKIN] = obj2;
@@ -123,7 +129,7 @@ function DemoModal() {
         onSecondaryAction() {
           return callback(table[12]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");
         },
-        disclaimer: "The cheat is to the limit."
+        disclaimer: "The cheat is to the limit.",
       });
     };
     obj[constants.LIMIT] = obj3;
@@ -147,7 +153,10 @@ function DemoStepModal() {
       return callback3(callback(6237).HeaderActionButton, obj);
     };
     obj[2] = function headerTitle() {
-      return callback3(callback(5495).NavigatorHeader, { title: constants.START, subtitle: "I said come on fhqwhgads" });
+      return callback3(callback(5495).NavigatorHeader, {
+        title: constants.START,
+        subtitle: "I said come on fhqwhgads",
+      });
     };
     obj[3] = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -160,7 +169,7 @@ function DemoStepModal() {
         },
         secondaryAction: "Maybe later",
         onSecondaryAction: callback2(4723).pop,
-        disclaimer: "I said come on fhqwhgads."
+        disclaimer: "I said come on fhqwhgads.",
       });
     };
     obj[constants.START] = obj;
@@ -179,7 +188,7 @@ function DemoStepModal() {
         onAction() {
           return arr.push(closure_1_10.EVERYBODY);
         },
-        children: callback3(callback(7705).TextInput, { placeholder: "My friend Jake" })
+        children: callback3(callback(7705).TextInput, { placeholder: "My friend Jake" }),
       });
     };
     obj[constants.WHO_DAT] = obj;
@@ -196,7 +205,7 @@ function DemoStepModal() {
       return callback3(closure_14, {
         onAction() {
           return arr.push(closure_1_10.JOCKIN);
-        }
+        },
       });
     };
     obj[constants.EVERYBODY] = obj1;
@@ -206,7 +215,10 @@ function DemoStepModal() {
     const obj11 = callback(5495);
     obj2[1] = callback(5495).getHeaderCloseButton(callback2(4723).pop);
     obj2[2] = function headerTitle() {
-      return callback3(callback(5495).NavigatorHeader, { title: constants.JOCKIN, subtitle: "Tryin' to play like, you know me" });
+      return callback3(callback(5495).NavigatorHeader, {
+        title: constants.JOCKIN,
+        subtitle: "Tryin' to play like, you know me",
+      });
     };
     obj2[3] = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -217,7 +229,7 @@ function DemoStepModal() {
         onAction() {
           return arr.push(closure_1_10.LIMIT);
         },
-        disclaimer: "Tryin' to play like, you know me."
+        disclaimer: "Tryin' to play like, you know me.",
       });
     };
     obj[constants.JOCKIN] = obj2;
@@ -240,14 +252,14 @@ function DemoStepModal() {
         onSecondaryAction() {
           return callback(table[12]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");
         },
-        disclaimer: "The cheat is to the limit."
+        disclaimer: "The cheat is to the limit.",
       });
     };
     obj[constants.LIMIT] = obj3;
     return obj;
   }, []);
   const memo = React.useMemo(() => {
-    const items = [, , , , ];
+    const items = [, , , ,];
     ({ START: arr[0], WHO_DAT: arr[1], EVERYBODY: arr[2], JOCKIN: arr[3], LIMIT: arr[4] } = closure_10);
     return items;
   }, []);
@@ -269,9 +281,19 @@ function DemoScreen(arg0) {
     tmp5 = callback2(closure_5, obj);
   }
   obj = { children: null };
-  const items = [tmp5, callback2(Text.Text, { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: title }), children];
+  const items = [
+    tmp5,
+    callback2(Text.Text, {
+      accessibilityRole: "header",
+      variant: "heading-xl/bold",
+      color: "mobile-text-heading-primary",
+      style: tmp.title,
+      children: title,
+    }),
+    children,
+  ];
   obj[0] = items;
-  children = [closure_8(ModalContent.ModalContent, obj), ];
+  children = [closure_8(ModalContent.ModalContent, obj)];
   if (footer == null) {
     let tmp8Result = null != disclaimer;
     if (tmp8Result) {
@@ -279,7 +301,7 @@ function DemoScreen(arg0) {
       obj2[0] = disclaimer;
       tmp8Result = tmp8(tmp3(13819).ModalDisclaimer, obj2);
     }
-    const items2 = [tmp8Result, , ];
+    const items2 = [tmp8Result, ,];
     tmp8Result = null != action;
     if (tmp8Result) {
       const obj3 = { variant: "primary", text: null, onPress: null };
@@ -310,7 +332,12 @@ function SwitchesScreen(onAction) {
   parts = "I said ooh ah fhqwhgads, I said ooh ah fhqhgads!".split(" ");
   [arr2, c1] = callback(React.useState(parts.map(() => false)), 2);
   let obj = { title: "Everybody come on fhqwhgads.", emoji: "\u{1F44F}", footer: null, children: null };
-  obj = { isVisible: arr2.some((arg0) => arg0), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction };
+  obj = {
+    isVisible: arr2.some((arg0) => arg0),
+    floatingBackgroundColor: tmp.screen.backgroundColor,
+    text: "Come on fhqwhgads",
+    onPress: onAction.onAction,
+  };
   obj[2] = callback2(parts(10732).ModalFloatingAction, obj);
   obj = { style: tmp.tableRows, children: null };
   const tmp2 = callback(React.useState(parts.map(() => false)), 2);
@@ -318,21 +345,27 @@ function SwitchesScreen(onAction) {
     hasIcons: false,
     children: arr2.map((value) => {
       parts = arg1;
-      return closure_1_7(parts(closure_1_2[23]).TableSwitchRow, {
-        label: parts[arg1],
-        value,
-        onValueChange(arg0) {
-          closure_0 = arg0;
-          closure_1_1((arr) => arr.map((arg0, arg1) => {
-            let tmp = arg0;
-            if (arg1 === closure_1_0) {
-              tmp = closure_0;
-            }
-            return tmp;
-          }));
-        }
-      }, arg1);
-    })
+      return closure_1_7(
+        parts(closure_1_2[23]).TableSwitchRow,
+        {
+          label: parts[arg1],
+          value,
+          onValueChange(arg0) {
+            closure_0 = arg0;
+            closure_1_1((arr) =>
+              arr.map((arg0, arg1) => {
+                let tmp = arg0;
+                if (arg1 === closure_1_0) {
+                  tmp = closure_0;
+                }
+                return tmp;
+              }),
+            );
+          },
+        },
+        arg1,
+      );
+    }),
   });
   const items = [callback2(closure_5, obj), callback2(parts(10732).ModalFloatingActionSpacer, {})];
   obj[3] = items;
@@ -348,24 +381,58 @@ function openDemoStepModal() {
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: { flex: 1, alignItems: "center", padding: 16, gap: 16 }, screen: null, emojiContainer: null, emoji: null, title: null, tableRows: null };
+createCacheKey = {
+  container: { flex: 1, alignItems: "center", padding: 16, gap: 16 },
+  screen: null,
+  emojiContainer: null,
+  emoji: null,
+  title: null,
+  tableRows: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { alignItems: "center", justifyContent: "center", width: 80, height: 80, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 16 };
+createCacheKey[2] = {
+  alignItems: "center",
+  justifyContent: "center",
+  width: 80,
+  height: 80,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  marginBottom: 16,
+};
 createCacheKey[3] = { fontSize: 48, lineHeight: 80 };
 createCacheKey[4] = { marginBottom: 16 };
 createCacheKey[5] = { width: "100%" };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let closure_10 = { START: "Come on fhqwhgads", WHO_DAT: "Who's that?", EVERYBODY: "Everybody come on fhqwhgads", JOCKIN: "I see you jockin' me", LIMIT: "Everybody to the limit" };
-let obj1 = { alignItems: "center", justifyContent: "center", width: 80, height: 80, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 16 };
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemModal.tsx");
+let closure_10 = {
+  START: "Come on fhqwhgads",
+  WHO_DAT: "Who's that?",
+  EVERYBODY: "Everybody come on fhqwhgads",
+  JOCKIN: "I see you jockin' me",
+  LIMIT: "Everybody to the limit",
+};
+let obj1 = {
+  alignItems: "center",
+  justifyContent: "center",
+  width: 80,
+  height: 80,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  marginBottom: 16,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/design_system/native/UserSettingsDesignSystemModal.tsx",
+);
 
 export default function UserSettingsDesignSystemModal() {
   let obj = { children: null };
   obj = { style: callback4().container, children: null };
   obj = { onPress: openDemoModal, text: "Show Modal" };
-  const items = [callback2(Button.Button, obj), callback2(Button.Button, { onPress: openDemoStepModal, text: "Show Stepped Modal" })];
+  const items = [
+    callback2(Button.Button, obj),
+    callback2(Button.Button, { onPress: openDemoStepModal, text: "Show Stepped Modal" }),
+  ];
   obj[1] = items;
   obj[0] = callback3(closure_5, obj);
   return callback2(closure_6, obj);
-};
+}

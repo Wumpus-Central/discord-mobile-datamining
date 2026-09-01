@@ -6,11 +6,20 @@ import closure_4 from "InitialMemberVerificationStore.tsx";
 import { setInitialVerification } from "InitialMemberVerificationStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/MemberVerificationModalHooks.tsx",
+);
 
 export const useSetInitialVerificationEffect = function useSetInitialVerificationEffect(guildId) {
   let _require = guildId;
-  obj = { initial: _require(obj[3]).useStateFromStores(items, () => closure_1_4.getInitialVerificationState(closure_0), items1), current: null };
+  obj = {
+    initial: _require(obj[3]).useStateFromStores(
+      items,
+      () => closure_1_4.getInitialVerificationState(closure_0),
+      items1,
+    ),
+    current: null,
+  };
   _require = guildId;
   items = [closure_4];
   items1 = [guildId];
@@ -77,5 +86,9 @@ export const useInitialVerification = function useInitialVerification(id) {
   const _require = id;
   const items = [closure_4];
   const items1 = [id];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.getInitialVerificationState(closure_0), items1);
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_4.getInitialVerificationState(closure_0),
+    items1,
+  );
 };

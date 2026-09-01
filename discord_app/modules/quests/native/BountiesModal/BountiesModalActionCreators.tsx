@@ -9,10 +9,14 @@ const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/Bo
 export default {
   showModal(arg0) {
     ({ bountyId, sourceQuestContent } = arg0);
-    _modDef4723.pushLazy(asyncRequireImpl(14609, dependencyMap.paths), { bountyId, sourceQuestContent }, BOUNTIES_MODAL);
+    _modDef4723.pushLazy(
+      asyncRequireImpl(14609, dependencyMap.paths),
+      { bountyId, sourceQuestContent },
+      BOUNTIES_MODAL,
+    );
   },
   hideModal() {
     _modDef4723.popWithKey(BOUNTIES_MODAL);
-  }
+  },
 };
 export const BOUNTIES_MODAL_KEY = "BOUNTIES_MODAL";

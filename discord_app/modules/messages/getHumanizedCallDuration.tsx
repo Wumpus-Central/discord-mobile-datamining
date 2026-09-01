@@ -13,4 +13,4 @@ export default function getHumanizedCallDuration(call) {
     humanizeResult = duration.humanize();
   }
   return humanizeResult;
-};
+}

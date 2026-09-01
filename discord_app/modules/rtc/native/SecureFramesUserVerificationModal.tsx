@@ -13,11 +13,29 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
-({ USER_VERIFICATION_CHUNK_SIZE: c9, USER_VERIFICATION_LENGTH: c10, USER_VERIFICATION_NUM_COLUMNS: unpackModuleId, USER_VERIFIED_TOAST_KEY: closure_12 } = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
+({
+  USER_VERIFICATION_CHUNK_SIZE: c9,
+  USER_VERIFICATION_LENGTH: c10,
+  USER_VERIFICATION_NUM_COLUMNS: unpackModuleId,
+  USER_VERIFIED_TOAST_KEY: closure_12,
+} = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
 ({ AnalyticsLocations: map1, AnalyticsSections: closure_14 } = ME);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-createCacheKey = { container: null, footer: null, footerText: null, header: null, subtitle: null, code: null, helpMessage: null };
-createCacheKey = { flex: 1, padding: 16, flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  container: null,
+  footer: null,
+  footerText: null,
+  header: null,
+  subtitle: null,
+  code: null,
+  helpMessage: null,
+};
+createCacheKey = {
+  flex: 1,
+  padding: 16,
+  flexDirection: "column",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, gap: 16, justifyContent: "flex-end" };
 createCacheKey[2] = { textAlign: "center" };
@@ -66,7 +84,10 @@ export default function SecureFramesUserVerificationModal(userId) {
   let obj6 = userId(name[15]);
   isUserSecureFramesVerified = obj6.useIsUserSecureFramesVerified({ userId, channelId, userKey: fingerprintUserKey });
   let obj7 = userId(name[16]);
-  const isPersistentSecureFramesFingerprint = obj7.useIsPersistentSecureFramesFingerprint({ userId, userKey: fingerprintUserKey });
+  const isPersistentSecureFramesFingerprint = obj7.useIsPersistentSecureFramesFingerprint({
+    userId,
+    userKey: fingerprintUserKey,
+  });
   isCurrentUserKeyPersistent = isPersistentSecureFramesFingerprint.isCurrentUserKeyPersistent;
   isOtherUserKeyPersistent = isPersistentSecureFramesFingerprint.isOtherUserKeyPersistent;
   const items2 = [channelId, fingerprintUserKey, isOtherUserKeyPersistent, name, userId];
@@ -139,18 +160,21 @@ export default function SecureFramesUserVerificationModal(userId) {
   const alertIfSecureFramesKeyInconsistent = obj9.useAlertIfSecureFramesKeyInconsistent(obj);
   const items6 = [isUserSecureFramesVerified];
   const items7 = [isCurrentUserKeyPersistent, isOtherUserKeyPersistent, name];
-  [tmp18, tmp19] = fingerprint(fingerprintUserKey.useMemo(() => {
-    const intl = userId(name[21]).intl;
-    const string = intl.string;
-    const t = userId(name[21]).t;
-    if (isUserSecureFramesVerified) {
-      const items = [string(t.UNUuem), userId(name[28]).BadgeColors.INFO];
-      let items1 = items;
-    } else {
-      items1 = [string(t.y2b7CA), userId(name[28]).BadgeColors.DANGER];
-    }
-    return items1;
-  }, items6), 2);
+  [tmp18, tmp19] = fingerprint(
+    fingerprintUserKey.useMemo(() => {
+      const intl = userId(name[21]).intl;
+      const string = intl.string;
+      const t = userId(name[21]).t;
+      if (isUserSecureFramesVerified) {
+        const items = [string(t.UNUuem), userId(name[28]).BadgeColors.INFO];
+        let items1 = items;
+      } else {
+        items1 = [string(t.y2b7CA), userId(name[28]).BadgeColors.DANGER];
+      }
+      return items1;
+    }, items6),
+    2,
+  );
   const items8 = [channelId, userId];
   const memo = fingerprintUserKey.useMemo(() => {
     let obj = userId(name[17]);
@@ -164,16 +188,30 @@ export default function SecureFramesUserVerificationModal(userId) {
   }, items8);
   obj1 = { top: true, bottom: true, style: tmp.container, children: null };
   obj2 = { style: tmp.header, children: null };
-  obj3 = { accessibilityRole: "button", accessibilityLabel: null, androidRippleConfig: null, hitSlop: 8, onPress: null, children: null };
+  obj3 = {
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    androidRippleConfig: null,
+    hitSlop: 8,
+    onPress: null,
+    children: null,
+  };
   let intl = userId(name[21]).intl;
   obj3[1] = intl.string(userId(name[21]).t.cpT0Cq);
   obj3[2] = ANDROID_FOREGROUND_RIPPLE;
   obj3[4] = callback3;
   obj3[5] = callback(userId(name[31]).ArrowLargeLeftIcon, { size: "md" });
-  const items9 = [callback(userId(name[30]).PressableOpacity, obj3), ];
+  const items9 = [callback(userId(name[30]).PressableOpacity, obj3)];
   let tmp24Result = null != fingerprint && null != readableSecureFramesFingerprint;
   if (tmp24Result) {
-    obj4 = { accessibilityRole: "button", accessibilityLabel: null, androidRippleConfig: null, hitSlop: 8, onPress: null, children: null };
+    obj4 = {
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      androidRippleConfig: null,
+      hitSlop: 8,
+      onPress: null,
+      children: null,
+    };
     const intl2 = tmp2(tmp3[21]).intl;
     obj4[1] = intl2.string(tmp2(tmp3[21]).t.RDE0Sc);
     obj4[2] = tmp25;
@@ -186,12 +224,12 @@ export default function SecureFramesUserVerificationModal(userId) {
   }
   items9[1] = tmp24Result;
   obj2[1] = items9;
-  const items10 = [closure_17(isUserSecureFramesVerified, obj2), , , ];
+  const items10 = [closure_17(isUserSecureFramesVerified, obj2), , ,];
   obj6 = { spacing: 8, justify: "center", align: "center", direction: "vertical", children: null };
   obj7 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl4 = tmp2(tmp3[21]).intl;
   obj7[2] = intl4.string(userId(name[21]).t["/WPGnF"]);
-  const items11 = [callback(userId(name[32]).Text, obj7), ];
+  const items11 = [callback(userId(name[32]).Text, obj7)];
   obj8 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
   const intl5 = tmp2(tmp3[21]).intl;
   obj8[3] = intl5.format(userId(name[21]).t.oc2kce, { username: name });
@@ -199,21 +237,24 @@ export default function SecureFramesUserVerificationModal(userId) {
   obj6[4] = items11;
   items10[1] = closure_17(userId(name[33]).Stack, obj6);
   obj9 = { style: tmp.code, children: null };
-  const items12 = [callback(channelId(name[34]), { style: tmp.helpMessage, userId, userKey: fingerprintUserKey }), ];
+  const items12 = [callback(channelId(name[34]), { style: tmp.helpMessage, userId, userKey: fingerprintUserKey })];
   const obj11 = { title: null, chunks: null, columns: null, trailing: null };
   const obj10 = { style: tmp.helpMessage, userId, userKey: fingerprintUserKey };
-  const tmp17 = fingerprint(fingerprintUserKey.useMemo(() => {
-    const intl = userId(name[21]).intl;
-    const string = intl.string;
-    const t = userId(name[21]).t;
-    if (isUserSecureFramesVerified) {
-      const items = [string(t.UNUuem), userId(name[28]).BadgeColors.INFO];
-      let items1 = items;
-    } else {
-      items1 = [string(t.y2b7CA), userId(name[28]).BadgeColors.DANGER];
-    }
-    return items1;
-  }, items6), 2);
+  const tmp17 = fingerprint(
+    fingerprintUserKey.useMemo(() => {
+      const intl = userId(name[21]).intl;
+      const string = intl.string;
+      const t = userId(name[21]).t;
+      if (isUserSecureFramesVerified) {
+        const items = [string(t.UNUuem), userId(name[28]).BadgeColors.INFO];
+        let items1 = items;
+      } else {
+        items1 = [string(t.y2b7CA), userId(name[28]).BadgeColors.DANGER];
+      }
+      return items1;
+    }, items6),
+    2,
+  );
   tmp25 = ANDROID_FOREGROUND_RIPPLE;
   const intl6 = tmp2(tmp3[21]).intl;
   obj11[0] = intl6.string(userId(name[21]).t["/WPGnF"]);
@@ -232,7 +273,14 @@ export default function SecureFramesUserVerificationModal(userId) {
   obj9[1] = items12;
   items10[2] = closure_17(isUserSecureFramesVerified, obj9);
   const obj13 = { style: tmp.footer, children: null };
-  const items13 = [callback(userId(name[32]).Text, { style: tmp.footerText, variant: "text-xs/normal", color: "text-default", children: memo }), ];
+  const items13 = [
+    callback(userId(name[32]).Text, {
+      style: tmp.footerText,
+      variant: "text-xs/normal",
+      color: "text-default",
+      children: memo,
+    }),
+  ];
   let loading = null == readableSecureFramesFingerprint;
   if (!loading) {
     loading = isPersistentSecureFramesFingerprint.loading;
@@ -256,4 +304,4 @@ export default function SecureFramesUserVerificationModal(userId) {
   items10[3] = closure_17(isUserSecureFramesVerified, obj13);
   obj1[3] = items10;
   return closure_17(userId(name[29]).SafeAreaPaddingView, obj1);
-};
+}

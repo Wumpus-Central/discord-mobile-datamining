@@ -51,7 +51,16 @@ function getStickerSendability(stickerById, closure_1_3, channel) {
     obj5 = getStickerExtensionFromFormatType;
   }
 }
-let obj = { SENDABLE: 0, [0]: "SENDABLE", SENDABLE_WITH_PREMIUM: 1, [1]: "SENDABLE_WITH_PREMIUM", NONSENDABLE: 2, [2]: "NONSENDABLE", SENDABLE_WITH_BOOSTED_GUILD: 3, [3]: "SENDABLE_WITH_BOOSTED_GUILD" };
+let obj = {
+  SENDABLE: 0,
+  [0]: "SENDABLE",
+  SENDABLE_WITH_PREMIUM: 1,
+  [1]: "SENDABLE_WITH_PREMIUM",
+  NONSENDABLE: 2,
+  [2]: "NONSENDABLE",
+  SENDABLE_WITH_BOOSTED_GUILD: 3,
+  [3]: "SENDABLE_WITH_BOOSTED_GUILD",
+};
 let result = require("set").fileFinishedImporting("modules/stickers/StickerSendability.tsx");
 
 export const StickerSendability = obj;

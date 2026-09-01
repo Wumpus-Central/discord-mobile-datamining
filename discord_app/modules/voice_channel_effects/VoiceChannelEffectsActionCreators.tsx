@@ -8,7 +8,9 @@ import { DEFAULT_SOUND_GUILD_ID } from "../soundboard/SoundboardConstants.tsx";
 
 const require = arg1;
 ({ Endpoints: error, NOOP_NULL: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsActionCreators.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/voice_channel_effects/VoiceChannelEffectsActionCreators.tsx",
+);
 
 export const VoiceChannelEffectSentLocation = { EMOJI_PICKER: "emoji_picker", EFFECT_BAR: "effect_bar" };
 export const sendVoiceChannelCustomCallSoundEffect = function sendVoiceChannelCustomCallSoundEffect(id, c4, arg2) {
@@ -27,16 +29,26 @@ export const sendVoiceChannelCustomCallSoundEffect = function sendVoiceChannelCu
   }, 1000);
   obj[1] = abortController(6193).sampleAnimationId(BASIC, abortController(6193).CUSTOM_CALL_SOUND_ANIMATION_RANGE);
   const HTTP = tmp2(530).HTTP;
-  obj = { url: closure_7.CUSTOM_CALL_SOUNDS(id), body: obj, signal: abortController.signal, onRequestProgress: throttleResult, rejectWithError: true };
+  obj = {
+    url: closure_7.CUSTOM_CALL_SOUNDS(id),
+    body: obj,
+    signal: abortController.signal,
+    onRequestProgress: throttleResult,
+    rejectWithError: true,
+  };
   const tmp2Result = abortController(6193);
-  HTTP.post(obj).then(closure_8, () => {
-
-  });
+  HTTP.post(obj).then(closure_8, () => {});
   const postResult = HTTP.post(obj);
   const items = [abortController(5973).CHANNEL_CALL];
   abortController(6216)(items, arg2, c4, abortController(4973).AnalyticsSoundType.ENTRY);
 };
-export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundboardEffect(channelId, emojiId, arg2, arg3, arg4) {
+export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundboardEffect(
+  channelId,
+  emojiId,
+  arg2,
+  arg3,
+  arg4,
+) {
   let customEmojiById = null;
   if (null != emojiId.emojiId) {
     customEmojiById = customEmojiById.getCustomEmojiById(emojiId.emojiId);
@@ -68,16 +80,14 @@ export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundbo
         abortController.abort();
       }
     }, 1000),
-    rejectWithError: true
+    rejectWithError: true,
   };
   const throttleResult = obj.throttle(() => {
     if (closure_1_4.getVoiceChannelId() !== abortController) {
       abortController.abort();
     }
   }, 1000);
-  HTTP.post(obj).then(closure_8, () => {
-
-  });
+  HTTP.post(obj).then(closure_8, () => {});
   const postResult = HTTP.post(obj);
   if (arg3 == null) {
     items = [];

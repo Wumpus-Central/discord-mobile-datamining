@@ -14,9 +14,7 @@ export default function useOnNewPendingRequest(stateFromStores) {
   pendingRequestCount(stateFromStores[4])(() => {
     if (!ref2.getAreLinkedUsersProcessed()) {
       const linkedUsers = pendingRequestCount(stateFromStores[5]).fetchLinkedUsers();
-      linkedUsers.catch(() => {
-
-      });
+      linkedUsers.catch(() => {});
       const obj = pendingRequestCount(stateFromStores[5]);
     }
   });
@@ -39,4 +37,4 @@ export default function useOnNewPendingRequest(stateFromStores) {
       }
     }
   }, items2);
-};
+}

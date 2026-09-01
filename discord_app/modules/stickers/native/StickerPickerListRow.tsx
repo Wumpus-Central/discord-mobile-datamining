@@ -13,14 +13,31 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 noopAll;
 const STICKER_SIZE = PADDING_HORIZONTAL.STICKER_SIZE;
-let closure_10 = createCacheKey.createStyles({ row: { height: PADDING_HORIZONTAL.ROW_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "space-between", overflow: "hidden" }, stickerImage: { height: STICKER_SIZE, width: STICKER_SIZE } });
+let closure_10 = createCacheKey.createStyles({
+  row: {
+    height: PADDING_HORIZONTAL.ROW_HEIGHT,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    overflow: "hidden",
+  },
+  stickerImage: { height: STICKER_SIZE, width: STICKER_SIZE },
+});
 let result = require("set").fileFinishedImporting("modules/stickers/native/StickerPickerListRow.tsx");
 
 export default function StickerPickerListRow(stickers) {
   let arr;
   let sum;
   stickers = stickers.stickers;
-  ({ rowSize, onPressSticker: importDefault, onLongPressStickerDetail: dependencyMap, focusedSticker: closure_3, setFocusedSticker: View, channel: closure_5, nativeRow } = stickers);
+  ({
+    rowSize,
+    onPressSticker: importDefault,
+    onLongPressStickerDetail: dependencyMap,
+    focusedSticker: closure_3,
+    setFocusedSticker: View,
+    channel: closure_5,
+    nativeRow,
+  } = stickers);
   if (nativeRow === undefined) {
     let obj = stickers(500);
     nativeRow = obj.isAndroid();
@@ -49,7 +66,7 @@ export default function StickerPickerListRow(stickers) {
     if (user != null) {
       id = user.id;
     }
-    items = [stickers(closure_1_2[13]).shouldAnimateSticker(closure_7, id.id === id), , ];
+    items = [stickers(closure_1_2[13]).shouldAnimateSticker(closure_7, id.id === id), ,];
     let isSendableStickerResult = null == closure_5;
     if (!isSendableStickerResult) {
       isSendableStickerResult = stickers(closure_1_2[14]).isSendableSticker(id, closure_1_5.getCurrentUser(), tmp5);
@@ -74,7 +91,15 @@ export default function StickerPickerListRow(stickers) {
           let tmp17 = callback;
           let tmp18 = callback(rowTraits(tmp12), 3);
           let first = tmp18[0];
-          obj = { stickerId: null, stickerName: null, stickerType: null, stickerUrl: null, stickerAnimated: null, stickerDisabled: null, stickerOpaque: null };
+          obj = {
+            stickerId: null,
+            stickerName: null,
+            stickerType: null,
+            stickerUrl: null,
+            stickerAnimated: null,
+            stickerDisabled: null,
+            stickerOpaque: null,
+          };
           ({ id: obj4[0], name: obj4[1], format_type: obj4[2] } = tmp12);
           let tmp20 = stickers;
           let tmp21 = dependencyMap;
@@ -87,7 +112,15 @@ export default function StickerPickerListRow(stickers) {
           arr = items.push(obj);
           let tmp15 = dependencyMap;
         } else {
-          obj = { stickerId: null, stickerName: "", stickerType: null, stickerUrl: "", stickerAnimated: false, stickerDisabled: true, stickerOpaque: false };
+          obj = {
+            stickerId: null,
+            stickerName: "",
+            stickerType: null,
+            stickerUrl: "",
+            stickerAnimated: false,
+            stickerDisabled: true,
+            stickerOpaque: false,
+          };
           let tmp14 = stickers;
           tmp15 = dependencyMap;
           obj[2] = stickers(5212).StickerFormat.PNG;
@@ -129,8 +162,14 @@ export default function StickerPickerListRow(stickers) {
       const obj3 = { message: "Error in StickerPickerListRowNativeComponent", category: "sticker", data: null };
       obj4 = { itemLength: null, items: null };
       obj4[0] = arr.length;
-      let found = arr.filter((stickerId) => null == stickerId.stickerId || null == stickerId.stickerName || null == stickerId.stickerUrl);
-      obj4[1] = found.map((stickerId) => ({ stickerId: stickerId.stickerId, stickerName: stickerId.stickerName, stickerUrl: stickerId.stickerUrl }));
+      let found = arr.filter(
+        (stickerId) => null == stickerId.stickerId || null == stickerId.stickerName || null == stickerId.stickerUrl,
+      );
+      obj4[1] = found.map((stickerId) => ({
+        stickerId: stickerId.stickerId,
+        stickerName: stickerId.stickerName,
+        stickerUrl: stickerId.stickerUrl,
+      }));
       obj3[2] = obj4;
       importDefault(tmp[18]).addBreadcrumb(obj3);
       throw tmp28;
@@ -152,7 +191,7 @@ export default function StickerPickerListRow(stickers) {
             if (user != null) {
               id = user.id;
             }
-            items = [stickers(closure_1_2[13]).shouldAnimateSticker(closure_7, tmp2.id === id), , ];
+            items = [stickers(closure_1_2[13]).shouldAnimateSticker(closure_7, tmp2.id === id), ,];
             let isSendableStickerResult = null == closure_5;
             if (!isSendableStickerResult) {
               isSendableStickerResult = tmp25(tmp26[14]).isSendableSticker(tmp2, closure_1_5.getCurrentUser(), tmp4);
@@ -163,7 +202,15 @@ export default function StickerPickerListRow(stickers) {
             const obj5 = stickers(closure_1_2[13]);
             const tmp27 = closure_7;
             [tmp10, tmp11, tmp12] = closure_1_3(items, 3);
-            obj = { accessibilityRole: "button", accessibilityLabel: null, style: null, disabled: null, onPress: null, onLongPress: null, children: null };
+            obj = {
+              accessibilityRole: "button",
+              accessibilityLabel: null,
+              style: null,
+              disabled: null,
+              onPress: null,
+              onLongPress: null,
+              children: null,
+            };
             obj[1] = tmp2.name;
             obj[2] = closure_6.stickerImage;
             obj[3] = tmp12;
@@ -195,4 +242,4 @@ export default function StickerPickerListRow(stickers) {
     obj5[1] = items;
     return items(View, obj5);
   }
-};
+}

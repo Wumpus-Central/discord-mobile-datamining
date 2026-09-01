@@ -11,7 +11,7 @@ import { PlatformTypes } from "../../../Constants.tsx";
 require = arg1;
 function _requestAndSyncContacts() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (v02 === 2) {
       v02 = 3;
       HermesBuiltin.throwTypeError();
@@ -143,7 +143,7 @@ let prototype = function ContactSyncLifecycleManager() {
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       return applyArgumentsResult.handleConnectionOpen();
-    }
+    },
   };
   applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
     if (null != currentUser.getCurrentUser()) {
@@ -152,16 +152,18 @@ let prototype = function ContactSyncLifecycleManager() {
         const result = tmp4(tmp5[7]).checkContactPermissions();
         result.then((arg0) => {
           if (arg0 === constants.AUTHORIZED) {
-            callback(table[9]).runAfterInteractions(() => (function requestAndSyncContacts() {
-              const self = this;
-              const apply = closure_11.apply;
-              if (typeof apply === "unknown") {
-                applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            })());
+            callback(table[9]).runAfterInteractions(() =>
+              (function requestAndSyncContacts() {
+                const self = this;
+                const apply = closure_11.apply;
+                if (typeof apply === "unknown") {
+                  applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(),
+            );
             const obj = callback(table[9]);
           }
         });
@@ -174,8 +176,7 @@ let prototype = function ContactSyncLifecycleManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp3 {
-}
+class prototype extends tmp3 {}
 prototype = new prototype();
 let result = require("set").fileFinishedImporting("modules/contact_sync/native/ContactSyncManager.tsx");
 

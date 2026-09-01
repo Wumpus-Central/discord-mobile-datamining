@@ -14,5 +14,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "TYPING_STOP_LOCAL", channelId: id };
     obj.dispatch(obj);
-  }
+  },
 };

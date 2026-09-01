@@ -7,7 +7,12 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let obj = { commandClickable: null };
-obj = { color: ThemesDefault.colors.MENTION_FOREGROUND, backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND, marginEnd: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_12 };
+obj = {
+  color: ThemesDefault.colors.MENTION_FOREGROUND,
+  backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND,
+  marginEnd: ThemesDefault.space.PX_12,
+  marginBottom: ThemesDefault.space.PX_12,
+};
 obj[0] = obj;
 let closure_5 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function UserProfileAboutMeCardCommand(channel) {
@@ -20,7 +25,14 @@ const memoResult = importAllResult.memo(function UserProfileAboutMeCardCommand(c
     onPress() {
       let obj = closure_1_0(channel[6]);
       const bestActiveInput = obj.getBestActiveInput();
-      obj = { channelId: channel.id, currentText: null, commandId: null, commandName: null, onOpenCustomKeyboard: null, onSetCommand: null };
+      obj = {
+        channelId: channel.id,
+        currentText: null,
+        commandId: null,
+        commandName: null,
+        onOpenCustomKeyboard: null,
+        onSetCommand: null,
+      };
       let str;
       if (bestActiveInput != null) {
         str = bestActiveInput.getText();
@@ -77,7 +89,7 @@ const memoResult = importAllResult.memo(function UserProfileAboutMeCardCommand(c
       return closure_1_0(channel[7]).handleLongPressCommandMention(command.displayName, command.id);
     },
     style: callback().commandClickable,
-    children: items
+    children: items,
   });
 });
 let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileAboutMeCardCommand.tsx");

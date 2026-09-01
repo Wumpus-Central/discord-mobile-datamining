@@ -15,11 +15,22 @@ require = arg1;
 let obj = { container: null, headerRow: null, icon: null, description: null, divider: null };
 obj = { backgroundColor: ThemesDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
 obj[0] = obj;
-createCacheKey = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: require("useGameMentionSearchBarHeight").GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL };
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 16,
+  paddingVertical: require("useGameMentionSearchBarHeight").GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL,
+};
 obj[1] = createCacheKey;
 obj[2] = { marginRight: 12 };
-obj[3] = { paddingHorizontal: 16, paddingBottom: require("useGameMentionSearchBarHeight").GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
-const obj2 = { paddingHorizontal: 16, paddingBottom: require("useGameMentionSearchBarHeight").GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
+obj[3] = {
+  paddingHorizontal: 16,
+  paddingBottom: require("useGameMentionSearchBarHeight").GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM,
+};
+const obj2 = {
+  paddingHorizontal: 16,
+  paddingBottom: require("useGameMentionSearchBarHeight").GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM,
+};
 obj[4] = { marginLeft: 0, backgroundColor: ThemesDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
 let closure_5 = createCacheKey.createStyles(obj);
 let obj3 = { marginLeft: 0, backgroundColor: ThemesDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
@@ -28,10 +39,22 @@ const memoResult = importAllResult.memo(function GameMentionSearchBar() {
   let obj = { style: tmp.container, children: null };
   obj = { accessible: true, accessibilityRole: "header", children: null };
   obj = { style: tmp.headerRow, children: null };
-  const items = [callback(GameControllerIcon.GameControllerIcon, { size: "sm", style: tmp.icon }), callback(Text.Text, { variant: useGameMentionSearchBarHeight.GAME_MENTION_SEARCH_BAR_TITLE_VARIANT, color: "mobile-text-heading-primary", children: "@game" })];
+  const items = [
+    callback(GameControllerIcon.GameControllerIcon, { size: "sm", style: tmp.icon }),
+    callback(Text.Text, {
+      variant: useGameMentionSearchBarHeight.GAME_MENTION_SEARCH_BAR_TITLE_VARIANT,
+      color: "mobile-text-heading-primary",
+      children: "@game",
+    }),
+  ];
   obj[1] = items;
-  const items1 = [callback2(View, obj), ];
-  const obj3 = { style: tmp.description, variant: useGameMentionSearchBarHeight.GAME_MENTION_SEARCH_BAR_DESCRIPTION_VARIANT, color: "text-muted", children: null };
+  const items1 = [callback2(View, obj)];
+  const obj3 = {
+    style: tmp.description,
+    variant: useGameMentionSearchBarHeight.GAME_MENTION_SEARCH_BAR_DESCRIPTION_VARIANT,
+    color: "text-muted",
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj3[3] = intl.string(getSystemLocale.t["1kR88y"]);
   items1[1] = callback(Text.Text, obj3);

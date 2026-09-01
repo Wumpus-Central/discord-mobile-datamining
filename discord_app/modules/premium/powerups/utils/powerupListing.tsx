@@ -47,13 +47,17 @@ function orderPowerupListings(items) {
       if (findIndexResult2 !== findIndexResult1 + 1) {
         items1 = [];
         HermesBuiltin.arraySpread(tmp9, 0);
-        items1.splice(items1.findIndex((type) => {
-          let tmp = "singlePerk" === type.type;
-          if (tmp) {
-            tmp = type.powerup.skuId === callback(4368).GUILD_POWERUP_TAG_SKU_ID;
-          }
-          return tmp;
-        }) + 1, 0, callback(items1.splice(findIndexResult2, 1), 1)[0]);
+        items1.splice(
+          items1.findIndex((type) => {
+            let tmp = "singlePerk" === type.type;
+            if (tmp) {
+              tmp = type.powerup.skuId === callback(4368).GUILD_POWERUP_TAG_SKU_ID;
+            }
+            return tmp;
+          }) + 1,
+          0,
+          callback(items1.splice(findIndexResult2, 1), 1)[0],
+        );
         tmp10 = items1;
       }
     }
@@ -121,7 +125,12 @@ function buildPowerupListings(arg0, arr) {
 const GuildPowerupType = BoostedGuildTiers.GuildPowerupType;
 const PERK_SKU_BADGES = BoostedGuildTiers.PERK_SKU_BADGES;
 let obj = { guildTagsBadgePacks: null };
-let items = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID];
+let items = [
+  require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID,
+  require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID,
+  require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID,
+  require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID,
+];
 obj[0] = items;
 const entries = Object.entries(obj);
 let closure_8 = entries.reduce((arg0, arg1) => {
@@ -132,7 +141,7 @@ let closure_8 = entries.reduce((arg0, arg1) => {
   }
   return arg0;
 }, {});
-let items1 = [, ];
+let items1 = [,];
 ({ LEVEL: arr3[0], PERK: arr3[1] } = GuildPowerupType);
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/powerupListing.tsx");
 
@@ -142,25 +151,32 @@ export const useBuildGuildPowerupsSections = function useBuildGuildPowerupsSecti
   const _require = guildId;
   dependencyMap = gameServerEnabled;
   const items = [closure_4];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.getStateForGuild(closure_0));
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_4.getStateForGuild(closure_0),
+  );
   let powerupCatalog;
   if (stateFromStores != null) {
     powerupCatalog = stateFromStores.powerupCatalog;
   }
   items1 = [powerupCatalog, gameServerEnabled];
-  return React.useMemo(() => closure_1_11.reduce((arr) => {
-    let tmp;
-    if (powerupCatalog != null) {
-      tmp = powerupCatalog.powerupCatalog[arg1];
-    }
-    if (null == tmp) {
-      return arr;
-    } else {
-      obj = { type: null, listings: null };
-      obj[0] = arg1;
-      obj[1] = closure_1_10(arg1, tmp, closure_1);
-      arr.push(obj);
-      return arr;
-    }
-  }, []), items1);
+  return React.useMemo(
+    () =>
+      closure_1_11.reduce((arr) => {
+        let tmp;
+        if (powerupCatalog != null) {
+          tmp = powerupCatalog.powerupCatalog[arg1];
+        }
+        if (null == tmp) {
+          return arr;
+        } else {
+          obj = { type: null, listings: null };
+          obj[0] = arg1;
+          obj[1] = closure_1_10(arg1, tmp, closure_1);
+          arr.push(obj);
+          return arr;
+        }
+      }, []),
+    items1,
+  );
 };

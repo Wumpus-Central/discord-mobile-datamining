@@ -29,4 +29,4 @@ export default function countContentTypes(content) {
     sum4 = sum3 + 1;
   }
   return sum4;
-};
+}

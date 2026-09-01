@@ -156,9 +156,10 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceInclude
         return null;
       } else {
         if (arr.length > 3) {
-          if ("\"" === arr[1]) {
+          if ('"' === arr[1]) {
             let num = 1;
-            textChannelNameDisambiguations = textChannelNameDisambiguations.getTextChannelNameDisambiguations(throwTypeErrorResult);
+            textChannelNameDisambiguations =
+              textChannelNameDisambiguations.getTextChannelNameDisambiguations(throwTypeErrorResult);
             num = callback2(11).keys(textChannelNameDisambiguations);
             num[Symbol.iterator]();
             const obj2 = callback2(11);
@@ -200,7 +201,12 @@ function matchesUser(arg0, arg1, username, requireExact) {
 const result = require("set").fileFinishedImporting("modules/channel_text_area/PlaintextResolvers.tsx");
 
 export { resolvePlaintextInlineVoid };
-export const resolveApplicationCommandOption = function resolveApplicationCommandOption(text, throwTypeErrorResult, id, forceIncludeExternalGuilds) {
+export const resolveApplicationCommandOption = function resolveApplicationCommandOption(
+  text,
+  throwTypeErrorResult,
+  id,
+  forceIncludeExternalGuilds,
+) {
   const tmp = resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceIncludeExternalGuilds);
   let voidToOptionValueResult = null;
   if (null != tmp) {

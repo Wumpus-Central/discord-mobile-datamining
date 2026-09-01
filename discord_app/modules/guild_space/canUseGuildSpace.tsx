@@ -17,13 +17,17 @@ export const useIsGuildSpaceAdmin = function useIsGuildSpaceAdmin(arg0) {
   const _require = arg0;
   const items = [closure_3];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let canResult = null != stateFromStores;
-    if (canResult) {
-      canResult = closure_1_3.can(closure_1_4.MANAGE_GUILD, tmp);
-    }
-    return canResult;
-  }, items1);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let canResult = null != stateFromStores;
+      if (canResult) {
+        canResult = closure_1_3.can(closure_1_4.MANAGE_GUILD, tmp);
+      }
+      return canResult;
+    },
+    items1,
+  );
 };
 export function canUseGuildSpace(closure_2, getChannelIdForGuildTransition) {
   return false;
@@ -38,12 +42,16 @@ export const useCanUseGuildSpace = function useCanUseGuildSpace(id, useGuildActi
   tmpResult = tmp(589);
   const items2 = [closure_3];
   const items3 = [stateFromStores];
-  const stateFromStores1 = tmpResult.useStateFromStores(items2, () => {
-    let canResult = null != stateFromStores;
-    if (canResult) {
-      canResult = closure_1_3.can(closure_1_4.MANAGE_GUILD, tmp);
-    }
-    return canResult;
-  }, items3);
+  const stateFromStores1 = tmpResult.useStateFromStores(
+    items2,
+    () => {
+      let canResult = null != stateFromStores;
+      if (canResult) {
+        canResult = closure_1_3.can(closure_1_4.MANAGE_GUILD, tmp);
+      }
+      return canResult;
+    },
+    items3,
+  );
   return false;
 };

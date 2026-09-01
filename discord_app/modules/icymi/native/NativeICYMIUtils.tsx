@@ -10,5 +10,7 @@ export const pushICYMIInfoModal = function pushICYMIInfoModal(arg0) {
   ({ extendedOnboarding, skipIntro } = arg0);
   let obj = _modDef4723;
   obj = { extendedOnboarding, skipIntro };
-  obj.pushLazy(asyncRequireImpl(16054, dependencyMap.paths), obj, ICYMI_INFO_MODAL_KEY.ICYMI_INFO_MODAL_KEY, { presentation: "fullScreenModal" });
+  obj.pushLazy(asyncRequireImpl(16054, dependencyMap.paths), obj, ICYMI_INFO_MODAL_KEY.ICYMI_INFO_MODAL_KEY, {
+    presentation: "fullScreenModal",
+  });
 };

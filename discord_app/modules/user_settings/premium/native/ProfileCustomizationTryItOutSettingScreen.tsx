@@ -17,13 +17,17 @@ const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: "100%", alignItems: "center", justifyContent: "center" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/user_settings/premium/native/ProfileCustomizationTryItOutSettingScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/premium/native/ProfileCustomizationTryItOutSettingScreen.tsx",
+);
 
 export default function ProfileCustomizationTryItOutSettingScreen() {
   let tmp = callback();
   const tmp2 = stateFromStores;
   const tmp4 = stateFromStores(categories[8]);
-  ({ analyticsLocations, sourceAnalyticsLocations } = stateFromStores(categories[8])(stateFromStores(categories[9]).USER_SETTINGS_TRY_OUT_PREMIUM));
+  ({ analyticsLocations, sourceAnalyticsLocations } = stateFromStores(categories[8])(
+    stateFromStores(categories[9]).USER_SETTINGS_TRY_OUT_PREMIUM,
+  ));
   let obj = sourceAnalyticsLocations(categories[10]);
   const items = [visibleEffectOrder];
   stateFromStores = obj.useStateFromStores(items, () => visibleEffectOrder.getCurrentUser());
@@ -42,10 +46,14 @@ export default function ProfileCustomizationTryItOutSettingScreen() {
   const items2 = [pendingAvatarDecoration, setPendingAvatarDecoration, categories];
   const effect1 = pendingAvatarDecoration.useEffect(() => {
     if (undefined === pendingAvatarDecoration) {
-      const avatarDecorationsFromCategories = sourceAnalyticsLocations(categories[14]).getAvatarDecorationsFromCategories(categories);
+      const avatarDecorationsFromCategories = sourceAnalyticsLocations(
+        categories[14],
+      ).getAvatarDecorationsFromCategories(categories);
       const _Math = Math;
       const _Math2 = Math;
-      setPendingAvatarDecoration(avatarDecorationsFromCategories[Math.floor(Math, Math.random(Math) * avatarDecorationsFromCategories.length)]);
+      setPendingAvatarDecoration(
+        avatarDecorationsFromCategories[Math.floor(Math, Math.random(Math) * avatarDecorationsFromCategories.length)],
+      );
       const obj = sourceAnalyticsLocations(categories[14]);
     }
   }, items2);
@@ -56,7 +64,9 @@ export default function ProfileCustomizationTryItOutSettingScreen() {
   const items3 = [visibleFontOrder, visibleEffectOrder];
   const effect2 = pendingAvatarDecoration.useEffect(() => {
     const obj = sourceAnalyticsLocations(categories[17]);
-    const result = obj.setTryItOutDisplayNameStyles(sourceAnalyticsLocations(categories[18]).generateRandomDisplayNameStyles(visibleFontOrder, visibleEffectOrder));
+    const result = obj.setTryItOutDisplayNameStyles(
+      sourceAnalyticsLocations(categories[18]).generateRandomDisplayNameStyles(visibleFontOrder, visibleEffectOrder),
+    );
   }, items3);
   const items4 = [sourceAnalyticsLocations];
   const effect3 = pendingAvatarDecoration.useEffect(() => {
@@ -84,4 +94,4 @@ export default function ProfileCustomizationTryItOutSettingScreen() {
     obj[1] = <setPendingAvatarDecoration style={null}>{null}</setPendingAvatarDecoration>;
     tmp18 = jsx(sourceAnalyticsLocations(tmp3[8]).AnalyticsLocationProvider, { value: null, children: null });
   }
-};
+}

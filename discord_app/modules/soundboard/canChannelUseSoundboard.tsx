@@ -21,7 +21,7 @@ export default function canChannelUseSoundboard(type) {
       return type.isGuildVoiceOrThread() && canResult && closure_3.can(constants2.SPEAK, type);
     }
   }
-};
+}
 export const canSelectedVoiceChannelUseSoundboard = function canSelectedVoiceChannelUseSoundboard() {
   channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
   let flag = false;
@@ -41,18 +41,22 @@ export const useCanChannelUseSoundboard = function useCanChannelUseSoundboard(ar
   const _require = arg0;
   const items = [closure_3];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let flag = false;
-    if (null != closure_0) {
-      const CALLABLE = closure_1_5.CALLABLE;
-      flag = true;
-      if (!CALLABLE.has(obj.type)) {
-        const canResult = closure_1_3.can(closure_1_6.USE_SOUNDBOARD, obj);
-        const canResult1 = closure_1_3.can(closure_1_6.SPEAK, obj);
-        flag = obj.isGuildVoiceOrThread() && canResult && closure_1_3.can(closure_1_6.SPEAK, obj);
-        const tmp6 = obj.isGuildVoiceOrThread() && canResult && closure_1_3.can(closure_1_6.SPEAK, obj);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let flag = false;
+      if (null != closure_0) {
+        const CALLABLE = closure_1_5.CALLABLE;
+        flag = true;
+        if (!CALLABLE.has(obj.type)) {
+          const canResult = closure_1_3.can(closure_1_6.USE_SOUNDBOARD, obj);
+          const canResult1 = closure_1_3.can(closure_1_6.SPEAK, obj);
+          flag = obj.isGuildVoiceOrThread() && canResult && closure_1_3.can(closure_1_6.SPEAK, obj);
+          const tmp6 = obj.isGuildVoiceOrThread() && canResult && closure_1_3.can(closure_1_6.SPEAK, obj);
+        }
       }
-    }
-    return flag;
-  }, items1);
+      return flag;
+    },
+    items1,
+  );
 };

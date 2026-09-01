@@ -16,10 +16,25 @@ require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, header: null, text: null, link: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", height: "100%" };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  display: "flex",
+  flexDirection: "column",
+  height: "100%",
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT, flexDirection: "row", paddingVertical: ThemesDefault.space.PX_8, alignItems: "center" };
-let obj1 = { backgroundColor: ThemesDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT, flexDirection: "row", paddingVertical: ThemesDefault.space.PX_8, alignItems: "center" };
+createCacheKey[1] = {
+  backgroundColor: ThemesDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT,
+  flexDirection: "row",
+  paddingVertical: ThemesDefault.space.PX_8,
+  alignItems: "center",
+};
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT,
+  flexDirection: "row",
+  paddingVertical: ThemesDefault.space.PX_8,
+  alignItems: "center",
+};
 createCacheKey[2] = { marginRight: ThemesDefault.space.PX_8, textAlign: "left", flexShrink: 1 };
 createCacheKey[3] = { textDecorationLine: "underline" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
@@ -38,7 +53,7 @@ export default function SuspendedUserSafetyHubPage() {
     callback(6052).closeSuspendedUser();
   };
   obj1[3] = registerAssetDefault;
-  const items = [callback(IconButton.IconButton, obj1), ];
+  const items = [callback(IconButton.IconButton, obj1)];
   const obj2 = {
     style: tmp.text,
     onPress() {
@@ -46,11 +61,16 @@ export default function SuspendedUserSafetyHubPage() {
     },
     variant: "text-xs/medium",
     color: "control-critical-primary-text-default",
-    children: null
+    children: null,
   };
   const intl2 = getSystemLocale.intl;
-  const items1 = [intl2.string(getSystemLocale.t["MG+Bzb"]), " ", ];
-  const obj3 = { style: tmp.link, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: null };
+  const items1 = [intl2.string(getSystemLocale.t["MG+Bzb"]), " "];
+  const obj3 = {
+    style: tmp.link,
+    variant: "text-xs/medium",
+    color: "control-critical-primary-text-default",
+    children: null,
+  };
   const intl3 = getSystemLocale.intl;
   obj3[3] = intl3.string(getSystemLocale.t["9JceHN"]);
   items1[2] = callback(Text.Text, obj3);
@@ -61,4 +81,4 @@ export default function SuspendedUserSafetyHubPage() {
   obj[1] = items2;
   obj[3] = callback2(View, obj);
   return callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-};
+}

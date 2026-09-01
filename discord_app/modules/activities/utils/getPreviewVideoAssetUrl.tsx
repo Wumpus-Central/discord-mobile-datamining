@@ -15,4 +15,4 @@ export default function getPreviewVideoAssetUrl(closure_7, banner_asset_id) {
     combined = "" + location.protocol + tmp + Endpoints.STORE_ASSET(closure_7, banner_asset_id, "mp4");
   }
   return combined;
-};
+}

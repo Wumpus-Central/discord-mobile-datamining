@@ -25,7 +25,7 @@ function VideoGuardNotice() {
   const tmp = callback3();
   obj = { variant: "text-sm/normal", color: "text-subtle", children: null };
   const intl = getSystemLocale.intl;
-  const items = [intl.string(getSystemLocale.t.UoW002), " ", ];
+  const items = [intl.string(getSystemLocale.t.UoW002), " "];
   const intl2 = getSystemLocale.intl;
   obj = { helpdeskArticle: VIDEO_GUARD_BLOG_POST_URL.VIDEO_GUARD_BLOG_POST_URL };
   items[2] = intl2.format(getSystemLocale.t.BPDKoA, obj);
@@ -33,20 +33,34 @@ function VideoGuardNotice() {
   obj[1] = callback(Text.Text, obj);
   return callback2(setDefault, obj);
 }
-function NOOP() {
-
-}
+function NOOP() {}
 let c3 = importAllResult;
 ({ jsxs: c5, jsx: closure_6, Fragment: error } = jsxProd);
 let obj = { scrollView: null, scrollViewScreenReader: null, blurRegion: null, videoGuardNotice: null };
 obj = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[0] = obj;
-createCacheKey = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
+createCacheKey = {
+  flex: 1,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE,
+};
 obj[1] = createCacheKey;
 obj[2] = { height: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
-obj[3] = { padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj[3] = {
+  padding: ThemesDefault.space.PX_12,
+  borderRadius: ThemesDefault.radii.sm,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderWidth: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 let closure_8 = createCacheKey.createStyles(obj);
-let obj2 = { padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj2 = {
+  padding: ThemesDefault.space.PX_12,
+  borderRadius: ThemesDefault.radii.sm,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderWidth: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 let closure_10 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").ScrollView);
 let closure_11 = importAllResult.memo((arg0) => {
   ({ channel, openTab } = arg0);
@@ -59,7 +73,9 @@ let closure_11 = importAllResult.memo((arg0) => {
   obj1 = apexExperimentDefault2;
   const treatment = obj1.useConfig({ location: "VoicePanelVoiceControls" }).treatment;
   let obj2 = apexExperimentDefault;
-  let nonContextualStreamOutputPresent = obj2.useConfig({ location: "VoicePanelVoiceControls" }).nonContextualStreamOutputPresent;
+  let nonContextualStreamOutputPresent = obj2.useConfig({
+    location: "VoicePanelVoiceControls",
+  }).nonContextualStreamOutputPresent;
   const VideoGuardExperiment = VIDEO_GUARD_BLOG_POST_URL.VideoGuardExperiment;
   const tmp6 = useSelectedActiveStreamDefault(channel);
   let tmp8 = tmp2;
@@ -69,7 +85,7 @@ let closure_11 = importAllResult.memo((arg0) => {
   if (tmp8) {
     tmp8 = callback2(VideoGuardNotice, {});
   }
-  const items = [tmp8, , , , , , , ];
+  const items = [tmp8, , , , , , ,];
   if (!tmp2) {
     items[1] = tmp2;
     obj = { channel: null, connected: null };
@@ -83,7 +99,7 @@ let closure_11 = importAllResult.memo((arg0) => {
     obj = { title: null, hasIcons: true, children: null };
     const intl = tmp3(1236).intl;
     obj[0] = intl.string(tmp3(1236).t.NiTd0e);
-    const items1 = [callback2(tmp3(16788).DeafenSwitch, {}), , , , ];
+    const items1 = [callback2(tmp3(16788).DeafenSwitch, {}), , , ,];
     obj1 = { channel: null, connected: null };
     obj1[0] = channel;
     obj1[1] = tmp2;
@@ -105,7 +121,7 @@ let closure_11 = importAllResult.memo((arg0) => {
     items[5] = callback2(tmp3(10075).VoiceProcessingOptions, {});
     const obj4 = { guildId: null };
     obj4[0] = channel.guild_id;
-    const items2 = [callback2(tmp3(16788).VoiceSettingsButton, obj4), ];
+    const items2 = [callback2(tmp3(16788).VoiceSettingsButton, obj4)];
     tmp14Result = null != tmp6;
     if (tmp14Result) {
       const obj5 = { stream: null };
@@ -125,7 +141,11 @@ let closure_11 = importAllResult.memo((arg0) => {
           const obj7 = { title: null, hasIcons: true, children: null };
           const intl2 = tmp3(1236).intl;
           obj7[0] = intl2.string(tmp3(1236).t.J6rqB7);
-          const items3 = [tmp14(tmp3(16788).LeaveActivitiesButton, {}), tmp14(tmp3(16788).ShareActivityLogsButton, {}), tmp14(tmp3(16788).ToggleShowActivitiesDebugOverlay, {})];
+          const items3 = [
+            tmp14(tmp3(16788).LeaveActivitiesButton, {}),
+            tmp14(tmp3(16788).ShareActivityLogsButton, {}),
+            tmp14(tmp3(16788).ToggleShowActivitiesDebugOverlay, {}),
+          ];
           obj7[2] = items3;
           tmp7Result = tmp7(tmp3(5992).TableRowGroup, obj7);
         }
@@ -138,7 +158,7 @@ let closure_11 = importAllResult.memo((arg0) => {
   } else {
     const obj9 = { openTab: null };
     obj9[0] = openTab;
-    const items4 = [callback2(tmp3(16788).ActivitiesButton, obj9), ];
+    const items4 = [callback2(tmp3(16788).ActivitiesButton, obj9)];
     if (tmp3(16682).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
       const obj10 = { openTab: null };
       obj10[0] = openTab;
@@ -158,7 +178,9 @@ let closure_11 = importAllResult.memo((arg0) => {
   }
 });
 let closure_13 = { top: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
-let closure_14 = { code: "function VoicePanelVoiceControlsTsx1({offset:offset}){const{isScrolled}=this.__closure;isScrolled.set(offset>0);}" };
+let closure_14 = {
+  code: "function VoicePanelVoiceControlsTsx1({offset:offset}){const{isScrolled}=this.__closure;isScrolled.set(offset>0);}",
+};
 const memoResult = importAllResult.memo(function VoicePanelVoiceControls(isVisible) {
   isVisible = isVisible.isVisible;
   let channelId;
@@ -180,7 +202,9 @@ const memoResult = importAllResult.memo(function VoicePanelVoiceControls(isVisib
   fn.__initData = closure_14;
   const items1 = [sharedValue];
   const callback = gestureRef.useCallback(fn, items1);
-  const tmp8 = gestureRef.useContext(isVisible(sharedValue[24]).ControlsGestureScrollLock)({ onScrollHandlerWorkletized: callback });
+  const tmp8 = gestureRef.useContext(isVisible(sharedValue[24]).ControlsGestureScrollLock)({
+    onScrollHandlerWorkletized: callback,
+  });
   gestureRef = tmp8.gestureRef;
   scrollerRef = tmp8.scrollerRef;
   ({ onScroll, animatedProps } = tmp8);
@@ -211,14 +235,23 @@ const memoResult = importAllResult.memo(function VoicePanelVoiceControls(isVisib
     return result;
   }, items3);
   obj = { gesture: memo, children: null };
-  obj = { style: isScreenReaderEnabled ? tmp.scrollViewScreenReader : tmp.scrollView, ref: scrollerRef, onScroll, animatedProps, onMomentumScrollEnd: NOOP, scrollEventThrottle: 8.333333333333334, scrollIndicatorInsets: closure_13, children: null };
+  obj = {
+    style: isScreenReaderEnabled ? tmp.scrollViewScreenReader : tmp.scrollView,
+    ref: scrollerRef,
+    onScroll,
+    animatedProps,
+    onMomentumScrollEnd: NOOP,
+    scrollEventThrottle: 8.333333333333334,
+    scrollIndicatorInsets: closure_13,
+    children: null,
+  };
   let tmp14Result = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     obj1 = { style: null };
     obj1[0] = tmp.blurRegion;
     tmp14Result = tmp14(tmp2(tmp3[7]), obj1);
   }
-  const items4 = [tmp14Result, , ];
+  const items4 = [tmp14Result, ,];
   tmp14Result = null != stateFromStores;
   if (tmp14Result) {
     obj2 = { channel: null, openTab: null };
@@ -230,7 +263,7 @@ const memoResult = importAllResult.memo(function VoicePanelVoiceControls(isVisib
   items4[2] = closure_6(isVisible(sharedValue[28]).SafeAreaPaddingView, { bottom: true });
   obj[7] = items4;
   obj[1] = closure_5(closure_10, obj);
-  const children = [closure_6(isVisible(sharedValue[26]).GestureDetector, obj), ];
+  const children = [closure_6(isVisible(sharedValue[26]).GestureDetector, obj)];
   let tmp14Result1 = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     const obj3 = { shown: null, style: null };

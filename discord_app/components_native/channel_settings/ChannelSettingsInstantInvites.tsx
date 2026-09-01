@@ -18,12 +18,18 @@ import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { content: null, gap: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
+createCacheKey = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  flex: 1,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: ThemesDefault.space.PX_16 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { height: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsInstantInvites.tsx");
+const result = require("set").fileFinishedImporting(
+  "components_native/channel_settings/ChannelSettingsInstantInvites.tsx",
+);
 
 export default function ConnectedChannelSettingsInstantInvites() {
   let tmp = callback2();
@@ -70,18 +76,24 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items3);
   const tmp3 = invites(memo.useState(undefined), 2);
   const items4 = [closure_7];
-  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items4, () => {
-    if (null != closure_2) {
-      const sortedLinkedChannelsForGuild = closure_1_7.getSortedLinkedChannelsForGuild(tmp.guild_id);
-      let found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
-    } else {
-      found = [];
-    }
-    return found;
-  });
+  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+    items4,
+    () => {
+      if (null != closure_2) {
+        const sortedLinkedChannelsForGuild = closure_1_7.getSortedLinkedChannelsForGuild(tmp.guild_id);
+        let found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
+      } else {
+        found = [];
+      }
+      return found;
+    },
+  );
   const items5 = [memo, stateFromStoresArray];
   memo1 = memo.useMemo(() => {
-    const items = [...memo.map((data) => ({ type: "invite", data })), ...stateFromStoresArray.map((data) => ({ type: "channel", data }))];
+    const items = [
+      ...memo.map((data) => ({ type: "invite", data })),
+      ...stateFromStoresArray.map((data) => ({ type: "channel", data })),
+    ];
     return items;
   }, items5);
   const items6 = [memo1.length];
@@ -117,7 +129,14 @@ export default function ConnectedChannelSettingsInstantInvites() {
     if (null != tmp4) {
       obj = { style: null, children: null };
       obj[0] = tmp.content;
-      obj1 = { sections: null, estimatedListSize: "windowSize", itemSize: null, renderItem: null, insetStart: null, insetEnd: null };
+      obj1 = {
+        sections: null,
+        estimatedListSize: "windowSize",
+        itemSize: null,
+        renderItem: null,
+        insetStart: null,
+        insetEnd: null,
+      };
       obj1[0] = items6;
       obj1[2] = tmp4;
       obj1[3] = callback1;
@@ -129,7 +148,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }
   obj2 = { style: tmp.content, children: null };
   tmp = callback;
-  const items8 = [callback(tmpResult(6047).SceneLoadingIndicator, {}), ];
+  const items8 = [callback(tmpResult(6047).SceneLoadingIndicator, {})];
   tmpResult = null;
   if (memo1.length > 0) {
     tmp2 = _modDef16402;
@@ -142,4 +161,4 @@ export default function ConnectedChannelSettingsInstantInvites() {
   items8[1] = tmpResult;
   obj2[1] = items8;
   tmp16Result = closure_10(stateFromStoresArray, obj2);
-};
+}

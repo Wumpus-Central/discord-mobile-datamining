@@ -5,8 +5,12 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 require("ME").AutoCompleteResultTypes;
-let closure_7 = { code: "function HorizontalAutocompleteWrapperTsx1(){const{withTiming,toValue}=this.__closure;return{opacity:withTiming(toValue)};}" };
-const result = require("set").fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocompleteWrapper.tsx");
+let closure_7 = {
+  code: "function HorizontalAutocompleteWrapperTsx1(){const{withTiming,toValue}=this.__closure;return{opacity:withTiming(toValue)};}",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocompleteWrapper.tsx",
+);
 
 export default function HorizontalAutocompleteWrapper(channel) {
   channel = channel.channel;
@@ -86,5 +90,8 @@ export default function HorizontalAutocompleteWrapper(channel) {
   const animatedStyle = channel(autocompleteSelectionStart[6]).useAnimatedStyle(fn);
   obj = { style: items2, children: <callback {...obj1} /> };
   items2 = [style, animatedStyle];
-  return jsx(onPressAutocompleteItem(autocompleteSelectionStart[6]).View, { style: items2, children: <callback {...obj1} /> });
-};
+  return jsx(onPressAutocompleteItem(autocompleteSelectionStart[6]).View, {
+    style: items2,
+    children: <callback {...obj1} />,
+  });
+}

@@ -49,7 +49,7 @@ function Content() {
       visible: first1,
       onPress() {
         return callback(false);
-      }
+      },
     };
   }, items1);
   obj1 = first1(8974);
@@ -63,16 +63,23 @@ function Content() {
     },
     variant: "primary",
     text: str,
-    size: "md"
+    size: "md",
   };
-  const items2 = [callback2(View, obj), callback2(first1(5993).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }), callback2(first1(5993).TableSwitchRow, { label: "Enable Bottom Position", value: first2, onValueChange: tmp11[1] }), callback2(TooltipNote, {})];
+  const items2 = [
+    callback2(View, obj),
+    callback2(first1(5993).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }),
+    callback2(first1(5993).TableSwitchRow, { label: "Enable Bottom Position", value: first2, onValueChange: tmp11[1] }),
+    callback2(TooltipNote, {}),
+  ];
   obj[0] = items2;
   return callback3(closure_6, obj);
 }
 class TooltipNote {
   constructor() {
     obj = { variant: "text-sm/normal", style: { padding: 16, paddingTop: 16 }, children: null };
-    items = ["Note: If your tooltip is not displaying or it is not in the right position/zIndex, consider adding or moving an existing"];
+    items = [
+      "Note: If your tooltip is not displaying or it is not in the right position/zIndex, consider adding or moving an existing",
+    ];
     items[1] = jsx(require("Text").Text, { variant: "text-sm/bold", children: " <LayerScope/>" });
     items[2] = " on the surface you expect to see the tooltip.";
     obj[2] = items;
@@ -80,15 +87,20 @@ class TooltipNote {
   }
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" }, flex: { flex: 1 } });
-let result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTooltip.tsx");
+let closure_8 = createCacheKey.createStyles({
+  container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" },
+  flex: { flex: 1 },
+});
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/design_system/native/UserSettingsDesignSystemTooltip.tsx",
+);
 
 export default function UserSettingsDesignSystemTooltip() {
   let obj = { style: callback4().flex, bottom: true, children: null };
   obj = { children: callback2(Content, {}) };
   obj[2] = callback2(Layer.LayerScope, obj);
   return callback2(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-};
+}
 export const useCanRotate = function useCanRotate() {
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];

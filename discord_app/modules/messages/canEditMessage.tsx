@@ -51,4 +51,4 @@ export default function canEditMessage(author) {
     tmp = tmp3;
   }
   return tmp;
-};
+}

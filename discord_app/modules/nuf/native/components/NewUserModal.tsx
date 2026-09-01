@@ -13,7 +13,11 @@ const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createNativeStackNavigator.createNativeStackNavigator();
 createNativeStackNavigator = { header: null };
-createNativeStackNavigator = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
+createNativeStackNavigator = {
+  borderBottomWidth: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  shadowColor: "transparent",
+};
 createNativeStackNavigator[0] = createNativeStackNavigator;
 let closure_9 = createCacheKey.createStyles(createNativeStackNavigator);
 const result = require("set").fileFinishedImporting("modules/nuf/native/components/NewUserModal.tsx");
@@ -80,7 +84,7 @@ export default function NewUserModal(arg0) {
         fullScreenGestureEnabled: false,
         presentation: null,
         animation: "slide_from_right",
-        headerBackVisible: false
+        headerBackVisible: false,
       };
       let str = "card";
       if (obj2.isAndroid()) {
@@ -91,7 +95,7 @@ export default function NewUserModal(arg0) {
       return obj;
     },
     initialRouteName: null,
-    children: null
+    children: null,
   };
   if (initialRouteName == null) {
     initialRouteName = "choose-avatar";
@@ -102,9 +106,9 @@ export default function NewUserModal(arg0) {
     getComponent() {
       return lib(15590).RedesignNotificationScreen;
     },
-    initialParams: { onComplete: callback }
+    initialParams: { onComplete: callback },
   };
-  const items1 = [callback(Navigator.Screen, obj), , , , ];
+  const items1 = [callback(Navigator.Screen, obj), , , ,];
   obj1 = {
     name: "choose-avatar",
     getComponent() {
@@ -121,15 +125,21 @@ export default function NewUserModal(arg0) {
             obj = {
               onConfirm() {
                 return callback(true);
-              }
+              },
             };
-            obj.openAlert("skip-avatar-upload", closure_1_6(closure_1_4.lazy(() => callback(paths[8])(paths[7], paths.paths)), obj));
+            obj.openAlert(
+              "skip-avatar-upload",
+              closure_1_6(
+                closure_1_4.lazy(() => callback(paths[8])(paths[7], paths.paths)),
+                obj,
+              ),
+            );
           };
           return closure_1_6(closure_1_1(closure_1_2[18]), obj);
-        }
+        },
       };
     },
-    initialParams: { onComplete: callback }
+    initialParams: { onComplete: callback },
   };
   items1[1] = callback(Navigator.Screen, obj1);
   items1[2] = callback(Navigator.Screen, {
@@ -138,7 +148,7 @@ export default function NewUserModal(arg0) {
     getComponent() {
       return lib(12223).ContactSyncOnboardingModal;
     },
-    initialParams: { onComplete: callback }
+    initialParams: { onComplete: callback },
   });
   items1[3] = callback(Navigator.Screen, {
     name: "discoverability",
@@ -146,15 +156,15 @@ export default function NewUserModal(arg0) {
     getComponent() {
       return lib(17030).default;
     },
-    initialParams: { onComplete: callback }
+    initialParams: { onComplete: callback },
   });
   items1[4] = callback(Navigator.Screen, {
     name: "connect-guardian",
     getComponent() {
       return lib(17032).default;
     },
-    initialParams: { onComplete: callback }
+    initialParams: { onComplete: callback },
   });
   obj[2] = items1;
   return callback(Navigator.Navigator, obj);
-};
+}

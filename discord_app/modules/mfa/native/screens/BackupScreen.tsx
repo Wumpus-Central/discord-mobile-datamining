@@ -48,7 +48,7 @@ export default function BackupScreen() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_3 = tmp3;
       closure_1_4(undefined);
       closure_1_1(true);
@@ -85,7 +85,7 @@ export default function BackupScreen() {
     })();
   });
   const items1 = [finish];
-  closure_8 = React.useCallback(function() {
+  closure_8 = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -104,7 +104,7 @@ export default function BackupScreen() {
   if (first1 > 0) {
     obj = { variant: "text-md/normal", children: null };
     const intl3 = tmp(tmp2[6]).intl;
-    const items2 = [intl3.string(tmp(tmp2[6]).t.RRtlLg), ];
+    const items2 = [intl3.string(tmp(tmp2[6]).t.RRtlLg)];
     const intl4 = tmp(tmp2[6]).intl;
     obj1 = { countdown: null };
     obj1[0] = first1;
@@ -114,13 +114,22 @@ export default function BackupScreen() {
   } else {
     obj2 = { variant: "text-md/normal", children: null };
     const intl8 = tmp(tmp2[6]).intl;
-    const items3 = [intl8.string(tmp(tmp2[6]).t.RRtlLg), ];
+    const items3 = [intl8.string(tmp(tmp2[6]).t.RRtlLg)];
     const intl9 = tmp(tmp2[6]).intl;
     items3[1] = intl9.string(tmp(tmp2[6]).t.v3a6Pd);
     obj2[1] = items3;
   }
-  const items4 = [first1(_require(first[5]).Text, obj2), ];
-  const obj3 = { label: null, placeholder: null, isValidClipboardCode: null, maxLength: null, onChangeCode: null, error: null, isDisabled: null, autoFocus: null };
+  const items4 = [first1(_require(first[5]).Text, obj2)];
+  const obj3 = {
+    label: null,
+    placeholder: null,
+    isValidClipboardCode: null,
+    maxLength: null,
+    onChangeCode: null,
+    error: null,
+    isDisabled: null,
+    autoFocus: null,
+  };
   let tmp3Result = tmp3(tmp2[10]);
   const intl5 = tmp(tmp2[6]).intl;
   obj3[0] = intl5.string(_require(first[6]).t["C/ZAw/"]);
@@ -167,4 +176,4 @@ export default function BackupScreen() {
   obj5[4] = tmp6;
   obj[3] = closure_7(tmp3Result, obj5);
   return closure_7(importDefault(first[9]), obj);
-};
+}

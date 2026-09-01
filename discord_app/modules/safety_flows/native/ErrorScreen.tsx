@@ -10,7 +10,13 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, buttonContainer: null };
-createCacheKey = { flexDirection: "column", justifyContent: "center", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_16, alignItems: "center" };
+createCacheKey = {
+  flexDirection: "column",
+  justifyContent: "center",
+  gap: ThemesDefault.space.PX_8,
+  padding: ThemesDefault.space.PX_16,
+  alignItems: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_8 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
@@ -20,7 +26,7 @@ let result = require("set").fileFinishedImporting("modules/safety_flows/native/E
 export default function ErrorScreen() {
   function _handleRetry() {
     const self = this;
-    const tmp = closure_1_3(function*() {
+    const tmp = closure_1_3(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -113,7 +119,7 @@ export default function ErrorScreen() {
   obj = { variant: "heading-lg/semibold", children: null };
   const intl = _require(_handleRetry[11]).intl;
   obj[1] = intl.string(_require(_handleRetry[11]).t.c6kn6F);
-  const items = [callback2(_require(_handleRetry[10]).Text, obj), , ];
+  const items = [callback2(_require(_handleRetry[10]).Text, obj), ,];
   obj1 = { variant: "text-md/normal", color: "text-muted", children: null };
   const intl2 = _require(_handleRetry[11]).intl;
   obj1[2] = intl2.string(_require(_handleRetry[11]).t.ZUEGFn);
@@ -125,11 +131,11 @@ export default function ErrorScreen() {
     },
     text: null,
     variant: "secondary",
-    size: "md"
+    size: "md",
   };
   const intl3 = _require(_handleRetry[11]).intl;
   obj3[1] = intl3.string(_require(_handleRetry[11]).t["2jxGer"]);
-  const items1 = [callback2(_require(_handleRetry[13]).Button, obj3), ];
+  const items1 = [callback2(_require(_handleRetry[13]).Button, obj3)];
   const obj4 = {
     onPress: function handleRetry() {
       const self = this;
@@ -144,7 +150,7 @@ export default function ErrorScreen() {
     text: null,
     variant: "primary",
     size: "md",
-    loading: null
+    loading: null,
   };
   const intl4 = _require(_handleRetry[11]).intl;
   obj4[1] = intl4.string(_require(_handleRetry[11]).t["7NqTJn"]);
@@ -154,4 +160,4 @@ export default function ErrorScreen() {
   items[2] = callback3(_require(_handleRetry[12]).Stack, obj2);
   obj[1] = items;
   return callback3(View, obj);
-};
+}

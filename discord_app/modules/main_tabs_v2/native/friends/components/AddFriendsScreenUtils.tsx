@@ -16,7 +16,7 @@ function _sendWave() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       const dMFromUserId = tmp4;
       if (flag === undefined) {
         flag = true;
@@ -119,7 +119,9 @@ function _sendWave() {
   }
   return applyArgumentsResult;
 }
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx",
+);
 
 export const dismissIncomingRequest = function dismissIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);

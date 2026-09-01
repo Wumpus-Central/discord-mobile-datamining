@@ -26,4 +26,4 @@ export default function navigateToLastChannel() {
     transitionToChannel.transitionToChannel(channelId1);
     const tmpResult = transitionToChannel;
   }
-};
+}

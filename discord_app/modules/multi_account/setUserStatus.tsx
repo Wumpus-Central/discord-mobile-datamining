@@ -11,7 +11,7 @@ function _setUserStatus() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (globalStats === 2) {
         globalStats = 3;
         HermesBuiltin.throwTypeError();
@@ -45,7 +45,13 @@ function _setUserStatus() {
               dependencyMap = undefined;
               c3 = undefined;
               globalStats = undefined;
-              ({ nextStatus: c0, prevStatus: c1, analyticsContext: c2, durationMillis: c3, disableTracking } = callback);
+              ({
+                nextStatus: c0,
+                prevStatus: c1,
+                analyticsContext: c2,
+                durationMillis: c3,
+                disableTracking,
+              } = callback);
               if (disableTracking === undefined) {
                 disableTracking = false;
               }
@@ -80,21 +86,25 @@ function _setUserStatus() {
               c3 = 2;
               globalStats = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = PreloadedUserSettingsActionCreators.updateAsync("status", (statusCreatedAtMs) => {
-                const StringValue = _undefined(_undefined2[8]).StringValue;
-                let obj = { value: _undefined };
-                statusCreatedAtMs.status = StringValue.create(obj);
-                statusCreatedAtMs.statusExpiresAtMs = str;
-                if (c1 === _undefined) {
-                  if (null != statusCreatedAtMs.statusCreatedAtMs) {
-                    statusCreatedAtMs = statusCreatedAtMs.statusCreatedAtMs;
+              obj2[0] = PreloadedUserSettingsActionCreators.updateAsync(
+                "status",
+                (statusCreatedAtMs) => {
+                  const StringValue = _undefined(_undefined2[8]).StringValue;
+                  let obj = { value: _undefined };
+                  statusCreatedAtMs.status = StringValue.create(obj);
+                  statusCreatedAtMs.statusExpiresAtMs = str;
+                  if (c1 === _undefined) {
+                    if (null != statusCreatedAtMs.statusCreatedAtMs) {
+                      statusCreatedAtMs = statusCreatedAtMs.statusCreatedAtMs;
+                    }
+                    statusCreatedAtMs.statusCreatedAtMs = statusCreatedAtMs;
                   }
-                  statusCreatedAtMs.statusCreatedAtMs = statusCreatedAtMs;
-                }
-                const UInt64Value = _undefined(_undefined2[8]).UInt64Value;
-                obj = { value: "" + Date.now() };
-                statusCreatedAtMs = UInt64Value.create(obj);
-              }, callback(1370).UserSettingsDelay.INFREQUENT_USER_ACTION);
+                  const UInt64Value = _undefined(_undefined2[8]).UInt64Value;
+                  obj = { value: "" + Date.now() };
+                  statusCreatedAtMs = UInt64Value.create(obj);
+                },
+                callback(1370).UserSettingsDelay.INFREQUENT_USER_ACTION,
+              );
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -192,4 +202,4 @@ export default function setUserStatus() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

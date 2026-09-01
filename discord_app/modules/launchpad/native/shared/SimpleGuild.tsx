@@ -9,7 +9,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-let closure_10 = createCacheKey.createStyles({ dmsWrapper: { flex: 1, justifyContent: "center", alignItems: "center" } });
+let closure_10 = createCacheKey.createStyles({
+  dmsWrapper: { flex: 1, justifyContent: "center", alignItems: "center" },
+});
 const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/SimpleGuild.tsx");
 
 export default function SimpleGuild(guildId) {
@@ -50,7 +52,11 @@ export default function SimpleGuild(guildId) {
   let tmp7Result = tmp7(tmp5[10]);
   const items1 = [closure_6];
   const items2 = [guildId];
-  const stateFromStoresObject = tmp7Result.useStateFromStoresObject(items1, () => ({ unread: closure_1_6.hasUnread(guildId), badge: closure_1_6.getMentionCount(guildId) }), items2);
+  const stateFromStoresObject = tmp7Result.useStateFromStoresObject(
+    items1,
+    () => ({ unread: closure_1_6.hasUnread(guildId), badge: closure_1_6.getMentionCount(guildId) }),
+    items2,
+  );
   unread2 = stateFromStoresObject.unread;
   badge2 = stateFromStoresObject.badge;
   tmp7Result = tmp7(tmp5[11]);
@@ -113,7 +119,25 @@ export default function SimpleGuild(guildId) {
       if ("uri" in tmp17Result) {
         let tmp19 = null != tmp17Result.uri;
       }
-      obj = { guildIconRef: null, guildId: null, style: null, backgroundColor: null, selected: null, size: null, borderRadius: null, onPress: null, onLongPress: null, unread: null, badge: null, onLayout: null, onAccessibilityAction: null, accessibilityLabel: null, usingCutout: null, activityIndicatorState: null, children: null };
+      obj = {
+        guildIconRef: null,
+        guildId: null,
+        style: null,
+        backgroundColor: null,
+        selected: null,
+        size: null,
+        borderRadius: null,
+        onPress: null,
+        onLongPress: null,
+        unread: null,
+        badge: null,
+        onLayout: null,
+        onAccessibilityAction: null,
+        accessibilityLabel: null,
+        usingCutout: null,
+        activityIndicatorState: null,
+        children: null,
+      };
       obj[0] = guildIconRef;
       let id;
       if (stateFromStores != null) {
@@ -161,7 +185,21 @@ export default function SimpleGuild(guildId) {
             }
             num4 = num5;
           }
-          const obj2 = { cutoutBottomRightSize: null, cutoutBottomRightInsetX: 6, cutoutBottomRightInsetY: 7, cutoutTopRightSize: null, cutoutTopRightInsetX: 8, cutoutTopRightInsetY: 8, imageSize: null, imageSource: null, imageBorderRadius: null, imageBackgroundColor: null, clipOuterAmount: null, borderStroke: 1, borderStrokeColor: null };
+          const obj2 = {
+            cutoutBottomRightSize: null,
+            cutoutBottomRightInsetX: 6,
+            cutoutBottomRightInsetY: 7,
+            cutoutTopRightSize: null,
+            cutoutTopRightInsetX: 8,
+            cutoutTopRightInsetY: 8,
+            imageSize: null,
+            imageSource: null,
+            imageBorderRadius: null,
+            imageBackgroundColor: null,
+            clipOuterAmount: null,
+            borderStroke: 1,
+            borderStrokeColor: null,
+          };
           obj2[0] = num4;
           let num6 = 0;
           if (null != activityIndicatorState.source) {
@@ -180,7 +218,14 @@ export default function SimpleGuild(guildId) {
           obj2[12] = iconStroke.color;
           tmp20Result = tmp20(tmp4Result, obj2);
         } else {
-          const obj3 = { guild: null, size: null, selected: null, animate: null, TABS_altDefaultBackground: null, style: null };
+          const obj3 = {
+            guild: null,
+            size: null,
+            selected: null,
+            animate: null,
+            TABS_altDefaultBackground: null,
+            style: null,
+          };
           obj3[0] = stateFromStores;
           obj3[1] = iconSize;
           obj3[2] = flag2;
@@ -200,4 +245,4 @@ export default function SimpleGuild(guildId) {
     }
   }
   tmp19 = null != tmp17Result;
-};
+}

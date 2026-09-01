@@ -21,7 +21,11 @@ let obj = {
   useDescription: function useVoiceSensitivitySettingDescription() {
     let obj = inputMode(589);
     const items = [closure_4];
-    const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ inputMode: store.getMode(), vadThreshold: store.getModeOptions().threshold, vadAutoThreshold: store.getModeOptions().autoThreshold }));
+    const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+      inputMode: store.getMode(),
+      vadThreshold: store.getModeOptions().threshold,
+      vadAutoThreshold: store.getModeOptions().autoThreshold,
+    }));
     inputMode = stateFromStoresObject.inputMode;
     obj = { style: callback().slider, children: jsx(VoiceSensitivityDefault, obj) };
     ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
@@ -32,19 +36,25 @@ let obj = {
         let obj = closure_1_1(closure_1_2[7]);
         obj = { threshold };
         return obj.setMode(inputMode, obj);
-      }
+      },
     };
-    return <View auto={vadAutoThreshold} threshold={vadThreshold} onThresholdChange={function onThresholdChange(threshold) {
-      let obj = closure_1_1(closure_1_2[7]);
-      obj = { threshold };
-      return obj.setMode(inputMode, obj);
-    }} />;
+    return (
+      <View
+        auto={vadAutoThreshold}
+        threshold={vadThreshold}
+        onThresholdChange={function onThresholdChange(threshold) {
+          let obj = closure_1_1(closure_1_2[7]);
+          obj = { threshold };
+          return obj.setMode(inputMode, obj);
+        }}
+      />
+    );
   },
   useSearchTerms() {
     const intl = getSystemLocale.intl;
     const items = [intl.string(getSystemLocale.t.nuFtHH)];
     return items;
-  }
+  },
 };
 const createStaticResult = createToggle.createStatic({
   useTitle() {
@@ -55,7 +65,11 @@ const createStaticResult = createToggle.createStatic({
   useDescription: function useVoiceSensitivitySettingDescription() {
     let obj = inputMode(589);
     const items = [closure_4];
-    const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ inputMode: store.getMode(), vadThreshold: store.getModeOptions().threshold, vadAutoThreshold: store.getModeOptions().autoThreshold }));
+    const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+      inputMode: store.getMode(),
+      vadThreshold: store.getModeOptions().threshold,
+      vadAutoThreshold: store.getModeOptions().autoThreshold,
+    }));
     inputMode = stateFromStoresObject.inputMode;
     obj = { style: callback().slider, children: jsx(VoiceSensitivityDefault, obj) };
     ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
@@ -66,19 +80,25 @@ const createStaticResult = createToggle.createStatic({
         let obj = closure_1_1(closure_1_2[7]);
         obj = { threshold };
         return obj.setMode(inputMode, obj);
-      }
+      },
     };
-    return <View auto={vadAutoThreshold} threshold={vadThreshold} onThresholdChange={function onThresholdChange(threshold) {
-      let obj = closure_1_1(closure_1_2[7]);
-      obj = { threshold };
-      return obj.setMode(inputMode, obj);
-    }} />;
+    return (
+      <View
+        auto={vadAutoThreshold}
+        threshold={vadThreshold}
+        onThresholdChange={function onThresholdChange(threshold) {
+          let obj = closure_1_1(closure_1_2[7]);
+          obj = { threshold };
+          return obj.setMode(inputMode, obj);
+        }}
+      />
+    );
   },
   useSearchTerms() {
     const intl = getSystemLocale.intl;
     const items = [intl.string(getSystemLocale.t.nuFtHH)];
     return items;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/VoiceSensitivitySetting.tsx");
 

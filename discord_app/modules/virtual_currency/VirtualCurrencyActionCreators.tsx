@@ -18,7 +18,7 @@ function fetchVirtualCurrencyBalance() {
 }
 function _fetchVirtualCurrencyBalance() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (constants === 2) {
       constants = 3;
       HermesBuiltin.throwTypeError();
@@ -125,7 +125,7 @@ function _redeemVirtualCurrencyForSKU() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (logger === 2) {
         logger = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -167,7 +167,14 @@ function _redeemVirtualCurrencyForSKU() {
                 c4 = undefined;
                 c5 = undefined;
                 throwTypeErrorResult = callback;
-                ({ skuId: c0, loadId: c1, onRedeemStart: c2, onRedeemSucceed: c3, onRedeemFail: c4, shouldRefetchBalance } = callback);
+                ({
+                  skuId: c0,
+                  loadId: c1,
+                  onRedeemStart: c2,
+                  onRedeemSucceed: c3,
+                  onRedeemFail: c4,
+                  shouldRefetchBalance,
+                } = callback);
                 if (shouldRefetchBalance === undefined) {
                   shouldRefetchBalance = true;
                 }

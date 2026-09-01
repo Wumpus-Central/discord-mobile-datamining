@@ -7,7 +7,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/avatar/native/components/RedesignSkipAvatarUploadAlertModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/avatar/native/components/RedesignSkipAvatarUploadAlertModal.tsx",
+);
 
 export default function RedesignSkipAvatarUploadAlertModal(onConfirm) {
   let obj = { title: null, content: null, actions: null };
@@ -19,7 +21,7 @@ export default function RedesignSkipAvatarUploadAlertModal(onConfirm) {
   obj = { onPress: onConfirm.onConfirm, text: null };
   const intl3 = getSystemLocale.intl;
   obj[1] = intl3.string(getSystemLocale.t.nhJ8OC);
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
+  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm")];
   obj1 = { variant: "secondary", text: null };
   const intl4 = getSystemLocale.intl;
   obj1[1] = intl4.string(getSystemLocale.t["7eZ3ji"]);
@@ -27,4 +29,4 @@ export default function RedesignSkipAvatarUploadAlertModal(onConfirm) {
   obj[0] = items;
   obj[2] = callback2(getAlertModalItemKey.AlertActions, obj);
   return callback(getAlertModalItemKey.AlertModal, obj);
-};
+}

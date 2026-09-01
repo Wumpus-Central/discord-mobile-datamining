@@ -11,13 +11,23 @@ require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { headerImage: null, header: null, subtitle: null, buttons: null };
-createCacheKey = { marginLeft: "auto", marginRight: "auto", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.round, padding: 12, marginTop: 8, marginBottom: 8 };
+createCacheKey = {
+  marginLeft: "auto",
+  marginRight: "auto",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: ThemesDefault.radii.round,
+  padding: 12,
+  marginTop: 8,
+  marginBottom: 8,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: 8, marginBottom: 8, textAlign: "center" };
 createCacheKey[2] = { lineHeight: 18, marginBottom: 8, textAlign: "center" };
 createCacheKey[3] = { marginTop: 16, marginBottom: 8, gap: 12 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlert.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/alerts/MemberVerificationAlert.tsx",
+);
 
 export default function MemberVerificationAlert(arg0) {
   ({ icon, subtitle } = arg0);
@@ -34,7 +44,7 @@ export default function MemberVerificationAlert(arg0) {
     obj[1] = callback(icon, { size: "lg" });
     tmp7 = callback(View, obj);
   }
-  const items = [tmp7, , , ];
+  const items = [tmp7, , ,];
   obj = { style: tmp2.header, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: header };
   items[1] = callback(Text.Heading, obj);
   let tmp10Result = null;
@@ -48,4 +58,4 @@ export default function MemberVerificationAlert(arg0) {
   items[3] = callback(View, { style: tmp2.buttons, children: buttons });
   obj.children = items;
   return closure_5(componentDidMountDefault, obj);
-};
+}

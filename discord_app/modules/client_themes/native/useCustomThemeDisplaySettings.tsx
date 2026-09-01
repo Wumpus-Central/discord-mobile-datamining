@@ -10,10 +10,13 @@ const result = require("set").fileFinishedImporting("modules/client_themes/nativ
 export const useCustomThemeDisplaySettings = function useCustomThemeDisplaySettings(base_theme) {
   let obj = initialize;
   let items = [closure_3];
-  [tmp4, tmp5, tmp6] = callback(obj.useStateFromStoresArray(items, () => {
-    const items = [store.getCustomTheme(), store.getBaseTheme(), store.getPreviewTheme()];
-    return items;
-  }), 3);
+  [tmp4, tmp5, tmp6] = callback(
+    obj.useStateFromStoresArray(items, () => {
+      const items = [store.getCustomTheme(), store.getBaseTheme(), store.getPreviewTheme()];
+      return items;
+    }),
+    3,
+  );
   if (undefined !== tmp6) {
     return tmp6;
   } else {
@@ -36,8 +39,11 @@ export const useCustomThemeDisplaySettings = function useCustomThemeDisplaySetti
     }
   }
   const tmp = require;
-  const tmp3 = callback(obj.useStateFromStoresArray(items, () => {
-    const items = [store.getCustomTheme(), store.getBaseTheme(), store.getPreviewTheme()];
-    return items;
-  }), 3);
+  const tmp3 = callback(
+    obj.useStateFromStoresArray(items, () => {
+      const items = [store.getCustomTheme(), store.getBaseTheme(), store.getPreviewTheme()];
+      return items;
+    }),
+    3,
+  );
 };

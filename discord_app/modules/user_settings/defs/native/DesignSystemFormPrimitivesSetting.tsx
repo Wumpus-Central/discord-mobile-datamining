@@ -10,13 +10,13 @@ obj = {
     return "Form Primitives";
   },
   parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_FORM_PRIMITIVES,
   getComponent() {
     return Radio /* Radio */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemFormPrimitivesSetting.tsx");

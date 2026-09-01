@@ -19,7 +19,13 @@ const processColor = get_ActivityIndicator.processColor;
 const MessageTypes = ME.MessageTypes;
 let result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/interaction/ExecutedCommand.tsx");
 
-export const createExecutedCommand = function createExecutedCommand(message, channel, roleStyle, theme, defaultUsernameColor) {
+export const createExecutedCommand = function createExecutedCommand(
+  message,
+  channel,
+  roleStyle,
+  theme,
+  defaultUsernameColor,
+) {
   let tmp = null != message.activityInstance;
   if (tmp) {
     tmp = undefined !== message.activityInstance;
@@ -107,9 +113,13 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       if (user == null) {
         user = message.interaction.user;
       }
-      const tmp14 = message.type === MessageTypes.CHAT_INPUT_COMMAND || message.type === tmp13.INTERACTION_PREMIUM_UPSELL;
+      const tmp14 =
+        message.type === MessageTypes.CHAT_INPUT_COMMAND || message.type === tmp13.INTERACTION_PREMIUM_UPSELL;
       const tmp16Result1 = processColorStrings;
-      const displayNameFontIdForMobileUser = createDisplayNameStylesMobile.getDisplayNameFontIdForMobileUser(user, guildId);
+      const displayNameFontIdForMobileUser = createDisplayNameStylesMobile.getDisplayNameFontIdForMobileUser(
+        user,
+        guildId,
+      );
       if (null != tmp24) {
         let user2 = obj.getUser(tmp24.id);
         if (user2 == null) {
@@ -121,7 +131,16 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       obj = { username: null, usernameOnClick: null };
       const tmp16Result4 = createDisplayNameStylesMobile;
       obj[0] = useNullableMessageAuthor.getUserAuthor(message.interaction.user, channel).nick;
-      obj = { name: "usernameOnClick", action: "bindUserMenu", userId: null, messageChannelId: null, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null };
+      obj = {
+        name: "usernameOnClick",
+        action: "bindUserMenu",
+        userId: null,
+        messageChannelId: null,
+        linkColor: null,
+        roleColor: null,
+        roleColors: null,
+        shouldShowRoleDot: null,
+      };
       obj[2] = id;
       obj[3] = message.channel_id;
       obj[4] = tmp37;
@@ -167,7 +186,16 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
           }
           const tmp16Result7 = tmp16(8144);
         }
-        obj6 = { userId: null, username: null, usernameColor: null, avatarURL: null, targetUsernameColor: null, content: null, commandNameBackgroundStyles: null, showAppsIcon: true };
+        obj6 = {
+          userId: null,
+          username: null,
+          usernameColor: null,
+          avatarURL: null,
+          targetUsernameColor: null,
+          content: null,
+          commandNameBackgroundStyles: null,
+          showAppsIcon: true,
+        };
         obj6[0] = message.interaction.user.id;
         obj6[1] = obj.username;
         obj6[2] = tmp37;
@@ -191,7 +219,15 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       if (null == channel) {
         let obj9 = {};
       } else {
-        const obj10 = { name: "commandNameOnClick", action: "bindTapCommandName", userId: null, messageId: null, applicationUserId: null, messageType: null, messageChannelId: null };
+        const obj10 = {
+          name: "commandNameOnClick",
+          action: "bindTapCommandName",
+          userId: null,
+          messageId: null,
+          applicationUserId: null,
+          messageType: null,
+          messageChannelId: null,
+        };
         obj10[2] = message.interaction.user.id;
         obj10[3] = message.id;
         obj10[4] = message.author.id;
@@ -211,7 +247,16 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         if (tmp24 != null) {
           id2 = tmp24.id;
         }
-        const obj12 = { name: "targetUsernameOnClick", action: "bindUserMenu", userId: null, messageChannelId: null, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null };
+        const obj12 = {
+          name: "targetUsernameOnClick",
+          action: "bindUserMenu",
+          userId: null,
+          messageChannelId: null,
+          linkColor: null,
+          roleColor: null,
+          roleColors: null,
+          shouldShowRoleDot: null,
+        };
         obj12[2] = id2;
         obj12[3] = message.channel_id;
         obj12[4] = tmp33;

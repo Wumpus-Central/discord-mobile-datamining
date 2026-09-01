@@ -10,11 +10,26 @@ import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_9 } from "../../../../../pr
 import { createCacheKey } from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbed.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbed.tsx",
+);
 
-export const createReferralTrialEmbedRedeemable = function createReferralTrialEmbedRedeemable(message, theme, id, relevantUserTrialOffer) {
+export const createReferralTrialEmbedRedeemable = function createReferralTrialEmbedRedeemable(
+  message,
+  theme,
+  id,
+  relevantUserTrialOffer,
+) {
   if (null != message.author) {
-    let obj = { headerTextColor: null, titleColor: null, bodyTextColor: null, footerTextColor: null, subTextColor: null, backgroundColor: null, acceptLabelColor: null };
+    let obj = {
+      headerTextColor: null,
+      titleColor: null,
+      bodyTextColor: null,
+      footerTextColor: null,
+      subTextColor: null,
+      backgroundColor: null,
+      acceptLabelColor: null,
+    };
     obj[0] = ThemesDefault.colors.WHITE;
     obj[1] = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
     obj[2] = ThemesDefault.colors.TEXT_DEFAULT;
@@ -22,13 +37,24 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
     obj[4] = ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT;
     obj[5] = ThemesDefault.colors.BACKGROUND_MOD_NORMAL;
     obj[6] = ThemesDefault.colors.WHITE;
-    const tmp47 = require("../../../../../../design/components/Styles/native/createStyles.tsx").createNativeStyleProperties(obj)(theme);
+    const tmp47 =
+      require("../../../../../../design/components/Styles/native/createStyles.tsx").createNativeStyleProperties(obj)(
+        theme,
+      );
     ({ titleColor, bodyTextColor, backgroundColor } = tmp47);
     ({ headerTextColor, footerTextColor, subTextColor, acceptLabelColor } = tmp47);
     channel = channel.getChannel(message.getChannelId());
     if (null != channel) {
       if (channel.isDM()) {
-        obj = { backgroundColor: null, borderColor: null, thumbnailCornerRadius: 3, headerLogoUrl: null, headerText: null, headerColor: null, thumbnailUrl: null };
+        obj = {
+          backgroundColor: null,
+          borderColor: null,
+          thumbnailCornerRadius: 3,
+          headerLogoUrl: null,
+          headerText: null,
+          headerColor: null,
+          thumbnailUrl: null,
+        };
         obj[0] = backgroundColor;
         obj[1] = backgroundColor;
         let tmp44Result = tmp44(7855);
@@ -94,7 +120,9 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
               const result = tmp44(7194).hasUserTrialOfferExpired(relevantUserTrialOffer);
               if (!tmp14) {
                 const expiresAt = relevantUserTrialOffer.expiresAt;
-                const referralTrialOfferExpirationCopy = tmp44(7964).getReferralTrialOfferExpirationCopy(expiresAt.getTime());
+                const referralTrialOfferExpirationCopy = tmp44(7964).getReferralTrialOfferExpirationCopy(
+                  expiresAt.getTime(),
+                );
                 const intl2 = tmp44(1236).intl;
                 const tmp44Result2 = tmp44(7964);
                 const subscriptionTrial = relevantUserTrialOffer.subscriptionTrial;
@@ -204,7 +232,11 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
                 formatToPartsResult1 = intl6.formatToParts(tmp44(1236).t.mVzEG8, obj11);
                 const tmp46Result4 = tmp46(1995);
               }
-              tmp14 = null == relevantUserTrialOffer.expiresAt || result || tmp10 || null != relevantUserTrialOffer.redeemedAt;
+              tmp14 =
+                null == relevantUserTrialOffer.expiresAt ||
+                result ||
+                tmp10 ||
+                null != relevantUserTrialOffer.redeemedAt;
               const tmp44Result1 = tmp44(7194);
             }
           }

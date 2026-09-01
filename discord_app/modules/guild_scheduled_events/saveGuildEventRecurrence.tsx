@@ -23,7 +23,11 @@ export default function saveGuildEventRecurrence(guild_id, nextRecurrenceIdInEve
     const result = tmpResult.areSchedulesIdentical(startDate, baseScheduleForRecurrence);
     const obj5 = _modDef9673;
     if (result) {
-      let result1 = obj5.deleteGuildEventException(guild_id.guild_id, guild_id.id, event_exception_id.event_exception_id);
+      let result1 = obj5.deleteGuildEventException(
+        guild_id.guild_id,
+        guild_id.id,
+        event_exception_id.event_exception_id,
+      );
     } else {
       let toISOStringResult;
       if (startDate != null) {
@@ -43,7 +47,12 @@ export default function saveGuildEventRecurrence(guild_id, nextRecurrenceIdInEve
   } else {
     const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(nextRecurrenceIdInEvent);
     const obj7 = DISCORD_EPOCHDefault;
-    obj = { original_scheduled_start_time: null, scheduled_start_time: null, scheduled_end_time: null, is_canceled: false };
+    obj = {
+      original_scheduled_start_time: null,
+      scheduled_start_time: null,
+      scheduled_end_time: null,
+      is_canceled: false,
+    };
     const _Date = Date;
     const date = new Date(extractTimestampResult);
     obj[0] = date.toISOString();
@@ -60,4 +69,4 @@ export default function saveGuildEventRecurrence(guild_id, nextRecurrenceIdInEve
     return _modDef9673.createGuildEventException(obj, guild_id.guild_id, guild_id.id);
   }
   obj2 = getRRule;
-};
+}

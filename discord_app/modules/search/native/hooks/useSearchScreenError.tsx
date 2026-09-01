@@ -28,7 +28,13 @@ export const useMessageSearchErrorScreen = function useMessageSearchErrorScreen(
   }
   closure_4 = anyErrorMessage.useRef(null);
   const items1 = [stateFromStores, anyErrorMessage];
-  obj = { hasError: null != stateFromStores, errorText: anyErrorMessage, isErrorFullscreen: null, isErrorToast: null, showErrorToast: null };
+  obj = {
+    hasError: null != stateFromStores,
+    errorText: anyErrorMessage,
+    isErrorFullscreen: null,
+    isErrorToast: null,
+    showErrorToast: null,
+  };
   let tmp5 = null != stateFromStores;
   const callback = anyErrorMessage.useCallback(() => {
     if (stateFromStores !== ref.current) {
@@ -53,7 +59,11 @@ export const useMessageTabCountsErrorText = function useMessageTabCountsErrorTex
   const items = [closure_5, closure_4];
   return searchContext(589).useStateFromStores(items, () => {
     const searchResultsQuery = closure_1_5.getSearchResultsQuery(searchContext);
-    const searchTabFetchId = searchContext(closure_1_2[5]).getSearchTabFetchId(searchContext, closure_1_6, searchResultsQuery);
+    const searchTabFetchId = searchContext(closure_1_2[5]).getSearchTabFetchId(
+      searchContext,
+      closure_1_6,
+      searchResultsQuery,
+    );
     if (closure_1_4.getIsInitialFetchComplete(searchTabFetchId)) {
       if (null != obj2.getTotalCount(searchTabFetchId)) {
         return null;

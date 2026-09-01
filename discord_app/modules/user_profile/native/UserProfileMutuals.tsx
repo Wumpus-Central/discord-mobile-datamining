@@ -11,7 +11,10 @@ noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let c8 = "text-sm/medium";
 let c9 = "text-default";
-let closure_10 = createCacheKey.createStyles({ container: { flexDirection: "row", columnGap: 4, flexWrap: "wrap" }, section: { flexDirection: "row", alignItems: "center", columnGap: 6 } });
+let closure_10 = createCacheKey.createStyles({
+  container: { flexDirection: "row", columnGap: 4, flexWrap: "wrap" },
+  section: { flexDirection: "row", alignItems: "center", columnGap: 6 },
+});
 const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileMutuals.tsx");
 
 export default function UserProfileMutuals(user) {
@@ -66,16 +69,27 @@ export default function UserProfileMutuals(user) {
             closure_1_0(closure_1_2[13]).transitionToGuild(arg0);
             const obj = closure_1_0(closure_1_2[13]);
             closure_1_1(closure_1_2[9]).hideAllActionSheets();
-          }
+          },
         };
-        obj.openLazy(user(_undefined[11])(_undefined[10], _undefined.paths), "UserProfileMutualsActionSheet", obj, "stack");
+        obj.openLazy(
+          user(_undefined[11])(_undefined[10], _undefined.paths),
+          "UserProfileMutualsActionSheet",
+          obj,
+          "stack",
+        );
       };
       obj1 = { size: null, totalCount: null, names: null, children: null };
       obj1[0] = tmp2(1297).AvatarSizes.SIZE_16;
       obj1[1] = mapped.length;
       obj1[2] = mapped.map((username) => username.username);
-      obj1[3] = mapped.map((id) => callback(user(_undefined[16]).Avatar, { user: id, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "r" }, id.id));
-      const items = [callback(tmp2(9427).AvatarPile, obj1), ];
+      obj1[3] = mapped.map((id) =>
+        callback(
+          user(_undefined[16]).Avatar,
+          { user: id, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "r" },
+          id.id,
+        ),
+      );
+      const items = [callback(tmp2(9427).AvatarPile, obj1)];
       const obj2 = { variant: null, color: null, children: null };
       obj2[0] = c8;
       obj2[1] = c9;
@@ -84,13 +98,19 @@ export default function UserProfileMutuals(user) {
       obj[3] = items;
       tmp9Result = tmp9(tmp2(5068).PressableOpacity, obj);
     }
-    const items1 = [tmp9Result, , ];
+    const items1 = [tmp9Result, ,];
     let tmp15 = tmp7;
     if (tmp7) {
       tmp15 = tmp8;
     }
     if (tmp15) {
-      const obj3 = { variant: null, color: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+      const obj3 = {
+        variant: null,
+        color: null,
+        accessibilityElementsHidden: true,
+        importantForAccessibility: "no-hide-descendants",
+        children: null,
+      };
       obj3[0] = c8;
       obj3[1] = c9;
       obj3[4] = DIVIDER_DOT;
@@ -123,9 +143,14 @@ export default function UserProfileMutuals(user) {
             closure_1_0(closure_1_2[13]).transitionToGuild(arg0);
             const obj = closure_1_0(closure_1_2[13]);
             closure_1_1(closure_1_2[9]).hideAllActionSheets();
-          }
+          },
         };
-        obj.openLazy(user(_undefined[11])(_undefined[10], _undefined.paths), "UserProfileMutualsActionSheet", obj, "stack");
+        obj.openLazy(
+          user(_undefined[11])(_undefined[10], _undefined.paths),
+          "UserProfileMutualsActionSheet",
+          obj,
+          "stack",
+        );
       };
       let tmp21 = !tmp7;
       if (!tmp7) {
@@ -139,7 +164,7 @@ export default function UserProfileMutuals(user) {
         });
         tmp21 = callback(tmp2(9270).GuildIconPile, obj5);
       }
-      const items2 = [tmp21, ];
+      const items2 = [tmp21];
       const obj6 = { variant: null, color: null, children: null };
       obj6[0] = c8;
       obj6[1] = c9;
@@ -155,4 +180,4 @@ export default function UserProfileMutuals(user) {
     return null;
   }
   const tmp6 = guildId(9228)(user);
-};
+}

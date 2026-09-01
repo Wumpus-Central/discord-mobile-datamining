@@ -91,7 +91,26 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
     const intl3 = tmp(tmp2[9]).intl;
     stringResult1 = intl3.string(tmp(tmp2[9]).t.a17rBk);
   }
-  obj = { ref, alpha2: stateFromStores.alpha2, countryCode: stateFromStores.code, onChange: callback1, onSubmitEditing: onSubmit, placeholder: stringResult, returnKeyType: "next", autoCapitalize: "none", accessibilityHint: stringResult1, label: stringResult, errorMessage: inputError, onPressCountrySelector: callback2, forceMode: inputMode, submitBehavior, autoComplete: null, keyboardType: null, isClearable: true, status: null };
+  obj = {
+    ref,
+    alpha2: stateFromStores.alpha2,
+    countryCode: stateFromStores.code,
+    onChange: callback1,
+    onSubmitEditing: onSubmit,
+    placeholder: stringResult,
+    returnKeyType: "next",
+    autoCapitalize: "none",
+    accessibilityHint: stringResult1,
+    label: stringResult,
+    errorMessage: inputError,
+    onPressCountrySelector: callback2,
+    forceMode: inputMode,
+    submitBehavior,
+    autoComplete: null,
+    keyboardType: null,
+    isClearable: true,
+    status: null,
+  };
   const tmp16 = closure_7;
   const tmpResult = loginPhone(setLoginPhone[6]);
   let str = "email";

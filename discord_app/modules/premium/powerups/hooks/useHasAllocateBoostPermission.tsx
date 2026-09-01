@@ -20,7 +20,7 @@ export default function useHasAllocateBoostPermission(arg0) {
     }
     return canResult;
   });
-};
+}
 export const getHasAllocateBoostPermission = function getHasAllocateBoostPermission(closure_4, guild) {
   let canResult = null;
   if (null != guild) {

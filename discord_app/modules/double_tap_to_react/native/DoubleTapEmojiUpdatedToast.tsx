@@ -21,7 +21,7 @@ class ToastEmoji {
     stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
     closure_1 = stateFromStores;
     tmp2 = closure_7();
-    items1 = [, ];
+    items1 = [,];
     items1[0] = emoji;
     items1[1] = stateFromStores;
     memo = closure_3.useMemo(() => {
@@ -42,7 +42,13 @@ class ToastEmoji {
       return url;
     }, items1);
     tmp4 = jsx;
-    obj = { style: tmp2.toastEmoji, fastImageStyle: tmp2.toastEmojiCustom, textEmojiStyle: tmp2.toastEmojiText, name: null, src: null };
+    obj = {
+      style: tmp2.toastEmoji,
+      fastImageStyle: tmp2.toastEmojiCustom,
+      textEmojiStyle: tmp2.toastEmojiText,
+      name: null,
+      src: null,
+    };
     str = "";
     tmp5 = require("Emoji");
     if (null == emoji.id) {

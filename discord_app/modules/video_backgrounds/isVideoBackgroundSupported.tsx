@@ -23,4 +23,4 @@ export default function isVideoBackgroundSupported() {
     const tmp6 = apexExperimentDefault.getConfig({ location: "isVideoBackgroundSupported" }).enabled && supportsResult;
   }
   return tmp4;
-};
+}

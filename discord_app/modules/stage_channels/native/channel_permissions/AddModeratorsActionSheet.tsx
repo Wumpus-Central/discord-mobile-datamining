@@ -14,14 +14,16 @@ createCacheKey = { container: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/stage_channels/native/channel_permissions/AddModeratorsActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/channel_permissions/AddModeratorsActionSheet.tsx",
+);
 
 export default function AddModeratorsActionSheet(channel) {
   channel = channel.channel;
   let first;
   function _handleAddModeratorsPressed() {
     const self = this;
-    const tmp = closure_1_3(function*() {
+    const tmp = closure_1_3(function* () {
       c1 = tmp3;
       c0 = 0;
       c1 = 0;
@@ -33,11 +35,19 @@ export default function AddModeratorsActionSheet(channel) {
         row = row.row;
         if (row.rowType === closure_2_8.ROLE) {
           closure_1 = closure_1 + 1;
-          let moderatorOverwrite = closure_2_0(closure_2_2[11]).createModeratorOverwrite(row.id, closure_2_0(closure_2_2[12]).PermissionOverwriteType.ROLE, c0);
+          let moderatorOverwrite = closure_2_0(closure_2_2[11]).createModeratorOverwrite(
+            row.id,
+            closure_2_0(closure_2_2[12]).PermissionOverwriteType.ROLE,
+            c0,
+          );
           const obj2 = closure_2_0(closure_2_2[11]);
         } else {
           closure_0 = closure_0 + 1;
-          moderatorOverwrite = closure_2_0(closure_2_2[11]).createModeratorOverwrite(row.id, closure_2_0(closure_2_2[12]).PermissionOverwriteType.MEMBER, c0);
+          moderatorOverwrite = closure_2_0(closure_2_2[11]).createModeratorOverwrite(
+            row.id,
+            closure_2_0(closure_2_2[12]).PermissionOverwriteType.MEMBER,
+            c0,
+          );
           const obj = closure_2_0(closure_2_2[11]);
         }
         return moderatorOverwrite;
@@ -107,7 +117,14 @@ export default function AddModeratorsActionSheet(channel) {
       obj1[1] = tmp12(tmp4(tmp5[17]).BottomSheetTitleHeader, obj);
       let obj2 = { style: null, children: null };
       obj2[0] = tmp.container;
-      const obj3 = { inActionSheet: true, channel: null, guild: null, permission: null, pendingAdditions: null, setPendingAdditions: null };
+      const obj3 = {
+        inActionSheet: true,
+        channel: null,
+        guild: null,
+        permission: null,
+        pendingAdditions: null,
+        setPendingAdditions: null,
+      };
       obj3[1] = channel;
       obj3[2] = stateFromStores;
       obj3[3] = tmp4(tmp5[21]).MODERATE_STAGE_CHANNEL_PERMISSIONS;
@@ -132,4 +149,4 @@ export default function AddModeratorsActionSheet(channel) {
       return applyArgumentsResult;
     };
   }
-};
+}

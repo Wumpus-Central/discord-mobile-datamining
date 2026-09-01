@@ -48,11 +48,19 @@ class CollectiblesPreview {
       obj1 = { style: null, children: null };
       obj1[0] = tmp3.container;
       obj2 = { style: null, children: null };
-      items = [, ];
+      items = [,];
       ({ scaler: arr2[0], bundleContainer: arr2[1] } = tmp3);
       obj2[0] = items;
       tmp26 = closure_1;
-      obj3 = { deco: null, pfx: null, nameplate: null, size: "small", previewAssets: null, disableStaticBackground: true, targetSize: null };
+      obj3 = {
+        deco: null,
+        pfx: null,
+        nameplate: null,
+        size: "small",
+        previewAssets: null,
+        disableStaticBackground: true,
+        targetSize: null,
+      };
       ({ firstAvatarDecoration: obj15[0], firstProfileEffect: obj15[1], firstNameplate: obj15[2] } = itemsSortingHat);
       obj3[4] = collectiblesItemData.previewAssets;
       tmp27 = closure_9;
@@ -96,7 +104,7 @@ class CollectiblesPreview {
         obj10 = { style: null, children: null };
         obj10[0] = tmp3.container;
         obj11 = { style: null, children: null };
-        items1 = [, ];
+        items1 = [,];
         ({ scaler: arr[0], profileFrameContainer: arr[1] } = tmp3);
         obj11[0] = items1;
         tmp10 = closure_1;
@@ -189,8 +197,21 @@ class PremiumSKUPreview {
   }
 }
 let closure_8 = createCacheKey.createStyles((width, height) => {
-  let obj = { container: { width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }, scaler: null, bundleContainer: null, socialLayerStorefrontContainer: null, profileFrameContainer: null, premiumRiveContainer: null };
-  obj = { width: SourceIcon.DEFAULT_ITEM_SIZE, height: SourceIcon.DEFAULT_ITEM_SIZE, justifyContent: "center", alignItems: "center", transform: null };
+  let obj = {
+    container: { width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" },
+    scaler: null,
+    bundleContainer: null,
+    socialLayerStorefrontContainer: null,
+    profileFrameContainer: null,
+    premiumRiveContainer: null,
+  };
+  obj = {
+    width: SourceIcon.DEFAULT_ITEM_SIZE,
+    height: SourceIcon.DEFAULT_ITEM_SIZE,
+    justifyContent: "center",
+    alignItems: "center",
+    transform: null,
+  };
   obj = { scaleX: width / SourceIcon.DEFAULT_ITEM_SIZE };
   const items = [obj, { scaleY: height / SourceIcon.DEFAULT_ITEM_SIZE }];
   obj[4] = items;
@@ -238,7 +259,7 @@ export default function SKUPreview(arg0) {
     }
     return null;
   }
-};
+}
 export { CollectiblesPreview };
 export { SocialLayerStorefrontSKUPreview };
 export { PremiumSKUPreview };

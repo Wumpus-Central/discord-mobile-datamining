@@ -27,7 +27,7 @@ const memoResult = importAllResult.memo(function FileGridItem(containerStyle) {
   let items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(data.channelId));
   obj1 = importAllResult;
-  const items1 = [data.author, ];
+  const items1 = [data.author];
   let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
@@ -44,7 +44,7 @@ const memoResult = importAllResult.memo(function FileGridItem(containerStyle) {
   const tmp7 = onPress(imageStyle[11])(data.attachment);
   closure_6 = tmp7;
   const size = data.attachment.size;
-  const items2 = [, , ];
+  const items2 = [, ,];
   ({ channelId: arr3[0], messageId: arr3[1] } = data);
   items2[2] = onPress;
   const items3 = [data, tmp7, imageStyle, scale, tmp.icon];
@@ -54,7 +54,16 @@ const memoResult = importAllResult.memo(function FileGridItem(containerStyle) {
   const memo1 = obj1.useMemo(() => {
     const type = data.type;
     if (closure_1_8.MEDIA_ATTACHMENT === type) {
-      let obj = { containerStyle: null, attachment: null, channelId: null, authorId: null, scale: null, containerHeight: null, containerWidth: null, renderFallback: null };
+      let obj = {
+        containerStyle: null,
+        attachment: null,
+        channelId: null,
+        authorId: null,
+        scale: null,
+        containerHeight: null,
+        containerWidth: null,
+        renderFallback: null,
+      };
       obj[0] = imageStyle;
       ({ attachment: obj3[1], channelId: obj3[2] } = tmp);
       obj[3] = tmp.author.id;
@@ -93,7 +102,7 @@ const memoResult = importAllResult.memo(function FileGridItem(containerStyle) {
     }
   }, items3);
   obj = { containerStyle: containerStyle.containerStyle, onPress: callback, children: null };
-  const items4 = [callback(data(imageStyle[13]).SearchListCardThumbnail, { thumbnail: memo1 }), , ];
+  const items4 = [callback(data(imageStyle[13]).SearchListCardThumbnail, { thumbnail: memo1 }), ,];
   obj = { label: tmp7, subLabel: null };
   let sizeStringResult;
   if (size > 0) {

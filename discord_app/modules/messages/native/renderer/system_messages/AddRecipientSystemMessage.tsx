@@ -9,7 +9,9 @@ import closure_4 from "../../../../../stores/ChannelStore.tsx";
 import closure_5 from "../../../../../stores/UserStore.tsx";
 
 const THREAD_CHANNEL_TYPES = createChannelRecord.THREAD_CHANNEL_TYPES;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx",
+);
 
 export const createAddRecipientSystemMessage = function createAddRecipientSystemMessage(message) {
   ({ message, roleStyle } = message);
@@ -22,8 +24,21 @@ export const createAddRecipientSystemMessage = function createAddRecipientSystem
   }
   let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const userAuthorWithProcessedColor = getMessageAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }), otherUsername: userAuthorWithProcessedColor.nick, otherUsernameOnClick: formatUsernameOnClickDefault({ userId: first, message, author: userAuthorWithProcessedColor, roleStyle }) };
+  const userAuthorWithProcessedColor = getMessageAuthorWithProcessedColor.getUserAuthorWithProcessedColor(
+    user,
+    channel,
+  );
+  obj = {
+    username: messageAuthorWithProcessedColor.nick,
+    usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }),
+    otherUsername: userAuthorWithProcessedColor.nick,
+    otherUsernameOnClick: formatUsernameOnClickDefault({
+      userId: first,
+      message,
+      author: userAuthorWithProcessedColor,
+      roleStyle,
+    }),
+  };
   const intl = getSystemLocale.intl;
   const formatToParts = intl.formatToParts;
   const t = getSystemLocale.t;

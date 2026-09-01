@@ -39,7 +39,7 @@ class Card {
       radius = obj.useToken(require("Themes").modules.mobile.CARD_DEFAULT_RADIUS);
     }
     tmp2 = closure_10(flag, flag2, str3, str, str2, radius);
-    items = [, , ];
+    items = [, ,];
     ({ spacing: arr[0], card: arr[1] } = tmp2);
     items[2] = merged.style;
     if ("onPress" in merged) {
@@ -131,7 +131,7 @@ function PressableCard(start) {
         obj = { backgroundColor: null };
         obj2 = onPressIn(closure_2[10]);
         obj3 = onPressIn(closure_2[4]);
-        items = [, ];
+        items = [,];
         items[0] = backgroundColor;
         items[1] = backgroundColorPressed;
         interpolateColorResult = obj3.interpolateColor(closure_2.get(), [0, 1], items);
@@ -139,7 +139,14 @@ function PressableCard(start) {
         return obj;
       }
     }
-    let obj2 = { withSpring: null, interpolateColor: null, pressed: null, backgroundColor: null, backgroundColorPressed: null, ON_PRESS_SPRING: null };
+    let obj2 = {
+      withSpring: null,
+      interpolateColor: null,
+      pressed: null,
+      backgroundColor: null,
+      backgroundColorPressed: null,
+      ON_PRESS_SPRING: null,
+    };
     obj2[0] = tmp(tmp2[10]).withSpring;
     obj2[1] = tmp(tmp2[4]).interpolateColor;
     obj2[2] = sharedValue;
@@ -254,7 +261,9 @@ let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4, arg5
   card.backgroundColor = BACKGROUND_SURFACE_HIGH;
   return { card, spacing: { padding: 16 } };
 });
-let closure_12 = { code: "function CardNativeTsx1(){const{withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING}=this.__closure;const pressedColor=withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,'animate-always');return{backgroundColor:pressedColor};}" };
+let closure_12 = {
+  code: "function CardNativeTsx1(){const{withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING}=this.__closure;const pressedColor=withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,'animate-always');return{backgroundColor:pressedColor};}",
+};
 let result = require("set").fileFinishedImporting("design/components/Card/native/Card.native.tsx");
 
 export { Card };

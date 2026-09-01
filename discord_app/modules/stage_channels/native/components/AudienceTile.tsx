@@ -11,7 +11,8 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 require = arg1;
 function RaisedHandIcon(rtsState) {
   const tmp = styles();
-  let activeBackground = rtsState.rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+  let activeBackground =
+    rtsState.rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
   if (activeBackground) {
     let PRIMARY_800 = unsafe_rawColors.WHITE;
@@ -20,7 +21,7 @@ function RaisedHandIcon(rtsState) {
     PRIMARY_800 = unsafe_rawColors.PRIMARY_800;
     tmp5 = tmp4;
   }
-  const items = [tmp.raisedHandContainer, ];
+  const items = [tmp.raisedHandContainer];
   if (activeBackground) {
     activeBackground = tmp.activeBackground;
   }
@@ -31,8 +32,30 @@ function RaisedHandIcon(rtsState) {
   return closure_5(View, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { touchableContainer: { overflow: "visible" }, container: { alignItems: "center" }, avatarContainer: { position: "relative", padding: 8, paddingTop: 0, paddingBottom: 4 }, raisedHandContainer: null, activeBackground: null, raisedHand: null, nameplateContainer: null, usernameText: null, faded: null };
-obj = { position: "absolute", top: -8, right: 0, height: 24, width: 24, alignItems: "center", justifyContent: "center", borderRadius: 12, borderWidth: 2, borderColor: ThemesDefault.unsafe_rawColors.PRIMARY_800, backgroundColor: ThemesDefault.colors.WHITE };
+let obj = {
+  touchableContainer: { overflow: "visible" },
+  container: { alignItems: "center" },
+  avatarContainer: { position: "relative", padding: 8, paddingTop: 0, paddingBottom: 4 },
+  raisedHandContainer: null,
+  activeBackground: null,
+  raisedHand: null,
+  nameplateContainer: null,
+  usernameText: null,
+  faded: null,
+};
+obj = {
+  position: "absolute",
+  top: -8,
+  right: 0,
+  height: 24,
+  width: 24,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: 12,
+  borderWidth: 2,
+  borderColor: ThemesDefault.unsafe_rawColors.PRIMARY_800,
+  backgroundColor: ThemesDefault.colors.WHITE,
+};
 obj[3] = obj;
 createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
 obj[4] = createCacheKey;
@@ -55,18 +78,22 @@ const memoResult = importAllResult.memo((channel) => {
   let obj = channel(guildId[10]);
   const items = [closure_4];
   const items1 = [guildId, user.id];
-  let stateFromStores = obj.useStateFromStores(items, () => {
-    let tmp2 = null != guildId;
-    if (tmp2) {
-      const member = closure_1_4.getMember(tmp, user.id);
-      let premiumSince;
-      if (member != null) {
-        premiumSince = member.premiumSince;
+  let stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let tmp2 = null != guildId;
+      if (tmp2) {
+        const member = closure_1_4.getMember(tmp, user.id);
+        let premiumSince;
+        if (member != null) {
+          premiumSince = member.premiumSince;
+        }
+        tmp2 = null != premiumSince;
       }
-      tmp2 = null != premiumSince;
-    }
-    return Boolean(tmp2);
-  }, items1);
+      return Boolean(tmp2);
+    },
+    items1,
+  );
   obj1 = channel(guildId[11]);
   let result = obj1.isRequestedToSpeakAll(rtsState);
   let obj2 = user(guildId[12]);
@@ -79,7 +106,7 @@ const memoResult = importAllResult.memo((channel) => {
   obj = { accessibilityLabel: null, style: null, accessibilityRole: "button", onPress: null, children: null };
   const intl = tmp6(tmp3[14]).intl;
   obj[0] = intl.formatToPlainString(channel(guildId[14]).t.QLMGhv, { name });
-  const items2 = [, , ];
+  const items2 = [, ,];
   ({ touchableContainer: arr3[0], container: arr3[1] } = tmp);
   items2[2] = { width: result1 };
   obj[1] = items2;
@@ -95,7 +122,7 @@ const memoResult = importAllResult.memo((channel) => {
     faded = tmp.faded;
   }
   obj1[3] = faded;
-  const items3 = [closure_5(channel(guildId[7]).CutoutableAvatarImage, obj1), ];
+  const items3 = [closure_5(channel(guildId[7]).CutoutableAvatarImage, obj1)];
   if (result) {
     obj2 = { rtsState: null };
     obj2[0] = rtsState;
@@ -103,18 +130,18 @@ const memoResult = importAllResult.memo((channel) => {
   }
   items3[1] = result;
   obj[1] = items3;
-  const items4 = [closure_6(View, obj), ];
+  const items4 = [closure_6(View, obj)];
   const obj3 = { style: items5, children: null };
   items5 = [tmp.nameplateContainer];
   if (blocked) {
     blocked = tmp14(tmp6(tmp3[16]).BlockedStatus, {});
   }
-  const items6 = [blocked, , , ];
+  const items6 = [blocked, , ,];
   if (ignored) {
     ignored = tmp14(tmp6(tmp3[16]).IgnoredStatus, {});
   }
   items6[1] = ignored;
-  const items7 = [tmp.usernameText, , ];
+  const items7 = [tmp.usernameText, ,];
   let tmp16 = stateFromStores;
   if (!stateFromStores) {
     tmp16 = tmp10;

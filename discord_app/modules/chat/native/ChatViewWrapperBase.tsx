@@ -12,5 +12,12 @@ const result = require("set").fileFinishedImporting("modules/chat/native/ChatVie
 export default function ChatViewWrapperBase(arg0) {
   ({ channelId, children, stickyHeader, style } = arg0);
   const tmp = useChatViewPointerEventsAndroidDefault(channelId);
-  return jsx(Layer.LayerScope, { children: jsx(StickyWrapper.StickyWrapper, { header: stickyHeader, style, pointerEvents: useChatViewPointerEventsAndroidDefault(channelId), children }) });
-};
+  return jsx(Layer.LayerScope, {
+    children: jsx(StickyWrapper.StickyWrapper, {
+      header: stickyHeader,
+      style,
+      pointerEvents: useChatViewPointerEventsAndroidDefault(channelId),
+      children,
+    }),
+  });
+}

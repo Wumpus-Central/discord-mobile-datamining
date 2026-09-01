@@ -29,7 +29,7 @@ class TransitionGroup {
     }, []);
     closure_5 = items(renderItem.useState(closure_4), 2)[1];
     closure_6 = renderItem.useRef(null);
-    items = [, , , ];
+    items = [, , ,];
     items[0] = items;
     items[1] = getItemKey;
     items[2] = renderItem;
@@ -179,20 +179,28 @@ function getSingleItemKey() {
 }
 let obj = { MOUNTED: 0, [0]: "MOUNTED", ENTERED: 1, [1]: "ENTERED", YEETED: 2, [2]: "YEETED" };
 let closure_4 = {};
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/TransitionGroup/TransitionGroup.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/design/components/TransitionGroup/TransitionGroup.tsx",
+);
 
 export const TransitionStates = obj;
 export { TransitionGroup };
 export const TransitionItem = function TransitionItem(item) {
   item = item.item;
   let items = [item];
-  return <TransitionGroup items={React.useMemo(() => {
-    if (null != item) {
-      const items = [tmp];
-      let items1 = items;
-    } else {
-      items1 = [];
-    }
-    return items1;
-  }, items)} renderItem={arg0.renderItem} getItemKey={getSingleItemKey} />;
+  return (
+    <TransitionGroup
+      items={React.useMemo(() => {
+        if (null != item) {
+          const items = [tmp];
+          let items1 = items;
+        } else {
+          items1 = [];
+        }
+        return items1;
+      }, items)}
+      renderItem={arg0.renderItem}
+      getItemKey={getSingleItemKey}
+    />
+  );
 };

@@ -4,15 +4,20 @@ import closure_3 from "../../../collectibles/CollectiblesPurchaseStore.tsx";
 import closure_4 from "../../../../stores/GiftCodeStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx",
+);
 
 export default function useGiftCodeErrorMessage(arg0, id) {
   const _require = arg0;
   let items = [closure_4];
-  const tmp3 = callback(_require(first[3]).useStateFromStoresArray(items, () => {
-    const items = [closure_1_4.get(closure_0), closure_1_4.getError(closure_0)];
-    return items;
-  }), 2);
+  const tmp3 = callback(
+    _require(first[3]).useStateFromStoresArray(items, () => {
+      const items = [closure_1_4.get(closure_0), closure_1_4.getError(closure_0)];
+      return items;
+    }),
+    2,
+  );
   first = tmp3[0];
   const obj = _require(first[3]);
   const items1 = [closure_3];
@@ -54,4 +59,4 @@ export default function useGiftCodeErrorMessage(arg0, id) {
     }
   }
   return stringResult;
-};
+}

@@ -48,12 +48,26 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
       obj = { navigationReplace: flag };
       obj.transitionToChannel(channel.id, obj);
     }, items1),
-    onLongPress: importAllResult.useCallback(() => channel(closure_1_2[4]).openChannelLongPressActionSheet(channel.id), items2)
+    onLongPress: importAllResult.useCallback(
+      () => channel(closure_1_2[4]).openChannelLongPressActionSheet(channel.id),
+      items2,
+    ),
   };
   items1 = [channel.id, flag];
   items2 = [channel.id];
   const merged = Object.assign(obj);
-  obj1 = { channel, unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted, mentionCount, unreadBadge: null, subtitle: null, latestMessageTimestamp: null, channelName: null, fontScale: null };
+  obj1 = {
+    channel,
+    unread,
+    resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES,
+    muted,
+    mentionCount,
+    unreadBadge: null,
+    subtitle: null,
+    latestMessageTimestamp: null,
+    channelName: null,
+    fontScale: null,
+  };
   const tmp5Result = channel(4935);
   obj1[5] = jsx(flag(16562), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
   let tmp11Result = null != tmp7;
@@ -71,14 +85,19 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
   obj1[8] = flag(4674)(channel);
   obj1[9] = fontScale;
   obj.children = flag(16571)(obj1);
-  return tmp2Result(jsx(channel(5068).PressableHighlight, {
-    onPress: importAllResult.useCallback(() => {
-      let obj = channel(closure_1_2[3]);
-      obj = { navigationReplace: flag };
-      obj.transitionToChannel(channel.id, obj);
-    }, items1),
-    onLongPress: importAllResult.useCallback(() => channel(closure_1_2[4]).openChannelLongPressActionSheet(channel.id), items2)
-  }));
+  return tmp2Result(
+    jsx(channel(5068).PressableHighlight, {
+      onPress: importAllResult.useCallback(() => {
+        let obj = channel(closure_1_2[3]);
+        obj = { navigationReplace: flag };
+        obj.transitionToChannel(channel.id, obj);
+      }, items1),
+      onLongPress: importAllResult.useCallback(
+        () => channel(closure_1_2[4]).openChannelLongPressActionSheet(channel.id),
+        items2,
+      ),
+    }),
+  );
 });
 const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/DMChannel.tsx");
 

@@ -164,11 +164,23 @@ let closure_19 = [];
 let closure_20 = {};
 let c21 = null;
 const Store = initializeDefault.Store;
-class LocalActivityStore extends Store {
-}
+class LocalActivityStore extends Store {}
 const prototype = LocalActivityStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_5, closure_10, closure_11, closure_4, closure_13, closure_7, closure_12, closure_6, closure_14, closure_15, closure_8, closure_9);
+  this.waitFor(
+    closure_5,
+    closure_10,
+    closure_11,
+    closure_4,
+    closure_13,
+    closure_7,
+    closure_12,
+    closure_6,
+    closure_14,
+    closure_15,
+    closure_8,
+    closure_9,
+  );
   const items = [closure_7];
   this.syncWith(items, () => {
     callback();
@@ -285,12 +297,18 @@ const localActivityStore = new LocalActivityStore(dispatcherDefault, {
         let tmp20 = tmp11;
         let tmp21 = obj2;
         let tmp22 = tmp10;
-        let activityFlags = obj2.computeActivityFlags(tmp15, hasFlagResult, tmp10.platform === constants2.EMBEDDED, tmp13Result.isContextlessEmbeddedActivity(tmp10), tmp11);
+        let activityFlags = obj2.computeActivityFlags(
+          tmp15,
+          hasFlagResult,
+          tmp10.platform === constants2.EMBEDDED,
+          tmp13Result.isContextlessEmbeddedActivity(tmp10),
+          tmp11,
+        );
         let tmp25 = num;
         if (activityFlags !== tmp12) {
           let tmp30 = first;
           let tmp31 = tmp8;
-          let items = [tmp8, , ];
+          let items = [tmp8, ,];
           obj = {};
           let tmp32 = tmp9;
           let tmp33 = obj;
@@ -305,7 +323,7 @@ const localActivityStore = new LocalActivityStore(dispatcherDefault, {
         } else {
           let tmp26 = first;
           let tmp27 = tmp8;
-          let items1 = [tmp8, , ];
+          let items1 = [tmp8, ,];
           let tmp28 = tmp9;
           items1[1] = tmp10;
           let tmp29 = tmp11;
@@ -323,7 +341,7 @@ const localActivityStore = new LocalActivityStore(dispatcherDefault, {
     updateActivities();
   },
   EMBEDDED_ACTIVITY_CLOSE: updateActivities,
-  RUNNING_GAME_TOGGLE_DETECTION: updateActivities
+  RUNNING_GAME_TOGGLE_DETECTION: updateActivities,
 });
 const result = require("set").fileFinishedImporting("stores/LocalActivityStore.tsx");
 

@@ -2,17 +2,21 @@
 import closure_2 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx",
+);
 
 export const useTrackAppLauncherItemImpressionOnFirstView = function useTrackAppLauncherItemImpressionOnFirstView() {
   let obj = entrypoint(9049);
   entrypoint = obj.useAppLauncherContext().entrypoint;
   dependencyMap = React.useRef(new Set());
   const set = new Set();
-  const focusEffect = entrypoint(1500).useFocusEffect(React.useCallback(() => {
-    const current = ref.current;
-    current.clear();
-  }, []));
+  const focusEffect = entrypoint(1500).useFocusEffect(
+    React.useCallback(() => {
+      const current = ref.current;
+      current.clear();
+    }, []),
+  );
   obj = {
     trackAppLauncherItemImpressionOnFirstView: React.useCallback((itemKey) => {
       itemKey = itemKey.itemKey;
@@ -25,7 +29,15 @@ export const useTrackAppLauncherItemImpressionOnFirstView = function useTrackApp
         obj = { type: null, name: null, properties: null };
         obj[0] = entrypoint(ref[4]).ImpressionTypes.VIEW;
         obj[1] = entrypoint(ref[4]).ImpressionNames.APP_LAUNCHER_ITEM;
-        obj = { source: null, section_name: null, section_position: null, section_overall_position: null, application_id: null, command_id: null, application_flags: null };
+        obj = {
+          source: null,
+          section_name: null,
+          section_position: null,
+          section_overall_position: null,
+          application_id: null,
+          command_id: null,
+          application_flags: null,
+        };
         obj[0] = entrypoint;
         obj[1] = sectionName;
         obj[2] = sectionPosition;
@@ -36,7 +48,7 @@ export const useTrackAppLauncherItemImpressionOnFirstView = function useTrackApp
         obj[2] = obj;
         obj.trackImpression(obj);
       }
-    }, items)
+    }, items),
   };
   items = [entrypoint];
   return obj;

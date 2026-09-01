@@ -33,7 +33,7 @@ function FocusedControlsExpanded(children) {
   }, items);
   let obj = availableHeight(bottom[13]);
   const fn = function _() {
-    const bound = Math.min(-1 * positionY.get() / closure_1_15, 1);
+    const bound = Math.min((-1 * positionY.get()) / closure_1_15, 1);
     const obj = { opacity: bound, pointerEvents: null };
     let str = "auto";
     if (0 === bound) {
@@ -50,7 +50,11 @@ function FocusedControlsExpanded(children) {
   obj1 = { scrollEnabled: first, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
   const items1 = [callback3().expandedControlsContainer, animatedStyle];
-  obj1[1] = callback2(positionY(bottom[13]).View, { style: items1, onLayout: callback, children: children.expandedControls });
+  obj1[1] = callback2(positionY(bottom[13]).View, {
+    style: items1,
+    onLayout: callback,
+    children: children.expandedControls,
+  });
   obj[1] = callback2(closure_7, obj1);
   return callback2(closure_5, obj);
 }
@@ -61,7 +65,7 @@ function FocusedControlsBottomDrawerTooltip(positionY) {
   const canShowTooltip = obj.useCanShowTooltip(positionY(691).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
   positionY(4217);
   const fn = function o() {
-    return { opacity: 1 - Math.min(-1 * positionY.get() / closure_1_15, 1) };
+    return { opacity: 1 - Math.min((-1 * positionY.get()) / closure_1_15, 1) };
   };
   obj = { positionY, EXPANDED_DRAWER_SHOW_POSITION: c15 };
   fn.__closure = obj;
@@ -71,7 +75,16 @@ function FocusedControlsBottomDrawerTooltip(positionY) {
   if (canShowTooltip) {
     obj = { style: null, children: null };
     obj[0] = tmp6;
-    obj1 = { style: null, arrowPosition: null, arrowDirection: null, arrowWidth: 8, arrowHeight: 4, containerStyle: null, labelStyle: null, label: null };
+    obj1 = {
+      style: null,
+      arrowPosition: null,
+      arrowDirection: null,
+      arrowWidth: 8,
+      arrowHeight: 4,
+      containerStyle: null,
+      labelStyle: null,
+      label: null,
+    };
     obj1[0] = tmp.tooltipStyle;
     obj1[1] = tmp2(1297).TooltipArrowPositions.CENTER;
     obj1[2] = tmp2(1297).TooltipArrowDirections.DOWN;
@@ -97,10 +110,21 @@ function FocusedControlsAboveActionBarView(positionY) {
   fn.__closure = obj;
   fn.__workletHash = 5042367101380;
   fn.__initData = closure_25;
-  obj = { accessible: true, onPress: onPressHeader, accessibilityRole: "button", accessibilityLabel: "Group DM", accessibilityHint: "Press to start a new conversation", accessibilityState: { expanded: isExpanded }, children: null };
+  obj = {
+    accessible: true,
+    onPress: onPressHeader,
+    accessibilityRole: "button",
+    accessibilityLabel: "Group DM",
+    accessibilityHint: "Press to start a new conversation",
+    accessibilityState: { expanded: isExpanded },
+    children: null,
+  };
   obj1 = { style: tmp.aboveActionBarContainer, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const items = [callback2(FocusedControlsBottomDrawerTooltip, { positionY }), callback2(positionY(5937).ActionSheetHeaderBar, {}), ];
+  const items = [
+    callback2(FocusedControlsBottomDrawerTooltip, { positionY }),
+    callback2(positionY(5937).ActionSheetHeaderBar, {}),
+  ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {
     const obj2 = { style: null, children: null };
@@ -271,10 +295,12 @@ class FocusedControlsBottomDrawer {
     sharedValue3 = require("../../../../index.native.tsx");
     closure_12 = sharedValue3;
     callback = onClose.useCallback(() => {
-      const result = reveal(sum3[18]).UNSAFE_markDismissibleContentAsDismissed(reveal(sum3[19]).DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
+      const result = reveal(sum3[18]).UNSAFE_markDismissibleContentAsDismissed(
+        reveal(sum3[19]).DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE,
+      );
     }, []);
     closure_13 = callback;
-    items = [, , ];
+    items = [, ,];
     items[0] = sharedValue;
     items[1] = derivedValue;
     items[2] = callback;
@@ -310,7 +336,15 @@ class FocusedControlsBottomDrawer {
         return;
       }
     }
-    obj = { runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, clearFocusTimer: closure_8, drawerOpen: sharedValue2, positionY: sharedValue, CLOSE_DRAWER_POSITION: 0, velocity: sharedValue3, startY: sharedValue1 };
+    obj = {
+      runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS,
+      clearFocusTimer: closure_8,
+      drawerOpen: sharedValue2,
+      positionY: sharedValue,
+      CLOSE_DRAWER_POSITION: 0,
+      velocity: sharedValue3,
+      startY: sharedValue1,
+    };
     M.__closure = obj;
     M.__workletHash = 9674965708496;
     M.__initData = closure_30;
@@ -361,7 +395,9 @@ class FocusedControlsBottomDrawer {
           const result2 = closure_11.set(true);
           const obj2 = reveal(sum3[20]);
           obj3 = reveal(sum3[13]);
-          reveal(sum3[13]).runOnJS(callback(sum3[22]).acknowledgeTooltip)(reveal(sum3[15]).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS);
+          reveal(sum3[13]).runOnJS(callback(sum3[22]).acknowledgeTooltip)(
+            reveal(sum3[15]).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS,
+          );
         };
         tmp5 = num2 >= 500;
         if (500 > result2) {
@@ -419,11 +455,28 @@ class FocusedControlsBottomDrawer {
         return;
       }
     }
-    obj1 = { drawerOpen: sharedValue2, positionY: sharedValue, maxHeight: derivedValue, velocity: sharedValue3, MIN_GESTURE_TRIGGER_VELOCITY: 500, CLOSE_DRAWER_POSITION: 0, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, handleOpen, startY: sharedValue1, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, TIMING_CONFIG: closure_19, TooltipActionCreators: require("dispatcher"), TooltipNames: require("keys").TooltipNames, TIMING_CONFIG_EXIT: closure_20, resetFocusTimer: closure_9, handleClose };
+    obj1 = {
+      drawerOpen: sharedValue2,
+      positionY: sharedValue,
+      maxHeight: derivedValue,
+      velocity: sharedValue3,
+      MIN_GESTURE_TRIGGER_VELOCITY: 500,
+      CLOSE_DRAWER_POSITION: 0,
+      runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS,
+      handleOpen,
+      startY: sharedValue1,
+      withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming,
+      TIMING_CONFIG: closure_19,
+      TooltipActionCreators: require("dispatcher"),
+      TooltipNames: require("keys").TooltipNames,
+      TIMING_CONFIG_EXIT: closure_20,
+      resetFocusTimer: closure_9,
+      handleClose,
+    };
     H.__closure = obj1;
     H.__workletHash = 6790759206787;
     H.__initData = closure_28;
-    items1 = [, , , ];
+    items1 = [, , ,];
     items1[0] = sharedValue;
     items1[1] = onUpdateResult.onEnd(H);
     items1[2] = callback1;
@@ -439,7 +492,16 @@ class FocusedControlsBottomDrawer {
       if (!reveal) {
         num = first;
       }
-      let obj = { position: "absolute", height: onDrawerOpen, overflow: "hidden", bottom: null, right: null, borderRadius: null, width: null, transform: null };
+      let obj = {
+        position: "absolute",
+        height: onDrawerOpen,
+        overflow: "hidden",
+        bottom: null,
+        right: null,
+        borderRadius: null,
+        width: null,
+        transform: null,
+      };
       let num2 = 0;
       if (sum4) {
         num2 = 16;
@@ -461,18 +523,27 @@ class FocusedControlsBottomDrawer {
       obj[7] = items;
       return obj;
     };
-    obj2 = { reveal, controlHeightWithOffset: sum, sheetHeight: bound, isLandscapeMode: tmp5, safeAreaRight: right, sheetWidth: tmp6, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, TIMING_CONFIG: closure_19 };
+    obj2 = {
+      reveal,
+      controlHeightWithOffset: sum,
+      sheetHeight: bound,
+      isLandscapeMode: tmp5,
+      safeAreaRight: right,
+      sheetWidth: tmp6,
+      withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming,
+      TIMING_CONFIG: closure_19,
+    };
     fn.__closure = obj2;
     fn.__workletHash = 608185354082;
     fn.__initData = closure_31;
-    items2 = [, ];
+    items2 = [,];
     items2[0] = tmp5;
     items2[1] = first1;
     animatedStyle = tmp19Result5.useAnimatedStyle(fn);
     effect = onClose.useEffect(() => {
       const result = first1.set(reveal(sum3[20]).withTiming(0, closure_1_20));
     }, items2);
-    items3 = [, ];
+    items3 = [,];
     items3[0] = reveal;
     items3[1] = first1;
     effect1 = onClose.useEffect(() => {
@@ -525,11 +596,11 @@ class FocusedControlsBottomDrawer {
     obj4 = { gesture: tmp31[1], children: null };
     tmp41 = handleOpen;
     obj5 = { style: items6, children: null };
-    items6 = [, ];
+    items6 = [,];
     items6[0] = tmp.bottomDrawerContainer;
     items6[1] = animatedStyle1;
     obj6 = { blurTheme: theme, style: null };
-    items7 = [, ];
+    items7 = [,];
     items7[0] = tmp.visualEffectView;
     tmp2Result = require("isBlurDisabled");
     tmp19Result8 = require("AccessibilityAnnouncer");
@@ -539,9 +610,15 @@ class FocusedControlsBottomDrawer {
     }
     items7[1] = prop;
     obj6[1] = items7;
-    items8 = [, , , ];
+    items8 = [, , ,];
     items8[0] = tmp40(tmp2Result, obj6);
-    items8[1] = tmp40(FocusedControlsAboveActionBarView, { onPressHeader: tmp33, aboveActionBar, positionY: first1, offsetY: diff, isExpanded: tmp31[3] });
+    items8[1] = tmp40(FocusedControlsAboveActionBarView, {
+      onPressHeader: tmp33,
+      aboveActionBar,
+      positionY: first1,
+      offsetY: diff,
+      isExpanded: tmp31[3],
+    });
     items8[2] = children;
     items8[3] = tmp40(FocusedControlsExpanded, { expandedControls, availableHeight: diff2, positionY: first1 });
     obj5[1] = items8;
@@ -556,13 +633,20 @@ class FocusedControlsBottomDrawer {
 ({ ComponentActions: closure_12, Fonts } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let c15 = 20;
-function EXTENDED_CONTROLS_OFFSET_Y(arg0) {
-
-}
-function EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y(arg0) {
-
-}
-createCacheKey = { bottomDrawerContainer: null, visualEffectView: null, visualEffectViewBackground: null, expandedControlsContainer: null, aboveActionBarContainer: null, aboveActionBarChildrenContainer: null, ptbButton: null, tooltipStyle: null, containerStyle: null, labelStyle: null };
+function EXTENDED_CONTROLS_OFFSET_Y(arg0) {}
+function EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y(arg0) {}
+createCacheKey = {
+  bottomDrawerContainer: null,
+  visualEffectView: null,
+  visualEffectViewBackground: null,
+  expandedControlsContainer: null,
+  aboveActionBarContainer: null,
+  aboveActionBarChildrenContainer: null,
+  ptbButton: null,
+  tooltipStyle: null,
+  containerStyle: null,
+  labelStyle: null,
+};
 createCacheKey = { position: "absolute", left: 0, right: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
@@ -577,22 +661,44 @@ createCacheKey[5] = { position: "absolute", left: 16, right: 16, top: -64 };
 createCacheKey[6] = { margin: 0, marginHorizontal: 16, marginBottom: 8 };
 createCacheKey[7] = { alignSelf: "center", position: "absolute", top: -28 };
 createCacheKey[8] = { paddingHorizontal: 8, paddingVertical: 4 };
-const merged1 = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
+const merged1 = Object.assign(
+  importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }),
+);
 createCacheKey[9] = {};
 let closure_18 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { easing: require("Button").STANDARD_EASING, duration: 250 };
 let obj4 = { easing: require("Button").STANDARD_EASING, duration: 400 };
-let closure_21 = { code: "function FocusedControlsBottomControlsTsx1(){const{positionY,EXPANDED_DRAWER_SHOW_POSITION}=this.__closure;const opacity=Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1);return{opacity:opacity,pointerEvents:opacity===0?'none':'auto'};}" };
-let closure_23 = { code: "function FocusedControlsBottomControlsTsx2(){const{positionY,EXPANDED_DRAWER_SHOW_POSITION}=this.__closure;return{opacity:1-Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1)};}" };
-let closure_25 = { code: "function FocusedControlsBottomControlsTsx3(){const{offsetY,EXPANDED_DRAWER_SHOW_POSITION,positionY}=this.__closure;const maxHeightRange=offsetY/3-EXPANDED_DRAWER_SHOW_POSITION;const opacity=2-Math.max(Math.abs(positionY.get())/maxHeightRange,0);return{opacity:opacity};}" };
-let closure_27 = { code: "function FocusedControlsBottomControlsTsx4(){const{isLandscapeMode,controlMaxHeight,landscapeOffsetY,portraitOffsetY}=this.__closure;return isLandscapeMode?controlMaxHeight-landscapeOffsetY:controlMaxHeight-portraitOffsetY;}" };
-let closure_28 = { code: "function FocusedControlsBottomControlsTsx5(){const{drawerOpen,positionY,maxHeight,velocity,MIN_GESTURE_TRIGGER_VELOCITY,CLOSE_DRAWER_POSITION,runOnJS,handleOpen,startY,withTiming,TIMING_CONFIG,TooltipActionCreators,TooltipNames,TIMING_CONFIG_EXIT,resetFocusTimer,handleClose}=this.__closure;var _velocity$get,_velocity$get2;const isDrawerAlreadyOpen=drawerOpen.get();const isPassedTriggerThreshold=positionY.get()*-1>=maxHeight.get()/2;const isHighOpenVelocity=((_velocity$get=velocity.get())!==null&&_velocity$get!==void 0?_velocity$get:0)*-1>=MIN_GESTURE_TRIGGER_VELOCITY;const isHighCloseVelocity=((_velocity$get2=velocity.get())!==null&&_velocity$get2!==void 0?_velocity$get2:0)>=MIN_GESTURE_TRIGGER_VELOCITY;const isLowerThanMinHeight=positionY.get()>CLOSE_DRAWER_POSITION;function openDrawer(){runOnJS(handleOpen)();startY.set(-maxHeight.get());positionY.set(withTiming(startY.get(),TIMING_CONFIG));drawerOpen.set(true);runOnJS(TooltipActionCreators.acknowledgeTooltip)(TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS);}function closeDrawer(){startY.set(0);positionY.set(withTiming(CLOSE_DRAWER_POSITION,TIMING_CONFIG_EXIT));drawerOpen.set(false);runOnJS(resetFocusTimer)();runOnJS(handleClose)();}if(isHighOpenVelocity&&!isDrawerAlreadyOpen||isPassedTriggerThreshold&&!isDrawerAlreadyOpen){openDrawer();}else if(isLowerThanMinHeight||isHighCloseVelocity&&isDrawerAlreadyOpen){closeDrawer();}else if(isPassedTriggerThreshold){openDrawer();}else{closeDrawer();}}" };
-let closure_29 = { code: "function FocusedControlsBottomControlsTsx6(event){const{velocity,positionY,maxHeight,startY}=this.__closure;var _startY$get;velocity.set(event.velocityY);if(positionY.get()*-1>maxHeight.get()+16){return;}positionY.set(((_startY$get=startY.get())!==null&&_startY$get!==void 0?_startY$get:0)+event.translationY);}" };
-let closure_30 = { code: "function FocusedControlsBottomControlsTsx7(){const{runOnJS,clearFocusTimer,drawerOpen,positionY,CLOSE_DRAWER_POSITION,velocity,startY}=this.__closure;runOnJS(clearFocusTimer)();drawerOpen.set(positionY.get()!==CLOSE_DRAWER_POSITION);velocity.set(0);if(positionY.get()==null||!drawerOpen.get()){startY.set(0);}}" };
-let closure_31 = { code: "function FocusedControlsBottomControlsTsx8(){const{reveal,controlHeightWithOffset,sheetHeight,isLandscapeMode,safeAreaRight,sheetWidth,withTiming,TIMING_CONFIG}=this.__closure;const revealOffset=reveal?0:controlHeightWithOffset;return{position:'absolute',height:sheetHeight,overflow:'hidden',bottom:isLandscapeMode?16:0,right:isLandscapeMode?16+safeAreaRight:0,borderRadius:isLandscapeMode?8:0,width:sheetWidth,transform:[{translateY:withTiming(revealOffset,TIMING_CONFIG)}]};}" };
-let closure_32 = { code: "function FocusedControlsBottomControlsTsx9(){const{sheetHeight,offsetY,positionY}=this.__closure;return{height:sheetHeight,transform:[{translateY:offsetY+positionY.get()}]};}" };
+let closure_21 = {
+  code: "function FocusedControlsBottomControlsTsx1(){const{positionY,EXPANDED_DRAWER_SHOW_POSITION}=this.__closure;const opacity=Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1);return{opacity:opacity,pointerEvents:opacity===0?'none':'auto'};}",
+};
+let closure_23 = {
+  code: "function FocusedControlsBottomControlsTsx2(){const{positionY,EXPANDED_DRAWER_SHOW_POSITION}=this.__closure;return{opacity:1-Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1)};}",
+};
+let closure_25 = {
+  code: "function FocusedControlsBottomControlsTsx3(){const{offsetY,EXPANDED_DRAWER_SHOW_POSITION,positionY}=this.__closure;const maxHeightRange=offsetY/3-EXPANDED_DRAWER_SHOW_POSITION;const opacity=2-Math.max(Math.abs(positionY.get())/maxHeightRange,0);return{opacity:opacity};}",
+};
+let closure_27 = {
+  code: "function FocusedControlsBottomControlsTsx4(){const{isLandscapeMode,controlMaxHeight,landscapeOffsetY,portraitOffsetY}=this.__closure;return isLandscapeMode?controlMaxHeight-landscapeOffsetY:controlMaxHeight-portraitOffsetY;}",
+};
+let closure_28 = {
+  code: "function FocusedControlsBottomControlsTsx5(){const{drawerOpen,positionY,maxHeight,velocity,MIN_GESTURE_TRIGGER_VELOCITY,CLOSE_DRAWER_POSITION,runOnJS,handleOpen,startY,withTiming,TIMING_CONFIG,TooltipActionCreators,TooltipNames,TIMING_CONFIG_EXIT,resetFocusTimer,handleClose}=this.__closure;var _velocity$get,_velocity$get2;const isDrawerAlreadyOpen=drawerOpen.get();const isPassedTriggerThreshold=positionY.get()*-1>=maxHeight.get()/2;const isHighOpenVelocity=((_velocity$get=velocity.get())!==null&&_velocity$get!==void 0?_velocity$get:0)*-1>=MIN_GESTURE_TRIGGER_VELOCITY;const isHighCloseVelocity=((_velocity$get2=velocity.get())!==null&&_velocity$get2!==void 0?_velocity$get2:0)>=MIN_GESTURE_TRIGGER_VELOCITY;const isLowerThanMinHeight=positionY.get()>CLOSE_DRAWER_POSITION;function openDrawer(){runOnJS(handleOpen)();startY.set(-maxHeight.get());positionY.set(withTiming(startY.get(),TIMING_CONFIG));drawerOpen.set(true);runOnJS(TooltipActionCreators.acknowledgeTooltip)(TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS);}function closeDrawer(){startY.set(0);positionY.set(withTiming(CLOSE_DRAWER_POSITION,TIMING_CONFIG_EXIT));drawerOpen.set(false);runOnJS(resetFocusTimer)();runOnJS(handleClose)();}if(isHighOpenVelocity&&!isDrawerAlreadyOpen||isPassedTriggerThreshold&&!isDrawerAlreadyOpen){openDrawer();}else if(isLowerThanMinHeight||isHighCloseVelocity&&isDrawerAlreadyOpen){closeDrawer();}else if(isPassedTriggerThreshold){openDrawer();}else{closeDrawer();}}",
+};
+let closure_29 = {
+  code: "function FocusedControlsBottomControlsTsx6(event){const{velocity,positionY,maxHeight,startY}=this.__closure;var _startY$get;velocity.set(event.velocityY);if(positionY.get()*-1>maxHeight.get()+16){return;}positionY.set(((_startY$get=startY.get())!==null&&_startY$get!==void 0?_startY$get:0)+event.translationY);}",
+};
+let closure_30 = {
+  code: "function FocusedControlsBottomControlsTsx7(){const{runOnJS,clearFocusTimer,drawerOpen,positionY,CLOSE_DRAWER_POSITION,velocity,startY}=this.__closure;runOnJS(clearFocusTimer)();drawerOpen.set(positionY.get()!==CLOSE_DRAWER_POSITION);velocity.set(0);if(positionY.get()==null||!drawerOpen.get()){startY.set(0);}}",
+};
+let closure_31 = {
+  code: "function FocusedControlsBottomControlsTsx8(){const{reveal,controlHeightWithOffset,sheetHeight,isLandscapeMode,safeAreaRight,sheetWidth,withTiming,TIMING_CONFIG}=this.__closure;const revealOffset=reveal?0:controlHeightWithOffset;return{position:'absolute',height:sheetHeight,overflow:'hidden',bottom:isLandscapeMode?16:0,right:isLandscapeMode?16+safeAreaRight:0,borderRadius:isLandscapeMode?8:0,width:sheetWidth,transform:[{translateY:withTiming(revealOffset,TIMING_CONFIG)}]};}",
+};
+let closure_32 = {
+  code: "function FocusedControlsBottomControlsTsx9(){const{sheetHeight,offsetY,positionY}=this.__closure;return{height:sheetHeight,transform:[{translateY:offsetY+positionY.get()}]};}",
+};
 let obj2 = {};
-let result = require("set").fileFinishedImporting("modules/video_calls/native/components/FocusedControlsBottomControls.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/video_calls/native/components/FocusedControlsBottomControls.tsx",
+);
 
 export default function FocusedControlsBottomControls(omitPTT) {
   let flag = omitPTT.omitPTT;
@@ -603,14 +709,22 @@ export default function FocusedControlsBottomControls(omitPTT) {
   let _require;
   const tmp = callback3();
   [tmp3, c0] = callback(React.useState(0), 2);
-  let obj = { aboveActionBar: children, actionBarControlsHeight: tmp3, expandedControls, reveal, onDrawerClose, onDrawerOpen: omitPTT.onDrawerOpen, children: null };
+  let obj = {
+    aboveActionBar: children,
+    actionBarControlsHeight: tmp3,
+    expandedControls,
+    reveal,
+    onDrawerClose,
+    onDrawerOpen: omitPTT.onDrawerOpen,
+    children: null,
+  };
   obj = {
     onLayout: React.useCallback((nativeEvent) => {
       _undefined(nativeEvent.nativeEvent.layout.height);
     }, []),
-    children: null
+    children: null,
   };
-  const items = [header, actionBar, ];
+  const items = [header, actionBar];
   let tmp4Result = null;
   if (!flag) {
     obj = { look: null, style: null, sendCallback: null, stopCallback: null };
@@ -625,6 +739,6 @@ export default function FocusedControlsBottomControls(omitPTT) {
   obj[1] = items;
   obj[6] = closure_14(closure_5, obj);
   return closure_13(FocusedControlsBottomDrawer, obj);
-};
+}
 export const FOCUSED_CONTROLS_HEADER_HEIGHT = 54;
 export { FocusedControlsBottomDrawer };

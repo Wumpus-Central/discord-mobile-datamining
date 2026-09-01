@@ -45,8 +45,7 @@ let c0 = false;
 let closure_1 = {};
 let set = new Set();
 const Store = initializeDefault.Store;
-class ScheduledMessageStore extends Store {
-}
+class ScheduledMessageStore extends Store {}
 const prototype = ScheduledMessageStore.prototype;
 prototype["getMessagesPendingRemoval"] = function getMessagesPendingRemoval() {
   return set;
@@ -58,7 +57,7 @@ Object.defineProperty(prototype, "loading", {
   get: function loading() {
     return c0;
   },
-  set: undefined
+  set: undefined,
 });
 ScheduledMessageStore.displayName = "scheduledMessageStore";
 const scheduledMessageStore = new ScheduledMessageStore(dispatcherDefault, {
@@ -104,7 +103,7 @@ const scheduledMessageStore = new ScheduledMessageStore(dispatcherDefault, {
     }
   },
   LOGOUT: reset,
-  CONNECTION_OPEN: reset
+  CONNECTION_OPEN: reset,
 });
 const result = set.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageStore.tsx");
 

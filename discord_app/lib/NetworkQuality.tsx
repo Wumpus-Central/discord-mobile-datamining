@@ -35,7 +35,20 @@ prototype["getStats"] = function getStats() {
     const _Math = Math;
     num = Math.round(tmp2);
   }
-  const obj = { duration_connection_type_wifi: num, duration_connection_type_cellular: null, duration_connection_type_ethernet: null, duration_connection_type_bluetooth: null, duration_connection_type_other: null, duration_connection_type_unknown: null, duration_connection_type_none: null, duration_effective_connection_speed_2g: null, duration_effective_connection_speed_3g: null, duration_effective_connection_speed_4g: null, duration_effective_connection_speed_5g: null, duration_effective_connection_speed_unknown: null };
+  const obj = {
+    duration_connection_type_wifi: num,
+    duration_connection_type_cellular: null,
+    duration_connection_type_ethernet: null,
+    duration_connection_type_bluetooth: null,
+    duration_connection_type_other: null,
+    duration_connection_type_unknown: null,
+    duration_connection_type_none: null,
+    duration_effective_connection_speed_2g: null,
+    duration_effective_connection_speed_3g: null,
+    duration_effective_connection_speed_4g: null,
+    duration_effective_connection_speed_5g: null,
+    duration_effective_connection_speed_unknown: null,
+  };
   let num2 = 0;
   if (null != _networkStats.connectionTypeBuckets[constants.CELLULAR]) {
     const _Math2 = Math;

@@ -32,7 +32,7 @@ function GestureWrapper(children) {
   isScreenLandscape = isScreenLandscape(5071).useIsScreenLandscape();
   let items = [isScreenLandscape, tmp];
   const style = React.useMemo(() => {
-    const items = [styles.flex, ];
+    const items = [styles.flex];
     let rootBackgroundColor;
     if (isScreenLandscape) {
       rootBackgroundColor = styles.rootBackgroundColor;
@@ -76,7 +76,10 @@ function AppNavigationContainer(children) {
             if (tmp14 !== closure_1_9.getChannelId()) {
               const coerceChannelRouteResult = tmp(tmp2[22]).coerceChannelRoute(currentRoute);
               if (!tmp18) {
-                tmp(tmp2[23]).transitionTo(closure_1_12.CHANNEL(tmp13, tmp14), { openChannel: true, navigationReplace: false });
+                tmp(tmp2[23]).transitionTo(closure_1_12.CHANNEL(tmp13, tmp14), {
+                  openChannel: true,
+                  navigationReplace: false,
+                });
                 const tmpResult2 = tmp(tmp2[23]);
               }
               tmp18 = null != coerceChannelRouteResult && coerceChannelRouteResult.params.showCreateThread;
@@ -124,7 +127,15 @@ function AppNavigationContainer(children) {
   }, []);
   let obj = useNavigationTheme;
   const navigationTheme = obj.useNavigationTheme(useThemeDefault());
-  obj = { theme: navigationTheme, ref: null, onReady: null, onStateChange: null, initialState: null, navigationInChildEnabled: true, children: null };
+  obj = {
+    theme: navigationTheme,
+    ref: null,
+    onReady: null,
+    onStateChange: null,
+    initialState: null,
+    navigationInChildEnabled: true,
+    children: null,
+  };
   let tmp = useThemeDefault();
   obj[1] = require("../modules/main_tabs_v2/RootNavigationRef.native.tsx").getRootNavigationRef();
   obj[2] = handleNavigationOnReady;
@@ -136,7 +147,11 @@ function AppNavigationContainer(children) {
 function ShareNavigationContainer(children) {
   const tmp = useThemeDefault();
   const theme = useNavigationTheme.useNavigationTheme(tmp);
-  return callback2(createStandardNavigationFactories.NavigationContainer, { theme, navigationInChildEnabled: true, children: children.children });
+  return callback2(createStandardNavigationFactories.NavigationContainer, {
+    theme,
+    navigationInChildEnabled: true,
+    children: children.children,
+  });
 }
 function AppNavigationContainerOrEmpty(arg0) {
   ({ children, appEntryKey } = arg0);
@@ -159,7 +174,10 @@ createCacheKey = { flex: { flex: 1 }, rootBackgroundColor: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
 createCacheKey[1] = createCacheKey;
 let closure_16 = createCacheKey.createStyles(createCacheKey);
-let result = module_4217.configureReanimatedLogger({ level: require("../modules/reanimated/ReanimatedRexport.tsx").ReanimatedLogLevel.error, strict: false });
+let result = module_4217.configureReanimatedLogger({
+  level: require("../modules/reanimated/ReanimatedRexport.tsx").ReanimatedLogLevel.error,
+  strict: false,
+});
 try {
   require("enableScreens").enableFreeze();
   let obj6 = require("enableScreens");
@@ -167,7 +185,9 @@ try {
   obj2[0] = require("useTrackNavigatorScreenImpression").useTrackNavigatorScreenImpression;
   require("designConfig").setDesignConfig(obj2);
   let c22 = false;
-  let closure_23 = { code: "function AppContainerTsx1(){const{RNScreensTurboModule}=this.__closure;global.RNScreensTurboModule=RNScreensTurboModule;}" };
+  let closure_23 = {
+    code: "function AppContainerTsx1(){const{RNScreensTurboModule}=this.__closure;global.RNScreensTurboModule=RNScreensTurboModule;}",
+  };
   let obj7 = require("designConfig");
   const result1 = _modDef1208.profiledRootComponent(function AppContainer(children) {
     children = children.children;
@@ -222,7 +242,7 @@ try {
           let obj = callback(table[51]);
           obj = { tags };
           return obj.captureException(arg0, obj);
-        }
+        },
       };
       obj = { enabledExperiments: memo };
       return obj;
@@ -248,9 +268,14 @@ try {
       const obj10 = { children: null };
       const obj11 = { children: null };
       const tmp3 = memo1(closure_1_3[42]);
-      const items = [closure_1_14(memo1(closure_1_3[46]), {}), ];
+      const items = [closure_1_14(memo1(closure_1_3[46]), {})];
       const obj12 = { children: null };
-      const items1 = [riveAppStatePlaybackExperiment, closure_1_14(memo(closure_1_3[47]).SafeAreaReporter, {}), closure_1_14(memo1(closure_1_3[48]), {}), closure_1_14(memo1(closure_1_3[49]), {})];
+      const items1 = [
+        riveAppStatePlaybackExperiment,
+        closure_1_14(memo(closure_1_3[47]).SafeAreaReporter, {}),
+        closure_1_14(memo1(closure_1_3[48]), {}),
+        closure_1_14(memo1(closure_1_3[49]), {}),
+      ];
       obj12[0] = items1;
       items[1] = closure_1_15(memo(closure_1_3[47]).SafeAreaProvider, obj12);
       obj11[0] = items;
@@ -273,5 +298,4 @@ try {
   const importDefaultResult = _modDef1208;
   const result2 = require("set").fileFinishedImporting("components_native/AppContainer.tsx");
   exports.default = result1;
-} catch (err) {
-}
+} catch (err) {}

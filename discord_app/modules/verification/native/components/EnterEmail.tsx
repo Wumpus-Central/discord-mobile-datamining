@@ -57,7 +57,7 @@ export default function EnterEmail(isChangeEmail) {
       closure_0 = arg0;
       c2 = 0;
       c1 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (c1 === 2) {
           c1 = 3;
           HermesBuiltin.throwTypeError();
@@ -122,7 +122,7 @@ export default function EnterEmail(isChangeEmail) {
         }
       })();
     });
-    obj[0] = function() {
+    obj[0] = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -153,7 +153,13 @@ export default function EnterEmail(isChangeEmail) {
     obj[0] = tmp.background;
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    obj1 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    obj1 = {
+      style: null,
+      accessibilityRole: "header",
+      variant: "heading-xl/extrabold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj1[0] = tmp.title;
     if (null != stateFromStores.email) {
       const intl2 = tmp2(tmp3[16]).intl;
@@ -163,7 +169,7 @@ export default function EnterEmail(isChangeEmail) {
       stringResult = intl.string(tmp2(tmp3[16]).t["CDTD/K"]);
     }
     obj1[4] = stringResult;
-    const items3 = [closure_14(tmp2(tmp3[15]).Text, obj1), , , ];
+    const items3 = [closure_14(tmp2(tmp3[15]).Text, obj1), , ,];
     let obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj2[0] = tmp.prompt;
     if (null != stateFromStores.email) {
@@ -177,7 +183,20 @@ export default function EnterEmail(isChangeEmail) {
     }
     obj2[3] = formatToPlainStringResult;
     items3[1] = closure_14(tmp2(tmp3[15]).Text, obj2);
-    let obj4 = { style: null, label: null, textContentType: "emailAddress", keyboardType: "email-address", value: null, onChangeText: null, onSubmitEditing: null, placeholder: null, returnKeyType: "done", autoCapitalize: "none", error: null, autoFocus: true };
+    let obj4 = {
+      style: null,
+      label: null,
+      textContentType: "emailAddress",
+      keyboardType: "email-address",
+      value: null,
+      onChangeText: null,
+      onSubmitEditing: null,
+      placeholder: null,
+      returnKeyType: "done",
+      autoCapitalize: "none",
+      error: null,
+      autoFocus: true,
+    };
     obj4[0] = tmp.input;
     const intl5 = tmp2(tmp3[16]).intl;
     obj4[1] = intl5.string(tmp2(tmp3[16]).t["w/qqKK"]);
@@ -203,4 +222,4 @@ export default function EnterEmail(isChangeEmail) {
     const tmp20 = changeEmailReason(tmp3[17]);
   }
   return tmp13Result;
-};
+}

@@ -86,7 +86,15 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
     obj[1] = callback3(tmp(tmp2[13]).BottomSheetTitleHeader, obj);
     obj2 = { direction: "vertical", spacing: null, children: null };
     obj2[1] = stateFromStores(tmp2[17]).space.PX_16;
-    let obj3 = { groupRef: null, hasIcons: false, defaultValue: null, onChange: null, title: null, accessibilityLabel: null, children: null };
+    let obj3 = {
+      groupRef: null,
+      hasIcons: false,
+      defaultValue: null,
+      onChange: null,
+      title: null,
+      accessibilityLabel: null,
+      children: null,
+    };
     obj3[0] = ref;
     obj3[2] = sortOrder;
     obj3[3] = function onChange(arg0) {
@@ -100,7 +108,7 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
     const intl5 = tmp(tmp2[5]).intl;
     obj4[0] = intl5.string(tmp(tmp2[5]).t.jOPmcI);
     obj4[1] = tmp(tmp2[6]).ThreadSortOrder.LATEST_ACTIVITY;
-    const items1 = [obj4, ];
+    const items1 = [obj4];
     const obj5 = { label: null, value: null };
     const intl6 = tmp(tmp2[5]).intl;
     obj5[0] = intl6.string(tmp(tmp2[5]).t.UIltXd);
@@ -110,12 +118,20 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
       const value = label.value;
       return _undefined3(channelId(sortOrder[19]).TableRadioRow, { label: label.label, value }, value);
     });
-    const items2 = [callback3(tmp(tmp2[18]).TableRadioGroup, obj3), , ];
+    const items2 = [callback3(tmp(tmp2[18]).TableRadioGroup, obj3), ,];
     let tmp13Result = null;
     if (stateFromStores.isForumChannel()) {
       tmp13Result = null;
       if (!stateFromStores.isGameInvitesChannel()) {
-        const obj6 = { groupRef: null, hasIcons: false, defaultValue: null, onChange: null, title: null, accessibilityLabel: null, children: null };
+        const obj6 = {
+          groupRef: null,
+          hasIcons: false,
+          defaultValue: null,
+          onChange: null,
+          title: null,
+          accessibilityLabel: null,
+          children: null,
+        };
         obj6[0] = ref1;
         obj6[2] = layoutType;
         obj6[3] = function onChange(arg0) {
@@ -129,7 +145,7 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
         const intl9 = tmp(tmp2[5]).intl;
         obj7[0] = intl9.string(tmp(tmp2[5]).t["NJFr+g"]);
         obj7[1] = tmp(tmp2[7]).ForumLayout.LIST;
-        const items3 = [obj7, ];
+        const items3 = [obj7];
         const obj8 = { label: null, value: null };
         const intl10 = tmp(tmp2[5]).intl;
         obj8[0] = intl10.string(tmp(tmp2[5]).t.wKeggb);
@@ -145,7 +161,15 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
     items2[1] = tmp13Result;
     tmp13Result = null;
     if (tmp12) {
-      const obj9 = { groupRef: null, hasIcons: false, defaultValue: null, onChange: null, title: null, accessibilityLabel: null, children: null };
+      const obj9 = {
+        groupRef: null,
+        hasIcons: false,
+        defaultValue: null,
+        onChange: null,
+        title: null,
+        accessibilityLabel: null,
+        children: null,
+      };
       obj9[0] = ref2;
       obj9[2] = tagSetting;
       obj9[3] = function onChange(arg0) {
@@ -159,7 +183,7 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
       const intl13 = tmp(tmp2[5]).intl;
       obj10[0] = intl13.string(tmp(tmp2[5]).t.rQ0ctQ);
       obj10[1] = tmp(tmp2[8]).ThreadSearchTagSetting.MATCH_SOME;
-      const items4 = [obj10, ];
+      const items4 = [obj10];
       const obj11 = { label: null, value: null };
       const intl14 = tmp(tmp2[5]).intl;
       obj11[0] = intl14.string(tmp(tmp2[5]).t.FCXUu0);
@@ -179,4 +203,4 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
     return callback3(tmp(tmp2[12]).ActionSheet, obj);
   }
   const tmp6 = layoutType(React.useState(tagSetting), 2);
-};
+}

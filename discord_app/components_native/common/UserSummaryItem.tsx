@@ -10,10 +10,20 @@ import createCacheKey from "../../design/components/Styles/native/createStyles.t
 
 require = arg1;
 noopAll;
-createCacheKey = { container: { flexDirection: "row" }, names: { marginStart: 4, paddingRight: 1 }, namesLegacy: null, plusCountContainer: null, cutout: null };
+createCacheKey = {
+  container: { flexDirection: "row" },
+  names: { marginStart: 4, paddingRight: 1 },
+  namesLegacy: null,
+  plusCountContainer: null,
+  cutout: null,
+};
 createCacheKey = { marginStart: 4, paddingRight: 1, color: ThemesDefault.colors.TEXT_SUBTLE };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginStart: 2, alignItems: "center" };
+createCacheKey[3] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  marginStart: 2,
+  alignItems: "center",
+};
 createCacheKey[4] = { marginRight: -4 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { direction: require("Button").CutoutDirection.RIGHT };
@@ -48,15 +58,17 @@ export default function UserSummaryItem(users) {
   obj = {};
   obj1 = _require(avatarSize[7]);
   const items = [closure_4];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_0.forEach((id) => {
-    let tmp2 = null != closure_1;
-    if (tmp2) {
-      tmp2 = null != id;
-    }
-    if (tmp2) {
-      closure_3[id.id] = closure_1_4.getMember(closure_1, id.id);
-    }
-  }));
+  const stateFromStores = obj1.useStateFromStores(items, () =>
+    closure_0.forEach((id) => {
+      let tmp2 = null != closure_1;
+      if (tmp2) {
+        tmp2 = null != id;
+      }
+      if (tmp2) {
+        closure_3[id.id] = closure_1_4.getMember(closure_1, id.id);
+      }
+    }),
+  );
   if (0 === bound) {
     return null;
   } else {
@@ -114,7 +126,13 @@ export default function UserSummaryItem(users) {
             let items2 = [tmp4.cutout, tmp3];
             obj[2] = items2;
             obj[3] = cutout;
-            let arr = items1.push(jsx(_require(tmp15[6]).CutoutableAvatarImage, { size: null, source: null, style: null, cutout: null }, id));
+            let arr = items1.push(
+              jsx(
+                _require(tmp15[6]).CutoutableAvatarImage,
+                { size: null, source: null, style: null, cutout: null },
+                id,
+              ),
+            );
           } else {
             let tmp16 = jsx;
             let tmp17 = _require;
@@ -149,12 +167,24 @@ export default function UserSummaryItem(users) {
         const _HermesInternal3 = HermesInternal;
         const combined = "username-" + formatToPlainStringResult;
         if (null != namesVariant) {
-          obj2 = { variant: null, color: "redesign-channel-name-muted-text", style: null, lineClamp: 1, children: null };
+          obj2 = {
+            variant: null,
+            color: "redesign-channel-name-muted-text",
+            style: null,
+            lineClamp: 1,
+            children: null,
+          };
           obj2[0] = namesVariant;
           const items3 = [tmp4.names, namesStyle];
           obj2[2] = items3;
           obj2[4] = formatToPlainStringResult;
-          items1.push(jsx(_require(tmp23[11]).Text, { variant: null, color: "redesign-channel-name-muted-text", style: null, lineClamp: 1, children: null }, combined));
+          items1.push(
+            jsx(
+              _require(tmp23[11]).Text,
+              { variant: null, color: "redesign-channel-name-muted-text", style: null, lineClamp: 1, children: null },
+              combined,
+            ),
+          );
         } else {
           const obj3 = { style: null, numberOfLines: 1, children: null };
           const items4 = [tmp4.namesLegacy, namesStyle];
@@ -170,7 +200,7 @@ export default function UserSummaryItem(users) {
         const text = `+${tmp5 + 1 - max}`;
         const tmp37 = _require(tmp23[6]).AVATAR_SIZE_MAP[avatarSize];
         const obj4 = { style: null, children: null };
-        const items5 = [tmp4.plusCountContainer, ];
+        const items5 = [tmp4.plusCountContainer];
         obj5 = { borderRadius: null, width: null, height: null, padding: null };
         obj5[0] = tmp37;
         obj5[1] = tmp37;
@@ -180,9 +210,17 @@ export default function UserSummaryItem(users) {
         obj4[0] = items5;
         const obj6 = { variant: "text-xs/normal", color: "mobile-text-heading-primary", children: null };
         obj6[2] = text;
-        obj4[1] = jsx(_require(tmp23[11]).Text, { variant: "text-xs/normal", color: "mobile-text-heading-primary", children: null });
+        obj4[1] = jsx(_require(tmp23[11]).Text, {
+          variant: "text-xs/normal",
+          color: "mobile-text-heading-primary",
+          children: null,
+        });
         const _HermesInternal2 = HermesInternal;
-        items1.push(<obj key={"plus-" + `+${tmp5 + 1 - max}`} style={null}>{null}</obj>);
+        items1.push(
+          <obj key={"plus-" + `+${tmp5 + 1 - max}`} style={null}>
+            {null}
+          </obj>,
+        );
       }
     }
     const obj7 = { style: null, children: null };
@@ -191,4 +229,4 @@ export default function UserSummaryItem(users) {
     obj7[1] = items1;
     return <obj style={null}>{null}</obj>;
   }
-};
+}

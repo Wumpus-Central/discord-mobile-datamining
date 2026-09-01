@@ -46,7 +46,16 @@ function vibegrationLocation(closure_0, isPreview) {
 }
 let result = require("set").fileFinishedImporting("modules/vibegrations/lib/VibegrationsAnalytics.tsx");
 
-export const VibegrationErrorCodes = { BUILD_FAILED: "BUILD_FAILED", HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED", AGENT_ERROR: "AGENT_ERROR", PUBLISH_FAILED: "PUBLISH_FAILED", WS_OPEN_FAILED: "WS_OPEN_FAILED", SEND_FAILED: "SEND_FAILED", RUNTIME_FRAME_ERROR: "RUNTIME_FRAME_ERROR", RUNTIME_WORKER_ERROR: "RUNTIME_WORKER_ERROR" };
+export const VibegrationErrorCodes = {
+  BUILD_FAILED: "BUILD_FAILED",
+  HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED",
+  AGENT_ERROR: "AGENT_ERROR",
+  PUBLISH_FAILED: "PUBLISH_FAILED",
+  WS_OPEN_FAILED: "WS_OPEN_FAILED",
+  SEND_FAILED: "SEND_FAILED",
+  RUNTIME_FRAME_ERROR: "RUNTIME_FRAME_ERROR",
+  RUNTIME_WORKER_ERROR: "RUNTIME_WORKER_ERROR",
+};
 export const trackVibegrationTurnResulted = function trackVibegrationTurnResulted(project_id, result) {
   let obj = expandEventPropertiesDefault;
   const project = store.getProject(project_id);

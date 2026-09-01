@@ -10,4 +10,4 @@ export default function didReplyMention(mentions, author) {
     hasItem = mentions.includes(author.author.id);
   }
   return hasItem;
-};
+}

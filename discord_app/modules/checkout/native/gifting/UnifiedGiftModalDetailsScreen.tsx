@@ -15,9 +15,19 @@ obj = { flex: 1, paddingTop: ThemesDefault.space.PX_12, alignItems: "stretch" };
 obj[0] = obj;
 createCacheKey = { paddingBottom: ThemesDefault.space.PX_24 };
 obj[1] = createCacheKey;
-obj[2] = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, textTransform: "capitalize" };
+obj[2] = {
+  marginTop: ThemesDefault.space.PX_24,
+  marginBottom: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  textTransform: "capitalize",
+};
 let closure_9 = createCacheKey.createStyles(obj);
-let obj2 = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, textTransform: "capitalize" };
+let obj2 = {
+  marginTop: ThemesDefault.space.PX_24,
+  marginBottom: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  textTransform: "capitalize",
+};
 const memoResult = importAllResult.memo((recipientUser) => {
   recipientUser = recipientUser.recipientUser;
   const validateRecipient = recipientUser.validateRecipient;
@@ -45,11 +55,13 @@ const memoResult = importAllResult.memo((recipientUser) => {
     if (null != recipientUser) {
       callback(true);
       const promise = validateRecipient(tmp2.id);
-      validateRecipient(tmp2.id).then((arg0) => {
-        callback(arg0);
-      }).finally(() => {
-        callback2(false);
-      });
+      validateRecipient(tmp2.id)
+        .then((arg0) => {
+          callback(arg0);
+        })
+        .finally(() => {
+          callback2(false);
+        });
       const nextPromise = validateRecipient(tmp2.id).then((arg0) => {
         callback(arg0);
       });
@@ -89,7 +101,17 @@ const memoResult = importAllResult.memo((recipientUser) => {
     obj[2] = first2;
     return obj;
   }, items3);
-  const items4 = [first1(recipientUser(navigation[9]).GiftBackgroundSelect, { giftStyle: first, setGiftStyle: tmp10[1], withConsistentHeight: false }), , , , , ];
+  const items4 = [
+    first1(recipientUser(navigation[9]).GiftBackgroundSelect, {
+      giftStyle: first,
+      setGiftStyle: tmp10[1],
+      withConsistentHeight: false,
+    }),
+    ,
+    ,
+    ,
+    ,
+  ];
   obj1 = { variant: "text-sm/semibold", style: tmp.sectionHeader, children: null };
   const intl = recipientUser(navigation[11]).intl;
   obj1[2] = intl.string(recipientUser(navigation[11]).t.xFn72s);
@@ -110,14 +132,19 @@ const memoResult = importAllResult.memo((recipientUser) => {
     obj4[0] = recipientUser;
     obj4[1] = tmp6;
     items4[4] = renderProductDetails(obj4);
-    const obj5 = { onFocusMessage: null, setMessagePosition: null, customGiftMessage: null, setCustomGiftMessage: null };
+    const obj5 = {
+      onFocusMessage: null,
+      setMessagePosition: null,
+      customGiftMessage: null,
+      setCustomGiftMessage: null,
+    };
     obj5[0] = callback1;
     obj5[1] = tmp13[1];
     obj5[2] = first2;
     obj5[3] = tmp15[1];
     items4[5] = tmp22(tmp2(tmp3[14]).GiftCustomMessage, obj5);
     obj[3] = items4;
-    const items5 = [tmp19(first, obj), ];
+    const items5 = [tmp19(first, obj)];
     const obj6 = { isPurchaseDisabled: null, giftOptions: null };
     obj6[0] = null == recipientUser || tmp7[0] || !tmp6;
     obj6[1] = memo;
@@ -125,8 +152,14 @@ const memoResult = importAllResult.memo((recipientUser) => {
     obj[1] = items5;
     return tmp19(ref, obj);
   }
-  tmp22Result = tmp22(validateRecipient(tmp3[13]), { selectedUser: recipientUser, onPress: callback, setSelectedUser: setRecipientUser });
+  tmp22Result = tmp22(validateRecipient(tmp3[13]), {
+    selectedUser: recipientUser,
+    onPress: callback,
+    setSelectedUser: setRecipientUser,
+  });
 });
-const result = require("set").fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalDetailsScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/checkout/native/gifting/UnifiedGiftModalDetailsScreen.tsx",
+);
 
 export default memoResult;

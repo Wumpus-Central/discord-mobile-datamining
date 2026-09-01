@@ -9,28 +9,32 @@ export const useHubUnreadCount = function useHubUnreadCount(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_4];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    if (null == callback) {
-      return 0;
-    } else {
-      const ackMessageIdResult = closure_1_4.ackMessageId(tmp.id);
-      callback = ackMessageIdResult;
-      if (null == ackMessageIdResult) {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      if (null == callback) {
         return 0;
       } else {
-        let directoryEntries = closure_1_3.getDirectoryEntries(tmp.id);
-        if (directoryEntries == null) {
-          directoryEntries = {};
+        const ackMessageIdResult = closure_1_4.ackMessageId(tmp.id);
+        callback = ackMessageIdResult;
+        if (null == ackMessageIdResult) {
+          return 0;
+        } else {
+          let directoryEntries = closure_1_3.getDirectoryEntries(tmp.id);
+          if (directoryEntries == null) {
+            directoryEntries = {};
+          }
+          const values = Object.values(directoryEntries);
+          const _Math = Math;
+          const found = values.filter((createdAt) => {
+            const time = new Date(createdAt.createdAt).getTime();
+            const date = new Date(createdAt.createdAt);
+            return time > closure_1_1(closure_1_2[3]).extractTimestamp(closure_0);
+          });
+          return Math.min(callback(closure_1_2[4]).MAX_CATEGORY_SERVERS, found.length);
         }
-        const values = Object.values(directoryEntries);
-        const _Math = Math;
-        const found = values.filter((createdAt) => {
-          const time = new Date(createdAt.createdAt).getTime();
-          const date = new Date(createdAt.createdAt);
-          return time > closure_1_1(closure_1_2[3]).extractTimestamp(closure_0);
-        });
-        return Math.min(callback(closure_1_2[4]).MAX_CATEGORY_SERVERS, found.length);
       }
-    }
-  }, items1);
+    },
+    items1,
+  );
 };

@@ -15,7 +15,10 @@ function getProductPurchaseState(closure_1_5, skuId) {
   if (skuId != null) {
     type = skuId.type;
   }
-  if (require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.BUNDLE === type) {
+  if (
+    require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType
+      .BUNDLE === type
+  ) {
     if (!tmp) {
       tmp = items.length > 0 && tmp3Result.length === items.length;
       const tmp7 = items.length > 0 && tmp3Result.length === items.length;
@@ -63,5 +66,7 @@ export { getProductPurchaseState };
 export const useProductPurchaseState = function useProductPurchaseState(product) {
   const _require = product;
   const items = [closure_3];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => closure_1_4(closure_1_3, closure_0));
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () =>
+    closure_1_4(closure_1_3, closure_0),
+  );
 };

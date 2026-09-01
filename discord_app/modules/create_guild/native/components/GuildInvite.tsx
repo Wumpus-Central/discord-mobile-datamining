@@ -36,7 +36,14 @@ function GuildInviteSuggestionRows(openInviteSheet) {
   if (0 !== suggestions.length) {
     let obj = { style: null, children: null };
     obj[0] = tmp.suggestionsContainer;
-    obj = { data: null, renderItem: null, contentContainerStyle: null, ListFooterComponent: null, ItemSeparatorComponent: null, keyExtractor: null };
+    obj = {
+      data: null,
+      renderItem: null,
+      contentContainerStyle: null,
+      ListFooterComponent: null,
+      ItemSeparatorComponent: null,
+      keyExtractor: null,
+    };
     obj[0] = tmp2;
     obj[1] = function renderItem(arg0) {
       ({ item, index } = arg0);
@@ -64,28 +71,93 @@ function GuildInviteSuggestionRows(openInviteSheet) {
   return tmp6Result;
 }
 ({ Image: c5, View: closure_6, FlatList: error, StyleSheet } = get_ActivityIndicator);
-({ AnalyticEvents: closure_14, AnalyticsSections: closure_15, InstantInviteSources: closure_16, Permissions: closure_17, SearchTypes: closure_18 } = ME);
+({
+  AnalyticEvents: closure_14,
+  AnalyticsSections: closure_15,
+  InstantInviteSources: closure_16,
+  Permissions: closure_17,
+  SearchTypes: closure_18,
+} = ME);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-createCacheKey = { container: null, header: null, description: null, headerImage: null, linkContainer: null, linkButton: null, linkButtonIcon: null, inviteDetail: null, shareButton: null, suggestionsContainer: null, friendIcon: null, suggestionRowsContainer: null, separator: null };
-createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" };
+createCacheKey = {
+  container: null,
+  header: null,
+  description: null,
+  headerImage: null,
+  linkContainer: null,
+  linkButton: null,
+  linkButtonIcon: null,
+  inviteDetail: null,
+  shareButton: null,
+  suggestionsContainer: null,
+  friendIcon: null,
+  suggestionRowsContainer: null,
+  separator: null,
+};
+createCacheKey = {
+  marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT,
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  alignItems: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: 8 };
 createCacheKey[2] = { lineHeight: 18, marginBottom: 8, paddingHorizontal: 16, textAlign: "center" };
 createCacheKey[3] = { marginVertical: 16 };
 createCacheKey[4] = { paddingHorizontal: 16, width: "100%" };
-createCacheKey[5] = { marginTop: 16, flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, padding: 12, justifyContent: "space-between" };
-let obj1 = { marginTop: 16, flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, padding: 12, justifyContent: "space-between" };
+createCacheKey[5] = {
+  marginTop: 16,
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.xs,
+  padding: 12,
+  justifyContent: "space-between",
+};
+let obj1 = {
+  marginTop: 16,
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.xs,
+  padding: 12,
+  justifyContent: "space-between",
+};
 createCacheKey[6] = { flexShrink: 0, marginLeft: 8, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[7] = { marginTop: 8 };
 createCacheKey[8] = { marginVertical: 16 };
 createCacheKey[9] = { width: "100%", flex: 1, alignContent: "flex-start" };
 let obj2 = { flexShrink: 0, marginLeft: 8, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[10] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, height: 32, width: 32, padding: 8, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.xxl };
+createCacheKey[10] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  height: 32,
+  width: 32,
+  padding: 8,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.xxl,
+};
 createCacheKey[11] = { marginHorizontal: 12 };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, height: 32, width: 32, padding: 8, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.xxl };
-createCacheKey[12] = { height: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginStart: ThemesDefault.modules.mobile.TABLE_ROW_DIVIDER_PADDING };
+let obj3 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  height: 32,
+  width: 32,
+  padding: 8,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.xxl,
+};
+createCacheKey[12] = {
+  height: StyleSheet.hairlineWidth,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginStart: ThemesDefault.modules.mobile.TABLE_ROW_DIVIDER_PADDING,
+};
 let closure_21 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { height: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginStart: ThemesDefault.modules.mobile.TABLE_ROW_DIVIDER_PADDING };
+let obj4 = {
+  height: StyleSheet.hairlineWidth,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginStart: ThemesDefault.modules.mobile.TABLE_ROW_DIVIDER_PADDING,
+};
 let result = require("set").fileFinishedImporting("modules/create_guild/native/components/GuildInvite.tsx");
 
 export default function GuildInvite(closeOnEditInviteLink) {
@@ -149,7 +221,10 @@ export default function GuildInvite(closeOnEditInviteLink) {
       const result = obj.setAccessibilityFocus(obj);
     }
   }, items2);
-  const first1 = isScreenReaderEnabled(ref.useState(() => inviteSuggestionRows.getInviteSuggestionRows()), 1)[0];
+  const first1 = isScreenReaderEnabled(
+    ref.useState(() => inviteSuggestionRows.getInviteSuggestionRows()),
+    1,
+  )[0];
   const tmp12 = stateFromStores1();
   closure_9 = tmp12;
   onClose(navigation[23])(() => {
@@ -183,12 +258,17 @@ export default function GuildInvite(closeOnEditInviteLink) {
         AccessibilityAnnouncer.announce(intl.string(closure_1_0(closure_1_2[17]).t["FY/yLY"]));
         callback();
         let obj = closure_1_1(closure_1_2[14]);
-        obj = { flow_type: closure_1_15.GUILD_CREATE_MODAL, from_step: closure_1_13.GUILD_INVITE, to_step: "modal_closed", skip: !closure_5 };
+        obj = {
+          flow_type: closure_1_15.GUILD_CREATE_MODAL,
+          from_step: closure_1_13.GUILD_INVITE,
+          to_step: "modal_closed",
+          skip: !closure_5,
+        };
         obj.track(closure_1_14.USER_FLOW_TRANSITION, obj);
       }),
       headerLeft() {
         return null;
-      }
+      },
     };
     navigation.setOptions(obj);
   }, items4);
@@ -203,7 +283,7 @@ export default function GuildInvite(closeOnEditInviteLink) {
     tmp20 = first1.length > 0;
   }
   const items5 = [stateFromStores1];
-  const items6 = [stateFromStores1, , ];
+  const items6 = [stateFromStores1, ,];
   let code1;
   const callback = obj2.useCallback(() => {
     if (null != stateFromStores1) {
@@ -243,12 +323,19 @@ export default function GuildInvite(closeOnEditInviteLink) {
       }
       obj = { top: true, left: true, right: true, style: null, children: null };
       obj[3] = tmp.container;
-      obj1 = { ref: null, style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+      obj1 = {
+        ref: null,
+        style: null,
+        accessibilityRole: "header",
+        variant: "heading-xl/extrabold",
+        color: "mobile-text-heading-primary",
+        children: null,
+      };
       obj1[0] = ref;
       obj1[1] = tmp.header;
       let intl = tmp2(tmp3[17]).intl;
       obj1[5] = intl.string(tmp2(tmp3[17]).t.OZ1qhO);
-      const items8 = [callback(tmp2(tmp3[32]).Text, obj1), , , , ];
+      const items8 = [callback(tmp2(tmp3[32]).Text, obj1), , , ,];
       obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
       obj2[0] = tmp.description;
       const intl2 = tmp2(tmp3[17]).intl;
@@ -264,7 +351,13 @@ export default function GuildInvite(closeOnEditInviteLink) {
       items8[2] = tmp29Result;
       obj4 = { style: null, children: null };
       obj4[0] = tmp.linkContainer;
-      const obj5 = { style: null, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
+      const obj5 = {
+        style: null,
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        onPress: null,
+        children: null,
+      };
       obj5[0] = tmp.linkButton;
       const intl3 = tmp2(tmp3[17]).intl;
       obj5[2] = intl3.string(tmp2(tmp3[17]).t["3XVNyt"]);
@@ -275,13 +368,13 @@ export default function GuildInvite(closeOnEditInviteLink) {
       const obj6 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: null, children: null };
       obj6[2] = { flexShrink: 1 };
       obj6[3] = tmp17Result;
-      const items9 = [callback(tmp2(tmp3[32]).Text, obj6), ];
+      const items9 = [callback(tmp2(tmp3[32]).Text, obj6)];
       const obj7 = { source: null, style: null };
       obj7[0] = tmp13(tmp3[36]);
       obj7[1] = tmp.linkButtonIcon;
       items9[1] = callback(tmp2(tmp3[35]).Icon, obj7);
       obj5[4] = items9;
-      const items10 = [closure_20(tmp2(tmp3[34]).PressableOpacity, obj5), , ];
+      const items10 = [closure_20(tmp2(tmp3[34]).PressableOpacity, obj5), ,];
       const obj8 = { style: null, children: null };
       obj8[0] = tmp.inviteDetail;
       const obj9 = { channel: null, canEditInvite: true, callbackActionSheet: null, onEdit: null, source: null };
@@ -311,4 +404,4 @@ export default function GuildInvite(closeOnEditInviteLink) {
     }
   }
   return null;
-};
+}

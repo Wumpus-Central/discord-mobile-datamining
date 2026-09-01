@@ -11,7 +11,7 @@ function _handleUsePrimaryEntryPointAppCommand() {
     c4 = 0;
     c5 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -120,7 +120,7 @@ function _handleUsePrimaryEntryPointAppCommandInternal() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -162,7 +162,21 @@ function _handleUsePrimaryEntryPointAppCommandInternal() {
               c10 = undefined;
               c11 = undefined;
               c12 = undefined;
-              ({ targetApplication: c0, locationObject: c1, channelId: c2, analyticsLocations: c3, componentId: c4, commandOrigin: c5, sectionName: c6, source: c7, onExecutedCallback: c8, referrerId: c9, customId: c10, inviterUserId: c11, onConfirmActivityLaunchChecksAlertOpen: c12 } = lib);
+              ({
+                targetApplication: c0,
+                locationObject: c1,
+                channelId: c2,
+                analyticsLocations: c3,
+                componentId: c4,
+                commandOrigin: c5,
+                sectionName: c6,
+                source: c7,
+                onExecutedCallback: c8,
+                referrerId: c9,
+                customId: c10,
+                inviterUserId: c11,
+                onConfirmActivityLaunchChecksAlertOpen: c12,
+              } = lib);
               closure_13 = undefined;
               let currentUser2;
               dependencyMap = 1;
@@ -195,7 +209,23 @@ function _handleUsePrimaryEntryPointAppCommandInternal() {
                       let obj2 = callback2(9516);
                       obj2.markActivityUsed(lib.id);
                       let obj3 = lib(9469);
-                      obj2 = { channelId: null, applicationId: null, isStart: true, embeddedActivitiesManager: null, componentId: null, commandOrigin: null, sectionName: null, locationObject: null, analyticsLocations: null, source: null, onExecutedCallback: null, referrerId: null, customId: null, inviterUserId: null, onConfirmActivityLaunchChecksAlertOpen: null };
+                      obj2 = {
+                        channelId: null,
+                        applicationId: null,
+                        isStart: true,
+                        embeddedActivitiesManager: null,
+                        componentId: null,
+                        commandOrigin: null,
+                        sectionName: null,
+                        locationObject: null,
+                        analyticsLocations: null,
+                        source: null,
+                        onExecutedCallback: null,
+                        referrerId: null,
+                        customId: null,
+                        inviterUserId: null,
+                        onConfirmActivityLaunchChecksAlertOpen: null,
+                      };
                       obj2[0] = callback2;
                       obj2[1] = lib.id;
                       obj2[3] = closure_13;
@@ -267,4 +297,4 @@ export default function handleUsePrimaryEntryPointAppCommand() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

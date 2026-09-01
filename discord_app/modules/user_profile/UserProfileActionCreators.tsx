@@ -19,7 +19,7 @@ function _saveProfileChanges() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c9 === 2) {
         c9 = 3;
         HermesBuiltin.throwTypeError();
@@ -185,7 +185,9 @@ export const notifyUnsavedUserProfileChangesInModal = function notifyUnsavedUser
   const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
   const intl = getSystemLocale.intl;
   const intl2 = getSystemLocale.intl;
-  AccessibilityAnnouncer.announce("" + intl.string(getSystemLocale.t.GP7JLE) + " " + intl2.string(getSystemLocale.t.gKoO1D));
+  AccessibilityAnnouncer.announce(
+    "" + intl.string(getSystemLocale.t.GP7JLE) + " " + intl2.string(getSystemLocale.t.gKoO1D),
+  );
 };
 export const saveProfileChanges = function saveProfileChanges(closure_8, id2, bannerOriginalMd5) {
   const self = this;
@@ -263,7 +265,9 @@ export const setTryItOutDisplayNameStyles = function setTryItOutDisplayNameStyle
   obj = { feature_name: constants4.DISPLAY_NAME_STYLES, feature_tier: constants3.PREMIUM_STANDARD };
   expandEventPropertiesDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
-export const setTryItOutCustomTypingIndicatorStyle = function setTryItOutCustomTypingIndicatorStyle(customTypingIndicatorStyle) {
+export const setTryItOutCustomTypingIndicatorStyle = function setTryItOutCustomTypingIndicatorStyle(
+  customTypingIndicatorStyle,
+) {
   let obj = dispatcherDefault;
   obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE", customTypingIndicatorStyle };
   obj.dispatch(obj);

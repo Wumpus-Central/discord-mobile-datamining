@@ -16,7 +16,14 @@ export default function getAnalyticsDataForSKU(applicationId) {
   application = application.getApplication(applicationId.applicationId);
   const price = applicationId.getPrice();
   const price1 = applicationId.getPrice(null, false);
-  let obj = { sku_id: applicationId.id, sku_type: applicationId.type, application_id: applicationId.applicationId, application_name: null, store_title: null, distribution_type: null };
+  let obj = {
+    sku_id: applicationId.id,
+    sku_type: applicationId.type,
+    application_id: applicationId.applicationId,
+    application_name: null,
+    store_title: null,
+    distribution_type: null,
+  };
   let name = null;
   if (null != application) {
     name = application.name;
@@ -50,7 +57,21 @@ export default function getAnalyticsDataForSKU(applicationId) {
   }
   let tmp9 = null;
   if (flag) {
-    obj = { has_single_player: null, has_online_multiplayer: null, has_local_multiplayer: null, has_pvp_features: null, has_local_coop: null, has_online_coop: null, has_cross_platform: null, has_rich_presence: null, has_game_invites: null, has_spectator_mode: null, has_controller_support: null, has_cloud_saves: null, has_secure_networking: null };
+    obj = {
+      has_single_player: null,
+      has_online_multiplayer: null,
+      has_local_multiplayer: null,
+      has_pvp_features: null,
+      has_local_coop: null,
+      has_online_coop: null,
+      has_cross_platform: null,
+      has_rich_presence: null,
+      has_game_invites: null,
+      has_spectator_mode: null,
+      has_controller_support: null,
+      has_cloud_saves: null,
+      has_secure_networking: null,
+    };
     obj[0] = applicationId.hasFeature(SKUFeatureTypes.SINGLE_PLAYER);
     obj[1] = applicationId.hasFeature(SKUFeatureTypes.ONLINE_MULTIPLAYER);
     obj[2] = applicationId.hasFeature(SKUFeatureTypes.LOCAL_MULTIPLAYER);
@@ -70,4 +91,4 @@ export default function getAnalyticsDataForSKU(applicationId) {
   const merged1 = Object.assign(tmp5);
   const merged2 = Object.assign(tmp9);
   return {};
-};
+}

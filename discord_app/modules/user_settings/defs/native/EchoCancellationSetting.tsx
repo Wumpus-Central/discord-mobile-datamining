@@ -15,7 +15,7 @@ createToggle = {
     const items = [closure_2];
     return initialize.useStateFromStores(items, () => echoCancellation.getEchoCancellation());
   },
-  onValueChange: require("handleAutomaticGainControlChange").handleEchoCancellationChange
+  onValueChange: require("handleAutomaticGainControlChange").handleEchoCancellationChange,
 };
 createToggle = createToggle.createToggle(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/EchoCancellationSetting.tsx");

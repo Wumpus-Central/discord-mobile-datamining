@@ -11,7 +11,9 @@ import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 ({ GuildFeatures: c9, Permissions: c10 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx",
+);
 
 export const getContextForPermission = function getContextForPermission(arg0, arg1) {
   let tmp = arg1;
@@ -75,36 +77,48 @@ export const useCanAccessMemberSafetyPage = function useCanAccessMemberSafetyPag
   const _require = id;
   const items = [closure_5, closure_7];
   const items1 = [id];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const items = [closure_1_5, closure_1_7];
-    [obj, obj2] = closure_1_3(items, 2);
-    const guild = obj.getGuild(closure_0);
-    const currentUser = obj2.getCurrentUser();
-    return false;
-  }, items1);
-};
-export const useCanAccessBulkBanningFeature = function useCanAccessBulkBanningFeature(arg0) {
-  const _require = arg0;
-  let items = [closure_5, closure_7];
-  const items1 = [arg0];
-  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const items = [closure_1_5, closure_1_7];
-    [obj, obj2] = closure_1_3(items, 2);
-    const guild = obj.getGuild(closure_0);
-    const currentUser = obj2.getCurrentUser();
-    return false;
-  }, items1);
-  const obj = initialize;
-  const items2 = [closure_5, closure_7];
-  const items3 = [arg0];
-  if (stateFromStores) {
-    stateFromStores = obj2.useStateFromStores(items2, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
       const items = [closure_1_5, closure_1_7];
       [obj, obj2] = closure_1_3(items, 2);
       const guild = obj.getGuild(closure_0);
       const currentUser = obj2.getCurrentUser();
       return false;
-    }, items3);
+    },
+    items1,
+  );
+};
+export const useCanAccessBulkBanningFeature = function useCanAccessBulkBanningFeature(arg0) {
+  const _require = arg0;
+  let items = [closure_5, closure_7];
+  const items1 = [arg0];
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const items = [closure_1_5, closure_1_7];
+      [obj, obj2] = closure_1_3(items, 2);
+      const guild = obj.getGuild(closure_0);
+      const currentUser = obj2.getCurrentUser();
+      return false;
+    },
+    items1,
+  );
+  const obj = initialize;
+  const items2 = [closure_5, closure_7];
+  const items3 = [arg0];
+  if (stateFromStores) {
+    stateFromStores = obj2.useStateFromStores(
+      items2,
+      () => {
+        const items = [closure_1_5, closure_1_7];
+        [obj, obj2] = closure_1_3(items, 2);
+        const guild = obj.getGuild(closure_0);
+        const currentUser = obj2.getCurrentUser();
+        return false;
+      },
+      items3,
+    );
   }
   return stateFromStores;
 };
@@ -112,14 +126,18 @@ export const useCanAccessInviteCodeFeature = function useCanAccessInviteCodeFeat
   const _require = arg0;
   const items = [closure_5, closure_6];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const guild = closure_1_5.getGuild(closure_0);
-    let canResult = null != guild;
-    if (canResult) {
-      canResult = closure_1_6.can(closure_1_10.MANAGE_GUILD, guild);
-    }
-    return canResult;
-  }, items1);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const guild = closure_1_5.getGuild(closure_0);
+      let canResult = null != guild;
+      if (canResult) {
+        canResult = closure_1_6.can(closure_1_10.MANAGE_GUILD, guild);
+      }
+      return canResult;
+    },
+    items1,
+  );
 };
 export const useCanBulkBanUser = function useCanBulkBanUser(arg0, arg1, arg2) {
   const _require = arg0;
@@ -127,18 +145,22 @@ export const useCanBulkBanUser = function useCanBulkBanUser(arg0, arg1, arg2) {
   dependencyMap = arg2;
   const items = [closure_6, closure_5];
   const items1 = [arg1, arg0, arg2];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const guild = closure_1_5.getGuild(closure_0);
-    let tmp2 = null != guild;
-    if (tmp2) {
-      let canManageUserResult = closure_1;
-      if (closure_1) {
-        canManageUserResult = closure_1_6.canManageUser(closure_1_10.BAN_MEMBERS, closure_2, guild);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const guild = closure_1_5.getGuild(closure_0);
+      let tmp2 = null != guild;
+      if (tmp2) {
+        let canManageUserResult = closure_1;
+        if (closure_1) {
+          canManageUserResult = closure_1_6.canManageUser(closure_1_10.BAN_MEMBERS, closure_2, guild);
+        }
+        tmp2 = canManageUserResult;
       }
-      tmp2 = canManageUserResult;
-    }
-    return tmp2;
-  }, items1);
+      return tmp2;
+    },
+    items1,
+  );
 };
 export const canBulkBanUser = function canBulkBanUser(arg0, arg1, user) {
   guild = guild.getGuild(arg0);

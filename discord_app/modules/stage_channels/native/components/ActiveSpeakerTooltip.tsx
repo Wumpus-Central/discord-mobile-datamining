@@ -10,13 +10,35 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 import useActiveSpeakerPillScrollHandler from "../StageChannelListStore.tsx";
 
 const require = arg1;
-({ useActiveSpeakerPillScrollHandler: closure_6, useActiveSpeakerPillState: error } = require("useActiveSpeakerPillScrollHandler"));
+({
+  useActiveSpeakerPillScrollHandler: closure_6,
+  useActiveSpeakerPillState: error,
+} = require("useActiveSpeakerPillScrollHandler"));
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let obj = { container: { width: "100%", flexDirection: "column", alignItems: "center", justifyContent: "center" }, participantItemContainer: null, participantAvatarContainer: null, participantAvatarText: null, participantNameplateContainer: null, participantNameplateSpeakingText: null };
-obj = { padding: 10, flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.round };
+let obj = {
+  container: { width: "100%", flexDirection: "column", alignItems: "center", justifyContent: "center" },
+  participantItemContainer: null,
+  participantAvatarContainer: null,
+  participantAvatarText: null,
+  participantNameplateContainer: null,
+  participantNameplateSpeakingText: null,
+};
+obj = {
+  padding: 10,
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.round,
+};
 obj[1] = obj;
 obj[2] = { alignItems: "center", justifyContent: "center" };
-createCacheKey = { fontSize: 12, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, lineHeight: 18 };
+createCacheKey = {
+  fontSize: 12,
+  fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  lineHeight: 18,
+};
 obj[3] = createCacheKey;
 obj[4] = { paddingHorizontal: 3, flexDirection: "row", alignItems: "center", justifyContent: "center" };
 obj[5] = { lineHeight: 18, color: ThemesDefault.colors.TEXT_SUBTLE };
@@ -28,11 +50,19 @@ const memoResult = importAllResult.memo((channel) => {
   let obj = channel(589);
   let items = [closure_5];
   const items1 = [channel.id];
-  const first = callback(obj.useStateFromStores(items, () => {
-    const speakingParticipants = closure_1_5.getSpeakingParticipants(channel.id);
-    const items = [speakingParticipants.map((user) => user.user), closure_1_5.getParticipantsVersion(channel.id)];
-    return items;
-  }, items1, channel(5375).isVersionEqual), 1)[0];
+  const first = callback(
+    obj.useStateFromStores(
+      items,
+      () => {
+        const speakingParticipants = closure_1_5.getSpeakingParticipants(channel.id);
+        const items = [speakingParticipants.map((user) => user.user), closure_1_5.getParticipantsVersion(channel.id)];
+        return items;
+      },
+      items1,
+      channel(5375).isVersionEqual,
+    ),
+    1,
+  )[0];
   let tmp5 = null;
   if (0 !== first.length) {
     tmp5 = null;
@@ -50,7 +80,7 @@ const memoResult = importAllResult.memo((channel) => {
       obj2[3] = channel.id;
       obj2[4] = channel.getGuildId();
       obj1[1] = callback3(UserSummaryItemDefault, obj2);
-      const items2 = [callback3(View, obj1), ];
+      const items2 = [callback3(View, obj1)];
       const obj3 = { style: null, children: null };
       obj3[0] = tmp.participantNameplateContainer;
       const obj4 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
@@ -69,6 +99,8 @@ const memoResult = importAllResult.memo((channel) => {
   }
   return tmp5;
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/ActiveSpeakerTooltip.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/components/ActiveSpeakerTooltip.tsx",
+);
 
 export default memoResult;

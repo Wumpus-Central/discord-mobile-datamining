@@ -14,7 +14,9 @@ export default function useGuildRoleMemberCounts(arg0) {
   }
   const items = [closure_4];
   const items1 = [arg0, num];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.getRoleMemberCount(closure_0));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_4.getRoleMemberCount(closure_0),
+  );
   const effect = React.useEffect(() => {
     if (null != closure_0) {
       let tmp4 = null != tmp3;
@@ -35,4 +37,4 @@ export default function useGuildRoleMemberCounts(arg0) {
     }
   }, items1);
   return stateFromStores;
-};
+}

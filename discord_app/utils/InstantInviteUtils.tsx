@@ -118,8 +118,23 @@ const minutes = "minutes";
 const hours = "hours";
 const days = "days";
 const never = "never";
-let closure_19 = { [arg1(9912).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [arg1(9912).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [arg1(9912).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [arg1(9912).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [arg1(9912).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [arg1(9912).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [arg1(9912).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [arg1(9912).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [arg1(9912).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [arg1(9912).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
-let items = [require("get label").INVITE_OPTIONS_14_DAYS, require("get label").INVITE_OPTIONS_30_DAYS, require("get label").INVITE_OPTIONS_60_DAYS];
+let closure_19 = {
+  [arg1(9912).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" },
+  [arg1(9912).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" },
+  [arg1(9912).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" },
+  [arg1(9912).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" },
+  [arg1(9912).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" },
+  [arg1(9912).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" },
+  [arg1(9912).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" },
+  [arg1(9912).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" },
+  [arg1(9912).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" },
+  [arg1(9912).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" },
+};
+let items = [
+  require("get label").INVITE_OPTIONS_14_DAYS,
+  require("get label").INVITE_OPTIONS_30_DAYS,
+  require("get label").INVITE_OPTIONS_60_DAYS,
+];
 obj = {
   getMaxAgeOptionByValue(label) {
     closure_0 = label;
@@ -166,7 +181,7 @@ obj = {
   INVITE_OPTIONS_10_TIMES: require("get label").INVITE_OPTIONS_10_TIMES,
   INVITE_OPTIONS_25_TIMES: require("get label").INVITE_OPTIONS_25_TIMES,
   INVITE_OPTIONS_50_TIMES: require("get label").INVITE_OPTIONS_50_TIMES,
-  INVITE_OPTIONS_100_TIMES: require("get label").INVITE_OPTIONS_100_TIMES
+  INVITE_OPTIONS_100_TIMES: require("get label").INVITE_OPTIONS_100_TIMES,
 };
 const result = require("set").fileFinishedImporting("utils/InstantInviteUtils.tsx");
 
@@ -179,7 +194,14 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
   const rows = [];
   const counts = { numFriends: 0, numDms: 0, numGroupDms: 0, numGuildMembers: 0, numChannels: 0 };
   if ("" === query) {
-    obj = { omitUserIds: null, maxRowsWithoutQuery: null, omitGuildId: null, shownUserIds: null, rows: null, counts: null };
+    obj = {
+      omitUserIds: null,
+      maxRowsWithoutQuery: null,
+      omitGuildId: null,
+      shownUserIds: null,
+      rows: null,
+      counts: null,
+    };
     obj[0] = omitUserIds;
     obj[1] = maxRowsWithoutQuery;
     obj[2] = omitGuildId;

@@ -22,7 +22,12 @@ export default (arg0) => {
       }
       obj = { muted: true, mute_config: obj };
       obj = { selected_time_window: closure_2_3.HOURS_1, end_time: toISOStringResult };
-      const result = closure_2_1(closure_2_2[3]).updateChannelOverrideSettings(tmp.guildId, tmp.channelId, obj, lib(closure_2_2[4]).NotificationLabels.Muted);
+      const result = closure_2_1(closure_2_2[3]).updateChannelOverrideSettings(
+        tmp.guildId,
+        tmp.channelId,
+        obj,
+        lib(closure_2_2[4]).NotificationLabels.Muted,
+      );
       lib(true);
     });
   });

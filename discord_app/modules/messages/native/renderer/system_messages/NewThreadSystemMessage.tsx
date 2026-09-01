@@ -7,7 +7,9 @@ import closure_4 from "../../../../../stores/RelationshipStore.tsx";
 import closure_5 from "../../../../../stores/UserStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx",
+);
 
 export const createNewThreadSystemMessage = function createNewThreadSystemMessage(roleStyle) {
   const message = roleStyle.message;
@@ -20,7 +22,16 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   }
   channel = channel.getChannel(channel_id);
   const intl = tmp(1236).intl;
-  obj = { actorName: messageAuthorWithProcessedColor.nick, actorHook: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), threadName: null, threadOnClick: null };
+  obj = {
+    actorName: messageAuthorWithProcessedColor.nick,
+    actorHook: formatUsernameOnClickDefault({
+      message,
+      author: messageAuthorWithProcessedColor,
+      roleStyle: roleStyle.roleStyle,
+    }),
+    threadName: null,
+    threadOnClick: null,
+  };
   if (null != channel) {
     let content = tmp(4674).computeChannelName(channel, closure_5, closure_4);
     const tmpResult = tmp(4674);

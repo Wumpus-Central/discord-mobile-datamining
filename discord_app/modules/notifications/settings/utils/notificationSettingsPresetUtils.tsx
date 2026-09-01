@@ -20,10 +20,23 @@ export const presetFromSettings = function presetFromSettings(unreadSetting, mes
   const items3 = [UserNotificationSettings.ONLY_MENTIONS, UnreadSetting.ONLY_MENTIONS];
   const withResult1 = match.with(items1, () => constants.ALL_MESSAGES).with(items2, () => constants.MENTIONS);
   const items4 = [UserNotificationSettings.NO_MESSAGES, UnreadSetting.UNSET];
-  const withResult2 = match.with(items1, () => constants.ALL_MESSAGES).with(items2, () => constants.MENTIONS).with(items3, () => constants.MENTIONS);
+  const withResult2 = match
+    .with(items1, () => constants.ALL_MESSAGES)
+    .with(items2, () => constants.MENTIONS)
+    .with(items3, () => constants.MENTIONS);
   const items5 = [UserNotificationSettings.NO_MESSAGES, UnreadSetting.ONLY_MENTIONS];
-  const withResult3 = match.with(items1, () => constants.ALL_MESSAGES).with(items2, () => constants.MENTIONS).with(items3, () => constants.MENTIONS).with(items4, () => constants.NOTHING);
-  return match.with(items1, () => constants.ALL_MESSAGES).with(items2, () => constants.MENTIONS).with(items3, () => constants.MENTIONS).with(items4, () => constants.NOTHING).with(items5, () => constants.NOTHING).otherwise(() => constants.CUSTOM);
+  const withResult3 = match
+    .with(items1, () => constants.ALL_MESSAGES)
+    .with(items2, () => constants.MENTIONS)
+    .with(items3, () => constants.MENTIONS)
+    .with(items4, () => constants.NOTHING);
+  return match
+    .with(items1, () => constants.ALL_MESSAGES)
+    .with(items2, () => constants.MENTIONS)
+    .with(items3, () => constants.MENTIONS)
+    .with(items4, () => constants.NOTHING)
+    .with(items5, () => constants.NOTHING)
+    .otherwise(() => constants.CUSTOM);
 };
 export const presetName = function presetName(tmp4Result) {
   const match = t.match(tmp4Result);
@@ -32,36 +45,46 @@ export const presetName = function presetName(tmp4Result) {
     const intl = callback(1236).intl;
     return intl.string(callback(1236).t.hZrr6k);
   });
-  const withResult1 = match.with(obj.ALL_MESSAGES, () => {
-    const intl = callback(1236).intl;
-    return intl.string(callback(1236).t.hZrr6k);
-  }).with(obj.MENTIONS, () => {
-    const intl = callback(1236).intl;
-    return intl.string(callback(1236).t.y59NJm);
-  });
-  const withResult2 = match.with(obj.ALL_MESSAGES, () => {
-    const intl = callback(1236).intl;
-    return intl.string(callback(1236).t.hZrr6k);
-  }).with(obj.MENTIONS, () => {
-    const intl = callback(1236).intl;
-    return intl.string(callback(1236).t.y59NJm);
-  }).with(obj.NOTHING, () => {
-    const intl = callback(1236).intl;
-    return intl.string(callback(1236).t["pGn/bJ"]);
-  });
-  return match.with(obj.ALL_MESSAGES, () => {
-    const intl = callback(1236).intl;
-    return intl.string(callback(1236).t.hZrr6k);
-  }).with(obj.MENTIONS, () => {
-    const intl = callback(1236).intl;
-    return intl.string(callback(1236).t.y59NJm);
-  }).with(obj.NOTHING, () => {
-    const intl = callback(1236).intl;
-    return intl.string(callback(1236).t["pGn/bJ"]);
-  }).with(obj.CUSTOM, () => {
-    const intl = callback(1236).intl;
-    return intl.string(callback(1236).t["32yow9"]);
-  }).exhaustive();
+  const withResult1 = match
+    .with(obj.ALL_MESSAGES, () => {
+      const intl = callback(1236).intl;
+      return intl.string(callback(1236).t.hZrr6k);
+    })
+    .with(obj.MENTIONS, () => {
+      const intl = callback(1236).intl;
+      return intl.string(callback(1236).t.y59NJm);
+    });
+  const withResult2 = match
+    .with(obj.ALL_MESSAGES, () => {
+      const intl = callback(1236).intl;
+      return intl.string(callback(1236).t.hZrr6k);
+    })
+    .with(obj.MENTIONS, () => {
+      const intl = callback(1236).intl;
+      return intl.string(callback(1236).t.y59NJm);
+    })
+    .with(obj.NOTHING, () => {
+      const intl = callback(1236).intl;
+      return intl.string(callback(1236).t["pGn/bJ"]);
+    });
+  return match
+    .with(obj.ALL_MESSAGES, () => {
+      const intl = callback(1236).intl;
+      return intl.string(callback(1236).t.hZrr6k);
+    })
+    .with(obj.MENTIONS, () => {
+      const intl = callback(1236).intl;
+      return intl.string(callback(1236).t.y59NJm);
+    })
+    .with(obj.NOTHING, () => {
+      const intl = callback(1236).intl;
+      return intl.string(callback(1236).t["pGn/bJ"]);
+    })
+    .with(obj.CUSTOM, () => {
+      const intl = callback(1236).intl;
+      return intl.string(callback(1236).t["32yow9"]);
+    })
+    .exhaustive();
 };
 export const arePresetSettingsUnset = function arePresetSettingsUnset(arg0, arg1) {
   let tmp = null != arg0;

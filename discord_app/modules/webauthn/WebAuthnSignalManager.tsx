@@ -7,14 +7,18 @@ initializeDefault;
 class WebAuthnSignalManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    applyArgumentsResult.actions = { AUTHENTICATOR_DELETE: applyArgumentsResult.handleAuthenticatorDelete, MFA_WEBAUTHN_CREDENTIALS_LOADED: applyArgumentsResult.handleWebAuthnCredentialsLoaded, CURRENT_USER_UPDATE: applyArgumentsResult.handleCurrentUserUpdate };
+    applyArgumentsResult.actions = {
+      AUTHENTICATOR_DELETE: applyArgumentsResult.handleAuthenticatorDelete,
+      MFA_WEBAUTHN_CREDENTIALS_LOADED: applyArgumentsResult.handleWebAuthnCredentialsLoaded,
+      CURRENT_USER_UPDATE: applyArgumentsResult.handleCurrentUserUpdate,
+    };
     return applyArgumentsResult;
   }
 }
 const prototype = WebAuthnSignalManager.prototype;
 prototype["handleAuthenticatorDelete"] = function handleAuthenticatorDelete(credential) {
   credential = credential.credential;
-  return callback(function*() {
+  return callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -69,7 +73,7 @@ prototype["handleAuthenticatorDelete"] = function handleAuthenticatorDelete(cred
 };
 prototype["handleWebAuthnCredentialsLoaded"] = function handleWebAuthnCredentialsLoaded(credentials) {
   credentials = credentials.credentials;
-  return callback(function*() {
+  return callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -125,7 +129,7 @@ prototype["handleWebAuthnCredentialsLoaded"] = function handleWebAuthnCredential
 };
 prototype["handleCurrentUserUpdate"] = function handleCurrentUserUpdate(user) {
   user = user.user;
-  return callback(function*() {
+  return callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();

@@ -22,7 +22,12 @@ function AutocompleteFormDivider() {
 noopAll;
 ({ AutoCompleteResultTypes: error, WHITESPACE_RE: closure_8 } = ME);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: c9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = AUTOCOMPLETE_ROW_HEIGHT);
-({ CHANNEL_SENTINEL: unpackModuleId, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = regExp);
+({
+  CHANNEL_SENTINEL: unpackModuleId,
+  EMOJI_SENTINEL: closure_12,
+  GAME_MENTION_SENTINEL: map1,
+  MENTION_SENTINEL: closure_14,
+} = regExp);
 const hairlineWidth = require("get ActivityIndicator").StyleSheet.hairlineWidth;
 createCacheKey = { itemDivider: null };
 createCacheKey = { marginLeft: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
@@ -69,7 +74,9 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
     if (channel.isThread()) {
       const obj3 = computeChannelName;
       const _HermesInternal6 = HermesInternal;
-      return "#\"" + obj3.escapeChannelName(computeChannelName.computeChannelName(type.channel, closure_6, closure_5)) + "\"";
+      return (
+        '#"' + obj3.escapeChannelName(computeChannelName.computeChannelName(type.channel, closure_6, closure_5)) + '"'
+      );
     } else {
       channel2 = type.channel;
       const guildId = channel2.getGuildId();

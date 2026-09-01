@@ -11,7 +11,7 @@ function _fetchMediaPostEmbed() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       dependencyMap = tmp3;
       obj1 = { type: "MEDIA_POST_EMBED_FETCH", threadId: null };
       obj1[1] = callback;
@@ -60,7 +60,7 @@ function _unfurlEmbedUrl() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();

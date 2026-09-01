@@ -12,9 +12,29 @@ const require = arg1;
 noopAll;
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ navbarInner: { flex: 1, justifyContent: "space-between" }, navbarLeft: { flexShrink: 1, flexDirection: "row", marginRight: 8 }, navbarRight: { flexShrink: 0, justifyContent: "flex-end", flexDirection: "row", gap: 8 }, navbarName: { flexShrink: 1, alignItems: "center", height: 40, marginLeft: 8 }, navbarNameInner: { borderRadius: 20, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.7)", flex: 1, flexDirection: "row", paddingHorizontal: 18 }, navbarNameShrinkWrapper: { flexShrink: 1 }, contextIcon: { width: 18, height: 18, marginRight: 6 } });
-let closure_9 = { code: "function MediaModalOverlayHeaderTsx1(){const{withTiming,isPreparing}=this.__closure;return{opacity:withTiming(isPreparing?0:1)};}" };
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayHeader.tsx");
+let closure_8 = createCacheKey.createStyles({
+  navbarInner: { flex: 1, justifyContent: "space-between" },
+  navbarLeft: { flexShrink: 1, flexDirection: "row", marginRight: 8 },
+  navbarRight: { flexShrink: 0, justifyContent: "flex-end", flexDirection: "row", gap: 8 },
+  navbarName: { flexShrink: 1, alignItems: "center", height: 40, marginLeft: 8 },
+  navbarNameInner: {
+    borderRadius: 20,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    flex: 1,
+    flexDirection: "row",
+    paddingHorizontal: 18,
+  },
+  navbarNameShrinkWrapper: { flexShrink: 1 },
+  contextIcon: { width: 18, height: 18, marginRight: 6 },
+});
+let closure_9 = {
+  code: "function MediaModalOverlayHeaderTsx1(){const{withTiming,isPreparing}=this.__closure;return{opacity:withTiming(isPreparing?0:1)};}",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/media_viewer/native/components/overlay/MediaModalOverlayHeader.tsx",
+);
 
 export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   ({ source, contextName, contextIcon } = arg0);
@@ -62,7 +82,7 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   obj5[0] = intl.string(isModalOpen(1236).t.cpT0Cq);
   obj5[1] = closure_6(isModalOpen(5551).XSmallIcon, { size: "md", color: "interactive-text-active" });
   obj5[2] = onClose;
-  const items1 = [closure_6(_modDef8640, obj5), ];
+  const items1 = [closure_6(_modDef8640, obj5)];
   let tmp10Result = null != contextName;
   if (tmp10Result) {
     const obj6 = { style: null, children: null };
@@ -78,10 +98,17 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
       obj8[3] = tmp.contextIcon;
       tmp10Result = tmp10(tmp2(1297).Icon, obj8);
     }
-    const items2 = [tmp10Result, ];
+    const items2 = [tmp10Result];
     const obj9 = { style: null, children: null };
     obj9[0] = tmp.navbarNameShrinkWrapper;
-    const obj10 = { accessibilityRole: "header", variant: "heading-md/medium", lineClamp: 1, ellipsizeMode: "tail", color: "text-overlay-light", children: null };
+    const obj10 = {
+      accessibilityRole: "header",
+      variant: "heading-md/medium",
+      lineClamp: 1,
+      ellipsizeMode: "tail",
+      color: "text-overlay-light",
+      children: null,
+    };
     obj10[5] = contextName;
     obj9[1] = tmp10(tmp2(4474).Text, obj10);
     items2[1] = tmp10(tmp13, obj9);
@@ -91,14 +118,14 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   }
   items1[1] = tmp10Result;
   obj4[1] = items1;
-  const items3 = [closure_7(closure_4, obj4), ];
+  const items3 = [closure_7(closure_4, obj4)];
   let tmp12Result = !tmp7;
   if (!tmp7) {
     const obj11 = { style: null, children: null };
     obj11[0] = tmp.navbarRight;
     const obj12 = { source: null };
     obj12[0] = source;
-    const items4 = [tmp10(tmp6(12830), obj12), ];
+    const items4 = [tmp10(tmp6(12830), obj12)];
     let tmp10Result1 = null;
     if (!disableMediaOverlayButton) {
       const obj13 = { items: null, children: null };

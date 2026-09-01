@@ -35,7 +35,7 @@ function BadgedIcon(arg0) {
     const obj2 = { size: "sm", color: null };
     obj2[1] = token;
     obj1[1] = tmp8(BookmarkIcon, obj2);
-    const items2 = [tmp8(SolidCutoutDefault, obj1), ];
+    const items2 = [tmp8(SolidCutoutDefault, obj1)];
     const obj3 = { style: null };
     obj3[0] = tmp6.dot;
     items2[1] = tmp8(tmp9, obj3);
@@ -52,12 +52,37 @@ function BadgedIcon(arg0) {
 }
 let c3 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { shape: require("SolidCutout").CutoutShape.Circle, x: require("getIconSize").ICON_SIZE.sm - 7, y: require("getIconSize").ICON_SIZE.sm - 8, size: 10 };
-obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: { width: require("getIconSize").ICON_SIZE.sm, height: require("getIconSize").ICON_SIZE.sm, position: "relative" }, dot: null };
-createCacheKey = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: ThemesDefault.radii.lg, right: -2, bottom: -0.5 };
+let obj = {
+  shape: require("SolidCutout").CutoutShape.Circle,
+  x: require("getIconSize").ICON_SIZE.sm - 7,
+  y: require("getIconSize").ICON_SIZE.sm - 8,
+  size: 10,
+};
+obj = {
+  container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" },
+  iconAnchor: {
+    width: require("getIconSize").ICON_SIZE.sm,
+    height: require("getIconSize").ICON_SIZE.sm,
+    position: "relative",
+  },
+  dot: null,
+};
+createCacheKey = {
+  position: "absolute",
+  height: 6.5,
+  width: 6.5,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION,
+  borderRadius: ThemesDefault.radii.lg,
+  right: -2,
+  bottom: -0.5,
+};
 obj[2] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(obj);
-let obj1 = { width: require("getIconSize").ICON_SIZE.sm, height: require("getIconSize").ICON_SIZE.sm, position: "relative" };
+let obj1 = {
+  width: require("getIconSize").ICON_SIZE.sm,
+  height: require("getIconSize").ICON_SIZE.sm,
+  position: "relative",
+};
 const forwardRefResult = importAllResult.forwardRef((type, ref) => {
   type = type.type;
   const onOpen = type.onOpen;
@@ -77,7 +102,11 @@ const forwardRefResult = importAllResult.forwardRef((type, ref) => {
     if (0 === stateFromStores1) {
       if (!hasForLaterAccess) {
         const items = [onOpen(stateFromStores1[18]).FOR_LATER_ROADBLOCK];
-        onOpen(stateFromStores1[16])(type(stateFromStores1[17]).EntitlementFeatureNames.SAVED_MESSAGES, undefined, items);
+        onOpen(stateFromStores1[16])(
+          type(stateFromStores1[17]).EntitlementFeatureNames.SAVED_MESSAGES,
+          undefined,
+          items,
+        );
         const tmp5 = onOpen(stateFromStores1[16]);
       }
     }
@@ -87,7 +116,14 @@ const forwardRefResult = importAllResult.forwardRef((type, ref) => {
   const obj3 = type(stateFromStores1[15]);
   const tmp8 = View;
   const tmp9 = BadgedIcon;
-  obj1 = { variant: "tertiary", size: "sm", icon: tmp7(tmp9, obj), onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 2 };
+  obj1 = {
+    variant: "tertiary",
+    size: "sm",
+    icon: tmp7(tmp9, obj),
+    onPress: callback,
+    accessibilityLabel: null,
+    maxFontSizeMultiplier: 2,
+  };
   obj[1] = type === type(stateFromStores1[11]).SavedMessageSortTypes.REMINDER && stateFromStores;
   const intl = tmp(tmp2[21]).intl;
   if (type === type(stateFromStores1[11]).SavedMessageSortTypes.REMINDER) {

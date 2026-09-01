@@ -4,9 +4,18 @@ import Button from "../../../design/void/native.tsx";
 import CONFIG_NEVER_ANIMATE_TIMING from "../../../design/animation/reanimated/timing/timing.tsx";
 import CONFIG_NEVER_ANIMATE from "../../../design/animation/reanimated/spring/spring.tsx";
 
-let obj = { damping: 30, mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
+let obj = {
+  damping: 30,
+  mass: 1,
+  stiffness: 250,
+  overshootClamping: true,
+  restSpeedThreshold: 0.001,
+  restDisplacementThreshold: 0.001,
+};
 obj = { duration: 500, easing: Button.STANDARD_EASING };
-let closure_4 = { code: "function getSortedByMeasure_PanGestureAnimationsTsx2(array,measure){const sorted=new Array(...array).sort(function(left,right){const al=Math.abs(left-measure);const ar=Math.abs(right-measure);return al<ar?-1:al>ar?1:0;});return sorted;}" };
+let closure_4 = {
+  code: "function getSortedByMeasure_PanGestureAnimationsTsx2(array,measure){const sorted=new Array(...array).sort(function(left,right){const al=Math.abs(left-measure);const ar=Math.abs(right-measure);return al<ar?-1:al>ar?1:0;});return sorted;}",
+};
 function getNearestValue(arg0, arg1) {
   closure_0 = arg1;
   let num = arg2;
@@ -83,7 +92,9 @@ function getNearestValue(arg0, arg1) {
 }
 getNearestValue.__closure = {};
 getNearestValue.__workletHash = 4186929947751;
-getNearestValue.__initData = { code: "function getNearestValue_PanGestureAnimationsTsx1(array,measure,velocity=0){const unitVector=velocity<0?-1:velocity>0?1:0;function getSortedByMeasure(array,measure){'worklet';const sorted=new Array(...array).sort(function(left,right){const al=Math.abs(left-measure);const ar=Math.abs(right-measure);return al<ar?-1:al>ar?1:0;});return sorted;}if(array.length===0){return measure;}const sorted=getSortedByMeasure(array,measure);if(unitVector!==0){var _sorted$find;return(_sorted$find=sorted.find(function(value){const result=unitVector<0?measure>value:measure<value;return result;}))!==null&&_sorted$find!==void 0?_sorted$find:sorted[0];}return sorted[0];}" };
+getNearestValue.__initData = {
+  code: "function getNearestValue_PanGestureAnimationsTsx1(array,measure,velocity=0){const unitVector=velocity<0?-1:velocity>0?1:0;function getSortedByMeasure(array,measure){'worklet';const sorted=new Array(...array).sort(function(left,right){const al=Math.abs(left-measure);const ar=Math.abs(right-measure);return al<ar?-1:al>ar?1:0;});return sorted;}if(array.length===0){return measure;}const sorted=getSortedByMeasure(array,measure);if(unitVector!==0){var _sorted$find;return(_sorted$find=sorted.find(function(value){const result=unitVector<0?measure>value:measure<value;return result;}))!==null&&_sorted$find!==void 0?_sorted$find:sorted[0];}return sorted[0];}",
+};
 function withPanGestureSpring(value, velocity) {
   let tmp = arg2;
   obj = CONFIG_NEVER_ANIMATE;
@@ -98,7 +109,9 @@ function withPanGestureSpring(value, velocity) {
 obj = { SPRING_CONFIG: obj, withSpring: CONFIG_NEVER_ANIMATE.withSpring };
 withPanGestureSpring.__closure = obj;
 withPanGestureSpring.__workletHash = 12189464558811;
-withPanGestureSpring.__initData = { code: "function withPanGestureSpring_PanGestureAnimationsTsx3(destination,velocity,config){const{SPRING_CONFIG,withSpring}=this.__closure;const springConfig=config!==null&&config!==void 0?config:SPRING_CONFIG;return withSpring(destination,{...springConfig,velocity:velocity});}" };
+withPanGestureSpring.__initData = {
+  code: "function withPanGestureSpring_PanGestureAnimationsTsx3(destination,velocity,config){const{SPRING_CONFIG,withSpring}=this.__closure;const springConfig=config!==null&&config!==void 0?config:SPRING_CONFIG;return withSpring(destination,{...springConfig,velocity:velocity});}",
+};
 function withPanGestureTiming(value, timingStandard) {
   let tmp = timingStandard;
   obj = CONFIG_NEVER_ANIMATE_TIMING;
@@ -109,11 +122,21 @@ function withPanGestureTiming(value, timingStandard) {
 }
 withPanGestureTiming.__closure = { TIMING_CONFIG: obj, withTiming: CONFIG_NEVER_ANIMATE_TIMING.withTiming };
 withPanGestureTiming.__workletHash = 7636074551896;
-withPanGestureTiming.__initData = { code: "function withPanGestureTiming_PanGestureAnimationsTsx4(destination,config){const{TIMING_CONFIG,withTiming}=this.__closure;const timingConfig=config!==null&&config!==void 0?config:TIMING_CONFIG;return withTiming(destination,timingConfig);}" };
-let closure_8 = { code: "function PanGestureAnimationsTsx5(){const{isGestureInProgress}=this.__closure;if(isGestureInProgress!=null){isGestureInProgress.set(false);}}" };
-let closure_9 = { code: "function PanGestureAnimationsTsx6(event,success){const{start,translate,snapPositions,velocity,swipeVelocityThreshold,getNearestValue,withPanGestureSpring,withPanGestureTiming,onEnd}=this.__closure;start.set(translate.get());if(snapPositions!=null){var _onEnd;const swipeVelocity=Math.abs(velocity.get())>swipeVelocityThreshold?velocity.get():0;const snapPoint=getNearestValue(snapPositions.get(),translate.get(),swipeVelocity);if(swipeVelocity!==0){translate.set(withPanGestureSpring(snapPoint,velocity.get()));}else{translate.set(withPanGestureTiming(snapPoint));}(_onEnd=onEnd)===null||_onEnd===void 0||_onEnd(event,{success:success,destination:snapPoint,startPosition:start.get()});}}" };
-let closure_10 = { code: "function PanGestureAnimationsTsx7(event){const{start,vertical,lowerBounds,upperBounds,velocity,translate,onChange}=this.__closure;var _onChange;const{velocityY:velocityY,translationY:translationY,velocityX:velocityX,translationX:translationX}=event;let next=start.get()+(vertical?translationY:translationX);if(lowerBounds!=null&&next<lowerBounds){next=lowerBounds;}else if(upperBounds!=null&&next>upperBounds){next=upperBounds;}velocity.set(vertical?velocityY:velocityX);translate.set(next);(_onChange=onChange)===null||_onChange===void 0||_onChange(event,{destination:translate.get(),startPosition:start.get()});}" };
-let closure_11 = { code: "function PanGestureAnimationsTsx8(event){const{start,translate,velocity,isGestureInProgress,onStart}=this.__closure;var _onStart;start.set(translate.get());velocity.set(0);if(isGestureInProgress!=null){isGestureInProgress.set(true);}(_onStart=onStart)===null||_onStart===void 0||_onStart(event,{destination:start.get(),startPosition:start.get()});}" };
+withPanGestureTiming.__initData = {
+  code: "function withPanGestureTiming_PanGestureAnimationsTsx4(destination,config){const{TIMING_CONFIG,withTiming}=this.__closure;const timingConfig=config!==null&&config!==void 0?config:TIMING_CONFIG;return withTiming(destination,timingConfig);}",
+};
+let closure_8 = {
+  code: "function PanGestureAnimationsTsx5(){const{isGestureInProgress}=this.__closure;if(isGestureInProgress!=null){isGestureInProgress.set(false);}}",
+};
+let closure_9 = {
+  code: "function PanGestureAnimationsTsx6(event,success){const{start,translate,snapPositions,velocity,swipeVelocityThreshold,getNearestValue,withPanGestureSpring,withPanGestureTiming,onEnd}=this.__closure;start.set(translate.get());if(snapPositions!=null){var _onEnd;const swipeVelocity=Math.abs(velocity.get())>swipeVelocityThreshold?velocity.get():0;const snapPoint=getNearestValue(snapPositions.get(),translate.get(),swipeVelocity);if(swipeVelocity!==0){translate.set(withPanGestureSpring(snapPoint,velocity.get()));}else{translate.set(withPanGestureTiming(snapPoint));}(_onEnd=onEnd)===null||_onEnd===void 0||_onEnd(event,{success:success,destination:snapPoint,startPosition:start.get()});}}",
+};
+let closure_10 = {
+  code: "function PanGestureAnimationsTsx7(event){const{start,vertical,lowerBounds,upperBounds,velocity,translate,onChange}=this.__closure;var _onChange;const{velocityY:velocityY,translationY:translationY,velocityX:velocityX,translationX:translationX}=event;let next=start.get()+(vertical?translationY:translationX);if(lowerBounds!=null&&next<lowerBounds){next=lowerBounds;}else if(upperBounds!=null&&next>upperBounds){next=upperBounds;}velocity.set(vertical?velocityY:velocityX);translate.set(next);(_onChange=onChange)===null||_onChange===void 0||_onChange(event,{destination:translate.get(),startPosition:start.get()});}",
+};
+let closure_11 = {
+  code: "function PanGestureAnimationsTsx8(event){const{start,translate,velocity,isGestureInProgress,onStart}=this.__closure;var _onStart;start.set(translate.get());velocity.set(0);if(isGestureInProgress!=null){isGestureInProgress.set(true);}(_onStart=onStart)===null||_onStart===void 0||_onStart(event,{destination:start.get(),startPosition:start.get()});}",
+};
 const obj1 = { TIMING_CONFIG: obj, withTiming: CONFIG_NEVER_ANIMATE_TIMING.withTiming };
 let result = set.fileFinishedImporting("modules/action_sheet/native/PanGestureAnimations.tsx");
 
@@ -201,7 +224,15 @@ export default function usePanGesture(lowerBounds) {
       return;
     }
   }
-  C.__closure = { start: sharedValue, vertical: flag, lowerBounds, upperBounds, velocity: sharedValue1, translate, onChange };
+  C.__closure = {
+    start: sharedValue,
+    vertical: flag,
+    lowerBounds,
+    upperBounds,
+    velocity: sharedValue1,
+    translate,
+    onChange,
+  };
   C.__workletHash = 15962975179371;
   C.__initData = sharedValue;
   const onStartResult = Gesture.Pan().onStart(N);
@@ -266,7 +297,17 @@ export default function usePanGesture(lowerBounds) {
       return;
     }
   }
-  obj = { start: sharedValue, translate, snapPositions, velocity: sharedValue1, swipeVelocityThreshold: num, getNearestValue: onStart, withPanGestureSpring: onChange, withPanGestureTiming: onEnd, onEnd };
+  obj = {
+    start: sharedValue,
+    translate,
+    snapPositions,
+    velocity: sharedValue1,
+    swipeVelocityThreshold: num,
+    getNearestValue: onStart,
+    withPanGestureSpring: onChange,
+    withPanGestureTiming: onEnd,
+    onEnd,
+  };
   T.__closure = obj;
   T.__workletHash = 15665959414289;
   T.__initData = isGestureInProgress;
@@ -285,7 +326,7 @@ export default function usePanGesture(lowerBounds) {
   S.__workletHash = 11128244755178;
   S.__initData = flag;
   return Gesture.Pan().onStart(N).onChange(C).onEnd(T).onFinalize(S);
-};
+}
 export const SPRING_CONFIG = obj;
 export const TIMING_CONFIG = obj;
 export { withPanGestureSpring };

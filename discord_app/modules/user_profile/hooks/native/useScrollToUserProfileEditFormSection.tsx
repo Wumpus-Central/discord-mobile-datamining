@@ -5,14 +5,19 @@ import closure_4 from "../../../a11y/AccessibilityStore.tsx";
 import closure_5 from "../../../profile_customization/ProfileCustomizationNavigationStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx",
+);
 
 export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
   ref = ref.useRef({});
   const items = [closure_4];
-  closure_3 = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  closure_3 = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => useReducedMotion.useReducedMotion,
+  );
   const effect = ref.useEffect(() => {
     let tmp2 = null != closure_1;
     if (tmp2) {
@@ -46,4 +51,4 @@ export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
     }
   });
   return ref;
-};
+}

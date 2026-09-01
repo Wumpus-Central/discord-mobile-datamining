@@ -3,8 +3,60 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import set from "../../../../../_runtime/00002_set.js";
 
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-let set = new Set(["accessibilityActions", "accessibilityElementsHidden", "accessibilityHint", "accessibilityIgnoresInvertColors", "accessibilityLabel", "accessibilityLabelledBy", "accessibilityLanguage", "accessibilityLargeContentTitle", "accessibilityLiveRegion", "accessibilityRespondsToUserInteraction", "accessibilityRole", "accessibilityShowsLargeContentViewer", "accessibilityState", "accessibilityValue", "accessibilityViewIsModal", "accessible", "allowFontScaling", "aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-hidden", "aria-label", "aria-labelledby", "aria-live", "aria-modal", "aria-selected", "aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext", "id", "importantForAccessibility", "maxFontSizeMultiplier", "nativeID", "onAccessibilityAction", "onAccessibilityEscape", "onAccessibilityTap", "onMagicTap", "role", "screenReaderFocusable", "testID"]);
-const set1 = new Set(["fontVariant", "textDecorationColor", "textDecorationStyle", "textShadowColor", "textShadowOffset", "textShadowRadius", "userSelect", "writingDirection"]);
+let set = new Set([
+  "accessibilityActions",
+  "accessibilityElementsHidden",
+  "accessibilityHint",
+  "accessibilityIgnoresInvertColors",
+  "accessibilityLabel",
+  "accessibilityLabelledBy",
+  "accessibilityLanguage",
+  "accessibilityLargeContentTitle",
+  "accessibilityLiveRegion",
+  "accessibilityRespondsToUserInteraction",
+  "accessibilityRole",
+  "accessibilityShowsLargeContentViewer",
+  "accessibilityState",
+  "accessibilityValue",
+  "accessibilityViewIsModal",
+  "accessible",
+  "allowFontScaling",
+  "aria-busy",
+  "aria-checked",
+  "aria-disabled",
+  "aria-expanded",
+  "aria-hidden",
+  "aria-label",
+  "aria-labelledby",
+  "aria-live",
+  "aria-modal",
+  "aria-selected",
+  "aria-valuemax",
+  "aria-valuemin",
+  "aria-valuenow",
+  "aria-valuetext",
+  "id",
+  "importantForAccessibility",
+  "maxFontSizeMultiplier",
+  "nativeID",
+  "onAccessibilityAction",
+  "onAccessibilityEscape",
+  "onAccessibilityTap",
+  "onMagicTap",
+  "role",
+  "screenReaderFocusable",
+  "testID",
+]);
+const set1 = new Set([
+  "fontVariant",
+  "textDecorationColor",
+  "textDecorationStyle",
+  "textShadowColor",
+  "textShadowOffset",
+  "textShadowRadius",
+  "userSelect",
+  "writingDirection",
+]);
 let closure_3 = { eligible: false, reason: "animated" };
 let closure_4 = { eligible: false, reason: "experiment-disabled" };
 let closure_5 = { eligible: false, reason: "native-text-override" };

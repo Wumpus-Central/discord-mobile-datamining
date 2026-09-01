@@ -11,23 +11,53 @@ const require = arg1;
 let c8 = 0.04;
 let closure_9 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
 let closure_10 = createCacheKey.createStyles((borderRadius, paddingVertical) => {
-  let obj = { scrollContentContainer: { flexGrow: 1 }, controlsContainer: null, indicatorContainer: null, indicator: null };
-  obj = { backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" };
+  let obj = {
+    scrollContentContainer: { flexGrow: 1 },
+    controlsContainer: null,
+    indicatorContainer: null,
+    indicator: null,
+  };
+  obj = {
+    backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND,
+    borderRadius: borderRadius + paddingVertical,
+    paddingVertical,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+  };
   obj[1] = obj;
   obj[2] = { position: "absolute", width: "100%", height: "100%", borderRadius, flexDirection: "row" };
   obj = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_INDICATOR_BACKGROUND, borderRadius };
   obj[3] = obj;
   return obj;
 });
-let closure_11 = { code: "function SegmentedControlNativeTsx1(){const{indicatorWidth}=this.__closure;return indicatorWidth.get();}" };
-let closure_12 = { code: "function SegmentedControlNativeTsx2(_,previous){const{previousIndicatorWidth}=this.__closure;if(previous!=null){previousIndicatorWidth.set(previous);}}" };
-let closure_13 = { code: "function SegmentedControlNativeTsx3(){const{activeIndex,itemCount}=this.__closure;return Math.min(Math.max(activeIndex.get(),0),itemCount-1);}" };
-let closure_14 = { code: "function SegmentedControlNativeTsx4(){const{clampedActiveIndex,defaultActiveIndex,indicatorWidth}=this.__closure;return(clampedActiveIndex.get()-defaultActiveIndex.get())*indicatorWidth.get();}" };
-let closure_15 = { code: "function SegmentedControlNativeTsx5(){const{indicatorTranslateX,pressedIndex,clampedActiveIndex,PRESSED_TRANSLATE_AMOUNT,indicatorWidth,scrollOverflow,interpolate,SCROLL_OVERFLOW_UPPER_BOUND,SCROLL_OVERFLOW_MAX_SCALE,segmentSpacing,itemCount,previousIndicatorWidth,withSpring,SELECTED_INDICATOR_SPRING}=this.__closure;let translateX=indicatorTranslateX.get();let scaleX=1;if(pressedIndex.get()>=0){if(pressedIndex.get()<clampedActiveIndex.get()){scaleX+=PRESSED_TRANSLATE_AMOUNT;translateX-=indicatorWidth.get()*(PRESSED_TRANSLATE_AMOUNT/2);}else if(pressedIndex.get()>clampedActiveIndex.get()){scaleX+=PRESSED_TRANSLATE_AMOUNT;translateX+=indicatorWidth.get()*(PRESSED_TRANSLATE_AMOUNT/2);}}if(scrollOverflow.get()<0){const scaleFactor=interpolate(scrollOverflow.get(),[-SCROLL_OVERFLOW_UPPER_BOUND,0],[SCROLL_OVERFLOW_MAX_SCALE,1],'clamp');const scaleAmount=indicatorWidth.get()*(1-scaleFactor);scaleX=scaleFactor;translateX+=-scaleAmount/2;}else if(scrollOverflow.get()>0){const scaleFactor=interpolate(scrollOverflow.get(),[SCROLL_OVERFLOW_UPPER_BOUND,0],[SCROLL_OVERFLOW_MAX_SCALE,1],'clamp');const scaleAmount=indicatorWidth.get()*(1-scaleFactor);scaleX=scaleFactor;translateX+=scaleAmount/2;}if(clampedActiveIndex.get()===0){translateX+=segmentSpacing;}else if(clampedActiveIndex.get()===itemCount-1){translateX-=segmentSpacing;}const animated=indicatorWidth.get()===previousIndicatorWidth.get();if(!animated){previousIndicatorWidth.set(indicatorWidth.get());}return{transform:[{translateX:animated?withSpring(translateX,SELECTED_INDICATOR_SPRING):translateX},{scaleX:withSpring(scaleX,SELECTED_INDICATOR_SPRING)}]};}" };
-let closure_16 = { code: "function onPanGestureUpdate_SegmentedControlNativeTsx6(event){const{indicatorWidth,panIndex,activeIndex,itemCount}=this.__closure;const progess=event.translationX/indicatorWidth.get();const index=panIndex.get()+progess;activeIndex.set(Math.min(Math.max(index,0),itemCount-1));}" };
-let closure_17 = { code: "function SegmentedControlNativeTsx7(){const{panIndex,activeIndex,runOnJS,setActiveIndex}=this.__closure;panIndex.set(-1);activeIndex.set(Math.round(activeIndex.get()));runOnJS(setActiveIndex)(activeIndex.get());}" };
-let closure_18 = { code: "function SegmentedControlNativeTsx8(){const{panIndex,activeIndex}=this.__closure;panIndex.set(activeIndex.get());}" };
-let result = require("set").fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControl.native.tsx");
+let closure_11 = {
+  code: "function SegmentedControlNativeTsx1(){const{indicatorWidth}=this.__closure;return indicatorWidth.get();}",
+};
+let closure_12 = {
+  code: "function SegmentedControlNativeTsx2(_,previous){const{previousIndicatorWidth}=this.__closure;if(previous!=null){previousIndicatorWidth.set(previous);}}",
+};
+let closure_13 = {
+  code: "function SegmentedControlNativeTsx3(){const{activeIndex,itemCount}=this.__closure;return Math.min(Math.max(activeIndex.get(),0),itemCount-1);}",
+};
+let closure_14 = {
+  code: "function SegmentedControlNativeTsx4(){const{clampedActiveIndex,defaultActiveIndex,indicatorWidth}=this.__closure;return(clampedActiveIndex.get()-defaultActiveIndex.get())*indicatorWidth.get();}",
+};
+let closure_15 = {
+  code: "function SegmentedControlNativeTsx5(){const{indicatorTranslateX,pressedIndex,clampedActiveIndex,PRESSED_TRANSLATE_AMOUNT,indicatorWidth,scrollOverflow,interpolate,SCROLL_OVERFLOW_UPPER_BOUND,SCROLL_OVERFLOW_MAX_SCALE,segmentSpacing,itemCount,previousIndicatorWidth,withSpring,SELECTED_INDICATOR_SPRING}=this.__closure;let translateX=indicatorTranslateX.get();let scaleX=1;if(pressedIndex.get()>=0){if(pressedIndex.get()<clampedActiveIndex.get()){scaleX+=PRESSED_TRANSLATE_AMOUNT;translateX-=indicatorWidth.get()*(PRESSED_TRANSLATE_AMOUNT/2);}else if(pressedIndex.get()>clampedActiveIndex.get()){scaleX+=PRESSED_TRANSLATE_AMOUNT;translateX+=indicatorWidth.get()*(PRESSED_TRANSLATE_AMOUNT/2);}}if(scrollOverflow.get()<0){const scaleFactor=interpolate(scrollOverflow.get(),[-SCROLL_OVERFLOW_UPPER_BOUND,0],[SCROLL_OVERFLOW_MAX_SCALE,1],'clamp');const scaleAmount=indicatorWidth.get()*(1-scaleFactor);scaleX=scaleFactor;translateX+=-scaleAmount/2;}else if(scrollOverflow.get()>0){const scaleFactor=interpolate(scrollOverflow.get(),[SCROLL_OVERFLOW_UPPER_BOUND,0],[SCROLL_OVERFLOW_MAX_SCALE,1],'clamp');const scaleAmount=indicatorWidth.get()*(1-scaleFactor);scaleX=scaleFactor;translateX+=scaleAmount/2;}if(clampedActiveIndex.get()===0){translateX+=segmentSpacing;}else if(clampedActiveIndex.get()===itemCount-1){translateX-=segmentSpacing;}const animated=indicatorWidth.get()===previousIndicatorWidth.get();if(!animated){previousIndicatorWidth.set(indicatorWidth.get());}return{transform:[{translateX:animated?withSpring(translateX,SELECTED_INDICATOR_SPRING):translateX},{scaleX:withSpring(scaleX,SELECTED_INDICATOR_SPRING)}]};}",
+};
+let closure_16 = {
+  code: "function onPanGestureUpdate_SegmentedControlNativeTsx6(event){const{indicatorWidth,panIndex,activeIndex,itemCount}=this.__closure;const progess=event.translationX/indicatorWidth.get();const index=panIndex.get()+progess;activeIndex.set(Math.min(Math.max(index,0),itemCount-1));}",
+};
+let closure_17 = {
+  code: "function SegmentedControlNativeTsx7(){const{panIndex,activeIndex,runOnJS,setActiveIndex}=this.__closure;panIndex.set(-1);activeIndex.set(Math.round(activeIndex.get()));runOnJS(setActiveIndex)(activeIndex.get());}",
+};
+let closure_18 = {
+  code: "function SegmentedControlNativeTsx8(){const{panIndex,activeIndex}=this.__closure;panIndex.set(activeIndex.get());}",
+};
+let result = require("set").fileFinishedImporting(
+  "design/components/SegmentedControl/native/SegmentedControl.native.tsx",
+);
 
 export const SegmentedControl = function SegmentedControl(keyboardShouldPersistTaps) {
   const state = keyboardShouldPersistTaps.state;
@@ -138,7 +168,7 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
           interpolateResult = obj4.interpolate(obj3.get(), [-50, 0], [0.9, 1], "clamp");
           tmp15 = closure_12;
           num5 = 2;
-          sum = value + -closure_12.get() * (1 - interpolateResult) / 2;
+          sum = value + (-closure_12.get() * (1 - interpolateResult)) / 2;
           num = interpolateResult;
         } else {
           sum = value;
@@ -151,7 +181,7 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
             interpolateResult1 = obj13.interpolate(obj3.get(), [50, 0], [0.9, 1], "clamp");
             tmp35 = closure_12;
             num6 = 2;
-            sum = value + closure_12.get() * (1 - interpolateResult1) / 2;
+            sum = value + (closure_12.get() * (1 - interpolateResult1)) / 2;
             num = interpolateResult1;
           }
         }
@@ -185,7 +215,7 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
         obj = { transform: null };
         obj1 = { translateX: null };
         obj1[0] = withSpringResult;
-        items = [, ];
+        items = [,];
         items[0] = obj1;
         obj2 = { scaleX: null };
         tmp28 = state;
@@ -223,70 +253,98 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
       return;
     }
   }
-  obj = { indicatorTranslateX: derivedValue1, pressedIndex, clampedActiveIndex: derivedValue, PRESSED_TRANSLATE_AMOUNT: num, indicatorWidth: sharedValue1, scrollOverflow, interpolate: state(activeIndex[6]).interpolate, SCROLL_OVERFLOW_UPPER_BOUND: 50, SCROLL_OVERFLOW_MAX_SCALE: 0.9, segmentSpacing: num, itemCount: length, previousIndicatorWidth: sharedValue2, withSpring: state(activeIndex[7]).withSpring, SELECTED_INDICATOR_SPRING: closure_9 };
+  obj = {
+    indicatorTranslateX: derivedValue1,
+    pressedIndex,
+    clampedActiveIndex: derivedValue,
+    PRESSED_TRANSLATE_AMOUNT: num,
+    indicatorWidth: sharedValue1,
+    scrollOverflow,
+    interpolate: state(activeIndex[6]).interpolate,
+    SCROLL_OVERFLOW_UPPER_BOUND: 50,
+    SCROLL_OVERFLOW_MAX_SCALE: 0.9,
+    segmentSpacing: num,
+    itemCount: length,
+    previousIndicatorWidth: sharedValue2,
+    withSpring: state(activeIndex[7]).withSpring,
+    SELECTED_INDICATOR_SPRING: closure_9,
+  };
   B.__closure = obj;
   B.__workletHash = 5537358752627;
   B.__initData = sharedValue3;
   animatedStyle = state(activeIndex[6]).useAnimatedStyle(B);
   const items2 = [items, sharedValue3, callback, tmp4.indicator, animatedStyle];
   const items3 = [items, length, num, state, pressedIndex, "experimental_Large" === str, str, setActiveIndex];
-  const memo = scrollOverflow.useMemo(() => items.map((id) => {
-    const tmp = closure_15.get() === arg1;
-    let onLayout;
-    if (tmp) {
-      onLayout = closure_14;
-    }
-    const style = [indicator.indicator, tmp ? closure_18 : { opacity: 0 }];
-    return closure_1_6(closure_1_1(closure_1_2[6]).View, { onLayout, style }, id.id);
-  }), items2);
+  const memo = scrollOverflow.useMemo(
+    () =>
+      items.map((id) => {
+        const tmp = closure_15.get() === arg1;
+        let onLayout;
+        if (tmp) {
+          onLayout = closure_14;
+        }
+        const style = [indicator.indicator, tmp ? closure_18 : { opacity: 0 }];
+        return closure_1_6(closure_1_1(closure_1_2[6]).View, { onLayout, style }, id.id);
+      }),
+    items2,
+  );
   function onPanGestureUpdate(translationX) {
     const result = translationX.translationX / sharedValue1.get();
     const result1 = activeIndex.set(Math.min(Math.max(sharedValue.get() + result, 0), length - 1));
   }
-  onPanGestureUpdate.__closure = { indicatorWidth: sharedValue1, panIndex: sharedValue, activeIndex, itemCount: length };
+  onPanGestureUpdate.__closure = {
+    indicatorWidth: sharedValue1,
+    panIndex: sharedValue,
+    activeIndex,
+    itemCount: length,
+  };
   onPanGestureUpdate.__workletHash = 4853281820821;
   onPanGestureUpdate.__initData = derivedValue;
-  const memo1 = scrollOverflow.useMemo(() => items.map((arg0, index) => {
-    closure_0 = index;
-    ({ label, id, icon } = arg0);
-    if (0 === index) {
-      let tmp3 = closure_8;
-    } else if (index === closure_10 - 1) {
-      tmp3 = -closure_8;
-    }
-    if (0 === index) {
-      let tmp6 = -closure_8;
-    } else if (index === closure_10 - 1) {
-      tmp6 = closure_8;
-    }
-    obj = {
-      style: obj,
-      index,
-      itemCount: closure_10,
-      label,
-      state: closure_0,
-      pressed: closure_5,
-      onPress() {
-        closure_1_6(closure_0);
-      },
-      onPressIn() {
-        const result = closure_1_5.set(closure_0);
-      },
-      onPressOut() {
-        const result = closure_5.set(-1);
-      },
-      icon: null,
-      variant: null
-    };
-    obj = { minWidth: `${1 / closure_10 * 100}%`, marginStart: tmp3, marginEnd: tmp6 };
-    let tmp9 = null;
-    if (closure_7) {
-      tmp9 = icon;
-    }
-    obj[9] = tmp9;
-    obj[10] = closure_1;
-    return closure_1_6(closure_1_0(closure_1_2[8]).SegmentedControlItem, obj, id);
-  }), items3);
+  const memo1 = scrollOverflow.useMemo(
+    () =>
+      items.map((arg0, index) => {
+        closure_0 = index;
+        ({ label, id, icon } = arg0);
+        if (0 === index) {
+          let tmp3 = closure_8;
+        } else if (index === closure_10 - 1) {
+          tmp3 = -closure_8;
+        }
+        if (0 === index) {
+          let tmp6 = -closure_8;
+        } else if (index === closure_10 - 1) {
+          tmp6 = closure_8;
+        }
+        obj = {
+          style: obj,
+          index,
+          itemCount: closure_10,
+          label,
+          state: closure_0,
+          pressed: closure_5,
+          onPress() {
+            closure_1_6(closure_0);
+          },
+          onPressIn() {
+            const result = closure_1_5.set(closure_0);
+          },
+          onPressOut() {
+            const result = closure_5.set(-1);
+          },
+          icon: null,
+          variant: null,
+        };
+        obj = { minWidth: `${(1 / closure_10) * 100}%`, marginStart: tmp3, marginEnd: tmp6 };
+        let tmp9 = null;
+        if (closure_7) {
+          tmp9 = icon;
+        }
+        obj[9] = tmp9;
+        obj[10] = closure_1;
+        return closure_1_6(closure_1_0(closure_1_2[8]).SegmentedControlItem, obj, id);
+      }),
+    items3,
+  );
   const Gesture = state(activeIndex[9]).Gesture;
   const obj9 = state(activeIndex[6]);
   class J {
@@ -325,7 +383,13 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
   const items4 = [setActiveIndex(items, obj2), memo1];
   obj1[2] = items4;
   const tmp18 = callback(items, obj1, items.length);
-  obj3 = { horizontal: true, alwaysBounceHorizontal: false, contentContainerStyle: tmp4.scrollContentContainer, keyboardShouldPersistTaps: keyboardShouldPersistTaps.keyboardShouldPersistTaps, children: tmp18 };
+  obj3 = {
+    horizontal: true,
+    alwaysBounceHorizontal: false,
+    contentContainerStyle: tmp4.scrollContentContainer,
+    keyboardShouldPersistTaps: keyboardShouldPersistTaps.keyboardShouldPersistTaps,
+    children: tmp18,
+  };
   let tmp17Result = setActiveIndex(pressedIndex, obj3);
   if ("experimental_Large" === str) {
     obj4 = { gesture: null, children: null };

@@ -98,7 +98,9 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
           let tmp3Result = tmp3(5406);
           if (tmp3Result.isUnusableRoleSubscriptionEmoji(emoji, guildId)) {
             tmp3Result = tmp3(4114);
-            tmp3Result.shouldHideGuildPurchaseEntryPoints(emoji.guildId) ? EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE : EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
+            tmp3Result.shouldHideGuildPurchaseEntryPoints(emoji.guildId)
+              ? EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE
+              : EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
           } else {
             let PREMIUM_LOCKED = null;
             if (emoji.animated) {
@@ -131,7 +133,7 @@ function _getEmojiColors() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const obj2 = v0(table[10]);
       yield obj2.getEmojiColors(closure_0);
       return arg1;
@@ -149,13 +151,22 @@ function _getEmojiColors() {
 ({ isGuildTextChannelType: c4, isGuildVocalChannelType: c5 } = createChannelRecord);
 ({ EMOJI_MAX_FILESIZE: c9, EMOJI_MAX_LENGTH: c10, EMOJI_RE: unpackModuleId, EmojiDisabledReasons } = set);
 ({ EmojiIntention: map1, isExternalEmojiAllowedForIntention: closure_14 } = set);
-const items = [, ];
+const items = [,];
 ({ PREMIUM_LOCKED: arr[0], ROLE_SUBSCRIPTION_LOCKED: arr[1] } = EmojiDisabledReasons);
 set = new Set(items);
-const items1 = [...set, EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE, EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE];
+const items1 = [
+  ...set,
+  EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE,
+  EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE,
+];
 const set1 = new Set(items1);
-const items2 = [, , , ];
-({ DISALLOW_CUSTOM: arr3[0], DISALLOW_EXTERNAL: arr3[1], GUILD_SUBSCRIPTION_UNAVAILABLE: arr3[2], ONLY_GUILD_EMOJIS_ALLOWED: arr3[3] } = EmojiDisabledReasons);
+const items2 = [, , ,];
+({
+  DISALLOW_CUSTOM: arr3[0],
+  DISALLOW_EXTERNAL: arr3[1],
+  GUILD_SUBSCRIPTION_UNAVAILABLE: arr3[2],
+  ONLY_GUILD_EMOJIS_ALLOWED: arr3[3],
+} = EmojiDisabledReasons);
 const set2 = new Set(items2);
 const result = set.fileFinishedImporting("utils/EmojiUtils.tsx");
 
@@ -305,7 +316,7 @@ export default {
   },
   isDataTooBig(arg0) {
     return fit.dataUriFileSize(arg0) > closure_9;
-  }
+  },
 };
 export const countEmoji = function countEmoji(arr) {
   closure_0 = arg1;

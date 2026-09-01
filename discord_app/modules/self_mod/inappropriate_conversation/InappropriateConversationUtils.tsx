@@ -6,7 +6,9 @@ import closure_4 from "../ChannelSafetyWarningsStore.tsx";
 import { SafetyWarningTypes } from "../ChannelSafetyWarningsStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx",
+);
 
 export const getSafetyAlertsSettingOrDefault = function getSafetyAlertsSettingOrDefault() {
   currentUser = currentUser.getCurrentUser();
@@ -32,7 +34,9 @@ export const getSafetyAlertsSettingOrDefault = function getSafetyAlertsSettingOr
   }
   return userIsTeen;
 };
-export const getInappropriateConversationTakeoverForChannel = function getInappropriateConversationTakeoverForChannel(channelId) {
+export const getInappropriateConversationTakeoverForChannel = function getInappropriateConversationTakeoverForChannel(
+  channelId,
+) {
   channelSafetyWarnings = channelSafetyWarnings.getChannelSafetyWarnings(channelId);
   const found = channelSafetyWarnings.filter((type) => type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1);
   if (found.filter((dismiss_timestamp) => null != dismiss_timestamp.dismiss_timestamp).length > 0) {
@@ -46,21 +50,26 @@ export const getInappropriateConversationTakeoverForChannel = function getInappr
     return first;
   }
 };
-export const shouldShowInappropriateConversationTakeoverForChannelRecord = function shouldShowInappropriateConversationTakeoverForChannelRecord(safetyWarnings) {
-  let tmp = null != safetyWarnings.safetyWarnings;
-  if (tmp) {
-    safetyWarnings = safetyWarnings.safetyWarnings;
-    const found = safetyWarnings.filter((type) => type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1);
-    let everyResult = found.length > 0;
-    if (everyResult) {
-      everyResult = found.every((dismiss_timestamp) => null == dismiss_timestamp.dismiss_timestamp);
+export const shouldShowInappropriateConversationTakeoverForChannelRecord =
+  function shouldShowInappropriateConversationTakeoverForChannelRecord(safetyWarnings) {
+    let tmp = null != safetyWarnings.safetyWarnings;
+    if (tmp) {
+      safetyWarnings = safetyWarnings.safetyWarnings;
+      const found = safetyWarnings.filter((type) => type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1);
+      let everyResult = found.length > 0;
+      if (everyResult) {
+        everyResult = found.every((dismiss_timestamp) => null == dismiss_timestamp.dismiss_timestamp);
+      }
+      tmp = everyResult;
     }
-    tmp = everyResult;
-  }
-  return tmp;
-};
-export const shouldShowTakeoverForWarnings = function shouldShowTakeoverForWarnings(inappropriateConversationWarningsForChannel) {
-  const found = inappropriateConversationWarningsForChannel.filter((type) => type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1);
+    return tmp;
+  };
+export const shouldShowTakeoverForWarnings = function shouldShowTakeoverForWarnings(
+  inappropriateConversationWarningsForChannel,
+) {
+  const found = inappropriateConversationWarningsForChannel.filter(
+    (type) => type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1,
+  );
   let everyResult = found.length > 0;
   if (everyResult) {
     everyResult = found.every((dismiss_timestamp) => null == dismiss_timestamp.dismiss_timestamp);

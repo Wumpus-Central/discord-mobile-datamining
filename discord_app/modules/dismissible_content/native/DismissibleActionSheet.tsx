@@ -16,13 +16,16 @@ export const DismissibleActionSheet = function DismissibleActionSheet(arg0) {
     };
     obj.openLazy(lib.importer(), lib.actionSheetKey, obj);
   });
-  const items = [, ];
+  const items = [,];
   ({ actionSheetKey: arr[0], hideSheetOnUnmount: arr[1] } = arg0);
-  const effect = React.useEffect(() => () => {
-    if (tmp2) {
-      closure_1_0(closure_1_1[2]).hideActionSheet(tmp.actionSheetKey);
-      const obj = closure_1_0(closure_1_1[2]);
-    }
-  }, items);
+  const effect = React.useEffect(
+    () => () => {
+      if (tmp2) {
+        closure_1_0(closure_1_1[2]).hideActionSheet(tmp.actionSheetKey);
+        const obj = closure_1_0(closure_1_1[2]);
+      }
+    },
+    items,
+  );
   return null;
 };

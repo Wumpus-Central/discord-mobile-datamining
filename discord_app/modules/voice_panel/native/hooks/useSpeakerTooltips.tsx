@@ -8,8 +8,12 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ setVoiceUpsellDismissed: c5, useConsoleVoiceUpsellStore: closure_6 } = useConsoleVoiceUpsellStore);
-let closure_10 = { code: "function useSpeakerTooltipsTsx1(){const{controlsSpecs}=this.__closure;return controlsSpecs.get().mode;}" };
-let closure_11 = { code: "function useSpeakerTooltipsTsx2(currentControlsMode,previous){const{runOnJS,setIsShowingControls,VoicePanelControlsModes}=this.__closure;if(currentControlsMode===previous)return;runOnJS(setIsShowingControls)(currentControlsMode===VoicePanelControlsModes.FLOATING_DEFAULT);}" };
+let closure_10 = {
+  code: "function useSpeakerTooltipsTsx1(){const{controlsSpecs}=this.__closure;return controlsSpecs.get().mode;}",
+};
+let closure_11 = {
+  code: "function useSpeakerTooltipsTsx2(currentControlsMode,previous){const{runOnJS,setIsShowingControls,VoicePanelControlsModes}=this.__closure;if(currentControlsMode===previous)return;runOnJS(setIsShowingControls)(currentControlsMode===VoicePanelControlsModes.FLOATING_DEFAULT);}",
+};
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useSpeakerTooltips.tsx");
 
 export default function useSpeakerTooltips(targetRef, memo) {
@@ -51,7 +55,7 @@ export default function useSpeakerTooltips(targetRef, memo) {
   }
   memo2 = first;
   const items = [first, tmp5];
-  memo = obj2.useMemo(() => memo2 ? closure_3 : [], items);
+  memo = obj2.useMemo(() => (memo2 ? closure_3 : []), items);
   let tmp6Result = tmp6(tmp3[11]);
   const tmp8Result = callback(tmp6Result.useSelectedDismissibleContent(memo), 2);
   first1 = tmp8Result[0];
@@ -60,7 +64,15 @@ export default function useSpeakerTooltips(targetRef, memo) {
   closure_8 = tmp16;
   const items1 = [first, tmp8Result[1], first1];
   const memo1 = obj2.useMemo(() => {
-    const obj = { position: "bottom", title: null, description: null, visible: null, renderImgComponent: null, withBlurBackground: true, onDismiss: null };
+    const obj = {
+      position: "bottom",
+      title: null,
+      description: null,
+      visible: null,
+      renderImgComponent: null,
+      withBlurBackground: true,
+      onDismiss: null,
+    };
     const intl = memo2(callback1[13]).intl;
     obj[1] = intl.string(memo2(callback1[13]).t.O2WA4u);
     const intl2 = memo2(callback1[13]).intl;
@@ -102,7 +114,15 @@ export default function useSpeakerTooltips(targetRef, memo) {
     if (str == null) {
       str = "";
     }
-    obj = { position: "bottom", title: str, description: null, visible: null, imgSource: null, withBlurBackground: true, onDismiss: null };
+    obj = {
+      position: "bottom",
+      title: str,
+      description: null,
+      visible: null,
+      imgSource: null,
+      withBlurBackground: true,
+      onDismiss: null,
+    };
     let str2;
     if (consoleInfo != null) {
       str2 = consoleInfo.connectSublabel;
@@ -165,4 +185,4 @@ export default function useSpeakerTooltips(targetRef, memo) {
   const tmp2 = first;
   const tmp8 = callback;
   const coachmark1 = memo2(callback1[16]).useCoachmark(targetRef, memo2);
-};
+}

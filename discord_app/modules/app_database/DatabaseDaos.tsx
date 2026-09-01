@@ -4,9 +4,15 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 import closure_3 from "../../stores/AuthenticationStore.tsx";
 
 const require = arg1;
-const items = [require("../../../discord_common/js/packages/kv-storage/js/index.tsx").TableId.KvCache, "guild_basic_channels"];
-const items1 = [items, ];
-const items2 = [require("../../../discord_common/js/packages/kv-storage/js/index.tsx").TableId.KvCache, "basic_channels_stale"];
+const items = [
+  require("../../../discord_common/js/packages/kv-storage/js/index.tsx").TableId.KvCache,
+  "guild_basic_channels",
+];
+const items1 = [items];
+const items2 = [
+  require("../../../discord_common/js/packages/kv-storage/js/index.tsx").TableId.KvCache,
+  "basic_channels_stale",
+];
 items1[1] = items2;
 const Store = initializeDefault.Store;
 class DatabaseDaos extends Store {
@@ -149,7 +155,11 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     f73080 = (database) => {
-      const entityDao = new f73080(1957).EntityDao("guilds_requiring_deleted_ids_sync", f73080(1957).TableId.KvCache, database);
+      const entityDao = new f73080(1957).EntityDao(
+        "guilds_requiring_deleted_ids_sync",
+        f73080(1957).TableId.KvCache,
+        database,
+      );
       return entityDao;
     };
     applyArgumentsResult.guildsRequiringDeletedIdsSync = (arg0) => {
@@ -165,7 +175,11 @@ class DatabaseDaos extends Store {
       return tmp5;
     };
     f73080 = (database) => {
-      const entityDao = new f73080(1957).EntityDao("guilds_requiring_channel_sync", f73080(1957).TableId.KvCache, database);
+      const entityDao = new f73080(1957).EntityDao(
+        "guilds_requiring_channel_sync",
+        f73080(1957).TableId.KvCache,
+        database,
+      );
       return entityDao;
     };
     applyArgumentsResult.guildsRequiringChannelSync = (arg0) => {
@@ -354,11 +368,15 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.userGuildSettingsTransaction = function userGuildSettingsTransaction(database) {
       return f73080.userGuildSettings(database.database).upgradeTransaction(database);
     };
-    applyArgumentsResult.guildsRequiringDeletedIdsSyncTransaction = function guildsRequiringDeletedIdsSyncTransaction(database) {
+    applyArgumentsResult.guildsRequiringDeletedIdsSyncTransaction = function guildsRequiringDeletedIdsSyncTransaction(
+      database,
+    ) {
       const result = f73080.guildsRequiringDeletedIdsSync(database.database);
       return result.upgradeTransaction(database);
     };
-    applyArgumentsResult.guildsRequiringChannelSyncTransaction = function guildsRequiringChannelSyncTransaction(database) {
+    applyArgumentsResult.guildsRequiringChannelSyncTransaction = function guildsRequiringChannelSyncTransaction(
+      database,
+    ) {
       const result = f73080.guildsRequiringChannelSync(database.database);
       return result.upgradeTransaction(database);
     };

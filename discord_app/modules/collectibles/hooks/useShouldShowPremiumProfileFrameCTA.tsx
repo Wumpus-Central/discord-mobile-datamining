@@ -13,4 +13,4 @@ export default function useShouldShowPremiumProfileFrameCTA(location) {
     tmp2 = location.product.type === CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
   }
   return tmp2;
-};
+}

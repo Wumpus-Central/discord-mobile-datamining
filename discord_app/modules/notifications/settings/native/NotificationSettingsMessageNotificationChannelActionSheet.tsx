@@ -9,7 +9,9 @@ import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFla
 
 const require = arg1;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotificationChannelActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/notifications/settings/native/NotificationSettingsMessageNotificationChannelActionSheet.tsx",
+);
 
 export default function NotificationSettingsMessageNotificationChannelActionSheet(channel) {
   const _require = channel;
@@ -33,11 +35,19 @@ export default function NotificationSettingsMessageNotificationChannelActionShee
       tmp = unread !== closure_1_5.ALL_MESSAGES;
     }
     if (tmp) {
-      obj.flags = channel(closure_1_2[9]).withChannelUnreadFlags(closure_1_3.getChannelIdFlags(channel.channel.guild_id, channel.channel.id), closure_1_6.UNREADS_ALL_MESSAGES);
+      obj.flags = channel(closure_1_2[9]).withChannelUnreadFlags(
+        closure_1_3.getChannelIdFlags(channel.channel.guild_id, channel.channel.id),
+        closure_1_6.UNREADS_ALL_MESSAGES,
+      );
       const obj2 = channel(closure_1_2[9]);
     }
     const NotificationLabel = channel(closure_1_2[11]).NotificationLabel;
-    const result = unread(closure_1_2[10]).updateChannelOverrideSettings(channel.channel.guild_id, channel.channel.id, obj, NotificationLabel.notifications(message_notifications));
+    const result = unread(closure_1_2[10]).updateChannelOverrideSettings(
+      channel.channel.guild_id,
+      channel.channel.id,
+      obj,
+      NotificationLabel.notifications(message_notifications),
+    );
   };
   return jsx(unread(10246), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
-};
+}

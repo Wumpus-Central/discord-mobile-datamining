@@ -44,14 +44,22 @@ const memoResult = importAllResult.memo((guildId) => {
   tmp2Result = tmp2(tmp3[10]);
   const items2 = [callback1, segmentedControlState];
   const items3 = [stateFromStores];
-  stateFromStores1 = tmp2Result.useStateFromStores(items2, () => {
-    let canPruneGuildMembersResult = null != stateFromStores;
-    if (canPruneGuildMembersResult) {
-      canPruneGuildMembersResult = guildId(num[11]).canPruneGuildMembers(tmp, segmentedControlState.getCurrentUser(), callback1);
-      const obj = guildId(num[11]);
-    }
-    return canPruneGuildMembersResult;
-  }, items3);
+  stateFromStores1 = tmp2Result.useStateFromStores(
+    items2,
+    () => {
+      let canPruneGuildMembersResult = null != stateFromStores;
+      if (canPruneGuildMembersResult) {
+        canPruneGuildMembersResult = guildId(num[11]).canPruneGuildMembers(
+          tmp,
+          segmentedControlState.getCurrentUser(),
+          callback1,
+        );
+        const obj = guildId(num[11]);
+      }
+      return canPruneGuildMembersResult;
+    },
+    items3,
+  );
   const items4 = [guildId, num];
   const memo = obj.useMemo(() => {
     let obj = { label: null, id: null, page: null };
@@ -60,7 +68,7 @@ const memoResult = importAllResult.memo((guildId) => {
     obj[1] = guildId(num[13]).MemberSafetyPageTab.ALL_MEMBERS;
     obj = { guildId };
     obj[2] = closure_1_9(callback(num[14]), obj);
-    const items = [obj, , , ];
+    const items = [obj, , ,];
     obj = { label: null, id: null, count: null, page: null };
     const intl2 = guildId(num[12]).intl;
     obj[0] = intl2.string(guildId(num[12]).t["4eQVBO"]);
@@ -115,7 +123,7 @@ const memoResult = importAllResult.memo((guildId) => {
         obj[2] = ref.ref;
         const merged1 = Object.assign(merged);
         return callback3(callback(6237).HeaderActionButton, obj);
-      }
+      },
     };
     return closure_1_9(guildId(num[18]).ContextMenu, obj);
   }, items5);
@@ -129,7 +137,7 @@ const memoResult = importAllResult.memo((guildId) => {
           tmp = closure_1_6();
         }
         return tmp;
-      }
+      },
     });
   }, items6);
   const callback2 = obj.useCallback((nativeEvent) => {
@@ -151,14 +159,23 @@ const memoResult = importAllResult.memo((guildId) => {
   }, items7);
   obj = { style: tmp4.container, children: null };
   obj1 = { style: tmp4.tabContainer, children: null };
-  callback3 = obj.useCallback((toLocaleString) => "(" + guildId(num[23]).defaultCountFormatter(toLocaleString) + ")", []);
+  callback3 = obj.useCallback(
+    (toLocaleString) => "(" + guildId(num[23]).defaultCountFormatter(toLocaleString) + ")",
+    [],
+  );
   obj1[1] = callback(guildId(num[24]).Tabs, { state: segmentedControlState, grow: true, formatCount: callback3 });
-  const items8 = [callback(navigation, obj1), ];
+  const items8 = [callback(navigation, obj1)];
   const tmp2Result2 = guildId(num[22]);
-  items8[1] = callback(navigation, { style: tmp4.content, onLayout: callback2, children: callback(guildId(num[25]).SegmentedControlPages, { state: segmentedControlState }) });
+  items8[1] = callback(navigation, {
+    style: tmp4.content,
+    onLayout: callback2,
+    children: callback(guildId(num[25]).SegmentedControlPages, { state: segmentedControlState }),
+  });
   obj[1] = items8;
   return callback2(navigation, obj);
 });
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembersWithTabs.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/native/GuildSettingsModalMembersWithTabs.tsx",
+);
 
 export default memoResult;

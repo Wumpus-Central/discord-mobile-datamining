@@ -18,4 +18,4 @@ export default function useCameraEncodeError(arg0) {
       return type;
     }
   });
-};
+}

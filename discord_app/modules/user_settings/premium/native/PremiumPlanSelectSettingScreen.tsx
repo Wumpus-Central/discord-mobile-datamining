@@ -6,7 +6,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumPlanSelectSettingScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/premium/native/PremiumPlanSelectSettingScreen.tsx",
+);
 
 export default function PremiumPlanSelectSettingScreen() {
   let obj = useSettingNavigationRoute;
@@ -14,4 +16,4 @@ export default function PremiumPlanSelectSettingScreen() {
   obj = {};
   const merged = Object.assign(settingNavigationRoute.params);
   return jsx(BoostPurchaseNitroBannerDefault, {});
-};
+}

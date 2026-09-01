@@ -18,7 +18,10 @@ function CoachmarkImage() {
   return <closure_4 uri={metadataDefault} />;
 }
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
-let closure_8 = createCacheKey.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" }, image: { width: 160, height: 106 } });
+let closure_8 = createCacheKey.createStyles({
+  imageContainer: { alignItems: "center", justifyContent: "center" },
+  image: { width: 160, height: 106 },
+});
 const result = require("set").fileFinishedImporting("modules/user_profile/native/WishlistViewerCoachmark.tsx");
 
 export default function WishlistViewerCoachmark(isVisible) {
@@ -32,7 +35,17 @@ export default function WishlistViewerCoachmark(isVisible) {
   }, items);
   const items1 = [isVisible, markAsDismissed, callback];
   const memo = callback.useMemo(() => {
-    const obj = { title: null, description: null, position: "bottom", visible: null, onDismiss: null, renderImgComponent: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
+    const obj = {
+      title: null,
+      description: null,
+      position: "bottom",
+      visible: null,
+      onDismiss: null,
+      renderImgComponent: null,
+      buttonLabel: null,
+      buttonVariant: "primary",
+      onButtonPress: null,
+    };
     const intl = isVisible(onViewWishlist[6]).intl;
     obj[0] = intl.string(isVisible(onViewWishlist[6]).t["+b6iUl"]);
     const intl2 = isVisible(onViewWishlist[6]).intl;
@@ -51,4 +64,4 @@ export default function WishlistViewerCoachmark(isVisible) {
   }, items1);
   const coachmark = isVisible(onViewWishlist[7]).useCoachmark(isVisible.anchorRef, memo);
   return null;
-};
+}

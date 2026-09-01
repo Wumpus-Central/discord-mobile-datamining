@@ -13,11 +13,11 @@ class ForumPostAnalyticsManager extends tmp2 {
     applyArgumentsResult.readStateSnapshots = {};
     applyArgumentsResult.actions = {
       CHANNEL_SELECT(arg0) {
-            return applyArgumentsResult.handleChannelSelect(arg0);
-          },
+        return applyArgumentsResult.handleChannelSelect(arg0);
+      },
       THREAD_CREATE(arg0) {
-            return applyArgumentsResult.handleThreadCreate(arg0);
-          }
+        return applyArgumentsResult.handleThreadCreate(arg0);
+      },
     };
     applyArgumentsResult.handleChannelSelect = function handleChannelSelect(channelId) {
       channelId = channelId.channelId;

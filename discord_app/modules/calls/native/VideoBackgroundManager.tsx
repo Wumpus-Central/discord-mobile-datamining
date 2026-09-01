@@ -18,8 +18,7 @@ let prototype = function VideoBackgroundManager() {
   applyArgumentsResult.actions = { VOICE_CHANNEL_SELECT: applyArgumentsResult._handleSelectVoiceChannel };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 const result = require("set").fileFinishedImporting("modules/calls/native/VideoBackgroundManager.tsx");
 

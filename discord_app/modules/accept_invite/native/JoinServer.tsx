@@ -17,7 +17,7 @@ class OrSeparator {
     tmp = closure_11();
     obj = { style: tmp.separator, children: null };
     obj = { style: tmp.innerSeparator };
-    items = [, , ];
+    items = [, ,];
     items[0] = jsx(View, obj);
     obj1 = { style: tmp.orText, variant: "text-sm/semibold", color: "text-muted", children: null };
     intl = require("getSystemLocale").intl;
@@ -32,10 +32,24 @@ class OrSeparator {
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ CREATE_GUILD_SMALL_SCREEN_MAX_HEIGHT: closure_6, CreateGuildModalStates: error } = NUXGuildTemplatesAnalytics);
 ({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
-createCacheKey = { growSpacing: null, container: null, textInput: null, innerSeparator: null, separator: null, orText: null, header: null, description: null, exampleText: null };
+createCacheKey = {
+  growSpacing: null,
+  container: null,
+  textInput: null,
+  innerSeparator: null,
+  separator: null,
+  orText: null,
+  header: null,
+  description: null,
+  exampleText: null,
+};
 createCacheKey = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexGrow: 2, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
+createCacheKey[1] = {
+  flexGrow: 2,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_16,
+};
 let obj1 = { flexGrow: 2, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { borderRadius: ThemesDefault.radii.lg };
 let obj2 = { borderRadius: ThemesDefault.radii.lg };
@@ -61,7 +75,7 @@ export default function JoinServer(arg0) {
   navigation = obj.useNavigation();
   items = [navigation];
   obj = { keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
-  const items1 = [tmp.container, ];
+  const items1 = [tmp.container];
   obj = { paddingBottom: null };
   const callback = React.useCallback(() => {
     navigation.push(closure_1_7.JOIN_STUDENT_HUB);
@@ -72,11 +86,17 @@ export default function JoinServer(arg0) {
   let tmp7Result = null;
   if (useWindowDimensionsDefault().height > closure_6) {
     obj1 = { children: null };
-    const obj2 = { style: null, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+    const obj2 = {
+      style: null,
+      accessibilityRole: "header",
+      variant: "heading-xl/bold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj2[0] = tmp.header;
     const intl = tmp4(1236).intl;
     obj2[4] = intl.string(tmp4(1236).t.jlfuFW);
-    const items2 = [callback(tmp4(4474).Text, obj2), ];
+    const items2 = [callback(tmp4(4474).Text, obj2)];
     const obj3 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj3[0] = tmp.description;
     const intl2 = tmp4(1236).intl;
@@ -86,8 +106,21 @@ export default function JoinServer(arg0) {
     tmp7Result = tmp7(closure_10, obj1);
   }
   const obj4 = { children: null };
-  const items3 = [tmp7Result, , ];
-  const obj5 = { label: null, error: null, value: null, onChangeText: null, placeholder: null, accessibilityLabel: null, autoFocus: true, autoCapitalize: "none", autoCorrect: false, returnKeyType: "join", textStyle: null, onSubmitEditing: null };
+  const items3 = [tmp7Result, ,];
+  const obj5 = {
+    label: null,
+    error: null,
+    value: null,
+    onChangeText: null,
+    placeholder: null,
+    accessibilityLabel: null,
+    autoFocus: true,
+    autoCapitalize: "none",
+    autoCorrect: false,
+    returnKeyType: "join",
+    textStyle: null,
+    onSubmitEditing: null,
+  };
   const intl3 = tmp4(1236).intl;
   obj5[0] = intl3.string(navigation(1236).t.qreV25);
   obj5[1] = error;
@@ -107,13 +140,13 @@ export default function JoinServer(arg0) {
     example3: items[2],
     exampleHook(children) {
       return callback(navigation(table[6]).Text, { variant: "text-sm/medium", color: "text-default", children }, arg1);
-    }
+    },
   });
   items3[2] = callback(navigation(4474).Text, obj6);
   obj4[0] = items3;
-  const items4 = [closure_9(closure_4, obj4), ];
+  const items4 = [closure_9(closure_4, obj4)];
   const obj8 = { children: null };
-  const items5 = [callback(closure_4, { style: tmp.growSpacing }), , , ];
+  const items5 = [callback(closure_4, { style: tmp.growSpacing }), , ,];
   const obj10 = { size: "lg", text: null, accessibilityLabel: null, loading: null, disabled: null, onPress: null };
   const intl6 = tmp4(1236).intl;
   obj10[1] = intl6.string(navigation(1236).t["+H/coT"]);
@@ -135,5 +168,5 @@ export default function JoinServer(arg0) {
   items4[1] = closure_9(closure_10, obj8);
   obj[2] = items4;
   return closure_9(closure_5, obj);
-};
+}
 export { OrSeparator };

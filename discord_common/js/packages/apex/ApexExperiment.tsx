@@ -23,7 +23,14 @@ export default function createApexExperimentCommon(definition, registerExperimen
       callback = tmp2;
       const items = [evaluationAndAssignment];
       const items1 = [tmp, tmp2];
-      const tmp3 = callback(evaluationAndAssignment(589).useStateFromStoresArray(items, () => _location.getEvaluationAndAssignment(revision, closure_1, trackedVariantId, closure_2), items1), 2);
+      const tmp3 = callback(
+        evaluationAndAssignment(589).useStateFromStoresArray(
+          items,
+          () => _location.getEvaluationAndAssignment(revision, closure_1, trackedVariantId, closure_2),
+          items1,
+        ),
+        2,
+      );
       const first = tmp3[0];
       closure_3 = first;
       let variantId;
@@ -81,7 +88,17 @@ export default function createApexExperimentCommon(definition, registerExperimen
         tmp12 = closure_8;
       }
       closure_9 = tmp14;
-      const items2 = [tmp, first, trackedVariantId, revision, location.location, isOverride, prop, useAsEligibility, null == tmp12];
+      const items2 = [
+        tmp,
+        first,
+        trackedVariantId,
+        revision,
+        location.location,
+        isOverride,
+        prop,
+        useAsEligibility,
+        null == tmp12,
+      ];
       closure_1_3(() => {
         let tmp2 = null == closure_3;
         if (!tmp2) {
@@ -103,7 +120,15 @@ export default function createApexExperimentCommon(definition, registerExperimen
           tmp2 = closure_9;
         }
         if (!tmp2) {
-          const result = _location.trackExperimentExposure(tmp, trackedVariantId, _location.location, revision, revision, trackedVariantId, closure_1);
+          const result = _location.trackExperimentExposure(
+            tmp,
+            trackedVariantId,
+            _location.location,
+            revision,
+            revision,
+            trackedVariantId,
+            closure_1,
+          );
         }
       }, items2);
       if (null != variantId) {
@@ -119,7 +144,10 @@ export default function createApexExperimentCommon(definition, registerExperimen
         obj[0] = location.location;
         tmpResult = dependencyMap("user", obj);
       }
-      [tmp7, tmp8] = callback(evaluationAndAssignment.getEvaluationAndAssignment(closure_5, tmp3, closure_4, tmpResult), 2);
+      [tmp7, tmp8] = callback(
+        evaluationAndAssignment.getEvaluationAndAssignment(closure_5, tmp3, closure_4, tmpResult),
+        2,
+      );
       let variantId;
       if (tmp8 != null) {
         variantId = tmp8.variantId;
@@ -184,12 +212,20 @@ export default function createApexExperimentCommon(definition, registerExperimen
         tmp14 = null != tmp12;
       }
       if (tmp14) {
-        const result = obj2.trackExperimentExposure(tmp7, tmp5, location.location, tmp2, revision, trackedVariantId, tmp3);
+        const result = obj2.trackExperimentExposure(
+          tmp7,
+          tmp5,
+          location.location,
+          tmp2,
+          revision,
+          trackedVariantId,
+          tmp3,
+        );
       }
       if (null != variantId) {
         return tmp12;
       }
       tmp12 = closure_7;
-    }
+    },
   };
-};
+}

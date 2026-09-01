@@ -15,7 +15,9 @@ export const useTopCommands = function useTopCommands(commandContext) {
     const ifUncached = FrecencyUserSettingsActionCreators.loadIfUncached(constants.FRECENCY_AND_FAVORITES_SETTINGS);
   }, []);
   const items = [closure_5];
-  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => topCommandsWithoutLoadingLatest.getTopCommandsWithoutLoadingLatest());
+  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () =>
+    topCommandsWithoutLoadingLatest.getTopCommandsWithoutLoadingLatest(),
+  );
   const items1 = [stateFromStores, commandContext];
   return React.useMemo(() => closure_1_3(stateFromStores, closure_0), items1);
 };
@@ -26,7 +28,9 @@ export const useTopRealCommands = function useTopRealCommands(arg0) {
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const items = [closure_5];
-  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => topCommandsWithoutLoadingLatest.getTopCommandsWithoutLoadingLatest());
+  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () =>
+    topCommandsWithoutLoadingLatest.getTopCommandsWithoutLoadingLatest(),
+  );
   const items1 = [stateFromStores, arg0];
   return React.useMemo(() => closure_1_4(closure_1_3(stateFromStores, closure_0)), items1);
 };

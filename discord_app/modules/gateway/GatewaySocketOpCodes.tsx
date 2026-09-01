@@ -5,8 +5,7 @@ import closure_3 from "../../stores/RTCRegionStore.tsx";
 import { EventEmitter } from "../../../_runtime/00652_EventEmitter.js";
 
 require = arg1;
-class GatewaySocketOpCodes extends EventEmitter {
-}
+class GatewaySocketOpCodes extends EventEmitter {}
 const prototype = GatewaySocketOpCodes.prototype;
 prototype["presenceUpdate"] = function presenceUpdate(status, since, activities, afk) {
   this.send(Opcode.Opcode.PRESENCE_UPDATE, { status, since, activities, afk });
@@ -48,7 +47,14 @@ prototype["voiceStateUpdate"] = function voiceStateUpdate(guildId) {
   if (num === undefined) {
     num = 0;
   }
-  const obj = { guild_id: guildId, channel_id: channelId, self_mute: flag, self_deaf: flag2, self_video: flag3, flags: num };
+  const obj = {
+    guild_id: guildId,
+    channel_id: channelId,
+    self_mute: flag,
+    self_deaf: flag2,
+    self_video: flag3,
+    flags: num,
+  };
   let result = null != channelId;
   if (result) {
     result = closure_3.shouldIncludePreferredRegion();
@@ -121,7 +127,12 @@ prototype["streamCreate"] = function streamCreate(streamType, guildId, channelId
   if (region === undefined) {
     tmp = null;
   }
-  this.send(Opcode.Opcode.STREAM_CREATE, { type: streamType, guild_id: guildId, channel_id: channelId, preferred_region: tmp });
+  this.send(Opcode.Opcode.STREAM_CREATE, {
+    type: streamType,
+    guild_id: guildId,
+    channel_id: channelId,
+    preferred_region: tmp,
+  });
 };
 prototype["streamWatch"] = function streamWatch(streamKey) {
   this.send(Opcode.Opcode.STREAM_WATCH, { stream_key: streamKey });
@@ -136,7 +147,11 @@ prototype["streamSetPaused"] = function streamSetPaused(streamKey, paused) {
   this.send(Opcode.Opcode.STREAM_SET_PAUSED, { stream_key: streamKey, paused });
 };
 prototype["requestForumUnreads"] = function requestForumUnreads(guildId, channelId, threads) {
-  this.send(Opcode.Opcode.REQUEST_FORUM_UNREADS, { guild_id: guildId, channel_id: channelId, threads: threads.map((threadId) => ({ thread_id: threadId.threadId, ack_message_id: threadId.ackMessageId })) });
+  this.send(Opcode.Opcode.REQUEST_FORUM_UNREADS, {
+    guild_id: guildId,
+    channel_id: channelId,
+    threads: threads.map((threadId) => ({ thread_id: threadId.threadId, ack_message_id: threadId.ackMessageId })),
+  });
 };
 prototype["requestSoundboardSounds"] = function requestSoundboardSounds(guildIds) {
   this.send(Opcode.Opcode.REQUEST_SOUNDBOARD_SOUNDS, { guild_ids: guildIds });
@@ -144,8 +159,20 @@ prototype["requestSoundboardSounds"] = function requestSoundboardSounds(guildIds
 prototype["requestLastMessages"] = function requestLastMessages(closure_0, closure_1) {
   this.send(Opcode.Opcode.REQUEST_LAST_MESSAGES, { guild_id: closure_0, channel_ids: closure_1 });
 };
-prototype["getDeletedEntityIdsNotMatchingHash"] = function getDeletedEntityIdsNotMatchingHash(guild_id, channel_ids_hash, role_ids_hash, emoji_ids_hash, sticker_ids_hash) {
-  this.send(Opcode.Opcode.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH, { guild_id, channel_ids_hash, role_ids_hash, emoji_ids_hash, sticker_ids_hash });
+prototype["getDeletedEntityIdsNotMatchingHash"] = function getDeletedEntityIdsNotMatchingHash(
+  guild_id,
+  channel_ids_hash,
+  role_ids_hash,
+  emoji_ids_hash,
+  sticker_ids_hash,
+) {
+  this.send(Opcode.Opcode.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH, {
+    guild_id,
+    channel_ids_hash,
+    role_ids_hash,
+    emoji_ids_hash,
+    sticker_ids_hash,
+  });
 };
 prototype["triggerGuildChannelResync"] = function triggerGuildChannelResync(guild_id, items) {
   this.send(Opcode.Opcode.GUILD_CHANNELS_RESYNC, { guild_id, obfuscated_channel_ids: items });

@@ -28,10 +28,14 @@ if (null != global.__KvStorage) {
     }
   } else {
     const _Error = Error;
-    const error3 = new Error("couldn't start the storage subsystem: native module exists, but jsi might not be available?");
+    const error3 = new Error(
+      "couldn't start the storage subsystem: native module exists, but jsi might not be available?",
+    );
     throw error3;
   }
 }
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/implementation/Classic.native.tsx");
+const result = set.fileFinishedImporting(
+  "../discord_common/js/packages/kv-storage/js/implementation/Classic.native.tsx",
+);
 
 export const KV_RAW = __KvStorage;

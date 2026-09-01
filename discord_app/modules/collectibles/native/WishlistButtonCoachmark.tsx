@@ -51,4 +51,4 @@ export default function WishlistButtonCoachmark(anchorRef) {
   const obj3 = hasNeverWishlisted(15417);
   const coachmark = hasNeverWishlisted(8973).useCoachmark(anchorRef.anchorRef, memo1);
   return null;
-};
+}

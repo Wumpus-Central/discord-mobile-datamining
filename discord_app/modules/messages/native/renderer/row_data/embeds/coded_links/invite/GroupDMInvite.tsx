@@ -8,7 +8,9 @@ import closure_5 from "../../../../../../../../stores/UserStore.tsx";
 import { InviteTypes } from "../../../../../../../instant_invite/Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx",
+);
 
 export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, closure_2) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(closure_2));
@@ -83,7 +85,10 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
     channelName = intl4.string(tmp8(1236).t.LJpTRF);
   }
   if (flag) {
-    ({ acceptLabelDisabledColor: acceptLabelGreenColor, acceptLabelDisabledBackgroundColor: acceptLabelGreenBackgroundColor } = colors);
+    ({
+      acceptLabelDisabledColor: acceptLabelGreenColor,
+      acceptLabelDisabledBackgroundColor: acceptLabelGreenBackgroundColor,
+    } = colors);
     const intl6 = tmp8(1236).intl;
     let stringResult = intl6.string(tmp8(1236).t.cEnaWx);
   } else {

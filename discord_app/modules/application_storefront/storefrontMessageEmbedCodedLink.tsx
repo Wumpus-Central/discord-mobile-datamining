@@ -1,7 +1,9 @@
 // discord_app/modules/application_storefront/storefrontMessageEmbedCodedLink.tsx
 import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
 
-const result = require("set").fileFinishedImporting("modules/application_storefront/storefrontMessageEmbedCodedLink.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/application_storefront/storefrontMessageEmbedCodedLink.tsx",
+);
 
 export const makeStorefrontSKUCodedLink = function makeStorefrontSKUCodedLink(formatted, formatted2) {
   return "" + formatted + ":" + formatted2;

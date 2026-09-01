@@ -49,7 +49,7 @@ function PremiumRewardFillGradient(arg0) {
     return items1;
   }, items1);
   obj = { style: tmp.fill, colors: memo, start: closure_9, end: closure_10, pointerEvents: "none" };
-  const items3 = [callback(opaqueBlack(transparentWhite[9]), obj), , ];
+  const items3 = [callback(opaqueBlack(transparentWhite[9]), obj), ,];
   obj1 = { style: tmp.fill, colors: memo1, start: closure_11, end: closure_12, pointerEvents: "none" };
   items3[1] = callback(opaqueBlack(transparentWhite[9]), obj1);
   items3[2] = children;
@@ -74,7 +74,7 @@ function PremiumRewardGlowGradient(arg0) {
   const isThemeDarkResult = obj2.isThemeDark(token1(4413)());
   obj = { style: items1, children: null };
   items1 = [tmp.wrapper, style];
-  const items2 = [tmp.glow, ];
+  const items2 = [tmp.glow];
   let glowLight = !isThemeDarkResult;
   const tmp10 = closure_5;
   const tmp7 = token1(4413)();
@@ -92,13 +92,23 @@ function PremiumRewardGlowGradient(arg0) {
 }
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ wrapper: { position: "relative", overflow: "hidden" }, fill: { position: "absolute", left: 0, right: 0, bottom: 0, height: "100%" }, glow: { position: "absolute", left: 0, right: 0, bottom: 0, height: "50%" }, glowLight: { opacity: 0.5 } });
+let closure_8 = createCacheKey.createStyles({
+  wrapper: { position: "relative", overflow: "hidden" },
+  fill: { position: "absolute", left: 0, right: 0, bottom: 0, height: "100%" },
+  glow: { position: "absolute", left: 0, right: 0, bottom: 0, height: "50%" },
+  glowLight: { opacity: 0.5 },
+});
 let closure_9 = { x: 0, y: 0.5 };
 let closure_10 = { x: 1, y: 0.5 };
 let closure_11 = { x: 0.5, y: 0 };
 let closure_12 = { x: 0.5, y: 1 };
 const hexOpacityToRgbaResult = hexToRgba.hexOpacityToRgba("#000000", 0);
-let closure_13 = createCacheKey.createStyleProperties({ transparentBlack: hexOpacityToRgbaResult, opaqueBlack: ThemesDefault.colors.BLACK, transparentWhite: hexToRgba.hexOpacityToRgba("#FFFFFF", 0), opaqueWhite: ThemesDefault.colors.WHITE });
+let closure_13 = createCacheKey.createStyleProperties({
+  transparentBlack: hexOpacityToRgbaResult,
+  opaqueBlack: ThemesDefault.colors.BLACK,
+  transparentWhite: hexToRgba.hexOpacityToRgba("#FFFFFF", 0),
+  opaqueWhite: ThemesDefault.colors.WHITE,
+});
 const hexOpacityToRgbaResult1 = hexToRgba.hexOpacityToRgba("#FFFFFF", 0);
 const result = require("set").fileFinishedImporting("modules/quests/native/PremiumRewardGradient.tsx");
 
@@ -109,4 +119,4 @@ export default function QuestPremiumRewardGradientWrapper(visible) {
     obj[1] = tmp2;
     return tmp3(closure_5, obj);
   }
-};
+}

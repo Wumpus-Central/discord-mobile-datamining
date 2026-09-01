@@ -18,15 +18,18 @@ export default function useMobileInviteSuggestions(arg0, arg1, arg2, arg3) {
   dependencyMap = arg2;
   const callback = arg3;
   let items = [closure_7, closure_8];
-  const tmp = callback(require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
-    const items = [store.getInviteSuggestionRows(), ];
-    let voiceStatesForChannel = null;
-    if (null != closure_0) {
-      voiceStatesForChannel = closure_1_8.getVoiceStatesForChannel(tmp);
-    }
-    items[1] = voiceStatesForChannel;
-    return items;
-  }), 2);
+  const tmp = callback(
+    require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
+      const items = [store.getInviteSuggestionRows()];
+      let voiceStatesForChannel = null;
+      if (null != closure_0) {
+        voiceStatesForChannel = closure_1_8.getVoiceStatesForChannel(tmp);
+      }
+      items[1] = voiceStatesForChannel;
+      return items;
+    }),
+    2,
+  );
   const rows = tmp[0];
   closure_5 = tmp[1];
   const tmp3 = callback(rows.useState(true), 2);
@@ -37,7 +40,15 @@ export default function useMobileInviteSuggestions(arg0, arg1, arg2, arg3) {
     if (!isFetchingRows) {
       const initialCounts = store.getInitialCounts();
       let obj = callback(698);
-      obj = { location: null, num_suggestions: null, guild_id: null, num_friends: null, num_dms: null, num_group_dms: null, application_id: null };
+      obj = {
+        location: null,
+        num_suggestions: null,
+        guild_id: null,
+        num_friends: null,
+        num_dms: null,
+        num_group_dms: null,
+        application_id: null,
+      };
       obj[0] = callback;
       obj[1] = rows.length;
       obj[2] = lib.guild_id;
@@ -87,4 +98,4 @@ export default function useMobileInviteSuggestions(arg0, arg1, arg2, arg3) {
     memberIds = [];
   }, items2);
   return { rows, isFetchingRows };
-};
+}

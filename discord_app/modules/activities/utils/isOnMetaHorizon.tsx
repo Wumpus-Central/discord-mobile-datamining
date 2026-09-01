@@ -29,4 +29,4 @@ export default function isOnMetaHorizon(application_id) {
     tmp2 = tmp5;
   }
   return tmp2;
-};
+}

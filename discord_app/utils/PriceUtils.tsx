@@ -120,7 +120,13 @@ const result = require("set").fileFinishedImporting("utils/PriceUtils.tsx");
 
 export { formatSingleCurrencyPrice };
 export const formatDualPriceForBG = function formatDualPriceForBG(result, localeOverride) {
-  return "" + formatSingleCurrencyPrice(result, CurrencyCodes.EUR, localeOverride) + " (" + formatSingleCurrencyPrice(1.95583 * result, CurrencyCodes.BGN, localeOverride) + ")";
+  return (
+    "" +
+    formatSingleCurrencyPrice(result, CurrencyCodes.EUR, localeOverride) +
+    " (" +
+    formatSingleCurrencyPrice(1.95583 * result, CurrencyCodes.BGN, localeOverride) +
+    ")"
+  );
 };
 export { formatPrice };
 export { formatRate };
@@ -129,7 +135,11 @@ export const formatPercent = function formatPercent(arg0, arg1) {
 };
 export const formatSubscriptionPlanRate = function formatSubscriptionPlanRate(interval_count) {
   const price = getPremiumPlanItem.getPrice(interval_count.id);
-  return formatRate(formatPrice(price.amount, price.currency), interval_count.interval, "interval_count" in interval_count ? interval_count.interval_count : interval_count.intervalCount);
+  return formatRate(
+    formatPrice(price.amount, price.currency),
+    interval_count.interval,
+    "interval_count" in interval_count ? interval_count.interval_count : interval_count.intervalCount,
+  );
 };
 export const maybeShortenPrice = function maybeShortenPrice(str) {
   let replaced = str;

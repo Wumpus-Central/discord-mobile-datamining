@@ -8,7 +8,13 @@ class DetectableGameRecord extends tmp2 {
   constructor(arg0) {
     tmp3 = new DetectableGameRecord(tmp2, new.target, new.target, tmp);
     // ThrowIfThisInitialized (0x7c)
-    ({ id: tmp3.id, name: tmp3.name, description: tmp3.description, icon: tmp3.icon, icon_hash: tmp3.icon_hash } = global);
+    ({
+      id: tmp3.id,
+      name: tmp3.name,
+      description: tmp3.description,
+      icon: tmp3.icon,
+      icon_hash: tmp3.icon_hash,
+    } = global);
     tmp3.aliases = global.aliases || [];
     ({ cover_image_hash: tmp3.cover_image_hash, executables } = global);
     if (executables == null) {
@@ -48,5 +54,33 @@ prototype["hasTheme"] = function hasTheme(arg0) {
 
 export const GameTheme = { EROTIC: "Erotic" };
 export { DetectableGameRecord };
-export const GameDetectionDebugLevel = { NONE: 0, [0]: "NONE", WINDOWED_ONLY: 1, [1]: "WINDOWED_ONLY", ALL: 2, [2]: "ALL" };
-export const SteamReviewScoreDescription = { NO_USER_REVIEWS: 0, [0]: "NO_USER_REVIEWS", OVERWHELMINGLY_POSITIVE: 1, [1]: "OVERWHELMINGLY_POSITIVE", VERY_POSITIVE: 2, [2]: "VERY_POSITIVE", POSITIVE: 3, [3]: "POSITIVE", MOSTLY_POSITIVE: 4, [4]: "MOSTLY_POSITIVE", MIXED: 5, [5]: "MIXED", MOSTLY_NEGATIVE: 6, [6]: "MOSTLY_NEGATIVE", NEGATIVE: 7, [7]: "NEGATIVE", VERY_NEGATIVE: 8, [8]: "VERY_NEGATIVE", OVERWHELMINGLY_NEGATIVE: 9, [9]: "OVERWHELMINGLY_NEGATIVE" };
+export const GameDetectionDebugLevel = {
+  NONE: 0,
+  [0]: "NONE",
+  WINDOWED_ONLY: 1,
+  [1]: "WINDOWED_ONLY",
+  ALL: 2,
+  [2]: "ALL",
+};
+export const SteamReviewScoreDescription = {
+  NO_USER_REVIEWS: 0,
+  [0]: "NO_USER_REVIEWS",
+  OVERWHELMINGLY_POSITIVE: 1,
+  [1]: "OVERWHELMINGLY_POSITIVE",
+  VERY_POSITIVE: 2,
+  [2]: "VERY_POSITIVE",
+  POSITIVE: 3,
+  [3]: "POSITIVE",
+  MOSTLY_POSITIVE: 4,
+  [4]: "MOSTLY_POSITIVE",
+  MIXED: 5,
+  [5]: "MIXED",
+  MOSTLY_NEGATIVE: 6,
+  [6]: "MOSTLY_NEGATIVE",
+  NEGATIVE: 7,
+  [7]: "NEGATIVE",
+  VERY_NEGATIVE: 8,
+  [8]: "VERY_NEGATIVE",
+  OVERWHELMINGLY_NEGATIVE: 9,
+  [9]: "OVERWHELMINGLY_NEGATIVE",
+};

@@ -2,9 +2,7 @@
 import set from "../../_runtime/00002_set.js";
 
 const obj = {
-  useTrackNavigatorScreenImpression() {
-
-  }
+  useTrackNavigatorScreenImpression() {},
 };
 const result = set.fileFinishedImporting("design/config.tsx");
 

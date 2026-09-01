@@ -110,11 +110,11 @@ function CallWithVoiceChat(channel) {
     obj3[0] = channel;
     tmp16 = callback2(tmp2(9628), obj3);
   }
-  const items1 = [tmp16, ];
+  const items1 = [tmp16];
   const items2 = [animatedStyle1, StyleSheet.absoluteFill];
   items1[1] = callback2(translateX(4217).View, { pointerEvents: "box-none", style: items2 });
   obj2[1] = items1;
-  const items3 = [closure_13(closure_6, obj2), ];
+  const items3 = [closure_13(closure_6, obj2)];
   const obj4 = { style: tmp.textContainer, children: null };
   let tmp18Result = null;
   if (tmp11[0]) {
@@ -169,7 +169,7 @@ function MainCallScreen(channel) {
         closure_0 = arg0;
         c2 = 0;
         c3 = 0;
-        return (function*(arg0) {
+        return (function* (arg0) {
           if (c3 === 2) {
             c3 = 3;
             HermesBuiltin.throwTypeError();
@@ -286,11 +286,20 @@ function MainCallScreen(channel) {
   const tmp22 = id(9653);
   const tmp2Result = isConnectedToVoiceChannel(500);
   const tmp23 = isConnectedToVoiceChannel(500).isAndroid() || !isConnectedToVoiceChannel;
-  return tmp11(tmp22, { forceHide: isConnectedToVoiceChannel(500).isAndroid() || !isConnectedToVoiceChannel, showWhenParticipantOnScreen: !isConnectedToVoiceChannel, children: tmp11(isConnectedToVoiceChannel(4204).ThemeContextProvider, { gradient: tmp21, children: tmp14Result }) });
+  return tmp11(tmp22, {
+    forceHide: isConnectedToVoiceChannel(500).isAndroid() || !isConnectedToVoiceChannel,
+    showWhenParticipantOnScreen: !isConnectedToVoiceChannel,
+    children: tmp11(isConnectedToVoiceChannel(4204).ThemeContextProvider, { gradient: tmp21, children: tmp14Result }),
+  });
 }
 ({ View: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { flex: { flex: 1, alignSelf: "stretch" }, textInVoiceContainer: null, voiceContainer: null, textContainer: null };
+createCacheKey = {
+  flex: { flex: 1, alignSelf: "stretch" },
+  textInVoiceContainer: null,
+  voiceContainer: null,
+  textContainer: null,
+};
 createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.right = undefined;
@@ -304,10 +313,18 @@ const merged2 = Object.assign(StyleSheet.absoluteFillObject);
 obj2.left = "50%";
 createCacheKey[3] = obj2;
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let closure_15 = { code: "function ChannelCallNavigatorTsx1(){const{width,translateX}=this.__closure;var _translateX$get,_translateX;return{width:width,transform:[{translateX:(_translateX$get=(_translateX=translateX)===null||_translateX===void 0?void 0:_translateX.get())!==null&&_translateX$get!==void 0?_translateX$get:0}]};}" };
-let closure_16 = { code: "function ChannelCallNavigatorTsx2(){const{interpolate,translateX,width}=this.__closure;var _translateX$get,_translateX;return{backgroundColor:'black',opacity:interpolate((_translateX$get=(_translateX=translateX)===null||_translateX===void 0?void 0:_translateX.get())!==null&&_translateX$get!==void 0?_translateX$get:0,[-width,0],[0.9,0])};}" };
-let closure_17 = { code: "function ChannelCallNavigatorTsx3(){const{translateX}=this.__closure;var _translateX$get,_translateX;return Math.abs((_translateX$get=(_translateX=translateX)===null||_translateX===void 0?void 0:_translateX.get())!==null&&_translateX$get!==void 0?_translateX$get:0)>0;}" };
-let closure_18 = { code: "function ChannelCallNavigatorTsx4(isMoving,previous){const{runOnJS,setShouldRenderChat}=this.__closure;if(!isMoving||isMoving===previous)return;runOnJS(setShouldRenderChat)(true);}" };
+let closure_15 = {
+  code: "function ChannelCallNavigatorTsx1(){const{width,translateX}=this.__closure;var _translateX$get,_translateX;return{width:width,transform:[{translateX:(_translateX$get=(_translateX=translateX)===null||_translateX===void 0?void 0:_translateX.get())!==null&&_translateX$get!==void 0?_translateX$get:0}]};}",
+};
+let closure_16 = {
+  code: "function ChannelCallNavigatorTsx2(){const{interpolate,translateX,width}=this.__closure;var _translateX$get,_translateX;return{backgroundColor:'black',opacity:interpolate((_translateX$get=(_translateX=translateX)===null||_translateX===void 0?void 0:_translateX.get())!==null&&_translateX$get!==void 0?_translateX$get:0,[-width,0],[0.9,0])};}",
+};
+let closure_17 = {
+  code: "function ChannelCallNavigatorTsx3(){const{translateX}=this.__closure;var _translateX$get,_translateX;return Math.abs((_translateX$get=(_translateX=translateX)===null||_translateX===void 0?void 0:_translateX.get())!==null&&_translateX$get!==void 0?_translateX$get:0)>0;}",
+};
+let closure_18 = {
+  code: "function ChannelCallNavigatorTsx4(isMoving,previous){const{runOnJS,setShouldRenderChat}=this.__closure;if(!isMoving||isMoving===previous)return;runOnJS(setShouldRenderChat)(true);}",
+};
 let result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallNavigator.tsx");
 
 export default function ChannelCallNavigator(channel) {
@@ -316,7 +333,13 @@ export default function ChannelCallNavigator(channel) {
   if (guild_id == null) {
     guild_id = null;
   }
-  obj = { value: guild_id, children: tmp2(channel(6008).Navigator, { screens: { [ChannelCallScreens.MAIN_CALL_SCREEN]: obj }, initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN }) };
+  obj = {
+    value: guild_id,
+    children: tmp2(channel(6008).Navigator, {
+      screens: { [ChannelCallScreens.MAIN_CALL_SCREEN]: obj },
+      initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN,
+    }),
+  };
   obj = {
     headerShown: false,
     ignoreKeyboard: true,
@@ -324,7 +347,7 @@ export default function ChannelCallNavigator(channel) {
     title: "",
     render() {
       return closure_1_12(closure_1_20, { channel });
-    }
+    },
   };
   return closure_12(contextDefault.Provider, obj);
-};
+}

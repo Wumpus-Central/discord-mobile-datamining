@@ -53,4 +53,4 @@ export default function useScreenNameSharedValue() {
     const obj = sharedValue(closure_1_1[1]);
   }, items);
   return sharedValue;
-};
+}

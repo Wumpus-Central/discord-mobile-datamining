@@ -13,7 +13,12 @@ noopAll;
 ({ View: c3, Image: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 createCacheKey = { container: null, border: null, description: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
+createCacheKey = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[2] = { marginTop: 16, textAlign: "center" };
@@ -25,9 +30,9 @@ export default function NsfwGateChat() {
   const tmp = callback3();
   let obj = { children: null };
   obj = { style: tmp.border };
-  const items = [callback(closure_3, obj), ];
+  const items = [callback(closure_3, obj)];
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(closure_4, { source: registerAssetDefault }), ];
+  const items1 = [callback(closure_4, { source: registerAssetDefault })];
   const obj2 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
   const intl = getSystemLocale.intl;
   obj2[3] = intl.string(getSystemLocale.t.W4Qyxr);
@@ -36,4 +41,4 @@ export default function NsfwGateChat() {
   items[1] = callback2(closure_3, obj);
   obj[0] = items;
   return callback2(closure_7, obj);
-};
+}

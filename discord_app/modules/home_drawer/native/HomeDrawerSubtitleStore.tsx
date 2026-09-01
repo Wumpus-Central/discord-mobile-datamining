@@ -28,7 +28,7 @@ const obj = keys.create((arg0, arg1) => {
         _null = null;
       }
       _null({ currentType: "voice" });
-    }
+    },
   };
 });
 const result = set.fileFinishedImporting("modules/home_drawer/native/HomeDrawerSubtitleStore.tsx");

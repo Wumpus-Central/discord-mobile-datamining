@@ -10,7 +10,25 @@ let tmp3 = new timestampDefault("useScrollHandlers");
 let result = require("set").fileFinishedImporting("modules/messages/native/hooks/useScrollHandlers.tsx");
 
 export default function useScrollHandlers(arg0) {
-  ({ chatRef: require, chatManager: importDefault, chatUpdatesQueue: dependencyMap, pendingUpdatesQueueRef: closure_3, animatedRef: closure_4, fetchMoreBefore: closure_5, fetchMoreAfter: closure_6, handleVisibleMessagesChange: closure_7, applyNativeRowsUpdate: closure_8, messages: closure_9, channel: closure_10, channelId: closure_11, screenIndex: closure_12, onScroll: closure_13, useReducedMotion: closure_14, isStaff: closure_15, visibleMessagesWindowHandler: closure_16 } = arg0);
+  ({
+    chatRef: require,
+    chatManager: importDefault,
+    chatUpdatesQueue: dependencyMap,
+    pendingUpdatesQueueRef: closure_3,
+    animatedRef: closure_4,
+    fetchMoreBefore: closure_5,
+    fetchMoreAfter: closure_6,
+    handleVisibleMessagesChange: closure_7,
+    applyNativeRowsUpdate: closure_8,
+    messages: closure_9,
+    channel: closure_10,
+    channelId: closure_11,
+    screenIndex: closure_12,
+    onScroll: closure_13,
+    useReducedMotion: closure_14,
+    isStaff: closure_15,
+    visibleMessagesWindowHandler: closure_16,
+  } = arg0);
   let ref;
   let ref1;
   let ref2;
@@ -124,7 +142,18 @@ export default function useScrollHandlers(arg0) {
     if (isFirstMessageVisible === undefined) {
       isFirstMessageVisible = false;
     }
-    if (handleScrollCallbacks({ eventTimestamp: eventTimestamp.eventTimestamp, isAtBottom, isNearBottom, isNearTop, dragging, decelerating, shouldShowJumpToPresent, isFirstMessageVisible })) {
+    if (
+      handleScrollCallbacks({
+        eventTimestamp: eventTimestamp.eventTimestamp,
+        isAtBottom,
+        isNearBottom,
+        isNearTop,
+        dragging,
+        decelerating,
+        shouldShowJumpToPresent,
+        isFirstMessageVisible,
+      })
+    ) {
       ref2.current = isAtBottom;
       ref3.current = isNearBottom;
       ref4.current = isNearTop;
@@ -205,7 +234,17 @@ export default function useScrollHandlers(arg0) {
     handleScrollPosition(arg0) {
       ({ timeStamp, nativeEvent } = arg0);
       ({ firstVisibleMessageIndex, lastVisibleMessageIndex, changesetUpdateId } = nativeEvent);
-      ({ isAtBottom, isNearBottom, isNearTop, dragging, decelerating, shouldShowJumpToPresent, isFirstMessageVisible, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible } = nativeEvent);
+      ({
+        isAtBottom,
+        isNearBottom,
+        isNearTop,
+        dragging,
+        decelerating,
+        shouldShowJumpToPresent,
+        isFirstMessageVisible,
+        firstVisibleMessagePercentVisible,
+        lastVisibleMessagePercentVisible,
+      } = nativeEvent);
       let obj = closure_1_0(closure_1_2[7]);
       const changesetIdForChat = obj.getChangesetIdForChat(closure_0.current);
       if (changesetUpdateId !== changesetIdForChat) {
@@ -213,10 +252,22 @@ export default function useScrollHandlers(arg0) {
           ref.current = timeStamp;
         }
         if (closure_15) {
-          closure_1_6.log("STAFF-ACK-LOG: Ignoring outdated scroll event.", closure_11, changesetUpdateId, changesetIdForChat, timeStamp);
+          closure_1_6.log(
+            "STAFF-ACK-LOG: Ignoring outdated scroll event.",
+            closure_11,
+            changesetUpdateId,
+            changesetIdForChat,
+            timeStamp,
+          );
         }
       } else {
-        obj = { firstVisibleMessageRowIndex: null, lastVisibleMessageRowIndex: null, firstVisibleMessagePercentVisible: null, lastVisibleMessagePercentVisible: null, source: null };
+        obj = {
+          firstVisibleMessageRowIndex: null,
+          lastVisibleMessageRowIndex: null,
+          firstVisibleMessagePercentVisible: null,
+          lastVisibleMessagePercentVisible: null,
+          source: null,
+        };
         obj[0] = firstVisibleMessageIndex;
         obj[1] = lastVisibleMessageIndex;
         obj[2] = firstVisibleMessagePercentVisible;
@@ -228,7 +279,16 @@ export default function useScrollHandlers(arg0) {
           current = timeStamp;
         }
         ref.current = undefined;
-        obj = { eventTimestamp: null, isAtBottom: null, isNearBottom: null, isNearTop: null, dragging: null, decelerating: null, shouldShowJumpToPresent: null, isFirstMessageVisible: null };
+        obj = {
+          eventTimestamp: null,
+          isAtBottom: null,
+          isNearBottom: null,
+          isNearTop: null,
+          dragging: null,
+          decelerating: null,
+          shouldShowJumpToPresent: null,
+          isFirstMessageVisible: null,
+        };
         obj[0] = current;
         obj[1] = isAtBottom;
         obj[2] = isNearBottom;
@@ -246,6 +306,6 @@ export default function useScrollHandlers(arg0) {
       }
       tmp = closure_1_0;
       tmp2 = closure_1_2;
-    }
+    },
   };
-};
+}

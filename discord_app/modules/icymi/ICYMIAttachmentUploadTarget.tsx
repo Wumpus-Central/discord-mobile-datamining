@@ -5,8 +5,7 @@ import ME from "../../Constants.tsx";
 
 ({ Endpoints: obj1, MAX_ATTACHMENT_SIZE: c3, MAX_UPLOAD_COUNT: c4 } = ME);
 const result = set.fileFinishedImporting("modules/icymi/ICYMIAttachmentUploadTarget.tsx");
-class ICYMIAttachmentUploadTarget {
-}
+class ICYMIAttachmentUploadTarget {}
 const prototype = ICYMIAttachmentUploadTarget.prototype;
 prototype["getCreateAttachmentURL"] = function getCreateAttachmentURL() {
   return closure_2.GRAVITY_ATTACHMENTS;
@@ -27,7 +26,7 @@ Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
   get: function shouldReactNativeCompressUploads() {
     return true;
   },
-  set: undefined
+  set: undefined,
 });
 
 export default ICYMIAttachmentUploadTarget;

@@ -2,7 +2,9 @@
 import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { useNativeCheckoutStore } from "../../../checkout/native/NativeCheckoutStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseRunner.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseRunner.tsx",
+);
 
 export const HeadlessCollectiblesPurchaseRunner = function HeadlessCollectiblesPurchaseRunner(attempt) {
   attempt = attempt.attempt;

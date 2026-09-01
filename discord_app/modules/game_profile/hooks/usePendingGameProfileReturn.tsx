@@ -57,7 +57,7 @@ export default function usePendingGameProfileReturn(channelId) {
     if (stateFromStores1 != null) {
       id = stateFromStores1.id;
     }
-    return null != id ? (() => closure_1_1(closure_1_2[5]).clearGameProfilePendingReturn(id.id)) : undefined;
+    return null != id ? () => closure_1_1(closure_1_2[5]).clearGameProfilePendingReturn(id.id) : undefined;
   }, items3);
   if (stateFromStores1 != null) {
     const name = stateFromStores1.name;
@@ -77,4 +77,4 @@ export default function usePendingGameProfileReturn(channelId) {
     }
   }
   return null;
-};
+}

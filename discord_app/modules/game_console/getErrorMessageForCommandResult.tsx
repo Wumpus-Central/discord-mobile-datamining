@@ -89,4 +89,4 @@ export default function getErrorMessageForCommandResult(arg0, arg1, code) {
     }
     return tmp;
   }
-};
+}

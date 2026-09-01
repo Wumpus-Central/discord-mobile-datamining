@@ -14,8 +14,21 @@ noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: c5, BoostedGuildTiers: closure_6 } = ME);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { guildTierProgressCircle: { position: "relative", width: 70, height: 70 }, guildTierBackground: null, guildTierNoneIcon: null, guildTierIcon: null, guildTierName: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: 64, height: 64, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.xxl };
+createCacheKey = {
+  guildTierProgressCircle: { position: "relative", width: 70, height: 70 },
+  guildTierBackground: null,
+  guildTierNoneIcon: null,
+  guildTierIcon: null,
+  guildTierName: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  width: 64,
+  height: 64,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.xxl,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { width: 18, height: 30 };
 createCacheKey[3] = { width: 24, height: 24 };
@@ -48,7 +61,7 @@ export default function BoostedGuildTierProgressCircle(arg0) {
     if (null != tmp7) {
       num2 = 100;
       if (tmp7 > 0) {
-        num2 = tmp5 / tmp7 * 100;
+        num2 = (tmp5 / tmp7) * 100;
       }
     }
     obj = { style: null, percent: null, children: null };
@@ -70,7 +83,7 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       const obj2 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no" };
       obj2[0] = tier048PxSource;
       obj2[1] = tmp.guildTierIcon;
-      const items = [tmp8(tmp12, obj2), ];
+      const items = [tmp8(tmp12, obj2)];
       const obj3 = { style: null, variant: "text-xs/semibold", color: "interactive-text-active", children: null };
       obj3[0] = tmp.guildTierName;
       let tmp19Result = tmp19(4369);
@@ -84,4 +97,4 @@ export default function BoostedGuildTierProgressCircle(arg0) {
     tier048PxSource = tmp19Result.getTier048PxSource(theme);
     const obj10 = getGuildTierFromGuild;
   }
-};
+}

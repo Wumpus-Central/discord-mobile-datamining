@@ -17,5 +17,5 @@ export default {
     const result = obj.saveUserGuildSettings(id, obj);
     obj = { type: "GUILD_TOGGLE_COLLAPSE_MUTED", guildId: id };
     dispatcherDefault.dispatch(obj);
-  }
+  },
 };

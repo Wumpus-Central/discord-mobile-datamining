@@ -30,13 +30,13 @@ createToggle = {
     const intl = getSystemLocale.intl;
     const items = [intl.string(getSystemLocale.t.nuFtHH)];
     return items;
-  }
+  },
 };
 createToggle = {
   route: UserSettingsSections.VOICE,
   getComponent() {
     return KrispLogo /* KrispLogo */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/VoiceSetting.tsx");

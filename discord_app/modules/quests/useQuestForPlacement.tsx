@@ -47,16 +47,22 @@ export default function useFetchQuestForAdPlacement(arg0) {
   _require = arg0;
   const items = [closure_5];
   const items1 = [arg0];
-  stateFromStores = _require(stateFromStores[7]).useStateFromStores(items, () => {
-    const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
-    let value = deliveryAdDecisionByPlacement.get(closure_0);
-    if (value == null) {
-      value = null;
-    }
-    return value;
-  }, items1);
+  stateFromStores = _require(stateFromStores[7]).useStateFromStores(
+    items,
+    () => {
+      const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
+      let value = deliveryAdDecisionByPlacement.get(closure_0);
+      if (value == null) {
+        value = null;
+      }
+      return value;
+    },
+    items1,
+  );
   const obj = _require(stateFromStores[7]);
-  const enableFastAdRecheck = importDefault(stateFromStores[8]).useConfig({ location: "useQuestForAdPlacement" }).enableFastAdRecheck;
+  const enableFastAdRecheck = importDefault(stateFromStores[8]).useConfig({
+    location: "useQuestForAdPlacement",
+  }).enableFastAdRecheck;
   const items2 = [stateFromStores, arg0, enableFastAdRecheck];
   enableFastAdRecheck(() => {
     if (null != ref.current) {
@@ -64,14 +70,17 @@ export default function useFetchQuestForAdPlacement(arg0) {
       clearInterval(tmp.current);
     }
     closure_1_9(stateFromStores, current, "questBar-open");
-    ref.current = setInterval(() => {
-      const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
-      let value = deliveryAdDecisionByPlacement.get(current);
-      if (value == null) {
-        value = null;
-      }
-      closure_1_9(value, current, "questBar-interval");
-    }, enableFastAdRecheck ? closure_1_8 : closure_1_7);
+    ref.current = setInterval(
+      () => {
+        const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
+        let value = deliveryAdDecisionByPlacement.get(current);
+        if (value == null) {
+          value = null;
+        }
+        closure_1_9(value, current, "questBar-interval");
+      },
+      enableFastAdRecheck ? closure_1_8 : closure_1_7,
+    );
     current = tmp.current;
     return () => {
       if (null != current) {
@@ -84,14 +93,18 @@ export default function useFetchQuestForAdPlacement(arg0) {
   const obj2 = importDefault(stateFromStores[8]);
   const items3 = [closure_5];
   const items4 = [arg0];
-  const stateFromStores1 = _require(stateFromStores[7]).useStateFromStores(items3, () => {
-    const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
-    let value = deliveryAdDecisionByPlacement.get(closure_0);
-    if (value == null) {
-      value = null;
-    }
-    return value;
-  }, items4);
+  const stateFromStores1 = _require(stateFromStores[7]).useStateFromStores(
+    items3,
+    () => {
+      const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
+      let value = deliveryAdDecisionByPlacement.get(closure_0);
+      if (value == null) {
+        value = null;
+      }
+      return value;
+    },
+    items4,
+  );
   const obj3 = _require(stateFromStores[7]);
   let creative;
   if (stateFromStores1 != null) {
@@ -121,19 +134,23 @@ export default function useFetchQuestForAdPlacement(arg0) {
     }
   }
   return tmp8;
-};
+}
 export const useAdDecisionForPlacement = function useAdDecisionForPlacement(MOBILE_HOME_DOCK_AREA) {
   const _require = MOBILE_HOME_DOCK_AREA;
   const items = [closure_5];
   const items1 = [MOBILE_HOME_DOCK_AREA];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
-    let value = deliveryAdDecisionByPlacement.get(closure_0);
-    if (value == null) {
-      value = null;
-    }
-    return value;
-  }, items1);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
+      let value = deliveryAdDecisionByPlacement.get(closure_0);
+      if (value == null) {
+        value = null;
+      }
+      return value;
+    },
+    items1,
+  );
 };
 export const useAdRefreshLoop = function useAdRefreshLoop(MOBILE_HOME_DOCK_AREA) {
   let _require = MOBILE_HOME_DOCK_AREA;
@@ -141,16 +158,22 @@ export const useAdRefreshLoop = function useAdRefreshLoop(MOBILE_HOME_DOCK_AREA)
   _require = MOBILE_HOME_DOCK_AREA;
   const items = [closure_5];
   const items1 = [MOBILE_HOME_DOCK_AREA];
-  stateFromStores = _require(stateFromStores[7]).useStateFromStores(items, () => {
-    const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
-    let value = deliveryAdDecisionByPlacement.get(closure_0);
-    if (value == null) {
-      value = null;
-    }
-    return value;
-  }, items1);
+  stateFromStores = _require(stateFromStores[7]).useStateFromStores(
+    items,
+    () => {
+      const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
+      let value = deliveryAdDecisionByPlacement.get(closure_0);
+      if (value == null) {
+        value = null;
+      }
+      return value;
+    },
+    items1,
+  );
   const obj = _require(stateFromStores[7]);
-  const enableFastAdRecheck = importDefault(stateFromStores[8]).useConfig({ location: "useQuestForAdPlacement" }).enableFastAdRecheck;
+  const enableFastAdRecheck = importDefault(stateFromStores[8]).useConfig({
+    location: "useQuestForAdPlacement",
+  }).enableFastAdRecheck;
   const items2 = [stateFromStores, MOBILE_HOME_DOCK_AREA, enableFastAdRecheck];
   enableFastAdRecheck(() => {
     if (null != ref.current) {
@@ -158,14 +181,17 @@ export const useAdRefreshLoop = function useAdRefreshLoop(MOBILE_HOME_DOCK_AREA)
       clearInterval(tmp.current);
     }
     closure_1_9(stateFromStores, current, "questBar-open");
-    ref.current = setInterval(() => {
-      const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
-      let value = deliveryAdDecisionByPlacement.get(current);
-      if (value == null) {
-        value = null;
-      }
-      closure_1_9(value, current, "questBar-interval");
-    }, enableFastAdRecheck ? closure_1_8 : closure_1_7);
+    ref.current = setInterval(
+      () => {
+        const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
+        let value = deliveryAdDecisionByPlacement.get(current);
+        if (value == null) {
+          value = null;
+        }
+        closure_1_9(value, current, "questBar-interval");
+      },
+      enableFastAdRecheck ? closure_1_8 : closure_1_7,
+    );
     current = tmp.current;
     return () => {
       if (null != current) {

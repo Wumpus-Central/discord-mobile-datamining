@@ -15,7 +15,12 @@ import { initialize } from "../../../../discord_common/js/packages/flux/index.ts
 
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { subtitle: { textAlign: "center", lineHeight: 22 }, subtitleContainer: { alignItems: "center" }, divider: null, subtitleMeasure: null };
+createCacheKey = {
+  subtitle: { textAlign: "center", lineHeight: 22 },
+  subtitleContainer: { alignItems: "center" },
+  divider: null,
+  subtitleMeasure: null,
+};
 createCacheKey = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { position: "absolute", opacity: 0, left: 0, right: 0 };
@@ -40,7 +45,7 @@ export default function ChannelSpoiler(channelId) {
   }
   dependencyMap = isVocalResult;
   setControlsMode = obj3.useContext(tmp6(11839)).setControlsMode;
-  const items2 = [, , , ];
+  const items2 = [, , ,];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;
   items2[3] = isVocalResult;
@@ -78,8 +83,14 @@ export default function ChannelSpoiler(channelId) {
   if (null != channelIconComponent) {
     obj = { style: null, children: null };
     obj[0] = { flexDirection: "row", alignItems: "center", gap: 4, flexShrink: 1 };
-    const items4 = [callback(channelIconComponent, { size: "lg", color: "mobile-text-heading-primary" }), ];
-    obj = { variant: "heading-xxl/bold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: null };
+    const items4 = [callback(channelIconComponent, { size: "lg", color: "mobile-text-heading-primary" })];
+    obj = {
+      variant: "heading-xxl/bold",
+      color: "mobile-text-heading-primary",
+      lineClamp: 1,
+      style: null,
+      children: null,
+    };
     obj[3] = { flexShrink: 1 };
     obj[4] = tmp7;
     items4[1] = callback(tmp(4474).Text, obj);
@@ -108,8 +119,15 @@ export default function ChannelSpoiler(channelId) {
       obj4[0] = stateFromStores1.id;
       obj3[3] = tmp6Result.parseTopic(stateFromStores1.topic, true, obj4);
       obj2[2] = callback(tmp(4474).Text, obj3);
-      const items5 = [callback(View, obj2), , , ];
-      const obj5 = { color: "text-muted", variant: "text-md/medium", style: null, maxFontSizeMultiplier: 2, lineClamp: 3, children: null };
+      const items5 = [callback(View, obj2), , ,];
+      const obj5 = {
+        color: "text-muted",
+        variant: "text-md/medium",
+        style: null,
+        maxFontSizeMultiplier: 2,
+        lineClamp: 3,
+        children: null,
+      };
       obj5[2] = tmp4.subtitle;
       tmp6Result = tmp6(4468);
       const obj6 = { channelId: null };
@@ -138,7 +156,18 @@ export default function ChannelSpoiler(channelId) {
     }
     str = stateFromStores1.topic;
   }
-  const obj10 = { modalType: null, onAgree: null, onDisagree: null, title: null, subtitle: null, description: null, agreement: null, disagreement: null, guildId: null, channelId: null };
+  const obj10 = {
+    modalType: null,
+    onAgree: null,
+    onDisagree: null,
+    title: null,
+    subtitle: null,
+    description: null,
+    agreement: null,
+    disagreement: null,
+    guildId: null,
+    channelId: null,
+  };
   const tmp20 = callback;
   tmp7 = computeChannelNameDefault(stateFromStores1);
   obj10[0] = require("../../age_assurance/AgeVerificationAnalyticsUtils.tsx").NsfwSpaceWarningModalType.SPOILER_CHANNEL;
@@ -161,4 +190,4 @@ export default function ChannelSpoiler(channelId) {
   obj10[8] = id;
   obj10[9] = channelId.channelId;
   return tmp20(GatedContentDefault, obj10);
-};
+}

@@ -19,7 +19,7 @@ export default function useLoadGuildStickersWithCreator(arg0) {
   const effect = React.useEffect(() => {
     function _fetch() {
       const self = this;
-      const tmp = closure_2_2(function*() {
+      const tmp = closure_2_2(function* () {
         c0 = tmp3;
         c3 = 1;
         obj1 = closure_2_0(closure_2_1[6]);
@@ -87,4 +87,4 @@ export default function useLoadGuildStickersWithCreator(arg0) {
     obj[0] = tmp2;
   }
   return obj;
-};
+}

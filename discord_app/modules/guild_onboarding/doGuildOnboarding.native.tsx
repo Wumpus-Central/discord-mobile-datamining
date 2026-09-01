@@ -18,7 +18,7 @@ function _doGuildOnboarding() {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -182,7 +182,7 @@ function _fetchLandingAsset() {
     c4 = 0;
     c5 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -309,11 +309,9 @@ function openAndWaitForOnboarding(arg0) {
     obj = {
       guildId: tmp2,
       backShouldLeaveGuild: true,
-      onFinish() {
-
-      },
+      onFinish() {},
       landingAnimation: closure_1_12[tmp2],
-      isFirstOpen: true
+      isFirstOpen: true,
     };
     obj.pushLazy(callback(closure_1_2[17])(closure_1_2[16], closure_1_2.paths), obj, closure_1_7).then(() => {
       if (closure_1_5.getGuildId() !== closure_0) {
@@ -337,7 +335,7 @@ export default function doGuildOnboarding() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export { openAndWaitForOnboarding };
 export const discardOnboardingPromise = function discardOnboardingPromise(id) {
   delete tmp2[tmp];

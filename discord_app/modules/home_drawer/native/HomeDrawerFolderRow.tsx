@@ -137,7 +137,7 @@ function Wrapper(folder) {
     }
     return tmp2;
   });
-  const items6 = [folder.folderName, memo, , ];
+  const items6 = [folder.folderName, memo, ,];
   ({ title: arr10[2], titleText: arr10[3] } = tmp);
   const memo1 = stateFromStoresArray.useMemo(() => {
     if (memo.isMuted) {
@@ -146,8 +146,14 @@ function Wrapper(folder) {
       BellSlashIcon = closure_1_10;
     }
     let obj = { style: closure_1.title, children: null };
-    const items = [closure_1_11(BellSlashIcon, { size: "xs" }), ];
-    obj = { variant: "text-md/medium", style: closure_1.titleText, lineClamp: 1, color: "text-default", children: null };
+    const items = [closure_1_11(BellSlashIcon, { size: "xs" })];
+    obj = {
+      variant: "text-md/medium",
+      style: closure_1.titleText,
+      lineClamp: 1,
+      color: "text-default",
+      children: null,
+    };
     let folderName = folder.folderName;
     if (folderName == null) {
       const intl = folder(memo[13]).intl;
@@ -175,7 +181,16 @@ function Wrapper(folder) {
       let tmp14 = formatResult1;
     }
     const items7 = [tmp14, str];
-    const memo2 = obj.useMemo(() => closure_1_11(folder(memo[12]).Text, { variant: "text-xs/medium", color: c7, lineClamp: 1, children: formatResult3 }), items7);
+    const memo2 = obj.useMemo(
+      () =>
+        closure_1_11(folder(memo[12]).Text, {
+          variant: "text-xs/medium",
+          color: c7,
+          lineClamp: 1,
+          children: formatResult3,
+        }),
+      items7,
+    );
     obj1 = { title: null, subtitle: null };
     obj1[0] = memo1;
     let tmp20;
@@ -215,7 +230,10 @@ function Wrapper(folder) {
   }
 }
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let closure_13 = createCacheKey.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
+let closure_13 = createCacheKey.createStyles({
+  title: { flexDirection: "row", alignItems: "center", gap: 4 },
+  titleText: { flexShrink: 1 },
+});
 const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerFolderRow.tsx");
 
 export default function HomeDrawerFolderExpandedChildren(folderId) {
@@ -244,4 +262,4 @@ export default function HomeDrawerFolderExpandedChildren(folderId) {
     }
   }
   return tmp3;
-};
+}

@@ -18,7 +18,26 @@ function fromServerArray(id, roles) {
   return obj;
 }
 function fromServer(guildId, id) {
-  const obj = { id: id.id, name: id.name, guildId, permissions: fromStringAll.deserialize(id.permissions), mentionable: null, position: null, color: null, colorString: null, colors: null, colorStrings: null, hoist: null, managed: null, tags: null, icon: null, unicodeEmoji: null, flags: null, description: null, version: null };
+  const obj = {
+    id: id.id,
+    name: id.name,
+    guildId,
+    permissions: fromStringAll.deserialize(id.permissions),
+    mentionable: null,
+    position: null,
+    color: null,
+    colorString: null,
+    colors: null,
+    colorStrings: null,
+    hoist: null,
+    managed: null,
+    tags: null,
+    icon: null,
+    unicodeEmoji: null,
+    flags: null,
+    description: null,
+    version: null,
+  };
   ({ mentionable: obj[4], position: obj[5], color: obj[6] } = id);
   let int2hexResult = null;
   if (0 !== id.color) {
@@ -61,7 +80,26 @@ function fromServer(guildId, id) {
   return callback(GuildRoleRecordTypeTag, obj);
 }
 function fromSerialized(guildId, id) {
-  const obj = { id: id.id, name: id.name, guildId, permissions: fromStringAll.deserialize(id.permissions), mentionable: null, position: null, color: null, colorString: null, colors: null, colorStrings: null, hoist: null, managed: null, tags: null, icon: null, unicodeEmoji: null, flags: null, description: null, version: null };
+  const obj = {
+    id: id.id,
+    name: id.name,
+    guildId,
+    permissions: fromStringAll.deserialize(id.permissions),
+    mentionable: null,
+    position: null,
+    color: null,
+    colorString: null,
+    colors: null,
+    colorStrings: null,
+    hoist: null,
+    managed: null,
+    tags: null,
+    icon: null,
+    unicodeEmoji: null,
+    flags: null,
+    description: null,
+    version: null,
+  };
   ({ mentionable: obj[4], position: obj[5], color: obj[6] } = id);
   let int2hexResult = null;
   if (null != id.color) {

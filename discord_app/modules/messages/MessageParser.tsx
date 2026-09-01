@@ -150,17 +150,19 @@ function createParserState(getGuildId, arr) {
     mapped1 = [];
   }
   const tmp11 = applyDefault;
-  const tmp11Result = applyDefault(mapped1.reduce((arr, userId) => {
-    userId = userId.userId;
-    user = user.getUser(userId);
-    if (null != user) {
-      const obj = { id: null, text: null };
-      obj[0] = userId;
-      obj[1] = user.tag;
-      arr.push(obj);
-    }
-    return arr;
-  }, []));
+  const tmp11Result = applyDefault(
+    mapped1.reduce((arr, userId) => {
+      userId = userId.userId;
+      user = user.getUser(userId);
+      if (null != user) {
+        const obj = { id: null, text: null };
+        obj[0] = userId;
+        obj[1] = user.tag;
+        arr.push(obj);
+      }
+      return arr;
+    }, []),
+  );
   if (null != guild) {
     let sortedRoles = store3.getSortedRoles(guild.id);
   } else {
@@ -177,50 +179,64 @@ function createParserState(getGuildId, arr) {
   const mapped2 = found.map((id) => ({ id: id.id, text: id.name }));
   let tmp9Result = tmp9(12);
   const tmp13Result = applyDefault(sortedRoles);
-  const mapped3 = tmp9Result(textChannelNameDisambiguations.getTextChannelNameDisambiguations(guildId)).map((id) => ({ id: id.id, text: id.name }));
+  const mapped3 = tmp9Result(textChannelNameDisambiguations.getTextChannelNameDisambiguations(guildId)).map((id) => ({
+    id: id.id,
+    text: id.name,
+  }));
   if (null != guildId) {
     tmp9Result = tmp9(12);
     const found1 = tmp9Result(guildId(5385).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).filter((arg0) => arg0 !== closure_7);
     const tmp9Result1Result = tmp9Result(guildId(5385).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
-    const flatMapResult = found1.flatMap((arg0) => closure_1_6.getChannels(guildId)[arg0].map((channel) => {
-      channel = channel.channel;
-      if (!channel.isCategory()) {
-        const obj = { id: null, text: null };
-        obj[0] = channel.channel.id;
-        obj[1] = callback(table[14]).computeChannelName(channel.channel, closure_14, closure_12);
-        let tmp3 = obj;
-        const obj2 = callback(table[14]);
-      } else {
-        tmp3 = null;
-      }
-      return tmp3;
-    }));
-    let items = found1.flatMap((arg0) => closure_1_6.getChannels(guildId)[arg0].map((channel) => {
-      channel = channel.channel;
-      if (!channel.isCategory()) {
-        const obj = { id: null, text: null };
-        obj[0] = channel.channel.id;
-        obj[1] = callback(table[14]).computeChannelName(channel.channel, closure_14, closure_12);
-        let tmp3 = obj;
-        const obj2 = callback(table[14]);
-      } else {
-        tmp3 = null;
-      }
-      return tmp3;
-    })).filter(guildId(1471).isNotNullish).value();
-    const iter = found1.flatMap((arg0) => closure_1_6.getChannels(guildId)[arg0].map((channel) => {
-      channel = channel.channel;
-      if (!channel.isCategory()) {
-        const obj = { id: null, text: null };
-        obj[0] = channel.channel.id;
-        obj[1] = callback(table[14]).computeChannelName(channel.channel, closure_14, closure_12);
-        let tmp3 = obj;
-        const obj2 = callback(table[14]);
-      } else {
-        tmp3 = null;
-      }
-      return tmp3;
-    })).filter(guildId(1471).isNotNullish);
+    const flatMapResult = found1.flatMap((arg0) =>
+      closure_1_6.getChannels(guildId)[arg0].map((channel) => {
+        channel = channel.channel;
+        if (!channel.isCategory()) {
+          const obj = { id: null, text: null };
+          obj[0] = channel.channel.id;
+          obj[1] = callback(table[14]).computeChannelName(channel.channel, closure_14, closure_12);
+          let tmp3 = obj;
+          const obj2 = callback(table[14]);
+        } else {
+          tmp3 = null;
+        }
+        return tmp3;
+      }),
+    );
+    let items = found1
+      .flatMap((arg0) =>
+        closure_1_6.getChannels(guildId)[arg0].map((channel) => {
+          channel = channel.channel;
+          if (!channel.isCategory()) {
+            const obj = { id: null, text: null };
+            obj[0] = channel.channel.id;
+            obj[1] = callback(table[14]).computeChannelName(channel.channel, closure_14, closure_12);
+            let tmp3 = obj;
+            const obj2 = callback(table[14]);
+          } else {
+            tmp3 = null;
+          }
+          return tmp3;
+        }),
+      )
+      .filter(guildId(1471).isNotNullish)
+      .value();
+    const iter = found1
+      .flatMap((arg0) =>
+        closure_1_6.getChannels(guildId)[arg0].map((channel) => {
+          channel = channel.channel;
+          if (!channel.isCategory()) {
+            const obj = { id: null, text: null };
+            obj[0] = channel.channel.id;
+            obj[1] = callback(table[14]).computeChannelName(channel.channel, closure_14, closure_12);
+            let tmp3 = obj;
+            const obj2 = callback(table[14]);
+          } else {
+            tmp3 = null;
+          }
+          return tmp3;
+        }),
+      )
+      .filter(guildId(1471).isNotNullish);
   } else {
     items = [];
   }
@@ -232,7 +248,19 @@ function createParserState(getGuildId, arr) {
   const disambiguatedEmojiContext = store.getDisambiguatedEmojiContext(guildId);
   const escapedCustomEmoticonNames = disambiguatedEmojiContext.getEscapedCustomEmoticonNames();
   const customEmoji = disambiguatedEmojiContext.getCustomEmoji();
-  obj = { inline: true, mentionableRoles: mapped2, guild, users: tmp11Result, games: null, channels: null, emojiContext: null, customEmoticonsRegex: null, customEmoji: null, textExclusions: null, isNotification: false };
+  obj = {
+    inline: true,
+    mentionableRoles: mapped2,
+    guild,
+    users: tmp11Result,
+    games: null,
+    channels: null,
+    emojiContext: null,
+    customEmoticonsRegex: null,
+    customEmoji: null,
+    textExclusions: null,
+    isNotification: false,
+  };
   const customEmoticonRegex = disambiguatedEmojiContext.getCustomEmoticonRegex();
   const tmp9ResultResult = tmp9Result(textChannelNameDisambiguations.getTextChannelNameDisambiguations(guildId));
   if (null != arr) {
@@ -280,94 +308,96 @@ function unparseWithMeta(content, id, isNotification) {
   dependencyMap = undefined;
   c3 = "";
   const items = [];
-  const item = translateSurrogatesToInlineEmoji(4192).parserFor(omitResult)(content, obj).forEach((content) => {
-    (function handleEmoji(closure_0, type, f80944) {
-      if (null != f80944) {
-        if ("customEmoticon" === type.type) {
-          f80944(type.emoji, false);
-        }
-        if ("emoticon" === type.type) {
-          const result = callback(4134).translateSurrogatesToInlineEmoji(type.content);
-          let match = regex.exec(result);
-          if (null !== match) {
-            while (true) {
-              let tmp7 = match;
-              if (null != match[1]) {
-                if ("" !== match[1]) {
-                  let byId;
-                  if (closure_0.emojiContext) {
-                    let emojiContext = closure_0.emojiContext;
-                    byId = emojiContext.getById(match[1]);
-                  }
-                  if (byId) {
-                    let tmp11 = type.isShortcut || false;
-                    let tmp12 = f80944(byId, tmp11);
-                  }
-                  let tmp13 = regex;
-                  match = regex.exec(result);
-                  if (null === match) {
-                    break;
+  const item = translateSurrogatesToInlineEmoji(4192)
+    .parserFor(omitResult)(content, obj)
+    .forEach((content) => {
+      (function handleEmoji(closure_0, type, f80944) {
+        if (null != f80944) {
+          if ("customEmoticon" === type.type) {
+            f80944(type.emoji, false);
+          }
+          if ("emoticon" === type.type) {
+            const result = callback(4134).translateSurrogatesToInlineEmoji(type.content);
+            let match = regex.exec(result);
+            if (null !== match) {
+              while (true) {
+                let tmp7 = match;
+                if (null != match[1]) {
+                  if ("" !== match[1]) {
+                    let byId;
+                    if (closure_0.emojiContext) {
+                      let emojiContext = closure_0.emojiContext;
+                      byId = emojiContext.getById(match[1]);
+                    }
+                    if (byId) {
+                      let tmp11 = type.isShortcut || false;
+                      let tmp12 = f80944(byId, tmp11);
+                    }
+                    let tmp13 = regex;
+                    match = regex.exec(result);
+                    if (null === match) {
+                      break;
+                    }
                   }
                 }
-              }
-              let tmp8 = callback;
-              let tmp9 = dependencyMap;
-              let obj2 = callback(4134);
-              byId = obj2.getByName(match[2]);
-            }
-          }
-          const obj = callback(4134);
-        }
-      }
-    })(callback, content, f80944);
-    if (typeof content.content === "string") {
-      const type = content.type;
-      if ("emoji" === type) {
-        let obj = { position: null, length: null, id: null };
-        obj[0] = _var.length;
-        obj[1] = content.content.length;
-        obj[2] = content.id;
-        arr = arr.push(obj);
-        _var = _var + content.content;
-      } else {
-        if ("codeBlock" !== type) {
-          if ("inlineCode" !== type) {
-            if ("mention" !== type) {
-              if ("roleMention" !== type) {
-                if ("gameMention" !== type) {
-                  if ("channel" !== type) {
-                    _var = _var + lib(content.content);
-                  }
-                }
+                let tmp8 = callback;
+                let tmp9 = dependencyMap;
+                let obj2 = callback(4134);
+                byId = obj2.getByName(match[2]);
               }
             }
+            const obj = callback(4134);
           }
         }
-        if (true === tmp.isNotification) {
-          _var = _var + callback(f80944[26]).isolate(content.content);
-          let obj2 = callback(f80944[26]);
-        } else {
-          _var = _var + content.content;
-        }
-      }
-    } else {
-      const _Array = Array;
-      if (content.content.constructor === Array) {
-        const tmp24 = closure_1_23(content.content, tmp, lib, tmp2);
-        const emoji = tmp24.emoji;
-        for (const item10008 of emoji) {
-          let tmp5 = arr;
-          obj = { position: null, length: null, id: null };
-          let tmp6 = _var;
-          obj[0] = _var.length + item10008.position;
-          ({ length: obj[1], id: obj[2] } = item10008);
+      })(callback, content, f80944);
+      if (typeof content.content === "string") {
+        const type = content.type;
+        if ("emoji" === type) {
+          let obj = { position: null, length: null, id: null };
+          obj[0] = _var.length;
+          obj[1] = content.content.length;
+          obj[2] = content.id;
           arr = arr.push(obj);
-          continue;
+          _var = _var + content.content;
+        } else {
+          if ("codeBlock" !== type) {
+            if ("inlineCode" !== type) {
+              if ("mention" !== type) {
+                if ("roleMention" !== type) {
+                  if ("gameMention" !== type) {
+                    if ("channel" !== type) {
+                      _var = _var + lib(content.content);
+                    }
+                  }
+                }
+              }
+            }
+          }
+          if (true === tmp.isNotification) {
+            _var = _var + callback(f80944[26]).isolate(content.content);
+            let obj2 = callback(f80944[26]);
+          } else {
+            _var = _var + content.content;
+          }
         }
-        _var = _var + tmp24.content;
+      } else {
+        const _Array = Array;
+        if (content.content.constructor === Array) {
+          const tmp24 = closure_1_23(content.content, tmp, lib, tmp2);
+          const emoji = tmp24.emoji;
+          for (const item10008 of emoji) {
+            let tmp5 = arr;
+            obj = { position: null, length: null, id: null };
+            let tmp6 = _var;
+            obj[0] = _var.length + item10008.position;
+            ({ length: obj[1], id: obj[2] } = item10008);
+            arr = arr.push(obj);
+            continue;
+          }
+          _var = _var + tmp24.content;
+        }
       }
-    }
-  });
+    });
   obj = { content: c3, emoji: items };
   return obj;
 }
@@ -378,7 +408,23 @@ let tmp5 = /^<#(\d+)>/;
 let tmp6 = /^<a?:(\w+):(\d+)>/;
 const re18 = /(@everyone|@here|@Clyde)\b/;
 const re19 = /^[^\s]+@[^\s]+\.[^\s.]+/;
-let obj = { link: null, autolink: null, url: null, inlineCode: null, codeBlock: null, rawUserMention: null, rawRoleMention: null, rawChannelMention: null, rawEmoji: null, mention: null, channel: null, emoticon: null, emoji: null, customEmoticons: null, text: null };
+let obj = {
+  link: null,
+  autolink: null,
+  url: null,
+  inlineCode: null,
+  codeBlock: null,
+  rawUserMention: null,
+  rawRoleMention: null,
+  rawChannelMention: null,
+  rawEmoji: null,
+  mention: null,
+  channel: null,
+  emoticon: null,
+  emoji: null,
+  customEmoticons: null,
+  text: null,
+};
 let str = importDefaultResult.defaultRules.link;
 str7 = str;
 obj[0] = {
@@ -386,7 +432,7 @@ obj[0] = {
   match: str.match,
   parse(content) {
     return { type: str7.type, content: content[0] };
-  }
+  },
 };
 let str2 = importDefaultResult.defaultRules.autolink;
 str7 = str2;
@@ -395,7 +441,7 @@ obj[1] = {
   match: str2.match,
   parse(content) {
     return { type: str7.type, content: content[0] };
-  }
+  },
 };
 const str3 = importDefaultResult.defaultRules.url;
 str7 = str3;
@@ -404,7 +450,7 @@ obj[2] = {
   match: str3.match,
   parse(content) {
     return { type: str7.type, content: content[0] };
-  }
+  },
 };
 let str4 = parseLinkDefault.RULES.inlineCode;
 str7 = str4;
@@ -413,7 +459,7 @@ obj[3] = {
   match: str4.match,
   parse(content) {
     return { type: str7.type, content: content[0] };
-  }
+  },
 };
 let str5 = parseLinkDefault.RULES.codeBlock;
 str7 = str5;
@@ -422,13 +468,13 @@ obj[4] = {
   match: str5.match,
   parse(content) {
     return { type: str7.type, content: content[0] };
-  }
+  },
 };
 obj = {
   match: importDefaultResult.anyScopeRegex(tmp3),
   parse(content) {
     return { type: "text", content: content[0] };
-  }
+  },
 };
 obj[5] = obj;
 obj = { match: null, parse: null };
@@ -465,21 +511,25 @@ obj[9] = {
       let firstResult;
       if (str[0] === GAME_MENTION_SENTINEL) {
         closure_3 = str.substring(arr2.length);
-        const found = games.sortBy((text) => -text.text.length).filter((text) => {
-          const formatted = closure_1.toLowerCase();
-          return 1 === formatted.indexOf(text.text.toLowerCase());
-        });
+        const found = games
+          .sortBy((text) => -text.text.length)
+          .filter((text) => {
+            const formatted = closure_1.toLowerCase();
+            return 1 === formatted.indexOf(text.text.toLowerCase());
+          });
         const sortByResult = games.sortBy((text) => -text.text.length);
-        const mapped = found.sortBy((text) => {
-          let num = 1;
-          if (text.text === closure_3) {
-            num = 0;
-          }
-          return num;
-        }).map((text) => {
-          const items = [closure_0 + text.text, text.id, channel];
-          return items;
-        });
+        const mapped = found
+          .sortBy((text) => {
+            let num = 1;
+            if (text.text === closure_3) {
+              num = 0;
+            }
+            return num;
+          })
+          .map((text) => {
+            const items = [closure_0 + text.text, text.id, channel];
+            return items;
+          });
         firstResult = mapped.first();
         const sortByResult1 = found.sortBy((text) => {
           let num = 1;
@@ -500,21 +550,25 @@ obj[9] = {
         let firstResult1;
         if (str[0] === "@") {
           closure_3 = str.substring("@".length);
-          const found1 = users.sortBy((text) => -text.text.length).filter((text) => {
-            const formatted = closure_1.toLowerCase();
-            return 1 === formatted.indexOf(text.text.toLowerCase());
-          });
+          const found1 = users
+            .sortBy((text) => -text.text.length)
+            .filter((text) => {
+              const formatted = closure_1.toLowerCase();
+              return 1 === formatted.indexOf(text.text.toLowerCase());
+            });
           const sortByResult2 = users.sortBy((text) => -text.text.length);
-          const mapped1 = found1.sortBy((text) => {
-            let num = 1;
-            if (text.text === closure_3) {
-              num = 0;
-            }
-            return num;
-          }).map((text) => {
-            const items = [closure_0 + text.text, text.id, channel];
-            return items;
-          });
+          const mapped1 = found1
+            .sortBy((text) => {
+              let num = 1;
+              if (text.text === closure_3) {
+                num = 0;
+              }
+              return num;
+            })
+            .map((text) => {
+              const items = [closure_0 + text.text, text.id, channel];
+              return items;
+            });
           firstResult1 = mapped1.first();
           const sortByResult3 = found1.sortBy((text) => {
             let num = 1;
@@ -535,21 +589,25 @@ obj[9] = {
           let firstResult2;
           if (str[0] === "@") {
             closure_3 = str.substring("@".length);
-            const found2 = mentionableRoles.sortBy((text) => -text.text.length).filter((text) => {
-              const formatted = closure_1.toLowerCase();
-              return 1 === formatted.indexOf(text.text.toLowerCase());
-            });
+            const found2 = mentionableRoles
+              .sortBy((text) => -text.text.length)
+              .filter((text) => {
+                const formatted = closure_1.toLowerCase();
+                return 1 === formatted.indexOf(text.text.toLowerCase());
+              });
             const sortByResult4 = mentionableRoles.sortBy((text) => -text.text.length);
-            const mapped2 = found2.sortBy((text) => {
-              let num = 1;
-              if (text.text === closure_3) {
-                num = 0;
-              }
-              return num;
-            }).map((text) => {
-              const items = [closure_0 + text.text, text.id, channel];
-              return items;
-            });
+            const mapped2 = found2
+              .sortBy((text) => {
+                let num = 1;
+                if (text.text === closure_3) {
+                  num = 0;
+                }
+                return num;
+              })
+              .map((text) => {
+                const items = [closure_0 + text.text, text.id, channel];
+                return items;
+              });
             firstResult2 = mapped2.first();
             const sortByResult5 = found2.sortBy((text) => {
               let num = 1;
@@ -576,21 +634,25 @@ obj[9] = {
             let firstResult3;
             if (str[0] === "@") {
               closure_3 = str.substring("@".length);
-              const found3 = mapped3.sortBy((text) => -text.text.length).filter((text) => {
-                const formatted = closure_1.toLowerCase();
-                return 1 === formatted.indexOf(text.text.toLowerCase());
-              });
+              const found3 = mapped3
+                .sortBy((text) => -text.text.length)
+                .filter((text) => {
+                  const formatted = closure_1.toLowerCase();
+                  return 1 === formatted.indexOf(text.text.toLowerCase());
+                });
               const sortByResult6 = mapped3.sortBy((text) => -text.text.length);
-              const mapped4 = found3.sortBy((text) => {
-                let num = 1;
-                if (text.text === closure_3) {
-                  num = 0;
-                }
-                return num;
-              }).map((text) => {
-                const items = [closure_0 + text.text, text.id, channel];
-                return items;
-              });
+              const mapped4 = found3
+                .sortBy((text) => {
+                  let num = 1;
+                  if (text.text === closure_3) {
+                    num = 0;
+                  }
+                  return num;
+                })
+                .map((text) => {
+                  const items = [closure_0 + text.text, text.id, channel];
+                  return items;
+                });
               firstResult3 = mapped4.first();
               const sortByResult7 = found3.sortBy((text) => {
                 let num = 1;
@@ -644,7 +706,7 @@ obj[9] = {
       obj[1] = "<" + str + tmp + ">";
       return obj;
     }
-  }
+  },
 };
 obj[10] = {
   match(str, channels) {
@@ -653,28 +715,32 @@ obj[10] = {
     closure_1 = undefined;
     let firstResult1;
     if (str[0] === "#") {
-      if ("\"" !== str[1]) {
+      if ('"' !== str[1]) {
         str7 = "#";
         closure_1 = str;
         const channel = "channel";
         let firstResult;
         if (str[0] === "#") {
           closure_3 = str.substring("#".length);
-          const found = channels.sortBy((text) => -text.text.length).filter((text) => {
-            const formatted = closure_1.toLowerCase();
-            return 1 === formatted.indexOf(text.text.toLowerCase());
-          });
+          const found = channels
+            .sortBy((text) => -text.text.length)
+            .filter((text) => {
+              const formatted = closure_1.toLowerCase();
+              return 1 === formatted.indexOf(text.text.toLowerCase());
+            });
           const sortByResult = channels.sortBy((text) => -text.text.length);
-          const mapped = found.sortBy((text) => {
-            let num = 1;
-            if (text.text === closure_3) {
-              num = 0;
-            }
-            return num;
-          }).map((text) => {
-            const items = [closure_0 + text.text, text.id, channel];
-            return items;
-          });
+          const mapped = found
+            .sortBy((text) => {
+              let num = 1;
+              if (text.text === closure_3) {
+                num = 0;
+              }
+              return num;
+            })
+            .map((text) => {
+              const items = [closure_0 + text.text, text.id, channel];
+              return items;
+            });
           firstResult = mapped.first();
           const sortByResult1 = found.sortBy((text) => {
             let num = 1;
@@ -694,7 +760,7 @@ obj[10] = {
             if ("\\" !== str[num2]) {
               let sum = num2;
               num = num2;
-              if ("\"" === str[num2]) {
+              if ('"' === str[num2]) {
                 break;
               }
             } else {
@@ -726,7 +792,7 @@ obj[10] = {
   },
   parse(arg0) {
     return { type: "text", content: "<#" + arg0[1] + ">" };
-  }
+  },
 };
 obj[11] = {
   match(arg0, arg1, arg2) {
@@ -755,9 +821,13 @@ obj[11] = {
     }
   },
   parse(arg0) {
-    const obj = { type: "emoticon", content: parseRawEmojiObjectDefault.convertShortcutToName(arg0[1]), isShortcut: true };
+    const obj = {
+      type: "emoticon",
+      content: parseRawEmojiObjectDefault.convertShortcutToName(arg0[1]),
+      isShortcut: true,
+    };
     return obj;
-  }
+  },
 };
 const importDefaultResult3 = importDefaultResult;
 obj[12] = {
@@ -791,7 +861,7 @@ obj[12] = {
       obj[1] = tmp;
     }
     return obj;
-  }
+  },
 };
 obj[13] = {
   match(arg0, customEmoticonsRegex) {
@@ -823,7 +893,7 @@ obj[13] = {
       obj[1] = tmp;
     }
     return obj;
-  }
+  },
 };
 let obj4 = {};
 let merged = Object.assign(textRegexpDefault);
@@ -843,7 +913,20 @@ obj4.match = function match(arg0, textExclusions) {
   }
 };
 obj[14] = obj4;
-const obj5 = { inlineCode: null, codeBlock: null, mention: null, roleMention: null, channel: null, emoji: null, soundboard: null, unicodeEmoji: null, spoiler: null, staticRouteLink: null, timestamp: null, text: null };
+const obj5 = {
+  inlineCode: null,
+  codeBlock: null,
+  mention: null,
+  roleMention: null,
+  channel: null,
+  emoji: null,
+  soundboard: null,
+  unicodeEmoji: null,
+  spoiler: null,
+  staticRouteLink: null,
+  timestamp: null,
+  text: null,
+};
 const str6 = parseLinkDefault.RULES.inlineCode;
 str7 = str6;
 obj5[0] = {
@@ -851,7 +934,7 @@ obj5[0] = {
   match: str6.match,
   parse(content) {
     return { type: str7.type, content: content[0] };
-  }
+  },
 };
 str7 = parseLinkDefault.RULES.codeBlock;
 obj5[1] = {
@@ -859,7 +942,7 @@ obj5[1] = {
   match: str7.match,
   parse(content) {
     return { type: str7.type, content: content[0] };
-  }
+  },
 };
 const obj6 = { match: null, parse: null };
 const obj3 = {
@@ -893,7 +976,7 @@ const obj3 = {
       obj[1] = tmp;
     }
     return obj;
-  }
+  },
 };
 obj6[0] = importDefaultResult.anyScopeRegex(tmp3);
 obj6[1] = function parse(arg0, arg1, channelId) {
@@ -950,7 +1033,11 @@ obj6[1] = function parse(arg0, arg1, channelId) {
       if (null != id1) {
         closure_0 = str2.toLowerCase();
         let str5 = "";
-        if (tmp13Result1.some(store3.getUnsafeMutableRoles(guild.id), (name) => closure_0.startsWith(name.name.toLowerCase()))) {
+        if (
+          tmp13Result1.some(store3.getUnsafeMutableRoles(guild.id), (name) =>
+            closure_0.startsWith(name.name.toLowerCase()),
+          )
+        ) {
           const _HermesInternal = HermesInternal;
           const combined1 = "" + user.discriminator;
           const _HermesInternal2 = HermesInternal;
@@ -1209,7 +1296,7 @@ const obj16 = {
   unparse(content, id, isNotification) {
     return unparseWithMeta(content, id, isNotification).content;
   },
-  unparseWithMeta
+  unparseWithMeta,
 };
 let result = require("set").fileFinishedImporting("modules/messages/MessageParser.tsx");
 

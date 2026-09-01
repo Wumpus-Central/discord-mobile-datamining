@@ -214,9 +214,7 @@ export const handleClick = function handleClick(href, preventDefault) {
         const defaultResult = require("../lib/getOnClick.tsx").default(tmp8, obj3);
       }
       if (onCancel == null) {
-        onCancel = () => {
-
-        };
+        onCancel = () => {};
       }
       if (null !== guild_id.isBlockedDomain(tmp8)) {
         if (preventDefault != null) {
@@ -274,7 +272,14 @@ export const handleClick = function handleClick(href, preventDefault) {
               displayTarget = punycodeLinkResult.displayTarget;
             }
             const tmp53Result = tmp53(4954);
-            const obj5 = { url: null, trustUrl: null, onConfirm: null, onCancel: null, isProtocol: false, contextKey: null };
+            const obj5 = {
+              url: null,
+              trustUrl: null,
+              onConfirm: null,
+              onCancel: null,
+              isProtocol: false,
+              contextKey: null,
+            };
             obj5[0] = displayTarget;
             obj5[1] = tmp53(12819).trustDomain;
             obj5[2] = handleConfirm;

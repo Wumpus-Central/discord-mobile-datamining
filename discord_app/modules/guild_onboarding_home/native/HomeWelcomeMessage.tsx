@@ -10,17 +10,81 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { relativeContainer: { position: "relative" }, welcomeContainer: null, welcomeContent: null, avatarBackground: null, avatarBorder: null, avatar: null, adminUsernameContainer: null, adminUsername: null, message: null, icon: null };
-createCacheKey = { marginHorizontal: 12, marginVertical: 16, borderRadius: ThemesDefault.radii.sm, padding: 2, display: "flex", flexDirection: "column" };
+createCacheKey = {
+  relativeContainer: { position: "relative" },
+  welcomeContainer: null,
+  welcomeContent: null,
+  avatarBackground: null,
+  avatarBorder: null,
+  avatar: null,
+  adminUsernameContainer: null,
+  adminUsername: null,
+  message: null,
+  icon: null,
+};
+createCacheKey = {
+  marginHorizontal: 12,
+  marginVertical: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  padding: 2,
+  display: "flex",
+  flexDirection: "column",
+};
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 };
-let obj1 = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 };
-createCacheKey[3] = { position: "absolute", zIndex: 2, top: 0, left: 28, width: 40, height: 40, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let obj2 = { position: "absolute", zIndex: 2, top: 0, left: 28, width: 40, height: 40, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[4] = { position: "absolute", top: -2, zIndex: -1, left: 26, width: 44, height: 44, borderRadius: ThemesDefault.radii.round };
+createCacheKey[2] = {
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  paddingHorizontal: 12,
+  paddingBottom: 12,
+  paddingTop: 4,
+};
+let obj1 = {
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  paddingHorizontal: 12,
+  paddingBottom: 12,
+  paddingTop: 4,
+};
+createCacheKey[3] = {
+  position: "absolute",
+  zIndex: 2,
+  top: 0,
+  left: 28,
+  width: 40,
+  height: 40,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
+let obj2 = {
+  position: "absolute",
+  zIndex: 2,
+  top: 0,
+  left: 28,
+  width: 40,
+  height: 40,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
+createCacheKey[4] = {
+  position: "absolute",
+  top: -2,
+  zIndex: -1,
+  left: 26,
+  width: 44,
+  height: 44,
+  borderRadius: ThemesDefault.radii.round,
+};
 createCacheKey[5] = { position: "absolute", top: 0, zIndex: 3, left: 28 };
 createCacheKey[6] = { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 4, paddingLeft: 44 };
-let obj3 = { position: "absolute", top: -2, zIndex: -1, left: 26, width: 44, height: 44, borderRadius: ThemesDefault.radii.round };
+let obj3 = {
+  position: "absolute",
+  top: -2,
+  zIndex: -1,
+  left: 26,
+  width: 44,
+  height: 44,
+  borderRadius: ThemesDefault.radii.round,
+};
 createCacheKey[7] = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, paddingLeft: 8 };
 let obj4 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, paddingLeft: 8 };
 createCacheKey[8] = { color: ThemesDefault.colors.TEXT_DEFAULT };
@@ -59,7 +123,10 @@ export default function HomeWelcomeMessage(guildId) {
   }
   const tmp8 = stateFromStores1(stateFromStores2[9]);
   const tmp8Result = stateFromStores1(stateFromStores2[9])(id, guildId);
-  ({ primaryColor, secondaryColor, theme } = stateFromStores1(tmp3[10])({ user: stateFromStores2, displayProfile: stateFromStores1(stateFromStores2[9])(id, guildId) }));
+  ({ primaryColor, secondaryColor, theme } = stateFromStores1(tmp3[10])({
+    user: stateFromStores2,
+    displayProfile: stateFromStores1(stateFromStores2[9])(id, guildId),
+  }));
   let tmp2Result = tmp2(tmp3[8]);
   const items3 = [closure_5];
   stateFromStores3 = tmp2Result.useStateFromStores(items3, () => closure_1_5.getGuild(guildId));
@@ -94,7 +161,10 @@ export default function HomeWelcomeMessage(guildId) {
       const tmp4 = stateFromStores1(stateFromStores2[12]);
     }
   }, items4);
-  const tmp11 = stateFromStores1(tmp3[10])({ user: stateFromStores2, displayProfile: stateFromStores1(stateFromStores2[9])(id, guildId) });
+  const tmp11 = stateFromStores1(tmp3[10])({
+    user: stateFromStores2,
+    displayProfile: stateFromStores1(stateFromStores2[9])(id, guildId),
+  });
   const name = tmp2(tmp3[13]).useName(stateFromStores);
   if (null != stateFromStores1) {
     if (null != stateFromStores) {
@@ -107,7 +177,7 @@ export default function HomeWelcomeMessage(guildId) {
         obj1 = { style: null, children: null };
         obj1[0] = tmp.relativeContainer;
         if (null != stateFromStores2.avatarDecoration) {
-          const items6 = [null, , , ];
+          const items6 = [null, , ,];
           obj2 = { style: null };
           obj2[0] = tmp.avatarBackground;
           items6[1] = tmp17(tmp20, obj2);
@@ -117,7 +187,13 @@ export default function HomeWelcomeMessage(guildId) {
           let tmp7Result = tmp7(tmp3[16]);
           obj3[2] = tmp2(tmp3[17]).AvatarSizes.NORMAL;
           items6[2] = tmp17(tmp7Result, obj3);
-          const obj4 = { containerStyle: null, primaryColor: null, secondaryColor: null, fallbackBackground: null, children: null };
+          const obj4 = {
+            containerStyle: null,
+            primaryColor: null,
+            secondaryColor: null,
+            fallbackBackground: null,
+            children: null,
+          };
           obj4[0] = tmp.welcomeContainer;
           obj4[1] = primaryColor;
           obj4[2] = secondaryColor;
@@ -130,7 +206,7 @@ export default function HomeWelcomeMessage(guildId) {
           const obj7 = { style: null, variant: "text-md/semibold", children: null };
           obj7[0] = tmp.adminUsername;
           obj7[2] = tmp7(tmp3[20]).getName(guildId, null, stateFromStores2);
-          const items7 = [tmp17(tmp2(tmp3[19]).Text, obj7), ];
+          const items7 = [tmp17(tmp2(tmp3[19]).Text, obj7)];
           let tmp17Result = null;
           if (tmp16) {
             const obj8 = { size: null, style: null, source: null, disableColor: true };
@@ -141,7 +217,7 @@ export default function HomeWelcomeMessage(guildId) {
           }
           items7[1] = tmp17Result;
           obj6[1] = items7;
-          const items8 = [tmp19(tmp20, obj6), ];
+          const items8 = [tmp19(tmp20, obj6)];
           let username = name;
           if (name == null) {
             username = stateFromStores.username;
@@ -186,7 +262,7 @@ export default function HomeWelcomeMessage(guildId) {
           obj[3] = tmp19(tmp20, obj1);
           return tmp17(tmp18, obj);
         } else {
-          const items10 = [tmp.avatarBorder, ];
+          const items10 = [tmp.avatarBorder];
           if (null != primaryColor) {
             let int2rgbaResult = tmp2(tmp3[15]).int2rgba(primaryColor, 1);
             const tmp2Result2 = tmp2(tmp3[15]);
@@ -205,4 +281,4 @@ export default function HomeWelcomeMessage(guildId) {
     }
   }
   return null;
-};
+}

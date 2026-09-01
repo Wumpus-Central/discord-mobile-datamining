@@ -17,11 +17,20 @@ function LockedIcon() {
 }
 function DropdownIcon() {
   const items = [{ rotate: "90deg" }];
-  return callback(Button.Icon, { style: { transform: items }, size: Button.Icon.Sizes.MEDIUM, source: registerAssetDefault });
+  return callback(Button.Icon, {
+    style: { transform: items },
+    size: Button.Icon.Sizes.MEDIUM,
+    source: registerAssetDefault,
+  });
 }
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 }, placeholder: null, text: null };
+createCacheKey = {
+  container: { alignItems: "center", flexDirection: "row" },
+  content: { marginStart: 8, flexGrow: 1 },
+  placeholder: null,
+  text: null,
+};
 createCacheKey = {};
 const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_MUTED, 16));
 createCacheKey[2] = createCacheKey;
@@ -30,7 +39,9 @@ const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDe
 createCacheKey[3] = obj1;
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 const importDefaultResult1 = importDefaultResult;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormDropdown.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/FormDropdown.tsx",
+);
 
 export default function FormDropdown(arg0) {
   ({ disabled, label } = arg0);
@@ -47,8 +58,8 @@ export default function FormDropdown(arg0) {
     tmp9 = onPress;
   }
   obj[3] = tmp9;
-  const items1 = [leading, , ];
-  const items2 = [tmp.content, ];
+  const items1 = [leading, ,];
+  const items2 = [tmp.content];
   obj = { style: items2, children: null };
   items2[1] = null != label ? tmp.text : tmp.placeholder;
   if (label == null) {
@@ -59,5 +70,5 @@ export default function FormDropdown(arg0) {
   items1[2] = tmp5Result;
   obj[4] = items1;
   return tmp7(renderDefault, obj);
-};
+}
 export const useFormDropdownStyles = createCacheKey;

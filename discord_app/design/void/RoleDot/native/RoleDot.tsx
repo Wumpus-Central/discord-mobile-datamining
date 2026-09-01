@@ -11,7 +11,14 @@ import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { flexShrink: 0 }, background: { position: "relative" }, backgroundColor: null, borderBase: null, borderColor: null, dot: null };
+createCacheKey = {
+  container: { flexShrink: 0 },
+  background: { position: "relative" },
+  backgroundColor: null,
+  borderBase: null,
+  borderColor: null,
+  dot: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.TEXT_DEFAULT, borderRadius: ThemesDefault.radii.md };
@@ -62,7 +69,7 @@ export const RoleDot = function RoleDot(background) {
   result2 = diff / 2;
   const obj2 = { style: items, children: null };
   items = [tmp.container, obj, containerStyles];
-  const items1 = [tmp.background, , ];
+  const items1 = [tmp.background, ,];
   let backgroundColor = null;
   if (flag) {
     backgroundColor = tmp.backgroundColor;
@@ -73,12 +80,12 @@ export const RoleDot = function RoleDot(background) {
   const obj4 = { style: items2, children: closure_4(View, { style: items3 }) };
   items2 = [tmp.borderBase];
   items3 = [tmp.borderColor, { height: sum, width: sum }, { backgroundColor: color }];
-  const items4 = [closure_4(View, obj4), ];
+  const items4 = [closure_4(View, obj4)];
   if (tmp6) {
     if (null != colors) {
       if (null != colors.secondaryColor) {
         const obj5 = { colors: null, start: null, end: null, style: null };
-        const items5 = [, , ];
+        const items5 = [, ,];
         ({ primaryColor: arr7[0], secondaryColor: arr7[1], tertiaryColor: arr7[2] } = colors);
         obj5[0] = items5.filter(tmp2(1471).isNotNullish);
         obj5[1] = { x: 0, y: 0 };

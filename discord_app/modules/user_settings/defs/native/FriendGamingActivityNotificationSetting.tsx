@@ -17,7 +17,7 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: explicitContentFromProto.EnableFriendGamingActivityNotifications.useSetting,
-  onValueChange: onFriendGamingActivityNotificationSettingsChanged.onFriendGamingActivityNotificationSettingsChanged
+  onValueChange: onFriendGamingActivityNotificationSettingsChanged.onFriendGamingActivityNotificationSettingsChanged,
 });
 const obj = {
   useTitle() {
@@ -30,8 +30,10 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: explicitContentFromProto.EnableFriendGamingActivityNotifications.useSetting,
-  onValueChange: onFriendGamingActivityNotificationSettingsChanged.onFriendGamingActivityNotificationSettingsChanged
+  onValueChange: onFriendGamingActivityNotificationSettingsChanged.onFriendGamingActivityNotificationSettingsChanged,
 };
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/FriendGamingActivityNotificationSetting.tsx");
+const result = set.fileFinishedImporting(
+  "modules/user_settings/defs/native/FriendGamingActivityNotificationSetting.tsx",
+);
 
 export default toggle;

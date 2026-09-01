@@ -45,7 +45,13 @@ prototype["stop"] = function stop() {
 prototype["getPttQueueLatencyStats"] = function getPttQueueLatencyStats() {
   const pttQueueLatencyHistogram = this.pttQueueLatencyHistogram;
   const report = pttQueueLatencyHistogram.getReport([50, 95]);
-  return { ptt_queue_latency_max: report.max, ptt_queue_latency_mean: report.mean, ptt_queue_latency_p50: report.percentiles[50], ptt_queue_latency_p95: report.percentiles[95], ptt_queue_latency_samples: report.samples };
+  return {
+    ptt_queue_latency_max: report.max,
+    ptt_queue_latency_mean: report.mean,
+    ptt_queue_latency_p50: report.percentiles[50],
+    ptt_queue_latency_p95: report.percentiles[95],
+    ptt_queue_latency_samples: report.samples,
+  };
 };
 
 export default SystemResponsiveness;

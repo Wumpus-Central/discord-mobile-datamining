@@ -45,10 +45,12 @@ ActionBatcher.prototype["flush"] = function flush() {
   this.action = null;
   if (null != action) {
     const obj = action(self[0]);
-    action(self[0]).dispatch(action).catch((error) => {
-      const socket = self.socket;
-      return socket.resetSocketAndClearCacheOnError({ error, action: action.type });
-    });
+    action(self[0])
+      .dispatch(action)
+      .catch((error) => {
+        const socket = self.socket;
+        return socket.resetSocketAndClearCacheOnError({ error, action: action.type });
+      });
     const dispatchResult = action(self[0]).dispatch(action);
   }
 };

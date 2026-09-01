@@ -2,7 +2,9 @@
 import closure_2 from "../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesFlatData.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/useMessagesFlatData.tsx",
+);
 
 export default function useMessagesFlatData(channels, listItemHeight) {
   listItemHeight = listItemHeight.listItemHeight;
@@ -91,4 +93,4 @@ export default function useMessagesFlatData(channels, listItemHeight) {
     }
     return { listData, friendsHeaderIndex, friendsHeaderOffset, listHeaderHeight };
   }, items);
-};
+}

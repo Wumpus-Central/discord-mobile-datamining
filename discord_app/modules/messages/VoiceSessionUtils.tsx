@@ -33,33 +33,53 @@ export const getSortedVoiceSessionParticipants = function getSortedVoiceSessionP
     reduced = [];
   }
   const userAffinitiesMap = authStore.getUserAffinitiesMap();
-  return require("../user_affinities/maybeSortByProbability.tsx").maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
+  return require("../user_affinities/maybeSortByProbability.tsx").maybeSortByProbability(
+    reduced,
+    userAffinitiesMap,
+    "VoiceSessionUtils - participants",
+  );
 };
 export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionParticipants(author) {
   let stateFromStoresArray = author;
   const items = [closure_6];
   const items1 = [author.author.id, author.call];
-  stateFromStoresArray = stateFromStoresArray(589).useStateFromStoresArray(items, () => {
-    const call = stateFromStoresArray.call;
-    let participants;
-    if (call != null) {
-      participants = call.participants;
-    }
-    if (null != participants) {
-      const participants1 = stateFromStoresArray.call.participants;
-      const mapped = participants1.map((arg0) => user.getUser(arg0));
-      const found = mapped.filter((arg0) => null != arg0);
-      let found1 = found.filter((id) => id.id !== author.author.id);
-    } else {
-      found1 = [];
-    }
-    return found1;
-  }, items1);
+  stateFromStoresArray = stateFromStoresArray(589).useStateFromStoresArray(
+    items,
+    () => {
+      const call = stateFromStoresArray.call;
+      let participants;
+      if (call != null) {
+        participants = call.participants;
+      }
+      if (null != participants) {
+        const participants1 = stateFromStoresArray.call.participants;
+        const mapped = participants1.map((arg0) => user.getUser(arg0));
+        const found = mapped.filter((arg0) => null != arg0);
+        let found1 = found.filter((id) => id.id !== author.author.id);
+      } else {
+        found1 = [];
+      }
+      return found1;
+    },
+    items1,
+  );
   const obj = stateFromStoresArray(589);
   const items2 = [closure_4];
-  const stateFromStores = stateFromStoresArray(589).useStateFromStores(items2, () => userAffinitiesMap.getUserAffinitiesMap(), []);
+  const stateFromStores = stateFromStoresArray(589).useStateFromStores(
+    items2,
+    () => userAffinitiesMap.getUserAffinitiesMap(),
+    [],
+  );
   const items3 = [stateFromStoresArray, stateFromStores];
-  return React.useMemo(() => stateFromStoresArray(closure_1_2[4]).maybeSortByProbability(stateFromStoresArray, stateFromStores, "VoiceSessionUtils - participants"), items3);
+  return React.useMemo(
+    () =>
+      stateFromStoresArray(closure_1_2[4]).maybeSortByProbability(
+        stateFromStoresArray,
+        stateFromStores,
+        "VoiceSessionUtils - participants",
+      ),
+    items3,
+  );
 };
 export const getVoiceSessionMessageContent = function getVoiceSessionMessageContent(channel_id) {
   let _require = channel.getChannel(channel_id.channel_id);
@@ -89,7 +109,11 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     reduced = [];
   }
   const userAffinitiesMap = authStore.getUserAffinitiesMap();
-  const result = require("../user_affinities/maybeSortByProbability.tsx").maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
+  const result = require("../user_affinities/maybeSortByProbability.tsx").maybeSortByProbability(
+    reduced,
+    userAffinitiesMap,
+    "VoiceSessionUtils - participants",
+  );
   const mapped = result.map((user) => {
     const obj = { user, messageAuthor: channel_id(closure_1_2[7]).getUserAuthor(user, channel_id) };
     return obj;
@@ -102,7 +126,17 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     let formatToPlainStringResult = intl.formatToPlainString(tmp3(1236).t.HzBfIN, obj);
   } else {
     const intl2 = tmp3(1236).intl;
-    obj = { userCount: null, username: null, usernameOnClick: null, username2: null, username2OnClick: null, username3: null, username3OnClick: null, otherCount: null, duration: null };
+    obj = {
+      userCount: null,
+      username: null,
+      usernameOnClick: null,
+      username2: null,
+      username2OnClick: null,
+      username3: null,
+      username3OnClick: null,
+      otherCount: null,
+      duration: null,
+    };
     obj[0] = mapped.length + 1;
     obj[1] = messageAuthor.nick;
     obj[2] = tmp3(12).identity;

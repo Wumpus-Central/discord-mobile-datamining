@@ -10,7 +10,15 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 noopAll;
 createCacheKey = { container: null, icon: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", alignSelf: "center", width: 64, height: 64, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round };
+createCacheKey = {
+  alignItems: "center",
+  justifyContent: "center",
+  alignSelf: "center",
+  width: 64,
+  height: 64,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.round,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = {};
 let closure_4 = createCacheKey.createStyles(createCacheKey);
@@ -22,4 +30,4 @@ export default function VoicePanelLockedIcon() {
   obj = { style: tmp.icon, source: registerAssetDefault, size: Button.IconSizes.LARGE };
   obj[1] = jsx(Button.Icon, { style: tmp.icon, source: registerAssetDefault, size: Button.IconSizes.LARGE });
   return jsx(setDefault, { style: tmp.icon, source: registerAssetDefault, size: Button.IconSizes.LARGE });
-};
+}

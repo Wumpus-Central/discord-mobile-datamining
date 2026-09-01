@@ -35,5 +35,5 @@ export default {
       const BundleUpdaterManager = NativeModules.BundleUpdaterManager;
       BundleUpdaterManager.reload();
     }
-  }
+  },
 };

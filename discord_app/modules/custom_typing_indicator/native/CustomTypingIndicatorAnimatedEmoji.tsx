@@ -13,8 +13,12 @@ let closure_9 = createCacheKey.createStyles((fontSize) => {
   const imageEmoji = { width: fontSize, height: fontSize };
   return { textEmoji, imageEmoji };
 });
-let closure_10 = { code: "function CustomTypingIndicatorAnimatedEmojiTsx1(){const{angle,scale,ringRadius,translateY}=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-ringRadius*Math.sin(currentAngle)},{translateY:translateY.get()+ringRadius*(Math.cos(currentAngle)-1)}]};}" };
-let result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx");
+let closure_10 = {
+  code: "function CustomTypingIndicatorAnimatedEmojiTsx1(){const{angle,scale,ringRadius,translateY}=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-ringRadius*Math.sin(currentAngle)},{translateY:translateY.get()+ringRadius*(Math.cos(currentAngle)-1)}]};}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx",
+);
 
 export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
   ({ emoji, index } = emojiCount);
@@ -84,7 +88,15 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
             const withTimingResult1 = tmp5(tmp6[11]).withTiming(1, obj);
             obj1 = { duration: null };
             obj1[0] = result4;
-            const result5 = obj.set(tmp5Result.withDelay(result3, tmp5Result.withRepeat(tmp5Result1.withSequence(withTimingResult, withTimingResult1, tmp5(tmp6[11]).withTiming(1, obj1)), -1)));
+            const result5 = obj.set(
+              tmp5Result.withDelay(
+                result3,
+                tmp5Result.withRepeat(
+                  tmp5Result1.withSequence(withTimingResult, withTimingResult1, tmp5(tmp6[11]).withTiming(1, obj1)),
+                  -1,
+                ),
+              ),
+            );
             const tmp5Result4 = tmp5(tmp6[11]);
           } else if (tmp5(tmp6[10]).TypingIndicatorAnimation.RING === tmp4) {
             const tmp5Result5 = tmp5(tmp6[8]);
@@ -93,7 +105,9 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
             obj2 = { duration: 1600, easing: null };
             const result6 = 2 * Math.PI;
             obj2[1] = tmp5(tmp6[8]).Easing.linear;
-            const result7 = obj1.set(tmp5Result5.withDelay(result3, tmp5Result6.withRepeat(tmp5(tmp6[11]).withTiming(result6, obj2), -1)));
+            const result7 = obj1.set(
+              tmp5Result5.withDelay(result3, tmp5Result6.withRepeat(tmp5(tmp6[11]).withTiming(result6, obj2), -1)),
+            );
             const tmp5Result7 = tmp5(tmp6[11]);
           } else if (tmp5(tmp6[10]).TypingIndicatorAnimation.WAVE === tmp4) {
             const tmp5Result8 = tmp5(tmp6[8]);
@@ -109,7 +123,15 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
             const withTimingResult3 = tmp5(tmp6[11]).withTiming(0, obj4);
             const obj5 = { duration: null };
             obj5[0] = result4;
-            const result8 = obj2.set(tmp5Result8.withDelay(result3, tmp5Result9.withRepeat(tmp5Result10.withSequence(withTimingResult2, withTimingResult3, tmp5(tmp6[11]).withTiming(0, obj5)), -1)));
+            const result8 = obj2.set(
+              tmp5Result8.withDelay(
+                result3,
+                tmp5Result9.withRepeat(
+                  tmp5Result10.withSequence(withTimingResult2, withTimingResult3, tmp5(tmp6[11]).withTiming(0, obj5)),
+                  -1,
+                ),
+              ),
+            );
             const tmp5Result13 = tmp5(tmp6[11]);
           }
           return () => {
@@ -129,7 +151,7 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
       value = closure_8.get();
       obj = { transform: null };
       obj = { scale: closure_7.get() };
-      items = [, , ];
+      items = [, ,];
       items[0] = obj;
       obj1 = { translateX: -closure_10 * Math.sin(value) };
       items[1] = obj1;
@@ -179,4 +201,4 @@ export default function CustomTypingIndicatorAnimatedEmoji(emojiCount) {
   obj[4] = callback;
   obj[1] = sharedValue(emojiCount(num[12]), obj, name);
   return sharedValue(emojiCount(num[8]).View, obj);
-};
+}

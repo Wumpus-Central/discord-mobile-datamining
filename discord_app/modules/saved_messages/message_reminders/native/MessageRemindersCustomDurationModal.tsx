@@ -9,7 +9,15 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 let c5 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { modal: null, headerLeftContainer: null, headerRightContainer: null, container: null, formHeader: null, inputContainer: null, error: null };
+let obj = {
+  modal: null,
+  headerLeftContainer: null,
+  headerRightContainer: null,
+  container: null,
+  formHeader: null,
+  inputContainer: null,
+  error: null,
+};
 obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 obj[0] = obj;
 createCacheKey = { paddingLeft: ThemesDefault.space.PX_16 };
@@ -18,10 +26,20 @@ obj[2] = { paddingRight: ThemesDefault.space.PX_16 };
 obj[3] = { paddingHorizontal: 16, paddingTop: 24, gap: 24 };
 obj[4] = { marginBottom: 8 };
 let obj2 = { paddingRight: ThemesDefault.space.PX_16 };
-obj[5] = { paddingHorizontal: 16, paddingVertical: 12, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT };
+obj[5] = {
+  paddingHorizontal: 16,
+  paddingVertical: 12,
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+};
 obj[6] = { marginTop: 8 };
 let closure_9 = createCacheKey.createStyles(obj);
-let obj3 = { paddingHorizontal: 16, paddingVertical: 12, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT };
+let obj3 = {
+  paddingHorizontal: 16,
+  paddingVertical: 12,
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+};
 const memoResult = importAllResult.memo((onClose) => {
   onClose = onClose.onClose;
   const createReminder = onClose.createReminder;
@@ -37,7 +55,14 @@ const memoResult = importAllResult.memo((onClose) => {
     const obj2 = createReminder(closure_1_3[8]);
     const intl = onClose(closure_1_3[11]).intl;
     const t = onClose(closure_1_3[11]).t;
-    obj = { title: intl.string(tmp2 ? t.pSZKvM : t.GOmEb8), startDate: first.toDate(), minimumDate: null, maximumDate: null, mode: null, onSubmit: null };
+    obj = {
+      title: intl.string(tmp2 ? t.pSZKvM : t.GOmEb8),
+      startDate: first.toDate(),
+      minimumDate: null,
+      maximumDate: null,
+      mode: null,
+      onSubmit: null,
+    };
     if ("date" === date) {
       let startOfResult = obj4.clone().startOf("day");
       const cloneResult = obj4.clone();
@@ -89,7 +114,7 @@ const memoResult = importAllResult.memo((onClose) => {
     headerLeft: null,
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null,
-    headerRight: null
+    headerRight: null,
   };
   let obj4 = onClose(500);
   let num = 0;
@@ -111,14 +136,21 @@ const memoResult = importAllResult.memo((onClose) => {
     obj[3] = error(onClose(closure_1_3[17]).Text, obj);
     return error(onClose(closure_1_3[16]).PressableOpacity, obj);
   };
-  const items1 = [error(onClose(5502).Header, obj), ];
+  const items1 = [error(onClose(5502).Header, obj)];
   obj1 = { style: tmp.container, children: null };
   let obj2 = { children: null };
   const obj3 = { style: tmp.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: null };
   let intl = tmp11(1236).intl;
   obj3[3] = intl.string(onClose(1236).t.pSZKvM);
-  const items2 = [error(onClose(4474).Text, obj3), ];
-  obj4 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, onPress: null, style: null, children: null };
+  const items2 = [error(onClose(4474).Text, obj3)];
+  obj4 = {
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    accessibilityValue: null,
+    onPress: null,
+    style: null,
+    children: null,
+  };
   const intl2 = tmp11(1236).intl;
   obj4[1] = intl2.string(onClose(1236).t.pSZKvM);
   obj4[2] = { text: formatResult };
@@ -129,12 +161,19 @@ const memoResult = importAllResult.memo((onClose) => {
   obj4[5] = error(onClose(4474).Text, { variant: "text-md/medium", children: formatResult });
   items2[1] = error(onClose(5068).PressableOpacity, obj4);
   obj2[0] = items2;
-  const items3 = [handleOpenDatePicker(closure_6, obj2), ];
+  const items3 = [handleOpenDatePicker(closure_6, obj2)];
   const obj5 = { style: tmp.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: null };
   const intl3 = tmp11(1236).intl;
   obj5[3] = intl3.string(onClose(1236).t.GOmEb8);
-  const items4 = [error(onClose(4474).Text, obj5), , ];
-  const obj6 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, onPress: null, style: null, children: null };
+  const items4 = [error(onClose(4474).Text, obj5), ,];
+  const obj6 = {
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    accessibilityValue: null,
+    onPress: null,
+    style: null,
+    children: null,
+  };
   const intl4 = tmp11(1236).intl;
   obj6[1] = intl4.string(onClose(1236).t.GOmEb8);
   obj6[2] = { text: formatResult1 };
@@ -146,7 +185,13 @@ const memoResult = importAllResult.memo((onClose) => {
   items4[1] = error(onClose(5068).PressableOpacity, obj6);
   let tmp10Result = null != error;
   if (tmp10Result) {
-    const obj7 = { style: null, variant: "text-sm/medium", color: "text-feedback-critical", accessibilityRole: "alert", children: null };
+    const obj7 = {
+      style: null,
+      variant: "text-sm/medium",
+      color: "text-feedback-critical",
+      accessibilityRole: "alert",
+      children: null,
+    };
     obj7[0] = tmp.error;
     obj7[4] = error;
     tmp10Result = tmp10(tmp11(4474).Text, obj7);
@@ -158,6 +203,8 @@ const memoResult = importAllResult.memo((onClose) => {
   obj[1] = items1;
   return handleOpenDatePicker(closure_6, obj);
 });
-let result = require("set").fileFinishedImporting("modules/saved_messages/message_reminders/native/MessageRemindersCustomDurationModal.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/saved_messages/message_reminders/native/MessageRemindersCustomDurationModal.tsx",
+);
 
 export default memoResult;

@@ -20,10 +20,26 @@ const result = set.fileFinishedImporting("modules/premium/native/components/Pill
 export default function PillText(arg0) {
   ({ pillText, style } = arg0);
   const tmp = callback();
-  let obj = { style: items, start: HorizontalGradient.START, end: HorizontalGradient.END, colors: usePremiumPrimaryGradientColorsDefault(), children: null };
+  let obj = {
+    style: items,
+    start: HorizontalGradient.START,
+    end: HorizontalGradient.END,
+    colors: usePremiumPrimaryGradientColorsDefault(),
+    children: null,
+  };
   items = [tmp.pillTextContainer, style];
   const tmp2 = usePremiumPrimaryGradientColorsDefault();
   obj = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText };
-  obj[4] = jsx(Text.Text, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
-  return jsx(LinearGradientDefault, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
-};
+  obj[4] = jsx(Text.Text, {
+    variant: "text-xs/semibold",
+    color: "text-overlay-light",
+    style: tmp.pillText,
+    children: pillText,
+  });
+  return jsx(LinearGradientDefault, {
+    variant: "text-xs/semibold",
+    color: "text-overlay-light",
+    style: tmp.pillText,
+    children: pillText,
+  });
+}

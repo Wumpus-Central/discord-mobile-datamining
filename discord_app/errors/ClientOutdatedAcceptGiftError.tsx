@@ -8,8 +8,7 @@ const prototype = function ClientOutdatedAcceptGiftError(arg0) {
   applyArgumentsResult.code = AbortCodes.INVALID_GIFT_REDEMPTION_CLIENT_UPDATE_REQUIRED;
   return applyArgumentsResult;
 }.prototype;
-class prototype extends Error {
-}
+class prototype extends Error {}
 const result = set.fileFinishedImporting("errors/ClientOutdatedAcceptGiftError.tsx");
 
 export default prototype;

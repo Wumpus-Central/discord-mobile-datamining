@@ -6,8 +6,7 @@ let obj = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED"
 let map = new Map();
 const map1 = new Map();
 const Store = initializeDefault.Store;
-class UserApplicationIdentityStore extends Store {
-}
+class UserApplicationIdentityStore extends Store {}
 const prototype = UserApplicationIdentityStore.prototype;
 prototype["getUserIdentities"] = function getUserIdentities(arg0) {
   const value = map.get(arg0);
@@ -49,10 +48,12 @@ obj = {
   USER_APPLICATION_IDENTITY_FETCH_USER_SUCCESS: function handleFetchUserSuccess(userId) {
     const result = map1.set(userId.userId, obj.FETCHED);
     ({ userId, identities } = userId);
-    map = new Map(identities.map((application_id) => {
-      const items = [application_id.application_id, application_id];
-      return items;
-    }));
+    map = new Map(
+      identities.map((application_id) => {
+        const items = [application_id.application_id, application_id];
+        return items;
+      }),
+    );
     const result1 = map.set(userId, { identities, byApplication: map });
     const result2 = map1.set(userId, obj.FETCHED);
   },
@@ -70,17 +71,19 @@ obj = {
       const identities = value.identities;
       const found = identities.filter((application_id) => application_id.application_id !== user_id.application_id);
       const _Map = Map;
-      map = new Map(found.map((application_id) => {
-        const items = [application_id.application_id, application_id];
-        return items;
-      }));
+      map = new Map(
+        found.map((application_id) => {
+          const items = [application_id.application_id, application_id];
+          return items;
+        }),
+      );
       obj = { identities: null, byApplication: null };
       obj[0] = found;
       obj[1] = map;
       const result = obj.set(user_id, obj);
       const result1 = map1.set(user_id, obj.FETCHED);
     }
-  }
+  },
 };
 const userApplicationIdentityStore = new UserApplicationIdentityStore(dispatcherDefault, obj);
 let result = require("set").fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityStore.tsx");

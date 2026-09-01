@@ -13,14 +13,22 @@ export default function useEmojiHotrail(arg0) {
       rowSize = closure_1_1;
     }
     const substr = topEmojis.slice(0, rowSize - newlyAddedEmojis.length);
-    return { visibleTopEmojis: substr, visibleNewlyAddedEmojis: newlyAddedEmojis, allEmojis: substr.concat(newlyAddedEmojis) };
+    return {
+      visibleTopEmojis: substr,
+      visibleNewlyAddedEmojis: newlyAddedEmojis,
+      allEmojis: substr.concat(newlyAddedEmojis),
+    };
   }, items);
-};
+}
 export const getEmojiHotrail = function getEmojiHotrail(arg0) {
   ({ topEmojis, newlyAddedEmojis, rowSize } = arg0);
   if (rowSize === undefined) {
     rowSize = EMOJI_ROW_SIZE;
   }
   const substr = topEmojis.slice(0, rowSize - newlyAddedEmojis.length);
-  return { visibleTopEmojis: substr, visibleNewlyAddedEmojis: newlyAddedEmojis, allEmojis: substr.concat(newlyAddedEmojis) };
+  return {
+    visibleTopEmojis: substr,
+    visibleNewlyAddedEmojis: newlyAddedEmojis,
+    allEmojis: substr.concat(newlyAddedEmojis),
+  };
 };

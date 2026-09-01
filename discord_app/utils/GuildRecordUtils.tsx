@@ -9,7 +9,53 @@ import isValueEqual from "../lib/PlainRecord.tsx";
 import GuildNSFWContentLevel from "../records/GuildRecord.tsx";
 
 function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildTheme) {
-  let obj = { id: properties.id, joinedAt: joinedAt.joinedAt, premiumSubscriberCount: joinedAt.premiumSubscriberCount, name: properties.name, description: null, icon: null, splash: null, banner: null, homeHeader: null, features: null, preferredLocale: null, ownerId: null, application_id: null, afkChannelId: null, afkTimeout: null, systemChannelId: null, verificationLevel: null, explicitContentFilter: null, defaultMessageNotifications: null, mfaLevel: null, vanityURLCode: null, premiumTier: null, premiumProgressBarEnabled: null, premiumProgressBarEnabledUserUpdatedAt: null, systemChannelFlags: null, discoverySplash: null, rulesChannelId: null, safetyAlertsChannelId: null, publicUpdatesChannelId: null, maxStageVideoChannelUsers: null, maxVideoChannelUsers: null, maxMembers: null, nsfwLevel: null, ownerConfiguredContentLevel: null, hubType: null, latestOnboardingQuestionId: null, profile: null, guildTheme: null, premiumFeatures: null, moderatorReporting: null, guildSpaceSettings: null, verificationRoleId: null, gameApplicationIds: null, officialMessageColor: null, incidentsData: null };
+  let obj = {
+    id: properties.id,
+    joinedAt: joinedAt.joinedAt,
+    premiumSubscriberCount: joinedAt.premiumSubscriberCount,
+    name: properties.name,
+    description: null,
+    icon: null,
+    splash: null,
+    banner: null,
+    homeHeader: null,
+    features: null,
+    preferredLocale: null,
+    ownerId: null,
+    application_id: null,
+    afkChannelId: null,
+    afkTimeout: null,
+    systemChannelId: null,
+    verificationLevel: null,
+    explicitContentFilter: null,
+    defaultMessageNotifications: null,
+    mfaLevel: null,
+    vanityURLCode: null,
+    premiumTier: null,
+    premiumProgressBarEnabled: null,
+    premiumProgressBarEnabledUserUpdatedAt: null,
+    systemChannelFlags: null,
+    discoverySplash: null,
+    rulesChannelId: null,
+    safetyAlertsChannelId: null,
+    publicUpdatesChannelId: null,
+    maxStageVideoChannelUsers: null,
+    maxVideoChannelUsers: null,
+    maxMembers: null,
+    nsfwLevel: null,
+    ownerConfiguredContentLevel: null,
+    hubType: null,
+    latestOnboardingQuestionId: null,
+    profile: null,
+    guildTheme: null,
+    premiumFeatures: null,
+    moderatorReporting: null,
+    guildSpaceSettings: null,
+    verificationRoleId: null,
+    gameApplicationIds: null,
+    officialMessageColor: null,
+    incidentsData: null,
+  };
   let description = properties.description;
   if (description == null) {
     description = null;
@@ -182,7 +228,12 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
   let tmp37 = null;
   if (null != properties.premium_features) {
     obj = { features: null, additionalEmojiSlots: null, additionalStickerSlots: null, additionalSoundSlots: null };
-    ({ features: obj5[0], additional_emoji_slots: obj5[1], additional_sticker_slots: obj5[2], additional_sound_slots: obj5[3] } = properties.premium_features);
+    ({
+      features: obj5[0],
+      additional_emoji_slots: obj5[1],
+      additional_sticker_slots: obj5[2],
+      additional_sound_slots: obj5[3],
+    } = properties.premium_features);
     tmp37 = obj;
   }
   obj[38] = tmp37;
@@ -217,7 +268,12 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
   obj[44] = tmp8Result.fromServerGuildIncidentsData(properties.incidents_data);
   return closure_6(closure_8, guildTheme, obj);
 }
-({ constructInPlace: c3, merge: c4, objectIsPlainRecordOfType: c5, tryReuseExistingInPlacePlainRecord: closure_6 } = isValueEqual);
+({
+  constructInPlace: c3,
+  merge: c4,
+  objectIsPlainRecordOfType: c5,
+  tryReuseExistingInPlacePlainRecord: closure_6,
+} = isValueEqual);
 ({ GUILD_DEFAULT_PROPERTY_VALUES: error, GuildRecordTypeTag: closure_8 } = GuildNSFWContentLevel);
 GuildNSFWContentLevel = ME.GuildNSFWContentLevel;
 const result = set.fileFinishedImporting("utils/GuildRecordUtils.tsx");
@@ -305,18 +361,51 @@ export const fromGuild = function fromGuild(guild, fromGuildResult) {
       date = null;
     }
   }
-  return fromGuildPropertiesWithAdditionalFields(guild, { joinedAt: date, premiumSubscriberCount: guild.premium_subscription_count }, fromGuildResult);
+  return fromGuildPropertiesWithAdditionalFields(
+    guild,
+    { joinedAt: date, premiumSubscriberCount: guild.premium_subscription_count },
+    fromGuildResult,
+  );
 };
 export const fromInviteGuild = function fromInviteGuild(guild) {
-  let obj = { id: guild.id, name: guild.name, description: guild.description, icon: guild.icon, splash: guild.splash, banner: guild.banner, features: areSetsEqual.toSetInplace(guild.features), verificationLevel: null, vanityURLCode: null, premiumSubscriberCount: null, nsfwLevel: null, premiumTier: null, homeHeader: null };
-  ({ verification_level: obj[7], vanity_url_code: obj[8], premium_subscription_count: obj[9], nsfw_level: obj[10], premium_tier: obj[11], home_header: obj[12] } = guild);
+  let obj = {
+    id: guild.id,
+    name: guild.name,
+    description: guild.description,
+    icon: guild.icon,
+    splash: guild.splash,
+    banner: guild.banner,
+    features: areSetsEqual.toSetInplace(guild.features),
+    verificationLevel: null,
+    vanityURLCode: null,
+    premiumSubscriberCount: null,
+    nsfwLevel: null,
+    premiumTier: null,
+    homeHeader: null,
+  };
+  ({
+    verification_level: obj[7],
+    vanity_url_code: obj[8],
+    premium_subscription_count: obj[9],
+    nsfw_level: obj[10],
+    premium_tier: obj[11],
+    home_header: obj[12],
+  } = guild);
   obj = {};
   const merged = Object.assign(closure_7);
   const merged1 = Object.assign(obj);
   return callback(closure_8, obj);
 };
 export const fromGuildProfile = function fromGuildProfile(profile) {
-  let obj = { id: profile.id, name: profile.name, description: profile.description, icon: profile.icon, premiumSubscriberCount: null, premiumTier: null, features: null };
+  let obj = {
+    id: profile.id,
+    name: profile.name,
+    description: profile.description,
+    icon: profile.icon,
+    premiumSubscriberCount: null,
+    premiumTier: null,
+    features: null,
+  };
   let premiumSubscriberCount = profile.premiumSubscriberCount;
   if (premiumSubscriberCount == null) {
     premiumSubscriberCount = closure_7.premiumSubscriberCount;
@@ -397,7 +486,15 @@ export const fromGuildDirectoryEntry = function fromGuildDirectoryEntry(entry) {
   return callback(closure_8, obj);
 };
 export const fromVerificationGateGuild = function fromVerificationGateGuild(stateFromStores1) {
-  let obj = { id: stateFromStores1.id, name: stateFromStores1.name, icon: null, description: null, splash: null, features: null, verificationLevel: null };
+  let obj = {
+    id: stateFromStores1.id,
+    name: stateFromStores1.name,
+    icon: null,
+    description: null,
+    splash: null,
+    features: null,
+    verificationLevel: null,
+  };
   let icon = stateFromStores1.icon;
   if (icon == null) {
     icon = null;
@@ -425,7 +522,18 @@ export const fromVerificationGateGuild = function fromVerificationGateGuild(stat
   return callback(closure_8, obj);
 };
 export const fromClientDiscoverableGuild = function fromClientDiscoverableGuild(guild) {
-  let obj = { id: guild.id, name: guild.name, description: null, splash: null, banner: null, preferredLocale: null, icon: null, features: null, premiumSubscriberCount: null, discoverySplash: null };
+  let obj = {
+    id: guild.id,
+    name: guild.name,
+    description: null,
+    splash: null,
+    banner: null,
+    preferredLocale: null,
+    icon: null,
+    features: null,
+    premiumSubscriberCount: null,
+    discoverySplash: null,
+  };
   let description = guild.description;
   if (description == null) {
     description = null;
@@ -468,7 +576,15 @@ export const fromClientDiscoverableGuild = function fromClientDiscoverableGuild(
   return callback(closure_8, obj);
 };
 export const fromGuildBasic = function fromGuildBasic(id) {
-  let obj = { id: id.id, name: id.name, icon: null, description: null, splash: null, discoverySplash: null, features: null };
+  let obj = {
+    id: id.id,
+    name: id.name,
+    icon: null,
+    description: null,
+    splash: null,
+    discoverySplash: null,
+    features: null,
+  };
   let icon = id.icon;
   if (icon == null) {
     icon = null;
@@ -495,158 +611,250 @@ export const fromGuildBasic = function fromGuildBasic(id) {
   const merged1 = Object.assign(obj);
   return callback(closure_8, obj);
 };
-export const dangerouslyConstructGuildRecordFromUntypedObject = function dangerouslyConstructGuildRecordFromUntypedObject(c0) {
-  const obj = { id: c0.id, name: tmp, description: tmp2, ownerId: tmp3, icon: tmp4, splash: tmp5, banner: tmp6, homeHeader: tmp7, features: areSetsEqual.toSetInplace(c0.features), preferredLocale: null, afkChannelId: null, afkTimeout: null, systemChannelId: null, verificationLevel: null, joinedAt: null, defaultMessageNotifications: null, mfaLevel: null, application_id: null, explicitContentFilter: null, vanityURLCode: null, premiumTier: null, premiumSubscriberCount: null, premiumProgressBarEnabled: null, premiumProgressBarEnabledUserUpdatedAt: null, systemChannelFlags: null, discoverySplash: null, rulesChannelId: null, safetyAlertsChannelId: null, publicUpdatesChannelId: null, maxStageVideoChannelUsers: null, maxVideoChannelUsers: null, maxMembers: null, nsfwLevel: null, ownerConfiguredContentLevel: null, hubType: null, latestOnboardingQuestionId: null, profile: null, guildTheme: null, premiumFeatures: null, moderatorReporting: null, guildSpaceSettings: null, gameApplicationIds: null, officialMessageColor: null, verificationRoleId: null, incidentsData: null };
-  let preferredLocale = c0.preferredLocale;
-  if (!preferredLocale) {
-    preferredLocale = closure_7.preferredLocale;
-  }
-  obj[9] = preferredLocale;
-  obj[10] = c0.afkChannelId || null;
-  obj[11] = c0.afkTimeout;
-  obj[12] = c0.systemChannelId || null;
-  let verificationLevel = c0.verificationLevel;
-  if (!verificationLevel) {
-    verificationLevel = closure_7.verificationLevel;
-  }
-  obj[13] = verificationLevel;
-  const joinedAt = c0.joinedAt;
-  if (c0.joinedAt instanceof Date) {
-    let joinedAt2 = joinedAt;
-  } else if (null != joinedAt) {
-    const _Date = Date;
-    joinedAt2 = new Date(c0.joinedAt);
-  } else {
-    joinedAt2 = c0.joinedAt;
-  }
-  obj[14] = joinedAt2;
-  let defaultMessageNotifications = c0.defaultMessageNotifications;
-  if (!defaultMessageNotifications) {
-    defaultMessageNotifications = closure_7.defaultMessageNotifications;
-  }
-  obj[15] = defaultMessageNotifications;
-  let mfaLevel = c0.mfaLevel;
-  if (!mfaLevel) {
-    mfaLevel = closure_7.mfaLevel;
-  }
-  obj[16] = mfaLevel;
-  obj[17] = c0.application_id || null;
-  let explicitContentFilter = c0.explicitContentFilter;
-  if (!explicitContentFilter) {
-    explicitContentFilter = closure_7.explicitContentFilter;
-  }
-  obj[18] = explicitContentFilter;
-  obj[19] = c0.vanityURLCode || null;
-  let premiumTier = c0.premiumTier;
-  if (!premiumTier) {
-    premiumTier = closure_7.premiumTier;
-  }
-  obj[20] = premiumTier;
-  let premiumSubscriberCount = c0.premiumSubscriberCount;
-  if (!premiumSubscriberCount) {
-    premiumSubscriberCount = closure_7.premiumSubscriberCount;
-  }
-  obj[21] = premiumSubscriberCount;
-  let premiumProgressBarEnabled = c0.premiumProgressBarEnabled;
-  if (!premiumProgressBarEnabled) {
-    premiumProgressBarEnabled = closure_7.premiumProgressBarEnabled;
-  }
-  obj[22] = premiumProgressBarEnabled;
-  const premiumProgressBarEnabledUserUpdatedAt = c0.premiumProgressBarEnabledUserUpdatedAt;
-  if (c0.premiumProgressBarEnabledUserUpdatedAt instanceof Date) {
-    let date = premiumProgressBarEnabledUserUpdatedAt;
-  } else {
-    date = null;
-    if (null != premiumProgressBarEnabledUserUpdatedAt) {
-      const _Date2 = Date;
-      date = new Date(c0.premiumProgressBarEnabledUserUpdatedAt);
+export const dangerouslyConstructGuildRecordFromUntypedObject =
+  function dangerouslyConstructGuildRecordFromUntypedObject(c0) {
+    const obj = {
+      id: c0.id,
+      name: tmp,
+      description: tmp2,
+      ownerId: tmp3,
+      icon: tmp4,
+      splash: tmp5,
+      banner: tmp6,
+      homeHeader: tmp7,
+      features: areSetsEqual.toSetInplace(c0.features),
+      preferredLocale: null,
+      afkChannelId: null,
+      afkTimeout: null,
+      systemChannelId: null,
+      verificationLevel: null,
+      joinedAt: null,
+      defaultMessageNotifications: null,
+      mfaLevel: null,
+      application_id: null,
+      explicitContentFilter: null,
+      vanityURLCode: null,
+      premiumTier: null,
+      premiumSubscriberCount: null,
+      premiumProgressBarEnabled: null,
+      premiumProgressBarEnabledUserUpdatedAt: null,
+      systemChannelFlags: null,
+      discoverySplash: null,
+      rulesChannelId: null,
+      safetyAlertsChannelId: null,
+      publicUpdatesChannelId: null,
+      maxStageVideoChannelUsers: null,
+      maxVideoChannelUsers: null,
+      maxMembers: null,
+      nsfwLevel: null,
+      ownerConfiguredContentLevel: null,
+      hubType: null,
+      latestOnboardingQuestionId: null,
+      profile: null,
+      guildTheme: null,
+      premiumFeatures: null,
+      moderatorReporting: null,
+      guildSpaceSettings: null,
+      gameApplicationIds: null,
+      officialMessageColor: null,
+      verificationRoleId: null,
+      incidentsData: null,
+    };
+    let preferredLocale = c0.preferredLocale;
+    if (!preferredLocale) {
+      preferredLocale = closure_7.preferredLocale;
     }
-  }
-  obj[23] = date;
-  obj[24] = c0.systemChannelFlags;
-  obj[25] = c0.discoverySplash || null;
-  obj[26] = c0.rulesChannelId || null;
-  obj[27] = c0.safetyAlertsChannelId || null;
-  obj[28] = c0.publicUpdatesChannelId || null;
-  let maxStageVideoChannelUsers = c0.maxStageVideoChannelUsers;
-  if (!maxStageVideoChannelUsers) {
-    maxStageVideoChannelUsers = closure_7.maxStageVideoChannelUsers;
-  }
-  obj[29] = maxStageVideoChannelUsers;
-  let maxVideoChannelUsers = c0.maxVideoChannelUsers;
-  if (!maxVideoChannelUsers) {
-    maxVideoChannelUsers = closure_7.maxVideoChannelUsers;
-  }
-  obj[30] = maxVideoChannelUsers;
-  let maxMembers = c0.maxMembers;
-  if (!maxMembers) {
-    maxMembers = closure_7.maxMembers;
-  }
-  obj[31] = maxMembers;
-  let nsfwLevel = c0.nsfwLevel;
-  if (nsfwLevel == null) {
-    nsfwLevel = closure_7.nsfwLevel;
-  }
-  obj[32] = nsfwLevel;
-  let prop = c0.ownerConfiguredContentLevel;
-  if (prop == null) {
-    prop = null;
-  }
-  obj[33] = prop;
-  ({ hubType: obj[34], latestOnboardingQuestionId } = c0);
-  if (latestOnboardingQuestionId == null) {
-    latestOnboardingQuestionId = null;
-  }
-  obj[35] = latestOnboardingQuestionId;
-  let profile = c0.profile;
-  if (profile == null) {
-    profile = null;
-  }
-  obj[36] = profile;
-  let guildTheme = c0.guildTheme;
-  if (guildTheme == null) {
-    guildTheme = null;
-  }
-  obj[37] = guildTheme;
-  let premiumFeatures = c0.premiumFeatures;
-  if (premiumFeatures == null) {
-    premiumFeatures = null;
-  }
-  obj[38] = premiumFeatures;
-  let moderatorReporting = c0.moderatorReporting;
-  if (moderatorReporting == null) {
-    moderatorReporting = null;
-  }
-  obj[39] = moderatorReporting;
-  let guildSpaceSettings = c0.guildSpaceSettings;
-  if (guildSpaceSettings == null) {
-    guildSpaceSettings = null;
-  }
-  obj[40] = guildSpaceSettings;
-  let gameApplicationIds = c0.gameApplicationIds;
-  if (gameApplicationIds == null) {
-    gameApplicationIds = null;
-  }
-  obj[41] = gameApplicationIds;
-  let officialMessageColor = c0.officialMessageColor;
-  if (officialMessageColor == null) {
-    officialMessageColor = null;
-  }
-  obj[42] = officialMessageColor;
-  let verificationRoleId = c0.verificationRoleId;
-  if (verificationRoleId == null) {
-    verificationRoleId = null;
-  }
-  obj[43] = verificationRoleId;
-  let incidentsData = c0.incidentsData;
-  if (incidentsData == null) {
-    incidentsData = null;
-  }
-  obj[44] = incidentsData;
-  return callback(closure_8, obj);
-};
+    obj[9] = preferredLocale;
+    obj[10] = c0.afkChannelId || null;
+    obj[11] = c0.afkTimeout;
+    obj[12] = c0.systemChannelId || null;
+    let verificationLevel = c0.verificationLevel;
+    if (!verificationLevel) {
+      verificationLevel = closure_7.verificationLevel;
+    }
+    obj[13] = verificationLevel;
+    const joinedAt = c0.joinedAt;
+    if (c0.joinedAt instanceof Date) {
+      let joinedAt2 = joinedAt;
+    } else if (null != joinedAt) {
+      const _Date = Date;
+      joinedAt2 = new Date(c0.joinedAt);
+    } else {
+      joinedAt2 = c0.joinedAt;
+    }
+    obj[14] = joinedAt2;
+    let defaultMessageNotifications = c0.defaultMessageNotifications;
+    if (!defaultMessageNotifications) {
+      defaultMessageNotifications = closure_7.defaultMessageNotifications;
+    }
+    obj[15] = defaultMessageNotifications;
+    let mfaLevel = c0.mfaLevel;
+    if (!mfaLevel) {
+      mfaLevel = closure_7.mfaLevel;
+    }
+    obj[16] = mfaLevel;
+    obj[17] = c0.application_id || null;
+    let explicitContentFilter = c0.explicitContentFilter;
+    if (!explicitContentFilter) {
+      explicitContentFilter = closure_7.explicitContentFilter;
+    }
+    obj[18] = explicitContentFilter;
+    obj[19] = c0.vanityURLCode || null;
+    let premiumTier = c0.premiumTier;
+    if (!premiumTier) {
+      premiumTier = closure_7.premiumTier;
+    }
+    obj[20] = premiumTier;
+    let premiumSubscriberCount = c0.premiumSubscriberCount;
+    if (!premiumSubscriberCount) {
+      premiumSubscriberCount = closure_7.premiumSubscriberCount;
+    }
+    obj[21] = premiumSubscriberCount;
+    let premiumProgressBarEnabled = c0.premiumProgressBarEnabled;
+    if (!premiumProgressBarEnabled) {
+      premiumProgressBarEnabled = closure_7.premiumProgressBarEnabled;
+    }
+    obj[22] = premiumProgressBarEnabled;
+    const premiumProgressBarEnabledUserUpdatedAt = c0.premiumProgressBarEnabledUserUpdatedAt;
+    if (c0.premiumProgressBarEnabledUserUpdatedAt instanceof Date) {
+      let date = premiumProgressBarEnabledUserUpdatedAt;
+    } else {
+      date = null;
+      if (null != premiumProgressBarEnabledUserUpdatedAt) {
+        const _Date2 = Date;
+        date = new Date(c0.premiumProgressBarEnabledUserUpdatedAt);
+      }
+    }
+    obj[23] = date;
+    obj[24] = c0.systemChannelFlags;
+    obj[25] = c0.discoverySplash || null;
+    obj[26] = c0.rulesChannelId || null;
+    obj[27] = c0.safetyAlertsChannelId || null;
+    obj[28] = c0.publicUpdatesChannelId || null;
+    let maxStageVideoChannelUsers = c0.maxStageVideoChannelUsers;
+    if (!maxStageVideoChannelUsers) {
+      maxStageVideoChannelUsers = closure_7.maxStageVideoChannelUsers;
+    }
+    obj[29] = maxStageVideoChannelUsers;
+    let maxVideoChannelUsers = c0.maxVideoChannelUsers;
+    if (!maxVideoChannelUsers) {
+      maxVideoChannelUsers = closure_7.maxVideoChannelUsers;
+    }
+    obj[30] = maxVideoChannelUsers;
+    let maxMembers = c0.maxMembers;
+    if (!maxMembers) {
+      maxMembers = closure_7.maxMembers;
+    }
+    obj[31] = maxMembers;
+    let nsfwLevel = c0.nsfwLevel;
+    if (nsfwLevel == null) {
+      nsfwLevel = closure_7.nsfwLevel;
+    }
+    obj[32] = nsfwLevel;
+    let prop = c0.ownerConfiguredContentLevel;
+    if (prop == null) {
+      prop = null;
+    }
+    obj[33] = prop;
+    ({ hubType: obj[34], latestOnboardingQuestionId } = c0);
+    if (latestOnboardingQuestionId == null) {
+      latestOnboardingQuestionId = null;
+    }
+    obj[35] = latestOnboardingQuestionId;
+    let profile = c0.profile;
+    if (profile == null) {
+      profile = null;
+    }
+    obj[36] = profile;
+    let guildTheme = c0.guildTheme;
+    if (guildTheme == null) {
+      guildTheme = null;
+    }
+    obj[37] = guildTheme;
+    let premiumFeatures = c0.premiumFeatures;
+    if (premiumFeatures == null) {
+      premiumFeatures = null;
+    }
+    obj[38] = premiumFeatures;
+    let moderatorReporting = c0.moderatorReporting;
+    if (moderatorReporting == null) {
+      moderatorReporting = null;
+    }
+    obj[39] = moderatorReporting;
+    let guildSpaceSettings = c0.guildSpaceSettings;
+    if (guildSpaceSettings == null) {
+      guildSpaceSettings = null;
+    }
+    obj[40] = guildSpaceSettings;
+    let gameApplicationIds = c0.gameApplicationIds;
+    if (gameApplicationIds == null) {
+      gameApplicationIds = null;
+    }
+    obj[41] = gameApplicationIds;
+    let officialMessageColor = c0.officialMessageColor;
+    if (officialMessageColor == null) {
+      officialMessageColor = null;
+    }
+    obj[42] = officialMessageColor;
+    let verificationRoleId = c0.verificationRoleId;
+    if (verificationRoleId == null) {
+      verificationRoleId = null;
+    }
+    obj[43] = verificationRoleId;
+    let incidentsData = c0.incidentsData;
+    if (incidentsData == null) {
+      incidentsData = null;
+    }
+    obj[44] = incidentsData;
+    return callback(closure_8, obj);
+  };
 export const toGuildProperties = function toGuildProperties(id) {
-  let obj = { id: id.id, name: id.name, description: id.description, icon: id.icon, splash: id.splash, banner: id.banner, home_header: id.homeHeader, features: Array.from(id.features), preferred_locale: id.preferredLocale, owner_id: id.ownerId, application_id: id.application_id, afk_channel_id: id.afkChannelId, afk_timeout: id.afkTimeout, system_channel_id: id.systemChannelId, verification_level: id.verificationLevel, explicit_content_filter: id.explicitContentFilter, default_message_notifications: id.defaultMessageNotifications, mfa_level: id.mfaLevel, vanity_url_code: null, premium_tier: null, premium_progress_bar_enabled: null, premium_progress_bar_enabled_user_updated_at: null, premium_features: null, system_channel_flags: null, discovery_splash: null, rules_channel_id: null, safety_alerts_channel_id: null, public_updates_channel_id: null, max_stage_video_channel_users: null, max_video_channel_users: null, max_members: null, nsfw_level: null, nsfw: null, owner_configured_content_level: null, hub_type: null, latest_onboarding_question_id: null, profile: null, theme: null, moderator_reporting: null, guild_space_settings: null, official_message_color: null, incidents_data: null, game_application_ids: null, verification_role_id: null };
+  let obj = {
+    id: id.id,
+    name: id.name,
+    description: id.description,
+    icon: id.icon,
+    splash: id.splash,
+    banner: id.banner,
+    home_header: id.homeHeader,
+    features: Array.from(id.features),
+    preferred_locale: id.preferredLocale,
+    owner_id: id.ownerId,
+    application_id: id.application_id,
+    afk_channel_id: id.afkChannelId,
+    afk_timeout: id.afkTimeout,
+    system_channel_id: id.systemChannelId,
+    verification_level: id.verificationLevel,
+    explicit_content_filter: id.explicitContentFilter,
+    default_message_notifications: id.defaultMessageNotifications,
+    mfa_level: id.mfaLevel,
+    vanity_url_code: null,
+    premium_tier: null,
+    premium_progress_bar_enabled: null,
+    premium_progress_bar_enabled_user_updated_at: null,
+    premium_features: null,
+    system_channel_flags: null,
+    discovery_splash: null,
+    rules_channel_id: null,
+    safety_alerts_channel_id: null,
+    public_updates_channel_id: null,
+    max_stage_video_channel_users: null,
+    max_video_channel_users: null,
+    max_members: null,
+    nsfw_level: null,
+    nsfw: null,
+    owner_configured_content_level: null,
+    hub_type: null,
+    latest_onboarding_question_id: null,
+    profile: null,
+    theme: null,
+    moderator_reporting: null,
+    guild_space_settings: null,
+    official_message_color: null,
+    incidents_data: null,
+    game_application_ids: null,
+    verification_role_id: null,
+  };
   let vanityURLCode = id.vanityURLCode;
   if (vanityURLCode == null) {
     vanityURLCode = null;
@@ -663,16 +871,41 @@ export const toGuildProperties = function toGuildProperties(id) {
   obj[21] = toISOStringResult;
   let tmp3 = null;
   if (null != id.premiumFeatures) {
-    obj = { features: null, additional_emoji_slots: null, additional_sticker_slots: null, additional_sound_slots: null };
-    ({ features: obj2[0], additionalEmojiSlots: obj2[1], additionalStickerSlots: obj2[2], additionalSoundSlots: obj2[3] } = id.premiumFeatures);
+    obj = {
+      features: null,
+      additional_emoji_slots: null,
+      additional_sticker_slots: null,
+      additional_sound_slots: null,
+    };
+    ({
+      features: obj2[0],
+      additionalEmojiSlots: obj2[1],
+      additionalStickerSlots: obj2[2],
+      additionalSoundSlots: obj2[3],
+    } = id.premiumFeatures);
     tmp3 = obj;
   }
   obj[22] = tmp3;
-  ({ systemChannelFlags: obj[23], discoverySplash: obj[24], rulesChannelId: obj[25], safetyAlertsChannelId: obj[26], publicUpdatesChannelId: obj[27], maxStageVideoChannelUsers: obj[28], maxVideoChannelUsers: obj[29], maxMembers: obj[30], nsfwLevel: obj[31] } = id);
-  const items = [, ];
+  ({
+    systemChannelFlags: obj[23],
+    discoverySplash: obj[24],
+    rulesChannelId: obj[25],
+    safetyAlertsChannelId: obj[26],
+    publicUpdatesChannelId: obj[27],
+    maxStageVideoChannelUsers: obj[28],
+    maxVideoChannelUsers: obj[29],
+    maxMembers: obj[30],
+    nsfwLevel: obj[31],
+  } = id);
+  const items = [,];
   ({ AGE_RESTRICTED: arr[0], EXPLICIT: arr[1] } = GuildNSFWContentLevel);
   obj[32] = items.includes(id.nsfwLevel);
-  ({ ownerConfiguredContentLevel: obj[33], hubType: obj[34], latestOnboardingQuestionId: obj[35], profile: obj[36] } = id);
+  ({
+    ownerConfiguredContentLevel: obj[33],
+    hubType: obj[34],
+    latestOnboardingQuestionId: obj[35],
+    profile: obj[36],
+  } = id);
   let tmp4 = null;
   if (null != id.guildTheme) {
     const guildTheme = id.guildTheme;

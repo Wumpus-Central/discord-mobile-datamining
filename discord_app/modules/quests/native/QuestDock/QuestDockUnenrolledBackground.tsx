@@ -12,9 +12,18 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 let c4 = importAllResult;
 ({ AppState: c5, StyleSheet } = get_ActivityIndicator);
-({ QUEST_DOCK_EXPANDED_HEIGHT, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_8, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: c9 } = QUEST_DOCK_COLLAPSED_HEIGHT);
+({
+  QUEST_DOCK_EXPANDED_HEIGHT,
+  QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_8,
+  QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: c9,
+} = QUEST_DOCK_COLLAPSED_HEIGHT);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let obj = { backgroundWrapper: null, backgroundHeroAsset: null, backgroundHeroAssetVideo: null, backgroundGradient: null };
+let obj = {
+  backgroundWrapper: null,
+  backgroundHeroAsset: null,
+  backgroundHeroAssetVideo: null,
+  backgroundGradient: null,
+};
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.right = undefined;
@@ -34,8 +43,12 @@ const merged3 = Object.assign(StyleSheet.absoluteFillObject);
 obj3.height = QUEST_DOCK_EXPANDED_HEIGHT;
 obj[3] = obj3;
 let closure_13 = createCacheKey.createStyles(obj);
-let closure_14 = { code: "function QuestDockUnenrolledBackgroundTsx1(){const{withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,windowDimensions}=this.__closure;return{transform:[{translateX:withSpring(activeQuestDockMode.get()===QuestDockMode.COLLAPSED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED*-1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)},{translateY:withSpring(activeQuestDockMode.get()===QuestDockMode.COLLAPSED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED*-1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)}],width:windowDimensions.get().width};}" };
-let closure_15 = { code: "function QuestDockUnenrolledBackgroundTsx2(){const{withSpring,activeQuestDockMode,QuestDockMode,videoLoaded,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()!==QuestDockMode.EXPANDED||!videoLoaded?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)};}" };
+let closure_14 = {
+  code: "function QuestDockUnenrolledBackgroundTsx1(){const{withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,windowDimensions}=this.__closure;return{transform:[{translateX:withSpring(activeQuestDockMode.get()===QuestDockMode.COLLAPSED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED*-1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)},{translateY:withSpring(activeQuestDockMode.get()===QuestDockMode.COLLAPSED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED*-1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)}],width:windowDimensions.get().width};}",
+};
+let closure_15 = {
+  code: "function QuestDockUnenrolledBackgroundTsx2(){const{withSpring,activeQuestDockMode,QuestDockMode,videoLoaded,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()!==QuestDockMode.EXPANDED||!videoLoaded?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)};}",
+};
 const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground() {
   let obj = activeQuestDockMode(setRestingQuestDockMode[9]);
   const questCreative = obj.useQuestCreative();
@@ -47,7 +60,9 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground()
   const context = importAllResult.useContext(activeQuestDockMode(setRestingQuestDockMode[11]).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   const windowDimensions = context.windowDimensions;
-  setRestingQuestDockMode = importAllResult.useContext(activeQuestDockMode(setRestingQuestDockMode[12]).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  setRestingQuestDockMode = importAllResult.useContext(
+    activeQuestDockMode(setRestingQuestDockMode[12]).QuestDockExternalCoordinationContext,
+  ).setRestingQuestDockMode;
   let obj3 = activeQuestDockMode(setRestingQuestDockMode[14]);
   let items = [closure_6];
   const stateFromStores = obj3.useStateFromStores(items, () => lib.useReducedMotion);
@@ -56,7 +71,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground()
   const items1 = [token];
   const memo = importAllResult.useMemo(() => {
     const obj = windowDimensions(setRestingQuestDockMode[17])(token);
-    const items = [obj.alpha(0).hex(), , , ];
+    const items = [obj.alpha(0).hex(), , ,];
     const alphaResult = obj.alpha(0);
     items[1] = obj.alpha(0.1).hex();
     const alphaResult1 = obj.alpha(0.1);
@@ -75,7 +90,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground()
       num = -1 * closure_1_9;
     }
     obj = { translateX: obj.withSpring(num, closure_1_8) };
-    const items = [obj, ];
+    const items = [obj];
     let num3 = 0;
     if (obj1.get() === closure_1_7.COLLAPSED) {
       num3 = -1 * closure_1_9;
@@ -87,7 +102,14 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground()
     obj[1] = windowDimensions.get().width;
     return obj;
   };
-  obj = { withSpring: activeQuestDockMode(setRestingQuestDockMode[19]).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_9, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_8, windowDimensions };
+  obj = {
+    withSpring: activeQuestDockMode(setRestingQuestDockMode[19]).withSpring,
+    activeQuestDockMode,
+    QuestDockMode,
+    QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_9,
+    QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_8,
+    windowDimensions,
+  };
   fn.__closure = obj;
   fn.__workletHash = 3565242281634;
   fn.__initData = closure_14;
@@ -152,7 +174,13 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground()
       return obj;
     }
   }
-  obj = { withSpring: tmp(tmp2[19]).withSpring, activeQuestDockMode, QuestDockMode: tmp13, videoLoaded: first, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: tmp14 };
+  obj = {
+    withSpring: tmp(tmp2[19]).withSpring,
+    activeQuestDockMode,
+    QuestDockMode: tmp13,
+    videoLoaded: first,
+    QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: tmp14,
+  };
   G.__closure = obj;
   G.__workletHash = 13084905891385;
   G.__initData = closure_15;
@@ -162,14 +190,23 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground()
   let tmp7Result = tmp7(tmp2[23]);
   if (isRendered) {
     obj2 = { children: null };
-    obj3 = { style: null, onLoad: null, source: null, paused: null, resizeMode: "cover", muted: true, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false };
+    obj3 = {
+      style: null,
+      onLoad: null,
+      source: null,
+      paused: null,
+      resizeMode: "cover",
+      muted: true,
+      disableFocus: true,
+      preventsDisplaySleepDuringVideoPlayback: false,
+    };
     obj3[0] = tmp4.backgroundHeroAssetVideo;
     obj3[1] = callback;
     obj4 = { uri: null };
     obj4[0] = videoAsset.url;
     obj3[2] = obj4;
     obj3[3] = tmp8 !== tmp13.EXPANDED;
-    const items4 = [callback(tmp(tmp2[24]).VideoComponent, obj3), ];
+    const items4 = [callback(tmp(tmp2[24]).VideoComponent, obj3)];
     obj5 = { style: null, children: null };
     obj5[0] = animatedStyle1;
     tmp7Result = tmp7(tmp2[23]);
@@ -192,11 +229,22 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground()
     obj8[1] = obj9;
     tmp25Result = callback(tmp7(tmp2[25]), obj8);
   }
-  const items5 = [tmp25Result, tmp27(windowDimensions(setRestingQuestDockMode[26]), { locations: memo1, style: tmp4.backgroundGradient, start: VerticalGradient.START, end: VerticalGradient.END, colors: memo })];
+  const items5 = [
+    tmp25Result,
+    tmp27(windowDimensions(setRestingQuestDockMode[26]), {
+      locations: memo1,
+      style: tmp4.backgroundGradient,
+      start: VerticalGradient.START,
+      end: VerticalGradient.END,
+      colors: memo,
+    }),
+  ];
   obj1[1] = items5;
   return closure_12(tmp7Result, obj1);
 });
 let obj2 = {};
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx",
+);
 
 export default memoResult;

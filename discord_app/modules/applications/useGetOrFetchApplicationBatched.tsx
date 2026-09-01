@@ -59,16 +59,20 @@ prototype["_flush"] = function _flush() {
   });
   if (items1.length > 0) {
     const obj = items(items1[3]);
-    const item2 = items(items1[3]).chunk(items1, 20).forEach((arg0) => {
-      const applications = items(items1[4]).fetchApplications(arg0, false);
-    });
+    const item2 = items(items1[3])
+      .chunk(items1, 20)
+      .forEach((arg0) => {
+        const applications = items(items1[4]).fetchApplications(arg0, false);
+      });
     const chunkResult = items(items1[3]).chunk(items1, 20);
   }
   if (items2.length > 0) {
     const obj2 = items(items1[3]);
-    const item3 = items(items1[3]).chunk(items2, 20).forEach((arg0) => {
-      const applications = items(items1[4]).fetchApplications(arg0, true);
-    });
+    const item3 = items(items1[3])
+      .chunk(items2, 20)
+      .forEach((arg0) => {
+        const applications = items(items1[4]).fetchApplications(arg0, true);
+      });
     const chunkResult1 = items(items1[3]).chunk(items2, 20);
   }
 };
@@ -106,14 +110,18 @@ export const useGetOrFetchApplicationBatched = function useGetOrFetchApplication
   }, items);
   const items1 = [closure_4];
   const items2 = [applicationId];
-  return applicationId(589).useStateFromStores(items1, () => {
-    let application = null;
-    if (null != closure_0) {
-      application = null;
-      if ("" !== tmp) {
-        application = closure_1_4.getApplication(tmp);
+  return applicationId(589).useStateFromStores(
+    items1,
+    () => {
+      let application = null;
+      if (null != closure_0) {
+        application = null;
+        if ("" !== tmp) {
+          application = closure_1_4.getApplication(tmp);
+        }
       }
-    }
-    return application;
-  }, items2);
+      return application;
+    },
+    items2,
+  );
 };

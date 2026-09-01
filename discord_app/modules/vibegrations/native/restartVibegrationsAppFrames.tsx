@@ -21,10 +21,8 @@ export default function restartVibegrationsAppFrames(arg0) {
       obj[0] = arg0;
       obj[1] = item10003.surface;
       let launchFrameResult = obj2.launchFrame(obj);
-      let catchPromise = launchFrameResult.catch(() => {
-
-      });
+      let catchPromise = launchFrameResult.catch(() => {});
       continue;
     }
   }
-};
+}

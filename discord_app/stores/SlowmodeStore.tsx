@@ -30,11 +30,20 @@ function setCooldown(channel, SendMessage, arg2) {
       obj[3] = timeout;
       tmp3[SendMessage][channel.id] = obj;
       const timer2 = tmp3[SendMessage][channel.id].timer;
-      timer2.start(1000, () => {
-        obj = SendMessage(sum[4]);
-        obj = { type: "SLOWMODE_SET_COOLDOWN", channelId: id.id, slowmodeType: SendMessage, cooldownMs: Math.max(closure_2 - Date.now(), 0) };
-        obj.dispatch(obj);
-      }, true);
+      timer2.start(
+        1000,
+        () => {
+          obj = SendMessage(sum[4]);
+          obj = {
+            type: "SLOWMODE_SET_COOLDOWN",
+            channelId: id.id,
+            slowmodeType: SendMessage,
+            cooldownMs: Math.max(closure_2 - Date.now(), 0),
+          };
+          obj.dispatch(obj);
+        },
+        true,
+      );
     }
   }
 }
@@ -48,8 +57,7 @@ function handleUploadCancel(channelId) {
 let obj = { SendMessage: 0, [0]: "SendMessage", CreateThread: 1, [1]: "CreateThread" };
 let closure_6 = { [obj.SendMessage]: {}, [obj.CreateThread]: {} };
 const Store = initializeDefault.Store;
-class SlowmodeStore extends Store {
-}
+class SlowmodeStore extends Store {}
 const prototype = SlowmodeStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_4);
@@ -111,7 +119,7 @@ obj = {
   UPLOAD_CANCEL_REQUEST: handleUploadCancel,
   CHANNEL_UPDATES: function handleUpdateCooldown(channels) {
     channels = channels.channels;
-    const items = [, ];
+    const items = [,];
     ({ SendMessage: arr[0], CreateThread: arr[1] } = obj);
     const item = items.forEach((arg0) => {
       const iter = channels[Symbol.iterator]();
@@ -138,7 +146,11 @@ obj = {
             let tmp12 = rateLimitPerUser;
             let tmp13 = closure_1_1;
             let tmp14 = closure_1_2;
-            let tmp9Result = tmp9(tmp3, arg0, Math.min(num, rateLimitPerUser * closure_1_1(closure_1_2[5]).Millis.SECOND));
+            let tmp9Result = tmp9(
+              tmp3,
+              arg0,
+              Math.min(num, rateLimitPerUser * closure_1_1(closure_1_2[5]).Millis.SECOND),
+            );
           }
         }
         continue;
@@ -146,7 +158,7 @@ obj = {
     });
   },
   LOGOUT: function clear() {
-    const items = [, ];
+    const items = [,];
     ({ SendMessage: arr[0], CreateThread: arr[1] } = obj);
     let item = items.forEach((arg0) => {
       closure_0 = arg0;
@@ -157,7 +169,7 @@ obj = {
       });
       table[arg0] = {};
     });
-  }
+  },
 };
 const slowmodeStore = new SlowmodeStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("stores/SlowmodeStore.tsx");

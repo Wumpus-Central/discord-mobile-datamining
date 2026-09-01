@@ -31,21 +31,24 @@ function useCanRingToGuildVoiceChannel(user, DisconnectedUserRow, stateFromStore
   });
   const obj = initialize;
   const items1 = [closure_6, closure_7];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
-    let guild_id;
-    if (stateFromStores != null) {
-      guild_id = stateFromStores.guild_id;
-    }
-    if (null == guild_id) {
-      return false;
-    } else {
-      let canChat = null != closure_1_6.getMember(guild_id, user.id);
-      if (canChat) {
-        canChat = closure_1_7.getCheck(guild_id).canChat;
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => {
+      let guild_id;
+      if (stateFromStores != null) {
+        guild_id = stateFromStores.guild_id;
       }
-      return canChat;
-    }
-  });
+      if (null == guild_id) {
+        return false;
+      } else {
+        let canChat = null != closure_1_6.getMember(guild_id, user.id);
+        if (canChat) {
+          canChat = closure_1_7.getCheck(guild_id).canChat;
+        }
+        return canChat;
+      }
+    },
+  );
   let id;
   const obj2 = initialize;
   const tmp4 = importDefault;
@@ -90,7 +93,10 @@ export const useCanRing = function useCanRing(user, DisconnectedUserRow, selecte
   stateFromStores = _require(stateFromStores[10]).useStateFromStores(items, () => closure_1_5.getChannel(closure_1));
   const obj = _require(stateFromStores[10]);
   const items1 = [closure_3];
-  const stateFromStores1 = _require(stateFromStores[10]).useStateFromStores(items1, () => closure_1_3.getId() === user.id);
+  const stateFromStores1 = _require(stateFromStores[10]).useStateFromStores(
+    items1,
+    () => closure_1_3.getId() === user.id,
+  );
   const obj2 = _require(stateFromStores[10]);
   const items2 = [closure_10];
   let stateFromStores2 = _require(stateFromStores[10]).useStateFromStores(items2, () => closure_1_10.isFriend(user.id));

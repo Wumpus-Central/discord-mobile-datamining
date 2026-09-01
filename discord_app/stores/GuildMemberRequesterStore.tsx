@@ -41,9 +41,7 @@ function handleLoadSearchResults(arg0) {
     let item = data.forEach((messages) => {
       messages = messages.messages;
       let item = messages.forEach((arr) => {
-        const item = arr.forEach((arg0) => {
-
-        });
+        const item = arr.forEach((arg0) => {});
       });
     });
     const item1 = items.forEach((arg0) => {
@@ -69,8 +67,7 @@ let closure_4 = new acknowledgeDefault(importDefaultResult.isMember, (arg0, user
   obj.dispatch(obj);
 });
 const Store = initializeDefault.Store;
-class GuildMemberRequesterStore extends Store {
-}
+class GuildMemberRequesterStore extends Store {}
 const prototype = GuildMemberRequesterStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3);
@@ -189,7 +186,7 @@ const guildMemberRequesterStore = new GuildMemberRequesterStore(dispatcherDefaul
       }
     }
     return false;
-  }
+  },
 });
 let obj = {
   CONNECTION_CLOSED: handleConnectionReset,
@@ -298,7 +295,7 @@ let obj = {
       }
     }
     return false;
-  }
+  },
 };
 const tmp3 = new acknowledgeDefault(importDefaultResult.isMember, (arg0, userIds) => {
   let obj = dispatcherDefault;

@@ -10,8 +10,7 @@ let closure_5 = {};
 let closure_6 = {};
 let closure_7 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class PendingReplyStore extends PersistedStore {
-}
+class PendingReplyStore extends PersistedStore {}
 const prototype = PendingReplyStore.prototype;
 prototype["getState"] = function getState() {
   let obj = {};
@@ -55,7 +54,7 @@ const items = [
       obj = {};
     }
     return obj;
-  }
+  },
 ];
 PendingReplyStore.migrations = items;
 const pendingReplyStore = new PendingReplyStore(dispatcherDefault, {
@@ -68,7 +67,13 @@ const pendingReplyStore = new PendingReplyStore(dispatcherDefault, {
     if (flag === undefined) {
       flag = true;
     }
-    closure_5[channel.id] = { channel, message: message.message, shouldMention, showMentionToggle: flag, mediaMention: message.mediaMention };
+    closure_5[channel.id] = {
+      channel,
+      message: message.message,
+      shouldMention,
+      showMentionToggle: flag,
+      mediaMention: message.mediaMention,
+    };
     closure_7[channel.id] = message.source;
   },
   CREATE_SHALLOW_PENDING_REPLY: function handleCreateShallowPendingReply(messageId) {
@@ -80,7 +85,12 @@ const pendingReplyStore = new PendingReplyStore(dispatcherDefault, {
     if (flag === undefined) {
       flag = true;
     }
-    closure_6[channel.id] = { channelId: channel.id, messageId: messageId.messageId, shouldMention, showMentionToggle: flag };
+    closure_6[channel.id] = {
+      channelId: channel.id,
+      messageId: messageId.messageId,
+      shouldMention,
+      showMentionToggle: flag,
+    };
   },
   SET_PENDING_REPLY_SHOULD_MENTION: function handleSetPendingReplyShouldMention(arg0) {
     ({ channelId, shouldMention } = arg0);
@@ -176,7 +186,7 @@ const pendingReplyStore = new PendingReplyStore(dispatcherDefault, {
         }
       }
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/replies/PendingReplyStore.tsx");
 

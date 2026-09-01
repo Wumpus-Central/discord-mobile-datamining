@@ -12,7 +12,19 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 noopAll;
 let obj = new setOptionsDefault();
-obj.setOptions({ renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderEmbeds: true, ignoreMentioned: true, inlineAttachmentMedia: true, inlineEmbedMedia: true, renderReactions: false, renderReplies: true, renderThreadEmbeds: false });
+obj.setOptions({
+  renderCodedLinks: false,
+  renderGiftCode: false,
+  renderActivityInstanceEmbed: false,
+  renderActivityInviteEmbed: false,
+  renderEmbeds: true,
+  ignoreMentioned: true,
+  inlineAttachmentMedia: true,
+  inlineEmbedMedia: true,
+  renderReactions: false,
+  renderReplies: true,
+  renderThreadEmbeds: false,
+});
 const result = require("set").fileFinishedImporting("modules/threads/native/components/ThreadParentMessage.tsx");
 
 export const ThreadChannelStarterMessage = function ThreadChannelStarterMessage(arg0) {

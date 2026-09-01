@@ -13,54 +13,80 @@ export default function useWishlistNUXActionSheet() {
   const items = [closure_5];
   _require = obj.useStateFromStores(items, () => id.getId());
   const items1 = [closure_4];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_4.getFirstWishlistId(closure_0));
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => closure_1_4.getFirstWishlistId(closure_0),
+  );
   let obj2 = initialize;
   const items2 = [closure_4];
-  let stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
-    const userProfile = closure_1_4.getUserProfile(closure_0);
-    let tmp2 = null != userProfile;
-    if (tmp2) {
-      tmp2 = userProfile.fetchEndedAt > 0;
-    }
-    return tmp2;
-  });
+  let stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items2,
+    () => {
+      const userProfile = closure_1_4.getUserProfile(closure_0);
+      let tmp2 = null != userProfile;
+      if (tmp2) {
+        tmp2 = userProfile.fetchEndedAt > 0;
+      }
+      return tmp2;
+    },
+  );
   if (stateFromStores1) {
     stateFromStores1 = null == stateFromStores;
   }
   const obj3 = initialize;
   if (stateFromStores1) {
-    stateFromStores1 = !tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1373).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET);
+    stateFromStores1 = !tmpResult.useIsDismissibleContentDismissed_UNSAFE(
+      tmp(1373).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
+    );
   }
   obj = {
     shouldShowWishlistNUXActionSheet: stateFromStores1,
     showWishlistNUXActionSheet: React.useCallback((product) => {
       let obj = callback(paths[7]);
-      const result = obj.trackDismissibleContentShown(callback(paths[6]).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET);
+      const result = obj.trackDismissibleContentShown(
+        callback(paths[6]).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
+      );
       obj = { product };
-      callback2(paths[8]).openLazy(callback(paths[10])(paths[9], paths.paths), "WishlistNUXAddedItemActionSheet", obj, "stack");
+      callback2(paths[8]).openLazy(
+        callback(paths[10])(paths[9], paths.paths),
+        "WishlistNUXAddedItemActionSheet",
+        obj,
+        "stack",
+      );
       const obj2 = callback2(paths[8]);
       obj = { dismissAction: constants.USER_DISMISS, forceTrack: true };
-      const result1 = callback(paths[5]).UNSAFE_markDismissibleContentAsDismissed(callback(paths[6]).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET, obj);
-    }, [])
+      const result1 = callback(paths[5]).UNSAFE_markDismissibleContentAsDismissed(
+        callback(paths[6]).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
+        obj,
+      );
+    }, []),
   };
   return obj;
-};
+}
 export const useHasNeverWishlisted = function useHasNeverWishlisted() {
   const items = [closure_5];
-  _require = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => id.getId());
+  _require = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    id.getId(),
+  );
   const obj = initialize;
   const items1 = [closure_4];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_4.getFirstWishlistId(closure_0));
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => closure_1_4.getFirstWishlistId(closure_0),
+  );
   const obj2 = initialize;
   const items2 = [closure_4];
-  let stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
-    const userProfile = closure_1_4.getUserProfile(closure_0);
-    let tmp2 = null != userProfile;
-    if (tmp2) {
-      tmp2 = userProfile.fetchEndedAt > 0;
-    }
-    return tmp2;
-  });
+  let stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items2,
+    () => {
+      const userProfile = closure_1_4.getUserProfile(closure_0);
+      let tmp2 = null != userProfile;
+      if (tmp2) {
+        tmp2 = userProfile.fetchEndedAt > 0;
+      }
+      return tmp2;
+    },
+  );
   if (stateFromStores1) {
     stateFromStores1 = null == stateFromStores;
   }

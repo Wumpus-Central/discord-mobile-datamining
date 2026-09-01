@@ -22,5 +22,5 @@ export default {
   },
   clearMessages() {
     dispatcherDefault.dispatch({ type: "CLEAR_MESSAGES_AROUND_SUCCESS" });
-  }
+  },
 };

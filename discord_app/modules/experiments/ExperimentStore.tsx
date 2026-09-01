@@ -98,7 +98,16 @@ function getTrackExposureExperimentHash(descriptor) {
   }
 }
 function trackExposure(arg0) {
-  ({ experimentId, descriptor, location: _location, location_stack, context, fingerprint, excluded, exposureType } = arg0);
+  ({
+    experimentId,
+    descriptor,
+    location: _location,
+    location_stack,
+    context,
+    fingerprint,
+    excluded,
+    exposureType,
+  } = arg0);
   const assignmentSource = descriptor.assignmentSource;
   if ("override" === assignmentSource) {
     return false;
@@ -120,7 +129,12 @@ function trackExposure(arg0) {
     if (descriptor.override) {
       return false;
     } else {
-      const tmp10 = getTrackExposureExperimentKey(experimentId, descriptor, _location, exposureType === constants3.AUTO_FALLBACK && descriptor.triggerDebuggingEnabled);
+      const tmp10 = getTrackExposureExperimentKey(
+        experimentId,
+        descriptor,
+        _location,
+        exposureType === constants3.AUTO_FALLBACK && descriptor.triggerDebuggingEnabled,
+      );
       const tmp12 = getTrackExposureExperimentHash(descriptor);
       let tmp13 = flag;
       if (flag) {
@@ -140,7 +154,23 @@ function trackExposure(arg0) {
         } else {
           const type = descriptor.type;
           if (constants2.USER === type) {
-            let obj = { name: null, revision: null, population: null, bucket: null, location: null, location_stack: null, hash_result: null, excluded: null, exposure_type: null, assignment_source: null, assignment_session_id: null, assignment_loaded_from_cache: null, holdout_name: null, holdout_revision: null, holdout_bucket: null };
+            let obj = {
+              name: null,
+              revision: null,
+              population: null,
+              bucket: null,
+              location: null,
+              location_stack: null,
+              hash_result: null,
+              excluded: null,
+              exposure_type: null,
+              assignment_source: null,
+              assignment_session_id: null,
+              assignment_loaded_from_cache: null,
+              holdout_name: null,
+              holdout_revision: null,
+              holdout_bucket: null,
+            };
             obj[0] = experimentId;
             ({ revision: obj7[1], population: obj7[2], bucket: obj7[3] } = descriptor);
             obj[4] = _location;
@@ -148,7 +178,14 @@ function trackExposure(arg0) {
             obj[6] = descriptor.hashResult;
             obj[7] = excluded;
             obj[8] = exposureType;
-            ({ assignmentSource: obj7[9], sessionId: obj7[10], loadedFromCache: obj7[11], holdoutName: obj7[12], holdoutRevision: obj7[13], holdoutBucket: obj7[14] } = descriptor);
+            ({
+              assignmentSource: obj7[9],
+              sessionId: obj7[10],
+              loadedFromCache: obj7[11],
+              holdoutName: obj7[12],
+              holdoutRevision: obj7[13],
+              holdoutBucket: obj7[14],
+            } = descriptor);
             if (null != context) {
               obj.context_guild_id = context.guildId;
             }
@@ -184,7 +221,23 @@ function trackExposure(arg0) {
               EXPERIMENT_GUILD_TRIGGERED = tmp60.EXPERIMENT_GUILD_TRIGGERED;
               tmp23 = tmp60;
             }
-            obj = { name: null, revision: null, bucket: null, guild_id: null, location: null, location_stack: null, hash_result: null, excluded: null, exposure_type: null, assignment_source: null, assignment_session_id: null, assignment_loaded_from_cache: null, holdout_name: null, holdout_revision: null, holdout_bucket: null };
+            obj = {
+              name: null,
+              revision: null,
+              bucket: null,
+              guild_id: null,
+              location: null,
+              location_stack: null,
+              hash_result: null,
+              excluded: null,
+              exposure_type: null,
+              assignment_source: null,
+              assignment_session_id: null,
+              assignment_loaded_from_cache: null,
+              holdout_name: null,
+              holdout_revision: null,
+              holdout_bucket: null,
+            };
             obj[0] = experimentId;
             ({ revision: obj[1], bucket: obj[2], guildId: obj[3] } = descriptor);
             obj[4] = _location;
@@ -192,7 +245,14 @@ function trackExposure(arg0) {
             obj[6] = descriptor.hashResult;
             obj[7] = excluded;
             obj[8] = exposureType;
-            ({ assignmentSource: obj[9], sessionId: obj[10], loadedFromCache: obj[11], holdoutName: obj[12], holdoutRevision: obj[13], holdoutBucket: obj[14] } = descriptor);
+            ({
+              assignmentSource: obj[9],
+              sessionId: obj[10],
+              loadedFromCache: obj[11],
+              holdoutName: obj[12],
+              holdoutRevision: obj[13],
+              holdoutBucket: obj[14],
+            } = descriptor);
             if (flag) {
               const obj3 = {};
               const merged1 = Object.assign(obj);
@@ -267,7 +327,7 @@ function _loadPopulation(arg0) {
       return { bucket: tmp, positions: arr.map((s) => ({ start: s.s, end: s.e })) };
     }),
     filters: arr2.map(_loadGuildFilter),
-    rawFilterData: arr2
+    rawFilterData: arr2,
   };
 }
 function handleLoadedExperiments(type) {
@@ -293,7 +353,12 @@ function handleLoadedExperiments(type) {
   }
   if (tmp5) {
     obj = str4(fingerprint[8]);
-    obj = { fingerprint: null, current_snapshot_source: null, current_snapshot_session_id: null, current_snapshot_fingerprint: null };
+    obj = {
+      fingerprint: null,
+      current_snapshot_source: null,
+      current_snapshot_session_id: null,
+      current_snapshot_fingerprint: null,
+    };
     obj[0] = type.fingerprint;
     obj[1] = obj.source;
     obj[2] = obj.sessionId;
@@ -341,13 +406,43 @@ function handleLoadedExperiments(type) {
     obj[4] = fingerprint;
     const item = experiments.forEach((arg0) => {
       [tmp, tmp2, tmp3, tmp4, tmp5, num, tmp6, tmp7, tmp8, tmp9, tmp10] = arg0;
-      obj = { type: "user", revision: tmp2, population: tmp5, bucket: tmp3, override: 0 === tmp4, hashResult: num, aaMode: 1 === tmp6, triggerDebuggingEnabled: 1 === tmp7, assignmentSource: source, sessionId, loadedFromCache: c3, fingerprint, holdoutName: tmp8, holdoutRevision: tmp9, holdoutBucket: tmp10 };
+      obj = {
+        type: "user",
+        revision: tmp2,
+        population: tmp5,
+        bucket: tmp3,
+        override: 0 === tmp4,
+        hashResult: num,
+        aaMode: 1 === tmp6,
+        triggerDebuggingEnabled: 1 === tmp7,
+        assignmentSource: source,
+        sessionId,
+        loadedFromCache: c3,
+        fingerprint,
+        holdoutName: tmp8,
+        holdoutRevision: tmp9,
+        holdoutBucket: tmp10,
+      };
       loadedUserExperiments[tmp] = obj;
     });
     if (null != guildExperiments) {
       const item1 = guildExperiments.forEach((arg0) => {
         [tmp, tmp2, tmp3, arr, tmp4, arr2, tmp5, tmp6, tmp7, tmp8] = arg0;
-        obj = { hashKey: tmp2, revision: tmp3, populations: arr.map(closure_1_35), overrides: closure_1_34(tmp4), overridesFormatted: null, holdoutName: null, holdoutControlBucket: null, aaMode: null, triggerDebuggingEnabled: null, assignmentSource: null, sessionId: null, loadedFromCache: null, fingerprint: null };
+        obj = {
+          hashKey: tmp2,
+          revision: tmp3,
+          populations: arr.map(closure_1_35),
+          overrides: closure_1_34(tmp4),
+          overridesFormatted: null,
+          holdoutName: null,
+          holdoutControlBucket: null,
+          aaMode: null,
+          triggerDebuggingEnabled: null,
+          assignmentSource: null,
+          sessionId: null,
+          loadedFromCache: null,
+          fingerprint: null,
+        };
         if (items == null) {
           items = [];
         }
@@ -425,7 +520,15 @@ function computeGuildExperimentDescriptor(guildId, holdoutName) {
     if (null != tmp2.overrides[guildId]) {
       let tmp29 = null;
       if (tmp34 !== constants.NOT_ELIGIBLE) {
-        let obj = { type: null, guildId: null, revision: null, bucket: null, override: true, hashResult: -1, triggerDebuggingEnabled: null };
+        let obj = {
+          type: null,
+          guildId: null,
+          revision: null,
+          bucket: null,
+          override: true,
+          hashResult: -1,
+          triggerDebuggingEnabled: null,
+        };
         obj[0] = constants2.GUILD;
         obj[1] = guildId;
         obj[2] = tmp32;
@@ -449,7 +552,18 @@ function computeGuildExperimentDescriptor(guildId, holdoutName) {
         let tmp7 = computeGuildExperimentBucketFromPopulationsOrNull;
         let tmp8 = computeGuildExperimentBucketFromPopulationsOrNull(arg0, item10027, result);
         if (null !== tmp8) {
-          obj = { type: null, guildId: null, revision: null, bucket: null, override: true, hashResult: null, triggerDebuggingEnabled: null, assignmentSource: null, sessionId: null, loadedFromCache: null };
+          obj = {
+            type: null,
+            guildId: null,
+            revision: null,
+            bucket: null,
+            override: true,
+            hashResult: null,
+            triggerDebuggingEnabled: null,
+            assignmentSource: null,
+            sessionId: null,
+            loadedFromCache: null,
+          };
           let tmp10 = constants2;
           obj[0] = constants2.GUILD;
           obj[1] = arg0;
@@ -498,7 +612,21 @@ function computeGuildExperimentDescriptor(guildId, holdoutName) {
             }
           }
         }
-        const obj2 = { type: null, guildId: null, revision: null, bucket: null, hashResult: null, aaMode: null, triggerDebuggingEnabled: null, assignmentSource: null, sessionId: null, loadedFromCache: null, holdoutName: null, holdoutRevision: null, holdoutBucket: null };
+        const obj2 = {
+          type: null,
+          guildId: null,
+          revision: null,
+          bucket: null,
+          hashResult: null,
+          aaMode: null,
+          triggerDebuggingEnabled: null,
+          assignmentSource: null,
+          sessionId: null,
+          loadedFromCache: null,
+          holdoutName: null,
+          holdoutRevision: null,
+          holdoutBucket: null,
+        };
         obj2[0] = constants2.GUILD;
         obj2[1] = guildId;
         obj2[2] = tmp2.revision;
@@ -578,10 +706,20 @@ function handleOverlayInitialize(arg0) {
   if (tmp) {
     c26 = true;
   }
-  ({ hasLoadedExperiments: c16, trackedExposureExperiments: closure_17, loadedUserExperiments: closure_21, userExperimentOverrides: closure_24, guildExperimentOverrides: closure_25 } = serializedExperimentStore);
+  ({
+    hasLoadedExperiments: c16,
+    trackedExposureExperiments: closure_17,
+    loadedUserExperiments: closure_21,
+    userExperimentOverrides: closure_24,
+    guildExperimentOverrides: closure_25,
+  } = serializedExperimentStore);
   const obj = {};
   const merged = Object.assign(obj);
-  ({ assignmentSource: obj.source, assignmentSessionId: obj.sessionId, assignmentFingerprint: obj.fingerprint } = serializedExperimentStore);
+  ({
+    assignmentSource: obj.source,
+    assignmentSessionId: obj.sessionId,
+    assignmentFingerprint: obj.fingerprint,
+  } = serializedExperimentStore);
   closure_22 = processGuildExperimentPopulationFromCache(serializedExperimentStore.loadedGuildExperiments);
   closure_23 = {};
 }
@@ -621,7 +759,7 @@ function loadLocalOverrides() {
   if (obj == null) {
     obj = {};
   }
-  const items = [obj, , ];
+  const items = [obj, ,];
   const Storage2 = tmp3(595).Storage;
   let value = Storage2.get(userExperimentOverrides);
   if (value == null) {
@@ -707,13 +845,19 @@ function saveExperimentOverrides() {
       const result1 = Storage2.set(guildExperimentOverrides, closure_25);
     } catch (tmp20) {
       logger.error("Error saving guild experiment overrides, unsaved data will be lost", tmp20);
-      importDefault(tmp[8]).track(constants4.EXPERIMENT_SAVE_EXPOSURE_FAILED, { module: "discord_app", call: "ExperimentStore.saveExperimentOverrides" });
+      importDefault(tmp[8]).track(constants4.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+        module: "discord_app",
+        call: "ExperimentStore.saveExperimentOverrides",
+      });
       const obj2 = importDefault(tmp[8]);
     }
   } catch (tmp8) {
     logger.error("Error saving user experiment overrides, unsaved data will be lost", tmp8);
     tmp4 = dependencyMap;
-    expandEventPropertiesDefault.track(constants4.EXPERIMENT_SAVE_EXPOSURE_FAILED, { module: "discord_app", call: "ExperimentStore.saveExperimentOverrides" });
+    expandEventPropertiesDefault.track(constants4.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+      module: "discord_app",
+      call: "ExperimentStore.saveExperimentOverrides",
+    });
     const obj = expandEventPropertiesDefault;
   }
 }
@@ -725,7 +869,10 @@ function saveTrackedExposureExperiments(closure_17) {
     const result = Storage.set(c11, obj);
   } catch (tmp6) {
     logger.error("Error saving tracked exposure experiments, unsaved data will be lost", tmp6);
-    expandEventPropertiesDefault.track(constants4.EXPERIMENT_SAVE_EXPOSURE_FAILED, { module: "discord_app", call: "ExperimentStore.saveTrackedExposureExperiments" });
+    expandEventPropertiesDefault.track(constants4.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+      module: "discord_app",
+      call: "ExperimentStore.saveTrackedExposureExperiments",
+    });
     const obj2 = expandEventPropertiesDefault;
   }
 }
@@ -826,7 +973,17 @@ let timestamp = Date.now();
 let ExperimentStore;
 class ExperimentStore extends tmp3 {
   constructor() {
-    obj = { LOGOUT: handleLogout, LOGIN_SUCCESS: handleLogin, CONNECTION_OPEN: handleLoadedExperiments, EXPERIMENTS_FETCH_SUCCESS: handleLoadedExperiments, OVERLAY_INITIALIZE: handleOverlayInitialize, EXPERIMENTS_FETCH_FAILURE: handleFetchFailure, EXPERIMENT_OVERRIDE_BUCKET: handleExperimentOverrideBucket, GUILD_CREATE: handleGuildChange, GUILD_UPDATE: handleGuildChange };
+    obj = {
+      LOGOUT: handleLogout,
+      LOGIN_SUCCESS: handleLogin,
+      CONNECTION_OPEN: handleLoadedExperiments,
+      EXPERIMENTS_FETCH_SUCCESS: handleLoadedExperiments,
+      OVERLAY_INITIALIZE: handleOverlayInitialize,
+      EXPERIMENTS_FETCH_FAILURE: handleFetchFailure,
+      EXPERIMENT_OVERRIDE_BUCKET: handleExperimentOverrideBucket,
+      GUILD_CREATE: handleGuildChange,
+      GUILD_UPDATE: handleGuildChange,
+    };
     tmp = new tmp(obj, require("dispatcher").DispatchBand.Early, new.target, tmp, obj);
     // ThrowIfThisInitialized (0x7c)
     tmp.trackExposure = trackExposure;
@@ -894,7 +1051,13 @@ prototype["loadCache"] = function loadCache() {
       const sessionId = snapshot.sessionId;
       const fingerprint = snapshot.fingerprint;
       c3 = true;
-      let obj = { rawUserExperiments: null, rawGuildExperiments: null, source: null, sessionId: null, fingerprint: null };
+      let obj = {
+        rawUserExperiments: null,
+        rawGuildExperiments: null,
+        source: null,
+        sessionId: null,
+        fingerprint: null,
+      };
       obj[0] = rawUserExperiments;
       let items = rawGuildExperiments;
       if (rawGuildExperiments == null) {
@@ -906,13 +1069,43 @@ prototype["loadCache"] = function loadCache() {
       obj[4] = fingerprint;
       const item2 = rawUserExperiments.forEach((arg0) => {
         [tmp, tmp2, tmp3, tmp4, tmp5, num, tmp6, tmp7, tmp8, tmp9, tmp10] = arg0;
-        obj = { type: "user", revision: tmp2, population: tmp5, bucket: tmp3, override: 0 === tmp4, hashResult: num, aaMode: 1 === tmp6, triggerDebuggingEnabled: 1 === tmp7, assignmentSource: source, sessionId, loadedFromCache: c3, fingerprint, holdoutName: tmp8, holdoutRevision: tmp9, holdoutBucket: tmp10 };
+        obj = {
+          type: "user",
+          revision: tmp2,
+          population: tmp5,
+          bucket: tmp3,
+          override: 0 === tmp4,
+          hashResult: num,
+          aaMode: 1 === tmp6,
+          triggerDebuggingEnabled: 1 === tmp7,
+          assignmentSource: source,
+          sessionId,
+          loadedFromCache: c3,
+          fingerprint,
+          holdoutName: tmp8,
+          holdoutRevision: tmp9,
+          holdoutBucket: tmp10,
+        };
         loadedUserExperiments[tmp] = obj;
       });
       if (null != rawGuildExperiments) {
         const item3 = rawGuildExperiments.forEach((arg0) => {
           [tmp, tmp2, tmp3, arr, tmp4, arr2, tmp5, tmp6, tmp7, tmp8] = arg0;
-          obj = { hashKey: tmp2, revision: tmp3, populations: arr.map(closure_1_35), overrides: closure_1_34(tmp4), overridesFormatted: null, holdoutName: null, holdoutControlBucket: null, aaMode: null, triggerDebuggingEnabled: null, assignmentSource: null, sessionId: null, loadedFromCache: null, fingerprint: null };
+          obj = {
+            hashKey: tmp2,
+            revision: tmp3,
+            populations: arr.map(closure_1_35),
+            overrides: closure_1_34(tmp4),
+            overridesFormatted: null,
+            holdoutName: null,
+            holdoutControlBucket: null,
+            aaMode: null,
+            triggerDebuggingEnabled: null,
+            assignmentSource: null,
+            sessionId: null,
+            loadedFromCache: null,
+            fingerprint: null,
+          };
           if (items == null) {
             items = [];
           }
@@ -942,7 +1135,7 @@ Object.defineProperty(prototype, "hasLoadedExperiments", {
   get: function hasLoadedExperiments() {
     return c16;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["hasRegisteredExperiment"] = function hasRegisteredExperiment(arg0) {
   return null != dependencyMap2[arg0];
@@ -1033,7 +1226,7 @@ prototype["getRecentExposures"] = function getRecentExposures(GUILD, id) {
     return obj.startsWith(closure_0);
   });
   return found.map((arg0) => {
-    [str, ] = arg0;
+    [str] = arg0;
     const items = [str.replace(closure_0, ""), tmp];
     return items;
   });
@@ -1120,10 +1313,34 @@ prototype["getSerializedState"] = function getSerializedState() {
       continue;
     }
   }
-  obj = { hasLoadedExperiments: c16, trackedExposureExperiments: closure_17, loadedUserExperiments: closure_21, loadedGuildExperiments: obj, userExperimentOverrides: closure_24, guildExperimentOverrides: closure_25, cookieOverrides: Version.getBuildOverrideExperiments(), assignmentSource: closure_20.source, assignmentSessionId: closure_20.sessionId, assignmentFingerprint: closure_20.fingerprint };
+  obj = {
+    hasLoadedExperiments: c16,
+    trackedExposureExperiments: closure_17,
+    loadedUserExperiments: closure_21,
+    loadedGuildExperiments: obj,
+    userExperimentOverrides: closure_24,
+    guildExperimentOverrides: closure_25,
+    cookieOverrides: Version.getBuildOverrideExperiments(),
+    assignmentSource: closure_20.source,
+    assignmentSessionId: closure_20.sessionId,
+    assignmentFingerprint: closure_20.fingerprint,
+  };
   return obj;
 };
-function hasExperimentTrackedExposure(experimentId, Early, _location, Object, prototype, hasExperimentTrackedExposure, handleLogout, handleLogin, handleLoadedExperiments, handleOverlayInitialize, handleFetchFailure, ExperimentStore) {
+function hasExperimentTrackedExposure(
+  experimentId,
+  Early,
+  _location,
+  Object,
+  prototype,
+  hasExperimentTrackedExposure,
+  handleLogout,
+  handleLogin,
+  handleLoadedExperiments,
+  handleOverlayInitialize,
+  handleFetchFailure,
+  ExperimentStore,
+) {
   const tmp3 = dependencyMap[getTrackExposureExperimentKey(experimentId, Early, _location, Object)];
   let tmp4 = null != tmp3;
   if (tmp4) {
@@ -1136,14 +1353,53 @@ function hasExperimentTrackedExposure(experimentId, Early, _location, Object, pr
 prototype["hasExperimentTrackedExposure"] = hasExperimentTrackedExposure;
 ExperimentStore.displayName = "ExperimentStore";
 ExperimentStore.LATEST_SNAPSHOT_VERSION = 1;
-hasExperimentTrackedExposure = new hasExperimentTrackedExposure({ LOGOUT: handleLogout, LOGIN_SUCCESS: handleLogin, CONNECTION_OPEN: handleLoadedExperiments, EXPERIMENTS_FETCH_SUCCESS: handleLoadedExperiments, OVERLAY_INITIALIZE: handleOverlayInitialize, EXPERIMENTS_FETCH_FAILURE: handleFetchFailure, EXPERIMENT_OVERRIDE_BUCKET: handleExperimentOverrideBucket, GUILD_CREATE: handleGuildChange, GUILD_UPDATE: handleGuildChange }, require("dispatcher").DispatchBand.Early, tmp, Object, prototype, "hasExperimentTrackedExposure", handleLogout, handleLogin, handleLoadedExperiments, handleOverlayInitialize, handleFetchFailure, ExperimentStore);
+hasExperimentTrackedExposure = new hasExperimentTrackedExposure(
+  {
+    LOGOUT: handleLogout,
+    LOGIN_SUCCESS: handleLogin,
+    CONNECTION_OPEN: handleLoadedExperiments,
+    EXPERIMENTS_FETCH_SUCCESS: handleLoadedExperiments,
+    OVERLAY_INITIALIZE: handleOverlayInitialize,
+    EXPERIMENTS_FETCH_FAILURE: handleFetchFailure,
+    EXPERIMENT_OVERRIDE_BUCKET: handleExperimentOverrideBucket,
+    GUILD_CREATE: handleGuildChange,
+    GUILD_UPDATE: handleGuildChange,
+  },
+  require("dispatcher").DispatchBand.Early,
+  tmp,
+  Object,
+  prototype,
+  "hasExperimentTrackedExposure",
+  handleLogout,
+  handleLogin,
+  handleLoadedExperiments,
+  handleOverlayInitialize,
+  handleFetchFailure,
+  ExperimentStore,
+);
 // ThrowIfThisInitialized (0x7c)
 hasExperimentTrackedExposure.trackExposure = trackExposure;
-let obj = { LOGOUT: handleLogout, LOGIN_SUCCESS: handleLogin, CONNECTION_OPEN: handleLoadedExperiments, EXPERIMENTS_FETCH_SUCCESS: handleLoadedExperiments, OVERLAY_INITIALIZE: handleOverlayInitialize, EXPERIMENTS_FETCH_FAILURE: handleFetchFailure, EXPERIMENT_OVERRIDE_BUCKET: handleExperimentOverrideBucket, GUILD_CREATE: handleGuildChange, GUILD_UPDATE: handleGuildChange };
+let obj = {
+  LOGOUT: handleLogout,
+  LOGIN_SUCCESS: handleLogin,
+  CONNECTION_OPEN: handleLoadedExperiments,
+  EXPERIMENTS_FETCH_SUCCESS: handleLoadedExperiments,
+  OVERLAY_INITIALIZE: handleOverlayInitialize,
+  EXPERIMENTS_FETCH_FAILURE: handleFetchFailure,
+  EXPERIMENT_OVERRIDE_BUCKET: handleExperimentOverrideBucket,
+  GUILD_CREATE: handleGuildChange,
+  GUILD_UPDATE: handleGuildChange,
+};
 let tmp6 = new timestampDefault("ExperimentStore");
 let result = require("set").fileFinishedImporting("modules/experiments/ExperimentStore.tsx");
 
 export default hasExperimentTrackedExposure;
 export const registerExperiment = function registerExperiment(experimentId) {
-  closure_19[experimentId.experimentId] = { type: experimentId.experimentType, title: experimentId.title, description: experimentId.description, buckets: experimentId.buckets, commonTriggerPoint: experimentId.commonTriggerPoint };
+  closure_19[experimentId.experimentId] = {
+    type: experimentId.experimentType,
+    title: experimentId.title,
+    description: experimentId.description,
+    buckets: experimentId.buckets,
+    commonTriggerPoint: experimentId.commonTriggerPoint,
+  };
 };

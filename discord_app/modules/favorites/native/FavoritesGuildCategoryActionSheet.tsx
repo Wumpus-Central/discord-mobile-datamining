@@ -12,7 +12,10 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
   dependencyMap = tmp3;
   const DeveloperMode = category(4166).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  let obj = { header: callback(category(5621).BottomSheetTitleHeader, { title: onClose(4674)(category, true) }), children: null };
+  let obj = {
+    header: callback(category(5621).BottomSheetTitleHeader, { title: onClose(4674)(category, true) }),
+    children: null,
+  };
   let tmp7Result = null;
   if (null != tmp3) {
     obj = { hasIcons: true, children: null };
@@ -28,7 +31,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
     obj[1] = tmp7(tmp4(5991).ActionSheetRow, obj);
     tmp7Result = tmp7(tmp4(5991).ActionSheetRow.Group, obj);
   }
-  const items = [tmp7Result, , ];
+  const items = [tmp7Result, ,];
   const obj2 = { hasIcons: true, children: null };
   const obj3 = { label: null, icon: null, onPress: null };
   const intl = tmp4(1236).intl;
@@ -97,4 +100,4 @@ export default function FavoritesGuildCategoryActionSheet(categoryId) {
     tmp4 = callback(FavoritesGuildCategoryActionSheetConnected, obj);
   }
   return tmp4;
-};
+}

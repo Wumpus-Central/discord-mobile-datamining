@@ -25,7 +25,7 @@ function ReactionNotificationBody(arg0) {
   const tmp = callback2();
   ({ gradientColors, gradientStyles } = useTruncatedGradientColorsDefault());
   obj = { variant: messagePreviewTextVariant, color: "text-default", style: tmp.italic, children: text };
-  const children = [callback(Text.Text, obj), , ];
+  const children = [callback(Text.Text, obj), ,];
   let tmp8Result = null;
   if (null != secondaryText) {
     obj = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp: null, children: null };
@@ -38,7 +38,14 @@ function ReactionNotificationBody(arg0) {
   if (hasMessageContent) {
     tmp8Result = null;
     if (null != messagePreview) {
-      obj1 = { message: null, lineClamp: 1, maxHeight: null, textColor: "text-subtle", gradientStyles: null, gradientColors: null };
+      obj1 = {
+        message: null,
+        lineClamp: 1,
+        maxHeight: null,
+        textColor: "text-subtle",
+        gradientStyles: null,
+        gradientColors: null,
+      };
       obj1[0] = messagePreview;
       obj1[2] = closure_6;
       obj1[4] = gradientStyles;
@@ -71,7 +78,7 @@ function ReactionNotificationBodyWrapper(arg0) {
   const setting = AnimateEmoji.useSetting();
   let obj = message(10212);
   const previewableMedia = obj.usePreviewableMedia(message);
-  const items = [setting, reaction, , , ];
+  const items = [setting, reaction, , ,];
   ({ imageEmoji: arr[2], textEmoji: arr[3], italic: arr[4] } = tmp4);
   const callback = React.useCallback(() => {
     let name;
@@ -306,7 +313,14 @@ function ReactorNotificationIcon(notification) {
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: error } = set);
 ({ ChannelTypes: closure_8, MessageEmbedTypes: c9 } = ME);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { newContainerRoleDot: { paddingRight: 4, paddingTop: 0 }, container: { flexDirection: "column" }, textEmoji: { fontSize: 12 }, imageEmoji: null, italic: null, guildIcon: null };
+createCacheKey = {
+  newContainerRoleDot: { paddingRight: 4, paddingTop: 0 },
+  container: { flexDirection: "column" },
+  textEmoji: { fontSize: 12 },
+  imageEmoji: null,
+  italic: null,
+  guildIcon: null,
+};
 let tmp5;
 if (!PlatformTypes.isIOS()) {
   let items = [{ translateY: 2 }];
@@ -357,24 +371,28 @@ export default function ReactionNotification(notification) {
   c7 = result;
   obj1 = parentChannel;
   const items = [message.reactions];
-  const memo = parentChannel.useMemo(() => notification(guild[24]).sumBy(message.reactions, (count_details) => {
-    count_details = count_details.count_details;
-    let num;
-    if (count_details != null) {
-      num = count_details.burst;
-    }
-    if (num == null) {
-      num = 0;
-    }
-    let num2;
-    if (count_details != null) {
-      num2 = count_details.normal;
-    }
-    if (num2 == null) {
-      num2 = 0;
-    }
-    return num + num2;
-  }), items);
+  const memo = parentChannel.useMemo(
+    () =>
+      notification(guild[24]).sumBy(message.reactions, (count_details) => {
+        count_details = count_details.count_details;
+        let num;
+        if (count_details != null) {
+          num = count_details.burst;
+        }
+        if (num == null) {
+          num = 0;
+        }
+        let num2;
+        if (count_details != null) {
+          num2 = count_details.normal;
+        }
+        if (num2 == null) {
+          num2 = 0;
+        }
+        return num + num2;
+      }),
+    items,
+  );
   if (tmp6) {
     tmp6 = 1 !== memo;
   }
@@ -413,7 +431,7 @@ export default function ReactionNotification(notification) {
     }
   }
   const items2 = [channel, parentChannel, guild, userAuthor, tmp6, result];
-  const items3 = [channel.id, id, id, message.id, , ];
+  const items3 = [channel.id, id, id, message.id, ,];
   ({ inAppNotificationId: arr4[4], type: arr4[5] } = notification);
   const memo1 = obj1.useMemo(() => {
     const obj = { type: "message", channel, parentChannel, guild, author: userAuthor, locationTextColor: str };
@@ -422,7 +440,14 @@ export default function ReactionNotification(notification) {
   const items4 = [id];
   callback = obj1.useCallback(() => {
     let obj = notification(guild[17]);
-    obj = { type: notification.type, dismissReason: "notification_clicked", guildId: id, channelId: id, messageId: message.id, inAppNotificationId: notification.inAppNotificationId };
+    obj = {
+      type: notification.type,
+      dismissReason: "notification_clicked",
+      guildId: id,
+      channelId: id,
+      messageId: message.id,
+      inAppNotificationId: notification.inAppNotificationId,
+    };
     obj.trackDismissed(obj);
     channel(guild[27]).popAll();
     const obj3 = channel(guild[27]);
@@ -435,8 +460,26 @@ export default function ReactionNotification(notification) {
     obj = { channelId: id };
     return obj.pushLazy(notification(guild[31])(guild[30], guild.paths), obj);
   }, items4);
-  obj = { icon: callback(ReactorNotificationIcon, { notification, isMilestone: result }), accessoryLabelNode: tmp13Result, header: memo1, onPress: callback, onSettingsPress: callback1, notification, rightAccessory: callback(tmp3(tmp4[33]).MediaPreviewRightAccessory, { message }), children: null };
-  obj1 = { style: tmp.container, children: callback(ReactionNotificationBodyWrapper, { message, reaction: notification.reaction, reactionCount: memo, renderAnnouncementText: tmp6, isMilestone: result }) };
+  obj = {
+    icon: callback(ReactorNotificationIcon, { notification, isMilestone: result }),
+    accessoryLabelNode: tmp13Result,
+    header: memo1,
+    onPress: callback,
+    onSettingsPress: callback1,
+    notification,
+    rightAccessory: callback(tmp3(tmp4[33]).MediaPreviewRightAccessory, { message }),
+    children: null,
+  };
+  obj1 = {
+    style: tmp.container,
+    children: callback(ReactionNotificationBodyWrapper, {
+      message,
+      reaction: notification.reaction,
+      reactionCount: memo,
+      renderAnnouncementText: tmp6,
+      isMilestone: result,
+    }),
+  };
   obj[7] = callback(id, obj1);
   return callback(notification(guild[32]).NotificationPressable, obj);
-};
+}

@@ -21,7 +21,7 @@ export default function MobileSurvey() {
     if (null != stateFromStores) {
       function _setSurveySeen() {
         const self = this;
-        const tmp = closure_2_3(function*() {
+        const tmp = closure_2_3(function* () {
           if (c0 === 2) {
             c0 = 3;
             HermesBuiltin.throwTypeError();
@@ -99,7 +99,14 @@ export default function MobileSurvey() {
   }, items1);
   let tmp5 = null;
   if (null != stateFromStores) {
-    obj = { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null };
+    obj = {
+      body: null,
+      confirmText: null,
+      cancelText: null,
+      onConfirm: null,
+      onCancel: null,
+      renderConfirmRightIcon: null,
+    };
     ({ prompt: obj2[0], cta: obj2[1] } = stateFromStores);
     const intl = tmp(1236).intl;
     obj[2] = intl.string(tmp(1236).t.f3Pet9);
@@ -112,10 +119,22 @@ export default function MobileSurvey() {
       return lib(closure_1_2[8]).surveyHide(stateFromStores.key, true);
     };
     obj[5] = function renderConfirmRightIcon() {
-      return closure_1_7(lib(closure_1_2[12]).Icon, { style: lib.confirmIcon, color: stateFromStores(closure_1_2[13]).unsafe_rawColors.WHITE, size: lib(closure_1_2[12]).Icon.Sizes.SMALL, source: stateFromStores(closure_1_2[14]) });
+      return closure_1_7(lib(closure_1_2[12]).Icon, {
+        style: lib.confirmIcon,
+        color: stateFromStores(closure_1_2[13]).unsafe_rawColors.WHITE,
+        size: lib(closure_1_2[12]).Icon.Sizes.SMALL,
+        source: stateFromStores(closure_1_2[14]),
+      });
     };
-    tmp5 = jsx(stateFromStores(4947), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
+    tmp5 = jsx(stateFromStores(4947), {
+      body: null,
+      confirmText: null,
+      cancelText: null,
+      onConfirm: null,
+      onCancel: null,
+      renderConfirmRightIcon: null,
+    });
     const tmp8 = stateFromStores(4947);
   }
   return tmp5;
-};
+}

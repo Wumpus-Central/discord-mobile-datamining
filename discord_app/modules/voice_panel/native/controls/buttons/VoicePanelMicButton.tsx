@@ -16,11 +16,19 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 const require = arg1;
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = new timestampDefault("VoicePanelMicButton");
-let closure_17 = createCacheKey.createStyles({ text: { position: "absolute", left: 0, right: 0, bottom: 4, textAlign: "center", opacity: 0.5 } });
-let closure_18 = { code: "function VoicePanelMicButtonTsx1(){const{runOnJS,handlePTTEnd}=this.__closure;runOnJS(handlePTTEnd)();}" };
-let closure_19 = { code: "function VoicePanelMicButtonTsx2(event,manager){const{State,runOnJS,handleDragStart}=this.__closure;if(event.state!==State.BEGAN)return;manager.activate();runOnJS(handleDragStart)();}" };
+let closure_17 = createCacheKey.createStyles({
+  text: { position: "absolute", left: 0, right: 0, bottom: 4, textAlign: "center", opacity: 0.5 },
+});
+let closure_18 = {
+  code: "function VoicePanelMicButtonTsx1(){const{runOnJS,handlePTTEnd}=this.__closure;runOnJS(handlePTTEnd)();}",
+};
+let closure_19 = {
+  code: "function VoicePanelMicButtonTsx2(event,manager){const{State,runOnJS,handleDragStart}=this.__closure;if(event.state!==State.BEGAN)return;manager.activate();runOnJS(handleDragStart)();}",
+};
 let tmp3 = new timestampDefault("VoicePanelMicButton");
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelMicButton.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/controls/buttons/VoicePanelMicButton.tsx",
+);
 
 export const PTTButton = function PTTButton(arg0) {
   channelId = undefined;
@@ -41,61 +49,79 @@ export const PTTButton = function PTTButton(arg0) {
   obj1 = channelId(sharedValue[13]);
   const items = [closure_8, callback3, closure_12, closure_9, closure_10, callback1, callback];
   const items1 = [channelId];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => {
-    const channel = closure_1_8.getChannel(mute);
-    if (null != channel) {
-      const obj = { channel: null, authenticationStore: null, voiceStateStore: null, mediaEngineStore: null, permissionStore: null, impersonateStore: null };
-      obj[0] = channel;
-      obj[1] = closure_1_7;
-      obj[2] = closure_1_12;
-      obj[3] = closure_1_9;
-      obj[4] = closure_1_10;
-      obj[5] = closure_1_6;
-      let muteStates = mute(voicePanelButtonStyles[14]).getMuteStates(obj);
-      const obj2 = mute(voicePanelButtonStyles[14]);
-    } else {
-      muteStates = { selfMute: false, suppress: false, mute: false };
-    }
-    const current = dominantMuteState.current;
-    let selfMute;
-    if (current != null) {
-      selfMute = current.selfMute;
-    }
-    let tmp11 = selfMute !== muteStates.selfMute;
-    if (tmp11) {
-      const currentUser = closure_1_11.getCurrentUser();
-      let isStaffResult;
-      if (currentUser != null) {
-        isStaffResult = currentUser.isStaff();
+  const stateFromStoresObject = obj1.useStateFromStoresObject(
+    items,
+    () => {
+      const channel = closure_1_8.getChannel(mute);
+      if (null != channel) {
+        const obj = {
+          channel: null,
+          authenticationStore: null,
+          voiceStateStore: null,
+          mediaEngineStore: null,
+          permissionStore: null,
+          impersonateStore: null,
+        };
+        obj[0] = channel;
+        obj[1] = closure_1_7;
+        obj[2] = closure_1_12;
+        obj[3] = closure_1_9;
+        obj[4] = closure_1_10;
+        obj[5] = closure_1_6;
+        let muteStates = mute(voicePanelButtonStyles[14]).getMuteStates(obj);
+        const obj2 = mute(voicePanelButtonStyles[14]);
+      } else {
+        muteStates = { selfMute: false, suppress: false, mute: false };
       }
-      tmp11 = isStaffResult;
-    }
-    if (tmp11) {
-      const current2 = tmp9.current;
-      let selfMute1;
-      if (current2 != null) {
-        selfMute1 = current2.selfMute;
+      const current = dominantMuteState.current;
+      let selfMute;
+      if (current != null) {
+        selfMute = current.selfMute;
       }
-      closure_1_16.info("Self mute changed", selfMute1, ">", muteStates.selfMute);
-      const tmp14 = closure_1_16;
-    }
-    dominantMuteState.current = muteStates;
-    return mute(voicePanelButtonStyles[15]).createMuteHandler(muteStates, null != closure_1_5.getAwaitingRemoteSessionInfo());
-  }, items1);
+      let tmp11 = selfMute !== muteStates.selfMute;
+      if (tmp11) {
+        const currentUser = closure_1_11.getCurrentUser();
+        let isStaffResult;
+        if (currentUser != null) {
+          isStaffResult = currentUser.isStaff();
+        }
+        tmp11 = isStaffResult;
+      }
+      if (tmp11) {
+        const current2 = tmp9.current;
+        let selfMute1;
+        if (current2 != null) {
+          selfMute1 = current2.selfMute;
+        }
+        closure_1_16.info("Self mute changed", selfMute1, ">", muteStates.selfMute);
+        const tmp14 = closure_1_16;
+      }
+      dominantMuteState.current = muteStates;
+      return mute(voicePanelButtonStyles[15]).createMuteHandler(
+        muteStates,
+        null != closure_1_5.getAwaitingRemoteSessionInfo(),
+      );
+    },
+    items1,
+  );
   ({ mute, onPress } = stateFromStoresObject);
   let obj2 = channelId(sharedValue[13]);
   const items2 = [closure_8, callback3, closure_12, closure_9, closure_10, callback1];
   const items3 = [channelId];
-  const stateFromStoresObject1 = obj2.useStateFromStoresObject(items2, () => {
-    const channel = closure_1_8.getChannel(channelId);
-    if (null != channel) {
-      const obj2 = channelId(sharedValue[16]);
-      let deafStates = obj2.getDeafStates(channel, closure_1_12, closure_1_9, callback3);
-    } else {
-      deafStates = { selfDeaf: false, deaf: false };
-    }
-    return channelId(sharedValue[15]).createDeafHandler(deafStates);
-  }, items3);
+  const stateFromStoresObject1 = obj2.useStateFromStoresObject(
+    items2,
+    () => {
+      const channel = closure_1_8.getChannel(channelId);
+      if (null != channel) {
+        const obj2 = channelId(sharedValue[16]);
+        let deafStates = obj2.getDeafStates(channel, closure_1_12, closure_1_9, callback3);
+      } else {
+        deafStates = { selfDeaf: false, deaf: false };
+      }
+      return channelId(sharedValue[15]).createDeafHandler(deafStates);
+    },
+    items3,
+  );
   onPress2 = stateFromStoresObject1.onPress;
   if (!stateFromStoresObject1.deaf) {
     let tmp9;
@@ -116,7 +142,9 @@ export const PTTButton = function PTTButton(arg0) {
         tmp2();
       }
       tmp.current.active = true;
-      const result = channelId(sharedValue[20]).triggerHapticFeedback(channelId(sharedValue[20]).HapticFeedbackTypes.IMPACT_MEDIUM);
+      const result = channelId(sharedValue[20]).triggerHapticFeedback(
+        channelId(sharedValue[20]).HapticFeedbackTypes.IMPACT_MEDIUM,
+      );
       const obj = channelId(sharedValue[20]);
       channelId(sharedValue[21]).setPushToTalkState(true);
       closure_3.lock();
@@ -162,7 +190,11 @@ export const PTTButton = function PTTButton(arg0) {
         const tmpResult = closure_1_0(closure_1_2[18]);
       }
     };
-    let obj = { State: channelId(sharedValue[22]).State, runOnJS: channelId(sharedValue[18]).runOnJS, handleDragStart: callback3 };
+    let obj = {
+      State: channelId(sharedValue[22]).State,
+      runOnJS: channelId(sharedValue[18]).runOnJS,
+      handleDragStart: callback3,
+    };
     fn.__closure = obj;
     fn.__workletHash = 13866422602014;
     fn.__initData = closure_1_19;
@@ -180,7 +212,15 @@ export const PTTButton = function PTTButton(arg0) {
   tmp6Result = tmp6(tmp3[23]);
   const voicePanelButtonStyles = tmp6Result.useVoicePanelButtonStyles(wrapperSpecs);
   obj = { gesture: memo, children: null };
-  obj = { onPressIn: callback, onPressOut: callback2, props, pressed: sharedValue, accessibilityLabel: null, style: null, children: null };
+  obj = {
+    onPressIn: callback,
+    onPressOut: callback2,
+    props,
+    pressed: sharedValue,
+    accessibilityLabel: null,
+    style: null,
+    children: null,
+  };
   const tmp19 = closure_15;
   const tmp20 = closure_14;
   const tmp4 = callback(React.useState(false), 2);
@@ -195,7 +235,7 @@ export const PTTButton = function PTTButton(arg0) {
   obj1 = { children: null };
   obj[6] = closure_13(channelId(sharedValue[26]).MicrophoneIcon, { color, size: "lg" });
   obj[1] = closure_13(onPress2(sharedValue[24]), obj);
-  const items10 = [closure_13(channelId(sharedValue[22]).GestureDetector, obj), ];
+  const items10 = [closure_13(channelId(sharedValue[22]).GestureDetector, obj)];
   obj2 = { style: items11, variant: "text-xxs/medium", children: null };
   items11 = [tmp.text, voicePanelButtonStyles.iconFill];
   const intl2 = tmp6(tmp3[25]).intl;
@@ -216,47 +256,61 @@ export const MicButton = function MicButton(arg0) {
   let obj = mute(voicePanelButtonStyles[13]);
   const items = [closure_8, closure_7, closure_12, closure_9, closure_10, closure_6, closure_5];
   const items1 = [channelId];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const channel = closure_1_8.getChannel(mute);
-    if (null != channel) {
-      const obj = { channel: null, authenticationStore: null, voiceStateStore: null, mediaEngineStore: null, permissionStore: null, impersonateStore: null };
-      obj[0] = channel;
-      obj[1] = closure_1_7;
-      obj[2] = closure_1_12;
-      obj[3] = closure_1_9;
-      obj[4] = closure_1_10;
-      obj[5] = closure_1_6;
-      let muteStates = mute(voicePanelButtonStyles[14]).getMuteStates(obj);
-      const obj2 = mute(voicePanelButtonStyles[14]);
-    } else {
-      muteStates = { selfMute: false, suppress: false, mute: false };
-    }
-    const current = dominantMuteState.current;
-    let selfMute;
-    if (current != null) {
-      selfMute = current.selfMute;
-    }
-    let tmp11 = selfMute !== muteStates.selfMute;
-    if (tmp11) {
-      const currentUser = closure_1_11.getCurrentUser();
-      let isStaffResult;
-      if (currentUser != null) {
-        isStaffResult = currentUser.isStaff();
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => {
+      const channel = closure_1_8.getChannel(mute);
+      if (null != channel) {
+        const obj = {
+          channel: null,
+          authenticationStore: null,
+          voiceStateStore: null,
+          mediaEngineStore: null,
+          permissionStore: null,
+          impersonateStore: null,
+        };
+        obj[0] = channel;
+        obj[1] = closure_1_7;
+        obj[2] = closure_1_12;
+        obj[3] = closure_1_9;
+        obj[4] = closure_1_10;
+        obj[5] = closure_1_6;
+        let muteStates = mute(voicePanelButtonStyles[14]).getMuteStates(obj);
+        const obj2 = mute(voicePanelButtonStyles[14]);
+      } else {
+        muteStates = { selfMute: false, suppress: false, mute: false };
       }
-      tmp11 = isStaffResult;
-    }
-    if (tmp11) {
-      const current2 = tmp9.current;
-      let selfMute1;
-      if (current2 != null) {
-        selfMute1 = current2.selfMute;
+      const current = dominantMuteState.current;
+      let selfMute;
+      if (current != null) {
+        selfMute = current.selfMute;
       }
-      closure_1_16.info("Self mute changed", selfMute1, ">", muteStates.selfMute);
-      const tmp14 = closure_1_16;
-    }
-    dominantMuteState.current = muteStates;
-    return mute(voicePanelButtonStyles[15]).createMuteHandler(muteStates, null != closure_1_5.getAwaitingRemoteSessionInfo());
-  }, items1);
+      let tmp11 = selfMute !== muteStates.selfMute;
+      if (tmp11) {
+        const currentUser = closure_1_11.getCurrentUser();
+        let isStaffResult;
+        if (currentUser != null) {
+          isStaffResult = currentUser.isStaff();
+        }
+        tmp11 = isStaffResult;
+      }
+      if (tmp11) {
+        const current2 = tmp9.current;
+        let selfMute1;
+        if (current2 != null) {
+          selfMute1 = current2.selfMute;
+        }
+        closure_1_16.info("Self mute changed", selfMute1, ">", muteStates.selfMute);
+        const tmp14 = closure_1_16;
+      }
+      dominantMuteState.current = muteStates;
+      return mute(voicePanelButtonStyles[15]).createMuteHandler(
+        muteStates,
+        null != closure_1_5.getAwaitingRemoteSessionInfo(),
+      );
+    },
+    items1,
+  );
   mute = stateFromStoresObject.mute;
   dominantMuteState = stateFromStoresObject.dominantMuteState;
   voicePanelButtonStyles = mute(voicePanelButtonStyles[23]).useVoicePanelButtonStyles(wrapperSpecs);

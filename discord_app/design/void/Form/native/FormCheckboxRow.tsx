@@ -25,4 +25,4 @@ export default function FormCheckboxRow(selected) {
   obj.trailing = jsx(FormCheckboxDefault, { selected });
   obj.trailingWrapperStyle = tmp2.checkboxWrapperStyle;
   return jsx(_modDef5592, {});
-};
+}

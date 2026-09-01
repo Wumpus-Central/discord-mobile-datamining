@@ -13,7 +13,8 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useGoreContentFriendsDmSettingValue() {
-    const parentalControlledGoreContentSettings = useParentalControlledExplicitContentSettings.useParentalControlledGoreContentSettings();
+    const parentalControlledGoreContentSettings =
+      useParentalControlledExplicitContentSettings.useParentalControlledGoreContentSettings();
     let goreContentFriendDm;
     if (parentalControlledGoreContentSettings != null) {
       goreContentFriendDm = parentalControlledGoreContentSettings.goreContentFriendDm;
@@ -46,9 +47,11 @@ createToggle = {
       const obj2 = selectedTeenId(14427);
     }
   },
-  unsearchable: true
+  unsearchable: true,
 };
 createToggle = createToggle.createPressable(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersFriendsDMsSetting.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersFriendsDMsSetting.tsx",
+);
 
 export default createToggle;

@@ -23,7 +23,8 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtend
       obj = _modDef1208;
       obj = { category: "ad", message: null };
       const _HermesInternal = HermesInternal;
-      obj[1] = "future facing timestamp Date.now(): " + timestamp1 + ", initialized timestamp: " + tmp11.createdAtTimestamp;
+      obj[1] =
+        "future facing timestamp Date.now(): " + timestamp1 + ", initialized timestamp: " + tmp11.createdAtTimestamp;
       obj.addBreadcrumb(obj);
       let flag2 = true;
     } else {
@@ -38,7 +39,12 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtend
     }
     return tmp9;
   }
-  obj = { uuid: v1.v4(), createdAtTimestamp: timestamp, lastUsedTimestamp: timestamp, version: result2.CLIENT_SESSION_STORAGE_VERSION };
+  obj = {
+    uuid: v1.v4(),
+    createdAtTimestamp: timestamp,
+    lastUsedTimestamp: timestamp,
+    version: result2.CLIENT_SESSION_STORAGE_VERSION,
+  };
   const obj4 = v1;
   dispatcherDefault.dispatch({ type: "AD_SESSION_RESET" });
   tmp9 = obj;
@@ -55,7 +61,11 @@ export const isAdSessionExpired = function isAdSessionExpired(createdAtTimestamp
     let obj = _modDef1208;
     obj = { category: "ad", message: null };
     const _HermesInternal = HermesInternal;
-    obj[1] = "future facing timestamp Date.now(): " + timestamp + ", initialized timestamp: " + createdAtTimestamp.createdAtTimestamp;
+    obj[1] =
+      "future facing timestamp Date.now(): " +
+      timestamp +
+      ", initialized timestamp: " +
+      createdAtTimestamp.createdAtTimestamp;
     obj.addBreadcrumb(obj);
     return true;
   } else {

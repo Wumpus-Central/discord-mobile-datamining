@@ -2,10 +2,18 @@
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-let closure_4 = { code: "function useTapGesturesTsx1(){const{runOnJS,handleEvent}=this.__closure;return runOnJS(handleEvent)('double');}" };
-let closure_5 = { code: "function useTapGesturesTsx2(event,manager){const{isFocusedVideoZoomed}=this.__closure;if(isFocusedVideoZoomed.get()){manager.fail();}}" };
-let closure_6 = { code: "function useTapGesturesTsx3(){const{runOnJS,handleEvent}=this.__closure;return runOnJS(handleEvent)('single');}" };
-let closure_7 = { code: "function useTapGesturesTsx4(){const{runOnJS,triggerHapticFeedback,HapticFeedbackTypes,handleEvent}=this.__closure;runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_MEDIUM);runOnJS(handleEvent)('long');}" };
+let closure_4 = {
+  code: "function useTapGesturesTsx1(){const{runOnJS,handleEvent}=this.__closure;return runOnJS(handleEvent)('double');}",
+};
+let closure_5 = {
+  code: "function useTapGesturesTsx2(event,manager){const{isFocusedVideoZoomed}=this.__closure;if(isFocusedVideoZoomed.get()){manager.fail();}}",
+};
+let closure_6 = {
+  code: "function useTapGesturesTsx3(){const{runOnJS,handleEvent}=this.__closure;return runOnJS(handleEvent)('single');}",
+};
+let closure_7 = {
+  code: "function useTapGesturesTsx4(){const{runOnJS,triggerHapticFeedback,HapticFeedbackTypes,handleEvent}=this.__closure;runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_MEDIUM);runOnJS(handleEvent)('long');}",
+};
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useTapGestures.tsx");
 
 export default function useTapGestures(onSingleTap) {
@@ -19,7 +27,13 @@ export default function useTapGestures(onSingleTap) {
   const layoutEffect = React.useLayoutEffect(() => {
     closure_2.current = closure_0;
   });
-  const items = [null != onSingleTap.onSingleTap, null != onSingleTap.onDoubleTap, null != onSingleTap.onLongPress, gesturesEnabled, isFocusedVideoZoomed];
+  const items = [
+    null != onSingleTap.onSingleTap,
+    null != onSingleTap.onDoubleTap,
+    null != onSingleTap.onLongPress,
+    gesturesEnabled,
+    isFocusedVideoZoomed,
+  ];
   return React.useMemo(() => {
     function handleEvent(arg0) {
       if ("single" === arg0) {
@@ -98,14 +112,21 @@ export default function useTapGestures(onSingleTap) {
     const LongPressResult = Gesture4.LongPress();
     const fn3 = function n() {
       const obj = handleEvent(ref[3]);
-      handleEvent(ref[3]).runOnJS(handleEvent(ref[4]).triggerHapticFeedback)(handleEvent(ref[4]).HapticFeedbackTypes.IMPACT_MEDIUM);
+      handleEvent(ref[3]).runOnJS(handleEvent(ref[4]).triggerHapticFeedback)(
+        handleEvent(ref[4]).HapticFeedbackTypes.IMPACT_MEDIUM,
+      );
       const runOnJSResult = handleEvent(ref[3]).runOnJS(handleEvent(ref[4]).triggerHapticFeedback);
       handleEvent(ref[3]).runOnJS(handleEvent)("long");
     };
     const enabledResult2 = Gesture4.LongPress().enabled(tmp3);
-    fn3.__closure = { runOnJS: onSingleTap(4217).runOnJS, triggerHapticFeedback: onSingleTap(4446).triggerHapticFeedback, HapticFeedbackTypes: onSingleTap(4446).HapticFeedbackTypes, handleEvent };
+    fn3.__closure = {
+      runOnJS: onSingleTap(4217).runOnJS,
+      triggerHapticFeedback: onSingleTap(4446).triggerHapticFeedback,
+      HapticFeedbackTypes: onSingleTap(4446).HapticFeedbackTypes,
+      handleEvent,
+    };
     fn3.__workletHash = 1947700378974;
     fn3.__initData = closure_1_7;
     return Gesture.Exclusive(onStartResult, onStartResult1, enabledResult2.onStart(fn3));
   }, items);
-};
+}

@@ -26,7 +26,7 @@ function _fetchBountiesAndDispatch() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       let map = tmp3;
       let decisions = tmp5;
       callback(closure_1_2[4]).dispatch({ type: "BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_BEGIN" });
@@ -72,7 +72,13 @@ function _fetchBountiesAndDispatch() {
           }
           return [];
         });
-        const obj3 = { type: "BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_SUCCESS", bounties: null, placement: null, adDecisionsByAdCreativeId: null, fetchedAt: null };
+        const obj3 = {
+          type: "BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_SUCCESS",
+          bounties: null,
+          placement: null,
+          adDecisionsByAdCreativeId: null,
+          fetchedAt: null,
+        };
         obj3[1] = closure_4;
         obj3[2] = closure_0;
         obj3[3] = map;
@@ -100,7 +106,7 @@ function _fetchQuestHomeBounties() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -130,28 +136,36 @@ function _fetchQuestHomeBounties() {
               c2 = 1;
               c1 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_7(tmp5, closure_1_3(function*() {
-                let uuid = tmp2;
-                let obj5 = closure_1_0(7207);
-                uuid = yield obj5.getSession();
-                const uuid2 = closure_1_0(7466).getOrRefreshAdSession();
-                const HTTP = closure_1_0(530).HTTP;
-                const obj3 = { url: null, query: null, rejectWithError: false, context: null };
-                obj3[0] = closure_1_6.QUESTS_GET_DECISIONS;
-                const obj4 = { placement: null, client_ad_session_id: null, client_heartbeat_session_id: null, num_decisions_requested: 5 };
-                obj4[0] = uuid;
-                obj4[1] = uuid2.uuid;
-                if (uuid != null) {
-                  uuid = uuid.uuid;
-                }
-                obj4[2] = uuid;
-                obj3[1] = obj4;
-                obj5 = { connection_type: null };
-                obj5[0] = closure_1_4.getType();
-                obj3[3] = obj5;
-                yield HTTP.get(obj3);
-                return arg1.body;
-              }));
+              obj1[0] = closure_1_7(
+                tmp5,
+                closure_1_3(function* () {
+                  let uuid = tmp2;
+                  let obj5 = closure_1_0(7207);
+                  uuid = yield obj5.getSession();
+                  const uuid2 = closure_1_0(7466).getOrRefreshAdSession();
+                  const HTTP = closure_1_0(530).HTTP;
+                  const obj3 = { url: null, query: null, rejectWithError: false, context: null };
+                  obj3[0] = closure_1_6.QUESTS_GET_DECISIONS;
+                  const obj4 = {
+                    placement: null,
+                    client_ad_session_id: null,
+                    client_heartbeat_session_id: null,
+                    num_decisions_requested: 5,
+                  };
+                  obj4[0] = uuid;
+                  obj4[1] = uuid2.uuid;
+                  if (uuid != null) {
+                    uuid = uuid.uuid;
+                  }
+                  obj4[2] = uuid;
+                  obj3[1] = obj4;
+                  obj5 = { connection_type: null };
+                  obj5[0] = closure_1_4.getType();
+                  obj3[3] = obj5;
+                  yield HTTP.get(obj3);
+                  return arg1.body;
+                }),
+              );
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -188,7 +202,7 @@ function _fetchBountyPreview() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();
@@ -218,26 +232,32 @@ function _fetchBountyPreview() {
               v0 = 1;
               c2 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_7(tmp6, v0(function*() {
-                const _URLSearchParams = URLSearchParams;
-                closure_0 = 0;
-                let items = [];
-                closure_0 = HermesBuiltin.arraySpread(closure_1_0.map((arg0) => {
-                  const items = ["ad_creative_ids", arg0];
-                  return items;
-                }), closure_0);
-                const _String = String;
-                const items1 = ["placement", String(c1)];
-                items[closure_0] = items1;
-                closure_0 = closure_0 + 1;
-                const str2 = new URLSearchParams(items);
-                const HTTP = closure_1_0(table[11]).HTTP;
-                obj1 = { url: null, rejectWithError: false };
-                const _HermesInternal = HermesInternal;
-                obj1[0] = "" + closure_1_6.QUESTS_CREATIVE_PREVIEW + "?" + str2.toString();
-                yield HTTP.get(obj1);
-                return arg1.body;
-              }));
+              obj1[0] = closure_1_7(
+                tmp6,
+                v0(function* () {
+                  const _URLSearchParams = URLSearchParams;
+                  closure_0 = 0;
+                  let items = [];
+                  closure_0 = HermesBuiltin.arraySpread(
+                    closure_1_0.map((arg0) => {
+                      const items = ["ad_creative_ids", arg0];
+                      return items;
+                    }),
+                    closure_0,
+                  );
+                  const _String = String;
+                  const items1 = ["placement", String(c1)];
+                  items[closure_0] = items1;
+                  closure_0 = closure_0 + 1;
+                  const str2 = new URLSearchParams(items);
+                  const HTTP = closure_1_0(table[11]).HTTP;
+                  obj1 = { url: null, rejectWithError: false };
+                  const _HermesInternal = HermesInternal;
+                  obj1[0] = "" + closure_1_6.QUESTS_CREATIVE_PREVIEW + "?" + str2.toString();
+                  yield HTTP.get(obj1);
+                  return arg1.body;
+                }),
+              );
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -275,7 +295,7 @@ function _claimBountyReward() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -360,7 +380,12 @@ function _claimBountyReward() {
               if (null != adMetadataSealed) {
                 tmp15 = adMetadataSealed;
               }
-              obj6 = { decision_metadata_sealed: null, traffic_metadata_sealed: null, client_ad_session_id: null, client_heartbeat_session_id: null };
+              obj6 = {
+                decision_metadata_sealed: null,
+                traffic_metadata_sealed: null,
+                client_ad_session_id: null,
+                client_heartbeat_session_id: null,
+              };
               obj6[0] = tmp15;
               let tmp18 = null;
               if (null != claimingBountyReward) {
@@ -443,7 +468,13 @@ export const setBountyVideoProgress = function setBountyVideoProgress(bountyId, 
   if (null != obj.getCurrentAdSession()) {
     const orRefreshAdSession = getOrRefreshAdSession.getOrRefreshAdSession(true);
     const tmpResult = getOrRefreshAdSession;
-    obj = { type: "BOUNTIES_VIDEO_PROGRESS_UPDATE", bountyId: null, timestampSec: null, maxTimestampSec: null, duration: null };
+    obj = {
+      type: "BOUNTIES_VIDEO_PROGRESS_UPDATE",
+      bountyId: null,
+      timestampSec: null,
+      maxTimestampSec: null,
+      duration: null,
+    };
     obj[1] = bountyId;
     ({ timestampSec: obj4[2], maxTimestampSec: obj4[3], duration: obj4[4] } = arg1);
     dispatcherDefault.dispatch(obj);

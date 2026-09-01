@@ -37,14 +37,49 @@ function Loading() {
 ({ InviteSendStates: c10, InviteTargetTypes: unpackModuleId } = InviteSendStates);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 createCacheKey = { placeholderHeader: null, placeholderLabel: null, emptyState: null, searchAndShareContainer: null };
-createCacheKey = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+createCacheKey = {
+  height: 16,
+  width: "80%",
+  margin: 16,
+  marginBottom: 8,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 16, width: "40%", margin: 16, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+createCacheKey[1] = {
+  height: 16,
+  width: "40%",
+  margin: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 createCacheKey[2] = { backgroundColor: "transparent" };
-let obj1 = { height: 16, width: "40%", margin: 16, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-createCacheKey[3] = { borderTopWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, flexDirection: "column", gap: ThemesDefault.space.PX_12 };
+let obj1 = {
+  height: 16,
+  width: "40%",
+  margin: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
+createCacheKey[3] = {
+  borderTopWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginTop: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  flexDirection: "column",
+  gap: ThemesDefault.space.PX_12,
+};
 let closure_16 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { borderTopWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, flexDirection: "column", gap: ThemesDefault.space.PX_12 };
+let obj2 = {
+  borderTopWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginTop: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  flexDirection: "column",
+  gap: ThemesDefault.space.PX_12,
+};
 let result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityInviteSheet.tsx");
 
 export default function ActivityInviteSheet(activity) {
@@ -109,9 +144,12 @@ export default function ActivityInviteSheet(activity) {
             obj[3] = analyticsLocations(tmp24[13]).ACTIVITY_INVITE_SHEET;
             const obj3 = analyticsLocations(tmp24[17]);
             const sendActivityInviteResult = analyticsLocations(tmp24[17]).sendActivityInvite(obj);
-            analyticsLocations(tmp24[17]).sendActivityInvite(obj).then(markInviteSent).catch((arg0) => {
-              callback(String(arg0));
-            });
+            analyticsLocations(tmp24[17])
+              .sendActivityInvite(obj)
+              .then(markInviteSent)
+              .catch((arg0) => {
+                callback(String(arg0));
+              });
             const nextPromise = analyticsLocations(tmp24[17]).sendActivityInvite(obj).then(markInviteSent);
           } catch (tmp16) {
             const _String2 = String;
@@ -182,7 +220,7 @@ export default function ActivityInviteSheet(activity) {
     obj5[3] = intl2.string(tmp11(1236).t.iI1gMg);
     obj4[1] = tmp17(tmp11(6221).SearchField, obj5);
     obj3[0] = tmp17(View, obj4);
-    const items4 = [tmp17(View, obj3), ];
+    const items4 = [tmp17(View, obj3)];
     if (tmp16) {
       const obj6 = { style: null, title: null };
       obj6[0] = tmp.emptyState;
@@ -208,4 +246,4 @@ export default function ActivityInviteSheet(activity) {
   obj[4] = tmp19Result;
   obj[1] = closure_13(activity(5622).BottomSheet, obj);
   return closure_13(activity(5953).AnalyticsLocationProvider, obj);
-};
+}

@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/StreamFailed.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/StreamFailed.tsx",
+);
 
 export const getStreamFailedSource = function getStreamFailedSource(theme) {
   let obj = getIllustrationSource;
@@ -17,7 +19,7 @@ export const getStreamFailedSource = function getStreamFailedSource(theme) {
     },
     darker() {
       return callback(9572);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -29,7 +31,7 @@ export const useStreamFailedSource = function useStreamFailedSource() {
     },
     darker() {
       return callback(9572);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -41,7 +43,7 @@ export const StreamFailed = function StreamFailed(arg0) {
     },
     darker() {
       return callback(9572);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

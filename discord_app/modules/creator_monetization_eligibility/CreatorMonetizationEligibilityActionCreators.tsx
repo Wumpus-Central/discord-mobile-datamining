@@ -11,7 +11,7 @@ function _createCreatorMonetizationEnableRequest() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -82,7 +82,7 @@ function _getCreatorMonetizationEligibility() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const HTTP = callback(530).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_4.CREATOR_MONETIZATION_ELIGIBILITY(callback);
@@ -108,7 +108,7 @@ function _acceptCreatorMonetizationTerms() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -179,7 +179,7 @@ function _acceptCreatorMonetizationTermsV() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -250,7 +250,7 @@ function _getCreatorMonetizationOnboardingMarketing() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const HTTP = callback(530).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_4.CREATOR_MONETIZATION_MARKETING_ONBOARDING(callback);
@@ -276,7 +276,7 @@ function _ownershipTransferOnboard() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       closure_3 = tmp2;
       const table = tmp5;
       const HTTP = callback(closure_1_2[3]).HTTP;
@@ -312,7 +312,7 @@ function _requestRemoveMonetization() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -384,7 +384,7 @@ function _removeMonetization() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const callback = tmp2;
       yield (function requestRemoveMonetization(closure_0) {
         const self = this;
@@ -412,7 +412,9 @@ function _removeMonetization() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx",
+);
 
 export const createCreatorMonetizationEnableRequest = function createCreatorMonetizationEnableRequest(arg0) {
   const self = this;
@@ -476,12 +478,18 @@ export const ownershipTransferOnboard = function ownershipTransferOnboard() {
 };
 export const acceptNewTerms = function acceptNewTerms(arg0) {
   const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(arg0), rejectWithError: sendRequest.rejectWithMigratedError() };
+  const obj = {
+    url: Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(arg0),
+    rejectWithError: sendRequest.rejectWithMigratedError(),
+  };
   return HTTP.post(obj);
 };
 export const acceptNewTermsDemonetized = function acceptNewTermsDemonetized(arg0) {
   const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(arg0), rejectWithError: sendRequest.rejectWithMigratedError() };
+  const obj = {
+    url: Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(arg0),
+    rejectWithError: sendRequest.rejectWithMigratedError(),
+  };
   return HTTP.post(obj);
 };
 export const removeMonetization = function removeMonetization() {

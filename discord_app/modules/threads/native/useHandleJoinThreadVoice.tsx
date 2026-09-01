@@ -7,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/threads/native/useH
 
 export default function useHandleJoinThreadVoice(arg0) {
   closure_0 = arg0;
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -122,4 +122,4 @@ export default function useHandleJoinThreadVoice(arg0) {
       }
     }
   });
-};
+}

@@ -25,7 +25,7 @@ export default function WebAuthnNameStep(arg0) {
   let first;
   function _onPress() {
     const self = this;
-    const tmp = callback(function*() {
+    const tmp = callback(function* () {
       if (v03 === 2) {
         v03 = 3;
         HermesBuiltin.throwTypeError();
@@ -88,7 +88,13 @@ export default function WebAuthnNameStep(arg0) {
           } else {
             v02 = 0;
             v02(false);
-            const obj3 = { key: "WEBAUTHN_CREDENTIAL_REGISTER_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-success" };
+            const obj3 = {
+              key: "WEBAUTHN_CREDENTIAL_REGISTER_SUCCESS_TOAST_KEY",
+              content: null,
+              icon: null,
+              IconComponent: null,
+              iconColor: "status-success",
+            };
             const intl = closure_1_0(closure_1_2[10]).intl;
             obj3[1] = intl.string(closure_1_0(closure_1_2[10]).t.j3d5qI);
             obj3[2] = v0(closure_1_2[11]);
@@ -132,14 +138,28 @@ export default function WebAuthnNameStep(arg0) {
   const tmp5Result = callback(first.useState(name), 2);
   first = tmp5Result[0];
   obj = { children: null };
-  obj = { showTopContainer: false, value: first, onChange: tmp5Result[1], style: tmp.margin, error: tmp8, title: null, placeholder: null, disabled: null, clearButtonVisibility: null, autoFocus: true, showBorder: true, required: true, large: true };
+  obj = {
+    showTopContainer: false,
+    value: first,
+    onChange: tmp5Result[1],
+    style: tmp.margin,
+    error: tmp8,
+    title: null,
+    placeholder: null,
+    disabled: null,
+    clearButtonVisibility: null,
+    autoFocus: true,
+    showBorder: true,
+    required: true,
+    large: true,
+  };
   let intl = tmp2(1236).intl;
   obj[5] = intl.string(getSystemLocale.t["Jzd+z/"]);
   const intl2 = tmp2(1236).intl;
   obj[6] = intl2.string(getSystemLocale.t["I/sJtJ"]);
   obj[7] = tmp6[0];
   obj[8] = Button.ClearButtonVisibility.WITH_CONTENT;
-  const items = [callback2(Form.FormInput, obj), callback2(Form.FormDivider, {}), ];
+  const items = [callback2(Form.FormInput, obj), callback2(Form.FormDivider, {})];
   obj1 = { style: tmp.margin, children: null };
   let obj2 = {
     onPress() {
@@ -154,7 +174,7 @@ export default function WebAuthnNameStep(arg0) {
     },
     text: null,
     disabled: null,
-    size: "lg"
+    size: "lg",
   };
   const intl3 = tmp2(1236).intl;
   obj2[1] = intl3.string(getSystemLocale.t["5dyZ1S"]);
@@ -163,4 +183,4 @@ export default function WebAuthnNameStep(arg0) {
   items[2] = callback2(_onPress, obj1);
   obj[0] = items;
   return callback3(Form.Form, obj);
-};
+}

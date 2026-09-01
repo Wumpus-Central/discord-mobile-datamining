@@ -11,7 +11,9 @@ export default function useDeactivateWarningText(arg0, skuId) {
   const _require = arg0;
   importDefault = skuId;
   let items = [stateFromStores1];
-  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => stateFromStores1.getMemberCount(closure_0));
+  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () =>
+    stateFromStores1.getMemberCount(closure_0),
+  );
   const tmp2 = importDefault(stateFromStores[5])(arg0);
   const React = tmp2;
   let obj = _require(stateFromStores[4]);
@@ -27,32 +29,36 @@ export default function useDeactivateWarningText(arg0, skuId) {
   let obj2 = _require(stateFromStores[4]);
   const items2 = [stateFromStores2];
   const items3 = [arg0, skuId.skuId, tmp2];
-  stateFromStores2 = _require(stateFromStores[4]).useStateFromStores(items2, () => {
-    let num = 0;
-    if (skuId.skuId === callback(stateFromStores[6]).GUILD_POWERUP_ROLE_COLOR_SKU_ID) {
-      num = 0;
-      if (null != closure_3) {
-        const sortedRoles = stateFromStores2.getSortedRoles(callback);
-        num = sortedRoles.reduce((arg0, colorStrings) => {
-          colorStrings = colorStrings.colorStrings;
-          let secondaryColor;
-          if (colorStrings != null) {
-            secondaryColor = colorStrings.secondaryColor;
-          }
-          let sum = arg0;
-          if (null != secondaryColor) {
-            let num = table[colorStrings.id];
-            if (num == null) {
-              num = 0;
+  stateFromStores2 = _require(stateFromStores[4]).useStateFromStores(
+    items2,
+    () => {
+      let num = 0;
+      if (skuId.skuId === callback(stateFromStores[6]).GUILD_POWERUP_ROLE_COLOR_SKU_ID) {
+        num = 0;
+        if (null != closure_3) {
+          const sortedRoles = stateFromStores2.getSortedRoles(callback);
+          num = sortedRoles.reduce((arg0, colorStrings) => {
+            colorStrings = colorStrings.colorStrings;
+            let secondaryColor;
+            if (colorStrings != null) {
+              secondaryColor = colorStrings.secondaryColor;
             }
-            sum = arg0 + num;
-          }
-          return sum;
-        }, 0);
+            let sum = arg0;
+            if (null != secondaryColor) {
+              let num = table[colorStrings.id];
+              if (num == null) {
+                num = 0;
+              }
+              sum = arg0 + num;
+            }
+            return sum;
+          }, 0);
+        }
       }
-    }
-    return num;
-  }, items3);
+      return num;
+    },
+    items3,
+  );
   const items4 = [skuId, stateFromStores2, stateFromStores, stateFromStores1];
   return React.useMemo(() => {
     skuId = skuId.skuId;
@@ -126,4 +132,4 @@ export default function useDeactivateWarningText(arg0, skuId) {
       return items;
     }
   }, items4);
-};
+}

@@ -34,4 +34,4 @@ export default function useIsCarouselInView() {
     return () => clearInterval(closure_0);
   }, []);
   return { containerRef, isInView };
-};
+}

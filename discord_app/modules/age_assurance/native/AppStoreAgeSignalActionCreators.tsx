@@ -5,7 +5,7 @@ import { Endpoints } from "../../../Constants.tsx";
 const require = arg1;
 function _requestAgeSignalChallenge() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     let body = tmp2;
     const HTTP = closure_1_0(table[2]).HTTP;
     obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
@@ -40,7 +40,7 @@ function _submitAgeSignal() {
     closure_2 = arg2;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -70,8 +70,26 @@ function _submitAgeSignal() {
               const HTTP = callback(table[2]).HTTP;
               obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
               obj1[0] = constants.AGE_SIGNAL;
-              const obj2 = { platform: null, age_lower: null, age_upper: null, google_age_signals_status: null, google_age_range_source: null, google_significant_change_status: null, apple_verified_method: null, is_cold_launch: null, integrity_token: null };
-              ({ platform: obj6[0], ageLower: obj6[1], ageUpper: obj6[2], googleAgeSignalsStatus: obj6[3], googleAgeRangeSource: obj6[4], googleSignificantChangeStatus: obj6[5], appleVerifiedMethod: obj6[6] } = callback);
+              const obj2 = {
+                platform: null,
+                age_lower: null,
+                age_upper: null,
+                google_age_signals_status: null,
+                google_age_range_source: null,
+                google_significant_change_status: null,
+                apple_verified_method: null,
+                is_cold_launch: null,
+                integrity_token: null,
+              };
+              ({
+                platform: obj6[0],
+                ageLower: obj6[1],
+                ageUpper: obj6[2],
+                googleAgeSignalsStatus: obj6[3],
+                googleAgeRangeSource: obj6[4],
+                googleSignificantChangeStatus: obj6[5],
+                appleVerifiedMethod: obj6[6],
+              } = callback);
               obj2[7] = closure_2;
               obj2[8] = table;
               obj1[1] = obj2;

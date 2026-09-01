@@ -36,7 +36,7 @@ export default function ChannelIndicator(arg0) {
     let obj = { style: null, children: null };
     obj[0] = tmp.indicatorContainer;
     obj = { style: null };
-    const items = [tmp.indicator, , ];
+    const items = [tmp.indicator, ,];
     obj = { backgroundColor: null };
     obj[0] = tmp6;
     items[1] = obj;
@@ -46,4 +46,4 @@ export default function ChannelIndicator(arg0) {
     tmp7 = <closure_3 backgroundColor={null} />;
   }
   return tmp7;
-};
+}

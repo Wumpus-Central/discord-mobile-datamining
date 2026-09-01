@@ -10,7 +10,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 let c3 = importAllResult;
 let obj = { container: null };
-obj = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+obj = {
+  marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL,
+  marginHorizontal: 8,
+  borderRadius: ThemesDefault.radii.md,
+};
 obj[0] = obj;
 let closure_8 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((guildId) => {
@@ -41,7 +45,18 @@ const memoResult = importAllResult.memo((guildId) => {
   }, items1);
   let tmp7 = null;
   if (null != stateFromStores) {
-    obj = { onPress: null, onLongPress: null, style: null, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null };
+    obj = {
+      onPress: null,
+      onLongPress: null,
+      style: null,
+      accessible: true,
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      accessibilityState: null,
+      channel: null,
+      selected: null,
+      resolvedUnreadSetting: null,
+    };
     obj[0] = callback;
     obj[1] = tmp6;
     obj[2] = tmp.container;

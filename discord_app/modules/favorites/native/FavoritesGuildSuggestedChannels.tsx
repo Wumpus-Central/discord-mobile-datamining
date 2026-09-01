@@ -15,7 +15,10 @@ const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 const PX_8 = ThemesDefault.space.PX_8;
 const PX_4 = ThemesDefault.space.PX_4;
-let closure_13 = createCacheKey.createStyles({ container: { marginTop: PX_4 }, rows: { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: PX_8 } });
+let closure_13 = createCacheKey.createStyles({
+  container: { marginTop: PX_4 },
+  rows: { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: PX_8 },
+});
 const result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildSuggestedChannels.tsx");
 
 export default function FavoritesGuildSuggestedChannels() {
@@ -47,12 +50,19 @@ export default function FavoritesGuildSuggestedChannels() {
     obj[0] = intl.string(messagesProxyDefault.oHWnLy);
     obj[2] = categoryStyles;
     obj[3] = memo;
-    const items2 = [tmp2(15695).renderCategoryItem(obj), ];
+    const items2 = [tmp2(15695).renderCategoryItem(obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.rows;
     obj1[1] = arr.map((result) => {
       let obj = { style: closure_3, children: null };
-      obj = { result, onPressDestination: callback(15793), onLongPress: closure_1_7, start: 0 === arg1, end: arg1 === result.length - 1, trailing: null };
+      obj = {
+        result,
+        onPressDestination: callback(15793),
+        onLongPress: closure_1_7,
+        start: 0 === arg1,
+        end: arg1 === result.length - 1,
+        trailing: null,
+      };
       obj = { variant: "secondary", size: "sm", grow: false, text: null, onPress: null };
       const intl = arr(1236).intl;
       obj[3] = intl.string(result(1236).t.OYkgVk);
@@ -70,7 +80,7 @@ export default function FavoritesGuildSuggestedChannels() {
     const tmp2Result = tmp2(15695);
   }
   return tmp9;
-};
+}
 export const getFavoritesSuggestionsNoticeHeight = function getFavoritesSuggestionsNoticeHeight(fontScale, arg1, arg2) {
   let num = 0;
   if (0 !== arg2) {

@@ -244,9 +244,12 @@ export const shouldRenderInvite = function shouldRenderInvite(channels, guild) {
   if (tmp2) {
     let tmp8 = null != channels;
     if (tmp8) {
-      let tmp10 = null != channels[closure_3].find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
+      let tmp10 =
+        null != channels[closure_3].find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
       if (!tmp10) {
-        tmp10 = null != channels[closure_4].find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
+        tmp10 =
+          null !=
+          channels[closure_4].find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
         const arr2 = channels[closure_4];
       }
       tmp8 = tmp10;
@@ -260,7 +263,11 @@ export const useShouldShowInviteInActionBar = function useShouldShowInviteInActi
   const callback = id;
   const items = [closure_5];
   const items1 = [id.id];
-  const stateFromStoresObject = callback(f48109[6]).useStateFromStoresObject(items, () => closure_1_5.getChannels(id.id), items1);
+  const stateFromStoresObject = callback(f48109[6]).useStateFromStoresObject(
+    items,
+    () => closure_1_5.getChannels(id.id),
+    items1,
+  );
   let vanityURLCode;
   if (id != null) {
     vanityURLCode = id.vanityURLCode;
@@ -274,9 +281,17 @@ export const useShouldShowInviteInActionBar = function useShouldShowInviteInActi
   if (tmp5) {
     let tmp8 = null == stateFromStoresObject;
     if (!tmp8) {
-      let tmp10 = null != stateFromStoresObject[closure_3].find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
+      let tmp10 =
+        null !=
+        stateFromStoresObject[closure_3].find((channel) =>
+          closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel),
+        );
       if (!tmp10) {
-        tmp10 = null != stateFromStoresObject[closure_4].find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
+        tmp10 =
+          null !=
+          stateFromStoresObject[closure_4].find((channel) =>
+            closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel),
+          );
         const arr4 = stateFromStoresObject[closure_4];
       }
       tmp8 = tmp10;

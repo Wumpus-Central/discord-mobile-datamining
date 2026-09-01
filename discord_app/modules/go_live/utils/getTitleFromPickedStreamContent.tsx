@@ -21,4 +21,4 @@ export default function getTitleFromPickedStreamContent(windows) {
     }
   }
   return joined;
-};
+}

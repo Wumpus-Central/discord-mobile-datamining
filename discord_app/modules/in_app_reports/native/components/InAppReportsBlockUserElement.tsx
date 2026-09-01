@@ -6,7 +6,9 @@ import { AnalyticEvents } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx",
+);
 
 export default function BlockUserElement(user) {
   user = user.user;
@@ -36,7 +38,15 @@ export default function BlockUserElement(user) {
   const items5 = [user, reportId, channelId];
   let tmp7 = null;
   if (null != user) {
-    obj = { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null };
+    obj = {
+      title: null,
+      disabledTitle: null,
+      description: null,
+      disabled: null,
+      variant: "danger",
+      onPress: null,
+      icon: null,
+    };
     const intl = tmp(tmp2[11]).intl;
     obj = { username: null };
     obj[0] = memo;
@@ -54,4 +64,4 @@ export default function BlockUserElement(user) {
     const tmp10 = channelId(tmp2[10]);
   }
   return tmp7;
-};
+}

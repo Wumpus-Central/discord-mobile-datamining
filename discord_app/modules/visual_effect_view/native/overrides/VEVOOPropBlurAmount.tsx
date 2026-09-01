@@ -34,7 +34,13 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurAmount() {
   if (str == null) {
     str = "";
   }
-  obj = { label: "Blur Amount " + str, leadingStyle: tmp.enabledSwitchStyle, leading: tmp7(FormSwitch.FormSwitch, obj), subLabel: tmp7(first(15519), obj1), disabled: !tmp3 };
+  obj = {
+    label: "Blur Amount " + str,
+    leadingStyle: tmp.enabledSwitchStyle,
+    leading: tmp7(FormSwitch.FormSwitch, obj),
+    subLabel: tmp7(first(15519), obj1),
+    disabled: !tmp3,
+  };
   obj = {
     value: tmp3,
     onValueChange(arg0) {
@@ -44,7 +50,7 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurAmount() {
         tmp3 = first;
       }
       callback(tmp3);
-    }
+    },
   };
   const ref = importAllResult.useRef(first);
   const tmp8 = require;
@@ -57,9 +63,11 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurAmount() {
         tmp3 = first;
       }
       callback(tmp3);
-    }
+    },
   });
 });
-const result = require("set").fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurAmount.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/visual_effect_view/native/overrides/VEVOOPropBlurAmount.tsx",
+);
 
 export default memoResult;

@@ -3,7 +3,9 @@ import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/billing/native/subscription/useCreateSubscriptionParams.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/billing/native/subscription/useCreateSubscriptionParams.tsx",
+);
 
 export default function useCreateSubscriptionParams(arg0, arg1) {
   closure_0 = arg0;
@@ -33,4 +35,4 @@ export default function useCreateSubscriptionParams(arg0, arg1) {
     }
     return tmp2;
   }, items);
-};
+}

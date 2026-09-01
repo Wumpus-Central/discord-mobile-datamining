@@ -21,14 +21,14 @@ createToggle = {
   onValueChange: trackDeviceChangedDefault.setOutputVolume,
   useSearchTerms() {
     const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["3182VD"]), ];
+    const items = [intl.string(getSystemLocale.t["3182VD"])];
     const intl2 = getSystemLocale.intl;
     items[1] = intl2.string(getSystemLocale.t["DGq/PR"]);
     return items;
   },
   usePredicate() {
     return apexExperimentDefault.useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
-  }
+  },
 };
 createToggle = createToggle.createVolumeSlider(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/OutputVolumeSetting.tsx");

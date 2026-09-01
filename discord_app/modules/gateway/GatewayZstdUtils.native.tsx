@@ -23,6 +23,8 @@ export const supportsZstd = function supportsZstd() {
   return flag;
 };
 export const createZstdContextWeb = function createZstdContextWeb() {
-  error = new Error("Attempting to use createZstdContextWeb in a native context. Use MobileGatewayCompressionHandler instead.");
+  error = new Error(
+    "Attempting to use createZstdContextWeb in a native context. Use MobileGatewayCompressionHandler instead.",
+  );
   throw error;
 };

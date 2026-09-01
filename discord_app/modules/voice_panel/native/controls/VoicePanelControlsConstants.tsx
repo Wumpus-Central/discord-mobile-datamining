@@ -3,7 +3,12 @@ import set from "../../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsConstants.tsx");
 
-export const VoicePanelControlsModes = { FLOATING_DEFAULT: "floating-default", DRAWER: "drawer", HIDDEN: "hidden", RESET: "reset" };
+export const VoicePanelControlsModes = {
+  FLOATING_DEFAULT: "floating-default",
+  DRAWER: "drawer",
+  HIDDEN: "hidden",
+  RESET: "reset",
+};
 export const CONTROLS_HEIGHT_PTT = 112;
 export const CONTROLS_HEIGHT = 80;
 export const CONTROLS_MAX_WIDTH = 400;

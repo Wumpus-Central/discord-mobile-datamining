@@ -11,7 +11,10 @@ noopAll;
 ({ View: obj1, Pressable: c3 } = get_ActivityIndicator);
 ({ usePromoEmailConsentStore: c4, setPromoEmailConsentChecked: c5 } = setPromoEmailConsentState);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ checkboxRow: { flexDirection: "row", alignItems: "flex-start", gap: 8 }, checkboxLabel: { flex: 1 } });
+let closure_8 = createCacheKey.createStyles({
+  checkboxRow: { flexDirection: "row", alignItems: "flex-start", gap: 8 },
+  checkboxLabel: { flex: 1 },
+});
 const result = require("set").fileFinishedImporting("modules/auth/native/components/PromotionalEmailCheckBox.tsx");
 
 export default function PromotionalEmailCheckBox(style) {
@@ -25,7 +28,14 @@ export default function PromotionalEmailCheckBox(style) {
   if (tmp2) {
     obj = { style: null, children: null };
     obj[0] = style.style;
-    obj = { accessibilityRole: null, accessibilityLabel: null, accessibilityState: null, onPress: null, style: null, children: null };
+    obj = {
+      accessibilityRole: null,
+      accessibilityLabel: null,
+      accessibilityState: null,
+      onPress: null,
+      style: null,
+      children: null,
+    };
     obj[0] = tmp7;
     const intl = tmp4(1236).intl;
     obj[1] = intl.string(tmp4(1236).t.ylFCLt);
@@ -36,7 +46,7 @@ export default function PromotionalEmailCheckBox(style) {
     obj[4] = tmp.checkboxRow;
     obj1 = { checked: null };
     obj1[0] = tmp3;
-    const items = [callback2(tmp4(7684).FormCheckbox, obj1), ];
+    const items = [callback2(tmp4(7684).FormCheckbox, obj1)];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
     obj2[2] = tmp.checkboxLabel;
     const intl2 = tmp4(1236).intl;
@@ -47,4 +57,4 @@ export default function PromotionalEmailCheckBox(style) {
     tmp9 = callback2(closure_2, obj);
   }
   return tmp9;
-};
+}

@@ -156,7 +156,7 @@ obj = {
         }
       }, 200);
     }
-  }
+  },
 };
 let result = require("set").fileFinishedImporting("utils/GuildUtils.tsx");
 

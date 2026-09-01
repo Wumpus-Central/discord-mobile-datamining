@@ -31,14 +31,14 @@ export default function FavoritesGuildChannels(arg0) {
     return null;
   } else {
     let tmp2Result = arg0;
-    const items = [callback2(FavoritesGuildSuggestionsLoaderInnerDefault, {}), ];
+    const items = [callback2(FavoritesGuildSuggestionsLoaderInnerDefault, {})];
     if (hasNoChannels) {
       obj = { style: null, contentInset: null, children: null };
       ({ style: obj8[0], contentInset: obj8[1] } = tmp2Result);
       tmp2Result = ChannelListPanelBackdropDefault;
       obj1 = { guild: null, showExtraButtons: false, canOpenGuildActionSheet: false };
       obj1[0] = tmp2Result.guild;
-      const items1 = [tmp10(ChannelListStickyHeaderDefault, obj1), , ];
+      const items1 = [tmp10(ChannelListStickyHeaderDefault, obj1), ,];
       tmp2Result = PX_8Default;
       items1[1] = tmp10(tmp2Result, {});
       let tmp10Result = null;
@@ -65,4 +65,4 @@ export default function FavoritesGuildChannels(arg0) {
     closure_5(closure_6, obj3);
     const tmp9 = closure_6;
   }
-};
+}

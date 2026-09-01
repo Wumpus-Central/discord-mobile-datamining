@@ -53,22 +53,25 @@ export default function Modal(route) {
     }
     closure_1.current = onExited;
   });
-  const effect1 = obj1.useEffect(() => () => {
-    const current = ref.current;
-    let currentResult;
-    if (current != null) {
-      currentResult = current();
-    }
-    return currentResult;
-  }, []);
+  const effect1 = obj1.useEffect(
+    () => () => {
+      const current = ref.current;
+      let currentResult;
+      if (current != null) {
+        currentResult = current();
+      }
+      return currentResult;
+    },
+    [],
+  );
   const layoutEffect = obj1.useLayoutEffect(() => modal(7220).trackAppUIViewed("ModalScreen"), []);
   const tmp6 = trackImpressionDefault;
   ({ left, right } = useSafeAreaInsetsDefault());
   let tmp7Result = tmp7(16452);
-  const items = [absoluteFillObject.absoluteFillObject, ];
+  const items = [absoluteFillObject.absoluteFillObject];
   let tmp16;
   if (!tmp7Result.shouldExcludeSafeAreaForModalKey(modal.key)) {
-    const items1 = [tmp.containerWithPadding, ];
+    const items1 = [tmp.containerWithPadding];
     obj = { paddingLeft: null, paddingRight: null };
     obj[0] = left;
     obj[1] = right;
@@ -88,7 +91,7 @@ export default function Modal(route) {
   obj2.style = undefined;
   obj2.transitionState = null;
   obj2.onClose = callback;
-  const items2 = [<modal.modal />, ];
+  const items2 = [<modal.modal />];
   tmp7Result = tmp7(500);
   let isIOSResult = tmp7Result.isIOS();
   if (isIOSResult) {
@@ -97,4 +100,4 @@ export default function Modal(route) {
   items2[1] = isIOSResult;
   obj1[2] = items2;
   return closure_10(closure_6, obj1);
-};
+}

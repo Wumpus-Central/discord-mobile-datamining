@@ -54,7 +54,7 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
       let tmp37 = tmp10;
       let tmp38 = tmp12;
       let tmp36 = jsx;
-      let items1 = [tmp.floatingIconWrapper, ];
+      let items1 = [tmp.floatingIconWrapper];
       let tmp39 = nextResult;
       let leftMargin;
       if (tmp9.withLeftMargin) {
@@ -91,13 +91,27 @@ let obj = { container: null, iconContainer: null, floatingIconWrapper: null, flo
 obj = { position: "absolute", top: 0, left: 0, borderRadius: ThemesDefault.radii.round, padding: 6 };
 obj[0] = obj;
 obj[1] = { flexDirection: "row" };
-obj[2] = { width: 20, height: 20, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
+obj[2] = {
+  width: 20,
+  height: 20,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey = { width: 12, height: 12, tintColor: ThemesDefault.colors.WHITE };
 obj[3] = createCacheKey;
 obj[4] = { marginLeft: 4 };
 let closure_8 = createCacheKey.createStyles(obj);
-let closure_10 = { code: "function VoicePanelHeaderUserStateTsx1(){const{withTiming,isHeaderHidden,OPACITY_TIMING}=this.__closure;return{opacity:withTiming(isHeaderHidden.get()?1:0,OPACITY_TIMING)};}" };
-let obj1 = { width: 20, height: 20, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
+let closure_10 = {
+  code: "function VoicePanelHeaderUserStateTsx1(){const{withTiming,isHeaderHidden,OPACITY_TIMING}=this.__closure;return{opacity:withTiming(isHeaderHidden.get()?1:0,OPACITY_TIMING)};}",
+};
+let obj1 = {
+  width: 20,
+  height: 20,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+};
 const memoResult = importAllResult.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
   isHeaderHidden = isHeaderHidden.isHeaderHidden;
   let channelId;
@@ -135,7 +149,11 @@ const memoResult = importAllResult.memo(function VoicePanelHeaderUserState(isHea
     const items1 = [tmp2.container, tmp6];
     obj[1] = items1;
     obj[3] = tmp4;
-    tmp7 = <closure_6 blurTheme="dark" style={null} pointerEvents="none">{null}</closure_6>;
+    tmp7 = (
+      <closure_6 blurTheme="dark" style={null} pointerEvents="none">
+        {null}
+      </closure_6>
+    );
   }
   return tmp7;
 });

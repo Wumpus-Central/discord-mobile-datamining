@@ -19,10 +19,26 @@ export default function PremiumFeaturesLogo(premiumType) {
     tmp = importDefault;
     tmp3 = registerAssetDefault;
   }
-  const obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null, resizeMode: "contain", source: null };
+  const obj = {
+    accessible: true,
+    accessibilityLabel: null,
+    accessibilityRole: "header",
+    style: null,
+    resizeMode: "contain",
+    source: null,
+  };
   const tmpResult = tmp(5493);
   obj[1] = getPremiumPlanItem.getPremiumTypeDisplayName(premiumType);
   obj[3] = premiumType.style;
   obj[5] = tmp3;
-  return <tmpResult accessible accessibilityLabel={null} accessibilityRole="header" style={null} resizeMode="contain" source={null} />;
-};
+  return (
+    <tmpResult
+      accessible
+      accessibilityLabel={null}
+      accessibilityRole="header"
+      style={null}
+      resizeMode="contain"
+      source={null}
+    />
+  );
+}

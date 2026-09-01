@@ -4,13 +4,27 @@ import closure_4 from "../../../../_runtime/00019_noop.js";
 import closure_5 from "../../a11y/AccessibilityStore.tsx";
 
 const require = arg1;
-let closure_6 = { code: "function useUserProfileOverscrollStylesTsx1(){const{position}=this.__closure;return position.get()<=0;}" };
-let closure_7 = { code: "function useUserProfileOverscrollStylesTsx2(){const{isNegativeScrollPosition,position}=this.__closure;const transform=isNegativeScrollPosition.get()?[{translateY:position.get()}]:[];return{transform:transform};}" };
-let closure_8 = { code: "function useUserProfileOverscrollStylesTsx3(){const{interpolate,position,minScrollPosition,SCALE_FACTOR,translateOnScale,isNegativeScrollPosition}=this.__closure;const scale=interpolate(position.get(),[minScrollPosition,0],[SCALE_FACTOR,1]);const translateY=interpolate(position.get(),[minScrollPosition,0],[translateOnScale,0]);const transform=isNegativeScrollPosition.get()?[{scale:scale},{translateY:translateY}]:[];return{transform:transform};}" };
-let closure_9 = { code: "function useUserProfileOverscrollStylesTsx4(){const{isNegativeScrollPosition,position,coefficient}=this.__closure;const transform=isNegativeScrollPosition.get()?[{translateY:position.get()*(1/coefficient)}]:[];return{transform:transform};}" };
-let closure_10 = { code: "function useUserProfileOverscrollStylesTsx5(){const{clamp,interpolate,position,windowHeight,coefficient}=this.__closure;return{blurAmount:clamp(interpolate(position.get(),[0,-windowHeight*coefficient],[0,1]),0,1)};}" };
-let closure_11 = { code: "function useUserProfileOverscrollStylesTsx6(){const{position}=this.__closure;return position.get()<0;}" };
-let closure_12 = { code: "function useUserProfileOverscrollStylesTsx7(result,previous){const{runOnJS,setShowBlur}=this.__closure;return result!==previous&&runOnJS(setShowBlur)(result);}" };
+let closure_6 = {
+  code: "function useUserProfileOverscrollStylesTsx1(){const{position}=this.__closure;return position.get()<=0;}",
+};
+let closure_7 = {
+  code: "function useUserProfileOverscrollStylesTsx2(){const{isNegativeScrollPosition,position}=this.__closure;const transform=isNegativeScrollPosition.get()?[{translateY:position.get()}]:[];return{transform:transform};}",
+};
+let closure_8 = {
+  code: "function useUserProfileOverscrollStylesTsx3(){const{interpolate,position,minScrollPosition,SCALE_FACTOR,translateOnScale,isNegativeScrollPosition}=this.__closure;const scale=interpolate(position.get(),[minScrollPosition,0],[SCALE_FACTOR,1]);const translateY=interpolate(position.get(),[minScrollPosition,0],[translateOnScale,0]);const transform=isNegativeScrollPosition.get()?[{scale:scale},{translateY:translateY}]:[];return{transform:transform};}",
+};
+let closure_9 = {
+  code: "function useUserProfileOverscrollStylesTsx4(){const{isNegativeScrollPosition,position,coefficient}=this.__closure;const transform=isNegativeScrollPosition.get()?[{translateY:position.get()*(1/coefficient)}]:[];return{transform:transform};}",
+};
+let closure_10 = {
+  code: "function useUserProfileOverscrollStylesTsx5(){const{clamp,interpolate,position,windowHeight,coefficient}=this.__closure;return{blurAmount:clamp(interpolate(position.get(),[0,-windowHeight*coefficient],[0,1]),0,1)};}",
+};
+let closure_11 = {
+  code: "function useUserProfileOverscrollStylesTsx6(){const{position}=this.__closure;return position.get()<0;}",
+};
+let closure_12 = {
+  code: "function useUserProfileOverscrollStylesTsx7(result,previous){const{runOnJS,setShowBlur}=this.__closure;return result!==previous&&runOnJS(setShowBlur)(result);}",
+};
 let result = require("set").fileFinishedImporting("modules/user_profile/native/useUserProfileOverscrollStyles.tsx");
 
 export default function useUserProfileOverscrollStyles(arg0) {
@@ -70,22 +84,22 @@ export default function useUserProfileOverscrollStyles(arg0) {
   class O {
     constructor() {
       obj = height(closure_2[5]);
-      items = [, ];
+      items = [,];
       items[0] = closure_3;
       items[1] = 0;
       interpolateResult = obj.interpolate(closure_2.get(), items, [1.5, 1]);
       obj2 = height(closure_2[5]);
-      items1 = [, ];
+      items1 = [,];
       items1[0] = closure_3;
       items1[1] = 0;
-      items2 = [, ];
+      items2 = [,];
       items2[0] = closure_4;
       items2[1] = 0;
       interpolateResult1 = obj2.interpolate(closure_2.get(), items1, items2);
       if (closure_5.get()) {
         obj = { scale: null };
         obj[0] = interpolateResult;
-        items3 = [, ];
+        items3 = [,];
         items3[0] = obj;
         obj1 = { translateY: null };
         obj1[0] = interpolateResult1;
@@ -97,7 +111,14 @@ export default function useUserProfileOverscrollStyles(arg0) {
       return { transform: items4 };
     }
   }
-  obj = { interpolate: tmp2(tmp[5]).interpolate, position: scrollPosition, minScrollPosition: tmp4, SCALE_FACTOR: 1.5, translateOnScale: result, isNegativeScrollPosition: derivedValue };
+  obj = {
+    interpolate: tmp2(tmp[5]).interpolate,
+    position: scrollPosition,
+    minScrollPosition: tmp4,
+    SCALE_FACTOR: 1.5,
+    translateOnScale: result,
+    isNegativeScrollPosition: derivedValue,
+  };
   O.__closure = obj;
   O.__workletHash = 5375176079092;
   O.__initData = closure_8;
@@ -130,7 +151,13 @@ export default function useUserProfileOverscrollStyles(arg0) {
       return obj;
     }
   }
-  obj = { clamp: tmp2(tmp[5]).clamp, interpolate: tmp2(tmp[5]).interpolate, position: scrollPosition, windowHeight: height, coefficient: stateFromStores };
+  obj = {
+    clamp: tmp2(tmp[5]).clamp,
+    interpolate: tmp2(tmp[5]).interpolate,
+    position: scrollPosition,
+    windowHeight: height,
+    coefficient: stateFromStores,
+  };
   A.__closure = obj;
   A.__workletHash = 849678936428;
   A.__initData = closure_10;
@@ -159,5 +186,11 @@ export default function useUserProfileOverscrollStyles(arg0) {
   fn3.__workletHash = 6548835412849;
   fn3.__initData = closure_12;
   const animatedReaction = height(scrollPosition[5]).useAnimatedReaction(H, fn3);
-  return { bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur: showBlur[0] };
-};
+  return {
+    bannerAnimatedStyle,
+    bannerImageAnimatedStyle,
+    contentAnimatedStyle,
+    blurAnimatedProps,
+    showBlur: showBlur[0],
+  };
+}

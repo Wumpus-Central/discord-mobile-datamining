@@ -5,7 +5,7 @@ const result = set.fileFinishedImporting("modules/messages/native/getEmbeddedAct
 
 export default function getEmbeddedActivityKey(location) {
   return "" + location.location.id + ":" + location.applicationId + ":" + location.launchId;
-};
+}
 export const parseEmbeddedActivityKey = function parseEmbeddedActivityKey(str) {
   const parts = str.split(":");
   let tmp = null;

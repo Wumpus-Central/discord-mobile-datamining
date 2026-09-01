@@ -15,7 +15,12 @@ import ME from "../../Constants.tsx";
 
 require = arg1;
 function getAccessibilityLabelFormatter() {
-  const obj = { minutes: getSystemLocale.t["1Rcf/h"], hours: getSystemLocale.t.vgnx51, days: getSystemLocale.t.fNvE50, month: null };
+  const obj = {
+    minutes: getSystemLocale.t["1Rcf/h"],
+    hours: getSystemLocale.t.vgnx51,
+    days: getSystemLocale.t.fNvE50,
+    month: null,
+  };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.P7Gygz);
   return obj;
@@ -36,7 +41,10 @@ export const trackThreadBrowserOpened = function trackThreadBrowserOpened() {
   if (arg0 === undefined) {
     str = "Modal";
   }
-  collectGuildAnalyticsMetadata.trackWithMetadata(constants.OPEN_MODAL, { type: "Thread Browser", location_section: str });
+  collectGuildAnalyticsMetadata.trackWithMetadata(constants.OPEN_MODAL, {
+    type: "Thread Browser",
+    location_section: str,
+  });
 };
 export const trackActiveThreadsPopoutOpened = function trackActiveThreadsPopoutOpened() {
   expandEventPropertiesDefault.track(constants.OPEN_POPOUT, { type: "Active Threads Popout" });
@@ -111,7 +119,9 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
 export const useLastMessageTimestamp = function useLastMessageTimestamp(thread) {
   const _require = thread;
   const items = [closure_5];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.lastMessageId(thread.id));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_5.lastMessageId(thread.id),
+  );
   let extractTimestampResult = null;
   if (null != stateFromStores) {
     extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(stateFromStores);

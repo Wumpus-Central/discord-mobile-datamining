@@ -12,7 +12,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ creatorWrapper: { marginLeft: -16, marginBottom: -16, marginTop: 8, flex: 1 }, gameWrapper: { flex: 1, flexDirection: "row", alignItems: "center", gap: 8 }, gameText: { flex: 1 } });
+let closure_9 = createCacheKey.createStyles({
+  creatorWrapper: { marginLeft: -16, marginBottom: -16, marginTop: 8, flex: 1 },
+  gameWrapper: { flex: 1, flexDirection: "row", alignItems: "center", gap: 8 },
+  gameText: { flex: 1 },
+});
 const memoResult = importAllResult.memo((onInviteRevoked) => {
   const invite = onInviteRevoked.invite;
   const guild = invite.guild;
@@ -39,17 +43,23 @@ const memoResult = importAllResult.memo((onInviteRevoked) => {
       items: inviteActions,
       children(ref) {
         const merged = Object.assign(ref, Object.create(null));
-        const obj = { size: "sm", variant: "secondary", icon: callback(10674).more, accessibilityLabel: null, ref: null };
+        const obj = {
+          size: "sm",
+          variant: "secondary",
+          icon: callback(10674).more,
+          accessibilityLabel: null,
+          ref: null,
+        };
         const intl = invite(1236).intl;
         obj[3] = intl.string(invite(1236).t.DEoVWZ);
         obj[4] = ref.ref;
         const merged1 = Object.assign(merged);
         return callback2(invite(8006).IconButton, obj);
-      }
-    })
+      },
+    }),
   ];
   obj[2] = items2;
-  const items3 = [callback2(invite(4926).Stack, obj), , , ];
+  const items3 = [callback2(invite(4926).Stack, obj), , ,];
   obj1 = {
     items: inviteActions,
     children(ref) {
@@ -60,7 +70,7 @@ const memoResult = importAllResult.memo((onInviteRevoked) => {
       obj[4] = ref.ref;
       const merged1 = Object.assign(merged);
       return callback2(invite(8006).IconButton, obj);
-    }
+    },
   };
   const tmp = callback3();
   items3[1] = callback(invite(10678).InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
@@ -145,7 +155,7 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
       obj.show(obj);
     }
   }, items);
-  const items1 = [, , ];
+  const items1 = [, ,];
   ({ guild_id: arr2[0], id: arr2[1] } = channel);
   items1[2] = callback;
   const memo = callback.useMemo(() => {
@@ -156,7 +166,7 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
     obj[2] = function action() {
       closure_1_0(closure_1_2[12]).transitionTo(closure_1_6.CHANNEL(closure_0.guild_id, closure_0.id));
     };
-    const items = [obj, ];
+    const items = [obj];
     obj = { label: null, iconSource: null, variant: "destructive", action: null };
     const intl2 = channel(1236).intl;
     obj[0] = intl2.string(channel(1236).t.JmUENg);
@@ -169,7 +179,7 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
   obj = { game: getOrFetchApplication, size: null };
   const tmp9 = canUnlinkLobbyChannel(10671);
   obj[1] = channel(5963).GameIconSizes.SIZE_24;
-  const items2 = [callback(canUnlinkLobbyChannel(5963), obj), ];
+  const items2 = [callback(canUnlinkLobbyChannel(5963), obj)];
   obj1 = { ellipsizeMode: "tail", lineClamp: 1, variant: "text-lg/bold", style: tmp.gameText, children: null };
   let name;
   if (getOrFetchApplication != null) {
@@ -185,17 +195,23 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
       items: memo,
       children(ref) {
         const merged = Object.assign(ref, Object.create(null));
-        const obj = { size: "sm", variant: "secondary", icon: canUnlinkLobbyChannel(10674).more, accessibilityLabel: null, ref: null };
+        const obj = {
+          size: "sm",
+          variant: "secondary",
+          icon: canUnlinkLobbyChannel(10674).more,
+          accessibilityLabel: null,
+          ref: null,
+        };
         const intl = channel(1236).intl;
         obj[3] = intl.string(channel(1236).t.DEoVWZ);
         obj[4] = ref.ref;
         const merged1 = Object.assign(merged);
         return callback(channel(8006).IconButton, obj);
-      }
-    })
+      },
+    }),
   ];
   obj2[2] = items3;
-  const items4 = [closure_8(channel(4926).Stack, obj2), callback(channel(10678).InstantInviteDetails, { channel }), ];
+  const items4 = [closure_8(channel(4926).Stack, obj2), callback(channel(10678).InstantInviteDetails, { channel })];
   const obj4 = { style: tmp.creatorWrapper, children: null };
   let tmp15Result = null;
   if (null != linked_by) {
@@ -209,17 +225,27 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
     items: memo,
     children(ref) {
       const merged = Object.assign(ref, Object.create(null));
-      const obj = { size: "sm", variant: "secondary", icon: canUnlinkLobbyChannel(10674).more, accessibilityLabel: null, ref: null };
+      const obj = {
+        size: "sm",
+        variant: "secondary",
+        icon: canUnlinkLobbyChannel(10674).more,
+        accessibilityLabel: null,
+        ref: null,
+      };
       const intl = channel(1236).intl;
       obj[3] = intl.string(channel(1236).t.DEoVWZ);
       obj[4] = ref.ref;
       const merged1 = Object.assign(merged);
       return callback(channel(8006).IconButton, obj);
-    }
+    },
   };
   const tmp8Result = canUnlinkLobbyChannel(5963);
   obj4[1] = tmp15Result;
-  items4[2] = callback(channel(4926).Stack, { direction: "horizontal", align: "flex-end", children: callback(View, obj4) });
+  items4[2] = callback(channel(4926).Stack, {
+    direction: "horizontal",
+    align: "flex-end",
+    children: callback(View, obj4),
+  });
   obj6[0] = items4;
   return closure_8(channel(5601).Card, obj6);
 };

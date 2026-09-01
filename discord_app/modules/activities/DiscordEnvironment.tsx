@@ -5,8 +5,22 @@ import closure_3 from "../user_settings/ThemeStore.tsx";
 import RESPONSIVE_DENSITY_MEDIA_QUERY from "../themes/UIDensityConstants.tsx";
 
 require = arg1;
-({ RESPONSIVE_DENSITY_FALLBACK: c4, RESPONSIVE_DENSITY_MEDIA_QUERY: c5, resolveUIDensity: closure_6 } = RESPONSIVE_DENSITY_MEDIA_QUERY);
-const frozen = Object.freeze({ baseTheme: "dark", customTheme: null, uiDensity: "default", messageDisplayCompact: false, fontScale: 100, reducedMotion: false, highContrast: false, forcedColors: false, underlineLinks: false });
+({
+  RESPONSIVE_DENSITY_FALLBACK: c4,
+  RESPONSIVE_DENSITY_MEDIA_QUERY: c5,
+  resolveUIDensity: closure_6,
+} = RESPONSIVE_DENSITY_MEDIA_QUERY);
+const frozen = Object.freeze({
+  baseTheme: "dark",
+  customTheme: null,
+  uiDensity: "default",
+  messageDisplayCompact: false,
+  fontScale: 100,
+  reducedMotion: false,
+  highContrast: false,
+  forcedColors: false,
+  underlineLinks: false,
+});
 let closure_8 = ["custom-theme-background", "custom-client-theme"];
 const result = require("set").fileFinishedImporting("modules/activities/DiscordEnvironment.tsx");
 
@@ -91,7 +105,17 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
       }
     }
   }
-  let obj = { baseTheme: str, customTheme: null, uiDensity: null, messageDisplayCompact: null, fontScale: null, reducedMotion: null, highContrast: null, forcedColors: null, underlineLinks: null };
+  let obj = {
+    baseTheme: str,
+    customTheme: null,
+    uiDensity: null,
+    messageDisplayCompact: null,
+    fontScale: null,
+    reducedMotion: null,
+    highContrast: null,
+    forcedColors: null,
+    underlineLinks: null,
+  };
   let tmp = null;
   if (typeof document !== "undefined") {
     const _window2 = window;
@@ -164,7 +188,16 @@ export const getDiscordEnvQueryParams = function getDiscordEnvQueryParams() {
       }
     }
   }
-  const obj = { theme: str, ui_density: null, message_display_compact: null, font_scale: null, reduced_motion: null, high_contrast: null, forced_colors: null, underline_links: null };
+  const obj = {
+    theme: str,
+    ui_density: null,
+    message_display_compact: null,
+    font_scale: null,
+    reduced_motion: null,
+    high_contrast: null,
+    forced_colors: null,
+    underline_links: null,
+  };
   if (typeof window !== "undefined") {
     const _window2 = window;
     if (typeof window.matchMedia === "function") {

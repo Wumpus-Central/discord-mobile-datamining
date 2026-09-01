@@ -27,4 +27,4 @@ export default function getRandomCustomStatusPrompt(size) {
     return tmp3;
   }
   found = closure_2;
-};
+}

@@ -3,7 +3,9 @@ import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/interaction_components/native/components/useSearchableSelectComponent.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/interaction_components/native/components/useSearchableSelectComponent.tsx",
+);
 
 export default function useSearchableSelectComponent(selectActionComponent) {
   selectActionComponent = selectActionComponent.selectActionComponent;
@@ -19,10 +21,18 @@ export default function useSearchableSelectComponent(selectActionComponent) {
   first = tmp[0];
   let obj = selectActionComponent(onSubmit[2]);
   React = obj.getInitialSnowflakeSelectOptions(selectActionComponent, containerId, guildId);
-  const tmp3 = first(React.useState(() => new Map(closure_4.map((value) => {
-    const items = [value.value, value];
-    return items;
-  }))), 2);
+  const tmp3 = first(
+    React.useState(
+      () =>
+        new Map(
+          closure_4.map((value) => {
+            const items = [value.value, value];
+            return items;
+          }),
+        ),
+    ),
+    2,
+  );
   first1 = tmp3[0];
   closure_6 = tmp3[1];
   let items = [first, queryOptions];
@@ -76,8 +86,8 @@ export default function useSearchableSelectComponent(selectActionComponent) {
       onSubmit({ type: selectActionComponent.type, selectedOptions: items });
       queryOptions(onSubmit[3]).hideActionSheet();
     },
-    setQuery: tmp[1]
+    setQuery: tmp[1],
   };
   items1 = [...first1.values()];
   return obj;
-};
+}

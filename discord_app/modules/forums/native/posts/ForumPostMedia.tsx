@@ -17,7 +17,13 @@ import { redactionSettingToRenderedString } from "../../../explicit_media_redact
 require = arg1;
 function ForumPostMediaAndroid(blurTheme) {
   const shouldSpoiler = blurTheme.shouldSpoiler;
-  const obj = { style: blurTheme.androidStyle, source: blurTheme.source, blurRadius: null, resizeMode: "cover", children: null };
+  const obj = {
+    style: blurTheme.androidStyle,
+    source: blurTheme.source,
+    blurRadius: null,
+    resizeMode: "cover",
+    children: null,
+  };
   let num = 0;
   if (shouldSpoiler) {
     num = 10;
@@ -29,7 +35,10 @@ function ForumPostMediaAndroid(blurTheme) {
 function ForumPostMediaIOS(arg0) {
   const obj = { children: null };
   ({ shouldSpoiler, blurTheme, source, iosStyle } = arg0);
-  const items = [callback2(preloadDefault, { style: iosStyle, source, resizeMode: "cover" }), callback2(ForumPostMediaSpoiler, { shouldSpoiler, blurTheme })];
+  const items = [
+    callback2(preloadDefault, { style: iosStyle, source, resizeMode: "cover" }),
+    callback2(ForumPostMediaSpoiler, { shouldSpoiler, blurTheme }),
+  ];
   obj[0] = items;
   return callback3(closure_11, obj);
 }
@@ -49,7 +58,7 @@ class ForumPostMediaSpoiler {
       obj[0] = blurTheme;
       tmp8 = StyleSheet;
       obj[1] = StyleSheet.absoluteFill;
-      items = [, ];
+      items = [,];
       items[0] = jsx(require("isBlurDisabled"), obj);
       tmp9 = View;
       obj1 = { style: null, children: null };
@@ -143,7 +152,14 @@ function ForumPostMedia(obscureReason) {
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = Math.min(PixelRatio.get(), 4);
 let closure_14 = Math.min(PixelRatio.get(), 4);
-createCacheKey = { mediaContainer: { position: "relative", overflow: "hidden" }, thumbnailBorder: null, thumbnail: null, spoilerIconContainer: null, spoilerIcon: null, gridMediaContainer: null };
+createCacheKey = {
+  mediaContainer: { position: "relative", overflow: "hidden" },
+  thumbnailBorder: null,
+  thumbnail: null,
+  spoilerIconContainer: null,
+  spoilerIcon: null,
+  gridMediaContainer: null,
+};
 createCacheKey = { borderRadius: ThemesDefault.radii.sm };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { height: 80, width: 80 };
@@ -205,17 +221,35 @@ export const ForumPostMediaThumbnail = function ForumPostMediaThumbnail(firstMes
     tmp7 = null;
   }
   React = tmp7;
-  const items1 = [tmp7, isLocalDeviceMedia, , , , ];
+  const items1 = [tmp7, isLocalDeviceMedia, , , ,];
   ({ height: arr2[2], src: arr2[3], width: arr2[4], srcIsAnimated: arr2[5] } = media);
-  obj = { iosStyle: tmp.thumbnail, androidStyle: tmp.thumbnail, containerStyle: null, obscureReason: null, shouldSpoiler: null, blurTheme: null, source: null, onPress: null, isMediaPost: null };
-  const items2 = [tmp.thumbnailBorder, , ];
+  obj = {
+    iosStyle: tmp.thumbnail,
+    androidStyle: tmp.thumbnail,
+    containerStyle: null,
+    obscureReason: null,
+    shouldSpoiler: null,
+    blurTheme: null,
+    source: null,
+    onPress: null,
+    isMediaPost: null,
+  };
+  const items2 = [tmp.thumbnailBorder, ,];
   const memo = obj2.useMemo(() => {
     let obj = { uri: null };
     if (isLocalDeviceMedia) {
       obj[0] = media.src;
       let tmp7 = obj;
     } else {
-      obj = { src: null, sourceWidth: null, sourceHeight: null, targetWidth: null, targetHeight: null, format: null, animated: null };
+      obj = {
+        src: null,
+        sourceWidth: null,
+        sourceHeight: null,
+        targetWidth: null,
+        targetHeight: null,
+        format: null,
+        animated: null,
+      };
       ({ src: obj3[0], width: obj3[1], height: obj3[2] } = media);
       const _Math = Math;
       obj[3] = Math.ceil(80 * closure_1_13);
@@ -269,17 +303,31 @@ export const ForumPostGridMedia = function ForumPostGridMedia(targetWidth) {
   callback = tmp6;
   const isMediaPostResult = channel.isMediaPost();
   React = isMediaPostResult;
-  const items = [, , , , , , ];
+  const items = [, , , , , ,];
   ({ src: arr[0], width: arr[1], height: arr[2] } = media);
   items[3] = targetWidth;
   items[4] = targetHeight;
   items[5] = tmp6;
   items[6] = isMediaPostResult;
-  obj = { containerStyle: tmp.gridMediaContainer, iosStyle: { height: targetHeight, width: targetWidth }, androidStyle: { height: targetHeight, width: targetWidth }, shouldSpoiler: null, obscureReason: null, blurTheme: null, source: null, isPortrait: null, isMediaPost: null };
+  obj = {
+    containerStyle: tmp.gridMediaContainer,
+    iosStyle: { height: targetHeight, width: targetWidth },
+    androidStyle: { height: targetHeight, width: targetWidth },
+    shouldSpoiler: null,
+    obscureReason: null,
+    blurTheme: null,
+    source: null,
+    isPortrait: null,
+    isMediaPost: null,
+  };
   const memo = React.useMemo(() => {
     if (c4) {
       const _Math3 = Math;
-      const bound = Math.min(1, targetWidth * closure_1_14 / media.width, targetHeight * closure_1_14 / media.height);
+      const bound = Math.min(
+        1,
+        (targetWidth * closure_1_14) / media.width,
+        (targetHeight * closure_1_14) / media.height,
+      );
       let obj = { uri: null };
       obj = { src: null, sourceWidth: null, sourceHeight: null, targetWidth: null, targetHeight: null, format: null };
       ({ src: obj6[0], width: obj6[1], height: obj6[2] } = media);

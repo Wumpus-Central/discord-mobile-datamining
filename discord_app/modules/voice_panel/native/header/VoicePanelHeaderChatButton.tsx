@@ -35,13 +35,13 @@ export default function VoicePanelHeaderChatButton(channelId) {
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["5KxXrK"]);
   obj[2] = callback;
-  const children = [callback(_modDef16616, obj), ];
+  const children = [callback(_modDef16616, obj)];
   let tmp8Result = null != tmp5;
   if (tmp8Result) {
     obj = { style: null, children: null };
     obj[0] = tmp.badgeContainer;
     obj1 = { style: null };
-    const items1 = [, ];
+    const items1 = [,];
     ({ badge: arr2[0], notificationBadge: arr2[1] } = tmp);
     obj1[0] = items1;
     obj[1] = tmp8(tmp3(6006), obj1);
@@ -50,4 +50,4 @@ export default function VoicePanelHeaderChatButton(channelId) {
   }
   children[1] = tmp8Result;
   return tmp6(tmp7, { children });
-};
+}

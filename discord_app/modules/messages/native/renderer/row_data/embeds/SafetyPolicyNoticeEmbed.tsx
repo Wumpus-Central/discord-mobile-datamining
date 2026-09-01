@@ -11,7 +11,9 @@ import registerAssetDefault from "../../../../../../../_runtime/08737_registerAs
 const Image = get_ActivityIndicator.Image;
 const MessageEmbedTypes = ME.MessageEmbedTypes;
 const SafetyHubPolicyNoticeKeys = SafetyHubView.SafetyHubPolicyNoticeKeys;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx",
+);
 
 export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEmbed(message) {
   if (null != message.embeds) {
@@ -50,7 +52,14 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
         }
         if (null != rawValue) {
           if (null != parsed) {
-            let obj = { titleText: null, titleIcon: null, subtitleText: null, descriptionText: null, ctaText: null, classificationId: null };
+            let obj = {
+              titleText: null,
+              titleIcon: null,
+              subtitleText: null,
+              descriptionText: null,
+              ctaText: null,
+              classificationId: null,
+            };
             const intl = getSystemLocale.intl;
             obj[0] = intl.string(getSystemLocale.t["4CxGXi"]);
             obj[1] = frozen.getAssetUriForEmbed(Image.resolveAssetSource(registerAssetDefault));

@@ -29,11 +29,11 @@ export default function LeaveServerAlert(guild) {
     onPress() {
       return closure_1_1(closure_1_2[5]).leaveGuild(guild.id);
     },
-    text: null
+    text: null,
   };
   const intl3 = tmp2(1236).intl;
   obj1[2] = intl3.string(guild(1236).t.p89ACt);
-  const items = [closure_4(guild(4863).AlertActionButton, obj1, "confirm"), ];
+  const items = [closure_4(guild(4863).AlertActionButton, obj1, "confirm")];
   const obj2 = { variant: "secondary", text: null };
   const intl4 = tmp2(1236).intl;
   obj2[1] = intl4.string(guild(1236).t.gm1Vej);
@@ -41,4 +41,4 @@ export default function LeaveServerAlert(guild) {
   obj[0] = items;
   obj[2] = callback(guild(4863).AlertActions, obj);
   return closure_4(guild(4863).AlertModal, obj);
-};
+}

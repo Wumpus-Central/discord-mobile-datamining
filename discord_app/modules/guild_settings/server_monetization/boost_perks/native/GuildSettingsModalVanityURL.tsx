@@ -39,7 +39,10 @@ class GuildSettingsModalVanityURL extends PureComponent {
     }
     applyArgumentsResult.state = { isEditing: false, vanityURLCode: str };
     applyArgumentsResult.handleStartEditing = function handleStartEditing() {
-      closure_1_1(closure_1_2[12]).openModal(applyArgumentsResult.props.guild.id, applyArgumentsResult.state.vanityURLCode);
+      closure_1_1(closure_1_2[12]).openModal(
+        applyArgumentsResult.props.guild.id,
+        applyArgumentsResult.state.vanityURLCode,
+      );
       applyArgumentsResult.setState({ isEditing: true });
     };
     applyArgumentsResult.handleChange = function handleChange(vanityURLCode) {
@@ -54,7 +57,10 @@ class GuildSettingsModalVanityURL extends PureComponent {
     };
     applyArgumentsResult.handleSave = function handleSave() {
       applyArgumentsResult.setState({ isEditing: false });
-      closure_1_1(closure_1_2[12]).changeVanityURL(applyArgumentsResult.props.guild.id, applyArgumentsResult.state.vanityURLCode);
+      closure_1_1(closure_1_2[12]).changeVanityURL(
+        applyArgumentsResult.props.guild.id,
+        applyArgumentsResult.state.vanityURLCode,
+      );
     };
     return applyArgumentsResult;
   }
@@ -99,17 +105,19 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
     if (submitting) {
       let fn2 = () => callback(self(table[9]).HeaderSubmittingIndicator, {});
     } else {
-      fn2 = isEditing ? (() => {
-        const obj = { onPress: self.handleSave, text: null };
-        const intl = self(closure_1_2[11]).intl;
-        obj[1] = intl.string(self(closure_1_2[11]).t["R3BPH+"]);
-        return closure_1_9(self(closure_1_2[10]).HeaderActionButton, obj);
-      }) : (() => {
-        const obj = { onPress: self.handleStartEditing, text: null };
-        const intl = self(closure_1_2[11]).intl;
-        obj[1] = intl.string(self(closure_1_2[11]).t.bt75uw);
-        return closure_1_9(self(closure_1_2[10]).HeaderActionButton, obj);
-      });
+      fn2 = isEditing
+        ? () => {
+            const obj = { onPress: self.handleSave, text: null };
+            const intl = self(closure_1_2[11]).intl;
+            obj[1] = intl.string(self(closure_1_2[11]).t["R3BPH+"]);
+            return closure_1_9(self(closure_1_2[10]).HeaderActionButton, obj);
+          }
+        : () => {
+            const obj = { onPress: self.handleStartEditing, text: null };
+            const intl = self(closure_1_2[11]).intl;
+            obj[1] = intl.string(self(closure_1_2[11]).t.bt75uw);
+            return closure_1_9(self(closure_1_2[10]).HeaderActionButton, obj);
+          };
     }
     setOptionsResult[1] = fn2;
     setOptionsResult = navigation.setOptions(setOptionsResult);
@@ -164,13 +172,13 @@ prototype["render"] = function render() {
     obj3[2] = self.handleChange;
     obj3[3] = isEditing;
     obj3[4] = errorMessageFromErrorCode;
-    const items1 = [callback(TextInput.TextInput, obj3), ];
+    const items1 = [callback(TextInput.TextInput, obj3)];
     const obj4 = { style: null, children: null };
     obj4[0] = styles.hints;
     const obj5 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = getSystemLocale.intl;
     obj5[2] = intl2.string(getSystemLocale.t.IhWDcu);
-    const items2 = [callback(Text.Text, obj5), , , , ];
+    const items2 = [callback(Text.Text, obj5), , , ,];
     const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl3 = getSystemLocale.intl;
     obj6[2] = intl3.string(getSystemLocale.t["1mRkFr"]);
@@ -190,7 +198,7 @@ prototype["render"] = function render() {
     obj4[1] = items2;
     items1[1] = closure_10(closure_3, obj4);
     obj2[1] = items1;
-    const items3 = [closure_10(closure_3, obj2), ];
+    const items3 = [closure_10(closure_3, obj2)];
     const obj9 = { style: null, children: null };
     obj9[0] = styles.center;
     const obj10 = { source: null, style: null, resizeMode: "contain" };
@@ -209,7 +217,9 @@ prototype["render"] = function render() {
   }
 };
 let obj2 = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/native/GuildSettingsModalVanityURL.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/server_monetization/boost_perks/native/GuildSettingsModalVanityURL.tsx",
+);
 
 export default function ConnectedGuildSettingsModalVanityURL(guildId) {
   guildId = guildId.guildId;
@@ -231,7 +241,15 @@ export default function ConnectedGuildSettingsModalVanityURL(guildId) {
   let tmp10 = null;
   if (null != stateFromStores) {
     obj = { children: null };
-    obj = { guild: null, vanityURLCode: null, submitting: null, errorDetails: null, navigation: null, styles: null, contentContainerStyle: null };
+    obj = {
+      guild: null,
+      vanityURLCode: null,
+      submitting: null,
+      errorDetails: null,
+      navigation: null,
+      styles: null,
+      contentContainerStyle: null,
+    };
     obj[0] = stateFromStores;
     obj[1] = stateFromStores1;
     obj[2] = tmp8;
@@ -244,4 +262,4 @@ export default function ConnectedGuildSettingsModalVanityURL(guildId) {
     tmp10 = callback2(closure_11, obj);
   }
   return tmp10;
-};
+}

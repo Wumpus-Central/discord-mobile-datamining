@@ -19,14 +19,28 @@ function NativeMessagePreviewContent(arg0) {
   ({ message, lineClamp, maxHeight } = arg0);
   const tmp = useTruncatedGradientColorsDefault();
   ({ gradientColors, gradientStyles } = tmp);
-  return callback(View, { children: callback(PreviewIcon.NativeChannelRowPreview, { message, lineClamp, maxHeight, gradientStyles, gradientColors }) });
+  return callback(View, {
+    children: callback(PreviewIcon.NativeChannelRowPreview, {
+      message,
+      lineClamp,
+      maxHeight,
+      gradientStyles,
+      gradientColors,
+    }),
+  });
 }
 class SystemMessageText {
   constructor(arg0) {
     tmp = closure_10();
     obj = require("isReactionMilestoneNotification");
     messagePreviewTextVariant = obj.getMessagePreviewTextVariant();
-    obj = { variant: messagePreviewTextVariant, color: "text-subtle", style: tmp.italic, lineClamp: closure_7, children: global.text };
+    obj = {
+      variant: messagePreviewTextVariant,
+      color: "text-subtle",
+      style: tmp.italic,
+      lineClamp: closure_7,
+      children: global.text,
+    };
     return jsx(require("Text").Text, obj);
   }
 }
@@ -78,14 +92,14 @@ function EmbedCard(embed) {
   let tmp7 = null != color;
   if (tmp7) {
     obj = { style: null };
-    const items = [tmp.embedAccentBar, ];
+    const items = [tmp.embedAccentBar];
     obj = { backgroundColor: null };
     obj[0] = color;
     items[1] = obj;
     obj[0] = items;
     tmp7 = callback(tmp6, obj);
   }
-  const items1 = [tmp7, , ];
+  const items1 = [tmp7, ,];
   obj1 = { style: tmp.embedTextContainer, children: null };
   let tmp9 = null != name;
   if (tmp9) {
@@ -93,7 +107,7 @@ function EmbedCard(embed) {
     obj2[3] = name;
     tmp9 = callback(Text.Text, obj2);
   }
-  const items2 = [tmp9, , , ];
+  const items2 = [tmp9, , ,];
   let tmp13 = null != name1;
   if (tmp13) {
     const obj3 = { variant: "text-xs/medium", color: "text-default", lineClamp: 1, children: null };
@@ -143,12 +157,36 @@ if (PlatformTypes.isIOS()) {
   str = "ggsans-NormalItalic, NotoSans-NormalItalic";
 }
 let closure_10 = createCacheKey.createStyles({ italic: { fontStyle: "italic", fontFamily: str } });
-createCacheKey = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.sm, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };
+createCacheKey = {
+  embedContainer: null,
+  embedAccentBar: null,
+  embedTextContainer: null,
+  embedMediaContainer: null,
+  embedMedia: null,
+};
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.sm,
+  paddingTop: ThemesDefault.space.PX_8,
+  paddingBottom: ThemesDefault.space.PX_8,
+  paddingRight: ThemesDefault.space.PX_8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  flexDirection: "row",
+  overflow: "hidden",
+};
 createCacheKey[0] = createCacheKey;
-PlatformTypes = { width: 4, marginTop: -ThemesDefault.space.PX_8, marginBottom: -ThemesDefault.space.PX_8, alignSelf: "stretch" };
+PlatformTypes = {
+  width: 4,
+  marginTop: -ThemesDefault.space.PX_8,
+  marginBottom: -ThemesDefault.space.PX_8,
+  alignSelf: "stretch",
+};
 createCacheKey[1] = PlatformTypes;
-createCacheKey = { flex: 1, gap: ThemesDefault.space.PX_4, paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  flex: 1,
+  gap: ThemesDefault.space.PX_4,
+  paddingVertical: ThemesDefault.space.PX_4,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", height: 60, width: "channel" };
 createCacheKey[4] = { width: "100%", height: "100%" };
@@ -194,7 +232,7 @@ export default function MessagePreviewText(message) {
     obj1[0] = getInitialMessagePreview;
     obj1[1] = closure_7;
     obj1[2] = closure_6;
-    const items1 = [callback(NativeMessagePreviewContent, obj1), ];
+    const items1 = [callback(NativeMessagePreviewContent, obj1)];
     const obj2 = { embed: null };
     obj2[0] = first;
     items1[1] = callback(EmbedCard, obj2);
@@ -229,7 +267,15 @@ export default function MessagePreviewText(message) {
       channel = channel.getChannel(message.channel_id);
       tmp(10177);
       if (null != channel) {
-        const obj6 = { channel: null, message: null, color: "text-default", layout: null, variant: null, muted: false, lineClamp: null };
+        const obj6 = {
+          channel: null,
+          message: null,
+          color: "text-default",
+          layout: null,
+          variant: null,
+          muted: false,
+          lineClamp: null,
+        };
         obj6[0] = channel;
         obj6[1] = message;
         obj6[3] = tmp(4171).ChannelListLayoutTypes.COZY;
@@ -248,10 +294,15 @@ export default function MessagePreviewText(message) {
       if (null !== text) {
         const obj8 = { text: null };
         obj8[0] = text;
-        const items2 = [callback(SystemMessageText, obj8), ];
+        const items2 = [callback(SystemMessageText, obj8)];
         let tmp17Result = null !== secondaryText;
         if (tmp17Result) {
-          const obj9 = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp: null, children: null };
+          const obj9 = {
+            variant: "redesign/message-preview/medium",
+            color: "text-link",
+            lineClamp: null,
+            children: null,
+          };
           obj9[2] = closure_7;
           obj9[3] = secondaryText;
           tmp17Result = callback(tmp(4474).Text, obj9);
@@ -275,8 +326,13 @@ export default function MessagePreviewText(message) {
       const obj12 = { children: null };
       const obj13 = { text: null };
       obj13[0] = formatResult1;
-      const items3 = [callback(SystemMessageText, obj13), ];
-      const obj14 = { variant: "redesign/message-preview/medium", color: "text-default", lineClamp: null, children: null };
+      const items3 = [callback(SystemMessageText, obj13)];
+      const obj14 = {
+        variant: "redesign/message-preview/medium",
+        color: "text-default",
+        lineClamp: null,
+        children: null,
+      };
       obj14[2] = closure_7;
       obj14[3] = message.poll.question.text;
       items3[1] = callback(tmp(4474).Text, obj14);
@@ -290,5 +346,5 @@ export default function MessagePreviewText(message) {
       return callback(NativeMessagePreviewContent, obj15);
     }
   }
-};
+}
 export { SystemMessageText };

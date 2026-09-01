@@ -19,29 +19,43 @@ const memoResult = importAllResult.memo(function DevToolsGuildTagBadgesModal() {
           return callback2(callback(table[4]).GenericHeaderTitle, { title: children.children });
         },
         headerLeft: callback(closure_1_2[4]).getRenderModalCloseImage(navigation.navigation),
-        headerTitleAlign: "center"
+        headerTitleAlign: "center",
       };
       let merged = Object.assign(callback);
       let merged1 = Object.assign(closure_1_1(closure_1_2[5])());
       return obj;
     },
-    children: null
+    children: null,
   };
   obj = {
     name: "DevToolsGuildTagBadges",
     options() {
       return { title: "Guild Tag Badges" };
     },
-    component: itemsDefault
+    component: itemsDefault,
   };
   ({ Navigator, Screen } = closure_4);
-  obj[1] = <Screen name="DevToolsGuildTagBadges" options={function options() {
-    return { title: "Guild Tag Badges" };
-  }} component={itemsDefault} />;
-  return <Navigator name="DevToolsGuildTagBadges" options={function options() {
-    return { title: "Guild Tag Badges" };
-  }} component={itemsDefault} />;
+  obj[1] = (
+    <Screen
+      name="DevToolsGuildTagBadges"
+      options={function options() {
+        return { title: "Guild Tag Badges" };
+      }}
+      component={itemsDefault}
+    />
+  );
+  return (
+    <Navigator
+      name="DevToolsGuildTagBadges"
+      options={function options() {
+        return { title: "Guild Tag Badges" };
+      }}
+      component={itemsDefault}
+    />
+  );
 });
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildTagBadgesModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsGuildTagBadgesModal.tsx",
+);
 
 export default memoResult;

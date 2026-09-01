@@ -7,8 +7,12 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 noopAll;
 ({ Keyboard: c3, View: c4 } = get_ActivityIndicator);
-let closure_6 = createCacheKey.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 0 } });
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationFormRenderer.tsx");
+let closure_6 = createCacheKey.createStyles({
+  container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 0 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/MemberVerificationFormRenderer.tsx",
+);
 
 export default function MemberVerificationFormRenderer(arg0) {
   ({ rulesChannelId: require, formFields, onChange: importDefault, verification: dependencyMap } = arg0);
@@ -64,4 +68,4 @@ export default function MemberVerificationFormRenderer(arg0) {
   }
   obj[1] = mapped;
   return <closure_4 style={callback().container}>{null}</closure_4>;
-};
+}

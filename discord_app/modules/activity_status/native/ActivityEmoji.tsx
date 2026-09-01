@@ -5,7 +5,10 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-let closure_5 = createCacheKey.createStyles({ emoji: { flexShrink: 0, width: "100%", height: "100%" }, text: { textAlign: "center", fontFamily: "System" } });
+let closure_5 = createCacheKey.createStyles({
+  emoji: { flexShrink: 0, width: "100%", height: "100%" },
+  text: { textAlign: "center", fontFamily: "System" },
+});
 const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityEmoji.tsx");
 
 export default function ActivityEmoji(emoji) {
@@ -65,16 +68,23 @@ export default function ActivityEmoji(emoji) {
     obj[0] = style;
     <ReactionIcon style={null} size="sm" />;
   } else {
-    obj = { src: null, name: null, style: null, textEmojiStyle: null, fastImageStyle: null, adjustsFontSizeToFit: true };
+    obj = {
+      src: null,
+      name: null,
+      style: null,
+      textEmojiStyle: null,
+      fastImageStyle: null,
+      adjustsFontSizeToFit: true,
+    };
     obj[0] = memo;
     obj[1] = emoji.name;
-    const items1 = [style, ];
+    const items1 = [style];
     obj = { width: null, height: null };
     obj[0] = size;
     obj[1] = size;
     items1[1] = obj;
     obj[2] = items1;
-    const items2 = [, , ];
+    const items2 = [, ,];
     ({ emoji: arr3[0], text: arr3[1] } = tmp);
     obj1 = { fontSize: null };
     obj1[0] = size;
@@ -83,4 +93,4 @@ export default function ActivityEmoji(emoji) {
     obj[4] = tmp.emoji;
     jsx(EmojiDefault, { width: null, height: null });
   }
-};
+}

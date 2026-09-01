@@ -32,4 +32,4 @@ export default function hasRichActivity(type) {
     tmp = tmp3;
   }
   return tmp;
-};
+}

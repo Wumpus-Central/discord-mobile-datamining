@@ -48,7 +48,14 @@ function useInputStyles(size) {
   }
   const token1 = tmpResult.useToken(INPUT_FIELD_TEXT_STYLE_LG);
   const obj = map;
-  return callback3(str, flag2, flag3, token, token1, map.useToken(ThemesDefault.modules.mobile.INPUT_FIELD_PADDING_VERTICAL_SM_IOS));
+  return callback3(
+    str,
+    flag2,
+    flag3,
+    token,
+    token1,
+    map.useToken(ThemesDefault.modules.mobile.INPUT_FIELD_PADDING_VERTICAL_SM_IOS),
+  );
 }
 noopAll;
 ({ Platform, StyleSheet: c3, View: c4 } = get_ActivityIndicator);
@@ -78,7 +85,11 @@ let closure_9 = createCacheKey.createStyles(() => {
   let obj = { sm: InputHeights.InputHeights.SM, md: InputHeights.InputHeights.MD, lg: InputHeights.InputHeights.LG };
   obj = { sm: ThemesDefault.space.PX_8, md: ThemesDefault.space.PX_12, lg: ThemesDefault.space.PX_16 };
   obj = { sm: ThemesDefault.space.PX_4, md: ThemesDefault.space.PX_8, lg: ThemesDefault.space.PX_8 };
-  obj1 = { sm: { paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 }, md: null, lg: null };
+  obj1 = {
+    sm: { paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 },
+    md: null,
+    lg: null,
+  };
   const obj2 = { paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
   const tmp = require;
   obj1[1] = { paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8 };
@@ -98,11 +109,32 @@ let closure_9 = createCacheKey.createStyles(() => {
   if (flag2) {
     num3 = 1;
   }
-  const obj6 = { container: obj5, background: null, placeholderText: null, minHeight: null, radius: null, padding: null, text: null, leadingText: null, trailingText: null, leadingIcon: null, trailingIcon: null, splitBorder: null };
+  const obj6 = {
+    container: obj5,
+    background: null,
+    placeholderText: null,
+    minHeight: null,
+    radius: null,
+    padding: null,
+    text: null,
+    leadingText: null,
+    trailingText: null,
+    leadingIcon: null,
+    trailingIcon: null,
+    splitBorder: null,
+  };
   obj5[3] = num3;
   const obj4 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_8 + 2 };
-  obj6[1] = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderWidth: ThemesDefault.modules.mobile.INPUT_FIELD_BORDER_WIDTH, borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT };
-  const obj7 = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderWidth: ThemesDefault.modules.mobile.INPUT_FIELD_BORDER_WIDTH, borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT };
+  obj6[1] = {
+    backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+    borderWidth: ThemesDefault.modules.mobile.INPUT_FIELD_BORDER_WIDTH,
+    borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT,
+  };
+  const obj7 = {
+    backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+    borderWidth: ThemesDefault.modules.mobile.INPUT_FIELD_BORDER_WIDTH,
+    borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT,
+  };
   obj6[2] = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
   obj6[3] = { minHeight: obj[str] };
   obj6[4] = { borderRadius: num };
@@ -126,8 +158,32 @@ let closure_9 = createCacheKey.createStyles(() => {
   obj11.zIndex = 1;
   obj11.pointerEvents = "none";
   obj6[8] = obj11;
-  obj6[9] = { position: "absolute", left: 0, top: 0, bottom: 0, paddingTop: obj[str], paddingBottom: obj[str], paddingStart: obj[str], paddingEnd: obj[str], justifyContent: "center", zIndex: 1, pointerEvents: "none" };
-  obj6[10] = { position: "absolute", right: 0, top: 0, bottom: 0, paddingTop: obj[str], paddingBottom: obj[str], paddingStart: obj[str], paddingEnd: obj[str], justifyContent: "center", zIndex: 1, pointerEvents: "none" };
+  obj6[9] = {
+    position: "absolute",
+    left: 0,
+    top: 0,
+    bottom: 0,
+    paddingTop: obj[str],
+    paddingBottom: obj[str],
+    paddingStart: obj[str],
+    paddingEnd: obj[str],
+    justifyContent: "center",
+    zIndex: 1,
+    pointerEvents: "none",
+  };
+  obj6[10] = {
+    position: "absolute",
+    right: 0,
+    top: 0,
+    bottom: 0,
+    paddingTop: obj[str],
+    paddingBottom: obj[str],
+    paddingStart: obj[str],
+    paddingEnd: obj[str],
+    justifyContent: "center",
+    zIndex: 1,
+    pointerEvents: "none",
+  };
   const obj12 = {};
   const merged3 = Object.assign(tmp6);
   obj12.borderRightWidth = 1;
@@ -135,9 +191,15 @@ let closure_9 = createCacheKey.createStyles(() => {
   obj6[11] = obj12;
   return obj6;
 });
-createCacheKey = { error: ThemesDefault.colors.INPUT_BORDER_ERROR_DEFAULT, default: "transparent", focused: ThemesDefault.colors.INPUT_BORDER_ACTIVE };
+createCacheKey = {
+  error: ThemesDefault.colors.INPUT_BORDER_ERROR_DEFAULT,
+  default: "transparent",
+  focused: ThemesDefault.colors.INPUT_BORDER_ACTIVE,
+};
 let closure_10 = createCacheKey.createStyleProperties(createCacheKey);
-let closure_11 = { code: "function InputFieldContainerNativeTsx1(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}" };
+let closure_11 = {
+  code: "function InputFieldContainerNativeTsx1(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}",
+};
 const result = require("set").fileFinishedImporting("design/components/Input/native/InputFieldContainer.native.tsx");
 
 export { useInputStyles };
@@ -151,7 +213,13 @@ export const InputFieldContainer = function InputFieldContainer(isFocused) {
   if (undefined !== status) {
     str = status;
   }
-  let obj = { size: isFocused.size, isRound: isFocused.isRound, isDisabled: isFocused.isDisabled, grow: isFocused.grow, hasLeadingIcon: null != isFocused.leadingIcon };
+  let obj = {
+    size: isFocused.size,
+    isRound: isFocused.isRound,
+    isDisabled: isFocused.isDisabled,
+    grow: isFocused.grow,
+    hasLeadingIcon: null != isFocused.leadingIcon,
+  };
   const tmp3 = useInputStyles(obj);
   const fn = function s() {
     if ("default" !== str) {
@@ -165,7 +233,14 @@ export const InputFieldContainer = function InputFieldContainer(isFocused) {
         num = 1;
       }
     }
-    const obj = { borderWidth: lib(str[9]).withSpring(num, closure_1_7), borderColor: null, left: null, right: null, top: null, bottom: null };
+    const obj = {
+      borderWidth: lib(str[9]).withSpring(num, closure_1_7),
+      borderColor: null,
+      left: null,
+      right: null,
+      top: null,
+      bottom: null,
+    };
     const obj2 = lib(str[9]);
     obj[1] = lib(str[9]).withSpring(str, closure_1_7);
     obj[2] = -num;
@@ -174,12 +249,18 @@ export const InputFieldContainer = function InputFieldContainer(isFocused) {
     obj[5] = -num;
     return obj;
   };
-  obj = { status: str, ringColors: tmp, isFocused: tmp2, withSpring: _require(str[9]).withSpring, RING_SPRING_CONFIG: closure_7 };
+  obj = {
+    status: str,
+    ringColors: tmp,
+    isFocused: tmp2,
+    withSpring: _require(str[9]).withSpring,
+    RING_SPRING_CONFIG: closure_7,
+  };
   fn.__closure = obj;
   fn.__workletHash = 1037178877006;
   fn.__initData = closure_11;
   obj = { style: items, children: null };
-  items = [, , , ];
+  items = [, , ,];
   ({ container: arr[0], background: arr[1], radius: arr[2], minHeight: arr[3] } = tmp3);
   const animatedStyle = _require(str[8]).useAnimatedStyle(fn);
   const items1 = [absoluteFill.absoluteFill, tmp3.radius, animatedStyle];

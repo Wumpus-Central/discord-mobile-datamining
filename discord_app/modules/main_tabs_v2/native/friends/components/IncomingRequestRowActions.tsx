@@ -7,12 +7,24 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row" } });
-let closure_8 = { code: "function IncomingRequestRowActionsTsx1(){const{animate,pressed,withTiming}=this.__closure;return{position:'absolute',right:0,flexDirection:'row',opacity:!animate?!pressed.get()?1:0:withTiming(!pressed.get()?1:0,{duration:150}),pointerEvents:!pressed.get()?'auto':'none'};}" };
-let closure_9 = { code: "function IncomingRequestRowActionsTsx2(){const{buttonWidth,buttonOffsetX,pressed,animate,withTiming}=this.__closure;const width=buttonWidth.get();const offset=buttonOffsetX.get();const scaleX=!pressed.get()?0.5:1;const translateX=!pressed.get()?width-offset:0;return{transform:[{translateX:!animate?translateX:withTiming(translateX)},{scaleX:!animate?scaleX:withTiming(scaleX)}],opacity:!animate?!pressed.get()?0:1:withTiming(!pressed.get()?0:1),pointerEvents:!pressed.get()?'none':'auto'};}" };
-let closure_10 = { code: "function IncomingRequestRowActionsTsx3(){const{waveWidth,waveHeight}=this.__closure;return{transform:[{translateX:waveWidth.get()/2},{translateY:waveHeight.get()/2}]};}" };
-let closure_11 = { code: "function IncomingRequestRowActionsTsx4(){const{withDelay,withRepeat,withTiming,pressed,Easing,waveWidth,waveHeight}=this.__closure;return{transform:[{rotateZ:withDelay(450,withRepeat(withTiming(pressed.get()?'8deg':'-2deg',{duration:150,easing:Easing.inOut(Easing.quad)}),4,true))},{translateX:-waveWidth.get()/2},{translateY:-waveHeight.get()/2}]};}" };
-let closure_12 = { code: "function IncomingRequestRowActionsTsx5(){const{pressed}=this.__closure;return{pointerEvents:!pressed.get()?'none':'none'};}" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx");
+let closure_8 = {
+  code: "function IncomingRequestRowActionsTsx1(){const{animate,pressed,withTiming}=this.__closure;return{position:'absolute',right:0,flexDirection:'row',opacity:!animate?!pressed.get()?1:0:withTiming(!pressed.get()?1:0,{duration:150}),pointerEvents:!pressed.get()?'auto':'none'};}",
+};
+let closure_9 = {
+  code: "function IncomingRequestRowActionsTsx2(){const{buttonWidth,buttonOffsetX,pressed,animate,withTiming}=this.__closure;const width=buttonWidth.get();const offset=buttonOffsetX.get();const scaleX=!pressed.get()?0.5:1;const translateX=!pressed.get()?width-offset:0;return{transform:[{translateX:!animate?translateX:withTiming(translateX)},{scaleX:!animate?scaleX:withTiming(scaleX)}],opacity:!animate?!pressed.get()?0:1:withTiming(!pressed.get()?0:1),pointerEvents:!pressed.get()?'none':'auto'};}",
+};
+let closure_10 = {
+  code: "function IncomingRequestRowActionsTsx3(){const{waveWidth,waveHeight}=this.__closure;return{transform:[{translateX:waveWidth.get()/2},{translateY:waveHeight.get()/2}]};}",
+};
+let closure_11 = {
+  code: "function IncomingRequestRowActionsTsx4(){const{withDelay,withRepeat,withTiming,pressed,Easing,waveWidth,waveHeight}=this.__closure;return{transform:[{rotateZ:withDelay(450,withRepeat(withTiming(pressed.get()?'8deg':'-2deg',{duration:150,easing:Easing.inOut(Easing.quad)}),4,true))},{translateX:-waveWidth.get()/2},{translateY:-waveHeight.get()/2}]};}",
+};
+let closure_12 = {
+  code: "function IncomingRequestRowActionsTsx5(){const{pressed}=this.__closure;return{pointerEvents:!pressed.get()?'none':'none'};}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx",
+);
 
 export const IncomingRequestRowActions = function IncomingRequestRowActions(user) {
   user = user.user;
@@ -87,7 +99,7 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
       withTimingResult = user(pressed[5]).withTiming(num2);
       const obj2 = user(pressed[5]);
     }
-    const items = [{ translateX: withTimingResult }, ];
+    const items = [{ translateX: withTimingResult }];
     let withTimingResult1 = num;
     if (animate) {
       withTimingResult1 = user(pressed[5]).withTiming(num);
@@ -116,7 +128,13 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
     obj[2] = str;
     return obj;
   };
-  obj = { buttonWidth: sharedValue1, buttonOffsetX: sharedValue, pressed, animate, withTiming: user(pressed[5]).withTiming };
+  obj = {
+    buttonWidth: sharedValue1,
+    buttonOffsetX: sharedValue,
+    pressed,
+    animate,
+    withTiming: user(pressed[5]).withTiming,
+  };
   fn.__closure = obj;
   fn.__workletHash = 2207673076655;
   fn.__initData = sharedValue3;
@@ -125,7 +143,7 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   const fn2 = function x() {
     let obj = { transform: null };
     obj = { translateX: sharedValue2.get() / 2 };
-    const items = [obj, ];
+    const items = [obj];
     obj = { translateY: sharedValue3.get() / 2 };
     items[1] = obj;
     obj[0] = items;
@@ -153,7 +171,7 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
       Easing = tmp(tmp2[4]).Easing;
       obj2[1] = Easing.inOut(tmp(tmp2[4]).Easing.quad);
       obj1[0] = obj.withDelay(450, obj2.withRepeat(obj3.withTiming(str, obj2), 4, true));
-      items = [, , ];
+      items = [, ,];
       items[0] = obj1;
       obj3 = { translateX: -closure_8.get() / 2 };
       items[1] = obj3;
@@ -163,7 +181,15 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
       return obj;
     }
   }
-  obj1 = { withDelay: user(pressed[4]).withDelay, withRepeat: user(pressed[4]).withRepeat, withTiming: user(pressed[5]).withTiming, pressed, Easing: user(pressed[4]).Easing, waveWidth: sharedValue2, waveHeight: sharedValue3 };
+  obj1 = {
+    withDelay: user(pressed[4]).withDelay,
+    withRepeat: user(pressed[4]).withRepeat,
+    withTiming: user(pressed[5]).withTiming,
+    pressed,
+    Easing: user(pressed[4]).Easing,
+    waveWidth: sharedValue2,
+    waveHeight: sharedValue3,
+  };
   A.__closure = obj1;
   A.__workletHash = 6870822621980;
   A.__initData = closure_11;
@@ -205,24 +231,40 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
       const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
     },
     style: animatedStyle,
-    children: null
+    children: null,
   };
   obj4 = { direction: "horizontal", spacing: 8, children: null };
   const obj12 = user(pressed[4]);
   const tmp16 = sharedValue;
   const tmp17 = onDeclineIncomingRequest;
   const tmp19 = applicationId;
-  const items3 = [animate(user(pressed[8]).IconButton, { size: "sm", variant: "tertiary", icon: applicationId(pressed[9]), onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 }), ];
-  obj6 = { size: "sm", variant: "active", icon: applicationId(pressed[10]), onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
+  const items3 = [
+    animate(user(pressed[8]).IconButton, {
+      size: "sm",
+      variant: "tertiary",
+      icon: applicationId(pressed[9]),
+      onPress: callback1,
+      accessibilityLabel: ignoreRequestAccessibilityLabel,
+      maxFontSizeMultiplier: 2,
+    }),
+  ];
+  obj6 = {
+    size: "sm",
+    variant: "active",
+    icon: applicationId(pressed[10]),
+    onPress: callback,
+    accessibilityLabel: acceptRequestAccessibilityLabel,
+    maxFontSizeMultiplier: 2,
+  };
   items3[1] = animate(user(pressed[8]).IconButton, obj6);
   obj4[2] = items3;
   obj3[2] = sharedValue(user(pressed[7]).Stack, obj4);
-  const items4 = [animate(applicationId(pressed[4]).View, obj3), ];
+  const items4 = [animate(applicationId(pressed[4]).View, obj3)];
   const obj7 = {
     style: animatedStyle1,
     onLayout(nativeEvent) {
       const result = sharedValue1.set(nativeEvent.nativeEvent.layout.width);
-    }
+    },
   };
   const merged = Object.assign(animatedProps);
   obj8 = { size: "sm", variant: "secondary", text: null, icon: null, onPress: null };
@@ -232,19 +274,35 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   if (animate) {
     tmp21 = animatedStyle2;
   }
-  obj9 = { style: tmp21, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+  obj9 = {
+    style: tmp21,
+    accessibilityElementsHidden: true,
+    importantForAccessibility: "no-hide-descendants",
+    children: null,
+  };
   let tmp22 = null;
   if (animate) {
     tmp22 = animatedStyle3;
   }
-  let obj5 = { size: "sm", variant: "tertiary", icon: applicationId(pressed[9]), onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
+  let obj5 = {
+    size: "sm",
+    variant: "tertiary",
+    icon: applicationId(pressed[9]),
+    onPress: callback1,
+    accessibilityLabel: ignoreRequestAccessibilityLabel,
+    maxFontSizeMultiplier: 2,
+  };
   obj9[3] = animate(tmp19(pressed[4]).View, {
     style: tmp22,
     onLayout(nativeEvent) {
       const result = sharedValue2.set(nativeEvent.nativeEvent.layout.width);
       const result1 = sharedValue3.set(nativeEvent.nativeEvent.layout.height);
     },
-    children: animate(tmp2(pressed[13]).Text, { maxFontSizeMultiplier: 2, variant: "text-sm/normal", children: "\u{1F44B}" })
+    children: animate(tmp2(pressed[13]).Text, {
+      maxFontSizeMultiplier: 2,
+      variant: "text-sm/normal",
+      children: "\u{1F44B}",
+    }),
   });
   obj8[3] = animate(applicationId(pressed[4]).View, obj9);
   obj8[4] = callback2;

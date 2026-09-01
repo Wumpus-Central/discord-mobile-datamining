@@ -8,7 +8,15 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 let c3 = importAllResult;
 let obj = { iconContainer: null };
-obj = { width: 40, height: 40, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, display: "flex", justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.md };
+obj = {
+  width: 40,
+  height: 40,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  borderRadius: ThemesDefault.radii.md,
+};
 obj[0] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function MessageFailedToSendNotification(notification) {
@@ -40,6 +48,8 @@ const memoResult = importAllResult.memo(function MessageFailedToSendNotification
   obj[4] = notification;
   return jsx(channelId(10255).NotificationPressable, { style: callback().iconContainer, children: null });
 });
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/MessageFailedToSendNotification.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_notifications/native/MessageFailedToSendNotification.tsx",
+);
 
 export default memoResult;

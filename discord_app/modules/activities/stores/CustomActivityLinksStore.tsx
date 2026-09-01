@@ -5,8 +5,7 @@ import closure_0 from "../records/CustomActivityLinkRecord.tsx";
 
 let closure_1 = {};
 const Store = initializeDefault.Store;
-class CustomActivityLinksStore extends Store {
-}
+class CustomActivityLinksStore extends Store {}
 CustomActivityLinksStore.prototype["getOne"] = function getOne(id, linkId) {
   if (null != dependencyMap[id]) {
     return dependencyMap[id][linkId];
@@ -24,7 +23,7 @@ const customActivityLinksStore = new CustomActivityLinksStore(dispatcherDefault,
   },
   LOGOUT: function handleLogout() {
     closure_1 = {};
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/activities/stores/CustomActivityLinksStore.tsx");
 

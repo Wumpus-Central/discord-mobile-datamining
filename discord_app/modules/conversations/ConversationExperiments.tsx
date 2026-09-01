@@ -6,13 +6,28 @@ import ApexExperiment from "../experiments/apex/index.tsx";
 const require = arg1;
 ApexExperiment = { 1: null, 2: { enabled: false } };
 ApexExperiment[2] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-conversation-highlighting-utility", defaultConfig: { enabled: false }, variations: ApexExperiment });
+const apexExperiment = ApexExperiment.createApexExperiment({
+  kind: "user",
+  name: "2026-03-conversation-highlighting-utility",
+  defaultConfig: { enabled: false },
+  variations: ApexExperiment,
+});
 ApexExperiment = { 1: null };
 ApexExperiment[1] = { enabled: true };
-const apexExperiment1 = ApexExperiment.createApexExperiment({ kind: "guild", name: "2026-06-topical-navigation-guild", defaultConfig: { enabled: false }, variations: ApexExperiment });
+const apexExperiment1 = ApexExperiment.createApexExperiment({
+  kind: "guild",
+  name: "2026-06-topical-navigation-guild",
+  defaultConfig: { enabled: false },
+  variations: ApexExperiment,
+});
 const obj1 = { 1: null };
 obj1[1] = { enabled: true };
-const apexExperiment2 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-04-topical-navigation-staff-control", defaultConfig: { enabled: false }, variations: obj1 });
+const apexExperiment2 = ApexExperiment.createApexExperiment({
+  kind: "user",
+  name: "2026-04-topical-navigation-staff-control",
+  defaultConfig: { enabled: false },
+  variations: obj1,
+});
 const result = require("set").fileFinishedImporting("modules/conversations/ConversationExperiments.tsx");
 
 export const ConversationHighlightingExperiment = apexExperiment;
@@ -99,22 +114,28 @@ export const useIsConversationDebugUXEnabled = function useIsConversationDebugUX
   const items1 = [arg0, CONVERSATIONS_EXTRACTION_PROCESSING];
   const obj = { location };
   const obj2 = _require(CONVERSATIONS_EXTRACTION_PROCESSING[3]);
-  return _require(CONVERSATIONS_EXTRACTION_PROCESSING[3]).useStateFromStores(items, () => {
-    let tmp2 = null != closure_0;
-    if (tmp2) {
-      const guild = closure_1_2.getGuild(tmp);
-      let flag;
-      if (guild != null) {
-        const features = guild.features;
-        flag = features.has(SUMMARIES_ENABLED_GA);
-      }
-      if (flag == null) {
-        flag = false;
-      }
-      tmp2 = flag;
-    }
-    return tmp2;
-  }, items1) && apexExperiment.useConfig({ location }).enabled;
+  return (
+    _require(CONVERSATIONS_EXTRACTION_PROCESSING[3]).useStateFromStores(
+      items,
+      () => {
+        let tmp2 = null != closure_0;
+        if (tmp2) {
+          const guild = closure_1_2.getGuild(tmp);
+          let flag;
+          if (guild != null) {
+            const features = guild.features;
+            flag = features.has(SUMMARIES_ENABLED_GA);
+          }
+          if (flag == null) {
+            flag = false;
+          }
+          tmp2 = flag;
+        }
+        return tmp2;
+      },
+      items1,
+    ) && apexExperiment.useConfig({ location }).enabled
+  );
 };
 export const useIsTopicalNavEnabled = function useIsTopicalNavEnabled(guild_id, channel_header) {
   let obj = { location: channel_header };
@@ -136,22 +157,26 @@ export const useIsTopicalNavEnabled = function useIsTopicalNavEnabled(guild_id, 
   let tmp2Result = tmp2(tmp3[3]);
   const items2 = [closure_2];
   const items3 = [guild_id, CONVERSATIONS_EXTRACTION_PROCESSING2];
-  let enabled = tmp2Result.useStateFromStores(items2, () => {
-    let tmp2 = null != closure_0;
-    if (tmp2) {
-      const guild = closure_1_2.getGuild(tmp);
-      let flag;
-      if (guild != null) {
-        const features = guild.features;
-        flag = features.has(SUMMARIES_ENABLED_GA);
+  let enabled = tmp2Result.useStateFromStores(
+    items2,
+    () => {
+      let tmp2 = null != closure_0;
+      if (tmp2) {
+        const guild = closure_1_2.getGuild(tmp);
+        let flag;
+        if (guild != null) {
+          const features = guild.features;
+          flag = features.has(SUMMARIES_ENABLED_GA);
+        }
+        if (flag == null) {
+          flag = false;
+        }
+        tmp2 = flag;
       }
-      if (flag == null) {
-        flag = false;
-      }
-      tmp2 = flag;
-    }
-    return tmp2;
-  }, items3);
+      return tmp2;
+    },
+    items3,
+  );
   SUMMARIES_ENABLED_GA = tmp.SUMMARIES_ENABLED_GA;
   _require = guild_id;
   tmp2Result = tmp2(tmp3[3]);

@@ -20,7 +20,10 @@ export default function usePremiumGroupMembership() {
     flag2 = true;
   }
   const items = [closure_4];
-  const stateFromStoresObject = flag(589).useStateFromStoresObject(items, () => ({ premiumGroupMembership: closure_4.getMembership(), isFetchingMembership: closure_4.isFetchingMembership() }));
+  const stateFromStoresObject = flag(589).useStateFromStoresObject(items, () => ({
+    premiumGroupMembership: closure_4.getMembership(),
+    isFetchingMembership: closure_4.isFetchingMembership(),
+  }));
   const items1 = [flag2, flag];
   ({ premiumGroupMembership, isFetchingMembership } = stateFromStoresObject);
   useEffect(() => {
@@ -36,4 +39,4 @@ export default function usePremiumGroupMembership() {
     }
   }, items1);
   return { premiumGroupMembership, isLoading };
-};
+}

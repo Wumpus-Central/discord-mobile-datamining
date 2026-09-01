@@ -4,7 +4,9 @@ import { useNativeCheckoutStore } from "../../../checkout/native/NativeCheckoutS
 import { AnalyticEvents } from "../../../../Constants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/headless_components/HeadlessSlayerStorefrontPurchaseRunner.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/slayer_storefront/native/headless_components/HeadlessSlayerStorefrontPurchaseRunner.tsx",
+);
 
 export const HeadlessSlayerStorefrontPurchaseRunner = function HeadlessSlayerStorefrontPurchaseRunner(attempt) {
   attempt = attempt.attempt;
@@ -38,7 +40,17 @@ export const HeadlessSlayerStorefrontPurchaseRunner = function HeadlessSlayerSto
     }
     onPurchaseError();
   }, items);
-  obj = { skuId, sku, analyticsLoadId: tmp.load_id, analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null };
+  obj = {
+    skuId,
+    sku,
+    analyticsLoadId: tmp.load_id,
+    analyticsLocations,
+    orderId: null,
+    analyticsData: null,
+    onPurchaseComplete: null,
+    onPurchaseError: null,
+    onPurchasePending: null,
+  };
   let id;
   if (tmp3 != null) {
     id = tmp3.id;
@@ -54,9 +66,7 @@ export const HeadlessSlayerStorefrontPurchaseRunner = function HeadlessSlayerSto
     callback();
   };
   obj[7] = callback;
-  obj[8] = function onPurchasePending() {
-
-  };
+  obj[8] = function onPurchasePending() {};
   const tmp6Result = importDefault(onPurchaseError[4])(obj);
   closure_9 = tmp6Result;
   closure_10 = obj.useRef(0);

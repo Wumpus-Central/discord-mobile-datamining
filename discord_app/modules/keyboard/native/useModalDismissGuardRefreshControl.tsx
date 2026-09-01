@@ -4,9 +4,7 @@ import { RefreshControl } from "../../../../_runtime/00017_get_ActivityIndicator
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-function noop() {
-
-}
+function noop() {}
 const result = require("set").fileFinishedImporting("modules/keyboard/native/useModalDismissGuardRefreshControl.tsx");
 
 export const useModalDismissGuardRefreshControl = function useModalDismissGuardRefreshControl() {

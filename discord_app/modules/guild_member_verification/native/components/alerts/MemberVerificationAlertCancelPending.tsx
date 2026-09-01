@@ -4,7 +4,9 @@ import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertCancelPending.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/alerts/MemberVerificationAlertCancelPending.tsx",
+);
 
 export default function MemberVerificationAlertCancelPending(guildId) {
   guildId = guildId.guildId;
@@ -31,7 +33,7 @@ export default function MemberVerificationAlertCancelPending(guildId) {
     confirmText = intl3.string(tmp7(1236).t.OzHPde);
   }
   obj = { children: null };
-  const items1 = [closure_4(guildId(4928).Button, { variant: "destructive", text: confirmText, onPress: callback }), ];
+  const items1 = [closure_4(guildId(4928).Button, { variant: "destructive", text: confirmText, onPress: callback })];
   obj = { text: null, variant: "secondary", onPress: null };
   const intl4 = tmp7(1236).intl;
   obj[0] = intl4.string(guildId(1236).t.bANR0R);
@@ -40,4 +42,4 @@ export default function MemberVerificationAlertCancelPending(guildId) {
   obj[0] = items1;
   obj.buttons = closure_6(closure_5, obj);
   return closure_4(onClose(7657), obj);
-};
+}

@@ -35,8 +35,12 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
   importDefault = tmpResult.useUserTag(user);
   const tmp9 = useUserProfileBannerHeightDefault(ACTION_SHEET_MAX_WIDTH);
   const tmp8 = useBadgesDefault(displayProfile);
-  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = useUserProfileOverscrollStylesDefault({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 }));
-  const tmp10 = useUserProfileOverscrollStylesDefault({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 });
+  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } =
+    useUserProfileOverscrollStylesDefault({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 }));
+  const tmp10 = useUserProfileOverscrollStylesDefault({
+    scrollPosition: scrollPosition.scrollPosition,
+    bannerHeight: tmp9,
+  });
   ({ theme, primaryColor, secondaryColor } = useProfileThemeDefault({ user, displayProfile }));
   const tmp11 = useProfileThemeDefault({ user, displayProfile });
   const userProfileColors = trackUserProfileAction(8532).useUserProfileColors({ theme, primaryColor, secondaryColor });
@@ -44,7 +48,15 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
   if (null == user) {
     return null;
   } else {
-    obj = { user: null, displayProfile: null, bannerHeight: null, bannerAnimatedStyle: null, bannerImageAnimatedStyle: null, blurAnimatedProps: null, showBlur: null };
+    obj = {
+      user: null,
+      displayProfile: null,
+      bannerHeight: null,
+      bannerAnimatedStyle: null,
+      bannerImageAnimatedStyle: null,
+      blurAnimatedProps: null,
+      showBlur: null,
+    };
     obj[0] = user;
     obj[1] = displayProfile;
     obj[2] = tmp9;
@@ -52,7 +64,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     obj[4] = bannerImageAnimatedStyle;
     obj[5] = blurAnimatedProps;
     obj[6] = showBlur;
-    const items = [callback(tmp(8919), obj), ];
+    const items = [callback(tmp(8919), obj)];
     obj = { style: null, children: null };
     obj[0] = contentAnimatedStyle;
     obj1 = { user: null, guildId: null, backgroundColor: null, disableStatus: true };
@@ -63,9 +75,9 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     }
     obj1[1] = guildId;
     obj1[2] = tmp13;
-    const items1 = [callback(tmp4(8555).OpenableUserProfileAvatar, obj1), ];
+    const items1 = [callback(tmp4(8555).OpenableUserProfileAvatar, obj1)];
     const obj2 = { style: null, children: null };
-    const items2 = [, , ];
+    const items2 = [, ,];
     ({ profileContentWrapper: arr2[0], profileContent: arr2[1] } = tmp3);
     const obj3 = { paddingTop: null, paddingBottom: null };
     obj3[0] = closure_5;
@@ -74,7 +86,19 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     obj2[0] = items2;
     const obj4 = { style: null, children: null };
     obj4[0] = tmp3.primaryInfo;
-    const obj5 = { user: null, guildId: null, displayName: null, pronouns: null, badges: null, badgeContainerBackground: null, displayNameAccessibilityHint: null, onPressDisplayName: null, onPressUserTag: null, onPressPronouns: null, showBadgeToastOnPress: true };
+    const obj5 = {
+      user: null,
+      guildId: null,
+      displayName: null,
+      pronouns: null,
+      badges: null,
+      badgeContainerBackground: null,
+      displayNameAccessibilityHint: null,
+      onPressDisplayName: null,
+      onPressUserTag: null,
+      onPressPronouns: null,
+      showBadgeToastOnPress: true,
+    };
     obj5[0] = user;
     let guild_id1;
     tmpResult = tmp(8921);
@@ -106,14 +130,14 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
       trackUserProfileAction(closure_1_2[16]).presentUserPronouns();
     };
     obj4[1] = callback(tmpResult, obj5);
-    const items3 = [callback(View, obj4), ];
+    const items3 = [callback(View, obj4)];
     const obj7 = { style: null, children: null };
     obj7[0] = tmp3.cards;
     const obj8 = { userId: null, displayProfile: null, channel: null, style: null };
     obj8[0] = user.id;
     obj8[1] = displayProfile;
     obj8[2] = channel;
-    const items4 = [tmp3.card, ];
+    const items4 = [tmp3.card];
     const obj9 = { backgroundColor: null };
     obj9[0] = containerBackground;
     items4[1] = obj9;

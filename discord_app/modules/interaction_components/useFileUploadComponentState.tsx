@@ -8,7 +8,10 @@ const result = require("set").fileFinishedImporting("modules/interaction_compone
 
 export const useFileUploadComponentState = function useFileUploadComponentState(maxValues) {
   const componentStateContext = state(uploadIds[3]).useComponentStateContext();
-  executeStateUpdate(uploadIds[4])(null != componentStateContext, "useFileUploadComponentState must be used within a ComponentStateContextProvider");
+  executeStateUpdate(uploadIds[4])(
+    null != componentStateContext,
+    "useFileUploadComponentState must be used within a ComponentStateContextProvider",
+  );
   const channelId = componentStateContext.channelId;
   executeStateUpdate(uploadIds[4])(null != channelId, "useFileUploadComponentState must be used inside a channel");
   error = componentStateContext.useComponentState(maxValues);
@@ -32,14 +35,19 @@ export const useFileUploadComponentState = function useFileUploadComponentState(
     return mapped.filter((arg0) => null != arg0);
   }, items1);
   const items2 = [executeStateUpdate];
-  setUploadIds = uploads.useCallback((uploadIds) => executeStateUpdate({ type: state(uploadIds[5]).ComponentType.FILE_UPLOAD, uploadIds }), items2);
+  setUploadIds = uploads.useCallback(
+    (uploadIds) => executeStateUpdate({ type: state(uploadIds[5]).ComponentType.FILE_UPLOAD, uploadIds }),
+    items2,
+  );
   const items3 = [uploadIds, currentUploads, setUploadIds];
   const effect = uploads.useEffect(() => {
     if (uploadIds.length > currentUploads.length) {
-      setUploadIds(uploadIds.filter((arg0) => {
-        closure_0 = arg0;
-        return closure_4.some((id) => id.id === closure_0);
-      }));
+      setUploadIds(
+        uploadIds.filter((arg0) => {
+          closure_0 = arg0;
+          return closure_4.some((id) => id.id === closure_0);
+        }),
+      );
     }
   }, items3);
   return { uploadIds, setUploadIds, currentUploads, error: error.error };

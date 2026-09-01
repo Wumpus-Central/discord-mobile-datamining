@@ -20,14 +20,24 @@ export default importAllResult.memo(function VEVOOSlider(disabled) {
     flag = false;
   }
   ({ initialValue, onValueChange } = disabled);
-  const items = [callback().slider, ];
+  const items = [callback().slider];
   let num = 1;
   const tmp = callback();
   const tmp2 = jsx;
   if (flag) {
     num = 0.5;
   }
-  const obj = { style: items, disabled: disabled.disabled, value: current, minimumValue: 0, maximumValue: 1, minimumTrackTintColor: ThemesDefault.unsafe_rawColors.BRAND_500, maximumTrackTintColor: ThemesDefault.unsafe_rawColors.PRIMARY_400, onValueChange, onResponderGrant: null };
+  const obj = {
+    style: items,
+    disabled: disabled.disabled,
+    value: current,
+    minimumValue: 0,
+    maximumValue: 1,
+    minimumTrackTintColor: ThemesDefault.unsafe_rawColors.BRAND_500,
+    maximumTrackTintColor: ThemesDefault.unsafe_rawColors.PRIMARY_400,
+    onValueChange,
+    onResponderGrant: null,
+  };
   items[1] = { opacity: num };
   current = initialValue.current;
   const tmp5 = _modDef8381;

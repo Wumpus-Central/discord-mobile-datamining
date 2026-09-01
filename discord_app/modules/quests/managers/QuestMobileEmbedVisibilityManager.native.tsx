@@ -51,7 +51,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
         let hasItem = message.codedLinks.length <= 0;
         if (!hasItem) {
           let tmp5 = closure_1_17;
-          let items1 = [, ];
+          let items1 = [,];
           ({ SENDING: arr2[0], SEND_FAILED: arr2[1] } = closure_1_17);
           let tmp6 = state;
           hasItem = items1.includes(state);
@@ -114,7 +114,18 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
         let tmp4 = quest;
         if (null != quest) {
           let tmp6 = applyArgumentsResult;
-          let obj = { quest: null, questContent: null, triggeredByStatusChange: false, questContentPosition: null, channelId: null, messageId: null, questId: null, isQuestEnrollmentBlocked: null, sourceQuestContent: null, adCreativeType: null };
+          let obj = {
+            quest: null,
+            questContent: null,
+            triggeredByStatusChange: false,
+            questContentPosition: null,
+            channelId: null,
+            messageId: null,
+            questId: null,
+            isQuestEnrollmentBlocked: null,
+            sourceQuestContent: null,
+            adCreativeType: null,
+          };
           let tmp7 = quest;
           obj[0] = tmp4;
           let tmp8 = applyArgumentsResult;
@@ -487,7 +498,10 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
         }
         let hasItem = null != type;
         if (hasItem) {
-          const items = [applyArgumentsResult(closure_1_2[23]).ChannelTypes.GUILD_STAGE_VOICE, applyArgumentsResult(closure_1_2[23]).ChannelTypes.GUILD_VOICE];
+          const items = [
+            applyArgumentsResult(closure_1_2[23]).ChannelTypes.GUILD_STAGE_VOICE,
+            applyArgumentsResult(closure_1_2[23]).ChannelTypes.GUILD_VOICE,
+          ];
           let type1;
           if (channel != null) {
             type1 = channel.type;
@@ -551,7 +565,10 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
         if (null != type) {
           let tmp35 = applyArgumentsResult;
           let tmp36 = closure_1_2;
-          let items1 = [applyArgumentsResult(closure_1_2[23]).ChannelTypes.GUILD_STAGE_VOICE, applyArgumentsResult(closure_1_2[23]).ChannelTypes.GUILD_VOICE];
+          let items1 = [
+            applyArgumentsResult(closure_1_2[23]).ChannelTypes.GUILD_STAGE_VOICE,
+            applyArgumentsResult(closure_1_2[23]).ChannelTypes.GUILD_VOICE,
+          ];
           let tmp37 = channel;
           let type1;
           if (tmp7 != null) {
@@ -626,15 +643,9 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
         obj.wasAlertOpen = tmp;
       }
     };
-    applyArgumentsResult.unsubscribeFromVoicePanelStore = function unsubscribeFromVoicePanelStore() {
-
-    };
-    applyArgumentsResult.unsubscribeFromChannelDetailsStore = function unsubscribeFromChannelDetailsStore() {
-
-    };
-    applyArgumentsResult.unsubscribeFromAlertStore = function unsubscribeFromAlertStore() {
-
-    };
+    applyArgumentsResult.unsubscribeFromVoicePanelStore = function unsubscribeFromVoicePanelStore() {};
+    applyArgumentsResult.unsubscribeFromChannelDetailsStore = function unsubscribeFromChannelDetailsStore() {};
+    applyArgumentsResult.unsubscribeFromAlertStore = function unsubscribeFromAlertStore() {};
     map = new Map();
     result = map.set(closure_15, applyArgumentsResult.handleQuestStoreChanged);
     result1 = result.set(closure_12, applyArgumentsResult.handleSelectedChannelStoreChanged);
@@ -642,7 +653,9 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
     result3 = result2.set(closure_14, applyArgumentsResult.handleAppStateStoreChanged);
     result4 = result3.set(closure_6, applyArgumentsResult.handleChannelRTCStoreChanged);
     applyArgumentsResult.stores = result4.set(closure_13, applyArgumentsResult.handleAlertStoreChanged);
-    applyArgumentsResult.actions = { QUESTS_VISIBLE_MOBILE_MESSAGES_CHANGED: applyArgumentsResult.handleVisibleMessagesChanged };
+    applyArgumentsResult.actions = {
+      QUESTS_VISIBLE_MOBILE_MESSAGES_CHANGED: applyArgumentsResult.handleVisibleMessagesChanged,
+    };
     return applyArgumentsResult;
   }
   _initialize() {
@@ -679,6 +692,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
 }
 let closure_19 = QuestMobileEmbedVisibilityManager.prototype;
 const questMobileEmbedVisibilityManager = new QuestMobileEmbedVisibilityManager();
-let result = require("set").fileFinishedImporting("modules/quests/managers/QuestMobileEmbedVisibilityManager.native.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/quests/managers/QuestMobileEmbedVisibilityManager.native.tsx",
+);
 
 export default questMobileEmbedVisibilityManager;

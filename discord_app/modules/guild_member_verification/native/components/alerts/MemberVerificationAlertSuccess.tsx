@@ -9,8 +9,24 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 const require = arg1;
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ alert: { marginTop: 120 }, header: { marginTop: 40, textAlign: "center" }, text: { marginVertical: 8, lineHeight: 18, textAlign: "center" }, illustrationContainer: { position: "absolute", display: "flex", flexDirection: "column", alignItems: "center", left: 0, right: 0, top: -220 }, illustration: { height: 246, width: 240 } });
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertSuccess.tsx");
+let closure_8 = createCacheKey.createStyles({
+  alert: { marginTop: 120 },
+  header: { marginTop: 40, textAlign: "center" },
+  text: { marginVertical: 8, lineHeight: 18, textAlign: "center" },
+  illustrationContainer: {
+    position: "absolute",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    left: 0,
+    right: 0,
+    top: -220,
+  },
+  illustration: { height: 246, width: 240 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/alerts/MemberVerificationAlertSuccess.tsx",
+);
 
 export default function MemberVerificationAlertSuccess(guildId) {
   guildId = guildId.guildId;
@@ -48,7 +64,7 @@ export default function MemberVerificationAlertSuccess(guildId) {
     obj1[1] = !tmp7;
     obj1[2] = tmp2.illustration;
     obj[1] = callback(handleConfirmAndAck(tmp4[9]), obj1);
-    const items2 = [callback(View, obj), , ];
+    const items2 = [callback(View, obj), ,];
     const obj2 = { style: null, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
     obj2[0] = tmp2.header;
     const intl2 = tmp3(tmp4[8]).intl;
@@ -64,4 +80,4 @@ export default function MemberVerificationAlertSuccess(guildId) {
     obj.children = items2;
     return callback2(tmp10, obj);
   }
-};
+}

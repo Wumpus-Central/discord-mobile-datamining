@@ -32,42 +32,56 @@ function ToggleTableRow(toggleName) {
   toggleName = toggleName.toggleName;
   const description = toggleName.description;
   ({ value, onValueChange } = toggleName);
-  return callback2(toggleName(5599).TableRow, {
-    label: description,
-    labelLineClamp: 1,
-    subLabel: toggleName,
-    subLabelLineClamp: 1,
-    onPress() {
-      let obj = description(closure_1_2[10]);
-      obj = { content: description, key: toggleName };
-      obj.open(obj);
+  return callback2(
+    toggleName(5599).TableRow,
+    {
+      label: description,
+      labelLineClamp: 1,
+      subLabel: toggleName,
+      subLabelLineClamp: 1,
+      onPress() {
+        let obj = description(closure_1_2[10]);
+        obj = { content: description, key: toggleName };
+        obj.open(obj);
+      },
+      trailing: callback2(toggleName(5994).FormSwitch, { value, onValueChange }),
     },
-    trailing: callback2(toggleName(5994).FormSwitch, { value, onValueChange })
-  }, toggleName);
+    toggleName,
+  );
 }
 function DevTogglesForCategory(title) {
   ({ category, query } = title);
   let obj = category(589);
   const items = [closure_7];
   const items1 = [query, category];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.allByCategory(category).filter((arg0) => {
-    [tmp, , ] = arg0;
-    return closure_1_11(closure_1, tmp, tmp2);
-  }), items1, category(589).statesWillNeverBeEqual);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () =>
+      closure_1_7.allByCategory(category).filter((arg0) => {
+        [tmp, ,] = arg0;
+        return closure_1_11(closure_1, tmp, tmp2);
+      }),
+    items1,
+    category(589).statesWillNeverBeEqual,
+  );
   let tmp3 = null;
   if (0 !== stateFromStores.length) {
     obj = { title: null, hasIcons: false, children: null };
     obj[0] = title.title;
     obj[2] = stateFromStores.map((arg0) => {
-      [tmp, tmp2, ] = arg0;
-      return callback(closure_13, {
-        toggleName: tmp,
-        description: tmp3,
-        value: tmp2,
-        onValueChange(arg0) {
-          return closure_1_0(closure_1_2[14]).toggle(closure_0, arg0);
-        }
-      }, tmp);
+      [tmp, tmp2] = arg0;
+      return callback(
+        closure_13,
+        {
+          toggleName: tmp,
+          description: tmp3,
+          value: tmp2,
+          onValueChange(arg0) {
+            return closure_1_0(closure_1_2[14]).toggle(closure_0, arg0);
+          },
+        },
+        tmp,
+      );
     });
     tmp3 = callback2(category(5992).TableRowGroup, obj);
   }
@@ -75,12 +89,17 @@ function DevTogglesForCategory(title) {
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { wrap: null, container: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_16 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { paddingVertical: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsTogglesScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsTogglesScreen.tsx",
+);
 
 export default function DevToolsTogglesScreen() {
   let tmp = callback4();
@@ -91,27 +110,36 @@ export default function DevToolsTogglesScreen() {
   obj1 = first(589);
   const items = [closure_6];
   const items1 = [first];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_6.allWithDescriptions().filter((arg0) => {
-    [str, , str2] = arg0;
-    let tmp = 0 === length.length;
-    if (!tmp) {
-      const formatted = str3.toLowerCase();
-      let tmp2ResultResult = closure_1_1(closure_1_2[6])(formatted, str.toLowerCase());
-      if (!tmp2ResultResult) {
-        const formatted1 = str3.toLowerCase();
-        tmp2ResultResult = tmp2(tmp3[6])(formatted1, str2.toLowerCase());
-        const tmp2Result = tmp2(tmp3[6]);
-      }
-      tmp = tmp2ResultResult;
-      tmp2 = closure_1_1;
-      tmp3 = closure_1_2;
-      const tmp4 = closure_1_1(closure_1_2[6]);
-    }
-    return tmp;
-  }), items1, first(589).statesWillNeverBeEqual);
+  const stateFromStores = obj1.useStateFromStores(
+    items,
+    () =>
+      closure_1_6.allWithDescriptions().filter((arg0) => {
+        [str, , str2] = arg0;
+        let tmp = 0 === length.length;
+        if (!tmp) {
+          const formatted = str3.toLowerCase();
+          let tmp2ResultResult = closure_1_1(closure_1_2[6])(formatted, str.toLowerCase());
+          if (!tmp2ResultResult) {
+            const formatted1 = str3.toLowerCase();
+            tmp2ResultResult = tmp2(tmp3[6])(formatted1, str2.toLowerCase());
+            const tmp2Result = tmp2(tmp3[6]);
+          }
+          tmp = tmp2ResultResult;
+          tmp2 = closure_1_1;
+          tmp3 = closure_1_2;
+          const tmp4 = closure_1_1(closure_1_2[6]);
+        }
+        return tmp;
+      }),
+    items1,
+    first(589).statesWillNeverBeEqual,
+  );
   obj = { style: tmp.wrap, contentContainerStyle: null, children: null };
-  const items2 = [tmp.container, ];
-  obj = { paddingBottom: ThemesDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom };
+  const items2 = [tmp.container];
+  obj = {
+    paddingBottom:
+      ThemesDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom,
+  };
   items2[1] = obj;
   obj[1] = items2;
   obj1 = { title: "Actions", hasIcons: false, children: null };
@@ -124,25 +152,35 @@ export default function DevToolsTogglesScreen() {
         const obj = first(15308);
         first(15290).clearAll();
       },
-      arrow: true
+      arrow: true,
     }),
-    callback2(first(5599).TableRow, { label: callback2(first(6221).SearchField, { size: "md", placeholder: "Search design toggles", onChange: tmp3[1] }) })
+    callback2(first(5599).TableRow, {
+      label: callback2(first(6221).SearchField, {
+        size: "md",
+        placeholder: "Search design toggles",
+        onChange: tmp3[1],
+      }),
+    }),
   ];
   obj1[2] = items3;
-  const items4 = [callback3(first(5992).TableRowGroup, obj1), , ];
+  const items4 = [callback3(first(5992).TableRowGroup, obj1), ,];
   let tmp7Result = null;
   if (stateFromStores.length > 0) {
     const obj4 = { title: "Design Toggles", hasIcons: false, children: null };
     obj4[2] = stateFromStores.map((arg0) => {
       [tmp, tmp2, tmp3] = arg0;
-      return callback(closure_13, {
-        toggleName: tmp,
-        description: tmp3,
-        value: tmp2,
-        onValueChange(arg0) {
-          return closure_1_0(closure_1_2[18]).toggle(closure_0, arg0);
-        }
-      }, tmp);
+      return callback(
+        closure_13,
+        {
+          toggleName: tmp,
+          description: tmp3,
+          value: tmp2,
+          onValueChange(arg0) {
+            return closure_1_0(closure_1_2[18]).toggle(closure_0, arg0);
+          },
+        },
+        tmp,
+      );
     });
     tmp7Result = tmp7(first(5992).TableRowGroup, obj4);
   }
@@ -156,4 +194,4 @@ export default function DevToolsTogglesScreen() {
   obj5[1] = items4;
   obj[2] = callback3(first(4926).Stack, obj5);
   return callback2(ScrollView, obj);
-};
+}

@@ -14,22 +14,22 @@ class ReadStates {
     obj.readStateVersion = null;
     obj.actions = {
       CONNECTION_OPEN(arg0) {
-            return obj.handleConnectionOpen(arg0);
-          },
+        return obj.handleConnectionOpen(arg0);
+      },
       CHANNEL_PINS_ACK(version) {
-            return obj.handleReadStateAction(version);
-          },
+        return obj.handleReadStateAction(version);
+      },
       MESSAGE_ACK(version) {
-            return obj.handleReadStateAction(version);
-          },
+        return obj.handleReadStateAction(version);
+      },
       BACKGROUND_SYNC_FINISHED(messagesOnly) {
-            if (!messagesOnly.messagesOnly) {
-              obj.handleWriteCaches(arg1, false);
-            }
-          },
+        if (!messagesOnly.messagesOnly) {
+          obj.handleWriteCaches(arg1, false);
+        }
+      },
       WRITE_CACHES(arg0, arg1) {
-            return obj.handleWriteCaches(arg1, true);
-          }
+        return obj.handleWriteCaches(arg1, true);
+      },
     };
     return obj;
   }
@@ -37,7 +37,7 @@ class ReadStates {
 const prototype = ReadStates.prototype;
 prototype["getAll"] = function getAll(arg0) {
   closure_0 = arg0;
-  return callback(function*() {
+  return callback(function* () {
     let length = tmp5;
     closure_0 = tmp2;
     const _performance2 = performance;
@@ -118,7 +118,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
       const result = obj1.nonGuildVersionsTransaction(database);
       let obj = { id: "highest_last_message_id", versionString: null };
       obj[1] = str2;
-      const items = [obj, , ];
+      const items = [obj, ,];
       obj = { id: "private_channels_version", versionString: null };
       obj[1] = _lastMessageId;
       items[1] = obj;
@@ -152,7 +152,7 @@ set.actions = {
   },
   WRITE_CACHES(arg0, arg1) {
     return obj.handleWriteCaches(arg1, true);
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/app_database/modules/ReadStates.tsx");
 

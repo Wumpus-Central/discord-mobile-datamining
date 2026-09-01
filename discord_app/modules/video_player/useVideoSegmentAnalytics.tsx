@@ -45,7 +45,14 @@ export default function useVideoSegmentAnalytics(getCurrentVideoTime) {
   const items = [onAnalytics];
   const tmp9 = callback((segmentEndSec) => {
     if (segmentEndSec.segmentEndSec >= segmentEndSec.segmentStartSec) {
-      const obj = { start_time: null, end_time: null, duration: null, segment_start_sec: null, segment_end_sec: null, segment_duration_sec: null };
+      const obj = {
+        start_time: null,
+        end_time: null,
+        duration: null,
+        segment_start_sec: null,
+        segment_end_sec: null,
+        segment_duration_sec: null,
+      };
       ({ startTimeMs: obj[0], endTimeMs: obj[1] } = segmentEndSec);
       obj[2] = segmentEndSec.endTimeMs - segmentEndSec.startTimeMs;
       ({ segmentStartSec: obj[3], segmentEndSec: obj[4] } = segmentEndSec);
@@ -196,8 +203,8 @@ export default function useVideoSegmentAnalytics(getCurrentVideoTime) {
     }, []),
     handleSeek: callback(() => {
       ref4.current();
-    }, [])
+    }, []),
   };
-};
+}
 export const SEGMENT_ANALYTICS_EMIT_INTERVAL_MS = 4000;
 export const SEGMENT_ANALYTICS_MIN_DURATION_MS = 2000;

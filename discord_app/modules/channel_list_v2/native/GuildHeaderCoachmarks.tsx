@@ -48,8 +48,14 @@ export default function GuildHeaderCoachmarks(arg0) {
   const obj3 = guild(mobileBoostProgressBarEnabled[15]);
   const tmp13 = constants;
   const tmp14 = callback;
-  [tmp16, tmp17] = callback(guild(mobileBoostProgressBarEnabled[15]).useSelectedDismissibleContent(memo, constants.GUILD_HEADER_TOOLTIPS), 2);
-  const tmp15 = callback(guild(mobileBoostProgressBarEnabled[15]).useSelectedDismissibleContent(memo, constants.GUILD_HEADER_TOOLTIPS), 2);
+  [tmp16, tmp17] = callback(
+    guild(mobileBoostProgressBarEnabled[15]).useSelectedDismissibleContent(memo, constants.GUILD_HEADER_TOOLTIPS),
+    2,
+  );
+  const tmp15 = callback(
+    guild(mobileBoostProgressBarEnabled[15]).useSelectedDismissibleContent(memo, constants.GUILD_HEADER_TOOLTIPS),
+    2,
+  );
   let tmp18 = false === tmp8;
   if (tmp18) {
     tmp18 = tmp9;
@@ -60,7 +66,10 @@ export default function GuildHeaderCoachmarks(arg0) {
   if (tmp18) {
     tmp18 = tmp11;
   }
-  const tmp14Result = tmp14(guild(mobileBoostProgressBarEnabled[16]).useBoostToUnlockCoachmarkDCF(tmp18, guild.id, tmp13.GUILD_HEADER_TOOLTIPS), 2);
+  const tmp14Result = tmp14(
+    guild(mobileBoostProgressBarEnabled[16]).useBoostToUnlockCoachmarkDCF(tmp18, guild.id, tmp13.GUILD_HEADER_TOOLTIPS),
+    2,
+  );
   if (first == null) {
     first = tmp14Result[0];
   }
@@ -91,4 +100,4 @@ export default function GuildHeaderCoachmarks(arg0) {
     return null;
   }
   const obj4 = guild(mobileBoostProgressBarEnabled[16]);
-};
+}

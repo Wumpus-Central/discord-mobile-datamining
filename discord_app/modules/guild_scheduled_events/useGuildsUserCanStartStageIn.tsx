@@ -16,21 +16,26 @@ export const useChannelsUserCanStartStageIn = function useChannelsUserCanStartSt
   }
   const items = [closure_2, closure_4];
   const items1 = [id];
-  return id(589).useStateFromStoresArray(items, () => closure_1_2.getChannels(id)[closure_1_3].reduce((arr, channel) => {
-    channel = channel.channel;
-    if (channel.isGuildStageVoice()) {
-      const channel2 = channel.channel;
-      if (closure_4 !== undefined) {
-        let canResult = channel2.isGuildStageVoice();
-        if (canResult) {
-          canResult = obj.can(callback(table[2]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel2);
+  return id(589).useStateFromStoresArray(
+    items,
+    () =>
+      closure_1_2.getChannels(id)[closure_1_3].reduce((arr, channel) => {
+        channel = channel.channel;
+        if (channel.isGuildStageVoice()) {
+          const channel2 = channel.channel;
+          if (closure_4 !== undefined) {
+            let canResult = channel2.isGuildStageVoice();
+            if (canResult) {
+              canResult = obj.can(callback(table[2]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel2);
+            }
+            if (canResult) {
+              arr.push(channel);
+            }
+          }
+          obj = closure_4;
         }
-        if (canResult) {
-          arr.push(channel);
-        }
-      }
-      obj = closure_4;
-    }
-    return arr;
-  }, []), items1);
+        return arr;
+      }, []),
+    items1,
+  );
 };

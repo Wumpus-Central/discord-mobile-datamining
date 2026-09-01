@@ -10,8 +10,19 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { display: "flex", flexDirection: "row", paddingBottom: 8, marginBottom: 16 }, channelItem: null };
-createCacheKey = { display: "flex", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.round, marginLeft: 8, paddingVertical: 8, paddingHorizontal: 12 };
+createCacheKey = {
+  container: { display: "flex", flexDirection: "row", paddingBottom: 8, marginBottom: 16 },
+  channelItem: null,
+};
+createCacheKey = {
+  display: "flex",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.round,
+  marginLeft: 8,
+  paddingVertical: 8,
+  paddingHorizontal: 12,
+};
 createCacheKey[1] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/ResourcesRow.tsx");
@@ -32,13 +43,12 @@ export default function ResourcesRow(guildId) {
         onPress() {
           const homeResourceChannel = guildId(closure_2_2[7]).selectHomeResourceChannel(channelId, channelId.channelId);
         },
-        children: null
+        children: null,
       };
       obj = { variant: "text-md/medium", color: "text-default", children: children.title };
       obj[2] = closure_1_5(guildId(closure_1_2[12]).Text, obj);
       return closure_1_5(guildId(closure_1_2[11]).PressableOpacity, obj, children.channelId);
     }),
-
   ];
   let tmp6 = null;
   if (tmp3) {
@@ -60,4 +70,4 @@ export default function ResourcesRow(guildId) {
   items[1] = tmp6;
   obj[2] = items;
   return closure_6(ScrollView, obj);
-};
+}

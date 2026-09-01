@@ -16,12 +16,44 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { card: { padding: 0 }, cardWatchTask: { justifyContent: "flex-end", height: 210 }, content: null, contentWatchTask: null, footer: null, instructionsText: null, videoPreviewWrapper: null, videoPreview: null, playVideoIconWrapper: null };
+createCacheKey = {
+  card: { padding: 0 },
+  cardWatchTask: { justifyContent: "flex-end", height: 210 },
+  content: null,
+  contentWatchTask: null,
+  footer: null,
+  instructionsText: null,
+  videoPreviewWrapper: null,
+  videoPreview: null,
+  playVideoIconWrapper: null,
+};
 createCacheKey = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { alignItems: "flex-end" };
-createCacheKey[4] = { padding: 12, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderBottomLeftRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
-let obj1 = { padding: 12, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderBottomLeftRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
+createCacheKey[4] = {
+  padding: 12,
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderBottomLeftRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS,
+  borderBottomRightRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+};
+let obj1 = {
+  padding: 12,
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderBottomLeftRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS,
+  borderBottomRightRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+};
 createCacheKey[5] = { marginTop: ThemesDefault.space.PX_12, textAlign: "center" };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -33,10 +65,34 @@ createCacheKey[7] = {};
 let obj2 = { marginTop: ThemesDefault.space.PX_12, textAlign: "center" };
 let obj4 = {};
 let items = [{ translateX: -30 }, { translateY: -30 }];
-createCacheKey[8] = { alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, position: "absolute", left: "50%", overflow: "hidden", top: "50%", width: 60, height: 60, transform: items };
+createCacheKey[8] = {
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.round,
+  position: "absolute",
+  left: "50%",
+  overflow: "hidden",
+  top: "50%",
+  width: 60,
+  height: 60,
+  transform: items,
+};
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj5 = { alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, position: "absolute", left: "50%", overflow: "hidden", top: "50%", width: 60, height: 60, transform: items };
-let result = require("set").fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetProgressCard.tsx");
+let obj5 = {
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.round,
+  position: "absolute",
+  left: "50%",
+  overflow: "hidden",
+  top: "50%",
+  width: 60,
+  height: 60,
+  transform: items,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/quests/native/QuestBottomSheet/QuestBottomSheetProgressCard.tsx",
+);
 
 export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSheetProgressCardPlayStreamTask(quest) {
   quest = quest.quest;
@@ -80,14 +136,28 @@ export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSh
   const tmp2Result2 = questTaskDetails(10927);
   const isSponsoredPlayQuestResult = questTaskDetails(7467).isSponsoredPlayQuest(quest);
   c8 = isSponsoredPlayQuestResult;
-  const items1 = [questTaskDetails, tmp7, null != claimedAt, gameTitle, defaultRewardName, isQuestProgressing, result, questFormattedDate, isSponsoredPlayQuestResult];
+  const items1 = [
+    questTaskDetails,
+    tmp7,
+    null != claimedAt,
+    gameTitle,
+    defaultRewardName,
+    isQuestProgressing,
+    result,
+    questFormattedDate,
+    isSponsoredPlayQuestResult,
+  ];
   const memo = React.useMemo(() => {
     if (dependencyMap) {
       if (!closure_3) {
         const intl = questTaskDetails(1236).intl;
         let obj = { rewardHook: null, date: null };
         obj[0] = function rewardHook() {
-          return closure_1_7(closure_1_0(closure_1_2[12]).Text, { variant: "text-sm/semibold", color: "text-strong", children: closure_7 });
+          return closure_1_7(closure_1_0(closure_1_2[12]).Text, {
+            variant: "text-sm/semibold",
+            color: "text-strong",
+            children: closure_7,
+          });
         };
         obj[1] = questFormattedDate;
         return intl.format(questTaskDetails(1236).t.e3OlfB, obj);
@@ -143,7 +213,7 @@ export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSh
     tmp7 = isQuestProgressing;
   }
   obj1[3] = !tmp7;
-  const items2 = [defaultRewardName(isQuestProgressing(14732), obj1), ];
+  const items2 = [defaultRewardName(isQuestProgressing(14732), obj1)];
   let tmp18Result = null != memo;
   if (tmp18Result) {
     let obj2 = { style: null, variant: "text-sm/semibold", color: "text-subtle", children: null };
@@ -153,7 +223,7 @@ export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSh
   }
   items2[1] = tmp18Result;
   obj[1] = items2;
-  const items3 = [c8(c4, obj), ];
+  const items3 = [c8(c4, obj)];
   if (isQuestProgressing) {
     let obj3 = { style: null, children: null };
     obj3[0] = tmp.footer;
@@ -175,11 +245,26 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
   let obj = quest(11083);
   const items = [quest];
   const questTaskDetails = obj.useQuestTaskDetails(quest);
-  const memo = React.useMemo(() => quest(closure_1_2[16]).getQuestAsset(quest, quest(closure_1_2[16]).QuestAssetType.QUEST_BAR_HERO_VIDEO), items);
+  const memo = React.useMemo(
+    () => quest(closure_1_2[16]).getQuestAsset(quest, quest(closure_1_2[16]).QuestAssetType.QUEST_BAR_HERO_VIDEO),
+    items,
+  );
   const items1 = [quest];
-  const memo1 = React.useMemo(() => quest(closure_1_2[16]).getQuestAsset(quest, quest(closure_1_2[16]).QuestAssetType.VIDEO_PLAYER_THUMBNAIL, undefined, true), items1);
+  const memo1 = React.useMemo(
+    () =>
+      quest(closure_1_2[16]).getQuestAsset(
+        quest,
+        quest(closure_1_2[16]).QuestAssetType.VIDEO_PLAYER_THUMBNAIL,
+        undefined,
+        true,
+      ),
+    items1,
+  );
   const items2 = [quest];
-  const memo2 = React.useMemo(() => quest(closure_1_2[16]).getQuestAsset(quest, quest(closure_1_2[16]).QuestAssetType.QUEST_BAR_HERO_IMAGE), items2);
+  const memo2 = React.useMemo(
+    () => quest(closure_1_2[16]).getQuestAsset(quest, quest(closure_1_2[16]).QuestAssetType.QUEST_BAR_HERO_IMAGE),
+    items2,
+  );
   obj1 = quest(14724);
   obj = { questId: quest.id, sourceQuestContent: quest.sourceQuestContent };
   let isHeroVideoSupportedResult = null != memo;
@@ -204,13 +289,22 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
   const intl = tmp2(1236).intl;
   obj[2] = intl.string(_74KqrR);
   obj1 = { style: items3, border: "subtle", children: null };
-  items3 = [, ];
+  items3 = [,];
   ({ card: arr4[0], cardWatchTask: arr4[1] } = tmp);
   let tmp14Result = isHeroVideoSupportedResult;
   if (isHeroVideoSupportedResult) {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.videoPreviewWrapper;
-    const obj3 = { style: null, poster: null, posterResizeMode: "cover", source: null, resizeMode: "cover", muted: true, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false };
+    const obj3 = {
+      style: null,
+      poster: null,
+      posterResizeMode: "cover",
+      source: null,
+      resizeMode: "cover",
+      muted: true,
+      disableFocus: true,
+      preventsDisplaySleepDuringVideoPlayback: false,
+    };
     obj3[0] = tmp.videoPreview;
     let url;
     if (memo1 != null) {
@@ -220,7 +314,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
     const obj4 = { uri: null };
     obj4[0] = memo.url;
     obj3[3] = obj4;
-    const items4 = [tmp13(tmp2(8602).VideoComponent, obj3), ];
+    const items4 = [tmp13(tmp2(8602).VideoComponent, obj3)];
     const obj5 = { start: null, end: null, style: null, colors: null };
     obj5[0] = { x: 0.5, y: 0.5 };
     obj5[1] = { x: 1, y: 1 };
@@ -231,7 +325,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
     tmp14Result = tmp14(closure_4, obj2);
     const tmp16 = closure_4;
   }
-  const items5 = [tmp14Result, , , ];
+  const items5 = [tmp14Result, , ,];
   tmp14Result = !isHeroVideoSupportedResult;
   if (!isHeroVideoSupportedResult) {
     tmp14Result = null != memo2;
@@ -244,7 +338,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
     const obj8 = { uri: null };
     obj8[0] = memo2.url;
     obj7[1] = obj8;
-    const items6 = [tmp13(preloadDefault, obj7), ];
+    const items6 = [tmp13(preloadDefault, obj7)];
     const obj9 = { start: null, end: null, style: null, colors: null };
     obj9[0] = { x: 0.5, y: 0.5 };
     obj9[1] = { x: 1, y: 1 };
@@ -256,13 +350,13 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
   }
   items5[1] = tmp14Result;
   const obj10 = { style: tmp.playVideoIconWrapper, children: null };
-  const items7 = [closure_7(_modDef14762, { blurTheme: "light" }), ];
+  const items7 = [closure_7(_modDef14762, { blurTheme: "light" })];
   const watchTaskPressHandler = obj1.useWatchTaskPressHandler(obj);
   items7[1] = closure_7(quest(8578).PlayIcon, { color: ThemesDefault.colors.WHITE });
   obj10[1] = items7;
   items5[2] = closure_8(closure_4, obj10);
   const obj11 = { color: ThemesDefault.colors.WHITE };
-  const items8 = [, ];
+  const items8 = [,];
   ({ content: arr9[0], contentWatchTask: arr9[1] } = tmp);
   items5[3] = closure_7(closure_4, { style: items8, children: closure_7(COMPLETION_GLOW_SHADOW_RADIUSDefault, obj13) });
   obj1[2] = items5;

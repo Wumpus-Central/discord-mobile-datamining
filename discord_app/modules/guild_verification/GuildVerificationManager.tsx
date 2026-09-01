@@ -44,7 +44,9 @@ function handleInviteData(invite) {
     const obj3 = inviteGuildHasPendingMemberDisabledVerification;
   }
   if (new_member) {
-    const result = inviteGuildHasPendingMemberDisabledVerification.openVerificationModalOrTransitionToApplication(guild.id);
+    const result = inviteGuildHasPendingMemberDisabledVerification.openVerificationModalOrTransitionToApplication(
+      guild.id,
+    );
     const obj4 = inviteGuildHasPendingMemberDisabledVerification;
   }
 }
@@ -55,8 +57,7 @@ let prototype = function GuildVerificationManager() {
   applyArgumentsResult.actions = { INVITE_ACCEPT_SUCCESS: handleInviteData };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 let result = set.fileFinishedImporting("modules/guild_verification/GuildVerificationManager.tsx");
 

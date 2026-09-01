@@ -7,12 +7,15 @@ const result = require("set").fileFinishedImporting("modules/self_mod/hooks/useU
 
 export const useUserIsTeen = function useUserIsTeen() {
   const items = [closure_2];
-  return false === initialize.useStateFromStores(items, () => {
-    currentUser = currentUser.getCurrentUser();
-    let nsfwAllowed;
-    if (currentUser != null) {
-      nsfwAllowed = currentUser.nsfwAllowed;
-    }
-    return nsfwAllowed;
-  });
+  return (
+    false ===
+    initialize.useStateFromStores(items, () => {
+      currentUser = currentUser.getCurrentUser();
+      let nsfwAllowed;
+      if (currentUser != null) {
+        nsfwAllowed = currentUser.nsfwAllowed;
+      }
+      return nsfwAllowed;
+    })
+  );
 };

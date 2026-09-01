@@ -53,9 +53,14 @@ function GuildInfoHeader(bannerHeight) {
   obj = { style: animatedStyle1, children: null };
   const tmp5 = bannerHeight(4218);
   obj[1] = callback(bannerHeight(5070), { absolute: true, tall: true });
-  const items1 = [callback(bannerHeight(4218), obj), ];
+  const items1 = [callback(bannerHeight(4218), obj)];
   obj1 = { style: tmp.headerWrapper, children: callback(bannerHeight(15724), obj2) };
-  obj2 = { guild, showExtraButtons: !isFavoritesGuildIdResult, canOpenGuildActionSheet: !isFavoritesGuildIdResult, showCoachmarks: !isFavoritesGuildIdResult };
+  obj2 = {
+    guild,
+    showExtraButtons: !isFavoritesGuildIdResult,
+    canOpenGuildActionSheet: !isFavoritesGuildIdResult,
+    showCoachmarks: !isFavoritesGuildIdResult,
+  };
   items1[1] = callback(closure_5, obj1);
   obj[1] = items1;
   return callback2(tmp5, obj);
@@ -73,7 +78,10 @@ function ReanimatedGuildBanner(guild) {
   closure_5 = tmp3;
   let obj = guild(bannerHeight[25]);
   let items = [closure_8, sharedValue];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ actionSheetOpen: null != key.getKey(), useReducedMotion: sharedValue.useReducedMotion }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    actionSheetOpen: null != key.getKey(),
+    useReducedMotion: sharedValue.useReducedMotion,
+  }));
   ({ useReducedMotion, actionSheetOpen } = stateFromStoresObject);
   let tmp17Result = scrollPosition(bannerHeight[13])(guild.id);
   obj1 = guild(bannerHeight[26]);
@@ -83,11 +91,15 @@ function ReanimatedGuildBanner(guild) {
   let items1 = [sharedValue];
   let items2 = [sharedValue];
   const callback = bannerWidth.useCallback(() => {
-    const result = sharedValue.set(guild(bannerHeight[27]).withSpring(1, guild(bannerHeight[28]).springStandard, "animate-always"));
+    const result = sharedValue.set(
+      guild(bannerHeight[27]).withSpring(1, guild(bannerHeight[28]).springStandard, "animate-always"),
+    );
   }, items1);
   let items3 = [guild, onPress];
   const callback1 = bannerWidth.useCallback(() => {
-    const result = sharedValue.set(guild(bannerHeight[27]).withSpring(0, guild(bannerHeight[28]).springStandard, "animate-always"));
+    const result = sharedValue.set(
+      guild(bannerHeight[27]).withSpring(0, guild(bannerHeight[28]).springStandard, "animate-always"),
+    );
   }, items2);
   const callback2 = bannerWidth.useCallback(() => {
     if (onPress != null) {
@@ -108,7 +120,7 @@ function ReanimatedGuildBanner(guild) {
     } else {
       interpolateResult = value / 2;
     }
-    const items3 = [{ translateY: interpolateResult }, ];
+    const items3 = [{ translateY: interpolateResult }];
     let num2 = 1;
     if (value < 0) {
       num2 = (bannerHeight - value) / bannerHeight;
@@ -117,7 +129,12 @@ function ReanimatedGuildBanner(guild) {
     obj[1] = items3;
     return obj;
   };
-  obj = { scrollPosition, interpolate: guild(bannerHeight[20]).interpolate, maxScrollPosition: bannerHeight, bannerHeight };
+  obj = {
+    scrollPosition,
+    interpolate: guild(bannerHeight[20]).interpolate,
+    maxScrollPosition: bannerHeight,
+    bannerHeight,
+  };
   fn.__closure = obj;
   fn.__workletHash = 16532496584630;
   fn.__initData = closure_21;
@@ -165,7 +182,7 @@ function ReanimatedGuildBanner(guild) {
     obj3 = { style: null, source: null };
     obj3[0] = tmp13;
     obj3[1] = animatableSourceWithFallback;
-    const items5 = [callback(tmp(tmp2[31]), obj3), , ];
+    const items5 = [callback(tmp(tmp2[31]), obj3), ,];
     const obj4 = { style: null };
     const items6 = [tmp3.bannerOverlay, animatedStyle1];
     obj4[0] = items6;
@@ -182,7 +199,11 @@ function ReanimatedGuildBanner(guild) {
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5, Pressable: closure_6 } = get_ActivityIndicator);
-({ STICKY_BANNER_ASPECT_RATIO: c9, BANNER_MAX_HEIGHT_PERCENTAGE: c10, SEARCH_BAR_MARGIN_BOTTOM: unpackModuleId } = hairlineWidth);
+({
+  STICKY_BANNER_ASPECT_RATIO: c9,
+  BANNER_MAX_HEIGHT_PERCENTAGE: c10,
+  SEARCH_BAR_MARGIN_BOTTOM: unpackModuleId,
+} = hairlineWidth);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = createCacheKey.createStyles(() => ({ guildHeaderWrapper: { zIndex: 5 } }));
 let closure_16 = createCacheKey.createStyles((arg0) => {
@@ -203,14 +224,24 @@ let result = createCacheKey.experimental_createToken((gradient) => {
   return PANEL_BG;
 });
 let closure_17 = createCacheKey.createStyles({ headerWrapper: { backgroundColor: result } });
-let closure_18 = { code: "function RedesignGuildHeaderTsx1(){const{scrollPosition,bannerHeight}=this.__closure;return{transform:[{translateY:Math.max(0,scrollPosition.get()-bannerHeight)}]};}" };
-let closure_19 = { code: "function RedesignGuildHeaderTsx2(){const{scrollPosition,bannerHeight}=this.__closure;return{transform:[{translateY:Math.min(0,scrollPosition.get()-bannerHeight)}]};}" };
-let closure_21 = { code: "function RedesignGuildHeaderTsx3(){const{scrollPosition,interpolate,maxScrollPosition,bannerHeight}=this.__closure;const scrollPosValue=scrollPosition.get();return{opacity:interpolate(scrollPosValue,[0,maxScrollPosition],[1,0],'clamp'),transform:[{translateY:scrollPosValue>=0?interpolate(-scrollPosValue,[0,bannerHeight],[0,-bannerHeight],'clamp'):scrollPosValue/2},{scale:scrollPosValue>=0?1:(bannerHeight-scrollPosValue)/bannerHeight}]};}" };
-let closure_22 = { code: "function RedesignGuildHeaderTsx4(){const{interpolate,pressed}=this.__closure;return{opacity:interpolate(pressed.get(),[0,1],[0,0.3])};}" };
+let closure_18 = {
+  code: "function RedesignGuildHeaderTsx1(){const{scrollPosition,bannerHeight}=this.__closure;return{transform:[{translateY:Math.max(0,scrollPosition.get()-bannerHeight)}]};}",
+};
+let closure_19 = {
+  code: "function RedesignGuildHeaderTsx2(){const{scrollPosition,bannerHeight}=this.__closure;return{transform:[{translateY:Math.min(0,scrollPosition.get()-bannerHeight)}]};}",
+};
+let closure_21 = {
+  code: "function RedesignGuildHeaderTsx3(){const{scrollPosition,interpolate,maxScrollPosition,bannerHeight}=this.__closure;const scrollPosValue=scrollPosition.get();return{opacity:interpolate(scrollPosValue,[0,maxScrollPosition],[1,0],'clamp'),transform:[{translateY:scrollPosValue>=0?interpolate(-scrollPosValue,[0,bannerHeight],[0,-bannerHeight],'clamp'):scrollPosValue/2},{scale:scrollPosValue>=0?1:(bannerHeight-scrollPosValue)/bannerHeight}]};}",
+};
+let closure_22 = {
+  code: "function RedesignGuildHeaderTsx4(){const{interpolate,pressed}=this.__closure;return{opacity:interpolate(pressed.get(),[0,1],[0,0.3])};}",
+};
 const memoResult = importAllResult.memo(function RedesignGuildHeader(bannerWidth) {
   ({ guild, scrollPosition, bannerHeight } = bannerWidth);
   let obj = { style: callback3().guildHeaderWrapper, preventClipping: true, children: null };
-  const items = [callback(ReanimatedGuildBanner, { guild, scrollPosition, bannerHeight, bannerWidth: bannerWidth.bannerWidth }), ];
+  const items = [
+    callback(ReanimatedGuildBanner, { guild, scrollPosition, bannerHeight, bannerWidth: bannerWidth.bannerWidth }),
+  ];
   obj = { guild, scrollPosition, bannerHeight: null };
   let num = 0;
   if (null != guild.banner) {

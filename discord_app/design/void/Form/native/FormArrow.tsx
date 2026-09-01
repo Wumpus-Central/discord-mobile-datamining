@@ -25,7 +25,7 @@ export default function FormArrow(arg0) {
     obj[0] = tmp.wrapper;
     obj = { maxFontSizeMultiplier: 1.5, variant: "text-md/medium", color: "text-muted", children: null };
     obj[3] = label;
-    const items = [callback(Text.Text, obj), ];
+    const items = [callback(Text.Text, obj)];
     obj1 = { style: null, source: null, size: null };
     const items1 = [tmp.icon, style];
     obj1[0] = items1;
@@ -43,4 +43,4 @@ export default function FormArrow(arg0) {
     tmp6 = callback(Button.Icon, obj);
   }
   return tmp6;
-};
+}

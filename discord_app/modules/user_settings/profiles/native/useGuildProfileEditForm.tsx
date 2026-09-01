@@ -47,7 +47,9 @@ export default function useGuildProfileEditForm() {
   if (selectedGuild != null) {
     id = selectedGuild.id;
   }
-  const guildAutomodProfileQuarantineErrors = stateFromStores(pendingNickname[10]).useGuildAutomodProfileQuarantineErrors(id);
+  const guildAutomodProfileQuarantineErrors = stateFromStores(
+    pendingNickname[10],
+  ).useGuildAutomodProfileQuarantineErrors(id);
   let tmpResult = tmp(tmp2[9]);
   const items2 = [tmp4, pendingProfileEffect];
   const stateFromStores1 = tmpResult.useStateFromStores(items2, () => {
@@ -67,10 +69,13 @@ export default function useGuildProfileEditForm() {
     return delayedCall;
   }, []);
   const items3 = [memo];
-  const effect = pendingThemeColors.useEffect(() => () => {
-    closure_13.cancel();
-    closure_1_1(closure_1_2[12]).wait(closure_1_0(closure_1_2[13]).resetAllPending);
-  }, items3);
+  const effect = pendingThemeColors.useEffect(
+    () => () => {
+      closure_13.cancel();
+      closure_1_1(closure_1_2[12]).wait(closure_1_0(closure_1_2[13]).resetAllPending);
+    },
+    items3,
+  );
   closure_14 = pendingAvatar(tmp2[14])();
   tmpResult = tmp(tmp2[9]);
   const items4 = [tmp5, pendingNameplate];
@@ -92,7 +97,22 @@ export default function useGuildProfileEditForm() {
     tmp15 = stateFromStoresObject.formState === memo.CLOSED;
   }
   closure_15 = tmp15;
-  const items5 = [tmp15, stateFromStores, pendingAvatar, pendingNickname, pendingAvatarDecoration, pendingNameplate, pendingDisplayNameStyles, pendingBanner, pendingBio, pendingPronouns, pendingThemeColors, pendingProfileEffect, pendingProfileFrame, , ];
+  const items5 = [
+    tmp15,
+    stateFromStores,
+    pendingAvatar,
+    pendingNickname,
+    pendingAvatarDecoration,
+    pendingNameplate,
+    pendingDisplayNameStyles,
+    pendingBanner,
+    pendingBio,
+    pendingPronouns,
+    pendingThemeColors,
+    pendingProfileEffect,
+    pendingProfileFrame,
+    ,
+  ];
   let id1;
   let obj3 = stateFromStores(pendingNickname[10]);
   let obj6 = pendingThemeColors;
@@ -100,177 +120,195 @@ export default function useGuildProfileEditForm() {
     id1 = selectedGuild.id;
   }
   obj = {
-    handleSubmit: obj6.useCallback(pendingPronouns(() => {
-      c4 = 0;
-      let body = 0;
-      return (function*() {
-        c3 = tmp2;
-        dependencyMap = tmp3;
-        if (!closure_1_15) {
-          if (null != closure_1_0) {
-            let guildMemberChangesForUpdateRequest = closure_1_0;
-            guildMemberChangesForUpdateRequest = dependencyMap;
-            obj1 = { pendingAvatar: null, pendingNickname: null, pendingAvatarDecoration: null, pendingNameplate: null, pendingDisplayNameStyles: null };
-            guildMemberChangesForUpdateRequest = closure_1_1;
-            obj1[0] = closure_1_1;
-            guildMemberChangesForUpdateRequest = dependencyMap;
-            obj1[1] = dependencyMap;
-            guildMemberChangesForUpdateRequest = closure_1_8;
-            obj1[2] = closure_1_8;
-            guildMemberChangesForUpdateRequest = closure_1_11;
-            obj1[3] = closure_1_11;
-            guildMemberChangesForUpdateRequest = closure_1_12;
-            obj1[4] = closure_1_12;
-            guildMemberChangesForUpdateRequest = closure_1_0(10833).getGuildMemberChangesForUpdateRequest(obj1);
-            let avatarId = guildMemberChangesForUpdateRequest;
-            guildMemberChangesForUpdateRequest = closure_1_0;
-            guildMemberChangesForUpdateRequest = dependencyMap;
-            const obj16 = closure_1_0(10833);
-            const obj2 = { pendingBanner: null, pendingBio: null, pendingPronouns: null, pendingThemeColors: null, pendingProfileEffect: null, pendingProfileFrame: null };
-            guildMemberChangesForUpdateRequest = c3;
-            obj2[0] = c3;
-            guildMemberChangesForUpdateRequest = v0;
-            obj2[1] = v0;
-            guildMemberChangesForUpdateRequest = body;
-            obj2[2] = body;
-            guildMemberChangesForUpdateRequest = closure_1_6;
-            obj2[3] = closure_1_6;
-            guildMemberChangesForUpdateRequest = closure_1_9;
-            obj2[4] = closure_1_9;
-            guildMemberChangesForUpdateRequest = closure_1_10;
-            obj2[5] = closure_1_10;
-            let id;
-            if (closure_1_7 != null) {
-              id = closure_1_7.id;
-            }
-            let bannerOriginalMd5 = closure_1_0(10833).getProfileChangesForUpdateRequest(obj2, id);
-            dependencyMap = true;
-            c3 = false;
-            const _Object = Object;
-            if (Object.keys(guildMemberChangesForUpdateRequest).length > 0) {
-              let id1;
+    handleSubmit: obj6.useCallback(
+      pendingPronouns(() => {
+        c4 = 0;
+        let body = 0;
+        return (function* () {
+          c3 = tmp2;
+          dependencyMap = tmp3;
+          if (!closure_1_15) {
+            if (null != closure_1_0) {
+              let guildMemberChangesForUpdateRequest = closure_1_0;
+              guildMemberChangesForUpdateRequest = dependencyMap;
+              obj1 = {
+                pendingAvatar: null,
+                pendingNickname: null,
+                pendingAvatarDecoration: null,
+                pendingNameplate: null,
+                pendingDisplayNameStyles: null,
+              };
+              guildMemberChangesForUpdateRequest = closure_1_1;
+              obj1[0] = closure_1_1;
+              guildMemberChangesForUpdateRequest = dependencyMap;
+              obj1[1] = dependencyMap;
+              guildMemberChangesForUpdateRequest = closure_1_8;
+              obj1[2] = closure_1_8;
+              guildMemberChangesForUpdateRequest = closure_1_11;
+              obj1[3] = closure_1_11;
+              guildMemberChangesForUpdateRequest = closure_1_12;
+              obj1[4] = closure_1_12;
+              guildMemberChangesForUpdateRequest = closure_1_0(10833).getGuildMemberChangesForUpdateRequest(obj1);
+              let avatarId = guildMemberChangesForUpdateRequest;
+              guildMemberChangesForUpdateRequest = closure_1_0;
+              guildMemberChangesForUpdateRequest = dependencyMap;
+              const obj16 = closure_1_0(10833);
+              const obj2 = {
+                pendingBanner: null,
+                pendingBio: null,
+                pendingPronouns: null,
+                pendingThemeColors: null,
+                pendingProfileEffect: null,
+                pendingProfileFrame: null,
+              };
+              guildMemberChangesForUpdateRequest = c3;
+              obj2[0] = c3;
+              guildMemberChangesForUpdateRequest = v0;
+              obj2[1] = v0;
+              guildMemberChangesForUpdateRequest = body;
+              obj2[2] = body;
+              guildMemberChangesForUpdateRequest = closure_1_6;
+              obj2[3] = closure_1_6;
+              guildMemberChangesForUpdateRequest = closure_1_9;
+              obj2[4] = closure_1_9;
+              guildMemberChangesForUpdateRequest = closure_1_10;
+              obj2[5] = closure_1_10;
+              let id;
               if (closure_1_7 != null) {
-                id1 = closure_1_7.id;
+                id = closure_1_7.id;
               }
-              v0 = 1;
-              guildMemberChangesForUpdateRequest = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = closure_1_0(9034).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest);
-              return obj3;
+              let bannerOriginalMd5 = closure_1_0(10833).getProfileChangesForUpdateRequest(obj2, id);
+              dependencyMap = true;
+              c3 = false;
+              const _Object = Object;
+              if (Object.keys(guildMemberChangesForUpdateRequest).length > 0) {
+                let id1;
+                if (closure_1_7 != null) {
+                  id1 = closure_1_7.id;
+                }
+                v0 = 1;
+                guildMemberChangesForUpdateRequest = 1;
+                let obj3 = { value: null, done: false };
+                obj3[0] = closure_1_0(9034).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest);
+                return obj3;
+              }
+              const obj18 = closure_1_0(10833);
             }
-            const obj18 = closure_1_0(10833);
           }
-        }
-        yield "HermesInternal";
-        if (1 === tmp6) {
-          if (arg0 === 1) {
+          yield "HermesInternal";
+          if (1 === tmp6) {
+            if (arg0 === 1) {
+              guildMemberChangesForUpdateRequest = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              guildMemberChangesForUpdateRequest = 3;
+              const obj4 = { value: null, done: true };
+              obj4[0] = arg1;
+              return obj4;
+            } else {
+              v0 = arg1;
+              if (v0.ok) {
+                body = v0.body;
+                if (undefined !== closure_1_1) {
+                  obj3 = closure_1_0(7760);
+                  const obj5 = { isGuildProfile: true, avatarHash: null, avatarId: null, avatarAssetOrigin: null };
+                  obj5[1] = guildMemberChangesForUpdateRequest.avatar;
+                  obj5[2] = avatarId.avatarId;
+                  let assetOrigin;
+                  if (closure_1_1 != null) {
+                    assetOrigin = closure_1_1.assetOrigin;
+                  }
+                  obj5[3] = assetOrigin;
+                  const result = obj3.trackUserAvatarUpdated(obj5);
+                }
+              } else {
+                let avatar;
+                if (v0 != null) {
+                  body = v0.body;
+                  if (body != null) {
+                    avatar = body.avatar;
+                  }
+                }
+                if (null != avatar) {
+                  guildMemberChangesForUpdateRequest = v0;
+                  guildMemberChangesForUpdateRequest = closure_1_0(14259).showGenericGuildProfileUpdateFailureToast(
+                    v0.body.avatar,
+                  );
+                  c3 = true;
+                  const obj15 = closure_1_0(14259);
+                }
+              }
+              let tmp42 = dependencyMap;
+              if (dependencyMap) {
+                let ok;
+                if (v0 != null) {
+                  ok = v0.ok;
+                }
+                avatarId = ok;
+                if (ok == null) {
+                  avatarId = false;
+                }
+                tmp42 = avatarId;
+              }
+              dependencyMap = tmp42;
+            }
+          } else if (arg0 === 1) {
             guildMemberChangesForUpdateRequest = 3;
             throw arg1;
           } else if (arg0 === 2) {
             guildMemberChangesForUpdateRequest = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
+            let obj6 = { value: null, done: true };
+            obj6[0] = arg1;
+            return obj6;
           } else {
-            v0 = arg1;
-            if (v0.ok) {
-              body = v0.body;
-              if (undefined !== closure_1_1) {
-                obj3 = closure_1_0(7760);
-                const obj5 = { isGuildProfile: true, avatarHash: null, avatarId: null, avatarAssetOrigin: null };
-                obj5[1] = guildMemberChangesForUpdateRequest.avatar;
-                obj5[2] = avatarId.avatarId;
-                let assetOrigin;
-                if (closure_1_1 != null) {
-                  assetOrigin = closure_1_1.assetOrigin;
-                }
-                obj5[3] = assetOrigin;
-                const result = obj3.trackUserAvatarUpdated(obj5);
-              }
-            } else {
-              let avatar;
-              if (v0 != null) {
-                body = v0.body;
-                if (body != null) {
-                  avatar = body.avatar;
-                }
-              }
-              if (null != avatar) {
-                guildMemberChangesForUpdateRequest = v0;
-                guildMemberChangesForUpdateRequest = closure_1_0(14259).showGenericGuildProfileUpdateFailureToast(v0.body.avatar);
+            ok = arg1;
+            let ok1;
+            if (ok != null) {
+              ok1 = ok.ok;
+            }
+            if (!ok1) {
+              const aPIError = new closure_1_0(4376).APIError(ok);
+              const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
+              if (null != firstFieldErrorMessage) {
+                obj1 = closure_1_0(14259);
+                const result1 = obj1.showGenericGuildProfileUpdateFailureToast(closure_1_9);
                 c3 = true;
-                const obj15 = closure_1_0(14259);
               }
             }
-            let tmp42 = dependencyMap;
+            let tmp24 = dependencyMap;
             if (dependencyMap) {
-              let ok;
-              if (v0 != null) {
-                ok = v0.ok;
+              let ok2;
+              if (closure_1_8 != null) {
+                ok2 = closure_1_8.ok;
               }
-              avatarId = ok;
-              if (ok == null) {
-                avatarId = false;
+              bannerOriginalMd5 = ok2;
+              if (ok2 == null) {
+                bannerOriginalMd5 = false;
               }
-              tmp42 = avatarId;
+              tmp24 = bannerOriginalMd5;
             }
-            dependencyMap = tmp42;
+            dependencyMap = tmp24;
           }
-        } else if (arg0 === 1) {
-          guildMemberChangesForUpdateRequest = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          guildMemberChangesForUpdateRequest = 3;
-          let obj6 = { value: null, done: true };
-          obj6[0] = arg1;
-          return obj6;
-        } else {
-          ok = arg1;
-          let ok1;
-          if (ok != null) {
-            ok1 = ok.ok;
+          let tmp54 = dependencyMap;
+          if (!dependencyMap) {
+            tmp54 = c3;
           }
-          if (!ok1) {
-            const aPIError = new closure_1_0(4376).APIError(ok);
-            const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
-            if (null != firstFieldErrorMessage) {
-              obj1 = closure_1_0(14259);
-              const result1 = obj1.showGenericGuildProfileUpdateFailureToast(closure_1_9);
-              c3 = true;
-            }
+          if (!tmp54) {
+            obj6 = closure_1_0(14259);
+            const intl = closure_1_0(1236).intl;
+            const result2 = obj6.showGenericGuildProfileUpdateFailureToast(intl.string(closure_1_0(1236).t.s35OuK));
           }
-          let tmp24 = dependencyMap;
           if (dependencyMap) {
-            let ok2;
-            if (closure_1_8 != null) {
-              ok2 = closure_1_8.ok;
-            }
-            bannerOriginalMd5 = ok2;
-            if (ok2 == null) {
-              bannerOriginalMd5 = false;
-            }
-            tmp24 = bannerOriginalMd5;
+            closure_1_13.delay();
           }
-          dependencyMap = tmp24;
-        }
-        let tmp54 = dependencyMap;
-        if (!dependencyMap) {
-          tmp54 = c3;
-        }
-        if (!tmp54) {
-          obj6 = closure_1_0(14259);
-          const intl = closure_1_0(1236).intl;
-          const result2 = obj6.showGenericGuildProfileUpdateFailureToast(intl.string(closure_1_0(1236).t.s35OuK));
-        }
-        if (dependencyMap) {
-          closure_1_13.delay();
-        }
-        return dependencyMap;
-      })();
-    }), items5),
+          return dependencyMap;
+        })();
+      }),
+      items5,
+    ),
     isDisabled: tmp15,
     isSubmitting: stateFromStores1,
-    resetPending: tmp(tmp2[13]).resetAllPending
+    resetPending: tmp(tmp2[13]).resetAllPending,
   };
   items5[13] = id1;
   items5[14] = memo;
@@ -281,5 +319,5 @@ export default function useGuildProfileEditForm() {
   obj.guild = selectedGuild;
   obj.errors = obj;
   return obj;
-};
+}
 export const RESET_DELAY_MS = 200;

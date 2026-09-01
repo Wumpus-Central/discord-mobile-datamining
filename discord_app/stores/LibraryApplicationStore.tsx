@@ -38,8 +38,7 @@ let closure_12 = {};
 let closure_13 = {};
 let c14 = false;
 const Store = initializeDefault.Store;
-class LibraryApplicationStore extends Store {
-}
+class LibraryApplicationStore extends Store {}
 const prototype = LibraryApplicationStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_5);
@@ -89,7 +88,7 @@ Object.defineProperty(prototype, "libraryApplications", {
     });
     return obj;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getAllLibraryApplications"] = function getAllLibraryApplications() {
   const merged = Object.assign(closure_10);
@@ -203,7 +202,7 @@ Object.defineProperty(prototype, "fetched", {
   get: function fetched(arg0) {
     return c8;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "entitledBranchIds", {
   get: function entitledBranchIds() {
@@ -212,17 +211,19 @@ Object.defineProperty(prototype, "entitledBranchIds", {
     const obj = {};
     const tmp = apply;
     const values = apply({}).values();
-    const found = values.filter((libraryApplication) => callback(table[4]).isUserEntitledToLibraryApplication(libraryApplication));
+    const found = values.filter((libraryApplication) =>
+      callback(table[4]).isUserEntitledToLibraryApplication(libraryApplication),
+    );
     const tmpResult = apply({});
     return found.map((branchId) => branchId.branchId).value();
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasRemovedLibraryApplicationThisSession", {
   get: function hasRemovedLibraryApplicationThisSession() {
     return c14;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["whenInitialized"] = function whenInitialized(arg0) {
   closure_0 = arg0;
@@ -313,7 +314,7 @@ const libraryApplicationStore = new LibraryApplicationStore(dispatcherDefault, {
   },
   DEVELOPER_TEST_MODE_RESET: function handleTestModeDisabled() {
     closure_10 = {};
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/LibraryApplicationStore.tsx");
 

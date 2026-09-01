@@ -76,30 +76,32 @@ export const wrapPaths = function wrapPaths(frozen, arg1) {
       obj[tmp] = () => {
         const items = [...arguments];
         const callback = closure_1_1;
-        return callback(...items.map((arg0) => {
-          if (null == arg0) {
-            return arg0;
-          } else if (arg0 instanceof closure_1_1) {
-            let str = arg0.toString();
-          } else if (null == closure_0) {
-            let _encodeURIComponent = encodeURIComponent;
-            str = encodeURIComponent(arg0);
-          } else {
-            const _String = String;
-            str = String(arg0);
-            const parts = str.split("");
-            const mapped = parts.map((arg0) => {
-              if (null == closure_0) {
-                const _encodeURIComponent = encodeURIComponent;
-                let encodeURIComponentResult = encodeURIComponent(arg0);
-              } else {
-                encodeURIComponentResult = arg0;
-              }
-              return encodeURIComponentResult;
-            });
-            str = mapped.join("");
-          }
-        }));
+        return callback(
+          ...items.map((arg0) => {
+            if (null == arg0) {
+              return arg0;
+            } else if (arg0 instanceof closure_1_1) {
+              let str = arg0.toString();
+            } else if (null == closure_0) {
+              let _encodeURIComponent = encodeURIComponent;
+              str = encodeURIComponent(arg0);
+            } else {
+              const _String = String;
+              str = String(arg0);
+              const parts = str.split("");
+              const mapped = parts.map((arg0) => {
+                if (null == closure_0) {
+                  const _encodeURIComponent = encodeURIComponent;
+                  let encodeURIComponentResult = encodeURIComponent(arg0);
+                } else {
+                  encodeURIComponentResult = arg0;
+                }
+                return encodeURIComponentResult;
+              });
+              str = mapped.join("");
+            }
+          }),
+        );
       };
     }
   }

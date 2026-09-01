@@ -37,4 +37,4 @@ export default function useCountdown(closure_0) {
   }
   importDefault(flag[3])(tmp3, tmp5);
   return diffAsUnitsResult;
-};
+}

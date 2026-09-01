@@ -14,4 +14,4 @@ export default function ClipsSettingsScreen() {
     return callback(table[3]).createList({ sections });
   }, []);
   return jsx(_modDef14340, { node });
-};
+}

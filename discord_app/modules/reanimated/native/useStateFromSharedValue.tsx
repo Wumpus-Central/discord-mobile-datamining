@@ -5,13 +5,18 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 const require = arg1;
 let c4 = 9999999;
 const map = new Map();
-let closure_6 = { code: "function useStateFromSharedValueTsx1(id,listener,sharedValue){const{runOnJS}=this.__closure;sharedValue.addListener(id,function(value){return runOnJS(listener)(value);});}" };
+let closure_6 = {
+  code: "function useStateFromSharedValueTsx1(id,listener,sharedValue){const{runOnJS}=this.__closure;sharedValue.addListener(id,function(value){return runOnJS(listener)(value);});}",
+};
 let closure_7 = { code: "function useStateFromSharedValueTsx2(id,sharedValue){sharedValue.removeListener(id);}" };
 let result = require("set").fileFinishedImporting("modules/reanimated/native/useStateFromSharedValue.tsx");
 
 export default function useStateFromSharedValue(arg0) {
   closure_0 = arg0;
-  const tmp = callback(React.useState(() => closure_0.get()), 2);
+  const tmp = callback(
+    React.useState(() => closure_0.get()),
+    2,
+  );
   closure_0 = arg0;
   closure_1 = tmp2;
   const items = [arg0, tmp[1]];
@@ -72,11 +77,14 @@ export default function useStateFromSharedValue(arg0) {
     };
   }, items);
   return tmp[0];
-};
+}
 export const useDerivedStateFromSharedValue = function useDerivedStateFromSharedValue(activeIndex, stateFromStores) {
   closure_0 = activeIndex;
   let callback = stateFromStores;
-  [tmp2, closure_2] = callback(React.useState(() => callback(activeIndex.get(), undefined)), 2);
+  [tmp2, closure_2] = callback(
+    React.useState(() => callback(activeIndex.get(), undefined)),
+    2,
+  );
   React = React.useRef(stateFromStores);
   const layoutEffect = React.useLayoutEffect(() => {
     closure_3.current = callback;

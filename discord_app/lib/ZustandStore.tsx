@@ -10,13 +10,19 @@ const result = set.fileFinishedImporting("lib/ZustandStore.tsx");
 export const createZustandStore = function createZustandStore(arg0) {
   const _require = arg0;
   let obj = identity;
-  dependencyMap = obj.createWithEqualityFn(require("../../_runtime/04345_createJSONStorage.js").subscribeWithSelector((arg0, arg1, arg2) => {
-    let callback = arg0;
-    return callback((arg0) => {
-      const callback = arg0;
-      return callback(closure_1_1[2]).batchUpdates(() => callback(callback));
-    }, arg1, arg2);
-  }));
+  dependencyMap = obj.createWithEqualityFn(
+    require("../../_runtime/04345_createJSONStorage.js").subscribeWithSelector((arg0, arg1, arg2) => {
+      let callback = arg0;
+      return callback(
+        (arg0) => {
+          const callback = arg0;
+          return callback(closure_1_1[2]).batchUpdates(() => callback(callback));
+        },
+        arg1,
+        arg2,
+      );
+    }),
+  );
   function setState(arg0) {
     const callback = arg0;
     callback(store[2]).batchUpdates(() => closure_1_1.setState(initialState));
@@ -61,7 +67,7 @@ export const createZustandStore = function createZustandStore(arg0) {
         HermesBuiltin.throwTypeError();
       }
       callback(store[2]).batchUpdates(() => closure_1_1.setState(initialState));
-    }
+    },
   };
   return obj;
 };

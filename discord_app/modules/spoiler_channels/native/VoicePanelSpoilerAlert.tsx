@@ -26,17 +26,17 @@ export default function VoicePanelSpoilerAlert(channelId) {
       const voiceChannel = callback(closure_1_2[6]).selectVoiceChannel(channelId);
       callback();
     },
-    text: null
+    text: null,
   };
   const intl3 = channelId(1236).intl;
   obj1[2] = intl3.string(channelId(1236).t.p89ACt);
-  const items = [callback(channelId(4863).AlertActionButton, obj1, "confirm"), ];
+  const items = [callback(channelId(4863).AlertActionButton, obj1, "confirm")];
   const obj2 = {
     variant: "secondary",
     onPress() {
       callback();
     },
-    text: null
+    text: null,
   };
   const intl4 = channelId(1236).intl;
   obj2[2] = intl4.string(channelId(1236).t["/g10LC"]);
@@ -44,5 +44,5 @@ export default function VoicePanelSpoilerAlert(channelId) {
   obj[0] = items;
   obj[2] = callback2(channelId(4863).AlertActions, obj);
   return callback(channelId(4863).AlertModal, obj);
-};
+}
 export const VOICE_PANEL_SPOILER_KEY = "voice-panel-spoiler";

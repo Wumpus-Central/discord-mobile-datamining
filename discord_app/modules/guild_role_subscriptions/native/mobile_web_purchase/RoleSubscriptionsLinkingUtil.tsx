@@ -21,7 +21,7 @@ function _performRoleSubscriptionUpsellRedirect() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -122,7 +122,7 @@ function _performRoleSubscriptionUpsellRedirect() {
 }
 function _performRoleSubscriptionTeamCreationRedirect() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();
@@ -188,7 +188,7 @@ function _performRoleSubscriptionEditPayoutRedirect() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -266,7 +266,7 @@ function _performDeveloperPortalRedirectWithTokenHandoff() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -364,7 +364,9 @@ function _performDeveloperPortalRedirectWithTokenHandoff() {
   return applyArgumentsResult;
 }
 ({ RelativeMarketingURLs: c4, Routes: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/mobile_web_purchase/RoleSubscriptionsLinkingUtil.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/mobile_web_purchase/RoleSubscriptionsLinkingUtil.tsx",
+);
 
 export default {
   performRoleSubscriptionUpsellRedirect,
@@ -397,5 +399,5 @@ export default {
       return resolved;
     }
     resolved = Promise.resolve(false);
-  }
+  },
 };

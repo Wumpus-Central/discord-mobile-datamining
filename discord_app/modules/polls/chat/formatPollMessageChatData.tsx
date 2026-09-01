@@ -118,7 +118,26 @@ function computeBasicPollChatData(message) {
     }
     const result = GuildMemberFlags.hasAutomodQuarantinedProfile(selfMember);
     const obj4 = GuildMemberFlags;
-    obj = { poll: null, canTapAnswers: null, canRemoveVote: null, canShowVoteCounts: null, canSubmitVote: null, expirationLabel: null, hasSelectedAnswer: null, hasVoted: null, hasVoteRecorded: null, isEditingVote: null, isExpired: null, isInteractive: null, isSent: null, reactions: null, selectedAnswerIds: null, submitting: null, tapShouldOpenVotersModal: null, showResults: null };
+    obj = {
+      poll: null,
+      canTapAnswers: null,
+      canRemoveVote: null,
+      canShowVoteCounts: null,
+      canSubmitVote: null,
+      expirationLabel: null,
+      hasSelectedAnswer: null,
+      hasVoted: null,
+      hasVoteRecorded: null,
+      isEditingVote: null,
+      isExpired: null,
+      isInteractive: null,
+      isSent: null,
+      reactions: null,
+      selectedAnswerIds: null,
+      submitting: null,
+      tapShouldOpenVotersModal: null,
+      showResults: null,
+    };
     obj[0] = poll;
     obj[1] = tmp19;
     let tmp30 = tmp16;
@@ -165,7 +184,13 @@ function computeBasicPollChatData(message) {
   }
 }
 const MessageStates = ME.MessageStates;
-let obj = { channelId: ME.EMPTY_STRING_SNOWFLAKE_ID, selectedAnswerIds: null, submitting: false, editing: false, showResults: false };
+let obj = {
+  channelId: ME.EMPTY_STRING_SNOWFLAKE_ID,
+  selectedAnswerIds: null,
+  submitting: false,
+  editing: false,
+  showResults: false,
+};
 let set = new Set();
 obj[1] = set;
 let result = set.fileFinishedImporting("modules/polls/chat/formatPollMessageChatData.tsx");
@@ -237,20 +262,23 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
         computeBasicPollChatData = intl2.formatToPlainString(tmp4(tmp5[16]).t.XRkuof, obj);
         let _Math = Math;
         const items = [];
-        HermesBuiltin.arraySpread(answers.map((answer_id) => {
-          const tmp = totalVotes(reactions, "" + answer_id.answer_id);
-          let num;
-          if (tmp != null) {
-            const count_details = tmp.count_details;
-            if (count_details != null) {
-              num = count_details.vote;
+        HermesBuiltin.arraySpread(
+          answers.map((answer_id) => {
+            const tmp = totalVotes(reactions, "" + answer_id.answer_id);
+            let num;
+            if (tmp != null) {
+              const count_details = tmp.count_details;
+              if (count_details != null) {
+                num = count_details.vote;
+              }
             }
-          }
-          if (num == null) {
-            num = 0;
-          }
-          return num;
-        }), 0);
+            if (num == null) {
+              num = 0;
+            }
+            return num;
+          }),
+          0,
+        );
         const _Math2 = Math;
         closure_14 = HermesBuiltin.apply(items, Math);
         const mapped = answers.map((answer_id) => {
@@ -288,18 +316,63 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
           const str = flag(layout_type[8]);
           const tmp5 = hasVoted;
           const withResult = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected");
-          const withResult1 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected");
-          const withResult2 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected");
-          const withResult3 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted");
-          const withResult4 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted").with({ didSelfVote: true, isExpired: false }, () => "voted");
-          const withResult5 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted").with({ didSelfVote: true, isExpired: false }, () => "voted").with({ hasVoted: true, isExpired: false }, () => "notVoted");
-          const withResult6 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted").with({ didSelfVote: true, isExpired: false }, () => "voted").with({ hasVoted: true, isExpired: false }, () => "notVoted").with({ isSelected: true }, () => "selected");
-          obj = { answerId: combined, pollMedia: null, isSelected: null, isVictor: null, didSelfVote: null, style: null, shouldAnimateTransition: null, votesPercentage: null, votes: null };
+          const withResult1 = match
+            .with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected")
+            .with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected");
+          const withResult2 = match
+            .with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected")
+            .with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected")
+            .with({ isExpired: true, didSelfVote: true }, () => "loserSelected");
+          const withResult3 = match
+            .with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected")
+            .with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected")
+            .with({ isExpired: true, didSelfVote: true }, () => "loserSelected")
+            .with({ isExpired: true }, () => "notVoted");
+          const withResult4 = match
+            .with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected")
+            .with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected")
+            .with({ isExpired: true, didSelfVote: true }, () => "loserSelected")
+            .with({ isExpired: true }, () => "notVoted")
+            .with({ didSelfVote: true, isExpired: false }, () => "voted");
+          const withResult5 = match
+            .with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected")
+            .with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected")
+            .with({ isExpired: true, didSelfVote: true }, () => "loserSelected")
+            .with({ isExpired: true }, () => "notVoted")
+            .with({ didSelfVote: true, isExpired: false }, () => "voted")
+            .with({ hasVoted: true, isExpired: false }, () => "notVoted");
+          const withResult6 = match
+            .with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected")
+            .with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected")
+            .with({ isExpired: true, didSelfVote: true }, () => "loserSelected")
+            .with({ isExpired: true }, () => "notVoted")
+            .with({ didSelfVote: true, isExpired: false }, () => "voted")
+            .with({ hasVoted: true, isExpired: false }, () => "notVoted")
+            .with({ isSelected: true }, () => "selected");
+          obj = {
+            answerId: combined,
+            pollMedia: null,
+            isSelected: null,
+            isVictor: null,
+            didSelfVote: null,
+            style: null,
+            shouldAnimateTransition: null,
+            votesPercentage: null,
+            votes: null,
+          };
           obj = { text: answer_id.poll_media.text, emoji: null, stickerId: null, attachmentIds: null };
           let name = answer_id.poll_media.emoji;
           obj1 = { animateEmoji: num };
           let flag2 = obj1.animateEmoji;
-          const withResult7 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted").with({ didSelfVote: true, isExpired: false }, () => "voted").with({ hasVoted: true, isExpired: false }, () => "notVoted").with({ isSelected: true }, () => "selected").with({ isExpired: false, showResults: true }, () => "notVoted");
+          const withResult7 = match
+            .with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected")
+            .with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected")
+            .with({ isExpired: true, didSelfVote: true }, () => "loserSelected")
+            .with({ isExpired: true }, () => "notVoted")
+            .with({ didSelfVote: true, isExpired: false }, () => "voted")
+            .with({ hasVoted: true, isExpired: false }, () => "notVoted")
+            .with({ isSelected: true }, () => "selected")
+            .with({ isExpired: false, showResults: true }, () => "notVoted");
           if (flag2 === undefined) {
             flag2 = false;
           }
@@ -328,10 +401,12 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
             obj[7] = Math.round(100 * num2);
             const match1 = tmp8(tmp9[8]).match(layout_type);
             const str2 = tmp8(tmp9[8]);
-            obj[8] = match1.with(tmp8(tmp9[18]).PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")").otherwise(() => {
-              const intl = num(closure_1_2[16]).intl;
-              return intl.formatToPlainString(num(closure_1_2[16]).t.XRkuof, { count: num });
-            });
+            obj[8] = match1
+              .with(tmp8(tmp9[18]).PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")")
+              .otherwise(() => {
+                const intl = num(closure_1_2[16]).intl;
+                return intl.formatToPlainString(num(closure_1_2[16]).t.XRkuof, { count: num });
+              });
             return obj;
           } else {
             let flag3 = name.animated;
@@ -384,7 +459,15 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
             tmp11 = null == flag3 && null != name.id;
           }
         });
-        obj1 = { isExpired: null, canSubmitVote: null, hasVoted: null, isEditingVote: null, canRemoveVote: null, isInteractive: null, showResults: null };
+        obj1 = {
+          isExpired: null,
+          canSubmitVote: null,
+          hasVoted: null,
+          isEditingVote: null,
+          canRemoveVote: null,
+          isInteractive: null,
+          showResults: null,
+        };
         obj1[0] = isExpired;
         obj1[1] = canSubmitVote;
         obj1[2] = hasVoted;
@@ -394,90 +477,86 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
         obj1[6] = showResults;
         let match = tmp4(tmp5[8]).match(obj1);
         let str2 = tmp4(tmp5[8]);
-        let withResult = match.with({ isInteractive: false }, () => {
-
-        });
-        let withResult1 = match.with({ isInteractive: false }, () => {
-
-        }).with({ isExpired: true }, () => {
-
-        });
-        let withResult2 = match.with({ isInteractive: false }, () => {
-
-        }).with({ isExpired: true }, () => {
-
-        }).with({ isEditingVote: true }, () => {
-          obj = { label: null, presentation: "button", enabled: null, type: "submit" };
-          const intl = flag(layout_type[16]).intl;
-          obj[0] = intl.string(flag(layout_type[16]).t.JwkNU4);
-          obj[2] = hasSelectedAnswer;
-          return obj;
-        });
-        let withResult3 = match.with({ isInteractive: false }, () => {
-
-        }).with({ isExpired: true }, () => {
-
-        }).with({ isEditingVote: true }, () => {
-          obj = { label: null, presentation: "button", enabled: null, type: "submit" };
-          const intl = flag(layout_type[16]).intl;
-          obj[0] = intl.string(flag(layout_type[16]).t.JwkNU4);
-          obj[2] = hasSelectedAnswer;
-          return obj;
-        }).with({ canRemoveVote: true }, () => {
-          obj = { label: null, presentation: "secondaryButton", enabled: true, type: "remove" };
-          const intl = flag(layout_type[16]).intl;
-          obj[0] = intl.string(flag(layout_type[16]).t.XhQEh8);
-          return obj;
-        });
-        let withResult4 = match.with({ isInteractive: false }, () => {
-
-        }).with({ isExpired: true }, () => {
-
-        }).with({ isEditingVote: true }, () => {
-          obj = { label: null, presentation: "button", enabled: null, type: "submit" };
-          const intl = flag(layout_type[16]).intl;
-          obj[0] = intl.string(flag(layout_type[16]).t.JwkNU4);
-          obj[2] = hasSelectedAnswer;
-          return obj;
-        }).with({ canRemoveVote: true }, () => {
-          obj = { label: null, presentation: "secondaryButton", enabled: true, type: "remove" };
-          const intl = flag(layout_type[16]).intl;
-          obj[0] = intl.string(flag(layout_type[16]).t.XhQEh8);
-          return obj;
-        }).with({ hasVoted: false, showResults: true }, () => {
-          obj = { label: null, presentation: "secondaryButton", enabled: true, type: "showVotes" };
-          const intl = flag(layout_type[16]).intl;
-          obj[0] = intl.string(flag(layout_type[16]).t.gNj6In);
-          return obj;
-        });
+        let withResult = match.with({ isInteractive: false }, () => {});
+        let withResult1 = match.with({ isInteractive: false }, () => {}).with({ isExpired: true }, () => {});
+        let withResult2 = match
+          .with({ isInteractive: false }, () => {})
+          .with({ isExpired: true }, () => {})
+          .with({ isEditingVote: true }, () => {
+            obj = { label: null, presentation: "button", enabled: null, type: "submit" };
+            const intl = flag(layout_type[16]).intl;
+            obj[0] = intl.string(flag(layout_type[16]).t.JwkNU4);
+            obj[2] = hasSelectedAnswer;
+            return obj;
+          });
+        let withResult3 = match
+          .with({ isInteractive: false }, () => {})
+          .with({ isExpired: true }, () => {})
+          .with({ isEditingVote: true }, () => {
+            obj = { label: null, presentation: "button", enabled: null, type: "submit" };
+            const intl = flag(layout_type[16]).intl;
+            obj[0] = intl.string(flag(layout_type[16]).t.JwkNU4);
+            obj[2] = hasSelectedAnswer;
+            return obj;
+          })
+          .with({ canRemoveVote: true }, () => {
+            obj = { label: null, presentation: "secondaryButton", enabled: true, type: "remove" };
+            const intl = flag(layout_type[16]).intl;
+            obj[0] = intl.string(flag(layout_type[16]).t.XhQEh8);
+            return obj;
+          });
+        let withResult4 = match
+          .with({ isInteractive: false }, () => {})
+          .with({ isExpired: true }, () => {})
+          .with({ isEditingVote: true }, () => {
+            obj = { label: null, presentation: "button", enabled: null, type: "submit" };
+            const intl = flag(layout_type[16]).intl;
+            obj[0] = intl.string(flag(layout_type[16]).t.JwkNU4);
+            obj[2] = hasSelectedAnswer;
+            return obj;
+          })
+          .with({ canRemoveVote: true }, () => {
+            obj = { label: null, presentation: "secondaryButton", enabled: true, type: "remove" };
+            const intl = flag(layout_type[16]).intl;
+            obj[0] = intl.string(flag(layout_type[16]).t.XhQEh8);
+            return obj;
+          })
+          .with({ hasVoted: false, showResults: true }, () => {
+            obj = { label: null, presentation: "secondaryButton", enabled: true, type: "showVotes" };
+            const intl = flag(layout_type[16]).intl;
+            obj[0] = intl.string(flag(layout_type[16]).t.gNj6In);
+            return obj;
+          });
         tmp4Result = tmp4(tmp5[19]);
-        const otherwiseResult = match.with({ isInteractive: false }, () => {
-
-        }).with({ isExpired: true }, () => {
-
-        }).with({ isEditingVote: true }, () => {
-          obj = { label: null, presentation: "button", enabled: null, type: "submit" };
-          const intl = flag(layout_type[16]).intl;
-          obj[0] = intl.string(flag(layout_type[16]).t.JwkNU4);
-          obj[2] = hasSelectedAnswer;
-          return obj;
-        }).with({ canRemoveVote: true }, () => {
-          obj = { label: null, presentation: "secondaryButton", enabled: true, type: "remove" };
-          const intl = flag(layout_type[16]).intl;
-          obj[0] = intl.string(flag(layout_type[16]).t.XhQEh8);
-          return obj;
-        }).with({ hasVoted: false, showResults: true }, () => {
-          obj = { label: null, presentation: "secondaryButton", enabled: true, type: "showVotes" };
-          const intl = flag(layout_type[16]).intl;
-          obj[0] = intl.string(flag(layout_type[16]).t.gNj6In);
-          return obj;
-        }).otherwise(() => {
-          obj = { label: null, presentation: "button", enabled: null, type: "submit" };
-          const intl = flag(layout_type[16]).intl;
-          obj[0] = intl.string(flag(layout_type[16]).t.JwkNU4);
-          obj[2] = canSubmitVote;
-          return obj;
-        });
+        const otherwiseResult = match
+          .with({ isInteractive: false }, () => {})
+          .with({ isExpired: true }, () => {})
+          .with({ isEditingVote: true }, () => {
+            obj = { label: null, presentation: "button", enabled: null, type: "submit" };
+            const intl = flag(layout_type[16]).intl;
+            obj[0] = intl.string(flag(layout_type[16]).t.JwkNU4);
+            obj[2] = hasSelectedAnswer;
+            return obj;
+          })
+          .with({ canRemoveVote: true }, () => {
+            obj = { label: null, presentation: "secondaryButton", enabled: true, type: "remove" };
+            const intl = flag(layout_type[16]).intl;
+            obj[0] = intl.string(flag(layout_type[16]).t.XhQEh8);
+            return obj;
+          })
+          .with({ hasVoted: false, showResults: true }, () => {
+            obj = { label: null, presentation: "secondaryButton", enabled: true, type: "showVotes" };
+            const intl = flag(layout_type[16]).intl;
+            obj[0] = intl.string(flag(layout_type[16]).t.gNj6In);
+            return obj;
+          })
+          .otherwise(() => {
+            obj = { label: null, presentation: "button", enabled: null, type: "submit" };
+            const intl = flag(layout_type[16]).intl;
+            obj[0] = intl.string(flag(layout_type[16]).t.JwkNU4);
+            obj[2] = canSubmitVote;
+            return obj;
+          });
         const intl3 = tmp4(tmp5[16]).intl;
         const string = intl3.string;
         const t = tmp4(tmp5[16]).t;
@@ -501,17 +580,19 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
           return obj;
         });
         let tmp20;
-        let withResult6 = match1.with({ isInteractive: false, isExpired: false }, () => {
-          obj = { label: null, presentation: "text", enabled: false };
-          const intl = flag(layout_type[16]).intl;
-          obj[0] = intl.string(flag(layout_type[16]).t.trrip0);
-          return obj;
-        }).with({ isEditingVote: true }, () => {
-          obj = { label: null, presentation: "textButton", enabled: true, type: "cancel" };
-          const intl = flag(layout_type[16]).intl;
-          obj[0] = intl.string(flag(layout_type[16]).t["ETE/oC"]);
-          return obj;
-        });
+        let withResult6 = match1
+          .with({ isInteractive: false, isExpired: false }, () => {
+            obj = { label: null, presentation: "text", enabled: false };
+            const intl = flag(layout_type[16]).intl;
+            obj[0] = intl.string(flag(layout_type[16]).t.trrip0);
+            return obj;
+          })
+          .with({ isEditingVote: true }, () => {
+            obj = { label: null, presentation: "textButton", enabled: true, type: "cancel" };
+            const intl = flag(layout_type[16]).intl;
+            obj[0] = intl.string(flag(layout_type[16]).t["ETE/oC"]);
+            return obj;
+          });
         if (isInteractive) {
           if (!isExpired) {
             if (!hasVoted) {
@@ -525,63 +606,108 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
           }
         }
         const allow_multiselect = poll.allow_multiselect;
-        const otherwiseResult1 = match1.with({ isInteractive: false, isExpired: false }, () => {
-          obj = { label: null, presentation: "text", enabled: false };
-          const intl = flag(layout_type[16]).intl;
-          obj[0] = intl.string(flag(layout_type[16]).t.trrip0);
-          return obj;
-        }).with({ isEditingVote: true }, () => {
-          obj = { label: null, presentation: "textButton", enabled: true, type: "cancel" };
-          const intl = flag(layout_type[16]).intl;
-          obj[0] = intl.string(flag(layout_type[16]).t["ETE/oC"]);
-          return obj;
-        }).otherwise(() => ({ label: closure_13, secondaryLabel: expirationLabel, accessibilityHint: c15, presentation: "text", enabled: true, type: "showVoterDetails" }));
+        const otherwiseResult1 = match1
+          .with({ isInteractive: false, isExpired: false }, () => {
+            obj = { label: null, presentation: "text", enabled: false };
+            const intl = flag(layout_type[16]).intl;
+            obj[0] = intl.string(flag(layout_type[16]).t.trrip0);
+            return obj;
+          })
+          .with({ isEditingVote: true }, () => {
+            obj = { label: null, presentation: "textButton", enabled: true, type: "cancel" };
+            const intl = flag(layout_type[16]).intl;
+            obj[0] = intl.string(flag(layout_type[16]).t["ETE/oC"]);
+            return obj;
+          })
+          .otherwise(() => ({
+            label: closure_13,
+            secondaryLabel: expirationLabel,
+            accessibilityHint: c15,
+            presentation: "text",
+            enabled: true,
+            type: "showVoterDetails",
+          }));
         const obj4 = { isInteractive: null, isExpired: null, canSelectMultipleAnswers: null };
         obj4[0] = isInteractive;
         obj4[1] = isExpired;
         obj4[2] = allow_multiselect;
         const match2 = tmp4(tmp5[8]).match(obj4);
         const str4 = tmp4(tmp5[8]);
-        let withResult7 = match2.with({ isInteractive: false }, () => {
-
-        });
-        const withResult8 = match2.with({ isInteractive: false }, () => {
-
-        }).with({ isExpired: true }, () => {
-
-        });
-        const obj5 = { question: null, promptLabel: null, answers: null, answersInteraction: null, answerTapAccessibilityLabel: null, layoutType: null, resources: null, containerStyle: "normal", primaryAction: null, isInteractive: null, canTapAnswers: null, canSelectMultipleAnswers: null, hasSelectedAnswer: null, canShowVoteCounts: null, hasVoted: null, isExpired: null, myAvatarUrl: null, secondaryAction: null, tertiaryAction: null };
+        let withResult7 = match2.with({ isInteractive: false }, () => {});
+        const withResult8 = match2.with({ isInteractive: false }, () => {}).with({ isExpired: true }, () => {});
+        const obj5 = {
+          question: null,
+          promptLabel: null,
+          answers: null,
+          answersInteraction: null,
+          answerTapAccessibilityLabel: null,
+          layoutType: null,
+          resources: null,
+          containerStyle: "normal",
+          primaryAction: null,
+          isInteractive: null,
+          canTapAnswers: null,
+          canSelectMultipleAnswers: null,
+          hasSelectedAnswer: null,
+          canShowVoteCounts: null,
+          hasVoted: null,
+          isExpired: null,
+          myAvatarUrl: null,
+          secondaryAction: null,
+          tertiaryAction: null,
+        };
         obj5[0] = poll.question;
-        obj5[1] = match2.with({ isInteractive: false }, () => {
-
-        }).with({ isExpired: true }, () => {
-
-        }).with({ canSelectMultipleAnswers: true }, () => {
-          const intl = flag(layout_type[16]).intl;
-          return intl.string(flag(layout_type[16]).t.yCXvxa);
-        }).otherwise(() => {
-          const intl = flag(layout_type[16]).intl;
-          return intl.string(flag(layout_type[16]).t["9Y2wKO"]);
-        });
+        obj5[1] = match2
+          .with({ isInteractive: false }, () => {})
+          .with({ isExpired: true }, () => {})
+          .with({ canSelectMultipleAnswers: true }, () => {
+            const intl = flag(layout_type[16]).intl;
+            return intl.string(flag(layout_type[16]).t.yCXvxa);
+          })
+          .otherwise(() => {
+            const intl = flag(layout_type[16]).intl;
+            return intl.string(flag(layout_type[16]).t["9Y2wKO"]);
+          });
         obj5[2] = mapped;
-        const withResult9 = match2.with({ isInteractive: false }, () => {
-
-        }).with({ isExpired: true }, () => {
-
-        }).with({ canSelectMultipleAnswers: true }, () => {
-          const intl = flag(layout_type[16]).intl;
-          return intl.string(flag(layout_type[16]).t.yCXvxa);
-        });
+        const withResult9 = match2
+          .with({ isInteractive: false }, () => {})
+          .with({ isExpired: true }, () => {})
+          .with({ canSelectMultipleAnswers: true }, () => {
+            const intl = flag(layout_type[16]).intl;
+            return intl.string(flag(layout_type[16]).t.yCXvxa);
+          });
         const obj6 = { tapShouldOpenVotersModal: null, canTapAnswers: null, canSelectMultipleAnswers: null };
         obj6[0] = tapShouldOpenVotersModal;
         obj6[1] = canTapAnswers;
         obj6[2] = allow_multiselect;
         const match3 = tmp4(tmp5[8]).match(obj6);
         const str5 = tmp4(tmp5[8]);
-        const withResult10 = match3.with({ tapShouldOpenVotersModal: true }, () => flag(layout_type[20]).PollChatAnswerInteractionType.LIST);
-        const withResult11 = match3.with({ tapShouldOpenVotersModal: true }, () => flag(layout_type[20]).PollChatAnswerInteractionType.LIST).with({ canTapAnswers: false }, () => flag(layout_type[20]).PollChatAnswerInteractionType.LIST);
-        const withResult12 = match3.with({ tapShouldOpenVotersModal: true }, () => flag(layout_type[20]).PollChatAnswerInteractionType.LIST).with({ canTapAnswers: false }, () => flag(layout_type[20]).PollChatAnswerInteractionType.LIST).with({ canSelectMultipleAnswers: false }, () => flag(layout_type[20]).PollChatAnswerInteractionType.RADIO_BUTTONS);
-        obj5[3] = match3.with({ tapShouldOpenVotersModal: true }, () => flag(layout_type[20]).PollChatAnswerInteractionType.LIST).with({ canTapAnswers: false }, () => flag(layout_type[20]).PollChatAnswerInteractionType.LIST).with({ canSelectMultipleAnswers: false }, () => flag(layout_type[20]).PollChatAnswerInteractionType.RADIO_BUTTONS).with({ canSelectMultipleAnswers: true }, () => flag(layout_type[20]).PollChatAnswerInteractionType.CHECKBOXES).exhaustive();
+        const withResult10 = match3.with(
+          { tapShouldOpenVotersModal: true },
+          () => flag(layout_type[20]).PollChatAnswerInteractionType.LIST,
+        );
+        const withResult11 = match3
+          .with({ tapShouldOpenVotersModal: true }, () => flag(layout_type[20]).PollChatAnswerInteractionType.LIST)
+          .with({ canTapAnswers: false }, () => flag(layout_type[20]).PollChatAnswerInteractionType.LIST);
+        const withResult12 = match3
+          .with({ tapShouldOpenVotersModal: true }, () => flag(layout_type[20]).PollChatAnswerInteractionType.LIST)
+          .with({ canTapAnswers: false }, () => flag(layout_type[20]).PollChatAnswerInteractionType.LIST)
+          .with(
+            { canSelectMultipleAnswers: false },
+            () => flag(layout_type[20]).PollChatAnswerInteractionType.RADIO_BUTTONS,
+          );
+        obj5[3] = match3
+          .with({ tapShouldOpenVotersModal: true }, () => flag(layout_type[20]).PollChatAnswerInteractionType.LIST)
+          .with({ canTapAnswers: false }, () => flag(layout_type[20]).PollChatAnswerInteractionType.LIST)
+          .with(
+            { canSelectMultipleAnswers: false },
+            () => flag(layout_type[20]).PollChatAnswerInteractionType.RADIO_BUTTONS,
+          )
+          .with(
+            { canSelectMultipleAnswers: true },
+            () => flag(layout_type[20]).PollChatAnswerInteractionType.CHECKBOXES,
+          )
+          .exhaustive();
         let tmp21;
         if (tapShouldOpenVotersModal) {
           tmp21 = stringResult;
@@ -607,7 +733,7 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
       }
     }
   }
-};
+}
 export { reactionForId };
 export const isPollMessageDirectlyInteractive = function isPollMessageDirectlyInteractive(poll) {
   let tmp = null == poll.poll;

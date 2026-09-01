@@ -24,26 +24,29 @@ prototype["stateWrapper"] = function stateWrapper() {
 };
 NoteStore.displayName = "NoteStore";
 const LibdiscoreBatchStoreRefactorExperiment = items.LibdiscoreBatchStoreRefactorExperiment;
-const noteStore = new NoteStore({
-  LOGOUT(arg0, clear) {
-    return clear.clear();
+const noteStore = new NoteStore(
+  {
+    LOGOUT(arg0, clear) {
+      return clear.clear();
+    },
+    RESET_SOCKET(arg0, clear) {
+      return clear.clear();
+    },
+    CONNECTION_OPEN(arg0, clear) {
+      return clear.clear();
+    },
+    OVERLAY_INITIALIZE(arg0, clear) {
+      return clear.clear();
+    },
+    USER_NOTE_UPDATE(note, set) {
+      const result = set.set(note.id, callback(Note, { loading: false, note: note.note }));
+    },
+    USER_NOTE_LOAD_START(userId, set) {
+      const result = set.set(userId.userId, callback(Note, { loading: true, note: null }));
+    },
   },
-  RESET_SOCKET(arg0, clear) {
-    return clear.clear();
-  },
-  CONNECTION_OPEN(arg0, clear) {
-    return clear.clear();
-  },
-  OVERLAY_INITIALIZE(arg0, clear) {
-    return clear.clear();
-  },
-  USER_NOTE_UPDATE(note, set) {
-    const result = set.set(note.id, callback(Note, { loading: false, note: note.note }));
-  },
-  USER_NOTE_LOAD_START(userId, set) {
-    const result = set.set(userId.userId, callback(Note, { loading: true, note: null }));
-  }
-}, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());
+  LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode(),
+);
 let result = set2.fileFinishedImporting("modules/user_profile/notes/NoteStore.tsx");
 
 export default noteStore;

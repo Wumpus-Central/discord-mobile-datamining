@@ -3,7 +3,16 @@ import set from "../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/soundboard/SoundboardTypes.tsx");
 
-export const SoundButtonOverlay = { NONE: 0, [0]: "NONE", PLAY: 1, [1]: "PLAY", ADD: 2, [2]: "ADD", SOUNDMOJI: 3, [3]: "SOUNDMOJI" };
+export const SoundButtonOverlay = {
+  NONE: 0,
+  [0]: "NONE",
+  PLAY: 1,
+  [1]: "PLAY",
+  ADD: 2,
+  [2]: "ADD",
+  SOUNDMOJI: 3,
+  [3]: "SOUNDMOJI",
+};
 export const AnalyticsSoundType = { ENTRY: "entry_sound", EXIT: "exit_sound", DEFAULT: "default" };
 export const AnalyticsChangeType = { ADDED: "added", UPDATED: "updated", REMOVED: "removed" };
 export const AnalyticsSoundSource = { DEFAULT: "default", CUSTOM: "custom" };
@@ -34,5 +43,18 @@ export const soundboardSoundToAPI = function soundboardSoundToAPI(arg0) {
   obj.user_id = userId;
   return obj;
 };
-export const SoundboardSoundGridSectionType = { FAVORITES: 0, [0]: "FAVORITES", GUILD: 1, [1]: "GUILD", DEFAULTS: 2, [2]: "DEFAULTS", SEARCH: 3, [3]: "SEARCH", FREQUENTLY_USED: 4, [4]: "FREQUENTLY_USED", TOP_SOUNDS: 5, [5]: "TOP_SOUNDS" };
+export const SoundboardSoundGridSectionType = {
+  FAVORITES: 0,
+  [0]: "FAVORITES",
+  GUILD: 1,
+  [1]: "GUILD",
+  DEFAULTS: 2,
+  [2]: "DEFAULTS",
+  SEARCH: 3,
+  [3]: "SEARCH",
+  FREQUENTLY_USED: 4,
+  [4]: "FREQUENTLY_USED",
+  TOP_SOUNDS: 5,
+  [5]: "TOP_SOUNDS",
+};
 export const SoundboardSoundItemType = { SOUND: 0, [0]: "SOUND", ADD_SOUND: 1, [1]: "ADD_SOUND" };

@@ -60,8 +60,7 @@ prototype["ensure"] = function ensure(arg0, arg1, arg2) {
   return tmp3;
 };
 const Store = initializeDefault.Store;
-class MessageReactionsStore extends Store {
-}
+class MessageReactionsStore extends Store {}
 const prototype2 = MessageReactionsStore.prototype;
 prototype2["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_2, closure_5);
@@ -129,7 +128,7 @@ const messageReactionsStore = new MessageReactionsStore(dispatcherDefault, {
       users = users.users;
       return users.set(id.id, new closure_1_3(id));
     });
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("stores/MessageReactionsStore.tsx");
 

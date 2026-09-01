@@ -10,20 +10,37 @@ const require = arg1;
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_6, AnalyticsSections: error } = ME);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { background: null, content: null, iosPaddingThemeAdjust: null, container: null, inputContainer: null, headerText: null };
+createCacheKey = {
+  background: null,
+  content: null,
+  iosPaddingThemeAdjust: null,
+  container: null,
+  inputContainer: null,
+  headerText: null,
+};
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_40 };
 const obj2 = { paddingTop: ThemesDefault.space.PX_40 };
-createCacheKey[3] = { flexGrow: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_16 };
-let obj3 = { flexGrow: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[3] = {
+  flexGrow: 1,
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
+let obj3 = {
+  flexGrow: 1,
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_16, backgroundColor: "transparent", paddingHorizontal: 0 };
 createCacheKey[5] = { textTransform: "none" };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 const obj4 = { marginTop: ThemesDefault.space.PX_16, backgroundColor: "transparent", paddingHorizontal: 0 };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/UsernameSearchScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/friends/screens/UsernameSearchScreen.tsx",
+);
 
 export default function UsernameSearchScreen(navigation) {
   navigation = navigation.navigation;
@@ -37,19 +54,23 @@ export default function UsernameSearchScreen(navigation) {
   const insets = ref(5594)().insets;
   ref = React.useRef(null);
   const items = [navigation];
-  const effect1 = React.useEffect(() => navigation.addListener("transitionEnd", (data) => {
-    let closing = data.data.closing;
-    if (!closing) {
-      closing = closure_1_0(closure_1_2[8]).getIsScreenReaderEnabled();
-      const obj = closure_1_0(closure_1_2[8]);
-    }
-    if (!closing) {
-      const current = ref.current;
-      if (current != null) {
-        current.focus();
-      }
-    }
-  }), items);
+  const effect1 = React.useEffect(
+    () =>
+      navigation.addListener("transitionEnd", (data) => {
+        let closing = data.data.closing;
+        if (!closing) {
+          closing = closure_1_0(closure_1_2[8]).getIsScreenReaderEnabled();
+          const obj = closure_1_0(closure_1_2[8]);
+        }
+        if (!closing) {
+          const current = ref.current;
+          if (current != null) {
+            current.focus();
+          }
+        }
+      }),
+    items,
+  );
   let obj = navigation(7616);
   const clientThemesOverride = obj.useClientThemesOverride();
   obj1 = navigation(500);
@@ -67,8 +88,13 @@ export default function UsernameSearchScreen(navigation) {
   obj = { style: items1, children: null };
   items1 = [tmp.content, clientThemesOverride];
   let tmp3Result = tmp3(6049);
-  const items2 = [callback(ref(5070), { absolute: true }), ];
-  obj1 = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
+  const items2 = [callback(ref(5070), { absolute: true })];
+  obj1 = {
+    alwaysBounceVertical: false,
+    keyboardShouldPersistTaps: "handled",
+    contentContainerStyle: null,
+    children: null,
+  };
   const items3 = [tmp.container, prop, { paddingBottom: insets.bottom + ref(712).space.PX_16 }];
   obj1[2] = items3;
   const obj3 = { style: tmp.inputContainer, autoFocusInput: false, headerText: null, headerTextStyle: null, ref: null };
@@ -82,4 +108,4 @@ export default function UsernameSearchScreen(navigation) {
   obj[1] = items2;
   obj[1] = callback2(tmp3Result, obj);
   return callback(closure_5, obj);
-};
+}

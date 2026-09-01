@@ -11,7 +11,9 @@ import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx",
+);
 
 export const MinecraftNeutralIcon = function MinecraftNeutralIcon(secondaryColor) {
   ({ style, color } = secondaryColor);
@@ -30,7 +32,7 @@ export const MinecraftNeutralIcon = function MinecraftNeutralIcon(secondaryColor
   let obj = { children: null };
   obj = { source: registerAsset, color, style };
   const merged1 = Object.assign(merged);
-  const items = [callback(BaseIconImage.BaseIconImage, obj), , ];
+  const items = [callback(BaseIconImage.BaseIconImage, obj), ,];
   obj = { source: registerAsset2, color: str, style: items2 };
   const items1 = [style];
   items2 = [];

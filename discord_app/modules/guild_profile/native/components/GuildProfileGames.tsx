@@ -13,7 +13,11 @@ function ClickableGameIcon(game) {
   dependencyMap = undefined;
   let React;
   ({ style, activityLevel } = game);
-  const obj = { gameId: game.id, source: game(8812).GameProfileSources.GuildProfileGames, trackEntryPointImpression: true };
+  const obj = {
+    gameId: game.id,
+    source: game(8812).GameProfileSources.GuildProfileGames,
+    trackEntryPointImpression: true,
+  };
   const tmp3Result = onPressFallback(8801)(obj);
   dependencyMap = tmp3Result;
   React = tmp5;
@@ -32,15 +36,30 @@ function ClickableGameIcon(game) {
 function FavoriteGame(activityLevel) {
   const game = activityLevel.game;
   let obj = { style: createCacheKey().favoriteGame, children: null };
-  const items = [callback(ClickableGameIcon, { game, activityLevel: activityLevel.activityLevel }), ];
+  const items = [callback(ClickableGameIcon, { game, activityLevel: activityLevel.activityLevel })];
   obj = { variant: "text-sm/medium", color: "text-subtle", children: game.name };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { display: "flex", flexDirection: "row", gap: 8 }, favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, lastItem: { position: "relative", width: 32, height: 32 }, lastItemOverlay: null, lastItemImage: null, lastItemText: null };
-createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, borderRadius: ThemesDefault.radii.xs };
+createCacheKey = {
+  container: { display: "flex", flexDirection: "row", gap: 8 },
+  favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 },
+  lastItem: { position: "relative", width: 32, height: 32 },
+  lastItemOverlay: null,
+  lastItemImage: null,
+  lastItemText: null,
+};
+createCacheKey = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM,
+  borderRadius: ThemesDefault.radii.xs,
+};
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { position: "absolute" };
 createCacheKey[5] = { display: "flex", justifyContent: "center", alignItems: "center", width: 32, height: 32 };
@@ -86,7 +105,7 @@ export default function GuildProfileGames(profile) {
         obj[0] = closure_3.lastItemImage;
         obj[1] = tmp;
         obj[2] = gameActivity[tmp.id];
-        const items = [callback(lastGameToDisplay(remainingGames[7]), obj), , ];
+        const items = [callback(lastGameToDisplay(remainingGames[7]), obj), ,];
         obj1 = { style: null };
         obj1[0] = closure_3.lastItemOverlay;
         items[1] = callback(gameActivity, obj1);
@@ -127,18 +146,28 @@ export default function GuildProfileGames(profile) {
         obj1 = { style: null, onPress: null, children: null };
         obj1[0] = tmp3.container;
         obj1[1] = tmp8;
-        const items1 = [gamesToDisplay.map((game) => callback(lastGameToDisplay(remainingGames[7]), { game, activityLevel: gameActivity[game.id] }, game.id)), memo];
+        const items1 = [
+          gamesToDisplay.map((game) =>
+            callback(lastGameToDisplay(remainingGames[7]), { game, activityLevel: gameActivity[game.id] }, game.id),
+          ),
+          memo,
+        ];
         obj1[2] = items1;
         tmp16Result = tmp16(profile(remainingGames[14]).PressableHighlight, obj1);
       } else {
         obj = { style: null, children: null };
         obj[0] = tmp3.container;
-        const items2 = [gamesToDisplay.map((game) => callback(closure_1_8, { game, activityLevel: gameActivity[game.id], onPressFallback: closure_6 }, game.id)), memo];
+        const items2 = [
+          gamesToDisplay.map((game) =>
+            callback(closure_1_8, { game, activityLevel: gameActivity[game.id], onPressFallback: closure_6 }, game.id),
+          ),
+          memo,
+        ];
         obj[1] = items2;
         tmp16Result = tmp16(gameActivity, obj);
       }
     }
   }
   return tmp9;
-};
+}
 export const useStyles = createCacheKey;

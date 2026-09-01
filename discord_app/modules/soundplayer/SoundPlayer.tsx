@@ -24,7 +24,13 @@ import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 function MuteDeafen() {
   const items = [closure_13, closure_16];
-  const f101390 = () => ({ inVoiceChannel: null != voiceChannelId.getVoiceChannelId(), selfMute: closure_13.isSelfMute(), selfDeaf: closure_13.isSelfDeaf(), audioPermissionReady: closure_13.isNativeAudioPermissionReady(), shouldSkipMuteUnmuteSound: closure_13.shouldSkipMuteUnmuteSound() });
+  const f101390 = () => ({
+    inVoiceChannel: null != voiceChannelId.getVoiceChannelId(),
+    selfMute: closure_13.isSelfMute(),
+    selfDeaf: closure_13.isSelfDeaf(),
+    audioPermissionReady: closure_13.isNativeAudioPermissionReady(),
+    shouldSkipMuteUnmuteSound: closure_13.shouldSkipMuteUnmuteSound(),
+  });
   const f101391 = (selfDeaf) => {
     ({ inVoiceChannel, selfMute, selfDeaf } = arg1);
     if (inVoiceChannel) {
@@ -70,7 +76,10 @@ function MuteDeafen() {
 }
 function Camera() {
   const items = [closure_13, closure_16];
-  const f101392 = () => ({ videoEnabled: videoEnabled.isVideoEnabled(), inVoiceChannel: null != voiceChannelId.getVoiceChannelId() });
+  const f101392 = () => ({
+    videoEnabled: videoEnabled.isVideoEnabled(),
+    inVoiceChannel: null != voiceChannelId.getVoiceChannelId(),
+  });
   const f101393 = (videoEnabled, videoEnabled2) => {
     videoEnabled = videoEnabled2.videoEnabled;
     if (videoEnabled.videoEnabled !== videoEnabled) {
@@ -119,7 +128,14 @@ function RTCConnect() {
     }
     const wasEverRtcConnected = store2.getWasEverRtcConnected();
     const state = store2.getState();
-    const obj = { channelType: type, guildId, connected: state === constants.RTC_CONNECTED, connectHasStarted: null, awaitingRemote: null, connectedRemote: null };
+    const obj = {
+      channelType: type,
+      guildId,
+      connected: state === constants.RTC_CONNECTED,
+      connectHasStarted: null,
+      awaitingRemote: null,
+      connectedRemote: null,
+    };
     let tmp6 = !wasEverRtcConnected;
     if (!wasEverRtcConnected) {
       tmp6 = state !== tmp5.DISCONNECTED;
@@ -391,7 +407,16 @@ function VoiceChannel() {
       singleActiveStreamKey = encodeStreamKeyResult;
       const obj2 = currentUserId(f101406[23]);
     }
-    return { channelType, voiceChannelId, voiceChannelUserCount, streamingUserIds, singleActiveStreamKey, singleActiveStreamViewerCount, currentUserId, allActiveStreams };
+    return {
+      channelType,
+      voiceChannelId,
+      voiceChannelUserCount,
+      streamingUserIds,
+      singleActiveStreamKey,
+      singleActiveStreamViewerCount,
+      currentUserId,
+      allActiveStreams,
+    };
   };
   const f101407 = (voiceChannelId) => {
     closure_0 = voiceChannelId;
@@ -485,7 +510,9 @@ function ActivitySounds() {
     const channelId = store.getChannelId();
     let obj = connectedActivityLocation;
     connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
-    const embeddedActivityLocationChannelId = items(f101408[24]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
+    const embeddedActivityLocationChannelId = items(f101408[24]).getEmbeddedActivityLocationChannelId(
+      connectedActivityLocation,
+    );
     id = id.getId();
     const obj2 = items(f101408[24]);
     if (obj3.isNotNullish(channelId)) {
@@ -532,12 +559,29 @@ function ActivitySounds() {
     if (!result1) {
       result1 = result;
     }
-    obj = { connectedActivityLocation, voiceChannelId, currentUserId: id, channelActivities: embeddedActivitiesForChannel, connectedChannelActivities: embeddedActivitiesForChannel2, userConnectedActivity: selfEmbeddedActivityForLocation, voiceChannelActivities: embeddedActivitiesForChannel1, hasFrame: callback(mainFrame), inVibegrationsChannel: result1 };
+    obj = {
+      connectedActivityLocation,
+      voiceChannelId,
+      currentUserId: id,
+      channelActivities: embeddedActivitiesForChannel,
+      connectedChannelActivities: embeddedActivitiesForChannel2,
+      userConnectedActivity: selfEmbeddedActivityForLocation,
+      voiceChannelActivities: embeddedActivitiesForChannel1,
+      hasFrame: callback(mainFrame),
+      inVibegrationsChannel: result1,
+    };
     return obj;
   };
   const f101409 = (voiceChannelActivities) => {
     ({ connectedActivityLocation, currentUserId: items, userConnectedActivity } = arg1);
-    ({ voiceChannelActivities, hasFrame, voiceChannelId, channelActivities, connectedChannelActivities, inVibegrationsChannel } = arg1);
+    ({
+      voiceChannelActivities,
+      hasFrame,
+      voiceChannelId,
+      channelActivities,
+      connectedChannelActivities,
+      inVibegrationsChannel,
+    } = arg1);
     const someResult = voiceChannelActivities.some((applicationId) => {
       applicationId = undefined;
       if (userConnectedActivity != null) {
@@ -630,7 +674,9 @@ function ActivitySounds() {
         }
         str3 = str;
       }
-      tmp10 = voiceChannelActivities.connectedChannelActivities.length < connectedChannelActivities.length && voiceChannelActivities.channelActivities.length < channelActivities.length;
+      tmp10 =
+        voiceChannelActivities.connectedChannelActivities.length < connectedChannelActivities.length &&
+        voiceChannelActivities.channelActivities.length < channelActivities.length;
       const tmp2Result5 = tmp2(tmp3[25]);
     }
     let tmp14 = null != str3;
@@ -719,7 +765,18 @@ let result = require("set").fileFinishedImporting("modules/soundplayer/SoundPlay
 
 export default function SoundPlayer() {
   const obj = { children: null };
-  const items = [callback(MuteDeafen, {}), callback(Camera, {}), callback(RTCConnect, {}), callback(Speaking, {}), callback(SelfMutedTemporarily, {}), callback(UserHasBeenMoved, {}), callback(VoiceChannel, {}), callback(UserInvitedToSpeak, {}), callback(ActivitySounds, {}), callback(PriorityVAD, {})];
+  const items = [
+    callback(MuteDeafen, {}),
+    callback(Camera, {}),
+    callback(RTCConnect, {}),
+    callback(Speaking, {}),
+    callback(SelfMutedTemporarily, {}),
+    callback(UserHasBeenMoved, {}),
+    callback(VoiceChannel, {}),
+    callback(UserInvitedToSpeak, {}),
+    callback(ActivitySounds, {}),
+    callback(PriorityVAD, {}),
+  ];
   obj[0] = items;
   return callback2(closure_26, obj);
-};
+}

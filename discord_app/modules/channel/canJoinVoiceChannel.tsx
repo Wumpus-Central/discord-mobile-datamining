@@ -10,7 +10,10 @@ const result = set.fileFinishedImporting("modules/channel/canJoinVoiceChannel.ts
 export default function canJoinVoiceChannel(type, canBasicChannel) {
   let canBasicChannelResult = isPrivate(type.type);
   if (!canBasicChannelResult) {
-    canBasicChannelResult = canBasicChannel.canBasicChannel(BasicPermissions.CONNECT | BasicPermissions.VIEW_CHANNEL, type);
+    canBasicChannelResult = canBasicChannel.canBasicChannel(
+      BasicPermissions.CONNECT | BasicPermissions.VIEW_CHANNEL,
+      type,
+    );
   }
   return canBasicChannelResult;
-};
+}

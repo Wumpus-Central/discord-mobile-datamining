@@ -26,8 +26,13 @@ class StreamTextOverlay {
     tmp4 = jsx;
     tmp5 = closure_0;
     tmp6 = closure_2;
-    obj = { style: tmp.screenMessageText, variant: "text-md/semibold", color: "text-overlay-light", children: global.title };
-    items = [, ];
+    obj = {
+      style: tmp.screenMessageText,
+      variant: "text-md/semibold",
+      color: "text-overlay-light",
+      children: global.title,
+    };
+    items = [,];
     items[0] = jsx(require("Text").Text, obj);
     tmp4Result = null;
     if (null != subtext) {
@@ -44,8 +49,22 @@ class StreamTextOverlay {
 let c3 = importAllResult;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-let obj = { container: null, screenMessageContainer: null, screenMessageText: null, screenMessageSubtext: null, statusWrapper: null, liveTag: null };
-obj = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: ThemesDefault.colors.BLACK };
+let obj = {
+  container: null,
+  screenMessageContainer: null,
+  screenMessageText: null,
+  screenMessageSubtext: null,
+  statusWrapper: null,
+  liveTag: null,
+};
+obj = {
+  flex: 1,
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+  width: "100%",
+  backgroundColor: ThemesDefault.colors.BLACK,
+};
 obj[0] = obj;
 createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -57,7 +76,17 @@ createCacheKey.backgroundColor = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_r
 obj[1] = createCacheKey;
 obj[2] = { lineHeight: 18 };
 obj[3] = { color: ThemesDefault.unsafe_rawColors.PRIMARY_300, fontSize: 14, lineHeight: 18, textAlign: "center" };
-let obj3 = { position: "absolute", bottom: 8, right: 8, backgroundColor: null, borderRadius: null, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
+let obj3 = {
+  position: "absolute",
+  bottom: 8,
+  right: 8,
+  backgroundColor: null,
+  borderRadius: null,
+  width: 24,
+  height: 24,
+  justifyContent: "center",
+  alignItems: "center",
+};
 obj3[3] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj3[4] = ThemesDefault.radii.md;
 obj[4] = obj3;
@@ -114,7 +143,14 @@ let closure_15 = importAllResult.memo((participant) => {
         }
       }
       if (null != tmp5) {
-        const obj4 = { stream: null, removeCloseButton: null, removeSplashImage: null, type: null, style: null, avError: null };
+        const obj4 = {
+          stream: null,
+          removeCloseButton: null,
+          removeSplashImage: null,
+          type: null,
+          style: null,
+          avError: null,
+        };
         obj4[0] = stateFromStores;
         obj4[1] = removeEmptyStateButton;
         obj4[2] = removeEmptyStateImage;
@@ -124,7 +160,15 @@ let closure_15 = importAllResult.memo((participant) => {
         return callback(tmp4(9566), obj4);
       } else {
         id = id.getId();
-        const obj5 = { resizeMode: null, streamId: null, gestureEnabled: null, renderTag: null, videoSpinnerContext: null, userId: null, paused: null };
+        const obj5 = {
+          resizeMode: null,
+          streamId: null,
+          gestureEnabled: null,
+          renderTag: null,
+          videoSpinnerContext: null,
+          userId: null,
+          paused: null,
+        };
         obj5[0] = resizeMode;
         obj5[1] = streamId;
         obj5[2] = gestureEnabled;
@@ -151,7 +195,13 @@ let closure_15 = importAllResult.memo((participant) => {
 });
 let closure_16 = importAllResult.memo((arg0) => {
   ({ onFullScreen, style } = arg0);
-  let obj = { accessibilityRole: "button", onPress: onFullScreen, style: items, hitSlop: { top: 4, left: 4, right: 4, bottom: 4 }, children: null };
+  let obj = {
+    accessibilityRole: "button",
+    onPress: onFullScreen,
+    style: items,
+    hitSlop: { top: 4, left: 4, right: 4, bottom: 4 },
+    children: null,
+  };
   items = [callback2().statusWrapper, style];
   obj = { source: registerAssetDefault, size: Button.Icon.Sizes.SMALL, color: ThemesDefault.unsafe_rawColors.WHITE };
   obj[4] = callback(Button.Icon, obj);
@@ -188,10 +238,23 @@ export default function StreamTile(participant) {
   }, items1);
   const tmp3 = callback2();
   ({ streamId, user } = participant);
-  let obj = { gesture: onSingleTap(onDoubleTap[20])({ onSingleTapStart: callback, onDoubleTapStart: callback1 }), children: null };
+  let obj = {
+    gesture: onSingleTap(onDoubleTap[20])({ onSingleTapStart: callback, onDoubleTapStart: callback1 }),
+    children: null,
+  };
   obj = { style: items2, children: null };
   items2 = [tmp3.container, style];
-  const items3 = [callback(closure_15, { streamId, participant, user, resizeMode: CONTAIN, gestureEnabled, removeEmptyStateButton, removeEmptyStateImage }), ];
+  const items3 = [
+    callback(closure_15, {
+      streamId,
+      participant,
+      user,
+      resizeMode: CONTAIN,
+      gestureEnabled,
+      removeEmptyStateButton,
+      removeEmptyStateImage,
+    }),
+  ];
   let tmp7Result = null != onFullScreen;
   if (tmp7Result) {
     obj = { onFullScreen: null, style: null };
@@ -203,5 +266,5 @@ export default function StreamTile(participant) {
   obj[1] = items3;
   obj[1] = closure_11(closure_4, obj);
   return callback(participant(onDoubleTap[21]).GestureDetector, obj);
-};
+}
 export { StreamTextOverlay };

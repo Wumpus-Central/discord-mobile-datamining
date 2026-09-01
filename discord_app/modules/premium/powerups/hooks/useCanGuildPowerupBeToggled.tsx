@@ -12,10 +12,13 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
   importDefault = arg1;
   dependencyMap = arg2;
   const items = [closure_4];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => stateForGuild.getStateForGuild(closure_0));
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => stateForGuild.getStateForGuild(closure_0),
+  );
   const tmp2 = usePowerupActiveStatusDefault(arg0, arg1);
   closure_4 = tmp2;
-  const items1 = [stateFromStores, , , , ];
+  const items1 = [stateFromStores, , , ,];
   ({ skuId: arr2[1], dependencies: arr2[2] } = arg1);
   items1[3] = arg2;
   items1[4] = tmp2.type;
@@ -71,4 +74,4 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
     }
     tmp = stateFromStores;
   }, items1);
-};
+}

@@ -46,10 +46,13 @@ const memoResult = importAllResult.memo(function CircleWithCutout(arg0) {
   items = [obj];
   obj1 = { children: null };
   const obj2 = { id: "mask", children: null };
-  const items1 = [callback(inlineStyles.Rect, { width: result2, height: result2, fill: "white" }), callback(inlineStyles.Circle, { cx: diff, cy: tmp8, r: cutoutRadius * num, fill: "black" })];
+  const items1 = [
+    callback(inlineStyles.Rect, { width: result2, height: result2, fill: "white" }),
+    callback(inlineStyles.Circle, { cx: diff, cy: tmp8, r: cutoutRadius * num, fill: "black" }),
+  ];
   obj2[1] = items1;
   obj1[0] = callback2(inlineStyles.Mask, obj2);
-  const items2 = [callback(inlineStyles.Defs, obj1), ];
+  const items2 = [callback(inlineStyles.Defs, obj1)];
   const obj4 = { cx: result, cy: result, r: result, fill, mask: null };
   let str;
   if (enableCutout) {

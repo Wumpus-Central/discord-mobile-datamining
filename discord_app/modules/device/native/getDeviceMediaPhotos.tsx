@@ -42,4 +42,4 @@ export default function getDeviceMediaPhotos(arg0) {
     photos1.then(onFetched).catch(onError);
     const nextPromise1 = photos1.then(onFetched);
   }
-};
+}

@@ -12,8 +12,7 @@ let c5 = 0;
 let c6 = false;
 let c7 = false;
 const Store = initializeDefault.Store;
-class FriendSuggestionStore extends Store {
-}
+class FriendSuggestionStore extends Store {}
 const prototype = FriendSuggestionStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3);
@@ -120,7 +119,7 @@ const friendSuggestionStore = new FriendSuggestionStore(dispatcherDefault, {
   LOAD_FRIEND_SUGGESTIONS_FAILURE: function handleLoadFriendSuggestionsFailure() {
     c6 = false;
     closure_4 = {};
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/friend_suggestions/FriendSuggestionStore.tsx");
 

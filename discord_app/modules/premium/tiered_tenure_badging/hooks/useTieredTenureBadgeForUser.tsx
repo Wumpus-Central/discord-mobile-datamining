@@ -2,7 +2,9 @@
 import closure_2 from "../../../user_profile/UserProfileStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx",
+);
 
 export const useTieredTenureBadgeForUser = function useTieredTenureBadgeForUser(id) {
   const _require = id;

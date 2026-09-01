@@ -25,7 +25,15 @@ function formatCategory(id) {
   return obj;
 }
 function formatSetting(item10022, arg1) {
-  const obj = { id: item10022.string_id, groupId: item10022.category, name: null, importance: null, ringtone: null, badge: null, vibrate: null };
+  const obj = {
+    id: item10022.string_id,
+    groupId: item10022.category,
+    name: null,
+    importance: null,
+    ringtone: null,
+    badge: null,
+    vibrate: null,
+  };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(item10022.title);
   if (arg1 != null) {
@@ -142,12 +150,23 @@ function buildChannelsAndMapping() {
       return items;
     }),
     channels: items,
-    inheritedImportances: obj2
+    inheritedImportances: obj2,
   };
   return obj;
 }
 ({ NOTIF_CATEGORIES: c3, NOTIF_SETTING_MAPPING: c4, NOTIF_SETTINGS: c5 } = items2);
-let closure_6 = { NONE: 0, [0]: "NONE", MIN: 1, [1]: "MIN", LOW: 2, [2]: "LOW", DEFAULT: 3, [3]: "DEFAULT", HIGH: 4, [4]: "HIGH" };
+let closure_6 = {
+  NONE: 0,
+  [0]: "NONE",
+  MIN: 1,
+  [1]: "MIN",
+  LOW: 2,
+  [2]: "LOW",
+  DEFAULT: 3,
+  [3]: "DEFAULT",
+  HIGH: 4,
+  [4]: "HIGH",
+};
 let result = set.fileFinishedImporting("modules/notifications/native/NotifSettingsUtils.android.tsx");
 
 export default {
@@ -191,5 +210,5 @@ export default {
       }
     }
     return false;
-  }
+  },
 };

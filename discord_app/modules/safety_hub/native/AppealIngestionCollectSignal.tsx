@@ -13,7 +13,14 @@ function AppealSignalRadioRow(signal) {
   let obj = signal(4205);
   const radioA11yNative = obj.useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  obj = { style: signal.rowStyle, label: null, onPress: null, trailing: null, accessibilityRole: null, accessibilityState: null };
+  obj = {
+    style: signal.rowStyle,
+    label: null,
+    onPress: null,
+    trailing: null,
+    accessibilityRole: null,
+    accessibilityState: null,
+  };
   obj = { text: signal(8689).getAppealSignalDisplayText(signal) };
   obj[1] = callback(signal(8363).FormRow.Label, obj);
   obj[2] = function onPress() {
@@ -27,7 +34,13 @@ function AppealSignalRadioRow(signal) {
 noopAll;
 ({ AppealIngestionSignal: c4, AppealIngestionSignalOrder: c5 } = SafetyHubView);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { flex: 1, paddingHorizontal: 16 }, form: null, formRow: null, formSection: null, disclaimer: null };
+createCacheKey = {
+  container: { flex: 1, paddingHorizontal: 16 },
+  form: null,
+  formRow: null,
+  formSection: null,
+  disclaimer: null,
+};
 createCacheKey = { marginBottom: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -60,7 +73,11 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
       obj[1] = function onClose() {
         return callback(4445).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
       };
-      lib(tmp2[11]).openLazy(isDsaEligible(tmp2[13])(tmp2[12], tmp2.paths), "AppealIngestionFreeTextAppealReasonActionSheet", obj);
+      lib(tmp2[11]).openLazy(
+        isDsaEligible(tmp2[13])(tmp2[12], tmp2.paths),
+        "AppealIngestionFreeTextAppealReasonActionSheet",
+        obj,
+      );
       const tmpResult = lib(tmp2[11]);
     }
   }
@@ -72,11 +89,28 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   const intl2 = isDsaEligible(1236).intl;
   const stringResult = intl.string(isDsaEligible(1236).t["C5q+pW"]);
   obj = { children: null };
-  const items = [callback(isDsaEligible(11469).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(isDsaEligible(1236).t.VEcRhw) }), ];
+  const items = [
+    callback(isDsaEligible(11469).AppealIngestionModalHeader, {
+      headerText: stringResult,
+      subHeaderText: intl2.string(isDsaEligible(1236).t.VEcRhw),
+    }),
+  ];
   obj = { style: tmp.container, children: null };
   obj1 = { style: tmp.form, children: null };
   const stringResult1 = intl2.string(isDsaEligible(1236).t.VEcRhw);
-  const items1 = [callback(isDsaEligible(8363).FormSection, { sectionBodyStyle: tmp.formSection, accessibilityRole: "radiogroup", children: closure_5.map((signal) => closure_1_6(closure_1_9, { signal, selected: signal === closure_2, rowStyle: lib.formRow, onSelect: handleAppealSignalSelect }, "formrow-" + arg1)) }), ];
+  const items1 = [
+    callback(isDsaEligible(8363).FormSection, {
+      sectionBodyStyle: tmp.formSection,
+      accessibilityRole: "radiogroup",
+      children: closure_5.map((signal) =>
+        closure_1_6(
+          closure_1_9,
+          { signal, selected: signal === closure_2, rowStyle: lib.formRow, onSelect: handleAppealSignalSelect },
+          "formrow-" + arg1,
+        ),
+      ),
+    }),
+  ];
   const obj3 = { style: tmp.disclaimer, children: null };
   const obj4 = { variant: "text-sm/normal", children: null };
   const intl3 = isDsaEligible(1236).intl;
@@ -88,4 +122,4 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   items[1] = callback(handleAppealSignalSelect, obj);
   obj[0] = items;
   return callback2(isDsaEligible(11469).AppealIngestionModalScreen, obj);
-};
+}

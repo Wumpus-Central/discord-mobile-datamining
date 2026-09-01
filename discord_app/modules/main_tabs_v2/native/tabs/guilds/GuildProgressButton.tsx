@@ -39,9 +39,11 @@ export default function GuildProgressButton(guild) {
   obj[3] = callback;
   obj[4] = jsx(completed(12154), { percent: percentComplete });
   return jsx(guild(8365).RowButton, { source: completed(15787) });
-};
+}
 export const getScaledGuildProgressButtonHeight = function getScaledGuildProgressButtonHeight(fontScale) {
-  const refreshToken = useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.TABLE_ROW_PADDING);
+  const refreshToken = useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(
+    ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+  );
   const obj = useIsMobileVisualRefreshExperimentEnabled;
   const sum = refreshToken + map.scaleTextLineHeight("text-md/semibold", fontScale);
   const obj2 = map;

@@ -7,7 +7,9 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 const require = arg1;
 let closure_7 = createCacheKey.createStyles({ container: { flex: 1 } });
-let result = require("set").fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorPreviewScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/search/native/components/navigator/SearchNavigatorPreviewScreen.tsx",
+);
 
 export default function SearchNavigatorPreviewScreen() {
   let obj = navigation(searchContext[5]);
@@ -40,6 +42,16 @@ export default function SearchNavigatorPreviewScreen() {
       return jsx(channelId(tmp2[8]), { channelId: null, onBeforeJumpToMessage: null });
     }
   }
-  obj = { horizontal: true, scrollEnabled: false, bounces: false, contentContainerStyle: tmp.container, children: jsx(channelId(tmp2[8]), { channelId, onBeforeJumpToMessage: callback }) };
-  return <ScrollView horizontal scrollEnabled={false} bounces={false} contentContainerStyle={tmp.container}>{jsx(channelId(tmp2[8]), { channelId, onBeforeJumpToMessage: callback })}</ScrollView>;
-};
+  obj = {
+    horizontal: true,
+    scrollEnabled: false,
+    bounces: false,
+    contentContainerStyle: tmp.container,
+    children: jsx(channelId(tmp2[8]), { channelId, onBeforeJumpToMessage: callback }),
+  };
+  return (
+    <ScrollView horizontal scrollEnabled={false} bounces={false} contentContainerStyle={tmp.container}>
+      {jsx(channelId(tmp2[8]), { channelId, onBeforeJumpToMessage: callback })}
+    </ScrollView>
+  );
+}

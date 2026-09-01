@@ -14,7 +14,9 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 require = arg1;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { position: "absolute", bottom: 0, left: 0, right: 0 } });
-let closure_11 = { code: "function YouBarFloatingShadeTsx1(){const{gradientHeight,drawerWidth}=this.__closure;return{height:gradientHeight,opacity:1,width:drawerWidth};}" };
+let closure_11 = {
+  code: "function YouBarFloatingShadeTsx1(){const{gradientHeight,drawerWidth}=this.__closure;return{height:gradientHeight,opacity:1,width:drawerWidth};}",
+};
 const memoResult = importAllResult.memo(function YouBarFloatingShade() {
   const tmp = callback3();
   let obj = useYouBarTotalHeight;
@@ -62,12 +64,19 @@ const memoResult = importAllResult.memo(function YouBarFloatingShade() {
   }
   obj = { children: null };
   const items1 = [tmp.container, animatedStyle, { height: youBarTotalHeight, opacity: 0 }];
-  const items2 = [callback(View, { style: items1, pointerEvents: "box-only" }), , ];
-  const items3 = [tmp.container, ];
+  const items2 = [callback(View, { style: items1, pointerEvents: "box-only" }), ,];
+  const items3 = [tmp.container];
   obj = { bottom: sum / 2, height: sum / 2, width };
   items3[1] = obj;
   const items4 = [str2, str];
-  items2[1] = callback(width(4940), { style: items3, colors: items4, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1], pointerEvents: "none" });
+  items2[1] = callback(width(4940), {
+    style: items3,
+    colors: items4,
+    start: { x: 0, y: 0 },
+    end: { x: 0, y: 1 },
+    locations: [0, 1],
+    pointerEvents: "none",
+  });
   const items5 = [tmp.container, { width, height: sum / 2, backgroundColor: str }];
   items2[2] = callback(View, { style: items5 });
   obj[0] = items2;

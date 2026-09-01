@@ -9,4 +9,4 @@ export default function closeCustomKeyboard(channelId) {
   if (bestActiveInputForChannelId != null) {
     bestActiveInputForChannelId.closeCustomKeyboard();
   }
-};
+}

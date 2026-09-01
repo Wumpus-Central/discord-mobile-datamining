@@ -50,11 +50,15 @@ const memoResult = importAllResult.memo(function ChatInputGuardReadonly(guildId)
   });
   const items2 = [closure_7];
   const items3 = [stateFromStoresArray];
-  stateFromStoresArray1 = guildId(stateFromStores[12]).useStateFromStoresArray(items2, () => {
-    const found = stateFromStoresArray.filter(guildId(stateFromStores[13]).isNotNullish);
-    const found1 = found.filter((type) => callback(type.type));
-    return found1.filter((arg0) => closure_7.can(constants.SEND_MESSAGES, arg0));
-  }, items3);
+  stateFromStoresArray1 = guildId(stateFromStores[12]).useStateFromStoresArray(
+    items2,
+    () => {
+      const found = stateFromStoresArray.filter(guildId(stateFromStores[13]).isNotNullish);
+      const found1 = found.filter((type) => callback(type.type));
+      return found1.filter((arg0) => closure_7.can(constants.SEND_MESSAGES, arg0));
+    },
+    items3,
+  );
   if (null != stateFromStores) {
     obj = { text: null, handlePress: null };
     const intl2 = tmp(tmp2[14]).intl;
@@ -104,7 +108,12 @@ const memoResult = importAllResult.memo(function ChatInputGuardReadonly(guildId)
   const intl3 = tmp(tmp2[14]).intl;
   obj4[2] = intl3.string(guildId(stateFromStores[14]).t["9cs5LM"]);
   obj4[3] = text;
-  return jsx(importDefault(stateFromStores[19]), { type: "simple-action", actionOnPress: handlePress, actionLabel: null, message: null });
+  return jsx(importDefault(stateFromStores[19]), {
+    type: "simple-action",
+    actionOnPress: handlePress,
+    actionLabel: null,
+    message: null,
+  });
 });
 const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardReadonly.tsx");
 

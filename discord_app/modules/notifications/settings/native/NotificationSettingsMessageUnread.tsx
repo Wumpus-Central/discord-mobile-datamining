@@ -19,16 +19,16 @@ function NotificationSettingsMessageUnread(onPress) {
   obj1 = { variant: "text-sm/semibold", color: "text-default", style: tmp.headerTitle, children: null };
   const intl = require("../../../../intl/index.native.tsx").intl;
   obj1[3] = intl.string(require("../../../../intl/index.native.tsx").t.Tqd1Af);
-  const items = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj1), ];
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj1)];
   const obj2 = { variant: "text-xs/semibold", color: "text-default", children: null };
   const intl2 = require("../../../../intl/index.native.tsx").intl;
   obj2[2] = intl2.string(require("../../../../intl/index.native.tsx").t.RpQgm5);
   items[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj2);
   obj[1] = items;
-  const items1 = [callback2(View, obj), ];
+  const items1 = [callback2(View, obj)];
   const obj3 = { onPress: onPress.onCustomize, activeOpacity: 0.6, children: null };
   const obj4 = { style: tmp.card, children: null };
-  const items2 = [callback(NotificationSettingsMockChannelsDefault, { unreadSetting: onPress.setting }), , ];
+  const items2 = [callback(NotificationSettingsMockChannelsDefault, { unreadSetting: onPress.setting }), ,];
   const obj6 = { variant: "text-sm/medium", style: tmp.label, children: null };
   let str;
   if (found != null) {
@@ -55,14 +55,22 @@ function NotificationSettingsMessageUnread(onPress) {
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { card: null, cta: null, label: null, header: null, headerTitle: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 20, borderWidth: 1, padding: 14 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: 20,
+  borderWidth: 1,
+  padding: 14,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: 4, textAlign: "center" };
 createCacheKey[2] = { marginTop: 8, textAlign: "center" };
 createCacheKey[3] = { marginBottom: 8 };
 createCacheKey[4] = { marginBottom: 4 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnread.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/notifications/settings/native/NotificationSettingsMessageUnread.tsx",
+);
 
 export const NotificationSettingsGuildMessageUnread = function NotificationSettingsGuildMessageUnread(style) {
   const _require = style;
@@ -73,7 +81,7 @@ export const NotificationSettingsGuildMessageUnread = function NotificationSetti
       let obj = closure_1_1(closure_1_2[11]);
       obj = { guildId: style.guildId };
       obj.openLazy(style(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), "MessageUnreadActionSheet", obj);
-    }
+    },
   };
   return callback(NotificationSettingsMessageUnread, obj);
 };
@@ -86,7 +94,7 @@ export const NotificationSettingsChannelMessageUnread = function NotificationSet
       let obj = closure_1_1(closure_1_2[11]);
       obj = { channel: style.channel };
       obj.openLazy(style(closure_1_2[13])(closure_1_2[15], closure_1_2.paths), "MessageUnreadActionSheet", obj);
-    }
+    },
   };
   return callback(NotificationSettingsMessageUnread, obj);
 };

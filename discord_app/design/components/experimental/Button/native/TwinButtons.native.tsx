@@ -17,7 +17,9 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
   container[1] = arg0 ? space.PX_8 : space.PX_12;
   return { container, button: { flex: 1 } };
 });
-const result = require("set").fileFinishedImporting("design/components/experimental/Button/native/TwinButtons.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/experimental/Button/native/TwinButtons.native.tsx",
+);
 
 export const TwinButtons = function TwinButtons(children) {
   let _require;
@@ -38,20 +40,24 @@ export const TwinButtons = function TwinButtons(children) {
         }
       }
       return tmp;
-    })
+    }),
   };
   Children = React.Children;
-  return <View style={tmp.container}>{Children.map(arg0.children, (type) => {
-    let tmp = null;
-    if (closure_1_3.isValidElement(type)) {
-      tmp = null;
-      if (type.type === lib(closure_1_2[6]).Button) {
-        const obj = { style: null, children: null };
-        obj[0] = lib.button;
-        obj[1] = type;
-        tmp = closure_1_5(closure_1_4, obj);
-      }
-    }
-    return tmp;
-  })}</View>;
+  return (
+    <View style={tmp.container}>
+      {Children.map(arg0.children, (type) => {
+        let tmp = null;
+        if (closure_1_3.isValidElement(type)) {
+          tmp = null;
+          if (type.type === lib(closure_1_2[6]).Button) {
+            const obj = { style: null, children: null };
+            obj[0] = lib.button;
+            obj[1] = type;
+            tmp = closure_1_5(closure_1_4, obj);
+          }
+        }
+        return tmp;
+      })}
+    </View>
+  );
 };

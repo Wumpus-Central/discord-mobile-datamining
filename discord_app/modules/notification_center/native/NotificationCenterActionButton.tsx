@@ -7,7 +7,9 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/notification_center/native/NotificationCenterActionButton.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/notification_center/native/NotificationCenterActionButton.tsx",
+);
 
 export default function NotificationCenterActionButton() {
   const obj = {
@@ -18,7 +20,7 @@ export default function NotificationCenterActionButton() {
       return callback2(paths[4]).openLazy(callback(paths[6])(paths[5], paths.paths), "NotificationCenterActionSheet");
     },
     accessibilityLabel: null,
-    maxFontSizeMultiplier: 2
+    maxFontSizeMultiplier: 2,
   };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t["UKOtz+"]);
@@ -30,6 +32,6 @@ export default function NotificationCenterActionButton() {
       return callback2(paths[4]).openLazy(callback(paths[6])(paths[5], paths.paths), "NotificationCenterActionSheet");
     },
     accessibilityLabel: null,
-    maxFontSizeMultiplier: 2
+    maxFontSizeMultiplier: 2,
   });
-};
+}

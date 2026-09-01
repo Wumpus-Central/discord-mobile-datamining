@@ -15,25 +15,53 @@ noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { content: null, headerImage: null, title: null, subtitle: null, subtitleText: null, trailing: null };
-createCacheKey = { alignItems: "center", marginTop: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.lg };
+createCacheKey = {
+  alignItems: "center",
+  marginTop: ThemesDefault.space.PX_24,
+  marginHorizontal: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_12,
+  backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+  borderRadius: ThemesDefault.radii.lg,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 135, width: 216, marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[1] = {
+  height: 135,
+  width: 216,
+  marginTop: ThemesDefault.space.PX_24,
+  marginBottom: ThemesDefault.space.PX_16,
+};
 let obj1 = { height: 135, width: 216, marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_8, width: "100%", textAlign: "center" };
 let obj2 = { marginBottom: ThemesDefault.space.PX_8, width: "100%", textAlign: "center" };
-createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_48, width: "100%", alignContent: "center" };
+createCacheKey[3] = {
+  marginBottom: ThemesDefault.space.PX_24,
+  paddingHorizontal: ThemesDefault.space.PX_48,
+  width: "100%",
+  alignContent: "center",
+};
 createCacheKey[4] = { textAlign: "center" };
-const obj3 = { marginBottom: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_48, width: "100%", alignContent: "center" };
-createCacheKey[5] = { width: "100%", paddingBottom: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_12 };
+const obj3 = {
+  marginBottom: ThemesDefault.space.PX_24,
+  paddingHorizontal: ThemesDefault.space.PX_48,
+  width: "100%",
+  alignContent: "center",
+};
+createCacheKey[5] = {
+  width: "100%",
+  paddingBottom: ThemesDefault.space.PX_4,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+};
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { width: "100%", paddingBottom: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_12 };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsContactSyncEmptyState.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/friends/components/AddFriendsContactSyncEmptyState.tsx",
+);
 
 export default function AddFriendsContactSyncEmptyState() {
   const tmp = callback3();
   let obj = { style: tmp.content, children: null };
   obj = { resizeMode: "contain", style: tmp.headerImage, source: registerAssetDefault };
-  const items = [callback(closure_4, obj), , , ];
+  const items = [callback(closure_4, obj), , ,];
   obj = { style: tmp.title, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["/G+nci"]);
@@ -55,4 +83,4 @@ export default function AddFriendsContactSyncEmptyState() {
   items[3] = callback(closure_3, obj4);
   obj[1] = items;
   return callback2(closure_3, obj);
-};
+}

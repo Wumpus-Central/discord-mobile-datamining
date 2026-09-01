@@ -15,7 +15,9 @@ function measureInWindowForFWO(value) {
 }
 measureInWindowForFWO.__closure = { _measureInWindowForFWO: __measureInWindowForFWO };
 measureInWindowForFWO.__workletHash = 12993496951221;
-measureInWindowForFWO.__initData = { code: "function measureInWindowForFWO_FWOMeasureUtilsTsx1(tag){const{_measureInWindowForFWO}=this.__closure;var _measureInWindowForFW,_measureInWindowForFW2;return(_measureInWindowForFW=(_measureInWindowForFW2=_measureInWindowForFWO)===null||_measureInWindowForFW2===void 0?void 0:_measureInWindowForFW2(tag))!==null&&_measureInWindowForFW!==void 0?_measureInWindowForFW:null;}" };
+measureInWindowForFWO.__initData = {
+  code: "function measureInWindowForFWO_FWOMeasureUtilsTsx1(tag){const{_measureInWindowForFWO}=this.__closure;var _measureInWindowForFW,_measureInWindowForFW2;return(_measureInWindowForFW=(_measureInWindowForFW2=_measureInWindowForFWO)===null||_measureInWindowForFW2===void 0?void 0:_measureInWindowForFW2(tag))!==null&&_measureInWindowForFW!==void 0?_measureInWindowForFW:null;}",
+};
 const result = set.fileFinishedImporting("modules/screen/native/FWOMeasureUtils.tsx");
 
 export { measureInWindowForFWO };

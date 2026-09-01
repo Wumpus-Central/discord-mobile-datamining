@@ -21,7 +21,15 @@ function PortalKeyboardPlaceholderInner(keyboardType) {
   const tmp2 = useWindowDimensionsDefault();
   let obj = useGradientBottom;
   obj = { style: null };
-  const items = [callback(keyboardType.keyboardType, useWindowDimensionsDefault().width - rect.left - rect.right, useCustomKeyboardHeightDefault(), tmp).container, obj.useGradientBottom()];
+  const items = [
+    callback(
+      keyboardType.keyboardType,
+      useWindowDimensionsDefault().width - rect.left - rect.right,
+      useCustomKeyboardHeightDefault(),
+      tmp,
+    ).container,
+    obj.useGradientBottom(),
+  ];
   obj[0] = items;
   return <closure_3 style={null} />;
 }

@@ -17,7 +17,12 @@ let c3 = importAllResult;
 let closure_13 = createICYMIStyles.createICYMIStyles((inset) => {
   obj = { pressable: obj, footer: null };
   obj = { flex: 1, paddingLeft: inset.inset };
-  obj = { marginVertical: inset.margin, gap: ThemesDefault.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: inset.inset };
+  obj = {
+    marginVertical: inset.margin,
+    gap: ThemesDefault.space.PX_8,
+    paddingHorizontal: ITEM_PADDING,
+    marginLeft: inset.inset,
+  };
   obj[1] = obj;
   return obj;
 });
@@ -28,7 +33,9 @@ let closure_14 = importAllResult.memo((message) => {
   ({ unread, visible } = message);
   let obj = message(channel[11]);
   let items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.isChannelMuted(channel.getGuildId(), channel.id));
+  const stateFromStores = obj.useStateFromStores(items, () =>
+    closure_1_8.isChannelMuted(channel.getGuildId(), channel.id),
+  );
   const tmp4 = callback3();
   obj1 = importAllResult;
   let id;
@@ -55,7 +62,16 @@ let closure_14 = importAllResult.memo((message) => {
   const callback = obj1.useCallback(() => {
     let obj = guild(channel[13]);
     obj.itemInteracted(message.id, "announcement", "long_press_channel");
-    obj = { itemId: message.id, itemType: "announcement", actionParameters: { actionGestureType: "long_press", actionTargetElement: "item_header", actionIntentType: "open", actionDestinationType: "channel" } };
+    obj = {
+      itemId: message.id,
+      itemType: "announcement",
+      actionParameters: {
+        actionGestureType: "long_press",
+        actionTargetElement: "item_header",
+        actionIntentType: "open",
+        actionDestinationType: "channel",
+      },
+    };
     guild(channel[13]).feedItemActioned(obj);
     const obj2 = guild(channel[13]);
     const result = message(channel[14]).openChannelLongPressActionSheet(channel.id);
@@ -64,7 +80,16 @@ let closure_14 = importAllResult.memo((message) => {
   const callback1 = obj1.useCallback(() => {
     let obj = guild(channel[13]);
     obj.itemInteracted(message.id, "announcement", "long_press_message");
-    obj = { itemId: message.id, itemType: "announcement", actionParameters: { actionGestureType: "long_press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: "channel" } };
+    obj = {
+      itemId: message.id,
+      itemType: "announcement",
+      actionParameters: {
+        actionGestureType: "long_press",
+        actionTargetElement: "item_container",
+        actionIntentType: "open",
+        actionDestinationType: "channel",
+      },
+    };
     guild(channel[13]).feedItemActioned(obj);
     const user = closure_1_9.getUser(message.author.id);
     const obj2 = guild(channel[13]);
@@ -74,7 +99,16 @@ let closure_14 = importAllResult.memo((message) => {
   const callback2 = obj1.useCallback(() => {
     let obj = guild(channel[13]);
     obj.itemInteracted(message.id, "announcement", "press_message");
-    obj = { itemId: message.id, itemType: "announcement", actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "navigate", actionDestinationType: "channel" } };
+    obj = {
+      itemId: message.id,
+      itemType: "announcement",
+      actionParameters: {
+        actionGestureType: "press",
+        actionTargetElement: "item_container",
+        actionIntentType: "navigate",
+        actionDestinationType: "channel",
+      },
+    };
     guild(channel[13]).feedItemActioned(obj);
     if (null != message) {
       obj = { id: null, timestamp: null };
@@ -90,7 +124,18 @@ let closure_14 = importAllResult.memo((message) => {
   }, items4);
   let tmpResult = tmp(tmp2[17]);
   const gravityMessage = tmpResult.useGravityMessage(message);
-  obj = { actionLabel: null, id: null, interactionType: "announcement", channelId: null, timestamp: null, onHeaderPress: null, onHeaderLongPress: null, message: null, shouldFeatureUser: true, children: null };
+  obj = {
+    actionLabel: null,
+    id: null,
+    interactionType: "announcement",
+    channelId: null,
+    timestamp: null,
+    onHeaderPress: null,
+    onHeaderLongPress: null,
+    message: null,
+    shouldFeatureUser: true,
+    children: null,
+  };
   const intl = tmp(tmp2[19]).intl;
   obj[0] = intl.string(message(channel[19]).t["8P08G9"]);
   obj[1] = message.id;
@@ -100,12 +145,21 @@ let closure_14 = importAllResult.memo((message) => {
   obj[5] = callback2;
   obj[6] = callback;
   obj[7] = gravityMessage;
-  obj = { onPress: callback2, onLongPress: callback1, accessibilityRole: "button", accessibilityLabel: guild(tmp2[22])({ channel, unread }), accessibilityHint: null, unstable_pressDelay: 130, style: null, children: null };
+  obj = {
+    onPress: callback2,
+    onLongPress: callback1,
+    accessibilityRole: "button",
+    accessibilityLabel: guild(tmp2[22])({ channel, unread }),
+    accessibilityHint: null,
+    unstable_pressDelay: 130,
+    style: null,
+    children: null,
+  };
   tmpResult = tmp(tmp2[22]);
   obj[4] = tmpResult.getChannelA11yHint({ channel, muted: stateFromStores });
   obj[6] = tmp4.pressable;
   obj[7] = callback(message(channel[23]).MessageRowContent, { message, channel, guild, lineClamp: 5, visible });
-  const items5 = [callback(message(channel[21]).PressableHighlight, obj), ];
+  const items5 = [callback(message(channel[21]).PressableHighlight, obj)];
   obj1 = { style: tmp4.footer, children: callback(guild(tmp2[24]), obj2) };
   items5[1] = callback(View, obj1);
   obj[9] = items5;
@@ -162,4 +216,4 @@ export default function AnnouncementMessageRowWrapper(message) {
     }
   }
   return tmp9;
-};
+}

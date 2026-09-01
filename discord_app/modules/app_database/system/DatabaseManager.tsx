@@ -17,7 +17,7 @@ function _trySpeculativelyOpenDatabaseAsync() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -108,15 +108,15 @@ class DatabaseManager extends Store {
     tmp2 = require("dispatcher");
     obj = {
       CLEAR_CACHES(arg0) {
-            return obj.handleClearCaches(arg0);
-          },
+        return obj.handleClearCaches(arg0);
+      },
       CONNECTION_CLOSED() {
-            return obj.handleAuthenticationStoreChanged();
-          },
+        return obj.handleAuthenticationStoreChanged();
+      },
       CONNECTION_OPEN() {
-            return obj.handleConnectionOpen();
-          },
-      LOGOUT: null
+        return obj.handleConnectionOpen();
+      },
+      LOGOUT: null,
     };
     class LOGOUT {
       constructor() {
@@ -240,7 +240,9 @@ prototype["handleClearCaches"] = function handleClearCaches(preventWritingCaches
   if (preventWritingCachesAgainThisSession.preventWritingCachesAgainThisSession) {
     self.preventWritingCachesAgainThisSession = true;
   }
-  const result = self.replaceDisableAllDatabases("DatabaseManager (" + preventWritingCachesAgainThisSession.reason + ")");
+  const result = self.replaceDisableAllDatabases(
+    "DatabaseManager (" + preventWritingCachesAgainThisSession.reason + ")",
+  );
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   const self = this;
@@ -281,7 +283,7 @@ prototype["handleAuthenticationStoreChanged"] = function handleAuthenticationSto
 function carefullySpeculativelyOpen(userId) {
   closure_0 = userId;
   let self = this;
-  return callback2(function*() {
+  return callback2(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -381,9 +383,22 @@ let obj = {
   },
   LOGOUT() {
     return obj.handleAuthenticationStoreChanged();
-  }
+  },
 };
-tmp = new tmp(importDefaultResult, obj, require("dispatcher").DispatchBand.Early, DatabaseManager, tmp, importDefaultResult, obj, new.target, undefined, carefullySpeculativelyOpen, globalThis, arg1);
+tmp = new tmp(
+  importDefaultResult,
+  obj,
+  require("dispatcher").DispatchBand.Early,
+  DatabaseManager,
+  tmp,
+  importDefaultResult,
+  obj,
+  new.target,
+  undefined,
+  carefullySpeculativelyOpen,
+  globalThis,
+  arg1,
+);
 // ThrowIfThisInitialized (0x7c)
 closure_0 = tmp;
 let tmp3 = new timestampDefault("DatabaseManager");

@@ -29,7 +29,7 @@ const memoResult = importAllResult.memo((height) => {
   }
   const hasAvatarForGuildResult = user.hasAvatarForGuild(guildId);
   obj = { style: { height: height.contentHeight }, children: null };
-  const items = [callback(DiscordTagDefault, { user, nick: nickname }), ];
+  const items = [callback(DiscordTagDefault, { user, nick: nickname })];
   if (hasAvatarForGuildResult) {
     obj = { style: null, children: null };
     obj[0] = tmp.mainIdentity;
@@ -41,7 +41,7 @@ const memoResult = importAllResult.memo((height) => {
       obj1[2] = user;
       tmp8Result = tmp8(Button.Avatar, obj1);
     }
-    const items1 = [tmp8Result, ];
+    const items1 = [tmp8Result];
     const obj2 = { user: null, usernameStyle: null, hideBotTag: true };
     obj2[0] = user;
     obj2[1] = tmp.mainTag;
@@ -60,7 +60,17 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
   if (deprecatedFormRow === undefined) {
     deprecatedFormRow = false;
   }
-  ({ disabled, guildId, leading, onPress, trailing, userId: require, subLabel, accessibilityRole, accessibilityState } = arrow);
+  ({
+    disabled,
+    guildId,
+    leading,
+    onPress,
+    trailing,
+    userId: require,
+    subLabel,
+    accessibilityRole,
+    accessibilityState,
+  } = arrow);
   let SMALL = dependencyMap;
   ({ end, start } = arrow);
   let obj = initialize;
@@ -69,7 +79,17 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
   if (null == stateFromStores) {
     return null;
   } else if (deprecatedFormRow) {
-    obj = { accessibilityLabel: null, disabled: null, leading: null, label: null, onPress: null, subLabel: null, trailing: null, accessibilityRole: null, accessibilityState: null };
+    obj = {
+      accessibilityLabel: null,
+      disabled: null,
+      leading: null,
+      label: null,
+      onPress: null,
+      subLabel: null,
+      trailing: null,
+      accessibilityRole: null,
+      accessibilityState: null,
+    };
     obj[0] = accessibilityLabel;
     obj[1] = disabled;
     if (leading == null) {
@@ -93,7 +113,20 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
     obj[8] = accessibilityState;
     let tmp2Result = tmp2(tmp(8363).FormRow, obj);
   } else {
-    obj1 = { accessibilityLabel: null, arrow: null, disabled: null, end: null, icon: null, label: null, onPress: null, start: null, subLabel: null, trailing: null, accessibilityRole: null, accessibilityState: null };
+    obj1 = {
+      accessibilityLabel: null,
+      arrow: null,
+      disabled: null,
+      end: null,
+      icon: null,
+      label: null,
+      onPress: null,
+      start: null,
+      subLabel: null,
+      trailing: null,
+      accessibilityRole: null,
+      accessibilityState: null,
+    };
     obj1[0] = accessibilityLabel;
     obj1[1] = arrow.arrow;
     obj1[2] = disabled;

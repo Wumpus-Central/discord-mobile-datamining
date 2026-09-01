@@ -26,7 +26,9 @@ obj[2] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.
 obj[3] = { flex: 1 };
 let closure_11 = createCacheKey.createStyles(obj);
 let obj2 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationPreviewMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/conversations/components/native/ConversationPreviewMessage.tsx",
+);
 
 export default function ConversationPreviewMessage(message) {
   message = message.message;
@@ -39,7 +41,11 @@ export default function ConversationPreviewMessage(message) {
   obj1 = message(setting[9]);
   const items1 = [closure_6];
   const items2 = [guildId, message.author.id];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_6.getMember(guildId, message.author.id), items2);
+  const stateFromStores1 = obj1.useStateFromStores(
+    items1,
+    () => closure_1_6.getMember(guildId, message.author.id),
+    items2,
+  );
   message(setting[10]);
   if ("username" === stateFromStores) {
     let colorString;
@@ -57,7 +63,12 @@ export default function ConversationPreviewMessage(message) {
     }
     const processColorStringsArray = tmp2Result.useProcessColorStringsArray(colorStrings);
     tmp2Result = tmp2(tmp3[11]);
-    const isRoleStyleAndRoleColorsEligibleForERC = tmp2Result.useIsRoleStyleAndRoleColorsEligibleForERC(guildId, message.author.id, stateFromStores, processColorStringsArray);
+    const isRoleStyleAndRoleColorsEligibleForERC = tmp2Result.useIsRoleStyleAndRoleColorsEligibleForERC(
+      guildId,
+      message.author.id,
+      stateFromStores,
+      processColorStringsArray,
+    );
     const TimestampHourCycle = tmp2(tmp3[12]).TimestampHourCycle;
     setting = TimestampHourCycle.useSetting();
     const items3 = [message.timestamp, setting];
@@ -70,7 +81,7 @@ export default function ConversationPreviewMessage(message) {
     obj2[0] = message.author;
     obj2[1] = guildId;
     obj2[2] = tmp2(tmp3[14]).AvatarSizes.XXSMALL;
-    const items4 = [callback(tmp2(tmp3[14]).Avatar, obj2), , ];
+    const items4 = [callback(tmp2(tmp3[14]).Avatar, obj2), ,];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.authorRow;
     let tmp24Result = "dot" === stateFromStores;
@@ -86,7 +97,7 @@ export default function ConversationPreviewMessage(message) {
       tmp24Result = tmp24(tmp2(tmp3[14]).RoleDot, { size: "small", color: null, colors: null });
       const obj4 = { size: "small", color: null, colors: null };
     }
-    const items5 = [tmp24Result, ];
+    const items5 = [tmp24Result];
     const obj5 = { variant: "text-md/medium", lineClamp: 1, style: null, gradientColors: null, children: null };
     obj5[2] = {};
     let tmp27;
@@ -103,7 +114,7 @@ export default function ConversationPreviewMessage(message) {
     obj6[4] = memo;
     items4[2] = callback(tmp2(tmp3[15]).Text, obj6);
     obj1[1] = items4;
-    const items6 = [closure_8(View, obj1), ];
+    const items6 = [closure_8(View, obj1)];
     const obj7 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: null, message: null, rowGenerator: null };
     obj7[2] = modifyRow;
     obj7[3] = message;
@@ -112,4 +123,4 @@ export default function ConversationPreviewMessage(message) {
     obj[1] = items6;
     return closure_8(View, obj);
   }
-};
+}

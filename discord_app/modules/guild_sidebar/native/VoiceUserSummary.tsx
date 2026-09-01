@@ -8,7 +8,21 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = Object.freeze({ direction: require("Button").CutoutDirection.RIGHT, inset: -2 });
-let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40 }, containerNoPadding: { flexDirection: "row", alignItems: "center", height: 40 }, iconContainer: { height: 40 }, redesignChannelIcon: { marginRight: 4 }, overflow: { height: 20, paddingHorizontal: 4, paddingVertical: 0, display: "flex", flexDirection: "row", alignItems: "center" }, transparentBorder: { borderColor: "transparent" } });
+let closure_7 = createCacheKey.createStyles({
+  container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40 },
+  containerNoPadding: { flexDirection: "row", alignItems: "center", height: 40 },
+  iconContainer: { height: 40 },
+  redesignChannelIcon: { marginRight: 4 },
+  overflow: {
+    height: 20,
+    paddingHorizontal: 4,
+    paddingVertical: 0,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  transparentBorder: { borderColor: "transparent" },
+});
 let obj = { direction: require("Button").CutoutDirection.RIGHT, inset: -2 };
 const memoResult = importAllResult.memo((guildId) => {
   guildId = guildId.guildId;
@@ -28,8 +42,16 @@ const memoResult = importAllResult.memo((guildId) => {
     }
     obj = { size: "sm", color: "channel-icon", style: null };
     obj[2] = tmp.redesignChannelIcon;
-    const items1 = [tmp7(VoiceNormalIcon, obj), ];
-    obj1 = { offsetAmount: -6, style: null, overflowStyle: null, overflowComponent: null, items: null, max: null, renderItem: null };
+    const items1 = [tmp7(VoiceNormalIcon, obj)];
+    obj1 = {
+      offsetAmount: -6,
+      style: null,
+      overflowStyle: null,
+      overflowComponent: null,
+      items: null,
+      max: null,
+      renderItem: null,
+    };
     obj1[1] = tmp.iconContainer;
     const items2 = [tmp.overflow, transparentBorder];
     obj1[2] = items2;

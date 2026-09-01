@@ -77,6 +77,10 @@ export const getOptimizedProfileEffectThumbnailUrl = function getOptimizedProfil
 export const useFetchFractionalPremiumInfo = function useFetchFractionalPremiumInfo() {
   const tmp = calculateFractionalPremiumInfoDefault({ forceFetch: true });
   let obj = resetCache;
-  obj = { isLoading: !tmp.fetched, isFractionalPremiumActive: tmp.isFractionalPremiumActive, expiresAt: obj.dateFormat(tmp.endsAt, "L") };
+  obj = {
+    isLoading: !tmp.fetched,
+    isFractionalPremiumActive: tmp.isFractionalPremiumActive,
+    expiresAt: obj.dateFormat(tmp.endsAt, "L"),
+  };
   return obj;
 };

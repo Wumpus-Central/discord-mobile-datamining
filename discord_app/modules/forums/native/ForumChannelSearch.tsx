@@ -8,7 +8,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 let c3 = importAllResult;
-let closure_8 = createCacheKey.createStyles({ inputContainer: { flexGrow: 1, marginLeft: 8 }, cancelButtonContainer: { paddingLeft: 8 } });
+let closure_8 = createCacheKey.createStyles({
+  inputContainer: { flexGrow: 1, marginLeft: 8 },
+  cancelButtonContainer: { paddingLeft: 8 },
+});
 const memoResult = importAllResult.memo((channelId) => {
   channelId = channelId.channelId;
   let navigation;
@@ -20,12 +23,15 @@ const memoResult = importAllResult.memo((channelId) => {
   let obj2 = channelId(route[6]);
   const items = [navigation, route];
   const canSearchForumPostsByChannelId = channelId(route[7]).useCanSearchForumPostsByChannelId(channelId);
-  const effect = importAllResult.useEffect(() => () => {
-    if (null != closure_1) {
-      obj.setOptions(closure_1_0(closure_1_2[8]).getDefaultChannelStackHeaderProps(obj, closure_2));
-      const obj2 = closure_1_0(closure_1_2[8]);
-    }
-  }, items);
+  const effect = importAllResult.useEffect(
+    () => () => {
+      if (null != closure_1) {
+        obj.setOptions(closure_1_0(closure_1_2[8]).getDefaultChannelStackHeaderProps(obj, closure_2));
+        const obj2 = closure_1_0(closure_1_2[8]);
+      }
+    },
+    items,
+  );
   let tmp8 = null;
   if (canSearchForumPostsByChannelId) {
     obj = { style: null, children: null };
@@ -52,13 +58,17 @@ const memoResult1 = importAllResult.memo((channelId) => {
   const tmp = callback();
   const items = [closure_6];
   const items1 = [channelId];
-  const stateFromStores = channelId(589).useStateFromStores(items, () => {
-    let searchQuery = null;
-    if (null != channelId) {
-      searchQuery = closure_1_6.getSearchQuery(tmp);
-    }
-    return searchQuery;
-  }, items1);
+  const stateFromStores = channelId(589).useStateFromStores(
+    items,
+    () => {
+      let searchQuery = null;
+      if (null != channelId) {
+        searchQuery = closure_1_6.getSearchQuery(tmp);
+      }
+      return searchQuery;
+    },
+    items1,
+  );
   channelId(589);
   [][0] = channelId;
   let tmp8Result = null;
@@ -67,7 +77,15 @@ const memoResult1 = importAllResult.memo((channelId) => {
     if (null != stateFromStores) {
       obj = { style: null, children: null };
       obj[0] = tmp.inputContainer;
-      obj = { size: "sm", defaultValue: null, onChange: null, placeholder: null, autoFocus: null, onClear: null, grow: false };
+      obj = {
+        size: "sm",
+        defaultValue: null,
+        onChange: null,
+        placeholder: null,
+        autoFocus: null,
+        onClear: null,
+        grow: false,
+      };
       obj[1] = stateFromStores;
       obj[2] = function onChange(query) {
         if (null != channelId) {

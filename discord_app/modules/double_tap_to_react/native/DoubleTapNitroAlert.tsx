@@ -30,7 +30,10 @@ export default function DoubleTapNitroAlert(emojiName) {
     });
   }, []);
   let obj = { header: null, title: null, content: null, actions: null };
-  obj = { style: callback3().icon, children: callback(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) };
+  obj = {
+    style: callback3().icon,
+    children: callback(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
+  };
   obj[0] = callback(View, obj);
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.HRAWfC);
@@ -40,7 +43,7 @@ export default function DoubleTapNitroAlert(emojiName) {
   obj1 = { onPress: callback, text: null };
   const intl3 = getSystemLocale.intl;
   obj1[1] = intl3.string(getSystemLocale.t.LIIHRy);
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj1, "confirm"), ];
+  const items = [callback(getAlertModalItemKey.AlertActionButton, obj1, "confirm")];
   const obj2 = { variant: "secondary", text: null };
   const intl4 = getSystemLocale.intl;
   obj2[1] = intl4.string(getSystemLocale.t["Nr6v2+"]);
@@ -48,4 +51,4 @@ export default function DoubleTapNitroAlert(emojiName) {
   obj[0] = items;
   obj[3] = callback2(closure_8, obj);
   return callback(getAlertModalItemKey.AlertModal, obj);
-};
+}

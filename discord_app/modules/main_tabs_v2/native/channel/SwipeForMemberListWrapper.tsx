@@ -19,8 +19,20 @@ const View = get_ActivityIndicator.View;
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new timestampDefault("SwipeForMemberListWrapper");
 let context = importAllResult.createContext(undefined);
-let obj = { memberListPreview: null, content: null, memberListContainer: null, midnightBorder: null, midnightRightOverflow: null };
-obj = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj = {
+  memberListPreview: null,
+  content: null,
+  memberListContainer: null,
+  midnightBorder: null,
+  midnightRightOverflow: null,
+};
+obj = {
+  flex: 1,
+  justifyContent: "center",
+  alignItems: "flex-start",
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 obj[0] = obj;
 createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -32,13 +44,27 @@ let obj2 = { flex: 1, overflow: "hidden", backgroundColor: ThemesDefault.colors.
 obj[3] = { borderLeftColor: ThemesDefault.colors.BORDER_STRONG, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
 obj[4] = { right: -MIDNIGHT_BORDER_WIDTH };
 let closure_17 = createCacheKey.createStyles(obj);
-let closure_18 = { code: "function SwipeForMemberListWrapperTsx1(){const{shownPixels}=this.__closure;return shownPixels.get()>0;}" };
-let closure_19 = { code: "function SwipeForMemberListWrapperTsx2(isVisible,wasVisible){const{mainDisallowGesture,stackDisallowGesture,panelDisallowGesture}=this.__closure;var _stackDisallowGesture;if(isVisible===wasVisible)return;mainDisallowGesture.set(isVisible);(_stackDisallowGesture=stackDisallowGesture)===null||_stackDisallowGesture===void 0||_stackDisallowGesture.set(isVisible);if(!isVisible){panelDisallowGesture.set(false);}}" };
-let closure_20 = { code: "function SwipeForMemberListWrapperTsx3(){const{isChatLockedOpen,mainTranslateX,stackTranslateX}=this.__closure;return!isChatLockedOpen&&mainTranslateX.get()>0||stackTranslateX!=null&&stackTranslateX.get()>0;}" };
-let closure_21 = { code: "function SwipeForMemberListWrapperTsx4(isInactive,wasInactive){const{panelDisallowGesture}=this.__closure;if(isInactive===wasInactive)return;panelDisallowGesture.set(isInactive);}" };
-let closure_22 = { code: "function SwipeForMemberListWrapperTsx5(){const{maxWidth,translateX}=this.__closure;return maxWidth-translateX.get();}" };
-let closure_23 = { code: "function SwipeForMemberListWrapperTsx6(){const{theme,ThemeTypes,isChatBesideChannelList,translateX,MIDNIGHT_BORDER_WIDTH}=this.__closure;if(theme!==ThemeTypes.MIDNIGHT||isChatBesideChannelList)return translateX.get();return translateX.get()-MIDNIGHT_BORDER_WIDTH;}" };
-let closure_24 = { code: "function SwipeForMemberListWrapperTsx7(){const{shownPixels,PEEK_PIXEL_THRESHOLD}=this.__closure;const exceedsPeekThreshold=shownPixels.get()>PEEK_PIXEL_THRESHOLD*2;return{display:exceedsPeekThreshold?'none':'flex',opacity:exceedsPeekThreshold?0:1-shownPixels.get()/PEEK_PIXEL_THRESHOLD};}" };
+let closure_18 = {
+  code: "function SwipeForMemberListWrapperTsx1(){const{shownPixels}=this.__closure;return shownPixels.get()>0;}",
+};
+let closure_19 = {
+  code: "function SwipeForMemberListWrapperTsx2(isVisible,wasVisible){const{mainDisallowGesture,stackDisallowGesture,panelDisallowGesture}=this.__closure;var _stackDisallowGesture;if(isVisible===wasVisible)return;mainDisallowGesture.set(isVisible);(_stackDisallowGesture=stackDisallowGesture)===null||_stackDisallowGesture===void 0||_stackDisallowGesture.set(isVisible);if(!isVisible){panelDisallowGesture.set(false);}}",
+};
+let closure_20 = {
+  code: "function SwipeForMemberListWrapperTsx3(){const{isChatLockedOpen,mainTranslateX,stackTranslateX}=this.__closure;return!isChatLockedOpen&&mainTranslateX.get()>0||stackTranslateX!=null&&stackTranslateX.get()>0;}",
+};
+let closure_21 = {
+  code: "function SwipeForMemberListWrapperTsx4(isInactive,wasInactive){const{panelDisallowGesture}=this.__closure;if(isInactive===wasInactive)return;panelDisallowGesture.set(isInactive);}",
+};
+let closure_22 = {
+  code: "function SwipeForMemberListWrapperTsx5(){const{maxWidth,translateX}=this.__closure;return maxWidth-translateX.get();}",
+};
+let closure_23 = {
+  code: "function SwipeForMemberListWrapperTsx6(){const{theme,ThemeTypes,isChatBesideChannelList,translateX,MIDNIGHT_BORDER_WIDTH}=this.__closure;if(theme!==ThemeTypes.MIDNIGHT||isChatBesideChannelList)return translateX.get();return translateX.get()-MIDNIGHT_BORDER_WIDTH;}",
+};
+let closure_24 = {
+  code: "function SwipeForMemberListWrapperTsx7(){const{shownPixels,PEEK_PIXEL_THRESHOLD}=this.__closure;const exceedsPeekThreshold=shownPixels.get()>PEEK_PIXEL_THRESHOLD*2;return{display:exceedsPeekThreshold?'none':'flex',opacity:exceedsPeekThreshold?0:1-shownPixels.get()/PEEK_PIXEL_THRESHOLD};}",
+};
 let obj3 = { borderLeftColor: ThemesDefault.colors.BORDER_STRONG, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/SwipeForMemberListWrapper.tsx");
 
@@ -104,7 +130,14 @@ export default function _default(channelId) {
       ComponentDispatch.dispatch(derivedValue.CHANNEL_DETAILS_HIDDEN, obj);
     }
   }, items2);
-  const tmp11 = derivedValue(gesture2[20])({ canDrag: true, onDragStart: callback, onPreMovement: callback1, startShown: false, cancelOnSwipeRightFromStart: true, openWidth: memo });
+  const tmp11 = derivedValue(gesture2[20])({
+    canDrag: true,
+    onDragStart: callback,
+    onPreMovement: callback1,
+    startShown: false,
+    cancelOnSwipeRightFromStart: true,
+    openWidth: memo,
+  });
   ({ gesture, panelGestureContext } = tmp11);
   translateX3 = panelGestureContext;
   ({ isDragging, translateX } = tmp11);
@@ -144,7 +177,13 @@ export default function _default(channelId) {
     }
     diff = disallowGesture3.get();
   }
-  obj = { theme: tmp4, ThemeTypes: derivedStateFromSharedValue, isChatBesideChannelList, translateX, MIDNIGHT_BORDER_WIDTH: isChatLockedOpen };
+  obj = {
+    theme: tmp4,
+    ThemeTypes: derivedStateFromSharedValue,
+    isChatBesideChannelList,
+    translateX,
+    MIDNIGHT_BORDER_WIDTH: isChatLockedOpen,
+  };
   te.__closure = obj;
   te.__workletHash = 5498466465211;
   te.__initData = closure_23;
@@ -339,7 +378,11 @@ export default function _default(channelId) {
       obj = disallowGesture2;
     }
   };
-  fn2.__closure = { mainDisallowGesture: disallowGesture, stackDisallowGesture: disallowGesture2, panelDisallowGesture: disallowGesture3 };
+  fn2.__closure = {
+    mainDisallowGesture: disallowGesture,
+    stackDisallowGesture: disallowGesture2,
+    panelDisallowGesture: disallowGesture3,
+  };
   fn2.__workletHash = 13681610289748;
   fn2.__initData = closure_19;
   const animatedReaction = tmp12Result.useAnimatedReaction(fn, fn2);
@@ -388,7 +431,11 @@ export default function _default(channelId) {
     return obj;
   }, items13);
   const tmp12Result1 = gesture(gesture2[14]);
-  const mainTabsChannelScreenStyles = gesture(gesture2[27]).useMainTabsChannelScreenStyles(isDragging, derivedValue1, maxWidth);
+  const mainTabsChannelScreenStyles = gesture(gesture2[27]).useMainTabsChannelScreenStyles(
+    isDragging,
+    derivedValue1,
+    maxWidth,
+  );
   const tmp12Result2 = gesture(gesture2[27]);
   function le() {
     let obj = derivedValue;
@@ -418,18 +465,26 @@ export default function _default(channelId) {
         navigation.goBack();
       }
     },
-    children: null
+    children: null,
   };
-  obj3 = { style: tmp.content, accessibilityElementsHidden: derivedStateFromSharedValue, importantForAccessibility: null, children: null };
+  obj3 = {
+    style: tmp.content,
+    accessibilityElementsHidden: derivedStateFromSharedValue,
+    importantForAccessibility: null,
+    children: null,
+  };
   let str;
   if (derivedStateFromSharedValue) {
     str = "no-hide-descendants";
   }
   obj3[2] = str;
-  const items14 = [children, callback2(gesture(gesture2[29]).MainTabsContentScrim, { translateX: derivedValue1, maxWidth })];
+  const items14 = [
+    children,
+    callback2(gesture(gesture2[29]).MainTabsContentScrim, { translateX: derivedValue1, maxWidth }),
+  ];
   obj3[3] = items14;
-  const items15 = [callback3(disallowGesture2, obj3), ];
-  const items16 = [mainTabsChannelScreenStyles, tmp.memberListContainer, , ];
+  const items15 = [callback3(disallowGesture2, obj3)];
+  const items16 = [mainTabsChannelScreenStyles, tmp.memberListContainer, ,];
   let midnightBorder;
   if (tmp4 === derivedStateFromSharedValue.MIDNIGHT) {
     midnightBorder = tmp.midnightBorder;
@@ -441,20 +496,40 @@ export default function _default(channelId) {
       prop = tmp.midnightRightOverflow;
     }
   }
-  const obj4 = { style: items16, accessibilityElementsHidden: !derivedStateFromSharedValue, importantForAccessibility: "no-hide-descendants", children: null };
+  const obj4 = {
+    style: items16,
+    accessibilityElementsHidden: !derivedStateFromSharedValue,
+    importantForAccessibility: "no-hide-descendants",
+    children: null,
+  };
   items16[3] = prop;
-  const items17 = [callback2(derivedValue(gesture2[30]), { absolute: true, withOverlay: true, overlayOpacity: 0.5 }), , ];
-  obj5 = { children: tmp35(tmp2(tmp3[32]), { isShowing: derivedStateFromSharedValue, channelId: tmp5[0], isSearchLocked: false, onBackPress: callback4, componentWidth: tmp8, onChannelDeleted: callback3 }) };
+  const items17 = [
+    callback2(derivedValue(gesture2[30]), { absolute: true, withOverlay: true, overlayOpacity: 0.5 }),
+    ,
+  ];
+  obj5 = {
+    children: tmp35(tmp2(tmp3[32]), {
+      isShowing: derivedStateFromSharedValue,
+      channelId: tmp5[0],
+      isSearchLocked: false,
+      onBackPress: callback4,
+      componentWidth: tmp8,
+      onChannelDeleted: callback3,
+    }),
+  };
   items17[1] = callback2(gesture(gesture2[31]).LayerScope, obj5);
   const tmp12Result3 = gesture(gesture2[13]);
   const tmp41 = !derivedStateFromSharedValue;
   const items18 = [gesture3.absoluteFill, animatedStyle];
-  items17[2] = callback2(derivedValue(gesture2[13]).View, { style: items18, children: callback2(disallowGesture2, obj7) });
+  items17[2] = callback2(derivedValue(gesture2[13]).View, {
+    style: items18,
+    children: callback2(disallowGesture2, obj7),
+  });
   obj4[3] = items17;
   items15[1] = callback3(derivedValue(gesture2[13]).View, obj4);
   obj2[2] = items15;
   obj1[1] = callback3(disallowGesture2, obj2);
   obj[1] = callback2(gesture(gesture2[28]).GestureDetector, obj1);
   return callback2(context.Provider, obj);
-};
+}
 export const SwipeForMemberListContext = context;

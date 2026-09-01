@@ -50,10 +50,19 @@ function PricingSubheadingCopy() {
   let obj6 = _require(str3[12]);
   let obj7 = closure_10;
   const items4 = [closure_10];
-  [tmp12, tmp13, tmp14, tmp15, tmp16] = str2(obj6.useStateFromStoresArray(items4, () => {
-    const items = [store.getProduct(lib(str3[17]).ProductIds.PREMIUM_GUILD_1_MONTHLY), store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_MONTHLY), store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY), store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_YEARLY), store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY)];
-    return items;
-  }), 5);
+  [tmp12, tmp13, tmp14, tmp15, tmp16] = str2(
+    obj6.useStateFromStoresArray(items4, () => {
+      const items = [
+        store.getProduct(lib(str3[17]).ProductIds.PREMIUM_GUILD_1_MONTHLY),
+        store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_MONTHLY),
+        store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY),
+        store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_YEARLY),
+        store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY),
+      ];
+      return items;
+    }),
+    5,
+  );
   if (stateFromStores2 == null) {
     stateFromStores2 = table[constants.PREMIUM_MONTH_GUILD];
   }
@@ -121,12 +130,20 @@ function PricingSubheadingCopy() {
         str3 = "...";
         if (null != result) {
           const tmp2Result3 = tmp2(tmp3[21]);
-          str3 = tmp2Result3.formatRate(tmp2(tmp3[21]).formatPrice(result, formatted, { convertToMajorUnits: false }), interval, intervalCount);
+          str3 = tmp2Result3.formatRate(
+            tmp2(tmp3[21]).formatPrice(result, formatted, { convertToMajorUnits: false }),
+            interval,
+            intervalCount,
+          );
           const tmp2Result4 = tmp2(tmp3[21]);
         }
         if (null != result1) {
           const tmp2Result5 = tmp2(tmp3[21]);
-          str2 = tmp2Result5.formatRate(tmp2(tmp3[21]).formatPrice(result1, formatted, { convertToMajorUnits: false }), interval, intervalCount);
+          str2 = tmp2Result5.formatRate(
+            tmp2(tmp3[21]).formatPrice(result1, formatted, { convertToMajorUnits: false }),
+            interval,
+            intervalCount,
+          );
           const tmp2Result6 = tmp2(tmp3[21]);
         }
         if (result !== result1) {
@@ -207,9 +224,21 @@ function PricingSubheadingCopy() {
   }
   return callback(_require(str3[18]).Text, { style: tmp.cardText, variant: "text-md/medium", children: "..." });
 }
-({ SubscriptionPlans: closure_12, SubscriptionPlanInfo: map1, PremiumTypes: closure_14, SubscriptionIntervalTypes: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17 } = GuildFeatures);
+({
+  SubscriptionPlans: closure_12,
+  SubscriptionPlanInfo: map1,
+  PremiumTypes: closure_14,
+  SubscriptionIntervalTypes: closure_15,
+  NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16,
+  GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17,
+} = GuildFeatures);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-let closure_21 = createCacheKey.createStyles({ title: { marginTop: 16 }, pricingSection: { alignItems: "center" }, originalPrice: { textDecorationLine: "line-through" }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" } });
+let closure_21 = createCacheKey.createStyles({
+  title: { marginTop: 16 },
+  pricingSection: { alignItems: "center" },
+  originalPrice: { textDecorationLine: "line-through" },
+  cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" },
+});
 let result = require("set").fileFinishedImporting("components_native/premium/PremiumSubscriptionPricingUpsell.tsx");
 
 export default function PremiumSubscriptionPricingUpsell() {
@@ -217,10 +246,16 @@ export default function PremiumSubscriptionPricingUpsell() {
   let obj = getSubscriptionPlansLoaded;
   obj = { style: tmp.pricingSection, children: null };
   const subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  obj = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-lg/semibold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t["3x1PFE"]);
-  const items = [callback(Text.Text, obj), ];
+  const items = [callback(Text.Text, obj)];
   let tmp5Result = null;
   if (subscriptionPlansLoaded) {
     tmp5Result = callback(PricingSubheadingCopy, {});
@@ -228,4 +263,4 @@ export default function PremiumSubscriptionPricingUpsell() {
   items[1] = tmp5Result;
   obj[1] = items;
   return closure_20(View, obj);
-};
+}

@@ -5,4 +5,4 @@ const result = set.fileFinishedImporting("modules/chat/native/useChatViewPointer
 
 export default function useChatViewPointerEventsAndroid() {
   return "auto";
-};
+}

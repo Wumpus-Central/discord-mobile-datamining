@@ -5,4 +5,4 @@ const result = set.fileFinishedImporting("modules/premium/sounds/soundmoji/utils
 
 export default function getSoundString(arg0, arg1) {
   return "<sound:" + arg0 + ":" + arg1 + ">";
-};
+}

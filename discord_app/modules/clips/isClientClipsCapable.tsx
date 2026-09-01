@@ -9,7 +9,9 @@ const result = set.fileFinishedImporting("modules/clips/isClientClipsCapable.tsx
 
 export default function isClientClipsCapable(getMediaEngine) {
   const ClipsExperiment = apexExperiment.ClipsExperiment;
-  let ignorePlatformRestriction = ClipsExperiment.getConfig({ location: "isClipsClientCapable" }).ignorePlatformRestriction;
+  let ignorePlatformRestriction = ClipsExperiment.getConfig({
+    location: "isClipsClientCapable",
+  }).ignorePlatformRestriction;
   if (!ignorePlatformRestriction) {
     let isDesktopResult = setAll.isDesktop();
     if (isDesktopResult) {
@@ -20,4 +22,4 @@ export default function isClientClipsCapable(getMediaEngine) {
     const obj = setAll;
   }
   return ignorePlatformRestriction;
-};
+}

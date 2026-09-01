@@ -66,7 +66,7 @@ function ActivityCardBody(user) {
   user(onAction[21]);
   obj = { style: tmp.body, children: null };
   if (user.bot) {
-    const items = [tmp8, ];
+    const items = [tmp8];
     obj = { style: null, children: null };
     obj[0] = tmp.content;
     if (activity(tmp2[22])(activity)) {
@@ -102,7 +102,7 @@ function ActivityCardBody(user) {
       tmp31 = tmp24;
       const tmp25 = MaybeLink;
     }
-    const items1 = [tmp24Result, , , ];
+    const items1 = [tmp24Result, , ,];
     if (activity(tmp2[22])(activity)) {
       let trimmed;
       if (activity.state != null) {
@@ -216,7 +216,7 @@ function ActivityCardBody(user) {
   } else {
     if (null == largeImage) {
       if (null != largeImage) {
-        const items3 = [tmp.imageContainer, ];
+        const items3 = [tmp.imageContainer];
         const obj15 = { style: null, children: null };
         items3[1] = activity(tmp2[27])(activity) ? tmp.crunchyrollImageAspectRatio : tmp.imageAspectRatio;
         obj15[0] = items3;
@@ -233,7 +233,7 @@ function ActivityCardBody(user) {
         obj17[1] = largeImage.alt;
         obj17[2] = tmp.largeImage;
         obj16[1] = callback(tmp12Result, obj17);
-        const items4 = [callback(MaybeLink, obj16), ];
+        const items4 = [callback(MaybeLink, obj16)];
         let tmp13Result = null != smallImage;
         if (tmp13Result) {
           const obj18 = { style: null, children: null };
@@ -261,7 +261,7 @@ function ActivityCardBody(user) {
         const IM4J4eResult = IM4J4e(tmp2[26]);
       } else {
         const obj21 = { style: null, children: null };
-        const items5 = [, ];
+        const items5 = [,];
         ({ imageContainer: arr7[0], imageAspectRatio: arr7[1] } = tmp);
         obj21[0] = items5;
         const obj22 = { size: "custom", style: null, color: null };
@@ -276,7 +276,13 @@ function ActivityCardBody(user) {
     } else {
       let tmp10 = activity;
     }
-    const obj23 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
+    const obj23 = {
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      accessibilityHint: null,
+      onPress: null,
+      children: null,
+    };
     obj23[1] = largeImage.alt;
     const intl = IM4J4e(tmp2[23]).intl;
     obj23[2] = intl.string(IM4J4e(tmp2[23]).t.sjjOk2);
@@ -285,7 +291,7 @@ function ActivityCardBody(user) {
       user(onAction[24]).openAlbum(activity, user.id);
     };
     const obj24 = { style: null, children: null };
-    const items6 = [, ];
+    const items6 = [,];
     ({ imageContainer: arr3[0], imageAspectRatio: arr3[1] } = tmp);
     obj24[0] = items6;
     tmp10 = tmp10(tmp2[25]);
@@ -319,7 +325,13 @@ function ActivityCard(user) {
   dependencyMap = tmp5Result;
   const application_id = activity.application_id;
   let tmp2Result = tmp2(8801);
-  obj = { location: "User Profile Activity Card", applicationId: application_id, source: user(8812).GameProfileSources.UserProfile, trackEntryPointImpression: true, sourceUserId: user.id };
+  obj = {
+    location: "User Profile Activity Card",
+    applicationId: application_id,
+    source: user(8812).GameProfileSources.UserProfile,
+    trackEntryPointImpression: true,
+    sourceUserId: user.id,
+  };
   let ConnectPlatformButton = user;
   const tmp2ResultResult = tmp2Result(obj);
   closure_3 = tmp2ResultResult;
@@ -373,7 +385,13 @@ function ActivityCard(user) {
     if (activity.type !== tmp14.HANG_STATUS) {
       obj1 = { value: null, children: null };
       obj1[0] = analyticsLocations;
-      let obj2 = { onPress: null, disabled: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
+      let obj2 = {
+        onPress: null,
+        disabled: null,
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        children: null,
+      };
       obj2[0] = callback;
       obj2[1] = null == tmp2ResultResult;
       const intl = ConnectPlatformButton(1236).intl;
@@ -406,7 +424,7 @@ function ActivityCard(user) {
       obj6[1] = activity;
       obj6[2] = stateFromStores1;
       obj6[3] = tmp5Result;
-      const items4 = [closure_21(ActivityCardBody, obj6), , , ];
+      const items4 = [closure_21(ActivityCardBody, obj6), , ,];
       tmp34Result = null;
       if (tmp2(9399)(activity)) {
         ({ start, end } = activity.timestamps);
@@ -496,7 +514,13 @@ function ActivityCard(user) {
                   const obj14 = { style: null, children: null };
                   obj14[0] = tmp.customButtons;
                   const buttons = activity.buttons;
-                  obj14[1] = buttons.map((arg0, index) => closure_1_21(user(9432).CustomActivityButton, { index, user, activity, onAction: dependencyMap }, index));
+                  obj14[1] = buttons.map((arg0, index) =>
+                    closure_1_21(
+                      user(9432).CustomActivityButton,
+                      { index, user, activity, onAction: dependencyMap },
+                      index,
+                    ),
+                  );
                   tmp34Result3 = tmp34(closure_7, obj14);
                 }
               }
@@ -541,16 +565,23 @@ function StreamActivityCard(user) {
   const stateFromStores2 = obj2.useStateFromStores(items2, () => closure_1_11.getGuild(stream.guildId));
   let obj3 = user(activity[40]);
   const items3 = [closure_13];
-  const stateFromStores3 = obj3.useStateFromStores(items3, () => closure_1_13.findActivity(user.id, (arg0) => callback(table[30])(arg0) && !callback(table[52])(arg0)));
+  const stateFromStores3 = obj3.useStateFromStores(items3, () =>
+    closure_1_13.findActivity(user.id, (arg0) => callback(table[30])(arg0) && !callback(table[52])(arg0)),
+  );
   let obj4 = user(activity[40]);
   const items4 = [closure_9];
-  const stateFromStores4 = obj4.useStateFromStores(items4, () => closure_1_9.getActiveStreamForUser(user.id, undefined));
+  const stateFromStores4 = obj4.useStateFromStores(items4, () =>
+    closure_1_9.getActiveStreamForUser(user.id, undefined),
+  );
   let ownerId;
   if (stateFromStores4 != null) {
     ownerId = stateFromStores4.ownerId;
   }
   const tmp10 = stream(activity[53]);
-  ({ effectiveVolume, handleVolumeChange } = stream(activity[53])(ownerId, user(activity[54]).MediaEngineContextTypes.STREAM));
+  ({ effectiveVolume, handleVolumeChange } = stream(activity[53])(
+    ownerId,
+    user(activity[54]).MediaEngineContextTypes.STREAM,
+  ));
   let tmp2Result = tmp2(tmp3[40]);
   const items5 = [closure_8];
   const stateFromStores5 = tmp2Result.useStateFromStores(items5, () => {
@@ -614,8 +645,10 @@ function StreamActivityCard(user) {
     const obj2 = user(activity[59]);
     stream(activity[60]).hideAllActionSheets();
   };
-  const items7 = [closure_21(closure_7, obj3), , , , ];
-  let tmp19Result = null != stateFromStores4 && !tmp9Result1.useConfig({ location: "UserProfileVoiceSettings" }).nonContextualStreamOutputPresent;
+  const items7 = [closure_21(closure_7, obj3), , , ,];
+  let tmp19Result =
+    null != stateFromStores4 &&
+    !tmp9Result1.useConfig({ location: "UserProfileVoiceSettings" }).nonContextualStreamOutputPresent;
   if (tmp19Result) {
     const obj5 = { value: null, onValueChange: null, accessibilityLabel: null };
     obj5[0] = effectiveVolume;
@@ -681,7 +714,9 @@ function VoiceCallActivityCard(arg0) {
   });
   const tmp4 = stateFromStores(9424)(channel);
   const tmp9 = stateFromStores(5953);
-  ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(5953)(stateFromStores(5973).USER_PROFILE_VOICE_ACTIVITY_CARD));
+  ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(5953)(
+    stateFromStores(5973).USER_PROFILE_VOICE_ACTIVITY_CARD,
+  ));
   obj = { display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations };
   const tmp11 = stateFromStores(9418)(obj);
   closure_3 = tmp11;
@@ -713,11 +748,17 @@ function VoiceCallActivityCard(arg0) {
       id = stateFromStores.id;
     }
     obj3[1] = id;
-    const items3 = [closure_21(tmp2(12470), obj3), ];
+    const items3 = [closure_21(tmp2(12470), obj3)];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.voiceCallContent;
     if (stateFromStores1) {
-      const obj5 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
+      const obj5 = {
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        accessibilityHint: null,
+        onPress: null,
+        children: null,
+      };
       const obj6 = { channel: null };
       obj6[0] = channel;
       obj5[1] = tmp2(9425)(obj6);
@@ -752,10 +793,16 @@ function VoiceCallActivityCard(arg0) {
       obj10[2] = items5;
       tmp13Result = tmp13(tmp6(4474).Text, obj10);
     }
-    const items6 = [tmp13Result, ];
+    const items6 = [tmp13Result];
     let tmp18Result = null;
     if (null != stateFromStores) {
-      const obj13 = { accessibilityRole: "button", accessibilityHint: null, accessibilityLabel: null, onPress: null, children: null };
+      const obj13 = {
+        accessibilityRole: "button",
+        accessibilityHint: null,
+        accessibilityLabel: null,
+        onPress: null,
+        children: null,
+      };
       const intl4 = tmp6(1236).intl;
       obj13[1] = intl4.string(tmp6(1236).t.KLOhbO);
       const intl5 = tmp6(1236).intl;
@@ -781,7 +828,7 @@ function VoiceCallActivityCard(arg0) {
     obj4[1] = items6;
     items3[1] = tmp13(closure_7, obj4);
     obj2[1] = items3;
-    const items7 = [tmp13(closure_7, obj2), ];
+    const items7 = [tmp13(closure_7, obj2)];
     const obj17 = { channel: null, isInChannel: null, onAction: null };
     obj17[0] = channel;
     obj17[1] = isInChannel;
@@ -796,7 +843,28 @@ function VoiceCallActivityCard(arg0) {
 ({ TouchableOpacity: c5, TouchableWithoutFeedback: closure_6, View: error } = get_ActivityIndicator);
 ({ ActivityTypes: closure_17, Permissions: closure_18, PlatformTypes: closure_19, StatusTypes: closure_20 } = ME);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
-createCacheKey = { card: { gap: 12 }, cardTitle: { marginBottom: 0 }, cardTitleIcon: null, body: null, content: null, imageContainer: null, imageAspectRatio: null, crunchyrollImageAspectRatio: null, largeImage: null, smallImageBackground: null, smallImage: null, badges: null, voiceChannelDivider: null, customButtons: null, streamPreview: null, voiceActivityCard: null, voiceSettings: null, voiceSettingsDivider: null, voiceCallContent: null, voiceCallNameIconWrapper: null };
+createCacheKey = {
+  card: { gap: 12 },
+  cardTitle: { marginBottom: 0 },
+  cardTitleIcon: null,
+  body: null,
+  content: null,
+  imageContainer: null,
+  imageAspectRatio: null,
+  crunchyrollImageAspectRatio: null,
+  largeImage: null,
+  smallImageBackground: null,
+  smallImage: null,
+  badges: null,
+  voiceChannelDivider: null,
+  customButtons: null,
+  streamPreview: null,
+  voiceActivityCard: null,
+  voiceSettings: null,
+  voiceSettingsDivider: null,
+  voiceCallContent: null,
+  voiceCallNameIconWrapper: null,
+};
 createCacheKey = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flexDirection: "row", alignItems: "center", gap: 16 };
@@ -806,10 +874,22 @@ createCacheKey[6] = { width: 60, maxHeight: 60, aspectRatio: "1 / 1" };
 createCacheKey[7] = { width: 60, maxHeight: 100, aspectRatio: "2 / 3" };
 createCacheKey[8] = { borderRadius: ThemesDefault.radii.xs, width: "100%", height: "100%" };
 let obj1 = { borderRadius: ThemesDefault.radii.xs, width: "100%", height: "100%" };
-createCacheKey[9] = { borderRadius: 16, position: "absolute", right: -4, bottom: -4, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey[9] = {
+  borderRadius: 16,
+  position: "absolute",
+  right: -4,
+  bottom: -4,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[10] = { width: 24, height: 24, borderRadius: 12 };
 createCacheKey[11] = { marginTop: 4, flexDirection: "row", flexWrap: "wrap", columnGap: 8, rowGap: 0 };
-let obj2 = { borderRadius: 16, position: "absolute", right: -4, bottom: -4, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj2 = {
+  borderRadius: 16,
+  position: "absolute",
+  right: -4,
+  bottom: -4,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[12] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, paddingTop: 12 };
 createCacheKey[13] = { flexDirection: "column", gap: 8 };
 let obj3 = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, paddingTop: 12 };
@@ -817,7 +897,14 @@ createCacheKey[14] = { aspectRatio: 1.7777777777777777, borderRadius: ThemesDefa
 createCacheKey[15] = { padding: 0 };
 createCacheKey[16] = { padding: 0, marginBottom: -16 };
 let obj4 = { aspectRatio: 1.7777777777777777, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
-createCacheKey[17] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, paddingTop: 16, marginTop: 4, marginHorizontal: -CARD_PADDING, paddingHorizontal: CARD_PADDING };
+createCacheKey[17] = {
+  borderTopWidth: 1,
+  borderTopColor: ThemesDefault.colors.BORDER_SUBTLE,
+  paddingTop: 16,
+  marginTop: 4,
+  marginHorizontal: -CARD_PADDING,
+  paddingHorizontal: CARD_PADDING,
+};
 createCacheKey[18] = { flex: 1, gap: 4 };
 let num = 16;
 if (set.isAndroid()) {
@@ -885,7 +972,7 @@ export default function UserProfileActivity(guildId) {
         obj[0] = user;
         obj[1] = currentUser;
         obj[2] = voiceChannel;
-        const items4 = [, ];
+        const items4 = [,];
         ({ voiceSettings: arr11[0], voiceSettingsDivider: arr11[1] } = tmp);
         obj[3] = items4;
         obj[1] = callback(tmp2(tmp3[73]), obj);
@@ -905,7 +992,7 @@ export default function UserProfileActivity(guildId) {
       tmp12 = null != voiceChannel;
     }
     if (!tmp12) {
-      const items5 = [tmp12, , ];
+      const items5 = [tmp12, ,];
       let tmp20 = !stateFromStores2;
       if (!stateFromStores2) {
         tmp20 = null != stream;
@@ -971,13 +1058,13 @@ export default function UserProfileActivity(guildId) {
         const items6 = [tmp.card, style];
         obj3[0] = items6;
         tmp2Result = tmp2(tmp3[42]);
-        items7 = [, ];
+        items7 = [,];
         items7[0] = items7(voiceChannel);
         const obj4 = { user: null, currentUser: null, channel: null, style: null };
         obj4[0] = user;
         obj4[1] = currentUser;
         obj4[2] = voiceChannel;
-        const items8 = [, ];
+        const items8 = [,];
         ({ voiceSettings: arr8[0], voiceSettingsDivider: arr8[1] } = tmp);
         obj4[3] = items8;
         items7[1] = callback(tmp2(tmp3[73]), obj4);
@@ -995,4 +1082,4 @@ export default function UserProfileActivity(guildId) {
     }
     tmp11 = closure_23;
   }
-};
+}

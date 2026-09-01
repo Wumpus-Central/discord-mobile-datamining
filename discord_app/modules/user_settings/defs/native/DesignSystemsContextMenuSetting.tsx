@@ -10,13 +10,13 @@ obj = {
     return "Context Menu";
   },
   parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_CONTEXT_MENU,
   getComponent() {
     return DemoContextMenu /* DemoContextMenu */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsContextMenuSetting.tsx");

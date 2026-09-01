@@ -7,7 +7,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 noopAll;
 createCacheKey = { separatorDot: null };
-createCacheKey = { width: 4, height: 4, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
+createCacheKey = {
+  width: 4,
+  height: 4,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+};
 createCacheKey[0] = createCacheKey;
 let closure_2 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/icymi/native/SeparatorDot.tsx");
@@ -17,4 +22,4 @@ export default function SeparatorDot() {
   const items = [callback().separatorDot];
   obj[0] = items;
   return <View style={null} />;
-};
+}

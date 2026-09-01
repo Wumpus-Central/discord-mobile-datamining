@@ -39,7 +39,9 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
   }, []);
   const obj2 = stateFromStores1(results[7]);
   const items2 = [closure_5];
-  stateFromStores1 = stateFromStores1(results[7]).useStateFromStores(items2, () => userAffinitiesMap.getUserAffinitiesMap());
+  stateFromStores1 = stateFromStores1(results[7]).useStateFromStores(items2, () =>
+    userAffinitiesMap.getUserAffinitiesMap(),
+  );
   const items3 = [stateFromStores1];
   memo1 = memo.useMemo(() => {
     array = new Array(array.size);
@@ -183,4 +185,4 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
     }
     return items;
   }, items4);
-};
+}

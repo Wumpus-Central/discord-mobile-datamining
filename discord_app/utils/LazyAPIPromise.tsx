@@ -11,7 +11,7 @@ export default function useLazyAPIPromise(arg0, arg1) {
   closure_1 = arg1;
   function _execFn() {
     const self = this;
-    const tmp = callback(function*() {
+    const tmp = callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -115,7 +115,7 @@ export default function useLazyAPIPromise(arg0, arg1) {
       }
       return applyArgumentsResult;
     },
-    { loading: tmp[0], error: tmp2[0] }
+    { loading: tmp[0], error: tmp2[0] },
   ];
   return items;
-};
+}

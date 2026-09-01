@@ -6,12 +6,18 @@ import keys from "../../../../_runtime/00644_keys.js";
 const require = arg1;
 function setUseEntranceAnimationState(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_5.setState(closure_0));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
+    closure_1_5.setState(closure_0),
+  );
 }
 let obj = { duration: 300, easing: require("Button").STANDARD_EASING };
 obj = keys.create(() => ({ isComplete: false }));
-let closure_7 = { code: "function useEntranceAnimationTsx1(){const{runOnJS,setUseEntranceAnimationState}=this.__closure;runOnJS(setUseEntranceAnimationState)({isComplete:true});}" };
-let closure_8 = { code: "function useEntranceAnimationTsx2(){const{runOnJS,setUseEntranceAnimationState,incrementLoads}=this.__closure;runOnJS(setUseEntranceAnimationState)({isComplete:true});runOnJS(incrementLoads)();}" };
+let closure_7 = {
+  code: "function useEntranceAnimationTsx1(){const{runOnJS,setUseEntranceAnimationState}=this.__closure;runOnJS(setUseEntranceAnimationState)({isComplete:true});}",
+};
+let closure_8 = {
+  code: "function useEntranceAnimationTsx2(){const{runOnJS,setUseEntranceAnimationState,incrementLoads}=this.__closure;runOnJS(setUseEntranceAnimationState)({isComplete:true});runOnJS(incrementLoads)();}",
+};
 let result = require("set").fileFinishedImporting("modules/media_viewer/native/useEntranceAnimation.tsx");
 
 export const useEntranceAnimationState = obj;
@@ -33,7 +39,9 @@ export const useEntranceAnimation = function useEntranceAnimation(entranceAnimat
     fn.__closure = obj;
     fn.__workletHash = 7427534745615;
     fn.__initData = closure_1_7;
-    const result = entranceAnimationDriver.set(entranceAnimationDriver(closure_1_1[5]).withTiming(1, closure_1_4, "respect-motion-settings", fn));
+    const result = entranceAnimationDriver.set(
+      entranceAnimationDriver(closure_1_1[5]).withTiming(1, closure_1_4, "respect-motion-settings", fn),
+    );
   }, items);
   const handleError = React.useCallback(() => {
     obj = entranceAnimationDriver;

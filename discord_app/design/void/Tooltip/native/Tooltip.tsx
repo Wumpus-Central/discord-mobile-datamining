@@ -9,14 +9,49 @@ const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { UP: "UP", DOWN: "DOWN" };
 obj = { CENTER: "CENTER", RIGHT: "RIGHT", LEFT: "LEFT" };
-obj = { container: { padding: 10, borderRadius: ThemesDefault.radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND }, label: null, title: null, arrow: null };
+obj = {
+  container: {
+    padding: 10,
+    borderRadius: ThemesDefault.radii.xs,
+    alignSelf: "flex-start",
+    minWidth: 60,
+    alignItems: "center",
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  },
+  label: null,
+  title: null,
+  arrow: null,
+};
 createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_MEDIUM, fontSize: 12, color: ThemesDefault.colors.WHITE };
 obj[1] = createCacheKey;
 obj[2] = { marginBottom: 4 };
-let obj1 = { padding: 10, borderRadius: ThemesDefault.radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-obj[3] = { width: 0, height: 0, borderStyle: "solid", borderLeftColor: "transparent", borderRightColor: "transparent", borderTopColor: ThemesDefault.colors.BACKGROUND_BRAND, borderBottomColor: ThemesDefault.colors.BACKGROUND_BRAND };
+let obj1 = {
+  padding: 10,
+  borderRadius: ThemesDefault.radii.xs,
+  alignSelf: "flex-start",
+  minWidth: 60,
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
+obj[3] = {
+  width: 0,
+  height: 0,
+  borderStyle: "solid",
+  borderLeftColor: "transparent",
+  borderRightColor: "transparent",
+  borderTopColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderBottomColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
 let closure_8 = createCacheKey.createStyles(obj);
-let obj3 = { width: 0, height: 0, borderStyle: "solid", borderLeftColor: "transparent", borderRightColor: "transparent", borderTopColor: ThemesDefault.colors.BACKGROUND_BRAND, borderBottomColor: ThemesDefault.colors.BACKGROUND_BRAND };
+let obj3 = {
+  width: 0,
+  height: 0,
+  borderStyle: "solid",
+  borderLeftColor: "transparent",
+  borderRightColor: "transparent",
+  borderTopColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderBottomColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
 const result = require("set").fileFinishedImporting("design/void/Tooltip/native/Tooltip.tsx");
 
 export default function Tooltip(arrowHeight) {
@@ -63,7 +98,7 @@ export default function Tooltip(arrowHeight) {
   let tmp8 = UP === obj.UP;
   if (tmp8) {
     obj = { style: null };
-    const items1 = [tmp3.arrow, , , ];
+    const items1 = [tmp3.arrow, , ,];
     obj = { borderLeftWidth: null, borderRightWidth: null, borderBottomWidth: null };
     obj[0] = arrowWidth / 2;
     obj[1] = arrowWidth / 2;
@@ -74,7 +109,7 @@ export default function Tooltip(arrowHeight) {
     obj[0] = items1;
     tmp8 = callback(tmp6, obj);
   }
-  const items2 = [tmp8, , ];
+  const items2 = [tmp8, ,];
   obj1 = { onLayout: arrowHeight.onLayout, style: items3, children: null };
   items3 = [tmp3.container, containerStyle];
   let tmp10 = null;
@@ -84,7 +119,7 @@ export default function Tooltip(arrowHeight) {
     obj2[3] = title;
     tmp10 = callback(num2(LEFT[7]).Heading, obj2);
   }
-  const items4 = [tmp10, , ];
+  const items4 = [tmp10, ,];
   let tmp14 = null;
   if (null != label) {
     const obj3 = { style: null, children: null };
@@ -100,7 +135,7 @@ export default function Tooltip(arrowHeight) {
   let tmp18 = UP === obj.DOWN;
   if (tmp18) {
     const obj4 = { style: null };
-    const items6 = [tmp3.arrow, , , ];
+    const items6 = [tmp3.arrow, , ,];
     const obj5 = { borderLeftWidth: null, borderRightWidth: null, borderTopWidth: null };
     obj5[0] = arrowWidth / 2;
     obj5[1] = arrowWidth / 2;
@@ -114,6 +149,6 @@ export default function Tooltip(arrowHeight) {
   items2[2] = tmp18;
   obj[1] = items2;
   return closure_5(View, obj);
-};
+}
 export const TooltipArrowDirections = obj;
 export const TooltipArrowPositions = obj;

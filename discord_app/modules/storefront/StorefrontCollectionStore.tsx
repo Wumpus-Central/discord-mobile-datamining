@@ -9,8 +9,7 @@ let closure_3 = {};
 let closure_4 = {};
 let closure_5 = {};
 const Store = initializeDefault.Store;
-class StorefrontCollectionStore extends Store {
-}
+class StorefrontCollectionStore extends Store {}
 const prototype = StorefrontCollectionStore.prototype;
 prototype["getFetchState"] = function getFetchState(arg0) {
   let tmp;
@@ -249,7 +248,9 @@ const storefrontCollectionStore = new StorefrontCollectionStore(dispatcherDefaul
     }
     dependencyMap2[applicationId] = { state: "loading", collections };
   },
-  STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS: function handleCollectionsForApplicationFetchSuccess(collections) {
+  STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS: function handleCollectionsForApplicationFetchSuccess(
+    collections,
+  ) {
     collections = collections.collections;
     let timestamp;
     ({ applicationId, includePricing, skuTypes } = collections);
@@ -271,7 +272,9 @@ const storefrontCollectionStore = new StorefrontCollectionStore(dispatcherDefaul
     }
     dependencyMap3[pageKey] = { state: "loading", collectionIds };
   },
-  STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS: function handleCollectionsForApplicationPageFetchSuccess(collections) {
+  STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS: function handleCollectionsForApplicationPageFetchSuccess(
+    collections,
+  ) {
     collections = collections.collections;
     let timestamp;
     ({ pageKey, listKey, total } = collections);
@@ -282,7 +285,9 @@ const storefrontCollectionStore = new StorefrontCollectionStore(dispatcherDefaul
       timestamp[collection.id] = { state: "success", collection, fetchedAt: timestamp };
     });
   },
-  STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_FAILURE: function handleCollectionsForApplicationPageFetchFailure(arg0) {
+  STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_FAILURE: function handleCollectionsForApplicationPageFetchFailure(
+    arg0,
+  ) {
     ({ pageKey, apiError } = arg0);
     closure_2[pageKey] = { state: "error", fetchedAt: Date.now(), fetchError: apiError };
   },
@@ -296,7 +301,11 @@ const storefrontCollectionStore = new StorefrontCollectionStore(dispatcherDefaul
   },
   STOREFRONT_COLLECTIONS_AFTER_FETCH_SUCCESS: function handleCollectionsAfterFetchSuccess(collections) {
     collections = collections.collections;
-    closure_4[collections.requestKey] = { state: "success", collectionIds: collections.map((id) => id.id), fetchedAt: Date.now() };
+    closure_4[collections.requestKey] = {
+      state: "success",
+      collectionIds: collections.map((id) => id.id),
+      fetchedAt: Date.now(),
+    };
     const item = collections.forEach((id) => {
       closure_5[id.id] = id;
     });
@@ -312,7 +321,7 @@ const storefrontCollectionStore = new StorefrontCollectionStore(dispatcherDefaul
     closure_3 = {};
     closure_4 = {};
     closure_5 = {};
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/storefront/StorefrontCollectionStore.tsx");
 

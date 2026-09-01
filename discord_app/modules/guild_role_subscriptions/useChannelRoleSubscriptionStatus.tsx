@@ -44,12 +44,18 @@ function getChannelRoleSubscriptionStatus(id, closure_1_7, closure_1_6, closure_
   return obj;
 }
 let closure_6 = { needSubscriptionToAccess: false, isSubscriptionGated: false };
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx",
+);
 
 export default function useChannelRoleSubscriptionStatus(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_2, closure_4];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => closure_1_7(closure_0, closure_1_3, closure_1_2, closure_1_4), items1);
-};
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(
+    items,
+    () => closure_1_7(closure_0, closure_1_3, closure_1_2, closure_1_4),
+    items1,
+  );
+}
 export { getChannelRoleSubscriptionStatus };

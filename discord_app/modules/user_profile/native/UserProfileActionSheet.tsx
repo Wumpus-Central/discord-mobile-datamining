@@ -44,27 +44,55 @@ function ActionSheetAlignedView(children) {
     const items = [obj];
     obj[0] = items;
     const value = animatedIndex.get();
-    obj[1] = animatedPosition(safeAreaTop[13]).interpolate(value, [-1, 0], [0, 1], animatedPosition(safeAreaTop[13]).Extrapolation.CLAMP);
+    obj[1] = animatedPosition(safeAreaTop[13]).interpolate(
+      value,
+      [-1, 0],
+      [0, 1],
+      animatedPosition(safeAreaTop[13]).Extrapolation.CLAMP,
+    );
     return obj;
   };
-  obj = { animatedPosition, safeAreaTop, interpolate: animatedPosition(safeAreaTop[13]).interpolate, animatedIndex, Extrapolation: animatedPosition(safeAreaTop[13]).Extrapolation };
+  obj = {
+    animatedPosition,
+    safeAreaTop,
+    interpolate: animatedPosition(safeAreaTop[13]).interpolate,
+    animatedIndex,
+    Extrapolation: animatedPosition(safeAreaTop[13]).Extrapolation,
+  };
   fn.__closure = obj;
   fn.__workletHash = 16546700050596;
   fn.__initData = closure_22;
   const animatedStyle = obj.useAnimatedStyle(fn);
   const style = [absoluteFill.absoluteFill, animatedStyle];
-  return callback(animatedIndex(safeAreaTop[13]).View, { style, pointerEvents: "box-none", children: children.children });
+  return callback(animatedIndex(safeAreaTop[13]).View, {
+    style,
+    pointerEvents: "box-none",
+    children: children.children,
+  });
 }
 let c4 = importAllResult;
 ({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = ME);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-let closure_18 = createCacheKey.createStyles({ container: { flex: 1 }, profileContainer: { position: "relative" }, noPadding: { paddingHorizontal: 0 }, profileEffect: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 1 } });
+let closure_18 = createCacheKey.createStyles({
+  container: { flex: 1 },
+  profileContainer: { position: "relative" },
+  noPadding: { paddingHorizontal: 0 },
+  profileEffect: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 1 },
+});
 let closure_19 = { code: "function UserProfileActionSheetTsx1(){const{value}=this.__closure;return value.get();}" };
-let closure_20 = { code: "function UserProfileActionSheetTsx2(prepared){const{animatedPosition}=this.__closure;return animatedPosition.set(prepared);}" };
-let closure_22 = { code: "function UserProfileActionSheetTsx3(){const{animatedPosition,safeAreaTop,interpolate,animatedIndex,Extrapolation}=this.__closure;return{transform:[{translateY:animatedPosition.get()+safeAreaTop}],opacity:interpolate(animatedIndex.get(),[-1,0],[0,1],Extrapolation.CLAMP)};}" };
-let closure_24 = { code: "function UserProfileActionSheetTsx4(payload,context){const{defaultHandleOnScroll,scrollPosition,animatedScrollableState,SCROLLABLE_STATE}=this.__closure;var _defaultHandleOnScrol;(_defaultHandleOnScrol=defaultHandleOnScroll)===null||_defaultHandleOnScrol===void 0||_defaultHandleOnScrol(payload,context);scrollPosition.set(animatedScrollableState.get()===SCROLLABLE_STATE.LOCKED?0:payload.contentOffset.y);}" };
-let closure_25 = { code: "function UserProfileActionSheetTsx5(){const{scrollPosition}=this.__closure;const transform=scrollPosition.get()<=0?[{translateY:scrollPosition.get()}]:[];return{transform:transform};}" };
+let closure_20 = {
+  code: "function UserProfileActionSheetTsx2(prepared){const{animatedPosition}=this.__closure;return animatedPosition.set(prepared);}",
+};
+let closure_22 = {
+  code: "function UserProfileActionSheetTsx3(){const{animatedPosition,safeAreaTop,interpolate,animatedIndex,Extrapolation}=this.__closure;return{transform:[{translateY:animatedPosition.get()+safeAreaTop}],opacity:interpolate(animatedIndex.get(),[-1,0],[0,1],Extrapolation.CLAMP)};}",
+};
+let closure_24 = {
+  code: "function UserProfileActionSheetTsx4(payload,context){const{defaultHandleOnScroll,scrollPosition,animatedScrollableState,SCROLLABLE_STATE}=this.__closure;var _defaultHandleOnScrol;(_defaultHandleOnScrol=defaultHandleOnScroll)===null||_defaultHandleOnScrol===void 0||_defaultHandleOnScrol(payload,context);scrollPosition.set(animatedScrollableState.get()===SCROLLABLE_STATE.LOCKED?0:payload.contentOffset.y);}",
+};
+let closure_25 = {
+  code: "function UserProfileActionSheetTsx5(){const{scrollPosition}=this.__closure;const transform=scrollPosition.get()<=0?[{translateY:scrollPosition.get()}]:[];return{transform:transform};}",
+};
 const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) {
   userId = userId.userId;
   const channelId = userId.channelId;
@@ -180,7 +208,12 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
         }
         const result = animatedScrollableState.set(num);
       };
-      obj = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: callback(closure_1_2[12]).SCROLLABLE_STATE };
+      obj = {
+        defaultHandleOnScroll: handleOnScroll,
+        scrollPosition: animatedScrollableState,
+        animatedScrollableState,
+        SCROLLABLE_STATE: callback(closure_1_2[12]).SCROLLABLE_STATE,
+      };
       fn.__closure = obj;
       fn.__workletHash = 13254130622789;
       fn.__initData = closure_1_24;
@@ -225,12 +258,23 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
   const setting = ProfileVisibility.useSetting();
   const tmp2Result2 = userId(tmp3[13]);
   const items6 = [stateFromStores2];
-  const stateFromStoresObject = userId(tmp3[15]).useStateFromStoresObject(items6, () => stateFromStores2.getPendingChanges());
+  const stateFromStoresObject = userId(tmp3[15]).useStateFromStoresObject(items6, () =>
+    stateFromStores2.getPendingChanges(),
+  );
   pendingAvatarDecoration = stateFromStoresObject.pendingAvatarDecoration;
   pendingProfileEffect = stateFromStoresObject.pendingProfileEffect;
   pendingProfileFrame = stateFromStoresObject.pendingProfileFrame;
   const tmp2Result3 = userId(tmp3[15]);
-  createUserProfileAnalyticsContext = userId(tmp3[21]).useCreateUserProfileAnalyticsContext({ layout: "ACTION_SHEET", sourceSessionId: sessionId, userId, guildId: guild_id, channelId, messageId, roleId, showGuildProfile: flag });
+  createUserProfileAnalyticsContext = userId(tmp3[21]).useCreateUserProfileAnalyticsContext({
+    layout: "ACTION_SHEET",
+    sourceSessionId: sessionId,
+    userId,
+    guildId: guild_id,
+    channelId,
+    messageId,
+    roleId,
+    showGuildProfile: flag,
+  });
   if (isPreviewingChanges) {
     if (undefined !== pendingProfileFrame) {
       let skuId;
@@ -359,7 +403,14 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
           tmp = isNonUserBotResult;
         }
         if (!tmp) {
-          obj = { type: "action_sheet", withMutualGuilds: true, withMutualFriends: true, dispatchWait: true, guildId: null, channelId: null };
+          obj = {
+            type: "action_sheet",
+            withMutualGuilds: true,
+            withMutualFriends: true,
+            dispatchWait: true,
+            guildId: null,
+            channelId: null,
+          };
           obj[4] = guild_id;
           const avatarURL = obj.getAvatarURL(guild_id, 80);
           obj[5] = channelId;
@@ -394,7 +445,7 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
       if (pendingAvatarDecoration != null) {
         skuId2 = pendingAvatarDecoration.skuId;
       }
-      const items13 = [skuId2, , , ];
+      const items13 = [skuId2, , ,];
       let skuId3;
       if (pendingProfileEffect != null) {
         skuId3 = pendingProfileEffect.skuId;
@@ -434,11 +485,14 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
         }
       }, items13);
       const items14 = [onClose];
-      const effect4 = obj7.useEffect(() => () => {
-        if (closure_2 != null) {
-          tmp();
-        }
-      }, items14);
+      const effect4 = obj7.useEffect(
+        () => () => {
+          if (closure_2 != null) {
+            tmp();
+          }
+        },
+        items14,
+      );
       const effect5 = obj7.useEffect(() => {
         function handleNavigationChange() {
           key = undefined;
@@ -473,7 +527,14 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
       if (null == stateFromStores) {
         obj2 = { value: null, children: null };
         obj2[0] = analyticsLocations;
-        let obj3 = { value: null, openedAt: null, fetchStartedAt: null, fetchEndedAt: null, isLoaded: null, children: null };
+        let obj3 = {
+          value: null,
+          openedAt: null,
+          fetchStartedAt: null,
+          fetchEndedAt: null,
+          isLoaded: null,
+          children: null,
+        };
         obj3[0] = createUserProfileAnalyticsContext;
         obj3[1] = openedAt;
         let fetchStartedAt;
@@ -509,7 +570,14 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
         obj7 = { value: null, children: null };
         obj7[0] = analyticsLocations;
         tmp = closure_17;
-        const obj8 = { value: null, openedAt: null, fetchStartedAt: null, fetchEndedAt: null, isLoaded: null, children: null };
+        const obj8 = {
+          value: null,
+          openedAt: null,
+          fetchStartedAt: null,
+          fetchEndedAt: null,
+          isLoaded: null,
+          children: null,
+        };
         obj8[0] = createUserProfileAnalyticsContext;
         obj8[1] = openedAt;
         let fetchStartedAt1;
@@ -527,7 +595,17 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
           isLoaded1 = tmp6ResultResult.isLoaded;
         }
         obj8[4] = isLoaded1;
-        const obj9 = { ref: null, handleDisabled: true, scrollable: true, startExpanded: true, maxHeight: null, contentStyles: null, backdropChildren: null, animatedIndex: null, children: null };
+        const obj9 = {
+          ref: null,
+          handleDisabled: true,
+          scrollable: true,
+          startExpanded: true,
+          maxHeight: null,
+          contentStyles: null,
+          backdropChildren: null,
+          animatedIndex: null,
+          children: null,
+        };
         obj9[0] = bottomSheetRef.bottomSheetRef;
         obj9[4] = diff - memo2;
         obj9[5] = tmp.noPadding;
@@ -539,12 +617,19 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
           obj10[0] = sharedValue;
           tmp99Result = tmp99(createUserProfileAnalyticsContext, obj10);
         }
-        const items15 = [tmp99Result, , , ];
+        const items15 = [tmp99Result, , ,];
         const obj11 = { gradientHeight: null, bannerHeight: null };
         obj11[0] = diff;
         obj11[1] = tmp50;
         items15[1] = first1(tmp6(tmp3[53]), obj11);
-        const obj12 = { scrollsToTop: false, style: null, contentContainerStyle: null, scrollEventsHandlersHook: null, ref: null, children: null };
+        const obj12 = {
+          scrollsToTop: false,
+          style: null,
+          contentContainerStyle: null,
+          scrollEventsHandlersHook: null,
+          ref: null,
+          children: null,
+        };
         obj12[1] = tmp.container;
         let str2;
         if (isPreviewingChanges) {
@@ -562,7 +647,23 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
         const obj14 = { style: null, onLayout: null, children: null };
         obj14[0] = tmp.profileContainer;
         obj14[1] = callback;
-        const obj15 = { user: null, channel: null, displayProfile: null, disableCalls: null, disableMessage: null, isVoiceContext: null, location: null, disableStatus: null, scrollViewRef: null, isPreviewingChanges: null, navigateToShop: null, navigateToPremium: null, showUserProfileActionSheet: null, initialSection: null, scrollPosition: null };
+        const obj15 = {
+          user: null,
+          channel: null,
+          displayProfile: null,
+          disableCalls: null,
+          disableMessage: null,
+          isVoiceContext: null,
+          location: null,
+          disableStatus: null,
+          scrollViewRef: null,
+          isPreviewingChanges: null,
+          navigateToShop: null,
+          navigateToPremium: null,
+          showUserProfileActionSheet: null,
+          initialSection: null,
+          scrollPosition: null,
+        };
         obj15[0] = stateFromStores;
         obj15[1] = stateFromStores1;
         obj15[2] = tmp6ResultResult;
@@ -610,11 +711,11 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
           tmp99Result = tmp99(tmp6(tmp3[58]), obj18);
           const tmp6Result7 = tmp6(tmp3[58]);
         }
-        const items16 = [tmp99Result, ];
+        const items16 = [tmp99Result];
         let tmp99Result1 = null != tmp43Result;
         if (tmp99Result1) {
           const obj19 = { style: null, pointerEvents: "none", children: null };
-          const items17 = [tmp.profileEffect, , ];
+          const items17 = [tmp.profileEffect, ,];
           const obj20 = { height: null };
           obj20[0] = diff;
           items17[1] = obj20;
@@ -642,7 +743,7 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
         }
         items15[3] = tmp99Result2;
         obj9[8] = items15;
-        const items18 = [tmp(tmp2(tmp3[48]).BottomSheet, obj9), , ];
+        const items18 = [tmp(tmp2(tmp3[48]).BottomSheet, obj9), ,];
         let tmpResult = null != tmp6Result2Result;
         if (tmpResult) {
           const obj25 = { animatedPosition: null, safeAreaTop: null, animatedIndex: null, children: null };
@@ -654,7 +755,7 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
           obj26[1] = UserProfileThemeTypes.ACTION_SHEET;
           obj26[2] = tmp2(tmp3[28]).ProfileFrameLayerOrder.FRONT;
           obj26[3] = first1;
-          const items19 = [tmp99(tmp6(tmp3[27]), obj26), ];
+          const items19 = [tmp99(tmp6(tmp3[27]), obj26)];
           const obj27 = { variant: "floating", tabStyle: null, onPress: null };
           const obj28 = { backgroundColor: null };
           obj28[0] = token;

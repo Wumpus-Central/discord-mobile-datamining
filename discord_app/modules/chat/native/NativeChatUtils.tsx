@@ -209,7 +209,7 @@ obj = {
         }
       }
     }
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/chat/native/NativeChatUtils.tsx");
 

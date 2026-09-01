@@ -16,7 +16,10 @@ class HomeIndicator extends Component {
 }
 const prototype = HomeIndicator.prototype;
 HomeIndicator["pushStackEntry"] = function pushStackEntry(prefersHidden) {
-  const obj = { prefersHidden: prefersHidden.prefersHidden, prefersDeferringSystemGestures: prefersHidden.prefersDeferringSystemGestures };
+  const obj = {
+    prefersHidden: prefersHidden.prefersHidden,
+    prefersDeferringSystemGestures: prefersHidden.prefersDeferringSystemGestures,
+  };
   const _propsStack = HomeIndicator._propsStack;
   _propsStack.push(obj);
   HomeIndicator._updatePropsStack();
@@ -35,7 +38,10 @@ HomeIndicator["popStackEntry"] = function popStackEntry(arg0) {
   }
 };
 HomeIndicator["replaceStackEntry"] = function replaceStackEntry(arg0, prefersHidden) {
-  const obj = { prefersHidden: prefersHidden.prefersHidden, prefersDeferringSystemGestures: prefersHidden.prefersDeferringSystemGestures };
+  const obj = {
+    prefersHidden: prefersHidden.prefersHidden,
+    prefersDeferringSystemGestures: prefersHidden.prefersDeferringSystemGestures,
+  };
   let num = -1;
   if (null != arg0) {
     const _propsStack = HomeIndicator._propsStack;

@@ -8,8 +8,11 @@ const result = require("set").fileFinishedImporting("modules/guild_onboarding_ho
 export default function useResourceChannels(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_2];
-  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items, () => {
-    const resourceChannels = closure_1_3.getResourceChannels(closure_0);
-    return resourceChannels.filter((channelId) => null != channel.getChannel(channelId.channelId));
-  });
-};
+  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(
+    items,
+    () => {
+      const resourceChannels = closure_1_3.getResourceChannels(closure_0);
+      return resourceChannels.filter((channelId) => null != channel.getChannel(channelId.channelId));
+    },
+  );
+}

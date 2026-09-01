@@ -48,7 +48,15 @@ export default function Sticker(opaque) {
   const intl = tmp(1236).intl;
   const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.rk6pOw, { stickerName: sticker.name });
   if (sticker.format_type === StickerFormat.StickerFormat.LOTTIE) {
-    const obj2 = { url: null, asset: null, width: null, height: null, opacity: null, renderMode: null, accessibilityLabel: null };
+    const obj2 = {
+      url: null,
+      asset: null,
+      width: null,
+      height: null,
+      opacity: null,
+      renderMode: null,
+      accessibilityLabel: null,
+    };
     obj2[0] = str;
     let str4 = sticker.id;
     if (str4 == null) {
@@ -61,7 +69,15 @@ export default function Sticker(opaque) {
     const NativeLottieRenderMode = tmp(7908).NativeLottieRenderMode;
     obj2[5] = animated ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
     obj2[6] = formatToPlainStringResult;
-    return jsx(NativeLottieViewDefault, { url: null, asset: null, width: null, height: null, opacity: null, renderMode: null, accessibilityLabel: null });
+    return jsx(NativeLottieViewDefault, {
+      url: null,
+      asset: null,
+      width: null,
+      height: null,
+      opacity: null,
+      renderMode: null,
+      accessibilityLabel: null,
+    });
   } else {
     if (sticker.format_type === tmp(5212).StickerFormat.APNG) {
       if ("type" in sticker) {
@@ -82,7 +98,14 @@ export default function Sticker(opaque) {
       const merged = Object.assign(obj3);
       return jsx(_modDef10262, {});
     }
-    const obj6 = { resizeMode: "contain", style: null, placeholder: null, source: null, accessible: true, accessibilityLabel: null };
+    const obj6 = {
+      resizeMode: "contain",
+      style: null,
+      placeholder: null,
+      source: null,
+      accessible: true,
+      accessibilityLabel: null,
+    };
     const obj7 = { height: null, width: null, opacity: null };
     obj7[0] = size;
     obj7[1] = size;
@@ -103,7 +126,7 @@ export default function Sticker(opaque) {
     return tmp12(tmp14, obj6);
   }
   obj1 = { stickerName: sticker.name };
-};
+}
 export const getStickerAssetUrl = function getStickerAssetUrl(sticker, closure_7, first) {
   if (sticker.format_type === StickerFormat.StickerFormat.LOTTIE) {
     let tmpResult = tmp(4852);

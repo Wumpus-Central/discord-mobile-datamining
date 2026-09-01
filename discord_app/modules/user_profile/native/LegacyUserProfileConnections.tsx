@@ -148,7 +148,7 @@ class ConnectedUserAccount {
         obj2[1] = require("Button").Icon.Sizes.REFRESH_SMALL_16;
         obj2[2] = require("registerAsset");
         obj2[3] = tmp33;
-        items = [, ];
+        items = [,];
         items[0] = jsx(require("Button").Icon, obj2);
         obj3 = { style: null, size: null, source: null, color: null };
         obj3[0] = tmp.verifiedCheck;
@@ -164,7 +164,9 @@ class ConnectedUserAccount {
       items1[0] = account.name;
       name = undefined;
       callback = closure_3.useCallback(() => {
-        const result = account(_undefined[23]).triggerHapticFeedback(account(_undefined[23]).HapticFeedbackTypes.IMPACT_LIGHT);
+        const result = account(_undefined[23]).triggerHapticFeedback(
+          account(_undefined[23]).HapticFeedbackTypes.IMPACT_LIGHT,
+        );
         const obj = account(_undefined[23]);
         account(_undefined[24]).copy(account.name);
         const obj2 = account(_undefined[24]);
@@ -173,10 +175,10 @@ class ConnectedUserAccount {
       if (value != null) {
         name = value.name;
       }
-      items2 = [, ];
+      items2 = [,];
       items2[0] = name;
       items2[1] = platformUserUrl;
-      items3 = [, , ];
+      items3 = [, ,];
       items3[0] = account.type;
       items3[1] = platformUserUrl;
       items3[2] = userId;
@@ -220,7 +222,13 @@ class ConnectedUserAccount {
         PressableOpacity = Pressable;
       }
       tmp42 = jsx;
-      obj4 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, onLongPress: null, children: null };
+      obj4 = {
+        accessibilityLabel: null,
+        accessibilityRole: "button",
+        onPress: null,
+        onLongPress: null,
+        children: null,
+      };
       obj4[0] = memo;
       tmp43 = undefined;
       if (null != platformUserUrl) {
@@ -230,7 +238,7 @@ class ConnectedUserAccount {
       obj4[3] = callback;
       tmp44 = View;
       obj5 = { style: null, children: null };
-      items4 = [, ];
+      items4 = [,];
       items4[0] = tmp.connectedAccountContainer;
       items4[1] = style;
       obj5[0] = items4;
@@ -240,7 +248,7 @@ class ConnectedUserAccount {
       obj7 = { size: null, source: null, disableColor: true };
       obj7[0] = require("Button").Icon.Sizes.MEDIUM;
       obj7[1] = source;
-      items5 = [, , ];
+      items5 = [, ,];
       items5[0] = tmp42(require("Button").Icon, obj7);
       obj8 = { style: null, children: null };
       obj8[0] = tmp.connectedAccountNameContainer;
@@ -249,11 +257,11 @@ class ConnectedUserAccount {
       obj10 = { variant: "text-md/semibold", style: null, children: null };
       obj10[1] = tmp.connectedAccountNameText;
       obj10[2] = account.name;
-      items6 = [, ];
+      items6 = [,];
       items6[0] = tmp42(require("Text").Text, obj10);
       items6[1] = tmp34;
       obj9[1] = items6;
-      items7 = [, , ];
+      items7 = [, ,];
       items7[0] = jsxs(View, obj9);
       tmp42Result = null;
       if (null != createdAtDate) {
@@ -310,7 +318,7 @@ class ConnectedApplicationUserRoleAccount {
     tmp4 = jsxs;
     tmp5 = View;
     obj = { style: items, children: null };
-    items = [, ];
+    items = [,];
     items[0] = tmp.connectedAccountContainer;
     items[1] = global.style;
     tmp6 = null;
@@ -320,7 +328,7 @@ class ConnectedApplicationUserRoleAccount {
       obj1[2] = applicationRoleConnection.platform_name;
       tmp6 = jsx(require("Text").Text, obj1);
     }
-    items1 = [, , , ];
+    items1 = [, , ,];
     items1[0] = tmp6;
     tmp8 = jsx;
     obj2 = { style: tmp.appConnectionNameContainer, children: null };
@@ -350,26 +358,26 @@ class ConnectedApplicationUserRoleAccount {
     intl = require("getSystemLocale").intl;
     obj8 = {
       applicationHook() {
-            obj = { style: obj.connectedAccountPoweredByText, children: null };
-            let tmp5 = null;
-            if (null != applicationRoleConnection.application.bot) {
-              obj = { style: null, user: null, size: null, guildId: "a" };
-              obj[0] = tmp3.connectedAccountPoweredByAvatar;
-              const tmp12 = new closure_1_7(tmp4.application.bot);
-              obj[1] = tmp12;
-              obj[2] = applicationRoleConnection(closure_1_2[17]).AvatarSizes.SIZE_16;
-              tmp5 = closure_1_14(applicationRoleConnection(closure_1_2[17]).Avatar, obj);
-            }
-            const items = [tmp5, ];
-            obj = { variant: "text-xs/normal", color: "text-default", children: tmp4.application.name };
-            items[1] = closure_1_14(applicationRoleConnection(closure_1_2[31]).Text, obj);
-            obj[1] = items;
-            return closure_1_15(closure_1_5, obj);
-          }
+        obj = { style: obj.connectedAccountPoweredByText, children: null };
+        let tmp5 = null;
+        if (null != applicationRoleConnection.application.bot) {
+          obj = { style: null, user: null, size: null, guildId: "a" };
+          obj[0] = tmp3.connectedAccountPoweredByAvatar;
+          const tmp12 = new closure_1_7(tmp4.application.bot);
+          obj[1] = tmp12;
+          obj[2] = applicationRoleConnection(closure_1_2[17]).AvatarSizes.SIZE_16;
+          tmp5 = closure_1_14(applicationRoleConnection(closure_1_2[17]).Avatar, obj);
+        }
+        const items = [tmp5];
+        obj = { variant: "text-xs/normal", color: "text-default", children: tmp4.application.name };
+        items[1] = closure_1_14(applicationRoleConnection(closure_1_2[31]).Text, obj);
+        obj[1] = items;
+        return closure_1_15(closure_1_5, obj);
+      },
     };
     obj7[2] = intl.format(require("getSystemLocale").t.zIT9YA, obj8);
     obj6[1] = tmp8(require("Text").Text, obj7);
-    items2 = [, ];
+    items2 = [,];
     items2[0] = tmp8(tmp5, obj6);
     items2[1] = tmp8(tmp5, { style: { flexGrow: 1 } });
     obj5[1] = items2;
@@ -382,7 +390,24 @@ let c3 = importAllResult;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ AnalyticEvents: c10, PlatformTypes: unpackModuleId, ThemeTypes: closure_12 } = ME);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-obj = { connectedAccountContainer: obj, connectedAccount: { flexDirection: "row", alignItems: "center" }, connectedAccountNameContainer: { flex: 1, marginLeft: 8 }, connectedAccountName: { flexDirection: "row", alignItems: "center" }, connectedAccountNameText: null, connectedAccountNameCreatedAtText: null, connectedAccountOpenLink: null, connectedAccountOpenHide: null, verifiedCheckContainer: null, verifiedCheck: null, connectedAccountChildren: null, metadataItem: null, appConnectionNameContainer: null, connectedAccountPoweredByContainer: null, connectedAccountPoweredByAvatar: null, connectedAccountPoweredByText: null };
+obj = {
+  connectedAccountContainer: obj,
+  connectedAccount: { flexDirection: "row", alignItems: "center" },
+  connectedAccountNameContainer: { flex: 1, marginLeft: 8 },
+  connectedAccountName: { flexDirection: "row", alignItems: "center" },
+  connectedAccountNameText: null,
+  connectedAccountNameCreatedAtText: null,
+  connectedAccountOpenLink: null,
+  connectedAccountOpenHide: null,
+  verifiedCheckContainer: null,
+  verifiedCheck: null,
+  connectedAccountChildren: null,
+  metadataItem: null,
+  appConnectionNameContainer: null,
+  connectedAccountPoweredByContainer: null,
+  connectedAccountPoweredByAvatar: null,
+  connectedAccountPoweredByText: null,
+};
 obj = { paddingHorizontal: 10, paddingVertical: require("semanticColor").FORM_ROW_VERTICAL_PADDING / 2 };
 createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[4] = createCacheKey;
@@ -391,15 +416,37 @@ let obj2 = { color: ThemesDefault.colors.TEXT_SUBTLE };
 let items = [{ rotate: "135deg" }];
 obj[6] = { height: 24, width: 24, transform: items, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 let obj3 = { height: 24, width: 24, transform: items, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-obj[7] = { alignSelf: "flex-start", margin: 4, height: 16, width: 16, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj[7] = {
+  alignSelf: "flex-start",
+  margin: 4,
+  height: 16,
+  width: 16,
+  tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+};
 obj[8] = { marginLeft: 4, height: 16, width: 16 };
 obj[9] = { position: "absolute", left: 0, top: 0 };
 obj[10] = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", overflow: "hidden" };
-let obj4 = { alignSelf: "flex-start", margin: 4, height: 16, width: 16, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj4 = {
+  alignSelf: "flex-start",
+  margin: 4,
+  height: 16,
+  width: 16,
+  tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+};
 obj[11] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[12] = { flex: 1, flexDirection: "row", alignItems: "center", marginTop: 4 };
 let obj5 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-obj[13] = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, marginTop: 12 };
+obj[13] = {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.sm,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  paddingHorizontal: 8,
+  paddingVertical: 4,
+  marginTop: 12,
+};
 obj[14] = { marginRight: 4 };
 obj[15] = { marginTop: -4, alignItems: "center", flexDirection: "row" };
 let closure_17 = createCacheKey.createStyles(obj);
@@ -407,7 +454,17 @@ let closure_18 = importAllResult.memo(ConnectedUserAccount);
 let closure_19 = importAllResult.memo(ConnectedApplicationUserRoleAccount);
 let closure_20 = [];
 let closure_21 = [];
-let obj6 = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, marginTop: 12 };
+let obj6 = {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.sm,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  paddingHorizontal: 8,
+  paddingVertical: 4,
+  marginTop: 12,
+};
 let result = require("set").fileFinishedImporting("modules/user_profile/native/LegacyUserProfileConnections.tsx");
 
 export default function LegacyUserProfileConnections(user) {
@@ -501,7 +558,7 @@ export default function LegacyUserProfileConnections(user) {
         const tmp13 = importDefault(tmp2[35]);
       }
       obj = { children: null };
-      const items6 = [tmp10, ];
+      const items6 = [tmp10];
       obj1 = { title: null, showContainer: true, children: null };
       const intl2 = tmp(tmp2[26]).intl;
       obj1[0] = intl2.string(tmp(tmp2[26]).t["3fe7U5"]);
@@ -515,7 +572,7 @@ export default function LegacyUserProfileConnections(user) {
     }
   }
   return tmp17Result;
-};
+}
 export { ConnectedUserAccount };
 export { ConnectedApplicationUserRoleAccount };
 export const useAppplicationRoleConnectionItems = function useAppplicationRoleConnectionItems(arr) {
@@ -523,7 +580,10 @@ export const useAppplicationRoleConnectionItems = function useAppplicationRoleCo
   const theme = require("../../../../discord_common/js/packages/design/native.tsx").useThemeContext().theme;
   const obj = ManaContext;
   const items = [closure_6];
-  dependencyMap = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_6.locale);
+  dependencyMap = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_6.locale,
+  );
   return arr.map((applicationRoleConnection) => {
     obj = { children: closure_1_14(closure_1_19, obj) };
     obj = { applicationRoleConnection, theme: c1, locale: theme, style: id };

@@ -29,7 +29,7 @@ export default function useActionBarHeight(id) {
     }
   }
   return sum + num2;
-};
+}
 export const CALL_ACTION_BAR_HEIGHT = 88;
 export const FIVE_BUTTON_CONTAINER_PADDING_TOP = 16;
 export const FIVE_BUTTON_CONTAINER_PADDING_BOTTOM = 16;

@@ -37,7 +37,9 @@ export default function VoiceUserConnected(channel) {
   ({ localMute, localVideo } = stateFromStoresObject);
   const obj2 = channel(sessionId[9]);
   const items1 = [closure_5];
-  const stateFromStores = channel(sessionId[9]).useStateFromStores(items1, () => closure_1_5.getStreamForUser(user.id, channel.getGuildId()));
+  const stateFromStores = channel(sessionId[9]).useStateFromStores(items1, () =>
+    closure_1_5.getStreamForUser(user.id, channel.getGuildId()),
+  );
   const obj3 = channel(sessionId[9]);
   const items2 = [closure_8];
   const stateFromStores1 = channel(sessionId[9]).useStateFromStores(items2, () => {
@@ -56,7 +58,11 @@ export default function VoiceUserConnected(channel) {
   const items3 = [closure_9];
   const items4 = [channel.id, user.id];
   let tmp8 = null != sessionId;
-  const stateFromStores2 = channel(sessionId[9]).useStateFromStores(items3, () => closure_1_9.getVoicePlatformForChannel(channel.id, user.id), items4);
+  const stateFromStores2 = channel(sessionId[9]).useStateFromStores(
+    items3,
+    () => closure_1_9.getVoicePlatformForChannel(channel.id, user.id),
+    items4,
+  );
   if (tmp8) {
     tmp8 = tmp;
   }
@@ -66,20 +72,43 @@ export default function VoiceUserConnected(channel) {
   let tmp2Result = tmp2(tmp3[9]);
   const items5 = [closure_3];
   const items6 = [user.id, channel.id];
-  const stateFromStores3 = tmp2Result.useStateFromStores(items5, () => {
-    embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(channel.id);
-    return embeddedActivitiesForChannel.find((userIds) => {
-      userIds = userIds.userIds;
-      return userIds.has(id.id);
-    });
-  }, items6);
+  const stateFromStores3 = tmp2Result.useStateFromStores(
+    items5,
+    () => {
+      embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(channel.id);
+      return embeddedActivitiesForChannel.find((userIds) => {
+        userIds = userIds.userIds;
+        return userIds.has(id.id);
+      });
+    },
+    items6,
+  );
   tmp2Result = tmp2(tmp3[9]);
   const items7 = [closure_4];
   const stateFromStores4 = tmp2Result.useStateFromStores(items7, () => {
     const guildRingingUsers = closure_1_4.getGuildRingingUsers(channel.id);
     return guildRingingUsers.has(user.id);
   });
-  obj = { guildId: channel.guild_id, channelId: channel.id, member, user, collapsed, serverMute: null, serverDeaf: null, mute: null, deaf: null, localMute: null, video: null, stream: null, platform: null, disabled: null, isInEmbeddedActivity: null, isGuest: null, voicePlatform: null, ringing: null };
+  obj = {
+    guildId: channel.guild_id,
+    channelId: channel.id,
+    member,
+    user,
+    collapsed,
+    serverMute: null,
+    serverDeaf: null,
+    mute: null,
+    deaf: null,
+    localMute: null,
+    video: null,
+    stream: null,
+    platform: null,
+    disabled: null,
+    isInEmbeddedActivity: null,
+    isGuest: null,
+    voicePlatform: null,
+    ringing: null,
+  };
   const obj5 = channel(sessionId[9]);
   const tmp11 = jsx;
   if (!mute) {
@@ -106,4 +135,4 @@ export default function VoiceUserConnected(channel) {
   obj[16] = stateFromStores2;
   obj[17] = stateFromStores4;
   return tmp11(user(sessionId[10]), obj);
-};
+}

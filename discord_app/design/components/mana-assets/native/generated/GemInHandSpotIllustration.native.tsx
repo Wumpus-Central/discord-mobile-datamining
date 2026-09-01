@@ -5,7 +5,9 @@ import preloadDefault from "../../../../../components_native/common/FastImage.ts
 import metadataDefault from "../../../../../../discord_assets/assets/mana/asset-library/generated/GemInHandSpotIllustration-2x.png.js";
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GemInHandSpotIllustration.native.tsx");
+const result = set.fileFinishedImporting(
+  "design/components/mana-assets/native/generated/GemInHandSpotIllustration.native.tsx",
+);
 
 export const GemInHandSpotIllustration = function GemInHandSpotIllustration(width) {
   let num = width.width;
@@ -21,7 +23,14 @@ export const GemInHandSpotIllustration = function GemInHandSpotIllustration(widt
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  let obj = {
+    fadeDuration: 0,
+    source: null,
+    style: null,
+    accessible: null,
+    accessibilityLabel: null,
+    resizeMode: null,
+  };
   obj = { uri: metadataDefault };
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };

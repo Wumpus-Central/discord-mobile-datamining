@@ -17,8 +17,17 @@ function ProductNameAndDescription(product) {
   let obj = getBundleDescription;
   obj = { style: tmp.description, children: null };
   const productDescription = obj.useProductDescription(product);
-  obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: product.name };
-  const items = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-md/medium", color: "text-default", children: productDescription })];
+  obj = {
+    variant: "heading-xl/bold",
+    color: "mobile-text-heading-primary",
+    style: tmp.title,
+    accessibilityRole: "header",
+    children: product.name,
+  };
+  const items = [
+    callback(Text.Text, obj),
+    callback(Text.Text, { variant: "text-md/medium", color: "text-default", children: productDescription }),
+  ];
   obj[1] = items;
   return callback2(View, obj);
 }
@@ -52,14 +61,19 @@ function ProductPurchaseStatus(product) {
 function BundleProductDetailsActionSheetInfo(arg0) {
   ({ product, onTrackPress } = arg0);
   const tmp = callback3();
-  const items = [, ];
+  const items = [,];
   ({ body: arr[0], bundleBody: arr[1] } = tmp);
   return callback(View, { style: items, children: callback(ProductPurchaseStatus, { product, onTrackPress }) });
 }
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { title: { marginBottom: 2 }, body: null, bundleBody: null, description: null };
-obj = { marginTop: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_16, flexDirection: "column", gap: 20 };
+obj = {
+  marginTop: ThemesDefault.space.PX_24,
+  marginHorizontal: ThemesDefault.space.PX_16,
+  flexDirection: "column",
+  gap: 20,
+};
 obj[1] = obj;
 obj[2] = { marginTop: 0 };
 obj[3] = { flexDirection: "column", gap: 6 };
@@ -78,7 +92,7 @@ export default function ProductDetailsActionSheetInfo(arg0) {
     obj[0] = tmp.body;
     obj = { product: null };
     obj[0] = product;
-    const items = [callback(ProductNameAndDescription, obj), ];
+    const items = [callback(ProductNameAndDescription, obj)];
     obj1 = { product: null, onTrackPress: null };
     obj1[0] = product;
     obj1[1] = onTrackPress;
@@ -87,4 +101,4 @@ export default function ProductDetailsActionSheetInfo(arg0) {
     tmp7 = callback2(View, obj);
   }
   return tmp7;
-};
+}

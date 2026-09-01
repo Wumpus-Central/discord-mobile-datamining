@@ -36,4 +36,4 @@ export default function isStreaming(activeSourceId, arg1) {
       }
     }
   }
-};
+}

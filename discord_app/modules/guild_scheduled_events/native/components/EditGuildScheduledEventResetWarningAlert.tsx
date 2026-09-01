@@ -6,7 +6,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildScheduledEventResetWarningAlert.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/EditGuildScheduledEventResetWarningAlert.tsx",
+);
 
 export default function EditGuildScheduledEventResetWarningAlert(arg0) {
   ({ onClose, onConfirm } = arg0);
@@ -20,5 +22,13 @@ export default function EditGuildScheduledEventResetWarningAlert(arg0) {
   obj[5] = componentDidMountDefault.Colors.GREEN;
   const intl4 = getSystemLocale.intl;
   obj[6] = intl4.string(getSystemLocale.t["ETE/oC"]);
-  return jsx(componentDidMountDefault, { onClose, onConfirm, title: null, body: null, confirmText: null, confirmColor: null, cancelText: null });
-};
+  return jsx(componentDidMountDefault, {
+    onClose,
+    onConfirm,
+    title: null,
+    body: null,
+    confirmText: null,
+    confirmColor: null,
+    cancelText: null,
+  });
+}

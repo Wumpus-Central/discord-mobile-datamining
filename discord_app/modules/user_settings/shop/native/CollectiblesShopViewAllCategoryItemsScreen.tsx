@@ -4,7 +4,9 @@ import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopViewAllCategoryItemsScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/shop/native/CollectiblesShopViewAllCategoryItemsScreen.tsx",
+);
 
 export default function CollectiblesShopViewAllCategoryItemsScreen() {
   let obj = stackNavigation(7159);
@@ -18,4 +20,4 @@ export default function CollectiblesShopViewAllCategoryItemsScreen() {
   const obj2 = stackNavigation(1499);
   const merged = Object.assign(settingNavigationRoute.params);
   return jsx(_modDef15443, {});
-};
+}

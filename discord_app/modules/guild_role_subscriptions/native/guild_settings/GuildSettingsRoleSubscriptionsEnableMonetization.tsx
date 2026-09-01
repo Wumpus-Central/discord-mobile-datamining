@@ -7,7 +7,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEnableMonetization.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEnableMonetization.tsx",
+);
 
 export default function GuildSubscriptionEnableMonetization(guildId) {
   guildId = guildId.guildId;
@@ -25,4 +27,4 @@ export default function GuildSubscriptionEnableMonetization(guildId) {
     const tmp8 = UnavailableNoticeDefault;
   }
   return tmp5;
-};
+}

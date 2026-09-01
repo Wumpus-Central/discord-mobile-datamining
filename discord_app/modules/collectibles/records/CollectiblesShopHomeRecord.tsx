@@ -1,6 +1,17 @@
 // discord_app/modules/collectibles/records/CollectiblesShopHomeRecord.tsx
 import closure_2 from "CollectiblesCategoryRecord.tsx";
-import { CountdownTimerBlockRecord, FeaturedBlockRecord, FeedBlockRecord, GameServerHostingBannerBlockRecord as closure_6, HeroBlockRecord, ImmersiveBannerBlockRecord as closure_8, RewardHeroBlockRecord, ShelfBlockRecord, SocialLayerStorefrontPromotionalBannerBlockRecord as closure_11, WideBannerBlockRecord } from "CountdownTimerBlockRecord.tsx";
+import {
+  CountdownTimerBlockRecord,
+  FeaturedBlockRecord,
+  FeedBlockRecord,
+  GameServerHostingBannerBlockRecord as closure_6,
+  HeroBlockRecord,
+  ImmersiveBannerBlockRecord as closure_8,
+  RewardHeroBlockRecord,
+  ShelfBlockRecord,
+  SocialLayerStorefrontPromotionalBannerBlockRecord as closure_11,
+  WideBannerBlockRecord,
+} from "CountdownTimerBlockRecord.tsx";
 
 const require = arg1;
 let prototype;

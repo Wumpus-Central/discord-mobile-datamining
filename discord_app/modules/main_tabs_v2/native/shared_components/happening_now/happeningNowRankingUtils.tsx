@@ -5,13 +5,28 @@ import closure_4 from "../../../../../stores/VoiceStateStore.tsx";
 import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HappeningNowConstants.tsx";
 
 require = arg1;
-({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: c5, HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: closure_6, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: error } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx");
+({
+  HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: c5,
+  HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: closure_6,
+  HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: error,
+} = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx",
+);
 
 export const cardSize = function cardSize(arg0) {
   return closure_6;
 };
-export const HappeningNowWeights = { Stage: 7, Voice: 6, Stream: 5, Game: 4, Listening: 3, CustomStatus: 3, User: 2, Base: 1 };
+export const HappeningNowWeights = {
+  Stage: 7,
+  Voice: 6,
+  Stream: 5,
+  Game: 4,
+  Listening: 3,
+  CustomStatus: 3,
+  User: 2,
+  Base: 1,
+};
 export const HAPPENING_NOW_OFFLINE_PENALTY = -1000;
 export const filterHappeningNowCards = function filterHappeningNowCards(isFocused) {
   return isFocused.filter((voiceState) => {
@@ -93,7 +108,7 @@ export const sortHappeningNowCards = function sortHappeningNowCards(result) {
         }
       }
       return flag;
-    }
+    },
   ];
   return apply.orderBy(result, items, ["asc", "asc"]);
 };

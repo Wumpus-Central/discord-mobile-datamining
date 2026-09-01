@@ -8,10 +8,29 @@ function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
   analyticsLocations = analyticsLocations(5953)().analyticsLocations;
-  let obj = { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
-  obj = { user: userRecord, guildId: "Array", size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093 };
+  let obj = {
+    icon: null,
+    label: null,
+    subLabel: null,
+    labelLineClamp: 1,
+    subLabelLineClamp: 1,
+    accessibilityRole: "button",
+    accessibilityActions: null,
+    onAccessibilityAction: null,
+    onPress: null,
+    trailing: null,
+  };
+  obj = {
+    user: userRecord,
+    guildId: "Array",
+    size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093,
+  };
   obj[2] = userRecord(1297).AvatarSizes.REFRESH_MEDIUM_32;
-  obj[0] = jsx(userRecord(1297).Avatar, { user: userRecord, guildId: "Array", size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093 });
+  obj[0] = jsx(userRecord(1297).Avatar, {
+    user: userRecord,
+    guildId: "Array",
+    size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093,
+  });
   let tmp4 = null != userRecord;
   if (tmp4) {
     let username = userRecord.globalName;
@@ -57,7 +76,9 @@ function BlockedUserRow(userRecord) {
   return jsx(userRecord(5599).TableRow, { name: "unblock", label: null });
 }
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUserRowV2.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/content_and_social/native/BlockedUserRowV2.tsx",
+);
 
 export default function ConnectedBlockedUserRow(userId) {
   userId = userId.userId;
@@ -71,4 +92,4 @@ export default function ConnectedBlockedUserRow(userId) {
     tmp2 = <BlockedUserRow userRecord={null} />;
   }
   return tmp2;
-};
+}

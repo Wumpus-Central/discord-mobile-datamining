@@ -11,12 +11,41 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { wrapper: null, content: null, heading: null, list: null, listItem: null, questionWrapper: null, questionWrapperExpanded: null, question: null, questionIcon: null, questionIconExpanded: null, answer: null };
-createCacheKey = { alignSelf: "center", marginTop: 50, marginBottom: require("GuildBoostingMarketingPersistentCta").VISIBILITY_OFFSET, maxWidth: 800, paddingHorizontal: 16, width: "100%" };
+createCacheKey = {
+  wrapper: null,
+  content: null,
+  heading: null,
+  list: null,
+  listItem: null,
+  questionWrapper: null,
+  questionWrapperExpanded: null,
+  question: null,
+  questionIcon: null,
+  questionIconExpanded: null,
+  answer: null,
+};
+createCacheKey = {
+  alignSelf: "center",
+  marginTop: 50,
+  marginBottom: require("GuildBoostingMarketingPersistentCta").VISIBILITY_OFFSET,
+  maxWidth: 800,
+  paddingHorizontal: 16,
+  width: "100%",
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 16, paddingVertical: 28 };
+createCacheKey[1] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  borderRadius: ThemesDefault.radii.sm,
+  paddingHorizontal: 16,
+  paddingVertical: 28,
+};
 createCacheKey[2] = { marginBottom: 20, textAlign: "center" };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 16, paddingVertical: 28 };
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  borderRadius: ThemesDefault.radii.sm,
+  paddingHorizontal: 16,
+  paddingVertical: 28,
+};
 createCacheKey[3] = { borderTopColor: ThemesDefault.colors.BORDER_MUTED, borderTopWidth: 1 };
 let obj2 = { borderTopColor: ThemesDefault.colors.BORDER_MUTED, borderTopWidth: 1 };
 createCacheKey[4] = { borderBottomColor: ThemesDefault.colors.BORDER_MUTED, borderBottomWidth: 1 };
@@ -38,7 +67,7 @@ let items1 = [
     getAnswer() {
       const intl = getSystemLocale.intl;
       return intl.string(getSystemLocale.t.nhkk6k);
-    }
+    },
   },
   {
     getQuestion() {
@@ -49,7 +78,7 @@ let items1 = [
       const intl = getSystemLocale.intl;
       const obj = { helpCenterUrl: combinedDefault.getArticleURL(HelpdeskArticles.GUILD_BOOSTING_FAQ) };
       return intl.format(getSystemLocale.t["8zlqlD"], obj);
-    }
+    },
   },
   {
     getQuestion() {
@@ -59,7 +88,7 @@ let items1 = [
     getAnswer() {
       const intl = getSystemLocale.intl;
       return intl.string(getSystemLocale.t["Vz/SCQ"]);
-    }
+    },
   },
   {
     getQuestion() {
@@ -69,7 +98,7 @@ let items1 = [
     getAnswer() {
       const intl = getSystemLocale.intl;
       return intl.string(getSystemLocale.t["+OURPp"]);
-    }
+    },
   },
   {
     getQuestion() {
@@ -79,7 +108,7 @@ let items1 = [
     getAnswer() {
       const intl = getSystemLocale.intl;
       return intl.string(getSystemLocale.t["3TeauK"]);
-    }
+    },
   },
   {
     getQuestion() {
@@ -89,7 +118,7 @@ let items1 = [
     getAnswer() {
       const intl = getSystemLocale.intl;
       return intl.string(getSystemLocale.t.bTRacj);
-    }
+    },
   },
   {
     getQuestion() {
@@ -99,7 +128,7 @@ let items1 = [
     getAnswer() {
       const intl = getSystemLocale.intl;
       return intl.string(getSystemLocale.t["2T5iPo"]);
-    }
+    },
   },
   {
     getQuestion() {
@@ -109,7 +138,7 @@ let items1 = [
     getAnswer() {
       const intl = getSystemLocale.intl;
       return intl.string(getSystemLocale.t.NZax1u);
-    }
+    },
   },
   {
     getQuestion() {
@@ -119,8 +148,8 @@ let items1 = [
     getAnswer() {
       const intl = getSystemLocale.intl;
       return intl.string(getSystemLocale.t.Aje8Pb);
-    }
-  }
+    },
+  },
 ];
 const obj4 = { flexGrow: 0, flexShrink: 0, tintColor: ThemesDefault.colors.ICON_MUTED };
 const obj5 = {
@@ -131,9 +160,11 @@ const obj5 = {
   getAnswer() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.nhkk6k);
-  }
+  },
 };
-const result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingFaq.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingFaq.tsx",
+);
 
 export default function GuildBoostingMarketingFaq() {
   let tmp = callback4();
@@ -144,7 +175,7 @@ export default function GuildBoostingMarketingFaq() {
   obj = { style: tmp.heading, variant: "heading-xxl/bold", children: null };
   const intl = require("../../../../intl/index.native.tsx").intl;
   obj[2] = intl.string(require("../../../../intl/index.native.tsx").t.HPJ6Nj);
-  let items = [callback2(require("../../../../design/components/Text/native/Text.tsx").Heading, obj), ];
+  let items = [callback2(require("../../../../design/components/Text/native/Text.tsx").Heading, obj)];
   const tmp2 = callback(React.useState(null), 2);
   items[1] = callback2(View, {
     style: tmp.list,
@@ -152,7 +183,7 @@ export default function GuildBoostingMarketingFaq() {
       const lib = arg1;
       let tmp = closure_1 === arg1;
       let obj = { style: lib.listItem, children: null };
-      const items = [lib.questionWrapper, ];
+      const items = [lib.questionWrapper];
       let questionWrapperExpanded = tmp;
       if (tmp) {
         questionWrapperExpanded = tmp4.questionWrapperExpanded;
@@ -170,7 +201,7 @@ export default function GuildBoostingMarketingFaq() {
         },
         accessibilityRole: "button",
         accessibilityState: { expanded: tmp },
-        children: null
+        children: null,
       };
       items[1] = questionWrapperExpanded;
       let str = "interactive-text-default";
@@ -178,9 +209,9 @@ export default function GuildBoostingMarketingFaq() {
         str = "interactive-text-active";
       }
       obj = { color: str, style: tmp4.question, variant: "text-md/normal", children: getQuestion.getQuestion() };
-      items1 = [closure_1_7(lib(closure_1_2[10]).Text, obj), ];
+      items1 = [closure_1_7(lib(closure_1_2[10]).Text, obj)];
       obj1 = { source: closure_1_1(closure_1_2[13]), style: null };
-      const items2 = [lib.questionIcon, ];
+      const items2 = [lib.questionIcon];
       let questionIconExpanded = tmp;
       if (tmp) {
         questionIconExpanded = tmp4.questionIconExpanded;
@@ -189,7 +220,7 @@ export default function GuildBoostingMarketingFaq() {
       obj1[1] = items2;
       items1[1] = closure_1_7(lib(closure_1_2[12]).Icon, obj1);
       obj[4] = items1;
-      const items3 = [closure_1_8(lib(closure_1_2[11]).PressableOpacity, obj), ];
+      const items3 = [closure_1_8(lib(closure_1_2[11]).PressableOpacity, obj)];
       if (tmp) {
         const obj2 = { style: null, color: "interactive-text-active", variant: "text-sm/normal", children: null };
         obj2[0] = tmp4.answer;
@@ -199,9 +230,9 @@ export default function GuildBoostingMarketingFaq() {
       items3[1] = tmp;
       obj[1] = items3;
       return closure_1_8(closure_1_5, obj, arg1);
-    })
+    }),
   });
   obj[1] = items;
   obj[1] = callback3(View, obj);
   return callback2(View, obj);
-};
+}

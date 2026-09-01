@@ -10,5 +10,5 @@ export default function openPremiumUpsellActionSheet(featureName, subfeatureName
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { featureName, subfeatureName, analyticsLocations, onDismiss };
   obj.openLazy(asyncRequireImpl(7595, dependencyMap.paths), PremiumUpsellActionSheetKey, obj);
-};
+}
 export const PREMIUM_UPSELL_ACTION_SHEET_KEY = "PremiumUpsellActionSheetKey";

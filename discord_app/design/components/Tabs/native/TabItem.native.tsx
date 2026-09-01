@@ -33,7 +33,12 @@ function TabItemCount(arg0) {
       return obj;
     }
   }
-  obj = { withSpring: index(pressed[6]).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG: closure_8, interpolate: index(pressed[3]).interpolate };
+  obj = {
+    withSpring: index(pressed[6]).withSpring,
+    countAnimationState: sharedValue,
+    COUNT_SPRING_CONFIG: closure_8,
+    interpolate: index(pressed[3]).interpolate,
+  };
   T.__closure = obj;
   T.__workletHash = 16666672974627;
   T.__initData = closure_13;
@@ -61,12 +66,28 @@ function TabItemCount(arg0) {
     obj[0] = index(pressed[6]).withSpring(active, closure_1_7, "animate-always");
     return obj;
   };
-  obj = { colors: tmp7, pressed, index, activeIndex, withSpring: tmp2(tmp3[6]).withSpring, TEXT_SPRING_CONFIG: closure_7 };
+  obj = {
+    colors: tmp7,
+    pressed,
+    index,
+    activeIndex,
+    withSpring: tmp2(tmp3[6]).withSpring,
+    TEXT_SPRING_CONFIG: closure_7,
+  };
   fn.__closure = obj;
   fn.__workletHash = 11643476765161;
   fn.__initData = closure_12;
   const animatedStyle1 = index(pressed[3]).useAnimatedStyle(fn);
-  obj1 = { style: items1, children: callback(tmp2(tmp3[7]).Text, { animated: true, variant: "text-sm/medium", style: animatedStyle1, lineClamp: 1, children: count }) };
+  obj1 = {
+    style: items1,
+    children: callback(tmp2(tmp3[7]).Text, {
+      animated: true,
+      variant: "text-sm/medium",
+      style: animatedStyle1,
+      lineClamp: 1,
+      children: count,
+    }),
+  };
   items1 = [tmp.count, animatedStyle];
   return callback(activeIndex(pressed[3]).View, obj1);
 }
@@ -74,17 +95,38 @@ function TabItemCount(arg0) {
 let closure_6 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").Pressable);
 let closure_7 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 let closure_8 = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
-let obj = { item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" }, count: null };
+let obj = {
+  item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" },
+  count: null,
+};
 obj = { marginLeft: ThemesDefault.space.PX_8 };
 obj[1] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
-createCacheKey = { inactive: ThemesDefault.colors.TEXT_MUTED, active: ThemesDefault.colors.TEXT_BRAND, pressed: ThemesDefault.colors.TEXT_BRAND };
+createCacheKey = {
+  inactive: ThemesDefault.colors.TEXT_MUTED,
+  active: ThemesDefault.colors.TEXT_BRAND,
+  pressed: ThemesDefault.colors.TEXT_BRAND,
+};
 let closure_10 = createCacheKey.createStyleProperties(createCacheKey);
-let closure_11 = createCacheKey.createStyleProperties({ inactive: ThemesDefault.colors.TEXT_MUTED, active: ThemesDefault.colors.TEXT_STRONG, pressed: ThemesDefault.colors.TEXT_STRONG });
-let closure_12 = { code: "function TabItemNativeTsx1(){const{colors,pressed,index,activeIndex,withSpring,TEXT_SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,TEXT_SPRING_CONFIG,'animate-always')};}" };
-let closure_13 = { code: "function TabItemNativeTsx2(){const{withSpring,countAnimationState,COUNT_SPRING_CONFIG,interpolate}=this.__closure;return{opacity:withSpring(countAnimationState.get(),COUNT_SPRING_CONFIG),transform:[{translateX:withSpring(interpolate(countAnimationState.get(),[0,1],[-10,0]),COUNT_SPRING_CONFIG)}]};}" };
-let closure_15 = { code: "function TabItemNativeTsx3(){const{activeIndex,index}=this.__closure;return{accessibilityState:{selected:activeIndex.get()===index}};}" };
-let obj2 = { inactive: ThemesDefault.colors.TEXT_MUTED, active: ThemesDefault.colors.TEXT_STRONG, pressed: ThemesDefault.colors.TEXT_STRONG };
+let closure_11 = createCacheKey.createStyleProperties({
+  inactive: ThemesDefault.colors.TEXT_MUTED,
+  active: ThemesDefault.colors.TEXT_STRONG,
+  pressed: ThemesDefault.colors.TEXT_STRONG,
+});
+let closure_12 = {
+  code: "function TabItemNativeTsx1(){const{colors,pressed,index,activeIndex,withSpring,TEXT_SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,TEXT_SPRING_CONFIG,'animate-always')};}",
+};
+let closure_13 = {
+  code: "function TabItemNativeTsx2(){const{withSpring,countAnimationState,COUNT_SPRING_CONFIG,interpolate}=this.__closure;return{opacity:withSpring(countAnimationState.get(),COUNT_SPRING_CONFIG),transform:[{translateX:withSpring(interpolate(countAnimationState.get(),[0,1],[-10,0]),COUNT_SPRING_CONFIG)}]};}",
+};
+let closure_15 = {
+  code: "function TabItemNativeTsx3(){const{activeIndex,index}=this.__closure;return{accessibilityState:{selected:activeIndex.get()===index}};}",
+};
+let obj2 = {
+  inactive: ThemesDefault.colors.TEXT_MUTED,
+  active: ThemesDefault.colors.TEXT_STRONG,
+  pressed: ThemesDefault.colors.TEXT_STRONG,
+};
 let result = require("set").fileFinishedImporting("design/components/Tabs/native/TabItem.native.tsx");
 
 export const TabItem = function TabItem(arg0) {
@@ -130,11 +172,18 @@ export const TabItem = function TabItem(arg0) {
     obj[0] = index(pressed[6]).withSpring(active, closure_1_7, "animate-always");
     return obj;
   };
-  obj = { colors: tmp6, pressed, index, activeIndex, withSpring: tmp3(tmp4[6]).withSpring, TEXT_SPRING_CONFIG: closure_7 };
+  obj = {
+    colors: tmp6,
+    pressed,
+    index,
+    activeIndex,
+    withSpring: tmp3(tmp4[6]).withSpring,
+    TEXT_SPRING_CONFIG: closure_7,
+  };
   fn2.__closure = obj;
   fn2.__workletHash = 11643476765161;
   fn2.__initData = closure_12;
-  const items = [callback2().item, ];
+  const items = [callback2().item];
   let num = 0;
   const animatedStyle = tmp3Result.useAnimatedStyle(fn2);
   if (grow) {
@@ -158,7 +207,15 @@ export const TabItem = function TabItem(arg0) {
   }
   obj.accessibilityHint = formatToPlainStringResult;
   obj.animatedProps = animatedProps;
-  const items1 = [callback(index(pressed[7]).Text, { animated: true, variant: "text-sm/semibold", style: animatedStyle, lineClamp: 1, children: label }), ];
+  const items1 = [
+    callback(index(pressed[7]).Text, {
+      animated: true,
+      variant: "text-sm/semibold",
+      style: animatedStyle,
+      lineClamp: 1,
+      children: label,
+    }),
+  ];
   let tmp12Result = null;
   if (null != count) {
     const obj2 = { count: null, index: null, activeIndex: null, pressed: null, variant: null };

@@ -34,7 +34,7 @@ export default function useFastestListSections(fastestListId) {
       incrementId() {
         closure_0 = closure_0 + 1;
         return closure_0;
-      }
+      },
     };
   });
   closure_8 = tmp;
@@ -89,7 +89,25 @@ export default function useFastestListSections(fastestListId) {
     }
     if (typeof num4 === "number") {
       if (typeof tmp10 === "number") {
-        obj = { keysAreUniform: null, listId: null, listFooterKey: null, listFooterSize: null, listHeaderKey: null, listHeaderSize: null, sections: null, sectionsId: null, sectionHeaderKeys: null, sectionHeaderSizes: null, sectionHeaderSizeIsUniform: null, sectionFooterKeys: null, sectionFooterSizes: null, sectionFooterSizeIsUniform: null, itemKeys: null, itemSizeIsUniform: null, itemSizes: null };
+        obj = {
+          keysAreUniform: null,
+          listId: null,
+          listFooterKey: null,
+          listFooterSize: null,
+          listHeaderKey: null,
+          listHeaderSize: null,
+          sections: null,
+          sectionsId: null,
+          sectionHeaderKeys: null,
+          sectionHeaderSizes: null,
+          sectionHeaderSizeIsUniform: null,
+          sectionFooterKeys: null,
+          sectionFooterSizes: null,
+          sectionFooterSizeIsUniform: null,
+          itemKeys: null,
+          itemSizeIsUniform: null,
+          itemSizes: null,
+        };
         obj[0] = tmp12;
         obj[1] = fastestListId;
         obj[2] = str;
@@ -182,4 +200,4 @@ export default function useFastestListSections(fastestListId) {
     closure_8.incrementId();
   }, items1);
   return fastestListId(itemSize[3])(memo);
-};
+}

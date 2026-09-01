@@ -11,8 +11,7 @@ const MAX_UPLOAD_COUNT = ME.MAX_UPLOAD_COUNT;
 let map = new Map();
 let closure_6 = [];
 const Store = initializeDefault.Store;
-class UploadAttachmentStore extends Store {
-}
+class UploadAttachmentStore extends Store {}
 const prototype = UploadAttachmentStore.prototype;
 prototype["getFirstUpload"] = function getFirstUpload(arg0, arg1) {
   map = map.get(arg0);
@@ -189,7 +188,15 @@ const uploadAttachmentStore = new UploadAttachmentStore(dispatcherDefault, {
     const result1 = obj.set(channelId, value1);
   },
   UPLOAD_ATTACHMENT_UPDATE_FILE: function handleUpdateFile(arg0) {
-    ({ channelId, id: require, filename: importDefault, description: dependencyMap, spoiler: DraftType, thumbnail: MAX_UPLOAD_COUNT, draftType } = arg0);
+    ({
+      channelId,
+      id: require,
+      filename: importDefault,
+      description: dependencyMap,
+      spoiler: DraftType,
+      thumbnail: MAX_UPLOAD_COUNT,
+      draftType,
+    } = arg0);
     map = map.get(channelId);
     if (map == null) {
       const _Map = Map;
@@ -338,7 +345,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(dispatcherDefault, {
     }
     const result = value1.set(draftType, found);
     const result1 = obj.set(channelId, value1);
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/UploadAttachmentStore.tsx");
 

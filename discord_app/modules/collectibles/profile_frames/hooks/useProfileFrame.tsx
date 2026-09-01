@@ -32,4 +32,4 @@ export default function useProfileFrame(arg0) {
       }
     }
   });
-};
+}

@@ -13,15 +13,36 @@ noopAll;
 ({ InstantInviteSources: closure_6, Fonts } = ME);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, header: null, title: null, description: null, ctaContainer: null };
-createCacheKey = { flex: 1, justifyContent: "flex-end", padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  flex: 1,
+  justifyContent: "flex-end",
+  padding: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: 16, alignSelf: "center" };
-createCacheKey[2] = { fontFamily: Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8, alignSelf: "center" };
+createCacheKey[2] = {
+  fontFamily: Fonts.PRIMARY_BOLD,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  fontSize: 24,
+  textAlign: "center",
+  marginBottom: 8,
+  alignSelf: "center",
+};
 createCacheKey[3] = { textAlign: "center", alignSelf: "center", marginBottom: 24 };
 createCacheKey[4] = { marginBottom: 8 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { fontFamily: Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8, alignSelf: "center" };
-const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEmpty.tsx");
+let obj1 = {
+  fontFamily: Fonts.PRIMARY_BOLD,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  fontSize: 24,
+  textAlign: "center",
+  marginBottom: 8,
+  alignSelf: "center",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/directory_channels/native/components/GuildDirectoryEmpty.tsx",
+);
 
 export default function GuildDirectoryEmpty(guild) {
   guild = guild.guild;
@@ -33,14 +54,14 @@ export default function GuildDirectoryEmpty(guild) {
   dependencyMap = obj.useStateFromStores(items, () => closure_1_5.getChannels(guild.id));
   obj1 = guild(11874);
   obj = { contentContainerStyle: items1, children: null };
-  items1 = [tmp.container, ];
+  items1 = [tmp.container];
   obj = { paddingBottom: channel(1628)().bottom + 16 };
   items1[1] = obj;
   obj1 = { source: null, style: null };
   const canCreateOrAddGuildInDirectory = obj1.useCanCreateOrAddGuildInDirectory(channel);
   obj1[0] = channel(12293);
   obj1[1] = tmp.header;
-  const items2 = [callback(closure_3, obj1), , , , ];
+  const items2 = [callback(closure_3, obj1), , , ,];
   const obj2 = { style: tmp.title, accessibilityRole: "header", children: null };
   const intl = guild(1236).intl;
   obj2[2] = intl.format(guild(1236).t.vyvrpC, { guildName: guild.name });
@@ -70,11 +91,11 @@ export default function GuildDirectoryEmpty(guild) {
       return guild(9909).handleOpenInviteActionsheet(guild, channel.id, dependencyMap, closure_1_6.HUB_EMPTY_STATE);
     },
     iconSource: channel(12295),
-    title: null
+    title: null,
   };
   const intl4 = tmp4(1236).intl;
   obj6[3] = intl4.string(guild(1236).t.L4bwJ9);
   items2[4] = callback(guild(8363).FormCTA, obj6);
   obj[1] = items2;
   return closure_8(closure_4, obj);
-};
+}

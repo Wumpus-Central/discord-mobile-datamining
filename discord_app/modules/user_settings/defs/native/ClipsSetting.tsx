@@ -13,13 +13,13 @@ obj = {
   },
   parent: null,
   IconComponent: ClipsIcon.ClipsIcon,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.CLIPS,
   getComponent() {
     return ClipsSettingsScreen /* ClipsSettingsScreen */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ClipsSetting.tsx");

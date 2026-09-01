@@ -16,8 +16,7 @@ function handleUserStoreUpdates() {
 }
 let c3 = null;
 const Store = initializeDefault.Store;
-class GuildMFAWarningStore extends Store {
-}
+class GuildMFAWarningStore extends Store {}
 const prototype = GuildMFAWarningStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_1, closure_0);
@@ -42,7 +41,7 @@ const guildMFAWarningStore = new GuildMFAWarningStore(dispatcherDefault, {
   CONNECTION_OPEN: handleUserStoreUpdates,
   GUILD_UPDATE: function handleGuildPermissionsUpdate() {
     return true;
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("stores/channel_notices/GuildMFAWarningStore.tsx");
 

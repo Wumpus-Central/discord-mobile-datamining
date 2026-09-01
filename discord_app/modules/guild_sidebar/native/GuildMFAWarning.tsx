@@ -26,7 +26,7 @@ function handlePress() {
 }
 function _handlePress() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -108,10 +108,10 @@ export default function GuildMFAWarning() {
   const tmp = callback4();
   let obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
   obj = { style: tmp.MFAWarningIcon, source: registerAssetDefault };
-  const items = [callback2(Image, obj), ];
+  const items = [callback2(Image, obj)];
   obj = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
-  const items1 = [intl.string(getSystemLocale.t.ZIf8Ag), ];
+  const items1 = [intl.string(getSystemLocale.t.ZIf8Ag)];
   obj1 = { style: tmp.MFAWarningLink, children: null };
   const intl2 = getSystemLocale.intl;
   const items2 = [" ", intl2.string(getSystemLocale.t.hvVgAZ)];
@@ -121,7 +121,7 @@ export default function GuildMFAWarning() {
   items[1] = callback3(Text.Text, obj);
   obj[3] = items;
   return callback3(PressableBase.PressableOpacity, obj);
-};
+}
 export const getScaledGuildMFAWarningHeight = function getScaledGuildMFAWarningHeight(fontScale) {
   return 83 + 5 * map.scaleTextLineHeight("text-xs/medium", fontScale) + 10 + 10;
 };

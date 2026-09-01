@@ -95,8 +95,25 @@ class GuildBadge {
   }
 }
 noopAll;
-let obj = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", PARTNERED_BLACK: 2, [2]: "PARTNERED_BLACK", VERIFIED_BLACK: 3, [3]: "VERIFIED_BLACK", NONE: 4, [4]: "NONE" };
-obj = { [VERIFIED]: registerAssetDefault, [PARTNERED]: registerAssetDefault2, [VERIFIED_BLACK]: registerAssetDefault3, [PARTNERED_BLACK]: registerAssetDefault4, [obj.NONE]: null };
+let obj = {
+  PARTNERED: 0,
+  [0]: "PARTNERED",
+  VERIFIED: 1,
+  [1]: "VERIFIED",
+  PARTNERED_BLACK: 2,
+  [2]: "PARTNERED_BLACK",
+  VERIFIED_BLACK: 3,
+  [3]: "VERIFIED_BLACK",
+  NONE: 4,
+  [4]: "NONE",
+};
+obj = {
+  [VERIFIED]: registerAssetDefault,
+  [PARTNERED]: registerAssetDefault2,
+  [VERIFIED_BLACK]: registerAssetDefault3,
+  [PARTNERED_BLACK]: registerAssetDefault4,
+  [obj.NONE]: null,
+};
 ({ VERIFIED, PARTNERED, VERIFIED_BLACK, PARTNERED_BLACK } = obj);
 GuildBadge.Sizes = require("Button").Icon.Sizes;
 const result = require("set").fileFinishedImporting("modules/guild/native/GuildBadge.tsx");

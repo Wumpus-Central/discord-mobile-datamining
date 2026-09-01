@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/activities/utils/getEmbeddedAc
 
 export default function getEmbeddedActivitiesManager() {
   return postMessageToWebView;
-};
+}

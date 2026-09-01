@@ -30,10 +30,25 @@ export default function StreamFullAlert(arg0) {
   obj = { variant: "text-md/normal", style: closure_6.body, children: null };
   const intl3 = tmp(1236).intl;
   obj[2] = intl3.string(getSystemLocale.t.VVZDBL);
-  const items = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult }), ];
-  obj1 = { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult };
+  const items = [
+    callback(Text.Text, obj),
+    callback(Text.Text, {
+      variant: "text-md/normal",
+      selectable: true,
+      color: "text-muted",
+      style: closure_6.body,
+      children: formatToPlainStringResult,
+    }),
+  ];
+  obj1 = {
+    variant: "text-md/normal",
+    selectable: true,
+    color: "text-muted",
+    style: closure_6.body,
+    children: formatToPlainStringResult,
+  };
   const tmp6 = componentDidMountDefault;
   items[2] = callback(Image, { source: registerAssetDefault, style: closure_6.image });
   obj.children = items;
   return callback2(tmp6, obj);
-};
+}

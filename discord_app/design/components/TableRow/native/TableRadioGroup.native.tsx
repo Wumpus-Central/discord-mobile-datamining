@@ -34,19 +34,23 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
   }
   importAllResult = tmp4;
   const items = [undefined !== value, onChange, tmp4];
-  const imperativeHandle = obj.useImperativeHandle(groupRef, () => ({
-    setValue(arg0) {
-      if (!closure_1) {
-        callback(arg0);
-      }
-      if (closure_0 != null) {
-        tmp3(arg0);
-      }
-    },
-    getValue() {
-      return closure_3;
-    }
-  }), items);
+  const imperativeHandle = obj.useImperativeHandle(
+    groupRef,
+    () => ({
+      setValue(arg0) {
+        if (!closure_1) {
+          callback(arg0);
+        }
+        if (closure_0 != null) {
+          tmp3(arg0);
+        }
+      },
+      getValue() {
+        return closure_3;
+      },
+    }),
+    items,
+  );
   jsx = obj.useContext(onChange(5598).RedesignCompatContext);
   const items1 = [undefined !== value, onChange];
   callback = obj.useCallback((arg0) => {
@@ -72,7 +76,7 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
         return tmp4;
       }
       tmp4 = type;
-    })
+    }),
   };
   Children = obj.Children;
   obj[1] = jsx(onChange(5992).TableRowGroup, {
@@ -88,13 +92,24 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
         return tmp4;
       }
       tmp4 = type;
-    })
+    }),
   });
-  return <callback.Provider accessibilityRole="radiogroup" accessibilityLabel={accessibilityLabel} title={title} description={description} helperText={helperText} hasIcons={hasIcons}>{Children.map(children, (type) => {
-    if (!_null.isValidElement(type)) {
-      let tmp4 = null;
-      return tmp4;
-    }
-    tmp4 = type;
-  })}</callback.Provider>;
+  return (
+    <callback.Provider
+      accessibilityRole="radiogroup"
+      accessibilityLabel={accessibilityLabel}
+      title={title}
+      description={description}
+      helperText={helperText}
+      hasIcons={hasIcons}
+    >
+      {Children.map(children, (type) => {
+        if (!_null.isValidElement(type)) {
+          let tmp4 = null;
+          return tmp4;
+        }
+        tmp4 = type;
+      })}
+    </callback.Provider>
+  );
 };

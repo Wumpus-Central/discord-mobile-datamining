@@ -34,13 +34,13 @@ obj = {
     let shadowOffset = {
       resolve(isAndroid) {
         return f69486(f69486[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
-      }
+      },
     };
-    f69486 = (shadowColorAndroid) => arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
+    f69486 = (shadowColorAndroid) => (arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor);
     const shadowColor = {
       resolve(isAndroid) {
         return f69486(f69486[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
-      }
+      },
     };
     f69486 = (shadowOpacity) => shadowOpacity.shadowOpacity;
     f69486 = (shadowRadius) => shadowRadius.shadowRadius;
@@ -51,40 +51,42 @@ obj = {
       shadowOpacity: {
         resolve(isAndroid) {
           return f69486(f69486[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
-        }
+        },
       },
       shadowRadius: {
         resolve(isAndroid) {
           return f69486(f69486[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
-        }
+        },
       },
       elevation: {
         resolve(isAndroid) {
           return f69486(f69486[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
-        }
-      }
+        },
+      },
     };
   }),
   radii: Radius.Radius,
-  modules: mapValuesDefault(_private4._private.Modules, (arg0) => mapValuesDefault(arg0, (arg0) => {
-    closure_0 = arg0;
-    return {
-      resolve(arg0) {
-        ({ enabledExperiments, density } = arg0);
-        if (enabledExperiments == null) {
-          enabledExperiments = [];
-        }
-        const obj = { enabledExperiments, density: null };
-        if (density == null) {
-          density = "compact";
-        }
-        obj[1] = density;
-        return closure_0.resolve(obj);
-      }
-    };
-  })),
+  modules: mapValuesDefault(_private4._private.Modules, (arg0) =>
+    mapValuesDefault(arg0, (arg0) => {
+      closure_0 = arg0;
+      return {
+        resolve(arg0) {
+          ({ enabledExperiments, density } = arg0);
+          if (enabledExperiments == null) {
+            enabledExperiments = [];
+          }
+          const obj = { enabledExperiments, density: null };
+          if (density == null) {
+            density = "compact";
+          }
+          obj[1] = density;
+          return closure_0.resolve(obj);
+        },
+      };
+    }),
+  ),
   space: Layout.SpacePx,
-  internal: obj
+  internal: obj,
 };
 obj = {
   isSemanticColor(backgroundColor) {
@@ -281,7 +283,7 @@ obj = {
   },
   adjustColorContrast(result, contrast, category, theme) {
     return interpolate.transformColorContrast(result, category, theme, contrast);
-  }
+  },
 };
 let result = set.fileFinishedImporting("../discord_common/js/packages/tokens/native.tsx");
 

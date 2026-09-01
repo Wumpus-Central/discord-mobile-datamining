@@ -9,8 +9,7 @@ import closure_4 from "GuildPowerupsStore.tsx";
 require = arg1;
 let closure_5 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class GuildPowerupsNotificationStore extends PersistedStore {
-}
+class GuildPowerupsNotificationStore extends PersistedStore {}
 const prototype = GuildPowerupsNotificationStore.prototype;
 prototype["getState"] = function getState() {
   return closure_5;
@@ -35,7 +34,7 @@ let items = [
       closure_0[tmp] = tmp2;
     });
     return arg0;
-  }
+  },
 ];
 GuildPowerupsNotificationStore.migrations = items;
 const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(dispatcherDefault, {
@@ -84,7 +83,7 @@ const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(dispat
   },
   GUILD_POWERUPS_RESET_NOTIFICATIONS: function handleResetNotifications() {
     closure_5 = {};
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/premium/powerups/GuildPowerupsNotificationStore.tsx");
 

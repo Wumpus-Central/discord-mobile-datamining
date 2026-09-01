@@ -18,7 +18,9 @@ const pressable = createToggle.createPressable({
   parent: MobileUserSettings.MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useGoreContentGuildsSettingValue() {
     const obj = useExplicitContentSettingOrDefault;
-    return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentGuilds)();
+    return redactionSettingToRenderedString.redactionSettingToRenderedString(
+      obj.useGoreContentSettingOrDefault().goreContentGuilds,
+    )();
   },
   onPress: function onGoreContentGuildsOnPress() {
     let obj = resolveGoreSettingWithDefaults;
@@ -47,13 +49,13 @@ const pressable = createToggle.createPressable({
   },
   useSearchTerms() {
     const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
+    const items = [intl.string(getSystemLocale.t["N/oRI+"]), ,];
     const intl2 = getSystemLocale.intl;
     items[1] = intl2.string(getSystemLocale.t.QVdYsK);
     const intl3 = getSystemLocale.intl;
     items[2] = intl3.string(getSystemLocale.t["K0OWP+"]);
     return items;
-  }
+  },
 });
 let obj = {
   useTitle: function getTitle() {
@@ -63,7 +65,9 @@ let obj = {
   parent: MobileUserSettings.MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useGoreContentGuildsSettingValue() {
     const obj = useExplicitContentSettingOrDefault;
-    return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentGuilds)();
+    return redactionSettingToRenderedString.redactionSettingToRenderedString(
+      obj.useGoreContentSettingOrDefault().goreContentGuilds,
+    )();
   },
   onPress: function onGoreContentGuildsOnPress() {
     let obj = resolveGoreSettingWithDefaults;
@@ -92,13 +96,13 @@ let obj = {
   },
   useSearchTerms() {
     const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
+    const items = [intl.string(getSystemLocale.t["N/oRI+"]), ,];
     const intl2 = getSystemLocale.intl;
     items[1] = intl2.string(getSystemLocale.t.QVdYsK);
     const intl3 = getSystemLocale.intl;
     items[2] = intl3.string(getSystemLocale.t["K0OWP+"]);
     return items;
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/user_settings/defs/native/GoreMediaFiltersGuildsSetting.tsx");
 

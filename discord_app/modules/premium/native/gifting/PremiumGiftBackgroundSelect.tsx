@@ -25,7 +25,7 @@ class GiftBackgroundSelect {
     obj = require("../../../reanimated/ReanimatedRexport.tsx");
     sharedValue = obj.useSharedValue(false);
     closure_2 = sharedValue;
-    items = [, ];
+    items = [,];
     items[0] = first;
     items[1] = sharedValue;
     effect = closure_4.useEffect(() => {
@@ -47,7 +47,11 @@ class GiftBackgroundSelect {
         return obj;
       }
     }
-    obj = { STANDARD_EASING: require("Button").STANDARD_EASING, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, visibility: sharedValue };
+    obj = {
+      STANDARD_EASING: require("Button").STANDARD_EASING,
+      withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming,
+      visibility: sharedValue,
+    };
     N.__closure = obj;
     N.__workletHash = 5743780040676;
     N.__initData = closure_10;
@@ -55,20 +59,23 @@ class GiftBackgroundSelect {
     tmp7 = jsxs;
     tmp8 = Fragment;
     tmp9 = jsx;
-    items1 = [, ];
-    items1[0] = jsx(require("PremiumGiftBackgroundAnimation"), { giftStyle: global.giftStyle, withConsistentHeight: flag });
+    items1 = [,];
+    items1[0] = jsx(require("PremiumGiftBackgroundAnimation"), {
+      giftStyle: global.giftStyle,
+      withConsistentHeight: flag,
+    });
     obj1 = {
       onContentSizeChange(arg0) {
-            if (null == first) {
-              callback(arg0);
-            }
-          },
+        if (null == first) {
+          callback(arg0);
+        }
+      },
       contentContainerStyle: null,
       style: null,
       horizontal: true,
-      showsHorizontalScrollIndicator: false
+      showsHorizontalScrollIndicator: false,
     };
-    items2 = [, ];
+    items2 = [,];
     items2[0] = tmp.contentContainer;
     obj2 = null != first;
     tmp10 = closure_8;
@@ -81,7 +88,7 @@ class GiftBackgroundSelect {
     obj3 = { children: null };
     items2[1] = obj2;
     obj1[1] = items2;
-    items3 = [, ];
+    items3 = [,];
     items3[0] = tmp.scrollView;
     items3[1] = animatedStyle;
     obj1[2] = items3;
@@ -97,7 +104,9 @@ obj = { flex: 1, marginTop: ThemesDefault.space.PX_24 };
 obj[0] = obj;
 obj[1] = { justifyContent: "center" };
 let closure_9 = createCacheKey.createStyles(obj);
-let closure_10 = { code: "function PremiumGiftBackgroundSelectTsx1(){const{STANDARD_EASING,withTiming,visibility}=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:100};return{opacity:withTiming(visibility.get()?1:0,animationSettings)};}" };
+let closure_10 = {
+  code: "function PremiumGiftBackgroundSelectTsx1(){const{STANDARD_EASING,withTiming,visibility}=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:100};return{opacity:withTiming(visibility.get()?1:0,animationSettings)};}",
+};
 let result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx");
 
 export default function PremiumGiftBackgroundSelect() {
@@ -105,5 +114,5 @@ export default function PremiumGiftBackgroundSelect() {
   const nativeGiftContext = obj.useNativeGiftContext();
   obj = { giftStyle: nativeGiftContext.giftStyle, setGiftStyle: nativeGiftContext.setGiftStyle };
   return callback2(GiftBackgroundSelect, obj);
-};
+}
 export { GiftBackgroundSelect };

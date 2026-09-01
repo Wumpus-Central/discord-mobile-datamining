@@ -7,20 +7,19 @@ const require = arg1;
 let c3 = null;
 let c4 = null;
 const Store = initializeDefault.Store;
-class MessagePreviewStore extends Store {
-}
+class MessagePreviewStore extends Store {}
 const prototype = MessagePreviewStore.prototype;
 Object.defineProperty(prototype, "messages", {
   get: function messages() {
     return c3;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "jumpTargetId", {
   get: function jumpTargetId() {
     return c4;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getMessage"] = function getMessage(arg0) {
   closure_0 = arg0;
@@ -42,7 +41,7 @@ const messagePreviewStore = new MessagePreviewStore(dispatcherDefault, {
   CLEAR_MESSAGES_AROUND_SUCCESS: function handleClearMessagesAround() {
     c3 = null;
     c4 = null;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/native/MessagePreviewStore.tsx");
 

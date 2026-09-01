@@ -64,12 +64,25 @@ export default function ApplicationCommandList(channel) {
     }
   }, items2);
   const items3 = [scrollDown];
-  return <scrollDown style={style} keyExtractor={function keyExtractor(id) {
-    return id.id;
-  }} data={commands} renderItem={callback} ItemSeparatorComponent={ItemSeparatorComponent} getItemLayout={getItemLayout} onScroll={sections.useCallback((nativeEvent) => {
-    nativeEvent = nativeEvent.nativeEvent;
-    if (nativeEvent.contentOffset.y + nativeEvent.layoutMeasurement.height >= nativeEvent.contentSize.height - closure_1_7) {
-      scrollDown();
-    }
-  }, items3)} />;
-};
+  return (
+    <scrollDown
+      style={style}
+      keyExtractor={function keyExtractor(id) {
+        return id.id;
+      }}
+      data={commands}
+      renderItem={callback}
+      ItemSeparatorComponent={ItemSeparatorComponent}
+      getItemLayout={getItemLayout}
+      onScroll={sections.useCallback((nativeEvent) => {
+        nativeEvent = nativeEvent.nativeEvent;
+        if (
+          nativeEvent.contentOffset.y + nativeEvent.layoutMeasurement.height >=
+          nativeEvent.contentSize.height - closure_1_7
+        ) {
+          scrollDown();
+        }
+      }, items3)}
+    />
+  );
+}

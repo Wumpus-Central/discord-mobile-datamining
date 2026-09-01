@@ -20,10 +20,10 @@ function Placeholder() {
   obj = { style: tmp.commandContainer, children: null };
   obj = { style: tmp.loadingCommandIcon };
   const placeholderWidth1 = obj1.usePlaceholderWidth(20, 70);
-  const items = [callback2(closure_5, obj), ];
+  const items = [callback2(closure_5, obj)];
   obj1 = { children: null };
   const items1 = [tmp.loadingTextPlaceholder, { width: placeholderWidth }];
-  const items2 = [callback2(closure_5, { style: items1 }), ];
+  const items2 = [callback2(closure_5, { style: items1 })];
   const items3 = [tmp.loadingTextPlaceholderSmall, { width: placeholderWidth1 }];
   items2[1] = callback2(closure_5, { style: items3 });
   obj1[0] = items2;
@@ -42,24 +42,30 @@ function FrecentActivityOneClickCTA(context) {
   let id = closure_4.useId();
   let items = [closure_7];
   const obj3 = context(handleActivityItemSelected[14]);
-  [tmp6, tmp7] = callback(context(handleActivityItemSelected[14]).useStateFromStoresArray(items, () => {
-    const items = [closure_1_7.isLaunchingActivity(), ];
-    let id;
-    if ("channel" === context.type) {
-      id = context.channel.id;
-    }
-    items[1] = closure_1_7.getLaunchState(app.applicationId, id);
-    return items;
-  }), 2);
-  const tmp5 = callback(context(handleActivityItemSelected[14]).useStateFromStoresArray(items, () => {
-    const items = [closure_1_7.isLaunchingActivity(), ];
-    let id;
-    if ("channel" === context.type) {
-      id = context.channel.id;
-    }
-    items[1] = closure_1_7.getLaunchState(app.applicationId, id);
-    return items;
-  }), 2);
+  [tmp6, tmp7] = callback(
+    context(handleActivityItemSelected[14]).useStateFromStoresArray(items, () => {
+      const items = [closure_1_7.isLaunchingActivity()];
+      let id;
+      if ("channel" === context.type) {
+        id = context.channel.id;
+      }
+      items[1] = closure_1_7.getLaunchState(app.applicationId, id);
+      return items;
+    }),
+    2,
+  );
+  const tmp5 = callback(
+    context(handleActivityItemSelected[14]).useStateFromStoresArray(items, () => {
+      const items = [closure_1_7.isLaunchingActivity()];
+      let id;
+      if ("channel" === context.type) {
+        id = context.channel.id;
+      }
+      items[1] = closure_1_7.getLaunchState(app.applicationId, id);
+      return items;
+    }),
+    2,
+  );
   obj = { context, applicationId: app.applicationId };
   let isLaunching = null != tmp7;
   const activityAction = context(handleActivityItemSelected[30]).useActivityAction(obj);
@@ -70,8 +76,19 @@ function FrecentActivityOneClickCTA(context) {
     isLaunching = tmp7.componentId === id;
   }
   const obj4 = context(handleActivityItemSelected[30]);
-  obj = { applicationId: app.applicationId, context, sectionName: tmp(tmp2[15]).AppLauncherSectionName.RECENT_APPS, onActivityItemSelected, location: tmp(tmp2[31]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, entrypoint, launchingComponentId: id, fetchesApplication: false };
-  handleActivityItemSelected = context(handleActivityItemSelected[22]).useHandleActivityItemSelected(obj).handleActivityItemSelected;
+  obj = {
+    applicationId: app.applicationId,
+    context,
+    sectionName: tmp(tmp2[15]).AppLauncherSectionName.RECENT_APPS,
+    onActivityItemSelected,
+    location: tmp(tmp2[31]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME,
+    entrypoint,
+    launchingComponentId: id,
+    fetchesApplication: false,
+  };
+  handleActivityItemSelected = context(handleActivityItemSelected[22]).useHandleActivityItemSelected(
+    obj,
+  ).handleActivityItemSelected;
   const items1 = [handleActivityItemSelected];
   obj1 = { app, disabled: null, submitting: null, onAppSelected: null };
   callback = obj1.useCallback(() => {
@@ -97,7 +114,15 @@ function FrecentApp(app) {
     return null;
   } else {
     const appLauncherIconSource = app(11623).getAppLauncherIconSource(app.section.application);
-    let obj = { style: null, disabled: null, accessible: true, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
+    let obj = {
+      style: null,
+      disabled: null,
+      accessible: true,
+      accessibilityLabel: null,
+      accessibilityRole: "button",
+      onPress: null,
+      children: null,
+    };
     obj[0] = disabled ? tmp.appContainerDisabled : tmp.appContainer;
     obj[1] = disabled;
     const application = app.section.application;
@@ -125,7 +150,7 @@ function FrecentApp(app) {
       obj[1] = appLauncherIconSource;
       tmp3 = callback2(onAppSelected(5493), obj);
     }
-    const items = [tmp3, ];
+    const items = [tmp3];
     obj = { submitting: null, style: null };
     obj[0] = submitting;
     obj[1] = tmp.submittingOverlay;
@@ -136,7 +161,22 @@ function FrecentApp(app) {
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: null, headerContainer: null, header: null, scrollView: null, scrollViewContentContainer: null, contextMenuIcon: null, appContainer: null, appContainerDisabled: null, commandContainer: null, appIcon: null, loadingCommandIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, submittingOverlay: null };
+createCacheKey = {
+  container: null,
+  headerContainer: null,
+  header: null,
+  scrollView: null,
+  scrollViewContentContainer: null,
+  contextMenuIcon: null,
+  appContainer: null,
+  appContainerDisabled: null,
+  commandContainer: null,
+  appIcon: null,
+  loadingCommandIcon: null,
+  loadingTextPlaceholder: null,
+  loadingTextPlaceholderSmall: null,
+  submittingOverlay: null,
+};
 createCacheKey = { marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center" };
@@ -147,25 +187,100 @@ createCacheKey[4] = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[5] = { height: 16, width: 16 };
 let obj2 = { gap: ThemesDefault.space.PX_8 };
 let merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
-createCacheKey[6] = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.lg };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.lg };
+createCacheKey[6] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT,
+  borderRadius: ThemesDefault.radii.lg,
+};
+let obj3 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT,
+  borderRadius: ThemesDefault.radii.lg,
+};
 const merged1 = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
-createCacheKey[7] = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.lg, opacity: 0.4 };
-let obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.lg, opacity: 0.4 };
-createCacheKey[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.md, paddingLeft: ThemesDefault.space.PX_12, paddingRight: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, flexDirection: "row", justifyContent: "center", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-let obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.md, paddingLeft: ThemesDefault.space.PX_12, paddingRight: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, flexDirection: "row", justifyContent: "center", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+createCacheKey[7] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT,
+  borderRadius: ThemesDefault.radii.lg,
+  opacity: 0.4,
+};
+let obj4 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT,
+  borderRadius: ThemesDefault.radii.lg,
+  opacity: 0.4,
+};
+createCacheKey[8] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT,
+  borderRadius: ThemesDefault.radii.md,
+  paddingLeft: ThemesDefault.space.PX_12,
+  paddingRight: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_12,
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+};
+let obj5 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT,
+  borderRadius: ThemesDefault.radii.md,
+  paddingLeft: ThemesDefault.space.PX_12,
+  paddingRight: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_12,
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+};
 createCacheKey[9] = { width: 60, height: 60, borderRadius: ThemesDefault.radii.lg };
 let obj6 = { width: 60, height: 60, borderRadius: ThemesDefault.radii.lg };
-createCacheKey[10] = { width: 36, height: 36, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-let obj7 = { width: 36, height: 36, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-createCacheKey[11] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start", marginBottom: ThemesDefault.space.PX_4 };
-const obj8 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start", marginBottom: ThemesDefault.space.PX_4 };
-createCacheKey[12] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
-const obj9 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
-createCacheKey[13] = { position: "absolute", top: 0, left: 0, width: 60, height: 60, borderRadius: ThemesDefault.radii.lg };
+createCacheKey[10] = {
+  width: 36,
+  height: 36,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+};
+let obj7 = {
+  width: 36,
+  height: 36,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+};
+createCacheKey[11] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  height: 16,
+  borderRadius: ThemesDefault.radii.lg,
+  alignSelf: "flex-start",
+  marginBottom: ThemesDefault.space.PX_4,
+};
+const obj8 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  height: 16,
+  borderRadius: ThemesDefault.radii.lg,
+  alignSelf: "flex-start",
+  marginBottom: ThemesDefault.space.PX_4,
+};
+createCacheKey[12] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  height: 16,
+  borderRadius: ThemesDefault.radii.lg,
+  alignSelf: "flex-start",
+};
+const obj9 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  height: 16,
+  borderRadius: ThemesDefault.radii.lg,
+  alignSelf: "flex-start",
+};
+createCacheKey[13] = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: 60,
+  height: 60,
+  borderRadius: ThemesDefault.radii.lg,
+};
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 const obj11 = { APPS: 0, [0]: "APPS", COMMANDS: 1, [1]: "COMMANDS" };
-let closure_16 = { code: "function FrecencySectionTsx1(){const{withTiming,isRecentsMenuOpen}=this.__closure;return{transform:[{rotate:withTiming(isRecentsMenuOpen?'-180deg':'0deg')}]};}" };
+let closure_16 = {
+  code: "function FrecencySectionTsx1(){const{withTiming,isRecentsMenuOpen}=this.__closure;return{transform:[{rotate:withTiming(isRecentsMenuOpen?'-180deg':'0deg')}]};}",
+};
 const obj10 = { position: "absolute", top: 0, left: 0, width: 60, height: 60, borderRadius: ThemesDefault.radii.lg };
 let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/FrecencySection.tsx");
 
@@ -232,7 +347,10 @@ export default function FrecencySection(loading) {
         trackWithMetadataResult[1] = RECENT_COMMANDS;
         HOME = tmp5(HOME[15]).AppLauncherLocations.HOME;
         trackWithMetadataResult[2] = HOME;
-        trackWithMetadataResult = trackWithMetadataResult.trackWithMetadata(lib.APP_LAUNCHER_FRECENTS_SEEN, trackWithMetadataResult);
+        trackWithMetadataResult = trackWithMetadataResult.trackWithMetadata(
+          lib.APP_LAUNCHER_FRECENTS_SEEN,
+          trackWithMetadataResult,
+        );
         tmp7 = first1;
         tmp8 = COMMANDS;
       }
@@ -305,7 +423,7 @@ export default function FrecencySection(loading) {
       obj = { num: commands.length, section_name: memo(commands[15]).AppLauncherSectionName.RECENT_COMMANDS };
       memo(commands[16]).trackWithMetadata(lib.APP_LAUNCHER_FRECENTS_TOGGLED, obj);
     };
-    const items4 = [obj, ];
+    const items4 = [obj];
     obj1 = { label: null, IconComponent: null, action: null };
     const intl2 = tmp2(tmp3[19]).intl;
     obj1[0] = intl2.string(tmp2(tmp3[19]).t.TCAk0p);
@@ -347,7 +465,14 @@ export default function FrecencySection(loading) {
         } else {
           displayName = type.displayName;
         }
-        obj = { style: null, accessible: true, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
+        obj = {
+          style: null,
+          accessible: true,
+          accessibilityLabel: null,
+          accessibilityRole: "button",
+          onPress: null,
+          children: null,
+        };
         obj[0] = selection.commandContainer;
         const _HermesInternal = HermesInternal;
         obj[2] = "" + displayName + " " + sectionName;
@@ -360,11 +485,11 @@ export default function FrecencySection(loading) {
           obj[1] = appLauncherIconSource;
           tmp10 = first1(callback(tmp3[25]), obj);
         }
-        const items = [tmp10, ];
+        const items = [tmp10];
         obj1 = { children: null };
         const obj2 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
         obj2[2] = displayName;
-        const items1 = [first1(tmp2(tmp3[26]).Text, obj2), ];
+        const items1 = [first1(tmp2(tmp3[26]).Text, obj2)];
         const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: null };
         obj3[2] = sectionName;
         items1[1] = first1(tmp2(tmp3[26]).Text, obj3);
@@ -426,10 +551,15 @@ export default function FrecencySection(loading) {
         let obj = { style: selection.header };
         const merged = Object.assign(Object.assign(ref, Object.create(null)));
         obj.ref = ref.ref;
-        obj = { accessibilityRole: "header", variant: "text-lg/bold", color: "mobile-text-heading-primary", children: null };
+        obj = {
+          accessibilityRole: "header",
+          variant: "text-lg/bold",
+          color: "mobile-text-heading-primary",
+          children: null,
+        };
         const intl = memo(commands[19]).intl;
         obj[3] = intl.string(memo(commands[19]).t.acSE0h);
-        const items = [first1(memo(commands[26]).Text, obj), ];
+        const items = [first1(memo(commands[26]).Text, obj)];
         let tmp5Result = null;
         if (commands.length > 0) {
           tmp5Result = null;
@@ -446,7 +576,7 @@ export default function FrecencySection(loading) {
         obj.children = items;
         return closure_12(closure_1_5, obj);
       };
-      const items5 = [first1(tmp2(tmp3[27]).ContextMenu, obj4), ];
+      const items5 = [first1(tmp2(tmp3[27]).ContextMenu, obj4)];
       let tmp31 = COMMANDS === tmp12.APPS;
       if (tmp31) {
         tmp31 = tmp9;
@@ -476,8 +606,14 @@ export default function FrecencySection(loading) {
       obj5[3] = first1(tmp2(tmp3[26]).Text, obj6);
       items5[1] = first1(tmp2(tmp3[29]).PressableOpacity, obj5);
       obj3[1] = items5;
-      const items6 = [closure_12(closure_5, obj3), ];
-      const obj7 = { style: null, contentContainerStyle: null, horizontal: true, showsHorizontalScrollIndicator: false, children: null };
+      const items6 = [closure_12(closure_5, obj3)];
+      const obj7 = {
+        style: null,
+        contentContainerStyle: null,
+        horizontal: true,
+        showsHorizontalScrollIndicator: false,
+        children: null,
+      };
       ({ scrollView: obj13[0], scrollViewContentContainer: obj13[1] } = tmp);
       if (loading) {
         const items7 = [1, 2, 3, 4, 5];
@@ -499,5 +635,5 @@ export default function FrecencySection(loading) {
   }
   tmp12 = COMMANDS;
   APPS = COMMANDS.APPS;
-};
+}
 export const SectionItemType = obj11;

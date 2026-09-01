@@ -41,8 +41,7 @@ let prototype = function ProximitySensorManager() {
   applyArgumentsResult.stores = result.set(closure_4, handleChange);
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 let result = set.fileFinishedImporting("modules/voice_calls/native/ProximitySensorManager.tsx");
 

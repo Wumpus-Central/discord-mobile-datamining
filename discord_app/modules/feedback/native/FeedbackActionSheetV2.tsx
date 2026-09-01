@@ -55,33 +55,44 @@ export default function FeedbackActionSheetV2(optionsTree) {
   const tmp5 = usePreviousDefault(optionsTree);
   closure_5 = tmp5;
   obj1 = applyDefault;
-  const tmp7 = callback(ref.useState(obj1.shuffle(optionsTree.map((problemOptions) => {
-    const obj = {};
-    const merged = Object.assign(problemOptions);
-    const obj2 = callback(table[8]);
-    let freeformConfig = problemOptions.freeformConfig;
-    if (freeformConfig == null) {
-      freeformConfig = [];
-    }
-    obj.problemOptions = callback(table[8]).shuffle(problemOptions.problemOptions).concat(freeformConfig);
-    return obj;
-  }))), 2);
+  const tmp7 = callback(
+    ref.useState(
+      obj1.shuffle(
+        optionsTree.map((problemOptions) => {
+          const obj = {};
+          const merged = Object.assign(problemOptions);
+          const obj2 = callback(table[8]);
+          let freeformConfig = problemOptions.freeformConfig;
+          if (freeformConfig == null) {
+            freeformConfig = [];
+          }
+          obj.problemOptions = callback(table[8]).shuffle(problemOptions.problemOptions).concat(freeformConfig);
+          return obj;
+        }),
+      ),
+    ),
+    2,
+  );
   first = tmp7[0];
   callback2 = tmp7[1];
   const items = [optionsTree, tmp5];
   const effect = ref.useEffect(() => {
     if (!obj.isEqual(closure_5, optionsTree)) {
-      callback2(closure_1_1(closure_1_2[8]).shuffle(optionsTree.map((problemOptions) => {
-        const obj = {};
-        const merged = Object.assign(problemOptions);
-        const obj2 = callback(table[8]);
-        let freeformConfig = problemOptions.freeformConfig;
-        if (freeformConfig == null) {
-          freeformConfig = [];
-        }
-        obj.problemOptions = callback(table[8]).shuffle(problemOptions.problemOptions).concat(freeformConfig);
-        return obj;
-      })));
+      callback2(
+        closure_1_1(closure_1_2[8]).shuffle(
+          optionsTree.map((problemOptions) => {
+            const obj = {};
+            const merged = Object.assign(problemOptions);
+            const obj2 = callback(table[8]);
+            let freeformConfig = problemOptions.freeformConfig;
+            if (freeformConfig == null) {
+              freeformConfig = [];
+            }
+            obj.problemOptions = callback(table[8]).shuffle(problemOptions.problemOptions).concat(freeformConfig);
+            return obj;
+          }),
+        ),
+      );
       const tmpResult = closure_1_1(closure_1_2[8]);
     }
   }, items);
@@ -124,7 +135,13 @@ export default function FeedbackActionSheetV2(optionsTree) {
       obj[3] = first1;
       obj[0] = obj;
       obj[1] = function trackReport(rating) {
-        const obj = { rating: rating.rating, category: rating.category, reason: rating.reason, dontShowAgain: rating.dontShowAgain, feedback: null };
+        const obj = {
+          rating: rating.rating,
+          category: rating.category,
+          reason: rating.reason,
+          dontShowAgain: rating.dontShowAgain,
+          feedback: null,
+        };
         let str = rating.feedback;
         if (str == null) {
           str = "";
@@ -214,7 +231,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
       obj[3] = ratingBody;
       tmp35 = callback2(tmp20(4474).Text, obj);
     }
-    const items2 = [tmp35, , ];
+    const items2 = [tmp35, ,];
     obj = { ratingOptions: null, selectedRating: null, onChangeRating: null };
     obj[0] = ratingOptions;
     obj[1] = first2;
@@ -248,16 +265,20 @@ export default function FeedbackActionSheetV2(optionsTree) {
         const obj5 = { hasIcons: false, children: null };
         obj5[1] = first.map((label) => {
           closure_0 = label;
-          return callback2(optionsTree(closure_1_2[19]).TableRow, {
-            label: label.label,
-            labelLineClamp: 2,
-            onPress() {
-              return closure_1_18(closure_0);
-            }
-          }, arg1);
+          return callback2(
+            optionsTree(closure_1_2[19]).TableRow,
+            {
+              label: label.label,
+              labelLineClamp: 2,
+              onPress() {
+                return closure_1_18(closure_0);
+              },
+            },
+            arg1,
+          );
         });
         obj4[1] = callback2(tmp20(5992).TableRowGroup, obj5);
-        const items3 = [callback2(closure_5, obj4), ];
+        const items3 = [callback2(closure_5, obj4)];
         const obj6 = { variant: "secondary", size: "sm", text: null, onPress: null };
         const intl2 = tmp20(1236).intl;
         obj6[2] = intl2.string(tmp20(1236).t["13/7kX"]);
@@ -280,16 +301,20 @@ export default function FeedbackActionSheetV2(optionsTree) {
       const problemOptions = first4.problemOptions;
       obj9[1] = problemOptions.map((label) => {
         closure_0 = label;
-        return callback2(optionsTree(closure_1_2[19]).TableRow, {
-          label: label.label,
-          labelLineClamp: 2,
-          onPress() {
-            return closure_1_19(closure_0);
-          }
-        }, arg1);
+        return callback2(
+          optionsTree(closure_1_2[19]).TableRow,
+          {
+            label: label.label,
+            labelLineClamp: 2,
+            onPress() {
+              return closure_1_19(closure_0);
+            },
+          },
+          arg1,
+        );
       });
       obj8[1] = callback2(tmp20(5992).TableRowGroup, obj9);
-      const items4 = [callback2(closure_5, obj8), ];
+      const items4 = [callback2(closure_5, obj8)];
       const obj10 = { variant: "secondary", size: "sm", text: null, onPress: null };
       let intl = tmp20(1236).intl;
       obj10[2] = intl.string(tmp20(1236).t["13/7kX"]);
@@ -329,6 +354,9 @@ export default function FeedbackActionSheetV2(optionsTree) {
   obj12[1] = tmp40Result;
   obj11[4] = callback2(optionsTree(5621).BottomSheetTitleHeader, obj12);
   const items5 = [tmp.container, { paddingBottom: tmp.container.padding + bottom }];
-  obj11[5] = callback2(optionsTree(5624).BottomSheetScrollView, { contentContainerStyle: items5, children: tmp33Result });
+  obj11[5] = callback2(optionsTree(5624).BottomSheetScrollView, {
+    contentContainerStyle: items5,
+    children: tmp33Result,
+  });
   return callback2(optionsTree(5622).BottomSheet, obj11);
-};
+}

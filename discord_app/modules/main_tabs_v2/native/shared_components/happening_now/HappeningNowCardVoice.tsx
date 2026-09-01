@@ -56,37 +56,43 @@ const memoResult = importAllResult.memo((guildId) => {
   obj1 = voiceState(voiceState[18]);
   let items = [closure_7, closure_6, closure_5];
   const items1 = [voiceUserAffinitySortType, voiceState.channelId];
-  stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
-    const voiceStatesForChannel = closure_1_7.getVoiceStatesForChannel(voiceState.channelId);
-    const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
-    const found = mapped.filter(voiceState(voiceState[20]).isNotNullish);
-    const items = [
-      (id) => {
-        const userAffinity = closure_1_5.getUserAffinity(id.id);
-        if ("vc_probability" === closure_1) {
-          let num2;
-          if (userAffinity != null) {
-            num2 = userAffinity.vcProbability;
+  stateFromStoresArray = obj1.useStateFromStoresArray(
+    items,
+    () => {
+      const voiceStatesForChannel = closure_1_7.getVoiceStatesForChannel(voiceState.channelId);
+      const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((userId) =>
+        user.getUser(userId.userId),
+      );
+      const found = mapped.filter(voiceState(voiceState[20]).isNotNullish);
+      const items = [
+        (id) => {
+          const userAffinity = closure_1_5.getUserAffinity(id.id);
+          if ("vc_probability" === closure_1) {
+            let num2;
+            if (userAffinity != null) {
+              num2 = userAffinity.vcProbability;
+            }
+            if (num2 == null) {
+              num2 = 0;
+            }
+            let num = num2;
+          } else {
+            num = undefined;
+            if (userAffinity != null) {
+              num = userAffinity.communicationProbability;
+            }
+            if (num == null) {
+              num = 0;
+            }
           }
-          if (num2 == null) {
-            num2 = 0;
-          }
-          let num = num2;
-        } else {
-          num = undefined;
-          if (userAffinity != null) {
-            num = userAffinity.communicationProbability;
-          }
-          if (num == null) {
-            num = 0;
-          }
-        }
-        return num;
-      }
-    ];
-    const arr = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel);
-    return found.orderBy(items, ["desc"]).value();
-  }, items1);
+          return num;
+        },
+      ];
+      const arr = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel);
+      return found.orderBy(items, ["desc"]).value();
+    },
+    items1,
+  );
   const items2 = [index, guildId, voiceState.channelId, stateFromStoresArray];
   if (0 === stateFromStoresArray.length) {
     obj = { panelVariant: null };
@@ -108,12 +114,12 @@ const memoResult = importAllResult.memo((guildId) => {
     obj2[0] = guildId;
     obj2[1] = stateFromStoresArray;
     obj1[1] = callback(voiceUserAffinitySortType(tmp3[15]), obj2);
-    const items3 = [callback(View, obj1), ];
+    const items3 = [callback(View, obj1)];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.content;
     const obj4 = { lineClamp: 2, children: null };
     obj4[1] = tmp5;
-    const items4 = [callback(tmp2(tmp3[13]).HappeningNowCardHeader, obj4), ];
+    const items4 = [callback(tmp2(tmp3[13]).HappeningNowCardHeader, obj4)];
     const obj5 = { voiceState: null };
     obj5[0] = voiceState;
     items4[1] = callback(tmp2(tmp3[16]).HappeningNowVoiceCardSubtitle, obj5);
@@ -126,45 +132,56 @@ const memoResult = importAllResult.memo((guildId) => {
   }
   return tmp11Result;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx",
+);
 
 export default memoResult;
 export const useVoiceChannelUsers = function useVoiceChannelUsers(channelId) {
   const _require = channelId;
-  const voiceUserAffinitySortType = require("../../../../user_affinities/VoiceUserAffinityExperiment.tsx").useVoiceUserAffinitySortType("useVoiceChannelUsers");
+  const voiceUserAffinitySortType =
+    require("../../../../user_affinities/VoiceUserAffinityExperiment.tsx").useVoiceUserAffinitySortType(
+      "useVoiceChannelUsers",
+    );
   const obj = apexExperiment;
   const items = [closure_7, closure_6, closure_5];
   const items1 = [voiceUserAffinitySortType, channelId.channelId];
-  return require("../../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
-    const voiceStatesForChannel = closure_1_7.getVoiceStatesForChannel(voiceState.channelId);
-    const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
-    const found = mapped.filter(voiceState(voiceState[20]).isNotNullish);
-    const items = [
-      (id) => {
-        const userAffinity = closure_1_5.getUserAffinity(id.id);
-        if ("vc_probability" === closure_1) {
-          let num2;
-          if (userAffinity != null) {
-            num2 = userAffinity.vcProbability;
+  return require("../../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+    items,
+    () => {
+      const voiceStatesForChannel = closure_1_7.getVoiceStatesForChannel(voiceState.channelId);
+      const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((userId) =>
+        user.getUser(userId.userId),
+      );
+      const found = mapped.filter(voiceState(voiceState[20]).isNotNullish);
+      const items = [
+        (id) => {
+          const userAffinity = closure_1_5.getUserAffinity(id.id);
+          if ("vc_probability" === closure_1) {
+            let num2;
+            if (userAffinity != null) {
+              num2 = userAffinity.vcProbability;
+            }
+            if (num2 == null) {
+              num2 = 0;
+            }
+            let num = num2;
+          } else {
+            num = undefined;
+            if (userAffinity != null) {
+              num = userAffinity.communicationProbability;
+            }
+            if (num == null) {
+              num = 0;
+            }
           }
-          if (num2 == null) {
-            num2 = 0;
-          }
-          let num = num2;
-        } else {
-          num = undefined;
-          if (userAffinity != null) {
-            num = userAffinity.communicationProbability;
-          }
-          if (num == null) {
-            num = 0;
-          }
-        }
-        return num;
-      }
-    ];
-    const arr = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel);
-    return found.orderBy(items, ["desc"]).value();
-  }, items1);
+          return num;
+        },
+      ];
+      const arr = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel);
+      return found.orderBy(items, ["desc"]).value();
+    },
+    items1,
+  );
 };
 export { formatVoiceActivityTitle };

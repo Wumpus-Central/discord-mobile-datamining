@@ -5,10 +5,27 @@ import { t } from "../../../../../_runtime/04705_t.js";
 
 function normal(border) {
   const _require = border;
-  const obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
+  const obj = {
+    border: border.colors.BORDER_SUBTLE,
+    borderWidth: 1,
+    fill: border.colors.CARD_SECONDARY_BG,
+    label: null,
+    opacity: 1,
+    answerBackground: null,
+    answerFill: null,
+    radioStyle: null,
+    radioBackground: null,
+    radioForeground: null,
+  };
   const match = require("../../../../../_runtime/04705_t.js").match(arg1);
   const str = t;
-  obj[3] = match.with(require("../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx").PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
+  obj[3] = match
+    .with(
+      require("../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx").PollLayoutTypes
+        .IMAGE_ONLY_ANSWERS,
+      () => border.colors.WHITE,
+    )
+    .otherwise(() => border.colors.TEXT_DEFAULT);
   obj[5] = border.colors.BACKGROUND_MOD_MUTED;
   obj[6] = border.colors.BACKGROUND_MOD_SUBTLE;
   obj[7] = require("../PollMessageChatDataTypes.tsx").PollRadioStyle.HOLLOW;
@@ -22,10 +39,27 @@ function normalVote(border, arg1) {
   }
   let obj = {};
   const _require = border;
-  obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
+  obj = {
+    border: border.colors.BORDER_SUBTLE,
+    borderWidth: 1,
+    fill: border.colors.CARD_SECONDARY_BG,
+    label: null,
+    opacity: 1,
+    answerBackground: null,
+    answerFill: null,
+    radioStyle: null,
+    radioBackground: null,
+    radioForeground: null,
+  };
   const match = require("../../../../../_runtime/04705_t.js").match(arg1);
   const str = t;
-  obj[3] = match.with(require("../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx").PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
+  obj[3] = match
+    .with(
+      require("../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx").PollLayoutTypes
+        .IMAGE_ONLY_ANSWERS,
+      () => border.colors.WHITE,
+    )
+    .otherwise(() => border.colors.TEXT_DEFAULT);
   obj[5] = border.colors.BACKGROUND_MOD_MUTED;
   obj[6] = border.colors.BACKGROUND_MOD_SUBTLE;
   obj[7] = require("../PollMessageChatDataTypes.tsx").PollRadioStyle.HOLLOW;
@@ -110,5 +144,5 @@ export const pollStyleSets = {
     obj.radioForeground = colors.colors.STATUS_POSITIVE_TEXT;
     return obj;
   },
-  normalVote
+  normalVote,
 };

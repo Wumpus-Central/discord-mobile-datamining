@@ -21,7 +21,7 @@ function PriceOptionRow(selected) {
   let obj = useCheckboxA11yNative;
   const radioA11yNative = obj.useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  const items = [tmp.rowContainer, ];
+  const items = [tmp.rowContainer];
   let containerSelected;
   if (selected) {
     containerSelected = tmp.containerSelected;
@@ -32,7 +32,7 @@ function PriceOptionRow(selected) {
   const tmp5 = closure_10;
   const tmp7 = renderDefault;
   obj[1] = importDefault(selected ? 17276 : 16151);
-  const items1 = [closure_9(preloadDefault, obj), ];
+  const items1 = [closure_9(preloadDefault, obj)];
   obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl = tmp2(1236).intl;
   const obj2 = { price: null, interval: null };
@@ -47,11 +47,43 @@ function PriceOptionRow(selected) {
 }
 ({ TouchableOpacity: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, rowContainer: null, containerSelected: null, rowStatusIcon: null, confirmButton: null, backToTemplates: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24, borderTopLeftRadius: ThemesDefault.radii.md, borderTopRightRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  container: null,
+  rowContainer: null,
+  containerSelected: null,
+  rowStatusIcon: null,
+  confirmButton: null,
+  backToTemplates: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  padding: 24,
+  borderTopLeftRadius: ThemesDefault.radii.md,
+  borderTopRightRadius: ThemesDefault.radii.md,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, flexDirection: "row", alignSelf: "stretch", justifyContent: "flex-start", padding: 12, marginBottom: 12, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, flexDirection: "row", alignSelf: "stretch", justifyContent: "flex-start", padding: 12, marginBottom: 12, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
+createCacheKey[1] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.sm,
+  flexDirection: "row",
+  alignSelf: "stretch",
+  justifyContent: "flex-start",
+  padding: 12,
+  marginBottom: 12,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+};
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.sm,
+  flexDirection: "row",
+  alignSelf: "stretch",
+  justifyContent: "flex-start",
+  padding: 12,
+  marginBottom: 12,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+};
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[3] = { height: 20, width: 20, marginRight: 12 };
 let obj2 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
@@ -59,7 +91,9 @@ createCacheKey[4] = { borderRadius: ThemesDefault.radii.xs };
 createCacheKey[5] = { alignSelf: "center" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { borderRadius: ThemesDefault.radii.xs };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet.tsx",
+);
 
 export default function GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet(selectedTemplate) {
   selectedTemplate = selectedTemplate.selectedTemplate;
@@ -73,8 +107,19 @@ export default function GuildRoleSubscriptionTierTemplatePriceReselectionActionS
   obj = { contentContainerStyle: { paddingBottom: importDefault(newPricesToPick[17])().bottom }, children: null };
   obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = selectedTemplate(newPricesToPick[14]).intl;
-  obj1[2] = intl.format(selectedTemplate(newPricesToPick[14]).t["5WZ9Ct"], { tierName: selectedTemplate.listings[0].name });
-  let items = [callback2(selectedTemplate(newPricesToPick[13]).Text, obj1), callback2(selectedTemplate(newPricesToPick[20]).Spacer, { size: 12 }), , , , , , , ];
+  obj1[2] = intl.format(selectedTemplate(newPricesToPick[14]).t["5WZ9Ct"], {
+    tierName: selectedTemplate.listings[0].name,
+  });
+  let items = [
+    callback2(selectedTemplate(newPricesToPick[13]).Text, obj1),
+    callback2(selectedTemplate(newPricesToPick[20]).Spacer, { size: 12 }),
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+  ];
   const obj3 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = selectedTemplate(newPricesToPick[14]).intl;
   const obj4 = { price: null };
@@ -85,13 +130,17 @@ export default function GuildRoleSubscriptionTierTemplatePriceReselectionActionS
   items[3] = callback2(selectedTemplate(newPricesToPick[20]).Spacer, { size: 24 });
   items[4] = newPricesToPick.map((price) => {
     closure_0 = arg1;
-    return closure_1_9(closure_1_12, {
+    return closure_1_9(
+      closure_1_12,
+      {
+        price,
+        selected: arg1 === c3,
+        onPress() {
+          return closure_1_4(closure_0);
+        },
+      },
       price,
-      selected: arg1 === c3,
-      onPress() {
-        return closure_1_4(closure_0);
-      }
-    }, price);
+    );
   });
   items[5] = callback2(selectedTemplate(newPricesToPick[20]).Spacer, { size: 36 });
   items[6] = callback2(selectedTemplate(newPricesToPick[21]).BaseTextButton, {
@@ -107,7 +156,7 @@ export default function GuildRoleSubscriptionTierTemplatePriceReselectionActionS
       obj.listings = items;
       callback(obj, true);
     },
-    grow: true
+    grow: true,
   });
   items[7] = callback2(selectedTemplate(newPricesToPick[20]).Spacer, { size: 24 });
   const obj6 = {
@@ -116,7 +165,7 @@ export default function GuildRoleSubscriptionTierTemplatePriceReselectionActionS
     },
     style: tmp.backToTemplates,
     activeOpacity: 0.5,
-    children: null
+    children: null,
   };
   obj7 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
   const intl3 = selectedTemplate(newPricesToPick[14]).intl;
@@ -127,4 +176,4 @@ export default function GuildRoleSubscriptionTierTemplatePriceReselectionActionS
   obj[1] = callback3(selectedTemplate(newPricesToPick[19]).BottomSheetScrollView, obj);
   obj[2] = callback2(closure_6, obj);
   return callback2(selectedTemplate(newPricesToPick[18]).BottomSheet, obj);
-};
+}

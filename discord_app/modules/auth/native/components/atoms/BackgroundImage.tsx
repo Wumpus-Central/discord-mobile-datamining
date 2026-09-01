@@ -19,24 +19,26 @@ export default function BackgroundImage(backgroundImageSource) {
   let items = [backgroundImageSource, flag, tmp];
   let obj = { style: absoluteFill.absoluteFill, children: null };
   obj = {};
-  const merged = Object.assign(React.useMemo(() => {
-    const items = [closure_1_6.absoluteFill, ];
-    const obj = { style: items, source: null };
-    items[1] = flag ? { width: "100%", height: "100%" } : { width: "100%" };
-    if (null != backgroundImageSource) {
-      obj[1] = backgroundImageSource;
-      return obj;
-    } else {
-      let tmp2 = table;
-      if (obj2.isThemeDark(table)) {
-        tmp2 = tmp2[5];
-        let tmp4Result = tmp4(tmp2);
+  const merged = Object.assign(
+    React.useMemo(() => {
+      const items = [closure_1_6.absoluteFill];
+      const obj = { style: items, source: null };
+      items[1] = flag ? { width: "100%", height: "100%" } : { width: "100%" };
+      if (null != backgroundImageSource) {
+        obj[1] = backgroundImageSource;
+        return obj;
       } else {
-        tmp4Result = tmp4(tmp2[6]);
+        let tmp2 = table;
+        if (obj2.isThemeDark(table)) {
+          tmp2 = tmp2[5];
+          let tmp4Result = tmp4(tmp2);
+        } else {
+          tmp4Result = tmp4(tmp2[6]);
+        }
+        obj2 = backgroundImageSource(table[4]);
       }
-      obj2 = backgroundImageSource(table[4]);
-    }
-  }, items));
+    }, items),
+  );
   obj[1] = <closure_4 />;
   return <closure_5 />;
-};
+}

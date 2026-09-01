@@ -26,7 +26,7 @@ function _transitionToEventDetailsFromInvite() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -98,7 +98,9 @@ function _transitionToEventDetailsFromInvite() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx",
+);
 
 export { openGuildEventDetails };
 export const transitionToEventDetailsFromInvite = function transitionToEventDetailsFromInvite() {

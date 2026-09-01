@@ -28,7 +28,14 @@ export default function computeGuildsBarCutout(containerSize) {
   }
   const roundToNearestPixelResult = PixelRatio.roundToNearestPixel(BADGE_SIZE + 2 * BADGE_PADDING);
   const roundToNearestPixelResult1 = PixelRatio.roundToNearestPixel(BADGE_SIZE2 + 2 * BADGE_PADDING);
-  const obj = { shape: SolidCutout.CutoutShape.RoundedRect, x: 0, y: 0, width: roundToNearestPixelResult, height: roundToNearestPixelResult1, cornerRadius: PixelRatio.roundToNearestPixel(Math.min(roundToNearestPixelResult, roundToNearestPixelResult1) / 2) };
+  const obj = {
+    shape: SolidCutout.CutoutShape.RoundedRect,
+    x: 0,
+    y: 0,
+    width: roundToNearestPixelResult,
+    height: roundToNearestPixelResult1,
+    cornerRadius: PixelRatio.roundToNearestPixel(Math.min(roundToNearestPixelResult, roundToNearestPixelResult1) / 2),
+  };
   if ("top-right" === containerSize.position) {
     obj.x = containerSize - roundToNearestPixelResult + BADGE_PADDING;
     obj.y = -BADGE_PADDING;
@@ -37,4 +44,4 @@ export default function computeGuildsBarCutout(containerSize) {
     obj.y = containerSize - roundToNearestPixelResult1 + BADGE_PADDING;
   }
   return obj;
-};
+}

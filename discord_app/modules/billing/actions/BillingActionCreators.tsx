@@ -20,7 +20,7 @@ function _deletePaymentSource() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -117,7 +117,7 @@ function _updatePaymentSource() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -225,7 +225,7 @@ function _updatePaymentSource() {
 }
 function _fetchPaymentSources() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -332,7 +332,7 @@ function _fetchPaymentSource() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -429,7 +429,7 @@ function _fetchWalletInformation() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -496,7 +496,12 @@ function _fetchWalletInformation() {
             obj6 = { currency: null, amount: null };
             obj6[0] = lib.body.currency;
             obj6[1] = lib.body.balance;
-            const obj7 = { type: "BILLING_WALLET_BALANCE_FETCH_SUCCESS", paymentSourceId: null, currency: null, amount: null };
+            const obj7 = {
+              type: "BILLING_WALLET_BALANCE_FETCH_SUCCESS",
+              paymentSourceId: null,
+              currency: null,
+              amount: null,
+            };
             obj7[1] = callback;
             obj7[2] = obj6.currency;
             obj7[3] = obj6.amount;
@@ -544,7 +549,7 @@ function _fetchPayment() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const table = tmp2;
       const callback = tmp5;
       const HTTP = lib(closure_1_2[9]).HTTP;
@@ -575,7 +580,7 @@ function _fetchPayments() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    const iter = (function*() {
+    const iter = (function* () {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -691,7 +696,7 @@ function _fetchPayments() {
 }
 function _fetchSubscriptions() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -769,7 +774,10 @@ function _fetchSubscriptions() {
           if (null == lib.body) {
             const _JSON = JSON;
             const _HermesInternal = HermesInternal;
-            const billingError = new callback(4376).BillingError("response body is null, response: " + JSON.stringify(lib), lib.status);
+            const billingError = new callback(4376).BillingError(
+              "response body is null, response: " + JSON.stringify(lib),
+              lib.status,
+            );
             throw billingError;
           } else {
             obj = lib(709);
@@ -806,7 +814,7 @@ function _fetchSubscriptions() {
 }
 function _getPerksRelevance() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const callback = tmp3;
     closure_1_1(closure_1_2[8]).wait(() => {
       tmp3(tmp19[8]).dispatch({ type: "BILLING_PERKS_RELEVANCE_FETCH_START" });
@@ -846,7 +854,7 @@ function _getPerksRelevance() {
 }
 function _fetchMostRecentSubscription() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const callback = tmp3;
     closure_1_1(closure_1_2[8]).wait(() => {
       tmp3(tmp27[8]).dispatch({ type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START" });
@@ -897,7 +905,7 @@ function _createSubscription() {
     c10 = 0;
     c11 = 0;
     c8 = 0;
-    const iter = (function*(arg0, gateway_checkout_context) {
+    const iter = (function* (arg0, gateway_checkout_context) {
       if (c11 === 2) {
         c11 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -942,7 +950,18 @@ function _createSubscription() {
                 c8 = undefined;
                 c9 = undefined;
                 throwTypeErrorResult = lib;
-                ({ items: closure_0, paymentSource: c1, trialId: obj14, code: obj13, currency: post, metadata: HTTP, referralCode: c6, loadId: c7, expectedInvoicePrice: c8, expectedRenewalPrice: c9 } = lib);
+                ({
+                  items: closure_0,
+                  paymentSource: c1,
+                  trialId: obj14,
+                  code: obj13,
+                  currency: post,
+                  metadata: HTTP,
+                  referralCode: c6,
+                  loadId: c7,
+                  expectedInvoicePrice: c8,
+                  expectedRenewalPrice: c9,
+                } = lib);
                 c10 = undefined;
                 c11 = undefined;
                 closure_12 = undefined;
@@ -1178,7 +1197,7 @@ function _payInvoiceManually() {
     c14 = 0;
     c15 = 0;
     c12 = 0;
-    return (function*(arg0, arg1, arg2, arg3, arg4) {
+    return (function* (arg0, arg1, arg2, arg3, arg4) {
       if (c15 === 2) {
         c15 = 3;
         HermesBuiltin.throwTypeError();
@@ -1244,7 +1263,9 @@ function _payInvoiceManually() {
                 if (obj11 == null) {
                   closure_5 = "";
                 }
-                closure_5 = aPIBaseURL + closure_10.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(closure_2.type, closure_5, "success");
+                closure_5 =
+                  aPIBaseURL +
+                  closure_10.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(closure_2.type, closure_5, "success");
               }
             } else if (2 === tmp8) {
               let set = 0;
@@ -1381,7 +1402,7 @@ function _redirectedPaymentSucceeded() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_2 = tmp5;
       closure_1 = tmp2;
       closure_1 = yield closure_1_25(callback);
@@ -1432,7 +1453,7 @@ function _cancelSubscription() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -1550,7 +1571,7 @@ function _updateSubscription() {
     c13 = 0;
     c14 = 0;
     c11 = 0;
-    return (function*(arg0, gateway_checkout_context) {
+    return (function* (arg0, gateway_checkout_context) {
       if (c14 === 2) {
         c14 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -1712,7 +1733,9 @@ function _updateSubscription() {
                   if (closure_8 == null) {
                     c7 = "";
                   }
-                  c7.return_url = aPIBaseURL + billingError.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(lib2.paymentSource.type, c7, "success");
+                  c7.return_url =
+                    aPIBaseURL +
+                    billingError.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(lib2.paymentSource.type, c7, "success");
                   const tmp18 = c7;
                 }
               } else if (arg0 === 1) {
@@ -1800,7 +1823,7 @@ function _voidPendingPayment() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -1871,7 +1894,7 @@ function _fetchIpCountryCode() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*() {
+    const iter = (function* () {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -2007,7 +2030,7 @@ function _fetchIpLocation() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*() {
+    const iter = (function* () {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -2156,7 +2179,7 @@ function _redeemReactivationOffer() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -2261,7 +2284,7 @@ function _redeemUserDiscountOffer() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -2352,8 +2375,20 @@ function _redeemUserDiscountOffer() {
   return applyArgumentsResult;
 }
 let closure_3 = ["line1", "line2", "postalCode"];
-({ AnalyticEvents: c9, Endpoints: c10, PaymentGateways: unpackModuleId, REDIRECTED_PAYMENT_SOURCES: closure_12, SubscriptionStatusTypes: map1 } = ME);
-({ ADYEN_PAYMENT_SOURCES: closure_15, CurrencyCodes: closure_16, PaymentStatusTypes: closure_17, PREPAID_PAYMENT_SOURCES: closure_18, SubscriptionTypes: closure_19 } = sum);
+({
+  AnalyticEvents: c9,
+  Endpoints: c10,
+  PaymentGateways: unpackModuleId,
+  REDIRECTED_PAYMENT_SOURCES: closure_12,
+  SubscriptionStatusTypes: map1,
+} = ME);
+({
+  ADYEN_PAYMENT_SOURCES: closure_15,
+  CurrencyCodes: closure_16,
+  PaymentStatusTypes: closure_17,
+  PREPAID_PAYMENT_SOURCES: closure_18,
+  SubscriptionTypes: closure_19,
+} = sum);
 let result = require("set").fileFinishedImporting("modules/billing/actions/BillingActionCreators.tsx");
 for (const key10070 in require("_getClientSecret")) {
   let tmp5 = key10070;
@@ -2501,7 +2536,13 @@ export const cancelSubscription = function cancelSubscription(id, c4) {
 export const deleteRenewalMutation = function deleteRenewalMutation(items) {
   let obj = { items: items.items };
   obj = { amount: 0, currency: items.currency };
-  return updateSubscription(items, obj, obj, getPremiumPlanItem.getItemPlansTotalServerPrice(items.items, items.currency, items.paymentSourceId), arg1);
+  return updateSubscription(
+    items,
+    obj,
+    obj,
+    getPremiumPlanItem.getItemPlansTotalServerPrice(items.items, items.currency, items.paymentSourceId),
+    arg1,
+  );
 };
 export { updateSubscription };
 export const resubscribeToSubscription = function resubscribeToSubscription(currency, closure_1_6, id) {
@@ -2512,14 +2553,30 @@ export const resubscribeToSubscription = function resubscribeToSubscription(curr
   if (id != null) {
     id = id.id;
   }
-  return updateSubscription(currency, obj, obj, getPremiumPlanItem.getItemPlansTotalServerPrice(items, currency, id), closure_1_6, arg4);
+  return updateSubscription(
+    currency,
+    obj,
+    obj,
+    getPremiumPlanItem.getItemPlansTotalServerPrice(items, currency, id),
+    closure_1_6,
+    arg4,
+  );
 };
-export const upgradeSubscription = function upgradeSubscription(renewalMutations, basePlanId, arg2, itemPlansTotalServerPrice) {
+export const upgradeSubscription = function upgradeSubscription(
+  renewalMutations,
+  basePlanId,
+  arg2,
+  itemPlansTotalServerPrice,
+) {
   let obj = getPremiumPlanItem;
   obj = { status: constants.ACTIVE, items: obj.getItemsWithUpsertedPremiumPlanId(renewalMutations, basePlanId) };
   return updateSubscription(renewalMutations, obj, arg2, itemPlansTotalServerPrice, arg4, arg5);
 };
-export const changeSubscriptionCurrency = function changeSubscriptionCurrency(items, currency, itemPlansTotalServerPrice) {
+export const changeSubscriptionCurrency = function changeSubscriptionCurrency(
+  items,
+  currency,
+  itemPlansTotalServerPrice,
+) {
   let obj = { currency };
   obj = { amount: 0, currency: currency.toLowerCase() };
   return updateSubscription(items, obj, obj, itemPlansTotalServerPrice, arg3, arg4);
@@ -2557,7 +2614,12 @@ export const popupBridgeCallback = function popupBridgeCallback(paymentSourceTyp
   let obj = dispatcherDefault;
   obj.dispatch({ type: "BILLING_POPUP_BRIDGE_CALLBACK_START", paymentSourceType });
   const HTTP = paymentSourceType(530).HTTP;
-  obj = { url: closure_10.BILLING_POPUP_BRIDGE_CALLBACK(paymentSourceType), body: { state, path, query, insecure }, oldFormErrors: true, rejectWithError: false };
+  obj = {
+    url: closure_10.BILLING_POPUP_BRIDGE_CALLBACK(paymentSourceType),
+    body: { state, path, query, insecure },
+    oldFormErrors: true,
+    rejectWithError: false,
+  };
   return HTTP.post(obj).then((arg0) => {
     let obj = closure_1_1(closure_1_2[8]);
     obj = { type: "BILLING_POPUP_BRIDGE_CALLBACK_END", paymentSourceType };
@@ -2577,7 +2639,11 @@ export const fetchIpCountryCode = function fetchIpCountryCode() {
 };
 export const fetchPaymentSourceCreationContext = function fetchPaymentSourceCreationContext() {
   const HTTP = sendRequest.HTTP;
-  return HTTP.get({ url: closure_10.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT, oldFormErrors: true, rejectWithError: false });
+  return HTTP.get({
+    url: closure_10.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT,
+    oldFormErrors: true,
+    rejectWithError: false,
+  });
 };
 export const clearAndFetchPaymentSourceCreationContext = function clearAndFetchPaymentSourceCreationContext() {
   let obj = dispatcherDefault;
@@ -2585,46 +2651,48 @@ export const clearAndFetchPaymentSourceCreationContext = function clearAndFetchP
   const HTTP = sendRequest.HTTP;
   obj = { url: closure_10.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT, oldFormErrors: true, rejectWithError: false };
   const value = HTTP.get(obj);
-  value.then((body) => {
-    body = body.body;
-    if (null != body) {
-      let store_country = body.store_country;
-      if (store_country == null) {
-        store_country = null;
+  value
+    .then((body) => {
+      body = body.body;
+      if (null != body) {
+        let store_country = body.store_country;
+        if (store_country == null) {
+          store_country = null;
+        }
+        let obj = { store_country: null, allowed_payment_source_types: null, allowed_billing_address_countries: null };
+        obj[0] = store_country;
+        let prop = body.allowed_payment_source_types;
+        if (prop == null) {
+          prop = [];
+        }
+        obj[1] = prop;
+        let prop1 = body.allowed_billing_address_countries;
+        if (prop1 == null) {
+          prop1 = [];
+        }
+        obj = { type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_SUCCESS", data: null };
+        obj[2] = prop1;
+        obj[1] = obj;
+        callback(709).dispatch(obj);
+        const obj3 = callback(709);
+      } else {
+        obj = callback(709);
+        obj1 = { type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_FAIL", error: null };
+        const _Error = Error;
+        error = new Error("Missing response body");
+        obj1[1] = error;
+        obj.dispatch(obj1);
       }
-      let obj = { store_country: null, allowed_payment_source_types: null, allowed_billing_address_countries: null };
-      obj[0] = store_country;
-      let prop = body.allowed_payment_source_types;
-      if (prop == null) {
-        prop = [];
+    })
+    .catch((arg0) => {
+      error = arg0;
+      if (!(arg0 instanceof Error)) {
+        const _Error = Error;
+        const _String = String;
+        error = new Error(String(arg0));
       }
-      obj[1] = prop;
-      let prop1 = body.allowed_billing_address_countries;
-      if (prop1 == null) {
-        prop1 = [];
-      }
-      obj = { type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_SUCCESS", data: null };
-      obj[2] = prop1;
-      obj[1] = obj;
-      callback(709).dispatch(obj);
-      const obj3 = callback(709);
-    } else {
-      obj = callback(709);
-      obj1 = { type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_FAIL", error: null };
-      const _Error = Error;
-      error = new Error("Missing response body");
-      obj1[1] = error;
-      obj.dispatch(obj1);
-    }
-  }).catch((arg0) => {
-    error = arg0;
-    if (!(arg0 instanceof Error)) {
-      const _Error = Error;
-      const _String = String;
-      error = new Error(String(arg0));
-    }
-    callback(709).dispatch({ type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_FAIL", error });
-  });
+      callback(709).dispatch({ type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_FAIL", error });
+    });
 };
 export const fetchIpLocation = function fetchIpLocation() {
   const self = this;

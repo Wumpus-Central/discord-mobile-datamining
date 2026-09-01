@@ -45,7 +45,16 @@ function ChannelTitleContent(arg0) {
   if (!importAllResult.isValidElement(title)) {
     obj = { style: null, children: null };
     obj[0] = tmp.channelNameContainer;
-    obj = { style: null, lineClamp: 1, variant: "heading-md/bold", color: "mobile-text-heading-primary", accessibilityLabel: null, maxFontSizeMultiplier: 1, accessibilityRole: "header", children: null };
+    obj = {
+      style: null,
+      lineClamp: 1,
+      variant: "heading-md/bold",
+      color: "mobile-text-heading-primary",
+      accessibilityLabel: null,
+      maxFontSizeMultiplier: 1,
+      accessibilityRole: "header",
+      children: null,
+    };
     obj[0] = tmp.channelName;
     obj[4] = accessibleTitle;
     obj[7] = title;
@@ -53,7 +62,7 @@ function ChannelTitleContent(arg0) {
     tmp8 = callback(View, obj);
   }
   obj1 = { style: tmp.flexRow, children: null };
-  const items = [tmp2, ];
+  const items = [tmp2];
   const obj2 = { style: tmp.channelTextContainer, children: null };
   const items1 = [tmp8, titleSuffix];
   const items2 = [callback2(View, { style: tmp.flexRow, children: items1 }), subTitle];
@@ -64,7 +73,15 @@ function ChannelTitleContent(arg0) {
 }
 function ParentChannelSubTitle(parentChannel) {
   parentChannel = parentChannel.parentChannel;
-  let obj = { lineClamp: 1, style: callback3().navbarTitleSecondaryText, accessibilityLabel: null, maxFontSizeMultiplier: 1, variant: "text-xs/medium", color: "text-muted", children: null };
+  let obj = {
+    lineClamp: 1,
+    style: callback3().navbarTitleSecondaryText,
+    accessibilityLabel: null,
+    maxFontSizeMultiplier: 1,
+    variant: "text-xs/medium",
+    color: "text-muted",
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj = { channelName: null };
   const tmp = callback3();
@@ -79,18 +96,29 @@ function DMChannelName(style) {
   let obj = userId(589);
   const items = [closure_11, closure_10];
   const items1 = [userId];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    let str = closure_1_10.getNickname(userId);
-    if (str == null) {
-      str = closure_1_1(closure_1_2[31]).getName(tmp);
-      const obj = closure_1_1(closure_1_2[31]);
-    }
-    if (str == null) {
-      str = "";
-    }
-    return str;
-  }, items1);
-  obj = { numberOfLines: 1, style: style.style, accessibilityLabel: null, maxFontSizeMultiplier: 1, accessibilityRole: "header", children: null };
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let str = closure_1_10.getNickname(userId);
+      if (str == null) {
+        str = closure_1_1(closure_1_2[31]).getName(tmp);
+        const obj = closure_1_1(closure_1_2[31]);
+      }
+      if (str == null) {
+        str = "";
+      }
+      return str;
+    },
+    items1,
+  );
+  obj = {
+    numberOfLines: 1,
+    style: style.style,
+    accessibilityLabel: null,
+    maxFontSizeMultiplier: 1,
+    accessibilityRole: "header",
+    children: null,
+  };
   const intl = userId(1236).intl;
   obj[2] = intl.formatToPlainString(userId(1236).t.fYqXVY, { channelName: stateFromStores });
   obj[5] = stateFromStores;
@@ -101,7 +129,12 @@ function ConnectedStatus(style) {
   let obj = userId(589);
   const items = [closure_9];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const obj = { status: closure_1_9.getStatus(userId), isMobileOnline: closure_1_9.isMobileOnline(userId), isVROnline: closure_1_9.isVROnline(userId), streaming: closure_1_1(closure_1_2[32])(closure_1_9.getActivities(userId)) };
+    const obj = {
+      status: closure_1_9.getStatus(userId),
+      isMobileOnline: closure_1_9.isMobileOnline(userId),
+      isVROnline: closure_1_9.isVROnline(userId),
+      streaming: closure_1_1(closure_1_2[32])(closure_1_9.getActivities(userId)),
+    };
     return obj;
   });
   ({ status, isMobileOnline, isVROnline, streaming } = stateFromStoresObject);
@@ -112,9 +145,24 @@ let c3 = importAllResult;
 ({ ChannelTypes: closure_12, Fonts } = ME);
 ({ ContentDismissActionType: closure_14, DismissibleContentGroupName: closure_15 } = ContentDismissActionType);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-let obj = { navbarTitleContainer: { height: "100%", flex: 1, flexDirection: "row", alignItems: "center" }, navbarTitlePrimaryText: null, navbarTitleSecondaryText: null, channelIcon: null, channelIconColor: null, homeIcon: null, premiumIcon: null, status: null, channelTextContainer: null, channelNameContainer: null, channelName: null, flexRow: null };
+let obj = {
+  navbarTitleContainer: { height: "100%", flex: 1, flexDirection: "row", alignItems: "center" },
+  navbarTitlePrimaryText: null,
+  navbarTitleSecondaryText: null,
+  channelIcon: null,
+  channelIconColor: null,
+  homeIcon: null,
+  premiumIcon: null,
+  status: null,
+  channelTextContainer: null,
+  channelNameContainer: null,
+  channelName: null,
+  flexRow: null,
+};
 obj = {};
-const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
+const merged = Object.assign(
+  importDefaultResult(Fonts.DISPLAY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18),
+);
 obj.flexShrink = 1;
 obj[1] = obj;
 createCacheKey = { fontSize: 12, lineHeight: 16, color: ThemesDefault.colors.TEXT_MUTED, marginTop: -4 };
@@ -186,24 +234,28 @@ const memoResult = importAllResult.memo((threadDraft) => {
   let obj4 = channelId(stateFromStores1[16]);
   const items3 = [closure_7];
   const items4 = [stateFromStores1, threadDraft];
-  const stateFromStores3 = obj4.useStateFromStores(items3, () => {
-    if (null != threadDraft) {
-      if (null != tmp.parentChannelId) {
-        let channel = closure_1_7.getChannel(tmp.parentChannelId);
+  const stateFromStores3 = obj4.useStateFromStores(
+    items3,
+    () => {
+      if (null != threadDraft) {
+        if (null != tmp.parentChannelId) {
+          let channel = closure_1_7.getChannel(tmp.parentChannelId);
+        }
+        return channel;
       }
-      return channel;
-    }
-    channel = null;
-    if (null != stateFromStores1) {
       channel = null;
-      if (null != tmp2.parent_id) {
+      if (null != stateFromStores1) {
         channel = null;
-        if (closure_1_6.has(tmp2.type)) {
-          channel = closure_1_7.getChannel(tmp2.parent_id);
+        if (null != tmp2.parent_id) {
+          channel = null;
+          if (closure_1_6.has(tmp2.type)) {
+            channel = closure_1_7.getChannel(tmp2.parent_id);
+          }
         }
       }
-    }
-  }, items4);
+    },
+    items4,
+  );
   let obj5 = channelId(stateFromStores1[21]);
   const selectedSpecialNavigationPath = obj5.useSelectedSpecialNavigationPath();
   const intl = channelId(stateFromStores1[17]).intl;
@@ -275,7 +327,9 @@ const memoResult = importAllResult.memo((threadDraft) => {
             let name = threadDraft.name;
           }
           let tmp2Result = tmp2(tmp3[18]);
-          const threadChannelIcon = tmp2Result.getThreadChannelIcon(threadDraft.isPrivate ? tmp13.PRIVATE_THREAD : tmp13.PUBLIC_THREAD);
+          const threadChannelIcon = tmp2Result.getThreadChannelIcon(
+            threadDraft.isPrivate ? tmp13.PRIVATE_THREAD : tmp13.PUBLIC_THREAD,
+          );
           const intl3 = tmp2(tmp3[17]).intl;
           const obj10 = { channelName: null };
           obj10[0] = name;
@@ -474,7 +528,17 @@ export const ChannelButtons = function ChannelButtons(buttons) {
       let fn = onPress.onPress;
       const hasActivitiesPrivateChannelTooltip = onPress.hasActivitiesPrivateChannelTooltip;
       ({ onLongPress, source, color, style, accessibilityLabel, children, disabled } = onPress);
-      let obj = { accessibilityRole: "button", accessibilityLabel, color, source, onPress: null, onLongPress: null, disabled: null, style: null, children: null };
+      let obj = {
+        accessibilityRole: "button",
+        accessibilityLabel,
+        color,
+        source,
+        onPress: null,
+        onLongPress: null,
+        disabled: null,
+        style: null,
+        children: null,
+      };
       if (hasActivitiesPrivateChannelTooltip) {
         fn = (arg0) => {
           if (null != fn) {
@@ -482,7 +546,10 @@ export const ChannelButtons = function ChannelButtons(buttons) {
           }
           let obj = fn(closure_1_2[34]);
           obj = { dismissAction: closure_1_14.AUTO };
-          const result = obj.UNSAFE_markDismissibleContentAsDismissed(fn(closure_1_2[35]).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP, obj);
+          const result = obj.UNSAFE_markDismissibleContentAsDismissed(
+            fn(closure_1_2[35]).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP,
+            obj,
+          );
         };
       }
       obj[4] = fn;
@@ -490,7 +557,7 @@ export const ChannelButtons = function ChannelButtons(buttons) {
       obj[6] = disabled;
       obj[7] = style;
       obj[8] = children;
-      children = [closure_16(callback(table[33]), obj), ];
+      children = [closure_16(callback(table[33]), obj)];
       let tmp3Result = null;
       if (hasActivitiesPrivateChannelTooltip) {
         obj = { contentTypes: null, groupName: null, children: null };
@@ -500,7 +567,9 @@ export const ChannelButtons = function ChannelButtons(buttons) {
         obj[2] = function children(markAsDismissed) {
           markAsDismissed = markAsDismissed.markAsDismissed;
           let tmp2 = null;
-          if (markAsDismissed.visibleContent === markAsDismissed(table[35]).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP) {
+          if (
+            markAsDismissed.visibleContent === markAsDismissed(table[35]).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP
+          ) {
             const obj = { onClosePress: null };
             obj[0] = function onClosePress() {
               return markAsDismissed(closure_1_14.UNKNOWN);

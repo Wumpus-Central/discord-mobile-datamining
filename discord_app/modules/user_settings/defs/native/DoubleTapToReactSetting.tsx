@@ -36,7 +36,7 @@ const toggle = createToggle.createToggle({
     }
     obj[3] = animated;
     DoubleTapReactionEmoji2.updateSetting(obj);
-  }
+  },
 });
 let obj = {
   useTitle() {
@@ -69,7 +69,7 @@ let obj = {
     }
     obj[3] = animated;
     DoubleTapReactionEmoji2.updateSetting(obj);
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DoubleTapToReactSetting.tsx");
 

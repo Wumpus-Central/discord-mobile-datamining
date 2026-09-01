@@ -26,7 +26,7 @@ export default function SharePreparingModal(onCancel) {
   const items = [onCancel];
   const effect = React.useEffect(() => () => callback(), items);
   let obj = { style: tmp.content, children: null };
-  const items1 = [callback(onCancel(4916).Backdrop, { blur: "none", "aria-hidden": true }), , , ];
+  const items1 = [callback(onCancel(4916).Backdrop, { blur: "none", "aria-hidden": true }), , ,];
   obj = { style: tmp.topBar, pointerEvents: "box-none", children: null };
   obj = { style: tmp.topBarEnd, children: null };
   obj1 = { accessibilityLabel: null, icon: null, onPress: null };
@@ -44,4 +44,4 @@ export default function SharePreparingModal(onCancel) {
   items1[3] = callback(onCancel(4474).Text, obj2);
   obj[1] = items1;
   return callback2(closure_4, obj);
-};
+}

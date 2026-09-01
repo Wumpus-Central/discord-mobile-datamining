@@ -8,30 +8,38 @@ import { REACTION_MILESTONE_COUNTS } from "InAppNotificationConstants.tsx";
 import ME from "../../../Constants.tsx";
 
 require = arg1;
-({ AnalyticEvents: c5, ChannelTypes: closure_6, InAppNotificationTypes: error, MessageEmbedTypes: closure_8, MessageFlags: c9 } = ME);
+({
+  AnalyticEvents: c5,
+  ChannelTypes: closure_6,
+  InAppNotificationTypes: error,
+  MessageEmbedTypes: closure_8,
+  MessageFlags: c9,
+} = ME);
 const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationUtils.tsx");
 
 export const isReactionMilestoneNotification = function isReactionMilestoneNotification(reactions, type) {
   if (null != type) {
     if (type !== constants2.GUILD_ANNOUNCEMENT) {
-      return REACTION_MILESTONE_COUNTS.has(apply.sumBy(reactions, (count_details) => {
-        count_details = count_details.count_details;
-        let num;
-        if (count_details != null) {
-          num = count_details.burst;
-        }
-        if (num == null) {
-          num = 0;
-        }
-        let num2;
-        if (count_details != null) {
-          num2 = count_details.normal;
-        }
-        if (num2 == null) {
-          num2 = 0;
-        }
-        return num + num2;
-      }));
+      return REACTION_MILESTONE_COUNTS.has(
+        apply.sumBy(reactions, (count_details) => {
+          count_details = count_details.count_details;
+          let num;
+          if (count_details != null) {
+            num = count_details.burst;
+          }
+          if (num == null) {
+            num = 0;
+          }
+          let num2;
+          if (count_details != null) {
+            num2 = count_details.normal;
+          }
+          if (num2 == null) {
+            num2 = 0;
+          }
+          return num + num2;
+        }),
+      );
     }
   }
   return false;
@@ -229,5 +237,12 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
 };
 export const trackDismissed = function trackDismissed(arg0) {
   ({ guildId, channelId, type, dismissReason, inAppNotificationId, messageId } = arg0);
-  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, { type, guild_id: guildId, channel_id: channelId, dismiss_reason: dismissReason, in_app_notification_id: inAppNotificationId, message_id: messageId });
+  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, {
+    type,
+    guild_id: guildId,
+    channel_id: channelId,
+    dismiss_reason: dismissReason,
+    in_app_notification_id: inAppNotificationId,
+    message_id: messageId,
+  });
 };

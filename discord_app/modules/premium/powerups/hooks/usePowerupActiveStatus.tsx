@@ -6,7 +6,12 @@ import { GuildFeatures } from "../../../../Constants.tsx";
 import { GAME_SERVER_POWERUP_SKU_ID as closure_9 } from "../../../game_server/GameServerConstants.tsx";
 
 const require = arg1;
-({ GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS: c4, PowerupActiveStatusType: c5, POWERUPS_INCLUDED_IN_LEVEL: closure_6, BOOSTING_TIER_TO_LEVEL_SKU_ID: error } = BoostedGuildTiers);
+({
+  GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS: c4,
+  PowerupActiveStatusType: c5,
+  POWERUPS_INCLUDED_IN_LEVEL: closure_6,
+  BOOSTING_TIER_TO_LEVEL_SKU_ID: error,
+} = BoostedGuildTiers);
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/usePowerupActiveStatus.tsx");
 
 export default function usePowerupActiveStatus(arg0, arg1) {
@@ -134,7 +139,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
     first = mapped[0];
   }
   return first;
-};
+}
 export const isPowerupActiveStatusActive = function isPowerupActiveStatusActive(type) {
   return type.type !== constants.INACTIVE;
 };

@@ -5,7 +5,8 @@ import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
 import ME from "../../../../Constants.tsx";
 
 let useMemo = noop.useMemo;
-({ MULTIPLE_PURCHASEABLE_PREMIUM_FEATURES_BOOST_INFO: closure_1, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: obj1 } = BoostedGuildTiers);
+({ MULTIPLE_PURCHASEABLE_PREMIUM_FEATURES_BOOST_INFO: closure_1, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: obj1 } =
+  BoostedGuildTiers);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: c3, BoostedGuildTiers: c4, GuildFeatures: c5 } = ME);
 const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useTotalPossibleBoostCount.tsx");
 
@@ -49,4 +50,4 @@ export default function useTotalPossibleBoostCount(arg0) {
       return num;
     }
   }, items);
-};
+}

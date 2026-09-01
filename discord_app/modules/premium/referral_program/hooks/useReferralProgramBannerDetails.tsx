@@ -4,7 +4,9 @@ import closure_3 from "../../../../stores/UserStore.tsx";
 import closure_4 from "../../ReferralTrialStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useReferralProgramBannerDetails.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/referral_program/hooks/useReferralProgramBannerDetails.tsx",
+);
 
 export const MAX_REFERRALS_SENT = 3;
 export const useReferralProgramBannerDetails = function useReferralProgramBannerDetails() {
@@ -22,7 +24,11 @@ export const useReferralProgramBannerDetails = function useReferralProgramBanner
       const user = callback(table[4]).getUser(arg0);
     });
   }, items2);
-  obj = { referralSentUsers: stateFromStoresArray1, hasSentAllReferrals: 3 === stateFromStoresArray.length, refreshAt: null };
+  obj = {
+    referralSentUsers: stateFromStoresArray1,
+    hasSentAllReferrals: 3 === stateFromStoresArray.length,
+    refreshAt: null,
+  };
   const obj2 = stateFromStoresArray(589);
   const items3 = [closure_4];
   obj[2] = stateFromStoresArray(589).useStateFromStores(items3, () => authStore.getRefreshAt());

@@ -4,16 +4,40 @@ import getSystemLocale from "../../intl/index.native.tsx";
 import getTimestampStringDefault from "../threads/getTimestampString.tsx";
 
 function getJoinedAtDateFormatter() {
-  return { seconds: getSystemLocale.t["FsBhl/"], minutes: getSystemLocale.t["4d1mgT"], hours: getSystemLocale.t["2wkczD"], days: getSystemLocale.t["ocdS+f"], months: getSystemLocale.t["az14+h"], years: getSystemLocale.t["5Gk1ns"] };
+  return {
+    seconds: getSystemLocale.t["FsBhl/"],
+    minutes: getSystemLocale.t["4d1mgT"],
+    hours: getSystemLocale.t["2wkczD"],
+    days: getSystemLocale.t["ocdS+f"],
+    months: getSystemLocale.t["az14+h"],
+    years: getSystemLocale.t["5Gk1ns"],
+  };
 }
 function getAccountAgeDateFormatter() {
-  return { hours: getSystemLocale.t.JZP2Rs, days: getSystemLocale.t["3moSHc"], months: getSystemLocale.t["0Ddwr1"], years: getSystemLocale.t.cR7lcs };
+  return {
+    hours: getSystemLocale.t.JZP2Rs,
+    days: getSystemLocale.t["3moSHc"],
+    months: getSystemLocale.t["0Ddwr1"],
+    years: getSystemLocale.t.cR7lcs,
+  };
 }
 const obj = { JOINED_AT: 0, [0]: "JOINED_AT", ACCOUNT_AGE: 1, [1]: "ACCOUNT_AGE" };
 const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/DateUtils.tsx");
 
-export const ACCOUNT_AGE_DATE_TOOLTIP_CONFIG = { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" };
-export const MEMBER_JOIN_DATE_TOOLTIP_CONFIG = { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" };
+export const ACCOUNT_AGE_DATE_TOOLTIP_CONFIG = {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+  hour: "numeric",
+  minute: "2-digit",
+};
+export const MEMBER_JOIN_DATE_TOOLTIP_CONFIG = {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+  hour: "numeric",
+  minute: "2-digit",
+};
 export const MembersTableDateFormats = obj;
 export const getMembersTableTimestampFormatter = function getMembersTableTimestampFormatter(arg0) {
   if (arg0 === obj.JOINED_AT) {

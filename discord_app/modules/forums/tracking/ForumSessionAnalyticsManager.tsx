@@ -2,8 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 import v1 from "../../../../_runtime/00514_v1.js";
 
-class ForumSessionAnalyticsManager {
-}
+class ForumSessionAnalyticsManager {}
 ForumSessionAnalyticsManager.prototype["getForumChannelSessionId"] = function getForumChannelSessionId(arg0) {
   const self = this;
   if (null == this.session) {

@@ -9,7 +9,9 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4, marginLeft: 8 } });
+let closure_7 = createCacheKey.createStyles({
+  container: { flexDirection: "row", alignItems: "center", gap: 4, marginLeft: 8 },
+});
 const result = require("set").fileFinishedImporting("modules/game_invite_channels/native/GameInviteVoiceCount.tsx");
 
 export default function GameInviteVoiceCount(channel) {
@@ -17,14 +19,18 @@ export default function GameInviteVoiceCount(channel) {
   let obj = channel(589);
   const items = [closure_4];
   const items1 = [channel];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getVoiceStatesForChannel(channel).length, items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => closure_1_4.getVoiceStatesForChannel(channel).length,
+    items1,
+  );
   let tmp5 = null;
   if (0 !== stateFromStores) {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj = { size: "xs", color: null };
     obj[1] = ThemesDefault.colors.ICON_FEEDBACK_POSITIVE;
-    const items2 = [callback(tmp2(5050).VoiceNormalIcon, obj), ];
+    const items2 = [callback(tmp2(5050).VoiceNormalIcon, obj)];
     obj1 = { variant: "text-sm/medium", color: "text-feedback-positive", children: null };
     obj1[2] = stateFromStores;
     items2[1] = callback(tmp2(4474).Text, obj1);
@@ -32,4 +38,4 @@ export default function GameInviteVoiceCount(channel) {
     tmp5 = callback2(View, obj);
   }
   return tmp5;
-};
+}

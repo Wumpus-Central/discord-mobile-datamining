@@ -99,7 +99,13 @@ function DropdownOptionRow(option) {
   return callback(onSelect(selected[13]), { label, selected, leading, trailing, onPress });
 }
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ optionTextEmoji: { fontSize: 24, lineHeight: 24, paddingTop: 5 }, optionImageEmoji: { height: 24, width: 24 }, newBadge: { fontWeight: "bold" }, labelRow: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, closeButtonWrapper: { marginTop: 16, marginHorizontal: 16 } });
+let closure_10 = createCacheKey.createStyles({
+  optionTextEmoji: { fontSize: 24, lineHeight: 24, paddingTop: 5 },
+  optionImageEmoji: { height: 24, width: 24 },
+  newBadge: { fontWeight: "bold" },
+  labelRow: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
+  closeButtonWrapper: { marginTop: 16, marginHorizontal: 16 },
+});
 const result = require("set").fileFinishedImporting("modules/guild_onboarding/native/DropdownOptionsActionSheet.tsx");
 
 export default function DropdownOptionsActionSheet(arg0) {
@@ -110,7 +116,9 @@ export default function DropdownOptionsActionSheet(arg0) {
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getOnboardingPrompt(closure_1));
   obj1 = defaultAreStatesEqual;
   const items1 = [closure_6];
-  closure_4 = obj1.useStateFromStoresArray(items1, () => closure_1_6.getOnboardingResponsesForPrompt(closure_0, closure_1));
+  closure_4 = obj1.useStateFromStoresArray(items1, () =>
+    closure_1_6.getOnboardingResponsesForPrompt(closure_0, closure_1),
+  );
   if (null == stateFromStores) {
     return null;
   } else {
@@ -127,8 +135,14 @@ export default function DropdownOptionsActionSheet(arg0) {
     const intl2 = tmp3(1236).intl;
     obj3[1] = intl2.string(tmp3(1236).t.E2ICbC);
     const options = stateFromStores.options;
-    obj3[2] = options.map((id) => closure_1_8(closure_1_11, { option: id, responses: closure_4, onSelect: closure_3, canBeNew: Boolean(closure_2) }, id.id));
-    const items2 = [callback(tmp3(1297).CardSection, obj3), ];
+    obj3[2] = options.map((id) =>
+      closure_1_8(
+        closure_1_11,
+        { option: id, responses: closure_4, onSelect: closure_3, canBeNew: Boolean(closure_2) },
+        id.id,
+      ),
+    );
+    const items2 = [callback(tmp3(1297).CardSection, obj3)];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.closeButtonWrapper;
     const obj5 = { onPress: null, text: null, grow: true };
@@ -142,4 +156,4 @@ export default function DropdownOptionsActionSheet(arg0) {
     return callback(tmp3(5622).BottomSheet, obj);
   }
   tmp = callback3();
-};
+}

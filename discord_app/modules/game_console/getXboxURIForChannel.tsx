@@ -20,7 +20,15 @@ export default function getXboxURIForChannel(channelId) {
   if (guildId == null) {
     tmp4 = closure_9;
   }
-  const obj = { guildId: tmp4, channelId: channelId.id, channelName: computeChannelName.computeChannelName(channelId, closure_5, closure_4), guildName: null, muted: null, deafened: null, nonce: null };
+  const obj = {
+    guildId: tmp4,
+    channelId: channelId.id,
+    channelName: computeChannelName.computeChannelName(channelId, closure_5, closure_4),
+    guildName: null,
+    muted: null,
+    deafened: null,
+    nonce: null,
+  };
   let name;
   if (guild != null) {
     name = guild.name;
@@ -44,4 +52,4 @@ export default function getXboxURIForChannel(channelId) {
     combined = "" + closure_7 + "?" + str.toString();
   }
   return combined;
-};
+}

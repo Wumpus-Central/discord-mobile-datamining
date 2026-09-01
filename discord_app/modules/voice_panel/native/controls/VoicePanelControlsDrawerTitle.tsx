@@ -7,13 +7,28 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { titleWrapper: { position: "absolute", top: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center", padding: 16, height: require("VoicePanelControlsModes").CONTROLS_DRAWER_HEADER_SIZE }, titlePill: null, titlePillBG: null };
+let obj = {
+  titleWrapper: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 16,
+    height: require("VoicePanelControlsModes").CONTROLS_DRAWER_HEADER_SIZE,
+  },
+  titlePill: null,
+  titlePillBG: null,
+};
 obj = { borderRadius: ThemesDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 };
 obj[1] = obj;
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[2] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(obj);
-let closure_7 = { code: "function VoicePanelControlsDrawerTitleTsx1(){const{shown,_shown,disablePill,backgroundColor}=this.__closure;const showBGColor=shown!=null?shown.get():_shown.get();return{backgroundColor:showBGColor&&!disablePill?backgroundColor:'transparent'};}" };
+let closure_7 = {
+  code: "function VoicePanelControlsDrawerTitleTsx1(){const{shown,_shown,disablePill,backgroundColor}=this.__closure;const showBGColor=shown!=null?shown.get():_shown.get();return{backgroundColor:showBGColor&&!disablePill?backgroundColor:'transparent'};}",
+};
 const memoResult = importAllResult.memo(function VoicePanelControlsDrawerTitle(children) {
   let shown = children.shown;
   let flag = children.disablePill;
@@ -54,15 +69,22 @@ const memoResult = importAllResult.memo(function VoicePanelControlsDrawerTitle(c
     shown = sharedValue;
   }
   obj = { shown, style: backgroundColor.absoluteFillObject, blurStyle };
-  const items1 = [closure_4(flag(sharedValue[8]), obj), ];
+  const items1 = [closure_4(flag(sharedValue[8]), obj)];
   obj1 = { style: items2, children: null };
   items2 = [tmp.titlePill, animatedStyle];
   const tmp10 = flag(sharedValue[8]);
-  obj1[1] = closure_4(tmp2(sharedValue[10]).Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: children.title });
+  obj1[1] = closure_4(tmp2(sharedValue[10]).Text, {
+    variant: "redesign/heading-18/bold",
+    color: "mobile-text-heading-primary",
+    accessibilityRole: "header",
+    children: children.title,
+  });
   items1[1] = closure_4(tmp7(sharedValue[9]), obj1);
   obj[1] = items1;
   return tmp6(tmp8, obj);
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsDrawerTitle.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/controls/VoicePanelControlsDrawerTitle.tsx",
+);
 
 export default memoResult;

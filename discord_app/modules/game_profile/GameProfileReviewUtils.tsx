@@ -69,7 +69,8 @@ export const getSteamReviewScoreDescriptionIntl = function getSteamReviewScoreDe
   }
 };
 export const canShowLocalizedSteamReview = function canShowLocalizedSteamReview(steam) {
-  let tmp = null != steam && null != steam.localizedRating && null != steam.localizedRatingCount && null != steam.ratingCount;
+  let tmp =
+    null != steam && null != steam.localizedRating && null != steam.localizedRatingCount && null != steam.ratingCount;
   if (tmp) {
     tmp = steam.localizedRatingCount >= 200;
   }

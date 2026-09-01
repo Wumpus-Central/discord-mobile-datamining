@@ -41,7 +41,7 @@ export default function useIsNewMember(arg0) {
     }
     return flag;
   });
-};
+}
 export const getIsNewMember = function getIsNewMember(closure_0) {
   let flag = true;
   if (!fullServerPreview.isFullServerPreview(closure_0)) {

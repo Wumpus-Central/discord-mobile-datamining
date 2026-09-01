@@ -45,14 +45,14 @@ const memoResult = importAllResult.memo(function MediaModalLoader(onLoad) {
   closure_6 = importAllResult.useRef(null);
   const callback = importAllResult.useCallback(() => {
     const timerId = setTimeout(() => {
-      callback((arg0) => arg0 === None.None ? None.Loading : None.None);
+      callback((arg0) => (arg0 === None.None ? None.Loading : None.None));
     }, 1000);
     closure_6.current = timerId;
     return timerId;
   }, []);
   const callback1 = importAllResult.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
-    _undefined(100 * nativeEvent.loaded / nativeEvent.total);
+    _undefined((100 * nativeEvent.loaded) / nativeEvent.total);
   }, []);
   callback2 = importAllResult.useCallback(() => callback(closure_1_10.Loaded), []);
   const items = [first, onLoadStart, onError, onLoad];
@@ -96,7 +96,7 @@ const memoResult = importAllResult.memo(function MediaModalLoader(onLoad) {
     const description = source.description;
     obj1.accessibilityLabel = description;
     obj1.loop = true;
-    const items2 = [callback(onLoad.Component, obj1), , ];
+    const items2 = [callback(onLoad.Component, obj1), ,];
     let tmp28Result = null;
     if (first === closure_10.Loading) {
       const obj2 = { style: null, children: null };
@@ -111,7 +111,7 @@ const memoResult = importAllResult.memo(function MediaModalLoader(onLoad) {
         obj[3] = items4;
         tmp28Result = tmp28(onLoadStart(onError[6]).Text, obj);
       }
-      const items5 = [tmp28Result, ];
+      const items5 = [tmp28Result];
       const obj3 = { color: "white", style: null, size: "large" };
       obj3[1] = tmp2.loaderIndicator;
       items5[1] = tmp29(closure_6, obj3);

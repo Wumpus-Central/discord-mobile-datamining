@@ -9,12 +9,31 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { upsell: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, title: { lineHeight: 16, flex: 1 }, emojis: { height: 28 }, emojiWrapper: null, emoji: null };
-createCacheKey = { position: "absolute", width: 28, height: 28, padding: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderRadius: 14, borderColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
+createCacheKey = {
+  upsell: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
+  title: { lineHeight: 16, flex: 1 },
+  emojis: { height: 28 },
+  emojiWrapper: null,
+  emoji: null,
+};
+createCacheKey = {
+  position: "absolute",
+  width: 28,
+  height: 28,
+  padding: 2,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderWidth: 2,
+  borderRadius: 14,
+  borderColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { width: 16, height: 16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx",
+);
 
 export default function ChannelAutocompleteEmojiUpsell(results) {
   results = results.results;
@@ -25,7 +44,7 @@ export default function ChannelAutocompleteEmojiUpsell(results) {
   let obj = { style: tmp.upsell, children: null };
   const mapped = substr.map((id) => {
     let obj = { style: items, children: null };
-    items = [closure_0.emojiWrapper, ];
+    items = [closure_0.emojiWrapper];
     obj = { left: 24 * arg1 };
     items[1] = obj;
     obj = { style: closure_0.emoji, source: null };
@@ -47,9 +66,9 @@ export default function ChannelAutocompleteEmojiUpsell(results) {
   const intl = require("../../../intl/index.native.tsx").intl;
   obj = { count: results.length };
   obj[3] = intl.format(require("../../../intl/index.native.tsx").t.uEky42, obj);
-  let items = [callback(require("../../../design/components/Text/native/Text.tsx").Text, obj), ];
+  let items = [callback(require("../../../design/components/Text/native/Text.tsx").Text, obj)];
   const items1 = [tmp.emojis, { width: result + 16 }];
   items[1] = callback(View, { style: items1, children: mapped });
   obj[1] = items;
   return callback2(View, obj);
-};
+}

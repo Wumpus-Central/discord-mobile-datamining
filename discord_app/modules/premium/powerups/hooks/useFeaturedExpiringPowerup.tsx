@@ -9,12 +9,18 @@ const result = require("set").fileFinishedImporting("modules/premium/powerups/ho
 export default function useFeaturedExpiringPowerup(arg0) {
   const _require = arg0;
   let items = [closure_4];
-  stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => closure_1_4.getStateForGuild(closure_0));
+  stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () =>
+    closure_1_4.getStateForGuild(closure_0),
+  );
   let obj = _require(stateFromStores[3]);
   const items1 = [expiringPowerupCoachmarkEnabled];
-  const stateFromStores1 = _require(stateFromStores[3]).useStateFromStores(items1, () => expiringPowerupCoachmarkEnabled.getStateForGuild(closure_0));
+  const stateFromStores1 = _require(stateFromStores[3]).useStateFromStores(items1, () =>
+    expiringPowerupCoachmarkEnabled.getStateForGuild(closure_0),
+  );
   const obj2 = _require(stateFromStores[3]);
-  expiringPowerupCoachmarkEnabled = _require(stateFromStores[4]).useExpiringPowerupCoachmarkEnabled("useFeaturedExpiringPowerup");
+  expiringPowerupCoachmarkEnabled = _require(stateFromStores[4]).useExpiringPowerupCoachmarkEnabled(
+    "useFeaturedExpiringPowerup",
+  );
   const items2 = [stateFromStores, stateFromStores1, expiringPowerupCoachmarkEnabled];
   return stateFromStores1.useMemo(() => {
     if (expiringPowerupCoachmarkEnabled) {
@@ -99,4 +105,4 @@ export default function useFeaturedExpiringPowerup(arg0) {
       }
     }
   }, items2);
-};
+}

@@ -42,7 +42,13 @@ function StepNode(isCurrent) {
     obj[1] = items;
     return obj;
   };
-  obj = { interpolate: tmp2(tmp3[6]).interpolate, state: sharedValue, withTiming: tmp2(tmp3[7]).withTiming, duration: num2, Easing: tmp2(tmp3[6]).Easing };
+  obj = {
+    interpolate: tmp2(tmp3[6]).interpolate,
+    state: sharedValue,
+    withTiming: tmp2(tmp3[7]).withTiming,
+    duration: num2,
+    Easing: tmp2(tmp3[6]).Easing,
+  };
   fn.__closure = obj;
   fn.__workletHash = 4051275727555;
   fn.__initData = closure_8;
@@ -72,14 +78,27 @@ function StepNode(isCurrent) {
   }
   filledNode = tmp.filledNode;
 }
-createCacheKey = { container: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, node: { width: 20, height: 20, borderRadius: 10, marginHorizontal: -2 }, filledNode: null, emptyNode: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, alignItems: "center", justifyContent: "center" };
+createCacheKey = {
+  container: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
+  node: { width: 20, height: 20, borderRadius: 10, marginHorizontal: -2 },
+  filledNode: null,
+  emptyNode: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let closure_8 = { code: "function StepsIndicatorTsx1(){const{interpolate,state,withTiming,duration,Easing}=this.__closure;const rawScale=interpolate(state.get(),[0,1],[8/20,1]);const scale=withTiming(rawScale,{duration:duration,easing:Easing.out(Easing.ease)});const rawMargin=interpolate(state.get(),[0,1],[-2,6]);const marginHorizontal=withTiming(rawMargin,{duration:duration,easing:Easing.out(Easing.ease)});return{marginHorizontal:marginHorizontal,transform:[{scale:scale}]};}" };
+let closure_8 = {
+  code: "function StepsIndicatorTsx1(){const{interpolate,state,withTiming,duration,Easing}=this.__closure;const rawScale=interpolate(state.get(),[0,1],[8/20,1]);const scale=withTiming(rawScale,{duration:duration,easing:Easing.out(Easing.ease)});const rawMargin=interpolate(state.get(),[0,1],[-2,6]);const marginHorizontal=withTiming(rawMargin,{duration:duration,easing:Easing.out(Easing.ease)});return{marginHorizontal:marginHorizontal,transform:[{scale:scale}]};}",
+};
 let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/StepsIndicator.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/StepsIndicator.tsx",
+);
 
 export default function StepsIndicator(current) {
   current = current.current;
@@ -113,30 +132,34 @@ export default function StepsIndicator(current) {
         } while (sum < total);
       }
       return items;
-    }, items1)
+    }, items1),
   };
   items2 = [callback().container, current.style];
-  return <View style={items2}>{React.useMemo(() => {
-    let sum;
-    const items = [];
-    let num = 0;
-    if (0 < total) {
-      do {
-        sum = num + 1;
-        let tmp2 = closure_1_6;
-        let tmp3 = closure_1_9;
-        let obj = { useReducedMotion: null, isCurrent: null, isDone: null, label: null };
-        let tmp4 = stateFromStores;
-        obj[0] = stateFromStores;
-        let tmp5 = current;
-        obj[1] = sum === current;
-        obj[2] = sum < current;
-        obj[3] = sum;
-        let arr = items.push(closure_1_6(closure_1_9, obj, num));
-        let tmp7 = total;
-        num = sum;
-      } while (sum < total);
-    }
-    return items;
-  }, items1)}</View>;
-};
+  return (
+    <View style={items2}>
+      {React.useMemo(() => {
+        let sum;
+        const items = [];
+        let num = 0;
+        if (0 < total) {
+          do {
+            sum = num + 1;
+            let tmp2 = closure_1_6;
+            let tmp3 = closure_1_9;
+            let obj = { useReducedMotion: null, isCurrent: null, isDone: null, label: null };
+            let tmp4 = stateFromStores;
+            obj[0] = stateFromStores;
+            let tmp5 = current;
+            obj[1] = sum === current;
+            obj[2] = sum < current;
+            obj[3] = sum;
+            let arr = items.push(closure_1_6(closure_1_9, obj, num));
+            let tmp7 = total;
+            num = sum;
+          } while (sum < total);
+        }
+        return items;
+      }, items1)}
+    </View>
+  );
+}

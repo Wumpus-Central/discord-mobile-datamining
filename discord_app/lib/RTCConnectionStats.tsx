@@ -63,7 +63,7 @@ prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccess
     state_ice_checking_ms: null,
     state_no_route_ms: null,
     state_rtc_connecting_ms: null,
-    state_rtc_disconnected_ms: null
+    state_rtc_disconnected_ms: null,
   };
   RTC_DISCONNECTED = RTCConnectionStates.AWAITING_ENDPOINT;
   RTC_DISCONNECTED = RTCConnectionStates.AUTHENTICATING;
@@ -136,7 +136,10 @@ prototype["getStateDurations"] = function getStateDurations(nowResult) {
   if (0 === this.history.length) {
     return [];
   } else {
-    let arr = zipWithNextDefault(self.history, (state, startTime) => ({ state: state.state, durationMs: startTime.startTime - state.startTime }));
+    let arr = zipWithNextDefault(self.history, (state, startTime) => ({
+      state: state.state,
+      durationMs: startTime.startTime - state.startTime,
+    }));
     let obj = applyDefault;
     const lastResult = obj.last(self.history);
     obj = { state: null, durationMs: null };

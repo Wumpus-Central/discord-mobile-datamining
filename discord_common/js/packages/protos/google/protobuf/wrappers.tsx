@@ -1,7 +1,17 @@
 // discord_common/js/packages/protos/google/protobuf/wrappers.tsx
 import _mod1307 from "../../../../../../_runtime/metro/01307__.js";
 import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5, MessageType as MessageType6, MessageType as MessageType7, MessageType as MessageType8, MessageType as MessageType9 } from "../../../../../../_runtime/metro/01307__.js";
+import {
+  MessageType,
+  MessageType as MessageType2,
+  MessageType as MessageType3,
+  MessageType as MessageType4,
+  MessageType as MessageType5,
+  MessageType as MessageType6,
+  MessageType as MessageType7,
+  MessageType as MessageType8,
+  MessageType as MessageType9,
+} from "../../../../../../_runtime/metro/01307__.js";
 
 require = arg1;
 class DoubleValue$Type extends MessageType {
@@ -105,7 +115,13 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(value, tag, writ
   return tag;
 };
 let items = [{ no: 1, name: "value", kind: "scalar", T: 1 }];
-defineProperty = new defineProperty("google.protobuf.DoubleValue", items, tmp2, "internalJsonWrite", "internalJsonRead");
+defineProperty = new defineProperty(
+  "google.protobuf.DoubleValue",
+  items,
+  tmp2,
+  "internalJsonWrite",
+  "internalJsonRead",
+);
 // ThrowIfThisInitialized (0x7c)
 class FloatValue$Type extends MessageType2 {
   constructor() {
@@ -208,7 +224,13 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(value, tag, wri
   return tag;
 };
 const items1 = [{ no: 1, name: "value", kind: "scalar", T: 2 }];
-const defineProperty1 = new defineProperty("google.protobuf.FloatValue", items1, tmp2, "internalJsonWrite", "internalJsonRead");
+const defineProperty1 = new defineProperty(
+  "google.protobuf.FloatValue",
+  items1,
+  tmp2,
+  "internalJsonWrite",
+  "internalJsonRead",
+);
 // ThrowIfThisInitialized (0x7c)
 class Int64Value$Type extends MessageType3 {
   constructor() {
@@ -312,7 +334,13 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(value, tag, wri
   return tag;
 };
 const items2 = [{ no: 1, name: "value", kind: "scalar", T: 3 }];
-const defineProperty2 = new defineProperty("google.protobuf.Int64Value", items2, tmp2, "internalJsonWrite", "internalJsonRead");
+const defineProperty2 = new defineProperty(
+  "google.protobuf.Int64Value",
+  items2,
+  tmp2,
+  "internalJsonWrite",
+  "internalJsonRead",
+);
 // ThrowIfThisInitialized (0x7c)
 class UInt64Value$Type extends MessageType4 {
   constructor() {
@@ -416,7 +444,13 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(value, tag, wri
   return tag;
 };
 const items3 = [{ no: 1, name: "value", kind: "scalar", T: 4 }];
-const defineProperty3 = new defineProperty("google.protobuf.UInt64Value", items3, tmp2, "internalJsonWrite", "internalJsonRead");
+const defineProperty3 = new defineProperty(
+  "google.protobuf.UInt64Value",
+  items3,
+  tmp2,
+  "internalJsonWrite",
+  "internalJsonRead",
+);
 // ThrowIfThisInitialized (0x7c)
 class Int32Value$Type extends MessageType5 {
   constructor() {
@@ -519,7 +553,13 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(value, tag, wri
   return tag;
 };
 const items4 = [{ no: 1, name: "value", kind: "scalar", T: 5 }];
-const defineProperty4 = new defineProperty("google.protobuf.Int32Value", items4, tmp2, "internalJsonWrite", "internalJsonRead");
+const defineProperty4 = new defineProperty(
+  "google.protobuf.Int32Value",
+  items4,
+  tmp2,
+  "internalJsonWrite",
+  "internalJsonRead",
+);
 // ThrowIfThisInitialized (0x7c)
 class UInt32Value$Type extends MessageType6 {
   constructor() {
@@ -622,7 +662,13 @@ prototype6["internalBinaryWrite"] = function internalBinaryWrite(value, tag, wri
   return tag;
 };
 const items5 = [{ no: 1, name: "value", kind: "scalar", T: 13 }];
-const defineProperty5 = new defineProperty("google.protobuf.UInt32Value", items5, tmp2, "internalJsonWrite", "internalJsonRead");
+const defineProperty5 = new defineProperty(
+  "google.protobuf.UInt32Value",
+  items5,
+  tmp2,
+  "internalJsonWrite",
+  "internalJsonRead",
+);
 // ThrowIfThisInitialized (0x7c)
 class BoolValue$Type extends MessageType7 {
   constructor() {
@@ -724,7 +770,13 @@ prototype7["internalBinaryWrite"] = function internalBinaryWrite(value, tag, wri
   return tag;
 };
 const items6 = [{ no: 1, name: "value", kind: "scalar", T: 8 }];
-const defineProperty6 = new defineProperty("google.protobuf.BoolValue", items6, tmp2, "internalJsonWrite", "internalJsonRead");
+const defineProperty6 = new defineProperty(
+  "google.protobuf.BoolValue",
+  items6,
+  tmp2,
+  "internalJsonWrite",
+  "internalJsonRead",
+);
 // ThrowIfThisInitialized (0x7c)
 class StringValue$Type extends MessageType8 {
   constructor() {
@@ -826,7 +878,32 @@ prototype8["internalBinaryWrite"] = function internalBinaryWrite(value, tag, wri
   return tag;
 };
 const items7 = [{ no: 1, name: "value", kind: "scalar", T: 9 }];
-tmp = new tmp("google.protobuf.StringValue", items7, tmp2, "internalJsonWrite", "internalJsonRead", "create", "internalBinaryRead", StringValue$Type, "internalBinaryWrite", tmp, undefined, arg1, dependencyMap, new.target, defineProperty, new.target, defineProperty1, new.target, defineProperty2, new.target, defineProperty3, new.target, defineProperty4, new.target);
+tmp = new tmp(
+  "google.protobuf.StringValue",
+  items7,
+  tmp2,
+  "internalJsonWrite",
+  "internalJsonRead",
+  "create",
+  "internalBinaryRead",
+  StringValue$Type,
+  "internalBinaryWrite",
+  tmp,
+  undefined,
+  arg1,
+  dependencyMap,
+  new.target,
+  defineProperty,
+  new.target,
+  defineProperty1,
+  new.target,
+  defineProperty2,
+  new.target,
+  defineProperty3,
+  new.target,
+  defineProperty4,
+  new.target,
+);
 // ThrowIfThisInitialized (0x7c)
 class BytesValue$Type extends MessageType9 {
   constructor() {
@@ -932,7 +1009,32 @@ prototype9["internalBinaryWrite"] = function internalBinaryWrite(value, tag, wri
 };
 const items8 = [{ no: 1, name: "value", kind: "scalar", T: 12 }];
 // ThrowIfThisInitialized (0x7c)
-let tmp12 = new "internalBinaryWrite"("google.protobuf.BytesValue", items8, tmp2, "internalJsonWrite", "internalJsonRead", "create", "internalBinaryRead", BytesValue$Type, "internalBinaryWrite", items8, undefined, arg1, dependencyMap, new.target, defineProperty, new.target, defineProperty1, new.target, defineProperty2, new.target, defineProperty3, new.target, defineProperty4, new.target);
+let tmp12 = new "internalBinaryWrite"(
+  "google.protobuf.BytesValue",
+  items8,
+  tmp2,
+  "internalJsonWrite",
+  "internalJsonRead",
+  "create",
+  "internalBinaryRead",
+  BytesValue$Type,
+  "internalBinaryWrite",
+  items8,
+  undefined,
+  arg1,
+  dependencyMap,
+  new.target,
+  defineProperty,
+  new.target,
+  defineProperty1,
+  new.target,
+  defineProperty2,
+  new.target,
+  defineProperty3,
+  new.target,
+  defineProperty4,
+  new.target,
+);
 let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/google/protobuf/wrappers.tsx");
 
 export const DoubleValue = defineProperty;

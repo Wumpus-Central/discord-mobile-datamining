@@ -21,7 +21,12 @@ export const showScheduleMessageSuccessToast = function showScheduleMessageSucce
 };
 export const showScheduleMessageFailureToast = function showScheduleMessageFailureToast(error) {
   let obj = dispatcherDefault;
-  obj = { key: "SCHEDULED_MESSAGE_CREATE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+  obj = {
+    key: "SCHEDULED_MESSAGE_CREATE_FAILURE",
+    content: null,
+    IconComponent: null,
+    iconColor: "icon-feedback-critical",
+  };
   const intl = getSystemLocale.intl;
   obj = { error };
   obj[1] = intl.formatToPlainString(getSystemLocale.t.PsJmUe, obj);
@@ -35,7 +40,9 @@ export const handleScheduleMessageError = function handleScheduleMessageError(cl
     code = body.code;
   }
   if (code === AbortCodes.TOO_MANY_SCHEDULED_MESSAGES) {
-    const scheduledMessagesLimit = ScheduledMessagesConfig.getScheduledMessagesLimit("ScheduledMessagesCreateRoadblock");
+    const scheduledMessagesLimit = ScheduledMessagesConfig.getScheduledMessagesLimit(
+      "ScheduledMessagesCreateRoadblock",
+    );
     if (scheduledMessagesLimit.isUpgradable) {
       let tmp11Result = tmp11(7593);
       const items = [tmp11(5973).SCHEDULED_MESSAGES_ROADBLOCK];
@@ -54,7 +61,12 @@ export const handleScheduleMessageError = function handleScheduleMessageError(cl
       const intl5 = tmp7(1236).intl;
       obj[3] = intl5.string(tmp7(1236).t.lv6bDa);
       obj[4] = function onCancel() {
-        return callback2(paths[9]).pushLazy(callback(paths[11])(paths[10], paths.paths), {}, "scheduled-messages-modal", { presentation: "modal" });
+        return callback2(paths[9]).pushLazy(
+          callback(paths[11])(paths[10], paths.paths),
+          {},
+          "scheduled-messages-modal",
+          { presentation: "modal" },
+        );
       };
       tmp11Result.show(obj);
     }
@@ -69,7 +81,12 @@ export const handleScheduleMessageError = function handleScheduleMessageError(cl
       message = closure_26.message;
     }
     obj = dispatcherDefault;
-    obj1 = { key: "SCHEDULED_MESSAGE_CREATE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+    obj1 = {
+      key: "SCHEDULED_MESSAGE_CREATE_FAILURE",
+      content: null,
+      IconComponent: null,
+      iconColor: "icon-feedback-critical",
+    };
     const intl = getSystemLocale.intl;
     const obj2 = { error: null };
     obj2[0] = message;
@@ -88,7 +105,12 @@ export const showScheduledMessageEditSuccessToast = function showScheduledMessag
 };
 export const showScheduledMessageEditFailureToast = function showScheduledMessageEditFailureToast(message) {
   let obj = dispatcherDefault;
-  obj = { key: "SCHEDULED_MESSAGE_UPDATE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+  obj = {
+    key: "SCHEDULED_MESSAGE_UPDATE_FAILURE",
+    content: null,
+    IconComponent: null,
+    iconColor: "icon-feedback-critical",
+  };
   const intl = getSystemLocale.intl;
   obj = { error: message };
   obj[1] = intl.formatToPlainString(getSystemLocale.t.slM6In, obj);
@@ -105,7 +127,12 @@ export const showScheduleMessageDeleteSuccessToast = function showScheduleMessag
 };
 export const showScheduleMessageDeleteFailureToast = function showScheduleMessageDeleteFailureToast(message) {
   let obj = dispatcherDefault;
-  obj = { key: "SCHEDULED_MESSAGE_DELETE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+  obj = {
+    key: "SCHEDULED_MESSAGE_DELETE_FAILURE",
+    content: null,
+    IconComponent: null,
+    iconColor: "icon-feedback-critical",
+  };
   const intl = getSystemLocale.intl;
   obj = { error: message };
   obj[1] = intl.formatToPlainString(getSystemLocale.t.sUvyW3, obj);
@@ -122,7 +149,12 @@ export const showScheduleMessageSentNowSuccessToast = function showScheduleMessa
 };
 export const showScheduleMessageSentNowFailureToast = function showScheduleMessageSentNowFailureToast(message) {
   let obj = dispatcherDefault;
-  obj = { key: "SCHEDULED_MESSAGE_SEND_NOW_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+  obj = {
+    key: "SCHEDULED_MESSAGE_SEND_NOW_FAILURE",
+    content: null,
+    IconComponent: null,
+    iconColor: "icon-feedback-critical",
+  };
   const intl = getSystemLocale.intl;
   obj = { error: message };
   obj[1] = intl.formatToPlainString(getSystemLocale.t["uy++C+"], obj);

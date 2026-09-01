@@ -8,7 +8,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 createCacheKey = { image: null };
-createCacheKey = { height: 80, width: 80, marginTop: ThemesDefault.space.PX_8, marginBottom: -ThemesDefault.space.PX_16 };
+createCacheKey = {
+  height: 80,
+  width: 80,
+  marginTop: ThemesDefault.space.PX_8,
+  marginBottom: -ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/collectibles/native/MobileShopButtonCoachmark.tsx");
@@ -43,12 +48,15 @@ export default function MobileShopButtonCoachmark(marketing) {
   const effect = visible.useEffect(() => {
     closure_9.current = onDismiss;
   });
-  const effect1 = visible.useEffect(() => () => {
-    if (!ref.current) {
-      ref2.current(closure_1_4.AUTO_DISMISS);
-    }
-  }, []);
-  const items2 = [, , , , , , , ];
+  const effect1 = visible.useEffect(
+    () => () => {
+      if (!ref.current) {
+        ref2.current(closure_1_4.AUTO_DISMISS);
+      }
+    },
+    [],
+  );
+  const items2 = [, , , , , , ,];
   ({ title: arr3[0], body: arr3[1], buttonLabel: arr3[2] } = marketing);
   items2[3] = visible;
   items2[4] = assetLight;
@@ -69,7 +77,7 @@ export default function MobileShopButtonCoachmark(marketing) {
       buttonLabel: null,
       buttonVariant: "secondary",
       onButtonPress: null,
-      onDismiss: null
+      onDismiss: null,
     };
     let buttonLabel = marketing.buttonLabel;
     if (buttonLabel == null) {
@@ -83,4 +91,4 @@ export default function MobileShopButtonCoachmark(marketing) {
   }, items2);
   const coachmark = marketing(navigateToShop[7]).useCoachmark(marketing.shopButtonRef, memo);
   return null;
-};
+}

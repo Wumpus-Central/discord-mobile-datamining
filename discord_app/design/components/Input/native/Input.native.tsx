@@ -12,7 +12,12 @@ require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { inputRow: null, labelWrapper: null, label: null, description: null, error: null };
-createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_4, marginBottom: ThemesDefault.space.PX_4 };
+createCacheKey = {
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_4,
+  marginBottom: ThemesDefault.space.PX_4,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
 let obj1 = { marginBottom: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
@@ -38,7 +43,7 @@ export const Input = function Input(arg0) {
   }
   let obj = { style: containerStyle, children: null };
   if (null == label) {
-    const items = [null, , , ];
+    const items = [null, , ,];
     obj = { style: null, children: null };
     obj[0] = tmp.inputRow;
     obj[1] = children;
@@ -71,11 +76,18 @@ export const Input = function Input(arg0) {
     obj2[1] = items1;
     let tmp7Result = tmp7(tmp8, obj2);
   } else {
-    const obj4 = { variant: "text-sm/semibold", color: "text-subtle", style: null, nativeID: null, accessibilityLabel: null, children: null };
+    const obj4 = {
+      variant: "text-sm/semibold",
+      color: "text-subtle",
+      style: null,
+      nativeID: null,
+      accessibilityLabel: null,
+      children: null,
+    };
     obj4[2] = tmp.label;
     obj4[3] = labelId;
     obj4[4] = combined;
-    const items2 = [label, ];
+    const items2 = [label];
     tmp7Result = null;
     if (required) {
       const obj5 = { variant: "text-sm/bold", color: "text-feedback-critical", "aria-hidden": true, children: null };

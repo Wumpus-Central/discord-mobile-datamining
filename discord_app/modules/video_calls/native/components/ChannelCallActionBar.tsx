@@ -78,7 +78,7 @@ class VideoButton {
       }
     }, []);
     closure_6 = callback;
-    items4 = [, , , , ];
+    items4 = [, , , ,];
     items4[0] = channel;
     items4[1] = stateFromStores2;
     items4[2] = tmp3;
@@ -111,7 +111,15 @@ class VideoButton {
       }
       tmp13 = reachedLimit;
     }
-    obj = { appearsDisabled: tmp13, isActive: stateFromStores1, onPress: callback1, accessibilityLabel: null, source: null, isSmallSize: null, lottieComponent: null };
+    obj = {
+      appearsDisabled: tmp13,
+      isActive: stateFromStores1,
+      onPress: callback1,
+      accessibilityLabel: null,
+      source: null,
+      isSmallSize: null,
+      lottieComponent: null,
+    };
     intl = require("getSystemLocale").intl;
     obj[3] = intl.string(require("getSystemLocale").t.HK4JIu);
     obj[4] = require("registerAsset");
@@ -127,11 +135,16 @@ class ScreenshareButton {
     tmp2 = require("stopScreenshare")(channel);
     ({ onPress, isFeatureEnabled, isActive, imgSource } = tmp2);
     if (!isFeatureEnabled) {
-      onPress = () => {
-
-      };
+      onPress = () => {};
     }
-    obj = { appearsDisabled: !isFeatureEnabled, source: imgSource, isActive, accessibilityLabel: null, onPress: null, isSmallSize: null };
+    obj = {
+      appearsDisabled: !isFeatureEnabled,
+      source: imgSource,
+      isActive,
+      accessibilityLabel: null,
+      onPress: null,
+      isSmallSize: null,
+    };
     intl = require("getSystemLocale").intl;
     obj[3] = intl.string(require("getSystemLocale").t.XF1nZz);
     obj[4] = onPress;
@@ -153,10 +166,10 @@ class AudioRouteButton {
       isActive: isAudioRouteEnabled,
       source: routeSource,
       onPress() {
-            _undefined(channel.id, closure_2);
-          },
+        _undefined(channel.id, closure_2);
+      },
       accessibilityLabel: null,
-      isSmallSize: null
+      isSmallSize: null,
     };
     intl = require("getSystemLocale").intl;
     obj[3] = intl.string(require("getSystemLocale").t["A/Ly/2"]);
@@ -185,7 +198,7 @@ class DisconnectStreamButton {
     tmp = channel;
     tmp2 = closure_3;
     obj = require("initialize");
-    items = [, ];
+    items = [,];
     items[0] = closure_7;
     items[1] = closure_10;
     closure_1 = obj.useStateFromStores(items, () => {
@@ -322,10 +335,16 @@ function useActionBarPrimaryButtons(channel) {
   });
   obj2 = channel(589);
   const items2 = [closure_6];
-  const stateFromStores1 = channel(589).useStateFromStores(items2, () => null != currentEmbeddedActivity.getCurrentEmbeddedActivity());
+  const stateFromStores1 = channel(589).useStateFromStores(
+    items2,
+    () => null != currentEmbeddedActivity.getCurrentEmbeddedActivity(),
+  );
   const obj4 = channel(589);
   const items3 = [closure_8];
-  const stateFromStoresObject = channel(589).useStateFromStoresObject(items3, () => ({ awaitingRemote: null != store.getAwaitingRemoteSessionInfo(), remoteSessionId: store.getRemoteSessionId() }));
+  const stateFromStoresObject = channel(589).useStateFromStoresObject(items3, () => ({
+    awaitingRemote: null != store.getAwaitingRemoteSessionInfo(),
+    remoteSessionId: store.getRemoteSessionId(),
+  }));
   let awaitingRemote = stateFromStoresObject.awaitingRemote;
   obj = { [closure_27.END_ACTIVITY]: stateFromStores1, [closure_27.END_CALL]: isConnectedToVoiceChannel };
   if (!awaitingRemote) {
@@ -337,13 +356,50 @@ function useActionBarPrimaryButtons(channel) {
 }
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 createCacheKey = { container: null, containerForFiveButtonLayout: null };
-createCacheKey = { height: require("sum").CALL_ACTION_BAR_HEIGHT, justifyContent: "center", alignItems: "center", flexDirection: "row" };
+createCacheKey = {
+  height: require("sum").CALL_ACTION_BAR_HEIGHT,
+  justifyContent: "center",
+  alignItems: "center",
+  flexDirection: "row",
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: require("sum").FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT, paddingHorizontal: 16, paddingTop: require("sum").FIVE_BUTTON_CONTAINER_PADDING_TOP, paddingBottom: require("sum").FIVE_BUTTON_CONTAINER_PADDING_BOTTOM, justifyContent: "center", flexDirection: "row" };
+createCacheKey[1] = {
+  height: require("sum").FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
+  paddingHorizontal: 16,
+  paddingTop: require("sum").FIVE_BUTTON_CONTAINER_PADDING_TOP,
+  paddingBottom: require("sum").FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
+  justifyContent: "center",
+  flexDirection: "row",
+};
 let closure_18 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { NONE: 0, [0]: "NONE", SCREEN_SHARE_START: 1, [1]: "SCREEN_SHARE_START", SCREEN_SHARE_END: 2, [2]: "SCREEN_SHARE_END", AUDIO_ROUTE: 3, [3]: "AUDIO_ROUTE" };
-let obj3 = { END_STREAM: 0, [0]: "END_STREAM", END_ACTIVITY: 1, [1]: "END_ACTIVITY", END_CALL: 2, [2]: "END_CALL", END_REMOTE: 3, [3]: "END_REMOTE" };
-let obj1 = { height: require("sum").FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT, paddingHorizontal: 16, paddingTop: require("sum").FIVE_BUTTON_CONTAINER_PADDING_TOP, paddingBottom: require("sum").FIVE_BUTTON_CONTAINER_PADDING_BOTTOM, justifyContent: "center", flexDirection: "row" };
+let obj2 = {
+  NONE: 0,
+  [0]: "NONE",
+  SCREEN_SHARE_START: 1,
+  [1]: "SCREEN_SHARE_START",
+  SCREEN_SHARE_END: 2,
+  [2]: "SCREEN_SHARE_END",
+  AUDIO_ROUTE: 3,
+  [3]: "AUDIO_ROUTE",
+};
+let obj3 = {
+  END_STREAM: 0,
+  [0]: "END_STREAM",
+  END_ACTIVITY: 1,
+  [1]: "END_ACTIVITY",
+  END_CALL: 2,
+  [2]: "END_CALL",
+  END_REMOTE: 3,
+  [3]: "END_REMOTE",
+};
+let obj1 = {
+  height: require("sum").FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
+  paddingHorizontal: 16,
+  paddingTop: require("sum").FIVE_BUTTON_CONTAINER_PADDING_TOP,
+  paddingBottom: require("sum").FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
+  justifyContent: "center",
+  flexDirection: "row",
+};
 let result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallActionBar.tsx");
 
 export default function ChannelCallActionBar(arg0) {
@@ -365,7 +421,11 @@ export default function ChannelCallActionBar(arg0) {
   let obj = useIsFiveButtonLayout;
   const isFiveButtonLayout = obj.useIsFiveButtonLayout(channel.id);
   obj = { value: contextDefault(tmp2(5973).CHANNEL_CALL_ACTION_BAR).analyticsLocations, children: null };
-  obj = { pointerEvents: "box-none", style: isFiveButtonLayout ? tmp.containerForFiveButtonLayout : tmp.container, children: null };
+  obj = {
+    pointerEvents: "box-none",
+    style: isFiveButtonLayout ? tmp.containerForFiveButtonLayout : tmp.container,
+    children: null,
+  };
   if (shouldShowConnectingScreen) {
     obj1 = { channel: null };
     obj1[0] = channel;
@@ -378,7 +438,7 @@ export default function ChannelCallActionBar(arg0) {
       obj2[1] = isFiveButtonLayout;
       tmp11Result = tmp11(VideoButton, obj2);
     }
-    const items = [tmp11Result, , , ];
+    const items = [tmp11Result, , ,];
     if (obj2.AUDIO_ROUTE === tmp5) {
       obj3 = { isSmallSize: null, channel: null };
       obj3[0] = isFiveButtonLayout;
@@ -434,7 +494,7 @@ export default function ChannelCallActionBar(arg0) {
   obj[2] = tmp13Result;
   obj[1] = closure_15(View, obj);
   return closure_15(context.AnalyticsLocationProvider, obj);
-};
+}
 export { VideoButton };
 export { ScreenshareButton };
 export { AudioRouteButton };

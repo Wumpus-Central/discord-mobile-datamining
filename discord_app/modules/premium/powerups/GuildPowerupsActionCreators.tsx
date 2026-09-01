@@ -64,23 +64,31 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
         }
         return num;
       });
-      const reduced = sorted.reduce((powerupCatalog, skuId) => {
-        powerupCatalog = powerupCatalog.powerupCatalog;
-        powerupCatalog.allPowerups[skuId.skuId] = skuId;
-        if (null == powerupCatalog[skuId.type]) {
-          powerupCatalog[skuId.type] = [];
-        }
-        let arr = powerupCatalog[skuId.type];
-        if (arr != null) {
-          const push = arr.push;
-          if (push != null) {
-            arr = push(skuId);
+      const reduced = sorted.reduce(
+        (powerupCatalog, skuId) => {
+          powerupCatalog = powerupCatalog.powerupCatalog;
+          powerupCatalog.allPowerups[skuId.skuId] = skuId;
+          if (null == powerupCatalog[skuId.type]) {
+            powerupCatalog[skuId.type] = [];
           }
-        }
-        return powerupCatalog;
-      }, { allPowerups: {}, powerupCatalog: {} });
+          let arr = powerupCatalog[skuId.type];
+          if (arr != null) {
+            const push = arr.push;
+            if (push != null) {
+              arr = push(skuId);
+            }
+          }
+          return powerupCatalog;
+        },
+        { allPowerups: {}, powerupCatalog: {} },
+      );
       ({ allPowerups, powerupCatalog } = reduced);
-      closure_1_1(closure_1_2[2]).dispatch({ type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId: callback, allPowerups, powerupCatalog });
+      closure_1_1(closure_1_2[2]).dispatch({
+        type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS",
+        guildId: callback,
+        allPowerups,
+        powerupCatalog,
+      });
       return body.body;
     });
   }
@@ -92,7 +100,13 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
     flag = true;
   }
   let obj = _httpGetWithCountryCodeQuery;
-  obj = { url: Endpoints.GUILD_POWERUPS(closure_0), query: { include_ends_at: flag }, oldFormErrors: true, rejectWithError: require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+  obj = {
+    url: Endpoints.GUILD_POWERUPS(closure_0),
+    query: { include_ends_at: flag },
+    oldFormErrors: true,
+    rejectWithError:
+      require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+  };
   const result = obj.httpGetWithCountryCodeQuery(obj);
   return result.then((body) => {
     let obj = {};
@@ -137,7 +151,12 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
       }
       obj[sku.sku_id] = sku;
     });
-    obj = { type: "GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS", guildId: obj, unlockedPowerups: obj, unlockedGameServers: obj };
+    obj = {
+      type: "GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS",
+      guildId: obj,
+      unlockedPowerups: obj,
+      unlockedGameServers: obj,
+    };
     closure_1_1(closure_1_2[2]).dispatch(obj);
   });
 };

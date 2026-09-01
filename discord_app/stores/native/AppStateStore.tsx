@@ -11,8 +11,7 @@ const AppStates = ME.AppStates;
 const currentState = get_ActivityIndicator.AppState.currentState;
 let c2 = null;
 const Store = initializeDefault.Store;
-class AppStateStore extends Store {
-}
+class AppStateStore extends Store {}
 const prototype = AppStateStore.prototype;
 prototype["getState"] = function getState() {
   return currentState;
@@ -37,7 +36,7 @@ const appStateStore = new AppStateStore(dispatcherDefault, {
         closure_2 = Date.now();
       }
     }
-  }
+  },
 });
 const obj = {
   APP_STATE_UPDATE: function handleAppStateUpdate(state) {
@@ -50,7 +49,7 @@ const obj = {
         closure_2 = Date.now();
       }
     }
-  }
+  },
 };
 let result = set.fileFinishedImporting("stores/native/AppStateStore.tsx");
 

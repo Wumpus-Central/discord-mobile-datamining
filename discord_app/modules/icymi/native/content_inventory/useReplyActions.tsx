@@ -42,25 +42,31 @@ export const useReplyActions = function useReplyActions(content) {
       }
     });
     React = tmp7;
-    const items2 = [null != stateFromStores1, ];
+    const items2 = [null != stateFromStores1];
     let id;
     if (stateFromStores1 != null) {
       id = stateFromStores1.id;
     }
     items2[1] = id;
-    const effect = React.useEffect(() => closure_4 ? (() => {
-      let id;
-      if (id != null) {
-        id = id.id;
-      }
-      closure_1_1(closure_1_2[10]).clearAll(id, closure_1_6.ChannelMessage);
-    }) : undefined, items2);
+    const effect = React.useEffect(
+      () =>
+        closure_4
+          ? () => {
+              let id;
+              if (id != null) {
+                id = id.id;
+              }
+              closure_1_1(closure_1_2[10]).clearAll(id, closure_1_6.ChannelMessage);
+            }
+          : undefined,
+      items2,
+    );
     _require = undefined;
     _require = stateFromStores1((arg0) => {
       closure_0 = arg0;
       closure_3 = 0;
       closure_4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (num8 === 2) {
           num8 = 3;
           HermesBuiltin.throwTypeError();
@@ -181,7 +187,14 @@ export const useReplyActions = function useReplyActions(content) {
               }
             } else {
               obj5 = lib(hotwheels_gaming_activity[16]);
-              const obj8 = { channel: null, content: null, entry: null, whenReady: false, doNotNotifyOnError: false, location: null };
+              const obj8 = {
+                channel: null,
+                content: null,
+                entry: null,
+                whenReady: false,
+                doNotNotifyOnError: false,
+                location: null,
+              };
               obj8[0] = channel;
               obj8[1] = lib;
               obj8[2] = lib;
@@ -199,7 +212,7 @@ export const useReplyActions = function useReplyActions(content) {
       })();
     });
     const items3 = [stateFromStores, content];
-    callback = obj3.useCallback(function() {
+    callback = obj3.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -213,7 +226,16 @@ export const useReplyActions = function useReplyActions(content) {
     callback1 = obj3.useCallback((id) => {
       let obj = stateFromStores(hotwheels_gaming_activity[21]);
       obj.itemInteracted(lib.id, hotwheels_gaming_activity, "press_emoji_send");
-      obj = { itemId: lib.id, itemType: hotwheels_gaming_activity, actionParameters: { actionGestureType: "press", actionTargetElement: "reaction_reply_button", actionIntentType: "react", actionDestinationType: null } };
+      obj = {
+        itemId: lib.id,
+        itemType: hotwheels_gaming_activity,
+        actionParameters: {
+          actionGestureType: "press",
+          actionTargetElement: "reaction_reply_button",
+          actionIntentType: "react",
+          actionDestinationType: null,
+        },
+      };
       stateFromStores(hotwheels_gaming_activity[21]).feedItemActioned(obj);
       if (null != id.id) {
         const _HermesInternal = HermesInternal;
@@ -228,7 +250,14 @@ export const useReplyActions = function useReplyActions(content) {
     const items6 = [stateFromStores, content, callback1, callback];
     const callback2 = obj3.useCallback(() => {
       let obj = lib(hotwheels_gaming_activity[22]);
-      obj = { pickerIntention: closure_1_8.REACTION, autoFocus: false, startExpanded: false, onPressEmoji: callback1, channel: stateFromStores1, reactionType: lib(hotwheels_gaming_activity[23]).ReactionTypes.NORMAL };
+      obj = {
+        pickerIntention: closure_1_8.REACTION,
+        autoFocus: false,
+        startExpanded: false,
+        onPressEmoji: callback1,
+        channel: stateFromStores1,
+        reactionType: lib(hotwheels_gaming_activity[23]).ReactionTypes.NORMAL,
+      };
       const result = obj.openEmojiPickerActionSheet(obj);
     }, items5);
     obj[0] = React.useCallback(() => {
@@ -247,7 +276,12 @@ export const useReplyActions = function useReplyActions(content) {
         obj = { itemId: null, itemType: null, actionParameters: null };
         obj[0] = lib.id;
         obj[1] = str;
-        obj[2] = { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null };
+        obj[2] = {
+          actionGestureType: "press",
+          actionTargetElement: "item_container",
+          actionIntentType: "open",
+          actionDestinationType: null,
+        };
         stateFromStores(hotwheels_gaming_activity[21]).feedItemActioned(obj);
         const obj2 = stateFromStores(hotwheels_gaming_activity[21]);
         obj = { content: null, author: null, sendMessage: null, onPressEmoji: null };
@@ -255,7 +289,11 @@ export const useReplyActions = function useReplyActions(content) {
         obj[1] = tmp;
         obj[2] = callback;
         obj[3] = callback1;
-        stateFromStores(hotwheels_gaming_activity[17]).openLazy(lib(hotwheels_gaming_activity[25])(hotwheels_gaming_activity[24], hotwheels_gaming_activity.paths), "ReactActionSheet", obj);
+        stateFromStores(hotwheels_gaming_activity[17]).openLazy(
+          lib(hotwheels_gaming_activity[25])(hotwheels_gaming_activity[24], hotwheels_gaming_activity.paths),
+          "ReactActionSheet",
+          obj,
+        );
         const obj4 = stateFromStores(hotwheels_gaming_activity[17]);
       }
     }, items6);

@@ -29,5 +29,5 @@ export default function usePollMessageContextItemTypes(poll) {
     }
   }
   return closure_4;
-};
+}
 export const PollMessageContextItemTypes = obj;

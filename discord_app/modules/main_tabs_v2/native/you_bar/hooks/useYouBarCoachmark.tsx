@@ -17,7 +17,9 @@ export const useYouBarCoachmark = function useYouBarCoachmark(isQuestRendered) {
   let stateFromStores;
   const animatedRef = visibleContent(markAsDismissed[6]).useAnimatedRef();
   let obj = visibleContent(markAsDismissed[6]);
-  const isInPrivateProfilesExperiment = visibleContent(markAsDismissed[7]).useIsInPrivateProfilesExperiment("PrivateProfileCoachmark");
+  const isInPrivateProfilesExperiment = visibleContent(markAsDismissed[7]).useIsInPrivateProfilesExperiment(
+    "PrivateProfileCoachmark",
+  );
   markAsDismissed = isInPrivateProfilesExperiment;
   const obj2 = visibleContent(markAsDismissed[7]);
   isTinyBroncoEligible = visibleContent(markAsDismissed[8]).useIsTinyBroncoEligible();
@@ -67,7 +69,10 @@ export const useYouBarCoachmark = function useYouBarCoachmark(isQuestRendered) {
     return obj;
   }, items2);
   const tmp7 = isTinyBroncoEligible(visibleContent(markAsDismissed[13]).useSelectedDismissibleContent(memo), 2);
-  const privateProfileCoachmarkProps = visibleContent(markAsDismissed[14]).usePrivateProfileCoachmarkProps({ visibleContent, markAsDismissed });
+  const privateProfileCoachmarkProps = visibleContent(markAsDismissed[14]).usePrivateProfileCoachmarkProps({
+    visibleContent,
+    markAsDismissed,
+  });
   const obj7 = visibleContent(markAsDismissed[14]);
   const coachmark = visibleContent(markAsDismissed[15]).useCoachmark(animatedRef, privateProfileCoachmarkProps);
   const obj8 = visibleContent(markAsDismissed[15]);

@@ -12,7 +12,7 @@ function _fetchNote() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -113,7 +113,9 @@ const result = require("set").fileFinishedImporting("modules/user_profile/hooks/
 export default function useNote(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.getNote(closure_0));
+  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_5.getNote(closure_0),
+  );
   const items1 = [stateFromStores, arg0];
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {
@@ -133,4 +135,4 @@ export default function useNote(arg0) {
     stateFromStores = { loading: true, note: null };
   }
   return stateFromStores;
-};
+}

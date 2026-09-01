@@ -14,7 +14,13 @@ function getAnalyticsConfig(type) {
     obj = { event: null, properties: null };
     obj[0] = AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED;
     obj = { message_id: null, channel_id: null, guild_id: null, source_channel_id: null, source_guild_id: null };
-    ({ messageId: obj9[0], channelId: obj9[1], guildId: obj9[2], sourceChannelId: obj9[3], sourceGuildId: obj9[4] } = type);
+    ({
+      messageId: obj9[0],
+      channelId: obj9[1],
+      guildId: obj9[2],
+      sourceChannelId: obj9[3],
+      sourceGuildId: obj9[4],
+    } = type);
     obj[1] = obj;
     return obj;
   } else if (tmp.APP_EMBED === type) {
@@ -32,9 +38,24 @@ function getAnalyticsConfig(type) {
   } else if (tmp.VOICE_INVITE_EMBED === type) {
     const obj5 = { event: null, properties: null };
     obj5[0] = encodeProperties.ImpressionNames.VOICE_INVITE_EMBED;
-    const obj6 = { impression_type: null, invite_code: null, invite_guild_id: null, invite_channel_id: null, invite_instance_id: null, has_active_stream: null, location_stack: null };
+    const obj6 = {
+      impression_type: null,
+      invite_code: null,
+      invite_guild_id: null,
+      invite_channel_id: null,
+      invite_instance_id: null,
+      has_active_stream: null,
+      location_stack: null,
+    };
     obj6[0] = encodeProperties.ImpressionTypes.VIEW;
-    ({ inviteCode: obj3[1], inviteGuildId: obj3[2], inviteChannelId: obj3[3], inviteInstanceId: obj3[4], hasActiveStream: obj3[5], treatmentRendered } = type);
+    ({
+      inviteCode: obj3[1],
+      inviteGuildId: obj3[2],
+      inviteChannelId: obj3[3],
+      inviteInstanceId: obj3[4],
+      hasActiveStream: obj3[5],
+      treatmentRendered,
+    } = type);
     const INVITE_EMBED = QUICK_SWITCHERDefault.INVITE_EMBED;
     if (treatmentRendered) {
       const items = [INVITE_EMBED, QUICK_SWITCHERDefault.VOICE_CHANNEL_LIST_INVITE_EMBED];
@@ -61,7 +82,12 @@ function getMessageViewKey(type) {
   return combined;
 }
 const AnalyticEvents = ME.AnalyticEvents;
-let obj = { ANNOUNCEMENT: "announcement", APP_EMBED: "app_embed", OFFICIAL_MESSAGE: "official_message", VOICE_INVITE_EMBED: "voice_invite_embed" };
+let obj = {
+  ANNOUNCEMENT: "announcement",
+  APP_EMBED: "app_embed",
+  OFFICIAL_MESSAGE: "official_message",
+  VOICE_INVITE_EMBED: "voice_invite_embed",
+};
 initializeDefault;
 class MessageViewTrackingManager extends tmp2 {
   constructor() {
@@ -76,8 +102,8 @@ class MessageViewTrackingManager extends tmp2 {
     applyArgumentsResult.batchTimerId = null;
     applyArgumentsResult.actions = {
       CHANNEL_SELECT() {
-            return applyArgumentsResult.handleChannelSelect();
-          }
+        return applyArgumentsResult.handleChannelSelect();
+      },
     };
     return applyArgumentsResult;
   }

@@ -5,7 +5,9 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 const logger = new require("log").Logger("DirectVideo");
 logger.enableNativeLogger(true);
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/DirectVideo.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/media-engine/native/ui/DirectVideo.tsx",
+);
 
 export default function DirectVideo(streamId, onContainerResized) {
   streamId = streamId.streamId;
@@ -104,7 +106,10 @@ export default function DirectVideo(streamId, onContainerResized) {
         }
       });
       const listener2 = element.addEventListener("canplaythrough", function handleReady() {
-        closure_1_5.info("handleReady for " + closure_8.current.streamId + ", have onReady callback = " + null != closure_8.current.onReady);
+        closure_1_5.info(
+          "handleReady for " + closure_8.current.streamId + ", have onReady callback = " + null !=
+            closure_8.current.onReady,
+        );
         const current = closure_8.current;
         onReady = current.onReady;
         if (onReady != null) {
@@ -154,4 +159,4 @@ export default function DirectVideo(streamId, onContainerResized) {
   obj = { className: flag(onReady[4])("media-engine-video", streamId.className), ref };
   const merged1 = Object.assign(merged);
   return flag2("div", obj);
-};
+}

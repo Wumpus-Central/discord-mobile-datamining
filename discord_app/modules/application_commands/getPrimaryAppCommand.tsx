@@ -16,7 +16,7 @@ function _getPrimaryAppCommand() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -111,7 +111,13 @@ function queryForPrimaryAppCommand(closure_0, id) {
   let obj = { commandTypes: null };
   items = [PermissionOverwriteType.ApplicationCommandType.PRIMARY_ENTRY_POINT];
   obj[0] = items;
-  obj = { placeholderCount: 1, scoreMethod: ScoreMethod.ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true };
+  obj = {
+    placeholderCount: 1,
+    scoreMethod: ScoreMethod.ScoreMethod.COMMAND_ONLY,
+    applicationId: id,
+    allowFetch: false,
+    allowApplicationState: true,
+  };
   return closure_7.query(closure_0, obj, obj).commands[0];
 }
 ({ getOrFetchApplicationCommandIndexForTarget: c5, useQueryState: closure_6 } = getIndexKey);
@@ -128,13 +134,19 @@ export default function getPrimaryAppCommand() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 export const NO_PRIMARY_APP_COMMAND_ERROR = "no primary app command for application";
 export { queryForPrimaryAppCommand };
 export const useGetPrimaryAppCommand = function useGetPrimaryAppCommand(context, id) {
   const _require = id;
   let obj = { commandTypes: items };
-  obj = { placeholderCount: 1, scoreMethod: _require(loading[5]).ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true };
+  obj = {
+    placeholderCount: 1,
+    scoreMethod: _require(loading[5]).ScoreMethod.COMMAND_ONLY,
+    applicationId: id,
+    allowFetch: false,
+    allowApplicationState: true,
+  };
   const tmp = callback2(context, obj, obj);
   loading = tmp.loading;
   const first = tmp.commands[0];
@@ -156,7 +168,13 @@ export const useGetPrimaryAppCommand = function useGetPrimaryAppCommand(context,
 };
 export const useQueryForPrimaryAppCommand = function useQueryForPrimaryAppCommand(arg0, applicationId) {
   let obj = { commandTypes: items };
-  obj = { placeholderCount: 1, scoreMethod: ScoreMethod.ScoreMethod.COMMAND_ONLY, applicationId, allowFetch: false, allowApplicationState: true };
+  obj = {
+    placeholderCount: 1,
+    scoreMethod: ScoreMethod.ScoreMethod.COMMAND_ONLY,
+    applicationId,
+    allowFetch: false,
+    allowApplicationState: true,
+  };
   return callback2(arg0, obj, obj);
 };
 export const useIsPrimaryAppCommandUsableInAppDM = function useIsPrimaryAppCommandUsableInAppDM(applicationId) {
@@ -164,7 +182,13 @@ export const useIsPrimaryAppCommandUsableInAppDM = function useIsPrimaryAppComma
   let loading;
   closure_2 = undefined;
   let obj = { commandTypes: items };
-  obj = { placeholderCount: 1, scoreMethod: applicationId(loading[5]).ScoreMethod.COMMAND_ONLY, applicationId, allowFetch: false, allowApplicationState: true };
+  obj = {
+    placeholderCount: 1,
+    scoreMethod: applicationId(loading[5]).ScoreMethod.COMMAND_ONLY,
+    applicationId,
+    allowFetch: false,
+    allowApplicationState: true,
+  };
   ({ context, botUserId } = applicationId);
   const tmp3 = callback2(context, obj, obj);
   loading = tmp3.loading;

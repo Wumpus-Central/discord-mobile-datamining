@@ -2,7 +2,9 @@
 import closure_2 from "../../../../stores/MessageStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useLastChannelMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/hooks/useLastChannelMessage.tsx",
+);
 
 export const useLastChannelMessage = function useLastChannelMessage(channelId) {
   const _require = channelId;

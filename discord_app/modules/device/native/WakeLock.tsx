@@ -27,7 +27,7 @@ export default function WakeLock(wakeLockKey) {
     };
   }, items);
   return null;
-};
+}
 export const useWakeLock = function useWakeLock(VoiceMessageOverlay) {
   closure_0 = VoiceMessageOverlay;
   const items = [VoiceMessageOverlay];

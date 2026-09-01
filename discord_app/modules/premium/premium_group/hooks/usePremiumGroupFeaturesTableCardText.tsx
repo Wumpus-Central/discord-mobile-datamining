@@ -7,7 +7,9 @@ import SubscriptionStatusTypes from "../PremiumGroupConstants.tsx";
 
 require = arg1;
 ({ getPremiumGroupProductName: c4, HELP_CENTER_LINK: c5 } = SubscriptionStatusTypes);
-const result = require("set").fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx",
+);
 
 export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
   let obj = { useCachedData: true, fetch: arg0 === create.PremiumSubscriptionGroupRole.MEMBER };
@@ -53,4 +55,4 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
     obj2[1] = formatResult;
     return obj2;
   }
-};
+}

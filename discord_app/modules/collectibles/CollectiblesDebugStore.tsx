@@ -19,7 +19,7 @@ let obj = keys.create((arg0) => {
     },
     clearLogs() {
       return callback({ logs: [] });
-    }
+    },
   };
 });
 const result = set.fileFinishedImporting("modules/collectibles/CollectiblesDebugStore.tsx");

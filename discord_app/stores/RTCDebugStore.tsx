@@ -113,7 +113,33 @@ const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;
 let combined = "" + MediaEngineContextTypes.DEFAULT + ":" + require("ME").RTCDebugSections.TRANSPORT + ":" + 0;
 let closure_12 = {};
 const map = new Map();
-let obj = { availableOutgoingBitrate: true, bitrate: true, bitrateTarget: true, bytesReceived: true, bytesSent: true, encoderQualityPsnr: true, encoderQualityVmaf: true, encodeUsage: true, frameRateDecode: true, frameRateEncode: true, frameRateInput: true, frameRateNetwork: true, frameRateRender: true, keyFramesEncoded: true, keyFramesDecoded: true, inboundBitrateEstimate: true, packetsLost: true, packetsReceived: true, packetsSent: true, ping: true, qpSum: true, videoEntropy: true, audioLevel: true, screenshareCapturedFps: true, screenshareCapturedFpsUnique: true };
+let obj = {
+  availableOutgoingBitrate: true,
+  bitrate: true,
+  bitrateTarget: true,
+  bytesReceived: true,
+  bytesSent: true,
+  encoderQualityPsnr: true,
+  encoderQualityVmaf: true,
+  encodeUsage: true,
+  frameRateDecode: true,
+  frameRateEncode: true,
+  frameRateInput: true,
+  frameRateNetwork: true,
+  frameRateRender: true,
+  keyFramesEncoded: true,
+  keyFramesDecoded: true,
+  inboundBitrateEstimate: true,
+  packetsLost: true,
+  packetsReceived: true,
+  packetsSent: true,
+  ping: true,
+  qpSum: true,
+  videoEntropy: true,
+  audioLevel: true,
+  screenshareCapturedFps: true,
+  screenshareCapturedFpsUnique: true,
+};
 let RTCDebugVideoOutputMap;
 class RTCDebugVideoOutputMap {
   constructor(arg0) {
@@ -175,8 +201,7 @@ let item = values.forEach((arg0) => {
   closure_12[arg0] = {};
 });
 const Store = initializeDefault.Store;
-class RTCDebugStore extends Store {
-}
+class RTCDebugStore extends Store {}
 const prototype2 = RTCDebugStore.prototype;
 prototype2["initialize"] = function initialize() {
   this.waitFor(closure_5, closure_6);
@@ -339,7 +364,13 @@ obj = {
           replayConnection.on(replayConnection(4579).BaseConnectionEvent.Video, (userId) => {
             let num = arg3;
             obj = closure_1_1(closure_1_3[7]);
-            obj = { type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT", mediaEngineConnectionId: replayConnection.mediaEngineConnectionId, userId, videoSsrc: null, streamId: null };
+            obj = {
+              type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",
+              mediaEngineConnectionId: replayConnection.mediaEngineConnectionId,
+              userId,
+              videoSsrc: null,
+              streamId: null,
+            };
             if (arg3 == null) {
               num = 0;
             }
@@ -358,7 +389,12 @@ obj = {
     }
   },
   RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: function handleUpdateVideoOutput(mediaEngineConnectionId) {
-    closure_15 = closure_15.put(mediaEngineConnectionId.mediaEngineConnectionId, mediaEngineConnectionId.userId, mediaEngineConnectionId.videoSsrc, mediaEngineConnectionId.streamId);
+    closure_15 = closure_15.put(
+      mediaEngineConnectionId.mediaEngineConnectionId,
+      mediaEngineConnectionId.userId,
+      mediaEngineConnectionId.videoSsrc,
+      mediaEngineConnectionId.streamId,
+    );
   },
   RTC_DEBUG_SET_RECORDING_FLAG: function handleSetRecordingFlag(value) {
     value = value.value;
@@ -563,7 +599,7 @@ obj = {
         }
       });
     });
-  }
+  },
 };
 const rTCDebugStore = new RTCDebugStore(dispatcherDefault, obj);
 let result = require("set").fileFinishedImporting("stores/RTCDebugStore.tsx");

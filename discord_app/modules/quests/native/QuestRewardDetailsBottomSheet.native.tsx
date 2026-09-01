@@ -36,22 +36,25 @@ function QuestRewardDetailsBottomSheet(quest) {
   const defaultRewardName = obj1.getDefaultRewardName(quest.config, stateFromStores);
   obj = { direction: "vertical", spacing: memo(712).space.PX_16, style: tmp.wrapper, children: null };
   obj = { align: "center", direction: "horizontal", spacing: memo(712).space.PX_16, children: null };
-  const items3 = [callback(memo(11337), { quest, height: 56, width: 56, withAnimation: true }), ];
+  const items3 = [callback(memo(11337), { quest, height: 56, width: 56, withAnimation: true })];
   obj1 = { direction: "vertical", spacing: memo(712).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj2 = { variant: "eyebrow", color: "text-subtle", children: null };
   let intl = quest(1236).intl;
   obj2[2] = intl.string(quest(1236).t["jyYgZ+"]);
-  const items4 = [callback(quest(4474).Text, obj2), callback(quest(4474).Text, { variant: "heading-lg/semibold", color: "text-strong", children: defaultRewardName })];
+  const items4 = [
+    callback(quest(4474).Text, obj2),
+    callback(quest(4474).Text, { variant: "heading-lg/semibold", color: "text-strong", children: defaultRewardName }),
+  ];
   obj1[3] = items4;
   items3[1] = callback2(quest(4926).Stack, obj1);
   obj[3] = items3;
-  const items5 = [callback2(quest(4926).Stack, obj), ];
+  const items5 = [callback2(quest(4926).Stack, obj)];
   let tmp9Result = null != memo1;
   if (tmp9Result) {
     const obj3 = { children: null };
     const obj4 = { style: null };
     obj4[0] = tmp.separator;
-    const items6 = [tmp8(View, obj4), ];
+    const items6 = [tmp8(View, obj4)];
     const obj5 = { variant: "text-md/normal", color: "text-subtle", children: null };
     obj5[2] = memo1;
     items6[1] = tmp8(quest(4474).Text, obj5);
@@ -87,4 +90,4 @@ export default function QuestRewardDetailsBottomSheetConnected(questId) {
     tmp3 = callback(QuestRewardDetailsBottomSheet, obj);
   }
   return tmp3;
-};
+}

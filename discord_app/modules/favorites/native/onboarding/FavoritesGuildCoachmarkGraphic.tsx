@@ -19,9 +19,9 @@ const result = set.fileFinishedImporting("modules/favorites/native/onboarding/Fa
 export default function FavoritesGuildCoachmarkGraphic() {
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
-  const items = [callback(AccountAgeTier10LargeBadge.FavoritesSpotIllustration, { width: 160, height: 90 }), ];
+  const items = [callback(AccountAgeTier10LargeBadge.FavoritesSpotIllustration, { width: 160, height: 90 })];
   obj = { style: tmp.betaTag };
   items[1] = callback(Button.BetaTag, obj);
   obj[1] = items;
   return callback2(View, obj);
-};
+}

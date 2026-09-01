@@ -92,7 +92,7 @@ export default function setupLoadFromMessageManagerHandlers(actions) {
         set.add(channelId);
       }
     },
-    autoSubscribe: false
+    autoSubscribe: false,
   };
   actions.actions = obj;
-};
+}

@@ -6,7 +6,9 @@ import closure_4 from "../../../../../stores/UserStore.tsx";
 import { Permissions } from "../../../../../Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx",
+);
 
 export const computeIsStickerReplyEnabled = function computeIsStickerReplyEnabled(guildId, channel, message, arg3) {
   currentUser = currentUser.getCurrentUser();

@@ -20,13 +20,13 @@ obj = {
   usePredicate: function useHasGuildRoleSubscriptionsSetting() {
     return useUserRoleSubscriptionRelationshipDefault() === constants.SUBSCRIBED;
   },
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.GUILD_ROLE_SUBSCRIPTIONS,
   getComponent() {
     return GuildRoleSubscriptionsSectionHeader /* GuildRoleSubscriptionsSectionHeader */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/GuildRoleSubscriptionsSetting.tsx");

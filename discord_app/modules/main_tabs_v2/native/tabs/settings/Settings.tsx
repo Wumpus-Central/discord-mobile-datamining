@@ -6,8 +6,18 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-createCacheKey = { containerOuter: { flex: 1, overflow: "hidden" }, containerOuterTablet: null, container: null, containerTablet: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, flex: 1 };
+createCacheKey = {
+  containerOuter: { flex: 1, overflow: "hidden" },
+  containerOuterTablet: null,
+  container: null,
+  containerTablet: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.md,
+  flex: 1,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flex: 1 };
 createCacheKey[3] = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", flex: 1 };
@@ -34,7 +44,7 @@ export default function Settings() {
   obj = {
     style: React.useMemo(() => {
       if (closure_3) {
-        const items = [tmp.containerOuterTablet, ];
+        const items = [tmp.containerOuterTablet];
         let obj = { paddingTop: null, paddingLeft: null, paddingRight: null };
         obj[0] = top;
         obj[1] = left;
@@ -42,7 +52,7 @@ export default function Settings() {
         items[1] = obj;
         let items1 = items;
       } else {
-        items1 = [tmp.containerOuter, ];
+        items1 = [tmp.containerOuter];
         obj = { paddingLeft: null, paddingRight: null };
         obj[0] = left;
         obj[1] = right;
@@ -50,9 +60,12 @@ export default function Settings() {
       }
       return items1;
     }, items),
-    children: null
+    children: null,
   };
   obj = { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: tmp7(tmp4(tmp2[10]), {}) };
-  obj[1] = jsx(left(right[9]).View, { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: tmp7(tmp4(tmp2[10]), {}) });
+  obj[1] = jsx(left(right[9]).View, {
+    style: tmp5 ? tmp6.containerTablet : tmp6.container,
+    children: tmp7(tmp4(tmp2[10]), {}),
+  });
   return <closure_4 style={tmp5 ? tmp6.containerTablet : tmp6.container}>{tmp7(tmp4(tmp2[10]), {})}</closure_4>;
-};
+}

@@ -11,7 +11,7 @@ function _sendGiftMessage() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_3 = tmp5;
       dependencyMap = tmp2;
       const callback = lib;
@@ -70,6 +70,4 @@ export const sendGiftMessage = function sendGiftMessage() {
   }
   return applyArgumentsResult;
 };
-export function unhandledGiftIntent(giftIntentType) {
-
-}
+export function unhandledGiftIntent(giftIntentType) {}

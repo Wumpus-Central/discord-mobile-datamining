@@ -13,7 +13,10 @@ export default function useGuildThemeNuxTrigger(guildId, isNuxOpen) {
   let React;
   let constants;
   closure_5 = undefined;
-  const enabledGuildThemeForGuildId = _require(isNuxOpen[3]).useEnabledGuildThemeForGuildId(guildId, "GuildThemeNuxTrigger");
+  const enabledGuildThemeForGuildId = _require(isNuxOpen[3]).useEnabledGuildThemeForGuildId(
+    guildId,
+    "GuildThemeNuxTrigger",
+  );
   const obj = _require(isNuxOpen[3]);
   if (null != enabledGuildThemeForGuildId) {
     const items = [tmp(tmp2[5]).DismissibleContent.GUILD_THEME_NUX];
@@ -39,15 +42,17 @@ export default function useGuildThemeNuxTrigger(guildId, isNuxOpen) {
           const timeout = setTimeout(() => {
             closure_5.current = true;
             c0 = false;
-            const resolved = Promise.resolve(callback({
-              guildId: c0,
-              markAsDismissed(arg0) {
-                if (!c0) {
-                  c0 = true;
-                  closure_1_3(arg0, true);
-                }
-              }
-            }));
+            const resolved = Promise.resolve(
+              callback({
+                guildId: c0,
+                markAsDismissed(arg0) {
+                  if (!c0) {
+                    c0 = true;
+                    closure_1_3(arg0, true);
+                  }
+                },
+              }),
+            );
             resolved.catch(() => {
               closure_5.current = false;
             });
@@ -57,5 +62,5 @@ export default function useGuildThemeNuxTrigger(guildId, isNuxOpen) {
       }
     }
   }, items3);
-};
+}
 export const GUILD_THEME_NUX_DELAY_MS = 2000;

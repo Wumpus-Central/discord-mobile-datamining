@@ -412,13 +412,13 @@ Object.defineProperty(prototype2, "end", {
   get: function end() {
     return this.start + this.length;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype2, "length", {
   get: function length() {
     return this.match[0].length;
   },
-  set: undefined
+  set: undefined,
 });
 prototype2["valueOf"] = function valueOf() {
   return this.match[0];

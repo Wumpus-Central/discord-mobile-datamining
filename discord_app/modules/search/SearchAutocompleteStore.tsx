@@ -261,12 +261,11 @@ let closure_14 = [];
 const map = new Map();
 const map1 = new Map();
 let c17 = 10;
-let items = [, , ];
+let items = [, ,];
 ({ FILTER_FROM: arr[0], FILTER_IN: arr[1], FILTER_MENTIONS: arr[2] } = SearchTokenTypes);
 let set = new Set(items);
 const Store = initializeDefault.Store;
-class SearchAutocompleteStoreClass extends Store {
-}
+class SearchAutocompleteStoreClass extends Store {}
 const prototype = SearchAutocompleteStoreClass.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_4, closure_5, closure_6, closure_7, closure_8);
@@ -439,7 +438,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(dispatcher
       tmp = rebuildAutocompleteResults(c13);
     }
     return tmp;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/search/SearchAutocompleteStore.tsx");
 

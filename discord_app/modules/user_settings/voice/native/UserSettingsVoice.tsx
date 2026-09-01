@@ -25,9 +25,11 @@ const result = require("set").fileFinishedImporting("modules/user_settings/voice
 export default function UserSettingsVoice() {
   const tmp = callback2();
   let obj = apexExperimentDefault;
-  let nonContextualStreamOutputPresent = obj.useConfig({ location: "NewUserSettingsVoice" }).nonContextualStreamOutputPresent;
+  let nonContextualStreamOutputPresent = obj.useConfig({
+    location: "NewUserSettingsVoice",
+  }).nonContextualStreamOutputPresent;
   obj = { style: tmp.container, children: null };
-  const items = [callback(handleInputModePressDefault, {}), , , , , , ];
+  const items = [callback(handleInputModePressDefault, {}), , , , , ,];
   if (nonContextualStreamOutputPresent) {
     nonContextualStreamOutputPresent = tmp4(tmp2(10068), {});
   }
@@ -44,7 +46,7 @@ export default function UserSettingsVoice() {
   obj2[1] = items;
   obj[1] = closure_7(Stack.Stack, obj2);
   return callback(View, obj);
-};
+}
 export const UserSettingsTableRowGroup = function UserSettingsTableRowGroup(arg0) {
   const merged = Object.assign(arg0);
   return callback(TableRowGroupTitle.TableRowGroup, {});

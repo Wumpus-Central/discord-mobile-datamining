@@ -18,10 +18,17 @@ import { getFocusedChannelId } from "../../panels/isChannelFocused.native.tsx";
 require = arg1;
 function useDeliveredDockCreative() {
   const items = [closure_7];
-  let stateFromStores = deliveredQuestId(deliveredBounty[10]).useStateFromStores(items, () => questPreviewOverride.getQuestPreviewOverride(deliveredQuestId(deliveredBounty[11]).QuestContent.QUEST_BAR_MOBILE), []);
+  let stateFromStores = deliveredQuestId(deliveredBounty[10]).useStateFromStores(
+    items,
+    () =>
+      questPreviewOverride.getQuestPreviewOverride(deliveredQuestId(deliveredBounty[11]).QuestContent.QUEST_BAR_MOBILE),
+    [],
+  );
   let obj = deliveredQuestId(deliveredBounty[10]);
   const tmp3 = closure_7;
-  const adDecisionForPlacement = deliveredQuestId(deliveredBounty[12]).useAdDecisionForPlacement(deliveredQuestId(deliveredBounty[11]).AdPlacement.MOBILE_HOME_DOCK_AREA);
+  const adDecisionForPlacement = deliveredQuestId(deliveredBounty[12]).useAdDecisionForPlacement(
+    deliveredQuestId(deliveredBounty[11]).AdPlacement.MOBILE_HOME_DOCK_AREA,
+  );
   const obj2 = deliveredQuestId(deliveredBounty[12]);
   let creative;
   if (adDecisionForPlacement != null) {
@@ -31,18 +38,22 @@ function useDeliveredDockCreative() {
   let tmpResult = tmp(tmp2[10]);
   const items1 = [tmp3];
   const items2 = [deliveredQuestId];
-  const stateFromStores1 = tmpResult.useStateFromStores(items1, () => {
-    let tmp2 = null;
-    if (null != deliveredQuestId) {
-      const quests = closure_1_7.quests;
-      let value = quests.get(tmp);
-      if (value == null) {
-        value = null;
+  const stateFromStores1 = tmpResult.useStateFromStores(
+    items1,
+    () => {
+      let tmp2 = null;
+      if (null != deliveredQuestId) {
+        const quests = closure_1_7.quests;
+        let value = quests.get(tmp);
+        if (value == null) {
+          value = null;
+        }
+        tmp2 = value;
       }
-      tmp2 = value;
-    }
-    return tmp2;
-  }, items2);
+      return tmp2;
+    },
+    items2,
+  );
   let tmp9 = null;
   if (null != stateFromStores1) {
     tmpResult = tmp(tmp2[14]);
@@ -83,7 +94,13 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   const obj = deliveredAdCreativeId(14703);
   const items = [closure_7];
   let userStatus;
-  const stateFromStores = deliveredAdCreativeId(589).useStateFromStores(items, () => null != questPreviewOverride.getQuestPreviewOverride(deliveredAdCreativeId(table[11]).QuestContent.QUEST_BAR_MOBILE), []);
+  const stateFromStores = deliveredAdCreativeId(589).useStateFromStores(
+    items,
+    () =>
+      null !=
+      questPreviewOverride.getQuestPreviewOverride(deliveredAdCreativeId(table[11]).QuestContent.QUEST_BAR_MOBILE),
+    [],
+  );
   if (deliveredQuest != null) {
     userStatus = deliveredQuest.userStatus;
   }
@@ -110,13 +127,17 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   const items1 = [tmp5];
   const items2 = [deliveredAdCreativeId];
   const type = mobileQuestDock.type;
-  const stateFromStores1 = deliveredAdCreativeId(589).useStateFromStores(items1, () => {
-    let isAdContentDismissedResult = null != deliveredAdCreativeId;
-    if (isAdContentDismissedResult) {
-      isAdContentDismissedResult = closure_1_7.isAdContentDismissed(tmp);
-    }
-    return isAdContentDismissedResult;
-  }, items2);
+  const stateFromStores1 = deliveredAdCreativeId(589).useStateFromStores(
+    items1,
+    () => {
+      let isAdContentDismissedResult = null != deliveredAdCreativeId;
+      if (isAdContentDismissedResult) {
+        isAdContentDismissedResult = closure_1_7.isAdContentDismissed(tmp);
+      }
+      return isAdContentDismissedResult;
+    },
+    items2,
+  );
   if (deliveredAdCreativeId(7446).AdCreativeType.NO_FILL === type) {
     return false;
   } else if (tmp(7446).AdCreativeType.BOUNTY === type) {
@@ -135,7 +156,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       return tmp15;
     }
     tmp15 = null != deliveredQuest && isEligibleForQuests && !isQuestExpired && !tmp10 && !isDismissedResult && !tmp4;
-    const tmp16 = null != deliveredQuest && isEligibleForQuests && !isQuestExpired && !tmp10 && !isDismissedResult && !tmp4;
+    const tmp16 =
+      null != deliveredQuest && isEligibleForQuests && !isQuestExpired && !tmp10 && !isDismissedResult && !tmp4;
   }
 }
 ({ QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_8, QuestVariants: c9 } = QuestsExperimentLocations);
@@ -150,38 +172,54 @@ export const useMobileQuestDockHeight = function useMobileQuestDockHeight() {
   return num;
 };
 export const useMobileQuestDock = function useMobileQuestDock() {
-  const adRefreshLoop = maybeRefreshAd.useAdRefreshLoop(QuestsVisibleMessagesChangedSource.AdPlacement.MOBILE_HOME_DOCK_AREA);
+  const adRefreshLoop = maybeRefreshAd.useAdRefreshLoop(
+    QuestsVisibleMessagesChangedSource.AdPlacement.MOBILE_HOME_DOCK_AREA,
+  );
   return useDeliveredDockCreative();
 };
-export const useIsMobileQuestDockVisibleToUser = function useIsMobileQuestDockVisibleToUser(mobileQuestDock, isMobileQuestDockRenderedBase) {
+export const useIsMobileQuestDockVisibleToUser = function useIsMobileQuestDockVisibleToUser(
+  mobileQuestDock,
+  isMobileQuestDockRenderedBase,
+) {
   const _require = mobileQuestDock;
   let tmp = isMobileQuestDockRenderedBase;
   const isChannelFocused = require("../../panels/isChannelFocused.native.tsx").useIsChannelFocused();
   const obj = getFocusedChannelId;
-  const currentNavigationRouteName = require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx").useCurrentNavigationRouteName();
+  const currentNavigationRouteName =
+    require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx").useCurrentNavigationRouteName();
   const obj2 = coerceMainRoute;
-  let tmp4 = null != require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx").coerceGuildsRoute({ name: currentNavigationRouteName });
+  let tmp4 =
+    null !=
+    require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx").coerceGuildsRoute({
+      name: currentNavigationRouteName,
+    });
   const obj3 = coerceMainRoute;
   const items = [closure_7];
-  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const type = mobileQuestDock.type;
-    if (mobileQuestDock(closure_1_2[15]).AdCreativeType.QUEST === type) {
-      return closure_1_7.isClaimingReward(tmp.quest.id);
-    } else {
-      return false;
-    }
-    tmp = mobileQuestDock;
-  });
+  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const type = mobileQuestDock.type;
+      if (mobileQuestDock(closure_1_2[15]).AdCreativeType.QUEST === type) {
+        return closure_1_7.isClaimingReward(tmp.quest.id);
+      } else {
+        return false;
+      }
+      tmp = mobileQuestDock;
+    },
+  );
   const obj4 = initialize;
   const items1 = [closure_5];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
-    key = key.getKey();
-    let tmp2 = key === closure_10;
-    if (!tmp2) {
-      tmp2 = key === closure_8;
-    }
-    return tmp2;
-  });
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => {
+      key = key.getKey();
+      let tmp2 = key === closure_10;
+      if (!tmp2) {
+        tmp2 = key === closure_8;
+      }
+      return tmp2;
+    },
+  );
   if (isMobileQuestDockRenderedBase) {
     tmp = !isChannelFocused;
   }
@@ -203,13 +241,21 @@ export const useIsMobileQuestDockRendered = function useIsMobileQuestDockRendere
 export const useQuestGameLogotypeAssetUrl = function useQuestGameLogotypeAssetUrl(quest) {
   closure_0 = quest;
   const items = [quest];
-  return React.useMemo(() => quest(closure_1_2[22]).getQuestAsset(quest, quest(closure_1_2[22]).QuestAssetType.LOGO_TYPE, closure_1_12.DARK).url, items);
+  return React.useMemo(
+    () =>
+      quest(closure_1_2[22]).getQuestAsset(quest, quest(closure_1_2[22]).QuestAssetType.LOGO_TYPE, closure_1_12.DARK)
+        .url,
+    items,
+  );
 };
 export const useQuestDockHeroAsset = function useQuestDockHeroAsset(quest) {
   closure_0 = quest;
   const items = [quest];
   return React.useMemo(() => {
-    const questAsset = quest(closure_1_2[22]).getQuestAsset(quest, quest(closure_1_2[22]).QuestAssetType.QUEST_BAR_HERO);
+    const questAsset = quest(closure_1_2[22]).getQuestAsset(
+      quest,
+      quest(closure_1_2[22]).QuestAssetType.QUEST_BAR_HERO,
+    );
     let videoAsset = null;
     if (null != quest.config.assets.questBarHeroVideo) {
       videoAsset = tmp(tmp2[22]).resolveAsset(tmp3.id, tmp3.config.assets.questBarHeroVideo);
@@ -237,7 +283,9 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
   let obj = _require(stateFromStores[23]);
   const activityApplicationId = obj.getActivityApplicationId(quest);
   let items = [closure_6];
-  stateFromStores = _require(stateFromStores[10]).useStateFromStores(items, () => closure_1_6.getApplication(activityApplicationId));
+  stateFromStores = _require(stateFromStores[10]).useStateFromStores(items, () =>
+    closure_1_6.getApplication(activityApplicationId),
+  );
   let obj2 = _require(stateFromStores[10]);
   const tmp = stateFromStores;
   const canLaunchFrameResult = _require(stateFromStores[24]).canLaunchFrame(stateFromStores);
@@ -294,25 +342,77 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
   obj = {
     isMobileActivityQuest: canLaunchActivityResult,
     questApplication: stateFromStores,
-    launchMobileActivity: React.useCallback(callback(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+    launchMobileActivity: React.useCallback(
+      callback(function* () {
+        if (v0 === 2) {
+          v0 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === v02) {
-            if (arg0 === 1) {
+          try {
+            v0 = 2;
+            if (0 === v02) {
+              if (arg0 === 1) {
+                v0 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                v0 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else if (closure_1_4) {
+                if (closure_1_3) {
+                  let obj5 = v02(closure_1_2[28]);
+                  obj1 = { applicationId: null, surface: null };
+                  obj1[0] = closure_1_2.id;
+                  obj1[1] = closure_1_11;
+                  v02 = 1;
+                  v0 = 1;
+                  let obj2 = { value: null, done: false };
+                  obj2[0] = obj5.launchFrame(obj1);
+                  return obj2;
+                } else {
+                  let id;
+                  if (closure_1_2 != null) {
+                    const bot = tmp6.bot;
+                    if (bot != null) {
+                      id = bot.id;
+                    }
+                  }
+                  if (null != id) {
+                    obj2 = v0(closure_1_2[29]);
+                    const obj3 = { appId: null, botId: null, analyticsLocations: null };
+                    obj3[0] = tmp6.id;
+                    obj3[1] = tmp6.bot.id;
+                    obj3[2] = [];
+                    v02 = 2;
+                    v0 = 1;
+                    const obj4 = { value: null, done: false };
+                    obj4[0] = obj2.launchActivityInBotDM(obj3);
+                    return obj4;
+                  }
+                }
+              }
+            } else if (1 === tmp4) {
+              if (arg0 === 1) {
+                v0 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                v0 = 3;
+                obj5 = { value: null, done: true };
+                obj5[0] = arg1;
+                return obj5;
+              }
+            } else if (arg0 === 1) {
               v0 = 3;
               throw arg1;
             } else if (arg0 === 2) {
@@ -320,66 +420,17 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
-            } else if (closure_1_4) {
-              if (closure_1_3) {
-                let obj5 = v02(closure_1_2[28]);
-                obj1 = { applicationId: null, surface: null };
-                obj1[0] = closure_1_2.id;
-                obj1[1] = closure_1_11;
-                v02 = 1;
-                v0 = 1;
-                let obj2 = { value: null, done: false };
-                obj2[0] = obj5.launchFrame(obj1);
-                return obj2;
-              } else {
-                let id;
-                if (closure_1_2 != null) {
-                  const bot = tmp6.bot;
-                  if (bot != null) {
-                    id = bot.id;
-                  }
-                }
-                if (null != id) {
-                  obj2 = v0(closure_1_2[29]);
-                  const obj3 = { appId: null, botId: null, analyticsLocations: null };
-                  obj3[0] = tmp6.id;
-                  obj3[1] = tmp6.bot.id;
-                  obj3[2] = [];
-                  v02 = 2;
-                  v0 = 1;
-                  const obj4 = { value: null, done: false };
-                  obj4[0] = obj2.launchActivityInBotDM(obj3);
-                  return obj4;
-                }
-              }
             }
-          } else if (1 === tmp4) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj5 = { value: null, done: true };
-              obj5[0] = arg1;
-              return obj5;
-            }
-          } else if (arg0 === 1) {
             v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            return { value: "HermesInternal", done: null };
+          } catch (tmp15) {
+            v0 = tmp;
+            throw tmp15;
           }
-          v0 = 3;
-          return { value: "HermesInternal", done: null };
-        } catch (tmp15) {
-          v0 = tmp;
-          throw tmp15;
         }
-      }
-    }), items2)
+      }),
+      items2,
+    ),
   };
   return obj;
 };

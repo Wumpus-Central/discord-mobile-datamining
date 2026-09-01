@@ -22,7 +22,7 @@ function handleCacheActionPress(key) {
     icon() {
       return callback2(callback(table[5]).CircleInformationIcon, {});
     },
-    content: key
+    content: key,
   };
   obj.open(obj);
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(CacheActionsActionSheet);
@@ -37,7 +37,7 @@ function CacheActionsActionSheet() {
   obj1 = { icon: callback2(FileUpIcon.FileUpIcon, {}), label: null, onPress: null };
   const intl2 = getSystemLocale.intl;
   obj1[1] = intl2.string(getSystemLocale.t["/GUaXh"]);
-  obj1[2] = callback(function*() {
+  obj1[2] = callback(function* () {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       HermesBuiltin.throwTypeError();
@@ -92,8 +92,13 @@ function CacheActionsActionSheet() {
       }
     }
   });
-  const items = [callback2(ActionSheetRowIcon.ActionSheetRow, obj1), ];
-  let obj2 = { variant: "danger", icon: callback2(FileWarningIcon.FileWarningIcon, { color: "text-feedback-critical" }), label: null, onPress: null };
+  const items = [callback2(ActionSheetRowIcon.ActionSheetRow, obj1)];
+  let obj2 = {
+    variant: "danger",
+    icon: callback2(FileWarningIcon.FileWarningIcon, { color: "text-feedback-critical" }),
+    label: null,
+    onPress: null,
+  };
   const intl3 = getSystemLocale.intl;
   obj2[2] = intl3.string(getSystemLocale.t.tgwiMO);
   obj2[3] = function onPress() {
@@ -106,7 +111,7 @@ function CacheActionsActionSheet() {
       icon() {
         return callback2(callback(table[5]).CircleInformationIcon, {});
       },
-      content: stringResult
+      content: stringResult,
     };
     callback2(4194).open(obj);
     const obj2 = callback2(4194);
@@ -138,7 +143,7 @@ createToggle = {
     const obj = initialize;
     return DeveloperMode.useSetting() && stateFromStores;
   },
-  withArrow: true
+  withArrow: true,
 };
 createToggle = createToggle.createPressable(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/CacheActionsSetting.tsx");

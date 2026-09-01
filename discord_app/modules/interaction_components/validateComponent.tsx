@@ -145,4 +145,4 @@ export default function validateComponent(type, arg1, modal) {
       length = values.selectedOptions.length;
     }
   }
-};
+}

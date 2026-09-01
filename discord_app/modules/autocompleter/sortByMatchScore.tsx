@@ -36,4 +36,4 @@ export default function sortByMatchScore(score, score2) {
     }
   }
   return score2.score - score.score;
-};
+}

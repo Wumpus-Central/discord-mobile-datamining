@@ -9,7 +9,8 @@ import MESSAGE_GROUP_SPACING from "../../../modules/messages/MessageConstants.ts
 const require = arg1;
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 ({ AbortCodes: c4, NOOP: c5 } = ME);
-({ DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE: closure_6, FileUploadErrorTypes: error } = MESSAGE_GROUP_SPACING);
+({ DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE: closure_6, FileUploadErrorTypes: error } =
+  MESSAGE_GROUP_SPACING);
 let closure_8 = new timestampDefault("CloudUploader(Native).tsx");
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.MediaManager);
 _fileSizeDefault;
@@ -32,7 +33,7 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
     return super.upload;
   }
   self = this;
-  return self(function*() {
+  return self(function* () {
     if (store === 2) {
       store = 3;
       HermesBuiltin.throwTypeError();
@@ -74,69 +75,72 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
             closure_0 = closure_1_1(closure_1_2[6]).backgroundTaskIdentifierInvalid;
             onceResult = closure_1_0;
             onceResult = closure_1_3;
-            onceResult = closure_1_0.once("start", closure_1_3(function*() {
-              if (dependencyMap === 2) {
-                dependencyMap = 3;
-                HermesBuiltin.throwTypeError();
-              } else if (tmp4 === 3) {
-                if (arg0 === 1) {
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
+            onceResult = closure_1_0.once(
+              "start",
+              closure_1_3(function* () {
+                if (dependencyMap === 2) {
+                  dependencyMap = 3;
+                  HermesBuiltin.throwTypeError();
+                } else if (tmp4 === 3) {
+                  if (arg0 === 1) {
+                    throw arg1;
+                  } else if (arg0 === 2) {
+                    let obj = { value: null, done: true };
+                    obj[0] = arg1;
+                    return obj;
+                  } else {
+                    return { value: "HermesInternal", done: null };
+                  }
                 } else {
-                  return { value: "HermesInternal", done: null };
-                }
-              } else {
-                try {
-                  dependencyMap = 2;
-                  if (0 === length) {
-                    if (arg0 === 1) {
+                  try {
+                    dependencyMap = 2;
+                    if (0 === length) {
+                      if (arg0 === 1) {
+                        dependencyMap = 3;
+                        throw arg1;
+                      } else if (arg0 === 2) {
+                        dependencyMap = 3;
+                        obj = { value: null, done: true };
+                        obj[0] = arg1;
+                        return obj;
+                      } else {
+                        let callback = tmp2;
+                        obj1 = { title: null, content: null };
+                        const intl = callback(1236).intl;
+                        obj1[0] = intl.string(callback(1236).t["B/HSDd"]);
+                        const intl2 = callback(1236).intl;
+                        const obj2 = { count: null };
+                        obj2[0] = length.length;
+                        obj1[1] = intl2.formatToPlainString(callback(1236).t.D0noUt, obj2);
+                        dependencyMap = 1;
+                        const obj3 = { value: null, done: false };
+                        obj3[0] = files(7500).startBackgroundTask(obj1);
+                        return obj3;
+                      }
+                    } else if (arg0 === 1) {
                       dependencyMap = 3;
                       throw arg1;
                     } else if (arg0 === 2) {
                       dependencyMap = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
+                      const obj4 = { value: null, done: true };
+                      obj4[0] = arg1;
+                      return obj4;
                     } else {
-                      let callback = tmp2;
-                      obj1 = { title: null, content: null };
-                      const intl = callback(1236).intl;
-                      obj1[0] = intl.string(callback(1236).t["B/HSDd"]);
-                      const intl2 = callback(1236).intl;
-                      const obj2 = { count: null };
-                      obj2[0] = length.length;
-                      obj1[1] = intl2.formatToPlainString(callback(1236).t.D0noUt, obj2);
-                      dependencyMap = 1;
-                      const obj3 = { value: null, done: false };
-                      obj3[0] = files(7500).startBackgroundTask(obj1);
-                      return obj3;
+                      callback = arg1;
+                      if (closure_1_0._aborted) {
+                        obj = files(7500);
+                        obj.endBackgroundTask(closure_1_0);
+                      }
+                      dependencyMap = 3;
+                      return { value: "HermesInternal", done: null };
                     }
-                  } else if (arg0 === 1) {
-                    dependencyMap = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    dependencyMap = 3;
-                    const obj4 = { value: null, done: true };
-                    obj4[0] = arg1;
-                    return obj4;
-                  } else {
-                    callback = arg1;
-                    if (closure_1_0._aborted) {
-                      obj = files(7500);
-                      obj.endBackgroundTask(closure_1_0);
-                    }
-                    dependencyMap = 3;
-                    return { value: "HermesInternal", done: null };
+                  } catch (tmp13) {
+                    dependencyMap = tmp;
+                    throw tmp13;
                   }
-                } catch (tmp13) {
-                  dependencyMap = tmp;
-                  throw tmp13;
                 }
-              }
-            }));
+              }),
+            );
             function onCompleteTask() {
               closure_2_1(closure_2_2[6]).endBackgroundTask(closure_0);
               closure_0.removeListener("complete", files);
@@ -325,7 +329,7 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
 };
 prototype["startUpload"] = function startUpload() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -464,47 +468,50 @@ prototype["observeCompressionProgress"] = function observeCompressionProgress(fi
     }
   });
   let mediaEventSubscriptions = this.mediaEventSubscriptions;
-  let result = mediaEventSubscriptions.set(this._file.id, nativeEventEmitter.addListener("compression-progress", (uri) => {
-    uri = uri.uri;
-    let obj = self;
-    const uploadItems = self.uploadItems;
-    if (uploadItems.has(uri)) {
-      const uploadItems2 = obj.uploadItems;
-      uploadItems2.get(uri).compressionProgress = uri.progress;
-      const uploadItems3 = obj.uploadItems;
-      const items = [];
-      HermesBuiltin.arraySpread(uploadItems3.values(), 0);
-      const meanByResult = closure_1_1(closure_1_2[16]).meanBy(items, "compressionProgress");
-      if (meanByResult >= 100) {
-        const mediaEventSubscriptions = obj.mediaEventSubscriptions;
-        const value = mediaEventSubscriptions.get(obj._file.id);
-        if (value != null) {
-          value.remove();
+  let result = mediaEventSubscriptions.set(
+    this._file.id,
+    nativeEventEmitter.addListener("compression-progress", (uri) => {
+      uri = uri.uri;
+      let obj = self;
+      const uploadItems = self.uploadItems;
+      if (uploadItems.has(uri)) {
+        const uploadItems2 = obj.uploadItems;
+        uploadItems2.get(uri).compressionProgress = uri.progress;
+        const uploadItems3 = obj.uploadItems;
+        const items = [];
+        HermesBuiltin.arraySpread(uploadItems3.values(), 0);
+        const meanByResult = closure_1_1(closure_1_2[16]).meanBy(items, "compressionProgress");
+        if (meanByResult >= 100) {
+          const mediaEventSubscriptions = obj.mediaEventSubscriptions;
+          const value = mediaEventSubscriptions.get(obj._file.id);
+          if (value != null) {
+            value.remove();
+          }
+          const mediaEventSubscriptions2 = obj.mediaEventSubscriptions;
+          mediaEventSubscriptions2.delete(obj._file.id);
+          const uploadItems4 = obj.uploadItems;
+          uploadItems4.clear();
+          const items1 = obj._file.items;
+          if (items1 != null) {
+            const item = items1.forEach((item) => {
+              item.item.compressionProgress = 100;
+            });
+          }
+          obj = {};
+          const merged = Object.assign(obj._file);
+          obj.compressionProgress = 100;
+          obj._file = obj;
+        } else {
+          obj = {};
+          const merged1 = Object.assign(obj._file);
+          obj.compressionProgress = meanByResult;
+          obj._file = obj;
         }
-        const mediaEventSubscriptions2 = obj.mediaEventSubscriptions;
-        mediaEventSubscriptions2.delete(obj._file.id);
-        const uploadItems4 = obj.uploadItems;
-        uploadItems4.clear();
-        const items1 = obj._file.items;
-        if (items1 != null) {
-          const item = items1.forEach((item) => {
-            item.item.compressionProgress = 100;
-          });
-        }
-        obj = {};
-        const merged = Object.assign(obj._file);
-        obj.compressionProgress = 100;
-        obj._file = obj;
-      } else {
-        obj = {};
-        const merged1 = Object.assign(obj._file);
-        obj.compressionProgress = meanByResult;
-        obj._file = obj;
+        obj.emit("compression-progress", obj._file);
+        const obj2 = closure_1_1(closure_1_2[16]);
       }
-      obj.emit("compression-progress", obj._file);
-      const obj2 = closure_1_1(closure_1_2[16]);
-    }
-  }));
+    }),
+  );
 };
 const tmp5 = new timestampDefault("CloudUploader(Native).tsx");
 let result = require("set").fileFinishedImporting("lib/uploader/native/CloudUploader.tsx");

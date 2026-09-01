@@ -146,8 +146,7 @@ function handleRelationshipAddOrUpdate(relationship) {
 let closure_7 = {};
 let map = new Map();
 const Store = initializeDefault.Store;
-class GamePartyStore extends Store {
-}
+class GamePartyStore extends Store {}
 const prototype = GamePartyStore.prototype;
 prototype["initialize"] = function initialize() {
   const items = [closure_4];
@@ -299,7 +298,7 @@ const gamePartyStore = new GamePartyStore(dispatcherDefault, {
         continue;
       }
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("stores/GamePartyStore.tsx");
 

@@ -31,7 +31,13 @@ function VoiceUsers(arg0) {
     obj[0] = Button.AvatarSizes.XSMALL;
     obj[1] = substr.map((username) => username.username);
     obj[2] = substr.length;
-    obj[3] = substr.map((id) => closure_1_11(closure_1_0(closure_1_2[11]).Avatar, { size: closure_1_0(closure_1_2[11]).AvatarSizes.XSMALL, user: id, guildId: closure_0, animate: false }, id.id));
+    obj[3] = substr.map((id) =>
+      closure_1_11(
+        closure_1_0(closure_1_2[11]).Avatar,
+        { size: closure_1_0(closure_1_2[11]).AvatarSizes.XSMALL, user: id, guildId: closure_0, animate: false },
+        id.id,
+      ),
+    );
     obj[1] = callback(AvatarPile.AvatarPile, obj);
     tmp = callback(View, obj);
   }
@@ -47,7 +53,14 @@ function LiveTag() {
   return callback(View, obj);
 }
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" }, streamPreviewShadow: null, streamPreview: null, streamPreviewDarkGradient: null, streamPreviewGradient: null, streamPreviewBorder: null };
+createCacheKey = {
+  voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" },
+  streamPreviewShadow: null,
+  streamPreview: null,
+  streamPreviewDarkGradient: null,
+  streamPreviewGradient: null,
+  streamPreviewBorder: null,
+};
 createCacheKey = { borderRadius: ThemesDefault.radii.sm };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_MEDIUM);
 createCacheKey[1] = createCacheKey;
@@ -55,15 +68,55 @@ createCacheKey[2] = { width: 72, height: 44, borderRadius: ThemesDefault.radii.s
 createCacheKey[3] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.8 };
 createCacheKey[4] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.2 };
 let obj1 = { width: 72, height: 44, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-createCacheKey[5] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[5] = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.sm,
+};
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { tag: null, tagText: null };
-let obj2 = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.sm };
-obj3[0] = { paddingHorizontal: 4, paddingVertical: 1, borderBottomRightRadius: ThemesDefault.radii.xs, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, position: "absolute", top: 0, left: 0 };
+let obj2 = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.sm,
+};
+obj3[0] = {
+  paddingHorizontal: 4,
+  paddingVertical: 1,
+  borderBottomRightRadius: ThemesDefault.radii.xs,
+  overflow: "hidden",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.unsafe_rawColors.RED_400,
+  position: "absolute",
+  top: 0,
+  left: 0,
+};
 createCacheKey = { textAlign: "center", color: ThemesDefault.unsafe_rawColors.WHITE, includeFontPadding: false };
 obj3[1] = createCacheKey;
 let closure_15 = createCacheKey.createStyles(obj3);
-let obj4 = { paddingHorizontal: 4, paddingVertical: 1, borderBottomRightRadius: ThemesDefault.radii.xs, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, position: "absolute", top: 0, left: 0 };
+let obj4 = {
+  paddingHorizontal: 4,
+  paddingVertical: 1,
+  borderBottomRightRadius: ThemesDefault.radii.xs,
+  overflow: "hidden",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.unsafe_rawColors.RED_400,
+  position: "absolute",
+  top: 0,
+  left: 0,
+};
 const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerGuildVoiceState.tsx");
 
 export const GuildVoiceState = function GuildVoiceState(arg0) {
@@ -77,7 +130,7 @@ export const GuildVoiceState = function GuildVoiceState(arg0) {
   if (!tmp2) {
     return null;
   } else {
-    const items = [tmp.voiceContainer, ];
+    const items = [tmp.voiceContainer];
     let num = 32;
     if (null != streamingUser) {
       num = 48;
@@ -102,7 +155,7 @@ export const GuildVoiceState = function GuildVoiceState(arg0) {
       const obj4 = { uri: null };
       obj4[0] = previewUrl;
       obj3[1] = obj4;
-      const items1 = [tmp7(tmp3(5493), obj3), , , , ];
+      const items1 = [tmp7(tmp3(5493), obj3), , , ,];
       const obj5 = { colors: null, start: null, end: null, style: null, pointerEvents: "none" };
       obj5[0] = ["rgba(0, 0, 0, 1)", "rgba(0, 0, 0, 0)"];
       obj5[1] = { x: 0, y: 0 };
@@ -134,41 +187,55 @@ export const useVoiceUsers = function useVoiceUsers(guild) {
   isHomeDrawerChannelInChannelList = obj.useIsHomeDrawerChannelInChannelList();
   let items = [stateFromStores1, closure_8];
   const items1 = [id, isHomeDrawerChannelInChannelList];
-  const stateFromStoresArray = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStoresArray(items, () => {
-    const found = stateFromStores1.getChannels(id)[closure_1_6].filter((channel) => {
-      channel = channel.channel;
-      let tmp = channel.type === closure_1_10.GUILD_VOICE;
-      if (tmp) {
-        tmp = !closure_1_8.isGuildOrCategoryOrChannelMuted(closure_1, channel.id);
-      }
-      if (tmp) {
-        tmp = callback(channel);
-      }
-      return tmp;
-    });
-    return found.map((channel) => channel.channel.id);
-  }, items1);
+  const stateFromStoresArray = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStoresArray(
+    items,
+    () => {
+      const found = stateFromStores1.getChannels(id)[closure_1_6].filter((channel) => {
+        channel = channel.channel;
+        let tmp = channel.type === closure_1_10.GUILD_VOICE;
+        if (tmp) {
+          tmp = !closure_1_8.isGuildOrCategoryOrChannelMuted(closure_1, channel.id);
+        }
+        if (tmp) {
+          tmp = callback(channel);
+        }
+        return tmp;
+      });
+      return found.map((channel) => channel.channel.id);
+    },
+    items1,
+  );
   const obj2 = _require(isHomeDrawerChannelInChannelList[18]);
   const items2 = [closure_9];
   const items3 = [id];
-  const stateFromStores = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStores(items2, () => closure_1_9.getVoiceStates(id), items3);
+  const stateFromStores = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStores(
+    items2,
+    () => closure_1_9.getVoiceStates(id),
+    items3,
+  );
   const obj3 = _require(isHomeDrawerChannelInChannelList[18]);
   const items4 = [closure_7];
-  stateFromStores1 = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStores(items4, () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs());
+  stateFromStores1 = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStores(items4, () =>
+    blockedOrIgnoredIDs.getBlockedOrIgnoredIDs(),
+  );
   const items5 = [stateFromStoresArray, stateFromStores, guild.afkChannelId, stateFromStores1];
   const items6 = [stateFromStores, guild.afkChannelId, stateFromStoresArray];
-  const memo = stateFromStoresArray.useMemo(() => id(isHomeDrawerChannelInChannelList[19]).flatMap(stateFromStoresArray, (arg0) => {
-    if (arg0 === afkChannelId.afkChannelId) {
-      return [];
-    } else {
-      let items = table[arg0];
-      if (items == null) {
-        items = [];
-      }
-      const mapped = items.map((user) => user.user);
-      return closure_1_0(closure_1_2[20]).filterOutBlockedOrIgnoredUsers(mapped, closure_5);
-    }
-  }), items5);
+  const memo = stateFromStoresArray.useMemo(
+    () =>
+      id(isHomeDrawerChannelInChannelList[19]).flatMap(stateFromStoresArray, (arg0) => {
+        if (arg0 === afkChannelId.afkChannelId) {
+          return [];
+        } else {
+          let items = table[arg0];
+          if (items == null) {
+            items = [];
+          }
+          const mapped = items.map((user) => user.user);
+          return closure_1_0(closure_1_2[20]).filterOutBlockedOrIgnoredUsers(mapped, closure_5);
+        }
+      }),
+    items5,
+  );
   const memo1 = stateFromStoresArray.useMemo(() => {
     c0 = null;
     c1 = null;

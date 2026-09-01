@@ -5,7 +5,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 noopAll;
 let c4 = "GuildRoleSubscriptionTrialActiveUserLimitSelect";
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormTrialActiveUserLimitPicker.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/FormTrialActiveUserLimitPicker.tsx",
+);
 
 export default function FormTrialActiveUserLimitPicker(activeTrialUserlimit) {
   const str = activeTrialUserlimit.activeTrialUserlimit;
@@ -33,6 +35,6 @@ export default function FormTrialActiveUserLimitPicker(activeTrialUserlimit) {
       obj[3] = str;
       obj.openLazy(str(paths[7])(paths[6], paths.paths), closure_1_4, obj);
     },
-    disabled: activeTrialUserlimit.disabled
+    disabled: activeTrialUserlimit.disabled,
   });
-};
+}

@@ -10,24 +10,67 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { progressBarContainer: null, progressBar: null, progressBarScrubber: null, progressBarTrack: null, progressBarFill: null, progressBarGradientFill: null };
-createCacheKey = { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 + 34 };
+createCacheKey = {
+  progressBarContainer: null,
+  progressBar: null,
+  progressBarScrubber: null,
+  progressBarTrack: null,
+  progressBarFill: null,
+  progressBarGradientFill: null,
+};
+createCacheKey = {
+  display: "flex",
+  alignItems: "center",
+  width: "100%",
+  marginTop: 40,
+  paddingHorizontal: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 + 34,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 54, maxWidth: 660, width: "100%" };
-createCacheKey[2] = { height: 8, top: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 - 4, marginHorizontal: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 + 2 };
-let obj1 = { height: 8, top: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 - 4, marginHorizontal: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 + 2 };
-createCacheKey[3] = { borderRadius: 8, height: "100%", width: "100%", position: "absolute", zIndex: 0, backgroundColor: ThemesDefault.colors.SPINE_DEFAULT };
+createCacheKey[2] = {
+  height: 8,
+  top: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 - 4,
+  marginHorizontal: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 + 2,
+};
+let obj1 = {
+  height: 8,
+  top: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 - 4,
+  marginHorizontal: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 + 2,
+};
+createCacheKey[3] = {
+  borderRadius: 8,
+  height: "100%",
+  width: "100%",
+  position: "absolute",
+  zIndex: 0,
+  backgroundColor: ThemesDefault.colors.SPINE_DEFAULT,
+};
 createCacheKey[4] = { borderRadius: 8, position: "absolute", height: "100%", left: 0, zIndex: 1 };
 createCacheKey[5] = { height: "100%", width: "100%", borderRadius: 8 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let items = [, , , ];
+let items = [, , ,];
 ({ NONE: arr[0], TIER_1: arr[1], TIER_2: arr[2], TIER_3: arr[3] } = BoostedGuildTiers);
 let closure_12 = { stiffness: 27, damping: 10 };
-let closure_13 = { code: "function GuildBoostingMarketingProgressBarTsx1(){const{width}=this.__closure;return{width:width.get()+\"%\"};}" };
-let closure_14 = { code: "function GuildBoostingMarketingProgressBarTsx2(){const{width}=this.__closure;return width.get();}" };
-let closure_15 = { code: "function GuildBoostingMarketingProgressBarTsx3(width){const{BoostedGuildTiers,TIER_REACHED_OFFSET,revealedTier,runOnJS,setRevealedTier}=this.__closure;let tier=BoostedGuildTiers.NONE;if(width>=33.33-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_1;if(width>=66.67-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_2;if(width>=100-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_3;if(tier!==revealedTier)runOnJS(setRevealedTier)(tier);}" };
-let obj2 = { borderRadius: 8, height: "100%", width: "100%", position: "absolute", zIndex: 0, backgroundColor: ThemesDefault.colors.SPINE_DEFAULT };
-let result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBar.tsx");
+let closure_13 = {
+  code: 'function GuildBoostingMarketingProgressBarTsx1(){const{width}=this.__closure;return{width:width.get()+"%"};}',
+};
+let closure_14 = {
+  code: "function GuildBoostingMarketingProgressBarTsx2(){const{width}=this.__closure;return width.get();}",
+};
+let closure_15 = {
+  code: "function GuildBoostingMarketingProgressBarTsx3(width){const{BoostedGuildTiers,TIER_REACHED_OFFSET,revealedTier,runOnJS,setRevealedTier}=this.__closure;let tier=BoostedGuildTiers.NONE;if(width>=33.33-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_1;if(width>=66.67-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_2;if(width>=100-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_3;if(tier!==revealedTier)runOnJS(setRevealedTier)(tier);}",
+};
+let obj2 = {
+  borderRadius: 8,
+  height: "100%",
+  width: "100%",
+  position: "absolute",
+  zIndex: 0,
+  backgroundColor: ThemesDefault.colors.SPINE_DEFAULT,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBar.tsx",
+);
 
 export default function ProgressBar(guild) {
   guild = guild.guild;
@@ -79,13 +122,22 @@ export default function ProgressBar(guild) {
       const obj = guild(sharedValue[11]);
     }
   };
-  obj = { BoostedGuildTiers, TIER_REACHED_OFFSET: 5, revealedTier: first, runOnJS: guild(sharedValue[11]).runOnJS, setRevealedTier: tmp9 };
+  obj = {
+    BoostedGuildTiers,
+    TIER_REACHED_OFFSET: 5,
+    revealedTier: first,
+    runOnJS: guild(sharedValue[11]).runOnJS,
+    setRevealedTier: tmp9,
+  };
   fn2.__closure = obj;
   fn2.__workletHash = 4844648302516;
   fn2.__initData = closure_15;
   const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
   const items1 = [guild];
-  fillFactor = React.useMemo(() => guild(sharedValue[12]).getGuildBoostingProgressBarFillFactor(guild), items1).fillFactor;
+  fillFactor = React.useMemo(
+    () => guild(sharedValue[12]).getGuildBoostingProgressBarFillFactor(guild),
+    items1,
+  ).fillFactor;
   const items2 = [fillFactor, sharedValue, stateFromStores];
   const effect = React.useEffect(() => {
     let result = 100 * fillFactor;
@@ -117,8 +169,17 @@ export default function ProgressBar(guild) {
     str = tmp2(tmp3[8]).unsafe_rawColors.PRIMARY_160;
   }
   const items4 = [str, "#AB77F2"];
-  obj3[1] = closure_8(tmp16, { useAngle: true, angle: 90, colors: items4, locations: [0.1577, 0.9905], style: tmp.progressBarGradientFill });
-  const items5 = [closure_8(stateFromStores(sharedValue[11]).View, obj3), closure_8(fillFactor, { style: tmp.progressBarTrack })];
+  obj3[1] = closure_8(tmp16, {
+    useAngle: true,
+    angle: 90,
+    colors: items4,
+    locations: [0.1577, 0.9905],
+    style: tmp.progressBarGradientFill,
+  });
+  const items5 = [
+    closure_8(stateFromStores(sharedValue[11]).View, obj3),
+    closure_8(fillFactor, { style: tmp.progressBarTrack }),
+  ];
   obj2[1] = items5;
   const items6 = [
     closure_9(fillFactor, obj2),
@@ -130,10 +191,10 @@ export default function ProgressBar(guild) {
       }
       obj[4] = tmp4;
       return closure_1_8(stateFromStores(sharedValue[7]), obj, tier);
-    })
+    }),
   ];
   obj1[1] = items6;
   obj[1] = closure_9(fillFactor, obj1);
   return closure_8(fillFactor, obj);
-};
+}
 export const PROGRESS_BAR_SPACING = 40;

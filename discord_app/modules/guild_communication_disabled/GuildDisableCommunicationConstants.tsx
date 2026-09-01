@@ -24,9 +24,24 @@ function getFriendlyDurationString(arg0) {
     return intl.formatToPlainString(getSystemLocale.t.EmoBD2, { weeks: 1 });
   }
 }
-let obj = { DURATION_60_SEC: 60, [60]: "DURATION_60_SEC", DURATION_5_MIN: 300, [300]: "DURATION_5_MIN", DURATION_10_MIN: 600, [600]: "DURATION_10_MIN", DURATION_1_HOUR: 3600, [3600]: "DURATION_1_HOUR", DURATION_1_DAY: 86400, [86400]: "DURATION_1_DAY", DURATION_1_WEEK: 604800, [604800]: "DURATION_1_WEEK" };
+let obj = {
+  DURATION_60_SEC: 60,
+  [60]: "DURATION_60_SEC",
+  DURATION_5_MIN: 300,
+  [300]: "DURATION_5_MIN",
+  DURATION_10_MIN: 600,
+  [600]: "DURATION_10_MIN",
+  DURATION_1_HOUR: 3600,
+  [3600]: "DURATION_1_HOUR",
+  DURATION_1_DAY: 86400,
+  [86400]: "DURATION_1_DAY",
+  DURATION_1_WEEK: 604800,
+  [604800]: "DURATION_1_WEEK",
+};
 const articleURL = importDefaultResult.getArticleURL(require("ME").HelpdeskArticles.DISABLE_GUILD_COMMUNICATION);
-const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/GuildDisableCommunicationConstants.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_communication_disabled/GuildDisableCommunicationConstants.tsx",
+);
 
 export const DisableCommunicationDuration = obj;
 export { getFriendlyDurationString };

@@ -27,11 +27,18 @@ class FacepileGroupDMAvatar {
     }
     tmp7 = require("Button").AVATAR_SIZE_MAP[pileSizeOverride];
     closure_1 = tmp7;
-    items1 = [, ];
+    items1 = [,];
     items1[0] = tmp4;
     items1[1] = tmp7;
-    obj = { style: items2, accessible, accessibilityLabel, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-    items2 = [, ];
+    obj = {
+      style: items2,
+      accessible,
+      accessibilityLabel,
+      accessibilityElementsHidden: true,
+      importantForAccessibility: "no-hide-descendants",
+      children: null,
+    };
+    items2 = [,];
     items2[0] = memo;
     items2[1] = style;
     tmp11 = jsx;
@@ -44,7 +51,12 @@ class FacepileGroupDMAvatar {
       const sqrtResult1 = Math.sqrt(2 * Math.pow(diff, 2));
       const sum1 = -sqrtResult - (sum - sqrtResult) - sqrtResult1 + (sqrtResult1 - diff);
       obj = { nativeCutouts: null };
-      obj = { shape: callback(table[6]).CutoutShape.Circle, x: table - result1 - sum1, y: table - result1 - sum1, size: result1 };
+      obj = {
+        shape: callback(table[6]).CutoutShape.Circle,
+        x: table - result1 - sum1,
+        y: table - result1 - sum1,
+        size: result1,
+      };
       const items = [obj];
       obj[0] = items;
       return obj;
@@ -63,9 +75,17 @@ class FacepileGroupDMAvatar {
       obj3[0] = users[0];
     }
     merged = Object.assign(obj3);
-    items3 = [, ];
+    items3 = [,];
     items3[0] = tmp11(require("Button").Avatar, obj1);
-    obj4 = { status, statusSizeOverride: require("Button").StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "Ctg7PUHcQmZu" };
+    obj4 = {
+      status,
+      statusSizeOverride: require("Button").StatusSizes.REFRESH_MEDIUM_10,
+      autoStatusCutout: true,
+      style: tmp.secondFace,
+      size: pileSizeOverride,
+      guildId: "Array",
+      animate: "Ctg7PUHcQmZu",
+    };
     obj4[6] = animate;
     if (null == users) {
       obj5 = { source: null };
@@ -91,7 +111,10 @@ obj[require("Button").AvatarSizes.REFRESH_MEDIUM_32] = require("Button").AvatarS
 obj[require("Button").AvatarSizes.XSMALL] = require("Button").AvatarSizes.SIZE_16;
 obj[require("Button").AvatarSizes.SIZE_16] = require("Button").AvatarSizes.XXSMALL_10;
 obj[require("Button").AvatarSizes.NORMAL] = require("Button").AvatarSizes.XSMALL;
-let closure_8 = createCacheKey.createStyles({ firstFace: { position: "absolute", top: 0, left: 0 }, secondFace: { position: "absolute", bottom: 0, right: 0 } });
+let closure_8 = createCacheKey.createStyles({
+  firstFace: { position: "absolute", top: 0, left: 0 },
+  secondFace: { position: "absolute", bottom: 0, right: 0 },
+});
 let result = require("set").fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.tsx");
 
 export default function GroupDMAvatar(pileSizeOverride) {
@@ -108,7 +131,17 @@ export default function GroupDMAvatar(pileSizeOverride) {
     if (0 !== channel.recipients.length) {
       if (0 !== stateFromStoresArray.length) {
         if (1 === stateFromStoresArray.length) {
-          obj = { autoStatusCutout: true, status: null, style: null, size: null, user: null, guildId: "a", animate: 1518500249, accessible: 1859775393, accessibilityLabel: 2400959708 };
+          obj = {
+            autoStatusCutout: true,
+            status: null,
+            style: null,
+            size: null,
+            user: null,
+            guildId: "a",
+            animate: 1518500249,
+            accessible: 1859775393,
+            accessibilityLabel: 2400959708,
+          };
           obj[1] = status;
           obj[2] = style;
           obj[3] = size;
@@ -118,7 +151,16 @@ export default function GroupDMAvatar(pileSizeOverride) {
           obj[8] = accessibilityLabel;
           let tmp5 = callback(tmp(1297).Avatar, obj);
         } else {
-          obj = { status: null, style: null, size: null, animate: null, users: null, pileSizeOverride: null, accessible: null, accessibilityLabel: null };
+          obj = {
+            status: null,
+            style: null,
+            size: null,
+            animate: null,
+            users: null,
+            pileSizeOverride: null,
+            accessible: null,
+            accessibilityLabel: null,
+          };
           obj[0] = status;
           obj[1] = style;
           obj[2] = size;
@@ -133,6 +175,15 @@ export default function GroupDMAvatar(pileSizeOverride) {
       return tmp5;
     }
   }
-  tmp5 = callback(tmp(1297).Avatar, { autoStatusCutout: true, status, style, size, channel, animate, accessible, accessibilityLabel });
-};
+  tmp5 = callback(tmp(1297).Avatar, {
+    autoStatusCutout: true,
+    status,
+    style,
+    size,
+    channel,
+    animate,
+    accessible,
+    accessibilityLabel,
+  });
+}
 export { FacepileGroupDMAvatar };

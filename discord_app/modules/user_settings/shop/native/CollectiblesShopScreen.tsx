@@ -18,7 +18,8 @@ export default function CollectiblesShopScreen() {
   const shopOrientationLock = useShopOrientationLock.useShopOrientationLock();
   const obj2 = useShopOrientationLock;
   const tmp = require;
-  const giftCardMobileConsumptionHalfsheet = useGiftCardMobileConsumptionHalfsheet.useGiftCardMobileConsumptionHalfsheet();
+  const giftCardMobileConsumptionHalfsheet =
+    useGiftCardMobileConsumptionHalfsheet.useGiftCardMobileConsumptionHalfsheet();
   const params = settingNavigationRoute.params;
   let screen;
   if (params != null) {
@@ -43,4 +44,4 @@ export default function CollectiblesShopScreen() {
   }
   obj[2] = onNavigateAway;
   return jsx(CollectiblesShopInternal.CollectiblesShopV2, { analyticsSource, screen, onNavigateAway: null });
-};
+}

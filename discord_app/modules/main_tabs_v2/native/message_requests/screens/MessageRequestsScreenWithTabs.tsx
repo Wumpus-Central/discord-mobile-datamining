@@ -37,7 +37,7 @@ const memoResult = importAllResult.memo((navigation) => {
   obj[0] = intl.string(navigation(1236).t["7RFcXZ"]);
   obj[1] = constants.REQUEST;
   obj[2] = callback2(PendingMessageRequestRowDefault, { goToMessageRequestPreview: callback });
-  const items1 = [obj, ];
+  const items1 = [obj];
   obj1 = { label: null, id: null, page: null };
   const intl2 = navigation(1236).intl;
   obj1[0] = intl2.string(navigation(1236).t.ulKXHp);
@@ -48,13 +48,29 @@ const memoResult = importAllResult.memo((navigation) => {
   obj[1] = tmp2[0];
   const segmentedControlState = obj.useSegmentedControlState(obj);
   const obj2 = { style: tmp.container, children: null };
-  const items2 = [callback2(View, { style: tmp.tabContainer, onLayout: callback1, children: callback2(navigation(9762).SegmentedControl, { state: segmentedControlState }) }), , ];
-  const obj3 = { style: tmp.tabContainer, onLayout: callback1, children: callback2(navigation(9762).SegmentedControl, { state: segmentedControlState }) };
-  items2[1] = callback2(View, { style: tmp.messageRequestContent, children: callback2(navigation(9268).SegmentedControlPages, { state: segmentedControlState }) });
+  const items2 = [
+    callback2(View, {
+      style: tmp.tabContainer,
+      onLayout: callback1,
+      children: callback2(navigation(9762).SegmentedControl, { state: segmentedControlState }),
+    }),
+    ,
+  ];
+  const obj3 = {
+    style: tmp.tabContainer,
+    onLayout: callback1,
+    children: callback2(navigation(9762).SegmentedControl, { state: segmentedControlState }),
+  };
+  items2[1] = callback2(View, {
+    style: tmp.messageRequestContent,
+    children: callback2(navigation(9268).SegmentedControlPages, { state: segmentedControlState }),
+  });
   items2[2] = callback2(navigation(11463).TTIFirstContentfulPaint, { label: "message_requests" });
   obj2[1] = items2;
   return callback3(View, obj2);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsScreenWithTabs.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/message_requests/screens/MessageRequestsScreenWithTabs.tsx",
+);
 
 export default memoResult;

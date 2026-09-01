@@ -8,13 +8,47 @@ import importAllResult from "../../../../../../_runtime/00019_noop.js";
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles((height) => {
-  let obj = { container: { flexDirection: "row", alignItems: "center", marginLeft: -2 }, overflowCircle: null, wrapper: null, badge: null, audienceBadge: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.round, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", height, width: height };
+  let obj = {
+    container: { flexDirection: "row", alignItems: "center", marginLeft: -2 },
+    overflowCircle: null,
+    wrapper: null,
+    badge: null,
+    audienceBadge: null,
+  };
+  obj = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+    borderRadius: ThemesDefault.radii.round,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    height,
+    width: height,
+  };
   obj[1] = obj;
-  obj = { borderRadius: ThemesDefault.radii.round, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 2 };
+  obj = {
+    borderRadius: ThemesDefault.radii.round,
+    borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    borderWidth: 2,
+  };
   obj[2] = obj;
-  obj[3] = { borderRadius: ThemesDefault.radii.round, paddingHorizontal: 8, display: "flex", flexDirection: "row", alignItems: "center", height };
-  obj1 = { borderRadius: ThemesDefault.radii.round, paddingHorizontal: 8, display: "flex", flexDirection: "row", alignItems: "center", height };
+  obj[3] = {
+    borderRadius: ThemesDefault.radii.round,
+    paddingHorizontal: 8,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    height,
+  };
+  obj1 = {
+    borderRadius: ThemesDefault.radii.round,
+    paddingHorizontal: 8,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    height,
+  };
   obj[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
   return obj;
 });
@@ -34,7 +68,7 @@ const memoResult = importAllResult.memo(function VoiceOrStageSummaryRow(layout) 
   let tmp4 = callback(size);
   closure_4 = tmp4;
   obj = { style: items, children: null };
-  items = [tmp4.container, ];
+  items = [tmp4.container];
   obj = { height: size + 4 };
   items[1] = obj;
   let items1 = [
@@ -42,7 +76,7 @@ const memoResult = importAllResult.memo(function VoiceOrStageSummaryRow(layout) 
       if (arg1 < max) {
         if (arg1 === tmp - 1) {
           if (closure_3 > 0) {
-            const items = [lib.wrapper, ];
+            const items = [lib.wrapper];
             let obj = 0 !== arg1;
             if (obj) {
               obj = { marginLeft: -12 };
@@ -64,7 +98,7 @@ const memoResult = importAllResult.memo(function VoiceOrStageSummaryRow(layout) 
           }
           return tmp3Result;
         }
-        const items1 = [lib.wrapper, ];
+        const items1 = [lib.wrapper];
         obj = 0 !== arg1;
         if (obj) {
           obj = { marginLeft: -12 };
@@ -82,23 +116,22 @@ const memoResult = importAllResult.memo(function VoiceOrStageSummaryRow(layout) 
         const tmp4 = closure_3;
       }
     }),
-
   ];
   let tmp8Result = null != audienceCount && audienceCount > 0;
   if (tmp8Result) {
-    const items2 = [tmp4.wrapper, ];
+    const items2 = [tmp4.wrapper];
     obj1 = { style: null, children: null };
     items2[1] = users.length > 0 && { marginLeft: -12 };
     obj1[0] = items2;
     let obj2 = { style: null, children: null };
-    const items3 = [, ];
+    const items3 = [,];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
     obj2[0] = items3;
     let obj3 = { size: null, style: null, source: null };
     obj3[0] = tmp(tmp2[7]).Icon.Sizes.CUSTOM;
     obj3[1] = { height: 14, width: 14 };
     obj3[2] = importDefault(tmp2[8]);
-    const items4 = [closure_4(tmp(tmp2[7]).Icon, obj3), ];
+    const items4 = [closure_4(tmp(tmp2[7]).Icon, obj3)];
     let obj4 = { variant: "text-sm/bold", style: null, children: null };
     obj4[1] = { marginLeft: 4 };
     obj4[2] = audienceCount;
@@ -112,6 +145,8 @@ const memoResult = importAllResult.memo(function VoiceOrStageSummaryRow(layout) 
   obj[1] = items1;
   return closure_5(closure_3, obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/VoiceOrStageSummaryRow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/guild_channels/VoiceOrStageSummaryRow.tsx",
+);
 
 export default memoResult;

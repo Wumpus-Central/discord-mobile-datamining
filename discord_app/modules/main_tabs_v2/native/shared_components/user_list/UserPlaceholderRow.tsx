@@ -16,12 +16,26 @@ let closure_8 = createCacheKey.createStyles((height) => {
   obj = { marginHorizontal: ThemesDefault.space.PX_16, flex: 1 };
   obj[1] = obj;
   obj[2] = { alignItems: "center", flexDirection: "row" };
-  obj[3] = { width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-  obj1 = { width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+  obj[3] = {
+    width: ThemesDefault.space.PX_32,
+    height: ThemesDefault.space.PX_32,
+    borderRadius: ThemesDefault.radii.lg,
+    overflow: "hidden",
+    backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  };
+  obj1 = {
+    width: ThemesDefault.space.PX_32,
+    height: ThemesDefault.space.PX_32,
+    borderRadius: ThemesDefault.radii.lg,
+    overflow: "hidden",
+    backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  };
   obj[4] = { height: 20, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
   return obj;
 });
-let closure_9 = { code: "function UserPlaceholderRowTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
+let closure_9 = {
+  code: "function UserPlaceholderRowTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
+};
 const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
   let flag = animate.animate;
   if (flag === undefined) {
@@ -52,7 +66,9 @@ const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
       const withTimingResult = sharedValue(closure_1_2[8]).withTiming(0.3, obj);
       obj = { duration: null };
       obj[0] = 2 * sharedValue(closure_1_2[9]).timingSlowDuration;
-      const result = set(obj.withRepeat(obj2.withSequence(withTimingResult, sharedValue(closure_1_2[8]).withTiming(1, obj)), -1, true));
+      const result = set(
+        obj.withRepeat(obj2.withSequence(withTimingResult, sharedValue(closure_1_2[8]).withTiming(1, obj)), -1, true),
+      );
       const obj5 = sharedValue(closure_1_2[8]);
     } else {
       const result1 = set(1);
@@ -68,11 +84,11 @@ const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
   obj = { style: items2, collapsable: false, children: null };
   items2 = [tmp3.row, animatedStyle];
   obj = { style: tmp3.placeholderAvatar };
-  const items3 = [callback(View, obj), ];
+  const items3 = [callback(View, obj)];
   obj1 = { style: tmp3.rowInner, children: null };
   let obj2 = { style: tmp3.rowHeaderWrapper, children: null };
   let obj3 = { style: null };
-  const items4 = [tmp3.placeholderText, ];
+  const items4 = [tmp3.placeholderText];
   const obj4 = { width: null };
   let result = 10000 * Math.sin(row);
   obj4[0] = "" + 40 * (result - Math.floor(result)) + 40 + "%";
@@ -84,6 +100,8 @@ const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
   obj[2] = items3;
   return callback2(flag(4217).View, obj);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx",
+);
 
 export default memoResult;

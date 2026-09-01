@@ -9,8 +9,20 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-let obj = { PLAN_SELECT: "PremiumGiftPlanSelect", REWARD_SELECT: "GiftingSKUSelect", CUSTOMIZATION: "PremiumGiftCustomization", SUCCESS: "PremiumGiftSuccess", GIFTING_BADGE: "GiftingBadgePostPurchase" };
-obj = { [PLAN_SELECT]: require("PaymentFlowStep").PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: require("PaymentFlowStep").PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: require("PaymentFlowStep").PaymentFlowStep.PLAN_SELECT, [SUCCESS]: require("PaymentFlowStep").PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: require("PaymentFlowStep").PaymentFlowStep.CONFIRM };
+let obj = {
+  PLAN_SELECT: "PremiumGiftPlanSelect",
+  REWARD_SELECT: "GiftingSKUSelect",
+  CUSTOMIZATION: "PremiumGiftCustomization",
+  SUCCESS: "PremiumGiftSuccess",
+  GIFTING_BADGE: "GiftingBadgePostPurchase",
+};
+obj = {
+  [PLAN_SELECT]: require("PaymentFlowStep").PaymentFlowStep.SKU_SELECT,
+  [REWARD_SELECT]: require("PaymentFlowStep").PaymentFlowStep.REWARD_SKU_SELECT,
+  [CUSTOMIZATION]: require("PaymentFlowStep").PaymentFlowStep.PLAN_SELECT,
+  [SUCCESS]: require("PaymentFlowStep").PaymentFlowStep.CONFIRM,
+  [GIFTING_BADGE]: require("PaymentFlowStep").PaymentFlowStep.CONFIRM,
+};
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = obj);
 obj = { header: { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
 let closure_9 = createCacheKey.createStyles(obj);
@@ -70,7 +82,10 @@ export default function PremiumGiftModal(analyticsLocations) {
       obj[1] = tmp11Result.getHeaderCloseButton(callback);
       obj[2] = tmp10.header;
       obj[3] = function render() {
-        return callback2(_undefined(_undefined2[11]), { shouldUseDMWishlistGiftingDesign: true, isLoadingWishlist: false });
+        return callback2(_undefined(_undefined2[11]), {
+          shouldUseDMWishlistGiftingDesign: true,
+          isLoadingWishlist: false,
+        });
       };
       obj1 = obj;
     } else {
@@ -111,7 +126,12 @@ export default function PremiumGiftModal(analyticsLocations) {
     obj3[2] = tmp10.header;
     obj3[3] = function render(arg0) {
       ({ defaultHighlightedReward, allRewards, claimableRewards, onSelect } = arg0);
-      return callback2(_undefined(_undefined2[12]), { defaultHighlightedReward, allRewards, claimableRewards, onSelect });
+      return callback2(_undefined(_undefined2[12]), {
+        defaultHighlightedReward,
+        allRewards,
+        claimableRewards,
+        onSelect,
+      });
     };
     obj2[obj.REWARD_SELECT] = obj3;
     if (initialRoute === obj.CUSTOMIZATION) {
@@ -150,7 +170,7 @@ export default function PremiumGiftModal(analyticsLocations) {
           const items = [callback2(5973).GIFTING_BADGE_POST_PURCHASE];
           obj[0] = items;
           obj.openGiftModal(obj);
-        }
+        },
       });
     };
     obj2[obj.GIFTING_BADGE] = obj6;
@@ -160,7 +180,16 @@ export default function PremiumGiftModal(analyticsLocations) {
     if (tmp11Result6.isPremiumGiftingSupported()) {
       const obj7 = { value: null, children: null };
       obj7[0] = contextDefault(analyticsLocations).analyticsLocations;
-      const obj8 = { basePurchaseAnalytics: null, recipientUserId: null, onClose: null, setCurrentAnalyticsStep: null, premiumType: null, planInterval: null, initialOrder: null, children: null };
+      const obj8 = {
+        basePurchaseAnalytics: null,
+        recipientUserId: null,
+        onClose: null,
+        setCurrentAnalyticsStep: null,
+        premiumType: null,
+        planInterval: null,
+        initialOrder: null,
+        children: null,
+      };
       obj8[0] = tmp4;
       obj8[1] = recipientUserId;
       obj8[2] = callback;
@@ -196,5 +225,5 @@ export default function PremiumGiftModal(analyticsLocations) {
   } else {
     PLAN_SELECT = obj.PLAN_SELECT;
   }
-};
+}
 export const PremiumGiftScreens = obj;

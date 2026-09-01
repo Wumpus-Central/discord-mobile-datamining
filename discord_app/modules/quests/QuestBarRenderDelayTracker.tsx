@@ -8,8 +8,7 @@ import _modDef10937 from "../app_state/DiscordAppState.native.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let c4 = 30000;
-class QuestBarRenderDelayTracker {
-}
+class QuestBarRenderDelayTracker {}
 const prototype = QuestBarRenderDelayTracker.prototype;
 prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
   const self = this;
@@ -25,7 +24,7 @@ prototype["sendMetric"] = function sendMetric(arg0, arg1, arg2) {
     obj = { name: null, tags: null };
     obj[0] = set2.MetricEvents.QUEST_BAR_RENDER_DELAY;
     const _HermesInternal = HermesInternal;
-    const items = ["quest_id:" + arg0, ];
+    const items = ["quest_id:" + arg0];
     const _HermesInternal2 = HermesInternal;
     items[1] = "timeout:" + arg1;
     obj[1] = items;

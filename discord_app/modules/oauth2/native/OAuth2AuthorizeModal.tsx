@@ -9,17 +9,51 @@ import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
-createCacheKey = { container: null, contentContainer: null, titleContainer: null, titleContainerBorder: null, title: null };
+createCacheKey = {
+  container: null,
+  contentContainer: null,
+  titleContainer: null,
+  titleContainerBorder: null,
+  title: null,
+};
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { padding: 16, flexDirection: "row", gap: 16 };
-createCacheKey[3] = { position: "absolute", left: 0, right: 0, bottom: 0, height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj1 = { position: "absolute", left: 0, right: 0, bottom: 0, height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[4] = { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, marginEnd: 40 };
+createCacheKey[3] = {
+  position: "absolute",
+  left: 0,
+  right: 0,
+  bottom: 0,
+  height: 1,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
+let obj1 = {
+  position: "absolute",
+  left: 0,
+  right: 0,
+  bottom: 0,
+  height: 1,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
+createCacheKey[4] = {
+  flex: 1,
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  marginEnd: 40,
+};
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let closure_9 = { code: "function OAuth2AuthorizeModalTsx1(){const{borderOpacity}=this.__closure;var _borderOpacity$get;return{opacity:(_borderOpacity$get=borderOpacity.get())!==null&&_borderOpacity$get!==void 0?_borderOpacity$get:1};}" };
-let obj2 = { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, marginEnd: 40 };
+let closure_9 = {
+  code: "function OAuth2AuthorizeModalTsx1(){const{borderOpacity}=this.__closure;var _borderOpacity$get;return{opacity:(_borderOpacity$get=borderOpacity.get())!==null&&_borderOpacity$get!==void 0?_borderOpacity$get:1};}",
+};
+let obj2 = {
+  flex: 1,
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  marginEnd: 40,
+};
 let result = require("set").fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeModal.tsx");
 
 export default function OAuth2AuthorizeModal(arg0) {
@@ -43,7 +77,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const animatedStyle = obj1.useAnimatedStyle(fn);
   obj = { style: tmp.container, children: null };
   obj = { style: items1, children: null };
-  items1 = [tmp.titleContainer, ];
+  items1 = [tmp.titleContainer];
   obj1 = { paddingTop: sharedValue(1628)().top + 16 };
   items1[1] = obj1;
   callback = React.useCallback((nativeEvent) => {
@@ -71,7 +105,7 @@ export default function OAuth2AuthorizeModal(arg0) {
       }
       return goBackOrCancelResult;
     },
-    children: null
+    children: null,
   };
   if (null != tmp4.backStep) {
     const obj3 = { color: null };
@@ -83,7 +117,10 @@ export default function OAuth2AuthorizeModal(arg0) {
     tmp11Result = tmp11(tmp5(5551).XSmallIcon, obj4);
   }
   obj2[3] = tmp11Result;
-  const items2 = [closure_5(require("../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj2), , ];
+  const items2 = [
+    closure_5(require("../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj2),
+    ,
+  ];
   const obj5 = { style: tmp.title, children: null };
   const obj6 = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
   const intl3 = tmp5(1236).intl;
@@ -93,7 +130,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const items3 = [tmp.titleContainerBorder, animatedStyle];
   items2[2] = closure_5(sharedValue(4217).View, { style: items3 });
   obj[1] = items2;
-  const items4 = [closure_6(View, obj), ];
+  const items4 = [closure_6(View, obj)];
   const obj7 = { bottom: true, style: tmp.contentContainer, children: null };
   const obj8 = {};
   const merged = Object.assign(tmp4);
@@ -103,4 +140,4 @@ export default function OAuth2AuthorizeModal(arg0) {
   items4[1] = closure_5(require("../../../components_native/common/SafeAreaView.tsx").SafeAreaPaddingView, obj7);
   obj[1] = items4;
   return closure_6(View, obj);
-};
+}

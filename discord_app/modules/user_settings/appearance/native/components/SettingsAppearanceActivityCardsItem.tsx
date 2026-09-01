@@ -5,11 +5,20 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardsItem.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardsItem.tsx",
+);
 
 export default function ActivityCardsItem(animatedStyles) {
   animatedStyles = animatedStyles.animatedStyles;
-  let obj = { contentContainerStyle: null, data: null, renderItem: null, keyExtractor: null, showsHorizontalScrollIndicator: false, horizontal: true };
+  let obj = {
+    contentContainerStyle: null,
+    data: null,
+    renderItem: null,
+    keyExtractor: null,
+    showsHorizontalScrollIndicator: false,
+    horizontal: true,
+  };
   obj = { paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
   obj[0] = obj;
   obj[1] = animatedStyles.cards;
@@ -20,5 +29,8 @@ export default function ActivityCardsItem(animatedStyles) {
   obj[3] = function keyExtractor(title) {
     return title.title;
   };
-  return jsx(animatedStyles(8105).FlashList, { paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 });
-};
+  return jsx(animatedStyles(8105).FlashList, {
+    paddingVertical: ThemesDefault.space.PX_16,
+    paddingHorizontal: ThemesDefault.space.PX_16,
+  });
+}

@@ -9,10 +9,14 @@ const result = set.fileFinishedImporting("modules/virtual_currency/hooks/useFetc
 export const useFetchVirtualCurrencyBalance = function useFetchVirtualCurrencyBalance(disableFetch) {
   const _require = disableFetch;
   const items = [closure_3];
-  const isFetching = _require(balance[2]).useStateFromStoresObject(items, () => ({ balance: closure_3.balance, isFetching: closure_3.isFetchingBalance, error: closure_3.fetchBalanceError }));
+  const isFetching = _require(balance[2]).useStateFromStoresObject(items, () => ({
+    balance: closure_3.balance,
+    isFetching: closure_3.isFetchingBalance,
+    error: closure_3.fetchBalanceError,
+  }));
   balance = isFetching.balance;
   error = isFetching.error;
-  const items1 = [balance, error, ];
+  const items1 = [balance, error];
   disableFetch = undefined;
   if (disableFetch != null) {
     disableFetch = disableFetch.disableFetch;

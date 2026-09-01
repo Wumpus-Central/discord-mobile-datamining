@@ -22,9 +22,5 @@ export const useIsInReverseTrial = function useIsInReverseTrial() {
 export function useReverseTrialDaysRemaining() {
   return 0;
 }
-export function maybeShowReverseTrialInitialUpsellModal() {
-
-}
-export function maybeShowReverseTrialFollowupUpsellModal() {
-
-}
+export function maybeShowReverseTrialInitialUpsellModal() {}
+export function maybeShowReverseTrialFollowupUpsellModal() {}

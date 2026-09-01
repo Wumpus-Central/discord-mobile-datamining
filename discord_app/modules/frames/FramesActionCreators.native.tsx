@@ -9,7 +9,7 @@ function _launchFrameOnNative() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       c1 = 0;
       const obj2 = closure_1_1(table[3]);
       closure_0 = yield obj2.launchFrame(closure_0);

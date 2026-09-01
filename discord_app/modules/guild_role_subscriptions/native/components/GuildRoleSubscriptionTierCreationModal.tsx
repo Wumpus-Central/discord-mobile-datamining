@@ -8,8 +8,11 @@ import MAX_SUBSCRIPTION_TIERS from "../../GuildRoleSubscriptionsConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_TIER_CREATION_KEY: c9 } = MAX_SUBSCRIPTION_TIERS);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierCreationModal.tsx");
+({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_TIER_CREATION_KEY: c9 } =
+  MAX_SUBSCRIPTION_TIERS);
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierCreationModal.tsx",
+);
 
 export default function GuildRoleSubscriptionTierCreationModal(guildId) {
   guildId = guildId.guildId;
@@ -21,7 +24,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
   error = undefined;
   function _handleCreate() {
     const self = this;
-    const tmp = first(function*() {
+    const tmp = first(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -113,12 +116,21 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
     }
   }, items);
   const memo = React.useMemo(() => {
-    const items = [, , , , ];
-    ({ DETAILS: arr[0], CHANNEL_BENEFITS: arr[1], INTANGIBLE_BENEFITS: arr[2], DESIGN: arr[3], CONFIRMATION: arr[4] } = _handleCreate);
+    const items = [, , , ,];
+    ({
+      DETAILS: arr[0],
+      CHANNEL_BENEFITS: arr[1],
+      INTANGIBLE_BENEFITS: arr[2],
+      DESIGN: arr[3],
+      CONFIRMATION: arr[4],
+    } = _handleCreate);
     return items;
   }, []);
   obj = { guildId, editStateId: first, groupListingId, children: null };
   obj = { guildId, children: jsx(groupListingId(17326), obj1) };
-  obj[3] = jsx(guildId(17308).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: jsx(groupListingId(17326), obj1) });
+  obj[3] = jsx(guildId(17308).RoleSubscriptionSettingsDisabledContextProvider, {
+    guildId,
+    children: jsx(groupListingId(17326), obj1),
+  });
   return jsx(guildId(17325).EditStateContextProvider, { guildId, children: jsx(groupListingId(17326), obj1) });
-};
+}

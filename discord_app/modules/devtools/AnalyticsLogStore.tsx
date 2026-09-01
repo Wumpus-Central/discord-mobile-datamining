@@ -13,8 +13,7 @@ let c6 = 0;
 let closure_7 = [];
 let c8 = false;
 const Store = initializeDefault.Store;
-class AnalyticsLogStore extends Store {
-}
+class AnalyticsLogStore extends Store {}
 const prototype = AnalyticsLogStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3);
@@ -23,25 +22,25 @@ Object.defineProperty(prototype, "loggedEvents", {
   get: function loggedEvents() {
     return closure_5;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "loggedEventsVersion", {
   get: function loggedEventsVersion() {
     return c6;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "loggedTriggers", {
   get: function loggedTriggers() {
     return closure_7;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "trackTriggers", {
   get: function trackTriggers() {
     return c8;
   },
-  set: undefined
+  set: undefined,
 });
 AnalyticsLogStore.displayName = "AnalyticsLogStore";
 const analyticsLogStore = new AnalyticsLogStore(dispatcherDefault, {
@@ -79,7 +78,16 @@ const analyticsLogStore = new AnalyticsLogStore(dispatcherDefault, {
     }
     if (isDeveloper) {
       const items = [];
-      const obj = { key: null, experimentId: null, descriptor: null, exposureType: null, excluded: null, location: null, previouslyTracked: null, timestamp: null };
+      const obj = {
+        key: null,
+        experimentId: null,
+        descriptor: null,
+        exposureType: null,
+        excluded: null,
+        location: null,
+        previouslyTracked: null,
+        timestamp: null,
+      };
       const arraySpreadResult = HermesBuiltin.arraySpread(items, 0);
       obj[0] = v1.v4();
       obj[1] = experimentId;
@@ -106,7 +114,7 @@ const analyticsLogStore = new AnalyticsLogStore(dispatcherDefault, {
     closure_5 = [];
     closure_6 = closure_6 + 1;
     closure_7 = [];
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/devtools/AnalyticsLogStore.tsx");
 

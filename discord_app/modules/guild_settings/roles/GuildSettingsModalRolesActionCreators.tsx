@@ -20,7 +20,7 @@ function _updateGuildRole() {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       dependencyMap = tmp2;
       ({ guildId: c0, roleId: c1, name: c2, permissions: c3, color: c4, hoist: c5, mentionable: c6 } = callback);
       yield "PX_16";
@@ -56,7 +56,9 @@ function _updateGuildRole() {
   }
   return applyArgumentsResult;
 }
-let result = require("set").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsModalRolesActionCreators.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_settings/roles/GuildSettingsModalRolesActionCreators.tsx",
+);
 
 export default {
   startReordering(guildId) {
@@ -73,7 +75,15 @@ export default {
     obj.dispatch(obj);
   },
   toggleRoleSetting(guildId, id, hoist, mentionable) {
-    return updateGuildRole({ guildId, roleId: id.id, name: id.name, permissions: id.permissions, color: id.color, hoist, mentionable });
+    return updateGuildRole({
+      guildId,
+      roleId: id.id,
+      name: id.name,
+      permissions: id.permissions,
+      color: id.color,
+      hoist,
+      mentionable,
+    });
   },
   startEditingPermissions(guildId, roleId) {
     let obj = dispatcherDefault;
@@ -100,6 +110,9 @@ export default {
     ({ guildId, roleId, name, permissions, color, hoist, mentionable } = arg0);
     dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING" });
     const obj = dispatcherDefault;
-    updateGuildRole({ guildId, roleId, name, permissions, color, hoist, mentionable }).then(() => callback(709).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_SUCCESS" }), () => callback(709).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_FAILURE" }));
-  }
+    updateGuildRole({ guildId, roleId, name, permissions, color, hoist, mentionable }).then(
+      () => callback(709).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_SUCCESS" }),
+      () => callback(709).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_FAILURE" }),
+    );
+  },
 };

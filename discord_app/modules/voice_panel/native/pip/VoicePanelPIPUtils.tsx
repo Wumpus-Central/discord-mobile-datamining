@@ -24,11 +24,18 @@ function clamp(arg0, arg1, arg2) {
 }
 clamp.__closure = {};
 clamp.__workletHash = 10301627783217;
-clamp.__initData = { code: "function clamp_VoicePanelPIPUtilsTsx1(value,min,max){return Math.min(Math.max(value,min),max);}" };
+clamp.__initData = {
+  code: "function clamp_VoicePanelPIPUtilsTsx1(value,min,max){return Math.min(Math.max(value,min),max);}",
+};
 let obj = { mass: 0.3, damping: 80, stiffness: 150 };
 function layoutTransition(originX) {
   obj = { animations: null, initialValues: null };
-  obj = { originX: CONFIG_NEVER_ANIMATE.withSpring(originX.targetOriginX, obj), originY: null, width: null, height: null };
+  obj = {
+    originX: CONFIG_NEVER_ANIMATE.withSpring(originX.targetOriginX, obj),
+    originY: null,
+    width: null,
+    height: null,
+  };
   const obj3 = CONFIG_NEVER_ANIMATE;
   obj[1] = CONFIG_NEVER_ANIMATE.withSpring(originX.targetOriginY, obj);
   const obj4 = CONFIG_NEVER_ANIMATE;
@@ -36,23 +43,37 @@ function layoutTransition(originX) {
   const obj5 = CONFIG_NEVER_ANIMATE;
   obj[3] = CONFIG_NEVER_ANIMATE.withSpring(originX.targetHeight, obj);
   obj[0] = obj;
-  obj[1] = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
+  obj[1] = {
+    originX: originX.currentOriginX,
+    originY: originX.currentOriginY,
+    width: originX.currentWidth,
+    height: originX.currentHeight,
+  };
   return obj;
 }
 obj = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, PIP_LAYOUT_PHYSICS: obj };
 layoutTransition.__closure = obj;
 layoutTransition.__workletHash = 16735009420384;
-layoutTransition.__initData = { code: "function layoutTransition_VoicePanelPIPUtilsTsx2(values){const{withSpring,PIP_LAYOUT_PHYSICS}=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,PIP_LAYOUT_PHYSICS),originY:withSpring(values.targetOriginY,PIP_LAYOUT_PHYSICS),width:withSpring(values.targetWidth,PIP_LAYOUT_PHYSICS),height:withSpring(values.targetHeight,PIP_LAYOUT_PHYSICS)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};}" };
+layoutTransition.__initData = {
+  code: "function layoutTransition_VoicePanelPIPUtilsTsx2(values){const{withSpring,PIP_LAYOUT_PHYSICS}=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,PIP_LAYOUT_PHYSICS),originY:withSpring(values.targetOriginY,PIP_LAYOUT_PHYSICS),width:withSpring(values.targetWidth,PIP_LAYOUT_PHYSICS),height:withSpring(values.targetHeight,PIP_LAYOUT_PHYSICS)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};}",
+};
 function getPIPWindowDimensions(width, left) {
   const bound = Math.max(left.left, PIP_WINDOW_OFFSET);
   const bound1 = Math.max(left.top, PIP_WINDOW_OFFSET);
   const diff = width.width - bound;
   const diff1 = width.height - bound1;
-  return { xOffset: bound, yOffset: bound1, xRange: diff - Math.max(left.right, PIP_WINDOW_OFFSET), yRange: diff1 - Math.max(left.bottom, PIP_WINDOW_OFFSET) };
+  return {
+    xOffset: bound,
+    yOffset: bound1,
+    xRange: diff - Math.max(left.right, PIP_WINDOW_OFFSET),
+    yRange: diff1 - Math.max(left.bottom, PIP_WINDOW_OFFSET),
+  };
 }
 getPIPWindowDimensions.__closure = { PIP_WINDOW_OFFSET };
 getPIPWindowDimensions.__workletHash = 12185397231026;
-getPIPWindowDimensions.__initData = { code: "function getPIPWindowDimensions_VoicePanelPIPUtilsTsx3(windowDimensions,safeArea){const{PIP_WINDOW_OFFSET}=this.__closure;const xOffset=Math.max(safeArea.left,PIP_WINDOW_OFFSET);const yOffset=Math.max(safeArea.top,PIP_WINDOW_OFFSET);return{xOffset:xOffset,yOffset:yOffset,xRange:windowDimensions.width-xOffset-Math.max(safeArea.right,PIP_WINDOW_OFFSET),yRange:windowDimensions.height-yOffset-Math.max(safeArea.bottom,PIP_WINDOW_OFFSET)};}" };
+getPIPWindowDimensions.__initData = {
+  code: "function getPIPWindowDimensions_VoicePanelPIPUtilsTsx3(windowDimensions,safeArea){const{PIP_WINDOW_OFFSET}=this.__closure;const xOffset=Math.max(safeArea.left,PIP_WINDOW_OFFSET);const yOffset=Math.max(safeArea.top,PIP_WINDOW_OFFSET);return{xOffset:xOffset,yOffset:yOffset,xRange:windowDimensions.width-xOffset-Math.max(safeArea.right,PIP_WINDOW_OFFSET),yRange:windowDimensions.height-yOffset-Math.max(safeArea.bottom,PIP_WINDOW_OFFSET)};}",
+};
 function pipXYtoAbsoluteXY(arg0) {
   ({ windowDimensions, safeArea } = arg0);
   ({ pipX, pipY } = arg0);
@@ -68,7 +89,9 @@ function pipXYtoAbsoluteXY(arg0) {
 }
 pipXYtoAbsoluteXY.__closure = { getPIPWindowDimensions };
 pipXYtoAbsoluteXY.__workletHash = 16213175273517;
-pipXYtoAbsoluteXY.__initData = { code: "function pipXYtoAbsoluteXY_VoicePanelPIPUtilsTsx4({pipX:pipX,pipY:pipY,windowDimensions:windowDimensions,safeArea:safeArea}){const{getPIPWindowDimensions}=this.__closure;const{xOffset:xOffset,yOffset:yOffset,xRange:xRange,yRange:yRange}=getPIPWindowDimensions(windowDimensions,safeArea);return{x:xOffset+pipX*xRange,y:yOffset+pipY*yRange};}" };
+pipXYtoAbsoluteXY.__initData = {
+  code: "function pipXYtoAbsoluteXY_VoicePanelPIPUtilsTsx4({pipX:pipX,pipY:pipY,windowDimensions:windowDimensions,safeArea:safeArea}){const{getPIPWindowDimensions}=this.__closure;const{xOffset:xOffset,yOffset:yOffset,xRange:xRange,yRange:yRange}=getPIPWindowDimensions(windowDimensions,safeArea);return{x:xOffset+pipX*xRange,y:yOffset+pipY*yRange};}",
+};
 function getClampedPIPPosition(topAvoidanceRegion) {
   ({ pipX, pipY, width, height, windowDimensions, safeArea, bottomAvoidanceRegion } = topAvoidanceRegion);
   if (bottomAvoidanceRegion === undefined) {
@@ -126,7 +149,9 @@ function getClampedPIPPosition(topAvoidanceRegion) {
 }
 getClampedPIPPosition.__closure = { pipXYtoAbsoluteXY, getPIPWindowDimensions, clamp };
 getClampedPIPPosition.__workletHash = 7473574077366;
-getClampedPIPPosition.__initData = { code: "function getClampedPIPPosition_VoicePanelPIPUtilsTsx5({pipX:pipX,pipY:pipY,width:width,height:height,windowDimensions:windowDimensions,safeArea:safeArea,bottomAvoidanceRegion=0,topAvoidanceRegion=0,positionOffset={x:0,y:0}}){const{pipXYtoAbsoluteXY,getPIPWindowDimensions,clamp}=this.__closure;let{x:x,y:y}=pipXYtoAbsoluteXY({pipX:pipX===-1?1:pipX,pipY:pipY===-1?0:pipY,windowDimensions:windowDimensions,safeArea:safeArea});const halfWidth=width/2;const halfHeight=height/2;x-=halfWidth;if(pipY===-1){y+=72;}else{y-=halfHeight;}const pipRegion=getPIPWindowDimensions(windowDimensions,safeArea);x=clamp(x,pipRegion.xOffset,pipRegion.xOffset+pipRegion.xRange-width);y=clamp(y,pipRegion.yOffset+topAvoidanceRegion,pipRegion.yOffset+pipRegion.yRange-bottomAvoidanceRegion-height);x+=positionOffset.x;y+=positionOffset.y;return{x:x,y:y};}" };
+getClampedPIPPosition.__initData = {
+  code: "function getClampedPIPPosition_VoicePanelPIPUtilsTsx5({pipX:pipX,pipY:pipY,width:width,height:height,windowDimensions:windowDimensions,safeArea:safeArea,bottomAvoidanceRegion=0,topAvoidanceRegion=0,positionOffset={x:0,y:0}}){const{pipXYtoAbsoluteXY,getPIPWindowDimensions,clamp}=this.__closure;let{x:x,y:y}=pipXYtoAbsoluteXY({pipX:pipX===-1?1:pipX,pipY:pipY===-1?0:pipY,windowDimensions:windowDimensions,safeArea:safeArea});const halfWidth=width/2;const halfHeight=height/2;x-=halfWidth;if(pipY===-1){y+=72;}else{y-=halfHeight;}const pipRegion=getPIPWindowDimensions(windowDimensions,safeArea);x=clamp(x,pipRegion.xOffset,pipRegion.xOffset+pipRegion.xRange-width);y=clamp(y,pipRegion.yOffset+topAvoidanceRegion,pipRegion.yOffset+pipRegion.yRange-bottomAvoidanceRegion-height);x+=positionOffset.x;y+=positionOffset.y;return{x:x,y:y};}",
+};
 function calculatePIPPositionFromVelocity(arg0) {
   ({ velocityX, velocityY, windowDimensions, safeArea } = arg0);
   ({ absoluteX, absoluteY } = arg0);
@@ -238,7 +263,9 @@ function calculatePIPPositionFromVelocity(arg0) {
 }
 calculatePIPPositionFromVelocity.__closure = { getPIPWindowDimensions, MIN_PIP_TOSS_VELOCITY, clamp };
 calculatePIPPositionFromVelocity.__workletHash = 3870426217462;
-calculatePIPPositionFromVelocity.__initData = { code: "function calculatePIPPositionFromVelocity_VoicePanelPIPUtilsTsx6({velocityX:velocityX,velocityY:velocityY,absoluteX:absoluteX,absoluteY:absoluteY,windowDimensions:windowDimensions,safeArea:safeArea}){const{getPIPWindowDimensions,MIN_PIP_TOSS_VELOCITY,clamp}=this.__closure;const pipRegion=getPIPWindowDimensions(windowDimensions,safeArea);const{xRange:xRange,yRange:yRange}=pipRegion;const x=absoluteX-pipRegion.xOffset;const y=absoluteY-pipRegion.yOffset;let pipX=0;let pipY=0;if(Math.max(Math.abs(velocityY),Math.abs(velocityX))<MIN_PIP_TOSS_VELOCITY){const closestEdge=function(specs){const minValue=Math.min(...Object.values(specs));if(specs.left===minValue){return'left';}if(specs.top===minValue){return'top';}if(specs.right===minValue){return'right';}return'bottom';}({left:clamp(x,0,xRange),right:clamp(xRange-x,0,xRange),top:clamp(y,0,yRange),bottom:clamp(yRange-y,0,yRange)});switch(closestEdge){case'left':pipX=0;pipY=y/yRange;break;case'right':pipX=1;pipY=y/yRange;break;case'top':pipY=0;pipX=x/xRange;break;case'bottom':pipY=1;pipX=x/xRange;break;}}else{const slope=velocityY/velocityX;let intersectionY=0;let intersectionX=0;intersectionX=velocityX>0?xRange:0;intersectionY=y+slope*(intersectionX-x);if(intersectionY>=0&&intersectionY<=yRange){pipX=intersectionX/xRange;pipY=intersectionY/yRange;}else{intersectionY=velocityY>0?yRange:0;intersectionX=x+1/slope*(intersectionY-y);pipX=intersectionX/xRange;pipY=intersectionY/yRange;}}return{pipX:clamp(pipX,0,1),pipY:clamp(pipY,0,1)};}" };
+calculatePIPPositionFromVelocity.__initData = {
+  code: "function calculatePIPPositionFromVelocity_VoicePanelPIPUtilsTsx6({velocityX:velocityX,velocityY:velocityY,absoluteX:absoluteX,absoluteY:absoluteY,windowDimensions:windowDimensions,safeArea:safeArea}){const{getPIPWindowDimensions,MIN_PIP_TOSS_VELOCITY,clamp}=this.__closure;const pipRegion=getPIPWindowDimensions(windowDimensions,safeArea);const{xRange:xRange,yRange:yRange}=pipRegion;const x=absoluteX-pipRegion.xOffset;const y=absoluteY-pipRegion.yOffset;let pipX=0;let pipY=0;if(Math.max(Math.abs(velocityY),Math.abs(velocityX))<MIN_PIP_TOSS_VELOCITY){const closestEdge=function(specs){const minValue=Math.min(...Object.values(specs));if(specs.left===minValue){return'left';}if(specs.top===minValue){return'top';}if(specs.right===minValue){return'right';}return'bottom';}({left:clamp(x,0,xRange),right:clamp(xRange-x,0,xRange),top:clamp(y,0,yRange),bottom:clamp(yRange-y,0,yRange)});switch(closestEdge){case'left':pipX=0;pipY=y/yRange;break;case'right':pipX=1;pipY=y/yRange;break;case'top':pipY=0;pipX=x/xRange;break;case'bottom':pipY=1;pipX=x/xRange;break;}}else{const slope=velocityY/velocityX;let intersectionY=0;let intersectionX=0;intersectionX=velocityX>0?xRange:0;intersectionY=y+slope*(intersectionX-x);if(intersectionY>=0&&intersectionY<=yRange){pipX=intersectionX/xRange;pipY=intersectionY/yRange;}else{intersectionY=velocityY>0?yRange:0;intersectionX=x+1/slope*(intersectionY-y);pipX=intersectionX/xRange;pipY=intersectionY/yRange;}}return{pipX:clamp(pipX,0,1),pipY:clamp(pipY,0,1)};}",
+};
 const xl = ThemesDefault.radii.xl;
 const lg = ThemesDefault.radii.lg;
 function getVoicePanelPIPBorderRadius(width, height) {
@@ -252,7 +279,9 @@ function getVoicePanelPIPBorderRadius(width, height) {
 }
 getVoicePanelPIPBorderRadius.__closure = { SquareActivityPIPReferenceDimensions, lg, xl };
 getVoicePanelPIPBorderRadius.__workletHash = 4735899866220;
-getVoicePanelPIPBorderRadius.__initData = { code: "function getVoicePanelPIPBorderRadius_VoicePanelPIPUtilsTsx7(width,height){const{SquareActivityPIPReferenceDimensions,lg,xl}=this.__closure;if(width<=SquareActivityPIPReferenceDimensions.width&&height<=SquareActivityPIPReferenceDimensions.height){return lg;}return xl;}" };
+getVoicePanelPIPBorderRadius.__initData = {
+  code: "function getVoicePanelPIPBorderRadius_VoicePanelPIPUtilsTsx7(width,height){const{SquareActivityPIPReferenceDimensions,lg,xl}=this.__closure;if(width<=SquareActivityPIPReferenceDimensions.width&&height<=SquareActivityPIPReferenceDimensions.height){return lg;}return xl;}",
+};
 let result = set.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPUtils.tsx");
 
 export { PIPReferenceDimensions };

@@ -37,7 +37,12 @@ let obj = {
     if (tmpResult.hasApplicationFlag(application, constants.EMBEDDED_FIRST_PARTY)) {
       tmpResult = tmp(9456);
       const activeAnalyticsSessionIDs = tmpResult.getActiveAnalyticsSessionIDs(id);
-      obj = { activity_application_id: null, activity_channel_type: null, activity_guild_id: null, activity_user_session_id: null };
+      obj = {
+        activity_application_id: null,
+        activity_channel_type: null,
+        activity_guild_id: null,
+        activity_user_session_id: null,
+      };
       obj[0] = id;
       let type;
       if (obj3 != null) {
@@ -60,7 +65,7 @@ let obj = {
       const tmp12 = new tmp5(9503)(obj1, "This application cannot access this API");
       throw tmp12;
     }
-  }
+  },
 };
 obj = {
   scope: require("RPC_SCOPE_CONFIG").RPC_LOCAL_SCOPE,
@@ -81,7 +86,7 @@ obj = {
       const obj4 = isTestModeForApplication;
       return HTTP.post(obj).then((body) => body.body);
     }
-  }
+  },
 };
 let result = require("set").fileFinishedImporting("modules/rpc/server/commands/application.tsx");
 

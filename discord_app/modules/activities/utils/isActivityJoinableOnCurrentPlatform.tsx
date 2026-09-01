@@ -59,7 +59,7 @@ export default function isActivityJoinableOnCurrentPlatform(type) {
   } else {
     return false;
   }
-};
+}
 export const getCurrentActivityGamePlatform = function getCurrentActivityGamePlatform() {
   if (obj.isIOS()) {
     let META_QUEST = constants2.IOS;

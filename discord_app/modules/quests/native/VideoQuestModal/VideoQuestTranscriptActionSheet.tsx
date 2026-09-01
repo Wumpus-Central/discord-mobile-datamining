@@ -15,7 +15,9 @@ createCacheKey = { paddingBottom: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 100 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestTranscriptActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/quests/native/VideoQuestModal/VideoQuestTranscriptActionSheet.tsx",
+);
 
 export default function VideoQuestTranscriptActionSheet(quest) {
   quest = quest.quest;
@@ -25,7 +27,12 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   importDefault = tmp2;
   let items = [quest, tmp2];
   const effect = React.useEffect(() => {
-    const questAsset = quest(closure_1_2[7]).getQuestAsset(quest, quest(closure_1_2[7]).QuestAssetType.VIDEO_PLAYER_TRANSCRIPT, undefined, true);
+    const questAsset = quest(closure_1_2[7]).getQuestAsset(
+      quest,
+      quest(closure_1_2[7]).QuestAssetType.VIDEO_PLAYER_TRANSCRIPT,
+      undefined,
+      true,
+    );
     let tmp6 = null == closure_1 || tmp5.questId !== tmp3.id;
     if (!tmp6) {
       tmp6 = tmp5.fetchStatus === closure_1_5.NONE;
@@ -83,9 +90,15 @@ export default function VideoQuestTranscriptActionSheet(quest) {
     obj2[0] = tmp.loadingSpinner;
     tmp7Result = tmp7(ActivityIndicator, obj2);
   }
-  const items2 = [tmp7Result, memo.length > 0 && memo.map((children) => callback(quest(table[14]).Text, { variant: "heading-md/normal", color: "text-muted", children }, arg1))];
+  const items2 = [
+    tmp7Result,
+    memo.length > 0 &&
+      memo.map((children) =>
+        callback(quest(table[14]).Text, { variant: "heading-md/normal", color: "text-muted", children }, arg1),
+      ),
+  ];
   obj1[2] = items2;
   obj[1] = closure_8(quest(4926).Stack, obj1);
   obj[2] = callback2(quest(5624).BottomSheetScrollView, obj);
   return callback2(quest(5989).ActionSheet, obj);
-};
+}

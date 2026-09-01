@@ -31,10 +31,10 @@ let obj = {
   },
   getComponent() {
     return render /* render */.default;
-  }
+  },
 };
 items = [importDefaultResult];
-let items1 = [obj, , ];
+let items1 = [obj, ,];
 obj = {
   stores: items2,
   center: true,
@@ -43,7 +43,7 @@ obj = {
   },
   getComponent() {
     return render /* render */.default;
-  }
+  },
 };
 items2 = [importDefaultResult1];
 items1[1] = obj;
@@ -56,7 +56,7 @@ items1[2] = {
   },
   getComponent() {
     return MobileSurvey /* MobileSurvey */.default;
-  }
+  },
 };
 let closure_15 = new getStoresDefault(items1);
 let obj2 = { alertWrapper: null, alertContentWrapper: null };
@@ -131,11 +131,18 @@ AlertWrapper.prototype["render"] = function render() {
   obj = { dialogKey: str, onDismiss: self.handleRequestClose, children: null };
   obj = { style: items, children: null };
   items = [StyleSheet.absoluteFill, tmp.alertContentWrapper];
-  obj1 = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", accessibilityRole: "none", accessible: false, onPress: self.handleRequestClose, children: null };
+  obj1 = {
+    accessibilityElementsHidden: true,
+    importantForAccessibility: "no-hide-descendants",
+    accessibilityRole: "none",
+    accessible: false,
+    onPress: self.handleRequestClose,
+    children: null,
+  };
   const items1 = [tmp.alertWrapper, self.props.style, { opacity }];
   const renderAlertResult = props.renderAlert(obj);
   obj1[5] = callback(RN.View, { style: items1 });
-  const items2 = [callback(closure_7, obj1), ];
+  const items2 = [callback(closure_7, obj1)];
   const items3 = [{ scale }];
   items2[1] = callback(RN.View, { style: { transform: items3 }, children: renderAlertResult });
   obj[1] = items2;
@@ -152,7 +159,7 @@ let obj1 = {
   },
   getComponent() {
     return MobileSurvey /* MobileSurvey */.default;
-  }
+  },
 };
 const tmp7 = new getStoresDefault(items1);
 const memoResult = importAllResult.memo(function Alerts() {
@@ -197,13 +204,18 @@ const memoResult = importAllResult.memo(function Alerts() {
     closure_0.current = stateFromStoresObject;
   });
   const items1 = [closure_12];
-  stateFromStores = _require(stateFromStores[18]).useStateFromStores(items1, () => alertDismissable.isAlertDismissable());
+  stateFromStores = _require(stateFromStores[18]).useStateFromStores(items1, () =>
+    alertDismissable.isAlertDismissable(),
+  );
   const obj2 = _require(stateFromStores[18]);
   const items2 = [closure_8];
   renderAlert = stateFromStoresObject.renderAlert;
   const renderKey = stateFromStoresObject.renderKey;
   const items3 = [renderAlert, stateFromStores];
-  const stateFromStores1 = _require(stateFromStores[18]).useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
+  const stateFromStores1 = _require(stateFromStores[18]).useStateFromStores(
+    items2,
+    () => useReducedMotion.useReducedMotion,
+  );
   const callback = renderAlert.useCallback(() => {
     let tmp2 = tmp;
     if (null != renderAlert) {

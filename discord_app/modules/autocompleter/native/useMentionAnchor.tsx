@@ -140,6 +140,6 @@ export default function useMentionAnchor(c22) {
         obj[1] = arg0;
         tmp3 = tmp3(obj);
       }
-    }, items)
+    }, items),
   };
-};
+}

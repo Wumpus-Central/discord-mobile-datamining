@@ -35,4 +35,4 @@ export default function trackFriendsListViewed(source) {
   }
   obj[3] = num2;
   isClickstreamEnabled.trackClickstream(AnalyticEvents.FRIENDS_LIST_VIEWED_CLICKSTREAM, obj);
-};
+}

@@ -3,7 +3,18 @@ import set from "../../../../_runtime/00002_set.js";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 function transformProfileEffectKeyFrameFromServer(src) {
-  const obj = { src: src.src, loop: src.loop, height: src.height, width: src.width, duration: null, start: null, loopDelay: null, position: null, zIndex: null, randomizedSources: null };
+  const obj = {
+    src: src.src,
+    loop: src.loop,
+    height: src.height,
+    width: src.width,
+    duration: null,
+    start: null,
+    loopDelay: null,
+    position: null,
+    zIndex: null,
+    randomizedSources: null,
+  };
   let num = src.duration;
   if (num == null) {
     num = 0;
@@ -32,7 +43,16 @@ export default function transformSKUTenantMetadata(social_layer) {
       const carousel_items = social_layer.carousel_items;
       let mapped;
       if (carousel_items != null) {
-        mapped = carousel_items.map((thumbnailAssetId) => ({ thumbnailAssetId: thumbnailAssetId.thumbnail_asset_id, assetId: thumbnailAssetId.asset_id, backgroundAssetId: thumbnailAssetId.background_asset_id, youtubeVideoId: thumbnailAssetId.youtube_video_id, label: thumbnailAssetId.label, labelIconAssetId: thumbnailAssetId.label_icon_asset_id, title: thumbnailAssetId.title, description: thumbnailAssetId.description }));
+        mapped = carousel_items.map((thumbnailAssetId) => ({
+          thumbnailAssetId: thumbnailAssetId.thumbnail_asset_id,
+          assetId: thumbnailAssetId.asset_id,
+          backgroundAssetId: thumbnailAssetId.background_asset_id,
+          youtubeVideoId: thumbnailAssetId.youtube_video_id,
+          label: thumbnailAssetId.label,
+          labelIconAssetId: thumbnailAssetId.label_icon_asset_id,
+          title: thumbnailAssetId.title,
+          description: thumbnailAssetId.description,
+        }));
       }
       if (mapped == null) {
         mapped = [];
@@ -53,7 +73,18 @@ export default function transformSKUTenantMetadata(social_layer) {
     const collectibles = social_layer.collectibles;
     let tmp6;
     if (null != collectibles) {
-      obj = { type: null, item: null, categorySkuId: null, premiumType: null, expiresSecondsAfterClaim: null, expiresAt: null, variant: null, optionSelectorDisplayValue: null, sourceType: null, isFirstParty: null };
+      obj = {
+        type: null,
+        item: null,
+        categorySkuId: null,
+        premiumType: null,
+        expiresSecondsAfterClaim: null,
+        expiresAt: null,
+        variant: null,
+        optionSelectorDisplayValue: null,
+        sourceType: null,
+        isFirstParty: null,
+      };
       ({ type: obj3[0], item } = collectibles);
       let tmp7;
       if (null != item) {
@@ -83,8 +114,30 @@ export default function transformSKUTenantMetadata(social_layer) {
           ({ label: obj5[4], palette: obj5[5] } = item);
           tmp7 = obj3;
         } else if (tmp8(1950).CollectiblesItemType.PROFILE_EFFECT === type) {
-          const obj5 = { id: null, type: null, title: null, description: null, accessibilityLabel: null, animationType: null, staticFrameSrc: null, thumbnailPreviewSrc: null, reducedMotionSrc: null, effects: null };
-          ({ id: obj4[0], type: obj4[1], title: obj4[2], description: obj4[3], accessibilityLabel: obj4[4], animationType: obj4[5], staticFrameSrc: obj4[6], thumbnailPreviewSrc: obj4[7], reducedMotionSrc: obj4[8], effects } = item);
+          const obj5 = {
+            id: null,
+            type: null,
+            title: null,
+            description: null,
+            accessibilityLabel: null,
+            animationType: null,
+            staticFrameSrc: null,
+            thumbnailPreviewSrc: null,
+            reducedMotionSrc: null,
+            effects: null,
+          };
+          ({
+            id: obj4[0],
+            type: obj4[1],
+            title: obj4[2],
+            description: obj4[3],
+            accessibilityLabel: obj4[4],
+            animationType: obj4[5],
+            staticFrameSrc: obj4[6],
+            thumbnailPreviewSrc: obj4[7],
+            reducedMotionSrc: obj4[8],
+            effects,
+          } = item);
           let mapped1;
           if (effects != null) {
             mapped1 = effects.map(transformProfileEffectKeyFrameFromServer);
@@ -92,8 +145,26 @@ export default function transformSKUTenantMetadata(social_layer) {
           obj5[9] = mapped1;
           tmp7 = obj5;
         } else if (tmp8(1950).CollectiblesItemType.PROFILE_FRAME === type) {
-          const obj6 = { id: null, type: null, label: null, layers: null, innerWidth: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null };
-          ({ id: obj10[0], type: obj10[1], label: obj10[2], layers: obj10[3], inner_width: obj10[4], overflow_top: obj10[5], overflow_bottom: obj10[6], overflow_horizontal: obj10[7] } = item);
+          const obj6 = {
+            id: null,
+            type: null,
+            label: null,
+            layers: null,
+            innerWidth: null,
+            overflowTop: null,
+            overflowBottom: null,
+            overflowHorizontal: null,
+          };
+          ({
+            id: obj10[0],
+            type: obj10[1],
+            label: obj10[2],
+            layers: obj10[3],
+            inner_width: obj10[4],
+            overflow_top: obj10[5],
+            overflow_bottom: obj10[6],
+            overflow_horizontal: obj10[7],
+          } = item);
           tmp7 = obj6;
         }
       }
@@ -108,8 +179,22 @@ export default function transformSKUTenantMetadata(social_layer) {
       const variant = collectibles.variant;
       let tmp18;
       if (null != variant) {
-        const obj7 = { role: null, baseVariantSkuId: null, baseVariantName: null, value: null, label: null, collapseUnder: null };
-        ({ role: obj9[0], base_variant_sku_id: obj9[1], base_variant_name: obj9[2], value: obj9[3], label: obj9[4], collapse_under: obj9[5] } = variant);
+        const obj7 = {
+          role: null,
+          baseVariantSkuId: null,
+          baseVariantName: null,
+          value: null,
+          label: null,
+          collapseUnder: null,
+        };
+        ({
+          role: obj9[0],
+          base_variant_sku_id: obj9[1],
+          base_variant_name: obj9[2],
+          value: obj9[3],
+          label: obj9[4],
+          collapse_under: obj9[5],
+        } = variant);
         tmp18 = obj7;
       }
       obj[6] = tmp18;
@@ -125,4 +210,4 @@ export default function transformSKUTenantMetadata(social_layer) {
     obj[2] = mapped2;
     return obj;
   }
-};
+}

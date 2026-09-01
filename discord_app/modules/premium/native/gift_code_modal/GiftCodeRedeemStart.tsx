@@ -14,8 +14,28 @@ const require = arg1;
 ({ ImageBackground: c5, View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ AnalyticEvents: unpackModuleId, GiftCodeModalStates: closure_12 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-createCacheKey = { container: null, body: null, bodyWithMessage: null, nameplateContainer: null, nameplateContainerOffCenter: null, message: null, text: null, footer: null, confettiBackground: null, emojiContainer: null, imageWrapper: null, collectiblesAsset: null, collectiblesAssetBundle: null, giftCardAsset: null, linkAccountIcon: null };
-createCacheKey = { flex: 1, justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  container: null,
+  body: null,
+  bodyWithMessage: null,
+  nameplateContainer: null,
+  nameplateContainerOffCenter: null,
+  message: null,
+  text: null,
+  footer: null,
+  confettiBackground: null,
+  emojiContainer: null,
+  imageWrapper: null,
+  collectiblesAsset: null,
+  collectiblesAssetBundle: null,
+  giftCardAsset: null,
+  linkAccountIcon: null,
+};
+createCacheKey = {
+  flex: 1,
+  justifyContent: "space-between",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28 };
 createCacheKey[2] = { flex: 0 };
@@ -24,11 +44,25 @@ createCacheKey[4] = { paddingBottom: 56 };
 createCacheKey[5] = { gap: 8 };
 createCacheKey[6] = { textAlign: "center", paddingHorizontal: 32 };
 createCacheKey[7] = { paddingHorizontal: 24, paddingBottom: 12 };
-createCacheKey[8] = { justifyContent: "center", width: "100%", position: "absolute", top: 0, left: 0, opacity: 0.4, height: 275 };
+createCacheKey[8] = {
+  justifyContent: "center",
+  width: "100%",
+  position: "absolute",
+  top: 0,
+  left: 0,
+  opacity: 0.4,
+  height: 275,
+};
 createCacheKey[9] = { justifyContent: "center", alignItems: "center" };
 createCacheKey[10] = { position: "relative", width: "100%", alignItems: "center", justifyContent: "center" };
 createCacheKey[11] = { margin: 40 };
-createCacheKey[12] = { margin: 20, alignSelf: "stretch", minHeight: 250, alignItems: "center", justifyContent: "center" };
+createCacheKey[12] = {
+  margin: 20,
+  alignSelf: "stretch",
+  minHeight: 250,
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[13] = { marginTop: 20, marginBottom: 40 };
 createCacheKey[14] = { marginRight: 4 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
@@ -111,7 +145,9 @@ export default function GiftCodeRedeemStart(giftCode) {
   canStartAuthorization = tmp16.canStartAuthorization;
   startAuthorization = tmp16.startAuthorization;
   const tmp2Result4 = tmp2(tmp3[16]);
-  const socialLayerStorefrontMobileAccountLinkingDisabled = tmp2(tmp3[25]).useSocialLayerStorefrontMobileAccountLinkingDisabled(giftCode.applicationId);
+  const socialLayerStorefrontMobileAccountLinkingDisabled = tmp2(
+    tmp3[25],
+  ).useSocialLayerStorefrontMobileAccountLinkingDisabled(giftCode.applicationId);
   let tmp5Result = tmp5(tmp3[26]);
   analyticsLocations = tmp5Result(tmp5(tmp3[27]).GIFT_CODE_MODAL).analyticsLocations;
   obj = { analyticsLocations, skuId: giftCode.skuId, applicationId: giftCode.applicationId, canStartAuthorization };
@@ -126,7 +162,14 @@ export default function GiftCodeRedeemStart(giftCode) {
       let obj = str(soundId[9]);
       if (obj.isGameItemSKU(stateFromStores1)) {
         ({ analyticsLocations, skuId, applicationId, canStartAuthorization } = ref.current);
-        obj = { location_stack: null, sku_id: null, application_id: null, is_gift: true, is_account_linked: null, can_start_authorization: null };
+        obj = {
+          location_stack: null,
+          sku_id: null,
+          application_id: null,
+          is_gift: true,
+          is_account_linked: null,
+          can_start_authorization: null,
+        };
         obj[0] = analyticsLocations;
         obj[1] = skuId;
         obj[2] = applicationId;
@@ -177,14 +220,20 @@ export default function GiftCodeRedeemStart(giftCode) {
     });
   }, []);
   obj1 = { bottom: true, style: tmp.container, children: null };
-  const items8 = [tmp.body, ];
+  const items8 = [tmp.body];
   let bodyWithMessage;
   if (tmp27Result) {
     bodyWithMessage = tmp.bodyWithMessage;
   }
   obj2 = { contentContainerStyle: items8, alwaysBounceVertical: false, children: null };
   items8[1] = bodyWithMessage;
-  const obj3 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.text, accessibilityRole: "header", children: null };
+  const obj3 = {
+    variant: "heading-xl/bold",
+    color: "mobile-text-heading-primary",
+    style: tmp.text,
+    accessibilityRole: "header",
+    children: null,
+  };
   if (first != null) {
     type = first.type;
   }
@@ -195,11 +244,15 @@ export default function GiftCodeRedeemStart(giftCode) {
       if (stateFromStores1 != null) {
         name = stateFromStores1.name;
       }
-      let subscriptionGiftStartHeaderText = tmp2(tmp3[8]).getSubscriptionGiftStartHeaderText(getOrFetchSubscriptionPlan, str, name);
+      let subscriptionGiftStartHeaderText = tmp2(tmp3[8]).getSubscriptionGiftStartHeaderText(
+        getOrFetchSubscriptionPlan,
+        str,
+        name,
+      );
       const tmp2Result6 = tmp2(tmp3[8]);
     }
     obj3[4] = subscriptionGiftStartHeaderText;
-    const items9 = [tmp30(tmp2(tmp3[32]).Text, obj3), , , ];
+    const items9 = [tmp30(tmp2(tmp3[32]).Text, obj3), , ,];
     let obj4 = { style: null, children: null };
     obj4[0] = tmp.imageWrapper;
     let tmp30Result = null != emojiName;
@@ -220,7 +273,14 @@ export default function GiftCodeRedeemStart(giftCode) {
     if (null == first) {
       if (null != getOrFetchApplication) {
         if (tmp2Result7.isGameItemSKU(stateFromStores1)) {
-          const obj8 = { sku: null, application: null, sender: null, hasAccountLinked: null, canStartAuthorization: null, mobileAccountLinkingDisabled: null };
+          const obj8 = {
+            sku: null,
+            application: null,
+            sender: null,
+            hasAccountLinked: null,
+            canStartAuthorization: null,
+            mobileAccountLinkingDisabled: null,
+          };
           obj8[0] = stateFromStores1;
           obj8[1] = getOrFetchApplication;
           obj8[2] = str;
@@ -239,7 +299,7 @@ export default function GiftCodeRedeemStart(giftCode) {
           const obj11 = { sender: null };
           obj11[0] = str;
           obj10[3] = intl2.format(tmp2(tmp3[10]).t["6yrIzU"], obj11);
-          const items10 = [tmp30(tmp2(tmp3[32]).Text, obj10), ];
+          const items10 = [tmp30(tmp2(tmp3[32]).Text, obj10)];
           let str4 = "heading-xxl/semibold";
           if (customMessage.length > 110) {
             str4 = "heading-xl/semibold";
@@ -254,7 +314,7 @@ export default function GiftCodeRedeemStart(giftCode) {
         }
         items9[3] = tmp27Result;
         obj2[2] = items9;
-        const items11 = [tmp27(tmp28, obj2), ];
+        const items11 = [tmp27(tmp28, obj2)];
         const obj13 = { style: null, children: null };
         obj13[0] = tmp.footer;
         if (giftCode.isClaimed) {
@@ -290,7 +350,12 @@ export default function GiftCodeRedeemStart(giftCode) {
                   obj16[2] = tmp30(tmp2(tmp3[46]).ExperimentalGameControllerLinkIcon, obj17);
                   obj16[3] = function onPress() {
                     let obj = customMessage(soundId[28]);
-                    obj = { location_stack: analyticsLocations, sku_id: str.skuId, application_id: str.applicationId, is_gift: true };
+                    obj = {
+                      location_stack: analyticsLocations,
+                      sku_id: str.skuId,
+                      application_id: str.applicationId,
+                      is_gift: true,
+                    };
                     obj.track(hasAlreadyLinked.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, obj);
                     obj = { analyticsLocations };
                     startAuthorization(obj);
@@ -326,17 +391,29 @@ export default function GiftCodeRedeemStart(giftCode) {
               code: str.code,
               onRedeemed() {
                 let obj = closure_1_0(closure_1_2[8]);
-                obj = { step: closure_1_12.SUCCESS, giftCode: closure_0, customMessage: closure_1, emojiName: closure_3, soundId: closure_2 };
+                obj = {
+                  step: closure_1_12.SUCCESS,
+                  giftCode: closure_0,
+                  customMessage: closure_1,
+                  emojiName: closure_3,
+                  soundId: closure_2,
+                };
                 obj.trackStep(obj);
                 obj = { giftCode: closure_0 };
               },
               onError(error) {
                 let obj = closure_1_0(closure_1_2[8]);
-                obj = { step: closure_1_12.ERROR, giftCode: closure_0, customMessage: closure_1, emojiName: closure_3, soundId: closure_2 };
+                obj = {
+                  step: closure_1_12.ERROR,
+                  giftCode: closure_0,
+                  customMessage: closure_1,
+                  emojiName: closure_3,
+                  soundId: closure_2,
+                };
                 obj.trackStep(obj);
                 obj = { message: closure_1_0(closure_1_2[8]).getGiftCodeRedeemError(error, closure_4) };
                 const obj4 = closure_1_0(closure_1_2[8]);
-              }
+              },
             };
             obj.redeemGiftCode(obj);
           };
@@ -368,7 +445,15 @@ export default function GiftCodeRedeemStart(giftCode) {
         obj21[1] = callback;
         let tmp30Result3 = null != tmp25;
         if (tmp30Result3) {
-          const obj22 = { deco: null, pfx: null, nameplate: null, previewAssets: null, disableStaticBackground: true, size: "large", targetSize: null };
+          const obj22 = {
+            deco: null,
+            pfx: null,
+            nameplate: null,
+            previewAssets: null,
+            disableStaticBackground: true,
+            size: "large",
+            targetSize: null,
+          };
           obj22[0] = firstAvatarDecoration;
           obj22[1] = firstProfileEffect;
           obj22[2] = firstNameplate;
@@ -389,35 +474,104 @@ export default function GiftCodeRedeemStart(giftCode) {
     const str3 = tmp2(tmp3[11]);
     const obj25 = { type: null };
     obj25[0] = tmp2(tmp3[12]).CollectiblesItemType.PROFILE_EFFECT;
-    const withResult = match.with(obj24, (avatarDecoration) => startAuthorization(str(soundId[38]).Avatar, { source: user.getAvatarSource(null, true, str(soundId[38]).AVATAR_SIZE_MAP[str(undefined, soundId[38]).AvatarSizes.GIFT_START]), avatarDecoration, size: str(soundId[38]).AvatarSizes.GIFT_START, animate: true }));
+    const withResult = match.with(obj24, (avatarDecoration) =>
+      startAuthorization(str(soundId[38]).Avatar, {
+        source: user.getAvatarSource(
+          null,
+          true,
+          str(soundId[38]).AVATAR_SIZE_MAP[str(undefined, soundId[38]).AvatarSizes.GIFT_START],
+        ),
+        avatarDecoration,
+        size: str(soundId[38]).AvatarSizes.GIFT_START,
+        animate: true,
+      }),
+    );
     const obj26 = { type: null };
     obj26[0] = tmp2(tmp3[12]).CollectiblesItemType.PROFILE_FRAME;
-    const withResult1 = match.with(obj24, (avatarDecoration) => startAuthorization(str(soundId[38]).Avatar, { source: user.getAvatarSource(null, true, str(soundId[38]).AVATAR_SIZE_MAP[str(undefined, soundId[38]).AvatarSizes.GIFT_START]), avatarDecoration, size: str(soundId[38]).AvatarSizes.GIFT_START, animate: true })).with(obj25, (profileEffect) => startAuthorization(customMessage(soundId[39]), { user, profileEffect }));
+    const withResult1 = match
+      .with(obj24, (avatarDecoration) =>
+        startAuthorization(str(soundId[38]).Avatar, {
+          source: user.getAvatarSource(
+            null,
+            true,
+            str(soundId[38]).AVATAR_SIZE_MAP[str(undefined, soundId[38]).AvatarSizes.GIFT_START],
+          ),
+          avatarDecoration,
+          size: str(soundId[38]).AvatarSizes.GIFT_START,
+          animate: true,
+        }),
+      )
+      .with(obj25, (profileEffect) => startAuthorization(customMessage(soundId[39]), { user, profileEffect }));
     const obj27 = { type: null };
     obj27[0] = tmp2(tmp3[12]).CollectiblesItemType.NAMEPLATE;
-    const withResult2 = match.with(obj24, (avatarDecoration) => startAuthorization(str(soundId[38]).Avatar, { source: user.getAvatarSource(null, true, str(soundId[38]).AVATAR_SIZE_MAP[str(undefined, soundId[38]).AvatarSizes.GIFT_START]), avatarDecoration, size: str(soundId[38]).AvatarSizes.GIFT_START, animate: true })).with(obj25, (profileEffect) => startAuthorization(customMessage(soundId[39]), { user, profileEffect })).with(obj26, (profileFrame) => startAuthorization(customMessage(soundId[40]), { user, profileFrame }));
-    obj23[1] = match.with(obj24, (avatarDecoration) => startAuthorization(str(soundId[38]).Avatar, { source: user.getAvatarSource(null, true, str(soundId[38]).AVATAR_SIZE_MAP[str(undefined, soundId[38]).AvatarSizes.GIFT_START]), avatarDecoration, size: str(soundId[38]).AvatarSizes.GIFT_START, animate: true })).with(obj25, (profileEffect) => startAuthorization(customMessage(soundId[39]), { user, profileEffect })).with(obj26, (profileFrame) => startAuthorization(customMessage(soundId[40]), { user, profileFrame })).with(obj27, (nameplate) => {
-      const items = [closure_5.nameplateContainer, ];
-      let prop;
-      if (!closure_8) {
-        prop = closure_5.nameplateContainerOffCenter;
-      }
-      obj = { style: items, children: tmp(str(soundId[41]).NameplatePreview, obj) };
-      items[1] = prop;
-      obj = { user, nameplate };
-      return startAuthorization(closure_6, obj);
-    }).otherwise(() => startAuthorization(customMessage(soundId[42]), { giftStyle: str.giftStyle }));
-    const withResult3 = match.with(obj24, (avatarDecoration) => startAuthorization(str(soundId[38]).Avatar, { source: user.getAvatarSource(null, true, str(soundId[38]).AVATAR_SIZE_MAP[str(undefined, soundId[38]).AvatarSizes.GIFT_START]), avatarDecoration, size: str(soundId[38]).AvatarSizes.GIFT_START, animate: true })).with(obj25, (profileEffect) => startAuthorization(customMessage(soundId[39]), { user, profileEffect })).with(obj26, (profileFrame) => startAuthorization(customMessage(soundId[40]), { user, profileFrame })).with(obj27, (nameplate) => {
-      const items = [closure_5.nameplateContainer, ];
-      let prop;
-      if (!closure_8) {
-        prop = closure_5.nameplateContainerOffCenter;
-      }
-      obj = { style: items, children: tmp(str(soundId[41]).NameplatePreview, obj) };
-      items[1] = prop;
-      obj = { user, nameplate };
-      return startAuthorization(closure_6, obj);
-    });
+    const withResult2 = match
+      .with(obj24, (avatarDecoration) =>
+        startAuthorization(str(soundId[38]).Avatar, {
+          source: user.getAvatarSource(
+            null,
+            true,
+            str(soundId[38]).AVATAR_SIZE_MAP[str(undefined, soundId[38]).AvatarSizes.GIFT_START],
+          ),
+          avatarDecoration,
+          size: str(soundId[38]).AvatarSizes.GIFT_START,
+          animate: true,
+        }),
+      )
+      .with(obj25, (profileEffect) => startAuthorization(customMessage(soundId[39]), { user, profileEffect }))
+      .with(obj26, (profileFrame) => startAuthorization(customMessage(soundId[40]), { user, profileFrame }));
+    obj23[1] = match
+      .with(obj24, (avatarDecoration) =>
+        startAuthorization(str(soundId[38]).Avatar, {
+          source: user.getAvatarSource(
+            null,
+            true,
+            str(soundId[38]).AVATAR_SIZE_MAP[str(undefined, soundId[38]).AvatarSizes.GIFT_START],
+          ),
+          avatarDecoration,
+          size: str(soundId[38]).AvatarSizes.GIFT_START,
+          animate: true,
+        }),
+      )
+      .with(obj25, (profileEffect) => startAuthorization(customMessage(soundId[39]), { user, profileEffect }))
+      .with(obj26, (profileFrame) => startAuthorization(customMessage(soundId[40]), { user, profileFrame }))
+      .with(obj27, (nameplate) => {
+        const items = [closure_5.nameplateContainer];
+        let prop;
+        if (!closure_8) {
+          prop = closure_5.nameplateContainerOffCenter;
+        }
+        obj = { style: items, children: tmp(str(soundId[41]).NameplatePreview, obj) };
+        items[1] = prop;
+        obj = { user, nameplate };
+        return startAuthorization(closure_6, obj);
+      })
+      .otherwise(() => startAuthorization(customMessage(soundId[42]), { giftStyle: str.giftStyle }));
+    const withResult3 = match
+      .with(obj24, (avatarDecoration) =>
+        startAuthorization(str(soundId[38]).Avatar, {
+          source: user.getAvatarSource(
+            null,
+            true,
+            str(soundId[38]).AVATAR_SIZE_MAP[str(undefined, soundId[38]).AvatarSizes.GIFT_START],
+          ),
+          avatarDecoration,
+          size: str(soundId[38]).AvatarSizes.GIFT_START,
+          animate: true,
+        }),
+      )
+      .with(obj25, (profileEffect) => startAuthorization(customMessage(soundId[39]), { user, profileEffect }))
+      .with(obj26, (profileFrame) => startAuthorization(customMessage(soundId[40]), { user, profileFrame }))
+      .with(obj27, (nameplate) => {
+        const items = [closure_5.nameplateContainer];
+        let prop;
+        if (!closure_8) {
+          prop = closure_5.nameplateContainerOffCenter;
+        }
+        obj = { style: items, children: tmp(str(soundId[41]).NameplatePreview, obj) };
+        items[1] = prop;
+        obj = { user, nameplate };
+        return startAuthorization(closure_6, obj);
+      });
   }
   const tmp24 = emojiName(user.useState(), 2);
   tmp28 = closure_7;
@@ -444,234 +598,299 @@ export default function GiftCodeRedeemStart(giftCode) {
     obj31[0] = tmp2(tmp3[12]).CollectiblesItemType.AVATAR_DECORATION;
     const P2 = tmp2(tmp3[11]).P;
     obj31[1] = P2.not(tmp2(tmp3[11]).P.nullish);
-    const withResult5 = match1.with(obj29, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
-    }).with(obj30, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t.iJ8823);
-    });
+    const withResult5 = match1
+      .with(obj29, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
+      })
+      .with(obj30, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t.iJ8823);
+      });
     const obj32 = { type: null, sender: null };
     obj32[0] = tmp2(tmp3[12]).CollectiblesItemType.PROFILE_EFFECT;
     const P3 = tmp2(tmp3[11]).P;
     obj32[1] = P3.not(tmp2(tmp3[11]).P.nullish);
-    const withResult6 = match1.with(obj29, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
-    }).with(obj30, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t.iJ8823);
-    }).with(obj31, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
-    });
+    const withResult6 = match1
+      .with(obj29, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
+      })
+      .with(obj30, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t.iJ8823);
+      })
+      .with(obj31, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
+      });
     const obj33 = { type: null, sender: null };
     obj33[0] = tmp2(tmp3[12]).CollectiblesItemType.NAMEPLATE;
     const P4 = tmp2(tmp3[11]).P;
     obj33[1] = P4.not(tmp2(tmp3[11]).P.nullish);
-    const withResult7 = match1.with(obj29, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
-    }).with(obj30, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t.iJ8823);
-    }).with(obj31, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
-    }).with(obj32, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
-    });
+    const withResult7 = match1
+      .with(obj29, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
+      })
+      .with(obj30, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t.iJ8823);
+      })
+      .with(obj31, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
+      })
+      .with(obj32, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
+      });
     const obj34 = { type: null, sender: null };
     obj34[0] = tmp2(tmp3[12]).CollectiblesItemType.PROFILE_FRAME;
     const P5 = tmp2(tmp3[11]).P;
     obj34[1] = P5.not(tmp2(tmp3[11]).P.nullish);
-    const withResult8 = match1.with(obj29, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
-    }).with(obj30, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t.iJ8823);
-    }).with(obj31, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
-    }).with(obj32, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
-    }).with(obj33, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.vFiQlU, { sender: str });
-    });
+    const withResult8 = match1
+      .with(obj29, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
+      })
+      .with(obj30, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t.iJ8823);
+      })
+      .with(obj31, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
+      })
+      .with(obj32, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
+      })
+      .with(obj33, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.vFiQlU, { sender: str });
+      });
     const obj35 = { type: null, sender: null };
     obj35[0] = tmp2(tmp3[12]).CollectiblesItemType.AVATAR_DECORATION;
     obj35[1] = tmp2(tmp3[11]).P.nullish;
-    const withResult9 = match1.with(obj29, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
-    }).with(obj30, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t.iJ8823);
-    }).with(obj31, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
-    }).with(obj32, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
-    }).with(obj33, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.vFiQlU, { sender: str });
-    }).with(obj34, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t["UH/EQL"], { sender: str });
-    });
+    const withResult9 = match1
+      .with(obj29, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
+      })
+      .with(obj30, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t.iJ8823);
+      })
+      .with(obj31, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
+      })
+      .with(obj32, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
+      })
+      .with(obj33, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.vFiQlU, { sender: str });
+      })
+      .with(obj34, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t["UH/EQL"], { sender: str });
+      });
     const obj36 = { type: null, sender: null };
     obj36[0] = tmp2(tmp3[12]).CollectiblesItemType.PROFILE_EFFECT;
     obj36[1] = tmp2(tmp3[11]).P.nullish;
-    const withResult10 = match1.with(obj29, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
-    }).with(obj30, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t.iJ8823);
-    }).with(obj31, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
-    }).with(obj32, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
-    }).with(obj33, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.vFiQlU, { sender: str });
-    }).with(obj34, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t["UH/EQL"], { sender: str });
-    }).with(obj35, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t["2ZO6CC"]);
-    });
+    const withResult10 = match1
+      .with(obj29, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
+      })
+      .with(obj30, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t.iJ8823);
+      })
+      .with(obj31, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
+      })
+      .with(obj32, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
+      })
+      .with(obj33, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.vFiQlU, { sender: str });
+      })
+      .with(obj34, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t["UH/EQL"], { sender: str });
+      })
+      .with(obj35, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t["2ZO6CC"]);
+      });
     const obj37 = { type: null, sender: null };
     obj37[0] = tmp2(tmp3[12]).CollectiblesItemType.NAMEPLATE;
     obj37[1] = tmp2(tmp3[11]).P.nullish;
-    const withResult11 = match1.with(obj29, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
-    }).with(obj30, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t.iJ8823);
-    }).with(obj31, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
-    }).with(obj32, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
-    }).with(obj33, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.vFiQlU, { sender: str });
-    }).with(obj34, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t["UH/EQL"], { sender: str });
-    }).with(obj35, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t["2ZO6CC"]);
-    }).with(obj36, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t["2NxdjX"]);
-    });
+    const withResult11 = match1
+      .with(obj29, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
+      })
+      .with(obj30, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t.iJ8823);
+      })
+      .with(obj31, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
+      })
+      .with(obj32, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
+      })
+      .with(obj33, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.vFiQlU, { sender: str });
+      })
+      .with(obj34, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t["UH/EQL"], { sender: str });
+      })
+      .with(obj35, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t["2ZO6CC"]);
+      })
+      .with(obj36, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t["2NxdjX"]);
+      });
     const obj38 = { type: null, sender: null };
     obj38[0] = tmp2(tmp3[12]).CollectiblesItemType.PROFILE_FRAME;
     obj38[1] = tmp2(tmp3[11]).P.nullish;
-    const withResult12 = match1.with(obj29, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
-    }).with(obj30, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t.iJ8823);
-    }).with(obj31, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
-    }).with(obj32, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
-    }).with(obj33, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.vFiQlU, { sender: str });
-    }).with(obj34, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t["UH/EQL"], { sender: str });
-    }).with(obj35, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t["2ZO6CC"]);
-    }).with(obj36, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t["2NxdjX"]);
-    }).with(obj37, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t.v7F232);
-    });
-    subscriptionGiftStartHeaderText = match1.with(obj29, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
-    }).with(obj30, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t.iJ8823);
-    }).with(obj31, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
-    }).with(obj32, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
-    }).with(obj33, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.vFiQlU, { sender: str });
-    }).with(obj34, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t["UH/EQL"], { sender: str });
-    }).with(obj35, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t["2ZO6CC"]);
-    }).with(obj36, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t["2NxdjX"]);
-    }).with(obj37, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t.v7F232);
-    }).with(obj38, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t["1+tgC0"]);
-    }).otherwise(() => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t["2BWscv"]);
-    });
-    const withResult13 = match1.with(obj29, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
-    }).with(obj30, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t.iJ8823);
-    }).with(obj31, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
-    }).with(obj32, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
-    }).with(obj33, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t.vFiQlU, { sender: str });
-    }).with(obj34, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.formatToPlainString(str(soundId[10]).t["UH/EQL"], { sender: str });
-    }).with(obj35, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t["2ZO6CC"]);
-    }).with(obj36, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t["2NxdjX"]);
-    }).with(obj37, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t.v7F232);
-    }).with(obj38, () => {
-      const intl = str(soundId[10]).intl;
-      return intl.string(str(soundId[10]).t["1+tgC0"]);
-    });
+    const withResult12 = match1
+      .with(obj29, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
+      })
+      .with(obj30, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t.iJ8823);
+      })
+      .with(obj31, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
+      })
+      .with(obj32, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
+      })
+      .with(obj33, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.vFiQlU, { sender: str });
+      })
+      .with(obj34, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t["UH/EQL"], { sender: str });
+      })
+      .with(obj35, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t["2ZO6CC"]);
+      })
+      .with(obj36, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t["2NxdjX"]);
+      })
+      .with(obj37, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t.v7F232);
+      });
+    subscriptionGiftStartHeaderText = match1
+      .with(obj29, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
+      })
+      .with(obj30, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t.iJ8823);
+      })
+      .with(obj31, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
+      })
+      .with(obj32, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
+      })
+      .with(obj33, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.vFiQlU, { sender: str });
+      })
+      .with(obj34, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t["UH/EQL"], { sender: str });
+      })
+      .with(obj35, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t["2ZO6CC"]);
+      })
+      .with(obj36, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t["2NxdjX"]);
+      })
+      .with(obj37, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t.v7F232);
+      })
+      .with(obj38, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t["1+tgC0"]);
+      })
+      .otherwise(() => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t["2BWscv"]);
+      });
+    const withResult13 = match1
+      .with(obj29, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.JUV1tL, { sender: str });
+      })
+      .with(obj30, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t.iJ8823);
+      })
+      .with(obj31, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.SKduyh, { sender: str });
+      })
+      .with(obj32, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t["1w42T2"], { sender: str });
+      })
+      .with(obj33, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t.vFiQlU, { sender: str });
+      })
+      .with(obj34, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.formatToPlainString(str(soundId[10]).t["UH/EQL"], { sender: str });
+      })
+      .with(obj35, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t["2ZO6CC"]);
+      })
+      .with(obj36, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t["2NxdjX"]);
+      })
+      .with(obj37, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t.v7F232);
+      })
+      .with(obj38, () => {
+        const intl = str(soundId[10]).intl;
+        return intl.string(str(soundId[10]).t["1+tgC0"]);
+      });
   }
-};
+}

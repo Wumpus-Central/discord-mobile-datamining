@@ -26,7 +26,7 @@ function _pickImage() {
     closure_1 = arg1;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, base64) {
+    return (function* (arg0, base64) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -109,7 +109,7 @@ class ImagePickerIcon {
     }
     tmp = closure_8();
     tmp3 = global.previewShape === closure_9.CIRCLE ? tmp.imageCircle : tmp.imageSquircle;
-    items = [, ];
+    items = [,];
     items[0] = image;
     items[1] = size;
     tmp2 = "center" === previewResizeMode ? tmp.imageCentered : tmp.image;
@@ -125,7 +125,8 @@ class ImagePickerIcon {
           if (null != size) {
             const obj = image(closure_1_2[7]);
             const _HermesInternal = HermesInternal;
-            let uri2 = tmp.uri + "?size=" + obj.getBestMediaProxySize(tmp3 * image(closure_1_2[7]).getDevicePixelRatio());
+            let uri2 =
+              tmp.uri + "?size=" + obj.getBestMediaProxySize(tmp3 * image(closure_1_2[7]).getDevicePixelRatio());
             tmp.uri = uri2;
             const obj2 = image(closure_1_2[7]);
           }
@@ -136,7 +137,15 @@ class ImagePickerIcon {
     }, items);
     tmp5 = jsxs;
     tmp6 = imageUploadSize;
-    obj = { accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, style: null, disabled: null, children: null };
+    obj = {
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      accessibilityState: null,
+      onPress: null,
+      style: null,
+      disabled: null,
+      children: null,
+    };
     tmp9 = image;
     tmp8 = require("render");
     intl = require("getSystemLocale").intl;
@@ -145,7 +154,7 @@ class ImagePickerIcon {
     obj[3] = function onPress() {
       return closure_1_10(closure_1, closure_2);
     };
-    items1 = [, , , , ];
+    items1 = [, , , ,];
     items1[0] = tmp.image;
     items1[1] = tmp3;
     items1[2] = tmp.imageContainerEmpty;
@@ -160,7 +169,7 @@ class ImagePickerIcon {
     if (null != image) {
       tmp12 = jsx;
       obj = { style: null, resizeMode: null, source: null };
-      items2 = [, , ];
+      items2 = [, ,];
       items2[0] = tmp2;
       items2[1] = style;
       items2[2] = tmp3;
@@ -179,11 +188,11 @@ class ImagePickerIcon {
       tmp10 = jsx;
       tmp12Result = jsx(require("ImagePlusIcon").ImagePlusIcon, {});
     }
-    items3 = [, ];
+    items3 = [,];
     items3[0] = tmp12Result;
     tmp10Result = null != image && !flag;
     if (tmp10Result) {
-      items4 = [, ];
+      items4 = [,];
       items4[0] = tmp.editImageIcon;
       tmp15 = View;
       if (standalone) {
@@ -201,18 +210,54 @@ class ImagePickerIcon {
   }
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 }, buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 }, imageDescription: { flexWrap: "wrap", marginBottom: 16 }, image: { alignSelf: "center", width: 84, height: 84 }, imageCentered: { alignSelf: "center", width: 20, height: 20 }, imageCircle: { borderRadius: 42 }, imageSquircle: null, imageContainerEmpty: null, editImageIcon: null, standaloneIcon: null, disabled: null };
+createCacheKey = {
+  imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 },
+  buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 },
+  imageDescription: { flexWrap: "wrap", marginBottom: 16 },
+  image: { alignSelf: "center", width: 84, height: 84 },
+  imageCentered: { alignSelf: "center", width: 20, height: 20 },
+  imageCircle: { borderRadius: 42 },
+  imageSquircle: null,
+  imageContainerEmpty: null,
+  editImageIcon: null,
+  standaloneIcon: null,
+  disabled: null,
+};
 createCacheKey = { borderRadius: ThemesDefault.radii.sm };
 createCacheKey[6] = createCacheKey;
 createCacheKey[7] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[8] = { alignItems: "center", backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.lg, top: 0, height: 24, justifyContent: "center", right: 0, padding: 4, position: "absolute", width: 24 };
+createCacheKey[8] = {
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  borderRadius: ThemesDefault.radii.lg,
+  top: 0,
+  height: 24,
+  justifyContent: "center",
+  right: 0,
+  padding: 4,
+  position: "absolute",
+  width: 24,
+};
 createCacheKey[9] = { top: -4, right: -4 };
 createCacheKey[10] = { opacity: 0.3 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { CIRCLE: 0, [0]: "CIRCLE", SQUIRCLE: 1, [1]: "SQUIRCLE" };
-let obj2 = { alignItems: "center", backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.lg, top: 0, height: 24, justifyContent: "center", right: 0, padding: 4, position: "absolute", width: 24 };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormImagePicker.tsx");
+let obj2 = {
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  borderRadius: ThemesDefault.radii.lg,
+  top: 0,
+  height: 24,
+  justifyContent: "center",
+  right: 0,
+  padding: 4,
+  position: "absolute",
+  width: 24,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/FormImagePicker.tsx",
+);
 
 export default function FormImagePicker(children) {
   const imageUploadSize = children.imageUploadSize;
@@ -231,7 +276,12 @@ export default function FormImagePicker(children) {
   }
   let obj = { style: tmp2.imageSelectionRow, children: null };
   obj = { style: tmp2.buttonColumn, children: null };
-  obj = { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description };
+  obj = {
+    style: tmp2.imageDescription,
+    variant: "text-sm/medium",
+    color: "text-default",
+    children: children.description,
+  };
   const items = [
     callback2(tmp6(4474).Text, obj),
     callback2(tmp6(4928).Button, {
@@ -241,11 +291,11 @@ export default function FormImagePicker(children) {
         return closure_1_10(imageUploadSize, setImage);
       },
       size: "md",
-      disabled
-    })
+      disabled,
+    }),
   ];
   obj[1] = items;
-  const items1 = [callback3(View, obj), ];
+  const items1 = [callback3(View, obj)];
   const obj2 = {};
   const merged1 = Object.assign(merged);
   obj2.disabled = disabled;
@@ -255,6 +305,6 @@ export default function FormImagePicker(children) {
   items1[1] = callback2(ImagePickerIcon, obj2);
   obj[1] = items1;
   return callback3(View, obj);
-};
+}
 export const PreviewShape = obj3;
 export { ImagePickerIcon };

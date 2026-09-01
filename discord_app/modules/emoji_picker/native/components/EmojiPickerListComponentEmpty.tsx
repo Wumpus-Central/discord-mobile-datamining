@@ -36,9 +36,25 @@ const memoResult = importAllResult.memo(function EmojiPickerListComponentEmpty(i
   const intl = tmp3(tmp4[9]).intl;
   obj[1] = intl.string(insetTop(insetBottom[9]).t.IxxiKF);
   ({ emptyStateBody: obj4[2], emptyStateContainer: obj4[3], emptyStateImage: obj4[4] } = tmp);
-  obj[3] = jsx(insetTop(insetBottom[8]).RefreshEmptyState, { source: searchEmptySource, body: null, bodyStyle: null, containerStyle: null, imageStyle: null });
-  return <BottomSheetScrollView source={searchEmptySource} body={null} bodyStyle={null} containerStyle={null} imageStyle={null} />;
+  obj[3] = jsx(insetTop(insetBottom[8]).RefreshEmptyState, {
+    source: searchEmptySource,
+    body: null,
+    bodyStyle: null,
+    containerStyle: null,
+    imageStyle: null,
+  });
+  return (
+    <BottomSheetScrollView
+      source={searchEmptySource}
+      body={null}
+      bodyStyle={null}
+      containerStyle={null}
+      imageStyle={null}
+    />
+  );
 });
-const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponentEmpty.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/emoji_picker/native/components/EmojiPickerListComponentEmpty.tsx",
+);
 
 export default memoResult;

@@ -36,7 +36,11 @@ function renderVoicePanel(arg0, channelId, transitionState, transitionCleanUp) {
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function VoicePanelContainer() {
   const tmp = callback((channels) => Array.from(channels.channels), isIterable.shallow);
-  return jsx(ManaContext.TransitionGroup, { items: callback((channels) => Array.from(channels.channels), isIterable.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
+  return jsx(ManaContext.TransitionGroup, {
+    items: callback((channels) => Array.from(channels.channels), isIterable.shallow),
+    getItemKey: getChannelKey,
+    renderItem: renderVoicePanel,
+  });
 });
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
 

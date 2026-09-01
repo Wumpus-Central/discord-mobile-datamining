@@ -47,7 +47,9 @@ export const useManaTextMigrationHighlight = function useManaTextMigrationHighli
         }
         return tmp2;
       }
-    }) ? tmp.overridden : tmp.highlight;
+    })
+      ? tmp.overridden
+      : tmp.highlight;
   }
 };
 export const withManaTextMigrationHighlight = function withManaTextMigrationHighlight(fromEntriesResult) {

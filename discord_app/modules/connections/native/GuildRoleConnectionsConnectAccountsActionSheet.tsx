@@ -55,11 +55,17 @@ function ChannelName(channel) {
     obj[1] = tmp.channelNameIcon;
     tmp8 = callback2(tmp2(1297).Icon, obj);
   }
-  const items1 = [tmp8, ];
+  const items1 = [tmp8];
   const tmp5 = computeChannelNameDefault(channel);
   const tmp6 = closure_30;
   const tmp7 = closure_8;
-  items1[1] = callback2(Text.Text, { variant: "heading-lg/semibold", color: "text-default", style: tmp.channelNameText, lineClamp: 1, children: computeChannelNameDefault(channel) });
+  items1[1] = callback2(Text.Text, {
+    variant: "heading-lg/semibold",
+    color: "text-default",
+    style: tmp.channelNameText,
+    lineClamp: 1,
+    children: computeChannelNameDefault(channel),
+  });
   obj[1] = items1;
   return tmp6(tmp7, obj);
 }
@@ -208,7 +214,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     tmp13Result = tmp13(tmp2(tmp3[24]).Text, obj2);
     tmp15 = tmp13;
   }
-  const items1 = [result, flag, canStartAuthorization, startAuthorization, onAttempted, onIdentityAuthorize, , , , ];
+  const items1 = [result, flag, canStartAuthorization, startAuthorization, onAttempted, onIdentityAuthorize, , , ,];
   ({ connection_type: arr2[6], application_id: arr2[7] } = eligibilityState);
   items1[8] = identity_connected_account_type;
   items1[9] = identity_auth_required_scopes;
@@ -264,7 +270,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
   }
   let tmp18Result = null;
   if (!officialApplicationIds.includes(str)) {
-    const items2 = [tmp.connectionsChecksGroup, , ];
+    const items2 = [tmp.connectionsChecksGroup, ,];
     let prop = null;
     if (result) {
       prop = tmp.connectionsChecksGroupPassed;
@@ -291,7 +297,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
       obj4[2] = tmp2(tmp3[21]).AvatarSizes.XSMALL;
       tmp15Result = tmp15(tmp2(tmp3[21]).Avatar, obj4);
     }
-    const items3 = [tmp15Result, , ];
+    const items3 = [tmp15Result, ,];
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.connectionsChecksGroupTextContainer;
     const obj6 = { style: null, children: null };
@@ -304,7 +310,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     obj7[2] = name;
     const items4 = [tmp15(tmp2(tmp3[24]).Text, obj7), tmp10];
     obj6[1] = items4;
-    const items5 = [closure_30(application, obj6), ];
+    const items5 = [closure_30(application, obj6)];
     tmp15Result = null;
     if (!flag) {
       tmp15Result = null;
@@ -328,8 +334,16 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
 }
 function ConnectionsChecks(eligibilityStatesGroups) {
   eligibilityStatesGroups = eligibilityStatesGroups.eligibilityStatesGroups;
-  ({ onPlatformAttempt: importDefault, onPlatformConnect: dependencyMap, onPlatformConnected } = eligibilityStatesGroups);
-  ({ onPlatformIdentityAuthorize: closure_4, initialAttemptedPlatformType, initialAttemptedApplicationId } = eligibilityStatesGroups);
+  ({
+    onPlatformAttempt: importDefault,
+    onPlatformConnect: dependencyMap,
+    onPlatformConnected,
+  } = eligibilityStatesGroups);
+  ({
+    onPlatformIdentityAuthorize: closure_4,
+    initialAttemptedPlatformType,
+    initialAttemptedApplicationId,
+  } = eligibilityStatesGroups);
   let React;
   c6 = undefined;
   c7 = undefined;
@@ -362,14 +376,18 @@ function ConnectionsChecks(eligibilityStatesGroups) {
   let items = [eligibilityStatesGroups];
   memo = obj.useMemo(() => closure_1_1(closure_1_2[32]).flatten(eligibilityStatesGroups), items);
   let items1 = [memo];
-  memo1 = obj.useMemo(() => closure_1_1(closure_1_2[32]).groupBy(memo, (application_id) => {
-    let str = "";
-    if (null != application_id.application_id) {
-      const _HermesInternal = HermesInternal;
-      str = ":" + application_id.application_id;
-    }
-    return "" + application_id.connection_type + str;
-  }), items1);
+  memo1 = obj.useMemo(
+    () =>
+      closure_1_1(closure_1_2[32]).groupBy(memo, (application_id) => {
+        let str = "";
+        if (null != application_id.application_id) {
+          const _HermesInternal = HermesInternal;
+          str = ":" + application_id.application_id;
+        }
+        return "" + application_id.connection_type + str;
+      }),
+    items1,
+  );
   let items2 = [memo];
   const effect = obj.useEffect(() => _undefined(Date.now()), items2);
   let items3 = [memo1, first, first1, onPlatformConnected];
@@ -534,7 +552,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp24Result = tmp24(tmp5(tmp6[29]), obj5);
       const tmp5Result = tmp5(tmp6[29]);
     }
-    const items = [closure_5.connectionsChecksGroup, , ];
+    const items = [closure_5.connectionsChecksGroup, ,];
     let prop = null;
     if (tmp3) {
       prop = tmp38.connectionsChecksGroupPassed;
@@ -592,7 +610,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
         tmp24Result = tmp24(c8, obj7);
       }
     }
-    const items1 = [tmp24Result, , , , ];
+    const items1 = [tmp24Result, , , ,];
     let tmp24Result1 = null;
     if (null != value) {
       const obj9 = { platformType: null };
@@ -622,7 +640,14 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       }
       name = name1;
     }
-    const items2 = [tmp24(eligibilityStatesGroups(closure_1_2[24]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: name }), tmp24Result, ];
+    const items2 = [
+      tmp24(eligibilityStatesGroups(closure_1_2[24]).Text, {
+        variant: "text-md/medium",
+        color: "mobile-text-heading-primary",
+        children: name,
+      }),
+      tmp24Result,
+    ];
     let tmp24Result3 = null;
     if (null != tmp28) {
       const obj13 = { onPress: null, children: null };
@@ -649,8 +674,12 @@ function ConnectionsChecks(eligibilityStatesGroups) {
         value(application[35])(null != connectionMetadataField, "connectionMetadataField is null");
         value(application[35])(null != operator, "operator is null");
         value(application[35])(null != value, "value is null");
-        return callback3(closure_35, { connectionType, connectionMetadataField, operator, value, result, description }, connectionMetadataField);
-      })
+        return callback3(
+          closure_35,
+          { connectionType, connectionMetadataField, operator, value, result, description },
+          connectionMetadataField,
+        );
+      }),
     ];
     obj11[1] = items3;
     items1[3] = closure_1_30(c8, obj11);
@@ -750,20 +779,100 @@ function ConnectedUserAccountOptions(account) {
   return callback3(closure_8, obj3);
 }
 ({ ActivityIndicator: closure_6, Pressable: error, View: closure_8 } = get_ActivityIndicator);
-({ MetadataFields: closure_17, OperatorTypes: closure_18, GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_19, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_20 } = OperatorTypes);
-({ PlatformTypes: closure_21, UserSettingsSections: closure_22, AnalyticEvents: closure_23, MarketingURLs: closure_24, FRIEND_SYNC_PLATFORM_TYPES: closure_25, ACTIVITY_PLATFORM_TYPES: closure_26, Permissions: closure_27, EMPTY_STRING_SNOWFLAKE_ID: closure_28 } = ME);
+({
+  MetadataFields: closure_17,
+  OperatorTypes: closure_18,
+  GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_19,
+  GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_20,
+} = OperatorTypes);
+({
+  PlatformTypes: closure_21,
+  UserSettingsSections: closure_22,
+  AnalyticEvents: closure_23,
+  MarketingURLs: closure_24,
+  FRIEND_SYNC_PLATFORM_TYPES: closure_25,
+  ACTIVITY_PLATFORM_TYPES: closure_26,
+  Permissions: closure_27,
+  EMPTY_STRING_SNOWFLAKE_ID: closure_28,
+} = ME);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = jsxProd);
-createCacheKey = { container: { padding: 12 }, connectionsChecksGroups: { marginTop: 16, flexDirection: "column" }, connectionsChecksGroup: null, connectionsChecksGroupPassed: null, connectionsChecksGroupPlatformDisabled: null, connectionsChecksGroupRequirementsNotMet: null, connectionsChecksGroupTextContainer: null, connectionsChecksGroupTextNameContainer: null, connectionsChecksGroupTextNameInfoIcon: null, connectionsChecksGroupCheckmark: null, connectionsChecksGroupCaret: null, connectionsCheck: null, platformIcon: null, channelName: null, channelNameIcon: null, channelNameText: null, header: null, content: null, footerText: null, accountConnectedContainer: null, accountConnectedPreview: null, accountConnectedPreviewConnectedUserAccount: null, accountConnectedPrivacy: null, accountConnectedPrivacyOptionsContainer: null, roleGranted: null, roleGrantedName: null, verifiedIcon: null, channelsGranted: null, manageConnectionsButton: null, loading: null, appIcon: null, botTag: null };
-createCacheKey = { flexDirection: "row", borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: ThemesDefault.radii.md, paddingHorizontal: 16, paddingVertical: 20, marginBottom: 16, width: "100%", alignItems: "center", position: "relative" };
+createCacheKey = {
+  container: { padding: 12 },
+  connectionsChecksGroups: { marginTop: 16, flexDirection: "column" },
+  connectionsChecksGroup: null,
+  connectionsChecksGroupPassed: null,
+  connectionsChecksGroupPlatformDisabled: null,
+  connectionsChecksGroupRequirementsNotMet: null,
+  connectionsChecksGroupTextContainer: null,
+  connectionsChecksGroupTextNameContainer: null,
+  connectionsChecksGroupTextNameInfoIcon: null,
+  connectionsChecksGroupCheckmark: null,
+  connectionsChecksGroupCaret: null,
+  connectionsCheck: null,
+  platformIcon: null,
+  channelName: null,
+  channelNameIcon: null,
+  channelNameText: null,
+  header: null,
+  content: null,
+  footerText: null,
+  accountConnectedContainer: null,
+  accountConnectedPreview: null,
+  accountConnectedPreviewConnectedUserAccount: null,
+  accountConnectedPrivacy: null,
+  accountConnectedPrivacyOptionsContainer: null,
+  roleGranted: null,
+  roleGrantedName: null,
+  verifiedIcon: null,
+  channelsGranted: null,
+  manageConnectionsButton: null,
+  loading: null,
+  appIcon: null,
+  botTag: null,
+};
+createCacheKey = {
+  flexDirection: "row",
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderWidth: 2,
+  borderRadius: ThemesDefault.radii.md,
+  paddingHorizontal: 16,
+  paddingVertical: 20,
+  marginBottom: 16,
+  width: "100%",
+  alignItems: "center",
+  position: "relative",
+};
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-let obj1 = { borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[3] = {
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
+let obj1 = {
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 let obj2 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[5] = { paddingVertical: 4, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, position: "absolute", top: -8, right: 20 };
+createCacheKey[5] = {
+  paddingVertical: 4,
+  paddingHorizontal: 12,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
+  position: "absolute",
+  top: -8,
+  right: 20,
+};
 createCacheKey[6] = { flex: 1 };
 createCacheKey[7] = { flexDirection: "row", alignItems: "center" };
-let obj3 = { paddingVertical: 4, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, position: "absolute", top: -8, right: 20 };
+let obj3 = {
+  paddingVertical: 4,
+  paddingHorizontal: 12,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
+  position: "absolute",
+  top: -8,
+  right: 20,
+};
 createCacheKey[8] = { marginLeft: 4, tintColor: ThemesDefault.colors.TEXT_FEEDBACK_WARNING };
 let obj4 = { marginLeft: 4, tintColor: ThemesDefault.colors.TEXT_FEEDBACK_WARNING };
 createCacheKey[9] = { tintColor: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE, width: 24, height: 24 };
@@ -781,24 +890,89 @@ createCacheKey[18] = { marginBottom: 16 };
 createCacheKey[19] = { flexDirection: "column", alignItems: "flex-start", marginVertical: 24 };
 createCacheKey[20] = { width: "100%" };
 let obj7 = { tintColor: ThemesDefault.colors.TEXT_MUTED, marginRight: 8, width: 24, height: 24 };
-createCacheKey[21] = { marginTop: 8, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[21] = {
+  marginTop: 8,
+  borderRadius: ThemesDefault.radii.xs,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 createCacheKey[22] = { marginTop: 16, width: "100%" };
-let obj8 = { marginTop: 8, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[23] = { marginTop: 8, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, padding: 8, flexDirection: "column" };
-let obj9 = { marginTop: 8, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, padding: 8, flexDirection: "column" };
-createCacheKey[24] = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingVertical: 12, paddingHorizontal: 8, borderTopStartRadius: 4, borderTopEndRadius: 4, marginTop: 16 };
+let obj8 = {
+  marginTop: 8,
+  borderRadius: ThemesDefault.radii.xs,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
+createCacheKey[23] = {
+  marginTop: 8,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.xs,
+  padding: 8,
+  flexDirection: "column",
+};
+let obj9 = {
+  marginTop: 8,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.xs,
+  padding: 8,
+  flexDirection: "column",
+};
+createCacheKey[24] = {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  paddingVertical: 12,
+  paddingHorizontal: 8,
+  borderTopStartRadius: 4,
+  borderTopEndRadius: 4,
+  marginTop: 16,
+};
 createCacheKey[25] = { overflow: "hidden", marginRight: 24 };
 createCacheKey[26] = { marginRight: 8 };
-let obj10 = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingVertical: 12, paddingHorizontal: 8, borderTopStartRadius: 4, borderTopEndRadius: 4, marginTop: 16 };
-createCacheKey[27] = { flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, padding: 16, borderBottomStartRadius: 4, borderBottomEndRadius: 4, marginBottom: 24 };
+let obj10 = {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  paddingVertical: 12,
+  paddingHorizontal: 8,
+  borderTopStartRadius: 4,
+  borderTopEndRadius: 4,
+  marginTop: 16,
+};
+createCacheKey[27] = {
+  flexDirection: "column",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  padding: 16,
+  borderBottomStartRadius: 4,
+  borderBottomEndRadius: 4,
+  marginBottom: 24,
+};
 createCacheKey[28] = { marginTop: 8 };
 createCacheKey[29] = { marginTop: 24, marginBottom: 32, alignSelf: "center" };
 createCacheKey[30] = { marginRight: 8 };
 createCacheKey[31] = { marginLeft: 4 };
 let closure_32 = createCacheKey.createStyles(createCacheKey);
-let closure_39 = { CHECKS_REQUIRED: 0, [0]: "CHECKS_REQUIRED", ACCOUNT_CONNECTED: 1, [1]: "ACCOUNT_CONNECTED", ROLE_GRANTED: 2, [2]: "ROLE_GRANTED" };
-let obj11 = { flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, padding: 16, borderBottomStartRadius: 4, borderBottomEndRadius: 4, marginBottom: 24 };
-let result = require("set").fileFinishedImporting("modules/connections/native/GuildRoleConnectionsConnectAccountsActionSheet.tsx");
+let closure_39 = {
+  CHECKS_REQUIRED: 0,
+  [0]: "CHECKS_REQUIRED",
+  ACCOUNT_CONNECTED: 1,
+  [1]: "ACCOUNT_CONNECTED",
+  ROLE_GRANTED: 2,
+  [2]: "ROLE_GRANTED",
+};
+let obj11 = {
+  flexDirection: "column",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  padding: 16,
+  borderBottomStartRadius: 4,
+  borderBottomEndRadius: 4,
+  marginBottom: 24,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/connections/native/GuildRoleConnectionsConnectAccountsActionSheet.tsx",
+);
 class GuildRoleConnectionsConnectAccountsActionSheet {
   constructor(arg0) {
     guildId = global.guildId;
@@ -823,7 +997,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
     closure_19 = undefined;
     _handleAssignRole = function _handleAssignRole() {
       const self = this;
-      const tmp = closure_1_3(function*() {
+      const tmp = closure_1_3(function* () {
         if (c0 === 2) {
           c0 = 3;
           HermesBuiltin.throwTypeError();
@@ -926,20 +1100,23 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
     first2 = tmp23[0];
     closure_14 = first2;
     closure_15 = tmp23[1];
-    tmp25 = onCloseModal(closure_5.useState(() => {
-      let tmp2 = null;
-      if (null != initialAttemptedPlatformType) {
-        const obj = { platformType: null, applicationId: null };
-        obj[0] = tmp;
-        let tmp3 = closure_3;
-        if (closure_3 == null) {
-          tmp3 = null;
+    tmp25 = onCloseModal(
+      closure_5.useState(() => {
+        let tmp2 = null;
+        if (null != initialAttemptedPlatformType) {
+          const obj = { platformType: null, applicationId: null };
+          obj[0] = tmp;
+          let tmp3 = closure_3;
+          if (closure_3 == null) {
+            tmp3 = null;
+          }
+          obj[1] = tmp3;
+          tmp2 = obj;
         }
-        obj[1] = tmp3;
-        tmp2 = obj;
-      }
-      return tmp2;
-    }), 2);
+        return tmp2;
+      }),
+      2,
+    );
     [tmp26, closure_16] = tmp25;
     tmp27 = onCloseModal(closure_5.useState(null), 2);
     [arr6, closure_17] = tmp27;
@@ -953,14 +1130,17 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
     obj5 = require("initialize");
     items4 = [];
     items4[0] = closure_13;
-    stateFromStores4 = obj5.useStateFromStores(items4, () => mutableGuildChannelsForGuild.getMutableGuildChannelsForGuild(guildId));
+    stateFromStores4 = obj5.useStateFromStores(items4, () =>
+      mutableGuildChannelsForGuild.getMutableGuildChannelsForGuild(guildId),
+    );
     obj6 = require("initialize");
     items5 = [];
     items5[0] = closure_10;
     stateFromStores5 = obj6.useStateFromStores(items5, () => lib.locale);
     values = Object.values(stateFromStores4);
     found = values.filter((arg0) => {
-      let hasItem = _undefined2.can(closure_1_27.VIEW_CHANNEL, arg0) && _undefined2.can(closure_1_27.SEND_MESSAGES, arg0);
+      let hasItem =
+        _undefined2.can(closure_1_27.VIEW_CHANNEL, arg0) && _undefined2.can(closure_1_27.SEND_MESSAGES, arg0);
       if (hasItem) {
         hasItem = role(initialAttemptedPlatformType[42])(arg0).includes(role);
         const obj2 = role(initialAttemptedPlatformType[42])(arg0);
@@ -968,20 +1148,22 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
       return hasItem;
     });
     closure_19 = found;
-    items6 = [, , , ];
+    items6 = [, , ,];
     items6[0] = guildId;
     items6[1] = role.id;
     items6[2] = stateFromStores;
     items6[3] = stateFromStores1;
     effect = closure_5.useEffect(() => {
-      const guildRoleConnectionsEligibility = role(initialAttemptedPlatformType[43]).fetchGuildRoleConnectionsEligibility(guildId, role.id);
+      const guildRoleConnectionsEligibility = role(
+        initialAttemptedPlatformType[43],
+      ).fetchGuildRoleConnectionsEligibility(guildId, role.id);
       guildRoleConnectionsEligibility.then((arr) => {
         callback(arr);
         callback2(arr.some((arr) => arr.every((result) => result.result)));
         callback3(false);
       });
     }, items6);
-    items7 = [, , ];
+    items7 = [, ,];
     items7[0] = initialAttemptedPlatformType;
     items7[1] = role.id;
     items7[2] = guildId;
@@ -995,7 +1177,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
         const obj3 = guildId(initialAttemptedPlatformType[45]);
       }
     }, items7);
-    items8 = [, , , , ];
+    items8 = [, , , ,];
     items8[0] = first;
     items8[1] = found.length;
     items8[2] = stateFromStores3;
@@ -1089,7 +1271,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
       obj = { screen: closure_1_22.AUTHORIZED_APPS };
       guildId(initialAttemptedPlatformType[47]).openUserSettings(obj);
     };
-    items9 = [, , ];
+    items9 = [, ,];
     items9[0] = tmp36Result;
     if (tmp2.CHECKS_REQUIRED === tmp4) {
       tmp55 = null != arr;
@@ -1123,7 +1305,9 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           handlePlatformAttempt = function handlePlatformAttempt() {
             let obj = role(initialAttemptedPlatformType[44]);
             obj = { role_id: role.id };
-            const merged = Object.assign(guildId(initialAttemptedPlatformType[45]).collectGuildAnalyticsMetadata(guildId));
+            const merged = Object.assign(
+              guildId(initialAttemptedPlatformType[45]).collectGuildAnalyticsMetadata(guildId),
+            );
             obj.track(closure_1_23.PASSPORT_CHALLENGE_STARTED, obj);
           };
           handlePlatformConnect = function handlePlatformConnect(platformType, role_connections_verification_url) {
@@ -1147,9 +1331,18 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 let obj = lib(closure_1_2[46]);
                 obj = { default: closure_1_40 };
                 const resolved = Promise.resolve(obj);
-                obj = { role: lib, guildId: platformType, initialAttemptedPlatformType: tmp, initialAttemptedApplicationId: null, overrideUrl: null, onCloseModal: null };
+                obj = {
+                  role: lib,
+                  guildId: platformType,
+                  initialAttemptedPlatformType: tmp,
+                  initialAttemptedApplicationId: null,
+                  overrideUrl: null,
+                  onCloseModal: null,
+                };
                 let tmp7 = null;
-                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(closure_1_2[48]).makeGuildRoleConnectionsConnectAccountsActionSheetKey(lib.id);
+                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(
+                  closure_1_2[48],
+                ).makeGuildRoleConnectionsConnectAccountsActionSheetKey(lib.id);
                 if (null != platformType) {
                   tmp7 = id;
                 }
@@ -1158,7 +1351,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 obj[5] = closure_1_4;
                 obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj);
               },
-              overrideUrl: null
+              overrideUrl: null,
             };
             let prop;
             if (role_connections_verification_url != null) {
@@ -1188,12 +1381,21 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 const resolved = Promise.resolve(obj);
                 const obj5 = role(initialAttemptedPlatformType[50]);
                 const tmp2 = applicationId;
-                obj = { role: null, guildId: null, initialAttemptedPlatformType: null, initialAttemptedApplicationId: null, overrideUrl: null, onCloseModal: null };
+                obj = {
+                  role: null,
+                  guildId: null,
+                  initialAttemptedPlatformType: null,
+                  initialAttemptedApplicationId: null,
+                  overrideUrl: null,
+                  onCloseModal: null,
+                };
                 obj[0] = wasAlreadyConnected;
                 obj[1] = applicationId;
                 obj[2] = tmp;
                 let tmp13 = null;
-                const guildRoleConnectionsConnectAccountsActionSheetKey = applicationId(combined[48]).makeGuildRoleConnectionsConnectAccountsActionSheetKey(wasAlreadyConnected.id);
+                const guildRoleConnectionsConnectAccountsActionSheetKey = applicationId(
+                  combined[48],
+                ).makeGuildRoleConnectionsConnectAccountsActionSheetKey(wasAlreadyConnected.id);
                 if (null != tmp) {
                   tmp13 = tmp2;
                 }
@@ -1206,17 +1408,29 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
             }
             const subscription = role(initialAttemptedPlatformType[50]).subscribe("MODAL_POP", handleModalClose);
             const obj2 = role(initialAttemptedPlatformType[50]);
-            obj = { clientId: applicationId, scopes, integrationType: null, connectedAccountProvider: null, callback: null, dismissOAuthModal: null };
+            obj = {
+              clientId: applicationId,
+              scopes,
+              integrationType: null,
+              connectedAccountProvider: null,
+              callback: null,
+              dismissOAuthModal: null,
+            };
             let obj3 = role(initialAttemptedPlatformType[51]);
             obj[2] = guildId(initialAttemptedPlatformType[54]).ApplicationIntegrationType.USER_INSTALL;
             obj[3] = connectedAccountProvider;
-            obj[4] = function callback() {
-
-            };
+            obj[4] = function callback() {};
             obj[5] = function dismissOAuthModal() {
               return role(initialAttemptedPlatformType[51]).popWithKey(combined);
             };
-            obj3.pushLazy(guildId(initialAttemptedPlatformType[53])(initialAttemptedPlatformType[52], initialAttemptedPlatformType.paths), obj, combined);
+            obj3.pushLazy(
+              guildId(initialAttemptedPlatformType[53])(
+                initialAttemptedPlatformType[52],
+                initialAttemptedPlatformType.paths,
+              ),
+              obj,
+              combined,
+            );
           };
           handlePlatformConnected = function handlePlatformConnected(arg0, arg1) {
             mutableGuildChannelsForGuild(arg0);
@@ -1224,24 +1438,34 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
             _undefined(closure_1_39.ACCOUNT_CONNECTED);
             _undefined2(null);
             if (null != arg1) {
-              const userApplicationRoleConnections = guildId(initialAttemptedPlatformType[55]).fetchUserApplicationRoleConnections();
+              const userApplicationRoleConnections = guildId(
+                initialAttemptedPlatformType[55],
+              ).fetchUserApplicationRoleConnections();
               const obj = guildId(initialAttemptedPlatformType[55]);
-              userApplicationRoleConnections.then((arg0) => {
-                callback(arg0);
-              }).catch(() => {
-
-              });
+              userApplicationRoleConnections
+                .then((arg0) => {
+                  callback(arg0);
+                })
+                .catch(() => {});
               const nextPromise = userApplicationRoleConnections.then((arg0) => {
                 callback(arg0);
               });
             }
           };
           obj7[2] = intl13.format(jHfRvZ, obj8);
-          items10 = [, , ];
+          items10 = [, ,];
           items10[0] = tmp36(require("Text").Text, obj7);
           obj9 = { style: null, children: null };
           obj9[0] = tmp.connectionsChecksGroups;
-          obj10 = { eligibilityStatesGroups: null, onPlatformAttempt: null, onPlatformConnect: null, onPlatformConnected: null, onPlatformIdentityAuthorize: null, initialAttemptedPlatformType: null, initialAttemptedApplicationId: null };
+          obj10 = {
+            eligibilityStatesGroups: null,
+            onPlatformAttempt: null,
+            onPlatformConnect: null,
+            onPlatformConnected: null,
+            onPlatformIdentityAuthorize: null,
+            initialAttemptedPlatformType: null,
+            initialAttemptedApplicationId: null,
+          };
           obj10[0] = arr;
           obj10[1] = handlePlatformAttempt;
           obj10[2] = handlePlatformConnect;
@@ -1312,7 +1536,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
             tmp36Result1 = tmp36(closure_6, obj16);
           }
           obj15[1] = tmp36Result1;
-          items11 = [, ];
+          items11 = [,];
           items11[0] = tmp36(tmp38, obj15);
           obj17 = { variant: "text-md/normal", color: "text-default", children: null };
           intl6 = require("getSystemLocale").intl;
@@ -1335,9 +1559,17 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           obj21 = { variant: "eyebrow", color: "text-default", children: null };
           intl3 = require("getSystemLocale").intl;
           obj21[2] = intl3.string(require("getSystemLocale").t.TOjkEg);
-          items12 = [, ];
+          items12 = [,];
           items12[0] = tmp36(require("Text").Text, obj21);
-          obj22 = { account: null, userId: null, theme: null, locale: null, style: null, showMetadata: null, showInvisibleIcon: null };
+          obj22 = {
+            account: null,
+            userId: null,
+            theme: null,
+            locale: null,
+            style: null,
+            showMetadata: null,
+            showInvisibleIcon: null,
+          };
           obj22[0] = found1;
           obj22[1] = stateFromStores2;
           obj22[2] = tmp29;
@@ -1347,14 +1579,14 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           obj22[6] = tmp15;
           items12[1] = tmp36(require("LegacyUserProfileConnections").ConnectedUserAccount, obj22);
           obj20[1] = items12;
-          items13 = [, ];
+          items13 = [,];
           items13[0] = tmp37(tmp38, obj20);
           obj23 = { style: null, children: null };
           obj23[0] = tmp.accountConnectedPrivacy;
           obj24 = { variant: "eyebrow", color: "text-default", children: null };
           intl4 = require("getSystemLocale").intl;
           obj24[2] = intl4.string(require("getSystemLocale").t.jndPhX);
-          items14 = [, ];
+          items14 = [,];
           items14[0] = tmp36(require("Text").Text, obj24);
           tmp49 = ConnectedUserAccountOptions;
           obj25 = { account: null, setShowPreviewInvisibleIcon: null, setShowPreviewMetadata: null };
@@ -1367,7 +1599,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           obj19[0] = items13;
           tmp37Result2 = tmp37(tmp47, obj19);
         }
-        items15 = [, ];
+        items15 = [,];
         items15[0] = tmp37Result2;
         tmp37Result3 = null;
         if (null != found2) {
@@ -1376,7 +1608,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           obj27 = { variant: "eyebrow", color: "text-default", children: null };
           intl5 = require("getSystemLocale").intl;
           obj27[2] = intl5.string(require("getSystemLocale").t.TOjkEg);
-          items16 = [, ];
+          items16 = [,];
           items16[0] = tmp36(require("Text").Text, obj27);
           obj28 = { applicationRoleConnection: null, theme: null, locale: null, style: null };
           obj28[0] = found2;
@@ -1402,14 +1634,20 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           obj32[0] = guildId;
           obj32[1] = tmp.verifiedIcon;
           obj32[2] = role;
-          items17 = [, ];
+          items17 = [,];
           items17[0] = tmp36(require("VerifiedRoleIcon"), obj32);
-          obj33 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: null };
+          obj33 = {
+            variant: "text-lg/semibold",
+            color: "mobile-text-heading-primary",
+            lineClamp: 1,
+            style: null,
+            children: null,
+          };
           obj33[3] = tmp.roleGrantedName;
           obj33[4] = role.name;
           items17[1] = tmp36(require("Text").Text, obj33);
           obj31[1] = items17;
-          items18 = [, ];
+          items18 = [,];
           items18[0] = tmp37(tmp38, obj31);
           obj34 = { style: null, children: null };
           obj34[0] = tmp.channelsGranted;
@@ -1471,7 +1709,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
         };
         intl8 = require("getSystemLocale").intl;
         obj37[2] = intl8.string(require("getSystemLocale").t.cpT0Cq);
-        items19 = [, ];
+        items19 = [,];
         items19[0] = tmp36(require("Button").Button, obj37);
         tmp36Result3 = null;
         if (flag) {

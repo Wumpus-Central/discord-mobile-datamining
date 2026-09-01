@@ -5,10 +5,17 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 import privDefault from "../../../_runtime/01401_priv.js";
 
 let closure_2 = { taken: null, error: "HermesInternal", rateLimited: null };
-let obj = { validations: new privDefault({ max: 100, maxAge: 60000 }), currentUsernameInvalid: false, retryAfterTime: null, suggestions: { migration: { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false }, registration: { suggestion: { username: "r" }, source: "PX_16", fetched: "kasvot" } } };
+let obj = {
+  validations: new privDefault({ max: 100, maxAge: 60000 }),
+  currentUsernameInvalid: false,
+  retryAfterTime: null,
+  suggestions: {
+    migration: { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false },
+    registration: { suggestion: { username: "r" }, source: "PX_16", fetched: "kasvot" },
+  },
+};
 const Store = initializeDefault.Store;
-class UniqueUsernamesStore extends Store {
-}
+class UniqueUsernamesStore extends Store {}
 const prototype = UniqueUsernamesStore.prototype;
 prototype["isRateLimited"] = function isRateLimited() {
   let tmp2 = null != obj.retryAfterTime;
@@ -95,7 +102,9 @@ obj = {
       obj.currentUsernameInvalid = true;
     }
   },
-  UNIQUE_USERNAME_REGISTRATION_SUGGESTIONS_SUCCESS: function handleUniqueUsernameRegistrationSuggestionsSuccess(source) {
+  UNIQUE_USERNAME_REGISTRATION_SUGGESTIONS_SUCCESS: function handleUniqueUsernameRegistrationSuggestionsSuccess(
+    source,
+  ) {
     const suggestion = source.suggestion;
     obj.suggestions.registration = { suggestion, source: source.source, fetched: true };
     let username;
@@ -106,7 +115,7 @@ obj = {
       const validations = obj.validations;
       const result = validations.set(suggestion.username, { taken: false });
     }
-  }
+  },
 };
 const uniqueUsernamesStore = new UniqueUsernamesStore(dispatcherDefault, obj);
 let tmp2 = new privDefault({ max: 100, maxAge: 60000 });

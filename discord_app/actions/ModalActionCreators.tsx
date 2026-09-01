@@ -52,7 +52,9 @@ export default {
     const obj = getRootNavigationRef;
     return new Promise((arg0) => {
       closure_0 = arg0;
-      return callback(table[6]).enqueue(() => callback(closure_1_4.pushLazy(closure_1_1, closure_1_2, closure_1_3, callback)));
+      return callback(table[6]).enqueue(() =>
+        callback(closure_1_4.pushLazy(closure_1_1, closure_1_2, closure_1_3, callback)),
+      );
     });
   },
   updateAnimation(key, SLIDE_IN_OUT) {
@@ -96,5 +98,5 @@ export default {
     dispatcherDefault.dispatch({ type: "CONNECTIONS_GRID_MODAL_HIDE" });
     const obj10 = dispatcherDefault;
     dispatcherDefault.dispatch({ type: "USER_PROFILE_MODAL_CLOSE" });
-  }
+  },
 };

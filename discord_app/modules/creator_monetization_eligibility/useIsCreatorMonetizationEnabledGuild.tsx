@@ -3,7 +3,9 @@ import closure_2 from "../../stores/GuildStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx",
+);
 
 export default function useIsCreatorMonetizationEnabledGuild(arg0) {
   const _require = arg0;
@@ -28,7 +30,7 @@ export default function useIsCreatorMonetizationEnabledGuild(arg0) {
     }
     return tmp2;
   });
-};
+}
 export const isCreatorMonetizationEnabledGuild = function isCreatorMonetizationEnabledGuild(guild) {
   const features = guild.features;
   const hasItem = features.has(GuildFeatures.CREATOR_MONETIZABLE_DISABLED);

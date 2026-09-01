@@ -14,19 +14,29 @@ import importDefaultResult from "../../../_runtime/04192_t.js";
 require = arg1;
 ({ AnalyticEvents: closure_6, MARKDOWN_SPOILER_WRAPPER: error, ME: closure_8 } = ME);
 const re9 = /\\([*?+/])/g;
-obj = { tts: obj, me: obj, tableflip: obj1, unflip: obj2, shrug: obj3, nick: obj4, reaction: null, searchReplace: null, spoiler: null };
+obj = {
+  tts: obj,
+  me: obj,
+  tableflip: obj1,
+  unflip: obj2,
+  shrug: obj3,
+  nick: obj4,
+  reaction: null,
+  searchReplace: null,
+  spoiler: null,
+};
 obj = {
   action() {
     obj = { tts: null };
     const EnableTTSCommand = explicitContentFromProto.EnableTTSCommand;
     obj[0] = EnableTTSCommand.getSetting();
     return obj;
-  }
+  },
 };
 obj = {
   action(arg0) {
     return { content: "_" + arg0 + "_" };
-  }
+  },
 };
 const obj5 = {
   match: importDefaultResult.anyScopeRegex(/^\+:(.+?): *$/),
@@ -51,7 +61,7 @@ const obj5 = {
       }
       obj = closure_5;
     }
-  }
+  },
 };
 obj[6] = obj5;
 const obj6 = { match: null, action: null };
@@ -59,19 +69,19 @@ obj1 = {
   action(arg0) {
     obj = { content: "" + arg0 + " (\u256F\u00B0\u25A1\u00B0)\u256F\uFE35 \u253B\u2501\u253B".trim() };
     return obj;
-  }
+  },
 };
 obj2 = {
   action(arg0) {
     obj = { content: "" + arg0 + " \u252C\u2500\u252C\u30CE( \u00BA _ \u00BA\u30CE)".trim() };
     return obj;
-  }
+  },
 };
 obj3 = {
   action(arg0) {
     obj = { content: "" + arg0 + " \u00AF\\_(\u30C4)_/\u00AF".trim() };
     return obj;
-  }
+  },
 };
 obj4 = {
   action(arg0, channel) {
@@ -81,7 +91,7 @@ obj4 = {
       obj.changeNickname(channel.guild_id, channel.id, closure_8, arg0);
       return { content: "" };
     }
-  }
+  },
 };
 obj6[0] = importDefaultResult.anyScopeRegex(/^s\/([^\/\\]*(?:\\.[^\/\\]*)*)\/([^\/\\]*(?:\\.[^\/\\]*)*)(?:\/([g]*))?$/);
 obj6[1] = function action(str, channel) {
@@ -134,7 +144,7 @@ obj[8] = {
   action(arg0) {
     obj = { content: callback2(arg0).trim() };
     return obj;
-  }
+  },
 };
 Object.setPrototypeOf(obj, null);
 const importDefaultResult1 = importDefaultResult;

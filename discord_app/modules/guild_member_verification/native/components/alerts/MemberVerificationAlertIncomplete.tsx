@@ -5,7 +5,9 @@ import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertIncomplete.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/alerts/MemberVerificationAlertIncomplete.tsx",
+);
 
 export default function MemberVerificationAlertIncomplete(guildId) {
   guildId = guildId.guildId;
@@ -57,7 +59,7 @@ export default function MemberVerificationAlertIncomplete(guildId) {
   const intl3 = tmp2(1236).intl;
   obj2[1] = intl3.string(guildId(1236).t.h3aGmv);
   obj2[2] = callback;
-  const items4 = [callback(guildId(4928).Button, obj2), ];
+  const items4 = [callback(guildId(4928).Button, obj2)];
   const obj3 = { text: null, variant: "destructive", onPress: null };
   const intl4 = tmp2(1236).intl;
   obj3[0] = intl4.string(guildId(1236).t.OQFlFD);
@@ -66,4 +68,4 @@ export default function MemberVerificationAlertIncomplete(guildId) {
   obj1[0] = items4;
   obj.buttons = callback2(closure_6, obj1);
   return callback(onClose(7657), obj);
-};
+}

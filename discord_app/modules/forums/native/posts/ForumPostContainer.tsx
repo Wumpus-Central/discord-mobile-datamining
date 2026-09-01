@@ -9,8 +9,17 @@ import createFakeSharedValue from "../../../reanimated/ReanimatedHelperTypes.tsx
 
 const require = arg1;
 let c3 = importAllResult;
-let obj = { childContainer: { position: "relative", minHeight: 110, padding: 12 }, card: { marginBottom: 12 }, disabledContainer: null };
-obj = { marginBottom: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.md, overflow: "hidden" };
+let obj = {
+  childContainer: { position: "relative", minHeight: 110, padding: 12 },
+  card: { marginBottom: 12 },
+  disabledContainer: null,
+};
+obj = {
+  marginBottom: 12,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderRadius: ThemesDefault.radii.md,
+  overflow: "hidden",
+};
 obj[2] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
 const context = importAllResult.createContext(createFakeSharedValue.createFakeSharedValue(false));
@@ -26,20 +35,69 @@ export const ForumPostPressableContainer = function ForumPostPressableContainer(
   let obj = sharedValue(4217);
   sharedValue = obj.useSharedValue(false);
   const items = [sharedValue];
-  const memo = importAllResult.useMemo(() => ({
-    onPressIn() {
-      return store.set(true);
-    },
-    onPressOut() {
-      return store.set(false);
-    }
-  }), items);
+  const memo = importAllResult.useMemo(
+    () => ({
+      onPressIn() {
+        return store.set(true);
+      },
+      onPressOut() {
+        return store.set(false);
+      },
+    }),
+    items,
+  );
   ({ onPressIn, onPressOut } = memo);
-  obj = { style: tmp.card, children: jsx(sharedValue(5601).Card, { style: items1, variant: "surface-high", accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children }) };
+  obj = {
+    style: tmp.card,
+    children: jsx(sharedValue(5601).Card, {
+      style: items1,
+      variant: "surface-high",
+      accessibilityRole: "button",
+      onPress: onTapPost,
+      onPressIn,
+      onPressOut,
+      onLongPress: onLongTapPost,
+      unstable_pressDelay: 130,
+      children,
+    }),
+  };
   ({ onTapPost, onLongTapPost } = useNativeForumPostHandlersDefault({ threadId }));
   items1 = [tmp.childContainer, style];
-  obj = { value: sharedValue, children: <View style={tmp.card}>{jsx(sharedValue(5601).Card, { style: items1, variant: "surface-high", accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children })}</View> };
-  return <redux.Provider value={sharedValue}><View style={tmp.card}>{jsx(sharedValue(5601).Card, { style: items1, variant: "surface-high", accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children })}</View></redux.Provider>;
+  obj = {
+    value: sharedValue,
+    children: (
+      <View style={tmp.card}>
+        {jsx(sharedValue(5601).Card, {
+          style: items1,
+          variant: "surface-high",
+          accessibilityRole: "button",
+          onPress: onTapPost,
+          onPressIn,
+          onPressOut,
+          onLongPress: onLongTapPost,
+          unstable_pressDelay: 130,
+          children,
+        })}
+      </View>
+    ),
+  };
+  return (
+    <redux.Provider value={sharedValue}>
+      <View style={tmp.card}>
+        {jsx(sharedValue(5601).Card, {
+          style: items1,
+          variant: "surface-high",
+          accessibilityRole: "button",
+          onPress: onTapPost,
+          onPressIn,
+          onPressOut,
+          onLongPress: onLongTapPost,
+          unstable_pressDelay: 130,
+          children,
+        })}
+      </View>
+    </redux.Provider>
+  );
 };
 export const ForumPostDisabledContainer = function ForumPostDisabledContainer(arg0) {
   ({ children, style } = arg0);
@@ -47,5 +105,9 @@ export const ForumPostDisabledContainer = function ForumPostDisabledContainer(ar
   const items = [callback().disabledContainer, style];
   obj[0] = items;
   obj[2] = children;
-  return <View style={null} pointerEvents="none">{null}</View>;
+  return (
+    <View style={null} pointerEvents="none">
+      {null}
+    </View>
+  );
 };

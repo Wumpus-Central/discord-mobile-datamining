@@ -8,11 +8,15 @@ let result = require("set").fileFinishedImporting("modules/guilds_bar/native/Gui
 
 export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFolderMenuItems) {
   const _require = guildFolderMenuItems;
-  let obj = { IconComponent: require("../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx").EnvelopeIcon, label: null, action: null };
+  let obj = {
+    IconComponent: require("../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx").EnvelopeIcon,
+    label: null,
+    action: null,
+  };
   const intl = require("../../../intl/index.native.tsx").intl;
   obj[1] = intl.string(require("../../../intl/index.native.tsx").t.e6RscS);
   obj[2] = function action() {
-    return closure_1_2(function*() {
+    return closure_1_2(function* () {
       if (guildFolderById === 2) {
         guildFolderById = 3;
         HermesBuiltin.throwTypeError();
@@ -70,12 +74,16 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
       }
     })();
   };
-  const items = [obj, ];
-  obj = { IconComponent: require("../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx").SettingsIcon, label: null, action: null };
+  const items = [obj];
+  obj = {
+    IconComponent: require("../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx").SettingsIcon,
+    label: null,
+    action: null,
+  };
   const intl2 = require("../../../intl/index.native.tsx").intl;
   obj[1] = intl2.string(require("../../../intl/index.native.tsx").t.Dx7im5);
   obj[2] = function action() {
-    return closure_1_2(function*() {
+    return closure_1_2(function* () {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();

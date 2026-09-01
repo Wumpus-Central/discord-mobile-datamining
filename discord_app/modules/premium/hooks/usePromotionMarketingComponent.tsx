@@ -18,7 +18,10 @@ export const usePromotionMarketingComponent = function usePromotionMarketingComp
     if (null == marketingComponentByType) {
       return null;
     } else {
-      const promotionByTypeAndId = obj.getPromotionByTypeAndId(PREMIUM_TAB(stateFromStores[6]).PromotionTypes.MARKETING_MOMENT, marketingComponentByType.promotionId);
+      const promotionByTypeAndId = obj.getPromotionByTypeAndId(
+        PREMIUM_TAB(stateFromStores[6]).PromotionTypes.MARKETING_MOMENT,
+        marketingComponentByType.promotionId,
+      );
       let trialId;
       if (promotionByTypeAndId != null) {
         trialId = promotionByTypeAndId.trialId;

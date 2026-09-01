@@ -26,7 +26,9 @@ createCacheKey[2] = { marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { paddingHorizontal: 0 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 const obj2 = { marginTop: ThemesDefault.space.PX_24 };
-const result = require("set").fileFinishedImporting("modules/message_request/native/spam/SpamMessageHamActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/message_request/native/spam/SpamMessageHamActionSheet.tsx",
+);
 
 export default function SpamMessageRequestHamActionSheet(arg0) {
   ({ channel: require, onConfirm: importDefault, onCancel: dependencyMap } = arg0);
@@ -53,7 +55,7 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
     },
     onAcceptSuccess(arg0) {
       callback(4445).hideActionSheet();
-    }
+    },
   };
   const messageRequestActions = obj1.useMessageRequestActions(obj);
   ({ acceptMessageRequest: c5, isAcceptLoading, isOptimisticAccepted } = messageRequestActions);
@@ -61,7 +63,7 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
     onDismiss() {
       dependencyMap();
     },
-    children: null
+    children: null,
   };
   obj1 = { title: null, trailing: null, backgroundColor: null };
   let intl = getSystemLocale.intl;
@@ -70,10 +72,10 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
     onPress() {
       closure_1_1(closure_1_2[12]).hideActionSheet();
       dependencyMap();
-    }
+    },
   });
   obj1[2] = tmp.header;
-  const items1 = [callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj1), ];
+  const items1 = [callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj1)];
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.switch, label: null, value: null, switchProps: null, onValueChange: null };
   const intl2 = getSystemLocale.intl;
@@ -83,7 +85,7 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
   obj4[4] = function onValueChange(arg0) {
     return callback2(arg0);
   };
-  const items2 = [callback(Form.FormSwitchRow, obj4), ];
+  const items2 = [callback(Form.FormSwitchRow, obj4)];
   const obj5 = { style: tmp.buttonContainer, children: null };
   const obj6 = {
     size: "md",
@@ -93,7 +95,7 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
     },
     text: null,
     disabled: null,
-    loading: null
+    loading: null,
   };
   const intl3 = getSystemLocale.intl;
   obj6[2] = intl3.string(getSystemLocale.t.olZgw5);
@@ -115,4 +117,4 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
   items1[1] = closure_8(c5, obj3);
   obj[1] = items1;
   return closure_8(Background.BottomSheet, obj);
-};
+}

@@ -55,8 +55,7 @@ let c3 = null;
 let closure_4 = {};
 let closure_5 = {};
 const Store = initializeDefault.Store;
-class VideoStreamStore extends Store {
-}
+class VideoStreamStore extends Store {}
 const prototype = VideoStreamStore.prototype;
 prototype["getStreamId"] = function getStreamId(arg0, arg1) {
   let DEFAULT = arg2;
@@ -183,7 +182,7 @@ const videoStreamStore = new VideoStreamStore(dispatcherDefault, {
     } else {
       delete tmp[tmp2];
     }
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/VideoStreamStore.tsx");
 

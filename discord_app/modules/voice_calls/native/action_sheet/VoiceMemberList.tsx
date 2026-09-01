@@ -28,7 +28,12 @@ function ItemSeparator() {
 function VoiceMemberListSectionHeader(title) {
   const tmp = callback4();
   let obj = { style: tmp.sectionContainer, children: null };
-  obj = { style: tmp.sectionTitle, variant: "text-xs/bold", color: "text-default", children: title.title.toUpperCase() };
+  obj = {
+    style: tmp.sectionTitle,
+    variant: "text-xs/bold",
+    color: "text-default",
+    children: title.title.toUpperCase(),
+  };
   obj[1] = callback2(Text.Text, obj);
   return callback2(closure_8, obj);
 }
@@ -72,7 +77,7 @@ function VoiceSectionRow(arg0) {
         closure_2 = arg2;
         c5 = 0;
         c6 = 0;
-        return (function*(arg0, arg1, arg2) {
+        return (function* (arg0, arg1, arg2) {
           if (c6 === 2) {
             c6 = 3;
             HermesBuiltin.throwTypeError();
@@ -113,7 +118,12 @@ function VoiceSectionRow(arg0) {
                     const result = obj2.dismissGlobalKeyboard();
                     let obj3 = lib(closure_1_3[29]);
                     const voiceChannel = obj3.selectVoiceChannel(tmp29.id);
-                    obj1 = { applicationId: null, activityChannelId: null, locationObject: null, analyticsLocations: null };
+                    obj1 = {
+                      applicationId: null,
+                      activityChannelId: null,
+                      locationObject: null,
+                      analyticsLocations: null,
+                    };
                     obj1[0] = tmp30.applicationId;
                     obj1[1] = tmp29.id;
                     obj1[2] = lib.location;
@@ -183,7 +193,14 @@ function VoiceSectionRow(arg0) {
 ({ SectionList: error, View: closure_8 } = get_ActivityIndicator);
 ({ AnalyticsPages: closure_15, InstantInviteSources: closure_16, Permissions: closure_17 } = ME);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
-let closure_24 = createCacheKey.createStyles({ container: { flex: 1, flexShrink: 1 }, sectionContainer: { paddingTop: 16, paddingHorizontal: 16 }, sectionTitle: { lineHeight: 16 }, voiceChannelContainer: { overflow: "hidden", flexGrow: 1, flexShrink: 1, minHeight: 1 }, headerFormDivider: { marginLeft: 0 }, rowFormDivider: { marginHorizontal: 16 } });
+let closure_24 = createCacheKey.createStyles({
+  container: { flex: 1, flexShrink: 1 },
+  sectionContainer: { paddingTop: 16, paddingHorizontal: 16 },
+  sectionTitle: { lineHeight: 16 },
+  voiceChannelContainer: { overflow: "hidden", flexGrow: 1, flexShrink: 1, minHeight: 1 },
+  headerFormDivider: { marginLeft: 0 },
+  rowFormDivider: { marginHorizontal: 16 },
+});
 let closure_25 = importAllResult.memo((channel) => callback2(_modDef13434, { channel: channel.channel }));
 let closure_26 = importAllResult.memo((channel) => {
   channel = channel.channel;
@@ -194,7 +211,7 @@ let closure_26 = importAllResult.memo((channel) => {
     tmp7 = null;
     if (tmp6) {
       let obj = { children: null };
-      const items = [callback2(ItemSeparator, {}), ];
+      const items = [callback2(ItemSeparator, {})];
       obj = { leading: null, label: null, onPress: null };
       obj = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
       const intl = tmp4(1236).intl;
@@ -300,7 +317,10 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
           str = "";
         }
         let tmp3Result = tmp3(tmp4[36]);
-        [arr10, arr11] = callback(tmp3Result.partition(stateFromStores, (user) => stateFromStoresArray.includes(user.user.id)), 2);
+        [arr10, arr11] = callback(
+          tmp3Result.partition(stateFromStores, (user) => stateFromStoresArray.includes(user.user.id)),
+          2,
+        );
         if (arr10.length > 0) {
           obj = { type: null, title: null, data: null };
           obj[0] = constants.SPECTATING;
@@ -327,13 +347,21 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
           obj2[2] = reduced;
           items5.push(obj2);
         }
-        const tmp14 = callback(tmp3Result.partition(stateFromStores, (user) => stateFromStoresArray.includes(user.user.id)), 2);
+        const tmp14 = callback(
+          tmp3Result.partition(stateFromStores, (user) => stateFromStoresArray.includes(user.user.id)),
+          2,
+        );
       }
       const items6 = [channel.id, analyticsLocations];
       callback = stateFromStoresArray.useCallback((id) => {
         let obj = flag(analyticsLocations[37]);
         obj.hideActionSheet();
-        obj = { userId: id.id, channelId: channel.id, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations };
+        obj = {
+          userId: id.id,
+          channelId: channel.id,
+          isVoiceContext: true,
+          sourceAnalyticsLocations: analyticsLocations,
+        };
         flag(analyticsLocations[38])(obj);
       }, items6);
       const items7 = [channel, flag, callback];
@@ -374,7 +402,7 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
         obj4[0] = tmp2.container;
         const obj5 = { channel: null };
         obj5[0] = channel;
-        const items8 = [tmp24(tmp5(tmp4[40]).VoiceChannelHeader, obj5), , ];
+        const items8 = [tmp24(tmp5(tmp4[40]).VoiceChannelHeader, obj5), ,];
         const obj6 = { style: null };
         obj6[0] = tmp2.headerFormDivider;
         items8[1] = tmp24(tmp5(tmp4[19]).FormDivider, obj6);
@@ -390,7 +418,7 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
             obj[0] = tmp2;
             obj[1] = tmp[arg0];
             obj = { children: null };
-            const items = [callback1(obj), ];
+            const items = [callback1(obj)];
             obj = { style: null };
             obj[0] = rowFormDivider.rowFormDivider;
             items[1] = closure_1_21(channel(analyticsLocations[19]).FormDivider, obj);
@@ -437,7 +465,17 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
         obj3[1] = callback3(items5, obj4);
         let tmp24Result = tmp24(tmp5(tmp4[39]).ThemeContextProvider, obj3);
       } else {
-        const obj8 = { ref: null, sections: null, renderSectionHeader: null, renderItem: null, keyExtractor: null, ItemSeparatorComponent: null, ListFooterComponent: null, ListHeaderComponent: null, stickySectionHeadersEnabled: false };
+        const obj8 = {
+          ref: null,
+          sections: null,
+          renderSectionHeader: null,
+          renderItem: null,
+          keyExtractor: null,
+          ItemSeparatorComponent: null,
+          ListFooterComponent: null,
+          ListHeaderComponent: null,
+          stickySectionHeadersEnabled: false,
+        };
         obj8[0] = arg1;
         obj8[1] = items5;
         obj8[2] = renderSectionHeader;

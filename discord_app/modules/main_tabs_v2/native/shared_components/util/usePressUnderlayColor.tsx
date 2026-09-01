@@ -7,7 +7,9 @@ import useThemeDefault from "../../../../../hooks/useTheme.tsx";
 import CHANNEL_THEME_COLOR_PALETTE from "../../../channel_emoji/ChannelEmojiConstants.tsx";
 
 let closure_3 = CHANNEL_THEME_COLOR_PALETTE.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR;
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx");
+const result = set.fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx",
+);
 
 export default function usePressUnderlayColor(arr) {
   const tmp2 = useThemeDefault();
@@ -30,4 +32,4 @@ export default function usePressUnderlayColor(arr) {
     }
   }
   return hexWithOpacityResult;
-};
+}

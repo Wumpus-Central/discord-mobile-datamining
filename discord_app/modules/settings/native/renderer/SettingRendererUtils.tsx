@@ -6,7 +6,11 @@ import MobileUserSettings2 from "../../../user_settings/core/native/SettingsCons
 import map2 from "SettingHookHarness.tsx";
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "SettingRendererConstants.tsx";
 
-({ ListItemType: c3, NodeType: c4, SUPPORTED_SEARCH_RESULT_NO_PARENT_RENDERER_TYPES: c5 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
+({
+  ListItemType: c3,
+  NodeType: c4,
+  SUPPORTED_SEARCH_RESULT_NO_PARENT_RENDERER_TYPES: c5,
+} = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
 const AnalyticsPages = ME.AnalyticsPages;
 const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
 let result = set2.fileFinishedImporting("modules/settings/native/renderer/SettingRendererUtils.tsx");
@@ -60,7 +64,7 @@ export const getSettingSearchableTitles = function getSettingSearchableTitles() 
     if (!tmp2.unsearchable) {
       const cachedSettingTitle = items(closure_1_2[8]).getCachedSettingTitle(tmp);
       if (null != cachedSettingTitle) {
-        items = [tmp, ];
+        items = [tmp];
         const items1 = [cachedSettingTitle];
         HermesBuiltin.arraySpread(tmp3(tmp4[8]).getCachedSettingSearchTerms(tmp), 1);
         items[1] = items1;
@@ -120,7 +124,13 @@ export const toSettingListItems = function toSettingListItems(node, field) {
       obj[1] = settings.label;
       items.push(obj);
       const item = found.forEach((setting) => {
-        closure_1_1.push({ type: closure_2_3.SECTION_ROW, setting, settingData: callback(closure_2_2[10]).SETTING_RENDERER_CONFIG[setting], start: 0 === arg1, end: arg1 === found.length - 1 });
+        closure_1_1.push({
+          type: closure_2_3.SECTION_ROW,
+          setting,
+          settingData: callback(closure_2_2[10]).SETTING_RENDERER_CONFIG[setting],
+          start: 0 === arg1,
+          end: arg1 === found.length - 1,
+        });
       });
       if (null != settings.subLabel) {
         obj = { type: null, label: null };
@@ -171,7 +181,16 @@ export const getSettingListSearchResultItems = function getSettingListSearchResu
     const breadcrumbs = sortByResult(items1[11]).getBreadcrumbs(setting);
     const hasItem = set.has(category);
     set.add(category);
-    obj = { type: set.SETTING_SEARCH_RESULT, settingData: data.data, title: cachedSettingTitle, IconComponent: null, breadcrumbs: null, setting: null, index: null, total: null };
+    obj = {
+      type: set.SETTING_SEARCH_RESULT,
+      settingData: data.data,
+      title: cachedSettingTitle,
+      IconComponent: null,
+      breadcrumbs: null,
+      setting: null,
+      index: null,
+      total: null,
+    };
     let tmp11;
     if (!hasItem) {
       const tmp12 = tmp(tmp2[10]).SETTING_RENDERER_CONFIG[category];
@@ -197,7 +216,11 @@ export const getSettingListSearchResultItems = function getSettingListSearchResu
   });
   return items1;
 };
-export const getScoredSettingListSearchResultItems = function getScoredSettingListSearchResultItems(settings, isLoading, placeholderCount) {
+export const getScoredSettingListSearchResultItems = function getScoredSettingListSearchResultItems(
+  settings,
+  isLoading,
+  placeholderCount,
+) {
   let items = [];
   if (isLoading) {
     for (let num4 = 0; num4 < placeholderCount; num4 = num4 + 1) {
@@ -276,7 +299,16 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
           } else {
             highestLevelAncestor = setting;
           }
-          obj = { type: closure_1_3.SETTING_SEARCH_RESULT, settingData: nearestRouteAncestorDataOrSelf, title: null, IconComponent: null, breadcrumbs: null, setting: null, index: null, total: null };
+          obj = {
+            type: closure_1_3.SETTING_SEARCH_RESULT,
+            settingData: nearestRouteAncestorDataOrSelf,
+            title: null,
+            IconComponent: null,
+            breadcrumbs: null,
+            setting: null,
+            index: null,
+            total: null,
+          };
           const cachedSettingTitle = arr(closure_1_2[8]).getCachedSettingTitle(setting);
           const tmp8 = closure_1_1;
           const tmpResult = arr(closure_1_2[8]);

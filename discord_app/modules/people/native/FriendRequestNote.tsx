@@ -12,12 +12,38 @@ const require = arg1;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: null, spoiler: null, hidden: null };
-createCacheKey = { width: "100%", position: "relative", padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.md, minHeight: 56, flexDirection: "row", alignItems: "center" };
+createCacheKey = {
+  width: "100%",
+  position: "relative",
+  padding: ThemesDefault.space.PX_12,
+  borderRadius: ThemesDefault.radii.md,
+  minHeight: 56,
+  flexDirection: "row",
+  alignItems: "center",
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.md };
+createCacheKey[1] = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  justifyContent: "center",
+  alignItems: "center",
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[2] = { opacity: 0 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.md };
+let obj1 = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  justifyContent: "center",
+  alignItems: "center",
+  borderRadius: ThemesDefault.radii.md,
+};
 let result = require("set").fileFinishedImporting("modules/people/native/FriendRequestNote.tsx");
 
 export default function FriendRequestNote(styles) {
@@ -29,7 +55,10 @@ export default function FriendRequestNote(styles) {
   const hideFriendRequestNotes = obj.useHideFriendRequestNotes();
   obj1 = require(analyticsLocation[9]);
   const items = [closure_6];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ note: closure_1_6.getNote(closure_0), type: closure_1_6.getRelationshipType(closure_0) }));
+  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({
+    note: closure_1_6.getNote(closure_0),
+    type: closure_1_6.getRelationshipType(closure_0),
+  }));
   note = stateFromStoresObject.note;
   [tmp7, c3] = note(React.useState(stateFromStoresObject.type === RelationshipTypes.PENDING_OUTGOING), 2);
   const items1 = [analyticsLocation, note];
@@ -63,16 +92,22 @@ export default function FriendRequestNote(styles) {
         }
         obj = { style: null, children: null };
         obj[0] = hidden;
-        obj1 = { accessible: null, accessibilityElementsHidden: null, accessibilityLabel: null, variant: "redesign/message-preview/normal", children: null };
+        obj1 = {
+          accessible: null,
+          accessibilityElementsHidden: null,
+          accessibilityLabel: null,
+          variant: "redesign/message-preview/normal",
+          children: null,
+        };
         obj1[0] = tmp7;
         obj1[1] = !tmp7;
         obj1[2] = str;
         obj1[4] = note;
         obj[1] = closure_8(tmp2(tmp3[11]).Text, obj1);
-        const items3 = [closure_8(closure_5, obj), ];
+        const items3 = [closure_8(closure_5, obj)];
         let tmp15Result = null;
         if (!tmp7) {
-          const items4 = [tmp.spoiler, ];
+          const items4 = [tmp.spoiler];
           let tmp12;
           if (null != backgroundColor) {
             const obj2 = { backgroundColor: null };
@@ -99,4 +134,4 @@ export default function FriendRequestNote(styles) {
     }
   }
   return tmp13Result;
-};
+}

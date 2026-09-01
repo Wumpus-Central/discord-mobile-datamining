@@ -19,4 +19,4 @@ const result = require("set").fileFinishedImporting("modules/search/native/compo
 export default function HighlightText(children) {
   const tmp = callback();
   return jsx(Button.LegacyText, { style: callback().text, children: children.children });
-};
+}

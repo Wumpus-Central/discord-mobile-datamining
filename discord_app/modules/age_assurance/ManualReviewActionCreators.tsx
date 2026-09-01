@@ -7,7 +7,7 @@ import { SafetyToastType } from "../safety_common/Constants.tsx";
 const require = arg1;
 function _requestManualReview() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const HTTP = v0(closure_1_2[4]).HTTP;
     obj1 = { url: null, rejectWithError: true };
     obj1[0] = closure_1_4.AGE_VERIFICATION_MANUAL_REVIEW;
@@ -25,7 +25,7 @@ function _requestManualReview() {
 }
 function _handleManualReviewCta() {
   let self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (constants === 2) {
       constants = 3;
       HermesBuiltin.throwTypeError();

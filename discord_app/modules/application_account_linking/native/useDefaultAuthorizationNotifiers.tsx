@@ -4,9 +4,15 @@ import closure_4 from "../../../stores/native/AppStateStore.tsx";
 import { AppStates } from "../../../Constants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx",
+);
 
-export const useDefaultAuthorizationNotifiers = function useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyLinked, value) {
+export const useDefaultAuthorizationNotifiers = function useDefaultAuthorizationNotifiers(
+  startAuthorization,
+  hasAlreadyLinked,
+  value,
+) {
   const _require = startAuthorization;
   closure_1 = hasAlreadyLinked;
   let obj = value;
@@ -22,7 +28,10 @@ export const useDefaultAuthorizationNotifiers = function useDefaultAuthorization
   let previousWhen;
   React = React.useRef(false);
   const items = [stateFromStores];
-  stateFromStores = _require(flag[3]).useStateFromStores(items, () => stateFromStores.getState() === previousWhen.ACTIVE);
+  stateFromStores = _require(flag[3]).useStateFromStores(
+    items,
+    () => stateFromStores.getState() === previousWhen.ACTIVE,
+  );
   const obj2 = React;
   const obj3 = _require(flag[3]);
   const tmp = _require;

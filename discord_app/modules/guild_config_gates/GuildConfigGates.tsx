@@ -25,13 +25,13 @@ initialize = {
     }
     return tmp;
   },
-  load: null
+  load: null,
 };
 let closure_3 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c5 = 0;
   c6 = 0;
-  return (function*(arg0, body) {
+  return (function* (arg0, body) {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();
@@ -77,7 +77,12 @@ let closure_3 = importDefaultResult((arg0) => {
           throw body;
         } else if (arg0 !== 2) {
           lib = body.body;
-          const obj2 = { type: "GUILD_CONFIG_GATES_FETCH_SUCCESS", guildId: null, guildVerificationRoleEnabled: null, applicationIdentityLinkedRolesEnabled: null };
+          const obj2 = {
+            type: "GUILD_CONFIG_GATES_FETCH_SUCCESS",
+            guildId: null,
+            guildVerificationRoleEnabled: null,
+            applicationIdentityLinkedRolesEnabled: null,
+          };
           obj2[1] = callback;
           const guild_verification_role_enabled = lib.guild_verification_role_enabled;
           lib = guild_verification_role_enabled;
@@ -105,7 +110,7 @@ let closure_3 = importDefaultResult((arg0) => {
     }
   })();
 });
-initialize[2] = function() {
+initialize[2] = function () {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {

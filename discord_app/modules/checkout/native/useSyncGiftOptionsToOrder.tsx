@@ -29,13 +29,16 @@ export default function useSyncGiftOptionsToOrder(arg0, arg1) {
     }
   }, []);
   const items = [callback];
-  const effect = React.useEffect(() => () => {
-    if (null != ref.current) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-    }
-    callback(false);
-  }, items);
+  const effect = React.useEffect(
+    () => () => {
+      if (null != ref.current) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(tmp.current);
+      }
+      callback(false);
+    },
+    items,
+  );
   const items1 = [arg0, arg1, tmp2, callback];
   const effect1 = React.useEffect(() => {
     if (null != id) {
@@ -62,8 +65,24 @@ export default function useSyncGiftOptionsToOrder(arg0, arg1) {
           let obj = callback(table[3]);
           obj = { orderId: null, giftInfo: null, expectedRevision: null };
           obj[0] = id;
-          obj = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
-          ({ recipient_id: obj3[0], gift_style: obj3[1], emoji_id: obj3[2], emoji_name: obj3[3], sound_id: obj3[4], reward_sku_ids: obj3[5], custom_message: obj3[6] } = tmp5);
+          obj = {
+            recipient_id: null,
+            gift_style: null,
+            emoji_id: null,
+            emoji_name: null,
+            sound_id: null,
+            reward_sku_ids: null,
+            custom_message_contents: null,
+          };
+          ({
+            recipient_id: obj3[0],
+            gift_style: obj3[1],
+            emoji_id: obj3[2],
+            emoji_name: obj3[3],
+            sound_id: obj3[4],
+            reward_sku_ids: obj3[5],
+            custom_message: obj3[6],
+          } = tmp5);
           obj[1] = obj;
           obj[2] = ref4.current;
           const updateOrderResult = obj.updateOrder(obj);
@@ -72,42 +91,55 @@ export default function useSyncGiftOptionsToOrder(arg0, arg1) {
             closure_2.current = closure_1;
             closure_7.current = 0;
           });
-          obj.updateOrder(obj).then((current) => {
-            closure_5.current = current;
-            closure_2.current = closure_1;
-            closure_7.current = 0;
-          }).catch((error) => {
-            closure_1_7.current = closure_1_7.current + 1;
-            let obj = { error, orderId: id };
-            logger.error("Failed to sync gift customization to order", obj);
-            obj = { orderId: id };
-            const result = id(table[4]).captureBillingException(error, { tags: { source: "useSyncGiftOptionsToOrder" }, extra: obj });
-          }).finally(() => {
-            closure_4.current = false;
-            if (ref.current !== ref2.current) {
-              if (0 === ref3.current) {
-                callback((arg0) => arg0 + 1);
-              } else if (tmp3.current < 3) {
-                const _setTimeout = setTimeout;
-                closure_9.current = setTimeout(() => callback((arg0) => arg0 + 1), 500 * 2 ** (tmp3.current - 1));
+          obj
+            .updateOrder(obj)
+            .then((current) => {
+              closure_5.current = current;
+              closure_2.current = closure_1;
+              closure_7.current = 0;
+            })
+            .catch((error) => {
+              closure_1_7.current = closure_1_7.current + 1;
+              let obj = { error, orderId: id };
+              logger.error("Failed to sync gift customization to order", obj);
+              obj = { orderId: id };
+              const result = id(table[4]).captureBillingException(error, {
+                tags: { source: "useSyncGiftOptionsToOrder" },
+                extra: obj,
+              });
+            })
+            .finally(() => {
+              closure_4.current = false;
+              if (ref.current !== ref2.current) {
+                if (0 === ref3.current) {
+                  callback((arg0) => arg0 + 1);
+                } else if (tmp3.current < 3) {
+                  const _setTimeout = setTimeout;
+                  closure_9.current = setTimeout(() => callback((arg0) => arg0 + 1), 500 * 2 ** (tmp3.current - 1));
+                } else {
+                  callback2(false);
+                }
               } else {
-                callback2(false);
+                callback2(true);
               }
-            } else {
-              callback2(true);
-            }
-          });
-          const catchPromise = obj.updateOrder(obj).then((current) => {
-            closure_5.current = current;
-            closure_2.current = closure_1;
-            closure_7.current = 0;
-          }).catch((error) => {
-            closure_1_7.current = closure_1_7.current + 1;
-            let obj = { error, orderId: id };
-            logger.error("Failed to sync gift customization to order", obj);
-            obj = { orderId: id };
-            const result = id(table[4]).captureBillingException(error, { tags: { source: "useSyncGiftOptionsToOrder" }, extra: obj });
-          });
+            });
+          const catchPromise = obj
+            .updateOrder(obj)
+            .then((current) => {
+              closure_5.current = current;
+              closure_2.current = closure_1;
+              closure_7.current = 0;
+            })
+            .catch((error) => {
+              closure_1_7.current = closure_1_7.current + 1;
+              let obj = { error, orderId: id };
+              logger.error("Failed to sync gift customization to order", obj);
+              obj = { orderId: id };
+              const result = id(table[4]).captureBillingException(error, {
+                tags: { source: "useSyncGiftOptionsToOrder" },
+                extra: obj,
+              });
+            });
         } else {
           callback(true);
         }
@@ -142,4 +174,4 @@ export default function useSyncGiftOptionsToOrder(arg0, arg1) {
   }, items2);
   const items3 = [callback1];
   return React.useMemo(() => ({ awaitSync: callback1 }), items3);
-};
+}

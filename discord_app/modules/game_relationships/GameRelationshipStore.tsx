@@ -33,40 +33,36 @@ function remove(arg0, arg1) {
   }
   secondaryIndexMap.delete("" + arg1 + "-" + arg0);
 }
-function GAME_RELATIONSHIP_KEY(arg0, arg1) {
-
-}
+function GAME_RELATIONSHIP_KEY(arg0, arg1) {}
 function GameRelationshipIndexes_BY_APPLICATION_ID(nextResult) {
   return "application-id-" + nextResult;
 }
-function GameRelationshipIndexes_BY_USER_ID(arg0) {
-
-}
-function GameRelationshipIndexes_BY_RELATIONSHIP_TYPE(arg0) {
-
-}
-const secondaryIndexMap = new require("version").SecondaryIndexMap(function gameRelationshipsIndex(applicationId) {
-  const items = [];
-  if (typeof GameRelationshipIndexes_BY_APPLICATION_ID !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  items.push("application-id-" + applicationId.applicationId);
-  if (typeof GameRelationshipIndexes_BY_USER_ID !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  items.push("user-id-" + applicationId.id);
-  if (typeof GameRelationshipIndexes_BY_RELATIONSHIP_TYPE !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  items.push("relationship-type-" + applicationId.type);
-  return items;
-}, (since) => "" + since.since);
+function GameRelationshipIndexes_BY_USER_ID(arg0) {}
+function GameRelationshipIndexes_BY_RELATIONSHIP_TYPE(arg0) {}
+const secondaryIndexMap = new require("version").SecondaryIndexMap(
+  function gameRelationshipsIndex(applicationId) {
+    const items = [];
+    if (typeof GameRelationshipIndexes_BY_APPLICATION_ID !== "function") {
+      HermesBuiltin.throwTypeError();
+    }
+    items.push("application-id-" + applicationId.applicationId);
+    if (typeof GameRelationshipIndexes_BY_USER_ID !== "function") {
+      HermesBuiltin.throwTypeError();
+    }
+    items.push("user-id-" + applicationId.id);
+    if (typeof GameRelationshipIndexes_BY_RELATIONSHIP_TYPE !== "function") {
+      HermesBuiltin.throwTypeError();
+    }
+    items.push("relationship-type-" + applicationId.type);
+    return items;
+  },
+  (since) => "" + since.since,
+);
 let c7 = 0;
 let c8 = 0;
 let c9 = 0;
 const Store = initializeDefault.Store;
-class GameRelationshipStore extends Store {
-}
+class GameRelationshipStore extends Store {}
 const prototype = GameRelationshipStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_0);
@@ -122,7 +118,13 @@ const gameRelationshipStore = new GameRelationshipStore(dispatcherDefault, {
     secondaryIndexMap.clear();
     gameRelationships = gameRelationships.gameRelationships;
     const item = gameRelationships.forEach((id) => {
-      const obj = { id: id.id, applicationId: id.application_id, type: id.type, since: id.since, dmAccessType: id.dm_access_type };
+      const obj = {
+        id: id.id,
+        applicationId: id.application_id,
+        type: id.type,
+        since: id.since,
+        dmAccessType: id.dm_access_type,
+      };
       ({ id, applicationId } = obj);
       if (typeof c2 !== "function") {
         HermesBuiltin.throwTypeError();
@@ -239,7 +241,7 @@ const gameRelationshipStore = new GameRelationshipStore(dispatcherDefault, {
       }
       recountRelationshipTypes();
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/game_relationships/GameRelationshipStore.tsx");
 

@@ -13,7 +13,15 @@ function validateDiscordTag(arr) {
       const tmp4 = callback(arr.split("#"), 2);
       let str2 = tmp4[1];
       let obj = expandEventPropertiesDefault;
-      obj = { reason: "Invalid Username", query: null, discrim_len: null, username_len: null, is_email_like: null, is_invite_like: null, is_num_only: null };
+      obj = {
+        reason: "Invalid Username",
+        query: null,
+        discrim_len: null,
+        username_len: null,
+        is_email_like: null,
+        is_invite_like: null,
+        is_num_only: null,
+      };
       obj[1] = arr;
       if (str2 == null) {
         str2 = "";

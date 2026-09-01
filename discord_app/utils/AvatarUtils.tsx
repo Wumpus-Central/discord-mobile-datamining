@@ -178,7 +178,16 @@ function getUserAvatarURL(user, flag, closure_2, format, SUPPORTS_WEBP) {
     tmp3 = closure_11;
   }
   if (!bot) {
-    const obj = { endpoint: null, path: "avatars", id: null, hash: null, size: null, canAnimate: null, format: null, canWebP: null };
+    const obj = {
+      endpoint: null,
+      path: "avatars",
+      id: null,
+      hash: null,
+      size: null,
+      canAnimate: null,
+      format: null,
+      canWebP: null,
+    };
     obj[0] = closure_3.AVATAR;
     obj[2] = id;
     obj[3] = avatar;
@@ -361,7 +370,16 @@ function getApplicationIconURL(guildMember) {
         tmp2 = closure_4;
       }
       if (!bot2) {
-        obj = { endpoint: null, path: "avatars", id: null, hash: null, size: null, canAnimate: null, format: null, canWebP: null };
+        obj = {
+          endpoint: null,
+          path: "avatars",
+          id: null,
+          hash: null,
+          size: null,
+          canAnimate: null,
+          format: null,
+          canWebP: null,
+        };
         obj[0] = closure_3.AVATAR;
         obj[2] = id;
         obj[3] = avatar;
@@ -392,7 +410,16 @@ function getApplicationIconURL(guildMember) {
     }
     let tmp23 = icon;
     if (!isMatch) {
-      obj = { endpoint: null, path: "app-icons", id: null, hash: null, size: null, canAnimate: false, canWebP: false, keepAspectRatio: null };
+      obj = {
+        endpoint: null,
+        path: "app-icons",
+        id: null,
+        hash: null,
+        size: null,
+        canAnimate: false,
+        canWebP: false,
+        keepAspectRatio: null,
+      };
       obj[0] = closure_3.APPLICATION_ICON;
       obj[2] = guildMember.id;
       obj[3] = icon;
@@ -410,7 +437,16 @@ function getApplicationIconURL(guildMember) {
         tmp10 = closure_4;
       }
       if (!bot3) {
-        obj1 = { endpoint: null, path: "avatars", id: null, hash: null, size: null, canAnimate: null, format: null, canWebP: null };
+        obj1 = {
+          endpoint: null,
+          path: "avatars",
+          id: null,
+          hash: null,
+          size: null,
+          canAnimate: null,
+          format: null,
+          canWebP: null,
+        };
         obj1[0] = closure_3.AVATAR;
         obj1[2] = id2;
         obj1[3] = avatar2;
@@ -453,7 +489,15 @@ function getChannelIconURL(arg0) {
     }
     let tmp5 = DEFAULT_CHANNEL_ICON;
   } else {
-    obj = { endpoint: null, path: "channel-icons", id: null, hash: null, canAnimate: false, size: null, canWebP: false };
+    obj = {
+      endpoint: null,
+      path: "channel-icons",
+      id: null,
+      hash: null,
+      canAnimate: false,
+      size: null,
+      canWebP: false,
+    };
     obj[0] = closure_3.CHANNEL_ICON;
     obj[2] = id;
     obj[3] = icon;
@@ -461,7 +505,10 @@ function getChannelIconURL(arg0) {
     tmp5 = getAvatarURL(obj);
     if (tmp5 == null) {
       obj = DISCORD_EPOCHDefault;
-      tmp5 = ensureAvatarSource.default.DEFAULT_GROUP_DM_AVATARS[obj.extractTimestamp(id) % ensureAvatarSource.default.DEFAULT_GROUP_DM_AVATARS.length];
+      tmp5 =
+        ensureAvatarSource.default.DEFAULT_GROUP_DM_AVATARS[
+          obj.extractTimestamp(id) % ensureAvatarSource.default.DEFAULT_GROUP_DM_AVATARS.length
+        ];
       const extractTimestampResult = obj.extractTimestamp(id);
     }
   }
@@ -518,7 +565,20 @@ function getEmojiURL(size) {
         const _location2 = location;
         const _window3 = window;
         const _HermesInternal3 = HermesInternal;
-        return "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/emojis/" + id + "." + tmp + "?" + combined + str4 + str6;
+        return (
+          "" +
+          location.protocol +
+          "//" +
+          window.GLOBAL_ENV.CDN_HOST +
+          "/emojis/" +
+          id +
+          "." +
+          tmp +
+          "?" +
+          combined +
+          str4 +
+          str6
+        );
       } else {
         const _location = location;
         const _window2 = window;
@@ -531,8 +591,7 @@ function getEmojiURL(size) {
         }
         return combined1;
       }
-    } catch (err) {
-    }
+    } catch (err) {}
     const obj2 = handleImageLoad;
   } else if (animated) {
     let str2 = "gif";
@@ -688,7 +747,10 @@ function getAvatarDecorationURL(canAnimate) {
             const searchParams = str2.searchParams;
             tmp13Result = tmp13(1465);
             const _HermesInternal3 = HermesInternal;
-            const result1 = searchParams.set("size", "" + tmp13Result.getBestMediaProxySize(size * tmp13(1465).getDevicePixelRatio(), closure_12));
+            const result1 = searchParams.set(
+              "size",
+              "" + tmp13Result.getBestMediaProxySize(size * tmp13(1465).getDevicePixelRatio(), closure_12),
+            );
             const searchParams2 = str2.searchParams;
             const _HermesInternal4 = HermesInternal;
             const result2 = searchParams2.set("passthrough", "" + flag);
@@ -756,7 +818,15 @@ function getResourceChannelIconURL(icon) {
   icon = icon.icon;
   let tmp2 = null;
   if (null != icon) {
-    const obj = { endpoint: null, path: "resource-channels", id: null, hash: null, size: null, canAnimate: true, canWebP: false };
+    const obj = {
+      endpoint: null,
+      path: "resource-channels",
+      id: null,
+      hash: null,
+      size: null,
+      canAnimate: true,
+      canWebP: false,
+    };
     obj[0] = closure_3.GUILD_RESOURCE_CHANNELS_ICON;
     obj[2] = tmp;
     obj[3] = icon;
@@ -769,7 +839,15 @@ function getNewMemberActionIconURL(icon) {
   icon = icon.icon;
   let tmp2 = null;
   if (null != icon) {
-    const obj = { endpoint: null, path: "new-member-actions", id: null, hash: null, size: null, canAnimate: true, canWebP: false };
+    const obj = {
+      endpoint: null,
+      path: "new-member-actions",
+      id: null,
+      hash: null,
+      size: null,
+      canAnimate: true,
+      canWebP: false,
+    };
     obj[0] = closure_3.GUILD_NEW_MEMBER_ACTIONS_ICON;
     obj[2] = tmp;
     obj[3] = icon;
@@ -788,7 +866,15 @@ function getGuildTemplateIconURL(size) {
   if (flag === undefined) {
     flag = false;
   }
-  return getAvatarURL({ endpoint: closure_3.GUILD_TEMPLATE_ICON, path: "guild-templates", id, hash: icon, size, canAnimate: flag, canWebP: false });
+  return getAvatarURL({
+    endpoint: closure_3.GUILD_TEMPLATE_ICON,
+    path: "guild-templates",
+    id,
+    hash: icon,
+    size,
+    canAnimate: flag,
+    canWebP: false,
+  });
 }
 function getVideoFilterAssetURL(size) {
   const userId = size.userId;
@@ -807,7 +893,7 @@ function getVideoFilterAssetURL(size) {
     hash: assetHash,
     size: size.size,
     canAnimate: flag,
-    canWebP: false
+    canWebP: false,
   });
 }
 function hasAnimatedGuildIcon(icon) {
@@ -919,7 +1005,16 @@ function getGuildIconURL(canAnimate) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  return getAvatarURL({ endpoint: closure_3.GUILD_ICON, path: "icons", id, hash: icon, size, canAnimate: flag, lossless: flag2, canWebP: closure_11 });
+  return getAvatarURL({
+    endpoint: closure_3.GUILD_ICON,
+    path: "icons",
+    id,
+    hash: icon,
+    size,
+    canAnimate: flag,
+    lossless: flag2,
+    canWebP: closure_11,
+  });
 }
 function getGameAssetURL(format) {
   let size = format.size;
@@ -931,7 +1026,17 @@ function getGameAssetURL(format) {
   if (flag === undefined) {
     flag = false;
   }
-  return getAvatarURL({ endpoint: closure_3.APPLICATION_ICON, path: "app-icons", id, hash, size, canAnimate: false, keepAspectRatio: flag, format: format.format, canWebP: false });
+  return getAvatarURL({
+    endpoint: closure_3.APPLICATION_ICON,
+    path: "app-icons",
+    id,
+    hash,
+    size,
+    canAnimate: false,
+    keepAspectRatio: flag,
+    format: format.format,
+    canWebP: false,
+  });
 }
 function isVideoAssetHash(asset) {
   let startsWithResult = null != asset;
@@ -1062,7 +1167,17 @@ export default {
     if (flag === undefined) {
       flag = false;
     }
-    let obj = { endpoint: closure_3.APPLICATION_ICON, path: "app-icons", id, hash, size, canAnimate: false, keepAspectRatio: flag, format: format.format, canWebP: false };
+    let obj = {
+      endpoint: closure_3.APPLICATION_ICON,
+      path: "app-icons",
+      id,
+      hash,
+      size,
+      canAnimate: false,
+      keepAspectRatio: flag,
+      format: format.format,
+      canWebP: false,
+    };
     const tmp = getAvatarURL(obj);
     let tmp2 = tmp;
     if (typeof tmp !== "number") {
@@ -1083,7 +1198,16 @@ export default {
     if (flag2 === undefined) {
       flag2 = false;
     }
-    let obj = { endpoint: closure_3.GUILD_ICON, path: "icons", id, hash: icon, size, canAnimate: flag, lossless: flag2, canWebP: closure_11 };
+    let obj = {
+      endpoint: closure_3.GUILD_ICON,
+      path: "icons",
+      id,
+      hash: icon,
+      size,
+      canAnimate: flag,
+      lossless: flag2,
+      canWebP: closure_11,
+    };
     const tmp = getAvatarURL(obj);
     let tmp2 = tmp;
     if (typeof tmp !== "number") {
@@ -1104,7 +1228,15 @@ export default {
     if (flag === undefined) {
       flag = false;
     }
-    let obj = { endpoint: closure_3.GUILD_TEMPLATE_ICON, path: "guild-templates", id, hash: icon, size, canAnimate: flag, canWebP: false };
+    let obj = {
+      endpoint: closure_3.GUILD_TEMPLATE_ICON,
+      path: "guild-templates",
+      id,
+      hash: icon,
+      size,
+      canAnimate: flag,
+      canWebP: false,
+    };
     const tmp = getAvatarURL(obj);
     let tmp2 = tmp;
     if (typeof tmp !== "number") {
@@ -1189,7 +1321,7 @@ export default {
         if (typeof tmp !== "number") {
           const tmp2 = arg1(false);
           if (typeof tmp2 === "number") {
-            const items = [tmp, ];
+            const items = [tmp];
             obj = {};
             const merged = Object.assign(tmp2);
             obj.isForceCached = true;
@@ -1203,7 +1335,7 @@ export default {
       }
     }
     return tmp;
-  }
+  },
 };
 export const DATA_IMAGE_PREFIX = tmp3;
 export { DEFAULT_AVATARS };

@@ -22,12 +22,30 @@ import ME from "../Constants.tsx";
 
 require = arg1;
 function getSystemMessageUserJoinMobile(id) {
-  const items = [getSystemLocale.t.Jm6e0x, getSystemLocale.t.MGRnRT, getSystemLocale.t.EXOEGh, getSystemLocale.t["5uCTFN"], getSystemLocale.t.rl45Qo, getSystemLocale.t.Bh9zpQ, getSystemLocale.t.RdEy1J, getSystemLocale.t.qcdp00, getSystemLocale.t.F7w2Ru, getSystemLocale.t.gSyOgK, getSystemLocale.t.uYgqv7, getSystemLocale.t["b/1SBX"], getSystemLocale.t.LhebZF];
+  const items = [
+    getSystemLocale.t.Jm6e0x,
+    getSystemLocale.t.MGRnRT,
+    getSystemLocale.t.EXOEGh,
+    getSystemLocale.t["5uCTFN"],
+    getSystemLocale.t.rl45Qo,
+    getSystemLocale.t.Bh9zpQ,
+    getSystemLocale.t.RdEy1J,
+    getSystemLocale.t.qcdp00,
+    getSystemLocale.t.F7w2Ru,
+    getSystemLocale.t.gSyOgK,
+    getSystemLocale.t.uYgqv7,
+    getSystemLocale.t["b/1SBX"],
+    getSystemLocale.t.LhebZF,
+  ];
   const obj = DISCORD_EPOCHDefault;
   return items[obj.extractTimestamp(obj, id) % items.length];
 }
 ({ MessageEmbedTypes: c10, MessageTypes: unpackModuleId, NOOP: closure_12 } = ME);
-let closure_13 = { "234395307759108106": "https://groovy.bot/commands", "365975655608745985": "https://www.pokecord.com/getting-started", "512412940897484800": "http://jameslantz.net/smilebot" };
+let closure_13 = {
+  "234395307759108106": "https://groovy.bot/commands",
+  "365975655608745985": "https://www.pokecord.com/getting-started",
+  "512412940897484800": "http://jameslantz.net/smilebot",
+};
 const result = require("set").fileFinishedImporting("utils/SystemMessageUtils.tsx");
 
 export default {
@@ -146,7 +164,9 @@ export default {
                   obj9[0] = name;
                   obj9[1] = isForumPost.guild_id;
                   obj9[2] = mentions.role_subscription_data;
-                  astToStringResult2 = obj34.astToString(identityHook.getRoleSubscriptionPurchaseSystemMessageContentMobile(obj9));
+                  astToStringResult2 = obj34.astToString(
+                    identityHook.getRoleSubscriptionPurchaseSystemMessageContentMobile(obj9),
+                  );
                   const obj35 = identityHook;
                 }
                 return astToStringResult2;
@@ -167,7 +187,11 @@ export default {
                     const obj10 = { username: null, productName: null };
                     obj10[0] = name;
                     obj10[1] = mentions.purchase_notification.guild_product_purchase.product_name;
-                    astToStringResult3 = obj31.astToString(getGuildProductPurchaseSystemMessageContentMobile.getGuildProductPurchaseSystemMessageContentMobile(obj10));
+                    astToStringResult3 = obj31.astToString(
+                      getGuildProductPurchaseSystemMessageContentMobile.getGuildProductPurchaseSystemMessageContentMobile(
+                        obj10,
+                      ),
+                    );
                     const obj32 = getGuildProductPurchaseSystemMessageContentMobile;
                   }
                 }
@@ -177,13 +201,19 @@ export default {
                   return null;
                 } else {
                   const obj26 = useNullableMessageAuthor;
-                  const messageAuthor = obj26.getMessageAuthor(createMinimalMessageRecord.createMessageRecord(mentions));
+                  const messageAuthor = obj26.getMessageAuthor(
+                    createMinimalMessageRecord.createMessageRecord(mentions),
+                  );
                   const obj27 = createMinimalMessageRecord;
                   const obj28 = reactParserFor;
                   const obj11 = { application: null, username: null };
                   obj11[0] = mentions.application;
                   obj11[1] = messageAuthor.nick;
-                  return obj28.astToString(getApplicationSubscriptionSystemMessageASTContent.getApplicationSubscriptionSystemMessageASTContent(obj11));
+                  return obj28.astToString(
+                    getApplicationSubscriptionSystemMessageASTContent.getApplicationSubscriptionSystemMessageASTContent(
+                      obj11,
+                    ),
+                  );
                 }
               } else if (tmp9.PRIVATE_CHANNEL_INTEGRATION_ADDED === type) {
                 let astToStringResult4 = null;
@@ -194,7 +224,9 @@ export default {
                   const obj22 = getPrivateChannelIntegrationAddedSystemMessageContent;
                   const obj24 = useNullableMessageAuthor;
                   obj12[1] = obj24.getMessageAuthor(createMinimalMessageRecord.createMessageRecord(mentions)).nick;
-                  astToStringResult4 = obj20.astToString(obj22.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj12));
+                  astToStringResult4 = obj20.astToString(
+                    obj22.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj12),
+                  );
                   const obj25 = createMinimalMessageRecord;
                 }
                 return astToStringResult4;
@@ -208,7 +240,9 @@ export default {
                   let obj18 = useNullableMessageAuthor;
                   let obj19 = createMinimalMessageRecord;
                   obj13[1] = obj18.getMessageAuthor(obj19.createMessageRecord(mentions)).nick;
-                  astToStringResult5 = obj15.astToString(obj16.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj13));
+                  astToStringResult5 = obj15.astToString(
+                    obj16.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj13),
+                  );
                 }
                 return astToStringResult5;
               } else if (tmp9.AUTO_MODERATION_ACTION === type) {
@@ -244,7 +278,10 @@ export default {
                     const guild = store2.getGuild(channel.getGuildId());
                     astToStringResult6 = null;
                     if (null != guild) {
-                      if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED === value) {
+                      if (
+                        AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED ===
+                        value
+                      ) {
                         let tmp34Result = tmp34(7896);
                         const intl5 = tmp34(1236).intl;
                         const obj14 = { guildName: null };
@@ -260,7 +297,9 @@ export default {
                         const intl3 = tmp34(1236).intl;
                         obj16 = { guildName: null };
                         obj16[0] = guild.name;
-                        astToStringResult6 = tmp34(7896).astToString(intl3.formatToParts(tmp34(1236).t["a+lJKl"], obj16));
+                        astToStringResult6 = tmp34(7896).astToString(
+                          intl3.formatToParts(tmp34(1236).t["a+lJKl"], obj16),
+                        );
                         const tmp34Result1 = tmp34(7896);
                       }
                     }
@@ -355,7 +394,21 @@ export default {
     }
   },
   getSystemMessageUserJoin(id) {
-    const items = [getSystemLocale.t["0cuj7l"], getSystemLocale.t["MuW+CN"], getSystemLocale.t.osqpHX, getSystemLocale.t["5ToSh2"], getSystemLocale.t.JEB8ps, getSystemLocale.t.pkOV5T, getSystemLocale.t["kRb1J+"], getSystemLocale.t["EmKLY+"], getSystemLocale.t.rPtBnb, getSystemLocale.t["5B/ekS"], getSystemLocale.t.ESNC3Y, getSystemLocale.t.Iw6d8w, getSystemLocale.t["WecSZ/"]];
+    const items = [
+      getSystemLocale.t["0cuj7l"],
+      getSystemLocale.t["MuW+CN"],
+      getSystemLocale.t.osqpHX,
+      getSystemLocale.t["5ToSh2"],
+      getSystemLocale.t.JEB8ps,
+      getSystemLocale.t.pkOV5T,
+      getSystemLocale.t["kRb1J+"],
+      getSystemLocale.t["EmKLY+"],
+      getSystemLocale.t.rPtBnb,
+      getSystemLocale.t["5B/ekS"],
+      getSystemLocale.t.ESNC3Y,
+      getSystemLocale.t.Iw6d8w,
+      getSystemLocale.t["WecSZ/"],
+    ];
     const obj = DISCORD_EPOCHDefault;
     return items[obj.extractTimestamp(obj, id) % items.length];
   },
@@ -374,5 +427,5 @@ export default {
       formatResult = intl.format(require("../intl/index.native.tsx").t.xw1Ij0, obj);
     }
     return formatResult;
-  }
+  },
 };

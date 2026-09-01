@@ -4,7 +4,9 @@ import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { ContentDismissActionType } from "../../../../dismissible_content/DismissibleContentConstants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useShowGuildPowerupRollbackSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/powerups/native/hooks/useShowGuildPowerupRollbackSheet.tsx",
+);
 
 export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
   let flag = arg2;
@@ -60,4 +62,4 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
       const tmp10 = first(table[5]);
     }
   }, items1);
-};
+}

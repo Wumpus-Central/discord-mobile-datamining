@@ -24,7 +24,7 @@ const memoResult = importAllResult.memo(function InstantInviteSelfMeasurer(type)
     importantForAccessibility: "no-hide-descendants",
     accessibilityElementsHidden: true,
     accessible: false,
-    children: null
+    children: null,
   };
   items1 = [type.containerStyle, callback().container];
   if ("invite" === item.type) {
@@ -37,11 +37,24 @@ const memoResult = importAllResult.memo(function InstantInviteSelfMeasurer(type)
     tmp2Result = tmp2(onMeasured(10669).LinkedChannelInvite, obj);
   }
   obj[6] = tmp2Result;
-  return <View style={items1} onLayout={importAllResult.useCallback((nativeEvent) => {
-    const layout = nativeEvent.nativeEvent.layout;
-    onMeasured("height" === str ? layout.height : layout.width);
-  }, items)} pointerEvents="none" importantForAccessibility="no-hide-descendants" accessibilityElementsHidden accessible={false}>{null}</View>;
+  return (
+    <View
+      style={items1}
+      onLayout={importAllResult.useCallback((nativeEvent) => {
+        const layout = nativeEvent.nativeEvent.layout;
+        onMeasured("height" === str ? layout.height : layout.width);
+      }, items)}
+      pointerEvents="none"
+      importantForAccessibility="no-hide-descendants"
+      accessibilityElementsHidden
+      accessible={false}
+    >
+      {null}
+    </View>
+  );
 });
-const result = require("set").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx",
+);
 
 export default memoResult;

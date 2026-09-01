@@ -39,7 +39,10 @@ export const createObservableLock = function createObservableLock(arg0) {
     }
     return new Promise((arg0, arg1) => {
       const nextPromise = promise.then(promise);
-      promise = promise.then(promise).then(arg0, arg1).then(() => arr.splice(0, 1));
+      promise = promise
+        .then(promise)
+        .then(arg0, arg1)
+        .then(() => arr.splice(0, 1));
       if (null != timerId) {
         promise = promise.then(() => clearTimeout(closure_2));
       }

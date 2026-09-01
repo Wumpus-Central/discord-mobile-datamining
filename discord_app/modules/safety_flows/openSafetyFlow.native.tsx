@@ -11,7 +11,7 @@ function _openSafetyFlow() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    const iter = (function*() {
+    const iter = (function* () {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -86,7 +86,11 @@ function _openSafetyFlow() {
                 obj1 = callback(closure_2[4]);
                 obj4 = { task: null, initialScreen: null };
                 obj4[1] = requiredAction(closure_2[3]).SafetyFlowScreens.ERROR;
-                obj1.pushLazy(requiredAction(closure_2[8])(closure_2[7], closure_2.paths), obj4, requiredAction(closure_2[5]).SAFETY_FLOWS_MODAL_KEY);
+                obj1.pushLazy(
+                  requiredAction(closure_2[8])(closure_2[7], closure_2.paths),
+                  obj4,
+                  requiredAction(closure_2[5]).SAFETY_FLOWS_MODAL_KEY,
+                );
                 const tmp16 = requiredAction(closure_2[8])(closure_2[7], closure_2.paths);
               } else if (arg0 === 1) {
                 c7 = 3;
@@ -118,7 +122,11 @@ function _openSafetyFlow() {
                   obj5[0] = callback;
                   obj5[1] = closure_2;
                   const obj11 = callback(closure_2[4]);
-                  obj11.pushLazy(requiredAction(closure_2[8])(closure_2[7], closure_2.paths), obj5, requiredAction(closure_2[5]).SAFETY_FLOWS_MODAL_KEY);
+                  obj11.pushLazy(
+                    requiredAction(closure_2[8])(closure_2[7], closure_2.paths),
+                    obj5,
+                    requiredAction(closure_2[5]).SAFETY_FLOWS_MODAL_KEY,
+                  );
                   constants = 0;
                   const tmp56 = requiredAction(closure_2[8])(closure_2[7], closure_2.paths);
                 }

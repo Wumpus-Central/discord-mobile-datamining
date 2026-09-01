@@ -6,7 +6,11 @@ import { EmojiIntention } from "../../emojis/EmojiConstants.tsx";
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/share/native/useShareChatInputActions.tsx");
 
-export const useShareChatInputActions = function useShareChatInputActions(setText, selectedDestinationChannel, appEntryKey) {
+export const useShareChatInputActions = function useShareChatInputActions(
+  setText,
+  selectedDestinationChannel,
+  appEntryKey,
+) {
   closure_0 = setText;
   closure_1 = selectedDestinationChannel;
   let callback = appEntryKey;
@@ -68,13 +72,22 @@ export const useShareChatInputActions = function useShareChatInputActions(setTex
         current.blur();
       }
       let obj = setText(selectedDestinationChannel[3]);
-      obj = { onPressEmoji: callback3, onClose: callback4, pickerIntention: constants.CHAT, autoFocus: false, startExpanded: false, channel: selectedDestinationChannel, appEntryKey: closure_2, guildId: null };
+      obj = {
+        onPressEmoji: callback3,
+        onClose: callback4,
+        pickerIntention: constants.CHAT,
+        autoFocus: false,
+        startExpanded: false,
+        channel: selectedDestinationChannel,
+        appEntryKey: closure_2,
+        guildId: null,
+      };
       let guildId;
       if (selectedDestinationChannel != null) {
         guildId = selectedDestinationChannel.getGuildId();
       }
       obj[7] = guildId;
       const result = obj.openEmojiPickerActionSheet(obj);
-    }, items1)
+    }, items1),
   };
 };

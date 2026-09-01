@@ -22,14 +22,29 @@ let closure_12 = createCacheKey.createStyles((layout) => {
   obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
   obj[0] = obj;
   obj[1] = { flex: 1 };
-  obj1 = { flexDirection: "column", flexGrow: 2, flexShrink: 2, alignSelf: "center", overflow: "hidden", marginTop: -2, marginRight: ThemesDefault.space.PX_8 };
+  obj1 = {
+    flexDirection: "column",
+    flexGrow: 2,
+    flexShrink: 2,
+    alignSelf: "center",
+    overflow: "hidden",
+    marginTop: -2,
+    marginRight: ThemesDefault.space.PX_8,
+  };
   obj[2] = obj1;
   let num = 0;
   if (obj6.isAndroid()) {
     num = 2;
   }
   obj[3] = { flexShrink: 1, marginBottom: num };
-  const obj2 = { position: "relative", borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0 };
+  const obj2 = {
+    position: "relative",
+    borderRadius: ThemesDefault.radii.round,
+    justifyContent: "center",
+    alignItems: "center",
+    flexShrink: 0,
+    flexGrow: 0,
+  };
   const merged = Object.assign(sizeStyle);
   obj2.marginRight = layoutStyles.icon.margin.marginRight + 4;
   obj[4] = obj2;
@@ -64,7 +79,10 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       let friendSuggestionName = suggestedFriend.friendSuggestionName;
     }
     let tmpResult = tmp(15634);
-    const suggestedContactNameForSuggestion = tmpResult.getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend);
+    const suggestedContactNameForSuggestion = tmpResult.getSuggestedContactNameForSuggestion(
+      friendSuggestionName,
+      suggestedFriend,
+    );
     let str2 = "";
     if (null != suggestedContactNameForSuggestion) {
       const _HermesInternal = HermesInternal;
@@ -80,7 +98,10 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       tmpResult = tmp(4217);
       sharedValue = tmpResult.useSharedValue(false);
       const items2 = [closure_6];
-      stateFromStores = tmp(647).useStateFromStores(items2, () => closure_1_6.getRelationshipType(suggestedFriend.user.id) === closure_1_8.PENDING_OUTGOING);
+      stateFromStores = tmp(647).useStateFromStores(
+        items2,
+        () => closure_1_6.getRelationshipType(suggestedFriend.user.id) === closure_1_8.PENDING_OUTGOING,
+      );
       const items3 = [sharedValue, stateFromStores];
       const effect = obj4.useEffect(() => {
         if (!stateFromStores) {
@@ -91,7 +112,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       obj = { accessibilityRole: "button", underlayColor: null, onPress: null, style: null, children: null };
       obj[1] = tmp4.rowActive.backgroundColor;
       obj[2] = tmp9;
-      const items4 = [tmp4.pressable, ];
+      const items4 = [tmp4.pressable];
       obj1 = { borderRadius: null };
       obj1[0] = layoutStyles.container.borderRadius;
       items4[1] = obj1;
@@ -104,14 +125,14 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       obj3[2] = layoutStyles.icon.avatarSize;
       obj3[3] = !stateFromStoresObject;
       obj2[1] = callback(tmp(1297).Avatar, obj3);
-      const items5 = [callback(sharedValue, obj2), , ];
+      const items5 = [callback(sharedValue, obj2), ,];
       obj4 = { style: null, children: null };
       obj4[0] = tmp4.textContainer;
       const obj5 = { lineClamp: 1, variant: null, color: "text-default", style: null, children: null };
       obj5[1] = layoutStyles.channelName.text.variant;
       obj5[3] = tmp4.nameText;
       obj5[4] = friendSuggestionName;
-      const items6 = [callback(tmp(4474).Text, obj5), ];
+      const items6 = [callback(tmp(4474).Text, obj5)];
       const tmp20 = closure_11;
       const tmpResult3 = tmp(16029);
       let num3 = 0;
@@ -127,7 +148,15 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       if (tmpResult5.isAndroid()) {
         num4 = 2;
       }
-      const obj8 = { lineHeight: null, textVariant: null, actioned: null, maxFontSizeMultiplier: 1.75, label: null, actionStatus: null, animate: null };
+      const obj8 = {
+        lineHeight: null,
+        textVariant: null,
+        actioned: null,
+        maxFontSizeMultiplier: 1.75,
+        label: null,
+        actionStatus: null,
+        animate: null,
+      };
       obj8[0] = layoutStyles.messagePreview.height + num4;
       obj8[1] = layoutStyles.messagePreview.text.variant;
       obj8[2] = sharedValue;
@@ -140,7 +169,14 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       items6[1] = callback(sharedValue, obj6);
       obj4[1] = items6;
       items5[1] = closure_10(sharedValue, obj4);
-      const obj9 = { user: null, added: null, size: null, onAddSuggestion: null, onFinishAnimation: null, animate: null };
+      const obj9 = {
+        user: null,
+        added: null,
+        size: null,
+        onAddSuggestion: null,
+        onFinishAnimation: null,
+        animate: null,
+      };
       obj9[0] = suggestedFriend.user;
       obj9[1] = sharedValue;
       tmpResult5 = tmp(500);
@@ -177,4 +213,4 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
   }
   tmp5Result = tmp5(4322);
   friendSuggestionName = tmp5Result.getName(suggestedFriend.user);
-};
+}

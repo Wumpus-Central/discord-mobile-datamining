@@ -57,7 +57,12 @@ class PostMessageTransport extends EventEmitter {
         const item = Array.from(selfEmbeddedActivities.entries()).forEach((arg0) => {
           [tmp, tmp2] = arg0;
           let obj = callback2(698);
-          obj = { application_id: tmp, channel_id: callback(4111).getEmbeddedActivityLocationChannelId(tmp2.location), guild_id: null, timeout_ms: null };
+          obj = {
+            application_id: tmp,
+            channel_id: callback(4111).getEmbeddedActivityLocationChannelId(tmp2.location),
+            guild_id: null,
+            timeout_ms: null,
+          };
           const obj3 = callback(4111);
           obj[2] = callback(4111).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj[3] = closure_11;
@@ -142,7 +147,7 @@ class PostMessageTransport extends EventEmitter {
       c8 = 0;
       c9 = 0;
       c7 = 0;
-      return (function*(arg0, arg1, arg2) {
+      return (function* (arg0, arg1, arg2) {
         if (c9 === 2) {
           c9 = 3;
           let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -263,7 +268,14 @@ class PostMessageTransport extends EventEmitter {
                         obj3.track(c7.ACTIVITY_HANDSHAKE, obj4);
                       }
                       c7 = 2;
-                      const obj5 = { source: null, postMessageToRPCClient: null, version: null, logger: null, postClose: null, encoding: null };
+                      const obj5 = {
+                        source: null,
+                        postMessageToRPCClient: null,
+                        version: null,
+                        logger: null,
+                        postClose: null,
+                        encoding: null,
+                      };
                       obj5[0] = lib;
                       obj5[1] = paths;
                       const _Number = Number;
@@ -297,7 +309,9 @@ class PostMessageTransport extends EventEmitter {
                   throwTypeErrorResult = frame_id;
                   throwTypeErrorResult = lib;
                   const _HermesInternal7 = HermesInternal;
-                  throwTypeErrorResult = logger6.error("Unrecognized iframe ID: reported " + frame_id + ", expected " + lib.iframeId);
+                  throwTypeErrorResult = logger6.error(
+                    "Unrecognized iframe ID: reported " + frame_id + ", expected " + lib.iframeId,
+                  );
                   throwTypeErrorResult = lib2;
                   throwTypeErrorResult = paths;
                   const obj7 = { closeCode: null };
@@ -392,7 +406,7 @@ class PostMessageTransport extends EventEmitter {
         }
       })();
     });
-    tmp4.handleHandshake = function() {
+    tmp4.handleHandshake = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -410,7 +424,7 @@ class PostMessageTransport extends EventEmitter {
       c6 = 0;
       c7 = 0;
       c5 = 0;
-      return (function*(arg0, arg1) {
+      return (function* (arg0, arg1) {
         if (c7 === 2) {
           c7 = 3;
           HermesBuiltin.throwTypeError();
@@ -492,7 +506,7 @@ class PostMessageTransport extends EventEmitter {
         }
       })();
     });
-    tmp4.handleClose = function() {
+    tmp4.handleClose = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {

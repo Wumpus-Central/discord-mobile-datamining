@@ -12,7 +12,7 @@ function _getApplicationSubscriptionGroupListingsForApplication() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const HTTP = callback(530).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_4.APPLICATION_SUBSCRIPTION_GROUP_LISTING(callback, closure_1);
@@ -36,7 +36,7 @@ function _getEntitlementsForGuild() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const HTTP = callback(530).HTTP;
       obj1 = { url: null, query: null, rejectWithError: null };
       obj1[0] = closure_1_4.GUILD_ENTITLEMENTS(callback);
@@ -61,7 +61,7 @@ function _getSubscriptionGroupForSubscriptionPlan() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const HTTP = callback(530).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_4.SUBSCRIPTION_PLAN_GROUP_LISTING(callback);
@@ -87,7 +87,7 @@ function _fetchEligibleApplicationSubscriptionGuilds() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const HTTP = callback(530).HTTP;
       obj1 = { url: null, query: null, rejectWithError: null };
       obj1[0] = closure_1_4.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS;
@@ -111,16 +111,17 @@ function _fetchEligibleApplicationSubscriptionGuilds() {
 }
 const result = require("set").fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionsHttpApi.tsx");
 
-export const getApplicationSubscriptionGroupListingsForApplication = function getApplicationSubscriptionGroupListingsForApplication(closure_0, closure_1) {
-  const self = this;
-  const apply = _getApplicationSubscriptionGroupListingsForApplication.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
+export const getApplicationSubscriptionGroupListingsForApplication =
+  function getApplicationSubscriptionGroupListingsForApplication(closure_0, closure_1) {
+    const self = this;
+    const apply = _getApplicationSubscriptionGroupListingsForApplication.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
 export const getEntitlementsForGuild = function getEntitlementsForGuild(closure_0) {
   const self = this;
   const apply = _getEntitlementsForGuild.apply;
@@ -147,20 +148,26 @@ export const fetchApplication = function fetchApplication(applicationId, signal)
   obj = { type: "APPLICATION_FETCH", applicationId };
   obj.dispatch(obj);
   const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-  obj = { url: Endpoints.APPLICATION_PUBLIC(applicationId), signal, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+  obj = {
+    url: Endpoints.APPLICATION_PUBLIC(applicationId),
+    signal,
+    rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+  };
   const value = HTTP.get(obj);
   const obj4 = sendRequest;
-  return value.then((application) => {
-    let obj = callback(table[3]);
-    obj = { type: "APPLICATION_FETCH_SUCCESS", application: application.body, isHydrated: true };
-    obj.dispatch(obj);
-    return application.body;
-  }).catch((arg0) => {
-    let obj = closure_1_1(closure_1_2[3]);
-    obj = { type: "APPLICATION_FETCH_FAIL", applicationId: closure_0 };
-    obj.dispatch(obj);
-    return Promise.reject(new closure_1_1(closure_1_2[4])(arg0));
-  });
+  return value
+    .then((application) => {
+      let obj = callback(table[3]);
+      obj = { type: "APPLICATION_FETCH_SUCCESS", application: application.body, isHydrated: true };
+      obj.dispatch(obj);
+      return application.body;
+    })
+    .catch((arg0) => {
+      let obj = closure_1_1(closure_1_2[3]);
+      obj = { type: "APPLICATION_FETCH_FAIL", applicationId: closure_0 };
+      obj.dispatch(obj);
+      return Promise.reject(new closure_1_1(closure_1_2[4])(arg0));
+    });
 };
 export const fetchEligibleApplicationSubscriptionGuilds = function fetchEligibleApplicationSubscriptionGuilds() {
   const self = this;

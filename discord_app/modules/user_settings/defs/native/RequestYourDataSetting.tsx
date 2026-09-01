@@ -94,13 +94,13 @@ obj = {
       return flag;
     };
   },
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: UserSettingsSections.REQUEST_DATA,
   getComponent() {
     return require("../../privacy_and_safety/native/RequestDataScreen.tsx").default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/RequestYourDataSetting.tsx");
@@ -108,13 +108,16 @@ const result = set.fileFinishedImporting("modules/user_settings/defs/native/Requ
 export default route;
 export const fetchHarvestStatus = function fetchHarvestStatus() {
   const harvestStatus = saveProfileAndAccountRequest.getHarvestStatus();
-  harvestStatus.then((arg0) => {
-    const callback = arg0;
-    callback(705).batchUpdates(() => {
-      closure_1_7.setState({ isRequesting: false, harvestRequest: body.body });
-    });
-  }, () => {
-    callback(705).batchUpdates(() => state.setState({ isRequesting: false }));
-  });
+  harvestStatus.then(
+    (arg0) => {
+      const callback = arg0;
+      callback(705).batchUpdates(() => {
+        closure_1_7.setState({ isRequesting: false, harvestRequest: body.body });
+      });
+    },
+    () => {
+      callback(705).batchUpdates(() => state.setState({ isRequesting: false }));
+    },
+  );
 };
 export { useIsHarvestRequestDisabled };

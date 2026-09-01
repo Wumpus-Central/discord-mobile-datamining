@@ -30,21 +30,25 @@ export default function useCanPurchaseFrames(location) {
       isPremiumExactlyResult = null != premiumState;
     }
     if (isPremiumExactlyResult) {
-      isPremiumExactlyResult = currentUser.premiumState.premiumSubscriptionType === callback(table[5]).PremiumSubscriptionType.TIER_2;
+      isPremiumExactlyResult =
+        currentUser.premiumState.premiumSubscriptionType === callback(table[5]).PremiumSubscriptionType.TIER_2;
     }
     return isPremiumExactlyResult;
   });
   let tmp5 = bucket === apexExperiment2.ProfileFramesPurchaseBucket.OPEN_PURCHASE;
   if (!tmp5) {
     tmp5 = bucket === apexExperiment2.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
-    const tmp6 = bucket === apexExperiment2.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
+    const tmp6 =
+      bucket === apexExperiment2.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
   }
   if (isProfileFramesEnabled) {
     isProfileFramesEnabled = tmp5;
   }
   return isProfileFramesEnabled;
-};
-export const useCanViewProfileFramesInCollectiblesShop = function useCanViewProfileFramesInCollectiblesShop(UserProfileFrameEditButton) {
+}
+export const useCanViewProfileFramesInCollectiblesShop = function useCanViewProfileFramesInCollectiblesShop(
+  UserProfileFrameEditButton,
+) {
   let isProfileFramesEnabled = apexExperiment.useIsProfileFramesEnabled(UserProfileFrameEditButton);
   apexExperimentDefault;
   if (isProfileFramesEnabled) {
@@ -52,7 +56,9 @@ export const useCanViewProfileFramesInCollectiblesShop = function useCanViewProf
   }
   return isProfileFramesEnabled;
 };
-export const useIsProfileFramesEarlyAccessPhase = function useIsProfileFramesEarlyAccessPhase(CollectiblesShopCardCardDetailsV2) {
+export const useIsProfileFramesEarlyAccessPhase = function useIsProfileFramesEarlyAccessPhase(
+  CollectiblesShopCardCardDetailsV2,
+) {
   let isProfileFramesEnabled = apexExperiment.useIsProfileFramesEnabled(CollectiblesShopCardCardDetailsV2);
   apexExperimentDefault;
   if (isProfileFramesEnabled) {
@@ -70,7 +76,8 @@ export const isUserPaidTier2 = function isUserPaidTier2(premiumState) {
     isPremiumExactlyResult = null != premiumState;
   }
   if (isPremiumExactlyResult) {
-    isPremiumExactlyResult = premiumState.premiumState.premiumSubscriptionType === create.PremiumSubscriptionType.TIER_2;
+    isPremiumExactlyResult =
+      premiumState.premiumState.premiumSubscriptionType === create.PremiumSubscriptionType.TIER_2;
   }
   return isPremiumExactlyResult;
 };

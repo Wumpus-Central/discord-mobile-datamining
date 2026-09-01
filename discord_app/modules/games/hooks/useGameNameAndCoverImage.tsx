@@ -27,4 +27,4 @@ export default function useGameNameAndCoverImage(arg0, arg1, size) {
   obj[1] = name;
   obj[2] = game.isLoading;
   return obj;
-};
+}

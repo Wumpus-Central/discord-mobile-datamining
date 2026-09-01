@@ -7,7 +7,15 @@ import ME from "../../../Constants.tsx";
 import { v1 } from "../../../../_runtime/00514_v1.js";
 
 function goToStandalonePremiumCheckout(planId, arg1, arg2) {
-  const result = closure_4.BILLING_STANDALONE_CHECKOUT_PAGE(planId.planId, planId.isGift, planId.loadId, planId.paymentMethodType, planId.deepLinkType, planId.usePresetOffer, planId.flowType);
+  const result = closure_4.BILLING_STANDALONE_CHECKOUT_PAGE(
+    planId.planId,
+    planId.isGift,
+    planId.loadId,
+    planId.paymentMethodType,
+    planId.deepLinkType,
+    planId.usePresetOffer,
+    planId.flowType,
+  );
   require = result;
   importDefault = arg1;
   dependencyMap = arg2;
@@ -22,7 +30,10 @@ function goToStandalonePremiumCheckout(planId, arg1, arg2) {
   const HTTP = sendRequest.HTTP;
   obj = { url: uRL.HANDOFF, body: { key: v4Result }, oldFormErrors: true, rejectWithError: false };
   const obj2 = v1;
-  return HTTP.post(obj).then((arg0) => callback(arg0, uRL), (arg0) => callback2(arg0, closure_0));
+  return HTTP.post(obj).then(
+    (arg0) => callback(arg0, uRL),
+    (arg0) => callback2(arg0, closure_0),
+  );
 }
 ({ Endpoints: c3, Routes: c4 } = ME);
 let result = set.fileFinishedImporting("modules/payments/utils/BillingStandaloneUtils.tsx");
@@ -41,13 +52,20 @@ export const goToBillingStandalonePageWithHandoff = function goToBillingStandalo
   const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj = { url: uRL.HANDOFF, body: { key: v4Result }, oldFormErrors: true, rejectWithError: false };
   const obj2 = v1;
-  return HTTP.post(obj).then((arg0) => callback(arg0, uRL), (arg0) => callback2(arg0, closure_0));
+  return HTTP.post(obj).then(
+    (arg0) => callback(arg0, uRL),
+    (arg0) => callback2(arg0, closure_0),
+  );
 };
 export { goToStandalonePremiumCheckout };
 export const goToStandalonePremiumCheckoutWeb = function goToStandalonePremiumCheckoutWeb(planId) {
-  return goToStandalonePremiumCheckout(planId, (body, searchParams) => {
-    searchParams = searchParams.searchParams;
-    searchParams.append("handoff_token", body.body.handoff_token);
-    window.open(searchParams.href);
-  }, arg1);
+  return goToStandalonePremiumCheckout(
+    planId,
+    (body, searchParams) => {
+      searchParams = searchParams.searchParams;
+      searchParams.append("handoff_token", body.body.handoff_token);
+      window.open(searchParams.href);
+    },
+    arg1,
+  );
 };

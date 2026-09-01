@@ -47,5 +47,10 @@ export default function Emoji(arg0) {
       return tmp6(tmp7, obj);
     }
   }
-  tmp6Result = tmp6(tmp(1297).LegacyText, { style: textEmojiStyle, allowFontScaling: false, adjustsFontSizeToFit, children: name });
-};
+  tmp6Result = tmp6(tmp(1297).LegacyText, {
+    style: textEmojiStyle,
+    allowFontScaling: false,
+    adjustsFontSizeToFit,
+    children: name,
+  });
+}

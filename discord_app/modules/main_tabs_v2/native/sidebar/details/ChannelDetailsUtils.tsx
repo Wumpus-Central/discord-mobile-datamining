@@ -14,7 +14,7 @@ export const getChannelDetailsButtons = function getChannelDetailsButtons(channe
   if (channel.type === set2.ChannelTypes.GUILD_DIRECTORY) {
     let items = [];
   } else {
-    items = [, , ];
+    items = [, ,];
     ({ SEARCH: arr[0], MUTE: arr[1], SETTINGS: arr[2] } = ChannelDetailsButtonTypes);
   }
   let found = items;
@@ -23,6 +23,11 @@ export const getChannelDetailsButtons = function getChannelDetailsButtons(channe
   }
   return found;
 };
-export const navigateToChannelDetailsScreen = function navigateToChannelDetailsScreen(closure_4, PERMISSIONS, closure_0, source) {
+export const navigateToChannelDetailsScreen = function navigateToChannelDetailsScreen(
+  closure_4,
+  PERMISSIONS,
+  closure_0,
+  source,
+) {
   closure_4.navigate("sidebar", { screen: PERMISSIONS, channelId: closure_0, source });
 };

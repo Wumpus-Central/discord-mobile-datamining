@@ -31,7 +31,9 @@ export default function _default(width) {
   const items = [sharedValue];
   const effect = React.useEffect(() => {
     const obj = sharedValue(closure_1_2[5]);
-    const result = sharedValue.set(obj.withRepeat(sharedValue(closure_1_2[6]).withTiming(1, { duration: 650 }), -1, true));
+    const result = sharedValue.set(
+      obj.withRepeat(sharedValue(closure_1_2[6]).withTiming(1, { duration: 650 }), -1, true),
+    );
   }, items);
   let obj = sharedValue(4217);
   class C {
@@ -46,4 +48,4 @@ export default function _default(width) {
   const animatedStyle = sharedValue(4217).useAnimatedStyle(C);
   const style = [tmp3Result.skeletonCard, width.style, animatedStyle];
   return jsx(_modDef4217.View, { style });
-};
+}

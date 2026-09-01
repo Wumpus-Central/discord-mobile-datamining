@@ -17,7 +17,7 @@ function _handleBoostPress() {
     closure_2 = arg2;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -112,7 +112,10 @@ export default function GuildBoostingSubscribeButton(guild) {
   let items = [closure_6];
   const stateFromStores = guild(analyticsSection[14]).useStateFromStores(items, () => {
     const keys = Object.keys(boostSlots.boostSlots);
-    return keys.some((arg0) => null == boostSlots.boostSlots[arg0].premiumGuildSubscription && !boostSlots.boostSlots[arg0].isOnCooldown());
+    return keys.some(
+      (arg0) =>
+        null == boostSlots.boostSlots[arg0].premiumGuildSubscription && !boostSlots.boostSlots[arg0].isOnCooldown(),
+    );
   });
   const items1 = [navigation, analyticsSection, onAvailableSlotPress, intent, guild.onResult];
   const callback = intent.useCallback((arg0, arg1) => {
@@ -140,13 +143,27 @@ export default function GuildBoostingSubscribeButton(guild) {
   }, items1);
   let tmp8 = !stateFromStores;
   if (!stateFromStores) {
-    tmp8 = fractionalPremiumState !== handleMobileWebRedirectCheckout.NONE || premiumGroupRole === tmp4(tmp2[15]).PremiumSubscriptionGroupRole.MEMBER;
-    const tmp10 = fractionalPremiumState !== handleMobileWebRedirectCheckout.NONE || premiumGroupRole === tmp4(tmp2[15]).PremiumSubscriptionGroupRole.MEMBER;
+    tmp8 =
+      fractionalPremiumState !== handleMobileWebRedirectCheckout.NONE ||
+      premiumGroupRole === tmp4(tmp2[15]).PremiumSubscriptionGroupRole.MEMBER;
+    const tmp10 =
+      fractionalPremiumState !== handleMobileWebRedirectCheckout.NONE ||
+      premiumGroupRole === tmp4(tmp2[15]).PremiumSubscriptionGroupRole.MEMBER;
   }
   const tmp11 = previousGuildSubscriptionSlot(analyticsSection[16])("guild_boost_subscribe_button");
   const shouldUseMobileWebRedirectCheckout = tmp11.shouldUseMobileWebRedirectCheckout;
   handleMobileWebRedirectCheckout = tmp11.handleMobileWebRedirectCheckout;
-  const items2 = [tmp3, shouldUseMobileWebRedirectCheckout, handleMobileWebRedirectCheckout, guild.id, analyticsSection, stateFromStores, previousGuildSubscriptionSlot, analyticsLocations, callback];
+  const items2 = [
+    tmp3,
+    shouldUseMobileWebRedirectCheckout,
+    handleMobileWebRedirectCheckout,
+    guild.id,
+    analyticsSection,
+    stateFromStores,
+    previousGuildSubscriptionSlot,
+    analyticsLocations,
+    callback,
+  ];
   closure_13 = intent.useCallback(() => {
     if (closure_6) {
       let tmp8 = callback;
@@ -180,7 +197,7 @@ export default function GuildBoostingSubscribeButton(guild) {
     },
     disabled: tmp8,
     text: null,
-    icon: null
+    icon: null,
   };
   const intl = tmp4(tmp2[18]).intl;
   const string = intl.string;
@@ -198,4 +215,4 @@ export default function GuildBoostingSubscribeButton(guild) {
   obj[5] = tmp12Result;
   obj[1] = closure_13(guild(analyticsSection[17]).Button, obj);
   return closure_13(View, obj);
-};
+}

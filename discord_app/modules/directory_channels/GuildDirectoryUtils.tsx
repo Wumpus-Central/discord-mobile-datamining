@@ -9,8 +9,32 @@ const result = set2.fileFinishedImporting("modules/directory_channels/GuildDirec
 
 export const guildDirectoryEntryFromServer = function guildDirectoryEntryFromServer(entry) {
   if (entry.type === DirectoryEntryTypes.GUILD) {
-    const obj = { channelId: null, guildId: null, type: null, authorId: null, createdAt: null, description: null, primaryCategoryId: null, name: null, icon: null, splash: null, features: null, approximateMemberCount: null, approximatePresenceCount: null, featurableInDirectory: null };
-    ({ directory_channel_id: obj[0], entity_id: obj[1], type: obj[2], author_id: obj[3], created_at: obj[4], description: obj[5], primary_category_id: obj[6], guild } = entry);
+    const obj = {
+      channelId: null,
+      guildId: null,
+      type: null,
+      authorId: null,
+      createdAt: null,
+      description: null,
+      primaryCategoryId: null,
+      name: null,
+      icon: null,
+      splash: null,
+      features: null,
+      approximateMemberCount: null,
+      approximatePresenceCount: null,
+      featurableInDirectory: null,
+    };
+    ({
+      directory_channel_id: obj[0],
+      entity_id: obj[1],
+      type: obj[2],
+      author_id: obj[3],
+      created_at: obj[4],
+      description: obj[5],
+      primary_category_id: obj[6],
+      guild,
+    } = entry);
     let name;
     if (guild != null) {
       name = guild.name;

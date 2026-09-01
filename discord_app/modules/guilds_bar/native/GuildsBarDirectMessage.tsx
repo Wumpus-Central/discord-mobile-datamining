@@ -14,7 +14,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 let c3 = importAllResult;
 let obj = { dm: null };
-obj = { width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
+obj = {
+  width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
+  height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
+};
 obj[0] = obj;
 let closure_12 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelId) {
@@ -64,7 +67,10 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
   });
   channel = stateFromStoresObject.channel;
   dmRecipient = stateFromStoresObject.dmRecipient;
-  const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true });
+  const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({
+    disableSelectedColor: true,
+    disableBGColor: true,
+  });
   const items2 = [channel, dmRecipient];
   ({ badge, cutouts } = stateFromStores(channel[15])({ mentionCount: stateFromStores }));
   const memo = dmRecipient.useMemo(() => {
@@ -84,26 +90,41 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
     return tmp2;
   }, items2);
   const items3 = [channel];
-  const memo1 = dmRecipient.useMemo(() => ({
-    onPress() {
-      if (null != closure_2) {
-        closure_1_0(closure_1_2[16]).transitionToChannel(tmp.id);
-        const obj = closure_1_0(closure_1_2[16]);
-      }
-    },
-    onLongPress() {
-      if (null != closure_2) {
-        const result = closure_1_0(closure_1_2[17]).openChannelLongPressActionSheet(tmp.id);
-        const obj = closure_1_0(closure_1_2[17]);
-      }
-    }
-  }), items3);
+  const memo1 = dmRecipient.useMemo(
+    () => ({
+      onPress() {
+        if (null != closure_2) {
+          closure_1_0(closure_1_2[16]).transitionToChannel(tmp.id);
+          const obj = closure_1_0(closure_1_2[16]);
+        }
+      },
+      onLongPress() {
+        if (null != closure_2) {
+          const result = closure_1_0(closure_1_2[17]).openChannelLongPressActionSheet(tmp.id);
+          const obj = closure_1_0(closure_1_2[17]);
+        }
+      },
+    }),
+    items3,
+  );
   let isMultiUserDMResult;
   const tmp8 = stateFromStores(channel[15])({ mentionCount: stateFromStores });
   if (channel != null) {
     isMultiUserDMResult = channel.isMultiUserDM();
   }
-  obj = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: true, cutouts: false, externalChildren: "done", expandedChildren: "flowing", children: "hourglass" };
+  obj = {
+    selected: false,
+    circle: !isMultiUserDMResult,
+    unread: true,
+    styles: guildsBarAnimatedWrapperStyles,
+    label: stateFromStoresObject.label,
+    overState: "Boolean",
+    config: true,
+    cutouts: false,
+    externalChildren: "done",
+    expandedChildren: "flowing",
+    children: "hourglass",
+  };
   obj[6] = memo1;
   obj[7] = cutouts;
   obj[8] = badge;
@@ -135,7 +156,19 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
     }
   }
   obj[10] = tmp11Result;
-  return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: true, cutouts: false, externalChildren: "done", expandedChildren: "flowing", children: "hourglass" });
+  return jsx(stateFromStores(channel[11]), {
+    selected: false,
+    circle: !isMultiUserDMResult,
+    unread: true,
+    styles: guildsBarAnimatedWrapperStyles,
+    label: stateFromStoresObject.label,
+    overState: "Boolean",
+    config: true,
+    cutouts: false,
+    externalChildren: "done",
+    expandedChildren: "flowing",
+    children: "hourglass",
+  });
 });
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDirectMessage.tsx");
 

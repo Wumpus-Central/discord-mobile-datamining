@@ -16,7 +16,15 @@ require = arg1;
 noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, topContainer: null, growContainer: null, image: null, title: null, subtitle: null, info: null };
+createCacheKey = {
+  container: null,
+  topContainer: null,
+  growContainer: null,
+  image: null,
+  title: null,
+  subtitle: null,
+  info: null,
+};
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_16 };
@@ -35,11 +43,22 @@ const result = require("set").fileFinishedImporting("modules/nuf/native/componen
 export default function RedesignDiscoverabilityLanding(onNext) {
   const tmp = callback3();
   let obj = { style: tmp.container, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
-  obj = { flexGrow: 2, paddingTop: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + 32, paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingHorizontal: ThemesDefault.space.PX_16 };
+  obj = {
+    flexGrow: 2,
+    paddingTop: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + 32,
+    paddingBottom: useSafeAreaInsetsDefault().bottom + 16,
+    paddingHorizontal: ThemesDefault.space.PX_16,
+  };
   obj[2] = obj;
   obj = { style: tmp.topContainer };
-  const items = [callback(closure_3, obj), , , , , , ];
-  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const items = [callback(closure_3, obj), , , , , ,];
+  obj1 = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj1[4] = intl.string(getSystemLocale.t.n8nw6j);
   items[1] = callback(Text.Text, obj1);
@@ -51,12 +70,16 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   items[3] = callback(preloadDefault, obj3);
   const obj4 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = getSystemLocale.intl;
-  const items1 = [intl3.string(getSystemLocale.t.ci12MJ), " ", ];
+  const items1 = [intl3.string(getSystemLocale.t.ci12MJ), " "];
   const intl4 = getSystemLocale.intl;
   items1[2] = intl4.format(getSystemLocale.t.VcSQ4n, {
     learnMoreHook(children) {
-      return callback2(callback(4474).Text, { onPress: callback(12218).handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children }, arg1);
-    }
+      return callback2(
+        callback(4474).Text,
+        { onPress: callback(12218).handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children },
+        arg1,
+      );
+    },
   });
   obj4[3] = items1;
   items[4] = callback2(Text.Text, obj4);
@@ -68,4 +91,4 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   items[6] = callback(Button.Button, obj7);
   obj[3] = items;
   return callback2(closure_4, obj);
-};
+}

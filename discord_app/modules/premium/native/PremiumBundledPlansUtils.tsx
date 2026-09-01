@@ -95,7 +95,12 @@ function getProductIdFromSubscriptionItems(subscriptionItemsForProduct) {
   error = new Error("No App Store bundled product matches the subscription items");
   throw error;
 }
-({ PREMIUM_GUILD_SUBSCRIPTION_PLANS: c3, PremiumTypes: c4, SubscriptionIntervalTypes: c5, SubscriptionPlans: closure_6 } = GuildFeatures);
+({
+  PREMIUM_GUILD_SUBSCRIPTION_PLANS: c3,
+  PremiumTypes: c4,
+  SubscriptionIntervalTypes: c5,
+  SubscriptionPlans: closure_6,
+} = GuildFeatures);
 let result = require("set").fileFinishedImporting("modules/premium/native/PremiumBundledPlansUtils.tsx");
 
 export const getPremiumBundlesWithPredicate = function getPremiumBundlesWithPredicate(fn) {
@@ -115,7 +120,13 @@ export const getToggledIntervalProduct = function getToggledIntervalProduct(prod
     if (tmp8.premiumTier !== closure_4.TIER_1) {
       const _Object = Object;
       const values = Object.values(tmp(6087).AppStorePremiumProductIdsToPremiumBundledItems);
-      const found = values.find((numPremiumGuild) => numPremiumGuild.numPremiumGuild === numPremiumGuild.numPremiumGuild && numPremiumGuild.premiumTier === numPremiumGuild.premiumTier && numPremiumGuild.interval !== numPremiumGuild.interval && !numPremiumGuild.isDeprecated);
+      const found = values.find(
+        (numPremiumGuild) =>
+          numPremiumGuild.numPremiumGuild === numPremiumGuild.numPremiumGuild &&
+          numPremiumGuild.premiumTier === numPremiumGuild.premiumTier &&
+          numPremiumGuild.interval !== numPremiumGuild.interval &&
+          !numPremiumGuild.isDeprecated,
+      );
       productId = undefined;
       if (found != null) {
         productId = found.productId;
@@ -141,7 +152,13 @@ export const getProductIdsForBothIntervals = function getProductIdsForBothInterv
       if (tmp14.premiumTier !== closure_4.TIER_1) {
         const _Object = Object;
         const values = Object.values(tmp(6087).AppStorePremiumProductIdsToPremiumBundledItems);
-        const found = values.find((numPremiumGuild) => numPremiumGuild.numPremiumGuild === numPremiumGuild.numPremiumGuild && numPremiumGuild.premiumTier === numPremiumGuild.premiumTier && numPremiumGuild.interval !== numPremiumGuild.interval && !numPremiumGuild.isDeprecated);
+        const found = values.find(
+          (numPremiumGuild) =>
+            numPremiumGuild.numPremiumGuild === numPremiumGuild.numPremiumGuild &&
+            numPremiumGuild.premiumTier === numPremiumGuild.premiumTier &&
+            numPremiumGuild.interval !== numPremiumGuild.interval &&
+            !numPremiumGuild.isDeprecated,
+        );
         let productId;
         if (found != null) {
           productId = found.productId;
@@ -241,7 +258,10 @@ export const excludeNitroOnlyPlansForActiveTrial = function excludeNitroOnlyPlan
   return !tmp;
 };
 export { getSubscriptionItemsForProduct };
-export const getModifySubscriptionItemsForProduct = function getModifySubscriptionItemsForProduct(productId, closure_0) {
+export const getModifySubscriptionItemsForProduct = function getModifySubscriptionItemsForProduct(
+  productId,
+  closure_0,
+) {
   if (productId in found(6087).AppStorePremiumProductIdsToPremiumBundledItems) {
     const tmp8 = tmp(6087).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     if (null != tmp8.premiumTier) {

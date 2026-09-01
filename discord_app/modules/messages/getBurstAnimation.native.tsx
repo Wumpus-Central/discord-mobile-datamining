@@ -5,188 +5,188 @@ let closure_0 = arg1;
 let obj = {
   load() {
     return callback(7530);
-  }
+  },
 };
 const items = [
   obj,
   {
     load() {
       return callback(7531);
-    }
+    },
   },
   {
     load() {
       return callback(7532);
-    }
+    },
   },
   {
     load() {
       return callback(7533);
-    }
+    },
   },
   {
     load() {
       return callback(7534);
-    }
+    },
   },
   {
     load() {
       return callback(7535);
-    }
+    },
   },
   {
     load() {
       return callback(7536);
-    }
+    },
   },
   {
     load() {
       return callback(7537);
-    }
+    },
   },
   {
     load() {
       return callback(7538);
-    }
+    },
   },
   {
     load() {
       return callback(7539);
-    }
+    },
   },
   {
     load() {
       return callback(7540);
-    }
+    },
   },
   {
     load() {
       return callback(7541);
-    }
+    },
   },
   {
     load() {
       return callback(7542);
-    }
+    },
   },
   {
     load() {
       return callback(7543);
-    }
+    },
   },
   {
     load() {
       return callback(7544);
-    }
+    },
   },
   {
     load() {
       return callback(7545);
-    }
+    },
   },
   {
     load() {
       return callback(7546);
-    }
+    },
   },
   {
     load() {
       return callback(7547);
-    }
-  }
+    },
+  },
 ];
 obj = {
   load() {
     return callback(7548);
-  }
+  },
 };
 const items1 = [
   obj,
   {
     load() {
       return callback(7549);
-    }
+    },
   },
   {
     load() {
       return callback(7550);
-    }
+    },
   },
   {
     load() {
       return callback(7551);
-    }
+    },
   },
   {
     load() {
       return callback(7552);
-    }
+    },
   },
   {
     load() {
       return callback(7553);
-    }
+    },
   },
   {
     load() {
       return callback(7554);
-    }
+    },
   },
   {
     load() {
       return callback(7555);
-    }
+    },
   },
   {
     load() {
       return callback(7556);
-    }
+    },
   },
   {
     load() {
       return callback(7557);
-    }
+    },
   },
   {
     load() {
       return callback(7558);
-    }
+    },
   },
   {
     load() {
       return callback(7559);
-    }
+    },
   },
   {
     load() {
       return callback(7560);
-    }
+    },
   },
   {
     load() {
       return callback(7561);
-    }
+    },
   },
   {
     load() {
       return callback(7562);
-    }
+    },
   },
   {
     load() {
       return callback(7563);
-    }
+    },
   },
   {
     load() {
       return callback(7564);
-    }
+    },
   },
   {
     load() {
       return callback(7565);
-    }
-  }
+    },
+  },
 ];
 closure_0 = asyncGeneratorStepDefault((arg0, arg1, arg2) => {
   closure_0 = arg0;
@@ -195,7 +195,7 @@ closure_0 = asyncGeneratorStepDefault((arg0, arg1, arg2) => {
   closure_3 = arg3;
   c6 = 0;
   c7 = 0;
-  const iter = (function*(arg0, arg1, arg2) {
+  const iter = (function* (arg0, arg1, arg2) {
     if (c7 === 2) {
       c7 = 3;
       HermesBuiltin.throwTypeError();
@@ -267,7 +267,7 @@ closure_0 = asyncGeneratorStepDefault((arg0, arg1, arg2) => {
 });
 const result = require("set").fileFinishedImporting("modules/messages/getBurstAnimation.native.tsx");
 
-export const getBurstAnimation = function() {
+export const getBurstAnimation = function () {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

@@ -12,10 +12,16 @@ noopAll;
 createCacheKey = { title: null, cardStyle: null };
 createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginHorizontal: ThemesDefault.space.PX_16, padding: 0, marginBottom: ThemesDefault.space.PX_24 };
+createCacheKey[1] = {
+  marginHorizontal: ThemesDefault.space.PX_16,
+  padding: 0,
+  marginBottom: ThemesDefault.space.PX_24,
+};
 let closure_4 = createCacheKey.createStyles(createCacheKey);
 const obj1 = { marginHorizontal: ThemesDefault.space.PX_16, padding: 0, marginBottom: ThemesDefault.space.PX_24 };
-const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetProgress.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_action_sheet/native/components/GuildActionSheetProgress.tsx",
+);
 
 export default function GuildActionSheetProgress(guild) {
   guild = guild.guild;
@@ -34,10 +40,15 @@ export default function GuildActionSheetProgress(guild) {
         obj = { guild: null, titleStyle: null, longPressDisabled: true, resume: true };
         obj[0] = guild;
         obj[1] = tmp.title;
-        obj[1] = jsx(GuildProgressOverviewViewDefault, { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
+        obj[1] = jsx(GuildProgressOverviewViewDefault, {
+          guild: null,
+          titleStyle: null,
+          longPressDisabled: true,
+          resume: true,
+        });
         tmp5 = jsx(PressableCard.Card, { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
       }
     }
   }
   return tmp5;
-};
+}

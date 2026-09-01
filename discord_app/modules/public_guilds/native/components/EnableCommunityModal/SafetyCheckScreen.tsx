@@ -10,7 +10,9 @@ const require = arg1;
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
 ({ VerificationLevels: closure_8, GuildExplicitContentFilterTypes: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/SafetyCheckScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/public_guilds/native/components/EnableCommunityModal/SafetyCheckScreen.tsx",
+);
 
 export default function SafetyCheckScreen() {
   let obj = React;
@@ -46,11 +48,17 @@ export default function SafetyCheckScreen() {
     obj[2] = guild.explicitContentFilter !== tmp17.ALL_MEMBERS || guild.verificationLevel === tmp15.NONE;
     obj = { style: null, children: null };
     obj[0] = enableCommunitySharedStyles.content;
-    obj1 = { ref: null, accessibilityRole: "header", variant: "text-md/semibold", color: "text-subtle", children: null };
+    obj1 = {
+      ref: null,
+      accessibilityRole: "header",
+      variant: "text-md/semibold",
+      color: "text-subtle",
+      children: null,
+    };
     obj1[0] = ref;
     const intl = tmp2(tmp3[13]).intl;
     obj1[4] = intl.formatToPlainString(tmp2(tmp3[13]).t.tInpJj, { number: 1, total: 3 });
-    const items1 = [callback2(tmp2(tmp3[12]).Text, obj1), , , ];
+    const items1 = [callback2(tmp2(tmp3[12]).Text, obj1), , ,];
     obj2 = { resizeMode: "contain", source: null };
     obj2[1] = tmp7.safetyCheck;
     items1[1] = callback2(closure_5, obj2);
@@ -65,7 +73,7 @@ export default function SafetyCheckScreen() {
     obj4[3] = intl3.string(tmp2(tmp3[13]).t.i1STwu);
     items1[3] = callback2(tmp2(tmp3[12]).Text, obj4);
     obj[1] = items1;
-    const items2 = [closure_11(closure_6, obj), ];
+    const items2 = [closure_11(closure_6, obj)];
     const obj5 = { spacing: 24, style: null, children: null };
     const obj6 = { paddingHorizontal: null };
     obj6[0] = token;
@@ -101,7 +109,7 @@ export default function SafetyCheckScreen() {
     };
     obj8[1] = callback2(tmp2(tmp3[17]).TableSwitchRow, obj9);
     obj7[2] = callback2(tmp4Result, obj8);
-    const items3 = [callback2(tmp2(tmp3[15]).TableRowGroup, obj7), ];
+    const items3 = [callback2(tmp2(tmp3[15]).TableRowGroup, obj7)];
     const obj10 = { helperText: null, hasIcons: false, children: null };
     const intl6 = tmp2(tmp3[13]).intl;
     obj10[0] = intl6.string(tmp2(tmp3[13]).t.b0MaDV);
@@ -141,4 +149,4 @@ export default function SafetyCheckScreen() {
     const tmp21 = guild.explicitContentFilter !== tmp17.ALL_MEMBERS || guild.verificationLevel === tmp15.NONE;
   }
   return tmp20Result;
-};
+}

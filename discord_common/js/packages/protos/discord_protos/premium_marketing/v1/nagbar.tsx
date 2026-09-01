@@ -9,7 +9,7 @@ import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 require = arg1;
 class Nagbar$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , ];
+    items = [, , , , , , ,];
     items[0] = { no: 1, name: "body", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "cta_label", kind: "scalar", T: 9 };
     items[2] = {
@@ -17,9 +17,13 @@ class Nagbar$Type extends MessageType {
       name: "cta_action",
       kind: "enum",
       T() {
-            const items = ["discord_protos.premium_marketing.v1.ButtonAction", callback(8455).ButtonAction, "BUTTON_ACTION_"];
-            return items;
-          }
+        const items = [
+          "discord_protos.premium_marketing.v1.ButtonAction",
+          callback(8455).ButtonAction,
+          "BUTTON_ACTION_",
+        ];
+        return items;
+      },
     };
     items[3] = { no: 4, name: "deeplink_section", kind: "scalar", T: 9 };
     items[4] = {
@@ -27,16 +31,16 @@ class Nagbar$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(8454).HelpArticle;
-          }
+        return callback(8454).HelpArticle;
+      },
     };
     items[5] = {
       no: 6,
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
-          }
+        return callback(8453).LocalizedString;
+      },
     };
     obj = { no: 7, name: "cta_label_localized", kind: "message", T: null };
     class T {
@@ -51,8 +55,8 @@ class Nagbar$Type extends MessageType {
       name: "navigable_storefront_application_id",
       kind: "message",
       T() {
-            return callback(1337).UInt64Value;
-          }
+        return callback(1337).UInt64Value;
+      },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.Nagbar", items, T);
     // ThrowIfThisInitialized (0x7c)
@@ -114,7 +118,12 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         let tmp29 = LocalizedString;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
-        obj.ctaLabelLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.ctaLabelLocalized);
+        obj.ctaLabelLocalized = LocalizedString.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.ctaLabelLocalized,
+        );
       } else if (8 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
@@ -122,7 +131,12 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         let tmp24 = UInt64Value;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
-        obj.navigableStorefrontApplicationId = UInt64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.navigableStorefrontApplicationId);
+        obj.navigableStorefrontApplicationId = UInt64Value.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.navigableStorefrontApplicationId,
+        );
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -179,26 +193,58 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(body, tag, write
   if (body.helpArticle) {
     const HelpArticle = create2.HelpArticle;
     const tagResult4 = tag.tag(5, _mod1307.WireType.LengthDelimited);
-    const joined = HelpArticle.internalBinaryWrite(body.helpArticle, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = HelpArticle.internalBinaryWrite(body.helpArticle, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = HelpArticle.internalBinaryWrite(
+      body.helpArticle,
+      tag.tag(5, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = HelpArticle.internalBinaryWrite(
+      body.helpArticle,
+      tag.tag(5, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (body.bodyLocalized) {
     const LocalizedString = create.LocalizedString;
     const tagResult5 = tag.tag(6, _mod1307.WireType.LengthDelimited);
-    const joined1 = LocalizedString.internalBinaryWrite(body.bodyLocalized, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(body.bodyLocalized, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = LocalizedString.internalBinaryWrite(
+      body.bodyLocalized,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(
+      body.bodyLocalized,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (body.ctaLabelLocalized) {
     const LocalizedString2 = create.LocalizedString;
     const tagResult6 = tag.tag(7, _mod1307.WireType.LengthDelimited);
-    const joined2 = LocalizedString2.internalBinaryWrite(body.ctaLabelLocalized, tag.tag(7, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = LocalizedString2.internalBinaryWrite(body.ctaLabelLocalized, tag.tag(7, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined2 = LocalizedString2.internalBinaryWrite(
+      body.ctaLabelLocalized,
+      tag.tag(7, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult2 = LocalizedString2.internalBinaryWrite(
+      body.ctaLabelLocalized,
+      tag.tag(7, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (body.navigableStorefrontApplicationId) {
     const UInt64Value = defineProperty.UInt64Value;
     const tagResult7 = tag.tag(8, _mod1307.WireType.LengthDelimited);
-    const joined3 = UInt64Value.internalBinaryWrite(body.navigableStorefrontApplicationId, tag.tag(8, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = UInt64Value.internalBinaryWrite(body.navigableStorefrontApplicationId, tag.tag(8, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined3 = UInt64Value.internalBinaryWrite(
+      body.navigableStorefrontApplicationId,
+      tag.tag(8, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult3 = UInt64Value.internalBinaryWrite(
+      body.navigableStorefrontApplicationId,
+      tag.tag(8, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -220,7 +266,7 @@ let items = [
     T() {
       const items = ["discord_protos.premium_marketing.v1.ButtonAction", callback(8455).ButtonAction, "BUTTON_ACTION_"];
       return items;
-    }
+    },
   },
   { no: 4, name: "deeplink_section", kind: "scalar", T: 9 },
   {
@@ -229,7 +275,7 @@ let items = [
     kind: "message",
     T() {
       return callback(8454).HelpArticle;
-    }
+    },
   },
   {
     no: 6,
@@ -237,10 +283,9 @@ let items = [
     kind: "message",
     T() {
       return callback(8453).LocalizedString;
-    }
+    },
   },
-,
-
+  ,
 ];
 let obj = { no: 7, name: "cta_label_localized", kind: "message", T: null };
 class T {
@@ -256,10 +301,12 @@ items[7] = {
   kind: "message",
   T() {
     return callback(1337).UInt64Value;
-  }
+  },
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.Nagbar", items, tmp, T, Nagbar$Type, prototype, items);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/nagbar.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/nagbar.tsx",
+);
 
 export const Nagbar = prototype;

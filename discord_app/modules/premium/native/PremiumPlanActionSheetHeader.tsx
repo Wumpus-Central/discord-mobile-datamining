@@ -15,7 +15,14 @@ noopAll;
 ({ PremiumTypes: c4, SubscriptionIntervalTypes: c5 } = GuildFeatures);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let items = [{ scaleX: -1 }];
-let closure_9 = createCacheKey.createStyles({ header: { height: 112, justifyContent: "center", alignItems: "center" }, logoContainer: { position: "absolute", top: 16, left: 16 }, imgWumpus: { position: "absolute", height: 90 }, imgWumpusRight: { transform: items }, imgWumpusBottom: { bottom: 0 }, discountPill: { marginTop: 10 } });
+let closure_9 = createCacheKey.createStyles({
+  header: { height: 112, justifyContent: "center", alignItems: "center" },
+  logoContainer: { position: "absolute", top: 16, left: 16 },
+  imgWumpus: { position: "absolute", height: 90 },
+  imgWumpusRight: { transform: items },
+  imgWumpusBottom: { bottom: 0 },
+  discountPill: { marginTop: 10 },
+});
 const result = require("set").fileFinishedImporting("modules/premium/native/PremiumPlanActionSheetHeader.tsx");
 
 export default function PremiumPlanActionSheetHeader(arg0) {
@@ -42,7 +49,16 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     }
     tmp10 = hasItem;
   }
-  obj = { style: tmp.header, colors: getPremiumGradientColor(premiumType), start: keys.HorizontalGradient.START, end: keys.HorizontalGradient.END, accessible: true, accessibilityRole: "header", accessibilityLabel: null, children: null };
+  obj = {
+    style: tmp.header,
+    colors: getPremiumGradientColor(premiumType),
+    start: keys.HorizontalGradient.START,
+    end: keys.HorizontalGradient.END,
+    accessible: true,
+    accessibilityRole: "header",
+    accessibilityLabel: null,
+    children: null,
+  };
   const tmp14 = LinearGradientDefault;
   obj[6] = getPremiumPlanItem.getPremiumTypeDisplayName(premiumType);
   if (TIER_0.TIER_0 === premiumType) {
@@ -56,7 +72,7 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     }
   }
   if (!tmp13Result) {
-    const items = [tmp13Result, , ];
+    const items = [tmp13Result, ,];
     obj = { style: null, children: null };
     obj[0] = tmp.logoContainer;
     tmp13Result = tmp13(5493);
@@ -69,10 +85,16 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     }
     obj1 = { source: null, resizeMode: "contain" };
     obj1[0] = tmp13Result1;
-    const items1 = [closure_7(tmp13Result, obj1), , ];
+    const items1 = [closure_7(tmp13Result, obj1), ,];
     let tmp22Result = null;
     if (tmp2) {
-      const obj2 = { style: null, trialOffer: null, premiumType: null, useWhiteBackground: true, hideTrialCountdown: true };
+      const obj2 = {
+        style: null,
+        trialOffer: null,
+        premiumType: null,
+        useWhiteBackground: true,
+        hideTrialCountdown: true,
+      };
       obj2[0] = tmp.discountPill;
       obj2[1] = trialOffer;
       obj2[2] = premiumType;
@@ -81,7 +103,13 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     items1[1] = tmp22Result;
     tmp22Result = null;
     if (tmp10) {
-      const obj3 = { style: null, discountOffer: null, premiumType: null, shouldShowDiscountUpsell: true, useWhiteBackground: true };
+      const obj3 = {
+        style: null,
+        discountOffer: null,
+        premiumType: null,
+        shouldShowDiscountUpsell: true,
+        useWhiteBackground: true,
+      };
       obj3[0] = tmp.discountPill;
       obj3[1] = discountOffer;
       obj3[2] = premiumType;
@@ -99,7 +127,7 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     }
     const obj4 = { source: null, style: null, resizeMode: "contain" };
     obj4[0] = tmp13Result3;
-    const items2 = [tmp.imgWumpus, ];
+    const items2 = [tmp.imgWumpus];
     if (tmp15.TIER_0 !== premiumType) {
       if (tmp15.TIER_1 !== premiumType) {
         if (tmp15.TIER_2 === premiumType) {
@@ -132,4 +160,4 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     const tmp13Result4 = tmp13(5493);
     const tmp17 = closure_7;
   }
-};
+}

@@ -37,15 +37,17 @@ export default function ClearAfterOptionsActionSheet(arg0) {
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.E45wvP);
   obj[2] = initialValue;
-  obj[4] = ClearAfterOptions.map((value) => callback3(callback(7693).TableRadioRow, { value, label: callback2(9222)(value) }, value));
-  const items = [callback2(context.TableRadioGroup, obj), ];
+  obj[4] = ClearAfterOptions.map((value) =>
+    callback3(callback(7693).TableRadioRow, { value, label: callback2(9222)(value) }, value),
+  );
+  const items = [callback2(context.TableRadioGroup, obj)];
   obj1 = { style: tmp.buttonWrapper, children: null };
   const obj2 = {
     onPress() {
       callback(callback2);
       callback2(closure_1_2[14]).hideActionSheet();
     },
-    text: null
+    text: null,
   };
   const intl3 = getSystemLocale.intl;
   obj2[1] = intl3.string(getSystemLocale.t.TyCVIq);
@@ -53,4 +55,4 @@ export default function ClearAfterOptionsActionSheet(arg0) {
   items[1] = callback2(View, obj1);
   obj[2] = items;
   return callback3(Background.BottomSheet, obj);
-};
+}

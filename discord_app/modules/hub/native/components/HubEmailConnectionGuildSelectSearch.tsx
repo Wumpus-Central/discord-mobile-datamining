@@ -19,8 +19,13 @@ function EmptyState() {
   const tmp = callback4();
   let obj = { style: tmp.emptyWrapper, children: null };
   obj = { style: tmp.emptyStateImage, source: registerAssetDefault };
-  const items = [callback2(closure_7, obj), ];
-  obj = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
+  const items = [callback2(closure_7, obj)];
+  obj = {
+    style: tmp.emptyStateTitle,
+    variant: "text-sm/semibold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["6HXiuE"]);
   items[1] = callback2(Text.Text, obj);
@@ -29,17 +34,31 @@ function EmptyState() {
 }
 ({ View: closure_6, Image: error, FlatList: closure_8 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-createCacheKey = { scrollContainer: null, fauxHeader: null, emptyWrapper: null, emptyStateImage: null, emptyStateTitle: null, error: null };
+createCacheKey = {
+  scrollContainer: null,
+  fauxHeader: null,
+  emptyWrapper: null,
+  emptyStateImage: null,
+  emptyStateTitle: null,
+  error: null,
+};
 createCacheKey = { flex: 1, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: 0 };
 createCacheKey[2] = { flex: 1, alignItems: "center", justifyContent: "center", marginTop: 64, paddingHorizontal: 16 };
 createCacheKey[3] = { marginBottom: 24 };
 createCacheKey[4] = { marginBottom: 4, textAlign: "center" };
-createCacheKey[5] = { color: ThemesDefault.unsafe_rawColors.RED_400, alignSelf: "center", fontSize: 14, marginBottom: 8 };
+createCacheKey[5] = {
+  color: ThemesDefault.unsafe_rawColors.RED_400,
+  alignSelf: "center",
+  fontSize: 14,
+  marginBottom: 8,
+};
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { color: ThemesDefault.unsafe_rawColors.RED_400, alignSelf: "center", fontSize: 14, marginBottom: 8 };
-const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionGuildSelectSearch.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/hub/native/components/HubEmailConnectionGuildSelectSearch.tsx",
+);
 
 export default function HubEmailConnectionGuildSelectSearch(arg0) {
   ({ guildsInfo, email: require, onClose: importDefault } = arg0);
@@ -75,11 +94,9 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   const intl = tmp2(1236).intl;
   obj1[0] = intl.string(getSystemLocale.t.nL2wKD);
   obj1[1] = tmp4[1];
-  obj1[2] = function onClose() {
-
-  };
+  obj1[2] = function onClose() {};
   obj[1] = callback2(_modDef6220, obj1);
-  const items = [callback2(HeaderBackImage.FauxHeader, obj), ];
+  const items = [callback2(HeaderBackImage.FauxHeader, obj)];
   obj2 = {
     keyboardShouldPersistTaps: "always",
     data: found,
@@ -101,7 +118,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
       let id;
       id = item.id;
       return closure_1_10(closure_1_0(error[19]).HubEmailConnectionGuildSelectRow, {
-        signup: arr(function*() {
+        signup: arr(function* () {
           if (v0 === 2) {
             v0 = 3;
             HermesBuiltin.throwTypeError();
@@ -185,7 +202,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
           }
         }),
         guildInfo: item,
-        loading: c6
+        loading: c6,
       });
     },
     keyExtractor(id) {
@@ -198,10 +215,10 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
       return callback(c6, { style: { height: 8 } });
     },
     style: tmp.scrollContainer,
-    contentContainerStyle: obj3
+    contentContainerStyle: obj3,
   };
   const tmp8Result = _modDef6220;
   items[1] = callback2(anyErrorMessage, obj2);
   obj[0] = items;
   return callback3(closure_12, obj);
-};
+}

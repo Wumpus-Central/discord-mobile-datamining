@@ -16,4 +16,4 @@ const result = require("set").fileFinishedImporting("modules/auth/native/compone
 export default function AuthNavbarPlaceholder() {
   const tmp = callback();
   return jsx(HeaderBackImage.FauxHeader, { style: callback().navBar, children: null });
-};
+}

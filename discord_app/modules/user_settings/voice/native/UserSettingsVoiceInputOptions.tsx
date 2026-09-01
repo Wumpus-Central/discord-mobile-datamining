@@ -23,7 +23,7 @@ function handleInputModePress() {
   obj1[1] = function onPress() {
     callback(9781).setMode(constants.PUSH_TO_TALK);
   };
-  const items = [obj1, ];
+  const items = [obj1];
   const obj2 = { label: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj2[0] = intl3.string(getSystemLocale.t.cHCEOJ);
@@ -37,13 +37,19 @@ function handleInputModePress() {
 noopAll;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ value: { textAlign: "right" }, slider: { marginTop: 4 } });
-let result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceInputOptions.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/voice/native/UserSettingsVoiceInputOptions.tsx",
+);
 
 export default function UserSettingsVoiceInputOptions() {
   const iter = callback();
   let obj = inputMode(589);
   const items = [closure_4];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ inputMode: store.getMode(), vadThreshold: store.getModeOptions().threshold, vadAutoThreshold: store.getModeOptions().autoThreshold }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    inputMode: store.getMode(),
+    vadThreshold: store.getModeOptions().threshold,
+    vadAutoThreshold: store.getModeOptions().autoThreshold,
+  }));
   inputMode = stateFromStoresObject.inputMode;
   const vadAutoThreshold = stateFromStoresObject.vadAutoThreshold;
   obj = { title: null, hasIcons: false, children: null };
@@ -63,7 +69,7 @@ export default function UserSettingsVoiceInputOptions() {
   obj1[3] = stringResult;
   obj[1] = closure_6(inputMode(4474).Text, obj1);
   obj[2] = handleInputModePress;
-  const items1 = [closure_6(inputMode(5599).TableRow, obj), ];
+  const items1 = [closure_6(inputMode(5599).TableRow, obj)];
   let tmp4Result = null;
   if (inputMode !== InputModes.PUSH_TO_TALK) {
     const obj2 = { children: null };
@@ -76,7 +82,7 @@ export default function UserSettingsVoiceInputOptions() {
       obj = { autoThreshold };
       return obj.setMode(inputMode, obj);
     };
-    const items2 = [tmp5(tmp(5993).TableSwitchRow, obj3), ];
+    const items2 = [tmp5(tmp(5993).TableSwitchRow, obj3)];
     const obj4 = { label: null, subLabel: null };
     const intl6 = tmp(1236).intl;
     obj4[0] = intl6.string(tmp(1236).t["o+2oMK"]);
@@ -99,5 +105,5 @@ export default function UserSettingsVoiceInputOptions() {
   items1[1] = tmp4Result;
   obj[2] = items1;
   return closure_8(inputMode(10062).UserSettingsTableRowGroup, obj);
-};
+}
 export { handleInputModePress };

@@ -16,5 +16,9 @@ const result = require("set").fileFinishedImporting("modules/in_app_reports/nati
 
 export default function Arrow() {
   const tmp = callback();
-  return jsx(Button.Icon, { source: registerAssetDefault, size: Button.Icon.Sizes.MEDIUM, style: callback().tintColor });
-};
+  return jsx(Button.Icon, {
+    source: registerAssetDefault,
+    size: Button.Icon.Sizes.MEDIUM,
+    style: callback().tintColor,
+  });
+}

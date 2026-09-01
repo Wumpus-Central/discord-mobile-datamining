@@ -20,7 +20,7 @@ function OverrideProfileFrameLayer(layer) {
   c5 = sum;
   const result = layer.ratio * sum;
   c6 = result;
-  const items = [, , , , , ];
+  const items = [, , , , ,];
   ({ anchor: arr[0], type: arr[1], order: arr[2] } = layer);
   items[3] = overflowTop;
   items[4] = overflowBottom;
@@ -113,7 +113,8 @@ function OverrideProfileFrameLayer(layer) {
   return null;
 }
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: c4, PROFILE_FRAME_Z_INDEX: c5 } = PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO);
+({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: c4, PROFILE_FRAME_Z_INDEX: c5 } =
+  PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO);
 createCacheKey = { container: null, layer: null };
 createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -125,7 +126,9 @@ obj1.alignItems = "center";
 obj1.overflow = "hidden";
 createCacheKey[1] = obj1;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideFrame.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideFrame.tsx",
+);
 
 export default function FramePreviewOverrideFrame(override) {
   override = override.override;
@@ -172,7 +175,16 @@ export default function FramePreviewOverrideFrame(override) {
       let obj = { style: null, children: null };
       obj[0] = tmp.container;
       obj[1] = memo.map((id) => {
-        const obj = { layer: id, uri: null, ratio: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null, containerWidth: null, containerHeight: null };
+        const obj = {
+          layer: id,
+          uri: null,
+          ratio: null,
+          overflowTop: null,
+          overflowBottom: null,
+          overflowHorizontal: null,
+          containerWidth: null,
+          containerHeight: null,
+        };
         let uri;
         if (override.layerAssetById[id.id] != null) {
           uri = tmp.uri;
@@ -200,4 +212,4 @@ export default function FramePreviewOverrideFrame(override) {
     }
   }
   return null;
-};
+}

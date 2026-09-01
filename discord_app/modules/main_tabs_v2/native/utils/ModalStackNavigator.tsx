@@ -18,16 +18,19 @@ const memoResult = importAllResult.memo(function ModalStackNavigator(children) {
         headerTitle(children) {
           const merged = Object.assign(children, Object.create(null));
           const merged1 = Object.assign(merged);
-          return closure_1_3(closure_1_0(closure_1_2[4]).GenericHeaderTitle, { title: children.children, icon: closure_1 });
+          return closure_1_3(closure_1_0(closure_1_2[4]).GenericHeaderTitle, {
+            title: children.children,
+            icon: closure_1,
+          });
         },
         headerLeft: closure_1_0(7607).getRenderModalCloseImage(navigation.navigation),
-        headerTitleAlign: "center"
+        headerTitleAlign: "center",
       };
       let merged = Object.assign(dependencyMap);
       let merged1 = Object.assign(closure_1_1(10662)());
       return obj;
     },
-    children: <closure_4.Screen {...obj} />
+    children: <closure_4.Screen {...obj} />,
   };
   obj = {
     name: screenKey,
@@ -40,17 +43,24 @@ const memoResult = importAllResult.memo(function ModalStackNavigator(children) {
       }
       obj[1] = str;
       return obj;
-    }
+    },
   };
-  return <closure_4.Navigator name={screenKey} options={function options() {
-    const obj = { title: closure_0, orientation: null };
-    let str;
-    if (obj2.isIOS()) {
-      str = "portrait";
-    }
-    obj[1] = str;
-    return obj;
-  }}>{arg0.render}</closure_4.Navigator>;
+  return (
+    <closure_4.Navigator
+      name={screenKey}
+      options={function options() {
+        const obj = { title: closure_0, orientation: null };
+        let str;
+        if (obj2.isIOS()) {
+          str = "portrait";
+        }
+        obj[1] = str;
+        return obj;
+      }}
+    >
+      {arg0.render}
+    </closure_4.Navigator>
+  );
 });
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/utils/ModalStackNavigator.tsx");
 

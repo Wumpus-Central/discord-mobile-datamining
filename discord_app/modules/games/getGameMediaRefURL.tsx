@@ -48,4 +48,4 @@ export default function getGameMediaRefURL(arg0, type, size) {
       return null;
     }
   }
-};
+}

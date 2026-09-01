@@ -25,11 +25,23 @@ function getChatInputSendButtonItemKey(sendVoiceMessageEnabled) {
 function FloatingSlot(arg0) {
   ({ buttonHeight, buttonMargin } = arg0);
   ({ buttonWidth, sendVoiceMessageEnabled, children } = arg0);
-  const style = [{ height: buttonHeight }, useChatInputFloatingWidthDefault({ expanded: !sendVoiceMessageEnabled, collapsedWidth: buttonHeight + 2 * buttonMargin, expandedWidth: buttonWidth + 2 * buttonMargin }).animatedStyle];
+  const style = [
+    { height: buttonHeight },
+    useChatInputFloatingWidthDefault({
+      expanded: !sendVoiceMessageEnabled,
+      collapsedWidth: buttonHeight + 2 * buttonMargin,
+      expandedWidth: buttonWidth + 2 * buttonMargin,
+    }).animatedStyle,
+  ];
   return jsx(_modDef4217.View, { style, children });
 }
 let c4 = importAllResult;
-let closure_10 = { BUTTON_SEND: "send-button", BUTTON_SEND_DISABLED: "send-button-disabled", BUTTON_SEND_VOICE_MESSAGE: "voice-message-button", BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled" };
+let closure_10 = {
+  BUTTON_SEND: "send-button",
+  BUTTON_SEND_DISABLED: "send-button-disabled",
+  BUTTON_SEND_VOICE_MESSAGE: "voice-message-button",
+  BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled",
+};
 let closure_11 = createCacheKey.createStyles((width, height) => {
   obj = { button: obj, buttonActive: null, iconActive: null };
   obj = { width, height };
@@ -56,7 +68,16 @@ let closure_12 = importAllResult.memo((type) => {
     obj[1] = channelId;
     let tmp7Result = tmp7(tmp3(11822), obj);
   } else {
-    obj1 = { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null };
+    obj1 = {
+      active: true,
+      style: null,
+      activeStyle: null,
+      activeIconStyle: null,
+      IconComponent: null,
+      accessibilityLabel: null,
+      onPress: null,
+      disabled: null,
+    };
     ({ button: obj4[1], buttonActive: obj4[2], iconActive: obj4[3] } = tmp5);
     tmp3Result = tmp3(11806);
     obj1[4] = tmp(4423).SendMessageIcon;
@@ -67,7 +88,11 @@ let closure_12 = importAllResult.memo((type) => {
     tmp7Result = tmp7(tmp3Result, obj1);
   }
   obj[4] = tmp7Result;
-  return <tmp3Result cleanup={cleanup} state={state} withBounce={withBounce} bounceEnterDelayMs={num}>{null}</tmp3Result>;
+  return (
+    <tmp3Result cleanup={cleanup} state={state} withBounce={withBounce} bounceEnterDelayMs={num}>
+      {null}
+    </tmp3Result>
+  );
 });
 const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   channel = channel.channel;
@@ -116,7 +141,16 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   }
   const items3 = [channel.id, stateFromStores1, onSendMessage, tmp12, canSendVoiceMessage];
   const memo = obj4.useMemo(() => {
-    const items = [{ channelId: channel.id, isOnCooldown: stateFromStores1, onSendMessage, sendEnabled: closure_4, sendVoiceMessageEnabled: canSendVoiceMessage, withBounce: true }];
+    const items = [
+      {
+        channelId: channel.id,
+        isOnCooldown: stateFromStores1,
+        onSendMessage,
+        sendEnabled: closure_4,
+        sendVoiceMessageEnabled: canSendVoiceMessage,
+        withBounce: true,
+      },
+    ];
     return items;
   }, items3);
   const imperativeHandle = obj4.useImperativeHandle(ref, () => ({ setHasText: c2 }));
@@ -133,7 +167,16 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
       obj1[1] = channel.id;
       let tmp15Result = tmp15(tmp3(11822), obj1);
     } else {
-      obj2 = { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null };
+      obj2 = {
+        active: true,
+        style: null,
+        activeStyle: null,
+        activeIconStyle: null,
+        IconComponent: null,
+        accessibilityLabel: null,
+        onPress: null,
+        disabled: null,
+      };
       ({ button: obj11[1], buttonActive: obj11[2], iconActive: obj11[3] } = tmp7);
       obj2[4] = tmp(4423).SendMessageIcon;
       const intl = tmp(1236).intl;

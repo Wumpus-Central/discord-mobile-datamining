@@ -29,13 +29,13 @@ obj = {
     }
     return stringResult;
   },
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.SWIPE_RIGHT_TO_LEFT,
   getComponent() {
     return UserSettingsSwipeRightToLeft /* UserSettingsSwipeRightToLeft */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/SwipeRightToLeftSetting.tsx");

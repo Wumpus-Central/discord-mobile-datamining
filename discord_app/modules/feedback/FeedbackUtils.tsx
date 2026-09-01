@@ -7,7 +7,17 @@ import getSystemLocale from "../../intl/index.native.tsx";
 import messagesProxyDefault from "intl/Feedback.messages.js";
 import FeedbackRating from "Constants.tsx";
 
-({ ConnectionFeedbackOption: c3, AudioFeedbackOption: c4, VideoFeedbackOption: c5, VideoBackgroundFeedbackOption: closure_6, StreamFeedbackOption: error, FeedbackOptionVariant: closure_8, FeedbackType: c9, MAX_REPRESENTABLE_DATE: c10, PeopleFeedbackOption: unpackModuleId } = FeedbackRating);
+({
+  ConnectionFeedbackOption: c3,
+  AudioFeedbackOption: c4,
+  VideoFeedbackOption: c5,
+  VideoBackgroundFeedbackOption: closure_6,
+  StreamFeedbackOption: error,
+  FeedbackOptionVariant: closure_8,
+  FeedbackType: c9,
+  MAX_REPRESENTABLE_DATE: c10,
+  PeopleFeedbackOption: unpackModuleId,
+} = FeedbackRating);
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/feedback/FeedbackUtils.tsx");
 
@@ -41,7 +51,7 @@ export const getConnectionFeedbackOptions = function getConnectionFeedbackOption
   let obj = { variant: constants6.SELF, value: constants.COULD_NOT_CONNECT, label: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault.gMHKDJ);
-  const items = [obj, , , , , ];
+  const items = [obj, , , , ,];
   obj = { value: constants.HIGH_TTC, variant: constants6.SELF, label: null };
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(messagesProxyDefault.y06Ayn);
@@ -69,7 +79,7 @@ export const getAudioFeedbackOptions = function getAudioFeedbackOptions(isMobile
   let obj = { value: constants2.NO_AUDIO, variant: constants6.SELF, label: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault["GWypH+"]);
-  const items = [obj, , , , , , , , , , , , ];
+  const items = [obj, , , , , , , , , , , ,];
   obj = { value: constants2.NO_AUDIO, variant: constants6.OTHERS, label: null };
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(messagesProxyDefault.ftSvQ0);
@@ -126,7 +136,7 @@ export const getVideoFeedbackOptions = function getVideoFeedbackOptions() {
   let obj = { value: constants3.NO_VIDEO, variant: constants6.SELF, label: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault["Bh+02d"]);
-  const items = [obj, , , , , ];
+  const items = [obj, , , , ,];
   obj = { value: constants3.NO_VIDEO, variant: constants6.SOMEONE, label: null };
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(messagesProxyDefault["R+wqwU"]);
@@ -154,7 +164,7 @@ export const getVideoBackgroundFeedbackOptions = function getVideoBackgroundFeed
   let obj = { value: constants4.OUTLINE_FUZZY_OR_HALO, variant: constants6.SELF, label: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault.calUNv);
-  const items = [obj, , , ];
+  const items = [obj, , ,];
   obj = { value: constants4.INACCURATE_BACKGROUND_DETECTION, variant: constants6.SELF, label: null };
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(messagesProxyDefault.zYumoj);
@@ -176,7 +186,7 @@ export const getStreamFeedbackOptions = function getStreamFeedbackOptions(isStre
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault["w+kiDF"]);
   obj[3] = !isStreamer;
-  const items = [obj, , , , , , , , , , , , , , , , , , ];
+  const items = [obj, , , , , , , , , , , , , , , , , ,];
   obj = { value: constants5.BLACK_SCREEN, variant: constants6.SELF, label: null, disabled: null };
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(messagesProxyDefault.RRZZZb);

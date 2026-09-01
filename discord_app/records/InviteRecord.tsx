@@ -42,7 +42,11 @@ InviteRecord["createFromServer"] = function createFromServer(created_at) {
   ({ max_uses: obj.maxUses, max_age: obj.maxAge } = created_at);
   created_at = created_at.created_at;
   obj.createdAt = hooksDefault(created_at);
-  ({ target_type: obj.targetType, target_user: obj.targetUser, target_application: obj.targetApplication } = created_at);
+  ({
+    target_type: obj.targetType,
+    target_user: obj.targetUser,
+    target_application: obj.targetApplication,
+  } = created_at);
   return new InviteRecord(obj);
 };
 prototype["isExpired"] = function isExpired() {

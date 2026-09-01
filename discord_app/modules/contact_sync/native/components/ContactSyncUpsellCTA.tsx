@@ -10,7 +10,11 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 const require = arg1;
 ({ AnalyticEvents: c4, AnalyticsSections: c5 } = ME);
 let obj = { container: null };
-obj = { padding: 12, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj = {
+  padding: 12,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 obj[0] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function ContactSyncUpsellCTA(location) {
@@ -47,7 +51,7 @@ const memoResult = importAllResult.memo(function ContactSyncUpsellCTA(location) 
     style: items,
     iconSource: registerAssetDefault,
     title: null,
-    subtitle: null
+    subtitle: null,
   };
   items = [callback().container, location.style];
   let intl = location(1236).intl;
@@ -86,7 +90,7 @@ const memoResult = importAllResult.memo(function ContactSyncUpsellCTA(location) 
     style: items,
     iconSource: registerAssetDefault,
     title: null,
-    subtitle: null
+    subtitle: null,
   });
 });
 let result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncUpsellCTA.tsx");

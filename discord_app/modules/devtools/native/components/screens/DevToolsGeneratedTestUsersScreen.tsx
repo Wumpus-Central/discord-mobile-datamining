@@ -28,78 +28,101 @@ function PoolIdInput(onSubmit) {
   const tmp = callback4();
   [tmp7, c5] = callback2(React.useState(false), 2);
   items = [first, first1, onSubmit];
-  let callback = React.useCallback(first1(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  let callback = React.useCallback(
+    first1(function* () {
+      if (v0 === 2) {
+        v0 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === length) {
-          if (arg0 === 1) {
+        try {
+          v0 = 2;
+          if (0 === length) {
+            if (arg0 === 1) {
+              v0 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              v0 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_0 = tmp3;
+              if (0 !== length.length) {
+                closure_1_5(true);
+                c3 = 1;
+                length = 2;
+                v0 = 1;
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_0(tmp24, c3);
+                return obj1;
+              } else {
+                v0 = 3;
+              }
+            }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            callback2(false);
+            throw callback;
+          } else if (arg0 === 1) {
             v0 = 3;
             throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_0 = tmp3;
-            if (0 !== length.length) {
-              closure_1_5(true);
-              c3 = 1;
-              length = 2;
-              v0 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(tmp24, c3);
-              return obj1;
-            } else {
-              v0 = 3;
-            }
+          } else if (arg0 !== 2) {
+            callback("");
+            v0("");
+            c3 = 0;
+            callback2(false);
           }
-        } else if (1 === tmp7) {
           c3 = 0;
           callback2(false);
-          throw callback;
-        } else if (arg0 === 1) {
           v0 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          callback("");
-          v0("");
-          c3 = 0;
-          callback2(false);
-        }
-        c3 = 0;
-        callback2(false);
-        v0 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } catch (tmp29) {
-        callback = tmp29;
-        if (tmp4 === c3) {
-          v0 = tmp2;
-          throw tmp29;
-        } else {
-          length = tmp;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } catch (tmp29) {
+          callback = tmp29;
+          if (tmp4 === c3) {
+            v0 = tmp2;
+            throw tmp29;
+          } else {
+            length = tmp;
+          }
         }
       }
-    }
-  }), items);
+    }),
+    items,
+  );
   let obj = { spacing: 4, style: tmp.inputContainer, children: null };
-  const items1 = [callback3(onSubmit(7705).TextInput, { size: "md", placeholder: "Enter Pool ID", onChange: tmp2[1], autoCapitalize: "none", autoCorrect: false, autoComplete: "off", isClearable: true }), callback3(onSubmit(7705).TextInput, { size: "md", secureTextEntry: true, placeholder: "Enter Password", onChange: tmp4[1], autoCapitalize: "none", autoCorrect: false, autoComplete: "off", isClearable: true }), ];
+  const items1 = [
+    callback3(onSubmit(7705).TextInput, {
+      size: "md",
+      placeholder: "Enter Pool ID",
+      onChange: tmp2[1],
+      autoCapitalize: "none",
+      autoCorrect: false,
+      autoComplete: "off",
+      isClearable: true,
+    }),
+    callback3(onSubmit(7705).TextInput, {
+      size: "md",
+      secureTextEntry: true,
+      placeholder: "Enter Password",
+      onChange: tmp4[1],
+      autoCapitalize: "none",
+      autoCorrect: false,
+      autoComplete: "off",
+      isClearable: true,
+    }),
+  ];
   let tmp11 = 0 === first.length;
   if (!tmp11) {
     tmp11 = 0 === first1.length;
@@ -107,7 +130,14 @@ function PoolIdInput(onSubmit) {
   if (!tmp11) {
     tmp11 = tmp7;
   }
-  items1[2] = callback3(onSubmit(4928).Button, { size: "md", variant: "primary", text: "Get Pool", disabled: tmp11, loading: tmp7, onPress: callback });
+  items1[2] = callback3(onSubmit(4928).Button, {
+    size: "md",
+    variant: "primary",
+    text: "Get Pool",
+    disabled: tmp11,
+    loading: tmp7,
+    onPress: callback,
+  });
   obj[2] = items1;
   return closure_11(onSubmit(4926).Stack, obj);
 }
@@ -144,7 +174,7 @@ function UserActionSheet(pool) {
         disabled: id.id === dependencyMap,
         trailing: null,
         start: null,
-        end: null
+        end: null,
       };
       ({ username: obj[1], email: obj[2] } = id);
       let tmp2Result;
@@ -155,7 +185,7 @@ function UserActionSheet(pool) {
       obj[6] = 0 === arg1;
       obj[7] = arg1 === usersForPool.length - 1;
       return closure_1_10(pool(5599).TableRow, obj, id.id);
-    })
+    }),
   });
   obj[1] = callback3(closure_6, obj);
   return callback3(pool(5622).BottomSheet, obj);
@@ -172,12 +202,50 @@ function PoolUsers(pool) {
     obj = { pool };
     obj.openLazy(Promise.resolve(obj), "generated-test-users", obj);
   }, items);
-  return callback3(pool(5599).TableRow, { icon: callback3(items[Number(undefined, id) % items.length], { size: "md", color: length[Number(undefined, id) % length.length] }), label: pool.summary, subLabel: "" + usersForPool.length + " users", arrow: true, onPress: callback, start, end });
+  return callback3(pool(5599).TableRow, {
+    icon: callback3(items[Number(undefined, id) % items.length], {
+      size: "md",
+      color: length[Number(undefined, id) % length.length],
+    }),
+    label: pool.summary,
+    subLabel: "" + usersForPool.length + " users",
+    arrow: true,
+    onPress: callback,
+    start,
+    end,
+  });
 }
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let items = [require("UserIcon").UserIcon, require("ShieldIcon").ShieldIcon, require("GiftIcon").GiftIcon, require("AchievementsIcon").AchievementsIcon, require("PiggyBankIcon").PiggyBankIcon, require("TreehouseIcon").TreehouseIcon, require("SpeedometerIcon").SpeedometerIcon, require("CompassIcon").CompassIcon, require("SignPostIcon").SignPostIcon, require("CarIcon").CarIcon, require("TrainIcon").TrainIcon, require("TeacupIcon").TeacupIcon, require("InventoryIcon").InventoryIcon, require("FoodIcon").FoodIcon, require("BurgerIcon").BurgerIcon, require("MagicDoorIcon").MagicDoorIcon, require("PawPrintIcon").PawPrintIcon, require("RecordPlayerIcon").RecordPlayerIcon, require("SettingsIcon").SettingsIcon];
-let closure_13 = ["text-default", "text-feedback-positive", "text-feedback-warning", "text-feedback-critical", "text-link", "text-brand"];
+let items = [
+  require("UserIcon").UserIcon,
+  require("ShieldIcon").ShieldIcon,
+  require("GiftIcon").GiftIcon,
+  require("AchievementsIcon").AchievementsIcon,
+  require("PiggyBankIcon").PiggyBankIcon,
+  require("TreehouseIcon").TreehouseIcon,
+  require("SpeedometerIcon").SpeedometerIcon,
+  require("CompassIcon").CompassIcon,
+  require("SignPostIcon").SignPostIcon,
+  require("CarIcon").CarIcon,
+  require("TrainIcon").TrainIcon,
+  require("TeacupIcon").TeacupIcon,
+  require("InventoryIcon").InventoryIcon,
+  require("FoodIcon").FoodIcon,
+  require("BurgerIcon").BurgerIcon,
+  require("MagicDoorIcon").MagicDoorIcon,
+  require("PawPrintIcon").PawPrintIcon,
+  require("RecordPlayerIcon").RecordPlayerIcon,
+  require("SettingsIcon").SettingsIcon,
+];
+let closure_13 = [
+  "text-default",
+  "text-feedback-positive",
+  "text-feedback-warning",
+  "text-feedback-critical",
+  "text-link",
+  "text-brand",
+];
 createCacheKey = { container: null, contentContainer: null, inputContainer: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
@@ -186,7 +254,9 @@ let obj1 = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { marginBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGeneratedTestUsersScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsGeneratedTestUsersScreen.tsx",
+);
 
 export default function DevToolsGeneratedTestUsersScreen() {
   const tmp = callback4();
@@ -206,7 +276,7 @@ export default function DevToolsGeneratedTestUsersScreen() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (table === 2) {
         table = 3;
         HermesBuiltin.throwTypeError();
@@ -261,9 +331,9 @@ export default function DevToolsGeneratedTestUsersScreen() {
   });
   obj = { style: tmp.container, children: null };
   obj = { contentContainerStyle: null, children: null };
-  const items1 = [tmp.contentContainer, ];
+  const items1 = [tmp.contentContainer];
   obj1 = { paddingBottom: null };
-  callback = React.useCallback(function() {
+  callback = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -273,21 +343,32 @@ export default function DevToolsGeneratedTestUsersScreen() {
     }
     return applyArgumentsResult;
   }, []);
-  obj1[0] = ThemesDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom;
+  obj1[0] =
+    ThemesDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom;
   items1[1] = obj1;
   obj[0] = items1;
-  const items2 = [callback3(PoolIdInput, { onSubmit: callback }), ];
+  const items2 = [callback3(PoolIdInput, { onSubmit: callback })];
   let tmp5Result = 0 === stateFromStoresArray.length;
   if (tmp5Result) {
-    tmp5Result = tmp5(require("../../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, { label: "No pools available." });
+    tmp5Result = tmp5(require("../../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, {
+      label: "No pools available.",
+    });
   }
   const obj2 = { spacing: 16, children: null };
   const obj3 = { title: "Generated Test User Pools", hasIcons: true, children: null };
-  const items3 = [tmp5Result, stateFromStoresArray.map((id) => closure_1_10(closure_1_17, { pool: id, start: 0 === arg1, end: arg1 === length.length - 1 }, id.id))];
+  const items3 = [
+    tmp5Result,
+    stateFromStoresArray.map((id) =>
+      closure_1_10(closure_1_17, { pool: id, start: 0 === arg1, end: arg1 === length.length - 1 }, id.id),
+    ),
+  ];
   obj3[2] = items3;
-  items2[1] = closure_11(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, obj3);
+  items2[1] = closure_11(
+    require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup,
+    obj3,
+  );
   obj2[1] = items2;
   obj[1] = closure_11(require("../../../../../design/components/Stack/native/Stack.native.tsx").Stack, obj2);
   obj[1] = callback3(closure_7, obj);
   return callback3(closure_6, obj);
-};
+}

@@ -6,8 +6,10 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 noopAll;
 let closure_2 = createCacheKey.createStyles({ spinner: { marginTop: 12 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/Placeholder.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/Placeholder.tsx",
+);
 
 export default function Placeholder() {
   return <ActivityIndicator style={callback().spinner} />;
-};
+}

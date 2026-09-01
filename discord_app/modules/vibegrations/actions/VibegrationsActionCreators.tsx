@@ -52,7 +52,7 @@ function _listProjects() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -199,7 +199,7 @@ function _getProject() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_3 = tmp3;
       closure_2 = tmp2;
       const HTTP = callback(closure_1_2[8]).HTTP;
@@ -219,7 +219,13 @@ function _getProject() {
         const obj4 = { type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: null };
         obj4[1] = closure_2.body.project;
         obj.dispatch(obj4);
-        const obj5 = { bot_permissions_changed: null, integration_installed: null, preview_ready: null, has_activity: null, owner_authorization_revoked: null };
+        const obj5 = {
+          bot_permissions_changed: null,
+          integration_installed: null,
+          preview_ready: null,
+          has_activity: null,
+          owner_authorization_revoked: null,
+        };
         obj5[0] = closure_2.body.bot_permissions_changed;
         obj5[1] = closure_2.body.integration_installed;
         obj5[2] = closure_2.body.preview_ready;
@@ -249,7 +255,7 @@ function _createProject() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const table = tmp2;
       const callback2 = tmp5;
       const HTTP = callback(closure_1_2[8]).HTTP;
@@ -294,7 +300,7 @@ function _patchProject() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_3 = tmp2;
       const table = tmp5;
       const HTTP = lib(closure_1_2[8]).HTTP;
@@ -328,7 +334,7 @@ function _setProjectIcon() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -435,7 +441,7 @@ function _deleteProject() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const table = tmp2;
       let callback2 = tmp5;
       const HTTP = callback(closure_1_2[8]).HTTP;
@@ -465,7 +471,7 @@ function _refreshPublishedProject() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       body = tmp2;
       isPreview = isPreview.isPreview;
       yield "PX_16";
@@ -519,9 +525,7 @@ function _refreshPublishedProject() {
           c4 = 4;
           project = 1;
           const obj7 = { value: null, done: false };
-          obj7[0] = widgetConfigs.catch(() => {
-
-          });
+          obj7[0] = widgetConfigs.catch(() => {});
           return obj7;
         }
       } else if (arg0 === 1) {
@@ -560,7 +564,13 @@ let result = require("set").fileFinishedImporting("modules/vibegrations/actions/
 
 export const trackPublishFailed = function trackPublishFailed(project_id, message, arg2) {
   let obj = vibegrationLocation;
-  obj = { location: "publish", code: vibegrationLocation.VibegrationErrorCodes.PUBLISH_FAILED, message: null, details: null, isPreview: null };
+  obj = {
+    location: "publish",
+    code: vibegrationLocation.VibegrationErrorCodes.PUBLISH_FAILED,
+    message: null,
+    details: null,
+    isPreview: null,
+  };
   let str = "";
   if (arg2) {
     str = "-preview";

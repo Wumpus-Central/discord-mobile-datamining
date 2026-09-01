@@ -5,8 +5,7 @@ import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
 
 let closure_1 = { sentGifts: {} };
 const PersistedStore = initializeDefault.PersistedStore;
-class SentGiftsStore extends PersistedStore {
-}
+class SentGiftsStore extends PersistedStore {}
 const prototype = SentGiftsStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
@@ -72,8 +71,13 @@ const sentGiftsStore = new SentGiftsStore(dispatcherDefault, {
     const combined = "" + skuId.skuId + ":" + skuId.recipientId;
     const date = new Date();
     const date1 = new Date(date.getTime() + 172800000);
-    closure_1.sentGifts[combined] = { skuId: skuId.skuId, recipientId: skuId.recipientId, sentAt: date.toISOString(), expiresAt: new Date(date.getTime() + 172800000).toISOString() };
-  }
+    closure_1.sentGifts[combined] = {
+      skuId: skuId.skuId,
+      recipientId: skuId.recipientId,
+      sentAt: date.toISOString(),
+      expiresAt: new Date(date.getTime() + 172800000).toISOString(),
+    };
+  },
 });
 const result = require("set").fileFinishedImporting("modules/wishlists/SentGiftsStore.tsx");
 

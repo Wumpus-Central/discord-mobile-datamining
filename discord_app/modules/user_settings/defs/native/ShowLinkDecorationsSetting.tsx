@@ -20,7 +20,7 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue: useShowLinkDecorationsSettingValue,
-  onValueChange: onShowLinkDecorationsValueChange
+  onValueChange: onShowLinkDecorationsValueChange,
 };
 createToggle = createToggle.createToggle(createToggle);
 let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ShowLinkDecorationsSetting.tsx");

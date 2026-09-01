@@ -13,10 +13,36 @@ noopAll;
 createCacheKey = { container: null, pill: null, bubble: null, verifiedContainer: null, roleIcon: null };
 createCacheKey = { marginRight: 4, marginBottom: 4, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", paddingHorizontal: 8, paddingVertical: 6, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-let obj1 = { flexDirection: "row", alignItems: "center", paddingHorizontal: 8, paddingVertical: 6, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[2] = { marginRight: 8, borderRadius: ThemesDefault.radii.sm, height: 12, width: 12, backgroundColor: ThemesDefault.colors.ICON_MUTED };
-let obj2 = { marginRight: 8, borderRadius: ThemesDefault.radii.sm, height: 12, width: 12, backgroundColor: ThemesDefault.colors.ICON_MUTED };
+createCacheKey[1] = {
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 8,
+  paddingVertical: 6,
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
+let obj1 = {
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 8,
+  paddingVertical: 6,
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
+createCacheKey[2] = {
+  marginRight: 8,
+  borderRadius: ThemesDefault.radii.sm,
+  height: 12,
+  width: 12,
+  backgroundColor: ThemesDefault.colors.ICON_MUTED,
+};
+let obj2 = {
+  marginRight: 8,
+  borderRadius: ThemesDefault.radii.sm,
+  height: 12,
+  width: 12,
+  backgroundColor: ThemesDefault.colors.ICON_MUTED,
+};
 createCacheKey[3] = { marginRight: 8, borderRadius: ThemesDefault.radii.sm, height: 12, width: 12 };
 createCacheKey[4] = { paddingRight: 4 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
@@ -62,7 +88,7 @@ export default function RolePill(role) {
       role(closure_1_2[9]).roleIdCopied(combined);
     },
     accessible: false,
-    children: null
+    children: null,
   };
   obj1 = { style: tmp9.pill, children: null };
   if (undefined !== guild_connections) {
@@ -77,7 +103,7 @@ export default function RolePill(role) {
     let tmp10Result = tmp10(combined(5997), obj2);
     const tmp15 = combined(5997);
   } else {
-    const items = [tmp9.bubble, ];
+    const items = [tmp9.bubble];
     if (null != color) {
       const obj3 = { backgroundColor: null };
       obj3[0] = color;
@@ -90,7 +116,7 @@ export default function RolePill(role) {
     obj5[0] = items;
     tmp10Result = tmp10(tmp12, obj5);
   }
-  const items1 = [tmp10Result, , ];
+  const items1 = [tmp10Result, ,];
   tmp10Result = null;
   if (null != roleIcon) {
     const obj6 = { style: null, children: null };
@@ -99,8 +125,12 @@ export default function RolePill(role) {
     tmp10Result = tmp10(tmp12, obj6);
   }
   items1[1] = tmp10Result;
-  items1[2] = closure_6(role(4474).Text, { variant: "text-xs/semibold", color: "interactive-text-active", children: name });
+  items1[2] = closure_6(role(4474).Text, {
+    variant: "text-xs/semibold",
+    color: "interactive-text-active",
+    children: name,
+  });
   obj1[1] = items1;
   obj[4] = closure_7(View, obj1);
   return closure_6(role(5068).PressableHighlight, obj);
-};
+}

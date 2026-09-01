@@ -13,8 +13,7 @@ RESOLUTION_720 = ApplicationStreamResolutions.RESOLUTION_720;
 const FPS_30 = ApplicationStreamFPS.FPS_30;
 let c5 = true;
 const PersistedStore = initializeDefault.PersistedStore;
-class ApplicationStreamingSettingsStore extends PersistedStore {
-}
+class ApplicationStreamingSettingsStore extends PersistedStore {}
 const prototype = ApplicationStreamingSettingsStore.prototype;
 prototype["initialize"] = function initialize(preset) {
   if (null != preset) {
@@ -96,7 +95,7 @@ const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(
       flag = true;
     }
     return flag;
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/ApplicationStreamingSettingsStore.tsx");
 

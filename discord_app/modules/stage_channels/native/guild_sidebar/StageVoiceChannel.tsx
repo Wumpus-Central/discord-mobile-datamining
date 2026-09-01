@@ -19,7 +19,11 @@ const require = arg1;
 let c4 = importAllResult;
 ({ MAX_STAGE_VOICE_USER_LIMIT: map1, Permissions: closure_14 } = ME);
 let obj = { voiceStates: { marginLeft: 36, marginBottom: 8 }, container: null };
-obj = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+obj = {
+  marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL,
+  marginHorizontal: 8,
+  borderRadius: ThemesDefault.radii.md,
+};
 obj[1] = obj;
 let closure_16 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((channel) => {
@@ -29,10 +33,22 @@ const memoResult = importAllResult.memo((channel) => {
   let obj = channel(589);
   const items = [closure_12, closure_8, closure_9, closure_10, closure_7, closure_6];
   const items1 = [channel];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const obj = { stageInstance: closure_1_12.getStageInstanceByChannel(channel.id), hasUnread: closure_1_8.hasUnread(channel.id), resolvedUnreadSetting: closure_1_9.resolveUnreadSetting(channel), voiceStates: closure_1_10.getVoiceStatesForChannel(channel), hasMedia: channel(closure_1_3[15]).getStageHasMedia(channel.id), locked: !closure_1_7.can(closure_1_14.CONNECT, channel), collapsed: closure_1_6.isCollapsed(channel.id) };
-    return obj;
-  }, items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => {
+      const obj = {
+        stageInstance: closure_1_12.getStageInstanceByChannel(channel.id),
+        hasUnread: closure_1_8.hasUnread(channel.id),
+        resolvedUnreadSetting: closure_1_9.resolveUnreadSetting(channel),
+        voiceStates: closure_1_10.getVoiceStatesForChannel(channel),
+        hasMedia: channel(closure_1_3[15]).getStageHasMedia(channel.id),
+        locked: !closure_1_7.can(closure_1_14.CONNECT, channel),
+        collapsed: closure_1_6.isCollapsed(channel.id),
+      };
+      return obj;
+    },
+    items1,
+  );
   ({ stageInstance, hasUnread, hasMedia, collapsed } = stateFromStoresObject);
   ({ resolvedUnreadSetting, voiceStates, locked } = stateFromStoresObject);
   let arr3 = transformParticipantToSortedVoiceStateDefault(channel.guild_id)[channel.id];
@@ -40,7 +56,10 @@ const memoResult = importAllResult.memo((channel) => {
     arr3 = NO_VOICE_STATES;
   }
   let tmp2Result = tmp2(5374);
-  const stageParticipantsCount = tmp2Result.useStageParticipantsCount(channel.id, tmp2(5368).StageChannelParticipantNamedIndex.AUDIENCE);
+  const stageParticipantsCount = tmp2Result.useStageParticipantsCount(
+    channel.id,
+    tmp2(5368).StageChannelParticipantNamedIndex.AUDIENCE,
+  );
   const sum = stageParticipantsCount + arr3.length;
   const items2 = [channel];
   const items3 = [channel.id];
@@ -94,7 +113,13 @@ const memoResult = importAllResult.memo((channel) => {
     obj.unread = hasUnread;
     obj.resolvedUnreadSetting = resolvedUnreadSetting;
     obj.subtitle = topic;
-    let obj2 = { channel: null, isChannelSelected: null, isChannelCollapsed: null, enableConnectedUserLimit: null, voiceStates: null };
+    let obj2 = {
+      channel: null,
+      isChannelSelected: null,
+      isChannelCollapsed: null,
+      enableConnectedUserLimit: null,
+      voiceStates: null,
+    };
     obj2[0] = channel;
     obj2[1] = selected;
     obj2[2] = collapsed;

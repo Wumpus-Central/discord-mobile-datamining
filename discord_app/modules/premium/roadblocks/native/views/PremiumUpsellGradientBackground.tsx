@@ -13,7 +13,9 @@ createCacheKey = { opacity: 0.1 };
 const merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx",
+);
 
 export const PremiumUpsellGradientBackground = function PremiumUpsellGradientBackground(useTier0UpsellContent) {
   const obj = { style: callback().gradient, start: null, end: null, colors: null };

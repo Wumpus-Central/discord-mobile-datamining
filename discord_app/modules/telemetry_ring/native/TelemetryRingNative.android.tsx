@@ -13,6 +13,6 @@ export default {
   },
   clear() {
     enforcingDefault.clear();
-  }
+  },
 };
 export const TelemetryChannel = { SENTRY: "SENTRY", NORMAL: "NORMAL", ZOOMED: "ZOOMED" };

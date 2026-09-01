@@ -17,7 +17,7 @@ obj = {
   screen: obj,
   useSearchTerms() {
     const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t.uEz8JF), , , , , ];
+    const items = [intl.string(getSystemLocale.t.uEz8JF), , , , ,];
     const intl2 = getSystemLocale.intl;
     items[1] = intl2.string(getSystemLocale.t["N/oRI+"]);
     const intl3 = getSystemLocale.intl;
@@ -29,13 +29,13 @@ obj = {
     const intl6 = getSystemLocale.intl;
     items[5] = intl6.string(getSystemLocale.t["K0OWP+"]);
     return items;
-  }
+  },
 };
 obj = {
   route: ME.UserSettingsSections.SENSITIVE_MEDIA_FILTERS,
   getComponent() {
     return UserSettingsSensitiveContentFilters /* UserSettingsSensitiveContentFilters */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/SensitiveContentFilterSetting.tsx");

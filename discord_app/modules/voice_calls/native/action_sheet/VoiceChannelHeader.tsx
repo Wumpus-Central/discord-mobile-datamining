@@ -27,7 +27,7 @@ function PrivateChannelSubtitle(channel) {
   const state = idDefault(channel.id).state;
   let obj = { style: tmp.subtitleWrapper, children: null };
   obj = { useAllAloneText: false, channel, voiceState: state, style: tmp.subtitle };
-  const items = [callback(OngoingCallStatusLabelDefault, obj), , ];
+  const items = [callback(OngoingCallStatusLabelDefault, obj), ,];
   let tmp6Result = state === id.CallStates.CONNECTED;
   if (tmp6Result) {
     obj = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
@@ -64,7 +64,11 @@ class VoiceChannelHeader {
     items1[0] = closure_4;
     items2 = [];
     items2[0] = channel;
-    closure_1 = obj2.useStateFromStores(items1, () => closure_1_4.getSelfEmbeddedActivityForChannel(channel.id), items2);
+    closure_1 = obj2.useStateFromStores(
+      items1,
+      () => closure_1_4.getSelfEmbeddedActivityForChannel(channel.id),
+      items2,
+    );
     name = undefined;
     tmp7 = require("computeChannelName")(channel);
     if (stateFromStores != null) {
@@ -117,20 +121,32 @@ class VoiceChannelHeader {
     }
     obj3[1] = tmp5Result;
     obj3[3] = tmp.icons;
-    items3 = [, , ];
+    items3 = [, ,];
     items3[0] = tmp14(require("Button").Icon, obj3);
     obj4 = { style: tmp.middle, children: null };
     tmp14Result = formatToPlainStringResult;
     if (typeof formatToPlainStringResult === "string") {
-      obj5 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-md/semibold", color: "text-overlay-light", children: null };
+      obj5 = {
+        lineClamp: 1,
+        lineBreakMode: "tail",
+        variant: "text-md/semibold",
+        color: "text-overlay-light",
+        children: null,
+      };
       obj5[4] = formatToPlainStringResult;
       tmp14Result = tmp14(require("Text").Text, obj5);
     }
-    items4 = [, ];
+    items4 = [,];
     items4[0] = tmp14Result;
     tmp14Result1 = name;
     if (typeof name === "string") {
-      obj6 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-xs/medium", color: "text-overlay-light", children: null };
+      obj6 = {
+        lineClamp: 1,
+        lineBreakMode: "tail",
+        variant: "text-xs/medium",
+        color: "text-overlay-light",
+        children: null,
+      };
       obj6[4] = name;
       tmp14Result1 = tmp14(require("Text").Text, obj6);
     }
@@ -152,7 +168,12 @@ class VoiceChannelHeader {
   }
 }
 function AddMemberButton(onPress) {
-  const obj = { onPress: onPress.onPress, iconSource: registerAssetDefault, iconStyle: callback2().icons, accessibilityLabel: null };
+  const obj = {
+    onPress: onPress.onPress,
+    iconSource: registerAssetDefault,
+    iconStyle: callback2().icons,
+    accessibilityLabel: null,
+  };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["6Qgrev"]);
   return callback(IconButton, obj);
@@ -160,14 +181,32 @@ function AddMemberButton(onPress) {
 class IconButton {
   constructor(arg0) {
     ({ onPress, iconStyle, iconSource, accessibilityLabel, style } = global);
-    obj = { accessibilityRole: "button", accessibilityLabel, onPress, style, children: jsx(require("Button").Icon, { source: iconSource, style: iconStyle }) };
+    obj = {
+      accessibilityRole: "button",
+      accessibilityLabel,
+      onPress,
+      style,
+      children: jsx(require("Button").Icon, { source: iconSource, style: iconStyle }),
+    };
     return jsx(require("PressableBase").PressableOpacity, obj);
   }
 }
 noopAll;
 ({ Permissions: error, AnalyticsPages: closure_8, InstantInviteSources: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { container: { alignSelf: "stretch", flexDirection: "row", paddingVertical: 10, paddingHorizontal: 16, alignItems: "center" }, middle: { flex: 1, justifyContent: "space-around", marginHorizontal: 16 }, icons: null, subtitle: null, subtitleWrapper: null };
+createCacheKey = {
+  container: {
+    alignSelf: "stretch",
+    flexDirection: "row",
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    alignItems: "center",
+  },
+  middle: { flex: 1, justifyContent: "space-around", marginHorizontal: 16 },
+  icons: null,
+  subtitle: null,
+  subtitleWrapper: null,
+};
 createCacheKey = { flexDirection: "row", tintColor: ThemesDefault.colors.WHITE };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { fontSize: 12, lineHeight: 16, color: ThemesDefault.colors.WHITE };

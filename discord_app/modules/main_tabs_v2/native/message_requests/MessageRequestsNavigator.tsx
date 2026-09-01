@@ -15,10 +15,16 @@ let closure_7 = createNativeStackNavigator.createNativeStackNavigator();
 createNativeStackNavigator = { container: null, header: null };
 createNativeStackNavigator = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createNativeStackNavigator[0] = createNativeStackNavigator;
-createCacheKey = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
+createCacheKey = {
+  borderBottomWidth: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  shadowColor: "transparent",
+};
 createNativeStackNavigator[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createNativeStackNavigator);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/MessageRequestsNavigator.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/message_requests/MessageRequestsNavigator.tsx",
+);
 
 export default function MessageRequestsNavigator() {
   const tmp = callback3();
@@ -40,12 +46,12 @@ export default function MessageRequestsNavigator() {
           return callback2(callback(table[9]).GenericHeaderTitle, { title: children.children });
         },
         headerTitleAlign: "center",
-        headerLeft: lib(closure_1_2[9]).getRenderModalCloseImage(navigation.navigation)
+        headerLeft: lib(closure_1_2[9]).getRenderModalCloseImage(navigation.navigation),
       };
       let merged = Object.assign(closure_1);
       return obj;
     },
-    children: null
+    children: null,
   };
   obj1 = { name: "root", options: null, getComponent: null };
   const obj2 = { title: null };
@@ -57,7 +63,7 @@ export default function MessageRequestsNavigator() {
   obj1[2] = function getComponent() {
     return lib(16454).default;
   };
-  const items1 = [callback(Screen, obj1), , ];
+  const items1 = [callback(Screen, obj1), ,];
   const obj3 = { name: "spam", options: null, getComponent: null };
   const obj4 = { title: null };
   const intl2 = require("../../../../intl/index.native.tsx").intl;
@@ -81,4 +87,4 @@ export default function MessageRequestsNavigator() {
   obj[1] = items1;
   obj[1] = callback2(Navigator, obj);
   return callback(View, obj);
-};
+}

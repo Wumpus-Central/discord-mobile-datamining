@@ -10,7 +10,9 @@ import getTagPropertiesDefault from "../getTagProperties.tsx";
 import closure_3 from "../../../../../stores/ChannelStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildReportFalseAlarmSystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/GuildReportFalseAlarmSystemMessage.tsx",
+);
 
 export const createGuildReportFalseAlarmSystemMessage = function createGuildReportFalseAlarmSystemMessage(roleStyle) {
   ({ message, theme } = roleStyle);
@@ -19,7 +21,14 @@ export const createGuildReportFalseAlarmSystemMessage = function createGuildRepo
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   const tmp2 = resultDefault(theme);
   let automodUsernameColor = nativeStyleProperties.resolveAlertModeColors(theme).automodUsernameColor;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  obj = {
+    username: messageAuthorWithProcessedColor.nick,
+    usernameOnClick: formatUsernameOnClickDefault({
+      message,
+      author: messageAuthorWithProcessedColor,
+      roleStyle: roleStyle.roleStyle,
+    }),
+  };
   const obj2 = nativeStyleProperties;
   obj = {};
   const merged = Object.assign(createCommonMessageDefault(roleStyle));

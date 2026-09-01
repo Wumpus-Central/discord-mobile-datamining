@@ -13,7 +13,11 @@ const mobile_web_redirect_checkout = "mobile_web_redirect_checkout";
 const result = set.fileFinishedImporting("modules/payments/utils/MobileWebRedirectCheckoutUtils.tsx");
 
 export const MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG = "mobile_web_redirect_checkout";
-export const captureMobileWebRedirectCheckoutSentryError = function captureMobileWebRedirectCheckoutSentryError(error, source, tags) {
+export const captureMobileWebRedirectCheckoutSentryError = function captureMobileWebRedirectCheckoutSentryError(
+  error,
+  source,
+  tags,
+) {
   let obj = _modDef1208;
   obj = { tags: null, extra: null };
   obj = { app_context: mobile_web_redirect_checkout, source };
@@ -26,7 +30,9 @@ export const isMobileWebRedirectCheckoutEnabled = function isMobileWebRedirectCh
   return isMetaQuest.isMetaQuest();
 };
 export const getCustomCheckoutFlowForAnalytics = function getCustomCheckoutFlowForAnalytics() {
-  return isMetaQuest.isMetaQuest() ? CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
+  return isMetaQuest.isMetaQuest()
+    ? CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT
+    : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
 };
 export const useGetCustomCheckoutFlow = function useGetCustomCheckoutFlow() {
   const _location = _extends.useLocation();

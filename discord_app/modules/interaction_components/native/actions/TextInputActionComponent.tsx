@@ -23,7 +23,15 @@ const memoResult = importAllResult.memo((type) => {
   error = componentState.error;
   let obj3 = executeStateUpdate;
   const isFirstTextInputInModal = type(16968).useIsFirstTextInputInModal(type.id);
-  obj = { placeholder, maxLength, status: null, defaultValue: null, onChange: null, autoFocus: null, isClearable: true };
+  obj = {
+    placeholder,
+    maxLength,
+    status: null,
+    defaultValue: null,
+    onChange: null,
+    autoFocus: null,
+    isClearable: true,
+  };
   let str = "default";
   const state = executeStateUpdate.useState(() => {
     type = undefined;
@@ -60,6 +68,8 @@ const memoResult = importAllResult.memo((type) => {
   }
   return tmp16;
 });
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/TextInputActionComponent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/native/actions/TextInputActionComponent.tsx",
+);
 
 export default memoResult;

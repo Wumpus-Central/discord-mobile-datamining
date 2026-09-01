@@ -8,7 +8,18 @@ import { AnalyticEvents } from "../../../Constants.tsx";
 import { _uploadContacts } from "ContactSyncUtils.tsx";
 
 require = arg1;
-let obj = { INITIALIZED: "Flow Initialized", LANDING: "Landing", PERMISSION_REQUESTED: "Contacts Permission Requested", NAME_INPUT: "Name Input", SUGGESTIONS_RESULTS: "Suggestions Results", CONTACT_INVITES: "Contact Invites", ADD_PHONE_NUMBER: "Add Phone Number", VERIFY_PHONE_NUMBER: "Verify Phone Number", PASSWORD_CONFIRM: "Password Confirmation", COMPLETE: "Complete" };
+let obj = {
+  INITIALIZED: "Flow Initialized",
+  LANDING: "Landing",
+  PERMISSION_REQUESTED: "Contacts Permission Requested",
+  NAME_INPUT: "Name Input",
+  SUGGESTIONS_RESULTS: "Suggestions Results",
+  CONTACT_INVITES: "Contact Invites",
+  ADD_PHONE_NUMBER: "Add Phone Number",
+  VERIFY_PHONE_NUMBER: "Verify Phone Number",
+  PASSWORD_CONFIRM: "Password Confirmation",
+  COMPLETE: "Complete",
+};
 let c8 = null;
 let c9 = 0;
 const Onboarding = "Onboarding";

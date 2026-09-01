@@ -93,7 +93,16 @@ function transformRewardRequirementServer(type) {
   return tmp;
 }
 function transformSlayerStorefrontPromotionServer(id) {
-  let obj = { id: id.id, endsAt: null, flavor: null, pdp: null, storefront: null, checkout: null, vcStream: null, rewardRequirements: null };
+  let obj = {
+    id: id.id,
+    endsAt: null,
+    flavor: null,
+    pdp: null,
+    storefront: null,
+    checkout: null,
+    vcStream: null,
+    rewardRequirements: null,
+  };
   let ends_at = id.ends_at;
   if (ends_at == null) {
     ends_at = null;
@@ -162,14 +171,36 @@ function getSKUShareURL(arg0, applicationId) {
       const _location = location;
       const _window = window;
       const _HermesInternal = HermesInternal;
-      let combined = "" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT + closure_13.GAME_SHOP(arg0, applicationId.id, applicationId.slug);
+      let combined =
+        "" +
+        location.protocol +
+        window.GLOBAL_ENV.WEBAPP_ENDPOINT +
+        closure_13.GAME_SHOP(arg0, applicationId.id, applicationId.slug);
     }
     return combined;
   }
-  combined = "" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT + closure_13.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
+  combined =
+    "" +
+    location.protocol +
+    window.GLOBAL_ENV.WEBAPP_ENDPOINT +
+    closure_13.COLLECTIBLES_SHOP_GAME_SHOP(
+      applicationId.applicationId,
+      undefined,
+      applicationId.id,
+      applicationId.slug,
+    );
 }
-({ getChannelsGameShopPrefix: closure_8, STOREFRONT_MARKETING_GUILD_ID: c9, STOREFRONT_MARKETING_GUILD_ID_TEST: c10 } = STOREFRONT_MARKETING_GUILD_ID);
-({ GuildFeatures: unpackModuleId, PriceSetAssignmentPurchaseTypes: closure_12, Routes: map1, SKUProductLines: closure_14 } = ME);
+({
+  getChannelsGameShopPrefix: closure_8,
+  STOREFRONT_MARKETING_GUILD_ID: c9,
+  STOREFRONT_MARKETING_GUILD_ID_TEST: c10,
+} = STOREFRONT_MARKETING_GUILD_ID);
+({
+  GuildFeatures: unpackModuleId,
+  PriceSetAssignmentPurchaseTypes: closure_12,
+  Routes: map1,
+  SKUProductLines: closure_14,
+} = ME);
 let str = "jpg";
 if (require("_httpGetWithCountryCodeQuery").SUPPORTS_WEBP) {
   str = "webp";
@@ -340,35 +371,48 @@ export const getRewardRequirementPlanTargetingParams = function getRewardRequire
   }
   obj = {};
 };
-export const transformSlayerApplicationStorefrontSummaryServer = function transformSlayerApplicationStorefrontSummaryServer(id) {
-  const obj = { id: id.id, publishedAt: null, title: null, logoAssetId: null, lightThemeLogoAssetId: null };
-  const published_at = id.published_at;
-  let tmp = null;
-  if (null != published_at) {
-    const _Date = Date;
-    const date = new Date(published_at);
-    const _Number = Number;
-    let tmp7 = null;
-    if (!Number.isNaN(date.getTime())) {
-      tmp7 = date;
+export const transformSlayerApplicationStorefrontSummaryServer =
+  function transformSlayerApplicationStorefrontSummaryServer(id) {
+    const obj = { id: id.id, publishedAt: null, title: null, logoAssetId: null, lightThemeLogoAssetId: null };
+    const published_at = id.published_at;
+    let tmp = null;
+    if (null != published_at) {
+      const _Date = Date;
+      const date = new Date(published_at);
+      const _Number = Number;
+      let tmp7 = null;
+      if (!Number.isNaN(date.getTime())) {
+        tmp7 = date;
+      }
+      tmp = tmp7;
     }
-    tmp = tmp7;
-  }
-  obj[1] = tmp;
-  ({ title: obj[2], logo_asset_id } = id);
-  if (logo_asset_id == null) {
-    logo_asset_id = null;
-  }
-  obj[3] = logo_asset_id;
-  let prop = id.light_theme_logo_asset_id;
-  if (prop == null) {
-    prop = null;
-  }
-  obj[4] = prop;
-  return obj;
-};
+    obj[1] = tmp;
+    ({ title: obj[2], logo_asset_id } = id);
+    if (logo_asset_id == null) {
+      logo_asset_id = null;
+    }
+    obj[3] = logo_asset_id;
+    let prop = id.light_theme_logo_asset_id;
+    if (prop == null) {
+      prop = null;
+    }
+    obj[4] = prop;
+    return obj;
+  };
 export const transformSlayerApplicationStorefrontServer = function transformSlayerApplicationStorefrontServer(body) {
-  let obj = { id: body.id, publishedAt: null, applicationId: null, title: null, logoAssetId: null, lightThemeLogoAssetId: null, pages: null, assets: null, application: null, storefrontPricing: null, promotions: null };
+  let obj = {
+    id: body.id,
+    publishedAt: null,
+    applicationId: null,
+    title: null,
+    logoAssetId: null,
+    lightThemeLogoAssetId: null,
+    pages: null,
+    assets: null,
+    application: null,
+    storefrontPricing: null,
+    promotions: null,
+  };
   const published_at = body.published_at;
   let tmp = null;
   if (null != published_at) {
@@ -452,7 +496,9 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
           obj = { primaryIconAsset: "children", primaryIconLabel: "c" };
         } else {
           const obj3 = _httpGetWithCountryCodeQuery;
-          const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
+          const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(
+            obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"),
+          );
           obj = { primaryIconAsset: null, primaryIconLabel: null };
           obj[0] = toURLSafeResult;
           obj[1] = first.label;
@@ -477,7 +523,9 @@ export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
   if (null != error) {
     if (null != error.thumbnailAssetId) {
       const obj3 = _httpGetWithCountryCodeQuery;
-      return isDiscordProxiedAssetUrlDefault.toURLSafe(obj3.getAssetURL(error.applicationId, error.thumbnailAssetId, num, "webp"));
+      return isDiscordProxiedAssetUrlDefault.toURLSafe(
+        obj3.getAssetURL(error.applicationId, error.thumbnailAssetId, num, "webp"),
+      );
     }
   }
 };
@@ -545,7 +593,9 @@ export const getCardBackgroundImageURL = function getCardBackgroundImageURL(sku,
     }
     if (null != applicationId) {
       const obj3 = _httpGetWithCountryCodeQuery;
-      return isDiscordProxiedAssetUrlDefault.toURLSafe(obj3.getAssetURL(sku.applicationId, sku.tenantMetadata.socialLayer.cardBackgroundImageAssetId, num, str));
+      return isDiscordProxiedAssetUrlDefault.toURLSafe(
+        obj3.getAssetURL(sku.applicationId, sku.tenantMetadata.socialLayer.cardBackgroundImageAssetId, num, str),
+      );
     }
   }
 };
@@ -655,21 +705,27 @@ export const isOnSocialLayerStorefrontSkuPage = function isOnSocialLayerStorefro
   }
   return tmp2;
 };
-export const useGetSocialLayerStorefrontGuildIdAndApplication = function useGetSocialLayerStorefrontGuildIdAndApplication(applicationId) {
-  const _require = applicationId;
-  const items = [closure_7];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_7.getGuildIdFromApplicationId(closure_0));
-  const obj = initialize;
-  const application = require("../applications/useGetOrFetchApplications.tsx").useGetOrFetchApplication(applicationId);
-  let guildId = stateFromStores;
-  if (stateFromStores == null) {
-    guildId = undefined;
-    if (application != null) {
-      guildId = application.guildId;
+export const useGetSocialLayerStorefrontGuildIdAndApplication =
+  function useGetSocialLayerStorefrontGuildIdAndApplication(applicationId) {
+    const _require = applicationId;
+    const items = [closure_7];
+    const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+      items,
+      () => closure_1_7.getGuildIdFromApplicationId(closure_0),
+    );
+    const obj = initialize;
+    const application = require("../applications/useGetOrFetchApplications.tsx").useGetOrFetchApplication(
+      applicationId,
+    );
+    let guildId = stateFromStores;
+    if (stateFromStores == null) {
+      guildId = undefined;
+      if (application != null) {
+        guildId = application.guildId;
+      }
     }
-  }
-  return { guildId, application };
-};
+    return { guildId, application };
+  };
 export const getSocialLayerStorefrontApplicationId = function getSocialLayerStorefrontApplicationId(guildId) {
   let applicationIdFromGuildId = store2.getApplicationIdFromGuildId(guildId);
   const guild = store.getGuild(guildId);
@@ -692,11 +748,17 @@ export const getSocialLayerStorefrontApplicationId = function getSocialLayerStor
 export const useGetSocialLayerStorefrontApplicationId = function useGetSocialLayerStorefrontApplicationId(arg0) {
   const _require = arg0;
   const items = [closure_7];
-  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_7.getApplicationIdFromGuildId(closure_0));
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_7.getApplicationIdFromGuildId(closure_0),
+  );
   const obj = initialize;
   const items1 = [closure_6];
   const items2 = [arg0];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_6.getGuild(closure_0), items2);
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => closure_1_6.getGuild(closure_0),
+    items2,
+  );
   if (stateFromStores == null) {
     let length;
     if (stateFromStores1 != null) {

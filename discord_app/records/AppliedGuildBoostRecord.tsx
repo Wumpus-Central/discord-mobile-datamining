@@ -14,8 +14,7 @@ prototype = function AppliedGuildBoostRecord(endsAt) {
   tmp.endsAt = endsAt;
   return tmp;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["createFromServer"] = function createFromServer(user) {
   ({ id, guild_id } = user);
   if (null != user.user) {

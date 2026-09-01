@@ -7,7 +7,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
-let closure_5 = createCacheKey.createStyles({ image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" } });
+let closure_5 = createCacheKey.createStyles({
+  image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" },
+});
 const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsImage.tsx");
 
 export default function GuildPowerupsImage(style) {
@@ -34,4 +36,4 @@ export default function GuildPowerupsImage(style) {
   }
   const items2 = [tmp.image, style];
   tmp6 = jsx(preloadDefault, { style: items2, source: { uri: imageUrl } });
-};
+}

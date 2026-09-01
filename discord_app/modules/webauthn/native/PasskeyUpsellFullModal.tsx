@@ -14,4 +14,4 @@ export default function PasskeyUpsellFullModal() {
   const screens = obj.getScreens({ isModal: true });
   obj = { screens, initialRouteName: WebAuthnScreens.MODAL_UPSELL };
   return jsx(Modal.Modal, { screens, initialRouteName: WebAuthnScreens.MODAL_UPSELL });
-};
+}

@@ -27,7 +27,10 @@ export default function usePreloadedAsset(arg0) {
   let combined;
   c5 = undefined;
   const items = [c5];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => _undefined.useReducedMotion);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => _undefined.useReducedMotion,
+  );
   let obj2 = initialize;
   const tmp3 = require("../../utils/PlatformUtils.tsx").isAndroid() && flag && !stateFromStores;
   dependencyMap = tmp3;
@@ -78,21 +81,24 @@ export default function usePreloadedAsset(arg0) {
             let preloadResult = num(16533).preload(tmp);
             const obj2 = num(16533);
           }
-          preloadResult.then(() => {
-            if (!c0) {
-              c0 = true;
-              const obj = { key: null, status: "preloaded" };
-              obj[0] = closure_1_4;
-              closure_1_5(obj);
-            }
-          }, () => {
-            if (!c0) {
-              c0 = true;
-              const obj = { key: null, status: "skipped" };
-              obj[0] = closure_1_4;
-              closure_1_5(obj);
-            }
-          });
+          preloadResult.then(
+            () => {
+              if (!c0) {
+                c0 = true;
+                const obj = { key: null, status: "preloaded" };
+                obj[0] = closure_1_4;
+                closure_1_5(obj);
+              }
+            },
+            () => {
+              if (!c0) {
+                c0 = true;
+                const obj = { key: null, status: "skipped" };
+                obj[0] = closure_1_4;
+                closure_1_5(obj);
+              }
+            },
+          );
           return () => {
             c0 = true;
             clearTimeout(closure_1);
@@ -105,4 +111,4 @@ export default function usePreloadedAsset(arg0) {
     }
   }, items1);
   return { status };
-};
+}

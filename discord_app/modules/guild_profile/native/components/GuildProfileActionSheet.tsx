@@ -12,11 +12,17 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ View: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { loadingContainer: { paddingTop: 40 }, footerContainer: { paddingHorizontal: 16, paddingVertical: 40 }, scrollView: null };
+createCacheKey = {
+  loadingContainer: { paddingTop: 40 },
+  footerContainer: { paddingHorizontal: 16, paddingVertical: 40 },
+  scrollView: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[2] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_profile/native/components/GuildProfileActionSheet.tsx",
+);
 
 export default function GuildProfileActionSheet(guildId) {
   guildId = guildId.guildId;
@@ -33,12 +39,17 @@ export default function GuildProfileActionSheet(guildId) {
   let items = [closure_6];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_1_6.getErrorCode(guildId));
   let obj2 = guildId(analyticsLocations[11]);
-  const token = obj2.useToken(fetchGuildProfile(analyticsLocations[7]).colors.INTERACTIVE_TEXT_HOVER, fetchGuildProfile(analyticsLocations[8])());
+  const token = obj2.useToken(
+    fetchGuildProfile(analyticsLocations[7]).colors.INTERACTIVE_TEXT_HOVER,
+    fetchGuildProfile(analyticsLocations[8])(),
+  );
   let obj3 = guildId(analyticsLocations[12]);
   bottomSheetRef = obj3.useBottomSheetRef();
   ({ bottomSheetClose, bottomSheetRef } = bottomSheetRef);
   const tmp4 = fetchGuildProfile(analyticsLocations[8])();
-  analyticsLocations = fetchGuildProfile(analyticsLocations[13])(fetchGuildProfile(analyticsLocations[14]).GUILD_PROFILE).analyticsLocations;
+  analyticsLocations = fetchGuildProfile(analyticsLocations[13])(
+    fetchGuildProfile(analyticsLocations[14]).GUILD_PROFILE,
+  ).analyticsLocations;
   let obj4 = guildId(analyticsLocations[11]);
   token1 = obj4.useToken(fetchGuildProfile(analyticsLocations[7]).colors.BACKGROUND_BASE_LOW);
   let obj5 = token1;
@@ -108,7 +119,7 @@ export default function GuildProfileActionSheet(guildId) {
     const obj6 = { enableFooterMarginAdjustment: true, style: null, children: null };
     obj6[1] = tmp.scrollView;
     obj6[2] = tmp19;
-    const items5 = [tmp20(tmp5(tmp3[25]).BottomSheetScrollView, obj6), ];
+    const items5 = [tmp20(tmp5(tmp3[25]).BottomSheetScrollView, obj6)];
     const obj7 = { variant: "floating", tabStyle: null, onPress: null };
     const obj8 = { backgroundColor: null };
     obj8[0] = token;
@@ -119,7 +130,10 @@ export default function GuildProfileActionSheet(guildId) {
     return callback2(tmp5(tmp3[23]).BottomSheet, obj4);
   }
   const tmp10 = fetchGuildProfile(analyticsLocations[13]);
-  tmp19 = callback(closure_4, { style: tmp.loadingContainer, children: callback(closure_5, { animating: true, size: "large" }) });
+  tmp19 = callback(closure_4, {
+    style: tmp.loadingContainer,
+    children: callback(closure_5, { animating: true, size: "large" }),
+  });
   tmp18 = null;
   tmp20 = callback;
-};
+}

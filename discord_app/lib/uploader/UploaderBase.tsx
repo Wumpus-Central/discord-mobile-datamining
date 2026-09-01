@@ -78,7 +78,18 @@ class UploaderBase extends EventEmitter {
     };
     obj = require("apply");
     tmp3.id = obj.uniqueId("Uploader");
-    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "channel" };
+    tmp3._file = {
+      id: tmp3.id,
+      currentSize: 0,
+      totalPreCompressionSize: 0,
+      compressionProgress: 0,
+      progress: 0,
+      rate: 0,
+      hasImage: false,
+      hasVideo: false,
+      attachmentsCount: 0,
+      items: "channel",
+    };
     return tmp3;
   }
 }
@@ -95,7 +106,7 @@ prototype["_fileSize"] = function _fileSize() {
 };
 prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c9 === 2) {
       c9 = 3;
       HermesBuiltin.throwTypeError();
@@ -147,7 +158,9 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
               c9 = 3;
               return { value: false, done: true };
             } else {
-              files = closure_1_0(closure_1_2[7]).getKestrelConfig({ location: "UploaderBase.compressAndCheckFileSize" });
+              files = closure_1_0(closure_1_2[7]).getKestrelConfig({
+                location: "UploaderBase.compressAndCheckFileSize",
+              });
               const _HermesInternal3 = HermesInternal;
               closure_1_6.log("compressing files for " + closure_1_0.id);
               files = closure_1_0.files;
@@ -197,7 +210,10 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
             c9 = 3;
             return { value: false, done: true };
           } else {
-            effectiveKestrelLimit = closure_1_0(closure_1_2[7]).getEffectiveKestrelLimit(files, store.getMaxFileSize(c2.channelId));
+            effectiveKestrelLimit = closure_1_0(closure_1_2[7]).getEffectiveKestrelLimit(
+              files,
+              store.getMaxFileSize(c2.channelId),
+            );
             const currentSize2 = c2.currentSize;
             effectiveKestrelLimit = currentSize2;
             if (currentSize2 == null) {
@@ -263,7 +279,14 @@ prototype["setUploadingTextForUI"] = function setUploadingTextForUI() {
   const files2 = this.files;
   const someResult = files.some((isImage) => isImage.isImage);
   const _fileSizeResult = this._fileSize();
-  logger.log("setUploadingTextForUI - total content: " + _fileSizeResult + " bytes and " + this.files.length + " attachments for " + this.id);
+  logger.log(
+    "setUploadingTextForUI - total content: " +
+      _fileSizeResult +
+      " bytes and " +
+      this.files.length +
+      " attachments for " +
+      this.id,
+  );
   const obj = {};
   const merged = Object.assign(this._file);
   obj.totalPostCompressionSize = _fileSizeResult;
@@ -288,7 +311,7 @@ prototype["_recomputeProgressTotal"] = function _recomputeProgressTotal() {
       }
       return arg0 + num;
     }, 0),
-    total: this._fileSize()
+    total: this._fileSize(),
   };
   files = this.files;
   return obj;
@@ -333,7 +356,7 @@ prototype["cancel"] = function cancel() {
 prototype["cancelItem"] = function cancelItem(itemId) {
   closure_0 = itemId;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c4 === 2) {
       c4 = 3;
       HermesBuiltin.throwTypeError();
@@ -424,7 +447,18 @@ prototype["upload"] = function upload(arg0) {
     const _Date = Date;
     self._lastUpdate = Date.now();
     self._loaded = 0;
-    const obj = { id: null, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: null };
+    const obj = {
+      id: null,
+      currentSize: 0,
+      totalPreCompressionSize: 0,
+      compressionProgress: 0,
+      progress: 0,
+      rate: 0,
+      hasImage: false,
+      hasVideo: false,
+      attachmentsCount: 0,
+      items: null,
+    };
     obj[0] = self.id;
     obj[9] = arg0;
     self._file = obj;

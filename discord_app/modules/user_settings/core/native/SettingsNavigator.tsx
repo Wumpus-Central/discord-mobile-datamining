@@ -27,12 +27,19 @@ function LeftAlignedHeaderTitle(children) {
   if (usePersistentBadge != null) {
     persistentBadge = usePersistentBadge();
   }
-  const tmp5 = callback(Text.Heading, { lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: null != persistentBadge ? tmp.headerTitleWithBadge : tmp.headerContainer, children: children.title });
+  const tmp5 = callback(Text.Heading, {
+    lineClamp: 1,
+    variant: "redesign/heading-18/bold",
+    color: "mobile-text-heading-primary",
+    maxFontSizeMultiplier: 2,
+    style: null != persistentBadge ? tmp.headerTitleWithBadge : tmp.headerContainer,
+    children: children.title,
+  });
   let tmp6 = tmp5;
   if (null != persistentBadge) {
     let obj = { style: null, children: null };
     obj[0] = tmp.headerContainerRow;
-    const items = [tmp5, ];
+    const items = [tmp5];
     obj = { badge: null };
     obj[0] = persistentBadge;
     items[1] = callback(SettingHeaderBadge, obj);
@@ -45,12 +52,28 @@ let c4 = importAllResult;
 ({ AnalyticsPages: closure_8, UserSettingsSections: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createNativeStackNavigator.createNativeStackNavigator();
-let obj = { statusBarSpacer: null, headerContainer: null, headerContainerRow: null, headerTitleWithBadge: null, backIcon: null };
+let obj = {
+  statusBarSpacer: null,
+  headerContainer: null,
+  headerContainerRow: null,
+  headerTitleWithBadge: null,
+  backIcon: null,
+};
 obj = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj[0] = obj;
-createNativeStackNavigator = { width: "100%", paddingHorizontal: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8 };
+createNativeStackNavigator = {
+  width: "100%",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_8,
+};
 obj[1] = createNativeStackNavigator;
-createCacheKey = { flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, width: "100%" };
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_8,
+  width: "100%",
+};
 obj[2] = createCacheKey;
 obj[3] = { flexShrink: 1 };
 obj[4] = { borderRadius: ThemesDefault.radii.round, marginTop: ThemesDefault.space.PX_8 };
@@ -91,11 +114,14 @@ const memoResult = importAllResult.memo(() => {
     const result = obj.trackUserSettingsPaneViewed(obj);
   }, items);
   const items1 = [onClose];
-  const effect1 = importAllResult.useEffect(() => () => {
-    if (closure_3 != null) {
-      tmp();
-    }
-  }, items1);
+  const effect1 = importAllResult.useEffect(
+    () => () => {
+      if (closure_3 != null) {
+        tmp();
+      }
+    },
+    items1,
+  );
   const items2 = [obj];
   const stateFromStores = _require(params[17]).useStateFromStores(items2, () => obj.locale);
   closure_5 = onClose(importAllResult.useState(false), 2)[1];
@@ -130,47 +156,58 @@ const memoResult = importAllResult.memo(() => {
         accessibilityRole: "button",
         accessibilityLabel: null,
         hitSlop: null,
-        children: null
+        children: null,
       };
       const intl = lib(params[27]).intl;
       obj[3] = intl.string(lib(params[27]).t["13/7kX"]);
       obj[4] = lib(params[28]).BACK_ICON_WITH_BADGE_HIT_SLOP;
-      obj = { style: lib.backIcon, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: closure_2_10(lib(params[28]).SettingsLeftIconWithBadge, obj1) };
+      obj = {
+        style: lib.backIcon,
+        importantForAccessibility: "no-hide-descendants",
+        accessibilityElementsHidden: true,
+        children: closure_2_10(lib(params[28]).SettingsLeftIconWithBadge, obj1),
+      };
       obj[5] = closure_2_10(closure_5, obj);
       obj[1] = closure_2_10(lib(params[26]).PressableOpacity, obj);
       return closure_2_10(closure_5, obj);
     };
   }, items4);
-  const memo1 = importAllResult.useMemo(() => ({
-    transitionEnd(data) {
-      let isActive = data.data.closing;
-      state = state.getState();
-      if (isActive) {
-        isActive = state.isActive;
-      }
-      if (isActive) {
-        isActive = "" === state.query;
-      }
-      if (isActive) {
-        state.setState({ isActive: false });
-      }
-    }
-  }), []);
-  closure_8 = importAllResult.useMemo(() => ({
-    transitionEnd(data) {
-      let closing = data.data.closing;
-      if (closing) {
-        closing = null != store.getField("selected");
-      }
-      if (closing) {
-        store.setState({ selected: null });
-      }
-    }
-  }), []);
+  const memo1 = importAllResult.useMemo(
+    () => ({
+      transitionEnd(data) {
+        let isActive = data.data.closing;
+        state = state.getState();
+        if (isActive) {
+          isActive = state.isActive;
+        }
+        if (isActive) {
+          isActive = "" === state.query;
+        }
+        if (isActive) {
+          state.setState({ isActive: false });
+        }
+      },
+    }),
+    [],
+  );
+  closure_8 = importAllResult.useMemo(
+    () => ({
+      transitionEnd(data) {
+        let closing = data.data.closing;
+        if (closing) {
+          closing = null != store.getField("selected");
+        }
+        if (closing) {
+          store.setState({ selected: null });
+        }
+      },
+    }),
+    [],
+  );
   const tmp2Result5 = _require(params[25]);
   const autoSettingsSearchSessionAnalytics = _require(params[29]).useAutoSettingsSearchSessionAnalytics();
   obj = { value: tmp14(screen(tmp3[19]).USER_SETTINGS).analyticsLocations, children: null };
-  const items5 = [callback(screen(params[30]), {}), ];
+  const items5 = [callback(screen(params[30]), {})];
   obj1 = {
     style: tmp.statusBarSpacer,
     accessible: false,
@@ -179,9 +216,15 @@ const memoResult = importAllResult.memo(() => {
         closure_4.goBack();
       }
     },
-    children: null
+    children: null,
   };
-  const obj2 = { id: "settings-navigator", screenOptions: null, screenListeners: null, initialRouteName: null, children: null };
+  const obj2 = {
+    id: "settings-navigator",
+    screenOptions: null,
+    screenListeners: null,
+    initialRouteName: null,
+    children: null,
+  };
   let merged = Object.assign(accessibilityNativeStackOptions);
   obj2[1] = {
     fullScreenGestureEnabled: true,
@@ -189,7 +232,7 @@ const memoResult = importAllResult.memo(() => {
       return callback4(closure_15, { title: children.children });
     },
     headerTitleAlign: "center",
-    unstable_headerInsets: { left: false, right: false }
+    unstable_headerInsets: { left: false, right: false },
   };
   obj2[2] = { beforeRemove, transitionStart };
   obj2[3] = screen;
@@ -197,7 +240,13 @@ const memoResult = importAllResult.memo(() => {
     callback(closure_12.Screen, {
       name: constants.OVERVIEW,
       options(navigation) {
-        obj = { title: null, headerLeft: null, headerBackVisible: false, headerShadowVisible: false, contentStyle: null };
+        obj = {
+          title: null,
+          headerLeft: null,
+          headerBackVisible: false,
+          headerShadowVisible: false,
+          contentStyle: null,
+        };
         const intl = callback(params[27]).intl;
         obj[0] = intl.string(callback(params[27]).t["3D5yo/"]);
         obj[1] = callback3(navigation.navigation);
@@ -207,14 +256,20 @@ const memoResult = importAllResult.memo(() => {
       listeners: memo1,
       getComponent() {
         return callback(params[31]).default;
-      }
+      },
     }),
     memo.map((arg0) => {
       [tmp, tmp2] = arg0;
       obj = {
         name: tmp2.route,
         options(navigation) {
-          obj = { title: callback(params[20]).getSettingTitle(callback), headerLeft: closure_1_7(navigation.navigation), headerBackVisible: false, contentStyle: closure_1_6, headerShadowVisible: null };
+          obj = {
+            title: callback(params[20]).getSettingTitle(callback),
+            headerLeft: closure_1_7(navigation.navigation),
+            headerBackVisible: false,
+            contentStyle: closure_1_6,
+            headerShadowVisible: null,
+          };
           const navigationOptions = component.navigationOptions;
           let flag;
           if (navigationOptions != null) {
@@ -227,7 +282,10 @@ const memoResult = importAllResult.memo(() => {
           if (null != component.usePersistentBadge) {
             obj = { headerTitle: null };
             obj[0] = function headerTitle(children) {
-              return closure_2_10(closure_2_15, { title: children.children, usePersistentBadge: usePersistentBadge.usePersistentBadge });
+              return closure_2_10(closure_2_15, {
+                title: children.children,
+                usePersistentBadge: usePersistentBadge.usePersistentBadge,
+              });
             };
           } else {
             obj = {};
@@ -241,7 +299,7 @@ const memoResult = importAllResult.memo(() => {
           return component;
         },
         initialParams: null,
-        listeners: null
+        listeners: null,
       };
       let tmp4;
       if (screen === tmp2.route) {
@@ -250,7 +308,7 @@ const memoResult = importAllResult.memo(() => {
       obj[3] = tmp4;
       obj[4] = closure_8;
       return closure_1_10(closure_1_12.Screen, obj, tmp);
-    })
+    }),
   ];
   obj2[4] = items6;
   obj1[3] = callback2(closure_12.Navigator, obj2);

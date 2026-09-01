@@ -6,7 +6,17 @@ import { frozen } from "../zustand/LocalStorageWrapper.tsx";
 
 let obj = { name: "shared-spaces-warning-storage", storage: null };
 obj[1] = createJSONStorage.createJSONStorage(() => frozen);
-obj = keys.create(createJSONStorage.persist(() => ({ channelDismissTimestamps: {}, userDismissTimestamps: {}, globalDismissTimestamp: null, queuedWarning: false }), obj));
+obj = keys.create(
+  createJSONStorage.persist(
+    () => ({
+      channelDismissTimestamps: {},
+      userDismissTimestamps: {},
+      globalDismissTimestamp: null,
+      queuedWarning: false,
+    }),
+    obj,
+  ),
+);
 const result = set.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningStore.tsx");
 
 export const useSharedSpacesWarningStore = obj;

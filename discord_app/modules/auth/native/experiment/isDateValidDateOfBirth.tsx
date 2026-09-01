@@ -11,4 +11,4 @@ export default function isDateValidDateOfBirth(arg0) {
     const obj = hooksDefault();
   }
   return tmp;
-};
+}

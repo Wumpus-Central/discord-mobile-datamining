@@ -17,19 +17,54 @@ let closure_11 = ["#666777", "#535564"];
 let closure_12 = importDefaultResult1.createAnimatedComponent(inlineStyles.Circle);
 let obj = { "x-sm": 40, sm: 64, md: 70, "md-lg": 100, lg: 128 };
 let closure_14 = createCacheKey.createStyles((arg0) => {
-  obj = { wrapper: { position: "relative" }, container: { position: "relative", display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1 }, completionGlow: { shadowOffset: { width: 0, height: 0 }, shadowRadius: 20, shadowOpacity: 0, elevation: 4, shadowColor: "#30C77399" }, canvas: { transform: items }, imageContainer: null, progressPath: null, confetti: null, opacityMask: null };
+  obj = {
+    wrapper: { position: "relative" },
+    container: { position: "relative", display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1 },
+    completionGlow: {
+      shadowOffset: { width: 0, height: 0 },
+      shadowRadius: 20,
+      shadowOpacity: 0,
+      elevation: 4,
+      shadowColor: "#30C77399",
+    },
+    canvas: { transform: items },
+    imageContainer: null,
+    progressPath: null,
+    confetti: null,
+    opacityMask: null,
+  };
   items = [{ rotate: "-90deg" }];
-  obj = { position: "absolute", height: 0.78 * arg0, width: 0.78 * arg0, borderRadius: ThemesDefault.radii.round, overflow: "hidden" };
+  obj = {
+    position: "absolute",
+    height: 0.78 * arg0,
+    width: 0.78 * arg0,
+    borderRadius: ThemesDefault.radii.round,
+    overflow: "hidden",
+  };
   obj[4] = obj;
   obj = { color: ThemesDefault.colors.STATUS_POSITIVE };
   obj[5] = obj;
   obj[6] = { position: "absolute", pointerEvents: "none" };
-  obj[7] = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 2 };
+  obj[7] = {
+    backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 2,
+  };
   return obj;
 });
-let closure_15 = { code: "function QuestProgressIndicatorTsx1(){const{glowOpacity}=this.__closure;return{shadowOpacity:glowOpacity.get()};}" };
-let closure_16 = { code: "function QuestProgressIndicatorTsx2(){const{circumference,animatedProgress}=this.__closure;return{strokeDashoffset:circumference-circumference*animatedProgress.get()};}" };
-let closure_17 = { code: "function QuestProgressIndicatorTsx3(){const{underlayOpacity,styles}=this.__closure;return{opacity:underlayOpacity.get(),...styles.opacityMask};}" };
+let closure_15 = {
+  code: "function QuestProgressIndicatorTsx1(){const{glowOpacity}=this.__closure;return{shadowOpacity:glowOpacity.get()};}",
+};
+let closure_16 = {
+  code: "function QuestProgressIndicatorTsx2(){const{circumference,animatedProgress}=this.__closure;return{strokeDashoffset:circumference-circumference*animatedProgress.get()};}",
+};
+let closure_17 = {
+  code: "function QuestProgressIndicatorTsx3(){const{underlayOpacity,styles}=this.__closure;return{opacity:underlayOpacity.get(),...styles.opacityMask};}",
+};
 const memoResult = importDefaultResult.memo(function QuestProgressIndicator(loading) {
   ({ quest, size, progress } = loading);
   let flag = loading.loading;
@@ -174,8 +209,15 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   }
   obj = {};
   let merged = Object.assign(obj);
-  obj1 = { style: items5, accessible: true, accessibilityRole: "progressbar", accessibilityLabel: null, accessibilityValue: null, children: null };
-  items5 = [, , ];
+  obj1 = {
+    style: items5,
+    accessible: true,
+    accessibilityRole: "progressbar",
+    accessibilityLabel: null,
+    accessibilityValue: null,
+    children: null,
+  };
+  items5 = [, ,];
   ({ wrapper: arr6[0], completionGlow: arr6[1] } = tmp9);
   items5[2] = animatedStyle;
   let formatToPlainStringResult = accessibilityLabel;
@@ -187,17 +229,41 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   }
   obj1[3] = formatToPlainStringResult;
   obj1[4] = { min: 0, max: 100, now: rounded };
-  const items6 = [closure_9(flag(stateFromStores[4]).View, { style: animatedStyle1 }), ];
+  const items6 = [closure_9(flag(stateFromStores[4]).View, { style: animatedStyle1 })];
   const obj3 = { style: tmp9.container, children: null };
   const obj4 = { height: obj[size], width: obj[size], style: tmp9.canvas, children: null };
   const obj5 = { children: null };
   const obj6 = { id: "underlayGradient", x1: "0", y1: "0.5", x2: "1", y2: "0.5", children: null };
-  const items7 = [closure_9(progress(stateFromStores[5]).Stop, { offset: "0", stopColor: 19 }), closure_9(progress(stateFromStores[5]).Stop, { offset: "1", stopColor: 17 })];
+  const items7 = [
+    closure_9(progress(stateFromStores[5]).Stop, { offset: "0", stopColor: 19 }),
+    closure_9(progress(stateFromStores[5]).Stop, { offset: "1", stopColor: 17 }),
+  ];
   obj6[5] = items7;
   obj5[0] = sharedValue2(progress(stateFromStores[5]).LinearGradient, obj6);
-  const items8 = [closure_9(progress(stateFromStores[5]).Defs, obj5), closure_9(progress(stateFromStores[5]).Circle, { cx: obj[size] / 2, cy: obj[size] / 2, r: diff, fill: "none", stroke: "url(#underlayGradient)", strokeWidth: tmp4 }), closure_9(closure_12, { cx: obj[size] / 2, cy: obj[size] / 2, r: diff, fill: "none", stroke: tmp9.progressPath.color, strokeWidth: tmp4, strokeDasharray: result, strokeLinecap: "round", animatedProps })];
+  const items8 = [
+    closure_9(progress(stateFromStores[5]).Defs, obj5),
+    closure_9(progress(stateFromStores[5]).Circle, {
+      cx: obj[size] / 2,
+      cy: obj[size] / 2,
+      r: diff,
+      fill: "none",
+      stroke: "url(#underlayGradient)",
+      strokeWidth: tmp4,
+    }),
+    closure_9(closure_12, {
+      cx: obj[size] / 2,
+      cy: obj[size] / 2,
+      r: diff,
+      fill: "none",
+      stroke: tmp9.progressPath.color,
+      strokeWidth: tmp4,
+      strokeDasharray: result,
+      strokeLinecap: "round",
+      animatedProps,
+    }),
+  ];
   obj4[3] = items8;
-  const items9 = [sharedValue2(progress(stateFromStores[5]).Svg, obj4), , ];
+  const items9 = [sharedValue2(progress(stateFromStores[5]).Svg, obj4), ,];
   let tmp25Result = null;
   if (flag2) {
     const obj11 = { ref: null, style: null, source: null, autoPlay: false, loop: false };
@@ -208,10 +274,27 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
     const tmp28Result = tmp28(tmp2[12]);
   }
   items9[1] = tmp25Result;
-  const obj10 = { cx: obj[size] / 2, cy: obj[size] / 2, r: diff, fill: "none", stroke: tmp9.progressPath.color, strokeWidth: tmp4, strokeDasharray: result, strokeLinecap: "round", animatedProps };
+  const obj10 = {
+    cx: obj[size] / 2,
+    cy: obj[size] / 2,
+    r: diff,
+    fill: "none",
+    stroke: tmp9.progressPath.color,
+    strokeWidth: tmp4,
+    strokeDasharray: result,
+    strokeLinecap: "round",
+    animatedProps,
+  };
   const obj7 = { offset: "0", stopColor: 19 };
   const obj8 = { offset: "1", stopColor: 17 };
-  const obj9 = { cx: obj[size] / 2, cy: obj[size] / 2, r: diff, fill: "none", stroke: "url(#underlayGradient)", strokeWidth: tmp4 };
+  const obj9 = {
+    cx: obj[size] / 2,
+    cy: obj[size] / 2,
+    r: diff,
+    fill: "none",
+    stroke: "url(#underlayGradient)",
+    strokeWidth: tmp4,
+  };
   tmp21 = callback(() => {
     obj = {};
     const merged = Object.assign(closure_6.confetti);
@@ -222,7 +305,10 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
     obj.transform = items;
     return obj;
   }, items3);
-  items9[2] = closure_9(sharedValue, { style: tmp9.imageContainer, children: closure_9(flag(stateFromStores[14]), obj13) });
+  items9[2] = closure_9(sharedValue, {
+    style: tmp9.imageContainer,
+    children: closure_9(flag(stateFromStores[14]), obj13),
+  });
   obj3[1] = items9;
   items6[1] = sharedValue2(sharedValue, obj3);
   obj1[5] = items6;

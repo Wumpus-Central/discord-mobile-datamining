@@ -28,10 +28,13 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
   const callback = tmp4;
   let tmpResult = tmp(647);
   const items1 = [stateFromStores1];
-  const tmp6 = callback(tmpResult.useStateFromStoresArray(items1, () => {
-    const items = [stateFromStores1.getProduct(closure_0), stateFromStores1.getProductFetch(closure_0)];
-    return items;
-  }), 2);
+  const tmp6 = callback(
+    tmpResult.useStateFromStoresArray(items1, () => {
+      const items = [stateFromStores1.getProduct(closure_0), stateFromStores1.getProductFetch(closure_0)];
+      return items;
+    }),
+    2,
+  );
   const first = tmp6[0];
   closure_4 = tmp8;
   tmpResult = tmp(647);

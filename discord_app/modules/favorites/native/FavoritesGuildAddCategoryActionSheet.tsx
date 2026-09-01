@@ -24,12 +24,28 @@ function FavoritesGuildAddCategoryActionSheet() {
       const obj2 = result(closure_1_2[8]);
     }
   }, items);
-  obj = { contentStyles: tmp.content, bodyStyles: tmp.body, keyboardShouldPersistTaps: "always", header: null, children: null };
+  obj = {
+    contentStyles: tmp.content,
+    bodyStyles: tmp.body,
+    keyboardShouldPersistTaps: "always",
+    header: null,
+    children: null,
+  };
   obj = { title: null };
   const intl = first(1236).intl;
   obj[0] = intl.string(first(1236).t["ISN+NM"]);
   obj[3] = callback2(first(5621).BottomSheetTitleHeader, obj);
-  obj1 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, isClearable: true, returnKeyType: "done", onSubmitEditing: null };
+  obj1 = {
+    label: null,
+    placeholder: null,
+    value: null,
+    onChange: null,
+    maxLength: null,
+    autoFocus: true,
+    isClearable: true,
+    returnKeyType: "done",
+    onSubmitEditing: null,
+  };
   const intl2 = first(1236).intl;
   obj1[0] = intl2.string(first(1236).t.OCAkGP);
   const intl3 = first(1236).intl;
@@ -38,7 +54,7 @@ function FavoritesGuildAddCategoryActionSheet() {
   obj1[3] = tmp2[1];
   obj1[4] = closure_5;
   obj1[8] = callback;
-  const items1 = [callback2(first(7705).TextInput, obj1), ];
+  const items1 = [callback2(first(7705).TextInput, obj1)];
   let obj2 = { text: null, onPress: null, disabled: null };
   const intl4 = first(1236).intl;
   obj2[0] = intl4.string(first(1236).t.CumH4u);

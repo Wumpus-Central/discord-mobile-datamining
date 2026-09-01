@@ -13,20 +13,24 @@ export default function useInviteAssignableRoles(arg0) {
   const _require = arg0;
   const items = [closure_5, closure_7, closure_6];
   const items1 = [arg0];
-  const stateFromStoresObject = _require(currentUser[6]).useStateFromStoresObject(items, () => {
-    if (null != closure_0) {
-      sortedRoles = closure_1_5.getSortedRoles(tmp.id);
-    } else {
-      sortedRoles = [];
-    }
-    const obj = { sortedRoles, currentUser: closure_1_7.getCurrentUser(), canManageRoles: null };
-    let canResult = null != tmp;
-    if (canResult) {
-      canResult = closure_1_6.can(closure_1_8.MANAGE_ROLES, tmp);
-    }
-    obj[2] = canResult;
-    return obj;
-  }, items1);
+  const stateFromStoresObject = _require(currentUser[6]).useStateFromStoresObject(
+    items,
+    () => {
+      if (null != closure_0) {
+        sortedRoles = closure_1_5.getSortedRoles(tmp.id);
+      } else {
+        sortedRoles = [];
+      }
+      const obj = { sortedRoles, currentUser: closure_1_7.getCurrentUser(), canManageRoles: null };
+      let canResult = null != tmp;
+      if (canResult) {
+        canResult = closure_1_6.can(closure_1_8.MANAGE_ROLES, tmp);
+      }
+      obj[2] = canResult;
+      return obj;
+    },
+    items1,
+  );
   let sortedRoles = stateFromStoresObject.sortedRoles;
   currentUser = stateFromStoresObject.currentUser;
   const canManageRoles = stateFromStoresObject.canManageRoles;
@@ -64,4 +68,4 @@ export default function useInviteAssignableRoles(arg0) {
     }
     return [];
   }, items2);
-};
+}

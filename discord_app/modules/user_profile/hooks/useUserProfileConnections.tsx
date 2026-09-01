@@ -43,4 +43,4 @@ export default function useUserProfileConnections(arg0) {
     }
     return found;
   }, items1);
-};
+}

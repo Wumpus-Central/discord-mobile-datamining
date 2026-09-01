@@ -5,7 +5,8 @@ import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import DM_SETTINGS_UPSELL_LAST_SHOWN_KEY from "DmSettingsUpsellConstants.tsx";
 
-({ DM_SETTINGS_UPSELL_LAST_SHOWN_KEY: c3, DM_SETTINGS_UPSELL_LAST_SHOWN_MAX_TIME_MS: c4 } = DM_SETTINGS_UPSELL_LAST_SHOWN_KEY);
+({ DM_SETTINGS_UPSELL_LAST_SHOWN_KEY: c3, DM_SETTINGS_UPSELL_LAST_SHOWN_MAX_TIME_MS: c4 } =
+  DM_SETTINGS_UPSELL_LAST_SHOWN_KEY);
 let result = set.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellActionCreators.native.tsx");
 
 export default {
@@ -19,8 +20,10 @@ export default {
         const tmpResult = tmp(16922);
       }
     }
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(16921, dependencyMap.paths), "dm_settings_upsell_modal", { guildId });
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(16921, dependencyMap.paths), "dm_settings_upsell_modal", {
+      guildId,
+    });
     const Storage2 = tmp(595).Storage;
     const result = Storage2.set(closure_3, timestamp);
-  }
+  },
 };

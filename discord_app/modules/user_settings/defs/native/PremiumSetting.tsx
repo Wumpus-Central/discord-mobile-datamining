@@ -13,10 +13,14 @@ import { PremiumScreen } from "../../premium/native/PremiumSettingScreen.tsx";
 require = arg1;
 createToggle = {
   useTitle: function getPremiumSettingTitle() {
-    const mobileNitroManageSubscriptionsSettingsExperiment = apexExperiment.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
+    const mobileNitroManageSubscriptionsSettingsExperiment =
+      apexExperiment.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
     const obj = apexExperiment;
     currentUser = currentUser.getCurrentUser();
-    const result = getPremiumPlanItem.hasPremiumSubscriptionToDisplay(currentUser, premiumTypeSubscription.getPremiumTypeSubscription());
+    const result = getPremiumPlanItem.hasPremiumSubscriptionToDisplay(
+      currentUser,
+      premiumTypeSubscription.getPremiumTypeSubscription(),
+    );
     const intl = getSystemLocale.intl;
     const string = intl.string;
     if (result) {
@@ -45,13 +49,13 @@ createToggle = {
   useTrailing: function usePremiumSettingTrailing() {
     return jsx(ThemedTabBadgeDefault, {});
   },
-  screen: createToggle
+  screen: createToggle,
 };
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM,
   getComponent() {
     return PremiumScreen /* PremiumScreen */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
 let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/PremiumSetting.tsx");

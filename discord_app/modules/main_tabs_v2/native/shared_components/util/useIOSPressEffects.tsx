@@ -3,8 +3,12 @@ import closure_3 from "../../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let obj = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };
-let closure_5 = { code: "function useIOSPressEffectsTsx1(){const{withSpring,interpolate,sharedPressState,sharedWidthScale,SPRING_CONFIG,withOpacity}=this.__closure;const scale=withSpring(interpolate(sharedPressState.get(),[0,1],[1,sharedWidthScale.get()]),SPRING_CONFIG);if(withOpacity){return{transform:[{scale:scale}],opacity:withSpring(interpolate(sharedPressState.get(),[0,1],[1,0.5]),SPRING_CONFIG)};}else{return{transform:[{scale:scale}]};}}" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx");
+let closure_5 = {
+  code: "function useIOSPressEffectsTsx1(){const{withSpring,interpolate,sharedPressState,sharedWidthScale,SPRING_CONFIG,withOpacity}=this.__closure;const scale=withSpring(interpolate(sharedPressState.get(),[0,1],[1,sharedWidthScale.get()]),SPRING_CONFIG);if(withOpacity){return{transform:[{scale:scale}],opacity:withSpring(interpolate(sharedPressState.get(),[0,1],[1,0.5]),SPRING_CONFIG)};}else{return{transform:[{scale:scale}]};}}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx",
+);
 
 export const SPRING_CONFIG = obj;
 export const useIOSPressEffects = function useIOSPressEffects(arg0) {
@@ -75,10 +79,22 @@ export const useIOSPressEffects = function useIOSPressEffects(arg0) {
       return obj2;
     }
   }
-  obj = { withSpring: _require(width[4]).withSpring, interpolate: _require(width[2]).interpolate, sharedPressState: sharedValue1, sharedWidthScale: sharedValue, SPRING_CONFIG: sharedValue1, withOpacity: flag };
+  obj = {
+    withSpring: _require(width[4]).withSpring,
+    interpolate: _require(width[2]).interpolate,
+    sharedPressState: sharedValue1,
+    sharedWidthScale: sharedValue,
+    SPRING_CONFIG: sharedValue1,
+    withOpacity: flag,
+  };
   S.__closure = obj;
   S.__workletHash = 1305898392151;
   S.__initData = closure_5;
-  obj = { sharedPressState: sharedValue1, onPressOut: callback1, onPressIn: callback, pressableStyles: _require(width[2]).useAnimatedStyle(S) };
+  obj = {
+    sharedPressState: sharedValue1,
+    onPressOut: callback1,
+    onPressIn: callback,
+    pressableStyles: _require(width[2]).useAnimatedStyle(S),
+  };
   return obj;
 };

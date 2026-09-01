@@ -19,4 +19,4 @@ export default function shouldShowActivityTimeBar(type) {
     tmp2 = null != type.timestamps.end;
   }
   return tmp2;
-};
+}

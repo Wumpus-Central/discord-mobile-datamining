@@ -24,4 +24,4 @@ export default function EmojiOptionsActionSheet(emojiSrc) {
   obj[1] = jsx(emojiSrc(5599).TableRow, { icon: jsx(emojiSrc(4421).LinkIcon, {}), label: null, onPress: null });
   obj[0] = jsx(emojiSrc(5992).TableRowGroup, { icon: jsx(emojiSrc(4421).LinkIcon, {}), label: null, onPress: null });
   return jsx(emojiSrc(5989).ActionSheet, { icon: jsx(emojiSrc(4421).LinkIcon, {}), label: null, onPress: null });
-};
+}

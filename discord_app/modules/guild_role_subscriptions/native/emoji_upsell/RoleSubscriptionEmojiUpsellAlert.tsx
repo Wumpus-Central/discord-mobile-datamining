@@ -5,13 +5,19 @@ import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/emoji_upsell/RoleSubscriptionEmojiUpsellAlert.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/emoji_upsell/RoleSubscriptionEmojiUpsellAlert.tsx",
+);
 
 export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
   ({ guildId: require, onClose } = arg0);
   let stateFromStores;
   function handleConfirm() {
-    const result = onClose(stateFromStores[8]).transitionToGuildSync(closure_0, undefined, closure_1_5.ROLE_SUBSCRIPTIONS);
+    const result = onClose(stateFromStores[8]).transitionToGuildSync(
+      closure_0,
+      undefined,
+      closure_1_5.ROLE_SUBSCRIPTIONS,
+    );
     if (onClose != null) {
       onClose();
     }
@@ -55,5 +61,10 @@ export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
     return closure_1_6(closure_1_0(stateFromStores[10]).CreatorRevenueButton, obj);
   };
   obj[3] = jsx(require(stateFromStores[11]).PremiumUpsellItem, { alertWidth: diff, upsellItem: memo });
-  return jsx(onClose(stateFromStores[9]), { cancelText: null, onClose: null, renderConfirmButton: null, children: null });
-};
+  return jsx(onClose(stateFromStores[9]), {
+    cancelText: null,
+    onClose: null,
+    renderConfirmButton: null,
+    children: null,
+  });
+}

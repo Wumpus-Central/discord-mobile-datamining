@@ -18,7 +18,7 @@ let prototype = function MemberVerificationApplicationManager() {
     },
     CHANNEL_SELECT() {
       return applyArgumentsResult.showApplicationApprovedAlert();
-    }
+    },
   };
   applyArgumentsResult.showApplicationApprovedAlert = function showApplicationApprovedAlert() {
     const guildId = closure_1_3.getGuildId();
@@ -66,9 +66,10 @@ let prototype = function MemberVerificationApplicationManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationApplicationManager.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/MemberVerificationApplicationManager.tsx",
+);
 
 export default prototype;

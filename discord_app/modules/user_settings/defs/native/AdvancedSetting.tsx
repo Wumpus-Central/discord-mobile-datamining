@@ -12,13 +12,13 @@ obj = {
   },
   parent: null,
   IconComponent: SettingsIcon.SettingsIcon,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.ADVANCED,
   getComponent() {
     return require("../../advanced/native/SettingsAdvancedScreen.tsx").default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AdvancedSetting.tsx");

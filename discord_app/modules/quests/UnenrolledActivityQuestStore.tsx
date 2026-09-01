@@ -10,8 +10,7 @@ let c3 = false;
 set1 = new Set();
 c3 = false;
 const PersistedStore = initializeDefault.PersistedStore;
-class UnenrolledActivityQuestStore extends PersistedStore {
-}
+class UnenrolledActivityQuestStore extends PersistedStore {}
 const prototype = UnenrolledActivityQuestStore.prototype;
 prototype["initialize"] = function initialize(dismissedQuestIds) {
   dismissedQuestIds = undefined;
@@ -63,7 +62,7 @@ const unenrolledActivityQuestStore = new UnenrolledActivityQuestStore(dispatcher
   UNENROLLED_ACTIVITY_QUEST_AUTO_ENROLL: function handleSetAutoEnroll(autoEnroll) {
     autoEnroll = autoEnroll.autoEnroll;
     return true;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/quests/UnenrolledActivityQuestStore.tsx");
 

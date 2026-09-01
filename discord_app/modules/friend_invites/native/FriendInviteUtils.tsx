@@ -45,7 +45,11 @@ export const acceptFriendInvite = function acceptFriendInvite(invite, arg1) {
         if (inviter != null) {
           username = inviter.username;
         }
-        obj = { key: "FRIEND_INVITE_ACCEPT_CONFIRMATION", content: intl.formatToPlainString(invite(closure_1_2[4]).t.st2dcs, { username }), icon: tmp(tmp2[5]) };
+        obj = {
+          key: "FRIEND_INVITE_ACCEPT_CONFIRMATION",
+          content: intl.formatToPlainString(invite(closure_1_2[4]).t.st2dcs, { username }),
+          icon: tmp(tmp2[5]),
+        };
         obj.open(obj);
         closure_1_1(closure_1_2[6]).wait(() => callback(table[7])());
       };

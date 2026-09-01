@@ -5,7 +5,9 @@ import preloadDefault from "../../../../../components_native/common/FastImage.ts
 import vanityUrlDefault from "../../../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier3SmallBadge-2x.png.js";
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier3SmallBadge.native.tsx");
+const result = set.fileFinishedImporting(
+  "design/components/mana-assets/native/generated/GameDiversityTier3SmallBadge.native.tsx",
+);
 
 export const GameDiversityTier3SmallBadge = function GameDiversityTier3SmallBadge(width) {
   let num = width.width;
@@ -21,7 +23,14 @@ export const GameDiversityTier3SmallBadge = function GameDiversityTier3SmallBadg
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  let obj = {
+    fadeDuration: 0,
+    source: null,
+    style: null,
+    accessible: null,
+    accessibilityLabel: null,
+    resizeMode: null,
+  };
   obj = { uri: vanityUrlDefault };
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };

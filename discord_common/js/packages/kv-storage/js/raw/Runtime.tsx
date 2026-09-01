@@ -22,7 +22,13 @@ prototype["executeAsync"] = function executeAsync(type, arg1) {
     const nextIdResult = self.nextId();
     callback(nextIdResult);
     const pending = self.pending;
-    const result = pending.set(nextIdResult, { id: nextIdResult, tag: closure_1, started: performance.now(), resolve, reject });
+    const result = pending.set(nextIdResult, {
+      id: nextIdResult,
+      tag: closure_1,
+      started: performance.now(),
+      resolve,
+      reject,
+    });
   });
 };
 prototype["addCompletionCallback"] = function addCompletionCallback(arg0) {
@@ -114,7 +120,7 @@ prototype["initialize"] = function initialize() {
           str = "completed";
         }
         const execution = ok.timings.execution;
-        const items = ["" + execution.toFixed(3) + "ms execution", , , ];
+        const items = ["" + execution.toFixed(3) + "ms execution", , ,];
         const materialization = ok.timings.materialization;
         items[1] = "" + materialization.toFixed(3) + "ms js materialization";
         const ccTotal = ok.timings.ccTotal;

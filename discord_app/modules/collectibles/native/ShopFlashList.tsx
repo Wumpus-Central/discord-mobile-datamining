@@ -33,6 +33,24 @@ export default function ShopFlashList(initialScrollIndex) {
   }
   obj = { shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: tmp3(15413).INITIAL_SCROLL_DELAY_MS };
   const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce(obj);
-  obj = { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: callback().contentContainer };
-  return jsx(noop.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: callback().contentContainer });
-};
+  obj = {
+    ref,
+    data,
+    renderItem,
+    showsVerticalScrollIndicator: false,
+    ListEmptyComponent: ShopEmptyState,
+    initialScrollIndex,
+    getItemType,
+    contentContainerStyle: callback().contentContainer,
+  };
+  return jsx(noop.FlashList, {
+    ref,
+    data,
+    renderItem,
+    showsVerticalScrollIndicator: false,
+    ListEmptyComponent: ShopEmptyState,
+    initialScrollIndex,
+    getItemType,
+    contentContainerStyle: callback().contentContainer,
+  });
+}

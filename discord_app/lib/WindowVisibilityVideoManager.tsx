@@ -6,7 +6,10 @@ import onDefault from "../../discord_common/js/shared/utils/TypedEventEmitter.ts
 import NativeEventEmitterDefault from "../modules/external_pip/ExternalPip.android.tsx";
 
 const require = arg1;
-let obj = { WindowVisibilityChanged: "window-visibility-changed", IncomingVideoEnabledChanged: "incoming-video-enabled-changed" };
+let obj = {
+  WindowVisibilityChanged: "window-visibility-changed",
+  IncomingVideoEnabledChanged: "incoming-video-enabled-changed",
+};
 onDefault;
 class WindowVisibilityVideoManager extends tmp2 {
   constructor() {

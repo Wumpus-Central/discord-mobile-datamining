@@ -40,7 +40,7 @@ const toggle = createToggle.createToggle({
     }
     return stringResult;
   },
-  useIsDisabled: useFocusModeEnabled.useFocusModeEnabled
+  useIsDisabled: useFocusModeEnabled.useFocusModeEnabled,
 });
 let obj = {
   useTitle() {
@@ -73,7 +73,7 @@ let obj = {
     }
     return stringResult;
   },
-  useIsDisabled: useFocusModeEnabled.useFocusModeEnabled
+  useIsDisabled: useFocusModeEnabled.useFocusModeEnabled,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/InAppNotificationsSetting.tsx");
 

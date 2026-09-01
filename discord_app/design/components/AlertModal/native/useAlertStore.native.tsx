@@ -12,15 +12,18 @@ export const useAlertStore = keys;
 export const dismissAlerts = function dismissAlerts() {
   const alerts = keys.getState().alerts;
   const items = [[], []];
-  const tmp = callback(alerts.reduce((arg0, dismissable) => {
-    let num = 0;
-    if (false === dismissable.dismissable) {
-      num = 1;
-    }
-    let arr = arg0[num];
-    arr = arr.push(dismissable);
-    return arg0;
-  }, items), 2);
+  const tmp = callback(
+    alerts.reduce((arg0, dismissable) => {
+      let num = 0;
+      if (false === dismissable.dismissable) {
+        num = 1;
+      }
+      let arr = arg0[num];
+      arr = arr.push(dismissable);
+      return arg0;
+    }, items),
+    2,
+  );
   const first = tmp[0];
   const arr4 = tmp[1];
   first(705).batchUpdates(() => {

@@ -36,9 +36,7 @@ export const showShareActionSheet = function showShareActionSheet(source, PREMIU
     fn = _require(fn[4]).showSharePreparingModal(obj);
     const obj3 = _require(fn[4]);
   } else {
-    fn = () => {
-
-    };
+    fn = () => {};
   }
   let message = source.message;
   if (message == null) {
@@ -59,43 +57,49 @@ export const showShareActionSheet = function showShareActionSheet(source, PREMIU
   }
   const obj5 = importDefault(fn[2]);
   const shareResult = importDefault(fn[2]).share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn);
-  const nextPromise = importDefault(fn[2]).share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn).then((method) => {
-    if (null != method) {
-      method = method.method;
-      if (source.iOSOnlyShareCallback != null) {
-        let tmp3 = method;
-        if (method == null) {
-          tmp3 = null;
+  const nextPromise = importDefault(fn[2])
+    .share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn)
+    .then((method) => {
+      if (null != method) {
+        method = method.method;
+        if (source.iOSOnlyShareCallback != null) {
+          let tmp3 = method;
+          if (method == null) {
+            tmp3 = null;
+          }
+          iOSOnlyShareCallback(tmp, tmp3);
         }
-        iOSOnlyShareCallback(tmp, tmp3);
+        const result = source(fn[3]).trackAppClickInNativeShareSheet(method, closure_1);
+        const obj = source(fn[3]);
       }
-      const result = source(fn[3]).trackAppClickInNativeShareSheet(method, closure_1);
-      const obj = source(fn[3]);
-    }
-  });
-  importDefault(fn[2]).share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn).then((method) => {
-    if (null != method) {
-      method = method.method;
-      if (source.iOSOnlyShareCallback != null) {
-        let tmp3 = method;
-        if (method == null) {
-          tmp3 = null;
+    });
+  importDefault(fn[2])
+    .share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn)
+    .then((method) => {
+      if (null != method) {
+        method = method.method;
+        if (source.iOSOnlyShareCallback != null) {
+          let tmp3 = method;
+          if (method == null) {
+            tmp3 = null;
+          }
+          iOSOnlyShareCallback(tmp, tmp3);
         }
-        iOSOnlyShareCallback(tmp, tmp3);
+        const result = source(fn[3]).trackAppClickInNativeShareSheet(method, closure_1);
+        const obj = source(fn[3]);
       }
-      const result = source(fn[3]).trackAppClickInNativeShareSheet(method, closure_1);
-      const obj = source(fn[3]);
-    }
-  }).catch((arg0) => {
-    let str = PREMIUM_GIFT_SUCCESS_MODAL;
-    if (PREMIUM_GIFT_SUCCESS_MODAL == null) {
-      str = "";
-    }
-    PREMIUM_GIFT_SUCCESS_MODAL(fn[5]).captureException(arg0, { tags: { location: str } });
-    if (source.iOSOnlyShareCallback != null) {
-      iOSOnlyShareCallback(false, null);
-    }
-  }).finally(() => {
-    fn();
-  });
+    })
+    .catch((arg0) => {
+      let str = PREMIUM_GIFT_SUCCESS_MODAL;
+      if (PREMIUM_GIFT_SUCCESS_MODAL == null) {
+        str = "";
+      }
+      PREMIUM_GIFT_SUCCESS_MODAL(fn[5]).captureException(arg0, { tags: { location: str } });
+      if (source.iOSOnlyShareCallback != null) {
+        iOSOnlyShareCallback(false, null);
+      }
+    })
+    .finally(() => {
+      fn();
+    });
 };

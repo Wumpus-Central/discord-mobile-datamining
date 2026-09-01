@@ -3,7 +3,11 @@ import set from "../../../../_runtime/00002_set.js";
 import defaultStatesAreEqual from "../../../lib/ZustandStore.tsx";
 import PortalKeyboardState from "PortalKeyboard.tsx";
 
-const zustandStore = defaultStatesAreEqual.createZustandStore(() => ({ keyboard: null, state: PortalKeyboardState.PortalKeyboardState.EMPTY, renderers: [] }));
+const zustandStore = defaultStatesAreEqual.createZustandStore(() => ({
+  keyboard: null,
+  state: PortalKeyboardState.PortalKeyboardState.EMPTY,
+  renderers: [],
+}));
 const result = set.fileFinishedImporting("modules/keyboard/native/PortalKeyboardUIStore.native.tsx");
 
 export const PortalKeyboardUIStore = { getField: zustandStore.getField, useField: zustandStore.useField };
@@ -16,8 +20,14 @@ export const isPortalKeyboardOpenForChannel = function isPortalKeyboardOpenForCh
   }
   let tmp3 = channelId === arg0;
   if (tmp3) {
-    tmp3 = state === PortalKeyboardState.PortalKeyboardState.REQUEST_OPEN || state === PortalKeyboardState.PortalKeyboardState.OPENING || state === PortalKeyboardState.PortalKeyboardState.OPEN;
-    const tmp6 = state === PortalKeyboardState.PortalKeyboardState.REQUEST_OPEN || state === PortalKeyboardState.PortalKeyboardState.OPENING || state === PortalKeyboardState.PortalKeyboardState.OPEN;
+    tmp3 =
+      state === PortalKeyboardState.PortalKeyboardState.REQUEST_OPEN ||
+      state === PortalKeyboardState.PortalKeyboardState.OPENING ||
+      state === PortalKeyboardState.PortalKeyboardState.OPEN;
+    const tmp6 =
+      state === PortalKeyboardState.PortalKeyboardState.REQUEST_OPEN ||
+      state === PortalKeyboardState.PortalKeyboardState.OPENING ||
+      state === PortalKeyboardState.PortalKeyboardState.OPEN;
   }
   return tmp3;
 };

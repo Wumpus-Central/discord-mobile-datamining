@@ -9,7 +9,16 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { disabledPermissionIcon: null };
-createCacheKey = { width: 24, height: 24, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.ICON_FEEDBACK_CRITICAL };
+createCacheKey = {
+  width: 24,
+  height: 24,
+  flexGrow: 0,
+  flexShrink: 0,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.ICON_FEEDBACK_CRITICAL,
+};
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/oauth2/native/BotPermissions.tsx");
@@ -43,7 +52,7 @@ export default function BotPermissions(guild) {
       onToggle(arg0) {
         return closure_1_2(arg0, closure_0);
       },
-      label: permissionName
+      label: permissionName,
     };
     return _undefined(permissions(onPermissionsChange[9]).Checkbox, obj, String(arg0));
   });
@@ -52,8 +61,14 @@ export default function BotPermissions(guild) {
     let obj = permissions(onPermissionsChange[8]);
     const permissionName = obj.getPermissionName(arg0);
     obj = { direction: "horizontal", align: "center", children: null };
-    obj = { style: obj.disabledPermissionIcon, children: _undefined(permissions(onPermissionsChange[11]).XSmallIcon, { size: "sm", color: "white" }) };
-    const items = [_undefined(c5, obj), _undefined(permissions(onPermissionsChange[12]).Text, { variant: "text-md/medium", children: permissionName })];
+    obj = {
+      style: obj.disabledPermissionIcon,
+      children: _undefined(permissions(onPermissionsChange[11]).XSmallIcon, { size: "sm", color: "white" }),
+    };
+    const items = [
+      _undefined(c5, obj),
+      _undefined(permissions(onPermissionsChange[12]).Text, { variant: "text-md/medium", children: permissionName }),
+    ];
     obj[2] = items;
     return closure_1_7(permissions(onPermissionsChange[10]).Stack, obj, String(arg0));
   });
@@ -62,9 +77,12 @@ export default function BotPermissions(guild) {
   const intl = permissions(onPermissionsChange[13]).intl;
   obj = { applicationName: application.name, guildName: guild.name };
   obj[2] = intl.format(permissions(onPermissionsChange[13]).t.sOaT2j, obj);
-  const items1 = [callback(permissions(onPermissionsChange[12]).Text, obj), callback(permissions(onPermissionsChange[10]).Stack, { spacing: 12, children: mapped })];
+  const items1 = [
+    callback(permissions(onPermissionsChange[12]).Text, obj),
+    callback(permissions(onPermissionsChange[10]).Stack, { spacing: 12, children: mapped }),
+  ];
   obj[0] = items1;
-  const children = [callback2(permissions(onPermissionsChange[10]).Stack, obj), ];
+  const children = [callback2(permissions(onPermissionsChange[10]).Stack, obj)];
   let tmp6Result = null;
   if (mapped1.length > 0) {
     obj1 = { children: null };
@@ -73,7 +91,7 @@ export default function BotPermissions(guild) {
     const obj3 = { applicationName: null };
     obj3[0] = application.name;
     obj2[2] = intl2.format(tmp4(tmp[13]).t.fsOkF4, obj3);
-    const items3 = [tmp7(tmp4(tmp[12]).Text, obj2), ];
+    const items3 = [tmp7(tmp4(tmp[12]).Text, obj2)];
     const obj4 = { spacing: 12, children: null };
     obj4[1] = mapped1;
     items3[1] = tmp7(tmp4(tmp[10]).Stack, obj4);
@@ -82,4 +100,4 @@ export default function BotPermissions(guild) {
   }
   children[1] = tmp6Result;
   return callback2(permissions(onPermissionsChange[10]).Stack, { spacing: 16, children });
-};
+}

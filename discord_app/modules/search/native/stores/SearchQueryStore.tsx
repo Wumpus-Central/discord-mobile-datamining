@@ -197,8 +197,7 @@ const prototype = function SearchQueryStateManager(type) {
 const map = new Map();
 let closure_13 = areArraysShallowlyEqual.cachedFunction((arg0) => new prototype(arg0));
 const Store = initializeDefault.Store;
-class NativeSearchQueryStore extends Store {
-}
+class NativeSearchQueryStore extends Store {}
 const prototype2 = NativeSearchQueryStore.prototype;
 prototype2["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_5, closure_4);
@@ -327,7 +326,7 @@ areArraysShallowlyEqual = {
   },
   SEARCH_QUERY_NATIVE_DELETE: function handleSearchQueryNativeDelete(id) {
     map.delete(id.id);
-  }
+  },
 };
 const nativeSearchQueryStore = new NativeSearchQueryStore(dispatcherDefault, areArraysShallowlyEqual);
 let result = require("set").fileFinishedImporting("modules/search/native/stores/SearchQueryStore.tsx");

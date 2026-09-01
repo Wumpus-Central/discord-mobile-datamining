@@ -22,7 +22,9 @@ createCacheKey[2] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[3] = { marginLeft: 8 };
 createCacheKey[4] = { marginTop: 8 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/public_guilds/native/components/PublicGuildAnnouncementProfile.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/public_guilds/native/components/PublicGuildAnnouncementProfile.tsx",
+);
 
 export default function PublicGuildAnnouncementProfile() {
   const tmp = callback3();
@@ -31,11 +33,16 @@ export default function PublicGuildAnnouncementProfile() {
   obj = { style: tmp.avatar, source: null };
   let obj3 = isPublicSystemMessage;
   obj[1] = obj3.getPublicSystemMessageAvatar();
-  const items = [callback(preloadDefault, obj), , , ];
+  const items = [callback(preloadDefault, obj), , ,];
   obj1 = { style: tmp.nameWrapper, children: null };
   const tmp2 = preloadDefault;
-  const items1 = [callback(Button.Icon, { source: registerAssetDefault, disableColor: true }), ];
-  obj3 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const items1 = [callback(Button.Icon, { source: registerAssetDefault, disableColor: true })];
+  obj3 = {
+    style: tmp.headerText,
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj3[3] = intl.string(getSystemLocale.t.xfAlNx);
   items1[1] = callback(Text.Text, obj3);
@@ -52,4 +59,4 @@ export default function PublicGuildAnnouncementProfile() {
   obj[1] = items;
   obj[1] = callback2(View, obj);
   return callback(Background.BottomSheet, obj);
-};
+}

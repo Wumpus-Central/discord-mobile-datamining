@@ -7,10 +7,12 @@ import { USER_AFFINITY_TTL } from "UserAffinitiesConstants.tsx";
 function recomputeAffinities() {
   const userAffinities = obj.userAffinities;
   const found = userAffinities.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
-  map = new Map(found.map((otherUserId) => {
-    const items = [otherUserId.otherUserId, otherUserId];
-    return items;
-  }));
+  map = new Map(
+    found.map((otherUserId) => {
+      const items = [otherUserId.otherUserId, otherUserId];
+      return items;
+    }),
+  );
 }
 let map = new Map();
 let c3 = false;
@@ -18,8 +20,7 @@ const frozen = Object.freeze({ userAffinities: [], lastFetched: 0 });
 let obj = {};
 let merged = Object.assign(frozen);
 const PersistedStore = initializeDefault.PersistedStore;
-class UserAffinitiesV2Store extends PersistedStore {
-}
+class UserAffinitiesV2Store extends PersistedStore {}
 const prototype = UserAffinitiesV2Store.prototype;
 prototype["initialize"] = function initialize(userAffinities) {
   const self = this;
@@ -33,11 +34,15 @@ prototype["initialize"] = function initialize(userAffinities) {
     obj.lastFetched = userAffinities.lastFetched;
     const _Map = Map;
     const userAffinities1 = obj.userAffinities;
-    const found = userAffinities1.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
-    map = new Map(found.map((otherUserId) => {
-      const items = [otherUserId.otherUserId, otherUserId];
-      return items;
-    }));
+    const found = userAffinities1.filter(
+      (otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId),
+    );
+    map = new Map(
+      found.map((otherUserId) => {
+        const items = [otherUserId.otherUserId, otherUserId];
+        return items;
+      }),
+    );
   }
   const items = [closure_0];
   self.syncWith(items, recomputeAffinities);
@@ -124,10 +129,12 @@ obj = {
     obj.userAffinities = affineUsers.affineUsers;
     const userAffinities = obj.userAffinities;
     const found = userAffinities.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
-    map = new Map(found.map((otherUserId) => {
-      const items = [otherUserId.otherUserId, otherUserId];
-      return items;
-    }));
+    map = new Map(
+      found.map((otherUserId) => {
+        const items = [otherUserId.otherUserId, otherUserId];
+        return items;
+      }),
+    );
   },
   LOAD_USER_AFFINITIES_V2_FAILURE: function handleLoadUserAffinitiesFailure() {
     c3 = false;
@@ -137,7 +144,7 @@ obj = {
     const merged = Object.assign(frozen);
     map = new Map();
     c3 = false;
-  }
+  },
 };
 const userAffinitiesV2Store = new UserAffinitiesV2Store(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/user_affinities/UserAffinitiesV2Store.tsx");

@@ -7,7 +7,9 @@ import { useFavoritesAccess } from "../../FavoritesHooks.tsx";
 import { getFavoritesAwareGuildName } from "../../FavoritesUtils.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/favorites/native/action/useFavoritesGuildChannelActions.tsx",
+);
 
 export default function useFavoritesGuildChannelActions(channelId, FavoritesGuildActionSheet) {
   const _require = channelId;
@@ -18,7 +20,10 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   const obj2 = getFavoritesAwareGuildName;
   const tmp = _require;
   const items = [closure_4];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.isFavorite(channelId.id));
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_4.isFavorite(channelId.id),
+  );
   const obj3 = initialize;
   const isFavoritesGuildSelected = require("../../FavoritesHooks.tsx").useIsFavoritesGuildSelected();
   const obj4 = useFavoritesAccess;
@@ -44,6 +49,15 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
     tmp7 = !isFavoritesGuildSelected;
   }
   const favoritesBetaTagDismissibleContent = tmp(10319).useFavoritesBetaTagDismissibleContent(tmp7);
-  obj = { isExperimentEnabled, hasFavoritesAccess: hasAccess, canFavoriteChannel: isFavoritableChannelResult, isChannelInFavorites: stateFromStores, isFavoritesGuild: isFavoritesGuildSelected, channelId: channelId.id, shouldShowBetaTag: favoritesBetaTagDismissibleContent.shouldShowBetaTag, dismissBetaTag: favoritesBetaTagDismissibleContent.dismissBetaTag };
+  obj = {
+    isExperimentEnabled,
+    hasFavoritesAccess: hasAccess,
+    canFavoriteChannel: isFavoritableChannelResult,
+    isChannelInFavorites: stateFromStores,
+    isFavoritesGuild: isFavoritesGuildSelected,
+    channelId: channelId.id,
+    shouldShowBetaTag: favoritesBetaTagDismissibleContent.shouldShowBetaTag,
+    dismissBetaTag: favoritesBetaTagDismissibleContent.dismissBetaTag,
+  };
   return obj;
-};
+}

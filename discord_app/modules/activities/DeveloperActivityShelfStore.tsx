@@ -11,8 +11,7 @@ let obj = { INITIALIZED: "INITIALIZED", LOADING: "LOADING", LOADED: "LOADED", ER
 let INITIALIZED = obj.INITIALIZED;
 let closure_6 = [];
 const PersistedStore = initializeDefault.PersistedStore;
-class DeveloperActivityShelfStore extends PersistedStore {
-}
+class DeveloperActivityShelfStore extends PersistedStore {}
 const prototype = DeveloperActivityShelfStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   obj = arg0;
@@ -78,7 +77,7 @@ const items = [
     delete tmp2[tmp];
     const merged = Object.assign(arg0);
     return {};
-  }
+  },
 ];
 DeveloperActivityShelfStore.migrations = items;
 obj = {
@@ -104,10 +103,14 @@ obj = {
   DEVELOPER_ACTIVITY_SHELF_FETCH_START() {
     const LOADING = obj.LOADING;
   },
-  DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: function handleEmbeddedActivitiesFetchDeveloperApplicationsSuccess(applications) {
+  DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: function handleEmbeddedActivitiesFetchDeveloperApplicationsSuccess(
+    applications,
+  ) {
     applications = applications.applications;
     const LOADED = obj.LOADED;
-    closure_6 = applications.filter((application) => callback(table[1]).hasApplicationFlag(application, constants.EMBEDDED));
+    closure_6 = applications.filter((application) =>
+      callback(table[1]).hasApplicationFlag(application, constants.EMBEDDED),
+    );
   },
   DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: function handleEmbeddedActivitiesFetchDeveloperApplicationsFail(arg0) {
     const ERROR = obj.ERROR;
@@ -115,9 +118,7 @@ obj = {
   DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: function handleUpdateFilter(arg0) {
     closure_3.filter = arg0.filter;
   },
-  USER_SETTINGS_PROTO_UPDATE() {
-
-  }
+  USER_SETTINGS_PROTO_UPDATE() {},
 };
 const developerActivityShelfStore = new DeveloperActivityShelfStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/activities/DeveloperActivityShelfStore.tsx");

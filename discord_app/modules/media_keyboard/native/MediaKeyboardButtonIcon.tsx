@@ -7,7 +7,9 @@ import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 noopAll;
-let closure_4 = { code: "function MediaKeyboardButtonIconTsx1(){const{keyboard,KeyboardTypes,withTiming,timingStandard}=this.__closure;const isActive=keyboard===KeyboardTypes.MEDIA||keyboard===KeyboardTypes.APP_LAUNCHER;return{transform:[{rotate:withTiming(isActive?'45deg':'0deg',timingStandard)}]};}" };
+let closure_4 = {
+  code: "function MediaKeyboardButtonIconTsx1(){const{keyboard,KeyboardTypes,withTiming,timingStandard}=this.__closure;const isActive=keyboard===KeyboardTypes.MEDIA||keyboard===KeyboardTypes.APP_LAUNCHER;return{transform:[{rotate:withTiming(isActive?'45deg':'0deg',timingStandard)}]};}",
+};
 const result = require("set").fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx");
 
 export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
@@ -21,7 +23,9 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     let obj = ReanimatedRexport;
     const fn = function s() {
       const tmp = callback;
-      const tmp4 = callback === callback(closure_1_2[4]).KeyboardTypes.MEDIA || callback === callback(closure_1_2[4]).KeyboardTypes.APP_LAUNCHER;
+      const tmp4 =
+        callback === callback(closure_1_2[4]).KeyboardTypes.MEDIA ||
+        callback === callback(closure_1_2[4]).KeyboardTypes.APP_LAUNCHER;
       let str = "0deg";
       if (tmp4) {
         str = "45deg";
@@ -45,7 +49,10 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     obj[0] = animatedStyle;
     obj1 = {};
     const merged1 = Object.assign(merged);
-    obj[1] = jsx(require("../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx").PlusLargeIcon, {});
+    obj[1] = jsx(
+      require("../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx").PlusLargeIcon,
+      {},
+    );
     return jsx(_modDef4217.View, { style: null, children: null });
   }
 };

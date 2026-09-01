@@ -36,7 +36,17 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
   let obj2 = guildId(589);
   const items1 = [closure_6];
   const items2 = [id];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => ({ isMobileOnline: closure_1_6.isMobileOnline(id), isVROnline: closure_1_6.isVROnline(id), status: closure_1_6.getStatus(id), activities: closure_1_6.getActivities(id), customStatusActivity: closure_1_6.findActivity(id, (type) => type.type === constants.CUSTOM_STATUS) }), items2);
+  const stateFromStoresObject = obj2.useStateFromStoresObject(
+    items1,
+    () => ({
+      isMobileOnline: closure_1_6.isMobileOnline(id),
+      isVROnline: closure_1_6.isVROnline(id),
+      status: closure_1_6.getStatus(id),
+      activities: closure_1_6.getActivities(id),
+      customStatusActivity: closure_1_6.findActivity(id, (type) => type.type === constants.CUSTOM_STATUS),
+    }),
+    items2,
+  );
   ({ isMobileOnline, isVROnline, status, activities } = stateFromStoresObject);
   let obj3 = guildId(589);
   const items3 = [closure_5];
@@ -62,7 +72,16 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
   }
   obj[2] = avatarDecoration1;
   obj[3] = guildId;
-  obj = { isMobileOnline, isVROnline, size, status: null, statusStyle: null, streaming: null, animate: null, avatarDecoration: null };
+  obj = {
+    isMobileOnline,
+    isVROnline,
+    size,
+    status: null,
+    statusStyle: null,
+    streaming: null,
+    animate: null,
+    avatarDecoration: null,
+  };
   let tmp14 = null;
   const tmp10 = id(8107);
   if (!disableStatus) {
@@ -78,7 +97,14 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
   obj[6] = flag;
   obj[7] = id(8107)(obj4.getProfilePreviewValue(obj));
   if (null != onPress) {
-    obj1 = { ref: null, onPress: null, onLongPress: null, style: null, activeOpacity: 0.8, accessibilityRole: "imagebutton" };
+    obj1 = {
+      ref: null,
+      onPress: null,
+      onLongPress: null,
+      style: null,
+      activeOpacity: 0.8,
+      accessibilityRole: "imagebutton",
+    };
     obj1[0] = arg1;
     obj1[1] = onPress;
     obj1[2] = onPress;
@@ -98,7 +124,14 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
       const merged2 = Object.assign(obj);
     }
     obj1.children = jsx(obj(1297).Avatar, obj3);
-    jsx(obj(5068).PressableOpacity, { ref: null, onPress: null, onLongPress: null, style: null, activeOpacity: 0.8, accessibilityRole: "imagebutton" });
+    jsx(obj(5068).PressableOpacity, {
+      ref: null,
+      onPress: null,
+      onLongPress: null,
+      style: null,
+      activeOpacity: 0.8,
+      accessibilityRole: "imagebutton",
+    });
   } else {
     obj4 = { ref: null, style: null, accessibilityRole: "image", accessible: true };
     obj4[0] = arg1;

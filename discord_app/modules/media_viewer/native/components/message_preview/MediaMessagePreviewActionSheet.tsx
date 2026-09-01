@@ -25,7 +25,7 @@ const memoResult = importAllResult.memo(function MediaMessagePreviewActionSheet(
   callback = callback.useCallback(() => {
     message(closeMediaModal[4]).hideActionSheet();
   }, []);
-  const items = [callback, closeMediaModal, , , ];
+  const items = [callback, closeMediaModal, , ,];
   ({ guild_id: arr[2], id: arr[3] } = channel);
   items[4] = message.id;
   const items1 = [message.id, callback];
@@ -43,7 +43,10 @@ const memoResult = importAllResult.memo(function MediaMessagePreviewActionSheet(
   }, items1);
   const callback3 = callback.useCallback(() => {
     callback();
-    const result = channel(closeMediaModal[8]).showReportModalForMessage(message, "mobile_media_message_preview_action_sheet");
+    const result = channel(closeMediaModal[8]).showReportModalForMessage(
+      message,
+      "mobile_media_message_preview_action_sheet",
+    );
   }, items2);
   let obj = { icon: null, label: null, onPress: null };
   obj = { IconComponent: tmp(tmp2[11]).ChatArrowRightIcon };
@@ -51,7 +54,7 @@ const memoResult = importAllResult.memo(function MediaMessagePreviewActionSheet(
   const intl = tmp(tmp2[12]).intl;
   obj[1] = intl.string(channel(closeMediaModal[12]).t["+TSRGD"]);
   obj[2] = callback1;
-  const items3 = [callback(channel(closeMediaModal[10]).ActionSheetRow, obj), , ];
+  const items3 = [callback(channel(closeMediaModal[10]).ActionSheetRow, obj), ,];
   if (setting) {
     obj1 = { icon: null, label: null, onPress: null };
     const obj2 = { IconComponent: null };
@@ -74,8 +77,12 @@ const memoResult = importAllResult.memo(function MediaMessagePreviewActionSheet(
     canReportUserResult = tmp10(tmp(tmp2[10]).ActionSheetRow, obj3);
   }
   items3[2] = canReportUserResult;
-  return callback(channel(closeMediaModal[9]).ActionSheet, { children: closure_5(channel(closeMediaModal[10]).ActionSheetRow.Group, { hasIcons: true, children: items3 }) });
+  return callback(channel(closeMediaModal[9]).ActionSheet, {
+    children: closure_5(channel(closeMediaModal[10]).ActionSheetRow.Group, { hasIcons: true, children: items3 }),
+  });
 });
-let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/message_preview/MediaMessagePreviewActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/media_viewer/native/components/message_preview/MediaMessagePreviewActionSheet.tsx",
+);
 
 export default memoResult;

@@ -1,7 +1,12 @@
 // discord_app/modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx
 import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
-import { isAvatarDecorationRecord, isNameplateRecord, isProfileEffectRecord, isProfileFrameRecord } from "../records/AvatarDecorationRecord.tsx";
+import {
+  isAvatarDecorationRecord,
+  isNameplateRecord,
+  isProfileEffectRecord,
+  isProfileFrameRecord,
+} from "../records/AvatarDecorationRecord.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx");
@@ -74,7 +79,12 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
       }
       return () => {
         if (closure_1) {
-          closure_1_0(closure_1_1[8]).setPendingChanges({ avatarDecoration: "spriteIndex", profileEffect: "category", nameplate: "paths", profileFrame: "replace" });
+          closure_1_0(closure_1_1[8]).setPendingChanges({
+            avatarDecoration: "spriteIndex",
+            profileEffect: "category",
+            nameplate: "paths",
+            profileFrame: "replace",
+          });
           const obj = closure_1_0(closure_1_1[8]);
         }
       };

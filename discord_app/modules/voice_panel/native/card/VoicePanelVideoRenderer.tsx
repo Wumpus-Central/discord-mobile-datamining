@@ -32,43 +32,122 @@ function getScaleChangeWithOverscroll(arg0, arg1, arg2) {
 }
 getScaleChangeWithOverscroll.__closure = { MIN_OVERSCROLL: 0.1, OVERSCOLL_INTENSITY_FACTOR: 5 };
 getScaleChangeWithOverscroll.__workletHash = 8727721301304;
-getScaleChangeWithOverscroll.__initData = { code: "function getScaleChangeWithOverscroll_VoicePanelVideoRendererTsx1(currentScale,scaleChange,fitScale){const{MIN_OVERSCROLL,OVERSCOLL_INTENSITY_FACTOR}=this.__closure;if(currentScale>=fitScale){return scaleChange;}const underScale=1-currentScale;const factor=Math.max(MIN_OVERSCROLL,1-underScale*underScale*OVERSCOLL_INTENSITY_FACTOR);return 1+(scaleChange-1)*factor;}" };
-let closure_18 = createCacheKey.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, width: "100%", height: "100%", alignItems: "center", justifyContent: "center" }, animatedWrapperStyles: { position: "absolute" }, video: { width: "100%", height: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -16, marginLeft: -16, height: 32, width: 32 } });
-let closure_19 = { code: "function VoicePanelVideoRendererTsx2(){const{containerLayout,videoDimensions}=this.__closure;return Math.max(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}" };
-let closure_20 = { code: "function VoicePanelVideoRendererTsx3(){const{containerLayout,videoDimensions}=this.__closure;return Math.min(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}" };
-let closure_21 = { code: "function VoicePanelVideoRendererTsx4(){const{translateX,translateY,scale,fitScale,coverScale}=this.__closure;if(translateX.get()!==0||translateY.get()!==0){return false;}if(scale.get()===fitScale.get()||scale.get()===coverScale.get()){return true;}return false;}" };
-let closure_22 = { code: "function VoicePanelVideoRendererTsx5(forcedMode){const{scale,withSpring,fitScale,MODE_CHANGE_PHYSICS,disableAnimations,coverScale,translateX,SCALE_PHYSICS,translateY,currentSizeThreshold}=this.__closure;if(forcedMode==='fit'){scale.set(withSpring(fitScale.get(),MODE_CHANGE_PHYSICS,!disableAnimations.get()?'respect-motion-settings':'animate-never'));}else{scale.set(withSpring(coverScale.get(),MODE_CHANGE_PHYSICS,!disableAnimations.get()?'respect-motion-settings':'animate-never'));}translateX.set(withSpring(0,SCALE_PHYSICS));translateY.set(withSpring(0,SCALE_PHYSICS));currentSizeThreshold.set(forcedMode);}" };
-let closure_23 = { code: "function VoicePanelVideoRendererTsx6(){const{focused,id,videoDimensions,windowDimensions,isCamera,resetToDefaultSize}=this.__closure;var _focused$get;let resizeMode=((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id?'fit':'cover';const videoLandscape=videoDimensions.get().width>=videoDimensions.get().height;const parentLandscape=windowDimensions.get().width>=windowDimensions.get().height;const matchingAspect=videoLandscape===parentLandscape;if(isCamera&&resizeMode==='fit'){if(matchingAspect){resizeMode='cover';}}resetToDefaultSize(resizeMode);}" };
-let closure_24 = { code: "function VoicePanelVideoRendererTsx7(){const{containerLayout}=this.__closure;return containerLayout.get();}" };
-let closure_25 = { code: "function VoicePanelVideoRendererTsx8(containerLayout,previous){const{cheapWorkletShallowEqual,focused,id,resetOnLayoutChange}=this.__closure;var _focused$get;if(cheapWorkletShallowEqual(containerLayout,previous!==null&&previous!==void 0?previous:undefined))return;if(((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)!==id)return;if(containerLayout!==previous&&previous!=null){resetOnLayoutChange();}}" };
-let closure_26 = { code: "function VoicePanelVideoRendererTsx9(){const{coverScale,fitScale,MIN_ZOOM_FOR_COVER_SNAP_OFFSET,translateX,scale,translateY,SNAP_CENTER_THRESHOLD,containerLayout,videoDimensions,SNAP_EDGE_OUTER_THRESHOLD,SNAP_EDGE_INNER_THRESHOLD}=this.__closure;if(coverScale.get()<fitScale.get()+MIN_ZOOM_FOR_COVER_SNAP_OFFSET){return false;}const screenTranslateX=translateX.get()*scale.get();const screenTranslateY=translateY.get()*scale.get();if(screenTranslateX<-SNAP_CENTER_THRESHOLD||screenTranslateX>SNAP_CENTER_THRESHOLD||screenTranslateY<-SNAP_CENTER_THRESHOLD||screenTranslateY>SNAP_CENTER_THRESHOLD){return false;}const adjustedScreenTranslateX=screenTranslateX+(containerLayout.get().width-videoDimensions.get().width*scale.get())/2;const adjustedScreenTranslateY=screenTranslateY+(containerLayout.get().height-videoDimensions.get().height*scale.get())/2;const videoWidth=videoDimensions.get().width*scale.get();const videoHeight=videoDimensions.get().height*scale.get();if(videoHeight>=containerLayout.get().height&&adjustedScreenTranslateX>=-SNAP_EDGE_OUTER_THRESHOLD&&adjustedScreenTranslateX<=SNAP_EDGE_INNER_THRESHOLD&&adjustedScreenTranslateX+videoWidth>=containerLayout.get().width-SNAP_EDGE_INNER_THRESHOLD&&adjustedScreenTranslateX+videoWidth<=containerLayout.get().width+SNAP_EDGE_OUTER_THRESHOLD){return true;}if(videoWidth>=containerLayout.get().width&&adjustedScreenTranslateY>=-SNAP_EDGE_OUTER_THRESHOLD&&adjustedScreenTranslateY<=SNAP_EDGE_INNER_THRESHOLD&&adjustedScreenTranslateY+videoHeight>=containerLayout.get().height-SNAP_EDGE_INNER_THRESHOLD&&adjustedScreenTranslateY+videoHeight<=containerLayout.get().height+SNAP_EDGE_OUTER_THRESHOLD){return true;}return false;}" };
-let closure_27 = { code: "function VoicePanelVideoRendererTsx10(){const{numGesturesActive,isInSnap,resetToDefaultSize,scale,fitScale,videoDimensions,containerLayout,translateX,withSpring,SCALE_PHYSICS,translateY}=this.__closure;if(numGesturesActive.get()>0){return;}if(isInSnap.get()){isInSnap.set(false);resetToDefaultSize('cover');return;}if(scale.get()<fitScale.get()){resetToDefaultSize('fit');return;}const maxTranslateY=Math.max(0,(videoDimensions.get().height-containerLayout.get().height/scale.get())/2);const maxTranslateX=Math.max(0,(videoDimensions.get().width-containerLayout.get().width/scale.get())/2);translateX.set(withSpring(Math.min(maxTranslateX,Math.max(-maxTranslateX,translateX.get())),SCALE_PHYSICS));translateY.set(withSpring(Math.min(maxTranslateY,Math.max(-maxTranslateY,translateY.get())),SCALE_PHYSICS));}" };
-let closure_28 = { code: "function VoicePanelVideoRendererTsx11(){const{focused,id,isInDefaultZoom,isInPanToZoom}=this.__closure;var _focused$get;return((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id&&(!isInDefaultZoom.get()||isInPanToZoom.get());}" };
-let closure_29 = { code: "function VoicePanelVideoRendererTsx12(isFocusedZoomed,previous){const{setIsFocusedVideoZoomed}=this.__closure;if(isFocusedZoomed===previous){return;}setIsFocusedVideoZoomed(isFocusedZoomed);}" };
-let closure_30 = { code: "function VoicePanelVideoRendererTsx13(){const{focused,id}=this.__closure;var _focused$get;return((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;}" };
-let closure_31 = { code: "function VoicePanelVideoRendererTsx14(isFocused,previous){const{resetOnLayoutChange}=this.__closure;if(isFocused===previous){return;}resetOnLayoutChange();}" };
+getScaleChangeWithOverscroll.__initData = {
+  code: "function getScaleChangeWithOverscroll_VoicePanelVideoRendererTsx1(currentScale,scaleChange,fitScale){const{MIN_OVERSCROLL,OVERSCOLL_INTENSITY_FACTOR}=this.__closure;if(currentScale>=fitScale){return scaleChange;}const underScale=1-currentScale;const factor=Math.max(MIN_OVERSCROLL,1-underScale*underScale*OVERSCOLL_INTENSITY_FACTOR);return 1+(scaleChange-1)*factor;}",
+};
+let closure_18 = createCacheKey.createStyles({
+  wrapper: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  animatedWrapperStyles: { position: "absolute" },
+  video: { width: "100%", height: "100%" },
+  spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -16, marginLeft: -16, height: 32, width: 32 },
+});
+let closure_19 = {
+  code: "function VoicePanelVideoRendererTsx2(){const{containerLayout,videoDimensions}=this.__closure;return Math.max(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}",
+};
+let closure_20 = {
+  code: "function VoicePanelVideoRendererTsx3(){const{containerLayout,videoDimensions}=this.__closure;return Math.min(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}",
+};
+let closure_21 = {
+  code: "function VoicePanelVideoRendererTsx4(){const{translateX,translateY,scale,fitScale,coverScale}=this.__closure;if(translateX.get()!==0||translateY.get()!==0){return false;}if(scale.get()===fitScale.get()||scale.get()===coverScale.get()){return true;}return false;}",
+};
+let closure_22 = {
+  code: "function VoicePanelVideoRendererTsx5(forcedMode){const{scale,withSpring,fitScale,MODE_CHANGE_PHYSICS,disableAnimations,coverScale,translateX,SCALE_PHYSICS,translateY,currentSizeThreshold}=this.__closure;if(forcedMode==='fit'){scale.set(withSpring(fitScale.get(),MODE_CHANGE_PHYSICS,!disableAnimations.get()?'respect-motion-settings':'animate-never'));}else{scale.set(withSpring(coverScale.get(),MODE_CHANGE_PHYSICS,!disableAnimations.get()?'respect-motion-settings':'animate-never'));}translateX.set(withSpring(0,SCALE_PHYSICS));translateY.set(withSpring(0,SCALE_PHYSICS));currentSizeThreshold.set(forcedMode);}",
+};
+let closure_23 = {
+  code: "function VoicePanelVideoRendererTsx6(){const{focused,id,videoDimensions,windowDimensions,isCamera,resetToDefaultSize}=this.__closure;var _focused$get;let resizeMode=((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id?'fit':'cover';const videoLandscape=videoDimensions.get().width>=videoDimensions.get().height;const parentLandscape=windowDimensions.get().width>=windowDimensions.get().height;const matchingAspect=videoLandscape===parentLandscape;if(isCamera&&resizeMode==='fit'){if(matchingAspect){resizeMode='cover';}}resetToDefaultSize(resizeMode);}",
+};
+let closure_24 = {
+  code: "function VoicePanelVideoRendererTsx7(){const{containerLayout}=this.__closure;return containerLayout.get();}",
+};
+let closure_25 = {
+  code: "function VoicePanelVideoRendererTsx8(containerLayout,previous){const{cheapWorkletShallowEqual,focused,id,resetOnLayoutChange}=this.__closure;var _focused$get;if(cheapWorkletShallowEqual(containerLayout,previous!==null&&previous!==void 0?previous:undefined))return;if(((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)!==id)return;if(containerLayout!==previous&&previous!=null){resetOnLayoutChange();}}",
+};
+let closure_26 = {
+  code: "function VoicePanelVideoRendererTsx9(){const{coverScale,fitScale,MIN_ZOOM_FOR_COVER_SNAP_OFFSET,translateX,scale,translateY,SNAP_CENTER_THRESHOLD,containerLayout,videoDimensions,SNAP_EDGE_OUTER_THRESHOLD,SNAP_EDGE_INNER_THRESHOLD}=this.__closure;if(coverScale.get()<fitScale.get()+MIN_ZOOM_FOR_COVER_SNAP_OFFSET){return false;}const screenTranslateX=translateX.get()*scale.get();const screenTranslateY=translateY.get()*scale.get();if(screenTranslateX<-SNAP_CENTER_THRESHOLD||screenTranslateX>SNAP_CENTER_THRESHOLD||screenTranslateY<-SNAP_CENTER_THRESHOLD||screenTranslateY>SNAP_CENTER_THRESHOLD){return false;}const adjustedScreenTranslateX=screenTranslateX+(containerLayout.get().width-videoDimensions.get().width*scale.get())/2;const adjustedScreenTranslateY=screenTranslateY+(containerLayout.get().height-videoDimensions.get().height*scale.get())/2;const videoWidth=videoDimensions.get().width*scale.get();const videoHeight=videoDimensions.get().height*scale.get();if(videoHeight>=containerLayout.get().height&&adjustedScreenTranslateX>=-SNAP_EDGE_OUTER_THRESHOLD&&adjustedScreenTranslateX<=SNAP_EDGE_INNER_THRESHOLD&&adjustedScreenTranslateX+videoWidth>=containerLayout.get().width-SNAP_EDGE_INNER_THRESHOLD&&adjustedScreenTranslateX+videoWidth<=containerLayout.get().width+SNAP_EDGE_OUTER_THRESHOLD){return true;}if(videoWidth>=containerLayout.get().width&&adjustedScreenTranslateY>=-SNAP_EDGE_OUTER_THRESHOLD&&adjustedScreenTranslateY<=SNAP_EDGE_INNER_THRESHOLD&&adjustedScreenTranslateY+videoHeight>=containerLayout.get().height-SNAP_EDGE_INNER_THRESHOLD&&adjustedScreenTranslateY+videoHeight<=containerLayout.get().height+SNAP_EDGE_OUTER_THRESHOLD){return true;}return false;}",
+};
+let closure_27 = {
+  code: "function VoicePanelVideoRendererTsx10(){const{numGesturesActive,isInSnap,resetToDefaultSize,scale,fitScale,videoDimensions,containerLayout,translateX,withSpring,SCALE_PHYSICS,translateY}=this.__closure;if(numGesturesActive.get()>0){return;}if(isInSnap.get()){isInSnap.set(false);resetToDefaultSize('cover');return;}if(scale.get()<fitScale.get()){resetToDefaultSize('fit');return;}const maxTranslateY=Math.max(0,(videoDimensions.get().height-containerLayout.get().height/scale.get())/2);const maxTranslateX=Math.max(0,(videoDimensions.get().width-containerLayout.get().width/scale.get())/2);translateX.set(withSpring(Math.min(maxTranslateX,Math.max(-maxTranslateX,translateX.get())),SCALE_PHYSICS));translateY.set(withSpring(Math.min(maxTranslateY,Math.max(-maxTranslateY,translateY.get())),SCALE_PHYSICS));}",
+};
+let closure_28 = {
+  code: "function VoicePanelVideoRendererTsx11(){const{focused,id,isInDefaultZoom,isInPanToZoom}=this.__closure;var _focused$get;return((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id&&(!isInDefaultZoom.get()||isInPanToZoom.get());}",
+};
+let closure_29 = {
+  code: "function VoicePanelVideoRendererTsx12(isFocusedZoomed,previous){const{setIsFocusedVideoZoomed}=this.__closure;if(isFocusedZoomed===previous){return;}setIsFocusedVideoZoomed(isFocusedZoomed);}",
+};
+let closure_30 = {
+  code: "function VoicePanelVideoRendererTsx13(){const{focused,id}=this.__closure;var _focused$get;return((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;}",
+};
+let closure_31 = {
+  code: "function VoicePanelVideoRendererTsx14(isFocused,previous){const{resetOnLayoutChange}=this.__closure;if(isFocused===previous){return;}resetOnLayoutChange();}",
+};
 let closure_32 = { code: "function VoicePanelVideoRendererTsx15(){const{mode}=this.__closure;return mode.get();}" };
-let closure_33 = { code: "function VoicePanelVideoRendererTsx16(mode,previous){const{resetOnLayoutChange}=this.__closure;if(mode===previous){return;}resetOnLayoutChange();}" };
-let closure_34 = { code: "function VoicePanelVideoRendererTsx17(){const{videoDimensions}=this.__closure;return videoDimensions.get();}" };
-let closure_35 = { code: "function VoicePanelVideoRendererTsx18(layout,previous){const{currentSizeThreshold,resetOnLayoutChange}=this.__closure;if(currentSizeThreshold==null){return;}if(layout.width===(previous===null||previous===void 0?void 0:previous.width)&&layout.height===(previous===null||previous===void 0?void 0:previous.height)){return;}resetOnLayoutChange();}" };
-let closure_36 = { code: "function VoicePanelVideoRendererTsx19(){const{coverScale}=this.__closure;return coverScale.get();}" };
-let closure_37 = { code: "function VoicePanelVideoRendererTsx20(current,previous){const{currentSizeThreshold,resetToDefaultSize}=this.__closure;const _currentSizeThreshold=currentSizeThreshold.get();if(_currentSizeThreshold!=='cover'){return;}if(current===previous){return;}resetToDefaultSize(_currentSizeThreshold);}" };
-let closure_38 = { code: "function VoicePanelVideoRendererTsx21(){const{isInSnap}=this.__closure;return isInSnap.get();}" };
-let closure_39 = { code: "function VoicePanelVideoRendererTsx22(current,previous){const{runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;if(current===previous){return;}if(!current){return;}runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_LIGHT);}" };
-let closure_40 = { code: "function VoicePanelVideoRendererTsx23(){const{isInDefaultZoom,resetOnLayoutChange,focused,id,runOnJS,setFocused}=this.__closure;var _focused$get;if(!isInDefaultZoom.get()){resetOnLayoutChange();return;}if(((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)!==id){runOnJS(setFocused)(id);}else{runOnJS(setFocused)(null);}}" };
+let closure_33 = {
+  code: "function VoicePanelVideoRendererTsx16(mode,previous){const{resetOnLayoutChange}=this.__closure;if(mode===previous){return;}resetOnLayoutChange();}",
+};
+let closure_34 = {
+  code: "function VoicePanelVideoRendererTsx17(){const{videoDimensions}=this.__closure;return videoDimensions.get();}",
+};
+let closure_35 = {
+  code: "function VoicePanelVideoRendererTsx18(layout,previous){const{currentSizeThreshold,resetOnLayoutChange}=this.__closure;if(currentSizeThreshold==null){return;}if(layout.width===(previous===null||previous===void 0?void 0:previous.width)&&layout.height===(previous===null||previous===void 0?void 0:previous.height)){return;}resetOnLayoutChange();}",
+};
+let closure_36 = {
+  code: "function VoicePanelVideoRendererTsx19(){const{coverScale}=this.__closure;return coverScale.get();}",
+};
+let closure_37 = {
+  code: "function VoicePanelVideoRendererTsx20(current,previous){const{currentSizeThreshold,resetToDefaultSize}=this.__closure;const _currentSizeThreshold=currentSizeThreshold.get();if(_currentSizeThreshold!=='cover'){return;}if(current===previous){return;}resetToDefaultSize(_currentSizeThreshold);}",
+};
+let closure_38 = {
+  code: "function VoicePanelVideoRendererTsx21(){const{isInSnap}=this.__closure;return isInSnap.get();}",
+};
+let closure_39 = {
+  code: "function VoicePanelVideoRendererTsx22(current,previous){const{runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;if(current===previous){return;}if(!current){return;}runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_LIGHT);}",
+};
+let closure_40 = {
+  code: "function VoicePanelVideoRendererTsx23(){const{isInDefaultZoom,resetOnLayoutChange,focused,id,runOnJS,setFocused}=this.__closure;var _focused$get;if(!isInDefaultZoom.get()){resetOnLayoutChange();return;}if(((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)!==id){runOnJS(setFocused)(id);}else{runOnJS(setFocused)(null);}}",
+};
 let closure_41 = { code: "function VoicePanelVideoRendererTsx24(e,manager){return manager.fail();}" };
-let closure_42 = { code: "function VoicePanelVideoRendererTsx25(){const{controlsSpecs,VoicePanelControlsModes,runOnJS,showControls,hideControls}=this.__closure;if(controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN){runOnJS(showControls)({debounce:true});}else{runOnJS(hideControls)({debounce:true});}}" };
+let closure_42 = {
+  code: "function VoicePanelVideoRendererTsx25(){const{controlsSpecs,VoicePanelControlsModes,runOnJS,showControls,hideControls}=this.__closure;if(controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN){runOnJS(showControls)({debounce:true});}else{runOnJS(hideControls)({debounce:true});}}",
+};
 let closure_43 = { code: "function VoicePanelVideoRendererTsx26(e,manager){return manager.fail();}" };
-let closure_44 = { code: "function VoicePanelVideoRendererTsx27(){const{numGesturesActive,handleMovementEnd}=this.__closure;numGesturesActive.set(numGesturesActive.get()-1);handleMovementEnd();}" };
-let closure_45 = { code: "function VoicePanelVideoRendererTsx28(event){const{scale,getScaleChangeWithOverscroll,fitScale,containerLayout,translateX,translateY,isInSnap,isInCoverSnap}=this.__closure;scale.set(scale.get()*getScaleChangeWithOverscroll(scale.get(),event.scaleChange,fitScale.get()));const startingFocalFromCenterX=event.focalX-containerLayout.get().width/2;const startingFocalFromCenterY=event.focalY-containerLayout.get().height/2;const zoomCenteringX=-1*startingFocalFromCenterX*(event.scaleChange-1)/scale.get();const zoomCenteringY=-1*startingFocalFromCenterY*(event.scaleChange-1)/scale.get();translateX.set(translateX.get()+zoomCenteringX);translateY.set(translateY.get()+zoomCenteringY);isInSnap.set(isInCoverSnap());}" };
-let closure_46 = { code: "function VoicePanelVideoRendererTsx29(){const{numGesturesActive,isInPanToZoom,currentSizeThreshold}=this.__closure;numGesturesActive.set(numGesturesActive.get()+1);isInPanToZoom.set(false);currentSizeThreshold.set(null);}" };
-let closure_47 = { code: "function VoicePanelVideoRendererTsx30(event,manager){const{focused,id}=this.__closure;var _focused$get;if(((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)!==id){manager.fail();}}" };
-let closure_48 = { code: "function VoicePanelVideoRendererTsx31(){const{isInPanToZoom}=this.__closure;isInPanToZoom.set(false);}" };
-let closure_49 = { code: "function VoicePanelVideoRendererTsx32(event){const{numGesturesActive,translateX,withSpring,FLING_VELOCITY_SCALING,scale,SCALE_PHYSICS,translateY,handleMovementEnd}=this.__closure;numGesturesActive.set(numGesturesActive.get()-1);translateX.set(withSpring(translateX.get()+event.velocityX*FLING_VELOCITY_SCALING/scale.get(),SCALE_PHYSICS));translateY.set(withSpring(translateY.get()+event.velocityY*FLING_VELOCITY_SCALING/scale.get(),SCALE_PHYSICS));handleMovementEnd();}" };
-let closure_50 = { code: "function VoicePanelVideoRendererTsx33(event){const{isInPanToZoom,PAN_TO_ZOOM_SCALE_FACTOR,scale,getScaleChangeWithOverscroll,fitScale,translateX,translateY,isInSnap,isInCoverSnap}=this.__closure;if(isInPanToZoom.get()){const scaleChange=1+event.changeY*PAN_TO_ZOOM_SCALE_FACTOR;scale.set(scale.get()*getScaleChangeWithOverscroll(scale.get(),scaleChange,fitScale.get()));}else{translateX.set(translateX.get()+event.changeX/scale.get());translateY.set(translateY.get()+event.changeY/scale.get());}isInSnap.set(isInCoverSnap());}" };
-let closure_51 = { code: "function VoicePanelVideoRendererTsx34(){const{isInPanToZoom,runOnJS,hideControls,numGesturesActive,currentSizeThreshold}=this.__closure;if(isInPanToZoom.get()){runOnJS(hideControls)();}numGesturesActive.set(numGesturesActive.get()+1);currentSizeThreshold.set(null);}" };
-let closure_52 = { code: "function VoicePanelVideoRendererTsx35(){const{lastTapTimestamp,PAN_TO_ZOOM_TAP_TIME_MILLIS,isInPanToZoom}=this.__closure;const hasRecentTap=Date.now()-lastTapTimestamp.get()<=PAN_TO_ZOOM_TAP_TIME_MILLIS;isInPanToZoom.set(hasRecentTap);lastTapTimestamp.set(Date.now());}" };
-let closure_53 = { code: "function VoicePanelVideoRendererTsx36(event,manager){const{focused,id}=this.__closure;var _focused$get;if(((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)!==id){manager.fail();return;}}" };
+let closure_44 = {
+  code: "function VoicePanelVideoRendererTsx27(){const{numGesturesActive,handleMovementEnd}=this.__closure;numGesturesActive.set(numGesturesActive.get()-1);handleMovementEnd();}",
+};
+let closure_45 = {
+  code: "function VoicePanelVideoRendererTsx28(event){const{scale,getScaleChangeWithOverscroll,fitScale,containerLayout,translateX,translateY,isInSnap,isInCoverSnap}=this.__closure;scale.set(scale.get()*getScaleChangeWithOverscroll(scale.get(),event.scaleChange,fitScale.get()));const startingFocalFromCenterX=event.focalX-containerLayout.get().width/2;const startingFocalFromCenterY=event.focalY-containerLayout.get().height/2;const zoomCenteringX=-1*startingFocalFromCenterX*(event.scaleChange-1)/scale.get();const zoomCenteringY=-1*startingFocalFromCenterY*(event.scaleChange-1)/scale.get();translateX.set(translateX.get()+zoomCenteringX);translateY.set(translateY.get()+zoomCenteringY);isInSnap.set(isInCoverSnap());}",
+};
+let closure_46 = {
+  code: "function VoicePanelVideoRendererTsx29(){const{numGesturesActive,isInPanToZoom,currentSizeThreshold}=this.__closure;numGesturesActive.set(numGesturesActive.get()+1);isInPanToZoom.set(false);currentSizeThreshold.set(null);}",
+};
+let closure_47 = {
+  code: "function VoicePanelVideoRendererTsx30(event,manager){const{focused,id}=this.__closure;var _focused$get;if(((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)!==id){manager.fail();}}",
+};
+let closure_48 = {
+  code: "function VoicePanelVideoRendererTsx31(){const{isInPanToZoom}=this.__closure;isInPanToZoom.set(false);}",
+};
+let closure_49 = {
+  code: "function VoicePanelVideoRendererTsx32(event){const{numGesturesActive,translateX,withSpring,FLING_VELOCITY_SCALING,scale,SCALE_PHYSICS,translateY,handleMovementEnd}=this.__closure;numGesturesActive.set(numGesturesActive.get()-1);translateX.set(withSpring(translateX.get()+event.velocityX*FLING_VELOCITY_SCALING/scale.get(),SCALE_PHYSICS));translateY.set(withSpring(translateY.get()+event.velocityY*FLING_VELOCITY_SCALING/scale.get(),SCALE_PHYSICS));handleMovementEnd();}",
+};
+let closure_50 = {
+  code: "function VoicePanelVideoRendererTsx33(event){const{isInPanToZoom,PAN_TO_ZOOM_SCALE_FACTOR,scale,getScaleChangeWithOverscroll,fitScale,translateX,translateY,isInSnap,isInCoverSnap}=this.__closure;if(isInPanToZoom.get()){const scaleChange=1+event.changeY*PAN_TO_ZOOM_SCALE_FACTOR;scale.set(scale.get()*getScaleChangeWithOverscroll(scale.get(),scaleChange,fitScale.get()));}else{translateX.set(translateX.get()+event.changeX/scale.get());translateY.set(translateY.get()+event.changeY/scale.get());}isInSnap.set(isInCoverSnap());}",
+};
+let closure_51 = {
+  code: "function VoicePanelVideoRendererTsx34(){const{isInPanToZoom,runOnJS,hideControls,numGesturesActive,currentSizeThreshold}=this.__closure;if(isInPanToZoom.get()){runOnJS(hideControls)();}numGesturesActive.set(numGesturesActive.get()+1);currentSizeThreshold.set(null);}",
+};
+let closure_52 = {
+  code: "function VoicePanelVideoRendererTsx35(){const{lastTapTimestamp,PAN_TO_ZOOM_TAP_TIME_MILLIS,isInPanToZoom}=this.__closure;const hasRecentTap=Date.now()-lastTapTimestamp.get()<=PAN_TO_ZOOM_TAP_TIME_MILLIS;isInPanToZoom.set(hasRecentTap);lastTapTimestamp.set(Date.now());}",
+};
+let closure_53 = {
+  code: "function VoicePanelVideoRendererTsx36(event,manager){const{focused,id}=this.__closure;var _focused$get;if(((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)!==id){manager.fail();return;}}",
+};
 function shouldMakeActive(mode) {
   ({ focusedId, isScrollVisible } = mode);
   let tmp = !isScrollVisible;
@@ -83,17 +162,39 @@ function shouldMakeActive(mode) {
 }
 shouldMakeActive.__closure = { VoicePanelModes };
 shouldMakeActive.__workletHash = 14556501664557;
-shouldMakeActive.__initData = { code: "function shouldMakeActive_VoicePanelVideoRendererTsx37({mode:mode,focusedId:focusedId,selfId:selfId,isScrollVisible:isScrollVisible}){const{VoicePanelModes}=this.__closure;const isPIP=mode===VoicePanelModes.PIP;if(!isScrollVisible||isPIP||focusedId!=null&&focusedId!==selfId){return false;}return true;}" };
-let closure_55 = { code: "function VoicePanelVideoRendererTsx38(){const{mode,focused,isScrollVisible,streamId}=this.__closure;var _focused$get;return[mode.get(),(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id,isScrollVisible.get(),streamId];}" };
-let closure_56 = { code: "function VoicePanelVideoRendererTsx39(props,previous){const{cheapWorkletArrayShallowEqual,runOnJS,setHasActiveVideoOutputSink,shouldMakeActive,id}=this.__closure;if(cheapWorkletArrayShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const[mode,focusedId,isScrollVisible,streamId]=props;if(streamId==null)return;runOnJS(setHasActiveVideoOutputSink)(streamId,shouldMakeActive({mode:mode,focusedId:focusedId,selfId:id,isScrollVisible:isScrollVisible}));}" };
-let closure_57 = { code: "function VoicePanelVideoRendererTsx40(){const{focused,id,windowDimensions,sharedCoords}=this.__closure;var _focused$get;if(((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id){return{width:windowDimensions.get().width,height:windowDimensions.get().height};}return{width:sharedCoords.get().width,height:sharedCoords.get().height};}" };
-let closure_58 = { code: "function VoicePanelVideoRendererTsx41(){const{scale,videoDimensions,mode}=this.__closure;return[scale.get(),videoDimensions.get(),mode.get()];}" };
-let closure_59 = { code: "function VoicePanelVideoRendererTsx42(props,previous){const{streamId,cheapWorkletShallowEqual,runOnJS,respondToVideoSizeUpdate}=this.__closure;if(streamId==null)return;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;runOnJS(respondToVideoSizeUpdate)();}" };
-let closure_60 = { code: "function VoicePanelVideoRendererTsx43(){const{videoDimensions,pipState,VoicePanelPIPModes,scale,disableAnimations,translateX,translateY,mirror}=this.__closure;let{width:width,height:height}=videoDimensions.get();if(pipState.mode===VoicePanelPIPModes.IN_APP){if(width>height){width=width*(pipState.height/height)/scale.get();height=pipState.height/scale.get();}else{height=height*(pipState.width/width)/scale.get();width=pipState.width/scale.get();}}return{width:width,height:height,opacity:disableAnimations.get()?0:1,transform:[{scale:scale.get()},{translateX:translateX.get()},{translateY:translateY.get()},{scaleX:mirror?-1:1}]};}" };
-let closure_61 = { code: "function VoicePanelVideoRendererTsx44(){const{mode,VoicePanelModes,focused,id}=this.__closure;var _focused$get;return{inPip:mode.get()===VoicePanelModes.PIP,isFocused:((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id};}" };
-let closure_62 = { code: "function VoicePanelVideoRendererTsx45(curr,prev){const{cheapWorkletShallowEqual,strokeOpacity,withDelay,withTiming}=this.__closure;if(cheapWorkletShallowEqual(curr,prev!==null&&prev!==void 0?prev:undefined))return;if(curr.inPip||curr.isFocused){strokeOpacity.set(0);return;}const shouldDelay=(prev===null||prev===void 0?void 0:prev.isFocused)===true;strokeOpacity.set(shouldDelay?withDelay(300,withTiming(0.3,{duration:0},'animate-never')):0.3);}" };
-let closure_63 = { code: "function VoicePanelVideoRendererTsx46(){const{isInSnap,SNAP_EDGE_INNER_THRESHOLD,borderRadius,strokeOpacity}=this.__closure;if(isInSnap.get()){return{position:'absolute',top:0,left:0,bottom:0,right:0,borderWidth:SNAP_EDGE_INNER_THRESHOLD,overflow:'hidden',borderColor:'white',opacity:0.5};}return{position:'absolute',top:-1,left:-1,bottom:-1,right:-1,borderWidth:2,borderRadius:borderRadius+2,overflow:'hidden',borderColor:'white',opacity:strokeOpacity.get()};}" };
-let closure_64 = { code: "function VoicePanelVideoRendererTsx47(values){const{layout,disableAnimations}=this.__closure;return layout(values,disableAnimations.get());}" };
+shouldMakeActive.__initData = {
+  code: "function shouldMakeActive_VoicePanelVideoRendererTsx37({mode:mode,focusedId:focusedId,selfId:selfId,isScrollVisible:isScrollVisible}){const{VoicePanelModes}=this.__closure;const isPIP=mode===VoicePanelModes.PIP;if(!isScrollVisible||isPIP||focusedId!=null&&focusedId!==selfId){return false;}return true;}",
+};
+let closure_55 = {
+  code: "function VoicePanelVideoRendererTsx38(){const{mode,focused,isScrollVisible,streamId}=this.__closure;var _focused$get;return[mode.get(),(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id,isScrollVisible.get(),streamId];}",
+};
+let closure_56 = {
+  code: "function VoicePanelVideoRendererTsx39(props,previous){const{cheapWorkletArrayShallowEqual,runOnJS,setHasActiveVideoOutputSink,shouldMakeActive,id}=this.__closure;if(cheapWorkletArrayShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const[mode,focusedId,isScrollVisible,streamId]=props;if(streamId==null)return;runOnJS(setHasActiveVideoOutputSink)(streamId,shouldMakeActive({mode:mode,focusedId:focusedId,selfId:id,isScrollVisible:isScrollVisible}));}",
+};
+let closure_57 = {
+  code: "function VoicePanelVideoRendererTsx40(){const{focused,id,windowDimensions,sharedCoords}=this.__closure;var _focused$get;if(((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id){return{width:windowDimensions.get().width,height:windowDimensions.get().height};}return{width:sharedCoords.get().width,height:sharedCoords.get().height};}",
+};
+let closure_58 = {
+  code: "function VoicePanelVideoRendererTsx41(){const{scale,videoDimensions,mode}=this.__closure;return[scale.get(),videoDimensions.get(),mode.get()];}",
+};
+let closure_59 = {
+  code: "function VoicePanelVideoRendererTsx42(props,previous){const{streamId,cheapWorkletShallowEqual,runOnJS,respondToVideoSizeUpdate}=this.__closure;if(streamId==null)return;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;runOnJS(respondToVideoSizeUpdate)();}",
+};
+let closure_60 = {
+  code: "function VoicePanelVideoRendererTsx43(){const{videoDimensions,pipState,VoicePanelPIPModes,scale,disableAnimations,translateX,translateY,mirror}=this.__closure;let{width:width,height:height}=videoDimensions.get();if(pipState.mode===VoicePanelPIPModes.IN_APP){if(width>height){width=width*(pipState.height/height)/scale.get();height=pipState.height/scale.get();}else{height=height*(pipState.width/width)/scale.get();width=pipState.width/scale.get();}}return{width:width,height:height,opacity:disableAnimations.get()?0:1,transform:[{scale:scale.get()},{translateX:translateX.get()},{translateY:translateY.get()},{scaleX:mirror?-1:1}]};}",
+};
+let closure_61 = {
+  code: "function VoicePanelVideoRendererTsx44(){const{mode,VoicePanelModes,focused,id}=this.__closure;var _focused$get;return{inPip:mode.get()===VoicePanelModes.PIP,isFocused:((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id};}",
+};
+let closure_62 = {
+  code: "function VoicePanelVideoRendererTsx45(curr,prev){const{cheapWorkletShallowEqual,strokeOpacity,withDelay,withTiming}=this.__closure;if(cheapWorkletShallowEqual(curr,prev!==null&&prev!==void 0?prev:undefined))return;if(curr.inPip||curr.isFocused){strokeOpacity.set(0);return;}const shouldDelay=(prev===null||prev===void 0?void 0:prev.isFocused)===true;strokeOpacity.set(shouldDelay?withDelay(300,withTiming(0.3,{duration:0},'animate-never')):0.3);}",
+};
+let closure_63 = {
+  code: "function VoicePanelVideoRendererTsx46(){const{isInSnap,SNAP_EDGE_INNER_THRESHOLD,borderRadius,strokeOpacity}=this.__closure;if(isInSnap.get()){return{position:'absolute',top:0,left:0,bottom:0,right:0,borderWidth:SNAP_EDGE_INNER_THRESHOLD,overflow:'hidden',borderColor:'white',opacity:0.5};}return{position:'absolute',top:-1,left:-1,bottom:-1,right:-1,borderWidth:2,borderRadius:borderRadius+2,overflow:'hidden',borderColor:'white',opacity:strokeOpacity.get()};}",
+};
+let closure_64 = {
+  code: "function VoicePanelVideoRendererTsx47(values){const{layout,disableAnimations}=this.__closure;return layout(values,disableAnimations.get());}",
+};
 const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   let id = streamKey.id;
   const streamId = streamKey.streamId;
@@ -143,7 +244,9 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   let tmp = sharedValue5();
   let obj = id(focused[16]);
   obj1 = importAllResult;
-  const surfaceDirectRendererExperiment = obj.useSurfaceDirectRendererExperiment(userId, { location: "VoicePanelVideoRenderer" });
+  const surfaceDirectRendererExperiment = obj.useSurfaceDirectRendererExperiment(userId, {
+    location: "VoicePanelVideoRenderer",
+  });
   const context = importAllResult.useContext(isCamera(focused[11]));
   mode = context.mode;
   setIsFocusedVideoZoomed = mode;
@@ -170,7 +273,14 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       dismissToPIPGestureRef(id);
     }
   });
-  const onReady = isCamera(focused[18])({ streamId, userId, loading: tmp12, videoSpinnerContext, paused: flag3, streamKey: streamKey.streamKey }).onReady;
+  const onReady = isCamera(focused[18])({
+    streamId,
+    userId,
+    loading: tmp12,
+    videoSpinnerContext,
+    paused: flag3,
+    streamKey: streamKey.streamKey,
+  }).onReady;
   sharedValue5 = onReady;
   isCamera(focused[19])({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, loading: tmp12 });
   let items = [onReady];
@@ -185,7 +295,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   let obj7 = id(focused[8]);
   class Je {
     constructor() {
-      items = [, , , ];
+      items = [, , ,];
       items[0] = setIsFocusedVideoZoomed.get();
       value = windowDimensions.get();
       id = undefined;
@@ -239,7 +349,13 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       return;
     }
   }
-  obj = { cheapWorkletArrayShallowEqual: id(focused[13]).cheapWorkletArrayShallowEqual, runOnJS: id(focused[8]).runOnJS, setHasActiveVideoOutputSink, shouldMakeActive, id };
+  obj = {
+    cheapWorkletArrayShallowEqual: id(focused[13]).cheapWorkletArrayShallowEqual,
+    runOnJS: id(focused[8]).runOnJS,
+    setHasActiveVideoOutputSink,
+    shouldMakeActive,
+    id,
+  };
   We.__closure = obj;
   We.__workletHash = 12089612803324;
   We.__initData = closure_56;
@@ -376,7 +492,13 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       return tmp;
     }
   }
-  I.__closure = { translateX: sharedValue3, translateY: sharedValue4, scale: sharedValue2, fitScale: derivedValue2, coverScale: derivedValue1 };
+  I.__closure = {
+    translateX: sharedValue3,
+    translateY: sharedValue4,
+    scale: sharedValue2,
+    fitScale: derivedValue2,
+    coverScale: derivedValue1,
+  };
   I.__workletHash = 15099362638406;
   I.__initData = sharedValue3;
   const derivedValue3 = id(focused[8]).useDerivedValue(I);
@@ -406,7 +528,18 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     const result3 = sharedValue4.set(id(focused[12]).withSpring(0, dismissToPIPGestureRef));
     const result4 = sharedValue4.set(arg0);
   }
-  obj1 = { scale: sharedValue2, withSpring: id(focused[12]).withSpring, fitScale: derivedValue2, MODE_CHANGE_PHYSICS: sharedValue, disableAnimations: sharedValue, coverScale: derivedValue1, translateX: sharedValue3, SCALE_PHYSICS: dismissToPIPGestureRef, translateY: sharedValue4, currentSizeThreshold: sharedValue9 };
+  obj1 = {
+    scale: sharedValue2,
+    withSpring: id(focused[12]).withSpring,
+    fitScale: derivedValue2,
+    MODE_CHANGE_PHYSICS: sharedValue,
+    disableAnimations: sharedValue,
+    coverScale: derivedValue1,
+    translateX: sharedValue3,
+    SCALE_PHYSICS: dismissToPIPGestureRef,
+    translateY: sharedValue4,
+    currentSizeThreshold: sharedValue9,
+  };
   ae.__closure = obj1;
   ae.__workletHash = 16610861286231;
   ae.__initData = sharedValue4;
@@ -436,7 +569,14 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     }
     token(str);
   }
-  re.__closure = { focused, id, videoDimensions: sharedValue1, windowDimensions: windowDimensions2, isCamera, resetToDefaultSize: callback2 };
+  re.__closure = {
+    focused,
+    id,
+    videoDimensions: sharedValue1,
+    windowDimensions: windowDimensions2,
+    isCamera,
+    resetToDefaultSize: callback2,
+  };
   re.__workletHash = 15643035811761;
   re.__initData = sharedValue6;
   const items3 = [focused, id, isCamera, sharedValue1, windowDimensions2, callback2];
@@ -462,7 +602,12 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       tmp6 = id === id && safeAreaState !== current && null != current;
     }
   }
-  obj2 = { cheapWorkletShallowEqual: id(focused[13]).cheapWorkletShallowEqual, focused, id, resetOnLayoutChange: callback3 };
+  obj2 = {
+    cheapWorkletShallowEqual: id(focused[13]).cheapWorkletShallowEqual,
+    focused,
+    id,
+    resetOnLayoutChange: callback3,
+  };
   ce.__closure = obj2;
   ce.__workletHash = 13816224514199;
   ce.__initData = callback6;
@@ -535,7 +680,19 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       }
     }
   }
-  Le.__closure = { coverScale: derivedValue1, fitScale: derivedValue2, MIN_ZOOM_FOR_COVER_SNAP_OFFSET: 0.05, translateX: sharedValue3, scale: sharedValue2, translateY: sharedValue4, SNAP_CENTER_THRESHOLD: 50, containerLayout: derivedValue, videoDimensions: sharedValue1, SNAP_EDGE_OUTER_THRESHOLD: 50, SNAP_EDGE_INNER_THRESHOLD: controlsSpecs };
+  Le.__closure = {
+    coverScale: derivedValue1,
+    fitScale: derivedValue2,
+    MIN_ZOOM_FOR_COVER_SNAP_OFFSET: 0.05,
+    translateX: sharedValue3,
+    scale: sharedValue2,
+    translateY: sharedValue4,
+    SNAP_CENTER_THRESHOLD: 50,
+    containerLayout: derivedValue,
+    videoDimensions: sharedValue1,
+    SNAP_EDGE_OUTER_THRESHOLD: 50,
+    SNAP_EDGE_INNER_THRESHOLD: controlsSpecs,
+  };
   Le.__workletHash = 3902544453390;
   Le.__initData = token;
   const items4 = [derivedValue1, sharedValue2, sharedValue3, sharedValue4, derivedValue, sharedValue1, derivedValue2];
@@ -556,12 +713,16 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
           const bound1 = Math.max(0, (sharedValue1.get().width - derivedValue.get().width / obj.get()) / 2);
           const _Math3 = Math;
           const _Math4 = Math;
-          const result1 = sharedValue3.set(id(focused[12]).withSpring(Math.min(bound1, Math.max(-bound1, sharedValue3.get())), dismissToPIPGestureRef));
+          const result1 = sharedValue3.set(
+            id(focused[12]).withSpring(Math.min(bound1, Math.max(-bound1, sharedValue3.get())), dismissToPIPGestureRef),
+          );
           const obj3 = id(focused[12]);
           const tmp16 = -bound1;
           const _Math5 = Math;
           const _Math6 = Math;
-          const result2 = sharedValue4.set(id(focused[12]).withSpring(Math.min(bound, Math.max(-bound, sharedValue4.get())), dismissToPIPGestureRef));
+          const result2 = sharedValue4.set(
+            id(focused[12]).withSpring(Math.min(bound, Math.max(-bound, sharedValue4.get())), dismissToPIPGestureRef),
+          );
           const obj4 = id(focused[12]);
           const tmp20 = -bound;
         }
@@ -569,11 +730,33 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       obj2 = sharedValue6;
     }
   }
-  obj3 = { numGesturesActive: sharedValue5, isInSnap: sharedValue6, resetToDefaultSize: callback2, scale: sharedValue2, fitScale: derivedValue2, videoDimensions: sharedValue1, containerLayout: derivedValue, translateX: sharedValue3, withSpring: id(focused[12]).withSpring, SCALE_PHYSICS: dismissToPIPGestureRef, translateY: sharedValue4 };
+  obj3 = {
+    numGesturesActive: sharedValue5,
+    isInSnap: sharedValue6,
+    resetToDefaultSize: callback2,
+    scale: sharedValue2,
+    fitScale: derivedValue2,
+    videoDimensions: sharedValue1,
+    containerLayout: derivedValue,
+    translateX: sharedValue3,
+    withSpring: id(focused[12]).withSpring,
+    SCALE_PHYSICS: dismissToPIPGestureRef,
+    translateY: sharedValue4,
+  };
   ye.__closure = obj3;
   ye.__workletHash = 3493652911835;
   ye.__initData = sharedValue10;
-  const items5 = [derivedValue2, sharedValue5, sharedValue6, sharedValue2, sharedValue1, derivedValue, sharedValue3, sharedValue4, callback2];
+  const items5 = [
+    derivedValue2,
+    sharedValue5,
+    sharedValue6,
+    sharedValue2,
+    sharedValue1,
+    derivedValue,
+    sharedValue3,
+    sharedValue4,
+    callback2,
+  ];
   callback5 = importAllResult.useCallback(ye, items5);
   const obj23 = id(focused[8]);
   const tmp34 = controlsSpecs;
@@ -737,11 +920,38 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     }
   }
   const obj31 = id(focused[8]);
-  Ze.__closure = { runOnJS: id(focused[8]).runOnJS, triggerHapticFeedback: id(focused[14]).triggerHapticFeedback, HapticFeedbackTypes: id(focused[14]).HapticFeedbackTypes };
+  Ze.__closure = {
+    runOnJS: id(focused[8]).runOnJS,
+    triggerHapticFeedback: id(focused[14]).triggerHapticFeedback,
+    HapticFeedbackTypes: id(focused[14]).HapticFeedbackTypes,
+  };
   Ze.__workletHash = 11115846398818;
   Ze.__initData = closure_39;
   const animatedReaction7 = obj31.useAnimatedReaction($e, Ze);
-  const items6 = [tmp12, dismissToPIPGestureRef, focused, id, sharedValue2, sharedValue3, sharedValue4, callback3, sharedValue5, sharedValue9, derivedValue, sharedValue6, callback4, callback5, sharedValue7, sharedValue8, derivedValue3, setFocused, hideControls, controlsSpecs, showControls, derivedValue2];
+  const items6 = [
+    tmp12,
+    dismissToPIPGestureRef,
+    focused,
+    id,
+    sharedValue2,
+    sharedValue3,
+    sharedValue4,
+    callback3,
+    sharedValue5,
+    sharedValue9,
+    derivedValue,
+    sharedValue6,
+    callback4,
+    callback5,
+    sharedValue7,
+    sharedValue8,
+    derivedValue3,
+    setFocused,
+    hideControls,
+    controlsSpecs,
+    showControls,
+    derivedValue2,
+  ];
   const memo = importAllResult.useMemo(() => {
     const Gesture = id(focused[15]).Gesture;
     const Gesture2 = id(focused[15]).Gesture;
@@ -786,7 +996,14 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
         return;
       }
     }
-    let obj = { isInDefaultZoom: callback6, resetOnLayoutChange: sharedValue10, focused, id, runOnJS: id(focused[8]).runOnJS, setFocused };
+    let obj = {
+      isInDefaultZoom: callback6,
+      resetOnLayoutChange: sharedValue10,
+      focused,
+      id,
+      runOnJS: id(focused[8]).runOnJS,
+      setFocused,
+    };
     E.__closure = obj;
     E.__workletHash = 10743965328356;
     E.__initData = closure_1_40;
@@ -820,7 +1037,13 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
         return;
       }
     }
-    obj = { controlsSpecs, VoicePanelControlsModes: setIsFocusedVideoZoomed, runOnJS: id(focused[8]).runOnJS, showControls, hideControls };
+    obj = {
+      controlsSpecs,
+      VoicePanelControlsModes: setIsFocusedVideoZoomed,
+      runOnJS: id(focused[8]).runOnJS,
+      showControls,
+      hideControls,
+    };
     V.__closure = obj;
     V.__workletHash = 11260765819879;
     V.__initData = closure_1_42;
@@ -878,17 +1101,35 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       const diff2 = scaleChange.focalX - store2.get().width / 2;
       const diff3 = scaleChange.focalY - store2.get().height / 2;
       const diff4 = scaleChange.scaleChange - 1;
-      const result1 = -1 * diff2 * diff4 / obj.get();
+      const result1 = (-1 * diff2 * diff4) / obj.get();
       const diff5 = scaleChange.scaleChange - 1;
-      const result2 = -1 * diff3 * diff5 / obj.get();
+      const result2 = (-1 * diff3 * diff5) / obj.get();
       const result3 = store4.set(store4.get() + result1);
       const result4 = store5.set(store5.get() + result2);
       const result5 = store7.set(callback2());
     };
-    fn.__closure = { scale: sharedValue2, getScaleChangeWithOverscroll: sharedValue4, fitScale: derivedValue2, containerLayout: derivedValue, translateX: sharedValue3, translateY: sharedValue4, isInSnap: sharedValue6, isInCoverSnap: callback4 };
+    fn.__closure = {
+      scale: sharedValue2,
+      getScaleChangeWithOverscroll: sharedValue4,
+      fitScale: derivedValue2,
+      containerLayout: derivedValue,
+      translateX: sharedValue3,
+      translateY: sharedValue4,
+      isInSnap: sharedValue6,
+      isInCoverSnap: callback4,
+    };
     fn.__workletHash = 2077670235308;
     fn.__initData = closure_1_45;
-    let obj2 = { scale: sharedValue2, getScaleChangeWithOverscroll: sharedValue4, fitScale: derivedValue2, containerLayout: derivedValue, translateX: sharedValue3, translateY: sharedValue4, isInSnap: sharedValue6, isInCoverSnap: callback4 };
+    let obj2 = {
+      scale: sharedValue2,
+      getScaleChangeWithOverscroll: sharedValue4,
+      fitScale: derivedValue2,
+      containerLayout: derivedValue,
+      translateX: sharedValue3,
+      translateY: sharedValue4,
+      isInSnap: sharedValue6,
+      isInCoverSnap: callback4,
+    };
     const onStartResult1 = Gesture5.Pinch().enabled(!closure_4).onTouchesDown(I).onStart(D);
     const fn2 = function v() {
       const result = store6.set(store6.get() - 1);
@@ -940,10 +1181,22 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       const result1 = store10.set(null);
     };
     const onBeginResult = result.averageTouches(true).onTouchesDown(fn3).onBegin(S);
-    fn4.__closure = { isInPanToZoom: sharedValue3, runOnJS: id(focused[8]).runOnJS, hideControls, numGesturesActive: sharedValue5, currentSizeThreshold: sharedValue4 };
+    fn4.__closure = {
+      isInPanToZoom: sharedValue3,
+      runOnJS: id(focused[8]).runOnJS,
+      hideControls,
+      numGesturesActive: sharedValue5,
+      currentSizeThreshold: sharedValue4,
+    };
     fn4.__workletHash = 16349993539830;
     fn4.__initData = closure_1_51;
-    const obj5 = { isInPanToZoom: sharedValue3, runOnJS: id(focused[8]).runOnJS, hideControls, numGesturesActive: sharedValue5, currentSizeThreshold: sharedValue4 };
+    const obj5 = {
+      isInPanToZoom: sharedValue3,
+      runOnJS: id(focused[8]).runOnJS,
+      hideControls,
+      numGesturesActive: sharedValue5,
+      currentSizeThreshold: sharedValue4,
+    };
     const fn5 = function s(changeY) {
       if (store9.get()) {
         const result = changeY.changeY * closure_1_15;
@@ -969,10 +1222,30 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       }
       const result4 = store7.set(callback2());
     };
-    fn5.__closure = { isInPanToZoom: sharedValue3, PAN_TO_ZOOM_SCALE_FACTOR: sharedValue2, scale: sharedValue2, getScaleChangeWithOverscroll: sharedValue4, fitScale: derivedValue2, translateX: sharedValue3, translateY: sharedValue4, isInSnap: sharedValue6, isInCoverSnap: callback4 };
+    fn5.__closure = {
+      isInPanToZoom: sharedValue3,
+      PAN_TO_ZOOM_SCALE_FACTOR: sharedValue2,
+      scale: sharedValue2,
+      getScaleChangeWithOverscroll: sharedValue4,
+      fitScale: derivedValue2,
+      translateX: sharedValue3,
+      translateY: sharedValue4,
+      isInSnap: sharedValue6,
+      isInCoverSnap: callback4,
+    };
     fn5.__workletHash = 17282206686388;
     fn5.__initData = closure_1_50;
-    const obj6 = { isInPanToZoom: sharedValue3, PAN_TO_ZOOM_SCALE_FACTOR: sharedValue2, scale: sharedValue2, getScaleChangeWithOverscroll: sharedValue4, fitScale: derivedValue2, translateX: sharedValue3, translateY: sharedValue4, isInSnap: sharedValue6, isInCoverSnap: callback4 };
+    const obj6 = {
+      isInPanToZoom: sharedValue3,
+      PAN_TO_ZOOM_SCALE_FACTOR: sharedValue2,
+      scale: sharedValue2,
+      getScaleChangeWithOverscroll: sharedValue4,
+      fitScale: derivedValue2,
+      translateX: sharedValue3,
+      translateY: sharedValue4,
+      isInSnap: sharedValue6,
+      isInCoverSnap: callback4,
+    };
     const onStartResult2 = onBeginResult.onStart(fn4);
     const fn6 = function o(velocityX) {
       const result = store6.set(store6.get() - 1);
@@ -986,10 +1259,28 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       callback3();
     };
     const onChangeResult1 = onBeginResult.onStart(fn4).onChange(fn5);
-    fn6.__closure = { numGesturesActive: sharedValue5, translateX: sharedValue3, withSpring: id(focused[12]).withSpring, FLING_VELOCITY_SCALING: showControls, scale: sharedValue2, SCALE_PHYSICS: dismissToPIPGestureRef, translateY: sharedValue4, handleMovementEnd: callback5 };
+    fn6.__closure = {
+      numGesturesActive: sharedValue5,
+      translateX: sharedValue3,
+      withSpring: id(focused[12]).withSpring,
+      FLING_VELOCITY_SCALING: showControls,
+      scale: sharedValue2,
+      SCALE_PHYSICS: dismissToPIPGestureRef,
+      translateY: sharedValue4,
+      handleMovementEnd: callback5,
+    };
     fn6.__workletHash = 10045783163820;
     fn6.__initData = closure_1_49;
-    const obj7 = { numGesturesActive: sharedValue5, translateX: sharedValue3, withSpring: id(focused[12]).withSpring, FLING_VELOCITY_SCALING: showControls, scale: sharedValue2, SCALE_PHYSICS: dismissToPIPGestureRef, translateY: sharedValue4, handleMovementEnd: callback5 };
+    const obj7 = {
+      numGesturesActive: sharedValue5,
+      translateX: sharedValue3,
+      withSpring: id(focused[12]).withSpring,
+      FLING_VELOCITY_SCALING: showControls,
+      scale: sharedValue2,
+      SCALE_PHYSICS: dismissToPIPGestureRef,
+      translateY: sharedValue4,
+      handleMovementEnd: callback5,
+    };
     const fn7 = function t() {
       const result = store9.set(false);
     };
@@ -1017,10 +1308,14 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       obj.updateVideoSize(isCamera, obj, sharedValue2.get());
     }
   }, items7);
-  let obj4 = { runOnJS: id(focused[8]).runOnJS, triggerHapticFeedback: id(focused[14]).triggerHapticFeedback, HapticFeedbackTypes: id(focused[14]).HapticFeedbackTypes };
+  let obj4 = {
+    runOnJS: id(focused[8]).runOnJS,
+    triggerHapticFeedback: id(focused[14]).triggerHapticFeedback,
+    HapticFeedbackTypes: id(focused[14]).HapticFeedbackTypes,
+  };
   class Ke {
     constructor() {
-      items = [, , ];
+      items = [, ,];
       items[0] = closure_20.get();
       items[1] = showControls.get();
       items[2] = setIsFocusedVideoZoomed.get();
@@ -1047,7 +1342,12 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       return;
     }
   }
-  obj5 = { streamId, cheapWorkletShallowEqual: id(focused[13]).cheapWorkletShallowEqual, runOnJS: id(focused[8]).runOnJS, respondToVideoSizeUpdate: callback6 };
+  obj5 = {
+    streamId,
+    cheapWorkletShallowEqual: id(focused[13]).cheapWorkletShallowEqual,
+    runOnJS: id(focused[8]).runOnJS,
+    respondToVideoSizeUpdate: callback6,
+  };
   Be.__closure = obj5;
   Be.__workletHash = 5259362546534;
   Be.__initData = closure_59;
@@ -1082,7 +1382,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       obj[2] = num2;
       obj = { scale: null };
       obj[0] = sharedValue2.get();
-      const items = [obj, , , ];
+      const items = [obj, , ,];
       obj = { translateX: null };
       obj[0] = sharedValue3.get();
       items[1] = obj;
@@ -1110,7 +1410,16 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       result1 = size.width / sharedValue2.get();
     }
   }
-  obj6 = { videoDimensions: sharedValue1, pipState: pIPState, VoicePanelPIPModes: windowDimensions2, scale: sharedValue2, disableAnimations: sharedValue, translateX: sharedValue3, translateY: sharedValue4, mirror: flag };
+  obj6 = {
+    videoDimensions: sharedValue1,
+    pipState: pIPState,
+    VoicePanelPIPModes: windowDimensions2,
+    scale: sharedValue2,
+    disableAnimations: sharedValue,
+    translateX: sharedValue3,
+    translateY: sharedValue4,
+    mirror: flag,
+  };
   lt.__closure = obj6;
   lt.__workletHash = 4149619035590;
   lt.__initData = closure_60;
@@ -1165,7 +1474,12 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       const result1 = sharedValue10.set(0);
     }
   }
-  obj7 = { cheapWorkletShallowEqual: tmp2(tmp3[13]).cheapWorkletShallowEqual, strokeOpacity: sharedValue10, withDelay: tmp2(tmp3[8]).withDelay, withTiming: tmp2(tmp3[26]).withTiming };
+  obj7 = {
+    cheapWorkletShallowEqual: tmp2(tmp3[13]).cheapWorkletShallowEqual,
+    strokeOpacity: sharedValue10,
+    withDelay: tmp2(tmp3[8]).withDelay,
+    withTiming: tmp2(tmp3[26]).withTiming,
+  };
   dt.__closure = obj7;
   dt.__workletHash = 5119744299592;
   dt.__initData = closure_62;
@@ -1174,11 +1488,32 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   class St {
     constructor() {
       if (closure_23.get()) {
-        obj = { position: "absolute", top: 0, left: 0, bottom: 0, right: 0, borderWidth: null, overflow: "hidden", borderColor: "white", opacity: 0.5 };
+        obj = {
+          position: "absolute",
+          top: 0,
+          left: 0,
+          bottom: 0,
+          right: 0,
+          borderWidth: null,
+          overflow: "hidden",
+          borderColor: "white",
+          opacity: 0.5,
+        };
         tmp3 = controlsSpecs;
         obj[5] = controlsSpecs;
       } else {
-        obj = { position: "absolute", top: -1, left: -1, bottom: -1, right: -1, borderWidth: 2, borderRadius: null, overflow: "hidden", borderColor: "white", opacity: null };
+        obj = {
+          position: "absolute",
+          top: -1,
+          left: -1,
+          bottom: -1,
+          right: -1,
+          borderWidth: 2,
+          borderRadius: null,
+          overflow: "hidden",
+          borderColor: "white",
+          opacity: null,
+        };
         tmp = closure_26;
         num = 2;
         obj[6] = closure_26 + 2;
@@ -1188,7 +1523,12 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       return obj;
     }
   }
-  St.__closure = { isInSnap: sharedValue6, SNAP_EDGE_INNER_THRESHOLD: tmp34, borderRadius: token, strokeOpacity: sharedValue10 };
+  St.__closure = {
+    isInSnap: sharedValue6,
+    SNAP_EDGE_INNER_THRESHOLD: tmp34,
+    borderRadius: token,
+    strokeOpacity: sharedValue10,
+  };
   St.__workletHash = 5172898891721;
   St.__initData = closure_63;
   function ft(arg0) {
@@ -1206,10 +1546,17 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   let tmp5Result = tmp5(tmp3[27]);
   obj10 = { style: items11, layout: callback7, children: null };
   items11 = [tmp.animatedWrapperStyles, animatedStyle];
-  obj11 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId, onReady: callback, onSize: callback1, style: tmp.video, layout: callback7 };
+  obj11 = {
+    useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
+    streamId,
+    onReady: callback,
+    onSize: callback1,
+    style: tmp.video,
+    layout: callback7,
+  };
   tmp5Result = tmp5(tmp3[27]);
   obj10[2] = setFocused(sharedValue3, obj11);
-  const items12 = [setFocused(tmp5Result, obj10), ];
+  const items12 = [setFocused(tmp5Result, obj10)];
   if (tmp12) {
     obj12 = { animate: true, style: null };
     obj12[1] = tmp.spinner;

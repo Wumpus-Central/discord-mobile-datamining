@@ -3,9 +3,21 @@ import getSystemLocale from "../../intl/index.native.tsx";
 import closure_2 from "../applications/ApplicationStore.tsx";
 
 require = arg1;
-const items = [require("WidgetType").WidgetType.PERSONAL, require("WidgetType").WidgetType.CLIPS_GALLERY, require("WidgetType").WidgetType.APPLICATION, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.PLAYED_GAMES, require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.WANT_TO_PLAY_GAMES];
+const items = [
+  require("WidgetType").WidgetType.PERSONAL,
+  require("WidgetType").WidgetType.CLIPS_GALLERY,
+  require("WidgetType").WidgetType.APPLICATION,
+  require("WidgetType").WidgetType.FAVORITE_GAMES,
+  require("WidgetType").WidgetType.PLAYED_GAMES,
+  require("WidgetType").WidgetType.CURRENT_GAMES,
+  require("WidgetType").WidgetType.WANT_TO_PLAY_GAMES,
+];
 const items1 = [require("WidgetType").WidgetType.FAVORITE_GAMES];
-const items2 = [require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.CLIPS_GALLERY];
+const items2 = [
+  require("WidgetType").WidgetType.CURRENT_GAMES,
+  require("WidgetType").WidgetType.FAVORITE_GAMES,
+  require("WidgetType").WidgetType.CLIPS_GALLERY,
+];
 const obj = {
   [arg1(7367).WidgetType.FAVORITE_GAMES]: () => {
     const intl = getSystemLocale.intl;
@@ -41,7 +53,7 @@ const obj = {
   [arg1(7367).WidgetType.CLIPS_GALLERY]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.zY8Ghg);
-  }
+  },
 };
 const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileWidgetConstants.tsx");
 

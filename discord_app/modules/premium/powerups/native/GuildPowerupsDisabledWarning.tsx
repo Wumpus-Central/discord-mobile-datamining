@@ -10,7 +10,16 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { container: null, text: null };
-obj = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, borderColor: ThemesDefault.colors.STATUS_WARNING_BACKGROUND, borderWidth: 1, borderRadius: ThemesDefault.radii.lg, padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING };
+obj = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  borderColor: ThemesDefault.colors.STATUS_WARNING_BACKGROUND,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.lg,
+  padding: ThemesDefault.space.PX_12,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING,
+};
 obj[0] = obj;
 obj[1] = { flex: 1 };
 let closure_6 = createCacheKey.createStyles(obj);
@@ -20,9 +29,9 @@ export default function GuildPowerupsDisabledWarning(children) {
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
   obj = { color: ThemesDefault.colors.TEXT_FEEDBACK_WARNING, size: "md" };
-  const items = [callback(WarningIcon.WarningIcon, obj), ];
+  const items = [callback(WarningIcon.WarningIcon, obj)];
   obj = { style: tmp.text, variant: "text-md/semibold", color: "text-feedback-warning", children: children.text };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
-};
+}

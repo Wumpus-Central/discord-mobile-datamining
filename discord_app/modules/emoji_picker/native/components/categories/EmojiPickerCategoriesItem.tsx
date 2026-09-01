@@ -13,19 +13,51 @@ let c4 = importAllResult;
 ({ CATEGORY_ICON_RIPPLE_CONFIG: error, CATEGORY_ICON_SIZE, NODE_SIZE } = ME);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 obj = { itemInner: obj, fadedItem: null, activeItem: null, guildItem: null, lockContainer: null, lock: null };
-obj = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
+obj = {
+  justifyContent: "center",
+  alignItems: "center",
+  height: NODE_SIZE,
+  width: NODE_SIZE,
+  borderRadius: NODE_SIZE / 2,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.ICON_TRANSPARENT };
 obj[1] = createCacheKey;
 obj[2] = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 obj[3] = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 };
 let obj2 = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-obj[4] = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
-let obj3 = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
+obj[4] = {
+  width: 12,
+  height: 12,
+  position: "absolute",
+  bottom: 0,
+  end: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+};
+let obj3 = {
+  width: 12,
+  height: 12,
+  position: "absolute",
+  bottom: 0,
+  end: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+};
 obj[5] = { width: 7.5, height: 7.5, tintColor: ThemesDefault.colors.TEXT_DEFAULT };
 let closure_10 = createCacheKey.createStyles(obj);
-let closure_11 = { code: "function EmojiPickerCategoriesItemTsx1(){const{withTiming,categoryIndexActive,index,timingStandard,styleColorActive,styleColorTransparent}=this.__closure;return{opacity:withTiming(categoryIndexActive.get()===index?1:0.5,timingStandard),backgroundColor:categoryIndexActive.get()===index?styleColorActive:styleColorTransparent};}" };
-let closure_12 = { code: "function EmojiPickerCategoriesItemTsx2(){const{categoryIndexActive,index}=this.__closure;return categoryIndexActive.get()===index;}" };
-let closure_13 = { code: "function EmojiPickerCategoriesItemTsx3(active,prev){const{runOnJS,setIsSelected}=this.__closure;if(active!==prev){runOnJS(setIsSelected)(active);}}" };
+let closure_11 = {
+  code: "function EmojiPickerCategoriesItemTsx1(){const{withTiming,categoryIndexActive,index,timingStandard,styleColorActive,styleColorTransparent}=this.__closure;return{opacity:withTiming(categoryIndexActive.get()===index?1:0.5,timingStandard),backgroundColor:categoryIndexActive.get()===index?styleColorActive:styleColorTransparent};}",
+};
+let closure_12 = {
+  code: "function EmojiPickerCategoriesItemTsx2(){const{categoryIndexActive,index}=this.__closure;return categoryIndexActive.get()===index;}",
+};
+let closure_13 = {
+  code: "function EmojiPickerCategoriesItemTsx3(active,prev){const{runOnJS,setIsSelected}=this.__closure;if(active!==prev){runOnJS(setIsSelected)(active);}}",
+};
 let obj4 = { width: 7.5, height: 7.5, tintColor: ThemesDefault.colors.TEXT_DEFAULT };
 const memoResult = importAllResult.memo(function EmojiPickerCategoriesItem(category) {
   category = category.category;
@@ -52,16 +84,29 @@ const memoResult = importAllResult.memo(function EmojiPickerCategoriesItem(categ
       if (categoryIndexActive.get() === index) {
         num = 1;
       }
-      obj = { opacity: obj.withTiming(num, tmp(tmp2[10]).timingStandard), backgroundColor: obj2.get() === tmp3 ? backgroundColor : backgroundColor };
+      obj = {
+        opacity: obj.withTiming(num, tmp(tmp2[10]).timingStandard),
+        backgroundColor: obj2.get() === tmp3 ? backgroundColor : backgroundColor,
+      };
       return obj;
     }
   }
-  obj = { withTiming: category(handlePressCategory[9]).withTiming, categoryIndexActive, index, timingStandard: category(handlePressCategory[10]).timingStandard, styleColorActive: backgroundColor, styleColorTransparent: backgroundColor2 };
+  obj = {
+    withTiming: category(handlePressCategory[9]).withTiming,
+    categoryIndexActive,
+    index,
+    timingStandard: category(handlePressCategory[10]).timingStandard,
+    styleColorActive: backgroundColor,
+    styleColorTransparent: backgroundColor2,
+  };
   T.__closure = obj;
   T.__workletHash = 3335518235623;
   T.__initData = closure_11;
   const animatedStyle = obj.useAnimatedStyle(T);
-  const tmp5 = index(backgroundColor.useState(() => categoryIndexActive.get() === index), 2);
+  const tmp5 = index(
+    backgroundColor.useState(() => categoryIndexActive.get() === index),
+    2,
+  );
   EmojiCategoryTypes = tmp6;
   let obj2 = category(handlePressCategory[8]);
   const fn = function p() {
@@ -89,7 +134,15 @@ const memoResult = importAllResult.memo(function EmojiPickerCategoriesItem(categ
   const animatedReaction = obj2.useAnimatedReaction(fn, E);
   const items = [handlePressCategory, index, category];
   callback = backgroundColor.useCallback(() => handlePressCategory(index, category), items);
-  obj1 = { androidRippleConfig: closure_7, style, onPress: callback, accessibilityRole: "tab", accessibilityLabel: null, accessibilityState: null, children: null };
+  obj1 = {
+    androidRippleConfig: closure_7,
+    style,
+    onPress: callback,
+    accessibilityRole: "tab",
+    accessibilityLabel: null,
+    accessibilityState: null,
+    children: null,
+  };
   if (category.type === EmojiCategoryTypes.GUILD) {
     let name = category.guild.name;
   } else {
@@ -112,7 +165,7 @@ const memoResult = importAllResult.memo(function EmojiPickerCategoriesItem(categ
     obj4[0] = category.id;
     tmp9Result = tmp9(tmp12(tmp3[13]), obj4);
   }
-  const items2 = [tmp9Result, ];
+  const items2 = [tmp9Result];
   if (locked) {
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.lockContainer;
@@ -126,6 +179,8 @@ const memoResult = importAllResult.memo(function EmojiPickerCategoriesItem(categ
   obj1[6] = closure_9(categoryIndexActive(handlePressCategory[8]).View, obj2);
   return closure_8(category(handlePressCategory[11]).PressableOpacity, obj1);
 });
-const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoriesItem.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/emoji_picker/native/components/categories/EmojiPickerCategoriesItem.tsx",
+);
 
 export default memoResult;

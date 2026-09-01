@@ -6,5 +6,5 @@ const result = set.fileFinishedImporting("utils/RegexUtils.tsx");
 export default {
   escape(str) {
     return str.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&");
-  }
+  },
 };

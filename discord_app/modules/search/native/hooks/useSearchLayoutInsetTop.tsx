@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/search/native/hooks/useSearchL
 
 export default function useSearchLayoutInsetTop() {
   return useSafeAreaInsetsDefault().top + 8;
-};
+}

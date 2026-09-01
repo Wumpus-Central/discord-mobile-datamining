@@ -70,7 +70,14 @@ function renderSearchResultsSection() {
 let c3 = importAllResult;
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = { bottom: 24 };
-let obj = { listContainer: { minHeight: 16 }, list: { flex: -1, marginTop: 8 }, guildIcon: null, categoryWrapper: null, pressable: null, pressableUnderlayColor: null };
+let obj = {
+  listContainer: { minHeight: 16 },
+  list: { flex: -1, marginTop: 8 },
+  guildIcon: null,
+  categoryWrapper: null,
+  pressable: null,
+  pressableUnderlayColor: null,
+};
 obj = { borderRadius: ThemesDefault.radii.sm };
 obj[2] = obj;
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
@@ -88,7 +95,11 @@ let closure_14 = importAllResult.memo((guild) => {
   }, items);
   let obj = guild(589);
   const items1 = [closure_6];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items1, () => ({ unread: closure_1_6.hasUnread(guild.id), mentionCount: closure_1_6.getMentionCount(guild.id), isMentionLowImportance: closure_1_6.getIsMentionLowImportance(guild.id) }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items1, () => ({
+    unread: closure_1_6.hasUnread(guild.id),
+    mentionCount: closure_1_6.getMentionCount(guild.id),
+    isMentionLowImportance: closure_1_6.getIsMentionLowImportance(guild.id),
+  }));
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
   obj1 = guild(4935);
   const fontScale = obj1.useFontScale();
@@ -100,7 +111,7 @@ let closure_14 = importAllResult.memo((guild) => {
   obj = { children: null };
   const tmp7 = itemsDefault;
   obj1 = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items4 = [callback(_modDef16562, obj1), , ];
+  const items4 = [callback(_modDef16562, obj1), ,];
   obj2 = { size: tmp2.icon.guildIconSize, guild, style: items5 };
   items5 = [tmp.guildIcon, tmp2.icon.margin];
   items4[1] = callback(GuildIconSizesDefault, obj2);
@@ -117,7 +128,10 @@ let closure_16 = importAllResult.memo((arg0) => {
   let obj = renderCategoryItem;
   const categoryStyles = obj.useCategoryStyles();
   const tmp = callback3();
-  obj = { style: tmp.categoryWrapper, children: renderCategoryItem.renderCategoryItem({ name, onPress, note, styles: categoryStyles }) };
+  obj = {
+    style: tmp.categoryWrapper,
+    children: renderCategoryItem.renderCategoryItem({ name, onPress, note, styles: categoryStyles }),
+  };
   return callback(View, obj);
 });
 let obj2 = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
@@ -155,7 +169,9 @@ const memoResult = importAllResult.memo(function InitialResultsInner(history) {
     }
     return closure_1_15({ result: tmp3, categoryStyles });
   }, items1);
-  const someResult = unreads.some((type) => type.type === history(toggleExpandedHistory[20]).AutocompleterResultTypes.VOICE_CHANNEL);
+  const someResult = unreads.some(
+    (type) => type.type === history(toggleExpandedHistory[20]).AutocompleterResultTypes.VOICE_CHANNEL,
+  );
   c7 = someResult;
   const items2 = [toggleExpandedHistory, expandedHistory, stateFromStores, someResult];
   const callback1 = expandedHistory.useCallback((arg0) => {
@@ -223,7 +239,21 @@ const memoResult = importAllResult.memo(function InitialResultsInner(history) {
   }
   obj = { style: tmp.listContainer, children: null };
   if (history.length > 0) {
-    obj = { optimizeListItemRender: true, batchesToRender: 6, style: null, sectionSize: null, itemSize: null, renderItem: null, renderSection: null, sections: null, sectionFooterSize: 8, footerSize: 8, scrollIndicatorInsets: null, chunkBase: null, keyboardShouldPersistTaps: "always" };
+    obj = {
+      optimizeListItemRender: true,
+      batchesToRender: 6,
+      style: null,
+      sectionSize: null,
+      itemSize: null,
+      renderItem: null,
+      renderSection: null,
+      sections: null,
+      sectionFooterSize: 8,
+      footerSize: 8,
+      scrollIndicatorInsets: null,
+      chunkBase: null,
+      keyboardShouldPersistTaps: "always",
+    };
     obj[2] = tmp.list;
     obj[3] = tmp9.category.height;
     obj[4] = callback2;
@@ -254,7 +284,10 @@ const memoResult1 = importAllResult.memo(function SearchResultsInner(results) {
   let obj = results(ref[25]);
   categoryStyles = obj.useCategoryStyles();
   const items = [results, categoryStyles];
-  const callback = importAllResult.useCallback((arg0, arg1) => closure_1_15({ result: results[arg1], categoryStyles }), items);
+  const callback = importAllResult.useCallback(
+    (arg0, arg1) => closure_1_15({ result: results[arg1], categoryStyles }),
+    items,
+  );
   ref = importAllResult.useRef(null);
   const items1 = [results.query];
   const effect = importAllResult.useEffect(() => {
@@ -273,7 +306,21 @@ const memoResult1 = importAllResult.memo(function SearchResultsInner(results) {
   obj = { style: tmp.listContainer, children: null };
   let tmp11Result = null;
   if (results.length > 0) {
-    obj = { ref: null, optimizeListItemRender: true, batchesToRender: 6, style: null, sectionSize: null, itemSize: null, renderSection: null, renderItem: null, sections: null, footerSize: 16, scrollIndicatorInsets: null, chunkBase: null, keyboardShouldPersistTaps: "always" };
+    obj = {
+      ref: null,
+      optimizeListItemRender: true,
+      batchesToRender: 6,
+      style: null,
+      sectionSize: null,
+      itemSize: null,
+      renderSection: null,
+      renderItem: null,
+      sections: null,
+      footerSize: 16,
+      scrollIndicatorInsets: null,
+      chunkBase: null,
+      keyboardShouldPersistTaps: "always",
+    };
     obj[0] = ref;
     obj[3] = tmp.list;
     obj[4] = tmp8.category.height;

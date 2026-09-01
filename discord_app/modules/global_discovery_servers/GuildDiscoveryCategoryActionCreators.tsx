@@ -9,7 +9,7 @@ import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTP
 const require = arg1;
 function _maybeFetchGuildDiscoveryCategories() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -96,7 +96,7 @@ function _fetchMetadataForGuild() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       let obj4 = tmp3;
       c4 = 1;
       const HTTP = callback(closure_1_2[4]).HTTP;
@@ -108,7 +108,18 @@ function _fetchMetadataForGuild() {
       obj2.dispatch({ type: "GUILD_DISCOVERY_METADATA_FETCH_FAIL" });
       yield "HermesInternal";
       body = body.body;
-      obj4 = { primaryCategoryId: null, secondaryCategoryIds: null, keywords: null, emojiDiscoverabilityEnabled: null, partnerActionedTimestamp: null, partnerApplicationTimestamp: null, isPublished: null, reasonsToJoin: null, socialLinks: null, about: null };
+      obj4 = {
+        primaryCategoryId: null,
+        secondaryCategoryIds: null,
+        keywords: null,
+        emojiDiscoverabilityEnabled: null,
+        partnerActionedTimestamp: null,
+        partnerApplicationTimestamp: null,
+        isPublished: null,
+        reasonsToJoin: null,
+        socialLinks: null,
+        about: null,
+      };
       obj4[0] = body.primary_category_id;
       obj4[1] = body.category_ids;
       obj4[2] = body.keywords;
@@ -143,7 +154,7 @@ function _fetchSlugForGuild() {
     c4 = 0;
     c5 = 0;
     c3 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       dependencyMap = tmp3;
       c3 = 1;
       const HTTP = callback(closure_1_2[4]).HTTP;
@@ -188,7 +199,7 @@ function _saveGuildMetadata() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -227,7 +238,18 @@ function _saveGuildMetadata() {
               c7 = undefined;
               c8 = undefined;
               c9 = undefined;
-              ({ guildId: c0, primaryCategoryId: c1, keywords: c2, emojiDiscoverabilityEnabled: c3, partnerActionedTimestamp: c4, partnerApplicationTimestamp: c5, isPublished: c6, reasonsToJoin: c7, socialLinks: c8, about: c9 } = callback);
+              ({
+                guildId: c0,
+                primaryCategoryId: c1,
+                keywords: c2,
+                emojiDiscoverabilityEnabled: c3,
+                partnerActionedTimestamp: c4,
+                partnerApplicationTimestamp: c5,
+                isPublished: c6,
+                reasonsToJoin: c7,
+                socialLinks: c8,
+                about: c9,
+              } = callback);
               body = undefined;
               let primary_category_id;
               let category_ids;
@@ -257,7 +279,17 @@ function _saveGuildMetadata() {
               const HTTP = callback(530).HTTP;
               const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
               obj2[0] = c6.GUILD_DISCOVERY_METADATA(callback);
-              const obj3 = { primary_category_id: null, emoji_discoverability_enabled: null, partner_actioned_timestamp: null, partner_application_timestamp: null, keywords: null, is_published: null, reasons_to_join: null, social_links: null, about: null };
+              const obj3 = {
+                primary_category_id: null,
+                emoji_discoverability_enabled: null,
+                partner_actioned_timestamp: null,
+                partner_application_timestamp: null,
+                keywords: null,
+                is_published: null,
+                reasons_to_join: null,
+                social_links: null,
+                about: null,
+              };
               obj3[0] = callback2;
               obj3[1] = c3;
               obj3[2] = c4;
@@ -308,7 +340,18 @@ function _saveGuildMetadata() {
             let obj7 = callback2(709);
             const obj6 = { type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER", guildId: null, metadata: null };
             obj6[1] = callback;
-            obj7 = { primaryCategoryId: null, secondaryCategoryIds: null, keywords: null, emojiDiscoverabilityEnabled: null, partnerActionedTimestamp: null, partnerApplicationTimestamp: null, isPublished: null, reasonsToJoin: null, socialLinks: null, about: null };
+            obj7 = {
+              primaryCategoryId: null,
+              secondaryCategoryIds: null,
+              keywords: null,
+              emojiDiscoverabilityEnabled: null,
+              partnerActionedTimestamp: null,
+              partnerApplicationTimestamp: null,
+              isPublished: null,
+              reasonsToJoin: null,
+              socialLinks: null,
+              about: null,
+            };
             obj7[0] = primary_category_id;
             obj7[1] = category_ids;
             obj7[2] = keywords;
@@ -348,7 +391,9 @@ function _saveGuildMetadata() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/global_discovery_servers/GuildDiscoveryCategoryActionCreators.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/global_discovery_servers/GuildDiscoveryCategoryActionCreators.tsx",
+);
 
 export const maybeFetchGuildDiscoveryCategories = function maybeFetchGuildDiscoveryCategories() {
   const self = this;
@@ -390,12 +435,18 @@ export const updateGuildKeywords = function updateGuildKeywords(guildId, keyword
   obj = { type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, keywords };
   obj.dispatch(obj);
 };
-export const updateGuildEmojiDiscoverabilityEnabled = function updateGuildEmojiDiscoverabilityEnabled(guildId, emojiDiscoverabilityEnabled) {
+export const updateGuildEmojiDiscoverabilityEnabled = function updateGuildEmojiDiscoverabilityEnabled(
+  guildId,
+  emojiDiscoverabilityEnabled,
+) {
   let obj = dispatcherDefault;
   obj = { type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, emojiDiscoverabilityEnabled };
   obj.dispatch(obj);
 };
-export const updateGuildDiscoveryMetadataIsPublished = function updateGuildDiscoveryMetadataIsPublished(guildId, isPublished) {
+export const updateGuildDiscoveryMetadataIsPublished = function updateGuildDiscoveryMetadataIsPublished(
+  guildId,
+  isPublished,
+) {
   let obj = dispatcherDefault;
   obj = { type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, isPublished };
   obj.dispatch(obj);
@@ -405,12 +456,18 @@ export const updateGuildDiscoveryMetadataAbout = function updateGuildDiscoveryMe
   obj = { type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, about };
   obj.dispatch(obj);
 };
-export const updateGuildDiscoveryMetadataReasonsToJoin = function updateGuildDiscoveryMetadataReasonsToJoin(guildId, reasonsToJoin) {
+export const updateGuildDiscoveryMetadataReasonsToJoin = function updateGuildDiscoveryMetadataReasonsToJoin(
+  guildId,
+  reasonsToJoin,
+) {
   let obj = dispatcherDefault;
   obj = { type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, reasonsToJoin };
   obj.dispatch(obj);
 };
-export const updateGuildDiscoveryMetadataSocialLinks = function updateGuildDiscoveryMetadataSocialLinks(guildId, socialLinks) {
+export const updateGuildDiscoveryMetadataSocialLinks = function updateGuildDiscoveryMetadataSocialLinks(
+  guildId,
+  socialLinks,
+) {
   let obj = dispatcherDefault;
   obj = { type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, socialLinks };
   obj.dispatch(obj);
@@ -429,33 +486,45 @@ export const addGuildCategory = function addGuildCategory(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
   const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-  let obj = { url: Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(arg0, arg1), oldFormErrors: true, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+  let obj = {
+    url: Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(arg0, arg1),
+    oldFormErrors: true,
+    rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+  };
   const obj2 = sendRequest;
   const putResult = HTTP.put(obj);
-  HTTP.put(obj).then(() => {
-    let obj = callback(closure_1_2[5]);
-    obj = { type: "GUILD_DISCOVERY_CATEGORY_ADD", guildId: closure_0, categoryId: callback };
-    obj.dispatch(obj);
-  }).catch((body) => {
-    let obj = callback(closure_1_2[5]);
-    obj = { type: "GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL", guildId: closure_0, errors: body.body };
-    obj.dispatch(obj);
-  });
+  HTTP.put(obj)
+    .then(() => {
+      let obj = callback(closure_1_2[5]);
+      obj = { type: "GUILD_DISCOVERY_CATEGORY_ADD", guildId: closure_0, categoryId: callback };
+      obj.dispatch(obj);
+    })
+    .catch((body) => {
+      let obj = callback(closure_1_2[5]);
+      obj = { type: "GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL", guildId: closure_0, errors: body.body };
+      obj.dispatch(obj);
+    });
 };
 export const deleteGuildCategory = function deleteGuildCategory(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
   const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-  let obj = { url: Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(arg0, arg1), oldFormErrors: true, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+  let obj = {
+    url: Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(arg0, arg1),
+    oldFormErrors: true,
+    rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+  };
   const obj2 = sendRequest;
   const delResult = HTTP.del(obj);
-  HTTP.del(obj).then(() => {
-    let obj = callback(closure_1_2[5]);
-    obj = { type: "GUILD_DISCOVERY_CATEGORY_DELETE", guildId: closure_0, categoryId: callback };
-    obj.dispatch(obj);
-  }).catch((body) => {
-    let obj = callback(closure_1_2[5]);
-    obj = { type: "GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL", guildId: closure_0, errors: body.body };
-    obj.dispatch(obj);
-  });
+  HTTP.del(obj)
+    .then(() => {
+      let obj = callback(closure_1_2[5]);
+      obj = { type: "GUILD_DISCOVERY_CATEGORY_DELETE", guildId: closure_0, categoryId: callback };
+      obj.dispatch(obj);
+    })
+    .catch((body) => {
+      let obj = callback(closure_1_2[5]);
+      obj = { type: "GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL", guildId: closure_0, errors: body.body };
+      obj.dispatch(obj);
+    });
 };

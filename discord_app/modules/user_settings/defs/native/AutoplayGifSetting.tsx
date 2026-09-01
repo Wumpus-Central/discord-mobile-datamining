@@ -12,7 +12,7 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.ACCESSIBILITY,
   useValue: explicitContentFromProto.GifAutoPlay.useSetting,
-  onValueChange: explicitContentFromProto.GifAutoPlay.updateSetting
+  onValueChange: explicitContentFromProto.GifAutoPlay.updateSetting,
 });
 const obj = {
   useTitle() {
@@ -21,7 +21,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.ACCESSIBILITY,
   useValue: explicitContentFromProto.GifAutoPlay.useSetting,
-  onValueChange: explicitContentFromProto.GifAutoPlay.updateSetting
+  onValueChange: explicitContentFromProto.GifAutoPlay.updateSetting,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AutoplayGifSetting.tsx");
 

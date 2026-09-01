@@ -31,7 +31,7 @@ function getGradientColorByPercentage(type, END) {
     if (1 === colors.length) {
       return tmp(4326).hexToRgb(colors[0]);
     } else {
-      const mapped2 = colors.map((arg0, arg1) => arg1 / (colors.length - 1) * 100);
+      const mapped2 = colors.map((arg0, arg1) => (arg1 / (colors.length - 1)) * 100);
       obj = nDefault;
       const scaleResult1 = obj.scale(colors);
       const obj3 = obj.scale(colors).domain(mapped2)(END);
@@ -58,7 +58,10 @@ function getBottomColorWithOpacity(type, hexToRgbResult, arg2) {
   const tmp2 = require;
   const tmp2Result = hexToRgba;
   const tmp7 = new hslToRgbDefault(tmpResult.r, tmpResult.g, tmpResult.b, arg2);
-  const mixColorsResult = tmp2Result.mixColors(tmp7, new hslToRgbDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - arg2));
+  const mixColorsResult = tmp2Result.mixColors(
+    tmp7,
+    new hslToRgbDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - arg2),
+  );
   const tmp8 = new hslToRgbDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - arg2);
   const obj2 = nDefault;
   return nDefault.rgb(mixColorsResult.red, mixColorsResult.green, mixColorsResult.blue).hex("rgb");
@@ -79,7 +82,10 @@ function getTopColorWithOpacity(type, hexToRgbResult, arg2) {
   const tmp2 = require;
   const tmp2Result = hexToRgba;
   const tmp7 = new hslToRgbDefault(tmpResult.r, tmpResult.g, tmpResult.b, arg2);
-  const mixColorsResult = tmp2Result.mixColors(tmp7, new hslToRgbDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - arg2));
+  const mixColorsResult = tmp2Result.mixColors(
+    tmp7,
+    new hslToRgbDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - arg2),
+  );
   const tmp8 = new hslToRgbDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - arg2);
   const obj2 = nDefault;
   return nDefault.rgb(mixColorsResult.red, mixColorsResult.green, mixColorsResult.blue).hex("rgb");
@@ -153,7 +159,36 @@ function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme)
   }
 }
 let c8 = 128;
-let obj = { LEVEL_9: 0.9, [0.9]: "LEVEL_9", LEVEL_85: 0.85, [0.85]: "LEVEL_85", LEVEL_8: 0.8, [0.8]: "LEVEL_8", LEVEL_75: 0.75, [0.75]: "LEVEL_75", LEVEL_7: 0.7, [0.7]: "LEVEL_7", LEVEL_6: 0.6, [0.6]: "LEVEL_6", LEVEL_5: 0.5, [0.5]: "LEVEL_5", LEVEL_4: 0.4, [0.4]: "LEVEL_4", LEVEL_35: 0.35, [0.35]: "LEVEL_35", LEVEL_3: 0.3, [0.3]: "LEVEL_3", LEVEL_25: 0.25, [0.25]: "LEVEL_25", LEVEL_2: 0.2, [0.2]: "LEVEL_2", LEVEL_15: 0.15, [0.15]: "LEVEL_15", LEVEL_1: 0.1, [0.1]: "LEVEL_1" };
+let obj = {
+  LEVEL_9: 0.9,
+  [0.9]: "LEVEL_9",
+  LEVEL_85: 0.85,
+  [0.85]: "LEVEL_85",
+  LEVEL_8: 0.8,
+  [0.8]: "LEVEL_8",
+  LEVEL_75: 0.75,
+  [0.75]: "LEVEL_75",
+  LEVEL_7: 0.7,
+  [0.7]: "LEVEL_7",
+  LEVEL_6: 0.6,
+  [0.6]: "LEVEL_6",
+  LEVEL_5: 0.5,
+  [0.5]: "LEVEL_5",
+  LEVEL_4: 0.4,
+  [0.4]: "LEVEL_4",
+  LEVEL_35: 0.35,
+  [0.35]: "LEVEL_35",
+  LEVEL_3: 0.3,
+  [0.3]: "LEVEL_3",
+  LEVEL_25: 0.25,
+  [0.25]: "LEVEL_25",
+  LEVEL_2: 0.2,
+  [0.2]: "LEVEL_2",
+  LEVEL_15: 0.15,
+  [0.15]: "LEVEL_15",
+  LEVEL_1: 0.1,
+  [0.1]: "LEVEL_1",
+};
 obj = { DARK: ThemesDefault.unsafe_rawColors.BLACK, LIGHT: ThemesDefault.unsafe_rawColors.WHITE };
 obj = { START: 0, [0]: "START", MID: 50, [50]: "MID", END: 100, [100]: "END" };
 let result = require("set").fileFinishedImporting("modules/client_themes/native/ClientThemesUtils.tsx");
@@ -214,7 +249,10 @@ export const getGradientThemeMetadata = function getGradientThemeMetadata(gradie
         HermesBuiltin.arraySpread(mapped1, 0);
         const _Math2 = Math;
         const tmp17 = nDefault;
-        const result = nDefault(colors1[mapped1.indexOf(mapped1, HermesBuiltin.apply(min, items, Math))]).set("hsl.s", 0.2);
+        const result = nDefault(colors1[mapped1.indexOf(mapped1, HermesBuiltin.apply(min, items, Math))]).set(
+          "hsl.s",
+          0.2,
+        );
         const result1 = result.set("hsl.l", 0.7);
         let hexResult = result1.hex();
         const _Math3 = Math;
@@ -223,7 +261,10 @@ export const getGradientThemeMetadata = function getGradientThemeMetadata(gradie
         HermesBuiltin.arraySpread(mapped1, 0);
         const _Math4 = Math;
         const tmp24 = nDefault;
-        const result2 = nDefault(colors1[mapped1.indexOf(mapped1, HermesBuiltin.apply(max, items1, Math))]).set("hsl.s", 0.2);
+        const result2 = nDefault(colors1[mapped1.indexOf(mapped1, HermesBuiltin.apply(max, items1, Math))]).set(
+          "hsl.s",
+          0.2,
+        );
         const result3 = result2.set("hsl.l", 0.9);
         const hexResult1 = result3.hex();
         let tmp6 = hexResult1;
@@ -239,7 +280,15 @@ export const getGradientThemeMetadata = function getGradientThemeMetadata(gradie
       }
       obj = { theme: null, colors: null };
       obj[0] = gradientThemeFromFlags;
-      obj = { "gradient.start": null, "gradient.mid": null, "gradient.end": null, "gradient.top": null, "gradient.bottom": null, "gradient.primary": null, "gradient.secondary": null };
+      obj = {
+        "gradient.start": null,
+        "gradient.mid": null,
+        "gradient.end": null,
+        "gradient.top": null,
+        "gradient.bottom": null,
+        "gradient.primary": null,
+        "gradient.secondary": null,
+      };
       obj[0] = tmp11;
       obj[1] = calculateGradientValueWithOpacity(gradient, obj.MID, gradient.theme);
       obj[2] = tmp13;
@@ -263,7 +312,7 @@ export const useGradientValue = function useGradientValue(END) {
   dependencyMap = tmp;
   const tmp2 = useThemeDefault();
   closure_3 = tmp2;
-  const items = [tmp, , , , ];
+  const items = [tmp, , , ,];
   let dark;
   if (arg1 != null) {
     dark = arg1.dark;

@@ -10,10 +10,10 @@ class UserSettingsManager extends tmp2 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       POST_CONNECTION_OPEN() {
-            applyArgumentsResult.setVerifyTimezone();
-          },
+        applyArgumentsResult.setVerifyTimezone();
+      },
       OVERLAY_INITIALIZE: applyArgumentsResult.setVerifyTimezone,
-      USER_SETTINGS_PROTO_UPDATE: applyArgumentsResult.ensureTimezoneUpdated
+      USER_SETTINGS_PROTO_UPDATE: applyArgumentsResult.ensureTimezoneUpdated,
     };
     return applyArgumentsResult;
   }

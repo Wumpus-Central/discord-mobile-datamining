@@ -21,11 +21,21 @@ function useFetchPurchases(flag) {
   stateFromStores = flag(isFetching[4]).useStateFromStores(items, () => ref2.hasLoadedExperiments);
   let obj = flag(isFetching[4]);
   const items1 = [closure_7];
-  const isClaiming = fetchPurchasesError(flag(isFetching[4]).useStateFromStoresArray(items1, () => {
-    const items = [, , , , , ];
-    ({ isFetching: arr[0], isClaiming: arr[1], fetchError: arr[2], claimError: arr[3], purchases: arr[4], hasPreviouslyFetched: arr[5] } = closure_7);
-    return items;
-  }), 6);
+  const isClaiming = fetchPurchasesError(
+    flag(isFetching[4]).useStateFromStoresArray(items1, () => {
+      const items = [, , , , ,];
+      ({
+        isFetching: arr[0],
+        isClaiming: arr[1],
+        fetchError: arr[2],
+        claimError: arr[3],
+        purchases: arr[4],
+        hasPreviouslyFetched: arr[5],
+      } = closure_7);
+      return items;
+    }),
+    6,
+  );
   isFetching = isClaiming[0];
   fetchPurchasesError = isClaiming[2];
   hasPreviouslyFetched = isClaiming[5];
@@ -65,7 +75,14 @@ function useFetchPurchases(flag) {
       const obj = flag(isFetching[5]);
     }
   }, items5);
-  return { isClaiming: isClaiming[1], fetchPurchasesError, claimError: isClaiming[3], isFetching, purchases: isClaiming[4], hasPreviouslyFetched };
+  return {
+    isClaiming: isClaiming[1],
+    fetchPurchasesError,
+    claimError: isClaiming[3],
+    isFetching,
+    purchases: isClaiming[4],
+    hasPreviouslyFetched,
+  };
 }
 function useFetchCollectiblesCategoriesAndPurchases(paymentGateway) {
   paymentGateway = undefined;
@@ -107,11 +124,25 @@ function useFetchCollectiblesCategoriesAndPurchases(paymentGateway) {
   if (!isFetching) {
     tmp11 = isFetching2;
   }
-  obj = { isFetching: tmp11, isFetchingCategories: isFetching, isFetchingPurchases: isFetching2, isClaiming, categories, purchases: tmp8Result.purchases, fetchCategoriesError, fetchPurchasesError, claimError, refreshCategories, hasPreviouslyFetched: tmp8Result.hasPreviouslyFetched };
+  obj = {
+    isFetching: tmp11,
+    isFetchingCategories: isFetching,
+    isFetchingPurchases: isFetching2,
+    isClaiming,
+    categories,
+    purchases: tmp8Result.purchases,
+    fetchCategoriesError,
+    fetchPurchasesError,
+    claimError,
+    refreshCategories,
+    hasPreviouslyFetched: tmp8Result.hasPreviouslyFetched,
+  };
   return obj;
 }
 ({ useEffect: c4, useRef: c5 } = noop);
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx",
+);
 
 export default useFetchCollectiblesCategoriesAndPurchases;
 export { useFetchPurchases };
@@ -129,7 +160,9 @@ export const useGetOrFetchPurchase = function useGetOrFetchPurchase(selectedGift
   }
   return value;
 };
-export const useGetOrFetchCollectiblesCategoriesAndPurchases = function useGetOrFetchCollectiblesCategoriesAndPurchases(arg0) {
+export const useGetOrFetchCollectiblesCategoriesAndPurchases = function useGetOrFetchCollectiblesCategoriesAndPurchases(
+  arg0,
+) {
   let obj = arg0;
   if (arg0 == null) {
     obj = {};

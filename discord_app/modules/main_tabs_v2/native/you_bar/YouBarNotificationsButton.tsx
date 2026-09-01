@@ -9,13 +9,23 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 let c3 = importAllResult;
-({ YOU_BAR_SPRING_CONFIG: closure_6, YOU_BAR_BUTTON_HIT_SLOP: error, YOU_BAR_BUTTON_ICON_SIZE } = CONNECTION_BANNER_HEIGHT);
+({
+  YOU_BAR_SPRING_CONFIG: closure_6,
+  YOU_BAR_BUTTON_HIT_SLOP: error,
+  YOU_BAR_BUTTON_ICON_SIZE,
+} = CONNECTION_BANNER_HEIGHT);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, iconContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, overdueReminderDot: null };
+let obj = {
+  icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE },
+  iconContainer: { display: "flex", flexDirection: "row", alignItems: "center" },
+  overdueReminderDot: null,
+};
 obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
 obj[2] = obj;
 let closure_10 = createCacheKey.createStyles(obj);
-let closure_11 = { code: "function YouBarNotificationsButtonTsx1(){const{withSpring,badgeCount,YOU_BAR_SPRING_CONFIG,tokens}=this.__closure;return{transform:[{scaleX:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)}],marginLeft:withSpring(badgeCount>0?tokens.space.PX_4:0,YOU_BAR_SPRING_CONFIG),opacity:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)};}" };
+let closure_11 = {
+  code: "function YouBarNotificationsButtonTsx1(){const{withSpring,badgeCount,YOU_BAR_SPRING_CONFIG,tokens}=this.__closure;return{transform:[{scaleX:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)}],marginLeft:withSpring(badgeCount>0?tokens.space.PX_4:0,YOU_BAR_SPRING_CONFIG),opacity:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)};}",
+};
 const memoResult = importAllResult.memo(function YouBarNotificationsButton(hasNameplate) {
   hasNameplate = hasNameplate.hasNameplate;
   let _require;
@@ -49,7 +59,12 @@ const memoResult = importAllResult.memo(function YouBarNotificationsButton(hasNa
     obj[2] = tmpResult.withSpring(num3, closure_1_6);
     return obj;
   };
-  obj = { withSpring: _require(callback[9]).withSpring, badgeCount: value, YOU_BAR_SPRING_CONFIG: closure_6, tokens: isForLaterExperimentOn(callback[6]) };
+  obj = {
+    withSpring: _require(callback[9]).withSpring,
+    badgeCount: value,
+    YOU_BAR_SPRING_CONFIG: closure_6,
+    tokens: isForLaterExperimentOn(callback[6]),
+  };
   fn.__closure = obj;
   fn.__workletHash = 11181198364048;
   fn.__initData = closure_11;
@@ -65,7 +80,9 @@ const memoResult = importAllResult.memo(function YouBarNotificationsButton(hasNa
     isForLaterExperimentOn = hasForLaterAccess;
   }
   let items = [savedMessageCount];
-  const stateFromStores = _require(callback[11]).useStateFromStores(items, () => overdueMessageReminderCount.getOverdueMessageReminderCount());
+  const stateFromStores = _require(callback[11]).useStateFromStores(items, () =>
+    overdueMessageReminderCount.getOverdueMessageReminderCount(),
+  );
   let tmp10 = isForLaterExperimentOn;
   if (isForLaterExperimentOn) {
     tmp10 = stateFromStores > 0;
@@ -117,7 +134,17 @@ const memoResult = importAllResult.memo(function YouBarNotificationsButton(hasNa
     const _HermesInternal = HermesInternal;
     combined = "" + formatToPlainStringResult + ", " + intl2.formatToPlainString(tmp4(tmp3[15]).t.yBmFPA, obj1);
   }
-  obj2 = { accessibilityLabel: combined, accessibilityActions: memo, onAccessibilityAction: callback1, variant: null, size: "sm", icon: null, onPress: null, onLongPress: null, hitSlop: null };
+  obj2 = {
+    accessibilityLabel: combined,
+    accessibilityActions: memo,
+    onAccessibilityAction: callback1,
+    variant: null,
+    size: "sm",
+    icon: null,
+    onPress: null,
+    onLongPress: null,
+    hitSlop: null,
+  };
   let str4 = "tertiary";
   if (hasNameplate) {
     str4 = "secondary-overlay";
@@ -126,9 +153,22 @@ const memoResult = importAllResult.memo(function YouBarNotificationsButton(hasNa
   obj2[3] = str4;
   const obj4 = { style: tmp.iconContainer, children: null };
   const tmp14Result = closure_8(_require(callback[16]).BellIcon, obj);
-  const items4 = [closure_8(_require(callback[17]).YouBarButtonIcon, { icon: closure_8(_require(callback[16]).BellIcon, obj), hasBadge: tmp10, badgeStyle: tmp.overdueReminderDot }), ];
-  const obj5 = { icon: closure_8(_require(callback[16]).BellIcon, obj), hasBadge: tmp10, badgeStyle: tmp.overdueReminderDot };
-  items4[1] = closure_8(tmp2(callback[8]).View, { style: animatedStyle, children: closure_8(_require(callback[19]).Badge, { value }) });
+  const items4 = [
+    closure_8(_require(callback[17]).YouBarButtonIcon, {
+      icon: closure_8(_require(callback[16]).BellIcon, obj),
+      hasBadge: tmp10,
+      badgeStyle: tmp.overdueReminderDot,
+    }),
+  ];
+  const obj5 = {
+    icon: closure_8(_require(callback[16]).BellIcon, obj),
+    hasBadge: tmp10,
+    badgeStyle: tmp.overdueReminderDot,
+  };
+  items4[1] = closure_8(tmp2(callback[8]).View, {
+    style: animatedStyle,
+    children: closure_8(_require(callback[19]).Badge, { value }),
+  });
   obj4[1] = items4;
   obj2[5] = callback(View, obj4);
   obj2[6] = function onPress() {

@@ -9,7 +9,11 @@ import { ChannelTypes } from "../../../../Constants.tsx";
 
 require = arg1;
 function isSaveableChannel(item10025) {
-  return item10025.type === ChannelTypes.DM || item10025.type === ChannelTypes.GROUP_DM || item10025.type === ChannelTypes.GUILD_TEXT;
+  return (
+    item10025.type === ChannelTypes.DM ||
+    item10025.type === ChannelTypes.GROUP_DM ||
+    item10025.type === ChannelTypes.GUILD_TEXT
+  );
 }
 function addFallback(arg0, id, extendedMemoryLru) {
   if (!extendedMemoryLru.hasExtended(id.id)) {
@@ -35,7 +39,10 @@ export const withFallbacks = function withFallbacks(extendedMemoryLru, arg1) {
   if (extendedMemoryLru.totalLength >= arg1) {
     return extendedMemoryLru;
   } else {
-    extendedMemoryLru = new totalLength.ExtendedMemoryLru(extendedMemoryLru.primaryCapacity, extendedMemoryLru.extendedCapacity);
+    extendedMemoryLru = new totalLength.ExtendedMemoryLru(
+      extendedMemoryLru.primaryCapacity,
+      extendedMemoryLru.extendedCapacity,
+    );
     const diff = arg1 - extendedMemoryLru.totalLength;
     guildFolders = guildFolders.getGuildFolders();
     const iter = guildFolders[Symbol.iterator]();

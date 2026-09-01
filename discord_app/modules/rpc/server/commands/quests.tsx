@@ -50,7 +50,7 @@ obj = {
     let tmp8 = prototypeDefault;
     tmp8 = new tmp8(obj, "Quest not found: " + quest_id);
     throw tmp8;
-  }
+  },
 };
 obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = obj;
 obj = {
@@ -97,7 +97,7 @@ obj = {
     let tmp18 = prototypeDefault;
     tmp18 = new tmp18(obj2, "Quest not found: " + quest_id);
     throw tmp18;
-  }
+  },
 };
 obj[RPCCommands.QUEST_START_TIMER] = obj;
 obj[RPCCommands.GET_QUEST] = {
@@ -108,7 +108,11 @@ obj[RPCCommands.GET_QUEST] = {
     const result = obj.validatePostMessageTransport(socket.transport);
     const obj2 = recurseReplaceContentTree;
     const validateApplicationResult = recurseReplaceContentTree.validateApplication(socket.application);
-    const eligibleQuestsForApplicationId = questMatchesActivity.getEligibleQuestsForApplicationId(store.quests, validateApplicationResult, true);
+    const eligibleQuestsForApplicationId = questMatchesActivity.getEligibleQuestsForApplicationId(
+      store.quests,
+      validateApplicationResult,
+      true,
+    );
     if (0 === eligibleQuestsForApplicationId.length) {
       obj = { errorCode: null };
       obj[0] = constants.INVALID_COMMAND;
@@ -161,7 +165,7 @@ obj[RPCCommands.GET_QUEST] = {
       })[0];
     }
     const obj3 = questMatchesActivity;
-  }
+  },
 };
 let obj1 = {
   scope: require("set").OAuth2Scopes.IDENTIFY,
@@ -171,7 +175,11 @@ let obj1 = {
     const result = obj.validatePostMessageTransport(socket.transport);
     const obj2 = recurseReplaceContentTree;
     const validateApplicationResult = recurseReplaceContentTree.validateApplication(socket.application);
-    const eligibleQuestsForApplicationId = questMatchesActivity.getEligibleQuestsForApplicationId(store.quests, validateApplicationResult, true);
+    const eligibleQuestsForApplicationId = questMatchesActivity.getEligibleQuestsForApplicationId(
+      store.quests,
+      validateApplicationResult,
+      true,
+    );
     if (0 === eligibleQuestsForApplicationId.length) {
       obj = { errorCode: null };
       obj[0] = constants.INVALID_COMMAND;
@@ -224,7 +232,7 @@ let obj1 = {
       })[0];
     }
     const obj3 = questMatchesActivity;
-  }
+  },
 };
 let result = require("set").fileFinishedImporting("modules/rpc/server/commands/quests.tsx");
 

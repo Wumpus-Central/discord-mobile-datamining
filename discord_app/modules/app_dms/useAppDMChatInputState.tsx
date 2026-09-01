@@ -8,7 +8,12 @@ import closure_8 from "../../stores/UserStore.tsx";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "../../Constants.tsx";
 
 const require = arg1;
-let items = [require("PermissionOverwriteType").ApplicationCommandType.PRIMARY_ENTRY_POINT, require("PermissionOverwriteType").ApplicationCommandType.CHAT, require("PermissionOverwriteType").ApplicationCommandType.MESSAGE, require("PermissionOverwriteType").ApplicationCommandType.USER];
+let items = [
+  require("PermissionOverwriteType").ApplicationCommandType.PRIMARY_ENTRY_POINT,
+  require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  require("PermissionOverwriteType").ApplicationCommandType.MESSAGE,
+  require("PermissionOverwriteType").ApplicationCommandType.USER,
+];
 const result = require("set").fileFinishedImporting("modules/app_dms/useAppDMChatInputState.tsx");
 
 export default function useAppDMChatInputState(context) {
@@ -147,4 +152,4 @@ export default function useAppDMChatInputState(context) {
   }
   obj1[1] = flag;
   return obj1;
-};
+}

@@ -17,7 +17,13 @@ SubscriptionTrialRecord["createFromServer"] = function createFromServer(arg0) {
   if (typeof SubscriptionTrialRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp2 = new SubscriptionTrialRecord("Trying to call a non-function", SubscriptionTrialRecord, new.target, id, interval);
+  const tmp2 = new SubscriptionTrialRecord(
+    "Trying to call a non-function",
+    SubscriptionTrialRecord,
+    new.target,
+    id,
+    interval,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp2.id = id;
   tmp2.interval = interval;
@@ -33,7 +39,7 @@ Object.defineProperty(SubscriptionTrialRecord.prototype, "isMultiInterval", {
     }
     return tmp;
   },
-  set: undefined
+  set: undefined,
 });
 const result = require("set").fileFinishedImporting("modules/billing/records/SubscriptionTrialRecord.tsx");
 

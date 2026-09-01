@@ -11,4 +11,4 @@ export default function triggerIOSHaptic() {
     const result = HapticFeedbackTypes.triggerHapticFeedback(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_MEDIUM);
     const obj = HapticFeedbackTypes;
   }
-};
+}

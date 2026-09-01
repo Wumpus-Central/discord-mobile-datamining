@@ -39,5 +39,5 @@ export const AVErrorNoInputDevicesDefinition = {
   },
   makeErrorContextKey(mediaSessionId) {
     return "" + mediaSessionId.mediaSessionId;
-  }
+  },
 };

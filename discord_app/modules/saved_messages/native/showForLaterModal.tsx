@@ -11,5 +11,7 @@ export const showForLaterModal = function showForLaterModal(BOOKMARK) {
     tmp(7605).markRemindersSeen();
     const tmpResult = tmp(7605);
   }
-  _modDef4723.pushLazy(asyncRequireImpl(7606, dependencyMap.paths), { type: BOOKMARK }, "for-later-modal", { presentation: "modal" });
+  _modDef4723.pushLazy(asyncRequireImpl(7606, dependencyMap.paths), { type: BOOKMARK }, "for-later-modal", {
+    presentation: "modal",
+  });
 };

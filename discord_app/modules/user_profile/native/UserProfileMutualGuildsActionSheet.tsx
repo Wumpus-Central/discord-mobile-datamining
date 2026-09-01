@@ -15,7 +15,9 @@ createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_8, alignItems: "center"
 createCacheKey[2] = { alignItems: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { paddingTop: ThemesDefault.space.PX_8, alignItems: "center" };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileMutualGuildsActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_profile/native/UserProfileMutualGuildsActionSheet.tsx",
+);
 
 export default function UserProfileMutualGuildsActionSheet(user) {
   user = user.user;
@@ -55,7 +57,7 @@ export default function UserProfileMutualGuildsActionSheet(user) {
           return closure_1_1(item.guild.id);
         },
         start,
-        end
+        end,
       });
     };
     tmp3Result = tmp3(user(9218).UserProfileStackedActionSheetList, obj2);
@@ -63,4 +65,4 @@ export default function UserProfileMutualGuildsActionSheet(user) {
   obj[1] = tmp3Result;
   obj[2] = <closure_3 style={tmp.container}>{null}</closure_3>;
   return <tmp4 style={tmp.container}>{null}</tmp4>;
-};
+}

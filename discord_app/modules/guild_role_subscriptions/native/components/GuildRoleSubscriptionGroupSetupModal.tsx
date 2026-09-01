@@ -18,7 +18,7 @@ function _createGroupFromStore() {
     closure_3 = arg3;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -137,7 +137,7 @@ class GuildRoleSubscriptionGroupSetupModal {
     closure_11 = undefined;
     _handleCreateGroupAndTier = function _handleCreateGroupAndTier() {
       let self = this;
-      const tmp = _undefined2(function*() {
+      const tmp = _undefined2(function* () {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -198,7 +198,12 @@ class GuildRoleSubscriptionGroupSetupModal {
                     closure_1_0(closure_1_3[9]).presentError(closure_1);
                     const obj8 = closure_1_0(closure_1_3[9]);
                   }
-                  const obj2 = { guildId: null, editStateId: null, groupListingId: null, onBeforeDispatchNewListing: null };
+                  const obj2 = {
+                    guildId: null,
+                    editStateId: null,
+                    groupListingId: null,
+                    onBeforeDispatchNewListing: null,
+                  };
                   obj2[0] = closure_1;
                   obj2[1] = closure_6;
                   obj2[2] = closure_1_0;
@@ -289,8 +294,15 @@ class GuildRoleSubscriptionGroupSetupModal {
       }
     }, items);
     memo = obj.useMemo(() => {
-      const items = [, , , , , , ];
-      ({ GATING: arr[0], GROUP: arr[1], DETAILS: arr[2], CHANNEL_BENEFITS: arr[3], INTANGIBLE_BENEFITS: arr[4], DESIGN: arr[5] } = constants);
+      const items = [, , , , , ,];
+      ({
+        GATING: arr[0],
+        GROUP: arr[1],
+        DETAILS: arr[2],
+        CHANNEL_BENEFITS: arr[3],
+        INTANGIBLE_BENEFITS: arr[4],
+        DESIGN: arr[5],
+      } = constants);
       items[6] = { scene: constants.CONFIRMATION, extraProps: { isForGroupSetupModal: true } };
       return items;
     }, []);
@@ -331,12 +343,17 @@ class GuildRoleSubscriptionGroupSetupModal {
     obj2.onClose = callback;
     obj2.stepScreenPropsMap = memo1;
     obj1[1] = closure_11(tmp13, obj2);
-    obj[3] = closure_11(require("useRoleSubscriptionSettingsDisabled").RoleSubscriptionSettingsDisabledContextProvider, obj1);
+    obj[3] = closure_11(
+      require("useRoleSubscriptionSettingsDisabled").RoleSubscriptionSettingsDisabledContextProvider,
+      obj1,
+    );
     return closure_11(require("useEditStateContext").EditStateContextProvider, obj);
   }
 }
 ({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: c9 } = MAX_SUBSCRIPTION_TIERS);
 GuildRoleSubscriptionGroupSetupModal.modalConfig = { closable: false };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupSetupModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupSetupModal.tsx",
+);
 
 export default GuildRoleSubscriptionGroupSetupModal;

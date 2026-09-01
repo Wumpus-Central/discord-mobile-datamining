@@ -12,7 +12,9 @@ createCacheKey = { tag: null };
 createCacheKey = { paddingHorizontal: 6, paddingVertical: 2, columnGap: 4, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfilePrimaryGuildEditButton.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_profile/native/UserProfilePrimaryGuildEditButton.tsx",
+);
 
 export default function UserProfilePrimaryGuildEditButton(arg0) {
   ({ user, pendingPrimaryGuildId } = arg0);
@@ -104,7 +106,15 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
       num = 1;
     }
     const sum = tmp6(tmp7[12]).TextStyleSheet["text-md/semibold"].fontSize + num;
-    obj = { label: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null, disabled: null };
+    obj = {
+      label: null,
+      buttonText: null,
+      accessibilityValue: null,
+      onPress: null,
+      leading: null,
+      trailing: null,
+      disabled: null,
+    };
     const intl2 = tmp6(tmp7[10]).intl;
     obj[0] = intl2.string(tmp6(tmp7[10]).t["DUD+5n"]);
     obj[1] = name;
@@ -113,8 +123,19 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     obj[2] = obj;
     obj[3] = function onPress() {
       let obj = userAvailableGuildsWithTags(handleSelectPrimaryGuild[14]);
-      obj = { availableGuilds: userAvailableGuildsWithTags, selectedGuildId: pendingPrimaryGuildId, onSelectGuild: handleSelectPrimaryGuild };
-      obj.openLazy(pendingPrimaryGuildId(handleSelectPrimaryGuild[16])(handleSelectPrimaryGuild[15], handleSelectPrimaryGuild.paths), "UserPrimaryGuildListBottomSheet", obj);
+      obj = {
+        availableGuilds: userAvailableGuildsWithTags,
+        selectedGuildId: pendingPrimaryGuildId,
+        onSelectGuild: handleSelectPrimaryGuild,
+      };
+      obj.openLazy(
+        pendingPrimaryGuildId(handleSelectPrimaryGuild[16])(
+          handleSelectPrimaryGuild[15],
+          handleSelectPrimaryGuild.paths,
+        ),
+        "UserPrimaryGuildListBottomSheet",
+        obj,
+      );
     };
     let tmp23Result = null;
     if (null != stateFromStores) {
@@ -127,7 +148,15 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     obj[4] = tmp23Result;
     tmp23Result = null;
     if (null != tag) {
-      obj2 = { containerStyles: null, textStyle: null, guildTag: null, guildBadge: null, badgeSize: null, textVariant: "text-md/semibold", textColor: "text-default" };
+      obj2 = {
+        containerStyles: null,
+        textStyle: null,
+        guildTag: null,
+        guildBadge: null,
+        badgeSize: null,
+        textVariant: "text-md/semibold",
+        textColor: "text-default",
+      };
       const items2 = [tmp.tag, tagStyle];
       obj2[0] = items2;
       const obj3 = { lineHeight: null };
@@ -143,4 +172,4 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     return jsx(tmp6(tmp7[13]).UserProfileEditFormButton, { text: null });
   }
   return null;
-};
+}

@@ -50,7 +50,14 @@ function maybeCancelTimeout(message, UPDATE) {
             return obj.isMediaFlaggedForHarmType(callback(6141).ContentHarmType.EXPLICIT, obj);
           });
           let tmp5Result = tmp5(7345);
-          let obj = { messageId: null, channelId: null, numOfAttachments: null, numOfEmbeds: null, numOfExplicitAttachments: null, numOfExplicitEmbeds: null };
+          let obj = {
+            messageId: null,
+            channelId: null,
+            numOfAttachments: null,
+            numOfEmbeds: null,
+            numOfExplicitAttachments: null,
+            numOfExplicitEmbeds: null,
+          };
           ({ id: obj2[0], channel_id: obj2[1] } = message);
           obj[2] = attachments.length;
           obj[3] = embeds.length;
@@ -152,7 +159,10 @@ function handleUnscannedMessages(found2, isMessageUpdate) {
         if (tmp) {
           const result = obj.sendMultiChannelMessagesForScanning(found);
         } else {
-          const result1 = obj.sendMessagesForScanning(found[0].channel_id, found.map((id) => id.id));
+          const result1 = obj.sendMessagesForScanning(
+            found[0].channel_id,
+            found.map((id) => id.id),
+          );
         }
       }
     }, 800 * Math.random());
@@ -161,7 +171,10 @@ function handleUnscannedMessages(found2, isMessageUpdate) {
     if (tmp) {
       let result = obj2.sendMultiChannelMessagesForScanning(found1);
     } else {
-      let result1 = obj2.sendMessagesForScanning(found1[0].channel_id, found1.map((id) => id.id));
+      let result1 = obj2.sendMessagesForScanning(
+        found1[0].channel_id,
+        found1.map((id) => id.id),
+      );
     }
   }
 }
@@ -207,10 +220,25 @@ function processMessagesFromAction(firstMessages, isMessageUpdate) {
   obj = {};
   const item = arr4.forEach((channel_id) => {
     if (null == obj[channel_id.channel_id]) {
-      tmp[channel_id.channel_id] = { numOfAttachments: 0, numOfAttachmentsPendingScan: 0, numOfEmbeds: 0, numOfEmbedsPendingScan: 0 };
+      tmp[channel_id.channel_id] = {
+        numOfAttachments: 0,
+        numOfAttachmentsPendingScan: 0,
+        numOfEmbeds: 0,
+        numOfEmbedsPendingScan: 0,
+      };
     }
     if (null == obj[channel_id.id]) {
-      obj = { channelId: null, numOfAttachments: 0, numOfSelfHarmAttachments: 0, numOfGoreAttachments: 0, numOfExplicitAttachments: 0, numOfEmbeds: 0, numOfSelfHarmEmbeds: 0, numOfGoreEmbeds: 0, numOfExplicitEmbeds: 0 };
+      obj = {
+        channelId: null,
+        numOfAttachments: 0,
+        numOfSelfHarmAttachments: 0,
+        numOfGoreAttachments: 0,
+        numOfExplicitAttachments: 0,
+        numOfEmbeds: 0,
+        numOfSelfHarmEmbeds: 0,
+        numOfGoreEmbeds: 0,
+        numOfExplicitEmbeds: 0,
+      };
       obj[0] = channel_id.channel_id;
       tmp2[channel_id.id] = obj;
     }
@@ -233,8 +261,10 @@ function processMessagesFromAction(firstMessages, isMessageUpdate) {
     const unscannedMediaIds = obj(closure_1_2[11]).getUnscannedMediaIds(channel_id);
     obj[channel_id.channel_id].numOfAttachments = obj[channel_id.channel_id].numOfAttachments + num;
     obj[channel_id.channel_id].numOfEmbeds = obj[channel_id.channel_id].numOfEmbeds + num2;
-    obj[channel_id.channel_id].numOfAttachmentsPendingScan = obj[channel_id.channel_id].numOfAttachmentsPendingScan + unscannedMediaIds.attachmentIds.length;
-    obj[channel_id.channel_id].numOfEmbedsPendingScan = obj[channel_id.channel_id].numOfEmbedsPendingScan + unscannedMediaIds.embedIds.length;
+    obj[channel_id.channel_id].numOfAttachmentsPendingScan =
+      obj[channel_id.channel_id].numOfAttachmentsPendingScan + unscannedMediaIds.attachmentIds.length;
+    obj[channel_id.channel_id].numOfEmbedsPendingScan =
+      obj[channel_id.channel_id].numOfEmbedsPendingScan + unscannedMediaIds.embedIds.length;
     obj[channel_id.id].numOfAttachments = obj[channel_id.id].numOfAttachments + num;
     obj[channel_id.id].numOfEmbeds = obj[channel_id.id].numOfEmbeds + num2;
     const attachments1 = channel_id.attachments;
@@ -320,7 +350,13 @@ function processMessagesFromAction(firstMessages, isMessageUpdate) {
   const item1 = entries.forEach((arg0) => {
     [tmp, tmp2] = arg0;
     obj = obj(7345);
-    obj = { channelId: tmp, numOfAttachments: tmp2.numOfAttachments, numOfAttachmentsPendingScan: tmp2.numOfAttachmentsPendingScan, numOfEmbeds: tmp2.numOfEmbeds, numOfEmbedsPendingScan: tmp2.numOfEmbedsPendingScan };
+    obj = {
+      channelId: tmp,
+      numOfAttachments: tmp2.numOfAttachments,
+      numOfAttachmentsPendingScan: tmp2.numOfAttachmentsPendingScan,
+      numOfEmbeds: tmp2.numOfEmbeds,
+      numOfEmbedsPendingScan: tmp2.numOfEmbedsPendingScan,
+    };
     const result = obj.trackExplicitMediaRedactableMessagedLoaded(obj);
   });
   const obj3 = obj(11);
@@ -328,7 +364,18 @@ function processMessagesFromAction(firstMessages, isMessageUpdate) {
   const item2 = entries1.forEach((arg0) => {
     [tmp, tmp2] = arg0;
     obj = obj(7345);
-    obj = { messageId: tmp, channelId: tmp2.channelId, numOfAttachments: tmp2.numOfAttachments, numOfGoreAttachments: tmp2.numOfGoreAttachments, numOfExplicitAttachments: tmp2.numOfExplicitAttachments, numOfSelfHarmAttachments: tmp2.numOfSelfHarmAttachments, numOfEmbeds: tmp2.numOfEmbeds, numOfGoreEmbeds: tmp2.numOfGoreEmbeds, numOfExplicitEmbeds: tmp2.numOfExplicitEmbeds, numOfSelfHarmEmbeds: tmp2.numOfSelfHarmEmbeds };
+    obj = {
+      messageId: tmp,
+      channelId: tmp2.channelId,
+      numOfAttachments: tmp2.numOfAttachments,
+      numOfGoreAttachments: tmp2.numOfGoreAttachments,
+      numOfExplicitAttachments: tmp2.numOfExplicitAttachments,
+      numOfSelfHarmAttachments: tmp2.numOfSelfHarmAttachments,
+      numOfEmbeds: tmp2.numOfEmbeds,
+      numOfGoreEmbeds: tmp2.numOfGoreEmbeds,
+      numOfExplicitEmbeds: tmp2.numOfExplicitEmbeds,
+      numOfSelfHarmEmbeds: tmp2.numOfSelfHarmEmbeds,
+    };
     const result = obj.trackRedactableMessageLoaded(obj);
   });
   let flag = found2.length > 0;
@@ -477,7 +524,13 @@ function handleSearchMessagesSuccess(data) {
   c0 = false;
   const item = data.forEach((messages) => {
     const tmp = closure_1_1(closure_1_2[22])(messages.messages);
-    closure_0 = closure_1_19(closure_1_1(closure_1_2[19])(closure_1_1(closure_1_2[22])(messages.messages), (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id)) || closure_0;
+    closure_0 =
+      closure_1_19(
+        closure_1_1(closure_1_2[19])(
+          closure_1_1(closure_1_2[22])(messages.messages),
+          (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id,
+        ),
+      ) || closure_0;
   });
   return c0;
 }
@@ -599,10 +652,25 @@ function maybeScanMessagesForChannelId(channelId) {
     obj = {};
     const item = arr5.forEach((channel_id) => {
       if (null == obj[channel_id.channel_id]) {
-        tmp[channel_id.channel_id] = { numOfAttachments: 0, numOfAttachmentsPendingScan: 0, numOfEmbeds: 0, numOfEmbedsPendingScan: 0 };
+        tmp[channel_id.channel_id] = {
+          numOfAttachments: 0,
+          numOfAttachmentsPendingScan: 0,
+          numOfEmbeds: 0,
+          numOfEmbedsPendingScan: 0,
+        };
       }
       if (null == obj[channel_id.id]) {
-        obj = { channelId: null, numOfAttachments: 0, numOfSelfHarmAttachments: 0, numOfGoreAttachments: 0, numOfExplicitAttachments: 0, numOfEmbeds: 0, numOfSelfHarmEmbeds: 0, numOfGoreEmbeds: 0, numOfExplicitEmbeds: 0 };
+        obj = {
+          channelId: null,
+          numOfAttachments: 0,
+          numOfSelfHarmAttachments: 0,
+          numOfGoreAttachments: 0,
+          numOfExplicitAttachments: 0,
+          numOfEmbeds: 0,
+          numOfSelfHarmEmbeds: 0,
+          numOfGoreEmbeds: 0,
+          numOfExplicitEmbeds: 0,
+        };
         obj[0] = channel_id.channel_id;
         tmp2[channel_id.id] = obj;
       }
@@ -625,8 +693,10 @@ function maybeScanMessagesForChannelId(channelId) {
       const unscannedMediaIds = obj(closure_1_2[11]).getUnscannedMediaIds(channel_id);
       obj[channel_id.channel_id].numOfAttachments = obj[channel_id.channel_id].numOfAttachments + num;
       obj[channel_id.channel_id].numOfEmbeds = obj[channel_id.channel_id].numOfEmbeds + num2;
-      obj[channel_id.channel_id].numOfAttachmentsPendingScan = obj[channel_id.channel_id].numOfAttachmentsPendingScan + unscannedMediaIds.attachmentIds.length;
-      obj[channel_id.channel_id].numOfEmbedsPendingScan = obj[channel_id.channel_id].numOfEmbedsPendingScan + unscannedMediaIds.embedIds.length;
+      obj[channel_id.channel_id].numOfAttachmentsPendingScan =
+        obj[channel_id.channel_id].numOfAttachmentsPendingScan + unscannedMediaIds.attachmentIds.length;
+      obj[channel_id.channel_id].numOfEmbedsPendingScan =
+        obj[channel_id.channel_id].numOfEmbedsPendingScan + unscannedMediaIds.embedIds.length;
       obj[channel_id.id].numOfAttachments = obj[channel_id.id].numOfAttachments + num;
       obj[channel_id.id].numOfEmbeds = obj[channel_id.id].numOfEmbeds + num2;
       const attachments1 = channel_id.attachments;
@@ -712,7 +782,13 @@ function maybeScanMessagesForChannelId(channelId) {
     const item1 = entries.forEach((arg0) => {
       [tmp, tmp2] = arg0;
       obj = obj(7345);
-      obj = { channelId: tmp, numOfAttachments: tmp2.numOfAttachments, numOfAttachmentsPendingScan: tmp2.numOfAttachmentsPendingScan, numOfEmbeds: tmp2.numOfEmbeds, numOfEmbedsPendingScan: tmp2.numOfEmbedsPendingScan };
+      obj = {
+        channelId: tmp,
+        numOfAttachments: tmp2.numOfAttachments,
+        numOfAttachmentsPendingScan: tmp2.numOfAttachmentsPendingScan,
+        numOfEmbeds: tmp2.numOfEmbeds,
+        numOfEmbedsPendingScan: tmp2.numOfEmbedsPendingScan,
+      };
       const result = obj.trackExplicitMediaRedactableMessagedLoaded(obj);
     });
     const obj3 = obj(11);
@@ -720,7 +796,18 @@ function maybeScanMessagesForChannelId(channelId) {
     const item2 = entries1.forEach((arg0) => {
       [tmp, tmp2] = arg0;
       obj = obj(7345);
-      obj = { messageId: tmp, channelId: tmp2.channelId, numOfAttachments: tmp2.numOfAttachments, numOfGoreAttachments: tmp2.numOfGoreAttachments, numOfSelfHarmAttachments: tmp2.numOfSelfHarmAttachments, numOfExplicitAttachments: tmp2.numOfExplicitAttachments, numOfEmbeds: tmp2.numOfEmbeds, numOfGoreEmbeds: tmp2.numOfGoreEmbeds, numOfExplicitEmbeds: tmp2.numOfExplicitEmbeds, numOfSelfHarmEmbeds: tmp2.numOfSelfHarmEmbeds };
+      obj = {
+        messageId: tmp,
+        channelId: tmp2.channelId,
+        numOfAttachments: tmp2.numOfAttachments,
+        numOfGoreAttachments: tmp2.numOfGoreAttachments,
+        numOfSelfHarmAttachments: tmp2.numOfSelfHarmAttachments,
+        numOfExplicitAttachments: tmp2.numOfExplicitAttachments,
+        numOfEmbeds: tmp2.numOfEmbeds,
+        numOfGoreEmbeds: tmp2.numOfGoreEmbeds,
+        numOfExplicitEmbeds: tmp2.numOfExplicitEmbeds,
+        numOfSelfHarmEmbeds: tmp2.numOfSelfHarmEmbeds,
+      };
       const result = obj.trackRedactableMessageLoaded(obj);
     });
     let flag = found2.length > 0;
@@ -737,11 +824,25 @@ let closure_14 = {};
 initializeDefault;
 let prototype = function ExplicitMediaManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.actions = { LOAD_MESSAGES_SUCCESS: handleMessagesLoad, LOAD_FORUM_POSTS: handleForumPostsLoad, LOAD_THREADS_SUCCESS: handleThreadsLoad, LOAD_ARCHIVED_THREADS_SUCCESS: handleThreadsLoad, SIDEBAR_VIEW_CHANNEL: handleSidebarViewChannel, MESSAGE_CREATE: handleMessageCreate, MESSAGE_UPDATE: handleMessageUpdate, LOGOUT: resetManager, SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess, MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess, CHANNEL_SELECT: handleChannelSelect, LOAD_PINNED_MESSAGES_SUCCESS: handleLoadPinnedMessages, USER_SETTINGS_PROTO_UPDATE: handleUserSettingsUpdate, CHANNEL_RTC_UPDATE_CHAT_OPEN: handleVoiceChannelChatOpen };
+  applyArgumentsResult.actions = {
+    LOAD_MESSAGES_SUCCESS: handleMessagesLoad,
+    LOAD_FORUM_POSTS: handleForumPostsLoad,
+    LOAD_THREADS_SUCCESS: handleThreadsLoad,
+    LOAD_ARCHIVED_THREADS_SUCCESS: handleThreadsLoad,
+    SIDEBAR_VIEW_CHANNEL: handleSidebarViewChannel,
+    MESSAGE_CREATE: handleMessageCreate,
+    MESSAGE_UPDATE: handleMessageUpdate,
+    LOGOUT: resetManager,
+    SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
+    CHANNEL_SELECT: handleChannelSelect,
+    LOAD_PINNED_MESSAGES_SUCCESS: handleLoadPinnedMessages,
+    USER_SETTINGS_PROTO_UPDATE: handleUserSettingsUpdate,
+    CHANNEL_RTC_UPDATE_CHAT_OPEN: handleVoiceChannelChatOpen,
+  };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaManager.tsx");
 

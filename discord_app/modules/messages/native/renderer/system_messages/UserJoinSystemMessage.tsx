@@ -7,7 +7,9 @@ import closure_4 from "../../../../../stores/GuildStore.tsx";
 import { SystemChannelFlags } from "../../../../../Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx",
+);
 
 export const createUserJoinSystemMessage = function createUserJoinSystemMessage(roleStyle) {
   const message = roleStyle.message;
@@ -37,7 +39,10 @@ export const createUserJoinSystemMessage = function createUserJoinSystemMessage(
   }
   obj = { content: null, sticker: null, stickerLabel: null };
   const intl = tmp(1236).intl;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp4(7871)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  obj = {
+    username: messageAuthorWithProcessedColor.nick,
+    usernameOnClick: tmp4(7871)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }),
+  };
   obj[0] = intl.formatToParts(systemMessageUserJoinMobile, obj);
   obj[1] = transformStickerResult;
   const intl2 = tmp(1236).intl;

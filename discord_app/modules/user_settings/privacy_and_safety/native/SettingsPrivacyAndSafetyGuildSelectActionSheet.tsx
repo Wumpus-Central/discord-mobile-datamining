@@ -9,12 +9,18 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: error, setSelectedGuildId: closure_8, useUserSafetySettingsSelectedGuildStore: c9 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
+({
+  GUILD_SELECT_ALL_SERVERS_OPTION_ID: error,
+  setSelectedGuildId: closure_8,
+  useUserSafetySettingsSelectedGuildStore: c9,
+} = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
 createCacheKey = { iconContainer: null };
 createCacheKey = { marginRight: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SettingsPrivacyAndSafetyGuildSelectActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/privacy_and_safety/native/SettingsPrivacyAndSafetyGuildSelectActionSheet.tsx",
+);
 
 export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
   let obj = React;
@@ -65,17 +71,34 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
         obj = { query: null };
         obj[0] = arg0;
         const obj4 = obj(callback[16]);
-        reduced = obj(callback[16]).queryGuilds(obj).map((record) => {
-          record = record.record;
-          return { type: callback(4745).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
-        });
+        reduced = obj(callback[16])
+          .queryGuilds(obj)
+          .map((record) => {
+            record = record.record;
+            return { type: callback(4745).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+          });
         const queryGuildsResult = obj(callback[16]).queryGuilds(obj);
       }
       return reduced;
     }, []);
     const items1 = [tmp2[0], callback];
     const memo = obj.useMemo(() => callback(selectedGuildId), items1);
-    obj1 = { onPressOptionItem: null, renderHeaderIcon: null, renderIcon: null, iconContainerStyle: null, selectionActionComponent: null, options: null, selectedCount: 1, selectedOptions: null, isSelected: null, submitSelection: null, onQueryChange: null, itemAccessibilityLabel: null, allowEmpty: false, expanded: true };
+    obj1 = {
+      onPressOptionItem: null,
+      renderHeaderIcon: null,
+      renderIcon: null,
+      iconContainerStyle: null,
+      selectionActionComponent: null,
+      options: null,
+      selectedCount: 1,
+      selectedOptions: null,
+      isSelected: null,
+      submitSelection: null,
+      onQueryChange: null,
+      itemAccessibilityLabel: null,
+      allowEmpty: false,
+      expanded: true,
+    };
     obj1[0] = function onPressOptionItem(arg0, guild) {
       callback(guild.guild.id);
       obj = obj(callback[12]);
@@ -118,7 +141,22 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
     obj1[11] = function itemAccessibilityLabel(label) {
       return label.label;
     };
-    return jsx(obj(tmp4[13]), { onPressOptionItem: null, renderHeaderIcon: null, renderIcon: null, iconContainerStyle: null, selectionActionComponent: null, options: null, selectedCount: 1, selectedOptions: null, isSelected: null, submitSelection: null, onQueryChange: null, itemAccessibilityLabel: null, allowEmpty: false, expanded: true });
+    return jsx(obj(tmp4[13]), {
+      onPressOptionItem: null,
+      renderHeaderIcon: null,
+      renderIcon: null,
+      iconContainerStyle: null,
+      selectionActionComponent: null,
+      options: null,
+      selectedCount: 1,
+      selectedOptions: null,
+      isSelected: null,
+      submitSelection: null,
+      onQueryChange: null,
+      itemAccessibilityLabel: null,
+      allowEmpty: false,
+      expanded: true,
+    });
   }
   const obj2 = { type: selectedGuildId(callback[8]).SelectOptionType.GUILD, guild: null, label: null, value: null };
   tmp = callback3();
@@ -130,4 +168,4 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
   obj2[2] = intl2.string(selectedGuildId(callback[10]).t["32u1Dx"]);
   obj2[3] = closure_7;
   obj = obj2;
-};
+}

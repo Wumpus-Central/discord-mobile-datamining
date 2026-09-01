@@ -40,7 +40,33 @@ initializeDefault;
 class AVErrorManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    applyArgumentsResult.actions = { MEDIA_ENGINE_SET_AUDIO_ENABLED: applyArgumentsResult.updateActiveErrors, AUDIO_INPUT_DETECTED: applyArgumentsResult.updateActiveErrors, AUDIO_SET_DISPLAY_SILENCE_WARNING: applyArgumentsResult.updateActiveErrors, CERTIFIED_DEVICES_SET: applyArgumentsResult.updateActiveErrors, AUDIO_SET_INPUT_DEVICE: applyArgumentsResult.updateActiveErrors, AUDIO_SET_OUTPUT_DEVICE: applyArgumentsResult.updateActiveErrors, MEDIA_ENGINE_DEVICES: applyArgumentsResult.updateActiveErrors, RTC_CONNECTION_STATE: applyArgumentsResult.updateActiveErrors, VOICE_STATE_UPDATES: applyArgumentsResult.updateActiveErrors, MEDIA_ENGINE_SET_GO_LIVE_SOURCE: applyArgumentsResult.updateActiveErrors, MEDIA_ENGINE_SOUNDSHARE_FAILED: applyArgumentsResult.updateActiveErrors, MEDIA_ENGINE_NOISE_CANCELLATION_ERROR: applyArgumentsResult.updateActiveErrors, MEDIA_ENGINE_VOICE_ACTIVITY_DETECTION_ERROR: applyArgumentsResult.updateActiveErrors, MEDIA_ENGINE_VIDEO_FILTER_ERROR: applyArgumentsResult.updateActiveErrors, MEDIA_ENGINE_VIDEO_STATE_CHANGED: applyArgumentsResult.updateActiveErrors, NATIVE_SCREEN_SHARE_PICKER_UPDATE: applyArgumentsResult.updateActiveErrors, NATIVE_SCREEN_SHARE_PICKER_ERROR: applyArgumentsResult.updateActiveErrors, MEDIA_SESSION_JOINED: applyArgumentsResult.updateActiveErrors, RTC_CONNECTION_UPDATE_ID: applyArgumentsResult.updateActiveErrors, RTC_CONNECTION_VIDEO: applyArgumentsResult.updateActiveErrors, RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: applyArgumentsResult.updateActiveErrors, VIDEO_STREAM_READY_TIMEOUT: applyArgumentsResult.updateActiveErrors, CLEAR_VIDEO_STREAM_READY_TIMEOUT: applyArgumentsResult.updateActiveErrors, REPORT_AV_ERROR: applyArgumentsResult.handleReportAVError, STREAM_CLOSE: applyArgumentsResult.updateActiveErrors };
+    applyArgumentsResult.actions = {
+      MEDIA_ENGINE_SET_AUDIO_ENABLED: applyArgumentsResult.updateActiveErrors,
+      AUDIO_INPUT_DETECTED: applyArgumentsResult.updateActiveErrors,
+      AUDIO_SET_DISPLAY_SILENCE_WARNING: applyArgumentsResult.updateActiveErrors,
+      CERTIFIED_DEVICES_SET: applyArgumentsResult.updateActiveErrors,
+      AUDIO_SET_INPUT_DEVICE: applyArgumentsResult.updateActiveErrors,
+      AUDIO_SET_OUTPUT_DEVICE: applyArgumentsResult.updateActiveErrors,
+      MEDIA_ENGINE_DEVICES: applyArgumentsResult.updateActiveErrors,
+      RTC_CONNECTION_STATE: applyArgumentsResult.updateActiveErrors,
+      VOICE_STATE_UPDATES: applyArgumentsResult.updateActiveErrors,
+      MEDIA_ENGINE_SET_GO_LIVE_SOURCE: applyArgumentsResult.updateActiveErrors,
+      MEDIA_ENGINE_SOUNDSHARE_FAILED: applyArgumentsResult.updateActiveErrors,
+      MEDIA_ENGINE_NOISE_CANCELLATION_ERROR: applyArgumentsResult.updateActiveErrors,
+      MEDIA_ENGINE_VOICE_ACTIVITY_DETECTION_ERROR: applyArgumentsResult.updateActiveErrors,
+      MEDIA_ENGINE_VIDEO_FILTER_ERROR: applyArgumentsResult.updateActiveErrors,
+      MEDIA_ENGINE_VIDEO_STATE_CHANGED: applyArgumentsResult.updateActiveErrors,
+      NATIVE_SCREEN_SHARE_PICKER_UPDATE: applyArgumentsResult.updateActiveErrors,
+      NATIVE_SCREEN_SHARE_PICKER_ERROR: applyArgumentsResult.updateActiveErrors,
+      MEDIA_SESSION_JOINED: applyArgumentsResult.updateActiveErrors,
+      RTC_CONNECTION_UPDATE_ID: applyArgumentsResult.updateActiveErrors,
+      RTC_CONNECTION_VIDEO: applyArgumentsResult.updateActiveErrors,
+      RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: applyArgumentsResult.updateActiveErrors,
+      VIDEO_STREAM_READY_TIMEOUT: applyArgumentsResult.updateActiveErrors,
+      CLEAR_VIDEO_STREAM_READY_TIMEOUT: applyArgumentsResult.updateActiveErrors,
+      REPORT_AV_ERROR: applyArgumentsResult.handleReportAVError,
+      STREAM_CLOSE: applyArgumentsResult.updateActiveErrors,
+    };
     return applyArgumentsResult;
   }
 }
@@ -114,7 +140,9 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
             let tmp41 = logger;
             let _JSON = JSON;
             let _HermesInternal2 = HermesInternal;
-            let infoResult = logger.info("Error resolved: " + tmp37.type + " " + JSON.stringify(callback(tmp37, closure_3)));
+            let infoResult = logger.info(
+              "Error resolved: " + tmp37.type + " " + JSON.stringify(callback(tmp37, closure_3)),
+            );
           }
           continue;
         }
@@ -128,7 +156,11 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
     const _Object = Object;
     const call = toString.call;
     const _HermesInternal = HermesInternal;
-    logger.error("existingErrors is not a Map: " + activeErrors1 + " type: " + typeof call === "unknown" ? toString() : call(activeErrors1));
+    logger.error(
+      "existingErrors is not a Map: " + activeErrors1 + " type: " + typeof call === "unknown"
+        ? toString()
+        : call(activeErrors1),
+    );
   }
 };
 prototype["handleReportAVError"] = function handleReportAVError(arg0) {

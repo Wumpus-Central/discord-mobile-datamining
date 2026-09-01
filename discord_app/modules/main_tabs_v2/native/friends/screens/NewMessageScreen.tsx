@@ -44,7 +44,7 @@ function findLocalMatchingPrivateChannelId(arg0) {
     }
     return dMFromUserId;
   } else {
-    const items = [, ];
+    const items = [,];
     [arr[0], arr[1]] = callback2(sortedChannels.getSortedChannels(), 2);
     const iter = items[Symbol.iterator]();
     const tmp3 = callback2(sortedChannels.getSortedChannels(), 2);
@@ -75,7 +75,7 @@ function _findMatchingPrivateChannelId() {
     c2 = 0;
     c1 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -187,7 +187,7 @@ function Header(title) {
   fn.__initData = closure_24;
   obj = { style: callback5().header, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const items1 = [callback3(numInGroup(7607).GenericHeaderTitle, { title: title.title }), ];
+  const items1 = [callback3(numInGroup(7607).GenericHeaderTitle, { title: title.title })];
   obj1 = { style: animatedStyle, variant: "text-xs/medium", color: null, children: null };
   let str = "text-muted";
   if (0 === memo) {
@@ -229,8 +229,16 @@ function ChatPreview(channelId) {
   navigateToChannel(16334)(callback);
   let obj = { style: tmp.background, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { guildId: closure_15, channelId, chatInputRef: React.useRef(null), HACK_fixModalInteraction: true, alwaysRespectKeyboard: true, screenIndex: "new-message", secondaryTextFieldRef: channelId.tagListInputRef };
-  const items2 = [callback3(navigateToChannel(10977), obj), ];
+  obj = {
+    guildId: closure_15,
+    channelId,
+    chatInputRef: React.useRef(null),
+    HACK_fixModalInteraction: true,
+    alwaysRespectKeyboard: true,
+    screenIndex: "new-message",
+    secondaryTextFieldRef: channelId.tagListInputRef,
+  };
+  const items2 = [callback3(navigateToChannel(10977), obj)];
   obj1 = { portal: null };
   const ref = React.useRef(null);
   obj1[0] = channelId(500).isAndroid();
@@ -239,10 +247,23 @@ function ChatPreview(channelId) {
   obj[1] = callback4(View, obj);
   return callback3(View, obj);
 }
-({ AnalyticEvents: closure_12, AnalyticsSections: map1, ChannelTypes: closure_14, ME: closure_15, Routes: closure_16 } = ME);
+({
+  AnalyticEvents: closure_12,
+  AnalyticsSections: map1,
+  ChannelTypes: closure_14,
+  ME: closure_15,
+  Routes: closure_16,
+} = ME);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = _modDef4217.createAnimatedComponent(require("Text").Text);
-let obj = { container: { flex: 1 }, background: null, header: null, emptyContainer: null, emptyKeyboardView: null, addFriendsButtonContainer: null };
+let obj = {
+  container: { flex: 1 },
+  background: null,
+  header: null,
+  emptyContainer: null,
+  emptyKeyboardView: null,
+  addFriendsButtonContainer: null,
+};
 obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[1] = obj;
 let str = "center";
@@ -252,10 +273,17 @@ if (set.isAndroid()) {
 obj[2] = { flexDirection: "column", alignItems: str };
 obj[3] = { flexGrow: 1, justifyContent: "center" };
 obj[4] = { flexGrow: 1 };
-createCacheKey = { marginBottom: ThemesDefault.space.PX_16, flexDirection: "row", justifyContent: "center", width: "100%" };
+createCacheKey = {
+  marginBottom: ThemesDefault.space.PX_16,
+  flexDirection: "row",
+  justifyContent: "center",
+  width: "100%",
+};
 obj[5] = createCacheKey;
 let closure_20 = createCacheKey.createStyles(obj);
-let closure_24 = { code: "function NewMessageScreenTsx1(){const{numInGroup,NUM_IN_GROUP_THRESHOLD,withTiming}=this.__closure;const show=numInGroup>=NUM_IN_GROUP_THRESHOLD;return{opacity:withTiming(show?1:0),maxHeight:withTiming(show?20:0)};}" };
+let closure_24 = {
+  code: "function NewMessageScreenTsx1(){const{numInGroup,NUM_IN_GROUP_THRESHOLD,withTiming}=this.__closure;const show=numInGroup>=NUM_IN_GROUP_THRESHOLD;return{opacity:withTiming(show?1:0),maxHeight:withTiming(show?20:0)};}",
+};
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/NewMessageScreen.tsx");
 
 export default function NewMessageScreen(navigation) {
@@ -341,12 +369,14 @@ export default function NewMessageScreen(navigation) {
   }, items2);
   obj1 = initialize;
   const items3 = [FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID];
-  stateFromStores = obj1.useStateFromStores(items3, () => FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID.getChannel(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID));
+  stateFromStores = obj1.useStateFromStores(items3, () =>
+    FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID.getChannel(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID),
+  );
   const items4 = [first, stateFromStores];
   const effect1 = obj.useEffect(() => {
     function _doAction() {
       let self = this;
-      const tmp = stateFromStores(function*() {
+      const tmp = stateFromStores(function* () {
         if (c3 === 2) {
           c3 = 3;
           HermesBuiltin.throwTypeError();
@@ -486,7 +516,18 @@ export default function NewMessageScreen(navigation) {
     }
     if (tmp2) {
       let obj = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(lib[18]);
-      obj = { type: "LOAD_MESSAGES_SUCCESS", channelId: null, messages: null, isBefore: false, isAfter: false, hasMoreBefore: false, hasMoreAfter: false, limit: 0, jump: "PX_16", isStale: "custom" };
+      obj = {
+        type: "LOAD_MESSAGES_SUCCESS",
+        channelId: null,
+        messages: null,
+        isBefore: false,
+        isAfter: false,
+        hasMoreBefore: false,
+        hasMoreAfter: false,
+        limit: 0,
+        jump: "PX_16",
+        isStale: "custom",
+      };
       obj[1] = tmp.id;
       obj[2] = [];
       obj.dispatch(obj);
@@ -511,7 +552,7 @@ export default function NewMessageScreen(navigation) {
           tmp4 = closure_1_2;
         }
         return tmp2;
-      }
+      },
     });
   }, items7);
   const items8 = [navigation];
@@ -524,7 +565,7 @@ export default function NewMessageScreen(navigation) {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -620,7 +661,7 @@ export default function NewMessageScreen(navigation) {
     })();
   });
   const items9 = [first, callback];
-  const callback1 = obj.useCallback(function(arg0) {
+  const callback1 = obj.useCallback(function (arg0) {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -658,7 +699,10 @@ export default function NewMessageScreen(navigation) {
   closure_10 = tmp28;
   let tmp9 = first(obj.useState(false), 2);
   const items10 = [callback];
-  stateFromStores1 = require("../../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items10, () => callback.getRelationshipCount() > 0);
+  stateFromStores1 = require("../../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items10,
+    () => callback.getRelationshipCount() > 0,
+  );
   const items11 = [navigation, stateFromStores1, 0 === first.length];
   const items12 = [navigation];
   const memo = obj.useMemo(() => {
@@ -689,7 +733,13 @@ export default function NewMessageScreen(navigation) {
   }, items11);
   const items13 = [navigation, tmp, insets.bottom];
   const memo1 = obj.useMemo(() => {
-    const obj = { icon: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(lib[37]), IconComponent: navigation(lib[38]).UserPlusIcon, label: null, iconVariant: "default", onPress: null };
+    const obj = {
+      icon: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(lib[37]),
+      IconComponent: navigation(lib[38]).UserPlusIcon,
+      label: null,
+      iconVariant: "default",
+      onPress: null,
+    };
     const intl = navigation(lib[25]).intl;
     obj[2] = intl.string(navigation(lib[25]).t["9nbDJx"]);
     obj[4] = function onPress() {
@@ -700,7 +750,7 @@ export default function NewMessageScreen(navigation) {
   }, items12);
   const memo2 = obj.useMemo(() => {
     let obj = { style: items, children: null };
-    items = [lib.emptyKeyboardView, ];
+    items = [lib.emptyKeyboardView];
     obj = { paddingBottom: stateFromStores.bottom };
     items[1] = obj;
     obj = { title: null, subtitle: null, containerStyle: null, fullHeight: true, children: null };
@@ -721,7 +771,26 @@ export default function NewMessageScreen(navigation) {
     obj[1] = closure_1_17(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(lib[39]), obj);
     return closure_1_17(c6, obj);
   }, items13);
-  obj = { value: tmp4(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(5973).NEW_MESSAGE_COMPOSER).analyticsLocations, children: callback3(tmp2(11935), obj1) };
-  obj1 = { actions: memo, noResultActions: memo1, rowMode: stateFromStores1.NONE, tagListInputRef: ref, onSelectUser: callback1, onQueryChanged: callback3, selectedUserIds: first, withAffinitySuggestions: true, overrideResults: tmp26Result, withGuildMembers: tmp28, withGDMNames: true, forceSearchResults: tmp10, onForceSearchResults: callback2, defaultNoResultsFound: memo2, autoFocusSearch: true };
+  obj = {
+    value: tmp4(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(5973).NEW_MESSAGE_COMPOSER).analyticsLocations,
+    children: callback3(tmp2(11935), obj1),
+  };
+  obj1 = {
+    actions: memo,
+    noResultActions: memo1,
+    rowMode: stateFromStores1.NONE,
+    tagListInputRef: ref,
+    onSelectUser: callback1,
+    onQueryChanged: callback3,
+    selectedUserIds: first,
+    withAffinitySuggestions: true,
+    overrideResults: tmp26Result,
+    withGuildMembers: tmp28,
+    withGDMNames: true,
+    forceSearchResults: tmp10,
+    onForceSearchResults: callback2,
+    defaultNoResultsFound: memo2,
+    autoFocusSearch: true,
+  };
   return callback3(require("../../../../app_analytics/useAnalyticsLocations.tsx").AnalyticsLocationProvider, obj);
-};
+}

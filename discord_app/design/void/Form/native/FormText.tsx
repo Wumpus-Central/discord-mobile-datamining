@@ -45,7 +45,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   let primary = size.color;
   const tmp = callback(str);
   const obj = { ref, style: null, children: null };
-  const items = [tmp.text, , ];
+  const items = [tmp.text, ,];
   if (primary == null) {
     primary = tmp.primary;
   }

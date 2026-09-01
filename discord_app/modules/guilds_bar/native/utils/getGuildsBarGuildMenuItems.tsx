@@ -12,11 +12,16 @@ export default function getGuildsBarGuildMenuItems(arg0) {
   const _require = arg0;
   let obj = getMuteTimeOptions;
   let result = obj.shouldShowUseNewNotificationSystem("GuildPopoutMenu");
-  obj = { IconComponent: require("../../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx").EnvelopeIcon, label: null, action: null };
+  obj = {
+    IconComponent: require("../../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx")
+      .EnvelopeIcon,
+    label: null,
+    action: null,
+  };
   const intl = require("../../../../intl/index.native.tsx").intl;
   obj[1] = intl.string(require("../../../../intl/index.native.tsx").t.e6RscS);
   obj[2] = function action() {
-    return closure_1_3(function*() {
+    return closure_1_3(function* () {
       if (paths === 2) {
         paths = 3;
         HermesBuiltin.throwTypeError();
@@ -71,15 +76,24 @@ export default function getGuildsBarGuildMenuItems(arg0) {
       }
     })();
   };
-  let items = [obj, , ];
-  obj = { IconComponent: require("../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx").BellIcon, label: null, action: null };
+  let items = [obj, ,];
+  obj = {
+    IconComponent: require("../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx").BellIcon,
+    label: null,
+    action: null,
+  };
   const intl2 = require("../../../../intl/index.native.tsx").intl;
   obj[1] = intl2.string(require("../../../../intl/index.native.tsx").t.HcoRu0);
   obj[2] = function action() {
     closure_1_1(closure_1_2[10]).open(closure_0);
   };
   items[1] = obj;
-  obj1 = { IconComponent: require("../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx").SettingsIcon, label: null, action: null };
+  obj1 = {
+    IconComponent: require("../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx")
+      .SettingsIcon,
+    label: null,
+    action: null,
+  };
   const intl3 = require("../../../../intl/index.native.tsx").intl;
   obj1[1] = intl3.string(require("../../../../intl/index.native.tsx").t.PdRCRg);
   obj1[2] = function action() {
@@ -98,7 +112,11 @@ export default function getGuildsBarGuildMenuItems(arg0) {
       obj2[1] = intl5.string(tmp(1236).t.De0BTC);
       obj2[2] = function action() {
         if (null != callback) {
-          const result = closure_1_1(closure_1_2[10]).updateGuildNotificationSettings(tmp, { muted: false }, callback(closure_1_2[17]).NotificationLabels.Unmuted);
+          const result = closure_1_1(closure_1_2[10]).updateGuildNotificationSettings(
+            tmp,
+            { muted: false },
+            callback(closure_1_2[17]).NotificationLabels.Unmuted,
+          );
           const obj = closure_1_1(closure_1_2[10]);
         }
       };
@@ -116,4 +134,4 @@ export default function getGuildsBarGuildMenuItems(arg0) {
     }
   }
   return items;
-};
+}

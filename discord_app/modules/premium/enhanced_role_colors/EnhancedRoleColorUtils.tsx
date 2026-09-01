@@ -31,8 +31,14 @@ export const extractColorStringsFromServerColors = function extractColorStringsF
 export const getAuthorHasGradientRole = function getAuthorHasGradientRole(colorStrings) {
   let tmp = null != colorStrings;
   if (tmp) {
-    tmp = null != colorStrings.colorStrings && null != colorStrings.colorStrings.primaryColor && null != colorStrings.colorStrings.secondaryColor;
-    const tmp2 = null != colorStrings.colorStrings && null != colorStrings.colorStrings.primaryColor && null != colorStrings.colorStrings.secondaryColor;
+    tmp =
+      null != colorStrings.colorStrings &&
+      null != colorStrings.colorStrings.primaryColor &&
+      null != colorStrings.colorStrings.secondaryColor;
+    const tmp2 =
+      null != colorStrings.colorStrings &&
+      null != colorStrings.colorStrings.primaryColor &&
+      null != colorStrings.colorStrings.secondaryColor;
   }
   return tmp;
 };

@@ -20,6 +20,8 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   obj.children = jsx(SplitTextField.SplitTextField, { ref });
   return jsx(Input.Input, { ref });
 });
-const result = require("set").fileFinishedImporting("design/components/SplitTextInput/native/SplitTextInput.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/SplitTextInput/native/SplitTextInput.native.tsx",
+);
 
 export const SplitTextInput = forwardRefResult;

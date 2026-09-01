@@ -30,12 +30,16 @@ export default function ActivateDeviceModal(userCode) {
         },
         render() {
           return closure_1_4(callback(closure_1_2[6]).ActivateDevice, { onClose, prefilledUserCode: callback });
-        }
-      }
+        },
+      },
     };
   }, items);
   let obj = { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null };
   let intl = userCode(1236).intl;
   obj[2] = intl.string(userCode(1236).t["13/7kX"]);
-  return jsx(userCode(6008).Navigator, { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null });
-};
+  return jsx(userCode(6008).Navigator, {
+    screens: memo,
+    initialRouteName: constants.ACTIVATE_DEVICE,
+    headerBackTitle: null,
+  });
+}

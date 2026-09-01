@@ -62,5 +62,11 @@ export const updateComboOnMessageSend = function updateComboOnMessageSend(closur
       num = num3 + 1;
     }
   }
-  dispatcherDefault.dispatch({ type: "POGGERMODE_UPDATE_COMBO", channelId: closure_1_0, userId: id, multiplier: num, value: 0 });
+  dispatcherDefault.dispatch({
+    type: "POGGERMODE_UPDATE_COMBO",
+    channelId: closure_1_0,
+    userId: id,
+    multiplier: num,
+    value: 0,
+  });
 };

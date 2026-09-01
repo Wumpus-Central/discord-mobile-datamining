@@ -61,7 +61,7 @@ function PopoutCheck(arg0) {
     obj2[0] = tmp.popoutCheck;
     const obj3 = { size: "sm", style: null };
     obj3[1] = tmp.popoutCheckIcon;
-    const items = [callback(CheckmarkLargeIcon.CheckmarkLargeIcon, obj3), ];
+    const items = [callback(CheckmarkLargeIcon.CheckmarkLargeIcon, obj3)];
     const obj4 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: null };
     obj4[2] = formatResult;
     items[1] = callback(Text.Text, obj4);
@@ -96,100 +96,104 @@ class PopoutChecks {
     closure_5 = obj2.useToken(require("Themes").unsafe_rawColors.GREEN_330);
     obj = {
       children: keys.map((arg0, arg1) => {
-            const found = arr.filter((operator) => null != operator.operator);
-            const found1 = arr.find((application) => null != application.application);
-            let obj = lib(table[21]);
-            const value = obj.get(arg0);
-            let application;
-            if (found1 != null) {
-              application = found1.application;
-            }
-            let bot;
+        const found = arr.filter((operator) => null != operator.operator);
+        const found1 = arr.find((application) => null != application.application);
+        let obj = lib(table[21]);
+        const value = obj.get(arg0);
+        let application;
+        if (found1 != null) {
+          application = found1.application;
+        }
+        let bot;
+        if (application != null) {
+          bot = application.bot;
+        }
+        let tmp7 = null;
+        if (null != bot) {
+          tmp7 = new closure_1_7(application.bot);
+        }
+        const officialApplicationIds = guildId(tmp3[15]).officialApplicationIds;
+        let str;
+        if (application != null) {
+          str = application.id;
+        }
+        if (str == null) {
+          str = "";
+        }
+        if (officialApplicationIds.includes(str)) {
+          obj = { style: null, guildId: null, roleColor: null, size: 16 };
+          obj[0] = lib.botTag;
+          obj[1] = guildId;
+          obj[2] = closure_5;
+          let tmp12 = closure_1_16(tmp2(tmp3[22]), obj);
+        } else if (null != tmp7) {
+          obj = { style: null, verified: false };
+          obj[0] = lib.botTag;
+          tmp12 = closure_1_16(tmp2(tmp3[23]), obj);
+        }
+        const items = [lib.popoutChecksGroup];
+        let prop = null;
+        if (arg1 < closure_4) {
+          prop = tmp21.popoutChecksGroupBottomMargin;
+        }
+        obj1 = { style: items, children: null };
+        items[1] = prop;
+        const obj2 = { style: lib.popoutCheckGroupName, children: null };
+        if (null == value) {
+          const items1 = [null, , ,];
+          let tmp26 = null;
+          if (null != tmp7) {
+            const obj3 = { style: null, user: null, size: null, guildId: "a" };
+            obj3[0] = tmp21.popoutCheckGroupPlatformIcon;
+            obj3[1] = tmp7;
+            obj3[2] = tmp11(tmp3[24]).AvatarSizes.XSMALL;
+            tmp26 = closure_1_16(tmp11(tmp3[24]).Avatar, obj3);
+          }
+          items1[1] = tmp26;
+          let name;
+          if (value != null) {
+            name = value.name;
+          }
+          if (name == null) {
+            let name1;
             if (application != null) {
-              bot = application.bot;
+              name1 = application.name;
             }
-            let tmp7 = null;
-            if (null != bot) {
-              tmp7 = new closure_1_7(application.bot);
-            }
-            const officialApplicationIds = guildId(tmp3[15]).officialApplicationIds;
-            let str;
-            if (application != null) {
-              str = application.id;
-            }
-            if (str == null) {
-              str = "";
-            }
-            if (officialApplicationIds.includes(str)) {
-              obj = { style: null, guildId: null, roleColor: null, size: 16 };
-              obj[0] = lib.botTag;
-              obj[1] = guildId;
-              obj[2] = closure_5;
-              let tmp12 = closure_1_16(tmp2(tmp3[22]), obj);
-            } else if (null != tmp7) {
-              obj = { style: null, verified: false };
-              obj[0] = lib.botTag;
-              tmp12 = closure_1_16(tmp2(tmp3[23]), obj);
-            }
-            const items = [lib.popoutChecksGroup, ];
-            let prop = null;
-            if (arg1 < closure_4) {
-              prop = tmp21.popoutChecksGroupBottomMargin;
-            }
-            obj1 = { style: items, children: null };
-            items[1] = prop;
-            const obj2 = { style: lib.popoutCheckGroupName, children: null };
-            if (null == value) {
-              const items1 = [null, , , ];
-              let tmp26 = null;
-              if (null != tmp7) {
-                const obj3 = { style: null, user: null, size: null, guildId: "a" };
-                obj3[0] = tmp21.popoutCheckGroupPlatformIcon;
-                obj3[1] = tmp7;
-                obj3[2] = tmp11(tmp3[24]).AvatarSizes.XSMALL;
-                tmp26 = closure_1_16(tmp11(tmp3[24]).Avatar, obj3);
-              }
-              items1[1] = tmp26;
-              let name;
-              if (value != null) {
-                name = value.name;
-              }
-              if (name == null) {
-                let name1;
-                if (application != null) {
-                  name1 = application.name;
-                }
-                name = name1;
-              }
-              const obj4 = { variant: "text-sm/medium", color: "interactive-text-active", children: null };
-              obj4[2] = name;
-              items1[2] = closure_1_16(tmp11(tmp3[17]).Text, obj4);
-              items1[3] = tmp12;
-              obj2[1] = items1;
-              const items2 = [
-                tmp19(tmp20, obj2),
-                found.map((description) => {
-                    ({ connection_type, connection_metadata_field, operator, value } = description);
-                    callback(38)(null != connectionMetadataField, "connectionMetadataField is null");
-                    callback(38)(null != operator, "operator is null");
-                    callback(38)(null != value, "value is null");
-                    return callback2(closure_20, { connectionType, connectionMetadataField, operator, value, description: description.description }, "" + connectionType + ":" + connectionMetadataField + ":" + operator + ":" + value);
-                  })
-              ];
-              obj1[1] = items2;
-              return tmp19(tmp20, obj1, arg0);
-            } else {
-              const obj5 = { style: null, source: null, disableColor: true, size: null };
-              obj5[0] = tmp21.popoutCheckGroupPlatformIcon;
-              let tmp11Result = tmp11(tmp3[25]);
-              tmp11Result = tmp11(tmp3[26]);
-              const icon = value.icon;
-              obj5[1] = tmp11Result.makeSource(tmp11Result.isThemeDark(table) ? icon.darkPNG : icon.lightPNG);
-              obj5[3] = tmp11(tmp3[24]).Icon.Sizes.MEDIUM;
-              closure_1_16(tmp11(tmp3[24]).Icon, obj5);
-              const tmp23 = closure_1_16;
-            }
-          })
+            name = name1;
+          }
+          const obj4 = { variant: "text-sm/medium", color: "interactive-text-active", children: null };
+          obj4[2] = name;
+          items1[2] = closure_1_16(tmp11(tmp3[17]).Text, obj4);
+          items1[3] = tmp12;
+          obj2[1] = items1;
+          const items2 = [
+            tmp19(tmp20, obj2),
+            found.map((description) => {
+              ({ connection_type, connection_metadata_field, operator, value } = description);
+              callback(38)(null != connectionMetadataField, "connectionMetadataField is null");
+              callback(38)(null != operator, "operator is null");
+              callback(38)(null != value, "value is null");
+              return callback2(
+                closure_20,
+                { connectionType, connectionMetadataField, operator, value, description: description.description },
+                "" + connectionType + ":" + connectionMetadataField + ":" + operator + ":" + value,
+              );
+            }),
+          ];
+          obj1[1] = items2;
+          return tmp19(tmp20, obj1, arg0);
+        } else {
+          const obj5 = { style: null, source: null, disableColor: true, size: null };
+          obj5[0] = tmp21.popoutCheckGroupPlatformIcon;
+          let tmp11Result = tmp11(tmp3[25]);
+          tmp11Result = tmp11(tmp3[26]);
+          const icon = value.icon;
+          obj5[1] = tmp11Result.makeSource(tmp11Result.isThemeDark(table) ? icon.darkPNG : icon.lightPNG);
+          obj5[3] = tmp11(tmp3[24]).Icon.Sizes.MEDIUM;
+          closure_1_16(tmp11(tmp3[24]).Icon, obj5);
+          const tmp23 = closure_1_16;
+        }
+      }),
     };
     return jsx(Fragment, obj);
   }
@@ -197,8 +201,31 @@ class PopoutChecks {
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = ME);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-createCacheKey = { container: { flexDirection: "column", alignItems: "center", padding: 16 }, header: null, verifiedContainer: null, headerTextContainer: null, verifiedCheck: null, loadingSpinner: null, popoutCheck: null, popoutCheckIcon: null, popoutChecksGroup: null, popoutChecksGroupBottomMargin: null, popoutCheckGroupName: null, popoutCheckGroupPlatformIcon: null, button: null, botTag: null };
-createCacheKey = { width: "100%", flexDirection: "row", alignItems: "center", paddingBottom: 16, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: ThemesDefault.space.PX_24 };
+createCacheKey = {
+  container: { flexDirection: "column", alignItems: "center", padding: 16 },
+  header: null,
+  verifiedContainer: null,
+  headerTextContainer: null,
+  verifiedCheck: null,
+  loadingSpinner: null,
+  popoutCheck: null,
+  popoutCheckIcon: null,
+  popoutChecksGroup: null,
+  popoutChecksGroupBottomMargin: null,
+  popoutCheckGroupName: null,
+  popoutCheckGroupPlatformIcon: null,
+  button: null,
+  botTag: null,
+};
+createCacheKey = {
+  width: "100%",
+  flexDirection: "row",
+  alignItems: "center",
+  paddingBottom: 16,
+  borderBottomWidth: 1,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginBottom: ThemesDefault.space.PX_24,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginRight: 8, height: 24, width: 24 };
 createCacheKey[3] = { flexShrink: 1, flexDirection: "column" };
@@ -208,14 +235,26 @@ createCacheKey[6] = { flexDirection: "row", alignItems: "center", marginTop: 8, 
 createCacheKey[7] = { marginRight: 8, tintColor: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
 createCacheKey[8] = { width: "100%", marginBottom: 24 };
 let obj1 = { marginRight: 8, tintColor: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
-createCacheKey[9] = { paddingBottom: 12, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: 12 };
+createCacheKey[9] = {
+  paddingBottom: 12,
+  borderBottomWidth: 1,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginBottom: 12,
+};
 createCacheKey[10] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[11] = { marginRight: 8 };
 createCacheKey[12] = { marginBottom: 8 };
 createCacheKey[13] = { marginLeft: 4 };
 let closure_19 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { paddingBottom: 12, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: 12 };
-let result = require("set").fileFinishedImporting("modules/connections/native/ConnectionsRoleMessageBadgeActionSheet.tsx");
+let obj2 = {
+  paddingBottom: 12,
+  borderBottomWidth: 1,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginBottom: 12,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/connections/native/ConnectionsRoleMessageBadgeActionSheet.tsx",
+);
 
 export default function ConnectionsRoleMessageBadgeActionSheet(userId) {
   userId = userId.userId;
@@ -266,7 +305,10 @@ export default function ConnectionsRoleMessageBadgeActionSheet(userId) {
       tmp = null == stateFromStores2;
     }
     if (tmp) {
-      const guildRoleConnectionsEligibility = roleId(channelId[33]).fetchGuildRoleConnectionsEligibility(guildId, roleId);
+      const guildRoleConnectionsEligibility = roleId(channelId[33]).fetchGuildRoleConnectionsEligibility(
+        guildId,
+        roleId,
+      );
       guildRoleConnectionsEligibility.then(() => callback(false));
       const obj = roleId(channelId[33]);
     }
@@ -307,7 +349,7 @@ export default function ConnectionsRoleMessageBadgeActionSheet(userId) {
       obj3[1] = id;
       obj3[2] = stateFromStores3;
       obj2[1] = closure_16(tmp2(tmp3[35]), obj3);
-      const items7 = [closure_16(closure_6, obj2), ];
+      const items7 = [closure_16(closure_6, obj2)];
       obj4 = { style: null, children: null };
       obj4[0] = tmp.headerTextContainer;
       let name;
@@ -316,20 +358,20 @@ export default function ConnectionsRoleMessageBadgeActionSheet(userId) {
       }
       const obj5 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
       obj5[2] = name;
-      const items8 = [closure_16(tmp5(tmp3[17]).Text, obj5), ];
+      const items8 = [closure_16(tmp5(tmp3[17]).Text, obj5)];
       const obj6 = { variant: "text-xs/normal", color: "text-default", children: null };
       obj6[2] = formatResult;
       items8[1] = closure_16(tmp5(tmp3[17]).Text, obj6);
       obj4[1] = items8;
       items7[1] = closure_17(closure_6, obj4);
       obj1[1] = items7;
-      const items9 = [closure_17(closure_6, obj1), ];
+      const items9 = [closure_17(closure_6, obj1)];
       if (null != stateFromStores2) {
         if (null != stateFromStores2.flat()) {
           const obj7 = { eligibilityStates: null, guildId: null };
           obj7[0] = stateFromStores2.flat();
           obj7[1] = guildId;
-          const items10 = [tmp16(PopoutChecks, obj7), , ];
+          const items10 = [tmp16(PopoutChecks, obj7), ,];
           let tmp16Result = null;
           if (!hasItem) {
             const obj8 = { style: null, children: null };
@@ -389,5 +431,5 @@ export default function ConnectionsRoleMessageBadgeActionSheet(userId) {
   }
   const intl3 = tmp5(tmp3[14]).intl;
   formatResult = intl3.string(tmp5(tmp3[14]).t.jDym4E);
-};
+}
 export { PopoutChecks };

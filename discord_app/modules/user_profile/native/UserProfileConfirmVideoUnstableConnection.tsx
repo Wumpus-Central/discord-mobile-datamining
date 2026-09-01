@@ -7,7 +7,9 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmVideoUnstableConnection.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_profile/native/UserProfileConfirmVideoUnstableConnection.tsx",
+);
 
 export default function UserProfileConfirmVideoUnstableConnection(onConfirm) {
   let obj = { title: null, content: null, actions: null };
@@ -20,7 +22,7 @@ export default function UserProfileConfirmVideoUnstableConnection(onConfirm) {
   const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t.ND1my3);
   obj[1] = onConfirm.onConfirm;
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
+  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm")];
   obj1 = { variant: "secondary", text: null };
   const intl4 = getSystemLocale.intl;
   obj1[1] = intl4.string(getSystemLocale.t.jEqEhy);
@@ -28,4 +30,4 @@ export default function UserProfileConfirmVideoUnstableConnection(onConfirm) {
   obj[0] = items;
   obj[2] = callback2(getAlertModalItemKey.AlertActions, obj);
   return callback(getAlertModalItemKey.AlertModal, obj);
-};
+}

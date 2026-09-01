@@ -6,7 +6,9 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx",
+);
 
 export default function ProfileEffectUserPreview(profileEffect) {
   profileEffect = profileEffect.profileEffect;
@@ -24,4 +26,4 @@ export default function ProfileEffectUserPreview(profileEffect) {
   obj[1] = formatToPlainStringResult;
   const merged1 = Object.assign(merged);
   return jsx(filterLayerDefault, { profileEffectOverride: profileEffect, accessibilityLabel: null });
-};
+}

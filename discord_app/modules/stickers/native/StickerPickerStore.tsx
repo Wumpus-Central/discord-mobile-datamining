@@ -19,7 +19,7 @@ let obj = keys.create((arg0) => {
           return tmp;
         });
       });
-    }
+    },
   };
 });
 const result = set.fileFinishedImporting("modules/stickers/native/StickerPickerStore.tsx");

@@ -6,7 +6,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/verification/native/components/ConfirmEmailChangeCode.tsx",
+);
 
 export default function ConfirmEmailChangeCode(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
@@ -35,13 +37,13 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const obj2 = callback(table[7]);
       yield obj2.confirmEmailChange(callback);
       return arg1;
     })();
   });
-  obj[0] = function() {
+  obj[0] = function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -52,7 +54,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
     return applyArgumentsResult;
   };
   obj[1] = callback;
-  obj[2] = callback(function*() {
+  obj[2] = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -108,5 +110,11 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
   obj[3] = intl.string(require("../../../../intl/index.native.tsx").t["2x/2Uo"]);
   const intl2 = require("../../../../intl/index.native.tsx").intl;
   obj[4] = intl2.string(require("../../../../intl/index.native.tsx").t.PDTjLN);
-  return jsx(navigation(7703), { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null });
-};
+  return jsx(navigation(7703), {
+    onFormSubmit: null,
+    onSuccess: null,
+    onResend: null,
+    headerText: null,
+    confirmButtonText: null,
+  });
+}

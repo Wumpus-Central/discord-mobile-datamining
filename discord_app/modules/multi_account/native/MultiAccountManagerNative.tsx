@@ -16,42 +16,44 @@ let closure_6 = new timestampDefault("MultiAccountManagerNative");
 let c7 = "switch-accounts-spinner-modal";
 let closure_8 = 15 * setDefault.Millis.SECOND;
 let c9 = null;
-obj = Object.create(function MultiAccountModalManagerImpl() {
-  obj = Object.create(new.target.prototype);
-  obj.cancelled = false;
-  obj.push = function push() {
-    obj = closure_1_1(closure_1_2[4]);
-    obj.pushLazy(obj(closure_1_2[6])(closure_1_2[5], closure_1_2.paths), {}, closure_1_7);
-    if (obj.cancelled) {
-      closure_1_1(closure_1_2[4]).popWithKey(closure_1_7);
-      const tmpResult = closure_1_1(closure_1_2[4]);
-    }
-  };
-  obj.enqueue = function enqueue() {
-    let arr = obj;
+obj = Object.create(
+  function MultiAccountModalManagerImpl() {
+    obj = Object.create(new.target.prototype);
     obj.cancelled = false;
-    obj = obj(closure_1_2[7]);
-    const rootNavigationRef = obj.getRootNavigationRef();
-    if (null != rootNavigationRef) {
-      if (rootNavigationRef.isReady()) {
-        arr = arr.push();
+    obj.push = function push() {
+      obj = closure_1_1(closure_1_2[4]);
+      obj.pushLazy(obj(closure_1_2[6])(closure_1_2[5], closure_1_2.paths), {}, closure_1_7);
+      if (obj.cancelled) {
+        closure_1_1(closure_1_2[4]).popWithKey(closure_1_7);
+        const tmpResult = closure_1_1(closure_1_2[4]);
       }
-    }
-    const ComponentDispatch = obj(closure_1_2[8]).ComponentDispatch;
-    ComponentDispatch.subscribeOnce(closure_1_4.NAVIGATOR_READY, () => {
-      let arr = cancelled;
-      if (!cancelled.cancelled) {
-        arr = arr.push();
+    };
+    obj.enqueue = function enqueue() {
+      let arr = obj;
+      obj.cancelled = false;
+      obj = obj(closure_1_2[7]);
+      const rootNavigationRef = obj.getRootNavigationRef();
+      if (null != rootNavigationRef) {
+        if (rootNavigationRef.isReady()) {
+          arr = arr.push();
+        }
       }
-    });
-  };
-  obj.pop = function pop() {
-    obj.cancelled = true;
-    obj = closure_1_1(closure_1_2[4]);
-    obj.popWithKey(closure_1_7);
-  };
-  return obj;
-}.prototype.prototype);
+      const ComponentDispatch = obj(closure_1_2[8]).ComponentDispatch;
+      ComponentDispatch.subscribeOnce(closure_1_4.NAVIGATOR_READY, () => {
+        let arr = cancelled;
+        if (!cancelled.cancelled) {
+          arr = arr.push();
+        }
+      });
+    };
+    obj.pop = function pop() {
+      obj.cancelled = true;
+      obj = closure_1_1(closure_1_2[4]);
+      obj.popWithKey(closure_1_7);
+    };
+    return obj;
+  }.prototype.prototype,
+);
 obj.cancelled = false;
 obj.push = function push() {
   obj = closure_1_1(closure_1_2[4]);
@@ -85,8 +87,7 @@ obj.pop = function pop() {
   obj.popWithKey(closure_1_7);
 };
 _initializeDefault;
-class MultiAccountManagerNative extends tmp5 {
-}
+class MultiAccountManagerNative extends tmp5 {}
 const prototype = MultiAccountManagerNative.prototype;
 prototype["onSwitchStart"] = function onSwitchStart() {
   obj = _modDef4723;

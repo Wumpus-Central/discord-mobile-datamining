@@ -4,7 +4,9 @@ import { UserRowModes } from "UserRowConstants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx",
+);
 
 export default function GroupDMRow(channel) {
   channel = channel.channel;
@@ -62,4 +64,4 @@ export default function GroupDMRow(channel) {
     tmp5Result = tmp5(tmp7(5599).TableRow, obj2);
   }
   return tmp5Result;
-};
+}

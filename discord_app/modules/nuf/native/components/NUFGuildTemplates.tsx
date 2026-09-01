@@ -27,7 +27,7 @@ function _onCreateGuild() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -110,7 +110,7 @@ function _onCreateServer() {
     closure_2 = arg2;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -178,7 +178,11 @@ function _onCreateServer() {
   return applyArgumentsResult;
 }
 ({ AnalyticEvents: error, AnalyticsSections: closure_8, NOOP: c9 } = ME);
-({ CreateGuildModalStates: unpackModuleId, GuildTemplateTriggers: closure_12, NUXGuildTemplatesAnalytics: map1 } = NUXGuildTemplatesAnalytics);
+({
+  CreateGuildModalStates: unpackModuleId,
+  GuildTemplateTriggers: closure_12,
+  NUXGuildTemplatesAnalytics: map1,
+} = NUXGuildTemplatesAnalytics);
 let obj = { impression_group: require("encodeProperties").ImpressionGroups.GUILD_ADD_FLOW };
 let result = require("set").fileFinishedImporting("modules/nuf/native/components/NUFGuildTemplates.tsx");
 
@@ -194,7 +198,7 @@ export default function NUFGuildTemplates() {
           return null;
         },
         headerLeft: null,
-        render: null
+        render: null,
       };
       let obj2 = callback(5495);
       obj[4] = obj2.getHeaderCloseButton(() => {
@@ -217,7 +221,7 @@ export default function NUFGuildTemplates() {
         },
         render(guildTemplate) {
           return callback3(callback2(12250), { guildTemplate: guildTemplate.guildTemplate, trigger: constants.NUF });
-        }
+        },
       };
       obj[constants.CREATION_INTENT] = obj;
       obj[constants.CREATE_SERVER] = {
@@ -247,7 +251,7 @@ export default function NUFGuildTemplates() {
           const intl = callback(1236).intl;
           obj.customTitle = intl.string(callback(1236).t["5HZu07"]);
           return callback3(callback2(11900), obj);
-        }
+        },
       };
       obj2 = {
         impressionName: callback(503).ImpressionNames.GUILD_ADD_JOIN,
@@ -259,7 +263,7 @@ export default function NUFGuildTemplates() {
         render() {
           obj = { location: "Onboarding Join Guild Modal", onClose: callback2(12246).closeCreateGuildModal };
           return callback3(callback2(12253), obj);
-        }
+        },
       };
       obj[constants.JOIN_SERVER] = obj2;
       obj1 = {
@@ -289,7 +293,7 @@ export default function NUFGuildTemplates() {
           const intl = callback(1236).intl;
           obj.customTitle = intl.string(callback(1236).t["5HZu07"]);
           return callback3(callback2(11900), obj);
-        }
+        },
       };
       obj[constants.ACCEPT_INVITE] = {
         impressionName: callback(503).ImpressionNames.GUILD_ADD_ACCEPT_INVITE,
@@ -304,7 +308,7 @@ export default function NUFGuildTemplates() {
         render(code) {
           obj = { code: code.code, onPressClose: callback2(12246).closeCreateGuildModal };
           return callback3(callback2(12254), obj);
-        }
+        },
       };
       const obj3 = {
         impressionName: callback(503).ImpressionNames.GUILD_ADD_ACCEPT_INVITE,
@@ -319,7 +323,7 @@ export default function NUFGuildTemplates() {
         render(code) {
           obj = { code: code.code, onPressClose: callback2(12246).closeCreateGuildModal };
           return callback3(callback2(12254), obj);
-        }
+        },
       };
       obj[constants.CHANNEL_PROMPT] = {
         impressionName: callback(503).ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
@@ -338,14 +342,22 @@ export default function NUFGuildTemplates() {
               return closure_1_15(guildId);
             },
             guildId,
-            buttonText: null
+            buttonText: null,
           };
           const intl = guildId(1236).intl;
           obj[5] = intl.string(guildId(1236).t["uHXB+F"]);
           return callback3(callback2(12283), obj);
-        }
+        },
       };
-      const obj5 = { impressionName: "Array", impressionProperties: true, fullscreen: true, ignoreKeyboard: null, headerTitle: null, headerLeft: null, render: true };
+      const obj5 = {
+        impressionName: "Array",
+        impressionProperties: true,
+        fullscreen: true,
+        ignoreKeyboard: null,
+        headerTitle: null,
+        headerLeft: null,
+        render: true,
+      };
       obj5[1] = closure_18;
       obj5[4] = function headerTitle() {
         return null;
@@ -361,7 +373,7 @@ export default function NUFGuildTemplates() {
     }, []),
     onWillFocus: Keyboard.dismiss,
     headerBackTitle: null,
-    initialRouteName: null
+    initialRouteName: null,
   };
   let intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
@@ -377,7 +389,7 @@ export default function NUFGuildTemplates() {
           return null;
         },
         headerLeft: null,
-        render: null
+        render: null,
       };
       let obj2 = callback(5495);
       obj[4] = obj2.getHeaderCloseButton(() => {
@@ -400,7 +412,7 @@ export default function NUFGuildTemplates() {
         },
         render(guildTemplate) {
           return callback3(callback2(12250), { guildTemplate: guildTemplate.guildTemplate, trigger: constants.NUF });
-        }
+        },
       };
       obj[constants.CREATION_INTENT] = obj;
       obj[constants.CREATE_SERVER] = {
@@ -430,7 +442,7 @@ export default function NUFGuildTemplates() {
           const intl = callback(1236).intl;
           obj.customTitle = intl.string(callback(1236).t["5HZu07"]);
           return callback3(callback2(11900), obj);
-        }
+        },
       };
       obj2 = {
         impressionName: callback(503).ImpressionNames.GUILD_ADD_JOIN,
@@ -442,7 +454,7 @@ export default function NUFGuildTemplates() {
         render() {
           obj = { location: "Onboarding Join Guild Modal", onClose: callback2(12246).closeCreateGuildModal };
           return callback3(callback2(12253), obj);
-        }
+        },
       };
       obj[constants.JOIN_SERVER] = obj2;
       obj1 = {
@@ -472,7 +484,7 @@ export default function NUFGuildTemplates() {
           const intl = callback(1236).intl;
           obj.customTitle = intl.string(callback(1236).t["5HZu07"]);
           return callback3(callback2(11900), obj);
-        }
+        },
       };
       obj[constants.ACCEPT_INVITE] = {
         impressionName: callback(503).ImpressionNames.GUILD_ADD_ACCEPT_INVITE,
@@ -487,7 +499,7 @@ export default function NUFGuildTemplates() {
         render(code) {
           obj = { code: code.code, onPressClose: callback2(12246).closeCreateGuildModal };
           return callback3(callback2(12254), obj);
-        }
+        },
       };
       const obj3 = {
         impressionName: callback(503).ImpressionNames.GUILD_ADD_ACCEPT_INVITE,
@@ -502,7 +514,7 @@ export default function NUFGuildTemplates() {
         render(code) {
           obj = { code: code.code, onPressClose: callback2(12246).closeCreateGuildModal };
           return callback3(callback2(12254), obj);
-        }
+        },
       };
       obj[constants.CHANNEL_PROMPT] = {
         impressionName: callback(503).ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
@@ -521,14 +533,22 @@ export default function NUFGuildTemplates() {
               return closure_1_15(guildId);
             },
             guildId,
-            buttonText: null
+            buttonText: null,
           };
           const intl = guildId(1236).intl;
           obj[5] = intl.string(guildId(1236).t["uHXB+F"]);
           return callback3(callback2(12283), obj);
-        }
+        },
       };
-      const obj5 = { impressionName: "Array", impressionProperties: true, fullscreen: true, ignoreKeyboard: null, headerTitle: null, headerLeft: null, render: true };
+      const obj5 = {
+        impressionName: "Array",
+        impressionProperties: true,
+        fullscreen: true,
+        ignoreKeyboard: null,
+        headerTitle: null,
+        headerLeft: null,
+        render: true,
+      };
       obj5[1] = closure_18;
       obj5[4] = function headerTitle() {
         return null;
@@ -544,6 +564,6 @@ export default function NUFGuildTemplates() {
     }, []),
     onWillFocus: Keyboard.dismiss,
     headerBackTitle: null,
-    initialRouteName: null
+    initialRouteName: null,
   });
-};
+}

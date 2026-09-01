@@ -26,11 +26,24 @@ let prototype;
 prototype = function StorefrontPromotionRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
   // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp.id, applicationId: tmp.applicationId, name: tmp.name, displayName: tmp.displayName, rewardType: tmp.rewardType, rewardStatus: tmp.rewardStatus, rewardConfig: tmp.rewardConfig, skuIds: tmp.skuIds, appliesToAllSkus: tmp.appliesToAllSkus, includeBundles: tmp.includeBundles, startsAt: tmp.startsAt, endsAt: tmp.endsAt, tenantMetadata: tmp.tenantMetadata } = arg0);
+  ({
+    id: tmp.id,
+    applicationId: tmp.applicationId,
+    name: tmp.name,
+    displayName: tmp.displayName,
+    rewardType: tmp.rewardType,
+    rewardStatus: tmp.rewardStatus,
+    rewardConfig: tmp.rewardConfig,
+    skuIds: tmp.skuIds,
+    appliesToAllSkus: tmp.appliesToAllSkus,
+    includeBundles: tmp.includeBundles,
+    startsAt: tmp.startsAt,
+    endsAt: tmp.endsAt,
+    tenantMetadata: tmp.tenantMetadata,
+  } = arg0);
   return tmp;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["createFromServer"] = function createFromServer(display_name) {
   ({ id, application_id, name } = display_name);
   if (name == null) {
@@ -176,7 +189,26 @@ prototype["createFromServer"] = function createFromServer(display_name) {
   if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp32 = new prototype(str, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp, _Date2, _Date, prototype, new.target, id, application_id, name, display_name, reward_type, reward_status);
+  const tmp32 = new prototype(
+    str,
+    tmp7,
+    tmp6,
+    tmp5,
+    tmp4,
+    tmp3,
+    tmp2,
+    tmp,
+    _Date2,
+    _Date,
+    prototype,
+    new.target,
+    id,
+    application_id,
+    name,
+    display_name,
+    reward_type,
+    reward_status,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp32.id = id;
   tmp32.applicationId = application_id;

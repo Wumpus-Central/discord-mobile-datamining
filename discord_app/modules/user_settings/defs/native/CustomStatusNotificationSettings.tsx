@@ -12,7 +12,11 @@ import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx"
 function onChange(custom_status_push_notifications) {
   const CustomStatusPushNotifications = explicitContentFromProto.CustomStatusPushNotifications;
   const CustomStatusPushNotificationType = create.CustomStatusPushNotificationType;
-  CustomStatusPushNotifications.updateSetting(custom_status_push_notifications ? CustomStatusPushNotificationType.STATUS_PUSH_ENABLED : CustomStatusPushNotificationType.STATUS_PUSH_DISABLED);
+  CustomStatusPushNotifications.updateSetting(
+    custom_status_push_notifications
+      ? CustomStatusPushNotificationType.STATUS_PUSH_ENABLED
+      : CustomStatusPushNotificationType.STATUS_PUSH_DISABLED,
+  );
   let obj = expandEventPropertiesDefault;
   obj = { update_type: constants.ACCOUNT, custom_status_push_notifications };
   obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
@@ -34,7 +38,7 @@ const toggle = createToggle.createToggle({
     const setting = CustomStatusPushNotifications.useSetting();
     return setting !== create.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
   },
-  onValueChange: onChange
+  onValueChange: onChange,
 });
 let obj = {
   useTitle() {
@@ -51,7 +55,7 @@ let obj = {
     const setting = CustomStatusPushNotifications.useSetting();
     return setting !== create.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
   },
-  onValueChange: onChange
+  onValueChange: onChange,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/CustomStatusNotificationSettings.tsx");
 

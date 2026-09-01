@@ -79,7 +79,17 @@ prototype["_trackStartSpeaking"] = function _trackStartSpeaking() {
     const channelId = store.getChannelId();
     const guildId = store.getGuildId();
     let obj = collectGuildAnalyticsMetadata;
-    obj = { mode: null, priority: null, channel: null, server: null, channel_id: null, guild_id: null, rtc_connection_id: null, media_session_id: null, voice_state_count: null };
+    obj = {
+      mode: null,
+      priority: null,
+      channel: null,
+      server: null,
+      channel_id: null,
+      guild_id: null,
+      rtc_connection_id: null,
+      media_session_id: null,
+      voice_state_count: null,
+    };
     obj[0] = closure_4.getMode();
     obj[1] = closure_7.isCurrentUserPrioritySpeaking();
     obj[2] = channelId;
@@ -101,7 +111,17 @@ prototype["_trackStartListening"] = function _trackStartListening() {
     if (this._anyoneElseSpeaking) {
       const channelId = store.getChannelId();
       const guildId = store.getGuildId();
-      obj = { mute: null, anyone_priority: null, channel: null, server: null, channel_id: null, guild_id: null, rtc_connection_id: null, media_session_id: null, voice_state_count: null };
+      obj = {
+        mute: null,
+        anyone_priority: null,
+        channel: null,
+        server: null,
+        channel_id: null,
+        guild_id: null,
+        rtc_connection_id: null,
+        media_session_id: null,
+        voice_state_count: null,
+      };
       obj[0] = obj.isMute();
       obj[1] = closure_7.isAnyonePrioritySpeaking();
       obj[2] = channelId;
@@ -125,7 +145,15 @@ prototype["_terminate"] = function _terminate() {
 prototype["getGameMetadata"] = function getGameMetadata() {
   const findActivityResult = closure_6.findActivity((type) => type.type === constants.PLAYING);
   currentGameForAnalytics = currentGameForAnalytics.getCurrentGameForAnalytics();
-  const obj = { game_platform: getGamePlatformDefault(findActivityResult), game_name: null, game_exe_name: null, game_id: null, game_distributor: null, game_distributor_game_id: null, game_metadata: null };
+  const obj = {
+    game_platform: getGamePlatformDefault(findActivityResult),
+    game_name: null,
+    game_exe_name: null,
+    game_id: null,
+    game_distributor: null,
+    game_distributor_game_id: null,
+    game_metadata: null,
+  };
   let name = null;
   if (null != findActivityResult) {
     name = findActivityResult.name;

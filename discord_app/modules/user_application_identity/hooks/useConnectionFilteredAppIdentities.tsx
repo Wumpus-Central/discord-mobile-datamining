@@ -3,7 +3,9 @@ import closure_2 from "../../../../_runtime/00019_noop.js";
 import { APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS as closure_3 } from "../UserApplicationIdentityConstants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx",
+);
 
 export default function useConnectionFilteredAppIdentities(arg0) {
   let obj = arg1;
@@ -28,7 +30,9 @@ export default function useConnectionFilteredAppIdentities(arg0) {
         let someResult = closure_1_3.some((applicationId) => {
           let migrationExperimentEnabled = applicationId.applicationId === profile.application_id;
           if (migrationExperimentEnabled) {
-            migrationExperimentEnabled = applicationId.getMigrationExperimentEnabled("useConnectionFilteredAppIdentities");
+            migrationExperimentEnabled = applicationId.getMigrationExperimentEnabled(
+              "useConnectionFilteredAppIdentities",
+            );
           }
           return migrationExperimentEnabled;
         });
@@ -44,8 +48,8 @@ export default function useConnectionFilteredAppIdentities(arg0) {
         }
         return someResult;
       });
-    }, items)
+    }, items),
   };
   items = [data, undefined !== includeHidden && includeHidden];
   return obj;
-};
+}

@@ -21,4 +21,4 @@ export default function getChatInputPositionStyle() {
     obj2 = set2;
   }
   return tmp;
-};
+}

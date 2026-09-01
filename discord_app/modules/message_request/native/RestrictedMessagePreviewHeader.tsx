@@ -9,7 +9,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, avatar: null };
-createCacheKey = { alignItems: "flex-start", gap: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12 };
+createCacheKey = {
+  alignItems: "flex-start",
+  gap: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_12,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_4 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
@@ -29,7 +33,11 @@ export default function RestrictedMessagePreviewHeader(channel) {
   userTag = obj1.getUserTag(user, { decoration: "never", identifiable: "always" });
   const items = [user.id, channel.id, analyticsLocations];
   const callback = userTag.useCallback(() => {
-    user(analyticsLocations[8])({ userId: user.id, channelId: channel.id, sourceAnalyticsLocations: analyticsLocations });
+    user(analyticsLocations[8])({
+      userId: user.id,
+      channelId: channel.id,
+      sourceAnalyticsLocations: analyticsLocations,
+    });
   }, items);
   const items1 = [userTag];
   const items2 = [user];
@@ -51,22 +59,36 @@ export default function RestrictedMessagePreviewHeader(channel) {
         callback2(4445).hideActionSheet();
         const obj3 = callback2(4445);
         callback2(4723).popWithKey(closure_5);
-      }
+      },
     };
-    obj.openLazy(channel(analyticsLocations[13])(analyticsLocations[12], analyticsLocations.paths), "MutualGuildsActionSheet", obj);
+    obj.openLazy(
+      channel(analyticsLocations[13])(analyticsLocations[12], analyticsLocations.paths),
+      "MutualGuildsActionSheet",
+      obj,
+    );
   }, items2);
   obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
   const intl = channel(analyticsLocations[18]).intl;
   obj[1] = intl.string(channel(analyticsLocations[18]).t.iXAna6);
   obj[2] = callback;
-  obj1 = { style: tmp.avatar, user, guildId: channel.guild_id, size: channel(analyticsLocations[19]).AvatarSizes.XXLARGE, avatarDecoration: user.avatarDecoration };
+  obj1 = {
+    style: tmp.avatar,
+    user,
+    guildId: channel.guild_id,
+    size: channel(analyticsLocations[19]).AvatarSizes.XXLARGE,
+    avatarDecoration: user.avatarDecoration,
+  };
   obj[3] = callback(channel(analyticsLocations[19]).Avatar, obj1);
-  const items3 = [callback(channel(analyticsLocations[17]).PressableOpacity, obj), , , , , ];
+  const items3 = [callback(channel(analyticsLocations[17]).PressableOpacity, obj), , , , ,];
   let obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = channel(analyticsLocations[18]).intl;
   obj2[1] = intl2.string(channel(analyticsLocations[18]).t.iXAna6);
   obj2[2] = callback;
-  obj2[3] = callback(channel(analyticsLocations[20]).Text, { variant: "heading-xxl/extrabold", color: "mobile-text-heading-primary", children: name });
+  obj2[3] = callback(channel(analyticsLocations[20]).Text, {
+    variant: "heading-xxl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: name,
+  });
   items3[1] = callback(channel(analyticsLocations[17]).PressableOpacity, obj2);
   const isProvisional = user.isProvisional;
   let tmp11Result = !isProvisional;
@@ -85,9 +107,14 @@ export default function RestrictedMessagePreviewHeader(channel) {
   const intl4 = tmp12(tmp3[18]).intl;
   obj5[2] = intl4.formatToPlainString(channel(analyticsLocations[18]).t["Qvg+6+"], { username: name });
   items3[3] = callback(channel(analyticsLocations[20]).Text, obj5);
-  const obj6 = { userId: user.id, onPress: callback2, iconSize: channel(analyticsLocations[22]).GuildIconSizes.XSMALL, textVariant: "text-md/medium" };
+  const obj6 = {
+    userId: user.id,
+    onPress: callback2,
+    iconSize: channel(analyticsLocations[22]).GuildIconSizes.XSMALL,
+    textVariant: "text-md/medium",
+  };
   items3[4] = callback(user(analyticsLocations[21]), obj6);
   items3[5] = callback(user(analyticsLocations[23]), { channel, user });
   obj[1] = items3;
   return closure_7(View, obj);
-};
+}

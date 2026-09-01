@@ -4,7 +4,9 @@ import isAgeRestrictedContentClassification from "utils.tsx";
 
 let result = set.fileFinishedImporting("modules/content_classification/ContentClassificationReference.tsx");
 
-export const isAgeRestrictedClassificationReference = function isAgeRestrictedClassificationReference(contentClassification) {
+export const isAgeRestrictedClassificationReference = function isAgeRestrictedClassificationReference(
+  contentClassification,
+) {
   let loaded;
   if (contentClassification != null) {
     loaded = contentClassification.loaded;

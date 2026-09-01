@@ -10,7 +10,9 @@ createCacheKey = { container: null };
 createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorMoreMenu.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/conversations/components/native/ConversationNavigatorMoreMenu.tsx",
+);
 
 export default function ConversationNavigatorMoreMenu(channelId) {
   channelId = channelId.channelId;
@@ -31,7 +33,7 @@ export default function ConversationNavigatorMoreMenu(channelId) {
       ConversationsAnalytics.trackThumbsClicked(obj);
       closure_1_0(closure_1_1[9]).presentFeedbackSent();
     };
-    const items = [obj, ];
+    const items = [obj];
     obj = { label: null, IconComponent: null, action: null };
     const intl2 = channelId(conversationId[5]).intl;
     obj[0] = intl2.string(channelId(conversationId[5]).t.uNGhdg);
@@ -61,6 +63,6 @@ export default function ConversationNavigatorMoreMenu(channelId) {
       obj.icon = closure_1_4(channelId(conversationId[13]).MoreHorizontalIcon, { size: "sm" });
       obj[2] = closure_1_4(channelId(conversationId[12]).IconButton, obj);
       return closure_1_4(closure_1_3, obj);
-    }
+    },
   });
-};
+}

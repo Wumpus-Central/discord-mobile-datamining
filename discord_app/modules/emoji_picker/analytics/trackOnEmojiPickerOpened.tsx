@@ -54,7 +54,10 @@ function trackOnEmojiPickerOpened(arg0) {
   if (channel != null) {
     guildId2 = channel.getGuildId();
   }
-  const topAndNewlyAddedEmojis = useTopAndNewlyAddedEmojis.getTopAndNewlyAddedEmojis({ guildId: guildId2, pickerIntention: intention });
+  const topAndNewlyAddedEmojis = useTopAndNewlyAddedEmojis.getTopAndNewlyAddedEmojis({
+    guildId: guildId2,
+    pickerIntention: intention,
+  });
   ({ topEmojis, newlyAddedEmojis } = topAndNewlyAddedEmojis);
   const obj4 = useTopAndNewlyAddedEmojis;
   const tmp6 = require;
@@ -95,7 +98,7 @@ function trackOnEmojiPickerOpened(arg0) {
     num_expressions_top_server: visibleTopEmojis.length,
     num_animated_expressions_top_server: visibleTopEmojis.filter((animated) => animated.animated).length,
     num_expressions_newly_added: visibleNewlyAddedEmojis.length,
-    num_animated_expressions_newly_added: visibleNewlyAddedEmojis.filter((animated) => animated.animated).length
+    num_animated_expressions_newly_added: visibleNewlyAddedEmojis.filter((animated) => animated.animated).length,
   };
   let tmp14 = intention === tmp2.REACTION;
   if (tmp14) {
@@ -116,7 +119,9 @@ function trackOnEmojiPickerOpened(arg0) {
 const result = require("set").fileFinishedImporting("modules/emoji_picker/analytics/trackOnEmojiPickerOpened.tsx");
 
 export default trackOnEmojiPickerOpened;
-export const useTrackOnEmojiPickerOpenedForReactions = function useTrackOnEmojiPickerOpenedForReactions(stateFromStores) {
+export const useTrackOnEmojiPickerOpenedForReactions = function useTrackOnEmojiPickerOpenedForReactions(
+  stateFromStores,
+) {
   closure_0 = React.useRef(stateFromStores);
   const effect = React.useEffect(() => {
     if (ref.current.intention === closure_1_8.REACTION) {

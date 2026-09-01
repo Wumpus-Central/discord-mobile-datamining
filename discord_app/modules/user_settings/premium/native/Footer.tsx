@@ -14,7 +14,12 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 noopAll;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "center", width: "100%" }, footerText: { marginBottom: 24 }, button: { marginBottom: 40 }, easterEggSpacing: { position: "absolute", top: 40 } });
+let closure_7 = createCacheKey.createStyles({
+  container: { flex: 1, flexDirection: "column", alignItems: "center", width: "100%" },
+  footerText: { marginBottom: 24 },
+  button: { marginBottom: 40 },
+  easterEggSpacing: { position: "absolute", top: 40 },
+});
 const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/Footer.tsx");
 
 export default function Footer(showSubscribeButton) {
@@ -30,7 +35,7 @@ export default function Footer(showSubscribeButton) {
     obj[0] = tmp.footerText;
     const intl = getSystemLocale.intl;
     obj[3] = intl.string(getSystemLocale.t["2bSPbq"]);
-    const items1 = [callback(Text.Text, obj), ];
+    const items1 = [callback(Text.Text, obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.button;
     const obj2 = { text: null, variant: "primary", size: "lg", onPress: null, grow: true };
@@ -41,7 +46,7 @@ export default function Footer(showSubscribeButton) {
     obj[0] = items1;
     tmp8Result = tmp8(closure_5, obj);
   }
-  const items2 = [tmp8Result, ];
+  const items2 = [tmp8Result];
   let easterEggSpacing = null;
   const tmp14 = callback;
   const tmp4 = useOpenPremiumMarketingPaymentDefault;
@@ -52,4 +57,4 @@ export default function Footer(showSubscribeButton) {
   items2[1] = tmp14(tmp2Result, { style: easterEggSpacing, source: registerAssetDefault });
   obj[1] = items2;
   return closure_6(View, obj);
-};
+}

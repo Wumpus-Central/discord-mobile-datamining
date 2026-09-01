@@ -3,7 +3,13 @@ import set from "../../../_runtime/00002_set.js";
 import createExperiment from "../experiments/index.tsx";
 
 const items = [{ id: 1, label: "Enabled", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({ kind: "user", id: "2023-09_iar_user_reporting", label: "Safety Experience IAR User Reporting", defaultConfig: { enabled: false }, treatments: items });
+const experiment = createExperiment.createExperiment({
+  kind: "user",
+  id: "2023-09_iar_user_reporting",
+  label: "Safety Experience IAR User Reporting",
+  defaultConfig: { enabled: false },
+  treatments: items,
+});
 const result = set.fileFinishedImporting("modules/in_app_reports/SafetyExperienceIarUserReportingExperiment.tsx");
 
 export default experiment;

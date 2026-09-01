@@ -26,28 +26,43 @@ export default function AppLauncherUserOption(option) {
   const items = [onPress];
   const stateFromStores = obj.useStateFromStores(items, () => onPress.useReducedMotion);
   const tmp = callback2();
-  [tmp6, c6] = callback(channel.useState(() => {
-    let userId = null;
-    if (null != closure_1) {
-      userId = null;
-      if ("userMention" === tmp.type) {
-        userId = tmp.userId;
+  [tmp6, c6] = callback(
+    channel.useState(() => {
+      let userId = null;
+      if (null != closure_1) {
+        userId = null;
+        if ("userMention" === tmp.type) {
+          userId = tmp.userId;
+        }
       }
-    }
-    return userId;
-  }), 2);
-  const tmp5 = callback(channel.useState(() => {
-    let userId = null;
-    if (null != closure_1) {
-      userId = null;
-      if ("userMention" === tmp.type) {
-        userId = tmp.userId;
+      return userId;
+    }),
+    2,
+  );
+  const tmp5 = callback(
+    channel.useState(() => {
+      let userId = null;
+      if (null != closure_1) {
+        userId = null;
+        if ("userMention" === tmp.type) {
+          userId = tmp.userId;
+        }
       }
-    }
-    return userId;
-  }), 2);
+      return userId;
+    }),
+    2,
+  );
   [tmp8, c7] = callback(channel.useState(null), 2);
-  obj = { style, option, hasError, selected: null, onPress: null, leading: null, selectedItemName: null, autoFocus: null };
+  obj = {
+    style,
+    option,
+    hasError,
+    selected: null,
+    onPress: null,
+    leading: null,
+    selectedItemName: null,
+    autoFocus: null,
+  };
   let tmp12 = null != tmp8;
   const tmp7 = callback(channel.useState(null), 2);
   if (!tmp12) {
@@ -74,9 +89,13 @@ export default function AppLauncherUserOption(option) {
         }
         callback({ user });
       },
-      onActionSheetDismiss: closure_3
+      onActionSheetDismiss: closure_3,
     };
-    obj2.openLazy(option(closure_1_2[11])(closure_1_2[10], closure_1_2.paths), option(closure_1_2[12]).APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, obj);
+    obj2.openLazy(
+      option(closure_1_2[11])(closure_1_2[10], closure_1_2.paths),
+      option(closure_1_2[12]).APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY,
+      obj,
+    );
   };
   if (null != tmp8) {
     obj = { user: null, guildId: null, animate: null, size: null };
@@ -109,4 +128,4 @@ export default function AppLauncherUserOption(option) {
   obj[6] = tmp9Result;
   obj[7] = autoFocus;
   return c6(AppLauncherSelectOptionFormRowDefault, obj);
-};
+}

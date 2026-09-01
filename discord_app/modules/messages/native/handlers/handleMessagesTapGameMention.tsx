@@ -8,6 +8,10 @@ const result = set.fileFinishedImporting("modules/messages/native/handlers/handl
 export const handleMessagesTapGameMention = function handleMessagesTapGameMention(gameId) {
   gameId = gameId.gameId;
   let obj = _modDef8806;
-  obj = { gameId, gameProfileModalChecks: { shouldOpenGameProfile: true, gameId }, source: GameProfileEmbedAction.GameProfileSources.GameMention };
+  obj = {
+    gameId,
+    gameProfileModalChecks: { shouldOpenGameProfile: true, gameId },
+    source: GameProfileEmbedAction.GameProfileSources.GameMention,
+  };
   obj.openGameProfileModal(obj);
 };

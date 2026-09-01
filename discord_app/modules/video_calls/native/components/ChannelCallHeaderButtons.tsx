@@ -9,12 +9,18 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallHeaderButtons.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/video_calls/native/components/ChannelCallHeaderButtons.tsx",
+);
 
 export const CameraButton = function CameraButton() {
   let obj = initialize;
   const items = [closure_3];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isVideoEnabled: store.isVideoEnabled(), videoDeviceId: store.getVideoDeviceId(), videoDevices: store.getVideoDevices() }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    isVideoEnabled: store.isVideoEnabled(),
+    videoDeviceId: store.getVideoDeviceId(),
+    videoDevices: store.getVideoDevices(),
+  }));
   ({ videoDeviceId: require, videoDevices: importDefault } = stateFromStoresObject);
   let tmp4 = null;
   if (stateFromStoresObject.isVideoEnabled) {
@@ -30,7 +36,12 @@ export const CameraButton = function CameraButton() {
         const obj = closure_1_1(closure_1_2[7]);
       }
     };
-    tmp4 = jsx(ChannelCallNavigatorIconDefault, { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
+    tmp4 = jsx(ChannelCallNavigatorIconDefault, {
+      accessibilityLabel: null,
+      source: null,
+      onPress: null,
+      disableBackground: true,
+    });
     const tmp7 = ChannelCallNavigatorIconDefault;
   }
   return tmp4;

@@ -31,7 +31,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t.cWGW5d);
     obj[1] = VideoQualitySettings.BEST;
-    const items = [obj, , ];
+    const items = [obj, ,];
     obj = { label: null, value: null };
     const intl2 = getSystemLocale.intl;
     obj[0] = intl2.string(getSystemLocale.t["5hKnyC"]);
@@ -43,7 +43,7 @@ createToggle = {
     obj[1] = VideoQualitySettings.DATA_SAVER;
     items[2] = obj;
     return items;
-  }
+  },
 };
 createToggle = createToggle.createRadio(createToggle);
 let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/VideoUploadQualitySetting.tsx");

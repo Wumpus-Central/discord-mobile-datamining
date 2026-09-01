@@ -11,8 +11,7 @@ require = arg1;
 let closure_6 = {};
 let closure_7 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class UpcomingEventNoticesStore extends PersistedStore {
-}
+class UpcomingEventNoticesStore extends PersistedStore {}
 const prototype = UpcomingEventNoticesStore.prototype;
 prototype["initialize"] = function initialize(upcomingEventDismissals) {
   this.waitFor(closure_2, closure_3);
@@ -78,7 +77,14 @@ const upcomingEventNoticesStore = new UpcomingEventNoticesStore(dispatcherDefaul
         if (guildScheduledEvent.status === constants.SCHEDULED) {
           if (null == obj[guildEventId]) {
             obj = getNextShownUpcomingEventNoticeType;
-            if (obj.getNextShownUpcomingEventNoticeType(guildScheduledEvent, undefined, dependencyMap[guildEventId], false) === constants2.NEW_EVENT) {
+            if (
+              obj.getNextShownUpcomingEventNoticeType(
+                guildScheduledEvent,
+                undefined,
+                dependencyMap[guildEventId],
+                false,
+              ) === constants2.NEW_EVENT
+            ) {
               obj = {};
               const merged = Object.assign(obj);
               const _Date = Date;
@@ -93,7 +99,7 @@ const upcomingEventNoticesStore = new UpcomingEventNoticesStore(dispatcherDefaul
     const obj = {};
     const merged = Object.assign(obj);
     obj[guildEventId.guildEventId] = Date.now();
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx");
 

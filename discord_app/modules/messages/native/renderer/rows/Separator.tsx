@@ -6,8 +6,18 @@ import Changeset from "../RowGeneratorConstants.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 ({ RowType: obj1, SeparatorType: c3 } = Changeset);
-let closure_4 = createCacheKey.createNativeStyleProperties({ dayColor: ThemesDefault.colors.TEXT_MUTED, unreadTextColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_TEXT, unreadBorderColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_BORDER, summaryColor: ThemesDefault.colors.TEXT_BRAND });
-let obj = { dayColor: ThemesDefault.colors.TEXT_MUTED, unreadTextColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_TEXT, unreadBorderColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_BORDER, summaryColor: ThemesDefault.colors.TEXT_BRAND };
+let closure_4 = createCacheKey.createNativeStyleProperties({
+  dayColor: ThemesDefault.colors.TEXT_MUTED,
+  unreadTextColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_TEXT,
+  unreadBorderColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_BORDER,
+  summaryColor: ThemesDefault.colors.TEXT_BRAND,
+});
+let obj = {
+  dayColor: ThemesDefault.colors.TEXT_MUTED,
+  unreadTextColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_TEXT,
+  unreadBorderColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_BORDER,
+  summaryColor: ThemesDefault.colors.TEXT_BRAND,
+};
 const result = set.fileFinishedImporting("modules/messages/native/renderer/rows/Separator.tsx");
 
 export const generateSeparatorRowData = function generateSeparatorRowData(text, theme) {

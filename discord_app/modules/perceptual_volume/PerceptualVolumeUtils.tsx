@@ -17,7 +17,7 @@ export const perceptualToAmplitude = function perceptualToAmplitude(arg0) {
       let powResult = Math.pow(result, 2.8);
     } else {
       const _Math = Math;
-      powResult = Math.pow(10, 6 * (result - 1) / 20);
+      powResult = Math.pow(10, (6 * (result - 1)) / 20);
     }
     return powResult * num;
   }
@@ -36,7 +36,7 @@ export const amplitudeToPerceptual = function amplitudeToPerceptual(USER) {
       let powResult = Math.pow(result, 0.35714285714285715);
     } else {
       const _Math = Math;
-      powResult = 20 * Math.log10(result) / 6 + 1;
+      powResult = (20 * Math.log10(result)) / 6 + 1;
     }
     return powResult * num;
   }

@@ -9,7 +9,9 @@ import closure_8 from "../UserGuildJoinRequestStore.tsx";
 import { Permissions } from "../../../Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx",
+);
 
 export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
   [tmp2, require] = callback(joinRequest.useState(false), 2);
@@ -63,4 +65,4 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
     }
   }, items2);
   return { loading, joinRequest, joinRequestGuild };
-};
+}

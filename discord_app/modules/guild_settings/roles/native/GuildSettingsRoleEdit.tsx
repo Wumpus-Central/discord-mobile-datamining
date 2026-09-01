@@ -31,7 +31,12 @@ let closure_4 = ["guild"];
 const error = importAllResult;
 ({ AnalyticEvents: closure_18, DEFAULT_ROLE_COLOR: closure_19, GuildSettingsSections: closure_20 } = ME);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
-createCacheKey = { container: { flex: 1, paddingTop: 16 }, innerContainer: null, managedRolesWarningContainer: null, form: null };
+createCacheKey = {
+  container: { flex: 1, paddingTop: 16 },
+  innerContainer: null,
+  managedRolesWarningContainer: null,
+  form: null,
+};
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginVertical: 8, marginHorizontal: 16 };
@@ -65,7 +70,15 @@ class GuildSettingsRoleEdit extends PureComponent {
       });
       const arr = closure_1_1(closure_1_3[23])(members);
       const sizeResult = found.size();
-      obj = { tab_opened: sectionAnalyticsName, is_everyone: null, role_id: null, role_mentionable: null, role_hoist: null, role_permissions: null, role_num_members: null };
+      obj = {
+        tab_opened: sectionAnalyticsName,
+        is_everyone: null,
+        role_id: null,
+        role_mentionable: null,
+        role_hoist: null,
+        role_permissions: null,
+        role_num_members: null,
+      };
       const obj4 = closure_1_1(closure_1_3[24]);
       obj[1] = applyArgumentsResult(closure_1_3[25]).isEveryoneRoleId(id.props.guild.id, id);
       obj[2] = id;
@@ -83,13 +96,24 @@ class GuildSettingsRoleEdit extends PureComponent {
       applyArgumentsResult(closure_1_3[26]).updateRoleName(applyArgumentsResult.props.role.id, name);
     };
     applyArgumentsResult.handleMentionableChanged = function handleMentionableChanged(mentionable) {
-      applyArgumentsResult(closure_1_3[26]).toggleRoleSettings(applyArgumentsResult.props.role.id, applyArgumentsResult.props.role.hoist, mentionable);
+      applyArgumentsResult(closure_1_3[26]).toggleRoleSettings(
+        applyArgumentsResult.props.role.id,
+        applyArgumentsResult.props.role.hoist,
+        mentionable,
+      );
     };
     applyArgumentsResult.handleHoistChanged = function handleHoistChanged(hoist) {
-      applyArgumentsResult(closure_1_3[26]).toggleRoleSettings(applyArgumentsResult.props.role.id, hoist, applyArgumentsResult.props.role.mentionable);
+      applyArgumentsResult(closure_1_3[26]).toggleRoleSettings(
+        applyArgumentsResult.props.role.id,
+        hoist,
+        applyArgumentsResult.props.role.mentionable,
+      );
     };
     applyArgumentsResult.handlePermissionsChanged = function handlePermissionsChanged(permissions) {
-      const result = applyArgumentsResult(closure_1_3[26]).updateRolePermissionSet(applyArgumentsResult.props.role.id, permissions);
+      const result = applyArgumentsResult(closure_1_3[26]).updateRolePermissionSet(
+        applyArgumentsResult.props.role.id,
+        permissions,
+      );
     };
     applyArgumentsResult.handleSaveRole = function handleSaveRole() {
       return new Promise((arg0) => {
@@ -203,17 +227,20 @@ class GuildSettingsRoleEdit extends PureComponent {
           } else {
             updateRoleResult = Promise.resolve();
           }
-          updateRoleResult.then(() => {
-            if (null != closure_2) {
-              const result = callback(navigation[31]).putRoleConnectionsConfigurations(closure_4, closure_5, tmp);
-              result.then(callback2, closure_8);
-              const obj = callback(navigation[31]);
-            } else {
-              callback2();
-            }
-          }, (arg0) => {
-            callback3(arg0);
-          });
+          updateRoleResult.then(
+            () => {
+              if (null != closure_2) {
+                const result = callback(navigation[31]).putRoleConnectionsConfigurations(closure_4, closure_5, tmp);
+                result.then(callback2, closure_8);
+                const obj = callback(navigation[31]);
+              } else {
+                callback2();
+              }
+            },
+            (arg0) => {
+              callback3(arg0);
+            },
+          );
         });
       });
     };
@@ -222,7 +249,15 @@ class GuildSettingsRoleEdit extends PureComponent {
       ({ guild: closure_1, role } = props);
       const navigation = props.navigation;
       let obj = closure_1_1(closure_1_3[32]);
-      obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, confirmColor: null };
+      obj = {
+        title: null,
+        body: null,
+        cancelText: null,
+        confirmText: null,
+        onConfirm: null,
+        hideActionSheet: false,
+        confirmColor: null,
+      };
       const intl = applyArgumentsResult(closure_1_3[20]).intl;
       obj = { name: role.name };
       obj[0] = intl.formatToPlainString(applyArgumentsResult(closure_1_3[20]).t.FiMFTZ, obj);
@@ -232,7 +267,7 @@ class GuildSettingsRoleEdit extends PureComponent {
       obj[2] = intl3.string(applyArgumentsResult(closure_1_3[20]).t["ETE/oC"]);
       const intl4 = applyArgumentsResult(closure_1_3[20]).intl;
       obj[3] = intl4.string(applyArgumentsResult(closure_1_3[20]).t.N86XcP);
-      applyArgumentsResult = closure_1_6(function*() {
+      applyArgumentsResult = closure_1_6(function* () {
         if (user === 2) {
           user = 3;
           HermesBuiltin.throwTypeError();
@@ -293,7 +328,7 @@ class GuildSettingsRoleEdit extends PureComponent {
           }
         }
       });
-      obj[4] = function() {
+      obj[4] = function () {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -316,7 +351,16 @@ class GuildSettingsRoleEdit extends PureComponent {
         let resolved = new Promise((arg0) => {
           closure_0 = arg0;
           let obj = closure_1_1(closure_1_3[32]);
-          obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, hideActionSheet: false, confirmColor: null };
+          obj = {
+            title: null,
+            body: null,
+            cancelText: null,
+            confirmText: null,
+            onConfirm: null,
+            onCancel: null,
+            hideActionSheet: false,
+            confirmColor: null,
+          };
           const intl = closure_1_0(closure_1_3[20]).intl;
           obj[0] = intl.string(closure_1_0(closure_1_3[20]).t.P3yCXJ);
           const intl2 = closure_1_0(closure_1_3[20]).intl;
@@ -409,7 +453,7 @@ prototype["renderSubScreenButtons"] = function renderSubScreenButtons() {
   obj[1] = function onPress() {
     return self.onSubScreenValueChange(closure_1_17.PERMISSIONS);
   };
-  const items = [callback2(self(5599).TableRow, obj), , ];
+  const items = [callback2(self(5599).TableRow, obj), ,];
   obj = { label: null, onPress: null, arrow: true };
   const intl2 = self(1236).intl;
   obj[0] = intl2.string(self(1236).t["5//Muu"]);
@@ -472,7 +516,19 @@ prototype["render"] = function render() {
   }
   const effectiveSection = self.getEffectiveSection();
   if (constants.DISPLAY === effectiveSection) {
-    let obj = { guild: null, role: null, name: null, formErrors: null, mentionable: null, hoist: null, onNameChanged: null, onMentionableChanged: null, onHoistChanged: null, locked: null, autoFocusInput: null };
+    let obj = {
+      guild: null,
+      role: null,
+      name: null,
+      formErrors: null,
+      mentionable: null,
+      hoist: null,
+      onNameChanged: null,
+      onMentionableChanged: null,
+      onHoistChanged: null,
+      locked: null,
+      autoFocusInput: null,
+    };
     obj[0] = guild;
     obj[1] = role;
     obj[2] = name;
@@ -533,7 +589,7 @@ prototype["render"] = function render() {
         result = self.renderManagedRoleWarningText();
       }
     }
-    const items = [result, tmp11Result, , ];
+    const items = [result, tmp11Result, ,];
     let result1 = null;
     if (effectiveSection === tmp9.DISPLAY) {
       result1 = self.renderSubScreenButtons();
@@ -610,7 +666,7 @@ export default function ConnectedGuildSettingsRoleEdit(guildId) {
       const obj = guildId(section[26]);
     }
   }, items1);
-  const items2 = [guildId, ];
+  const items2 = [guildId];
   let id;
   if (role != null) {
     id = role.id;
@@ -639,4 +695,4 @@ export default function ConnectedGuildSettingsRoleEdit(guildId) {
     tmp10 = callback3(closure_24, obj);
   }
   return tmp10;
-};
+}

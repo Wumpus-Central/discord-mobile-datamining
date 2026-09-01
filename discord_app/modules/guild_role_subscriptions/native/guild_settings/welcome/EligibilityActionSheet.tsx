@@ -9,8 +9,13 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 const EligibilityActionSheet = "EligibilityActionSheet";
-let closure_8 = createCacheKey.createStyles({ container: { flex: 1, paddingHorizontal: 0 }, title: { marginHorizontal: 24, marginTop: 16 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/welcome/EligibilityActionSheet.tsx");
+let closure_8 = createCacheKey.createStyles({
+  container: { flex: 1, paddingHorizontal: 0 },
+  title: { marginHorizontal: 24, marginTop: 16 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/welcome/EligibilityActionSheet.tsx",
+);
 
 export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   onRequireModeratorMFAClick = onRequireModeratorMFAClick.onRequireModeratorMFAClick;
@@ -29,7 +34,7 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
       onRequireModeratorMFAClick() {
         closure_1_1(closure_1_2[4]).hideActionSheet(closure_1_7);
         callback();
-      }
+      },
     };
     return { actions, sortedByIneligible: true };
   }, items);
@@ -37,10 +42,13 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   obj = { style: tmp.title, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = onRequireModeratorMFAClick(1236).intl;
   obj[3] = intl.string(onRequireModeratorMFAClick(1236).t["3s47iN"]);
-  const items1 = [callback(onRequireModeratorMFAClick(4474).Heading, obj), ];
-  obj = { style: tmp.container, items: useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo) };
+  const items1 = [callback(onRequireModeratorMFAClick(4474).Heading, obj)];
+  obj = {
+    style: tmp.container,
+    items: useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo),
+  };
   items1[1] = callback(EligibilityChecklistRowDefault, obj);
   obj[1] = items1;
   return callback2(onRequireModeratorMFAClick(5622).BottomSheet, obj);
-};
+}
 export const ELIGIBILITY_ACTION_SHEET_KEY = "EligibilityActionSheet";

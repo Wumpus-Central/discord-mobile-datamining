@@ -10,10 +10,16 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 createCacheKey = { container: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_12 };
+createCacheKey = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+};
 createCacheKey[0] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresOverviewScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/icymi/native/custom_scores/ICYMICustomScoresOverviewScreen.tsx",
+);
 
 export default function ICYMICustomScoresOverviewScreen(navigation) {
   navigation = navigation.navigation;
@@ -35,7 +41,10 @@ export default function ICYMICustomScoresOverviewScreen(navigation) {
   const items4 = [navigation];
   closure_4 = React.useCallback((guildId) => navigation.navigate("guild", { guildId }), items4);
   obj = { showsVerticalScrollIndicator: false, style: callback().container, contentInset: null, children: null };
-  obj = { bottom: stateFromStores(stateFromStores1[9])().bottom, top: stateFromStores(stateFromStores1[7]).space.PX_12 };
+  obj = {
+    bottom: stateFromStores(stateFromStores1[9])().bottom,
+    top: stateFromStores(stateFromStores1[7]).space.PX_12,
+  };
   obj[2] = obj;
   obj1 = {
     hasIcons: true,
@@ -48,7 +57,7 @@ export default function ICYMICustomScoresOverviewScreen(navigation) {
         icon: null,
         label: null,
         trailing: null,
-        arrow: true
+        arrow: true,
       };
       obj = { guild };
       obj[1] = closure_1_8(stateFromStores(stateFromStores1[12]), obj);
@@ -66,7 +75,7 @@ export default function ICYMICustomScoresOverviewScreen(navigation) {
       }
       obj[3] = tmpResult;
       return closure_1_8(navigation(stateFromStores1[11]).TableRow, obj, guild.id);
-    })
+    }),
   };
   obj[3] = jsx(navigation(stateFromStores1[10]).TableRowGroup, {
     hasIcons: true,
@@ -79,7 +88,7 @@ export default function ICYMICustomScoresOverviewScreen(navigation) {
         icon: null,
         label: null,
         trailing: null,
-        arrow: true
+        arrow: true,
       };
       obj = { guild };
       obj[1] = closure_1_8(stateFromStores(stateFromStores1[12]), obj);
@@ -97,7 +106,12 @@ export default function ICYMICustomScoresOverviewScreen(navigation) {
       }
       obj[3] = tmpResult;
       return closure_1_8(navigation(stateFromStores1[11]).TableRow, obj, guild.id);
-    })
+    }),
   });
-  return <closure_4 bottom={stateFromStores(stateFromStores1[9])().bottom} top={stateFromStores(stateFromStores1[7]).space.PX_12} />;
-};
+  return (
+    <closure_4
+      bottom={stateFromStores(stateFromStores1[9])().bottom}
+      top={stateFromStores(stateFromStores1[7]).space.PX_12}
+    />
+  );
+}

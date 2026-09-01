@@ -8,7 +8,12 @@ import roundToNearestPixelResult from "../../../../../_runtime/00014_Integer.js"
 const PixelRatio = get_ActivityIndicator.PixelRatio;
 const PX_12 = ThemesDefault.space.PX_12;
 const result = 2 * PX_12;
-const obj = { top: ThemesDefault.space.PX_16, bottom: ThemesDefault.space.PX_16, left: ThemesDefault.space.PX_16, right: ThemesDefault.space.PX_16 };
+const obj = {
+  top: ThemesDefault.space.PX_16,
+  bottom: ThemesDefault.space.PX_16,
+  left: ThemesDefault.space.PX_16,
+  right: ThemesDefault.space.PX_16,
+};
 const REFRESH_MEDIUM_32 = Button.AvatarSizes.REFRESH_MEDIUM_32;
 const NORMAL = Button.AvatarSizes.NORMAL;
 const YOUBAR_60 = Button.AvatarSizes.YOUBAR_60;
@@ -19,7 +24,14 @@ const diff1 = sum1 + 8 - (Button.AVATAR_SIZE_MAP[REFRESH_MEDIUM_32] + PX_12);
 const result1 = set.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarConstants.tsx");
 
 export const CONNECTION_BANNER_HEIGHT = 48;
-export const YOU_BAR_SPRING_CONFIG = { damping: 20, stiffness: 300, mass: 1.5, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
+export const YOU_BAR_SPRING_CONFIG = {
+  damping: 20,
+  stiffness: 300,
+  mass: 1.5,
+  overshootClamping: true,
+  restSpeedThreshold: 0.001,
+  restDisplacementThreshold: 0.001,
+};
 export const YOU_BAR_PADDING = PX_12;
 export const YOU_BAR_HEIGHT = 32 + result;
 export const YOU_BAR_MARGIN = ThemesDefault.space.PX_16;

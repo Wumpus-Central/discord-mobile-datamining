@@ -71,12 +71,12 @@ function InviteCard(invite) {
     obj1 = { style: null, children: null };
     const items = [tmp.container, invite.style];
     obj1[0] = items;
-    const items1 = [tmp14, ];
+    const items1 = [tmp14];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.text;
     const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: null };
     obj3[2] = stringResult;
-    const items2 = [tmp18(tmp17(4474).Text, obj3), ];
+    const items2 = [tmp18(tmp17(4474).Text, obj3)];
     const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj4[2] = name;
     items2[1] = tmp18(tmp17(4474).Text, obj4);
@@ -92,12 +92,19 @@ function GuildTemplateCard(arg0) {
   let obj = { style: items, children: null };
   items = [tmp.container, style];
   obj = { source: registerAssetDefault };
-  const items1 = [callback(closure_5, obj), ];
+  const items1 = [callback(closure_5, obj)];
   obj = { style: tmp.text, children: null };
   obj1 = { variant: "text-sm/medium", color: "text-subtle", children: null };
   const intl = getSystemLocale.intl;
   obj1[2] = intl.string(getSystemLocale.t.QzUORX);
-  const items2 = [callback(Text.Text, obj1), callback(Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guildTemplate.name })];
+  const items2 = [
+    callback(Text.Text, obj1),
+    callback(Text.Text, {
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      children: guildTemplate.name,
+    }),
+  ];
   obj[1] = items2;
   items1[1] = callback2(closure_4, obj);
   obj[1] = items1;
@@ -115,8 +122,15 @@ function Centerpiece(inlineButtons) {
   items = [tmp3.centerpieceContainer];
   obj = { alwaysBounceVertical: false, contentContainerStyle: tmp3.scrollViewContainer, children: null };
   obj = { style: tmp3.logo, source: registerAsset };
-  const items1 = [callback(closure_5, obj), , ];
-  obj1 = { style: tmp3.header, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
+  const items1 = [callback(closure_5, obj), ,];
+  obj1 = {
+    style: tmp3.header,
+    lineClamp: null,
+    variant: "display-md",
+    color: "text-overlay-light",
+    maxFontSizeMultiplier: 1,
+    children: null,
+  };
   let num = 2;
   if (tmp2) {
     num = 1;
@@ -124,14 +138,20 @@ function Centerpiece(inlineButtons) {
   obj1[1] = num;
   const intl = tmp4(1236).intl;
   obj1[5] = intl.string(getSystemLocale.t["3S2xmm"]);
-  const items2 = [callback(Text.Heading, obj1), , , ];
-  const items3 = [tmp3.subHeader, ];
+  const items2 = [callback(Text.Heading, obj1), , ,];
+  const items3 = [tmp3.subHeader];
   if (null != invite) {
     let subHeaderWithInvite = tmp3.subHeaderWithInvite;
   } else {
     subHeaderWithInvite = null;
   }
-  const obj2 = { variant: "text-md/medium", color: "text-overlay-light", style: items3, maxFontSizeMultiplier: 3, children: null };
+  const obj2 = {
+    variant: "text-md/medium",
+    color: "text-overlay-light",
+    style: items3,
+    maxFontSizeMultiplier: 3,
+    children: null,
+  };
   items3[1] = subHeaderWithInvite;
   const intl2 = tmp4(1236).intl;
   obj2[4] = intl2.string(getSystemLocale.t.Gtcthl);
@@ -160,19 +180,40 @@ function Centerpiece(inlineButtons) {
 ({ AnalyticEvents: closure_14, StorageKeys: closure_15, AuthStates: closure_16, InviteStates: closure_17 } = ME);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
 let closure_22 = createCacheKey.createStyles((arg0) => {
-  const obj = { container: { height: "100%", flex: 1, padding: 16 }, logo: { flex: 0, width: 93, height: 70, tintColor: "white", alignSelf: "center", marginBottom: 24 }, scrollViewContainer: { flexShrink: 0, flexGrow: 1, justifyContent: "center" }, header: { textAlign: "center", marginBottom: 8, textTransform: "uppercase" }, subHeader: null, subHeaderWithInvite: null, centerpieceContainer: null, buttonContainer: null };
+  const obj = {
+    container: { height: "100%", flex: 1, padding: 16 },
+    logo: { flex: 0, width: 93, height: 70, tintColor: "white", alignSelf: "center", marginBottom: 24 },
+    scrollViewContainer: { flexShrink: 0, flexGrow: 1, justifyContent: "center" },
+    header: { textAlign: "center", marginBottom: 8, textTransform: "uppercase" },
+    subHeader: null,
+    subHeaderWithInvite: null,
+    centerpieceContainer: null,
+    buttonContainer: null,
+  };
   let num = 300;
   if (arg0) {
     num = 480;
   }
-  obj[4] = { fontSize: 18, textAlign: "center", alignSelf: "center", maxWidth: num, marginBottom: 24, marginHorizontal: 16 };
+  obj[4] = {
+    fontSize: 18,
+    textAlign: "center",
+    alignSelf: "center",
+    maxWidth: num,
+    marginBottom: 24,
+    marginHorizontal: 16,
+  };
   obj[5] = { marginBottom: 16 };
   obj[6] = { flexGrow: 1, flexShrink: 1, justifyContent: "center" };
   obj[7] = { paddingHorizontal: 28, maxWidth: 480, alignSelf: "center", width: "100%" };
   return obj;
 });
 createCacheKey = { container: null, text: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, padding: 16, flexDirection: "row", borderRadius: ThemesDefault.radii.sm };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  padding: 16,
+  flexDirection: "row",
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginLeft: 16 };
 let closure_23 = createCacheKey.createStyles(createCacheKey);
@@ -198,7 +239,9 @@ export default function Welcome() {
   });
   let obj3 = _require(stateFromStores[26]);
   const items2 = [closure_9];
-  const stateFromStores1 = obj3.useStateFromStores(items2, () => store.getGuildTemplate(store.getDisplayedGuildTemplateCode()));
+  const stateFromStores1 = obj3.useStateFromStores(items2, () =>
+    store.getGuildTemplate(store.getDisplayedGuildTemplateCode()),
+  );
   let obj4 = _require(stateFromStores[26]);
   const items3 = [closure_7];
   const React = obj4.useStateFromStores(items3, () => underageAnonymous.isUnderageAnonymous());
@@ -252,12 +295,8 @@ export default function Welcome() {
     const locationMetadata = callback(stateFromStores[31]).getLocationMetadata();
   }, []);
   importDefault(stateFromStores[32])(hasLoadedExperiments.hasLoadedExperiments);
-  const effect1 = React.useEffect(() => {
-
-  });
-  const effect2 = React.useEffect(() => {
-
-  });
+  const effect1 = React.useEffect(() => {});
+  const effect2 = React.useEffect(() => {});
   if (stateFromStores3) {
     if (stateFromStores2) {
       return callback(importDefault(tmp2[33]), {});
@@ -280,11 +319,11 @@ export default function Welcome() {
         const obj2 = callback(stateFromStores[29]);
       }
     },
-    text: null
+    text: null,
   };
   const intl = tmp5(tmp2[16]).intl;
   obj1[3] = intl.string(_require(stateFromStores[16]).t.pV8xeR);
-  const items6 = [callback(_require(stateFromStores[37]).Button, obj1), ];
+  const items6 = [callback(_require(stateFromStores[37]).Button, obj1)];
   obj2 = {
     size: "lg",
     variant: "secondary-overlay",
@@ -292,7 +331,7 @@ export default function Welcome() {
       navigation.navigate(closure_1_16.LOGIN);
       callback(stateFromStores[29]).track(closure_1_14.LOGIN_VIEWED, { source: "welcome" });
     },
-    text: null
+    text: null,
   };
   const intl2 = tmp5(tmp2[16]).intl;
   obj2[3] = intl2.string(_require(stateFromStores[16]).t.dKhVQN);
@@ -301,7 +340,7 @@ export default function Welcome() {
   obj[1] = callback2(_require(stateFromStores[36]).ButtonGroup, obj);
   const tmp19 = callback(closure_4, obj);
   obj3 = { style: null, children: null };
-  const items7 = [tmp4.container, ];
+  const items7 = [tmp4.container];
   obj4 = { paddingTop: top + tmp5(tmp2[39]).NAV_BAR_HEIGHT, paddingBottom: bottom };
   items7[1] = obj4;
   obj3[0] = items7;
@@ -311,7 +350,7 @@ export default function Welcome() {
     tmp21 = tmp19;
   }
   obj5[2] = tmp21;
-  const items8 = [callback(Centerpiece, obj5), , ];
+  const items8 = [callback(Centerpiece, obj5), ,];
   let tmp22 = !tmp3;
   if (!tmp3) {
     tmp22 = tmp19;
@@ -322,4 +361,4 @@ export default function Welcome() {
   obj3[1] = items8;
   obj6[1] = callback2(closure_4, obj3);
   return callback(_require(stateFromStores[38]).ThemeContextProvider, obj6);
-};
+}

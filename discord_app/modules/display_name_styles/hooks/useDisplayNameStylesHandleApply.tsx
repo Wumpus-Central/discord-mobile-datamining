@@ -3,7 +3,9 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import { AnalyticEvents } from "../../../Constants.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx",
+);
 
 export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHandleApply(hasChanges) {
   hasChanges = hasChanges.hasChanges;
@@ -14,7 +16,16 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
   const guildId = hasChanges.guildId;
   const isTryItOut = hasChanges.isTryItOut;
   const onClose = hasChanges.onClose;
-  let items = [hasChanges, selectedFontId, selectedEffectId, selectedColors, defaultColor, onClose, guildId, isTryItOut];
+  let items = [
+    hasChanges,
+    selectedFontId,
+    selectedEffectId,
+    selectedColors,
+    defaultColor,
+    onClose,
+    guildId,
+    isTryItOut,
+  ];
   return selectedColors.useCallback(() => {
     if (hasChanges) {
       let tmp4 = selectedEffectId === hasChanges(selectedEffectId[2]).DisplayNameEffect.SOLID;

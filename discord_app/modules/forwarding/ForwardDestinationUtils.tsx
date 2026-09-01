@@ -104,22 +104,27 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           const items = [];
           const messageSnapshots3 = components.messageSnapshots;
           let arraySpreadResult = HermesBuiltin.arraySpread(tmp11(4852).getMessageStickers(components), 0);
-          arraySpreadResult = HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(table[12]).getMessageStickers(message.message)), arraySpreadResult);
+          arraySpreadResult = HermesBuiltin.arraySpread(
+            messageSnapshots3.flatMap((message) => type(table[12]).getMessageStickers(message.message)),
+            arraySpreadResult,
+          );
           if (items.length > 0) {
             if (!closure_9.can(constants2.USE_EXTERNAL_STICKERS, type)) {
-              if (items.some((id) => {
-                const stickerById = closure_1_4.getStickerById(id.id);
-                let isGuildStickerResult = null != stickerById;
-                if (isGuildStickerResult) {
-                  isGuildStickerResult = type(closure_1_2[12]).isGuildSticker(stickerById);
-                  const obj = type(closure_1_2[12]);
-                }
-                if (isGuildStickerResult) {
-                  isGuildStickerResult = stickerById.guild_id !== type.guild_id || undefined;
-                  const tmp6 = stickerById.guild_id !== type.guild_id || undefined;
-                }
-                return isGuildStickerResult;
-              })) {
+              if (
+                items.some((id) => {
+                  const stickerById = closure_1_4.getStickerById(id.id);
+                  let isGuildStickerResult = null != stickerById;
+                  if (isGuildStickerResult) {
+                    isGuildStickerResult = type(closure_1_2[12]).isGuildSticker(stickerById);
+                    const obj = type(closure_1_2[12]);
+                  }
+                  if (isGuildStickerResult) {
+                    isGuildStickerResult = stickerById.guild_id !== type.guild_id || undefined;
+                    const tmp6 = stickerById.guild_id !== type.guild_id || undefined;
+                  }
+                  return isGuildStickerResult;
+                })
+              ) {
                 const obj3 = { label: null };
                 const intl5 = tmp11(1236).intl;
                 obj3[0] = intl5.string(tmp11(1236).t["0Yyrua"]);
@@ -158,61 +163,76 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
   const _require = arg0;
   const items = [closure_11, closure_8, closure_10];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
-    const mapped = lib.map((id) => {
-      id = id.id;
-      if ("user" === id.type) {
-        user = user.getUser(id);
-        let tmp13 = null;
-        if (null != user) {
-          nickname = nickname.getNickname(user.id);
-          if (nickname == null) {
-            nickname = callback2(4322).getName(user);
-            const obj2 = callback2(4322);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+    items,
+    () => {
+      const mapped = lib.map((id) => {
+        id = id.id;
+        if ("user" === id.type) {
+          user = user.getUser(id);
+          let tmp13 = null;
+          if (null != user) {
+            nickname = nickname.getNickname(user.id);
+            if (nickname == null) {
+              nickname = callback2(4322).getName(user);
+              const obj2 = callback2(4322);
+            }
+            tmp13 = nickname;
           }
-          tmp13 = nickname;
+          return tmp13;
+        } else {
+          channel = channel.getChannel(id);
+          let channelName = null;
+          if (null != channel) {
+            const obj = callback(4674);
+            channelName = obj.computeChannelName(channel, user, nickname, true);
+          }
+          return channelName;
         }
-        return tmp13;
-      } else {
-        channel = channel.getChannel(id);
-        let channelName = null;
-        if (null != channel) {
-          const obj = callback(4674);
-          channelName = obj.computeChannelName(channel, user, nickname, true);
-        }
-        return channelName;
-      }
-    });
-    return mapped.filter(lib(closure_1_2[9]).isNotNullish);
-  }, items1);
+      });
+      return mapped.filter(lib(closure_1_2[9]).isNotNullish);
+    },
+    items1,
+  );
 };
 export const useDestinationNamesWithSlowmode = function useDestinationNamesWithSlowmode(selectedDestinations) {
   const _require = selectedDestinations;
   const items = [closure_8, closure_9];
   const items1 = [selectedDestinations];
-  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
-    const mapped = selectedDestinations.map((type) => {
-      let channel = null;
-      if ("channel" === type.type) {
-        channel = channel.getChannel(tmp);
-      }
-      return channel;
-    });
-    const found = mapped.filter(selectedDestinations(closure_1_2[9]).isNotNullish);
-    return found.filter((rateLimitPerUser) => {
-      let tmp2 = null != rateLimitPerUser.rateLimitPerUser;
-      if (tmp2) {
-        tmp2 = rateLimitPerUser.rateLimitPerUser > 0;
-      }
-      if (tmp2) {
-        tmp2 = !callback(table[17]).canBypassSlowmodeHelper(rateLimitPerUser, closure_9);
-        const obj = callback(table[17]);
-      }
-      return tmp2;
-    });
-  }, items1);
+  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+    items,
+    () => {
+      const mapped = selectedDestinations.map((type) => {
+        let channel = null;
+        if ("channel" === type.type) {
+          channel = channel.getChannel(tmp);
+        }
+        return channel;
+      });
+      const found = mapped.filter(selectedDestinations(closure_1_2[9]).isNotNullish);
+      return found.filter((rateLimitPerUser) => {
+        let tmp2 = null != rateLimitPerUser.rateLimitPerUser;
+        if (tmp2) {
+          tmp2 = rateLimitPerUser.rateLimitPerUser > 0;
+        }
+        if (tmp2) {
+          tmp2 = !callback(table[17]).canBypassSlowmodeHelper(rateLimitPerUser, closure_9);
+          const obj = callback(table[17]);
+        }
+        return tmp2;
+      });
+    },
+    items1,
+  );
   let obj = initialize;
   const items2 = [closure_11, closure_10];
   const items3 = [stateFromStoresArray];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items2, () => stateFromStoresArray.map((channel) => callback(table[19]).computeChannelName(channel, closure_11, closure_10, true)), items3);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+    items2,
+    () =>
+      stateFromStoresArray.map((channel) =>
+        callback(table[19]).computeChannelName(channel, closure_11, closure_10, true),
+      ),
+    items3,
+  );
 };

@@ -11,44 +11,43 @@ let c6;
 let c7;
 let c8 = false;
 const Store = initializeDefault.Store;
-class CollectiblesPurchaseStore extends Store {
-}
+class CollectiblesPurchaseStore extends Store {}
 const prototype = CollectiblesPurchaseStore.prototype;
 Object.defineProperty(prototype, "isFetching", {
   get: function isFetching() {
     return c4;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isClaiming", {
   get: function isClaiming() {
     return c5;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "purchases", {
   get: function purchases() {
     return map;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "fetchError", {
   get: function fetchError() {
     return c6;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "claimError", {
   get: function claimError() {
     return c7;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasPreviouslyFetched", {
   get: function hasPreviouslyFetched(arg0, items2) {
     return c8;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getPurchase"] = function getPurchase(skuId) {
   let value;
@@ -74,10 +73,12 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(dispatcherDefaul
       if (!obj.isEqual(items, purchases.purchases)) {
         const _Map = Map;
         purchases = purchases.purchases;
-        map = new Map(purchases.map((skuId) => {
-          const items = [skuId.skuId, skuId];
-          return items;
-        }));
+        map = new Map(
+          purchases.map((skuId) => {
+            const items = [skuId.skuId, skuId];
+            return items;
+          }),
+        );
       }
       obj = apply;
     }
@@ -103,10 +104,12 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(dispatcherDefaul
         if (!obj.isEqual(items, purchases.purchases)) {
           const _Map = Map;
           purchases = purchases.purchases;
-          map = new Map(purchases.map((skuId) => {
-            const items = [skuId.skuId, skuId];
-            return items;
-          }));
+          map = new Map(
+            purchases.map((skuId) => {
+              const items = [skuId.skuId, skuId];
+              return items;
+            }),
+          );
         }
         obj = apply;
       }
@@ -124,7 +127,7 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(dispatcherDefaul
     c6 = undefined;
     c7 = undefined;
     c8 = false;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesPurchaseStore.tsx");
 

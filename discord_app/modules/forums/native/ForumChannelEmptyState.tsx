@@ -10,7 +10,12 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 require = arg1;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" }, image: { width: 120, height: 80 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 20 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 20 } });
+let closure_7 = createCacheKey.createStyles({
+  container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" },
+  image: { width: 120, height: 80 },
+  title: { textAlign: "center", marginTop: 16, marginHorizontal: 20 },
+  subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 20 },
+});
 const memoResult = importAllResult.memo((topViewHeight) => {
   let num = topViewHeight.topViewHeight;
   if (num === undefined) {
@@ -29,8 +34,14 @@ const memoResult = importAllResult.memo((topViewHeight) => {
     tmp4Result = tmp4(12306);
   }
   obj = { source: tmp4Result, style: tmp.image };
-  const items1 = [closure_5(closure_4, obj), , ];
-  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const items1 = [closure_5(closure_4, obj), ,];
+  obj1 = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-lg/semibold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = tmp2(1236).intl;
   if (tagFilter.size > 0) {
     obj2 = { numTags: null };

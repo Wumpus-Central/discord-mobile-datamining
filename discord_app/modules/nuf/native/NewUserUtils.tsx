@@ -15,7 +15,7 @@ import { NotificationAuthorizationStatus as closure_11 } from "../../native_perm
 require = arg1;
 function _shouldSkipContactSyncStep() {
   const self = this;
-  const tmp = importDefaultResult(function*() {
+  const tmp = importDefaultResult(function* () {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       HermesBuiltin.throwTypeError();
@@ -113,7 +113,7 @@ function _getNextOnboardingStep() {
     closure_2 = arg2;
     c6 = 0;
     c7 = 0;
-    const iter = (function*() {
+    const iter = (function* () {
       if (transitionStep2 === 2) {
         transitionStep2 = 3;
         HermesBuiltin.throwTypeError();
@@ -281,10 +281,10 @@ let obj = {
       avatar = currentUser.avatar;
     }
     return null == avatar;
-  }
+  },
 };
 obj = { key: "enable-notification", shouldShowStep: null };
-let closure_13 = importDefaultResult(function*() {
+let closure_13 = importDefaultResult(function* () {
   if (table === 2) {
     table = 3;
     HermesBuiltin.throwTypeError();
@@ -338,7 +338,7 @@ let closure_13 = importDefaultResult(function*() {
     }
   }
 });
-obj[1] = function() {
+obj[1] = function () {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -349,7 +349,7 @@ obj[1] = function() {
   return applyArgumentsResult;
 };
 obj = { key: "contact-sync", shouldShowStep: null };
-let closure_14 = importDefaultResult(function*() {
+let closure_14 = importDefaultResult(function* () {
   if (c0 === 2) {
     c0 = 3;
     HermesBuiltin.throwTypeError();
@@ -414,7 +414,7 @@ let closure_14 = importDefaultResult(function*() {
     }
   }
 });
-obj[1] = function() {
+obj[1] = function () {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -431,29 +431,29 @@ let items = [
     key: "discoverability",
     shouldShowStep() {
       return true;
-    }
+    },
   },
   obj,
   {
     key: "connect-guardian",
     shouldShowStep() {
       return shouldShowGuardianConnect.getShouldShowGuardianConnect();
-    }
+    },
   },
   {
     key: "accept-invite",
     shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
     transitionStep() {
       dispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
-    }
-  }
+    },
+  },
 ];
 let obj1 = {
   key: "accept-invite",
   shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
   transitionStep() {
     dispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
-  }
+  },
 };
 let result = require("set").fileFinishedImporting("modules/nuf/native/NewUserUtils.tsx");
 

@@ -24,7 +24,7 @@ Object.defineProperty(prototype, "prefix", {
   get: function prefix() {
     return this.table.prefix;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["withoutLogging"] = function withoutLogging() {
   const originalPrefix = this.originalPrefix;
@@ -77,12 +77,15 @@ prototype["putAll"] = function putAll(arg0, arg1, arr) {
     Replace = require("../types/index.tsx").ConflictOptions.Replace;
   }
   const table = this.table;
-  return table.putAll(arr.map((data) => {
-    const id = data.id;
-    const padStartResult = id.padStart(19, "0");
-    const items = [closure_0, closure_1, padStartResult];
-    return { key: items, data, generation: padStartResult };
-  }), Replace);
+  return table.putAll(
+    arr.map((data) => {
+      const id = data.id;
+      const padStartResult = id.padStart(19, "0");
+      const items = [closure_0, closure_1, padStartResult];
+      return { key: items, data, generation: padStartResult };
+    }),
+    Replace,
+  );
 };
 prototype["deleteAll"] = function deleteAll() {
   const table = this.table;
@@ -169,12 +172,15 @@ prototype2["putAll"] = function putAll(arg0, arg1, arr) {
     Replace = require("../types/index.tsx").ConflictOptions.Replace;
   }
   const transaction = this.transaction;
-  transaction.putAll(arr.map((data) => {
-    const id = data.id;
-    const padStartResult = id.padStart(19, "0");
-    const items = [closure_0, closure_1, padStartResult];
-    return { key: items, data, generation: padStartResult };
-  }), Replace);
+  transaction.putAll(
+    arr.map((data) => {
+      const id = data.id;
+      const padStartResult = id.padStart(19, "0");
+      const items = [closure_0, closure_1, padStartResult];
+      return { key: items, data, generation: padStartResult };
+    }),
+    Replace,
+  );
 };
 prototype2["replaceChannel"] = function replaceChannel(arg0, arg1, arg2) {
   this.deleteChannel(arg0, arg1);

@@ -18,4 +18,4 @@ export default function getEmojiText(id) {
     surrogates = ":" + name + ":";
   }
   name = id.name;
-};
+}

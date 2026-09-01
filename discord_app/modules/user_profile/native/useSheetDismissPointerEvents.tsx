@@ -1,7 +1,9 @@
 // discord_app/modules/user_profile/native/useSheetDismissPointerEvents.tsx
 import set from "../../../../_runtime/00002_set.js";
 
-let closure_2 = { code: "function useSheetDismissPointerEventsTsx1(){const{contentGestureState,State,handleGestureState}=this.__closure;var _contentGestureState,_handleGestureState;const isDragging=((_contentGestureState=contentGestureState)===null||_contentGestureState===void 0?void 0:_contentGestureState.get())===State.ACTIVE||((_handleGestureState=handleGestureState)===null||_handleGestureState===void 0?void 0:_handleGestureState.get())===State.ACTIVE;return{pointerEvents:isDragging?'none':'box-none'};}" };
+let closure_2 = {
+  code: "function useSheetDismissPointerEventsTsx1(){const{contentGestureState,State,handleGestureState}=this.__closure;var _contentGestureState,_handleGestureState;const isDragging=((_contentGestureState=contentGestureState)===null||_contentGestureState===void 0?void 0:_contentGestureState.get())===State.ACTIVE||((_handleGestureState=handleGestureState)===null||_handleGestureState===void 0?void 0:_handleGestureState.get())===State.ACTIVE;return{pointerEvents:isDragging?'none':'box-none'};}",
+};
 const result = set.fileFinishedImporting("modules/user_profile/native/useSheetDismissPointerEvents.tsx");
 
 export default function useSheetDismissPointerEvents() {
@@ -37,4 +39,4 @@ export default function useSheetDismissPointerEvents() {
   fn.__workletHash = 16631714570992;
   fn.__initData = closure_2;
   return prop(prop1[1]).useAnimatedStyle(fn);
-};
+}

@@ -47,7 +47,15 @@ export const syncMemberSupplemental = function syncMemberSupplemental(guildId, m
       if (!tmp5) {
         joinSourceType = dependencyMap(closure_1_1[0]).JoinSourceType.INVITE;
       }
-      const obj = { userId: joinSourceType.userId, sourceInviteCode: null, joinSourceType: null, inviterId: null, integrationType: null, joinSourceApplicationId: null, joinSourceChannelId: null };
+      const obj = {
+        userId: joinSourceType.userId,
+        sourceInviteCode: null,
+        joinSourceType: null,
+        inviterId: null,
+        integrationType: null,
+        joinSourceApplicationId: null,
+        joinSourceChannelId: null,
+      };
       ({ sourceInviteCode, userId } = joinSourceType);
       if (sourceInviteCode == null) {
         sourceInviteCode = undefined;

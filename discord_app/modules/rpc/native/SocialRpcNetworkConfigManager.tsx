@@ -9,7 +9,12 @@ import closure_4 from "../../user_settings/LocaleStore.tsx";
 import closure_5 from "../../../stores/AuthenticationStore.tsx";
 
 function updateSocialRpcNetworkConfig() {
-  let obj = { "X-Super-Properties": expandEventPropertiesDefault.getSuperPropertiesBase64(), "X-Fingerprint": store.getFingerprint(), "X-Installation-ID": store.getInstallationForTracking(), "X-Discord-Locale": locale.locale };
+  let obj = {
+    "X-Super-Properties": expandEventPropertiesDefault.getSuperPropertiesBase64(),
+    "X-Fingerprint": store.getFingerprint(),
+    "X-Installation-ID": store.getInstallationForTracking(),
+    "X-Discord-Locale": locale.locale,
+  };
   const NativeCacheModule = NativeModules.NativeCacheModule;
   if (NativeCacheModule != null) {
     const _JSON = JSON;
@@ -24,14 +29,11 @@ const NativeModules = get_ActivityIndicator.NativeModules;
 initializeDefault;
 let prototype = function SocialRpcNetworkConfigManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.handleUpdate = set2.isAndroid() ? updateSocialRpcNetworkConfig : (() => {
-
-  });
+  applyArgumentsResult.handleUpdate = set2.isAndroid() ? updateSocialRpcNetworkConfig : () => {};
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 let result = set.fileFinishedImporting("modules/rpc/native/SocialRpcNetworkConfigManager.tsx");
 

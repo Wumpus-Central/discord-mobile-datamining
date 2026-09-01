@@ -3,4 +3,15 @@ import set from "../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesMarketingType.tsx");
 
-export const CollectiblesMarketingType = { COACHTIP: 0, [0]: "COACHTIP", BADGE: 1, [1]: "BADGE", BANNER: 2, [2]: "BANNER", COACHMARK: 3, [3]: "COACHMARK", TAB_TOOLTIP: 4, [4]: "TAB_TOOLTIP" };
+export const CollectiblesMarketingType = {
+  COACHTIP: 0,
+  [0]: "COACHTIP",
+  BADGE: 1,
+  [1]: "BADGE",
+  BANNER: 2,
+  [2]: "BANNER",
+  COACHMARK: 3,
+  [3]: "COACHMARK",
+  TAB_TOOLTIP: 4,
+  [4]: "TAB_TOOLTIP",
+};

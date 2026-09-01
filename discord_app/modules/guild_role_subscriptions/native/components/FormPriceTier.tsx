@@ -7,7 +7,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 noopAll;
 ({ LoadingState: c3, usePriceTiersAvailableInGuild: c4 } = usePriceTiers);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormPriceTier.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/FormPriceTier.tsx",
+);
 
 export default function FormPriceTier(guildId) {
   guildId = guildId.guildId;
@@ -69,4 +71,4 @@ export default function FormPriceTier(guildId) {
     obj[3] = intl.string(guildId(onChange[4]).t.nCOuYJ);
     return jsx(price(onChange[5]), { label: null, disabled: null, onPress: null, placeholder: null });
   }
-};
+}

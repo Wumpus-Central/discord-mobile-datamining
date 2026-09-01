@@ -9,7 +9,9 @@ if (DCDScrollTracker) {
   tmp3 = new tmp3(DCDScrollTracker);
 }
 let closure_3 = tmp3;
-let closure_4 = { code: "function useLaunchPadPullTabMinimizedTsx1(){const{launchPadPullTabState,isVoicePanelOpen,launchPadSharedState,isMinimizedDuringScroll}=this.__closure;const isMinimized=(launchPadPullTabState.get().minimized||isVoicePanelOpen)&&launchPadSharedState.get()<=0;return isMinimized||isMinimizedDuringScroll.get();}" };
+let closure_4 = {
+  code: "function useLaunchPadPullTabMinimizedTsx1(){const{launchPadPullTabState,isVoicePanelOpen,launchPadSharedState,isMinimizedDuringScroll}=this.__closure;const isMinimized=(launchPadPullTabState.get().minimized||isVoicePanelOpen)&&launchPadSharedState.get()<=0;return isMinimized||isMinimizedDuringScroll.get();}",
+};
 let result = require("set").fileFinishedImporting("modules/launchpad/native/useLaunchPadPullTabMinimized.tsx");
 
 export default function useLaunchPadPullTabMinimized(launchPadSharedState) {
@@ -58,8 +60,13 @@ export default function useLaunchPadPullTabMinimized(launchPadSharedState) {
     }
     return value;
   };
-  fn.__closure = { launchPadPullTabState, isVoicePanelOpen: isVoicePanelFullscreen, launchPadSharedState, isMinimizedDuringScroll: sharedValue };
+  fn.__closure = {
+    launchPadPullTabState,
+    isVoicePanelOpen: isVoicePanelFullscreen,
+    launchPadSharedState,
+    isMinimizedDuringScroll: sharedValue,
+  };
   fn.__workletHash = 14263056934448;
   fn.__initData = closure_4;
   return sharedValue(launchPadPullTabState[2]).useDerivedValue(fn);
-};
+}

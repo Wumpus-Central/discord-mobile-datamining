@@ -9,10 +9,16 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 const require = arg1;
 createCacheKey = { container: null };
-createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL,
+  marginHorizontal: 8,
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx",
+);
 
 export default function GuildHomeChannelRow(selected) {
   selected = selected.selected;
@@ -30,7 +36,16 @@ export default function GuildHomeChannelRow(selected) {
     DEFAULT = ChannelModes.DEFAULT;
     tmp5 = tmp3;
   }
-  let obj = { onPress: callback, style: callback().container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null };
+  let obj = {
+    onPress: callback,
+    style: callback().container,
+    accessible: true,
+    accessibilityLabel: null,
+    accessibilityState: null,
+    mode: null,
+    name: null,
+    icon: null,
+  };
   const tmp = callback();
   const intl = tmp5(1236).intl;
   obj[3] = intl.string(tmp5(1236).t.VbpLyU);
@@ -44,4 +59,4 @@ export default function GuildHomeChannelRow(selected) {
   obj = { mode: DEFAULT, IconComponent: tmp5(13580).SignPostIcon };
   obj[7] = jsx(tmp5(11948).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(13580).SignPostIcon });
   return jsx(BaseChannelSubtitleDefault, { mode: DEFAULT, IconComponent: tmp5(13580).SignPostIcon });
-};
+}

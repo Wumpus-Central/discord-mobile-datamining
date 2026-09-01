@@ -6,7 +6,9 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelWrapper.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/guild_channels/ChannelWrapper.tsx",
+);
 
 export const renderChannelWrapper = function renderChannelWrapper(children, fontScale) {
   ({ channel, layout, launchpad, panelVariant } = fontScale);
@@ -23,7 +25,7 @@ export const renderChannelWrapper = function renderChannelWrapper(children, font
   }
   const scaledChannelRowHeight = obj.getScaledChannelRowHeight(fontScale.fontScale, layout, isThreadResult);
   const layoutStyles = getLayoutStyles.getLayoutStyles(layout, launchpad);
-  const items = [{ flex: 1, flexDirection: "row", alignItems: "center", position: "relative" }, , ];
+  const items = [{ flex: 1, flexDirection: "row", alignItems: "center", position: "relative" }, ,];
   let isThreadResult1;
   if (channel != null) {
     isThreadResult1 = channel.isThread();

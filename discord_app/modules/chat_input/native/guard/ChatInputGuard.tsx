@@ -16,7 +16,16 @@ require = arg1;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  let obj = { container: null, content: null, underlay: null, wrapper: null, floating: null, text: null, subtext: null, spacing: null };
+  let obj = {
+    container: null,
+    content: null,
+    underlay: null,
+    wrapper: null,
+    floating: null,
+    text: null,
+    subtext: null,
+    spacing: null,
+  };
   obj = { paddingHorizontal: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_8 };
   obj[0] = obj;
   let lg;
@@ -30,15 +39,42 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   }
   obj[1] = str;
   obj[1] = obj;
-  obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, height: ThemesDefault.space.PX_8 + Radius.Radius.lg };
+  obj1 = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+    height: ThemesDefault.space.PX_8 + Radius.Radius.lg,
+  };
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj1.top = undefined;
   obj[2] = obj1;
-  obj[3] = { borderColor: ThemesDefault.colors.BORDER_MUTED, paddingHorizontal: ThemesDefault.space.PX_12, paddingTop: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, borderWidth: 1 };
-  const obj2 = { borderColor: ThemesDefault.colors.BORDER_MUTED, paddingHorizontal: ThemesDefault.space.PX_12, paddingTop: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, borderWidth: 1 };
-  obj[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderColor: ThemesDefault.colors.BORDER_MUTED, borderWidth: 1 };
+  obj[3] = {
+    borderColor: ThemesDefault.colors.BORDER_MUTED,
+    paddingHorizontal: ThemesDefault.space.PX_12,
+    paddingTop: ThemesDefault.space.PX_16,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+    borderRadius: ThemesDefault.radii.lg,
+    borderWidth: 1,
+  };
+  const obj2 = {
+    borderColor: ThemesDefault.colors.BORDER_MUTED,
+    paddingHorizontal: ThemesDefault.space.PX_12,
+    paddingTop: ThemesDefault.space.PX_16,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+    borderRadius: ThemesDefault.radii.lg,
+    borderWidth: 1,
+  };
+  obj[4] = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+    borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+    borderColor: ThemesDefault.colors.BORDER_MUTED,
+    borderWidth: 1,
+  };
   obj[5] = { textAlign: "center" };
-  const obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderColor: ThemesDefault.colors.BORDER_MUTED, borderWidth: 1 };
+  const obj3 = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+    borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+    borderColor: ThemesDefault.colors.BORDER_MUTED,
+    borderWidth: 1,
+  };
   obj[6] = { marginTop: ThemesDefault.space.PX_4, textAlign: "center" };
   const obj4 = { marginTop: ThemesDefault.space.PX_4, textAlign: "center" };
   obj[7] = { marginTop: ThemesDefault.space.PX_8 };
@@ -53,7 +89,17 @@ export default function ChatInputGuard(type) {
     let obj = { style: null, children: null };
     obj[0] = tmp3.floating;
     ({ icon, message, subtext } = type);
-    obj = { arrow: false, accessibilityRole: "button", onPress: null, icon: null, start: true, end: true, trailing: null, label: null, subLabel: null };
+    obj = {
+      arrow: false,
+      accessibilityRole: "button",
+      onPress: null,
+      icon: null,
+      start: true,
+      end: true,
+      trailing: null,
+      label: null,
+      subLabel: null,
+    };
     obj[2] = actionOnPress;
     obj[3] = icon;
     if (null != actionLabel) {
@@ -80,7 +126,7 @@ export default function ChatInputGuard(type) {
     tmp7Result = null;
     if (null != countdown) {
       const obj4 = { style: null, deadline: null };
-      const items = [, ];
+      const items = [,];
       ({ text: arr3[0], spacing: arr3[1] } = tmp3);
       obj4[0] = items;
       obj4[1] = countdown;
@@ -89,7 +135,16 @@ export default function ChatInputGuard(type) {
     tmp8 = closure_5;
   } else {
     ({ subtext: subtext2, buttonSecondaryText, buttonSecondaryOnPress, countdown: countdown2 } = type);
-    ({ message: message2, buttonPrimaryText, buttonPrimaryOnPress, buttonPrimaryDisabled, buttonPrimaryLoading, buttonPrimaryVariant, buttonSecondaryDisabled, buttonSecondaryLoading } = type);
+    ({
+      message: message2,
+      buttonPrimaryText,
+      buttonPrimaryOnPress,
+      buttonPrimaryDisabled,
+      buttonPrimaryLoading,
+      buttonPrimaryVariant,
+      buttonSecondaryDisabled,
+      buttonSecondaryLoading,
+    } = type);
     const obj5 = { disabled: null, loading: null, text: null, onPress: null, size: "sm", variant: null };
     obj5[0] = buttonPrimaryDisabled;
     obj5[1] = buttonPrimaryLoading;
@@ -102,7 +157,7 @@ export default function ChatInputGuard(type) {
     const obj7 = { style: null, variant: "text-sm/semibold", children: null };
     obj7[0] = tmp3.text;
     obj7[2] = message2;
-    const items1 = [callback(Text.Text, obj7), , , ];
+    const items1 = [callback(Text.Text, obj7), , ,];
     let tmp13Result = null;
     if (null != subtext2) {
       tmp13Result = null;
@@ -122,7 +177,7 @@ export default function ChatInputGuard(type) {
       tmp16Result = tmp15;
       if (null != buttonSecondaryOnPress) {
         const obj8 = { children: null };
-        const items2 = [tmp15, ];
+        const items2 = [tmp15];
         const obj9 = { disabled: null, loading: null, text: null, onPress: null, variant: "secondary", size: "sm" };
         obj9[0] = buttonSecondaryDisabled;
         obj9[1] = buttonSecondaryLoading;
@@ -139,7 +194,7 @@ export default function ChatInputGuard(type) {
     tmp13Result = null;
     if (null != countdown2) {
       const obj11 = { style: null, deadline: null };
-      const items3 = [, ];
+      const items3 = [,];
       ({ text: arr2[0], spacing: arr2[1] } = tmp3);
       obj11[0] = items3;
       obj11[1] = countdown2;
@@ -149,7 +204,7 @@ export default function ChatInputGuard(type) {
     obj6[1] = items1;
     return closure_8(closure_5, obj6);
   }
-};
+}
 export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIndex) {
   screenIndex = screenIndex.screenIndex;
   const channelId = screenIndex.channelId;
@@ -166,7 +221,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   const items1 = [getChatInputPositionStyleDefault({ isCreatingThread: false }), chatInputFloatingOverlayStyle];
   obj[0] = items1;
   obj[1] = callback;
-  const items2 = [callback(screenIndex(11828).ChatInputScrimGradient, {}), ];
+  const items2 = [callback(screenIndex(11828).ChatInputScrimGradient, {})];
   obj = { style: tmp6.container, children: null };
   let tmp10Result = null;
   if (!tmp3) {
@@ -174,7 +229,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
     obj1[0] = tmp6.underlay;
     tmp10Result = tmp10(tmp9, obj1);
   }
-  const items3 = [tmp10Result, , ];
+  const items3 = [tmp10Result, ,];
   const obj2 = { style: tmp6.content, children: null };
   tmp10Result = null;
   if (tmp3) {

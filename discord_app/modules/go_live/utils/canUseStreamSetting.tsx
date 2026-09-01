@@ -35,4 +35,4 @@ export default function canUseStreamSetting(quality, user) {
     return tmp7;
   }
   return true;
-};
+}

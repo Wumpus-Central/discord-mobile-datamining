@@ -14,27 +14,29 @@ class ItemsSortingHat {
 const prototype = ItemsSortingHat.prototype;
 Object.defineProperty(prototype, "firstAvatarDecoration", {
   get: function firstAvatarDecoration(first) {
-    return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION);
+    return this.getFirstItemByType(
+      CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION,
+    );
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "firstProfileEffect", {
   get: function firstProfileEffect() {
     return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "firstNameplate", {
   get: function firstNameplate(first) {
     return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "firstProfileFrame", {
   get: function firstProfileFrame(first) {
     return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME);
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getFirstItemByType"] = function getFirstItemByType(AVATAR_DECORATION) {
   const itemsByTypes = this.itemsByTypes;
@@ -69,7 +71,12 @@ export const useShopProductItems = function useShopProductItems(product) {
     }
     let obj = Object.create(closure_1_3.prototype);
     obj.itemsByTypes = obj.sortByTypes(product.items);
-    obj = { firstProfileEffect: obj.firstProfileEffect, firstAvatarDecoration: obj.firstAvatarDecoration, firstNameplate: obj.firstNameplate, firstProfileFrame: obj.firstProfileFrame };
+    obj = {
+      firstProfileEffect: obj.firstProfileEffect,
+      firstAvatarDecoration: obj.firstAvatarDecoration,
+      firstNameplate: obj.firstNameplate,
+      firstProfileFrame: obj.firstProfileFrame,
+    };
     return obj;
   }, items);
 };

@@ -25,7 +25,7 @@ export default function ThreadNotificationsBottomSheet(channel) {
       return obj.setNotificationSettings(channel, obj);
     },
     accessibilityLabel: null,
-    children: null
+    children: null,
   };
   const intl2 = channel(1236).intl;
   obj1[3] = intl2.string(channel(1236).t.h850Ss);
@@ -42,7 +42,7 @@ export default function ThreadNotificationsBottomSheet(channel) {
       return obj.setNotificationSettings(channel, obj);
     },
     accessibilityLabel: null,
-    children: null
+    children: null,
   });
   return jsx(channel(5989).ActionSheet, { title: null });
-};
+}

@@ -26,7 +26,10 @@ function LaunchpadChannelIcon(channel) {
   obj = { style: tmp.guildBadgeIcon, children: null };
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id));
   const tmp2 = getLayoutStyleDefault();
-  obj[1] = callback(GuildIconSizesDefault, { guild: stateFromStores, size: getLayoutStyleDefault().icon.guildBadgeIconSize });
+  obj[1] = callback(GuildIconSizesDefault, {
+    guild: stateFromStores,
+    size: getLayoutStyleDefault().icon.guildBadgeIconSize,
+  });
   const items1 = [callback(View, obj), callback(channel(11758).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
   obj[0] = items1;
   return callback2(closure_9, obj);
@@ -35,7 +38,15 @@ noopAll;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles(() => {
   let obj = { guildBadgeIcon: null };
-  obj = { position: "absolute", zIndex: 1, bottom: -4, right: -4, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 2, borderRadius: 6 };
+  obj = {
+    position: "absolute",
+    zIndex: 1,
+    bottom: -4,
+    right: -4,
+    borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    borderWidth: 2,
+    borderRadius: 6,
+  };
   obj[0] = obj;
   return obj;
 });
@@ -80,9 +91,18 @@ export default function renderChannelItem(unread) {
     }
   }
   const tmp7 = getLayoutStyleDefault();
-  const children = [unreadBadge, , , ];
+  const children = [unreadBadge, , ,];
   obj = { style: null, children: null };
-  obj = { position: "relative", borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0, width: tmp7.icon.wrapper.size, height: tmp7.icon.wrapper.size };
+  obj = {
+    position: "relative",
+    borderRadius: ThemesDefault.radii.round,
+    justifyContent: "center",
+    alignItems: "center",
+    flexShrink: 0,
+    flexGrow: 0,
+    width: tmp7.icon.wrapper.size,
+    height: tmp7.icon.wrapper.size,
+  };
   const merged = Object.assign(tmp7.icon.margin);
   obj[0] = obj;
   if (channel.isGroupDM()) {
@@ -104,7 +124,23 @@ export default function renderChannelItem(unread) {
     channelName = computeChannelName.computeChannelName(channel, closure_6, closure_5);
     const obj6 = computeChannelName;
   }
-  children[2] = ChannelContentDefault({ name: channelName, subtitle, unread: flag, resolvedUnreadSetting: ONLY_MENTIONS, muted: flag3, lastMessageTimestampString: relativeTimestamp, channel, channelCategoryName, locked, connected, live: flag2, mentionCount, mentionBadge, isSubscriptionGated, needSubscriptionToAccess: flag4 });
+  children[2] = ChannelContentDefault({
+    name: channelName,
+    subtitle,
+    unread: flag,
+    resolvedUnreadSetting: ONLY_MENTIONS,
+    muted: flag3,
+    lastMessageTimestampString: relativeTimestamp,
+    channel,
+    channelCategoryName,
+    locked,
+    connected,
+    live: flag2,
+    mentionCount,
+    mentionBadge,
+    isSubscriptionGated,
+    needSubscriptionToAccess: flag4,
+  });
   tmp11Result = null;
   if (null != end) {
     const obj3 = { style: null, children: null };
@@ -114,8 +150,18 @@ export default function renderChannelItem(unread) {
   }
   children[3] = tmp11Result;
   return tmp8(tmp9(tmp10, { children }), { fontScale });
-};
+}
 export const getChannelAccessibilityProps = function getChannelAccessibilityProps(arg0) {
   ({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount } = arg0);
-  return { accessible: true, accessibilityRole: "button", accessibilityLabel: getChannelA11yLabelDefault({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount }) };
+  return {
+    accessible: true,
+    accessibilityRole: "button",
+    accessibilityLabel: getChannelA11yLabelDefault({
+      channel,
+      unread,
+      mentionCount,
+      voiceStates,
+      embeddedActivitiesCount,
+    }),
+  };
 };

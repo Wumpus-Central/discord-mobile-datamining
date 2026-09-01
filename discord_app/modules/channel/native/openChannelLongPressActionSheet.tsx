@@ -11,7 +11,7 @@ export const openChannelLongPressActionSheet = function openChannelLongPressActi
     channelId: id,
     onClose() {
       closure_1_1(closure_1_2[0]).hideActionSheet(combined);
-    }
+    },
   };
   obj.openLazy(combined(2009)(10652, dependencyMap.paths), combined, obj);
 };

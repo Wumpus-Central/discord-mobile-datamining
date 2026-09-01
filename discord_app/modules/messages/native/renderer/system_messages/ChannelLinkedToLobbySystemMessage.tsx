@@ -6,7 +6,9 @@ import closure_3 from "../../../../applications/ApplicationStore.tsx";
 import { HelpdeskArticles } from "../../../../../Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx",
+);
 
 export const createChannelLinkedToLobbySystemMessage = function createChannelLinkedToLobbySystemMessage(message) {
   message = message.message;
@@ -22,7 +24,13 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
   } else {
     let obj = getMessageAuthorWithProcessedColor;
     const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-    obj = { username: null, usernameOnClick: null, applicationName: null, applicationNameOnClick: null, urlOnClick: null };
+    obj = {
+      username: null,
+      usernameOnClick: null,
+      applicationName: null,
+      applicationNameOnClick: null,
+      urlOnClick: null,
+    };
     obj[0] = messageAuthorWithProcessedColor.nick;
     obj = { message: null, author: null, roleStyle: null };
     obj[0] = message;

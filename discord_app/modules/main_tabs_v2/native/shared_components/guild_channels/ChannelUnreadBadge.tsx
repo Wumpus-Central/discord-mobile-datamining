@@ -10,7 +10,10 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
-let closure_7 = createCacheKey.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" }, unreadBadgePanel: { marginLeft: -16 } });
+let closure_7 = createCacheKey.createStyles({
+  unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" },
+  unreadBadgePanel: { marginLeft: -16 },
+});
 const memoResult = importAllResult.memo(function ChannelUnreadBadge(panelVariant) {
   let flag = panelVariant.panelVariant;
   ({ unread, resolvedUnreadSetting, muted, isThread, layout, launchpad } = panelVariant);
@@ -23,7 +26,7 @@ const memoResult = importAllResult.memo(function ChannelUnreadBadge(panelVariant
   getFontScale;
   let tmp8Result = null;
   if (unread) {
-    const items = [tmp.unreadBadge, , , ];
+    const items = [tmp.unreadBadge, , ,];
     let unreadBadgePanel;
     if (flag) {
       unreadBadgePanel = tmp.unreadBadgePanel;
@@ -55,6 +58,8 @@ const memoResult = importAllResult.memo(function ChannelUnreadBadge(panelVariant
   }
   return tmp8Result;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelUnreadBadge.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/guild_channels/ChannelUnreadBadge.tsx",
+);
 
 export default memoResult;

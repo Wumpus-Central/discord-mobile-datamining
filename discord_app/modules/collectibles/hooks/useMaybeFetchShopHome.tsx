@@ -37,28 +37,34 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   let items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
   const items1 = [closure_7];
-  stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => skipNumCategories.skipNumCategories);
+  stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => skipNumCategories.skipNumCategories,
+  );
   const obj2 = initialize;
   const items2 = [closure_8];
-  const tmp3 = callback(require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items2, () => {
-    const items = [store.getShopBlocks(closure_0), , , , , , , ];
-    let num = store.getLastSuccessfulFetch(closure_0);
-    if (num == null) {
-      num = 0;
-    }
-    items[1] = num;
-    let num2 = obj.getLastErrorTimestamp(tmp);
-    if (num2 == null) {
-      num2 = 0;
-    }
-    items[2] = num2;
-    items[3] = store.getLastFetchOptions(closure_0);
-    items[4] = store.getFetchShopHomeError(closure_0);
-    items[5] = store.getIsFetchingShopHome(closure_0);
-    items[6] = store.getHasKnownStaleData(closure_0);
-    items[7] = store.getShopHomeConfigOverride();
-    return items;
-  }), 8);
+  const tmp3 = callback(
+    require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items2, () => {
+      const items = [store.getShopBlocks(closure_0), , , , , , ,];
+      let num = store.getLastSuccessfulFetch(closure_0);
+      if (num == null) {
+        num = 0;
+      }
+      items[1] = num;
+      let num2 = obj.getLastErrorTimestamp(tmp);
+      if (num2 == null) {
+        num2 = 0;
+      }
+      items[2] = num2;
+      items[3] = store.getLastFetchOptions(closure_0);
+      items[4] = store.getFetchShopHomeError(closure_0);
+      items[5] = store.getIsFetchingShopHome(closure_0);
+      items[6] = store.getHasKnownStaleData(closure_0);
+      items[7] = store.getShopHomeConfigOverride();
+      return items;
+    }),
+    8,
+  );
   [tmp4, tmp5] = tmp3;
   callback2 = tmp5;
   closure_6 = tmp6;
@@ -128,7 +134,7 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
     shopBlocks: tmp4,
     refreshShopHome: stateFromStores1(() => {
       const collectiblesShopHome = HOME(7286).fetchCollectiblesShopHome(HOME, closure_12, closure_2);
-    }, items7)
+    }, items7),
   };
   return obj;
 };

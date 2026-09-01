@@ -14,4 +14,4 @@ export default function FormSubLabel(color) {
     color = "text-subtle";
   }
   return jsx(Text.Text, { color, variant: "text-xs/normal", lineClamp, style, accessible, children });
-};
+}

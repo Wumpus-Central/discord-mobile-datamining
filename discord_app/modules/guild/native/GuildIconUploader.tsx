@@ -15,29 +15,87 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 require = arg1;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { width: 82, height: 82, marginTop: 4 }, guildPlaceholder: null, guildIcon: null, iconWrapperBorder: null, filledIconWrapper: null, emptyIconWrapper: null, emptyGuildIcon: null, emptyGuildIconText: null, uploadIcon: null };
+createCacheKey = {
+  container: { width: 82, height: 82, marginTop: 4 },
+  guildPlaceholder: null,
+  guildIcon: null,
+  iconWrapperBorder: null,
+  filledIconWrapper: null,
+  emptyIconWrapper: null,
+  emptyGuildIcon: null,
+  emptyGuildIconText: null,
+  uploadIcon: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { width: 82, height: 82, borderRadius: 41 };
-createCacheKey[3] = { position: "absolute", top: -8, right: -8, width: 40, height: 40, borderRadius: 20, justifyContent: "center", alignItems: "center" };
-createCacheKey[4] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-let obj1 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-createCacheKey[5] = { position: "absolute", top: -4, right: -4, width: 32, height: 32, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
-let obj2 = { position: "absolute", top: -4, right: -4, width: 32, height: 32, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
-createCacheKey[6] = { borderWidth: 2, borderStyle: "dashed", justifyContent: "center", alignItems: "center", borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[3] = {
+  position: "absolute",
+  top: -8,
+  right: -8,
+  width: 40,
+  height: 40,
+  borderRadius: 20,
+  justifyContent: "center",
+  alignItems: "center",
+};
+createCacheKey[4] = {
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.lg,
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+};
+let obj1 = {
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.lg,
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+};
+createCacheKey[5] = {
+  position: "absolute",
+  top: -4,
+  right: -4,
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  justifyContent: "center",
+  alignItems: "center",
+};
+let obj2 = {
+  position: "absolute",
+  top: -4,
+  right: -4,
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  justifyContent: "center",
+  alignItems: "center",
+};
+createCacheKey[6] = {
+  borderWidth: 2,
+  borderStyle: "dashed",
+  justifyContent: "center",
+  alignItems: "center",
+  borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+};
 createCacheKey[7] = { textAlign: "center", lineHeight: 16, paddingTop: 4 };
 createCacheKey[8] = { height: 16, width: 16 };
 let closure_8 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
-class GuildIconUploader extends PureComponent {
-}
+class GuildIconUploader extends PureComponent {}
 const prototype = GuildIconUploader.prototype;
 prototype["renderIcon"] = function renderIcon() {
   const tmp = callback3(this.context);
   const icon = this.props.icon;
   if (null != icon) {
     let obj = { style: null, source: null };
-    const items = [, ];
+    const items = [,];
     ({ guildIcon: arr2[0], guildPlaceholder: arr2[1] } = tmp);
     obj[0] = items;
     obj = { uri: null };
@@ -46,7 +104,7 @@ prototype["renderIcon"] = function renderIcon() {
     let tmp6Result = callback(closure_4, obj);
   } else {
     obj1 = { style: null, children: null };
-    const items1 = [, ];
+    const items1 = [,];
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj1[0] = items1;
     if (obj6.isThemeDark(theme.theme)) {
@@ -56,7 +114,7 @@ prototype["renderIcon"] = function renderIcon() {
     }
     obj = { source: null };
     obj[0] = tmp13Result;
-    const items2 = [callback(closure_4, obj), ];
+    const items2 = [callback(closure_4, obj)];
     const obj2 = { style: null, variant: "text-xs/bold", color: "text-default", children: null };
     obj2[0] = tmp.emptyGuildIconText;
     const intl = tmp10(1236).intl;
@@ -78,7 +136,7 @@ prototype["renderUpload"] = function renderUpload() {
   const iconBackgroundColor = props.iconBackgroundColor;
   if (null != props.icon) {
     let obj = { style: null, children: null };
-    const items = [tmp.iconWrapperBorder, ];
+    const items = [tmp.iconWrapperBorder];
     obj = { backgroundColor: null };
     obj[0] = iconBackgroundColor;
     items[1] = obj;
@@ -86,7 +144,7 @@ prototype["renderUpload"] = function renderUpload() {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.filledIconWrapper;
     const obj2 = { style: null, source: null };
-    const items1 = [tmp.uploadIcon, ];
+    const items1 = [tmp.uploadIcon];
     const obj3 = { tintColor: null };
     obj3[0] = iconBackgroundColor;
     items1[1] = obj3;
@@ -124,7 +182,13 @@ prototype["render"] = function render() {
   return closure_6(PressableBase.PressableOpacity, obj);
 };
 GuildIconUploader.contextType = require("ManaContext").ThemeContext;
-let obj3 = { borderWidth: 2, borderStyle: "dashed", justifyContent: "center", alignItems: "center", borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj3 = {
+  borderWidth: 2,
+  borderStyle: "dashed",
+  justifyContent: "center",
+  alignItems: "center",
+  borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+};
 const result = require("set").fileFinishedImporting("modules/guild/native/GuildIconUploader.tsx");
 
 export default GuildIconUploader;

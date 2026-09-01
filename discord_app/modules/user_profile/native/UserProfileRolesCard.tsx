@@ -11,7 +11,7 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 function RoleDot(color) {
   color = color.color;
-  const style = [callback2().roleDot, ];
+  const style = [callback2().roleDot];
   if (color == null) {
     color = closure_7;
   }
@@ -84,10 +84,10 @@ class RoleItem {
     DeveloperMode = require("explicitContentFromProto").DeveloperMode;
     setting = DeveloperMode.useSetting();
     obj3 = require("experiment");
-    items = [, ];
+    items = [,];
     items[0] = role.id;
     items[1] = name;
-    items1 = [, , ];
+    items1 = [, ,];
     items1[0] = role;
     items1[1] = name;
     items1[2] = roleIcon;
@@ -98,7 +98,15 @@ class RoleItem {
     }, items);
     tmp11 = jsx;
     if (setting) {
-      obj1 = { onPress: null, onLongPress: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, style: null, children: null };
+      obj1 = {
+        onPress: null,
+        onLongPress: null,
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        accessibilityHint: null,
+        style: null,
+        children: null,
+      };
       obj1[0] = callback;
       tmp14 = undefined;
       if (setting) {
@@ -131,10 +139,14 @@ function RolesList(guildMemberRoleIds) {
   let obj = guildMemberRoleIds(589);
   const items = [closure_6];
   const items1 = [guildMemberRoleIds, guildId];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
-    const manyRoles = closure_1_6.getManyRoles(guildId, guildMemberRoleIds);
-    return manyRoles.sort(guildMemberRoleIds(closure_1_2[20]).sortRolesByVerification);
-  }, items1);
+  const stateFromStoresArray = obj.useStateFromStoresArray(
+    items,
+    () => {
+      const manyRoles = closure_1_6.getManyRoles(guildId, guildMemberRoleIds);
+      return manyRoles.sort(guildMemberRoleIds(closure_1_2[20]).sortRolesByVerification);
+    },
+    items1,
+  );
   let tmp2 = null;
   if (0 !== stateFromStoresArray.length) {
     obj = { style: null, children: null };
@@ -147,7 +159,14 @@ function RolesList(guildMemberRoleIds) {
 ({ DEFAULT_ROLE_COLOR_HEX: error, MAX_VISUAL_ROLE_LENGTH: closure_8 } = ME);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" }, role: null, roleDot: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", columnGap: 4, padding: 6, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  columnGap: 4,
+  padding: 6,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { borderRadius: ThemesDefault.radii.round, height: 12, width: 12 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
@@ -182,5 +201,5 @@ export default function UserProfileRolesCard(userId) {
     const tmp7 = guildId(6000);
   }
   return tmp4;
-};
+}
 export { RoleItem };

@@ -3,13 +3,34 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import LAUNCH_PAD_SPRING_CONFIG from "LaunchPadConstants.tsx";
 
 const require = arg1;
-({ LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE: c4, LAUNCH_PAD_END_TRANSLATION_THRESHOLD: c5, LAUNCH_PAD_END_VELOCITY_THRESHOLD: closure_6, LAUNCH_PAD_PULL_TAB_HEIGHT: error, LAUNCH_PAD_PULL_TAB_HIT_SLOP: closure_8, LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: c9, LAUNCH_PAD_PULL_TAB_WIDTH: c10, LaunchPadTypes: unpackModuleId } = LAUNCH_PAD_SPRING_CONFIG);
-let closure_12 = { code: "function useLaunchPadGestureTsx1(){const{updateSharedValueIfChanged,gestureState,updaters}=this.__closure;updateSharedValueIfChanged(gestureState,{active:false,initialLaunchPadPosition:0,initialPullTabPosition:0,initialTouchX:0,initialTouchY:0,positionOffsetX:0,positionOffsetY:0,startTime:-1});updaters.setLaunchPadPullTabScale(1.0);}" };
-let closure_13 = { code: "function useLaunchPadGestureTsx2(){const{gestureState,updaters,updateSharedValueIfChanged}=this.__closure;const{initialLaunchPadPosition:initialLaunchPadPosition,active:active}=gestureState.get();if(active){if(initialLaunchPadPosition===1){updaters.setLaunchPadPosition(1);}else{updaters.setLaunchPadPosition(0);}}updateSharedValueIfChanged(gestureState,{active:false,initialLaunchPadPosition:0,initialPullTabPosition:0,initialTouchX:0,initialTouchY:0,positionOffsetX:0,positionOffsetY:0,startTime:-1});}" };
-let closure_14 = { code: "function useLaunchPadGestureTsx3({velocityX:velocityX,velocityY:velocityY,translationX:translationX,translationY:translationY}){const{gestureState,launchPadType,LaunchPadTypes,LAUNCH_PAD_END_TRANSLATION_THRESHOLD,LAUNCH_PAD_END_VELOCITY_THRESHOLD,updaters,launchPadSharedState}=this.__closure;const{requiresPop:requiresPop,startShown:startShown}=gestureState.get();if(requiresPop){if(!startShown){const isPullTabTapComplete=launchPadType===LaunchPadTypes.PULL_TAB&&Math.abs(translationX)<=LAUNCH_PAD_END_TRANSLATION_THRESHOLD&&Math.abs(translationY)<=LAUNCH_PAD_END_TRANSLATION_THRESHOLD&&Math.abs(velocityX)<=LAUNCH_PAD_END_VELOCITY_THRESHOLD&&Math.abs(velocityY)<=LAUNCH_PAD_END_VELOCITY_THRESHOLD;if(isPullTabTapComplete){updaters.setLaunchPadPosition(1);}else{updaters.setLaunchPadPosition(0);}}else{updaters.setLaunchPadPosition(1);}}else if(Math.abs(velocityX)<LAUNCH_PAD_END_VELOCITY_THRESHOLD){if(launchPadSharedState.get()>=0.5){updaters.setLaunchPadPosition(1);}else{updaters.setLaunchPadPosition(0);}}else if(velocityX>0){updaters.setLaunchPadPosition(0);}else{updaters.setLaunchPadPosition(1);}}" };
-let closure_15 = { code: "function useLaunchPadGestureTsx4({translationX:translationX,translationY:translationY,absoluteX:absoluteX}){const{gestureState,getWindowDimensionsWorklet,POP_RESISTANCE,launchPadType,LaunchPadTypes,PIP_POP_DISTANCE,updaters,updateSharedValueIfChanged,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;if(!gestureState.get().active)return;const{initialTouchX:initialTouchX,requiresPop:requiresPop}=gestureState.get();const{width:windowWidth}=getWindowDimensionsWorklet();const newXOffset=absoluteX-initialTouchX;const distance=Math.max(newXOffset*-1,0);const resistance=distance*POP_RESISTANCE;const positionOffsetX=absoluteX-gestureState.get().initialTouchX;const launchPadPosition=1-(gestureState.get().initialTouchX+translationX-(launchPadType!==LaunchPadTypes.PULL_TAB?40:0))/windowWidth;if(requiresPop&&distance<=PIP_POP_DISTANCE){if(launchPadType!==LaunchPadTypes.PULL_TAB){const a=(distance-resistance)/windowWidth;updaters.setLaunchPadPosition(a);}else{updaters.setLaunchPadPullTabTranslation(translationY);}updateSharedValueIfChanged(gestureState,{positionOffsetX:positionOffsetX});}else{if(requiresPop){updateSharedValueIfChanged(gestureState,{requiresPop:false,positionOffsetX:positionOffsetX});runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_MEDIUM);}else{updateSharedValueIfChanged(gestureState,{positionOffsetX:positionOffsetX});}updaters.setLaunchPadPosition(launchPadPosition);}}" };
-let closure_16 = { code: "function useLaunchPadGestureTsx5(event,manager){const{gestureState,State,getWindowDimensionsWorklet,launchPadType,LaunchPadTypes,LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE,LAUNCH_PAD_PULL_TAB_WIDTH,LAUNCH_PAD_PULL_TAB_HIT_SLOP,launchPadPullTabState,LAUNCH_PAD_PULL_TAB_HEIGHT,updaters,LAUNCH_PAD_PULL_TAB_SCALE_FACTOR,launchPadSharedState,MANUAL_ACTIVATION_THRESHOLD}=this.__closure;const{active:active,initialLaunchPadPosition:initialLaunchPadPosition,initialTouchX:initialTouchX,initialTouchY:initialTouchY}=gestureState.get();if(event.state!==State.BEGAN||active)return;const currentTouch=event.changedTouches[0];if(currentTouch==null){manager.fail();return;}const{x:x,y:y}=currentTouch;const{width:windowWidth}=getWindowDimensionsWorklet();switch(launchPadType){case LaunchPadTypes.DISABLED:manager.fail();return;case LaunchPadTypes.GESTURE_EDGE:if(initialLaunchPadPosition===0&&initialTouchX<windowWidth-LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE){manager.fail();return;}break;case LaunchPadTypes.PULL_TAB:{if(initialLaunchPadPosition>0)break;const inPullTabX=x>windowWidth-LAUNCH_PAD_PULL_TAB_WIDTH-LAUNCH_PAD_PULL_TAB_HIT_SLOP&&x<windowWidth;const inPullTabY=y>launchPadPullTabState.get().position-LAUNCH_PAD_PULL_TAB_HIT_SLOP&&y<launchPadPullTabState.get().position+LAUNCH_PAD_PULL_TAB_HEIGHT+LAUNCH_PAD_PULL_TAB_HIT_SLOP;if(!inPullTabX||!inPullTabY){manager.fail();return;}gestureState.set({...gestureState.get(),initialPullTabPosition:launchPadPullTabState.get().position,active:true});updaters.setLaunchPadPullTabScale(LAUNCH_PAD_PULL_TAB_SCALE_FACTOR);updaters.setLaunchPadShown(true);manager.activate();return;}case LaunchPadTypes.GESTURE_FULL:break;default:launchPadType;manager.fail();return;}const horizontalDistance=x-initialTouchX;const verticalDistance=Math.abs(y-initialTouchY);const hasMovedCorrectDirection=launchPadSharedState.get()>0&&horizontalDistance>0||launchPadSharedState.get()<=0&&horizontalDistance<0;if(hasMovedCorrectDirection&&Math.abs(horizontalDistance)>verticalDistance){if(Math.abs(horizontalDistance)<MANUAL_ACTIVATION_THRESHOLD){return;}gestureState.set({...gestureState.get(),active:true});updaters.setLaunchPadShown(true);manager.activate();return;}manager.fail();}" };
-let closure_17 = { code: "function useLaunchPadGestureTsx6(event){const{gestureState,launchPadSharedState}=this.__closure;const{x:x,y:y}=event.changedTouches[0];gestureState.set({active:false,initialLaunchPadPosition:launchPadSharedState.get(),initialPullTabPosition:0,initialTouchX:x,initialTouchY:y,positionOffsetX:0,positionOffsetY:0,startTime:Date.now(),requiresPop:launchPadSharedState.get()===0,startShown:!(launchPadSharedState.get()===0)});}" };
+({
+  LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE: c4,
+  LAUNCH_PAD_END_TRANSLATION_THRESHOLD: c5,
+  LAUNCH_PAD_END_VELOCITY_THRESHOLD: closure_6,
+  LAUNCH_PAD_PULL_TAB_HEIGHT: error,
+  LAUNCH_PAD_PULL_TAB_HIT_SLOP: closure_8,
+  LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: c9,
+  LAUNCH_PAD_PULL_TAB_WIDTH: c10,
+  LaunchPadTypes: unpackModuleId,
+} = LAUNCH_PAD_SPRING_CONFIG);
+let closure_12 = {
+  code: "function useLaunchPadGestureTsx1(){const{updateSharedValueIfChanged,gestureState,updaters}=this.__closure;updateSharedValueIfChanged(gestureState,{active:false,initialLaunchPadPosition:0,initialPullTabPosition:0,initialTouchX:0,initialTouchY:0,positionOffsetX:0,positionOffsetY:0,startTime:-1});updaters.setLaunchPadPullTabScale(1.0);}",
+};
+let closure_13 = {
+  code: "function useLaunchPadGestureTsx2(){const{gestureState,updaters,updateSharedValueIfChanged}=this.__closure;const{initialLaunchPadPosition:initialLaunchPadPosition,active:active}=gestureState.get();if(active){if(initialLaunchPadPosition===1){updaters.setLaunchPadPosition(1);}else{updaters.setLaunchPadPosition(0);}}updateSharedValueIfChanged(gestureState,{active:false,initialLaunchPadPosition:0,initialPullTabPosition:0,initialTouchX:0,initialTouchY:0,positionOffsetX:0,positionOffsetY:0,startTime:-1});}",
+};
+let closure_14 = {
+  code: "function useLaunchPadGestureTsx3({velocityX:velocityX,velocityY:velocityY,translationX:translationX,translationY:translationY}){const{gestureState,launchPadType,LaunchPadTypes,LAUNCH_PAD_END_TRANSLATION_THRESHOLD,LAUNCH_PAD_END_VELOCITY_THRESHOLD,updaters,launchPadSharedState}=this.__closure;const{requiresPop:requiresPop,startShown:startShown}=gestureState.get();if(requiresPop){if(!startShown){const isPullTabTapComplete=launchPadType===LaunchPadTypes.PULL_TAB&&Math.abs(translationX)<=LAUNCH_PAD_END_TRANSLATION_THRESHOLD&&Math.abs(translationY)<=LAUNCH_PAD_END_TRANSLATION_THRESHOLD&&Math.abs(velocityX)<=LAUNCH_PAD_END_VELOCITY_THRESHOLD&&Math.abs(velocityY)<=LAUNCH_PAD_END_VELOCITY_THRESHOLD;if(isPullTabTapComplete){updaters.setLaunchPadPosition(1);}else{updaters.setLaunchPadPosition(0);}}else{updaters.setLaunchPadPosition(1);}}else if(Math.abs(velocityX)<LAUNCH_PAD_END_VELOCITY_THRESHOLD){if(launchPadSharedState.get()>=0.5){updaters.setLaunchPadPosition(1);}else{updaters.setLaunchPadPosition(0);}}else if(velocityX>0){updaters.setLaunchPadPosition(0);}else{updaters.setLaunchPadPosition(1);}}",
+};
+let closure_15 = {
+  code: "function useLaunchPadGestureTsx4({translationX:translationX,translationY:translationY,absoluteX:absoluteX}){const{gestureState,getWindowDimensionsWorklet,POP_RESISTANCE,launchPadType,LaunchPadTypes,PIP_POP_DISTANCE,updaters,updateSharedValueIfChanged,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;if(!gestureState.get().active)return;const{initialTouchX:initialTouchX,requiresPop:requiresPop}=gestureState.get();const{width:windowWidth}=getWindowDimensionsWorklet();const newXOffset=absoluteX-initialTouchX;const distance=Math.max(newXOffset*-1,0);const resistance=distance*POP_RESISTANCE;const positionOffsetX=absoluteX-gestureState.get().initialTouchX;const launchPadPosition=1-(gestureState.get().initialTouchX+translationX-(launchPadType!==LaunchPadTypes.PULL_TAB?40:0))/windowWidth;if(requiresPop&&distance<=PIP_POP_DISTANCE){if(launchPadType!==LaunchPadTypes.PULL_TAB){const a=(distance-resistance)/windowWidth;updaters.setLaunchPadPosition(a);}else{updaters.setLaunchPadPullTabTranslation(translationY);}updateSharedValueIfChanged(gestureState,{positionOffsetX:positionOffsetX});}else{if(requiresPop){updateSharedValueIfChanged(gestureState,{requiresPop:false,positionOffsetX:positionOffsetX});runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_MEDIUM);}else{updateSharedValueIfChanged(gestureState,{positionOffsetX:positionOffsetX});}updaters.setLaunchPadPosition(launchPadPosition);}}",
+};
+let closure_16 = {
+  code: "function useLaunchPadGestureTsx5(event,manager){const{gestureState,State,getWindowDimensionsWorklet,launchPadType,LaunchPadTypes,LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE,LAUNCH_PAD_PULL_TAB_WIDTH,LAUNCH_PAD_PULL_TAB_HIT_SLOP,launchPadPullTabState,LAUNCH_PAD_PULL_TAB_HEIGHT,updaters,LAUNCH_PAD_PULL_TAB_SCALE_FACTOR,launchPadSharedState,MANUAL_ACTIVATION_THRESHOLD}=this.__closure;const{active:active,initialLaunchPadPosition:initialLaunchPadPosition,initialTouchX:initialTouchX,initialTouchY:initialTouchY}=gestureState.get();if(event.state!==State.BEGAN||active)return;const currentTouch=event.changedTouches[0];if(currentTouch==null){manager.fail();return;}const{x:x,y:y}=currentTouch;const{width:windowWidth}=getWindowDimensionsWorklet();switch(launchPadType){case LaunchPadTypes.DISABLED:manager.fail();return;case LaunchPadTypes.GESTURE_EDGE:if(initialLaunchPadPosition===0&&initialTouchX<windowWidth-LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE){manager.fail();return;}break;case LaunchPadTypes.PULL_TAB:{if(initialLaunchPadPosition>0)break;const inPullTabX=x>windowWidth-LAUNCH_PAD_PULL_TAB_WIDTH-LAUNCH_PAD_PULL_TAB_HIT_SLOP&&x<windowWidth;const inPullTabY=y>launchPadPullTabState.get().position-LAUNCH_PAD_PULL_TAB_HIT_SLOP&&y<launchPadPullTabState.get().position+LAUNCH_PAD_PULL_TAB_HEIGHT+LAUNCH_PAD_PULL_TAB_HIT_SLOP;if(!inPullTabX||!inPullTabY){manager.fail();return;}gestureState.set({...gestureState.get(),initialPullTabPosition:launchPadPullTabState.get().position,active:true});updaters.setLaunchPadPullTabScale(LAUNCH_PAD_PULL_TAB_SCALE_FACTOR);updaters.setLaunchPadShown(true);manager.activate();return;}case LaunchPadTypes.GESTURE_FULL:break;default:launchPadType;manager.fail();return;}const horizontalDistance=x-initialTouchX;const verticalDistance=Math.abs(y-initialTouchY);const hasMovedCorrectDirection=launchPadSharedState.get()>0&&horizontalDistance>0||launchPadSharedState.get()<=0&&horizontalDistance<0;if(hasMovedCorrectDirection&&Math.abs(horizontalDistance)>verticalDistance){if(Math.abs(horizontalDistance)<MANUAL_ACTIVATION_THRESHOLD){return;}gestureState.set({...gestureState.get(),active:true});updaters.setLaunchPadShown(true);manager.activate();return;}manager.fail();}",
+};
+let closure_17 = {
+  code: "function useLaunchPadGestureTsx6(event){const{gestureState,launchPadSharedState}=this.__closure;const{x:x,y:y}=event.changedTouches[0];gestureState.set({active:false,initialLaunchPadPosition:launchPadSharedState.get(),initialPullTabPosition:0,initialTouchX:x,initialTouchY:y,positionOffsetX:0,positionOffsetY:0,startTime:Date.now(),requiresPop:launchPadSharedState.get()===0,startShown:!(launchPadSharedState.get()===0)});}",
+};
 let result = require("set").fileFinishedImporting("modules/launchpad/native/useLaunchPadGesture.tsx");
 
 export default function useLaunchPadGesture(launchPadType) {
@@ -44,16 +65,31 @@ export default function useLaunchPadGesture(launchPadType) {
       const maxPointersResult = Gesture.Pan().enabled(tmp6).withRef(ref).minDistance(0).maxPointers(1);
       const tmp4Result = launchPadType(launchPadPullTabState[5]);
       let obj = { top: -1 * closure_6.top, left: 0, bottom: -1 * closure_6.bottom, right: num };
-      const manualActivationResult = maxPointersResult.manualActivation(launchPadType(launchPadPullTabState[5]).isAndroid());
+      const manualActivationResult = maxPointersResult.manualActivation(
+        launchPadType(launchPadPullTabState[5]).isAndroid(),
+      );
       const fn = function w(arg0) {
         ({ x, y } = arg0.changedTouches[0]);
-        const result = store2.set({ active: false, initialLaunchPadPosition: store.get(), initialPullTabPosition: 0, initialTouchX: x, initialTouchY: y, positionOffsetX: 0, positionOffsetY: 0, startTime: Date.now(), requiresPop: 0 === store.get(), startShown: 0 !== store.get() });
+        const result = store2.set({
+          active: false,
+          initialLaunchPadPosition: store.get(),
+          initialPullTabPosition: 0,
+          initialTouchX: x,
+          initialTouchY: y,
+          positionOffsetX: 0,
+          positionOffsetY: 0,
+          startTime: Date.now(),
+          requiresPop: 0 === store.get(),
+          startShown: 0 !== store.get(),
+        });
       };
       obj = { gestureState, launchPadSharedState };
       fn.__closure = obj;
       fn.__workletHash = 14359599806316;
       fn.__initData = closure_1_17;
-      const hitSlopResult = maxPointersResult.manualActivation(launchPadType(launchPadPullTabState[5]).isAndroid()).hitSlop(obj);
+      const hitSlopResult = maxPointersResult
+        .manualActivation(launchPadType(launchPadPullTabState[5]).isAndroid())
+        .hitSlop(obj);
       class X {
         constructor(arg0, arg1) {
           obj = closure_3;
@@ -161,11 +197,44 @@ export default function useLaunchPadGesture(launchPadType) {
           return;
         }
       }
-      const onTouchesDownResult = maxPointersResult.manualActivation(launchPadType(launchPadPullTabState[5]).isAndroid()).hitSlop(obj).onTouchesDown(fn);
-      X.__closure = { gestureState, State: launchPadType(launchPadPullTabState[4]).State, getWindowDimensionsWorklet: launchPadType(launchPadPullTabState[6]).getWindowDimensionsWorklet, launchPadType, LaunchPadTypes: closure_1_11, LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE: updaters, LAUNCH_PAD_PULL_TAB_WIDTH: closure_1_10, LAUNCH_PAD_PULL_TAB_HIT_SLOP: closure_1_8, launchPadPullTabState, LAUNCH_PAD_PULL_TAB_HEIGHT: ref, updaters, LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: closure_1_9, launchPadSharedState, MANUAL_ACTIVATION_THRESHOLD: 3 };
+      const onTouchesDownResult = maxPointersResult
+        .manualActivation(launchPadType(launchPadPullTabState[5]).isAndroid())
+        .hitSlop(obj)
+        .onTouchesDown(fn);
+      X.__closure = {
+        gestureState,
+        State: launchPadType(launchPadPullTabState[4]).State,
+        getWindowDimensionsWorklet: launchPadType(launchPadPullTabState[6]).getWindowDimensionsWorklet,
+        launchPadType,
+        LaunchPadTypes: closure_1_11,
+        LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE: updaters,
+        LAUNCH_PAD_PULL_TAB_WIDTH: closure_1_10,
+        LAUNCH_PAD_PULL_TAB_HIT_SLOP: closure_1_8,
+        launchPadPullTabState,
+        LAUNCH_PAD_PULL_TAB_HEIGHT: ref,
+        updaters,
+        LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: closure_1_9,
+        launchPadSharedState,
+        MANUAL_ACTIVATION_THRESHOLD: 3,
+      };
       X.__workletHash = 17469318427529;
       X.__initData = closure_1_16;
-      obj1 = { gestureState, State: launchPadType(launchPadPullTabState[4]).State, getWindowDimensionsWorklet: launchPadType(launchPadPullTabState[6]).getWindowDimensionsWorklet, launchPadType, LaunchPadTypes: closure_1_11, LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE: updaters, LAUNCH_PAD_PULL_TAB_WIDTH: closure_1_10, LAUNCH_PAD_PULL_TAB_HIT_SLOP: closure_1_8, launchPadPullTabState, LAUNCH_PAD_PULL_TAB_HEIGHT: ref, updaters, LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: closure_1_9, launchPadSharedState, MANUAL_ACTIVATION_THRESHOLD: 3 };
+      obj1 = {
+        gestureState,
+        State: launchPadType(launchPadPullTabState[4]).State,
+        getWindowDimensionsWorklet: launchPadType(launchPadPullTabState[6]).getWindowDimensionsWorklet,
+        launchPadType,
+        LaunchPadTypes: closure_1_11,
+        LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE: updaters,
+        LAUNCH_PAD_PULL_TAB_WIDTH: closure_1_10,
+        LAUNCH_PAD_PULL_TAB_HIT_SLOP: closure_1_8,
+        launchPadPullTabState,
+        LAUNCH_PAD_PULL_TAB_HEIGHT: ref,
+        updaters,
+        LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: closure_1_9,
+        launchPadSharedState,
+        MANUAL_ACTIVATION_THRESHOLD: 3,
+      };
       class I {
         constructor(arg0) {
           absoluteX = arg0.absoluteX;
@@ -230,10 +299,34 @@ export default function useLaunchPadGesture(launchPadType) {
         }
       }
       const onTouchesMoveResult = onTouchesDownResult.onTouchesMove(X);
-      I.__closure = { gestureState, getWindowDimensionsWorklet: launchPadType(launchPadPullTabState[6]).getWindowDimensionsWorklet, POP_RESISTANCE: 0.5, launchPadType, LaunchPadTypes: closure_1_11, PIP_POP_DISTANCE: 70, updaters, updateSharedValueIfChanged: launchPadSharedState(launchPadPullTabState[7]), runOnJS: launchPadType(launchPadPullTabState[8]).runOnJS, triggerHapticFeedback: launchPadType(launchPadPullTabState[9]).triggerHapticFeedback, HapticFeedbackTypes: launchPadType(launchPadPullTabState[9]).HapticFeedbackTypes };
+      I.__closure = {
+        gestureState,
+        getWindowDimensionsWorklet: launchPadType(launchPadPullTabState[6]).getWindowDimensionsWorklet,
+        POP_RESISTANCE: 0.5,
+        launchPadType,
+        LaunchPadTypes: closure_1_11,
+        PIP_POP_DISTANCE: 70,
+        updaters,
+        updateSharedValueIfChanged: launchPadSharedState(launchPadPullTabState[7]),
+        runOnJS: launchPadType(launchPadPullTabState[8]).runOnJS,
+        triggerHapticFeedback: launchPadType(launchPadPullTabState[9]).triggerHapticFeedback,
+        HapticFeedbackTypes: launchPadType(launchPadPullTabState[9]).HapticFeedbackTypes,
+      };
       I.__workletHash = 8073380735713;
       I.__initData = closure_1_15;
-      const obj2 = { gestureState, getWindowDimensionsWorklet: launchPadType(launchPadPullTabState[6]).getWindowDimensionsWorklet, POP_RESISTANCE: 0.5, launchPadType, LaunchPadTypes: closure_1_11, PIP_POP_DISTANCE: 70, updaters, updateSharedValueIfChanged: launchPadSharedState(launchPadPullTabState[7]), runOnJS: launchPadType(launchPadPullTabState[8]).runOnJS, triggerHapticFeedback: launchPadType(launchPadPullTabState[9]).triggerHapticFeedback, HapticFeedbackTypes: launchPadType(launchPadPullTabState[9]).HapticFeedbackTypes };
+      const obj2 = {
+        gestureState,
+        getWindowDimensionsWorklet: launchPadType(launchPadPullTabState[6]).getWindowDimensionsWorklet,
+        POP_RESISTANCE: 0.5,
+        launchPadType,
+        LaunchPadTypes: closure_1_11,
+        PIP_POP_DISTANCE: 70,
+        updaters,
+        updateSharedValueIfChanged: launchPadSharedState(launchPadPullTabState[7]),
+        runOnJS: launchPadType(launchPadPullTabState[8]).runOnJS,
+        triggerHapticFeedback: launchPadType(launchPadPullTabState[9]).triggerHapticFeedback,
+        HapticFeedbackTypes: launchPadType(launchPadPullTabState[9]).HapticFeedbackTypes,
+      };
       const fn2 = function v(velocityX) {
         velocityX = velocityX.velocityX;
         ({ velocityY, translationX, translationY } = velocityX);
@@ -271,10 +364,26 @@ export default function useLaunchPadGesture(launchPadType) {
           }
         }
       };
-      fn2.__closure = { gestureState, launchPadType, LaunchPadTypes: closure_1_11, LAUNCH_PAD_END_TRANSLATION_THRESHOLD: isModalOpen, LAUNCH_PAD_END_VELOCITY_THRESHOLD: closure_6, updaters, launchPadSharedState };
+      fn2.__closure = {
+        gestureState,
+        launchPadType,
+        LaunchPadTypes: closure_1_11,
+        LAUNCH_PAD_END_TRANSLATION_THRESHOLD: isModalOpen,
+        LAUNCH_PAD_END_VELOCITY_THRESHOLD: closure_6,
+        updaters,
+        launchPadSharedState,
+      };
       fn2.__workletHash = 13108163303108;
       fn2.__initData = closure_1_14;
-      const obj3 = { gestureState, launchPadType, LaunchPadTypes: closure_1_11, LAUNCH_PAD_END_TRANSLATION_THRESHOLD: isModalOpen, LAUNCH_PAD_END_VELOCITY_THRESHOLD: closure_6, updaters, launchPadSharedState };
+      const obj3 = {
+        gestureState,
+        launchPadType,
+        LaunchPadTypes: closure_1_11,
+        LAUNCH_PAD_END_TRANSLATION_THRESHOLD: isModalOpen,
+        LAUNCH_PAD_END_VELOCITY_THRESHOLD: closure_6,
+        updaters,
+        launchPadSharedState,
+      };
       const onChangeResult = onTouchesMoveResult.onChange(I);
       const fn3 = function b() {
         const value = store2.get();
@@ -285,25 +394,51 @@ export default function useLaunchPadGesture(launchPadType) {
             uiStore.setLaunchPadPosition(0);
           }
         }
-        closure_1_1(closure_1_2[7])(store2, { active: false, initialLaunchPadPosition: 0, initialPullTabPosition: 0, initialTouchX: 0, initialTouchY: 0, positionOffsetX: 0, positionOffsetY: 0, startTime: -1 });
+        closure_1_1(closure_1_2[7])(store2, {
+          active: false,
+          initialLaunchPadPosition: 0,
+          initialPullTabPosition: 0,
+          initialTouchX: 0,
+          initialTouchY: 0,
+          positionOffsetX: 0,
+          positionOffsetY: 0,
+          startTime: -1,
+        });
       };
       const onEndResult = onTouchesMoveResult.onChange(I).onEnd(fn2);
-      fn3.__closure = { gestureState, updaters, updateSharedValueIfChanged: launchPadSharedState(launchPadPullTabState[7]) };
+      fn3.__closure = {
+        gestureState,
+        updaters,
+        updateSharedValueIfChanged: launchPadSharedState(launchPadPullTabState[7]),
+      };
       fn3.__workletHash = 11677880944102;
       fn3.__initData = closure_1_13;
       let obj4 = { gestureState, updaters, updateSharedValueIfChanged: launchPadSharedState(launchPadPullTabState[7]) };
       const fn4 = function t() {
-        closure_1_1(closure_1_2[7])(closure_3, { active: false, initialLaunchPadPosition: 0, initialPullTabPosition: 0, initialTouchX: 0, initialTouchY: 0, positionOffsetX: 0, positionOffsetY: 0, startTime: -1 });
+        closure_1_1(closure_1_2[7])(closure_3, {
+          active: false,
+          initialLaunchPadPosition: 0,
+          initialPullTabPosition: 0,
+          initialTouchX: 0,
+          initialTouchY: 0,
+          positionOffsetX: 0,
+          positionOffsetY: 0,
+          startTime: -1,
+        });
         const result = uiStore.setLaunchPadPullTabScale(1);
       };
       const onTouchesCancelledResult = onEndResult.onTouchesCancelled(fn3);
-      fn4.__closure = { updateSharedValueIfChanged: launchPadSharedState(launchPadPullTabState[7]), gestureState, updaters };
+      fn4.__closure = {
+        updateSharedValueIfChanged: launchPadSharedState(launchPadPullTabState[7]),
+        gestureState,
+        updaters,
+      };
       fn4.__workletHash = 14463491499289;
       fn4.__initData = closure_1_12;
       return onTouchesCancelledResult.onFinalize(fn4);
     }, items),
-    gestureRef: ref
+    gestureRef: ref,
   };
   items = [gestureState, tmp2, isModalOpen, launchPadPullTabState, launchPadSharedState, launchPadType, updaters];
   return obj;
-};
+}

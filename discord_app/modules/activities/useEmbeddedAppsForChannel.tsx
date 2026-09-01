@@ -27,15 +27,19 @@ function useEmbeddedApps(arr, arg1) {
   }
   let items = [closure_5];
   const items1 = [set];
-  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
-    const items = [];
-    for (const item10006 of set) {
-      let tmp = closure_1_5;
-      arr = items.push(closure_1_5.getUser(item10006));
-      continue;
-    }
-    return items;
-  }, items1);
+  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+    items,
+    () => {
+      const items = [];
+      for (const item10006 of set) {
+        let tmp = closure_1_5;
+        arr = items.push(closure_1_5.getUser(item10006));
+        continue;
+      }
+      return items;
+    },
+    items1,
+  );
   const items2 = [arr, tmp2, stateFromStoresArray, arg1];
   return set.useMemo(() => {
     const map = new Map();
@@ -79,35 +83,42 @@ let result = require("set").fileFinishedImporting("modules/activities/useEmbedde
 export default function useEmbeddedAppsForChannel(arg0, arg1) {
   const _require = arg0;
   const items = [closure_6];
-  return useEmbeddedApps(require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
-    if (null != closure_0) {
-      if (null != tmp.id) {
-        if ("" !== tmp.id) {
-          let embeddedActivitiesForChannel = closure_1_6.getEmbeddedActivitiesForChannel(tmp.id);
+  return useEmbeddedApps(
+    require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
+      if (null != closure_0) {
+        if (null != tmp.id) {
+          if ("" !== tmp.id) {
+            let embeddedActivitiesForChannel = closure_1_6.getEmbeddedActivitiesForChannel(tmp.id);
+          }
+          return embeddedActivitiesForChannel;
         }
-        return embeddedActivitiesForChannel;
       }
-    }
-    embeddedActivitiesForChannel = closure_1_7;
-  }), arg1);
-};
+      embeddedActivitiesForChannel = closure_1_7;
+    }),
+    arg1,
+  );
+}
 export const useEmbeddedAppsByChannel = function useEmbeddedAppsByChannel(arg0) {
   const _require = arg0;
   let items = [closure_6];
-  const tmp = useEmbeddedApps(require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    if (null != closure_0) {
-      let embeddedActivitiesForGuild = closure_1_6.getEmbeddedActivitiesForGuild(tmp);
-    } else {
-      embeddedActivitiesForGuild = closure_1_7;
-    }
-    return embeddedActivitiesForGuild;
-  }));
+  const tmp = useEmbeddedApps(
+    require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+      if (null != closure_0) {
+        let embeddedActivitiesForGuild = closure_1_6.getEmbeddedActivitiesForGuild(tmp);
+      } else {
+        embeddedActivitiesForGuild = closure_1_7;
+      }
+      return embeddedActivitiesForGuild;
+    }),
+  );
   closure_1 = tmp;
   const items1 = [tmp];
   return React.useMemo(() => {
     const map = new Map();
     const item = closure_1.forEach((embeddedActivity) => {
-      const embeddedActivityLocationChannelId = map(closure_1_2[5]).getEmbeddedActivityLocationChannelId(embeddedActivity.embeddedActivity.location);
+      const embeddedActivityLocationChannelId = map(closure_1_2[5]).getEmbeddedActivityLocationChannelId(
+        embeddedActivity.embeddedActivity.location,
+      );
       if (null != embeddedActivityLocationChannelId) {
         let items = map.get(embeddedActivityLocationChannelId);
         if (items == null) {
@@ -126,36 +137,41 @@ export const useEmbeddedAppsWithPresence = function useEmbeddedAppsWithPresence(
   const _require = arg0;
   const items = [closure_4];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const map = new Map();
-    const item = map.forEach((embeddedActivity) => {
-      let value;
-      if (embeddedActivity != null) {
-        const userIds = embeddedActivity.embeddedActivity.userIds;
-        value = userIds.values().next().value;
-        const iter = userIds.values();
-      }
-      let id;
-      if (embeddedActivity != null) {
-        let application = embeddedActivity.application;
-        if (application != null) {
-          id = application.id;
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const map = new Map();
+      const item = map.forEach((embeddedActivity) => {
+        let value;
+        if (embeddedActivity != null) {
+          const userIds = embeddedActivity.embeddedActivity.userIds;
+          value = userIds.values().next().value;
+          const iter = userIds.values();
         }
-      }
-      const obj = {};
-      const merged = Object.assign(embeddedActivity);
-      obj.presenceActivity = closure_1_4.findActivity(value, (application_id) => {
         let id;
         if (embeddedActivity != null) {
-          const application = embeddedActivity.application;
+          let application = embeddedActivity.application;
           if (application != null) {
             id = application.id;
           }
         }
-        return application_id.application_id === id;
+        const obj = {};
+        const merged = Object.assign(embeddedActivity);
+        obj.presenceActivity = closure_1_4.findActivity(value, (application_id) => {
+          let id;
+          if (embeddedActivity != null) {
+            const application = embeddedActivity.application;
+            if (application != null) {
+              id = application.id;
+            }
+          }
+          return application_id.application_id === id;
+        });
+        const result = map.set(id, obj);
       });
-      const result = map.set(id, obj);
-    });
-    return map;
-  }, items1, require("../../../discord_common/js/packages/flux/index.tsx").statesWillNeverBeEqual);
+      return map;
+    },
+    items1,
+    require("../../../discord_common/js/packages/flux/index.tsx").statesWillNeverBeEqual,
+  );
 };

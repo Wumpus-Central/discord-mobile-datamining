@@ -219,7 +219,12 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
       } else {
         let tmpResult = tmp(4126);
         const tmp24 = computePermissions(channel, overwrites, roles, excludeGuildPermissions);
-        NONE4 = tmpResult.applyThreadPermissions(context, tmp24, closure_7.hasJoined(context.id), closure_14.isCurrentUserGuest(context.guild_id));
+        NONE4 = tmpResult.applyThreadPermissions(
+          context,
+          tmp24,
+          closure_7.hasJoined(context.id),
+          closure_14.isCurrentUserGuest(context.guild_id),
+        );
         const hasJoinedResult = closure_7.hasJoined(context.id);
       }
       return NONE4;
@@ -274,8 +279,7 @@ let closure_20 = {};
 let closure_21 = {};
 let c22 = 0;
 const Store = initializeDefault.Store;
-class PermissionStore extends Store {
-}
+class PermissionStore extends Store {}
 const prototype = PermissionStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_13, closure_14, closure_15, closure_4, closure_7, closure_5, closure_6, closure_16);
@@ -322,7 +326,24 @@ prototype["getGuildPermissions"] = function getGuildPermissions(guild) {
 prototype["getGuildPermissionProps"] = function getGuildPermissionProps(guild) {
   const self = this;
   const currentUser = authStore.getCurrentUser();
-  const obj = { canManageGuild: this.can(Permissions.MANAGE_GUILD, guild), canManageChannels: this.can(Permissions.MANAGE_CHANNELS, guild), canManageRoles: this.can(Permissions.MANAGE_ROLES, guild), canManageBans: this.can(Permissions.BAN_MEMBERS, guild), canManageNicknames: this.can(Permissions.MANAGE_NICKNAMES, guild), canManageGuildExpressions: this.can(Permissions.MANAGE_GUILD_EXPRESSIONS, guild) || self.can(Permissions.CREATE_GUILD_EXPRESSIONS, guild), canViewAuditLog: self.can(Permissions.VIEW_AUDIT_LOG, guild), canViewAuditLogV2: self.can(Permissions.VIEW_AUDIT_LOG, guild), canManageWebhooks: self.can(Permissions.MANAGE_WEBHOOKS, guild), canViewGuildAnalytics: self.can(Permissions.VIEW_GUILD_ANALYTICS, guild), canAccessMembersPage: self.canAccessMemberSafetyPage(guild), isGuildAdmin: self.can(Permissions.ADMINISTRATOR, guild), isOwner: null, isOwnerWithRequiredMfaLevel: null, guild: null };
+  const obj = {
+    canManageGuild: this.can(Permissions.MANAGE_GUILD, guild),
+    canManageChannels: this.can(Permissions.MANAGE_CHANNELS, guild),
+    canManageRoles: this.can(Permissions.MANAGE_ROLES, guild),
+    canManageBans: this.can(Permissions.BAN_MEMBERS, guild),
+    canManageNicknames: this.can(Permissions.MANAGE_NICKNAMES, guild),
+    canManageGuildExpressions:
+      this.can(Permissions.MANAGE_GUILD_EXPRESSIONS, guild) || self.can(Permissions.CREATE_GUILD_EXPRESSIONS, guild),
+    canViewAuditLog: self.can(Permissions.VIEW_AUDIT_LOG, guild),
+    canViewAuditLogV2: self.can(Permissions.VIEW_AUDIT_LOG, guild),
+    canManageWebhooks: self.can(Permissions.MANAGE_WEBHOOKS, guild),
+    canViewGuildAnalytics: self.can(Permissions.VIEW_GUILD_ANALYTICS, guild),
+    canAccessMembersPage: self.canAccessMemberSafetyPage(guild),
+    isGuildAdmin: self.can(Permissions.ADMINISTRATOR, guild),
+    isOwner: null,
+    isOwnerWithRequiredMfaLevel: null,
+    guild: null,
+  };
   let tmp4 = null != currentUser;
   if (tmp4) {
     tmp4 = callback(guild, currentUser);
@@ -671,7 +692,7 @@ const permissionStore = new PermissionStore(dispatcherDefault, {
   STAGE_INSTANCE_UPDATE: handleStageInstancesChanged,
   STAGE_INSTANCE_DELETE: handleStageInstancesChanged,
   IMPERSONATE_UPDATE: handleImpersonateUpdate,
-  IMPERSONATE_STOP: handleImpersonateUpdate
+  IMPERSONATE_STOP: handleImpersonateUpdate,
 });
 const result = require("set").fileFinishedImporting("stores/PermissionStore.tsx");
 

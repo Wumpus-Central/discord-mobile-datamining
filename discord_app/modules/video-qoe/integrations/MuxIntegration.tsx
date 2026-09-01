@@ -6,7 +6,25 @@ const prototype = function MuxIntegration() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["mapDiscordToMuxMetadata"] = function mapDiscordToMuxMetadata(config, sessionId) {
-  const obj = { env_key: "1qd16mdmdjasipqg3irobln4u", session_id: sessionId, player_name: "discord", player_version: "1.0.0", video_id: config.contentMetadata.contentId, video_title: config.contentMetadata.title, video_duration: null, video_content_type: null, video_series: null, video_producer: null, video_brand: null, video_cdn: "Cloudflare", video_stream_type: null, view_client_application_name: null, view_client_application_version: null, viewer_user_id: null, viewer_plan: null };
+  const obj = {
+    env_key: "1qd16mdmdjasipqg3irobln4u",
+    session_id: sessionId,
+    player_name: "discord",
+    player_version: "1.0.0",
+    video_id: config.contentMetadata.contentId,
+    video_title: config.contentMetadata.title,
+    video_duration: null,
+    video_content_type: null,
+    video_series: null,
+    video_producer: null,
+    video_brand: null,
+    video_cdn: "Cloudflare",
+    video_stream_type: null,
+    view_client_application_name: null,
+    view_client_application_version: null,
+    viewer_user_id: null,
+    viewer_plan: null,
+  };
   let durationMs = config.contentMetadata.durationMs;
   if (durationMs == null) {
     let result;

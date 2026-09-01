@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/SearchEmpty.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/SearchEmpty.tsx",
+);
 
 export const getSearchEmptySource = function getSearchEmptySource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getSearchEmptySource = function getSearchEmptySource(theme) {
     },
     light() {
       return callback(9158);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useSearchEmptySource = function useSearchEmptySource() {
     },
     light() {
       return callback(9158);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const SearchEmpty = function SearchEmpty(arg0) {
     },
     light() {
       return callback(9158);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

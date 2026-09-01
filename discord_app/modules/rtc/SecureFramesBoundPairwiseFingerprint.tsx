@@ -11,7 +11,7 @@ function _computeBoundPairwiseFingerprint() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -49,8 +49,13 @@ function _computeBoundPairwiseFingerprint() {
                   c2 = 1;
                   c3 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = (function memoizedPairwiseFingerprint(id, secureFramesRosterMapEntry1, arg2, secureFramesRosterMapEntry) {
-                    const items = [closure_6, id, , , ];
+                  obj1[0] = (function memoizedPairwiseFingerprint(
+                    id,
+                    secureFramesRosterMapEntry1,
+                    arg2,
+                    secureFramesRosterMapEntry,
+                  ) {
+                    const items = [closure_6, id, , ,];
                     const uint8Array = new Uint8Array(secureFramesRosterMapEntry1);
                     items[2] = callback(206).fromByteArray(uint8Array);
                     items[3] = arg2;
@@ -67,7 +72,13 @@ function _computeBoundPairwiseFingerprint() {
                       const uint8Array2 = new Uint8Array(secureFramesRosterMapEntry1);
                       const _Uint8Array2 = Uint8Array;
                       const uint8Array3 = new Uint8Array(secureFramesRosterMapEntry);
-                      const pairwiseFingerprint = obj4.generatePairwiseFingerprint(tmp, uint8Array2, id, uint8Array3, arg2);
+                      const pairwiseFingerprint = obj4.generatePairwiseFingerprint(
+                        tmp,
+                        uint8Array2,
+                        id,
+                        uint8Array3,
+                        arg2,
+                      );
                       const nextPromise = pairwiseFingerprint.then((arg0) => callback(table[4]).fromByteArray(arg0));
                       if (obj3.size >= 16) {
                         value = obj3.keys().next().value;

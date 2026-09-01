@@ -34,8 +34,13 @@ function DeviceOption(children) {
   const tmp = callback3();
   let obj = { style: tmp.deviceOption, children: null };
   obj = { style: tmp.deviceIcon, source: registerAssetDefault };
-  const items = [callback(closure_8, obj), ];
-  obj = { style: tmp.deviceText, color: "mobile-text-heading-primary", variant: "text-md/bold", children: children.name };
+  const items = [callback(closure_8, obj)];
+  obj = {
+    style: tmp.deviceText,
+    color: "mobile-text-heading-primary",
+    variant: "text-md/bold",
+    children: children.name,
+  };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(closure_7, obj);
@@ -44,8 +49,13 @@ function EmptyState() {
   const tmp = callback3();
   let obj = { style: tmp.emptyContainer, children: null };
   obj = { source: registerAssetDefault2, style: tmp.emptyArt };
-  const items = [callback(closure_8, obj), , ];
-  obj = { style: tmp.emptyHeader, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
+  const items = [callback(closure_8, obj), ,];
+  obj = {
+    style: tmp.emptyHeader,
+    variant: "heading-md/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.OkJf1e);
   items[1] = callback(Text.Text, obj);
@@ -58,12 +68,38 @@ function EmptyState() {
 }
 ({ Pressable: closure_6, View: error, Image: closure_8, ActivityIndicator: c9 } = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { container: { padding: 16, justifyContent: "center", paddingBottom: 90 }, loading: { minHeight: 56 }, footerContainer: null, radioItem: null, deviceIcon: null, deviceOption: null, deviceText: null, emptyContainer: null, emptyArt: null, emptyHeader: null, emptyBody: null, infoBox: null };
+createCacheKey = {
+  container: { padding: 16, justifyContent: "center", paddingBottom: 90 },
+  loading: { minHeight: 56 },
+  footerContainer: null,
+  radioItem: null,
+  deviceIcon: null,
+  deviceOption: null,
+  deviceText: null,
+  emptyContainer: null,
+  emptyArt: null,
+  emptyHeader: null,
+  emptyBody: null,
+  infoBox: null,
+};
 createCacheKey = { padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingBottom: 16 };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.xs, padding: 16 };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.xs, padding: 16 };
-createCacheKey[4] = { marginRight: 16, width: 32, height: 32, tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey[3] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.xs,
+  padding: 16,
+};
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.xs,
+  padding: 16,
+};
+createCacheKey[4] = {
+  marginRight: 16,
+  width: 32,
+  height: 32,
+  tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+};
 createCacheKey[5] = { flexDirection: "row", alignItems: "center", marginRight: 24 };
 createCacheKey[6] = { flexShrink: 1 };
 createCacheKey[7] = { alignItems: "center", justifyContent: "center" };
@@ -84,7 +120,7 @@ export default function GameConsoleListActionSheet(arg0) {
   c6 = undefined;
   function _handleTransferVoice() {
     const self = this;
-    const tmp = stateFromStores2(function*() {
+    const tmp = stateFromStores2(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -189,7 +225,15 @@ export default function GameConsoleListActionSheet(arg0) {
   }, items4);
   if (memo.length > 0) {
     obj = { children: null };
-    obj = { style: null, options: null, value: null, withDividers: false, withSpacing: true, disabled: null, onChange: null };
+    obj = {
+      style: null,
+      options: null,
+      value: null,
+      withDividers: false,
+      withSpacing: true,
+      disabled: null,
+      onChange: null,
+    };
     obj[0] = tmp.radioItem;
     obj[1] = memo;
     obj[2] = first;
@@ -199,7 +243,7 @@ export default function GameConsoleListActionSheet(arg0) {
       callback(value);
       const result = closure_1_0(stateFromStores[16]).persistSelectedDeviceId(closure_0, value);
     };
-    const items5 = [callback(tmp2(tmp3[21]).RadioGroup, obj), ];
+    const items5 = [callback(tmp2(tmp3[21]).RadioGroup, obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.infoBox;
     const intl = tmp2(tmp3[11]).intl;
@@ -241,7 +285,7 @@ export default function GameConsoleListActionSheet(arg0) {
     onPress() {
       return closure_1_0(stateFromStores[16]).fetchDevices(closure_0);
     },
-    children: null
+    children: null,
   };
   const obj6 = { variant: "text-md/semibold", color: "text-brand", children: null };
   const intl3 = tmp2(tmp3[11]).intl;
@@ -258,4 +302,4 @@ export default function GameConsoleListActionSheet(arg0) {
   obj7[1] = tmp12Result;
   obj3[3] = tmp12(require(stateFromStores[25]).BottomSheetScrollView, obj7);
   return tmp12(require(stateFromStores[23]).BottomSheet, obj3);
-};
+}

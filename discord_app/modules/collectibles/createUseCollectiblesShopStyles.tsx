@@ -123,9 +123,9 @@ export default function createUseCollectiblesShopStyles(arg0) {
             [obj32, obj33] = buttonColors;
             const toRgbResult = obj32.toRgb();
             let tmpResult = tmp(tmp2[2]);
-            const items1 = [, , ];
+            const items1 = [, ,];
             ({ r: arr9[0], g: arr9[1], b: arr9[2] } = toRgbResult);
-            const items2 = [, , ];
+            const items2 = [, ,];
             ({ r: arr10[0], g: arr10[1], b: arr10[2] } = obj33.toRgb());
             const toRgbResult1 = obj33.toRgb();
             [tmp44, tmp45, tmp46] = closure_1_3(tmpResult.getValueInColorGradientByPercentage(items1, items2, 50), 3);
@@ -155,9 +155,9 @@ export default function createUseCollectiblesShopStyles(arg0) {
           [obj2, obj3] = backgroundColors;
           const toRgbResult2 = obj1.toRgb();
           tmpResult = tmp(tmp2[2]);
-          const items3 = [, , ];
+          const items3 = [, ,];
           ({ r: arr2[0], g: arr2[1], b: arr2[2] } = toRgbResult2);
-          const items4 = [, , ];
+          const items4 = [, ,];
           ({ r: arr3[0], g: arr3[1], b: arr3[2] } = obj2.toRgb());
           const toRgbResult3 = obj2.toRgb();
           [tmp9, tmp10, tmp11] = closure_1_3(tmpResult.getValueInColorGradientByPercentage(items3, items4, 50), 3);
@@ -171,9 +171,9 @@ export default function createUseCollectiblesShopStyles(arg0) {
           const tmp8 = closure_1_3(tmpResult.getValueInColorGradientByPercentage(items3, items4, 50), 3);
           const toRgbResult4 = obj6.toRgb();
           const toRgbResult5 = obj7.toRgb();
-          const items5 = [, , ];
+          const items5 = [, ,];
           ({ r: arr4[0], g: arr4[1], b: arr4[2] } = toRgbResult4);
-          const items6 = [, , ];
+          const items6 = [, ,];
           ({ r: arr5[0], g: arr5[1], b: arr5[2] } = toRgbResult5);
           const tmpResult1 = tmp(tmp2[2]);
           [tmp16, tmp17, tmp18] = closure_1_3(tmp(tmp2[2]).getValueInColorGradientByPercentage(items5, items6, 50), 3);
@@ -195,4 +195,4 @@ export default function createUseCollectiblesShopStyles(arg0) {
       }
     }
   };
-};
+}

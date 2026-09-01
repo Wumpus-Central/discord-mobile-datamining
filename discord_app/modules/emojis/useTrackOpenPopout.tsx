@@ -13,7 +13,11 @@ let result = require("set").fileFinishedImporting("modules/emojis/useTrackOpenPo
 export const useTrackOpenPopout = (emojiId) => {
   ({ currentGuildId, popoutData: require, nonce: importDefault, demoMode: dependencyMap } = emojiId);
   let current;
-  let merged = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel.getChannel(channelId.getChannelId(currentGuildId))));
+  let merged = Object.assign(
+    collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(
+      channel.getChannel(channelId.getChannelId(currentGuildId)),
+    ),
+  );
   current = current.useRef({ guild_id: currentGuildId, emoji_id: emojiId.emojiId }).current;
   useMountLayoutEffectDefault(() => {
     let obj = closure_1_0(closure_1_2[7]);

@@ -13,8 +13,7 @@ let CLOSED = FormStates.CLOSED;
 let closure_3 = {};
 let c4 = null;
 const Store = initializeDefault.Store;
-class UserSettingsAccountStore extends Store {
-}
+class UserSettingsAccountStore extends Store {}
 const prototype = UserSettingsAccountStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_0);
@@ -39,7 +38,16 @@ const userSettingsAccountStore = new UserSettingsAccountStore(dispatcherDefault,
     } else {
       OPEN = FormStates.OPEN;
       closure_3 = {};
-      obj = { userId: null, username: null, discriminator: null, email: null, avatar: null, password: "", newPassword: null, claimed: null };
+      obj = {
+        userId: null,
+        username: null,
+        discriminator: null,
+        email: null,
+        avatar: null,
+        password: "",
+        newPassword: null,
+        claimed: null,
+      };
       ({ id: obj2[0], username: obj2[1], discriminator: obj2[2], email: obj2[3], avatar: obj2[4] } = currentUser);
       obj[7] = currentUser.isClaimed();
       obj = {};
@@ -55,7 +63,16 @@ const userSettingsAccountStore = new UserSettingsAccountStore(dispatcherDefault,
     } else {
       OPEN = FormStates.OPEN;
       closure_3 = {};
-      obj = { userId: null, username: null, discriminator: null, email: null, avatar: null, password: "", newPassword: null, claimed: null };
+      obj = {
+        userId: null,
+        username: null,
+        discriminator: null,
+        email: null,
+        avatar: null,
+        password: "",
+        newPassword: null,
+        claimed: null,
+      };
       ({ id: obj2[0], username: obj2[1], discriminator: obj2[2], email: obj2[3], avatar: obj2[4] } = currentUser);
       obj[7] = currentUser.isClaimed();
       obj = {};
@@ -95,13 +112,22 @@ const userSettingsAccountStore = new UserSettingsAccountStore(dispatcherDefault,
     const OPEN = FormStates.OPEN;
     closure_3 = {};
     if (null != currentUser) {
-      let obj = { userId: null, username: null, discriminator: null, email: null, avatar: null, password: "", newPassword: null, claimed: null };
+      let obj = {
+        userId: null,
+        username: null,
+        discriminator: null,
+        email: null,
+        avatar: null,
+        password: "",
+        newPassword: null,
+        claimed: null,
+      };
       ({ id: obj2[0], username: obj2[1], discriminator: obj2[2], email: obj2[3], avatar: obj2[4] } = currentUser);
       obj[7] = currentUser.isClaimed();
       obj = {};
       const merged = Object.assign(obj);
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/UserSettingsAccountStore.tsx");
 

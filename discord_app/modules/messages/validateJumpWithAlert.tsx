@@ -78,4 +78,4 @@ export default function validateJumpWithAlert(author) {
       return true;
     }
   }
-};
+}

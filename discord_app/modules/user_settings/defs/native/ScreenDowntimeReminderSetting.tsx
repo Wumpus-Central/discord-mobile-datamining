@@ -27,7 +27,9 @@ createToggle = {
     return _modDef15114.setScreenDowntimeReminder(screenDowntimeReminder);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });
+    let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({
+      location: "ScreenDowntimeReminderSetting",
+    });
     const obj = apexExperiment;
     const tmp2 = useUserIsTeenAgeGroupDefault();
     const hasActiveParentLinks = useUserIdsForLinkStatus.useHasActiveParentLinks();
@@ -38,9 +40,11 @@ createToggle = {
       isFamilyCenterV3Enabled = hasActiveParentLinks;
     }
     return isFamilyCenterV3Enabled;
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ScreenDowntimeReminderSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/ScreenDowntimeReminderSetting.tsx",
+);
 
 export default createToggle;

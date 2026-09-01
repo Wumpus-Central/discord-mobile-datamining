@@ -6,9 +6,28 @@ import { PlatformTypes } from "../../../Constants.tsx";
 import keys from "../../../../_runtime/00644_keys.js";
 
 const require = arg1;
-let obj = { NORMAL: 0, [0]: "NORMAL", ONBOARDING: 1, [1]: "ONBOARDING", ONBOARDING_INVITE: 2, [2]: "ONBOARDING_INVITE" };
+let obj = {
+  NORMAL: 0,
+  [0]: "NORMAL",
+  ONBOARDING: 1,
+  [1]: "ONBOARDING",
+  ONBOARDING_INVITE: 2,
+  [2]: "ONBOARDING_INVITE",
+};
 obj = keys.create(() => {
-  obj = { mode: obj.NORMAL, permissionState: ContactPermissions.NOT_DETERMINED, error: "", phone: null, phoneToken: null, name: null, isNameFromContactBook: false, allowPhone: true, allowEmail: true, bulkAddToken: null, suggestions: [] };
+  obj = {
+    mode: obj.NORMAL,
+    permissionState: ContactPermissions.NOT_DETERMINED,
+    error: "",
+    phone: null,
+    phoneToken: null,
+    name: null,
+    isNameFromContactBook: false,
+    allowPhone: true,
+    allowEmail: true,
+    bulkAddToken: null,
+    suggestions: [],
+  };
   return obj;
 });
 const result = require("set").fileFinishedImporting("modules/contact_sync/native/ContactSyncModalStore.tsx");
@@ -27,15 +46,29 @@ export const initialize = function initialize(arg0) {
   if (currentUser != null) {
     phone = currentUser.phone;
   }
-  _require(name[5]).batchUpdates(() => closure_1_7.setState(() => {
-    obj = {};
-    obj = { mode: closure_1_6.NORMAL, permissionState: closure_1_4.NOT_DETERMINED, error: "", phone: null, phoneToken: null, name: null, isNameFromContactBook: false, allowPhone: true, allowEmail: true, bulkAddToken: null, suggestions: [] };
-    const merged = Object.assign(obj);
-    obj.mode = closure_0;
-    obj.phone = closure_2;
-    obj.name = closure_1;
-    return obj;
-  }));
+  _require(name[5]).batchUpdates(() =>
+    closure_1_7.setState(() => {
+      obj = {};
+      obj = {
+        mode: closure_1_6.NORMAL,
+        permissionState: closure_1_4.NOT_DETERMINED,
+        error: "",
+        phone: null,
+        phoneToken: null,
+        name: null,
+        isNameFromContactBook: false,
+        allowPhone: true,
+        allowEmail: true,
+        bulkAddToken: null,
+        suggestions: [],
+      };
+      const merged = Object.assign(obj);
+      obj.mode = closure_0;
+      obj.phone = closure_2;
+      obj.name = closure_1;
+      return obj;
+    }),
+  );
 };
 export const setAllowSync = function setAllowSync(arg0) {
   const _require = arg0;

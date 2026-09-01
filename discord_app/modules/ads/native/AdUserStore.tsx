@@ -7,38 +7,37 @@ let c2 = false;
 let c3 = null;
 let c4 = null;
 const Store = initializeDefault.Store;
-class AdUserStore extends Store {
-}
+class AdUserStore extends Store {}
 const prototype = AdUserStore.prototype;
 Object.defineProperty(prototype, "adUser", {
   get: function adUser() {
     return closure_0;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isFetching", {
   get: function isFetching() {
     return c1;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasFetchFailed", {
   get: function hasFetchFailed() {
     return c2;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "fetchPromise", {
   get: function fetchPromise() {
     return c3;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "lastFetchedAt", {
   get: function lastFetchedAt() {
     return c4;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasFetchedRecently", {
   get: function hasFetchedRecently() {
@@ -49,16 +48,14 @@ Object.defineProperty(prototype, "hasFetchedRecently", {
     }
     return tmp;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["setFetchPromise"] = function setFetchPromise(arg0) {
   closure_3 = arg0;
 };
 AdUserStore.displayName = "AdUserStore";
 const adUserStore = new AdUserStore(dispatcherDefault, {
-  POST_CONNECTION_OPEN: function handlePostConnectionOpen() {
-
-  },
+  POST_CONNECTION_OPEN: function handlePostConnectionOpen() {},
   FETCH_AD_USER_START: function handleFetchAdUserStart() {
     c1 = true;
     closure_4 = Date.now();
@@ -66,14 +63,17 @@ const adUserStore = new AdUserStore(dispatcherDefault, {
   FETCH_AD_USER_SUCCESS: function handleFetchAdUserSuccess(advertisingId) {
     c1 = false;
     c3 = null;
-    closure_0 = { advertisingId: advertisingId.advertisingId, isLimitAdTrackingEnabled: advertisingId.isLimitAdTrackingEnabled };
+    closure_0 = {
+      advertisingId: advertisingId.advertisingId,
+      isLimitAdTrackingEnabled: advertisingId.isLimitAdTrackingEnabled,
+    };
     c2 = false;
   },
   FETCH_AD_USER_FAILURE: function handleFetchAdUserFailure() {
     c1 = false;
     c2 = true;
     c3 = null;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/ads/native/AdUserStore.tsx");
 

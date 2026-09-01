@@ -51,8 +51,7 @@ let c18 = false;
 let c19 = null;
 let c20 = null;
 const Store = initializeDefault.Store;
-class ReferralTrialStore extends Store {
-}
+class ReferralTrialStore extends Store {}
 const prototype = ReferralTrialStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3);
@@ -273,7 +272,7 @@ const referralTrialStore = new ReferralTrialStore(dispatcherDefault, {
     c19 = null;
     map1 = new Map();
     c20 = null;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/premium/ReferralTrialStore.tsx");
 

@@ -21,7 +21,7 @@ let result = set.fileFinishedImporting("modules/guild_scheduled_events/StageChan
 
 export const useStageChannelUpsellCardStore = function useStageChannelUpsellCardStore() {
   return callback((arg0) => {
-    const items = [, ];
+    const items = [,];
     ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
     return items;
   }, isIterable.shallow);

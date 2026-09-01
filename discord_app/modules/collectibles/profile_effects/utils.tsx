@@ -28,26 +28,27 @@ export const usePotentiallyRandomizedProfileEffect = function usePotentiallyRand
     const effects = cloneDeepResult.effects;
     let _Math = Math;
     const _Math2 = Math;
-    const diff = effects.reduce((arg0, randomizedSources) => {
-      randomizedSources = randomizedSources.randomizedSources;
-      let num;
-      if (randomizedSources != null) {
-        num = randomizedSources.length;
-      }
-      if (num == null) {
-        num = 0;
-      }
-      let tmp = arg0;
-      if (num > 0) {
-        let bound = num;
-        if (0 !== arg0) {
-          const _Math = Math;
-          bound = Math.min(arg0, num);
+    const diff =
+      effects.reduce((arg0, randomizedSources) => {
+        randomizedSources = randomizedSources.randomizedSources;
+        let num;
+        if (randomizedSources != null) {
+          num = randomizedSources.length;
         }
-        tmp = bound;
-      }
-      return tmp;
-    }, 0) - 1;
+        if (num == null) {
+          num = 0;
+        }
+        let tmp = arg0;
+        if (num > 0) {
+          let bound = num;
+          if (0 !== arg0) {
+            const _Math = Math;
+            bound = Math.min(arg0, num);
+          }
+          tmp = bound;
+        }
+        return tmp;
+      }, 0) - 1;
     _require = Math.floor(Math.random() * (diff + 1));
     const effects1 = cloneDeepResult.effects;
     cloneDeepResult.effects = effects1.map((randomizedSources) => {
@@ -77,26 +78,27 @@ export const usePotentiallyRandomizedProfileEffect = function usePotentiallyRand
       const effects2 = cloneDeepResult1.effects;
       const _Math3 = Math;
       const _Math4 = Math;
-      const diff1 = effects2.reduce((arg0, randomizedSources) => {
-        randomizedSources = randomizedSources.randomizedSources;
-        let num;
-        if (randomizedSources != null) {
-          num = randomizedSources.length;
-        }
-        if (num == null) {
-          num = 0;
-        }
-        let tmp = arg0;
-        if (num > 0) {
-          let bound = num;
-          if (0 !== arg0) {
-            const _Math = Math;
-            bound = Math.min(arg0, num);
+      const diff1 =
+        effects2.reduce((arg0, randomizedSources) => {
+          randomizedSources = randomizedSources.randomizedSources;
+          let num;
+          if (randomizedSources != null) {
+            num = randomizedSources.length;
           }
-          tmp = bound;
-        }
-        return tmp;
-      }, 0) - 1;
+          if (num == null) {
+            num = 0;
+          }
+          let tmp = arg0;
+          if (num > 0) {
+            let bound = num;
+            if (0 !== arg0) {
+              const _Math = Math;
+              bound = Math.min(arg0, num);
+            }
+            tmp = bound;
+          }
+          return tmp;
+        }, 0) - 1;
       _require = Math.floor(Math.random() * (diff1 + 1));
       const effects3 = cloneDeepResult1.effects;
       cloneDeepResult1.effects = effects3.map((randomizedSources) => {

@@ -15,7 +15,15 @@ function initialize() {
 const PersistedStore = getClass.PersistedStore;
 ({ DeviceSettingsStore, OfflineCacheStore } = getClass);
 const Store = initialize2.Store;
-const obj = { Emitter: loggerDefault, Store, PersistedStore, DeviceSettingsStore, OfflineCacheStore, connectStores: connectStoresDefault, initialize };
+const obj = {
+  Emitter: loggerDefault,
+  Store,
+  PersistedStore,
+  DeviceSettingsStore,
+  OfflineCacheStore,
+  connectStores: connectStoresDefault,
+  initialize,
+};
 ({ createFetchStore, NO_DATA } = areStatesEqual);
 Object.defineProperty(obj, "initialized", { get: () => Store.initialized, set: undefined });
 const result = set.fileFinishedImporting("../discord_common/js/packages/flux/index.tsx");

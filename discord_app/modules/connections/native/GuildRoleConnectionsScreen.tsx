@@ -15,26 +15,83 @@ const require = arg1;
 ({ View: c5, Pressable: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_12, HelpdeskArticles: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-createCacheKey = { container: null, content: null, infoText: null, verifiedRoles: null, verifiedRole: null, verifiedRoleHasRole: null, verifiedRolePressed: null, verifiedRoleIcon: null, roleCheckmark: null, verifiedRoleName: null, platformIconContainer: null, cutout: null };
+createCacheKey = {
+  container: null,
+  content: null,
+  infoText: null,
+  verifiedRoles: null,
+  verifiedRole: null,
+  verifiedRoleHasRole: null,
+  verifiedRolePressed: null,
+  verifiedRoleIcon: null,
+  roleCheckmark: null,
+  verifiedRoleName: null,
+  platformIconContainer: null,
+  cutout: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "column", alignItems: "center", padding: 16 };
 createCacheKey[2] = { marginTop: 24 };
 createCacheKey[3] = { marginTop: 24, flexDirection: "column", width: "100%" };
-createCacheKey[4] = { flexDirection: "row", borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: ThemesDefault.radii.md, paddingHorizontal: 16, paddingVertical: 20, marginBottom: 16, width: "100%", alignItems: "center", position: "relative" };
-let obj1 = { flexDirection: "row", borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: ThemesDefault.radii.md, paddingHorizontal: 16, paddingVertical: 20, marginBottom: 16, width: "100%", alignItems: "center", position: "relative" };
-createCacheKey[5] = { borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-let obj2 = { borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[4] = {
+  flexDirection: "row",
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderWidth: 2,
+  borderRadius: ThemesDefault.radii.md,
+  paddingHorizontal: 16,
+  paddingVertical: 20,
+  marginBottom: 16,
+  width: "100%",
+  alignItems: "center",
+  position: "relative",
+};
+let obj1 = {
+  flexDirection: "row",
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderWidth: 2,
+  borderRadius: ThemesDefault.radii.md,
+  paddingHorizontal: 16,
+  paddingVertical: 20,
+  marginBottom: 16,
+  width: "100%",
+  alignItems: "center",
+  position: "relative",
+};
+createCacheKey[5] = {
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
+let obj2 = {
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 createCacheKey[6] = { borderColor: ThemesDefault.colors.BORDER_MUTED };
 createCacheKey[7] = { marginRight: 12 };
 let obj3 = { borderColor: ThemesDefault.colors.BORDER_MUTED };
-createCacheKey[8] = { width: 20, height: 20, borderRadius: 10, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, position: "absolute", right: -8, top: -8 };
+createCacheKey[8] = {
+  width: 20,
+  height: 20,
+  borderRadius: 10,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  position: "absolute",
+  right: -8,
+  top: -8,
+};
 createCacheKey[9] = { flex: 1, overflow: "hidden", marginRight: 32 };
 createCacheKey[10] = { flexDirection: "row" };
 createCacheKey[11] = { marginRight: -6 };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
 const obj5 = { direction: require("Button").CutoutDirection.RIGHT, radius: 8 };
-let obj4 = { width: 20, height: 20, borderRadius: 10, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, position: "absolute", right: -8, top: -8 };
+let obj4 = {
+  width: 20,
+  height: 20,
+  borderRadius: 10,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  position: "absolute",
+  right: -8,
+  top: -8,
+};
 let result = require("set").fileFinishedImporting("modules/connections/native/GuildRoleConnectionsScreen.tsx");
 
 export default function GuildRoleConnectionsScreen(guildId) {
@@ -91,7 +148,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
     obj2 = { helpdeskArticleUrl: null };
     obj2[0] = tmp2(1995).getArticleURL(constants.CONNECTION_DETAILS);
     obj1[3] = intl.format(tmp4(1236).t["Y+TsEV"], obj2);
-    const items5 = [callback2(tmp4(4474).Text, obj1), ];
+    const items5 = [callback2(tmp4(4474).Text, obj1)];
     let obj3 = { style: null, children: null };
     obj3[0] = tmp.verifiedRoles;
     obj3[1] = found.map((children) => {
@@ -168,7 +225,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
       let obj = {
         accessibilityRole: "button",
         style(pressed) {
-          items = [found.verifiedRole, , ];
+          items = [found.verifiedRole, ,];
           let verifiedRoleHasRole = null;
           if (items) {
             verifiedRoleHasRole = tmp.verifiedRoleHasRole;
@@ -193,7 +250,11 @@ export default function GuildRoleConnectionsScreen(guildId) {
               const obj = callback(closure_1_2[17]);
               const result = callback(closure_1_2[16]).unassignGuildRoleConnection(callback, id.id);
             };
-            obj4.openLazy(guildId(closure_2[19])(closure_2[18], closure_2.paths), "LeaveConnectionRoleActionSheet-" + tmp.id, obj);
+            obj4.openLazy(
+              guildId(closure_2[19])(closure_2[18], closure_2.paths),
+              "LeaveConnectionRoleActionSheet-" + tmp.id,
+              obj,
+            );
             const tmp20 = guildId(closure_2[19])(closure_2[18], closure_2.paths);
           } else {
             obj = onCloseModal(closure_2[17]);
@@ -202,11 +263,15 @@ export default function GuildRoleConnectionsScreen(guildId) {
             obj[0] = tmp;
             obj[1] = tmp2;
             obj[2] = items;
-            obj.openLazy(tmp9, guildId(closure_2[21]).makeGuildRoleConnectionsConnectAccountsActionSheetKey(tmp.id), obj);
+            obj.openLazy(
+              tmp9,
+              guildId(closure_2[21]).makeGuildRoleConnectionsConnectAccountsActionSheetKey(tmp.id),
+              obj,
+            );
             const obj2 = guildId(closure_2[21]);
           }
         },
-        children: null
+        children: null,
       };
       let tmp12 = null;
       if (hasItem) {
@@ -219,8 +284,26 @@ export default function GuildRoleConnectionsScreen(guildId) {
         obj[1] = closure_1_14(guildId(1297).Icon, obj);
         tmp12 = closure_1_14(stateFromStores1, obj);
       }
-      const items1 = [tmp12, closure_1_14(onCloseModal(5997), { style: found.verifiedRoleIcon, guildId: id, role: children, size: 24 }), closure_1_14(guildId(4474).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", lineClamp: 1, style: found.verifiedRoleName, children: children.name }), ];
-      const obj3 = { style: found.platformIconContainer, users: [], renderedUsers: items, max: 3, withNames: false, avatarSize: guildId(1297).AvatarSizes.XSMALL, withPlusCount: true };
+      const items1 = [
+        tmp12,
+        closure_1_14(onCloseModal(5997), { style: found.verifiedRoleIcon, guildId: id, role: children, size: 24 }),
+        closure_1_14(guildId(4474).Text, {
+          variant: "text-md/medium",
+          color: "mobile-text-heading-primary",
+          lineClamp: 1,
+          style: found.verifiedRoleName,
+          children: children.name,
+        }),
+      ];
+      const obj3 = {
+        style: found.platformIconContainer,
+        users: [],
+        renderedUsers: items,
+        max: 3,
+        withNames: false,
+        avatarSize: guildId(1297).AvatarSizes.XSMALL,
+        withPlusCount: true,
+      };
       items1[3] = closure_1_14(onCloseModal(10137), obj3);
       obj[3] = items1;
       return closure_1_15(first, obj, children.id);
@@ -231,4 +314,4 @@ export default function GuildRoleConnectionsScreen(guildId) {
     return callback2(stateFromStores1, obj);
   }
   tmp2 = onCloseModal;
-};
+}

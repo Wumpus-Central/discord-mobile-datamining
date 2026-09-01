@@ -32,7 +32,9 @@ function FamilyCenterTeenQRCodeButtonInner() {
   stateFromStores1 = getLinkCode(stateFromStores[14]).useStateFromStores(items1, () => store.getLinkCode());
   const obj5 = getLinkCode(stateFromStores[14]);
   const items2 = [closure_6];
-  const stateFromStores2 = getLinkCode(stateFromStores[14]).useStateFromStores(items2, () => store.getLinkCodeExpiresAt());
+  const stateFromStores2 = getLinkCode(stateFromStores[14]).useStateFromStores(items2, () =>
+    store.getLinkCodeExpiresAt(),
+  );
   const obj6 = getLinkCode(stateFromStores[14]);
   const userQRLinkUrl = getLinkCode(stateFromStores[10]).useUserQRLinkUrl();
   const effect = stateFromStores1.useEffect(() => {
@@ -69,24 +71,51 @@ function FamilyCenterTeenQRCodeButtonInner() {
       obj[0] = stateFromStores1;
       obj[1] = stateFromStores2;
       obj[2] = getLinkCode2;
-      getLinkCode2(stateFromStores[18]).openLazy(getLinkCode(stateFromStores[20])(stateFromStores[19], stateFromStores.paths), closure_1_7, obj);
+      getLinkCode2(stateFromStores[18]).openLazy(
+        getLinkCode(stateFromStores[20])(stateFromStores[19], stateFromStores.paths),
+        closure_1_7,
+        obj,
+      );
       const obj3 = getLinkCode2(stateFromStores[18]);
     }
   }, items4);
   obj = { direction: "horizontal", spacing: tmp10(tmp4[9]).space.PX_8, style: tmp.container, children: null };
-  obj = { grow: true, shrink: true, size: "md", variant: "primary", text: null, disabled: null, onPress: null, icon: null, iconPosition: "start" };
+  obj = {
+    grow: true,
+    shrink: true,
+    size: "md",
+    variant: "primary",
+    text: null,
+    disabled: null,
+    onPress: null,
+    icon: null,
+    iconPosition: "start",
+  };
   let intl = tmp3(tmp4[12]).intl;
   obj[4] = intl.string(getLinkCode(stateFromStores[12]).t.Ej3B3Y);
   obj[5] = null == userQRLinkUrl || null == stateFromStores1 || null == stateFromStores2;
   obj[6] = callback1;
   obj[7] = callback(getLinkCode(stateFromStores[23]).ShareIcon, { size: "sm", color: "control-primary-text-default" });
-  const items5 = [callback(getLinkCode(stateFromStores[22]).Button, obj), ];
-  obj1 = { grow: true, shrink: true, size: "md", variant: "secondary", text: null, disabled: null, onPress: null, icon: null, iconPosition: "start" };
+  const items5 = [callback(getLinkCode(stateFromStores[22]).Button, obj)];
+  obj1 = {
+    grow: true,
+    shrink: true,
+    size: "md",
+    variant: "secondary",
+    text: null,
+    disabled: null,
+    onPress: null,
+    icon: null,
+    iconPosition: "start",
+  };
   const intl2 = tmp3(tmp4[12]).intl;
   obj1[4] = intl2.string(getLinkCode2(stateFromStores[24]).wd4yrz);
   obj1[5] = null == userQRLinkUrl || null == stateFromStores1 || null == stateFromStores2;
   obj1[6] = callback2;
-  obj1[7] = callback(getLinkCode(stateFromStores[25]).QrCodeIcon, { size: "sm", color: "control-secondary-text-default" });
+  obj1[7] = callback(getLinkCode(stateFromStores[25]).QrCodeIcon, {
+    size: "sm",
+    color: "control-secondary-text-default",
+  });
   items5[1] = callback(getLinkCode(stateFromStores[22]).Button, obj1);
   obj[3] = items5;
   return callback2(getLinkCode(stateFromStores[21]).Stack, obj);
@@ -96,19 +125,36 @@ class FamilyCenterBannerButton {
     ({ onPress, text, loading } = global);
     tmp = closure_16();
     obj = { style: tmp.button, children: null };
-    obj = { grow: true, shrink: true, size: "md", variant: "primary", text, onPress, loading, icon: jsx(require("QrCodeIcon").QrCodeIcon, obj1), iconPosition: "start" };
+    obj = {
+      grow: true,
+      shrink: true,
+      size: "md",
+      variant: "primary",
+      text,
+      onPress,
+      loading,
+      icon: jsx(require("QrCodeIcon").QrCodeIcon, obj1),
+      iconPosition: "start",
+    };
     obj1 = { style: tmp.art, size: "custom", color: "white" };
     obj[1] = jsx(require("Button").Button, obj);
     return jsx(View, obj);
   }
 }
-({ CONNECT_GUARDIAN_BOTTOM_SHEET_KEY: error, FAMILY_CENTER_LINK_REQUEST_REGEX: closure_8, FamilyCenterAction: c9 } = items);
+({
+  CONNECT_GUARDIAN_BOTTOM_SHEET_KEY: error,
+  FAMILY_CENTER_LINK_REQUEST_REGEX: closure_8,
+  FamilyCenterAction: c9,
+} = items);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 createCacheKey = { container: null };
 createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let closure_16 = createCacheKey.createStyles({ button: { height: 50, width: "100%", marginTop: 16 }, art: { width: 18, height: 18, marginRight: 6 } });
+let closure_16 = createCacheKey.createStyles({
+  button: { height: 50, width: "100%", marginTop: 16 },
+  art: { width: 18, height: 18, marginRight: 6 },
+});
 let result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterBannerButton.tsx");
 
 export default FamilyCenterBannerButton;
@@ -135,7 +181,10 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
         tmp4 = null;
         if (tmpResult.isDiscordHostname(hostname)) {
           if (null !== pathname.match(closure_8)) {
-            const result = handleQrCodeScanSucess(11486).handleFamilyCenterQRCodeScan(pathname, "FamilyCenterQRCodeScan");
+            const result = handleQrCodeScanSucess(11486).handleFamilyCenterQRCodeScan(
+              pathname,
+              "FamilyCenterQRCodeScan",
+            );
             const obj4 = handleQrCodeScanSucess(11486);
           }
           tmp4 = tmp6;
@@ -159,7 +208,9 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
       const obj3 = handleQrCodeScanSucess(closure_1_2[29]);
       const tmp = closure_1_1;
       const tmp2 = closure_1_2;
-      const tmp5 = handleQrCodeScanSucess(closure_1_2[29]).isMetaQuest() ? closure_1_11.HEADSET_CAMERA : closure_1_11.CAMERA;
+      const tmp5 = handleQrCodeScanSucess(closure_1_2[29]).isMetaQuest()
+        ? closure_1_11.HEADSET_CAMERA
+        : closure_1_11.CAMERA;
       const permission = tmp(tmp2[30]).requestPermission(tmp5);
       permission.then((arg0) => {
         if (arg0) {

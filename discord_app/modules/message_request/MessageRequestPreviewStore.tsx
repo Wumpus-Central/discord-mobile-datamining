@@ -39,8 +39,7 @@ function storeMessagePreview(id, arg1) {
 let closure_5 = {};
 let set = new Set();
 const Store = initializeDefault.Store;
-class MessageRequestPreviewStore extends Store {
-}
+class MessageRequestPreviewStore extends Store {}
 const prototype = MessageRequestPreviewStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_4, closure_2);
@@ -153,7 +152,9 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
       return false;
     }
   },
-  LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: function handleLoadMessageRequestsSupplementalDataSuccess(supplementalData) {
+  LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: function handleLoadMessageRequestsSupplementalDataSuccess(
+    supplementalData,
+  ) {
     supplementalData = supplementalData.supplementalData;
     set = undefined;
     const items = [...supplementalData.requestedChannelIds];
@@ -191,7 +192,9 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
       continue;
     }
   },
-  LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR: function handleLoadMessageRequestsSupplementalDataError(requestedChannelIds) {
+  LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR: function handleLoadMessageRequestsSupplementalDataError(
+    requestedChannelIds,
+  ) {
     requestedChannelIds = requestedChannelIds.requestedChannelIds;
     const item = requestedChannelIds.forEach((id) => {
       let isMessageRequestResult = messageRequest.isMessageRequest(id);
@@ -205,7 +208,7 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
         closure_5[id] = obj;
       }
     });
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/message_request/MessageRequestPreviewStore.tsx");
 

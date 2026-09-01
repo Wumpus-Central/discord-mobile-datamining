@@ -27,7 +27,7 @@ function _fetchSocialLayerStorefront2() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       if (c9 === 2) {
         c9 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -259,12 +259,20 @@ function _fetchSocialLayerStorefront2() {
                       obj1.dispatch(obj8);
                     }
                     obj4 = callback(obj1[5]);
-                    const obj10 = { type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS", guildOrApplicationId: null, storefront: null };
+                    const obj10 = {
+                      type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
+                      guildOrApplicationId: null,
+                      storefront: null,
+                    };
                     obj10[1] = lib;
                     obj10[2] = closure_17;
                     obj4.dispatch(obj10);
                     obj6 = callback(obj1[5]);
-                    let obj11 = { type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS", applicationId: null, storefrontMetadata: null };
+                    let obj11 = {
+                      type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS",
+                      applicationId: null,
+                      storefrontMetadata: null,
+                    };
                     obj11[1] = closure_17.applicationId;
                     obj8 = lib(obj1[6]);
                     obj11[2] = obj8.transformStorefrontMetadataServer(body);
@@ -348,7 +356,7 @@ function _fetchSocialLayerStorefrontSkuWithUrl2() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       if (promotionIdOverride2 === 2) {
         promotionIdOverride2 = 3;
         HermesBuiltin.throwTypeError();
@@ -467,14 +475,20 @@ function _fetchSocialLayerStorefrontSkuWithUrl2() {
                 obj8 = { type: "SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS", assets: null };
                 const _Object = Object;
                 const assets = closure_9.body.assets;
-                obj8[1] = Object.fromEntries(assets.map((id) => {
-                  const items = [id.id, id];
-                  return items;
-                }));
+                obj8[1] = Object.fromEntries(
+                  assets.map((id) => {
+                    const items = [id.id, id];
+                    return items;
+                  }),
+                );
                 callback2(obj1[5]).dispatch(obj8);
                 if (null != storefront_metadata) {
                   obj = callback2(obj1[5]);
-                  const obj9 = { type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS", applicationId: null, storefrontMetadata: null };
+                  const obj9 = {
+                    type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS",
+                    applicationId: null,
+                    storefrontMetadata: null,
+                  };
                   obj9[1] = store_listing.sku.application_id;
                   obj2 = callback(obj1[6]);
                   obj9[2] = obj2.transformStorefrontMetadataServer(storefront_metadata);
@@ -531,7 +545,7 @@ function _fetchSocialLayerStorefrontEntries() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -657,7 +671,7 @@ function _fetchSocialLayerStorefrontById() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -773,7 +787,11 @@ function _fetchSocialLayerStorefrontById() {
               obj8[2] = previewStorefrontId;
               obj3.dispatch(obj8);
               obj5 = callback2(closure_2[5]);
-              const obj9 = { type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS", applicationId: null, storefrontMetadata: null };
+              const obj9 = {
+                type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS",
+                applicationId: null,
+                storefrontMetadata: null,
+              };
               obj9[1] = previewStorefrontId.applicationId;
               obj7 = callback(closure_2[6]);
               obj9[2] = obj7.transformStorefrontMetadataServer(body);
@@ -831,7 +849,7 @@ function _fetchSocialLayerStorefrontAnnouncement() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       let obj = tmp3;
       c4 = 1;
       obj1 = { type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START", guildId: null };
@@ -854,7 +872,17 @@ function _fetchSocialLayerStorefrontAnnouncement() {
       } else if (arg0 !== 2) {
         body = body.body;
         if ("guild-discord-announcement" === body.type) {
-          obj5 = { type: "guild-discord-announcement", id: null, applicationId: null, applicationName: null, assetFullyQualifiedURL: null, videoAssetFullyQualifiedURL: null, popoverTitle: null, popoverBody: null, popoverCta: null };
+          obj5 = {
+            type: "guild-discord-announcement",
+            id: null,
+            applicationId: null,
+            applicationName: null,
+            assetFullyQualifiedURL: null,
+            videoAssetFullyQualifiedURL: null,
+            popoverTitle: null,
+            popoverBody: null,
+            popoverCta: null,
+          };
           obj5[1] = body.id;
           obj5[2] = body.application_id;
           obj5[3] = body.application_name;
@@ -865,7 +893,14 @@ function _fetchSocialLayerStorefrontAnnouncement() {
           obj5[8] = body.popover_cta;
           obj = obj5;
         } else {
-          obj = { type: "guild-application-announcement", id: null, applicationId: null, applicationName: null, assetId: null, backgroundImageAssetId: null };
+          obj = {
+            type: "guild-application-announcement",
+            id: null,
+            applicationId: null,
+            applicationName: null,
+            assetId: null,
+            backgroundImageAssetId: null,
+          };
           obj[1] = body.id;
           obj[2] = body.application_id;
           obj[3] = body.application_name;
@@ -894,7 +929,7 @@ function _fetchSocialLayerStorefrontAnnouncement() {
 }
 function _fetchSocialLayerStorefrontConfig() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (configFetchState === 2) {
       configFetchState = 3;
       HermesBuiltin.throwTypeError();
@@ -986,7 +1021,16 @@ function _fetchSocialLayerStorefrontConfig() {
                 if (!isNaNResult) {
                   tmp7 = date;
                 }
-                obj = { guildId: guildId.guild_id, applicationId: guildId.application_id, gameId: guildId.game_id, collectiblesShopNavigationEnabled: true === guildId.collectibles_shop_navigation_enabled, excludedPlatforms: null, disableMobileAccountLinking: null, promotionEndDatetime: null, allowOrbsSpending: null };
+                obj = {
+                  guildId: guildId.guild_id,
+                  applicationId: guildId.application_id,
+                  gameId: guildId.game_id,
+                  collectiblesShopNavigationEnabled: true === guildId.collectibles_shop_navigation_enabled,
+                  excludedPlatforms: null,
+                  disableMobileAccountLinking: null,
+                  promotionEndDatetime: null,
+                  allowOrbsSpending: null,
+                };
                 let excluded_platforms = guildId.excluded_platforms;
                 if (excluded_platforms == null) {
                   excluded_platforms = [];
@@ -1011,7 +1055,12 @@ function _fetchSocialLayerStorefrontConfig() {
             }
             obj1 = callback(date[5]);
             const obj3 = { type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS", config: null };
-            const obj4 = { promotionalSkuIds: null, promotionEndDatetime: null, storefronts: null, announcementModalConfig: null };
+            const obj4 = {
+              promotionalSkuIds: null,
+              promotionEndDatetime: null,
+              storefronts: null,
+              announcementModalConfig: null,
+            };
             obj4[0] = body.promotional_sku_ids;
             obj4[1] = callback;
             obj4[2] = c3;
@@ -1048,7 +1097,7 @@ function _fetchSocialLayerStorefrontConfig() {
 }
 function _fetchSocialLayerStorefrontLaunchAnnouncement() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     closure_9 = tmp3;
     c11 = 1;
     const HTTP = closure_1_0(closure_1_2[8]).HTTP;
@@ -1071,7 +1120,16 @@ function _fetchSocialLayerStorefrontLaunchAnnouncement() {
       }
       obj3 = null;
       if (null != closure_0) {
-        obj3 = { applicationId: null, lightThemeLogoUrl: null, darkThemeLogoUrl: null, backgroundUrl: null, titles: null, subtitle: null, features: null, buttonText: null };
+        obj3 = {
+          applicationId: null,
+          lightThemeLogoUrl: null,
+          darkThemeLogoUrl: null,
+          backgroundUrl: null,
+          titles: null,
+          subtitle: null,
+          features: null,
+          buttonText: null,
+        };
         obj3[0] = closure_0.application_id;
         const light_theme_logo_url = closure_0.light_theme_logo_url;
         obj3 = light_theme_logo_url;
@@ -1106,7 +1164,11 @@ function _fetchSocialLayerStorefrontLaunchAnnouncement() {
         const features = closure_0.features;
         let mapped;
         if (features != null) {
-          mapped = features.map((assetUrl) => ({ assetUrl: assetUrl.asset_url, title: assetUrl.title, subtitle: assetUrl.subtitle }));
+          mapped = features.map((assetUrl) => ({
+            assetUrl: assetUrl.asset_url,
+            title: assetUrl.title,
+            subtitle: assetUrl.subtitle,
+          }));
         }
         c6 = mapped;
         if (mapped == null) {
@@ -1151,7 +1213,10 @@ const map1 = new Map();
 let result = require("set").fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontActionCreators.tsx");
 
 export { _fetchSocialLayerStorefront };
-export const fetchSocialLayerStorefrontForApplication = function fetchSocialLayerStorefrontForApplication(applicationId, arg1) {
+export const fetchSocialLayerStorefrontForApplication = function fetchSocialLayerStorefrontForApplication(
+  applicationId,
+  arg1,
+) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -1167,12 +1232,20 @@ export const fetchSocialLayerStorefront = function fetchSocialLayerStorefront(gu
   obj = { type: "guild", guildId };
   return _fetchSocialLayerStorefront(obj, Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT(guildId), obj);
 };
-export const fetchSocialLayerStorefrontSkuForApplication = function fetchSocialLayerStorefrontSkuForApplication(applicationId, id, arg2) {
+export const fetchSocialLayerStorefrontSkuForApplication = function fetchSocialLayerStorefrontSkuForApplication(
+  applicationId,
+  id,
+  arg2,
+) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
-  return _fetchSocialLayerStorefrontSkuWithUrl(id, Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_BY_APPLICATION_ID(applicationId, id), obj);
+  return _fetchSocialLayerStorefrontSkuWithUrl(
+    id,
+    Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_BY_APPLICATION_ID(applicationId, id),
+    obj,
+  );
 };
 export const fetchSocialLayerStorefrontSku = function fetchSocialLayerStorefrontSku(arg0, id, arg2) {
   let obj = arg2;
@@ -1246,7 +1319,11 @@ export const fetchSocialLayerSKUPurchaseEligibility = function fetchSocialLayerS
     const timerId = setTimeout(() => {
       if ("checking" === closure_1_5.getSKUEligibility(closure_0)) {
         let obj = closure_1_1(closure_1_2[5]);
-        obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE", skuId: null, reason: "interaction_deadline" };
+        obj = {
+          type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE",
+          skuId: null,
+          reason: "interaction_deadline",
+        };
         obj[1] = closure_0;
         obj.dispatch(obj);
       }
@@ -1255,23 +1332,33 @@ export const fetchSocialLayerSKUPurchaseEligibility = function fetchSocialLayerS
     obj = { url: null, rejectWithError: true };
     obj[0] = Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY(arg0, closure_0);
     const postResult = HTTP.post(obj);
-    HTTP.post(obj).then((body) => {
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE", skuId: closure_0, interactionId: body.body.interaction_id };
-      obj.dispatch(obj);
-    }).catch((status) => {
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE", skuId: closure_0, httpStatus: null };
-      status = undefined;
-      if (status != null) {
-        status = status.status;
-      }
-      obj[2] = status;
-      obj.dispatch(obj);
-    });
+    HTTP.post(obj)
+      .then((body) => {
+        let obj = closure_1_1(closure_1_2[5]);
+        obj = {
+          type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE",
+          skuId: closure_0,
+          interactionId: body.body.interaction_id,
+        };
+        obj.dispatch(obj);
+      })
+      .catch((status) => {
+        let obj = closure_1_1(closure_1_2[5]);
+        obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE", skuId: closure_0, httpStatus: null };
+        status = undefined;
+        if (status != null) {
+          status = status.status;
+        }
+        obj[2] = status;
+        obj.dispatch(obj);
+      });
     const nextPromise = HTTP.post(obj).then((body) => {
       let obj = closure_1_1(closure_1_2[5]);
-      obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE", skuId: closure_0, interactionId: body.body.interaction_id };
+      obj = {
+        type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE",
+        skuId: closure_0,
+        interactionId: body.body.interaction_id,
+      };
       obj.dispatch(obj);
     });
   }

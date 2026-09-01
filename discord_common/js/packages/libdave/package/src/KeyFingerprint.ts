@@ -8,7 +8,7 @@ function _generateKeyFingerprint() {
     closure_1 = arg1;
     closure_2 = arg2;
     c3 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -86,7 +86,9 @@ function _generateKeyFingerprint() {
   }
   return applyArgumentsResult;
 }
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/libdave/package/src/KeyFingerprint.ts");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/libdave/package/src/KeyFingerprint.ts",
+);
 
 export const generateKeyFingerprint = function generateKeyFingerprint(closure_0, closure_3, closure_2) {
   const self = this;

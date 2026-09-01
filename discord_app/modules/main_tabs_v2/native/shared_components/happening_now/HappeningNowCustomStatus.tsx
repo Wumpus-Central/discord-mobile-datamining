@@ -19,21 +19,41 @@ let c15 = 16;
 let c16 = 32;
 let obj = { left: (HAPPENING_NOW_CONTENT_HEIGHT - 16) / 2, top: -3, transform: items };
 items = [{ rotate: "24deg" }];
-let items1 = [obj, , , , , ];
-obj = { left: HAPPENING_NOW_CONTENT_HEIGHT - 16 + 3, top: (HAPPENING_NOW_CONTENT_HEIGHT - 32 - 16) / 2, transform: items2 };
+let items1 = [obj, , , , ,];
+obj = {
+  left: HAPPENING_NOW_CONTENT_HEIGHT - 16 + 3,
+  top: (HAPPENING_NOW_CONTENT_HEIGHT - 32 - 16) / 2,
+  transform: items2,
+};
 items2 = [{ rotate: "-12deg" }];
 items1[1] = obj;
-obj = { left: HAPPENING_NOW_CONTENT_HEIGHT - 16 + 3, top: (HAPPENING_NOW_CONTENT_HEIGHT - 16 + 32) / 2, transform: items3 };
+obj = {
+  left: HAPPENING_NOW_CONTENT_HEIGHT - 16 + 3,
+  top: (HAPPENING_NOW_CONTENT_HEIGHT - 16 + 32) / 2,
+  transform: items3,
+};
 items3 = [{ rotate: "12deg" }];
 items1[2] = obj;
 let items4 = [{ rotate: "-24deg" }];
-items1[3] = { left: (HAPPENING_NOW_CONTENT_HEIGHT - 16) / 2, top: HAPPENING_NOW_CONTENT_HEIGHT - 16 + 3, transform: items4 };
+items1[3] = {
+  left: (HAPPENING_NOW_CONTENT_HEIGHT - 16) / 2,
+  top: HAPPENING_NOW_CONTENT_HEIGHT - 16 + 3,
+  transform: items4,
+};
 let items5 = [{ rotate: "12deg" }];
 items1[4] = { left: -3, top: (HAPPENING_NOW_CONTENT_HEIGHT - 16 + 32) / 2, transform: items5 };
 let items6 = [{ rotate: "-12deg" }];
 items1[5] = { left: -3, top: (HAPPENING_NOW_CONTENT_HEIGHT - 32 - 16) / 2, transform: items6 };
 let closure_18 = createCacheKey.createStyles((arg0) => {
-  obj = { customStatusContainer: { flexShrink: 1, flexDirection: "row", alignItems: "center" }, customStatusContextContainer: { flexShrink: 1, flexDirection: "column", marginLeft: 12, gap: 2 }, statusAvatar: { marginBottom: 2 }, largeEmoji: obj, smallEmoji: obj, cardContainer: null, emojisContainer: null };
+  obj = {
+    customStatusContainer: { flexShrink: 1, flexDirection: "row", alignItems: "center" },
+    customStatusContextContainer: { flexShrink: 1, flexDirection: "column", marginLeft: 12, gap: 2 },
+    statusAvatar: { marginBottom: 2 },
+    largeEmoji: obj,
+    smallEmoji: obj,
+    cardContainer: null,
+    emojisContainer: null,
+  };
   obj = { width: c16, height: c16, borderRadius: 2, overflow: "hidden" };
   obj = { position: "absolute", width: c15, height: c15, borderRadius: 2, opacity: 0.6 };
   let num;
@@ -41,10 +61,19 @@ let closure_18 = createCacheKey.createStyles((arg0) => {
     num = 12;
   }
   obj[5] = { justifyContent: "center", paddingLeft: num };
-  obj[6] = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+  obj[6] = {
+    width: HAPPENING_NOW_CONTENT_HEIGHT,
+    height: HAPPENING_NOW_CONTENT_HEIGHT,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: ThemesDefault.radii.sm,
+    overflow: "hidden",
+  };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCustomStatus.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCustomStatus.tsx",
+);
 
 export const CustomStatusActivityCard = function CustomStatusActivityCard(user) {
   user = user.user;
@@ -86,7 +115,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
   const effect = React.useEffect(() => {
     function _loadEmoji() {
       const self = this;
-      const tmp = callback(function*() {
+      const tmp = callback(function* () {
         if (v0 === 2) {
           v0 = 3;
           HermesBuiltin.throwTypeError();
@@ -196,7 +225,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
   }
   let tmp6Result = tmp6(9087);
   const gameMentionsAsPlainText = tmp6Result.useGameMentionsAsPlainText(activity.state);
-  const items2 = [userTitle, , ];
+  const items2 = [userTitle, ,];
   tmp6Result = tmp6(9425);
   items2[1] = tmp6Result.getStatusLabel(status);
   items2[2] = gameMentionsAsPlainText;
@@ -214,7 +243,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
   obj1 = { style: tmp.customStatusContainer, children: null };
   if (null != activity.emoji) {
     obj2 = { style: null, children: null };
-    const items3 = [tmp.emojisContainer, ];
+    const items3 = [tmp.emojisContainer];
     let obj3 = { backgroundColor: null };
     obj3[0] = tmp3;
     items3[1] = obj3;
@@ -237,33 +266,43 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     const items4 = [
       tmp15Result,
       items1.map((arg0, arg1) => {
-          let obj = user(closure_2[18]);
-          if (obj.isAndroid()) {
-            let tmp10 = null != first;
-            if (tmp10) {
-              obj = { source: null, style: null };
-              obj[0] = tmp8;
-              const items = [closure_2.smallEmoji, arg0];
-              obj[1] = items;
-              tmp10 = closure_1_12(closure_1_7, obj, arg1);
-            }
-            let tmp7 = tmp10;
-          } else {
-            obj = { emoji: null, size: null, style: null, animate: false };
-            obj[0] = activity.emoji;
-            obj[1] = closure_1_15;
-            items1 = [closure_2.smallEmoji, arg0];
-            obj[2] = items1;
-            tmp7 = closure_1_12(activity(closure_2[19]), obj, arg1);
+        let obj = user(closure_2[18]);
+        if (obj.isAndroid()) {
+          let tmp10 = null != first;
+          if (tmp10) {
+            obj = { source: null, style: null };
+            obj[0] = tmp8;
+            const items = [closure_2.smallEmoji, arg0];
+            obj[1] = items;
+            tmp10 = closure_1_12(closure_1_7, obj, arg1);
           }
-          return tmp7;
-        })
+          let tmp7 = tmp10;
+        } else {
+          obj = { emoji: null, size: null, style: null, animate: false };
+          obj[0] = activity.emoji;
+          obj[1] = closure_1_15;
+          items1 = [closure_2.smallEmoji, arg0];
+          obj[2] = items1;
+          tmp7 = closure_1_12(activity(closure_2[19]), obj, arg1);
+        }
+        return tmp7;
+      }),
     ];
     obj2[1] = items4;
-    const items5 = [callback(tmp17, obj2), ];
+    const items5 = [callback(tmp17, obj2)];
     const obj6 = { style: null, children: null };
     obj6[0] = tmp.customStatusContextContainer;
-    const obj7 = { user: null, avatarDecoration: null, size: null, guildId: null, status: null, isMobileOnline: null, isVROnline: null, style: null, autoStatusCutout: null };
+    const obj7 = {
+      user: null,
+      avatarDecoration: null,
+      size: null,
+      guildId: null,
+      status: null,
+      isMobileOnline: null,
+      isVROnline: null,
+      style: null,
+      autoStatusCutout: null,
+    };
     obj7[0] = user;
     obj7[1] = user.avatarDecoration;
     obj7[2] = tmp6(1297).AvatarSizes.XSMALL;
@@ -273,7 +312,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     obj7[6] = isVROnline;
     obj7[7] = tmp.statusAvatar;
     obj7[8] = STATUS_CUTOUT_SMALL;
-    const items6 = [tmp15(tmp6(1297).Avatar, obj7), , ];
+    const items6 = [tmp15(tmp6(1297).Avatar, obj7), ,];
     const obj8 = { noMargin: true, displayNameFont: null, children: null };
     obj8[1] = displayNameStylesFont;
     obj8[2] = userTitle;
@@ -288,7 +327,14 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     }
     let tmp15Result1 = num2 > 0;
     if (tmp15Result1) {
-      const obj9 = { ellipsizeMode: "tail", variant: "text-xs/medium", color: "text-default", lineClamp: null, maxFontSizeMultiplier: 2, children: null };
+      const obj9 = {
+        ellipsizeMode: "tail",
+        variant: "text-xs/medium",
+        color: "text-default",
+        lineClamp: null,
+        maxFontSizeMultiplier: 2,
+        children: null,
+      };
       obj9[3] = num;
       obj9[5] = gameMentionsAsPlainText;
       tmp15Result1 = tmp15(tmp6(4474).Text, obj9);
@@ -303,7 +349,16 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     tmp6Result1 = tmp6(500);
   } else {
     const obj11 = { children: null };
-    const obj12 = { user: null, avatarDecoration: null, size: null, guildId: null, status: null, isMobileOnline: null, isVROnline: null, autoStatusCutout: true };
+    const obj12 = {
+      user: null,
+      avatarDecoration: null,
+      size: null,
+      guildId: null,
+      status: null,
+      isMobileOnline: null,
+      isVROnline: null,
+      autoStatusCutout: true,
+    };
     obj12[0] = user;
     obj12[1] = user.avatarDecoration;
     obj12[2] = tmp6(1297).AvatarSizes.LARGE;
@@ -311,14 +366,21 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     obj12[4] = status;
     obj12[5] = isMobileOnline;
     obj12[6] = isVROnline;
-    const items7 = [tmp15(tmp6(1297).Avatar, obj12), ];
+    const items7 = [tmp15(tmp6(1297).Avatar, obj12)];
     const obj13 = { style: null, children: null };
     obj13[0] = tmp.customStatusContextContainer;
     const obj14 = { noMargin: true, displayNameFont: null, children: null };
     obj14[1] = displayNameStylesFont;
     obj14[2] = userTitle;
-    const items8 = [tmp15(tmp6(14891).HappeningNowCardHeader, obj14), ];
-    const obj15 = { ellipsizeMode: "tail", variant: "text-xs/medium", color: "text-default", lineClamp: null, maxFontSizeMultiplier: 2, children: null };
+    const items8 = [tmp15(tmp6(14891).HappeningNowCardHeader, obj14)];
+    const obj15 = {
+      ellipsizeMode: "tail",
+      variant: "text-xs/medium",
+      color: "text-default",
+      lineClamp: null,
+      maxFontSizeMultiplier: 2,
+      children: null,
+    };
     obj15[3] = num;
     obj15[5] = gameMentionsAsPlainText;
     items8[1] = tmp15(tmp6(4474).Text, obj15);

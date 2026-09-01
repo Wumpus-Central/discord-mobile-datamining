@@ -15,15 +15,17 @@ obj = {
   IconComponent: ImageWarningIcon.ImageWarningIcon,
   parent: MobileUserSettings.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   screen: obj,
-  unsearchable: true
+  unsearchable: true,
 };
 obj = {
   route: ME.UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   getComponent() {
     return UserSettingsSensitiveContentFilters /* UserSettingsSensitiveContentFilters */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsSensitiveContentFilterSetting.tsx");
+const result = set.fileFinishedImporting(
+  "modules/user_settings/defs/native/ParentalControlsSensitiveContentFilterSetting.tsx",
+);
 
 export default route;

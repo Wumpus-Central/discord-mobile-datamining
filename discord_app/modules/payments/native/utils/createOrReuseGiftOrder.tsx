@@ -19,7 +19,7 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -78,7 +78,16 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
                 skuId = closure_2_3.skuId;
                 c4 = 1;
                 let getOrCreateOrder = callback(closure_2_2[6]).getOrCreateOrder;
-                const obj2 = { skuId: null, paymentGateway: null, recipientUserId: null, purchaseType: null, isGift: true, createdAfter: null, subscriptionPlanId: null, externalGatewayFacet: null };
+                const obj2 = {
+                  skuId: null,
+                  paymentGateway: null,
+                  recipientUserId: null,
+                  purchaseType: null,
+                  isGift: true,
+                  createdAfter: null,
+                  subscriptionPlanId: null,
+                  externalGatewayFacet: null,
+                };
                 obj2[0] = c4;
                 const tmp61 = callback(closure_2_2[6]);
                 let obj3 = closure_2_7;
@@ -155,7 +164,7 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
     return iter;
   });
   let items = [GiftPurchaseButton];
-  return skuId.useCallback(function() {
+  return skuId.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

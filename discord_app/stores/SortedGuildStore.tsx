@@ -124,7 +124,10 @@ function rebuildTree(arg0, arg1) {
       }
       continue;
     }
-    insertUnsortedGuilds((arg0) => null == closure_13.nodes[arg0], (item10030) => closure_13.addNode(callback(table[10]).createGuildNode(item10030), closure_13.root, false));
+    insertUnsortedGuilds(
+      (arg0) => null == closure_13.nodes[arg0],
+      (item10030) => closure_13.addNode(callback(table[10]).createGuildNode(item10030), closure_13.root, false),
+    );
     guildsTree.version = tmp.version;
     const tmp69 = isUndefinedOrNullDefault(tmp, guildsTree);
     if (tmp69) {
@@ -230,14 +233,20 @@ function handleMoveById(sourceId) {
         tmp9 = null != node1.parentId;
       }
       const _HermesInternal2 = HermesInternal;
-      tmp22Result(!tmp9, "[SORTED GUILDS] Can't combine with a guild " + node1.id + " that's already inside of a folder");
+      tmp22Result(
+        !tmp9,
+        "[SORTED GUILDS] Can't combine with a guild " + node1.id + " that's already inside of a folder",
+      );
       tmp22Result = tmp22(38);
       const tmp10 = !tmp9;
       const tmp13 = areArraysShallowlyEqual;
       const tmp24 = _modDef38;
       const tmp5 = !tmp4;
       const _HermesInternal3 = HermesInternal;
-      tmp22Result(!(node.type === areArraysShallowlyEqual(5383).GuildsNodeType.FOLDER && null != node1.parentId), "[SORTED GUILDS] Can't move a folder " + node.id + " to inside of another folder " + node1.parentId);
+      tmp22Result(
+        !(node.type === areArraysShallowlyEqual(5383).GuildsNodeType.FOLDER && null != node1.parentId),
+        "[SORTED GUILDS] Can't move a folder " + node.id + " to inside of another folder " + node1.parentId,
+      );
       if (combine) {
         let convertToFolderResult = node1;
         if (node1.type !== tmp13(5383).GuildsNodeType.FOLDER) {
@@ -399,7 +408,10 @@ function handleGuildFolderExpand(folderId) {
     if (node.type === areArraysShallowlyEqual(5383).GuildsNodeType.FOLDER) {
       if (node.expanded !== isFolderExpandedResult) {
         const cloneNodeResult = guildsTree.cloneNode(node);
-        _modDef38(cloneNodeResult.id === node.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.");
+        _modDef38(
+          cloneNodeResult.id === node.id,
+          "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.",
+        );
         cloneNodeResult.expanded = isFolderExpandedResult;
         guildsTree.replaceNode(node, cloneNodeResult);
       }
@@ -414,7 +426,10 @@ function handleFolderExpanded(expanded) {
     if (node.type === areArraysShallowlyEqual(5383).GuildsNodeType.FOLDER) {
       if (node.expanded !== expanded) {
         const cloneNodeResult = guildsTree.cloneNode(node);
-        _modDef38(cloneNodeResult.id === node.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.");
+        _modDef38(
+          cloneNodeResult.id === node.id,
+          "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.",
+        );
         cloneNodeResult.expanded = expanded;
         guildsTree.replaceNode(node, cloneNodeResult);
       }
@@ -444,13 +459,18 @@ function handleCollapseAll() {
 }
 function setNodeExpanded(id, arg1) {
   const cloneNodeResult = guildsTree.cloneNode(id);
-  _modDef38(cloneNodeResult.id === id.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.");
+  _modDef38(
+    cloneNodeResult.id === id.id,
+    "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.",
+  );
   cloneNodeResult.expanded = false;
   guildsTree.replaceNode(id, cloneNodeResult);
 }
 clearAllDefault;
 let guildsTree = new require("GuildsNodeType").GuildsTree();
-let closure_28 = areArraysShallowlyEqual.cachedFunction((sortedGuildNodes) => sortedGuildNodes.sortedGuildNodes().map((id) => id.id));
+let closure_28 = areArraysShallowlyEqual.cachedFunction((sortedGuildNodes) =>
+  sortedGuildNodes.sortedGuildNodes().map((id) => id.id),
+);
 let closure_29 = areArraysShallowlyEqual.cachedFunction((getRoots) => {
   const roots = getRoots.getRoots();
   return roots.map(convertNodeToGuildFolder);
@@ -479,7 +499,22 @@ let SortedGuildStore;
 class SortedGuildStore extends tmp4 {
   constructor() {
     closure_0 = undefined;
-    obj = { CONNECTION_OPEN: handleRebuild, OVERLAY_INITIALIZE: handleRebuild, CACHE_LOADED: null, GUILD_CREATE: null, GUILD_DELETE: null, GUILD_MEMBER_ADD: null, USER_SETTINGS_PROTO_UPDATE: null, GUILD_MOVE_BY_ID: null, GUILD_FOLDER_CREATE_LOCAL: null, GUILD_FOLDER_EDIT_LOCAL: null, GUILD_FOLDER_DELETE_LOCAL: null, TOGGLE_GUILD_FOLDER_EXPAND: null, SET_GUILD_FOLDER_EXPANDED: null, GUILD_FOLDER_COLLAPSE: null };
+    obj = {
+      CONNECTION_OPEN: handleRebuild,
+      OVERLAY_INITIALIZE: handleRebuild,
+      CACHE_LOADED: null,
+      GUILD_CREATE: null,
+      GUILD_DELETE: null,
+      GUILD_MEMBER_ADD: null,
+      USER_SETTINGS_PROTO_UPDATE: null,
+      GUILD_MOVE_BY_ID: null,
+      GUILD_FOLDER_CREATE_LOCAL: null,
+      GUILD_FOLDER_EDIT_LOCAL: null,
+      GUILD_FOLDER_DELETE_LOCAL: null,
+      TOGGLE_GUILD_FOLDER_EXPAND: null,
+      SET_GUILD_FOLDER_EXPANDED: null,
+      GUILD_FOLDER_COLLAPSE: null,
+    };
     class CACHE_LOADED {
       constructor() {
         return obj.loadCache();
@@ -562,7 +597,22 @@ prototype["takeSnapshot"] = function takeSnapshot() {
 SortedGuildStore.displayName = "SortedGuildStore";
 SortedGuildStore.LATEST_SNAPSHOT_VERSION = 2;
 areArraysShallowlyEqual = undefined;
-areArraysShallowlyEqual = { CONNECTION_OPEN: handleRebuild, OVERLAY_INITIALIZE: handleRebuild, CACHE_LOADED: null, GUILD_CREATE: null, GUILD_DELETE: null, GUILD_MEMBER_ADD: null, USER_SETTINGS_PROTO_UPDATE: null, GUILD_MOVE_BY_ID: null, GUILD_FOLDER_CREATE_LOCAL: null, GUILD_FOLDER_EDIT_LOCAL: null, GUILD_FOLDER_DELETE_LOCAL: null, TOGGLE_GUILD_FOLDER_EXPAND: null, SET_GUILD_FOLDER_EXPANDED: null, GUILD_FOLDER_COLLAPSE: null };
+areArraysShallowlyEqual = {
+  CONNECTION_OPEN: handleRebuild,
+  OVERLAY_INITIALIZE: handleRebuild,
+  CACHE_LOADED: null,
+  GUILD_CREATE: null,
+  GUILD_DELETE: null,
+  GUILD_MEMBER_ADD: null,
+  USER_SETTINGS_PROTO_UPDATE: null,
+  GUILD_MOVE_BY_ID: null,
+  GUILD_FOLDER_CREATE_LOCAL: null,
+  GUILD_FOLDER_EDIT_LOCAL: null,
+  GUILD_FOLDER_DELETE_LOCAL: null,
+  TOGGLE_GUILD_FOLDER_EXPAND: null,
+  SET_GUILD_FOLDER_EXPANDED: null,
+  GUILD_FOLDER_COLLAPSE: null,
+};
 class CACHE_LOADED {
   constructor() {
     return obj.loadCache();
@@ -580,7 +630,19 @@ areArraysShallowlyEqual[10] = handleGuildFolderDeleteLocal;
 areArraysShallowlyEqual[11] = handleGuildFolderExpand;
 areArraysShallowlyEqual[12] = handleFolderExpanded;
 areArraysShallowlyEqual[13] = handleCollapseAll;
-areArraysShallowlyEqual = new areArraysShallowlyEqual(areArraysShallowlyEqual, tmp2, tmp, CACHE_LOADED, handleRebuild, handleJoinedLurkingGuild, handleSettingsUpdate, handleMoveById, handleGuildFolderCreateLocal, handleGuildFolderEditLocal, handleGuildFolderDeleteLocal);
+areArraysShallowlyEqual = new areArraysShallowlyEqual(
+  areArraysShallowlyEqual,
+  tmp2,
+  tmp,
+  CACHE_LOADED,
+  handleRebuild,
+  handleJoinedLurkingGuild,
+  handleSettingsUpdate,
+  handleMoveById,
+  handleGuildFolderCreateLocal,
+  handleGuildFolderEditLocal,
+  handleGuildFolderDeleteLocal,
+);
 // ThrowIfThisInitialized (0x7c)
 areArraysShallowlyEqual.loadCache = function loadCache() {
   const snapshot = lib.readSnapshot(closure_1_32.LATEST_SNAPSHOT_VERSION);

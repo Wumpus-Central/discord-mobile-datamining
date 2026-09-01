@@ -15,7 +15,10 @@ export const isIosAttributionEligible = function isIosAttributionEligible() {
   }
   return enabled;
 };
-export const isCampaignIosAttributionEnabled = function isCampaignIosAttributionEnabled(sourceQuestContent, adContentId) {
+export const isCampaignIosAttributionEnabled = function isCampaignIosAttributionEnabled(
+  sourceQuestContent,
+  adContentId,
+) {
   const adContext = getQuestDeliveryDataForPlacement.getAdContext(sourceQuestContent, adContentId);
   let prop;
   if (adContext != null) {
@@ -23,7 +26,11 @@ export const isCampaignIosAttributionEnabled = function isCampaignIosAttribution
   }
   return true === prop;
 };
-export const getIosAttributionClickFramework = function getIosAttributionClickFramework(arg0, sourceQuestContent, adContentId) {
+export const getIosAttributionClickFramework = function getIosAttributionClickFramework(
+  arg0,
+  sourceQuestContent,
+  adContentId,
+) {
   const IosAttributionFeatureGate = apexExperiment.IosAttributionFeatureGate;
   let enabled = IosAttributionFeatureGate.getConfig({ location: "quest_ios_attribution" }).enabled;
   if (enabled) {

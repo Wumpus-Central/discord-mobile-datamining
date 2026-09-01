@@ -10,8 +10,15 @@ const require = arg1;
 noopAll;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ container: { flex: 1 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 } });
-const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryCreateOrAddDescription.tsx");
+let closure_8 = createCacheKey.createStyles({
+  container: { flex: 1 },
+  title: { marginBottom: 8, textAlign: "center" },
+  description: { textAlign: "center" },
+  header: { alignItems: "center", justifyContent: "center", padding: 16 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/directory_channels/native/components/GuildDirectoryCreateOrAddDescription.tsx",
+);
 
 export default function GuildDirectoryCreateOrAddDescription(directoryChannelId) {
   directoryChannelId = directoryChannelId.directoryChannelId;
@@ -23,7 +30,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
       closure_1 = arg1;
       c4 = 0;
       c5 = 0;
-      return (function*(arg0, arg1) {
+      return (function* (arg0, arg1) {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -67,7 +74,14 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
                   }
                 } else if (null != closure_2) {
                   let obj3 = callback(closure_1_2[7]);
-                  const obj2 = { directoryChannelId: null, directoryGuildName: null, guild: null, description: null, category: null, onClose: null };
+                  const obj2 = {
+                    directoryChannelId: null,
+                    directoryGuildName: null,
+                    guild: null,
+                    description: null,
+                    category: null,
+                    onClose: null,
+                  };
                   obj2[0] = callback;
                   obj2[1] = callback2;
                   obj2[2] = closure_2;
@@ -127,16 +141,22 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   let obj = { children: null };
   obj = { style: tmp.container, keyboardShouldPersistTaps: "handled", children: null };
   obj = { style: tmp.header, children: null };
-  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  obj1 = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = directoryChannelId(1236).intl;
   obj1[4] = intl.string(directoryChannelId(1236).t["5bQcoa"]);
-  const items = [callback(directoryChannelId(4474).Text, obj1), ];
+  const items = [callback(directoryChannelId(4474).Text, obj1)];
   let obj2 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = directoryChannelId(1236).intl;
   obj2[3] = intl2.string(directoryChannelId(1236).t.Ie60Wc);
   items[1] = callback(directoryChannelId(4474).Text, obj2);
   obj[1] = items;
-  const items1 = [callback2(_onSubmit, obj), ];
+  const items1 = [callback2(_onSubmit, obj)];
   let obj3 = {
     onSubmit(arg0, arg1) {
       const self = this;
@@ -149,7 +169,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
       return applyArgumentsResult;
     },
     buttonLabel: null,
-    directoryChannelId: null
+    directoryChannelId: null,
   };
   const intl3 = directoryChannelId(1236).intl;
   obj3[1] = intl3.string(directoryChannelId(1236).t.H9jxS1);
@@ -158,4 +178,4 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   obj[2] = items1;
   obj[0] = callback2(closure_5, obj);
   return callback(directoryChannelId(11876).GuildDirectoryAddModalScreen, obj);
-};
+}

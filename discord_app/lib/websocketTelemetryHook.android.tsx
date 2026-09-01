@@ -32,8 +32,7 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
           tmp15 = first;
         }
         return tmp15;
-      } catch (err) {
-      }
+      } catch (err) {}
     })(arg0);
     if (null != tmp) {
       obj.url = tmp;
@@ -70,8 +69,7 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
               }
               flag = true;
             }
-          } catch (err) {
-          }
+          } catch (err) {}
         }
       }
     }
@@ -86,8 +84,7 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
     }
     try {
       callback(obj);
-    } catch (err) {
-    }
+    } catch (err) {}
   }
   if (typeof globalThis !== "undefined") {
     let _globalThis = globalThis;

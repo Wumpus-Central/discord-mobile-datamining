@@ -38,5 +38,5 @@ export default function isInviteActive(party, activity) {
     }
     return tmp12;
   }
-};
+}
 export const EMBED_LIFETIME = result;

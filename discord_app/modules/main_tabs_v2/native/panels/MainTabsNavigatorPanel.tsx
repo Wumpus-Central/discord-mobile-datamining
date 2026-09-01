@@ -19,7 +19,9 @@ obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 obj[1] = obj;
 obj[2] = { flex: 1 };
 let closure_13 = createCacheKey.createStyles(obj);
-let closure_14 = { code: "function MainTabsNavigatorPanelTsx1(){const{translateX,highestFullyRenderedScreenIndex}=this.__closure;return{opacity:translateX.get()>0&&highestFullyRenderedScreenIndex.get()<1?1:0};}" };
+let closure_14 = {
+  code: "function MainTabsNavigatorPanelTsx1(){const{translateX,highestFullyRenderedScreenIndex}=this.__closure;return{opacity:translateX.get()>0&&highestFullyRenderedScreenIndex.get()<1?1:0};}",
+};
 let tmp5 = new timestampDefault("MainTabsNavigatorPanel");
 const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
   let tmp = callback2();
@@ -51,14 +53,17 @@ const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
     }
   }, items);
   const arr2 = isChatLockedOpen(drawerWidth[14])(navigation);
-  const tmp10 = callback(importAllResult.useState(() => {
-    first = arr2[0];
-    let type;
-    if (first != null) {
-      type = first.type;
-    }
-    return type === navigation(drawerWidth[14]).ChannelScreenType.DEFAULT;
-  }), 2);
+  const tmp10 = callback(
+    importAllResult.useState(() => {
+      first = arr2[0];
+      let type;
+      if (first != null) {
+        type = first.type;
+      }
+      return type === navigation(drawerWidth[14]).ChannelScreenType.DEFAULT;
+    }),
+    2,
+  );
   let first = tmp10[0];
   closure_7 = tmp10[1];
   const first1 = arr2[0];
@@ -97,11 +102,17 @@ const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
       navigation.pop(num2);
     }
   }, items2);
-  let tmp15 = callback(importAllResult.useState(() => navigation(drawerWidth[14]).isActiveTabsGuilds(navigation.getState())), 2);
+  let tmp15 = callback(
+    importAllResult.useState(() => navigation(drawerWidth[14]).isActiveTabsGuilds(navigation.getState())),
+    2,
+  );
   const first2 = tmp15[0];
   closure_12 = tmp15[1];
   const tmp8 = isChatLockedOpen(drawerWidth[11])();
-  [isChatBesideChannelList, closure_13] = callback(importAllResult.useState(() => first2), 2);
+  [isChatBesideChannelList, closure_13] = callback(
+    importAllResult.useState(() => first2),
+    2,
+  );
   const items3 = [navigation];
   const effect1 = importAllResult.useEffect(() => {
     function handleStateChange(data) {
@@ -316,7 +327,7 @@ const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
     obj2[0] = panelGestureContext;
     let obj3 = { gesture: null, children: null };
     obj3[0] = gesture;
-    const items12 = [tmp.container, ];
+    const items12 = [tmp.container];
     let containerBackground = !isCustomThemeActive;
     if (!isCustomThemeActive) {
       containerBackground = tmp.containerBackground;
@@ -331,7 +342,7 @@ const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
     obj6[0] = items13;
     obj6[1] = !tmp38;
     obj6[2] = "no-hide-descendants";
-    const items14 = [callback(tmp5(tmp3[27]), {}), ];
+    const items14 = [callback(tmp5(tmp3[27]), {})];
     let tmp45Result;
     if (tmp43) {
       const obj7 = { translateX: null, maxWidth: null };
@@ -341,9 +352,20 @@ const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
     }
     items14[1] = tmp45Result;
     obj6[3] = items14;
-    const items15 = [first2(tmp5(tmp3[21]).View, obj6), callback(tmp5(tmp3[29]), {}), ];
+    const items15 = [first2(tmp5(tmp3[21]).View, obj6), callback(tmp5(tmp3[29]), {})];
     if (arr2.length > 0) {
-      const obj8 = { screens: null, screenStackActive: null, translateX: null, isDragging: null, maxWidth: null, highestFullyRenderedScreenIndex: null, shouldFreeze: null, focusChatPressableComponent: null, firstScreenWidth: null, firstScreenFrame: null };
+      const obj8 = {
+        screens: null,
+        screenStackActive: null,
+        translateX: null,
+        isDragging: null,
+        maxWidth: null,
+        highestFullyRenderedScreenIndex: null,
+        shouldFreeze: null,
+        focusChatPressableComponent: null,
+        firstScreenWidth: null,
+        firstScreenFrame: null,
+      };
       obj8[0] = arr2;
       tmp5Result = tmp5(tmp3[30]);
       if (!first) {

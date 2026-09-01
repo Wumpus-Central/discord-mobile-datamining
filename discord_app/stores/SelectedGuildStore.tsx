@@ -42,8 +42,7 @@ let c8 = null;
 let c9 = null;
 let closure_10 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class SelectedGuildStore extends PersistedStore {
-}
+class SelectedGuildStore extends PersistedStore {}
 const prototype = SelectedGuildStore.prototype;
 prototype["initialize"] = function initialize(selectedGuildTimestampMillis) {
   this.mustEmitChanges((type) => "CONNECTION_OPEN" !== type.type);
@@ -284,7 +283,7 @@ const selectedGuildStore = new SelectedGuildStore(dispatcherDefault, {
   LOGOUT: function handleLogout() {
     c8 = null;
     c9 = null;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/SelectedGuildStore.tsx");
 

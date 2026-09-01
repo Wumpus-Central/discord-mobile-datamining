@@ -87,7 +87,9 @@ function FormSwitchRow(onValueChange) {
   return callback2(tmp14, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ trailing: { flex: 1, flexDirection: "row", width: "100%", alignItems: "center" } });
+let closure_8 = createCacheKey.createStyles({
+  trailing: { flex: 1, flexDirection: "row", width: "100%", alignItems: "center" },
+});
 const result = require("set").fileFinishedImporting("design/void/Form/native/FormSwitchRow.tsx");
 
 export default function FormSwitchRowContainer(DEPRECATED_style) {
@@ -105,4 +107,4 @@ export default function FormSwitchRowContainer(DEPRECATED_style) {
     tmp3Result = tmp3(FormSwitchRow, obj);
   }
   return tmp3Result;
-};
+}

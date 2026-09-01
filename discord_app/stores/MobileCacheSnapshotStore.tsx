@@ -26,8 +26,14 @@ class MobileCacheSnapshotStore extends Store {
     closure_0 = tmp2;
     tmp5 = require("../../_runtime/metro/00038__.js");
     tmp5Result = tmp5(null != tmp2.getClass().displayName, "Snapshot stores need a display name");
-    tmp7 = require("../../_runtime/metro/00038__.js")(!("CLEAR_CACHES" in global), "MobileCacheSnapshotStores cannot use the 'CLEAR_CACHES' action");
-    tmp8 = require("../../_runtime/metro/00038__.js")(!("WRITE_CACHES" in global), "MobileCacheSnapshotStores cannot use the 'WRITE_CACHES' action");
+    tmp7 = require("../../_runtime/metro/00038__.js")(
+      !("CLEAR_CACHES" in global),
+      "MobileCacheSnapshotStores cannot use the 'CLEAR_CACHES' action",
+    );
+    tmp8 = require("../../_runtime/metro/00038__.js")(
+      !("WRITE_CACHES" in global),
+      "MobileCacheSnapshotStores cannot use the 'WRITE_CACHES' action",
+    );
     allStores = MobileCacheSnapshotStore.allStores;
     arr = allStores.push(tmp2);
     return tmp2;
@@ -42,7 +48,7 @@ Object.defineProperty(prototype, "persistKey", {
   get: function persistKey() {
     return "" + this.getClass().displayName + "-snapshot";
   },
-  set: undefined
+  set: undefined,
 });
 prototype["clear"] = function clear() {
   const Storage = Storage2.Storage;

@@ -20,7 +20,7 @@ function loadSavedGuildStickers() {
 }
 function _loadSavedGuildStickers() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -61,7 +61,11 @@ function _loadSavedGuildStickers() {
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = obj2.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", () => callback(table[7]).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", () => closure_1_1(closure_1_2[8]).getAsync(closure_0)));
+                obj1[0] = obj2.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", () =>
+                  callback(table[7]).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", () =>
+                    closure_1_1(closure_1_2[8]).getAsync(closure_0),
+                  ),
+                );
                 return obj1;
               }
             }
@@ -101,8 +105,7 @@ function _loadSavedGuildStickers() {
 let obj = { Unloaded: 0, [0]: "Unloaded", Loaded: 1, [1]: "Loaded" };
 let Unloaded = obj.Unloaded;
 const Store = initializeDefault.Store;
-class StickersStore extends Store {
-}
+class StickersStore extends Store {}
 const prototype = StickersStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_6, closure_5, closure_7);
@@ -113,13 +116,13 @@ Object.defineProperty(prototype, "isLoaded", {
   get: function isLoaded() {
     return Unloaded !== obj.Unloaded;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "loadState", {
   get: function loadState() {
     return Unloaded;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getStickerMetadataArrays"] = function getStickerMetadataArrays() {
   loadSavedGuildStickers();
@@ -130,13 +133,13 @@ Object.defineProperty(prototype, "hasLoadedStickerPacks", {
   get: function hasLoadedStickerPacks() {
     return store2.hasLoadedStickerPacks;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isFetchingStickerPacks", {
   get: function isFetchingStickerPacks() {
     return store2.isFetchingStickerPacks;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getStickerById"] = function getStickerById(arg0) {
   loadSavedGuildStickers();
@@ -185,7 +188,7 @@ obj = {
   },
   LOGOUT: function handleLogout() {
     Unloaded = obj.Unloaded;
-  }
+  },
 };
 const stickersStore = new StickersStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/stickers/StickersStore.tsx");

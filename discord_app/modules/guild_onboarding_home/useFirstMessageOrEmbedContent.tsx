@@ -37,4 +37,4 @@ export default function useFirstMessageOrEmbedContent(content) {
       return null;
     }
   }
-};
+}

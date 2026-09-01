@@ -172,6 +172,4 @@ map4;
 map5;
 getVoiceStatesForGuild = set.fileFinishedImporting("modules/app_startup/AllGatewayConnectionStores.native.tsx");
 
-export default function noop() {
-
-};
+export default function noop() {}

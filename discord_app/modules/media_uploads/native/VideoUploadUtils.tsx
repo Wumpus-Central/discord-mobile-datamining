@@ -62,7 +62,23 @@ VideoQualityTarget.fromCompressionQuality = function fromCompressionQuality(vide
   }
   return VERY_HIGH;
 };
-obj = { bitrateFloor: 300000, createHDR: false, frameRate: 30, keyFrameIntervalSeconds: 2, rotationDegrees: 0, skipVideoTranscode: false, targetBitrate: VideoQualityTarget.MEDIUM.targetBitrate, targetHeight: 480, targetWidth: 640, useHEVC: false, videoQuality: VideoQualityTarget.MEDIUM, hevcIsSupported: false, useTranscodedVideoForMovSources: true, transmuxLivePhotos: true, progressUpdateGranularity: 10 };
+obj = {
+  bitrateFloor: 300000,
+  createHDR: false,
+  frameRate: 30,
+  keyFrameIntervalSeconds: 2,
+  rotationDegrees: 0,
+  skipVideoTranscode: false,
+  targetBitrate: VideoQualityTarget.MEDIUM.targetBitrate,
+  targetHeight: 480,
+  targetWidth: 640,
+  useHEVC: false,
+  videoQuality: VideoQualityTarget.MEDIUM,
+  hevcIsSupported: false,
+  useTranscodedVideoForMovSources: true,
+  transmuxLivePhotos: true,
+  progressUpdateGranularity: 10,
+};
 const tmp2 = new timestampDefault("VideoUploadUtils.tsx");
 let result = set.fileFinishedImporting("modules/media_uploads/native/VideoUploadUtils.tsx");
 

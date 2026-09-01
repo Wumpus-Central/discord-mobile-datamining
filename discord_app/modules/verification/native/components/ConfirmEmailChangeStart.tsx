@@ -12,8 +12,16 @@ import { useNavigation } from "../../../../design/components/Navigator/native/us
 const require = arg1;
 ({ View: closure_6, Image: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles({ container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" }, image: { height: 190, width: 220, resizeMode: "contain" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, button: { marginTop: 16, width: "100%" } });
-const result = require("set").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeStart.tsx");
+let closure_12 = createCacheKey.createStyles({
+  container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" },
+  image: { height: 190, width: 220, resizeMode: "contain" },
+  title: { marginTop: 16, textAlign: "center" },
+  body: { marginTop: 8, lineHeight: 18, textAlign: "center" },
+  button: { marginTop: 16, width: "100%" },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/verification/native/components/ConfirmEmailChangeStart.tsx",
+);
 
 export default function ConfirmEmailChangeStart() {
   const tmp = callback4();
@@ -38,13 +46,27 @@ export default function ConfirmEmailChangeStart() {
     let obj2 = { style: null, source: null };
     obj2[0] = tmp.image;
     obj2[1] = navigation(7701);
-    const items1 = [callback2(closure_7, obj2), , , ];
-    const obj3 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    const items1 = [callback2(closure_7, obj2), , ,];
+    const obj3 = {
+      style: null,
+      accessibilityRole: "header",
+      variant: "heading-xl/extrabold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj3[0] = tmp.title;
     const intl2 = tmp2(1236).intl;
     obj3[4] = intl2.string(tmp2(1236).t.dQ71Wa);
     items1[1] = callback2(tmp2(4474).Text, obj3);
-    items1[2] = intl.format(tmp2(1236).t.oMFSgi, obj).map((children) => closure_1_10(lib(table[15]).Text, { style: lib.body, variant: "text-sm/medium", color: "text-default", children }, arg1));
+    items1[2] = intl
+      .format(tmp2(1236).t.oMFSgi, obj)
+      .map((children) =>
+        closure_1_10(
+          lib(table[15]).Text,
+          { style: lib.body, variant: "text-sm/medium", color: "text-default", children },
+          arg1,
+        ),
+      );
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.button;
     const obj5 = { text: null, onPress: null, loading: null, grow: true };
@@ -58,4 +80,4 @@ export default function ConfirmEmailChangeStart() {
     obj[2] = callback3(closure_6, obj1);
     return callback2(closure_8, obj);
   }
-};
+}

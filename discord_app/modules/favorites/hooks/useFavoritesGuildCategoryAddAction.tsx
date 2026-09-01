@@ -26,4 +26,4 @@ export default function useFavoritesGuildCategoryAddAction(id) {
     }
   }
   return tmp4;
-};
+}

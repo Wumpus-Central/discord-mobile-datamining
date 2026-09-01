@@ -7,7 +7,9 @@ import createCacheKey from "../design/components/Styles/native/createStyles.tsx"
 
 const require = arg1;
 noopAll;
-let closure_6 = createCacheKey.createStyles({ wrapper: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" } });
+let closure_6 = createCacheKey.createStyles({
+  wrapper: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" },
+});
 const result = require("set").fileFinishedImporting("components_native/MemberRolesList.tsx");
 
 export default function MemberRolesList(userRoles) {
@@ -55,4 +57,4 @@ export default function MemberRolesList(userRoles) {
     }
   }
   return tmp2Result;
-};
+}

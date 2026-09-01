@@ -27,8 +27,7 @@ let c14 = false;
 let c15 = null;
 let c16 = false;
 const Store = initializeDefault.Store;
-class GuildSettingsModalRolesStore extends Store {
-}
+class GuildSettingsModalRolesStore extends Store {}
 const prototype = GuildSettingsModalRolesStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_5, closure_4);
@@ -37,7 +36,7 @@ Object.defineProperty(prototype, "submitting", {
   get: function submitting(arg0) {
     return CLOSED === FormStates.SUBMITTING;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getUpdates"] = function getUpdates() {
   if (null != c9) {
@@ -61,31 +60,31 @@ Object.defineProperty(prototype, "order", {
   get: function order() {
     return c9;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "guild", {
   get: function guild() {
     return c10;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "role", {
   get: function role(key10, oldValue10, newValue10) {
     return c11;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "permissions", {
   get: function permissions(arg0) {
     return c13;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasPermissionChanges", {
   get: function hasPermissionChanges() {
     return c14;
   },
-  set: undefined
+  set: undefined,
 });
 GuildSettingsModalRolesStore.displayName = "GuildSettingsModalRolesStore";
 const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(dispatcherDefault, {
@@ -211,7 +210,7 @@ const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(dispatcher
     timeout = setTimeout(() => {
       c9 = null;
     }, 400);
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsModalRolesStore.tsx");
 

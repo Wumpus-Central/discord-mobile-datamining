@@ -7,4 +7,4 @@ const result = set.fileFinishedImporting("modules/premium/gifting/native/openGif
 
 export default function openGiftingBadgeInfoActionSheet() {
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10521, dependencyMap.paths), "GiftingBadgeInfoActionSheet");
-};
+}

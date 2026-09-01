@@ -14,6 +14,28 @@ export default function CustomStatusEntryRow(content) {
   let obj = useReplyActions;
   const replyActions = obj.useReplyActions({ content });
   ({ openEmojiPicker, openReplyActionSheet } = replyActions);
-  obj = { id: content.id, userId: content.author_id, customStatusExtra: content.extra, renderForScreenshot, visible, variant: { kind: "otherUserStatus", handlePressPrimary: openReplyActionSheet, handlePressSecondary: openEmojiPicker } };
-  return jsx(UploadPlaceholderDefault, { id: content.id, userId: content.author_id, customStatusExtra: content.extra, renderForScreenshot, visible, variant: { kind: "otherUserStatus", handlePressPrimary: openReplyActionSheet, handlePressSecondary: openEmojiPicker } });
-};
+  obj = {
+    id: content.id,
+    userId: content.author_id,
+    customStatusExtra: content.extra,
+    renderForScreenshot,
+    visible,
+    variant: {
+      kind: "otherUserStatus",
+      handlePressPrimary: openReplyActionSheet,
+      handlePressSecondary: openEmojiPicker,
+    },
+  };
+  return jsx(UploadPlaceholderDefault, {
+    id: content.id,
+    userId: content.author_id,
+    customStatusExtra: content.extra,
+    renderForScreenshot,
+    visible,
+    variant: {
+      kind: "otherUserStatus",
+      handlePressPrimary: openReplyActionSheet,
+      handlePressSecondary: openEmojiPicker,
+    },
+  });
+}

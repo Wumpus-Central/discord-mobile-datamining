@@ -11,4 +11,4 @@ export default function getChannelCopyForEmbeddedActivity(arg0) {
     stringResult = intl.string(getSystemLocale.t["2YCamo"]);
   }
   return stringResult;
-};
+}

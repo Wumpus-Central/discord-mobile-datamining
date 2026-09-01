@@ -34,7 +34,18 @@ export default function FormSwitch(value) {
       borderColor = ThemesDefault.unsafe_rawColors.PRIMARY_400;
     }
   }
-  obj = { accessible, trackColor: { true: color, false: borderColor }, ios_backgroundColor: null, value: null, disabled: null, style: null, onValueChange: null, accessibilityState: null, accessibilityLabel: null, accessibilityHint: null };
+  obj = {
+    accessible,
+    trackColor: { true: color, false: borderColor },
+    ios_backgroundColor: null,
+    value: null,
+    disabled: null,
+    style: null,
+    onValueChange: null,
+    accessibilityState: null,
+    accessibilityLabel: null,
+    accessibilityHint: null,
+  };
   let tmp11;
   if (false === (undefined !== value && value)) {
     if (tmp3) {
@@ -50,5 +61,18 @@ export default function FormSwitch(value) {
   obj[7] = { disabled: undefined !== disabled && disabled, selected: undefined !== value && value };
   obj[8] = accessibilityLabel;
   obj[9] = accessibilityHint;
-  return <Switch accessible={accessible} trackColor={{ true: color, false: borderColor }} ios_backgroundColor={null} value={null} disabled={null} style={null} onValueChange={null} accessibilityState={null} accessibilityLabel={null} accessibilityHint={null} />;
-};
+  return (
+    <Switch
+      accessible={accessible}
+      trackColor={{ true: color, false: borderColor }}
+      ios_backgroundColor={null}
+      value={null}
+      disabled={null}
+      style={null}
+      onValueChange={null}
+      accessibilityState={null}
+      accessibilityLabel={null}
+      accessibilityHint={null}
+    />
+  );
+}

@@ -30,8 +30,13 @@ export default function SingleVideoCall(channel) {
       const participant = bottom(right[8]).selectParticipant(channel.id, null);
     },
     onLongPress(user) {
-      bottom(right[9])({ userId: user.user.id, channelId: channel.id, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
-    }
+      bottom(right[9])({
+        userId: user.user.id,
+        channelId: channel.id,
+        isVoiceContext: true,
+        sourceAnalyticsLocations: analyticsLocations,
+      });
+    },
   };
   return jsx(bottom(right[5]), {
     gestureEnabled: true,
@@ -45,7 +50,12 @@ export default function SingleVideoCall(channel) {
       const participant = bottom(right[8]).selectParticipant(channel.id, null);
     },
     onLongPress(user) {
-      bottom(right[9])({ userId: user.user.id, channelId: channel.id, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
-    }
+      bottom(right[9])({
+        userId: user.user.id,
+        channelId: channel.id,
+        isVoiceContext: true,
+        sourceAnalyticsLocations: analyticsLocations,
+      });
+    },
   });
-};
+}

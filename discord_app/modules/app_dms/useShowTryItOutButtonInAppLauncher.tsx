@@ -30,4 +30,4 @@ export default function useShowTryItOutButtonInAppLauncher(arg0) {
     tmp8 = isPrimaryAppCommandUsableInAppDM;
   }
   return tmp8;
-};
+}

@@ -11,4 +11,4 @@ export default function isDiscordVisible() {
     isInPipModeResult = obj.isInPipMode();
   }
   return isInPipModeResult;
-};
+}

@@ -6,5 +6,13 @@ const result = set.fileFinishedImporting("modules/activities/utils/deferJoinActi
 
 export default function deferJoinActivityApplication(arg0) {
   ({ channelId, applicationId, intent, inviterUserId, analyticsLocations, commandOrigin } = arg0);
-  dispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_DEFERRED_OPEN", channelId, applicationId, intent, inviterUserId, analyticsLocations, commandOrigin });
-};
+  dispatcherDefault.dispatch({
+    type: "EMBEDDED_ACTIVITY_DEFERRED_OPEN",
+    channelId,
+    applicationId,
+    intent,
+    inviterUserId,
+    analyticsLocations,
+    commandOrigin,
+  });
+}

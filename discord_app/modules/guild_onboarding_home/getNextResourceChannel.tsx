@@ -14,12 +14,14 @@ export default function getCurrentAndNextResourceChannel(closure_0) {
     items = [resourceChannels[findIndexResult], resourceChannels[(findIndexResult + 1) % resourceChannels.length]];
   }
   return items;
-};
+}
 export const usePreviousAndNextResourceChannel = function usePreviousAndNextResourceChannel(guild_id, id) {
   const _require = guild_id;
   dependencyMap = id;
   const items = [closure_2];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.getResourceChannels(closure_0));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_2.getResourceChannels(closure_0),
+  );
   const findIndexResult = stateFromStores.findIndex((channelId) => channelId.channelId === closure_1);
   if (findIndexResult >= 0) {
     if (stateFromStores.length > 1) {
@@ -27,7 +29,10 @@ export const usePreviousAndNextResourceChannel = function usePreviousAndNextReso
         const items1 = [null, stateFromStores[1 - findIndexResult]];
         let items2 = items1;
       } else {
-        items2 = [stateFromStores[(findIndexResult - 1) % stateFromStores.length], stateFromStores[(findIndexResult + 1) % stateFromStores.length]];
+        items2 = [
+          stateFromStores[(findIndexResult - 1) % stateFromStores.length],
+          stateFromStores[(findIndexResult + 1) % stateFromStores.length],
+        ];
       }
     }
     return items2;

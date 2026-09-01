@@ -7,9 +7,19 @@ import RegistrationTransitionActionTypes from "../../../RegistrationConstants.ts
 import { AbortCodes } from "../../../../../Constants.tsx";
 
 const require = arg1;
-({ setRegistrationErrors: closure_6, updateRegistrationOptions: error, useRegistrationUIStore: closure_8 } = useRegistrationUIStore);
-({ authStateToRegisterTransitionStep: c9, RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: unpackModuleId } = RegistrationTransitionActionTypes);
-const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useIdentityRegistrationStep.tsx");
+({
+  setRegistrationErrors: closure_6,
+  updateRegistrationOptions: error,
+  useRegistrationUIStore: closure_8,
+} = useRegistrationUIStore);
+({
+  authStateToRegisterTransitionStep: c9,
+  RegisterTransitionSteps: c10,
+  RegistrationTransitionActionTypes: unpackModuleId,
+} = RegistrationTransitionActionTypes);
+const result = require("set").fileFinishedImporting(
+  "modules/auth/native/components/utils/useIdentityRegistrationStep.tsx",
+);
 
 export const useIdentityRegistrationStep = function useIdentityRegistrationStep(REGISTER_IDENTITY, inputMode) {
   let _require = REGISTER_IDENTITY;
@@ -42,7 +52,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -150,7 +160,14 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
             obj6[2] = closure_2_11.SUCCESS;
             closure_1_3(obj6);
             ref = 0;
-            const obj7 = { title: null, description: null, phone: null, sourceState: null, onPhoneTokenReceived: null, onBail: null };
+            const obj7 = {
+              title: null,
+              description: null,
+              phone: null,
+              sourceState: null,
+              onPhoneTokenReceived: null,
+              onBail: null,
+            };
             const intl = callback(navigation[8]).intl;
             obj7[0] = intl.string(callback(navigation[8]).t.h7hdQh);
             const intl2 = callback(navigation[8]).intl;
@@ -164,7 +181,11 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
               obj[1] = closure_1;
               obj[2] = arg0;
               v3(obj);
-              obj = { step: closure_2_10.PHONE_VERIFICATION, toStep: callback(closure_2_2[14]).getNextRegistrationTransitionStep(callback), actionType: closure_2_11.SUCCESS };
+              obj = {
+                step: closure_2_10.PHONE_VERIFICATION,
+                toStep: callback(closure_2_2[14]).getNextRegistrationTransitionStep(callback),
+                actionType: closure_2_11.SUCCESS,
+              };
               _undefined(obj);
               const obj3 = callback(closure_2_2[14]);
               const nextAuthState = callback(closure_2_2[14]).getNextAuthState(callback);
@@ -192,7 +213,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
     })();
   });
   let items1 = [REGISTER_IDENTITY, first1, context, navigation];
-  const callback1 = React.useCallback(function() {
+  const callback1 = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -237,7 +258,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
         stringResult = intl.string(callback(tmp[8]).t.nr0MVZ);
       }
       return stringResult;
-    }, items3)
+    }, items3),
   };
   return obj;
 };

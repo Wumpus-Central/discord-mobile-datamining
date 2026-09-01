@@ -7,8 +7,26 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let obj = { shape: require("SolidCutout").CutoutShape.RoundedRect, x: require("GuildIconSizes").ImageSizes[require("GuildIconSizes").GuildIconSizes.NORMAL] - -6 - 24, y: -6, width: 24, height: 24, cornerRadius: ThemesDefault.radii.sm };
-let closure_9 = createCacheKey.createStyles({ warningBadge: { position: "absolute", top: -6, right: -6, width: 24, height: 24, alignItems: "center", justifyContent: "center" }, warningIcon: { width: 16, height: 16 } });
+let obj = {
+  shape: require("SolidCutout").CutoutShape.RoundedRect,
+  x: require("GuildIconSizes").ImageSizes[require("GuildIconSizes").GuildIconSizes.NORMAL] - -6 - 24,
+  y: -6,
+  width: 24,
+  height: 24,
+  cornerRadius: ThemesDefault.radii.sm,
+};
+let closure_9 = createCacheKey.createStyles({
+  warningBadge: {
+    position: "absolute",
+    top: -6,
+    right: -6,
+    width: 24,
+    height: 24,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  warningIcon: { width: 16, height: 16 },
+});
 const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/AlertNotification.tsx");
 
 export default function AlertNotification(notification) {
@@ -51,10 +69,13 @@ export default function AlertNotification(notification) {
   obj = { children: null };
   obj1 = { cutouts: items2, children: callback(guild(6004), { guild, selected: false }) };
   items2 = [obj];
-  const items3 = [callback(guild(8098), obj1), ];
+  const items3 = [callback(guild(8098), obj1)];
   const obj2 = { style: tmp.warningBadge, children: null };
   const tmp8 = guild(8098);
-  obj2[1] = callback(channel(8736).WarningIcon, { style: tmp.warningIcon, color: guild(712).colors.ICON_FEEDBACK_WARNING });
+  obj2[1] = callback(channel(8736).WarningIcon, {
+    style: tmp.warningIcon,
+    color: guild(712).colors.ICON_FEEDBACK_WARNING,
+  });
   items3[1] = callback(View, obj2);
   obj[0] = items3;
   obj[0] = callback2(closure_6, obj);
@@ -63,4 +84,4 @@ export default function AlertNotification(notification) {
   obj[3] = callback;
   obj[4] = notification;
   return callback(channel(10255).NotificationPressable, obj);
-};
+}

@@ -51,7 +51,7 @@ function Content() {
   let tmpResult = tmp(9905);
   const intl = tmp4(1236).intl;
   obj[1] = intl.string(getSystemLocale.t["6XpbbR"]);
-  const items = [callback2(tmpResult, obj), , , , , , , ];
+  const items = [callback2(tmpResult, obj), , , , , , ,];
   obj1 = { description: null, image: null, imageUploadSize: null, previewShape: null, setImage: null, disabled: null };
   tmpResult = tmp(17314);
   const intl2 = tmp4(1236).intl;
@@ -72,7 +72,18 @@ function Content() {
   const intl3 = tmp4(1236).intl;
   obj2[1] = intl3.string(getSystemLocale.t.rJ6Oad);
   items[2] = callback2(FormHeaderDefault, obj2);
-  obj3 = { style: tmp3.textInput, showTopContainer: false, multiline: false, maxLength: closure_7, value: tmp7, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null, disabled: null };
+  obj3 = {
+    style: tmp3.textInput,
+    showTopContainer: false,
+    multiline: false,
+    maxLength: closure_7,
+    value: tmp7,
+    placeholder: null,
+    onChange: null,
+    autoFocus: true,
+    clearButtonVisibility: null,
+    disabled: null,
+  };
   const intl4 = tmp4(1236).intl;
   obj3[5] = intl4.string(getSystemLocale.t["i4/g+E"]);
   obj3[6] = tmp8;
@@ -84,7 +95,17 @@ function Content() {
   const intl5 = tmp4(1236).intl;
   obj4[1] = intl5.string(getSystemLocale.t["74JctW"]);
   items[4] = callback2(FormHeaderDefault, obj4);
-  const obj5 = { style: tmp3.textInput, showTopContainer: false, multiline: true, maxLength: closure_6, numberOfLines: 3, value: tmp15, placeholder: null, onChange: null, disabled: null };
+  const obj5 = {
+    style: tmp3.textInput,
+    showTopContainer: false,
+    multiline: true,
+    maxLength: closure_6,
+    numberOfLines: 3,
+    value: tmp15,
+    placeholder: null,
+    onChange: null,
+    disabled: null,
+  };
   const intl6 = tmp4(1236).intl;
   obj5[6] = intl6.string(getSystemLocale.t["3YHwoG"]);
   obj5[7] = tmp16;
@@ -105,10 +126,16 @@ function Content() {
   obj8[0] = items;
   return tmp22(tmp23, obj8);
 }
-({ GuildRoleSubscriptionsTierScenes: c5, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_6, MAX_SUBSCRIPTION_TIER_NAME_LENGTH: error } = MAX_SUBSCRIPTION_TIERS);
+({
+  GuildRoleSubscriptionsTierScenes: c5,
+  MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_6,
+  MAX_SUBSCRIPTION_TIER_NAME_LENGTH: error,
+} = MAX_SUBSCRIPTION_TIERS);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 const memoResult = importAllResult.memo(() => callback2(Content, {}));
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx",
+);
 
 export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   let obj = useEditStateContext;
@@ -137,5 +164,5 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   const merged = Object.assign(arg0);
   obj.children = callback2(closure_13, {});
   return callback2(HeaderDefault, obj);
-};
+}
 export const GuildRoleSubscriptionTierDetailsTab = memoResult;

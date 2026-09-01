@@ -7,7 +7,9 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmCancelFriendRequest.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_profile/native/UserProfileConfirmCancelFriendRequest.tsx",
+);
 
 export default function UserProfileConfirmCancelFriendRequest(arg0) {
   ({ userDisplayName, onConfirm } = arg0);
@@ -21,7 +23,7 @@ export default function UserProfileConfirmCancelFriendRequest(arg0) {
   const intl3 = getSystemLocale.intl;
   obj[1] = intl3.string(getSystemLocale.t["bTfA//"]);
   obj[2] = onConfirm;
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "cancel-friend-request"), ];
+  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "cancel-friend-request")];
   obj1 = { variant: "secondary", text: null };
   const intl4 = getSystemLocale.intl;
   obj1[1] = intl4.string(getSystemLocale.t["eN6+rI"]);
@@ -29,4 +31,4 @@ export default function UserProfileConfirmCancelFriendRequest(arg0) {
   obj[0] = items;
   obj[2] = callback2(getAlertModalItemKey.AlertActions, obj);
   return callback(getAlertModalItemKey.AlertModal, obj);
-};
+}

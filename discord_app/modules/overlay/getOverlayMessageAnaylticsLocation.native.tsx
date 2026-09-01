@@ -5,4 +5,4 @@ const result = set.fileFinishedImporting("modules/overlay/getOverlayMessageAnayl
 
 export default function getOverlayMessageAnalyticsLocation() {
   return null;
-};
+}

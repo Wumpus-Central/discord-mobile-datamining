@@ -8,8 +8,12 @@ import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 ({ ComponentActions: error, Routes: closure_8 } = ME);
-let closure_9 = { code: "function usePanelOpenStateTsx1(){const{connected}=this.__closure;return{connected:connected.get()};}" };
-let closure_10 = { code: "function usePanelOpenStateTsx2(props,previous){const{runOnJS,doCloseChannel}=this.__closure;const isConnected=props.connected;const wasConnected=(previous===null||previous===void 0?void 0:previous.connected)===true;if(wasConnected&&!isConnected){runOnJS(doCloseChannel)();}}" };
+let closure_9 = {
+  code: "function usePanelOpenStateTsx1(){const{connected}=this.__closure;return{connected:connected.get()};}",
+};
+let closure_10 = {
+  code: "function usePanelOpenStateTsx2(props,previous){const{runOnJS,doCloseChannel}=this.__closure;const isConnected=props.connected;const wasConnected=(previous===null||previous===void 0?void 0:previous.connected)===true;if(wasConnected&&!isConnected){runOnJS(doCloseChannel)();}}",
+};
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/controller/usePanelOpenState.tsx");
 
 export default function usePanelOpenState(arg0, arg1, arg2, connected) {
@@ -82,7 +86,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
       ComponentDispatch2.unsubscribe(closure_2_7.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items);
-  const tmp3 = callback(doCloseChannel.useState(() => callback2(12327).getHistory().location.pathname), 2);
+  const tmp3 = callback(
+    doCloseChannel.useState(() => callback2(12327).getHistory().location.pathname),
+    2,
+  );
   const first = tmp3[0];
   closure_6 = tmp3[1];
   const items1 = [arg0, first];
@@ -114,4 +121,4 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
       callback();
     };
   }, items1);
-};
+}

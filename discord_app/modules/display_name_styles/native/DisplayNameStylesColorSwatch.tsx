@@ -24,7 +24,7 @@ export default function DisplayNameStylesColorSwatch(colors) {
   if (colors.effectId === DisplayNameEffect.DisplayNameEffect.GUMMY) {
     if (colors.length > 0) {
       let obj = { style: null, children: null };
-      const items = [, ];
+      const items = [,];
       ({ colorSwatch: arr3[0], gummySwatch: arr3[1] } = tmp);
       obj[0] = items;
       obj = { colors: null };
@@ -47,7 +47,7 @@ export default function DisplayNameStylesColorSwatch(colors) {
       const tmp2Result = int2hslRaw;
     }
     const obj2 = { style: null };
-    const items1 = [tmp.colorSwatch, ];
+    const items1 = [tmp.colorSwatch];
     const obj3 = { backgroundColor: null };
     obj3[0] = str;
     items1[1] = obj3;
@@ -55,4 +55,4 @@ export default function DisplayNameStylesColorSwatch(colors) {
     return <View style={null} />;
   }
   const tmp2 = require;
-};
+}

@@ -17,7 +17,12 @@ export const submitDateOfBirth = function submitDateOfBirth(c0, closure_1_2) {
   obj = { source: closure_1_2, action: AgeGateAnalyticAction.AGE_GATE_SUBMITTED };
   obj.track(constants.AGE_GATE_ACTION, obj);
   const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-  obj = { url: constants2.ME, oldFormErrors: true, body: { date_of_birth: c0.format("YYYY-MM-DD") }, rejectWithError: false };
+  obj = {
+    url: constants2.ME,
+    oldFormErrors: true,
+    body: { date_of_birth: c0.format("YYYY-MM-DD") },
+    rejectWithError: false,
+  };
   obj1 = { date_of_birth: c0.format("YYYY-MM-DD") };
   return HTTP.patch(obj).then((user) => {
     let obj = closure_1_1(closure_1_2[5]);

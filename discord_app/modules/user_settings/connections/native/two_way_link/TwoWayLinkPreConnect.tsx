@@ -15,7 +15,7 @@ function _authorizeLink() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -97,7 +97,9 @@ function _authorizeLink() {
 let closure_11 = new timestampDefault("TwoWayLink");
 let closure_12 = createCacheKey.createStyles({ image: { marginBottom: 32 }, redirect: { marginTop: 8 } });
 const tmp4 = new timestampDefault("TwoWayLink");
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkPreConnect.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/TwoWayLinkPreConnect.tsx",
+);
 
 export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) {
   platformType = platformType.platformType;
@@ -115,91 +117,94 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
   callback2 = callback1.useRef(undefined);
   const items = [onError, platformType];
   const items1 = [platformType, onNext];
-  callback = callback1.useCallback(callback2(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  callback = callback1.useCallback(
+    callback2(function* () {
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let state = tmp3;
+              closure_0 = tmp7;
+              closure_0 = undefined;
+              state = undefined;
+              v0(true);
+              v0 = 1;
+              c4 = 2;
+              c5 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = (function authorizeLink(closure_1_0) {
+                const self = this;
+                const apply = closure_13.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(closure_1_0);
+              return obj1;
+            }
+          } else if (1 === tmp7) {
+            v0 = 0;
+            state();
+            c5 = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = undefined;
+            return obj2;
+          } else if (arg0 === 1) {
             c5 = 3;
             throw arg1;
           } else if (arg0 === 2) {
+            v0 = 0;
             c5 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           } else {
-            let state = tmp3;
-            closure_0 = tmp7;
-            closure_0 = undefined;
-            state = undefined;
-            v0(true);
-            v0 = 1;
-            c4 = 2;
-            c5 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = (function authorizeLink(closure_1_0) {
-              const self = this;
-              const apply = closure_13.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            })(closure_1_0);
-            return obj1;
+            closure_0 = arg1;
+            v0 = 0;
+            v0(false);
+            state = closure_1_0(closure_1_2[13]).getCallbackParamsFromURL(closure_0).state;
+            closure_1_1(closure_1_2[14])(null != state, "Authorize URL state query parameter must be present");
+            c4.current = state;
+            c5 = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (1 === tmp7) {
-          v0 = 0;
-          state();
-          c5 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = undefined;
-          return obj2;
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 0;
-          c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          closure_0 = arg1;
-          v0 = 0;
-          v0(false);
-          state = closure_1_0(closure_1_2[13]).getCallbackParamsFromURL(closure_0).state;
-          closure_1_1(closure_1_2[14])(null != state, "Authorize URL state query parameter must be present");
-          c4.current = state;
-          c5 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp15) {
-        closure_2 = tmp15;
-        if (tmp4 === v0) {
-          c5 = tmp2;
-          throw tmp15;
-        } else {
-          c4 = tmp;
+        } catch (tmp15) {
+          closure_2 = tmp15;
+          if (tmp4 === v0) {
+            c5 = tmp2;
+            throw tmp15;
+          } else {
+            c4 = tmp;
+          }
         }
       }
-    }
-  }), items);
+    }),
+    items,
+  );
   callback1 = callback1.useCallback((callbackState) => {
     callbackState = callbackState.callbackState;
     if (callbackState === ref.current) {
@@ -222,13 +227,28 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   obj1 = { source: img, style: null };
-  const items3 = [tmp.image, ];
+  const items3 = [tmp.image];
   if (imgStyle == null) {
     imgStyle = false;
   }
   items3[1] = imgStyle;
   obj1[1] = items3;
-  const items4 = [closure_9(closure_6, obj1), closure_9(platformType(onNext[16]).Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, accessibilityRole: "header", children: title }), closure_9(platformType(onNext[16]).Text, { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body }), ];
+  const items4 = [
+    closure_9(closure_6, obj1),
+    closure_9(platformType(onNext[16]).Text, {
+      variant: "heading-xl/bold",
+      color: "mobile-text-heading-primary",
+      style: twoWayLinkStyles.title,
+      accessibilityRole: "header",
+      children: title,
+    }),
+    closure_9(platformType(onNext[16]).Text, {
+      variant: "text-md/medium",
+      color: "text-default",
+      style: twoWayLinkStyles.body,
+      children: body,
+    }),
+  ];
   let tmp12Result = null != redirectDestination;
   if (tmp12Result) {
     const obj4 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
@@ -241,7 +261,7 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
   }
   items4[3] = tmp12Result;
   obj[1] = items4;
-  const items5 = [closure_10(closure_7, obj), ];
+  const items5 = [closure_10(closure_7, obj)];
   const obj6 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
   const obj7 = { style: twoWayLinkStyles.footerButton, children: null };
   const obj8 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };

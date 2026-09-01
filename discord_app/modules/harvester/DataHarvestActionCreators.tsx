@@ -14,15 +14,17 @@ export const getDataHarvestStatus = function getDataHarvestStatus() {
   const HTTP = sendRequest.HTTP;
   obj = { url: Endpoints.USER_HARVEST, oldFormErrors: true, rejectWithError: false };
   const value = HTTP.get(obj);
-  return value.then((body) => {
-    let obj = callback(709);
-    obj = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: body.body };
-    obj.dispatch(obj);
-  }).catch((error) => {
-    let obj = callback(709);
-    obj = { type: "LOAD_DATA_HARVEST_TYPE_FAILURE", error };
-    obj.dispatch(obj);
-  });
+  return value
+    .then((body) => {
+      let obj = callback(709);
+      obj = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: body.body };
+      obj.dispatch(obj);
+    })
+    .catch((error) => {
+      let obj = callback(709);
+      obj = { type: "LOAD_DATA_HARVEST_TYPE_FAILURE", error };
+      obj.dispatch(obj);
+    });
 };
 export const requestDataHarvest = function requestDataHarvest(mapped) {
   const harvest = saveProfileAndAccountRequest.requestHarvest(mapped);

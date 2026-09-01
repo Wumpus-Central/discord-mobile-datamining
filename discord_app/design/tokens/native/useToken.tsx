@@ -7,10 +7,12 @@ import ManaContext from "../../../../discord_common/js/packages/design/native.ts
 require = arg1;
 const map = new Map();
 const keys = Object.keys(ThemesDefault.colors);
-let closure_4 = Object.fromEntries(keys.map((arg0) => {
-  const items = [applyDefault.kebabCase(arg0), arg0];
-  return items;
-}));
+let closure_4 = Object.fromEntries(
+  keys.map((arg0) => {
+    const items = [applyDefault.kebabCase(arg0), arg0];
+    return items;
+  }),
+);
 let result = require("set").fileFinishedImporting("design/tokens/native/useToken.tsx");
 
 export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
@@ -77,7 +79,11 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
       semanticColor = value;
       if (internal6.isSemanticColor(BACKGROUND_BASE_LOW)) {
         const internal4 = tmp6(712).internal;
-        semanticColor = internal4.resolveSemanticColor(theme, BACKGROUND_BASE_LOW, getSemanticColorContextFromThemeContext.getSemanticColorContextFromThemeContext(themeContext));
+        semanticColor = internal4.resolveSemanticColor(
+          theme,
+          BACKGROUND_BASE_LOW,
+          getSemanticColorContextFromThemeContext.getSemanticColorContextFromThemeContext(themeContext),
+        );
         const objResult = getSemanticColorContextFromThemeContext;
       }
     }

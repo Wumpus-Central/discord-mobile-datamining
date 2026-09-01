@@ -155,8 +155,10 @@ const weakMap = new WeakMap();
 let items = ["\u{1F3FB}", "\u{1F3FC}", "\u{1F3FD}", "\u{1F3FE}", "\u{1F3FF}"];
 let tmp3 = /^:([^\s:]+?(?:::skin-tone-\d)?):/;
 const re7 = tmp3;
-const re8 = /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/;
-const re9 = /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g;
+const re8 =
+  /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/;
+const re9 =
+  /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g;
 let Emoji;
 class Emoji {
   constructor(arg0) {
@@ -198,7 +200,7 @@ Object.defineProperty(prototype, "names", {
   get: function names(arg0) {
     return this.emojiObject.names;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "allNamesString", {
   get: function allNamesString() {
@@ -213,7 +215,7 @@ Object.defineProperty(prototype, "allNamesString", {
     }
     return combined;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "unicodeVersion", {
   get: function unicodeVersion() {
@@ -223,43 +225,43 @@ Object.defineProperty(prototype, "unicodeVersion", {
     }
     return num;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasDiversity", {
   get: function hasDiversity() {
     return this.emojiObject.hasDiversity;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasMultiDiversity", {
   get: function hasMultiDiversity() {
     return this.emojiObject.hasMultiDiversity;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasDiversityParent", {
   get: function hasDiversityParent() {
     return this.emojiObject.hasDiversityParent;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasMultiDiversityParent", {
   get: function hasMultiDiversityParent() {
     return this.emojiObject.hasMultiDiversityParent;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "managed", {
   get: function managed() {
     return true;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "animated", {
   get: function animated() {
     return false;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "defaultDiversityChild", {
   get: function defaultDiversityChild() {
@@ -275,7 +277,7 @@ Object.defineProperty(prototype, "defaultDiversityChild", {
     }
     return null;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "url", {
   get: function url() {
@@ -289,7 +291,7 @@ Object.defineProperty(prototype, "url", {
     }
     return uRL;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "name", {
   get: function name() {
@@ -313,14 +315,14 @@ Object.defineProperty(prototype, "name", {
     }
     uniqueName = self.uniqueName;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "optionallyDiverseSequence", {
   get: function optionallyDiverseSequence() {
     const defaultDiversityChild = this.defaultDiversityChild;
     return null != defaultDiversityChild ? defaultDiversityChild.surrogates : this.surrogates;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["forEachDiversity"] = function forEachDiversity(arg0) {
   if (null != this.diversityChildren) {
@@ -408,7 +410,9 @@ let obj = {
   },
   maybeTranslateSurrogatesToInlineEmoji(content) {
     if (regex.test(content)) {
-      const mapped = findInlineEmojisFromSurrogates(content, true).map((type) => "text" === type.type ? type.text : type.emojiName);
+      const mapped = findInlineEmojisFromSurrogates(content, true).map((type) =>
+        "text" === type.type ? type.text : type.emojiName,
+      );
       const joined = mapped.join("");
       let tmp4 = null;
       if (joined !== content) {
@@ -421,7 +425,9 @@ let obj = {
   },
   findInlineEmojisFromSurrogates,
   translateSurrogatesToInlineEmoji(content) {
-    const mapped = findInlineEmojisFromSurrogates(content).map((type) => "text" === type.type ? type.text : type.emojiName);
+    const mapped = findInlineEmojisFromSurrogates(content).map((type) =>
+      "text" === type.type ? type.text : type.emojiName,
+    );
     return mapped.join("");
   },
   convertNameToSurrogate(emojiName) {
@@ -543,11 +549,12 @@ let obj = {
   numNonDiversitySprites: require("../../../_runtime/metro/04136__.js").numNonDiversitySprites,
   EMOJI_NAME_RE: /^:([^\s:]+?(?:::skin-tone-\d)?):/,
   EMOJI_NAME_AND_DIVERSITY_RE: tmp3,
-  EMOJI_SHORTCUT_RE: /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,
+  EMOJI_SHORTCUT_RE:
+    /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,
   hasSurrogates(tags) {
     const obj = applyDefault;
     return applyDefault.toArray(tags).some((arg0) => null != callback(table[1]).surrogateToEmoji[arg0]);
-  }
+  },
 };
 let result = require("set").fileFinishedImporting("modules/emojis/UnicodeEmojis.tsx");
 

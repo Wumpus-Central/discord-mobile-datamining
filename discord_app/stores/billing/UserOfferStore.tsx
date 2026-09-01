@@ -83,15 +83,37 @@ function handlePaymentSourceChange() {
 function handleReferralTrialStoreUpdate() {
   return false;
 }
-({ ANNUAL_DISCOUNT_IDS: c9, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: c10, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: unpackModuleId, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: closure_12, SubscriptionPlanInfo: map1, SubscriptionTrials: closure_14, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15 } = GuildFeatures);
+({
+  ANNUAL_DISCOUNT_IDS: c9,
+  DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: c10,
+  PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: unpackModuleId,
+  PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: closure_12,
+  SubscriptionPlanInfo: map1,
+  SubscriptionTrials: closure_14,
+  TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15,
+} = GuildFeatures);
 let closure_17 = performance.now();
-let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "flexDirection", userDiscountOffers: null, userDiscounts: "\u{1F443}\u{1F3FC}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: "TRANSPARENT" };
+let obj = {
+  userOffersLastFetchedAtDate: "r",
+  userTrialOffers: "flexDirection",
+  userDiscountOffers: null,
+  userDiscounts: "\u{1F443}\u{1F3FC}",
+  isFetching: true,
+  lastFetchSuccessful: null,
+  shouldTriggerOffer: 8,
+  cooldownExpirationTimestamps: "TRANSPARENT",
+};
 obj[1] = {};
 obj[2] = {};
-obj[7] = { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 };
+obj[7] = {
+  [OfferTriggerTypes.CHANNEL_OPENED]: 0,
+  [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0,
+  [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0,
+  [OfferTriggerTypes.USER_PROFILE_ACTION]: 0,
+  [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0,
+};
 const PersistedStore = initializeDefault.PersistedStore;
-class UserOfferStore extends PersistedStore {
-}
+class UserOfferStore extends PersistedStore {}
 const prototype = UserOfferStore.prototype;
 prototype["initialize"] = function initialize(userTrialOffers) {
   if (null != userTrialOffers) {
@@ -102,43 +124,47 @@ prototype["initialize"] = function initialize(userTrialOffers) {
       userTrialOffers = {};
     }
     const entries = Object.entries(userTrialOffers);
-    obj.userTrialOffers = Object.fromEntries(entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
-      const items = [tmp, ];
-      obj = closure_5;
-      if (tmp2 instanceof closure_5) {
-        items[1] = tmp2;
-        return items;
-      } else if ("trial_id" in tmp2) {
-        let fromServer = obj.createFromServer(tmp2);
-      } else {
-        obj = {};
-        const merged = Object.assign(tmp2);
-        let date = null;
-        if (null != tmp2.expiresAt) {
-          const _Date = Date;
-          date = new Date(tmp2.expiresAt);
+    obj.userTrialOffers = Object.fromEntries(
+      entries.map((arg0) => {
+        [tmp, tmp2] = arg0;
+        const items = [tmp];
+        obj = closure_5;
+        if (tmp2 instanceof closure_5) {
+          items[1] = tmp2;
+          return items;
+        } else if ("trial_id" in tmp2) {
+          let fromServer = obj.createFromServer(tmp2);
+        } else {
+          obj = {};
+          const merged = Object.assign(tmp2);
+          let date = null;
+          if (null != tmp2.expiresAt) {
+            const _Date = Date;
+            date = new Date(tmp2.expiresAt);
+          }
+          obj.expiresAt = date;
+          let date1 = null;
+          if (null != tmp2.redeemedAt) {
+            const _Date2 = Date;
+            date1 = new Date(tmp2.redeemedAt);
+          }
+          obj.redeemedAt = date1;
+          fromServer = new obj(obj);
         }
-        obj.expiresAt = date;
-        let date1 = null;
-        if (null != tmp2.redeemedAt) {
-          const _Date2 = Date;
-          date1 = new Date(tmp2.redeemedAt);
-        }
-        obj.redeemedAt = date1;
-        fromServer = new obj(obj);
-      }
-    }));
+      }),
+    );
     let userDiscountOffers = userTrialOffers.userDiscountOffers;
     if (userDiscountOffers == null) {
       userDiscountOffers = {};
     }
     const entries1 = Object.entries(userDiscountOffers);
-    obj.userDiscountOffers = Object.fromEntries(entries1.map((arg0) => {
-      [tmp, tmp2] = arg0;
-      const items = [tmp, callback(tmp2)];
-      return items;
-    }));
+    obj.userDiscountOffers = Object.fromEntries(
+      entries1.map((arg0) => {
+        [tmp, tmp2] = arg0;
+        const items = [tmp, callback(tmp2)];
+        return items;
+      }),
+    );
     let tmp = obj;
   } else {
     tmp = obj;
@@ -401,7 +427,13 @@ prototype["forceReset"] = function forceReset() {
   obj.userOffersLastFetchedAtDate = undefined;
   obj.isFetching = false;
   obj.shouldTriggerOffer = false;
-  obj.cooldownExpirationTimestamps = { [closure_16.CHANNEL_OPENED]: 0, [closure_16.JOIN_VOICE_CHANNEL]: 0, [closure_16.PREMIUM_UPSELL_VIEWED]: 0, [closure_16.USER_PROFILE_ACTION]: 0, [closure_16.VIDEO_STREAM_ENDED]: 0 };
+  obj.cooldownExpirationTimestamps = {
+    [closure_16.CHANNEL_OPENED]: 0,
+    [closure_16.JOIN_VOICE_CHANNEL]: 0,
+    [closure_16.PREMIUM_UPSELL_VIEWED]: 0,
+    [closure_16.USER_PROFILE_ACTION]: 0,
+    [closure_16.VIDEO_STREAM_ENDED]: 0,
+  };
 };
 prototype["lastFetchSuccessful"] = function lastFetchSuccessful() {
   return obj.lastFetchSuccessful;
@@ -463,11 +495,13 @@ let items = [
       const _Object = Object;
       const _Object2 = Object;
       const entries = Object.entries(userDiscountOffers.userDiscountOffers);
-      obj.userDiscountOffers = Object.fromEntries(entries.map((arg0) => {
-        [tmp, tmp2] = arg0;
-        const items = [tmp, callback(tmp2)];
-        return items;
-      }));
+      obj.userDiscountOffers = Object.fromEntries(
+        entries.map((arg0) => {
+          [tmp, tmp2] = arg0;
+          const items = [tmp, callback(tmp2)];
+          return items;
+        }),
+      );
       return obj;
     }
   },
@@ -495,7 +529,7 @@ let items = [
       obj.cooldownExpirationTimestamps = obj;
       return obj;
     }
-  }
+  },
 ];
 UserOfferStore.migrations = items;
 obj = {
@@ -566,7 +600,13 @@ obj = {
     obj.userOffersLastFetchedAtDate = undefined;
     obj.isFetching = false;
     obj.shouldTriggerOffer = false;
-    obj.cooldownExpirationTimestamps = { [closure_16.CHANNEL_OPENED]: 0, [closure_16.JOIN_VOICE_CHANNEL]: 0, [closure_16.PREMIUM_UPSELL_VIEWED]: 0, [closure_16.USER_PROFILE_ACTION]: 0, [closure_16.VIDEO_STREAM_ENDED]: 0 };
+    obj.cooldownExpirationTimestamps = {
+      [closure_16.CHANNEL_OPENED]: 0,
+      [closure_16.JOIN_VOICE_CHANNEL]: 0,
+      [closure_16.PREMIUM_UPSELL_VIEWED]: 0,
+      [closure_16.USER_PROFILE_ACTION]: 0,
+      [closure_16.VIDEO_STREAM_ENDED]: 0,
+    };
     obj.userOffersLastFetchedAtDate = Date.now();
     obj.isFetching = false;
     obj.lastFetchSuccessful = false;
@@ -624,8 +664,14 @@ obj = {
     obj.userOffersLastFetchedAtDate = undefined;
     obj.isFetching = false;
     obj.shouldTriggerOffer = false;
-    obj.cooldownExpirationTimestamps = { [closure_16.CHANNEL_OPENED]: 0, [closure_16.JOIN_VOICE_CHANNEL]: 0, [closure_16.PREMIUM_UPSELL_VIEWED]: 0, [closure_16.USER_PROFILE_ACTION]: 0, [closure_16.VIDEO_STREAM_ENDED]: 0 };
-  }
+    obj.cooldownExpirationTimestamps = {
+      [closure_16.CHANNEL_OPENED]: 0,
+      [closure_16.JOIN_VOICE_CHANNEL]: 0,
+      [closure_16.PREMIUM_UPSELL_VIEWED]: 0,
+      [closure_16.USER_PROFILE_ACTION]: 0,
+      [closure_16.VIDEO_STREAM_ENDED]: 0,
+    };
+  },
 };
 const userOfferStore = new UserOfferStore(dispatcherDefault, obj);
 let result = require("set").fileFinishedImporting("stores/billing/UserOfferStore.tsx");

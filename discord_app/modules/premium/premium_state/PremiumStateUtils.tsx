@@ -7,7 +7,11 @@ export const parseServerPremiumState = function parseServerPremiumState(premium_
   let tmp = null;
   if (null != premium_state) {
     const obj = { premiumSubscriptionType: null, premiumSource: null, premiumSubscriptionGroupRole: null };
-    ({ premium_subscription_type: obj[0], premium_source: obj[1], premium_subscription_group_role: obj[2] } = premium_state);
+    ({
+      premium_subscription_type: obj[0],
+      premium_source: obj[1],
+      premium_subscription_group_role: obj[2],
+    } = premium_state);
     tmp = obj;
   }
   return tmp;

@@ -6,7 +6,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/nuf_channels/native/components/NUFVoiceChannelsTemplate.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/nuf_channels/native/components/NUFVoiceChannelsTemplate.tsx",
+);
 
 export default function NUFVoiceChannelsTemplate(channel) {
   channel = channel.channel;
@@ -25,5 +27,11 @@ export default function NUFVoiceChannelsTemplate(channel) {
     const obj2 = closure_1_2(closure_1_3[6]);
     const voiceChannel = closure_1_1(closure_1_3[7]).selectVoiceChannel(channel.id);
   };
-  return jsx(NUFActionSheetTemplateDefault, { title: null, description: null, imageSrc: null, CTALabel: null, onCTAPress: null });
-};
+  return jsx(NUFActionSheetTemplateDefault, {
+    title: null,
+    description: null,
+    imageSrc: null,
+    CTALabel: null,
+    onCTAPress: null,
+  });
+}

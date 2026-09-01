@@ -17,8 +17,22 @@ export default function ForumPostMessageContent(senderModifier) {
     num = 2;
   }
   const tmp = callback();
-  ({ content, style, variant } = useNativeForumPostContentDefault({ message, messageLoaded, messageContent, isMessageDeleted, senderModifier: senderModifier.senderModifier }));
-  const obj = { variant, color: null, lineClamp: null, ellipsizeMode: "tail", includeFontPadding: true, style: null, children: null };
+  ({ content, style, variant } = useNativeForumPostContentDefault({
+    message,
+    messageLoaded,
+    messageContent,
+    isMessageDeleted,
+    senderModifier: senderModifier.senderModifier,
+  }));
+  const obj = {
+    variant,
+    color: null,
+    lineClamp: null,
+    ellipsizeMode: "tail",
+    includeFontPadding: true,
+    style: null,
+    children: null,
+  };
   let str = "text-muted";
   if (hasUnreads) {
     str = "text-default";
@@ -28,5 +42,13 @@ export default function ForumPostMessageContent(senderModifier) {
   const items = [style, tmp.text];
   obj[5] = items;
   obj[6] = content;
-  return jsx(Text.Text, { variant, color: null, lineClamp: null, ellipsizeMode: "tail", includeFontPadding: true, style: null, children: null });
-};
+  return jsx(Text.Text, {
+    variant,
+    color: null,
+    lineClamp: null,
+    ellipsizeMode: "tail",
+    includeFontPadding: true,
+    style: null,
+    children: null,
+  });
+}

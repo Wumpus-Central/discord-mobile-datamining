@@ -24,16 +24,45 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 noopAll;
 ({ THREADED_CHANNEL_TYPES: c5, THREAD_CHANNEL_TYPES: closure_6 } = createChannelRecord);
-({ CATEGORY_MARGIN_TOP: c10, getScaledCategoryRowHeight: unpackModuleId, getScaledChannelRowHeight: closure_12, getScaledChannelSubtitleHeight: map1, STICKY_HEADER_MARGIN_BOTTOM: closure_14 } = hairlineWidth);
+({
+  CATEGORY_MARGIN_TOP: c10,
+  getScaledCategoryRowHeight: unpackModuleId,
+  getScaledChannelRowHeight: closure_12,
+  getScaledChannelSubtitleHeight: map1,
+  STICKY_HEADER_MARGIN_BOTTOM: closure_14,
+} = hairlineWidth);
 ({ ChannelListChannelNoticeRow: closure_16, ChannelListGuildActionRow: closure_17 } = ChannelListGuildActionRow);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-let obj = { nonChannelContainer: { marginHorizontal: 16 }, liveChannelNotice: null, gameClaimNotice: null, applicationAccountLinkNotice: null, showAllVoiceChannelsButtonLastShownChannelActive: null, showAllVoiceChannelsButtonLastShownChannelInactive: null };
-obj = { marginTop: require("UserSummaryRow").LIVE_CHANNEL_NOTICE_MARGIN_TOP, marginBottom: require("UserSummaryRow").LIVE_CHANNEL_NOTICE_MARGIN_BOTTOM, marginHorizontal: 16 };
+let obj = {
+  nonChannelContainer: { marginHorizontal: 16 },
+  liveChannelNotice: null,
+  gameClaimNotice: null,
+  applicationAccountLinkNotice: null,
+  showAllVoiceChannelsButtonLastShownChannelActive: null,
+  showAllVoiceChannelsButtonLastShownChannelInactive: null,
+};
+obj = {
+  marginTop: require("UserSummaryRow").LIVE_CHANNEL_NOTICE_MARGIN_TOP,
+  marginBottom: require("UserSummaryRow").LIVE_CHANNEL_NOTICE_MARGIN_BOTTOM,
+  marginHorizontal: 16,
+};
 obj[1] = obj;
-obj = { marginTop: require("PX_8").GAME_CLAIM_NOTICE_MARGIN_TOP, marginBottom: require("PX_8").GAME_CLAIM_NOTICE_MARGIN_BOTTOM, marginHorizontal: 16 };
+obj = {
+  marginTop: require("PX_8").GAME_CLAIM_NOTICE_MARGIN_TOP,
+  marginBottom: require("PX_8").GAME_CLAIM_NOTICE_MARGIN_BOTTOM,
+  marginHorizontal: 16,
+};
 obj[2] = obj;
-obj[3] = { marginTop: require("AccountLinkLargeBanner").ACCOUNT_LINK_BANNER_MARGIN_TOP, marginBottom: require("AccountLinkLargeBanner").ACCOUNT_LINK_BANNER_MARGIN_BOTTOM, marginHorizontal: 16 };
-let obj1 = { marginTop: require("AccountLinkLargeBanner").ACCOUNT_LINK_BANNER_MARGIN_TOP, marginBottom: require("AccountLinkLargeBanner").ACCOUNT_LINK_BANNER_MARGIN_BOTTOM, marginHorizontal: 16 };
+obj[3] = {
+  marginTop: require("AccountLinkLargeBanner").ACCOUNT_LINK_BANNER_MARGIN_TOP,
+  marginBottom: require("AccountLinkLargeBanner").ACCOUNT_LINK_BANNER_MARGIN_BOTTOM,
+  marginHorizontal: 16,
+};
+let obj1 = {
+  marginTop: require("AccountLinkLargeBanner").ACCOUNT_LINK_BANNER_MARGIN_TOP,
+  marginBottom: require("AccountLinkLargeBanner").ACCOUNT_LINK_BANNER_MARGIN_BOTTOM,
+  marginHorizontal: 16,
+};
 obj[4] = { marginHorizontal: 16, marginTop: ThemesDefault.space.PX_16 };
 let obj2 = { marginHorizontal: 16, marginTop: ThemesDefault.space.PX_16 };
 obj[5] = { marginHorizontal: 16, marginTop: ThemesDefault.space.PX_8 };
@@ -68,7 +97,13 @@ export const getFastListRecyclerKey = function getFastListRecyclerKey(guildChann
     return "" + guildChannels.id + ":SECTION:" + arg2;
   }
 };
-export const renderChannelListSectionHeader = function renderChannelListSectionHeader(guildChannels, section, recentlyActiveChannelsEnabled, arg3, categoryStyles) {
+export const renderChannelListSectionHeader = function renderChannelListSectionHeader(
+  guildChannels,
+  section,
+  recentlyActiveChannelsEnabled,
+  arg3,
+  categoryStyles,
+) {
   if (guildChannels.favoritesSectionNumber === section) {
     obj = { name: null, withMarginTop: null, styles: null };
     const intl2 = getSystemLocale.intl;
@@ -115,7 +150,7 @@ export const renderChannelListSectionHeader = function renderChannelListSectionH
     if (flag2) {
       tmp11 = callback4(DividerDefault, {});
     }
-    const items = [tmp11, ];
+    const items = [tmp11];
     let renderCategoryItemResult = null;
     if (flag) {
       let obj3 = CategoryChannel;
@@ -147,7 +182,12 @@ export const renderChannelListSectionHeader = function renderChannelListSectionH
     tmp = require;
   }
 };
-export const getChannelListSectionHeaderSize = function getChannelListSectionHeaderSize(guildChannels, section, fontScale, arg3) {
+export const getChannelListSectionHeaderSize = function getChannelListSectionHeaderSize(
+  guildChannels,
+  section,
+  fontScale,
+  arg3,
+) {
   const tmp = callback(fontScale);
   let num = 0;
   if (arg3) {
@@ -191,7 +231,12 @@ export const getChannelListSectionHeaderSize = function getChannelListSectionHea
   }
   return tmp + num;
 };
-export const renderChannelListSectionFooter = function renderChannelListSectionFooter(guildChannels, section, ref, result) {
+export const renderChannelListSectionFooter = function renderChannelListSectionFooter(
+  guildChannels,
+  section,
+  ref,
+  result,
+) {
   let tmp = null;
   if (null != result) {
     obj = { guildId: null, channels: null };
@@ -226,13 +271,20 @@ export const renderChannelListSectionFooter = function renderChannelListSectionF
             obj = { render: false, lastShownChannelActive: false };
           } else {
             obj = { render: true, lastShownChannelActive: null };
-            obj[1] = closure_9.countVoiceStatesForChannel(categoryFromSection.getShownChannelIds()[categoryFromSection.getShownChannelIds(categoryFromSection).length - 1]) > 0;
+            obj[1] =
+              closure_9.countVoiceStatesForChannel(
+                categoryFromSection.getShownChannelIds()[
+                  categoryFromSection.getShownChannelIds(categoryFromSection).length - 1
+                ],
+              ) > 0;
           }
           if (obj.render) {
-            const items = [tmp, ];
+            const items = [tmp];
             obj1 = { children: null };
             const obj2 = { style: null, children: null };
-            obj2[0] = tmp8 ? obj.showAllVoiceChannelsButtonLastShownChannelActive : obj.showAllVoiceChannelsButtonLastShownChannelInactive;
+            obj2[0] = tmp8
+              ? obj.showAllVoiceChannelsButtonLastShownChannelActive
+              : obj.showAllVoiceChannelsButtonLastShownChannelInactive;
             const obj3 = { guildId: null, section: null, listRef: null };
             obj3[0] = guildChannels.id;
             obj3[1] = section;
@@ -253,7 +305,10 @@ export const renderChannelListSectionFooter = function renderChannelListSectionF
     return callback4(DividerDefault, {});
   }
 };
-export const getChannelListSectionHasFooterDivider = function getChannelListSectionHasFooterDivider(guildChannels, arg1) {
+export const getChannelListSectionHasFooterDivider = function getChannelListSectionHasFooterDivider(
+  guildChannels,
+  arg1,
+) {
   if (computeSubtitle.SECTION_INDEX_CHANNEL_NOTICES === arg1) {
     return false;
   } else if (computeSubtitle.SECTION_INDEX_GUILD_ACTIONS === arg1) {
@@ -279,7 +334,11 @@ export const getChannelListSectionHasFooterDivider = function getChannelListSect
   }
   const tmp = require;
 };
-export const getChannelListSectionFooterSize = function getChannelListSectionFooterSize(guildChannels, section, result) {
+export const getChannelListSectionFooterSize = function getChannelListSectionFooterSize(
+  guildChannels,
+  section,
+  result,
+) {
   let num = 0;
   if (null != result) {
     num = VOICE_USER_SUMMARY_HEIGHT.VOICE_USER_SUMMARY_HEIGHT;
@@ -311,7 +370,12 @@ export const getChannelListSectionFooterSize = function getChannelListSectionFoo
             obj = { render: false, lastShownChannelActive: false };
           } else {
             obj = { render: true, lastShownChannelActive: null };
-            obj[1] = closure_9.countVoiceStatesForChannel(categoryFromSection.getShownChannelIds()[categoryFromSection.getShownChannelIds(categoryFromSection).length - 1]) > 0;
+            obj[1] =
+              closure_9.countVoiceStatesForChannel(
+                categoryFromSection.getShownChannelIds()[
+                  categoryFromSection.getShownChannelIds(categoryFromSection).length - 1
+                ],
+              ) > 0;
           }
           if (!obj.render) {
             return num;
@@ -319,9 +383,12 @@ export const getChannelListSectionFooterSize = function getChannelListSectionFoo
             showAllVoiceChannelsButtonLastShownChannelActive = obj;
             const sum = num + tmp3(4933).SMALL_BUTTON_HEIGHT;
             if (tmp6) {
-              ({ showAllVoiceChannelsButtonLastShownChannelActive, marginTop } = showAllVoiceChannelsButtonLastShownChannelActive);
+              ({ showAllVoiceChannelsButtonLastShownChannelActive, marginTop } =
+                showAllVoiceChannelsButtonLastShownChannelActive);
             } else {
-              marginTop = showAllVoiceChannelsButtonLastShownChannelActive.showAllVoiceChannelsButtonLastShownChannelInactive.marginTop;
+              marginTop =
+                showAllVoiceChannelsButtonLastShownChannelActive.showAllVoiceChannelsButtonLastShownChannelInactive
+                  .marginTop;
             }
             const sum1 = sum + marginTop;
           }
@@ -338,7 +405,17 @@ export const getChannelListSectionFooterSize = function getChannelListSectionFoo
   }
 };
 export const renderChannelListItem = function renderChannelListItem(arg0) {
-  ({ guildChannels, section, row, selectedChannelId, guild, gameClaimMarkAsDismissed, applicationAccountLinkMarkAsDismissed, startApplicationAccountLinkAuthorization, accountLinkApplication } = arg0);
+  ({
+    guildChannels,
+    section,
+    row,
+    selectedChannelId,
+    guild,
+    gameClaimMarkAsDismissed,
+    applicationAccountLinkMarkAsDismissed,
+    startApplicationAccountLinkAuthorization,
+    accountLinkApplication,
+  } = arg0);
   if (channel(7273).SECTION_INDEX_CHANNEL_NOTICES === section) {
     const channelNoticeSection = guildChannels.getChannelNoticeSection();
     row = channelNoticeSection.getRow(row);
@@ -501,14 +578,21 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
       }
       type = record.type;
       if (type === type) {
-        const obj22 = { channel: null, selected: null, muted: null, subtitle: null, isRulesChannel: null, isSuggestedSection: null };
+        const obj22 = {
+          channel: null,
+          selected: null,
+          muted: null,
+          subtitle: null,
+          isRulesChannel: null,
+          isSuggestedSection: null,
+        };
         obj22[0] = record;
         obj22[1] = tmp5;
         ({ isMuted: obj8[2], subtitle: obj8[3] } = channel);
         obj22[4] = guild.rulesChannelId === record.id;
         obj22[5] = section === guildChannels.recentsSectionNumber;
         const obj23 = { children: null };
-        const items2 = [callback4(selectedChannelId(15813), obj22), ];
+        const items2 = [callback4(selectedChannelId(15813), obj22)];
         const threadIds = channel.threadIds;
         items2[1] = threadIds.map((arg0, arg1) => {
           let tmp = null;
@@ -709,7 +793,10 @@ export const getChannelListItemSize = function getChannelListItemSize(liveChanne
         }
         const voiceUserHeight = tmp(15712).getVoiceUserHeight(fontScale);
         if (record.type === tmp(692).ChannelTypes.GUILD_STAGE_VOICE) {
-          let participantCount = store.getParticipantCount(record.id, tmp(5368).StageChannelParticipantNamedIndex.SPEAKER);
+          let participantCount = store.getParticipantCount(
+            record.id,
+            tmp(5368).StageChannelParticipantNamedIndex.SPEAKER,
+          );
         } else {
           participantCount = closure_9.countVoiceStatesForChannel(record.id);
         }

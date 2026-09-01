@@ -14,7 +14,7 @@ function _navigateToEvent() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (store === 2) {
         store = 3;
         HermesBuiltin.throwTypeError();
@@ -143,7 +143,9 @@ function _navigateToEvent() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx",
+);
 
 export const navigateToEvent = function navigateToEvent(closure_0, onSuccess) {
   const self = this;

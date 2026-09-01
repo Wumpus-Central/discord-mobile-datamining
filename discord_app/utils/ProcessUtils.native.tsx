@@ -128,7 +128,9 @@ prototype["getCurrentCPUUsagePercent"] = function getCurrentCPUUsagePercent() {
 prototype["getCurrentMemoryUsageKB"] = function getCurrentMemoryUsageKB() {
   return this.memory;
 };
-prototype["setShouldCollectHermesInstrumentedStats"] = function setShouldCollectHermesInstrumentedStats(shouldCollectHermesInstrumentedStats) {
+prototype["setShouldCollectHermesInstrumentedStats"] = function setShouldCollectHermesInstrumentedStats(
+  shouldCollectHermesInstrumentedStats,
+) {
   this.shouldCollectHermesInstrumentedStats = shouldCollectHermesInstrumentedStats;
   let tmp;
   if (shouldCollectHermesInstrumentedStats) {
@@ -175,12 +177,8 @@ prototype["getPerfAttributedPAMemoryCallstacks"] = function getPerfAttributedPAM
 prototype["getPartitionAllocatorStats"] = function getPartitionAllocatorStats() {
   return null;
 };
-prototype["enableProfilingV8Heap"] = function enableProfilingV8Heap() {
-
-};
-prototype["disableProfilingV8Heap"] = function disableProfilingV8Heap() {
-
-};
+prototype["enableProfilingV8Heap"] = function enableProfilingV8Heap() {};
+prototype["disableProfilingV8Heap"] = function disableProfilingV8Heap() {};
 prototype["getProfilerV8MemoryCallstacks"] = function getProfilerV8MemoryCallstacks() {
   return null;
 };
@@ -211,7 +209,20 @@ function getCpuUsageElectronProcessTypeDetails() {
 prototype["getCpuUsageElectronProcessTypeDetails"] = getCpuUsageElectronProcessTypeDetails;
 prop = undefined;
 closure_1 = undefined;
-tmp = new tmp(tmp4, tmp3, tmp2, ProcessUtilsIOS, new.target, undefined, NativeModules, globalThis, getCpuUsageElectronProcessTypeDetails, require, dependencyMap, exports);
+tmp = new tmp(
+  tmp4,
+  tmp3,
+  tmp2,
+  ProcessUtilsIOS,
+  new.target,
+  undefined,
+  NativeModules,
+  globalThis,
+  getCpuUsageElectronProcessTypeDetails,
+  require,
+  dependencyMap,
+  exports,
+);
 // ThrowIfThisInitialized (0x7c)
 closure_1 = tmp;
 tmp.shouldCollectHermesInstrumentedStats = false;

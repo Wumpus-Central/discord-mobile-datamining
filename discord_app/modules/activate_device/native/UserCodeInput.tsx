@@ -30,13 +30,13 @@ export const UserCodeInput = function UserCodeInput(prefilledUserCode) {
   obj1 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = require("../../../intl/index.native.tsx").intl;
   obj1[3] = intl.string(require("../../../intl/index.native.tsx").t.KYPNUv);
-  const items = [callback2(require("../../../design/components/Text/native/Text.tsx").Text, obj1), ];
+  const items = [callback2(require("../../../design/components/Text/native/Text.tsx").Text, obj1)];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = require("../../../intl/index.native.tsx").intl;
   obj2[3] = intl2.string(require("../../../intl/index.native.tsx").t.xRHk7f);
   items[1] = callback2(require("../../../design/components/Text/native/Text.tsx").Text, obj2);
   obj[1] = items;
-  const items1 = [callback3(View, obj), , ];
+  const items1 = [callback3(View, obj), ,];
   const obj3 = {
     onChange(arg0) {
       return _undefined(arg0);
@@ -46,10 +46,12 @@ export const UserCodeInput = function UserCodeInput(prefilledUserCode) {
     autoFocus: true,
     autoComplete: "off",
     placeholder: null,
-    errorMessage: null
+    errorMessage: null,
   };
   const intl3 = require("../../../intl/index.native.tsx").intl;
-  obj3[5] = intl3.formatToPlainString(require("../../../intl/index.native.tsx").t["0tbz6x"], { number: OAuthConstants.USER_CODE_LENGTH });
+  obj3[5] = intl3.formatToPlainString(require("../../../intl/index.native.tsx").t["0tbz6x"], {
+    number: OAuthConstants.USER_CODE_LENGTH,
+  });
   obj3[6] = error;
   items1[1] = callback2(require("../../../design/components/TextInput/native/TextInput.native.tsx").TextInput, obj3);
   const obj5 = { size: "lg", text: null, onPress: null, loading: null, disabled: null, grow: true };

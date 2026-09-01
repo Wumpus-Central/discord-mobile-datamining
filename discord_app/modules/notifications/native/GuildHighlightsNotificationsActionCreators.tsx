@@ -9,7 +9,13 @@ let closure_3 = NotificationUserFeedbackReasons.NotificationUserFeedbackReasons;
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/notifications/native/GuildHighlightsNotificationsActionCreators.tsx");
 
-export const openGuildHighlightNotificationForPush = function openGuildHighlightNotificationForPush(guildId, arg1, TRENDING_CONTENT_PUSH, NOTIFICATION_CENTER, arg4) {
+export const openGuildHighlightNotificationForPush = function openGuildHighlightNotificationForPush(
+  guildId,
+  arg1,
+  TRENDING_CONTENT_PUSH,
+  NOTIFICATION_CENTER,
+  arg4,
+) {
   const _require = guildId;
   importDefault = arg1;
   dependencyMap = TRENDING_CONTENT_PUSH;
@@ -21,7 +27,7 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
   obj1 = { value: constants.TOO_MANY, label: null };
   const intl = require("../../../intl/index.native.tsx").intl;
   obj1[1] = intl.string(require("../../../intl/index.native.tsx").t.pLeQp0);
-  const items = [obj1, , , , ];
+  const items = [obj1, , , ,];
   const obj2 = { value: constants.IRRELEVANT_CHANNEL, label: null };
   const intl2 = require("../../../intl/index.native.tsx").intl;
   obj2[1] = intl2.string(require("../../../intl/index.native.tsx").t.Lu4n25);
@@ -41,13 +47,27 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
   obj[0] = items;
   obj[1] = function onFeedbackShown() {
     let obj = lib(TRENDING_CONTENT_PUSH[6]);
-    obj = { type: TRENDING_CONTENT_PUSH, location: closure_3, guild_id: closure_0, channel_id: lib.channel_id, message_id: lib.id };
+    obj = {
+      type: TRENDING_CONTENT_PUSH,
+      location: closure_3,
+      guild_id: closure_0,
+      channel_id: lib.channel_id,
+      message_id: lib.id,
+    };
     const merged = Object.assign(constants);
     obj.track(constants.FEEDBACK_FORM_VIEWED, obj);
   };
   obj[2] = function onFeedbackCompleted(rating) {
     let obj = lib(TRENDING_CONTENT_PUSH[6]);
-    obj = { type: TRENDING_CONTENT_PUSH, location: closure_3, rating: rating.rating, reason: null, guild_id: null, channel_id: null, message_id: null };
+    obj = {
+      type: TRENDING_CONTENT_PUSH,
+      location: closure_3,
+      rating: rating.rating,
+      reason: null,
+      guild_id: null,
+      channel_id: null,
+      message_id: null,
+    };
     let value;
     if (rating.reason != null) {
       value = iter.value;

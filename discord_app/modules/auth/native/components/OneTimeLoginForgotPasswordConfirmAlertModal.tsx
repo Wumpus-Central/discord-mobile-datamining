@@ -6,7 +6,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/auth/native/components/OneTimeLoginForgotPasswordConfirmAlertModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/auth/native/components/OneTimeLoginForgotPasswordConfirmAlertModal.tsx",
+);
 
 export default function OneTimeLoginForgotPasswordConfirmAlertModal() {
   let obj = { title: null, content: null, actions: null };
@@ -21,4 +23,4 @@ export default function OneTimeLoginForgotPasswordConfirmAlertModal() {
   obj[0] = jsx(getAlertModalItemKey.AlertActionButton, { text: null }, "okay");
   obj[2] = jsx(getAlertModalItemKey.AlertActions, { text: null });
   return jsx(getAlertModalItemKey.AlertModal, { text: null });
-};
+}

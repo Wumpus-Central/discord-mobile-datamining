@@ -5,7 +5,9 @@ import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx",
+);
 
 export default function _default(parents) {
   parents = parents.parents;
@@ -55,4 +57,4 @@ export default function _default(parents) {
     obj[5] = tmp2;
     return jsx(InAppReportsUpsellsTableRowDefault, { count: null, parent1: null, parent2: null, parent3: null });
   }
-};
+}

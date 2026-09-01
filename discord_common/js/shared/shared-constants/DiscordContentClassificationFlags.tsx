@@ -1,7 +1,33 @@
 // discord_common/js/shared/shared-constants/DiscordContentClassificationFlags.tsx
 import importAllResult from "../utils/BigFlagUtils.tsx";
 
-let obj = { EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED: require("../../../../discord_app/index.native.tsx"), SEXUALLY_SUGGESTIVE_IMAGERY: null, SEXUALLY_SUGGESTIVE_TEXT: null, SEXUALLY_EXPLICIT_IMAGERY: null, SEXUALLY_EXPLICIT_TEXT: null, NUDITY: null, DATING: null, REGULATED_GOODS_USAGE: null, REGULATED_GOODS_DEPICTION: null, VIOLENCE_DOMESTIC_SIMULATED: null, VIOLENCE_ANIMALS: null, VIOLENCE_FANTASY: null, VIOLENCE_GRAPHIC: null, SELF_HARM_DEPICTION: null, SELF_HARM_REFERENCE: null, GAMBLING_REAL: null, GAMBLING_SIMULATED: null, PROFANITY_MILD: null, PROFANITY_SEVERE: null, SLURS: null, DANGEROUS_PHYSICALLY_HARMFUL: null, DANGEROUS_MENTALLY_HARMFUL: null, TRAGEDY_SIMULATED_HISTORICAL: null, TRAGEDY_SIMULATED_NATURAL_DISASTER: null, TRAGEDY_REAL_MILITARY_CONFLICT: null };
+let obj = {
+  EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED: require("../../../../discord_app/index.native.tsx"),
+  SEXUALLY_SUGGESTIVE_IMAGERY: null,
+  SEXUALLY_SUGGESTIVE_TEXT: null,
+  SEXUALLY_EXPLICIT_IMAGERY: null,
+  SEXUALLY_EXPLICIT_TEXT: null,
+  NUDITY: null,
+  DATING: null,
+  REGULATED_GOODS_USAGE: null,
+  REGULATED_GOODS_DEPICTION: null,
+  VIOLENCE_DOMESTIC_SIMULATED: null,
+  VIOLENCE_ANIMALS: null,
+  VIOLENCE_FANTASY: null,
+  VIOLENCE_GRAPHIC: null,
+  SELF_HARM_DEPICTION: null,
+  SELF_HARM_REFERENCE: null,
+  GAMBLING_REAL: null,
+  GAMBLING_SIMULATED: null,
+  PROFANITY_MILD: null,
+  PROFANITY_SEVERE: null,
+  SLURS: null,
+  DANGEROUS_PHYSICALLY_HARMFUL: null,
+  DANGEROUS_MENTALLY_HARMFUL: null,
+  TRAGEDY_SIMULATED_HISTORICAL: null,
+  TRAGEDY_SIMULATED_NATURAL_DISASTER: null,
+  TRAGEDY_REAL_MILITARY_CONFLICT: null,
+};
 obj[1] = require("../../../../discord_app/modules/debug/logAppStart.tsx");
 const importAllResult1 = importAllResult;
 obj[2] = require("set");
@@ -52,10 +78,16 @@ obj[24] = require("../../../../_runtime/metro/00024___INTERNAL_VIEW_CONFIG.js");
 const frozen = Object.freeze(obj);
 obj = { RESTRICTED_TO_ADULT: null };
 const importAllResult24 = importAllResult;
-obj[0] = importAllResult.combine(frozen.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED, frozen.SEXUALLY_EXPLICIT_IMAGERY, frozen.SEXUALLY_EXPLICIT_TEXT);
+obj[0] = importAllResult.combine(
+  frozen.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED,
+  frozen.SEXUALLY_EXPLICIT_IMAGERY,
+  frozen.SEXUALLY_EXPLICIT_TEXT,
+);
 const frozen1 = Object.freeze(obj);
 const importAllResult25 = importAllResult;
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/shared-constants/DiscordContentClassificationFlags.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/shared/shared-constants/DiscordContentClassificationFlags.tsx",
+);
 
 export const DiscordContentClassificationFlags = frozen;
 export const DiscordContentClassificationFlagMasks = frozen1;

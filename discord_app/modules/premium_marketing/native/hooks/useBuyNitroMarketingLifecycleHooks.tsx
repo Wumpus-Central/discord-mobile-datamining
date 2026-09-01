@@ -11,16 +11,25 @@ createCacheKey = { navigator: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopWidth: 0 };
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroMarketingLifecycleHooks.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/premium_marketing/native/hooks/useBuyNitroMarketingLifecycleHooks.tsx",
+);
 
-export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingLifecycleHooks(nativeStackNavigation, initialLoadCompleted) {
+export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingLifecycleHooks(
+  nativeStackNavigation,
+  initialLoadCompleted,
+) {
   let _require = nativeStackNavigation;
   let promotionMarketingComponent = initialLoadCompleted;
   let tmp = callback();
   dependencyMap = tmp;
   _require = initialLoadCompleted;
   promotionMarketingComponent = undefined;
-  promotionMarketingComponent = require("../../../premium/hooks/usePromotionMarketingComponent.tsx").usePromotionMarketingComponent(require("../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx").MarketingComponentType.PREMIUM_TAB);
+  promotionMarketingComponent =
+    require("../../../premium/hooks/usePromotionMarketingComponent.tsx").usePromotionMarketingComponent(
+      require("../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx")
+        .MarketingComponentType.PREMIUM_TAB,
+    );
   const items = [initialLoadCompleted, promotionMarketingComponent];
   const effect = React.useEffect(() => {
     let tmp = initialLoadCompleted;
@@ -32,12 +41,19 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
     }
     if (tmp) {
       let obj = promotionMarketingComponent(_navigator[7]);
-      tmp = !obj.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(initialLoadCompleted(_navigator[8]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, promotionMarketingComponent.promotionId).isDismissed;
+      tmp = !obj.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(
+        initialLoadCompleted(_navigator[8]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
+        promotionMarketingComponent.promotionId,
+      ).isDismissed;
     }
     if (tmp) {
       obj = { dismissAction: null };
       obj[0] = closure_1_6.AUTO_DISMISS;
-      const result = promotionMarketingComponent(_navigator[9]).markSnowflakeBoundDismissibleContentAsDismissed(initialLoadCompleted(_navigator[8]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, promotionMarketingComponent.promotionId, obj);
+      const result = promotionMarketingComponent(_navigator[9]).markSnowflakeBoundDismissibleContentAsDismissed(
+        initialLoadCompleted(_navigator[8]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
+        promotionMarketingComponent.promotionId,
+        obj,
+      );
       const obj2 = promotionMarketingComponent(_navigator[9]);
     }
   }, items);
@@ -62,9 +78,12 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
   const layoutEffect = React.useLayoutEffect(() => {
     initialLoadCompleted.setOptions({ headerShown: false, contentStyle: _navigator.navigator });
   }, items2);
-  const effect3 = React.useEffect(() => () => {
-    if (!state.getState().isPaymentSuccess) {
-      callback();
-    }
-  }, []);
+  const effect3 = React.useEffect(
+    () => () => {
+      if (!state.getState().isPaymentSuccess) {
+        callback();
+      }
+    },
+    [],
+  );
 };

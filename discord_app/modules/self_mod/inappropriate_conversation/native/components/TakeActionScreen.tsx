@@ -12,7 +12,13 @@ import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-({ MODAL_LOCATION_CONTEXT_MOBILE: c10, NOFILTR_URL: unpackModuleId, THROUGHLINE_URL: closure_12, REPORTED_USER_CONFIRMATION_TOAST_KEY: map1, TOAST_CHECKMARK_ICON_COLOR: closure_14 } = LOCATION_CONTEXT_MOBILE);
+({
+  MODAL_LOCATION_CONTEXT_MOBILE: c10,
+  NOFILTR_URL: unpackModuleId,
+  THROUGHLINE_URL: closure_12,
+  REPORTED_USER_CONFIRMATION_TOAST_KEY: map1,
+  TOAST_CHECKMARK_ICON_COLOR: closure_14,
+} = LOCATION_CONTEXT_MOBILE);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 createCacheKey = { container: null, toastContainer: null, helplineGroup: null, textCenter: null };
 createCacheKey = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: ThemesDefault.space.PX_16 };
@@ -23,7 +29,9 @@ createCacheKey[2] = { display: "flex", alignSelf: "stretch", gap: ThemesDefault.
 createCacheKey[3] = { textAlign: "center" };
 let closure_17 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { display: "flex", alignSelf: "stretch", gap: ThemesDefault.space.PX_4 };
-let result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/components/TakeActionScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/native/components/TakeActionScreen.tsx",
+);
 
 export default function TakeActionButtons(senderId) {
   senderId = senderId.senderId;
@@ -68,78 +76,91 @@ export default function TakeActionButtons(senderId) {
     trackAnalyticsEvent(senderId(setReported[16]).CtaEventTypes.USER_TAKEOVER_MODAL_UNBLOCK);
   }, items3);
   const items4 = [senderId, channelId, tmp.toastContainer, setReported, lastChannelMessage, trackAnalyticsEvent];
-  closure_8 = lastChannelMessage.useCallback(trackAnalyticsEvent(function*() {
-    if (dependencyMap === 2) {
-      dependencyMap = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  closure_8 = lastChannelMessage.useCallback(
+    trackAnalyticsEvent(function* () {
+      if (dependencyMap === 2) {
+        dependencyMap = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        dependencyMap = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
+        try {
+          dependencyMap = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              dependencyMap = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              dependencyMap = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_0 = tmp4;
+              if (null != closure_1_9.getUser(closure_1_0)) {
+                closure_1_6(true);
+                let obj2 = closure_1_0(8756);
+                v0 = 1;
+                dependencyMap = 1;
+                obj1 = { value: null, done: false };
+                obj1[0] = obj2.submitReportForInappropriateConversationSafetyAlert(
+                  closure_1_5,
+                  () => {
+                    dependencyMap(true);
+                    let obj = v1(4194);
+                    obj = {
+                      key: closure_1_13,
+                      content: null,
+                      IconComponent: null,
+                      iconColor: null,
+                      containerStyle: null,
+                    };
+                    const intl = tmp4(1236).intl;
+                    obj[1] = intl.string(tmp4(1236).t.gn2c6X);
+                    obj[2] = tmp4(4438).CircleCheckIcon;
+                    obj[3] = closure_1_14;
+                    obj[4] = toastContainer.toastContainer;
+                    obj.open(obj);
+                  },
+                  () => {
+                    const intl = tmp4(1236).intl;
+                    tmp4(4193).presentFailedToast(intl.string(tmp4(1236).t["0YV04/"]));
+                  },
+                );
+                return obj1;
+              } else {
+                dependencyMap = 3;
+              }
+            }
+          } else if (arg0 === 1) {
             dependencyMap = 3;
             throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_0 = tmp4;
-            if (null != closure_1_9.getUser(closure_1_0)) {
-              closure_1_6(true);
-              let obj2 = closure_1_0(8756);
-              v0 = 1;
-              dependencyMap = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj2.submitReportForInappropriateConversationSafetyAlert(closure_1_5, () => {
-                dependencyMap(true);
-                let obj = v1(4194);
-                obj = { key: closure_1_13, content: null, IconComponent: null, iconColor: null, containerStyle: null };
-                const intl = tmp4(1236).intl;
-                obj[1] = intl.string(tmp4(1236).t.gn2c6X);
-                obj[2] = tmp4(4438).CircleCheckIcon;
-                obj[3] = closure_1_14;
-                obj[4] = toastContainer.toastContainer;
-                obj.open(obj);
-              }, () => {
-                const intl = tmp4(1236).intl;
-                tmp4(4193).presentFailedToast(intl.string(tmp4(1236).t["0YV04/"]));
-              });
-              return obj1;
-            } else {
-              dependencyMap = 3;
-            }
+          } else if (arg0 !== 2) {
+            callback2(false);
+            obj = v0(8675);
+            const result = obj.showReportSuccessToast(closure_0, v0);
+            callback(closure_1_0(11007).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
           }
-        } else if (arg0 === 1) {
           dependencyMap = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          callback2(false);
-          obj = v0(8675);
-          const result = obj.showReportSuccessToast(closure_0, v0);
-          callback(closure_1_0(11007).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
+        } catch (tmp22) {
+          dependencyMap = tmp;
+          throw tmp22;
         }
-        dependencyMap = 3;
-        obj2 = { value: null, done: true };
-        obj2[0] = arg1;
-        return obj2;
-      } catch (tmp22) {
-        dependencyMap = tmp;
-        throw tmp22;
       }
-    }
-  }), items4);
+    }),
+    items4,
+  );
   obj = { style: tmp.container, children: null };
   obj = { variant: "primary", size: "lg", icon: channelId(setReported[23]), text: null, grow: true, onPress: null };
   let intl = senderId(setReported[19]).intl;
@@ -155,8 +176,17 @@ export default function TakeActionButtons(senderId) {
     callback = callback1;
   }
   obj[5] = callback;
-  const items5 = [closure_15(senderId(setReported[22]).Button, obj), , ];
-  obj1 = { variant: "secondary", size: "lg", icon: tmp15(tmp3[24]), loading: tmp8, disabled: isReported, text: null, grow: true, onPress: null };
+  const items5 = [closure_15(senderId(setReported[22]).Button, obj), ,];
+  obj1 = {
+    variant: "secondary",
+    size: "lg",
+    icon: tmp15(tmp3[24]),
+    loading: tmp8,
+    disabled: isReported,
+    text: null,
+    grow: true,
+    onPress: null,
+  };
   const intl2 = tmp2(tmp3[19]).intl;
   const string2 = intl2.string;
   const t2 = tmp2(tmp3[19]).t;
@@ -194,7 +224,7 @@ export default function TakeActionButtons(senderId) {
         channelId(setReported[27]).openURL(closure_1_12);
         trackAnalyticsEvent(senderId(setReported[16]).CtaEventTypes.USER_TAKEOVER_MODAL_THROUGHLINE);
       };
-      const items6 = [tmp14(Button, obj4), ];
+      const items6 = [tmp14(Button, obj4)];
       const obj5 = { variant: "text-xs/medium", color: "text-default", style: null, children: null };
       obj5[2] = tmp.textCenter;
       const intl5 = tmp2(tmp3[19]).intl;
@@ -208,7 +238,7 @@ export default function TakeActionButtons(senderId) {
         channelId(setReported[27]).openURL(closure_1_11);
         trackAnalyticsEvent(senderId(setReported[16]).CtaEventTypes.USER_TAKEOVER_MODAL_NO_FILTR);
       };
-      const items7 = [tmp14(Button, obj4), ];
+      const items7 = [tmp14(Button, obj4)];
       const obj6 = { variant: "text-xs/medium", color: "text-default", style: null, children: null };
       obj6[2] = tmp.textCenter;
       const intl4 = tmp2(tmp3[19]).intl;
@@ -222,4 +252,4 @@ export default function TakeActionButtons(senderId) {
   items5[2] = tmp12Result;
   obj[1] = items5;
   return closure_16(closure_7, obj);
-};
+}

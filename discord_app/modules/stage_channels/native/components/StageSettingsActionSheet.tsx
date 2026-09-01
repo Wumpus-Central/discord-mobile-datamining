@@ -20,7 +20,9 @@ createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { color: ThemesDefault.unsafe_rawColors.RED_400 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-let result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageSettingsActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/components/StageSettingsActionSheet.tsx",
+);
 
 export default function StageSettingsActionSheet(channelId) {
   channelId = channelId.channelId;
@@ -32,7 +34,9 @@ export default function StageSettingsActionSheet(channelId) {
   stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
   obj1 = channelId(stateFromStores[12]);
   const items1 = [closure_7];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_7.can(channelId(stateFromStores[13]).MODERATE_STAGE_CHANNEL_PERMISSIONS, stateFromStores));
+  const stateFromStores1 = obj1.useStateFromStores(items1, () =>
+    closure_1_7.can(channelId(stateFromStores[13]).MODERATE_STAGE_CHANNEL_PERMISSIONS, stateFromStores),
+  );
   let obj2 = channelId(stateFromStores[14]);
   const isStageSpeakingDisabledForCurrentUser = obj2.useIsStageSpeakingDisabledForCurrentUser();
   let obj3 = channelId(stateFromStores[12]);
@@ -84,7 +88,7 @@ export default function StageSettingsActionSheet(channelId) {
         }
       }
     }
-    const items6 = [tmp14, , , , ];
+    const items6 = [tmp14, , , ,];
     obj2 = { label: null, leading: null, onPress: null };
     const intl3 = tmp2(tmp3[17]).intl;
     obj2[0] = intl3.string(tmp2(tmp3[17]).t.NiTd0e);
@@ -162,4 +166,4 @@ export default function StageSettingsActionSheet(channelId) {
     const tmp13 = View;
   }
   return tmp11Result1;
-};
+}

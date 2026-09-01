@@ -18,4 +18,4 @@ export default function getMutualGuildsLabel(arg0) {
     stringResult = intl.formatToPlainString(getSystemLocale.t.eE3oep, obj);
   }
   return stringResult;
-};
+}

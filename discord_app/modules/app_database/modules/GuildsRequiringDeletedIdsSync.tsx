@@ -9,24 +9,24 @@ class GuildsRequiringDeletedIdsSync {
     closure_0 = obj;
     obj.actions = {
       BACKGROUND_SYNC(arg0, arg1) {
-            return obj.handleBackgroundSync(arg0, arg1);
-          },
+        return obj.handleBackgroundSync(arg0, arg1);
+      },
       CONNECTION_OPEN(arg0, arg1) {
-            return obj.handleConnectionOpen(arg0, arg1);
-          },
+        return obj.handleConnectionOpen(arg0, arg1);
+      },
       GUILD_CREATE(arg0, arg1) {
-            return obj.handleGuildCreate(arg0, arg1);
-          },
+        return obj.handleGuildCreate(arg0, arg1);
+      },
       DELETED_ENTITY_IDS(arg0, arg1) {
-            return obj.handleDeletedEntityIds(arg0, arg1);
-          }
+        return obj.handleDeletedEntityIds(arg0, arg1);
+      },
     };
     return obj;
   }
 }
 const prototype = GuildsRequiringDeletedIdsSync.prototype;
 prototype["getAll"] = function getAll() {
-  return callback(function*() {
+  return callback(function* () {
     if (c2 === 2) {
       c2 = 3;
       HermesBuiltin.throwTypeError();
@@ -130,9 +130,7 @@ prototype["handleDeletedEntityIds"] = function handleDeletedEntityIds(guild_id, 
   const result = set(1956).guildsRequiringDeletedIdsSyncTransaction(database);
   result.delete(guild_id.guild_id);
 };
-prototype["resetInMemoryState"] = function resetInMemoryState() {
-
-};
+prototype["resetInMemoryState"] = function resetInMemoryState() {};
 set = Object.create(GuildsRequiringDeletedIdsSync.prototype);
 set.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
@@ -146,7 +144,7 @@ set.actions = {
   },
   DELETED_ENTITY_IDS(arg0, arg1) {
     return obj.handleDeletedEntityIds(arg0, arg1);
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/app_database/modules/GuildsRequiringDeletedIdsSync.tsx");
 

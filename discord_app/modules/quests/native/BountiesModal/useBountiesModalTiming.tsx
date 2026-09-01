@@ -50,20 +50,26 @@ export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
   }
   [tmp4, c11] = onRewardEarned(onVideoProgress.useState(tmp), 2);
   const tmp3 = onRewardEarned(onVideoProgress.useState(tmp), 2);
-  [tmp6, c12] = onRewardEarned(obj.useState(() => {
-    num = 0;
-    if (null != num3) {
-      num = num / tmp;
-    }
-    return num;
-  }), 2);
-  const tmp5 = onRewardEarned(obj.useState(() => {
-    num = 0;
-    if (null != num3) {
-      num = num / tmp;
-    }
-    return num;
-  }), 2);
+  [tmp6, c12] = onRewardEarned(
+    obj.useState(() => {
+      num = 0;
+      if (null != num3) {
+        num = num / tmp;
+      }
+      return num;
+    }),
+    2,
+  );
+  const tmp5 = onRewardEarned(
+    obj.useState(() => {
+      num = 0;
+      if (null != num3) {
+        num = num / tmp;
+      }
+      return num;
+    }),
+    2,
+  );
   [tmp8, c13] = onRewardEarned(obj.useState(null), 2);
   const tmp7 = onRewardEarned(obj.useState(null), 2);
   [tmp10, c14] = onRewardEarned(obj.useState(num2), 2);
@@ -165,6 +171,19 @@ export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
   if (isCompleted) {
     isCompleted = !tmp21;
   }
-  obj = { isCtaVisible: isCompleted, isEndCardVisible: tmp4, handleVideoEnd: callback1, handleVideoProgress: callback, handleVideoPaused: callback3, handleVideoResumed: callback4, handleReplay: callback2, rewardRemainingSeconds: num5, rewardTotalSeconds: result1, normalizedProgress: tmp8, maxVideoProgressSeconds: tmp10, videoDuration: tmp12 };
+  obj = {
+    isCtaVisible: isCompleted,
+    isEndCardVisible: tmp4,
+    handleVideoEnd: callback1,
+    handleVideoProgress: callback,
+    handleVideoPaused: callback3,
+    handleVideoResumed: callback4,
+    handleReplay: callback2,
+    rewardRemainingSeconds: num5,
+    rewardTotalSeconds: result1,
+    normalizedProgress: tmp8,
+    maxVideoProgressSeconds: tmp10,
+    videoDuration: tmp12,
+  };
   return obj;
 };

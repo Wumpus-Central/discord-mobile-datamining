@@ -25,7 +25,7 @@ const obj = {
       items = [];
     }
     return items;
-  }
+  },
 };
 const tmp2 = new setParamsDefault(function loadEmoji(arg0) {
   const tmp = emojiTermsImporter.emojiTermsImporter[arg0];

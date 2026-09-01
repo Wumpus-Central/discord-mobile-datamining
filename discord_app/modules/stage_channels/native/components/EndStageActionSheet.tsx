@@ -10,8 +10,19 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" }, title: null, subtitle: null, cancelButton: null, confirmButton: null };
-createCacheKey = { fontSize: 24, fontFamily: require("ME").Fonts.PRIMARY_BOLD, textAlign: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey = {
+  container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" },
+  title: null,
+  subtitle: null,
+  cancelButton: null,
+  confirmButton: null,
+};
+createCacheKey = {
+  fontSize: 24,
+  fontFamily: require("ME").Fonts.PRIMARY_BOLD,
+  textAlign: "center",
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginTop: 8, textAlign: "center" };
 createCacheKey[3] = { marginTop: 24, alignSelf: "stretch" };
@@ -27,7 +38,7 @@ export default function EndStageActionSheet(channel) {
   obj = { style: tmp.title, accessibilityRole: "header", children: null };
   const intl = channel(1236).intl;
   obj[2] = intl.string(channel(1236).t.pADdJu);
-  const items = [callback(channel(1297).LegacyText, obj), , , ];
+  const items = [callback(channel(1297).LegacyText, obj), , ,];
   obj1 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = channel(1236).intl;
   obj1[3] = intl2.string(channel(1236).t.mT7jwN);
@@ -59,4 +70,4 @@ export default function EndStageActionSheet(channel) {
   obj[1] = items;
   obj[0] = callback2(View, obj);
   return callback(ScrollHandlingActionSheetDefault, obj);
-};
+}

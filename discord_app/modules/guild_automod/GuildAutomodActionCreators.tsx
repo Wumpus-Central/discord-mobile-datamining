@@ -23,7 +23,20 @@ function _transformClientRuleToApiRule(id) {
   if (null != result) {
     delete tmp2[tmp];
   }
-  obj = { id: id.id, name: id.name, guild_id: id.guildId, event_type: id.eventType, trigger_type: id.triggerType, trigger_metadata: result, actions: null, enabled: null, creator_id: null, position: null, exempt_channels: null, exempt_roles: null };
+  obj = {
+    id: id.id,
+    name: id.name,
+    guild_id: id.guildId,
+    event_type: id.eventType,
+    trigger_type: id.triggerType,
+    trigger_metadata: result,
+    actions: null,
+    enabled: null,
+    creator_id: null,
+    position: null,
+    exempt_channels: null,
+    exempt_roles: null,
+  };
   const actions = id.actions;
   const found = actions.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
   obj[6] = found.map(_transformClientActionToApiAction);
@@ -51,7 +64,20 @@ function _transformApiRuletoClientRule(id) {
     const _Date = Date;
     id = obj.fromTimestamp(Date.now());
   }
-  obj = { id, name: id.name, guildId: id.guild_id, eventType: id.event_type, triggerType: id.trigger_type, triggerMetadata: _transformMetadataToCamelCase._transformMetadataToCamelCase(id.trigger_metadata), actions: null, enabled: null, creatorId: null, position: null, exemptChannels: null, exemptRoles: null };
+  obj = {
+    id,
+    name: id.name,
+    guildId: id.guild_id,
+    eventType: id.event_type,
+    triggerType: id.trigger_type,
+    triggerMetadata: _transformMetadataToCamelCase._transformMetadataToCamelCase(id.trigger_metadata),
+    actions: null,
+    enabled: null,
+    creatorId: null,
+    position: null,
+    exemptChannels: null,
+    exemptRoles: null,
+  };
   const actions = id.actions;
   const found = actions.filter(isDiscordFrontendDevelopment.isNotNullish);
   obj[6] = found.map(_transformApiActionToClientAction);
@@ -80,7 +106,7 @@ function _validateAutomodRule() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const table = tmp3;
       closure_1 = tmp2;
       const HTTP = lib(closure_1_2[8]).HTTP;
@@ -109,7 +135,7 @@ function _createAutomodRule() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       delete tmp3[tmp2];
       const callback = closure_1_13;
       const HTTP = lib(530).HTTP;
@@ -137,7 +163,7 @@ function _updateAutomodRule() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const callback = closure_1_13;
       const HTTP = lib(530).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
@@ -165,7 +191,7 @@ function _deleteAutomodRule() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       const HTTP = callback(530).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_8.GUILD_AUTOMOD_RULE(closure_1, callback);
@@ -189,7 +215,7 @@ function _fetchAutomodRules() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -272,7 +298,7 @@ function _executeAlertAction() {
     closure_2 = arg2;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -409,7 +435,11 @@ export const executeAlertAction = function executeAlertAction(messageId, channel
   }
   return applyArgumentsResult;
 };
-export const removeMentionRaidRestrictionWithFeedback = function removeMentionRaidRestrictionWithFeedback(arg0, arg1, arg2) {
+export const removeMentionRaidRestrictionWithFeedback = function removeMentionRaidRestrictionWithFeedback(
+  arg0,
+  arg1,
+  arg2,
+) {
   const _require = arg0;
   closure_1 = arg1;
   dependencyMap = arg2;

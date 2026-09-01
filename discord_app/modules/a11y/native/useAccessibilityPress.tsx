@@ -19,10 +19,10 @@ export default function useAccessibilityPress(stateFromStores) {
           ref.current();
         }
       },
-      accessibilityActions: items
+      accessibilityActions: items,
     };
     obj = { name: "activate", label: closure_1 };
     items = [obj];
     return obj;
   }, items1);
-};
+}

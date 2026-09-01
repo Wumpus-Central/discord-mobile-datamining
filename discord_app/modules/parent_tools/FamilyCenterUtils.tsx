@@ -7,7 +7,14 @@ import closure_3 from "FamilyCenterStore.tsx";
 import items from "FamilyCenterConstants.tsx";
 
 require = arg1;
-({ ACTION_TO_TEXT: c4, FAMILY_CENTER_ERROR_CODE_TO_FAILURE: c5, FamilyCenterFailureCode: closure_6, TeenActionDisplayType: error, UserLinkStatus: closure_8, UserLinkType: c9 } = items);
+({
+  ACTION_TO_TEXT: c4,
+  FAMILY_CENTER_ERROR_CODE_TO_FAILURE: c5,
+  FamilyCenterFailureCode: closure_6,
+  TeenActionDisplayType: error,
+  UserLinkStatus: closure_8,
+  UserLinkType: c9,
+} = items);
 let c10 = 86400;
 let c11 = 172800;
 let result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterUtils.tsx");
@@ -100,7 +107,11 @@ export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMES
   return yesterday;
 };
 export const isUserAction = function isUserAction(action) {
-  return action.display_type === constants2.USER_ADD || action.display_type === constants2.USER_INTERACTION || action.display_type === constants2.USER_CALLED;
+  return (
+    action.display_type === constants2.USER_ADD ||
+    action.display_type === constants2.USER_INTERACTION ||
+    action.display_type === constants2.USER_CALLED
+  );
 };
 export const isGuildAction = function isGuildAction(action) {
   return action.display_type === constants2.GUILD_ADD || action.display_type === tmp.GUILD_INTERACTION;

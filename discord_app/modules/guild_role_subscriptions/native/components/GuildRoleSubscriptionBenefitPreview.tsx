@@ -21,7 +21,7 @@ function BaseBenefitRow(isInteractive) {
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.emojiContainer, children: callback(EmojiIconDefault, { guildId, id: emoji }) };
-  const items = [callback(View, obj), , ];
+  const items = [callback(View, obj), ,];
   const items1 = [tmp.benefitColumn, contentStyle];
   items[1] = callback(View, { style: items1, children });
   let tmp4Result = true === flag;
@@ -53,7 +53,7 @@ function DescriptiveBenefitRow(benefit) {
     }
     emoji = str;
   }
-  children = [, ];
+  children = [,];
   children[0] = children;
   children[1] = tmp2;
   return callback2(BaseBenefitRow, { emoji, guildId, isInteractive, children });
@@ -86,7 +86,7 @@ function ChannelBenefitRow(benefit) {
     obj2[0] = tmp.channelIcon;
     obj2[1] = tmp2(1297).Icon.Sizes.CUSTOM;
     obj2[2] = channelIcon;
-    const items = [callback(tmp2(1297).Icon, obj2), ];
+    const items = [callback(tmp2(1297).Icon, obj2)];
     const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj3[2] = tmp5;
     items[1] = callback(tmp2(4474).Text, obj3);
@@ -108,17 +108,40 @@ function EmojiBenefitRow(benefit) {
   const tmp = callback3();
   let obj = { emoji: benefit.id, guildId, contentStyle: tmp.emojiRow, isInteractive, children: null };
   obj = { style: tmp.emojiColons, variant: "text-md/medium", color: "text-muted", children: ":" };
-  const items = [callback(Text.Text, obj), , ];
+  const items = [callback(Text.Text, obj), ,];
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: benefit.name };
   items[1] = callback(Text.Text, obj);
-  items[2] = callback(Text.Text, { style: tmp.emojiColons, variant: "text-md/medium", color: "text-muted", children: ":" });
+  items[2] = callback(Text.Text, {
+    style: tmp.emojiColons,
+    variant: "text-md/medium",
+    color: "text-muted",
+    children: ":",
+  });
   obj[4] = items;
   return callback2(BaseBenefitRow, obj);
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row", justifyContent: "flex-start" }, emojiContainer: { width: 24, height: 24, alignSelf: "flex-start", alignItems: "center", justifyContent: "center", marginEnd: 16 }, benefitColumn: { flexDirection: "column", flexGrow: 1, flex: 1, alignItems: "flex-start", justifyContent: "center" }, benefitDescription: { flex: 1, marginTop: 2 }, channelRow: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, channelIcon: { width: 16, height: 16, marginEnd: 8 }, emojiRow: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center" }, emojiColons: { paddingHorizontal: 2 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitPreview.tsx");
+let closure_7 = createCacheKey.createStyles({
+  container: { flexDirection: "row", justifyContent: "flex-start" },
+  emojiContainer: {
+    width: 24,
+    height: 24,
+    alignSelf: "flex-start",
+    alignItems: "center",
+    justifyContent: "center",
+    marginEnd: 16,
+  },
+  benefitColumn: { flexDirection: "column", flexGrow: 1, flex: 1, alignItems: "flex-start", justifyContent: "center" },
+  benefitDescription: { flex: 1, marginTop: 2 },
+  channelRow: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
+  channelIcon: { width: 16, height: 16, marginEnd: 8 },
+  emojiRow: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center" },
+  emojiColons: { paddingHorizontal: 2 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitPreview.tsx",
+);
 
 export const GuildRoleSubscriptionBenefitPreview = function GuildRoleSubscriptionBenefitPreview(arg0) {
   ({ benefit, guildId, isInteractive } = arg0);

@@ -11,7 +11,14 @@ import ROLL_DURATION_MS from "DiceRollConstants.tsx";
 import { MessageSendLocation } from "../messages/MessageConstants.tsx";
 
 require = arg1;
-({ AFTER_ROLL_DELAY_MS: error, ALLOWED_DICE_SIDES_SET: closure_8, DEFAULT_DICE_SIDES: c9, DISMISS_DELAY_MS: c10, MAX_DICE_COUNT: unpackModuleId, ROLL_DURATION_MS: closure_12 } = ROLL_DURATION_MS);
+({
+  AFTER_ROLL_DELAY_MS: error,
+  ALLOWED_DICE_SIDES_SET: closure_8,
+  DEFAULT_DICE_SIDES: c9,
+  DISMISS_DELAY_MS: c10,
+  MAX_DICE_COUNT: unpackModuleId,
+  ROLL_DURATION_MS: closure_12,
+} = ROLL_DURATION_MS);
 initializeDefault;
 class DiceRollLifecycleManager extends tmp3 {
   constructor() {
@@ -19,11 +26,11 @@ class DiceRollLifecycleManager extends tmp3 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       CHANNEL_SELECT(arg0) {
-            return applyArgumentsResult.handleChannelSelect(arg0);
-          },
+        return applyArgumentsResult.handleChannelSelect(arg0);
+      },
       DICE_ROLL_START(channelId) {
-            return applyArgumentsResult.handleStartRoll(channelId);
-          }
+        return applyArgumentsResult.handleStartRoll(channelId);
+      },
     };
     applyArgumentsResult.rollTimer = null;
     applyArgumentsResult.postRollDismissTimer = null;
@@ -105,7 +112,18 @@ prototype["sendMessage"] = function sendMessage(arg0, arg1, arg2, arr) {
     const _location = location;
     const _window = window;
     const _HermesInternal = HermesInternal;
-    const combined = "" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT + "/channels/" + str + "/" + arg0 + "/roll-dice/" + arg1 + "d" + arg2;
+    const combined =
+      "" +
+      location.protocol +
+      window.GLOBAL_ENV.WEBAPP_ENDPOINT +
+      "/channels/" +
+      str +
+      "/" +
+      arg0 +
+      "/roll-dice/" +
+      arg1 +
+      "d" +
+      arg2;
     const intl = getSystemLocale.intl;
     let obj = { count: null, sides: null };
     obj[0] = arg1;

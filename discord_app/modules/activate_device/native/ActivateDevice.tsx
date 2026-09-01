@@ -8,15 +8,48 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ View: c5, ImageBackground: closure_6, ActivityIndicator: error, ScrollView: closure_8 } = get_ActivityIndicator);
-createCacheKey = { background: { flex: 1 }, imageStyle: null, safeArea: null, content: null, scroller: null, scrollerContent: null };
+createCacheKey = {
+  background: { flex: 1 },
+  imageStyle: null,
+  safeArea: null,
+  content: null,
+  scroller: null,
+  scrollerContent: null,
+};
 createCacheKey = { marginVertical: 0, resizeMode: "cover", backgroundColor: ThemesDefault.colors.TEXT_BRAND };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flex: 1, justifyContent: "center", alignItems: "center" };
-createCacheKey[3] = { maxWidth: 480, backgroundColor: ThemesDefault.colors.PANEL_BG, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg, padding: 24, marginHorizontal: 24, marginVertical: 36, shadowColor: ThemesDefault.colors.BLACK, shadowOpacity: 0.2, shadowOffset: { width: 0, height: 4 }, shadowRadius: 4 };
+createCacheKey[3] = {
+  maxWidth: 480,
+  backgroundColor: ThemesDefault.colors.PANEL_BG,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.lg,
+  padding: 24,
+  marginHorizontal: 24,
+  marginVertical: 36,
+  shadowColor: ThemesDefault.colors.BLACK,
+  shadowOpacity: 0.2,
+  shadowOffset: { width: 0, height: 4 },
+  shadowRadius: 4,
+};
 createCacheKey[4] = { alignSelf: "stretch", flexGrow: 0 };
 createCacheKey[5] = { flexDirection: "column", gap: 16 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { maxWidth: 480, backgroundColor: ThemesDefault.colors.PANEL_BG, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg, padding: 24, marginHorizontal: 24, marginVertical: 36, shadowColor: ThemesDefault.colors.BLACK, shadowOpacity: 0.2, shadowOffset: { width: 0, height: 4 }, shadowRadius: 4 };
+let obj1 = {
+  maxWidth: 480,
+  backgroundColor: ThemesDefault.colors.PANEL_BG,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.lg,
+  padding: 24,
+  marginHorizontal: 24,
+  marginVertical: 36,
+  shadowColor: ThemesDefault.colors.BLACK,
+  shadowOpacity: 0.2,
+  shadowOffset: { width: 0, height: 4 },
+  shadowRadius: 4,
+};
 const result = require("set").fileFinishedImporting("modules/activate_device/native/ActivateDevice.tsx");
 
 export const ActivateDevice = (onClose) => {
@@ -64,14 +97,17 @@ export const ActivateDevice = (onClose) => {
       withBackPressHandler: false,
       callbackWithoutPost(arg0) {
         return closure_1_4(closure_0, arg0);
-      }
+      },
     };
     first(first1[8]).openOAuth2Modal(obj);
   }, items3);
   const effect = deviceCodeAuthorizeCallback.useEffect(() => {
     if ("userCodeData" in first) {
       const userCodeData = first.userCodeData;
-      const items = [first(first1[9]).ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, first(first1[9]).ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID];
+      const items = [
+        first(first1[9]).ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID,
+        first(first1[9]).ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID,
+      ];
       if (items.includes(userCodeData.clientId)) {
         callback2(callback(tmp2[10]));
       } else {
@@ -99,7 +135,11 @@ export const ActivateDevice = (onClose) => {
     obj[0] = prefilledUserCode;
     obj[1] = callback3;
     obj[2] = onClose;
-    let tmp21Result = jsx(tmp7(tmp8[14]).UserCodeInput, { prefilledUserCode: null, onUserCodeAccepted: null, onClose: null });
+    let tmp21Result = jsx(tmp7(tmp8[14]).UserCodeInput, {
+      prefilledUserCode: null,
+      onUserCodeAccepted: null,
+      onClose: null,
+    });
     const tmp21 = jsx;
   } else if ("authorization" === type) {
     tmp21Result = <closure_7 animating />;
@@ -117,11 +157,33 @@ export const ActivateDevice = (onClose) => {
       tmp21Result = jsx(tmp7(tmp8[16]).ActivateDeviceError, { onRetry: null });
     }
   }
-  const obj2 = { source: first(first1[17]).makeSource(importDefault(first1[18])), imageStyle: tmp.imageStyle, style: items6, children: null };
+  const obj2 = {
+    source: first(first1[17]).makeSource(importDefault(first1[18])),
+    imageStyle: tmp.imageStyle,
+    style: items6,
+    children: null,
+  };
   items6 = [tmp.background];
   const obj3 = { bottom: true, top: true, style: tmp.safeArea, children: null };
   const tmp7Result = first(first1[17]);
-  obj3[3] = <closure_5 style={tmp.content}><closure_8 {...obj5} /></closure_5>;
-  obj2[3] = jsx(first(first1[19]).SafeAreaPaddingView, { bottom: true, top: true, style: tmp.safeArea, children: null });
-  return <closure_6 source={first(first1[17]).makeSource(importDefault(first1[18]))} imageStyle={tmp.imageStyle} style={items6}>{null}</closure_6>;
+  obj3[3] = (
+    <closure_5 style={tmp.content}>
+      <closure_8 {...obj5} />
+    </closure_5>
+  );
+  obj2[3] = jsx(first(first1[19]).SafeAreaPaddingView, {
+    bottom: true,
+    top: true,
+    style: tmp.safeArea,
+    children: null,
+  });
+  return (
+    <closure_6
+      source={first(first1[17]).makeSource(importDefault(first1[18]))}
+      imageStyle={tmp.imageStyle}
+      style={items6}
+    >
+      {null}
+    </closure_6>
+  );
 };

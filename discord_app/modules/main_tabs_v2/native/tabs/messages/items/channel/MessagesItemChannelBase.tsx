@@ -17,14 +17,41 @@ let c3 = importAllResult;
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = createCacheKey.createStyles(() => {
   let obj = { pressable: null, nameplate: null, rowActive: null, selectedBorder: null, rowSelected: null };
-  obj = { marginBottom: 1, borderRadius: ThemesDefault.radii.md, marginHorizontal: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center", flex: 1 };
+  obj = {
+    marginBottom: 1,
+    borderRadius: ThemesDefault.radii.md,
+    marginHorizontal: ThemesDefault.space.PX_8,
+    paddingHorizontal: ThemesDefault.space.PX_8,
+    marginVertical: ThemesDefault.space.PX_4,
+    flexDirection: "row",
+    alignItems: "center",
+    flex: 1,
+  };
   obj[0] = obj;
   obj = { borderRadius: ThemesDefault.radii.md };
   obj[1] = obj;
   obj[2] = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
   obj1 = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-  obj[3] = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, borderRadius: ThemesDefault.radii.md };
-  const obj2 = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, borderRadius: ThemesDefault.radii.md };
+  obj[3] = {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    borderWidth: 1,
+    borderColor: ThemesDefault.colors.BORDER_MUTED,
+    borderRadius: ThemesDefault.radii.md,
+  };
+  const obj2 = {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    borderWidth: 1,
+    borderColor: ThemesDefault.colors.BORDER_MUTED,
+    borderRadius: ThemesDefault.radii.md,
+  };
   obj[4] = { borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
   return obj;
 });
@@ -53,7 +80,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
   const items2 = [tmp4, stateFromStores];
   const memo = setIsPressed.useMemo(() => ({ height, overflow: "hidden" }), items1);
   const memo1 = setIsPressed.useMemo(() => {
-    const items = [store.pressable, ];
+    const items = [store.pressable];
     let rowSelected;
     if (stateFromStores) {
       rowSelected = store.rowSelected;
@@ -96,7 +123,11 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
   ({ isIncomingCall, isOngoingCall } = height(isPressed[13])(channel.id));
   let obj4 = channel(isPressed[12]);
   const items5 = [closure_9];
-  const stateFromStoresObject2 = obj4.useStateFromStoresObject(items5, () => ({ resolvedUnreadSetting: closure_1_9.resolveUnreadSetting(channel), muted: closure_1_9.isChannelMuted(channel.getGuildId(), channel.id), favorite: closure_1_9.isMessagesFavorite(channel.id) }));
+  const stateFromStoresObject2 = obj4.useStateFromStoresObject(items5, () => ({
+    resolvedUnreadSetting: closure_1_9.resolveUnreadSetting(channel),
+    muted: closure_1_9.isChannelMuted(channel.getGuildId(), channel.id),
+    favorite: closure_1_9.isMessagesFavorite(channel.id),
+  }));
   ({ resolvedUnreadSetting, muted, favorite } = stateFromStoresObject2);
   let obj5 = channel(isPressed[12]);
   const items6 = [closure_7];
@@ -136,7 +167,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
   }
   isPressed = tmp15;
   const items8 = [stateFromStores, tmp15, isPressed, tmp4];
-  const items9 = [, , ];
+  const items9 = [, ,];
   ({ guild_id: arr10[0], id: arr10[1] } = channel);
   items9[2] = setIsPressed;
   const memo2 = obj1.useMemo(() => {
@@ -169,7 +200,26 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
   const callback3 = obj1.useCallback(() => {
     const result = channel(isPressed[18]).openChannelLongPressActionSheet(channel.id);
   }, items12);
-  obj = { onPressIn: callback, onPressOut: callback1, onPress: callback2, onLongPress: callback3, accessibilityRole: "button", accessibilityLabel: tmp9(tmp2[20])({ channel, unread: hasUnreadMessages, mentionCount: stateFromStoresObject1.mentionCount, isIncomingCall, isOngoingCall, ignored, blocked }), accessibilityHint: null, underlayColor: null, style: null, children: null };
+  obj = {
+    onPressIn: callback,
+    onPressOut: callback1,
+    onPress: callback2,
+    onLongPress: callback3,
+    accessibilityRole: "button",
+    accessibilityLabel: tmp9(tmp2[20])({
+      channel,
+      unread: hasUnreadMessages,
+      mentionCount: stateFromStoresObject1.mentionCount,
+      isIncomingCall,
+      isOngoingCall,
+      ignored,
+      blocked,
+    }),
+    accessibilityHint: null,
+    underlayColor: null,
+    style: null,
+    children: null,
+  };
   const obj8 = channel(isPressed[14]);
   const tmp24 = closure_13;
   obj[6] = channel(isPressed[20]).getChannelA11yHint({ channel, muted, userStatus: status, isFavorite: favorite });
@@ -191,7 +241,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
   obj1[3] = tmp27;
   obj1[4] = isPressed;
   obj1[5] = tmp4.nameplate;
-  const items13 = [closure_12(tmp9Result, obj1), , , , ];
+  const items13 = [closure_12(tmp9Result, obj1), , , ,];
   let tmp22Result = stateFromStores;
   if (stateFromStores) {
     obj2 = { style: null, pointerEvents: "none" };
@@ -204,13 +254,33 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
   obj3[3] = channel(isPressed[23]).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
   items13[2] = closure_12(tmp9Result, obj3);
   obj4 = { backgroundColor: memo2, children: null };
-  obj5 = { channel, channelSelected: stateFromStores, hasUnreadMessages, muted, ignored, blocked, isStreaming: null, status: null };
+  obj5 = {
+    channel,
+    channelSelected: stateFromStores,
+    hasUnreadMessages,
+    muted,
+    ignored,
+    blocked,
+    isStreaming: null,
+    status: null,
+  };
   const tmpResult = channel(isPressed[20]);
   obj5[6] = height(isPressed[26])(activities);
   obj5[7] = status;
   obj4[1] = closure_12(height(isPressed[25]), obj5);
   items13[3] = closure_12(channel(isPressed[24]).CutoutBackgroundProvider, obj4);
-  obj6 = { channel, channelSelected: stateFromStores, favorite, muted, ignored, blocked, hasActivity: null, hasUnreadMessages: null, resolvedUnreadSetting: null, hasNameplate: null };
+  obj6 = {
+    channel,
+    channelSelected: stateFromStores,
+    favorite,
+    muted,
+    ignored,
+    blocked,
+    hasActivity: null,
+    hasUnreadMessages: null,
+    resolvedUnreadSetting: null,
+    hasNameplate: null,
+  };
   let someResult;
   const tmp9Result1 = height(isPressed[25]);
   if (activities != null) {
@@ -225,7 +295,9 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
   obj[2] = tmp24(channel(isPressed[19]).PressableHighlight, obj);
   return closure_12(stateFromStores, obj);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelBase.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelBase.tsx",
+);
 
 export default memoResult;
 export const MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING = 1;

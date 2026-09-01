@@ -36,7 +36,7 @@ function CreateGameInvitePostContent(parentChannel) {
       parentChannel(lib[13]).transitionToThread(channel);
       const obj = parentChannel(lib[13]);
       const result = parentChannel(lib[10]).closeCreateGameInvitePostModal();
-    }
+    },
   };
   const createGameInvitePost = obj.useCreateGameInvitePost(obj);
   noMicTag = createGameInvitePost.noMicTag;
@@ -69,20 +69,26 @@ function CreateGameInvitePostContent(parentChannel) {
     obj[3] = first;
     obj.openLazy(parentChannel(lib[16])(lib[15], lib.paths), "ForumPostTagsActionSheet", obj);
   }, items2);
-  const obj2 = { style: tmp.closeButton, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
+  const obj2 = {
+    style: tmp.closeButton,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    onPress: null,
+    children: null,
+  };
   let intl = parentChannel(1236).intl;
   obj2[2] = intl.string(parentChannel(1236).t.cpT0Cq);
   obj2[3] = function onPress() {
     return parentChannel(lib[10]).closeCreateGameInvitePostModal();
   };
   obj2[4] = callback(parentChannel(5551).XSmallIcon, {});
-  const items4 = [callback(parentChannel(5068).PressableOpacity, obj2), ];
+  const items4 = [callback(parentChannel(5068).PressableOpacity, obj2)];
   const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = parentChannel(1236).intl;
   obj3[2] = intl2.string(first(3437).tOsHsu);
   items4[1] = callback(parentChannel(4474).Text, obj3);
   obj1[1] = items4;
-  const items5 = [callback2(View, obj1), , ];
+  const items5 = [callback2(View, obj1), ,];
   const obj4 = { style: tmp.body, children: null };
   const obj5 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true };
   const intl3 = parentChannel(1236).intl;
@@ -92,7 +98,7 @@ function CreateGameInvitePostContent(parentChannel) {
   obj5[2] = tmp5;
   obj5[3] = tmp6;
   obj5[4] = parentChannel(6119).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
-  const items6 = [callback(parentChannel(7808).TextArea, obj5), ];
+  const items6 = [callback(parentChannel(7808).TextArea, obj5)];
   let tmp15Result = availableTags.length > 0;
   if (tmp15Result) {
     const obj6 = { label: null, subLabel: null, arrow: true, trailing: null, onPress: null };
@@ -114,7 +120,7 @@ function CreateGameInvitePostContent(parentChannel) {
     tmp15Result = tmp15(tmp9(5599).TableRow, obj6);
   }
   const obj9 = { hasIcons: false, children: null };
-  const items7 = [tmp15Result, ];
+  const items7 = [tmp15Result];
   const obj10 = { label: null, subLabel: null, value: null, onValueChange: null, disabled: null };
   const intl6 = tmp9(1236).intl;
   obj10[0] = intl6.string(first(3437).Xd2NFi);
@@ -130,7 +136,15 @@ function CreateGameInvitePostContent(parentChannel) {
   items5[1] = callback2(View, obj4);
   const obj11 = { style: items8, children: null };
   items8 = [tmp.footer, { marginBottom: insets.bottom }];
-  const obj12 = { variant: "primary", size: "lg", grow: true, text: null, loading: null, disabled: null, onPress: null };
+  const obj12 = {
+    variant: "primary",
+    size: "lg",
+    grow: true,
+    text: null,
+    loading: null,
+    disabled: null,
+    onPress: null,
+  };
   const intl8 = tmp9(1236).intl;
   obj12[3] = intl8.string(parentChannel(1236).t.CumH4u);
   obj12[4] = submitting;
@@ -149,16 +163,38 @@ function NOOP_UPLOAD() {
 createCacheKey = { container: null, header: null, closeButton: null, body: null, tagsTrailing: null, footer: null };
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 44, flexDirection: "row", alignItems: "center", justifyContent: "center", borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj1 = { height: 44, flexDirection: "row", alignItems: "center", justifyContent: "center", borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[1] = {
+  height: 44,
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  borderBottomWidth: 1,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
+let obj1 = {
+  height: 44,
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  borderBottomWidth: 1,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 createCacheKey[2] = { position: "absolute", left: ThemesDefault.space.PX_16 };
 let obj2 = { position: "absolute", left: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { flex: 1, padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
 createCacheKey[4] = { flexDirection: "row", alignItems: "center", gap: 4 };
 let obj3 = { flex: 1, padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
-createCacheKey[5] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, padding: ThemesDefault.space.PX_16 };
+createCacheKey[5] = {
+  borderTopWidth: 1,
+  borderTopColor: ThemesDefault.colors.BORDER_SUBTLE,
+  padding: ThemesDefault.space.PX_16,
+};
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, padding: ThemesDefault.space.PX_16 };
+let obj4 = {
+  borderTopWidth: 1,
+  borderTopColor: ThemesDefault.colors.BORDER_SUBTLE,
+  padding: ThemesDefault.space.PX_16,
+};
 let result = require("set").fileFinishedImporting("modules/game_invite_channels/native/CreateGameInvitePostModal.tsx");
 
 export default function CreateGameInvitePostModal(parentChannelId) {
@@ -184,4 +220,4 @@ export default function CreateGameInvitePostModal(parentChannelId) {
     }
   }
   return tmp4;
-};
+}

@@ -12,7 +12,13 @@ const require = arg1;
 let c4 = importAllResult;
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { inputContainer: { marginTop: 20, flexDirection: "row", justifyContent: "center", alignSelf: "stretch" }, input: { flex: 1, maxWidth: 336, flexDirection: "row", alignSelf: "stretch" }, status: { flex: 1, maxHeight: 20, alignItems: "center", marginTop: 8 }, error: null, minHeightGuard: null };
+let obj = {
+  inputContainer: { marginTop: 20, flexDirection: "row", justifyContent: "center", alignSelf: "stretch" },
+  input: { flex: 1, maxWidth: 336, flexDirection: "row", alignSelf: "stretch" },
+  status: { flex: 1, maxHeight: 20, alignItems: "center", marginTop: 8 },
+  error: null,
+  minHeightGuard: null,
+};
 obj = { color: ThemesDefault.unsafe_rawColors.RED_400 };
 obj[3] = obj;
 obj[4] = { minHeight: 20 };
@@ -112,17 +118,31 @@ const forwardRefResult = importAllResult.forwardRef((appState, ref) => {
       handleSubmit(arr);
     }
   }, items2);
-  const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({
-    clear() {
-      callback("");
-    }
-  }), []);
-  obj = { autoFocus: true, style: items3, textStyle: tmp.input, value: first, autoCapitalize: "none", maxLength: 8, textContentType: "oneTimeCode", onChangeText: tmp6, accessibilityLabel: null };
+  const imperativeHandle = importAllResult.useImperativeHandle(
+    ref,
+    () => ({
+      clear() {
+        callback("");
+      },
+    }),
+    [],
+  );
+  obj = {
+    autoFocus: true,
+    style: items3,
+    textStyle: tmp.input,
+    value: first,
+    autoCapitalize: "none",
+    maxLength: 8,
+    textContentType: "oneTimeCode",
+    onChangeText: tmp6,
+    accessibilityLabel: null,
+  };
   items3 = [tmp.inputContainer, style];
   const intl = appState(resetLoginOnClose[13]).intl;
   obj[8] = intl.string(appState(resetLoginOnClose[13]).t.yO4lAM);
-  const items4 = [callback(handleSubmit(resetLoginOnClose[12]), obj), ];
-  const items5 = [tmp.status, ];
+  const items4 = [callback(handleSubmit(resetLoginOnClose[12]), obj)];
+  const items5 = [tmp.status];
   const tmp10 = handleSubmit;
   const tmp15 = closure_11;
   const tmp16 = closure_10;
@@ -136,9 +156,13 @@ const forwardRefResult = importAllResult.forwardRef((appState, ref) => {
     const isThemeDarkResult = tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme);
     unsafe_rawColors = first1;
     obj1 = { color: null };
-    obj1[0] = tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
+    obj1[0] = tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme)
+      ? unsafe_rawColors.WHITE
+      : unsafe_rawColors.PRIMARY_500;
     let tmp17Result = tmp17(first1, obj1);
-    const tmp23 = tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
+    const tmp23 = tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme)
+      ? unsafe_rawColors.WHITE
+      : unsafe_rawColors.PRIMARY_500;
   } else {
     tmp17Result = null;
     if (null != error) {

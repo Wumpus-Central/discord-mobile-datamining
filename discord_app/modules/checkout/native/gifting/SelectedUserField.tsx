@@ -12,21 +12,70 @@ require = arg1;
 noopAll;
 ({ Pressable: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, content: null, opener: null, openerWithClearButton: null, searchIcon: null, userPill: null, userPillText: null, clearButton: null };
+createCacheKey = {
+  container: null,
+  content: null,
+  opener: null,
+  openerWithClearButton: null,
+  searchIcon: null,
+  userPill: null,
+  userPillText: null,
+  clearButton: null,
+};
 createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", overflow: "hidden", alignItems: "center", display: "flex" };
-createCacheKey[2] = { flexDirection: "row", alignItems: "center", flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: 6 };
+createCacheKey[2] = {
+  flexDirection: "row",
+  alignItems: "center",
+  flex: 1,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: 6,
+};
 createCacheKey[3] = { paddingRight: 0 };
-const obj1 = { flexDirection: "row", alignItems: "center", flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: 6 };
+const obj1 = {
+  flexDirection: "row",
+  alignItems: "center",
+  flex: 1,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: 6,
+};
 createCacheKey[4] = { marginRight: ThemesDefault.space.PX_8 };
 let obj2 = { marginRight: ThemesDefault.space.PX_8 };
-createCacheKey[5] = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, paddingVertical: 6, paddingHorizontal: 6 };
+createCacheKey[5] = {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.lg,
+  paddingVertical: 6,
+  paddingHorizontal: 6,
+};
 createCacheKey[6] = { marginLeft: 6 };
-let obj3 = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, paddingVertical: 6, paddingHorizontal: 6 };
-createCacheKey[7] = { alignItems: "center", justifyContent: "center", minWidth: 44, minHeight: 44, paddingRight: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_8 };
+let obj3 = {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.lg,
+  paddingVertical: 6,
+  paddingHorizontal: 6,
+};
+createCacheKey[7] = {
+  alignItems: "center",
+  justifyContent: "center",
+  minWidth: 44,
+  minHeight: 44,
+  paddingRight: ThemesDefault.space.PX_16,
+  paddingLeft: ThemesDefault.space.PX_8,
+};
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { alignItems: "center", justifyContent: "center", minWidth: 44, minHeight: 44, paddingRight: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_8 };
+let obj4 = {
+  alignItems: "center",
+  justifyContent: "center",
+  minWidth: 44,
+  minHeight: 44,
+  paddingRight: ThemesDefault.space.PX_16,
+  paddingLeft: ThemesDefault.space.PX_8,
+};
 const result = require("set").fileFinishedImporting("modules/checkout/native/gifting/SelectedUserField.tsx");
 
 export default function SelectedUserField(onPress) {
@@ -34,12 +83,18 @@ export default function SelectedUserField(onPress) {
   const tmp = callback();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.content, children: null };
-  const items = [tmp.opener, ];
+  const items = [tmp.opener];
   let openerWithClearButton = null != selectedUser;
   if (openerWithClearButton) {
     openerWithClearButton = tmp.openerWithClearButton;
   }
-  obj = { style: items, onPress: onPress.onPress, accessibilityRole: "button", accessibilityLabel: null, children: null };
+  obj = {
+    style: items,
+    onPress: onPress.onPress,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    children: null,
+  };
   items[1] = openerWithClearButton;
   if (null != selectedUser) {
     const intl3 = tmp4(1236).intl;
@@ -55,14 +110,24 @@ export default function SelectedUserField(onPress) {
     const stringResult1 = intl.string(tmp4(1236).t.xFn72s);
   }
   obj[3] = combined;
-  const items1 = [closure_5(MagnifyingGlassIcon.MagnifyingGlassIcon, { style: tmp.searchIcon, size: "xs", color: "interactive-text-default" }), ];
+  const items1 = [
+    closure_5(MagnifyingGlassIcon.MagnifyingGlassIcon, {
+      style: tmp.searchIcon,
+      size: "xs",
+      color: "interactive-text-default",
+    }),
+  ];
   if (null != selectedUser) {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.userPill;
-    obj3 = { user: null, guildId: "Array", size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093 };
+    obj3 = {
+      user: null,
+      guildId: "Array",
+      size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093,
+    };
     obj3[0] = selectedUser;
     obj3[2] = tmp4(1297).AvatarSizes.XSMALL_20;
-    const items2 = [tmp2(tmp4(1297).Avatar, obj3), ];
+    const items2 = [tmp2(tmp4(1297).Avatar, obj3)];
     const obj4 = { variant: "text-md/medium", style: null, children: null };
     obj4[1] = tmp.userPillText;
     obj4[2] = nameFromUserDefault.getName(selectedUser);
@@ -79,7 +144,7 @@ export default function SelectedUserField(onPress) {
   }
   items1[1] = tmp2Result;
   obj[4] = items1;
-  const items3 = [closure_6(closure_3, obj), ];
+  const items3 = [closure_6(closure_3, obj)];
   tmp2Result = null;
   if (null != selectedUser) {
     const obj6 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -99,4 +164,4 @@ export default function SelectedUserField(onPress) {
   obj[1] = items3;
   obj[1] = closure_5(useInputStyles.InputFieldContainer, { children: closure_6(closure_4, obj) });
   return closure_5(closure_4, obj);
-};
+}

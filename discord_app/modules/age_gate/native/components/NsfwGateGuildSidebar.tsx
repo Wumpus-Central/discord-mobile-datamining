@@ -38,7 +38,13 @@ export default function NsfwGateGuildSidebar(guildId) {
     }
     if (tmp2) {
       let obj = stateFromStores(currentUser[11]);
-      obj = { guild_id: null, user_id: null, is_member: null, is_user_opted_in_to_age_restricted_servers: null, source: null };
+      obj = {
+        guild_id: null,
+        user_id: null,
+        is_member: null,
+        is_user_opted_in_to_age_restricted_servers: null,
+        source: null,
+      };
       obj[0] = guildId;
       obj[1] = tmp.id;
       obj[2] = closure_1_5.isMember(guildId, tmp.id);
@@ -60,7 +66,7 @@ export default function NsfwGateGuildSidebar(guildId) {
     obj[0] = items2;
     obj = { guild: null, showExtraButtons: false };
     obj[0] = stateFromStores;
-    const items3 = [callback(stateFromStores(tmp3[13]), obj), ];
+    const items3 = [callback(stateFromStores(tmp3[13]), obj)];
     obj1 = { imageStyle: null, titleStyle: null, containerStyle: null, source: null, title: null, body: null };
     obj1[0] = tmp.emptyStateImageContainer;
     obj1[1] = stateFromStores(tmp3[15])(constants2.DISPLAY_EXTRABOLD, undefined, 16);
@@ -78,4 +84,4 @@ export default function NsfwGateGuildSidebar(guildId) {
     const obj6 = stateFromStores(tmp3[18]);
   }
   return tmp7;
-};
+}

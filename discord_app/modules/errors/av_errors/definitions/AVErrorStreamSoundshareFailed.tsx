@@ -7,7 +7,9 @@ import closure_3 from "../../../../stores/HookErrorStore.tsx";
 import { MediaEngineHookTypes } from "../../../../Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSoundshareFailed.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/errors/av_errors/definitions/AVErrorStreamSoundshareFailed.tsx",
+);
 
 export const AVErrorStreamSoundshareFailedDefinition = {
   getActiveErrors() {
@@ -28,5 +30,5 @@ export const AVErrorStreamSoundshareFailedDefinition = {
   },
   makeErrorContextKey(streamKey) {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;
-  }
+  },
 };

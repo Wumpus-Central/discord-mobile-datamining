@@ -9,8 +9,7 @@ import closure_3 from "../../stores/UserStore.tsx";
 let closure_4 = [];
 let c5 = false;
 const PersistedStore = initializeDefault.PersistedStore;
-class FriendGroupsStore extends PersistedStore {
-}
+class FriendGroupsStore extends PersistedStore {}
 const prototype = FriendGroupsStore.prototype;
 prototype["initialize"] = function initialize(groups) {
   this.waitFor(closure_1, closure_2, closure_0, closure_3);
@@ -106,10 +105,12 @@ const friendGroupsStore = new FriendGroupsStore(dispatcherDefault, {
   },
   REORDER_FRIEND_GROUPS: function handleReorderFriendGroups(arg0) {
     let items = [];
-    const map = new Map(items.map((id) => {
-      items = [id.id, id];
-      return items;
-    }));
+    const map = new Map(
+      items.map((id) => {
+        items = [id.id, id];
+        return items;
+      }),
+    );
     while (tmp !== undefined) {
       let value = map.get(tmp2);
       if (null != value) {
@@ -168,7 +169,7 @@ const friendGroupsStore = new FriendGroupsStore(dispatcherDefault, {
       }
       return flag;
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/friend_groups/FriendGroupsStore.tsx");
 

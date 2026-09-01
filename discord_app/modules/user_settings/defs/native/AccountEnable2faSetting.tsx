@@ -35,7 +35,7 @@ createToggle = {
   withArrow: true,
   usePredicate: function useHasAccountEnable2FASetting() {
     return !useIs2FAEnabled.useIsTOTPEnabled();
-  }
+  },
 };
 createToggle = createToggle.createPressable(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountEnable2faSetting.tsx");

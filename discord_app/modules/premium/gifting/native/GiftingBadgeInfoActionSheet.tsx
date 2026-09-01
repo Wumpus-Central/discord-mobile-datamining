@@ -14,8 +14,20 @@ import { initialize } from "../../../../../discord_common/js/packages/flux/index
 
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, headerContainer: null, title: null, description: null, tierCards: null, tierCard: null, iconWrapper: null };
-createCacheKey = { alignItems: "center", paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  container: null,
+  headerContainer: null,
+  title: null,
+  description: null,
+  tierCards: null,
+  tierCard: null,
+  iconWrapper: null,
+};
+createCacheKey = {
+  alignItems: "center",
+  paddingTop: ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_8 };
 let obj1 = { paddingHorizontal: ThemesDefault.space.PX_8 };
@@ -45,21 +57,27 @@ export default function GiftingBadgeInfoActionSheet() {
     callback(698).track(constants.GIFTING_BADGE_INFO_ACTION_SHEET_OPENED);
   }, []);
   obj = { style: null, children: null };
-  const items2 = [tmp.container, ];
+  const items2 = [tmp.container];
   obj = { paddingBottom: useSafeAreaInsetsDefault().bottom + ThemesDefault.space.PX_16 };
   items2[1] = obj;
   obj[0] = items2;
   obj1 = { style: tmp.headerContainer, children: null };
-  let obj2 = { style: tmp.title, variant: "heading-xl/semibold", color: "text-strong", accessibilityRole: "header", children: null };
+  let obj2 = {
+    style: tmp.title,
+    variant: "heading-xl/semibold",
+    color: "text-strong",
+    accessibilityRole: "header",
+    children: null,
+  };
   let intl = require("../../../../intl/index.native.tsx").intl;
   obj2[4] = intl.string(messagesProxyDefault["0MB2C6"]);
-  const items3 = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj2), ];
+  const items3 = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj2)];
   let obj3 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = require("../../../../intl/index.native.tsx").intl;
   obj3[3] = intl2.string(messagesProxyDefault.k9sNVH);
   items3[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj3);
   obj1[1] = items3;
-  const items4 = [callback2(View, obj1), ];
+  const items4 = [callback2(View, obj1)];
   const obj4 = { style: tmp.tierCards, children: null };
   let mapped;
   if (stateFromStores != null) {
@@ -92,7 +110,14 @@ export default function GiftingBadgeInfoActionSheet() {
           obj[1] = closure_1_9(callback(closure_1_2[16]), obj);
           tmp7 = closure_1_9(tmp5, obj);
         }
-        const items = [tmp7, closure_1_9(lib(closure_1_2[13]).Text, { variant: "text-lg/semibold", color: "text-strong", children: children.name }), ];
+        const items = [
+          tmp7,
+          closure_1_9(lib(closure_1_2[13]).Text, {
+            variant: "text-lg/semibold",
+            color: "text-strong",
+            children: children.name,
+          }),
+        ];
         let tmp11Result = null != tmp3;
         if (tmp11Result) {
           const obj2 = { variant: "text-md/normal", color: "text-subtle", children: null };
@@ -114,4 +139,4 @@ export default function GiftingBadgeInfoActionSheet() {
   obj[1] = items4;
   obj5[2] = callback2(View, obj);
   return callback(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx").BottomSheet, obj5);
-};
+}

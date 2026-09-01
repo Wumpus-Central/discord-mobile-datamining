@@ -11,7 +11,7 @@ function _joinOrStartActivityInChannel() {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       c3 = tmp2;
       dependencyMap = tmp3;
       ({ appId: c0, channelId: c1, analyticsLocations: c2, customId: c3, referrerId: c4 } = callback);
@@ -43,7 +43,15 @@ function _joinOrStartActivityInChannel() {
         const compositeInstanceId = length[0].compositeInstanceId;
       }
       let obj2 = callback(9469);
-      obj2 = { channelId: null, applicationId: null, isStart: null, embeddedActivitiesManager: null, analyticsLocations: null, customId: null, referrerId: null };
+      obj2 = {
+        channelId: null,
+        applicationId: null,
+        isStart: null,
+        embeddedActivitiesManager: null,
+        analyticsLocations: null,
+        customId: null,
+        referrerId: null,
+      };
       obj2[0] = callback2;
       obj2[1] = callback;
       obj2[2] = null == compositeInstanceId;
@@ -66,7 +74,9 @@ function _joinOrStartActivityInChannel() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/applications/message_embed/native/utils/joinOrStartActivityInChannel.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/applications/message_embed/native/utils/joinOrStartActivityInChannel.tsx",
+);
 
 export const joinOrStartActivityInChannel = function joinOrStartActivityInChannel(arg0) {
   const self = this;

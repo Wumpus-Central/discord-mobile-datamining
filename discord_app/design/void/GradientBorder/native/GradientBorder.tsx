@@ -41,7 +41,7 @@ class GradientBorder {
         obj = { start: null, end: null, style: null };
         obj[0] = tmp6;
         obj[1] = tmp7;
-        items = [, ];
+        items = [,];
         items[0] = style;
         obj1 = { borderRadius: null, padding: null };
         obj1[0] = borderRadius;

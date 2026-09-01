@@ -8,7 +8,9 @@ import getVideoQuestWatchCtaText from "../../../utils/VideoQuestUtils.tsx";
 import closure_2 from "../../../../action_sheet/native/ActionSheetStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx",
+);
 
 export const useVideoExternallyPaused = function useVideoExternallyPaused(id, arg1) {
   const activeContextMenu = updateContextMenuState.useActiveContextMenu();

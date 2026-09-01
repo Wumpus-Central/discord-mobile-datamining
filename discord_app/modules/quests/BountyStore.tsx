@@ -10,20 +10,19 @@ let set1 = new Set();
 let map = new Map();
 let map1 = new Map();
 const Store = initializeDefault.Store;
-class BountyStore extends Store {
-}
+class BountyStore extends Store {}
 const prototype = BountyStore.prototype;
 Object.defineProperty(prototype, "isFetchingQuestHomeBounties", {
   get: function isFetchingQuestHomeBounties() {
     return c0;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "questHomeBounties", {
   get: function questHomeBounties() {
     return closure_1;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isBountyCompleted"] = function isBountyCompleted(id) {
   return set.has(id);
@@ -46,7 +45,10 @@ prototype["isClaimingBountyReward"] = function isClaimingBountyReward(closure_0)
 prototype["areAllBountiesCompleted"] = function areAllBountiesCompleted() {
   return closure_1.every((id) => set.has(id.id));
 };
-prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByPlacementAndAdCreativeId(arg0, adContentId) {
+prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByPlacementAndAdCreativeId(
+  arg0,
+  adContentId,
+) {
   let value = map.get(arg0);
   value = undefined;
   if (value != null) {
@@ -115,7 +117,7 @@ const bountyStore = new BountyStore(dispatcherDefault, {
   },
   AD_SESSION_RESET: function handleAdSessionReset() {
     map = new Map();
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/quests/BountyStore.tsx");
 

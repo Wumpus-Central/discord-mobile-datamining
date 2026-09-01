@@ -17,7 +17,10 @@ function useRevealProviderValue(arg0, channel) {
   const tmp5 = areParticipantStatesEqualDefault(channel);
   const tmp6 = callback2();
   const items1 = [closure_5];
-  stateFromStores1 = stateFromStores1(589).useStateFromStores(items1, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
+  stateFromStores1 = stateFromStores1(589).useStateFromStores(
+    items1,
+    () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo(),
+  );
   const obj2 = stateFromStores1(589);
   if (!arg0) {
     tmp = stateFromStores;
@@ -39,10 +42,18 @@ function useRevealProviderValue(arg0, channel) {
   const tmp10 = tmp2(500).isIOS() && tmp8;
   importDefault = tmp10;
   const items2 = [tmp, tmp10];
-  return importAllResult.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures: closure_1 }), items2);
+  return importAllResult.useMemo(
+    () => ({ reveal: stateFromStores1, prefersDeferringSystemGestures: closure_1 }),
+    items2,
+  );
 }
 let c3 = importAllResult;
-({ useChannelCallStore: closure_6, focusTimeout: error, resetFocusTimer: closure_8, useIsVoiceChatFocused: c9 } = VoiceChatDrawerState);
+({
+  useChannelCallStore: closure_6,
+  focusTimeout: error,
+  resetFocusTimer: closure_8,
+  useIsVoiceChatFocused: c9,
+} = VoiceChatDrawerState);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 const context = importAllResult.createContext({ reveal: true });
 const result = require("set").fileFinishedImporting("modules/video_calls/native/components/RevealProvider.tsx");
@@ -83,7 +94,7 @@ export default function RevealProvider(showStatus) {
   if (!reveal) {
     tmp10 = !flag;
   }
-  const items1 = [closure_10(tmp4Result, { hidden: tmp10, animated: true, barStyle: str }), children, ];
+  const items1 = [closure_10(tmp4Result, { hidden: tmp10, animated: true, barStyle: str }), children];
   let tmp12 = !reveal;
   tmp4Result = tmp4(9532);
   if (!reveal) {
@@ -92,6 +103,6 @@ export default function RevealProvider(showStatus) {
   items1[2] = closure_10(tmp4Result, { prefersHidden: tmp12, prefersDeferringSystemGestures });
   obj[1] = items1;
   return closure_11(context.Provider, obj);
-};
+}
 export const RevealContext = context;
 export { useRevealProviderValue };

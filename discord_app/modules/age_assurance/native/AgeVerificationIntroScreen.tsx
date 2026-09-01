@@ -14,7 +14,16 @@ const require = arg1;
 noopAll;
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-createCacheKey = { getStartedContainer: null, getStartedHeaderContainer: null, ageGroupLearnMoreContainer: null, getStartedHeaderText: null, getStartedRequestTextContainer: null, getStartedFooterContainer: null, getStartedRequestText: null, getStartedFooterButtonsContainer: null };
+createCacheKey = {
+  getStartedContainer: null,
+  getStartedHeaderContainer: null,
+  ageGroupLearnMoreContainer: null,
+  getStartedHeaderText: null,
+  getStartedRequestTextContainer: null,
+  getStartedFooterContainer: null,
+  getStartedRequestText: null,
+  getStartedFooterButtonsContainer: null,
+};
 createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", gap: ThemesDefault.space.PX_8 };
@@ -45,8 +54,13 @@ export default function GetStartedScreen(onComplete) {
   obj = { children: null };
   obj = { style: tmp.getStartedContainer, children: null };
   obj1 = { style: tmp.getStartedHeaderContainer, children: null };
-  const items = [callback3(modalSessionId(6256).ShieldSpotIllustration, {}), , ];
-  let obj2 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.getStartedHeaderText, children: null };
+  const items = [callback3(modalSessionId(6256).ShieldSpotIllustration, {}), ,];
+  let obj2 = {
+    variant: "heading-xl/bold",
+    color: "mobile-text-heading-primary",
+    style: tmp.getStartedHeaderText,
+    children: null,
+  };
   let obj6 = modalSessionId(4733);
   obj2[3] = obj6.getAgeVerificationGetStartedTitle(entryPoint);
   items[1] = callback3(modalSessionId(4474).Text, obj2);
@@ -55,12 +69,20 @@ export default function GetStartedScreen(onComplete) {
   obj3[3] = obj8.getAgeVerificationGetStartedSubtitle(entryPoint);
   items[2] = callback3(modalSessionId(4474).Text, obj3);
   obj1[1] = items;
-  const items1 = [callback4(closure_5, obj1), , ];
+  const items1 = [callback4(closure_5, obj1), ,];
   const obj4 = {
     hasIcons: true,
     children: callback2(modalSessionId).map((children) => {
       const description = children.description;
-      let obj = { index: arg1 + 1, tip: callback(modalSessionId(4474).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title }), description: null };
+      let obj = {
+        index: arg1 + 1,
+        tip: callback(modalSessionId(4474).Text, {
+          variant: "text-md/medium",
+          color: "mobile-text-heading-primary",
+          children: children.title,
+        }),
+        description: null,
+      };
       let tmpResult = null;
       if (null != description) {
         obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
@@ -69,7 +91,7 @@ export default function GetStartedScreen(onComplete) {
       }
       obj[2] = tmpResult;
       return callback(_undefined(8727), obj, arg1);
-    })
+    }),
   };
   items1[1] = callback3(modalSessionId(5992).TableRowGroup, obj4);
   const obj5 = { style: tmp.ageGroupLearnMoreContainer, children: null };
@@ -80,14 +102,18 @@ export default function GetStartedScreen(onComplete) {
       const obj = _undefined(closure_1_2[17]);
       obj.openUrl(_undefined(closure_1_2[18]).getArticleURL(closure_1_7.TIGGER_PAWTECT_LEARN_MORE));
       const obj2 = _undefined(closure_1_2[18]);
-      const result = modalSessionId(closure_1_2[19]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(closure_1_2[19]).AgeVerificationModalVersion.PRIMARY, modalSessionId(closure_1_2[19]).AgeVerificationModalCta.LEARN_MORE);
-    }
+      const result = modalSessionId(closure_1_2[19]).trackAgeVerificationModalClicked(
+        modalSessionId,
+        modalSessionId(closure_1_2[19]).AgeVerificationModalVersion.PRIMARY,
+        modalSessionId(closure_1_2[19]).AgeVerificationModalCta.LEARN_MORE,
+      );
+    },
   });
   obj5[1] = callback3(modalSessionId(4474).Text, obj6);
   items1[2] = callback3(closure_5, obj5);
   obj[1] = items1;
   obj[0] = callback4(closure_5, obj);
-  const items2 = [callback3(closure_4, obj), ];
+  const items2 = [callback3(closure_4, obj)];
   obj8 = { style: items3, children: null };
   items3 = [tmp.getStartedFooterContainer, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   let tmp9Result = !isManualAgeVerificationHidden;
@@ -101,19 +127,31 @@ export default function GetStartedScreen(onComplete) {
     obj11[0] = function handleOnRequestHook() {
       _undefined(closure_1_2[17]).openUrl(closure_1_8.APPEALS_LINK);
       const obj = _undefined(closure_1_2[17]);
-      const result = modalSessionId(closure_1_2[19]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(closure_1_2[19]).AgeVerificationModalVersion.PRIMARY, modalSessionId(closure_1_2[19]).AgeVerificationModalCta.MANUAL_REVIEW_REQUEST);
+      const result = modalSessionId(closure_1_2[19]).trackAgeVerificationModalClicked(
+        modalSessionId,
+        modalSessionId(closure_1_2[19]).AgeVerificationModalVersion.PRIMARY,
+        modalSessionId(closure_1_2[19]).AgeVerificationModalCta.MANUAL_REVIEW_REQUEST,
+      );
     };
     obj10[3] = intl2.format(tmp4(1236).t.pJAxgQ, obj11);
     obj9[1] = tmp9(tmp4(4474).Text, obj10);
     tmp9Result = tmp9(tmp10, obj9);
   }
   const obj12 = { children: null };
-  const items4 = [tmp9Result, ];
+  const items4 = [tmp9Result];
   const obj13 = { style: tmp.getStartedFooterButtonsContainer, children: null };
-  const obj14 = { variant: "primary", size: "lg", text: null, onPress: null, icon: null, loading: null, iconPosition: "end" };
+  const obj14 = {
+    variant: "primary",
+    size: "lg",
+    text: null,
+    onPress: null,
+    icon: null,
+    loading: null,
+    iconPosition: "end",
+  };
   const intl3 = tmp4(1236).intl;
   obj14[2] = intl3.string(modalSessionId(1236).t.SJMnkX);
-  obj14[3] = callback(function*() {
+  obj14[3] = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -141,7 +179,11 @@ export default function GetStartedScreen(onComplete) {
             return obj;
           } else {
             obj1 = v0(closure_1_2[19]);
-            const result = obj1.trackAgeVerificationModalClicked(v0, v0(closure_1_2[19]).AgeVerificationModalVersion.PRIMARY, v0(closure_1_2[19]).AgeVerificationModalCta.GET_STARTED);
+            const result = obj1.trackAgeVerificationModalClicked(
+              v0,
+              v0(closure_1_2[19]).AgeVerificationModalVersion.PRIMARY,
+              v0(closure_1_2[19]).AgeVerificationModalCta.GET_STARTED,
+            );
             v02 = 1;
             v0 = 1;
             obj1 = { value: null, done: false };
@@ -172,8 +214,12 @@ export default function GetStartedScreen(onComplete) {
       const obj = _undefined(closure_1_2[17]);
       obj.openUrl(_undefined(closure_1_2[18]).getArticleURL(closure_1_7.TIGGER_PAWTECT_LEARN_MORE));
       const obj2 = _undefined(closure_1_2[18]);
-      const result = modalSessionId(closure_1_2[19]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(closure_1_2[19]).AgeVerificationModalVersion.PRIMARY, modalSessionId(closure_1_2[19]).AgeVerificationModalCta.LEARN_MORE);
-    }
+      const result = modalSessionId(closure_1_2[19]).trackAgeVerificationModalClicked(
+        modalSessionId,
+        modalSessionId(closure_1_2[19]).AgeVerificationModalVersion.PRIMARY,
+        modalSessionId(closure_1_2[19]).AgeVerificationModalCta.LEARN_MORE,
+      );
+    },
   };
   const tmp2 = importDefault;
   const tmp8 = closure_11;
@@ -185,4 +231,4 @@ export default function GetStartedScreen(onComplete) {
   items2[1] = callback4(closure_5, obj8);
   obj12[0] = items2;
   return callback4(tmp8, obj12);
-};
+}

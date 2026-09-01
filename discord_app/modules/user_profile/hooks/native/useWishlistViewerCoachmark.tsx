@@ -19,7 +19,10 @@ export const useWishlistViewerCoachmark = function useWishlistViewerCoachmark(is
     items = [];
   }, items);
   let obj = isCurrentUser(shouldShowWishlistTab[3]);
-  obj = { isVisible: tmp3 === isCurrentUser(shouldShowWishlistTab[2]).DismissibleContent.WISHLIST_MOBILE_VIEWER_COACHMARK, markAsDismissed: tmp4 };
+  obj = {
+    isVisible: tmp3 === isCurrentUser(shouldShowWishlistTab[2]).DismissibleContent.WISHLIST_MOBILE_VIEWER_COACHMARK,
+    markAsDismissed: tmp4,
+  };
   [tmp3, tmp4] = callback(obj.useSelectedDismissibleContent(memo), 2);
   return obj;
 };

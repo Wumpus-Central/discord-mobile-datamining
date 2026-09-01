@@ -23,7 +23,7 @@ function _getGuildEventsForCurrentUser() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (set === 2) {
         set = 3;
         HermesBuiltin.throwTypeError();
@@ -117,20 +117,20 @@ class GuildScheduledEventManager extends tmp4 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       POST_CONNECTION_OPEN() {
-            return applyArgumentsResult.handleConnectionOpen();
-          },
+        return applyArgumentsResult.handleConnectionOpen();
+      },
       GUILD_DELETE(arg0) {
-            return applyArgumentsResult.handleGuildDelete(arg0);
-          },
+        return applyArgumentsResult.handleGuildDelete(arg0);
+      },
       GUILD_UNAVAILABLE(arg0) {
-            return applyArgumentsResult.handleGuildUnavailable(arg0);
-          },
+        return applyArgumentsResult.handleGuildUnavailable(arg0);
+      },
       INVITE_RESOLVE_SUCCESS(arg0) {
-            return applyArgumentsResult.handleInviteResolveSuccess(arg0);
-          },
+        return applyArgumentsResult.handleInviteResolveSuccess(arg0);
+      },
       CHANNEL_SELECT(arg0) {
-            return applyArgumentsResult.handleChannelSelect(arg0);
-          }
+        return applyArgumentsResult.handleChannelSelect(arg0);
+      },
     };
     return applyArgumentsResult;
   }
@@ -140,7 +140,7 @@ prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id
   closure_0 = guild_id;
   closure_1 = id;
   const callback = items1;
-  return callback(function*() {
+  return callback(function* () {
     const found = closure_1_2.filter((arg0) => {
       let tmp3 = null == closure_1_5["" + c0 + "-" + c1 + "-" + arg0];
       if (!tmp3) {
@@ -187,7 +187,7 @@ prototype["getGuildEventsForCurrentUser"] = function getGuildEventsForCurrentUse
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c7 === 2) {
       c7 = 3;
       HermesBuiltin.throwTypeError();
@@ -337,7 +337,7 @@ prototype["handleInviteResolveSuccess"] = function handleInviteResolveSuccess(in
 prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
   guildId = guildId.guildId;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c9 === 2) {
       c9 = 3;
       HermesBuiltin.throwTypeError();

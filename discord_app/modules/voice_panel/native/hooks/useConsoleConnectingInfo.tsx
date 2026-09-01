@@ -21,16 +21,17 @@ export default function useConsoleConnectingInfo(arg0) {
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
   const items1 = [closure_4];
-  const stateFromStores1 = require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
-    let str;
-    if (sessionId != null) {
-      str = sessionId.sessionId;
-    }
-    if (str == null) {
-      str = "";
-    }
-    return closure_1_4.getSessionById(str);
-  });
+  const stateFromStores1 =
+    require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
+      let str;
+      if (sessionId != null) {
+        str = sessionId.sessionId;
+      }
+      if (str == null) {
+        str = "";
+      }
+      return closure_1_4.getSessionById(str);
+    });
   let str;
   if (stateFromStores != null) {
     str = stateFromStores.type;
@@ -51,7 +52,14 @@ export default function useConsoleConnectingInfo(arg0) {
   if (stateFromStores != null) {
     channelId1 = stateFromStores.channelId;
   }
-  obj = { isConnectingToConsole: channelId1 === arg0, isConnectingOrConnectedToConsole: null, icon: null, text: null, color: null, displayCancel: null };
+  obj = {
+    isConnectingToConsole: channelId1 === arg0,
+    isConnectingOrConnectedToConsole: null,
+    icon: null,
+    text: null,
+    color: null,
+    displayCancel: null,
+  };
   let channelId2;
   if (stateFromStores != null) {
     channelId2 = stateFromStores.channelId;
@@ -63,4 +71,4 @@ export default function useConsoleConnectingInfo(arg0) {
   obj[4] = getConsoleColorDefault(str);
   obj[5] = tmp9;
   return obj;
-};
+}

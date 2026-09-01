@@ -9,7 +9,7 @@ function _copy() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();

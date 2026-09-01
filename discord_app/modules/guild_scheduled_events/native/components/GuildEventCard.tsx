@@ -16,7 +16,14 @@ function GuildEventCardControls(onCloseAction) {
   let obj = usePrimaryActionButtonType;
   const primaryActionButtonType = obj.usePrimaryActionButtonType(event, isConnected);
   obj = { direction: "horizontal", style: styles().actionContainer, children: null };
-  const items = [callback2(usePrimaryActionButtonType.GuildEventCardPrimaryAction, { event, onCloseAction: onCloseAction.onCloseAction, isConnected }), , ];
+  const items = [
+    callback2(usePrimaryActionButtonType.GuildEventCardPrimaryAction, {
+      event,
+      onCloseAction: onCloseAction.onCloseAction,
+      isConnected,
+    }),
+    ,
+  ];
   let tmp6Result = primaryActionButtonType === usePrimaryActionButtonType.PrimaryActionType.START;
   if (tmp6Result) {
     obj = { event: null };
@@ -52,13 +59,17 @@ const memoResult = importAllResult.memo((event) => {
   let obj = event(channel_id[10]);
   const items = [closure_4];
   const items1 = [channel_id];
-  let stateFromStores = obj.useStateFromStores(items, () => {
-    let isConnectedResult = closure_1_4.isConnected();
-    if (isConnectedResult) {
-      isConnectedResult = closure_1_4.getChannelId() === channel_id;
-    }
-    return isConnectedResult;
-  }, items1);
+  let stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let isConnectedResult = closure_1_4.isConnected();
+      if (isConnectedResult) {
+        isConnectedResult = closure_1_4.getChannelId() === channel_id;
+      }
+      return isConnectedResult;
+    },
+    items1,
+  );
   if (stateFromStores) {
     stateFromStores = callback(event);
   }
@@ -69,7 +80,13 @@ const memoResult = importAllResult.memo((event) => {
   }
   const result = event(channel_id[11]).recurrenceRuleFromServer(event.recurrence_rule);
   obj = { accessible: false, onPress: handlePress, children: null };
-  const items2 = [callback2(event(channel_id[8]).GuildEventCardHeader, { event, isNew: flag2 }), callback2(event(channel_id[8]).GuildEventCardMetaInfo, { event, onTitlePress: handlePress }), , , , ];
+  const items2 = [
+    callback2(event(channel_id[8]).GuildEventCardHeader, { event, isNew: flag2 }),
+    callback2(event(channel_id[8]).GuildEventCardMetaInfo, { event, onTitlePress: handlePress }),
+    ,
+    ,
+    ,
+  ];
   let hasItem = !flag;
   if (!flag) {
     hasItem = set.has(event.entity_type);
@@ -110,7 +127,9 @@ const memoResult = importAllResult.memo((event) => {
   obj[2] = closure_8(View, { children: items2 });
   return callback2(event(channel_id[12]).Card, obj);
 });
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventCard.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/GuildEventCard.tsx",
+);
 
 export default memoResult;
 export const useGuildEventCardStyles = styles;

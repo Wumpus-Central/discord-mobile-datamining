@@ -10,4 +10,4 @@ const result = require("set").fileFinishedImporting("modules/guild_sidebar/nativ
 export default function MentionsBadge(arg0) {
   ({ mentionsCount, isMentionLowImportance } = arg0);
   return jsx(Button.Badge, { value, isMentionLowImportance });
-};
+}

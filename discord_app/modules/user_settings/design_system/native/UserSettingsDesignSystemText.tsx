@@ -10,7 +10,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemText.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/design_system/native/UserSettingsDesignSystemText.tsx",
+);
 
 export default function UserSettingsDesignSystemText() {
   let obj = map;
@@ -32,6 +34,14 @@ export default function UserSettingsDesignSystemText() {
     return tmp;
   });
   obj[2] = jsx(TableRowGroupTitle.TableRowGroup, { title: "Text Variants", hasIcons: false, children: null });
-  obj[0] = jsx(Stack.Stack, { spacing: ThemesDefault.space.PX_24, style: { paddingHorizontal: token }, children: null });
-  return <ScrollView spacing={ThemesDefault.space.PX_24} style={{ paddingHorizontal: token }}>{null}</ScrollView>;
-};
+  obj[0] = jsx(Stack.Stack, {
+    spacing: ThemesDefault.space.PX_24,
+    style: { paddingHorizontal: token },
+    children: null,
+  });
+  return (
+    <ScrollView spacing={ThemesDefault.space.PX_24} style={{ paddingHorizontal: token }}>
+      {null}
+    </ScrollView>
+  );
+}

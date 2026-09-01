@@ -101,7 +101,7 @@ apply = {
     }
     return sMSBackupDisabledMessage;
   },
-  usePredicate: require("useIs2FAEnabled").useIsTOTPEnabled
+  usePredicate: require("useIs2FAEnabled").useIsTOTPEnabled,
 };
 apply = createToggle.createToggle(apply);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");

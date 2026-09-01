@@ -54,7 +54,7 @@ export default {
     closure_0 = arg0;
     closure_1 = stateFromStores;
     closure_2 = USER_PROFILE;
-    return callback(function*() {
+    return callback(function* () {
       closure_2 = tmp3;
       obj1 = { type: "WISHLIST_FETCH_START", wishlistId: null };
       obj1[1] = closure_1_0;
@@ -115,7 +115,7 @@ export default {
   addSkuToWishlist(closure_1_1, closure_1_2) {
     closure_0 = closure_1_1;
     closure_1 = closure_1_2;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -197,7 +197,13 @@ export default {
                 if (null != body) {
                   c3 = 2;
                   c3 = closure_1_9(user);
-                  const obj7 = { wishlist_id: null, action_type: "ADD", sku_id: null, sku_ids: null, location_stack: null };
+                  const obj7 = {
+                    wishlist_id: null,
+                    action_type: "ADD",
+                    sku_id: null,
+                    sku_ids: null,
+                    location_stack: null,
+                  };
                   obj7[0] = user.id;
                   obj7[2] = closure_0;
                   obj7[3] = c3;
@@ -264,7 +270,7 @@ export default {
     closure_0 = wishlistId;
     closure_1 = closure_1_1;
     closure_2 = analyticsLocations;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -348,7 +354,13 @@ export default {
                 if (null != closure_2) {
                   c3 = 2;
                   closure_2 = closure_1_9(id);
-                  const obj7 = { wishlist_id: null, action_type: "REMOVE", sku_id: null, sku_ids: null, location_stack: null };
+                  const obj7 = {
+                    wishlist_id: null,
+                    action_type: "REMOVE",
+                    sku_id: null,
+                    sku_ids: null,
+                    location_stack: null,
+                  };
                   obj7[0] = id.id;
                   obj7[2] = id;
                   obj7[3] = closure_2;
@@ -381,7 +393,7 @@ export default {
   updateWishlistVisibility(wishlistId, arg1) {
     closure_0 = wishlistId;
     closure_1 = arg1;
-    return callback(function*() {
+    return callback(function* () {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -499,10 +511,22 @@ export default {
   reorderWishlistItem(arg0, arg1, arg2) {
     closure_0 = arg0;
     closure_1 = arg1;
-    ({ previousSkuId: dependencyMap, nextSkuId: closure_3, newWishlistData: closure_4, analyticsLocations: closure_5 } = arg2);
-    return callback(function*() {
+    ({
+      previousSkuId: dependencyMap,
+      nextSkuId: closure_3,
+      newWishlistData: closure_4,
+      analyticsLocations: closure_5,
+    } = arg2);
+    return callback(function* () {
       closure_1 = tmp3;
-      obj1 = { type: "WISHLIST_REORDER_START", wishlistId: null, skuId: null, previousSkuId: null, nextSkuId: null, newWishlistData: null };
+      obj1 = {
+        type: "WISHLIST_REORDER_START",
+        wishlistId: null,
+        skuId: null,
+        previousSkuId: null,
+        nextSkuId: null,
+        newWishlistData: null,
+      };
       obj1[1] = closure_1_0;
       obj1[2] = closure_1_1;
       obj1[3] = closure_1_2;
@@ -549,7 +573,13 @@ export default {
               c3 = 2;
               closure_2 = closure_1_9(closure_1);
               const obj = closure_1_1(closure_1_2[15]);
-              const obj7 = { wishlist_id: null, action_type: "REORDER", sku_id: null, sku_ids: null, location_stack: null };
+              const obj7 = {
+                wishlist_id: null,
+                action_type: "REORDER",
+                sku_id: null,
+                sku_ids: null,
+                location_stack: null,
+              };
               obj7[0] = body;
               obj7[2] = closure_1;
               obj7[3] = closure_2;
@@ -579,7 +609,7 @@ export default {
     if (arg3 === undefined) {
       flag = true;
     }
-    return flag(function*() {
+    return flag(function* () {
       closure_1 = tmp3;
       obj1 = { type: "WISHLIST_RECOMMENDATIONS_FETCH_START", userIds: null, applicationIds: null };
       obj1[1] = closure_1_1;
@@ -628,7 +658,12 @@ export default {
           }
         })(body);
         closure_1 = closure_1_7.fromServer(body);
-        const obj6 = { type: "WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS", userIds: null, applicationIds: null, data: null };
+        const obj6 = {
+          type: "WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS",
+          userIds: null,
+          applicationIds: null,
+          data: null,
+        };
         obj6[1] = closure_1;
         obj6[2] = body;
         obj6[3] = closure_1;
@@ -639,5 +674,5 @@ export default {
       c3 = 0;
       return arg1;
     })();
-  }
+  },
 };

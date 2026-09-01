@@ -17,10 +17,16 @@ createCacheKey = { body: null, cardSection: null, cardTitle: null };
 createCacheKey = { marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center" };
-createCacheKey[2] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_24, textAlign: "center" };
+createCacheKey[2] = {
+  marginTop: ThemesDefault.space.PX_12,
+  marginBottom: ThemesDefault.space.PX_24,
+  textAlign: "center",
+};
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_24, textAlign: "center" };
-let result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/ParentalConsentConnectionScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/safety_flows/native/tasks/ParentalConsentConnectionScreen.tsx",
+);
 
 export default function ParentalConsentConnectionScreen() {
   const tmp = callback();
@@ -54,7 +60,9 @@ export default function ParentalConsentConnectionScreen() {
   const stateFromStores = onTaskComplete(str2[17]).useStateFromStores(items, () => authStore.getLinkedUsers());
   const tmp2Result1 = onTaskComplete(str2[17]);
   const items1 = [closure_7];
-  const stateFromStores1 = onTaskComplete(str2[17]).useStateFromStores(items1, () => authStore.getAreLinkedUsersProcessed());
+  const stateFromStores1 = onTaskComplete(str2[17]).useStateFromStores(items1, () =>
+    authStore.getAreLinkedUsersProcessed(),
+  );
   if (stateFromStores1) {
     const _Object = Object;
     const values = Object.values(stateFromStores);
@@ -112,85 +120,88 @@ export default function ParentalConsentConnectionScreen() {
   [tmp27, closure_5] = tmp14(obj9.useState(false), 2);
   const items6 = [onTaskComplete];
   const items7 = [tmp21, parsed, getLinkCode];
-  const callback1 = obj9.useCallback(parsed(function*() {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  const callback1 = obj9.useCallback(
+    parsed(function* () {
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
+        try {
+          c4 = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_0 = tmp4;
+              closure_1_5(true);
+              c3 = 2;
+              obj1 = { type: null };
+              obj1[0] = closure_1_0(closure_1_2[20]).TaskInputType.Empty;
+              v0 = 3;
+              c4 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = closure_1_0(obj1);
+              return obj2;
+            }
+          } else if (1 === tmp8) {
+            c3 = 0;
+            callback(false);
+            throw closure_2;
+          } else {
+            if (2 === tmp8) {
+              c3 = 1;
+              obj1 = v0(closure_1_2[21]);
+              const obj3 = { key: "SAFETY_FLOWS_PARENTAL_CONSENT_CONNECTION_ERROR", content: null };
+              const intl = closure_1_0(closure_1_2[22]).intl;
+              obj3[1] = intl.string(v0(closure_1_2[23])["+QRSxc"]);
+              obj1.open(obj3);
+              c3 = 0;
+              callback(false);
+              c4 = 3;
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              c3 = 1;
+            }
+            c3 = 0;
+            callback(false);
             c4 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
+          }
+        } catch (tmp33) {
+          closure_2 = tmp33;
+          if (tmp5 === c3) {
+            c4 = tmp3;
+            throw tmp33;
+          } else if (tmp2 === tmp35) {
+            v0 = tmp2;
           } else {
-            closure_0 = tmp4;
-            closure_1_5(true);
-            c3 = 2;
-            obj1 = { type: null };
-            obj1[0] = closure_1_0(closure_1_2[20]).TaskInputType.Empty;
-            v0 = 3;
-            c4 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = closure_1_0(obj1);
-            return obj2;
+            v0 = tmp;
           }
-        } else if (1 === tmp8) {
-          c3 = 0;
-          callback(false);
-          throw closure_2;
-        } else {
-          if (2 === tmp8) {
-            c3 = 1;
-            obj1 = v0(closure_1_2[21]);
-            const obj3 = { key: "SAFETY_FLOWS_PARENTAL_CONSENT_CONNECTION_ERROR", content: null };
-            const intl = closure_1_0(closure_1_2[22]).intl;
-            obj3[1] = intl.string(v0(closure_1_2[23])["+QRSxc"]);
-            obj1.open(obj3);
-            c3 = 0;
-            callback(false);
-            c4 = 3;
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            c3 = 1;
-          }
-          c3 = 0;
-          callback(false);
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp33) {
-        closure_2 = tmp33;
-        if (tmp5 === c3) {
-          c4 = tmp3;
-          throw tmp33;
-        } else if (tmp2 === tmp35) {
-          v0 = tmp2;
-        } else {
-          v0 = tmp;
         }
       }
-    }
-  }), items6);
+    }),
+    items6,
+  );
   const callback2 = obj9.useCallback(() => {
     let obj = getLinkCode(str2[24]);
     obj = { linkCode: str2, expiresAt: parsed, onRefresh: getLinkCode, title: null, body: null };
@@ -221,7 +232,7 @@ export default function ParentalConsentConnectionScreen() {
   obj[1] = formatResult;
   obj[3] = tmp27;
   obj2 = { spacing: tmp5(tmp3[9]).space.PX_16, children: null };
-  const items8 = [closure_10(getLinkCode(str2[30]), {}), ];
+  const items8 = [closure_10(getLinkCode(str2[30]), {})];
   let tmp30Result = tmp16;
   if (tmp16) {
     let obj3 = { variant: "primary", text: null, disabled: null, loading: null, onPress: null };
@@ -239,10 +250,19 @@ export default function ParentalConsentConnectionScreen() {
   const tmp14Result = tmp14(obj9.useState(false), 2);
   items8[1] = tmp30Result;
   obj2[1] = items8;
-  obj[4] = closure_10(onTaskComplete(str2[28]).ModalFooter, { children: closure_11(onTaskComplete(str2[29]).Stack, obj2) });
+  obj[4] = closure_10(onTaskComplete(str2[28]).ModalFooter, {
+    children: closure_11(onTaskComplete(str2[29]).Stack, obj2),
+  });
   const obj5 = { spacing: getLinkCode(str2[9]).space.PX_16, style: tmp.body, children: null };
   if (tmp16) {
-    const obj6 = { pendingRequests: null, linkedUsersProcessed: null, expiresAt: null, onRefreshLinkCode: null, onShare: null, onInviteAnotherGuardian: null };
+    const obj6 = {
+      pendingRequests: null,
+      linkedUsersProcessed: null,
+      expiresAt: null,
+      onRefreshLinkCode: null,
+      onShare: null,
+      onInviteAnotherGuardian: null,
+    };
     obj6[0] = derivedPendingRequests;
     obj6[1] = stateFromStores1;
     obj6[2] = parsed;
@@ -257,7 +277,7 @@ export default function ParentalConsentConnectionScreen() {
     obj8[0] = tmp.cardTitle;
     const intl4 = tmp2(tmp3[22]).intl;
     obj8[3] = intl4.string(tmp5(tmp3[34]).pojgfk);
-    const items9 = [tmp30(tmp2(tmp3[33]).Text, obj8), ];
+    const items9 = [tmp30(tmp2(tmp3[33]).Text, obj8)];
     obj9 = { shareActions: "full", linkCode: null, expiresAt: null, onRefresh: null };
     obj9[1] = tmp21;
     obj9[2] = parsed;
@@ -269,4 +289,4 @@ export default function ParentalConsentConnectionScreen() {
   obj5[2] = tmp30Result;
   obj[5] = closure_10(onTaskComplete(str2[29]).Stack, obj5);
   return closure_10(tmp5Result, obj);
-};
+}

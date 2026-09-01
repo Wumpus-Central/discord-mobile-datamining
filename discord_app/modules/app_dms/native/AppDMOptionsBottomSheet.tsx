@@ -64,7 +64,7 @@ export default function AppDMOptionsBottomSheet(userId) {
   const intl = userId(application[15]).intl;
   obj2[0] = intl.string(userId(application[15]).t.iXAna6);
   obj2[1] = callback;
-  const items3 = [callback(userId(application[14]).TableRow, obj2), ];
+  const items3 = [callback(userId(application[14]).TableRow, obj2)];
   const obj3 = { label: null, onPress: null, disabled: null };
   const intl2 = userId(application[15]).intl;
   obj3[0] = intl2.string(userId(application[15]).t.KUsDNI);
@@ -75,4 +75,4 @@ export default function AppDMOptionsBottomSheet(userId) {
   obj[1] = callback2(userId(application[13]).TableRowGroup, obj1);
   obj[2] = callback(View, obj);
   return callback(userId(application[12]).BottomSheet, obj);
-};
+}

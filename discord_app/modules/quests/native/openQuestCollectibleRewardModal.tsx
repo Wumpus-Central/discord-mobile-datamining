@@ -26,7 +26,7 @@ function QuestCollectibleRewardModalMessages(quest) {
   obj = { variant: "heading-xl/bold", style: tmp.title, children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.format(getSystemLocale.t.YNaxMp, { itemName: defaultRewardNameWithArticle });
-  const items1 = [callback(Text.Text, obj), ];
+  const items1 = [callback(Text.Text, obj)];
   obj1 = { variant: "text-md/medium", style: tmp.title, children: claimedCollectibleRewardMessage };
   items1[1] = callback(Text.Text, obj1);
   obj[0] = items1;

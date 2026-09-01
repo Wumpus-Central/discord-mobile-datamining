@@ -11,7 +11,13 @@ const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: error, RTCConnectionStates: closure_8 } = ME);
 let obj = {};
 const merged = Object.assign({ initialized: false, callId: "r" });
-obj = { DISCONNECTED: "disconneted", DISCONNECTING: "disconnecting", CONNECTING: "connecting", RINGING: "ringing", CONNECTED: "connected" };
+obj = {
+  DISCONNECTED: "disconneted",
+  DISCONNECTING: "disconnecting",
+  CONNECTING: "connecting",
+  RINGING: "ringing",
+  CONNECTED: "connected",
+};
 const result = require("set").fileFinishedImporting("modules/voice_calls/native/CallStateHooks.tsx");
 
 export default function _default() {
@@ -35,21 +41,25 @@ export default function _default() {
   obj = initialize;
   const items = [closure_5];
   const items1 = [tmp, id];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
-    const call = closure_1_5.getCall(closure_0);
-    if (null != call) {
-      const ringing = call.ringing;
-      let found = ringing.filter((arg0) => arg0 !== closure_1);
-    } else {
-      found = [];
-    }
-    let initialized = closure_1_10.initialized;
-    if (!initialized) {
-      initialized = found.length > 0;
-    }
-    closure_1_10.initialized = initialized;
-    return found;
-  }, items1);
+  const stateFromStoresArray = obj.useStateFromStoresArray(
+    items,
+    () => {
+      const call = closure_1_5.getCall(closure_0);
+      if (null != call) {
+        const ringing = call.ringing;
+        let found = ringing.filter((arg0) => arg0 !== closure_1);
+      } else {
+        found = [];
+      }
+      let initialized = closure_1_10.initialized;
+      if (!initialized) {
+        initialized = found.length > 0;
+      }
+      closure_1_10.initialized = initialized;
+      return found;
+    },
+    items1,
+  );
   const participants = stateFromStores.getParticipants(tmp);
   let found = participants.filter((type) => {
     let tmp = type.type !== closure_1_9.ACTIVITY;
@@ -61,36 +71,44 @@ export default function _default() {
   const tmp3 = id(9650)();
   dependencyMap = tmp3;
   const items2 = [getRTCConnectionId];
-  stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);
+  stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items2,
+    getRTCConnectionId.getRTCConnectionId,
+    [],
+  );
   const obj2 = initialize;
   const items3 = [getRTCConnectionId];
   const items4 = [stateFromStores, tmp3, tmp];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => {
-    let channelId;
-    if (channelId != null) {
-      channelId = channelId.channelId;
-    }
-    if (channelId === closure_0) {
-      closure_1_10.initialized = true;
-      return closure_1_8.RTC_CONNECTED;
-    } else {
-      if (!tmp2) {
-        closure_1_10.initialized = false;
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items3,
+    () => {
+      let channelId;
+      if (channelId != null) {
+        channelId = channelId.channelId;
       }
-      closure_1_10.callId = stateFromStores;
-      const state = closure_1_6.getState();
-      let initialized = closure_1_10.initialized;
-      if (!initialized) {
-        let tmp10 = state !== closure_1_8.DISCONNECTED;
-        if (tmp10) {
-          tmp10 = state !== closure_1_8.RTC_DISCONNECTED;
+      if (channelId === closure_0) {
+        closure_1_10.initialized = true;
+        return closure_1_8.RTC_CONNECTED;
+      } else {
+        if (!tmp2) {
+          closure_1_10.initialized = false;
         }
-        initialized = tmp10;
+        closure_1_10.callId = stateFromStores;
+        const state = closure_1_6.getState();
+        let initialized = closure_1_10.initialized;
+        if (!initialized) {
+          let tmp10 = state !== closure_1_8.DISCONNECTED;
+          if (tmp10) {
+            tmp10 = state !== closure_1_8.RTC_DISCONNECTED;
+          }
+          initialized = tmp10;
+        }
+        closure_1_10.initialized = initialized;
+        return state;
       }
-      closure_1_10.initialized = initialized;
-      return state;
-    }
-  }, items4);
+    },
+    items4,
+  );
   obj.initialized = obj.initialized || flag2;
   let state = obj.CONNECTING;
   let initialized = tmp6.initialized;
@@ -112,5 +130,5 @@ export default function _default() {
     }
   }
   return { state, initialized };
-};
+}
 export const CallStates = obj;

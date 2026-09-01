@@ -18,7 +18,13 @@ function handleSearchQuery(searchContext) {
   const searchContextId = obj.getSearchContextId(searchContext);
   let value = map.get(searchContextId);
   if (value == null) {
-    obj = { searchContext: null, wasInitialSearchQuery: true, candidateTabs: null, visibleTabs: null, visibleTabCounts: null };
+    obj = {
+      searchContext: null,
+      wasInitialSearchQuery: true,
+      candidateTabs: null,
+      visibleTabs: null,
+      visibleTabCounts: null,
+    };
     obj[0] = searchContext;
     obj[2] = closure_12;
     obj[3] = closure_12;
@@ -89,7 +95,9 @@ function computeLayoutForState(value) {
       } else if (tmp.PEOPLE === closure_1) {
         arg0[closure_1] = flag.getCount(closure_8);
       } else {
-        arg0[closure_1] = totalCount.getTotalCount(value(isInitialSearchQueryResult[8]).getSearchTabFetchId(searchContext, closure_1, searchResultsQuery));
+        arg0[closure_1] = totalCount.getTotalCount(
+          value(isInitialSearchQueryResult[8]).getSearchTabFetchId(searchContext, closure_1, searchResultsQuery),
+        );
         const obj = value(isInitialSearchQueryResult[8]);
       }
       return arg0;
@@ -122,7 +130,11 @@ function computeLayoutForState(value) {
     const result = tmp6Result.areArraysShallowEqual(value.candidateTabs, found);
     let tmp13 = !result;
     const obj2 = SearchTokenTypes;
-    const result1 = require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx").areArraysShallowEqual(value.visibleTabs, visibleTabs);
+    const result1 =
+      require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx").areArraysShallowEqual(
+        value.visibleTabs,
+        visibleTabs,
+      );
     const visibleTabCounts2 = value.visibleTabCounts;
     let tmp16 = visibleTabCounts2 === visibleTabCounts;
     if (!tmp16) {
@@ -163,12 +175,15 @@ function computeLayoutForAll() {
   }
   return flag;
 }
-({ SearchTabs: c9, SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: c10, SEARCH_TYPE_TO_SEARCH_RESULT_TABS: unpackModuleId } = MessageEmbedTypes);
+({
+  SearchTabs: c9,
+  SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: c10,
+  SEARCH_TYPE_TO_SEARCH_RESULT_TABS: unpackModuleId,
+} = MessageEmbedTypes);
 let closure_12 = [];
 const map = new Map();
 const Store = initializeDefault.Store;
-class SearchTabsLayoutStore extends Store {
-}
+class SearchTabsLayoutStore extends Store {}
 const prototype = SearchTabsLayoutStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_8, closure_4, closure_6, closure_5, closure_7, closure_3);
@@ -179,7 +194,13 @@ prototype["getCandidateTabs"] = function getCandidateTabs(searchContext) {
   let obj = SearchTokenTypes;
   let value = map.get(obj.getSearchContextId(searchContext));
   if (value == null) {
-    obj = { searchContext: null, wasInitialSearchQuery: true, candidateTabs: null, visibleTabs: null, visibleTabCounts: null };
+    obj = {
+      searchContext: null,
+      wasInitialSearchQuery: true,
+      candidateTabs: null,
+      visibleTabs: null,
+      visibleTabCounts: null,
+    };
     obj[0] = searchContext;
     obj[2] = closure_12;
     obj[3] = closure_12;
@@ -191,7 +212,13 @@ prototype["getVisibleTabs"] = function getVisibleTabs(searchContext) {
   let obj = SearchTokenTypes;
   let value = map.get(obj.getSearchContextId(searchContext));
   if (value == null) {
-    obj = { searchContext: null, wasInitialSearchQuery: true, candidateTabs: null, visibleTabs: null, visibleTabCounts: null };
+    obj = {
+      searchContext: null,
+      wasInitialSearchQuery: true,
+      candidateTabs: null,
+      visibleTabs: null,
+      visibleTabCounts: null,
+    };
     obj[0] = searchContext;
     obj[2] = closure_12;
     obj[3] = closure_12;
@@ -203,7 +230,13 @@ prototype["getVisibleTabCounts"] = function getVisibleTabCounts(searchContext) {
   let obj = SearchTokenTypes;
   let value = map.get(obj.getSearchContextId(searchContext));
   if (value == null) {
-    obj = { searchContext: null, wasInitialSearchQuery: true, candidateTabs: null, visibleTabs: null, visibleTabCounts: null };
+    obj = {
+      searchContext: null,
+      wasInitialSearchQuery: true,
+      candidateTabs: null,
+      visibleTabs: null,
+      visibleTabCounts: null,
+    };
     obj[0] = searchContext;
     obj[2] = closure_12;
     obj[3] = closure_12;
@@ -217,7 +250,7 @@ const searchTabsLayoutStore = new SearchTabsLayoutStore(dispatcherDefault, {
   SEARCH_QUERY_NATIVE_UPDATE: handleSearchQuery,
   SEARCH_QUERY_NATIVE_DELETE: function handleSearchQueryNativeDelete(id) {
     return map.delete(id.id);
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/search/native/stores/SearchTabsLayoutStore.tsx");
 

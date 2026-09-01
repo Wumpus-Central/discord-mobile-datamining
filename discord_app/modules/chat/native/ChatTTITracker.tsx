@@ -17,7 +17,7 @@ export const ChatTTITracker = function ChatTTITracker(messages) {
     };
     tmp3 = callback(TTIMeasurementView.TTIMeasurementView, obj, "cached_messages_tti");
   }
-  const children = [tmp3, ];
+  const children = [tmp3];
   if (messages.hasFetched) {
     obj = { nativeID: "latest_messages_tti", onMeasurement: null };
     obj[1] = function onMeasurement(nativeEvent) {

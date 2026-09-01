@@ -21,7 +21,8 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
   if (flag2 === undefined) {
     flag2 = false;
   }
-  ({ analyticsLocation, analyticsLocations, planId, applicationId, guildId, onPaymentSuccess, onPaymentDismiss } = isBoostPurchaseFlow);
+  ({ analyticsLocation, analyticsLocations, planId, applicationId, guildId, onPaymentSuccess, onPaymentDismiss } =
+    isBoostPurchaseFlow);
   function wrappedPredicate(isDeprecated) {
     const result = closure_1_0(closure_1_2[1]).shouldAlwaysExcludeFromPlanSelect(isDeprecated, flag2);
     let tmp2 = !result;
@@ -39,7 +40,18 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
   }
   const PREMIUM_PLAN_SELECT = UserSettingsSections.PREMIUM_PLAN_SELECT;
   if (null != navigation) {
-    let obj = { predicate: null, analyticsLocation: null, analyticsLocations: null, showCurrentPlan: null, isBoostPurchaseFlow: null, planId: null, applicationId: null, guildId: null, onPaymentSuccess: null, onPaymentDismiss: null };
+    let obj = {
+      predicate: null,
+      analyticsLocation: null,
+      analyticsLocations: null,
+      showCurrentPlan: null,
+      isBoostPurchaseFlow: null,
+      planId: null,
+      applicationId: null,
+      guildId: null,
+      onPaymentSuccess: null,
+      onPaymentDismiss: null,
+    };
     obj[0] = wrappedPredicate;
     obj[1] = analyticsLocation;
     obj[2] = analyticsLocations;
@@ -52,7 +64,20 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
     obj[9] = onPaymentDismiss;
     navigation.push(PREMIUM_PLAN_SELECT, obj);
   } else {
-    obj = { initialRoute: null, analyticsLocation: null, analyticsLocations: null, predicate: null, showCurrentPlan: null, isBoostPurchaseFlow: null, planId: null, applicationId: null, guildId: null, onBack: null, onPaymentSuccess: null, onPaymentDismiss: null };
+    obj = {
+      initialRoute: null,
+      analyticsLocation: null,
+      analyticsLocations: null,
+      predicate: null,
+      showCurrentPlan: null,
+      isBoostPurchaseFlow: null,
+      planId: null,
+      applicationId: null,
+      guildId: null,
+      onBack: null,
+      onPaymentSuccess: null,
+      onPaymentDismiss: null,
+    };
     obj[0] = PREMIUM_PLAN_SELECT;
     obj[1] = analyticsLocation;
     obj[2] = analyticsLocations;

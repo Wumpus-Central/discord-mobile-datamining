@@ -67,7 +67,9 @@ function getLegacyOverridesInfo(allExperimentOverrideDescriptors) {
   return obj;
 }
 ({ ExperimentBuckets: closure_6, ExperimentTypes: error } = ExperimentBuckets);
-const result = require("set").fileFinishedImporting("modules/experiments/client_override_hooks/useLegacyExperiments.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/experiments/client_override_hooks/useLegacyExperiments.tsx",
+);
 
 export { parseRegisteredExperiments };
 export { getLegacyOverridesInfo };
@@ -84,8 +86,13 @@ export const useLegacyExperiments = function useLegacyExperiments() {
   const items = [closure_5];
   stateFromStoresObject = obj.useStateFromStoresObject(items, () => store.getRegisteredExperiments());
   const items1 = [closure_5];
-  const stateFromStoresObject1 = stateFromStoresObject(589).useStateFromStoresObject(items1, () => store.getAllExperimentOverrideDescriptors());
-  obj = { experiments: useMemo(() => closure_1_8(stateFromStoresObject), items2), overridesInfo: useMemo(() => closure_1_9(stateFromStoresObject1), items3) };
+  const stateFromStoresObject1 = stateFromStoresObject(589).useStateFromStoresObject(items1, () =>
+    store.getAllExperimentOverrideDescriptors(),
+  );
+  obj = {
+    experiments: useMemo(() => closure_1_8(stateFromStoresObject), items2),
+    overridesInfo: useMemo(() => closure_1_9(stateFromStoresObject1), items3),
+  };
   items2 = [stateFromStoresObject];
   items3 = [stateFromStoresObject1];
   return obj;

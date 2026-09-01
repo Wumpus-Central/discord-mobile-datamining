@@ -13,8 +13,15 @@ function OverrideOption(type) {
   ({ permissionTitle, onPress } = type);
   let obj = type(styles[10]);
   const radioA11yNative = obj.useRadioA11yNative({ selected });
-  obj = { accessibilityRole: radioA11yNative.accessibilityRole, accessibilityLabel: null, accessibilityState: null, style: null, onPress: null, children: null };
-  items = [permissionTitle, ];
+  obj = {
+    accessibilityRole: radioA11yNative.accessibilityRole,
+    accessibilityLabel: null,
+    accessibilityState: null,
+    style: null,
+    onPress: null,
+    children: null,
+  };
+  items = [permissionTitle];
   if (type(styles[5]).DENY === type) {
     const intl2 = tmp(tmp2[6]).intl;
     let stringResult = intl2.string(tmp(tmp2[6]).t["6639O5"]);
@@ -43,7 +50,7 @@ function OverrideOption(type) {
       } else if (tmp3(tmp4[5]).PASSTHROUGH === tmp2) {
         tmp5 = items ? iconWrapper.passthroughSelected : iconWrapper.passthroughActive;
       }
-      items = [tmp5, ];
+      items = [tmp5];
       iconWrapper = iconWrapper.iconWrapper;
       items[1] = iconWrapper;
     }
@@ -79,8 +86,26 @@ function OverrideOption(type) {
 ({ Pressable: c3, View: c4 } = get_ActivityIndicator);
 const PX_4 = ThemesDefault.space.PX_4;
 const md = ThemesDefault.radii.md;
-let obj = { ternaryCheckBox: null, iconWrapper: null, icon: null, denyActive: null, denySelected: null, allowActive: null, allowSelected: null, passthroughSelected: null, passthroughActive: null, disabled: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: md, height: ThemesDefault.space.PX_32, paddingVertical: PX_4, paddingHorizontal: PX_4 / 2, flexDirection: "row" };
+let obj = {
+  ternaryCheckBox: null,
+  iconWrapper: null,
+  icon: null,
+  denyActive: null,
+  denySelected: null,
+  allowActive: null,
+  allowSelected: null,
+  passthroughSelected: null,
+  passthroughActive: null,
+  disabled: null,
+};
+obj = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: md,
+  height: ThemesDefault.space.PX_32,
+  paddingVertical: PX_4,
+  paddingHorizontal: PX_4 / 2,
+  flexDirection: "row",
+};
 obj[0] = obj;
 obj[1] = { borderRadius: md - PX_4, marginHorizontal: PX_4 / 2, justifyContent: "center", height: "100%" };
 createCacheKey = { marginHorizontal: ThemesDefault.space.PX_8 };
@@ -110,12 +135,18 @@ const memoResult = importAllResult.memo(function ChannelSettingsPermissionsOverr
   closure_3 = undefined;
   const tmp = callback();
   closure_3 = tmp;
-  items = [tmp.ternaryCheckBox, ];
+  items = [tmp.ternaryCheckBox];
   let disabled2 = disabled;
   if (disabled) {
     disabled2 = tmp.disabled;
   }
-  const obj = { style: items, pointerEvents: null, accessibilityRole: "radiogroup", accessibilityLabel: null, children: null };
+  const obj = {
+    style: items,
+    pointerEvents: null,
+    accessibilityRole: "radiogroup",
+    accessibilityLabel: null,
+    children: null,
+  };
   items[1] = disabled2;
   let str = "auto";
   if (disabled) {
@@ -125,24 +156,34 @@ const memoResult = importAllResult.memo(function ChannelSettingsPermissionsOverr
   obj[3] = permissionTitle;
   obj[4] = items.map((type) => {
     closure_0 = type;
-    return closure_1_5(closure_1_8, {
-      permissionTitle: closure_0,
-      type,
-      selected: closure_1 === type,
-      styles: closure_3,
-      onPress() {
-        let tmp2 = null != closure_1_2;
-        if (tmp2) {
-          tmp2 = closure_1_1 !== closure_0;
-        }
-        if (tmp2) {
-          closure_1_2(closure_0);
-        }
-      }
-    }, "checkbox-" + arg1);
+    return closure_1_5(
+      closure_1_8,
+      {
+        permissionTitle: closure_0,
+        type,
+        selected: closure_1 === type,
+        styles: closure_3,
+        onPress() {
+          let tmp2 = null != closure_1_2;
+          if (tmp2) {
+            tmp2 = closure_1_1 !== closure_0;
+          }
+          if (tmp2) {
+            closure_1_2(closure_0);
+          }
+        },
+      },
+      "checkbox-" + arg1,
+    );
   });
-  return <closure_4 style={items} pointerEvents={null} accessibilityRole="radiogroup" accessibilityLabel={null}>{null}</closure_4>;
+  return (
+    <closure_4 style={items} pointerEvents={null} accessibilityRole="radiogroup" accessibilityLabel={null}>
+      {null}
+    </closure_4>
+  );
 });
-const result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx");
+const result = require("set").fileFinishedImporting(
+  "components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx",
+);
 
 export default memoResult;

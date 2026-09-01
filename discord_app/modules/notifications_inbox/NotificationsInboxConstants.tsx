@@ -42,7 +42,11 @@ export const getNotificationsInboxGuild = function getNotificationsInboxGuild(ar
 export const MessageCategory = obj;
 export const InboxFilters = obj;
 export const InboxReadState = { READ: "READ", UNREAD: "UNREAD" };
-export const InboxMessageType = { ALL_MESSAGES_CHANNEL: "ALL_MESSAGES_CHANNEL", MENTION: "MENTION", BOOKMARK: "BOOKMARK" };
+export const InboxMessageType = {
+  ALL_MESSAGES_CHANNEL: "ALL_MESSAGES_CHANNEL",
+  MENTION: "MENTION",
+  BOOKMARK: "BOOKMARK",
+};
 export const MESSAGE_CATEGORY_DISPLAY_MAP = obj;
 export const getFilterMap = function getFilterMap() {
   obj = {};
@@ -55,6 +59,18 @@ export const getFilterMap = function getFilterMap() {
   return obj;
 };
 export const ChannelLoadState = { UNLOADED: "unloaded", LOADED: "loaded", LOADED_UNREAD: "loadedUnread" };
-export const LoadingTrigger = { AUTO_LOAD: "auto_load", ON_OPEN: "on_open", FILL_SCROLLER: "fill_scroller", USER_SCROLL: "user_scroll", UNKNOWN: "unknown" };
-export const NotificationInboxItemType = { MENTION: "MENTION", REPLY: "REPLY", REACTION: "REACTION", ANNOUNCEMENT: "ANNOUNCEMENT", MESSAGE: "MESSAGE" };
+export const LoadingTrigger = {
+  AUTO_LOAD: "auto_load",
+  ON_OPEN: "on_open",
+  FILL_SCROLLER: "fill_scroller",
+  USER_SCROLL: "user_scroll",
+  UNKNOWN: "unknown",
+};
+export const NotificationInboxItemType = {
+  MENTION: "MENTION",
+  REPLY: "REPLY",
+  REACTION: "REACTION",
+  ANNOUNCEMENT: "ANNOUNCEMENT",
+  MESSAGE: "MESSAGE",
+};
 export const NotificationInboxActionType = { ACK: "ACK", BOOKMARK: "BOOKMARK", SETTINGS: "SETTINGS" };

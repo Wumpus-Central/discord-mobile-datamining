@@ -11,8 +11,21 @@ const require = arg1;
 noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: 12, paddingLeft: 8 }, backButton: { flex: 1 }, logo: { flex: 2, height: 36 }, dummyRightButton: { flex: 1 } });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopViewAllCategoryItemsHeader.tsx");
+let closure_7 = createCacheKey.createStyles({
+  headerContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingBottom: 12,
+    paddingLeft: 8,
+  },
+  backButton: { flex: 1 },
+  logo: { flex: 2, height: 36 },
+  dummyRightButton: { flex: 1 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/CollectiblesShopViewAllCategoryItemsHeader.tsx",
+);
 
 export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   let _require;
@@ -35,12 +48,18 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
     navigation.goBack();
   };
   obj1[1] = callback(require("../../main_tabs_v2/native/shared_components/HeaderShared.tsx").HeaderIconButton, obj2);
-  const items = [callback(closure_4, obj1), , ];
-  const obj3 = { resizeMode: "contain", style: tmp.logo, source: { uri: logoUrl }, accessibilityLabel: null, accessibilityRole: "header" };
+  const items = [callback(closure_4, obj1), ,];
+  const obj3 = {
+    resizeMode: "contain",
+    style: tmp.logo,
+    source: { uri: logoUrl },
+    accessibilityLabel: null,
+    accessibilityRole: "header",
+  };
   const intl2 = require("../../../intl/index.native.tsx").intl;
   obj3[3] = intl2.formatToPlainString(require("../../../intl/index.native.tsx").t.FNtLb3, { category: categoryName });
   items[1] = callback(closure_3, obj3);
   items[2] = callback(closure_4, { style: tmp.dummyRightButton });
   obj[1] = items;
   return callback2(closure_4, obj);
-};
+}

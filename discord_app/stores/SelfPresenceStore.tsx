@@ -146,12 +146,19 @@ function handleUpdate() {
     if (flag) {
       const items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(found, 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(remoteActivities.filter((type) => type.type !== constants.CUSTOM_STATUS), arraySpreadResult);
+      arraySpreadResult = HermesBuiltin.arraySpread(
+        remoteActivities.filter((type) => type.type !== constants.CUSTOM_STATUS),
+        arraySpreadResult,
+      );
       const tmp12Result = applyDefault;
       const tmp12ResultResult = applyDefault(items.sort(sortActivity));
-      const valueResult = applyDefault(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value();
+      const valueResult = applyDefault(items.sort(sortActivity))
+        .uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name)
+        .value();
       closure_27 = filterPlayingActivities(valueResult);
-      const iter = applyDefault(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name);
+      const iter = applyDefault(items.sort(sortActivity)).uniqBy(
+        (type) => "" + type.type + ":" + type.application_id + ":" + type.name,
+      );
     }
   }
   found = [];
@@ -176,8 +183,7 @@ let closure_25 = Object.freeze([]);
 let closure_26 = [];
 let closure_27 = [];
 const Store = initializeDefault.Store;
-class SelfPresenceStore extends Store {
-}
+class SelfPresenceStore extends Store {}
 const prototype = SelfPresenceStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_5, closure_6, closure_7, closure_8, closure_9, closure_11, closure_3, closure_4);
@@ -276,7 +282,7 @@ const selfPresenceStore = new SelfPresenceStore(dispatcherDefault, {
       }
     }
     return false;
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("stores/SelfPresenceStore.tsx");
 

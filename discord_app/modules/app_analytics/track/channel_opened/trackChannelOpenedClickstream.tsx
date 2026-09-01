@@ -6,7 +6,9 @@ import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
 
 require = arg1;
 ({ ChannelTypes: c3, AnalyticEvents: c4 } = ME);
-const result = require("set").fileFinishedImporting("modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx",
+);
 
 export default function trackChannelOpenedClickstream(channelId) {
   channelId = channelId.channelId;
@@ -45,4 +47,4 @@ export default function trackChannelOpenedClickstream(channelId) {
       }
     }
   }
-};
+}

@@ -17,4 +17,4 @@ export default function BanConfirmModal(onBeforeGoBack) {
     return closure_1_3(closure_1_1(onGoBack[5]), { onBan: onGoBack, guildId: closure_0, userId: closure_1 });
   };
   return jsx(importDefault(onGoBack[3]), { screenKey: "ban", title: null, render: null });
-};
+}

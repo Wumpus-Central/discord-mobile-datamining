@@ -42,5 +42,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "FRIENDS_SET_INITIAL_SECTION", section };
     obj.dispatch(obj);
-  }
+  },
 };

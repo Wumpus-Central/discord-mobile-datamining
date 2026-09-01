@@ -197,4 +197,4 @@ export default function App() {
   obj[1] = jsx(getAuthComponentDefault, {});
   obj[1] = jsx(GestureWrapperDefault, { appEntryKey: "main", children: null });
   return <tmp11 appEntryKey="main">{null}</tmp11>;
-};
+}

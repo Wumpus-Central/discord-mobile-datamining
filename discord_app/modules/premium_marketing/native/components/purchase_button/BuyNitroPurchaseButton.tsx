@@ -9,8 +9,14 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ container: { width: "100%" }, buttonStack: { width: "100%" }, hiddenFlow: { position: "absolute", width: 0, height: 0, overflow: "hidden", opacity: 0 } });
-let result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButton.tsx");
+let closure_10 = createCacheKey.createStyles({
+  container: { width: "100%" },
+  buttonStack: { width: "100%" },
+  hiddenFlow: { position: "absolute", width: 0, height: 0, overflow: "hidden", opacity: 0 },
+});
+let result = require("set").fileFinishedImporting(
+  "modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButton.tsx",
+);
 
 export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
   ({ planSelection, location: _location } = sourceAnalyticsLocations);
@@ -79,12 +85,15 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
   const effect = React.useEffect(() => {
     closure_7.current = first;
   }, items);
-  const effect1 = React.useEffect(() => () => {
-    if (null != ref.current) {
-      const BuyNitroPurchaseLock = closure_1_0(closure_1_2[14]).BuyNitroPurchaseLock;
-      BuyNitroPurchaseLock.end();
-    }
-  }, []);
+  const effect1 = React.useEffect(
+    () => () => {
+      if (null != ref.current) {
+        const BuyNitroPurchaseLock = closure_1_0(closure_1_2[14]).BuyNitroPurchaseLock;
+        BuyNitroPurchaseLock.end();
+      }
+    },
+    [],
+  );
   const tmp20 = first(React.useState(undefined), 2);
   const items1 = [c6];
   let stateFromStores = null != first;
@@ -129,7 +138,7 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
     priceStringByProductId(trialId[18]).show(obj);
     callback();
   }, items2);
-  const items4 = [, , , ];
+  const items4 = [, , ,];
   ({ item: arr6[0], isTrial: arr6[1] } = selection);
   items4[2] = trialId;
   items4[3] = priceStringByProductId;
@@ -174,7 +183,17 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
       const tmp9 = c6;
     }
   }, items4);
-  const items5 = [callback(selection(trialId[19]).Button, { text: stringResult, variant: str, size: "lg", grow: true, onPress: callback3, loading: stateFromStores, disabled: isBuyNitroPurchaseBlocked }), ];
+  const items5 = [
+    callback(selection(trialId[19]).Button, {
+      text: stringResult,
+      variant: str,
+      size: "lg",
+      grow: true,
+      onPress: callback3,
+      loading: stateFromStores,
+      disabled: isBuyNitroPurchaseBlocked,
+    }),
+  ];
   let tmp34Result = null != outgoing;
   if (tmp34Result) {
     const obj2 = { snapshot: null, onDone: null };
@@ -184,7 +203,7 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
   }
   items5[1] = tmp34Result;
   obj1[1] = items5;
-  const items6 = [closure_9(c5, obj1), , ];
+  const items6 = [closure_9(c5, obj1), ,];
   tmp34Result = !result;
   if (!result) {
     const obj3 = { item: null, ctaText: null, isTrial: null, isDiscounted: null };
@@ -198,7 +217,21 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
   if (tmp34Result1) {
     obj4 = { style: null, pointerEvents: "none", children: null };
     obj4[0] = tmp3.hiddenFlow;
-    const obj5 = { item: null, analyticsLocations: null, analyticsLoadId: null, hasEmittedPaymentFlowStartedRef: null, applicationId: null, expectedPriceString: null, stagedTrialId: null, onExit: null, onOrderPriceMismatch: null, onOrderTrialUnavailable: null, onHostSheetClose: null, onPaymentSuccess: null, onPaymentDismiss: null };
+    const obj5 = {
+      item: null,
+      analyticsLocations: null,
+      analyticsLoadId: null,
+      hasEmittedPaymentFlowStartedRef: null,
+      applicationId: null,
+      expectedPriceString: null,
+      stagedTrialId: null,
+      onExit: null,
+      onOrderPriceMismatch: null,
+      onOrderTrialUnavailable: null,
+      onHostSheetClose: null,
+      onPaymentSuccess: null,
+      onPaymentDismiss: null,
+    };
     obj5[0] = first;
     obj5[1] = tmp13Result(prop, _location, tmp13(tmp5[7]).PREMIUM_PAYMENT_ACTION_SHEET).analyticsLocations;
     obj5[2] = tmp14;
@@ -218,4 +251,4 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
   items6[2] = tmp34Result1;
   obj[1] = items6;
   return closure_9(c5, obj);
-};
+}

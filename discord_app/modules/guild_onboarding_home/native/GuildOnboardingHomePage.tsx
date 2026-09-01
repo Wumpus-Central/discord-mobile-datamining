@@ -92,12 +92,12 @@ function GuildOnboardingHomePage(guildId) {
     obj = { guildId: null, hideDescription: null };
     obj[0] = guildId;
     obj[1] = tmp5;
-    const items3 = [callback(tmp4(16140), obj), ];
+    const items3 = [callback(tmp4(16140), obj)];
     if (tmp5) {
       obj1 = { children: null };
       let obj2 = { guildId: null };
       obj2[0] = guildId;
-      const items4 = [tmp12(tmp4(16145), obj2), , ];
+      const items4 = [tmp12(tmp4(16145), obj2), ,];
       let obj3 = { guildId: null };
       obj3[0] = guildId;
       items4[1] = tmp12(tmp4(16149), obj3);
@@ -127,7 +127,10 @@ export default function GuildOnboardingHomePageGuard(guildId) {
   let stateFromStores;
   let canSeeOnboardingHome;
   const items = [closure_4];
-  stateFromStores = guildId(canSeeOnboardingHome[7]).useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
+  stateFromStores = guildId(canSeeOnboardingHome[7]).useStateFromStores(
+    items,
+    () => hasLoadedExperiments.hasLoadedExperiments,
+  );
   let obj = guildId(canSeeOnboardingHome[7]);
   canSeeOnboardingHome = guildId(canSeeOnboardingHome[19]).useCanSeeOnboardingHome(guildId);
   const items1 = [guildId, stateFromStores, canSeeOnboardingHome];
@@ -140,4 +143,4 @@ export default function GuildOnboardingHomePageGuard(guildId) {
     }
   }, items1);
   return callback(GuildOnboardingHomePage, { guildId });
-};
+}

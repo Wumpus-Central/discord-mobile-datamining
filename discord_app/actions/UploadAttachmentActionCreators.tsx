@@ -46,7 +46,13 @@ export default {
       result.then(dispatch);
       const tmpResult = channelId(tmp2[1]);
     } else {
-      obj = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId: null, files: null, draftType: null, allowOptimization: null };
+      obj = {
+        type: "UPLOAD_ATTACHMENT_ADD_FILES",
+        channelId: null,
+        files: null,
+        draftType: null,
+        allowOptimization: null,
+      };
       obj[1] = channelId;
       let items = [file];
       obj[2] = items;
@@ -74,7 +80,16 @@ export default {
   update(channelId, id, draftType) {
     ({ description, filename, spoiler, thumbnail } = arg3);
     let obj = dispatcherDefault;
-    obj = { type: "UPLOAD_ATTACHMENT_UPDATE_FILE", channelId, id, filename, description, thumbnail, spoiler, draftType };
+    obj = {
+      type: "UPLOAD_ATTACHMENT_UPDATE_FILE",
+      channelId,
+      id,
+      filename,
+      description,
+      thumbnail,
+      spoiler,
+      draftType,
+    };
     obj.dispatch(obj);
   },
   setUploads(uploads) {
@@ -92,6 +107,13 @@ export default {
   },
   setFile(arg0) {
     ({ file, channelId, id, draftType, allowOptimization } = arg0);
-    dispatcherDefault.dispatch({ type: "UPLOAD_ATTACHMENT_SET_FILE", channelId, id, file, draftType, allowOptimization });
-  }
+    dispatcherDefault.dispatch({
+      type: "UPLOAD_ATTACHMENT_SET_FILE",
+      channelId,
+      id,
+      file,
+      draftType,
+      allowOptimization,
+    });
+  },
 };

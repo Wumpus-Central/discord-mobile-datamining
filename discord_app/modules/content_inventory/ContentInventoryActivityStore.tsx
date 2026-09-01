@@ -172,7 +172,7 @@ const contentInventoryActivityStore = new ContentInventoryActivityStore(dispatch
   },
   CONTENT_INVENTORY_SET_FEED: function handleSetContentInventoryFeed(feed) {
     return detectMatchingActivityForEntries(feed.feed.entries).updatedKeys.size > 0;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryActivityStore.tsx");
 

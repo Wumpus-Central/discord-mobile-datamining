@@ -52,7 +52,18 @@ function updateActivity(applicationId) {
   voiceChannelId = voiceChannelId.getVoiceChannelId();
   sessionId = sessionId.getSessionId();
   mediaSessionId = mediaSessionId.getMediaSessionId();
-  obj = { applicationId: applicationId.applicationId, distributor: null, shareActivity: null, token: null, duration: null, closed: null, exePath: null, voiceChannelId: null, sessionId: null, mediaSessionId: null };
+  obj = {
+    applicationId: applicationId.applicationId,
+    distributor: null,
+    shareActivity: null,
+    token: null,
+    duration: null,
+    closed: null,
+    exePath: null,
+    voiceChannelId: null,
+    sessionId: null,
+    mediaSessionId: null,
+  };
   if (applicationId.isDiscordApplication) {
     let distributor = Distributors.DISCORD;
   } else {
@@ -153,8 +164,7 @@ if (obj == null) {
 let closure_15 = {};
 let c16 = false;
 const Store = initializeDefault.Store;
-class ActivityTrackingStore extends Store {
-}
+class ActivityTrackingStore extends Store {}
 const prototype = ActivityTrackingStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_5, closure_6, closure_7, closure_8, closure_3, closure_9, closure_4);
@@ -210,7 +220,7 @@ obj = {
       const Storage = Storage2.Storage;
       const result = Storage.set(ActivityTrackingStore, tmp);
     }
-  }
+  },
 };
 const activityTrackingStore = new ActivityTrackingStore(dispatcherDefault, obj);
 let result = require("set").fileFinishedImporting("stores/ActivityTrackingStore.tsx");

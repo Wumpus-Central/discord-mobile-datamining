@@ -17,4 +17,4 @@ export default function showSearchableDestinationListModal(closure_1_1, closure_
     const tmpResult = useIsWindowLarge;
   }
   return obj2.pushLazy(closure_1_1, closure_0, c3, obj);
-};
+}

@@ -13,7 +13,11 @@ const require = arg1;
 noopAll;
 ({ AnalyticEvents: closure_6, UserSettingsSections: error } = ME);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ container: { position: "relative" }, bannerImage: { width: "100%", aspectRatio: 2.237580993520518, resizeMode: "contain" }, limitedTimeBadge: { position: "absolute", bottom: "68%", left: "3%", zIndex: 1 } });
+let closure_10 = createCacheKey.createStyles({
+  container: { position: "relative" },
+  bannerImage: { width: "100%", aspectRatio: 2.237580993520518, resizeMode: "contain" },
+  limitedTimeBadge: { position: "absolute", bottom: "68%", left: "3%", zIndex: 1 },
+});
 let result = require("set").fileFinishedImporting("modules/collectibles/native/FeaturedCategorySubblock.tsx");
 
 export default function _default(subblock) {
@@ -29,7 +33,9 @@ export default function _default(subblock) {
   const assetUrl = subblock.assetUrl;
   let obj2 = subblock(589);
   let items = [closure_4];
-  stateFromStores = obj2.useStateFromStores(items, () => closure_1_4.getCategoryByStoreListingId(subblock.categoryStoreListingId));
+  stateFromStores = obj2.useStateFromStores(items, () =>
+    closure_1_4.getCategoryByStoreListingId(subblock.categoryStoreListingId),
+  );
   let obj3 = subblock(12626);
   let unpublishedAt = subblock.unpublishedAt;
   if (unpublishedAt == null) {
@@ -43,8 +49,22 @@ export default function _default(subblock) {
     const _Date = Date;
     date = new Date(unpublishedAt);
   }
-  obj = { onChange: obj3.useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
-  obj = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, activeOpacity: 0.8, androidRippleConfig: null, hitSlop: 8, onPress: null, style: null, children: null };
+  obj = {
+    onChange: obj3.useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block")
+      .handleCardVisibilityChange,
+    children: null,
+  };
+  obj = {
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    activeOpacity: 0.8,
+    androidRippleConfig: null,
+    hitSlop: 8,
+    onPress: null,
+    style: null,
+    children: null,
+  };
   const intl = tmp2(1236).intl;
   obj1 = { category: subblock.name };
   obj[1] = intl.formatToPlainString(subblock(1236).t.FNtLb3, obj1);
@@ -58,7 +78,16 @@ export default function _default(subblock) {
     if (table != null) {
       sessionId = tmp3.sessionId;
     }
-    obj = { collectibles_shop_session_id: sessionId, sku_id: subblock.categoryStoreListingId, page_type: "mobile_home", page_section: null, page_category: null, tile_type: "FEATURED_BLOCK", tile_position: null, cta_name: null };
+    obj = {
+      collectibles_shop_session_id: sessionId,
+      sku_id: subblock.categoryStoreListingId,
+      page_type: "mobile_home",
+      page_section: null,
+      page_category: null,
+      tile_type: "FEATURED_BLOCK",
+      tile_position: null,
+      cta_name: null,
+    };
     let pageSection;
     if (table != null) {
       pageSection = tmp3.pageSection;
@@ -102,7 +131,7 @@ export default function _default(subblock) {
     obj3[1] = tmp.bannerImage;
     tmp11Result = tmp11(stateFromStores, obj3);
   }
-  const items1 = [tmp11Result, ];
+  const items1 = [tmp11Result];
   const tmp12 = onChangeDefault;
   const tmp13 = closure_9;
   let result = subblock(7299).shouldShowLimitedTimeBadge(date);
@@ -115,4 +144,4 @@ export default function _default(subblock) {
   obj[8] = items1;
   obj[1] = tmp13(subblock(5068).PressableOpacity, obj);
   return closure_8(tmp12, obj);
-};
+}

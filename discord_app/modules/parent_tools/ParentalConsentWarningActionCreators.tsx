@@ -20,7 +20,7 @@ function fetchWarning() {
       return closure_7;
     } else {
       const _require = c9;
-      const tmp6 = callback(function*() {
+      const tmp6 = callback(function* () {
         if (logger === 2) {
           logger = 3;
           HermesBuiltin.throwTypeError();
@@ -172,7 +172,7 @@ function maybeFetchWarning() {
 }
 function _maybeFetchWarning() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();
@@ -242,7 +242,7 @@ function _maybeFetchWarning() {
 }
 function _forceFetchWarning() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();

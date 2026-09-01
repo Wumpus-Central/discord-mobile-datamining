@@ -10,8 +10,7 @@ prototype = function LinkRecord(arg0) {
   ({ id: tmp.id, path: tmp.path, inviteCode: tmp.inviteCode } = arg0);
   return tmp;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["fromPath"] = function fromPath(pathname) {
   if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();

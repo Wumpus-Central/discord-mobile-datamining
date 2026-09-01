@@ -14,7 +14,7 @@ let prototype = function NativeOnDemandResourceManager() {
     },
     APP_STATE_UPDATE() {
       return applyArgumentsResult.handleAppStateUpdate();
-    }
+    },
   };
   applyArgumentsResult.isPastConnectionOpen = false;
   applyArgumentsResult.hasFetchedKrisp = false;
@@ -66,9 +66,10 @@ let prototype = function NativeOnDemandResourceManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/native_on_demand/native/NativeOnDemandResourceManager.android.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/native_on_demand/native/NativeOnDemandResourceManager.android.tsx",
+);
 
 export default prototype;

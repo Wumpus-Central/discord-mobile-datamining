@@ -6,7 +6,11 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-let obj = { inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 }, placeholderText: null, inputText: null };
+let obj = {
+  inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 },
+  placeholderText: null,
+  inputText: null,
+};
 obj = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
 obj[1] = obj;
 createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT };
@@ -146,12 +150,29 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
         if (current != null) {
           current.measureLayout(arg0, arg1, arg2);
         }
-      }
+      },
     }));
     if (tmp7) {
       if (flag3) {
         TextArea = TextArea(obj[9]).TextArea;
-        obj = { ref: null, returnKeyType: "default", onChange: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, placeholder: null, secureTextEntry: null, isDisabled: null, autoFocus: null, autoCapitalize: null, autoCorrect: null, maxLength: null, onEndEditing: null, value: null, errorMessage: null };
+        obj = {
+          ref: null,
+          returnKeyType: "default",
+          onChange: null,
+          keyboardAppearance: null,
+          keyboardType: null,
+          placeholderTextColor: null,
+          placeholder: null,
+          secureTextEntry: null,
+          isDisabled: null,
+          autoFocus: null,
+          autoCapitalize: null,
+          autoCorrect: null,
+          maxLength: null,
+          onEndEditing: null,
+          value: null,
+          errorMessage: null,
+        };
         obj[0] = ref;
         obj[2] = onChange;
         obj[3] = keyboardAppearance;
@@ -172,7 +193,23 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
         obj[15] = error;
         let tmp14Result = tmp14(TextArea, obj);
       } else {
-        obj = { ref: null, returnKeyType: "done", onChange: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, placeholder: null, secureTextEntry: null, isDisabled: null, autoFocus: null, autoCapitalize: null, autoCorrect: null, onEndEditing: null, value: null, errorMessage: null };
+        obj = {
+          ref: null,
+          returnKeyType: "done",
+          onChange: null,
+          keyboardAppearance: null,
+          keyboardType: null,
+          placeholderTextColor: null,
+          placeholder: null,
+          secureTextEntry: null,
+          isDisabled: null,
+          autoFocus: null,
+          autoCapitalize: null,
+          autoCorrect: null,
+          onEndEditing: null,
+          value: null,
+          errorMessage: null,
+        };
         obj[0] = ref;
         obj[2] = onChange;
         obj[3] = keyboardAppearance;
@@ -191,7 +228,32 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
         const tmp18 = value;
       }
     } else {
-      obj1 = { ref: null, inputTextColor: null, multiline: null, returnKeyType: null, onChangeText: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, title: null, helpText: null, error: null, placeholder: null, secureTextEntry: null, disabled: null, autoFocus: null, numberOfLines: null, autoCapitalize: null, autoCorrect: null, showBorder: null, showCharactersRemaining: null, style: null, inputTextStyle: null, value: null, clearButtonVisibility: null };
+      obj1 = {
+        ref: null,
+        inputTextColor: null,
+        multiline: null,
+        returnKeyType: null,
+        onChangeText: null,
+        keyboardAppearance: null,
+        keyboardType: null,
+        placeholderTextColor: null,
+        title: null,
+        helpText: null,
+        error: null,
+        placeholder: null,
+        secureTextEntry: null,
+        disabled: null,
+        autoFocus: null,
+        numberOfLines: null,
+        autoCapitalize: null,
+        autoCorrect: null,
+        showBorder: null,
+        showCharactersRemaining: null,
+        style: null,
+        inputTextStyle: null,
+        value: null,
+        clearButtonVisibility: null,
+      };
       obj1[0] = ref1;
       obj1[1] = color.inputText.color;
       obj1[2] = flag3;

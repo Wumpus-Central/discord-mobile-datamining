@@ -14,5 +14,5 @@ export default {
     dispatcherDefault.wait(() => {
       callback(table[0]).dispatch({ type: "CLEAR_IN_APP_NOTIFICATION" });
     });
-  }
+  },
 };

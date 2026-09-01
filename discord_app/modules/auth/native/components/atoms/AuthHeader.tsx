@@ -10,7 +10,9 @@ require = arg1;
 noopAll;
 createCacheKey = { header: null };
 createCacheKey = {};
-const merged = Object.assign(importDefaultResult(require("ME").Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+const merged = Object.assign(
+  importDefaultResult(require("ME").Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
+);
 createCacheKey.textAlign = "center";
 createCacheKey[0] = createCacheKey;
 let closure_3 = createCacheKey.createStyles(createCacheKey);
@@ -18,7 +20,7 @@ const result = require("set").fileFinishedImporting("modules/auth/native/compone
 
 export default function AuthHeader(arg0) {
   ({ children, style } = arg0);
-  style = [callback().header, ];
+  style = [callback().header];
   style[1] = style;
   return jsx(Button.LegacyText, { style, accessibilityRole: "header", children });
-};
+}

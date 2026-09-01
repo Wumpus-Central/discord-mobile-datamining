@@ -8,18 +8,37 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { placeholderContainer: { flexDirection: "row", alignItems: "center" }, placeholderIcon: null, placeholderContent: null, placeholderText: null, placeholderTextTop: null, placeholderTextBottom: null };
-createCacheKey = { height: HAPPENING_NOW_CONTENT_HEIGHT, width: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: ThemesDefault.radii.sm, marginRight: 12, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey = {
+  placeholderContainer: { flexDirection: "row", alignItems: "center" },
+  placeholderIcon: null,
+  placeholderContent: null,
+  placeholderText: null,
+  placeholderTextTop: null,
+  placeholderTextBottom: null,
+};
+createCacheKey = {
+  height: HAPPENING_NOW_CONTENT_HEIGHT,
+  width: HAPPENING_NOW_CONTENT_HEIGHT,
+  borderRadius: ThemesDefault.radii.sm,
+  marginRight: 12,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flex: 1 };
 createCacheKey[3] = { height: 12, borderRadius: 5, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[4] = { width: "75%" };
 createCacheKey[5] = { width: "50%", marginTop: 8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let closure_8 = { code: "function HappeningNowCardPlaceholderTsx1(){const{opacity,withRepeat,withTiming,endOpacity,duration,Easing}=this.__closure;opacity.set(withRepeat(withTiming(endOpacity,{duration:duration,easing:Easing.ease}),-1,true));}" };
-let closure_9 = { code: "function HappeningNowCardPlaceholderTsx2(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
+let closure_8 = {
+  code: "function HappeningNowCardPlaceholderTsx1(){const{opacity,withRepeat,withTiming,endOpacity,duration,Easing}=this.__closure;opacity.set(withRepeat(withTiming(endOpacity,{duration:duration,easing:Easing.ease}),-1,true));}",
+};
+let closure_9 = {
+  code: "function HappeningNowCardPlaceholderTsx2(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
+};
 let obj1 = { height: 12, borderRadius: 5, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardPlaceholder.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardPlaceholder.tsx",
+);
 
 export const HappeningNowCardPlaceholder = function HappeningNowCardPlaceholder(panelVariant) {
   let flag = panelVariant.panelVariant;
@@ -40,7 +59,14 @@ export const HappeningNowCardPlaceholder = function HappeningNowCardPlaceholder(
       obj = { duration: closure_0, easing: closure_1_0(closure_1_2[6]).Easing.ease };
       const result = closure_2.set(obj.withRepeat(closure_1_0(closure_1_2[7]).withTiming(closure_1, obj), -1, true));
     };
-    obj = { opacity: sharedValue, withRepeat: v1000(sharedValue[6]).withRepeat, withTiming: v1000(sharedValue[7]).withTiming, endOpacity: c1, duration: v1000, Easing: v1000(sharedValue[6]).Easing };
+    obj = {
+      opacity: sharedValue,
+      withRepeat: v1000(sharedValue[6]).withRepeat,
+      withTiming: v1000(sharedValue[7]).withTiming,
+      endOpacity: c1,
+      duration: v1000,
+      Easing: v1000(sharedValue[6]).Easing,
+    };
     fn.__closure = obj;
     fn.__workletHash = 14338250108016;
     fn.__initData = closure_1_8;
@@ -62,12 +88,12 @@ export const HappeningNowCardPlaceholder = function HappeningNowCardPlaceholder(
   obj = { style: items1, children: null };
   items1 = [animatedStyle, tmp.placeholderContainer];
   obj1 = { style: tmp.placeholderIcon };
-  const items2 = [closure_5(View, obj1), ];
+  const items2 = [closure_5(View, obj1)];
   const obj2 = { style: tmp.placeholderContent, children: null };
-  const items3 = [, ];
+  const items3 = [,];
   ({ placeholderText: arr4[0], placeholderTextTop: arr4[1] } = tmp);
-  const items4 = [closure_5(View, { style: items3 }), ];
-  const items5 = [, ];
+  const items4 = [closure_5(View, { style: items3 })];
+  const items5 = [,];
   ({ placeholderText: arr6[0], placeholderTextBottom: arr6[1] } = tmp);
   items4[1] = closure_5(View, { style: items5 });
   obj2[1] = items4;

@@ -34,7 +34,15 @@ function handleEdit(id, isForumPost, current, source) {
       if (null != isForumPost.parent_id) {
         createPendingReply.deletePendingReply(isForumPost.id);
         const obj7 = createPendingReply;
-        obj = { guildId: null, parentChannelId: null, threadId: null, messageId: null, isEdit: true, analyticsLocations: null, analyticsLocationObject: null };
+        obj = {
+          guildId: null,
+          parentChannelId: null,
+          threadId: null,
+          messageId: null,
+          isEdit: true,
+          analyticsLocations: null,
+          analyticsLocationObject: null,
+        };
         ({ guild_id: obj9[0], parent_id: obj9[1], id: obj9[2] } = isForumPost);
         obj[3] = id.id;
         const items = [tmp(5973).FORUM_CHANNEL, tmp(5973).GUILD_CHANNEL];
@@ -53,7 +61,14 @@ function handleEdit(id, isForumPost, current, source) {
     if ("message_swipe" === source) {
       if (editing.isEditing(isForumPost.id, id.id)) {
         const currentUser = authStore.getCurrentUser();
-        obj1 = { message_id: null, channel_id: null, guild_id: null, context_action: "edit", reason: "swipe_edit_undo", is_own_message: null };
+        obj1 = {
+          message_id: null,
+          channel_id: null,
+          guild_id: null,
+          context_action: "edit",
+          reason: "swipe_edit_undo",
+          is_own_message: null,
+        };
         obj1[0] = id.id;
         ({ id: obj5[1], guild_id: obj5[2] } = isForumPost);
         let tmp15 = null != currentUser;
@@ -78,7 +93,14 @@ function handleEdit(id, isForumPost, current, source) {
   pendingReply = pendingReply.getPendingReply(isForumPost.id);
   if (null != pendingReply) {
     const currentUser1 = authStore.getCurrentUser();
-    let obj2 = { message_id: null, channel_id: null, guild_id: null, context_action: "reply", reason: null, is_own_message: null };
+    let obj2 = {
+      message_id: null,
+      channel_id: null,
+      guild_id: null,
+      context_action: "reply",
+      reason: null,
+      is_own_message: null,
+    };
     obj2[0] = id.id;
     ({ id: obj12[1], guild_id: obj12[2] } = isForumPost);
     if ("message_swipe" === source) {
@@ -105,8 +127,20 @@ function handleEdit(id, isForumPost, current, source) {
   }
 }
 noopAll;
-({ AnalyticEvents: c10, AnalyticsObjects: unpackModuleId, AnalyticsPages: closure_12, AnalyticsSections: map1, ComponentActions: closure_14, GIF_RE_IOS: closure_15, MediaType: closure_16, MessageStates: closure_17, MessageTypes: closure_18 } = ME);
-let result = require("set").fileFinishedImporting("modules/messages/native/long_press/LongPressMessageActionSheetUtils.tsx");
+({
+  AnalyticEvents: c10,
+  AnalyticsObjects: unpackModuleId,
+  AnalyticsPages: closure_12,
+  AnalyticsSections: map1,
+  ComponentActions: closure_14,
+  GIF_RE_IOS: closure_15,
+  MediaType: closure_16,
+  MessageStates: closure_17,
+  MessageTypes: closure_18,
+} = ME);
+let result = require("set").fileFinishedImporting(
+  "modules/messages/native/long_press/LongPressMessageActionSheetUtils.tsx",
+);
 
 export function getContextBarCancelReason(edit, cancel) {
   if ("message_swipe" === cancel) {
@@ -235,7 +269,11 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                       if (current7 != null) {
                         result = globalThis;
                         const _HermesInternal = HermesInternal;
-                        result = current7.insertText("@" + result(4322).getUserTag(result, { decoration: "never" }), null, true);
+                        result = current7.insertText(
+                          "@" + result(4322).getUserTag(result, { decoration: "never" }),
+                          null,
+                          true,
+                        );
                         const resultResult6 = result(4322);
                       }
                     }
@@ -307,7 +345,14 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                               result = current5.dismissKeyboard();
                             }
                           }
-                          const obj2 = { title: null, body: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
+                          const obj2 = {
+                            title: null,
+                            body: null,
+                            children: null,
+                            cancelText: null,
+                            confirmText: null,
+                            onConfirm: null,
+                          };
                           const intl19 = result(1236).intl;
                           obj2[0] = intl19.string(result(1236).t.CvQ18w);
                           const intl20 = result(1236).intl;
@@ -339,7 +384,14 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                 current4.dismissKeyboard();
                               }
                             }
-                            const obj4 = { title: null, body: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
+                            const obj4 = {
+                              title: null,
+                              body: null,
+                              children: null,
+                              cancelText: null,
+                              confirmText: null,
+                              onConfirm: null,
+                            };
                             const intl15 = result(1236).intl;
                             obj4[0] = intl15.string(result(1236).t["Bse+F/"]);
                             const intl16 = result(1236).intl;
@@ -386,7 +438,14 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                         current3.dismissKeyboard();
                                       }
                                     }
-                                    const obj6 = { title: null, body: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
+                                    const obj6 = {
+                                      title: null,
+                                      body: null,
+                                      children: null,
+                                      cancelText: null,
+                                      confirmText: null,
+                                      onConfirm: null,
+                                    };
                                     const intl11 = result(1236).intl;
                                     obj6[0] = intl11.string(result(1236).t.MWMcg7);
                                     const intl12 = result(1236).intl;
@@ -404,7 +463,12 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                     result(4857).show(obj6);
                                     const resultResult15 = result(4857);
                                   }
-                                  const obj8 = { channel_id: null, guild_id: null, action_sheet_option: "delete", message_state: null };
+                                  const obj8 = {
+                                    channel_id: null,
+                                    guild_id: null,
+                                    action_sheet_option: "delete",
+                                    message_state: null,
+                                  };
                                   obj8[0] = id;
                                   obj8[1] = guild_id;
                                   obj8[3] = message.state;
@@ -413,14 +477,21 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                 } else {
                                   const intl40 = result(1236).intl;
                                   if (intl40.string(result(1236).t["5911Lb"]) === label) {
-                                    uploaderFileForMessageId = uploaderFileForMessageId.getUploaderFileForMessageId(message.id);
+                                    uploaderFileForMessageId = uploaderFileForMessageId.getUploaderFileForMessageId(
+                                      message.id,
+                                    );
                                     let items;
                                     if (uploaderFileForMessageId != null) {
                                       items = uploaderFileForMessageId.items;
                                     }
                                     result(11259)(channel, message, items, options.getOptions(message.id));
                                     const resultResult17 = result(11259);
-                                    const obj9 = { channel_id: null, guild_id: null, action_sheet_option: "retry", message_state: null };
+                                    const obj9 = {
+                                      channel_id: null,
+                                      guild_id: null,
+                                      action_sheet_option: "retry",
+                                      message_state: null,
+                                    };
                                     obj9[0] = id;
                                     obj9[1] = guild_id;
                                     obj9[3] = message.state;
@@ -431,7 +502,9 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                     if (intl41.string(result(1236).t.JrGD7E) === label) {
                                       const contentMessage = message.getContentMessage();
                                       if (isMessageComponentsV2(contentMessage)) {
-                                        const allTextDisplayContent = result(4739).getAllTextDisplayContent(contentMessage.components);
+                                        const allTextDisplayContent = result(4739).getAllTextDisplayContent(
+                                          contentMessage.components,
+                                        );
                                         if (null != allTextDisplayContent) {
                                           result(5981).copy(allTextDisplayContent);
                                           const resultResult20 = result(5981);
@@ -484,7 +557,11 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                 obj13[1] = channel.id;
                                                 result(698).track(constants.MESSAGE_LINK_COPIED, obj13);
                                                 const resultResult28 = result(698);
-                                                const channelPermalink = result(4666).getChannelPermalink(channel.guild_id, channel.id, id2);
+                                                const channelPermalink = result(4666).getChannelPermalink(
+                                                  channel.guild_id,
+                                                  channel.id,
+                                                  id2,
+                                                );
                                                 if (null != channelPermalink) {
                                                   result = result(5981).copy(channelPermalink);
                                                   const resultResult30 = result(5981);
@@ -507,60 +584,88 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                     }
                                                     if (null != mediaUrl) {
                                                       result = closure_15;
-                                                      selectedMedia = result(4671).urlMatchesFileExtension(selectedMedia.mediaUrl, closure_15);
+                                                      selectedMedia = result(4671).urlMatchesFileExtension(
+                                                        selectedMedia.mediaUrl,
+                                                        closure_15,
+                                                      );
                                                       const resultResult32 = result(4671);
                                                       result = result(1486).toURLSafe(selectedMedia.mediaUrl);
                                                       if (null != result) {
                                                         if (obj40.isRefreshableAttachmentUrl(result)) {
-                                                          let result6 = tmp53(10033).maybeRefreshAttachmentUrl(selectedMedia.mediaUrl);
+                                                          let result6 = tmp53(10033).maybeRefreshAttachmentUrl(
+                                                            selectedMedia.mediaUrl,
+                                                          );
                                                           const tmp53Result = tmp53(10033);
                                                         }
                                                         obj40 = selectedMedia(10033);
                                                         tmp53 = selectedMedia;
-                                                        result6.then((mediaUrl) => id(closure_1_3[38]).downloadMediaAssetWithContentType(mediaUrl, selectedMedia ? closure_1_16.GIF : closure_1_16.IMAGE, id.contentType)).then(() => {
-                                                          let obj = id(closure_1_3[31]);
-                                                          if (selectedMedia) {
-                                                            obj.presentGifSaved();
-                                                          } else {
-                                                            obj.presentImageSaved();
-                                                          }
-                                                          const tmp4 = closure_1_19(id2);
-                                                          let tmp5;
-                                                          if (!tmp4) {
-                                                            tmp5 = tmp3;
-                                                          }
-                                                          obj = { channel_id: tmp5, channel_static_route: null };
-                                                          let tmp6;
-                                                          if (tmp4) {
-                                                            tmp6 = tmp3;
-                                                          }
-                                                          obj = {};
-                                                          obj[1] = tmp6;
-                                                          const merged = Object.assign(obj);
-                                                          id2(closure_1_3[16]).track(closure_1_10.CONTEXT_MENU_IMAGE_SAVED, obj);
-                                                        }, () => {
-                                                          let obj = id2(closure_1_3[18]);
-                                                          obj = { title: null, body: null, isDismissable: true };
-                                                          const intl = id(closure_1_3[19]).intl;
-                                                          obj[0] = intl.string(id(closure_1_3[19]).t.cV3alD);
-                                                          const intl2 = id(closure_1_3[19]).intl;
-                                                          obj[1] = intl2.string(id(closure_1_3[19]).t.r4Zjzv);
-                                                          obj.show(obj);
-                                                          const tmp3 = closure_1_19(id2);
-                                                          let tmp4;
-                                                          if (!tmp3) {
-                                                            tmp4 = tmp2;
-                                                          }
-                                                          obj = { channel_id: tmp4, channel_static_route: null };
-                                                          let tmp5;
-                                                          if (tmp3) {
-                                                            tmp5 = tmp2;
-                                                          }
-                                                          obj[1] = tmp5;
-                                                          const merged = Object.assign(obj);
-                                                          id2(closure_1_3[16]).track(closure_1_10.CONTEXT_MENU_IMAGE_SAVE_FAILED, {});
-                                                        });
-                                                        const nextPromise = result6.then((mediaUrl) => id(closure_1_3[38]).downloadMediaAssetWithContentType(mediaUrl, selectedMedia ? closure_1_16.GIF : closure_1_16.IMAGE, id.contentType));
+                                                        result6
+                                                          .then((mediaUrl) =>
+                                                            id(closure_1_3[38]).downloadMediaAssetWithContentType(
+                                                              mediaUrl,
+                                                              selectedMedia ? closure_1_16.GIF : closure_1_16.IMAGE,
+                                                              id.contentType,
+                                                            ),
+                                                          )
+                                                          .then(
+                                                            () => {
+                                                              let obj = id(closure_1_3[31]);
+                                                              if (selectedMedia) {
+                                                                obj.presentGifSaved();
+                                                              } else {
+                                                                obj.presentImageSaved();
+                                                              }
+                                                              const tmp4 = closure_1_19(id2);
+                                                              let tmp5;
+                                                              if (!tmp4) {
+                                                                tmp5 = tmp3;
+                                                              }
+                                                              obj = { channel_id: tmp5, channel_static_route: null };
+                                                              let tmp6;
+                                                              if (tmp4) {
+                                                                tmp6 = tmp3;
+                                                              }
+                                                              obj = {};
+                                                              obj[1] = tmp6;
+                                                              const merged = Object.assign(obj);
+                                                              id2(closure_1_3[16]).track(
+                                                                closure_1_10.CONTEXT_MENU_IMAGE_SAVED,
+                                                                obj,
+                                                              );
+                                                            },
+                                                            () => {
+                                                              let obj = id2(closure_1_3[18]);
+                                                              obj = { title: null, body: null, isDismissable: true };
+                                                              const intl = id(closure_1_3[19]).intl;
+                                                              obj[0] = intl.string(id(closure_1_3[19]).t.cV3alD);
+                                                              const intl2 = id(closure_1_3[19]).intl;
+                                                              obj[1] = intl2.string(id(closure_1_3[19]).t.r4Zjzv);
+                                                              obj.show(obj);
+                                                              const tmp3 = closure_1_19(id2);
+                                                              let tmp4;
+                                                              if (!tmp3) {
+                                                                tmp4 = tmp2;
+                                                              }
+                                                              obj = { channel_id: tmp4, channel_static_route: null };
+                                                              let tmp5;
+                                                              if (tmp3) {
+                                                                tmp5 = tmp2;
+                                                              }
+                                                              obj[1] = tmp5;
+                                                              const merged = Object.assign(obj);
+                                                              id2(closure_1_3[16]).track(
+                                                                closure_1_10.CONTEXT_MENU_IMAGE_SAVE_FAILED,
+                                                                {},
+                                                              );
+                                                            },
+                                                          );
+                                                        const nextPromise = result6.then((mediaUrl) =>
+                                                          id(closure_1_3[38]).downloadMediaAssetWithContentType(
+                                                            mediaUrl,
+                                                            selectedMedia ? closure_1_16.GIF : closure_1_16.IMAGE,
+                                                            id.contentType,
+                                                          ),
+                                                        );
                                                       }
                                                       result6 = Promise.resolve(selectedMedia.mediaUrl);
                                                       const resultResult33 = result(1486);
@@ -574,18 +679,25 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                       }
                                                       if (null != mediaUrl1) {
                                                         result = constants5;
-                                                        const result7 = result(8568).downloadMediaAssetWithContentType(selectedMedia.mediaUrl, constants5.VIDEO, selectedMedia.contentType);
-                                                        result = result7.then(() => {
-                                                          id(4193).presentVideoSaved();
-                                                        }, () => {
-                                                          let obj = id2(4857);
-                                                          obj = { title: null, body: null, isDismissable: true };
-                                                          const intl = id(1236).intl;
-                                                          obj[0] = intl.string(id(1236).t.cV3alD);
-                                                          const intl2 = id(1236).intl;
-                                                          obj[1] = intl2.string(id(1236).t.r4Zjzv);
-                                                          obj.show(obj);
-                                                        });
+                                                        const result7 = result(8568).downloadMediaAssetWithContentType(
+                                                          selectedMedia.mediaUrl,
+                                                          constants5.VIDEO,
+                                                          selectedMedia.contentType,
+                                                        );
+                                                        result = result7.then(
+                                                          () => {
+                                                            id(4193).presentVideoSaved();
+                                                          },
+                                                          () => {
+                                                            let obj = id2(4857);
+                                                            obj = { title: null, body: null, isDismissable: true };
+                                                            const intl = id(1236).intl;
+                                                            obj[0] = intl.string(id(1236).t.cV3alD);
+                                                            const intl2 = id(1236).intl;
+                                                            obj[1] = intl2.string(id(1236).t.r4Zjzv);
+                                                            obj.show(obj);
+                                                          },
+                                                        );
                                                         const resultResult34 = result(8568);
                                                       }
                                                     } else {
@@ -608,25 +720,41 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                           if (intl52.string(result(1236).t["8xHmxo"]) !== label) {
                                                             const intl53 = result(1236).intl;
                                                             if (intl53.string(result(1236).t["5IEsGx"]) === label) {
-                                                              const obj15 = { message: null, channel: null, chatInputRef: null, actionSource: "action_sheet" };
+                                                              const obj15 = {
+                                                                message: null,
+                                                                channel: null,
+                                                                chatInputRef: null,
+                                                                actionSource: "action_sheet",
+                                                              };
                                                               obj15[0] = message;
                                                               obj15[1] = channel;
                                                               obj15[2] = chatInputRef;
                                                               result(11262)(obj15);
                                                               if ("Preview" === actionSheetSource) {
-                                                                result = result(4489).transitionToMessage(channel.id, message.id);
+                                                                result = result(4489).transitionToMessage(
+                                                                  channel.id,
+                                                                  message.id,
+                                                                );
                                                                 result = globalThis;
                                                                 const _setTimeout = setTimeout;
                                                                 result = setTimeout(() => {
-                                                                  const ComponentDispatch = id(closure_1_3[54]).ComponentDispatch;
-                                                                  return ComponentDispatch.dispatch(closure_1_14.TEXTAREA_FOCUS, { channelId: id.id });
+                                                                  const ComponentDispatch = id(
+                                                                    closure_1_3[54],
+                                                                  ).ComponentDispatch;
+                                                                  return ComponentDispatch.dispatch(
+                                                                    closure_1_14.TEXTAREA_FOCUS,
+                                                                    { channelId: id.id },
+                                                                  );
                                                                 }, 500);
                                                                 const resultResult36 = result(4489);
                                                               }
                                                             } else {
                                                               const intl54 = result(1236).intl;
                                                               if (intl54.string(result(1236).t.I3ltXO) === label) {
-                                                                const obj16 = { message: null, source: "long-press-sheet" };
+                                                                const obj16 = {
+                                                                  message: null,
+                                                                  source: "long-press-sheet",
+                                                                };
                                                                 obj16[0] = message;
                                                                 result(11263).openForwardModal(obj16);
                                                                 const resultResult37 = result(11263);
@@ -637,184 +765,393 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                   if (message != null) {
                                                                     id = message.id;
                                                                   }
-                                                                  const result8 = result(7509).openThreadCreationForMobile(channel, id, "Message");
+                                                                  const result8 = result(
+                                                                    7509,
+                                                                  ).openThreadCreationForMobile(channel, id, "Message");
                                                                   let result9 = null == message;
                                                                   if (!result9) {
                                                                     const resultResult39 = result(4332);
-                                                                    result9 = resultResult39.navigateToCreateThread(channel.guild_id, result(11).castMessageIdAsChannelId(message.id));
+                                                                    result9 = resultResult39.navigateToCreateThread(
+                                                                      channel.guild_id,
+                                                                      result(11).castMessageIdAsChannelId(message.id),
+                                                                    );
                                                                     const resultResult40 = result(11);
                                                                   }
                                                                   if (!result9) {
                                                                     const resultResult41 = result(1222);
-                                                                    resultResult41.transitionToGuild(channel.guild_id, result(11).castMessageIdAsChannelId(message.id));
+                                                                    resultResult41.transitionToGuild(
+                                                                      channel.guild_id,
+                                                                      result(11).castMessageIdAsChannelId(message.id),
+                                                                    );
                                                                     const resultResult42 = result(11);
                                                                   }
                                                                   const resultResult38 = result(7509);
                                                                 } else {
                                                                   const intl56 = result(1236).intl;
-                                                                  if (intl56.string(result(1236).t["39d0Wj"]) === label) {
+                                                                  if (
+                                                                    intl56.string(result(1236).t["39d0Wj"]) === label
+                                                                  ) {
                                                                     const resultResult43 = result(1222);
-                                                                    resultResult43.transitionToGuild(channel.guild_id, result(11).castMessageIdAsChannelId(message.id));
+                                                                    resultResult43.transitionToGuild(
+                                                                      channel.guild_id,
+                                                                      result(11).castMessageIdAsChannelId(message.id),
+                                                                    );
                                                                     const resultResult44 = result(11);
                                                                   } else {
                                                                     const intl57 = result(1236).intl;
-                                                                    if (intl57.string(result(1236).t.PHjkRE) === label) {
+                                                                    if (
+                                                                      intl57.string(result(1236).t.PHjkRE) === label
+                                                                    ) {
                                                                       result(4445).hideActionSheet();
                                                                       const resultResult45 = result(4445);
-                                                                      const obj17 = { channel: null, commandType: null, commandTargetId: null };
+                                                                      const obj17 = {
+                                                                        channel: null,
+                                                                        commandType: null,
+                                                                        commandTargetId: null,
+                                                                      };
                                                                       obj17[0] = channel;
-                                                                      obj17[1] = result(1955).ApplicationCommandType.MESSAGE;
+                                                                      obj17[1] =
+                                                                        result(1955).ApplicationCommandType.MESSAGE;
                                                                       obj17[2] = message.id;
-                                                                      const result10 = result(4332).navigateToContextMenuCommands(obj17);
+                                                                      const result10 =
+                                                                        result(4332).navigateToContextMenuCommands(
+                                                                          obj17,
+                                                                        );
                                                                       const resultResult46 = result(4332);
                                                                     } else {
                                                                       const intl58 = result(1236).intl;
-                                                                      if (intl58.string(result(1236).t.tpxJto) === label) {
-                                                                        const obj18 = { channelId: null, messageId: null, displayToast: true, source: null };
+                                                                      if (
+                                                                        intl58.string(result(1236).t.tpxJto) === label
+                                                                      ) {
+                                                                        const obj18 = {
+                                                                          channelId: null,
+                                                                          messageId: null,
+                                                                          displayToast: true,
+                                                                          source: null,
+                                                                        };
                                                                         obj18[0] = id;
                                                                         obj18[1] = id2;
-                                                                        obj18[3] = result(11292).SavedMessageSources.LONG_PRESS_ACTION_SHEET;
-                                                                        const result11 = result(11287).addOrUpdateSavedMessage(obj18);
+                                                                        obj18[3] =
+                                                                          result(
+                                                                            11292,
+                                                                          ).SavedMessageSources.LONG_PRESS_ACTION_SHEET;
+                                                                        const result11 =
+                                                                          result(11287).addOrUpdateSavedMessage(obj18);
                                                                         const resultResult47 = result(11287);
                                                                       } else {
                                                                         const intl59 = result(1236).intl;
-                                                                        if (intl59.string(result(1236).t.SvXS1Z) === label) {
-                                                                          const obj19 = { channelId: null, messageId: null, displayToast: true };
+                                                                        if (
+                                                                          intl59.string(result(1236).t.SvXS1Z) === label
+                                                                        ) {
+                                                                          const obj19 = {
+                                                                            channelId: null,
+                                                                            messageId: null,
+                                                                            displayToast: true,
+                                                                          };
                                                                           obj19[0] = id;
                                                                           obj19[1] = id2;
                                                                           result(11287).removeSavedMessage(obj19);
                                                                           const resultResult48 = result(11287);
                                                                         } else {
                                                                           const intl60 = result(1236).intl;
-                                                                          if (intl60.string(result(1236).t.mJ3P0N) === label) {
-                                                                            const obj20 = { createReminder: null, channelId: null, messageId: null, onBack: null };
+                                                                          if (
+                                                                            intl60.string(result(1236).t.mJ3P0N) ===
+                                                                            label
+                                                                          ) {
+                                                                            const obj20 = {
+                                                                              createReminder: null,
+                                                                              channelId: null,
+                                                                              messageId: null,
+                                                                              onBack: null,
+                                                                            };
                                                                             obj20[0] = function createReminder(dueAt) {
                                                                               let obj = id(closure_1_3[57]);
-                                                                              obj = { channelId: id2, messageId: selectedMedia, dueAt, displayToast: true, source: id(closure_1_3[58]).SavedMessageSources.LONG_PRESS_ACTION_SHEET };
+                                                                              obj = {
+                                                                                channelId: id2,
+                                                                                messageId: selectedMedia,
+                                                                                dueAt,
+                                                                                displayToast: true,
+                                                                                source: id(closure_1_3[58])
+                                                                                  .SavedMessageSources
+                                                                                  .LONG_PRESS_ACTION_SHEET,
+                                                                              };
                                                                               return obj.addOrUpdateSavedMessage(obj);
                                                                             };
-                                                                            ({ channel_id: obj16[1], id: obj16[2] } = message);
+                                                                            ({ channel_id: obj16[1], id: obj16[2] } =
+                                                                              message);
                                                                             obj20[3] = onBack;
-                                                                            result(4445).openLazy(result(2009)(11293, tmp2.paths), "MessageReminderDurationActionSheet", obj20);
+                                                                            result(4445).openLazy(
+                                                                              result(2009)(11293, tmp2.paths),
+                                                                              "MessageReminderDurationActionSheet",
+                                                                              obj20,
+                                                                            );
                                                                             const resultResult49 = result(4445);
                                                                           } else {
                                                                             const intl61 = result(1236).intl;
-                                                                            if (intl61.string(result(1236).t.vrbqs1) === label) {
-                                                                              const obj21 = { createReminder: null, removeReminder: null, channelId: null, messageId: null, onBack: null };
-                                                                              obj21[0] = function createReminder(dueAt) {
+                                                                            if (
+                                                                              intl61.string(result(1236).t.vrbqs1) ===
+                                                                              label
+                                                                            ) {
+                                                                              const obj21 = {
+                                                                                createReminder: null,
+                                                                                removeReminder: null,
+                                                                                channelId: null,
+                                                                                messageId: null,
+                                                                                onBack: null,
+                                                                              };
+                                                                              obj21[0] = function createReminder(
+                                                                                dueAt,
+                                                                              ) {
                                                                                 let obj = id(closure_1_3[57]);
-                                                                                obj = { channelId: id2, messageId: selectedMedia, dueAt, displayToast: true, source: id(closure_1_3[58]).SavedMessageSources.LONG_PRESS_ACTION_SHEET };
+                                                                                obj = {
+                                                                                  channelId: id2,
+                                                                                  messageId: selectedMedia,
+                                                                                  dueAt,
+                                                                                  displayToast: true,
+                                                                                  source: id(closure_1_3[58])
+                                                                                    .SavedMessageSources
+                                                                                    .LONG_PRESS_ACTION_SHEET,
+                                                                                };
                                                                                 return obj.addOrUpdateSavedMessage(obj);
                                                                               };
                                                                               obj21[1] = function removeReminder() {
                                                                                 let obj = id(closure_1_3[57]);
-                                                                                obj = { channelId: id2, messageId: selectedMedia, displayToast: true, isReminder: true };
+                                                                                obj = {
+                                                                                  channelId: id2,
+                                                                                  messageId: selectedMedia,
+                                                                                  displayToast: true,
+                                                                                  isReminder: true,
+                                                                                };
                                                                                 return obj.removeSavedMessage(obj);
                                                                               };
-                                                                              ({ channel_id: obj14[2], id: obj14[3] } = message);
+                                                                              ({ channel_id: obj14[2], id: obj14[3] } =
+                                                                                message);
                                                                               obj21[4] = onBack;
-                                                                              result(4445).openLazy(result(2009)(11293, tmp2.paths), "MessageReminderDurationActionSheet", obj21);
+                                                                              result(4445).openLazy(
+                                                                                result(2009)(11293, tmp2.paths),
+                                                                                "MessageReminderDurationActionSheet",
+                                                                                obj21,
+                                                                              );
                                                                               const resultResult50 = result(4445);
                                                                             } else {
                                                                               const intl62 = result(1236).intl;
-                                                                              if (intl62.string(result(1236).t.ZH7P2h) === label) {
+                                                                              if (
+                                                                                intl62.string(result(1236).t.ZH7P2h) ===
+                                                                                label
+                                                                              ) {
                                                                                 if (null != selectedMedia) {
                                                                                   let id1;
-                                                                                  if ("embed" === selectedMedia.sourceType) {
+                                                                                  if (
+                                                                                    "embed" === selectedMedia.sourceType
+                                                                                  ) {
                                                                                     id1 = selectedMedia.source.id;
                                                                                   }
                                                                                   id2 = undefined;
-                                                                                  if ("attachment" === selectedMedia.sourceType) {
+                                                                                  if (
+                                                                                    "attachment" ===
+                                                                                    selectedMedia.sourceType
+                                                                                  ) {
                                                                                     id2 = selectedMedia.source.id;
                                                                                   }
-                                                                                  let result12 = undefined !== id1 || undefined !== id2;
+                                                                                  let result12 =
+                                                                                    undefined !== id1 ||
+                                                                                    undefined !== id2;
                                                                                   if (!result12) {
-                                                                                    result12 = result(6138).messageHasObscurableMedia(message);
+                                                                                    result12 =
+                                                                                      result(
+                                                                                        6138,
+                                                                                      ).messageHasObscurableMedia(
+                                                                                        message,
+                                                                                      );
                                                                                     const resultResult51 = result(6138);
                                                                                   }
                                                                                   if (result12) {
-                                                                                    const obj22 = { channelId: null, messageId: null, attachmentId: null, embedId: null };
-                                                                                    ({ channel_id: obj12[0], id: obj12[1] } = message);
+                                                                                    const obj22 = {
+                                                                                      channelId: null,
+                                                                                      messageId: null,
+                                                                                      attachmentId: null,
+                                                                                      embedId: null,
+                                                                                    };
+                                                                                    ({
+                                                                                      channel_id: obj12[0],
+                                                                                      id: obj12[1],
+                                                                                    } = message);
                                                                                     obj22[2] = id2;
                                                                                     obj22[3] = id1;
-                                                                                    result(4445).openLazy(result(2009)(11260, tmp2.paths), closure_20, obj22);
+                                                                                    result(4445).openLazy(
+                                                                                      result(2009)(11260, tmp2.paths),
+                                                                                      closure_20,
+                                                                                      obj22,
+                                                                                    );
                                                                                     const resultResult52 = result(4445);
                                                                                   }
                                                                                 }
                                                                               } else {
                                                                                 const intl63 = result(1236).intl;
-                                                                                if (intl63.string(result(1236).t.grdwwt) === label) {
-                                                                                  ({ channel_id: obj9[0], id: obj9[1] } = message);
-                                                                                  result(11297).endPollEarly({ channelId: null, messageId: null });
-                                                                                  const obj23 = { channelId: null, messageId: null };
+                                                                                if (
+                                                                                  intl63.string(
+                                                                                    result(1236).t.grdwwt,
+                                                                                  ) === label
+                                                                                ) {
+                                                                                  ({
+                                                                                    channel_id: obj9[0],
+                                                                                    id: obj9[1],
+                                                                                  } = message);
+                                                                                  result(11297).endPollEarly({
+                                                                                    channelId: null,
+                                                                                    messageId: null,
+                                                                                  });
+                                                                                  const obj23 = {
+                                                                                    channelId: null,
+                                                                                    messageId: null,
+                                                                                  };
                                                                                   const resultResult53 = result(11297);
                                                                                 } else {
                                                                                   const intl64 = result(1236).intl;
-                                                                                  if (intl64.string(result(1236).t.Rjezbz) === label) {
-                                                                                    const obj24 = { message: null, guildId: null, onBack: null };
+                                                                                  if (
+                                                                                    intl64.string(
+                                                                                      result(1236).t.Rjezbz,
+                                                                                    ) === label
+                                                                                  ) {
+                                                                                    const obj24 = {
+                                                                                      message: null,
+                                                                                      guildId: null,
+                                                                                      onBack: null,
+                                                                                    };
                                                                                     obj24[0] = message;
                                                                                     obj24[1] = guild_id;
                                                                                     obj24[2] = onBack;
-                                                                                    result(4445).openLazy(result(2009)(11304, tmp2.paths), "AppInteractionInfoActionSheet", obj24);
+                                                                                    result(4445).openLazy(
+                                                                                      result(2009)(11304, tmp2.paths),
+                                                                                      "AppInteractionInfoActionSheet",
+                                                                                      obj24,
+                                                                                    );
                                                                                     const resultResult54 = result(4445);
                                                                                   } else {
                                                                                     const intl65 = result(1236).intl;
-                                                                                    if (intl65.string(result(1236).t["4sxKOb"]) !== label) {
+                                                                                    if (
+                                                                                      intl65.string(
+                                                                                        result(1236).t["4sxKOb"],
+                                                                                      ) !== label
+                                                                                    ) {
                                                                                       const intl66 = result(1236).intl;
-                                                                                      if (intl66.string(result(1236).t.wUIMqa) !== label) {
-                                                                                        const intl67 = result(1236).intl;
-                                                                                        if (intl67.string(result(1236).t.kFwAsa) === label) {
+                                                                                      if (
+                                                                                        intl66.string(
+                                                                                          result(1236).t.wUIMqa,
+                                                                                        ) !== label
+                                                                                      ) {
+                                                                                        const intl67 =
+                                                                                          result(1236).intl;
+                                                                                        if (
+                                                                                          intl67.string(
+                                                                                            result(1236).t.kFwAsa,
+                                                                                          ) === label
+                                                                                        ) {
                                                                                           id2 = message;
                                                                                           result = null;
                                                                                           let sourceType;
                                                                                           if (selectedMedia != null) {
-                                                                                            sourceType = selectedMedia.sourceType;
+                                                                                            sourceType =
+                                                                                              selectedMedia.sourceType;
                                                                                           }
-                                                                                          if ("attachment" === sourceType) {
+                                                                                          if (
+                                                                                            "attachment" === sourceType
+                                                                                          ) {
                                                                                             if (chatInputRef != null) {
-                                                                                              const current = chatInputRef.current;
+                                                                                              const current =
+                                                                                                chatInputRef.current;
                                                                                               if (current != null) {
                                                                                                 current.dismissKeyboard();
                                                                                               }
                                                                                             }
-                                                                                            const obj25 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
-                                                                                            const intl3 = result(1236).intl;
-                                                                                            obj25[0] = intl3.string(result(1236).t.CbTIEo);
-                                                                                            const intl4 = result(1236).intl;
-                                                                                            obj25[1] = intl4.string(result(1236).t.faHmO3);
-                                                                                            const intl5 = result(1236).intl;
-                                                                                            obj25[2] = intl5.string(result(1236).t["ETE/oC"]);
-                                                                                            const intl6 = result(1236).intl;
-                                                                                            obj25[3] = intl6.string(result(1236).t.kFwAsa);
-                                                                                            obj25[4] = function onConfirm() {
-                                                                                              id = selectedMedia.source.id;
-                                                                                              const attachments = id2.attachments;
-                                                                                              const found = attachments.filter((id) => id.id !== id);
-                                                                                              const result = id2(closure_1_3[17]).patchMessageAttachments(id, id2.id, found);
+                                                                                            const obj25 = {
+                                                                                              title: null,
+                                                                                              body: null,
+                                                                                              cancelText: null,
+                                                                                              confirmText: null,
+                                                                                              onConfirm: null,
                                                                                             };
+                                                                                            const intl3 =
+                                                                                              result(1236).intl;
+                                                                                            obj25[0] = intl3.string(
+                                                                                              result(1236).t.CbTIEo,
+                                                                                            );
+                                                                                            const intl4 =
+                                                                                              result(1236).intl;
+                                                                                            obj25[1] = intl4.string(
+                                                                                              result(1236).t.faHmO3,
+                                                                                            );
+                                                                                            const intl5 =
+                                                                                              result(1236).intl;
+                                                                                            obj25[2] = intl5.string(
+                                                                                              result(1236).t["ETE/oC"],
+                                                                                            );
+                                                                                            const intl6 =
+                                                                                              result(1236).intl;
+                                                                                            obj25[3] = intl6.string(
+                                                                                              result(1236).t.kFwAsa,
+                                                                                            );
+                                                                                            obj25[4] =
+                                                                                              function onConfirm() {
+                                                                                                id =
+                                                                                                  selectedMedia.source
+                                                                                                    .id;
+                                                                                                const attachments =
+                                                                                                  id2.attachments;
+                                                                                                const found =
+                                                                                                  attachments.filter(
+                                                                                                    (id) =>
+                                                                                                      id.id !== id,
+                                                                                                  );
+                                                                                                const result = id2(
+                                                                                                  closure_1_3[17],
+                                                                                                ).patchMessageAttachments(
+                                                                                                  id,
+                                                                                                  id2.id,
+                                                                                                  found,
+                                                                                                );
+                                                                                              };
                                                                                             result(4857).show(obj25);
-                                                                                            const resultResult55 = result(4857);
+                                                                                            const resultResult55 =
+                                                                                              result(4857);
                                                                                           }
                                                                                         }
                                                                                       }
                                                                                     }
                                                                                     if (chatInputRef != null) {
-                                                                                      const current2 = chatInputRef.current;
+                                                                                      const current2 =
+                                                                                        chatInputRef.current;
                                                                                       if (current2 != null) {
                                                                                         current2.dismissKeyboard();
                                                                                       }
                                                                                     }
-                                                                                    const obj26 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
+                                                                                    const obj26 = {
+                                                                                      title: null,
+                                                                                      body: null,
+                                                                                      cancelText: null,
+                                                                                      confirmText: null,
+                                                                                      onConfirm: null,
+                                                                                    };
                                                                                     const intl7 = result(1236).intl;
-                                                                                    obj26[0] = intl7.string(result(1236).t.VL1KOk);
+                                                                                    obj26[0] = intl7.string(
+                                                                                      result(1236).t.VL1KOk,
+                                                                                    );
                                                                                     const intl8 = result(1236).intl;
-                                                                                    obj26[1] = intl8.string(result(1236).t["vXZ+Fo"]);
+                                                                                    obj26[1] = intl8.string(
+                                                                                      result(1236).t["vXZ+Fo"],
+                                                                                    );
                                                                                     const intl9 = result(1236).intl;
-                                                                                    obj26[2] = intl9.string(result(1236).t["ETE/oC"]);
+                                                                                    obj26[2] = intl9.string(
+                                                                                      result(1236).t["ETE/oC"],
+                                                                                    );
                                                                                     const intl10 = result(1236).intl;
-                                                                                    obj26[3] = intl10.string(result(1236).t.YEHppG);
+                                                                                    obj26[3] = intl10.string(
+                                                                                      result(1236).t.YEHppG,
+                                                                                    );
                                                                                     obj26[4] = function onConfirm() {
-                                                                                      id2(closure_1_3[17]).suppressEmbeds(id, id2);
+                                                                                      id2(
+                                                                                        closure_1_3[17],
+                                                                                      ).suppressEmbeds(id, id2);
                                                                                     };
                                                                                     result(4857).show(obj26);
                                                                                     const resultResult56 = result(4857);
@@ -857,7 +1194,10 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                           if (!tmp40) {
                                                             tmp41 = id;
                                                           }
-                                                          const obj28 = { channel_id: null, channel_static_route: null };
+                                                          const obj28 = {
+                                                            channel_id: null,
+                                                            channel_static_route: null,
+                                                          };
                                                           obj28[0] = tmp41;
                                                           let tmp42;
                                                           if (tmp40) {
@@ -865,7 +1205,10 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                           }
                                                           obj28[1] = tmp42;
                                                           let merged = Object.assign(obj28);
-                                                          result(698).track(constants.CONTEXT_MENU_MEDIA_LINK_COPIED, obj27);
+                                                          result(698).track(
+                                                            constants.CONTEXT_MENU_MEDIA_LINK_COPIED,
+                                                            obj27,
+                                                          );
                                                           const resultResult59 = result(698);
                                                         }
                                                       }

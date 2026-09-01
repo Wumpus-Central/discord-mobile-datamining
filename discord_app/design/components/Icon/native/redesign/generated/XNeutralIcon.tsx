@@ -6,7 +6,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/XNeutralIcon.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Icon/native/redesign/generated/XNeutralIcon.tsx",
+);
 
 export const XNeutralIcon = function XNeutralIcon(color) {
   let str = color.color;

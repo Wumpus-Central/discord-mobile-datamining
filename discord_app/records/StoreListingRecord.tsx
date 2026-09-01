@@ -10,7 +10,17 @@ class StoreListingRecord extends tmp2 {
   constructor(arg0) {
     tmp2 = new StoreListingRecord(tmp, new.target, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ id: tmp2.id, applicationId: tmp2.applicationId, skuId: tmp2.skuId, skuFlags: tmp2.skuFlags, summary: tmp2.summary, tagline: tmp2.tagline, flavorText: tmp2.flavorText, description: tmp2.description, carouselItems } = global);
+    ({
+      id: tmp2.id,
+      applicationId: tmp2.applicationId,
+      skuId: tmp2.skuId,
+      skuFlags: tmp2.skuFlags,
+      summary: tmp2.summary,
+      tagline: tmp2.tagline,
+      flavorText: tmp2.flavorText,
+      description: tmp2.description,
+      carouselItems,
+    } = global);
     if (carouselItems == null) {
       carouselItems = [];
     }
@@ -82,7 +92,33 @@ class StoreListingRecord extends tmp2 {
 }
 StoreListingRecord["createFromServer"] = function createFromServer(id) {
   const staff_notes = id.staff_notes;
-  let obj = { id: id.id, applicationId: id.sku.application_id, skuId: id.sku.id, skuFlags: id.sku.flags, summary: id.summary, tagline: id.tagline, flavorText: id.flavor_text, description: id.description, childSkuIds: null, alternativeSkuIds: null, carouselItems: null, assets: null, staffNotes: null, guild: null, thumbnail: null, previewVideo: null, headerBackground: null, headerLogoDarkTheme: null, headerLogoLightTheme: null, boxArt: null, heroBackground: null, heroVideo: null, entitlementBranchId: null, benefits: null, published: null };
+  let obj = {
+    id: id.id,
+    applicationId: id.sku.application_id,
+    skuId: id.sku.id,
+    skuFlags: id.sku.flags,
+    summary: id.summary,
+    tagline: id.tagline,
+    flavorText: id.flavor_text,
+    description: id.description,
+    childSkuIds: null,
+    alternativeSkuIds: null,
+    carouselItems: null,
+    assets: null,
+    staffNotes: null,
+    guild: null,
+    thumbnail: null,
+    previewVideo: null,
+    headerBackground: null,
+    headerLogoDarkTheme: null,
+    headerLogoLightTheme: null,
+    boxArt: null,
+    heroBackground: null,
+    heroVideo: null,
+    entitlementBranchId: null,
+    benefits: null,
+    published: null,
+  };
   let mapped = null;
   if (null != id.child_skus) {
     const child_skus = id.child_skus;
@@ -98,7 +134,10 @@ StoreListingRecord["createFromServer"] = function createFromServer(id) {
   let mapped2 = null;
   if (null != id.carousel_items) {
     const carousel_items = id.carousel_items;
-    mapped2 = carousel_items.map((assetId) => ({ assetId: assetId.asset_id, youtubeVideoId: assetId.youtube_video_id }));
+    mapped2 = carousel_items.map((assetId) => ({
+      assetId: assetId.asset_id,
+      youtubeVideoId: assetId.youtube_video_id,
+    }));
   }
   obj[10] = mapped2;
   let mapped3 = null;

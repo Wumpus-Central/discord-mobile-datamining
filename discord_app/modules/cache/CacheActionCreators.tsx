@@ -10,7 +10,7 @@ function _writeCaches() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*() {
+    const iter = (function* () {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -129,5 +129,10 @@ export const writeCaches = function writeCaches(arg0) {
   return applyArgumentsResult;
 };
 export const clearCaches = function clearCaches() {
-  dispatcherDefault.dispatch({ type: "CLEAR_CACHES", reason: "Requested by user", preventWritingCachesAgainThisSession: true, resetSocket: true });
+  dispatcherDefault.dispatch({
+    type: "CLEAR_CACHES",
+    reason: "Requested by user",
+    preventWritingCachesAgainThisSession: true,
+    resetSocket: true,
+  });
 };

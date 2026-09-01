@@ -10,7 +10,17 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 noopAll;
 createCacheKey = { pin: null, pinIcon: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, width: 23, height: 23, marginEnd: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+createCacheKey = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.round,
+  width: 23,
+  height: 23,
+  marginEnd: 4,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 14, width: 14, tintColor: ThemesDefault.colors.WHITE };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
@@ -24,4 +34,4 @@ export default function ForumPostPinIcon(containerStyle) {
   obj = { source: registerAssetDefault, style: tmp.pinIcon };
   obj[1] = jsx(Button.Icon, { source: registerAssetDefault, style: tmp.pinIcon });
   return <View source={registerAssetDefault} style={tmp.pinIcon} />;
-};
+}

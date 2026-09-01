@@ -32,7 +32,15 @@ class IntegrationItem extends Component {
         const setState = guild.setState;
         if (integration.enabled) {
           setState({ enabled: false });
-          let showResult = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, confirmColor: null };
+          let showResult = {
+            title: null,
+            body: null,
+            confirmText: null,
+            cancelText: null,
+            onConfirm: null,
+            onCancel: null,
+            confirmColor: null,
+          };
           const intl = applyArgumentsResult(closure_1_2[15]).intl;
           showResult[0] = intl.string(applyArgumentsResult(closure_1_2[15]).t.emx3lN);
           if ("youtube" === integration.type) {
@@ -137,7 +145,7 @@ IntegrationItem.prototype["render"] = function render() {
         }
         return enabled;
       };
-      const items = [closure_11(tmp(5599).TableRow, obj), ];
+      const items = [closure_11(tmp(5599).TableRow, obj)];
       const obj2 = { value: null, disabled: null, onValueChange: null, label: null };
       const _Boolean = Boolean;
       obj2[0] = Boolean(self.state.enabled);
@@ -164,7 +172,9 @@ IntegrationItem.prototype["render"] = function render() {
     return null;
   }
 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/integrations/native/GuildSettingsModalIntegrationPlatform.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/integrations/native/GuildSettingsModalIntegrationPlatform.tsx",
+);
 
 export default function GuildSettingsModalIntegrationPlatform(platformType) {
   platformType = platformType.platformType;
@@ -191,7 +201,11 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
   navigation = obj1.useNavigation();
   let obj3 = platformType(589);
   const items = [guild];
-  const stateFromStoresObject = obj3.useStateFromStoresObject(items, () => ({ guild: guild.getGuild(), submitting: guild.isSubmitting(), hasChanges: guild.hasChanges() }));
+  const stateFromStoresObject = obj3.useStateFromStoresObject(items, () => ({
+    guild: guild.getGuild(),
+    submitting: guild.isSubmitting(),
+    hasChanges: guild.hasChanges(),
+  }));
   submitting = stateFromStoresObject.submitting;
   ({ hasChanges: c5, guild } = stateFromStoresObject);
   closure_7 = closeGuildSettings(4413)();
@@ -266,19 +280,23 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     if (found != null) {
       mapped = found.map((id) => {
         closure_0 = arg1;
-        return closure_1_11(closure_1_15, {
-          guild,
-          theme: closure_7,
-          integration: id,
-          styles: closure_2,
-          onPress() {
-            closure_1_3.push(constants.INTEGRATION_SETTINGS, { integrationId: closure_0 });
-          }
-        }, id.id);
+        return closure_1_11(
+          closure_1_15,
+          {
+            guild,
+            theme: closure_7,
+            integration: id,
+            styles: closure_2,
+            onPress() {
+              closure_1_3.push(constants.INTEGRATION_SETTINGS, { integrationId: closure_0 });
+            },
+          },
+          id.id,
+        );
       });
     }
     const obj5 = { children: null };
-    const items2 = [mapped, ];
+    const items2 = [mapped];
     const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj6[2] = formatResult;
     items2[1] = closure_11(tmp(4474).Text, obj6);
@@ -288,4 +306,4 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     obj5[0] = items3;
     return closure_12(closure_13, obj5);
   }
-};
+}

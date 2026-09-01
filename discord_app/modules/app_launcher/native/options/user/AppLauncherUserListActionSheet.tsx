@@ -13,15 +13,24 @@ function EmptyStateWithSnowflakeQuery(onPressRow) {
     contentContainerStyle: callback().emptyState,
     data: items,
     renderItem(item) {
-      return closure_1_4(onPressRow(closure_1_2[13]).TableRow, { label: item.item, start: true, end: true, onPress: onPressRow });
+      return closure_1_4(onPressRow(closure_1_2[13]).TableRow, {
+        label: item.item,
+        start: true,
+        end: true,
+        onPress: onPressRow,
+      });
     },
     keyboardShouldPersistTaps: "always",
-    keyboardDismissMode: "on-drag"
+    keyboardDismissMode: "on-drag",
   });
 }
 const AppLauncherUserListActionSheet = "AppLauncherUserListActionSheet";
-let closure_6 = createCacheKey.createStyles({ emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 } });
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserListActionSheet.tsx");
+let closure_6 = createCacheKey.createStyles({
+  emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/options/user/AppLauncherUserListActionSheet.tsx",
+);
 
 export default function AppLauncherUserListActionSheet(onUserPress) {
   onUserPress = onUserPress.onUserPress;
@@ -64,14 +73,37 @@ export default function AppLauncherUserListActionSheet(onUserPress) {
     }
     return tmp3Result;
   }, items2);
-  let obj = { onDismiss: onActionSheetDismiss, option: onUserPress.option, contentContainerStyles: { paddingHorizontal: 0 }, children: null };
+  let obj = {
+    onDismiss: onActionSheetDismiss,
+    option: onUserPress.option,
+    contentContainerStyles: { paddingHorizontal: 0 },
+    children: null,
+  };
   if (channel.isPrivate()) {
-    obj = { channelId: null, disableStickySections: true, hideTitle: true, headerShown: false, inActionSheet: true, onUserPress: null, opensUserProfileOnUserPress: false };
+    obj = {
+      channelId: null,
+      disableStickySections: true,
+      hideTitle: true,
+      headerShown: false,
+      inActionSheet: true,
+      onUserPress: null,
+      opensUserProfileOnUserPress: false,
+    };
     obj[0] = id;
     obj[5] = callback1;
     let tmp4Result = tmp4(tmp6(tmp5[10]), obj);
   } else {
-    obj = { channelId: null, guildId: null, searchable: true, searchableEmptyState: null, headerShown: false, opensUserProfileOnUserPress: false, onUserPress: null, inActionSheet: true, disableThemedGradient: true };
+    obj = {
+      channelId: null,
+      guildId: null,
+      searchable: true,
+      searchableEmptyState: null,
+      headerShown: false,
+      opensUserProfileOnUserPress: false,
+      onUserPress: null,
+      inActionSheet: true,
+      disableThemedGradient: true,
+    };
     obj[0] = id;
     obj[1] = channel.guild_id;
     obj[3] = callback2;
@@ -79,6 +111,11 @@ export default function AppLauncherUserListActionSheet(onUserPress) {
     tmp4Result = tmp4(tmp6(tmp5[11]), obj);
   }
   obj[3] = tmp4Result;
-  return jsx(onUserPress(callback[9]).AppLauncherCommandOptionActionSheet, { onDismiss: onActionSheetDismiss, option: onUserPress.option, contentContainerStyles: { paddingHorizontal: 0 }, children: null });
-};
+  return jsx(onUserPress(callback[9]).AppLauncherCommandOptionActionSheet, {
+    onDismiss: onActionSheetDismiss,
+    option: onUserPress.option,
+    contentContainerStyles: { paddingHorizontal: 0 },
+    children: null,
+  });
+}
 export const APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY = "AppLauncherUserListActionSheet";

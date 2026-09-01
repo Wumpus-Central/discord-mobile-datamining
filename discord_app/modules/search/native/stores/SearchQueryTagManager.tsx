@@ -44,13 +44,25 @@ prototype["mergeTag"] = function mergeTag(location, channelId) {
   closure_1 = channelId;
   const tags = this.tags;
   const items = [];
-  items[HermesBuiltin.arraySpread(tags.filter((arg0) => {
-    let tmp = arg0 !== closure_0;
-    if (tmp) {
-      tmp = arg0 !== closure_1;
-    }
-    return tmp;
-  }), 0)] = { type: SearchQueryTagTypes.COMPLETE, text: "" + location.text + " " + channelId.text, location: location.location, searchTokenType: location.searchTokenType, channelId: channelId.channelId, userId: channelId.userId };
+  items[
+    HermesBuiltin.arraySpread(
+      tags.filter((arg0) => {
+        let tmp = arg0 !== closure_0;
+        if (tmp) {
+          tmp = arg0 !== closure_1;
+        }
+        return tmp;
+      }),
+      0,
+    )
+  ] = {
+    type: SearchQueryTagTypes.COMPLETE,
+    text: "" + location.text + " " + channelId.text,
+    location: location.location,
+    searchTokenType: location.searchTokenType,
+    channelId: channelId.channelId,
+    userId: channelId.userId,
+  };
   this.tags = items;
 };
 prototype["replaceTag"] = function replaceTag(arg0, type) {

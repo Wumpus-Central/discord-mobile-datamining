@@ -12,7 +12,11 @@ const require = arg1;
 ({ View: c5, Keyboard: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { searchBarContainer: null, noResults: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_8,
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
@@ -74,18 +78,26 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   first = tmp8[0];
   closure_9 = tmp8[1];
   obj1 = disabledDestinations(onSelectedDestinationChange[8]);
-  const shareSearchResults = obj1.useShareSearchResults({ selectedDestinations: first, originDestination, channelFilter, includeMissingDMs: true });
+  const shareSearchResults = obj1.useShareSearchResults({
+    selectedDestinations: first,
+    originDestination,
+    channelFilter,
+    includeMissingDMs: true,
+  });
   results = shareSearchResults.results;
   updateSearchText = shareSearchResults.updateSearchText;
   callback = obj.useRef("");
   [tmp14, c13] = onSearchTextChange(obj.useState(false), 2);
   closure_14 = obj.useRef(null);
-  const effect = obj.useEffect(() => () => {
-    const current = ref.current;
-    if (current != null) {
-      current.cancel();
-    }
-  }, []);
+  const effect = obj.useEffect(
+    () => () => {
+      const current = ref.current;
+      if (current != null) {
+        current.cancel();
+      }
+    },
+    [],
+  );
   let items = [onSearchTextChange, updateSearchText];
   callback = obj.useCallback((current) => {
     let flag = arg1;
@@ -177,7 +189,17 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   callback3 = obj.useCallback((id) => callback2({ type: "user", id: id.id }), items6);
   const items7 = [callback2];
   callback4 = obj.useCallback((id) => callback2({ type: "channel", id: id.id }), items7);
-  const items8 = [results, getRowIsUnavailable, memo2, memo1, disableSelection, disableLongPress, NONE, callback3, callback4];
+  const items8 = [
+    results,
+    getRowIsUnavailable,
+    memo2,
+    memo1,
+    disableSelection,
+    disableLongPress,
+    NONE,
+    callback3,
+    callback4,
+  ];
   const callback5 = obj.useCallback((arg0, arg1) => {
     ({ type, record } = results[arg1]);
     if (type !== disabledDestinations(onSelectedDestinationChange[11]).AutocompleterResultTypes.HEADER) {
@@ -200,7 +222,15 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
       if (!tmp11) {
         tmp11 = null != tmp6;
       }
-      let obj = { disabled: null, selected: null, mode: null, subLabel: null, subLabelLineClamp: null, start: null, end: null };
+      let obj = {
+        disabled: null,
+        selected: null,
+        mode: null,
+        subLabel: null,
+        subLabelLineClamp: null,
+        start: null,
+        end: null,
+      };
       obj[0] = tmp11;
       obj[1] = hasItem;
       if (null != tmp6) {
@@ -293,7 +323,16 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   }, items9);
   const someResult = memo.some((arg0) => arg0 > 0);
   if (someResult) {
-    obj = { ref: null, sections: null, getItemProps: null, getSectionProps: null, getItemSize: null, insetStart: null, insetEnd: null, disableStickySections: null };
+    obj = {
+      ref: null,
+      sections: null,
+      getItemProps: null,
+      getSectionProps: null,
+      getItemSize: null,
+      insetStart: null,
+      insetEnd: null,
+      disableStickySections: null,
+    };
     obj[0] = ref1;
     obj[1] = memo;
     obj[2] = callback5;
@@ -332,7 +371,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   if (!disableGradient) {
     tmp35Result = tmp35(tmp26(tmp11[20]), { absolute: true });
   }
-  const items11 = [tmp35Result, , ];
+  const items11 = [tmp35Result, ,];
   if (flag2) {
     if (!someResult) {
       tmp35Result = null;
@@ -353,4 +392,4 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   obj5[4] = intl2.string(disabledDestinations(onSelectedDestinationChange[19]).t.CaEER6);
   obj4[1] = tmp35(disabledDestinations(onSelectedDestinationChange[21]).SearchField, obj5);
   tmp35Result = tmp35(disableSelection, obj4);
-};
+}

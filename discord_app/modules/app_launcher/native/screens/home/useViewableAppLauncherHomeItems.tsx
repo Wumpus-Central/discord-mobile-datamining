@@ -3,7 +3,9 @@ import closure_2 from "../../../../../../_runtime/00019_noop.js";
 import closure_3 from "../../../AppLauncherStore.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/useViewableAppLauncherHomeItems.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/screens/home/useViewableAppLauncherHomeItems.tsx",
+);
 
 export const useViewableAppLauncherHomeItems = function useViewableAppLauncherHomeItems() {
   let obj = sharedValue(sharedValue1[2]);
@@ -51,7 +53,7 @@ export const useViewableAppLauncherHomeItems = function useViewableAppLauncherHo
       });
     }, items),
     hasViewedActivityItem: sharedValue,
-    hasViewedLearnMoreItem: sharedValue1
+    hasViewedLearnMoreItem: sharedValue1,
   };
   items = [sharedValue, sharedValue1, ref];
   return obj;

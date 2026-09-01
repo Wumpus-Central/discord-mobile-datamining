@@ -4,9 +4,13 @@ import asyncRequireImpl from "../../../../../../_runtime/02009_asyncRequireImpl.
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const GuildSettingsModalStickerInfoActionSheet = "GuildSettingsModalStickerInfoActionSheet";
-const result = set.fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/showGuildSettingsModalStickerInfoActionSheet.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_settings/server_monetization/stickers/native/showGuildSettingsModalStickerInfoActionSheet.tsx",
+);
 
-export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSettingsModalStickerInfoActionSheet(arg0) {
+export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSettingsModalStickerInfoActionSheet(
+  arg0,
+) {
   ({ guildId, stickerId } = arg0);
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = {
@@ -14,7 +18,7 @@ export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSe
     stickerId,
     hideActionSheet() {
       callback(table[0]).hideActionSheet(closure_3);
-    }
+    },
   };
   obj.openLazy(asyncRequireImpl(17168, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);
 };

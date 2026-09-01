@@ -64,12 +64,26 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
   if (null != message.author) {
     if (0 !== message.giftCodes.length) {
       const colors = getEmbedThemeColorsDefault(forcedTheme).colors;
-      ({ headerColor: dependencyMap, titleColor: closure_3, subtitleColor: closure_4, bodyTextColor: closure_5, backgroundColor, resolvingGradientStart: closure_6, resolvingGradientEnd: closure_7, acceptLabelDisabledBackgroundColor: closure_8, acceptLabelDisabledColor: closure_9, thumbnailBackgroundColor: closure_10, acceptLabelGreenColor: closure_11, acceptBlurpleLabelBackgroundColor: closure_12 } = colors);
+      ({
+        headerColor: dependencyMap,
+        titleColor: closure_3,
+        subtitleColor: closure_4,
+        bodyTextColor: closure_5,
+        backgroundColor,
+        resolvingGradientStart: closure_6,
+        resolvingGradientEnd: closure_7,
+        acceptLabelDisabledBackgroundColor: closure_8,
+        acceptLabelDisabledColor: closure_9,
+        thumbnailBackgroundColor: closure_10,
+        acceptLabelGreenColor: closure_11,
+        acceptBlurpleLabelBackgroundColor: closure_12,
+      } = colors);
       let obj = { borderColor: null, backgroundColor: null, thumbnailCornerRadius: 3 };
       obj[0] = colors.borderColor;
       let tmp4 = backgroundColor;
       if (obj2.isThemeDark(forcedTheme)) {
-        const embedBackground = require("../../../../../client_themes/native/ClientThemesUtils.tsx").getEmbedBackground();
+        const embedBackground =
+          require("../../../../../client_themes/native/ClientThemesUtils.tsx").getEmbedBackground();
         let tmp5Result = closure_4(embedBackground);
         if (tmp5Result == null) {
           tmp5Result = backgroundColor;
@@ -108,7 +122,16 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
               } else {
                 error = error(error[25]);
               }
-              obj = { thumbnailUrl: null, headerText: null, titleText: null, titleColor: null, headerColor: null, thumbnailBackgroundColor: null, subtitle: null, subtitleColor: null };
+              obj = {
+                thumbnailUrl: null,
+                headerText: null,
+                titleText: null,
+                titleColor: null,
+                headerColor: null,
+                thumbnailBackgroundColor: null,
+                subtitle: null,
+                subtitleColor: null,
+              };
               obj[0] = closure_1_3.resolveAssetSource(error).uri;
               const intl13 = error(error[23]).intl;
               const string3 = intl13.string;
@@ -223,9 +246,13 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                         const intl6 = message(closure_1_2[23]).intl;
                         stringResult2 = intl6.string(message(closure_1_2[23]).t.v740sh);
                         let obj3 = message(closure_1_2[28]);
-                        processColorOrThrowResult = obj3.processColorOrThrow(callback(closure_1_2[26]).unsafe_rawColors.BRAND_500);
+                        processColorOrThrowResult = obj3.processColorOrThrow(
+                          callback(closure_1_2[26]).unsafe_rawColors.BRAND_500,
+                        );
                         let obj4 = message(closure_1_2[28]);
-                        processColorOrThrowResult1 = obj4.processColorOrThrow(callback(closure_1_2[26]).unsafe_rawColors.WHITE);
+                        processColorOrThrowResult1 = obj4.processColorOrThrow(
+                          callback(closure_1_2[26]).unsafe_rawColors.WHITE,
+                        );
                       }
                     }
                   }

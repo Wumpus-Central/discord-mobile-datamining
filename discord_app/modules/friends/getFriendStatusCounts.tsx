@@ -27,4 +27,4 @@ export default function getFriendStatusCounts() {
     continue;
   }
   return { num_friends_online, num_friends_idle, num_friends_dnd };
-};
+}

@@ -4,14 +4,38 @@ import toJSDefault from "../../lib/Record.tsx";
 
 require = arg1;
 toJSDefault;
-const frozen = Object.freeze({ 0: require("create").DayOfWeek.SUNDAY, 1: require("create").DayOfWeek.MONDAY, 2: require("create").DayOfWeek.TUESDAY, 3: require("create").DayOfWeek.WEDNESDAY, 4: require("create").DayOfWeek.THURSDAY, 5: require("create").DayOfWeek.FRIDAY, 6: require("create").DayOfWeek.SATURDAY });
-let closure_3 = Object.freeze({ [arg1(1930).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0, [arg1(1930).DayOfWeek.MONDAY]: 1, [arg1(1930).DayOfWeek.TUESDAY]: 2, [arg1(1930).DayOfWeek.WEDNESDAY]: 3, [arg1(1930).DayOfWeek.THURSDAY]: 4, [arg1(1930).DayOfWeek.FRIDAY]: 5, [arg1(1930).DayOfWeek.SATURDAY]: 6, [arg1(1930).DayOfWeek.SUNDAY]: 0 });
+const frozen = Object.freeze({
+  0: require("create").DayOfWeek.SUNDAY,
+  1: require("create").DayOfWeek.MONDAY,
+  2: require("create").DayOfWeek.TUESDAY,
+  3: require("create").DayOfWeek.WEDNESDAY,
+  4: require("create").DayOfWeek.THURSDAY,
+  5: require("create").DayOfWeek.FRIDAY,
+  6: require("create").DayOfWeek.SATURDAY,
+});
+let closure_3 = Object.freeze({
+  [arg1(1930).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0,
+  [arg1(1930).DayOfWeek.MONDAY]: 1,
+  [arg1(1930).DayOfWeek.TUESDAY]: 2,
+  [arg1(1930).DayOfWeek.WEDNESDAY]: 3,
+  [arg1(1930).DayOfWeek.THURSDAY]: 4,
+  [arg1(1930).DayOfWeek.FRIDAY]: 5,
+  [arg1(1930).DayOfWeek.SATURDAY]: 6,
+  [arg1(1930).DayOfWeek.SUNDAY]: 0,
+});
 let ScheduleRuleRecord;
 class ScheduleRuleRecord extends tmp2 {
   constructor(arg0) {
     tmp = new ScheduleRuleRecord(new.target, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ ruleId: tmp.ruleId, label: tmp.label, startTime: tmp.startTime, endTime: tmp.endTime, days: tmp.days, enabled: tmp.enabled } = global);
+    ({
+      ruleId: tmp.ruleId,
+      label: tmp.label,
+      startTime: tmp.startTime,
+      endTime: tmp.endTime,
+      days: tmp.days,
+      enabled: tmp.enabled,
+    } = global);
     return tmp;
   }
 }
@@ -23,7 +47,17 @@ ScheduleRuleRecord["fromServer"] = function fromServer(end_time) {
   if (typeof ScheduleRuleRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp2 = new ScheduleRuleRecord("Trying to call a non-function", ScheduleRuleRecord, new.target, rule_id, label, start_time, end_time, days, enabled);
+  const tmp2 = new ScheduleRuleRecord(
+    "Trying to call a non-function",
+    ScheduleRuleRecord,
+    new.target,
+    rule_id,
+    label,
+    start_time,
+    end_time,
+    days,
+    enabled,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp2.ruleId = rule_id;
   tmp2.label = label;
@@ -39,7 +73,14 @@ ScheduleRuleRecord["fromCache"] = function fromCache(arg0) {
   }
   const tmp2 = new ScheduleRuleRecord("Trying to call a non-function", ScheduleRuleRecord);
   // ThrowIfThisInitialized (0x7c)
-  ({ ruleId: tmp2.ruleId, label: tmp2.label, startTime: tmp2.startTime, endTime: tmp2.endTime, days: tmp2.days, enabled: tmp2.enabled } = arg0);
+  ({
+    ruleId: tmp2.ruleId,
+    label: tmp2.label,
+    startTime: tmp2.startTime,
+    endTime: tmp2.endTime,
+    days: tmp2.days,
+    enabled: tmp2.enabled,
+  } = arg0);
   return tmp2;
 };
 prototype["isActiveAt"] = function isActiveAt(closure_0, c1) {
@@ -119,7 +160,12 @@ RestrictedScheduleRecord["fromServer"] = function fromServer(rules) {
     if (typeof RestrictedScheduleRecord !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const tmp9 = new RestrictedScheduleRecord("Trying to call a non-function", rules, RestrictedScheduleRecord, new.target);
+    const tmp9 = new RestrictedScheduleRecord(
+      "Trying to call a non-function",
+      rules,
+      RestrictedScheduleRecord,
+      new.target,
+    );
     // ThrowIfThisInitialized (0x7c)
     tmp9.rules = mapped;
     tmp = tmp9;
@@ -135,7 +181,12 @@ RestrictedScheduleRecord["fromCache"] = function fromCache(rules) {
     if (typeof RestrictedScheduleRecord !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const tmp9 = new RestrictedScheduleRecord("Trying to call a non-function", rules, RestrictedScheduleRecord, new.target);
+    const tmp9 = new RestrictedScheduleRecord(
+      "Trying to call a non-function",
+      rules,
+      RestrictedScheduleRecord,
+      new.target,
+    );
     // ThrowIfThisInitialized (0x7c)
     tmp9.rules = mapped;
     tmp = tmp9;
@@ -290,7 +341,15 @@ prototype2["getNextEndTime"] = function getNextEndTime() {
     return null;
   }
 };
-let obj = { 0: require("create").DayOfWeek.SUNDAY, 1: require("create").DayOfWeek.MONDAY, 2: require("create").DayOfWeek.TUESDAY, 3: require("create").DayOfWeek.WEDNESDAY, 4: require("create").DayOfWeek.THURSDAY, 5: require("create").DayOfWeek.FRIDAY, 6: require("create").DayOfWeek.SATURDAY };
+let obj = {
+  0: require("create").DayOfWeek.SUNDAY,
+  1: require("create").DayOfWeek.MONDAY,
+  2: require("create").DayOfWeek.TUESDAY,
+  3: require("create").DayOfWeek.WEDNESDAY,
+  4: require("create").DayOfWeek.THURSDAY,
+  5: require("create").DayOfWeek.FRIDAY,
+  6: require("create").DayOfWeek.SATURDAY,
+};
 let result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterModels.tsx");
 
 export const JS_DAY_TO_DAY_OF_WEEK = frozen;
@@ -309,7 +368,15 @@ export const ensureRestrictedScheduleRecord = function ensureRestrictedScheduleR
           HermesBuiltin.throwTypeError();
         }
         const items = [];
-        const tmp7 = new RestrictedScheduleRecord("Trying to call a non-function", obj, new.target, items, RestrictedScheduleRecord, length, tmp2);
+        const tmp7 = new RestrictedScheduleRecord(
+          "Trying to call a non-function",
+          obj,
+          new.target,
+          items,
+          RestrictedScheduleRecord,
+          length,
+          tmp2,
+        );
         // ThrowIfThisInitialized (0x7c)
         tmp7.rules = items;
         length = tmp7;

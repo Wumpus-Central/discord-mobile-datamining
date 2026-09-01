@@ -35,7 +35,7 @@ export const humanizeValue = function humanizeValue(newPostCount, stateFromStore
   } else {
     const _Math3 = Math;
     const _Intl = Intl;
-    const result = Math.floor(10 * newPostCount / tmp7) / 10;
+    const result = Math.floor((10 * newPostCount) / tmp7) / 10;
     const numberFormat = new Intl.NumberFormat(stateFromStores, { maximumFractionDigits: 1 });
     const intl3 = getSystemLocale.intl;
     obj = { value: null };

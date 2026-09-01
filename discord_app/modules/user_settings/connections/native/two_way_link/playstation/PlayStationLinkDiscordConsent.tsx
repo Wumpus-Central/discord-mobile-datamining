@@ -6,7 +6,9 @@ import { PLAYSTATION_CLIENT_SCOPES } from "../../../../../game_console/GameConso
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkDiscordConsent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkDiscordConsent.tsx",
+);
 
 export const PlayStationLinkDiscordConsent = function PlayStationLinkDiscordConsent(platformType) {
   platformType = platformType.platformType;
@@ -32,6 +34,24 @@ export const PlayStationLinkDiscordConsent = function PlayStationLinkDiscordCons
   } else {
     PLAYSTATION = tmp(9336).ConsoleAuthorizationRedirectURIs.PLAYSTATION;
   }
-  obj = { platformType, callbackCode, callbackState, clientId: PLAYSTATION_APPLICATION_ID, scopes: PLAYSTATION_CLIENT_SCOPES, onNext: callback, onError: callback1, redirectUri: PLAYSTATION };
-  return jsx(navigation(9314).TwoWayLinkDiscordConsent, { platformType, callbackCode, callbackState, clientId: PLAYSTATION_APPLICATION_ID, scopes: PLAYSTATION_CLIENT_SCOPES, onNext: callback, onError: callback1, redirectUri: PLAYSTATION });
+  obj = {
+    platformType,
+    callbackCode,
+    callbackState,
+    clientId: PLAYSTATION_APPLICATION_ID,
+    scopes: PLAYSTATION_CLIENT_SCOPES,
+    onNext: callback,
+    onError: callback1,
+    redirectUri: PLAYSTATION,
+  };
+  return jsx(navigation(9314).TwoWayLinkDiscordConsent, {
+    platformType,
+    callbackCode,
+    callbackState,
+    clientId: PLAYSTATION_APPLICATION_ID,
+    scopes: PLAYSTATION_CLIENT_SCOPES,
+    onNext: callback,
+    onError: callback1,
+    redirectUri: PLAYSTATION,
+  });
 };

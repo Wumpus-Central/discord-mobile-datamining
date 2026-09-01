@@ -9,10 +9,12 @@ noopAll;
 const result = require("set").fileFinishedImporting("modules/captcha/tooling/native/OpenCaptchaTestModal.tsx");
 
 export const showCaptchaTestModal = function showCaptchaTestModal() {
-  _modDef4723.pushLazy(callback(function*() {
-    closure_0 = tmp2;
-    yield closure_1_0(paths[5])(paths[4], paths.paths);
-    closure_0 = arg1.default;
-    return () => closure_1_4(closure_0, {});
-  }));
+  _modDef4723.pushLazy(
+    callback(function* () {
+      closure_0 = tmp2;
+      yield closure_1_0(paths[5])(paths[4], paths.paths);
+      closure_0 = arg1.default;
+      return () => closure_1_4(closure_0, {});
+    }),
+  );
 };

@@ -16,8 +16,7 @@ prototype = function CollectiblesStoreListingRecord(styles) {
   tmp2.styles = styles.styles;
   return tmp2;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["fromServer"] = function fromServer(styles) {
   styles = styles.styles;
   ({ store_listing_id, sku_id } = styles);

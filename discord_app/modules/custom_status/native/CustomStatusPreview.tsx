@@ -10,7 +10,16 @@ const require = arg1;
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: c5, UserProfileThemeTypes: closure_6 } = ARBITRARY_LARGE_OFFSET);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  let obj = { flex: 1, position: "relative", overflow: "hidden", width: 323, maxHeight: 301, borderWidth: num, borderColor: null, borderRadius: null };
+  let obj = {
+    flex: 1,
+    position: "relative",
+    overflow: "hidden",
+    width: 323,
+    maxHeight: 301,
+    borderWidth: num,
+    borderColor: null,
+    borderRadius: null,
+  };
   const colors = ThemesDefault.colors;
   if (arg0) {
     let BACKGROUND_SURFACE_HIGH = colors.BORDER_MUTED;
@@ -47,15 +56,40 @@ export default function CustomStatusPreview(user) {
     let obj = user(pendingStatusEmoji[11]);
     obj.dismissKeyboard();
     obj = { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji };
-    pendingStatusText(pendingStatusEmoji[12]).openLazy(user(pendingStatusEmoji[14])(pendingStatusEmoji[13], pendingStatusEmoji.paths), "UserProfileCustomStatusActionSheet", obj, "stack");
+    pendingStatusText(pendingStatusEmoji[12]).openLazy(
+      user(pendingStatusEmoji[14])(pendingStatusEmoji[13], pendingStatusEmoji.paths),
+      "UserProfileCustomStatusActionSheet",
+      obj,
+      "stack",
+    );
   }, items);
   obj = { theme, primaryColor, secondaryColor, children: null };
   obj = { style: items1, children: null };
   items1 = [tmp7.profileContainer];
-  const items2 = [callback(pendingStatusText(pendingStatusEmoji[16]), { user, displayProfile: tmp3, bannerHeight: 132, disableInteraction: true }), , ];
-  const items3 = [callback(pendingStatusText(pendingStatusEmoji[17]), { user, backgroundColor: avatarBackground, disableStatus: true }), ];
-  obj1 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor: primaryColor, containerStyle: null, children: null };
-  const items4 = [, , ];
+  const items2 = [
+    callback(pendingStatusText(pendingStatusEmoji[16]), {
+      user,
+      displayProfile: tmp3,
+      bannerHeight: 132,
+      disableInteraction: true,
+    }),
+    ,
+  ];
+  const items3 = [
+    callback(pendingStatusText(pendingStatusEmoji[17]), {
+      user,
+      backgroundColor: avatarBackground,
+      disableStatus: true,
+    }),
+  ];
+  obj1 = {
+    fallbackBackground: gradientFallbackBackground,
+    primaryColor,
+    secondaryColor: primaryColor,
+    containerStyle: null,
+    children: null,
+  };
+  const items4 = [, ,];
   ({ profileContentWrapper: arr5[0], profileContent: arr5[1] } = tmp8);
   let tmp15 = "" !== pendingStatusText;
   const tmp5 = pendingStatusText(pendingStatusEmoji[8])({ user, displayProfile: tmp3 });
@@ -73,8 +107,25 @@ export default function CustomStatusPreview(user) {
   }
   items4[2] = tmp16;
   obj1[3] = items4;
-  const items5 = [callback(pendingStatusText(pendingStatusEmoji[19]), { hasCustomProfileTheme: null != primaryColor, style: tmp8.customStatusBubble, emojiOnlyStyle: tmp8.emojiOnlyCustomStatusBubble, onPressTruncatedStatus: callback, previewEmoji: pendingStatusEmoji, previewText: pendingStatusText, placeholderText }), ];
-  const obj4 = { user, themeType: constants.PREVIEW, pronouns: null, badges: null, badgeContainerBackground: null, showBadgeToastOnPress: false };
+  const items5 = [
+    callback(pendingStatusText(pendingStatusEmoji[19]), {
+      hasCustomProfileTheme: null != primaryColor,
+      style: tmp8.customStatusBubble,
+      emojiOnlyStyle: tmp8.emojiOnlyCustomStatusBubble,
+      onPressTruncatedStatus: callback,
+      previewEmoji: pendingStatusEmoji,
+      previewText: pendingStatusText,
+      placeholderText,
+    }),
+  ];
+  const obj4 = {
+    user,
+    themeType: constants.PREVIEW,
+    pronouns: null,
+    badges: null,
+    badgeContainerBackground: null,
+    showBadgeToastOnPress: false,
+  };
   let pronouns;
   let tmpResult = tmp(tmp2[20]);
   if (tmp3 != null) {
@@ -109,4 +160,4 @@ export default function CustomStatusPreview(user) {
   obj[1] = items2;
   obj[3] = closure_8(View, obj);
   return callback(user(pendingStatusEmoji[15]).ThemeContextProvider, obj);
-};
+}

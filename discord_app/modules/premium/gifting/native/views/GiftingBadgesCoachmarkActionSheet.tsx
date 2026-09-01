@@ -40,7 +40,7 @@ function HasBadgeCoachmark(markAsDismissed) {
     tmp4Result = tmp4(GiftingBadgeIconDefault, obj1);
   }
   obj[1] = tmp4Result;
-  const items2 = [closure_8(closure_5, obj), , ];
+  const items2 = [closure_8(closure_5, obj), ,];
   const obj2 = { style: tmp.textContainer, children: null };
   const obj3 = { style: tmp.text, variant: "heading-xl/bold", color: "text-strong", children: null };
   const intl = tmp5(1236).intl;
@@ -49,7 +49,7 @@ function HasBadgeCoachmark(markAsDismissed) {
     str = "";
   }
   obj3[3] = intl.format(messagesProxyDefault["a+jfuy"], { tierName: str });
-  const items3 = [closure_8(markAsDismissed(4474).Text, obj3), ];
+  const items3 = [closure_8(markAsDismissed(4474).Text, obj3)];
   const obj4 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = tmp5(1236).intl;
   if (giftCount == null) {
@@ -92,12 +92,12 @@ function NewBadgeCoachmark(markAsDismissed) {
   obj = { style: tmp.graphicContainer, children: null };
   obj1 = { source: { uri: metadataDefault }, style: tmp.newBadgeImage };
   obj[1] = callback(closure_4, obj1);
-  const items2 = [callback(closure_5, obj), , ];
+  const items2 = [callback(closure_5, obj), ,];
   const obj3 = { style: tmp.textContainer, children: null };
   const obj4 = { style: tmp.text, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1236).intl;
   obj4[3] = intl.string(messagesProxyDefault.Q2RQka);
-  const items3 = [callback(markAsDismissed(4474).Text, obj4), ];
+  const items3 = [callback(markAsDismissed(4474).Text, obj4)];
   const obj5 = { style: tmp.text, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl2 = markAsDismissed(1236).intl;
   obj5[3] = intl2.string(messagesProxyDefault["3EQnkg"]);
@@ -109,7 +109,10 @@ function NewBadgeCoachmark(markAsDismissed) {
   const intl3 = markAsDismissed(1236).intl;
   obj7[1] = intl3.string(messagesProxyDefault.DZnomS);
   const obj2 = { uri: metadataDefault };
-  obj7[2] = callback(markAsDismissed(10774).GiftIcon, { size: "sm", color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj7[2] = callback(markAsDismissed(10774).GiftIcon, {
+    size: "sm",
+    color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
+  });
   obj7[3] = callback;
   obj6[1] = callback(markAsDismissed(4928).Button, obj7);
   items2[2] = callback(closure_5, obj6);
@@ -119,18 +122,39 @@ function NewBadgeCoachmark(markAsDismissed) {
 }
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, graphicContainer: null, newBadgeImage: null, textContainer: null, text: null, footer: null };
+createCacheKey = {
+  container: null,
+  graphicContainer: null,
+  newBadgeImage: null,
+  textContainer: null,
+  text: null,
+  footer: null,
+};
 createCacheKey = { alignItems: "center", paddingHorizontal: 20, paddingBottom: 20, gap: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 188, width: 335, alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_16 };
+createCacheKey[1] = {
+  height: 188,
+  width: 335,
+  alignItems: "center",
+  justifyContent: "center",
+  padding: ThemesDefault.space.PX_16,
+};
 createCacheKey[2] = { width: "100%", height: "100%", objectFit: "contain" };
-let obj1 = { height: 188, width: 335, alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_16 };
+let obj1 = {
+  height: 188,
+  width: 335,
+  alignItems: "center",
+  justifyContent: "center",
+  padding: ThemesDefault.space.PX_16,
+};
 createCacheKey[3] = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { textAlign: "center" };
 createCacheKey[5] = { width: "100%" };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgesCoachmarkActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/gifting/native/views/GiftingBadgesCoachmarkActionSheet.tsx",
+);
 
 export default function GiftingBadgesCoachmarkActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -160,4 +184,4 @@ export default function GiftingBadgesCoachmarkActionSheet(markAsDismissed) {
     tmp5 = callback(NewBadgeCoachmark, obj);
   }
   return tmp5;
-};
+}

@@ -36,4 +36,4 @@ export default function UserProfileEditFormTextField(inputRef) {
     tmp9 = jsx(TextInput.TextInput, { ref: null });
   }
   return tmp9;
-};
+}

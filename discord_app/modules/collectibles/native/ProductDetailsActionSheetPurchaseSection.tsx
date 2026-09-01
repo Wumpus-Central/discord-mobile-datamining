@@ -125,9 +125,13 @@ function VCButton(balance) {
             const tmp4Result1 = tmp4(tmp2[29]);
           }
         }
-      }
+      },
     };
-    product(onTrackPress[22]).pushLazy(balance(onTrackPress[24])(onTrackPress[23], onTrackPress.paths), obj, closure_1_19);
+    product(onTrackPress[22]).pushLazy(
+      balance(onTrackPress[24])(onTrackPress[23], onTrackPress.paths),
+      obj,
+      closure_1_19,
+    );
   }, items);
   if (null == price) {
     return null;
@@ -171,7 +175,15 @@ function VCButton(balance) {
     });
     obj2 = { style: null, children: null };
     obj2[0] = tmp.buttonContainer;
-    const obj3 = { loading: false, textElement: null, onPress: null, disabled: null, size: "lg", variant: null, grow: true };
+    const obj3 = {
+      loading: false,
+      textElement: null,
+      onPress: null,
+      disabled: null,
+      size: "lg",
+      variant: null,
+      grow: true,
+    };
     obj3[1] = callback2(analyticsLocations, obj);
     obj3[2] = function onPress() {
       if (onTrackPress != null) {
@@ -193,7 +205,12 @@ function VCButton(balance) {
 }
 function PurchaseDisclaimer(arg0) {
   ({ product, buyButtonLabel } = arg0);
-  let obj = { style: callback3().disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: null };
+  let obj = {
+    style: callback3().disclaimer,
+    variant: "text-xxs/normal",
+    color: "interactive-text-active",
+    children: null,
+  };
   let formatResult = product.type !== CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
   if (formatResult) {
     const intl = tmp3(1236).intl;
@@ -211,8 +228,22 @@ function PurchaseDisclaimer(arg0) {
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const ORB_BADGE_COLLECTED_MODAL = "ORB_BADGE_COLLECTED_MODAL";
 const ORB_CHECKOUT_MODAL = "ORB_CHECKOUT_MODAL";
-createCacheKey = { container: null, containerFramesEA: null, gradientOverlay: null, purchaseSection: null, disclaimer: null, buttonContainer: null, framesEAContainer: null, orbsButtonLabel: null, orbsButtonText: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  container: null,
+  containerFramesEA: null,
+  gradientOverlay: null,
+  purchaseSection: null,
+  disclaimer: null,
+  buttonContainer: null,
+  framesEAContainer: null,
+  orbsButtonLabel: null,
+  orbsButtonText: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_8,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_MUTED };
 createCacheKey[2] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 };
@@ -227,7 +258,9 @@ createCacheKey[7] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[8] = { flexShrink: 1 };
 let closure_20 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { flexDirection: "column", gap: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetPurchaseSection.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/ProductDetailsActionSheetPurchaseSection.tsx",
+);
 
 export default function ProductDetailsActionSheetPurchaseSection(product) {
   product = product.product;
@@ -279,7 +312,7 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
   tmp5Result = tmp5(tmp3[48]);
   let canGiftProduct = tmp5Result.useCanGiftProduct(product);
   let PX_16 = tmp2(tmp3[49])().bottom;
-  const items2 = [tmp.container, , ];
+  const items2 = [tmp.container, ,];
   let containerFramesEA = tmp21Result;
   if (tmp21Result) {
     containerFramesEA = tmp.containerFramesEA;
@@ -296,7 +329,7 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
     obj[1] = [0.0854, 0.7847];
     obj[2] = { x: 0, y: 0 };
     obj[3] = { x: 1, y: 1 };
-    const items3 = [tmp.gradientOverlay, ];
+    const items3 = [tmp.gradientOverlay];
     obj1 = !isThemeDarkResult;
     let tmp2Result = tmp2(tmp3[50]);
     if (!isThemeDarkResult) {
@@ -305,28 +338,40 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
     obj2 = { children: null };
     items3[1] = obj1;
     obj[4] = items3;
-    const items4 = [callback2(tmp2Result, obj), ];
+    const items4 = [callback2(tmp2Result, obj)];
     obj3 = { style: null, preserveAspectRatio: "none", viewBox: "0 0 100 100", pointerEvents: "none", children: null };
     obj3[0] = tmp.gradientOverlay;
     tmp2Result = tmp2(tmp3[51]);
     obj4 = { children: null };
-    obj5 = { id: "frameEAVignette", cx: "50%", cy: "100%", rx: "100%", ry: "100%", fx: "50%", fy: "100%", children: null };
+    obj5 = {
+      id: "frameEAVignette",
+      cx: "50%",
+      cy: "100%",
+      rx: "100%",
+      ry: "100%",
+      fx: "50%",
+      fy: "100%",
+      children: null,
+    };
     obj6 = { offset: "60%", stopColor: null, stopOpacity: 1 };
     obj6[1] = token;
-    const items5 = [callback2(tmp5(tmp3[51]).Stop, obj6), ];
+    const items5 = [callback2(tmp5(tmp3[51]).Stop, obj6)];
     obj7 = { offset: "100%", stopColor: null, stopOpacity: 0 };
     obj7[1] = token;
     items5[1] = callback2(tmp5(tmp3[51]).Stop, obj7);
     obj5[7] = items5;
     obj4[0] = tmp21(tmp5(tmp3[51]).RadialGradient, obj5);
-    const items6 = [callback2(tmp5(tmp3[51]).Defs, obj4), callback2(tmp5(tmp3[51]).Rect, { x: "0", y: "0", width: "100", height: "100", fill: "url(#frameEAVignette)" })];
+    const items6 = [
+      callback2(tmp5(tmp3[51]).Defs, obj4),
+      callback2(tmp5(tmp3[51]).Rect, { x: "0", y: "0", width: "100", height: "100", fill: "url(#frameEAVignette)" }),
+    ];
     obj3[4] = items6;
     items4[1] = tmp21(tmp2Result, obj3);
     obj2[0] = items4;
     tmp21Result = tmp21(closure_17, obj2);
     const tmp23 = closure_17;
   }
-  const items7 = [tmp21Result, ];
+  const items7 = [tmp21Result];
   if (isPurchased) {
     tmp21Result = product.type !== tmp5(tmp3[33]).CollectiblesItemType.EXTERNAL_SKU;
     if (tmp21Result) {
@@ -355,7 +400,7 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
           _undefined2();
         };
       }
-      const items8 = [callback2(tmp5(tmp3[52]).Button, obj10), ];
+      const items8 = [callback2(tmp5(tmp3[52]).Button, obj10)];
       if (canGiftProduct) {
         obj11 = { product: null, analyticsLocations: null, onTrackPress: null };
         obj11[0] = product;
@@ -385,7 +430,7 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
     const arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations, 0);
     obj15[0] = tmp2(tmp3[55]).getArticleURL(constants.SHOP_FRAMES_EARLY_ACCESS);
     obj14[2] = intl8.format(tmp5(tmp3[16]).t["3cglst"], obj15);
-    const items10 = [callback2(tmp5(tmp3[31]).Text, obj14), , ];
+    const items10 = [callback2(tmp5(tmp3[31]).Text, obj14), ,];
     const obj16 = { onTrackPress: null, text: null };
     obj16[0] = onTrackPress;
     const intl9 = tmp5(tmp3[16]).intl;
@@ -446,12 +491,20 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
         obj21[3] = onTrackPress;
         tmp30 = callback2(VCButton, obj21);
       }
-      const items11 = [tmp30, , , ];
+      const items11 = [tmp30, , ,];
       let tmp21Result1 = !result2;
       if (!result2) {
         const obj22 = { style: null, children: null };
         obj22[0] = tmp.buttonContainer;
-        const obj23 = { loading: null, text: null, onPress: null, disabled: null, variant: null, size: "lg", grow: true };
+        const obj23 = {
+          loading: null,
+          text: null,
+          onPress: null,
+          disabled: null,
+          variant: null,
+          size: "lg",
+          grow: true,
+        };
         obj23[0] = isBuying;
         obj23[1] = stringResult;
         obj23[2] = function onPress() {
@@ -470,7 +523,7 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
           str2 = "secondary";
         }
         obj23[4] = str2;
-        const items12 = [callback2(tmp5(tmp3[52]).Button, obj23), ];
+        const items12 = [callback2(tmp5(tmp3[52]).Button, obj23)];
         let tmp34Result = canGiftProduct;
         if (canGiftProduct) {
           const obj24 = { product: null, analyticsLocations: null, variant: null, onTrackPress: null };
@@ -513,10 +566,17 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
     const obj27 = { text: null, loading: null, onPress: null, size: "lg", grow: true };
     const intl7 = tmp5(tmp3[16]).intl;
     obj27[0] = intl7.string(tmp5(tmp3[16]).t.zp6caO);
-    obj27[1] = callback(obj4.useStateFromStoresArray(items, () => {
-      const items = [closure_1_6.isClaiming === product.skuId];
-      return items;
-    }, items1), 1)[0];
+    obj27[1] = callback(
+      obj4.useStateFromStoresArray(
+        items,
+        () => {
+          const items = [closure_1_6.isClaiming === product.skuId];
+          return items;
+        },
+        items1,
+      ),
+      1,
+    )[0];
     obj27[2] = function onPress() {
       if (onTrackPress != null) {
         tmp(closure_1_8.ADD_TO_COLLECTION);
@@ -528,4 +588,4 @@ export default function ProductDetailsActionSheetPurchaseSection(product) {
   items7[1] = tmp21Result2;
   obj[1] = items7;
   return closure_16(handleClaim, obj);
-};
+}

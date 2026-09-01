@@ -11,15 +11,38 @@ import { initialize } from "../../../../../discord_common/js/packages/flux/index
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { card: null, cardContent: null, cardMessage: null, overlay: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: 10, padding: 16 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  overflow: "hidden",
+  borderRadius: 10,
+  padding: 16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "row" };
 createCacheKey[2] = { marginLeft: 12, maxWidth: 240 };
-createCacheKey[3] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[3] = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let closure_10 = { code: "function NotificationSettingsMockMessageTsx1(){const{withTiming,opacity,timingStandard}=this.__closure;return{opacity:withTiming(opacity.get(),timingStandard)};}" };
-let obj1 = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-let result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMockMessage.tsx");
+let closure_10 = {
+  code: "function NotificationSettingsMockMessageTsx1(){const{withTiming,opacity,timingStandard}=this.__closure;return{opacity:withTiming(opacity.get(),timingStandard)};}",
+};
+let obj1 = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/notifications/settings/native/NotificationSettingsMockMessage.tsx",
+);
 
 export default function NotificationSettingsMockMessage(notificationSetting) {
   const tmp = callback3();
@@ -62,7 +85,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
     const obj3 = { variant: "text-sm/normal", color: "text-link", children: null };
     const items1 = ["@", str, " "];
     obj3[2] = items1;
-    const items2 = [callback2(tmp2(4474).Text, obj3), ];
+    const items2 = [callback2(tmp2(4474).Text, obj3)];
     const intl3 = tmp2(1236).intl;
     items2[1] = intl3.string(tmp2(1236).t.WYyzI5);
     obj2[2] = items2;
@@ -80,8 +103,13 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   }, items3);
   const obj4 = { style: tmp.card, children: null };
   const obj5 = { style: tmp.cardContent, children: null };
-  const obj6 = { children: tmp12(require("../../../../design/void/native.tsx").Avatar, { source: sharedValue(10244), size: require("../../../../design/void/native.tsx").AvatarSizes.LARGE_48 }) };
-  const items4 = [tmp12(View, obj6), ];
+  const obj6 = {
+    children: tmp12(require("../../../../design/void/native.tsx").Avatar, {
+      source: sharedValue(10244),
+      size: require("../../../../design/void/native.tsx").AvatarSizes.LARGE_48,
+    }),
+  };
+  const items4 = [tmp12(View, obj6)];
   const obj8 = { style: tmp.cardMessage, children: null };
   const obj9 = { variant: "text-sm/semibold", children: null };
   const intl2 = tmp2(1236).intl;
@@ -90,9 +118,9 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   obj8[1] = items5;
   items4[1] = callback2(View, obj8);
   obj5[1] = items4;
-  const items6 = [callback2(View, obj5), ];
+  const items6 = [callback2(View, obj5)];
   const items7 = [animatedStyle, tmp.overlay];
   items6[1] = tmp12(sharedValue(4217).View, { style: items7 });
   obj4[1] = items6;
   return callback2(View, obj4);
-};
+}

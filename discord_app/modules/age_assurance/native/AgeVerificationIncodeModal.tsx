@@ -50,9 +50,9 @@ export default function AgeVerificationIncodeModal(webviewUrl) {
           trustedOrigin: origin,
           onMethodSelected(injectedJavaScriptBeforeContentLoaded) {
             return navigation.navigate(closure_1_5.VERIFY_AGE, { injectedJavaScriptBeforeContentLoaded });
-          }
+          },
         });
-      }
+      },
     };
     obj = {
       headerStyle: origin.headerStyle,
@@ -64,13 +64,23 @@ export default function AgeVerificationIncodeModal(webviewUrl) {
         return handleClose(callback(6237).HeaderActionButton, obj);
       },
       render(injectedJavaScriptBeforeContentLoaded) {
-        return handleClose(callback2(8694), { webviewUrl: closure_0, onComplete: callback2, onClose: handleClose, injectedJavaScriptBeforeContentLoaded: injectedJavaScriptBeforeContentLoaded.injectedJavaScriptBeforeContentLoaded });
-      }
+        return handleClose(callback2(8694), {
+          webviewUrl: closure_0,
+          onComplete: callback2,
+          onClose: handleClose,
+          injectedJavaScriptBeforeContentLoaded:
+            injectedJavaScriptBeforeContentLoaded.injectedJavaScriptBeforeContentLoaded,
+        });
+      },
     };
     return { [closure_1_5.METHOD_SELECT]: obj, [closure_1_5.VERIFY_AGE]: obj };
   }, items);
   let obj = { screens: memo, initialRouteName: constants.METHOD_SELECT, headerBackTitle: null };
   const intl2 = webviewUrl(onClose[6]).intl;
   obj[2] = intl2.string(webviewUrl(onClose[6]).t["13/7kX"]);
-  return jsx(webviewUrl(onClose[9]).Navigator, { screens: memo, initialRouteName: constants.METHOD_SELECT, headerBackTitle: null });
-};
+  return jsx(webviewUrl(onClose[9]).Navigator, {
+    screens: memo,
+    initialRouteName: constants.METHOD_SELECT,
+    headerBackTitle: null,
+  });
+}

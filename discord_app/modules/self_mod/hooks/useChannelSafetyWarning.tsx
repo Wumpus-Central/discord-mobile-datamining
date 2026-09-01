@@ -9,7 +9,11 @@ export const useChannelSafetyWarning = function useChannelSafetyWarning(channelI
   dependencyMap = LIKELY_ATO;
   const items = [closure_2];
   const items1 = [channelId];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.getChannelSafetyWarnings(closure_0), items1);
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_2.getChannelSafetyWarnings(closure_0),
+    items1,
+  );
   const found = stateFromStores.filter((type) => type.type === closure_1);
   return found.find((dismiss_timestamp) => {
     let tmp = null == dismiss_timestamp.dismiss_timestamp;

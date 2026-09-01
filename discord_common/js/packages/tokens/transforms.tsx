@@ -11,14 +11,30 @@ function interpolate(arg0, arg1, arg2) {
     return result;
   } else if (diff < result) {
     diff = diff - tmp;
-    result = diff / (result - tmp) * (result - tmp3);
+    result = (diff / (result - tmp)) * (result - tmp3);
     let sum = tmp3 + result;
   } else {
-    sum = result + (diff - result) / (tmp2 - result) * (tmp4 - result);
+    sum = result + ((diff - result) / (tmp2 - result)) * (tmp4 - result);
   }
 }
-let closure_2 = { BACKGROUND_LIGHTNESS_LIGHT_THEME: "*0.975", BACKGROUND_LIGHTNESS_DARK_THEME: "*1.6", BACKGROUND_SATURATION: "*0.8", TEXT_LIGHTNESS_LIGHT_THEME: "*1.05", TEXT_LIGHTNESS_MULTIPLIER_DARK_THEME: 0.85, [0.85]: "TEXT_LIGHTNESS_MULTIPLIER_DARK_THEME", TEXT_LIGHTNESS_MAX_DARK_THEME: 0.6, [0.6]: "TEXT_LIGHTNESS_MAX_DARK_THEME" };
-let closure_3 = { BORDER_MIN_OPACITY: 0.3, [0.3]: "BORDER_MIN_OPACITY", TEXT_LIGHTNESS_LIGHT_THEME: "*0.6", TEXT_LIGHTNESS_DARK_THEME: "*1.5", TEXT_SATURATION: "*2", BACKGROUND_LIGHTNESS_DARK_THEME: "*0.9" };
+let closure_2 = {
+  BACKGROUND_LIGHTNESS_LIGHT_THEME: "*0.975",
+  BACKGROUND_LIGHTNESS_DARK_THEME: "*1.6",
+  BACKGROUND_SATURATION: "*0.8",
+  TEXT_LIGHTNESS_LIGHT_THEME: "*1.05",
+  TEXT_LIGHTNESS_MULTIPLIER_DARK_THEME: 0.85,
+  [0.85]: "TEXT_LIGHTNESS_MULTIPLIER_DARK_THEME",
+  TEXT_LIGHTNESS_MAX_DARK_THEME: 0.6,
+  [0.6]: "TEXT_LIGHTNESS_MAX_DARK_THEME",
+};
+let closure_3 = {
+  BORDER_MIN_OPACITY: 0.3,
+  [0.3]: "BORDER_MIN_OPACITY",
+  TEXT_LIGHTNESS_LIGHT_THEME: "*0.6",
+  TEXT_LIGHTNESS_DARK_THEME: "*1.5",
+  TEXT_SATURATION: "*2",
+  BACKGROUND_LIGHTNESS_DARK_THEME: "*0.9",
+};
 let closure_5 = [0, 2];
 let closure_6 = [1.3, 0.7];
 let closure_7 = [0.98, 1];
@@ -34,7 +50,10 @@ export const transformColorForReducedContrast = function transformColorForReduce
           let TEXT_LIGHTNESS_LIGHT_THEME = constants.TEXT_LIGHTNESS_LIGHT_THEME;
         } else {
           const _Math = Math;
-          TEXT_LIGHTNESS_LIGHT_THEME = Math.max(tmp3 * constants.TEXT_LIGHTNESS_MULTIPLIER_DARK_THEME, constants.TEXT_LIGHTNESS_MAX_DARK_THEME);
+          TEXT_LIGHTNESS_LIGHT_THEME = Math.max(
+            tmp3 * constants.TEXT_LIGHTNESS_MULTIPLIER_DARK_THEME,
+            constants.TEXT_LIGHTNESS_MAX_DARK_THEME,
+          );
         }
         const result = nDefault(arg0).set("hsl.l", TEXT_LIGHTNESS_LIGHT_THEME);
         return result.hex();
@@ -84,14 +103,18 @@ export const transformColorForIncreasedContrast = function transformColorForIncr
   }
   return items3;
 };
-export const transformColorForReducedSaturation = function transformColorForReducedSaturation(result, category, saturation) {
+export const transformColorForReducedSaturation = function transformColorForReducedSaturation(
+  result,
+  category,
+  saturation,
+) {
   const obj = nDefault(result);
   if ("background" === category) {
     [tmp2, tmp3] = [0, 1];
     const items = [0.25, 1];
     [tmp5, tmp6] = items;
     const _HermesInternal2 = HermesInternal;
-    result = obj.set("hsl.s", "*" + tmp5 + (saturation - tmp2) / (tmp3 - tmp2) * (tmp6 - tmp5));
+    result = obj.set("hsl.s", "*" + tmp5 + ((saturation - tmp2) / (tmp3 - tmp2)) * (tmp6 - tmp5));
     return result.hex();
   } else {
     const _HermesInternal = HermesInternal;
@@ -104,13 +127,19 @@ export const transformColorContrast = function transformColorContrast(result, ca
     if ("border" !== category) {
       if ("text" === category) {
         const _HermesInternal = HermesInternal;
-        result = nDefault(result).set("hsl.l", "*" + interpolate(closure_5, "light" === theme ? closure_9 : closure_8, contrast));
+        result = nDefault(result).set(
+          "hsl.l",
+          "*" + interpolate(closure_5, "light" === theme ? closure_9 : closure_8, contrast),
+        );
         return result.hex();
       } else {
         return result;
       }
     }
   }
-  const result1 = nDefault(result).set("hsl.l", "*" + interpolate(closure_5, "light" === theme ? closure_7 : closure_6, contrast));
+  const result1 = nDefault(result).set(
+    "hsl.l",
+    "*" + interpolate(closure_5, "light" === theme ? closure_7 : closure_6, contrast),
+  );
   return result1.hex();
 };

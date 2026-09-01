@@ -17,4 +17,4 @@ export default function useMemoWithEqualityFunction(arg0, current) {
     tmp2.current = current;
   }
   return tmp.current;
-};
+}

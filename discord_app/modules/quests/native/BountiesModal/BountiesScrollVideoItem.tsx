@@ -104,13 +104,16 @@ function BountiesScrollVideoItemInner(bounty) {
     }, items2);
     let tmp5Result = tmp5(obj.useState(isActive), 2);
     [tmp19, tmp20] = tmp5Result;
-    tmp5Result = tmp5(obj.useState(() => {
-      let currentBalance = null;
-      if (isActive) {
-        currentBalance = orbAmount.getCurrentBalance();
-      }
-      return currentBalance;
-    }), 2);
+    tmp5Result = tmp5(
+      obj.useState(() => {
+        let currentBalance = null;
+        if (isActive) {
+          currentBalance = orbAmount.getCurrentBalance();
+        }
+        return currentBalance;
+      }),
+      2,
+    );
     [tmp22, tmp23] = tmp5Result;
     QuestsExperimentLocations = tmp23;
     if (tmp19 !== isActive) {
@@ -124,89 +127,92 @@ function BountiesScrollVideoItemInner(bounty) {
       }
     }
     const items3 = [bounty.id, isActive, orbAmount, sourceQuestContent];
-    const callback1 = obj.useCallback(callback(function*() {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_1 = tmp3;
-              c0 = tmp7;
-              c0 = false;
-              c3 = 1;
-              c4 = 2;
-              c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(closure_1_2[12]).claimBountyReward(closure_1_0.id, closure_1_1);
-              return obj1;
-            }
+    const callback1 = obj.useCallback(
+      callback(function* () {
+        if (c5 === 2) {
+          c5 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
           } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              closure_1 = closure_2;
-              obj1 = closure_1_0(closure_1_2[13]);
-              const result = obj1.openBountyRewardClaimErrorToast(closure_1);
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 0;
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c0 = true;
-              c3 = 0;
-            }
-            let tmp18 = c0;
-            if (c0) {
-              tmp18 = c4;
-            }
-            if (tmp18) {
-              closure_1_9((arg0) => {
-                let sum = null;
-                if (null != arg0) {
-                  sum = arg0 + closure_7;
-                }
-                return sum;
-              });
-            }
-            c5 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp27) {
-          closure_2 = tmp27;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp27;
-          } else {
-            c4 = tmp;
+        } else {
+          try {
+            c5 = 2;
+            if (0 === c4) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                closure_1 = tmp3;
+                c0 = tmp7;
+                c0 = false;
+                c3 = 1;
+                c4 = 2;
+                c5 = 1;
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_0(closure_1_2[12]).claimBountyReward(closure_1_0.id, closure_1_1);
+                return obj1;
+              }
+            } else {
+              if (1 === tmp7) {
+                c3 = 0;
+                closure_1 = closure_2;
+                obj1 = closure_1_0(closure_1_2[13]);
+                const result = obj1.openBountyRewardClaimErrorToast(closure_1);
+              } else if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c3 = 0;
+                c5 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                c0 = true;
+                c3 = 0;
+              }
+              let tmp18 = c0;
+              if (c0) {
+                tmp18 = c4;
+              }
+              if (tmp18) {
+                closure_1_9((arg0) => {
+                  let sum = null;
+                  if (null != arg0) {
+                    sum = arg0 + closure_7;
+                  }
+                  return sum;
+                });
+              }
+              c5 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          } catch (tmp27) {
+            closure_2 = tmp27;
+            if (tmp4 === c3) {
+              c5 = tmp2;
+              throw tmp27;
+            } else {
+              c4 = tmp;
+            }
           }
         }
-      }
-    }), items3);
+      }),
+      items3,
+    );
     tmp2Result = tmp2(14624);
     obj = { bountyId: null, endMode: null };
     obj[0] = bounty.id;
@@ -217,7 +223,18 @@ function BountiesScrollVideoItemInner(bounty) {
     const items4 = [flushProgress];
     const effect1 = obj.useEffect(() => () => callback(), items4);
     const tmp5Result1 = tmp5(obj.useState(0), 2);
-    obj = { bountyId: null, sourceQuestContent: null, rewardDurationMs: null, initialPlaybackTimeSec: null, initialMaxVideoProgressSec: null, initialVideoDurationSec: null, wasPreloaded: false, startupPath: null, verticalScrollingPosition: null, isActive: null };
+    obj = {
+      bountyId: null,
+      sourceQuestContent: null,
+      rewardDurationMs: null,
+      initialPlaybackTimeSec: null,
+      initialMaxVideoProgressSec: null,
+      initialVideoDurationSec: null,
+      wasPreloaded: false,
+      startupPath: null,
+      verticalScrollingPosition: null,
+      isActive: null,
+    };
     obj[0] = bounty.id;
     obj[1] = sourceQuestContent;
     obj[2] = result;
@@ -232,7 +249,17 @@ function BountiesScrollVideoItemInner(bounty) {
     const bountiesModalVideoAnalytics = tmp2(14625).useBountiesModalVideoAnalytics(obj);
     handleVideoProgressAnalytics = bountiesModalVideoAnalytics.handleVideoProgressAnalytics;
     onPlaybackTimeChange = undefined;
-    ({ handleVideoEndAnalytics, handleVideoLoopedAnalytics, handleVideoPausedAnalytics, handleVideoResumedAnalytics, handleVideoErrorAnalytics, handleLoadStartAnalytics, handleVideoTracksAnalytics, handleReadyForDisplayAnalytics, handleBufferAnalytics } = bountiesModalVideoAnalytics);
+    ({
+      handleVideoEndAnalytics,
+      handleVideoLoopedAnalytics,
+      handleVideoPausedAnalytics,
+      handleVideoResumedAnalytics,
+      handleVideoErrorAnalytics,
+      handleLoadStartAnalytics,
+      handleVideoTracksAnalytics,
+      handleReadyForDisplayAnalytics,
+      handleBufferAnalytics,
+    } = bountiesModalVideoAnalytics);
     if (scrollAffordance != null) {
       onPlaybackTimeChange = scrollAffordance.onPlaybackTimeChange;
     }
@@ -261,7 +288,21 @@ function BountiesScrollVideoItemInner(bounty) {
       }
     }, items5);
     const tmp2Result1 = tmp2(14625);
-    obj1 = { endMode: null, rewardDurationMs: null, isCompleted: null, onRewardEarned: null, onVideoProgress: null, onVideoEnd: null, onVideoLooped: null, onVideoPaused: null, onVideoResumed: null, playerRef: null, initialProgressSec: null, initialMaxVideoProgressSec: null, initialVideoDurationSec: null };
+    obj1 = {
+      endMode: null,
+      rewardDurationMs: null,
+      isCompleted: null,
+      onRewardEarned: null,
+      onVideoProgress: null,
+      onVideoEnd: null,
+      onVideoLooped: null,
+      onVideoPaused: null,
+      onVideoResumed: null,
+      playerRef: null,
+      initialProgressSec: null,
+      initialMaxVideoProgressSec: null,
+      initialVideoDurationSec: null,
+    };
     obj1[0] = LOOP;
     obj1[1] = result;
     obj1[2] = stateFromStores;
@@ -284,7 +325,14 @@ function BountiesScrollVideoItemInner(bounty) {
     handleVideoResumed = bountiesModalTiming.handleVideoResumed;
     handleReplay = bountiesModalTiming.handleReplay;
     const items6 = [handleVideoPaused, isEndCardVisible, onPaused];
-    ({ isCtaVisible, handleVideoEnd, handleVideoProgress, rewardRemainingSeconds, rewardTotalSeconds, normalizedProgress } = bountiesModalTiming);
+    ({
+      isCtaVisible,
+      handleVideoEnd,
+      handleVideoProgress,
+      rewardRemainingSeconds,
+      rewardTotalSeconds,
+      normalizedProgress,
+    } = bountiesModalTiming);
     const items7 = [handleVideoResumed, onResumed];
     const callback3 = obj.useCallback((arg0) => {
       handleVideoPaused(arg0);
@@ -314,7 +362,42 @@ function BountiesScrollVideoItemInner(bounty) {
     }, items8);
     const obj2 = { style: null, children: null };
     obj2[0] = memo;
-    const obj3 = { bounty: null, sourceQuestContent: null, isCompleted: null, isCtaVisible: null, isEndCardVisible: null, isScrollIndicatorEnabled: null, isProgressBarVisible: null, orbsBalance: null, handleVideoEnd: null, handleVideoProgress: null, handleVideoPaused: null, handleVideoResumed: null, handleVideoError: null, onLoadStart: null, onBuffer: null, onFirstFrame: null, onVideoTracks: null, rewardRemainingSeconds: null, rewardTotalSeconds: null, normalizedProgress: null, repeat: null, initialProgress: null, isActive: null, isRecapPageRevealed: null, isScrollingInBoundsSharedValue: null, playerRef: null, onPlayerStateChange: null, balanceWidgetPillResetKey: null, shouldLoadHls: null, width: null, height: null, peekScale: null, softDownloadCapsEnabled: null, renderEndCard: null };
+    const obj3 = {
+      bounty: null,
+      sourceQuestContent: null,
+      isCompleted: null,
+      isCtaVisible: null,
+      isEndCardVisible: null,
+      isScrollIndicatorEnabled: null,
+      isProgressBarVisible: null,
+      orbsBalance: null,
+      handleVideoEnd: null,
+      handleVideoProgress: null,
+      handleVideoPaused: null,
+      handleVideoResumed: null,
+      handleVideoError: null,
+      onLoadStart: null,
+      onBuffer: null,
+      onFirstFrame: null,
+      onVideoTracks: null,
+      rewardRemainingSeconds: null,
+      rewardTotalSeconds: null,
+      normalizedProgress: null,
+      repeat: null,
+      initialProgress: null,
+      isActive: null,
+      isRecapPageRevealed: null,
+      isScrollingInBoundsSharedValue: null,
+      playerRef: null,
+      onPlayerStateChange: null,
+      balanceWidgetPillResetKey: null,
+      shouldLoadHls: null,
+      width: null,
+      height: null,
+      peekScale: null,
+      softDownloadCapsEnabled: null,
+      renderEndCard: null,
+    };
     obj3[0] = bounty;
     obj3[1] = sourceQuestContent;
     obj3[2] = stateFromStores;
@@ -360,8 +443,15 @@ function BountiesScrollVideoItemInner(bounty) {
         sourceQuestContent: ref,
         overrideVisibility: isEndCardVisible,
         children() {
-          return closure_1_10(closure_1_1(closure_1_2[20]), { bounty: closure_0, visible: closure_17, onReplay: closure_20, isActive: closure_4, isScrollingInBoundsSharedValue: closure_5, sourceQuestContent: closure_1 });
-        }
+          return closure_1_10(closure_1_1(closure_1_2[20]), {
+            bounty: closure_0,
+            visible: closure_17,
+            onReplay: closure_20,
+            isActive: closure_4,
+            isScrollingInBoundsSharedValue: closure_5,
+            sourceQuestContent: closure_1,
+          });
+        },
       });
     };
     obj2[1] = handleProgress(tmp2(14627).BountyVideo, obj3);
@@ -405,7 +495,22 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {
-      return flag3(closure_1_11, { bounty, sourceQuestContent, width: closure_2, height: closure_3, index: closure_4, isActive, isRecapPageRevealed: flag, isRecapPageOnTop: flag2, isScrollingInBoundsSharedValue: closure_8, isScrollIndicatorOverlayEnabled, shouldLoadHls: flag3, scrollAffordance: closure_11, peekScale: closure_12, softDownloadCapsEnabled });
-    }
+      return flag3(closure_1_11, {
+        bounty,
+        sourceQuestContent,
+        width: closure_2,
+        height: closure_3,
+        index: closure_4,
+        isActive,
+        isRecapPageRevealed: flag,
+        isRecapPageOnTop: flag2,
+        isScrollingInBoundsSharedValue: closure_8,
+        isScrollIndicatorOverlayEnabled,
+        shouldLoadHls: flag3,
+        scrollAffordance: closure_11,
+        peekScale: closure_12,
+        softDownloadCapsEnabled,
+      });
+    },
   });
 };

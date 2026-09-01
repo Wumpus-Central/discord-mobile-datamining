@@ -9,17 +9,46 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, section: null, avatarList: null, touchableHitBox: null, guildAvatar: null, guildAvatarText: null };
+createCacheKey = {
+  container: null,
+  section: null,
+  avatarList: null,
+  touchableHitBox: null,
+  guildAvatar: null,
+  guildAvatarText: null,
+};
 createCacheKey = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4, flexWrap: "wrap", paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_12 };
+createCacheKey[2] = {
+  display: "flex",
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_4,
+  flexWrap: "wrap",
+  paddingTop: ThemesDefault.space.PX_12,
+  paddingBottom: ThemesDefault.space.PX_12,
+};
 createCacheKey[3] = { width: "100%", alignItems: "flex-start" };
-let obj1 = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4, flexWrap: "wrap", paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_12 };
-createCacheKey[4] = { borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+let obj1 = {
+  display: "flex",
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_4,
+  flexWrap: "wrap",
+  paddingTop: ThemesDefault.space.PX_12,
+  paddingBottom: ThemesDefault.space.PX_12,
+};
+createCacheKey[4] = {
+  borderRadius: ThemesDefault.radii.md,
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+};
 createCacheKey[5] = { fontSize: 12 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+let obj2 = {
+  borderRadius: ThemesDefault.radii.md,
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+};
 const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopActivity.tsx");
 
 export default function FamilyCenterTopActivity() {
@@ -36,7 +65,11 @@ export default function FamilyCenterTopActivity() {
   const callback = React.useCallback(() => {
     let obj = stateFromStores(stateFromStores1[8]);
     obj = { topUserActivities: stateFromStores };
-    obj.openLazy(callback(stateFromStores1[10])(stateFromStores1[9], stateFromStores1.paths), "FamilyCenterTopUsers", obj);
+    obj.openLazy(
+      callback(stateFromStores1[10])(stateFromStores1[9], stateFromStores1.paths),
+      "FamilyCenterTopUsers",
+      obj,
+    );
   }, items2);
   if (0 !== stateFromStores.length) {
     obj = { style: null, children: null };
@@ -53,7 +86,7 @@ export default function FamilyCenterTopActivity() {
       const obj2 = { variant: "text-sm/semibold", children: null };
       const intl2 = tmp2(tmp3[13]).intl;
       obj2[1] = intl2.string(stateFromStores(tmp3[14]).BxbvS7);
-      const items3 = [callback(tmp2(tmp3[15]).Text, obj2), ];
+      const items3 = [callback(tmp2(tmp3[15]).Text, obj2)];
       const obj3 = { style: null, children: null };
       obj3[0] = tmp.avatarList;
       obj3[1] = stateFromStores.map((user_id) => {
@@ -73,12 +106,18 @@ export default function FamilyCenterTopActivity() {
       tmp9 = callback(tmp8, obj);
       const tmp12 = stateFromStores(tmp3[12]);
     }
-    const items4 = [tmp9, ];
+    const items4 = [tmp9];
     let tmp13 = stateFromStores1.length > 0;
     if (tmp13) {
       const obj4 = { style: null, children: null };
       obj4[0] = tmp.section;
-      const obj5 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
+      const obj5 = {
+        style: null,
+        onPress: null,
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        children: null,
+      };
       obj5[0] = tmp.touchableHitBox;
       obj5[1] = tmp5;
       const intl3 = tmp2(tmp3[13]).intl;
@@ -86,7 +125,7 @@ export default function FamilyCenterTopActivity() {
       const obj6 = { variant: "text-sm/semibold", children: null };
       const intl4 = tmp2(tmp3[13]).intl;
       obj6[1] = intl4.string(stateFromStores(tmp3[14]).Lq9Set);
-      const items5 = [callback(tmp2(tmp3[15]).Text, obj6), ];
+      const items5 = [callback(tmp2(tmp3[15]).Text, obj6)];
       const obj7 = { style: null, children: null };
       obj7[0] = tmp.avatarList;
       obj7[1] = stateFromStores1.map((guild_id) => {
@@ -115,4 +154,4 @@ export default function FamilyCenterTopActivity() {
     tmp7Result = null;
   }
   return tmp7Result;
-};
+}

@@ -3,12 +3,20 @@ import initializeDefault from "../../../../discord_common/js/packages/flux/index
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import privDefault from "../../../../_runtime/01401_priv.js";
 
-let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", ERROR: 3, [3]: "ERROR" };
+let obj = {
+  NOT_FETCHED: 0,
+  [0]: "NOT_FETCHED",
+  FETCHING: 1,
+  [1]: "FETCHING",
+  FETCHED: 2,
+  [2]: "FETCHED",
+  ERROR: 3,
+  [3]: "ERROR",
+};
 let closure_1 = new privDefault({ max: 20 });
 let closure_2 = {};
 const Store = initializeDefault.Store;
-class ApplicationDirectorySimilarApplicationsStore extends Store {
-}
+class ApplicationDirectorySimilarApplicationsStore extends Store {}
 const prototype = ApplicationDirectorySimilarApplicationsStore.prototype;
 prototype["getSimilarApplications"] = function getSimilarApplications(arg0) {
   ({ applicationId, guildId, page } = arg0);
@@ -28,7 +36,13 @@ ApplicationDirectorySimilarApplicationsStore.displayName = "ApplicationDirectory
 obj = {
   APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: function handleFetchSimilarApplications(applicationId) {
     obj = {};
-    const combined = "applicationId:" + applicationId.applicationId + " guildId:" + applicationId.guildId + " page:" + applicationId.page;
+    const combined =
+      "applicationId:" +
+      applicationId.applicationId +
+      " guildId:" +
+      applicationId.guildId +
+      " page:" +
+      applicationId.page;
     const merged = Object.assign(obj);
     obj[combined] = obj.FETCHING;
   },
@@ -42,16 +56,29 @@ obj = {
     const merged = Object.assign(obj);
     obj[combined] = obj.FETCHED;
   },
-  APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: function handleFetchSimilarApplicationsFailure(applicationId) {
+  APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: function handleFetchSimilarApplicationsFailure(
+    applicationId,
+  ) {
     obj = {};
-    const combined = "applicationId:" + applicationId.applicationId + " guildId:" + applicationId.guildId + " page:" + applicationId.page;
+    const combined =
+      "applicationId:" +
+      applicationId.applicationId +
+      " guildId:" +
+      applicationId.guildId +
+      " page:" +
+      applicationId.page;
     const merged = Object.assign(obj);
     obj[combined] = obj.ERROR;
-  }
+  },
 };
-const applicationDirectorySimilarApplicationsStore = new ApplicationDirectorySimilarApplicationsStore(dispatcherDefault, obj);
+const applicationDirectorySimilarApplicationsStore = new ApplicationDirectorySimilarApplicationsStore(
+  dispatcherDefault,
+  obj,
+);
 const tmp2 = new privDefault({ max: 20 });
-let result = require("set").fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectorySimilarApplicationsStore.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/global_discovery_apps/stores/ApplicationDirectorySimilarApplicationsStore.tsx",
+);
 
 export default applicationDirectorySimilarApplicationsStore;
 export const FetchState = obj;

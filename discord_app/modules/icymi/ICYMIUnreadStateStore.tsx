@@ -8,8 +8,7 @@ require = arg1;
 let closure_2 = 7 * setDefault.Millis.DAY;
 let closure_3 = { readIdToTimestampMap: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class ICYMIUnreadStateStore extends DeviceSettingsStore {
-}
+class ICYMIUnreadStateStore extends DeviceSettingsStore {}
 const prototype = ICYMIUnreadStateStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let tmp = arg0;
@@ -86,7 +85,7 @@ const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(dispatcherDefault, {
   },
   CLEAR_ICYMI_READ_STATES: function handleClearReadStates() {
     closure_3.readIdToTimestampMap = {};
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/icymi/ICYMIUnreadStateStore.tsx");
 

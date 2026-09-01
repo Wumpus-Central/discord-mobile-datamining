@@ -30,7 +30,7 @@ function PlaceholderCommandRow(isFirstRow) {
   const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
   obj = { label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null };
   obj = { style: null };
-  const items = [tmp.loadingTextPlaceholder, ];
+  const items = [tmp.loadingTextPlaceholder];
   obj1 = { width: "" + placeholderWidth + "%" };
   items[1] = obj1;
   obj[0] = items;
@@ -64,13 +64,18 @@ class CommandRow {
       command,
       context,
       beforeExecuteCommand() {
-            let obj = callback(closure_1_3[15]);
-            obj = { command: callback, location: closure_4, triggerSection: callback(closure_1_3[15]).getCommandTriggerSection(closure_3), sectionName };
-            return obj.trackCommandSelected(obj);
-          },
+        let obj = callback(closure_1_3[15]);
+        obj = {
+          command: callback,
+          location: closure_4,
+          triggerSection: callback(closure_1_3[15]).getCommandTriggerSection(closure_3),
+          sectionName,
+        };
+        return obj.trackCommandSelected(obj);
+      },
       onExecuteCommand,
       tryExecuteCommand: null,
-      sectionName: null
+      sectionName: null,
     };
     fn = undefined;
     if (installOnDemand) {
@@ -79,7 +84,7 @@ class CommandRow {
         closure_0 = arg0;
         c2 = 0;
         c3 = 0;
-        return (function*(arg0, isAuthorized) {
+        return (function* (arg0, isAuthorized) {
           if (c3 === 2) {
             c3 = 3;
             HermesBuiltin.throwTypeError();
@@ -108,7 +113,12 @@ class CommandRow {
                 } else {
                   closure_1 = tmp2;
                   let channel;
-                  obj1 = { applicationId: null, channel: null, commandIntegrationTypes: null, appLauncherContext: null };
+                  obj1 = {
+                    applicationId: null,
+                    channel: null,
+                    commandIntegrationTypes: null,
+                    appLauncherContext: null,
+                  };
                   obj1[0] = lib.applicationId;
                   if ("channel" === c2.type) {
                     channel = c2.channel;
@@ -148,7 +158,7 @@ class CommandRow {
           }
         })();
       });
-      fn = function() {
+      fn = function () {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -193,11 +203,11 @@ class CommandRow {
       subLabelLineClamp: 1,
       icon,
       onPress() {
-            return callback2(closure_0, closure_3, closure_4);
-          },
+        return callback2(closure_0, closure_3, closure_4);
+      },
       accessibilityActions: memo,
       onAccessibilityAction: callback,
-      trailing: jsx(require("CommandRowIcon"), { hasOptions, sending: commandRowSend.sending, onPressSend })
+      trailing: jsx(require("CommandRowIcon"), { hasOptions, sending: commandRowSend.sending, onPressSend }),
     };
     return jsx(require("TableRowInner").TableRow, obj1);
   }
@@ -206,7 +216,20 @@ class CommandRow {
 const DEFAULT_CONTENT_PADDING = APP_LAUNCHER_BUILT_IN_SECTION_ICON.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = APP_LAUNCHER_BUILT_IN_SECTION_ICON.useAppLauncherNavigation;
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-createCacheKey = { headerSpacer: null, list: null, commandsHeaderContainer: null, commandsHeaderTextContainer: null, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
+createCacheKey = {
+  headerSpacer: null,
+  list: null,
+  commandsHeaderContainer: null,
+  commandsHeaderTextContainer: null,
+  viewContainerStyle: null,
+  mainContainerStyle: null,
+  monetizationDisclosureTextStyle: null,
+  monetizationDisclosureContainerStyle: null,
+  monetizationDisclosureStyle: null,
+  loadingTextPlaceholder: null,
+  loadingTextPlaceholderSmall: null,
+  noCommandsTextContainer: null,
+};
 createCacheKey = { height: require("xl").EXPANDED_HEADER_HEIGHT - require("xl").SHEET_HANDLE_CONTAINER_HEIGHT };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: DEFAULT_CONTENT_PADDING };
@@ -214,24 +237,66 @@ createCacheKey[2] = { flexDirection: "row", justifyContent: "space-between", ali
 createCacheKey[3] = { alignItems: "center", flexDirection: "row", gap: 8 };
 createCacheKey[4] = { borderRadius: ThemesDefault.radii.lg };
 let obj1 = { borderRadius: ThemesDefault.radii.lg };
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, paddingHorizontal: 12, paddingVertical: 16 };
-let obj2 = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, paddingHorizontal: 12, paddingVertical: 16 };
+createCacheKey[5] = {
+  backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+  paddingHorizontal: 12,
+  paddingVertical: 16,
+};
+let obj2 = {
+  backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+  paddingHorizontal: 12,
+  paddingVertical: 16,
+};
 createCacheKey[6] = { marginLeft: ThemesDefault.space.PX_4 };
 let obj3 = { marginLeft: ThemesDefault.space.PX_4 };
-createCacheKey[7] = { flexDirection: "row", alignItems: "center", marginBottom: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16 };
+createCacheKey[7] = {
+  flexDirection: "row",
+  alignItems: "center",
+  marginBottom: ThemesDefault.space.PX_24,
+  gap: ThemesDefault.space.PX_16,
+};
 createCacheKey[8] = { flexDirection: "row", alignItems: "center" };
-let obj4 = { flexDirection: "row", alignItems: "center", marginBottom: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16 };
-createCacheKey[9] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
-let obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
-createCacheKey[10] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+let obj4 = {
+  flexDirection: "row",
+  alignItems: "center",
+  marginBottom: ThemesDefault.space.PX_24,
+  gap: ThemesDefault.space.PX_16,
+};
+createCacheKey[9] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  height: 16,
+  marginBottom: 4,
+  borderRadius: ThemesDefault.radii.lg,
+  alignSelf: "flex-start",
+};
+let obj5 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  height: 16,
+  marginBottom: 4,
+  borderRadius: ThemesDefault.radii.lg,
+  alignSelf: "flex-start",
+};
+createCacheKey[10] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  height: 16,
+  borderRadius: ThemesDefault.radii.lg,
+  alignSelf: "flex-start",
+};
 createCacheKey[11] = { alignItems: "center" };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
 let obj7 = { PLACEHOLDER: 0, [0]: "PLACEHOLDER", COMMAND: 1, [1]: "COMMAND" };
 const array = new Array(6);
 let closure_18 = array.fill({ type: obj7.PLACEHOLDER });
-let obj6 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+let obj6 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  height: 16,
+  borderRadius: ThemesDefault.radii.lg,
+  alignSelf: "flex-start",
+};
 let obj8 = { type: obj7.PLACEHOLDER };
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/AppDetailContent.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/screens/application_view/app/AppDetailContent.tsx",
+);
 
 export default function AppDetailContent(context) {
   context = context.context;
@@ -267,13 +332,23 @@ export default function AppDetailContent(context) {
   let items = [context(sectionName[20]).ApplicationCommandType.CHAT];
   obj[0] = items;
   obj[1] = obj;
-  obj1 = { placeholderCount: 0, limit: loading, includeFrecency: true, allowApplicationState: installOnDemand, installOnDemand, applicationId: application.id };
+  obj1 = {
+    placeholderCount: 0,
+    limit: loading,
+    includeFrecency: true,
+    allowApplicationState: installOnDemand,
+    installOnDemand,
+    applicationId: application.id,
+  };
   obj[2] = obj1;
   const discovery = obj1.useDiscovery(obj);
   filterSection = discovery.filterSection;
   sectionDescriptors = discovery.sectionDescriptors;
   loading = discovery.loading;
-  const tmp7 = application(sectionName[21])({ sectionId: application.id, commandsByActiveSection: discovery.commandsByActiveSection });
+  const tmp7 = application(sectionName[21])({
+    sectionId: application.id,
+    commandsByActiveSection: discovery.commandsByActiveSection,
+  });
   ({ setSortOrder: c13, commands } = tmp7);
   let canSort = tmp7.canSort;
   let result = chatInputRef(true, true).result;
@@ -314,10 +389,23 @@ export default function AppDetailContent(context) {
   callback = onCommandExecuted.useCallback((command, section) => {
     let APP_LAUNCHER_APPLICATION_VIEW = arg2;
     if (arg2 === undefined) {
-      APP_LAUNCHER_APPLICATION_VIEW = context(sectionName[23]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
+      APP_LAUNCHER_APPLICATION_VIEW = context(sectionName[23]).ApplicationCommandTriggerLocations
+        .APP_LAUNCHER_APPLICATION_VIEW;
     }
     let obj = context(sectionName[24]);
-    obj = { location: APP_LAUNCHER_APPLICATION_VIEW, context, command, section, sectionDescriptors, query: "", navigation: closure_15, installOnDemand, sectionName, entrypoint, onCommandExecuted };
+    obj = {
+      location: APP_LAUNCHER_APPLICATION_VIEW,
+      context,
+      command,
+      section,
+      sectionDescriptors,
+      query: "",
+      navigation: closure_15,
+      installOnDemand,
+      sectionName,
+      entrypoint,
+      onCommandExecuted,
+    };
     const result = obj.handleApplicationCommandSelected(obj);
   }, items3);
   const items4 = [chatInputRef, keyboardCloseReasonRef, onCommandExecuted];
@@ -335,8 +423,12 @@ export default function AppDetailContent(context) {
   const items5 = [callback, commands.length, context, callback1, found, installOnDemand, sectionName];
   const sum = application(sectionName[18])().bottom + keyboardCloseReasonRef;
   c19 = sum;
-  const items6 = [application, , , ];
-  ({ monetizationDisclosureContainerStyle: arr8[1], monetizationDisclosureStyle: arr8[2], monetizationDisclosureTextStyle: arr8[3] } = tmp);
+  const items6 = [application, , ,];
+  ({
+    monetizationDisclosureContainerStyle: arr8[1],
+    monetizationDisclosureStyle: arr8[2],
+    monetizationDisclosureTextStyle: arr8[3],
+  } = tmp);
   callback2 = onCommandExecuted.useCallback((arg0) => {
     ({ item, index } = arg0);
     const type = item.type;
@@ -346,7 +438,18 @@ export default function AppDetailContent(context) {
       obj[1] = index === found.length - 1;
       return _undefined(c19, obj);
     } else if (tmp.COMMAND === type) {
-      obj = { command: null, onPressCommand: null, isFirstRow: null, isLastRow: null, context: null, onExecuteCommand: null, section: null, location: null, installOnDemand: null, sectionName: null };
+      obj = {
+        command: null,
+        onPressCommand: null,
+        isFirstRow: null,
+        isLastRow: null,
+        context: null,
+        onExecuteCommand: null,
+        section: null,
+        location: null,
+        installOnDemand: null,
+        sectionName: null,
+      };
       obj[0] = item.command;
       obj[1] = callback;
       obj[2] = 0 === index;
@@ -375,7 +478,7 @@ export default function AppDetailContent(context) {
     if (result) {
       obj = { style: null, children: null };
       obj[0] = closure_7.monetizationDisclosureStyle;
-      const items = [_undefined(tmp(tmp2[26]).BillIcon, { size: "sm", color: "icon-muted" }), ];
+      const items = [_undefined(tmp(tmp2[26]).BillIcon, { size: "sm", color: "icon-muted" })];
       obj = { style: null, variant: "text-xs/normal", color: "text-subtle", lineClamp: 1, children: null };
       obj[0] = closure_7.monetizationDisclosureTextStyle;
       const intl = tmp(tmp2[17]).intl;
@@ -388,7 +491,7 @@ export default function AppDetailContent(context) {
     if (isAndroidResult) {
       obj1 = { style: null, children: null };
       obj1[0] = closure_7.monetizationDisclosureStyle;
-      const items1 = [_undefined(tmp(tmp2[28]).ShopIcon, { size: "sm", color: "icon-muted" }), ];
+      const items1 = [_undefined(tmp(tmp2[28]).ShopIcon, { size: "sm", color: "icon-muted" })];
       const obj2 = { style: null, variant: "text-xs/normal", color: "text-subtle", lineClamp: 1, children: null };
       obj2[0] = closure_7.monetizationDisclosureTextStyle;
       const intl2 = tmp(tmp2[17]).intl;
@@ -419,13 +522,20 @@ export default function AppDetailContent(context) {
   const memo3 = onCommandExecuted.useMemo(() => ({ bottom: c19 }), items8);
   tmp4Result = tmp4(tmp3[29]);
   const appLauncherFlashListProps = tmp4Result.useAppLauncherFlashListProps();
-  const items9 = [callback2(onAauth2Cancel, { style: tmp.headerSpacer }), , , , , , ];
+  const items9 = [callback2(onAauth2Cancel, { style: tmp.headerSpacer }), , , , , ,];
   let obj2 = { sectionId: application.id, commandsByActiveSection: discovery.commandsByActiveSection };
   let obj3 = { style: tmp.headerSpacer };
   const tmp2Result = application(sectionName[29]);
   tmp9 = null == tmp8;
   if (tmp4Result1.isEmbeddedApp(application)) {
-    const obj4 = { application: null, context: null, sectionName: null, onActivityItemSelected: null, entrypoint: null, hasCommands: null };
+    const obj4 = {
+      application: null,
+      context: null,
+      sectionName: null,
+      onActivityItemSelected: null,
+      entrypoint: null,
+      hasCommands: null,
+    };
     obj4[0] = application;
     obj4[1] = context;
     obj4[2] = sectionName;
@@ -451,7 +561,15 @@ export default function AppDetailContent(context) {
     tmp26Result = "channel" === context.type;
   }
   if (tmp26Result) {
-    const obj6 = { context: null, allCommands: null, onPressCommand: null, section: null, onExecuteCommand: null, installOnDemand: null, sectionName: null };
+    const obj6 = {
+      context: null,
+      allCommands: null,
+      onPressCommand: null,
+      section: null,
+      onExecuteCommand: null,
+      installOnDemand: null,
+      sectionName: null,
+    };
     obj6[0] = context;
     obj6[1] = commands;
     obj6[2] = callback;
@@ -489,7 +607,7 @@ export default function AppDetailContent(context) {
       let intl2 = tmp4(tmp3[17]).intl;
       obj11[2] = intl2.string(tmp4(tmp3[17]).t.GOXqks);
       obj10[1] = tmp26(tmp4(tmp3[27]).Heading, obj11);
-      const items10 = [tmp26(tmp28, obj10), ];
+      const items10 = [tmp26(tmp28, obj10)];
       if (canSort) {
         const obj12 = { sortOrder: null, onSortOptionPress: null };
         obj12[0] = tmp7.sortOrder;
@@ -511,7 +629,25 @@ export default function AppDetailContent(context) {
   }
   const obj14 = { children: null };
   const items11 = [
-    callback2(tmp2Result, { ListHeaderComponent: commands(closure_15, { children: items9 }), contentContainerStyle: memo2, scrollIndicatorInsets: memo3, renderItem: callback2, data: memo, preserveScrollMomentum: true, lockableScrollableContentOffsetY, automaticallyAdjustsScrollIndicatorInsets: false, keyboardDismissMode: "none", animatedOnScroll: appLauncherFlashListProps.onScroll, ref: appLauncherFlashListProps.scrollerRef, simultaneousHandlers: appLauncherFlashListProps.gestureRef, animatedProps: appLauncherFlashListProps.animatedProps }, str3),
+    callback2(
+      tmp2Result,
+      {
+        ListHeaderComponent: commands(closure_15, { children: items9 }),
+        contentContainerStyle: memo2,
+        scrollIndicatorInsets: memo3,
+        renderItem: callback2,
+        data: memo,
+        preserveScrollMomentum: true,
+        lockableScrollableContentOffsetY,
+        automaticallyAdjustsScrollIndicatorInsets: false,
+        keyboardDismissMode: "none",
+        animatedOnScroll: appLauncherFlashListProps.onScroll,
+        ref: appLauncherFlashListProps.scrollerRef,
+        simultaneousHandlers: appLauncherFlashListProps.gestureRef,
+        animatedProps: appLauncherFlashListProps.animatedProps,
+      },
+      str3,
+    ),
     callback2(application(sectionName[9]), {
       application,
       onPressBack,
@@ -527,7 +663,12 @@ export default function AppDetailContent(context) {
         if (current != null) {
           current.closeCustomKeyboard();
         }
-        obj = { location: tmp3(tmp[23]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU, application_id: application.id, section_name: sectionName, source: entrypoint };
+        obj = {
+          location: tmp3(tmp[23]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
+          application_id: application.id,
+          section_name: sectionName,
+          source: entrypoint,
+        };
         if (null == installAppProps.customInstallUrl) {
           let tmp3Result = tmp3(tmp[36]);
           tmp3Result.trackWithMetadata(sectionDescriptors.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, obj);
@@ -547,11 +688,11 @@ export default function AppDetailContent(context) {
           }
         };
         tmp3Result.installApplication(obj);
-      }
-    })
+      },
+    }),
   ];
   obj14[0] = items11;
   return commands(closure_15, obj14);
-};
+}
 export const BETWEEN_SECTIONS_MARGIN = 24;
 export { CommandRow };

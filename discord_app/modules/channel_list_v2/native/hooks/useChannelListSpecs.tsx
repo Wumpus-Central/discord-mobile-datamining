@@ -22,6 +22,15 @@ export default function useChannelListSpecs(banner) {
       const _Math = Math;
       num = Math.min(dependencyMap / closure_4, height * top);
     }
-    return { bannerHeight: height(10730)(num), bannerWidth: height(10730)(dependencyMap), headerHeight: height(10730)(redesignGuildHeaderHeight), fontScale, listTop: height(10730)(num + redesignGuildHeaderHeight), listBottom: 0, listPaddingBottom: height(10730)(24), listViewportHeight: height(10730)(height - top) };
+    return {
+      bannerHeight: height(10730)(num),
+      bannerWidth: height(10730)(dependencyMap),
+      headerHeight: height(10730)(redesignGuildHeaderHeight),
+      fontScale,
+      listTop: height(10730)(num + redesignGuildHeaderHeight),
+      listBottom: 0,
+      listPaddingBottom: height(10730)(24),
+      listViewportHeight: height(10730)(height - top),
+    };
   }, items);
-};
+}

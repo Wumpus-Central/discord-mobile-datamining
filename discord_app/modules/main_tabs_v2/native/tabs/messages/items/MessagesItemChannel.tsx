@@ -30,7 +30,12 @@ let closure_7 = importAllResult.memo(function MessagesItemChannel(arg0) {
     obj[1] = placeholderHeight;
     obj[2] = isPressed;
     obj[3] = setIsPressed;
-    let tmp5 = jsx(MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDINGDefault, { channel: null, height: null, isPressed: null, setIsPressed: null });
+    let tmp5 = jsx(MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDINGDefault, {
+      channel: null,
+      height: null,
+      isPressed: null,
+      setIsPressed: null,
+    });
   } else {
     obj = { height: null, row: null };
     obj[0] = placeholderHeight;
@@ -69,7 +74,9 @@ const memoResult2 = importAllResult.memo((arg0) => {
   obj.setIsPressed = tmp3;
   return <closure_7 />;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx",
+);
 
 export const getMessagesItemChannelSizes = function getMessagesItemChannelSizes(fontScale) {
   let obj = map;

@@ -11,7 +11,15 @@ require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, icon: null, text: null };
-createCacheKey = { padding: 10, marginVertical: 5, borderRadius: ThemesDefault.radii.xs, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: require("result").DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+createCacheKey = {
+  padding: 10,
+  marginVertical: 5,
+  borderRadius: ThemesDefault.radii.xs,
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: require("result").DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginRight: 10 };
 createCacheKey[2] = { flexShrink: 1 };
@@ -22,9 +30,9 @@ export default function PaymentFlowWarningMessage(children) {
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.icon, color: ThemesDefault.unsafe_rawColors.YELLOW_300, width: 16, height: 16 };
-  const items = [callback(Button.WarningCircle, obj), ];
+  const items = [callback(Button.WarningCircle, obj)];
   obj = { variant: "text-sm/medium", style: tmp.text, children: children.message };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
-};
+}

@@ -25,4 +25,4 @@ export default function getBoostRowMessageText(phase) {
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxyDefault.hSXjlI);
   }
-};
+}

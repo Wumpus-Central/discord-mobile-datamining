@@ -7,12 +7,17 @@ import { ReferencedMessageState } from "../../../../replies/ReferencedMessageSto
 import { MessageTypes } from "../../../../../Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ThreadStarterSystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/ThreadStarterSystemMessage.tsx",
+);
 
 export const createThreadStarterSystemMessage = function createThreadStarterSystemMessage(message) {
   message = message.message;
   const type = message.type;
-  _modDef38(type === MessageTypes.THREAD_STARTER_MESSAGE, "cannot call createThreadStarterSystemMessage on a message of type " + type);
+  _modDef38(
+    type === MessageTypes.THREAD_STARTER_MESSAGE,
+    "cannot call createThreadStarterSystemMessage on a message of type " + type,
+  );
   let tmp5 = null;
   if (messageByReference.getMessageByReference(message.messageReference).state !== ReferencedMessageState.LOADED) {
     const obj = { content: null };

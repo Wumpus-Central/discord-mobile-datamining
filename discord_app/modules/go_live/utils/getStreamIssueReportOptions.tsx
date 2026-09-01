@@ -20,7 +20,7 @@ export default function getStreamIssueReportOptions(isEndStream) {
     tmp6 = tmp2;
   }
   obj[2] = stringResult;
-  const items = [obj, , , , , , , , ];
+  const items = [obj, , , , , , , ,];
   obj = { id: "blurry", value: tmp.BLURRY, label: null };
   const intl2 = tmp6(1236).intl;
   const string2 = intl2.string;
@@ -89,4 +89,4 @@ export default function getStreamIssueReportOptions(isEndStream) {
   obj6[2] = intl9.string(tmp6(1236).t.emlT91);
   items[8] = obj6;
   return items;
-};
+}

@@ -66,8 +66,7 @@ let c9 = 0;
 let closure_10 = {};
 let closure_11 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class GuildAutomodMessageStore extends PersistedStore {
-}
+class GuildAutomodMessageStore extends PersistedStore {}
 const prototype = GuildAutomodMessageStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   this.waitFor(closure_3, closure_4);
@@ -76,7 +75,11 @@ prototype["initialize"] = function initialize(arg0) {
   }
 };
 prototype["getState"] = function getState() {
-  return { automodFailedMessages: closure_8, mentionRaidDetectionByGuild: closure_10, lastIncidentAlertMessage: closure_11 };
+  return {
+    automodFailedMessages: closure_8,
+    mentionRaidDetectionByGuild: closure_10,
+    lastIncidentAlertMessage: closure_11,
+  };
 };
 prototype["getMessage"] = function getMessage(arg0) {
   let tmp = null;
@@ -176,13 +179,17 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(dispatcherDefault,
   },
   AUTO_MODERATION_MENTION_RAID_DETECTION: function handleMentionRaidDetection(decisionId) {
     const guildId = decisionId.guildId;
-    closure_10[guildId] = { guildId, decisionId: decisionId.decisionId, suspiciousMentionActivityUntil: decisionId.suspiciousMentionActivityUntil };
+    closure_10[guildId] = {
+      guildId,
+      decisionId: decisionId.decisionId,
+      suspiciousMentionActivityUntil: decisionId.suspiciousMentionActivityUntil,
+    };
     return true;
   },
   AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS: function handleMentionRaidNoticeDismiss(arg0) {
     delete tmp[tmp2];
     return true;
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/guild_automod/GuildAutomodMessageStore.tsx");
 

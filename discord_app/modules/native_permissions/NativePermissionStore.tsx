@@ -15,8 +15,8 @@ class NativePermissionStore extends DeviceSettingsStore {
     closure_0 = undefined;
     obj = {
       SET_NATIVE_PERMISSION(arg0) {
-            return obj.handleSetNativePermission(arg0);
-          }
+        return obj.handleSetNativePermission(arg0);
+      },
     };
     tmp2 = new tmp2(require("dispatcher"), obj, new.target, tmp2, tmp, new.target);
     // ThrowIfThisInitialized (0x7c)

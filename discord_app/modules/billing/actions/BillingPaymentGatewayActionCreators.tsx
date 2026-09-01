@@ -15,7 +15,7 @@ function _getClientSecret() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const HTTP = callback(closure_1_3[4]).HTTP;
       obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
       obj1[0] = closure_1_5.BILLING_STRIPE_PAYMENT_INTENTS(callback);
@@ -51,7 +51,7 @@ function _createCardToken() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -149,7 +149,7 @@ function _confirmEPS() {
     closure_3 = arg3;
     c6 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       name = 0;
       c4 = tmp2;
       if (null == lib) {
@@ -221,7 +221,7 @@ function _confirmPrzelewy() {
     closure_3 = arg3;
     c6 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       c5 = 0;
       let email = tmp2;
       if (null == lib) {
@@ -313,7 +313,7 @@ function _submitElementsForPaymentElement() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       c2 = 0;
       closure_1 = tmp2;
       const obj2 = closure_0;
@@ -355,7 +355,7 @@ function _createStripePaymentMethodWithElements() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_3 = tmp5;
       error = tmp2;
       obj1 = { elements: null };
@@ -397,7 +397,7 @@ function _submitElementsAndCreateStripePaymentMethod() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       c3 = 0;
       closure_2 = tmp2;
       if (null == closure_0) {
@@ -429,7 +429,7 @@ function _createExpressCheckoutPaymentMethod() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       c1 = tmp2;
       ({ stripePaymentMethodId: c0, billingAddress: c1, analyticsLocation: c2 } = callback);
       yield "PX_16";
@@ -460,7 +460,7 @@ function _confirmPaymentElementSource() {
     c12 = 0;
     c13 = 0;
     c11 = 0;
-    let iter = (function*(arg0, paymentMethod) {
+    let iter = (function* (arg0, paymentMethod) {
       if (v0 === 2) {
         v0 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -543,7 +543,12 @@ function _confirmPaymentElementSource() {
                     }
                   }
                   closure_11 = 2;
-                  ({ billingAddress: closure_2, paymentSourceType: closure_3, lastConfirmedSetupIntentRef: closure_4, createSetupIntent: closure_5 } = ref);
+                  ({
+                    billingAddress: closure_2,
+                    paymentSourceType: closure_3,
+                    lastConfirmedSetupIntentRef: closure_4,
+                    createSetupIntent: closure_5,
+                  } = ref);
                   closure_11 = 0;
                   ref = undefined;
                   let tmp99 = dependencyMap;
@@ -577,7 +582,7 @@ function _confirmPaymentElementSource() {
                   v0 = 1;
                   return { value: "PX_16", done: null };
                 }
-              break;
+                break;
               case 1:
                 closure_11 = 0;
                 callback = closure_10;
@@ -588,7 +593,7 @@ function _confirmPaymentElementSource() {
               case 2:
                 closure_11 = 0;
                 callback = closure_10;
-              break;
+                break;
               case 3:
                 if (arg0 === 1) {
                   v0 = 3;
@@ -620,7 +625,7 @@ function _confirmPaymentElementSource() {
                     }
                   }
                 }
-              break;
+                break;
               case 4:
                 if (arg0 === 1) {
                   v0 = 3;
@@ -660,23 +665,25 @@ function _confirmPaymentElementSource() {
                           const obj5 = { setupIntent: null, error: "Array" };
                           obj5[0] = c7;
                           closure_10 = obj5;
-                          if ((function shouldRecreateSetupIntentForPaymentElement(error) {
-                            let tmp = null != error;
-                            if (tmp) {
-                              tmp = "setup_intent_unexpected_state" === error.code;
-                            }
-                            if (tmp) {
-                              tmp = null != error.setup_intent;
-                            }
-                            if (tmp) {
-                              let tmp2 = "succeeded" === error.setup_intent.status;
-                              if (!tmp2) {
-                                tmp2 = "canceled" === error.setup_intent.status;
+                          if (
+                            (function shouldRecreateSetupIntentForPaymentElement(error) {
+                              let tmp = null != error;
+                              if (tmp) {
+                                tmp = "setup_intent_unexpected_state" === error.code;
                               }
-                              tmp = tmp2;
-                            }
-                            return tmp;
-                          })(closure_10.error)) {
+                              if (tmp) {
+                                tmp = null != error.setup_intent;
+                              }
+                              if (tmp) {
+                                let tmp2 = "succeeded" === error.setup_intent.status;
+                                if (!tmp2) {
+                                  tmp2 = "canceled" === error.setup_intent.status;
+                                }
+                                tmp = tmp2;
+                              }
+                              return tmp;
+                            })(closure_10.error)
+                          ) {
                             if (dependencyMap !== closure_10.PAYMENT_REQUEST) {
                               throwTypeErrorResult = obj14;
                               throwTypeErrorResult = callback;
@@ -696,7 +703,12 @@ function _confirmPaymentElementSource() {
                             const intl = callback(throwTypeErrorResult[5]).intl;
                             let obj = callback(throwTypeErrorResult[6]);
                             obj = { tags: { source: "payment_elements" } };
-                            return obj.dispatchConfirmationError(error, true, intl.string(callback(throwTypeErrorResult[5]).t.khEaRI), obj);
+                            return obj.dispatchConfirmationError(
+                              error,
+                              true,
+                              intl.string(callback(throwTypeErrorResult[5]).t.khEaRI),
+                              obj,
+                            );
                           }).setupIntent;
                           throwTypeErrorResult = ref;
                           throwTypeErrorResult = v0;
@@ -753,7 +765,7 @@ function _confirmPaymentElementSource() {
                     }
                   }
                 }
-              break;
+                break;
               case 5:
                 if (arg0 === 1) {
                   v0 = 3;
@@ -764,7 +776,7 @@ function _confirmPaymentElementSource() {
                   obj12[0] = paymentMethod;
                   return obj12;
                 }
-              break;
+                break;
               case 6:
                 if (arg0 === 1) {
                   v0 = 3;
@@ -798,7 +810,7 @@ function _confirmPaymentElementSource() {
                     }
                   }
                 }
-              break;
+                break;
               case 7:
                 if (arg0 === 1) {
                   v0 = 3;
@@ -816,7 +828,7 @@ function _confirmPaymentElementSource() {
                   obj16[0] = callback3(lib2);
                   return obj16;
                 }
-              break;
+                break;
               case 8:
                 if (arg0 === 1) {
                   v0 = 3;
@@ -827,7 +839,7 @@ function _confirmPaymentElementSource() {
                   obj17[0] = paymentMethod;
                   return obj17;
                 }
-              break;
+                break;
               case 9:
                 if (arg0 === 1) {
                   v0 = 3;
@@ -840,7 +852,7 @@ function _confirmPaymentElementSource() {
                 } else {
                   closure_10 = paymentMethod;
                 }
-              break;
+                break;
               case 10:
                 if (arg0 === 1) {
                   v0 = 3;
@@ -860,7 +872,7 @@ function _confirmPaymentElementSource() {
                   obj20[0] = lib.confirmSetup(obj);
                   return obj20;
                 }
-              break;
+                break;
               default:
                 if (arg0 === 1) {
                   v0 = 3;
@@ -912,7 +924,7 @@ function _confirmCardPaymentSource() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    return (function*(arg0, client_secret) {
+    return (function* (arg0, client_secret) {
       if (c9 === 2) {
         c9 = 3;
         HermesBuiltin.throwTypeError();
@@ -1022,7 +1034,9 @@ function _confirmCardPaymentSource() {
             return obj9;
           } else {
             closure_7 = client_secret;
-            setupIntent = callback3(closure_7.setupIntent, closure_7.error, (error) => callback(table[6]).dispatchConfirmationError(error)).setupIntent;
+            setupIntent = callback3(closure_7.setupIntent, closure_7.error, (error) =>
+              callback(table[6]).dispatchConfirmationError(error),
+            ).setupIntent;
             const obj15 = lib(4838);
             const obj10 = { billingAddressToken: null, analyticsLocation: null };
             obj10[0] = closure_5;
@@ -1062,7 +1076,7 @@ function _createStripePaymentSource() {
     closure_3 = arg3;
     c6 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       let name = 0;
       closure_4 = tmp2;
       if (null == lib) {
@@ -1125,7 +1139,7 @@ function _createAdyenPrepaidPaymentSource() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       let obj3 = tmp5;
       let table = tmp2;
       const obj2 = callback(closure_1_3[6]);
@@ -1161,7 +1175,7 @@ function _createAdyenVaultablePaymentSource() {
     c12 = 0;
     c13 = 0;
     c10 = 0;
-    const iter = (function*(arg0, paymentSource) {
+    const iter = (function* (arg0, paymentSource) {
       if (closure_13 === 2) {
         closure_13 = 3;
         HermesBuiltin.throwTypeError();
@@ -1268,7 +1282,8 @@ function _createAdyenVaultablePaymentSource() {
               if (closure_7 == null) {
                 constants = "";
               }
-              closure_8 = aPIBaseURL + closure_5.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(callback2, constants, "success");
+              closure_8 =
+                aPIBaseURL + closure_5.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(callback2, constants, "success");
               c10 = 1;
               closure_7 = {};
               obj6 = callback(paymentMethod[6]);
@@ -1300,7 +1315,10 @@ function _createAdyenVaultablePaymentSource() {
               const obj9 = { type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: null };
               const _HermesInternal = HermesInternal;
               const combined = "Unable to create payment source token: code: " + code + " message: " + message;
-              const billingError = new callback(paymentMethod[13]).BillingError(combined, callback(paymentMethod[13]).BillingError.ErrorCodes.UNKNOWN);
+              const billingError = new callback(paymentMethod[13]).BillingError(
+                combined,
+                callback(paymentMethod[13]).BillingError.ErrorCodes.UNKNOWN,
+              );
               obj9[1] = billingError;
               obj4.dispatch(obj9);
               throw c10;
@@ -1376,7 +1394,7 @@ function _createStripePaymentSourceToken() {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (line1 === 2) {
         line1 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -1452,7 +1470,10 @@ function _createStripePaymentSourceToken() {
                 throwTypeErrorResult = lib2;
                 let tmp84 = null;
                 if (null == lib2) {
-                  const billingError = new lib(email[13]).BillingError("Stripe not loaded", lib(email[13]).BillingError.ErrorCodes.UNKNOWN);
+                  const billingError = new lib(email[13]).BillingError(
+                    "Stripe not loaded",
+                    lib(email[13]).BillingError.ErrorCodes.UNKNOWN,
+                  );
                   throw billingError;
                 } else {
                   throwTypeErrorResult = billingAddress;
@@ -1531,7 +1552,10 @@ function _createStripePaymentSourceToken() {
                           throwTypeErrorResult = country;
                           if (country.PRZELEWY24 === type) {
                             if (tmp84 == lib.bank) {
-                              const billingError1 = new lib(email[13]).BillingError("p24 missing bank information", lib(email[13]).BillingError.ErrorCodes.UNKNOWN_PAYMENT_SOURCE);
+                              const billingError1 = new lib(email[13]).BillingError(
+                                "p24 missing bank information",
+                                lib(email[13]).BillingError.ErrorCodes.UNKNOWN_PAYMENT_SOURCE,
+                              );
                               throw billingError1;
                             } else {
                               obj3.type = "p24";
@@ -1564,7 +1588,10 @@ function _createStripePaymentSourceToken() {
                           }
                         }
                         if (tmp84 == lib.bank) {
-                          const billingError2 = new lib(email[13]).BillingError("EPS missing bank information", lib(email[13]).BillingError.ErrorCodes.UNKNOWN_PAYMENT_SOURCE);
+                          const billingError2 = new lib(email[13]).BillingError(
+                            "EPS missing bank information",
+                            lib(email[13]).BillingError.ErrorCodes.UNKNOWN_PAYMENT_SOURCE,
+                          );
                           throw billingError2;
                         } else {
                           obj3.type = "eps";
@@ -1617,7 +1644,10 @@ function _createStripePaymentSourceToken() {
               }
               const _HermesInternal = HermesInternal;
               const combined = "Unable to create payment source token: code: " + code + " message: " + message;
-              const billingError3 = new lib(email[13]).BillingError(combined, lib(email[13]).BillingError.ErrorCodes.UNKNOWN);
+              const billingError3 = new lib(email[13]).BillingError(
+                combined,
+                lib(email[13]).BillingError.ErrorCodes.UNKNOWN,
+              );
               throw billingError3;
             }
           } catch (tmp98) {
@@ -1643,7 +1673,7 @@ function _paymentIntentSucceeded() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_1 = tmp2;
       closure_1 = yield closure_1_2(c3[11]).getStripe();
       if (null == closure_1) {
@@ -1693,7 +1723,7 @@ function _paymentIntentSucceeded() {
 ({ ADYEN_PAYMENT_SOURCES: closure_8, STRIPE_PAYMENT_SOURCES: c9, PaymentSourceTypes } = sum);
 let closure_11 = new timestampDefault("BillingPaymentGatewayActionCreators.tsx");
 let closure_20 = { hasCreatedPaymentMethod: false };
-const items = [, ];
+const items = [,];
 ({ CARD: arr[0], PAYMENT_REQUEST: arr[1] } = PaymentSourceTypes);
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/billing/actions/BillingPaymentGatewayActionCreators.tsx");

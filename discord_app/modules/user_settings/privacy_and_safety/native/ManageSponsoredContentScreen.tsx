@@ -44,10 +44,16 @@ obj[require("create").AdTopic.REAL_MONEY_GAMING] = messagesProxyDefault.pmIitA;
 const keys = Object.keys(obj);
 let closure_8 = keys.map(Number);
 obj = { content: null };
-obj = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+obj = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_16,
+};
 obj[0] = obj;
 let closure_10 = createCacheKey.createStyles(obj);
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/ManageSponsoredContentScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/privacy_and_safety/native/ManageSponsoredContentScreen.tsx",
+);
 
 export default function ManageSponsoredContentScreen() {
   obj = { style: callback3().content, children: null };
@@ -55,7 +61,7 @@ export default function ManageSponsoredContentScreen() {
   const intl = getSystemLocale.intl;
   obj = { helpdeskArticle: combinedDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };
   obj[1] = intl.format(messagesProxyDefault["z/MfaY"], obj);
-  const items = [callback(TableRowGroupTitle.TableRowGroup, obj), ];
+  const items = [callback(TableRowGroupTitle.TableRowGroup, obj)];
   obj1 = { hasIcons: false, title: null, children: null };
   const intl2 = getSystemLocale.intl;
   obj1[1] = intl2.string(messagesProxyDefault.OkmBx0);
@@ -63,4 +69,4 @@ export default function ManageSponsoredContentScreen() {
   items[1] = callback(TableRowGroupTitle.TableRowGroup, obj1);
   obj[1] = items;
   return callback2(View, obj);
-};
+}

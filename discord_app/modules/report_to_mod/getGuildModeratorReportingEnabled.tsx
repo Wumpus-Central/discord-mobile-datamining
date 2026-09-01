@@ -13,4 +13,4 @@ export default function getGuildModeratorReportingEnabled(moderatorReporting) {
     flag = false;
   }
   return flag;
-};
+}

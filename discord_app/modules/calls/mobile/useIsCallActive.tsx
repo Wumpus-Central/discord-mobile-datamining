@@ -11,15 +11,19 @@ export default function useIsCallActive(arg0, arg1) {
   dependencyMap = arg1;
   const items = [closure_2, closure_3];
   const items1 = [arg0, arg1];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let isCallActiveResult = closure_1_2.isCallActive(closure_0, closure_1);
-    if (isCallActiveResult) {
-      const participants = closure_1_3.getParticipants(closure_0);
-      isCallActiveResult = participants.some((type) => type.type === constants.USER && !type.ringing);
-    }
-    return isCallActiveResult;
-  }, items1);
-};
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let isCallActiveResult = closure_1_2.isCallActive(closure_0, closure_1);
+      if (isCallActiveResult) {
+        const participants = closure_1_3.getParticipants(closure_0);
+        isCallActiveResult = participants.some((type) => type.type === constants.USER && !type.ringing);
+      }
+      return isCallActiveResult;
+    },
+    items1,
+  );
+}
 export const checkIsCallActive = function checkIsCallActive(channelId, id) {
   let isCallActiveResult = callActive.isCallActive(channelId, id);
   if (isCallActiveResult) {
@@ -33,16 +37,20 @@ export const useIsCallActiveNullable = function useIsCallActiveNullable(id) {
   dependencyMap = arg1;
   const items = [closure_2, closure_3];
   const items1 = [id, arg1];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let tmp2 = null != closure_0;
-    if (tmp2) {
-      let isCallActiveResult = closure_1_2.isCallActive(tmp, closure_1);
-      if (isCallActiveResult) {
-        const participants = closure_1_3.getParticipants(tmp);
-        isCallActiveResult = participants.some((type) => type.type === constants.USER && !type.ringing);
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let tmp2 = null != closure_0;
+      if (tmp2) {
+        let isCallActiveResult = closure_1_2.isCallActive(tmp, closure_1);
+        if (isCallActiveResult) {
+          const participants = closure_1_3.getParticipants(tmp);
+          isCallActiveResult = participants.some((type) => type.type === constants.USER && !type.ringing);
+        }
+        tmp2 = isCallActiveResult;
       }
-      tmp2 = isCallActiveResult;
-    }
-    return tmp2;
-  }, items1);
+      return tmp2;
+    },
+    items1,
+  );
 };

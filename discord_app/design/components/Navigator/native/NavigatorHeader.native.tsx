@@ -30,9 +30,7 @@ function CloseButton(onPress) {
   let obj = _require(fn[10]);
   closure_1 = obj.useNavigation();
   if (fn == null) {
-    fn = () => {
-
-    };
+    fn = () => {};
   }
   _require(fn[11]).useNavigatorBackPressHandler(() => {
     fn();
@@ -96,18 +94,39 @@ function HeaderTextButton(text) {
 noopAll;
 ({ View: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { fauxHeaderWrapper: null, headerTitle: null, headerBackTitleStyle: null, navigatorHeaderTitleContainer: null, navigatorHeaderContainer: null, navigatorHeaderSubtitle: null, headerButtonIcon: null, submittingIndicator: null };
+createCacheKey = {
+  fauxHeaderWrapper: null,
+  headerTitle: null,
+  headerBackTitleStyle: null,
+  navigatorHeaderTitleContainer: null,
+  navigatorHeaderContainer: null,
+  navigatorHeaderSubtitle: null,
+  headerButtonIcon: null,
+  submittingIndicator: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
 let merged = Object.assign(require("Text").TextStyleSheet["redesign/heading-18/bold"]);
 obj1.color = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 createCacheKey[1] = obj1;
-createCacheKey[2] = { fontFamily: require("ME").Fonts.PRIMARY_MEDIUM, fontSize: 16, letterSpacing: 0, lineHeight: 20, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey[2] = {
+  fontFamily: require("ME").Fonts.PRIMARY_MEDIUM,
+  fontSize: 16,
+  letterSpacing: 0,
+  lineHeight: 20,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+};
 createCacheKey[3] = { flexDirection: "row", justifyContent: "center", alignItems: "center" };
 createCacheKey[4] = { flexDirection: "column", justifyContent: "center", alignItems: "center" };
 createCacheKey[5] = { marginTop: -2 };
-const obj2 = { fontFamily: require("ME").Fonts.PRIMARY_MEDIUM, fontSize: 16, letterSpacing: 0, lineHeight: 20, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+const obj2 = {
+  fontFamily: require("ME").Fonts.PRIMARY_MEDIUM,
+  fontSize: 16,
+  letterSpacing: 0,
+  lineHeight: 20,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+};
 createCacheKey[6] = { width: 24, height: 24, tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 const obj3 = { width: 24, height: 24, tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[7] = { width: 22, height: 22, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -122,9 +141,19 @@ export const NavigatorHeader = function NavigatorHeader(subtitle) {
   const tmp = createCacheKey();
   let obj = { style: tmp.navigatorHeaderContainer, children: null };
   obj = { style: tmp.navigatorHeaderTitleContainer, children: null };
-  const items = [icon, callback(Text.Text, { accessibilityRole: "header", "aria-level": "1", lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: title })];
+  const items = [
+    icon,
+    callback(Text.Text, {
+      accessibilityRole: "header",
+      "aria-level": "1",
+      lineClamp: 1,
+      variant: "redesign/heading-18/bold",
+      color: "mobile-text-heading-primary",
+      children: title,
+    }),
+  ];
   obj[1] = items;
-  const items1 = [callback2(closure_4, obj), , ];
+  const items1 = [callback2(closure_4, obj), ,];
   let tmp6Result = null != subtitle;
   if (tmp6Result) {
     tmp6Result = "" !== subtitle;
@@ -159,7 +188,7 @@ export function getHeaderConditionalBackButton(handleBack) {
     onPress = onPress.onPress;
     function _handlePress() {
       const self = this;
-      const tmp = closure_2_3(function*() {
+      const tmp = closure_2_3(function* () {
         if (c2 === 2) {
           c2 = 3;
           HermesBuiltin.throwTypeError();
@@ -281,7 +310,7 @@ export const FauxHeader = function FauxHeader(arg0) {
   ({ children, style } = arg0);
   const top = useSafeAreaInsetsDefault().top;
   let obj = { style: null, children: null };
-  const items = [createCacheKey().fauxHeaderWrapper, , ];
+  const items = [createCacheKey().fauxHeaderWrapper, ,];
   obj = { paddingTop: top, height: top + NAV_BAR_HEIGHT.NAV_BAR_HEIGHT };
   items[1] = obj;
   items[2] = style;

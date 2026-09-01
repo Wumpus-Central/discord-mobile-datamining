@@ -9,8 +9,7 @@ function handleReset() {
 let map = new Map();
 let closure_3 = [];
 const Store = initializeDefault.Store;
-class SearchRecentMessageStore extends Store {
-}
+class SearchRecentMessageStore extends Store {}
 SearchRecentMessageStore.prototype["getRecentMessageAuthorIds"] = function getRecentMessageAuthorIds(guildId) {
   let value = map.get(guildId);
   if (value == null) {
@@ -61,7 +60,7 @@ const searchRecentMessageStore = new SearchRecentMessageStore(dispatcherDefault,
     }
   },
   SEARCH_RECENT_MESSAGES_CLEAR: handleReset,
-  CONNECTION_OPEN: handleReset
+  CONNECTION_OPEN: handleReset,
 });
 let result = require("set").fileFinishedImporting("modules/search/SearchRecentMessageStore.tsx");
 

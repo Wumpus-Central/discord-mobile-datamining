@@ -7,10 +7,17 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 const require = arg1;
 createCacheKey = { container: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, alignItems: "center", padding: 12 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.lg,
+  alignItems: "center",
+  padding: 12,
+};
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesOption.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/options/choices/AppLauncherChoicesOption.tsx",
+);
 
 export default function AppLauncherChoicesOption(option) {
   option = option.option;
@@ -20,28 +27,31 @@ export default function AppLauncherChoicesOption(option) {
   let first;
   let callback;
   ({ style, autoFocus, hasError } = option);
-  const tmp3 = onOpenChoicesSheet(onDismissChoicesSheet.useState(() => {
-    if (null != type) {
-      if ("text" === type.type) {
-        const choices = option.choices;
-        let found;
-        if (choices != null) {
-          found = choices.find((displayName) => displayName.displayName === text.text);
+  const tmp3 = onOpenChoicesSheet(
+    onDismissChoicesSheet.useState(() => {
+      if (null != type) {
+        if ("text" === type.type) {
+          const choices = option.choices;
+          let found;
+          if (choices != null) {
+            found = choices.find((displayName) => displayName.displayName === text.text);
+          }
+          if (null != found) {
+            const obj = { choice: null, index: null };
+            obj[0] = found;
+            const choices1 = tmp.choices;
+            obj[1] = choices1.indexOf(found);
+            return obj;
+          }
+          tmp = option;
         }
-        if (null != found) {
-          const obj = { choice: null, index: null };
-          obj[0] = found;
-          const choices1 = tmp.choices;
-          obj[1] = choices1.indexOf(found);
-          return obj;
-        }
-        tmp = option;
       }
-    }
-  }), 2);
+    }),
+    2,
+  );
   first = tmp3[0];
   callback = tmp3[1];
-  const items = [onDismissChoicesSheet, onOpenChoicesSheet, onSelect, option, ];
+  const items = [onDismissChoicesSheet, onOpenChoicesSheet, onSelect, option];
   let index;
   if (first != null) {
     index = first.index;
@@ -91,4 +101,4 @@ export default function AppLauncherChoicesOption(option) {
   obj[6] = first(option(onSelect[10]).FormArrow, {});
   obj[7] = callback;
   return first(option(onSelect[10]).FormRow, obj);
-};
+}

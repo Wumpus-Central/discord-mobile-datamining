@@ -9,4 +9,4 @@ export default function openQuestOrbMultiplierPerkInfoActionSheet(multiplier, or
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { multiplier, orbMultiplierEligibility };
   obj.openLazy(asyncRequireImpl(14768, dependencyMap.paths), "QuestOrbMultiplierPerkInfoActionSheet", obj);
-};
+}

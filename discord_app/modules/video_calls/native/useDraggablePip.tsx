@@ -5,28 +5,63 @@ import PIP_GESTURE_ACTIVE_OFFSET from "components/Constants.tsx";
 
 const require = arg1;
 ({ PIP_FOCUS_SCALE: c4, PIP_GESTURE_ACTIVE_OFFSET: c5 } = PIP_GESTURE_ACTIVE_OFFSET);
-let closure_6 = { mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001, damping: 20 };
-let closure_7 = { code: "function useDraggablePipTsx1(){const{withTiming,pipFocus,PIP_FOCUS_SCALE,STANDARD_EASING}=this.__closure;return withTiming(pipFocus?PIP_FOCUS_SCALE:1,{easing:STANDARD_EASING,duration:250});}" };
+let closure_6 = {
+  mass: 1,
+  stiffness: 250,
+  overshootClamping: true,
+  restSpeedThreshold: 0.001,
+  restDisplacementThreshold: 0.001,
+  damping: 20,
+};
+let closure_7 = {
+  code: "function useDraggablePipTsx1(){const{withTiming,pipFocus,PIP_FOCUS_SCALE,STANDARD_EASING}=this.__closure;return withTiming(pipFocus?PIP_FOCUS_SCALE:1,{easing:STANDARD_EASING,duration:250});}",
+};
 let closure_8 = { code: "function useDraggablePipTsx2(){const{width}=this.__closure;return width;}" };
 let closure_9 = { code: "function useDraggablePipTsx3(){const{height}=this.__closure;return height;}" };
-let closure_10 = { code: "function useDraggablePipTsx4(){const{pipScale,width}=this.__closure;return pipScale.get()*width;}" };
-let closure_11 = { code: "function useDraggablePipTsx5(){const{pipScale,height}=this.__closure;return pipScale.get()*height;}" };
-let closure_12 = { code: "function useDraggablePipTsx6(){const{containerWidth}=this.__closure;return containerWidth;}" };
-let closure_13 = { code: "function useDraggablePipTsx7(){const{containerHeight}=this.__closure;return containerHeight;}" };
-let closure_14 = { code: "function useDraggablePipTsx8(){const{containerWidth,scaledWidthDv,xPosition}=this.__closure;return[containerWidth-scaledWidthDv.get(),xPosition.get()];}" };
-let closure_15 = { code: "function useDraggablePipTsx9(result,previous){const{cheapWorkletArrayShallowEqual,clamp,xPosition,xDestination}=this.__closure;if(cheapWorkletArrayShallowEqual(result,previous!==null&&previous!==void 0?previous:undefined))return;const[containerWidthNew,xPositionNew]=result;const[containerWidthOld]=previous!==null&&previous!==void 0?previous:[0,0];if(previous!=null&&containerWidthNew!==containerWidthOld){const newX=clamp(xPositionNew*(containerWidthNew/containerWidthOld),0,containerWidthNew);xPosition.set(newX);xDestination.set(newX);}}" };
-let closure_16 = { code: "function useDraggablePipTsx10(){const{containerHeight,scaledHeightDv,yPosition}=this.__closure;return[containerHeight-scaledHeightDv.get(),yPosition.get()];}" };
-let closure_17 = { code: "function useDraggablePipTsx11(result,previous){const{cheapWorkletArrayShallowEqual,clamp,yPosition,yDestination}=this.__closure;if(cheapWorkletArrayShallowEqual(result,previous!==null&&previous!==void 0?previous:undefined))return;const[containerHeightNew,yPositionNew]=result;const[containerHeightOld]=previous!==null&&previous!==void 0?previous:[0,0];if(previous!=null&&containerHeightNew!==containerHeightOld){const newY=clamp(yPositionNew*(containerHeightNew/containerHeightOld),0,containerHeightNew);yPosition.set(newY);yDestination.set(newY);}}" };
-let closure_18 = { code: "function useDraggablePipTsx12(event){const{xPosition,containerWidthDv,scaledWidthDv,clamp,yPosition,containerHeightDv,scaledHeightDv,snapToCorners,withSpring,spring,xDestination,yDestination}=this.__closure;const toss=0.0875;const xToss=xPosition.get()+toss*event.velocityX;const xMin=0;const xMax=containerWidthDv.get()-scaledWidthDv.get();const targetX=clamp(xToss,xMin,xMax);const yToss=yPosition.get()+toss*event.velocityY;const yMin=0;const yMax=containerHeightDv.get()-scaledHeightDv.get();const targetY=clamp(yToss,yMin,yMax);const top=targetY;const bottom=containerHeightDv.get()-scaledHeightDv.get()-targetY;const left=targetX;const right=containerWidthDv.get()-scaledWidthDv.get()-targetX;const minDistance=Math.min(top,bottom,left,right);let snapX=targetX;let snapY=targetY;switch(minDistance){case top:snapY=yMin;if(snapToCorners){snapX=left<right?xMin:xMax;}break;case bottom:snapY=yMax;if(snapToCorners){snapX=left<right?xMin:xMax;}break;case left:snapX=xMin;if(snapToCorners){snapY=top<bottom?yMin:yMax;}break;case right:snapX=xMax;if(snapToCorners){snapY=top<bottom?yMin:yMax;}break;}xPosition.set(withSpring(snapX,{...spring,velocity:event.velocityX}));xDestination.set(snapX);yPosition.set(withSpring(snapY,{...spring,velocity:event.velocityY}));yDestination.set(snapY);}" };
-let closure_19 = { code: "function useDraggablePipTsx13(event){const{xPosition,xDestination,yPosition,yDestination,trackedVoiceControlsToggleMovedForGestureSv,onMoved,runOnJS}=this.__closure;xPosition.set(xDestination.get()+event.translationX);yPosition.set(yDestination.get()+event.translationY);if(!trackedVoiceControlsToggleMovedForGestureSv.get()){if(onMoved!=null){runOnJS(onMoved)();}trackedVoiceControlsToggleMovedForGestureSv.set(true);}}" };
-let closure_20 = { code: "function useDraggablePipTsx14(){const{onPress,runOnJS}=this.__closure;if(onPress!=null){runOnJS(onPress)();}}" };
-let closure_21 = { code: "function useDraggablePipTsx15(){const{xPosition,scaledWidthDv,widthDv,yPosition,scaledHeightDv,heightDv,pipScale}=this.__closure;return{transform:[{translateX:xPosition.get()+(scaledWidthDv.get()-widthDv.get())/2},{translateY:yPosition.get()+(scaledHeightDv.get()-heightDv.get())/2},{scale:pipScale.get()}]};}" };
+let closure_10 = {
+  code: "function useDraggablePipTsx4(){const{pipScale,width}=this.__closure;return pipScale.get()*width;}",
+};
+let closure_11 = {
+  code: "function useDraggablePipTsx5(){const{pipScale,height}=this.__closure;return pipScale.get()*height;}",
+};
+let closure_12 = {
+  code: "function useDraggablePipTsx6(){const{containerWidth}=this.__closure;return containerWidth;}",
+};
+let closure_13 = {
+  code: "function useDraggablePipTsx7(){const{containerHeight}=this.__closure;return containerHeight;}",
+};
+let closure_14 = {
+  code: "function useDraggablePipTsx8(){const{containerWidth,scaledWidthDv,xPosition}=this.__closure;return[containerWidth-scaledWidthDv.get(),xPosition.get()];}",
+};
+let closure_15 = {
+  code: "function useDraggablePipTsx9(result,previous){const{cheapWorkletArrayShallowEqual,clamp,xPosition,xDestination}=this.__closure;if(cheapWorkletArrayShallowEqual(result,previous!==null&&previous!==void 0?previous:undefined))return;const[containerWidthNew,xPositionNew]=result;const[containerWidthOld]=previous!==null&&previous!==void 0?previous:[0,0];if(previous!=null&&containerWidthNew!==containerWidthOld){const newX=clamp(xPositionNew*(containerWidthNew/containerWidthOld),0,containerWidthNew);xPosition.set(newX);xDestination.set(newX);}}",
+};
+let closure_16 = {
+  code: "function useDraggablePipTsx10(){const{containerHeight,scaledHeightDv,yPosition}=this.__closure;return[containerHeight-scaledHeightDv.get(),yPosition.get()];}",
+};
+let closure_17 = {
+  code: "function useDraggablePipTsx11(result,previous){const{cheapWorkletArrayShallowEqual,clamp,yPosition,yDestination}=this.__closure;if(cheapWorkletArrayShallowEqual(result,previous!==null&&previous!==void 0?previous:undefined))return;const[containerHeightNew,yPositionNew]=result;const[containerHeightOld]=previous!==null&&previous!==void 0?previous:[0,0];if(previous!=null&&containerHeightNew!==containerHeightOld){const newY=clamp(yPositionNew*(containerHeightNew/containerHeightOld),0,containerHeightNew);yPosition.set(newY);yDestination.set(newY);}}",
+};
+let closure_18 = {
+  code: "function useDraggablePipTsx12(event){const{xPosition,containerWidthDv,scaledWidthDv,clamp,yPosition,containerHeightDv,scaledHeightDv,snapToCorners,withSpring,spring,xDestination,yDestination}=this.__closure;const toss=0.0875;const xToss=xPosition.get()+toss*event.velocityX;const xMin=0;const xMax=containerWidthDv.get()-scaledWidthDv.get();const targetX=clamp(xToss,xMin,xMax);const yToss=yPosition.get()+toss*event.velocityY;const yMin=0;const yMax=containerHeightDv.get()-scaledHeightDv.get();const targetY=clamp(yToss,yMin,yMax);const top=targetY;const bottom=containerHeightDv.get()-scaledHeightDv.get()-targetY;const left=targetX;const right=containerWidthDv.get()-scaledWidthDv.get()-targetX;const minDistance=Math.min(top,bottom,left,right);let snapX=targetX;let snapY=targetY;switch(minDistance){case top:snapY=yMin;if(snapToCorners){snapX=left<right?xMin:xMax;}break;case bottom:snapY=yMax;if(snapToCorners){snapX=left<right?xMin:xMax;}break;case left:snapX=xMin;if(snapToCorners){snapY=top<bottom?yMin:yMax;}break;case right:snapX=xMax;if(snapToCorners){snapY=top<bottom?yMin:yMax;}break;}xPosition.set(withSpring(snapX,{...spring,velocity:event.velocityX}));xDestination.set(snapX);yPosition.set(withSpring(snapY,{...spring,velocity:event.velocityY}));yDestination.set(snapY);}",
+};
+let closure_19 = {
+  code: "function useDraggablePipTsx13(event){const{xPosition,xDestination,yPosition,yDestination,trackedVoiceControlsToggleMovedForGestureSv,onMoved,runOnJS}=this.__closure;xPosition.set(xDestination.get()+event.translationX);yPosition.set(yDestination.get()+event.translationY);if(!trackedVoiceControlsToggleMovedForGestureSv.get()){if(onMoved!=null){runOnJS(onMoved)();}trackedVoiceControlsToggleMovedForGestureSv.set(true);}}",
+};
+let closure_20 = {
+  code: "function useDraggablePipTsx14(){const{onPress,runOnJS}=this.__closure;if(onPress!=null){runOnJS(onPress)();}}",
+};
+let closure_21 = {
+  code: "function useDraggablePipTsx15(){const{xPosition,scaledWidthDv,widthDv,yPosition,scaledHeightDv,heightDv,pipScale}=this.__closure;return{transform:[{translateX:xPosition.get()+(scaledWidthDv.get()-widthDv.get())/2},{translateY:yPosition.get()+(scaledHeightDv.get()-heightDv.get())/2},{scale:pipScale.get()}]};}",
+};
 function clamp(arg0, arg1, arg2) {
   return Math.min(Math.max(arg0, arg1), arg2);
 }
 clamp.__closure = {};
 clamp.__workletHash = 1988116204206;
-clamp.__initData = { code: "function clamp_useDraggablePipTsx16(value,min,max){return Math.min(Math.max(value,min),max);}" };
+clamp.__initData = {
+  code: "function clamp_useDraggablePipTsx16(value,min,max){return Math.min(Math.max(value,min),max);}",
+};
 let result = require("set").fileFinishedImporting("modules/video_calls/native/useDraggablePip.tsx");
 
 export const useDraggablePip = function useDraggablePip(width) {
@@ -66,7 +101,12 @@ export const useDraggablePip = function useDraggablePip(width) {
       return obj.withTiming(num, obj);
     }
   }
-  obj = { withTiming: width(height[4]).withTiming, pipFocus: tmp, PIP_FOCUS_SCALE: onPress, STANDARD_EASING: width(height[5]).STANDARD_EASING };
+  obj = {
+    withTiming: width(height[4]).withTiming,
+    pipFocus: tmp,
+    PIP_FOCUS_SCALE: onPress,
+    STANDARD_EASING: width(height[5]).STANDARD_EASING,
+  };
   X.__closure = obj;
   X.__workletHash = 7848271415351;
   X.__initData = closure_7;
@@ -143,7 +183,7 @@ export const useDraggablePip = function useDraggablePip(width) {
   const obj15 = width(height[3]);
   class J {
     constructor() {
-      items = [, ];
+      items = [,];
       items[0] = containerWidth - closure_11.get();
       items[1] = closure_16.get();
       return items;
@@ -177,7 +217,12 @@ export const useDraggablePip = function useDraggablePip(width) {
       const tmp2 = containerWidth;
     }
   };
-  obj = { cheapWorkletArrayShallowEqual: width(height[6]).cheapWorkletArrayShallowEqual, clamp, xPosition: sharedValue1, xDestination: sharedValue };
+  obj = {
+    cheapWorkletArrayShallowEqual: width(height[6]).cheapWorkletArrayShallowEqual,
+    clamp,
+    xPosition: sharedValue1,
+    xDestination: sharedValue,
+  };
   fn.__closure = obj;
   fn.__workletHash = 15748808822770;
   fn.__initData = sharedValue;
@@ -185,7 +230,7 @@ export const useDraggablePip = function useDraggablePip(width) {
   const obj16 = width(height[3]);
   class U {
     constructor() {
-      items = [, ];
+      items = [,];
       items[0] = containerHeight - closure_12.get();
       items[1] = closure_18.get();
       return items;
@@ -233,12 +278,22 @@ export const useDraggablePip = function useDraggablePip(width) {
     }
   }
   const obj18 = width(height[3]);
-  R.__closure = { cheapWorkletArrayShallowEqual: width(height[6]).cheapWorkletArrayShallowEqual, clamp, yPosition: sharedValue3, yDestination: sharedValue2 };
+  R.__closure = {
+    cheapWorkletArrayShallowEqual: width(height[6]).cheapWorkletArrayShallowEqual,
+    clamp,
+    yPosition: sharedValue3,
+    yDestination: sharedValue2,
+  };
   R.__workletHash = 7685377389843;
   R.__initData = sharedValue2;
   const animatedReaction1 = obj18.useAnimatedReaction(U, R);
   const Gesture = width(height[7]).Gesture;
-  obj1 = { cheapWorkletArrayShallowEqual: width(height[6]).cheapWorkletArrayShallowEqual, clamp, yPosition: sharedValue3, yDestination: sharedValue2 };
+  obj1 = {
+    cheapWorkletArrayShallowEqual: width(height[6]).cheapWorkletArrayShallowEqual,
+    clamp,
+    yPosition: sharedValue3,
+    yDestination: sharedValue2,
+  };
   let items = [-onMoved, onMoved];
   const PanResult = Gesture.Pan();
   const items1 = [-onMoved, onMoved];
@@ -254,7 +309,15 @@ export const useDraggablePip = function useDraggablePip(width) {
       const result2 = sharedValue4.set(true);
     }
   }
-  obj2 = { xPosition: sharedValue1, xDestination: sharedValue, yPosition: sharedValue3, yDestination: sharedValue2, trackedVoiceControlsToggleMovedForGestureSv: sharedValue4, onMoved, runOnJS: width(height[3]).runOnJS };
+  obj2 = {
+    xPosition: sharedValue1,
+    xDestination: sharedValue,
+    yPosition: sharedValue3,
+    yDestination: sharedValue2,
+    trackedVoiceControlsToggleMovedForGestureSv: sharedValue4,
+    onMoved,
+    runOnJS: width(height[3]).runOnJS,
+  };
   ae.__closure = obj2;
   ae.__workletHash = 14964390506971;
   ae.__initData = sharedValue4;
@@ -347,7 +410,20 @@ export const useDraggablePip = function useDraggablePip(width) {
     const result2 = obj4.set(width(height[8]).withSpring(num, obj));
     const result3 = sharedValue2.set(num);
   }
-  obj3 = { xPosition: sharedValue1, containerWidthDv: derivedValue5, scaledWidthDv: derivedValue3, clamp, yPosition: sharedValue3, containerHeightDv: derivedValue6, scaledHeightDv: derivedValue4, snapToCorners, withSpring: width(height[8]).withSpring, spring: snapToCorners, xDestination: sharedValue, yDestination: sharedValue2 };
+  obj3 = {
+    xPosition: sharedValue1,
+    containerWidthDv: derivedValue5,
+    scaledWidthDv: derivedValue3,
+    clamp,
+    yPosition: sharedValue3,
+    containerHeightDv: derivedValue6,
+    scaledHeightDv: derivedValue4,
+    snapToCorners,
+    withSpring: width(height[8]).withSpring,
+    spring: snapToCorners,
+    xDestination: sharedValue,
+    yDestination: sharedValue2,
+  };
   se.__closure = obj3;
   se.__workletHash = 690760681755;
   se.__initData = sharedValue3;
@@ -375,7 +451,7 @@ export const useDraggablePip = function useDraggablePip(width) {
     let value = sharedValue1.get();
     value = derivedValue3.get();
     obj[0] = value + (value - derivedValue1.get()) / 2;
-    const items = [obj, , ];
+    const items = [obj, ,];
     obj = { translateY: null };
     const value1 = sharedValue3.get();
     const value2 = derivedValue4.get();
@@ -385,7 +461,15 @@ export const useDraggablePip = function useDraggablePip(width) {
     obj[0] = items;
     return obj;
   }
-  ce.__closure = { xPosition: sharedValue1, scaledWidthDv: derivedValue3, widthDv: derivedValue1, yPosition: sharedValue3, scaledHeightDv: derivedValue4, heightDv: derivedValue2, pipScale: derivedValue };
+  ce.__closure = {
+    xPosition: sharedValue1,
+    scaledWidthDv: derivedValue3,
+    widthDv: derivedValue1,
+    yPosition: sharedValue3,
+    scaledHeightDv: derivedValue4,
+    heightDv: derivedValue2,
+    pipScale: derivedValue,
+  };
   ce.__workletHash = 12534173786665;
   ce.__initData = closure_21;
   obj5[1] = width(height[3]).useAnimatedStyle(ce);

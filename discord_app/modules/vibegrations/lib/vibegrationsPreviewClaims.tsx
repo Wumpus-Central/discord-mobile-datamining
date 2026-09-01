@@ -20,7 +20,7 @@ export const awaitVibegrationsPreviewClaim = function awaitVibegrationsPreviewCl
         set.delete(closure_1_1);
         callback(null);
       }, 5000),
-      projectId: closure_0
+      projectId: closure_0,
     });
   });
 };

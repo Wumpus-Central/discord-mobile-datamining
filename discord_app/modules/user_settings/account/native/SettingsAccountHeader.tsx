@@ -22,7 +22,7 @@ function RestrictedAccountRedirect() {
       obj = { screen: constants.SETTINGS_CONTENT_AND_SOCIAL };
       obj.openUserSettings(obj);
     },
-    noticeType: SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE
+    noticeType: SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
   };
   return callback(SafetySettingsNoticeDefault, obj);
 }
@@ -40,7 +40,10 @@ const memoResult = importAllResult.memo(() => {
   const bannerText = obj1.getBannerText(stateFromStores);
   const tmp = callback2();
   const items1 = [closure_5];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs().size > 0);
+  const stateFromStores1 = initialize.useStateFromStores(
+    items1,
+    () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs().size > 0,
+  );
   const callback = importAllResult.useCallback(() => {
     callback(table[14]).open();
   }, []);
@@ -51,10 +54,18 @@ const memoResult = importAllResult.memo(() => {
     if (stateFromStores1) {
       tmp11 = callback(RestrictedAccountRedirect, {});
     }
-    const items2 = [tmp11, ];
+    const items2 = [tmp11];
     let tmp14 = null;
     if (null != bannerText) {
-      obj = { onPress: null, variant: "danger", label: null, accessibilityLabel: null, trailing: null, start: true, end: true };
+      obj = {
+        onPress: null,
+        variant: "danger",
+        label: null,
+        accessibilityLabel: null,
+        trailing: null,
+        start: true,
+        end: true,
+      };
       obj[0] = callback;
       ({ title: obj5[2], title: obj5[3] } = bannerText);
       obj1 = { text: null, accessibilityLabel: null, onPress: null };

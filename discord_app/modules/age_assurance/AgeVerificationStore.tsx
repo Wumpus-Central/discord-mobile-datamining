@@ -14,8 +14,7 @@ let c8 = false;
 let unchecked = "unchecked";
 let c10 = null;
 const Store = initializeDefault.Store;
-class AgeVerificationStore extends Store {
-}
+class AgeVerificationStore extends Store {}
 const prototype = AgeVerificationStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2);
@@ -24,31 +23,31 @@ Object.defineProperty(prototype, "loading", {
   get: function loading() {
     return c8;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "methods", {
   get: function methods(arg0) {
     return c4;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "methodsV2", {
   get: function methodsV2() {
     return c5;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "methodsV2FooterMessage", {
   get: function methodsV2FooterMessage() {
     return c6;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "methodsV2OutageBannerMessage", {
   get: function methodsV2OutageBannerMessage() {
     return c7;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getReactiveCheckStatus"] = function getReactiveCheckStatus() {
   return unchecked;
@@ -202,7 +201,7 @@ const ageVerificationStore = new AgeVerificationStore(dispatcherDefault, {
     c5 = null;
     c6 = null;
     c7 = null;
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/age_assurance/AgeVerificationStore.tsx");
 

@@ -32,33 +32,41 @@ export const useCanCurrentUserManageAutomod = function useCanCurrentUserManageAu
   const _require = arg0;
   const items = [closure_2, closure_3];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    if (closure_1_2 !== undefined) {
-      if (obj2 !== undefined) {
-        const guild = closure_1_2.getGuild(tmp);
-        let canResult = null != guild;
-        if (canResult) {
-          canResult = obj2.can(closure_1_5.MANAGE_GUILD, guild);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      if (closure_1_2 !== undefined) {
+        if (obj2 !== undefined) {
+          const guild = closure_1_2.getGuild(tmp);
+          let canResult = null != guild;
+          if (canResult) {
+            canResult = obj2.can(closure_1_5.MANAGE_GUILD, guild);
+          }
+          return canResult;
         }
-        return canResult;
       }
-    }
-  }, items1);
+    },
+    items1,
+  );
 };
 export const useIsUserProfileRuleEnabled = function useIsUserProfileRuleEnabled(arg0) {
   const _require = arg0;
   const items = [closure_2];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const guild = closure_1_2.getGuild(closure_0);
-    let flag;
-    if (guild != null) {
-      const features = guild.features;
-      flag = features.has(closure_1_4.COMMUNITY);
-    }
-    if (!flag) {
-      flag = false;
-    }
-    return flag;
-  }, items1);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const guild = closure_1_2.getGuild(closure_0);
+      let flag;
+      if (guild != null) {
+        const features = guild.features;
+        flag = features.has(closure_1_4.COMMUNITY);
+      }
+      if (!flag) {
+        flag = false;
+      }
+      return flag;
+    },
+    items1,
+  );
 };

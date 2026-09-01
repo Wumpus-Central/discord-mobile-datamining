@@ -18,7 +18,14 @@ function SearchHistoryRemoveIcon(searchContext) {
   const callback = importAllResult.useCallback(() => {
     const result = searchHistoryItem(closure_1_2[10]).removeSearchHistoryItem(searchContext, searchHistoryItem);
   }, items);
-  return callback2(searchContext(5068).PressableHighlight, { onPress: callback, accessibilityRole: "button", unstable_pressDelay: 130, style: { marginLeft: 16 }, hitSlop: { bottom: 16, left: 16, right: 16, top: 16 }, children: callback2(searchContext(5551).XSmallIcon, { size: "sm", color: "interactive-text-default" }) });
+  return callback2(searchContext(5068).PressableHighlight, {
+    onPress: callback,
+    accessibilityRole: "button",
+    unstable_pressDelay: 130,
+    style: { marginLeft: 16 },
+    hitSlop: { bottom: 16, left: 16, right: 16, top: 16 },
+    children: callback2(searchContext(5551).XSmallIcon, { size: "sm", color: "interactive-text-default" }),
+  });
 }
 function SearchHistoryTextRow(searchContext) {
   searchContext = searchContext.searchContext;
@@ -29,7 +36,7 @@ function SearchHistoryTextRow(searchContext) {
   dependencyMap = tmp;
   let obj = searchContext(16226);
   onPressSearchHistoryText = obj.useOnPressSearchHistoryText({ searchContext });
-  const items = [onPressSearchHistoryText, searchContext, , , ];
+  const items = [onPressSearchHistoryText, searchContext, , ,];
   ({ tags: arr[2], text: arr[3], type: arr[4] } = searchHistoryItem);
   const callback = importAllResult.useCallback(() => {
     let obj = searchHistoryItem(tag[14]);
@@ -43,18 +50,35 @@ function SearchHistoryTextRow(searchContext) {
   if (tags != null) {
     mapped = tags.map((children) => {
       obj = { accessibilityRole: "button", style: tag.tag, children: closure_1_10(searchContext(tag[16]).Text, obj) };
-      obj = { lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: children.text };
+      obj = {
+        lineClamp: 1,
+        variant: "text-sm/semibold",
+        color: "mobile-text-heading-primary",
+        children: children.text,
+      };
       return closure_1_10(closure_1_5, obj, children.text);
     });
   }
   obj = { label: null, onPress: null, trailing: null, iconContainerStyle: null, icon: null };
-  const items1 = [mapped, closure_10(searchContext(4474).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: searchHistoryItem.text })];
+  const items1 = [
+    mapped,
+    closure_10(searchContext(4474).Text, {
+      lineClamp: 1,
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      style: tmp.text,
+      children: searchHistoryItem.text,
+    }),
+  ];
   obj[1] = items1;
   obj[0] = closure_11(View, obj);
   obj[1] = callback;
   obj[2] = closure_10(SearchHistoryRemoveIcon, { searchContext, searchHistoryItem });
   obj[3] = tmp.textIconContainer;
-  obj[4] = closure_10(View, { style: tmp.iconContainer, children: closure_10(searchContext(6235).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }) });
+  obj[4] = closure_10(View, {
+    style: tmp.iconContainer,
+    children: closure_10(searchContext(6235).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }),
+  });
   return closure_10(searchContext(16236).SearchListRow, obj);
 }
 function SearchHistoryGroupDMRow(searchContext) {
@@ -123,7 +147,7 @@ function SearchHistoryDMRow(searchContext) {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -187,7 +211,7 @@ function SearchHistoryDMRow(searchContext) {
     })();
   });
   const items2 = [onPressDMItem, searchContext, searchHistoryItem.type];
-  callback = importAllResult.useCallback(function() {
+  callback = importAllResult.useCallback(function () {
     const self = this;
     const apply = searchContext.apply;
     if (typeof apply === "unknown") {
@@ -312,7 +336,14 @@ function SearchHistoryGuildTextChannelRow(searchContext) {
   }, items4);
   let tmp9Result = null;
   if (null != stateFromStores) {
-    obj = { channel: null, lastMessageId: null, onPress: null, accessibilityActions: null, onAccessibilityAction: null, trailing: null };
+    obj = {
+      channel: null,
+      lastMessageId: null,
+      onPress: null,
+      accessibilityActions: null,
+      onAccessibilityAction: null,
+      trailing: null,
+    };
     obj[0] = stateFromStores;
     obj[1] = stateFromStores1;
     obj[2] = callback;
@@ -326,12 +357,28 @@ function SearchHistoryGuildTextChannelRow(searchContext) {
 let c4 = importAllResult;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let obj = { iconContainer: null, text: null, textContainer: null, textIconContainer: null, tag: null };
-obj = { height: 48, width: 48, borderRadius: ThemesDefault.radii.xl, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, alignItems: "center", justifyContent: "center" };
+obj = {
+  height: 48,
+  width: 48,
+  borderRadius: ThemesDefault.radii.xl,
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  alignItems: "center",
+  justifyContent: "center",
+};
 obj[0] = obj;
 obj[1] = { flexShrink: 1 };
 obj[2] = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 2 };
 obj[3] = { alignSelf: "flex-start" };
-createCacheKey = { paddingHorizontal: 8, paddingVertical: 4, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", margin: 2, flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = {
+  paddingHorizontal: 8,
+  paddingVertical: 4,
+  borderRadius: ThemesDefault.radii.lg,
+  overflow: "hidden",
+  margin: 2,
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 obj[4] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(obj);
 let closure_17 = [];

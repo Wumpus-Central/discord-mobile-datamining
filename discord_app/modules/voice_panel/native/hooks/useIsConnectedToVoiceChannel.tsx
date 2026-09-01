@@ -5,7 +5,9 @@ import closure_4 from "../../../../stores/VoiceStateStore.tsx";
 import { RTCConnectionStates } from "../../../../Constants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx",
+);
 
 export default function useIsConnectedToVoiceChannel(arg0) {
   const _require = arg0;
@@ -31,4 +33,4 @@ export default function useIsConnectedToVoiceChannel(arg0) {
     }
     obj = closure_1_3;
   });
-};
+}

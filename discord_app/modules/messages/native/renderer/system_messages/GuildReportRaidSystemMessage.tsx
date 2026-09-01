@@ -9,7 +9,9 @@ import closure_3 from "../../../../../stores/ChannelStore.tsx";
 import closure_4 from "../../../../../stores/GuildStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildReportRaidSystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/GuildReportRaidSystemMessage.tsx",
+);
 
 export const createGuildReportRaidSystemMessage = function createGuildReportRaidSystemMessage(roleStyle) {
   ({ message, theme } = roleStyle);
@@ -23,7 +25,11 @@ export const createGuildReportRaidSystemMessage = function createGuildReportRaid
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   const tmp3 = resultDefault(theme);
   let automodUsernameColor = nativeStyleProperties.resolveAlertModeColors(theme).automodUsernameColor;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp(7871)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), guildName: null };
+  obj = {
+    username: messageAuthorWithProcessedColor.nick,
+    usernameOnClick: tmp(7871)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }),
+    guildName: null,
+  };
   let str;
   if (guild != null) {
     str = guild.name;

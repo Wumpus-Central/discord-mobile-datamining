@@ -11,4 +11,4 @@ export default function hasPerformanceForKrispFullband() {
     tmp2 = tmp >= 31;
   }
   return tmp2;
-};
+}

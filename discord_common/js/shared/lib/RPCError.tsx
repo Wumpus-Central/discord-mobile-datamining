@@ -13,8 +13,7 @@ const prototype = function RPCError(arg0, message) {
   tmp.name = "RPCError";
   return tmp;
 }.prototype;
-class prototype extends Error {
-}
+class prototype extends Error {}
 const result = set.fileFinishedImporting("../discord_common/js/shared/lib/RPCError.tsx");
 
 export const RPCError = prototype;

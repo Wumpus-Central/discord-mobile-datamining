@@ -23,7 +23,17 @@ export const bountyCtaFromServer = function bountyCtaFromServer(url) {
   return obj;
 };
 export const bountyFromServer = function bountyFromServer(creative_content) {
-  let obj = { id: creative_content.id, advertiserName: creative_content.advertiser_name, productName: creative_content.product_name, productIcon: null, videoPreview: null, imagePreview: null, videoHls: null, cta: null, rewardTimerSeconds: null };
+  let obj = {
+    id: creative_content.id,
+    advertiserName: creative_content.advertiser_name,
+    productName: creative_content.product_name,
+    productIcon: null,
+    videoPreview: null,
+    imagePreview: null,
+    videoHls: null,
+    cta: null,
+    rewardTimerSeconds: null,
+  };
   obj1 = resolveAsset;
   obj[3] = obj1.resolveOptionalAdCreativeCdnUrl(creative_content.product_icon);
   obj[4] = resolveAsset.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);

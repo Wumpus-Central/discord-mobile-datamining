@@ -6,13 +6,22 @@ import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 
 const MessageTypes = ME.MessageTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PrivateChannelIntegrationSystemMessage.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/PrivateChannelIntegrationSystemMessage.tsx",
+);
 
-export const createPrivateChannelIntegrationSystemMessage = function createPrivateChannelIntegrationSystemMessage(roleStyle, type) {
+export const createPrivateChannelIntegrationSystemMessage = function createPrivateChannelIntegrationSystemMessage(
+  roleStyle,
+  type,
+) {
   const message = roleStyle.message;
   let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const tmp5 = formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
+  const tmp5 = formatUsernameOnClickDefault({
+    message,
+    author: messageAuthorWithProcessedColor,
+    roleStyle: roleStyle.roleStyle,
+  });
   const application = message.application;
   let bot;
   if (application != null) {
@@ -30,7 +39,8 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
     obj[1] = messageAuthorWithProcessedColor.nick;
     obj[2] = tmp5;
     obj[3] = tmp7;
-    let privateChannelIntegrationAddedSystemMessageASTContent = tmpResult.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj);
+    let privateChannelIntegrationAddedSystemMessageASTContent =
+      tmpResult.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj);
   } else {
     tmpResult = tmp(7905);
     obj1 = { application: null, username: null, usernameOnClick: null, applicationNameOnClick: null };
@@ -38,7 +48,8 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
     obj1[1] = messageAuthorWithProcessedColor.nick;
     obj1[2] = tmp5;
     obj1[3] = tmp7;
-    privateChannelIntegrationAddedSystemMessageASTContent = tmpResult.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj1);
+    privateChannelIntegrationAddedSystemMessageASTContent =
+      tmpResult.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj1);
   }
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return { content: privateChannelIntegrationAddedSystemMessageASTContent };

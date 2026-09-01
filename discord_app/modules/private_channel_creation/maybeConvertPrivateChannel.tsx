@@ -18,4 +18,4 @@ export default function maybeConvertPrivateChannel(arg0) {
     }
     return ensurePrivateChannelResult;
   }
-};
+}

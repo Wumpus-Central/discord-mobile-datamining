@@ -13,7 +13,9 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 require = arg1;
 createCacheKey = { automodUsernameColor: ThemesDefault.colors.TEXT_BRAND };
 createCacheKey = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildAlertModeSystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/GuildAlertModeSystemMessage.tsx",
+);
 
 export const resolveAlertModeColors = createCacheKey;
 export const createGuildAlertModeEnabledSystemMessage = function createGuildAlertModeEnabledSystemMessage(roleStyle) {
@@ -22,7 +24,15 @@ export const createGuildAlertModeEnabledSystemMessage = function createGuildAler
   let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   let automodUsernameColor = createCacheKey(theme).automodUsernameColor;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), time: null };
+  obj = {
+    username: messageAuthorWithProcessedColor.nick,
+    usernameOnClick: formatUsernameOnClickDefault({
+      message,
+      author: messageAuthorWithProcessedColor,
+      roleStyle: roleStyle.roleStyle,
+    }),
+    time: null,
+  };
   let str = "";
   if ("" !== message.content) {
     const _Date = Date;
@@ -53,7 +63,14 @@ export const createGuildAlertModeDisabledSystemMessage = function createGuildAle
   let automodUsernameColor = createCacheKey(theme).automodUsernameColor;
   let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  obj = {
+    username: messageAuthorWithProcessedColor.nick,
+    usernameOnClick: formatUsernameOnClickDefault({
+      message,
+      author: messageAuthorWithProcessedColor,
+      roleStyle: roleStyle.roleStyle,
+    }),
+  };
   obj = { message, channel: "HermesInternal", isSystemDM: null, colors: -1 };
   obj[3] = resultDefault(theme);
   const tmp2 = resultDefault(theme);

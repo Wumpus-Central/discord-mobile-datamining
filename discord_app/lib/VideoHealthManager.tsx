@@ -29,7 +29,16 @@ class VideoHealthManager {
     logger = obj.logger;
     enableNativeLoggerResult = logger.enableNativeLogger(true);
     logger2 = obj.logger;
-    infoResult = logger2.info("constructor with windowLength = " + obj.windowLength + ",\n      fpsWindowBorderlineCount = " + obj.fpsWindowBorderlineCount + ",\n      fpsThreshold = " + obj.fpsThreshold + ",\n      backoffTimeSec = " + importAll);
+    infoResult = logger2.info(
+      "constructor with windowLength = " +
+        obj.windowLength +
+        ",\n      fpsWindowBorderlineCount = " +
+        obj.fpsWindowBorderlineCount +
+        ",\n      fpsThreshold = " +
+        obj.fpsThreshold +
+        ",\n      backoffTimeSec = " +
+        importAll,
+    );
     return obj;
   }
 }
@@ -228,8 +237,20 @@ prototype["disable"] = function disable() {
     continue;
   }
 };
-VideoHealthManager.defaultConfig = { featureEnabled: isTablet.isMobile, windowLength: 5, allowedPoorFpsRatio: 1, fpsThreshold: 5, backoffTimeSec: 15 };
-let obj = { featureEnabled: isTablet.isMobile, windowLength: 5, allowedPoorFpsRatio: 1, fpsThreshold: 5, backoffTimeSec: 15 };
+VideoHealthManager.defaultConfig = {
+  featureEnabled: isTablet.isMobile,
+  windowLength: 5,
+  allowedPoorFpsRatio: 1,
+  fpsThreshold: 5,
+  backoffTimeSec: 15,
+};
+let obj = {
+  featureEnabled: isTablet.isMobile,
+  windowLength: 5,
+  allowedPoorFpsRatio: 1,
+  fpsThreshold: 5,
+  backoffTimeSec: 15,
+};
 let result = set2.fileFinishedImporting("lib/VideoHealthManager.tsx");
 
 export { VideoHealthManager };

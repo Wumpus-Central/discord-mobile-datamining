@@ -8,6 +8,13 @@ const prototype = function EmbeddedActivityClientError(reason, detailCode) {
   obj.detailCode = detailCode;
   return obj;
 }.prototype;
-prototype.Reasons = { PRIMARY_APP_COMMAND_NOT_FOUND: 0, [0]: "PRIMARY_APP_COMMAND_NOT_FOUND", LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED: 1, [1]: "LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED", INVALID_CHANNEL: 2, [2]: "INVALID_CHANNEL" };
+prototype.Reasons = {
+  PRIMARY_APP_COMMAND_NOT_FOUND: 0,
+  [0]: "PRIMARY_APP_COMMAND_NOT_FOUND",
+  LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED: 1,
+  [1]: "LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED",
+  INVALID_CHANNEL: 2,
+  [2]: "INVALID_CHANNEL",
+};
 
 export default prototype;

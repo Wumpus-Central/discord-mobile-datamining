@@ -25,7 +25,7 @@ class StreamPreviewTile {
   constructor(arg0) {
     participant = global.participant;
     obj = { style: null, children: null };
-    items = [, ];
+    items = [,];
     items[0] = closure_16().streamPreview;
     items[1] = global.style;
     obj[0] = items;
@@ -35,8 +35,8 @@ class StreamPreviewTile {
       style: { aspectRatio: "disabled", borderRadius: false },
       disableTransition: true,
       onPress() {
-            return callback();
-          }
+        return callback();
+      },
     };
     obj[1] = jsx(require("StreamPreviewContainer"), obj);
     return jsx(View, obj);
@@ -97,7 +97,11 @@ class TileOverlay {
         return obj;
       }
     }
-    obj = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, reveal, STANDARD_EASING: require("Button").STANDARD_EASING };
+    obj = {
+      withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming,
+      reveal,
+      STANDARD_EASING: require("Button").STANDARD_EASING,
+    };
     T.__closure = obj;
     T.__workletHash = 15640123774063;
     T.__initData = closure_19;
@@ -124,7 +128,7 @@ class TileOverlay {
     obj1[3] = num4;
     tmp7 = jsxs;
     obj2 = { pointerEvents: "none", style: items, children: null };
-    items = [, , ];
+    items = [, ,];
     items[0] = StyleSheet.absoluteFill;
     items[1] = obj1;
     items[2] = animatedStyle;
@@ -136,11 +140,11 @@ class TileOverlay {
       obj3[1] = jsx(require("Button").LiveTag, {});
       isActiveStream = jsx(View, obj3);
     }
-    items1 = [, ];
+    items1 = [,];
     items1[0] = isActiveStream;
     obj4 = { style: tmp.usernamePosition, children: null };
     obj5 = { style: tmp.usernameContainer, children: null };
-    items2 = [, ];
+    items2 = [,];
     items2[0] = jsx(ParticipantIcon, { participant });
     items2[1] = jsx(require("ParticipantTitle"), { channel, participant });
     obj5[1] = items2;
@@ -155,21 +159,60 @@ let c3 = importAllResult;
 ({ resetFocus: closure_8, toggleFocus: c9 } = VoiceChatDrawerState);
 ({ ParticipantTypes: c10, isStreamParticipant: unpackModuleId, VoicePlatforms: closure_12 } = ParticipantTypes);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-let obj = { liveContainer: { position: "absolute", top: 8, right: 8 }, titleIcon: { marginRight: 6 }, usernameContainer: null, usernamePosition: null, streamPreview: null, screenshareContainer: null, stageStreamContainer: null };
-obj = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 4 };
+let obj = {
+  liveContainer: { position: "absolute", top: 8, right: 8 },
+  titleIcon: { marginRight: 6 },
+  usernameContainer: null,
+  usernamePosition: null,
+  streamPreview: null,
+  screenshareContainer: null,
+  stageStreamContainer: null,
+};
+obj = {
+  flexDirection: "row",
+  alignItems: "center",
+  alignSelf: "flex-start",
+  backgroundColor: null,
+  borderRadius: null,
+  paddingHorizontal: 8,
+  paddingVertical: 4,
+};
 obj[3] = hexToRgba.hexOpacityToRgba(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj[4] = ThemesDefault.radii.sm;
 obj[2] = obj;
-createCacheKey = { overflow: "hidden", position: "absolute", bottom: 8, left: 8, right: 40, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = {
+  overflow: "hidden",
+  position: "absolute",
+  bottom: 8,
+  left: 8,
+  right: 40,
+  borderRadius: ThemesDefault.radii.sm,
+};
 obj[3] = createCacheKey;
 obj[4] = { flex: 1, width: "100%", backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_600 };
 let obj2 = { flex: 1, width: "100%", backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_600 };
-obj[5] = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: ThemesDefault.colors.BLACK };
+obj[5] = {
+  flex: 1,
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+  width: "100%",
+  backgroundColor: ThemesDefault.colors.BLACK,
+};
 hexToRgba = { backgroundColor: ThemesDefault.colors.BLACK };
 obj[6] = hexToRgba;
 let closure_16 = createCacheKey.createStyles(obj);
-let closure_19 = { code: "function CallTileTsx1(){const{withTiming,reveal,STANDARD_EASING}=this.__closure;return{opacity:withTiming(reveal?1:0,{easing:STANDARD_EASING,duration:250})};}" };
-let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: ThemesDefault.colors.BLACK };
+let closure_19 = {
+  code: "function CallTileTsx1(){const{withTiming,reveal,STANDARD_EASING}=this.__closure;return{opacity:withTiming(reveal?1:0,{easing:STANDARD_EASING,duration:250})};}",
+};
+let obj3 = {
+  flex: 1,
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+  width: "100%",
+  backgroundColor: ThemesDefault.colors.BLACK,
+};
 const memoResult = importAllResult.memo((participant) => {
   participant = participant.participant;
   const channel = participant.channel;
@@ -212,7 +255,12 @@ const memoResult = importAllResult.memo((participant) => {
   const items2 = [channel.id, analyticsLocations];
   const items3 = [hasBottomSafeArea, hasRightSafeArea, bottom, right];
   const callback1 = hasBottomSafeArea.useCallback((user) => {
-    channel(hasRightSafeArea[14])({ userId: user.user.id, channelId: channel.id, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
+    channel(hasRightSafeArea[14])({
+      userId: user.user.id,
+      channelId: channel.id,
+      isVoiceContext: true,
+      sourceAnalyticsLocations: analyticsLocations,
+    });
   }, items2);
   const memo = hasBottomSafeArea.useMemo(() => {
     let num = 8;
@@ -243,7 +291,15 @@ const memoResult = importAllResult.memo((participant) => {
         id = stateFromStores.id;
       }
       if (activeStream.ownerId !== id) {
-        obj = { participant: null, onSingleTap: null, onDoubleTap: null, removeEmptyStateImage: null, onFullScreen: null, fullscreenIconStyle: null, style: null };
+        obj = {
+          participant: null,
+          onSingleTap: null,
+          onDoubleTap: null,
+          removeEmptyStateImage: null,
+          onFullScreen: null,
+          fullscreenIconStyle: null,
+          style: null,
+        };
         obj[0] = participant;
         obj[1] = closure_9;
         obj[2] = callback;
@@ -280,7 +336,17 @@ const memoResult = importAllResult.memo((participant) => {
       }
     }
   } else if (tmp9.USER === type) {
-    const obj4 = { participant: null, avatarSize: null, onSingleTap: null, onDoubleTap: null, onLongPress: null, statusStyle: null, hasNotch: null, resizeMode: null, style: null };
+    const obj4 = {
+      participant: null,
+      avatarSize: null,
+      onSingleTap: null,
+      onDoubleTap: null,
+      onLongPress: null,
+      statusStyle: null,
+      hasNotch: null,
+      resizeMode: null,
+      style: null,
+    };
     obj4[0] = participant;
     obj4[1] = avatarSize;
     obj4[2] = closure_9;
@@ -304,7 +370,15 @@ const memoResult = importAllResult.memo((participant) => {
   }
   let tmp27 = null;
   if (participant.type !== constants.ACTIVITY) {
-    const obj6 = { participant: null, isActiveStream: null, channel: null, hasTopSafeArea: null, hasLeftSafeArea: null, hasRightSafeArea: null, hasBottomSafeArea: null };
+    const obj6 = {
+      participant: null,
+      isActiveStream: null,
+      channel: null,
+      hasTopSafeArea: null,
+      hasLeftSafeArea: null,
+      hasRightSafeArea: null,
+      hasBottomSafeArea: null,
+    };
     obj6[0] = participant;
     obj6[1] = null != activeStream;
     obj6[2] = channel;

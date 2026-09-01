@@ -24,5 +24,5 @@ export const AVErrorStreamFailedToStartDefinition = {
   },
   makeErrorContextKey(streamKey) {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;
-  }
+  },
 };

@@ -23,7 +23,15 @@ function CountryCodeSelector(alpha2) {
     obj[0] = tmp.selectorOuterContainer;
     obj = { style: null, children: null };
     obj[0] = tmp.selectorContainer;
-    obj = { onPress: null, style: null, androidRippleConfig: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, children: null };
+    obj = {
+      onPress: null,
+      style: null,
+      androidRippleConfig: null,
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      accessibilityHint: null,
+      children: null,
+    };
     obj[0] = onPress;
     obj[1] = tmp.selectorPressable;
     obj[2] = { borderless: true };
@@ -34,7 +42,7 @@ function CountryCodeSelector(alpha2) {
     obj1[0] = tmp.selectorText;
     obj1[3] = combined;
     obj[6] = callback(Text.Text, obj1);
-    const items = [callback(PressableBase.PressableOpacity, obj), ];
+    const items = [callback(PressableBase.PressableOpacity, obj)];
     const obj2 = { style: null };
     obj2[0] = tmp.separator;
     items[1] = callback(View, obj2);
@@ -46,8 +54,23 @@ function CountryCodeSelector(alpha2) {
 }
 let c3 = importAllResult;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { label: { marginBottom: 8 }, input: { flexGrow: 1, marginBottom: 8 }, error: { marginBottom: 8 }, hint: { marginBottom: 8 }, selectorOuterContainer: { overflow: "hidden" }, selectorContainer: { flex: 1, flexDirection: "row" }, selectorPressable: { justifyContent: "center" }, selectorText: { alignSelf: "center" }, separator: null };
-obj = { borderLeftWidth: 1, borderLeftColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED, marginHorizontal: 12, marginVertical: -4 };
+let obj = {
+  label: { marginBottom: 8 },
+  input: { flexGrow: 1, marginBottom: 8 },
+  error: { marginBottom: 8 },
+  hint: { marginBottom: 8 },
+  selectorOuterContainer: { overflow: "hidden" },
+  selectorContainer: { flex: 1, flexDirection: "row" },
+  selectorPressable: { justifyContent: "center" },
+  selectorText: { alignSelf: "center" },
+  separator: null,
+};
+obj = {
+  borderLeftWidth: 1,
+  borderLeftColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED,
+  marginHorizontal: 12,
+  marginVertical: -4,
+};
 obj[8] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
@@ -87,7 +110,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj1[1] = label;
     tmp9 = callback(importDefault(tmp4[9]), obj1);
   }
-  const items1 = [tmp9, , , ];
+  const items1 = [tmp9, , ,];
   const obj2 = {};
   const merged1 = Object.assign(merged);
   obj2.renderLeadingComponent = function renderLeadingComponent() {

@@ -22,5 +22,5 @@ export default function getDisplayNameStylesFontName(arg0) {
     ZEL6mz = messagesProxyDefault.ZEL6mz;
   }
   return ZEL6mz;
-};
+}
 export const DISPLAY_NAME_STYLES_FONT_NAMES = obj;

@@ -4,11 +4,24 @@ import closure_3 from "../../../../../_runtime/00019_noop.js";
 import TextAreaCta from "../ChatInputConstants.tsx";
 
 const require = arg1;
-({ CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: c4, CHAT_INPUT_FLOATING_COLLAPSED_SCALE: c5, CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: closure_6, CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: error } = TextAreaCta);
-let closure_8 = { code: "function useChatInputFloatingBounceTsx1(finished){const{runOnJS,setEnterFinished}=this.__closure;if(finished===true){runOnJS(setEnterFinished)(true);}}" };
-let closure_9 = { code: "function useChatInputFloatingBounceTsx2(finished){const{runOnJS,handleExitFinished}=this.__closure;if(finished===true){runOnJS(handleExitFinished)();}}" };
-let closure_10 = { code: "function useChatInputFloatingBounceTsx3(){const{opacity,scale}=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };
-let result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingBounce.tsx");
+({
+  CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: c4,
+  CHAT_INPUT_FLOATING_COLLAPSED_SCALE: c5,
+  CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: closure_6,
+  CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: error,
+} = TextAreaCta);
+let closure_8 = {
+  code: "function useChatInputFloatingBounceTsx1(finished){const{runOnJS,setEnterFinished}=this.__closure;if(finished===true){runOnJS(setEnterFinished)(true);}}",
+};
+let closure_9 = {
+  code: "function useChatInputFloatingBounceTsx2(finished){const{runOnJS,handleExitFinished}=this.__closure;if(finished===true){runOnJS(handleExitFinished)();}}",
+};
+let closure_10 = {
+  code: "function useChatInputFloatingBounceTsx3(){const{opacity,scale}=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/chat_input/native/action_buttons/useChatInputFloatingBounce.tsx",
+);
 
 export default function useChatInputFloatingBounce(visible) {
   visible = visible.visible;
@@ -134,8 +147,10 @@ export default function useChatInputFloatingBounce(visible) {
       fn.__workletHash = 6186469155404;
       fn.__initData = closure_1_9;
       const result2 = sharedValue.set(obj.withTiming(0, closure_1_7, "respect-motion-settings", fn));
-      const result3 = sharedValue1.set(visible(6186469155404[4]).withTiming(closure_5, closure_1_7, "respect-motion-settings"));
-      const obj3 = visible(6186469155404[4]);
+      const result3 = sharedValue1.set(
+        visible((6186469155404)[4]).withTiming(closure_5, closure_1_7, "respect-motion-settings"),
+      );
+      const obj3 = visible((6186469155404)[4]);
     }
   }, items1);
   obj = { animatedStyle: null, isInteractive: null };
@@ -156,4 +171,4 @@ export default function useChatInputFloatingBounce(visible) {
   obj[0] = tmpResult.useAnimatedStyle(J);
   obj[1] = tmp10;
   return obj;
-};
+}

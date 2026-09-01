@@ -7,4 +7,4 @@ const result = set.fileFinishedImporting("modules/message_request/hooks/useIsStr
 
 export default function useIsStricterMessageRequests() {
   return set2.useIsTeenInCountrySet(set);
-};
+}

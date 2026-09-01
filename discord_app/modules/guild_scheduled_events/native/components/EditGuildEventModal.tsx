@@ -23,7 +23,7 @@ const memoResult = importAllResult.memo((guild) => {
   jsx = undefined;
   function _handleSave() {
     const self = this;
-    const tmp = callback(function*() {
+    const tmp = callback(function* () {
       if (id === 2) {
         id = 3;
         HermesBuiltin.throwTypeError();
@@ -106,22 +106,25 @@ const memoResult = importAllResult.memo((guild) => {
   obj1 = PREVIEW(first[7]);
   first1 = first1(importAllResult.useState(obj1.isEditingEvent(initialGuildEvent)), 1)[0];
   let tmp = callback();
-  [c6, tmp6] = first1(importDefault(first[8])(() => {
-    const result = initialGuildEvent(first[9]).dismissGlobalKeyboard();
-    if (first1) {
-      let id;
-      if (initialGuildEvent != null) {
-        id = tmp3.id;
+  [c6, tmp6] = first1(
+    importDefault(first[8])(() => {
+      const result = initialGuildEvent(first[9]).dismissGlobalKeyboard();
+      if (first1) {
+        let id;
+        if (initialGuildEvent != null) {
+          id = tmp3.id;
+        }
+        if (null != id) {
+          let saveEventResult = closure_1_1(tmp[10]).saveEvent(tmp3.id, first, PREVIEW.id);
+          const obj3 = closure_1_1(tmp[10]);
+        }
+        return saveEventResult;
       }
-      if (null != id) {
-        let saveEventResult = closure_1_1(tmp[10]).saveEvent(tmp3.id, first, PREVIEW.id);
-        const obj3 = closure_1_1(tmp[10]);
-      }
-      return saveEventResult;
-    }
-    const obj = initialGuildEvent(first[9]);
-    saveEventResult = closure_1_1(first[10]).createGuildEvent(first, PREVIEW.id);
-  }), 2);
+      const obj = initialGuildEvent(first[9]);
+      saveEventResult = closure_1_1(first[10]).createGuildEvent(first, PREVIEW.id);
+    }),
+    2,
+  );
   jsx = {
     guild,
     guildEvent: first,
@@ -167,7 +170,7 @@ const memoResult = importAllResult.memo((guild) => {
         const merged1 = Object.assign(closure_0);
         return {};
       });
-    }
+    },
   };
   obj = {};
   obj = { title: "", customNavbar: null, headerLeft: null, render: null, fullscreen: true };
@@ -203,43 +206,51 @@ const memoResult = importAllResult.memo((guild) => {
     return callback2(closure_1_1(first[18]), {});
   };
   obj[PREVIEW(first[7]).EditGuildEventScreens.PREVIEW] = obj2;
-  const tmp5 = first1(importDefault(first[8])(() => {
-    const result = initialGuildEvent(first[9]).dismissGlobalKeyboard();
-    if (first1) {
-      let id;
-      if (initialGuildEvent != null) {
-        id = tmp3.id;
+  const tmp5 = first1(
+    importDefault(first[8])(() => {
+      const result = initialGuildEvent(first[9]).dismissGlobalKeyboard();
+      if (first1) {
+        let id;
+        if (initialGuildEvent != null) {
+          id = tmp3.id;
+        }
+        if (null != id) {
+          let saveEventResult = closure_1_1(tmp[10]).saveEvent(tmp3.id, first, PREVIEW.id);
+          const obj3 = closure_1_1(tmp[10]);
+        }
+        return saveEventResult;
       }
-      if (null != id) {
-        let saveEventResult = closure_1_1(tmp[10]).saveEvent(tmp3.id, first, PREVIEW.id);
-        const obj3 = closure_1_1(tmp[10]);
-      }
-      return saveEventResult;
-    }
-    const obj = initialGuildEvent(first[9]);
-    saveEventResult = closure_1_1(first[10]).createGuildEvent(first, PREVIEW.id);
-  }), 2);
+      const obj = initialGuildEvent(first[9]);
+      saveEventResult = closure_1_1(first[10]).createGuildEvent(first, PREVIEW.id);
+    }),
+    2,
+  );
   return jsx(PREVIEW(first[19]).Navigator, {
     screens: obj,
     initialRouteName: PREVIEW(first[7]).EditGuildEventScreens.CHANNEL_SELECTOR,
-    initialRouteStack: first1(undefined.useState(() => {
-      let obj = { name: PREVIEW(first[7]).EditGuildEventScreens.CHANNEL_SELECTOR };
-      if (first1) {
-        const items = [obj, ];
-        obj = { name: null };
-        obj[0] = PREVIEW(first[7]).EditGuildEventScreens.DETAILS;
-        items[1] = obj;
-        let items1 = items;
-      } else {
-        items1 = [obj];
-      }
-      return items1;
-    }), 1)[0],
+    initialRouteStack: first1(
+      undefined.useState(() => {
+        let obj = { name: PREVIEW(first[7]).EditGuildEventScreens.CHANNEL_SELECTOR };
+        if (first1) {
+          const items = [obj];
+          obj = { name: null };
+          obj[0] = PREVIEW(first[7]).EditGuildEventScreens.DETAILS;
+          items[1] = obj;
+          let items1 = items;
+        } else {
+          items1 = [obj];
+        }
+        return items1;
+      }),
+      1,
+    )[0],
     cardShadowEnabled: false,
     cardOverlayEnabled: false,
-    cardStyle: tmp.cardStyle
+    cardStyle: tmp.cardStyle,
   });
 });
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModal.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/EditGuildEventModal.tsx",
+);
 
 export default memoResult;

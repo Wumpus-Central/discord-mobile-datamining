@@ -7,7 +7,9 @@ import { set } from "../CreatorMonetizationEligibilityExperimentUtils.tsx";
 
 const require = arg1;
 ({ GuildFeatures: closure_6, HelpdeskArticles: error, MarketingURLs: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx",
+);
 
 export default function useOnboardingMonetizationEnableFlow(features) {
   const _require = features;
@@ -124,7 +126,8 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   }
   const formatResult = intl.format(require("../../../intl/index.native.tsx").t.aJUdOi, obj);
   let formatResult3;
-  const creatorMonetizationAcceptTermsCheckboxText = require("CreatorMonetizationAcceptTermCheckboxText.tsx").getCreatorMonetizationAcceptTermsCheckboxText();
+  const creatorMonetizationAcceptTermsCheckboxText =
+    require("CreatorMonetizationAcceptTermCheckboxText.tsx").getCreatorMonetizationAcceptTermsCheckboxText();
   if (isApplicationRejected) {
     if (tmp35) {
       if (stateFromStores) {
@@ -139,7 +142,26 @@ export default function useOnboardingMonetizationEnableFlow(features) {
       refresh();
     }
   }, items1);
-  const obj3 = { resubmittingEnableRequest: loading, resubmissionError: error, isGuildOwner: stateFromStores, createEnableRequest, resubmittedRequest: submittedRequest, eligibilityLoading: loading2, eligibilityError: error2, refreshEligibility: refresh, eligibility, eligibleForMonetization: true === canApply, isApplicationPending: tmp23, hasPreviousApplicationRejection: isApplicationRejected, requestRejectedNoticeText: formatResult2, reapplyNoticeText: formatResult3, showAcceptTermsFlow: isExpeditedOnboardingGuild, wasRejectedInV1: null, requirementsFinePrintText: null, acceptTermsCheckboxText: null };
+  const obj3 = {
+    resubmittingEnableRequest: loading,
+    resubmissionError: error,
+    isGuildOwner: stateFromStores,
+    createEnableRequest,
+    resubmittedRequest: submittedRequest,
+    eligibilityLoading: loading2,
+    eligibilityError: error2,
+    refreshEligibility: refresh,
+    eligibility,
+    eligibleForMonetization: true === canApply,
+    isApplicationPending: tmp23,
+    hasPreviousApplicationRejection: isApplicationRejected,
+    requestRejectedNoticeText: formatResult2,
+    reapplyNoticeText: formatResult3,
+    showAcceptTermsFlow: isExpeditedOnboardingGuild,
+    wasRejectedInV1: null,
+    requirementsFinePrintText: null,
+    acceptTermsCheckboxText: null,
+  };
   if (isExpeditedOnboardingGuild) {
     if (!tmp19) {
       tmp19 = isApplicationRejected;
@@ -150,4 +172,4 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   obj3[16] = formatResult;
   obj3[17] = creatorMonetizationAcceptTermsCheckboxText;
   return obj3;
-};
+}

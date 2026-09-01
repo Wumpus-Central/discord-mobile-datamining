@@ -61,7 +61,7 @@ export default function RestrictedMessagePreviewActions(channel) {
         let obj = closure_1_1(closure_1_2[10]);
         obj = { location: closure_1_6.DM_CHANNEL };
         obj.removeFriend(id.id, obj);
-      }
+      },
     };
     obj.confirmRemoveFriend(obj);
   }, items5);
@@ -171,9 +171,9 @@ export default function RestrictedMessagePreviewActions(channel) {
     obj9[2] = formatResult;
     tmp28 = callback(tmp2(tmp3[21]).Text, obj9);
   }
-  const items9 = [tmp28, ];
+  const items9 = [tmp28];
   const items10 = [tmp19, tmp18, tmp14, tmp16];
   items9[1] = closure_10(View, { style: tmp.buttonRow, children: items10 });
   obj8[1] = items9;
   return closure_10(View, obj8);
-};
+}

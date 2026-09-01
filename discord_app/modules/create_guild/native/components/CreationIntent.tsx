@@ -16,10 +16,22 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ CreateGuildModalStates: closure_6, GuildTemplateTriggers: error, NUXGuildTemplatesAnalytics: closure_8 } = NUXGuildTemplatesAnalytics);
+({
+  CreateGuildModalStates: closure_6,
+  GuildTemplateTriggers: error,
+  NUXGuildTemplatesAnalytics: closure_8,
+} = NUXGuildTemplatesAnalytics);
 ({ AnalyticEvents: c9, AnalyticsLocations: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { contentContainer: null, scrollContainer: null, headerContainer: null, headerTitle: null, headerDescription: null, sections: null, skipDescription: null };
+createCacheKey = {
+  contentContainer: null,
+  scrollContainer: null,
+  headerContainer: null,
+  headerTitle: null,
+  headerDescription: null,
+  sections: null,
+  skipDescription: null,
+};
 createCacheKey = { flex: 1, marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
@@ -99,7 +111,9 @@ export default function CreationIntent(arg0) {
   const items1 = [trigger];
   const effect1 = isScreenReaderEnabled.useEffect(() => {
     if (closure_1_7.NUF === trigger) {
-      closure_1_0(arr[11]).trackNUFStep(closure_1_8.STEP_GUILD_TEMPLATE, closure_1_8.STEP_CREATION_INTENT, { skip: false });
+      closure_1_0(arr[11]).trackNUFStep(closure_1_8.STEP_GUILD_TEMPLATE, closure_1_8.STEP_CREATION_INTENT, {
+        skip: false,
+      });
       const obj2 = closure_1_0(arr[11]);
     } else if (tmp2.IN_APP === tmp) {
       trigger(arr[12]).track(closure_1_9.OPEN_MODAL, { type: "Server Intent Discovery" });
@@ -109,16 +123,23 @@ export default function CreationIntent(arg0) {
   obj = { top: true, left: true, right: true, style: tmp.contentContainer, children: null };
   obj = { style: tmp.scrollContainer, children: null };
   obj1 = { style: tmp.headerContainer, children: null };
-  let obj2 = { ref, style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  let obj2 = {
+    ref,
+    style: tmp.headerTitle,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj2[5] = intl.string(getSystemLocale.t.f3MvGS);
-  const items2 = [callback(Text.Text, obj2), ];
+  const items2 = [callback(Text.Text, obj2)];
   let obj3 = { style: tmp.headerDescription, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = getSystemLocale.intl;
   obj3[3] = intl2.string(getSystemLocale.t.nOzc7w);
   items2[1] = callback(Text.Text, obj3);
   obj1[1] = items2;
-  const items3 = [callback2(ref, obj1), , ];
+  const items3 = [callback2(ref, obj1), ,];
   const obj4 = { style: tmp.sections, children: null };
   const obj5 = { hasIcons: true, children: null };
   const tmp13 = trigger(11891);
@@ -131,7 +152,7 @@ export default function CreationIntent(arg0) {
     obj6[2] = function onPress() {
       onPress(false);
     };
-    const items4 = [tmp8(tmp13, obj6), ];
+    const items4 = [tmp8(tmp13, obj6)];
     const obj7 = { Icon: null, message: null, onPress: null };
     let tmp12Result = tmp12(11891);
     obj7[0] = tmp2(6256).WorldIllocon;
@@ -150,7 +171,7 @@ export default function CreationIntent(arg0) {
     obj6[2] = function onPress() {
       onPress(true);
     };
-    const items5 = [tmp8(tmp13, obj6), ];
+    const items5 = [tmp8(tmp13, obj6)];
     const obj8 = { Icon: null, message: null, onPress: null };
     tmp12Result = tmp12(11891);
     obj8[0] = tmp2(6256).ChairIllocon;
@@ -170,10 +191,10 @@ export default function CreationIntent(arg0) {
   obj9[3] = intl7.format(getSystemLocale.t["SMc+Gz"], {
     onSkip(arg0) {
       onPress(null);
-    }
+    },
   });
   items3[2] = callback(Text.Text, obj9);
   obj[1] = items3;
   obj[4] = callback2(onPress, obj);
   return callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-};
+}

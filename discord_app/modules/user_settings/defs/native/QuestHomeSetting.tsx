@@ -25,13 +25,13 @@ obj = {
       const result = obj.setQuestHomeUtmContext(obj);
       return true;
     };
-  }
+  },
 };
 obj = {
   route: ME.UserSettingsSections.QUESTS,
   getComponent() {
     return QuestHomeSetting /* QuestHomeSetting */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 let result = set.fileFinishedImporting("modules/user_settings/defs/native/QuestHomeSetting.tsx");

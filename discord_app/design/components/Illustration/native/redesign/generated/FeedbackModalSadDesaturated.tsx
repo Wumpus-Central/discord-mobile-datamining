@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/FeedbackModalSadDesaturated.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/FeedbackModalSadDesaturated.tsx",
+);
 
 export const getFeedbackModalSadDesaturatedSource = function getFeedbackModalSadDesaturatedSource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getFeedbackModalSadDesaturatedSource = function getFeedbackModalSad
     },
     light() {
       return callback(11220);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useFeedbackModalSadDesaturatedSource = function useFeedbackModalSad
     },
     light() {
       return callback(11220);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const FeedbackModalSadDesaturated = function FeedbackModalSadDesaturated(
     },
     light() {
       return callback(11220);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

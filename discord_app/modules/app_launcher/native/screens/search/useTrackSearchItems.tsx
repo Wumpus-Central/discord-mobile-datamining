@@ -3,7 +3,9 @@ import closure_2 from "../../../../../../_runtime/00019_noop.js";
 import { context } from "../../AppLauncherContext.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/search/useTrackSearchItems.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/screens/search/useTrackSearchItems.tsx",
+);
 
 export const useTrackSearchItems = function useTrackSearchItems(callback3, memo1, first) {
   const _require = callback3;
@@ -31,7 +33,14 @@ export const useTrackSearchItems = function useTrackSearchItems(callback3, memo1
               obj = { type: null, name: null, properties: null };
               obj[0] = closure_1_0(closure_1_1[3]).ImpressionTypes.VIEW;
               obj[1] = closure_1_0(closure_1_1[3]).ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM;
-              obj = { location: null, application_id: null, command_id: null, search_results_position: null, query: null, source: null };
+              obj = {
+                location: null,
+                application_id: null,
+                command_id: null,
+                search_results_position: null,
+                query: null,
+                source: null,
+              };
               obj[0] = closure_1_0(closure_1_1[4]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH;
               obj[1] = applicationId;
               obj[2] = commandId;
@@ -45,7 +54,7 @@ export const useTrackSearchItems = function useTrackSearchItems(callback3, memo1
           }
         }
       });
-    }, items)
+    }, items),
   };
   items = [entrypoint, callback3, memo1, first];
   return obj;

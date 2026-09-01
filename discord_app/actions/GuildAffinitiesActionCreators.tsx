@@ -8,11 +8,21 @@ const result = set.fileFinishedImporting("actions/GuildAffinitiesActionCreators.
 
 export const fetchGuildAffinities = function fetchGuildAffinities() {
   const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.GUILD_AFFINITIES, oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
+  const obj = {
+    url: Endpoints.GUILD_AFFINITIES,
+    oldFormErrors: true,
+    rejectWithError: sendRequest.rejectWithMigratedError(),
+  };
   const value = HTTP.get(obj);
-  return value.then((guildAffinities) => {
-    callback(709).dispatch({ type: "LOAD_GUILD_AFFINITIES_SUCCESS", guildAffinities: guildAffinities.body.guild_affinities });
-  }, () => {
-    callback(709).dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
-  });
+  return value.then(
+    (guildAffinities) => {
+      callback(709).dispatch({
+        type: "LOAD_GUILD_AFFINITIES_SUCCESS",
+        guildAffinities: guildAffinities.body.guild_affinities,
+      });
+    },
+    () => {
+      callback(709).dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
+    },
+  );
 };

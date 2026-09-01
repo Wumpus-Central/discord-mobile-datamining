@@ -4,7 +4,9 @@ import closure_2 from "../../../../stores/StreamRTCConnectionStore.tsx";
 import { RTCConnectionQuality } from "../../../../Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx",
+);
 
 export const AVErrorStreamBadNetworkQualityDefinition = {
   getActiveErrors() {
@@ -24,5 +26,5 @@ export const AVErrorStreamBadNetworkQualityDefinition = {
   },
   makeErrorContextKey(streamKey) {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;
-  }
+  },
 };

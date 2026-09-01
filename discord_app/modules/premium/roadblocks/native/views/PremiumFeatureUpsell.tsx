@@ -26,7 +26,10 @@ function PremiumFeatureUpsellPill(featureName) {
   const tmp4 = callback2(useTier0UpsellContent);
   dependencyMap = tmp4;
   let obj2 = featureName(9151);
-  mobileEmojiPickerUpsellRestyleEnabledForFeature = obj2.getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumFeatureUpsell");
+  mobileEmojiPickerUpsellRestyleEnabledForFeature = obj2.getMobileEmojiPickerUpsellRestyleEnabledForFeature(
+    featureName,
+    "native.PremiumFeatureUpsell",
+  );
   const tmp7 = useTier0UpsellContent ? closure_7.TIER_0 : closure_7.TIER_2;
   const fn = () => useTier0UpsellContent(closure_2[14])(featureName);
   let tmpResult = tmp(4139);
@@ -63,9 +66,13 @@ function PremiumFeatureUpsellPill(featureName) {
     obj3[0] = fn;
     formatResult = intl6.format(tmp(1236).t.x2dQxN, obj3);
   }
-  const tmp11 = useTier0UpsellContent(8969)(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, constants.PREMIUM_UPSELL_FILE_UPLOAD);
+  const tmp11 = useTier0UpsellContent(8969)(
+    useTier0UpsellContent,
+    premiumUpsellConfig.onViewAllPerks,
+    constants.PREMIUM_UPSELL_FILE_UPLOAD,
+  );
   loading = tmp11.loading;
-  let items = [tmp4.container, , ];
+  let items = [tmp4.container, ,];
   if (flag) {
     flag = tmp4.containerShadow;
   }
@@ -74,14 +81,24 @@ function PremiumFeatureUpsellPill(featureName) {
   items[2] = featureName.style;
   const obj5 = { style: tmp4.labelContainer, children: null };
   if (mobileEmojiPickerUpsellRestyleEnabledForFeature) {
-    let items1 = [tmp14, ];
+    let items1 = [tmp14];
     const obj6 = { style: null, variant: "text-sm/medium", children: null };
     obj6[0] = tmp4.text;
     obj6[2] = formatResult;
     items1[1] = callback(tmp(4474).Text, obj6);
     obj5[1] = items1;
-    const items2 = [tmp12(tmp13, obj5), ];
-    const obj7 = { disabled: null, shrink: true, style: null, size: null, onPress: null, text: null, color: null, renderIcon: null, renderLinearGradient: null };
+    const items2 = [tmp12(tmp13, obj5)];
+    const obj7 = {
+      disabled: null,
+      shrink: true,
+      style: null,
+      size: null,
+      onPress: null,
+      text: null,
+      color: null,
+      renderIcon: null,
+      renderLinearGradient: null,
+    };
     obj7[0] = loading;
     obj7[2] = tmp4.button;
     obj7[3] = tmp(1297).ButtonSizes.XSMALL;
@@ -100,7 +117,7 @@ function PremiumFeatureUpsellPill(featureName) {
       if (mobileEmojiPickerUpsellRestyleEnabledForFeature) {
         let obj = { size: "xxs", color: null, style: null };
         obj[1] = useTier0UpsellContent(closure_2[10]).colors.WHITE;
-        const items = [closure_2.nitroWheelIcon, ];
+        const items = [closure_2.nitroWheelIcon];
         let nitroWheelDisabled2 = loading;
         if (loading) {
           nitroWheelDisabled2 = closure_2.nitroWheelDisabled;
@@ -109,7 +126,7 @@ function PremiumFeatureUpsellPill(featureName) {
         obj[2] = items;
         let tmpResult = tmp(tmp2(tmp3[20]).NitroWheelIcon, obj);
       } else {
-        const items1 = [closure_2.nitroWheelButton, ];
+        const items1 = [closure_2.nitroWheelButton];
         let nitroWheelDisabled = loading;
         if (loading) {
           nitroWheelDisabled = closure_2.nitroWheelDisabled;
@@ -122,7 +139,12 @@ function PremiumFeatureUpsellPill(featureName) {
       return tmpResult;
     };
     obj7[8] = function renderLinearGradient() {
-      const obj = { style: closure_2.gradient, start: featureName(closure_2[22]).HorizontalGradient.START, end: featureName(closure_2[22]).HorizontalGradient.END, colors: useTier0UpsellContent ? closure_1_11.PREMIUM_TIER_0 : closure_1_11.PREMIUM_TIER_2_TRI_COLOR };
+      const obj = {
+        style: closure_2.gradient,
+        start: featureName(closure_2[22]).HorizontalGradient.START,
+        end: featureName(closure_2[22]).HorizontalGradient.END,
+        colors: useTier0UpsellContent ? closure_1_11.PREMIUM_TIER_0 : closure_1_11.PREMIUM_TIER_2_TRI_COLOR,
+      };
       return closure_1_12(useTier0UpsellContent(closure_2[21]), obj);
     };
     items2[1] = callback(tmp(1297).ShinyButton, obj7);
@@ -141,13 +163,32 @@ function PremiumFeatureUpsellPill(featureName) {
 ({ AnalyticEvents: c9, AnalyticsPages: c10 } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = createCacheKey.createStyles((arg0) => {
-  let obj = { container: null, containerShadow: null, nitroWheel: null, labelContainer: null, text: null, nitroWheelButton: null, nitroWheelIcon: null, nitroWheelDisabled: null, button: null, gradient: null };
-  obj = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round, padding: ThemesDefault.space.PX_12, justifyContent: "space-between" };
+  let obj = {
+    container: null,
+    containerShadow: null,
+    nitroWheel: null,
+    labelContainer: null,
+    text: null,
+    nitroWheelButton: null,
+    nitroWheelIcon: null,
+    nitroWheelDisabled: null,
+    button: null,
+    gradient: null,
+  };
+  obj = {
+    flexDirection: "row",
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+    borderRadius: ThemesDefault.radii.round,
+    padding: ThemesDefault.space.PX_12,
+    justifyContent: "space-between",
+  };
   obj[0] = obj;
   obj = {};
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
-  obj.shadowColor = arg0 ? unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS_2 : unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2;
+  obj.shadowColor = arg0
+    ? unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS_2
+    : unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2;
   obj.shadowOpacity = 0.6;
   obj[1] = obj;
   obj[2] = { width: 20, height: 20, marginEnd: ThemesDefault.space.PX_4 };
@@ -163,10 +204,19 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
   obj[9] = {};
   return obj;
 });
-let closure_16 = { code: "function PremiumFeatureUpsellTsx2(finished){const{cleanUp}=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);}" };
+let closure_16 = {
+  code: "function PremiumFeatureUpsellTsx2(finished){const{cleanUp}=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);}",
+};
 function animationEnterExit(value, cleanUp) {
   const _require = cleanUp;
-  const obj = { opacity: require("../../../../../design/animation/reanimated/spring/spring.tsx").withSpring(value, require("../../../../../design/animation/reanimated/spring/springPresets.tsx").springStandard, "respect-motion-settings", fn) };
+  const obj = {
+    opacity: require("../../../../../design/animation/reanimated/spring/spring.tsx").withSpring(
+      value,
+      require("../../../../../design/animation/reanimated/spring/springPresets.tsx").springStandard,
+      "respect-motion-settings",
+      fn,
+    ),
+  };
   fn = function l(arg0) {
     if (closure_0 != null) {
       tmp(arg0);
@@ -177,10 +227,15 @@ function animationEnterExit(value, cleanUp) {
   fn.__initData = closure_16;
   return obj;
 }
-createCacheKey = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, springStandard: require("SUBTLE_SPRING").springStandard };
+createCacheKey = {
+  withSpring: require("CONFIG_NEVER_ANIMATE").withSpring,
+  springStandard: require("SUBTLE_SPRING").springStandard,
+};
 animationEnterExit.__closure = createCacheKey;
 animationEnterExit.__workletHash = 15470414797897;
-animationEnterExit.__initData = { code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}" };
+animationEnterExit.__initData = {
+  code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}",
+};
 const result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx");
 
 export default function PremiumFeatureUpsell(shouldShow) {
@@ -219,7 +274,9 @@ export default function PremiumFeatureUpsell(shouldShow) {
       } else if (tmp6(castPremiumSubscriptionAsSkuId[6]).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
         APP_ICON_INLINE_UPSELL = closure_1_8.EMOJI_EVERYWHERE_INLINE_UPSELL;
       } else {
-        if (tmp6(castPremiumSubscriptionAsSkuId[6]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
+        if (
+          tmp6(castPremiumSubscriptionAsSkuId[6]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName
+        ) {
           APP_ICON_INLINE_UPSELL = closure_1_8.LARGER_FILE_UPLOAD_INLINE_UPSELL;
         } else if (tmp6(castPremiumSubscriptionAsSkuId[6]).EntitlementFeatureNames.APP_ICONS !== featureName) {
           if (tmp6(castPremiumSubscriptionAsSkuId[6]).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
@@ -243,6 +300,12 @@ export default function PremiumFeatureUpsell(shouldShow) {
   if (tmp3) {
     tmp8 = merged;
   }
-  obj = { useReducedMotion: false, item: tmp8, entering: animationEnterExit, exiting: animationEnterExit, renderItem: callback };
+  obj = {
+    useReducedMotion: false,
+    item: tmp8,
+    entering: animationEnterExit,
+    exiting: animationEnterExit,
+    renderItem: callback,
+  };
   return closure_12(ref(analyticsLocations[30]), obj);
-};
+}

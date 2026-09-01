@@ -34,4 +34,4 @@ export default function getParticipantTitle(guild_id, type, name) {
     }
     return name1 + str;
   }
-};
+}

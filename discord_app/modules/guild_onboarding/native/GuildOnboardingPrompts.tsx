@@ -27,7 +27,7 @@ function _getBackgroundGradientColor() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       let table = tmp5;
       let dependencyMap2 = tmp2;
       const obj2 = dependencyMap(closure_1_2[18]);
@@ -51,8 +51,13 @@ function BackgroundImageGradient(uri) {
   const tmp = callback4();
   let obj = { children: null };
   const items = [tmp.backgroundImage];
-  const items1 = [callback2(preloadDefault, { source: { uri: uri.splashUrl }, style: items, resizeMode: "cover" }), ];
-  obj = { style: tmp.backgroundColorGradient, start: keys.VerticalGradient.START, end: keys.VerticalGradient.END, colors: null };
+  const items1 = [callback2(preloadDefault, { source: { uri: uri.splashUrl }, style: items, resizeMode: "cover" })];
+  obj = {
+    style: tmp.backgroundColorGradient,
+    start: keys.VerticalGradient.START,
+    end: keys.VerticalGradient.END,
+    colors: null,
+  };
   const tmp2 = LinearGradientDefault;
   const items2 = [hexToRgba.hexWithOpacity(color, 0.16), color];
   obj[3] = items2;
@@ -63,27 +68,78 @@ function BackgroundImageGradient(uri) {
 ({ StyleSheet: closure_6, View: error } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_16, MarketingURLs: closure_17, Routes: closure_18 } = ME);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-createCacheKey = { flex: { flex: 1 }, container: null, subtitle: null, onboardingTitle: null, onboardingPolicy: null, onboardingPolicyText: null, landingOverlay: null, artWrapper: null, landingBody: null, backgroundImage: null, backgroundColorGradient: null, darkColorGradient: null };
-createCacheKey = { display: "flex", flex: 1, flexGrow: 1, marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, marginBottom: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+createCacheKey = {
+  flex: { flex: 1 },
+  container: null,
+  subtitle: null,
+  onboardingTitle: null,
+  onboardingPolicy: null,
+  onboardingPolicyText: null,
+  landingOverlay: null,
+  artWrapper: null,
+  landingBody: null,
+  backgroundImage: null,
+  backgroundColorGradient: null,
+  darkColorGradient: null,
+};
+createCacheKey = {
+  display: "flex",
+  flex: 1,
+  flexGrow: 1,
+  marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT,
+  marginBottom: ThemesDefault.space.PX_16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16, opacity: 0.8 };
 createCacheKey[3] = { textAlign: "center" };
 let obj1 = { marginBottom: ThemesDefault.space.PX_16, opacity: 0.8 };
-createCacheKey[4] = { position: "absolute", paddingHorizontal: ThemesDefault.space.PX_16, display: "flex", justifyContent: "center", width: "100%", marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[4] = {
+  position: "absolute",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  display: "flex",
+  justifyContent: "center",
+  width: "100%",
+  marginBottom: ThemesDefault.space.PX_16,
+};
 createCacheKey[5] = { textAlign: "center" };
 createCacheKey[6] = { position: "absolute", width: "100%", height: "100%", display: "flex", justifyContent: "center" };
-createCacheKey[7] = { height: 350, position: "relative", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" };
-let obj2 = { position: "absolute", paddingHorizontal: ThemesDefault.space.PX_16, display: "flex", justifyContent: "center", width: "100%", marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[7] = {
+  height: 350,
+  position: "relative",
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+};
+let obj2 = {
+  position: "absolute",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  display: "flex",
+  justifyContent: "center",
+  width: "100%",
+  marginBottom: ThemesDefault.space.PX_16,
+};
 createCacheKey[8] = { alignItems: "center", marginTop: -24, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[9] = { position: "absolute", height: "50%", width: "100%", top: 0 };
 createCacheKey[10] = { position: "absolute", height: "100%", width: "100%", top: 0 };
 createCacheKey[11] = { position: "absolute", height: "100%", width: "100%", top: 0 };
 let closure_22 = createCacheKey.createStyles(createCacheKey);
-let closure_25 = { code: "function GuildOnboardingPromptsTsx1(){const{showPrompts,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)});const rawTranslateY=!useReducedMotion&&showPrompts.get()?-80:0;const translateY=withTiming(rawTranslateY,{duration:300,easing:Easing.out(Easing.ease)});return{opacity:opacity,transform:[{translateY:translateY}]};}" };
-let closure_26 = { code: "function GuildOnboardingPromptsTsx2(){const{showPrompts,withDelay,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withDelay(200,withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)}));const rawTranslateY=!useReducedMotion&&showPrompts.get()?-80:0;const translateY=withDelay(200,withTiming(rawTranslateY,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity,transform:[{translateY:translateY}]};}" };
-let closure_27 = { code: "function GuildOnboardingPromptsTsx3(){const{showPrompts,withDelay,withTiming,Easing}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withDelay(200,withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity};}" };
-let closure_28 = { code: "function GuildOnboardingPromptsTsx4(){const{showPrompts,withDelay,withTiming,Easing}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withDelay(200,withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity};}" };
-let closure_29 = { code: "function GuildOnboardingPromptsTsx5(){const{showPrompts,withDelay,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity=showPrompts.get()?1:0;const opacity=withDelay(600,withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)}));const rawTranslateY=!useReducedMotion&&!showPrompts.get()?80:0;const translateY=withDelay(600,withTiming(rawTranslateY,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity,transform:[{translateY:translateY}]};}" };
+let closure_25 = {
+  code: "function GuildOnboardingPromptsTsx1(){const{showPrompts,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)});const rawTranslateY=!useReducedMotion&&showPrompts.get()?-80:0;const translateY=withTiming(rawTranslateY,{duration:300,easing:Easing.out(Easing.ease)});return{opacity:opacity,transform:[{translateY:translateY}]};}",
+};
+let closure_26 = {
+  code: "function GuildOnboardingPromptsTsx2(){const{showPrompts,withDelay,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withDelay(200,withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)}));const rawTranslateY=!useReducedMotion&&showPrompts.get()?-80:0;const translateY=withDelay(200,withTiming(rawTranslateY,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity,transform:[{translateY:translateY}]};}",
+};
+let closure_27 = {
+  code: "function GuildOnboardingPromptsTsx3(){const{showPrompts,withDelay,withTiming,Easing}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withDelay(200,withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity};}",
+};
+let closure_28 = {
+  code: "function GuildOnboardingPromptsTsx4(){const{showPrompts,withDelay,withTiming,Easing}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withDelay(200,withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity};}",
+};
+let closure_29 = {
+  code: "function GuildOnboardingPromptsTsx5(){const{showPrompts,withDelay,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity=showPrompts.get()?1:0;const opacity=withDelay(600,withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)}));const rawTranslateY=!useReducedMotion&&!showPrompts.get()?80:0;const translateY=withDelay(600,withTiming(rawTranslateY,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity,transform:[{translateY:translateY}]};}",
+};
 let obj3 = { alignItems: "center", marginTop: -24, paddingHorizontal: ThemesDefault.space.PX_16 };
 let result = require("set").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingPrompts.tsx");
 
@@ -144,14 +200,18 @@ export default function GuildOnboardingPrompt(guildId) {
   const tmp7 = callback;
   const items5 = [tmp7];
   const items6 = [guildId, prompts[currentPromptIdx]];
-  stateFromStoresArray = guildId(tmp3[23]).useStateFromStoresArray(items5, () => {
-    if (null != closure_11) {
-      let onboardingResponsesForPrompt = callback.getOnboardingResponsesForPrompt(guildId, tmp.id);
-    } else {
-      onboardingResponsesForPrompt = [];
-    }
-    return onboardingResponsesForPrompt;
-  }, items6);
+  stateFromStoresArray = guildId(tmp3[23]).useStateFromStoresArray(
+    items5,
+    () => {
+      if (null != closure_11) {
+        let onboardingResponsesForPrompt = callback.getOnboardingResponsesForPrompt(guildId, tmp.id);
+      } else {
+        onboardingResponsesForPrompt = [];
+      }
+      return onboardingResponsesForPrompt;
+    },
+    items6,
+  );
   let tmp15 = 0 === stateFromStoresArray.length;
   if (tmp15) {
     required = undefined;
@@ -294,7 +354,12 @@ export default function GuildOnboardingPrompt(guildId) {
     obj[1] = items;
     return obj;
   }
-  obj = { showPrompts: sharedValue, withTiming: tmp2(tmp3[33]).withTiming, Easing: tmp2(tmp3[26]).Easing, useReducedMotion: stateFromStores1 };
+  obj = {
+    showPrompts: sharedValue,
+    withTiming: tmp2(tmp3[33]).withTiming,
+    Easing: tmp2(tmp3[26]).Easing,
+    useReducedMotion: stateFromStores1,
+  };
   ot.__closure = obj;
   ot.__workletHash = 6820086589932;
   ot.__initData = closure_25;
@@ -330,7 +395,13 @@ export default function GuildOnboardingPrompt(guildId) {
     obj[1] = items;
     return obj;
   }
-  obj1 = { showPrompts: sharedValue, withDelay: tmp2(tmp3[26]).withDelay, withTiming: tmp2(tmp3[33]).withTiming, Easing: tmp2(tmp3[26]).Easing, useReducedMotion: stateFromStores1 };
+  obj1 = {
+    showPrompts: sharedValue,
+    withDelay: tmp2(tmp3[26]).withDelay,
+    withTiming: tmp2(tmp3[33]).withTiming,
+    Easing: tmp2(tmp3[26]).Easing,
+    useReducedMotion: stateFromStores1,
+  };
   st.__closure = obj1;
   st.__workletHash = 3034833873876;
   st.__initData = closure_26;
@@ -349,7 +420,12 @@ export default function GuildOnboardingPrompt(guildId) {
     obj[0] = obj2.withDelay(200, guildId(prompts[33]).withTiming(num, obj));
     return obj;
   }
-  obj2 = { showPrompts: sharedValue, withDelay: tmp2(tmp3[26]).withDelay, withTiming: tmp2(tmp3[33]).withTiming, Easing: tmp2(tmp3[26]).Easing };
+  obj2 = {
+    showPrompts: sharedValue,
+    withDelay: tmp2(tmp3[26]).withDelay,
+    withTiming: tmp2(tmp3[33]).withTiming,
+    Easing: tmp2(tmp3[26]).Easing,
+  };
   rt.__closure = obj2;
   rt.__workletHash = 2795589385440;
   rt.__initData = closure_27;
@@ -369,11 +445,21 @@ export default function GuildOnboardingPrompt(guildId) {
     return obj;
   }
   const tmp2Result7 = guildId(tmp3[26]);
-  lt.__closure = { showPrompts: sharedValue, withDelay: guildId(tmp3[26]).withDelay, withTiming: guildId(tmp3[33]).withTiming, Easing: guildId(tmp3[26]).Easing };
+  lt.__closure = {
+    showPrompts: sharedValue,
+    withDelay: guildId(tmp3[26]).withDelay,
+    withTiming: guildId(tmp3[33]).withTiming,
+    Easing: guildId(tmp3[26]).Easing,
+  };
   lt.__workletHash = 13481450530727;
   lt.__initData = closure_28;
   const animatedStyle3 = tmp2Result7.useAnimatedStyle(lt);
-  let obj3 = { showPrompts: sharedValue, withDelay: guildId(tmp3[26]).withDelay, withTiming: guildId(tmp3[33]).withTiming, Easing: guildId(tmp3[26]).Easing };
+  let obj3 = {
+    showPrompts: sharedValue,
+    withDelay: guildId(tmp3[26]).withDelay,
+    withTiming: guildId(tmp3[33]).withTiming,
+    Easing: guildId(tmp3[26]).Easing,
+  };
   function ct() {
     let obj = sharedValue;
     let num = 0;
@@ -403,10 +489,25 @@ export default function GuildOnboardingPrompt(guildId) {
     return obj;
   }
   const tmp2Result8 = guildId(tmp3[26]);
-  ct.__closure = { showPrompts: sharedValue, withDelay: guildId(tmp3[26]).withDelay, withTiming: guildId(tmp3[33]).withTiming, Easing: guildId(tmp3[26]).Easing, useReducedMotion: stateFromStores1 };
+  ct.__closure = {
+    showPrompts: sharedValue,
+    withDelay: guildId(tmp3[26]).withDelay,
+    withTiming: guildId(tmp3[33]).withTiming,
+    Easing: guildId(tmp3[26]).Easing,
+    useReducedMotion: stateFromStores1,
+  };
   ct.__workletHash = 14018549800735;
   ct.__initData = closure_29;
-  const items12 = [navigation, currentPromptIdx, stateFromStoresArray, guildId, prompts, onClose, backShouldLeaveGuild, tmp8];
+  const items12 = [
+    navigation,
+    currentPromptIdx,
+    stateFromStoresArray,
+    guildId,
+    prompts,
+    onClose,
+    backShouldLeaveGuild,
+    tmp8,
+  ];
   const animatedStyle4 = tmp2Result8.useAnimatedStyle(ct);
   const layoutEffect = obj5.useLayoutEffect(() => {
     if (0 === currentPromptIdx) {
@@ -483,7 +584,7 @@ export default function GuildOnboardingPrompt(guildId) {
   }, items12);
   obj5 = { style: tmp.flex, children: null };
   let obj6 = { top: true, bottom: true, style: items13, children: null };
-  items13 = [, ];
+  items13 = [,];
   ({ flex: arr16[0], container: arr16[1] } = tmp);
   const obj7 = { style: items14, children: null };
   items14 = [tmp.flex, animatedStyle4];
@@ -535,7 +636,15 @@ export default function GuildOnboardingPrompt(guildId) {
       }
       const type = tmp11.type;
       if (stateFromStores2.MULTIPLE_CHOICE === type) {
-        const obj8 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+        const obj8 = {
+          guildId: null,
+          currentPrompt: null,
+          lastPrompt: null,
+          currentPromptIndex: null,
+          numberOfPrompts: null,
+          selectOption: null,
+          handleOnPress: null,
+        };
         obj8[0] = guildId;
         obj8[1] = tmp11;
         obj8[2] = tmp18;
@@ -545,7 +654,15 @@ export default function GuildOnboardingPrompt(guildId) {
         obj8[6] = handleOnPress;
         tmp34Result = tmp34(tmp2(tmp3[36]).MultipleChoicePrompt, obj8);
       } else if (tmp36.DROPDOWN === type) {
-        const obj9 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+        const obj9 = {
+          guildId: null,
+          currentPrompt: null,
+          lastPrompt: null,
+          currentPromptIndex: null,
+          numberOfPrompts: null,
+          selectOption: null,
+          handleOnPress: null,
+        };
         obj9[0] = guildId;
         obj9[1] = tmp11;
         obj9[2] = tmp18;
@@ -562,10 +679,10 @@ export default function GuildOnboardingPrompt(guildId) {
   }
   obj7[1] = tmp34Result;
   obj6[3] = guildSplashURL(currentPromptIdx(tmp3[26]).View, obj7);
-  const items15 = [guildSplashURL(guildId(tmp3[35]).SafeAreaPaddingView, obj6), ];
+  const items15 = [guildSplashURL(guildId(tmp3[35]).SafeAreaPaddingView, obj6)];
   const obj10 = { style: stateFromStores1.absoluteFill, pointerEvents: "none", children: null };
   const obj11 = { style: items16, pointerEvents: "none", children: null };
-  items16 = [, ];
+  items16 = [,];
   ({ flex: arr19[0], landingOverlay: arr19[1] } = tmp);
   const obj12 = { style: items17, children: null };
   items17 = [tmp.landingOverlay, animatedStyle3];
@@ -576,20 +693,32 @@ export default function GuildOnboardingPrompt(guildId) {
     obj13[1] = tmp19[0];
     tmp34Result = tmp34(BackgroundImageGradient, obj13);
   }
-  const items18 = [tmp34Result, ];
+  const items18 = [tmp34Result];
   const obj14 = { style: tmp.darkColorGradient, start: null, end: null, colors: null };
   tmp6Result = tmp6(tmp3[21]);
   obj14[1] = guildId(tmp3[22]).VerticalGradient.START;
   obj14[2] = guildId(tmp3[22]).VerticalGradient.END;
-  let obj4 = { showPrompts: sharedValue, withDelay: guildId(tmp3[26]).withDelay, withTiming: guildId(tmp3[33]).withTiming, Easing: guildId(tmp3[26]).Easing, useReducedMotion: stateFromStores1 };
-  const items19 = [guildId(tmp3[19]).hexWithOpacity(currentPromptIdx(tmp3[17]).unsafe_rawColors.PRIMARY_800, 0.5), currentPromptIdx(tmp3[17]).unsafe_rawColors.PRIMARY_800];
+  let obj4 = {
+    showPrompts: sharedValue,
+    withDelay: guildId(tmp3[26]).withDelay,
+    withTiming: guildId(tmp3[33]).withTiming,
+    Easing: guildId(tmp3[26]).Easing,
+    useReducedMotion: stateFromStores1,
+  };
+  const items19 = [
+    guildId(tmp3[19]).hexWithOpacity(currentPromptIdx(tmp3[17]).unsafe_rawColors.PRIMARY_800, 0.5),
+    currentPromptIdx(tmp3[17]).unsafe_rawColors.PRIMARY_800,
+  ];
   obj14[3] = items19;
   items18[1] = guildSplashURL(tmp6Result, obj14);
   obj12[1] = items18;
-  const items20 = [closure_21(currentPromptIdx(tmp3[26]).View, obj12), , ];
+  const items20 = [closure_21(currentPromptIdx(tmp3[26]).View, obj12), ,];
   const tmp2Result10 = guildId(tmp3[19]);
   const items21 = [tmp.artWrapper, animatedStyle];
-  items20[1] = guildSplashURL(currentPromptIdx(tmp3[26]).View, { style: items21, children: guildSplashURL(currentPromptIdx(tmp3[38]), obj16) });
+  items20[1] = guildSplashURL(currentPromptIdx(tmp3[26]).View, {
+    style: items21,
+    children: guildSplashURL(currentPromptIdx(tmp3[38]), obj16),
+  });
   const obj17 = { style: items22, children: null };
   items22 = [tmp.landingBody, animatedStyle1];
   const obj18 = { style: tmp.subtitle, variant: "text-md/semibold", color: "text-overlay-light", children: null };
@@ -602,18 +731,29 @@ export default function GuildOnboardingPrompt(guildId) {
     str = "";
   }
   obj18[3] = intl.format(guildId(tmp3[40]).t.O2bQlD, { guildName: str });
-  const items23 = [guildSplashURL(guildId(tmp3[39]).Text, obj18), ];
-  const obj19 = { style: tmp.onboardingTitle, accessibilityRole: "header", variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
+  const items23 = [guildSplashURL(guildId(tmp3[39]).Text, obj18)];
+  const obj19 = {
+    style: tmp.onboardingTitle,
+    accessibilityRole: "header",
+    variant: "heading-xl/semibold",
+    color: "text-overlay-light",
+    children: null,
+  };
   const intl2 = tmp2(tmp3[40]).intl;
   obj19[4] = intl2.string(guildId(tmp3[40]).t["Alcl/e"]);
   items23[1] = guildSplashURL(guildId(tmp3[39]).Text, obj19);
   obj17[1] = items23;
   items20[2] = closure_21(currentPromptIdx(tmp3[26]).View, obj17);
   obj11[2] = items20;
-  const items24 = [closure_21(currentPromptIdx(tmp3[26]).View, obj11), ];
+  const items24 = [closure_21(currentPromptIdx(tmp3[26]).View, obj11)];
   const obj20 = { style: items25, pointerEvents: "auto", children: null };
   items25 = [tmp.onboardingPolicy, animatedStyle2, { bottom: currentPromptIdx(prompts[24])().bottom }];
-  const obj21 = { style: tmp.onboardingPolicyText, variant: "heading-sm/normal", color: "text-default", children: null };
+  const obj21 = {
+    style: tmp.onboardingPolicyText,
+    variant: "heading-sm/normal",
+    color: "text-default",
+    children: null,
+  };
   const intl3 = tmp2(tmp3[40]).intl;
   obj21[3] = intl3.format(guildId(tmp3[40]).t.kI6UoD, { privacyLink: constants.PRIVACY });
   obj20[2] = guildSplashURL(guildId(tmp3[39]).Text, obj21);
@@ -622,4 +762,4 @@ export default function GuildOnboardingPrompt(guildId) {
   items15[1] = closure_21(closure_7, obj10);
   obj5[1] = items15;
   return closure_21(closure_7, obj5);
-};
+}

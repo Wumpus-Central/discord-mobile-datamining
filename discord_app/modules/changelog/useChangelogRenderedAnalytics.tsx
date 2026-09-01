@@ -19,13 +19,17 @@ export default function useChangelogRenderedAnalytics(arg0) {
   const tmp3 = _require;
   const items1 = [stateFromStores2];
   const items2 = [tmp2, stateFromStores];
-  const stateFromStores1 = _require(stateFromStores[6]).useStateFromStores(items1, () => {
-    let str = closure_1;
-    if (closure_1 == null) {
-      str = "";
-    }
-    return stateFromStores2.getChangelog(str, stateFromStores);
-  }, items2);
+  const stateFromStores1 = _require(stateFromStores[6]).useStateFromStores(
+    items1,
+    () => {
+      let str = closure_1;
+      if (closure_1 == null) {
+        str = "";
+      }
+      return stateFromStores2.getChangelog(str, stateFromStores);
+    },
+    items2,
+  );
   const tmp6 = importDefault(stateFromStores[7])(arg0);
   closure_4 = tmp6;
   let timestamp = null;
@@ -97,4 +101,4 @@ export default function useChangelogRenderedAnalytics(arg0) {
       }
     };
   }, items8);
-};
+}

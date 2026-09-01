@@ -8,7 +8,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row", columnGap: 4, flexWrap: "wrap" }, section: { flexDirection: "row", alignItems: "center", columnGap: 6 } });
+let closure_7 = createCacheKey.createStyles({
+  container: { flexDirection: "row", columnGap: 4, flexWrap: "wrap" },
+  section: { flexDirection: "row", alignItems: "center", columnGap: 6 },
+});
 const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileMutualGuilds.tsx");
 
 export default function UserProfileMutualGuilds(user) {
@@ -37,9 +40,14 @@ export default function UserProfileMutualGuilds(user) {
               closure_1_0(closure_1_2[11]).transitionToGuild(arg0);
               const obj = closure_1_0(closure_1_2[11]);
               closure_1_1(closure_1_2[8]).hideAllActionSheets();
-            }
+            },
           };
-          trackUserProfileAction(closure_1_2[8]).openLazy(user(closure_1_2[10])(closure_1_2[9], closure_1_2.paths), "UserProfileMutualGuildsActionSheet", obj, "stack");
+          trackUserProfileAction(closure_1_2[8]).openLazy(
+            user(closure_1_2[10])(closure_1_2[9], closure_1_2.paths),
+            "UserProfileMutualGuildsActionSheet",
+            obj,
+            "stack",
+          );
         };
         obj1 = { size: null, totalCount: null, names: null, children: null };
         obj1[0] = tmp2(6004).GuildIconSizes.XXSMALL;
@@ -49,7 +57,7 @@ export default function UserProfileMutualGuilds(user) {
           const obj = { guild, size: user(6004).GuildIconSizes.XXSMALL };
           return callback(trackUserProfileAction(6004), obj, guild.id);
         });
-        const items = [callback(tmp2(9270).GuildIconPile, obj1), ];
+        const items = [callback(tmp2(9270).GuildIconPile, obj1)];
         const obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
         obj2[2] = trackUserProfileAction(9233)(mutualGuilds.length);
         items[1] = callback(tmp2(4474).Text, obj2);
@@ -60,4 +68,4 @@ export default function UserProfileMutualGuilds(user) {
     }
   }
   return null;
-};
+}

@@ -18,10 +18,29 @@ let c4 = importAllResult;
 let obj = { container: null, pressable: null, textContainer: null, avatar: null };
 obj = { paddingHorizontal: ThemesDefault.space.PX_8 };
 obj[0] = obj;
-createCacheKey = { borderRadius: ThemesDefault.radii.md, flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.md,
+  flexDirection: "row",
+  alignItems: "center",
+  padding: ThemesDefault.space.PX_8,
+};
 obj[1] = createCacheKey;
-obj[2] = { marginRight: ThemesDefault.space.PX_8, flexDirection: "column", alignSelf: "center", overflow: "hidden", flexGrow: 1, flexShrink: 1 };
-let obj2 = { marginRight: ThemesDefault.space.PX_8, flexDirection: "column", alignSelf: "center", overflow: "hidden", flexGrow: 1, flexShrink: 1 };
+obj[2] = {
+  marginRight: ThemesDefault.space.PX_8,
+  flexDirection: "column",
+  alignSelf: "center",
+  overflow: "hidden",
+  flexGrow: 1,
+  flexShrink: 1,
+};
+let obj2 = {
+  marginRight: ThemesDefault.space.PX_8,
+  flexDirection: "column",
+  alignSelf: "center",
+  overflow: "hidden",
+  flexGrow: 1,
+  flexShrink: 1,
+};
 obj[3] = { marginRight: ThemesDefault.space.PX_8 };
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(height) {
@@ -36,18 +55,23 @@ let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(h
   let items = [tmp, height];
   const items1 = [suggestedFriend];
   const memo = importAllResult.useMemo(() => {
-    const items = [, , ];
+    const items = [, ,];
     ({ container: arr[0], pressable: arr[1] } = closure_4);
     items[2] = { height };
     return items;
   }, items);
   const callback = importAllResult.useCallback(() => {
-    height(suggestedFriend[10])(suggestedFriend[9], suggestedFriend.paths).then((arg0) => arg0.default({ userId: closure_2.user.id, localUser: closure_2.user, location: "Messages Tab User Profile" }));
+    height(suggestedFriend[10])(suggestedFriend[9], suggestedFriend.paths).then((arg0) =>
+      arg0.default({ userId: closure_2.user.id, localUser: closure_2.user, location: "Messages Tab User Profile" }),
+    );
   }, items1);
   obj1 = height(suggestedFriend[11]);
   const items2 = [closure_6];
   if (!addedPressed) {
-    addedPressed = obj1.useStateFromStores(items2, () => closure_1_6.getRelationshipType(suggestedFriend.user.id) === closure_1_8.PENDING_OUTGOING);
+    addedPressed = obj1.useStateFromStores(
+      items2,
+      () => closure_1_6.getRelationshipType(suggestedFriend.user.id) === closure_1_8.PENDING_OUTGOING,
+    );
   }
   const items3 = [suggestedFriend];
   const memo1 = obj.useMemo(() => {
@@ -62,7 +86,10 @@ let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(h
         if (tmp.friendSuggestionName.length > 0) {
           let friendSuggestionName = tmp.friendSuggestionName;
         }
-        const suggestedContactNameForSuggestion = height(suggestedFriend[14]).getSuggestedContactNameForSuggestion(friendSuggestionName, tmp);
+        const suggestedContactNameForSuggestion = height(suggestedFriend[14]).getSuggestedContactNameForSuggestion(
+          friendSuggestionName,
+          tmp,
+        );
         let str2 = "";
         if (null != suggestedContactNameForSuggestion) {
           const _HermesInternal = HermesInternal;
@@ -99,14 +126,28 @@ let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(h
   obj = { accessibilityRole: "button", style: memo, onPress: callback, collapsable: false, children: null };
   obj = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: true };
   obj[3] = height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32;
-  const items5 = [callback2(height(suggestedFriend[18]).Avatar, obj), , ];
+  const items5 = [callback2(height(suggestedFriend[18]).Avatar, obj), ,];
   obj1 = { style: tmp.textContainer, children: null };
-  const items6 = [callback2(height(suggestedFriend[19]).Text, { lineClamp: 1, variant: "redesign/channel-title/semibold", maxFontSizeMultiplier: 2, color: "text-default", children: memo1.suggestionName }), ];
+  const items6 = [
+    callback2(height(suggestedFriend[19]).Text, {
+      lineClamp: 1,
+      variant: "redesign/channel-title/semibold",
+      maxFontSizeMultiplier: 2,
+      color: "text-default",
+      children: memo1.suggestionName,
+    }),
+  ];
   if (addedPressed) {
     let intl = tmp4(tmp5[12]).intl;
     userStatusLabel = intl.string(tmp4(tmp5[12]).t.Kzyxm9);
   }
-  items6[1] = callback2(height(suggestedFriend[19]).Text, { variant: "text-xs/medium", color: "text-default", lineClamp: 1, maxFontSizeMultiplier: 2, children: userStatusLabel });
+  items6[1] = callback2(height(suggestedFriend[19]).Text, {
+    variant: "text-xs/medium",
+    color: "text-default",
+    lineClamp: 1,
+    maxFontSizeMultiplier: 2,
+    children: userStatusLabel,
+  });
   obj1[1] = items6;
   items5[1] = closure_10(View, obj1);
   if (addedPressed) {
@@ -152,7 +193,9 @@ const memoResult2 = importAllResult.memo((arg0) => {
   obj.setAddedPressed = tmp3;
   return callback2(closure_12, obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriend.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriend.tsx",
+);
 
 export const getMessagesItemSuggestedFriendHeight = function getMessagesItemSuggestedFriendHeight(fontScale) {
   const obj = map;

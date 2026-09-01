@@ -3,7 +3,10 @@ import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import PermissionOverwriteType from "../../flow/Server.tsx";
 
-const items = [{ name: "True", displayName: "True", value: "true" }, { name: "False", displayName: "False", value: "false" }];
+const items = [
+  { name: "True", displayName: "True", value: "true" },
+  { name: "False", displayName: "False", value: "false" },
+];
 const frozen = Object.freeze([]);
 const frozen1 = Object.freeze([]);
 const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandConstants.tsx");

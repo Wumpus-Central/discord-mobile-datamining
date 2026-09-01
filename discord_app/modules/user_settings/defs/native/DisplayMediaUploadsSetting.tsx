@@ -12,7 +12,7 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.CHAT,
   useValue: explicitContentFromProto.InlineAttachmentMedia.useSetting,
-  onValueChange: explicitContentFromProto.InlineAttachmentMedia.updateSetting
+  onValueChange: explicitContentFromProto.InlineAttachmentMedia.updateSetting,
 });
 const obj = {
   useTitle() {
@@ -21,7 +21,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.CHAT,
   useValue: explicitContentFromProto.InlineAttachmentMedia.useSetting,
-  onValueChange: explicitContentFromProto.InlineAttachmentMedia.updateSetting
+  onValueChange: explicitContentFromProto.InlineAttachmentMedia.updateSetting,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DisplayMediaUploadsSetting.tsx");
 

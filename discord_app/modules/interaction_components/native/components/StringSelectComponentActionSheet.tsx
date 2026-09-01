@@ -6,13 +6,21 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-createCacheKey = { selectionOptionItemWithDescription: { minHeight: 64 }, selectionOptionItemDescription: { marginTop: 2 }, emojiWrapper: null, textEmoji: null, fastImageEmoji: null };
+createCacheKey = {
+  selectionOptionItemWithDescription: { minHeight: 64 },
+  selectionOptionItemDescription: { marginTop: 2 },
+  emojiWrapper: null,
+  textEmoji: null,
+  fastImageEmoji: null,
+};
 createCacheKey = { flexShrink: 0, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { fontSize: 16, color: "#000000" };
 createCacheKey[4] = { width: 24, height: 24 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/components/StringSelectComponentActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/native/components/StringSelectComponentActionSheet.tsx",
+);
 
 export default function StringSelectComponentActionSheet(selectionActionComponent) {
   selectionActionComponent = selectionActionComponent.selectionActionComponent;
@@ -26,7 +34,10 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   let tmp = callback();
   dependencyMap = tmp;
   let obj = selectionActionComponent(8028);
-  let tmp3 = first(React.useState(new Set(obj.getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
+  let tmp3 = first(
+    React.useState(new Set(obj.getInitialStringSelectOptions(selectionActionComponent, containerId))),
+    2,
+  );
   first = tmp3[0];
   React = tmp3[1];
   let items = [selectionActionComponent];
@@ -114,7 +125,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
     submitSelection: null,
     itemAccessibilityLabel: null,
     channelId: null,
-    allowEmpty: null
+    allowEmpty: null,
   };
   let set = new Set(obj.getInitialStringSelectOptions(selectionActionComponent, containerId));
   const tmp9 = memo;
@@ -144,4 +155,4 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   obj[12] = channelId;
   obj[13] = allowEmpty;
   return tmp9(onSubmit(11395), obj);
-};
+}

@@ -9,4 +9,4 @@ const result = set.fileFinishedImporting("modules/forwarding/native/ForwardingIc
 export default function ForwardingIcon(arg0) {
   const merged = Object.assign(arg0);
   return jsx(ArrowAngleRightUpIcon.ArrowAngleRightUpIcon, {});
-};
+}

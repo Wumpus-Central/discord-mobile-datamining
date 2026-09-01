@@ -9,7 +9,10 @@ const require = arg1;
 noopAll;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ header: { paddingHorizontal: 8, flexDirection: "row", alignItems: "center", gap: 16 }, emojiImage: { width: 30, height: 30, resizeMode: "contain" } });
+let closure_8 = createCacheKey.createStyles({
+  header: { paddingHorizontal: 8, flexDirection: "row", alignItems: "center", gap: 16 },
+  emojiImage: { width: 30, height: 30, resizeMode: "contain" },
+});
 const result = require("set").fileFinishedImporting("modules/guild_settings/native/EmojiOverflowActionSheet.tsx");
 
 export default function EmojiOverflowActionSheet(emoji) {
@@ -23,10 +26,21 @@ export default function EmojiOverflowActionSheet(emoji) {
   let obj3 = importAll(onSelectRolesForEmoji[6]);
   obj[0] = obj3.getEmojiURL({ id: emoji.id, animated: emoji.animated, size: 48 });
   obj[1] = obj;
-  const items = [callback2(onClose, obj), callback2(emoji(onSelectRolesForEmoji[7]).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: ":" + emoji.name + ":" })];
+  const items = [
+    callback2(onClose, obj),
+    callback2(emoji(onSelectRolesForEmoji[7]).Text, {
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      children: ":" + emoji.name + ":",
+    }),
+  ];
   obj[1] = items;
-  const items1 = [callback3(closure_5, obj), ];
-  obj3 = { icon: callback2(emoji(onSelectRolesForEmoji[10]).TrashIcon, { color: "text-feedback-critical" }), label: null, onPress: null };
+  const items1 = [callback3(closure_5, obj)];
+  obj3 = {
+    icon: callback2(emoji(onSelectRolesForEmoji[10]).TrashIcon, { color: "text-feedback-critical" }),
+    label: null,
+    onPress: null,
+  };
   let obj4 = { variant: "text-md/semibold", color: "text-feedback-critical", children: null };
   let intl = emoji(onSelectRolesForEmoji[11]).intl;
   obj4[2] = intl.string(emoji(onSelectRolesForEmoji[11]).t.oyYWHE);
@@ -35,7 +49,7 @@ export default function EmojiOverflowActionSheet(emoji) {
     emoji(onSelectRolesForEmoji[12]).deleteEmoji(closure_1, emoji.id);
     onClose();
   };
-  const items2 = [callback2(emoji(onSelectRolesForEmoji[9]).TableRow, obj3), , , ];
+  const items2 = [callback2(emoji(onSelectRolesForEmoji[9]).TableRow, obj3), , ,];
   const obj5 = { icon: callback2(emoji(onSelectRolesForEmoji[13]).PencilIcon, {}), label: null, onPress: null };
   let obj6 = { variant: "text-md/semibold", children: null };
   const intl2 = emoji(onSelectRolesForEmoji[11]).intl;
@@ -54,7 +68,7 @@ export default function EmojiOverflowActionSheet(emoji) {
     const intl3 = tmp3(tmp4[11]).intl;
     obj8[1] = intl3.string(tmp3(tmp4[11]).t["+riKdA"]);
     obj7[1] = tmp5(tmp3(tmp4[7]).Text, obj8);
-    obj7[2] = callback(function*() {
+    obj7[2] = callback(function* () {
       closure_2 = tmp3;
       let v0 = 1;
       yield closure_1_2(closure_1_0);
@@ -121,4 +135,4 @@ export default function EmojiOverflowActionSheet(emoji) {
   items1[1] = callback3(emoji(onSelectRolesForEmoji[8]).TableRowGroup, obj10);
   obj9[0] = items1;
   return callback3(emoji(onSelectRolesForEmoji[5]).ActionSheet, obj9);
-};
+}

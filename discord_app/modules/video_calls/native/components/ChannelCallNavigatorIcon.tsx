@@ -12,18 +12,55 @@ require = arg1;
 noopAll;
 ({ View: c3, StyleSheet: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { pressableContainer: { marginHorizontal: 4 }, pressable: null, container: null, text: null, disabled: null, iconColor: null };
+createCacheKey = {
+  pressableContainer: { marginHorizontal: 4 },
+  pressable: null,
+  container: null,
+  text: null,
+  disabled: null,
+  iconColor: null,
+};
 createCacheKey = { borderRadius: ThemesDefault.radii.lg };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { flexDirection: "row", height: 32, width: 32, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let obj1 = { flexDirection: "row", height: 32, width: 32, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[3] = { marginLeft: 4, fontSize: 14, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.WHITE };
+createCacheKey[2] = {
+  flexDirection: "row",
+  height: 32,
+  width: 32,
+  borderRadius: ThemesDefault.radii.lg,
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
+let obj1 = {
+  flexDirection: "row",
+  height: 32,
+  width: 32,
+  borderRadius: ThemesDefault.radii.lg,
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
+createCacheKey[3] = {
+  marginLeft: 4,
+  fontSize: 14,
+  fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD,
+  color: ThemesDefault.colors.WHITE,
+};
 createCacheKey[4] = { opacity: 0.5 };
-let obj2 = { marginLeft: 4, fontSize: 14, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.WHITE };
+let obj2 = {
+  marginLeft: 4,
+  fontSize: 14,
+  fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD,
+  color: ThemesDefault.colors.WHITE,
+};
 createCacheKey[5] = { color: ThemesDefault.colors.ICON_SUBTLE };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { color: ThemesDefault.colors.ICON_SUBTLE };
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallNavigatorIcon.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/video_calls/native/components/ChannelCallNavigatorIcon.tsx",
+);
 
 export default function ChannelCallNavigatorIcon(disableBackground) {
   ({ onPress: require, membersCount, disabled, theme } = disableBackground);
@@ -49,9 +86,9 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
       }
       callback();
     },
-    children: null
+    children: null,
   };
-  const items = [tmp.container, disableBackground.containerStyle, ];
+  const items = [tmp.container, disableBackground.containerStyle];
   if (disabled) {
     disabled = tmp.disabled;
   }
@@ -66,7 +103,7 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
       tmp2Result = tmp2(isBlurDisabledDefault, obj1);
     }
   }
-  const items1 = [tmp2Result, , ];
+  const items1 = [tmp2Result, ,];
   if (null != IconComponent) {
     const obj2 = { color: null, size: "sm" };
     obj2[0] = tmp.iconColor.color;
@@ -95,4 +132,4 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
   obj[5] = items2;
   obj[1] = closure_7(PressableBase.PressableOpacity, obj);
   return closure_6(closure_3, obj);
-};
+}

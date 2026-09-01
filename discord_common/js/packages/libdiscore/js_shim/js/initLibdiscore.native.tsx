@@ -5,7 +5,7 @@ import importAllResult from "../../mobile/js/timers.tsx";
 
 function _initLibdiscore() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();
@@ -50,7 +50,9 @@ function _initLibdiscore() {
   return applyArgumentsResult;
 }
 const result = importAllResult.registerTimerPolyfills();
-const result1 = require("set").fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx");
+const result1 = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx",
+);
 
 export const isLibdiscoreInitialized = function isLibdiscoreInitialized() {
   return undefined !== NativeModules.LibDiscoreModule;

@@ -10,7 +10,7 @@ export default function useIsSocialLayerParentApplication(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   return React.useMemo(() => callback(closure_1_1[2]).hasApplicationFlag(callback, closure_1_3.PARENT), items);
-};
+}
 export const getIsSocialLayerParentApplication = function getIsSocialLayerParentApplication(application) {
   return getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.PARENT);
 };

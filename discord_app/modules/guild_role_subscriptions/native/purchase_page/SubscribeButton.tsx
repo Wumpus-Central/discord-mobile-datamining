@@ -23,23 +23,36 @@ function SwitchTiersButton(activeSubscription) {
   obj = { children: null };
   obj = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = activeSubscription(1236).intl;
-  obj1 = { activeListingName: callback2(obj.useName(activeListingId), 1)[0], billingEndDate: obj1.format("MMMM Do"), emphasisHook };
+  obj1 = {
+    activeListingName: callback2(obj.useName(activeListingId), 1)[0],
+    billingEndDate: obj1.format("MMMM Do"),
+    emphasisHook,
+  };
   obj[2] = intl.format(activeSubscription(1236).t.lA7ztO, obj1);
-  const items = [callback3(activeSubscription(4474).Text, obj), callback3(activeSubscription(1297).Spacer, { size: 16 }), ];
+  const items = [
+    callback3(activeSubscription(4474).Text, obj),
+    callback3(activeSubscription(1297).Spacer, { size: 16 }),
+  ];
   const obj2 = { text: null, onPress: null };
   const intl2 = activeSubscription(1236).intl;
   obj2[0] = intl2.string(activeSubscription(1236).t.SACegK);
   obj2[1] = function onPress() {
     let obj = activeListingId(closure_1_3[19]);
     obj = { activeSubscription, activeListingId, changeToListingId };
-    obj.openLazy(activeSubscription(closure_1_3[21])(closure_1_3[20], closure_1_3.paths), "ChangeSubscriptionCard:" + changeToListingId, obj);
+    obj.openLazy(
+      activeSubscription(closure_1_3[21])(closure_1_3[20], closure_1_3.paths),
+      "ChangeSubscriptionCard:" + changeToListingId,
+      obj,
+    );
   };
   items[2] = callback3(activeSubscription(16129).ArrowButton, obj2);
   obj[0] = items;
   return callback4(View, obj);
 }
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/SubscribeButton.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/purchase_page/SubscribeButton.tsx",
+);
 
 export default function SubscribeButton(listingId) {
   listingId = listingId.listingId;
@@ -50,7 +63,11 @@ export default function SubscribeButton(listingId) {
   let obj = createSubscription(showMemberVerificationGate[10]);
   const items = [closure_9];
   const items1 = [listingId];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_9.getSubscriptionGroupListingForSubscriptionListing(createSubscription), items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => closure_1_9.getSubscriptionGroupListingForSubscriptionListing(createSubscription),
+    items1,
+  );
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -66,86 +83,97 @@ export default function SubscribeButton(listingId) {
   const applicationId = obj2.useApplicationId(listingId);
   let tmpResult = tmp(tmp2[10]);
   const items2 = [closure_8];
-  if (tmpResult.useStateFromStores(items2, () => currentlySelectedChannelId.getCurrentlySelectedChannelId()) === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
+  if (
+    tmpResult.useStateFromStores(items2, () => currentlySelectedChannelId.getCurrentlySelectedChannelId()) ===
+    StaticChannelRoute.ROLE_SUBSCRIPTIONS
+  ) {
     let ROLE_SUBSCRIPTIONS_TAB = AnalyticsLocations.ROLE_SUBSCRIPTION_GATED_CHANNEL;
   } else {
     ROLE_SUBSCRIPTIONS_TAB = AnalyticsLocations.ROLE_SUBSCRIPTIONS_TAB;
   }
   let tmp4Result = tmp4(tmp2[11]);
-  obj = { planId: callback2(obj1.useSubscriptionPlan(listingId), 1)[0].id, analyticsLocation: ROLE_SUBSCRIPTIONS_TAB, skuId: listingId, applicationId };
+  obj = {
+    planId: callback2(obj1.useSubscriptionPlan(listingId), 1)[0].id,
+    analyticsLocation: ROLE_SUBSCRIPTIONS_TAB,
+    skuId: listingId,
+    applicationId,
+  };
   createSubscription = tmp4Result.useCreateSubscription(obj);
   createSubscription = createSubscription.createSubscription;
   const nativePaymentsConnected = createSubscription.nativePaymentsConnected;
   const tmp9Result = callback2(React.useState(false), 2);
   callback = tmp9Result[1];
   const items3 = [createSubscription];
-  callback = React.useCallback(callback(function*() {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  callback = React.useCallback(
+    callback(function* () {
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
+        try {
+          c4 = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_0 = tmp3;
+              c3 = 1;
+              v0(true);
+              v0 = 2;
+              c4 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_0();
+              return obj1;
+            }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            v0(false);
+            throw closure_2;
+          } else if (arg0 === 1) {
             c4 = 3;
             throw arg1;
           } else if (arg0 === 2) {
+            c3 = 0;
+            v0(false);
             c4 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           } else {
-            closure_0 = tmp3;
-            c3 = 1;
-            v0(true);
-            v0 = 2;
-            c4 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0();
-            return obj1;
+            c3 = 0;
+            v0(false);
+            c4 = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (1 === tmp7) {
-          c3 = 0;
-          v0(false);
-          throw closure_2;
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 0;
-          v0(false);
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          c3 = 0;
-          v0(false);
-          c4 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp22) {
-        closure_2 = tmp22;
-        if (tmp4 === c3) {
-          c4 = tmp2;
-          throw tmp22;
-        } else {
-          v0 = tmp;
+        } catch (tmp22) {
+          closure_2 = tmp22;
+          if (tmp4 === c3) {
+            c4 = tmp2;
+            throw tmp22;
+          } else {
+            v0 = tmp;
+          }
         }
       }
-    }
-  }), items3);
+    }),
+    items3,
+  );
   let first = !nativePaymentsConnected;
   if (nativePaymentsConnected) {
     first = tmp9Result[0];
@@ -161,9 +189,7 @@ export default function SubscribeButton(listingId) {
     obj = { text: null, variant: "secondary", disabled: true, onPress: null };
     let intl2 = tmp(tmp2[14]).intl;
     obj[0] = intl2.string(tmp(tmp2[14]).t.XvAuMo);
-    obj[3] = function onPress() {
-
-    };
+    obj[3] = function onPress() {};
     let tmp22 = callback3(tmp(tmp2[24]).Button, obj);
   } else {
     if (null != activeSubscriptionListing) {
@@ -184,4 +210,4 @@ export default function SubscribeButton(listingId) {
     tmp22 = callback3(tmp4Result, obj2);
   }
   return tmp22;
-};
+}

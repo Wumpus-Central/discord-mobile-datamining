@@ -10,7 +10,13 @@ const require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { content: null, badge: null, overflowCount: null };
-createCacheKey = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+createCacheKey = {
+  flexGrow: 1,
+  flexShrink: 1,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_4,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 32, height: 32 };
 createCacheKey[2] = { marginLeft: 2 };
@@ -90,7 +96,7 @@ export default function UserProfileBadgesEditButton(arg0) {
         return closure_1_6(closure_1_4, obj, id.id);
       });
     }
-    const items = [mapped1, ];
+    const items = [mapped1];
     let tmp14Result = diff > 0;
     if (tmp14Result) {
       const obj2 = { variant: "text-md/normal", color: "mobile-text-heading-primary", style: null, children: null };
@@ -114,4 +120,4 @@ export default function UserProfileBadgesEditButton(arg0) {
   } else {
     return null;
   }
-};
+}

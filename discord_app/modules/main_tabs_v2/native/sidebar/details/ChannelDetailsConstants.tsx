@@ -5,8 +5,20 @@ import MessageEmbedTypes from "../../../../search/SearchConstants.tsx";
 const sum = MessageEmbedTypes.SEARCH_BAR_HEIGHT + 40;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx");
 
-export const ChannelDetailsNavigatorScreens = { DETAILS: "root", MUTE: "mute", THREADS: "threads", SETTINGS: "settings", PINNED_MESSAGES: "pinned-messages" };
-export const ChannelDetailsButtonTypes = { SEARCH: "search", MUTE: "mute", THREADS: "threads", SETTINGS: "settings", MORE: "more" };
+export const ChannelDetailsNavigatorScreens = {
+  DETAILS: "root",
+  MUTE: "mute",
+  THREADS: "threads",
+  SETTINGS: "settings",
+  PINNED_MESSAGES: "pinned-messages",
+};
+export const ChannelDetailsButtonTypes = {
+  SEARCH: "search",
+  MUTE: "mute",
+  THREADS: "threads",
+  SETTINGS: "settings",
+  MORE: "more",
+};
 export const CHANNEL_DETAILS_MARGIN = 16;
 export const CHANNEL_DETAILS_TOP_MARGIN = 24;
 export const CHANNEL_DETAILS_BODY_TOP_MARGIN = 20;

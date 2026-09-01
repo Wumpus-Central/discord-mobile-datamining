@@ -17,8 +17,19 @@ createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16, marginTop: Theme
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 const obj1 = { SENSITIVE_CONTENT_FILTERS: null, CONTENT_AND_SOCIAL: null, DATA_AND_PRIVACY: null };
-let items = [{ order: 100, predicate: require("getEmptyActivityFormatter").isParentallyControlled, Component: FamilyCenterSettingsParentalControlsNoticeDefault }, , ];
-const obj2 = { order: 100, predicate: require("getEmptyActivityFormatter").isParentallyControlled, Component: FamilyCenterSettingsParentalControlsNoticeDefault };
+let items = [
+  {
+    order: 100,
+    predicate: require("getEmptyActivityFormatter").isParentallyControlled,
+    Component: FamilyCenterSettingsParentalControlsNoticeDefault,
+  },
+  ,
+];
+const obj2 = {
+  order: 100,
+  predicate: require("getEmptyActivityFormatter").isParentallyControlled,
+  Component: FamilyCenterSettingsParentalControlsNoticeDefault,
+};
 items[1] = {
   order: 300,
   predicate() {
@@ -29,7 +40,7 @@ items[1] = {
     }
     return false === nsfwAllowed;
   },
-  Component: require("SensitiveContentFiltersTeenNotice").SensitiveContentFiltersTeenNotice
+  Component: require("SensitiveContentFiltersTeenNotice").SensitiveContentFiltersTeenNotice,
 };
 const obj3 = {
   order: 300,
@@ -41,7 +52,7 @@ const obj3 = {
     }
     return false === nsfwAllowed;
   },
-  Component: require("SensitiveContentFiltersTeenNotice").SensitiveContentFiltersTeenNotice
+  Component: require("SensitiveContentFiltersTeenNotice").SensitiveContentFiltersTeenNotice,
 };
 items[2] = {
   order: 200,
@@ -53,7 +64,7 @@ items[2] = {
     }
     return isFeatureAgeGatedResult;
   },
-  Component: AgeConfirmationNoticeDefault
+  Component: AgeConfirmationNoticeDefault,
 };
 obj1[0] = items;
 const obj4 = {
@@ -66,10 +77,20 @@ const obj4 = {
     }
     return isFeatureAgeGatedResult;
   },
-  Component: AgeConfirmationNoticeDefault
+  Component: AgeConfirmationNoticeDefault,
 };
-const items1 = [{ order: 100, predicate: require("getEmptyActivityFormatter").isParentallyControlled, Component: FamilyCenterSettingsParentalControlsNoticeDefault }, ];
-const obj5 = { order: 100, predicate: require("getEmptyActivityFormatter").isParentallyControlled, Component: FamilyCenterSettingsParentalControlsNoticeDefault };
+const items1 = [
+  {
+    order: 100,
+    predicate: require("getEmptyActivityFormatter").isParentallyControlled,
+    Component: FamilyCenterSettingsParentalControlsNoticeDefault,
+  },
+];
+const obj5 = {
+  order: 100,
+  predicate: require("getEmptyActivityFormatter").isParentallyControlled,
+  Component: FamilyCenterSettingsParentalControlsNoticeDefault,
+};
 items1[1] = {
   order: 200,
   predicate() {
@@ -80,7 +101,7 @@ items1[1] = {
     }
     return isFeatureAgeGatedResult;
   },
-  Component: AgeConfirmationNoticeDefault
+  Component: AgeConfirmationNoticeDefault,
 };
 obj1[1] = items1;
 const obj6 = {
@@ -93,12 +114,24 @@ const obj6 = {
     }
     return isFeatureAgeGatedResult;
   },
-  Component: AgeConfirmationNoticeDefault
+  Component: AgeConfirmationNoticeDefault,
 };
-const items2 = [{ order: 100, predicate: require("getEmptyActivityFormatter").isParentallyControlled, Component: FamilyCenterSettingsParentalControlsNoticeDefault }];
+const items2 = [
+  {
+    order: 100,
+    predicate: require("getEmptyActivityFormatter").isParentallyControlled,
+    Component: FamilyCenterSettingsParentalControlsNoticeDefault,
+  },
+];
 obj1[2] = items2;
-const obj7 = { order: 100, predicate: require("getEmptyActivityFormatter").isParentallyControlled, Component: FamilyCenterSettingsParentalControlsNoticeDefault };
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SettingsScreenNotices.tsx");
+const obj7 = {
+  order: 100,
+  predicate: require("getEmptyActivityFormatter").isParentallyControlled,
+  Component: FamilyCenterSettingsParentalControlsNoticeDefault,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/privacy_and_safety/native/SettingsScreenNotices.tsx",
+);
 
 export default function SettingsScreenNotices(screen) {
   screen = screen.screen;
@@ -121,5 +154,9 @@ export default function SettingsScreenNotices(screen) {
     tmp3 = <View style={null}>{null}</View>;
   }
   return tmp3;
+}
+export const SettingsScreen = {
+  SENSITIVE_CONTENT_FILTERS: "SENSITIVE_CONTENT_FILTERS",
+  CONTENT_AND_SOCIAL: "CONTENT_AND_SOCIAL",
+  DATA_AND_PRIVACY: "DATA_AND_PRIVACY",
 };
-export const SettingsScreen = { SENSITIVE_CONTENT_FILTERS: "SENSITIVE_CONTENT_FILTERS", CONTENT_AND_SOCIAL: "CONTENT_AND_SOCIAL", DATA_AND_PRIVACY: "DATA_AND_PRIVACY" };

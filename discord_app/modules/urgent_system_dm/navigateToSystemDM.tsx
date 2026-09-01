@@ -11,4 +11,4 @@ export default function navigateToSystemDM() {
     const privateChannel = _modDef5355.selectPrivateChannel(dMFromUserId);
     const obj = _modDef5355;
   }
-};
+}

@@ -33,7 +33,15 @@ function BenefitShowCase(children) {
     tmp3 = callback(Text.Text, obj);
   }
   obj = { children: null };
-  const items = [tmp3, callback(Button.Spacer, { size: 2 }), callback(Text.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: children.description })];
+  const items = [
+    tmp3,
+    callback(Button.Spacer, { size: 2 }),
+    callback(Text.Text, {
+      variant: "text-sm/medium",
+      color: "interactive-text-default",
+      children: children.description,
+    }),
+  ];
   obj[0] = items;
   return closure_10(closure_6, obj);
 }
@@ -41,7 +49,11 @@ function ChannelBenefitShowCase(channel) {
   ({ description, type, name } = channel.channel);
   let obj = getPrivateChannelIconComponent;
   obj = { style: { flexDirection: "row", alignItems: "center" }, children: null };
-  const items = [callback(obj.getPrivateChannelIconComponent(type), { size: "xs" }), callback(Button.Spacer, { size: 4 }), callback(Text.Text, { variant: "text-md/semibold", color: "text-default", children: name })];
+  const items = [
+    callback(obj.getPrivateChannelIconComponent(type), { size: "xs" }),
+    callback(Button.Spacer, { size: 4 }),
+    callback(Text.Text, { variant: "text-md/semibold", color: "text-default", children: name }),
+  ];
   obj[1] = items;
   obj = { title: callback2(closure_6, obj), description };
   return callback(BenefitShowCase, obj);
@@ -53,10 +65,20 @@ function ViewEntireTemplateFooter() {
   obj = { variant: "text-sm/semibold", color: "interactive-text-hover", style: { marginTop: -1 }, children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.kejaOD);
-  const items = [callback(Text.Text, obj), callback(Button.Spacer, { size: 3 }), callback(closure_6, { style: tmp.viewEntireTemplateFooterUnderline })];
+  const items = [
+    callback(Text.Text, obj),
+    callback(Button.Spacer, { size: 3 }),
+    callback(closure_6, { style: tmp.viewEntireTemplateFooterUnderline }),
+  ];
   obj[0] = items;
-  const items1 = [callback2(closure_6, obj), ];
-  const obj2 = { children: callback(Button.Icon, { size: Button.Icon.Sizes.REFRESH_SMALL_16, source: registerAssetDefault, style: { transform: items2 } }) };
+  const items1 = [callback2(closure_6, obj)];
+  const obj2 = {
+    children: callback(Button.Icon, {
+      size: Button.Icon.Sizes.REFRESH_SMALL_16,
+      source: registerAssetDefault,
+      style: { transform: items2 },
+    }),
+  };
   items2 = [{ rotate: "180deg" }];
   items1[1] = callback(closure_6, obj2);
   obj[1] = items1;
@@ -65,24 +87,100 @@ function ViewEntireTemplateFooter() {
 ({ TouchableOpacity: c5, View: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: error, GuildSettingsSections: closure_8 } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, subscriptionPlanTextStyle: null, descriptionPlanTextStyle: null, separator: null, contentContainer: null, contentHeader: null, viewEntireTemplateFooter: null, viewEntireTemplateFooterUnderline: null };
-createCacheKey = { padding: 16, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, width: 319 };
+createCacheKey = {
+  container: null,
+  subscriptionPlanTextStyle: null,
+  descriptionPlanTextStyle: null,
+  separator: null,
+  contentContainer: null,
+  contentHeader: null,
+  viewEntireTemplateFooter: null,
+  viewEntireTemplateFooterUnderline: null,
+};
+createCacheKey = {
+  padding: 16,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  width: 319,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { color: ThemesDefault.colors.TEXT_SUBTLE };
 let obj1 = { color: ThemesDefault.colors.TEXT_SUBTLE };
 createCacheKey[2] = { color: ThemesDefault.colors.TEXT_MUTED, paddingTop: 8, paddingBottom: 16 };
 let obj2 = { color: ThemesDefault.colors.TEXT_MUTED, paddingTop: 8, paddingBottom: 16 };
-createCacheKey[3] = { width: "100%", height: 1, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER, marginVertical: 16 };
-let obj3 = { width: "100%", height: 1, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER, marginVertical: 16 };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopRightRadius: ThemesDefault.radii.sm, borderTopLeftRadius: ThemesDefault.radii.sm, padding: 16, paddingBottom: 0 };
+createCacheKey[3] = {
+  width: "100%",
+  height: 1,
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER,
+  marginVertical: 16,
+};
+let obj3 = {
+  width: "100%",
+  height: 1,
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER,
+  marginVertical: 16,
+};
+createCacheKey[4] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderTopRightRadius: ThemesDefault.radii.sm,
+  borderTopLeftRadius: ThemesDefault.radii.sm,
+  padding: 16,
+  paddingBottom: 0,
+};
 createCacheKey[5] = { textTransform: "uppercase" };
-let obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopRightRadius: ThemesDefault.radii.sm, borderTopLeftRadius: ThemesDefault.radii.sm, padding: 16, paddingBottom: 0 };
-createCacheKey[6] = { paddingVertical: 16, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderBottomLeftRadius: ThemesDefault.radii.sm, borderBottomRightRadius: ThemesDefault.radii.sm, marginLeft: -16, marginRight: -16, marginTop: 16 };
-let obj5 = { paddingVertical: 16, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderBottomLeftRadius: ThemesDefault.radii.sm, borderBottomRightRadius: ThemesDefault.radii.sm, marginLeft: -16, marginRight: -16, marginTop: 16 };
-createCacheKey[7] = { position: "absolute", left: 0, right: 0, height: 1, bottom: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+let obj4 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderTopRightRadius: ThemesDefault.radii.sm,
+  borderTopLeftRadius: ThemesDefault.radii.sm,
+  padding: 16,
+  paddingBottom: 0,
+};
+createCacheKey[6] = {
+  paddingVertical: 16,
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderBottomLeftRadius: ThemesDefault.radii.sm,
+  borderBottomRightRadius: ThemesDefault.radii.sm,
+  marginLeft: -16,
+  marginRight: -16,
+  marginTop: 16,
+};
+let obj5 = {
+  paddingVertical: 16,
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderBottomLeftRadius: ThemesDefault.radii.sm,
+  borderBottomRightRadius: ThemesDefault.radii.sm,
+  marginLeft: -16,
+  marginRight: -16,
+  marginTop: 16,
+};
+createCacheKey[7] = {
+  position: "absolute",
+  left: 0,
+  right: 0,
+  height: 1,
+  bottom: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj6 = { position: "absolute", left: 0, right: 0, height: 1, bottom: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplatePreviewCard.tsx");
+let obj6 = {
+  position: "absolute",
+  left: 0,
+  right: 0,
+  height: 1,
+  bottom: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplatePreviewCard.tsx",
+);
 
 export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   template = template.template;
@@ -98,7 +196,9 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   let obj = template(navigation[15]);
   navigation = obj.useNavigation();
   obj1 = groupListingId(navigation[16]);
-  addNewEditStateFromTemplate = obj1.useEditStateIds(groupListingId, template.editGroupId, { includeSoftDeleted: true }).addNewEditStateFromTemplate;
+  addNewEditStateFromTemplate = obj1.useEditStateIds(groupListingId, template.editGroupId, {
+    includeSoftDeleted: true,
+  }).addNewEditStateFromTemplate;
   const first = template.listings[0];
   ({ channels, additional_perks } = first);
   const first1 = additional_perks[0];
@@ -142,8 +242,15 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
     }
   }, items1);
   obj = { style: tmp.container, children: null };
-  obj = { template, handleSelectTemplateInPreview: callback1, subscriptionPlanTextStyle: tmp.subscriptionPlanTextStyle, descriptionTextStyle: tmp.descriptionPlanTextStyle, closeActionSheet: false, descriptionTextProps: { numberOfLines: 2, ellipsizeMode: "tail" } };
-  const items2 = [callback(template(navigation[21]).GuildRoleSubscriptionTierTemplateBasicInfo, obj), ];
+  obj = {
+    template,
+    handleSelectTemplateInPreview: callback1,
+    subscriptionPlanTextStyle: tmp.subscriptionPlanTextStyle,
+    descriptionTextStyle: tmp.descriptionPlanTextStyle,
+    closeActionSheet: false,
+    descriptionTextProps: { numberOfLines: 2, ellipsizeMode: "tail" },
+  };
+  const items2 = [callback(template(navigation[21]).GuildRoleSubscriptionTierTemplateBasicInfo, obj)];
   obj1 = {
     style: tmp.contentContainer,
     onPress() {
@@ -151,28 +258,38 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
       obj = { template, guildId, handleSelectTemplateInPreview: callback1 };
       obj.openLazy(template(navigation[9])(navigation[8], navigation.paths), "TierTemplateCard", obj);
     },
-    children: null
+    children: null,
   };
   obj2 = {
     renderGap() {
       return callback(closure_13, {});
     },
-    children: null
+    children: null,
   };
   obj3 = { children: null };
   const obj4 = { title: null, count: null };
   const intl = tmp2(tmp3[13]).intl;
   obj4[0] = intl.formatToPlainString(template(navigation[13]).t.y7dUrm, { numChannels: channels.length });
   obj4[1] = channels.length;
-  const items3 = [callback(ContentHeader, obj4), callback(template(navigation[11]).Spacer, { size: 12 }), callback(ChannelBenefitShowCase, { channel: channels[0] }), callback(template(navigation[11]).Spacer, { size: 6 })];
+  const items3 = [
+    callback(ContentHeader, obj4),
+    callback(template(navigation[11]).Spacer, { size: 12 }),
+    callback(ChannelBenefitShowCase, { channel: channels[0] }),
+    callback(template(navigation[11]).Spacer, { size: 6 }),
+  ];
   obj3[0] = items3;
-  const items4 = [callback2(suggestedUnusedPrices, obj3), ];
+  const items4 = [callback2(suggestedUnusedPrices, obj3)];
   const obj5 = { children: null };
   const obj6 = { title: null, count: null };
   const intl2 = tmp2(tmp3[13]).intl;
   obj6[0] = intl2.formatToPlainString(template(navigation[13]).t.MR7oOF, { numBenefits: additional_perks.length });
   obj6[1] = additional_perks.length;
-  const items5 = [callback(ContentHeader, obj6), callback(template(navigation[11]).Spacer, { size: 12 }), callback(BenefitShowCase, { title: first1.name, description: first1.description }), callback(template(navigation[11]).Spacer, { size: 6 })];
+  const items5 = [
+    callback(ContentHeader, obj6),
+    callback(template(navigation[11]).Spacer, { size: 12 }),
+    callback(BenefitShowCase, { title: first1.name, description: first1.description }),
+    callback(template(navigation[11]).Spacer, { size: 6 }),
+  ];
   obj5[0] = items5;
   items4[1] = callback2(suggestedUnusedPrices, obj5);
   obj2[1] = items4;
@@ -181,5 +298,5 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   items2[1] = callback2(callback, obj1);
   obj[1] = items2;
   return callback2(suggestedUnusedPrices, obj);
-};
+}
 export const CARD_WIDTH = 319;

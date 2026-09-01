@@ -13,7 +13,7 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.CHAT,
   useValue: explicitContentFromProto.IncludeStickersInAutocomplete.useSetting,
-  onValueChange: UserSettingsText.setStickerAutocomplete
+  onValueChange: UserSettingsText.setStickerAutocomplete,
 });
 const obj = {
   useTitle() {
@@ -22,7 +22,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.CHAT,
   useValue: explicitContentFromProto.IncludeStickersInAutocomplete.useSetting,
-  onValueChange: UserSettingsText.setStickerAutocomplete
+  onValueChange: UserSettingsText.setStickerAutocomplete,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/StickerAutocompleteSetting.tsx");
 

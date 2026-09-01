@@ -11,7 +11,16 @@ import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-let closure_11 = { LURKER: "lurker", VOICE: "voice", CHAT: "chat", DIRECTORY: "directory", EXPRESSION_PICKER: "expression", MEDIA: "media", APPS: "apps", NONE: "none" };
+let closure_11 = {
+  LURKER: "lurker",
+  VOICE: "voice",
+  CHAT: "chat",
+  DIRECTORY: "directory",
+  EXPRESSION_PICKER: "expression",
+  MEDIA: "media",
+  APPS: "apps",
+  NONE: "none",
+};
 let closure_12 = createCacheKey.createStyles((backgroundColor) => {
   let obj = { lurker: null, chat: null, voice: null, expressionPickerBackground: null };
   obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
@@ -21,10 +30,14 @@ let closure_12 = createCacheKey.createStyles((backgroundColor) => {
   obj[3] = { backgroundColor };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx",
+);
 
 export default function useChannelSafeAreaBottomStyles(arg0) {
-  let backgroundColor = _require(stateFromStores[16]).useToken(importDefault(stateFromStores[9]).colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
+  let backgroundColor = _require(stateFromStores[16]).useToken(
+    importDefault(stateFromStores[9]).colors.MOBILE_KEYBOARD_GAP_BACKGROUND,
+  );
   let obj = _require(stateFromStores[16]);
   const tmp = _require;
   const gradientBottom = _require(stateFromStores[17]).useGradientBottom();
@@ -145,4 +158,4 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
       }
     }
   }, items1);
-};
+}

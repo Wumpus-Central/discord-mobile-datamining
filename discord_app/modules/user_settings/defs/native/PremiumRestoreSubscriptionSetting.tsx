@@ -19,31 +19,34 @@ createToggle = {
   onPress: function handleNitroRestoreSettingPress() {
     let obj = applyAppleReceiptDefault;
     const result = obj.restoreAndApplyPurchases(true);
-    result.then((arg0) => {
-      if (arg0.length > 0) {
+    result.then(
+      (arg0) => {
+        if (arg0.length > 0) {
+          let obj = callback2(paths[3]);
+          obj = { body: null };
+          const intl = callback(paths[4]).intl;
+          obj[0] = intl.string(callback(paths[4]).t.pnRpIb);
+          obj.show(obj);
+        } else {
+          obj = { title: null, body: null };
+          const intl2 = callback(paths[4]).intl;
+          obj[0] = intl2.string(callback(paths[4]).t.WXkaoM);
+          const intl3 = callback(paths[4]).intl;
+          obj[1] = intl3.string(callback(paths[4]).t.YW7lqS);
+          callback2(paths[3]).show(obj);
+          const obj3 = callback2(paths[3]);
+        }
+      },
+      () => {
         let obj = callback2(paths[3]);
-        obj = { body: null };
-        const intl = callback(paths[4]).intl;
-        obj[0] = intl.string(callback(paths[4]).t.pnRpIb);
-        obj.show(obj);
-      } else {
         obj = { title: null, body: null };
+        const intl = callback(paths[4]).intl;
+        obj[0] = intl.string(callback(paths[4]).t.POsVOt);
         const intl2 = callback(paths[4]).intl;
-        obj[0] = intl2.string(callback(paths[4]).t.WXkaoM);
-        const intl3 = callback(paths[4]).intl;
-        obj[1] = intl3.string(callback(paths[4]).t.YW7lqS);
-        callback2(paths[3]).show(obj);
-        const obj3 = callback2(paths[3]);
-      }
-    }, () => {
-      let obj = callback2(paths[3]);
-      obj = { title: null, body: null };
-      const intl = callback(paths[4]).intl;
-      obj[0] = intl.string(callback(paths[4]).t.POsVOt);
-      const intl2 = callback(paths[4]).intl;
-      obj[1] = intl2.string(callback(paths[4]).t["XbE/Ez"]);
-      obj.show(obj);
-    });
+        obj[1] = intl2.string(callback(paths[4]).t["XbE/Ez"]);
+        obj.show(obj);
+      },
+    );
     obj = {
       importer() {
         return callback(paths[6])(paths[5], paths.paths).then((arg0) => {
@@ -53,7 +56,7 @@ createToggle = {
             return closure_1_4(closure_0, {});
           };
         });
-      }
+      },
     };
     _modDef4858.openLazy(obj);
   },
@@ -67,9 +70,11 @@ createToggle = {
       const tmpResult = set;
     }
     return tmp4;
-  }
+  },
 };
 createToggle = createToggle.createPressable(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/PremiumRestoreSubscriptionSetting.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/PremiumRestoreSubscriptionSetting.tsx",
+);
 
 export default createToggle;

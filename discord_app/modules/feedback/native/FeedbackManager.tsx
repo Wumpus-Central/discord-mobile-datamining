@@ -23,7 +23,7 @@ let prototype = function FeedbackManager() {
     },
     IN_APP_REPORTS_SHOW_FEEDBACK(arg0) {
       return applyArgumentsResult.handleInAppReportsFeedback(arg0);
-    }
+    },
   };
   applyArgumentsResult.handleShowStreamFeedback = function handleShowStreamFeedback(streamKey) {
     streamKey = streamKey.streamKey;
@@ -65,14 +65,24 @@ let prototype = function FeedbackManager() {
     let application;
     let channel;
     application = closure_1_3.getApplication(applicationId);
-    channel = closure_1_4.getChannel(applyArgumentsResult(closure_1_2[11]).getEmbeddedActivityLocationChannelId(_location));
+    channel = closure_1_4.getChannel(
+      applyArgumentsResult(closure_1_2[11]).getEmbeddedActivityLocationChannelId(_location),
+    );
     if (tmp2) {
       const result = applicationId.possiblyShowFeedbackModal(closure_1_7.ACTIVITY, () => {
         closure_0 = applicationId(application[8])(application[12], application.paths);
-        let obj = { media_session_id: closure_1_5.getMediaSessionId(), rtc_connection_id: closure_1_5.getRTCConnectionId() };
+        let obj = {
+          media_session_id: closure_1_5.getMediaSessionId(),
+          rtc_connection_id: closure_1_5.getRTCConnectionId(),
+        };
         applicationId(application[9]).runAfterInteractions(() => {
           obj = _location(application[10]);
-          obj = { analyticsData: obj, activityApplication: closure_1_2, channel: closure_1_3, embeddedActivityLocation: obj };
+          obj = {
+            analyticsData: obj,
+            activityApplication: closure_1_2,
+            channel: closure_1_3,
+            embeddedActivityLocation: obj,
+          };
           obj.openLazy(closure_0, "ActivityFeedback" + obj.id + closure_0, obj);
         });
       });
@@ -98,14 +108,16 @@ let prototype = function FeedbackManager() {
         if (closure_0 == null) {
           str = "";
         }
-        closure_2_1(closure_2_2[10]).openLazy(closure_0, "ReportingFeedback" + closure_1_1 + str, { reportId: closure_0, reportType: closure_1_1 });
+        closure_2_1(closure_2_2[10]).openLazy(closure_0, "ReportingFeedback" + closure_1_1 + str, {
+          reportId: closure_0,
+          reportType: closure_1_1,
+        });
       });
     });
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 let result = require("set").fileFinishedImporting("modules/feedback/native/FeedbackManager.tsx");
 

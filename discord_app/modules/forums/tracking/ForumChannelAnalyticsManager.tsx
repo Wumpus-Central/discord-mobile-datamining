@@ -2,67 +2,69 @@
 import set from "../../../stores/ChannelStore.tsx";
 import set from "../../../../_runtime/00002_set.js";
 
-set = Object.create(function ForumChannelAnalyticsManager() {
-  const obj = Object.create(new.target.prototype);
-  obj.setFilterTagIds = function setFilterTagIds(filterTagIds) {
-    obj.filterTagIds = filterTagIds;
-  };
-  obj.setSortOrder = function setSortOrder(sortOrder) {
-    obj.sortOrder = sortOrder;
-  };
-  obj.setLayout = function setLayout(layout) {
-    obj.layout = layout;
-  };
-  obj.setTagSetting = function setTagSetting(tagSetting) {
-    obj.tagSetting = tagSetting;
-  };
-  obj.getFilterTagIdsAnalytics = function getFilterTagIdsAnalytics() {
-    if (null != obj.filterTagIds) {
-      const _Array = Array;
-      let items = Array.from(tmp.filterTagIds);
-    } else {
-      items = [];
-    }
-    return items;
-  };
-  obj.getSortOrderAnalytics = function getSortOrderAnalytics(id) {
-    let sortOrder = obj.sortOrder;
-    if (sortOrder == null) {
-      const channel = obj.getChannel(id);
-      let defaultSortOrder;
-      if (channel != null) {
-        defaultSortOrder = channel.getDefaultSortOrder();
+set = Object.create(
+  function ForumChannelAnalyticsManager() {
+    const obj = Object.create(new.target.prototype);
+    obj.setFilterTagIds = function setFilterTagIds(filterTagIds) {
+      obj.filterTagIds = filterTagIds;
+    };
+    obj.setSortOrder = function setSortOrder(sortOrder) {
+      obj.sortOrder = sortOrder;
+    };
+    obj.setLayout = function setLayout(layout) {
+      obj.layout = layout;
+    };
+    obj.setTagSetting = function setTagSetting(tagSetting) {
+      obj.tagSetting = tagSetting;
+    };
+    obj.getFilterTagIdsAnalytics = function getFilterTagIdsAnalytics() {
+      if (null != obj.filterTagIds) {
+        const _Array = Array;
+        let items = Array.from(tmp.filterTagIds);
+      } else {
+        items = [];
       }
-      sortOrder = defaultSortOrder;
-    }
-    return sortOrder;
-  };
-  obj.getLayoutAnalytics = function getLayoutAnalytics(id) {
-    let layout = obj.layout;
-    if (layout == null) {
-      const channel = obj.getChannel(id);
-      let defaultLayout;
-      if (channel != null) {
-        defaultLayout = channel.getDefaultLayout();
+      return items;
+    };
+    obj.getSortOrderAnalytics = function getSortOrderAnalytics(id) {
+      let sortOrder = obj.sortOrder;
+      if (sortOrder == null) {
+        const channel = obj.getChannel(id);
+        let defaultSortOrder;
+        if (channel != null) {
+          defaultSortOrder = channel.getDefaultSortOrder();
+        }
+        sortOrder = defaultSortOrder;
       }
-      layout = defaultLayout;
-    }
-    return layout;
-  };
-  obj.getTagSettingAnalytics = function getTagSettingAnalytics(id) {
-    let tagSetting = obj.tagSetting;
-    if (tagSetting == null) {
-      const channel = obj.getChannel(id);
-      let defaultTagSetting;
-      if (channel != null) {
-        defaultTagSetting = channel.getDefaultTagSetting();
+      return sortOrder;
+    };
+    obj.getLayoutAnalytics = function getLayoutAnalytics(id) {
+      let layout = obj.layout;
+      if (layout == null) {
+        const channel = obj.getChannel(id);
+        let defaultLayout;
+        if (channel != null) {
+          defaultLayout = channel.getDefaultLayout();
+        }
+        layout = defaultLayout;
       }
-      tagSetting = defaultTagSetting;
-    }
-    return tagSetting;
-  };
-  return obj;
-}.prototype.prototype);
+      return layout;
+    };
+    obj.getTagSettingAnalytics = function getTagSettingAnalytics(id) {
+      let tagSetting = obj.tagSetting;
+      if (tagSetting == null) {
+        const channel = obj.getChannel(id);
+        let defaultTagSetting;
+        if (channel != null) {
+          defaultTagSetting = channel.getDefaultTagSetting();
+        }
+        tagSetting = defaultTagSetting;
+      }
+      return tagSetting;
+    };
+    return obj;
+  }.prototype.prototype,
+);
 set.setFilterTagIds = function setFilterTagIds(filterTagIds) {
   obj.filterTagIds = filterTagIds;
 };

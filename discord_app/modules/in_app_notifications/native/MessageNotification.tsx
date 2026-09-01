@@ -10,7 +10,9 @@ const require = arg1;
 let c3 = importAllResult;
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: c5, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_6 } = set);
 let closure_8 = createCacheKey.createStyles({ newContainerRoleDot: { paddingRight: 4, paddingTop: 0 } });
-let closure_9 = importAllResult.memo((message) => jsx(NativeMessagePreviewContentDefault, { message: message.message, lineClamp: closure_6, maxHeight: closure_5 }));
+let closure_9 = importAllResult.memo((message) =>
+  jsx(NativeMessagePreviewContentDefault, { message: message.message, lineClamp: closure_6, maxHeight: closure_5 }),
+);
 const result = set.fileFinishedImporting("modules/in_app_notifications/native/MessageNotification.tsx");
 
 export default importAllResult.memo(function MessageNotification(notification) {
@@ -79,7 +81,10 @@ export default importAllResult.memo(function MessageNotification(notification) {
   const items1 = [nullableMessageAuthor.nick, channel.id, message.content];
   const effect = guild.useEffect(() => {
     const intl = message(parentChannel[8]).intl;
-    const obj = { userName: nullableMessageAuthor.nick, message: channel(parentChannel[11]).unparse(message.content, channel.id, true) };
+    const obj = {
+      userName: nullableMessageAuthor.nick,
+      message: channel(parentChannel[11]).unparse(message.content, channel.id, true),
+    };
     const obj2 = channel(parentChannel[11]);
     const AccessibilityAnnouncer = message(parentChannel[12]).AccessibilityAnnouncer;
     AccessibilityAnnouncer.announce(intl.formatToPlainString(message(parentChannel[8]).t.Hjp1LH, obj));
@@ -95,16 +100,39 @@ export default importAllResult.memo(function MessageNotification(notification) {
   const callback1 = guild.useCallback(() => {
     let obj = channel(parentChannel[13]);
     obj = { channelId: channel.id };
-    return obj.pushLazy(message(parentChannel[16])(parentChannel[15], parentChannel.paths), obj, "in-app-notification-settings-modal");
+    return obj.pushLazy(
+      message(parentChannel[16])(parentChannel[15], parentChannel.paths),
+      obj,
+      "in-app-notification-settings-modal",
+    );
   }, items3);
-  const memo = guild.useMemo(() => ({ type: "message", channel, parentChannel, guild, author: nullableMessageAuthor, onDismiss: handleDismissNotification }), items4);
+  const memo = guild.useMemo(
+    () => ({
+      type: "message",
+      channel,
+      parentChannel,
+      guild,
+      author: nullableMessageAuthor,
+      onDismiss: handleDismissNotification,
+    }),
+    items4,
+  );
   obj1 = { user: message.author, guildId: null, size: null };
   const guild2 = notification.guild;
   let id;
   if (guild2 != null) {
     id = guild2.id;
   }
-  obj2 = { icon: null, accessoryLabelNode: null, rightAccessory: null, children: null, header: null, notification: null, onPress: null, onSettingsPress: null };
+  obj2 = {
+    icon: null,
+    accessoryLabelNode: null,
+    rightAccessory: null,
+    children: null,
+    header: null,
+    notification: null,
+    onPress: null,
+    onSettingsPress: null,
+  };
   obj1[1] = id;
   obj1[2] = message(parentChannel[7]).AvatarSizes.NORMAL;
   obj2[0] = jsx(message(parentChannel[7]).Avatar, { user: message.author, guildId: null, size: null });
@@ -115,5 +143,14 @@ export default importAllResult.memo(function MessageNotification(notification) {
   obj2[5] = notification;
   obj2[6] = callback;
   obj2[7] = callback1;
-  return jsx(message(parentChannel[17]).NotificationPressable, { icon: null, accessoryLabelNode: null, rightAccessory: null, children: null, header: null, notification: null, onPress: null, onSettingsPress: null });
+  return jsx(message(parentChannel[17]).NotificationPressable, {
+    icon: null,
+    accessoryLabelNode: null,
+    rightAccessory: null,
+    children: null,
+    header: null,
+    notification: null,
+    onPress: null,
+    onSettingsPress: null,
+  });
 });

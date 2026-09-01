@@ -22,7 +22,7 @@ function UsernameStatusMessage(arg0) {
     let obj = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
     obj = { size: "xs", color: null };
     obj[1] = ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL;
-    const items = [callback3(tmp3(7708).CircleErrorIcon, obj), ];
+    const items = [callback3(tmp3(7708).CircleErrorIcon, obj)];
     obj1 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null };
     obj1[2] = tmp.status;
     const merged = Object.assign(createCacheKey);
@@ -76,7 +76,9 @@ createCacheKey[0] = require("../../../../../_runtime/00300_get_BatchedBridge.js"
 createCacheKey[1] = require("../../../../../_runtime/00300_get_BatchedBridge.js");
 createCacheKey = { layout: null };
 createCacheKey[0] = require("../../../../../_runtime/00300_get_BatchedBridge.js");
-const easingResult = LinearTransition.easing(Easing.inOut(require("../../../reanimated/ReanimatedRexport.tsx").Easing.quad));
+const easingResult = LinearTransition.easing(
+  Easing.inOut(require("../../../reanimated/ReanimatedRexport.tsx").Easing.quad),
+);
 const result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
 
 export const RegisterUsernameInput = function RegisterUsernameInput(setUsername) {
@@ -113,7 +115,26 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
   callback2 = obj.useCallback(() => {
     callback(false);
   }, items2);
-  obj = { ref, label: null, accessibilityHint: null, onChange: null, autoCorrect: false, secureTextEntry: null, keyboardType: null, value: null, onSubmitEditing: null, returnKeyType: "next", autoComplete: "username", textContentType: "username", autoCapitalize: "none", onFocus: null, onBlur: null, isClearable: true, status: null, submitBehavior: null };
+  obj = {
+    ref,
+    label: null,
+    accessibilityHint: null,
+    onChange: null,
+    autoCorrect: false,
+    secureTextEntry: null,
+    keyboardType: null,
+    value: null,
+    onSubmitEditing: null,
+    returnKeyType: "next",
+    autoComplete: "username",
+    textContentType: "username",
+    autoCapitalize: "none",
+    onFocus: null,
+    onBlur: null,
+    isClearable: true,
+    status: null,
+    submitBehavior: null,
+  };
   const intl = setUsername(1236).intl;
   obj[1] = intl.string(setUsername(1236).t.IEpCBQ);
   const intl2 = setUsername(1236).intl;
@@ -145,7 +166,10 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
   obj1 = { children: null };
   obj[16] = str2;
   obj[17] = submitBehavior;
-  const items3 = [closure_9(setUsername(7705).TextInput, obj), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
+  const items3 = [
+    closure_9(setUsername(7705).TextInput, obj),
+    closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] }),
+  ];
   obj1[0] = items3;
   return tmp11(tmp12, obj1);
 };

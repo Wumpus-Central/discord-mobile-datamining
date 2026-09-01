@@ -19,7 +19,14 @@ class MessageForward {
     return obj;
   }
 }
-MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closure_9, closure_7, arg3, arg4, maxSettingsForPreset) {
+MessageForward.prototype["getForwardInfo"] = function getForwardInfo(
+  arg0,
+  closure_9,
+  closure_7,
+  arg3,
+  arg4,
+  maxSettingsForPreset,
+) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = closure_4;

@@ -16,7 +16,13 @@ function ScheduleRuleRow(rule) {
   let obj = rule(10166);
   const scheduleRuleDateRange = obj.getScheduleRuleDateRange(rule);
   const obj2 = rule(10166);
-  obj = { label: scheduleRuleDateRange, subLabel: rule(10166).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  obj = {
+    label: scheduleRuleDateRange,
+    subLabel: rule(10166).formatDays(rule.days),
+    trailing: null,
+    arrow: null,
+    onPress: null,
+  };
   const intl = rule(1236).intl;
   const string = intl.string;
   const tmp4 = messagesProxyDefault;
@@ -86,12 +92,14 @@ export default function FamilyCenterParentalControlsScreenTime(readOnly) {
     obj[2] = tmp.header;
     const intl = tmp2(tmp3[8]).intl;
     obj[3] = intl.string(importDefault(tmp3[9])["72CmJd"]);
-    const items = [callback(tmp2(tmp3[7]).Text, obj), ];
+    const items = [callback(tmp2(tmp3[7]).Text, obj)];
     obj1 = { hasIcons: false, children: null };
-    obj1[1] = sortRulesByStartTimeResult.map((rule) => closure_1_5(closure_1_8, { rule, teenId: id, navigation: closure_1, readOnly: flag }, rule.ruleId));
+    obj1[1] = sortRulesByStartTimeResult.map((rule) =>
+      closure_1_5(closure_1_8, { rule, teenId: id, navigation: closure_1, readOnly: flag }, rule.ruleId),
+    );
     items[1] = callback(tmp2(tmp3[12]).TableRowGroup, obj1);
     obj[1] = items;
     tmp6 = callback2(View, obj);
   }
   return tmp6;
-};
+}

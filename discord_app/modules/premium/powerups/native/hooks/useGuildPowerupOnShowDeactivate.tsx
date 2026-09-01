@@ -5,7 +5,9 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 let closure_4 = importAllResult.lazy(() => asyncRequireImpl(12104, dependencyMap.paths));
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowDeactivate.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/powerups/native/hooks/useGuildPowerupOnShowDeactivate.tsx",
+);
 
 export default function useGuildPowerupOnShowDeactivate(arg0, arg1) {
   closure_0 = arg0;
@@ -16,4 +18,4 @@ export default function useGuildPowerupOnShowDeactivate(arg0, arg1) {
     obj = { guildId: callback, powerup: table };
     obj.openAlert("guild-powerups-deactivate-alert", closure_1_3(closure_1_4, obj));
   }, items);
-};
+}

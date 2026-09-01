@@ -9,8 +9,7 @@ let c3 = null;
 let c4 = false;
 let c5 = null;
 const Store = initializeDefault.Store;
-class GenericIAPStore extends Store {
-}
+class GenericIAPStore extends Store {}
 const prototype = GenericIAPStore.prototype;
 prototype["isGenericIapConnected"] = function isGenericIapConnected() {
   return c4;
@@ -18,10 +17,11 @@ prototype["isGenericIapConnected"] = function isGenericIapConnected() {
 prototype["genericProductsLoaded"] = function genericProductsLoaded() {
   let tmp = null != c3;
   if (tmp) {
-    tmp = applyDefault.filter(c3, (identifier) => {
-      const GenericProductIds = callback(table[2]).GenericProductIds;
-      return GenericProductIds.includes(identifier.identifier);
-    }).length === SubscriptionPlans.GenericProductIds.length;
+    tmp =
+      applyDefault.filter(c3, (identifier) => {
+        const GenericProductIds = callback(table[2]).GenericProductIds;
+        return GenericProductIds.includes(identifier.identifier);
+      }).length === SubscriptionPlans.GenericProductIds.length;
     const arr = applyDefault;
   }
   return tmp;
@@ -48,7 +48,7 @@ const genericIAPStore = new GenericIAPStore(dispatcherDefault, {
   },
   GENERIC_IAP_SET_STORE_FRONT: function setStoreFront(storeFront) {
     storeFront = storeFront.storeFront;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/billing/native/GenericIAPStore.tsx");
 

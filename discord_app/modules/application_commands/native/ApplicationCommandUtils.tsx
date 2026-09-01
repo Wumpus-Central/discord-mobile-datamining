@@ -42,7 +42,12 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
     }
   }
 };
-export const openCommandAttachmentPreview = function openCommandAttachmentPreview(applicationCommandManager, channelId, name, fn) {
+export const openCommandAttachmentPreview = function openCommandAttachmentPreview(
+  applicationCommandManager,
+  channelId,
+  name,
+  fn,
+) {
   closure_0 = applicationCommandManager;
   importDefault = channelId;
   dependencyMap = name;

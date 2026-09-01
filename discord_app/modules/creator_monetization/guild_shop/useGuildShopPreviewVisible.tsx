@@ -6,22 +6,29 @@ import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/
 
 const require = arg1;
 ({ Permissions: c3, GuildFeatures: c4 } = ME);
-let result = require("set").fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx",
+);
 
 export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(features) {
   const _require = features;
-  const result = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx").useIsDismissibleContentDismissed_UNSAFE(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
+  const result =
+    require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx").useIsDismissibleContentDismissed_UNSAFE(
+      require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx")
+        .DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW,
+    );
   const obj = UNSAFE_isDismissibleContentDismissed;
   const tmp = _require;
   const items = [closure_2];
   let flag;
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
-    let canResult = null != closure_0;
-    if (canResult) {
-      canResult = closure_1_2.can(closure_1_3.ADMINISTRATOR, tmp);
-    }
-    return canResult;
-  });
+  const stateFromStores =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
+      let canResult = null != closure_0;
+      if (canResult) {
+        canResult = closure_1_2.can(closure_1_3.ADMINISTRATOR, tmp);
+      }
+      return canResult;
+    });
   if (features != null) {
     features = features.features;
     flag = features.has(constants.PRODUCTS_AVAILABLE_FOR_PURCHASE);
@@ -34,8 +41,12 @@ export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(fe
   if (features != null) {
     id = features.id;
   }
-  const items1 = [, , ];
-  ({ CREATOR_MONETIZABLE: arr2[0], CREATOR_MONETIZABLE_PROVISIONAL: arr2[1], ROLE_SUBSCRIPTIONS_ENABLED: arr2[2] } = constants);
+  const items1 = [, ,];
+  ({
+    CREATOR_MONETIZABLE: arr2[0],
+    CREATOR_MONETIZABLE_PROVISIONAL: arr2[1],
+    ROLE_SUBSCRIPTIONS_ENABLED: arr2[2],
+  } = constants);
   const guildEligibleForGuildProducts = tmp(6105).useGuildEligibleForGuildProducts(id);
   let tmp9 = null != features;
   const tmpResult = tmp(6105);

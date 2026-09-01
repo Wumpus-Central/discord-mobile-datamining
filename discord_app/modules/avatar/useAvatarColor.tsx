@@ -15,7 +15,7 @@ function _maybeFetchColors() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -95,7 +95,7 @@ function _fetchColors() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -127,14 +127,16 @@ function _fetchColors() {
               table = undefined;
               dependencyMap = undefined;
               if (!closure_1_7.getState().fetching[callback]) {
-                callback(closure_1_2[5]).batchUpdates(() => closure_1_7.setState((fetching) => {
-                  let obj = { fetching: null };
-                  obj = {};
-                  const merged = Object.assign(fetching.fetching);
-                  obj[closure_0] = true;
-                  obj[0] = obj;
-                  return obj;
-                }));
+                callback(closure_1_2[5]).batchUpdates(() =>
+                  closure_1_7.setState((fetching) => {
+                    let obj = { fetching: null };
+                    obj = {};
+                    const merged = Object.assign(fetching.fetching);
+                    obj[closure_0] = true;
+                    obj[0] = obj;
+                    return obj;
+                  }),
+                );
                 c4 = 1;
                 const obj5 = callback(closure_1_2[5]);
                 c5 = 2;
@@ -148,14 +150,16 @@ function _fetchColors() {
           } else {
             if (1 === tmp7) {
               c4 = 0;
-              callback(705).batchUpdates(() => closure_1_7.setState((fetching) => {
-                let obj = { fetching: null };
-                obj = {};
-                const merged = Object.assign(fetching.fetching);
-                obj[closure_0] = false;
-                obj[0] = obj;
-                return obj;
-              }));
+              callback(705).batchUpdates(() =>
+                closure_1_7.setState((fetching) => {
+                  let obj = { fetching: null };
+                  obj = {};
+                  const merged = Object.assign(fetching.fetching);
+                  obj[closure_0] = false;
+                  obj[0] = obj;
+                  return obj;
+                }),
+              );
               const obj4 = callback(705);
             } else if (arg0 === 1) {
               c6 = 3;
@@ -273,7 +277,7 @@ export default function useAvatarColor(arg0, arg1) {
     memo = items3;
   }
   return stateFromStores(memo, 1)[0];
-};
+}
 export const useColorStore = keys;
 export { hasFetchedColors };
 export const maybeFetchColors = function maybeFetchColors(closure_0) {

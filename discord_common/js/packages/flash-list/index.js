@@ -12,9 +12,7 @@ let obj;
 if (set.isAndroid()) {
   obj = { disabled: true };
 }
-function noop() {
-
-}
+function noop() {}
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   obj = { maintainVisibleContentPosition: obj, ref };
   const merged = Object.assign(arg0);

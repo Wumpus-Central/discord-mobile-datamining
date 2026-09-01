@@ -26,7 +26,7 @@ export default function UserProfileConfirmThreadRemove(isForumPost) {
   const intl3 = tmp4(1236).intl;
   obj1[1] = intl3.string(getSystemLocale.t.N86XcP);
   obj1[2] = onConfirm;
-  const items = [closure_3(getAlertModalItemKey.AlertActionButton, obj1, "remove-user-from-thread"), ];
+  const items = [closure_3(getAlertModalItemKey.AlertActionButton, obj1, "remove-user-from-thread")];
   const obj2 = { variant: "secondary", text: null };
   const intl4 = tmp4(1236).intl;
   obj2[1] = intl4.string(getSystemLocale.t.yNbnce);
@@ -34,4 +34,4 @@ export default function UserProfileConfirmThreadRemove(isForumPost) {
   obj[0] = items;
   obj[2] = callback(getAlertModalItemKey.AlertActions, obj);
   return closure_3(getAlertModalItemKey.AlertModal, obj);
-};
+}

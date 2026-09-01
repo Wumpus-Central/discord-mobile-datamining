@@ -39,7 +39,16 @@ function updateGuildUnreadSentinel(arg0) {
     if (tmp == null) {
       tmp = NULL_STRING_GUILD_ID;
     }
-    const obj = { unread: false, unreadByType: null, unreadChannelId: null, lowImportanceMentionCount: 0, highImportanceMentionCount: 0, mentionCounts: null, ncMentionCount: 0, sentinel: null };
+    const obj = {
+      unread: false,
+      unreadByType: null,
+      unreadChannelId: null,
+      lowImportanceMentionCount: 0,
+      highImportanceMentionCount: 0,
+      mentionCounts: null,
+      ncMentionCount: 0,
+      sentinel: null,
+    };
     obj[1] = {};
     obj[5] = {};
     let num;
@@ -190,7 +199,10 @@ function aggregateGuildState(guild_id, unreadByType, unread) {
       tmp.highImportanceMentionCount = tmp.highImportanceMentionCount + count;
     }
   });
-  let flag = unreadByType.unread !== unread.unread || unreadByType.lowImportanceMentionCount !== unread.lowImportanceMentionCount || unreadByType.highImportanceMentionCount !== unread.highImportanceMentionCount;
+  let flag =
+    unreadByType.unread !== unread.unread ||
+    unreadByType.lowImportanceMentionCount !== unread.lowImportanceMentionCount ||
+    unreadByType.highImportanceMentionCount !== unread.highImportanceMentionCount;
   if (flag) {
     let tmp2 = guild_id;
     let tmp5 = guild_id;
@@ -235,7 +247,16 @@ function recountChannels(guildId, items) {
       if (tmp == null) {
         tmp11 = tmp2;
       }
-      let obj = { unread: false, unreadByType: null, unreadChannelId: null, lowImportanceMentionCount: 0, highImportanceMentionCount: 0, mentionCounts: null, ncMentionCount: 0, sentinel: null };
+      let obj = {
+        unread: false,
+        unreadByType: null,
+        unreadChannelId: null,
+        lowImportanceMentionCount: 0,
+        highImportanceMentionCount: 0,
+        mentionCounts: null,
+        ncMentionCount: 0,
+        sentinel: null,
+      };
       obj[1] = {};
       obj[5] = {};
       let num;
@@ -254,7 +275,16 @@ function recountChannels(guildId, items) {
     if (tmp == null) {
       tmp14 = tmp2;
     }
-    obj = { unread: false, unreadByType: null, unreadChannelId: null, lowImportanceMentionCount: 0, highImportanceMentionCount: 0, mentionCounts: null, ncMentionCount: 0, sentinel: null };
+    obj = {
+      unread: false,
+      unreadByType: null,
+      unreadChannelId: null,
+      lowImportanceMentionCount: 0,
+      highImportanceMentionCount: 0,
+      mentionCounts: null,
+      ncMentionCount: 0,
+      sentinel: null,
+    };
     obj[1] = {};
     obj[5] = {};
     let num2;
@@ -347,7 +377,16 @@ function updateNonChannel(guild_id, GUILD_EVENT) {
       if (guild_id == null) {
         tmp7 = NULL_STRING_GUILD_ID;
       }
-      let obj = { unread: false, unreadByType: null, unreadChannelId: null, lowImportanceMentionCount: 0, highImportanceMentionCount: 0, mentionCounts: null, ncMentionCount: 0, sentinel: null };
+      let obj = {
+        unread: false,
+        unreadByType: null,
+        unreadChannelId: null,
+        lowImportanceMentionCount: 0,
+        highImportanceMentionCount: 0,
+        mentionCounts: null,
+        ncMentionCount: 0,
+        sentinel: null,
+      };
       obj[1] = {};
       obj[5] = {};
       let num;
@@ -366,7 +405,16 @@ function updateNonChannel(guild_id, GUILD_EVENT) {
     if (guild_id == null) {
       tmp10 = NULL_STRING_GUILD_ID;
     }
-    obj = { unread: false, unreadByType: null, unreadChannelId: null, lowImportanceMentionCount: 0, highImportanceMentionCount: 0, mentionCounts: null, ncMentionCount: 0, sentinel: null };
+    obj = {
+      unread: false,
+      unreadByType: null,
+      unreadChannelId: null,
+      lowImportanceMentionCount: 0,
+      highImportanceMentionCount: 0,
+      mentionCounts: null,
+      ncMentionCount: 0,
+      sentinel: null,
+    };
     obj[1] = {};
     obj[5] = {};
     let num2;
@@ -410,7 +458,16 @@ function recountGuild(guildId) {
     if (tmp2 == null) {
       tmp7 = tmp3;
     }
-    let obj = { unread: false, unreadByType: null, unreadChannelId: null, lowImportanceMentionCount: 0, highImportanceMentionCount: 0, mentionCounts: null, ncMentionCount: 0, sentinel: null };
+    let obj = {
+      unread: false,
+      unreadByType: null,
+      unreadChannelId: null,
+      lowImportanceMentionCount: 0,
+      highImportanceMentionCount: 0,
+      mentionCounts: null,
+      ncMentionCount: 0,
+      sentinel: null,
+    };
     obj[1] = {};
     obj[5] = {};
     let num;
@@ -479,7 +536,13 @@ function recountGuild(guildId) {
         let tmp26 = hasItem;
         let tmp27 = tmp20;
         let tmp19 = constants;
-        let guildChannelUnreadState = store3.getGuildChannelUnreadState(obj12, result, channelOverrides, hasItem, tmp20);
+        let guildChannelUnreadState = store3.getGuildChannelUnreadState(
+          obj12,
+          result,
+          channelOverrides,
+          hasItem,
+          tmp20,
+        );
         ({ mentionCount, isMentionLowImportance } = guildChannelUnreadState);
         let tmp30 = mentionCount > 0;
         let tmp31 = hasItem;
@@ -670,7 +733,16 @@ function recountGuild(guildId) {
       if (tmp2 == null) {
         tmp84 = NULL_STRING_GUILD_ID;
       }
-      obj2 = { unread: false, unreadByType: null, unreadChannelId: null, lowImportanceMentionCount: 0, highImportanceMentionCount: 0, mentionCounts: null, ncMentionCount: 0, sentinel: null };
+      obj2 = {
+        unread: false,
+        unreadByType: null,
+        unreadChannelId: null,
+        lowImportanceMentionCount: 0,
+        highImportanceMentionCount: 0,
+        mentionCounts: null,
+        ncMentionCount: 0,
+        sentinel: null,
+      };
       obj2[1] = {};
       obj2[5] = {};
       let num4;
@@ -685,7 +757,10 @@ function recountGuild(guildId) {
       const tmp83 = closure_22;
     }
     closure_22[tmp79] = tmp82;
-    let flag3 = obj.unread !== tmp82.unread || obj.highImportanceMentionCount !== tmp82.highImportanceMentionCount || obj.lowImportanceMentionCount !== tmp82.lowImportanceMentionCount;
+    let flag3 =
+      obj.unread !== tmp82.unread ||
+      obj.highImportanceMentionCount !== tmp82.highImportanceMentionCount ||
+      obj.lowImportanceMentionCount !== tmp82.lowImportanceMentionCount;
     if (flag3) {
       let tmp87 = tmp2;
       if (tmp2 == null) {
@@ -846,7 +921,16 @@ function handleMessageCreate(channelId) {
         if (guild_id == null) {
           guild_id = NULL_STRING_GUILD_ID;
         }
-        const obj = { unread: false, unreadByType: null, unreadChannelId: null, lowImportanceMentionCount: 0, highImportanceMentionCount: 0, mentionCounts: null, ncMentionCount: 0, sentinel: null };
+        const obj = {
+          unread: false,
+          unreadByType: null,
+          unreadChannelId: null,
+          lowImportanceMentionCount: 0,
+          highImportanceMentionCount: 0,
+          mentionCounts: null,
+          ncMentionCount: 0,
+          sentinel: null,
+        };
         obj[1] = {};
         obj[5] = {};
         let num;
@@ -905,24 +989,35 @@ function handleChannelUpdate(channel) {
 }
 function handleChannelUpdates(channels) {
   const obj = applyDefault(channels.channels);
-  return applyDefault(channels.channels).groupBy((getGuildId) => getGuildId.getGuildId()).reduce((arg0, arr) => callback(arg2, arr.map((id) => id.id)) || arg0, false);
+  return applyDefault(channels.channels)
+    .groupBy((getGuildId) => getGuildId.getGuildId())
+    .reduce(
+      (arg0, arr) =>
+        callback(
+          arg2,
+          arr.map((id) => id.id),
+        ) || arg0,
+      false,
+    );
 }
 function handleBulkAck(channels) {
   const mapped = applyDefault(channels.channels).map((channelId) => channelId.channelId);
   const found = mapped.filter((arg0) => null != store.getChannel(arg0));
   const arr = applyDefault(channels.channels);
-  return found.groupBy((arg0) => {
-    const channel = store.getChannel(arg0);
-    let guildId;
-    if (channel != null) {
-      guildId = channel.getGuildId();
-    }
-    return guildId;
-  }).reduce((arg0, arg1, arg2) => callback(arg2, arg1) || arg0, false);
+  return found
+    .groupBy((arg0) => {
+      const channel = store.getChannel(arg0);
+      let guildId;
+      if (channel != null) {
+        guildId = channel.getGuildId();
+      }
+      return guildId;
+    })
+    .reduce((arg0, arg1, arg2) => callback(arg2, arg1) || arg0, false);
 }
 function handleThreadUpdate(channel) {
   channel = channel.channel;
-  const items = [, ];
+  const items = [,];
   ({ id: arr[0], parent_id: arr[1] } = channel);
   return recountChannels(channel.getGuildId(), items);
 }
@@ -950,13 +1045,19 @@ function handleThreadMembersUpdate(id) {
 function handleThreadListSync(threads) {
   threads = threads.threads;
   const found = threads.filter((id) => closure_6.hasJoined(id.id));
-  return recountChannels(threads.guildId, found.map((id) => id.id));
+  return recountChannels(
+    threads.guildId,
+    found.map((id) => id.id),
+  );
 }
 function handlePassiveUpdateV2(channels) {
   let tmp = channels.channels.length > 0;
   if (tmp) {
     channels = channels.channels;
-    tmp = recountChannels(channels.guildId, channels.map((id) => id.id));
+    tmp = recountChannels(
+      channels.guildId,
+      channels.map((id) => id.id),
+    );
   }
   return tmp;
 }
@@ -969,13 +1070,15 @@ function handleGuildUpdate(guildId) {
 function handleUserGuildSettingsFullUpdate(userGuildSettings) {
   userGuildSettings = userGuildSettings.userGuildSettings;
   set = undefined;
-  set = new Set(userGuildSettings.map((guild_id) => {
-    guild_id = guild_id.guild_id;
-    if (guild_id == null) {
-      guild_id = closure_21;
-    }
-    return guild_id;
-  }));
+  set = new Set(
+    userGuildSettings.map((guild_id) => {
+      guild_id = guild_id.guild_id;
+      if (guild_id == null) {
+        guild_id = closure_21;
+      }
+      return guild_id;
+    }),
+  );
   const keys = DISCORD_EPOCHDefault.keys(closure_22);
   return keys.reduce((arg0, arg1) => {
     let hasItem = set.has(arg1);
@@ -1023,8 +1126,8 @@ class GuildReadStateStore extends tmp3 {
       CONNECTION_OPEN: handleConnectionOpen,
       OVERLAY_INITIALIZE: handleOverlayInitialize,
       CACHE_LOADED_LAZY() {
-            return obj.loadCache();
-          },
+        return obj.loadCache();
+      },
       GUILD_CREATE: handleGuildCreate,
       GUILD_DELETE: handleGuildDelete,
       MESSAGE_CREATE: handleMessageCreate,
@@ -1068,7 +1171,7 @@ class GuildReadStateStore extends tmp3 {
       RESORT_THREADS: handleGenericUpdate,
       NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: handleClearNotifCenterGuildMentions,
       TRY_ACK: handleGenericUpdate,
-      LOAD_RECENT_MENTIONS_SUCCESS: handleRecentMentionsSuccess
+      LOAD_RECENT_MENTIONS_SUCCESS: handleRecentMentionsSuccess,
     };
     tmp = new tmp(obj, handleClearNotifCenterGuildMentions, handleGenericUpdate, new.target);
     // ThrowIfThisInitialized (0x7c)
@@ -1078,7 +1181,18 @@ class GuildReadStateStore extends tmp3 {
 }
 const prototype = GuildReadStateStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_11, closure_15, closure_14, closure_13, closure_10, closure_17, closure_16, closure_5, closure_6, closure_3);
+  this.waitFor(
+    closure_11,
+    closure_15,
+    closure_14,
+    closure_13,
+    closure_10,
+    closure_17,
+    closure_16,
+    closure_5,
+    closure_6,
+    closure_3,
+  );
 };
 prototype["loadCache"] = function loadCache() {
   const snapshot = this.readSnapshot(GuildReadStateStore.LATEST_SNAPSHOT_VERSION);
@@ -1131,7 +1245,16 @@ prototype["getMentionCount"] = function getMentionCount(arg0) {
     if (tmp == null) {
       tmp = NULL_STRING_GUILD_ID;
     }
-    const obj = { unread: false, unreadByType: null, unreadChannelId: null, lowImportanceMentionCount: 0, highImportanceMentionCount: 0, mentionCounts: null, ncMentionCount: 0, sentinel: null };
+    const obj = {
+      unread: false,
+      unreadByType: null,
+      unreadChannelId: null,
+      lowImportanceMentionCount: 0,
+      highImportanceMentionCount: 0,
+      mentionCounts: null,
+      ncMentionCount: 0,
+      sentinel: null,
+    };
     obj[1] = {};
     obj[5] = {};
     let num;
@@ -1163,7 +1286,16 @@ prototype["getIsMentionLowImportance"] = function getIsMentionLowImportance(arg0
     if (tmp == null) {
       tmp = NULL_STRING_GUILD_ID;
     }
-    const obj = { unread: false, unreadByType: null, unreadChannelId: null, lowImportanceMentionCount: 0, highImportanceMentionCount: 0, mentionCounts: null, ncMentionCount: 0, sentinel: null };
+    const obj = {
+      unread: false,
+      unreadByType: null,
+      unreadChannelId: null,
+      lowImportanceMentionCount: 0,
+      highImportanceMentionCount: 0,
+      mentionCounts: null,
+      ncMentionCount: 0,
+      sentinel: null,
+    };
     obj[1] = {};
     obj[5] = {};
     let num;
@@ -1308,7 +1440,10 @@ prototype["getMentionCountForPrivateChannel"] = function getMentionCountForPriva
   }
   return num;
 };
-prototype["getHighImportanceMentionCountForChannel"] = function getHighImportanceMentionCountForChannel(guild_id, currentlySelectedChannelId) {
+prototype["getHighImportanceMentionCountForChannel"] = function getHighImportanceMentionCountForChannel(
+  guild_id,
+  currentlySelectedChannelId,
+) {
   let tmp = guild_id;
   if (guild_id == null) {
     tmp = NULL_STRING_GUILD_ID;
@@ -1341,7 +1476,16 @@ prototype["getGuildChangeSentinel"] = function getGuildChangeSentinel(arg0) {
     if (tmp == null) {
       tmp = NULL_STRING_GUILD_ID;
     }
-    const obj = { unread: false, unreadByType: null, unreadChannelId: null, lowImportanceMentionCount: 0, highImportanceMentionCount: 0, mentionCounts: null, ncMentionCount: 0, sentinel: null };
+    const obj = {
+      unread: false,
+      unreadByType: null,
+      unreadChannelId: null,
+      lowImportanceMentionCount: 0,
+      highImportanceMentionCount: 0,
+      mentionCounts: null,
+      ncMentionCount: 0,
+      sentinel: null,
+    };
     obj[1] = {};
     obj[5] = {};
     let num;

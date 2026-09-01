@@ -16,17 +16,29 @@ function NewBadge() {
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.c2GSIl);
   obj[1] = jsx(Text.Text, { variant: "text-sm/bold", color: "text-default", children: null });
-  return <View variant="text-sm/bold" color="text-default">{null}</View>;
+  return (
+    <View variant="text-sm/bold" color="text-default">
+      {null}
+    </View>
+  );
 }
-const TOPICAL_NAVIGATION_HEADER_COACHMARK = require("DismissibleContent").DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
+const TOPICAL_NAVIGATION_HEADER_COACHMARK =
+  require("DismissibleContent").DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
 let items = [TOPICAL_NAVIGATION_HEADER_COACHMARK];
 createCacheKey = { badge: null, coachmarkWrapper: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  paddingVertical: 2,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.round,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginRight: ThemesDefault.space.PX_12 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 const obj1 = { marginRight: ThemesDefault.space.PX_12 };
-const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationCoachmark.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/conversations/components/native/ConversationCoachmark.tsx",
+);
 
 export const ConversationCoachmark = function ConversationCoachmark(arg0) {
   let first;
@@ -39,7 +51,14 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
   dependencyMap = tmp5;
   items = [tmp3[1], first];
   const memo = React.useMemo(() => {
-    const obj = { title: null, description: null, position: "bottom", visible: null, onDismiss: null, renderImgComponent: null };
+    const obj = {
+      title: null,
+      description: null,
+      position: "bottom",
+      visible: null,
+      onDismiss: null,
+      renderImgComponent: null,
+    };
     const intl = first(1236).intl;
     obj[0] = intl.string(first(1236).t.UcQjDe);
     const intl2 = first(1236).intl;

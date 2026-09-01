@@ -10,7 +10,12 @@ import ApexExperiment from "../experiments/apex/index.tsx";
 require = arg1;
 ApexExperiment = { 1: null, 2: { enableClips: true, ignorePlatformRestriction: false } };
 ApexExperiment[2] = { enableClips: true, ignorePlatformRestriction: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-clips-experiment", defaultConfig: { enableClips: false, ignorePlatformRestriction: false }, variations: ApexExperiment });
+const apexExperiment = ApexExperiment.createApexExperiment({
+  kind: "user",
+  name: "2026-03-clips-experiment",
+  defaultConfig: { enableClips: false, ignorePlatformRestriction: false },
+  variations: ApexExperiment,
+});
 const result = require("set").fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 
 export const ClipsExperiment = apexExperiment;

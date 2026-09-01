@@ -13,8 +13,7 @@ function handleUserSettingsStoreUpdate() {
 }
 let closure_2 = {};
 const Store = initializeDefault.Store;
-class WishlistRecommendationsStore extends Store {
-}
+class WishlistRecommendationsStore extends Store {}
 const prototype = WishlistRecommendationsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_0);
@@ -115,7 +114,7 @@ const wishlistRecommendationsStore = new WishlistRecommendationsStore(dispatcher
       }
     }
     return false;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/wishlists/WishlistRecommendationsStore.tsx");
 

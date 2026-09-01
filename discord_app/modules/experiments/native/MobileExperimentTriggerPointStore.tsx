@@ -28,7 +28,16 @@ prototype["initialize"] = function initialize() {
 MobileExperimentTriggerPointStore.displayName = "MobileExperimentTriggerPointStore";
 const obj = { CONNECTION_OPEN: handleConnectionOpen };
 // ThrowIfThisInitialized (0x7c)
-const tmp3 = new "initialize"(importDefaultResult, obj, require("dispatcher").DispatchBand.Early, prototype, MobileExperimentTriggerPointStore, "initialize", importDefaultResult, obj);
+const tmp3 = new "initialize"(
+  importDefaultResult,
+  obj,
+  require("dispatcher").DispatchBand.Early,
+  prototype,
+  MobileExperimentTriggerPointStore,
+  "initialize",
+  importDefaultResult,
+  obj,
+);
 const result = require("set").fileFinishedImporting("modules/experiments/native/MobileExperimentTriggerPointStore.tsx");
 
 export default tmp3;

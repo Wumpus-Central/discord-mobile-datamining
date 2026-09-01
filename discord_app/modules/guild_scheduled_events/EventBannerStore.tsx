@@ -7,8 +7,7 @@ import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
 const GuildScheduledEventStatus = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventStatus;
 let closure_1 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class EventBannerStore extends PersistedStore {
-}
+class EventBannerStore extends PersistedStore {}
 const prototype = EventBannerStore.prototype;
 prototype["initialize"] = function initialize(dismissedEventIds) {
   if (null != dismissedEventIds) {
@@ -58,7 +57,7 @@ const eventBannerStore = new EventBannerStore(dispatcherDefault, {
       const id = guildScheduledEvent.id;
       delete tmp[tmp2];
     }
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/guild_scheduled_events/EventBannerStore.tsx");
 

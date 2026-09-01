@@ -26,8 +26,7 @@ let closure_2 = {};
 let set = new Set();
 let closure_4 = {};
 const Store = initializeDefault.Store;
-class GuildOnboardingHomeSettingsStore extends Store {
-}
+class GuildOnboardingHomeSettingsStore extends Store {}
 const prototype = GuildOnboardingHomeSettingsStore.prototype;
 prototype["getSettings"] = function getSettings(arg0) {
   let tmp = null;
@@ -197,7 +196,9 @@ obj = {
       }
       tmp.resourceChannels = resourceChannels;
       resourceChannels = tmp.resourceChannels;
-      const findIndexResult = resourceChannels.findIndex((channelId) => channelId.channelId === resourceChannel.channelId);
+      const findIndexResult = resourceChannels.findIndex(
+        (channelId) => channelId.channelId === resourceChannel.channelId,
+      );
       let flag = -1 !== findIndexResult;
       if (flag) {
         obj = {};
@@ -240,7 +241,7 @@ obj = {
       const id2 = guild.id;
       delete tmp2[tmp];
     }
-  }
+  },
 };
 const guildOnboardingHomeSettingsStore = new GuildOnboardingHomeSettingsStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeSettingsStore.tsx");

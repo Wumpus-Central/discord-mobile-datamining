@@ -9,8 +9,21 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 const require = arg1;
 noopAll;
 ({ HUB_PROGRESS_ACTION_SHEET_ID: c4, HUB_PROGRESS_NUM_TOTAL_STEPS: c5 } = items);
-createCacheKey = { container: { overflow: "hidden", height: require("GuildDirectoryCreate").GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT, padding: 16 }, icon: { width: 48, height: 48 }, innerContainer: null };
-createCacheKey = { paddingVertical: 8, paddingLeft: 8, paddingRight: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = {
+  container: {
+    overflow: "hidden",
+    height: require("GuildDirectoryCreate").GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT,
+    padding: 16,
+  },
+  icon: { width: 48, height: 48 },
+  innerContainer: null,
+};
+createCacheKey = {
+  paddingVertical: 8,
+  paddingLeft: 8,
+  paddingRight: 12,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[2] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/hub/native/components/progress_bar/HubProgressHeader.tsx");
@@ -48,7 +61,15 @@ export default function HubProgressHeader(guild) {
     }
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    obj1 = { style: null, iconStyle: null, onPress: null, iconSource: null, title: null, subtitle: null, trailing: null };
+    obj1 = {
+      style: null,
+      iconStyle: null,
+      onPress: null,
+      iconSource: null,
+      title: null,
+      subtitle: null,
+      trailing: null,
+    };
     ({ innerContainer: obj6[0], icon: obj6[1] } = tmp);
     obj1[2] = function onPress() {
       let tmp = flag;
@@ -59,7 +80,11 @@ export default function HubProgressHeader(guild) {
         let obj = flag(nextHubProgressStep[11]);
         obj = { guild: null, analyticsSource: "Directory Channel Header" };
         obj[0] = guild;
-        obj.openLazy(guild(nextHubProgressStep[13])(nextHubProgressStep[12], nextHubProgressStep.paths), closure_1_4, obj);
+        obj.openLazy(
+          guild(nextHubProgressStep[13])(nextHubProgressStep[12], nextHubProgressStep.paths),
+          closure_1_4,
+          obj,
+        );
       }
     };
     obj1[3] = flag(tmp3[14]);
@@ -70,7 +95,15 @@ export default function HubProgressHeader(guild) {
       tmp10Result = tmp10(tmp11, {});
     }
     obj1[6] = tmp10Result;
-    obj[1] = jsx(tmp2(tmp3[10]).FormCTA, { style: null, iconStyle: null, onPress: null, iconSource: null, title: null, subtitle: null, trailing: null });
+    obj[1] = jsx(tmp2(tmp3[10]).FormCTA, {
+      style: null,
+      iconStyle: null,
+      onPress: null,
+      iconSource: null,
+      title: null,
+      subtitle: null,
+      trailing: null,
+    });
     return <View style={null}>{null}</View>;
   }
-};
+}

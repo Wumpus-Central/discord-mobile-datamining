@@ -9,7 +9,9 @@ import { EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY as closure_4 } from "../Explic
 import { SearchMediaTypes } from "../../search/SearchConstants.tsx";
 
 require = arg1;
-let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx",
+);
 
 export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilterPress(arg0) {
   ({ handlePress: require, excluded } = arg0);
@@ -73,7 +75,12 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     };
     items.push(obj);
   }
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14428, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14428, dependencyMap.paths), closure_4, {
+    title,
+    subtitle,
+    options: items,
+    currentValue,
+  });
 };
 export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMedia(media, found) {
   if (null == found) {

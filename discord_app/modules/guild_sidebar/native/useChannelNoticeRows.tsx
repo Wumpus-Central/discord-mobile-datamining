@@ -22,19 +22,23 @@ export default function useChannelNoticeRows(id) {
   currentUser = currentUser.getCurrentUser();
   const items1 = [closure_6];
   const items2 = [currentUser, id.mfaLevel, id];
-  const stateFromStores1 = id(stateFromStores[9]).useStateFromStores(items1, () => {
-    let result = null != currentUser;
-    if (result) {
-      result = id.mfaLevel === closure_1_10.ELEVATED;
-    }
-    if (result) {
-      result = !currentUser.mfaEnabled;
-    }
-    if (result) {
-      result = closure_6.hasElevatedPermissions(hasAlreadyLinked);
-    }
-    return result;
-  }, items2);
+  const stateFromStores1 = id(stateFromStores[9]).useStateFromStores(
+    items1,
+    () => {
+      let result = null != currentUser;
+      if (result) {
+        result = id.mfaLevel === closure_1_10.ELEVATED;
+      }
+      if (result) {
+        result = !currentUser.mfaEnabled;
+      }
+      if (result) {
+        result = closure_6.hasElevatedPermissions(hasAlreadyLinked);
+      }
+      return result;
+    },
+    items2,
+  );
   const obj2 = id(stateFromStores[9]);
   guildHasLiveChannelNotice = id(stateFromStores[16]).useGuildHasLiveChannelNotice(id);
   const obj3 = id(stateFromStores[16]);
@@ -46,29 +50,39 @@ export default function useChannelNoticeRows(id) {
   } else {
     items4 = [];
   }
-  const tmp10 = currentUser(id(stateFromStores[13]).useSelectedSingleUseGuildDismissibleContent(items4, id, constants.CHANNEL_NOTICES, true), 2);
+  const tmp10 = currentUser(
+    id(stateFromStores[13]).useSelectedSingleUseGuildDismissibleContent(items4, id, constants.CHANNEL_NOTICES, true),
+    2,
+  );
   closure_6 = tmp11;
   hasAlreadyLinked = undefined;
   let tmpResult = tmp(tmp2[9]);
   const items5 = [closure_7];
   tmpResult = tmp(tmp2[10]);
-  const tmp12 = hasAlreadyLinked(stateFromStores[11])(tmpResult.useApplication(tmpResult.useStateFromStoresArray(items5, () => {
-    guild = guild.getGuild(id);
-    let gameApplicationIds;
-    if (guild != null) {
-      gameApplicationIds = guild.gameApplicationIds;
-    }
-    if (gameApplicationIds == null) {
-      gameApplicationIds = [];
-    }
-    return gameApplicationIds;
-  })[0]).data);
+  const tmp12 = hasAlreadyLinked(stateFromStores[11])(
+    tmpResult.useApplication(
+      tmpResult.useStateFromStoresArray(items5, () => {
+        guild = guild.getGuild(id);
+        let gameApplicationIds;
+        if (guild != null) {
+          gameApplicationIds = guild.gameApplicationIds;
+        }
+        if (gameApplicationIds == null) {
+          gameApplicationIds = [];
+        }
+        return gameApplicationIds;
+      })[0],
+    ).data,
+  );
   ({ fetched, hasAlreadyLinked } = tmp12);
   ({ connectionApp, canStartAuthorization, startAuthorization } = tmp12);
   const obj5 = id(stateFromStores[13]);
   const tmp8 = constants;
   const tmp9 = currentUser;
-  const defaultAuthorizationNotifiers = id(stateFromStores[12]).useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyLinked);
+  const defaultAuthorizationNotifiers = id(stateFromStores[12]).useDefaultAuthorizationNotifiers(
+    startAuthorization,
+    hasAlreadyLinked,
+  );
   if (fetched) {
     fetched = !hasAlreadyLinked;
   }
@@ -96,7 +110,10 @@ export default function useChannelNoticeRows(id) {
   }
   const tmpResult2 = id(stateFromStores[13]);
   const items8 = [id, hasAlreadyLinked];
-  [tmp15, tmp16] = tmp9(id(stateFromStores[13]).useSelectedSingleUseGuildDismissibleContent(items7, id, tmp8.CHANNEL_NOTICES, true), 2);
+  [tmp15, tmp16] = tmp9(
+    id(stateFromStores[13]).useSelectedSingleUseGuildDismissibleContent(items7, id, tmp8.CHANNEL_NOTICES, true),
+    2,
+  );
   const effect = stateFromStores1.useEffect(() => {
     if (hasAlreadyLinked) {
       let obj = id(stateFromStores[15]);
@@ -104,7 +121,11 @@ export default function useChannelNoticeRows(id) {
       obj[0] = closure_1_11.INDIRECT_ACTION;
       obj[1] = id;
       obj[2] = closure_1_12.CHANNEL_NOTICES;
-      const result = obj.UNSAFE_markSingleUseGuildDismissibleContentAsDismissed(id(stateFromStores[14]).DismissibleContent.MOBILE_ACCOUNT_LINKING_BANNER, id, obj);
+      const result = obj.UNSAFE_markSingleUseGuildDismissibleContentAsDismissed(
+        id(stateFromStores[14]).DismissibleContent.MOBILE_ACCOUNT_LINKING_BANNER,
+        id,
+        obj,
+      );
     }
   }, items8);
   closure_7 = tmp18;
@@ -130,8 +151,8 @@ export default function useChannelNoticeRows(id) {
     gameClaimMarkAsDismissed: tmp10[1],
     applicationAccountLinkMarkAsDismissed: tmp16,
     startApplicationAccountLinkAuthorization: defaultAuthorizationNotifiers,
-    accountLinkApplication: connectionApp
+    accountLinkApplication: connectionApp,
   };
   items9 = [stateFromStores, stateFromStores1, guildHasLiveChannelNotice, null != tmp10[0], null != tmp15];
   return obj;
-};
+}

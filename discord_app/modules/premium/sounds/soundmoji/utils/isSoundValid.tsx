@@ -47,4 +47,4 @@ export default function isSoundValid(guildId) {
     }
     return true;
   }
-};
+}

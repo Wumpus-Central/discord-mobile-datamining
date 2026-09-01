@@ -50,7 +50,15 @@ function allowChannelAccess(id, channelType, MEMBER) {
 }
 ({ isGuildSelectableChannelType: c4, TEXT_CHANNEL_TYPES: c5, THREAD_CHANNEL_TYPES: closure_6 } = createChannelRecord);
 const ChannelTypes = ME.ChannelTypes;
-({ Permissions: map1, GuildFeatures: closure_14, BoostedGuildTiers: closure_15, BITRATE_MAX: closure_16, BITRATE_DEFAULT: closure_17, Routes: closure_18, AnalyticsPages: closure_19 } = ME);
+({
+  Permissions: map1,
+  GuildFeatures: closure_14,
+  BoostedGuildTiers: closure_15,
+  BITRATE_MAX: closure_16,
+  BITRATE_DEFAULT: closure_17,
+  Routes: closure_18,
+  AnalyticsPages: closure_19,
+} = ME);
 const BoostedGuildFeatures = GuildFeatures.BoostedGuildFeatures;
 ({ GUILD_VOICE: closure_21, GUILD_CATEGORY: closure_22, GUILD_STAGE_VOICE: closure_23 } = ChannelTypes);
 let result = set.fileFinishedImporting("utils/ChannelUtils.tsx");
@@ -120,7 +128,14 @@ export const permissionOverwriteForRole = function permissionOverwriteForRole(id
   return allowChannelAccess(id, channelType, PermissionOverwriteType.PermissionOverwriteType.ROLE);
 };
 export const permissionOverwritesForAnnouncement = function permissionOverwritesForAnnouncement(id) {
-  const items = [{ id, type: PermissionOverwriteType.PermissionOverwriteType.ROLE, deny: constants.SEND_MESSAGES, allow: applyOverwritesAll.NONE }];
+  const items = [
+    {
+      id,
+      type: PermissionOverwriteType.PermissionOverwriteType.ROLE,
+      deny: constants.SEND_MESSAGES,
+      allow: applyOverwritesAll.NONE,
+    },
+  ];
   return items;
 };
 export const isChannelFull = function isChannelFull(channel, closure_1_11, closure_10) {
@@ -209,7 +224,9 @@ export const computeSummarizedVoiceStates = function computeSummarizedVoiceState
           const forEach = arr.forEach;
           if (id.isGuildStageVoice()) {
             const item = forEach((voiceState) => {
-              const audienceRequestToSpeakState = closure_1_0(closure_1_3[12]).getAudienceRequestToSpeakState(voiceState.voiceState);
+              const audienceRequestToSpeakState = closure_1_0(closure_1_3[12]).getAudienceRequestToSpeakState(
+                voiceState.voiceState,
+              );
               if (audienceRequestToSpeakState === closure_1_0(closure_1_3[12]).RequestToSpeakStates.ON_STAGE) {
                 arr = arr.push(voiceState);
               }
@@ -233,7 +250,9 @@ export const computeSummarizedVoiceUsers = function computeSummarizedVoiceUsers(
           const forEach = arr.forEach;
           if (id.isGuildStageVoice()) {
             const item = forEach((voiceState) => {
-              const audienceRequestToSpeakState = closure_1_0(closure_1_3[12]).getAudienceRequestToSpeakState(voiceState.voiceState);
+              const audienceRequestToSpeakState = closure_1_0(closure_1_3[12]).getAudienceRequestToSpeakState(
+                voiceState.voiceState,
+              );
               if (audienceRequestToSpeakState === closure_1_0(closure_1_3[12]).RequestToSpeakStates.ON_STAGE) {
                 arr = arr.push(voiceState);
               }

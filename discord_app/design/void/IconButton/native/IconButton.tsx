@@ -13,7 +13,7 @@ class SquareIconButton {
     ({ onPress, source, style, iconStyle, accessibilityLabel, disabled } = global);
     tmp = closure_5();
     closure_1 = tmp;
-    items = [, ];
+    items = [,];
     items[0] = size;
     items[1] = tmp;
     tmp3 = jsx;
@@ -33,8 +33,16 @@ class SquareIconButton {
     if (!accessibilityHidden) {
       tmp6 = accessibilityLabel;
     }
-    obj = { accessibilityRole: "button", accessibilityLabel: tmp6, accessibilityElementsHidden: accessibilityHidden, onPress, disabled, style: items1, children: null };
-    items1 = [, , ];
+    obj = {
+      accessibilityRole: "button",
+      accessibilityLabel: tmp6,
+      accessibilityElementsHidden: accessibilityHidden,
+      onPress,
+      disabled,
+      style: items1,
+      children: null,
+    };
+    items1 = [, ,];
     items1[0] = tmp.container;
     items1[1] = style;
     items1[2] = memo;
@@ -48,7 +56,7 @@ class SquareIconButton {
     if (!disableColor) {
       icon = tmp.icon;
     }
-    items2 = [, ];
+    items2 = [,];
     items2[0] = icon;
     items2[1] = iconStyle;
     obj[1] = items2;
@@ -75,7 +83,7 @@ class CircularIconButton {
       largeCircular = tmp2.largeCircular;
     }
     obj = { style: items, size };
-    items = [, ];
+    items = [,];
     items[0] = largeCircular;
     items[1] = style;
     merged1 = Object.assign(merged);
@@ -84,8 +92,22 @@ class CircularIconButton {
   }
 }
 let obj = { SMALL_24: 24, [24]: "SMALL_24", MEDIUM_32: 32, [32]: "MEDIUM_32", LARGE_40: 40, [40]: "LARGE_40" };
-obj = { container: null, small: null, medium: null, large: null, smallCircular: null, mediumCircular: null, largeCircular: null, icon: null };
-obj = { borderRadius: ThemesDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: require("result").DARK_PRIMARY_700_LIGHT_PRIMARY_230 };
+obj = {
+  container: null,
+  small: null,
+  medium: null,
+  large: null,
+  smallCircular: null,
+  mediumCircular: null,
+  largeCircular: null,
+  icon: null,
+};
+obj = {
+  borderRadius: ThemesDefault.radii.xs,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: require("result").DARK_PRIMARY_700_LIGHT_PRIMARY_230,
+};
 obj[0] = obj;
 obj[1] = { height: obj.SMALL_24, width: obj.SMALL_24 };
 obj[2] = { height: obj.MEDIUM_32, width: obj.MEDIUM_32 };

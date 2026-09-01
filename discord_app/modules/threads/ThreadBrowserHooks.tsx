@@ -22,17 +22,23 @@ export const useTrackThreadBrowserTab = function useTrackThreadBrowserTab() {
 export const useActiveThreadIds = function useActiveThreadIds(arg0) {
   const _require = arg0;
   const items = [closure_7, closure_9, closure_6];
-  const items1 = [, ];
+  const items1 = [,];
   ({ guild_id: arr2[0], id: arr2[1] } = arg0);
-  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
-    const tmp = stateFromStoresArray(closure_1_2[12]);
-    const values = stateFromStoresArray(closure_1_2[12])(closure_1_9.getThreadsForParent(memo.guild_id, memo.id)).values();
-    const mapped = values.map((id) => channel.getChannel(id.id));
-    const found = mapped.filter(memo(closure_1_2[13]).isNotNullish);
-    const found1 = found.filter((arg0) => closure_7.can(constants.VIEW_CHANNEL, arg0));
-    const tmpResult = stateFromStoresArray(closure_1_2[12])(closure_1_9.getThreadsForParent(memo.guild_id, memo.id));
-    return found1.map((id) => id.id).value();
-  }, items1);
+  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+    items,
+    () => {
+      const tmp = stateFromStoresArray(closure_1_2[12]);
+      const values = stateFromStoresArray(closure_1_2[12])(
+        closure_1_9.getThreadsForParent(memo.guild_id, memo.id),
+      ).values();
+      const mapped = values.map((id) => channel.getChannel(id.id));
+      const found = mapped.filter(memo(closure_1_2[13]).isNotNullish);
+      const found1 = found.filter((arg0) => closure_7.can(constants.VIEW_CHANNEL, arg0));
+      const tmpResult = stateFromStoresArray(closure_1_2[12])(closure_1_9.getThreadsForParent(memo.guild_id, memo.id));
+      return found1.map((id) => id.id).value();
+    },
+    items1,
+  );
   const items2 = [stateFromStoresArray];
   return React.useMemo(() => {
     const sorted = stateFromStoresArray(closure_1_2[12])(stateFromStoresArray).sort((arg0, arg1) => {
@@ -47,17 +53,23 @@ export const useActiveThreads = function useActiveThreads(channel) {
   let memo = channel;
   let obj = memo(589);
   const items = [closure_7, closure_9, closure_6];
-  const items1 = [, ];
+  const items1 = [,];
   ({ guild_id: arr2[0], id: arr2[1] } = channel);
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
-    const tmp = stateFromStoresArray(closure_1_2[12]);
-    const values = stateFromStoresArray(closure_1_2[12])(closure_1_9.getThreadsForParent(memo.guild_id, memo.id)).values();
-    const mapped = values.map((id) => channel.getChannel(id.id));
-    const found = mapped.filter(memo(closure_1_2[13]).isNotNullish);
-    const found1 = found.filter((arg0) => closure_7.can(constants.VIEW_CHANNEL, arg0));
-    const tmpResult = stateFromStoresArray(closure_1_2[12])(closure_1_9.getThreadsForParent(memo.guild_id, memo.id));
-    return found1.map((id) => id.id).value();
-  }, items1);
+  const stateFromStoresArray = obj.useStateFromStoresArray(
+    items,
+    () => {
+      const tmp = stateFromStoresArray(closure_1_2[12]);
+      const values = stateFromStoresArray(closure_1_2[12])(
+        closure_1_9.getThreadsForParent(memo.guild_id, memo.id),
+      ).values();
+      const mapped = values.map((id) => channel.getChannel(id.id));
+      const found = mapped.filter(memo(closure_1_2[13]).isNotNullish);
+      const found1 = found.filter((arg0) => closure_7.can(constants.VIEW_CHANNEL, arg0));
+      const tmpResult = stateFromStoresArray(closure_1_2[12])(closure_1_9.getThreadsForParent(memo.guild_id, memo.id));
+      return found1.map((id) => id.id).value();
+    },
+    items1,
+  );
   const items2 = [stateFromStoresArray];
   memo = React.useMemo(() => {
     const sorted = stateFromStoresArray(closure_1_2[12])(stateFromStoresArray).sort((arg0, arg1) => {
@@ -69,7 +81,15 @@ export const useActiveThreads = function useActiveThreads(channel) {
   }, items2);
   const items3 = [closure_11];
   const items4 = [memo];
-  const tmp3 = callback(memo(589).useStateFromStores(items3, () => stateFromStoresArray(closure_1_2[12]).partition(memo, (id) => closure_11.hasJoined(id)), items4, memo(589).statesWillNeverBeEqual), 2);
+  const tmp3 = callback(
+    memo(589).useStateFromStores(
+      items3,
+      () => stateFromStoresArray(closure_1_2[12]).partition(memo, (id) => closure_11.hasJoined(id)),
+      items4,
+      memo(589).statesWillNeverBeEqual,
+    ),
+    2,
+  );
   obj = { joinedThreadIds: tmp3[0], unjoinedThreadIds: tmp3[1] };
   return obj;
 };
@@ -77,17 +97,21 @@ export const useActiveGuildThreads = function useActiveGuildThreads(arg0) {
   const _require = arg0;
   const items = [closure_7, closure_9, closure_6];
   const items1 = [arg0];
-  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
-    const tmp = stateFromStoresArray(closure_1_2[12]);
-    const values = stateFromStoresArray(closure_1_2[12])(closure_1_9.getThreadsForGuild(callback)).values();
-    const mapped = values.map((arg0) => callback(table[12]).values(arg0));
-    const tmpResult = stateFromStoresArray(closure_1_2[12])(closure_1_9.getThreadsForGuild(callback));
-    const mapped1 = mapped.flatten().map((id) => channel.getChannel(id.id));
-    const found = mapped1.filter(callback(closure_1_2[13]).isNotNullish);
-    const found1 = found.filter((arg0) => closure_7.can(constants.VIEW_CHANNEL, arg0));
-    const flattenResult = mapped.flatten();
-    return found1.map((id) => id.id).value();
-  }, items1);
+  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+    items,
+    () => {
+      const tmp = stateFromStoresArray(closure_1_2[12]);
+      const values = stateFromStoresArray(closure_1_2[12])(closure_1_9.getThreadsForGuild(callback)).values();
+      const mapped = values.map((arg0) => callback(table[12]).values(arg0));
+      const tmpResult = stateFromStoresArray(closure_1_2[12])(closure_1_9.getThreadsForGuild(callback));
+      const mapped1 = mapped.flatten().map((id) => channel.getChannel(id.id));
+      const found = mapped1.filter(callback(closure_1_2[13]).isNotNullish);
+      const found1 = found.filter((arg0) => closure_7.can(constants.VIEW_CHANNEL, arg0));
+      const flattenResult = mapped.flatten();
+      return found1.map((id) => id.id).value();
+    },
+    items1,
+  );
   const items2 = [stateFromStoresArray];
   return React.useMemo(() => {
     const sorted = stateFromStoresArray(closure_1_2[12])(stateFromStoresArray).sort((arg0, arg1) => {
@@ -108,7 +132,12 @@ export const useArchivedThreads = function useArchivedThreads(channel, LATEST_AC
   showResolvedFlags = showResolvedFlags(channel.id).showResolvedFlags;
   let obj = initialize;
   const items = [closure_10];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ loading: closure_1_10.isLoading(user.id, closure_1, closure_2, closure_3), isInitialLoad: closure_1_10.getIsInitialLoad(user.id, closure_1, closure_2, closure_3), canLoadMore: closure_1_10.getCanLoadMore(user.id, closure_1, closure_2, closure_3), nextOffset: closure_1_10.getNextOffset(user.id, closure_1, closure_2, closure_3) }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    loading: closure_1_10.isLoading(user.id, closure_1, closure_2, closure_3),
+    isInitialLoad: closure_1_10.getIsInitialLoad(user.id, closure_1, closure_2, closure_3),
+    canLoadMore: closure_1_10.getCanLoadMore(user.id, closure_1, closure_2, closure_3),
+    nextOffset: closure_1_10.getNextOffset(user.id, closure_1, closure_2, closure_3),
+  }));
   ({ loading, nextOffset } = stateFromStoresObject);
   const isInitialLoad = stateFromStoresObject.isInitialLoad;
   const items1 = [channel, LATEST_ACTIVITY, loadMore, MATCH_SOME, nextOffset, showResolvedFlags, result];
@@ -150,27 +179,31 @@ export const useArchivedThreads = function useArchivedThreads(channel, LATEST_AC
   obj = {
     threadIds: require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items4, () => {
       const tmp = LATEST_ACTIVITY(loadMore[12]);
-      const tmpResult = LATEST_ACTIVITY(loadMore[12])(closure_1_10.getThreads(user.id, LATEST_ACTIVITY, loadMore, closure_3));
-      return LATEST_ACTIVITY(loadMore[12])(closure_1_10.getThreads(user.id, LATEST_ACTIVITY, loadMore, closure_3)).filter((arg0) => {
-        if (closure_4) {
-          if (!closure_5) {
-            return false;
+      const tmpResult = LATEST_ACTIVITY(loadMore[12])(
+        closure_1_10.getThreads(user.id, LATEST_ACTIVITY, loadMore, closure_3),
+      );
+      return LATEST_ACTIVITY(loadMore[12])(closure_1_10.getThreads(user.id, LATEST_ACTIVITY, loadMore, closure_3))
+        .filter((arg0) => {
+          if (closure_4) {
+            if (!closure_5) {
+              return false;
+            }
           }
-        }
-        channel = closure_1_6.getChannel(arg0);
-        let canResult = null != channel;
-        if (canResult) {
-          canResult = closure_1_7.can(closure_1_12.VIEW_CHANNEL, channel);
-        }
-        if (canResult) {
-          canResult = !channel.isMediaThread();
-        }
-        return canResult;
-      }).value();
+          channel = closure_1_6.getChannel(arg0);
+          let canResult = null != channel;
+          if (canResult) {
+            canResult = closure_1_7.can(closure_1_12.VIEW_CHANNEL, channel);
+          }
+          if (canResult) {
+            canResult = !channel.isMediaThread();
+          }
+          return canResult;
+        })
+        .value();
     }),
     canLoadMore: stateFromStoresObject.canLoadMore,
     loading: null,
-    loadMore: null
+    loadMore: null,
   };
   items4 = [closure_10, nextOffset, isInitialLoad];
   if (!loading) {

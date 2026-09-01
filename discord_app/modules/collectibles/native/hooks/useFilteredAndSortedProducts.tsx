@@ -4,7 +4,9 @@ import closure_4 from "../../../../stores/UserStore.tsx";
 import { CollectiblesMobileShopScreen as closure_5 } from "../../CollectiblesShopConstants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useFilteredAndSortedProducts.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/hooks/useFilteredAndSortedProducts.tsx",
+);
 
 export const useFilteredAndSortedProducts = function useFilteredAndSortedProducts(products) {
   products = products.products;
@@ -24,7 +26,9 @@ export const useFilteredAndSortedProducts = function useFilteredAndSortedProduct
   _require = tmp3;
   const obj2 = _require(bypassAndroidUnsyncedFilter[4]);
   let items = [androidUnsyncedFilter];
-  const stateFromStores = _require(bypassAndroidUnsyncedFilter[6]).useStateFromStores(items, () => androidUnsyncedFilter.getCurrentUser());
+  const stateFromStores = _require(bypassAndroidUnsyncedFilter[6]).useStateFromStores(items, () =>
+    androidUnsyncedFilter.getCurrentUser(),
+  );
   const obj3 = _require(bypassAndroidUnsyncedFilter[6]);
   const canUseShopDiscountsResult = importDefault(bypassAndroidUnsyncedFilter[7]).canUseShopDiscounts(stateFromStores);
   importDefault = canUseShopDiscountsResult;

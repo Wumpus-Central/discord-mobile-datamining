@@ -221,11 +221,41 @@ function punycodeLink(url) {
 }
 let closure_4 = new privDefault({ max: 50 });
 let items = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"];
-let items1 = [require("AST_KEY").AST_KEY.TEXT, require("AST_KEY").AST_KEY.UNDERLINE, require("AST_KEY").AST_KEY.STRONG, require("AST_KEY").AST_KEY.ITALICS, require("AST_KEY").AST_KEY.STRIKETHROUGH, require("AST_KEY").AST_KEY.INLINE_CODE, require("AST_KEY").AST_KEY.SPOILER, require("AST_KEY").AST_KEY.LINE_BREAK, require("AST_KEY").AST_KEY.TIMESTAMP];
+let items1 = [
+  require("AST_KEY").AST_KEY.TEXT,
+  require("AST_KEY").AST_KEY.UNDERLINE,
+  require("AST_KEY").AST_KEY.STRONG,
+  require("AST_KEY").AST_KEY.ITALICS,
+  require("AST_KEY").AST_KEY.STRIKETHROUGH,
+  require("AST_KEY").AST_KEY.INLINE_CODE,
+  require("AST_KEY").AST_KEY.SPOILER,
+  require("AST_KEY").AST_KEY.LINE_BREAK,
+  require("AST_KEY").AST_KEY.TIMESTAMP,
+];
 let items2 = [...items1, require("AST_KEY").AST_KEY.EMOJI, require("AST_KEY").AST_KEY.CUSTOM_EMOJI];
-let items3 = [require("AST_KEY").AST_KEY.LIST, require("AST_KEY").AST_KEY.HEADING, require("AST_KEY").AST_KEY.BLOCK_QUOTE, require("AST_KEY").AST_KEY.SUBTEXT];
+let items3 = [
+  require("AST_KEY").AST_KEY.LIST,
+  require("AST_KEY").AST_KEY.HEADING,
+  require("AST_KEY").AST_KEY.BLOCK_QUOTE,
+  require("AST_KEY").AST_KEY.SUBTEXT,
+];
 const items4 = [require("AST_KEY").AST_KEY.TEXT];
-const items5 = [require("AST_KEY").AST_KEY.UNDERLINE, require("AST_KEY").AST_KEY.STRONG, require("AST_KEY").AST_KEY.ITALICS, require("AST_KEY").AST_KEY.STRIKETHROUGH, require("AST_KEY").AST_KEY.INLINE_CODE, require("AST_KEY").AST_KEY.SPOILER, require("AST_KEY").AST_KEY.LINE_BREAK, require("AST_KEY").AST_KEY.TIMESTAMP, require("AST_KEY").AST_KEY.EMOJI, require("AST_KEY").AST_KEY.CUSTOM_EMOJI, require("AST_KEY").AST_KEY.LIST, require("AST_KEY").AST_KEY.HEADING, require("AST_KEY").AST_KEY.BLOCK_QUOTE, require("AST_KEY").AST_KEY.SUBTEXT];
+const items5 = [
+  require("AST_KEY").AST_KEY.UNDERLINE,
+  require("AST_KEY").AST_KEY.STRONG,
+  require("AST_KEY").AST_KEY.ITALICS,
+  require("AST_KEY").AST_KEY.STRIKETHROUGH,
+  require("AST_KEY").AST_KEY.INLINE_CODE,
+  require("AST_KEY").AST_KEY.SPOILER,
+  require("AST_KEY").AST_KEY.LINE_BREAK,
+  require("AST_KEY").AST_KEY.TIMESTAMP,
+  require("AST_KEY").AST_KEY.EMOJI,
+  require("AST_KEY").AST_KEY.CUSTOM_EMOJI,
+  require("AST_KEY").AST_KEY.LIST,
+  require("AST_KEY").AST_KEY.HEADING,
+  require("AST_KEY").AST_KEY.BLOCK_QUOTE,
+  require("AST_KEY").AST_KEY.SUBTEXT,
+];
 let obj = {};
 let merged = Object.assign(tDefault.defaultRules.link);
 obj.match = function match(arr, allowLinks) {
@@ -389,7 +419,10 @@ obj.parse = function parse(arg0, rules, allowEmojiLinks) {
                   let tmp46Result = tmp46(12);
                   tmp46Result = tmp46(4192);
                   const obj8 = { content: null, target: null, title: null };
-                  obj8[0] = tmp46Result.parserFor(tmp46Result.pick(rules.rules, tmp23))(value.whitespaceSanitized, obj3);
+                  obj8[0] = tmp46Result.parserFor(tmp46Result.pick(rules.rules, tmp23))(
+                    value.whitespaceSanitized,
+                    obj3,
+                  );
                   obj8[1] = tmp48.target;
                   obj8[2] = value1.whitespaceSanitized;
                   return obj8;

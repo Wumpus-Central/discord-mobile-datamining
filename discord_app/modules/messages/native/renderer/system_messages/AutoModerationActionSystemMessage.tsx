@@ -40,7 +40,9 @@ let closure_11 = apply.memoize((arg0) => {
   obj[0] = processColorOrThrow.processColorOrThrow(tmp4);
   return obj;
 });
-let result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/AutoModerationActionSystemMessage.tsx");
+let result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/AutoModerationActionSystemMessage.tsx",
+);
 
 export const createAutoModerationActionSystemMessage = function createAutoModerationActionSystemMessage(message) {
   ({ message, theme, roleStyle } = message);
@@ -80,24 +82,39 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
               fromNowResult = hooksDefault(resolvedReason.raidDatetime).fromNow();
               const obj17 = hooksDefault(resolvedReason.raidDatetime);
             }
-            obj = { subtitleLeft: null, header: null, headerColor: null, headerIconURL: null, headerIconColor: null, body: null, shouldShowActions: false };
+            obj = {
+              subtitleLeft: null,
+              header: null,
+              headerColor: null,
+              headerIconURL: null,
+              headerIconColor: null,
+              body: null,
+              shouldShowActions: false,
+            };
             obj[0] = fromNowResult;
             const intl5 = getSystemLocale.intl;
             obj[1] = intl5.string(getSystemLocale.t.C2uIXE);
             const internal3 = ThemesDefault.internal;
-            obj[2] = processColorOrThrow.processColorOrThrow(internal3.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL));
+            obj[2] = processColorOrThrow.processColorOrThrow(
+              internal3.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL),
+            );
             const tmpResult4 = processColorOrThrow;
             obj[3] = closure_4.resolveAssetSource(getAvatarURL.makeSource(registerAssetDefault)).uri;
             const tmpResult5 = getAvatarURL;
             const internal4 = ThemesDefault.internal;
-            obj[4] = processColorOrThrow.processColorOrThrow(internal4.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL));
+            obj[4] = processColorOrThrow.processColorOrThrow(
+              internal4.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL),
+            );
             const intl6 = getSystemLocale.intl;
             obj[5] = intl6.string(getSystemLocale.t.SWIWEV);
             str = "";
             tmp14 = obj;
             tmp15 = stringResult;
             const tmpResult6 = processColorOrThrow;
-          } else if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED === notificationType) {
+          } else if (
+            AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED ===
+            notificationType
+          ) {
             const userIdOfAutomodAction = getDecisionOutcomeFromMessage.getUserIdOfAutomodAction(message);
             user = user.getUser(userIdOfAutomodAction);
             let member = null;
@@ -136,17 +153,33 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
                 let guildMemberAvatarSource = getAvatarURL.getGuildMemberAvatarSource(obj, author);
                 const tmpResult9 = getAvatarURL;
               }
-              obj1 = { header: null, headerColor: null, headerIconURL: null, headerIconColor: null, body: null, shouldShowActions: false, subtitleRight: null, subtitleLeft: null, enabledByAvatarURL: null, enabledByUsername: null, enabledByColor: null };
+              obj1 = {
+                header: null,
+                headerColor: null,
+                headerIconURL: null,
+                headerIconColor: null,
+                body: null,
+                shouldShowActions: false,
+                subtitleRight: null,
+                subtitleLeft: null,
+                enabledByAvatarURL: null,
+                enabledByUsername: null,
+                enabledByColor: null,
+              };
               const intl2 = getSystemLocale.intl;
               obj1[0] = intl2.string(getSystemLocale.t.lVLiFp);
               const ensureAvatarSourceResult = tmpResult8.ensureAvatarSource(guildMemberAvatarSource);
               const internal = ThemesDefault.internal;
-              obj1[1] = processColorOrThrow.processColorOrThrow(internal.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE));
+              obj1[1] = processColorOrThrow.processColorOrThrow(
+                internal.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE),
+              );
               const tmpResult10 = processColorOrThrow;
               obj1[2] = closure_4.resolveAssetSource(getAvatarURL.makeSource(registerAssetDefault2)).uri;
               const tmpResult11 = getAvatarURL;
               const internal2 = ThemesDefault.internal;
-              obj1[3] = processColorOrThrow.processColorOrThrow(internal2.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE));
+              obj1[3] = processColorOrThrow.processColorOrThrow(
+                internal2.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE),
+              );
               const intl3 = getSystemLocale.intl;
               obj1[4] = intl3.string(getSystemLocale.t["QV/8u5"]);
               const tmpResult12 = processColorOrThrow;
@@ -172,16 +205,27 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
             guildMemberAvatarSource = author.getAvatarSource(undefined, false, 16);
             tmpResult8 = ensureAvatarSource;
           } else {
-            const obj2 = { header: null, headerColor: null, headerIconURL: null, headerIconColor: null, body: null, shouldShowActions: false };
+            const obj2 = {
+              header: null,
+              headerColor: null,
+              headerIconURL: null,
+              headerIconColor: null,
+              body: null,
+              shouldShowActions: false,
+            };
             const intl17 = getSystemLocale.intl;
             obj2[0] = intl17.string(getSystemLocale.t.VdZCcC);
             const internal7 = ThemesDefault.internal;
-            obj2[1] = processColorOrThrow.processColorOrThrow(internal7.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_SUBTLE));
+            obj2[1] = processColorOrThrow.processColorOrThrow(
+              internal7.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_SUBTLE),
+            );
             const tmpResult13 = processColorOrThrow;
             obj2[2] = closure_4.resolveAssetSource(getAvatarURL.makeSource(registerAssetDefault)).uri;
             const tmpResult14 = getAvatarURL;
             const internal8 = ThemesDefault.internal;
-            obj2[3] = processColorOrThrow.processColorOrThrow(internal8.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_SUBTLE));
+            obj2[3] = processColorOrThrow.processColorOrThrow(
+              internal8.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_SUBTLE),
+            );
             const intl18 = getSystemLocale.intl;
             obj2[4] = intl18.string(getSystemLocale.t["NxHYX/"]);
             str = "";
@@ -215,7 +259,18 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
         obj4[0] = resolvedReason.joinAttempts;
         formatToPlainStringResult = formatToPlainString(t["4ylIiu"], obj4);
       }
-      const obj5 = { subtitleLeft: null, severity: null, subtitleRight: null, startTime: null, header: null, headerColor: null, headerIconURL: null, headerIconColor: null, body: null, shouldShowActions: true };
+      const obj5 = {
+        subtitleLeft: null,
+        severity: null,
+        subtitleRight: null,
+        startTime: null,
+        header: null,
+        headerColor: null,
+        headerIconURL: null,
+        headerIconColor: null,
+        body: null,
+        shouldShowActions: true,
+      };
       obj5[0] = formatToPlainStringResult;
       obj5[1] = formatToPlainStringResult;
       obj5[2] = fromNowResult1;
@@ -231,7 +286,9 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       obj5[4] = stringResult1;
       const tmpResult3 = getDecisionOutcomeFromMessage;
       const internal5 = ThemesDefault.internal;
-      obj5[5] = processColorOrThrow.processColorOrThrow(internal5.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL));
+      obj5[5] = processColorOrThrow.processColorOrThrow(
+        internal5.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL),
+      );
       let tmpResult18 = closure_4;
       let getRaidAlertResolveCTAText = closure_4.resolveAssetSource;
       let internal6 = getAvatarURL;
@@ -239,7 +296,9 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 7927 : 7710))).uri;
       const tmpResult16 = processColorOrThrow;
       internal6 = tmp45(712).internal;
-      obj5[7] = processColorOrThrow.processColorOrThrow(internal6.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL));
+      obj5[7] = processColorOrThrow.processColorOrThrow(
+        internal6.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL),
+      );
       intl9 = getSystemLocale.intl;
       const obj6 = { dateTime: null };
       obj6[0] = str2;
@@ -276,9 +335,22 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       const tmp57 = importDefault;
       const tmpResult20 = ensureAvatarSource;
       const tmpResult21 = getAvatarURL;
-      obj8.avatarURL = tmpResult20.ensureAvatarSource(tmpResult21.makeSource(ensureAvatarSource.getAutomodAvatarURL())).uri;
+      obj8.avatarURL = tmpResult20.ensureAvatarSource(
+        tmpResult21.makeSource(ensureAvatarSource.getAutomodAvatarURL()),
+      ).uri;
       obj8.colorString = callback(colorString);
-      const obj9 = { headerText: null, headerBadgeText: null, keywordDisplayText: null, message: null, notification: null, ruleDisplayText: null, reasonDisplayText: null, actionsIconURL: null, actionsText: null, feedbackText: null };
+      const obj9 = {
+        headerText: null,
+        headerBadgeText: null,
+        keywordDisplayText: null,
+        message: null,
+        notification: null,
+        ruleDisplayText: null,
+        reasonDisplayText: null,
+        actionsIconURL: null,
+        actionsText: null,
+        feedbackText: null,
+      };
       obj9[0] = str;
       const intl12 = getSystemLocale.intl;
       obj9[1] = intl12.string(getSystemLocale.t["70CJbT"]);
@@ -293,7 +365,22 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       if (flaggedMessageId == null) {
         flaggedMessageId = message.id;
       }
-      const obj11 = { id: null, channelId: null, guildId: null, userId: null, channelName: null, username: null, usernameColor: null, roleColor: null, shouldShowRoleDot: null, colorString: null, avatarURL: null, content: null, communicationDisabled: null, timestamp: null };
+      const obj11 = {
+        id: null,
+        channelId: null,
+        guildId: null,
+        userId: null,
+        channelName: null,
+        username: null,
+        usernameColor: null,
+        roleColor: null,
+        shouldShowRoleDot: null,
+        colorString: null,
+        avatarURL: null,
+        content: null,
+        communicationDisabled: null,
+        timestamp: null,
+      };
       obj11[0] = flaggedMessageId;
       let id;
       if (embedChannel != null) {

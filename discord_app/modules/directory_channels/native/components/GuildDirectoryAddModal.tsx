@@ -12,7 +12,9 @@ createCacheKey = { safeArea: null };
 createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flex: 1 };
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryAddModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/directory_channels/native/components/GuildDirectoryAddModal.tsx",
+);
 
 export default function GuildDirectoryAddModal(arg0) {
   const _require = arg0;
@@ -24,7 +26,13 @@ export default function GuildDirectoryAddModal(arg0) {
     const items = [obj];
     obj = { screens: null, initialStack: null };
     obj1 = {};
-    const obj2 = { fullscreen: true, impressionName: callback(closure_1_2[5]).ImpressionNames.HUB_EXISTING_GUILD_CHOOSE, headerLeft: null, headerTitle: null, render: null };
+    const obj2 = {
+      fullscreen: true,
+      impressionName: callback(closure_1_2[5]).ImpressionNames.HUB_EXISTING_GUILD_CHOOSE,
+      headerLeft: null,
+      headerTitle: null,
+      render: null,
+    };
     let obj5 = callback(closure_1_2[6]);
     obj2[2] = obj5.getHeaderCloseButton(closure_1_1(closure_1_2[7]).close);
     obj2[3] = function headerTitle() {
@@ -44,7 +52,7 @@ export default function GuildDirectoryAddModal(arg0) {
       render(arg0) {
         const merged = Object.assign(arg0);
         return callback2(callback(11886), {});
-      }
+      },
     };
     const obj3 = {
       fullscreen: true,
@@ -55,7 +63,7 @@ export default function GuildDirectoryAddModal(arg0) {
       render(arg0) {
         const merged = Object.assign(arg0);
         return callback2(callback(11886), {});
-      }
+      },
     };
     obj1[closure_1_3.TEMPLATES] = {
       fullscreen: true,
@@ -66,7 +74,7 @@ export default function GuildDirectoryAddModal(arg0) {
       render(arg0) {
         const merged = Object.assign(arg0);
         return callback2(callback(11890), {});
-      }
+      },
     };
     obj5 = {
       headerTitle() {
@@ -77,7 +85,7 @@ export default function GuildDirectoryAddModal(arg0) {
       render(arg0) {
         const merged = Object.assign(arg0);
         return callback2(callback(11900), {});
-      }
+      },
     };
     obj1[closure_1_3.CREATE] = obj5;
     obj[0] = obj1;
@@ -87,9 +95,17 @@ export default function GuildDirectoryAddModal(arg0) {
   let obj = { screens, initialRouteStack: initialStack, headerBackTitle: null };
   const intl = require("../../../../intl/index.native.tsx").intl;
   obj[2] = intl.string(require("../../../../intl/index.native.tsx").t["13/7kX"]);
-  return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { screens, initialRouteStack: initialStack, headerBackTitle: null });
-};
+  return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, {
+    screens,
+    initialRouteStack: initialStack,
+    headerBackTitle: null,
+  });
+}
 export const GuildDirectoryAddModalScreen = function GuildDirectoryAddModalScreen(children) {
   const tmp = callback();
-  return jsx(SafeAreaPaddingView.SafeAreaPaddingView, { top: true, style: callback().safeArea, children: children.children });
+  return jsx(SafeAreaPaddingView.SafeAreaPaddingView, {
+    top: true,
+    style: callback().safeArea,
+    children: children.children,
+  });
 };

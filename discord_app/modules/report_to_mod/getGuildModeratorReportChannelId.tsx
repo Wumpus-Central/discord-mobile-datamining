@@ -13,4 +13,4 @@ export default function getGuildModeratorReportChannelId(moderatorReporting) {
     prop = null;
   }
   return prop;
-};
+}

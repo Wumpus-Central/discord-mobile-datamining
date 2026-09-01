@@ -21,7 +21,7 @@ export default function useRestorePurchases() {
   closure_2 = undefined;
   function _restore(closure_4, arg1) {
     const self = this;
-    const tmp = callback(function*() {
+    const tmp = callback(function* () {
       if (logger === 2) {
         logger = 3;
         HermesBuiltin.throwTypeError();
@@ -135,4 +135,4 @@ export default function useRestorePurchases() {
     }
   }, items);
   return tmp[0];
-};
+}

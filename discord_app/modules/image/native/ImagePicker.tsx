@@ -102,7 +102,31 @@ export default {
     const internal6 = ThemesDefault.internal;
     const semanticColor5 = internal6.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_DEFAULT);
     let obj = openPickerDefault;
-    obj = { mediaType: "photo", path: uri, width, height, includeBase64, mimeType, freeStyleCropEnabled, cropperStatusBarLight: theme === ThemeTypes.LIGHT, cropperNavigationBarLight: theme === ThemeTypes.LIGHT, cropperActiveWidgetColor: semanticColor2, cropperInactiveWidgetColor: semanticColor3, cropperControlsColor: semanticColor1, cropperControlsBarColor: semanticColor, cropperChooseColor: semanticColor4, cropperChooseText: null, cropperCancelColor: null, cropperCancelText: null, cropperToolbarColor: null, cropperToolbarWidgetColor: null, cropperToolbarTitle: null, cropperRotateByAngleAccessibilityLabel: null, cropperResetRotationAccessibilityLabel: null, cropperClampButtonAccessibilityLabel: null };
+    obj = {
+      mediaType: "photo",
+      path: uri,
+      width,
+      height,
+      includeBase64,
+      mimeType,
+      freeStyleCropEnabled,
+      cropperStatusBarLight: theme === ThemeTypes.LIGHT,
+      cropperNavigationBarLight: theme === ThemeTypes.LIGHT,
+      cropperActiveWidgetColor: semanticColor2,
+      cropperInactiveWidgetColor: semanticColor3,
+      cropperControlsColor: semanticColor1,
+      cropperControlsBarColor: semanticColor,
+      cropperChooseColor: semanticColor4,
+      cropperChooseText: null,
+      cropperCancelColor: null,
+      cropperCancelText: null,
+      cropperToolbarColor: null,
+      cropperToolbarWidgetColor: null,
+      cropperToolbarTitle: null,
+      cropperRotateByAngleAccessibilityLabel: null,
+      cropperResetRotationAccessibilityLabel: null,
+      cropperClampButtonAccessibilityLabel: null,
+    };
     const intl = getSystemLocale.intl;
     obj[14] = intl.string(getSystemLocale.t["1Qm822"]);
     obj[15] = semanticColor5;
@@ -119,5 +143,5 @@ export default {
     const intl6 = getSystemLocale.intl;
     obj[22] = intl6.string(getSystemLocale.t.QHvDTL);
     return obj.openCropper(obj);
-  }
+  },
 };

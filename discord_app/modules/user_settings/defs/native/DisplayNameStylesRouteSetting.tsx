@@ -16,13 +16,13 @@ obj = {
   screen: obj,
   usePredicate() {
     return true;
-  }
+  },
 };
 obj = {
   route: ME.UserSettingsSections.DISPLAY_NAME_STYLES,
   getComponent() {
     return ApplyButton /* ApplyButton */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DisplayNameStylesRouteSetting.tsx");

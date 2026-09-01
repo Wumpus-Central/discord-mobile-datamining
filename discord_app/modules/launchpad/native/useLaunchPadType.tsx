@@ -19,4 +19,4 @@ export default function useLaunchPadType() {
   } else if (tmp(1306).LaunchPadMode.LAUNCH_PAD_PULL_TAB === setting) {
     return LaunchPadTypes.PULL_TAB;
   }
-};
+}

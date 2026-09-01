@@ -4,7 +4,9 @@ import closure_2 from "../../../../_runtime/00019_noop.js";
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/storefront/hooks/useGetOrFetchStorefrontPrices.tsx");
 
-export const useGetOrFetchStorefrontPricesForApplicationId = function useGetOrFetchStorefrontPricesForApplicationId(applicationId) {
+export const useGetOrFetchStorefrontPricesForApplicationId = function useGetOrFetchStorefrontPricesForApplicationId(
+  applicationId,
+) {
   applicationId = applicationId.applicationId;
   const items = [applicationId];
   const effect = React.useEffect(() => {

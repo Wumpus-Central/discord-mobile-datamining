@@ -10,10 +10,18 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 noopAll;
 createCacheKey = { cardContainer: null };
-createCacheKey = { display: "flex", borderRadius: ThemesDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" };
+createCacheKey = {
+  display: "flex",
+  borderRadius: ThemesDefault.radii.lg,
+  flexDirection: "column",
+  justifyContent: "space-between",
+  overflow: "hidden",
+};
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesBackground.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/premium/native/PremiumFeaturesBackground.tsx",
+);
 
 export default function PremiumFeaturesBackground(opacity) {
   let num = opacity.opacity;
@@ -42,4 +50,4 @@ export default function PremiumFeaturesBackground(opacity) {
   const merged1 = Object.assign(merged);
   obj.children = children;
   return jsx(LinearGradientDefault, { style: items, colors: mapped, start: null, end: null });
-};
+}

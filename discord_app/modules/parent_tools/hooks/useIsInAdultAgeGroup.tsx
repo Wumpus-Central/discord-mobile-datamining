@@ -8,4 +8,4 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/
 export default function useIsInAdultAgeGroup() {
   const items = [closure_2];
   return "adult" === initialize.useStateFromStores(items, () => ageGroup.getAgeGroup());
-};
+}

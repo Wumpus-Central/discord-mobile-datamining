@@ -20,7 +20,7 @@ function _openAgeVerificationAuthSession() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (state === 2) {
         state = 3;
         HermesBuiltin.throwTypeError();

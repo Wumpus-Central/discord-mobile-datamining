@@ -10,20 +10,48 @@ const require = arg1;
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ BoostInfoType: closure_6, GuildPowerupType: error } = BoostedGuildTiers);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, headerLeftContainer: null, headerRightContainer: null, boostInfoContainer: null, boostInfoSeparator: null, scrollView: null, boostButtonContainer: null };
+createCacheKey = {
+  container: null,
+  headerLeftContainer: null,
+  headerRightContainer: null,
+  boostInfoContainer: null,
+  boostInfoSeparator: null,
+  scrollView: null,
+  boostButtonContainer: null,
+};
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingLeft: ThemesDefault.space.PX_16 };
 let obj1 = { paddingLeft: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { paddingRight: ThemesDefault.space.PX_16 };
 let obj2 = { paddingRight: ThemesDefault.space.PX_16 };
-createCacheKey[3] = { flexDirection: "row", justifyContent: "space-between", borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: ThemesDefault.space.PX_16 };
-let obj3 = { flexDirection: "row", justifyContent: "space-between", borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[3] = {
+  flexDirection: "row",
+  justifyContent: "space-between",
+  borderWidth: 1,
+  borderStyle: "solid",
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginBottom: ThemesDefault.space.PX_16,
+};
+let obj3 = {
+  flexDirection: "row",
+  justifyContent: "space-between",
+  borderWidth: 1,
+  borderStyle: "solid",
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginBottom: ThemesDefault.space.PX_16,
+};
 createCacheKey[4] = { width: 1, height: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 let obj4 = { width: 1, height: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[5] = { paddingBottom: ThemesDefault.space.PX_96 };
 let obj5 = { paddingBottom: ThemesDefault.space.PX_96 };
-createCacheKey[6] = { paddingHorizontal: ThemesDefault.space.PX_16, position: "absolute", bottom: 0, left: 0, right: 0 };
+createCacheKey[6] = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  right: 0,
+};
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj6 = { paddingHorizontal: ThemesDefault.space.PX_16, position: "absolute", bottom: 0, left: 0, right: 0 };
 const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsModal.tsx");
@@ -131,7 +159,15 @@ export default function GuildPowerupsModal(guildId) {
   ({ available, spent, total } = autoOpenPerkId(autoOpenRequestId[16])(guildId));
   obj = { value: tmp10(...items1).analyticsLocations, children: null };
   obj = { style: tmp9.container, children: null };
-  obj1 = { title: null, headerTitle: null, headerTitleAlign: "center", headerStatusBarHeight: null, headerLeft: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
+  obj1 = {
+    title: null,
+    headerTitle: null,
+    headerTitleAlign: "center",
+    headerStatusBarHeight: null,
+    headerLeft: null,
+    headerLeftContainerStyle: null,
+    headerRightContainerStyle: null,
+  };
   let intl = tmp(tmp2[18]).intl;
   obj1[0] = intl.string(autoOpenPerkId(autoOpenRequestId[19]).hjvcLO);
   obj1[1] = function headerTitle() {
@@ -144,10 +180,15 @@ export default function GuildPowerupsModal(guildId) {
   tmpResult = tmp(tmp2[21]);
   obj1[4] = tmpResult.getHeaderCloseButton(callback);
   ({ headerLeftContainer: obj6[5], headerRightContainer: obj6[6] } = tmp9);
-  const items3 = [callback(guildId(autoOpenRequestId[17]).Header, obj1), , ];
+  const items3 = [callback(guildId(autoOpenRequestId[17]).Header, obj1), ,];
   const obj2 = { contentContainerStyle: tmp9.scrollView, children: null };
   const obj3 = { style: tmp9.boostInfoContainer, children: null };
-  const items4 = [callback(autoOpenPerkId(autoOpenRequestId[22]), { count: available, type: constants.AVAILABLE }), callback(closure_5, { style: tmp9.boostInfoSeparator }), , , ];
+  const items4 = [
+    callback(autoOpenPerkId(autoOpenRequestId[22]), { count: available, type: constants.AVAILABLE }),
+    callback(closure_5, { style: tmp9.boostInfoSeparator }),
+    ,
+    ,
+  ];
   const obj6 = { count: spent, type: constants.SPENT };
   items4[2] = callback(autoOpenPerkId(autoOpenRequestId[22]), obj6);
   items4[3] = callback(closure_5, { style: tmp9.boostInfoSeparator });
@@ -172,7 +213,7 @@ export default function GuildPowerupsModal(guildId) {
         return null;
       }
     }),
-    callback(autoOpenPerkId(autoOpenRequestId[26]), { guildId })
+    callback(autoOpenPerkId(autoOpenRequestId[26]), { guildId }),
   ];
   obj2[1] = items5;
   items3[1] = callback2(closure_4, obj2);
@@ -182,8 +223,11 @@ export default function GuildPowerupsModal(guildId) {
   const obj8 = { count: total, type: constants.TOTAL };
   let tmp13 = autoOpenPerkId(autoOpenRequestId[16])(guildId);
   const items6 = [tmp9.boostButtonContainer, { paddingBottom: bottom }];
-  items3[2] = callback(closure_5, { style: items6, children: callback(guildId(autoOpenRequestId[27]).GuildPowerupsBoostButton, { guildId }) });
+  items3[2] = callback(closure_5, {
+    style: items6,
+    children: callback(guildId(autoOpenRequestId[27]).GuildPowerupsBoostButton, { guildId }),
+  });
   obj[1] = items3;
   obj[1] = callback2(closure_5, obj);
   return callback(guildId(autoOpenRequestId[11]).AnalyticsLocationProvider, obj);
-};
+}

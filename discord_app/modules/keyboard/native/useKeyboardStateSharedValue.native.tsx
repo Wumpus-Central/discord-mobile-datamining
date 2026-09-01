@@ -20,10 +20,12 @@ function getKeyboardStateWorklet() {
 }
 getKeyboardStateWorklet.__closure = { keyboardStateSharedValue: module_4217 };
 getKeyboardStateWorklet.__workletHash = 1081829024717;
-getKeyboardStateWorklet.__initData = { code: "function getKeyboardStateWorklet_useKeyboardStateSharedValueNativeTsx1(){const{keyboardStateSharedValue}=this.__closure;return keyboardStateSharedValue.get();}" };
+getKeyboardStateWorklet.__initData = {
+  code: "function getKeyboardStateWorklet_useKeyboardStateSharedValueNativeTsx1(){const{keyboardStateSharedValue}=this.__closure;return keyboardStateSharedValue.get();}",
+};
 const result = require("set").fileFinishedImporting("modules/keyboard/native/useKeyboardStateSharedValue.native.tsx");
 
 export default function useKeyboardStateSharedValue() {
   return module_4217;
-};
+}
 export { getKeyboardStateWorklet };

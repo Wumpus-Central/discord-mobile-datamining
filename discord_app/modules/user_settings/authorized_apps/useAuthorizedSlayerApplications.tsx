@@ -4,7 +4,9 @@ import closure_4 from "../../oauth2/AuthorizedAppsStore.tsx";
 import { FetchState } from "../../oauth2/AuthorizedAppsStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx",
+);
 
 export default function useAuthorizedSlayerApplications(arg0, arg1) {
   const _require = arg0;
@@ -27,7 +29,9 @@ export default function useAuthorizedSlayerApplications(arg0, arg1) {
     if (null == stateFromStores1) {
       let items = [];
     } else {
-      const found = stateFromStores1.filter((application) => callback(table[3]).isSocialLayerSDKAuthorization(application.application, application.scopes));
+      const found = stateFromStores1.filter((application) =>
+        callback(table[3]).isSocialLayerSDKAuthorization(application.application, application.scopes),
+      );
       items = found.map((application) => application.application);
     }
     return items;
@@ -47,4 +51,4 @@ export default function useAuthorizedSlayerApplications(arg0, arg1) {
     showLoadingIndicator = tmp6;
   }
   return { showLoadingIndicator, slayerSdkApplications };
-};
+}

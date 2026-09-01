@@ -11,7 +11,13 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ ActivityIndicator: c5, ScrollView: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-createCacheKey = { loadingIndicator: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 }, container: null, headerContainer: null, centerText: null, helpLink: null };
+createCacheKey = {
+  loadingIndicator: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 },
+  container: null,
+  headerContainer: null,
+  centerText: null,
+  helpLink: null,
+};
 createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, flex: 1 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { paddingVertical: ThemesDefault.space.PX_16, alignItems: "center", gap: ThemesDefault.space.PX_8 };
@@ -29,7 +35,10 @@ export default function GetStartedScreen(modalSessionId) {
   let stringResult2;
   const tmp = callback2();
   let obj = modalSessionId(isManualAgeVerificationHidden[8]);
-  obj = { onComplete: modalSessionId.onClose, entryPoint: modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalEntryPoint.RETRY_MODAL };
+  obj = {
+    onComplete: modalSessionId.onClose,
+    entryPoint: modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalEntryPoint.RETRY_MODAL,
+  };
   initiateAgeVerification = obj.useInitiateAgeVerification(obj);
   ({ loading, initiateAgeVerification } = initiateAgeVerification);
   let obj2 = modalSessionId(isManualAgeVerificationHidden[10]);
@@ -44,7 +53,7 @@ export default function GetStartedScreen(modalSessionId) {
     let obj = { title: stringResult2, description: null, onPress: null };
     const intl = modalSessionId(isManualAgeVerificationHidden[11]).intl;
     obj[1] = intl.string(modalSessionId(isManualAgeVerificationHidden[11]).t.ecdUKD);
-    closure_0 = stringResult2(function*() {
+    closure_0 = stringResult2(function* () {
       if (c0 === 2) {
         c0 = 3;
         HermesBuiltin.throwTypeError();
@@ -71,7 +80,11 @@ export default function GetStartedScreen(modalSessionId) {
               obj[0] = arg1;
               return obj;
             } else {
-              const result = v0(closure_2_2[9]).trackAgeVerificationModalClicked(c0, v0(closure_2_2[9]).AgeVerificationModalVersion.RETRY, v0(closure_2_2[9]).AgeVerificationModalCta.GET_STARTED);
+              const result = v0(closure_2_2[9]).trackAgeVerificationModalClicked(
+                c0,
+                v0(closure_2_2[9]).AgeVerificationModalVersion.RETRY,
+                v0(closure_2_2[9]).AgeVerificationModalCta.GET_STARTED,
+              );
               v02 = 1;
               c0 = 1;
               obj1 = { value: null, done: false };
@@ -96,7 +109,7 @@ export default function GetStartedScreen(modalSessionId) {
         }
       }
     });
-    obj[2] = function() {
+    obj[2] = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -116,7 +129,11 @@ export default function GetStartedScreen(modalSessionId) {
       obj[2] = function onPress() {
         closure_1_1(closure_1_2[12]).openUrl(closure_1_9.APPEALS_LINK);
         const obj = closure_1_1(closure_1_2[12]);
-        const result = callback(closure_1_2[9]).trackAgeVerificationModalClicked(callback, callback(closure_1_2[9]).AgeVerificationModalVersion.RETRY, callback(closure_1_2[9]).AgeVerificationModalCta.MANUAL_REVIEW_REQUEST);
+        const result = callback(closure_1_2[9]).trackAgeVerificationModalClicked(
+          callback,
+          callback(closure_1_2[9]).AgeVerificationModalVersion.RETRY,
+          callback(closure_1_2[9]).AgeVerificationModalCta.MANUAL_REVIEW_REQUEST,
+        );
       };
       items.push(obj);
     }
@@ -136,39 +153,72 @@ export default function GetStartedScreen(modalSessionId) {
     tmp2Result = tmp2(tmp3[13]);
   }
   obj1 = { children: null };
-  const items1 = [loading, ];
+  const items1 = [loading];
   obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.headerContainer, children: null };
-  const items2 = [callback(modalSessionId(isManualAgeVerificationHidden[14]).ShieldSpotIllustration, {}), callback(modalSessionId(isManualAgeVerificationHidden[15]).Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.centerText, children: stringResult }), ];
-  const obj4 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.centerText, children: stringResult };
+  const items2 = [
+    callback(modalSessionId(isManualAgeVerificationHidden[14]).ShieldSpotIllustration, {}),
+    callback(modalSessionId(isManualAgeVerificationHidden[15]).Text, {
+      variant: "heading-xl/bold",
+      color: "mobile-text-heading-primary",
+      style: tmp.centerText,
+      children: stringResult,
+    }),
+  ];
+  const obj4 = {
+    variant: "heading-xl/bold",
+    color: "mobile-text-heading-primary",
+    style: tmp.centerText,
+    children: stringResult,
+  };
   const stringResult1 = intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JNK1ue);
   const tmp10 = closure_12;
-  items2[2] = callback(modalSessionId(isManualAgeVerificationHidden[15]).Text, { variant: "heading-md/medium", color: "text-strong", style: tmp.centerText, children: intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JNK1ue) });
+  items2[2] = callback(modalSessionId(isManualAgeVerificationHidden[15]).Text, {
+    variant: "heading-md/medium",
+    color: "text-strong",
+    style: tmp.centerText,
+    children: intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JNK1ue),
+  });
   obj3[1] = items2;
-  const items3 = [closure_11(closure_7, obj3), , ];
-  const obj5 = { variant: "heading-md/medium", color: "text-strong", style: tmp.centerText, children: intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JNK1ue) };
+  const items3 = [closure_11(closure_7, obj3), ,];
+  const obj5 = {
+    variant: "heading-md/medium",
+    color: "text-strong",
+    style: tmp.centerText,
+    children: intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JNK1ue),
+  };
   items3[1] = callback(modalSessionId(isManualAgeVerificationHidden[16]).TableRowGroup, {
     hasIcons: false,
     children: memo.map((arg0, arg1) => {
       ({ title, description, onPress } = arg0);
-      return callback(modalSessionId(isManualAgeVerificationHidden[17]).TableRow, { arrow: true, label, subLabel, onPress }, arg1);
-    })
+      return callback(
+        modalSessionId(isManualAgeVerificationHidden[17]).TableRow,
+        { arrow: true, label, subLabel, onPress },
+        arg1,
+      );
+    }),
   });
   const obj7 = { variant: "text-xs/medium", color: "text-muted", style: items4, children: null };
-  items4 = [, ];
+  items4 = [,];
   ({ centerText: arr6[0], helpLink: arr6[1] } = tmp);
   const intl4 = tmp2(tmp3[11]).intl;
   obj7[3] = intl4.format(modalSessionId(isManualAgeVerificationHidden[11]).t["L+FgkZ"], {
     handleOnHelpUrlHook() {
       const obj = initiateAgeVerification(isManualAgeVerificationHidden[12]);
-      obj.openUrl(initiateAgeVerification(isManualAgeVerificationHidden[18]).getArticleURL(closure_1_8.TIGGER_PAWTECT_LEARN_MORE));
+      obj.openUrl(
+        initiateAgeVerification(isManualAgeVerificationHidden[18]).getArticleURL(closure_1_8.TIGGER_PAWTECT_LEARN_MORE),
+      );
       const obj2 = initiateAgeVerification(isManualAgeVerificationHidden[18]);
-      const result = modalSessionId(isManualAgeVerificationHidden[9]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalVersion.RETRY, modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalCta.LEARN_MORE);
-    }
+      const result = modalSessionId(isManualAgeVerificationHidden[9]).trackAgeVerificationModalClicked(
+        modalSessionId,
+        modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalVersion.RETRY,
+        modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalCta.LEARN_MORE,
+      );
+    },
   });
   items3[2] = callback(modalSessionId(isManualAgeVerificationHidden[15]).Text, obj7);
   obj2[1] = items3;
   items1[1] = closure_11(closure_6, obj2);
   obj1[0] = items1;
   return closure_11(tmp10, obj1);
-};
+}

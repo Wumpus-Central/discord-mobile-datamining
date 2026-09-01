@@ -30,7 +30,13 @@ Storage.asyncGet("V2_DCD_CONTACTS_STORAGE_KEY", (arg0) => {
     return obj.dispatch(obj);
   });
 });
-let obj = keys.create(() => ({ loadedPolicyNotice: false, storedContacts: "", upsellCTADismissed: false, policyUpdateNoticeDismissed: false, dmListCTADismissed: false }));
+let obj = keys.create(() => ({
+  loadedPolicyNotice: false,
+  storedContacts: "",
+  upsellCTADismissed: false,
+  policyUpdateNoticeDismissed: false,
+  dmListCTADismissed: false,
+}));
 let Storage2 = Storage4.Storage;
 Storage2.asyncGet("ContactSyncDMListCTADismissed", (arg0) => {
   let _require = Boolean(arg0);
@@ -43,12 +49,16 @@ Storage2.asyncGet("ContactSyncDMListCTADismissed", (arg0) => {
   if (Date.now() - timestamp > 5184000000) {
     _require = true;
   }
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_7.setState({ dmListCTADismissed: c0 }));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
+    closure_1_7.setState({ dmListCTADismissed: c0 }),
+  );
 });
 const Storage3 = Storage4.Storage;
 Storage3.asyncGet("ContactSyncUpsellCTADismissed", (arg0) => {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_7.setState({ upsellCTADismissed: closure_0 }));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
+    closure_1_7.setState({ upsellCTADismissed: closure_0 }),
+  );
 });
 let result = set.fileFinishedImporting("modules/contact_sync/native/ContactSyncPersistedStore.tsx");
 
@@ -105,12 +115,14 @@ export const dismissUpsellCTA = function dismissUpsellCTA() {
 export const dismissDMListCTA = function dismissDMListCTA() {
   const Storage = Storage4.Storage;
   const result = Storage.set(ContactSyncDMListCTADismissed, true);
-  batchUpdates.batchUpdates(() => state.setState((arg0) => {
-    obj = {};
-    const merged = Object.assign(arg0);
-    obj.dmListCTADismissed = true;
-    return obj;
-  }));
+  batchUpdates.batchUpdates(() =>
+    state.setState((arg0) => {
+      obj = {};
+      const merged = Object.assign(arg0);
+      obj.dmListCTADismissed = true;
+      return obj;
+    }),
+  );
 };
 export const setDMListCTAFirstSeenDate = function setDMListCTAFirstSeenDate() {
   const Storage = Storage4.Storage;

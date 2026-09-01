@@ -13,7 +13,9 @@ require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx",
+);
 
 export const PlayStationLinkSuccess = function PlayStationLinkSuccess(onClose) {
   let obj = styles;
@@ -21,8 +23,16 @@ export const PlayStationLinkSuccess = function PlayStationLinkSuccess(onClose) {
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = callback3();
-  const items = [callback(closure_4, { source: React.useMemo(() => ({ uri: callback(table[5]) }), []), style: callback3().image }), , ];
-  const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
+  const items = [
+    callback(closure_4, { source: React.useMemo(() => ({ uri: callback(table[5]) }), []), style: callback3().image }),
+    ,
+  ];
+  const obj2 = {
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    style: twoWayLinkStyles.title,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj2[3] = intl.string(getSystemLocale.t.e6SOl0);
   items[1] = callback(Text.Text, obj2);
@@ -31,7 +41,7 @@ export const PlayStationLinkSuccess = function PlayStationLinkSuccess(onClose) {
   obj3[3] = intl2.string(getSystemLocale.t.QjAZAQ);
   items[2] = callback(Text.Text, obj3);
   obj[1] = items;
-  const items1 = [callback2(closure_5, obj), ];
+  const items1 = [callback2(closure_5, obj)];
   const obj4 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
   const obj5 = { style: twoWayLinkStyles.footerButton, children: null };
   const obj6 = { size: "md", text: null, onPress: null };

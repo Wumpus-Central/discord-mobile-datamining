@@ -16,8 +16,7 @@ let c10 = false;
 let c11 = false;
 let c12 = false;
 const Store = initializeDefault.Store;
-class WidgetStore extends Store {
-}
+class WidgetStore extends Store {}
 const prototype = WidgetStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4);
@@ -66,15 +65,19 @@ prototype["getWidgetUpdates"] = function getWidgetUpdates() {
   if (null != changedWidgets) {
     if (null != _null2) {
       const _Map = Map;
-      const map = new Map(_null2.map((id) => {
-        const items = [id.id, id];
-        return items;
-      }));
+      const map = new Map(
+        _null2.map((id) => {
+          const items = [id.id, id];
+          return items;
+        }),
+      );
       const _Map2 = Map;
-      map1 = new Map(changedWidgets.map((id) => {
-        const items = [id.id, id];
-        return items;
-      }));
+      map1 = new Map(
+        changedWidgets.map((id) => {
+          const items = [id.id, id];
+          return items;
+        }),
+      );
       let items = [];
       const items1 = [];
       const tmp37 = map1[Symbol.iterator]();
@@ -175,31 +178,31 @@ Object.defineProperty(prototype, "isSubmitting", {
   get: function isSubmitting() {
     return c8;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "suggestedFetchError", {
   get: function suggestedFetchError() {
     return c10;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "suggestedFetchIsLoading", {
   get: function suggestedFetchIsLoading() {
     return c11;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "suggestedFetchAttempted", {
   get: function suggestedFetchAttempted() {
     return c12;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "suggestedGameIds", {
   get: function suggestedGameIds() {
     return closure_9;
   },
-  set: undefined
+  set: undefined,
 });
 const widgetStore = new WidgetStore(dispatcherDefault, {
   WIDGET_PENDING_SET: function handleSetPendingWidgets(widgets) {
@@ -232,7 +235,10 @@ const widgetStore = new WidgetStore(dispatcherDefault, {
     c8 = false;
   },
   WIDGET_SUGGESTED_FETCH_SUCCESS: function handleSetSuggestedGameIds(arg0) {
-    ({ suggestedGamesIds: closure_9.suggestedGamesIds, suggestedWishlistGamesIds: closure_9.suggestedWishlistGamesIds } = arg0);
+    ({
+      suggestedGamesIds: closure_9.suggestedGamesIds,
+      suggestedWishlistGamesIds: closure_9.suggestedWishlistGamesIds,
+    } = arg0);
     c11 = false;
     c10 = false;
   },
@@ -255,7 +261,7 @@ const widgetStore = new WidgetStore(dispatcherDefault, {
     closure_9.suggestedGamesIds = suggestedGamesIds.filter((arg0) => arg0 !== applicationId);
     const prop = closure_9.suggestedWishlistGamesIds;
     closure_9.suggestedWishlistGamesIds = prop.filter((arg0) => arg0 !== applicationId);
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/user_profile/WidgetStore.tsx");
 

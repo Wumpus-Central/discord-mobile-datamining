@@ -12,7 +12,9 @@ const require = arg1;
 let obj = { duration: 100, easing: null };
 obj[1] = Easing.out(require("../../reanimated/ReanimatedRexport.tsx").Easing.quad);
 let closure_9 = { stiffness: 750, mass: 2.5, damping: 70 };
-let closure_10 = { code: "function BurstReactionToggleTsx1(){const{reducedMotion,targetBackgroundColor,backgroundColor,rotation}=this.__closure;const _backgroundColor=reducedMotion?targetBackgroundColor:backgroundColor.get();const _rotation=reducedMotion?0:rotation.get();return{backgroundColor:_backgroundColor,transform:[{rotate:_rotation+\"deg\"}]};}" };
+let closure_10 = {
+  code: 'function BurstReactionToggleTsx1(){const{reducedMotion,targetBackgroundColor,backgroundColor,rotation}=this.__closure;const _backgroundColor=reducedMotion?targetBackgroundColor:backgroundColor.get();const _rotation=reducedMotion?0:rotation.get();return{backgroundColor:_backgroundColor,transform:[{rotate:_rotation+"deg"}]};}',
+};
 obj = { container: null };
 obj = { borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, padding: 8, marginLeft: 8, width: 40, height: 40 };
 obj[0] = obj;
@@ -78,7 +80,12 @@ export default function BurstReactionToggle(arg0) {
     obj[1] = items;
     return obj;
   };
-  fn.__closure = { reducedMotion: stateFromStores, targetBackgroundColor: str, backgroundColor: sharedValue, rotation: sharedValue1 };
+  fn.__closure = {
+    reducedMotion: stateFromStores,
+    targetBackgroundColor: str,
+    backgroundColor: sharedValue,
+    rotation: sharedValue1,
+  };
   fn.__workletHash = 1525758595013;
   fn.__initData = closure_10;
   const items1 = [sharedValue, str, sharedValue1, num];
@@ -97,7 +104,7 @@ export default function BurstReactionToggle(arg0) {
     accessibilityLabel: null,
     accessibilityRole: "switch",
     accessibilityState: null,
-    children: null
+    children: null,
   };
   const intl = tmp9(tmp6[13]).intl;
   const string = intl.string;
@@ -111,6 +118,14 @@ export default function BurstReactionToggle(arg0) {
   obj[4] = { checked: isActive };
   obj = { style: items2, ref, children: tmp15(tmp9(tmp6[14]).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }) };
   items2 = [tmp.container, animatedStyle];
-  obj[5] = jsx(tmp7(tmp6[5]).View, { style: items2, ref, children: tmp15(tmp9(tmp6[14]).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }) });
-  return <sharedValue1 style={items2} ref={ref}>{tmp15(tmp9(tmp6[14]).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT })}</sharedValue1>;
-};
+  obj[5] = jsx(tmp7(tmp6[5]).View, {
+    style: items2,
+    ref,
+    children: tmp15(tmp9(tmp6[14]).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }),
+  });
+  return (
+    <sharedValue1 style={items2} ref={ref}>
+      {tmp15(tmp9(tmp6[14]).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT })}
+    </sharedValue1>
+  );
+}

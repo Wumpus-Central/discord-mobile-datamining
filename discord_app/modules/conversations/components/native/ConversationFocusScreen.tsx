@@ -12,10 +12,24 @@ const require = arg1;
 createCacheKey = { container: null, pendingContent: null };
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, paddingVertical: ThemesDefault.space.PX_24, alignItems: "center", gap: ThemesDefault.space.PX_32, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey[1] = {
+  flex: 1,
+  paddingVertical: ThemesDefault.space.PX_24,
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_32,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flex: 1, paddingVertical: ThemesDefault.space.PX_24, alignItems: "center", gap: ThemesDefault.space.PX_32, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationFocusScreen.tsx");
+let obj1 = {
+  flex: 1,
+  paddingVertical: ThemesDefault.space.PX_24,
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_32,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/conversations/components/native/ConversationFocusScreen.tsx",
+);
 
 export default function ConversationFocusScreen() {
   let container = callback2();
@@ -28,31 +42,43 @@ export default function ConversationFocusScreen() {
   obj1 = channelId(conversationId[7]);
   const items = [closure_6];
   const items1 = [channelId, conversationId];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_6.getHydratedMessages(channelId, conversationId), items1);
+  const stateFromStores = obj1.useStateFromStores(
+    items,
+    () => closure_1_6.getHydratedMessages(channelId, conversationId),
+    items1,
+  );
   let obj2 = channelId(conversationId[7]);
   const items2 = [closure_6];
   const items3 = [channelId, conversationId];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items2, () => {
-    let obj = closure_1_6;
-    const conversationMetadata = closure_1_6.getConversationMetadata(channelId, conversationId);
-    let flag;
-    if (conversationMetadata != null) {
-      flag = conversationMetadata.fullyHydrated;
-    }
-    if (flag == null) {
-      flag = false;
-    }
-    obj = { fullyHydrated: flag, isFullFetchPending: obj.isConversationFetchPending(conversationId, true), startMessageId: null };
-    startMessageId = undefined;
-    if (conversationMetadata != null) {
-      startMessageId = conversationMetadata.conversation.startMessageId;
-    }
-    if (startMessageId == null) {
-      startMessageId = null;
-    }
-    obj[2] = startMessageId;
-    return obj;
-  }, items3);
+  const stateFromStoresObject = obj2.useStateFromStoresObject(
+    items2,
+    () => {
+      let obj = closure_1_6;
+      const conversationMetadata = closure_1_6.getConversationMetadata(channelId, conversationId);
+      let flag;
+      if (conversationMetadata != null) {
+        flag = conversationMetadata.fullyHydrated;
+      }
+      if (flag == null) {
+        flag = false;
+      }
+      obj = {
+        fullyHydrated: flag,
+        isFullFetchPending: obj.isConversationFetchPending(conversationId, true),
+        startMessageId: null,
+      };
+      startMessageId = undefined;
+      if (conversationMetadata != null) {
+        startMessageId = conversationMetadata.conversation.startMessageId;
+      }
+      if (startMessageId == null) {
+        startMessageId = null;
+      }
+      obj[2] = startMessageId;
+      return obj;
+    },
+    items3,
+  );
   ({ fullyHydrated, startMessageId } = stateFromStoresObject);
   const items4 = [channelId, conversationId];
   const callback = startMessageId.useCallback((arg0) => {
@@ -106,7 +132,7 @@ export default function ConversationFocusScreen() {
     const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
     let intl = ChatPreview(tmp[10]).intl;
     obj3[2] = intl.string(ChatPreview(tmp[10]).t.eylmYW);
-    const items7 = [callback(ChatPreview(tmp[11]).Text, obj3), ];
+    const items7 = [callback(ChatPreview(tmp[11]).Text, obj3)];
     let tmp12Result = null != startMessageId;
     if (tmp12Result) {
       const obj4 = { variant: "tertiary", text: null, onPress: null };
@@ -122,4 +148,4 @@ export default function ConversationFocusScreen() {
     const tmp11 = closure_5;
     tmp12 = callback;
   }
-};
+}

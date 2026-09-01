@@ -6,7 +6,12 @@ import { SpeakingFlags } from "../../../discord_common/js/packages/media-engine/
 import { apexExperiment } from "GameEventsOnPlayerExperiment.tsx";
 
 const require = arg1;
-({ CLIPS_MAX_PARTICIPANTS: c4, CLIPS_MAX_TIMELINE_EVENTS: c5, ClipSignalTypes: closure_6, GameEventType: error } = result);
+({
+  CLIPS_MAX_PARTICIPANTS: c4,
+  CLIPS_MAX_TIMELINE_EVENTS: c5,
+  ClipSignalTypes: closure_6,
+  GameEventType: error,
+} = result);
 let obj = { UNKNOWN: 0, [0]: "UNKNOWN", KILL: 1, [1]: "KILL", MULTIKILL: 2, [2]: "MULTIKILL", DEATH: 3, [3]: "DEATH" };
 result = require("set").fileFinishedImporting("modules/clips/clipPayloadUtils.tsx");
 
@@ -103,7 +108,10 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
             } else {
               let tmp20 = item10061;
               let tmp21 = SpeakingFlags;
-              let result = map.set(tmp16.signal.userId, (tmp16.signal.speakingFlags & SpeakingFlags.VOICE) === SpeakingFlags.VOICE);
+              let result = map.set(
+                tmp16.signal.userId,
+                (tmp16.signal.speakingFlags & SpeakingFlags.VOICE) === SpeakingFlags.VOICE,
+              );
             }
             break;
           }

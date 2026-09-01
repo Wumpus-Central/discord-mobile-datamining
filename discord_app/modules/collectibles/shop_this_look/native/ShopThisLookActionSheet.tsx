@@ -21,21 +21,28 @@ function ShopThisLookCard(skuId) {
   let callback;
   let wishlistButton = callback3();
   let obj = skuId(12576);
-  const collectiblesShopProduct = obj.useCollectiblesShopProduct(skuId, { needsCategory: false, shouldFetchProduct: false });
+  const collectiblesShopProduct = obj.useCollectiblesShopProduct(skuId, {
+    needsCategory: false,
+    shouldFetchProduct: false,
+  });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
   obj1 = skuId(589);
   const items = [closure_6];
   const items1 = [skuId];
-  stateFromStores = obj1.useStateFromStores(items, () => {
-    const productsForSku = ref.getProductsForSku(skuId);
-    let found;
-    if (productsForSku != null) {
-      found = productsForSku.flatMap((skus) => skus.skus).find((id) => id.id === closure_0);
-      const flatMapResult = productsForSku.flatMap((skus) => skus.skus);
-    }
-    return found;
-  }, items1);
+  stateFromStores = obj1.useStateFromStores(
+    items,
+    () => {
+      const productsForSku = ref.getProductsForSku(skuId);
+      let found;
+      if (productsForSku != null) {
+        found = productsForSku.flatMap((skus) => skus.skus).find((id) => id.id === closure_0);
+        const flatMapResult = productsForSku.flatMap((skus) => skus.skus);
+      }
+      return found;
+    },
+    items1,
+  );
   type = undefined;
   if (stateFromStores != null) {
     const tenantMetadata = stateFromStores.tenantMetadata;
@@ -56,7 +63,10 @@ function ShopThisLookCard(skuId) {
       if (obj.getIsVariantProduct(tmp)) {
         const _Math = Math;
         const variants = tmp.variants;
-        const bound = Math.max(0, variants.findIndex((skuId) => skuId.skuId === closure_0));
+        const bound = Math.max(
+          0,
+          variants.findIndex((skuId) => skuId.skuId === closure_0),
+        );
         return tmp2(tmp3[14]).getSelectedProduct(tmp, bound);
       } else {
         return tmp;
@@ -88,7 +98,13 @@ function ShopThisLookCard(skuId) {
   const items5 = [skuId, type, memo];
   callback = stateFromStores.useCallback(() => {
     let obj = skuId(_undefined[15]);
-    obj = { action: skuId(_undefined[15]).ShopThisLookRowAction.ROW_CLICKED, skuId, productType: type, isDisabled: !memo, source: closure_1_8.ACTION_SHEET };
+    obj = {
+      action: skuId(_undefined[15]).ShopThisLookRowAction.ROW_CLICKED,
+      skuId,
+      productType: type,
+      isDisabled: !memo,
+      source: closure_1_8.ACTION_SHEET,
+    };
     const result = obj.trackShopThisLookRowAction(obj);
   }, items5);
   const items6 = [callback, onPress];
@@ -114,7 +130,7 @@ function ShopThisLookCard(skuId) {
         obj1[0] = stateFromStores;
         obj1[1] = size;
         obj1[2] = callback1;
-        const items7 = [callback(onPress(10777), obj1), ];
+        const items7 = [callback(onPress(10777), obj1)];
         let tmp17Result = null != memo1;
         if (tmp17Result) {
           callback1 = { selectedProduct: null, style: null };
@@ -150,7 +166,12 @@ createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefa
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginTop: -ThemesDefault.space.PX_8 };
 let obj1 = { textAlign: "center", marginTop: -ThemesDefault.space.PX_8 };
-createCacheKey[2] = { alignSelf: "center", flexDirection: "row", flexWrap: "wrap", paddingBottom: ThemesDefault.space.PX_8 };
+createCacheKey[2] = {
+  alignSelf: "center",
+  flexDirection: "row",
+  flexWrap: "wrap",
+  paddingBottom: ThemesDefault.space.PX_8,
+};
 createCacheKey[3] = { position: "relative" };
 let obj3 = {};
 const merged = Object.assign(require("SourceIcon").CARD_TOP_RIGHT_OVERLAY_POSITION);
@@ -158,7 +179,9 @@ obj3.zIndex = 1;
 createCacheKey[4] = obj3;
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { alignSelf: "center", flexDirection: "row", flexWrap: "wrap", paddingBottom: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/collectibles/shop_this_look/native/ShopThisLookActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/collectibles/shop_this_look/native/ShopThisLookActionSheet.tsx",
+);
 
 export default function ShopThisLookActionSheet(arg0) {
   let _require;
@@ -176,7 +199,11 @@ export default function ShopThisLookActionSheet(arg0) {
   dependencyMap = React.useCallback((initialProductSkuId) => {
     let obj = analyticsLocations(4445);
     obj.hideActionSheet();
-    obj = { initialProductSkuId, analyticsLocations, analyticsSource: analyticsLocations(5973).USER_PROFILE_OVERFLOW_MENU };
+    obj = {
+      initialProductSkuId,
+      analyticsLocations,
+      analyticsSource: analyticsLocations(5973).USER_PROFILE_OVERFLOW_MENU,
+    };
     const result = _undefined(7286).openCollectiblesShopMobile(obj);
   }, items);
   obj = { value: null, children: null };
@@ -190,24 +217,28 @@ export default function ShopThisLookActionSheet(arg0) {
   const obj3 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.description, children: null };
   const intl2 = require("../../../../intl/index.native.tsx").intl;
   obj3[3] = intl2.string(require("../../../../intl/index.native.tsx").t["ws+0Lr"]);
-  const items2 = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj3), ];
+  const items2 = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj3)];
   const tmp4 = analyticsLocations(9218);
   const items3 = [tmp.itemsContainer, { gap, width: rowWidth }];
   items2[1] = callback(closure_5, {
     style: items3,
     children: equippedCollectibleSkuIds.map((skuId) => {
       closure_0 = skuId;
-      return closure_1_9(closure_1_12, {
+      return closure_1_9(
+        closure_1_12,
+        {
+          skuId,
+          size: closure_0,
+          onPress() {
+            return closure_1_2(closure_0);
+          },
+        },
         skuId,
-        size: closure_0,
-        onPress() {
-          return closure_1_2(closure_0);
-        }
-      }, skuId);
-    })
+      );
+    }),
   });
   obj2[1] = items2;
   obj1[2] = callback2(closure_5, obj2);
   obj[1] = callback(tmp4, obj1);
   return callback(require("../../../app_analytics/useAnalyticsLocations.tsx").AnalyticsLocationProvider, obj);
-};
+}

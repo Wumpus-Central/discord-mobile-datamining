@@ -18,4 +18,4 @@ export default function useExpressionPickerListWidth(arg0) {
     bound = Math.min(diff, ACTION_SHEET_MAX_WIDTH);
   }
   return bound;
-};
+}

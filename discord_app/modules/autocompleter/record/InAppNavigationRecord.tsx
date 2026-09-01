@@ -7,7 +7,16 @@ import { UserSettingsPath } from "../../user_settings/UserSettingsConstants.tsx"
 
 require = arg1;
 toJSDefault;
-let obj = { SHOP: "SHOP", SHOP_ORBS_TAB: "SHOP_ORBS_TAB", NITRO_HOME: "NITRO_HOME", QUEST_HOME: "QUEST_HOME", QUEST_ORBS: "QUEST_ORBS", APPS_HOME: "APPS_HOME", SETTINGS: "SETTINGS", PLAYGROUND: "PLAYGROUND" };
+let obj = {
+  SHOP: "SHOP",
+  SHOP_ORBS_TAB: "SHOP_ORBS_TAB",
+  NITRO_HOME: "NITRO_HOME",
+  QUEST_HOME: "QUEST_HOME",
+  QUEST_ORBS: "QUEST_ORBS",
+  APPS_HOME: "APPS_HOME",
+  SETTINGS: "SETTINGS",
+  PLAYGROUND: "PLAYGROUND",
+};
 let prototype;
 prototype = function InAppNavigationRecord(collectionId) {
   const tmp3 = new prototype(tmp2, tmp);
@@ -19,11 +28,16 @@ prototype = function InAppNavigationRecord(collectionId) {
     type = collectionId.type;
   }
   tmp3.id = type;
-  ({ path: tmp3.path, type: tmp3.type, label: tmp3.label, collectionId: tmp3.collectionId, IconComponent: tmp3.IconComponent } = collectionId);
+  ({
+    path: tmp3.path,
+    type: tmp3.type,
+    label: tmp3.label,
+    collectionId: tmp3.collectionId,
+    IconComponent: tmp3.IconComponent,
+  } = collectionId);
   return tmp3;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["fromType"] = function fromType(arg0) {
   if (obj.SHOP === arg0) {
     obj = { path: null, type: null };
@@ -41,7 +55,13 @@ prototype["fromType"] = function fromType(arg0) {
       type7 = obj.type;
     }
     tmp96.id = type7;
-    ({ path: tmp96.path, type: tmp96.type, label: tmp96.label, collectionId: tmp96.collectionId, IconComponent: tmp96.IconComponent } = obj);
+    ({
+      path: tmp96.path,
+      type: tmp96.type,
+      label: tmp96.label,
+      collectionId: tmp96.collectionId,
+      IconComponent: tmp96.IconComponent,
+    } = obj);
     return tmp96;
   } else if (tmp7.NITRO_HOME === arg0) {
     obj = { path: null, type: null };
@@ -59,7 +79,13 @@ prototype["fromType"] = function fromType(arg0) {
       type6 = obj.type;
     }
     tmp86.id = type6;
-    ({ path: tmp86.path, type: tmp86.type, label: tmp86.label, collectionId: tmp86.collectionId, IconComponent: tmp86.IconComponent } = obj);
+    ({
+      path: tmp86.path,
+      type: tmp86.type,
+      label: tmp86.label,
+      collectionId: tmp86.collectionId,
+      IconComponent: tmp86.IconComponent,
+    } = obj);
     return tmp86;
   } else if (tmp7.QUEST_HOME === arg0) {
     obj1 = { path: null, type: null };
@@ -77,7 +103,13 @@ prototype["fromType"] = function fromType(arg0) {
       type5 = obj1.type;
     }
     tmp76.id = type5;
-    ({ path: tmp76.path, type: tmp76.type, label: tmp76.label, collectionId: tmp76.collectionId, IconComponent: tmp76.IconComponent } = obj1);
+    ({
+      path: tmp76.path,
+      type: tmp76.type,
+      label: tmp76.label,
+      collectionId: tmp76.collectionId,
+      IconComponent: tmp76.IconComponent,
+    } = obj1);
     return tmp76;
   } else if (tmp7.APPS_HOME === arg0) {
     let obj2 = { path: null, type: null };
@@ -95,7 +127,13 @@ prototype["fromType"] = function fromType(arg0) {
       type4 = obj2.type;
     }
     tmp66.id = type4;
-    ({ path: tmp66.path, type: tmp66.type, label: tmp66.label, collectionId: tmp66.collectionId, IconComponent: tmp66.IconComponent } = obj2);
+    ({
+      path: tmp66.path,
+      type: tmp66.type,
+      label: tmp66.label,
+      collectionId: tmp66.collectionId,
+      IconComponent: tmp66.IconComponent,
+    } = obj2);
     return tmp66;
   } else {
     let settingsPathToRouteResult = arg1;
@@ -121,7 +159,13 @@ prototype["fromType"] = function fromType(arg0) {
         type3 = obj3.type;
       }
       tmp57.id = type3;
-      ({ path: tmp57.path, type: tmp57.type, label: tmp57.label, collectionId: tmp57.collectionId, IconComponent: tmp57.IconComponent } = obj3);
+      ({
+        path: tmp57.path,
+        type: tmp57.type,
+        label: tmp57.label,
+        collectionId: tmp57.collectionId,
+        IconComponent: tmp57.IconComponent,
+      } = obj3);
       return tmp57;
     } else if (tmp7.PLAYGROUND === arg0) {
       let APP = settingsPathToRouteResult;
@@ -162,7 +206,13 @@ prototype["fromType"] = function fromType(arg0) {
         type2 = obj4.type;
       }
       tmp30.id = type2;
-      ({ path: tmp30.path, type: tmp30.type, label: tmp30.label, collectionId: tmp30.collectionId, IconComponent: tmp30.IconComponent } = obj4);
+      ({
+        path: tmp30.path,
+        type: tmp30.type,
+        label: tmp30.label,
+        collectionId: tmp30.collectionId,
+        IconComponent: tmp30.IconComponent,
+      } = obj4);
       return tmp30;
     } else if (tmp7.QUEST_ORBS === arg0) {
       obj = { path: null, type: null };
@@ -183,7 +233,13 @@ prototype["fromType"] = function fromType(arg0) {
         type = obj.type;
       }
       tmp21.id = type;
-      ({ path: tmp21.path, type: tmp21.type, label: tmp21.label, collectionId: tmp21.collectionId, IconComponent: tmp21.IconComponent } = obj);
+      ({
+        path: tmp21.path,
+        type: tmp21.type,
+        label: tmp21.label,
+        collectionId: tmp21.collectionId,
+        IconComponent: tmp21.IconComponent,
+      } = obj);
       return tmp21;
     } else {
       const _Error = Error;

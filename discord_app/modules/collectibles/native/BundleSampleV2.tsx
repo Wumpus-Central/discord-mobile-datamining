@@ -37,7 +37,13 @@ function BundleStaticPreviewContent(mutedBackground) {
         combined = "" + bgStatic + str2 + "width=" + rounded + "&height=" + rounded1;
       }
     }
-    let obj = { source: null, style: null, resizeMode: "cover", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+    let obj = {
+      source: null,
+      style: null,
+      resizeMode: "cover",
+      accessibilityElementsHidden: true,
+      importantForAccessibility: "no-hide-descendants",
+    };
     obj = { uri: null };
     obj[0] = combined;
     obj[0] = obj;
@@ -64,7 +70,7 @@ function BundleStaticPreviewContent(mutedBackground) {
     obj1[2] = tmp21Result;
     tmp21Result = tmp21(tmp18, obj1);
   }
-  const items = [tmp21Result, ];
+  const items = [tmp21Result];
   let tmp24Result = null != fgStatic;
   if (tmp24Result) {
     const obj3 = { style: null, pointerEvents: "none", children: null };
@@ -87,7 +93,13 @@ function BundleStaticPreviewContent(mutedBackground) {
         combined1 = "" + fgStatic + str7 + "width=" + rounded2 + "&height=" + rounded3;
       }
     }
-    const obj4 = { source: null, style: null, resizeMode: "cover", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+    const obj4 = {
+      source: null,
+      style: null,
+      resizeMode: "cover",
+      accessibilityElementsHidden: true,
+      importantForAccessibility: "no-hide-descendants",
+    };
     const obj5 = { uri: null };
     obj5[0] = combined1;
     obj4[0] = obj5;
@@ -123,7 +135,7 @@ function BundleSampleV2Composed(arg0) {
     obj[1] = callback(ProfileEffectSampleDefault, obj1);
     tmp12 = callback(tmp11, obj);
   }
-  const items = [tmp12, , ];
+  const items = [tmp12, ,];
   if (null == deco) {
     items[1] = tmp16;
     if (null == nameplateData) {
@@ -192,16 +204,79 @@ let closure_10 = createCacheKey.createStyles((arg0) => {
   let obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
   obj = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: ThemesDefault.radii.xs };
   obj[0] = obj;
-  obj = { position: "absolute", top: tmp.pfxTop, left: tmp.pfxLeft, width: tmp.pfxWidth, height: tmp.pfxHeight, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, transform: items, zIndex: 0, overflow: "hidden", borderRadius: ThemesDefault.radii.xs };
+  obj = {
+    position: "absolute",
+    top: tmp.pfxTop,
+    left: tmp.pfxLeft,
+    width: tmp.pfxWidth,
+    height: tmp.pfxHeight,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    transform: items,
+    zIndex: 0,
+    overflow: "hidden",
+    borderRadius: ThemesDefault.radii.xs,
+  };
   items = [{ rotate: "-8deg" }];
   obj[1] = obj;
   const items1 = [{ rotate: "8deg" }];
-  obj[2] = { position: "absolute", top: BUNDLE_PREVIEW_CONFIG[arg0].avatarTop, right: BUNDLE_PREVIEW_CONFIG[arg0].avatarRight, transform: items1, zIndex: 1, alignItems: "center", justifyContent: "center" };
+  obj[2] = {
+    position: "absolute",
+    top: BUNDLE_PREVIEW_CONFIG[arg0].avatarTop,
+    right: BUNDLE_PREVIEW_CONFIG[arg0].avatarRight,
+    transform: items1,
+    zIndex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  };
   const items2 = [{ rotate: "8deg" }];
-  obj[3] = { position: "absolute", top: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateTop, right: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateRight, transform: items2, zIndex: 1, alignItems: "center", justifyContent: "center", shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.5, shadowRadius: 4 };
-  obj1 = { position: "absolute", top: BUNDLE_PREVIEW_CONFIG[arg0].avatarTop, right: BUNDLE_PREVIEW_CONFIG[arg0].avatarRight, transform: items1, zIndex: 1, alignItems: "center", justifyContent: "center" };
-  const obj2 = { position: "absolute", top: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateTop, right: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateRight, transform: items2, zIndex: 1, alignItems: "center", justifyContent: "center", shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.5, shadowRadius: 4 };
-  obj[4] = { position: "absolute", bottom: BUNDLE_PREVIEW_CONFIG[arg0].nameplateBottom, marginHorizontal: 10, width: "90%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, zIndex: 2, borderRadius: ThemesDefault.radii.sm, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.5, shadowRadius: 4 };
+  obj[3] = {
+    position: "absolute",
+    top: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateTop,
+    right: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateRight,
+    transform: items2,
+    zIndex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: ThemesDefault.colors.BLACK,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+  };
+  obj1 = {
+    position: "absolute",
+    top: BUNDLE_PREVIEW_CONFIG[arg0].avatarTop,
+    right: BUNDLE_PREVIEW_CONFIG[arg0].avatarRight,
+    transform: items1,
+    zIndex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  };
+  const obj2 = {
+    position: "absolute",
+    top: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateTop,
+    right: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateRight,
+    transform: items2,
+    zIndex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: ThemesDefault.colors.BLACK,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+  };
+  obj[4] = {
+    position: "absolute",
+    bottom: BUNDLE_PREVIEW_CONFIG[arg0].nameplateBottom,
+    marginHorizontal: 10,
+    width: "90%",
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+    zIndex: 2,
+    borderRadius: ThemesDefault.radii.sm,
+    shadowColor: ThemesDefault.colors.BLACK,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+  };
   return obj;
 });
 const result = require("set").fileFinishedImporting("modules/collectibles/native/BundleSampleV2.tsx");
@@ -240,4 +315,4 @@ export default function BundleSampleV2(size) {
     tmp4 = callback(BundleSampleV2Composed, obj);
   }
   return tmp4;
-};
+}

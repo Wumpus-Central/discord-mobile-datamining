@@ -12,8 +12,7 @@ let c5;
 let closure_6 = {};
 let closure_7 = {};
 const Store = initializeDefault.Store;
-class ExplicitMediaStore extends Store {
-}
+class ExplicitMediaStore extends Store {}
 const prototype = ExplicitMediaStore.prototype;
 prototype["getFpMessageInfo"] = function getFpMessageInfo(closure_0) {
   return dependencyMap[closure_0];
@@ -56,7 +55,7 @@ Object.defineProperty(prototype, "validContentScanVersion", {
     }
     obj = apexExperiment;
   },
-  set: undefined
+  set: undefined,
 });
 ExplicitMediaStore.displayName = "FalsePositiveStore";
 const explicitMediaStore = new ExplicitMediaStore(dispatcherDefault, {
@@ -100,7 +99,7 @@ const explicitMediaStore = new ExplicitMediaStore(dispatcherDefault, {
       obj.reportSubmit = true;
       dependencyMap[messageId] = obj;
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaStore.tsx");
 

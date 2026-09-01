@@ -58,7 +58,10 @@ let obj = {
     }
   },
   [arg1(1955).ApplicationCommandOptionType.STRING]: (type, type2, id) => {
-    _modDef38(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.STRING, "option type must match validator type");
+    _modDef38(
+      type2.type === PermissionOverwriteType.ApplicationCommandOptionType.STRING,
+      "option type must match validator type",
+    );
     type = type.type;
     if ("emoji" === type) {
       let surrogate = type.surrogate;
@@ -142,7 +145,10 @@ let obj = {
     const tmp2 = _modDef38;
   },
   [arg1(1955).ApplicationCommandOptionType.INTEGER]: (type, type2, id) => {
-    _modDef38(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.INTEGER, "option type must match validator type");
+    _modDef38(
+      type2.type === PermissionOverwriteType.ApplicationCommandOptionType.INTEGER,
+      "option type must match validator type",
+    );
     let trimmed = null;
     if ("text" === type.type) {
       trimmed = type.text.trim();
@@ -171,7 +177,13 @@ let obj = {
               if (Number.isInteger(NumberResult)) {
                 const _Number3 = Number;
                 if (Number.isSafeInteger(NumberResult)) {
-                  obj = validateNumericOptionRange(NumberResult, type2, tmp3(1236).t["8Y5zsp"], tmp3(1236).t.CyRLmH, tmp3(1236).t["VD3Q+S"]);
+                  obj = validateNumericOptionRange(
+                    NumberResult,
+                    type2,
+                    tmp3(1236).t["8Y5zsp"],
+                    tmp3(1236).t.CyRLmH,
+                    tmp3(1236).t["VD3Q+S"],
+                  );
                 }
                 return obj;
               }
@@ -185,7 +197,10 @@ let obj = {
     return { success: false };
   },
   [arg1(1955).ApplicationCommandOptionType.NUMBER]: (type, type2, id) => {
-    _modDef38(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.NUMBER, "option type must match validator type");
+    _modDef38(
+      type2.type === PermissionOverwriteType.ApplicationCommandOptionType.NUMBER,
+      "option type must match validator type",
+    );
     let trimmed = null;
     if ("text" === type.type) {
       trimmed = type.text.trim();
@@ -213,7 +228,13 @@ let obj = {
             if (NumberResult <= Number.MAX_SAFE_INTEGER) {
               const _Number3 = Number;
               if (NumberResult >= Number.MIN_SAFE_INTEGER) {
-                obj = validateNumericOptionRange(NumberResult, type2, tmp3(1236).t["8Y5zsp"], tmp3(1236).t.CyRLmH, tmp3(1236).t["VD3Q+S"]);
+                obj = validateNumericOptionRange(
+                  NumberResult,
+                  type2,
+                  tmp3(1236).t["8Y5zsp"],
+                  tmp3(1236).t.CyRLmH,
+                  tmp3(1236).t["VD3Q+S"],
+                );
               }
               return obj;
             }
@@ -231,7 +252,12 @@ let obj = {
         return { success: true };
       } else {
         const tmpResult = tmp(8442);
-        const applicationCommandOption = tmpResult.resolveApplicationCommandOption(type.text, throwTypeErrorResult, id, { allowRoles: false });
+        const applicationCommandOption = tmpResult.resolveApplicationCommandOption(
+          type.text,
+          throwTypeErrorResult,
+          id,
+          { allowRoles: false },
+        );
         type = undefined;
         if (applicationCommandOption != null) {
           type = applicationCommandOption.type;
@@ -276,7 +302,12 @@ let obj = {
         return { success: true };
       } else {
         const tmp3Result = tmp3(8442);
-        const applicationCommandOption = tmp3Result.resolveApplicationCommandOption(type.text, throwTypeErrorResult, id, { allowUsers: false });
+        const applicationCommandOption = tmp3Result.resolveApplicationCommandOption(
+          type.text,
+          throwTypeErrorResult,
+          id,
+          { allowUsers: false },
+        );
         type = undefined;
         if (applicationCommandOption != null) {
           type = applicationCommandOption.type;
@@ -306,7 +337,11 @@ let obj = {
       if (obj2.isSnowflake(type.text)) {
         return { success: true };
       } else {
-        const applicationCommandOption = tmp4(8442).resolveApplicationCommandOption(type.text, throwTypeErrorResult, id);
+        const applicationCommandOption = tmp4(8442).resolveApplicationCommandOption(
+          type.text,
+          throwTypeErrorResult,
+          id,
+        );
         let tmp10 = null != applicationCommandOption;
         if (tmp10) {
           let tmp11 = "userMention" === applicationCommandOption.type;
@@ -357,7 +392,7 @@ let obj = {
       obj[0] = null != upload && upload.filename === type.text;
       return obj;
     }
-  }
+  },
 };
 const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandValidators.tsx");
 

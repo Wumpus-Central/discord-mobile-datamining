@@ -1,7 +1,9 @@
 // discord_app/modules/collectibles/profile_frames/tooling/computeProfileFrameDimensions.tsx
 import set from "../../../../../_runtime/00002_set.js";
 
-const result = set.fileFinishedImporting("modules/collectibles/profile_frames/tooling/computeProfileFrameDimensions.tsx");
+const result = set.fileFinishedImporting(
+  "modules/collectibles/profile_frames/tooling/computeProfileFrameDimensions.tsx",
+);
 
 export const computeProfileFrameDimensions = function computeProfileFrameDimensions(closure_4) {
   innerWidth = innerWidth(8543).DefaultProfileFrameDimensions.INNER_WIDTH;
@@ -22,7 +24,9 @@ export const computeProfileFrameDimensions = function computeProfileFrameDimensi
     }
     return tmp3;
   });
-  const mapped1 = found.map((dims) => Math.max(0, dims.dims.height - (716 - innerWidth(8543).DefaultProfileFrameDimensions.OVERFLOW_TOP)));
+  const mapped1 = found.map((dims) =>
+    Math.max(0, dims.dims.height - (716 - innerWidth(8543).DefaultProfileFrameDimensions.OVERFLOW_TOP)),
+  );
   let overflowTop = 0;
   if (mapped1.length > 0) {
     const _Math3 = Math;
@@ -39,7 +43,9 @@ export const computeProfileFrameDimensions = function computeProfileFrameDimensi
     }
     return tmp3;
   });
-  const mapped2 = found1.map((dims) => Math.max(0, dims.dims.height - (424 - innerWidth(8543).DefaultProfileFrameDimensions.OVERFLOW_BOTTOM)));
+  const mapped2 = found1.map((dims) =>
+    Math.max(0, dims.dims.height - (424 - innerWidth(8543).DefaultProfileFrameDimensions.OVERFLOW_BOTTOM)),
+  );
   let overflowBottom = 0;
   if (mapped2.length > 0) {
     const _Math5 = Math;

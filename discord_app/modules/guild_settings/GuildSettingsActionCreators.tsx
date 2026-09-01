@@ -16,7 +16,14 @@ import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTP
 import { toServerGuildProfile } from "../guild_tag/GuildTagTypes.tsx";
 
 require = arg1;
-({ Endpoints: c10, Layers, GuildSettingsSubsections: unpackModuleId, GuildSettingsSections: closure_12, GuildFeatures: map1, Routes: closure_14 } = ME);
+({
+  Endpoints: c10,
+  Layers,
+  GuildSettingsSubsections: unpackModuleId,
+  GuildSettingsSections: closure_12,
+  GuildFeatures: map1,
+  Routes: closure_14,
+} = ME);
 let closure_15 = new timestampDefault("GuildSettingsActionCreators");
 let obj = {
   init(guildId, section, location, subsection) {
@@ -29,7 +36,7 @@ let obj = {
     closure_1 = arg1;
     closure_2 = arg2;
     const callback = arg3;
-    return callback(function*() {
+    return callback(function* () {
       if (c0 === 2) {
         c0 = 3;
         HermesBuiltin.throwTypeError();
@@ -149,14 +156,24 @@ let obj = {
     obj = { enabled, channel_id };
     return HTTP.patch(obj).then((body) => {
       obj = closure_1_1(closure_1_2[9]);
-      obj = { type: "GUILD_SETTINGS_SET_WIDGET", guildId: closure_0, enabled: body.body.enabled, channelId: body.body.channel_id };
+      obj = {
+        type: "GUILD_SETTINGS_SET_WIDGET",
+        guildId: closure_0,
+        enabled: body.body.enabled,
+        channelId: body.body.channel_id,
+      };
       obj.dispatch(obj);
     });
   },
   updateMFALevel(updateMFALevelResult) {
     ({ guildId, level } = updateMFALevelResult);
     const HTTP = sendRequest.HTTP;
-    obj = { url: closure_10.GUILD_MFA(guildId), body: { level }, oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
+    obj = {
+      url: closure_10.GUILD_MFA(guildId),
+      body: { level },
+      oldFormErrors: true,
+      rejectWithError: sendRequest.rejectWithMigratedError(),
+    };
     const obj2 = sendRequest;
     return HTTP.post(obj).then((body) => {
       obj = callback(table[9]);
@@ -172,16 +189,19 @@ let obj = {
     obj = { icon: base64 };
     obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     const obj3 = sendRequest;
-    HTTP.patch(obj).then(() => {
-      obj = base64(closure_1_2[9]);
-      obj = { type: "GUILD_SETTINGS_UPDATE", icon: base64 };
-      obj.dispatch(obj);
-      const result = base64(closure_1_2[11]).checkGuildTemplateDirty(closure_0);
-    }, (body) => {
-      obj = base64(table[9]);
-      obj = { type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: body.body };
-      return obj.dispatch(obj);
-    });
+    HTTP.patch(obj).then(
+      () => {
+        obj = base64(closure_1_2[9]);
+        obj = { type: "GUILD_SETTINGS_UPDATE", icon: base64 };
+        obj.dispatch(obj);
+        const result = base64(closure_1_2[11]).checkGuildTemplateDirty(closure_0);
+      },
+      (body) => {
+        obj = base64(table[9]);
+        obj = { type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: body.body };
+        return obj.dispatch(obj);
+      },
+    );
   },
   cancelChanges(id) {
     obj = dispatcherDefault;
@@ -220,11 +240,56 @@ let obj = {
     const _require = id;
     ({ premiumProgressBarEnabled, profile } = arg1);
     obj = arg2;
-    ({ name, description, icon, splash, banner, homeHeader, afkChannelId, afkTimeout, systemChannelId, verificationLevel, defaultMessageNotifications, explicitContentFilter, features, systemChannelFlags, preferredLocale, rulesChannelId, safetyAlertsChannelId, ownerConfiguredContentLevel, discoverySplash, publicUpdatesChannelId, moderatorReportingEnabled, officialMessageColor, verificationRoleId } = arg1);
+    ({
+      name,
+      description,
+      icon,
+      splash,
+      banner,
+      homeHeader,
+      afkChannelId,
+      afkTimeout,
+      systemChannelId,
+      verificationLevel,
+      defaultMessageNotifications,
+      explicitContentFilter,
+      features,
+      systemChannelFlags,
+      preferredLocale,
+      rulesChannelId,
+      safetyAlertsChannelId,
+      ownerConfiguredContentLevel,
+      discoverySplash,
+      publicUpdatesChannelId,
+      moderatorReportingEnabled,
+      officialMessageColor,
+      verificationRoleId,
+    } = arg1);
     if (arg2 === undefined) {
       obj = {};
     }
-    obj = { name, description, icon, splash, banner, home_header: homeHeader, features, preferred_locale: preferredLocale, afk_channel_id: afkChannelId, afk_timeout: afkTimeout, system_channel_id: systemChannelId, verification_level: verificationLevel, default_message_notifications: defaultMessageNotifications, explicit_content_filter: explicitContentFilter, system_channel_flags: systemChannelFlags, rules_channel_id: rulesChannelId, owner_configured_content_level: ownerConfiguredContentLevel, discovery_splash: discoverySplash, public_updates_channel_id: publicUpdatesChannelId, safety_alerts_channel_id: safetyAlertsChannelId };
+    obj = {
+      name,
+      description,
+      icon,
+      splash,
+      banner,
+      home_header: homeHeader,
+      features,
+      preferred_locale: preferredLocale,
+      afk_channel_id: afkChannelId,
+      afk_timeout: afkTimeout,
+      system_channel_id: systemChannelId,
+      verification_level: verificationLevel,
+      default_message_notifications: defaultMessageNotifications,
+      explicit_content_filter: explicitContentFilter,
+      system_channel_flags: systemChannelFlags,
+      rules_channel_id: rulesChannelId,
+      owner_configured_content_level: ownerConfiguredContentLevel,
+      discovery_splash: discoverySplash,
+      public_updates_channel_id: publicUpdatesChannelId,
+      safety_alerts_channel_id: safetyAlertsChannelId,
+    };
     let tmp = null;
     if (null != premiumProgressBarEnabled) {
       obj = { premium_progress_bar_enabled: null };
@@ -245,34 +310,57 @@ let obj = {
     const pendingOriginalMd5s = store.getPendingOriginalMd5s();
     const obj5 = obj(709);
     const obj6 = obj(5113);
-    const headersForMd5 = obj6.buildHeadersForMd5({ [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash });
+    const headersForMd5 = obj6.buildHeadersForMd5({
+      [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon,
+      [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner,
+      [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash,
+      [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash,
+    });
     const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-    const obj2 = { url: closure_10.GUILD(id), query: obj3, body: obj, headers: headersForMd5, oldFormErrors: true, rejectWithError: null };
+    const obj2 = {
+      url: closure_10.GUILD(id),
+      query: obj3,
+      body: obj,
+      headers: headersForMd5,
+      oldFormErrors: true,
+      rejectWithError: null,
+    };
     obj3 = { for_discovery: obj.isForDiscovery };
-    obj1 = { [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash };
+    obj1 = {
+      [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon,
+      [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner,
+      [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash,
+      [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash,
+    };
     obj2[5] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     const obj10 = sendRequest;
-    return HTTP.patch(obj2).then((body) => {
-      obj = obj(closure_1_2[9]);
-      obj = { type: "GUILD_SETTINGS_SUBMIT_SUCCESS", guild: body.body };
-      obj.dispatch(obj);
-      const result = obj(closure_1_2[11]).checkGuildTemplateDirty(closure_0);
-    }, (errors) => {
-      obj = obj(closure_1_2[9]);
-      obj = { type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: errors.body };
-      obj.dispatch(obj);
-      obj = { errors: errors.body };
-      closure_1_15.error("Failed to save guild settings", obj);
-      if (obj.throwErr) {
-        throw errors.body;
-      }
-    });
+    return HTTP.patch(obj2).then(
+      (body) => {
+        obj = obj(closure_1_2[9]);
+        obj = { type: "GUILD_SETTINGS_SUBMIT_SUCCESS", guild: body.body };
+        obj.dispatch(obj);
+        const result = obj(closure_1_2[11]).checkGuildTemplateDirty(closure_0);
+      },
+      (errors) => {
+        obj = obj(closure_1_2[9]);
+        obj = { type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: errors.body };
+        obj.dispatch(obj);
+        obj = { errors: errors.body };
+        closure_1_15.error("Failed to save guild settings", obj);
+        if (obj.throwErr) {
+          throw errors.body;
+        }
+      },
+    );
   },
   updateGuildModeration(id, verificationLevel) {
     const _require = id;
     const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, rejectWithError: null };
-    obj = { verification_level: verificationLevel.verificationLevel, explicit_content_filter: verificationLevel.explicitContentFilter };
+    obj = {
+      verification_level: verificationLevel.verificationLevel,
+      explicit_content_filter: verificationLevel.explicitContentFilter,
+    };
     obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     const obj3 = sendRequest;
     return HTTP.patch(obj).then((arg0) => {
@@ -311,7 +399,11 @@ let obj = {
   },
   deleteGuild(arg0) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: closure_10.GUILD_DELETE(arg0), oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
+    obj = {
+      url: closure_10.GUILD_DELETE(arg0),
+      oldFormErrors: true,
+      rejectWithError: sendRequest.rejectWithMigratedError(),
+    };
     const obj2 = sendRequest;
     return HTTP.post(obj).then(() => {
       closure_16.close();
@@ -323,7 +415,7 @@ let obj = {
     if (arg1 === undefined) {
       flag = false;
     }
-    return callback(function*() {
+    return callback(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -411,7 +503,7 @@ let obj = {
     closure_2 = arg2;
     const callback = arg3;
     closure_4 = arg4;
-    return callback(function*() {
+    return callback(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -510,7 +602,11 @@ let obj = {
   },
   disableIntegration(id, id2) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: closure_10.GUILD_INTEGRATION(id, id2), oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
+    obj = {
+      url: closure_10.GUILD_INTEGRATION(id, id2),
+      oldFormErrors: true,
+      rejectWithError: sendRequest.rejectWithMigratedError(),
+    };
     return HTTP.del(obj);
   },
   updateIntegration(guildId, id, expire_behavior, expire_grace_period, enable_emoticons) {
@@ -522,12 +618,16 @@ let obj = {
   },
   syncIntegration(guildId, id) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: closure_10.GUILD_INTEGRATION_SYNC(guildId, id), oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
+    obj = {
+      url: closure_10.GUILD_INTEGRATION_SYNC(guildId, id),
+      oldFormErrors: true,
+      rejectWithError: sendRequest.rejectWithMigratedError(),
+    };
     HTTP.post(obj);
   },
   migratePinPermission(closure_1_0) {
     closure_0 = closure_1_0;
-    return callback(function*() {
+    return callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -587,7 +687,7 @@ let obj = {
     })();
   },
   migrateSlowmodePermission(closure_0) {
-    return callback(function*() {
+    return callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -649,7 +749,7 @@ let obj = {
   migratePermissions(arg0, arg1) {
     closure_0 = arg0;
     ({ migratePin: importDefault, migrateSlowmode: dependencyMap } = arg1);
-    return callback(function*() {
+    return callback(function* () {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();
@@ -721,7 +821,7 @@ let obj = {
         }
       }
     })();
-  }
+  },
 };
 const tmp3 = new timestampDefault("GuildSettingsActionCreators");
 let result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsActionCreators.tsx");

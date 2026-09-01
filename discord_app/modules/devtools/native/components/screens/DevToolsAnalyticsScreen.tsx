@@ -14,7 +14,10 @@ require = arg1;
 function CommonProperty(arg0) {
   ({ name, children } = arg0);
   const obj = { style: callback4().commonProperty, children: null };
-  const items = [callback2(Text.Text, { variant: "text-sm/semibold", color: "text-default", children: name }), children];
+  const items = [
+    callback2(Text.Text, { variant: "text-sm/semibold", color: "text-default", children: name }),
+    children,
+  ];
   obj[1] = items;
   return callback3(View, obj);
 }
@@ -28,7 +31,15 @@ function LoggedEvent(arg0) {
   user = user.getUser(fingerprint);
   let CopyIcon = fingerprint;
   let tmp6Result = dependencyMap;
-  let obj = { arrow: !tmp2, icon: callback2(fingerprint(10376).AnalyticsIcon, {}), label: event, subLabel: null, onPress: null, start: null, end: null };
+  let obj = {
+    arrow: !tmp2,
+    icon: callback2(fingerprint(10376).AnalyticsIcon, {}),
+    label: event,
+    subLabel: null,
+    onPress: null,
+    start: null,
+    end: null,
+  };
   if ("name" in properties) {
     let str2 = properties.name;
   } else {
@@ -46,7 +57,7 @@ function LoggedEvent(arg0) {
   };
   obj[5] = start;
   obj[6] = end;
-  let items = [callback2(fingerprint(5599).TableRow, obj), ];
+  let items = [callback2(fingerprint(5599).TableRow, obj)];
   if (!tmp2) {
     obj = { collapsable: false, children: null };
     items[1] = tmp2;
@@ -62,7 +73,7 @@ function LoggedEvent(arg0) {
     let obj4 = map(4075)(timestamp);
     obj3[2] = obj4.calendar();
     obj2[1] = tmp6(CopyIcon(4474).Text, obj3);
-    let items1 = [tmp6(CommonProperty, obj2), , ];
+    let items1 = [tmp6(CommonProperty, obj2), ,];
     tmp6Result = null != user;
     if (tmp6Result) {
       obj4 = { name: "User ", children: null };
@@ -85,7 +96,7 @@ function LoggedEvent(arg0) {
       const items2 = [map.monospace, { marginRight: 4 }];
       obj7[2] = items2;
       obj7[3] = fingerprint;
-      const items3 = [tmp6(CopyIcon(4474).Text, obj7), ];
+      const items3 = [tmp6(CopyIcon(4474).Text, obj7)];
       CopyIcon = CopyIcon(4425).CopyIcon;
       tmp6Result = tmp6(CopyIcon, { size: "sm" });
       items3[1] = tmp6Result;
@@ -100,7 +111,7 @@ function LoggedEvent(arg0) {
     obj9[1] = tmp6Result1;
     items1[2] = tmp6(CommonProperty, obj9);
     obj1[1] = items1;
-    obj1 = [, ];
+    obj1 = [,];
     obj1[0] = tmp4(tmp5, obj1);
     const obj10 = { style: null, children: null };
     obj10[0] = map.customPropertiesContainer;
@@ -112,7 +123,7 @@ function LoggedEvent(arg0) {
       let obj = { style: map.customProperty, children: null };
       obj = { variant: "text-sm/semibold", color: "text-brand", style: map.customPropertyName, children: items };
       items = [tmp, ":"];
-      const items1 = [closure_1_9(fingerprint(_undefined[9]).Text, obj), ];
+      const items1 = [closure_1_9(fingerprint(_undefined[9]).Text, obj)];
       if (null != tmp2) {
         obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", style: null, children: null };
         obj[2] = tmp5.monospace;
@@ -136,7 +147,19 @@ function LoggedEvent(arg0) {
   }
 }
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { analyticsContainer: null, contentContainer: null, searchFieldContainer: null, detailsContainer: null, commonPropertiesContainer: null, commonProperty: null, customPropertiesContainer: null, customProperty: null, customPropertyName: null, monospace: null, copyContainer: null };
+createCacheKey = {
+  analyticsContainer: null,
+  contentContainer: null,
+  searchFieldContainer: null,
+  detailsContainer: null,
+  commonPropertiesContainer: null,
+  commonProperty: null,
+  customPropertiesContainer: null,
+  customProperty: null,
+  customPropertyName: null,
+  monospace: null,
+  copyContainer: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
@@ -146,15 +169,29 @@ let obj2 = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: 10 };
-createCacheKey[5] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, height: 20 };
+createCacheKey[5] = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  marginVertical: 8,
+  height: 20,
+};
 createCacheKey[6] = { paddingHorizontal: 10, paddingVertical: 4 };
-createCacheKey[7] = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", justifyContent: "flex-start", marginVertical: 4 };
+createCacheKey[7] = {
+  flexDirection: "row",
+  alignItems: "center",
+  flexWrap: "wrap",
+  justifyContent: "flex-start",
+  marginVertical: 4,
+};
 createCacheKey[8] = { fontWeight: "600", fontFamily: Fonts.CODE_BOLD, marginRight: 4 };
 createCacheKey[9] = { fontFamily: Fonts.CODE_BOLD };
 createCacheKey[10] = { flexDirection: "row", alignItems: "center" };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: 10 };
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsAnalyticsScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsAnalyticsScreen.tsx",
+);
 
 export default function DevToolsAnalyticsScreen() {
   const tmp = callback4();
@@ -185,13 +222,40 @@ export default function DevToolsAnalyticsScreen() {
   const str2 = str.toLowerCase();
   const tmp12 = View;
   const tmp13 = callback3;
-  const items2 = [callback2(trimmed(5993).TableSwitchRow, { icon: callback2(trimmed(11721).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] }), ];
-  obj1 = { icon: callback2(trimmed(11721).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] };
-  items2[1] = callback2(trimmed(5599).TableRow, { arrow: true, variant: "danger", icon: callback2(trimmed(4436).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(15173).clearAnalyticsLog });
+  const items2 = [
+    callback2(trimmed(5993).TableSwitchRow, {
+      icon: callback2(trimmed(11721).ArrowsUpDownIcon, {}),
+      label: "Reverse Events",
+      value: first,
+      onValueChange: tmp5[1],
+    }),
+  ];
+  obj1 = {
+    icon: callback2(trimmed(11721).ArrowsUpDownIcon, {}),
+    label: "Reverse Events",
+    value: first,
+    onValueChange: tmp5[1],
+  };
+  items2[1] = callback2(trimmed(5599).TableRow, {
+    arrow: true,
+    variant: "danger",
+    icon: callback2(trimmed(4436).TrashIcon, { color: "text-feedback-critical" }),
+    label: "Clear Analytics Log",
+    onPress: trimmed(15173).clearAnalyticsLog,
+  });
   obj[2] = items2;
-  const items3 = [callback3(trimmed(5992).TableRowGroup, obj), , ];
-  const obj2 = { arrow: true, variant: "danger", icon: callback2(trimmed(4436).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(15173).clearAnalyticsLog };
-  items3[1] = callback2(View, { style: tmp.searchFieldContainer, children: callback2(trimmed(6221).SearchField, { placeholder: "Search by event name", onChange: tmp8 }) });
+  const items3 = [callback3(trimmed(5992).TableRowGroup, obj), ,];
+  const obj2 = {
+    arrow: true,
+    variant: "danger",
+    icon: callback2(trimmed(4436).TrashIcon, { color: "text-feedback-critical" }),
+    label: "Clear Analytics Log",
+    onPress: trimmed(15173).clearAnalyticsLog,
+  };
+  items3[1] = callback2(View, {
+    style: tmp.searchFieldContainer,
+    children: callback2(trimmed(6221).SearchField, { placeholder: "Search by event name", onChange: tmp8 }),
+  });
   if (0 === loggedEvents.length) {
     let tmp11Result = tmp11(tmp2(5599).TableRow, { label: "No events logged." });
   } else {
@@ -199,13 +263,23 @@ export default function DevToolsAnalyticsScreen() {
     if (0 === found.length) {
       const obj4 = { label: null };
       const _HermesInternal = HermesInternal;
-      obj4[0] = "No events match \"" + str + "\"";
+      obj4[0] = 'No events match "' + str + '"';
       tmp11Result = tmp11(tmp2(5599).TableRow, obj4);
     }
   }
-  const obj5 = { ListHeaderComponent: null, contentContainerStyle: null, extraData: null, data: null, renderItem: null };
+  const obj5 = {
+    ListHeaderComponent: null,
+    contentContainerStyle: null,
+    extraData: null,
+    data: null,
+    renderItem: null,
+  };
   const obj6 = { spacing: 16, children: null };
-  items3[2] = callback2(trimmed(5992).TableRowGroup, { title: "Analytics Events", hasIcons: false, children: tmp11Result });
+  items3[2] = callback2(trimmed(5992).TableRowGroup, {
+    title: "Analytics Events",
+    hasIcons: false,
+    children: tmp11Result,
+  });
   obj6[1] = items3;
   obj5[0] = tmp13(trimmed(4926).Stack, obj6);
   obj5[1] = tmp.contentContainer;
@@ -213,8 +287,15 @@ export default function DevToolsAnalyticsScreen() {
   obj5[3] = reversed;
   obj5[4] = function renderItem(arg0) {
     ({ item, index } = arg0);
-    return closure_1_8(closure_1_12, { start: 0 === index, end: index === reversed.length - 1, event: item.event, properties: item.properties, timestamp: item.timestamp, fingerprint: item.fingerprint });
+    return closure_1_8(closure_1_12, {
+      start: 0 === index,
+      end: index === reversed.length - 1,
+      event: item.event,
+      properties: item.properties,
+      timestamp: item.timestamp,
+      fingerprint: item.fingerprint,
+    });
   };
   obj[1] = callback2(trimmed(8105).FlashList, obj5);
   return callback2(tmp12, obj);
-};
+}

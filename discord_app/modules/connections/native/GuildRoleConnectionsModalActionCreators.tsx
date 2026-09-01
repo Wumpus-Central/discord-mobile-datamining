@@ -17,15 +17,23 @@ export const openGuildRoleConnectionsModal = function openGuildRoleConnectionsMo
       if (onClose != null) {
         onClose();
       }
-    }
+    },
   };
   obj.pushLazy(onClose(2009)(11169, dependencyMap.paths), obj, ROLE_CONNECTIONS_MODAL_KEY);
 };
-export const makeGuildRoleConnectionsConnectAccountsActionSheetKey = function makeGuildRoleConnectionsConnectAccountsActionSheetKey(id) {
-  return "GuildRoleConnectionsConnectAccountsActionSheet-" + id;
-};
-export const openGuildRoleConnectionsConnectAccountModal = function openGuildRoleConnectionsConnectAccountModal(id, guildId) {
+export const makeGuildRoleConnectionsConnectAccountsActionSheetKey =
+  function makeGuildRoleConnectionsConnectAccountsActionSheetKey(id) {
+    return "GuildRoleConnectionsConnectAccountsActionSheet-" + id;
+  };
+export const openGuildRoleConnectionsConnectAccountModal = function openGuildRoleConnectionsConnectAccountModal(
+  id,
+  guildId,
+) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { role: id, guildId };
-  obj.openLazy(asyncRequireImpl(11161, dependencyMap.paths), "GuildRoleConnectionsConnectAccountsActionSheet-" + id.id, obj);
+  obj.openLazy(
+    asyncRequireImpl(11161, dependencyMap.paths),
+    "GuildRoleConnectionsConnectAccountsActionSheet-" + id.id,
+    obj,
+  );
 };

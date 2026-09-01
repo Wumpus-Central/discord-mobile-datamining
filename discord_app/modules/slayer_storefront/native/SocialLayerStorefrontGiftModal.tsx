@@ -7,7 +7,9 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 noopAll;
 ({ AnalyticEvents: c4, PaymentGateways: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontGiftModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/slayer_storefront/native/SocialLayerStorefrontGiftModal.tsx",
+);
 
 export default function SocialLayerStorefrontGiftModal(skuId) {
   skuId = skuId.skuId;
@@ -23,7 +25,9 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
   let tmp2 = giftingOrigin;
   const items2 = [];
   const tmp3 = giftingOrigin(applicationId[5]);
-  items2[HermesBuiltin.arraySpread(analyticsLocations, 0)] = giftingOrigin(applicationId[6]).SLAYER_STOREFRONT_NATIVE_GIFT_MODAL;
+  items2[HermesBuiltin.arraySpread(analyticsLocations, 0)] = giftingOrigin(
+    applicationId[6],
+  ).SLAYER_STOREFRONT_NATIVE_GIFT_MODAL;
   analyticsLocations2 = tmp3(items2).analyticsLocations;
   obj1 = skuId(applicationId[7]);
   if (obj1.isIOS()) {
@@ -37,7 +41,12 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
   let enabled = GiftACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontGiftModal" }).enabled;
   tmp2(tmp[9])(() => {
     let obj = giftingOrigin(applicationId[10]);
-    obj = { location_stack: analyticsLocations2, type: skuId(applicationId[11]).SOCIAL_LAYER_STOREFRONT_GIFT_MODAL_KEY, sku_id: skuId, application_id: null };
+    obj = {
+      location_stack: analyticsLocations2,
+      type: skuId(applicationId[11]).SOCIAL_LAYER_STOREFRONT_GIFT_MODAL_KEY,
+      sku_id: skuId,
+      application_id: null,
+    };
     applicationId = undefined;
     if (applicationId != null) {
       applicationId = applicationId.applicationId;
@@ -51,7 +60,17 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
     if (productLineResult.isSocialLayerStorefrontGiftingSupported()) {
       obj = { skuIDs: null, activeSubscription: null, children: null };
       obj[0] = [];
-      obj = { paymentGateway: null, orderRequired: null, skuIds: null, isGift: true, activeSubscription: null, onOrderRetryCancellation: null, checkoutAnalyticsFields: null, analyticsInitialStep: "gift_customization", children: null };
+      obj = {
+        paymentGateway: null,
+        orderRequired: null,
+        skuIds: null,
+        isGift: true,
+        activeSubscription: null,
+        onOrderRetryCancellation: null,
+        checkoutAnalyticsFields: null,
+        analyticsInitialStep: "gift_customization",
+        children: null,
+      };
       obj[0] = GOOGLE;
       let tmp2Result = tmp2(tmp[16]);
       if (enabled) {
@@ -62,7 +81,15 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
       const items3 = [skuId];
       obj[2] = items3;
       obj[5] = productLine(tmp[11]).closeSocialLayerStorefrontGiftModal;
-      enabled = { is_gift: true, location_stack: null, payment_type: "sku", sku_id: null, sku_type: null, sku_product_line: null, application_id: null };
+      enabled = {
+        is_gift: true,
+        location_stack: null,
+        payment_type: "sku",
+        sku_id: null,
+        sku_type: null,
+        sku_product_line: null,
+        application_id: null,
+      };
       enabled[1] = analyticsLocations2;
       enabled[3] = skuId;
       ({ type: obj3[4], productLine } = applicationId);
@@ -71,7 +98,16 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
       enabled[6] = applicationId;
       obj[6] = enabled;
       tmp2 = tmp2(tmp[17]);
-      obj1 = { skuId: null, analyticsLocations: null, lockedRecipientUser: null, onGiftModalDismiss: null, giftingOrigin: null, validateRecipient: null, renderProductDetails: null, renderPurchaseSection: null };
+      obj1 = {
+        skuId: null,
+        analyticsLocations: null,
+        lockedRecipientUser: null,
+        onGiftModalDismiss: null,
+        giftingOrigin: null,
+        validateRecipient: null,
+        renderProductDetails: null,
+        renderPurchaseSection: null,
+      };
       obj1[0] = skuId;
       obj1[1] = analyticsLocations2;
       obj1[2] = skuId.lockedRecipientUser;
@@ -86,7 +122,14 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
       obj1[6] = giftingOrigin;
       obj1[7] = function renderPurchaseSection(arg0) {
         ({ isPurchaseDisabled, giftOptions } = arg0);
-        return closure_1_6(giftingOrigin(applicationId[19]), { skuId, sku: applicationId, isPurchaseDisabled, giftOptions, giftingOrigin, analyticsLocations: analyticsLocations2 });
+        return closure_1_6(giftingOrigin(applicationId[19]), {
+          skuId,
+          sku: applicationId,
+          isPurchaseDisabled,
+          giftOptions,
+          giftingOrigin,
+          analyticsLocations: analyticsLocations2,
+        });
       };
       tmp = tmp7(tmp2, obj1);
       obj[8] = tmp;
@@ -102,4 +145,4 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
     }
     productLineResult = productLine(tmp[12]);
   }
-};
+}

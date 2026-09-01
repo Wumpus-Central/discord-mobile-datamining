@@ -45,166 +45,182 @@ export const useHandleUseNow = function useHandleUseNow(product) {
     stringResult = intl.string(tmp2(tmp3[5]).t.tf1ZZ4);
   }
   let items = [product];
-  memo = obj.useMemo(() => (function computeCanUseNow(closure_0) {
-    if (callback2(closure_0.skuId)) {
-      return false;
-    } else if (closure_0.type !== callback(table[4]).CollectiblesItemType.BUNDLE) {
-      return true;
-    } else {
-      const _Set = Set;
-      const set = new Set();
-      const items = closure_0.items;
-      for (const item10023 of items) {
-        let tmp9 = item10023;
-        if (set.has(item10023.type)) {
-          let tmp12 = obj2;
-          obj2.return();
-          let flag = false;
+  memo = obj.useMemo(
+    () =>
+      (function computeCanUseNow(closure_0) {
+        if (callback2(closure_0.skuId)) {
           return false;
+        } else if (closure_0.type !== callback(table[4]).CollectiblesItemType.BUNDLE) {
+          return true;
         } else {
-          let tmp10 = item10023;
-          let addResult = set.add(tmp9.type);
-          continue;
-        }
-      }
-      return true;
-    }
-  })(closure_0), items);
-  obj = {
-    handleUseNow: obj.useCallback(onError(function*() {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+          const _Set = Set;
+          const set = new Set();
+          const items = closure_0.items;
+          for (const item10023 of items) {
+            let tmp9 = item10023;
+            if (set.has(item10023.type)) {
+              let tmp12 = obj2;
+              obj2.return();
+              let flag = false;
+              return false;
             } else {
-              const callback2 = tmp4;
-              closure_2 = tmp8;
-              c0 = undefined;
-              if (!closure_1_8) {
+              let tmp10 = item10023;
+              let addResult = set.add(tmp9.type);
+              continue;
+            }
+          }
+          return true;
+        }
+      })(closure_0),
+    items,
+  );
+  obj = {
+    handleUseNow: obj.useCallback(
+      onError(function* () {
+        if (c7 === 2) {
+          c7 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp7 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c7 = 2;
+            if (0 === c6) {
+              if (arg0 === 1) {
                 c7 = 3;
-                return { value: "HermesInternal", done: null };
+                throw arg1;
+              } else if (arg0 === 2) {
+                c7 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
               } else {
-                closure_1_3(true);
-                obj1 = {};
-                c0 = obj1;
-                c5 = 2;
-                if (null != closure_1_4) {
-                  obj1.avatarDecoration = closure_1_4;
-                }
-                if (null == c5) {
-                  if (null == c7) {
-                    if (null != c6) {
-                      c0.nameplate = c6;
-                    }
-                    const _Object = Object;
-                    if (Object.keys(c0).length > 0) {
-                      let obj3 = closure_1_0(closure_1_1[9]);
-                      c6 = 4;
-                      c7 = 1;
-                      const obj2 = { value: null, done: false };
-                      obj2[0] = obj3.saveProfileAndAccountChanges(c0);
-                      return obj2;
-                    } else {
-                      if (callback != null) {
-                        callback();
+                const callback2 = tmp4;
+                closure_2 = tmp8;
+                c0 = undefined;
+                if (!closure_1_8) {
+                  c7 = 3;
+                  return { value: "HermesInternal", done: null };
+                } else {
+                  closure_1_3(true);
+                  obj1 = {};
+                  c0 = obj1;
+                  c5 = 2;
+                  if (null != closure_1_4) {
+                    obj1.avatarDecoration = closure_1_4;
+                  }
+                  if (null == c5) {
+                    if (null == c7) {
+                      if (null != c6) {
+                        c0.nameplate = c6;
                       }
-                      c5 = 1;
-                      c5 = 0;
-                      callback2(false);
+                      const _Object = Object;
+                      if (Object.keys(c0).length > 0) {
+                        let obj3 = closure_1_0(closure_1_1[9]);
+                        c6 = 4;
+                        c7 = 1;
+                        const obj2 = { value: null, done: false };
+                        obj2[0] = obj3.saveProfileAndAccountChanges(c0);
+                        return obj2;
+                      } else {
+                        if (callback != null) {
+                          callback();
+                        }
+                        c5 = 1;
+                        c5 = 0;
+                        callback2(false);
+                      }
                     }
                   }
+                  let obj5 = closure_1_0(closure_1_1[7]);
+                  c0 = tmp21;
+                  if (c5 == null) {
+                    c0 = undefined;
+                  }
+                  obj3 = { pendingProfileEffect: null, pendingProfileFrame: null };
+                  obj3[0] = c0;
+                  callback = c7;
+                  if (c7 == null) {
+                    callback = undefined;
+                  }
+                  obj3[1] = callback;
+                  const profileChangesForUpdateRequest = obj5.getProfileChangesForUpdateRequest(obj3);
+                  c6 = 3;
+                  c7 = 1;
+                  const obj4 = { value: null, done: false };
+                  obj4[0] = closure_1_0(closure_1_1[8]).saveProfileChanges(profileChangesForUpdateRequest);
+                  return obj4;
                 }
-                let obj5 = closure_1_0(closure_1_1[7]);
-                c0 = tmp21;
-                if (c5 == null) {
-                  c0 = undefined;
-                }
-                obj3 = { pendingProfileEffect: null, pendingProfileFrame: null };
-                obj3[0] = c0;
-                callback = c7;
-                if (c7 == null) {
-                  callback = undefined;
-                }
-                obj3[1] = callback;
-                const profileChangesForUpdateRequest = obj5.getProfileChangesForUpdateRequest(obj3);
-                c6 = 3;
-                c7 = 1;
-                const obj4 = { value: null, done: false };
-                obj4[0] = closure_1_0(closure_1_1[8]).saveProfileChanges(profileChangesForUpdateRequest);
-                return obj4;
               }
-            }
-          } else if (1 !== tmp8) {
-            if (2 === tmp8) {
-              c5 = 1;
-              callback = closure_4;
-              if (closure_2 != null) {
-                tmp13(callback);
-              }
-            } else if (3 === tmp8) {
-              if (arg0 === 1) {
+            } else if (1 !== tmp8) {
+              if (2 === tmp8) {
+                c5 = 1;
+                callback = closure_4;
+                if (closure_2 != null) {
+                  tmp13(callback);
+                }
+              } else if (3 === tmp8) {
+                if (arg0 === 1) {
+                  c7 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c5 = 0;
+                  callback2(false);
+                  c7 = 3;
+                  obj5 = { value: null, done: true };
+                  obj5[0] = arg1;
+                  return obj5;
+                }
+              } else if (arg0 === 1) {
                 c7 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
                 c5 = 0;
                 callback2(false);
                 c7 = 3;
-                obj5 = { value: null, done: true };
-                obj5[0] = arg1;
-                return obj5;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
               }
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 0;
-              callback2(false);
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+            }
+            c5 = 0;
+            callback2(false);
+            throw closure_4;
+          } catch (tmp48) {
+            closure_4 = tmp48;
+            if (tmp5 === c5) {
+              c7 = tmp3;
+              throw tmp48;
+            } else if (tmp2 === tmp50) {
+              c6 = tmp2;
+            } else {
+              c6 = tmp;
             }
           }
-          c5 = 0;
-          callback2(false);
-          throw closure_4;
-        } catch (tmp48) {
-          closure_4 = tmp48;
-          if (tmp5 === c5) {
-            c7 = tmp3;
-            throw tmp48;
-          } else if (tmp2 === tmp50) {
-            c6 = tmp2;
-          } else {
-            c6 = tmp;
-          }
         }
-      }
-    }), items1),
+      }),
+      items1,
+    ),
     isApplying: tmp[0],
-    canUseNow: memo
+    canUseNow: memo,
   };
-  items1 = [memo, firstAvatarDecoration, firstProfileEffect, firstNameplate, firstProfileFrame, onSuccess, stringResult, onError];
+  items1 = [
+    memo,
+    firstAvatarDecoration,
+    firstProfileEffect,
+    firstNameplate,
+    firstProfileFrame,
+    onSuccess,
+    stringResult,
+    onError,
+  ];
   return obj;
 };

@@ -7,7 +7,7 @@ function hslToRgb(alpha) {
   const result = alpha.lightness / 255;
   const result1 = alpha.saturation / 255;
   const result2 = (1 - Math.abs(2 * result - 1)) * result1;
-  const result3 = result2 * (1 - Math.abs(hue / 60 % 2 - 1));
+  const result3 = result2 * (1 - Math.abs(((hue / 60) % 2) - 1));
   closure_0 = result - result2 / 2;
   if (hue < 60) {
     const items = [result2, result3, 0];
@@ -154,7 +154,7 @@ Color["parseColorFnString"] = function parseColorFnString(str) {
             let result = parseFloat(arg0) / 100;
           } else {
             const _parseFloat4 = parseFloat;
-            result = 255 * parseFloat(arg0) / 100;
+            result = (255 * parseFloat(arg0)) / 100;
           }
         } else {
           if ("h" !== str[arg1]) {
@@ -229,7 +229,7 @@ prototype["toHSL"] = function toHSL() {
     obj[3] = alpha;
   } else {
     if (result === bound) {
-      let num3 = (result1 - result2) / diff % 6;
+      let num3 = ((result1 - result2) / diff) % 6;
     } else if (result1 === bound) {
       num3 = (result2 - result) / diff + 2;
     } else {

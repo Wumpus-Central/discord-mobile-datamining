@@ -15,7 +15,13 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-let obj = { guildIcon: { flexShrink: 0, flexGrow: 0 }, subLabel: { display: "flex", flexDirection: "row", alignItems: "center" }, subLabelIcon: { width: 12, height: 12, marginRight: 2 }, subLabelSeparator: null, threadName: null };
+let obj = {
+  guildIcon: { flexShrink: 0, flexGrow: 0 },
+  subLabel: { display: "flex", flexDirection: "row", alignItems: "center" },
+  subLabelIcon: { width: 12, height: 12, marginRight: 2 },
+  subLabelSeparator: null,
+  threadName: null,
+};
 obj = { marginHorizontal: ThemesDefault.space.PX_4 };
 obj[3] = obj;
 obj[4] = { flexShrink: 1 };
@@ -64,7 +70,9 @@ const memoResult = importAllResult.memo(function ChannelRow(channel) {
     return channelName;
   });
   const items2 = [closure_7];
-  stateFromStores2 = channel(onPress[12]).useStateFromStores(items2, () => closure_7.lastMessageTimestamp(channel.id, stateFromStores2.CHANNEL));
+  stateFromStores2 = channel(onPress[12]).useStateFromStores(items2, () =>
+    closure_7.lastMessageTimestamp(channel.id, stateFromStores2.CHANNEL),
+  );
   const items3 = [channel, onPress];
   const items4 = [channel, onLongPress];
   const callback = onLongPress.useCallback(() => {
@@ -94,7 +102,7 @@ const memoResult = importAllResult.memo(function ChannelRow(channel) {
     }
     return tmp2;
   }, items5);
-  const items7 = [channel, , , , , , , , ];
+  const items7 = [channel, , , , , , , ,];
   let name;
   const memo1 = onLongPress.useMemo(() => {
     let tmp = label;
@@ -135,8 +143,15 @@ const memoResult = importAllResult.memo(function ChannelRow(channel) {
       obj = { color: null, style: null };
       obj[0] = flag2(onPress[11]).colors.TEXT_SUBTLE;
       obj[1] = closure_7.subLabelIcon;
-      const items = [closure_1_12(TextIcon, obj), , ];
-      obj = { style: null, variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, ellipsizeMode: "tail", children: null };
+      const items = [closure_1_12(TextIcon, obj), ,];
+      obj = {
+        style: null,
+        variant: "text-xs/medium",
+        color: "text-subtle",
+        lineClamp: 1,
+        ellipsizeMode: "tail",
+        children: null,
+      };
       obj[0] = closure_7.threadName;
       obj[5] = stateFromStores1;
       items[1] = closure_1_12(channel(onPress[18]).Text, obj);
@@ -145,7 +160,7 @@ const memoResult = importAllResult.memo(function ChannelRow(channel) {
         obj1 = { children: null };
         const obj2 = { style: null, variant: "text-xs/medium", color: "text-subtle", children: "\u2022" };
         obj2[0] = closure_7.subLabelSeparator;
-        const items1 = [tmp8(channel(onPress[18]).Text, obj2), ];
+        const items1 = [tmp8(channel(onPress[18]).Text, obj2)];
         const obj3 = { variant: "text-xs/medium", color: "text-subtle", children: null };
         obj3[2] = channel(onPress[19]).calendarFormatCompact(flag2(onPress[20])(tmp14));
         items1[1] = tmp8(channel(onPress[18]).Text, obj3);
@@ -177,7 +192,12 @@ const memoResult = importAllResult.memo(function ChannelRow(channel) {
   obj.icon = memo;
   obj.onPress = callback;
   obj.onLongPress = callback1;
-  obj.label = callback(channel(onPress[18]).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: memo1 });
+  obj.label = callback(channel(onPress[18]).Text, {
+    lineClamp: 1,
+    variant: "text-md/semibold",
+    color: "mobile-text-heading-primary",
+    children: memo1,
+  });
   obj.subLabel = memo2;
   if (NONE === stateFromStores1.TOGGLE) {
     obj = {};
@@ -194,6 +214,8 @@ const memoResult = importAllResult.memo(function ChannelRow(channel) {
   }
   return tmp17Result;
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/ChannelRow.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/ChannelRow.tsx",
+);
 
 export default memoResult;

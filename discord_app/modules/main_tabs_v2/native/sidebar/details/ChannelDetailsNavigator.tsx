@@ -71,7 +71,10 @@ const memoResult = importAllResult.memo((navigation) => {
     }
   }, items);
   const items1 = [navigation];
-  const effect1 = DETAILS.useEffect(() => navigation.addListener("beforeRemove", () => callback(table[15]).close()), items1);
+  const effect1 = DETAILS.useEffect(
+    () => navigation.addListener("beforeRemove", () => callback(table[15]).close()),
+    items1,
+  );
   obj1 = navigation(source[16]);
   channelSettingsScreensStyles = obj1.useChannelSettingsScreensStyles();
   const items2 = [channelId];
@@ -89,7 +92,11 @@ const memoResult = importAllResult.memo((navigation) => {
   const items3 = [channelId, guildId, channelSettingsScreensStyles];
   const memo1 = obj.useMemo(() => {
     if (null != guildId) {
-      let channelSettingsScreens = navigation(source[16]).getChannelSettingsScreens(channelId, tmp, channelSettingsScreensStyles);
+      let channelSettingsScreens = navigation(source[16]).getChannelSettingsScreens(
+        channelId,
+        tmp,
+        channelSettingsScreensStyles,
+      );
       const obj2 = navigation(source[16]);
     } else {
       channelSettingsScreens = {};
@@ -124,7 +131,7 @@ const memoResult = importAllResult.memo((navigation) => {
     options: { headerShown: false },
     getComponent() {
       return navigation(source[21]).default;
-    }
+    },
   };
   const items5 = [
     callback(closure_12.Screen, obj2),
@@ -143,13 +150,13 @@ const memoResult = importAllResult.memo((navigation) => {
           headerTitle() {
             return closure_1_9(closure_1_1(closure_1_2[23]), { channelId: route.params.channelId });
           },
-          headerLeft: route(source[11]).getRenderBackImage(route.navigation)
+          headerLeft: route(source[11]).getRenderBackImage(route.navigation),
         };
         return obj;
       },
       getComponent() {
         return navigation(source[24]).default;
-      }
+      },
     }),
     callback(closure_12.Screen, {
       name: constants.PINNED_MESSAGES,
@@ -171,7 +178,7 @@ const memoResult = importAllResult.memo((navigation) => {
       },
       getComponent() {
         return navigation(source[25]).default;
-      }
+      },
     }),
     callback(closure_12.Screen, {
       initialParams: { channelId, applicationId },
@@ -193,10 +200,9 @@ const memoResult = importAllResult.memo((navigation) => {
       },
       getComponent() {
         return navigation(source[26]).default;
-      }
+      },
     }),
-  ,
-
+    ,
   ];
   const obj6 = {};
   const merged1 = Object.assign(memo);
@@ -225,35 +231,41 @@ const memoResult = importAllResult.memo((navigation) => {
   items5[4] = callback(closure_12.Screen, obj6);
   const entries = Object.entries(memo1);
   items5[5] = entries.map((arg0) => {
-    [tmp, ] = arg0;
-    return closure_1_9(closure_1_12.Screen, {
-      name: tmp,
-      options(navigation) {
-        navigation = navigation.navigation;
-        const obj = { title: closure_1.title, headerLeft: null };
-        if (closure_1_3 === closure_0) {
-          let renderModalCloseImage = navigation(source[11]).getRenderModalCloseImage(navigation);
-          const obj3 = navigation(source[11]);
-        } else {
-          renderModalCloseImage = navigation(source[11]).getRenderModalBackImage(navigation);
-          const obj2 = navigation(source[11]);
-        }
-        obj[1] = renderModalCloseImage;
-        return obj;
+    [tmp] = arg0;
+    return closure_1_9(
+      closure_1_12.Screen,
+      {
+        name: tmp,
+        options(navigation) {
+          navigation = navigation.navigation;
+          const obj = { title: closure_1.title, headerLeft: null };
+          if (closure_1_3 === closure_0) {
+            let renderModalCloseImage = navigation(source[11]).getRenderModalCloseImage(navigation);
+            const obj3 = navigation(source[11]);
+          } else {
+            renderModalCloseImage = navigation(source[11]).getRenderModalBackImage(navigation);
+            const obj2 = navigation(source[11]);
+          }
+          obj[1] = renderModalCloseImage;
+          return obj;
+        },
+        children(route) {
+          let params = route.route.params;
+          if (params == null) {
+            params = closure_2_11;
+          }
+          return closure_1.render(params, route.navigation);
+        },
       },
-      children(route) {
-        let params = route.route.params;
-        if (params == null) {
-          params = closure_2_11;
-        }
-        return closure_1.render(params, route.navigation);
-      }
-    }, tmp);
+      tmp,
+    );
   });
   obj[3] = items5;
   obj[1] = callback2(closure_12.Navigator, obj);
   return callback(channelSettingsScreensStyles, obj);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx",
+);
 
 export default memoResult;

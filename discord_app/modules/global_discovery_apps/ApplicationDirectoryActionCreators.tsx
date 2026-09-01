@@ -24,7 +24,7 @@ function _getEmbedApplication() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -89,7 +89,13 @@ function _getEmbedApplication() {
                     };
                     c5 = 1;
                     const HTTP = callback(closure_1_2[13]).HTTP;
-                    const obj2 = { url: null, backoff: null, retries: 10, interceptResponse: null, rejectWithError: null };
+                    const obj2 = {
+                      url: null,
+                      backoff: null,
+                      retries: 10,
+                      interceptResponse: null,
+                      rejectWithError: null,
+                    };
                     obj2[0] = closure_1_17.APPLICATION_DIRECTORY_EMBED_APPLICATION(tmp34);
                     obj2[1] = tmp45;
                     obj2[3] = interceptResponse;
@@ -110,7 +116,11 @@ function _getEmbedApplication() {
             if (1 === tmp7) {
               c5 = 0;
               obj3 = callback2(interceptResponse[11]);
-              const obj4 = { type: "APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE", applicationId: null, isInvalidApplication: true };
+              const obj4 = {
+                type: "APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE",
+                applicationId: null,
+                isInvalidApplication: true,
+              };
               obj4[1] = callback;
               obj3.dispatch(obj4);
             } else if (arg0 === 1) {
@@ -160,7 +170,7 @@ function _getApplication() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -251,7 +261,11 @@ function _getApplication() {
               if (2 === tmp7) {
                 store = 0;
                 obj3 = obj1(709);
-                const obj7 = { type: "APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE", applicationId: null, isInvalidApplication: true };
+                const obj7 = {
+                  type: "APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE",
+                  applicationId: null,
+                  isInvalidApplication: true,
+                };
                 obj7[1] = callback;
                 obj3.dispatch(obj7);
               } else if (arg0 === 1) {
@@ -298,7 +312,7 @@ function _getApplication() {
 }
 function _getCategories() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -386,7 +400,7 @@ function _getSimilarApplications() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -461,7 +475,12 @@ function _getSimilarApplications() {
                 lastFetchTimeMs2 = lastFetchTimeMs.lastFetchTimeMs;
                 if (locale !== constants.FETCHING) {
                   let obj5 = lib(lastFetchTimeMs[11]);
-                  const obj4 = { type: "APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS", applicationId: null, guildId: null, page: null };
+                  const obj4 = {
+                    type: "APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS",
+                    applicationId: null,
+                    guildId: null,
+                    page: null,
+                  };
                   obj4[1] = callback;
                   obj4[2] = lib;
                   obj4[3] = page;
@@ -486,7 +505,12 @@ function _getSimilarApplications() {
               if (2 === tmp7) {
                 lastFetchTimeMs2 = 0;
                 obj1 = lib(lastFetchTimeMs[11]);
-                const obj8 = { type: "APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE", applicationId: null, guildId: null, page: null };
+                const obj8 = {
+                  type: "APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE",
+                  applicationId: null,
+                  guildId: null,
+                  page: null,
+                };
                 obj8[1] = callback;
                 obj8[2] = lib;
                 obj8[3] = page;
@@ -496,7 +520,15 @@ function _getSimilarApplications() {
                 throw arg1;
               } else if (arg0 !== 2) {
                 closure_7 = arg1;
-                const obj9 = { type: "APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS", applicationId: null, guildId: null, similarApplications: null, loadId: null, page: null, totalPages: null };
+                const obj9 = {
+                  type: "APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS",
+                  applicationId: null,
+                  guildId: null,
+                  similarApplications: null,
+                  loadId: null,
+                  page: null,
+                  totalPages: null,
+                };
                 obj9[1] = callback;
                 obj9[2] = lib;
                 obj9[3] = closure_7.body.applications;
@@ -545,7 +577,7 @@ function _search() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (integrationType === 2) {
         integrationType = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -639,7 +671,14 @@ function _search() {
                   }
                   const _Date = Date;
                   closure_15 = Date.now();
-                  const obj2 = { query: null, guildId: null, page: null, pageSize: null, categoryId: null, integrationType: null };
+                  const obj2 = {
+                    query: null,
+                    guildId: null,
+                    page: null,
+                    pageSize: null,
+                    categoryId: null,
+                    integrationType: null,
+                  };
                   obj2[0] = callback;
                   obj2[1] = callback2;
                   obj2[2] = page;
@@ -647,7 +686,14 @@ function _search() {
                   obj2[4] = categoryId;
                   obj2[5] = integrationType;
                   fetchState = excludeNonEmbeddedApps.getFetchState(obj2);
-                  const obj3 = { query: null, guildId: null, page: null, pageSize: null, categoryId: null, integrationType: null };
+                  const obj3 = {
+                    query: null,
+                    guildId: null,
+                    page: null,
+                    pageSize: null,
+                    categoryId: null,
+                    integrationType: null,
+                  };
                   obj3[0] = callback;
                   obj3[1] = callback2;
                   obj3[2] = page;
@@ -664,7 +710,20 @@ function _search() {
                     throwTypeErrorResult = c3;
                     throwTypeErrorResult = lastFetchTimeMs;
                     let obj5 = callback2(lastFetchTimeMs[11]);
-                    const obj4 = { type: "APPLICATION_DIRECTORY_FETCH_SEARCH", query: null, guildId: null, page: null, pageSize: null, categoryId: null, integrationType: null, minUserInstallCommandCount: null, excludeAppsWithCustomInstallUrl: null, excludeNonEmbeddedApps: null, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: null, source: null };
+                    const obj4 = {
+                      type: "APPLICATION_DIRECTORY_FETCH_SEARCH",
+                      query: null,
+                      guildId: null,
+                      page: null,
+                      pageSize: null,
+                      categoryId: null,
+                      integrationType: null,
+                      minUserInstallCommandCount: null,
+                      excludeAppsWithCustomInstallUrl: null,
+                      excludeNonEmbeddedApps: null,
+                      excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: null,
+                      source: null,
+                    };
                     obj4[1] = callback;
                     obj4[2] = callback2;
                     obj4[3] = page;
@@ -681,7 +740,20 @@ function _search() {
                     const HTTP = callback(lastFetchTimeMs[13]).HTTP;
                     obj5 = { url: null, query: null, rejectWithError: true };
                     obj5[0] = lastFetchTimeMs.APPLICATION_DIRECTORY_SEARCH;
-                    const obj6 = { query: null, guild_id: null, page: null, page_size: null, category_id: null, locale: null, integration_type: null, min_user_install_command_count: null, exclude_apps_with_custom_install_url: null, exclude_non_embedded_apps: null, exclude_embedded_apps_without_primary_entry_point_app_command: null, source: null };
+                    const obj6 = {
+                      query: null,
+                      guild_id: null,
+                      page: null,
+                      page_size: null,
+                      category_id: null,
+                      locale: null,
+                      integration_type: null,
+                      min_user_install_command_count: null,
+                      exclude_apps_with_custom_install_url: null,
+                      exclude_non_embedded_apps: null,
+                      exclude_embedded_apps_without_primary_entry_point_app_command: null,
+                      source: null,
+                    };
                     obj6[0] = callback;
                     obj6[1] = callback2;
                     obj6[2] = page;
@@ -709,7 +781,20 @@ function _search() {
                 if (2 === tmp7) {
                   pageSize = 0;
                   obj1 = callback2(lastFetchTimeMs[11]);
-                  const obj8 = { type: "APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE", query: null, guildId: null, page: null, pageSize: null, categoryId: null, integrationType: null, minUserInstallCommandCount: null, excludeAppsWithCustomInstallUrl: null, excludeNonEmbeddedApps: null, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: null, source: null };
+                  const obj8 = {
+                    type: "APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE",
+                    query: null,
+                    guildId: null,
+                    page: null,
+                    pageSize: null,
+                    categoryId: null,
+                    integrationType: null,
+                    minUserInstallCommandCount: null,
+                    excludeAppsWithCustomInstallUrl: null,
+                    excludeNonEmbeddedApps: null,
+                    excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: null,
+                    source: null,
+                  };
                   obj8[1] = callback;
                   obj8[2] = callback2;
                   obj8[3] = page;
@@ -731,7 +816,21 @@ function _search() {
                   closure_18 = arg1;
                   throwTypeErrorResult = callback2;
                   throwTypeErrorResult = lastFetchTimeMs;
-                  const obj9 = { type: "APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS", query: null, guildId: null, page: null, pageSize: null, categoryId: null, integrationType: null, result: null, minUserInstallCommandCount: null, excludeAppsWithCustomInstallUrl: null, excludeNonEmbeddedApps: null, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: null, source: null };
+                  const obj9 = {
+                    type: "APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS",
+                    query: null,
+                    guildId: null,
+                    page: null,
+                    pageSize: null,
+                    categoryId: null,
+                    integrationType: null,
+                    result: null,
+                    minUserInstallCommandCount: null,
+                    excludeAppsWithCustomInstallUrl: null,
+                    excludeNonEmbeddedApps: null,
+                    excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: null,
+                    source: null,
+                  };
                   throwTypeErrorResult = callback;
                   obj9[1] = callback;
                   throwTypeErrorResult = callback2;
@@ -744,7 +843,14 @@ function _search() {
                   obj9[5] = categoryId;
                   throwTypeErrorResult = integrationType;
                   obj9[6] = integrationType;
-                  const obj10 = { results: null, countsByCategory: null, totalCount: null, totalPages: null, type: null, loadId: null };
+                  const obj10 = {
+                    results: null,
+                    countsByCategory: null,
+                    totalCount: null,
+                    totalPages: null,
+                    type: null,
+                    loadId: null,
+                  };
                   throwTypeErrorResult = closure_18;
                   obj10[0] = closure_18.body.results;
                   throwTypeErrorResult = closure_18;
@@ -816,7 +922,7 @@ function _fetchCollections() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*() {
+    const iter = (function* () {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -938,7 +1044,11 @@ function _fetchCollections() {
               if (2 === tmp7) {
                 fetchState = 0;
                 obj3 = ACTIVE(709);
-                const obj8 = { type: "APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE", surface: null, activeState: null };
+                const obj8 = {
+                  type: "APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE",
+                  surface: null,
+                  activeState: null,
+                };
                 obj8[1] = APPLICATION_DIRECTORY;
                 obj8[2] = ACTIVE;
                 obj3.dispatch(obj8);
@@ -948,7 +1058,12 @@ function _fetchCollections() {
               } else if (arg0 !== 2) {
                 body = arg1;
                 obj = ACTIVE(709);
-                obj9 = { type: "APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS", collections: null, surface: null, activeState: null };
+                obj9 = {
+                  type: "APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS",
+                  collections: null,
+                  surface: null,
+                  activeState: null,
+                };
                 obj9[1] = body.body;
                 obj9[2] = APPLICATION_DIRECTORY;
                 obj9[3] = ACTIVE;
@@ -988,7 +1103,7 @@ function _fetchCollections() {
 }
 function _fetchIntegrationApplicationIdsForMyGuilds() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -1070,7 +1185,10 @@ function _fetchIntegrationApplicationIdsForMyGuilds() {
         } else if (arg0 !== 2) {
           body = arg1;
           obj = callback(closure_2[11]);
-          const obj4 = { type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS", guildIdToApplicationIds: null };
+          const obj4 = {
+            type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS",
+            guildIdToApplicationIds: null,
+          };
           obj4[1] = body.body;
           obj.dispatch(obj4);
           c3 = 0;
@@ -1103,7 +1221,9 @@ function _fetchIntegrationApplicationIdsForMyGuilds() {
 refreshSourceMapCookieDefault;
 let c18 = 600000;
 const map = new Map();
-let result = require("set").fileFinishedImporting("modules/global_discovery_apps/ApplicationDirectoryActionCreators.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/global_discovery_apps/ApplicationDirectoryActionCreators.tsx",
+);
 
 export const getEmbedApplication = function getEmbedApplication(code) {
   const self = this;

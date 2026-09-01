@@ -16,8 +16,29 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: { flexDirection: "column", gap: 16, width: "100%" }, header: { flexDirection: "column", alignItems: "center", gap: 8, marginBottom: 8 }, headerIcons: { flexDirection: "row", alignItems: "center", gap: 16, marginBottom: 8 }, card: null, cardName: null, cardInfo: null, platformIcon: null, platformIconSmall: null, infoNotice: null, infoText: null, divider: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: 12, padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  container: { flexDirection: "column", gap: 16, width: "100%" },
+  header: { flexDirection: "column", alignItems: "center", gap: 8, marginBottom: 8 },
+  headerIcons: { flexDirection: "row", alignItems: "center", gap: 16, marginBottom: 8 },
+  card: null,
+  cardName: null,
+  cardInfo: null,
+  platformIcon: null,
+  platformIconSmall: null,
+  infoNotice: null,
+  infoText: null,
+  divider: null,
+};
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: 12,
+  padding: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { flex: 1, minWidth: 0 };
 createCacheKey[5] = { flex: 1, minWidth: 0, flexDirection: "column", gap: 2 };
@@ -25,9 +46,27 @@ createCacheKey[6] = { width: 40, height: 40, borderRadius: ThemesDefault.radii.s
 let obj1 = { width: 40, height: 40, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[7] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
 let obj2 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[8] = { flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO, borderWidth: 1, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[8] = {
+  flexDirection: "row",
+  alignItems: "flex-start",
+  gap: 8,
+  padding: 12,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO,
+  borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[9] = { flex: 1 };
-let obj3 = { flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO, borderWidth: 1, borderRadius: ThemesDefault.radii.sm };
+let obj3 = {
+  flexDirection: "row",
+  alignItems: "flex-start",
+  gap: 8,
+  padding: 12,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO,
+  borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[10] = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 8 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 8 };
@@ -86,7 +125,7 @@ export default function ConnectAccountStep(clientId) {
     const obj3 = { source: null, size: null };
     obj3[0] = applicationIconSource;
     obj3[1] = tmp5(1297).AvatarSizes.XLARGE;
-    const items4 = [callback(tmp5(1297).Avatar, obj3), , ];
+    const items4 = [callback(tmp5(1297).Avatar, obj3), ,];
     const obj4 = { color: null, size: "md" };
     obj4[0] = tmp2(712).colors.INTERACTIVE_TEXT_DEFAULT;
     items4[1] = callback(tmp5(8798).MoreHorizontalIcon, obj4);
@@ -95,7 +134,7 @@ export default function ConnectAccountStep(clientId) {
     obj5[1] = tmp5(1297).AvatarSizes.XLARGE;
     items4[2] = callback(tmp5(1297).Avatar, obj5);
     obj2[1] = items4;
-    const items5 = [callback2(View, obj2), , ];
+    const items5 = [callback2(View, obj2), ,];
     const obj6 = { variant: "text-lg/normal", color: "text-default", children: null };
     const intl = tmp5(1236).intl;
     obj6[2] = intl.string(tmp5(1236).t.uT1CPa);
@@ -104,7 +143,7 @@ export default function ConnectAccountStep(clientId) {
     obj7[2] = str;
     items5[2] = callback(tmp5(4474).Text, obj7);
     obj1[1] = items5;
-    const items6 = [callback2(View, obj1), , , ];
+    const items6 = [callback2(View, obj1), , ,];
     const obj8 = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl2 = tmp5(1236).intl;
     const obj9 = { applicationName: null, platformName: null };
@@ -121,7 +160,7 @@ export default function ConnectAccountStep(clientId) {
       obj11[1] = tmp.platformIcon;
       tmp16Result = tmp16(tmp5(1297).Icon, obj11);
     }
-    const items7 = [tmp16Result, , ];
+    const items7 = [tmp16Result, ,];
     const obj12 = { variant: "text-md/medium", style: null, color: "text-default", children: null };
     obj12[1] = tmp.cardName;
     obj12[3] = platformName;
@@ -139,7 +178,7 @@ export default function ConnectAccountStep(clientId) {
     obj14[0] = tmp.infoNotice;
     const obj15 = { color: null, size: "sm" };
     obj15[0] = tmp2(712).colors.ICON_FEEDBACK_INFO;
-    const items8 = [callback(tmp5(4433).CircleInformationIcon, obj15), ];
+    const items8 = [callback(tmp5(4433).CircleInformationIcon, obj15)];
     const obj16 = { variant: "text-sm/normal", color: "text-default", style: null, children: null };
     obj16[2] = tmp.infoText;
     const intl4 = tmp5(1236).intl;
@@ -158,7 +197,7 @@ export default function ConnectAccountStep(clientId) {
     const icon = value.icon;
     const source = tmp5Result.makeSource(tmp5Result.isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
   }
-};
+}
 export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
   ({ platformName, connectedAccount } = arg0);
   ({ platformType, applicationName } = arg0);
@@ -173,7 +212,7 @@ export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
     obj1 = { platformName: null };
     obj1[0] = platformName;
     obj[2] = intl.format(getSystemLocale.t["+oaRw3"], obj1);
-    const items = [callback(Text.Text, obj), , , ];
+    const items = [callback(Text.Text, obj), , ,];
     let obj2 = { style: null, children: null };
     obj2[0] = tmp.card;
     let tmp10Result = null;
@@ -183,12 +222,12 @@ export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
       obj3[1] = tmp.platformIconSmall;
       tmp10Result = tmp10(tmp11(1297).Icon, obj3);
     }
-    const items1 = [tmp10Result, , ];
+    const items1 = [tmp10Result, ,];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.cardInfo;
     const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
     obj5[2] = connectedAccount.name;
-    const items2 = [callback(Text.Text, obj5), ];
+    const items2 = [callback(Text.Text, obj5)];
     const obj6 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl2 = tmp11(1236).intl;
     const obj7 = { platformName: null, connectedAccountId: null };

@@ -8,7 +8,11 @@ require = arg1;
 noopAll;
 ({ StyleSheet, View: obj1 } = get_ActivityIndicator);
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const styles = StyleSheet.create({ wrapper: { height: "100%", width: "100%" }, header: { zIndex: 1 }, androidHeader: { position: "absolute", top: 0, left: 0, right: 0 } });
+const styles = StyleSheet.create({
+  wrapper: { height: "100%", width: "100%" },
+  header: { zIndex: 1 },
+  androidHeader: { position: "absolute", top: 0, left: 0, right: 0 },
+});
 const result = require("set").fileFinishedImporting("design/components/Sticky/native/StickyWrapper.native.tsx");
 
 export const StickyWrapper = function StickyWrapper(header) {
@@ -17,7 +21,7 @@ export const StickyWrapper = function StickyWrapper(header) {
   items = [header.style, wrapper.wrapper];
   let tmp5Result = null;
   if (null != header) {
-    const items1 = [tmp3.header, ];
+    const items1 = [tmp3.header];
     let androidHeader;
     if (obj2.isAndroid()) {
       androidHeader = tmp3.androidHeader;

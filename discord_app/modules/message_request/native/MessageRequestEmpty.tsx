@@ -10,4 +10,4 @@ const result = require("set").fileFinishedImporting("modules/message_request/nat
 
 export default function MessageRequestEmpty(body) {
   return jsx(Button.EmptyState, { Illustration: getPendingSource.Pending, body: body.bodyText });
-};
+}

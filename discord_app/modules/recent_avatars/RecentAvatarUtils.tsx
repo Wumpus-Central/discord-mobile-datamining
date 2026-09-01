@@ -134,7 +134,13 @@ export const generateAvatarDescription = function generateAvatarDescription(maxS
     }
     obj = { name: null, dateTime: null };
     obj[0] = filename;
-    obj[1] = date.toLocaleString(tmp3(1236).intl.currentLocale, { year: "numeric", day: "numeric", month: "long", hour: "numeric", minute: "numeric" });
+    obj[1] = date.toLocaleString(tmp3(1236).intl.currentLocale, {
+      year: "numeric",
+      day: "numeric",
+      month: "long",
+      hour: "numeric",
+      minute: "numeric",
+    });
     return intl2.formatToPlainString(DYil93, obj);
   }
 };

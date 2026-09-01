@@ -16,8 +16,7 @@ function handleLoadFinished() {
 let closure_5 = 90 * setDefault.Millis.DAY;
 let closure_6 = { tab: null, localItemAcks: {}, hasNewMentions: false, isDataStale: false, isRefreshing: false };
 const PersistedStore = initializeDefault.PersistedStore;
-class NotificationCenterStore extends PersistedStore {
-}
+class NotificationCenterStore extends PersistedStore {}
 const prototype = NotificationCenterStore.prototype;
 prototype["initialize"] = function initialize(localItemAcks) {
   this.waitFor(closure_4);
@@ -118,7 +117,7 @@ const notificationCenterStore = new NotificationCenterStore(dispatcherDefault, {
     closure_6.isRefreshing = true;
   },
   LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: handleLoadFinished,
-  LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: handleLoadFinished
+  LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: handleLoadFinished,
 });
 const result = require("set").fileFinishedImporting("modules/notification_center/NotificationCenterStore.tsx");
 

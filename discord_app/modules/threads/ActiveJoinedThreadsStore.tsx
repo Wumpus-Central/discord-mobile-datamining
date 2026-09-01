@@ -132,15 +132,18 @@ function rebuildGuild_(guildId) {
               let tmp50 = dependencyMap;
               let _Date = Date;
               let tmp51 = getThreadAutoArchiveTimeOnceDefault(channel);
-              dependencyMap7[channel.id] = setTimeout(() => {
-                channel = closure_1_5.getChannel(channel.id);
-                if (null != channel) {
-                  obj = closure_1_1(closure_1_2[11]);
-                  obj = { type: "THREAD_UPDATE", channel: null };
-                  obj[1] = channel;
-                  obj.dispatch(obj);
-                }
-              }, tmp51 - Date.now() + 1);
+              dependencyMap7[channel.id] = setTimeout(
+                () => {
+                  channel = closure_1_5.getChannel(channel.id);
+                  if (null != channel) {
+                    obj = closure_1_1(closure_1_2[11]);
+                    obj = { type: "THREAD_UPDATE", channel: null };
+                    obj[1] = channel;
+                    obj.dispatch(obj);
+                  }
+                },
+                tmp51 - Date.now() + 1,
+              );
               continue;
             }
             continue;
@@ -297,15 +300,18 @@ function updateThread(guild_id, parent_id, id) {
             clearTimeoutResult = dependencyMap;
             clearTimeoutResult = getThreadAutoArchiveTimeOnceDefault(_Date);
             _Date = Date;
-            dependencyMap7[_Date.id] = setTimeout(() => {
-              channel = closure_1_5.getChannel(channel.id);
-              if (null != channel) {
-                obj = closure_1_1(closure_1_2[11]);
-                obj = { type: "THREAD_UPDATE", channel: null };
-                obj[1] = channel;
-                obj.dispatch(obj);
-              }
-            }, clearTimeoutResult - Date.now() + 1);
+            dependencyMap7[_Date.id] = setTimeout(
+              () => {
+                channel = closure_1_5.getChannel(channel.id);
+                if (null != channel) {
+                  obj = closure_1_1(closure_1_2[11]);
+                  obj = { type: "THREAD_UPDATE", channel: null };
+                  obj[1] = channel;
+                  obj.dispatch(obj);
+                }
+              },
+              clearTimeoutResult - Date.now() + 1,
+            );
           }
           const tmp80 = parseThreadState(_Date);
         } else {
@@ -529,15 +535,18 @@ function handleReadStateChannelAction(channelId) {
           if (tmp23.isTimedRelevant) {
             const _setTimeout = setTimeout;
             const _Date = Date;
-            dependencyMap7[channel.id] = setTimeout(() => {
-              channel = closure_1_5.getChannel(channel.id);
-              if (null != channel) {
-                obj = closure_1_1(closure_1_2[11]);
-                obj = { type: "THREAD_UPDATE", channel: null };
-                obj[1] = channel;
-                obj.dispatch(obj);
-              }
-            }, getThreadAutoArchiveTimeOnceDefault(channel) - Date.now() + 1);
+            dependencyMap7[channel.id] = setTimeout(
+              () => {
+                channel = closure_1_5.getChannel(channel.id);
+                if (null != channel) {
+                  obj = closure_1_1(closure_1_2[11]);
+                  obj = { type: "THREAD_UPDATE", channel: null };
+                  obj[1] = channel;
+                  obj.dispatch(obj);
+                }
+              },
+              getThreadAutoArchiveTimeOnceDefault(channel) - Date.now() + 1,
+            );
             const tmp33 = getThreadAutoArchiveTimeOnceDefault(channel);
           }
           ({ guild_id: guild_id2, parent_id: parent_id2 } = channel);
@@ -669,15 +678,18 @@ function rebuildReadStates() {
               let tmp21 = dependencyMap;
               let _Date = Date;
               let tmp22 = getThreadAutoArchiveTimeOnceDefault(channel);
-              dependencyMap7[channel.id] = setTimeout(() => {
-                channel = closure_1_5.getChannel(channel.id);
-                if (null != channel) {
-                  obj = closure_1_1(closure_1_2[11]);
-                  obj = { type: "THREAD_UPDATE", channel: null };
-                  obj[1] = channel;
-                  obj.dispatch(obj);
-                }
-              }, tmp22 - Date.now() + 1);
+              dependencyMap7[channel.id] = setTimeout(
+                () => {
+                  channel = closure_1_5.getChannel(channel.id);
+                  if (null != channel) {
+                    obj = closure_1_1(closure_1_2[11]);
+                    obj = { type: "THREAD_UPDATE", channel: null };
+                    obj[1] = channel;
+                    obj.dispatch(obj);
+                  }
+                },
+                tmp22 - Date.now() + 1,
+              );
               continue;
             }
             continue;
@@ -867,8 +879,7 @@ let closure_33 = {};
 let closure_34 = {};
 let closure_35 = {};
 const Store = initializeDefault.Store;
-class ActiveJoinedThreadsStore extends Store {
-}
+class ActiveJoinedThreadsStore extends Store {}
 const prototype = ActiveJoinedThreadsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_9, closure_5, closure_6, closure_10, closure_7, closure_8);
@@ -1231,7 +1242,7 @@ obj = {
     return tmp2;
   },
   TRY_ACK: rebuildReadStates,
-  BULK_ACK: rebuildReadStates
+  BULK_ACK: rebuildReadStates,
 };
 const activeJoinedThreadsStore = new ActiveJoinedThreadsStore(dispatcherDefault, obj);
 let result = set.fileFinishedImporting("modules/threads/ActiveJoinedThreadsStore.tsx");

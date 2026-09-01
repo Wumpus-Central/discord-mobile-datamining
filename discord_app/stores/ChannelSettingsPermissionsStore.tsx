@@ -102,8 +102,7 @@ let c18 = null;
 let c19 = null;
 let closure_20 = Storage.get(ADVANCED_MODE_ON_KEY) || false;
 const Store = initializeDefault.Store;
-class ChannelSettingsPermissionsStore extends Store {
-}
+class ChannelSettingsPermissionsStore extends Store {}
 const prototype = ChannelSettingsPermissionsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_6, closure_7);
@@ -125,55 +124,55 @@ Object.defineProperty(prototype, "editedPermissionIds", {
   get: function editedPermissionIds() {
     return Array.from(set);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "permissionOverwrites", {
   get: function permissionOverwrites() {
     return c14;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "selectedOverwriteId", {
   get: function selectedOverwriteId() {
     return c18;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "formState", {
   get: function formState() {
     return CLOSED;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isLockable", {
   get: function isLockable() {
     return closure_5;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "locked", {
   get: function locked() {
     return closure_4;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "channel", {
   get: function channel(channel, arg1) {
     return c16;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "category", {
   get: function category(arg0) {
     return c17;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "advancedMode", {
   get: function advancedMode() {
     return closure_20;
   },
-  set: undefined
+  set: undefined,
 });
 ChannelSettingsPermissionsStore.displayName = "ChannelSettingsPermissionsStore";
 const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(dispatcherDefault, {
@@ -265,7 +264,7 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(disp
     advancedMode = advancedMode.advancedMode;
     const Storage = Storage2.Storage;
     const result = Storage.set(ADVANCED_MODE_ON_KEY, advancedMode);
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/ChannelSettingsPermissionsStore.tsx");
 

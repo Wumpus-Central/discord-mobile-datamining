@@ -95,12 +95,28 @@ function canForwardMessage(state) {
   }
 }
 ({ GuildFeatures: closure_6, MessageFlags, MessageStates: error, MessageTypesSets: closure_8, Permissions: c9 } = ME);
-let closure_10 = MessageFlags.CROSSPOSTED | MessageFlags.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | MessageFlags.GUILD_FEED_HIDDEN | MessageFlags.HAS_SNAPSHOT | MessageFlags.HAS_THREAD | MessageFlags.IS_CROSSPOST | MessageFlags.IS_VOICE_MESSAGE | MessageFlags.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING | MessageFlags.SUPPRESS_EMBEDS | MessageFlags.SUPPRESS_NOTIFICATIONS | MessageFlags.URGENT | MessageFlags.IS_COMPONENTS_V2 | MessageFlags.IS_GUILD_OFFICIAL | MessageFlags.IS_SCHEDULED;
+let closure_10 =
+  MessageFlags.CROSSPOSTED |
+  MessageFlags.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD |
+  MessageFlags.GUILD_FEED_HIDDEN |
+  MessageFlags.HAS_SNAPSHOT |
+  MessageFlags.HAS_THREAD |
+  MessageFlags.IS_CROSSPOST |
+  MessageFlags.IS_VOICE_MESSAGE |
+  MessageFlags.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING |
+  MessageFlags.SUPPRESS_EMBEDS |
+  MessageFlags.SUPPRESS_NOTIFICATIONS |
+  MessageFlags.URGENT |
+  MessageFlags.IS_COMPONENTS_V2 |
+  MessageFlags.IS_GUILD_OFFICIAL |
+  MessageFlags.IS_SCHEDULED;
 const result = require("set").fileFinishedImporting("modules/forwarding/canForwardMessage.tsx");
 
 export { canForwardMessage };
 export const useCanForwardMessage = function useCanForwardMessage(message) {
   const _require = message;
   const items = [closure_5, closure_2, closure_3, closure_4];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_11(closure_0, closure_1_5, closure_1_2, closure_1_3, closure_1_4));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_11(closure_0, closure_1_5, closure_1_2, closure_1_3, closure_1_4),
+  );
 };

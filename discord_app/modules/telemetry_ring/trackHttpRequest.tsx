@@ -25,4 +25,4 @@ export default function trackHttpRequest(url) {
     expandEventPropertiesDefault.track(AnalyticEvents.HTTP_REQUEST, obj);
     const tmp3Result = expandEventPropertiesDefault;
   }
-};
+}

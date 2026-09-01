@@ -24,4 +24,4 @@ export default function isPlayingGameActivity(application_id) {
     tmp = tmp2;
   }
   return tmp;
-};
+}

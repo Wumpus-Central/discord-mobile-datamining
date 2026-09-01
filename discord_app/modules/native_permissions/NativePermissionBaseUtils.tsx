@@ -5,7 +5,11 @@ import NativePermissionStatus from "NativePermissionConstants.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
 const require = arg1;
-({ NativePermissionTypes: c5, NativePermissionStates: closure_6, NativePermissionStatus: error } = NativePermissionStatus);
+({
+  NativePermissionTypes: c5,
+  NativePermissionStates: closure_6,
+  NativePermissionStatus: error,
+} = NativePermissionStatus);
 let NativePermissionBaseUtils;
 class NativePermissionBaseUtils {
   constructor() {
@@ -24,7 +28,7 @@ prototype["requestAuthorization"] = function requestAuthorization(arg0, hasPermi
   return self(() => {
     let DENIED = 0;
     c3 = 0;
-    return (function*() {
+    return (function* () {
       c1 = tmp5;
       closure_0 = tmp2;
       if (typeof callback !== "function") {
@@ -72,24 +76,44 @@ prototype["showAlert"] = function showAlert(closure_1_0, arg1, arg2) {
   const _require = closure_1_0;
   const intl = require("../../intl/index.native.tsx").intl;
   const intl2 = require("../../intl/index.native.tsx").intl;
-  const combined = "" + intl.string(require("../../intl/index.native.tsx").t["68G7fD"]) + ". " + intl2.string(require("../../intl/index.native.tsx").t["5Jvu1R"]);
+  const combined =
+    "" +
+    intl.string(require("../../intl/index.native.tsx").t["68G7fD"]) +
+    ". " +
+    intl2.string(require("../../intl/index.native.tsx").t["5Jvu1R"]);
   let obj = { [closure_5.CAMERA]: combined, [closure_5.HEADSET_CAMERA]: combined };
   const intl3 = require("../../intl/index.native.tsx").intl;
   const stringResult = intl.string(require("../../intl/index.native.tsx").t["68G7fD"]);
   const intl4 = require("../../intl/index.native.tsx").intl;
-  obj[constants.AUDIO] = "" + intl3.string(require("../../intl/index.native.tsx").t.xisTfe) + ". " + intl4.string(require("../../intl/index.native.tsx").t["5Jvu1R"]);
+  obj[constants.AUDIO] =
+    "" +
+    intl3.string(require("../../intl/index.native.tsx").t.xisTfe) +
+    ". " +
+    intl4.string(require("../../intl/index.native.tsx").t["5Jvu1R"]);
   const intl5 = require("../../intl/index.native.tsx").intl;
   const stringResult1 = intl3.string(require("../../intl/index.native.tsx").t.xisTfe);
   const intl6 = require("../../intl/index.native.tsx").intl;
-  obj[constants.PHOTOS] = "" + intl5.string(require("../../intl/index.native.tsx").t.jQHU4M) + ". " + intl6.string(require("../../intl/index.native.tsx").t["5Jvu1R"]);
+  obj[constants.PHOTOS] =
+    "" +
+    intl5.string(require("../../intl/index.native.tsx").t.jQHU4M) +
+    ". " +
+    intl6.string(require("../../intl/index.native.tsx").t["5Jvu1R"]);
   const intl7 = require("../../intl/index.native.tsx").intl;
   const stringResult2 = intl5.string(require("../../intl/index.native.tsx").t.jQHU4M);
   const intl8 = require("../../intl/index.native.tsx").intl;
-  obj[constants.INPUT_MONITORING] = "" + intl7.string(require("../../intl/index.native.tsx").t.UIBqsS) + ". " + intl8.string(require("../../intl/index.native.tsx").t["5Jvu1R"]);
+  obj[constants.INPUT_MONITORING] =
+    "" +
+    intl7.string(require("../../intl/index.native.tsx").t.UIBqsS) +
+    ". " +
+    intl8.string(require("../../intl/index.native.tsx").t["5Jvu1R"]);
   const intl9 = require("../../intl/index.native.tsx").intl;
   const stringResult3 = intl7.string(require("../../intl/index.native.tsx").t.UIBqsS);
   const intl10 = require("../../intl/index.native.tsx").intl;
-  obj[constants.CONTACTS] = "" + intl9.string(require("../../intl/index.native.tsx").t.kTtf7o) + ". " + intl10.string(require("../../intl/index.native.tsx").t["5Jvu1R"]);
+  obj[constants.CONTACTS] =
+    "" +
+    intl9.string(require("../../intl/index.native.tsx").t.kTtf7o) +
+    ". " +
+    intl10.string(require("../../intl/index.native.tsx").t["5Jvu1R"]);
   if (null != obj[closure_1_0]) {
     obj = { title: null, body: null, onConfirm: null, cancelText: null, confirmText: null };
     const intl11 = tmp(1236).intl;
@@ -105,7 +129,9 @@ prototype["showAlert"] = function showAlert(closure_1_0, arg1, arg2) {
     self.openAlertModal(obj);
   }
 };
-NativePermissionBaseUtils["defaultNativePermissionsRequestOptions"] = function defaultNativePermissionsRequestOptions(arg0) {
+NativePermissionBaseUtils["defaultNativePermissionsRequestOptions"] = function defaultNativePermissionsRequestOptions(
+  arg0,
+) {
   let obj = { showAuthorizationError: true };
   let tmp = obj;
   if (null != arg0) {

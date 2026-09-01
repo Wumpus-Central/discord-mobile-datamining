@@ -12,8 +12,12 @@ let c8 = 2000;
 let closure_9 = Easing.inOut(require("../../reanimated/ReanimatedRexport.tsx").Easing.cubic);
 let closure_10 = [];
 let items = [require("DismissibleContent").DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX];
-let closure_12 = { code: "function useHomeDrawerPeekHintTsx1(){const{gestureState,panelX,PEEK_HINT_DRAWER_DRAG_THRESHOLD}=this.__closure;return gestureState.get().active&&panelX.get()>PEEK_HINT_DRAWER_DRAG_THRESHOLD;}" };
-let closure_13 = { code: "function useHomeDrawerPeekHintTsx2(isDragged,wasDragged){const{isPeekGranted,runOnJS,handleDrawerDragged}=this.__closure;if(!isPeekGranted||wasDragged==null)return;if(isDragged&&!wasDragged){runOnJS(handleDrawerDragged)();}}" };
+let closure_12 = {
+  code: "function useHomeDrawerPeekHintTsx1(){const{gestureState,panelX,PEEK_HINT_DRAWER_DRAG_THRESHOLD}=this.__closure;return gestureState.get().active&&panelX.get()>PEEK_HINT_DRAWER_DRAG_THRESHOLD;}",
+};
+let closure_13 = {
+  code: "function useHomeDrawerPeekHintTsx2(isDragged,wasDragged){const{isPeekGranted,runOnJS,handleDrawerDragged}=this.__closure;if(!isPeekGranted||wasDragged==null)return;if(isDragged&&!wasDragged){runOnJS(handleDrawerDragged)();}}",
+};
 let result = require("set").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerPeekHint.tsx");
 
 export const PEEK_HINT_DISTANCE = 40;
@@ -91,7 +95,9 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enableHome, 
       closure_13.current = setTimeout(() => {
         closure_13.current = null;
         closure_14.current = false;
-        const result = closure_0.set(closure_1_0(closure_1_1[15]).withSpring(0, closure_1_0(closure_1_1[16]).HOME_DRAWER_FLING_PHYSICS));
+        const result = closure_0.set(
+          closure_1_0(closure_1_1[15]).withSpring(0, closure_1_0(closure_1_1[16]).HOME_DRAWER_FLING_PHYSICS),
+        );
         const current = ref.current;
         if (current != null) {
           current(closure_1_7.AUTO_DISMISS);
@@ -126,7 +132,9 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enableHome, 
       }
       if (ref4.current) {
         tmp7.current = false;
-        const result = sharedValue2.set(sharedValue2(panelX[15]).withSpring(0, sharedValue2(panelX[16]).HOME_DRAWER_FLING_PHYSICS));
+        const result = sharedValue2.set(
+          sharedValue2(panelX[15]).withSpring(0, sharedValue2(panelX[16]).HOME_DRAWER_FLING_PHYSICS),
+        );
         const obj = sharedValue2(panelX[15]);
       }
     }, items3);

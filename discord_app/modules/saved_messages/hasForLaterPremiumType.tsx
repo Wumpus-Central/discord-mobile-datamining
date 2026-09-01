@@ -10,8 +10,10 @@ const result = require("set").fileFinishedImporting("modules/saved_messages/hasF
 export default function hasForLaterPremiumType() {
   currentUser = currentUser.getCurrentUser();
   return isPremiumAtLeast.isPremium(currentUser, PremiumTypes.TIER_2);
-};
+}
 export const useHasForLaterPremiumType = function useHasForLaterPremiumType() {
   const items = [closure_2];
-  return initialize.useStateFromStores(items, () => callback(table[2]).isPremium(currentUser.getCurrentUser(), TIER_2.TIER_2));
+  return initialize.useStateFromStores(items, () =>
+    callback(table[2]).isPremium(currentUser.getCurrentUser(), TIER_2.TIER_2),
+  );
 };

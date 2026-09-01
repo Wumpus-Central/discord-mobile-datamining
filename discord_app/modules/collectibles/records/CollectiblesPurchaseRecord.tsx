@@ -7,13 +7,43 @@ import { PREMIUM_TYPE_NONE } from "../../../Constants.tsx";
 
 let prototype;
 prototype = function CollectiblesPurchaseRecord(arg0) {
-  ({ skuId: tmp.skuId, name: tmp.name, type: tmp.type, premiumType: tmp.premiumType, items: tmp.items, categorySkuId: tmp.categorySkuId, isCategoryReward: tmp.isCategoryReward, prices: tmp.prices, bundledProducts: tmp.bundledProducts, googleSkuIds: tmp.googleSkuIds, variants: tmp.variants, eligibleOffers: tmp.eligibleOffers, baseVariantName: tmp.baseVariantName, baseVariantSkuId: tmp.baseVariantSkuId, variantLabel: tmp.variantLabel, variantValue: tmp.variantValue, purchasedAt: tmp.purchasedAt, purchaseType: tmp.purchaseType, expiresAt: tmp.expiresAt } = arg0);
+  ({
+    skuId: tmp.skuId,
+    name: tmp.name,
+    type: tmp.type,
+    premiumType: tmp.premiumType,
+    items: tmp.items,
+    categorySkuId: tmp.categorySkuId,
+    isCategoryReward: tmp.isCategoryReward,
+    prices: tmp.prices,
+    bundledProducts: tmp.bundledProducts,
+    googleSkuIds: tmp.googleSkuIds,
+    variants: tmp.variants,
+    eligibleOffers: tmp.eligibleOffers,
+    baseVariantName: tmp.baseVariantName,
+    baseVariantSkuId: tmp.baseVariantSkuId,
+    variantLabel: tmp.variantLabel,
+    variantValue: tmp.variantValue,
+    purchasedAt: tmp.purchasedAt,
+    purchaseType: tmp.purchaseType,
+    expiresAt: tmp.expiresAt,
+  } = arg0);
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["fromServer"] = function fromServer(sku_id) {
   sku_id = sku_id.sku_id;
   ({ premium_type, bundled_products, variants, purchased_at, expires_at } = sku_id);
-  ({ type, name, category_sku_id, prices, base_variant_name, base_variant_sku_id, variant_label, variant_value, purchase_type } = sku_id);
+  ({
+    type,
+    name,
+    category_sku_id,
+    prices,
+    base_variant_name,
+    base_variant_sku_id,
+    variant_label,
+    variant_value,
+    purchase_type,
+  } = sku_id);
   const merged = Object.assign(sku_id, Object.create(null));
   let tmp3 = null;
   if (premium_type !== PREMIUM_TYPE_NONE) {

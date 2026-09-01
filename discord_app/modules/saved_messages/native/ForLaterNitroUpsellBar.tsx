@@ -34,4 +34,4 @@ export default function ForLaterNitroUpsellBar(isReminder) {
     obj1[2] = callback;
     return <tmp3 text={null} isAtLimit={null} onPress={null} />;
   }
-};
+}

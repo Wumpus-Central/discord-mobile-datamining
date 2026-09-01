@@ -13,7 +13,9 @@ import closure_5 from "../../../../../../build_overrides/BuildOverrideStore.tsx"
 const Image = get_ActivityIndicator.Image;
 const State = getCurrentBuildOverride.State;
 const InviteTypes = InviteSendStates.InviteTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/BuildOverrideEmbed.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/coded_links/BuildOverrideEmbed.tsx",
+);
 
 export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, closure_2) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(closure_2));
@@ -51,7 +53,11 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
     }
     let tmpResult = tmp(12887);
     obj = getConstantsAll;
-    const tmpResultResult = tmpResult(buildOverride.override, ["discord_ios", "discord_android"], obj.getConstants().Version);
+    const tmpResultResult = tmpResult(
+      buildOverride.override,
+      ["discord_ios", "discord_android"],
+      obj.getConstants().Version,
+    );
     if (currentBuildOverride.state !== tmp6.Invalid) {
       if (buildOverride.state !== tmp6.Invalid) {
         if (null != buildOverride.override) {

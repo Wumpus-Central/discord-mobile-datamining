@@ -111,7 +111,29 @@ function AnimatedToast(toast) {
     obj[2] = width - 32;
     return obj;
   };
-  obj = { position: str, safeAreaTop: top, CONTAINER_DISTANCE_VERTICAL: 8, screenHeight: height, toastHeight: sharedValue, bottomTabsHeight: mobileQuestDockHeight, youBarHeight: youBarTotalHeight, interpolate: tmp3(tmp4[6]).interpolate, animationState: sharedValue1, ANIMATION_STATE_INPUT: content, CONTAINER_TOP_POSITION_START: -30, isReducedMotion: stateFromStores, withSpring: tmp3(tmp4[13]).withSpring, OPACITY_SPRING_PHYSICS: closure_10, TOAST_SPRING_PHYSICS: str, state, TransitionStates: tmp3(tmp4[14]).TransitionStates, runOnJS: tmp3(tmp4[6]).runOnJS, cleanUp, screenWidth: width, CONTAINER_DISTANCE_SIDES: 16 };
+  obj = {
+    position: str,
+    safeAreaTop: top,
+    CONTAINER_DISTANCE_VERTICAL: 8,
+    screenHeight: height,
+    toastHeight: sharedValue,
+    bottomTabsHeight: mobileQuestDockHeight,
+    youBarHeight: youBarTotalHeight,
+    interpolate: tmp3(tmp4[6]).interpolate,
+    animationState: sharedValue1,
+    ANIMATION_STATE_INPUT: content,
+    CONTAINER_TOP_POSITION_START: -30,
+    isReducedMotion: stateFromStores,
+    withSpring: tmp3(tmp4[13]).withSpring,
+    OPACITY_SPRING_PHYSICS: closure_10,
+    TOAST_SPRING_PHYSICS: str,
+    state,
+    TransitionStates: tmp3(tmp4[14]).TransitionStates,
+    runOnJS: tmp3(tmp4[6]).runOnJS,
+    cleanUp,
+    screenWidth: width,
+    CONTAINER_DISTANCE_SIDES: 16,
+  };
   fn.__closure = obj;
   fn.__workletHash = 3455640999355;
   fn.__initData = sharedValue1;
@@ -162,16 +184,26 @@ function wrapChildren(children) {
 }
 let c3 = importAllResult;
 let obj = { container: null };
-obj = { position: "absolute", alignSelf: "center", flexDirection: "row", justifyContent: "center", shadowColor: require("result").TOAST_CONTAINER_SHADOW_COLOR };
+obj = {
+  position: "absolute",
+  alignSelf: "center",
+  flexDirection: "row",
+  justifyContent: "center",
+  shadowColor: require("result").TOAST_CONTAINER_SHADOW_COLOR,
+};
 obj[0] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 createCacheKey = { START: 0, [0]: "START", END: 1, [1]: "END" };
-let items = [, ];
+let items = [,];
 ({ START: arr[0], END: arr[1] } = createCacheKey);
 let closure_10 = { mass: 0.1, damping: 10, stiffness: 100, overshootClamping: true };
 let closure_11 = { mass: 0.35, damping: 15, stiffness: 350, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1 };
-let closure_12 = { code: "function ToastContainerTsx1(){const{position,safeAreaTop,CONTAINER_DISTANCE_VERTICAL,screenHeight,toastHeight,bottomTabsHeight,youBarHeight,interpolate,animationState,ANIMATION_STATE_INPUT,CONTAINER_TOP_POSITION_START,isReducedMotion,withSpring,OPACITY_SPRING_PHYSICS,TOAST_SPRING_PHYSICS,state,TransitionStates,runOnJS,cleanUp,screenWidth,CONTAINER_DISTANCE_SIDES}=this.__closure;const verticalPositionEnd=position==='top'?safeAreaTop+CONTAINER_DISTANCE_VERTICAL:screenHeight-toastHeight.get()-bottomTabsHeight-CONTAINER_DISTANCE_VERTICAL-youBarHeight;const translateY=interpolate(animationState.get(),ANIMATION_STATE_INPUT,[position==='top'?CONTAINER_TOP_POSITION_START:screenHeight-bottomTabsHeight-toastHeight.get()-youBarHeight,verticalPositionEnd]);return{opacity:!isReducedMotion?withSpring(animationState.get(),OPACITY_SPRING_PHYSICS):animationState.get(),transform:[{translateY:!isReducedMotion?withSpring(translateY,TOAST_SPRING_PHYSICS,'respect-motion-settings',function(finished){if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}):translateY}],maxWidth:screenWidth-CONTAINER_DISTANCE_SIDES*2};}" };
-let closure_13 = { code: "function ToastContainerTsx2(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}" };
+let closure_12 = {
+  code: "function ToastContainerTsx1(){const{position,safeAreaTop,CONTAINER_DISTANCE_VERTICAL,screenHeight,toastHeight,bottomTabsHeight,youBarHeight,interpolate,animationState,ANIMATION_STATE_INPUT,CONTAINER_TOP_POSITION_START,isReducedMotion,withSpring,OPACITY_SPRING_PHYSICS,TOAST_SPRING_PHYSICS,state,TransitionStates,runOnJS,cleanUp,screenWidth,CONTAINER_DISTANCE_SIDES}=this.__closure;const verticalPositionEnd=position==='top'?safeAreaTop+CONTAINER_DISTANCE_VERTICAL:screenHeight-toastHeight.get()-bottomTabsHeight-CONTAINER_DISTANCE_VERTICAL-youBarHeight;const translateY=interpolate(animationState.get(),ANIMATION_STATE_INPUT,[position==='top'?CONTAINER_TOP_POSITION_START:screenHeight-bottomTabsHeight-toastHeight.get()-youBarHeight,verticalPositionEnd]);return{opacity:!isReducedMotion?withSpring(animationState.get(),OPACITY_SPRING_PHYSICS):animationState.get(),transform:[{translateY:!isReducedMotion?withSpring(translateY,TOAST_SPRING_PHYSICS,'respect-motion-settings',function(finished){if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}):translateY}],maxWidth:screenWidth-CONTAINER_DISTANCE_SIDES*2};}",
+};
+let closure_13 = {
+  code: "function ToastContainerTsx2(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}",
+};
 const memoResult = importAllResult.memo(() => {
   let obj = stateFromStoresArray(589);
   items = [closure_5];
@@ -196,7 +228,12 @@ const memoResult = importAllResult.memo(() => {
     }
   }, items1);
   obj = { items: stateFromStoresArray, renderItem, getItemKey, wrapChildren };
-  return jsx(stateFromStoresArray(4204).TransitionGroup, { items: stateFromStoresArray, renderItem, getItemKey, wrapChildren });
+  return jsx(stateFromStoresArray(4204).TransitionGroup, {
+    items: stateFromStoresArray,
+    renderItem,
+    getItemKey,
+    wrapChildren,
+  });
 });
 let result = require("set").fileFinishedImporting("modules/toast/native/ToastContainer.tsx");
 

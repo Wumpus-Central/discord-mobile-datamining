@@ -59,7 +59,11 @@ function canManageResource(arg0, arg1, arg2, arg3) {
   }
   return tmp;
 }
-({ CREATE_GUILD_EVENT_CORE_PERMISSIONS: error, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8, CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: c9 } = VIEW_CHANNEL);
+({
+  CREATE_GUILD_EVENT_CORE_PERMISSIONS: error,
+  CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8,
+  CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: c9,
+} = VIEW_CHANNEL);
 let closure_11 = {
   canCreateExpressions: false,
   canCreateGuildEvent: false,
@@ -70,13 +74,13 @@ let closure_11 = {
   },
   canManageGuildEvent() {
     return false;
-  }
+  },
 };
 const result = require("set").fileFinishedImporting("modules/permissions/useManageResourcePermissions.tsx");
 
 export const attachChannelPermissions = function attachChannelPermissions(channel) {
   if (null == channel) {
-    const items = [, ];
+    const items = [,];
     ({ CREATE_EVENTS: arr2[0], MANAGE_EVENTS: arr2[1] } = Permissions);
     return items;
   } else {
@@ -86,7 +90,7 @@ export const attachChannelPermissions = function attachChannelPermissions(channe
     } else if (channel.isGuildVoice()) {
       tmp = closure_9;
     }
-    const items1 = [fromStringAll.combine(tmp, Permissions.CREATE_EVENTS), ];
+    const items1 = [fromStringAll.combine(tmp, Permissions.CREATE_EVENTS)];
     const obj = fromStringAll;
     items1[1] = fromStringAll.combine(tmp, Permissions.MANAGE_EVENTS);
     return items1;
@@ -96,11 +100,11 @@ export const useManageResourcePermissions = function useManageResourcePermission
   const _require = channel;
   let obj = fromGuildPropertiesWithAdditionalFields;
   if (obj.isGuildRecord(channel)) {
-    let items = [, ];
+    let items = [,];
     ({ CREATE_EVENTS: arr3[0], MANAGE_EVENTS: arr3[1] } = Permissions);
     let items2 = items;
   } else if (null == channel) {
-    const items1 = [, ];
+    const items1 = [,];
     ({ CREATE_EVENTS: arr2[0], MANAGE_EVENTS: arr2[1] } = Permissions);
     items2 = items1;
   } else {
@@ -110,7 +114,7 @@ export const useManageResourcePermissions = function useManageResourcePermission
     } else if (channel.isGuildVoice()) {
       tmp4 = closure_9;
     }
-    items2 = [fromStringAll.combine(tmp4, Permissions.CREATE_EVENTS), ];
+    items2 = [fromStringAll.combine(tmp4, Permissions.CREATE_EVENTS)];
     const obj2 = fromStringAll;
     items2[1] = fromStringAll.combine(tmp4, Permissions.MANAGE_EVENTS);
     const obj3 = fromStringAll;
@@ -118,10 +122,18 @@ export const useManageResourcePermissions = function useManageResourcePermission
   [importAll, dependencyMap] = first(items2, 2);
   let tmpResult = tmp(589);
   const items3 = [closure_5];
-  const tmp10 = first(tmpResult.useStateFromStoresArray(items3, () => {
-    const items = [closure_5.can(closure_1_10.CREATE_GUILD_EXPRESSIONS, closure_0), closure_5.can(closure_1_10.MANAGE_GUILD_EXPRESSIONS, closure_0), closure_5.can(closure_1, closure_0), closure_5.can(closure_2, closure_0)];
-    return items;
-  }), 4);
+  const tmp10 = first(
+    tmpResult.useStateFromStoresArray(items3, () => {
+      const items = [
+        closure_5.can(closure_1_10.CREATE_GUILD_EXPRESSIONS, closure_0),
+        closure_5.can(closure_1_10.MANAGE_GUILD_EXPRESSIONS, closure_0),
+        closure_5.can(closure_1, closure_0),
+        closure_5.can(closure_2, closure_0),
+      ];
+      return items;
+    }),
+    4,
+  );
   first = tmp10[0];
   const React = tmp12;
   closure_5 = tmp13;
@@ -135,7 +147,14 @@ export const useManageResourcePermissions = function useManageResourcePermission
   if (null == channel) {
     obj = closure_11;
   } else {
-    obj = { canCreateExpressions: null, canCreateGuildEvent: null, canManageAllExpressions: null, canManageAllEvents: null, canManageGuildExpression: null, canManageGuildEvent: null };
+    obj = {
+      canCreateExpressions: null,
+      canCreateGuildEvent: null,
+      canManageAllExpressions: null,
+      canManageAllEvents: null,
+      canManageGuildExpression: null,
+      canManageGuildEvent: null,
+    };
     obj[0] = first;
     obj[1] = tmp13;
     obj[2] = tmp12;
@@ -160,12 +179,12 @@ export const getManageResourcePermissions = function getManageResourcePermission
   let canResult3;
   let currentUser;
   if (obj3.isGuildRecord(guild)) {
-    const items = [, ];
+    const items = [,];
     ({ CREATE_EVENTS: arr3[0], MANAGE_EVENTS: arr3[1] } = Permissions);
     let tmp5 = Permissions;
     let items2 = items;
   } else if (null == guild) {
-    const items1 = [, ];
+    const items1 = [,];
     ({ CREATE_EVENTS: arr2[0], MANAGE_EVENTS: arr2[1] } = Permissions);
     tmp5 = Permissions;
     items2 = items1;
@@ -177,7 +196,7 @@ export const getManageResourcePermissions = function getManageResourcePermission
       tmp3 = closure_9;
     }
     tmp5 = Permissions;
-    items2 = [canResult1(tmp[6]).combine(tmp3, Permissions.CREATE_EVENTS), ];
+    items2 = [canResult1(tmp[6]).combine(tmp3, Permissions.CREATE_EVENTS)];
     const obj4 = canResult1(tmp[6]);
     items2[1] = canResult1(tmp[6]).combine(tmp3, Permissions.MANAGE_EVENTS);
     const obj5 = canResult1(tmp[6]);
@@ -193,7 +212,14 @@ export const getManageResourcePermissions = function getManageResourcePermission
   if (null == guild) {
     obj = closure_11;
   } else {
-    obj = { canCreateExpressions: null, canCreateGuildEvent: null, canManageAllExpressions: null, canManageAllEvents: null, canManageGuildExpression: null, canManageGuildEvent: null };
+    obj = {
+      canCreateExpressions: null,
+      canCreateGuildEvent: null,
+      canManageAllExpressions: null,
+      canManageAllEvents: null,
+      canManageGuildExpression: null,
+      canManageGuildEvent: null,
+    };
     obj[0] = canResult;
     obj[1] = canResult2;
     obj[2] = canResult1;

@@ -24,15 +24,19 @@ export const useGuildEligibleForStageChannels = function useGuildEligibleForStag
   const _require = arg0;
   let items = [closure_2];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const items = [closure_1_2];
-    [obj] = items;
-    const guild = obj.getGuild(closure_0);
-    let hasItem;
-    if (guild != null) {
-      const features = guild.features;
-      hasItem = features.has(closure_1_3.COMMUNITY);
-    }
-    return Boolean(hasItem);
-  }, items1);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const items = [closure_1_2];
+      [obj] = items;
+      const guild = obj.getGuild(closure_0);
+      let hasItem;
+      if (guild != null) {
+        const features = guild.features;
+        hasItem = features.has(closure_1_3.COMMUNITY);
+      }
+      return Boolean(hasItem);
+    },
+    items1,
+  );
 };

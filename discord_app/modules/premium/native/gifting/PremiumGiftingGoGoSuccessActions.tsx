@@ -11,11 +11,19 @@ const require = arg1;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles(() => {
   let obj = { promoDetails: null };
-  obj = { marginBottom: ThemesDefault.space.PX_6, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+  obj = {
+    marginBottom: ThemesDefault.space.PX_6,
+    paddingVertical: ThemesDefault.space.PX_12,
+    paddingHorizontal: ThemesDefault.space.PX_16,
+    borderRadius: ThemesDefault.radii.md,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  };
   obj[0] = obj;
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingGoGoSuccessActions.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/premium/native/gifting/PremiumGiftingGoGoSuccessActions.tsx",
+);
 
 export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   giftCode = giftCode.giftCode;
@@ -31,7 +39,9 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   obj1 = onClose(navigation[8]);
   let items = [giftCodeURL];
   const stateFromStores = obj1.useStateFromStores(items, () => {
-    const marketingComponentByType = giftCodeURL.getMarketingComponentByType(onClose(navigation[9]).MarketingComponentType.GIFT_CUSTOMIZATION_BANNER);
+    const marketingComponentByType = giftCodeURL.getMarketingComponentByType(
+      onClose(navigation[9]).MarketingComponentType.GIFT_CUSTOMIZATION_BANNER,
+    );
     let prop = null;
     if (null != marketingComponentByType) {
       prop = null;
@@ -50,7 +60,9 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   let tmp2Result = tmp2(tmp3[11]);
   navigation = tmp2Result.useNavigation();
   const tmp = callback2();
-  enabled = prePurchaseGiftingBadgeProgress(navigation[12]).useConfig({ location: "PremiumGiftSuccessActions" }).enabled;
+  enabled = prePurchaseGiftingBadgeProgress(navigation[12]).useConfig({
+    location: "PremiumGiftSuccessActions",
+  }).enabled;
   tmp2Result = tmp2(tmp3[13]);
   giftCodeURL = tmp2Result.getGiftCodeURL(giftCode);
   const items1 = [enabled, prePurchaseGiftingBadgeProgress, navigation, onClose];
@@ -84,7 +96,11 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   callback2 = enabled.useCallback(() => {
     onClose();
     let obj = onClose(navigation[16]);
-    obj = { analyticsSource: prePurchaseGiftingBadgeProgress(navigation[17]).PREMIUM_GIFT_SUCCESS_MODAL, analyticsLocations: null, screen: null };
+    obj = {
+      analyticsSource: prePurchaseGiftingBadgeProgress(navigation[17]).PREMIUM_GIFT_SUCCESS_MODAL,
+      analyticsLocations: null,
+      screen: null,
+    };
     const items = [prePurchaseGiftingBadgeProgress(navigation[17]).PREMIUM_GIFT_SUCCESS_MODAL];
     obj[1] = items;
     obj[2] = closure_1_6.ORBS;
@@ -101,7 +117,7 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
     tmp16 = callback(tmp9(tmp3[18]), obj);
     const tmp9Result = tmp9(tmp3[18]);
   }
-  const items4 = [tmp16, , ];
+  const items4 = [tmp16, ,];
   let tmp19 = null != giftCode;
   if (tmp19) {
     obj = { variant: "primary", text: null, onPress: null };
@@ -137,4 +153,4 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   const intl4 = tmp2(tmp3[19]).intl;
   obj3[2] = intl4.string(onClose(navigation[19]).t.fYfGgK);
   obj3[3] = callback2;
-};
+}

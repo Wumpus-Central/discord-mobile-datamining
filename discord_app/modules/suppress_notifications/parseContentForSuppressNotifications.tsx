@@ -16,6 +16,6 @@ export default function parseContentForSuppressNotifications(str) {
     str = str.substring(7);
   }
   return items2;
-};
+}
 export const SILENT_SENTINEL = "@silent";
 export const SILENT_RE = regExp;

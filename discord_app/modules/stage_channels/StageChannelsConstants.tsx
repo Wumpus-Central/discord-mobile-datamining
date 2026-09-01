@@ -21,10 +21,17 @@ export const EXPLICIT_END_STAGE_SHEET_KEY = "explicit-end-stage";
 export const STAGE_INVITE_STATE_KEY = "stage-invite";
 export const STAGE_BOOSTING_SHEET_KEY = "stage-boosting";
 export const STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY = "stage-channel-audience-notice-shown";
-export const RequestToSpeakPermissionStates = { EVERYONE: 1, [1]: "EVERYONE", NO_ONE: 2, [2]: "NO_ONE", ROLES: 3, [3]: "ROLES" };
+export const RequestToSpeakPermissionStates = {
+  EVERYONE: 1,
+  [1]: "EVERYONE",
+  NO_ONE: 2,
+  [2]: "NO_ONE",
+  ROLES: 3,
+  [3]: "ROLES",
+};
 export const getStagePublicInfoText = function getStagePublicInfoText() {
   const intl = getSystemLocale.intl;
-  const items = [intl.string(getSystemLocale.t["9XlQ9W"]), , , ];
+  const items = [intl.string(getSystemLocale.t["9XlQ9W"]), , ,];
   const intl2 = getSystemLocale.intl;
   items[1] = intl2.string(getSystemLocale.t.lF0IbB);
   const intl3 = getSystemLocale.intl;

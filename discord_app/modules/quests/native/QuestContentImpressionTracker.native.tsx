@@ -74,7 +74,10 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
                   num = 0;
                   if (null != tmp2.current.parent.scrollX) {
                     const items = [tmp4.layout.x, tmp4.layout.x + tmp4.layout.width];
-                    const items1 = [tmp2.current.parent.scrollX, tmp2.current.parent.scrollX + tmp2.current.parent.layout.width];
+                    const items1 = [
+                      tmp2.current.parent.scrollX,
+                      tmp2.current.parent.scrollX + tmp2.current.parent.layout.width,
+                    ];
                     let items3 = items1;
                     let items2 = items;
                     if (null != tmp2.current.parent.firstItemOffset) {
@@ -93,7 +96,10 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
                   num = 0;
                   if (null != tmp2.current.parent.scrollY) {
                     items2 = [tmp4.layout.y, tmp4.layout.y + tmp4.layout.height];
-                    items3 = [tmp2.current.parent.scrollY, tmp2.current.parent.scrollY + tmp2.current.parent.layout.height];
+                    items3 = [
+                      tmp2.current.parent.scrollY,
+                      tmp2.current.parent.scrollY + tmp2.current.parent.layout.height,
+                    ];
                     const height = tmp4.layout.height;
                   }
                 }

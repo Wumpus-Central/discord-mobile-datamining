@@ -14,9 +14,17 @@ noopAll;
 createCacheKey = { circle: null, iconContainer: null };
 createCacheKey = { width: "100%", height: "100%", borderRadius: ThemesDefault.radii.round };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" };
+createCacheKey[1] = {
+  position: "absolute",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "100%",
+  height: "100%",
+};
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelDrawerToggleButton.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/controls/buttons/VoicePanelDrawerToggleButton.tsx",
+);
 
 export default function VoicePanelDrawerToggleButton(arg0) {
   ({ props, openTab, wrapperSpecs } = arg0);
@@ -28,7 +36,7 @@ export default function VoicePanelDrawerToggleButton(arg0) {
   const tmp5 = useDrawerToggleDefault(openTab);
   const tmp6 = closure_4;
   const items = [tmp.circle, { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor }];
-  const items1 = [callback(setDefault, { style: items }), ];
+  const items1 = [callback(setDefault, { style: items })];
   obj = { style: tmp.iconContainer, children: null };
   const tmp7 = AnimatedButtonWrapperDefault;
   if (isDrawerOpen) {
@@ -40,4 +48,4 @@ export default function VoicePanelDrawerToggleButton(arg0) {
   items1[1] = callback(setDefault, obj);
   obj[3] = items1;
   return tmp6(tmp7, obj);
-};
+}

@@ -8,10 +8,34 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 let c3 = importAllResult;
-let closure_8 = createCacheKey.createStyles({ buttonRowContainer: { flexGrow: 0, flexDirection: "row", justifyContent: "flex-end", paddingHorizontal: 12, height: 48 }, buttonContainer: { position: "absolute", bottom: 0, left: 0, right: 0, marginLeft: 24, marginRight: 24, flexDirection: "column", justifyContent: "flex-end" } });
-let closure_9 = { code: "function EditCollectiblesCTAButtonTsx1(){const{shouldShowButton,APPLY_BUTTON_BOUNCE_DISTANCE,APPLY_BUTTON_SCALE_TRANSITION,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetTranslateY=shouldShowButton.get()?0:APPLY_BUTTON_BOUNCE_DISTANCE;const targetScale=shouldShowButton.get()?1:APPLY_BUTTON_SCALE_TRANSITION;return{transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}]};}" };
-let closure_10 = { code: "function EditCollectiblesCTAButtonTsx2(){const{shouldShowButton}=this.__closure;return{pointerEvents:shouldShowButton.get()?'box-none':'none'};}" };
-let closure_11 = { code: "function EditCollectiblesCTAButtonTsx3(){const{shouldShowButton,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=shouldShowButton.get()?1:0;return{opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,{...MEDIA_PICKER_SEND_BUTTON_SPRING,overshootClamping:true})};}" };
+let closure_8 = createCacheKey.createStyles({
+  buttonRowContainer: {
+    flexGrow: 0,
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    paddingHorizontal: 12,
+    height: 48,
+  },
+  buttonContainer: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    marginLeft: 24,
+    marginRight: 24,
+    flexDirection: "column",
+    justifyContent: "flex-end",
+  },
+});
+let closure_9 = {
+  code: "function EditCollectiblesCTAButtonTsx1(){const{shouldShowButton,APPLY_BUTTON_BOUNCE_DISTANCE,APPLY_BUTTON_SCALE_TRANSITION,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetTranslateY=shouldShowButton.get()?0:APPLY_BUTTON_BOUNCE_DISTANCE;const targetScale=shouldShowButton.get()?1:APPLY_BUTTON_SCALE_TRANSITION;return{transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}]};}",
+};
+let closure_10 = {
+  code: "function EditCollectiblesCTAButtonTsx2(){const{shouldShowButton}=this.__closure;return{pointerEvents:shouldShowButton.get()?'box-none':'none'};}",
+};
+let closure_11 = {
+  code: "function EditCollectiblesCTAButtonTsx3(){const{shouldShowButton,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=shouldShowButton.get()?1:0;return{opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,{...MEDIA_PICKER_SEND_BUTTON_SPRING,overshootClamping:true})};}",
+};
 const memoResult = importAllResult.memo((user) => {
   user = user.user;
   const currentSkuId = user.currentSkuId;
@@ -56,7 +80,7 @@ const memoResult = importAllResult.memo((user) => {
         tmp5 = closure_6;
         withSpringResult = obj2.withSpring(num, closure_6);
       }
-      items = [, ];
+      items = [,];
       items[0] = { translateY: withSpringResult };
       withSpringResult1 = num2;
       if (!tmp) {
@@ -70,7 +94,14 @@ const memoResult = importAllResult.memo((user) => {
       return { transform: items };
     }
   }
-  obj = { shouldShowButton: sharedValue, APPLY_BUTTON_BOUNCE_DISTANCE: 60, APPLY_BUTTON_SCALE_TRANSITION: 0.9, reducedMotion: stateFromStores, withSpring: user(selectedSkuId[10]).withSpring, MEDIA_PICKER_SEND_BUTTON_SPRING: stateFromStores };
+  obj = {
+    shouldShowButton: sharedValue,
+    APPLY_BUTTON_BOUNCE_DISTANCE: 60,
+    APPLY_BUTTON_SCALE_TRANSITION: 0.9,
+    reducedMotion: stateFromStores,
+    withSpring: user(selectedSkuId[10]).withSpring,
+    MEDIA_PICKER_SEND_BUTTON_SPRING: stateFromStores,
+  };
   O.__closure = obj;
   O.__workletHash = 15594859424201;
   O.__initData = c9;
@@ -112,7 +143,12 @@ const memoResult = importAllResult.memo((user) => {
       return { opacity: withSpringResult };
     }
   }
-  obj = { shouldShowButton: sharedValue, reducedMotion: stateFromStores, withSpring: user(selectedSkuId[10]).withSpring, MEDIA_PICKER_SEND_BUTTON_SPRING: stateFromStores };
+  obj = {
+    shouldShowButton: sharedValue,
+    reducedMotion: stateFromStores,
+    withSpring: user(selectedSkuId[10]).withSpring,
+    MEDIA_PICKER_SEND_BUTTON_SPRING: stateFromStores,
+  };
   R.__closure = obj;
   R.__workletHash = 13351061137085;
   R.__initData = closure_11;
@@ -176,7 +212,9 @@ const memoResult = importAllResult.memo((user) => {
   }, items2);
   const callback = obj2.useCallback(() => {
     if (isTryItOut) {
-      const result = user(selectedSkuId[14]).triggerHapticFeedback(user(selectedSkuId[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
+      const result = user(selectedSkuId[14]).triggerHapticFeedback(
+        user(selectedSkuId[14]).HapticFeedbackTypes.IMPACT_MEDIUM,
+      );
       onApply();
       const obj4 = user(selectedSkuId[14]);
     } else if (c9) {
@@ -201,7 +239,13 @@ const memoResult = importAllResult.memo((user) => {
   if (result) {
     str = "active";
   }
-  obj2[2] = sharedValue(user(selectedSkuId[18]).Button, { variant: str, onPress: callback, size: "md", text: memo, grow: true });
+  obj2[2] = sharedValue(user(selectedSkuId[18]).Button, {
+    variant: str,
+    onPress: callback,
+    size: "md",
+    text: memo,
+    grow: true,
+  });
   obj1[2] = sharedValue(currentSkuId(selectedSkuId[9]).View, obj2);
   return sharedValue(currentSkuId(selectedSkuId[9]).View, obj1);
 });

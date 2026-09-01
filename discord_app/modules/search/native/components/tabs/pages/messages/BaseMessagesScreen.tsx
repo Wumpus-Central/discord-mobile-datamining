@@ -7,7 +7,9 @@ import { SearchResultContentEntityTypes as closure_6 } from "../../../../trackin
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx",
+);
 
 export default function BaseMessagesScreen(data) {
   data = data.data;
@@ -30,8 +32,16 @@ export default function BaseMessagesScreen(data) {
   const items = [isHistoricalIndexing, isNextPageLoading];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let obj = data(tab[7]);
-    const searchTabFetchId = obj.getSearchTabFetchId(searchContext, tab, isHistoricalIndexing.getSearchResultsQuery(searchContext));
-    obj = { isIndexing: isNextPageLoading.getIsIndexing(searchTabFetchId), isHistoricalIndexing: isNextPageLoading.getIsHistoricalIndexing(searchTabFetchId), documentsIndexed: isNextPageLoading.getDocumentsIndexed(searchTabFetchId) };
+    const searchTabFetchId = obj.getSearchTabFetchId(
+      searchContext,
+      tab,
+      isHistoricalIndexing.getSearchResultsQuery(searchContext),
+    );
+    obj = {
+      isIndexing: isNextPageLoading.getIsIndexing(searchTabFetchId),
+      isHistoricalIndexing: isNextPageLoading.getIsHistoricalIndexing(searchTabFetchId),
+      documentsIndexed: isNextPageLoading.getDocumentsIndexed(searchTabFetchId),
+    };
     return obj;
   });
   isHistoricalIndexing = stateFromStoresObject.isHistoricalIndexing;
@@ -97,7 +107,14 @@ export default function BaseMessagesScreen(data) {
         tmp11 = hasError(searchContext(tmp[13]), obj1);
       }
     }
-    const obj2 = { contentContainerStyle: null, data: null, onEndReached: null, ListHeaderComponent: null, ItemSeparatorComponent: null, numColumns: null };
+    const obj2 = {
+      contentContainerStyle: null,
+      data: null,
+      onEndReached: null,
+      ListHeaderComponent: null,
+      ItemSeparatorComponent: null,
+      numColumns: null,
+    };
     obj2[0] = contentContainerStyle;
     obj2[1] = data;
     obj2[2] = callback;
@@ -107,7 +124,7 @@ export default function BaseMessagesScreen(data) {
     tmp11 = hasError(searchContext(tmp[14]), obj2);
   }
   return tmp11;
-};
+}
 export const trackMessageItemPress = function trackMessageItemPress(messageId) {
   messageId = messageId.messageId;
   ({ searchContext, channelId, index } = messageId);

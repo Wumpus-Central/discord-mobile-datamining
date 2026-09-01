@@ -9,8 +9,7 @@ prototype = function CompanyRecord(arg0) {
   ({ id: tmp.id, name: tmp.name } = arg0);
   return tmp;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["createFromServer"] = function createFromServer(arg0) {
   if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();

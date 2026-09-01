@@ -21,10 +21,17 @@ function VoiceMessageIcon() {
   const token1 = obj1.useToken(ThemesDefault.colors.BACKGROUND_MOD_SUBTLE);
   obj = { width: "100%", height: "100%", viewBox: "0 0 64 61", fill: "none", children: null };
   const tmp = callback3();
-  obj[4] = callback(inlineStyles.Path, { d: "M22.2188 59.8545C19.5607 61.6263 16.0003 59.7208 16 56.5264V48C7.16344 48 2.5772e-07 40.8366 0 32V16C0 7.16344 7.16344 0 16 0H48C56.8366 0 64 7.16344 64 16V32C64 40.8366 56.8366 48 48 48H40L22.2188 59.8545Z", fill: token, stroke: token1 });
-  const items = [callback(inlineStylesDefault, obj), ];
+  obj[4] = callback(inlineStyles.Path, {
+    d: "M22.2188 59.8545C19.5607 61.6263 16.0003 59.7208 16 56.5264V48C7.16344 48 2.5772e-07 40.8366 0 32V16C0 7.16344 7.16344 0 16 0H48C56.8366 0 64 7.16344 64 16V32C64 40.8366 56.8366 48 48 48H40L22.2188 59.8545Z",
+    fill: token,
+    stroke: token1,
+  });
+  const items = [callback(inlineStylesDefault, obj)];
   obj1 = { style: tmp.voiceMessageIconOverlay, children: null };
-  const items1 = [callback(CirclePlayIcon.CirclePlayIcon, { size: "md", color: "background-brand", secondaryColor: "white" }), callback(WaveformIcon.WaveformIcon, { size: "md", color: "background-brand" })];
+  const items1 = [
+    callback(CirclePlayIcon.CirclePlayIcon, { size: "md", color: "background-brand", secondaryColor: "white" }),
+    callback(WaveformIcon.WaveformIcon, { size: "md", color: "background-brand" }),
+  ];
   obj1[1] = items1;
   items[1] = callback2(closure_4, obj1);
   obj[0] = items;
@@ -104,7 +111,11 @@ function getBasePreviewableMedia(arg0) {
               obj2[1] = tmp13.AUDIO;
               obj2[2] = tmp6;
               let tmp17 = callback;
-              obj2[3] = callback(tmp8(10213).CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
+              obj2[3] = callback(tmp8(10213).CirclePlayIcon, {
+                size: "lg",
+                color: "background-brand",
+                secondaryColor: "white",
+              });
               let str5 = null;
               if (isForward) {
                 str5 = "forward";
@@ -175,7 +186,15 @@ function getBasePreviewableMedia(arg0) {
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ MessageEmbedTypes: c5, MessageFlags: closure_6 } = ME);
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-let obj = { IMAGE: "image", VIDEO: "video", AUDIO: "audio", FILE: "file", STICKER: "sticker", GIF: "gif", VOICE_MESSAGE: "voice_message" };
+let obj = {
+  IMAGE: "image",
+  VIDEO: "video",
+  AUDIO: "audio",
+  FILE: "file",
+  STICKER: "sticker",
+  GIF: "gif",
+  VOICE_MESSAGE: "voice_message",
+};
 obj = { voiceMessageIconOverlay: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -185,7 +204,9 @@ obj.justifyContent = "center";
 obj.paddingBottom = 13;
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/hooks/usePreviewableMedia.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_notifications/native/hooks/usePreviewableMedia.tsx",
+);
 
 export const PreviewableMediaTypes = obj;
 export const usePreviewableMedia = function usePreviewableMedia(message) {

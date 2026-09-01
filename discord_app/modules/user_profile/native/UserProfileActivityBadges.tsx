@@ -13,7 +13,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, bold: { fontWeight: "bold" } });
+let closure_7 = createCacheKey.createStyles({
+  container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 },
+  bold: { fontWeight: "bold" },
+});
 const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileActivityBadges.tsx");
 
 export const TimestampBadge = function TimestampBadge(activity) {
@@ -68,7 +71,7 @@ export const TimestampBadge = function TimestampBadge(activity) {
       obj[0] = tmp.container;
       obj = { size: "xxs", color: null };
       obj[1] = tmp10(712).colors.TEXT_FEEDBACK_POSITIVE;
-      const items = [callback(GameControllerIcon, obj), ];
+      const items = [callback(GameControllerIcon, obj)];
       obj1 = { entry: null, style: null };
       const obj2 = { start: null, end: null, isCountDown: null };
       obj2[0] = start;
@@ -87,14 +90,17 @@ export const PartyBadge = function PartyBadge(activity) {
   activity = activity.activity;
   if (!isEmbeddedActivityDefault(activity)) {
     if (null != activity.party) {
-      const richGameStateBadgeText = calculateTimestampDurations.getRichGameStateBadgeText(activity.state, activity.party);
+      const richGameStateBadgeText = calculateTimestampDurations.getRichGameStateBadgeText(
+        activity.state,
+        activity.party,
+      );
       let tmp8 = null;
       if (null != richGameStateBadgeText) {
         let obj = { style: null, children: null };
         obj[0] = tmp.container;
         obj = { size: "xxs", color: null };
         obj[1] = ThemesDefault.colors.TEXT_MUTED;
-        const items = [callback(tmp9(5038).GroupIcon, obj), ];
+        const items = [callback(tmp9(5038).GroupIcon, obj)];
         obj = { variant: "text-sm/medium", color: "text-muted", children: null };
         obj[2] = richGameStateBadgeText;
         items[1] = callback(tmp9(4474).Text, obj);
@@ -120,7 +126,7 @@ export const EpisodeBadge = function EpisodeBadge(activity) {
     obj[0] = tmp.container;
     obj = { size: "xxs", color: null };
     obj[1] = ThemesDefault.colors.TEXT_MUTED;
-    const items = [callback(tmp2(9410).TopicsIcon, obj), ];
+    const items = [callback(tmp2(9410).TopicsIcon, obj)];
     obj1 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj1[2] = episodeBadgeText;
     items[1] = callback(tmp2(4474).Text, obj1);

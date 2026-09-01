@@ -10,7 +10,13 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { profileEffectPreviewContainer: null, sampleProfile: null, noneIcon: null };
-createCacheKey = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, overflow: "hidden" };
+createCacheKey = {
+  height: COLLECTIBLES_PREVIEW_SIZE,
+  width: COLLECTIBLES_PREVIEW_SIZE,
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  overflow: "hidden",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { aspectRatio: require("SAMPLE_PROFILE_ASPECT_RATIO").SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 createCacheKey[2] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
@@ -81,7 +87,15 @@ export default function UserProfileEffectEditButton(isTryItOut) {
     }
   }
   if (isFetching) {
-    obj1 = { label: null, buttonText: null, onPress: null, leading: null, loading: true, disabled: true, hideArrow: true };
+    obj1 = {
+      label: null,
+      buttonText: null,
+      onPress: null,
+      leading: null,
+      loading: true,
+      disabled: true,
+      hideArrow: true,
+    };
     const intl4 = tmp2(tmp3[13]).intl;
     obj1[0] = intl4.string(tmp2(tmp3[13]).t.wR5wOo);
     const intl5 = tmp2(tmp3[13]).intl;
@@ -106,7 +120,7 @@ export default function UserProfileEffectEditButton(isTryItOut) {
       obj6[0] = guildId(tmp3[17]);
       obj5[0] = obj6;
       obj5[1] = tmp.sampleProfile;
-      const items1 = [tmp13(guildId(tmp3[16]), obj5), ];
+      const items1 = [tmp13(guildId(tmp3[16]), obj5)];
       const obj7 = { skuId: null, bannerAdjustment: 0, useThumbnail: true };
       obj7[0] = profilePreviewValue.skuId;
       items1[1] = tmp13(guildId(tmp3[18]), obj7);
@@ -122,4 +136,4 @@ export default function UserProfileEffectEditButton(isTryItOut) {
     obj2[4] = tmp13Result;
   }
   return closure_6(user(isTryItOut[14]).UserProfileEditFormButton, obj2);
-};
+}

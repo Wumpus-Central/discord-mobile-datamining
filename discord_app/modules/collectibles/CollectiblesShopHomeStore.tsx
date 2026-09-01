@@ -13,8 +13,7 @@ const map6 = new Map();
 let c8;
 let c9;
 const Store = initializeDefault.Store;
-class CollectiblesShopHomesStore extends Store {
-}
+class CollectiblesShopHomesStore extends Store {}
 const prototype = CollectiblesShopHomesStore.prototype;
 prototype["getLastSuccessfulFetch"] = function getLastSuccessfulFetch(closure_0) {
   return map.get(closure_0);
@@ -88,7 +87,7 @@ const collectiblesShopHomesStore = new CollectiblesShopHomesStore(dispatcherDefa
     map5.clear();
     c8 = undefined;
     c9 = undefined;
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesShopHomeStore.tsx");
 

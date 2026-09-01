@@ -53,10 +53,13 @@ function handleAVAudioSessionMode() {
 }
 if (set.isAndroid()) {
   set = { setAVAudioSessionMode: null, AVAudioSessionMode: null };
-  set[0] = function setAVAudioSessionMode(VIDEO) {
-
+  set[0] = function setAVAudioSessionMode(VIDEO) {};
+  set[1] = {
+    VOICE: "AVAudioSessionModeVoiceChat",
+    VIDEO: "AVAudioSessionModeVideoChat",
+    LISTEN: "AVAudioSessionModeSpokenAudio",
+    DEFAULT: "AVAudioSessionModeDefault",
   };
-  set[1] = { VOICE: "AVAudioSessionModeVoiceChat", VIDEO: "AVAudioSessionModeVideoChat", LISTEN: "AVAudioSessionModeSpokenAudio", DEFAULT: "AVAudioSessionModeDefault" };
   let VoiceEngine = set;
 } else {
   VoiceEngine = require("get ActivityIndicator").NativeModules.VoiceEngine;
@@ -72,8 +75,7 @@ let prototype = function AudioSessionModeManager() {
   applyArgumentsResult.stores = result3.set(closure_2, handleAVAudioSessionMode);
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 let result = set.fileFinishedImporting("modules/voice_calls/native/AudioSessionModeManager.tsx");
 

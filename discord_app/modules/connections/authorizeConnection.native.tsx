@@ -120,13 +120,15 @@ export default function authorizeConnection(overrideUrl) {
             obj2[0] = _location;
             obj2[1] = successRedirect;
             const tmp28Result2 = tmp28(5350);
-            tmp28(5350).authorize(platformType, obj2).then((body) => {
-              const url = body.body.url;
-              if (null != url) {
-                overrideUrl(table[13]).openURL(url);
-                const obj = overrideUrl(table[13]);
-              }
-            });
+            tmp28(5350)
+              .authorize(platformType, obj2)
+              .then((body) => {
+                const url = body.body.url;
+                if (null != url) {
+                  overrideUrl(table[13]).openURL(url);
+                  const obj = overrideUrl(table[13]);
+                }
+              });
             const authorizeResult = tmp28(5350).authorize(platformType, obj2);
           }
           const obj18 = overrideUrl(5227);
@@ -151,4 +153,4 @@ export default function authorizeConnection(overrideUrl) {
     }
     const obj14 = overrideUrl(9328);
   }
-};
+}

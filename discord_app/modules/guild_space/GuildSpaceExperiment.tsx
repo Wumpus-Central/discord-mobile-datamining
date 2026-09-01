@@ -3,7 +3,13 @@ import set from "../../../_runtime/00002_set.js";
 import createExperiment from "../experiments/index.tsx";
 
 const items = [{ id: 1, label: "Enable Guild Space", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-06_guild_spaces", label: "Guild Space", defaultConfig: { enabled: false }, treatments: items });
+const experiment = createExperiment.createExperiment({
+  kind: "guild",
+  id: "2026-06_guild_spaces",
+  label: "Guild Space",
+  defaultConfig: { enabled: false },
+  treatments: items,
+});
 const result = set.fileFinishedImporting("modules/guild_space/GuildSpaceExperiment.tsx");
 
 export const GuildSpaceExperiment = experiment;

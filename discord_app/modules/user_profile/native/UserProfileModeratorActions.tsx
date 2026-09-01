@@ -23,14 +23,34 @@ function ModeratorActionRow(isDestructive) {
   if (isDestructive.isDestructive) {
     str = "danger";
   }
-  const obj = { label, subLabel: sublabel, icon: jsx(TableRowInner.TableRow.Icon, { IconComponent: icon, variant: str }), arrow: null != hint, variant: str, disabled, onPress, accessibilityLabel: null, accessibilityRole: "button" };
+  const obj = {
+    label,
+    subLabel: sublabel,
+    icon: jsx(TableRowInner.TableRow.Icon, { IconComponent: icon, variant: str }),
+    arrow: null != hint,
+    variant: str,
+    disabled,
+    onPress,
+    accessibilityLabel: null,
+    accessibilityRole: "button",
+  };
   let combined = label;
   if (null != sublabel) {
     const _HermesInternal = HermesInternal;
     combined = "" + label + ", " + sublabel;
   }
   obj[7] = combined;
-  return jsx(TableRowInner.TableRow, { label, subLabel: sublabel, icon: jsx(TableRowInner.TableRow.Icon, { IconComponent: icon, variant: str }), arrow: null != hint, variant: str, disabled, onPress, accessibilityLabel: null, accessibilityRole: "button" });
+  return jsx(TableRowInner.TableRow, {
+    label,
+    subLabel: sublabel,
+    icon: jsx(TableRowInner.TableRow.Icon, { IconComponent: icon, variant: str }),
+    arrow: null != hint,
+    variant: str,
+    disabled,
+    onPress,
+    accessibilityLabel: null,
+    accessibilityRole: "button",
+  });
 }
 noopAll;
 ({ GuildFeatures: closure_12, Permissions: map1 } = ME);
@@ -104,7 +124,19 @@ export default function UserProfileModeratorActions(user) {
   let obj7 = user(showUserProfile[17]);
   const items4 = [closure_10];
   const stateFromStoresObject = obj7.useStateFromStoresObject(items4, () => {
-    const obj = { canKickUser: user(showUserProfile[19]).canKickMember(user, stateFromStores), canBanUser: null, canChangeNick: null, canManageUserRoles: null, canManageGuildRoles: null, canManageGuild: null, canModerateMembers: null, canMoveMembers: null, canMuteMembers: null, canDeafenMembers: null, canModerateStage: null };
+    const obj = {
+      canKickUser: user(showUserProfile[19]).canKickMember(user, stateFromStores),
+      canBanUser: null,
+      canChangeNick: null,
+      canManageUserRoles: null,
+      canManageGuildRoles: null,
+      canManageGuild: null,
+      canModerateMembers: null,
+      canMoveMembers: null,
+      canMuteMembers: null,
+      canDeafenMembers: null,
+      canModerateStage: null,
+    };
     const obj2 = user(showUserProfile[19]);
     const tmp = user;
     const tmp2 = showUserProfile;
@@ -141,7 +173,15 @@ export default function UserProfileModeratorActions(user) {
     return obj;
   });
   ({ canKickUser, canBanUser, canModerateMembers, canMoveMembers } = stateFromStoresObject);
-  ({ canModerateStage, canChangeNick, canManageUserRoles, canManageGuildRoles, canManageGuild, canMuteMembers, canDeafenMembers } = stateFromStoresObject);
+  ({
+    canModerateStage,
+    canChangeNick,
+    canManageUserRoles,
+    canManageGuildRoles,
+    canManageGuild,
+    canMuteMembers,
+    canDeafenMembers,
+  } = stateFromStoresObject);
   if (canModerateMembers) {
     canModerateMembers = canKickUser;
   }
@@ -249,7 +289,8 @@ export default function UserProfileModeratorActions(user) {
       if (tmp22) {
         if (canModerateStage) {
           if (!stateFromStores4) {
-            const tmp31 = tmp4ResultResult === tmp2(tmp3[23]).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+            const tmp31 =
+              tmp4ResultResult === tmp2(tmp3[23]).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
             const intl3 = tmp2(tmp3[26]).intl;
             let string = intl3.string;
             let t = tmp2(tmp3[26]).t;
@@ -276,7 +317,9 @@ export default function UserProfileModeratorActions(user) {
               }
               guildId(showUserProfile[15]).hideActionSheet();
             };
-            items7.push(<ModeratorActionRow key="invite-to-speak" icon={null} label={null} disabled={null} onPress={null} />);
+            items7.push(
+              <ModeratorActionRow key="invite-to-speak" icon={null} label={null} disabled={null} onPress={null} />,
+            );
             const tmp33 = jsx;
             const tmp34 = ModeratorActionRow;
           }
@@ -305,9 +348,23 @@ export default function UserProfileModeratorActions(user) {
           obj[3] = function onSelect(id) {
             return closure_1_1(closure_1_3[34]).setChannel(id2.id, id.id, id.id);
           };
-          obj.openLazy(user(showUserProfile[33])(showUserProfile[32], showUserProfile.paths), "ChannelPicker", obj, "stack");
+          obj.openLazy(
+            user(showUserProfile[33])(showUserProfile[32], showUserProfile.paths),
+            "ChannelPicker",
+            obj,
+            "stack",
+          );
         };
-        items7.push(<ModeratorActionRow key="move-to-channel" label={null} hint={null} sublabel={null} icon={null} onPress={null} />);
+        items7.push(
+          <ModeratorActionRow
+            key="move-to-channel"
+            label={null}
+            hint={null}
+            sublabel={null}
+            icon={null}
+            onPress={null}
+          />,
+        );
         const tmp37 = jsx;
         const tmp38 = ModeratorActionRow;
       }
@@ -348,7 +405,7 @@ export default function UserProfileModeratorActions(user) {
             onRemove() {
               let arr = callback(4723);
               arr = arr.pop();
-            }
+            },
           };
           obj.pushLazy(user(showUserProfile[33])(showUserProfile[37], showUserProfile.paths), obj);
         };
@@ -379,7 +436,11 @@ export default function UserProfileModeratorActions(user) {
           if (num == null) {
             num = 0;
           }
-          obj.setMemberFlags(stateFromStores.id, user.id, user(showUserProfile[38]).setFlag(num, _undefined.BYPASSES_VERIFICATION, false));
+          obj.setMemberFlags(
+            stateFromStores.id,
+            user.id,
+            user(showUserProfile[38]).setFlag(num, _undefined.BYPASSES_VERIFICATION, false),
+          );
         };
         items7.push(<ModeratorActionRow key="unverify" label={null} icon={null} onPress={null} />);
       }
@@ -395,7 +456,11 @@ export default function UserProfileModeratorActions(user) {
           if (num == null) {
             num = 0;
           }
-          obj.setMemberFlags(stateFromStores.id, user.id, user(showUserProfile[38]).setFlag(num, _undefined.BYPASSES_VERIFICATION, true));
+          obj.setMemberFlags(
+            stateFromStores.id,
+            user.id,
+            user(showUserProfile[38]).setFlag(num, _undefined.BYPASSES_VERIFICATION, true),
+          );
         };
         items7.push(<ModeratorActionRow key="verify" label={null} icon={null} onPress={null} />);
       }
@@ -468,7 +533,11 @@ export default function UserProfileModeratorActions(user) {
               obj5[3] = function onPress() {
                 trackUserProfileAction({ action: "PRESS_KICK_USER" });
                 hideActionSheet();
-                guildId(showUserProfile[49])({ guildId: stateFromStores.id, userId: user.id, cancelButtonCallback: showUserProfile });
+                guildId(showUserProfile[49])({
+                  guildId: stateFromStores.id,
+                  userId: user.id,
+                  cancelButtonCallback: showUserProfile,
+                });
               };
               items7.push(<ModeratorActionRow key="kick" label={null} icon={null} isDestructive onPress={null} />);
             }
@@ -479,7 +548,11 @@ export default function UserProfileModeratorActions(user) {
               obj6[1] = tmp2(tmp3[50]).HammerIcon;
               obj6[3] = function onPress() {
                 trackUserProfileAction({ action: "PRESS_BAN_USER" });
-                guildId(showUserProfile[51])({ guildId: stateFromStores.id, userId: user.id, cancelButtonCallback: showUserProfile });
+                guildId(showUserProfile[51])({
+                  guildId: stateFromStores.id,
+                  userId: user.id,
+                  cancelButtonCallback: showUserProfile,
+                });
               };
               items7.push(<ModeratorActionRow key="ban" label={null} icon={null} isDestructive onPress={null} />);
             }
@@ -509,11 +582,19 @@ export default function UserProfileModeratorActions(user) {
                           callback({ action: "PRESS_REMOVE_FROM_THREAD" });
                           closure_1_1(closure_1_3[54]).removeMember(closure_2, id.id, "Context Menu");
                           callback2();
-                        }
+                        },
                       };
                       obj.confirmThreadRemove(obj);
                     };
-                    push(<ModeratorActionRow key="remove-from-thread" isDestructive label={null} icon={null} onPress={null} />);
+                    push(
+                      <ModeratorActionRow
+                        key="remove-from-thread"
+                        isDestructive
+                        label={null}
+                        icon={null}
+                        onPress={null}
+                      />,
+                    );
                   }
                 }
               }
@@ -530,7 +611,11 @@ export default function UserProfileModeratorActions(user) {
               const obj8 = { hasIcons: true, children: null };
               obj8[1] = items7;
               obj7[3] = jsx(tmp2(tmp3[56]).TableRowGroup, { hasIcons: true, children: null });
-              tmp87 = <tmp4Result title={null} style={null} titleStyle={null}>{null}</tmp4Result>;
+              tmp87 = (
+                <tmp4Result title={null} style={null} titleStyle={null}>
+                  {null}
+                </tmp4Result>
+              );
             }
             return tmp87;
           } else {
@@ -626,4 +711,4 @@ export default function UserProfileModeratorActions(user) {
       const tmp28 = ModeratorActionRow;
     }
   }
-};
+}

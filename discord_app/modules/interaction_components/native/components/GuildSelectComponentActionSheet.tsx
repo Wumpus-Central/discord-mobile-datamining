@@ -12,8 +12,14 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ guildIdentity: { flexDirection: "row", alignItems: "center" }, iconContainer: { marginRight: 16 }, avatar: { marginRight: 4 } });
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/components/GuildSelectComponentActionSheet.tsx");
+let closure_10 = createCacheKey.createStyles({
+  guildIdentity: { flexDirection: "row", alignItems: "center" },
+  iconContainer: { marginRight: 16 },
+  avatar: { marginRight: 4 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/native/components/GuildSelectComponentActionSheet.tsx",
+);
 
 export default function GuildSelectComponentActionSheet(arg0) {
   ({ selectedGuild, onSelectGuild: require, user: importDefault } = arg0);
@@ -27,7 +33,12 @@ export default function GuildSelectComponentActionSheet(arg0) {
   let obj = first1;
   const tmp2 = first(first1.useState(""), 2);
   first = tmp2[0];
-  obj = { type: ActionComponentState.SelectOptionType.GUILD, value: selectedGuild.id, label: selectedGuild.name, guild: selectedGuild };
+  obj = {
+    type: ActionComponentState.SelectOptionType.GUILD,
+    value: selectedGuild.id,
+    label: selectedGuild.name,
+    guild: selectedGuild,
+  };
   const tmp6 = first(first1.useState(obj), 2);
   first1 = tmp6[0];
   closure_5 = tmp6[1];
@@ -104,11 +115,15 @@ export default function GuildSelectComponentActionSheet(arg0) {
         obj[3] = guild.guild.id;
         tmp8 = closure_1_8(closure_1_0(tmp3[13]).Avatar, obj);
       }
-      const items = [tmp8, ];
+      const items = [tmp8];
       if (username == null) {
         username = tmp.username;
       }
-      items[1] = closure_1_8(closure_1_0(guildIdentity[14]).Text, { variant: "text-sm/medium", color: "text-default", children: username });
+      items[1] = closure_1_8(closure_1_0(guildIdentity[14]).Text, {
+        variant: "text-sm/medium",
+        color: "text-default",
+        children: username,
+      });
       obj[1] = items;
       return closure_1_9(closure_5, obj);
     },
@@ -129,6 +144,6 @@ export default function GuildSelectComponentActionSheet(arg0) {
       return label.label;
     },
     allowEmpty: false,
-    expanded: true
+    expanded: true,
   });
-};
+}

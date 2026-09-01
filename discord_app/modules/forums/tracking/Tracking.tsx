@@ -222,7 +222,9 @@ export const trackForumMorePostsLoaded = function trackForumMorePostsLoaded(arg0
   obj = {};
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   const obj3 = collectGuildAnalyticsMetadata;
-  const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(store.getChannel(channelId)));
+  const merged1 = Object.assign(
+    collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(store.getChannel(channelId)),
+  );
   const obj4 = collectGuildAnalyticsMetadata;
   const merged2 = Object.assign(collectForumAnalyticsMetadata.collectForumAnalyticsMetadata({ channelId }));
   obj.guild_id = guildId;
@@ -273,19 +275,30 @@ export const trackForumLayoutUpdated = function trackForumLayoutUpdated(channelI
 };
 export const trackForumPostLinkCopied = function trackForumPostLinkCopied(arg0) {
   ({ postId, location: _location } = arg0);
-  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.FORUM_POST_LINK_COPIED, { forum_post_id: postId, location: _location });
+  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.FORUM_POST_LINK_COPIED, {
+    forum_post_id: postId,
+    location: _location,
+  });
 };
 export const trackForumOnboardingClicked = function trackForumOnboardingClicked(onboarding_cta_type) {
-  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.FORUM_CHANNEL_ONBOARDING_CLICKED, { onboarding_cta_type: onboarding_cta_type.onboardingCTA });
+  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.FORUM_CHANNEL_ONBOARDING_CLICKED, {
+    onboarding_cta_type: onboarding_cta_type.onboardingCTA,
+  });
 };
 export const trackForumUpsellModalClicked = function trackForumUpsellModalClicked(forum_demo_id) {
-  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.FORUM_UPSELL_MODAL_CLICKED, { forum_demo_id: forum_demo_id.forumDemoId });
+  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.FORUM_UPSELL_MODAL_CLICKED, {
+    forum_demo_id: forum_demo_id.forumDemoId,
+  });
 };
 export const trackForumAddMediaToOriginalPostClicked = function trackForumAddMediaToOriginalPostClicked(added) {
-  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_CLICKED, { added: added.added });
+  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_CLICKED, {
+    added: added.added,
+  });
 };
 export const trackForumChannelMediaUploaderClicked = function trackForumChannelMediaUploaderClicked(is_mobile) {
-  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.FORUM_CHANNEL_MEDIA_UPLOADER_CLICKED, { is_mobile: is_mobile.isMobile });
+  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.FORUM_CHANNEL_MEDIA_UPLOADER_CLICKED, {
+    is_mobile: is_mobile.isMobile,
+  });
 };
 export const trackForumEnableAutomodClicked = function trackForumEnableAutomodClicked() {
   collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.FORUM_CHANNEL_ENABLE_AUTOMOD_CLICKED);
@@ -312,7 +325,12 @@ export const trackForumPostSidebarViewed = function trackForumPostSidebarViewed(
 };
 export const trackMobileForumComposerOpened = function trackMobileForumComposerOpened(arg0) {
   ({ guildId, channelId, location: _location } = arg0);
-  expandEventPropertiesDefault.track(constants.OPEN_MODAL, { type: "Create Forum Post", guild_id: guildId, channel_id: channelId, location: _location });
+  expandEventPropertiesDefault.track(constants.OPEN_MODAL, {
+    type: "Create Forum Post",
+    guild_id: guildId,
+    channel_id: channelId,
+    location: _location,
+  });
 };
 export const trackMobileForumComposerDismissed = function trackMobileForumComposerDismissed() {
   expandEventPropertiesDefault.track(constants.MODAL_DISMISSED, { type: "Create Forum Post" });

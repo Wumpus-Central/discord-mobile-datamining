@@ -10,8 +10,7 @@ let c5 = "";
 let c6 = false;
 let closure_7 = { viewNonce: "", regenerateNonce: "" };
 const Store = initializeDefault.Store;
-class MFAStore extends Store {
-}
+class MFAStore extends Store {}
 const prototype = MFAStore.prototype;
 prototype["getVerificationKey"] = function getVerificationKey() {
   return c5;
@@ -23,7 +22,7 @@ Object.defineProperty(prototype, "togglingSMS", {
   get: function togglingSMS() {
     return c3;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getNonces"] = function getNonces() {
   return closure_7;
@@ -32,7 +31,7 @@ Object.defineProperty(prototype, "hasSeenBackupPrompt", {
   get: function hasSeenBackupPrompt() {
     return c6;
   },
-  set: undefined
+  set: undefined,
 });
 MFAStore.displayName = "MFAStore";
 const mFAStore = new MFAStore(dispatcherDefault, {
@@ -66,9 +65,7 @@ const mFAStore = new MFAStore(dispatcherDefault, {
   MFA_SEEN_BACKUP_CODE_PROMPT: function handleSeenBackupPrompt() {
     c6 = true;
   },
-  CONNECTION_OPEN() {
-
-  }
+  CONNECTION_OPEN() {},
 });
 const result = require("set").fileFinishedImporting("stores/MFAStore.tsx");
 

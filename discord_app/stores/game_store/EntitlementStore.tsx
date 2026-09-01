@@ -60,8 +60,7 @@ let set = new Set();
 let set1 = new Set();
 let closure_18 = {};
 const Store = initializeAll.Store;
-class EntitlementStore extends Store {
-}
+class EntitlementStore extends Store {}
 const prototype = EntitlementStore.prototype;
 prototype["initialize"] = function initialize() {
   const items = [closure_4];
@@ -105,31 +104,31 @@ Object.defineProperty(prototype, "fetchingAllEntitlements", {
   get: function fetchingAllEntitlements() {
     return c13;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "fetchedAllEntitlements", {
   get: function fetchedAllEntitlements() {
     return c14;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "fetchedEndedEntitlements", {
   get: function fetchedEndedEntitlements() {
     return c15;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "applicationIdsFetching", {
   get: function applicationIdsFetching() {
     return set;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "applicationIdsFetched", {
   get: function applicationIdsFetched() {
     return set1;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isFetchingForApplication"] = function isFetchingForApplication(arg0) {
   let fetchingAllEntitlements = this.fetchingAllEntitlements;
@@ -271,7 +270,8 @@ prototype["getUnactivatedFractionalPremiumUnits"] = function getUnactivatedFract
   const forApplication = this.getForApplication(closure_8);
   if (forApplication != null) {
     const item = forApplication.forEach((skuId) => {
-      const ACTIVE_FRACTIONAL_PREMIUM_SKUS = items(closure_1_2[8]).FractionalPremiumSKUsSets.ACTIVE_FRACTIONAL_PREMIUM_SKUS;
+      const ACTIVE_FRACTIONAL_PREMIUM_SKUS = items(closure_1_2[8]).FractionalPremiumSKUsSets
+        .ACTIVE_FRACTIONAL_PREMIUM_SKUS;
       if (tmp) {
         items.push(skuId);
       }
@@ -299,9 +299,7 @@ const entitlementStore = new EntitlementStore(dispatcherDefault, {
       continue;
     }
   },
-  ENTITLEMENT_FETCH_APPLICATION_FAIL: function handleEntitlementApplicationFail() {
-
-  },
+  ENTITLEMENT_FETCH_APPLICATION_FAIL: function handleEntitlementApplicationFail() {},
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function handleEntitlementsGiftableFetchSuccess(entitlements) {
     entitlements = entitlements.entitlements;
     closure_10 = {};
@@ -371,7 +369,7 @@ const entitlementStore = new EntitlementStore(dispatcherDefault, {
     c14 = false;
     c13 = false;
     c15 = false;
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/game_store/EntitlementStore.tsx");
 

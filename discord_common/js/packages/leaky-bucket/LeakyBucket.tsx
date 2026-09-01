@@ -69,16 +69,20 @@ prototype["process"] = function process(arg0) {
       let _queue = obj._queue;
       _queue.push(obj);
       if (obj) {
-        const listener = obj.addEventListener("abort", () => {
-          const _queue = obj._queue;
-          const index = _queue.indexOf(obj);
-          if (index >= 0) {
-            const _queue1 = obj._queue;
-            _queue1.splice(index, 1);
-          }
-          error = new Error("Aborted");
-          callback(error);
-        }, { once: true });
+        const listener = obj.addEventListener(
+          "abort",
+          () => {
+            const _queue = obj._queue;
+            const index = _queue.indexOf(obj);
+            if (index >= 0) {
+              const _queue1 = obj._queue;
+              _queue1.splice(index, 1);
+            }
+            error = new Error("Aborted");
+            callback(error);
+          },
+          { once: true },
+        );
       }
       obj._processQueue();
       const obj3 = obj;

@@ -9,4 +9,4 @@ export default function useWideAuthView() {
   const tmp = useIsWindowLargeDefault();
   const obj = isMetaQuest;
   return isMetaQuest.isMetaQuest() || tmp;
-};
+}

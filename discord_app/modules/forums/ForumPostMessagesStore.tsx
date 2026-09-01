@@ -68,8 +68,7 @@ function handleReaction(colors) {
 }
 let closure_5 = {};
 const Store = initializeDefault.Store;
-class ForumPostMessagesStore extends Store {
-}
+class ForumPostMessagesStore extends Store {}
 const prototype = ForumPostMessagesStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_4);
@@ -97,7 +96,8 @@ const forumPostMessagesStore = new ForumPostMessagesStore(dispatcherDefault, {
     let tmp = !isPushNotification;
     if (!isPushNotification) {
       let obj = DISCORD_EPOCHDefault;
-      const tmp4 = isPushNotification.message.id === obj.castChannelIdAsMessageId(isPushNotification.message.channel_id);
+      const tmp4 =
+        isPushNotification.message.id === obj.castChannelIdAsMessageId(isPushNotification.message.channel_id);
       if (tmp4) {
         const message = isPushNotification.message;
         let messageRecord = null;
@@ -249,7 +249,7 @@ const forumPostMessagesStore = new ForumPostMessagesStore(dispatcherDefault, {
       closure_5[channelId] = obj;
       const obj3 = createMinimalMessageRecord;
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/forums/ForumPostMessagesStore.tsx");
 

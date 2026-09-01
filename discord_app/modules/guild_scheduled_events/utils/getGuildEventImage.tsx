@@ -30,4 +30,4 @@ export default function getGuildEventImageURL(image, size) {
     const _HermesInternal2 = HermesInternal;
     return combined + "?size=" + bestMediaProxySize;
   }
-};
+}

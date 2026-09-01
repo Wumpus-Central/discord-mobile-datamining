@@ -46,4 +46,4 @@ export default function useGeoForUser() {
   }
   obj[2] = subdivisionCode;
   return obj;
-};
+}

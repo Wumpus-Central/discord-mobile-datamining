@@ -23,7 +23,9 @@ let obj2 = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { width: 64, height: 64, borderRadius: ThemesDefault.radii.sm };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { width: 64, height: 64, borderRadius: ThemesDefault.radii.sm };
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsAccountLinkingScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsAccountLinkingScreen.tsx",
+);
 
 export default function DevToolsAccountLinkingScreen() {
   const tmp = callback();
@@ -100,7 +102,7 @@ export default function DevToolsAccountLinkingScreen() {
     str2 = mapped.join(", ");
   }
   obj = { style: tmp.container, contentContainerStyle: null, children: null };
-  const items5 = [tmp.scrollContainer, ];
+  const items5 = [tmp.scrollContainer];
   obj = { paddingBottom: tmp4.bottom + tmp2(712).space.PX_16 };
   items5[1] = obj;
   obj[1] = items5;
@@ -121,7 +123,7 @@ export default function DevToolsAccountLinkingScreen() {
           onPress() {
             return closure_1_1(name.id);
           },
-          trailing: null
+          trailing: null,
         };
         let tmpResult;
         if (closure_0 === name.id) {
@@ -135,7 +137,7 @@ export default function DevToolsAccountLinkingScreen() {
     }
   } else {
     obj1[2] = tmp18(tmp8(5599).TableRow, { label: "No guild selected" });
-    const items6 = [tmp18(tmp8(5992).TableRowGroup, obj1), , , ];
+    const items6 = [tmp18(tmp8(5992).TableRowGroup, obj1), , ,];
     obj2 = { style: null, children: null };
     const obj3 = { padding: null };
     obj3[0] = tmp2(712).space.PX_12;
@@ -144,7 +146,7 @@ export default function DevToolsAccountLinkingScreen() {
     obj4[1] = first;
     obj4[2] = tmp7;
     obj2[1] = tmp18(tmp8(7705).TextInput, obj4);
-    const items7 = [tmp18(closure_7, obj2), , ];
+    const items7 = [tmp18(closure_7, obj2), ,];
     if (null != getOrFetchApplication) {
       str = getOrFetchApplication.name;
     }
@@ -172,7 +174,7 @@ export default function DevToolsAccountLinkingScreen() {
     const obj9 = { label: "Connection Entrypoint URL", trailing: null };
     obj8[2] = str7;
     obj9[1] = tmp18(tmp8(4474).Text, obj8);
-    const items8 = [tmp18(tmp8(5599).TableRow, obj9), , ];
+    const items8 = [tmp18(tmp8(5599).TableRow, obj9), ,];
     let str8 = "text-muted";
     if (hasAlreadyLinked) {
       str8 = "text-feedback-positive";
@@ -195,7 +197,7 @@ export default function DevToolsAccountLinkingScreen() {
     obj14[1] = function onPress() {
       return callback({});
     };
-    const items9 = [tmp18(tmp8(4928).Button, obj14), ];
+    const items9 = [tmp18(tmp8(4928).Button, obj14)];
     const obj15 = { disabled: null, onPress: null, variant: "critical-primary", text: "Deauthorize" };
     obj15[0] = !tmp15;
     obj15[1] = callback;
@@ -224,7 +226,7 @@ export default function DevToolsAccountLinkingScreen() {
         obj16[1] = tmp18(connectionApp, obj18);
         tmp18Result = tmp18(tmp22, obj16);
       }
-      const items10 = [tmp18Result, ];
+      const items10 = [tmp18Result];
       let str10 = connectionApp.applicationAccountLinkBenefitConfig.reward_name;
       if (str10 == null) {
         str10 = "Unnamed Reward";
@@ -241,4 +243,4 @@ export default function DevToolsAccountLinkingScreen() {
     obj[2] = items6;
     return tmp16(closure_6, obj);
   }
-};
+}

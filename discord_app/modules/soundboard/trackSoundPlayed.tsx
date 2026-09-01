@@ -36,7 +36,22 @@ export default function trackSoundPlayed(location_stack, in_overlay, guildId) {
     }
     str = str2;
   }
-  const obj = { feature_name: constants.SOUNDBOARD_PLAY, feature_tier: tmp6 ? tmp8.PREMIUM_STANDARD : tmp8.FREE, guild_id: guildId, home_guild_id: guildId.guildId, location_stack, rtc_connection_id: rTCConnectionId, media_session_id: mediaSessionId, in_overlay, application_name: name, emoji_count: null, feature_selection: null, feature_selection_id: null, sound_type: null, sequence_number: null };
+  const obj = {
+    feature_name: constants.SOUNDBOARD_PLAY,
+    feature_tier: tmp6 ? tmp8.PREMIUM_STANDARD : tmp8.FREE,
+    guild_id: guildId,
+    home_guild_id: guildId.guildId,
+    location_stack,
+    rtc_connection_id: rTCConnectionId,
+    media_session_id: mediaSessionId,
+    in_overlay,
+    application_name: name,
+    emoji_count: null,
+    feature_selection: null,
+    feature_selection_id: null,
+    sound_type: null,
+    sequence_number: null,
+  };
   if (null != guildId.emojiId) {
     let num = 1;
   } else {
@@ -52,4 +67,4 @@ export default function trackSoundPlayed(location_stack, in_overlay, guildId) {
   }
   obj[13] = sum;
   expandEventPropertiesDefault.track(AnalyticEvents.PREMIUM_FEATURE_USAGE, obj);
-};
+}

@@ -9,38 +9,38 @@ class VirtualCurrencyStore extends Store {
     closure_0 = undefined;
     obj = {
       VIRTUAL_CURRENCY_REDEEM_START(skuId) {
-            return obj.handleRedeemVirtualCurrencyStart(skuId);
-          },
+        return obj.handleRedeemVirtualCurrencyStart(skuId);
+      },
       VIRTUAL_CURRENCY_REDEEM_SUCCESS(entitlements) {
-            return obj.handleRedeemVirtualCurrencySuccess(entitlements);
-          },
+        return obj.handleRedeemVirtualCurrencySuccess(entitlements);
+      },
       VIRTUAL_CURRENCY_REDEEM_FAIL(error) {
-            return obj.handleRedeemVirtualCurrencyFail(error);
-          },
+        return obj.handleRedeemVirtualCurrencyFail(error);
+      },
       VIRTUAL_CURRENCY_BALANCE_FETCH(arg0) {
-            return obj.handleBalanceFetch(arg0);
-          },
+        return obj.handleBalanceFetch(arg0);
+      },
       VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS(balance) {
-            return obj.handleBalanceFetchSuccess(balance);
-          },
+        return obj.handleBalanceFetchSuccess(balance);
+      },
       VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL(error) {
-            return obj.handleBalanceFetchFail(error);
-          },
+        return obj.handleBalanceFetchFail(error);
+      },
       VIRTUAL_CURRENCY_BALANCE_UPDATE(arg0) {
-            return obj.handleBalanceUpdate(arg0);
-          },
+        return obj.handleBalanceUpdate(arg0);
+      },
       VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN(arg0) {
-            return obj.handleOnboardingModalOpen(arg0);
-          },
+        return obj.handleOnboardingModalOpen(arg0);
+      },
       VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET(arg0) {
-            return obj.handleOnboardingModalReset(arg0);
-          },
+        return obj.handleOnboardingModalReset(arg0);
+      },
       LOGIN_SUCCESS() {
-            return obj.handleBalanceStateReset();
-          },
+        return obj.handleBalanceStateReset();
+      },
       VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY(balancePillOverlay) {
-            const result = obj.setBalancePillOverlay(balancePillOverlay.balancePillOverlay);
-          }
+        const result = obj.setBalancePillOverlay(balancePillOverlay.balancePillOverlay);
+      },
     };
     tmp2 = new tmp2(require("dispatcher"), obj, new.target, tmp2, tmp, new.target, undefined);
     // ThrowIfThisInitialized (0x7c)
@@ -62,55 +62,55 @@ Object.defineProperty(prototype, "redeemError", {
   get: function redeemError() {
     return this._redeemVirtualCurrencyError;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isRedeeming", {
   get: function isRedeeming() {
     return this._isRedeemingVirtualCurrency;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "redeemingSkuId", {
   get: function redeemingSkuId() {
     return this._redeemingSkuId;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "entitlements", {
   get: function entitlements(preorder_release_at) {
     return this._entitlements;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "balance", {
   get: function balance(arg0) {
     return this._balance;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "fetchBalanceError", {
   get: function fetchBalanceError() {
     return this._fetchBalanceError;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isFetchingBalance", {
   get: function isFetchingBalance() {
     return this._isFetchingBalance;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "onboardingModalOpenedPrior", {
   get: function onboardingModalOpenedPrior() {
     return this._onboardingModalOpenedPrior;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "balancePillOverlay", {
   get: function balancePillOverlay() {
     return this._balancePillOverlay;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["setBalancePillOverlay"] = function setBalancePillOverlay(_balancePillOverlay) {
   this._balancePillOverlay = _balancePillOverlay;
@@ -179,41 +179,52 @@ function handleOnboardingModalReset(arg0) {
 prototype["handleOnboardingModalReset"] = handleOnboardingModalReset;
 VirtualCurrencyStore.displayName = "VirtualCurrencyStore";
 object = undefined;
-object = new Object(dispatcherDefault, {
-  VIRTUAL_CURRENCY_REDEEM_START(skuId) {
-    return obj.handleRedeemVirtualCurrencyStart(skuId);
+object = new Object(
+  dispatcherDefault,
+  {
+    VIRTUAL_CURRENCY_REDEEM_START(skuId) {
+      return obj.handleRedeemVirtualCurrencyStart(skuId);
+    },
+    VIRTUAL_CURRENCY_REDEEM_SUCCESS(entitlements) {
+      return obj.handleRedeemVirtualCurrencySuccess(entitlements);
+    },
+    VIRTUAL_CURRENCY_REDEEM_FAIL(error) {
+      return obj.handleRedeemVirtualCurrencyFail(error);
+    },
+    VIRTUAL_CURRENCY_BALANCE_FETCH(arg0) {
+      return obj.handleBalanceFetch(arg0);
+    },
+    VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS(balance) {
+      return obj.handleBalanceFetchSuccess(balance);
+    },
+    VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL(error) {
+      return obj.handleBalanceFetchFail(error);
+    },
+    VIRTUAL_CURRENCY_BALANCE_UPDATE(arg0) {
+      return obj.handleBalanceUpdate(arg0);
+    },
+    VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN(arg0) {
+      return obj.handleOnboardingModalOpen(arg0);
+    },
+    VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET(arg0) {
+      return obj.handleOnboardingModalReset(arg0);
+    },
+    LOGIN_SUCCESS() {
+      return obj.handleBalanceStateReset();
+    },
+    VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY(balancePillOverlay) {
+      const result = obj.setBalancePillOverlay(balancePillOverlay.balancePillOverlay);
+    },
   },
-  VIRTUAL_CURRENCY_REDEEM_SUCCESS(entitlements) {
-    return obj.handleRedeemVirtualCurrencySuccess(entitlements);
-  },
-  VIRTUAL_CURRENCY_REDEEM_FAIL(error) {
-    return obj.handleRedeemVirtualCurrencyFail(error);
-  },
-  VIRTUAL_CURRENCY_BALANCE_FETCH(arg0) {
-    return obj.handleBalanceFetch(arg0);
-  },
-  VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS(balance) {
-    return obj.handleBalanceFetchSuccess(balance);
-  },
-  VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL(error) {
-    return obj.handleBalanceFetchFail(error);
-  },
-  VIRTUAL_CURRENCY_BALANCE_UPDATE(arg0) {
-    return obj.handleBalanceUpdate(arg0);
-  },
-  VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN(arg0) {
-    return obj.handleOnboardingModalOpen(arg0);
-  },
-  VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET(arg0) {
-    return obj.handleOnboardingModalReset(arg0);
-  },
-  LOGIN_SUCCESS() {
-    return obj.handleBalanceStateReset();
-  },
-  VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY(balancePillOverlay) {
-    const result = obj.setBalancePillOverlay(balancePillOverlay.balancePillOverlay);
-  }
-}, tmp, VirtualCurrencyStore, Object, prototype, new.target, undefined, handleOnboardingModalReset, dependencyMap);
+  tmp,
+  VirtualCurrencyStore,
+  Object,
+  prototype,
+  new.target,
+  undefined,
+  handleOnboardingModalReset,
+  dependencyMap,
+);
 // ThrowIfThisInitialized (0x7c)
 object._entitlements = null;
 object._redeemingSkuId = null;

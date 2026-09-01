@@ -9,7 +9,7 @@ function _importWithRetry() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       const callback = tmp3;
       ({ createPromise: c0, webpackId: c1, name: c2 } = lib);
       yield "PX_16";

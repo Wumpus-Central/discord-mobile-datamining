@@ -10,4 +10,4 @@ const result = require("set").fileFinishedImporting("design/void/NitroWheel/nati
 export default function NitroWheel(style) {
   const obj = { source: registerAssetDefault, style: style.style, resizeMode: "contain" };
   return jsx(preloadDefault, { source: registerAssetDefault, style: style.style, resizeMode: "contain" });
-};
+}

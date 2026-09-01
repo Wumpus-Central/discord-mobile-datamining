@@ -19,7 +19,11 @@ function handleUpdateVADPermission() {
       guildId = channel.getGuildId();
     }
     voiceState = voiceState.getVoiceState(guildId, id.getId());
-    let canResult = mode.getMode() !== constants.VOICE_ACTIVITY || null == channel || channel.isPrivate() || channel.isGuildStageVoice();
+    let canResult =
+      mode.getMode() !== constants.VOICE_ACTIVITY ||
+      null == channel ||
+      channel.isPrivate() ||
+      channel.isGuildStageVoice();
     if (!canResult) {
       canResult = closure_5.can(constants2.USE_VAD, channel);
     }
@@ -43,8 +47,7 @@ function handleUpdateVADPermission() {
 let c10 = true;
 let c11 = true;
 const Store = initializeDefault.Store;
-class PermissionVADStore extends Store {
-}
+class PermissionVADStore extends Store {}
 const prototype = PermissionVADStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3, closure_4, closure_5, closure_6, closure_7);
@@ -81,7 +84,7 @@ const permissionVADStore = new PermissionVADStore(dispatcherDefault, {
   },
   PERMISSION_CLEAR_VAD_WARNING: function handleClearWarning() {
     c11 = true;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/PermissionVADStore.tsx");
 

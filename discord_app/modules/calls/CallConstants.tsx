@@ -1,15 +1,40 @@
 // discord_app/modules/calls/CallConstants.tsx
 import set from "../../../_runtime/00002_set.js";
 
-let obj = { STREAM: 0, [0]: "STREAM", HIDDEN_STREAM: 1, [1]: "HIDDEN_STREAM", USER: 2, [2]: "USER", ACTIVITY: 3, [3]: "ACTIVITY" };
+let obj = {
+  STREAM: 0,
+  [0]: "STREAM",
+  HIDDEN_STREAM: 1,
+  [1]: "HIDDEN_STREAM",
+  USER: 2,
+  [2]: "USER",
+  ACTIVITY: 3,
+  [3]: "ACTIVITY",
+};
 obj = { VIDEO: 0, [0]: "VIDEO", CAMERA_PREVIEW: 1, [1]: "CAMERA_PREVIEW" };
 const result = set.fileFinishedImporting("modules/calls/CallConstants.tsx");
 
 export const ParticipantTypes = obj;
 export const ContextMenuTileTypes = { STREAM: "STREAM", USER: "USER", ACTIVITY: "ACTIVITY" };
 export const ParticipantSelectionTypes = { NONE: "NONE", AUTO: "AUTO" };
-export const VoicePlatforms = { DESKTOP: 0, [0]: "DESKTOP", MOBILE: 1, [1]: "MOBILE", XBOX: 2, [2]: "XBOX", PLAYSTATION: 3, [3]: "PLAYSTATION", QUEST: 4, [4]: "QUEST" };
-export const CallMenuEntrypoint = { CONTEXT_MENU: "Context Menu", THREE_DOT: "Three-Dot", CARET: "Caret", OTHER_BUTTON: "Other Button" };
+export const VoicePlatforms = {
+  DESKTOP: 0,
+  [0]: "DESKTOP",
+  MOBILE: 1,
+  [1]: "MOBILE",
+  XBOX: 2,
+  [2]: "XBOX",
+  PLAYSTATION: 3,
+  [3]: "PLAYSTATION",
+  QUEST: 4,
+  [4]: "QUEST",
+};
+export const CallMenuEntrypoint = {
+  CONTEXT_MENU: "Context Menu",
+  THREE_DOT: "Three-Dot",
+  CARET: "Caret",
+  OTHER_BUTTON: "Other Button",
+};
 export const isStreamParticipant = function isStreamParticipant(stateFromStores) {
   let type;
   if (stateFromStores != null) {

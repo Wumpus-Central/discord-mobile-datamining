@@ -16,7 +16,13 @@ export const getProtoFieldClass = function getProtoFieldClass(PreloadedUserSetti
     return found.T();
   }
 };
-export const createModifiedProto = function createModifiedProto(closure_1, c2, closure_0, PreloadedUserSettings, closure_02) {
+export const createModifiedProto = function createModifiedProto(
+  closure_1,
+  c2,
+  closure_0,
+  PreloadedUserSettings,
+  closure_02,
+) {
   if (null != closure_1) {
     let fromBinaryResult = closure_0.fromBinary(closure_0.toBinary(closure_1), b64ToProto.BINARY_READ_OPTIONS);
     const toBinaryResult = closure_0.toBinary(closure_1);

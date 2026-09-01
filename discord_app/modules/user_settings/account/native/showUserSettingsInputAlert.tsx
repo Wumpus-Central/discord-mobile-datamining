@@ -5,7 +5,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/showUserSettingsInputAlert.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/account/native/showUserSettingsInputAlert.tsx",
+);
 
 export default function showUserSettingsInputAlert(arg0) {
   ({ onSubmit: require, onSuccess: importDefault, onError: dependencyMap } = arg0);
@@ -35,7 +37,7 @@ export default function showUserSettingsInputAlert(arg0) {
           return closure_2_3(closure_0, obj);
         };
       });
-    }
+    },
   };
   obj.openLazy(obj);
-};
+}

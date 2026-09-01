@@ -36,4 +36,4 @@ export default function SettingsItemAppIcon(color) {
     return tmp11;
   }
   tmp11 = jsx(ClydeIcon.ClydeIcon, { color: INTERACTIVE_ICON_DEFAULT });
-};
+}

@@ -28,19 +28,23 @@ createToggle = {
     let hasPremiumSubscriptionToDisplay = getPremiumPlanItem.useHasPremiumSubscriptionToDisplay();
     const obj = getPremiumPlanItem;
     if (hasPremiumSubscriptionToDisplay) {
-      hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({ location: "useShowManageSubscriptionsSetting" });
+      hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({
+        location: "useShowManageSubscriptionsSetting",
+      });
     }
     return hasPremiumSubscriptionToDisplay;
   },
-  screen: createToggle
+  screen: createToggle,
 };
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM_MANAGE_PLAN,
   getComponent() {
     return PremiumPlanSelectSettingScreen /* PremiumPlanSelectSettingScreen */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx",
+);
 
 export default createToggle;

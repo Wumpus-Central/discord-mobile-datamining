@@ -16,13 +16,17 @@ noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { header: null, text: null };
 createCacheKey = {};
-const merged = Object.assign(importDefaultResult(require("ME").Fonts.PRIMARY_BOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+const merged = Object.assign(
+  importDefaultResult(require("ME").Fonts.PRIMARY_BOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
+);
 createCacheKey.textAlign = "center";
 createCacheKey.marginVertical = 12;
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginVertical: 8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_limited_access/native/GuildLimitedAccessInfoAlert.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_limited_access/native/GuildLimitedAccessInfoAlert.tsx",
+);
 
 export default function GuildLimitedAccessInfoAlert(arg0) {
   ({ guildId, onClose } = arg0);
@@ -44,7 +48,10 @@ export default function GuildLimitedAccessInfoAlert(arg0) {
   obj1 = { style: tmp.header, children: null };
   const intl3 = tmp2(1236).intl;
   obj1[1] = intl3.string(getSystemLocale.t.kJwpBW);
-  const items = [callback(Button.LegacyText, obj1), callback(Text.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 })];
+  const items = [
+    callback(Button.LegacyText, obj1),
+    callback(Text.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 }),
+  ];
   obj[1] = items;
   return callback2(componentDidMountDefault, obj);
-};
+}

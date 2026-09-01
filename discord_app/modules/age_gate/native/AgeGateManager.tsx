@@ -16,7 +16,13 @@ initializeDefault;
 class AgeGateManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen, CHANNEL_SELECT: applyArgumentsResult.handleChannelSelect, AGE_GATE_MODAL_OPEN: applyArgumentsResult.handleAgeGateModalOpen, AGE_GATE_MODAL_CLOSE: applyArgumentsResult.handleAgeGateModalClose, GUILD_UPDATE: applyArgumentsResult.handleGuildUpdate };
+    applyArgumentsResult.actions = {
+      POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen,
+      CHANNEL_SELECT: applyArgumentsResult.handleChannelSelect,
+      AGE_GATE_MODAL_OPEN: applyArgumentsResult.handleAgeGateModalOpen,
+      AGE_GATE_MODAL_CLOSE: applyArgumentsResult.handleAgeGateModalClose,
+      GUILD_UPDATE: applyArgumentsResult.handleGuildUpdate,
+    };
     return applyArgumentsResult;
   }
 }
@@ -44,18 +50,22 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(source) {
   source = source.source;
-  _modDef4723.pushLazy(callback(function*() {
-    closure_1 = tmp5;
-    closure_0 = tmp2;
-    yield closure_1_0(paths[10])(paths[9], paths.paths);
-    closure_0 = arg1.default;
-    if (closure_0 === closure_1_8.AUTH) {
-      const obj = { animation: null };
-      obj[0] = closure_1_0(paths[11]).ModalAnimation.SLIDE_IN_OUT;
-      closure_1_0.modalConfig = obj;
-    }
-    return closure_1_0;
-  }), { source }, closure_7);
+  _modDef4723.pushLazy(
+    callback(function* () {
+      closure_1 = tmp5;
+      closure_0 = tmp2;
+      yield closure_1_0(paths[10])(paths[9], paths.paths);
+      closure_0 = arg1.default;
+      if (closure_0 === closure_1_8.AUTH) {
+        const obj = { animation: null };
+        obj[0] = closure_1_0(paths[11]).ModalAnimation.SLIDE_IN_OUT;
+        closure_1_0.modalConfig = obj;
+      }
+      return closure_1_0;
+    }),
+    { source },
+    closure_7,
+  );
 };
 prototype["handleAgeGateModalClose"] = function handleAgeGateModalClose() {
   _modDef4723.popWithKey(closure_7);

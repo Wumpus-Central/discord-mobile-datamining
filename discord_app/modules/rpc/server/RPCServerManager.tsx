@@ -21,7 +21,13 @@ import { FrameLayoutModes } from "../../frames/FramesConstants.tsx";
 import { MediaEngineContextTypes } from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
 
 require = arg1;
-({ ActivityActionTypes: closure_17, RelationshipTypes: closure_18, AnalyticEvents: closure_19, RPCEvents: closure_20, RPCCloseCodes: closure_21 } = ME);
+({
+  ActivityActionTypes: closure_17,
+  RelationshipTypes: closure_18,
+  AnalyticEvents: closure_19,
+  RPCEvents: closure_20,
+  RPCCloseCodes: closure_21,
+} = ME);
 let result = require("set").fileFinishedImporting("modules/rpc/server/RPCServerManager.tsx");
 class RPCServerManager {
   constructor(arg0) {
@@ -162,16 +168,24 @@ class RPCServerManager {
           obj.intent = tmp2;
         }
         const rpcServer = tmp4.rpcServer;
-        const result = rpcServer.dispatchToSubscriptions(closure_1_20.ACTIVITY_JOIN, (socket) => {
-          let tmp = socket.socket.application.id === applicationId;
-          if (!tmp) {
-            tmp = null != parentApplicationId && socket.socket.application.parentId === tmp2;
-            const tmp4 = null != parentApplicationId && socket.socket.application.parentId === tmp2;
-          }
-          return tmp;
-        }, obj);
+        const result = rpcServer.dispatchToSubscriptions(
+          closure_1_20.ACTIVITY_JOIN,
+          (socket) => {
+            let tmp = socket.socket.application.id === applicationId;
+            if (!tmp) {
+              tmp = null != parentApplicationId && socket.socket.application.parentId === tmp2;
+              const tmp4 = null != parentApplicationId && socket.socket.application.parentId === tmp2;
+            }
+            return tmp;
+          },
+          obj,
+        );
         const rpcServer2 = tmp4.rpcServer;
-        const result1 = rpcServer2.dispatchToSubscriptions(closure_1_20.GAME_JOIN, (socket) => socket.socket.application.id === applicationId, obj);
+        const result1 = rpcServer2.dispatchToSubscriptions(
+          closure_1_20.GAME_JOIN,
+          (socket) => socket.socket.application.id === applicationId,
+          obj,
+        );
       }
     };
     obj.handleActivityLayoutModeUpdate = function handleActivityLayoutModeUpdate(arg0) {
@@ -180,13 +194,25 @@ class RPCServerManager {
         const rpcServer = tmp.rpcServer;
         obj = { is_pip_mode: null };
         obj[0] = layoutMode !== closure_1_22.FOCUSED;
-        const result = rpcServer.dispatchToSubscriptions(closure_1_20.ACTIVITY_PIP_MODE_UPDATE, (socket) => socket.socket.application.id === closure_0, obj);
+        const result = rpcServer.dispatchToSubscriptions(
+          closure_1_20.ACTIVITY_PIP_MODE_UPDATE,
+          (socket) => socket.socket.application.id === closure_0,
+          obj,
+        );
         obj = { layout_mode: null };
         obj[0] = layoutMode;
         const rpcServer2 = tmp.rpcServer;
-        const result1 = rpcServer2.dispatchToSubscriptions(closure_1_20.ACTIVITY_LAYOUT_MODE_UPDATE, (socket) => socket.socket.application.id === closure_0, obj);
+        const result1 = rpcServer2.dispatchToSubscriptions(
+          closure_1_20.ACTIVITY_LAYOUT_MODE_UPDATE,
+          (socket) => socket.socket.application.id === closure_0,
+          obj,
+        );
         const rpcServer3 = tmp.rpcServer;
-        const result2 = rpcServer3.dispatchToSubscriptions(closure_1_20.FRAME_LAYOUT_MODE_UPDATE, (socket) => socket.socket.application.id === closure_0, obj);
+        const result2 = rpcServer3.dispatchToSubscriptions(
+          closure_1_20.FRAME_LAYOUT_MODE_UPDATE,
+          (socket) => socket.socket.application.id === closure_0,
+          obj,
+        );
       }
     };
     obj.handleFrameUpdateLayoutMode = function handleFrameUpdateLayoutMode(frameId) {
@@ -232,7 +258,11 @@ class RPCServerManager {
           obj = { thermal_state: null };
           obj[0] = obj(closure_1_2[25]).getThermalState();
           const rpcServer = tmp.rpcServer;
-          const result = rpcServer.dispatchToSubscriptions(closure_1_20.THERMAL_STATE_UPDATE, (socket) => socket.socket.application.id === applicationId, obj);
+          const result = rpcServer.dispatchToSubscriptions(
+            closure_1_20.THERMAL_STATE_UPDATE,
+            (socket) => socket.socket.application.id === applicationId,
+            obj,
+          );
           const obj2 = obj(closure_1_2[25]);
         }
       }
@@ -249,7 +279,11 @@ class RPCServerManager {
       if (0 !== obj.rpcServer.subscriptions.length) {
         obj = obj(closure_1_2[26]);
         const rpcServer = tmp.rpcServer;
-        const result = rpcServer.dispatchToSubscriptions(closure_1_20.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, obj.activityInstanceConnectedParticipants());
+        const result = rpcServer.dispatchToSubscriptions(
+          closure_1_20.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE,
+          {},
+          obj.activityInstanceConnectedParticipants(),
+        );
       }
     };
     obj.handleActivityMessage = function handleActivityMessage(type) {
@@ -288,7 +322,11 @@ class RPCServerManager {
                             obj[2] = activity.type;
                             obj[3] = channelId;
                             obj[4] = message.id;
-                            const result = rpcServer.dispatchToSubscriptions(closure_1_20.ACTIVITY_INVITE, (socket) => socket.socket.application.id === application_id, obj);
+                            const result = rpcServer.dispatchToSubscriptions(
+                              closure_1_20.ACTIVITY_INVITE,
+                              (socket) => socket.socket.application.id === application_id,
+                              obj,
+                            );
                           } else if (tmp13.JOIN_REQUEST === type) {
                             const rpcServer2 = tmp.rpcServer;
                             obj = { user: null, activity: null, type: null, channel_id: null, message_id: null };
@@ -297,7 +335,11 @@ class RPCServerManager {
                             obj[2] = activity.type;
                             obj[3] = channelId;
                             obj[4] = message.id;
-                            const result1 = rpcServer2.dispatchToSubscriptions(closure_1_20.ACTIVITY_JOIN_REQUEST, (socket) => socket.socket.application.id === application_id, obj);
+                            const result1 = rpcServer2.dispatchToSubscriptions(
+                              closure_1_20.ACTIVITY_JOIN_REQUEST,
+                              (socket) => socket.socket.application.id === application_id,
+                              obj,
+                            );
                           }
                         }
                       }
@@ -359,7 +401,9 @@ class RPCServerManager {
           obj = obj(closure_1_2[24]);
           obj = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
-          const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(closure_1_2[24]).transformApplicationRelationship(callback, socket.socket.application.id));
+          const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) =>
+            callback(closure_1_2[24]).transformApplicationRelationship(callback, socket.socket.application.id),
+          );
         }
       }
     };
@@ -371,7 +415,9 @@ class RPCServerManager {
           obj = obj(closure_1_2[24]);
           obj = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
-          const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(closure_1_2[24]).transformApplicationRelationship(callback, socket.socket.application.id));
+          const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) =>
+            callback(closure_1_2[24]).transformApplicationRelationship(callback, socket.socket.application.id),
+          );
         }
       }
     };
@@ -383,7 +429,9 @@ class RPCServerManager {
           obj = obj(closure_1_2[24]);
           obj = obj.transformBaseRelationship(closure_1_18.NONE, user);
           const rpcServer = tmp2.rpcServer;
-          const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(closure_1_2[24]).transformApplicationRelationship(callback, socket.socket.application.id));
+          const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) =>
+            callback(closure_1_2[24]).transformApplicationRelationship(callback, socket.socket.application.id),
+          );
         }
       }
     };
@@ -404,7 +452,9 @@ class RPCServerManager {
             } else {
               lib = lib(closure_1_2[24]).transformBaseRelationship(relationshipType, user);
               const rpcServer = lib.rpcServer;
-              const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(closure_1_2[24]).transformApplicationRelationship(callback, socket.socket.application.id));
+              const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) =>
+                callback(closure_1_2[24]).transformApplicationRelationship(callback, socket.socket.application.id),
+              );
             }
           }
           tmp = item10023;
@@ -428,7 +478,9 @@ class RPCServerManager {
             } else {
               lib = lib(closure_1_2[24]).transformBaseRelationship(tmp, user);
               const rpcServer = lib.rpcServer;
-              const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(closure_1_2[24]).transformApplicationRelationship(callback, socket.socket.application.id));
+              const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) =>
+                callback(closure_1_2[24]).transformApplicationRelationship(callback, socket.socket.application.id),
+              );
             }
           }
         }
@@ -455,7 +507,9 @@ class RPCServerManager {
             obj = obj(closure_1_2[24]);
             obj = obj.transformBaseRelationship(relationshipType, user);
             const rpcServer = tmp.rpcServer;
-            const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(closure_1_2[24]).transformApplicationRelationship(callback, socket.socket.application.id));
+            const result = rpcServer.dispatchToSubscriptions(closure_1_20.RELATIONSHIP_UPDATE, {}, (socket) =>
+              callback(closure_1_2[24]).transformApplicationRelationship(callback, socket.socket.application.id),
+            );
           }
         }
       }
@@ -466,7 +520,11 @@ class RPCServerManager {
         const rpcServer = entitlement.rpcServer;
         obj = { entitlement: null };
         obj[0] = entitlement;
-        const result = rpcServer.dispatchToSubscriptions(closure_1_20.ENTITLEMENT_CREATE, (socket) => socket.socket.application.id === entitlement.application_id, obj);
+        const result = rpcServer.dispatchToSubscriptions(
+          closure_1_20.ENTITLEMENT_CREATE,
+          (socket) => socket.socket.application.id === entitlement.application_id,
+          obj,
+        );
       }
     };
     obj.handleEntitlementDelete = function handleEntitlementDelete(entitlement) {
@@ -475,7 +533,11 @@ class RPCServerManager {
         const rpcServer = entitlement.rpcServer;
         obj = { entitlement: null };
         obj[0] = entitlement;
-        const result = rpcServer.dispatchToSubscriptions(closure_1_20.ENTITLEMENT_DELETE, (socket) => socket.socket.application.id === entitlement.application_id, obj);
+        const result = rpcServer.dispatchToSubscriptions(
+          closure_1_20.ENTITLEMENT_DELETE,
+          (socket) => socket.socket.application.id === entitlement.application_id,
+          obj,
+        );
       }
     };
     obj.handleQuestEnrollSuccess = function handleQuestEnrollSuccess(enrolledQuestUserStatus) {
@@ -494,23 +556,34 @@ class RPCServerManager {
             obj[0] = questId;
             obj[1] = null != enrolledQuestUserStatus.enrolledAt;
             obj[2] = enrolledQuestUserStatus.enrolledAt;
-            const result = rpcServer.dispatchToSubscriptions(closure_1_20.QUEST_ENROLLMENT_STATUS_UPDATE, (socket) => {
-              let tmp = socket.socket.application.id === activityApplicationId;
-              if (tmp) {
-                const args = socket.args;
-                let quest_id;
-                if (args != null) {
-                  quest_id = args.quest_id;
+            const result = rpcServer.dispatchToSubscriptions(
+              closure_1_20.QUEST_ENROLLMENT_STATUS_UPDATE,
+              (socket) => {
+                let tmp = socket.socket.application.id === activityApplicationId;
+                if (tmp) {
+                  const args = socket.args;
+                  let quest_id;
+                  if (args != null) {
+                    quest_id = args.quest_id;
+                  }
+                  tmp = quest_id === questId;
                 }
-                tmp = quest_id === questId;
-              }
-              return tmp;
-            }, obj);
+                return tmp;
+              },
+              obj,
+            );
           }
         }
       }
     };
-    ({ server: tmp.rpcServer, transports: tmp.transports, commands: tmp.rpcCommandHandlers, events: tmp.rpcEventHandlers, stores: tmp.stores, registerTransportsForEmbeddedPlatform: tmp.registerTransportsForEmbeddedPlatform } = global);
+    ({
+      server: tmp.rpcServer,
+      transports: tmp.transports,
+      commands: tmp.rpcCommandHandlers,
+      events: tmp.rpcEventHandlers,
+      stores: tmp.stores,
+      registerTransportsForEmbeddedPlatform: tmp.registerTransportsForEmbeddedPlatform,
+    } = global);
     return obj;
   }
 }
@@ -587,13 +660,19 @@ prototype["init"] = function init() {
   const obj11 = dispatcherDefault;
   const subscription10 = dispatcherDefault.subscribe("ACTIVITY_JOIN", this.handleActivityJoin);
   const obj12 = dispatcherDefault;
-  const subscription11 = dispatcherDefault.subscribe("ACTIVITY_LAYOUT_MODE_UPDATE", this.handleActivityLayoutModeUpdate);
+  const subscription11 = dispatcherDefault.subscribe(
+    "ACTIVITY_LAYOUT_MODE_UPDATE",
+    this.handleActivityLayoutModeUpdate,
+  );
   const obj13 = dispatcherDefault;
   const subscription12 = dispatcherDefault.subscribe("FRAME_UPDATE_LAYOUT_MODE", this.handleFrameUpdateLayoutMode);
   const obj14 = dispatcherDefault;
   const subscription13 = dispatcherDefault.subscribe("THERMAL_STATE_CHANGE", this.handleThermalStateChange);
   const obj15 = dispatcherDefault;
-  const subscription14 = dispatcherDefault.subscribe("ACTIVITY_SCREEN_ORIENTATION_UPDATE", this.handleScreenOrientationUpdate);
+  const subscription14 = dispatcherDefault.subscribe(
+    "ACTIVITY_SCREEN_ORIENTATION_UPDATE",
+    this.handleScreenOrientationUpdate,
+  );
   const obj16 = dispatcherDefault;
   const subscription15 = dispatcherDefault.subscribe("EMBEDDED_ACTIVITY_UPDATE", this.handleEmbeddedActivityUpdate);
   const obj17 = dispatcherDefault;

@@ -52,8 +52,7 @@ const GuildTemplateStates = GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD.Gui
 let map = new Map();
 let c4 = null;
 const Store = initializeDefault.Store;
-class GuildTemplateStore extends Store {
-}
+class GuildTemplateStore extends Store {}
 const prototype = GuildTemplateStore.prototype;
 prototype["getGuildTemplate"] = function getGuildTemplate(code) {
   if (null != code) {
@@ -195,7 +194,7 @@ const guildTemplateStore = new GuildTemplateStore(dispatcherDefault, {
   },
   GUILD_TEMPLATE_MODAL_HIDE: function handleGuildTemplateModalHide() {
     c4 = null;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/guild_templates/GuildTemplateStore.tsx");
 

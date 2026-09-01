@@ -14,15 +14,24 @@ function Tab(index) {
   let callback;
   ({ children, tabStyle, tabStyleActive, tabStyleSelected } = index);
   const tmp = callback2();
-  [tmp3, tmp4] = callback(React.useState(() => false), 2);
+  [tmp3, tmp4] = callback(
+    React.useState(() => false),
+    2,
+  );
   callback = tmp4;
   const items = [tmp4];
   const items1 = [tmp4];
   callback = React.useCallback(() => _undefined(true), items);
   const items2 = [onSelect, index];
   const callback1 = React.useCallback(() => _undefined(false), items1);
-  const obj = { accessibilityRole: "tab", onPressIn: callback, onPressOut: callback1, onPress: React.useCallback(() => onSelect(index), items2), children: null };
-  const items3 = [tmp.tab, tabStyle, , , , ];
+  const obj = {
+    accessibilityRole: "tab",
+    onPressIn: callback,
+    onPressOut: callback1,
+    onPress: React.useCallback(() => onSelect(index), items2),
+    children: null,
+  };
+  const items3 = [tmp.tab, tabStyle, , , ,];
   let tabSelected = null;
   if (isSelected) {
     tabSelected = tmp.tabSelected;
@@ -44,10 +53,36 @@ function Tab(index) {
   }
   items3[5] = tmp13;
   obj[4] = <closure_4 style={items3}>{children}</closure_4>;
-  return <closure_5 accessibilityRole="tab" onPressIn={callback} onPressOut={callback1} onPress={React.useCallback(() => onSelect(index), items2)}>{null}</closure_5>;
+  return (
+    <closure_5
+      accessibilityRole="tab"
+      onPressIn={callback}
+      onPressOut={callback1}
+      onPress={React.useCallback(() => onSelect(index), items2)}
+    >
+      {null}
+    </closure_5>
+  );
 }
 ({ View: c4, TouchableWithoutFeedback: c5, FlatList: closure_6 } = get_ActivityIndicator);
-createCacheKey = { innerContainer: { flexDirection: "row", alignItems: "stretch" }, tab: { flexGrow: 1, flexBasis: "auto", flexShrink: 0, alignItems: "center", justifyContent: "center", marginBottom: 1, marginHorizontal: 1, padding: 10, borderBottomWidth: 2, borderBottomColor: "transparent" }, tabActive: { backgroundColor: "rgba(0,0,0,0.1)" }, tabSelected: null, container: null };
+createCacheKey = {
+  innerContainer: { flexDirection: "row", alignItems: "stretch" },
+  tab: {
+    flexGrow: 1,
+    flexBasis: "auto",
+    flexShrink: 0,
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 1,
+    marginHorizontal: 1,
+    padding: 10,
+    borderBottomWidth: 2,
+    borderBottomColor: "transparent",
+  },
+  tabActive: { backgroundColor: "rgba(0,0,0,0.1)" },
+  tabSelected: null,
+  container: null,
+};
 createCacheKey = { borderBottomColor: ThemesDefault.unsafe_rawColors.BRAND_600 };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { flex: 0 };
@@ -91,7 +126,10 @@ export default function TabBar(tabIndexSelected) {
     }
   }, items1);
   first = undefined;
-  first = tabStyleActive(tabStyleSelected.useState(() => tabIndexSelected), 1)[0];
+  first = tabStyleActive(
+    tabStyleSelected.useState(() => tabIndexSelected),
+    1,
+  )[0];
   const items2 = [first];
   const effect1 = tabStyleSelected.useEffect(() => {
     const timeout = setTimeout(() => {
@@ -112,7 +150,15 @@ export default function TabBar(tabIndexSelected) {
   const callback1 = tabStyleSelected.useCallback((arg0, arg1) => "tab-" + arg1, []);
   callback2 = tabStyleSelected.useCallback((children) => {
     const index = children.index;
-    return callback(closure_1_10, { index, isSelected: index === tabIndexSelected, tabStyle: first, tabStyleActive, tabStyleSelected, onSelect: flag2 ? callback : onSelect, children: children.item });
+    return callback(closure_1_10, {
+      index,
+      isSelected: index === tabIndexSelected,
+      tabStyle: first,
+      tabStyleActive,
+      tabStyleSelected,
+      onSelect: flag2 ? callback : onSelect,
+      children: children.item,
+    });
   }, items3);
   let obj = { style: tmp.container, accessibilityRole: "tablist", accessibilityLabel: null, children: null };
   const memo = tabStyleSelected.useMemo(() => {
@@ -122,8 +168,18 @@ export default function TabBar(tabIndexSelected) {
   const intl = tabIndexSelected(first[8]).intl;
   obj[2] = intl.string(tabIndexSelected(first[8]).t.t1qXlK);
   obj = { gesture: memo, children: callback(ref, obj) };
-  obj = { ref, contentContainerStyle: items4, horizontal: true, data: tabs, renderItem: callback2, keyExtractor: callback1, initialNumToRender: initialNumTabsToRender, onScrollToIndexFailed: closure_7, showsHorizontalScrollIndicator: !flag };
+  obj = {
+    ref,
+    contentContainerStyle: items4,
+    horizontal: true,
+    data: tabs,
+    renderItem: callback2,
+    keyExtractor: callback1,
+    initialNumToRender: initialNumTabsToRender,
+    onScrollToIndexFailed: closure_7,
+    showsHorizontalScrollIndicator: !flag,
+  };
   items4 = [containerStyle, tmp.innerContainer];
   obj[3] = callback(tabIndexSelected(first[7]).GestureDetector, obj);
   return callback(onSelect, obj);
-};
+}

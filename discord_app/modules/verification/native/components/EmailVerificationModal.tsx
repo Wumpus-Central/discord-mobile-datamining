@@ -12,7 +12,9 @@ function closeModal() {
   resetChangeEmailStore();
   _modDef7687.close();
 }
-const result = require("set").fileFinishedImporting("modules/verification/native/components/EmailVerificationModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/verification/native/components/EmailVerificationModal.tsx",
+);
 
 export default function EmailVerificationModal(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
@@ -52,4 +54,4 @@ export default function EmailVerificationModal(isChangeEmail) {
   if (stateFromStores != null) {
     const verified = stateFromStores.verified;
   }
-};
+}

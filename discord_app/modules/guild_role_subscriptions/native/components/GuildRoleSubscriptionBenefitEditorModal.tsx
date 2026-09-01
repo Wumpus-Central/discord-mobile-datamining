@@ -23,7 +23,7 @@ function DeleteButton(onDelete) {
   let obj = { style: items, accessibilityRole: "button", onPress: onDelete.onDelete, children: null };
   items = [stylesDefault().textInput, tmp.deleteButton];
   obj = { style: tmp.deleteIcon, color: ThemesDefault.unsafe_rawColors.RED_400, size: "custom" };
-  const items1 = [callback2(TrashIcon.TrashIcon, obj), ];
+  const items1 = [callback2(TrashIcon.TrashIcon, obj)];
   obj = { style: tmp.deleteLabel, children: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.p4Bh7f);
@@ -32,16 +32,28 @@ function DeleteButton(onDelete) {
   return callback3(PressableBase.PressableOpacity, obj);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ GuildRoleSubscriptionBenefitTypes: c10, MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: unpackModuleId, MAX_SUBSCRIPTION_BENEFIT_NAME_LENGTH: closure_12 } = MAX_SUBSCRIPTION_TIERS);
+({
+  GuildRoleSubscriptionBenefitTypes: c10,
+  MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: unpackModuleId,
+  MAX_SUBSCRIPTION_BENEFIT_NAME_LENGTH: closure_12,
+} = MAX_SUBSCRIPTION_TIERS);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let obj = { container: null, scrollContainer: null, deleteButton: null, deleteIcon: null, deleteLabel: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%" };
+obj = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+  height: "100%",
+};
 obj[0] = obj;
 obj[1] = { flexGrow: 1 };
 obj[2] = { flexDirection: "row", marginTop: 16, alignItems: "center", justifyContent: "center" };
 obj[3] = { width: 20, height: 20 };
 createCacheKey = {};
-const merged = Object.assign(importDefaultResult(require("ME").Fonts.PRIMARY_SEMIBOLD, ThemesDefault.unsafe_rawColors.RED_400, 16));
+const merged = Object.assign(
+  importDefaultResult(require("ME").Fonts.PRIMARY_SEMIBOLD, ThemesDefault.unsafe_rawColors.RED_400, 16),
+);
 createCacheKey.marginStart = 8;
 createCacheKey.lineHeight = 20;
 obj[4] = createCacheKey;
@@ -50,7 +62,7 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
   const _require = benefitType;
   function _handleSave() {
     const self = this;
-    const tmp = first1(function*() {
+    const tmp = first1(function* () {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -80,7 +92,14 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
               closure_0 = tmp3;
               if (null != c3) {
                 c3 = 1;
-                obj1 = { name: null, emoji_id: null, emoji_name: null, description: null, ref_type: null, ref_id: null };
+                obj1 = {
+                  name: null,
+                  emoji_id: null,
+                  emoji_name: null,
+                  description: null,
+                  ref_type: null,
+                  ref_id: null,
+                };
                 obj1[0] = c1;
                 obj1[1] = tmp31;
                 obj1[2] = closure_1_5;
@@ -137,7 +156,7 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
   }
   function _handleDelete() {
     const self = this;
-    const tmp = first1(function*() {
+    const tmp = first1(function* () {
       closure_0 = tmp3;
       c3 = 1;
       const onDelete = closure_1_0.onDelete;
@@ -236,7 +255,17 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
       let tmp25 = callback2(tmp2(17338), obj);
       let tmp26 = callback2;
     } else {
-      obj = { style: null, showTopContainer: false, multiline: false, maxLength: null, value: null, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null };
+      obj = {
+        style: null,
+        showTopContainer: false,
+        multiline: false,
+        maxLength: null,
+        value: null,
+        placeholder: null,
+        onChange: null,
+        autoFocus: true,
+        clearButtonVisibility: null,
+      };
       obj[0] = tmp4.textInput;
       obj[3] = closure_12;
       obj[4] = first;
@@ -264,9 +293,15 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
       return applyArgumentsResult;
     };
     obj1[4] = benefitType.listingId;
-    const items = [tmp26(tmp2(17340), obj1), ];
-    let obj2 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
-    const items1 = [tmp.scrollContainer, ];
+    const items = [tmp26(tmp2(17340), obj1)];
+    let obj2 = {
+      keyboardShouldPersistTaps: "handled",
+      showsVerticalScrollIndicator: false,
+      alwaysBounceVertical: false,
+      contentContainerStyle: null,
+      children: null,
+    };
+    const items1 = [tmp.scrollContainer];
     const obj3 = { paddingBottom: null };
     obj3[0] = first(1628)().bottom + 32 + 16;
     items1[1] = obj3;
@@ -274,7 +309,7 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp4.header;
     obj4[1] = stringResult1;
-    const items2 = [tmp26(tmp2(9905), obj4), tmp25, , , , , ];
+    const items2 = [tmp26(tmp2(9905), obj4), tmp25, , , , ,];
     const obj5 = { style: null, children: null };
     obj5[0] = tmp4.header;
     let tmp2Result = tmp2(9905);
@@ -298,7 +333,16 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
     const intl8 = tmp20(1236).intl;
     obj8[1] = intl8.string(tmp20(1236).t["74JctW"]);
     items2[4] = tmp26(tmp2Result, obj8);
-    const obj9 = { style: null, showTopContainer: false, multiline: true, maxLength: null, numberOfLines: 3, value: null, onChange: null, placeholder: null };
+    const obj9 = {
+      style: null,
+      showTopContainer: false,
+      multiline: true,
+      maxLength: null,
+      numberOfLines: 3,
+      value: null,
+      onChange: null,
+      placeholder: null,
+    };
     obj9[0] = tmp4.textInput;
     obj9[3] = _handleDelete;
     obj9[5] = first3;
@@ -338,6 +382,8 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
     tmp15 = num3 > 0;
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModal.tsx",
+);
 
 export default forwardRefResult;

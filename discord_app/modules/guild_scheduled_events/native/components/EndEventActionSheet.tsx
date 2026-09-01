@@ -9,14 +9,27 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" }, title: null, subtitle: null, cancelButtonContainer: null, confirmButtonContainer: null };
-createCacheKey = { fontSize: 24, fontFamily: require("ME").Fonts.PRIMARY_BOLD, textAlign: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey = {
+  container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" },
+  title: null,
+  subtitle: null,
+  cancelButtonContainer: null,
+  confirmButtonContainer: null,
+};
+createCacheKey = {
+  fontSize: 24,
+  fontFamily: require("ME").Fonts.PRIMARY_BOLD,
+  textAlign: "center",
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginTop: 8, textAlign: "center" };
 createCacheKey[3] = { marginTop: 24, alignSelf: "stretch" };
 createCacheKey[4] = { marginTop: 8, alignSelf: "stretch" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EndEventActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/EndEventActionSheet.tsx",
+);
 
 export default function EndEventActionSheet(channel) {
   channel = channel.channel;
@@ -39,7 +52,7 @@ export default function EndEventActionSheet(channel) {
     obj1[0] = tmp.title;
     const intl = tmp2(1236).intl;
     obj1[2] = intl.string(tmp2(1236).t["4Ao8LC"]);
-    const items = [callback(tmp2(1297).LegacyText, obj1), , , ];
+    const items = [callback(tmp2(1297).LegacyText, obj1), , ,];
     let obj2 = { style: null, variant: "text-md/medium", color: "text-default", children: null };
     obj2[0] = tmp.subtitle;
     const intl2 = tmp2(1236).intl;
@@ -74,4 +87,4 @@ export default function EndEventActionSheet(channel) {
     obj[0] = callback2(View, obj);
     return callback(activeEvent(8739), obj);
   }
-};
+}

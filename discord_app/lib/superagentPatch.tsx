@@ -19,13 +19,21 @@ function isAnalyticsEndpoint(pathname) {
     return regex.test(tmp);
   }
 }
-let closure_6 = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://cdn.discordapp.com/bad-domains/hashes.json"];
+let closure_6 = [
+  "https://cdn.discordapp.com/bad-domains/updated_hashes.json",
+  "https://cdn.discordapp.com/bad-domains/hashes.json",
+];
 _createForOfIteratorHelperDefault.parse[""] = JSON.parse;
 const idGenerator = new require("IdGenerator").IdGenerator();
 const re8 = /\/api(\/v\d+)?\/science/;
 ApexExperiment = { 1: null };
 ApexExperiment[1] = { migrationKilled: true };
-let closure_10 = ApexExperiment.createApexExperiment({ name: "2026-07-reject-with-error-kill-switch", kind: "user", defaultConfig: { migrationKilled: false }, variations: ApexExperiment });
+let closure_10 = ApexExperiment.createApexExperiment({
+  name: "2026-07-reject-with-error-kill-switch",
+  kind: "user",
+  defaultConfig: { migrationKilled: false },
+  variations: ApexExperiment,
+});
 let c11 = null;
 const subscription = importDefaultResult1.subscribe("LOGOUT", () => {
   c11 = null;
@@ -98,20 +106,23 @@ ApexExperiment = {
           }
           items = Languages;
         }
-        const result5 = promise.set("Accept-Language", (function populateQValues(items) {
-          c0 = 10;
-          const reduced = items.reduce((arr) => {
-            if (10 === closure_0) {
-              arr.push(arg1);
-            } else {
-              const _HermesInternal = HermesInternal;
-              arr.push("" + arg1 + ";q=0." + closure_0);
-            }
-            closure_0 = Math.max(closure_0 - 1, 1);
-            return arr;
-          }, []);
-          return reduced.join(",");
-        })(items));
+        const result5 = promise.set(
+          "Accept-Language",
+          (function populateQValues(items) {
+            c0 = 10;
+            const reduced = items.reduce((arr) => {
+              if (10 === closure_0) {
+                arr.push(arg1);
+              } else {
+                const _HermesInternal = HermesInternal;
+                arr.push("" + arg1 + ";q=0." + closure_0);
+              }
+              closure_0 = Math.max(closure_0 - 1, 1);
+              return arr;
+            }, []);
+            return reduced.join(",");
+          })(items),
+        );
         tmpResult2 = tmp(500);
       }
       const result6 = promise.set("X-Discord-Locale", callback(1996).default.locale);
@@ -152,9 +163,12 @@ ApexExperiment = {
           if (!isAnalyticsEndpoint(uRL.pathname)) {
             (function getDatadogAPMUrl(generateResult) {
               let str = new URLSearchParams();
-              str.append("query", "@http.x_client_trace_id:\"" + generateResult + "\"");
+              str.append("query", '@http.x_client_trace_id:"' + generateResult + '"');
               str.append("showAllSpans", "true");
-              const str2 = callback(table[5]).toURLSafe("traces?" + str.toString(), "https://datadog.discord.tools/apm/");
+              const str2 = callback(table[5]).toURLSafe(
+                "traces?" + str.toString(),
+                "https://datadog.discord.tools/apm/",
+              );
               str = null;
               if (null != str2) {
                 str = str2.toString();
@@ -162,8 +176,7 @@ ApexExperiment = {
               return str;
             })(generateResult);
           }
-        } catch (err) {
-        }
+        } catch (err) {}
       }
     }
     importAll = (function shouldTrackHttpRequest(url) {
@@ -295,67 +308,72 @@ ApexExperiment = {
           }
           return nextResult.default.showCaptchaAsync(nextResult1.extractCaptchaPropsFromResponse(statusCode.body));
         });
-        Promise.all(items).then((arg0) => {
-          const iter = arg0[Symbol.iterator]();
-          let nextResult;
-          if (iter !== undefined) {
-            nextResult = iter.next();
-          }
-          let nextResult1;
-          let tmp4 = tmp;
-          if (iter !== undefined) {
-            tmp4 = tmp6;
+        Promise.all(items)
+          .then((arg0) => {
+            const iter = arg0[Symbol.iterator]();
+            let nextResult;
             if (iter !== undefined) {
-              nextResult1 = iter.next();
-              tmp4 = tmp6;
+              nextResult = iter.next();
             }
-          }
-          if (!tmp4) {
-            iter.return();
-          }
-          return nextResult.default.showCaptchaAsync(nextResult1.extractCaptchaPropsFromResponse(statusCode.body));
-        }).then((X_Captcha_Key) => {
-          ({ captcha_rqtoken, captcha_session_id } = X_Captcha_Key);
-          const obj = { "X-Captcha-Key": X_Captcha_Key.captcha_key };
-          if (null != captcha_rqtoken) {
-            obj["X-Captcha-Rqtoken"] = captcha_rqtoken;
-          }
-          if (null != captcha_session_id) {
-            obj["X-Captcha-Session-Id"] = captcha_session_id;
-          }
-          callback(obj);
-        }).catch(arg2);
+            let nextResult1;
+            let tmp4 = tmp;
+            if (iter !== undefined) {
+              tmp4 = tmp6;
+              if (iter !== undefined) {
+                nextResult1 = iter.next();
+                tmp4 = tmp6;
+              }
+            }
+            if (!tmp4) {
+              iter.return();
+            }
+            return nextResult.default.showCaptchaAsync(nextResult1.extractCaptchaPropsFromResponse(statusCode.body));
+          })
+          .then((X_Captcha_Key) => {
+            ({ captcha_rqtoken, captcha_session_id } = X_Captcha_Key);
+            const obj = { "X-Captcha-Key": X_Captcha_Key.captcha_key };
+            if (null != captcha_rqtoken) {
+              obj["X-Captcha-Rqtoken"] = captcha_rqtoken;
+            }
+            if (null != captcha_session_id) {
+              obj["X-Captcha-Session-Id"] = captcha_session_id;
+            }
+            callback(obj);
+          })
+          .catch(arg2);
         let flag = true;
-        const nextPromise1 = Promise.all(items).then((arg0) => {
-          const iter = arg0[Symbol.iterator]();
-          let nextResult;
-          if (iter !== undefined) {
-            nextResult = iter.next();
-          }
-          let nextResult1;
-          let tmp4 = tmp;
-          if (iter !== undefined) {
-            tmp4 = tmp6;
+        const nextPromise1 = Promise.all(items)
+          .then((arg0) => {
+            const iter = arg0[Symbol.iterator]();
+            let nextResult;
             if (iter !== undefined) {
-              nextResult1 = iter.next();
-              tmp4 = tmp6;
+              nextResult = iter.next();
             }
-          }
-          if (!tmp4) {
-            iter.return();
-          }
-          return nextResult.default.showCaptchaAsync(nextResult1.extractCaptchaPropsFromResponse(statusCode.body));
-        }).then((X_Captcha_Key) => {
-          ({ captcha_rqtoken, captcha_session_id } = X_Captcha_Key);
-          const obj = { "X-Captcha-Key": X_Captcha_Key.captcha_key };
-          if (null != captcha_rqtoken) {
-            obj["X-Captcha-Rqtoken"] = captcha_rqtoken;
-          }
-          if (null != captcha_session_id) {
-            obj["X-Captcha-Session-Id"] = captcha_session_id;
-          }
-          callback(obj);
-        });
+            let nextResult1;
+            let tmp4 = tmp;
+            if (iter !== undefined) {
+              tmp4 = tmp6;
+              if (iter !== undefined) {
+                nextResult1 = iter.next();
+                tmp4 = tmp6;
+              }
+            }
+            if (!tmp4) {
+              iter.return();
+            }
+            return nextResult.default.showCaptchaAsync(nextResult1.extractCaptchaPropsFromResponse(statusCode.body));
+          })
+          .then((X_Captcha_Key) => {
+            ({ captcha_rqtoken, captcha_session_id } = X_Captcha_Key);
+            const obj = { "X-Captcha-Key": X_Captcha_Key.captcha_key };
+            if (null != captcha_rqtoken) {
+              obj["X-Captcha-Rqtoken"] = captcha_rqtoken;
+            }
+            if (null != captcha_session_id) {
+              obj["X-Captcha-Session-Id"] = captcha_session_id;
+            }
+            callback(obj);
+          });
       }
       return flag;
     }
@@ -373,9 +391,11 @@ ApexExperiment = {
         }
         if (mfa) {
           const promise4 = callback(2009)(15263, dependencyMap.paths);
-          callback(2009)(15263, dependencyMap.paths).then((openMFAModal) => {
-            openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
-          }).catch(arg2);
+          callback(2009)(15263, dependencyMap.paths)
+            .then((openMFAModal) => {
+              openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
+            })
+            .catch(arg2);
           flag = true;
           const nextPromise2 = callback(2009)(15263, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
@@ -431,7 +451,7 @@ ApexExperiment = {
       }
       tmp7Result = tmp7(16870);
     }
-  }
+  },
 };
 ApexExperiment = sendRequest.setRequestPatch(ApexExperiment);
 closure_0 = undefined;
@@ -439,7 +459,7 @@ closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
-  return (function*(arg0) {
+  return (function* (arg0) {
     if (c4 === 2) {
       c4 = 3;
       HermesBuiltin.throwTypeError();
@@ -502,7 +522,7 @@ closure_0 = importDefaultResult((arg0) => {
     }
   })();
 });
-sendRequest.setAwaitOnline(function() {
+sendRequest.setAwaitOnline(function () {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

@@ -10,16 +10,42 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: { alignSelf: "stretch", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, eventHeader: { marginStart: 8, flexShrink: 0, flexGrow: 1 }, active: null, actions: null, secondarySmallButton: null, secondarySmallIcon: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED, borderRadius: ThemesDefault.radii.xs };
+createCacheKey = {
+  container: { alignSelf: "stretch", flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
+  eventHeader: { marginStart: 8, flexShrink: 0, flexGrow: 1 },
+  active: null,
+  actions: null,
+  secondarySmallButton: null,
+  secondarySmallIcon: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED,
+  borderRadius: ThemesDefault.radii.xs,
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { alignItems: "center", flexDirection: "row", flexShrink: 0 };
-createCacheKey[4] = { flexShrink: 0, alignItems: "center", flexDirection: "row", padding: 8, marginLeft: 8, borderRadius: ThemesDefault.radii.xs };
-let obj1 = { flexShrink: 0, alignItems: "center", flexDirection: "row", padding: 8, marginLeft: 8, borderRadius: ThemesDefault.radii.xs };
+createCacheKey[4] = {
+  flexShrink: 0,
+  alignItems: "center",
+  flexDirection: "row",
+  padding: 8,
+  marginLeft: 8,
+  borderRadius: ThemesDefault.radii.xs,
+};
+let obj1 = {
+  flexShrink: 0,
+  alignItems: "center",
+  flexDirection: "row",
+  padding: 8,
+  marginLeft: 8,
+  borderRadius: ThemesDefault.radii.xs,
+};
 createCacheKey[5] = { tintColor: ThemesDefault.colors.TEXT_STRONG };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { tintColor: ThemesDefault.colors.TEXT_STRONG };
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventRecurrence.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/GuildEventRecurrence.tsx",
+);
 
 export default function GuildEventRecurrence(recurrenceId) {
   recurrenceId = recurrenceId.recurrenceId;
@@ -102,7 +128,7 @@ export default function GuildEventRecurrence(recurrenceId) {
       str4 = ", " + memo.startDateTimeString;
     }
     const sum1 = sum + str4;
-    const items4 = [tmp.container, ];
+    const items4 = [tmp.container];
     let active;
     if (isActive) {
       active = tmp.active;
@@ -110,7 +136,14 @@ export default function GuildEventRecurrence(recurrenceId) {
     obj = { style: null, children: null };
     items4[1] = active;
     obj[0] = items4;
-    obj1 = { accessible: true, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+    obj1 = {
+      accessible: true,
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      onPress: null,
+      style: null,
+      children: null,
+    };
     obj1[2] = sum1;
     obj1[3] = function onPress(stopPropagation) {
       stopPropagation.stopPropagation();
@@ -126,7 +159,7 @@ export default function GuildEventRecurrence(recurrenceId) {
     obj2[1] = stateFromStores;
     obj2[4] = recurrenceId;
     obj1[5] = callback(tmp2(9741).GuildEventCardHeader, obj2);
-    const items5 = [callback(tmp2(5068).PressableOpacity, obj1), ];
+    const items5 = [callback(tmp2(5068).PressableOpacity, obj1)];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.actions;
     if (tmp21Result) {
@@ -135,8 +168,15 @@ export default function GuildEventRecurrence(recurrenceId) {
       obj4[2] = intl2.string(tmp2(1236).t.fyBVRm);
       tmp21Result = tmp21(tmp2(4474).Text, obj4);
     }
-    const items6 = [tmp21Result, ];
-    const obj5 = { accessible: true, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+    const items6 = [tmp21Result];
+    const obj5 = {
+      accessible: true,
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      onPress: null,
+      style: null,
+      children: null,
+    };
     const intl3 = tmp2(1236).intl;
     const _HermesInternal3 = HermesInternal;
     obj5[2] = "" + intl3.string(tmp2(1236).t.HIgA5a) + ", " + sum1;
@@ -162,4 +202,4 @@ export default function GuildEventRecurrence(recurrenceId) {
     return closure_9(stateFromStores1, obj);
   }
   const tmp2Result2 = recurrenceId(9637);
-};
+}

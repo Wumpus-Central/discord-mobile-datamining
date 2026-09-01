@@ -12,8 +12,7 @@ import { ChannelNotificationSettingsFlags as closure_7 } from "../user_settings/
 require = arg1;
 let closure_8 = {};
 const Store = initializeDefault.Store;
-class ImpersonateStore extends Store {
-}
+class ImpersonateStore extends Store {}
 const prototype = ImpersonateStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_5, closure_4);
@@ -278,7 +277,7 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
       }
       return flag;
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/impersonate/ImpersonateStore.tsx");
 

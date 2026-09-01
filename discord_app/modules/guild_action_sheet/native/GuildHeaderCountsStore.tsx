@@ -9,8 +9,7 @@ import closure_4 from "../../../stores/VoiceStateStore.tsx";
 
 let obj = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class GuildHeaderCountsStore extends PersistedStore {
-}
+class GuildHeaderCountsStore extends PersistedStore {}
 const prototype = GuildHeaderCountsStore.prototype;
 prototype["initialize"] = function initialize() {
   let tmp = arg0;
@@ -70,7 +69,7 @@ obj = {
       obj[guildId] = { activeChannelsCount: "method", onlineCount: "T", memberCount: "Map" };
     }
     obj[guildId].activeChannelsCount = guildId.count;
-  }
+  },
 };
 const guildHeaderCountsStore = new GuildHeaderCountsStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/GuildHeaderCountsStore.tsx");

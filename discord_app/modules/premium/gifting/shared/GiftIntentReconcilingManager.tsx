@@ -21,22 +21,22 @@ class GiftIntentReconcilingManager extends tmp2 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       POST_CONNECTION_OPEN() {
-            return applyArgumentsResult.onPostConnectionOpen();
-          },
+        return applyArgumentsResult.onPostConnectionOpen();
+      },
       CHANNEL_SELECT(channelId) {
-            return applyArgumentsResult.onChannelSelect(channelId);
-          },
+        return applyArgumentsResult.onChannelSelect(channelId);
+      },
       GIFT_INTENT_DISMISSALS_FETCH_SUCCESS(dismissals) {
-            return applyArgumentsResult.onReconcileSuccess(dismissals);
-          },
+        return applyArgumentsResult.onReconcileSuccess(dismissals);
+      },
       GIFT_INTENT_DISMISSALS_FETCH_FAILURE() {
-            return applyArgumentsResult.onReconcileSettled(false);
-          },
+        return applyArgumentsResult.onReconcileSettled(false);
+      },
       LOGOUT() {
-            return applyArgumentsResult.onLogout();
-          }
+        return applyArgumentsResult.onLogout();
+      },
     };
-    items = [, ];
+    items = [,];
     items[0] = closure_6;
     items[1] = () => applyArgumentsResult.onPremiumGiftingIntentStoreChange();
     items1 = [];
@@ -94,7 +94,8 @@ prototype["attemptReconcileFetch"] = function attemptReconcileFetch() {
   const serverDismissalTimestampMs = this.getServerDismissalTimestampMs();
   if (!tmp2) {
     self.isReconciling = true;
-    const andReconcileGiftIntentDismissals = fetchAndReconcileGiftIntentDismissals.fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs);
+    const andReconcileGiftIntentDismissals =
+      fetchAndReconcileGiftIntentDismissals.fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs);
     const obj = fetchAndReconcileGiftIntentDismissals;
   }
 };
@@ -195,11 +196,17 @@ prototype["maybeRetryHeldGiftingPromptSystemMessage"] = function maybeRetryHeldG
     }
   }
 };
-prototype["shouldHoldGiftingPromptSystemMessageForServerReconcile"] = function shouldHoldGiftingPromptSystemMessageForServerReconcile() {
-  const lastKnownGiftIntentDismissedAtMs = store.getLastKnownGiftIntentDismissedAtMs();
-  return lastKnownGiftIntentDismissedAtMs < this.getServerDismissalTimestampMs();
-};
-prototype["trySendGiftingPromptSystemMessage"] = function trySendGiftingPromptSystemMessage(id, FRIEND_ANNIVERSARY, closure_0, SEND_MESSAGE) {
+prototype["shouldHoldGiftingPromptSystemMessageForServerReconcile"] =
+  function shouldHoldGiftingPromptSystemMessageForServerReconcile() {
+    const lastKnownGiftIntentDismissedAtMs = store.getLastKnownGiftIntentDismissedAtMs();
+    return lastKnownGiftIntentDismissedAtMs < this.getServerDismissalTimestampMs();
+  };
+prototype["trySendGiftingPromptSystemMessage"] = function trySendGiftingPromptSystemMessage(
+  id,
+  FRIEND_ANNIVERSARY,
+  closure_0,
+  SEND_MESSAGE,
+) {
   if (this.shouldHoldGiftingPromptSystemMessageForServerReconcile()) {
     this.heldGiftingPromptSystemMessage = true;
     let flag = false;

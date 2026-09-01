@@ -23,7 +23,14 @@ export const useOrderContext = function useOrderContext(initialOrder, NativeGift
   }, []);
   const items = [first, tmp[1], callback];
   return React.useMemo(() => {
-    const obj = { order: first, setOrder: closure_1, setRevision: callback, orderId: null, orderLineItemId: null, revision: null };
+    const obj = {
+      order: first,
+      setOrder: closure_1,
+      setRevision: callback,
+      orderId: null,
+      orderLineItemId: null,
+      revision: null,
+    };
     let id;
     if (first != null) {
       id = tmp.id;

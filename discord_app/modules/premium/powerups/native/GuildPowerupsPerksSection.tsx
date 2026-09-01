@@ -25,7 +25,7 @@ export default function GuildPowerupPerksSection(arg0) {
   obj[0] = intl.string(messagesProxyDefault.TV3Vm8);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(messagesProxyDefault.STx9hp);
-  const items = [callback(GuildPowerupsSectionHeaderDefault, obj), ];
+  const items = [callback(GuildPowerupsSectionHeaderDefault, obj)];
   obj = {
     style: tmp.container,
     children: listings.map((type) => {
@@ -49,9 +49,9 @@ export default function GuildPowerupPerksSection(arg0) {
       } else {
         return null;
       }
-    })
+    }),
   };
   items[1] = callback(View, obj);
   obj[0] = items;
   return callback2(closure_5, obj);
-};
+}

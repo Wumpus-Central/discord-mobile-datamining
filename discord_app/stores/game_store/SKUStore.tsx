@@ -105,8 +105,7 @@ let map1 = new Map();
 let map2 = new Map();
 let map3 = new Map();
 const Store = initializeAll.Store;
-class SKUStore extends Store {
-}
+class SKUStore extends Store {}
 const prototype = SKUStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2);
@@ -223,7 +222,7 @@ const sKUStore = new SKUStore(dispatcherDefault, {
     map3 = new Map();
   },
   APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: handleEntitlementsFetch,
-  ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: handleEntitlementsFetch
+  ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: handleEntitlementsFetch,
 });
 let result = set.fileFinishedImporting("stores/game_store/SKUStore.tsx");
 

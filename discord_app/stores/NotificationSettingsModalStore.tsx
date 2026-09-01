@@ -16,8 +16,7 @@ const FormStates = ME.FormStates;
 const ChannelTypes = ME.ChannelTypes;
 let CLOSED = FormStates.CLOSED;
 const Store = initializeDefault.Store;
-class NotificationSettingsModalStore extends Store {
-}
+class NotificationSettingsModalStore extends Store {}
 const prototype = NotificationSettingsModalStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
@@ -49,7 +48,7 @@ prototype["getProps"] = function getProps() {
         tmp = type === constants.GUILD_CATEGORY;
       }
       return tmp;
-    })
+    }),
   };
 };
 NotificationSettingsModalStore.displayName = "NotificationSettingsModalStore";
@@ -61,7 +60,7 @@ const notificationSettingsModalStore = new NotificationSettingsModalStore(dispat
   NOTIFICATION_SETTINGS_MODAL_CLOSE: function handleFormClose() {
     CLOSED = FormStates.CLOSED;
     c2 = null;
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/NotificationSettingsModalStore.tsx");
 

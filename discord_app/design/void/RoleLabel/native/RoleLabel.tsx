@@ -10,7 +10,10 @@ import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { display: "flex", flexDirection: "row" }, roleDot: { marginRight: 4 } });
+let closure_6 = createCacheKey.createStyles({
+  container: { display: "flex", flexDirection: "row" },
+  roleDot: { marginRight: 4 },
+});
 const result = require("set").fileFinishedImporting("design/void/RoleLabel/native/RoleLabel.tsx");
 
 export const RoleLabel = function RoleLabel(color) {

@@ -13,7 +13,12 @@ require = arg1;
 noopAll;
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ container: { paddingHorizontal: 16, alignItems: "center" }, image: { marginBottom: 16, marginTop: 64, textAlign: "center" }, header: { textAlign: "center", marginStart: 8, marginEnd: 8, marginBottom: 8 }, createButton: { marginTop: 16, marginBottom: 12 } });
+let closure_8 = createCacheKey.createStyles({
+  container: { paddingHorizontal: 16, alignItems: "center" },
+  image: { marginBottom: 16, marginTop: 64, textAlign: "center" },
+  header: { textAlign: "center", marginStart: 8, marginEnd: 8, marginBottom: 8 },
+  createButton: { marginTop: 16, marginBottom: 12 },
+});
 let result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/GuildProfileEmptyState.tsx");
 
 export default function GuildProfileEmptyState() {
@@ -21,7 +26,7 @@ export default function GuildProfileEmptyState() {
   let obj = { contentContainerStyle: tmp.container, children: null };
   obj = { style: tmp.image, children: callback2(SvgComponentDefault, obj) };
   obj = { style: tmp.image };
-  const items = [callback2(closure_5, obj), , , , ];
+  const items = [callback2(closure_5, obj), , , ,];
   obj1 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj1[3] = intl.string(getSystemLocale.t.Z1OZCV);
@@ -34,7 +39,7 @@ export default function GuildProfileEmptyState() {
   const obj4 = { text: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj4[0] = intl3.string(getSystemLocale.t["6dIB4R"]);
-  obj4[1] = callback(function*() {
+  obj4[1] = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -91,7 +96,7 @@ export default function GuildProfileEmptyState() {
   const obj5 = { text: null, variant: "secondary", onPress: null };
   const intl4 = getSystemLocale.intl;
   obj5[0] = intl4.string(getSystemLocale.t.yRjK4p);
-  obj5[2] = callback(function*() {
+  obj5[2] = callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -146,4 +151,4 @@ export default function GuildProfileEmptyState() {
   items[4] = callback2(Button.Button, obj5);
   obj[1] = items;
   return callback3(closure_4, obj);
-};
+}

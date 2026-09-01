@@ -7,7 +7,9 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ editIcon: { position: "absolute", right: -3 } });
-let closure_8 = { code: "function EditUserProfileAvatarTsx1(){const{rotation}=this.__closure;return{transform:[{rotateZ:rotation.get()+\"deg\"}]};}" };
+let closure_8 = {
+  code: 'function EditUserProfileAvatarTsx1(){const{rotation}=this.__closure;return{transform:[{rotateZ:rotation.get()+"deg"}]};}',
+};
 let result = require("set").fileFinishedImporting("modules/user_profile/native/EditUserProfileAvatar.tsx");
 
 export default function EditUserProfileAvatar(user) {
@@ -81,7 +83,7 @@ export default function EditUserProfileAvatar(user) {
         obj = { user: closure_0, currentAvatarDecoration: closure_7, analyticsLocations: closure_3 };
         const result = obj.openAvatarDecorationActionSheet(obj);
       },
-      showRemoveAvatar: null
+      showRemoveAvatar: null,
     };
     const tmp = user(flag3[12])(flag3[11], flag3.paths);
     obj[5] = user(flag3[16]).showRemoveAvatar(pendingAvatar, user.avatar);
@@ -125,7 +127,15 @@ export default function EditUserProfileAvatar(user) {
     const result = sharedValue.set(obj.withRepeat(user(flag3[19]).withTiming(360, obj), -1));
     return () => closure_1_0(closure_1_2[18]).cancelAnimation(closure_11);
   }, items3);
-  const tmp18 = pendingAvatar(flag2(flag3[20]), { style: avatarStyle, user, pendingAvatarSrc, pendingAvatarDecoration, statusStyle, disableStatus: flag, size });
+  const tmp18 = pendingAvatar(flag2(flag3[20]), {
+    style: avatarStyle,
+    user,
+    pendingAvatarSrc,
+    pendingAvatarDecoration,
+    statusStyle,
+    disableStatus: flag,
+    size,
+  });
   obj = { style, disabled, onPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = tmp8(tmp3[22]).intl;
   obj[4] = intl.string(user(flag3[22]).t.MUgHIN);
@@ -142,7 +152,7 @@ export default function EditUserProfileAvatar(user) {
       }
     }
   }
-  const items4 = [tmp17Result, ];
+  const items4 = [tmp17Result];
   let obj2 = { style: items5, size: null };
   items5 = [tmp.editIcon, editIconStyle];
   const tmp19 = setPendingAvatar;
@@ -155,4 +165,4 @@ export default function EditUserProfileAvatar(user) {
   items4[1] = pendingAvatar(flag2(flag3[23]), obj2);
   obj[5] = items4;
   return tmp19(user(flag3[21]).PressableOpacity, obj);
-};
+}

@@ -10,8 +10,20 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ HelpdeskArticles: closure_6, UserSettingsSections: error } = ME);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, art: null, infoHeader: null, info: null, infoDesc: null, buttonsContainer: null, linkSubtext: null };
-createCacheKey = { paddingVertical: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_24, justifyContent: "center" };
+createCacheKey = {
+  container: null,
+  art: null,
+  infoHeader: null,
+  info: null,
+  infoDesc: null,
+  buttonsContainer: null,
+  linkSubtext: null,
+};
+createCacheKey = {
+  paddingVertical: ThemesDefault.space.PX_24,
+  paddingHorizontal: ThemesDefault.space.PX_24,
+  justifyContent: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignSelf: "center", marginBottom: ThemesDefault.space.PX_16 };
 let obj1 = { alignSelf: "center", marginBottom: ThemesDefault.space.PX_16 };
@@ -25,7 +37,9 @@ let obj4 = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[6] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_8 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj5 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaLearnMoreActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/explicit_media_redaction/native/ExplicitMediaLearnMoreActionSheet.tsx",
+);
 
 export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   channelId = channelId.channelId;
@@ -62,7 +76,11 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   const items2 = [channelId, messageId];
   const effect = embedId.useEffect(() => {
     let obj = channelId(attachmentId[9]);
-    obj = { action: channelId(attachmentId[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_VIEWED, channelId, messageId };
+    obj = {
+      action: channelId(attachmentId[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
+      channelId,
+      messageId,
+    };
     const result = obj.trackMediaRedactionAction(obj);
   }, items2);
   const items3 = [memo, shouldAgeVerifyForExplicitMedia, callback, channelId, messageId, attachmentId, embedId];
@@ -73,7 +91,10 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
       obj[0] = function handleOnHelpUrlHook() {
         const obj = closure_1_1(closure_1_2[15]);
         obj.openUrl(closure_1_1(closure_1_2[14]).getArticleURL(closure_1_6.TIGGER_PAWTECT_LEARN_MORE));
-        callback(closure_1_0(closure_1_2[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
+        callback(
+          closure_1_0(closure_1_2[9]).TrackMediaRedactionActionType
+            .EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE,
+        );
       };
       let formatResult = intl2.format(channelId(attachmentId[10]).t["TGqx+i"], obj);
     } else {
@@ -84,9 +105,15 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
         obj[0] = function handleFalsePositiveHook() {
           let obj = closure_1_1(closure_1_2[12]);
           obj.hideActionSheet();
-          callback(closure_1_0(closure_1_2[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE);
+          callback(
+            closure_1_0(closure_1_2[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE,
+          );
           obj = { channelId: closure_0, messageId: closure_1, attachmentId: closure_2, embedId: closure_3 };
-          closure_1_1(closure_1_2[12]).openLazy(closure_1_0(closure_1_2[18])(closure_1_2[17], closure_1_2.paths), closure_1_5, obj);
+          closure_1_1(closure_1_2[12]).openLazy(
+            closure_1_0(closure_1_2[18])(closure_1_2[17], closure_1_2.paths),
+            closure_1_5,
+            obj,
+          );
         };
         formatResult = intl.format(channelId(attachmentId[10]).t.Ge0HUi, obj);
       }
@@ -94,13 +121,22 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
     return formatResult;
   }, items3);
   obj = { style: tmp.container, children: null };
-  obj = { style: tmp.art, children: callback(channelId(attachmentId[20]).ShieldSpotIllustration, { height: 120, width: 120 }) };
-  const items4 = [callback(isVerifiedTeen, obj), , ];
+  obj = {
+    style: tmp.art,
+    children: callback(channelId(attachmentId[20]).ShieldSpotIllustration, { height: 120, width: 120 }),
+  };
+  const items4 = [callback(isVerifiedTeen, obj), ,];
   obj1 = { style: tmp.info, children: null };
-  const obj2 = { style: tmp.infoHeader, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+  const obj2 = {
+    style: tmp.infoHeader,
+    accessibilityRole: "header",
+    variant: "heading-xl/bold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl3 = channelId(attachmentId[10]).intl;
   obj2[4] = intl3.string(channelId(attachmentId[10]).t.sGW77l);
-  const items5 = [callback(channelId(attachmentId[21]).Text, obj2), ];
+  const items5 = [callback(channelId(attachmentId[21]).Text, obj2)];
   const obj3 = { style: tmp.infoDesc, variant: "text-md/medium", color: "text-default", children: null };
   if (!memo) {
     const intl4 = tmp4(tmp2[10]).intl;
@@ -121,7 +157,9 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   if (memo) {
     obj5[2] = stringResult;
     obj5[3] = function handleAgeVerifyButtonPress() {
-      callback(channelId(attachmentId[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY);
+      callback(
+        channelId(attachmentId[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY,
+      );
       let obj = messageId(attachmentId[15]);
       obj = { entryPoint: channelId(attachmentId[16]).AgeVerificationModalEntryPoint.SENSITIVE_MEDIA_LEARN_MORE };
       const result = obj.showAgeVerificationGetStartedModal(obj);
@@ -154,7 +192,7 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
     }
   }
   const obj6 = { startExpanded: true, children: null };
-  const items6 = [callback(channelId(attachmentId[22]).Button, tmp18), , ];
+  const items6 = [callback(channelId(attachmentId[22]).Button, tmp18), ,];
   const obj7 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl7 = tmp4(tmp2[10]).intl;
   obj7[2] = intl7.string(channelId(attachmentId[10]).t.bmbHPA);
@@ -164,10 +202,15 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   };
   items6[1] = callback(channelId(attachmentId[22]).Button, obj7);
   stringResult = intl.string(channelId(attachmentId[10]).t["9KiIz6"]);
-  items6[2] = callback(channelId(attachmentId[21]).Text, { style: tmp.linkSubtext, variant: "text-sm/medium", color: "text-muted", children: callback1() });
+  items6[2] = callback(channelId(attachmentId[21]).Text, {
+    style: tmp.linkSubtext,
+    variant: "text-sm/medium",
+    color: "text-muted",
+    children: callback1(),
+  });
   obj4[1] = items6;
   items4[2] = closure_9(isVerifiedTeen, obj4);
   obj[1] = items4;
   obj6[1] = closure_9(isVerifiedTeen, obj);
   return callback(channelId(attachmentId[19]).BottomSheet, obj6);
-};
+}

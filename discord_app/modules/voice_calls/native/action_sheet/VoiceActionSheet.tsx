@@ -49,7 +49,7 @@ export default function VoiceActionSheet(channel) {
     obj1 = { children: null };
     const obj2 = { channel: null };
     obj2[0] = channel;
-    const items2 = [callback(tmp2(13434), obj2), ];
+    const items2 = [callback(tmp2(13434), obj2)];
     let obj3 = { channel: null };
     obj3[0] = channel;
     items2[1] = callback(tmp2(13435), obj3);
@@ -63,7 +63,7 @@ export default function VoiceActionSheet(channel) {
     obj5[0] = tmp.container;
     const obj6 = { blurTheme: "dark", style: null };
     obj6[1] = tmp.visualEffectView;
-    const items3 = [callback(tmp2(4918), obj6), ];
+    const items3 = [callback(tmp2(4918), obj6)];
     const obj7 = { channel: null };
     obj7[0] = channel;
     items3[1] = callback(tmp2(13438), obj7);
@@ -71,5 +71,8 @@ export default function VoiceActionSheet(channel) {
     obj4[2] = callback2(closure_4, obj5);
     children = callback(tmp5(5989).ActionSheet, obj4);
   }
-  return tmp8(channel(5953).AnalyticsLocationProvider, { value: contextDefault(QUICK_SWITCHERDefault.VOICE_ACTION_SHEET).analyticsLocations, children });
-};
+  return tmp8(channel(5953).AnalyticsLocationProvider, {
+    value: contextDefault(QUICK_SWITCHERDefault.VOICE_ACTION_SHEET).analyticsLocations,
+    children,
+  });
+}

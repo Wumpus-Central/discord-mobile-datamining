@@ -12,7 +12,13 @@ export default function trackAgeGateSubmitted(format, section) {
   if (obj2.diff(format, "years") < 18) {
     formatResult = format.format("YYYY-MM-DD");
   }
-  obj = { dob: formatResult, dob_day: format.date(), dob_month: format.month() + 1, dob_year: format.year(), source: obj };
+  obj = {
+    dob: formatResult,
+    dob_day: format.date(),
+    dob_month: format.month() + 1,
+    dob_year: format.year(),
+    source: obj,
+  };
   obj = { section };
   obj.track(AnalyticEvents.AGE_GATE_SUBMITTED, obj);
-};
+}

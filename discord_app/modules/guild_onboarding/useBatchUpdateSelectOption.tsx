@@ -14,13 +14,17 @@ export default function useBatchUpdateSelectOption(arg0) {
   let obj = initialize;
   let items = [closure_5];
   let items1 = [arg0];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    let pendingResponseOptions = closure_1_5.getPendingResponseOptions(closure_0);
-    if (pendingResponseOptions == null) {
-      pendingResponseOptions = closure_1_7;
-    }
-    return pendingResponseOptions;
-  }, items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let pendingResponseOptions = closure_1_5.getPendingResponseOptions(closure_0);
+      if (pendingResponseOptions == null) {
+        pendingResponseOptions = closure_1_7;
+      }
+      return pendingResponseOptions;
+    },
+    items1,
+  );
   let items2 = [arg0];
   const effect = React.useEffect(() => {
     let obj = stateFromStores(closure_1_2[4]);
@@ -125,20 +129,24 @@ export default function useBatchUpdateSelectOption(arg0) {
             HermesBuiltin.apply(items, items1);
           }
           obj = {};
-          const merged = Object.assign(items1.reduce((arg0, id) => {
-            const obj = { flags: null };
-            const channelIdFlags = closure_1_4.getChannelIdFlags(lib, id);
-            obj[0] = lib(closure_1_2[10]).setFlag(channelIdFlags, closure_1_6.OPT_IN_ENABLED, true);
-            arg0[id] = obj;
-            return arg0;
-          }, {}));
-          const merged1 = Object.assign(differenceResult3.reduce((arg0, id) => {
-            const obj = { flags: null };
-            const channelIdFlags = closure_1_4.getChannelIdFlags(lib, id);
-            obj[0] = lib(closure_1_2[10]).setFlag(channelIdFlags, closure_1_6.OPT_IN_ENABLED, false);
-            arg0[id] = obj;
-            return arg0;
-          }, {}));
+          const merged = Object.assign(
+            items1.reduce((arg0, id) => {
+              const obj = { flags: null };
+              const channelIdFlags = closure_1_4.getChannelIdFlags(lib, id);
+              obj[0] = lib(closure_1_2[10]).setFlag(channelIdFlags, closure_1_6.OPT_IN_ENABLED, true);
+              arg0[id] = obj;
+              return arg0;
+            }, {}),
+          );
+          const merged1 = Object.assign(
+            differenceResult3.reduce((arg0, id) => {
+              const obj = { flags: null };
+              const channelIdFlags = closure_1_4.getChannelIdFlags(lib, id);
+              obj[0] = lib(closure_1_2[10]).setFlag(channelIdFlags, closure_1_6.OPT_IN_ENABLED, false);
+              arg0[id] = obj;
+              return arg0;
+            }, {}),
+          );
           const obj14 = stateFromStores(closure_1_2[9]);
           const option = obj14.selectOption(tmp, singleSelect.id, roleIds.id, arg2);
           obj12 = callback(closure_1_2[7]);
@@ -192,8 +200,8 @@ export default function useBatchUpdateSelectOption(arg0) {
         differenceResult1 = stateFromStores(closure_1_2[5]).difference(found8, found9);
         const obj4 = stateFromStores(closure_1_2[5]);
       }
-    }, items4)
+    }, items4),
   };
   items4 = [arg0];
   return obj;
-};
+}

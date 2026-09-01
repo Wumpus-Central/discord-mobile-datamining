@@ -9,4 +9,4 @@ export default function openClearAllIncomingRequestsConfirmationModal(incomingPe
   let obj = _modDef4723;
   obj = { incomingPendingRequestCount };
   obj.pushLazy(asyncRequireImpl(9066, dependencyMap.paths), obj);
-};
+}

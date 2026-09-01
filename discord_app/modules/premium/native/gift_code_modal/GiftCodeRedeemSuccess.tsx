@@ -10,10 +10,31 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, body: null, nameplateContainer: null, bundleContainer: null, bundlePreview: null, header: null, message: null, footer: null, gameItemCard: null };
-createCacheKey = { flex: 1, justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  container: null,
+  body: null,
+  nameplateContainer: null,
+  bundleContainer: null,
+  bundlePreview: null,
+  header: null,
+  message: null,
+  footer: null,
+  gameItemCard: null,
+};
+createCacheKey = {
+  flex: 1,
+  justifyContent: "space-between",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28, paddingBottom: 12, paddingHorizontal: 32 };
+createCacheKey[1] = {
+  flex: 1,
+  alignItems: "center",
+  justifyContent: "center",
+  paddingTop: 28,
+  paddingBottom: 12,
+  paddingHorizontal: 32,
+};
 createCacheKey[2] = { width: "100%", paddingTop: ThemesDefault.space.PX_24 };
 let obj1 = { width: "100%", paddingTop: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { width: "100%", alignItems: "center", paddingTop: ThemesDefault.space.PX_24 };
@@ -117,7 +138,15 @@ export default function GiftCodeRedeemSuccess(giftCode) {
       obj7[1] = callback;
       let tmp20Result = null != tmp15;
       if (tmp20Result) {
-        const obj8 = { deco: null, pfx: null, nameplate: null, previewAssets: null, disableStaticBackground: true, size: "large", targetSize: null };
+        const obj8 = {
+          deco: null,
+          pfx: null,
+          nameplate: null,
+          previewAssets: null,
+          disableStaticBackground: true,
+          size: "large",
+          targetSize: null,
+        };
         obj8[0] = firstAvatarDecoration;
         obj8[1] = firstProfileEffect;
         obj8[2] = firstNameplate;
@@ -129,7 +158,7 @@ export default function GiftCodeRedeemSuccess(giftCode) {
       obj6[1] = callback2(closure_5, obj7);
       tmp20Result = tmp20(tmp21, obj6);
     }
-    const items1 = [tmp20Result, , ];
+    const items1 = [tmp20Result, ,];
     if (null == stateFromStores) {
       const obj9 = { variant: "heading-xl/bold", style: null, accessibilityRole: "header", children: null };
       obj9[1] = tmp.header;
@@ -156,7 +185,13 @@ export default function GiftCodeRedeemSuccess(giftCode) {
           }
         }
         if (null != first) {
-          const obj13 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: null, accessibilityRole: "header", children: null };
+          const obj13 = {
+            variant: "heading-xl/bold",
+            color: "mobile-text-heading-primary",
+            style: null,
+            accessibilityRole: "header",
+            children: null,
+          };
           obj13[2] = tmp.header;
           const intl = tmp2(1236).intl;
           obj13[4] = intl.string(tmp2(1236).t.IMffmm);
@@ -187,7 +222,7 @@ export default function GiftCodeRedeemSuccess(giftCode) {
       }
       items1[2] = tmp36Result;
       obj2[2] = items1;
-      const items2 = [tmp17(tmp18, obj2), ];
+      const items2 = [tmp17(tmp18, obj2)];
       const obj16 = { style: null, children: null };
       obj16[0] = tmp.footer;
       if (null != first) {
@@ -251,19 +286,32 @@ export default function GiftCodeRedeemSuccess(giftCode) {
     let obj = user;
     let avatarSource;
     if (user != null) {
-      avatarSource = obj.getAvatarSource(null, true, tmp2(tmp3[21]).AVATAR_SIZE_MAP[tmp2(undefined, tmp3[21]).AvatarSizes.GIFT_SUCCESS]);
+      avatarSource = obj.getAvatarSource(
+        null,
+        true,
+        tmp2(tmp3[21]).AVATAR_SIZE_MAP[tmp2(undefined, tmp3[21]).AvatarSizes.GIFT_SUCCESS],
+      );
     }
     obj = { source: avatarSource, avatarDecoration, size: tmp2(tmp3[21]).AvatarSizes.GIFT_SUCCESS, animate: true };
     return closure_1_8(giftCode(nameplateContainer[21]).Avatar, obj);
   });
   const obj23 = { type: giftCode(1950).CollectiblesItemType.PROFILE_EFFECT };
-  const withResult1 = withResult.with({ type: giftCode(1950).CollectiblesItemType.PROFILE_EFFECT }, (profileEffect) => closure_1_8(user(nameplateContainer[22]), { user, profileEffect }));
+  const withResult1 = withResult.with({ type: giftCode(1950).CollectiblesItemType.PROFILE_EFFECT }, (profileEffect) =>
+    closure_1_8(user(nameplateContainer[22]), { user, profileEffect }),
+  );
   const obj24 = { type: giftCode(1950).CollectiblesItemType.PROFILE_FRAME };
-  const withResult2 = withResult1.with({ type: giftCode(1950).CollectiblesItemType.PROFILE_FRAME }, (profileFrame) => closure_1_8(user(nameplateContainer[23]), { user, profileFrame }));
+  const withResult2 = withResult1.with({ type: giftCode(1950).CollectiblesItemType.PROFILE_FRAME }, (profileFrame) =>
+    closure_1_8(user(nameplateContainer[23]), { user, profileFrame }),
+  );
   const obj25 = { type: giftCode(1950).CollectiblesItemType.NAMEPLATE };
-  tmp20Result = withResult2.with({ type: giftCode(1950).CollectiblesItemType.NAMEPLATE }, (nameplate) => {
-    obj = { style: nameplateContainer.nameplateContainer, children: closure_1_8(giftCode(nameplateContainer[24]).NameplatePreview, obj) };
-    obj = { user, nameplate };
-    return closure_1_8(closure_1_5, obj);
-  }).otherwise(() => closure_1_8(user(nameplateContainer[25]), { giftStyle: giftCode.giftStyle }));
-};
+  tmp20Result = withResult2
+    .with({ type: giftCode(1950).CollectiblesItemType.NAMEPLATE }, (nameplate) => {
+      obj = {
+        style: nameplateContainer.nameplateContainer,
+        children: closure_1_8(giftCode(nameplateContainer[24]).NameplatePreview, obj),
+      };
+      obj = { user, nameplate };
+      return closure_1_8(closure_1_5, obj);
+    })
+    .otherwise(() => closure_1_8(user(nameplateContainer[25]), { giftStyle: giftCode.giftStyle }));
+}

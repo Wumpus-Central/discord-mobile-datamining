@@ -129,7 +129,10 @@ export const useParentalControlledConsent = function useParentalControlledConsen
   let items = [closure_5];
   _require = PERSONALIZATION;
   selectedTeenId = undefined;
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.hasConsented(selectedTeenId, closure_0));
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_5.hasConsented(selectedTeenId, closure_0),
+  );
   let obj2 = initialize;
   selectedTeenId = require("useSelectedTeen.tsx").useSelectedTeenId();
   _require = undefined;
@@ -138,7 +141,7 @@ export const useParentalControlledConsent = function useParentalControlledConsen
     c2 = 0;
     c5 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -218,7 +221,7 @@ export const useParentalControlledConsent = function useParentalControlledConsen
   let items1 = [selectedTeenId, PERSONALIZATION];
   obj = {
     hasConsented: stateFromStores,
-    updateConsent: React.useCallback(function() {
+    updateConsent: React.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -227,7 +230,7 @@ export const useParentalControlledConsent = function useParentalControlledConsen
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    }, items1)
+    }, items1),
   };
   return obj;
 };

@@ -7,7 +7,9 @@ import { getBestActiveInput } from "../../utils/native/ChatInputUtils.tsx";
 
 const require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_limited_access/openGuildLimitedAccessInfoModal.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_limited_access/openGuildLimitedAccessInfoModal.native.tsx",
+);
 
 export default function openGuildLimitedAccessInfoModal(arg0) {
   const _require = arg0;
@@ -28,7 +30,7 @@ export default function openGuildLimitedAccessInfoModal(arg0) {
           return closure_2_4(closure_0, obj);
         };
       });
-    }
+    },
   };
   _modDef4858.openLazy(obj);
-};
+}

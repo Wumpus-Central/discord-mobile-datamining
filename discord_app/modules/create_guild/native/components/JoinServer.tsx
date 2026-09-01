@@ -35,7 +35,9 @@ export default function JoinServerContainer(initialRoute) {
   const layoutEffect = React.useLayoutEffect(() => {
     if (initialRoute === _undefined.JOIN_SERVER) {
       let headerCloseButton = initialRoute(location[7]).getHeaderCloseButton(() => {
-        closure_1_0(closure_1_2[8]).trackNUFStep(closure_1_6.STEP_GUILD_JOIN, closure_1_6.STEP_FRIEND_LIST, { skip: true });
+        closure_1_0(closure_1_2[8]).trackNUFStep(closure_1_6.STEP_GUILD_JOIN, closure_1_6.STEP_FRIEND_LIST, {
+          skip: true,
+        });
         callback();
       });
       const obj2 = initialRoute(location[7]);
@@ -48,7 +50,7 @@ export default function JoinServerContainer(initialRoute) {
     navigation.setOptions({ headerLeft: headerCloseButton });
   }, items);
   obj = { top: true, left: true, right: true, style: items1, children: null };
-  items1 = [, ];
+  items1 = [,];
   ({ flex: arr2[0], contentContainer: arr2[1] } = tmp);
   obj = { inviteString: first, error: null, submitting: null, onInviteChange: null, onDone: null };
   let stringResult = null;
@@ -87,4 +89,4 @@ export default function JoinServerContainer(initialRoute) {
   };
   obj[4] = navigation(onClose(location[10]), obj);
   return navigation(initialRoute(location[9]).SafeAreaPaddingView, obj);
-};
+}

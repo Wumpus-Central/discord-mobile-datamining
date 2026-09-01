@@ -18,7 +18,15 @@ function EducationCoachmarkImg() {
 }
 let closure_9 = require("DismissibleContent").DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
 createCacheKey = { upsellImageContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.round, height: 40, width: 40, display: "flex", alignItems: "center", justifyContent: "center" };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderRadius: ThemesDefault.radii.round,
+  height: 40,
+  width: 40,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[0] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/reactions/native/useBurstToggleCoachmark.tsx");
@@ -39,7 +47,14 @@ export default function useBurstToggleCoachmark(targetRef) {
   closure_1 = tmp7;
   const items3 = [first, tmp5[1]];
   const memo = React.useMemo(() => {
-    const obj = { description: null, onDismiss: null, position: "bottom", renderImgComponent: null, title: null, visible: null };
+    const obj = {
+      description: null,
+      onDismiss: null,
+      position: "bottom",
+      renderImgComponent: null,
+      title: null,
+      visible: null,
+    };
     const intl = first(closure_1_2[13]).intl;
     obj[0] = intl.string(first(closure_1_2[13]).t.nyYohm);
     obj[1] = function onDismiss() {
@@ -56,4 +71,4 @@ export default function useBurstToggleCoachmark(targetRef) {
   tmpResult = tmp(8973);
   const coachmark = tmpResult.useCoachmark(targetRef, memo);
   return tmp5[1];
-};
+}

@@ -20,18 +20,44 @@ function getTargetCardSize(windowWidth) {
   return Math.max(closure_8, (windowWidth - safeAreaLeft - safeAreaRight - closure_13 * (num - 1)) / num);
 }
 const VoicePanelCardItemType = VoicePanelModes.VoicePanelCardItemType;
-({ BASE_TARGET_CARD_SIZE: closure_8, VoicePanelCTACardDimensionKeys: c9, VoicePanelCTACardDimensions: c10, VOICE_PANEL_CHUNK_DIVISOR: unpackModuleId } = VoicePanelModes);
+({
+  BASE_TARGET_CARD_SIZE: closure_8,
+  VoicePanelCTACardDimensionKeys: c9,
+  VoicePanelCTACardDimensions: c10,
+  VOICE_PANEL_CHUNK_DIVISOR: unpackModuleId,
+} = VoicePanelModes);
 ({ EDGE_GUTTER: closure_12, CALL_TILE_GUTTER: map1 } = CARD_SIZE);
-let closure_15 = { id: "invalid", type: VoicePanelCardItemType.PARTICIPANT, x: 0, y: 0, width: 0, height: 0, zIndex: 0 };
+let closure_15 = {
+  id: "invalid",
+  type: VoicePanelCardItemType.PARTICIPANT,
+  x: 0,
+  y: 0,
+  width: 0,
+  height: 0,
+  zIndex: 0,
+};
 let set = new Set();
 let closure_17 = { enlargeSquare: false, fillAspectRatio: false };
 let obj = { match: new Set(["1,camera", "2,camera", "2,camera,camera"]), layouts: items, global: true };
 items = [{ enlargeSquare: true, fillAspectRatio: false }];
-let items1 = [obj, ];
+let items1 = [obj];
 obj = { match: null, layouts: null };
 let set1 = new Set(["1,camera", "2,camera", "2,camera,camera"]);
-obj[0] = new Set(["1,stream", "2,stream", "3,stream", "2,stream,camera", "3,stream,camera", "3,stream,camera,camera", "3,camera", "3,camera,stream"]);
-let items2 = [{ enlargeSquare: true, fillAspectRatio: true }, { enlargeSquare: false, fillAspectRatio: false }, { enlargeSquare: false, fillAspectRatio: false }];
+obj[0] = new Set([
+  "1,stream",
+  "2,stream",
+  "3,stream",
+  "2,stream,camera",
+  "3,stream,camera",
+  "3,stream,camera,camera",
+  "3,camera",
+  "3,camera,stream",
+]);
+let items2 = [
+  { enlargeSquare: true, fillAspectRatio: true },
+  { enlargeSquare: false, fillAspectRatio: false },
+  { enlargeSquare: false, fillAspectRatio: false },
+];
 obj[1] = items2;
 items1[1] = obj;
 let result = set.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardLayoutManager.tsx");
@@ -50,7 +76,17 @@ class VoicePanelCardLayoutManager {
     set1 = new Set();
     obj[6] = set1;
     obj[7] = [];
-    obj[12] = { windowWidth: 0, windowHeight: 0, chunkSize: 0, safeAreaLeft: 0, safeAreaRight: 0, safeAreaTop: 0, safeAreaBottom: 0, gutter: 0, controlBarSize: 0 };
+    obj[12] = {
+      windowWidth: 0,
+      windowHeight: 0,
+      chunkSize: 0,
+      safeAreaLeft: 0,
+      safeAreaRight: 0,
+      safeAreaTop: 0,
+      safeAreaBottom: 0,
+      gutter: 0,
+      controlBarSize: 0,
+    };
     obj[13] = { width: 0, height: 0 };
     obj.channelId = global;
     return obj;
@@ -78,7 +114,17 @@ prototype["cleanUp"] = function cleanUp() {
 prototype["updateState"] = function updateState(arr, windowHeight) {
   const self = this;
   windowHeight = windowHeight.windowHeight;
-  const obj = { windowHeight, windowWidth: windowHeight.windowWidth, chunkSize: windowHeight / closure_11, safeAreaLeft: Math.max(windowHeight.safeAreaLeft, closure_12), safeAreaRight: Math.max(safeAreaRight, closure_12), safeAreaBottom: Math.max(safeAreaBottom, closure_12), safeAreaTop, gutter: closure_13, controlBarSize };
+  const obj = {
+    windowHeight,
+    windowWidth: windowHeight.windowWidth,
+    chunkSize: windowHeight / closure_11,
+    safeAreaLeft: Math.max(windowHeight.safeAreaLeft, closure_12),
+    safeAreaRight: Math.max(safeAreaRight, closure_12),
+    safeAreaBottom: Math.max(safeAreaBottom, closure_12),
+    safeAreaTop,
+    gutter: closure_13,
+    controlBarSize,
+  };
   ({ safeAreaRight, safeAreaTop, safeAreaBottom, controlBarSize } = windowHeight);
   if (!shallowEqualDefault(obj, this.props)) {
     self.props = obj;
@@ -203,46 +249,48 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
     closure_9 = "" + self.items.length;
     let bound2 = 0;
     for (const item10061 of set3) {
-      if ((function _loop(item10061) {
-        let obj = self;
-        const participant = set1.getParticipant(self.channelId, item10061.id);
-        if (item10061.type === set2.CTA) {
-          const targetDimensions = obj.getTargetDimensions(item10061.id);
-        } else if (null != participant) {
-          if (participant.type === tmp4.USER) {
-            let defaultTargetCoords = obj.defaultTargetCoords;
-          } else {
-            defaultTargetCoords = obj.getTargetDimensions(item10061.id);
-          }
-          tmp4 = items;
-        }
-        if (null != targetDimensions) {
-          if (null != participant) {
-            obj = { type: "custom", item: null, forceSquare: null };
-            obj[1] = item10061;
-            obj[2] = participant.type === items.USER;
-            const type = participant.type;
-            if (items.ACTIVITY === type) {
-              set.add(obj);
-            } else if (tmp17.STREAM === type) {
-              set1.add(obj);
-            } else if (tmp17.USER === type) {
-              set2.add(obj);
+      if (
+        (function _loop(item10061) {
+          let obj = self;
+          const participant = set1.getParticipant(self.channelId, item10061.id);
+          if (item10061.type === set2.CTA) {
+            const targetDimensions = obj.getTargetDimensions(item10061.id);
+          } else if (null != participant) {
+            if (participant.type === tmp4.USER) {
+              let defaultTargetCoords = obj.defaultTargetCoords;
+            } else {
+              defaultTargetCoords = obj.getTargetDimensions(item10061.id);
             }
-            let str = "stream";
-            if (participant.type !== items.STREAM) {
-              let str2 = "activity";
-              if (participant.type === tmp17.USER) {
-                str2 = "camera";
+            tmp4 = items;
+          }
+          if (null != targetDimensions) {
+            if (null != participant) {
+              obj = { type: "custom", item: null, forceSquare: null };
+              obj[1] = item10061;
+              obj[2] = participant.type === items.USER;
+              const type = participant.type;
+              if (items.ACTIVITY === type) {
+                set.add(obj);
+              } else if (tmp17.STREAM === type) {
+                set1.add(obj);
+              } else if (tmp17.USER === type) {
+                set2.add(obj);
               }
-              str = str2;
+              let str = "stream";
+              if (participant.type !== items.STREAM) {
+                let str2 = "activity";
+                if (participant.type === tmp17.USER) {
+                  str2 = "camera";
+                }
+                str = str2;
+              }
+              closure_9 = `${closure_9},${str}`;
+              set3.delete(item10061);
             }
-            closure_9 = `${closure_9},${str}`;
-            set3.delete(item10061);
           }
-        }
-        return 1;
-      })(item10061)) {
+          return 1;
+        })(item10061)
+      ) {
         let tmp28 = obj;
         obj.return();
         break;
@@ -266,7 +314,10 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
       obj[3] = safeAreaBottom;
       let tmp34 = found;
       let num2 = 120;
-      let bound = Math.max(120, windowHeight - self(windowWidth[11])(obj, found).height - found - controlBarSize - safeAreaBottom);
+      let bound = Math.max(
+        120,
+        windowHeight - self(windowWidth[11])(obj, found).height - found - controlBarSize - safeAreaBottom,
+      );
       let _Math2 = Math;
       if (null == found) {
         if (set.size <= 0) {
@@ -292,11 +343,13 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
           }
           let _Math3 = Math;
           let num3 = 1;
-          let bound1 = Math.max((windowWidth - safeAreaLeft - safeAreaRight) / tmp76 | 0, 1);
+          let bound1 = Math.max(((windowWidth - safeAreaLeft - safeAreaRight) / tmp76) | 0, 1);
           bound2 = bound1;
           let tmp40 = set;
           let tmp41 = obj3;
-          cardSize = set.roundToNearestPixel((windowWidth - safeAreaLeft - safeAreaRight - obj3 * (bound1 - 1)) / bound1);
+          cardSize = set.roundToNearestPixel(
+            (windowWidth - safeAreaLeft - safeAreaRight - obj3 * (bound1 - 1)) / bound1,
+          );
           let tmp38 = bound1;
         }
         let _global;
@@ -366,9 +419,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
         c17 = -1;
         items1 = 0;
         items1 = [];
-        function placeItem(arg0, arg1, arg2, arg3) {
-
-        }
+        function placeItem(arg0, arg1, arg2, arg3) {}
         closure_0 = 1 === self.items.length;
         let items2 = [set, set1, set2, set3];
         let tmp54 = items2;
@@ -638,7 +689,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
               const y = obj6.y;
               let tmp69 = self;
               const chunkSize = self.props.chunkSize;
-              items = [y / chunkSize | 0, (y + obj6.height) / chunkSize | 0];
+              items = [(y / chunkSize) | 0, ((y + obj6.height) / chunkSize) | 0];
               let first = items[0];
               if (first <= items[1]) {
                 do {
@@ -784,7 +835,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
       let _Math5 = Math;
       let num4 = 4;
       let num5 = 1;
-      bound2 = Math.max(Math.min((windowWidth - safeAreaLeft - safeAreaRight) / items1(obj5) | 0, 4), 1);
+      bound2 = Math.max(Math.min(((windowWidth - safeAreaLeft - safeAreaRight) / items1(obj5)) | 0, 4), 1);
       let tmp44 = set;
       cardSize = set.roundToNearestPixel((windowWidth - safeAreaLeft - safeAreaRight - gutter * (bound2 - 1)) / bound2);
       tmp38 = bound2;
@@ -902,6 +953,8 @@ export const useTargetDimensionsSubscription = function useTargetDimensionsSubsc
 export const useManagerSubscription = function useManagerSubscription(first2) {
   closure_0 = first2;
   [tmp2, importDefault] = callback(React.useState(first2.getLayoutKey()), 2);
-  const layoutEffect = React.useLayoutEffect(() => closure_0.subscribeToManager(() => callback(layoutKey.getLayoutKey())));
+  const layoutEffect = React.useLayoutEffect(() =>
+    closure_0.subscribeToManager(() => callback(layoutKey.getLayoutKey())),
+  );
   return tmp2;
 };

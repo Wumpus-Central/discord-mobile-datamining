@@ -38,7 +38,7 @@ function BlockedUsersList(userIds) {
     const obj3 = { numberOfBlockedUsers: null };
     obj3[0] = userIds.length;
     obj2[3] = intl2.formatToPlainString(getSystemLocale.t["c+JVEB"], obj3);
-    const items = [callback(Text.Text, obj2), ];
+    const items = [callback(Text.Text, obj2)];
     const obj4 = { hasIcons: true, children: null };
     obj4[1] = userIds.map((userId) => callback2(callback(table[14]), { userId }, userId));
     const intl3 = getSystemLocale.intl;
@@ -58,11 +58,13 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx",
+);
 
 export default function ConnectedBlockedUsersList() {
   let obj = initialize;
   const items = [closure_4];
   obj = { userIds: obj.useStateFromStoresArray(items, () => blockedIDs.getBlockedIDs()) };
   return callback(BlockedUsersList, obj);
-};
+}

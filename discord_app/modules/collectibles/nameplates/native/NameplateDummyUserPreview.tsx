@@ -20,7 +20,15 @@ obj = { padding: ThemesDefault.space.PX_8, avatarMarginRight: ThemesDefault.spac
 obj[require("Button").AvatarSizes.NORMAL] = obj;
 let closure_8 = createCacheKey.createStyles((arg0, arg1) => {
   obj = { container: null, avatarContainer: null, avatar: null, placeholderBar: null, nameplate: null };
-  obj = { padding: tmp.padding, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", width: "100%", position: "relative", borderRadius: ThemesDefault.radii.sm };
+  obj = {
+    padding: tmp.padding,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    width: "100%",
+    position: "relative",
+    borderRadius: ThemesDefault.radii.sm,
+  };
   obj[0] = obj;
   obj = { borderRadius: ThemesDefault.radii.round, marginRight: tmp.avatarMarginRight, backgroundColor: null };
   let str = "transparent";
@@ -34,12 +42,22 @@ let closure_8 = createCacheKey.createStyles((arg0, arg1) => {
     num = 0;
   }
   obj[2] = { opacity: num };
-  obj[3] = { borderRadius: ThemesDefault.radii.md, height: obj[arg0].placeholderBarHeight, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
-  obj1 = { borderRadius: ThemesDefault.radii.md, height: obj[arg0].placeholderBarHeight, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
+  obj[3] = {
+    borderRadius: ThemesDefault.radii.md,
+    height: obj[arg0].placeholderBarHeight,
+    backgroundColor: ThemesDefault.colors.BORDER_STRONG,
+  };
+  obj1 = {
+    borderRadius: ThemesDefault.radii.md,
+    height: obj[arg0].placeholderBarHeight,
+    backgroundColor: ThemesDefault.colors.BORDER_STRONG,
+  };
   obj[4] = { borderRadius: ThemesDefault.radii.sm };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/native/NameplateDummyUserPreview.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/nameplates/native/NameplateDummyUserPreview.tsx",
+);
 
 export const NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG = obj;
 export const NameplateDummyUserPreview = function NameplateDummyUserPreview(hideAvatar) {
@@ -62,8 +80,16 @@ export const NameplateDummyUserPreview = function NameplateDummyUserPreview(hide
   items1 = [tmp3.container, style];
   const stateFromStores = obj.useStateFromStores(items, () => callback(table[8]).isThemeDark(theme.theme));
   obj = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
-  const items2 = [callback(NameplateInnerDefault, obj), , ];
-  obj1 = { style: tmp3.avatarContainer, children: callback(Button.Avatar, { source: importDefault(stateFromStores ? 8524 : 8525), size: NORMAL, "aria-hidden": true, style: tmp3.avatar }) };
+  const items2 = [callback(NameplateInnerDefault, obj), ,];
+  obj1 = {
+    style: tmp3.avatarContainer,
+    children: callback(Button.Avatar, {
+      source: importDefault(stateFromStores ? 8524 : 8525),
+      size: NORMAL,
+      "aria-hidden": true,
+      style: tmp3.avatar,
+    }),
+  };
   items2[1] = callback(View, obj1);
   const items3 = [tmp3.placeholderBar, { width: hideAvatar.width }];
   items2[2] = callback(View, { style: items3 });

@@ -14,7 +14,14 @@ require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, textContainer: null };
-createCacheKey = { padding: 16, gap: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center" };
+createCacheKey = {
+  padding: 16,
+  gap: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.lg,
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
@@ -23,13 +30,15 @@ const result = require("set").fileFinishedImporting("modules/app_launcher/native
 export default function EmptyState() {
   const tmp = callback3();
   let obj = handleApplicationSelected;
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(AppLauncherEntrypoint.AppLauncherEmptyStateType.HOME_EMPTY);
+  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(
+    AppLauncherEntrypoint.AppLauncherEmptyStateType.HOME_EMPTY,
+  );
   obj = { style: tmp.container, children: null };
-  const items = [callback(SvgComponentDefault, {}), ];
+  const items = [callback(SvgComponentDefault, {})];
   obj = { style: tmp.textContainer, variant: "text-md/semibold", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["V7+xhH"]);
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
-};
+}

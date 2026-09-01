@@ -21,7 +21,7 @@ require = arg1;
 function AddAvatarScreen() {
   function _handleSelectAvatar(closure_5, arg1) {
     const self = this;
-    const tmp = pendingImage(function*() {
+    const tmp = pendingImage(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -137,7 +137,7 @@ function AddAvatarScreen() {
   if (pendingImage != null) {
     imageUri = pendingImage.imageUri;
   }
-  const items1 = [tmp.container, ];
+  const items1 = [tmp.container];
   let num = 16;
   const tmp9Result1 = useDominantRGBFromImage;
   if (bottom > 0) {
@@ -147,16 +147,22 @@ function AddAvatarScreen() {
   items1[1] = { paddingBottom: num };
   obj1 = { style: tmp.headerContainer, children: null };
   let obj2 = { children: null };
-  let obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  let obj3 = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = tmp9(1236).intl;
   obj3[4] = intl.string(getSystemLocale.t.XQRWvR);
-  const items2 = [callback(Text.Text, obj3), ];
+  const items2 = [callback(Text.Text, obj3)];
   let obj4 = { style: tmp.subtitle, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
   const intl2 = tmp9(1236).intl;
   obj4[3] = intl2.string(getSystemLocale.t.fH9TLT);
   items2[1] = callback(Text.Text, obj4);
   obj2[0] = items2;
-  const items3 = [closure_10(View, obj2), , ];
+  const items3 = [closure_10(View, obj2), ,];
   const memoizedImageSourceResult = useDominantRGBFromImage.memoizedImageSource(imageUri);
   items3[1] = callback(first(17023), {
     avatarSource: useDominantRGBFromImage.memoizedImageSource(imageUri),
@@ -170,7 +176,7 @@ function AddAvatarScreen() {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    }
+    },
   });
   const obj6 = { style: tmp.errorContainer, children: null };
   const obj7 = { style: tmp.errorText, children: null };
@@ -182,7 +188,7 @@ function AddAvatarScreen() {
   obj6[1] = callback(Button.LegacyText, obj7);
   items3[2] = callback(View, obj6);
   obj1[1] = items3;
-  const items4 = [closure_10(View, obj1), callback(first(17014), { onAvatarSelect: tmp4[1], selectedAvatar: first }), ];
+  const items4 = [closure_10(View, obj1), callback(first(17014), { onAvatarSelect: tmp4[1], selectedAvatar: first })];
   const obj8 = { style: tmp.buttonContainer, children: null };
   const obj9 = { text: null, grow: true, onPress: null, disabled: null };
   const intl4 = tmp9(1236).intl;
@@ -219,7 +225,7 @@ class AddAvatarModal {
         fullscreen: true,
         render() {
           return callback2(closure_12, {});
-        }
+        },
       };
       obj[0] = obj;
       return obj;
@@ -229,8 +235,22 @@ class AddAvatarModal {
 }
 ({ UPLOAD_MEDIUM_SIZE: closure_8, Fonts, ModalAnimation } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, headerContainer: null, buttonContainer: null, title: null, subtitle: null, errorContainer: null, errorText: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32, alignItems: "center" };
+createCacheKey = {
+  container: null,
+  headerContainer: null,
+  buttonContainer: null,
+  title: null,
+  subtitle: null,
+  errorContainer: null,
+  errorText: null,
+};
+createCacheKey = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  justifyContent: "center",
+  paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32,
+  alignItems: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", alignItems: "center" };
 createCacheKey[2] = { marginHorizontal: 16, marginBottom: 16 };

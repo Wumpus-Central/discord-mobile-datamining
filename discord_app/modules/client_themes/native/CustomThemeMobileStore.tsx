@@ -63,8 +63,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
   }
 }
 const PersistedStore = initializeDefault.PersistedStore;
-class CustomThemeMobileStore extends PersistedStore {
-}
+class CustomThemeMobileStore extends PersistedStore {}
 const prototype = CustomThemeMobileStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let customTheme = arg0;
@@ -298,7 +297,7 @@ const customThemeMobileStore = new CustomThemeMobileStore(dispatcherDefault, {
       }
     }
   },
-  LOGOUT: reset
+  LOGOUT: reset,
 });
 const result = require("set").fileFinishedImporting("modules/client_themes/native/CustomThemeMobileStore.tsx");
 

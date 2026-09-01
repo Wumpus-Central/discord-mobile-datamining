@@ -127,7 +127,9 @@ const FRIENDS_AND_NON_FRIENDS4 = ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIE
 const valueOfResult9 = NON_FRIENDS4.valueOf();
 obj1[FRIENDS_AND_NON_FRIENDS4.valueOf()] = require("create").ExplicitContentRedaction.BLOCK;
 const valueOfResult10 = FRIENDS_AND_NON_FRIENDS4.valueOf();
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx",
+);
 
 export const TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM = obj;
 export const TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_NON_FRIEND_DM = obj1;
@@ -164,7 +166,11 @@ export const getExplicitContentSettingOrDefault = function getExplicitContentSet
   if (setting != null) {
     prop = setting.explicitContentGuilds;
   }
-  obj = { explicitContentGuilds: resolveExplicitContentSettingWithDefaults({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
+  obj = {
+    explicitContentGuilds: resolveExplicitContentSettingWithDefaults({ setting: prop }),
+    explicitContentNonFriendDm: null,
+    explicitContentFriendDm: null,
+  };
   let prop1;
   if (setting != null) {
     prop1 = setting.explicitContentNonFriendDm;
@@ -184,7 +190,11 @@ export const updateExplicitContentSetting = function updateExplicitContentSettin
   if (setting != null) {
     prop = setting.explicitContentGuilds;
   }
-  obj = { explicitContentGuilds: tmp4({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
+  obj = {
+    explicitContentGuilds: tmp4({ setting: prop }),
+    explicitContentNonFriendDm: null,
+    explicitContentFriendDm: null,
+  };
   let prop1;
   if (setting != null) {
     prop1 = setting.explicitContentNonFriendDm;

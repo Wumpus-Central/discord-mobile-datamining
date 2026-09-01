@@ -12,7 +12,9 @@ createCacheKey = { body: null };
 createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/saved_messages/message_reminders/native/MessageReminderDurationActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/saved_messages/message_reminders/native/MessageReminderDurationActionSheet.tsx",
+);
 
 export default function MessageReminderDurationActionSheet(createReminder) {
   createReminder = createReminder.createReminder;
@@ -65,13 +67,17 @@ export default function MessageReminderDurationActionSheet(createReminder) {
     const prop = createReminder(closure_1_2[13]).MESSAGE_REMINDER_DURATION_ITEMS;
     const mapped = prop.map((arg0) => {
       ({ getDueAt: closure_0, getLabel } = arg0);
-      return closure_1_6(closure_1_0(closure_1_2[14]).TableRow, {
-        label: getLabel(),
-        onPress() {
-          closure_1_0(callback());
-          closure_2_1(closure_2_2[15]).hideActionSheet();
-        }
-      }, "create-reminder-" + getLabel());
+      return closure_1_6(
+        closure_1_0(closure_1_2[14]).TableRow,
+        {
+          label: getLabel(),
+          onPress() {
+            closure_1_0(callback());
+            closure_2_1(closure_2_2[15]).hideActionSheet();
+          },
+        },
+        "create-reminder-" + getLabel(),
+      );
     });
     let obj = { label: null, onPress: null, arrow: true };
     let intl = createReminder(closure_1_2[10]).intl;
@@ -94,7 +100,7 @@ export default function MessageReminderDurationActionSheet(createReminder) {
     return mapped;
   }, items2);
   obj = { header: memo, bodyStyles: tmp.body, startExpanded: true, children: null };
-  const items3 = [dueInText(createReminder(5992).TableRowGroup, { hasIcons: false, children: memo1 }), ];
+  const items3 = [dueInText(createReminder(5992).TableRowGroup, { hasIcons: false, children: memo1 })];
   let tmp14Result = null != removeReminder;
   if (tmp14Result) {
     obj1 = { icon: null, label: null, onPress: null, start: true, end: true };
@@ -110,4 +116,4 @@ export default function MessageReminderDurationActionSheet(createReminder) {
   items3[1] = tmp14Result;
   obj[3] = items3;
   return isOverdue(createReminder(5622).BottomSheet, obj);
-};
+}

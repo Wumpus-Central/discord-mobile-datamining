@@ -44,7 +44,14 @@ prototype["recordChannelFetchStart"] = function recordChannelFetchStart(channelI
   obj[4] = Date.now();
   const result = fetchLogs.set(combined, obj);
 };
-prototype["recordChannelFetchedLocal"] = function recordChannelFetchedLocal(basicChannel, INITIAL_MESSAGE_FETCH_KEY, closure_2, c3, closure_4, messages) {
+prototype["recordChannelFetchedLocal"] = function recordChannelFetchedLocal(
+  basicChannel,
+  INITIAL_MESSAGE_FETCH_KEY,
+  closure_2,
+  c3,
+  closure_4,
+  messages,
+) {
   let tmp = closure_2;
   const channelsFetchedWithLocalMessages = this.channelsFetchedWithLocalMessages;
   channelsFetchedWithLocalMessages.add(basicChannel);
@@ -56,7 +63,9 @@ prototype["recordChannelFetchedLocal"] = function recordChannelFetchedLocal(basi
   if (c3 == null) {
     tmp3 = null;
   }
-  const value = fetchLogs.get("" + basicChannel + ":" + INITIAL_MESSAGE_FETCH_KEY + ":" + tmp + ":" + tmp3 + ":" + closure_4);
+  const value = fetchLogs.get(
+    "" + basicChannel + ":" + INITIAL_MESSAGE_FETCH_KEY + ":" + tmp + ":" + tmp3 + ":" + closure_4,
+  );
   if (null != value) {
     const obj = { loadTime: null, count: null, lastMessageId: null };
     const _Date = Date;

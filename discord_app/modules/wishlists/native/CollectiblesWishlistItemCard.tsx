@@ -20,13 +20,17 @@ export default function CollectiblesWishlistItemCard(sku) {
   let obj = sku(size[4]);
   const items = [closure_5];
   const items1 = [sku.id, wishlistOwnerId];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    let hasSentGiftResult = null != wishlistOwnerId;
-    if (hasSentGiftResult) {
-      hasSentGiftResult = closure_1_5.hasSentGift(sku.id, tmp);
-    }
-    return hasSentGiftResult;
-  }, items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let hasSentGiftResult = null != wishlistOwnerId;
+      if (hasSentGiftResult) {
+        hasSentGiftResult = closure_1_5.hasSentGift(sku.id, tmp);
+      }
+      return hasSentGiftResult;
+    },
+    items1,
+  );
   const items2 = [sku];
   const productNameAndTypeFromSku = sku(size[5]).getProductNameAndTypeFromSku(sku);
   memo = memo.useMemo(() => closure_1_4(sku), items2);
@@ -55,4 +59,4 @@ export default function CollectiblesWishlistItemCard(sku) {
     return tmp8(tmp9, obj);
   }
   OWNED = tmp2(tmp3[7]).WishlistItemCardOverlay.OWNED;
-};
+}

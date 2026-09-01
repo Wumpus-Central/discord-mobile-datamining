@@ -31,4 +31,4 @@ export default function _default(shopBlock) {
   obj[2] = intl.string(getSystemLocale.t.eAn6z2);
   obj[1] = jsx(Button.EmptyState, { style: { marginTop: 42 }, Illustration: getNoResultsSource.NoResults, body: null });
   tmp6 = <View style={{ marginTop: 42 }} Illustration={getNoResultsSource.NoResults} body={null} />;
-};
+}

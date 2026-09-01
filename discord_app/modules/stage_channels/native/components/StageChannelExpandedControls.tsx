@@ -32,7 +32,11 @@ const memoResult = importAllResult.memo((channel) => {
   const tmp4 = useCanCurrentUserSpeakInChannelDefault(channel.id);
   const items2 = [closure_4];
   const items3 = [channel.id];
-  const stateFromStoresArray = channel(589).useStateFromStoresArray(items2, () => closure_1_4.getAllApplicationStreamsForChannel(channel.id), items3);
+  const stateFromStoresArray = channel(589).useStateFromStoresArray(
+    items2,
+    () => closure_1_4.getAllApplicationStreamsForChannel(channel.id),
+    items3,
+  );
   const obj3 = channel(589);
   const items4 = [closure_5];
   importDefault = channel(589).useStateFromStores(items4, () => id.getId());
@@ -70,6 +74,8 @@ const memoResult = importAllResult.memo((channel) => {
   obj1 = { style: tmp.container, children: items5.map((children) => callback(closure_3, { children }, arg1)) };
   return <View style={tmp.container}>{items5.map((children) => callback(closure_3, { children }, arg1))}</View>;
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageChannelExpandedControls.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/components/StageChannelExpandedControls.tsx",
+);
 
 export default memoResult;

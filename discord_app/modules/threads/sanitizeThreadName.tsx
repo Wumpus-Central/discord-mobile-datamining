@@ -9,4 +9,4 @@ export default function sanitizeThreadName(str) {
     trimmed = str.trim();
   }
   return trimmed;
-};
+}

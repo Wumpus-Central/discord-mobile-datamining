@@ -31,24 +31,33 @@ export default function FamilyCenterFeatureRows() {
   const intl = getSystemLocale.intl;
   const tmp = callback3();
   const intl2 = getSystemLocale.intl;
-  const ageSpecificText = obj.useAgeSpecificText(intl.string(messagesProxyDefault.qITXhY), intl2.string(messagesProxyDefault.bmhCnL));
+  const ageSpecificText = obj.useAgeSpecificText(
+    intl.string(messagesProxyDefault.qITXhY),
+    intl2.string(messagesProxyDefault.bmhCnL),
+  );
   obj1 = useAgeSpecificText;
   const intl3 = getSystemLocale.intl;
   const stringResult = intl.string(messagesProxyDefault.qITXhY);
   const intl4 = getSystemLocale.intl;
-  const ageSpecificText1 = obj1.useAgeSpecificText(intl3.string(messagesProxyDefault.t7SkFy), intl4.string(messagesProxyDefault["68zfxD"]));
+  const ageSpecificText1 = obj1.useAgeSpecificText(
+    intl3.string(messagesProxyDefault.t7SkFy),
+    intl4.string(messagesProxyDefault["68zfxD"]),
+  );
   let obj2 = useAgeSpecificText;
   const intl5 = getSystemLocale.intl;
   const stringResult1 = intl3.string(messagesProxyDefault.t7SkFy);
   const intl6 = getSystemLocale.intl;
   obj = { icon: null, IconComponent: null, header: null, description: null };
-  const ageSpecificText2 = obj2.useAgeSpecificText(intl5.string(messagesProxyDefault["+pi4Yt"]), intl6.string(messagesProxyDefault["1xPTwE"]));
+  const ageSpecificText2 = obj2.useAgeSpecificText(
+    intl5.string(messagesProxyDefault["+pi4Yt"]),
+    intl6.string(messagesProxyDefault["1xPTwE"]),
+  );
   obj[0] = registerAssetDefault3;
   obj[1] = ChatCheckIcon.ChatCheckIcon;
   const intl7 = getSystemLocale.intl;
   obj[2] = intl7.string(messagesProxyDefault["001l3m"]);
   obj[3] = ageSpecificText;
-  const items = [obj, , ];
+  const items = [obj, ,];
   obj = { icon: registerAssetDefault2, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
   const intl8 = getSystemLocale.intl;
   obj[2] = intl8.string(messagesProxyDefault.yipAeP);
@@ -64,17 +73,25 @@ export default function FamilyCenterFeatureRows() {
   const obj4 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-muted", children: null };
   const intl10 = getSystemLocale.intl;
   obj4[3] = intl10.string(messagesProxyDefault["6JkHSg"]);
-  const items1 = [callback(Text.Text, obj4), ];
+  const items1 = [callback(Text.Text, obj4)];
   const stringResult2 = intl5.string(messagesProxyDefault["+pi4Yt"]);
   items1[1] = callback(TableRowGroupTitle.TableRowGroup, {
     hasIcons: true,
     children: items.map((header) => {
       header = header.header;
       ({ description, icon, IconComponent } = header);
-      return callback2(callback(5599).TableRow, { label: header, subLabel: description, icon: callback2(callback(5599).TableRow.Icon, { source: icon, IconComponent }) }, header);
-    })
+      return callback2(
+        callback(5599).TableRow,
+        {
+          label: header,
+          subLabel: description,
+          icon: callback2(callback(5599).TableRow.Icon, { source: icon, IconComponent }),
+        },
+        header,
+      );
+    }),
   });
   obj3[1] = items1;
   obj2[1] = callback2(Stack.Stack, obj3);
   return callback(View, obj2);
-};
+}

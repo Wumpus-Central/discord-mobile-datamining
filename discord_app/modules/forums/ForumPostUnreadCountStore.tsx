@@ -10,8 +10,7 @@ import set from "../../../_runtime/00002_set.js";
 let closure_5 = {};
 let set = new Set();
 const Store = initializeDefault.Store;
-class ForumPostUnreadCountStore extends Store {
-}
+class ForumPostUnreadCountStore extends Store {}
 const prototype = ForumPostUnreadCountStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3, closure_4);
@@ -91,7 +90,7 @@ const forumPostUnreadCountStore = new ForumPostUnreadCountStore(dispatcherDefaul
   REQUEST_FORUM_UNREADS: function handleRequestForumUnreads(threads) {
     threads = threads.threads;
     const item = threads.forEach((threadId) => set.add(threadId.threadId));
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/forums/ForumPostUnreadCountStore.tsx");
 

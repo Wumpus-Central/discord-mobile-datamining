@@ -53,7 +53,9 @@ const memoResult = importAllResult.memo(function VoicePanelHeaderSpeaker(isConne
   let items = [closure_8];
   stateFromStores = obj1.useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
   const items1 = [stateFromStores];
-  closure_10 = isConnectedToVoiceChannel(style[16]).useStateFromStores(items1, () => stateFromStores.getQueueAudioSwap());
+  closure_10 = isConnectedToVoiceChannel(style[16]).useStateFromStores(items1, () =>
+    stateFromStores.getQueueAudioSwap(),
+  );
   const obj3 = isConnectedToVoiceChannel(style[16]);
   const items2 = [closure_12];
   stateFromStores1 = isConnectedToVoiceChannel(style[16]).useStateFromStores(items2, () => {
@@ -204,7 +206,9 @@ const memoResult = importAllResult.memo(function VoicePanelHeaderSpeaker(isConne
     return ref;
   }, items6);
   callback = obj5.useCallback(() => {
-    const result = isConnectedToVoiceChannel(style[28]).UNSAFE_markDismissibleContentAsDismissed(isConnectedToVoiceChannel(style[29]).DismissibleContent.DONUT_MOBILE_NUX);
+    const result = isConnectedToVoiceChannel(style[28]).UNSAFE_markDismissibleContentAsDismissed(
+      isConnectedToVoiceChannel(style[29]).DismissibleContent.DONUT_MOBILE_NUX,
+    );
     callback(true);
     closure_3.lock();
   }, items7);
@@ -223,7 +227,7 @@ const memoResult = importAllResult.memo(function VoicePanelHeaderSpeaker(isConne
         tmp9 = isConnectedToVoiceChannel;
       }
       obj[1] = tmp9;
-      const items = [closure_14(closure_1_18, obj), ];
+      const items = [closure_14(closure_1_18, obj)];
       obj = { style, ref, children: null };
       const tmp3 = toggleAudio(tmp, closure_3);
       const tmp4 = stateFromStores2;
@@ -262,8 +266,15 @@ const memoResult = importAllResult.memo(function VoicePanelHeaderSpeaker(isConne
         obj = { targetRef: null, canShowTooltip: null };
         obj[0] = ref;
         obj[1] = isConnectedToVoiceChannel;
-        const items8 = [callback(closure_18, obj), ];
-        obj1 = { menuItems: null, position: "bottom", align: "end", onRequestOpen: null, onRequestClose: null, children: null };
+        const items8 = [callback(closure_18, obj)];
+        obj1 = {
+          menuItems: null,
+          position: "bottom",
+          align: "end",
+          onRequestOpen: null,
+          onRequestClose: null,
+          children: null,
+        };
         obj1[0] = memo;
         obj1[3] = callback;
         obj1[4] = tmp2.unlock;

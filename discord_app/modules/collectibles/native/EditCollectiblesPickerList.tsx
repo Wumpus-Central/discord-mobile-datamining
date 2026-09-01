@@ -9,11 +9,20 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 let c3 = importAllResult;
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
-let obj = { list: { flex: 1, marginTop: 12 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: null };
+let obj = {
+  list: { flex: 1, marginTop: 12 },
+  listContent: { paddingBottom: 88 },
+  loadingContainer: { paddingVertical: 80, alignItems: "center" },
+  header: null,
+};
 obj = { paddingHorizontal: require("useCollectibleListLayout").GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 };
 obj[3] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
-let closure_8 = importAllResult.memo((children) => <closure_5 style={callback().header}>{jsx(Text.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: arg0.header })}</closure_5>);
+let closure_8 = importAllResult.memo((children) => (
+  <closure_5 style={callback().header}>
+    {jsx(Text.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: arg0.header })}
+  </closure_5>
+));
 const result = require("set").fileFinishedImporting("modules/collectibles/native/EditCollectiblesPickerList.tsx");
 
 export const EditCollectiblesPickerList = function EditCollectiblesPickerList(sections) {
@@ -50,9 +59,11 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
         items.push({ type: "header", key: "header-" + header.section, header: header.header });
         const obj = { type: "header", key: "header-" + header.section, header: header.header };
         const obj2 = items(closure_1_1[7]);
-        const item = items(closure_1_1[7]).chunk(header.items, items(closure_1_1[5]).ROW_SIZE).forEach((items) => {
-          header.push({ type: "row", key: "row-" + header.section + "-" + arg1, items });
-        });
+        const item = items(closure_1_1[7])
+          .chunk(header.items, items(closure_1_1[5]).ROW_SIZE)
+          .forEach((items) => {
+            header.push({ type: "row", key: "row-" + header.section + "-" + arg1, items });
+          });
       });
       return items;
     }
@@ -80,7 +91,16 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
     let tmp17 = obj;
   } else {
     obj[0] = tmp.list;
-    obj = { data: null, renderItem: null, getItemType: null, keyExtractor: null, extraData: null, contentContainerStyle: null, onLayout: null, keyboardShouldPersistTaps: "always" };
+    obj = {
+      data: null,
+      renderItem: null,
+      getItemType: null,
+      keyExtractor: null,
+      extraData: null,
+      contentContainerStyle: null,
+      onLayout: null,
+      keyboardShouldPersistTaps: "always",
+    };
     obj[0] = memo;
     obj[1] = callback1;
     obj[2] = callback2;

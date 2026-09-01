@@ -18,7 +18,29 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
   if (arg0) {
     num = 6;
   }
-  let obj = { position: "absolute", right: "50%", zIndex: 1, marginVertical: 12, marginHorizontal: 0, paddingRight: 9, paddingLeft: num, paddingVertical: 4, minHeight: 24, flexDirection: "row", justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.round, backgroundColor: null, elevation: 4, shadowColor: null, shadowOffset: null, shadowOpacity: 0.08, shadowRadius: 4, borderWidth: 1, borderColor: null };
+  let obj = {
+    position: "absolute",
+    right: "50%",
+    zIndex: 1,
+    marginVertical: 12,
+    marginHorizontal: 0,
+    paddingRight: 9,
+    paddingLeft: num,
+    paddingVertical: 4,
+    minHeight: 24,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: ThemesDefault.radii.round,
+    backgroundColor: null,
+    elevation: 4,
+    shadowColor: null,
+    shadowOffset: null,
+    shadowOpacity: 0.08,
+    shadowRadius: 4,
+    borderWidth: 1,
+    borderColor: null,
+  };
   const tmp3 = ThemesDefault;
   if (arg0) {
     let RED_400 = tmp3.unsafe_rawColors.RED_400;
@@ -40,7 +62,9 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
   return obj;
 });
 let c12 = "text-xs/bold";
-let closure_13 = { code: "function ChannelsUnreadBarTsx1(){const{shown,position,scrollPosition,listPaddingTop,searchBarHeight,justReachedEnd,runOnJS,resetReachedEnd,height,MARGIN,guildChannelsListUnreadBarInsetEnd,width,withSpring,springStandard,interpolate,pressed,ON_PRESS_SPRING}=this.__closure;const animatedShown=shown&&(position==='top'?scrollPosition!=null&&listPaddingTop!=null&&scrollPosition.get()>listPaddingTop+searchBarHeight:!justReachedEnd);if(justReachedEnd){runOnJS(resetReachedEnd)();}const offsetBase=height.get()-MARGIN;const value=animatedShown?position==='bottom'&&guildChannelsListUnreadBarInsetEnd!=null?-guildChannelsListUnreadBarInsetEnd.get():0:offsetBase*(position==='bottom'?1:-1);const opacity=animatedShown?1:0;const scale=width.get()>0?(width.get()+5)/width.get():1;return{opacity:withSpring(opacity,springStandard,'animate-always'),transform:[{translateY:withSpring(value,springStandard)},{translateX:width.get()/2},{scale:withSpring(interpolate(pressed.get(),[0,1],[1,scale]),ON_PRESS_SPRING)}]};}" };
+let closure_13 = {
+  code: "function ChannelsUnreadBarTsx1(){const{shown,position,scrollPosition,listPaddingTop,searchBarHeight,justReachedEnd,runOnJS,resetReachedEnd,height,MARGIN,guildChannelsListUnreadBarInsetEnd,width,withSpring,springStandard,interpolate,pressed,ON_PRESS_SPRING}=this.__closure;const animatedShown=shown&&(position==='top'?scrollPosition!=null&&listPaddingTop!=null&&scrollPosition.get()>listPaddingTop+searchBarHeight:!justReachedEnd);if(justReachedEnd){runOnJS(resetReachedEnd)();}const offsetBase=height.get()-MARGIN;const value=animatedShown?position==='bottom'&&guildChannelsListUnreadBarInsetEnd!=null?-guildChannelsListUnreadBarInsetEnd.get():0:offsetBase*(position==='bottom'?1:-1);const opacity=animatedShown?1:0;const scale=width.get()>0?(width.get()+5)/width.get():1;return{opacity:withSpring(opacity,springStandard,'animate-always'),transform:[{translateY:withSpring(value,springStandard)},{translateX:width.get()/2},{scale:withSpring(interpolate(pressed.get(),[0,1],[1,scale]),ON_PRESS_SPRING)}]};}",
+};
 const memoResult = importAllResult.memo(function ChannelsUnreadBar(position) {
   position = position.position;
   const shown = position.shown;
@@ -214,7 +238,7 @@ const memoResult = importAllResult.memo(function ChannelsUnreadBar(position) {
         tmp28 = position;
         tmp29 = onPress;
         obj1[0] = obj8.withSpring(result, position(onPress[16]).springStandard);
-        items = [, , ];
+        items = [, ,];
         items[0] = obj1;
         obj2 = { translateX: null };
         num8 = 2;
@@ -263,7 +287,25 @@ const memoResult = importAllResult.memo(function ChannelsUnreadBar(position) {
       return;
     }
   }
-  obj = { shown, position, scrollPosition, listPaddingTop, searchBarHeight: tmp21, justReachedEnd: first1, runOnJS: position(onPress[6]).runOnJS, resetReachedEnd: callback4, height: sharedValue1, MARGIN: 12, guildChannelsListUnreadBarInsetEnd, width: sharedValue, withSpring: position(onPress[15]).withSpring, springStandard: position(onPress[16]).springStandard, interpolate: position(onPress[6]).interpolate, pressed: sharedValue2, ON_PRESS_SPRING: position(onPress[16]).ON_PRESS_SPRING };
+  obj = {
+    shown,
+    position,
+    scrollPosition,
+    listPaddingTop,
+    searchBarHeight: tmp21,
+    justReachedEnd: first1,
+    runOnJS: position(onPress[6]).runOnJS,
+    resetReachedEnd: callback4,
+    height: sharedValue1,
+    MARGIN: 12,
+    guildChannelsListUnreadBarInsetEnd,
+    width: sharedValue,
+    withSpring: position(onPress[15]).withSpring,
+    springStandard: position(onPress[16]).springStandard,
+    interpolate: position(onPress[6]).interpolate,
+    pressed: sharedValue2,
+    ON_PRESS_SPRING: position(onPress[16]).ON_PRESS_SPRING,
+  };
   X.__closure = obj;
   X.__workletHash = 978162815161;
   X.__initData = sharedValue2;
@@ -281,7 +323,17 @@ const memoResult = importAllResult.memo(function ChannelsUnreadBar(position) {
   } else {
     MOBILE_UNREADBAR_TEXT_DEFAULT = tmp4Result.colors.MOBILE_UNREADBAR_TEXT_DEFAULT;
   }
-  obj = { style: items8, pointerEvents: null, accessibilityRole: "button", onPress: null, onPressIn: null, onPressOut: null, hitSlop: 12, onLayout: null, children: null };
+  obj = {
+    style: items8,
+    pointerEvents: null,
+    accessibilityRole: "button",
+    onPress: null,
+    onPressIn: null,
+    onPressOut: null,
+    hitSlop: 12,
+    onLayout: null,
+    children: null,
+  };
   items8 = [tmp6.unreadBar, memo, animatedStyle];
   let str2 = "none";
   let obj8 = position(onPress[6]);
@@ -293,7 +345,7 @@ const memoResult = importAllResult.memo(function ChannelsUnreadBar(position) {
   obj[4] = callback2;
   obj[5] = callback3;
   obj[7] = callback;
-  const items9 = [headerHeight(ArrowSmallUpIcon, { color: MOBILE_UNREADBAR_TEXT_DEFAULT, size: "xxs" }), ];
+  const items9 = [headerHeight(ArrowSmallUpIcon, { color: MOBILE_UNREADBAR_TEXT_DEFAULT, size: "xxs" })];
   obj1 = { style: tmp6.text, variant: tmp9, color: null, maxFontSizeMultiplier: 1.5, children: null };
   let str3 = "mobile-unreadbar-text-default";
   if (first) {

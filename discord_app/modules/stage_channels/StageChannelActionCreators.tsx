@@ -71,7 +71,7 @@ function _startStage() {
     closure_3 = arg3;
     c6 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -157,7 +157,7 @@ function _editStage() {
     closure_2 = arg2;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (table === 2) {
         table = 3;
         HermesBuiltin.throwTypeError();
@@ -230,7 +230,7 @@ function _endStage() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -408,10 +408,19 @@ export const removeUserFromChannel = function removeUserFromChannel(id, getGuild
     const obj = showTooManyUserGuildsAlertDefault;
   }
 };
-export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissionAllowed(getGuildId, REQUEST_TO_SPEAK, arg2) {
+export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissionAllowed(
+  getGuildId,
+  REQUEST_TO_SPEAK,
+  arg2,
+) {
   const guildId = getGuildId.getGuildId();
   _modDef38(null != guildId, "Channel cannot be guildless");
-  const obj = { id: guildId, type: PermissionOverwriteType.PermissionOverwriteType.ROLE, allow: applyOverwritesAll.NONE, deny: applyOverwritesAll.NONE };
+  const obj = {
+    id: guildId,
+    type: PermissionOverwriteType.PermissionOverwriteType.ROLE,
+    allow: applyOverwritesAll.NONE,
+    deny: applyOverwritesAll.NONE,
+  };
   const merged = Object.assign(getGuildId.permissionOverwrites[guildId]);
   const obj2 = fromStringAll;
   if (arg2) {

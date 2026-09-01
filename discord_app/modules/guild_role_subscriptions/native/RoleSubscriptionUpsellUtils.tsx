@@ -5,7 +5,9 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/RoleSubscriptionUpsellUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/RoleSubscriptionUpsellUtils.tsx",
+);
 
 export default {
   handleShowEmojiUpsellAlert(guildId) {
@@ -22,8 +24,8 @@ export default {
             return closure_2_3(closure_0, obj);
           };
         });
-      }
+      },
     };
     obj.openLazy(obj);
-  }
+  },
 };

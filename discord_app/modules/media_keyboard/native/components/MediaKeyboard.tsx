@@ -30,7 +30,7 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
   let canStartThreads;
   let memo1;
   closure_15 = undefined;
-  let items = [, ];
+  let items = [,];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   ({ onClose, transitionState } = channel);
   const effect = sharedValue.useEffect(() => {
@@ -56,7 +56,17 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
   allowedExtensions = fileTypeFiltering.allowedExtensions;
   validateFilenames = fileTypeFiltering.validateFilenames;
   showInvalidFileTypeAlert = fileTypeFiltering.showInvalidFileTypeAlert;
-  let items1 = [sharedValue, channel, chatInputRef, keyboardContextForType, ref, tmp8, allowedExtensions, validateFilenames, showInvalidFileTypeAlert];
+  let items1 = [
+    sharedValue,
+    channel,
+    chatInputRef,
+    keyboardContextForType,
+    ref,
+    tmp8,
+    allowedExtensions,
+    validateFilenames,
+    showInvalidFileTypeAlert,
+  ];
   memo = sharedValue.useMemo(() => {
     function onRestoreKeyboard() {
       if (closure_5.target !== closure_1_6.APP_LAUNCHER) {
@@ -101,7 +111,13 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
           }
         }
         tmp19Result = tmp19(tmp[18]);
-        const result2 = tmp19Result.addAttachmentForCommand(channelId, onSelectFiles, result1, tmp3, tmp19(tmp[21]).UploadOrigin.IMAGE_PICKER);
+        const result2 = tmp19Result.addAttachmentForCommand(
+          channelId,
+          onSelectFiles,
+          result1,
+          tmp3,
+          tmp19(tmp[21]).UploadOrigin.IMAGE_PICKER,
+        );
         const obj6 = onRestoreKeyboard(tmp[18]);
       }
     }
@@ -120,7 +136,7 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
           onRestoreKeyboard: FILE_ATTACHMENT,
           onSelectFiles(arg0) {
             return closure_1_1(arg0, IMAGE_PICKER);
-          }
+          },
         };
         const merged = Object.assign(obj);
         obj.handleAttachFile(obj);
@@ -139,7 +155,7 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
           onRestoreKeyboard: IMAGE_PICKER,
           onSelectFiles(arg0) {
             return closure_1_1(arg0, IMAGE_PICKER);
-          }
+          },
         };
         const merged = Object.assign(obj);
         obj.previewType = previewType;
@@ -172,7 +188,7 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
           onRestoreKeyboard: IMAGE_PICKER,
           onSelectFiles(arg0) {
             return closure_1_1(arg0, IMAGE_PICKER);
-          }
+          },
         };
         const merged = Object.assign(obj);
         obj.draftType = closure_1_8.draftType;
@@ -208,7 +224,15 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
         if (null != upload) {
           fn = () => channel(ref[18]).handleSelectKeyboardItem(channelId, item, isIncluded, false);
         }
-        obj = { channelId, disableAddDescription: null == upload, disableSpoiler: null == upload, upload: null, onAdd: null, onEdit: null, onRemove: null };
+        obj = {
+          channelId,
+          disableAddDescription: null == upload,
+          disableSpoiler: null == upload,
+          upload: null,
+          onAdd: null,
+          onEdit: null,
+          onRemove: null,
+        };
         let tmp8 = upload;
         if (upload == null) {
           tmp8 = cloudUpload;
@@ -254,11 +278,11 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
         }
         const current2 = onSelectFiles.current;
         current2.handleSend();
-      }
+      },
     };
   }, items1);
   canStartThreads = tmp8.canStartThreads;
-  let items2 = [memo, , , , ];
+  let items2 = [memo, , , ,];
   ({ uploadDisabled: arr3[1], canPostPolls: arr3[2] } = tmp8);
   items2[3] = isAppLauncherEnabled;
   items2[4] = canStartThreads;
@@ -311,15 +335,31 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
   closure_15 = sharedValue.useRef(null);
   let items3 = [memo];
   let items4 = [sharedValue, sharedValue1, memo, channel.id, tmp8, memo1, token];
-  const callback = sharedValue.useCallback((animatedIndex) => memo(chatInputRef(ref[32]), { animatedIndex: animatedIndex.animatedIndex, onPress: memo.onPressHeader }), items3);
+  const callback = sharedValue.useCallback(
+    (animatedIndex) =>
+      memo(chatInputRef(ref[32]), { animatedIndex: animatedIndex.animatedIndex, onPress: memo.onPressHeader }),
+    items3,
+  );
   const callback1 = sharedValue.useCallback((animateOnMount) => {
     let flag = animateOnMount.animateOnMount;
     if (flag === undefined) {
       flag = false;
     }
-    let obj = { animateOnMount: flag, animatedIndex: sharedValue, animatedPosition: sharedValue1, initialPosition: animateOnMount.initialPosition, children: null };
-    obj = { ref: closure_15, animatedIndex: sharedValue, channelId: channel.id, draftType: closure_8.draftType, onSend: memo.onSend };
-    const items = [memo(chatInputRef(ref[34]), obj), ];
+    let obj = {
+      animateOnMount: flag,
+      animatedIndex: sharedValue,
+      animatedPosition: sharedValue1,
+      initialPosition: animateOnMount.initialPosition,
+      children: null,
+    };
+    obj = {
+      ref: closure_15,
+      animatedIndex: sharedValue,
+      channelId: channel.id,
+      draftType: closure_8.draftType,
+      onSend: memo.onSend,
+    };
+    const items = [memo(chatInputRef(ref[34]), obj)];
     obj = {
       canPostPolls: closure_8.canPostPolls,
       onHeightChange(arg0) {
@@ -331,7 +371,7 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
         return setInsetFabResult;
       },
       uploadDisabled: closure_8.uploadDisabled,
-      overflowButtons: memo1
+      overflowButtons: memo1,
     };
     items[1] = memo(chatInputRef(ref[35]), obj);
     obj[4] = items;
@@ -351,10 +391,25 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
       return current.focusPhotosButton();
     },
     transitionState,
-    children: null
+    children: null,
   };
   const obj7 = channel(ref[17]);
-  obj = { channel, draftType: tmp8.draftType, onPressCamera: memo.onPressCamera, onAttachPress: memo.onAttachPress, onPressItem: memo.onPressItem, onLongPressItem: memo.onLongPressItem, onViewAll: memo.onViewAll, onManageLimited: memo.onManageLimited, includedUploadIds: tmp8.includedUploadIds, extensions: allowedExtensions, allowCamera: fileTypeFiltering.mediaFilesAllowed, uploadDisabled: tmp8.uploadDisabled, uploadLimit: tmp8.uploadLimit, disableWhenReachedLimit: tmp8.disableWhenReachedLimit };
+  obj = {
+    channel,
+    draftType: tmp8.draftType,
+    onPressCamera: memo.onPressCamera,
+    onAttachPress: memo.onAttachPress,
+    onPressItem: memo.onPressItem,
+    onLongPressItem: memo.onLongPressItem,
+    onViewAll: memo.onViewAll,
+    onManageLimited: memo.onManageLimited,
+    includedUploadIds: tmp8.includedUploadIds,
+    extensions: allowedExtensions,
+    allowCamera: fileTypeFiltering.mediaFilesAllowed,
+    uploadDisabled: tmp8.uploadDisabled,
+    uploadLimit: tmp8.uploadLimit,
+    disableWhenReachedLimit: tmp8.disableWhenReachedLimit,
+  };
   obj[10] = memo(chatInputRef(ref[37]), obj);
   return memo(chatInputRef(ref[36]), obj);
 });

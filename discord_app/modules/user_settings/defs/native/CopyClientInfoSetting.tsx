@@ -77,7 +77,7 @@ function ClientClientInfoActionSheet() {
     const obj = callback(5981);
     const result = callback(4193).presentCopiedToClipboard();
   };
-  const items = [callback(ActionSheetRowIcon.ActionSheetRow, obj1), , , , ];
+  const items = [callback(ActionSheetRowIcon.ActionSheetRow, obj1), , , ,];
   let obj2 = { label: null, subLabel: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj2[0] = intl3.string(getSystemLocale.t.zuaWIt);
@@ -119,7 +119,7 @@ function ClientClientInfoActionSheet() {
   };
   items[4] = callback(ActionSheetRowIcon.ActionSheetRow, obj5);
   obj[1] = items;
-  const items1 = [callback2(ActionSheetRowIcon.ActionSheetRow.Group, obj), ];
+  const items1 = [callback2(ActionSheetRowIcon.ActionSheetRow.Group, obj)];
   const obj6 = { hasIcons: true, children: null };
   const obj7 = { icon: callback(CopyIcon.CopyIcon, {}), label: null, onPress: null };
   const intl7 = getSystemLocale.intl;
@@ -130,7 +130,23 @@ function ClientClientInfoActionSheet() {
     ({ releaseChannel, buildOverride, manifest } = tmp);
     const deviceInfo = callback(4457).getDeviceInfo();
     const obj = callback(4457);
-    const combined = "App: " + appVersion + " (" + buildNumber + ") " + releaseChannel + "; Manifest: " + manifest + "; Build Override: " + buildOverride + "; " + "Device: " + deviceInfo + " OS " + callback(4457).getSystemVersion() + ";";
+    const combined =
+      "App: " +
+      appVersion +
+      " (" +
+      buildNumber +
+      ") " +
+      releaseChannel +
+      "; Manifest: " +
+      manifest +
+      "; Build Override: " +
+      buildOverride +
+      "; " +
+      "Device: " +
+      deviceInfo +
+      " OS " +
+      callback(4457).getSystemVersion() +
+      ";";
     const obj2 = callback(4457);
     callback(5981).copy(combined);
     const obj3 = callback(5981);
@@ -156,7 +172,7 @@ const pressable = createToggle.createPressable({
     obj.openLazy(Promise.resolve(obj), "ClientClientInfoActionSheet");
   },
   usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting,
-  withArrow: true
+  withArrow: true,
 });
 let obj = {
   useTitle() {
@@ -171,7 +187,7 @@ let obj = {
     obj.openLazy(Promise.resolve(obj), "ClientClientInfoActionSheet");
   },
   usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting,
-  withArrow: true
+  withArrow: true,
 };
 let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/CopyClientInfoSetting.tsx");
 

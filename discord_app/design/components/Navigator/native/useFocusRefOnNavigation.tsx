@@ -30,4 +30,4 @@ export default function useFocusRefOnNavigation(inputRef) {
       ref.cancel();
     };
   }, items);
-};
+}

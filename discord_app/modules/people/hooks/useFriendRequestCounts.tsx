@@ -24,7 +24,7 @@ export const useIncomingFriendRequestCount = function useIncomingFriendRequestCo
 export const getOutgoingFriendRequestCount = function getOutgoingFriendRequestCount(items1) {
   let tmp = items1;
   if (items1 === undefined) {
-    const items = [globalThis.o, ];
+    const items = [globalThis.o];
     items[1] = globalThis.s;
     tmp = items;
   }

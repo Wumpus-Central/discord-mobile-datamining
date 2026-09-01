@@ -9,11 +9,40 @@ import ME from "../../Constants.tsx";
 ({ ChannelTypes: c3, ChannelTypesSets: c4, HelpdeskArticles: c5, Permissions: closure_6 } = ME);
 const result = set.fileFinishedImporting("modules/channel_permissions/ChannelPermissionsConstants.tsx");
 
-export const RowType = { EMPTY_STATE: 0, [0]: "EMPTY_STATE", ADMINISTRATOR: 1, [1]: "ADMINISTRATOR", ROLE: 2, [2]: "ROLE", OWNER: 3, [3]: "OWNER", MEMBER: 4, [4]: "MEMBER", USER: 5, [5]: "USER", GUILD: 6, [6]: "GUILD" };
-export const AudienceSelectorSections = { ROLES: 0, [0]: "ROLES", MEMBERS: 1, [1]: "MEMBERS", USERS: 2, [2]: "USERS", GUILDS: 3, [3]: "GUILDS" };
+export const RowType = {
+  EMPTY_STATE: 0,
+  [0]: "EMPTY_STATE",
+  ADMINISTRATOR: 1,
+  [1]: "ADMINISTRATOR",
+  ROLE: 2,
+  [2]: "ROLE",
+  OWNER: 3,
+  [3]: "OWNER",
+  MEMBER: 4,
+  [4]: "MEMBER",
+  USER: 5,
+  [5]: "USER",
+  GUILD: 6,
+  [6]: "GUILD",
+};
+export const AudienceSelectorSections = {
+  ROLES: 0,
+  [0]: "ROLES",
+  MEMBERS: 1,
+  [1]: "MEMBERS",
+  USERS: 2,
+  [2]: "USERS",
+  GUILDS: 3,
+  [3]: "GUILDS",
+};
 export const MEMBER_REQUEST_COUNT = 20;
 export const ADVANCED_MODE_ON_KEY = "channelPermissionSettingsAdvancedModeOn";
-export const TrackExposureLocations = { SETTINGS_PAGE: "settings-page", MEMBERS_LIST: "members-list", EMPTY_STATE: "empty-state", CREATE_CHANNEL: "create-channel" };
+export const TrackExposureLocations = {
+  SETTINGS_PAGE: "settings-page",
+  MEMBERS_LIST: "members-list",
+  EMPTY_STATE: "empty-state",
+  CREATE_CHANNEL: "create-channel",
+};
 export const SettingMode = { BASIC: "basic", ADVANCED: "advanced" };
 export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(type, arg1, createPostsDisabled) {
   type = type.type;

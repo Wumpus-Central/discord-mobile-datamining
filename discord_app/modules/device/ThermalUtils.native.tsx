@@ -29,27 +29,31 @@ let closure_5 = keys.create((arg0) => {
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();
     thermalState1.then(function updateThermalState(arg0) {
       const callback = arg0;
-      callback(closure_1_2[5]).batchUpdates(() => state((rawThermalState) => {
-        let tmp = rawThermalState;
-        if (rawThermalState.rawThermalState !== closure_0) {
-          const obj = { rawThermalState: null };
-          obj[0] = tmp2;
-          tmp = obj;
-        }
-        return tmp;
-      }));
+      callback(closure_1_2[5]).batchUpdates(() =>
+        state((rawThermalState) => {
+          let tmp = rawThermalState;
+          if (rawThermalState.rawThermalState !== closure_0) {
+            const obj = { rawThermalState: null };
+            obj[0] = tmp2;
+            tmp = obj;
+          }
+          return tmp;
+        }),
+      );
     });
     nativeEventEmitter.addListener("DeviceThermalStateDidChange", (state) => {
       state = state.state;
-      callback(closure_1_2[5]).batchUpdates(() => state((rawThermalState) => {
-        let tmp = rawThermalState;
-        if (rawThermalState.rawThermalState !== closure_0) {
-          const obj = { rawThermalState: null };
-          obj[0] = tmp2;
-          tmp = obj;
-        }
-        return tmp;
-      }));
+      callback(closure_1_2[5]).batchUpdates(() =>
+        state((rawThermalState) => {
+          let tmp = rawThermalState;
+          if (rawThermalState.rawThermalState !== closure_0) {
+            const obj = { rawThermalState: null };
+            obj[0] = tmp2;
+            tmp = obj;
+          }
+          return tmp;
+        }),
+      );
     });
     return { rawThermalState: "r" };
   }
@@ -65,5 +69,5 @@ export default {
   },
   addListener(arg0) {
     return { remove: lib.subscribe(arg0) };
-  }
+  },
 };

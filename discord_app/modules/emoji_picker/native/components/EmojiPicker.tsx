@@ -12,7 +12,13 @@ let c3 = importAllResult;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ AnalyticEvents: c5, ChatInputComponentViewedTypes: closure_6, VerticalGradient: error } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let obj = { container: { flex: 1 }, list: { overflow: "hidden", flex: 1 }, header: null, headerGradientColor: null, headerGradient: null };
+let obj = {
+  container: { flex: 1 },
+  list: { overflow: "hidden", flex: 1 },
+  header: null,
+  headerGradientColor: null,
+  headerGradient: null,
+};
 obj = { flexDirection: "row", paddingTop: ThemesDefault.space.PX_8, paddingBottom: 1, gap: ThemesDefault.space.PX_12 };
 obj[2] = obj;
 createCacheKey = { color: ThemesDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
@@ -31,7 +37,7 @@ const memoResult = importAllResult.memo(function EmojiPicker(inPortalKeyboard) {
   let handleTextChange;
   ({ bottomSheetRef, onPressEmoji, onBackspace } = inPortalKeyboard);
   const tmp = callback3();
-  const items = [, ];
+  const items = [,];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   const effect = importAllResult.useEffect(() => {
     let obj = ref1(handleTextChange[7]);
@@ -71,9 +77,22 @@ const memoResult = importAllResult.memo(function EmojiPicker(inPortalKeyboard) {
   obj2[3] = handleTextChange;
   obj2[4] = callback;
   obj1[1] = callback(channel(handleTextChange[14]).SearchField, obj2);
-  const items3 = [callback(closure_4, obj1), , ];
+  const items3 = [callback(closure_4, obj1), ,];
   const obj3 = { style: tmp.list, children: null };
-  const obj4 = { bottomSheetIndex, emojiPickerListRef: ref, categories: emojiCategories, categoryIndexActive: sharedValue, emojis: tmp8.searchResults, onPressEmoji, onLongPressEmoji: null, channel: null, emojiPickerIntention: null, insetBottom: null, inPortalKeyboard: null, searchQueryRef: null };
+  const obj4 = {
+    bottomSheetIndex,
+    emojiPickerListRef: ref,
+    categories: emojiCategories,
+    categoryIndexActive: sharedValue,
+    emojis: tmp8.searchResults,
+    onPressEmoji,
+    onLongPressEmoji: null,
+    channel: null,
+    emojiPickerIntention: null,
+    insetBottom: null,
+    inPortalKeyboard: null,
+    searchQueryRef: null,
+  };
   const tmp11 = ref1(handleTextChange[13])({ hasCategories: true });
   obj4[6] = channel(handleTextChange[17]).openEmojiActionSheet;
   obj4[7] = channel;
@@ -81,18 +100,29 @@ const memoResult = importAllResult.memo(function EmojiPicker(inPortalKeyboard) {
   obj4[9] = safeAreaBottomKeyboardAware;
   obj4[10] = inPortalKeyboard;
   obj4[11] = tmp8.searchQueryRef;
-  const items4 = [callback(ref1(handleTextChange[16]), obj4), ];
+  const items4 = [callback(ref1(handleTextChange[16]), obj4)];
   const obj5 = { style: tmp.headerGradient, start: constants.START, end: constants.END, colors: null };
   const tmp12 = ref1(handleTextChange[16]);
   const tmp13 = ref1(handleTextChange[18]);
-  const items5 = [channel(handleTextChange[19]).hexOpacityToRgba(tmp.headerGradientColor.color, 100), ];
+  const items5 = [channel(handleTextChange[19]).hexOpacityToRgba(tmp.headerGradientColor.color, 100)];
   const obj10 = channel(handleTextChange[19]);
   items5[1] = channel(handleTextChange[19]).hexOpacityToRgba(tmp.headerGradientColor.color, 0);
   obj5[3] = items5;
   items4[1] = callback(tmp13, obj5);
   obj3[1] = items4;
   items3[1] = callback2(closure_4, obj3);
-  items3[2] = callback(ref1(handleTextChange[20]), { bottomSheetRef, bottomSheetIndex, style: safeAreaStyle, emojiPickerListRef: ref, categories: emojiCategories, categoryIndexActive: sharedValue, onBackspace, inPortalKeyboard, isSearching: null != tmp8.searchResults, onClearSearch: callback1 });
+  items3[2] = callback(ref1(handleTextChange[20]), {
+    bottomSheetRef,
+    bottomSheetIndex,
+    style: safeAreaStyle,
+    emojiPickerListRef: ref,
+    categories: emojiCategories,
+    categoryIndexActive: sharedValue,
+    onBackspace,
+    inPortalKeyboard,
+    isSearching: null != tmp8.searchResults,
+    onClearSearch: callback1,
+  });
   obj[1] = items3;
   obj[1] = callback2(closure_4, obj);
   return callback(channel(handleTextChange[10]).AnalyticsLocationProvider, obj);

@@ -11,26 +11,30 @@ export default function useTopAndNewlyAddedEmojis(arg0, arg1) {
   dependencyMap = arg1;
   const items = [closure_2];
   const items1 = [arg0, arg1];
-  return require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresObject(items, () => {
-    let obj = closure_1_2;
-    if (closure_1_2 !== undefined) {
-      if (tmp2 !== closure_1_3.REACTION) {
-        let topEmoji = obj.getTopEmoji(tmp);
-      } else {
-        topEmoji = closure_1_4;
+  return require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresObject(
+    items,
+    () => {
+      let obj = closure_1_2;
+      if (closure_1_2 !== undefined) {
+        if (tmp2 !== closure_1_3.REACTION) {
+          let topEmoji = obj.getTopEmoji(tmp);
+        } else {
+          topEmoji = closure_1_4;
+        }
+        obj = { topEmojis: null, newlyAddedEmojis: null };
+        obj[0] = topEmoji;
+        if (tmp2 !== closure_1_3.REACTION) {
+          let newlyAddedEmoji = obj.getNewlyAddedEmoji(tmp);
+        } else {
+          newlyAddedEmoji = closure_1_4;
+        }
+        obj[1] = newlyAddedEmoji;
+        return obj;
       }
-      obj = { topEmojis: null, newlyAddedEmojis: null };
-      obj[0] = topEmoji;
-      if (tmp2 !== closure_1_3.REACTION) {
-        let newlyAddedEmoji = obj.getNewlyAddedEmoji(tmp);
-      } else {
-        newlyAddedEmoji = closure_1_4;
-      }
-      obj[1] = newlyAddedEmoji;
-      return obj;
-    }
-  }, items1);
-};
+    },
+    items1,
+  );
+}
 export const getTopAndNewlyAddedEmojis = function getTopAndNewlyAddedEmojis(emojiStoreInstance) {
   emojiStoreInstance = emojiStoreInstance.emojiStoreInstance;
   if (emojiStoreInstance === undefined) {

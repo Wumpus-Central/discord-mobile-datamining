@@ -36,21 +36,34 @@ function ConnectGuardianShareScreen() {
   useOnNewPendingRequestDefault(_modDef4723.pop);
   obj = { spacing: ThemesDefault.space.PX_40, children: null };
   obj = { spacing: ThemesDefault.space.PX_8, children: null };
-  obj1 = { style: tmp.title, variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+  obj1 = {
+    style: tmp.title,
+    variant: "heading-xl/bold",
+    color: "mobile-text-heading-primary",
+    accessibilityRole: "header",
+    children: null,
+  };
   let intl = getLinkCode(1236).intl;
   obj1[4] = intl.string(messagesProxyDefault.ITlV6p);
-  const items2 = [callback(getLinkCode(4474).Text, obj1), ];
+  const items2 = [callback(getLinkCode(4474).Text, obj1)];
   obj2 = { style: tmp.body, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl2 = getLinkCode(1236).intl;
-  obj2[3] = intl2.format(messagesProxyDefault.F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
+  obj2[3] = intl2.format(messagesProxyDefault.F4GT2S, {
+    link: "https://support.discord.com/hc/articles/14155060633623",
+  });
   items2[1] = callback(getLinkCode(4474).Text, obj2);
   obj[1] = items2;
-  const items3 = [callback2(getLinkCode(4926).Stack, obj), ];
+  const items3 = [callback2(getLinkCode(4926).Stack, obj)];
   obj3 = { spacing: ThemesDefault.space.PX_24, style: tmp.cardSection, children: null };
-  const obj4 = { style: tmp.qrLabel, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj4 = {
+    style: tmp.qrLabel,
+    variant: "text-md/semibold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl3 = getLinkCode(1236).intl;
   obj4[3] = intl3.string(messagesProxyDefault.pojgfk);
-  const items4 = [callback(getLinkCode(4474).Text, obj4), ];
+  const items4 = [callback(getLinkCode(4474).Text, obj4)];
   if (null != stateFromStores) {
     if (null != stateFromStores1) {
       const obj5 = { shareActions: "full", linkCode: null, expiresAt: null, onRefresh: null };
@@ -73,7 +86,13 @@ function ConnectGuardianShareScreen() {
   tmp11Result = tmp11(View, { style: tmp.loading, children: callback(getLinkCode(6048).ActivityIndicator, {}) });
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { title: { textAlign: "center" }, body: { textAlign: "center" }, qrLabel: { textAlign: "center" }, cardSection: { alignItems: "center" }, loading: null };
+createCacheKey = {
+  title: { textAlign: "center" },
+  body: { textAlign: "center" },
+  qrLabel: { textAlign: "center" },
+  cardSection: { alignItems: "center" },
+  loading: null,
+};
 createCacheKey = { alignItems: "center", justifyContent: "center", paddingVertical: ThemesDefault.space.PX_24 };
 createCacheKey[4] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
@@ -90,7 +109,7 @@ export default function ConnectGuardianShareModal() {
       },
       render() {
         return callback(closure_9, {});
-      }
+      },
     };
     obj[0] = obj;
     return obj;
@@ -99,4 +118,4 @@ export default function ConnectGuardianShareModal() {
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
   return callback(Modal.Modal, obj);
-};
+}

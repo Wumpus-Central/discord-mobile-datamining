@@ -39,4 +39,4 @@ export default function getGroupDMRecipientLimit() {
     tmp5 = closure_4;
   }
   return tmp5;
-};
+}

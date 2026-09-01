@@ -23,7 +23,7 @@ export default function getActivityReportOptions(arg0) {
     tmp6 = tmp2;
   }
   obj[1] = stringResult;
-  const items = [obj, , , , ];
+  const items = [obj, , , ,];
   obj = { value: tmp.LAGGING, label: null };
   const intl2 = tmp6(1236).intl;
   const string2 = intl2.string;
@@ -76,4 +76,4 @@ export default function getActivityReportOptions(arg0) {
     obj3[1] = string5Result;
     obj3 = items.push(obj3);
   }
-};
+}

@@ -35,25 +35,31 @@ const memoResult = importAllResult.memo((index) => {
     items = [userId];
     obj.track(closure_1_8.ACTIVITY_CARD_CLICKED, obj);
     if (null != stateFromStores) {
-      index(tmp[13])(tmp[12], tmp.paths).then((arg0) => arg0.default({ userId: id.id, localUser: id, sourceAnalyticsLocations: closure_3 }));
+      index(tmp[13])(tmp[12], tmp.paths).then((arg0) =>
+        arg0.default({ userId: id.id, localUser: id, sourceAnalyticsLocations: closure_3 }),
+      );
       const promise = index(tmp[13])(tmp[12], tmp.paths);
     }
   }, items2);
   obj1 = index(guildId[10]);
   const items3 = [status];
   const items4 = [guildId, stateFromStores];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items3, () => {
-    if (null == stateFromStores) {
-      let obj = {};
-    } else {
-      obj = { status: null, activities: null, isMobileOnline: null, isVROnline: null };
-      obj[0] = status.getStatus(tmp.id, guildId);
-      obj[1] = status.getActivities(tmp.id, guildId);
-      obj[2] = status.isMobileOnline(tmp.id);
-      obj[3] = status.isVROnline(tmp.id);
-    }
-    return obj;
-  }, items4);
+  const stateFromStoresObject = obj1.useStateFromStoresObject(
+    items3,
+    () => {
+      if (null == stateFromStores) {
+        let obj = {};
+      } else {
+        obj = { status: null, activities: null, isMobileOnline: null, isVROnline: null };
+        obj[0] = status.getStatus(tmp.id, guildId);
+        obj[1] = status.getActivities(tmp.id, guildId);
+        obj[2] = status.isMobileOnline(tmp.id);
+        obj[3] = status.isVROnline(tmp.id);
+      }
+      return obj;
+    },
+    items4,
+  );
   status = stateFromStoresObject.status;
   const items5 = [status, stateFromStores];
   ({ activities, isMobileOnline, isVROnline } = stateFromStoresObject);
@@ -75,7 +81,17 @@ const memoResult = importAllResult.memo((index) => {
     obj[3] = joined;
     obj = { style: null, children: null };
     obj[0] = tmp.content;
-    obj1 = { user: null, avatarDecoration: null, guildId: null, size: null, isMobileOnline: null, isVROnline: null, streaming: null, status: null, autoStatusCutout: true };
+    obj1 = {
+      user: null,
+      avatarDecoration: null,
+      guildId: null,
+      size: null,
+      isMobileOnline: null,
+      isVROnline: null,
+      streaming: null,
+      status: null,
+      autoStatusCutout: true,
+    };
     obj1[0] = stateFromStores;
     obj1[1] = stateFromStores.avatarDecoration;
     obj1[2] = guildId;
@@ -84,12 +100,24 @@ const memoResult = importAllResult.memo((index) => {
     obj1[5] = isVROnline;
     obj1[6] = tmp2(tmp3[17])(activities);
     obj1[7] = tmp8;
-    obj[1] = jsx(tmp4(tmp3[7]).Avatar, { user: null, avatarDecoration: null, guildId: null, size: null, isMobileOnline: null, isVROnline: null, streaming: null, status: null, autoStatusCutout: true });
+    obj[1] = jsx(tmp4(tmp3[7]).Avatar, {
+      user: null,
+      avatarDecoration: null,
+      guildId: null,
+      size: null,
+      isMobileOnline: null,
+      isVROnline: null,
+      streaming: null,
+      status: null,
+      autoStatusCutout: true,
+    });
     obj[4] = <stateFromStores style={null}>{null}</stateFromStores>;
     return <tmp2Result style={null}>{null}</tmp2Result>;
   }
   tmp = callback();
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx",
+);
 
 export default memoResult;

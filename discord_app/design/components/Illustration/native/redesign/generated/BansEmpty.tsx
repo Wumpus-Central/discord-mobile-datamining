@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/BansEmpty.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/BansEmpty.tsx",
+);
 
 export const getBansEmptySource = function getBansEmptySource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getBansEmptySource = function getBansEmptySource(theme) {
     },
     light() {
       return callback(17238);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useBansEmptySource = function useBansEmptySource() {
     },
     light() {
       return callback(17238);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const BansEmpty = function BansEmpty(arg0) {
     },
     light() {
       return callback(17238);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

@@ -97,7 +97,7 @@ function getChannelScreen() {
       obj.animation = animation;
       return obj;
     },
-    getComponent: getChannelComponent
+    getComponent: getChannelComponent,
   };
   obj = {
     beforeRemove(data) {
@@ -122,7 +122,7 @@ function getChannelScreen() {
         SWIPE = constants2.SWIPE;
       }
       callback(4700).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-    }
+    },
   };
   return callback2(Screen.Screen, obj);
 }
@@ -140,16 +140,28 @@ export default importAllResult.memo(function StackNavigator() {
   stateFromStores(first[32])();
   let obj2 = _require(first[31]);
   let items = [accessibilityNativeStackOptions];
-  stateFromStores = _require(first[33]).useStateFromStores(items, () => null != accessibilityNativeStackOptions.getSessionId());
+  stateFromStores = _require(first[33]).useStateFromStores(
+    items,
+    () => null != accessibilityNativeStackOptions.getSessionId(),
+  );
   const tmp6 = callback(homeIndicatorStore.useState(closure_7.animation), 2);
   first = tmp6[0];
   callback = tmp6[1];
   let obj3 = _require(first[33]);
-  homeIndicatorStore = _require(first[34]).useHomeIndicatorStore((autoHideHomeIndicator) => autoHideHomeIndicator.autoHideHomeIndicator);
+  homeIndicatorStore = _require(first[34]).useHomeIndicatorStore(
+    (autoHideHomeIndicator) => autoHideHomeIndicator.autoHideHomeIndicator,
+  );
   const isChatBesideChannelList = stateFromStores(first[35])().isChatBesideChannelList;
   let obj4 = _require(first[34]);
   accessibilityNativeStackOptions = _require(first[36]).useAccessibilityNativeStackOptions();
-  let items1 = [tmp, stateFromStores, homeIndicatorStore, accessibilityNativeStackOptions, first, isChatBesideChannelList];
+  let items1 = [
+    tmp,
+    stateFromStores,
+    homeIndicatorStore,
+    accessibilityNativeStackOptions,
+    first,
+    isChatBesideChannelList,
+  ];
   return homeIndicatorStore.useMemo(() => {
     let obj = { profile: lib(first[37]).Profiles.MainNavigator, children: null };
     obj = { style: lib.flex, nativeID: closure_1_13, collapsableChildren: false, children: null };
@@ -161,7 +173,7 @@ export default importAllResult.memo(function StackNavigator() {
     if (stateFromStores) {
       tmpResult = tmp(closure_1_21, {});
     }
-    let items = [tmpResult, ];
+    let items = [tmpResult];
     obj = { profile: null, children: null };
     const tmp10 = stateFromStores(first[41]);
     obj[0] = lib(first[37]).Profiles.StackNavigator;
@@ -170,7 +182,7 @@ export default importAllResult.memo(function StackNavigator() {
       screenOptions() {
         return { headerShown: false, autoHideHomeIndicator: closure_4 };
       },
-      children: null
+      children: null,
     };
     let items1 = [
       closure_1_10(closure_1_16.Screen, {
@@ -188,17 +200,17 @@ export default importAllResult.memo(function StackNavigator() {
               const merged1 = Object.assign(closure_7);
               return { orientation: str, headerShown: false };
             },
-            children: null
+            children: null,
           };
           obj = { name: "tabs", getComponent: closure_1_19, options: closure_1_30 };
-          const items = [closure_1_10(closure_1_17.Screen, obj), , ];
+          const items = [closure_1_10(closure_1_17.Screen, obj), ,];
           obj = {
             name: "member-verification",
             getId(params) {
               return params.params.guildId;
             },
             getComponent: closure_1_22,
-            options: { presentation: "transparentModal", animation: "slide_from_bottom" }
+            options: { presentation: "transparentModal", animation: "slide_from_bottom" },
           };
           items[1] = closure_1_10(closure_1_17.Screen, obj);
           let animation;
@@ -221,18 +233,23 @@ export default importAllResult.memo(function StackNavigator() {
             options(arg0) {
               const obj = { headerShown: true, header: animation(closure_1_2[30]).renderHeader };
               ({ navigation, route } = arg0);
-              const merged = Object.assign(animation(closure_1_2[30]).getDefaultChannelStackHeaderProps(navigation, route));
+              const merged = Object.assign(
+                animation(closure_1_2[30]).getDefaultChannelStackHeaderProps(navigation, route),
+              );
               const merged1 = Object.assign(closure_1_7);
               obj.animation = animation;
               return obj;
             },
-            getComponent: closure_1_20
+            getComponent: closure_1_20,
           });
           obj[2] = items;
-          const items1 = [closure_1_11(closure_1_17.Navigator, obj), closure_1_0(closure_1_2[42]).APP_EXTRA_COMPONENTS_VOICE_AND_VIDEO];
+          const items1 = [
+            closure_1_11(closure_1_17.Navigator, obj),
+            closure_1_0(closure_1_2[42]).APP_EXTRA_COMPONENTS_VOICE_AND_VIDEO,
+          ];
           obj1[0] = items1;
           return closure_1_11(closure_1_12, obj1);
-        }
+        },
       }),
       closure_1_10(closure_1_16.Screen, { name: "search", getComponent: closure_1_27 }),
       closure_1_10(closure_1_16.Screen, {
@@ -240,17 +257,16 @@ export default importAllResult.memo(function StackNavigator() {
         getComponent: closure_1_26,
         options() {
           return callback2(10662)();
-        }
+        },
       }),
       closure_1_10(closure_1_16.Screen, { name: "auth", getComponent: closure_1_18, options: closure_1_30 }),
-    ,
-    ,
-    ,
-    ,
-    ,
-    ,
-    ,
-
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
+      ,
     ];
     const obj6 = { name: "account-standing", getComponent: closure_1_33, options: null };
     let merged = Object.assign(closure_1_30);
@@ -283,7 +299,7 @@ export default importAllResult.memo(function StackNavigator() {
         obj.animation = "slide_from_bottom";
         return obj;
       },
-      getComponent: closure_1_24
+      getComponent: closure_1_24,
     });
     const obj9 = {
       name: "friends",
@@ -314,7 +330,7 @@ export default importAllResult.memo(function StackNavigator() {
         return obj;
       },
       listeners: null,
-      getComponent: null
+      getComponent: null,
     };
     const obj2 = {
       name: "main",
@@ -331,17 +347,17 @@ export default importAllResult.memo(function StackNavigator() {
             const merged1 = Object.assign(closure_7);
             return { orientation: str, headerShown: false };
           },
-          children: null
+          children: null,
         };
         obj = { name: "tabs", getComponent: closure_1_19, options: closure_1_30 };
-        const items = [closure_1_10(closure_1_17.Screen, obj), , ];
+        const items = [closure_1_10(closure_1_17.Screen, obj), ,];
         obj = {
           name: "member-verification",
           getId(params) {
             return params.params.guildId;
           },
           getComponent: closure_1_22,
-          options: { presentation: "transparentModal", animation: "slide_from_bottom" }
+          options: { presentation: "transparentModal", animation: "slide_from_bottom" },
         };
         items[1] = closure_1_10(closure_1_17.Screen, obj);
         let animation;
@@ -364,18 +380,23 @@ export default importAllResult.memo(function StackNavigator() {
           options(arg0) {
             const obj = { headerShown: true, header: animation(closure_1_2[30]).renderHeader };
             ({ navigation, route } = arg0);
-            const merged = Object.assign(animation(closure_1_2[30]).getDefaultChannelStackHeaderProps(navigation, route));
+            const merged = Object.assign(
+              animation(closure_1_2[30]).getDefaultChannelStackHeaderProps(navigation, route),
+            );
             const merged1 = Object.assign(closure_1_7);
             obj.animation = animation;
             return obj;
           },
-          getComponent: closure_1_20
+          getComponent: closure_1_20,
         });
         obj[2] = items;
-        const items1 = [closure_1_11(closure_1_17.Navigator, obj), closure_1_0(closure_1_2[42]).APP_EXTRA_COMPONENTS_VOICE_AND_VIDEO];
+        const items1 = [
+          closure_1_11(closure_1_17.Navigator, obj),
+          closure_1_0(closure_1_2[42]).APP_EXTRA_COMPONENTS_VOICE_AND_VIDEO,
+        ];
         obj1[0] = items1;
         return closure_1_11(closure_1_12, obj1);
-      }
+      },
     };
     const obj3 = { name: "search", getComponent: closure_1_27 };
     const obj4 = {
@@ -383,7 +404,7 @@ export default importAllResult.memo(function StackNavigator() {
       getComponent: closure_1_26,
       options() {
         return callback2(10662)();
-      }
+      },
     };
     const obj5 = { name: "auth", getComponent: closure_1_18, options: closure_1_30 };
     const obj7 = { presentation: "fullScreenModal", gestureEnabled: false };
@@ -414,7 +435,7 @@ export default importAllResult.memo(function StackNavigator() {
         obj.animation = "slide_from_bottom";
         return obj;
       },
-      getComponent: closure_1_24
+      getComponent: closure_1_24,
     };
     const tmp2Result = stateFromStores(first[37]);
     let fn;
@@ -444,14 +465,14 @@ export default importAllResult.memo(function StackNavigator() {
         obj.fullScreenGestureEnabled = true;
         return obj;
       },
-      getComponent: closure_1_32
+      getComponent: closure_1_32,
     });
     items1[8] = closure_1_10(closure_1_16.Screen, {
       name: "sidebar",
       getComponent: closure_1_25,
       options() {
         return callback2(10662)({ lockOrientation: false });
-      }
+      },
     });
     const obj13 = {
       name: "settings",
@@ -467,19 +488,27 @@ export default importAllResult.memo(function StackNavigator() {
         obj.fullScreenGestureEnabled = true;
         return obj;
       },
-      getComponent: closure_1_32
+      getComponent: closure_1_32,
     };
     const obj14 = {
       name: "sidebar",
       getComponent: closure_1_25,
       options() {
         return callback2(10662)({ lockOrientation: false });
-      }
+      },
     };
     tmp5Result = lib(first[8]);
-    items1[9] = closure_1_10(closure_1_16.Screen, { name: "message-requests", options: stateFromStores(first[43])(), getComponent: closure_1_31 });
+    items1[9] = closure_1_10(closure_1_16.Screen, {
+      name: "message-requests",
+      options: stateFromStores(first[43])(),
+      getComponent: closure_1_31,
+    });
     const obj15 = { name: "message-requests", options: stateFromStores(first[43])(), getComponent: closure_1_31 };
-    items1[10] = closure_1_10(closure_1_16.Screen, { name: "context-menu-commands", options: stateFromStores(first[43])(), getComponent: closure_1_28 });
+    items1[10] = closure_1_10(closure_1_16.Screen, {
+      name: "context-menu-commands",
+      options: stateFromStores(first[43])(),
+      getComponent: closure_1_28,
+    });
     items1[11] = closure_1_10(closure_1_16.Screen, {
       name: "modal",
       getId(params) {
@@ -504,7 +533,7 @@ export default importAllResult.memo(function StackNavigator() {
         const merged = Object.assign(callback2(10662)({ presentation: str2 }));
         return obj;
       },
-      getComponent: closure_1_29
+      getComponent: closure_1_29,
     });
     obj1[2] = items1;
     obj[1] = closure_1_11(closure_1_16.Navigator, obj1);
@@ -512,7 +541,12 @@ export default importAllResult.memo(function StackNavigator() {
     obj12[0] = items;
     obj11[0] = closure_1_11(tmp10, obj12);
     obj10[0] = closure_1_10(tmp9, obj11);
-    const items2 = [closure_1_10(tmp8, obj10), lib(first[42]).APP_EXTRA_COMPONENTS, lib(first[42]).APP_EXTRA_COMPONENTS_NEVER_FREEZE, lib(first[42]).APP_EXTRA_COMPONENTS_EXTERNAL_PIP];
+    const items2 = [
+      closure_1_10(tmp8, obj10),
+      lib(first[42]).APP_EXTRA_COMPONENTS,
+      lib(first[42]).APP_EXTRA_COMPONENTS_NEVER_FREEZE,
+      lib(first[42]).APP_EXTRA_COMPONENTS_EXTERNAL_PIP,
+    ];
     obj[3] = items2;
     obj[1] = closure_1_11(tmp7, obj);
     return closure_1_10(tmp4, obj);

@@ -17,13 +17,17 @@ export default function ApplicationConnectionCard(connection) {
   let obj = connection(_location[4]);
   const items = [analyticsLocations];
   const items1 = [connection.application_id];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    let application = null;
-    if (null != connection.application_id) {
-      application = analyticsLocations.getApplication(tmp.application_id);
-    }
-    return application;
-  }, items1);
+  stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let application = null;
+      if (null != connection.application_id) {
+        application = analyticsLocations.getApplication(tmp.application_id);
+      }
+      return application;
+    },
+    items1,
+  );
   analyticsLocations = guildId(_location[5])(_location).analyticsLocations;
   const items2 = [stateFromStores, connection.application_id];
   const effect = stateFromStores.useEffect(() => {
@@ -39,9 +43,7 @@ export default function ApplicationConnectionCard(connection) {
     }
     if (!result) {
       const application = connection(_location[6]).fetchApplication(connection.application_id);
-      application.catch(() => {
-
-      });
+      application.catch(() => {});
       const obj = connection(_location[6]);
     }
   }, items2);
@@ -72,6 +74,22 @@ export default function ApplicationConnectionCard(connection) {
     obj = { analyticsLocations };
     startAuthorization(obj);
   }, items3);
-  obj = { displayName: name, description: connection.description, icon: jsx(guildId(_location[9]), { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL }), isLoading: !fetched, isConnected: hasAlreadyLinked, canConnect: canStartAuthorization, onConnect: callback };
-  return jsx(guildId(_location[12]), { displayName: name, description: connection.description, icon: jsx(guildId(_location[9]), { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL }), isLoading: !fetched, isConnected: hasAlreadyLinked, canConnect: canStartAuthorization, onConnect: callback });
-};
+  obj = {
+    displayName: name,
+    description: connection.description,
+    icon: jsx(guildId(_location[9]), { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL }),
+    isLoading: !fetched,
+    isConnected: hasAlreadyLinked,
+    canConnect: canStartAuthorization,
+    onConnect: callback,
+  };
+  return jsx(guildId(_location[12]), {
+    displayName: name,
+    description: connection.description,
+    icon: jsx(guildId(_location[9]), { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL }),
+    isLoading: !fetched,
+    isConnected: hasAlreadyLinked,
+    canConnect: canStartAuthorization,
+    onConnect: callback,
+  });
+}

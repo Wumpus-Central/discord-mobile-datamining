@@ -2,7 +2,16 @@
 import closure_2 from "../../stores/VoiceStateStore.tsx";
 
 const require = arg1;
-const obj = { NONE: 0, [0]: "NONE", REQUESTED_TO_SPEAK: 1, [1]: "REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK: 2, [2]: "REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK", ON_STAGE: 3, [3]: "ON_STAGE" };
+const obj = {
+  NONE: 0,
+  [0]: "NONE",
+  REQUESTED_TO_SPEAK: 1,
+  [1]: "REQUESTED_TO_SPEAK",
+  REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK: 2,
+  [2]: "REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK",
+  ON_STAGE: 3,
+  [3]: "ON_STAGE",
+};
 const result = require("set").fileFinishedImporting("modules/stage_channels/useAudienceRequestToSpeakState.tsx");
 
 export default function useAudienceRequestToSpeakState(arg0, arg1) {
@@ -10,36 +19,40 @@ export default function useAudienceRequestToSpeakState(arg0, arg1) {
   dependencyMap = arg1;
   const items = [closure_2];
   const items1 = [arg0, arg1];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    if (null != closure_0) {
-      if (null != closure_1) {
-        const voiceStateForChannel = closure_1_2.getVoiceStateForChannel(tmp8, tmp);
-        if (null == voiceStateForChannel) {
-          let NONE = closure_1_3.NONE;
-        } else {
-          if (voiceStateForChannel.suppress) {
-            if (null != voiceStateForChannel.requestToSpeakTimestamp) {
-              NONE = closure_1_3.REQUESTED_TO_SPEAK;
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      if (null != closure_0) {
+        if (null != closure_1) {
+          const voiceStateForChannel = closure_1_2.getVoiceStateForChannel(tmp8, tmp);
+          if (null == voiceStateForChannel) {
+            let NONE = closure_1_3.NONE;
+          } else {
+            if (voiceStateForChannel.suppress) {
+              if (null != voiceStateForChannel.requestToSpeakTimestamp) {
+                NONE = closure_1_3.REQUESTED_TO_SPEAK;
+              }
             }
-          }
-          if (!voiceStateForChannel.suppress) {
-            if (null != voiceStateForChannel.requestToSpeakTimestamp) {
-              NONE = closure_1_3.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+            if (!voiceStateForChannel.suppress) {
+              if (null != voiceStateForChannel.requestToSpeakTimestamp) {
+                NONE = closure_1_3.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+              }
             }
-          }
-          if (!voiceStateForChannel.suppress) {
-            if (null == voiceStateForChannel.requestToSpeakTimestamp) {
-              let NONE2 = closure_1_3.ON_STAGE;
+            if (!voiceStateForChannel.suppress) {
+              if (null == voiceStateForChannel.requestToSpeakTimestamp) {
+                let NONE2 = closure_1_3.ON_STAGE;
+              }
             }
+            NONE2 = closure_1_3.NONE;
           }
-          NONE2 = closure_1_3.NONE;
         }
+        return NONE;
       }
-      return NONE;
-    }
-    NONE = closure_1_3.NONE;
-  }, items1);
-};
+      NONE = closure_1_3.NONE;
+    },
+    items1,
+  );
+}
 export const RequestToSpeakStates = obj;
 export const getAudienceRequestToSpeakState = function getAudienceRequestToSpeakState(voiceStateForChannel) {
   if (null == voiceStateForChannel) {

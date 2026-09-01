@@ -4,8 +4,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 
 let c0 = null;
 const PersistedStore = initializeDefault.PersistedStore;
-class FamilyCenterPendingConnectionStore extends PersistedStore {
-}
+class FamilyCenterPendingConnectionStore extends PersistedStore {}
 const prototype = FamilyCenterPendingConnectionStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let tmp = arg0;
@@ -31,7 +30,7 @@ const familyCenterPendingConnectionStore = new FamilyCenterPendingConnectionStor
   },
   LOGOUT: function handleLogout() {
     c0 = null;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterPendingConnectionStore.tsx");
 

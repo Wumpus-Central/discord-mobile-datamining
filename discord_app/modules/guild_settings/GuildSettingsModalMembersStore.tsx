@@ -20,8 +20,7 @@ let c4 = null;
 let c5 = null;
 let c6 = null;
 const Store = initializeDefault.Store;
-class GuildSettingsModalMembersStore extends Store {
-}
+class GuildSettingsModalMembersStore extends Store {}
 const prototype = GuildSettingsModalMembersStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_0);
@@ -30,31 +29,31 @@ Object.defineProperty(prototype, "isSubmitting", {
   get: function isSubmitting() {
     return c2 === FormStates.SUBMITTING;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isEditing", {
   get: function isEditing() {
     return c3;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "roles", {
   get: function roles() {
     return c6;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "memberId", {
   get: function memberId() {
     return c5;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "nicknameError", {
   get: function nicknameError() {
     return c4;
   },
-  set: undefined
+  set: undefined,
 });
 GuildSettingsModalMembersStore.displayName = "GuildSettingsModalMembersStore";
 const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(dispatcherDefault, {
@@ -90,7 +89,7 @@ const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(dispat
   GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_SUCCESS: handleChangeNicknameSuccess,
   GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_FAILURE: function handleChangeNicknameFailure(error) {
     error = error.error;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersStore.tsx");
 

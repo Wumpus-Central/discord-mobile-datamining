@@ -11,7 +11,9 @@ import closure_4 from "../../../../../../guild_templates/GuildTemplateStore.tsx"
 const Image = get_ActivityIndicator.Image;
 const GuildTemplateStates = GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD.GuildTemplateStates;
 const InviteTypes = InviteSendStates.InviteTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/GuildTemplateEmbed.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/coded_links/GuildTemplateEmbed.tsx",
+);
 
 export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, closure_2) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(closure_2));
@@ -61,7 +63,10 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj1.subtitle = formatToPlainStringResult;
     obj1.subtitleColor = colors.subtitleColor;
     obj1.thumbnailUrl = Image.resolveAssetSource(tmp(12885)).uri;
-    ({ acceptLabelGreenColor: obj6.acceptLabelColor, acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor } = colors);
+    ({
+      acceptLabelGreenColor: obj6.acceptLabelColor,
+      acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor,
+    } = colors);
     const intl6 = getSystemLocale.intl;
     obj1.acceptLabelText = intl6.string(getSystemLocale.t["a3Gl+e"]);
     obj1.embedCanBeTapped = true;

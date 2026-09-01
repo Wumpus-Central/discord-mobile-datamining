@@ -30,7 +30,13 @@ function LHeading(children) {
     });
     combined = mapped.concat(tmp5);
   }
-  const items = [closure_10(require("../design/void/native.tsx").LegacyText, { accessibilityRole: "header", style: combined, children: children.children }), ];
+  const items = [
+    closure_10(require("../design/void/native.tsx").LegacyText, {
+      accessibilityRole: "header",
+      style: combined,
+      children: children.children,
+    }),
+  ];
   _require = false;
   let combined1;
   if (null != children.className) {
@@ -88,7 +94,7 @@ function LinkInner(target) {
       const tmpResult = changelog(closure_1_2[11]);
       tmpResult.openURL(target(closure_1_2[12]).sanitizeUrl(target));
     },
-    children
+    children,
   };
   return callback(target(1297).LegacyText, obj);
 }
@@ -96,18 +102,57 @@ let c3 = importAllResult;
 ({ View: c4, ScrollView: c5, StyleSheet } = get_ActivityIndicator);
 ({ LocalizedLinks: error, SOCIAL_LINKS: closure_8, AnalyticEvents: c9, Fonts } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { added: ThemesDefault.unsafe_rawColors.GREEN_360, fixed: ThemesDefault.unsafe_rawColors.RED_400, progress: ThemesDefault.unsafe_rawColors.YELLOW_300, improved: ThemesDefault.unsafe_rawColors.BRAND_500 };
-obj = { flex: { flex: 1 }, container: { padding: 18, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW }, footer: null, scrollViewContainer: null, lheading: null, lheadingText: null, lheadingLine: null, bulletPoint: null, listItem: null, listText: null };
-createCacheKey = { flexDirection: "row", justifyContent: "center", borderTopWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: ThemesDefault.colors.BORDER_STRONG, gap: ThemesDefault.space.PX_12, paddingHorizontal: 18, paddingVertical: ThemesDefault.space.PX_12 };
+let obj = {
+  added: ThemesDefault.unsafe_rawColors.GREEN_360,
+  fixed: ThemesDefault.unsafe_rawColors.RED_400,
+  progress: ThemesDefault.unsafe_rawColors.YELLOW_300,
+  improved: ThemesDefault.unsafe_rawColors.BRAND_500,
+};
+obj = {
+  flex: { flex: 1 },
+  container: { padding: 18, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW },
+  footer: null,
+  scrollViewContainer: null,
+  lheading: null,
+  lheadingText: null,
+  lheadingLine: null,
+  bulletPoint: null,
+  listItem: null,
+  listText: null,
+};
+createCacheKey = {
+  flexDirection: "row",
+  justifyContent: "center",
+  borderTopWidth: StyleSheet.hairlineWidth,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderTopColor: ThemesDefault.colors.BORDER_STRONG,
+  gap: ThemesDefault.space.PX_12,
+  paddingHorizontal: 18,
+  paddingVertical: ThemesDefault.space.PX_12,
+};
 obj[2] = createCacheKey;
 obj[3] = { flex: 1 };
 obj[4] = { marginBottom: 14, flexDirection: "row", alignItems: "center" };
 obj[5] = { fontSize: 16, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 obj[6] = { flexGrow: 1, flexShrink: 1, flexBasis: "auto", marginLeft: 10, height: 2 };
 let obj1 = { padding: 18, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj[7] = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
+obj[7] = {
+  width: 7,
+  height: 7,
+  borderRadius: 3.5,
+  marginRight: 13,
+  marginTop: 7,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+};
 obj[8] = { flexDirection: "row", marginLeft: 4, marginBottom: 8 };
-let obj3 = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
+let obj3 = {
+  width: 7,
+  height: 7,
+  borderRadius: 3.5,
+  marginRight: 13,
+  marginTop: 7,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+};
 obj[9] = { color: ThemesDefault.colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
 let closure_13 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((children) => {
@@ -115,7 +160,7 @@ const memoResult = importAllResult.memo((children) => {
   const tmp = callback2();
   obj = { style: tmp.listItem, children: null };
   obj = { style: tmp.bulletPoint };
-  const items = [callback(closure_4, obj), ];
+  const items = [callback(closure_4, obj)];
   obj = { style: tmp.listText, children: null };
   let childrenResult = children;
   if (typeof children === "function") {
@@ -142,9 +187,9 @@ const memoResult1 = importAllResult.memo((video) => {
       id(nativeEvent.nativeEvent);
     }, items),
     scrollEventThrottle: 3,
-    children: null
+    children: null,
   };
-  const items1 = [video.video, ];
+  const items1 = [video.video];
   let obj2 = get_defaultRulesDefault;
   id = changeLog.id;
   let obj3 = defaultRulesDefault;
@@ -165,23 +210,44 @@ const memoResult1 = importAllResult.memo((video) => {
   }
   items1[1] = obj2.reactParserFor(defaultRules)(changeLog.body, false);
   obj[4] = items1;
-  const items2 = [closure_11(closure_5, obj), ];
+  const items2 = [closure_11(closure_5, obj)];
   obj2 = { bottom: true, style: tmp.footer, children: null };
-  obj3 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: callback(id(8008).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  obj3 = {
+    size: "sm",
+    variant: "tertiary",
+    accessibilityRole: "link",
+    icon: callback(id(8008).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
+    accessibilityLabel: null,
+    onPress: null,
+  };
   const intl = id(1236).intl;
   obj3[4] = intl.string(id(1236).t["/lXfom"]);
   obj3[5] = function onPress() {
     callback(4190).openURL(callback(4105)(constants.TWITTER));
   };
-  const items3 = [callback(id(8006).IconButton, obj3), , ];
-  const obj4 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: callback(id(8010).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const items3 = [callback(id(8006).IconButton, obj3), ,];
+  const obj4 = {
+    size: "sm",
+    variant: "tertiary",
+    accessibilityRole: "link",
+    icon: callback(id(8010).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
+    accessibilityLabel: null,
+    onPress: null,
+  };
   const intl2 = id(1236).intl;
   obj4[4] = intl2.string(id(1236).t["h0or/l"]);
   obj4[5] = function onPress() {
     callback(4190).openURL(constants2.FACEBOOK_URL);
   };
   items3[1] = callback(id(8006).IconButton, obj4);
-  const obj5 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: callback(id(8012).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const obj5 = {
+    size: "sm",
+    variant: "tertiary",
+    accessibilityRole: "link",
+    icon: callback(id(8012).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
+    accessibilityLabel: null,
+    onPress: null,
+  };
   const intl3 = id(1236).intl;
   obj5[4] = intl3.string(id(1236).t["5uVPyf"]);
   obj5[5] = function onPress() {

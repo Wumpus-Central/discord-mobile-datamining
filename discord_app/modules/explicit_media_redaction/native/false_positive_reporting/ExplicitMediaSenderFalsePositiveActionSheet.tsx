@@ -5,7 +5,9 @@ import { EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_5 } fr
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaSenderFalsePositiveActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaSenderFalsePositiveActionSheet.tsx",
+);
 
 export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId) {
   channelId = channelId.channelId;
@@ -31,7 +33,7 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
     },
     report() {
       return channelId(7355).reportFailedSendFalsePositive(channelId, messageId, dependencyMap, closure_3);
-    }
+    },
   };
   const explicitMediaActions = channelId(8400).useExplicitMediaActions(obj);
   reportFalsePositive = explicitMediaActions.reportFalsePositive;
@@ -43,6 +45,18 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
   const callback = React.useCallback(() => {
     reportFalsePositive();
   }, items1);
-  obj = { channelId, messageId, isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading, onConfirmPress: callback, analyticsContext: tmp(7345).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW };
-  return jsx(channelId(8401).ExplicitMediaFalsePositiveActionSheet, { channelId, messageId, isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading, onConfirmPress: callback, analyticsContext: tmp(7345).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW });
-};
+  obj = {
+    channelId,
+    messageId,
+    isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading,
+    onConfirmPress: callback,
+    analyticsContext: tmp(7345).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
+  };
+  return jsx(channelId(8401).ExplicitMediaFalsePositiveActionSheet, {
+    channelId,
+    messageId,
+    isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading,
+    onConfirmPress: callback,
+    analyticsContext: tmp(7345).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
+  });
+}

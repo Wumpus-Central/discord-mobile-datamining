@@ -8,21 +8,24 @@ const result = require("set").fileFinishedImporting("modules/applications/getApp
 export default function useGetApplicationFromBotUserId(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let tmp = closure_0;
-    let tmp2;
-    if (null !== closure_0) {
-      if (tmp == null) {
-        tmp = closure_1_3;
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let tmp = closure_0;
+      let tmp2;
+      if (null !== closure_0) {
+        if (tmp == null) {
+          tmp = closure_1_3;
+        }
+        const userProfile = closure_1_2.getUserProfile(tmp);
+        let application;
+        if (userProfile != null) {
+          application = userProfile.application;
+        }
+        tmp2 = application;
       }
-      const userProfile = closure_1_2.getUserProfile(tmp);
-      let application;
-      if (userProfile != null) {
-        application = userProfile.application;
-      }
-      tmp2 = application;
-    }
-    return tmp2;
-  });
+      return tmp2;
+    },
+  );
   return stateFromStores;
-};
+}

@@ -10,7 +10,7 @@ function _getDisclosures() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_1 = tmp2;
       const result = c3.APPLICATION_DISCLOSURES(lib);
       const HTTP = lib(closure_1_1[2]).HTTP;
@@ -41,7 +41,7 @@ function _ackDisclosures() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();

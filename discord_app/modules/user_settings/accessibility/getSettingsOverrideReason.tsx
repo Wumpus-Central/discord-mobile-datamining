@@ -4,7 +4,9 @@ import closure_2 from "../UserSettingsOverridesStore.tsx";
 import { SettingsOverrideReasonKeys as closure_3 } from "../UserSettingsConstants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/accessibility/getSettingsOverrideReason.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/accessibility/getSettingsOverrideReason.tsx",
+);
 
 export default function getSettingsOverrideReason(arg0) {
   if (constants.REDUCED_MOTION === arg0) {
@@ -14,7 +16,7 @@ export default function getSettingsOverrideReason(arg0) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["2ExvRu"]);
   }
-};
+}
 export const useSettingsOverrideReason = function useSettingsOverrideReason(arg0) {
   const _require = arg0;
   const items = [closure_2];

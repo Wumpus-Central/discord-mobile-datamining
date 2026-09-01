@@ -6,7 +6,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/MountMeasure.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/performance/MountMeasure.tsx",
+);
 
 export default function MountMeasure(arg0) {
   ({ batchKey: require, onMeasure: dependencyMap, onCancel: View } = arg0);
@@ -18,9 +20,16 @@ export default function MountMeasure(arg0) {
     onLayout() {
       return callback(closure_0);
     },
-    children
+    children,
   };
-  return <View style={style} onLayout={function onLayout() {
-    return callback(closure_0);
-  }}>{children}</View>;
-};
+  return (
+    <View
+      style={style}
+      onLayout={function onLayout() {
+        return callback(closure_0);
+      }}
+    >
+      {children}
+    </View>
+  );
+}

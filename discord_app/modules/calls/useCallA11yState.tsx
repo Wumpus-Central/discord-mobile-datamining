@@ -20,4 +20,4 @@ export default function useCallA11yState(arg0) {
     obj = { isIncomingCall: hasItem, isOngoingCall: obj.isCallActive(closure_0) && !hasItem };
     return obj;
   });
-};
+}

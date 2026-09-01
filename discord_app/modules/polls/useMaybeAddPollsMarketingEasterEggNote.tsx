@@ -19,4 +19,4 @@ export default function useMaybeAddPollsMarketingEasterEggNote(arg0) {
     }
   }
   return formatToPlainStringResult;
-};
+}

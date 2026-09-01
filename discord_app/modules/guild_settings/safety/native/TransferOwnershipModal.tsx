@@ -43,13 +43,13 @@ export default function TransferOwnershipModal(guild) {
         closure_0 = arg0;
         c2 = 0;
         c1 = 0;
-        return (function*(arg0) {
+        return (function* (arg0) {
           const obj2 = closure_2_1(closure_2_2[10]);
           yield obj2.transferOwnership(id.id, id2.id, closure_2_6.EMAIL, id);
           return arg1;
         })();
       });
-      obj[0] = function() {
+      obj[0] = function () {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -66,7 +66,7 @@ export default function TransferOwnershipModal(guild) {
         const obj2 = callback2(9728);
         const result = callback(4193).showTransferOwnershipSuccess();
       };
-      obj[2] = closure_1_3(function*() {
+      obj[2] = closure_1_3(function* () {
         if (id === 2) {
           id = 3;
           HermesBuiltin.throwTypeError();
@@ -130,5 +130,9 @@ export default function TransferOwnershipModal(guild) {
   let obj = { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null };
   let intl = guild(1236).intl;
   obj[2] = intl.string(guild(1236).t["13/7kX"]);
-  return jsx(guild(6008).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
-};
+  return jsx(guild(6008).Navigator, {
+    screens: memo,
+    initialRouteName: constants.TRANFSER_OWNERSHIP,
+    headerBackTitle: null,
+  });
+}

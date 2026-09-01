@@ -2,7 +2,12 @@
 import set from "../../../_runtime/00002_set.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
 
-let obj = { showPTTJoinTooltip: false, showPTTIconIndicator: false, showPTTNoKeybindWarning: false, showPTTSpeakingIndicator: false };
+let obj = {
+  showPTTJoinTooltip: false,
+  showPTTIconIndicator: false,
+  showPTTNoKeybindWarning: false,
+  showPTTSpeakingIndicator: false,
+};
 obj = { name: "2025-12-09-ptt-education", kind: "user", defaultConfig: obj, variations: null };
 obj = { 1: null, 2: null };
 const obj1 = {};

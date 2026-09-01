@@ -44,12 +44,18 @@ function usePrimaryActionButtonType(event, isConnected) {
   const tmp3 = closure_12;
   const items2 = [closure_10];
   const items3 = [channel_id];
-  let stateFromStores1 = _require(channel_id[26]).useStateFromStores(items2, () => closure_1_10.getChannel(channel_id), items3);
+  let stateFromStores1 = _require(channel_id[26]).useStateFromStores(
+    items2,
+    () => closure_1_10.getChannel(channel_id),
+    items3,
+  );
   const obj2 = _require(channel_id[26]);
   if (stateFromStores1 == null) {
     stateFromStores1 = stateFromStores;
   }
-  const canManageGuildEventResult = _require(channel_id[27]).useManageResourcePermissions(stateFromStores1).canManageGuildEvent(event);
+  const canManageGuildEventResult = _require(channel_id[27])
+    .useManageResourcePermissions(stateFromStores1)
+    .canManageGuildEvent(event);
   const obj3 = _require(channel_id[27]);
   const items4 = [tmp3];
   if (tmpResult.useStateFromStores(items4, () => null != closure_1_12.getGuild(event.guild_id))) {
@@ -62,7 +68,10 @@ function usePrimaryActionButtonType(event, isConnected) {
         }
       }
     } else {
-      if (importAllResult.useMemo(() => event(channel_id[32]).getEventTimeData(scheduled_start_time), items).withinStartWindow) {
+      if (
+        importAllResult.useMemo(() => event(channel_id[32]).getEventTimeData(scheduled_start_time), items)
+          .withinStartWindow
+      ) {
         if (canManageGuildEventResult) {
           RSVP = obj12.START;
         }
@@ -81,10 +90,10 @@ class GuildEventCardRSVPAction {
     obj = require("initialize");
     items = [];
     items[0] = closure_17;
-    items1 = [, ];
+    items1 = [,];
     items1[0] = event.id;
     items1[1] = recurrenceId;
-    items2 = [, ];
+    items2 = [,];
     items2[0] = obj.useStateFromStores(items, () => closure_1_17.isInterestedInEventRecurrence(event.id, c1), items1);
     items2[1] = () => {
       const result = event(closure_1_2[21]).handleGuildScheduledEventRsvp(event.id, c1, event.guild_id);
@@ -100,7 +109,16 @@ class GuildEventCardRSVPAction {
     } else {
       BellIcon = require("BellIcon").BellIcon;
     }
-    obj = { accessibilityRole: "togglebutton", accessibilityState: { checked: first }, accessibilityLabel: null, variant: null, icon: null, text: null, onPress: null, grow: true };
+    obj = {
+      accessibilityRole: "togglebutton",
+      accessibilityState: { checked: first },
+      accessibilityLabel: null,
+      variant: null,
+      icon: null,
+      text: null,
+      onPress: null,
+      grow: true,
+    };
     tmp5 = require("ThrottledButton");
     intl = require("getSystemLocale").intl;
     obj[2] = "" + intl.string(require("getSystemLocale").t.DlcqlU) + ", " + event.name;
@@ -121,7 +139,7 @@ class GuildEventJoinAndRSVPAction {
     closure_3 = undefined;
     _handleJoinGuild = function _handleJoinGuild(closure_5, arg1) {
       const self = this;
-      const tmp = callback(function*() {
+      const tmp = callback(function* () {
         if (c4 === 2) {
           c4 = 3;
           HermesBuiltin.throwTypeError();
@@ -212,10 +230,10 @@ class GuildEventJoinAndRSVPAction {
     obj = require("initialize");
     items = [];
     items[0] = closure_17;
-    items1 = [, ];
+    items1 = [,];
     items1[0] = event.id;
     items1[1] = recurrenceId;
-    items2 = [, ];
+    items2 = [,];
     items2[0] = obj.useStateFromStores(items, () => closure_1_17.isInterestedInEventRecurrence(event.id, c1), items1);
     items2[1] = () => {
       const result = event(closure_1_2[21]).handleGuildScheduledEventRsvp(event.id, c1, event.guild_id);
@@ -259,7 +277,8 @@ class UserCountIconPill {
     tmp2Result = tmp2(guild_id, id, global.recurrenceId);
     obj = { accessibilityLabel: null, IconComponent: null, text: null };
     intl = require("getSystemLocale").intl;
-    obj[0] = "" + intl.formatToPlainString(require("getSystemLocale").t["+DLsD8"], { count: tmp2Result }) + ", " + event.name;
+    obj[0] =
+      "" + intl.formatToPlainString(require("getSystemLocale").t["+DLsD8"], { count: tmp2Result }) + ", " + event.name;
     obj[1] = require("GroupIcon").GroupIcon;
     obj[2] = tmp2Result.toLocaleString();
     return jsx(require("Button").IconPill, obj);
@@ -270,18 +289,31 @@ class GuildEventCardTitle {
     event = global.event;
     ({ style, textStyle, condensed, onPress } = global);
     tmp2 = jsx;
-    obj = { accessibilityRole: "button", accessibilityHint: null, accessibilityLabel: null, onPress: null, style: null, children: null };
+    obj = {
+      accessibilityRole: "button",
+      accessibilityHint: null,
+      accessibilityLabel: null,
+      onPress: null,
+      style: null,
+      children: null,
+    };
     tmp = closure_25();
     tmp3 = Pressable;
     intl = require("getSystemLocale").intl;
     obj[1] = intl.string(require("getSystemLocale").t.epxpiy);
     obj[2] = event.name;
     obj[3] = onPress;
-    items = [, ];
+    items = [,];
     items[0] = tmp.topicContainer;
     items[1] = style;
     obj[4] = items;
-    obj = { variant: "text-md/bold", color: "mobile-text-heading-primary", style: textStyle, lineClamp: null, children: null };
+    obj = {
+      variant: "text-md/bold",
+      color: "mobile-text-heading-primary",
+      style: textStyle,
+      lineClamp: null,
+      children: null,
+    };
     num = undefined;
     if (condensed) {
       num = 1;
@@ -309,7 +341,7 @@ class GuildEventCardDescription {
             tmp3 = jsx;
             tmp4 = View;
             obj = { style: null, children: null };
-            items = [, ];
+            items = [,];
             items[0] = tmp.detailsContainer;
             items[1] = style;
             obj[0] = items;
@@ -338,7 +370,25 @@ let c5 = importAllResult;
 ({ Permissions: closure_19, JoinGuildSources: closure_20 } = ME);
 ({ Fonts, NOOP: closure_21 } = sum);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
-let obj = { imageHeaderContainer: null, imageHeaderBanner: null, headerContainer: null, dateContainer: null, dateIcon: null, newBadge: null, topicContainer: null, detailsContainer: null, channelContainer: null, channelIcon: null, channelText: null, guildInfoContainer: null, guildIcon: null, guildInfo: null, guildInfoChannelContainer: null, guildInfoChannelText: null, creatorAvatar: null };
+let obj = {
+  imageHeaderContainer: null,
+  imageHeaderBanner: null,
+  headerContainer: null,
+  dateContainer: null,
+  dateIcon: null,
+  newBadge: null,
+  topicContainer: null,
+  detailsContainer: null,
+  channelContainer: null,
+  channelIcon: null,
+  channelText: null,
+  guildInfoContainer: null,
+  guildIcon: null,
+  guildInfo: null,
+  guildInfoChannelContainer: null,
+  guildInfoChannelText: null,
+  creatorAvatar: null,
+};
 obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 obj[0] = obj;
 obj[1] = { width: "100%", aspectRatio: 2.5 };
@@ -346,8 +396,18 @@ obj[2] = { flexDirection: "row", alignItems: "center" };
 obj[3] = { flexDirection: "row", alignItems: "center", flex: 1 };
 createCacheKey = { marginRight: ThemesDefault.space.PX_8 };
 obj[4] = createCacheKey;
-obj[5] = { paddingHorizontal: 4, paddingVertical: 2, marginEnd: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-let obj2 = { paddingHorizontal: 4, paddingVertical: 2, marginEnd: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+obj[5] = {
+  paddingHorizontal: 4,
+  paddingVertical: 2,
+  marginEnd: 8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
+let obj2 = {
+  paddingHorizontal: 4,
+  paddingVertical: 2,
+  marginEnd: 8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
 obj[6] = { paddingTop: ThemesDefault.space.PX_8 };
 let obj3 = { paddingTop: ThemesDefault.space.PX_8 };
 obj[7] = { paddingTop: ThemesDefault.space.PX_8 };
@@ -356,8 +416,20 @@ obj[8] = { flexDirection: "row", alignItems: "center", paddingTop: ThemesDefault
 let obj5 = { flexDirection: "row", alignItems: "center", paddingTop: ThemesDefault.space.PX_8 };
 obj[9] = { marginRight: ThemesDefault.space.PX_8 };
 let obj6 = { marginRight: ThemesDefault.space.PX_8 };
-obj[10] = { fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, flexShrink: 1 };
-let obj7 = { fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, flexShrink: 1 };
+obj[10] = {
+  fontFamily: Fonts.PRIMARY_MEDIUM,
+  color: ThemesDefault.colors.TEXT_SUBTLE,
+  fontSize: 14,
+  lineHeight: 18,
+  flexShrink: 1,
+};
+let obj7 = {
+  fontFamily: Fonts.PRIMARY_MEDIUM,
+  color: ThemesDefault.colors.TEXT_SUBTLE,
+  fontSize: 14,
+  lineHeight: 18,
+  flexShrink: 1,
+};
 obj[11] = { flexDirection: "row", alignItems: "center", paddingTop: ThemesDefault.space.PX_8 };
 let obj8 = { flexDirection: "row", alignItems: "center", paddingTop: ThemesDefault.space.PX_8 };
 obj[12] = { marginRight: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.sm };
@@ -368,7 +440,24 @@ obj[15] = { fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.TEXT_S
 let obj10 = { fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 12, lineHeight: 16 };
 obj[16] = { marginRight: ThemesDefault.space.PX_8 };
 const styles = createCacheKey.createStyles(obj);
-let obj12 = { RSVP: 0, [0]: "RSVP", JOIN: 1, [1]: "JOIN", START: 2, [2]: "START", STARTED: 3, [3]: "STARTED", CONNECTED: 4, [4]: "CONNECTED", END: 5, [5]: "END", ENDED: 6, [6]: "ENDED", JOIN_GUILD: 7, [7]: "JOIN_GUILD" };
+let obj12 = {
+  RSVP: 0,
+  [0]: "RSVP",
+  JOIN: 1,
+  [1]: "JOIN",
+  START: 2,
+  [2]: "START",
+  STARTED: 3,
+  [3]: "STARTED",
+  CONNECTED: 4,
+  [4]: "CONNECTED",
+  END: 5,
+  [5]: "END",
+  ENDED: 6,
+  [6]: "ENDED",
+  JOIN_GUILD: 7,
+  [7]: "JOIN_GUILD",
+};
 let obj11 = { marginRight: ThemesDefault.space.PX_8 };
 const memoResult = importAllResult.memo(function GuildEventCardPrimaryAction(event) {
   event = event.event;
@@ -456,7 +545,14 @@ const memoResult = importAllResult.memo(function GuildEventCardPrimaryAction(eve
       };
       return callback4(tmp3(tmp2[31]), obj3);
     } else if (tmp6.STARTED === tmp4) {
-      const obj4 = { variant: "secondary", text: null, accessibilityLabel: null, grow: true, disabled: true, onPress: null };
+      const obj4 = {
+        variant: "secondary",
+        text: null,
+        accessibilityLabel: null,
+        grow: true,
+        disabled: true,
+        onPress: null,
+      };
       let intl3 = tmp(tmp2[20]).intl;
       obj4[1] = intl3.string(tmp(tmp2[20]).t.Yz0V6O);
       let intl4 = tmp(tmp2[20]).intl;
@@ -499,7 +595,9 @@ const memoResult = importAllResult.memo(function GuildEventCardPrimaryAction(eve
     }
   }
 });
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventCardComponents.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/GuildEventCardComponents.tsx",
+);
 
 export const useGuildEventCardStyles = styles;
 export const GuildEventShareAction = function GuildEventShareAction(event) {
@@ -539,7 +637,11 @@ export const GuildEventModeratorAction = function GuildEventModeratorAction(even
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_12.getGuild(event.guild_id));
   const items1 = [closure_10];
   const items2 = [channel_id];
-  let stateFromStores1 = event(channel_id[26]).useStateFromStores(items1, () => closure_1_10.getChannel(channel_id), items2);
+  let stateFromStores1 = event(channel_id[26]).useStateFromStores(
+    items1,
+    () => closure_1_10.getChannel(channel_id),
+    items2,
+  );
   const obj2 = event(channel_id[26]);
   if (stateFromStores1 == null) {
     stateFromStores1 = stateFromStores;
@@ -560,10 +662,14 @@ export const useEventRsvpState = function useEventRsvpState(id) {
   const items = [closure_17];
   const items1 = [id.id, arg1];
   const items2 = [
-    require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_17.isInterestedInEventRecurrence(event.id, c1), items1),
+    require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+      items,
+      () => closure_1_17.isInterestedInEventRecurrence(event.id, c1),
+      items1,
+    ),
     () => {
       const result = event(closure_1_2[21]).handleGuildScheduledEventRsvp(event.id, c1, event.guild_id);
-    }
+    },
   ];
   return items2;
 };
@@ -577,7 +683,7 @@ export const GuildEventIndicateInterestAction = function GuildEventIndicateInter
     obj.useStateFromStores(items, () => closure_1_17.isInterestedInEventRecurrence(event.id, c1), items1),
     () => {
       const result = event(closure_1_2[21]).handleGuildScheduledEventRsvp(event.id, c1, event.guild_id);
-    }
+    },
   ];
   const tmp3 = callback(items2, 2);
   const first = tmp3[0];
@@ -590,7 +696,16 @@ export const GuildEventIndicateInterestAction = function GuildEventIndicateInter
   } else {
     BellIcon = tmp(9746).BellIcon;
   }
-  obj = { accessibilityRole: "togglebutton", accessibilityState: { checked: first }, accessibilityLabel: null, variant: null, icon: null, text: null, onPress: null, grow: true };
+  obj = {
+    accessibilityRole: "togglebutton",
+    accessibilityState: { checked: first },
+    accessibilityLabel: null,
+    variant: null,
+    icon: null,
+    text: null,
+    onPress: null,
+    grow: true,
+  };
   const intl = tmp(1236).intl;
   obj[2] = "" + intl.string(event(1236).t.DlcqlU) + ", " + event.name;
   obj[3] = str;
@@ -693,9 +808,19 @@ export const GuildEventCardHeader = function GuildEventCardHeader(event) {
   }
   toISOStringResult1 = tmp10;
   const items = [toISOStringResult, tmp10];
-  const memo = importAllResult.useMemo(() => event(toISOStringResult1[32]).getEventTimeData(c1, toISOStringResult1), items);
+  const memo = importAllResult.useMemo(
+    () => event(toISOStringResult1[32]).getEventTimeData(c1, toISOStringResult1),
+    items,
+  );
   let obj2 = event(tmp3[50]);
-  obj = { eventTimeData: memo, isStage: event.entity_type === constants.STAGE_INSTANCE, theme: tmp4, event, isCanceled: undefined !== is_canceled && is_canceled, recurrenceId };
+  obj = {
+    eventTimeData: memo,
+    isStage: event.entity_type === constants.STAGE_INSTANCE,
+    theme: tmp4,
+    event,
+    isCanceled: undefined !== is_canceled && is_canceled,
+    recurrenceId,
+  };
   const guildScheduledEventHeaderProps = obj2.getGuildScheduledEventHeaderProps(obj);
   color = guildScheduledEventHeaderProps.color;
   ({ text, shouldChangeTextColor } = guildScheduledEventHeaderProps);
@@ -709,9 +834,7 @@ export const GuildEventCardHeader = function GuildEventCardHeader(event) {
     let tmp16Result = tmp18;
     if (!flag2) {
       obj2 = { accessibilityRole: "button", onPress: null, children: null };
-      obj2[1] = function handleOpenRSVPList() {
-
-      };
+      obj2[1] = function handleOpenRSVPList() {};
       obj2[2] = tmp18;
       tmp16Result = tmp16(tmp13(tmp3[51]).PressableOpacity, obj2);
     }
@@ -722,7 +845,11 @@ export const GuildEventCardHeader = function GuildEventCardHeader(event) {
   const tmp7 = undefined !== is_canceled && is_canceled;
   const items1 = [closure_14];
   const items2 = [event];
-  const stateFromStores = event(toISOStringResult1[26]).useStateFromStores(items1, () => closure_1_14.getUser(event.creator_id), items2);
+  const stateFromStores = event(toISOStringResult1[26]).useStateFromStores(
+    items1,
+    () => closure_1_14.getUser(event.creator_id),
+    items2,
+  );
   let tmp21 = null != endDateTimeString;
   if (tmp21) {
     tmp21 = "" !== endDateTimeString;
@@ -759,7 +886,7 @@ export const GuildEventCardHeader = function GuildEventCardHeader(event) {
     tmp25Result = tmp25(tmp13(tmp3[53]).CalendarIcon, obj6);
     tmp27 = tmp25;
   }
-  const items4 = [tmp25Result, , , ];
+  const items4 = [tmp25Result, , ,];
   const obj7 = { style: tmp.dateContainer, children: null };
   if (tmp21) {
     const obj8 = { variant: "text-sm/semibold", color: "text-default", children: null };
@@ -808,9 +935,24 @@ export { GuildEventCardDescription };
 export const GuildEventCardMetaInfo = function GuildEventCardMetaInfo(textStyle) {
   ({ event, condensed } = textStyle);
   let obj = { children: null };
-  obj = { event, textStyle: textStyle.titleStyle, style: textStyle.titleContainerStyle, condensed, onPress: textStyle.onTitlePress };
+  obj = {
+    event,
+    textStyle: textStyle.titleStyle,
+    style: textStyle.titleContainerStyle,
+    condensed,
+    onPress: textStyle.onTitlePress,
+  };
   ({ descriptionStyle, descriptionContainerStyle } = textStyle);
-  const items = [callback4(GuildEventCardTitle, obj), callback4(GuildEventCardDescription, { event, textStyle: descriptionStyle, style: descriptionContainerStyle, condensed, numberOfLines: 3 })];
+  const items = [
+    callback4(GuildEventCardTitle, obj),
+    callback4(GuildEventCardDescription, {
+      event,
+      textStyle: descriptionStyle,
+      style: descriptionContainerStyle,
+      condensed,
+      numberOfLines: 3,
+    }),
+  ];
   obj[0] = items;
   return callback5(closure_24, obj);
 };
@@ -827,14 +969,18 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
   obj1 = channel_id(589);
   const items2 = [closure_11, closure_9];
   const items3 = [stateFromStores];
-  const stateFromStores1 = obj1.useStateFromStores(items2, () => {
-    let guild_id;
-    const id = closure_1_9.getId();
-    if (stateFromStores != null) {
-      guild_id = stateFromStores.guild_id;
-    }
-    return closure_1_11.isMember(guild_id, id);
-  }, items3);
+  const stateFromStores1 = obj1.useStateFromStores(
+    items2,
+    () => {
+      let guild_id;
+      const id = closure_1_9.getId();
+      if (stateFromStores != null) {
+        guild_id = stateFromStores.guild_id;
+      }
+      return closure_1_11.isMember(guild_id, id);
+    },
+    items3,
+  );
   let tmp7 = stateFromStores(4674)(stateFromStores);
   let obj2 = channel_id(9675);
   const locationFromEvent = obj2.getLocationFromEvent(event);
@@ -852,8 +998,14 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
     obj[1] = tmp.channelIcon;
     tmp12 = callback4(eventLocationIconComponent, obj);
   }
-  const items4 = [tmp12, ];
-  obj1 = { style: tmp.channelText, accessibilityLabel: null, variant: "text-sm/medium", color: "text-default", children: null };
+  const items4 = [tmp12];
+  obj1 = {
+    style: tmp.channelText,
+    accessibilityLabel: null,
+    variant: "text-sm/medium",
+    color: "text-default",
+    children: null,
+  };
   if (null != stateFromStores) {
     obj2 = { channel: null };
     obj2[0] = stateFromStores;
@@ -897,7 +1049,7 @@ export const GuildEventCardSimpleGuildInfo = function GuildEventCardSimpleGuildI
     obj[0] = stateFromStores;
     obj[1] = tmp2(6004).GuildIconSizes.XSMALL_20;
     obj[2] = tmp.guildIcon;
-    const items3 = [callback4(GuildIconSizesDefault, obj), ];
+    const items3 = [callback4(GuildIconSizesDefault, obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.guildInfo;
     const obj2 = { variant: "text-sm/semibold", style: null, children: null };
@@ -930,14 +1082,18 @@ export const GuildEventCardGuildInfo = function GuildEventCardGuildInfo(event) {
   let obj2 = channel_id(stateFromStores[26]);
   const items4 = [closure_11, closure_9];
   const items5 = [stateFromStores];
-  const stateFromStores2 = obj2.useStateFromStores(items4, () => {
-    guild_id = undefined;
-    const id = closure_1_9.getId();
-    if (stateFromStores != null) {
-      guild_id = stateFromStores.guild_id;
-    }
-    return closure_1_11.isMember(guild_id, id);
-  }, items5);
+  const stateFromStores2 = obj2.useStateFromStores(
+    items4,
+    () => {
+      guild_id = undefined;
+      const id = closure_1_9.getId();
+      if (stateFromStores != null) {
+        guild_id = stateFromStores.guild_id;
+      }
+      return closure_1_11.isMember(guild_id, id);
+    },
+    items5,
+  );
   const tmp8 = guild_id(stateFromStores[55])(stateFromStores);
   if (null == stateFromStores1) {
     return null;
@@ -957,12 +1113,12 @@ export const GuildEventCardGuildInfo = function GuildEventCardGuildInfo(event) {
     obj[0] = stateFromStores1;
     obj[1] = tmp2(tmp3[59]).GuildIconSizes.SMALL;
     obj[2] = tmp.guildIcon;
-    const items6 = [callback4(tmp7(tmp3[59]), obj), ];
+    const items6 = [callback4(tmp7(tmp3[59]), obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.guildInfo;
     obj2 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null };
     obj2[2] = stateFromStores1.name;
-    const items7 = [callback4(tmp2(tmp3[52]).Text, obj2), ];
+    const items7 = [callback4(tmp2(tmp3[52]).Text, obj2)];
     if (tmp12Result) {
       const obj3 = { style: null, accessible: true, accessibilityLabel: null, children: null };
       obj3[0] = tmp.guildInfoChannelContainer;
@@ -984,7 +1140,7 @@ export const GuildEventCardGuildInfo = function GuildEventCardGuildInfo(event) {
         obj5[2] = tmp.channelIcon;
         tmp14Result = tmp14(tmp2(tmp3[45]).Icon, obj5);
       }
-      const items8 = [tmp14Result, ];
+      const items8 = [tmp14Result];
       const obj6 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
       obj6[0] = tmp.guildInfoChannelText;
       obj6[3] = tmp10;

@@ -9,99 +9,99 @@ const items = [
     name(arg0) {
       return "image" + arg0 + ".jpg";
     },
-    type: "image/jpeg"
+    type: "image/jpeg",
   },
   {
     reName: /\.jfif$/i,
     name(arg0) {
       return "image" + arg0 + ".jpg";
     },
-    type: "image/jpeg"
+    type: "image/jpeg",
   },
   {
     reName: /\.png$/i,
     name(arg0) {
       return "image" + arg0 + ".png";
     },
-    type: "image/png"
+    type: "image/png",
   },
   {
     reName: /\.gif$/i,
     name(arg0) {
       return "image" + arg0 + ".gif";
     },
-    type: "image/gif"
+    type: "image/gif",
   },
   {
     reName: /\.webp$/i,
     name(arg0) {
       return "image" + arg0 + ".webp";
     },
-    type: "image/webp"
+    type: "image/webp",
   },
   {
     reName: /\.avif$/i,
     name(arg0) {
       return "image" + arg0 + ".avif";
     },
-    type: "image/avif"
+    type: "image/avif",
   },
   {
     reName: /\.heic$/i,
     name(arg0) {
       return "image" + arg0 + ".heic";
     },
-    type: "image/heic"
+    type: "image/heic",
   },
   {
     reName: /\.heif$/i,
     name(arg0) {
       return "image" + arg0 + ".heif";
     },
-    type: "image/heif"
+    type: "image/heif",
   },
   {
     reName: /\.dng$/i,
     name(arg0) {
       return "image" + arg0 + ".dng";
     },
-    type: "image/x-adobe-dng"
+    type: "image/x-adobe-dng",
   },
   {
     reName: /\.mov$/i,
     name(arg0) {
       return "video" + arg0 + ".mov";
     },
-    type: "video/quicktime"
+    type: "video/quicktime",
   },
   {
     reName: /\.qt$/i,
     name(arg0) {
       return "video" + arg0 + ".qt";
     },
-    type: "video/quicktime"
+    type: "video/quicktime",
   },
   {
     reName: /\.avi$/i,
     name(arg0) {
       return "video" + arg0 + ".avi";
     },
-    type: "video/x-msvideo"
+    type: "video/x-msvideo",
   },
   {
     reName: /\.mp4$/i,
     name(arg0) {
       return "video" + arg0 + ".mp4";
     },
-    type: "video/mp4"
+    type: "video/mp4",
   },
   {
     reName: /\.webm$/i,
     name(arg0) {
       return "video" + arg0 + ".webm";
     },
-    type: "image/webm"
-  }
+    type: "image/webm",
+  },
 ];
 const result = set.fileFinishedImporting("utils/UploadUtils.tsx");
 

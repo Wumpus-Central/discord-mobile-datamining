@@ -24,7 +24,7 @@ function showAgeVerificationTestModal() {
 }
 function _showAgeVerificationTestModal() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const callback = tmp3;
     c3 = 1;
     let obj2 = closure_1_0(closure_1_2[6]);
@@ -39,13 +39,23 @@ function _showAgeVerificationTestModal() {
       throw arg1;
     } else if (arg0 !== 2) {
       const lib = arg1;
-      obj2 = { webviewUrl: null, verificationRequestId: null, verificationVendorName: null, incodeParameters: null, onComplete: null, entryPoint: null };
+      obj2 = {
+        webviewUrl: null,
+        verificationRequestId: null,
+        verificationVendorName: null,
+        incodeParameters: null,
+        onComplete: null,
+        entryPoint: null,
+      };
       obj2[0] = lib.verification_webview_url;
       obj2[1] = lib.verification_request_id;
       obj2[2] = lib.verification_vendor_name;
       obj2[3] = lib.incode_parameters;
       obj2[4] = function onComplete() {
-        tmp3(tmp15[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
+        tmp3(tmp15[8]).open({
+          content: "[On Complete] Successfully age verified",
+          key: "age-verification-test-success",
+        });
       };
       obj2[5] = lib(8684).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS;
       callback(8682).showAgeVerification(obj2);
@@ -72,18 +82,32 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { padding: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsAgeVerificationScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsAgeVerificationScreen.tsx",
+);
 
 export default function DevToolsAgeVerificationScreen() {
   const tmp = callback4();
   let obj = { style: tmp.container, contentContainerStyle: null, children: null };
-  const items = [tmp.content, ];
+  const items = [tmp.content];
   obj = { paddingBottom: tmp.content.padding + useSafeAreaInsetsDefault().bottom };
   items[1] = obj;
   obj[1] = items;
   obj = { title: "Quick Actions", hasIcons: true, children: null };
-  const items1 = [callback2(TableRowInner.TableRow, { label: "Launch Age Verification Test Tool", onPress: showAgeVerificationTestModal, icon: callback2(KeyIcon.KeyIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) }), ];
-  obj1 = { label: "Launch Age Verification Test Tool", onPress: showAgeVerificationTestModal, icon: callback2(KeyIcon.KeyIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) };
+  const items1 = [
+    callback2(TableRowInner.TableRow, {
+      label: "Launch Age Verification Test Tool",
+      onPress: showAgeVerificationTestModal,
+      icon: callback2(KeyIcon.KeyIcon, {}),
+      trailing: callback2(TableRowArrow.TableRowArrow, {}),
+    }),
+  ];
+  obj1 = {
+    label: "Launch Age Verification Test Tool",
+    onPress: showAgeVerificationTestModal,
+    icon: callback2(KeyIcon.KeyIcon, {}),
+    trailing: callback2(TableRowArrow.TableRowArrow, {}),
+  };
   items1[1] = callback2(TableRowInner.TableRow, {
     label: "Launch Age Verification Modal",
     onPress() {
@@ -92,9 +116,9 @@ export default function DevToolsAgeVerificationScreen() {
       return obj.showAgeVerificationGetStartedModal(obj);
     },
     icon: callback2(KeyIcon.KeyIcon, {}),
-    trailing: callback2(TableRowArrow.TableRowArrow, {})
+    trailing: callback2(TableRowArrow.TableRowArrow, {}),
   });
   obj[2] = items1;
   obj[2] = callback3(TableRowGroupTitle.TableRowGroup, obj);
   return callback2(ScrollView, obj);
-};
+}

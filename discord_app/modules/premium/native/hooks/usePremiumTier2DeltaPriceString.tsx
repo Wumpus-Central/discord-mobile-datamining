@@ -11,7 +11,10 @@ function getViewerProductId(subscription) {
     return null;
   } else {
     try {
-      const productIdFromSubscription = getPremiumBundledItemsFromProductId.getProductIdFromSubscription(subscription, false);
+      const productIdFromSubscription = getPremiumBundledItemsFromProductId.getProductIdFromSubscription(
+        subscription,
+        false,
+      );
       try {
         const productIdFromSubscription1 = tmp3(7152).getProductIdFromSubscription(subscription, true);
         const tmp8 = tmp3(6087).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
@@ -38,8 +41,16 @@ function getViewerProductId(subscription) {
 let closure_6 = { priceString: null, failure: null };
 let result = require("set").fileFinishedImporting("modules/premium/native/hooks/usePremiumTier2DeltaPriceString.tsx");
 
-export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPriceString(plan, subscription, first, flag4) {
-  const tmp = productId((orderRequired) => ({ orderRequired: orderRequired.orderRequired, checkoutContext: orderRequired.getCheckoutContextRecord() }));
+export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPriceString(
+  plan,
+  subscription,
+  first,
+  flag4,
+) {
+  const tmp = productId((orderRequired) => ({
+    orderRequired: orderRequired.orderRequired,
+    checkoutContext: orderRequired.getCheckoutContextRecord(),
+  }));
   const checkoutContext = tmp.checkoutContext;
   const tmp3 = getViewerProductId(subscription);
   let kind = tmp3;
@@ -65,7 +76,8 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
           tmp11 = tmp4(tmp5[5]).AppStorePremiumProductIdsToPremiumBundledItems[tmp2Result];
         }
         flag = null != tmp11 && tmp11.basePlanId === plan.basePlanId && tmp11.numPremiumGuild < plan.numPremiumGuild;
-        const tmp12 = null != tmp11 && tmp11.basePlanId === plan.basePlanId && tmp11.numPremiumGuild < plan.numPremiumGuild;
+        const tmp12 =
+          null != tmp11 && tmp11.basePlanId === plan.basePlanId && tmp11.numPremiumGuild < plan.numPremiumGuild;
       }
     }
   }
@@ -112,7 +124,9 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
     if (null == checkoutContext) {
       let tmp20 = closure_6;
     } else {
-      const availablePlanForItems = checkoutContext.getAvailablePlanForItems(tmp4(tmp5[4]).getSubscriptionItemsForProduct(plan.productId));
+      const availablePlanForItems = checkoutContext.getAvailablePlanForItems(
+        tmp4(tmp5[4]).getSubscriptionItemsForProduct(plan.productId),
+      );
       if (null == availablePlanForItems) {
         tmp20 = closure_6;
       } else {
@@ -126,7 +140,9 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
             if (null != tmp3) {
               if (null != tmp17) {
                 if (0 !== tmp17.numPremiumGuild) {
-                  const availablePlanForItems1 = checkoutContext.getAvailablePlanForItems(tmp4(tmp5[4]).getSubscriptionItemsForProduct(tmp3));
+                  const availablePlanForItems1 = checkoutContext.getAvailablePlanForItems(
+                    tmp4(tmp5[4]).getSubscriptionItemsForProduct(tmp3),
+                  );
                   let addOnPrice1;
                   if (availablePlanForItems1 != null) {
                     addOnPrice1 = availablePlanForItems1.getAddOnPrice();
@@ -148,7 +164,9 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
               }
             }
             const obj5 = { priceString: null, failure: null };
-            obj5[0] = tmp4(tmp5[7]).formatPrice(addOnPrice.majorUnits, addOnPrice.currency, { convertToMajorUnits: false });
+            obj5[0] = tmp4(tmp5[7]).formatPrice(addOnPrice.majorUnits, addOnPrice.currency, {
+              convertToMajorUnits: false,
+            });
             tmp20 = obj5;
             const tmp4Result5 = tmp4(tmp5[7]);
           }
@@ -197,7 +215,13 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
         const _Error = Error;
         const _HermesInternal = HermesInternal;
         error = new Error("delta_price_integrity_" + tmp);
-        let obj = { source: "usePremiumTier2DeltaPriceString", delta_failure_kind: null, delta_platform: null, delta_currency_code: null, delta_product_id: null };
+        let obj = {
+          source: "usePremiumTier2DeltaPriceString",
+          delta_failure_kind: null,
+          delta_platform: null,
+          delta_currency_code: null,
+          delta_product_id: null,
+        };
         obj[1] = tmp;
         let str = platform;
         if (platform == null) {

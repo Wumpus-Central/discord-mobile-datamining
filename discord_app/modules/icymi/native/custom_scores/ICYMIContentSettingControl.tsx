@@ -26,7 +26,7 @@ function ContentSettingsControl(initialValue) {
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.rdt65I);
   obj = { source: registerAssetDefault, style: null };
-  const items = [tmp.icon, ];
+  const items = [tmp.icon];
   let iconSelected = null;
   if (tmp3 === generateHydrationId.ICYMICustomScore.LESS) {
     iconSelected = tmp.iconSelected;
@@ -34,12 +34,12 @@ function ContentSettingsControl(initialValue) {
   items[1] = iconSelected;
   obj[1] = items;
   obj[2] = closure_8(Button.Icon, obj);
-  const items1 = [obj, , ];
+  const items1 = [obj, ,];
   obj = { label: null, id: "0", icon: null, page: null };
   const intl2 = tmp4(1236).intl;
   obj[0] = intl2.string(getSystemLocale.t.SnrG00);
   obj1 = { source: registerAssetDefault2, style: null };
-  const items2 = [tmp.icon, ];
+  const items2 = [tmp.icon];
   let iconSelected1 = null;
   if (tmp3 === generateHydrationId.ICYMICustomScore.DEFAULT) {
     iconSelected1 = tmp.iconSelected;
@@ -52,7 +52,7 @@ function ContentSettingsControl(initialValue) {
   const intl3 = tmp4(1236).intl;
   obj2[0] = intl3.string(getSystemLocale.t.Rxe3jF);
   const obj3 = { source: registerAssetDefault3, style: null };
-  const items3 = [tmp.icon, ];
+  const items3 = [tmp.icon];
   let iconSelected2 = null;
   if (tmp3 === generateHydrationId.ICYMICustomScore.MORE) {
     iconSelected2 = tmp.iconSelected;
@@ -75,7 +75,7 @@ function ContentSettingsControl(initialValue) {
       callback(MORE);
     },
     items: items1,
-    defaultIndex: null
+    defaultIndex: null,
   };
   let num = 0;
   if (generateHydrationId.ICYMICustomScore.LESS !== tmp3) {
@@ -96,7 +96,10 @@ function ContentSettingsControl(initialValue) {
     str = "none";
   }
   obj6[1] = str;
-  obj6[2] = closure_8(SegmentedControl.SegmentedControl, { variant: "experimental_Large", state: segmentedControlState });
+  obj6[2] = closure_8(SegmentedControl.SegmentedControl, {
+    variant: "experimental_Large",
+    state: segmentedControlState,
+  });
   return closure_8(View, obj6);
 }
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
@@ -112,7 +115,9 @@ let obj3 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_16 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { marginTop: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/icymi/native/custom_scores/ICYMIContentSettingControl.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/icymi/native/custom_scores/ICYMIContentSettingControl.tsx",
+);
 
 export const GuildScoreSettings = function GuildScoreSettings(guild) {
   guild = guild.guild;
@@ -155,7 +160,7 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   obj = { variant: "text-sm/semibold", color: "text-default", children: null };
   const intl = id(1236).intl;
   obj[2] = intl.string(id(1236).t.Clq6km);
-  const items3 = [callback2(id(4474).Text, obj), , , , ];
+  const items3 = [callback2(id(4474).Text, obj), , , ,];
   obj = { variant: "text-xs/normal", color: "text-default", children: null };
   const intl2 = id(1236).intl;
   obj1 = { guildName: guild.name };
@@ -251,7 +256,7 @@ export const ChannelScoreSettings = function ChannelScoreSettings(channel) {
   obj = { variant: "text-sm/semibold", color: "text-default", children: null };
   const intl = id(stateFromStores[9]).intl;
   obj[2] = intl.string(id(stateFromStores[9]).t["0jRosn"]);
-  const items4 = [callback2(id(stateFromStores[18]).Text, obj), , , , ];
+  const items4 = [callback2(id(stateFromStores[18]).Text, obj), , , ,];
   obj = { variant: "text-xs/normal", color: "text-default", children: null };
   const intl2 = id(stateFromStores[9]).intl;
   obj[2] = intl2.format(id(stateFromStores[9]).t.KzkF1j, { channelName: tmp4 });

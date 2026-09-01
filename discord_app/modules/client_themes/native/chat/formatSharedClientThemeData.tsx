@@ -8,10 +8,23 @@ import registerAssetDefault from "../../../../../_runtime/07960_registerAsset.js
 const Image = get_ActivityIndicator.Image;
 const result = set.fileFinishedImporting("modules/client_themes/native/chat/formatSharedClientThemeData.tsx");
 
-export const formatSharedClientThemeData = function formatSharedClientThemeData(message, ensureAvatarSourceResult, nick) {
+export const formatSharedClientThemeData = function formatSharedClientThemeData(
+  message,
+  ensureAvatarSourceResult,
+  nick,
+) {
   const sharedClientTheme = message.sharedClientTheme;
   if (undefined !== sharedClientTheme) {
-    const obj = { colors: null, gradientAngle: null, createdBy: null, createdByAvatarUrl: null, nitroWheelIconUrl: null, previewLabel: null, previewHeading: null, createdByLabel: null };
+    const obj = {
+      colors: null,
+      gradientAngle: null,
+      createdBy: null,
+      createdByAvatarUrl: null,
+      nitroWheelIconUrl: null,
+      previewLabel: null,
+      previewHeading: null,
+      createdByLabel: null,
+    };
     ({ colors: obj[0], gradient_angle: obj[1] } = sharedClientTheme);
     obj[2] = nick;
     let str2 = "";

@@ -6,7 +6,12 @@ import createCacheKey from "../../../../../../../design/components/Styles/native
 import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
 
 let obj = { imageContainer: null };
-obj = { flex: 1, borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+obj = {
+  flex: 1,
+  borderRadius: ThemesDefault.radii.xs,
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 obj[0] = obj;
 let closure_2 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((arg0) => {
@@ -16,6 +21,8 @@ const memoResult = importAllResult.memo((arg0) => {
   obj[0] = items;
   return <View style={null} />;
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/GridItemPlaceholder.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/search/native/components/tabs/pages/placeholders/GridItemPlaceholder.tsx",
+);
 
 export default memoResult;

@@ -10,7 +10,7 @@ function _createHandoffToken() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -103,5 +103,5 @@ export default {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  }
+  },
 };

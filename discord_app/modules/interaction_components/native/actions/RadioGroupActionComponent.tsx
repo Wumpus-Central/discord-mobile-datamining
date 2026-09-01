@@ -5,7 +5,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = { code: "function RadioGroupActionComponentTsx1(){const{withSpring,hasValue,SUBTLE_SPRING}=this.__closure;return{maxHeight:withSpring(hasValue?60:0,SUBTLE_SPRING),marginTop:withSpring(hasValue?8:0,SUBTLE_SPRING),opacity:withSpring(hasValue?1:0,SUBTLE_SPRING)};}" };
+let closure_7 = {
+  code: "function RadioGroupActionComponentTsx1(){const{withSpring,hasValue,SUBTLE_SPRING}=this.__closure;return{maxHeight:withSpring(hasValue?60:0,SUBTLE_SPRING),marginTop:withSpring(hasValue?8:0,SUBTLE_SPRING),opacity:withSpring(hasValue?1:0,SUBTLE_SPRING)};}",
+};
 const memoResult = importAllResult.memo((type) => {
   type = type.type;
   const options = type.options;
@@ -97,9 +99,15 @@ const memoResult = importAllResult.memo((type) => {
       }
     },
     groupRef: ref,
-    children: options.map((label) => state(type(required[7]).TableRadioRow, { label: label.label, subLabel: label.description, value: label.value }, label.value))
+    children: options.map((label) =>
+      state(
+        type(required[7]).TableRadioRow,
+        { label: label.label, subLabel: label.description, value: label.value },
+        label.value,
+      ),
+    ),
   };
-  const children = [state(type(required[6]).TableRadioGroup, obj1), ];
+  const children = [state(type(required[6]).TableRadioGroup, obj1)];
   let tmp12Result = !required;
   if (!required) {
     const obj2 = { style: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
@@ -129,6 +137,8 @@ const memoResult = importAllResult.memo((type) => {
   children[1] = tmp12Result;
   return memo1(executeStateUpdate, { children });
 });
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/RadioGroupActionComponent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/native/actions/RadioGroupActionComponent.tsx",
+);
 
 export default memoResult;

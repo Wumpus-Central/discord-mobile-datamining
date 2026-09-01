@@ -9,7 +9,31 @@ const result = createCacheKey.experimental_createToken((theme) => {
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
   return AccessibilityAnnouncer.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_630;
 });
-let obj = { textColor: null, linkColor: null, timestampColor: null, highlightColor: null, unsupportedColor: null, embedProviderColor: null, embedBorderLeftColor: null, embedBodyTextColor: null, embedHeaderTextColor: null, opTagTextColor: null, opTagBackgroundColor: null, failedMessageBodyTextColor: null, automodBlockedBodyTextColor: null, aiBotTagColor: null, editedColor: null, defaultUsernameColor: null, feedbackColor: null, reportFpTextColor: null, reportFpBackgroundColor: null, retryTextColor: null, retryBackgroundColor: null, clipTagBackgroundColor: null, clipTagTextColor: null };
+let obj = {
+  textColor: null,
+  linkColor: null,
+  timestampColor: null,
+  highlightColor: null,
+  unsupportedColor: null,
+  embedProviderColor: null,
+  embedBorderLeftColor: null,
+  embedBodyTextColor: null,
+  embedHeaderTextColor: null,
+  opTagTextColor: null,
+  opTagBackgroundColor: null,
+  failedMessageBodyTextColor: null,
+  automodBlockedBodyTextColor: null,
+  aiBotTagColor: null,
+  editedColor: null,
+  defaultUsernameColor: null,
+  feedbackColor: null,
+  reportFpTextColor: null,
+  reportFpBackgroundColor: null,
+  retryTextColor: null,
+  retryBackgroundColor: null,
+  clipTagBackgroundColor: null,
+  clipTagTextColor: null,
+};
 const result1 = createCacheKey.experimental_createToken((theme) => {
   obj = AccessibilityAnnouncer;
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
@@ -52,4 +76,4 @@ export default function resolveMessageContentColors(arg0) {
     flag = false;
   }
   return callback(arg0, flag);
-};
+}

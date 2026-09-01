@@ -18,7 +18,10 @@ function computeAllowedForUser(permissions, guild_id, userId, roleIds, isImperso
   } else {
     if (!isImpersonating) {
       obj = commandPermissions;
-      const tmp4 = permissions[obj.toPermissionKey(obj, userId, ApplicationCommandSectionType.ApplicationCommandPermissionType.USER)];
+      const tmp4 =
+        permissions[
+          obj.toPermissionKey(obj, userId, ApplicationCommandSectionType.ApplicationCommandPermissionType.USER)
+        ];
       if (null != tmp4) {
         return tmp4.permission;
       }
@@ -29,7 +32,10 @@ function computeAllowedForUser(permissions, guild_id, userId, roleIds, isImperso
       let tmp10 = require;
       let tmp11 = dependencyMap;
       let obj3 = commandPermissions;
-      let tmp12 = permissions[obj3.toPermissionKey(obj3, tmp8, ApplicationCommandSectionType.ApplicationCommandPermissionType.ROLE)];
+      let tmp12 =
+        permissions[
+          obj3.toPermissionKey(obj3, tmp8, ApplicationCommandSectionType.ApplicationCommandPermissionType.ROLE)
+        ];
       if (null != tmp12) {
         let tmp14 = tmp12;
         if (tmp13.permission) {
@@ -48,7 +54,10 @@ function computeAllowedForUser(permissions, guild_id, userId, roleIds, isImperso
       let tmp17 = null;
       if (null != guild_id) {
         const obj4 = commandPermissions;
-        tmp17 = permissions[obj4.toPermissionKey(obj4, guild_id, ApplicationCommandSectionType.ApplicationCommandPermissionType.ROLE)];
+        tmp17 =
+          permissions[
+            obj4.toPermissionKey(obj4, guild_id, ApplicationCommandSectionType.ApplicationCommandPermissionType.ROLE)
+          ];
       }
       let permission = null;
       if (null != tmp17) {
@@ -61,7 +70,24 @@ function computeAllowedForUser(permissions, guild_id, userId, roleIds, isImperso
 const ChannelRecordBase = createChannelRecord.ChannelRecordBase;
 const BuiltInSectionId = TRUE_OPTION_NAME.BuiltInSectionId;
 const Permissions = ME.Permissions;
-let obj = { ALLOWED: 0, [0]: "ALLOWED", NSFW_NOT_ALLOWED: 1, [1]: "NSFW_NOT_ALLOWED", WRONG_COMMAND_TYPE: 2, [2]: "WRONG_COMMAND_TYPE", PREDICATE_FAILED: 3, [3]: "PREDICATE_FAILED", CONTEXT_NOT_ALLOWED: 4, [4]: "CONTEXT_NOT_ALLOWED", MISSING_BASE_PERMISSIONS: 5, [5]: "MISSING_BASE_PERMISSIONS", CHANNEL_DENIED: 6, [6]: "CHANNEL_DENIED", USER_DENIED: 7, [7]: "USER_DENIED" };
+let obj = {
+  ALLOWED: 0,
+  [0]: "ALLOWED",
+  NSFW_NOT_ALLOWED: 1,
+  [1]: "NSFW_NOT_ALLOWED",
+  WRONG_COMMAND_TYPE: 2,
+  [2]: "WRONG_COMMAND_TYPE",
+  PREDICATE_FAILED: 3,
+  [3]: "PREDICATE_FAILED",
+  CONTEXT_NOT_ALLOWED: 4,
+  [4]: "CONTEXT_NOT_ALLOWED",
+  MISSING_BASE_PERMISSIONS: 5,
+  [5]: "MISSING_BASE_PERMISSIONS",
+  CHANNEL_DENIED: 6,
+  [6]: "CHANNEL_DENIED",
+  USER_DENIED: 7,
+  [7]: "USER_DENIED",
+};
 const result = set.fileFinishedImporting("modules/application_commands/CommandPermissionUtils.tsx");
 
 export const HasAccessResult = obj;
@@ -153,13 +179,23 @@ export const hasAccess = function hasAccess(type, arg1, applicationAllowedForCha
                 id = id2;
               }
               const obj4 = commandPermissions;
-              const tmp28 = permissions[obj4.toPermissionKey(obj4, id, ApplicationCommandSectionType.ApplicationCommandPermissionType.CHANNEL)];
+              const tmp28 =
+                permissions[
+                  obj4.toPermissionKey(obj4, id, ApplicationCommandSectionType.ApplicationCommandPermissionType.CHANNEL)
+                ];
               if (null != tmp28) {
                 permission = tmp28.permission;
               } else {
                 let tmp27Result = tmp27(7267);
                 tmp27Result = tmp27(7266);
-                const tmp30 = permissions[tmp27Result.toPermissionKey(tmp27Result, tmp27Result.allChannelsSentinel(contextGuildId), tmp27(undefined, 7268).ApplicationCommandPermissionType.CHANNEL)];
+                const tmp30 =
+                  permissions[
+                    tmp27Result.toPermissionKey(
+                      tmp27Result,
+                      tmp27Result.allChannelsSentinel(contextGuildId),
+                      tmp27(undefined, 7268).ApplicationCommandPermissionType.CHANNEL,
+                    )
+                  ];
                 let permission1 = null;
                 if (null != tmp30) {
                   permission1 = tmp30.permission;
@@ -184,7 +220,9 @@ export const hasAccess = function hasAccess(type, arg1, applicationAllowedForCha
               if (false !== applicationAllowedForUser) {
                 if (null != type.defaultMemberPermissions) {
                   let tmp53Result = tmp53(506);
-                  if (!tmp53Result.equals(type.defaultMemberPermissions, buildCommand.DISABLED_BY_DEFAULT_PERMISSION_FLAG)) {
+                  if (
+                    !tmp53Result.equals(type.defaultMemberPermissions, buildCommand.DISABLED_BY_DEFAULT_PERMISSION_FLAG)
+                  ) {
                     tmp53Result = tmp53(506);
                     if (tmp53Result.has(computedPermissions, type.defaultMemberPermissions)) {
                       let USER_DENIED2 = obj.ALLOWED;
@@ -220,13 +258,23 @@ export const computeAllowedForChannel = function computeAllowedForChannel(permis
       id2 = id;
     }
     obj = commandPermissions;
-    const tmp3 = permissions[obj.toPermissionKey(obj, id2, ApplicationCommandSectionType.ApplicationCommandPermissionType.CHANNEL)];
+    const tmp3 =
+      permissions[
+        obj.toPermissionKey(obj, id2, ApplicationCommandSectionType.ApplicationCommandPermissionType.CHANNEL)
+      ];
     if (null != tmp3) {
       return tmp3.permission;
     } else {
       let tmpResult = tmp(7267);
       tmpResult = tmp(7266);
-      const tmp6 = permissions[tmpResult.toPermissionKey(tmpResult, tmpResult.allChannelsSentinel(guild_id), tmp(undefined, 7268).ApplicationCommandPermissionType.CHANNEL)];
+      const tmp6 =
+        permissions[
+          tmpResult.toPermissionKey(
+            tmpResult,
+            tmpResult.allChannelsSentinel(guild_id),
+            tmp(undefined, 7268).ApplicationCommandPermissionType.CHANNEL,
+          )
+        ];
       let permission = null;
       if (null != tmp6) {
         permission = tmp6.permission;

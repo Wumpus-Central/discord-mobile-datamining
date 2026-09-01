@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/premium/UserTrialAc
 export default {
   acknowledgeUserTrialOffer(arg0) {
     closure_0 = arg0;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -61,7 +61,10 @@ export default {
             if (1 === tmp7) {
               c3 = 0;
               if (404 === status.status) {
-                closure_1_1(closure_1_2[4]).dispatch({ type: "BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS", userTrialOffer: null });
+                closure_1_1(closure_1_2[4]).dispatch({
+                  type: "BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS",
+                  userTrialOffer: null,
+                });
                 const obj10 = closure_1_1(closure_1_2[4]);
               }
             } else if (arg0 === 1) {
@@ -97,5 +100,5 @@ export default {
         }
       }
     })();
-  }
+  },
 };

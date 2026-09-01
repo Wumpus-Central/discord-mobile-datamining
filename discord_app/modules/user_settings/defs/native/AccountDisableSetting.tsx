@@ -13,7 +13,7 @@ const pressable = createToggle.createPressable({
   parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
   onPress: function onAccountDisablePress() {
     handleDisableAccountDefault(false);
-  }
+  },
 });
 const obj = {
   useTitle() {
@@ -23,7 +23,7 @@ const obj = {
   parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
   onPress: function onAccountDisablePress() {
     handleDisableAccountDefault(false);
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountDisableSetting.tsx");
 

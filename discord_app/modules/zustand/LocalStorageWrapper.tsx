@@ -18,7 +18,7 @@ const frozen = Object.freeze({
   removeItem(arg0) {
     const Storage = Storage2.Storage;
     return Storage.remove(arg0);
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/zustand/LocalStorageWrapper.tsx");
 

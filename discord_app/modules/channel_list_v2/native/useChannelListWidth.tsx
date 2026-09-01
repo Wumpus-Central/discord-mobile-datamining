@@ -18,4 +18,4 @@ export default function useChannelListWidth() {
     num = token;
   }
   return diff - num;
-};
+}

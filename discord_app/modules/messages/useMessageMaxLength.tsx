@@ -10,8 +10,10 @@ const result = require("set").fileFinishedImporting("modules/messages/useMessage
 
 export default function useMessageMaxLength() {
   const items = [closure_3];
-  return initialize.useStateFromStores(items, () => callback(table[2]).canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5);
-};
+  return initialize.useStateFromStores(items, () =>
+    callback(table[2]).canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5,
+  );
+}
 export const getMaxMessageLength = function getMaxMessageLength() {
   return getPremiumPlanItemDefault.canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5;
 };

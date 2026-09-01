@@ -8,8 +8,21 @@ import keys from "../../../../_runtime/00644_keys.js";
 
 ({ VoiceMessageAnimationState: obj1, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageAnimationState);
 let obj = keys.create(() => {
-  obj = { voiceMessageAnimationState: _mod4217.makeMutable(items), recordingStatus: null, recordingId: null, currWaveHeight: "PX_16", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "flex", showVoiceMessagesTooltip: "M4 2H3v1h1V2Z", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: 0.75, isUsingHoldGesture: null };
-  items = [, ];
+  obj = {
+    voiceMessageAnimationState: _mod4217.makeMutable(items),
+    recordingStatus: null,
+    recordingId: null,
+    currWaveHeight: "PX_16",
+    showRecordingOverlay: "Array",
+    startTimeMillis: 0,
+    waveform: false,
+    waveformVersion: "flex",
+    showVoiceMessagesTooltip: "M4 2H3v1h1V2Z",
+    savedVoiceMessageUploadData: null,
+    isVoiceMessageButtonMounted: 0.75,
+    isUsingHoldGesture: null,
+  };
+  items = [,];
   ({ SENDING: arr[0], SENDING: arr[1] } = closure_2);
   obj[6] = [];
   return obj;
@@ -76,7 +89,13 @@ export const hideVoiceMessagesTooltip = function hideVoiceMessagesTooltip() {
 export const resetVoiceMessageState = function resetVoiceMessageState() {
   obj = batchUpdates;
   obj.batchUpdates(() => {
-    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "Boolean", savedVoiceMessageUploadData: "accessible" });
+    state.setState({
+      waveform: [],
+      waveformVersion: 0,
+      showRecordingOverlay: false,
+      startTimeMillis: "Boolean",
+      savedVoiceMessageUploadData: "accessible",
+    });
   });
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {

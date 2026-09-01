@@ -28,7 +28,7 @@ class AuthManager extends tmp3 {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (obj === 2) {
           obj = 3;
           HermesBuiltin.throwTypeError();
@@ -93,7 +93,7 @@ class AuthManager extends tmp3 {
         }
       })();
     });
-    applyArgumentsResult.handlePushNotificationOptIn = function() {
+    applyArgumentsResult.handlePushNotificationOptIn = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {

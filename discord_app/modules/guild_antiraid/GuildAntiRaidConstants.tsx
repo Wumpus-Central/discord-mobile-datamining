@@ -5,7 +5,13 @@ import getSystemLocale from "../../intl/index.native.tsx";
 import importAllResult from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 const Permissions = sum.Permissions;
-const combineResult = importAllResult.combine(Permissions.ADMINISTRATOR, Permissions.MANAGE_GUILD, Permissions.BAN_MEMBERS, Permissions.KICK_MEMBERS, Permissions.MODERATE_MEMBERS);
+const combineResult = importAllResult.combine(
+  Permissions.ADMINISTRATOR,
+  Permissions.MANAGE_GUILD,
+  Permissions.BAN_MEMBERS,
+  Permissions.KICK_MEMBERS,
+  Permissions.MODERATE_MEMBERS,
+);
 const result = set.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidConstants.tsx");
 
 export const GUILD_REPORT_RAID_MOBILE_KEY = "guild_report_raid_mobile";
@@ -15,7 +21,7 @@ export const getTimeframes = () => {
   let obj = { id: "1", value: 1, label: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["GA/d4I"]);
-  const items = [obj, , , , , ];
+  const items = [obj, , , , ,];
   obj = { id: "2", value: 2, label: null };
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(getSystemLocale.t["+rHFej"]);

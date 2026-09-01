@@ -18,8 +18,7 @@ function handleInviteData(invite) {
 let closure_0 = {};
 let closure_1 = {};
 const Store = initializeDefault.Store;
-class GuildMemberCountStore extends Store {
-}
+class GuildMemberCountStore extends Store {}
 const prototype = GuildMemberCountStore.prototype;
 prototype["getMemberCounts"] = function getMemberCounts() {
   return closure_0;
@@ -88,7 +87,7 @@ const guildMemberCountStore = new GuildMemberCountStore(dispatcherDefault, {
       }
     }
     return false;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/GuildMemberCountStore.tsx");
 

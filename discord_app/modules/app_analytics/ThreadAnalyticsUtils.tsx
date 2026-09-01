@@ -24,7 +24,17 @@ export const collectThreadMetadata = function collectThreadMetadata(channel, arg
         let obj = transitionTo;
         lastRouteChangeSource = obj.getLastRouteChangeSource();
       }
-      obj = { location: null, thread_approximate_member_count: null, thread_approximate_message_count: null, thread_archived: null, thread_locked: null, thread_auto_archive_duration_minutes: null, thread_approximate_creation_date: null, can_send_message: null, parent_channel_type: null };
+      obj = {
+        location: null,
+        thread_approximate_member_count: null,
+        thread_approximate_message_count: null,
+        thread_archived: null,
+        thread_locked: null,
+        thread_auto_archive_duration_minutes: null,
+        thread_approximate_creation_date: null,
+        can_send_message: null,
+        parent_channel_type: null,
+      };
       obj[0] = lastRouteChangeSource;
       obj[1] = memberCount.getMemberCount(channel.id);
       obj[2] = count.getCount(channel.id);

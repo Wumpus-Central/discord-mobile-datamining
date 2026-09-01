@@ -97,7 +97,11 @@ const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
   }
   obj1.style = obj2;
   obj1.nativeID = "guilds-bar-fast-list";
-  const items2 = [closure_4(fastListRef(7795), obj1), closure_4(fastListRef(15951), {}), closure_4(fastListRef(10317), {})];
+  const items2 = [
+    closure_4(fastListRef(7795), obj1),
+    closure_4(fastListRef(15951), {}),
+    closure_4(fastListRef(10317), {}),
+  ];
   obj[3] = items2;
   obj[1] = tmp11(tmp12, obj);
   obj[1] = closure_4(listProps(5652).GestureDetector, obj);

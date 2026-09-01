@@ -12,17 +12,57 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { actionBarContainer: null, actionRow: null, reactionRow: null, actionButton: null, actionButtonsContainer: null, lastActionButton: null, buttonText: null };
-createCacheKey = { overflow: "hidden", paddingHorizontal: 12, paddingVertical: 8, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: -1 };
+createCacheKey = {
+  actionBarContainer: null,
+  actionRow: null,
+  reactionRow: null,
+  actionButton: null,
+  actionButtonsContainer: null,
+  lastActionButton: null,
+  buttonText: null,
+};
+createCacheKey = {
+  overflow: "hidden",
+  paddingHorizontal: 12,
+  paddingVertical: 8,
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  marginBottom: -1,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 };
 createCacheKey[2] = { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 };
-createCacheKey[3] = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 8, height: 28, marginRight: 4, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
+createCacheKey[3] = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 8,
+  height: 28,
+  marginRight: 4,
+  borderRadius: ThemesDefault.radii.xs,
+  borderWidth: 1,
+  backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
+  borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
+};
 createCacheKey[4] = { justifyContent: "flex-end" };
 createCacheKey[5] = { marginRight: 0 };
 createCacheKey[6] = { marginLeft: 8 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 8, height: 28, marginRight: 4, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
+let obj1 = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 8,
+  height: 28,
+  marginRight: 4,
+  borderRadius: ThemesDefault.radii.xs,
+  borderWidth: 1,
+  backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
+  borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
+};
 let result = require("set").fileFinishedImporting("modules/forums/native/ForumPostActionBar.tsx");
 
 export default function ForumPostActionBar(channel) {
@@ -73,12 +113,12 @@ export default function ForumPostActionBar(channel) {
     obj[1] = callback(tmp2(11048).ForumPostActionBarReactions, obj1);
     tmp11 = callback(tmp10, obj);
   }
-  const items5 = [tmp11, ];
+  const items5 = [tmp11];
   obj2 = { style: items6, onLayout: callback, children: null };
-  items6 = [, ];
+  items6 = [,];
   ({ actionRow: arr7[0], actionButtonsContainer: arr7[1] } = tmp);
   if (stateFromStores2) {
-    const items7 = [tmp13, , ];
+    const items7 = [tmp13, ,];
     obj3 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl4 = tmp2(1236).intl;
     obj3[1] = intl4.string(tmp2(1236).t.WqhZss);
@@ -97,12 +137,17 @@ export default function ForumPostActionBar(channel) {
     obj4 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl5 = tmp2(1236).intl;
     obj4[1] = intl5.string(tmp2(1236).t.nFP4oa);
-    const items8 = [, ];
+    const items8 = [,];
     ({ actionButton: arr12[0], lastActionButton: arr12[1] } = tmp);
     obj4[2] = items8;
     obj4[3] = function onPress() {
       let obj = stateFromStores1(7201);
-      obj = { channelId: channel.id, messageId: stateFromStores1(11).castChannelIdAsMessageId(channel.id), flash: true, jumpType: channel(4409).JumpType.ANIMATED };
+      obj = {
+        channelId: channel.id,
+        messageId: stateFromStores1(11).castChannelIdAsMessageId(channel.id),
+        flash: true,
+        jumpType: channel(4409).JumpType.ANIMATED,
+      };
       obj.jumpToMessage(obj);
     };
     obj4[4] = callback(tmp2(11049).ArrowLargeUpIcon, { size: "xs" });
@@ -124,7 +169,7 @@ export default function ForumPostActionBar(channel) {
       obj5[2] = tmp.actionButton;
       obj5[3] = items9;
       intl = callback;
-      items9 = [callback(tmp2(4429).CheckmarkLargeIcon, { size: "xs", color: "text-brand" }), ];
+      items9 = [callback(tmp2(4429).CheckmarkLargeIcon, { size: "xs", color: "text-brand" })];
       Text = tmp2(4474).Text;
       const obj6 = { style: null, variant: "text-sm/semibold", color: "text-brand", children: null };
       const items10 = [tmp.buttonText];
@@ -139,7 +184,7 @@ export default function ForumPostActionBar(channel) {
       obj5[1] = Text(t["DjZ+6E"]);
       obj5[2] = tmp.actionButton;
       obj5[3] = items9;
-      const items11 = [callback(tmp2(9746).BellIcon, { size: "xs" }), ];
+      const items11 = [callback(tmp2(9746).BellIcon, { size: "xs" })];
       const obj7 = { style: null, variant: "text-sm/semibold", color: "interactive-text-default", children: null };
       obj7[0] = tmp.buttonText;
       const intl2 = tmp2(1236).intl;
@@ -150,4 +195,4 @@ export default function ForumPostActionBar(channel) {
     }
     tmp9(tmp2(5068).PressableOpacity, tmp15);
   }
-};
+}

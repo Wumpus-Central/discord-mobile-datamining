@@ -4,7 +4,7 @@ import importDefaultResult from "../../markup/combineMarkupRules.tsx";
 import createSearchResultLinkPreviewReactRules from "../../markup/native/MarkupSearchResultLinkPreviewReactRules.tsx";
 import importAllResult from "../../../../discord_common/js/packages/markup/MarkupParser.tsx";
 
-const items = [parseLinkDefault.NATIVE_SEARCH_RESULT_LINK_RULES, ];
+const items = [parseLinkDefault.NATIVE_SEARCH_RESULT_LINK_RULES];
 items[1] = require("createSearchResultLinkPreviewReactRules").createSearchResultLinkPreviewReactRules();
 const importDefaultResultResult = importDefaultResult(items);
 const reactParserForResult = importAllResult.reactParserFor(importDefaultResultResult);

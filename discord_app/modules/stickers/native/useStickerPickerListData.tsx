@@ -78,20 +78,33 @@ export default function useStickerPickerListData(containerWidth) {
       const push = items1.push;
       c0 = 0;
       const items4 = [];
-      HermesBuiltin.arraySpread(items.map((arg0, arg1) => {
-        if (0 === arg1) {
-          if (0 === arg0) {
-            return 0;
+      HermesBuiltin.arraySpread(
+        items.map((arg0, arg1) => {
+          if (0 === arg1) {
+            if (0 === arg0) {
+              return 0;
+            }
           }
-        }
-        const sum = arg0 * closure_1_6 + closure_1_9 + 12 + c0;
-        c0 = sum;
-        return sum;
-      }), 0);
+          const sum = arg0 * closure_1_6 + closure_1_9 + 12 + c0;
+          c0 = sum;
+          return sum;
+        }),
+        0,
+      );
       HermesBuiltin.apply(items4, items1);
     }
-    obj = { sections: items, sectionHeights: items1, sectionSize: closure_1_9, sectionFooterSize: 12, sectionLabels: items2, rowHeight: closure_1_6, rowSize: rounded, rowsBySection: items3, packToScrollToIndex: c4 };
+    obj = {
+      sections: items,
+      sectionHeights: items1,
+      sectionSize: closure_1_9,
+      sectionFooterSize: 12,
+      sectionLabels: items2,
+      rowHeight: closure_1_6,
+      rowSize: rounded,
+      rowsBySection: items3,
+      packToScrollToIndex: c4,
+    };
     return obj;
   }, items);
-};
+}
 export const StickerPickerSectionType = obj;

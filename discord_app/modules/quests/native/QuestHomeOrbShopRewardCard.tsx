@@ -12,7 +12,13 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { card: null };
-createCacheKey = { overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = {
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/quests/native/QuestHomeOrbShopRewardCard.tsx");
@@ -35,7 +41,9 @@ export default function QuestHomeOrbShopRewardCard(product) {
   let stateFromStores;
   let obj = initialize;
   const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => stateFromStores(table[8]).canUseShopDiscounts(currentUser.getCurrentUser()));
+  stateFromStores = obj.useStateFromStores(items, () =>
+    stateFromStores(table[8]).canUseShopDiscounts(currentUser.getCurrentUser()),
+  );
   const items1 = [product, stateFromStores];
   const memo = React.useMemo(() => {
     let obj = product(closure_1_2[9]);
@@ -46,7 +54,7 @@ export default function QuestHomeOrbShopRewardCard(product) {
   let tmp12Result = null;
   if (null != memo) {
     obj = { style: null, accessible: true, accessibilityRole: "text", accessibilityLabel: null, children: null };
-    const items2 = [tmp5.card, ];
+    const items2 = [tmp5.card];
     obj = { width: null, height: null };
     obj[0] = COLLECTIBLES_SHOP_CARD_WIDTH;
     obj[1] = COLLECTIBLES_SHOP_CARD_HEIGHT;
@@ -56,7 +64,7 @@ export default function QuestHomeOrbShopRewardCard(product) {
     obj1 = { product: null, isPurchased: false, solidBackground: true, cardWidth: null };
     obj1[0] = product;
     obj1[3] = COLLECTIBLES_SHOP_CARD_WIDTH;
-    const items3 = [callback(stateFromStores(12622), obj1), ];
+    const items3 = [callback(stateFromStores(12622), obj1)];
     let tmp14Result = !flag;
     if (!flag) {
       const obj2 = { product: null, collectibleProductState: null, hidePrice: true };
@@ -72,6 +80,6 @@ export default function QuestHomeOrbShopRewardCard(product) {
     tmp15 = stateFromStores;
   }
   return tmp12Result;
-};
+}
 export const QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH = 114;
 export const QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT = 123;

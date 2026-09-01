@@ -68,8 +68,7 @@ const isPrivate = createChannelRecord.isPrivate;
 let closure_7 = [];
 let set = new Set();
 const Store = initializeDefault.Store;
-class PrivateChannelReadStateStore extends Store {
-}
+class PrivateChannelReadStateStore extends Store {}
 const prototype = PrivateChannelReadStateStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_6, closure_3, closure_5, closure_4);
@@ -200,7 +199,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(dispatcher
       tmp7 = rebuildUnreads();
     }
     return tmp7;
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/PrivateChannelReadStateStore.tsx");
 

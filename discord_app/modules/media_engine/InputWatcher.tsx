@@ -15,7 +15,7 @@ class InputWatcher {
     obj.inputDetected = undefined;
     obj.lastUpdateTime = performance.now();
     closure_0 = obj;
-    obj.fetchInputDeviceOSConfig = closure_4(function*() {
+    obj.fetchInputDeviceOSConfig = closure_4(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -104,7 +104,7 @@ class InputWatcher {
               return obj3;
             } else {
               const mediaEngine = guid.mediaEngine;
-              const items = [mediaEngine.getDeviceOSVolume(guid), ];
+              const items = [mediaEngine.getDeviceOSVolume(guid)];
               const mediaEngine2 = guid.mediaEngine;
               items[1] = mediaEngine2.getDeviceOSMuted(guid);
               c4 = 3;
@@ -147,25 +147,49 @@ class InputWatcher {
       if (!arg0) {
         num = 1500;
       }
-      stateChangeTimeout.start(num, closure_1_4(function*() {
-        if (table === 2) {
-          table = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+      stateChangeTimeout.start(
+        num,
+        closure_1_4(function* () {
+          if (table === 2) {
+            table = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
           } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            table = 2;
-            if (0 === v0) {
-              if (arg0 === 1) {
+            try {
+              table = 2;
+              if (0 === v0) {
+                if (arg0 === 1) {
+                  table = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  table = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  closure_0 = tmp4;
+                  closure_1_6.info("Silence:", closure_1_0);
+                  v0.inputDetected = table;
+                  const _performance = performance;
+                  v0.lastUpdateTime = performance.now();
+                  if (closure_1_0) {
+                    v0 = 1;
+                    table = 1;
+                    obj1 = { value: null, done: false };
+                    obj1[0] = v0.fetchInputDeviceOSConfig();
+                    return obj1;
+                  }
+                }
+              } else if (arg0 === 1) {
                 table = 3;
                 throw arg1;
               } else if (arg0 === 2) {
@@ -173,42 +197,21 @@ class InputWatcher {
                 obj = { value: null, done: true };
                 obj[0] = arg1;
                 return obj;
-              } else {
-                closure_0 = tmp4;
-                closure_1_6.info("Silence:", closure_1_0);
-                v0.inputDetected = table;
-                const _performance = performance;
-                v0.lastUpdateTime = performance.now();
-                if (closure_1_0) {
-                  v0 = 1;
-                  table = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = v0.fetchInputDeviceOSConfig();
-                  return obj1;
-                }
               }
-            } else if (arg0 === 1) {
+              obj1 = v0(table[10]);
+              const obj2 = { type: "AUDIO_INPUT_DETECTED", inputDetected: null, lastUpdateTime: null };
+              obj2[1] = v0.inputDetected;
+              obj2[2] = v0.lastUpdateTime;
+              obj1.dispatch(obj2);
               table = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              table = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              return { value: "HermesInternal", done: null };
+            } catch (tmp12) {
+              table = tmp;
+              throw tmp12;
             }
-            obj1 = v0(table[10]);
-            const obj2 = { type: "AUDIO_INPUT_DETECTED", inputDetected: null, lastUpdateTime: null };
-            obj2[1] = v0.inputDetected;
-            obj2[2] = v0.lastUpdateTime;
-            obj1.dispatch(obj2);
-            table = 3;
-            return { value: "HermesInternal", done: null };
-          } catch (tmp12) {
-            table = tmp;
-            throw tmp12;
           }
-        }
-      }));
+        }),
+      );
     };
     obj.mediaEngine = global;
     obj.mediaEngineStore = arg1;

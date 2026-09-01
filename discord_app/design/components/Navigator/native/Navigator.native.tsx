@@ -42,7 +42,10 @@ function NavigationStack(screens) {
   token = screens(onDidFocus[8]).useToken(onWillFocus(onDidFocus[5]).colors.NAVIGATOR_HEADER_TINT);
   const obj2 = screens(onDidFocus[8]);
   navigatorShouldCrossfade = screens(onDidFocus[6]).useNavigatorShouldCrossfade();
-  first = gestureResponseDistance(gestureDirection.useState(() => screens(onDidFocus[9]).createStackNavigator()), 1)[0];
+  first = gestureResponseDistance(
+    gestureDirection.useState(() => screens(onDidFocus[9]).createStackNavigator()),
+    1,
+  )[0];
   top = onWillFocus(onDidFocus[10])().top;
   let items = [onWillFocus, onDidFocus];
   closure_24 = gestureDirection.useCallback((arg0) => {
@@ -59,10 +62,10 @@ function NavigationStack(screens) {
             tmp(closure_0);
           }
         }
-      }
+      },
     };
   }, items);
-  let items1 = [navigatorShouldCrossfade, , , , , , , , , , , , , , , , , , , , , ];
+  let items1 = [navigatorShouldCrossfade, , , , , , , , , , , , , , , , , , , , ,];
   ({ navbar: arr2[1], headerLeftContainerStyle: arr2[2], headerRightContainerStyle: arr2[3] } = tmp);
   items1[4] = headerStyle;
   items1[5] = token;
@@ -98,16 +101,37 @@ function NavigationStack(screens) {
       if (navigatorShouldCrossfade) {
         str = "screen";
       }
-      let obj = { headerMode: str, headerStyle: items, headerTintColor: token, headerTitleStyle: styles.headerTitle, headerBackTitleStyle: styles.headerBackTitleStyle, headerTitleAllowFontScaling: false, headerBackImage: screens(onDidFocus[7]).renderBackImage, headerBackButtonDisplayMode: "minimal", headerTitleContainerStyle: items1, headerLeftContainerStyle: items2, headerRightContainerStyle: items3, headerTitle: null, gestureDirection: null, gestureResponseDistance: null, cardOverlayEnabled: null, cardShadowEnabled: null, cardStyle: null, headerBackTitle: null, headerTitleAlign: null, headerStatusBarHeight: null, cardStyleInterpolator: null, headerStyleInterpolator: null };
+      let obj = {
+        headerMode: str,
+        headerStyle: items,
+        headerTintColor: token,
+        headerTitleStyle: styles.headerTitle,
+        headerBackTitleStyle: styles.headerBackTitleStyle,
+        headerTitleAllowFontScaling: false,
+        headerBackImage: screens(onDidFocus[7]).renderBackImage,
+        headerBackButtonDisplayMode: "minimal",
+        headerTitleContainerStyle: items1,
+        headerLeftContainerStyle: items2,
+        headerRightContainerStyle: items3,
+        headerTitle: null,
+        gestureDirection: null,
+        gestureResponseDistance: null,
+        cardOverlayEnabled: null,
+        cardShadowEnabled: null,
+        cardStyle: null,
+        headerBackTitle: null,
+        headerTitleAlign: null,
+        headerStatusBarHeight: null,
+        cardStyleInterpolator: null,
+        headerStyleInterpolator: null,
+      };
       items = [closure_18.navbar, headerStyle];
       items1 = [{ maxWidth: "60%", alignItems: "center" }, headerTitleContainerStyle];
       items2 = [closure_18.headerLeftContainerStyle, headerLeftContainerStyle];
       items3 = [closure_18.headerRightContainerStyle, headerRightContainerStyle];
       let fn;
       if (hideTitle) {
-        fn = () => {
-
-        };
+        fn = () => {};
       }
       obj[11] = fn;
       obj[12] = gestureDirection;
@@ -164,7 +188,7 @@ function NavigationStack(screens) {
       obj[21] = fn3;
       return obj;
     }, items1),
-    children: null
+    children: null,
   };
   const obj3 = screens(onDidFocus[6]);
   const keys = onWillFocus(onDidFocus[12]).keys(screens);
@@ -176,9 +200,7 @@ function NavigationStack(screens) {
       fullscreen = null != obj.customNavbar;
     }
     if (hideTitle) {
-      obj.headerTitle = () => {
-
-      };
+      obj.headerTitle = () => {};
     }
     if (fullscreen) {
       obj.headerTransparent = true;
@@ -196,7 +218,7 @@ function NavigationStack(screens) {
         const merged = Object.assign(arg0);
         obj.viewStyle = closure_1_10;
         return cardOverlayEnabled(screens(onDidFocus[13]).NavigatorScreen, obj);
-      }
+      },
     };
     return cardOverlayEnabled(first.Screen, obj, name);
   });
@@ -209,18 +231,28 @@ function WrappedNavigationStack(arg0) {
   let navigationContainerRef;
   let obj = createStandardNavigationFactories;
   navigationContainerRef = obj.createNavigationContainerRef();
-  const first = callback(React.useState(() => {
-    let tmp2;
-    if (null != closure_0) {
-      const obj = { routes: null };
-      obj[0] = tmp;
-      tmp2 = obj;
-    }
-    return tmp2;
-  }), 1)[0];
+  const first = callback(
+    React.useState(() => {
+      let tmp2;
+      if (null != closure_0) {
+        const obj = { routes: null };
+        obj[0] = tmp;
+        tmp2 = obj;
+      }
+      return tmp2;
+    }),
+    1,
+  )[0];
   obj1 = useNavigationTheme;
   navigationTheme = obj1.useNavigationTheme(navigationContainerRef(4413)());
-  obj = { ref: navigationContainerRef, theme: navigationTheme, initialState: null, onReady: null, onStateChange: null, children: null };
+  obj = {
+    ref: navigationContainerRef,
+    theme: navigationTheme,
+    initialState: null,
+    onReady: null,
+    onStateChange: null,
+    children: null,
+  };
   if (null == initialRouteState) {
     let tmp7;
     if (null != first) {
@@ -247,11 +279,21 @@ createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOW;
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderBottomWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, shadowColor: "transparent" };
+createCacheKey[1] = {
+  borderBottomWidth: StyleSheet.hairlineWidth,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+  shadowColor: "transparent",
+};
 createCacheKey[2] = { paddingLeft: 16, marginRight: -16 };
 createCacheKey[3] = { paddingRight: 16, marginLeft: -16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderBottomWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, shadowColor: "transparent" };
+let obj1 = {
+  borderBottomWidth: StyleSheet.hairlineWidth,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+  shadowColor: "transparent",
+};
 let result = require("set").fileFinishedImporting("design/components/Navigator/native/Navigator.native.tsx");
 
 export const useNavigatorScreens = function useNavigatorScreens(getNextRenewalDateLabel, items) {

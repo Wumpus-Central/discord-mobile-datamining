@@ -75,7 +75,13 @@ function expandEventProperties(arg0) {
         obj[0] = source;
         obj1 = obj;
       } else {
-        obj1 = { source_page: null, source_section: null, source_object: null, source_object_type: null, source_promotion_id: null };
+        obj1 = {
+          source_page: null,
+          source_section: null,
+          source_object: null,
+          source_object_type: null,
+          source_promotion_id: null,
+        };
         ({ page: obj5[0], section: obj5[1], object: obj5[2], objectType: obj5[3], promotionId: obj5[4] } = source);
       }
       const merged1 = Object.assign(obj1);
@@ -90,7 +96,13 @@ function expandEventProperties(arg0) {
       obj3[0] = _location;
       let obj4 = obj3;
     } else {
-      obj4 = { location: null, location_page: null, location_section: null, location_object: null, location_object_type: null };
+      obj4 = {
+        location: null,
+        location_page: null,
+        location_section: null,
+        location_object: null,
+        location_object_type: null,
+      };
       ({ page: obj3[0], page: obj3[1], section: obj3[2], object: obj3[3], objectType: obj3[4] } = _location);
     }
     const merged3 = Object.assign(obj4);
@@ -126,7 +138,13 @@ function expandLocation(str) {
     let obj = { location: null };
     obj[0] = str;
   } else {
-    obj = { location: null, location_page: null, location_section: null, location_object: null, location_object_type: null };
+    obj = {
+      location: null,
+      location_page: null,
+      location_section: null,
+      location_object: null,
+      location_object_type: null,
+    };
     ({ page: obj2[0], page: obj2[1], section: obj2[2], object: obj2[3], objectType: obj2[4] } = str);
   }
   return obj;
@@ -154,7 +172,7 @@ obj = {
       const obj = { throttlePeriod: null, throttleKeys: null };
       obj[0] = c17;
       obj[1] = function throttleKeys(arg0) {
-        const items = [, , ];
+        const items = [, ,];
         ({ guild_id: arr[0], channel_id: arr[1], location_section: arr[2] } = arg0);
         return items;
       };
@@ -229,34 +247,34 @@ obj = {
   [AnalyticEvents.ACTIVITY_PANEL_SDK_LINK_VIEWED]: obj53,
   [AnalyticEvents.LIBDISCORE_SLOW_TIMERS]: obj54,
   [AnalyticEvents.VIDEO_STREAM_ZOOM_CHANGED]: obj55,
-  [AnalyticEvents.CACHE_STATS_RECORDED]: obj56
+  [AnalyticEvents.CACHE_STATS_RECORDED]: obj56,
 };
 obj = {
   throttlePeriod: 300000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 isBlockedDomain = {
   throttlePeriod: 120000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 obj2 = {
   throttlePeriod: 900000,
   throttleKeys(arg0) {
-    const items = [, ];
+    const items = [,];
     ({ guild_id: arr[0], is_pending: arr[1] } = arg0);
     return items;
-  }
+  },
 };
 obj3 = {
   throttlePeriod: 900000,
   throttleKeys(tab_opened) {
     const items = [tab_opened.tab_opened];
     return items;
-  }
+  },
 };
 function getAccessibilityFeatures() {
   return AccessibilityFeatureFlags.NONE;
@@ -266,269 +284,269 @@ obj10 = {
   throttleKeys(notif_type) {
     const items = [notif_type.notif_type];
     return items;
-  }
+  },
 };
 obj11 = {
   throttlePeriod: 900000,
   throttleKeys(channel_id) {
     const items = [channel_id.channel_id];
     return items;
-  }
+  },
 };
 obj12 = {
   throttlePeriod: 900000,
   throttleKeys(channel_id) {
     const items = [channel_id.channel_id];
     return items;
-  }
+  },
 };
 obj13 = {
   throttlePeriod: 900000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 obj14 = {
   throttlePeriod: 120000,
   throttleKeys(arg0) {
-    const items = [, ];
+    const items = [,];
     ({ shortcut_name: arr[0], location_object: arr[1], source_class_list } = arg0);
     if (source_class_list == null) {
       source_class_list = [];
     }
     HermesBuiltin.arraySpread(source_class_list, 2);
     return items;
-  }
+  },
 };
 obj15 = {
   throttlePeriod: 10000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 obj16 = {
   throttlePeriod: 900000,
   throttleKeys(type) {
     const items = [type.type];
     return items;
-  }
+  },
 };
 obj17 = {
   throttlePeriod: 120000,
   throttleKeys(arg0) {
-    const items = [, ];
+    const items = [,];
     ({ role_id: arr[0], tab_opened: arr[1] } = arg0);
     return items;
-  }
+  },
 };
 obj18 = {
   throttlePeriod: 300000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 obj19 = {
   throttlePeriod: 300000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 obj20 = {
   throttlePeriod: 900000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 obj21 = {
   throttlePeriod: 900000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 obj22 = {
   throttlePeriod: 86400000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 obj23 = {
   throttlePeriod: 86400000,
   throttleKeys(arg0) {
-    const items = [, ];
+    const items = [,];
     ({ application_id: arr[0], command: arr[1] } = arg0);
     return items;
   },
-  throttlePercent: 0.001
+  throttlePercent: 0.001,
 };
 obj24 = {
   throttlePeriod: 86400000,
   throttleKeys(arg0) {
-    const items = [, ];
+    const items = [,];
     ({ application_id: arr[0], event: arr[1] } = arg0);
     return items;
   },
-  throttlePercent: 0.001
+  throttlePercent: 0.001,
 };
 obj25 = {
   throttlePeriod: 86400000,
   throttleKeys(application_id) {
     const items = [application_id.application_id];
     return items;
-  }
+  },
 };
 obj26 = {
   throttlePeriod: 86400000,
   throttleKeys(arg0) {
-    const items = [, ];
+    const items = [,];
     ({ banner_type: arr[0], channel_id: arr[1] } = arg0);
     return items;
-  }
+  },
 };
 obj27 = {
   throttlePeriod: 86400000,
   throttleKeys(arg0) {
-    const items = [, ];
+    const items = [,];
     ({ channel_id: arr[0], banner_hash: arr[1] } = arg0);
     return items;
-  }
+  },
 };
 obj28 = {
   throttlePeriod: 86400000,
   throttleKeys(arg0) {
-    const items = [, ];
+    const items = [,];
     ({ channel_id: arr[0], media_session_id: arr[1] } = arg0);
     return items;
-  }
+  },
 };
 obj29 = {
   throttlePeriod: 60000,
   throttleKeys(type) {
     const items = [type.type];
     return items;
-  }
+  },
 };
 obj30 = {
   throttlePeriod: 60000,
   throttleKeys(arg0) {
-    const items = [, ];
+    const items = [,];
     ({ guild_id: arr[0], channel_id: arr[1] } = arg0);
     return items;
-  }
+  },
 };
 obj31 = {
   throttlePeriod: 900000,
   throttleKeys(arg0) {
-    const items = [, ];
+    const items = [,];
     ({ guild_id: arr[0], channel_id: arr[1] } = arg0);
     return items;
-  }
+  },
 };
 obj32 = {
   throttlePeriod: 60000,
   throttleKeys(user_id) {
     const items = [user_id.user_id];
     return items;
-  }
+  },
 };
 obj33 = {
   throttlePeriod: 60000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 obj34 = {
   throttlePeriod: 300000,
   throttleKeys(channel_id) {
     const items = [channel_id.channel_id];
     return items;
-  }
+  },
 };
 obj35 = {
   throttlePeriod: 900000,
   throttleKeys(arg0) {
-    const items = [, ];
+    const items = [,];
     ({ context: arr[0], guild_id: arr[1] } = arg0);
     return items;
-  }
+  },
 };
 obj36 = {
   throttlePeriod: 900000,
   throttleKeys(guild_id) {
     const items = [guild_id.guild_id];
     return items;
-  }
+  },
 };
 obj37 = {
   throttlePeriod: 900000,
   throttleKeys(channel_id) {
     const items = [channel_id.channel_id];
     return items;
-  }
+  },
 };
 obj38 = {
   throttlePeriod: 900000,
   throttleKeys(tab) {
     const items = [tab.tab];
     return items;
-  }
+  },
 };
 obj39 = {
   throttlePeriod: 900000,
   throttleKeys(guild_id) {
     const items = [guild_id.guild_id];
     return items;
-  }
+  },
 };
 obj4 = {
   throttlePeriod: 900000,
   throttleKeys(tab_opened) {
     const items = [tab_opened.tab_opened];
     return items;
-  }
+  },
 };
 obj40 = {
   throttlePeriod: 60000,
   throttleKeys(arg0) {
-    const items = [, ];
+    const items = [,];
     ({ guild_id: arr[0], channel_id: arr[1] } = arg0);
     return items;
-  }
+  },
 };
 obj41 = {
   throttlePeriod: 3600000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 obj42 = {
   throttlePeriod: 300000,
   throttleKeys(location_stack) {
     const items = [location_stack.location_stack];
     return items;
-  }
+  },
 };
 obj43 = {
   throttlePeriod: 300000,
   throttleKeys(location_stack) {
     const items = [location_stack.location_stack];
     return items;
-  }
+  },
 };
 obj44 = {
   throttlePeriod: 900000,
   throttleKeys(channel_id) {
     const items = [channel_id.channel_id];
     return items;
-  }
+  },
 };
 obj45 = {
   throttlePeriod: 300000,
   throttleKeys(arg0) {
-    const items = [, ];
+    const items = [,];
     ({ activity_user_id: arr[0], surface: arr[1] } = arg0);
     return items;
   },
-  deduplicate: true
+  deduplicate: true,
 };
 obj46 = {
   throttlePeriod: 300000,
@@ -536,89 +554,94 @@ obj46 = {
     const items = [voice_channel_id.voice_channel_id];
     return items;
   },
-  deduplicate: true
+  deduplicate: true,
 };
 obj47 = {
   throttlePeriod: 1000,
   throttleKeys(channel_id) {
     const items = [channel_id.channel_id];
     return items;
-  }
+  },
 };
 obj48 = {
   throttlePeriod: 900000,
   throttleKeys(arg0) {
-    const items = [, ];
+    const items = [,];
     ({ channel_id: arr[0], message_id: arr[1] } = arg0);
     return items;
-  }
+  },
 };
 obj49 = {
   throttlePeriod: 10000,
   throttleKeys(guild_id) {
     const items = [guild_id.guild_id];
     return items;
-  }
+  },
 };
 obj5 = {
   throttlePeriod: 900000,
   throttleKeys(server) {
     const items = [server.server];
     return items;
-  }
+  },
 };
 obj50 = {
   throttlePeriod: 43200000,
   throttleKeys(arg0) {
-    const items = [, , , ];
-    ({ os_enabled: arr[0], notification_authorization_status: arr[1], foreground_app_enabled: arr[2], background_app_enabled: arr[3] } = arg0);
+    const items = [, , ,];
+    ({
+      os_enabled: arr[0],
+      notification_authorization_status: arr[1],
+      foreground_app_enabled: arr[2],
+      background_app_enabled: arr[3],
+    } = arg0);
     return items;
-  }
+  },
 };
 obj51 = {
   throttlePeriod: 3600000,
   throttleKeys(search_type) {
     const items = [search_type.search_type];
     return items;
-  }
+  },
 };
 obj52 = {
   throttlePeriod: 86400000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 obj53 = {
   throttlePeriod: 86400000,
   throttleKeys(application_id) {
     const items = [application_id.application_id];
     return items;
-  }
+  },
 };
 obj54 = {
   throttlePeriod: 3600000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 obj55 = {
   throttlePeriod: 1000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 obj56 = {
   throttlePeriod: 900000,
   throttleKeys() {
     return [];
-  }
+  },
 };
 obj6 = {
   throttlePeriod: 900000,
   throttleKeys(server) {
     const items = [server.server];
     return items;
-  }
+  },
 };
 obj7 = {
   throttlePeriod: 60000,
@@ -626,34 +649,44 @@ obj7 = {
     const items = [application_id.application_id];
     return items;
   },
-  deduplicate: true
+  deduplicate: true,
 };
 obj8 = {
   throttlePeriod: 900000,
   throttleKeys(channel_static_route) {
     if (null != channel_static_route.channel_static_route) {
-      const items = [, , ];
+      const items = [, ,];
       ({ guild_id: arr2[0], channel_static_route: arr2[1], channel_view: arr2[2] } = channel_static_route);
       let items1 = items;
     } else {
-      items1 = [, ];
+      items1 = [,];
       ({ channel_id: arr[0], channel_view: arr[1] } = channel_static_route);
     }
     return items1;
-  }
+  },
 };
 obj9 = {
   throttlePeriod: 86400000,
   throttleKeys(channel_id) {
     const items = [channel_id.channel_id];
     return items;
-  }
+  },
 };
-let closure_22 = encodeProperties.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
+let closure_22 = encodeProperties.trackMaker({
+  addBreadcrumb,
+  analyticEventConfigs: obj,
+  dispatcher: dispatcherDefault,
+  TRACK_ACTION_NAME: "TRACK",
+});
 let c24 = false;
 let closure_25 = {};
 const obj57 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
-let closure_26 = encodeProperties.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
+let closure_26 = encodeProperties.trackMaker({
+  addBreadcrumb,
+  analyticEventConfigs: obj,
+  dispatcher: dispatcherDefault,
+  TRACK_ACTION_NAME: "TRACK",
+});
 const obj59 = {};
 let merged = Object.assign(importAllResult1);
 obj59.getCampaignParams = require("encodeProperties").getCampaignParams;
@@ -705,9 +738,7 @@ const result1 = require("set").fileFinishedImporting("utils/AnalyticsUtils.tsx")
 export default obj59;
 export const AnalyticsContext = context;
 export { launchSignature };
-export const addExtraAnalyticsDecorator = function addExtraAnalyticsDecorator(arg0) {
-
-};
+export const addExtraAnalyticsDecorator = function addExtraAnalyticsDecorator(arg0) {};
 export const AnalyticEventConfigs = obj;
 export { expandLocation };
 export function setUTMContext(arg0) {

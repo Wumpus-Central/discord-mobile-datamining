@@ -25,7 +25,20 @@ import { MediaEngineContextTypes } from "../../../discord_common/js/packages/med
 require = arg1;
 ({ AnalyticEvents: map1, MediaEngineHookTypes: closure_14, RTCConnectionStates: closure_15 } = ME);
 let closure_17 = 5 * setDefault.Millis.SECOND;
-let closure_18 = { DETACHED: 0, [0]: "DETACHED", WAITING: 1, [1]: "WAITING", ATTACHED: 2, [2]: "ATTACHED", STARTED: 3, [3]: "STARTED", PLAYING: 4, [4]: "PLAYING", SILENCE: 5, [5]: "SILENCE" };
+let closure_18 = {
+  DETACHED: 0,
+  [0]: "DETACHED",
+  WAITING: 1,
+  [1]: "WAITING",
+  ATTACHED: 2,
+  [2]: "ATTACHED",
+  STARTED: 3,
+  [3]: "STARTED",
+  PLAYING: 4,
+  [4]: "PLAYING",
+  SILENCE: 5,
+  [5]: "SILENCE",
+};
 getEventHistoryStringDefault;
 class StreamRTCConnection extends tmp3 {
   constructor(arg0) {
@@ -35,7 +48,17 @@ class StreamRTCConnection extends tmp3 {
     obj = require("isStreamKey");
     decodeStreamKeyResult = obj.decodeStreamKey(streamKey);
     guildId = decodeStreamKeyResult.guildId;
-    obj = { userId: null, sessionId: null, guildId: null, channelId: null, context: null, streamServerId: null, streamChannelId: null, parentMediaSessionId: null, joinVoiceId: null };
+    obj = {
+      userId: null,
+      sessionId: null,
+      guildId: null,
+      channelId: null,
+      context: null,
+      streamServerId: null,
+      streamChannelId: null,
+      parentMediaSessionId: null,
+      joinVoiceId: null,
+    };
     id = closure_6.getId();
     obj[0] = id;
     obj[1] = sessionId;
@@ -46,7 +69,22 @@ class StreamRTCConnection extends tmp3 {
     obj[5] = serverId;
     obj[6] = channelId;
     obj[7] = parentMediaSessionId;
-    tmp = new tmp(obj, tmp2, closure_6, id, sessionId, guildId, STREAM, serverId, channelId, new.target, tmp, new.target, closure_0, initialLayout);
+    tmp = new tmp(
+      obj,
+      tmp2,
+      closure_6,
+      id,
+      sessionId,
+      guildId,
+      STREAM,
+      serverId,
+      channelId,
+      new.target,
+      tmp,
+      new.target,
+      closure_0,
+      initialLayout,
+    );
     // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp;
     tmp5 = new require("traceEvent")();
@@ -65,7 +103,16 @@ class StreamRTCConnection extends tmp3 {
     tmp.updateVideoStreamId = obj4.debounce((streamId, rtcServerId) => {
       ({ guildId, channelId, ownerId } = tmp4(tmp3.streamKey));
       const tmp4Result = tmp4(tmp3.streamKey);
-      obj = { type: "RTC_CONNECTION_VIDEO", guildId, channelId, userId: ownerId, streamId, rtcServerId, mediaEngineConnectionId: obj.getMediaEngineConnectionId(), context: closure_1_16.STREAM };
+      obj = {
+        type: "RTC_CONNECTION_VIDEO",
+        guildId,
+        channelId,
+        userId: ownerId,
+        streamId,
+        rtcServerId,
+        mediaEngineConnectionId: obj.getMediaEngineConnectionId(),
+        context: closure_1_16.STREAM,
+      };
       closure_1_1(tmp2[19]).dispatch(obj);
       return tmp;
     }, 200);
@@ -94,7 +141,7 @@ Object.defineProperty(prototype, "isOwner", {
   get: function isOwner() {
     return store.getId() === this.streamContext.ownerId;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["streamUpdate"] = function streamUpdate(arg0) {
   const _videoQuality = this._videoQuality;
@@ -129,8 +176,20 @@ prototype["getVideoStats"] = function getVideoStats() {
         inboundStats = {};
       }
     }
-    ({ duration: obj3[0], avg_bitrate: obj3[1], avg_fps: obj3[2], avg_resolution: obj3[3], inbound_bitrate_estimate_percentile99: obj3[4] } = inboundStats);
-    return { duration: null, avg_bitrate: null, avg_fps: null, avg_resolution: null, inbound_bitrate_estimate_percentile99: null };
+    ({
+      duration: obj3[0],
+      avg_bitrate: obj3[1],
+      avg_fps: obj3[2],
+      avg_resolution: obj3[3],
+      inbound_bitrate_estimate_percentile99: obj3[4],
+    } = inboundStats);
+    return {
+      duration: null,
+      avg_bitrate: null,
+      avg_fps: null,
+      avg_resolution: null,
+      inbound_bitrate_estimate_percentile99: null,
+    };
   } else {
     return null;
   }
@@ -161,162 +220,247 @@ prototype["initializeEvents"] = function initializeEvents() {
     if (state === closure_1_15.RTC_CONNECTED) {
       const _connection8 = tmp4._connection;
       if (_connection8 != null) {
-        _connection8.on(callback(tmp[21]).BaseConnectionEvent.ScreenshareFinish, (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25) => {
-          closure_0 = arg0;
-          const store = arg1;
-          closure_2 = arg2;
-          closure_3 = arg3;
-          closure_4 = arg4;
-          closure_5 = arg5;
-          closure_6 = arg6;
-          closure_7 = arg7;
-          closure_8 = arg8;
-          closure_9 = arg9;
-          closure_10 = arg10;
-          closure_11 = arg11;
-          closure_12 = arg12;
-          closure_13 = arg13;
-          closure_14 = arg14;
-          closure_15 = arg15;
-          closure_16 = arg16;
-          closure_17 = arg17;
-          closure_18 = arg18;
-          closure_19 = arg19;
-          closure_20 = arg20;
-          closure_21 = arg21;
-          closure_22 = arg22;
-          closure_23 = arg23;
-          closure_24 = arg24;
-          closure_25 = arg25;
-          let analyticsContext = store.analyticsContext;
-          store.screenshareFinishedCount = store.screenshareFinishedCount + 1;
-          const streamApplicationFromHistory = analyticsContext.getStreamApplicationFromHistory(store.screenshareFinishedCount);
-          const runningGameAnalytics = closure_1_0(closure_1_2[22]).getRunningGameAnalytics(streamApplicationFromHistory);
-          ({ gameName: closure_26, gameId: closure_27, exe: closure_28, distributor: closure_29 } = runningGameAnalytics);
-          const mediaSessionId = store.getMediaSessionId();
-          const rTCConnectionId = store.getRTCConnectionId();
-          let obj = closure_1_0(closure_1_2[22]);
-          closure_1_4().then((arg0) => {
-            let tmp = null;
-            if (null != arg0) {
-              let obj = { cpu_brand: null, cpu_vendor: null, cpu_memory: null, gpu_brand: null, gpu_memory: null };
-              ({ cpu_brand: obj[0], cpu_vendor: obj[1], cpu_memory: obj[2], gpu_brand: obj[3], gpu_memory: obj[4] } = arg0);
-              tmp = obj;
-            }
-            obj = { screenshare_frames: closure_0, videohook_frames: closure_1, hybrid_dxgi_frames: closure_2, hybrid_gdi_frames: closure_3, hybrid_videohook_frames: closure_4, hybrid_graphics_capture_frames: closure_5, hybrid_capture_method_switches: closure_6, hybrid_gdi_bitblt_frames: closure_7, hybrid_gdi_printwindow_frames: closure_8, hybrid_graphics_capture_frames_unique: closure_9, hybrid_dxgi_frames_unique: closure_10, hybrid_videohook_frames_unique: closure_11, hybrid_gdi_bitblt_frames_unique: closure_12, hybrid_gdi_printwindow_frames_unique: closure_13, skip_history_json: closure_14, quartz_frames: closure_15, screencapturekit_frames: closure_19, go_live_camera_frames: closure_18, total_frames: null, total_frames_unique: null, desktop_capturer_type: null, media_session_id: null, rtc_connection_id: null, context: null, activity: null, soundshare_session: null, picker_type_used: null, duration: null, share_game_name: null, share_game_id: null, share_game_exe: null, share_game_distributor: null, hdr_frames_capable: null, hdr_frames: null, discord_is_elevated: null, target_window_elevated: null, pipewire_frames: null, x11_frames: null, videohook_backend: null };
-            let num = closure_0;
-            let num2 = closure_1;
-            let num3 = closure_2;
-            let num4 = closure_3;
-            let num5 = closure_4;
-            let num6 = closure_5;
-            let num7 = closure_9;
-            let num8 = closure_10;
-            let num9 = closure_11;
-            let num10 = closure_12;
-            let num11 = closure_13;
-            let num12 = closure_15;
-            let num13 = closure_19;
-            let num14 = closure_18;
-            if (closure_0 == null) {
-              num = 0;
-            }
-            if (num2 == null) {
-              num2 = 0;
-            }
-            const sum = num + num2;
-            if (num3 == null) {
-              num3 = 0;
-            }
-            const sum1 = sum + num3;
-            if (num4 == null) {
-              num4 = 0;
-            }
-            const sum2 = sum1 + num4;
-            if (num5 == null) {
-              num5 = 0;
-            }
-            const sum3 = sum2 + num5;
-            if (num6 == null) {
-              num6 = 0;
-            }
-            const sum4 = sum3 + num6;
-            if (num12 == null) {
-              num12 = 0;
-            }
-            const sum5 = sum4 + num12;
-            if (num13 == null) {
-              num13 = 0;
-            }
-            const sum6 = sum5 + num13;
-            if (num14 == null) {
-              num14 = 0;
-            }
-            let num15 = closure_24;
-            const sum7 = sum6 + num14;
-            if (closure_24 == null) {
-              num15 = 0;
-            }
-            let num16 = closure_23;
-            const sum8 = sum7 + num15;
-            if (closure_23 == null) {
-              num16 = 0;
-            }
-            obj[18] = sum8 + num16;
-            if (num7 == null) {
-              num7 = 0;
-            }
-            if (num8 == null) {
-              num8 = 0;
-            }
-            const sum9 = num7 + num8;
-            if (num9 == null) {
-              num9 = 0;
-            }
-            const sum10 = sum9 + num9;
-            if (num10 == null) {
-              num10 = 0;
-            }
-            const sum11 = sum10 + num10;
-            if (num11 == null) {
-              num11 = 0;
-            }
-            obj[19] = sum11 + num11;
-            obj[20] = closure_16;
-            obj[21] = closure_30;
-            obj[22] = closure_31;
-            obj[23] = closure_2_16.STREAM;
-            obj[24] = closure_17;
-            const soundshareStats = closure_1.soundshareStats;
-            obj[25] = soundshareStats.getStats().soundshare_last_session;
-            let str = "internal";
-            if (null != closure_1.analyticsContext.nativePickerStyleUsed) {
-              str = "native";
-            }
-            obj[26] = str;
-            const analyticsContext = closure_1.analyticsContext;
-            obj[27] = analyticsContext.getDuration();
-            obj[28] = closure_26;
-            obj[29] = closure_27;
-            obj[30] = closure_28;
-            obj[31] = closure_29;
-            obj[32] = closure_20;
-            obj[33] = closure_21;
-            const obj2 = closure_2_1(closure_2_2[23]);
-            const tmp12 = closure_24;
-            const tmp14 = closure_23;
-            const tmp18 = closure_1;
-            const tmp2 = closure_2_1;
-            const tmp3 = closure_2_2;
-            obj[34] = closure_2_1(closure_2_2[24]).getDiscordIsElevated();
-            obj[35] = closure_22;
-            obj[36] = tmp14;
-            obj[37] = tmp12;
-            obj[38] = closure_25;
-            const merged = Object.assign(tmp);
-            obj2.track(closure_2_13.SCREENSHARE_FINISHED, obj);
-          });
-        });
+        _connection8.on(
+          callback(tmp[21]).BaseConnectionEvent.ScreenshareFinish,
+          (
+            arg0,
+            arg1,
+            arg2,
+            arg3,
+            arg4,
+            arg5,
+            arg6,
+            arg7,
+            arg8,
+            arg9,
+            arg10,
+            arg11,
+            arg12,
+            arg13,
+            arg14,
+            arg15,
+            arg16,
+            arg17,
+            arg18,
+            arg19,
+            arg20,
+            arg21,
+            arg22,
+            arg23,
+            arg24,
+            arg25,
+          ) => {
+            closure_0 = arg0;
+            const store = arg1;
+            closure_2 = arg2;
+            closure_3 = arg3;
+            closure_4 = arg4;
+            closure_5 = arg5;
+            closure_6 = arg6;
+            closure_7 = arg7;
+            closure_8 = arg8;
+            closure_9 = arg9;
+            closure_10 = arg10;
+            closure_11 = arg11;
+            closure_12 = arg12;
+            closure_13 = arg13;
+            closure_14 = arg14;
+            closure_15 = arg15;
+            closure_16 = arg16;
+            closure_17 = arg17;
+            closure_18 = arg18;
+            closure_19 = arg19;
+            closure_20 = arg20;
+            closure_21 = arg21;
+            closure_22 = arg22;
+            closure_23 = arg23;
+            closure_24 = arg24;
+            closure_25 = arg25;
+            let analyticsContext = store.analyticsContext;
+            store.screenshareFinishedCount = store.screenshareFinishedCount + 1;
+            const streamApplicationFromHistory = analyticsContext.getStreamApplicationFromHistory(
+              store.screenshareFinishedCount,
+            );
+            const runningGameAnalytics = closure_1_0(closure_1_2[22]).getRunningGameAnalytics(
+              streamApplicationFromHistory,
+            );
+            ({
+              gameName: closure_26,
+              gameId: closure_27,
+              exe: closure_28,
+              distributor: closure_29,
+            } = runningGameAnalytics);
+            const mediaSessionId = store.getMediaSessionId();
+            const rTCConnectionId = store.getRTCConnectionId();
+            let obj = closure_1_0(closure_1_2[22]);
+            closure_1_4().then((arg0) => {
+              let tmp = null;
+              if (null != arg0) {
+                let obj = { cpu_brand: null, cpu_vendor: null, cpu_memory: null, gpu_brand: null, gpu_memory: null };
+                ({
+                  cpu_brand: obj[0],
+                  cpu_vendor: obj[1],
+                  cpu_memory: obj[2],
+                  gpu_brand: obj[3],
+                  gpu_memory: obj[4],
+                } = arg0);
+                tmp = obj;
+              }
+              obj = {
+                screenshare_frames: closure_0,
+                videohook_frames: closure_1,
+                hybrid_dxgi_frames: closure_2,
+                hybrid_gdi_frames: closure_3,
+                hybrid_videohook_frames: closure_4,
+                hybrid_graphics_capture_frames: closure_5,
+                hybrid_capture_method_switches: closure_6,
+                hybrid_gdi_bitblt_frames: closure_7,
+                hybrid_gdi_printwindow_frames: closure_8,
+                hybrid_graphics_capture_frames_unique: closure_9,
+                hybrid_dxgi_frames_unique: closure_10,
+                hybrid_videohook_frames_unique: closure_11,
+                hybrid_gdi_bitblt_frames_unique: closure_12,
+                hybrid_gdi_printwindow_frames_unique: closure_13,
+                skip_history_json: closure_14,
+                quartz_frames: closure_15,
+                screencapturekit_frames: closure_19,
+                go_live_camera_frames: closure_18,
+                total_frames: null,
+                total_frames_unique: null,
+                desktop_capturer_type: null,
+                media_session_id: null,
+                rtc_connection_id: null,
+                context: null,
+                activity: null,
+                soundshare_session: null,
+                picker_type_used: null,
+                duration: null,
+                share_game_name: null,
+                share_game_id: null,
+                share_game_exe: null,
+                share_game_distributor: null,
+                hdr_frames_capable: null,
+                hdr_frames: null,
+                discord_is_elevated: null,
+                target_window_elevated: null,
+                pipewire_frames: null,
+                x11_frames: null,
+                videohook_backend: null,
+              };
+              let num = closure_0;
+              let num2 = closure_1;
+              let num3 = closure_2;
+              let num4 = closure_3;
+              let num5 = closure_4;
+              let num6 = closure_5;
+              let num7 = closure_9;
+              let num8 = closure_10;
+              let num9 = closure_11;
+              let num10 = closure_12;
+              let num11 = closure_13;
+              let num12 = closure_15;
+              let num13 = closure_19;
+              let num14 = closure_18;
+              if (closure_0 == null) {
+                num = 0;
+              }
+              if (num2 == null) {
+                num2 = 0;
+              }
+              const sum = num + num2;
+              if (num3 == null) {
+                num3 = 0;
+              }
+              const sum1 = sum + num3;
+              if (num4 == null) {
+                num4 = 0;
+              }
+              const sum2 = sum1 + num4;
+              if (num5 == null) {
+                num5 = 0;
+              }
+              const sum3 = sum2 + num5;
+              if (num6 == null) {
+                num6 = 0;
+              }
+              const sum4 = sum3 + num6;
+              if (num12 == null) {
+                num12 = 0;
+              }
+              const sum5 = sum4 + num12;
+              if (num13 == null) {
+                num13 = 0;
+              }
+              const sum6 = sum5 + num13;
+              if (num14 == null) {
+                num14 = 0;
+              }
+              let num15 = closure_24;
+              const sum7 = sum6 + num14;
+              if (closure_24 == null) {
+                num15 = 0;
+              }
+              let num16 = closure_23;
+              const sum8 = sum7 + num15;
+              if (closure_23 == null) {
+                num16 = 0;
+              }
+              obj[18] = sum8 + num16;
+              if (num7 == null) {
+                num7 = 0;
+              }
+              if (num8 == null) {
+                num8 = 0;
+              }
+              const sum9 = num7 + num8;
+              if (num9 == null) {
+                num9 = 0;
+              }
+              const sum10 = sum9 + num9;
+              if (num10 == null) {
+                num10 = 0;
+              }
+              const sum11 = sum10 + num10;
+              if (num11 == null) {
+                num11 = 0;
+              }
+              obj[19] = sum11 + num11;
+              obj[20] = closure_16;
+              obj[21] = closure_30;
+              obj[22] = closure_31;
+              obj[23] = closure_2_16.STREAM;
+              obj[24] = closure_17;
+              const soundshareStats = closure_1.soundshareStats;
+              obj[25] = soundshareStats.getStats().soundshare_last_session;
+              let str = "internal";
+              if (null != closure_1.analyticsContext.nativePickerStyleUsed) {
+                str = "native";
+              }
+              obj[26] = str;
+              const analyticsContext = closure_1.analyticsContext;
+              obj[27] = analyticsContext.getDuration();
+              obj[28] = closure_26;
+              obj[29] = closure_27;
+              obj[30] = closure_28;
+              obj[31] = closure_29;
+              obj[32] = closure_20;
+              obj[33] = closure_21;
+              const obj2 = closure_2_1(closure_2_2[23]);
+              const tmp12 = closure_24;
+              const tmp14 = closure_23;
+              const tmp18 = closure_1;
+              const tmp2 = closure_2_1;
+              const tmp3 = closure_2_2;
+              obj[34] = closure_2_1(closure_2_2[24]).getDiscordIsElevated();
+              obj[35] = closure_22;
+              obj[36] = tmp14;
+              obj[37] = tmp12;
+              obj[38] = closure_25;
+              const merged = Object.assign(tmp);
+              obj2.track(closure_2_13.SCREENSHARE_FINISHED, obj);
+            });
+          },
+        );
       }
       const _connection = tmp4._connection;
       if (_connection != null) {
@@ -398,7 +542,10 @@ prototype["initializeEvents"] = function initializeEvents() {
           if ("soundshare_attach_requested" === type) {
             const errorTimer2 = obj.errorTimer;
             errorTimer2.start(closure_1_17, () => {
-              callback(table[19]).dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_FAILED", errorMessage: "Sound Hook Failed" });
+              callback(table[19]).dispatch({
+                type: "MEDIA_ENGINE_SOUNDSHARE_FAILED",
+                errorMessage: "Sound Hook Failed",
+              });
             });
           } else if ("soundshare_recv_failed" === type) {
             ({ reason, code, retry } = type);
@@ -439,8 +586,30 @@ prototype["initializeEvents"] = function initializeEvents() {
           if (!store._firstFrameDelivered) {
             obj._firstFrameDelivered = true;
             const streamAnalyticsProperties = obj.getStreamAnalyticsProperties();
-            obj = { guild_id: null, channel_id: null, rtc_connection_id: null, media_session_id: null, parent_media_session_id: null, num_viewers: null, time_connected_to_first_frame_delivered: null, time_total_to_first_frame: null, time_remote_user_to_video_stream_created: null, time_video_stream_created_to_video_data_received: null, time_video_data_received_to_video_source_delivered_frame: null, time_remote_user_to_mls_external_sender_updated: null, time_remote_user_to_secure_frame_remote_key_ratchet_set: null, time_remote_user_to_secure_frame_local_key_ratchet_set: null, time_remote_user_to_first_frame_decrypted: null };
-            ({ guild_id: obj3[0], channel_id: obj3[1], rtc_connection_id: obj3[2], media_session_id: obj3[3], parent_media_session_id: obj3[4] } = streamAnalyticsProperties);
+            obj = {
+              guild_id: null,
+              channel_id: null,
+              rtc_connection_id: null,
+              media_session_id: null,
+              parent_media_session_id: null,
+              num_viewers: null,
+              time_connected_to_first_frame_delivered: null,
+              time_total_to_first_frame: null,
+              time_remote_user_to_video_stream_created: null,
+              time_video_stream_created_to_video_data_received: null,
+              time_video_data_received_to_video_source_delivered_frame: null,
+              time_remote_user_to_mls_external_sender_updated: null,
+              time_remote_user_to_secure_frame_remote_key_ratchet_set: null,
+              time_remote_user_to_secure_frame_local_key_ratchet_set: null,
+              time_remote_user_to_first_frame_decrypted: null,
+            };
+            ({
+              guild_id: obj3[0],
+              channel_id: obj3[1],
+              rtc_connection_id: obj3[2],
+              media_session_id: obj3[3],
+              parent_media_session_id: obj3[4],
+            } = streamAnalyticsProperties);
             obj[5] = obj.analyticsContext.numViewers;
             obj[6] = obj.getDuration();
             const obj2 = closure_1_1(closure_1_2[23]);
@@ -451,7 +620,10 @@ prototype["initializeEvents"] = function initializeEvents() {
               NumberResult = null;
               if (undefined !== remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp) {
                 const _Number = Number;
-                NumberResult = Number(remoteVideoStreamCreatedTimestamp.remoteVideoStreamCreatedTimestamp - remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp);
+                NumberResult = Number(
+                  remoteVideoStreamCreatedTimestamp.remoteVideoStreamCreatedTimestamp -
+                    remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp,
+                );
               }
             }
             obj[8] = NumberResult;
@@ -460,7 +632,10 @@ prototype["initializeEvents"] = function initializeEvents() {
               NumberResult1 = null;
               if (undefined !== remoteVideoStreamCreatedTimestamp.remoteVideoStreamCreatedTimestamp) {
                 const _Number2 = Number;
-                NumberResult1 = Number(remoteVideoStreamCreatedTimestamp.videoDataReceivedTimestamp - remoteVideoStreamCreatedTimestamp.remoteVideoStreamCreatedTimestamp);
+                NumberResult1 = Number(
+                  remoteVideoStreamCreatedTimestamp.videoDataReceivedTimestamp -
+                    remoteVideoStreamCreatedTimestamp.remoteVideoStreamCreatedTimestamp,
+                );
               }
             }
             obj[9] = NumberResult1;
@@ -469,7 +644,10 @@ prototype["initializeEvents"] = function initializeEvents() {
               NumberResult2 = null;
               if (undefined !== remoteVideoStreamCreatedTimestamp.videoDataReceivedTimestamp) {
                 const _Number3 = Number;
-                NumberResult2 = Number(remoteVideoStreamCreatedTimestamp.videoSourceDeliveredFrameTimestamp - remoteVideoStreamCreatedTimestamp.videoDataReceivedTimestamp);
+                NumberResult2 = Number(
+                  remoteVideoStreamCreatedTimestamp.videoSourceDeliveredFrameTimestamp -
+                    remoteVideoStreamCreatedTimestamp.videoDataReceivedTimestamp,
+                );
               }
             }
             obj[10] = NumberResult2;
@@ -478,7 +656,10 @@ prototype["initializeEvents"] = function initializeEvents() {
               NumberResult3 = null;
               if (undefined !== remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp) {
                 const _Number4 = Number;
-                NumberResult3 = Number(remoteVideoStreamCreatedTimestamp.updateMLSExternalSenderTimestamp - remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp);
+                NumberResult3 = Number(
+                  remoteVideoStreamCreatedTimestamp.updateMLSExternalSenderTimestamp -
+                    remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp,
+                );
               }
             }
             obj[11] = NumberResult3;
@@ -487,7 +668,10 @@ prototype["initializeEvents"] = function initializeEvents() {
               NumberResult4 = null;
               if (undefined !== remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp) {
                 const _Number5 = Number;
-                NumberResult4 = Number(remoteVideoStreamCreatedTimestamp.setRemoteSecureFrameKeyRatchetTimestamp - remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp);
+                NumberResult4 = Number(
+                  remoteVideoStreamCreatedTimestamp.setRemoteSecureFrameKeyRatchetTimestamp -
+                    remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp,
+                );
               }
             }
             obj[12] = NumberResult4;
@@ -496,7 +680,10 @@ prototype["initializeEvents"] = function initializeEvents() {
               NumberResult5 = null;
               if (undefined !== remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp) {
                 const _Number6 = Number;
-                NumberResult5 = Number(remoteVideoStreamCreatedTimestamp.setLocalSecureFrameKeyRatchetTimestamp - remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp);
+                NumberResult5 = Number(
+                  remoteVideoStreamCreatedTimestamp.setLocalSecureFrameKeyRatchetTimestamp -
+                    remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp,
+                );
               }
             }
             obj[13] = NumberResult5;
@@ -505,7 +692,10 @@ prototype["initializeEvents"] = function initializeEvents() {
               NumberResult6 = null;
               if (undefined !== remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp) {
                 const _Number7 = Number;
-                NumberResult6 = Number(remoteVideoStreamCreatedTimestamp.firstFrameDecryptedTimestamp - remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp);
+                NumberResult6 = Number(
+                  remoteVideoStreamCreatedTimestamp.firstFrameDecryptedTimestamp -
+                    remoteVideoStreamCreatedTimestamp.remoteUserCreatedTimestamp,
+                );
               }
             }
             obj[14] = NumberResult6;
@@ -516,57 +706,86 @@ prototype["initializeEvents"] = function initializeEvents() {
       }
       const _connection6 = tmp4._connection;
       if (_connection6 != null) {
-        _connection6.on(callback(tmp[21]).BaseConnectionEvent.FirstFrameEncryptedStats, (videoReceiversSetTimestamp) => {
-          const streamAnalyticsProperties = store.getStreamAnalyticsProperties();
-          let obj = closure_1_1(closure_1_2[23]);
-          obj = { guild_id: streamAnalyticsProperties.guild_id, channel_id: streamAnalyticsProperties.channel_id, rtc_connection_id: streamAnalyticsProperties.rtc_connection_id, media_session_id: streamAnalyticsProperties.media_session_id, parent_media_session_id: streamAnalyticsProperties.parent_media_session_id, time_local_user_to_video_receivers_set: null, time_local_user_to_mls_external_sender_updated: null, time_local_user_to_secure_frame_remote_key_ratchet_set: null, time_local_user_to_secure_frame_local_key_ratchet_set: null, time_local_user_to_first_frame_encrypted: null };
-          let NumberResult = null;
-          if (undefined !== videoReceiversSetTimestamp.videoReceiversSetTimestamp) {
-            NumberResult = null;
-            if (undefined !== videoReceiversSetTimestamp.localUserCreatedTimestamp) {
-              const _Number = Number;
-              NumberResult = Number(videoReceiversSetTimestamp.videoReceiversSetTimestamp - videoReceiversSetTimestamp.localUserCreatedTimestamp);
+        _connection6.on(
+          callback(tmp[21]).BaseConnectionEvent.FirstFrameEncryptedStats,
+          (videoReceiversSetTimestamp) => {
+            const streamAnalyticsProperties = store.getStreamAnalyticsProperties();
+            let obj = closure_1_1(closure_1_2[23]);
+            obj = {
+              guild_id: streamAnalyticsProperties.guild_id,
+              channel_id: streamAnalyticsProperties.channel_id,
+              rtc_connection_id: streamAnalyticsProperties.rtc_connection_id,
+              media_session_id: streamAnalyticsProperties.media_session_id,
+              parent_media_session_id: streamAnalyticsProperties.parent_media_session_id,
+              time_local_user_to_video_receivers_set: null,
+              time_local_user_to_mls_external_sender_updated: null,
+              time_local_user_to_secure_frame_remote_key_ratchet_set: null,
+              time_local_user_to_secure_frame_local_key_ratchet_set: null,
+              time_local_user_to_first_frame_encrypted: null,
+            };
+            let NumberResult = null;
+            if (undefined !== videoReceiversSetTimestamp.videoReceiversSetTimestamp) {
+              NumberResult = null;
+              if (undefined !== videoReceiversSetTimestamp.localUserCreatedTimestamp) {
+                const _Number = Number;
+                NumberResult = Number(
+                  videoReceiversSetTimestamp.videoReceiversSetTimestamp -
+                    videoReceiversSetTimestamp.localUserCreatedTimestamp,
+                );
+              }
             }
-          }
-          obj[5] = NumberResult;
-          let NumberResult1 = null;
-          if (undefined !== videoReceiversSetTimestamp.updateMLSExternalSenderTimestamp) {
-            NumberResult1 = null;
-            if (undefined !== videoReceiversSetTimestamp.localUserCreatedTimestamp) {
-              const _Number2 = Number;
-              NumberResult1 = Number(videoReceiversSetTimestamp.updateMLSExternalSenderTimestamp - videoReceiversSetTimestamp.localUserCreatedTimestamp);
+            obj[5] = NumberResult;
+            let NumberResult1 = null;
+            if (undefined !== videoReceiversSetTimestamp.updateMLSExternalSenderTimestamp) {
+              NumberResult1 = null;
+              if (undefined !== videoReceiversSetTimestamp.localUserCreatedTimestamp) {
+                const _Number2 = Number;
+                NumberResult1 = Number(
+                  videoReceiversSetTimestamp.updateMLSExternalSenderTimestamp -
+                    videoReceiversSetTimestamp.localUserCreatedTimestamp,
+                );
+              }
             }
-          }
-          obj[6] = NumberResult1;
-          let NumberResult2 = null;
-          if (undefined !== videoReceiversSetTimestamp.setRemoteSecureFrameKeyRatchetTimestamp) {
-            NumberResult2 = null;
-            if (undefined !== videoReceiversSetTimestamp.localUserCreatedTimestamp) {
-              const _Number3 = Number;
-              NumberResult2 = Number(videoReceiversSetTimestamp.setRemoteSecureFrameKeyRatchetTimestamp - videoReceiversSetTimestamp.localUserCreatedTimestamp);
+            obj[6] = NumberResult1;
+            let NumberResult2 = null;
+            if (undefined !== videoReceiversSetTimestamp.setRemoteSecureFrameKeyRatchetTimestamp) {
+              NumberResult2 = null;
+              if (undefined !== videoReceiversSetTimestamp.localUserCreatedTimestamp) {
+                const _Number3 = Number;
+                NumberResult2 = Number(
+                  videoReceiversSetTimestamp.setRemoteSecureFrameKeyRatchetTimestamp -
+                    videoReceiversSetTimestamp.localUserCreatedTimestamp,
+                );
+              }
             }
-          }
-          obj[7] = NumberResult2;
-          let NumberResult3 = null;
-          if (undefined !== videoReceiversSetTimestamp.setLocalSecureFrameKeyRatchetTimestamp) {
-            NumberResult3 = null;
-            if (undefined !== videoReceiversSetTimestamp.localUserCreatedTimestamp) {
-              const _Number4 = Number;
-              NumberResult3 = Number(videoReceiversSetTimestamp.setLocalSecureFrameKeyRatchetTimestamp - videoReceiversSetTimestamp.localUserCreatedTimestamp);
+            obj[7] = NumberResult2;
+            let NumberResult3 = null;
+            if (undefined !== videoReceiversSetTimestamp.setLocalSecureFrameKeyRatchetTimestamp) {
+              NumberResult3 = null;
+              if (undefined !== videoReceiversSetTimestamp.localUserCreatedTimestamp) {
+                const _Number4 = Number;
+                NumberResult3 = Number(
+                  videoReceiversSetTimestamp.setLocalSecureFrameKeyRatchetTimestamp -
+                    videoReceiversSetTimestamp.localUserCreatedTimestamp,
+                );
+              }
             }
-          }
-          obj[8] = NumberResult3;
-          let NumberResult4 = null;
-          if (undefined !== videoReceiversSetTimestamp.firstFrameEncryptedTimestamp) {
-            NumberResult4 = null;
-            if (undefined !== videoReceiversSetTimestamp.localUserCreatedTimestamp) {
-              const _Number5 = Number;
-              NumberResult4 = Number(videoReceiversSetTimestamp.firstFrameEncryptedTimestamp - videoReceiversSetTimestamp.localUserCreatedTimestamp);
+            obj[8] = NumberResult3;
+            let NumberResult4 = null;
+            if (undefined !== videoReceiversSetTimestamp.firstFrameEncryptedTimestamp) {
+              NumberResult4 = null;
+              if (undefined !== videoReceiversSetTimestamp.localUserCreatedTimestamp) {
+                const _Number5 = Number;
+                NumberResult4 = Number(
+                  videoReceiversSetTimestamp.firstFrameEncryptedTimestamp -
+                    videoReceiversSetTimestamp.localUserCreatedTimestamp,
+                );
+              }
             }
-          }
-          obj[9] = NumberResult4;
-          obj.track(closure_1_13.STREAMER_FIRST_FRAME_ENCRYPTED, obj);
-        });
+            obj[9] = NumberResult4;
+            obj.track(closure_1_13.STREAMER_FIRST_FRAME_ENCRYPTED, obj);
+          },
+        );
       }
       const _connection7 = tmp4._connection;
       if (_connection7 != null) {
@@ -595,11 +814,22 @@ prototype["initializeEvents"] = function initializeEvents() {
       tmp6 = null == obj2.getMediaSessionId() || callback;
     }
   });
-  this.on(require("../../lib/RTCConnectionEvent.tsx").RTCConnectionEvent.VideoSourceQualityChanged, (guildId, channelId, senderUserId, maxResolution, maxFrameRate, context) => {
-    let obj = self(709);
-    obj = { type: "MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED", guildId, channelId, senderUserId, maxResolution, maxFrameRate, context };
-    obj.dispatch(obj);
-  });
+  this.on(
+    require("../../lib/RTCConnectionEvent.tsx").RTCConnectionEvent.VideoSourceQualityChanged,
+    (guildId, channelId, senderUserId, maxResolution, maxFrameRate, context) => {
+      let obj = self(709);
+      obj = {
+        type: "MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED",
+        guildId,
+        channelId,
+        senderUserId,
+        maxResolution,
+        maxFrameRate,
+        context,
+      };
+      obj.dispatch(obj);
+    },
+  );
   this.on(require("../../lib/RTCConnectionEvent.tsx").RTCConnectionEvent.SecureFramesUpdate, () => {
     self(709).dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
   });
@@ -651,7 +881,29 @@ prototype["getStreamAnalyticsProperties"] = function getStreamAnalyticsPropertie
   region = region.getRegion(hostname.getHostname());
   let obj = removeExecutablePathPrefix;
   const runningGameAnalytics = obj.getRunningGameAnalytics(streamApplication);
-  obj = { channel_id: this.channelId, rtc_connection_id: this.getRTCConnectionId(), media_session_id: this.getMediaSessionId(), parent_media_session_id: this.parentMediaSessionId, sender_user_id: ownerId, context: MediaEngineContextTypes.STREAM, guild_id: guildId, stream_region: streamRegion, stream_source_type: streamSourceType, guild_region: region, participant_type: null, share_application_name: null, share_application_id: null, share_application_executable: null, share_application_distributor: null, share_application_distributor_game_id: null, share_application_game_metadata: null, video_layout: null, client_event_source: null, voice_backend_version: null, rtc_worker_backend_version: null };
+  obj = {
+    channel_id: this.channelId,
+    rtc_connection_id: this.getRTCConnectionId(),
+    media_session_id: this.getMediaSessionId(),
+    parent_media_session_id: this.parentMediaSessionId,
+    sender_user_id: ownerId,
+    context: MediaEngineContextTypes.STREAM,
+    guild_id: guildId,
+    stream_region: streamRegion,
+    stream_source_type: streamSourceType,
+    guild_region: region,
+    participant_type: null,
+    share_application_name: null,
+    share_application_id: null,
+    share_application_executable: null,
+    share_application_distributor: null,
+    share_application_distributor_game_id: null,
+    share_application_game_metadata: null,
+    video_layout: null,
+    client_event_source: null,
+    voice_backend_version: null,
+    rtc_worker_backend_version: null,
+  };
   ({ gameName, gameId, exe, distributor, sku, gameMetadata } = runningGameAnalytics);
   let str = "receiver";
   if (this.isOwner) {
@@ -671,7 +923,10 @@ prototype["getStreamAnalyticsProperties"] = function getStreamAnalyticsPropertie
   return obj;
 };
 prototype["getSoundshareAnalyticsProperties"] = function getSoundshareAnalyticsProperties() {
-  return { rtc_connection_id: this.getRTCConnectionId(), soundshare_experimental: experimentalSoundshare.getExperimentalSoundshare() };
+  return {
+    rtc_connection_id: this.getRTCConnectionId(),
+    soundshare_experimental: experimentalSoundshare.getExperimentalSoundshare(),
+  };
 };
 prototype["trackVideoStartStats"] = function trackVideoStartStats() {
   const self = this;

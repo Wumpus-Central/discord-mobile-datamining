@@ -6,7 +6,8 @@ import GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID from "../global_discovery_apps
 import getAuthenticationPath from "../../../discord_common/js/shared/utils/PathUtils.tsx";
 
 const CollectibleShopTab = items2.CollectibleShopTab;
-({ ApplicationDirectoryProfileSections: closure_1, GlobalDiscoveryAppsSections: obj1 } = GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID);
+({ ApplicationDirectoryProfileSections: closure_1, GlobalDiscoveryAppsSections: obj1 } =
+  GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID);
 let c3 = "@me";
 const items = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"];
 const obj = {
@@ -220,7 +221,7 @@ const obj = {
   CONFERENCE_MODE_VOICE: null,
   QUEST_PREVIEW: null,
   QUEST_PREVIEW_TOOL_2: null,
-  ICYMI: "/icymi"
+  ICYMI: "/icymi",
 };
 let str = "/login";
 if (CONFERENCE_MODE_ENABLED.CONFERENCE_MODE_ENABLED) {
@@ -377,7 +378,15 @@ obj[103] = function BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(META_QUEST_WEB_RE
   }
   return "/billing/premium/manage?flow_type=" + META_QUEST_WEB_REDIRECT_CHECKOUT + str;
 };
-obj[104] = function BILLING_STANDALONE_CHECKOUT_PAGE(planId, isGift, loadId, paymentMethodType, deepLinkType, usePresetOffer, flowType) {
+obj[104] = function BILLING_STANDALONE_CHECKOUT_PAGE(
+  planId,
+  isGift,
+  loadId,
+  paymentMethodType,
+  deepLinkType,
+  usePresetOffer,
+  flowType,
+) {
   let str = "";
   let str2 = "";
   if (null != paymentMethodType) {
@@ -398,7 +407,18 @@ obj[104] = function BILLING_STANDALONE_CHECKOUT_PAGE(planId, isGift, loadId, pay
     const _HermesInternal4 = HermesInternal;
     str = "&flow_type=" + flowType;
   }
-  return "/billing/premium/subscribe?plan_id=" + planId + "&gift=" + isGift + "&load_id=" + loadId + str2 + combined + combined1 + str;
+  return (
+    "/billing/premium/subscribe?plan_id=" +
+    planId +
+    "&gift=" +
+    isGift +
+    "&load_id=" +
+    loadId +
+    str2 +
+    combined +
+    combined1 +
+    str
+  );
 };
 obj[105] = function BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(closure_1, prop, newAnalyticsLoadId, prop1) {
   let str = "";

@@ -44,7 +44,7 @@ function PersonalWidgetShowMoreButton() {
     },
     accessibilityRole: "button",
     accessibilityState: { expanded: isExpanded },
-    children: null
+    children: null,
   };
   const intl = tmp(1236).intl;
   let t = tmp(1236).t;
@@ -113,7 +113,7 @@ function CoverSection(section) {
   const tmp = callback3();
   const tmp2 = useWidgetImage(userId, section.image, disableInteraction);
   const source = tmp2.source;
-  const items = [tmp.coverContent, ];
+  const items = [tmp.coverContent];
   let prop = null;
   ({ showGifTag, canToggleAnimation, toggleAnimation } = tmp2);
   if (null != source) {
@@ -127,7 +127,7 @@ function CoverSection(section) {
     obj[3] = section.title;
     tmp6 = callback2(PersonalWidgetText, obj);
   }
-  const items1 = [tmp6, ];
+  const items1 = [tmp6];
   let tmp9 = null;
   if ("" !== section.subtitle) {
     obj = { variant: "text-sm/medium", color: "text-default", maxLines: 3, children: null };
@@ -144,7 +144,13 @@ function CoverSection(section) {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.coverContainer;
     if (canToggleAnimation) {
-      const obj3 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
+      const obj3 = {
+        style: null,
+        onPress: null,
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        children: null,
+      };
       obj3[0] = closure_6.absoluteFill;
       obj3[1] = toggleAnimation;
       const intl = tmp25(1236).intl;
@@ -164,7 +170,7 @@ function CoverSection(section) {
       obj5[1] = closure_6.absoluteFill;
       tmp24Result = tmp24(preloadDefault, obj5);
     }
-    const items2 = [tmp24Result, , , ];
+    const items2 = [tmp24Result, , ,];
     tmp24Result = null;
     if (null != source) {
       if ("" !== section.title) {
@@ -215,7 +221,7 @@ function FieldRow(field) {
       obj[0] = toggleAnimation;
       const intl = getSystemLocale.intl;
       obj[2] = intl.string(getSystemLocale.t.MxXgrL);
-      const items = [tmp3, ];
+      const items = [tmp3];
       let tmp13 = null;
       if (showGifTag) {
         obj1 = { style: null };
@@ -228,7 +234,7 @@ function FieldRow(field) {
       const tmp10 = closure_5;
     }
   }
-  const items1 = [tmp7Result, ];
+  const items1 = [tmp7Result];
   const obj2 = { style: tmp.fieldContent, children: null };
   let tmp16 = null;
   if ("" !== field.title) {
@@ -236,7 +242,7 @@ function FieldRow(field) {
     obj3[3] = field.title;
     tmp16 = callback2(PersonalWidgetText, obj3);
   }
-  const items2 = [tmp16, ];
+  const items2 = [tmp16];
   let tmp19 = null;
   if ("" !== field.description) {
     const obj4 = { variant: "text-xs/medium", color: "text-subtle", maxLines: 4, children: null };
@@ -256,7 +262,9 @@ function FieldsSection(arg0) {
     const obj = { style: null, children: null };
     obj[0] = tmp.fieldsContainer;
     const fields = section.fields;
-    obj[1] = fields.map((field) => closure_1_10(closure_1_20, { userId: closure_0, field, disableInteraction: closure_1 }, field.key));
+    obj[1] = fields.map((field) =>
+      closure_1_10(closure_1_20, { userId: closure_0, field, disableInteraction: closure_1 }, field.key),
+    );
     tmp2 = callback2(closure_7, obj);
   }
   return tmp2;
@@ -307,7 +315,6 @@ function UserProfilePersonalWidgetCardContent(style) {
         return null;
       }
     }),
-
   ];
   tmp4Result = null;
   if (!disableInteraction) {
@@ -323,7 +330,18 @@ function UserProfilePersonalWidgetCardContent(style) {
 let closure_12 = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.5)", "#000"];
 let closure_13 = [0, 0.4, 1];
 let closure_14 = { top: 8, bottom: 8, left: 8, right: 8 };
-createCacheKey = { coverContainer: null, coverContent: null, coverContentWithImage: null, sectionsContainer: null, fieldsContainer: null, fieldRow: null, fieldImage: null, fieldContent: null, gifTag: null, gifTagSmall: null };
+createCacheKey = {
+  coverContainer: null,
+  coverContent: null,
+  coverContentWithImage: null,
+  sectionsContainer: null,
+  fieldsContainer: null,
+  fieldRow: null,
+  fieldImage: null,
+  fieldContent: null,
+  gifTag: null,
+  gifTagSmall: null,
+};
 createCacheKey = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { gap: ThemesDefault.space.PX_4 };
@@ -336,9 +354,17 @@ createCacheKey[4] = { gap: ThemesDefault.space.PX_12 };
 let obj4 = { gap: ThemesDefault.space.PX_12 };
 createCacheKey[5] = { flexDirection: "row", alignItems: "flex-start", gap: ThemesDefault.space.PX_12 };
 let obj5 = { flexDirection: "row", alignItems: "flex-start", gap: ThemesDefault.space.PX_12 };
-createCacheKey[6] = { width: ThemesDefault.space.PX_48, height: ThemesDefault.space.PX_48, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[6] = {
+  width: ThemesDefault.space.PX_48,
+  height: ThemesDefault.space.PX_48,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[7] = { flex: 1 };
-let obj6 = { width: ThemesDefault.space.PX_48, height: ThemesDefault.space.PX_48, borderRadius: ThemesDefault.radii.sm };
+let obj6 = {
+  width: ThemesDefault.space.PX_48,
+  height: ThemesDefault.space.PX_48,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[8] = { position: "absolute", top: ThemesDefault.space.PX_8, left: ThemesDefault.space.PX_8 };
 let obj7 = { position: "absolute", top: ThemesDefault.space.PX_8, left: ThemesDefault.space.PX_8 };
 createCacheKey[9] = { position: "absolute", top: ThemesDefault.space.PX_4, left: ThemesDefault.space.PX_4 };
@@ -352,4 +378,4 @@ export default function UserProfilePersonalWidgetCard(arg0) {
   const merged = Object.assign(arg0);
   obj[0] = callback2(UserProfilePersonalWidgetCardContent, obj);
   return callback2(PersonalWidgetExpandCollapseProvider.PersonalWidgetExpandCollapseProvider, obj);
-};
+}

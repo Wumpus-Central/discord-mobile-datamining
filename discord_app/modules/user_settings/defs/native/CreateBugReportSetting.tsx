@@ -33,7 +33,7 @@ createToggle = {
   useDescription: function useCreateBugReportSettingDescription() {
     return "Photo permission is required";
   },
-  usePredicate: require("useBugReporterExperimentSettingPredicate").useBugReporterExperimentSettingPredicate
+  usePredicate: require("useBugReporterExperimentSettingPredicate").useBugReporterExperimentSettingPredicate,
 };
 createToggle = createToggle.createToggle(createToggle);
 let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/CreateBugReportSetting.tsx");

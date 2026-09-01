@@ -15,8 +15,7 @@ function handleConnectionOpen() {
 }
 let obj = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class CollapsedVoiceChannelStore extends PersistedStore {
-}
+class CollapsedVoiceChannelStore extends PersistedStore {}
 const prototype = CollapsedVoiceChannelStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let tmp = arg0;
@@ -49,7 +48,7 @@ obj = {
     }
     obj = {};
     const merged = Object.assign(obj);
-  }
+  },
 };
 const collapsedVoiceChannelStore = new CollapsedVoiceChannelStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("stores/CollapsedVoiceChannelStore.tsx");

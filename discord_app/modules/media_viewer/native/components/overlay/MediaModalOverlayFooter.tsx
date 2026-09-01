@@ -8,7 +8,13 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { drawerContainer: { overflow: "hidden", backgroundColor: "dispatch" }, drawerHeaderTab: null, drawerHeader: null, messagePreviewContainer: null, thumbnailsContainer: null };
+createCacheKey = {
+  drawerContainer: { overflow: "hidden", backgroundColor: "dispatch" },
+  drawerHeaderTab: null,
+  drawerHeader: null,
+  messagePreviewContainer: null,
+  thumbnailsContainer: null,
+};
 createCacheKey = { width: 40, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_600 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { backgroundColor: "r" };
@@ -21,23 +27,57 @@ function clamp(arg0, arg1, arg2) {
 }
 clamp.__closure = {};
 clamp.__workletHash = 10219548303807;
-clamp.__initData = { code: "function clamp_MediaModalOverlayFooterTsx1(value,min,max){return Math.max(Math.min(value,max),min);}" };
-let closure_11 = { code: "function MediaModalOverlayFooterTsx2(){const{animationState,NONE,isCollapsed}=this.__closure;animationState.set(NONE);isCollapsed.set(false);}" };
-let closure_12 = { code: "function MediaModalOverlayFooterTsx3(){const{animationState,NONE,isCollapsed}=this.__closure;animationState.set(NONE);isCollapsed.set(true);}" };
-let closure_13 = { code: "function MediaModalOverlayFooterTsx4(){const{minFooterHeight,animationState,DRAWER_PANNING,animationDriver,COLLAPSED,interpolate,EXPANDED,EXPANDED_MORE,expandedHeight,MAX_DRAWER_VERTICAL_DRAG}=this.__closure;return{height:minFooterHeight>0&&(animationState.get()===DRAWER_PANNING||animationDriver.get()!==COLLAPSED)?interpolate(animationDriver.get(),[COLLAPSED,EXPANDED,EXPANDED_MORE],[minFooterHeight,Math.max(expandedHeight,minFooterHeight),Math.max(expandedHeight,minFooterHeight)+MAX_DRAWER_VERTICAL_DRAG],'clamp'):undefined,justifyContent:'flex-start'};}" };
-let closure_14 = { code: "function MediaModalOverlayFooterTsx5(){const{interpolate,animationDriver,COLLAPSED,EXPANDED,thumbnailsElementHeight}=this.__closure;return{opacity:interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[1,0],'clamp'),height:interpolate(animationDriver.get(),[EXPANDED,COLLAPSED],[0,thumbnailsElementHeight],'clamp')};}" };
-let closure_15 = { code: "function MediaModalOverlayFooterTsx6(){const{interpolate,animationDriver,COLLAPSED,EXPANDED}=this.__closure;return{height:interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[0,24],'clamp')};}" };
-let closure_16 = { code: "function MediaModalOverlayFooterTsx7(){const{r,g,b,interpolate,animationDriver,COLLAPSED,EXPANDED,a,DISMISSED}=this.__closure;return{backgroundColor:\"rgba(\"+r+\", \"+g+\", \"+b+\", \"+interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[a,1],'clamp')+\")\",paddingVertical:interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[8,0],'clamp'),transform:[{translateY:interpolate(animationDriver.get(),[DISMISSED,COLLAPSED],[100,0],'clamp')}]};}" };
-let closure_17 = { code: "function MediaModalOverlayFooterTsx8(){const{runOnJS,onFullViewToggled}=this.__closure;runOnJS(onFullViewToggled)();}" };
-let closure_18 = { code: "function MediaModalOverlayFooterTsx9(){const{full,animationDriver,withTiming,DISMISSED,STANDARD_EASING,COLLAPSED,runOnJS,onFullViewToggled}=this.__closure;if(!full){animationDriver.set(withTiming(DISMISSED,{duration:350,easing:STANDARD_EASING},'respect-motion-settings',function(){animationDriver.set(COLLAPSED);}));}else{runOnJS(onFullViewToggled)();}}" };
-let closure_19 = { code: "function MediaModalOverlayFooterTsx10(){const{animationDriver,COLLAPSED}=this.__closure;animationDriver.set(COLLAPSED);}" };
-let closure_20 = { code: "function MediaModalOverlayFooterTsx11(){const{animationDriver,COLLAPSE_DRAWER_ON_RELEASE,runOnJS,setFull,isCollapsed,COLLAPSED,animationState,withDelay,withTiming,NONE,STANDARD_EASING,EXPANDED}=this.__closure;if(animationDriver.get()<COLLAPSE_DRAWER_ON_RELEASE){runOnJS(setFull)(false);isCollapsed.set(true);if(animationDriver.get()===COLLAPSED){animationState.set(withDelay(150,withTiming(NONE,{duration:0})));}else{animationDriver.set(withTiming(COLLAPSED,{duration:150,easing:STANDARD_EASING},'respect-motion-settings',function(){animationState.set(NONE);}));}}else{runOnJS(setFull)(true);animationDriver.set(withTiming(EXPANDED,{duration:150,easing:STANDARD_EASING},'respect-motion-settings',function(){isCollapsed.set(false);animationState.set(NONE);}));}}" };
-let closure_21 = { code: "function MediaModalOverlayFooterTsx12({translationY:translationY}){const{animationState,DRAWER_PANNING,clamp,expandedHeight,thumbnailsElementHeight,collapsedHeight,COLLAPSED,EXPANDED,animationDriver,COLLAPSE_DRAWER_DURING_DRAG,runOnJS,setFull,DRAWER_VERTICAL_DRAG_RESISTANCE,MAX_DRAWER_VERTICAL_DRAG,EXPANDED_MORE}=this.__closure;animationState.set(DRAWER_PANNING);if(translationY>0){const animValue=clamp(1-translationY/Math.abs(expandedHeight-(thumbnailsElementHeight+collapsedHeight)),COLLAPSED,EXPANDED);animationDriver.set(animValue);if(animValue<COLLAPSE_DRAWER_DURING_DRAG){runOnJS(setFull)(false);}}else{const scrollAmount=clamp(-translationY/DRAWER_VERTICAL_DRAG_RESISTANCE,0,MAX_DRAWER_VERTICAL_DRAG);animationDriver.set(EXPANDED+(EXPANDED_MORE-EXPANDED)*scrollAmount/MAX_DRAWER_VERTICAL_DRAG);}}" };
-let closure_22 = { code: "function MediaModalOverlayFooterTsx13(){const{animationState,NONE}=this.__closure;animationState.set(NONE);}" };
-let closure_23 = { code: "function MediaModalOverlayFooterTsx14(){const{isCollapsed,animationState,NONE}=this.__closure;isCollapsed.set(false);animationState.set(NONE);}" };
-let closure_24 = { code: "function MediaModalOverlayFooterTsx15(){const{overlayEnabled,animationDriver}=this.__closure;return[overlayEnabled.get(),animationDriver.get()];}" };
-let closure_25 = { code: "function MediaModalOverlayFooterTsx16([overlayEnabledValue,animationDriverValue]){const{DISMISSED_HIDE_OVERLAY,overlayEnabled}=this.__closure;if(overlayEnabledValue&&animationDriverValue<DISMISSED_HIDE_OVERLAY){overlayEnabled.set(false);}}" };
-let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayFooter.tsx");
+clamp.__initData = {
+  code: "function clamp_MediaModalOverlayFooterTsx1(value,min,max){return Math.max(Math.min(value,max),min);}",
+};
+let closure_11 = {
+  code: "function MediaModalOverlayFooterTsx2(){const{animationState,NONE,isCollapsed}=this.__closure;animationState.set(NONE);isCollapsed.set(false);}",
+};
+let closure_12 = {
+  code: "function MediaModalOverlayFooterTsx3(){const{animationState,NONE,isCollapsed}=this.__closure;animationState.set(NONE);isCollapsed.set(true);}",
+};
+let closure_13 = {
+  code: "function MediaModalOverlayFooterTsx4(){const{minFooterHeight,animationState,DRAWER_PANNING,animationDriver,COLLAPSED,interpolate,EXPANDED,EXPANDED_MORE,expandedHeight,MAX_DRAWER_VERTICAL_DRAG}=this.__closure;return{height:minFooterHeight>0&&(animationState.get()===DRAWER_PANNING||animationDriver.get()!==COLLAPSED)?interpolate(animationDriver.get(),[COLLAPSED,EXPANDED,EXPANDED_MORE],[minFooterHeight,Math.max(expandedHeight,minFooterHeight),Math.max(expandedHeight,minFooterHeight)+MAX_DRAWER_VERTICAL_DRAG],'clamp'):undefined,justifyContent:'flex-start'};}",
+};
+let closure_14 = {
+  code: "function MediaModalOverlayFooterTsx5(){const{interpolate,animationDriver,COLLAPSED,EXPANDED,thumbnailsElementHeight}=this.__closure;return{opacity:interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[1,0],'clamp'),height:interpolate(animationDriver.get(),[EXPANDED,COLLAPSED],[0,thumbnailsElementHeight],'clamp')};}",
+};
+let closure_15 = {
+  code: "function MediaModalOverlayFooterTsx6(){const{interpolate,animationDriver,COLLAPSED,EXPANDED}=this.__closure;return{height:interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[0,24],'clamp')};}",
+};
+let closure_16 = {
+  code: 'function MediaModalOverlayFooterTsx7(){const{r,g,b,interpolate,animationDriver,COLLAPSED,EXPANDED,a,DISMISSED}=this.__closure;return{backgroundColor:"rgba("+r+", "+g+", "+b+", "+interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[a,1],\'clamp\')+")",paddingVertical:interpolate(animationDriver.get(),[COLLAPSED,EXPANDED],[8,0],\'clamp\'),transform:[{translateY:interpolate(animationDriver.get(),[DISMISSED,COLLAPSED],[100,0],\'clamp\')}]};}',
+};
+let closure_17 = {
+  code: "function MediaModalOverlayFooterTsx8(){const{runOnJS,onFullViewToggled}=this.__closure;runOnJS(onFullViewToggled)();}",
+};
+let closure_18 = {
+  code: "function MediaModalOverlayFooterTsx9(){const{full,animationDriver,withTiming,DISMISSED,STANDARD_EASING,COLLAPSED,runOnJS,onFullViewToggled}=this.__closure;if(!full){animationDriver.set(withTiming(DISMISSED,{duration:350,easing:STANDARD_EASING},'respect-motion-settings',function(){animationDriver.set(COLLAPSED);}));}else{runOnJS(onFullViewToggled)();}}",
+};
+let closure_19 = {
+  code: "function MediaModalOverlayFooterTsx10(){const{animationDriver,COLLAPSED}=this.__closure;animationDriver.set(COLLAPSED);}",
+};
+let closure_20 = {
+  code: "function MediaModalOverlayFooterTsx11(){const{animationDriver,COLLAPSE_DRAWER_ON_RELEASE,runOnJS,setFull,isCollapsed,COLLAPSED,animationState,withDelay,withTiming,NONE,STANDARD_EASING,EXPANDED}=this.__closure;if(animationDriver.get()<COLLAPSE_DRAWER_ON_RELEASE){runOnJS(setFull)(false);isCollapsed.set(true);if(animationDriver.get()===COLLAPSED){animationState.set(withDelay(150,withTiming(NONE,{duration:0})));}else{animationDriver.set(withTiming(COLLAPSED,{duration:150,easing:STANDARD_EASING},'respect-motion-settings',function(){animationState.set(NONE);}));}}else{runOnJS(setFull)(true);animationDriver.set(withTiming(EXPANDED,{duration:150,easing:STANDARD_EASING},'respect-motion-settings',function(){isCollapsed.set(false);animationState.set(NONE);}));}}",
+};
+let closure_21 = {
+  code: "function MediaModalOverlayFooterTsx12({translationY:translationY}){const{animationState,DRAWER_PANNING,clamp,expandedHeight,thumbnailsElementHeight,collapsedHeight,COLLAPSED,EXPANDED,animationDriver,COLLAPSE_DRAWER_DURING_DRAG,runOnJS,setFull,DRAWER_VERTICAL_DRAG_RESISTANCE,MAX_DRAWER_VERTICAL_DRAG,EXPANDED_MORE}=this.__closure;animationState.set(DRAWER_PANNING);if(translationY>0){const animValue=clamp(1-translationY/Math.abs(expandedHeight-(thumbnailsElementHeight+collapsedHeight)),COLLAPSED,EXPANDED);animationDriver.set(animValue);if(animValue<COLLAPSE_DRAWER_DURING_DRAG){runOnJS(setFull)(false);}}else{const scrollAmount=clamp(-translationY/DRAWER_VERTICAL_DRAG_RESISTANCE,0,MAX_DRAWER_VERTICAL_DRAG);animationDriver.set(EXPANDED+(EXPANDED_MORE-EXPANDED)*scrollAmount/MAX_DRAWER_VERTICAL_DRAG);}}",
+};
+let closure_22 = {
+  code: "function MediaModalOverlayFooterTsx13(){const{animationState,NONE}=this.__closure;animationState.set(NONE);}",
+};
+let closure_23 = {
+  code: "function MediaModalOverlayFooterTsx14(){const{isCollapsed,animationState,NONE}=this.__closure;isCollapsed.set(false);animationState.set(NONE);}",
+};
+let closure_24 = {
+  code: "function MediaModalOverlayFooterTsx15(){const{overlayEnabled,animationDriver}=this.__closure;return[overlayEnabled.get(),animationDriver.get()];}",
+};
+let closure_25 = {
+  code: "function MediaModalOverlayFooterTsx16([overlayEnabledValue,animationDriverValue]){const{DISMISSED_HIDE_OVERLAY,overlayEnabled}=this.__closure;if(overlayEnabledValue&&animationDriverValue<DISMISSED_HIDE_OVERLAY){overlayEnabled.set(false);}}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/media_viewer/native/components/overlay/MediaModalOverlayFooter.tsx",
+);
 
 export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelId) {
   let tmp = first1();
@@ -145,7 +185,7 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
       if (2 === sharedValue1.get()) {
         const obj = onFullViewToggled(num[6]);
         const value = sharedValue2.get();
-        const items = [tmp, , ];
+        const items = [tmp, ,];
         const _Math = Math;
         items[1] = Math.max(first2, tmp);
         const _Math2 = Math;
@@ -155,20 +195,40 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
     }
     return { height, justifyContent: "flex-start" };
   }
-  obj = { minFooterHeight: first3, animationState: sharedValue1, DRAWER_PANNING: 2, animationDriver: sharedValue2, COLLAPSED: 0, interpolate: onFullViewToggled(num[6]).interpolate, EXPANDED: 1, EXPANDED_MORE: 2, expandedHeight: first2, MAX_DRAWER_VERTICAL_DRAG: 40 };
+  obj = {
+    minFooterHeight: first3,
+    animationState: sharedValue1,
+    DRAWER_PANNING: 2,
+    animationDriver: sharedValue2,
+    COLLAPSED: 0,
+    interpolate: onFullViewToggled(num[6]).interpolate,
+    EXPANDED: 1,
+    EXPANDED_MORE: 2,
+    expandedHeight: first2,
+    MAX_DRAWER_VERTICAL_DRAG: 40,
+  };
   ee.__closure = obj;
   ee.__workletHash = 10727625692479;
   ee.__initData = closure_13;
   const animatedStyle = obj3.useAnimatedStyle(ee);
   let obj5 = onFullViewToggled(num[6]);
   function te() {
-    const obj = { opacity: onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [0, 1], [1, 0], "clamp"), height: null };
+    const obj = {
+      opacity: onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [0, 1], [1, 0], "clamp"),
+      height: null,
+    };
     const obj2 = onFullViewToggled(num[6]);
     const items = [0, num2];
     obj[1] = onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [1, 0], items, "clamp");
     return obj;
   }
-  obj = { interpolate: onFullViewToggled(num[6]).interpolate, animationDriver: sharedValue2, COLLAPSED: 0, EXPANDED: 1, thumbnailsElementHeight: num2 };
+  obj = {
+    interpolate: onFullViewToggled(num[6]).interpolate,
+    animationDriver: sharedValue2,
+    COLLAPSED: 0,
+    EXPANDED: 1,
+    thumbnailsElementHeight: num2,
+  };
   te.__closure = obj;
   te.__workletHash = 9896169174287;
   te.__initData = sharedValue2;
@@ -192,7 +252,12 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
     const obj = { height: onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [0, 1], [0, 24], "clamp") };
     return obj;
   }
-  obj1 = { interpolate: onFullViewToggled(num[6]).interpolate, animationDriver: sharedValue2, COLLAPSED: 0, EXPANDED: 1 };
+  obj1 = {
+    interpolate: onFullViewToggled(num[6]).interpolate,
+    animationDriver: sharedValue2,
+    COLLAPSED: 0,
+    EXPANDED: 1,
+  };
   ae.__closure = obj1;
   ae.__workletHash = 13288648164744;
   ae.__initData = callback;
@@ -209,7 +274,20 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
   closure_21 = a;
   let obj9 = onFullViewToggled(num[6]);
   function ie() {
-    let obj = { backgroundColor: "rgba(" + closure_18 + ", " + closure_19 + ", " + closure_20 + ", " + onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [0, 1], items, "clamp") + ")", paddingVertical: null, transform: null };
+    let obj = {
+      backgroundColor:
+        "rgba(" +
+        closure_18 +
+        ", " +
+        closure_19 +
+        ", " +
+        closure_20 +
+        ", " +
+        onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [0, 1], items, "clamp") +
+        ")",
+      paddingVertical: null,
+      transform: null,
+    };
     items = [closure_21, 1];
     const obj2 = onFullViewToggled(num[6]);
     obj[1] = onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [0, 1], [8, 0], "clamp");
@@ -220,7 +298,17 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
     obj[2] = items1;
     return obj;
   }
-  obj2 = { r, g, b, interpolate: onFullViewToggled(num[6]).interpolate, animationDriver: sharedValue2, COLLAPSED: 0, EXPANDED: 1, a, DISMISSED: -1 };
+  obj2 = {
+    r,
+    g,
+    b,
+    interpolate: onFullViewToggled(num[6]).interpolate,
+    animationDriver: sharedValue2,
+    COLLAPSED: 0,
+    EXPANDED: 1,
+    a,
+    DISMISSED: -1,
+  };
   ie.__closure = obj2;
   ie.__workletHash = 1645059598385;
   ie.__initData = callback1;
@@ -272,10 +360,28 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
       }
     };
     const directionResult = Gesture.Fling().direction(onFullViewToggled(num[11]).Directions.DOWN);
-    fn.__closure = { full: first, animationDriver: sharedValue2, withTiming: onFullViewToggled(num[8]).withTiming, DISMISSED: -1, STANDARD_EASING: onFullViewToggled(num[9]).STANDARD_EASING, COLLAPSED: 0, runOnJS: onFullViewToggled(num[6]).runOnJS, onFullViewToggled: callback2 };
+    fn.__closure = {
+      full: first,
+      animationDriver: sharedValue2,
+      withTiming: onFullViewToggled(num[8]).withTiming,
+      DISMISSED: -1,
+      STANDARD_EASING: onFullViewToggled(num[9]).STANDARD_EASING,
+      COLLAPSED: 0,
+      runOnJS: onFullViewToggled(num[6]).runOnJS,
+      onFullViewToggled: callback2,
+    };
     fn.__workletHash = 16686210274151;
     fn.__initData = closure_18;
-    let obj = { full: first, animationDriver: sharedValue2, withTiming: onFullViewToggled(num[8]).withTiming, DISMISSED: -1, STANDARD_EASING: onFullViewToggled(num[9]).STANDARD_EASING, COLLAPSED: 0, runOnJS: onFullViewToggled(num[6]).runOnJS, onFullViewToggled: callback2 };
+    let obj = {
+      full: first,
+      animationDriver: sharedValue2,
+      withTiming: onFullViewToggled(num[8]).withTiming,
+      DISMISSED: -1,
+      STANDARD_EASING: onFullViewToggled(num[9]).STANDARD_EASING,
+      COLLAPSED: 0,
+      runOnJS: onFullViewToggled(num[6]).runOnJS,
+      onFullViewToggled: callback2,
+    };
     const onStartResult = directionResult.onStart(fn);
     return directionResult.onStart(fn).withRef(ref1).enabled(first4);
   }, items9);
@@ -311,7 +417,23 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
         const result3 = store2.set(1 + Math.max(Math.min(result2, 40), 0) / 40);
       }
     };
-    let obj = { animationState: sharedValue1, DRAWER_PANNING: 2, clamp: first2, expandedHeight: first2, thumbnailsElementHeight: num2, collapsedHeight: first1, COLLAPSED: 0, EXPANDED: 1, animationDriver: sharedValue2, COLLAPSE_DRAWER_DURING_DRAG: 0.4, runOnJS: onFullViewToggled(num[6]).runOnJS, setFull: closure_7, DRAWER_VERTICAL_DRAG_RESISTANCE: 3, MAX_DRAWER_VERTICAL_DRAG: 40, EXPANDED_MORE: 2 };
+    let obj = {
+      animationState: sharedValue1,
+      DRAWER_PANNING: 2,
+      clamp: first2,
+      expandedHeight: first2,
+      thumbnailsElementHeight: num2,
+      collapsedHeight: first1,
+      COLLAPSED: 0,
+      EXPANDED: 1,
+      animationDriver: sharedValue2,
+      COLLAPSE_DRAWER_DURING_DRAG: 0.4,
+      runOnJS: onFullViewToggled(num[6]).runOnJS,
+      setFull: closure_7,
+      DRAWER_VERTICAL_DRAG_RESISTANCE: 3,
+      MAX_DRAWER_VERTICAL_DRAG: 40,
+      EXPANDED_MORE: 2,
+    };
     fn.__closure = obj;
     fn.__workletHash = 7012168718409;
     fn.__initData = closure_21;
@@ -324,7 +446,9 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
         let result = closure_4.set(true);
         if (0 === obj.get()) {
           let obj2 = closure_1_0(closure_1_2[6]);
-          let result1 = store.set(obj2.withDelay(150, closure_1_0(closure_1_2[8]).withTiming(closure_1_9, { duration: 0 })));
+          let result1 = store.set(
+            obj2.withDelay(150, closure_1_0(closure_1_2[8]).withTiming(closure_1_9, { duration: 0 })),
+          );
           const obj4 = closure_1_0(closure_1_2[8]);
         } else {
           const obj9 = closure_1_0(closure_1_2[8]);
@@ -361,7 +485,20 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
         const obj5 = closure_1_0(closure_1_2[6]);
       }
     };
-    obj = { animationDriver: sharedValue2, COLLAPSE_DRAWER_ON_RELEASE: 0.75, runOnJS: onFullViewToggled(num[6]).runOnJS, setFull: closure_7, isCollapsed: sharedValue, COLLAPSED: 0, animationState: sharedValue1, withDelay: onFullViewToggled(num[6]).withDelay, withTiming: onFullViewToggled(num[8]).withTiming, NONE: closure_9, STANDARD_EASING: onFullViewToggled(num[9]).STANDARD_EASING, EXPANDED: 1 };
+    obj = {
+      animationDriver: sharedValue2,
+      COLLAPSE_DRAWER_ON_RELEASE: 0.75,
+      runOnJS: onFullViewToggled(num[6]).runOnJS,
+      setFull: closure_7,
+      isCollapsed: sharedValue,
+      COLLAPSED: 0,
+      animationState: sharedValue1,
+      withDelay: onFullViewToggled(num[6]).withDelay,
+      withTiming: onFullViewToggled(num[8]).withTiming,
+      NONE: closure_9,
+      STANDARD_EASING: onFullViewToggled(num[9]).STANDARD_EASING,
+      EXPANDED: 1,
+    };
     fn2.__closure = obj;
     fn2.__workletHash = 16268892990477;
     fn2.__initData = closure_20;
@@ -393,19 +530,35 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
   }, items11);
   obj3 = { gesture: memo3, children: null };
   let obj4 = { style: animatedStyle3, children: null };
-  const items12 = [tmp30.MediaModalFooterUnderlay, ];
+  const items12 = [tmp30.MediaModalFooterUnderlay];
   obj5 = { style: items13, children: null };
   items13 = [animatedStyle2, tmp.drawerContainer];
   const tmp43 = overlayEnabled(num[12]);
-  obj5[1] = first(onFullViewToggled(num[14]).ActionSheetHeaderBar, { tabStyle: tmp.drawerHeaderTab, style: tmp.drawerHeader });
-  const items14 = [first(overlayEnabled(num[12]), obj5), channelId.sliderElement, ];
+  obj5[1] = first(onFullViewToggled(num[14]).ActionSheetHeaderBar, {
+    tabStyle: tmp.drawerHeaderTab,
+    style: tmp.drawerHeader,
+  });
+  const items14 = [first(overlayEnabled(num[12]), obj5), channelId.sliderElement];
   obj7 = { onLayout: callback5, style: animatedStyle, children: null };
   const obj8 = { style: tmp.messagePreviewContainer, children: null };
   let obj6 = { tabStyle: tmp.drawerHeaderTab, style: tmp.drawerHeader };
   const tmp44 = overlayEnabled(num[12]);
-  obj9 = { channelId: channelId.channelId, messageId: channelId.messageId, onClose: channelId.onClose, onTapMessage: callback2, onMeasureFullHeight: callback3, onMeasureCollapsedHeight: callback4, full: first, canExpand: first2 > first1, setScrollViewIsAtTop: tmp34[1], flingUpRef: ref, flingDownRef: ref1, animationDriver: sharedValue2 };
+  obj9 = {
+    channelId: channelId.channelId,
+    messageId: channelId.messageId,
+    onClose: channelId.onClose,
+    onTapMessage: callback2,
+    onMeasureFullHeight: callback3,
+    onMeasureCollapsedHeight: callback4,
+    full: first,
+    canExpand: first2 > first1,
+    setScrollViewIsAtTop: tmp34[1],
+    flingUpRef: ref,
+    flingDownRef: ref1,
+    animationDriver: sharedValue2,
+  };
   obj8[1] = first(overlayEnabled(num[15]), obj9);
-  const items15 = [first(sharedValue1, obj8), ];
+  const items15 = [first(sharedValue1, obj8)];
   if (tmp41Result) {
     const obj10 = { style: null, children: null };
     const items16 = [animatedStyle1, tmp.thumbnailsContainer];

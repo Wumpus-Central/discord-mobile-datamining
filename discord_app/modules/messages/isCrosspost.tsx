@@ -19,4 +19,4 @@ export default function isCrosspost(type) {
     hasFlagResult = type.messageReference.type !== constants2.FORWARD;
   }
   return hasFlagResult;
-};
+}

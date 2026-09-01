@@ -11,8 +11,7 @@ prototype = function UnknownCollectiblesItemRecord(arg0) {
   tmp.type = CollectiblesItemType.CollectiblesItemType.NONE;
   return tmp;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["fromServer"] = function fromServer(arg0) {
   const obj = {};
   let tmp2 = prototype;

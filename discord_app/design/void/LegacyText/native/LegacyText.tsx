@@ -6,7 +6,9 @@ import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 require = arg1;
-let closure_4 = createCacheKey.createStyles({ text: { fontFamily: require("ME").Fonts.PRIMARY_MEDIUM, includeFontPadding: false } });
+let closure_4 = createCacheKey.createStyles({
+  text: { fontFamily: require("ME").Fonts.PRIMARY_MEDIUM, includeFontPadding: false },
+});
 let obj = { fontFamily: require("ME").Fonts.PRIMARY_MEDIUM, includeFontPadding: false };
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   ({ style, children } = arg0);

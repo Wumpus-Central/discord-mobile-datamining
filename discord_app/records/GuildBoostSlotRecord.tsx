@@ -7,7 +7,14 @@ class GuildBoostSlotRecord extends tmp2 {
   constructor(arg0) {
     tmp = new GuildBoostSlotRecord(new.target, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ id: tmp.id, subscriptionId: tmp.subscriptionId, premiumGuildSubscription: tmp.premiumGuildSubscription, canceled: tmp.canceled, cooldownEndsAt: tmp.cooldownEndsAt, subscription: tmp.subscription } = global);
+    ({
+      id: tmp.id,
+      subscriptionId: tmp.subscriptionId,
+      premiumGuildSubscription: tmp.premiumGuildSubscription,
+      canceled: tmp.canceled,
+      cooldownEndsAt: tmp.cooldownEndsAt,
+      subscription: tmp.subscription,
+    } = global);
     return tmp;
   }
 }
@@ -25,7 +32,16 @@ GuildBoostSlotRecord["createFromServer"] = function createFromServer(premium_gui
   if (typeof GuildBoostSlotRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp3 = new GuildBoostSlotRecord("Trying to call a non-function", GuildBoostSlotRecord, new.target, id, subscription_id, tmp2, canceled, cooldown_ends_at);
+  const tmp3 = new GuildBoostSlotRecord(
+    "Trying to call a non-function",
+    GuildBoostSlotRecord,
+    new.target,
+    id,
+    subscription_id,
+    tmp2,
+    canceled,
+    cooldown_ends_at,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp3.id = id;
   tmp3.subscriptionId = subscription_id;

@@ -12,7 +12,14 @@ import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function ClearButton(onPress) {
-  let obj = { style: { borderRadius: 20, padding: 8 }, accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
+  let obj = {
+    style: { borderRadius: 20, padding: 8 },
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    onPress: null,
+    hitSlop: null,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.VkKicb);
   obj[3] = onPress.onPress;
@@ -25,7 +32,17 @@ let c3 = importAllResult;
 ({ TouchableWithoutFeedback: c4, View: c5, TouchableOpacity: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let obj = { container: null, onPress: null, input: null, error: null, closeIcon: null, placeholder: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, height: 48, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, paddingRight: 6, paddingLeft: 12, flexDirection: "row", alignItems: "center" };
+obj = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  height: 48,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.xs,
+  paddingRight: 6,
+  paddingLeft: 12,
+  flexDirection: "row",
+  alignItems: "center",
+};
 obj[0] = obj;
 obj[1] = { flexDirection: "row" };
 createCacheKey = { flex: 1, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -75,7 +92,7 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
     tmp11 = flag;
   }
   _modDef38(!tmp11, "Cannot have an editable input w/ onPress handler");
-  let items = [tmp4.container, , ];
+  let items = [tmp4.container, ,];
   error = null;
   if (error) {
     error = tmp4.error;
@@ -100,7 +117,7 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
     accessibilityLabel: null,
     accessibilityValue: null,
     accessibilityHint: null,
-    children: null
+    children: null,
   };
   let tmp17 = null;
   if (null != onPress) {
@@ -138,7 +155,7 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
   if (renderLeadingComponent != null) {
     result = renderLeadingComponent();
   }
-  const items1 = [result, , , ];
+  const items1 = [result, , ,];
   let str3 = "auto";
   if (null != onPress) {
     str3 = "none";
@@ -165,7 +182,7 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
       }
     },
     placeholderTextColor: tmp4.placeholder.color,
-    clearButtonMode: "never"
+    clearButtonMode: "never",
   };
   const merged1 = Object.assign(merged);
   let str4 = "no-hide-descendants";

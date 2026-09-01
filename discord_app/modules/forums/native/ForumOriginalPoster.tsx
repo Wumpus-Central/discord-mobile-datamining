@@ -13,13 +13,13 @@ class ForumOriginalPoster {
     tmp = closure_5();
     obj = { style: tmp.container, children: null };
     obj = { style: items, children: null };
-    items = [, ];
+    items = [,];
     ({ opIcon: arr[0], opIconBackground: arr[1] } = tmp);
     obj1 = { variant: "text-xs/semibold", color: "text-brand", children: null };
     intl = require("getSystemLocale").intl;
     obj1[2] = intl.string(require("getSystemLocale").t.fyE8sH);
     obj[1] = jsx(require("Text").Text, obj1);
-    items1 = [, ];
+    items1 = [,];
     items1[0] = jsx(View, obj);
     obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     intl2 = require("getSystemLocale").intl;
@@ -31,7 +31,11 @@ class ForumOriginalPoster {
 }
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, opIcon: null, opIconBackground: null };
+createCacheKey = {
+  container: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
+  opIcon: null,
+  opIconBackground: null,
+};
 createCacheKey = { borderRadius: ThemesDefault.radii.sm, marginEnd: 8, paddingHorizontal: 4 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { backgroundColor: require("result").DARK_BRAND_260_LIGHT_BRAND_200 };

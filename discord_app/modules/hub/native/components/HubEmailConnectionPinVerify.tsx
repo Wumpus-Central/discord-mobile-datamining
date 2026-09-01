@@ -17,7 +17,13 @@ function presentResendToast(content) {
 }
 ({ View: closure_6, Image: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ container: { alignItems: "center" }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center", marginBottom: 24 }, label: { textAlign: "center", marginBottom: 12 }, error: { alignSelf: "center", marginVertical: 8 } });
+let closure_11 = createCacheKey.createStyles({
+  container: { alignItems: "center" },
+  title: { marginBottom: 8, textAlign: "center" },
+  description: { textAlign: "center", marginBottom: 24 },
+  label: { textAlign: "center", marginBottom: 12 },
+  error: { alignSelf: "center", marginVertical: 8 },
+});
 const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionPinVerify.tsx");
 
 export default function HubEmailConnectionPinVerify(email) {
@@ -31,7 +37,7 @@ export default function HubEmailConnectionPinVerify(email) {
       c5 = 0;
       c6 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         const callback = tmp3;
         c4 = 1;
         const obj2 = closure_1_1(closure_1_2[12]);
@@ -79,44 +85,53 @@ export default function HubEmailConnectionPinVerify(email) {
     };
   }, items);
   let obj = importDefault(onClose[11]);
-  const throttleResult = obj.throttle(_handleCodeEntered(function*() {
-    closure_2 = tmp3;
-    c4 = 1;
-    yield callback(closure_1_2[12]).sendVerificationEmail(aPIError, true, callback);
-    if (1 === tmp7) {
-      c4 = 0;
-      callback = closure_3;
-      aPIError = new aPIError(closure_1_2[14]).APIError(callback);
-      obj1 = aPIError;
-      let anyErrorMessage;
-      if (aPIError != null) {
-        anyErrorMessage = obj1.getAnyErrorMessage();
+  const throttleResult = obj.throttle(
+    _handleCodeEntered(function* () {
+      closure_2 = tmp3;
+      c4 = 1;
+      yield callback(closure_1_2[12]).sendVerificationEmail(aPIError, true, callback);
+      if (1 === tmp7) {
+        c4 = 0;
+        callback = closure_3;
+        aPIError = new aPIError(closure_1_2[14]).APIError(callback);
+        obj1 = aPIError;
+        let anyErrorMessage;
+        if (aPIError != null) {
+          anyErrorMessage = obj1.getAnyErrorMessage();
+        }
+        closure_0 = anyErrorMessage;
+        if (anyErrorMessage == null) {
+          const intl2 = aPIError(closure_1_2[13]).intl;
+          closure_0 = intl2.string(aPIError(closure_1_2[13]).t.FPzC5z);
+        }
+        closure_1_12(closure_0);
+        c6 = 3;
+        const tmp26 = closure_1_12;
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        const intl = aPIError(closure_1_2[13]).intl;
+        closure_1_12(intl.string(aPIError(closure_1_2[13]).t["2bO4dz"]));
+        c4 = 0;
       }
-      closure_0 = anyErrorMessage;
-      if (anyErrorMessage == null) {
-        const intl2 = aPIError(closure_1_2[13]).intl;
-        closure_0 = intl2.string(aPIError(closure_1_2[13]).t.FPzC5z);
-      }
-      closure_1_12(closure_0);
-      c6 = 3;
-      const tmp26 = closure_1_12;
-    } else if (arg0 === 1) {
-      c6 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      const intl = aPIError(closure_1_2[13]).intl;
-      closure_1_12(intl.string(aPIError(closure_1_2[13]).t["2bO4dz"]));
       c4 = 0;
-    }
-    c4 = 0;
-    return arg1;
-  }), 1000);
+      return arg1;
+    }),
+    1000,
+  );
   const tmp3 = onClose;
   [obj2, c3] = callback(React.useState(null), 2);
   obj = { style: tmp.container, children: null };
   obj = { source: importDefault(onClose[17]) };
-  const items1 = [callback2(closure_7, obj), , , , , ];
-  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const items1 = [callback2(closure_7, obj), , , , ,];
+  obj1 = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   let intl = email(onClose[13]).intl;
   obj1[4] = intl.string(email(onClose[13]).t.SJ3Lxc);
   items1[1] = callback2(email(onClose[18]).Text, obj1);
@@ -145,7 +160,7 @@ export default function HubEmailConnectionPinVerify(email) {
       }
       return applyArgumentsResult;
     },
-    codeType: email(onClose[19]).CodeType.ALPHANUMERIC
+    codeType: email(onClose[19]).CodeType.ALPHANUMERIC,
   });
   let tmp6Result = null != obj1;
   if (tmp6Result) {
@@ -167,9 +182,9 @@ export default function HubEmailConnectionPinVerify(email) {
       }
       return applyArgumentsResult;
     },
-    codeType: email(onClose[19]).CodeType.ALPHANUMERIC
+    codeType: email(onClose[19]).CodeType.ALPHANUMERIC,
   };
   items1[5] = tmp6Result;
   obj[1] = items1;
   return callback2(email(onClose[16]).HubEmailConnectionScreen, { children: tmp8(tmp9, obj) });
-};
+}

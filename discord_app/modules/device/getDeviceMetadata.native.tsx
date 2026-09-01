@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/device/getDeviceMetadata.nativ
 
 export default function getDeviceMetadata() {
   return getDeviceMetadata.getDeviceMetadata();
-};
+}

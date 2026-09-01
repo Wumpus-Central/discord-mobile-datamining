@@ -23,7 +23,14 @@ function onDismiss() {
 noopAll;
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { paddingTop: 24, paddingBottom: 24, paddingLeft: 12, paddingRight: 12 }, fill: null, nitroWheel: null, textContainer: null, body: null, content: null };
+createCacheKey = {
+  container: { paddingTop: 24, paddingBottom: 24, paddingLeft: 12, paddingRight: 12 },
+  fill: null,
+  nitroWheel: null,
+  textContainer: null,
+  body: null,
+  content: null,
+};
 createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.flex = 1;
@@ -32,7 +39,13 @@ createCacheKey.justifyContent = "center";
 createCacheKey.top = -120;
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE, width: 37.5, height: 37.5 };
-createCacheKey[3] = { flexDirection: "row", flexShrink: 1, alignItems: "center", alignSelf: "center", textAlign: "center" };
+createCacheKey[3] = {
+  flexDirection: "row",
+  flexShrink: 1,
+  alignItems: "center",
+  alignSelf: "center",
+  textAlign: "center",
+};
 createCacheKey[4] = { paddingTop: 8, paddingBottom: 18 };
 createCacheKey[5] = { paddingHorizontal: 16 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
@@ -45,7 +58,13 @@ export default function BurstReactionFirstSendActionSheet(arg0) {
   let obj = getDeviceSpecificString;
   obj = { quest: getSystemLocale.t["5TpPli"] };
   const deviceSpecificString = obj.getDeviceSpecificString(obj, getSystemLocale.t["2Yp7dF"]);
-  obj = { backdropOpacity: _generateAnimationSource.BACKDROP_OPACITY, contentStyles: tmp.content, backdropChildren: null, onDismiss: null, children: null };
+  obj = {
+    backdropOpacity: _generateAnimationSource.BACKDROP_OPACITY,
+    contentStyles: tmp.content,
+    backdropChildren: null,
+    onDismiss: null,
+    children: null,
+  };
   obj1 = { style: tmp.fill, children: null };
   const obj2 = { channelId, emoji, messageId, reactionType: ReactionTypes.ReactionTypes.BURST };
   obj1[1] = callback(BurstReactionAnimationPreviewDefault, obj2);
@@ -53,13 +72,13 @@ export default function BurstReactionFirstSendActionSheet(arg0) {
   obj[3] = onDismiss;
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.textContainer, children: null };
-  const items = [callback(Button.NitroWheel, { style: tmp.nitroWheel }), ];
+  const items = [callback(Button.NitroWheel, { style: tmp.nitroWheel })];
   const obj6 = { variant: "heading-xl/bold", children: null };
   const intl = getSystemLocale.intl;
   obj6[1] = intl.string(getSystemLocale.t.NX7HI7);
   items[1] = callback(Text.Text, obj6);
   obj4[1] = items;
-  const items1 = [callback2(closure_3, obj4), , ];
+  const items1 = [callback2(closure_3, obj4), ,];
   const obj5 = { style: tmp.nitroWheel };
   const tmp3 = BurstReactionAnimationPreviewDefault;
   items1[1] = callback(closure_3, { style: tmp.body, children: callback(Text.Text, obj8) });
@@ -71,7 +90,7 @@ export default function BurstReactionFirstSendActionSheet(arg0) {
   obj3[1] = items1;
   obj[4] = callback2(closure_3, obj3);
   return callback(Background.BottomSheet, obj);
-};
+}
 export const openBurstReactionFirstSendActionSheet = function openBurstReactionFirstSendActionSheet(arg0) {
   ({ channelId, messageId, emoji } = arg0);
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
@@ -84,7 +103,9 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
     obj[3] = emoji;
     tmpResult.dispatch(obj);
   } else {
-    const result = tmp4(4298).UNSAFE_markDismissibleContentAsDismissed(tmp4(1373).DismissibleContent.SUPER_REACTIONS_FIRST_SENT);
+    const result = tmp4(4298).UNSAFE_markDismissibleContentAsDismissed(
+      tmp4(1373).DismissibleContent.SUPER_REACTIONS_FIRST_SENT,
+    );
     tmpResult = tmp(4445);
     obj = { channelId: null, messageId: null, emoji: null };
     obj[0] = channelId;

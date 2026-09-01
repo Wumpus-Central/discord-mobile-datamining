@@ -3,7 +3,9 @@ import closure_2 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let closure_3 = {};
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/useNavigatorBackHandler.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Navigator/native/useNavigatorBackHandler.native.tsx",
+);
 
 export default function useNavigatorBackHandler() {
   let tmp = arg0;
@@ -25,29 +27,33 @@ export default function useNavigatorBackHandler() {
     closure_2.current = flag;
     navigation.goBack();
   }, items);
-  const effect = React.useEffect(() => navigation.addListener("beforeRemove", (data) => {
-    closure_0 = data;
-    if (ref.current) {
-      let isIOSResult = "POP" === data.data.action.type;
-      if (isIOSResult) {
-        let obj = closure_1_0(closure_1_1[2]);
-        isIOSResult = obj.isIOS();
-      }
-      if (closure_0 != null) {
-        if (isIOSResult) {
-          obj = { preventable: false };
-        } else {
-          obj = { preventable: true, preventDefault: null, goBack: null };
-          obj[1] = function preventDefault() {
-            return data.preventDefault();
-          };
-          obj[2] = function goBack() {
-            return navigation.goBack();
-          };
+  const effect = React.useEffect(
+    () =>
+      navigation.addListener("beforeRemove", (data) => {
+        closure_0 = data;
+        if (ref.current) {
+          let isIOSResult = "POP" === data.data.action.type;
+          if (isIOSResult) {
+            let obj = closure_1_0(closure_1_1[2]);
+            isIOSResult = obj.isIOS();
+          }
+          if (closure_0 != null) {
+            if (isIOSResult) {
+              obj = { preventable: false };
+            } else {
+              obj = { preventable: true, preventDefault: null, goBack: null };
+              obj[1] = function preventDefault() {
+                return data.preventDefault();
+              };
+              obj[2] = function goBack() {
+                return navigation.goBack();
+              };
+            }
+            tmp4(obj);
+          }
         }
-        tmp4(obj);
-      }
-    }
-  }), items1);
+      }),
+    items1,
+  );
   return { onGoBack };
-};
+}

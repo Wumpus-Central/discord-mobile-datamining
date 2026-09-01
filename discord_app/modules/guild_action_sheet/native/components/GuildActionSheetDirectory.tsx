@@ -18,7 +18,9 @@ createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONS
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: 16, gap: 24 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetDirectory.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_action_sheet/native/components/GuildActionSheetDirectory.tsx",
+);
 
 export default function GuildActionSheetDirectory(arg0) {
   ({ guild, expanded } = arg0);
@@ -27,13 +29,21 @@ export default function GuildActionSheetDirectory(arg0) {
   }
   const tmp = callback3();
   let obj = { scrollable: true, startExpanded: expanded, children: null };
-  obj = { scrollsToTop: false, style: tmp.container, contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
-  const items = [callback(CommunityPillDefault, { guild }), ];
+  obj = {
+    scrollsToTop: false,
+    style: tmp.container,
+    contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom },
+    children: null,
+  };
+  const items = [callback(CommunityPillDefault, { guild })];
   obj = { style: tmp.actions, children: null };
-  const items1 = [callback(HideMutedChannelsOption.GuildActionSheetDirectoryActions, { guild }), callback(HideMutedChannelsOption.GuildDeveloperOptionAction, { guild })];
+  const items1 = [
+    callback(HideMutedChannelsOption.GuildActionSheetDirectoryActions, { guild }),
+    callback(HideMutedChannelsOption.GuildDeveloperOptionAction, { guild }),
+  ];
   obj[1] = items1;
   items[1] = callback2(View, obj);
   obj[3] = items;
   obj[2] = callback2(BottomSheetModal.BottomSheetScrollView, obj);
   return callback(Background.BottomSheet, obj);
-};
+}

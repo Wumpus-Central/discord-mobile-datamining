@@ -17,77 +17,81 @@ const forwardRefResult = importAllResult.forwardRef((onChange, ref) => {
   let obj = importAllResult;
   [tmp3, c4] = forceMode(undefined.useState(""), 2);
   ref = importAllResult.useRef(null);
-  const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({
-    blur() {
-      const current = closure_5.current;
-      let blurResult;
-      if (current != null) {
-        blurResult = current.blur();
-      }
-      return blurResult;
-    },
-    focus() {
-      const current = closure_5.current;
-      let focusResult;
-      if (current != null) {
-        focusResult = current.focus();
-      }
-      return focusResult;
-    },
-    isFocused() {
-      const current = closure_5.current;
-      let flag;
-      if (current != null) {
-        flag = current.isFocused();
-      }
-      if (flag == null) {
-        flag = false;
-      }
-      return flag;
-    },
-    setText(arg0) {
-      callback(arg0);
-      const current = closure_5.current;
-      if (current != null) {
-        current.setText(arg0);
-      }
-    },
-    getText() {
-      const current = closure_5.current;
-      let str;
-      if (current != null) {
-        str = current.getText();
-      }
-      if (str == null) {
-        str = "";
-      }
-      return str;
-    },
-    measure(arg0) {
-      const current = closure_5.current;
-      let measureResult;
-      if (current != null) {
-        measureResult = current.measure(arg0);
-      }
-      return measureResult;
-    },
-    measureInWindow(arg0) {
-      const current = closure_5.current;
-      let measureInWindowResult;
-      if (current != null) {
-        measureInWindowResult = current.measureInWindow(arg0);
-      }
-      return measureInWindowResult;
-    },
-    measureLayout(arg0, arg1, arg2) {
-      const current = closure_5.current;
-      let measureLayoutResult;
-      if (current != null) {
-        measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-      }
-      return measureLayoutResult;
-    }
-  }), []);
+  const imperativeHandle = importAllResult.useImperativeHandle(
+    ref,
+    () => ({
+      blur() {
+        const current = closure_5.current;
+        let blurResult;
+        if (current != null) {
+          blurResult = current.blur();
+        }
+        return blurResult;
+      },
+      focus() {
+        const current = closure_5.current;
+        let focusResult;
+        if (current != null) {
+          focusResult = current.focus();
+        }
+        return focusResult;
+      },
+      isFocused() {
+        const current = closure_5.current;
+        let flag;
+        if (current != null) {
+          flag = current.isFocused();
+        }
+        if (flag == null) {
+          flag = false;
+        }
+        return flag;
+      },
+      setText(arg0) {
+        callback(arg0);
+        const current = closure_5.current;
+        if (current != null) {
+          current.setText(arg0);
+        }
+      },
+      getText() {
+        const current = closure_5.current;
+        let str;
+        if (current != null) {
+          str = current.getText();
+        }
+        if (str == null) {
+          str = "";
+        }
+        return str;
+      },
+      measure(arg0) {
+        const current = closure_5.current;
+        let measureResult;
+        if (current != null) {
+          measureResult = current.measure(arg0);
+        }
+        return measureResult;
+      },
+      measureInWindow(arg0) {
+        const current = closure_5.current;
+        let measureInWindowResult;
+        if (current != null) {
+          measureInWindowResult = current.measureInWindow(arg0);
+        }
+        return measureInWindowResult;
+      },
+      measureLayout(arg0, arg1, arg2) {
+        const current = closure_5.current;
+        let measureLayoutResult;
+        if (current != null) {
+          measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
+        }
+        return measureLayoutResult;
+      },
+    }),
+    [],
+  );
   const tmp2 = forceMode(undefined.useState(""), 2);
   const tmp6 = onChange;
   const tmp7 = onPressCountrySelector;
@@ -127,7 +131,12 @@ const forwardRefResult = importAllResult.forwardRef((onChange, ref) => {
   }
   const items2 = [combined, onPressCountrySelector];
   const memo = obj.useMemo(() => {
-    const obj = { onPress: onPressCountrySelector, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null };
+    const obj = {
+      onPress: onPressCountrySelector,
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      accessibilityHint: null,
+    };
     let str = combined;
     if (combined == null) {
       str = "";

@@ -55,7 +55,7 @@ function ModeratorViewOverlay(channel) {
   let tmp10 = null;
   if (first1) {
     obj = { style: null, children: null };
-    const items1 = [closure_5.absoluteFill, , ];
+    const items1 = [closure_5.absoluteFill, ,];
     obj1 = { backgroundColor: null };
     obj1[0] = importDefault(tmp[8]).unsafe_rawColors.PRIMARY_800;
     items1[1] = obj1;
@@ -99,29 +99,51 @@ function JoinStageOverlay(channel) {
     };
   }, []);
   obj = { style: null, children: null };
-  const items = [closure_5.absoluteFill, { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800 }, animatedStyle];
+  const items = [
+    closure_5.absoluteFill,
+    { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800 },
+    animatedStyle,
+  ];
   obj[0] = items;
   obj[1] = callback2(JoinStageViewDefault, { channel: channel.channel });
   return callback2(_modDef4217.View, obj);
 }
 function StagePromptWrapper(channel) {
-  return callback2(RootThemeContextProvider.DisableCustomTheme, { children: callback2(StagePromptInner, { channel: channel.channel }) });
+  return callback2(RootThemeContextProvider.DisableCustomTheme, {
+    children: callback2(StagePromptInner, { channel: channel.channel }),
+  });
 }
 function StagePromptInner(channel) {
   const tmp = callback3();
-  return callback2(AgeVerificationSpeakerActionSheet.AnimatedStartStagePrompt, { channel: channel.channel, style: callback3().startStagePrompt });
+  return callback2(AgeVerificationSpeakerActionSheet.AnimatedStartStagePrompt, {
+    channel: channel.channel,
+    style: callback3().startStagePrompt,
+  });
 }
 ({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
-let closure_11 = { mass: 0.5, stiffness: 600, damping: 30, overshootClamping: false, restSpeedThreshold: 0.01, restDisplacementThreshold: 0.01 };
+let closure_11 = {
+  mass: 0.5,
+  stiffness: 600,
+  damping: 30,
+  overshootClamping: false,
+  restSpeedThreshold: 0.01,
+  restDisplacementThreshold: 0.01,
+};
 let closure_12 = { fullScreen: { flex: 1 } };
-let closure_13 = { code: "function StageChannelCallNavigatorTsx1(){const{withSpring,showStartStageView,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showStartStageView?1:0,viewAnimationConfig)};}" };
-let closure_15 = { code: "function StageChannelCallNavigatorTsx2(){const{withSpring,showOverlay,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showOverlay?1:0,viewAnimationConfig)};}" };
+let closure_13 = {
+  code: "function StageChannelCallNavigatorTsx1(){const{withSpring,showStartStageView,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showStartStageView?1:0,viewAnimationConfig)};}",
+};
+let closure_15 = {
+  code: "function StageChannelCallNavigatorTsx2(){const{withSpring,showOverlay,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showOverlay?1:0,viewAnimationConfig)};}",
+};
 createCacheKey = { startStagePrompt: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 let closure_17 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallNavigator.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/components/StageChannelCallNavigator.tsx",
+);
 
 export default function StageChannelCallNavigator(channel) {
   channel = channel.channel;
@@ -149,7 +171,7 @@ export default function StageChannelCallNavigator(channel) {
   React = tmp11;
   tmp4Result = tmp4(obj1.useState(false), 2);
   [tmp13, c5] = tmp4Result;
-  const items = [, ];
+  const items = [,];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   const effect = obj1.useEffect(() => {
     let obj = callback(first[14]);
@@ -181,7 +203,12 @@ export default function StageChannelCallNavigator(channel) {
       callback2();
     }
   }, items2);
-  obj = { actionBar: callback2(importDefault(tmp2[17]), { channel }), expandedControls: callback2(importDefault(tmp2[18]), { channel }), isTouchingLeftScreenEdge: true, channel };
+  obj = {
+    actionBar: callback2(importDefault(tmp2[17]), { channel }),
+    expandedControls: callback2(importDefault(tmp2[18]), { channel }),
+    isTouchingLeftScreenEdge: true,
+    channel,
+  };
   obj = { theme: ThemeTypes.DARK, children: null };
   if (null != tmp11) {
     obj1 = { style: null, children: null };
@@ -195,7 +222,7 @@ export default function StageChannelCallNavigator(channel) {
     obj4[0] = channel;
     obj4[1] = tmp11;
     obj3[0] = tmp18(tmp(tmp2[22]).ChannelCallSingleController, obj4);
-    const items3 = [tmp18(tmp10Result, obj3), , ];
+    const items3 = [tmp18(tmp10Result, obj3), ,];
     const obj5 = { header: null };
     const obj6 = { channel: null, fullscreenStream: true, onOpenRTCDebugOverlay: null };
     obj6[0] = channel;
@@ -234,7 +261,7 @@ export default function StageChannelCallNavigator(channel) {
     }
     const obj8 = { channel: null };
     obj8[0] = channel;
-    const items4 = [tmp18(tmp10Result2, obj8), ];
+    const items4 = [tmp18(tmp10Result2, obj8)];
     const obj9 = { header: null };
     const obj10 = { channel: null };
     obj10[0] = channel;
@@ -242,7 +269,7 @@ export default function StageChannelCallNavigator(channel) {
     const merged1 = Object.assign(obj);
     const obj11 = { channel: null };
     obj11[0] = channel;
-    const items5 = [tmp18(tmp10(tmp2[28]), obj11), ];
+    const items5 = [tmp18(tmp10(tmp2[28]), obj11)];
     if (isModerator) {
       isModerator = !callback(React.useState(isLive), 1)[0];
     }
@@ -265,4 +292,4 @@ export default function StageChannelCallNavigator(channel) {
   }
   obj[1] = tmp18Result;
   return callback2(channel(first[19]).ThemeContextProvider, obj);
-};
+}

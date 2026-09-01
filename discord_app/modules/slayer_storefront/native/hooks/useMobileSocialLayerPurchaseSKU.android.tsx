@@ -4,7 +4,9 @@ import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { PriceSetAssignmentPurchaseTypes as closure_4 } from "../../../../Constants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx",
+);
 
 export default function useMobileSocialLayerPurchaseSKU(sku) {
   sku = sku.sku;
@@ -46,4 +48,4 @@ export default function useMobileSocialLayerPurchaseSKU(sku) {
     return useMobilePurchaseSKUDefault(obj);
   }
   DEFAULT = constants.DEFAULT;
-};
+}

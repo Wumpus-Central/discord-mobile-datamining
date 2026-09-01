@@ -7,8 +7,7 @@ import Soundpacks2 from "Constants.tsx";
 const Soundpacks = Soundpacks2.Soundpacks;
 let closure_1 = { soundpack: Soundpacks.CLASSIC, lastSoundpackExperimentId: null };
 const PersistedStore = initializeDefault.PersistedStore;
-class SoundpackStore extends PersistedStore {
-}
+class SoundpackStore extends PersistedStore {}
 const prototype = SoundpackStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
@@ -40,7 +39,7 @@ const soundpackStore = new SoundpackStore(dispatcherDefault, {
       lastSoundpackExperimentId = obj.lastSoundpackExperimentId;
     }
     obj[1] = lastSoundpackExperimentId;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/soundpacks/SoundpackStore.tsx");
 

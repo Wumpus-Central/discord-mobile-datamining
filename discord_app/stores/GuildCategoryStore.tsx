@@ -267,8 +267,7 @@ let closure_12 = {};
 let c13 = null;
 let closure_14 = { _categories: [], null: [] };
 const Store = initializeDefault.Store;
-class GuildCategoryStore extends Store {
-}
+class GuildCategoryStore extends Store {}
 const prototype = GuildCategoryStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_7, closure_8, closure_3, closure_4, closure_2);
@@ -494,7 +493,7 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
       }
       return tmp;
     }, false);
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/GuildCategoryStore.tsx");
 

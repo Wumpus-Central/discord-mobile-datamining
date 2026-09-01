@@ -4,13 +4,16 @@ import closure_3 from "../../../../user_settings/UserSettingSearchStore.tsx";
 import { NodeType } from "../SettingRendererConstants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx",
+);
 
 export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearchResultSetting(ref, memo, scrollTarget) {
   const _require = ref;
   dependencyMap = memo;
   let current = ref.useField("selected");
-  const navigation = require("../../../../../design/components/Navigator/native/useNavigation.native.tsx").useNavigation();
+  const navigation =
+    require("../../../../../design/components/Navigator/native/useNavigation.native.tsx").useNavigation();
   ref = navigation.useRef(scrollTarget);
   if (current == null) {
     current = ref.current;

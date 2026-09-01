@@ -19,7 +19,14 @@ const forwardRefResult = importAllResult.forwardRef((date, ref) => {
   function openDatePicker() {
     updateDate.dismiss();
     let obj = closure_1_1(label[4]);
-    obj = { onSubmit: updateDate, title: label, startDate: null, maximumDate: null, minimumDate: null, requireDateChanged: true };
+    obj = {
+      onSubmit: updateDate,
+      title: label,
+      startDate: null,
+      maximumDate: null,
+      minimumDate: null,
+      requireDateChanged: true,
+    };
     let toDateResult;
     if (date != null) {
       toDateResult = date.toDate();
@@ -43,7 +50,7 @@ const forwardRefResult = importAllResult.forwardRef((date, ref) => {
   const imperativeHandle = ref.useImperativeHandle(ref, () => ({
     focus() {
       callback();
-    }
+    },
   }));
   let formatResult;
   if (date != null) {
@@ -54,7 +61,22 @@ const forwardRefResult = importAllResult.forwardRef((date, ref) => {
   const tmp4 = label;
   const tmp5 = importDefault(label[3]);
   const formatResult1 = importDefault(label[3])(obj.toDate()).format("L");
-  obj = { style, ref, value: null, placeholder: null, returnKeyType: "next", textContentType: "none", autoCapitalize: "none", clearButtonVisibility: null, editable: false, forceAccessibleContainer: true, accessibilityLabel: null, onPress: null, label: null, error: null };
+  obj = {
+    style,
+    ref,
+    value: null,
+    placeholder: null,
+    returnKeyType: "next",
+    textContentType: "none",
+    autoCapitalize: "none",
+    clearButtonVisibility: null,
+    editable: false,
+    forceAccessibleContainer: true,
+    accessibilityLabel: null,
+    onPress: null,
+    label: null,
+    error: null,
+  };
   let str2 = formatResult;
   const tmp5Result = importDefault(label[3])(obj.toDate());
   const tmp8 = openDatePicker;

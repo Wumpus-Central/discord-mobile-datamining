@@ -12,7 +12,7 @@ function ChangeSpendingLimitScreen(teenId) {
   let _require;
   function _handleSave(arg0) {
     const self = this;
-    const tmp = closure_1_3(function*() {
+    const tmp = closure_1_3(function* () {
       closure_0 = tmp3;
       dependencyMap = 1;
       yield closure_1_0();
@@ -26,7 +26,12 @@ function ChangeSpendingLimitScreen(teenId) {
         c3 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        const obj2 = { key: "SPENDING_CONTROLS_CHANGED", content: null, IconComponent: null, iconColor: "status-positive" };
+        const obj2 = {
+          key: "SPENDING_CONTROLS_CHANGED",
+          content: null,
+          IconComponent: null,
+          iconColor: "status-positive",
+        };
         const intl2 = closure_1_0(1236).intl;
         obj2[1] = intl2.string(v0(2369)["2WKfG1"]);
         obj2[2] = closure_1_0(4438).CircleCheckIcon;
@@ -65,13 +70,21 @@ function ChangeSpendingLimitScreen(teenId) {
   obj = { variant: "text-sm/normal", children: null };
   let intl = tmp2(1236).intl;
   obj[1] = intl.string(_handleSave(2369).IFguF2);
-  const items = [callback(require("../../../design/components/Text/native/Text.tsx").Text, obj), ];
+  const items = [callback(require("../../../design/components/Text/native/Text.tsx").Text, obj)];
   obj1 = { spacing: _handleSave(712).space.PX_8, children: null };
   let obj2 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
   let intl2 = tmp2(1236).intl;
   obj2[2] = intl2.string(_handleSave(2369)["1fHSu2"]);
-  const items1 = [callback(require("../../../design/components/Text/native/Text.tsx").Text, obj2), , ];
-  const obj3 = { accessibilityLabel: null, value: null, onChange: null, leadingText: null, placeholder: null, keyboardType: null, isClearable: true };
+  const items1 = [callback(require("../../../design/components/Text/native/Text.tsx").Text, obj2), ,];
+  const obj3 = {
+    accessibilityLabel: null,
+    value: null,
+    onChange: null,
+    leadingText: null,
+    placeholder: null,
+    keyboardType: null,
+    isClearable: true,
+  };
   const intl3 = tmp2(1236).intl;
   obj3[0] = intl3.string(_handleSave(2369)["1fHSu2"]);
   obj3[1] = amountInput;
@@ -88,7 +101,9 @@ function ChangeSpendingLimitScreen(teenId) {
     str = "decimal-pad";
   }
   obj3[5] = str;
-  const items2 = [callback(require("../../../design/components/TextInput/native/TextInput.native.tsx").TextInput, obj3), ];
+  const items2 = [
+    callback(require("../../../design/components/TextInput/native/TextInput.native.tsx").TextInput, obj3),
+  ];
   let tmp9Result = null;
   if (isOverspending) {
     const obj4 = { style: null, pointerEvents: "none" };
@@ -114,7 +129,7 @@ function ChangeSpendingLimitScreen(teenId) {
     items[1] = tmp8(tmp2(4926).Stack, obj1);
     obj[1] = items;
     obj5[0] = tmp8(tmp2(4926).Stack, obj);
-    const items3 = [tmp9(tmp2(8693).ModalContent, obj5), ];
+    const items3 = [tmp9(tmp2(8693).ModalContent, obj5)];
     if (isClearingCap) {
       let obj6 = { variant: "destructive", text: null, onPress: null, disabled: null, loading: null };
       const intl8 = tmp2(1236).intl;
@@ -138,7 +153,7 @@ function ChangeSpendingLimitScreen(teenId) {
     const obj8 = { children: null };
     const obj9 = { children: null };
     const obj10 = { children: null };
-    const items4 = [tmp9(tmp2(4928).Button, obj7), ];
+    const items4 = [tmp9(tmp2(4928).Button, obj7)];
     const obj11 = { variant: "tertiary", text: null, onPress: null };
     const intl9 = tmp2(1236).intl;
     obj11[1] = intl9.string(tmp2(1236).t["ETE/oC"]);
@@ -154,7 +169,7 @@ function ChangeSpendingLimitScreen(teenId) {
     obj12[0] = formatToPlainStringResult.warningRow;
     const obj13 = { size: "xs", color: null };
     obj13[1] = tmp10(712).colors.ICON_FEEDBACK_WARNING;
-    const items5 = [tmp9(tmp2(8736).WarningIcon, obj13), ];
+    const items5 = [tmp9(tmp2(8736).WarningIcon, obj13)];
     const obj14 = { variant: "text-sm/normal", style: null, children: null };
     obj14[1] = formatToPlainStringResult.warningText;
     const intl6 = tmp2(1236).intl;
@@ -208,7 +223,7 @@ export default function ChangeSpendingLimitModal(teenId) {
       },
       render() {
         return closure_1_6(closure_1_9, { teenId: closure_0 });
-      }
+      },
     };
     obj[0] = obj;
     return obj;
@@ -217,4 +232,4 @@ export default function ChangeSpendingLimitModal(teenId) {
   let intl = teenId(1236).intl;
   obj[2] = intl.string(teenId(1236).t["13/7kX"]);
   return callback(teenId(11501).Modal, obj);
-};
+}

@@ -24,8 +24,7 @@ function completeStep(guild_id, CHANNEL) {
 }
 let closure_6 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class GuildProgressStore extends PersistedStore {
-}
+class GuildProgressStore extends PersistedStore {}
 const prototype = GuildProgressStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   importDefault = arg0;
@@ -289,7 +288,7 @@ const guildProgressStore = new GuildProgressStore(dispatcherDefault, {
       tmp2 = tmp5;
     }
     return tmp2;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/guild_progress/GuildProgressStore.tsx");
 

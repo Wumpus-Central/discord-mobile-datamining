@@ -28,7 +28,19 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  ({ pressed, onPress, onPressDisabled, onPressIn, onPressOut, onLayout, accessible, accessibilityRole, accessibilityLabel, accessibilityHint, accessibilityState } = disabled);
+  ({
+    pressed,
+    onPress,
+    onPressDisabled,
+    onPressIn,
+    onPressOut,
+    onLayout,
+    accessible,
+    accessibilityRole,
+    accessibilityLabel,
+    accessibilityHint,
+    accessibilityState,
+  } = disabled);
   ({ accessibilityElementsHidden, importantForAccessibility, hitSlop, scaleAmountInPx } = disabled);
   closure_2 = undefined;
   let buttonAnimationProps;
@@ -42,7 +54,13 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     onPress = onPressDisabled;
   }
   let obj = flag2(accessibilityState[7]);
-  const buttonPressAnimationProps = obj.useButtonPressAnimationProps(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
+  const buttonPressAnimationProps = obj.useButtonPressAnimationProps(
+    pressed,
+    scaleAmountInPx,
+    onLayout,
+    onPressIn,
+    onPressOut,
+  );
   if (null == pressed) {
     obj = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
     obj = { onLayout: null, onPressIn: null, onPressOut: null };
@@ -83,7 +101,7 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     obj2[1] = children;
     tmp11 = jsx(tmp4(tmp5[5]).ThemeContextProvider, { theme: null, children: null });
   }
-  const items1 = [disabled.style, , , ];
+  const items1 = [disabled.style, , ,];
   if (flag) {
     flag = tmp.disabled;
   }

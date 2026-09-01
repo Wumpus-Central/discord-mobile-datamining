@@ -11,8 +11,19 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { overflow: { lineHeight: 16, textAlign: "center", textAlignVertical: "center", padding: 4 }, overflowContainer: null, container: null, modeMuted: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, display: "flex", alignItems: "center", justifyContent: "center" };
+createCacheKey = {
+  overflow: { lineHeight: 16, textAlign: "center", textAlignVertical: "center", padding: 4 },
+  overflowContainer: null,
+  container: null,
+  modeMuted: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.xs,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { display: "flex", flexDirection: "row" };
 createCacheKey[3] = { opacity: 0.3 };
@@ -46,7 +57,7 @@ export default function ChannelItemEmbeddedActivities(muted) {
     obj1[0] = embeddedApps[0].application;
     obj1[1] = size;
     obj1[2] = { marginRight: 4 };
-    const items = [callback(GameIconDefault, obj1), ];
+    const items = [callback(GameIconDefault, obj1)];
     if (2 === embeddedApps.length) {
       obj = { game: null, size: null };
       obj[0] = embeddedApps[1].application;
@@ -54,7 +65,7 @@ export default function ChannelItemEmbeddedActivities(muted) {
       let tmp16Result = tmp16(GameIconDefault, obj);
     } else {
       const obj2 = { style: null, children: null };
-      const items1 = [tmp3.overflowContainer, ];
+      const items1 = [tmp3.overflowContainer];
       const obj3 = { height: null, minWidth: null };
       obj3[0] = tmp13;
       obj3[1] = tmp13;
@@ -71,4 +82,4 @@ export default function ChannelItemEmbeddedActivities(muted) {
     obj[1] = items;
     return closure_5(View, obj);
   }
-};
+}

@@ -17,13 +17,21 @@ let require = arg1;
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, disclaimer: null };
-  obj = { paddingBottom: ThemesDefault.space.PX_12 + arg0, paddingTop: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+  obj = {
+    paddingBottom: ThemesDefault.space.PX_12 + arg0,
+    paddingTop: ThemesDefault.space.PX_12,
+    paddingHorizontal: ThemesDefault.space.PX_16,
+    gap: ThemesDefault.space.PX_8,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  };
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_TOP_HIGH);
   obj[0] = obj;
   obj[1] = { includeFontPadding: true };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopGiftPurchaseSection.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/CollectiblesShopGiftPurchaseSection.tsx",
+);
 
 export default function CollectiblesShopGiftPurchaseSection(disabled) {
   const product = disabled.product;
@@ -43,7 +51,11 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
   let obj = require(giftingOrigin[13]);
   const items = [closure_7];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const obj = { nextTier: getNextTier(product(giftingOrigin[14]).BadgeId.GIFTING), giftsToNextTier: getRemainingToNextTier(product(giftingOrigin[14]).BadgeId.GIFTING), badgeProgress: null };
+    const obj = {
+      nextTier: getNextTier(product(giftingOrigin[14]).BadgeId.GIFTING),
+      giftsToNextTier: getRemainingToNextTier(product(giftingOrigin[14]).BadgeId.GIFTING),
+      badgeProgress: null,
+    };
     ({ getNextTier, getRemainingToNextTier, getSingleRequirementProgress } = closure_7);
     const singleRequirementProgress = getSingleRequirementProgress(product(giftingOrigin[14]).BadgeId.GIFTING);
     let current;
@@ -72,7 +84,16 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
     }
     _undefined(false);
   }, items1);
-  obj = { product, analyticsLocations: giftOptions(giftingOrigin[15])().analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null, giftParams: null };
+  obj = {
+    product,
+    analyticsLocations: giftOptions(giftingOrigin[15])().analyticsLocations,
+    orderId: null,
+    analyticsData: null,
+    onPurchaseComplete: null,
+    onPurchaseError: null,
+    onPurchasePending: null,
+    giftParams: null,
+  };
   let id;
   let tmp = giftOptions;
   const tmp6 = callback2(React.useState(false), 2);
@@ -111,7 +132,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
             return closure_2_13(closure_0, { giftStyle: STANDARD_BOX, giftBadgeProgress: closure_1_3 });
           };
         });
-      }
+      },
     };
     giftOptions(giftingOrigin[21]).openLazy(obj);
     const obj3 = giftOptions(giftingOrigin[21]);
@@ -122,9 +143,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
     }
   };
   obj[5] = callback;
-  obj[6] = function onPurchasePending() {
-
-  };
+  obj[6] = function onPurchasePending() {};
   obj[7] = { isGift: true, options: giftOptions };
   closure_10 = giftOptions(giftingOrigin[18])(obj);
   obj = { style: tmp3.container, children: null };
@@ -145,7 +164,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
       const tmpResult = tmp(tmp2[25]);
     }
   }
-  const items2 = [tmp17Result, , ];
+  const items2 = [tmp17Result, ,];
   const obj2 = { variant: "text-xs/normal", style: tmp3.disclaimer, children: null };
   const intl = tmp4(tmp2[27]).intl;
   let obj3 = { buyButtonLabel: null, paidServiceTermURL: null, virtualGoodsURL: null };
@@ -157,7 +176,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
   const obj4 = { disabled: disabled.isPurchaseDisabled, loading: tmp7, variant: "active", text: null, onPress: null };
   const intl3 = tmp4(tmp2[27]).intl;
   obj4[3] = intl3.string(require(giftingOrigin[27]).t.ouo4FK);
-  obj4[4] = callback(function*() {
+  obj4[4] = callback(function* () {
     if (c2 === 2) {
       c2 = 3;
       HermesBuiltin.throwTypeError();
@@ -219,4 +238,4 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
   items2[2] = callback3(require(giftingOrigin[28]).Button, obj4);
   obj[1] = items2;
   return closure_14(closure_6, obj);
-};
+}

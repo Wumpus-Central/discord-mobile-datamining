@@ -17,24 +17,33 @@ export const useGuildMembers = function useGuildMembers(id, callback) {
   closure_1 = callback;
   const items = [closure_4];
   const items1 = [id, callback];
-  stateFromStoresArray = _require(stateFromStoresArray[5]).useStateFromStoresArray(items, () => {
-    const members = closure_1_4.getMembers(closure_0);
-    let found = members;
-    if (null != callback) {
-      found = members.filter(tmp);
-    }
-    return found;
-  }, items1);
+  stateFromStoresArray = _require(stateFromStoresArray[5]).useStateFromStoresArray(
+    items,
+    () => {
+      const members = closure_1_4.getMembers(closure_0);
+      let found = members;
+      if (null != callback) {
+        found = members.filter(tmp);
+      }
+      return found;
+    },
+    items1,
+  );
   const obj = _require(stateFromStoresArray[5]);
   const items2 = [closure_5];
   const items3 = [stateFromStoresArray];
-  const stateFromStoresObject = _require(stateFromStoresArray[5]).useStateFromStoresObject(items2, () => stateFromStoresArray.reduce((arg0, userId) => {
-    user = user.getUser(userId.userId);
-    if (null != user) {
-      arg0[userId.userId] = user;
-    }
-    return arg0;
-  }, {}), items3);
+  const stateFromStoresObject = _require(stateFromStoresArray[5]).useStateFromStoresObject(
+    items2,
+    () =>
+      stateFromStoresArray.reduce((arg0, userId) => {
+        user = user.getUser(userId.userId);
+        if (null != user) {
+          arg0[userId.userId] = user;
+        }
+        return arg0;
+      }, {}),
+    items3,
+  );
   const items4 = [stateFromStoresArray, stateFromStoresObject, id];
   return stateFromStoresObject.useMemo(() => {
     const items = [];
@@ -55,7 +64,18 @@ export const useGuildMembers = function useGuildMembers(id, callback) {
           let tmp8 = tmp5;
           nick = obj2.getName(obj);
         }
-        obj = { name: null, userTag: null, id: null, avatarSource: null, avatarURL: null, bot: null, verifiedBot: null, roles: null, key: null, user: null };
+        obj = {
+          name: null,
+          userTag: null,
+          id: null,
+          avatarSource: null,
+          avatarURL: null,
+          bot: null,
+          verifiedBot: null,
+          roles: null,
+          key: null,
+          user: null,
+        };
         obj[0] = nick;
         let tmp9 = callback;
         let tmp10 = stateFromStoresArray;
@@ -101,24 +121,33 @@ export const useGuildRoleMembers = function useGuildRoleMembers(id, id2, onMembe
   stateFromStoresObject = undefined;
   const items2 = [closure_4];
   const items3 = [id, callback];
-  stateFromStoresArray = _require(stateFromStoresArray[5]).useStateFromStoresArray(items2, () => {
-    const members = closure_1_4.getMembers(closure_0);
-    let found = members;
-    if (null != callback) {
-      found = members.filter(tmp);
-    }
-    return found;
-  }, items3);
+  stateFromStoresArray = _require(stateFromStoresArray[5]).useStateFromStoresArray(
+    items2,
+    () => {
+      const members = closure_1_4.getMembers(closure_0);
+      let found = members;
+      if (null != callback) {
+        found = members.filter(tmp);
+      }
+      return found;
+    },
+    items3,
+  );
   let obj = _require(stateFromStoresArray[5]);
   const items4 = [closure_5];
   const items5 = [stateFromStoresArray];
-  stateFromStoresObject = _require(stateFromStoresArray[5]).useStateFromStoresObject(items4, () => stateFromStoresArray.reduce((arg0, userId) => {
-    user = user.getUser(userId.userId);
-    if (null != user) {
-      arg0[userId.userId] = user;
-    }
-    return arg0;
-  }, {}), items5);
+  stateFromStoresObject = _require(stateFromStoresArray[5]).useStateFromStoresObject(
+    items4,
+    () =>
+      stateFromStoresArray.reduce((arg0, userId) => {
+        user = user.getUser(userId.userId);
+        if (null != user) {
+          arg0[userId.userId] = user;
+        }
+        return arg0;
+      }, {}),
+    items5,
+  );
   const items6 = [stateFromStoresArray, stateFromStoresObject, id];
   return stateFromStoresObject.useMemo(() => {
     const items = [];
@@ -139,7 +168,18 @@ export const useGuildRoleMembers = function useGuildRoleMembers(id, id2, onMembe
           let tmp8 = tmp5;
           nick = obj2.getName(obj);
         }
-        obj = { name: null, userTag: null, id: null, avatarSource: null, avatarURL: null, bot: null, verifiedBot: null, roles: null, key: null, user: null };
+        obj = {
+          name: null,
+          userTag: null,
+          id: null,
+          avatarSource: null,
+          avatarURL: null,
+          bot: null,
+          verifiedBot: null,
+          roles: null,
+          key: null,
+          user: null,
+        };
         obj[0] = nick;
         let tmp9 = callback;
         let tmp10 = stateFromStoresArray;

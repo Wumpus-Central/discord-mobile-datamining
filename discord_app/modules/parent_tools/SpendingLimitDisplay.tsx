@@ -16,7 +16,11 @@ function getSpendingLimitDisplayState(amount) {
   } else {
     const currency = amount.currency;
     const obj6 = formatSingleCurrencyPrice;
-    const formatRateResult = obj6.formatRate(formatSingleCurrencyPrice.formatPrice(amount.amount, currency), SubscriptionIntervalTypes.MONTH, 1);
+    const formatRateResult = obj6.formatRate(
+      formatSingleCurrencyPrice.formatPrice(amount.amount, currency),
+      SubscriptionIntervalTypes.MONTH,
+      1,
+    );
     if (arg1 >= amount.amount) {
       let obj = { kind: "spent", monthlyText: null };
       obj[1] = formatRateResult;
@@ -48,25 +52,30 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/Spendi
 
 export const useSpendingLimitFromUserSettings = function useSpendingLimitFromUserSettings() {
   const items = [closure_3];
-  return initialize.useStateFromStores(items, () => {
-    const safetySettings = settings.settings.safetySettings;
-    let oneTimePurchaseLimit;
-    if (safetySettings != null) {
-      const spendingLimitSettings = safetySettings.spendingLimitSettings;
-      if (spendingLimitSettings != null) {
-        oneTimePurchaseLimit = spendingLimitSettings.oneTimePurchaseLimit;
+  return initialize.useStateFromStores(
+    items,
+    () => {
+      const safetySettings = settings.settings.safetySettings;
+      let oneTimePurchaseLimit;
+      if (safetySettings != null) {
+        const spendingLimitSettings = safetySettings.spendingLimitSettings;
+        if (spendingLimitSettings != null) {
+          oneTimePurchaseLimit = spendingLimitSettings.oneTimePurchaseLimit;
+        }
       }
-    }
-    let tmp2 = null;
-    if (null != oneTimePurchaseLimit) {
-      const obj = { amount: null, currency: null };
-      const _Number = Number;
-      obj[0] = Number(oneTimePurchaseLimit.amount);
-      obj[1] = oneTimePurchaseLimit.currency;
-      tmp2 = obj;
-    }
-    return tmp2;
-  }, undefined, spendingLimitEqual.spendingLimitEqual);
+      let tmp2 = null;
+      if (null != oneTimePurchaseLimit) {
+        const obj = { amount: null, currency: null };
+        const _Number = Number;
+        obj[0] = Number(oneTimePurchaseLimit.amount);
+        obj[1] = oneTimePurchaseLimit.currency;
+        tmp2 = obj;
+      }
+      return tmp2;
+    },
+    undefined,
+    spendingLimitEqual.spendingLimitEqual,
+  );
 };
 export const CLOSE_TO_LIMIT_THRESHOLD_MAJOR_UNITS = 10;
 export { getSpendingLimitDisplayState };

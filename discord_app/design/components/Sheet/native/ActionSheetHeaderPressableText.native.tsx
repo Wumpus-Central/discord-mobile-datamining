@@ -11,12 +11,24 @@ const result = set.fileFinishedImporting("design/components/Sheet/native/ActionS
 
 export const ActionSheetHeaderPressableText = function ActionSheetHeaderPressableText(onPress) {
   ({ label, accessibilityLabel } = onPress);
-  const obj = { style: callback().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null };
+  const obj = {
+    style: callback().container,
+    accessibilityRole: "button",
+    onPress: onPress.onPress,
+    accessibilityLabel: null,
+    children: null,
+  };
   let tmp5 = label;
   if (null != accessibilityLabel) {
     tmp5 = accessibilityLabel;
   }
   obj[3] = tmp5;
   obj[4] = jsx(Text.Text, { variant: "text-md/medium", color: "text-brand", children: label });
-  return jsx(PressableBase.PressableOpacity, { style: callback().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null });
+  return jsx(PressableBase.PressableOpacity, {
+    style: callback().container,
+    accessibilityRole: "button",
+    onPress: onPress.onPress,
+    accessibilityLabel: null,
+    children: null,
+  });
 };

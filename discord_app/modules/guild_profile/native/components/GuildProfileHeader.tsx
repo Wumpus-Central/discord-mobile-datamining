@@ -11,8 +11,28 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 }, avatarBackground: null, members: null, memberCount: null, dot: null, dotOnline: null, established: null, nameRow: null, guildName: null, guildIcon: null };
-createCacheKey = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
+createCacheKey = {
+  header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 },
+  avatarBackground: null,
+  members: null,
+  memberCount: null,
+  dot: null,
+  dotOnline: null,
+  established: null,
+  nameRow: null,
+  guildName: null,
+  guildIcon: null,
+};
+createCacheKey = {
+  width: 86,
+  height: 86,
+  borderRadius: 28.666666666666668,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { display: "flex", flexDirection: "row", gap: 8 };
 createCacheKey[3] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 };
@@ -48,7 +68,10 @@ export default function GuildProfileHeader(icon) {
     const guildTraits = profile(stateFromStores1[13]).getGuildTraits(fromGuildProfileResult);
     const obj2 = profile(stateFromStores1[13]);
     const obj3 = profile(stateFromStores1[14]);
-    ({ tooltipTitle, tooltipSubtitle } = closure_1_8(profile(stateFromStores1[14]).getBadgeCategory(guildTraits), guildTraits.visibility));
+    ({ tooltipTitle, tooltipSubtitle } = closure_1_8(
+      profile(stateFromStores1[14]).getBadgeCategory(guildTraits),
+      guildTraits.visibility,
+    ));
     if (!tmp5) {
       if (tooltipSubtitle == null) {
         tooltipSubtitle = tooltipTitle;
@@ -62,14 +85,18 @@ export default function GuildProfileHeader(icon) {
   let obj4 = profile(stateFromStores1[9]);
   const items2 = [closure_7, closure_6];
   const items3 = [id];
-  stateFromStores1 = obj4.useStateFromStores(items2, () => {
-    const member = closure_1_7.getMember(id, closure_1_6.getId());
-    let joinedAt;
-    if (member != null) {
-      joinedAt = member.joinedAt;
-    }
-    return null != joinedAt;
-  }, items3);
+  stateFromStores1 = obj4.useStateFromStores(
+    items2,
+    () => {
+      const member = closure_1_7.getMember(id, closure_1_6.getId());
+      let joinedAt;
+      if (member != null) {
+        joinedAt = member.joinedAt;
+      }
+      return null != joinedAt;
+    },
+    items3,
+  );
   const items4 = [id, stateFromStores1];
   obj = { style: tmp.header, children: null };
   obj = { style: tmp.avatarBackground, children: null };
@@ -88,29 +115,37 @@ export default function GuildProfileHeader(icon) {
   obj1[1] = profile(stateFromStores1[18]).GuildIconSizes.XXLARGE;
   obj1[3] = profile.name;
   obj[1] = callback(id(stateFromStores1[18]), obj1);
-  const items5 = [callback(View, obj), , , ];
+  const items5 = [callback(View, obj), , ,];
   obj2 = { style: tmp.nameRow, children: null };
   let tmp15;
   if (stateFromStores1) {
     tmp15 = callback1;
   }
-  obj3 = { onPress: tmp15, style: tmp.guildName, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: profile.name };
-  const items6 = [callback(profile(stateFromStores1[19]).Text, obj3), ];
+  obj3 = {
+    onPress: tmp15,
+    style: tmp.guildName,
+    accessibilityRole: "header",
+    variant: "heading-xl/semibold",
+    color: "mobile-text-heading-primary",
+    lineClamp: 1,
+    children: profile.name,
+  };
+  const items6 = [callback(profile(stateFromStores1[19]).Text, obj3)];
   obj4 = { onPress: callback, children: tmp13(tmp5(tmp3[21]), obj5) };
   items6[1] = callback(profile(stateFromStores1[20]).PressableHighlight, obj4);
   obj2[1] = items6;
   items5[1] = closure_10(View, obj2);
   const obj6 = { style: tmp.members, children: null };
   const obj7 = { style: tmp.memberCount, children: null };
-  const items7 = [callback(View, { style: tmp.dotOnline }), ];
+  const items7 = [callback(View, { style: tmp.dotOnline })];
   const obj9 = { variant: "text-md/medium", color: "text-default", children: null };
   const intl = tmp2(tmp3[22]).intl;
   obj9[2] = intl.format(profile(stateFromStores1[22]).t["LC+S+m"], { membersOnline: profile.onlineCount });
   items7[1] = callback(profile(stateFromStores1[19]).Text, obj9);
   obj7[1] = items7;
-  const items8 = [closure_10(View, obj7), ];
+  const items8 = [closure_10(View, obj7)];
   const obj11 = { style: tmp.memberCount, children: null };
-  const items9 = [callback(View, { style: tmp.dot }), ];
+  const items9 = [callback(View, { style: tmp.dot })];
   const obj13 = { variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = tmp2(tmp3[22]).intl;
   obj13[2] = intl2.format(profile(stateFromStores1[22]).t.zRl6XR, { count: profile.memberCount });
@@ -127,5 +162,5 @@ export default function GuildProfileHeader(icon) {
   items5[3] = callback(View, obj15);
   obj[1] = items5;
   return closure_10(View, obj);
-};
+}
 export const useStyles = createCacheKey;

@@ -12,7 +12,7 @@ function _createTwoWayLink() {
     c9 = 0;
     c10 = 0;
     c8 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c10 === 2) {
         c10 = 3;
         HermesBuiltin.throwTypeError();
@@ -256,7 +256,7 @@ function _silentlyFinishTwoWayLinkError() {
     c4 = 0;
     c3 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       c6 = 1;
       obj1 = callback(table[7]);
       yield obj1.finishUserCodeTwoWayLinkError(callback, closure_1, table);
@@ -295,7 +295,7 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -430,7 +430,7 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
     })();
   });
   const items = [callback, callback2, callback1];
-  return React.useCallback(function() {
+  return React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

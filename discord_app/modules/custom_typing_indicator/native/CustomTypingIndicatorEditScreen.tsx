@@ -16,14 +16,28 @@ const require = arg1;
 createCacheKey = { screen: { flex: 1 }, container: null, previewContainer: null, section: null, description: null };
 createCacheKey = { padding: ThemesDefault.space.PX_16, rowGap: ThemesDefault.space.PX_24 };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { height: 140, display: "flex", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
-let obj1 = { height: 140, display: "flex", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
+createCacheKey[2] = {
+  height: 140,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+};
+let obj1 = {
+  height: 140,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+};
 createCacheKey[3] = { rowGap: ThemesDefault.space.PX_8 };
 let obj2 = { rowGap: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_4 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { marginTop: ThemesDefault.space.PX_4 };
-let result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorEditScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/custom_typing_indicator/native/CustomTypingIndicatorEditScreen.tsx",
+);
 
 export default function CustomTypingIndicatorEditScreen() {
   let tmp = callback();
@@ -48,17 +62,23 @@ export default function CustomTypingIndicatorEditScreen() {
   if (!result) {
     tmp8 = !isTryItOut;
   }
-  first = first(first1.useState(nativeStackNavigation(tmp3[18]).useCurrentCustomTypingIndicatorConfig(isTryItOut)), 1)[0];
-  const tmp10 = first(first1.useState(() => {
-    if (obj.hasCustomTypingIndicatorEmojis(first.emojis)) {
-      let emojis = first.emojis;
-    } else {
-      const _Array = Array;
-      emojis = Array(nativeStackNavigation(analyticsLocations[19]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT).fill(null);
-      const ArrayResult = Array(nativeStackNavigation(analyticsLocations[19]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT);
-    }
-    return emojis;
-  }), 2);
+  first = first(
+    first1.useState(nativeStackNavigation(tmp3[18]).useCurrentCustomTypingIndicatorConfig(isTryItOut)),
+    1,
+  )[0];
+  const tmp10 = first(
+    first1.useState(() => {
+      if (obj.hasCustomTypingIndicatorEmojis(first.emojis)) {
+        let emojis = first.emojis;
+      } else {
+        const _Array = Array;
+        emojis = Array(nativeStackNavigation(analyticsLocations[19]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT).fill(null);
+        const ArrayResult = Array(nativeStackNavigation(analyticsLocations[19]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT);
+      }
+      return emojis;
+    }),
+    2,
+  );
   first1 = tmp10[0];
   closure_6 = tmp10[1];
   const tmp12 = first(first1.useState(first.typingSuggestion), 2);
@@ -72,32 +92,45 @@ export default function CustomTypingIndicatorEditScreen() {
   const tmp16 = memo.length === nativeStackNavigation(tmp3[19]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT;
   closure_12 = tmp16;
   const items2 = [tmp16, memo, first2, first3];
-  const memo1 = first1.useMemo(() => ({ emojis: closure_12 ? memo : [], typingSuggestion: first2, animation: first3 }), items2);
+  const memo1 = first1.useMemo(
+    () => ({ emojis: closure_12 ? memo : [], typingSuggestion: first2, animation: first3 }),
+    items2,
+  );
   const tmp18 = isTryItOut(tmp3[20])(memo1, first);
   callback = tmp19;
   const items3 = [first2];
   callback = first1.useCallback((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
-    callback((arr) => arr.map((arg0, arg1) => {
-      if (arg1 === closure_0) {
-        let tmp = closure_1;
-      } else {
-        tmp = arg0;
-      }
-      return tmp;
-    }));
+    callback((arr) =>
+      arr.map((arg0, arg1) => {
+        if (arg1 === closure_0) {
+          let tmp = closure_1;
+        } else {
+          tmp = arg0;
+        }
+        return tmp;
+      }),
+    );
   }, []);
   const items4 = [memo, first3];
   const callback1 = first1.useCallback(() => {
     let obj = isTryItOut(analyticsLocations[21]);
     obj = { initialValue: first2, onChange: closure_8 };
-    obj.openLazy(nativeStackNavigation(analyticsLocations[23])(analyticsLocations[22], analyticsLocations.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", obj);
+    obj.openLazy(
+      nativeStackNavigation(analyticsLocations[23])(analyticsLocations[22], analyticsLocations.paths),
+      "CustomTypingIndicatorTypingSuggestionPickerSheet",
+      obj,
+    );
   }, items3);
   const callback2 = first1.useCallback(() => {
     let obj = isTryItOut(analyticsLocations[21]);
     obj = { emojis: memo, initialAnimation: first3, onChange: closure_10 };
-    obj.openLazy(nativeStackNavigation(analyticsLocations[23])(analyticsLocations[24], analyticsLocations.paths), "CustomTypingIndicatorAnimationPickerSheet", obj);
+    obj.openLazy(
+      nativeStackNavigation(analyticsLocations[23])(analyticsLocations[24], analyticsLocations.paths),
+      "CustomTypingIndicatorAnimationPickerSheet",
+      obj,
+    );
   }, items4);
   closure_15 = first1.useRef(null);
   const callback3 = first1.useCallback(() => {
@@ -124,120 +157,123 @@ export default function CustomTypingIndicatorEditScreen() {
   [tmp26, closure_16] = first(first1.useState(false), 2);
   closure_17 = first1.useRef(false);
   const items5 = [!tmp18, memo1, isTryItOut, entryPoint, nativeStackNavigation, memo, first3, first2];
-  let callback5 = first1.useCallback(entryPoint(function*() {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  let callback5 = first1.useCallback(
+    entryPoint(function* () {
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_2 = tmp2;
+              let firstFieldErrorMessage = 0;
+              let ok;
+              firstFieldErrorMessage = undefined;
+              if (closure_1_14) {
+                if (!closure_1_17.current) {
+                  let tmp34 = closure_1_13;
+                  if (tmp33(closure_1_13, closure_1_0(closure_1_2[19]).EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG)) {
+                    tmp34 = null;
+                  }
+                  if (closure_1_1) {
+                    const result = closure_1_0(closure_1_2[26]).setTryItOutCustomTypingIndicatorStyle(tmp34);
+                    const obj10 = closure_1_0(closure_1_2[26]);
+                  } else if ("profile" === c3) {
+                    obj1 = { customTypingIndicatorStyle: null };
+                    obj1[0] = tmp34;
+                    closure_1_0(closure_1_2[27]).setPendingChanges(obj1);
+                    const obj8 = closure_1_0(closure_1_2[27]);
+                  } else {
+                    closure_1_17.current = true;
+                    closure_1_16(true);
+                    let obj4 = closure_1_0(closure_1_2[28]);
+                    const obj2 = { typingIndicatorStyle: null };
+                    obj2[0] = tmp34;
+                    c3 = 1;
+                    c4 = 1;
+                    const obj3 = { value: null, done: false };
+                    obj3[0] = obj4.saveProfileAndAccountChanges(obj2);
+                    return obj3;
+                  }
+                  tmp33 = closure_1_1(closure_1_2[20]);
+                }
+              }
+              c4 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          } else if (arg0 === 1) {
             c4 = 3;
             throw arg1;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
           } else {
-            closure_2 = tmp2;
-            let firstFieldErrorMessage = 0;
-            let ok;
-            firstFieldErrorMessage = undefined;
-            if (closure_1_14) {
-              if (!closure_1_17.current) {
-                let tmp34 = closure_1_13;
-                if (tmp33(closure_1_13, closure_1_0(closure_1_2[19]).EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG)) {
-                  tmp34 = null;
-                }
-                if (closure_1_1) {
-                  const result = closure_1_0(closure_1_2[26]).setTryItOutCustomTypingIndicatorStyle(tmp34);
-                  const obj10 = closure_1_0(closure_1_2[26]);
-                } else if ("profile" === c3) {
-                  obj1 = { customTypingIndicatorStyle: null };
-                  obj1[0] = tmp34;
-                  closure_1_0(closure_1_2[27]).setPendingChanges(obj1);
-                  const obj8 = closure_1_0(closure_1_2[27]);
-                } else {
-                  closure_1_17.current = true;
-                  closure_1_16(true);
-                  let obj4 = closure_1_0(closure_1_2[28]);
-                  const obj2 = { typingIndicatorStyle: null };
-                  obj2[0] = tmp34;
-                  c3 = 1;
-                  c4 = 1;
-                  const obj3 = { value: null, done: false };
-                  obj3[0] = obj4.saveProfileAndAccountChanges(obj2);
-                  return obj3;
-                }
-                tmp33 = closure_1_1(closure_1_2[20]);
+            ok = arg1;
+            closure_17.current = false;
+            callback(false);
+            ok = undefined;
+            if (ok != null) {
+              ok = ok.ok;
+            }
+            if (!ok) {
+              firstFieldErrorMessage = null;
+              if (null != ok) {
+                const aPIError = new closure_1_0(closure_1_2[29]).APIError(ok);
+                firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("typing_indicator_style");
               }
+              obj1 = closure_1_0(closure_1_2[30]);
+              ok = firstFieldErrorMessage;
+              if (firstFieldErrorMessage == null) {
+                const intl = closure_1_0(closure_1_2[10]).intl;
+                ok = intl.string(closure_1_0(closure_1_2[10]).t["84MExs"]);
+              }
+              const result1 = obj1.showGenericProfileUpdateFailureToast(ok);
+              c4 = 3;
+              const obj5 = { value: null, done: true };
+              obj5[0] = undefined;
+              return obj5;
             }
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
-        } else {
-          ok = arg1;
-          closure_17.current = false;
-          callback(false);
-          ok = undefined;
-          if (ok != null) {
-            ok = ok.ok;
+          const obj6 = { emoji_names: null, animation_name: null, typing_suggestion: null, custom_emoji_count: null };
+          obj6[0] = closure_1_11.map((name) => name.name);
+          obj6[1] = closure_1_0(closure_1_2[9]).TypingIndicatorAnimation[closure_1_9];
+          obj6[2] = closure_1_0(closure_1_2[9]).TypingSuggestion[closure_1_7];
+          obj6[3] = closure_1_11.filter((id) => null != id.id).length;
+          closure_1_1(closure_1_2[25]).track(closure_1_9.TYPING_INDICATOR_STYLE_APPLIED, obj6);
+          if (closure_1_0.isFocused()) {
+            closure_1_0.goBack();
           }
-          if (!ok) {
-            firstFieldErrorMessage = null;
-            if (null != ok) {
-              const aPIError = new closure_1_0(closure_1_2[29]).APIError(ok);
-              firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("typing_indicator_style");
-            }
-            obj1 = closure_1_0(closure_1_2[30]);
-            ok = firstFieldErrorMessage;
-            if (firstFieldErrorMessage == null) {
-              const intl = closure_1_0(closure_1_2[10]).intl;
-              ok = intl.string(closure_1_0(closure_1_2[10]).t["84MExs"]);
-            }
-            const result1 = obj1.showGenericProfileUpdateFailureToast(ok);
-            c4 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = undefined;
-            return obj5;
-          }
+          const obj11 = closure_1_1(closure_1_2[25]);
+        } catch (tmp66) {
+          c4 = tmp;
+          throw tmp66;
         }
-        const obj6 = { emoji_names: null, animation_name: null, typing_suggestion: null, custom_emoji_count: null };
-        obj6[0] = closure_1_11.map((name) => name.name);
-        obj6[1] = closure_1_0(closure_1_2[9]).TypingIndicatorAnimation[closure_1_9];
-        obj6[2] = closure_1_0(closure_1_2[9]).TypingSuggestion[closure_1_7];
-        obj6[3] = closure_1_11.filter((id) => null != id.id).length;
-        closure_1_1(closure_1_2[25]).track(closure_1_9.TYPING_INDICATOR_STYLE_APPLIED, obj6);
-        if (closure_1_0.isFocused()) {
-          closure_1_0.goBack();
-        }
-        const obj11 = closure_1_1(closure_1_2[25]);
-      } catch (tmp66) {
-        c4 = tmp;
-        throw tmp66;
       }
-    }
-  }), items5);
+    }),
+    items5,
+  );
   const items6 = [analyticsLocations];
   obj = { style: tmp.screen, children: null };
   const container = tmp.container;
@@ -265,12 +301,15 @@ export default function CustomTypingIndicatorEditScreen() {
     tmp35Result = tmp35(tmp6Result, obj3);
   }
   obj2[1] = tmp35Result;
-  const items7 = [closure_12(first2, obj2), , , ];
+  const items7 = [closure_12(first2, obj2), , ,];
   obj4 = { style: tmp.section, children: null };
   let obj5 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", children: null };
   let intl = tmp2(tmp3[10]).intl;
   obj5[3] = intl.string(isTryItOut(tmp3[11])["l8CZ7+"]);
-  const items8 = [closure_12(nativeStackNavigation(tmp3[34]).Text, obj5), closure_12(isTryItOut(tmp3[35]), { emojis: first1, onChange: callback }), ];
+  const items8 = [
+    closure_12(nativeStackNavigation(tmp3[34]).Text, obj5),
+    closure_12(isTryItOut(tmp3[35]), { emojis: first1, onChange: callback }),
+  ];
   let obj6 = { label: null, arrow: true, disabled: null, trailing: null, onPress: null };
   const intl2 = tmp2(tmp3[10]).intl;
   obj6[0] = intl2.string(isTryItOut(tmp3[11]).iVKTbA);
@@ -299,7 +338,7 @@ export default function CustomTypingIndicatorEditScreen() {
   const obj9 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", children: null };
   const intl6 = tmp2(tmp3[10]).intl;
   obj9[3] = intl6.string(isTryItOut(tmp3[11]).BGCQqw);
-  const items9 = [closure_12(nativeStackNavigation(tmp3[34]).Text, obj9), , ];
+  const items9 = [closure_12(nativeStackNavigation(tmp3[34]).Text, obj9), ,];
   let obj10 = { hasIcons: false, children: null };
   let obj11 = { label: null, arrow: true, trailing: null, onPress: null };
   const intl7 = tmp2(tmp3[10]).intl;
@@ -313,7 +352,13 @@ export default function CustomTypingIndicatorEditScreen() {
   obj11[3] = callback1;
   obj10[1] = closure_12(nativeStackNavigation(tmp3[37]).TableRow, obj11);
   items9[1] = closure_12(nativeStackNavigation(tmp3[36]).TableRowGroup, obj10);
-  const obj13 = { style: tmp.description, variant: "text-xs/normal", color: "text-muted", includeFontPadding: true, children: null };
+  const obj13 = {
+    style: tmp.description,
+    variant: "text-xs/normal",
+    color: "text-muted",
+    includeFontPadding: true,
+    children: null,
+  };
   const intl9 = tmp2(tmp3[10]).intl;
   const obj14 = { helpCenterUrl: null };
   const tmp2Result2 = nativeStackNavigation(tmp3[18]);
@@ -323,12 +368,24 @@ export default function CustomTypingIndicatorEditScreen() {
   obj8[1] = items9;
   items7[2] = memo1(first2, obj8);
   const obj15 = { spacing: 8, children: null };
-  const obj16 = { variant: "secondary", size: "lg", icon: closure_12(nativeStackNavigation(tmp3[41]).DiceIcon, {}), text: null, onPress: null };
+  const obj16 = {
+    variant: "secondary",
+    size: "lg",
+    icon: closure_12(nativeStackNavigation(tmp3[41]).DiceIcon, {}),
+    text: null,
+    onPress: null,
+  };
   const intl10 = tmp2(tmp3[10]).intl;
   obj16[3] = intl10.string(isTryItOut(tmp3[11]).q4045h);
   obj16[4] = callback3;
-  const items10 = [closure_12(nativeStackNavigation(tmp3[40]).Button, obj16), ];
-  const obj17 = { variant: "secondary", size: "lg", icon: closure_12(nativeStackNavigation(tmp3[42]).DenyIcon, {}), text: null, onPress: null };
+  const items10 = [closure_12(nativeStackNavigation(tmp3[40]).Button, obj16)];
+  const obj17 = {
+    variant: "secondary",
+    size: "lg",
+    icon: closure_12(nativeStackNavigation(tmp3[42]).DenyIcon, {}),
+    text: null,
+    onPress: null,
+  };
   const intl11 = tmp2(tmp3[10]).intl;
   obj17[3] = intl11.string(isTryItOut(tmp3[11])["UnIf+S"]);
   obj17[4] = callback4;
@@ -336,7 +393,7 @@ export default function CustomTypingIndicatorEditScreen() {
   obj15[1] = items10;
   items7[3] = memo1(nativeStackNavigation(tmp3[39]).Stack, obj15);
   obj1[1] = items7;
-  const items11 = [memo1(tmp31, obj1), ];
+  const items11 = [memo1(tmp31, obj1)];
   const obj18 = { visible: !tmp18, disabled: tmp26, loading: tmp26, text: null, onPress: null, renderButton: null };
   const tmp6Result1 = isTryItOut(tmp3[38]);
   const intl12 = tmp2(tmp3[10]).intl;
@@ -362,4 +419,4 @@ export default function CustomTypingIndicatorEditScreen() {
   items11[1] = closure_12(isTryItOut(tmp3[43]), obj18);
   obj[1] = items11;
   return memo1(first2, obj);
-};
+}

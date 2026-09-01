@@ -22,7 +22,7 @@ class InputAttachmentContainer {
         tmp7 = pressableProps;
         merged = Object.assign(pressableProps);
         pressableProps = function style(pressed) {
-          const items = [style, { pointerEvents: "auto" }, ];
+          const items = [style, { pointerEvents: "auto" }];
           let obj;
           if (pressed.pressed) {
             obj = { opacity: 0.2 };
@@ -111,20 +111,26 @@ export const useInputAttachments = function useInputAttachments(size, leading) {
           if (null == trailing1) {
             let trailingIcon2 = inputStyles.trailingText;
           }
-          [tmp21, tmp22] = trailingIcon(React.useState(() => {
-            let num = 0;
-            if (null != leadingIcon) {
-              num = inputStyles(leadingIcon[4]).ICON_SIZE.xs + tmp;
-            }
-            return num;
-          }), 2);
-          const tmp23 = trailingIcon(React.useState(() => {
-            let num = 0;
-            if (null != trailingIcon) {
-              num = inputStyles(leadingIcon[4]).ICON_SIZE.xs + tmp;
-            }
-            return num;
-          }), 2);
+          [tmp21, tmp22] = trailingIcon(
+            React.useState(() => {
+              let num = 0;
+              if (null != leadingIcon) {
+                num = inputStyles(leadingIcon[4]).ICON_SIZE.xs + tmp;
+              }
+              return num;
+            }),
+            2,
+          );
+          const tmp23 = trailingIcon(
+            React.useState(() => {
+              let num = 0;
+              if (null != trailingIcon) {
+                num = inputStyles(leadingIcon[4]).ICON_SIZE.xs + tmp;
+              }
+              return num;
+            }),
+            2,
+          );
           const first = tmp23[0];
           obj = { content: null, setWidth: null, pressableProps: null, style: null };
           obj[0] = leading;

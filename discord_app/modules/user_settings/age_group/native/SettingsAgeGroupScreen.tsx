@@ -21,7 +21,7 @@ function SettingsAgeGroupHeader() {
   obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault.PY4MA0);
-  const items = [callback(Text.Text, obj), ];
+  const items = [callback(Text.Text, obj)];
   obj = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.format(messagesProxyDefault["1DN29p"], { handleOnHelpUrlHook: callback });
@@ -31,10 +31,16 @@ function SettingsAgeGroupHeader() {
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { headerContainer: null };
-createCacheKey = { gap: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  gap: ThemesDefault.space.PX_4,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx",
+);
 
 export default function SettingsAgeGroupScreen() {
   const node = React.useMemo(() => {
@@ -43,7 +49,7 @@ export default function SettingsAgeGroupScreen() {
     obj = { label: null, settings: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback2(2919)["5Mi5TE"]);
-    const items = [, ];
+    const items = [,];
     ({ AGE_GROUP_CONFIRM: arr[0], AGE_GROUP_RESET: arr[1] } = closure_5);
     obj[1] = items;
     const items1 = [obj];
@@ -52,4 +58,4 @@ export default function SettingsAgeGroupScreen() {
     return obj.createList(obj);
   }, []);
   return callback(_modDef14340, { node });
-};
+}

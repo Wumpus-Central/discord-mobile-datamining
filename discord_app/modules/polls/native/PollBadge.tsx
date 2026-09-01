@@ -13,7 +13,14 @@ require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, text: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.round, paddingHorizontal: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, color: ThemesDefault.colors.TEXT_MUTED, flexDirection: "row", alignItems: "center" };
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.round,
+  paddingHorizontal: 8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  color: ThemesDefault.colors.TEXT_MUTED,
+  flexDirection: "row",
+  alignItems: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginLeft: 4, textTransform: "uppercase" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
@@ -24,11 +31,11 @@ export default function PollBadge(style) {
   let obj = { style: items, children: null };
   items = [tmp.container, style.style];
   obj = { size: Button.IconSizes.EXTRA_SMALL_10, source: registerAssetDefault };
-  const items1 = [callback(Button.Icon, obj), ];
+  const items1 = [callback(Button.Icon, obj)];
   obj = { style: tmp.text, variant: "text-xs/semibold", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.RgIi2B);
   items1[1] = callback(Text.Text, obj);
   obj[1] = items1;
   return callback2(View, obj);
-};
+}

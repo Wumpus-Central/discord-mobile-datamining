@@ -104,7 +104,9 @@ function computeThreadIds(record, activeJoinedUnreadThreadsForParent, selectedCh
   if (set.has(record.type)) {
     const _Object = Object;
     const obj2 = applyDefault;
-    const mapped = applyDefault.sortBy(Object.values(activeJoinedUnreadThreadsForParent), (joinTimestamp) => -joinTimestamp.joinTimestamp).map((channel) => channel.channel.id);
+    const mapped = applyDefault
+      .sortBy(Object.values(activeJoinedUnreadThreadsForParent), (joinTimestamp) => -joinTimestamp.joinTimestamp)
+      .map((channel) => channel.channel.id);
     if (tmp) {
       return mapped;
     } else if (tmp4) {
@@ -126,7 +128,10 @@ function computeThreadIds(record, activeJoinedUnreadThreadsForParent, selectedCh
         });
       }
     }
-    const sortByResult = applyDefault.sortBy(Object.values(activeJoinedUnreadThreadsForParent), (joinTimestamp) => -joinTimestamp.joinTimestamp);
+    const sortByResult = applyDefault.sortBy(
+      Object.values(activeJoinedUnreadThreadsForParent),
+      (joinTimestamp) => -joinTimestamp.joinTimestamp,
+    );
   } else {
     return [];
   }
@@ -234,11 +239,38 @@ function shouldShowInRecents(guild, record, initializationData) {
     return false;
   }
 }
-({ ChannelRecordBase: closure_14, isGuildReadableType: closure_15, isThread: closure_16, THREADED_CHANNEL_TYPES: closure_17 } = createChannelRecord);
+({
+  ChannelRecordBase: closure_14,
+  isGuildReadableType: closure_15,
+  isThread: closure_16,
+  THREADED_CHANNEL_TYPES: closure_17,
+} = createChannelRecord);
 ({ ChannelTypes: closure_30, GuildFeatures: closure_31 } = ME);
 let c34 = "placeholder-channel-id";
-let closure_35 = { CannotShow: 1, [1]: "CannotShow", DoNotShow: 2, [2]: "DoNotShow", WouldShowIfUncollapsed: 3, [3]: "WouldShowIfUncollapsed", Show: 4, [4]: "Show" };
-let obj = { CHANNEL_NOTICES: 0, [0]: "CHANNEL_NOTICES", GUILD_ACTIONS: 1, [1]: "GUILD_ACTIONS", FAVORITES: 2, [2]: "FAVORITES", RECENTS: 3, [3]: "RECENTS", UNCATEGORIZED_CHANNELS: 4, [4]: "UNCATEGORIZED_CHANNELS", FIRST_NAMED_CATEGORY: 5, [5]: "FIRST_NAMED_CATEGORY" };
+let closure_35 = {
+  CannotShow: 1,
+  [1]: "CannotShow",
+  DoNotShow: 2,
+  [2]: "DoNotShow",
+  WouldShowIfUncollapsed: 3,
+  [3]: "WouldShowIfUncollapsed",
+  Show: 4,
+  [4]: "Show",
+};
+let obj = {
+  CHANNEL_NOTICES: 0,
+  [0]: "CHANNEL_NOTICES",
+  GUILD_ACTIONS: 1,
+  [1]: "GUILD_ACTIONS",
+  FAVORITES: 2,
+  [2]: "FAVORITES",
+  RECENTS: 3,
+  [3]: "RECENTS",
+  UNCATEGORIZED_CHANNELS: 4,
+  [4]: "UNCATEGORIZED_CHANNELS",
+  FIRST_NAMED_CATEGORY: 5,
+  [5]: "FIRST_NAMED_CATEGORY",
+};
 const CHANNEL_NOTICES = obj.CHANNEL_NOTICES;
 const GUILD_ACTIONS = obj.GUILD_ACTIONS;
 const FAVORITES = obj.FAVORITES;
@@ -376,7 +408,12 @@ class ChannelListImpl {
       tmp11 = new.target;
       tmp53 = obj;
       tmp54 = initializationData;
-      obj.categories[key10112] = new ChannelListCategoryWithParent(obj, obj1[key10112], obj2[key10112], initializationData);
+      obj.categories[key10112] = new ChannelListCategoryWithParent(
+        obj,
+        obj1[key10112],
+        obj2[key10112],
+        initializationData,
+      );
       continue;
     }
     obj.recentsSectionNumber = RECENTS;
@@ -386,7 +423,21 @@ class ChannelListImpl {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     closure_1 = undefined;
-    tmp19 = new closure_66(obj, tmp52, tmp35, initializationData, features, tmp11, type, tmp32, GUILD_CATEGORY, items1, items, arr3, mutableGuildChannelsForGuild);
+    tmp19 = new closure_66(
+      obj,
+      tmp52,
+      tmp35,
+      initializationData,
+      features,
+      tmp11,
+      type,
+      tmp32,
+      GUILD_CATEGORY,
+      items1,
+      items,
+      arr3,
+      mutableGuildChannelsForGuild,
+    );
     // ThrowIfThisInitialized (0x7c)
     closure_1 = tmp19;
     tmp20 = closure_1;
@@ -418,7 +469,28 @@ class ChannelListImpl {
       tmp26 = new.target;
       tmp27 = new.target;
       tmp28 = obj;
-      tmp29 = new ChannelListRecentsCategory(obj, tmp22, tmp35, initializationData, features, tmp11, type, tmp32, GUILD_CATEGORY, items1, tmp23, iter2, mutableGuildChannelsForGuild, new.target, undefined, items2, obj1, ChannelListRecentsCategory, items3, globalThis);
+      tmp29 = new ChannelListRecentsCategory(
+        obj,
+        tmp22,
+        tmp35,
+        initializationData,
+        features,
+        tmp11,
+        type,
+        tmp32,
+        GUILD_CATEGORY,
+        items1,
+        tmp23,
+        iter2,
+        mutableGuildChannelsForGuild,
+        new.target,
+        undefined,
+        items2,
+        obj1,
+        ChannelListRecentsCategory,
+        items3,
+        globalThis,
+      );
       tmp30 = tmp29;
       // ThrowIfThisInitialized (0x7c)
       closure_1 = tmp29;
@@ -449,7 +521,26 @@ class ChannelListImpl {
       throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
     }
     closure_1 = undefined;
-    tmp38 = new ChannelListVoiceChannelsCategory(obj, tmp22, tmp35, initializationData, features, tmp11, type, tmp32, GUILD_CATEGORY, items1, iter, iter2, tmp36, new.target, undefined, items2, obj1, throwTypeErrorResult2);
+    tmp38 = new ChannelListVoiceChannelsCategory(
+      obj,
+      tmp22,
+      tmp35,
+      initializationData,
+      features,
+      tmp11,
+      type,
+      tmp32,
+      GUILD_CATEGORY,
+      items1,
+      iter,
+      iter2,
+      tmp36,
+      new.target,
+      undefined,
+      items2,
+      obj1,
+      throwTypeErrorResult2,
+    );
     // ThrowIfThisInitialized (0x7c)
     closure_1 = tmp38;
     tmp38.hiddenChannelIds = null;
@@ -489,7 +580,10 @@ class ChannelListImpl {
     obj4 = Object.create(tmp45.prototype);
     obj4.rows = importDefault;
     obj.channelNoticeSection = obj4;
-    tmp47 = require("../../../_runtime/metro/00038__.js")(!("null" in obj.categories), "somehow a null got into categories");
+    tmp47 = require("../../../_runtime/metro/00038__.js")(
+      !("null" in obj.categories),
+      "somehow a null got into categories",
+    );
     tmp20Result = require("apply");
     obj.voiceChannelsSectionNumber = FIRST_NAMED_CATEGORY + tmp20Result.size(obj.categories);
     return obj;
@@ -498,9 +592,14 @@ class ChannelListImpl {
 const prototype = ChannelListImpl.prototype;
 Object.defineProperty(prototype, "initializationData", {
   get: function initializationData(arg0) {
-    return { selectedChannel: store5.getChannel(store7.getChannelId()), selectedVoiceChannelId: store7.getVoiceChannelId(), activeJoinedRelevantThreads: store4.getActiveJoinedRelevantThreadsForGuild(this.id), activeJoinedUnreadThreads: store4.getActiveJoinedUnreadThreadsForGuild(this.id) };
+    return {
+      selectedChannel: store5.getChannel(store7.getChannelId()),
+      selectedVoiceChannelId: store7.getVoiceChannelId(),
+      activeJoinedRelevantThreads: store4.getActiveJoinedRelevantThreadsForGuild(this.id),
+      activeJoinedUnreadThreads: store4.getActiveJoinedUnreadThreadsForGuild(this.id),
+    };
   },
-  set: undefined
+  set: undefined,
 });
 prototype["invalidate"] = function invalidate() {
   this.sections = null;
@@ -517,7 +616,7 @@ prototype["getSortedNamedCategories"] = function getSortedNamedCategories() {
   return self.sortedNamedCategories;
 };
 prototype["getSortedCategories"] = function getSortedCategories() {
-  const items = [, , , ];
+  const items = [, , ,];
   ({ favoritesCategory: arr[0], recentsCategory: arr[1], noParentCategory: arr[2] } = this);
   items[HermesBuiltin.arraySpread(this.getSortedNamedCategories(), 3)] = this.voiceChannelsCategory;
   return items;
@@ -546,9 +645,18 @@ prototype["getRows"] = function getRows() {
   const self = this;
   if (null == this.rows) {
     const _Object = Object;
-    self.sortedNamedCategories = applyDefault.sortBy(Object.values(self.categories), (record) => record.record.position);
-    const items = [, , , , , ];
-    ({ channelNoticeSection: arr[0], guildActionSection: arr[1], favoritesCategory: arr[2], recentsCategory: arr[3], noParentCategory: arr[4] } = self);
+    self.sortedNamedCategories = applyDefault.sortBy(
+      Object.values(self.categories),
+      (record) => record.record.position,
+    );
+    const items = [, , , , ,];
+    ({
+      channelNoticeSection: arr[0],
+      guildActionSection: arr[1],
+      favoritesCategory: arr[2],
+      recentsCategory: arr[3],
+      noParentCategory: arr[4],
+    } = self);
     items[HermesBuiltin.arraySpread(self.sortedNamedCategories, 5)] = self.voiceChannelsCategory;
     self.rows = items.map((getRows) => getRows.getRows());
     let num = 0;
@@ -730,13 +838,14 @@ prototype["getSectionRowsFromChannel"] = function getSectionRowsFromChannel(arg0
           }
           if (tmp7.type === constants.GUILD_CATEGORY) {
             const obj2 = { section: null };
-            obj2[0] = applyDefault.findIndex(self.getSortedNamedCategories(), (id) => {
-              id = undefined;
-              if (channel2 != null) {
-                id = channel2.id;
-              }
-              return id.id === id;
-            }) + FIRST_NAMED_CATEGORY;
+            obj2[0] =
+              applyDefault.findIndex(self.getSortedNamedCategories(), (id) => {
+                id = undefined;
+                if (channel2 != null) {
+                  id = channel2.id;
+                }
+                return id.id === id;
+              }) + FIRST_NAMED_CATEGORY;
             const items2 = [obj2];
             return items2;
           } else {
@@ -1088,26 +1197,31 @@ prototype2["getShownChannelIds"] = function getShownChannelIds() {
       }
       return sum;
     });
-    self.shownChannelIds = found.sortBy((record) => {
-      record = record.record;
-      const position = record.position;
-      if (record.isGuildVocal()) {
-        let sum = position + 10000;
-      } else {
-        sum = position;
-      }
-      return sum;
-    }).map((id) => id.id).value();
-    const iter = found.sortBy((record) => {
-      record = record.record;
-      const position = record.position;
-      if (record.isGuildVocal()) {
-        let sum = position + 10000;
-      } else {
-        sum = position;
-      }
-      return sum;
-    }).map((id) => id.id);
+    self.shownChannelIds = found
+      .sortBy((record) => {
+        record = record.record;
+        const position = record.position;
+        if (record.isGuildVocal()) {
+          let sum = position + 10000;
+        } else {
+          sum = position;
+        }
+        return sum;
+      })
+      .map((id) => id.id)
+      .value();
+    const iter = found
+      .sortBy((record) => {
+        record = record.record;
+        const position = record.position;
+        if (record.isGuildVocal()) {
+          let sum = position + 10000;
+        } else {
+          sum = position;
+        }
+        return sum;
+      })
+      .map((id) => id.id);
   }
   return self.shownChannelIds;
 };
@@ -1166,8 +1280,7 @@ const prototype3 = function ChannelListCategoryNoParent(arg0, arg1, arg2) {
   tmp2.channels = mapped.keyBy((id) => id.id).value();
   return tmp2;
 }.prototype;
-class prototype3 extends BaseChannelListCategory {
-}
+class prototype3 extends BaseChannelListCategory {}
 class ChannelListCategoryWithParent extends BaseChannelListCategory {
   constructor(arg0, arg1, arg2, arg3) {
     obj = { record: arg1, id: arg1.id, isCollapsed: true === global.collapsedCategoryIds[arg1.id] };
@@ -1194,7 +1307,8 @@ class ChannelListCategoryWithParent extends BaseChannelListCategory {
     if (!tmp) {
       obj = closure_22;
       tmp2 = Permissions;
-      isEmptyResult = closure_22.can(Permissions.MANAGE_CHANNELS, self.record) && obj.can(tmp2.VIEW_CHANNEL, self.record);
+      isEmptyResult =
+        closure_22.can(Permissions.MANAGE_CHANNELS, self.record) && obj.can(tmp2.VIEW_CHANNEL, self.record);
       if (isEmptyResult) {
         tmp4 = closure_1;
         tmp5 = closure_2;
@@ -1292,7 +1406,7 @@ prototype4["getFirstVoiceChannel"] = function getFirstVoiceChannel() {
   return null;
 };
 let ChannelListRecentlyActiveCategory;
-_instance_members_initializer_ChannelListRecentlyActiveCategory_ = function() {
+_instance_members_initializer_ChannelListRecentlyActiveCategory_ = function () {
   this.enabled = false;
 };
 class ChannelListRecentlyActiveCategory extends BaseChannelListCategory {
@@ -1382,7 +1496,7 @@ prototype5["getShownChannelIds"] = function getShownChannelIds() {
     if (self.enabled) {
       const found = applyDefault(self.channels).filter((renderLevel) => renderLevel.renderLevel >= closure_0);
       const mapped = found.map((arg0) => {
-        const items = [, , ];
+        const items = [, ,];
         ({ id: arr[0], lastMessageTimestamp: arr[1], renderLevel: arr[2] } = arg0);
         return items;
       });
@@ -1408,53 +1522,67 @@ prototype5["getShownChannelIds"] = function getShownChannelIds() {
         }
         return -tmp - num;
       });
-      const takeResult = found1.sortBy((arg0) => {
-        [, tmp, tmp2] = arg0;
-        let num = 0;
-        if (tmp2 !== closure_35.Show) {
-          num = callback(table[35]).DISCORD_EPOCH;
-        }
-        return -tmp - num;
-      }).take(ChannelListRecentlyActiveCategory.MAX_RECENT_CHANNELS);
-      const sortByResult1 = found1.sortBy((arg0) => {
-        [, tmp, tmp2] = arg0;
-        let num = 0;
-        if (tmp2 !== closure_35.Show) {
-          num = callback(table[35]).DISCORD_EPOCH;
-        }
-        return -tmp - num;
-      }).take(ChannelListRecentlyActiveCategory.MAX_RECENT_CHANNELS).sortBy((arg0) => {
-        [, tmp] = arg0;
-        return -tmp;
-      });
-      let items = found1.sortBy((arg0) => {
-        [, tmp, tmp2] = arg0;
-        let num = 0;
-        if (tmp2 !== closure_35.Show) {
-          num = callback(table[35]).DISCORD_EPOCH;
-        }
-        return -tmp - num;
-      }).take(ChannelListRecentlyActiveCategory.MAX_RECENT_CHANNELS).sortBy((arg0) => {
-        [, tmp] = arg0;
-        return -tmp;
-      }).map((arg0) => {
-        [tmp] = arg0;
-        return tmp;
-      }).value();
-      const iter = found1.sortBy((arg0) => {
-        [, tmp, tmp2] = arg0;
-        let num = 0;
-        if (tmp2 !== closure_35.Show) {
-          num = callback(table[35]).DISCORD_EPOCH;
-        }
-        return -tmp - num;
-      }).take(ChannelListRecentlyActiveCategory.MAX_RECENT_CHANNELS).sortBy((arg0) => {
-        [, tmp] = arg0;
-        return -tmp;
-      }).map((arg0) => {
-        [tmp] = arg0;
-        return tmp;
-      });
+      const takeResult = found1
+        .sortBy((arg0) => {
+          [, tmp, tmp2] = arg0;
+          let num = 0;
+          if (tmp2 !== closure_35.Show) {
+            num = callback(table[35]).DISCORD_EPOCH;
+          }
+          return -tmp - num;
+        })
+        .take(ChannelListRecentlyActiveCategory.MAX_RECENT_CHANNELS);
+      const sortByResult1 = found1
+        .sortBy((arg0) => {
+          [, tmp, tmp2] = arg0;
+          let num = 0;
+          if (tmp2 !== closure_35.Show) {
+            num = callback(table[35]).DISCORD_EPOCH;
+          }
+          return -tmp - num;
+        })
+        .take(ChannelListRecentlyActiveCategory.MAX_RECENT_CHANNELS)
+        .sortBy((arg0) => {
+          [, tmp] = arg0;
+          return -tmp;
+        });
+      let items = found1
+        .sortBy((arg0) => {
+          [, tmp, tmp2] = arg0;
+          let num = 0;
+          if (tmp2 !== closure_35.Show) {
+            num = callback(table[35]).DISCORD_EPOCH;
+          }
+          return -tmp - num;
+        })
+        .take(ChannelListRecentlyActiveCategory.MAX_RECENT_CHANNELS)
+        .sortBy((arg0) => {
+          [, tmp] = arg0;
+          return -tmp;
+        })
+        .map((arg0) => {
+          [tmp] = arg0;
+          return tmp;
+        })
+        .value();
+      const iter = found1
+        .sortBy((arg0) => {
+          [, tmp, tmp2] = arg0;
+          let num = 0;
+          if (tmp2 !== closure_35.Show) {
+            num = callback(table[35]).DISCORD_EPOCH;
+          }
+          return -tmp - num;
+        })
+        .take(ChannelListRecentlyActiveCategory.MAX_RECENT_CHANNELS)
+        .sortBy((arg0) => {
+          [, tmp] = arg0;
+          return -tmp;
+        })
+        .map((arg0) => {
+          [tmp] = arg0;
+          return tmp;
+        });
     } else {
       items = [];
     }
@@ -1561,14 +1689,23 @@ prototype6["getShownChannelIds"] = function getShownChannelIds() {
   const self = this;
   if (null == this.shownChannelIds) {
     const values = applyDefault(self.channels).values();
-    const found = values.filter((renderLevel) => renderLevel.renderLevel === closure_35.Show || renderLevel.renderLevel === tmp.WouldShowIfUncollapsed);
+    const found = values.filter(
+      (renderLevel) =>
+        renderLevel.renderLevel === closure_35.Show || renderLevel.renderLevel === tmp.WouldShowIfUncollapsed,
+    );
     const obj = applyDefault(self.channels);
     const sortByResult = found.sortBy((record) => record.record.position);
-    const valueResult = found.sortBy((record) => record.record.position).take(5).value();
+    const valueResult = found
+      .sortBy((record) => record.record.position)
+      .take(5)
+      .value();
     const iter = found.sortBy((record) => record.record.position).take(5);
     const _Set = Set;
     const items = [];
-    HermesBuiltin.arraySpread(valueResult, HermesBuiltin.arraySpread(found.filter((renderLevel) => renderLevel.renderLevel === closure_35.Show).value(), 0));
+    HermesBuiltin.arraySpread(
+      valueResult,
+      HermesBuiltin.arraySpread(found.filter((renderLevel) => renderLevel.renderLevel === closure_35.Show).value(), 0),
+    );
     set = new Set(items);
     const items1 = [];
     const iter2 = found.filter((renderLevel) => renderLevel.renderLevel === closure_35.Show);
@@ -1576,8 +1713,13 @@ prototype6["getShownChannelIds"] = function getShownChannelIds() {
     const tmp13 = applyDefault;
     const tmp13Result = applyDefault(items1);
     const sortByResult1 = applyDefault(items1).sortBy((record) => record.record.position);
-    self.shownChannelIds = applyDefault(items1).sortBy((record) => record.record.position).map((id) => id.id).value();
-    const iter3 = applyDefault(items1).sortBy((record) => record.record.position).map((id) => id.id);
+    self.shownChannelIds = applyDefault(items1)
+      .sortBy((record) => record.record.position)
+      .map((id) => id.id)
+      .value();
+    const iter3 = applyDefault(items1)
+      .sortBy((record) => record.record.position)
+      .map((id) => id.id);
   }
   return self.shownChannelIds;
 };
@@ -1618,17 +1760,23 @@ prototype7["getHiddenChannelIds"] = function getHiddenChannelIds() {
   if (this.guild.optInEnabled) {
     if (null == self.hiddenChannelIds) {
       const arr = applyDefault(self.channels);
-      const valueResult = applyDefault(self.channels).filter((renderLevel) => renderLevel.renderLevel === obj.WouldShowIfUncollapsed).value();
-      if (valueResult.every((record) => {
-        record = record.record;
-        return record.isCategory();
-      })) {
+      const valueResult = applyDefault(self.channels)
+        .filter((renderLevel) => renderLevel.renderLevel === obj.WouldShowIfUncollapsed)
+        .value();
+      if (
+        valueResult.every((record) => {
+          record = record.record;
+          return record.isCategory();
+        })
+      ) {
         self.hiddenChannelIds = [];
         return self.hiddenChannelIds;
       } else {
         self.hiddenChannelIds = valueResult.map((id) => id.id);
       }
-      const iter = applyDefault(self.channels).filter((renderLevel) => renderLevel.renderLevel === obj.WouldShowIfUncollapsed);
+      const iter = applyDefault(self.channels).filter(
+        (renderLevel) => renderLevel.renderLevel === obj.WouldShowIfUncollapsed,
+      );
     }
     return self.hiddenChannelIds;
   } else {
@@ -1660,30 +1808,30 @@ prototype7["getShownChannelIds"] = function getShownChannelIds() {
       const found = applyDefault(self.channels).filter((renderLevel) => renderLevel.renderLevel === Show.Show);
       const items = [
         (record) => {
-              if (record.record.type === closure_1_30.GUILD_CATEGORY) {
-                let num2 = record.record.position;
-              } else {
-                num2 = -1;
-                if (null != record.record.parent_id) {
-                  let num3;
-                  if (tmp[record.record.parent_id] != null) {
-                    num3 = tmp3.position;
-                  }
-                  if (num3 == null) {
-                    num3 = -1;
-                  }
-                  num2 = num3;
-                }
+          if (record.record.type === closure_1_30.GUILD_CATEGORY) {
+            let num2 = record.record.position;
+          } else {
+            num2 = -1;
+            if (null != record.record.parent_id) {
+              let num3;
+              if (tmp[record.record.parent_id] != null) {
+                num3 = tmp3.position;
               }
-              return num2;
-            },
-        (record) => {
-              let num = -1;
-              if (record.record.type !== constants.GUILD_CATEGORY) {
-                num = record.record.position;
+              if (num3 == null) {
+                num3 = -1;
               }
-              return num;
+              num2 = num3;
             }
+          }
+          return num2;
+        },
+        (record) => {
+          let num = -1;
+          if (record.record.type !== constants.GUILD_CATEGORY) {
+            num = record.record.position;
+          }
+          return num;
+        },
       ];
       const arr2 = applyDefault(self.channels);
       const valueResult = found.orderBy(items, ["asc", "asc"]).value();
@@ -1795,20 +1943,20 @@ Object.defineProperty(prototype10, "isMuted", {
     const mutedChannelIds = this.category.guild.mutedChannelIds;
     return mutedChannelIds.has(this.id);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype10, "isCollapsed", {
   get: function isCollapsed() {
     return collapsed2.isCollapsed(this.id);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype10, "isFirstVoiceChannel", {
   get: function isFirstVoiceChannel() {
     const category = this.category;
     return category.getFirstVoiceChannel() === this;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype10, "lastMessageTimestamp", {
   get: function lastMessageTimestamp() {
@@ -1816,7 +1964,7 @@ Object.defineProperty(prototype10, "lastMessageTimestamp", {
     threadIds = this.threadIds;
     return Math.max.apply(items);
   },
-  set: undefined
+  set: undefined,
 });
 prototype10["updateChannel"] = function updateChannel(record) {
   const self = this;
@@ -1860,8 +2008,7 @@ prototype10["computeSubtitle"] = function computeSubtitle() {
   }
   return computeSubtitle(this.record, isCollapsed, self.category.guild.optInEnabled);
 };
-class ChannelListChannelImpl extends BaseChannelListChannel {
-}
+class ChannelListChannelImpl extends BaseChannelListChannel {}
 ChannelListChannelImpl.prototype["computeState"] = function computeState(arg0) {
   const self = this;
   ({ selectedChannel, selectedVoiceChannelId } = arg0);
@@ -1900,7 +2047,13 @@ ChannelListChannelImpl.prototype["computeState"] = function computeState(arg0) {
       if (obj1 == null) {
         obj1 = {};
       }
-      const tmp12 = computeThreadIds(self.record, obj1, selectedChannel, selectedVoiceChannelId, guild.hideMutedChannels);
+      const tmp12 = computeThreadIds(
+        self.record,
+        obj1,
+        selectedChannel,
+        selectedVoiceChannelId,
+        guild.hideMutedChannels,
+      );
       if (self.id === guild.moderatorReportChannelId) {
         const obj2 = { renderLevel: null, threadIds: null };
         obj2[0] = closure_35.DoNotShow;
@@ -1991,8 +2144,7 @@ ChannelListChannelImpl.prototype["computeState"] = function computeState(arg0) {
     obj1 = activeJoinedRelevantThreads[self.id];
   }
 };
-class FavoritesChannelListChannel extends BaseChannelListChannel {
-}
+class FavoritesChannelListChannel extends BaseChannelListChannel {}
 FavoritesChannelListChannel.prototype["computeState"] = function computeState(arg0) {
   const self = this;
   ({ selectedChannel, selectedVoiceChannelId } = arg0);
@@ -2014,8 +2166,7 @@ FavoritesChannelListChannel.prototype["computeState"] = function computeState(ar
   }
   return tmp2;
 };
-class RecentsChannelListChannel extends BaseChannelListChannel {
-}
+class RecentsChannelListChannel extends BaseChannelListChannel {}
 RecentsChannelListChannel.prototype["computeState"] = function computeState(initializationData) {
   let self = this;
   let tmp = initializationData;
@@ -2160,40 +2311,43 @@ prototype12["_areChannelNoticeRowsUpdated"] = function _areChannelNoticeRowsUpda
   }
   return !applyDefault.isEqual(rows, rows);
 };
-prototype12["_areGuildVocalChannelsInRecentsInNeedOfAppearingInActiveNow"] = function _areGuildVocalChannelsInRecentsInNeedOfAppearingInActiveNow(id) {
-  if (null == this.guilds[id]) {
-    return false;
-  } else {
-    const categoryFromSection = obj.getCategoryFromSection(obj.voiceChannelsSectionNumber);
-    const categoryFromSection1 = obj.getCategoryFromSection(obj.recentsSectionNumber);
-    for (const key10005 in categoryFromSection1.channels) {
-      let tmp7 = key10005;
-      let tmp8 = categoryFromSection1.channels[key10005];
-      let tmp9 = closure_35;
-      if (tmp8.renderLevel !== closure_35.DoNotShow) {
-        continue;
-      } else {
-        let record = tmp8.record;
-        if (!record.isGuildVocal()) {
+prototype12["_areGuildVocalChannelsInRecentsInNeedOfAppearingInActiveNow"] =
+  function _areGuildVocalChannelsInRecentsInNeedOfAppearingInActiveNow(id) {
+    if (null == this.guilds[id]) {
+      return false;
+    } else {
+      const categoryFromSection = obj.getCategoryFromSection(obj.voiceChannelsSectionNumber);
+      const categoryFromSection1 = obj.getCategoryFromSection(obj.recentsSectionNumber);
+      for (const key10005 in categoryFromSection1.channels) {
+        let tmp7 = key10005;
+        let tmp8 = categoryFromSection1.channels[key10005];
+        let tmp9 = closure_35;
+        if (tmp8.renderLevel !== closure_35.DoNotShow) {
           continue;
         } else {
-          if (null != categoryFromSection.channels[tmp8.id]) {
+          let record = tmp8.record;
+          if (!record.isGuildVocal()) {
             continue;
           } else {
-            let tmp = importDefault;
-            let tmp2 = dependencyMap;
-            let obj2 = applyDefault;
-            let tmp3 = store9;
-            if (!obj2.some(store9.getVoiceStatesForChannel(tmp8.id))) {
+            if (null != categoryFromSection.channels[tmp8.id]) {
               continue;
             } else {
-              let tmp4 = store6;
-              if (store6.getMentionCount(tmp8.id) <= 0) {
+              let tmp = importDefault;
+              let tmp2 = dependencyMap;
+              let obj2 = applyDefault;
+              let tmp3 = store9;
+              if (!obj2.some(store9.getVoiceStatesForChannel(tmp8.id))) {
                 continue;
               } else {
-                let flag3 = true;
-                return true;
+                let tmp4 = store6;
+                if (store6.getMentionCount(tmp8.id) <= 0) {
+                  continue;
+                } else {
+                  let flag3 = true;
+                  return true;
+                }
               }
+              continue;
             }
             continue;
           }
@@ -2201,11 +2355,9 @@ prototype12["_areGuildVocalChannelsInRecentsInNeedOfAppearingInActiveNow"] = fun
         }
         continue;
       }
-      continue;
+      return false;
     }
-    return false;
-  }
-};
+  };
 prototype12["getGuild"] = function getGuild(id, arr, rows) {
   const self = this;
   let result = !(id in this.guilds) || self._areGuildActionRowsUpdated(id, arr);

@@ -15,5 +15,5 @@ export default {
   },
   close() {
     dispatcherDefault.wait(() => callback(table[0]).dispatch({ type: "TOAST_CLOSE" }));
-  }
+  },
 };

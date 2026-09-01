@@ -5,7 +5,9 @@ import useNullableMessageAuthor from "../../../useMessageAuthor.tsx";
 import processColorStrings from "../../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
 
 const processColor = get_ActivityIndicator.processColor;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx",
+);
 
 export const getMessageAuthorWithProcessedColor = function getMessageAuthorWithProcessedColor(message) {
   let obj = useNullableMessageAuthor;

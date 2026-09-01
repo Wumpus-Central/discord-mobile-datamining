@@ -23,7 +23,12 @@ require = arg1;
 noopAll;
 ({ View: c3, Pressable: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { [STANDARD_BOX]: registerAssetDefault, [CAKE]: registerAssetDefault2, [CHEST]: registerAssetDefault3, [COFFEE]: registerAssetDefault4 };
+let obj = {
+  [STANDARD_BOX]: registerAssetDefault,
+  [CAKE]: registerAssetDefault2,
+  [CHEST]: registerAssetDefault3,
+  [COFFEE]: registerAssetDefault4,
+};
 ({ STANDARD_BOX, CAKE, CHEST, COFFEE } = PremiumGiftStyles);
 obj = { uri: metadataDefault };
 obj[PremiumGiftStyles.NITROWEEN_STANDARD] = obj;
@@ -45,13 +50,23 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   }
   obj = { container: obj, selected: null, image: null };
   obj[4] = num;
-  obj = { position: "absolute", borderColor: tmp(712).colors.TEXT_BRAND, borderRadius: tmp(712).radii.sm, borderWidth: 2, flex: 1, width: 78, height: 44 };
+  obj = {
+    position: "absolute",
+    borderColor: tmp(712).colors.TEXT_BRAND,
+    borderRadius: tmp(712).radii.sm,
+    borderWidth: 2,
+    flex: 1,
+    width: 78,
+    height: 44,
+  };
   obj[1] = obj;
   obj[2] = { width: 72, height: 38, alignSelf: "center" };
   return obj;
 });
 const obj3 = { uri: metadataDefault5 };
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelectTile.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/native/gifting/PremiumGiftBackgroundSelectTile.tsx",
+);
 
 export default function GiftBackgroundSelectTile(index) {
   ({ selected, giftStyle } = index);
@@ -72,7 +87,7 @@ export default function GiftBackgroundSelectTile(index) {
       obj[0] = tmp.selected;
       selected = callback(closure_3, obj);
     }
-    const items = [selected, ];
+    const items = [selected];
     obj1 = { resizeMode: "contain", style: null, source: null };
     obj1[1] = tmp.image;
     obj1[2] = tmp2;
@@ -84,5 +99,5 @@ export default function GiftBackgroundSelectTile(index) {
     const tmp8 = importDefault;
   }
   return tmp4Result;
-};
+}
 export const GIFT_STYLE_IMG = obj;

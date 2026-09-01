@@ -29,7 +29,10 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
   let items = [c7];
   const items1 = [guildId];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => _undefined.getSortedRoles(guildId), items1);
-  const tmp5 = stateFromStoresArray(first.useState(() => new Set(closure_1)), 2);
+  const tmp5 = stateFromStoresArray(
+    first.useState(() => new Set(closure_1)),
+    2,
+  );
   first = tmp5[0];
   closure_6 = tmp5[1];
   [str, tmp8] = stateFromStoresArray(first.useState(""), 2);
@@ -80,12 +83,27 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
   let intl = guildId(onSave[13]).intl;
   obj = { count: first.size, max: guildId(onSave[11]).MAX_PROJECT_COLLABORATOR_ROLES };
   const tmp7 = stateFromStoresArray(first.useState(""), 2);
-  obj = { scrollable: true, startExpanded: true, keyboardShouldPersistTaps: "handled", dismissAccessibilityLabel: null, footer: null, header: null, children: null };
+  obj = {
+    scrollable: true,
+    startExpanded: true,
+    keyboardShouldPersistTaps: "handled",
+    dismissAccessibilityLabel: null,
+    footer: null,
+    header: null,
+    children: null,
+  };
   const intl2 = guildId(onSave[13]).intl;
   obj[3] = intl2.string(importDefault(onSave[14])["9yHiDe"]);
   let formatToPlainStringResult = intl.formatToPlainString(importDefault(onSave[14]).eaqbJt, obj);
   const tmp12 = closure_11;
-  obj[4] = callback2(closure_6, { style: tmp.roleListFooter, children: callback2(guildId(onSave[16]).Text, { variant: "text-xs/normal", color: "text-muted", children: intl.formatToPlainString(importDefault(onSave[14]).eaqbJt, obj) }) });
+  obj[4] = callback2(closure_6, {
+    style: tmp.roleListFooter,
+    children: callback2(guildId(onSave[16]).Text, {
+      variant: "text-xs/normal",
+      color: "text-muted",
+      children: intl.formatToPlainString(importDefault(onSave[14]).eaqbJt, obj),
+    }),
+  });
   const obj2 = { title: null, trailing: null };
   const intl3 = guildId(onSave[13]).intl;
   obj2[0] = intl3.string(importDefault(onSave[14]).fqvhf0);
@@ -101,7 +119,7 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
   const intl6 = guildId(onSave[13]).intl;
   obj4[4] = intl6.string(guildId(onSave[13]).t.Sojqsr);
   obj4[5] = tmp8;
-  const items4 = [callback2(guildId(onSave[19]).SearchField, obj4), ];
+  const items4 = [callback2(guildId(onSave[19]).SearchField, obj4)];
   const obj5 = { keyboardShouldPersistTaps: "handled", contentContainerStyle: tmp.roleListContent, children: null };
   if (0 === memo.length) {
     const obj6 = { style: null, children: null };
@@ -133,7 +151,7 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
         primaryColor = closure_1_9;
       }
       obj = { label: null, checked: null, disabled: null, accessibilityHint: null, onPress: null };
-      const items = [closure_1_10(closure_1_16, { color: primaryColor }), ];
+      const items = [closure_1_10(closure_1_16, { color: primaryColor })];
       obj = { variant: "text-md/medium", children: children.name };
       items[1] = closure_1_10(guildId(onSave[16]).Text, obj);
       obj[1] = items;
@@ -172,7 +190,13 @@ createCacheKey[2] = { paddingBottom: ThemesDefault.space.PX_64 };
 let obj2 = { paddingBottom: ThemesDefault.space.PX_64 };
 createCacheKey[3] = { alignItems: "center", paddingVertical: ThemesDefault.space.PX_24 };
 let obj3 = { alignItems: "center", paddingVertical: ThemesDefault.space.PX_24 };
-createCacheKey[4] = { alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_48, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey[4] = {
+  alignItems: "center",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_12,
+  paddingBottom: ThemesDefault.space.PX_48,
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+};
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let closure_15 = createCacheKey.createStyles((backgroundColor) => {
   let obj = { circle: null };
@@ -180,7 +204,13 @@ let closure_15 = createCacheKey.createStyles((backgroundColor) => {
   obj[0] = obj;
   return obj;
 });
-let obj4 = { alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_48, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let obj4 = {
+  alignItems: "center",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_12,
+  paddingBottom: ThemesDefault.space.PX_48,
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+};
 let result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsProjectSettingsSheet.tsx");
 
 export default function VibegrationsProjectSettingsSheet(projectId) {
@@ -238,7 +268,10 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
   let tmp5Result = tmp5(obj1.useState(num), 2);
   first1 = tmp5Result[0];
   closure_6 = tmp5Result[1];
-  tmp5Result = tmp5(obj1.useState(() => new Set(prop)), 2);
+  tmp5Result = tmp5(
+    obj1.useState(() => new Set(prop)),
+    2,
+  );
   first2 = tmp5Result[0];
   closure_8 = tmp5Result[1];
   const tmp5Result1 = callback(obj1.useState(false), 2);
@@ -322,129 +355,145 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
     obj = { guildId, initialSelectedRoleIds: first2, onSave: callback1 };
     obj.showActionSheet(obj);
   }, items2);
-  const items3 = [first1, tmp23, guildId, tmp26, isPublic, tmp22, stateFromStores, projectId, tmp24, first3, first2, trimmed];
-  const callback3 = obj1.useCallback(prop(function*() {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  const items3 = [
+    first1,
+    tmp23,
+    guildId,
+    tmp26,
+    isPublic,
+    tmp22,
+    stateFromStores,
+    projectId,
+    tmp24,
+    first3,
+    first2,
+    trimmed,
+  ];
+  const callback3 = obj1.useCallback(
+    prop(function* () {
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_0 = tmp4;
-            if (null != closure_1_2) {
-              if (closure_1_18) {
-                if (!closure_1_9) {
-                  if ("" !== closure_1_13) {
-                    obj1 = {};
-                    if (closure_1_15) {
-                      obj1.name = tmp34;
-                    }
-                    let tmp42 = closure_1_16;
-                    if (closure_1_16) {
-                      obj1.flags = closure_1_5;
-                    }
-                    let tmp44 = closure_1_17;
-                    if (closure_1_17) {
-                      const _Array = Array;
-                      obj1.collaborator_role_ids = Array.from(closure_1_7).sort();
-                      const arr = Array.from(closure_1_7);
-                    }
-                    let tmp46 = null == tmp65.guild_id;
-                    if (tmp46) {
-                      if (!tmp44) {
-                        if (tmp42) {
-                          tmp42 = closure_1_14;
-                        }
-                        tmp44 = tmp42;
+        try {
+          c4 = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_0 = tmp4;
+              if (null != closure_1_2) {
+                if (closure_1_18) {
+                  if (!closure_1_9) {
+                    if ("" !== closure_1_13) {
+                      obj1 = {};
+                      if (closure_1_15) {
+                        obj1.name = tmp34;
                       }
-                      tmp46 = tmp44;
+                      let tmp42 = closure_1_16;
+                      if (closure_1_16) {
+                        obj1.flags = closure_1_5;
+                      }
+                      let tmp44 = closure_1_17;
+                      if (closure_1_17) {
+                        const _Array = Array;
+                        obj1.collaborator_role_ids = Array.from(closure_1_7).sort();
+                        const arr = Array.from(closure_1_7);
+                      }
+                      let tmp46 = null == tmp65.guild_id;
+                      if (tmp46) {
+                        if (!tmp44) {
+                          if (tmp42) {
+                            tmp42 = closure_1_14;
+                          }
+                          tmp44 = tmp42;
+                        }
+                        tmp46 = tmp44;
+                      }
+                      if (tmp46) {
+                        obj1.guild_id = v0;
+                      }
+                      closure_1_10(true);
+                      closure_1_12(false);
+                      c3 = 2;
+                      v0 = 3;
+                      c4 = 1;
+                      const obj2 = { value: null, done: false };
+                      obj2[0] = closure_1_0(closure_1_2[24]).updateProjectSettings(closure_1_0, obj1);
+                      return obj2;
+                    } else {
+                      const intl = closure_1_0(closure_1_2[13]).intl;
+                      closure_1_11(intl.string(v0(closure_1_2[14]).I2hgEB));
                     }
-                    if (tmp46) {
-                      obj1.guild_id = v0;
-                    }
-                    closure_1_10(true);
-                    closure_1_12(false);
-                    c3 = 2;
-                    v0 = 3;
-                    c4 = 1;
-                    const obj2 = { value: null, done: false };
-                    obj2[0] = closure_1_0(closure_1_2[24]).updateProjectSettings(closure_1_0, obj1);
-                    return obj2;
-                  } else {
-                    const intl = closure_1_0(closure_1_2[13]).intl;
-                    closure_1_11(intl.string(v0(closure_1_2[14]).I2hgEB));
                   }
                 }
               }
+              c4 = 3;
             }
-            c4 = 3;
-          }
-        } else if (1 !== tmp8) {
-          if (2 === tmp8) {
-            c3 = 1;
-            closure_1_12(true);
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
+          } else if (1 !== tmp8) {
+            if (2 === tmp8) {
+              c3 = 1;
+              closure_1_12(true);
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              closure_1_10(false);
+              c4 = 3;
+              const obj3 = { value: null, done: true };
+              obj3[0] = arg1;
+              return obj3;
+            } else if (arg1.ok) {
+              obj1 = v0(closure_1_2[12]);
+              obj1.hideActionSheet(closure_1_12);
+              c3 = 1;
+            } else {
+              callback2(true);
+              c3 = 0;
+              callback(false);
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = undefined;
+              return obj;
+            }
             c3 = 0;
             closure_1_10(false);
-            c4 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else if (arg1.ok) {
-            obj1 = v0(closure_1_2[12]);
-            obj1.hideActionSheet(closure_1_12);
-            c3 = 1;
-          } else {
-            callback2(true);
-            c3 = 0;
-            callback(false);
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = undefined;
-            return obj;
           }
           c3 = 0;
-          closure_1_10(false);
-        }
-        c3 = 0;
-        callback(false);
-        throw closure_2;
-      } catch (tmp55) {
-        closure_2 = tmp55;
-        if (tmp5 === c3) {
-          c4 = tmp3;
-          throw tmp55;
-        } else if (tmp2 === tmp57) {
-          v0 = tmp2;
-        } else {
-          v0 = tmp;
+          callback(false);
+          throw closure_2;
+        } catch (tmp55) {
+          closure_2 = tmp55;
+          if (tmp5 === c3) {
+            c4 = tmp3;
+            throw tmp55;
+          } else if (tmp2 === tmp57) {
+            v0 = tmp2;
+          } else {
+            v0 = tmp;
+          }
         }
       }
-    }
-  }), items3);
+    }),
+    items3,
+  );
   obj = { scrollable: true, startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null };
   let intl = tmp2(tmp3[13]).intl;
   obj[2] = intl.string(guildId(stateFromStores[14]).UYmwNU);
@@ -459,7 +508,7 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
   obj2[1] = str2;
   obj2[2] = callback;
   obj2[4] = first3;
-  const items4 = [callback2(first2(stateFromStores[25]).TextInput, obj2), , , , , , ];
+  const items4 = [callback2(first2(stateFromStores[25]).TextInput, obj2), , , , , ,];
   let tmp31Result = null;
   if (null != tmp15) {
     let obj3 = { accessibilityRole: "alert", children: null };
@@ -556,5 +605,5 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
   obj14[0] = c11(closure_6, obj1);
   obj[4] = callback2(first2(stateFromStores[20]).BottomSheetScrollView, obj14);
   return callback2(first2(stateFromStores[15]).ActionSheet, obj);
-};
+}
 export const VIBEGRATIONS_PROJECT_SETTINGS_SHEET_KEY = "VibegrationsProjectSettingsSheet";

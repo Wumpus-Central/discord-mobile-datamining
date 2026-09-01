@@ -24,12 +24,14 @@ export default function ExistingUserAgeGateModal(source) {
   const shouldAgeVerifyForAgeGate = obj.useShouldAgeVerifyForAgeGate();
   closure_1 = React.useRef(shouldAgeVerifyForAgeGate);
   const items = [source];
-  const watchAgeVerificationStatusChange = source(4733).useWatchAgeVerificationStatusChange(React.useCallback(() => {
-    if (ref.current) {
-      source(closure_1_2[10]).closeAgeGateModal(source);
-      const obj = source(closure_1_2[10]);
-    }
-  }, items));
+  const watchAgeVerificationStatusChange = source(4733).useWatchAgeVerificationStatusChange(
+    React.useCallback(() => {
+      if (ref.current) {
+        source(closure_1_2[10]).closeAgeGateModal(source);
+        const obj = source(closure_1_2[10]);
+      }
+    }, items),
+  );
   obj = {
     screens: React.useMemo(() => {
       if (closure_1_6.NSFW_SERVER_INVITE !== closure_0) {
@@ -75,12 +77,17 @@ export default function ExistingUserAgeGateModal(source) {
           };
         }
         if (fn == null) {
-          fn = () => {
-
-          };
+          fn = () => {};
         }
         let obj = {};
-        obj = { fullscreen: true, impressionName: null, impressionProperties: null, headerLeft: null, headerTitle: null, render: null };
+        obj = {
+          fullscreen: true,
+          impressionName: null,
+          impressionProperties: null,
+          headerLeft: null,
+          headerTitle: null,
+          render: null,
+        };
         obj[1] = source(closure_1_2[14]).ImpressionNames.USER_AGE_GATE;
         obj[2] = { existing_user: true };
         let obj2 = source(closure_1_2[15]);
@@ -156,7 +163,7 @@ export default function ExistingUserAgeGateModal(source) {
       };
     }, items1),
     initialRouteName: shouldAgeVerifyForAgeGate ? tmp6.Pawtect : tmp6.AgeGate,
-    headerBackTitle: null
+    headerBackTitle: null,
   };
   items1 = [source];
   let intl = tmp(1236).intl;
@@ -206,12 +213,17 @@ export default function ExistingUserAgeGateModal(source) {
           };
         }
         if (fn == null) {
-          fn = () => {
-
-          };
+          fn = () => {};
         }
         let obj = {};
-        obj = { fullscreen: true, impressionName: null, impressionProperties: null, headerLeft: null, headerTitle: null, render: null };
+        obj = {
+          fullscreen: true,
+          impressionName: null,
+          impressionProperties: null,
+          headerLeft: null,
+          headerTitle: null,
+          render: null,
+        };
         obj[1] = source(closure_1_2[14]).ImpressionNames.USER_AGE_GATE;
         obj[2] = { existing_user: true };
         let obj2 = source(closure_1_2[15]);
@@ -287,6 +299,6 @@ export default function ExistingUserAgeGateModal(source) {
       };
     }, items1),
     initialRouteName: shouldAgeVerifyForAgeGate ? tmp6.Pawtect : tmp6.AgeGate,
-    headerBackTitle: null
+    headerBackTitle: null,
   });
-};
+}

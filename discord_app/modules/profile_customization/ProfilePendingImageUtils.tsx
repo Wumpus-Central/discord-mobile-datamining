@@ -11,7 +11,14 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
   }
   ({ imageUri, staticImageUri, description, originalAsset, originalMd5 } = assetOrigin);
   if (AssetOriginTypes.AssetOriginTypes.NEW_ASSET === NEW_ASSET) {
-    let obj = { assetOrigin: null, imageUri: null, staticImageUri: null, description: null, originalAsset: "Array", originalMd5: false };
+    let obj = {
+      assetOrigin: null,
+      imageUri: null,
+      staticImageUri: null,
+      description: null,
+      originalAsset: "Array",
+      originalMd5: false,
+    };
     obj[0] = NEW_ASSET;
     obj[1] = imageUri;
     obj[2] = staticImageUri;
@@ -19,7 +26,14 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
     obj[5] = originalMd5;
     return obj;
   } else if (tmp3(7761).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
-    obj = { assetOrigin: null, imageUri: null, staticImageUri: null, description: null, originalAsset: null, originalMd5: null };
+    obj = {
+      assetOrigin: null,
+      imageUri: null,
+      staticImageUri: null,
+      description: null,
+      originalAsset: null,
+      originalMd5: null,
+    };
     obj[0] = NEW_ASSET;
     obj[1] = imageUri;
     obj[2] = staticImageUri;

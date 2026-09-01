@@ -19,13 +19,23 @@ const result = require("set").fileFinishedImporting("modules/activate_device/nat
 export const ActivateDeviceError = function ActivateDeviceError(onRetry) {
   let obj = { children: null };
   obj = { source: registerAssetDefault, style: callback3().image };
-  const items = [callback(closure_3, obj), , ];
+  const items = [callback(closure_3, obj), ,];
   obj = { style: innerContentDefault.innerContent, children: null };
-  obj1 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: innerContentDefault.centerText, children: null };
+  obj1 = {
+    variant: "heading-lg/bold",
+    color: "mobile-text-heading-primary",
+    style: innerContentDefault.centerText,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj1[3] = intl.string(getSystemLocale.t["3dgwPD"]);
-  const items1 = [callback(Text.Text, obj1), ];
-  const obj2 = { variant: "text-md/medium", color: "text-default", style: innerContentDefault.centerText, children: null };
+  const items1 = [callback(Text.Text, obj1)];
+  const obj2 = {
+    variant: "text-md/medium",
+    color: "text-default",
+    style: innerContentDefault.centerText,
+    children: null,
+  };
   const intl2 = getSystemLocale.intl;
   obj2[3] = intl2.string(getSystemLocale.t["/GAO1P"]);
   items1[1] = callback(Text.Text, obj2);

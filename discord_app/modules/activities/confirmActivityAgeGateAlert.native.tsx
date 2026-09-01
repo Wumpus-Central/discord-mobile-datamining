@@ -14,7 +14,7 @@ require = arg1;
 function ConfirmActivityGateContent(children) {
   const tmp = callback3();
   let obj = { style: tmp.alertContainer, children: null };
-  const items = [callback(SvgComponentDefault, {}), ];
+  const items = [callback(SvgComponentDefault, {})];
   obj = { style: tmp.alertBodyText, variant: "text-md/normal", children: children.description };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
@@ -23,7 +23,12 @@ function ConfirmActivityGateContent(children) {
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertBodyText: null };
-createCacheKey = { fontSize: 16, lineHeight: 24, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center" };
+createCacheKey = {
+  fontSize: 16,
+  lineHeight: 24,
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  textAlign: "center",
+};
 createCacheKey[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/activities/confirmActivityAgeGateAlert.native.tsx");
@@ -33,7 +38,15 @@ export const confirmActivityAgeGateAlert = function confirmActivityAgeGateAlert(
   const intl = getSystemLocale.intl;
   let obj = { applicationName: application.name };
   const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.OgmIqy, obj);
-  obj = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, confirmColor: null };
+  obj = {
+    title: null,
+    children: null,
+    cancelText: null,
+    confirmText: null,
+    onConfirm: null,
+    onCancel: null,
+    confirmColor: null,
+  };
   const intl2 = getSystemLocale.intl;
   obj[0] = intl2.string(getSystemLocale.t.SSDPOF);
   obj[1] = callback(ConfirmActivityGateContent, { description: formatToPlainStringResult });

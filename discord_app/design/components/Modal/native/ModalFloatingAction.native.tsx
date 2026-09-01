@@ -7,8 +7,13 @@ import createCacheKey from "../../Styles/native/createStyles.tsx";
 const require = arg1;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ floating: { position: "absolute", bottom: 0, width: "100%", paddingHorizontal: 16 }, spacer: { height: 96 } });
-let closure_9 = { code: "function ModalFloatingActionNativeTsx1(){const{interpolate,sharedValue,floatingBackgroundColor,useReducedMotion}=this.__closure;return{opacity:interpolate(sharedValue.get(),[0,1],[0,1]),borderBottomColor:floatingBackgroundColor,borderBottomWidth:16,transform:[{translateY:interpolate(sharedValue.get(),[useReducedMotion?0.999999:0,1],[32,0])}]};}" };
+let closure_8 = createCacheKey.createStyles({
+  floating: { position: "absolute", bottom: 0, width: "100%", paddingHorizontal: 16 },
+  spacer: { height: 96 },
+});
+let closure_9 = {
+  code: "function ModalFloatingActionNativeTsx1(){const{interpolate,sharedValue,floatingBackgroundColor,useReducedMotion}=this.__closure;return{opacity:interpolate(sharedValue.get(),[0,1],[0,1]),borderBottomColor:floatingBackgroundColor,borderBottomWidth:16,transform:[{translateY:interpolate(sharedValue.get(),[useReducedMotion?0.999999:0,1],[32,0])}]};}",
+};
 let result = require("set").fileFinishedImporting("design/components/Modal/native/ModalFloatingAction.native.tsx");
 
 export const ModalFloatingAction = function ModalFloatingAction(isVisible) {
@@ -31,11 +36,18 @@ export const ModalFloatingAction = function ModalFloatingAction(isVisible) {
     if (isVisible) {
       num = 1;
     }
-    const result = sharedValue.set(isVisible(sharedValue[7]).withSpring(num, isVisible(sharedValue[8]).SUBTLE_SPRING, "animate-always"));
+    const result = sharedValue.set(
+      isVisible(sharedValue[7]).withSpring(num, isVisible(sharedValue[8]).SUBTLE_SPRING, "animate-always"),
+    );
   }, items);
   const tmp7 = floatingBackgroundColor(sharedValue[6])();
   const fn = function y() {
-    let obj = { opacity: isVisible(sharedValue[4]).interpolate(sharedValue.get(), [0, 1], [0, 1]), borderBottomColor: floatingBackgroundColor, borderBottomWidth: 16, transform: null };
+    let obj = {
+      opacity: isVisible(sharedValue[4]).interpolate(sharedValue.get(), [0, 1], [0, 1]),
+      borderBottomColor: floatingBackgroundColor,
+      borderBottomWidth: 16,
+      transform: null,
+    };
     const obj2 = isVisible(sharedValue[4]);
     let num = 0;
     const value = sharedValue.get();
@@ -65,11 +77,14 @@ export const ModalFloatingAction = function ModalFloatingAction(isVisible) {
   const tmp3Result = isVisible(sharedValue[4]);
   const tmp6Result = floatingBackgroundColor(sharedValue[9]);
   const obj6 = floatingBackgroundColor(sharedValue[10])(floatingBackgroundColor);
-  const items2 = [floatingBackgroundColor(sharedValue[10])(floatingBackgroundColor).alpha(0).hex(), floatingBackgroundColor];
+  const items2 = [
+    floatingBackgroundColor(sharedValue[10])(floatingBackgroundColor).alpha(0).hex(),
+    floatingBackgroundColor,
+  ];
   obj1[0] = items2;
   obj1[1] = [0, 0.5];
   obj1[2] = absoluteFill.absoluteFill;
-  const items3 = [callback(tmp6Result, obj1), ];
+  const items3 = [callback(tmp6Result, obj1)];
   let obj2 = {};
   const merged1 = Object.assign(merged);
   obj2.variant = "primary";

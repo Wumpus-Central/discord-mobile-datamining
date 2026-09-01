@@ -18,7 +18,7 @@ let set = {
       }
       return 2147483647;
     }
-  }
+  },
 };
 let obj = {
   resolve(enabledExperiments) {
@@ -37,7 +37,7 @@ let obj = {
       }
       return 2147483647;
     }
-  }
+  },
 };
 obj = {
   resolve(density) {
@@ -52,7 +52,7 @@ obj = {
       }
       return 24;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -71,7 +71,7 @@ set = {
       }
       return 2147483647;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -90,27 +90,27 @@ set = {
       }
       return 0;
     }
-  }
+  },
 };
 set = {
   resolve() {
     return 0.15;
-  }
+  },
 };
 set = {
   resolve() {
     return 8;
-  }
+  },
 };
 set = {
   resolve() {
     return 6;
-  }
+  },
 };
 set = {
   resolve() {
     return 0.4;
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -129,7 +129,7 @@ set = {
       }
       return 16;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -148,7 +148,7 @@ set = {
       }
       return "heading-md/bold";
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -167,7 +167,7 @@ set = {
       }
       return 0;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -186,7 +186,7 @@ set = {
       }
       return 8;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -205,7 +205,7 @@ set = {
       }
       return 16;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -224,7 +224,7 @@ set = {
       }
       return 12;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -243,7 +243,7 @@ set = {
       }
       return 12;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -262,7 +262,7 @@ set = {
       }
       return 2147483647;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -281,7 +281,7 @@ set = {
       }
       return "text-md/medium";
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -300,7 +300,7 @@ set = {
       }
       return "text-sm/medium";
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -319,7 +319,7 @@ set = {
       }
       return "text-xs/medium";
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -338,17 +338,17 @@ set = {
       }
       return 12;
     }
-  }
+  },
 };
 set = {
   resolve() {
     return 40;
-  }
+  },
 };
 set = {
   resolve() {
     return 20;
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -367,7 +367,7 @@ set = {
       }
       return 12;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -386,7 +386,7 @@ set = {
       }
       return 2147483647;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -405,7 +405,7 @@ set = {
       }
       return 0;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -423,7 +423,7 @@ set = {
       }
       return 24;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -442,7 +442,7 @@ set = {
       }
       return 16;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -461,7 +461,7 @@ set = {
       }
       return 16;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -480,7 +480,7 @@ set = {
       }
       return 0;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -499,12 +499,12 @@ set = {
       }
       return 0;
     }
-  }
+  },
 };
 set = {
   resolve() {
     return "icon-default";
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -523,12 +523,12 @@ set = {
       }
       return 0;
     }
-  }
+  },
 };
 set = {
   resolve() {
     return "text-default";
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -547,7 +547,7 @@ set = {
       }
       return "text-xs/semibold";
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -566,7 +566,7 @@ set = {
       }
       return 0;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -585,12 +585,12 @@ set = {
       }
       return 8;
     }
-  }
+  },
 };
 set = {
   resolve() {
     return "row";
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -609,7 +609,7 @@ set = {
       }
       return 16;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -628,12 +628,12 @@ set = {
       }
       return 8;
     }
-  }
+  },
 };
 set = {
   resolve() {
     return 32;
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -652,7 +652,7 @@ set = {
       }
       return "redesign/channel-title/semibold";
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -671,7 +671,7 @@ set = {
       }
       return 8;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -690,7 +690,7 @@ set = {
       }
       return 15;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -709,12 +709,12 @@ set = {
       }
       return 0;
     }
-  }
+  },
 };
 set = {
   resolve() {
     return 288;
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -733,7 +733,7 @@ set = {
       }
       return 24;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -752,7 +752,7 @@ set = {
       }
       return 16;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -771,12 +771,12 @@ set = {
       }
       return 16;
     }
-  }
+  },
 };
 set = {
   resolve() {
     return 4;
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -795,7 +795,7 @@ set = {
       }
       return 12;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -814,7 +814,7 @@ set = {
       }
       return 4;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -833,7 +833,7 @@ set = {
       }
       return 32;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -851,7 +851,7 @@ set = {
       }
       return 16;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -870,7 +870,7 @@ set = {
       }
       return 0;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -889,7 +889,7 @@ set = {
       }
       return 14;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -908,7 +908,7 @@ set = {
       }
       return 8;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -927,7 +927,7 @@ set = {
       }
       return 16;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -946,12 +946,12 @@ set = {
       }
       return 36;
     }
-  }
+  },
 };
 set = {
   resolve() {
     return 56;
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -970,7 +970,7 @@ set = {
       }
       return "text-sm/medium";
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -989,17 +989,17 @@ set = {
       }
       return 60;
     }
-  }
+  },
 };
 set = {
   resolve() {
     return 32;
-  }
+  },
 };
 set = {
   resolve() {
     return "text-strong";
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1018,12 +1018,12 @@ set = {
       }
       return "text-md/semibold";
     }
-  }
+  },
 };
 set = {
   resolve() {
     return 12;
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1042,7 +1042,7 @@ set = {
       }
       return 22;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1061,7 +1061,7 @@ set = {
       }
       return -6;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1080,7 +1080,7 @@ set = {
       }
       return "text-xxs/semibold";
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1099,12 +1099,12 @@ set = {
       }
       return "text-sm/semibold";
     }
-  }
+  },
 };
 set = {
   resolve() {
     return 16;
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1123,7 +1123,7 @@ set = {
       }
       return 22;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1142,7 +1142,7 @@ set = {
       }
       return 0;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1161,17 +1161,17 @@ set = {
       }
       return 8;
     }
-  }
+  },
 };
 set = {
   resolve() {
     return 14;
-  }
+  },
 };
 set = {
   resolve() {
     return 17;
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1189,7 +1189,7 @@ set = {
       }
       return 4;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1214,7 +1214,7 @@ set = {
       }
       return "text-sm/semibold";
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1239,7 +1239,7 @@ set = {
       }
       return 40;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1257,7 +1257,7 @@ set = {
       }
       return 8;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1275,7 +1275,7 @@ set = {
       }
       return 9;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1294,7 +1294,7 @@ set = {
       }
       return 12;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1318,7 +1318,7 @@ set = {
       }
       return 10;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1337,7 +1337,7 @@ set = {
       }
       return 12;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1362,7 +1362,7 @@ set = {
       }
       return 40;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1381,7 +1381,7 @@ set = {
       }
       return 32;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1406,7 +1406,7 @@ set = {
       }
       return 12;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1425,7 +1425,7 @@ set = {
       }
       return 32;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1444,7 +1444,7 @@ set = {
       }
       return 16;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1463,7 +1463,7 @@ set = {
       }
       return 12;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1482,7 +1482,7 @@ set = {
       }
       return 12;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1501,7 +1501,7 @@ set = {
       }
       return 24;
     }
-  }
+  },
 };
 set = {
   resolve(enabledExperiments) {
@@ -1520,44 +1520,46 @@ set = {
       }
       return 28;
     }
-  }
+  },
 };
 set = {
   resolve() {
     return 24;
-  }
+  },
 };
 set = {
   resolve() {
     return 16;
-  }
+  },
 };
 set = {
   resolve() {
     return 800;
-  }
+  },
 };
 set = {
   resolve() {
     return 602;
-  }
+  },
 };
 set = {
   resolve() {
     return 442;
-  }
+  },
 };
 set = {
   resolve() {
     return 248;
-  }
+  },
 };
 set = {
   resolve() {
     return 40;
-  }
+  },
 };
-const result = set.fileFinishedImporting("../discord_common/js/packages/tokens/modules/generated/generated-definitions.tsx");
+const result = set.fileFinishedImporting(
+  "../discord_common/js/packages/tokens/modules/generated/generated-definitions.tsx",
+);
 
 export const _private = {
   Modules: {
@@ -1577,7 +1579,7 @@ export const _private = {
             }
             return 6;
           }
-        }
+        },
       },
       SPINE_OFFSET_LEFT: {
         resolve(density) {
@@ -1592,59 +1594,59 @@ export const _private = {
             }
             return 24;
           }
-        }
-      }
+        },
+      },
     },
     chat: {
       AVATAR_SIZE: {
         resolve() {
           return 40;
-        }
+        },
       },
       INPUT_ICON_SIZE: {
         resolve() {
           return 20;
-        }
+        },
       },
       MARKUP_LINE_HEIGHT: {
         resolve() {
           return "1.375rem";
-        }
+        },
       },
       RESIZE_HANDLE_WIDTH: {
         resolve() {
           return 8;
-        }
-      }
+        },
+      },
     },
     control: {
       INPUT_HEIGHT_MD: {
         resolve() {
           return 40;
-        }
+        },
       },
       INPUT_HEIGHT_SM: {
         resolve() {
           return 32;
-        }
+        },
       },
       ITEM_HEIGHT_MD: {
         resolve() {
           return 40;
-        }
+        },
       },
       ITEM_HEIGHT_SM: {
         resolve() {
           return 32;
-        }
-      }
+        },
+      },
     },
     form: {
       INPUT_HEIGHT: {
         resolve() {
           return 44;
-        }
-      }
+        },
+      },
     },
     guildbar: {
       AVATAR_SIZE: {
@@ -1675,7 +1677,7 @@ export const _private = {
             }
             return 40;
           }
-        }
+        },
       },
       FOLDER_SIZE: {
         resolve(arg0) {
@@ -1705,47 +1707,47 @@ export const _private = {
             }
             return 48;
           }
-        }
-      }
+        },
+      },
     },
     icon: {
       SIZE_LG: {
         resolve() {
           return 32;
-        }
+        },
       },
       SIZE_MD: {
         resolve() {
           return 24;
-        }
+        },
       },
       SIZE_SM: {
         resolve() {
           return 18;
-        }
+        },
       },
       SIZE_XS: {
         resolve() {
           return 16;
-        }
+        },
       },
       SIZE_XXS: {
         resolve() {
           return 12;
-        }
-      }
+        },
+      },
     },
     menu: {
       BORDER_WIDTH: {
         resolve() {
           return 1;
-        }
+        },
       },
       SCROLLER_BLOCK_PADDING: {
         resolve() {
           return 8;
-        }
-      }
+        },
+      },
     },
     mobile: {
       BOUNTY_TILE_BORDER_RADIUS: {
@@ -1765,12 +1767,12 @@ export const _private = {
             }
             return 24;
           }
-        }
+        },
       },
       CARD_DEFAULT_RADIUS: {
         resolve() {
           return 16;
-        }
+        },
       },
       CHANNEL_DETAILS_NAV_BUTTONS_GAP: {
         resolve(enabledExperiments) {
@@ -1788,7 +1790,7 @@ export const _private = {
             }
             return 12;
           }
-        }
+        },
       },
       CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE: {
         resolve(enabledExperiments) {
@@ -1807,7 +1809,7 @@ export const _private = {
             }
             return "sm";
           }
-        }
+        },
       },
       CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT: {
         resolve(enabledExperiments) {
@@ -1826,7 +1828,7 @@ export const _private = {
             }
             return "tertiary";
           }
-        }
+        },
       },
       CHANNEL_DRAWER_CORNER_RADIUS: {
         resolve(enabledExperiments) {
@@ -1844,7 +1846,7 @@ export const _private = {
             }
             return 8;
           }
-        }
+        },
       },
       CHANNEL_DRAWER_DIVIDER_WIDTH: {
         resolve(enabledExperiments) {
@@ -1863,7 +1865,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHANNEL_DRAWER_SPACING: {
         resolve(enabledExperiments) {
@@ -1881,7 +1883,7 @@ export const _private = {
             }
             return 8;
           }
-        }
+        },
       },
       CHANNEL_HEADER_ICON_SIZE: {
         resolve(enabledExperiments) {
@@ -1900,7 +1902,7 @@ export const _private = {
             }
             return "md";
           }
-        }
+        },
       },
       CHANNEL_ITEM_RADIUS: {
         resolve(enabledExperiments) {
@@ -1919,7 +1921,7 @@ export const _private = {
             }
             return 12;
           }
-        }
+        },
       },
       CHANNEL_LIST_SUBTITLE_TEXT_STYLE: {
         resolve(enabledExperiments) {
@@ -1938,7 +1940,7 @@ export const _private = {
             }
             return "text-xs/medium";
           }
-        }
+        },
       },
       CHANNEL_LIST_TITLE_TEXT_STYLE: {
         resolve(enabledExperiments) {
@@ -1957,7 +1959,7 @@ export const _private = {
             }
             return "redesign/heading-18/bold";
           }
-        }
+        },
       },
       CHANNEL_NAME_CHANNEL_BORDER_WIDTH: {
         resolve(enabledExperiments) {
@@ -1975,7 +1977,7 @@ export const _private = {
             }
             return 1;
           }
-        }
+        },
       },
       CHANNEL_NAME_CHANNEL_ICON_RADIUS: {
         resolve(enabledExperiments) {
@@ -1994,12 +1996,12 @@ export const _private = {
             }
             return 12;
           }
-        }
+        },
       },
       CHANNEL_SAFE_AREA_BOTTOM_BACKGROUND: {
         resolve() {
           return "background-base-lower";
-        }
+        },
       },
       CHAT_INPUT_ACTION_BUTTON_GAP: {
         resolve(enabledExperiments) {
@@ -2027,7 +2029,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_ACTION_BUTTON_MARGIN: {
         resolve(enabledExperiments) {
@@ -2045,7 +2047,7 @@ export const _private = {
             }
             return 4;
           }
-        }
+        },
       },
       CHAT_INPUT_ACTION_BUTTON_SIZE: {
         resolve(enabledExperiments) {
@@ -2064,12 +2066,12 @@ export const _private = {
             }
             return 40;
           }
-        }
+        },
       },
       CHAT_INPUT_ACTION_ICON_ACTIVE_TINT: {
         resolve() {
           return "icon-strong";
-        }
+        },
       },
       CHAT_INPUT_ACTION_ICON_PIXEL_SIZE: {
         resolve(enabledExperiments) {
@@ -2088,7 +2090,7 @@ export const _private = {
             }
             return 24;
           }
-        }
+        },
       },
       CHAT_INPUT_BORDER_RADIUS: {
         resolve(enabledExperiments) {
@@ -2107,12 +2109,12 @@ export const _private = {
             }
             return 24;
           }
-        }
+        },
       },
       CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE: {
         resolve() {
           return 44;
-        }
+        },
       },
       CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH: {
         resolve(enabledExperiments) {
@@ -2131,7 +2133,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING: {
         resolve(enabledExperiments) {
@@ -2150,7 +2152,7 @@ export const _private = {
             }
             return 8;
           }
-        }
+        },
       },
       CHAT_INPUT_CONTEXT_BAR_GAP: {
         resolve(enabledExperiments) {
@@ -2169,7 +2171,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_CONTEXT_BAR_PADDING_HORIZONTAL: {
         resolve(enabledExperiments) {
@@ -2188,7 +2190,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_CONTEXT_BAR_PADDING_VERTICAL: {
         resolve(enabledExperiments) {
@@ -2207,7 +2209,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_EXPRESSION_OFFSET_LEFT: {
         resolve(enabledExperiments) {
@@ -2226,7 +2228,7 @@ export const _private = {
             }
             return 6;
           }
-        }
+        },
       },
       CHAT_INPUT_EXPRESSION_OFFSET_TOP: {
         resolve(enabledExperiments) {
@@ -2245,7 +2247,7 @@ export const _private = {
             }
             return 6;
           }
-        }
+        },
       },
       CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH: {
         resolve(enabledExperiments) {
@@ -2264,7 +2266,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_FLOATING_ACCESSORY_MARGIN_BOTTOM: {
         resolve(enabledExperiments) {
@@ -2283,7 +2285,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_FLOATING_ACCESSORY_MARGIN_HORIZONTAL: {
         resolve(enabledExperiments) {
@@ -2302,7 +2304,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP: {
         resolve(enabledExperiments) {
@@ -2320,12 +2322,12 @@ export const _private = {
             }
             return 4;
           }
-        }
+        },
       },
       CHAT_INPUT_FLOATING_ACCESSORY_TOP_BORDER_WIDTH: {
         resolve() {
           return 1;
-        }
+        },
       },
       CHAT_INPUT_FLOATING_BORDER_RADIUS: {
         resolve(enabledExperiments) {
@@ -2344,7 +2346,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_FLOATING_CONTENT_GAP: {
         resolve(enabledExperiments) {
@@ -2363,7 +2365,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL: {
         resolve(enabledExperiments) {
@@ -2388,7 +2390,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL: {
         resolve(enabledExperiments) {
@@ -2413,7 +2415,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_FLOATING_INLINE_FULL_GRADIENT_HEIGHT: {
         resolve(enabledExperiments) {
@@ -2432,7 +2434,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_FLOATING_OFFSET_MINIMUM: {
         resolve(enabledExperiments) {
@@ -2451,7 +2453,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT: {
         resolve(enabledExperiments) {
@@ -2470,7 +2472,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT_AT_BOTTOM: {
         resolve(enabledExperiments) {
@@ -2489,7 +2491,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_FLOATING_SCRIM_OFFSET_TOP: {
         resolve(enabledExperiments) {
@@ -2508,7 +2510,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_FLOATING_TYPING_GRADIENT_HEIGHT_REDUCED: {
         resolve(enabledExperiments) {
@@ -2527,12 +2529,12 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_ICON_DEFAULT_TINT: {
         resolve() {
           return "interactive-icon-default";
-        }
+        },
       },
       CHAT_INPUT_ICON_SIZE: {
         resolve(enabledExperiments) {
@@ -2551,7 +2553,7 @@ export const _private = {
             }
             return "medium";
           }
-        }
+        },
       },
       CHAT_INPUT_PILL_BORDER_WIDTH: {
         resolve(enabledExperiments) {
@@ -2570,7 +2572,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       CHAT_INPUT_PILL_MARGIN_HORIZONTAL: {
         resolve(enabledExperiments) {
@@ -2589,7 +2591,7 @@ export const _private = {
             }
             return 4;
           }
-        }
+        },
       },
       CHAT_INPUT_PILL_PADDING: {
         resolve(enabledExperiments) {
@@ -2607,7 +2609,7 @@ export const _private = {
             }
             return 2;
           }
-        }
+        },
       },
       CHAT_INPUT_REPLY_MENTION_ICON_MARGIN_RIGHT: {
         resolve(enabledExperiments) {
@@ -2625,7 +2627,7 @@ export const _private = {
             }
             return 4;
           }
-        }
+        },
       },
       CHAT_INPUT_REPLY_MENTION_ICON_SIZE: {
         resolve(enabledExperiments) {
@@ -2644,7 +2646,7 @@ export const _private = {
             }
             return 20;
           }
-        }
+        },
       },
       CHAT_INPUT_SEND_BUTTON_HEIGHT: {
         resolve(enabledExperiments) {
@@ -2672,7 +2674,7 @@ export const _private = {
             }
             return 40;
           }
-        }
+        },
       },
       CHAT_INPUT_SEND_BUTTON_WIDTH: {
         resolve(enabledExperiments) {
@@ -2702,7 +2704,7 @@ export const _private = {
             }
             return 40;
           }
-        }
+        },
       },
       COACHMARK_BODY_WIDTH: {
         resolve(enabledExperiments) {
@@ -2721,7 +2723,7 @@ export const _private = {
             }
             return 260;
           }
-        }
+        },
       },
       COACHMARK_BUTTON_SPACING: {
         resolve(enabledExperiments) {
@@ -2740,7 +2742,7 @@ export const _private = {
             }
             return 12;
           }
-        }
+        },
       },
       CONTROL_CHECKBOX_BORDER_RADIUS: {
         resolve(enabledExperiments) {
@@ -2759,7 +2761,7 @@ export const _private = {
             }
             return 8;
           }
-        }
+        },
       },
       CONTROL_CHECKBOX_BORDER_WIDTH: {
         resolve(enabledExperiments) {
@@ -2778,12 +2780,12 @@ export const _private = {
             }
             return 2;
           }
-        }
+        },
       },
       CONTROL_CHECKBOX_SIZE_DEFAULT: {
         resolve() {
           return 24;
-        }
+        },
       },
       CONTROL_RADIO_ICON_BORDER_WIDTH: {
         resolve(enabledExperiments) {
@@ -2802,7 +2804,7 @@ export const _private = {
             }
             return 2;
           }
-        }
+        },
       },
       CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT: {
         resolve(enabledExperiments) {
@@ -2821,12 +2823,12 @@ export const _private = {
             }
             return 10;
           }
-        }
+        },
       },
       CONTROL_RADIO_ICON_SIZE_DEFAULT: {
         resolve() {
           return 24;
-        }
+        },
       },
       CONTROL_SWITCH_HEIGHT: {
         resolve(enabledExperiments) {
@@ -2845,7 +2847,7 @@ export const _private = {
             }
             return 32;
           }
-        }
+        },
       },
       CONTROL_SWITCH_KNOB_CHECKED_OFFSET: {
         resolve(enabledExperiments) {
@@ -2864,7 +2866,7 @@ export const _private = {
             }
             return 16;
           }
-        }
+        },
       },
       CONTROL_SWITCH_KNOB_SIZE: {
         resolve(enabledExperiments) {
@@ -2883,7 +2885,7 @@ export const _private = {
             }
             return 24;
           }
-        }
+        },
       },
       CONTROL_SWITCH_WIDTH: {
         resolve(enabledExperiments) {
@@ -2902,7 +2904,7 @@ export const _private = {
             }
             return 48;
           }
-        }
+        },
       },
       EMOJI_ROW_EMOJI_CONTAINER_SIZE: {
         resolve(enabledExperiments) {
@@ -2921,7 +2923,7 @@ export const _private = {
             }
             return 48;
           }
-        }
+        },
       },
       EMOJI_ROW_EMOJI_FONT_SIZE: {
         resolve(enabledExperiments) {
@@ -2940,7 +2942,7 @@ export const _private = {
             }
             return 28;
           }
-        }
+        },
       },
       EMOJI_ROW_EMOJI_LINE_HEIGHT: {
         resolve(enabledExperiments) {
@@ -2959,7 +2961,7 @@ export const _private = {
             }
             return 33;
           }
-        }
+        },
       },
       EMOJI_ROW_EMOJI_MIN_SPACING: {
         resolve(enabledExperiments) {
@@ -2978,7 +2980,7 @@ export const _private = {
             }
             return 12;
           }
-        }
+        },
       },
       EMOJI_ROW_EMOJI_SIZE: {
         resolve(enabledExperiments) {
@@ -2997,7 +2999,7 @@ export const _private = {
             }
             return 28;
           }
-        }
+        },
       },
       GIFTING_SETTINGS_PADDING_HORIZONTAL: {
         resolve(enabledExperiments) {
@@ -3016,7 +3018,7 @@ export const _private = {
             }
             return 0;
           }
-        }
+        },
       },
       GROUP_AVATAR_SIZE: {
         resolve(enabledExperiments) {
@@ -3035,7 +3037,7 @@ export const _private = {
             }
             return 72;
           }
-        }
+        },
       },
       GUILD_BAR_ITEM_MARGIN: {
         resolve(enabledExperiments) {
@@ -3054,17 +3056,17 @@ export const _private = {
             }
             return 4;
           }
-        }
+        },
       },
       GUILD_BAR_ITEM_PADDING: {
         resolve() {
           return 8;
-        }
+        },
       },
       GUILD_BAR_ITEM_SIZE: {
         resolve() {
           return 48;
-        }
+        },
       },
       GUILD_FOLDER_BACKGROUND_LEFT: {
         resolve(enabledExperiments) {
@@ -3083,7 +3085,7 @@ export const _private = {
             }
             return 12;
           }
-        }
+        },
       },
       GUILD_FOLDER_BACKGROUND_RADIUS: set,
       GUILD_FOLDER_BACKGROUND_WIDTH_OFFSET: set,
@@ -3174,9 +3176,9 @@ export const _private = {
       VOICE_PANEL_GUTTER: set,
       VOICE_PANEL_PADDING: set,
       VOICE_TILE_BORDER_RADIUS: set,
-      YOU_BAR_BORDER_RADIUS: set
+      YOU_BAR_BORDER_RADIUS: set,
     },
     modal: { HORIZONTAL_PADDING: set, VERTICAL_PADDING: set, WIDTH_LARGE: set, WIDTH_MEDIUM: set, WIDTH_SMALL: set },
-    select: { MAX_WIDTH: set, OPTION_HEIGHT: set }
-  }
+    select: { MAX_WIDTH: set, OPTION_HEIGHT: set },
+  },
 };

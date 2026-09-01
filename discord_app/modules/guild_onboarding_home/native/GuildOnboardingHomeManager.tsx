@@ -36,7 +36,7 @@ let prototype = function GuildOnboardingHomeManager() {
     },
     THREAD_CREATE(arg0) {
       return lib.handleThreadCreate(arg0);
-    }
+    },
   };
   applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
     const guilds = closure_1_9.getGuilds();
@@ -115,7 +115,7 @@ let prototype = function GuildOnboardingHomeManager() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       c1 = tmp2;
       ({ guildId: c0, channelId: c1 } = c0);
       yield "PX_16";
@@ -173,7 +173,7 @@ let prototype = function GuildOnboardingHomeManager() {
     iter.next();
     return iter;
   });
-  applyArgumentsResult.handleChannelSelect = function() {
+  applyArgumentsResult.handleChannelSelect = function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -240,7 +240,7 @@ let prototype = function GuildOnboardingHomeManager() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (actionType === 2) {
         actionType = 3;
         HermesBuiltin.throwTypeError();
@@ -321,7 +321,7 @@ let prototype = function GuildOnboardingHomeManager() {
       }
     })();
   });
-  applyArgumentsResult._completeChatAction = function() {
+  applyArgumentsResult._completeChatAction = function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -337,7 +337,7 @@ let prototype = function GuildOnboardingHomeManager() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -382,7 +382,10 @@ let prototype = function GuildOnboardingHomeManager() {
               const selfMember = closure_1_8.getSelfMember(tmp23);
               if (null != selfMember) {
                 if (tmp24Result.getIsNewMember(tmp23)) {
-                  const items = [closure_1_1._getOrLoadOnboardingHomeSettings(tmp23), closure_1_1._getOrLoadMemberActions(tmp23, selfMember)];
+                  const items = [
+                    closure_1_1._getOrLoadOnboardingHomeSettings(tmp23),
+                    closure_1_1._getOrLoadMemberActions(tmp23, selfMember),
+                  ];
                   v0 = 1;
                   c4 = 1;
                   const obj2 = { value: null, done: false };
@@ -422,7 +425,7 @@ let prototype = function GuildOnboardingHomeManager() {
       }
     })();
   });
-  applyArgumentsResult._getOrLoadOnboardingMemberActions = function() {
+  applyArgumentsResult._getOrLoadOnboardingMemberActions = function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -436,7 +439,7 @@ let prototype = function GuildOnboardingHomeManager() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -511,7 +514,7 @@ let prototype = function GuildOnboardingHomeManager() {
       }
     })();
   });
-  applyArgumentsResult._getOrLoadOnboardingHomeSettings = function() {
+  applyArgumentsResult._getOrLoadOnboardingHomeSettings = function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -526,7 +529,7 @@ let prototype = function GuildOnboardingHomeManager() {
     closure_1 = arg1;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -603,7 +606,7 @@ let prototype = function GuildOnboardingHomeManager() {
       }
     })();
   });
-  applyArgumentsResult._getOrLoadMemberActions = function() {
+  applyArgumentsResult._getOrLoadMemberActions = function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -615,9 +618,10 @@ let prototype = function GuildOnboardingHomeManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/GuildOnboardingHomeManager.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_onboarding_home/native/GuildOnboardingHomeManager.tsx",
+);
 
 export default prototype;

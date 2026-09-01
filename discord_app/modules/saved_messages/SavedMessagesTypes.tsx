@@ -6,7 +6,18 @@ const result = set.fileFinishedImporting("modules/saved_messages/SavedMessagesTy
 
 export const SavedMessageSortTypes = { ALL: "ALL", REMINDER: "REMINDER", BOOKMARK: "BOOKMARK" };
 export const savedMessageDataToClient = function savedMessageDataToClient(save_data) {
-  const obj = { channelId: save_data.channel_id, messageId: save_data.message_id, savedAt: new Date(save_data.saved_at), authorSummary: null, channelSummary: null, messageSummary: null, guildId: null, authorId: null, notes: null, dueAt: null };
+  const obj = {
+    channelId: save_data.channel_id,
+    messageId: save_data.message_id,
+    savedAt: new Date(save_data.saved_at),
+    authorSummary: null,
+    channelSummary: null,
+    messageSummary: null,
+    guildId: null,
+    authorId: null,
+    notes: null,
+    dueAt: null,
+  };
   ({ author_summary: obj[3], channel_summary: obj[4], message_summary: obj[5] } = save_data);
   let guild_id;
   if (0 !== save_data.guild_id) {
@@ -35,7 +46,18 @@ export const savedMessageCreateObjectToClient = function savedMessageCreateObjec
   }
   obj = { message: messageRecord, saveData: null };
   const save_data = body.save_data;
-  obj = { channelId: save_data.channel_id, messageId: save_data.message_id, savedAt: new Date(save_data.saved_at), authorSummary: null, channelSummary: null, messageSummary: null, guildId: null, authorId: null, notes: null, dueAt: null };
+  obj = {
+    channelId: save_data.channel_id,
+    messageId: save_data.message_id,
+    savedAt: new Date(save_data.saved_at),
+    authorSummary: null,
+    channelSummary: null,
+    messageSummary: null,
+    guildId: null,
+    authorId: null,
+    notes: null,
+    dueAt: null,
+  };
   ({ author_summary: obj3[3], channel_summary: obj3[4], message_summary: obj3[5] } = save_data);
   let guild_id;
   if (0 !== save_data.guild_id) {

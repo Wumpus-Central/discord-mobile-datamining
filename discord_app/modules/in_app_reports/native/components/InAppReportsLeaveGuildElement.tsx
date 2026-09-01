@@ -5,7 +5,9 @@ import { AnalyticEvents } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsLeaveGuildElement.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsLeaveGuildElement.tsx",
+);
 
 export default function LeaveGuildElement(guild) {
   guild = guild.guild;
@@ -33,7 +35,15 @@ export default function LeaveGuildElement(guild) {
       callback(true);
     }
   }, items1);
-  let obj = { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null };
+  let obj = {
+    title: null,
+    disabledTitle: null,
+    description: null,
+    disabled: null,
+    variant: "danger",
+    onPress: null,
+    icon: null,
+  };
   let intl = guild(reportId[7]).intl;
   obj[0] = intl.string(guild(reportId[7]).t.cU96ip);
   let intl2 = guild(reportId[7]).intl;
@@ -65,5 +75,13 @@ export default function LeaveGuildElement(guild) {
     obj.show(obj);
   };
   obj[6] = jsx(guild(reportId[10]).DoorExitIcon, { color: "text-feedback-critical" });
-  return jsx(addCallback(reportId[6]), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
-};
+  return jsx(addCallback(reportId[6]), {
+    title: null,
+    disabledTitle: null,
+    description: null,
+    disabled: null,
+    variant: "danger",
+    onPress: null,
+    icon: null,
+  });
+}

@@ -51,5 +51,10 @@ export const generateLaunchSignature = function generateLaunchSignature(globalOb
   return LIBDISCORE_JSI.generateLaunchSignature(globalObject);
 };
 export const getHttpClientAPI = function getHttpClientAPI() {
-  return { httpRequest: LIBDISCORE_JSI.httpRequest, getHttpRequestStatus: LIBDISCORE_JSI.getHttpRequestStatus, cancelHttpRequest: LIBDISCORE_JSI.cancelHttpRequest, getTrackedRequestCount: LIBDISCORE_JSI.getTrackedRequestCount };
+  return {
+    httpRequest: LIBDISCORE_JSI.httpRequest,
+    getHttpRequestStatus: LIBDISCORE_JSI.getHttpRequestStatus,
+    cancelHttpRequest: LIBDISCORE_JSI.cancelHttpRequest,
+    getTrackedRequestCount: LIBDISCORE_JSI.getTrackedRequestCount,
+  };
 };

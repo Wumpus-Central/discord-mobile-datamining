@@ -40,7 +40,7 @@ function openIncodeAgeVerificationModal(arg0) {
   }
   let flag = null != combined;
   if (flag) {
-    callback(function*() {
+    callback(function* () {
       closure_1 = tmp3;
       closure_0 = tmp3;
       dependencyMap = 1;
@@ -66,12 +66,16 @@ function openIncodeAgeVerificationModal(arg0) {
           const v0 = 3;
           c4 = 1;
           const obj3 = { value: null, done: false };
-          obj3[0] = obj1.pushLazy(v0(function*() {
-            closure_0 = tmp2;
-            yield closure_1_0(paths[10])(paths[9], paths.paths);
-            closure_0 = arg1.default;
-            return () => closure_2_13(closure_0, { webviewUrl: c2, onClose: closure_0, onComplete: c1 });
-          }), {}, closure_1_5);
+          obj3[0] = obj1.pushLazy(
+            v0(function* () {
+              closure_0 = tmp2;
+              yield closure_1_0(paths[10])(paths[9], paths.paths);
+              closure_0 = arg1.default;
+              return () => closure_2_13(closure_0, { webviewUrl: c2, onClose: closure_0, onComplete: c1 });
+            }),
+            {},
+            closure_1_5,
+          );
           return obj3;
         }
       } else if (arg0 === 1) {
@@ -90,9 +94,7 @@ function openIncodeAgeVerificationModal(arg0) {
 function showAgeVerification(onClose) {
   let fn = onClose.onClose;
   if (fn === undefined) {
-    fn = function n(arg0) {
-
-    };
+    fn = function n(arg0) {};
   }
   ({ shouldShowExpressiveModal, externalWindow, webviewUrl } = onClose);
   ({ method, verificationVendorName } = onClose);
@@ -113,31 +115,35 @@ function showAgeVerification(onClose) {
             }
             const result = tmp2(tmp3[12]).openAgeVerificationCustomTab(webviewUrl, externalWindow);
             const tmp2Result1 = tmp2(tmp3[12]);
-            result.then((arg0) => {
-              if (!arg0) {
-                webviewUrl(merged[11]).showFailedToast(closure_1_12.TIGGER_PAWTECT_ERROR);
-                fn();
-                const obj = webviewUrl(merged[11]);
-              }
-            }).catch(() => {
-              webviewUrl(merged[11]).showFailedToast(closure_1_12.TIGGER_PAWTECT_ERROR);
-              fn();
-            });
-            return true;
-          } else {
-            if (tmp2Result2.isIOS()) {
-              const result1 = tmp2(tmp3[13]).openAgeVerificationAuthSession(webviewUrl);
-              const tmp2Result3 = tmp2(tmp3[13]);
-              result1.then((arg0) => {
+            result
+              .then((arg0) => {
                 if (!arg0) {
                   webviewUrl(merged[11]).showFailedToast(closure_1_12.TIGGER_PAWTECT_ERROR);
                   fn();
                   const obj = webviewUrl(merged[11]);
                 }
-              }).catch(() => {
+              })
+              .catch(() => {
                 webviewUrl(merged[11]).showFailedToast(closure_1_12.TIGGER_PAWTECT_ERROR);
                 fn();
               });
+            return true;
+          } else {
+            if (tmp2Result2.isIOS()) {
+              const result1 = tmp2(tmp3[13]).openAgeVerificationAuthSession(webviewUrl);
+              const tmp2Result3 = tmp2(tmp3[13]);
+              result1
+                .then((arg0) => {
+                  if (!arg0) {
+                    webviewUrl(merged[11]).showFailedToast(closure_1_12.TIGGER_PAWTECT_ERROR);
+                    fn();
+                    const obj = webviewUrl(merged[11]);
+                  }
+                })
+                .catch(() => {
+                  webviewUrl(merged[11]).showFailedToast(closure_1_12.TIGGER_PAWTECT_ERROR);
+                  fn();
+                });
               return true;
             }
             tmp2Result2 = tmp2(tmp3[18]);
@@ -156,21 +162,31 @@ function showAgeVerification(onClose) {
     }
     flag = null != webviewUrl;
     if (flag) {
-      webviewUrl(tmp3[8]).pushLazy(callback(function*() {
-        closure_0 = tmp2;
-        yield closure_1_0(paths[10])(paths[20], paths.paths);
-        closure_0 = arg1.default;
-        return () => {
-          merged = Object.assign(c2);
-          return closure_2_13(closure_0, { webviewUrl: c1, onClose: closure_0 });
-        };
-      }), {}, closure_5);
+      webviewUrl(tmp3[8]).pushLazy(
+        callback(function* () {
+          closure_0 = tmp2;
+          yield closure_1_0(paths[10])(paths[20], paths.paths);
+          closure_0 = arg1.default;
+          return () => {
+            merged = Object.assign(c2);
+            return closure_2_13(closure_0, { webviewUrl: c1, onClose: closure_0 });
+          };
+        }),
+        {},
+        closure_5,
+      );
       flag = true;
       const obj5 = webviewUrl(tmp3[8]);
     }
   }
 }
-({ AGE_VERIFICATION_MODAL_KEY: c5, AGE_VERIFICATION_GET_STARTED_MODAL_KEY: closure_6, AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY: error, MANUAL_REVIEW_DECIDED_TEEN_ALERT_KEY: closure_8, VerificationVendorName: c9 } = set);
+({
+  AGE_VERIFICATION_MODAL_KEY: c5,
+  AGE_VERIFICATION_GET_STARTED_MODAL_KEY: closure_6,
+  AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY: error,
+  MANUAL_REVIEW_DECIDED_TEEN_ALERT_KEY: closure_8,
+  VerificationVendorName: c9,
+} = set);
 let result = set.fileFinishedImporting("modules/age_assurance/AgeVerificationActionCreators.native.tsx");
 
 export default {
@@ -210,9 +226,7 @@ export default {
         onClose(709).dispatch({ type: "INITIATE_AGE_VERIFICATION" });
         obj = { onClose: null, onComplete: null };
         obj[0] = handleClose;
-        obj[1] = function onComplete() {
-
-        };
+        obj[1] = function onComplete() {};
         if (!openIncodeAgeVerificationModal(obj)) {
           obj = { type: "CLOSE_AGE_VERIFICATION_MODAL", status: null };
           obj[1] = prop;
@@ -224,31 +238,41 @@ export default {
         }
       } else {
         if (tmpResult3.isExpressiveModalV2Enabled(entryPoint)) {
-          onClose(4723).pushLazy(prop(function*() {
-            closure_0 = tmp2;
-            yield closure_1_0(paths[10])(paths[25], paths.paths);
-            closure_0 = arg1.default;
-            return () => closure_2_13(closure_0, {
-              entryPoint: closure_0,
-              onClose() {
-                let tmp;
-                if (callback != null) {
-                  tmp = callback();
-                }
-                return tmp;
-              }
-            });
-          }), {}, closure_6);
+          onClose(4723).pushLazy(
+            prop(function* () {
+              closure_0 = tmp2;
+              yield closure_1_0(paths[10])(paths[25], paths.paths);
+              closure_0 = arg1.default;
+              return () =>
+                closure_2_13(closure_0, {
+                  entryPoint: closure_0,
+                  onClose() {
+                    let tmp;
+                    if (callback != null) {
+                      tmp = callback();
+                    }
+                    return tmp;
+                  },
+                });
+            }),
+            {},
+            closure_6,
+          );
           const obj8 = onClose(4723);
         } else {
           currentUser = tmp(8723).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
           const tmpResult4 = tmp(8723);
-          onClose(4723).pushLazy(prop(function*() {
-            closure_0 = tmp2;
-            yield closure_1_0(paths[10])(paths[27], paths.paths);
-            closure_0 = arg1.default;
-            return () => closure_2_13(closure_0, { entryPoint: closure_0, isRetry: c2, useEmbeddedMethods: closure_1_4 });
-          }), {}, closure_6);
+          onClose(4723).pushLazy(
+            prop(function* () {
+              closure_0 = tmp2;
+              yield closure_1_0(paths[10])(paths[27], paths.paths);
+              closure_0 = arg1.default;
+              return () =>
+                closure_2_13(closure_0, { entryPoint: closure_0, isRetry: c2, useEmbeddedMethods: closure_1_4 });
+            }),
+            {},
+            closure_6,
+          );
           const obj7 = onClose(4723);
         }
         tmpResult3 = tmp(8700);
@@ -261,9 +285,7 @@ export default {
       webviewUrl: verification_webview_url,
       verificationVendorName: constants.K_ID,
       entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.SYSTEM_DM_MANUAL_REVIEW,
-      onComplete() {
-
-      }
+      onComplete() {},
     });
   },
   showManualReviewDecidedTeenModal() {
@@ -271,5 +293,5 @@ export default {
   },
   openUrl(arg0) {
     _modDef4190.openURL(arg0);
-  }
+  },
 };

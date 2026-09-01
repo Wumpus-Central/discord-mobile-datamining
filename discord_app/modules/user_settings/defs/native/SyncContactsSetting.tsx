@@ -27,7 +27,7 @@ createToggle = {
       phone = currentUser.phone;
     }
     syncContacts.handleSyncContacts(localAccount, phone, arg0);
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SyncContactsSetting.tsx");

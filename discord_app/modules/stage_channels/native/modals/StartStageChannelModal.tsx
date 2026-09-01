@@ -30,7 +30,7 @@ function NavigationBar(guild) {
   let tmp2 = null;
   if (null == guild.guild) {
     let obj = { style: null, children: null };
-    const items = [, ];
+    const items = [,];
     ({ contentContainer: arr[0], contentTopSpacing: arr[1] } = tmp);
     obj[0] = items;
     obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
@@ -80,7 +80,7 @@ class NotificationToggle {
     obj2 = { text: null };
     intl = require("getSystemLocale").intl;
     obj2[0] = intl.string(require("getSystemLocale").t.BYJgew);
-    items1 = [, ];
+    items1 = [,];
     items1[0] = jsx(require("Form").FormLabel, obj2);
     tmp5Result = null;
     if (stateFromStores) {
@@ -104,7 +104,26 @@ class NotificationToggle {
 ({ View: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ MAX_STAGE_TOPIC_LENGTH: c10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: unpackModuleId } = MAX_STAGE_TOPIC_LENGTH);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let obj = { keyboardAwareView: { flex: 1 }, closeButtonContainer: { right: 10 }, container: null, contentContainer: null, contentTopSpacing: null, header: null, headerTitle: null, headerSubtitle: null, textInput: null, startButton: null, error: null, optionExplanation: null, guildIcon: null, label: null, pill: null, pillLabel: null, notificationToggle: null, ageVerificationNotice: null };
+let obj = {
+  keyboardAwareView: { flex: 1 },
+  closeButtonContainer: { right: 10 },
+  container: null,
+  contentContainer: null,
+  contentTopSpacing: null,
+  header: null,
+  headerTitle: null,
+  headerSubtitle: null,
+  textInput: null,
+  startButton: null,
+  error: null,
+  optionExplanation: null,
+  guildIcon: null,
+  label: null,
+  pill: null,
+  pillLabel: null,
+  notificationToggle: null,
+  ageVerificationNotice: null,
+};
 obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[2] = obj;
 obj[3] = { paddingHorizontal: 16 };
@@ -112,7 +131,13 @@ obj[4] = { paddingTop: 16 };
 obj[5] = { alignItems: "center", paddingBottom: 24 };
 obj[6] = { marginTop: 16, marginBottom: 8 };
 obj[7] = { textAlign: "center" };
-createCacheKey = { padding: 12, width: "100%", borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 16 };
+createCacheKey = {
+  padding: 12,
+  width: "100%",
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  marginBottom: 16,
+};
 obj[8] = createCacheKey;
 obj[9] = { marginTop: 16 };
 obj[10] = { paddingTop: 8 };
@@ -120,11 +145,31 @@ obj[11] = { lineHeight: 16, paddingTop: 8 };
 obj[12] = { borderRadius: ThemesDefault.radii.md };
 obj[13] = { display: "flex", alignItems: "center", flexDirection: "row" };
 let obj2 = { borderRadius: ThemesDefault.radii.md };
-obj[14] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, paddingHorizontal: 4, paddingVertical: 2, marginStart: 8, borderRadius: ThemesDefault.radii.xs };
+obj[14] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  paddingHorizontal: 4,
+  paddingVertical: 2,
+  marginStart: 8,
+  borderRadius: ThemesDefault.radii.xs,
+};
 obj[15] = { textTransform: "uppercase" };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, paddingHorizontal: 4, paddingVertical: 2, marginStart: 8, borderRadius: ThemesDefault.radii.xs };
-obj[16] = { marginTop: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
-let obj4 = { marginTop: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
+let obj3 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  paddingHorizontal: 4,
+  paddingVertical: 2,
+  marginStart: 8,
+  borderRadius: ThemesDefault.radii.xs,
+};
+obj[16] = {
+  marginTop: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.sm,
+};
+let obj4 = {
+  marginTop: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.sm,
+};
 obj[17] = { marginBottom: ThemesDefault.space.PX_16 };
 let closure_16 = createCacheKey.createStyles(obj);
 let obj5 = { marginBottom: ThemesDefault.space.PX_16 };
@@ -147,7 +192,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   let callback3;
   function _handleSave() {
     const self = this;
-    const tmp = first1(function*() {
+    const tmp = first1(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -276,14 +321,21 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   obj = first2;
   const imperativeHandle = first2.useImperativeHandle(ref, () => ({
     renderRightButton: function RightButton() {
-      obj = { style: closure_1_16().closeButtonContainer, accessibilityRole: "button", accessibilityLabel: null, source: null, onPress: null, disableColor: true };
+      obj = {
+        style: closure_1_16().closeButtonContainer,
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        source: null,
+        onPress: null,
+        disableColor: true,
+      };
       const tmp = closure_1_16();
       const intl = closure_1_0(closure_1_3[13]).intl;
       obj[2] = intl.string(closure_1_0(closure_1_3[13]).t.cpT0Cq);
       obj[3] = closure_1_1(closure_1_3[15]);
       obj[4] = closure_1;
       return closure_1_14(closure_1_1(closure_1_3[22]), obj);
-    }
+    },
   }));
   const tmp4 = callback(first2.useState(channel.channel), 2);
   first = tmp4[0];
@@ -368,8 +420,14 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     obj.track(lib.START_STAGE_OPENED, obj);
   });
   obj = { style: tmp.header, children: null };
-  const items3 = [obj(HeaderIcon, { guild }), , ];
-  obj1 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const items3 = [obj(HeaderIcon, { guild }), ,];
+  obj1 = {
+    style: tmp.headerTitle,
+    accessibilityRole: "header",
+    variant: "text-lg/semibold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   if (null == memo) {
     const intl2 = tmp16(tmp17[13]).intl;
     let stringResult = intl2.string(tmp16(tmp17[13]).t.DDF0cJ);
@@ -390,8 +448,15 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   obj2[3] = stringResult1;
   items3[2] = obj(require(memo[21]).Text, obj2);
   obj[1] = items3;
-  obj3 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, style: tmp.container, contentContainerStyle: null, children: null };
-  const items4 = [tmp.contentContainer, ];
+  obj3 = {
+    keyboardShouldPersistTaps: "handled",
+    showsVerticalScrollIndicator: false,
+    alwaysBounceVertical: false,
+    style: tmp.container,
+    contentContainerStyle: null,
+    children: null,
+  };
+  const items4 = [tmp.contentContainer];
   let contentTopSpacing = null;
   let tmp29Result = tmp29(tmp30, obj);
   if (null != guild) {
@@ -399,13 +464,24 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   }
   items4[1] = contentTopSpacing;
   obj3[4] = items4;
-  const items5 = [tmp29Result, , , , , , , , ];
+  const items5 = [tmp29Result, , , , , , , ,];
   const obj4 = { children: null };
   let tmp26Result = tmp26(tmp17[31]);
   const intl5 = tmp16(tmp17[13]).intl;
   obj4[0] = intl5.string(require(memo[13]).t["5FPBOB"]);
   items5[1] = obj(tmp26Result, obj4);
-  let obj5 = { style: tmp.textInput, showBorder: false, showTopContainer: false, multiline: false, maxLength: canSendStageStartNotification, value: first1, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null };
+  let obj5 = {
+    style: tmp.textInput,
+    showBorder: false,
+    showTopContainer: false,
+    multiline: false,
+    maxLength: canSendStageStartNotification,
+    value: first1,
+    placeholder: null,
+    onChange: null,
+    autoFocus: true,
+    clearButtonVisibility: null,
+  };
   const intl6 = tmp16(tmp17[13]).intl;
   obj5[6] = intl6.string(require(memo[13]).t.ZwWruY);
   obj5[7] = tmp3Result[1];
@@ -439,7 +515,11 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     tmp31Result1 = tmp31(NotificationToggle, obj8);
   }
   items5[5] = tmp31Result1;
-  items5[6] = obj(importDefault(memo[33]), { onConfirmPress: _handleSave, style: tmp.ageVerificationNotice, channelId: first.id });
+  items5[6] = obj(importDefault(memo[33]), {
+    onConfirmPress: _handleSave,
+    style: tmp.ageVerificationNotice,
+    channelId: first.id,
+  });
   let tmp31Result2 = null;
   if (null != obj1) {
     const obj10 = { style: null, variant: "text-xs/medium", color: "text-feedback-critical", children: null };
@@ -469,7 +549,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
       return applyArgumentsResult;
     },
     disabled: tmp44,
-    loading: tmp14
+    loading: tmp14,
   });
   items5[8] = obj(closure_7, obj11);
   obj3[5] = items5;

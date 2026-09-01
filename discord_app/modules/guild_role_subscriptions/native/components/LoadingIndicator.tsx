@@ -6,8 +6,10 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 noopAll;
 let closure_2 = createCacheKey.createStyles({ indicator: { margin: 16 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/LoadingIndicator.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/LoadingIndicator.tsx",
+);
 
 export default function LoadingIndicator() {
   return <ActivityIndicator style={callback().indicator} />;
-};
+}

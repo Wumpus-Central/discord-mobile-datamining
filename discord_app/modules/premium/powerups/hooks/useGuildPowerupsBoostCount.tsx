@@ -62,7 +62,7 @@ export default function useGuildAppliedBoostCount(guildId) {
     obj = { available: 0, spent: 0, total: num, isLoading: true };
     return obj;
   }, items3);
-};
+}
 export const getGuildPowerupsBoostCount = function getGuildPowerupsBoostCount(id) {
   guild = guild.getGuild(id);
   let total;

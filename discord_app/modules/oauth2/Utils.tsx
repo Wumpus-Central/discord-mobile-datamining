@@ -43,7 +43,10 @@ export const getApplicationDetailsText = function getApplicationDetailsText(appl
     return intl.format(isSocialLayerParentApplication ? t["8LemYv"] : t["3Ywek3"], obj2);
   }
 };
-export const isContentClassificationRestricted = function isContentClassificationRestricted(content_classification, closure_32) {
+export const isContentClassificationRestricted = function isContentClassificationRestricted(
+  content_classification,
+  closure_32,
+) {
   let result = null != content_classification;
   if (result) {
     result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(content_classification);

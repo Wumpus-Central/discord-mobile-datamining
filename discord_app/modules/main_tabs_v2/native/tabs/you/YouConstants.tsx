@@ -15,4 +15,12 @@ export const YOU_CARD_BORDER_RADIUS = ThemesDefault.radii.lg;
 export const YOU_CARD_BORDER_WIDTH = 1;
 export const YOU_SCROLL_EVENT_THROTTLE = 16;
 export const YOU_ACTION_SHEET_TOP_INSET = 12;
-export const YOU_SCREEN_DROP_SHADOW = { xOffset: 0, yOffset: 2, shadowColorIos: "#000000", shadowOpacity: 0.08, shadowRadius: 2.62, elevation: 4, shadowColorAndroid: "#000000" };
+export const YOU_SCREEN_DROP_SHADOW = {
+  xOffset: 0,
+  yOffset: 2,
+  shadowColorIos: "#000000",
+  shadowOpacity: 0.08,
+  shadowRadius: 2.62,
+  elevation: 4,
+  shadowColorAndroid: "#000000",
+};

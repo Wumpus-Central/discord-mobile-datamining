@@ -9,4 +9,4 @@ export default function openSoundboardSoundPreviewActionSheet(channel, sound, an
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel, sound, soundGridLocation, analyticsSource };
   obj.openLazy(asyncRequireImpl(16657, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", obj);
-};
+}

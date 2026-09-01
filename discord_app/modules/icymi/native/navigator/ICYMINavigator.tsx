@@ -17,13 +17,13 @@ export default function ICYMINavigator() {
       return { headerShown: false, fullScreenGestureEnabled: true };
     },
     initialRouteName: "icymi-screen",
-    children: null
+    children: null,
   };
   obj = {
     name: "icymi-screen",
     getComponent() {
       return callback(16038).ICYMITab;
-    }
+    },
   };
   const items = [
     callback(closure_4.Screen, obj),
@@ -31,9 +31,9 @@ export default function ICYMINavigator() {
       name: "notifications-screen",
       getComponent() {
         return callback(15989).ThemedNotificationsModal;
-      }
-    })
+      },
+    }),
   ];
   obj[2] = items;
   return callback2(closure_4.Navigator, obj);
-};
+}

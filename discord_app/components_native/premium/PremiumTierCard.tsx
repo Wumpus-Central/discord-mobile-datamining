@@ -15,8 +15,22 @@ require = arg1;
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { header: { marginTop: 24, padding: 16 }, textLogoTier0: { width: 158, height: 32 }, textLogoTier1: { width: 185, height: 32 }, textLogoTier2: { width: 80, height: 32 }, wumpusLogo: { position: "absolute", top: 0, right: 24, zIndex: 1 }, wumpusLogoTier0: { width: 83, height: 100 }, wumpusLogoTier1: { width: 86, height: 100 }, wumpusLogoTier2: { width: 133, height: 100 }, body: null };
-createCacheKey = { padding: 16, borderBottomRightRadius: ThemesDefault.radii.xs, borderBottomLeftRadius: ThemesDefault.radii.xs };
+createCacheKey = {
+  header: { marginTop: 24, padding: 16 },
+  textLogoTier0: { width: 158, height: 32 },
+  textLogoTier1: { width: 185, height: 32 },
+  textLogoTier2: { width: 80, height: 32 },
+  wumpusLogo: { position: "absolute", top: 0, right: 24, zIndex: 1 },
+  wumpusLogoTier0: { width: 83, height: 100 },
+  wumpusLogoTier1: { width: 86, height: 100 },
+  wumpusLogoTier2: { width: 133, height: 100 },
+  body: null,
+};
+createCacheKey = {
+  padding: 16,
+  borderBottomRightRadius: ThemesDefault.radii.xs,
+  borderBottomLeftRadius: ThemesDefault.radii.xs,
+};
 createCacheKey[8] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("components_native/premium/PremiumTierCard.tsx");
@@ -25,7 +39,13 @@ export default function _default(premiumType) {
   premiumType = premiumType.premiumType;
   ({ children, style } = premiumType);
   const tmp = callback();
-  let obj = { style: tmp.header, start: keys.HorizontalGradient.START, end: keys.HorizontalGradient.END, colors: getPremiumGradientColor(premiumType), children: null };
+  let obj = {
+    style: tmp.header,
+    start: keys.HorizontalGradient.START,
+    end: keys.HorizontalGradient.END,
+    colors: getPremiumGradientColor(premiumType),
+    children: null,
+  };
   obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null, source: null };
   let obj2 = getPremiumPlanItem;
   obj[1] = obj2.getPremiumTypeDisplayName(premiumType);
@@ -46,8 +66,8 @@ export default function _default(premiumType) {
   }
   obj[4] = tmp5Result;
   obj[4] = closure_7(closure_4, obj);
-  const items = [closure_7(LinearGradientDefault, obj), , ];
-  const items1 = [tmp.wumpusLogo, ];
+  const items = [closure_7(LinearGradientDefault, obj), ,];
+  const items1 = [tmp.wumpusLogo];
   if (PremiumTypes.TIER_0 === premiumType) {
     let wumpusLogoTier2 = tmp.wumpusLogoTier0;
   } else if (tmp10.TIER_1 === premiumType) {
@@ -72,4 +92,4 @@ export default function _default(premiumType) {
   obj1[0] = items;
   children = closure_9(closure_8, obj1);
   return closure_7(PressableCard.Card, { variant: "surface-high", style, children });
-};
+}

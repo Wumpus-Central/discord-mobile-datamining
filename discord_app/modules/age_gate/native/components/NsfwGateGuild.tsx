@@ -14,7 +14,13 @@ const require = arg1;
 ({ AnalyticEvents: c9, HelpdeskArticles: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 createCacheKey = { container: null, header: null, description: null, image: null };
-createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  flex: 1,
+  alignItems: "center",
+  justifyContent: "center",
+  padding: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginBottom: 8 };
 createCacheKey[2] = { textAlign: "center", marginBottom: 16 };
@@ -38,7 +44,13 @@ export default function NsfwGateGuild(guildId) {
   const items = [guildId, currentUser];
   const effect = React.useEffect(() => {
     let obj = currentUser(closure_1_2[11]);
-    obj = { guild_id: guildId, user_id: null, is_member: null, is_user_opted_in_to_age_restricted_servers: null, source: null };
+    obj = {
+      guild_id: guildId,
+      user_id: null,
+      is_member: null,
+      is_user_opted_in_to_age_restricted_servers: null,
+      source: null,
+    };
     let id;
     if (currentUser != null) {
       id = tmp3.id;
@@ -62,19 +74,34 @@ export default function NsfwGateGuild(guildId) {
     obj.track(closure_1_9.GUILD_NSFW_GATE_VIEWED, obj);
   }, items);
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(currentUser(7748), {}), , , , , ];
+  const items1 = [callback(currentUser(7748), {}), , , , ,];
   obj = { source: currentUser(9133), style: tmp.image };
   items1[1] = callback(closure_5, obj);
-  obj1 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult };
+  obj1 = {
+    style: tmp.header,
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: stringResult,
+  };
   items1[2] = callback(guildId(4474).Text, obj1);
-  items1[3] = callback(guildId(4474).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: stringResult1 });
+  items1[3] = callback(guildId(4474).Text, {
+    style: tmp.description,
+    variant: "text-md/normal",
+    color: "text-default",
+    children: stringResult1,
+  });
   const formatResult = intl3.format(guildId(1236).t.Z12LNW, obj);
   const obj2 = { style: tmp.description, variant: "text-md/normal", color: "text-default", children: stringResult1 };
-  items1[4] = callback(guildId(4474).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: intl3.format(guildId(1236).t.Z12LNW, obj) });
+  items1[4] = callback(guildId(4474).Text, {
+    style: tmp.description,
+    variant: "text-md/normal",
+    color: "text-default",
+    children: intl3.format(guildId(1236).t.Z12LNW, obj),
+  });
   const obj4 = { onPress: guildId.onClose, size: "md", text: null };
   const intl4 = guildId(1236).intl;
   obj4[2] = intl4.string(guildId(1236).t.gRqiWV);
   items1[5] = callback(guildId(4928).Button, obj4);
   obj[1] = items1;
   return callback2(closure_4, obj);
-};
+}

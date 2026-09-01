@@ -10,7 +10,7 @@ import importDefaultResult1 from "../../../_runtime/00012_apply.js";
 require = arg1;
 function _install() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     closure_2 = tmp2;
     let usesMultilang = tmp3;
     closure_0 = yield closure_1_7.getAvailableDictionaries();
@@ -23,7 +23,11 @@ function _install() {
         closure_0 = closure_1;
         if (null != document.body) {
           const _document = document;
-          const listener = body.addEventListener("beforeinput", (target) => closure_1_9(closure_0, target.target), true);
+          const listener = body.addEventListener(
+            "beforeinput",
+            (target) => closure_1_9(closure_0, target.target),
+            true,
+          );
         }
       })(usesMultilang);
     }
@@ -148,19 +152,19 @@ Object.defineProperty(prototype, "enabled", {
   get: function enabled() {
     return this._enabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "enabled", {
   get: undefined,
   set: function enabled(_enabled) {
     this._enabled = _enabled;
-  }
+  },
 });
 Object.defineProperty(prototype, "usesMultilang", {
   get: function usesMultilang() {
     return this.useMultilang;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["setLearnedWords"] = function setLearnedWords(arg0) {
   spellCheck.setLearnedWords(arg0);

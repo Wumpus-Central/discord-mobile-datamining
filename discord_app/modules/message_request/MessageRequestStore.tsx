@@ -78,13 +78,13 @@ class MessageRequestStore extends tmp4 {
       CONNECTION_OPEN: handleConnectionOpen,
       CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpen,
       CACHE_LOADED_LAZY() {
-            return obj.loadCache();
-          },
+        return obj.loadCache();
+      },
       OVERLAY_INITIALIZE: handleOverlayInitialize,
       CHANNEL_CREATE: handleChannelCreate,
       CHANNEL_UPDATES: handleChannelUpdates,
       CHANNEL_DELETE: handleChannelDelete,
-      MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: handleMessageRequestAcceptOptimistic
+      MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: handleMessageRequestAcceptOptimistic,
     };
     tmp = new tmp(obj, handleChannelDelete, new.target, tmp);
     // ThrowIfThisInitialized (0x7c)
@@ -124,7 +124,16 @@ prototype["isReady"] = function isReady() {
 MessageRequestStore.displayName = "MessageRequestStore";
 MessageRequestStore.LATEST_SNAPSHOT_VERSION = 1;
 prototype = undefined;
-const obj = { CONNECTION_OPEN: handleConnectionOpen, CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpen, CACHE_LOADED_LAZY: null, OVERLAY_INITIALIZE: null, CHANNEL_CREATE: null, CHANNEL_UPDATES: null, CHANNEL_DELETE: null, MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: null };
+const obj = {
+  CONNECTION_OPEN: handleConnectionOpen,
+  CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpen,
+  CACHE_LOADED_LAZY: null,
+  OVERLAY_INITIALIZE: null,
+  CHANNEL_CREATE: null,
+  CHANNEL_UPDATES: null,
+  CHANNEL_DELETE: null,
+  MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: null,
+};
 class CACHE_LOADED_LAZY {
   constructor() {
     return obj.loadCache();
@@ -136,7 +145,17 @@ obj[4] = handleChannelCreate;
 obj[5] = handleChannelUpdates;
 obj[6] = handleChannelDelete;
 obj[7] = handleMessageRequestAcceptOptimistic;
-prototype = new prototype(obj, tmp2, tmp, Object, defineProperty, CACHE_LOADED_LAZY, handleOverlayInitialize, handleChannelCreate, handleChannelUpdates);
+prototype = new prototype(
+  obj,
+  tmp2,
+  tmp,
+  Object,
+  defineProperty,
+  CACHE_LOADED_LAZY,
+  handleOverlayInitialize,
+  handleChannelCreate,
+  handleChannelUpdates,
+);
 // ThrowIfThisInitialized (0x7c)
 const result = set.fileFinishedImporting("modules/message_request/MessageRequestStore.tsx");
 

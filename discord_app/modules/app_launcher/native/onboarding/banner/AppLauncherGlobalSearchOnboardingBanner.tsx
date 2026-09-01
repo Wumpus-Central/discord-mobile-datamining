@@ -9,12 +9,21 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 const require = arg1;
 createCacheKey = { appsIcon: null, appsIconImage: null };
-createCacheKey = { height: 40, width: 40, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
+createCacheKey = {
+  height: 40,
+  width: 40,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 24, width: 24, tintColor: ThemesDefault.unsafe_rawColors.WHITE };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 const obj1 = { height: 24, width: 24, tintColor: ThemesDefault.unsafe_rawColors.WHITE };
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherGlobalSearchOnboardingBanner.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/onboarding/banner/AppLauncherGlobalSearchOnboardingBanner.tsx",
+);
 
 export default function GlobalSearchCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -24,16 +33,27 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
   dependencyMap = callback();
   const diff = windowDimensions.width - 2 * DEFAULT_CONTENT_PADDING;
   const items = [markAsDismissed, visible];
-  const effect = React.useEffect(() => () => {
-    if (closure_1) {
-      const obj = { actionType: null };
-      obj[0] = closure_1_6.USER_DISMISS;
-      callback(obj);
-    }
-  }, items);
+  const effect = React.useEffect(
+    () => () => {
+      if (closure_1) {
+        const obj = { actionType: null };
+        obj[0] = closure_1_6.USER_DISMISS;
+        callback(obj);
+      }
+    },
+    items,
+  );
   let tmp3 = null;
   if (visible) {
-    let obj = { renderImgComponent: null, title: null, description: null, onDismiss: null, targetMeasurements: null, surfaceMeasurements: null, position: "bottom" };
+    let obj = {
+      renderImgComponent: null,
+      title: null,
+      description: null,
+      onDismiss: null,
+      targetMeasurements: null,
+      surfaceMeasurements: null,
+      position: "bottom",
+    };
     obj[0] = function appsIcon() {
       let obj = { style: closure_2.appsIcon, children: null };
       obj = { style: closure_2.appsIconImage, color: visible(closure_2[6]).colors.INTERACTIVE_TEXT_ACTIVE };
@@ -57,4 +77,4 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
     tmp3 = jsx(markAsDismissed(8982).Coachmark, { x: -140, y: -40, width: null, height: null });
   }
   return tmp3;
-};
+}

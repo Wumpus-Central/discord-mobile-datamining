@@ -19,4 +19,4 @@ export default function useGuildThemeNuxTrigger(arg0) {
     return tmp;
   }, []);
   useGuildThemeNuxTriggerDefault(arg0, { isNuxOpen: stateFromStores, openNux: callback });
-};
+}

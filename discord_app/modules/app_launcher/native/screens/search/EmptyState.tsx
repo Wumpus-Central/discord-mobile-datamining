@@ -5,7 +5,11 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-let closure_5 = createCacheKey.createStyles({ container: { position: "relative", justifyContent: "center", alignItems: "center" }, textContainer: { justifyContent: "center", width: "100%" }, text: { marginTop: 16, textAlign: "center" } });
+let closure_5 = createCacheKey.createStyles({
+  container: { position: "relative", justifyContent: "center", alignItems: "center" },
+  textContainer: { justifyContent: "center", width: "100%" },
+  text: { marginTop: 16, textAlign: "center" },
+});
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/search/EmptyState.tsx");
 
 export default function EmptyState(showsGenericMessage) {
@@ -15,7 +19,10 @@ export default function EmptyState(showsGenericMessage) {
   }
   const tmp = callback();
   let obj = flag(11623);
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(flag(8435).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
+  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(
+    flag(8435).AppLauncherEmptyStateType.SEARCH_EMPTY,
+    showsGenericMessage.query,
+  );
   const items = [flag];
   const effect = React.useEffect(() => {
     const intl = flag(closure_1_1[6]).intl;
@@ -44,4 +51,4 @@ export default function EmptyState(showsGenericMessage) {
   obj[1] = jsx(flag(4474).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null });
   obj[1] = <View style={tmp.textContainer}>{null}</View>;
   return <View style={tmp.textContainer}>{null}</View>;
-};
+}

@@ -14,4 +14,4 @@ export default function getRestrictedHiddenMediaCount(message) {
   const obj = getForwardInfo;
   const tmp = require;
   return sum + getStickerExtensionFromFormatType.getMessageStickers(message).length;
-};
+}

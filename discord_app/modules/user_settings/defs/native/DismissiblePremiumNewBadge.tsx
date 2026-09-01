@@ -16,7 +16,13 @@ const result = require("set").fileFinishedImporting("modules/user_settings/defs/
 
 export default function DismissiblePremiumNewBadge(dismissibleContent) {
   dismissibleContent = dismissibleContent.dismissibleContent;
-  ({ containerStyle: importDefault, noGradient: dependencyMap, newPremiumStyle: Gradients, colors: jsx, variantOverride: closure_5 } = dismissibleContent);
+  ({
+    containerStyle: importDefault,
+    noGradient: dependencyMap,
+    newPremiumStyle: Gradients,
+    colors: jsx,
+    variantOverride: closure_5,
+  } = dismissibleContent);
   closure_6 = undefined;
   closure_6 = callback();
   let items = [dismissibleContent];
@@ -54,7 +60,10 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
           obj1[2] = dismissibleContent(closure_1_2[9]).HorizontalGradient.END;
           let tmp15 = closure_4;
           if (closure_4 == null) {
-            const items1 = [tmp7(closure_1_2[4]).unsafe_rawColors.PREMIUM_TIER_2_PURPLE, tmp7(closure_1_2[4]).unsafe_rawColors.PREMIUM_TIER_2_PINK];
+            const items1 = [
+              tmp7(closure_1_2[4]).unsafe_rawColors.PREMIUM_TIER_2_PURPLE,
+              tmp7(closure_1_2[4]).unsafe_rawColors.PREMIUM_TIER_2_PINK,
+            ];
             tmp15 = items1;
           }
           obj1[3] = tmp15;
@@ -68,6 +77,6 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
         }
         return tmp6Result;
       }
-    }
+    },
   });
-};
+}

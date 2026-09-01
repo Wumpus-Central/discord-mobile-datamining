@@ -19,11 +19,16 @@ export default function useTrackCreateGuildViewed(arg0) {
         current = tmp4.current;
         current.push(tmp.code);
         let obj = callback(ref[3]);
-        obj = { guild_template_code: null, guild_template_name: null, guild_template_description: null, guild_template_guild_id: null };
+        obj = {
+          guild_template_code: null,
+          guild_template_name: null,
+          guild_template_description: null,
+          guild_template_guild_id: null,
+        };
         ({ code: obj2[0], name: obj2[1], description: obj2[2], sourceGuildId: obj2[3] } = tmp);
         obj.track(closure_1_4.CREATE_GUILD_VIEWED, obj);
       }
       tmp4 = ref;
     }
   });
-};
+}

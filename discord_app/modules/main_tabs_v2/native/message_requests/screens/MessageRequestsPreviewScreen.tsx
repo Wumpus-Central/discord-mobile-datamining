@@ -5,7 +5,9 @@ import { ME } from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsPreviewScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/message_requests/screens/MessageRequestsPreviewScreen.tsx",
+);
 
 export default function MessageRequestsScreen(route) {
   const channelId = route.route.params.channelId;
@@ -23,7 +25,13 @@ export default function MessageRequestsScreen(route) {
     obj[0] = channelId;
     let tmp5Result = tmp5(tmp7(16475), obj);
   } else {
-    obj1 = { guildId: null, channelId: null, chatInputRef: null, HACK_fixModalInteraction: true, screenIndex: "message-request" };
+    obj1 = {
+      guildId: null,
+      channelId: null,
+      chatInputRef: null,
+      HACK_fixModalInteraction: true,
+      screenIndex: "message-request",
+    };
     obj1[0] = tmp6;
     obj1[1] = channelId;
     obj1[2] = ref;
@@ -31,4 +39,4 @@ export default function MessageRequestsScreen(route) {
   }
   obj[2] = tmp5Result;
   return jsx(channelId(10160).ChannelContainer, { guildId: ME, channelId, children: null });
-};
+}

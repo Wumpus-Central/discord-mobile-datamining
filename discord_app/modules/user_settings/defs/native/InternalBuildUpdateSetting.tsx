@@ -61,7 +61,7 @@ createToggle = {
       closure_4.checkForNewerBuild();
     }
   },
-  withArrow: true
+  withArrow: true,
 };
 createToggle = createToggle.createPressable(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx");

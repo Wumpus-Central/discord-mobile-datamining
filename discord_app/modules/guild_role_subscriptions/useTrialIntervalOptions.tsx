@@ -50,4 +50,4 @@ export default function useTrialIntervalOptions(arg0) {
     }
     return { options, selectedOption };
   }, items);
-};
+}

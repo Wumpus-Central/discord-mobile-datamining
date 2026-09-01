@@ -11,7 +11,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/interaction_components/native/display/TextDisplayComponent.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/interaction_components/native/display/TextDisplayComponent.tsx",
+);
 
 export default function TextDisplayComponent(content) {
   let obj = channelId(8021);
@@ -24,24 +26,48 @@ export default function TextDisplayComponent(content) {
   const parseToASTResult = obj1.parseToAST(content.content, true, obj2.getInitialParserState(obj));
   let items = [closure_4];
   const obj5 = channelId(589);
-  [tmp6, tmp7] = callback(channelId(589).useStateFromStoresArray(items, () => {
-    const items = [, ];
-    ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = closure_4);
-    return items;
-  }), 2);
+  [tmp6, tmp7] = callback(
+    channelId(589).useStateFromStoresArray(items, () => {
+      const items = [,];
+      ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = closure_4);
+      return items;
+    }),
+    2,
+  );
   const AnimateEmoji = channelId(4166).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  obj = { model: null, markdownTextRenderOptions: null, onTapLink: null, onLongPressLink: null, onTapAttachmentLink: null, onLongPressAttachmentLink: null, onTapMention: null, onTapTimestamp: null, onTapInlineCode: null, onTapEmoji: null, style: null };
+  obj = {
+    model: null,
+    markdownTextRenderOptions: null,
+    onTapLink: null,
+    onLongPressLink: null,
+    onTapAttachmentLink: null,
+    onLongPressAttachmentLink: null,
+    onTapMention: null,
+    onTapTimestamp: null,
+    onTapInlineCode: null,
+    onTapEmoji: null,
+    style: null,
+  };
   obj1 = {};
-  const tmp5 = callback(channelId(589).useStateFromStoresArray(items, () => {
-    const items = [, ];
-    ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = closure_4);
-    return items;
-  }), 2);
+  const tmp5 = callback(
+    channelId(589).useStateFromStoresArray(items, () => {
+      const items = [,];
+      ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = closure_4);
+      return items;
+    }),
+    2,
+  );
   const merged = Object.assign(content);
   obj1.content = parseToASTResult;
   obj[0] = obj1;
-  obj2 = { containerId: componentContainerId, shouldAnimateEmoji: setting, shouldShowLinkDecorations: tmp7, shouldShowRoleDot: "dot" === tmp6, shouldShowRoleOnName: "username" === tmp6 };
+  obj2 = {
+    containerId: componentContainerId,
+    shouldAnimateEmoji: setting,
+    shouldShowLinkDecorations: tmp7,
+    shouldShowRoleDot: "dot" === tmp6,
+    shouldShowRoleOnName: "username" === tmp6,
+  };
   obj[1] = obj2;
   obj[2] = function onTapLink(nativeEvent) {
     const result = channelId(closure_1_2[13]).handleMessagesTapURLLink(nativeEvent.nativeEvent.data, channelId);
@@ -54,5 +80,17 @@ export default function TextDisplayComponent(content) {
   obj[8] = channelId(11185).contentHandlers.onTapInlineCode;
   obj[9] = channelId(11185).contentHandlers.onTapEmoji;
   obj[10] = { width: "100%" };
-  return jsx(__INTERNAL_VIEW_CONFIGDefault, { model: null, markdownTextRenderOptions: null, onTapLink: null, onLongPressLink: null, onTapAttachmentLink: null, onLongPressAttachmentLink: null, onTapMention: null, onTapTimestamp: null, onTapInlineCode: null, onTapEmoji: null, style: null });
-};
+  return jsx(__INTERNAL_VIEW_CONFIGDefault, {
+    model: null,
+    markdownTextRenderOptions: null,
+    onTapLink: null,
+    onLongPressLink: null,
+    onTapAttachmentLink: null,
+    onLongPressAttachmentLink: null,
+    onTapMention: null,
+    onTapTimestamp: null,
+    onTapInlineCode: null,
+    onTapEmoji: null,
+    style: null,
+  });
+}

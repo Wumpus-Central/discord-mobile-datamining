@@ -9,26 +9,28 @@ let closure_3 = {};
 let closure_4 = {};
 let closure_5 = {};
 let closure_6 = 10 * setDefault.Millis.MINUTE;
-const secondaryIndexMap = new require("version").SecondaryIndexMap((guild_id) => {
-  const items = ["guild:" + guild_id.guild_id];
-  if (guild_id.published) {
-    const _HermesInternal = HermesInternal;
-    items.push("guild:" + guild_id.guild_id + ":published");
-  }
-  return items;
-}, (id) => {
-  const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(id.id);
-  if (id.published) {
-    let diff = -extractTimestampResult;
-  } else {
-    diff = 1000000000000 - extractTimestampResult;
-  }
-  return diff;
-});
+const secondaryIndexMap = new require("version").SecondaryIndexMap(
+  (guild_id) => {
+    const items = ["guild:" + guild_id.guild_id];
+    if (guild_id.published) {
+      const _HermesInternal = HermesInternal;
+      items.push("guild:" + guild_id.guild_id + ":published");
+    }
+    return items;
+  },
+  (id) => {
+    const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(id.id);
+    if (id.published) {
+      let diff = -extractTimestampResult;
+    } else {
+      diff = 1000000000000 - extractTimestampResult;
+    }
+    return diff;
+  },
+);
 let closure_8 = [];
 const Store = initializeDefault.Store;
-class GuildProductsStore extends Store {
-}
+class GuildProductsStore extends Store {}
 const prototype = GuildProductsStore.prototype;
 prototype["getGuildProductsForGuildFetchState"] = function getGuildProductsForGuildFetchState(arg0) {
   let NOT_FETCHED = table[arg0];
@@ -122,7 +124,7 @@ obj = {
     if (404 === productId.error.status) {
       secondaryIndexMap.delete(productId);
     }
-  }
+  },
 };
 const guildProductsStore = new GuildProductsStore(dispatcherDefault, obj);
 let result = require("set").fileFinishedImporting("modules/guild_products/GuildProductsStore.tsx");

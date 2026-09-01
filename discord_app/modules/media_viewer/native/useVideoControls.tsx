@@ -70,7 +70,7 @@ export default function useVideoControls(arg0, portal) {
   const obj2 = state;
   tmp = callback2();
   tmp2 = _require;
-};
+}
 export const useVideoStateStore = keys;
 export const initVideoStateStore = function initVideoStateStore() {
   batchUpdates.batchUpdates(() => {
@@ -92,11 +92,15 @@ export const toggleMuted = function toggleMuted() {
 };
 export const setVideoStateControls = function setVideoStateControls(videoControls) {
   const _require = videoControls;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_7.setState({ controls: closure_0 }));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
+    closure_1_7.setState({ controls: closure_0 }),
+  );
 };
 export const setPausedState = function setPausedState(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_7.setState({ paused: closure_0 }));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
+    closure_1_7.setState({ paused: closure_0 }),
+  );
 };
 export const tryPauseCurrentVideo = function tryPauseCurrentVideo() {
   const controls = keys.getState().controls;

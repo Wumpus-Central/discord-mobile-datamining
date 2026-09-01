@@ -15,7 +15,16 @@ function AppLauncherApplicationViewScreenInner(application) {
   let chatInputRef;
   closure_4 = undefined;
   initiallyExpanded = undefined;
-  ({ context, lockableScrollableContentOffsetY, installOnDemand, sectionName, onPressBack, onActivityItemSelected, entrypoint, onCommandExecuted } = application);
+  ({
+    context,
+    lockableScrollableContentOffsetY,
+    installOnDemand,
+    sectionName,
+    onPressBack,
+    onActivityItemSelected,
+    entrypoint,
+    onCommandExecuted,
+  } = application);
   const requiredAppLauncherContext = application(bottomSheetExpandReasonRef[7]).useRequiredAppLauncherContext();
   bottomSheetExpandReasonRef = requiredAppLauncherContext.bottomSheetExpandReasonRef;
   chatInputRef = requiredAppLauncherContext.chatInputRef;
@@ -39,18 +48,33 @@ function AppLauncherApplicationViewScreenInner(application) {
       tmp = closure_4;
     }
     if (tmp) {
-      bottomSheetExpandReasonRef.current = application(bottomSheetExpandReasonRef[7]).AppLauncherBottomSheetExpandReason.APP_VIEW;
+      bottomSheetExpandReasonRef.current = application(
+        bottomSheetExpandReasonRef[7],
+      ).AppLauncherBottomSheetExpandReason.APP_VIEW;
       if (expandBottomSheet != null) {
         expandBottomSheet();
       }
     }
   }, items1);
-  return jsx(expandBottomSheet(bottomSheetExpandReasonRef[11]), { application, context, lockableScrollableContentOffsetY, installOnDemand, sectionName, onPressBack, onActivityItemSelected, entrypoint, onCommandExecuted, onAauth2Cancel });
+  return jsx(expandBottomSheet(bottomSheetExpandReasonRef[11]), {
+    application,
+    context,
+    lockableScrollableContentOffsetY,
+    installOnDemand,
+    sectionName,
+    onPressBack,
+    onActivityItemSelected,
+    entrypoint,
+    onCommandExecuted,
+    onAauth2Cancel,
+  });
 }
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
 ({ AppLauncherRouteName: error, SCREEN_BACKGROUND_COLOR } = APP_LAUNCHER_BUILT_IN_SECTION_ICON);
 let closure_10 = createCacheKey.createStyles({ container: { backgroundColor: SCREEN_BACKGROUND_COLOR, flex: 1 } });
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx",
+);
 
 export default function AppLauncherApplicationViewScreen(route) {
   const params = route.route.params;
@@ -103,7 +127,19 @@ export default function AppLauncherApplicationViewScreen(route) {
   }, items);
   obj = { style: callback().container, children: null };
   if (null != FAKE_BUILT_IN_APP) {
-    obj = { context: null, application: null, lockableScrollableContentOffsetY: null, initiallyExpanded: null, installOnDemand: null, sectionName: null, onPressBack: null, onActivityItemSelected: null, entrypoint: null, expandBottomSheet: null, onCommandExecuted: null };
+    obj = {
+      context: null,
+      application: null,
+      lockableScrollableContentOffsetY: null,
+      initiallyExpanded: null,
+      installOnDemand: null,
+      sectionName: null,
+      onPressBack: null,
+      onActivityItemSelected: null,
+      entrypoint: null,
+      expandBottomSheet: null,
+      onCommandExecuted: null,
+    };
     obj[0] = context;
     obj[1] = FAKE_BUILT_IN_APP;
     obj[2] = sharedValue;
@@ -140,4 +176,4 @@ export default function AppLauncherApplicationViewScreen(route) {
   }
   obj[1] = tmp11Result;
   return <c5 style={callback().container}>{null}</c5>;
-};
+}

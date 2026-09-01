@@ -27,7 +27,14 @@ function EmptyStateSticker(sticker) {
 }
 ({ AnalyticEvents: closure_8, AnalyticsSections: c9 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let closure_13 = createCacheKey.createStyles({ header: { marginBottom: 8, textAlign: "center" }, blurb: { lineHeight: 18, textAlign: "center", marginBottom: 12 }, premiumButton: { marginTop: 20, alignSelf: "center", paddingLeft: 5, paddingRight: 10, flexGrow: 0 }, nitroWheel: { width: 32 }, stickersRow: { flexDirection: "row", alignSelf: "center" }, sticker: { paddingHorizontal: 2 } });
+let closure_13 = createCacheKey.createStyles({
+  header: { marginBottom: 8, textAlign: "center" },
+  blurb: { lineHeight: 18, textAlign: "center", marginBottom: 12 },
+  premiumButton: { marginTop: 20, alignSelf: "center", paddingLeft: 5, paddingRight: 10, flexGrow: 0 },
+  nitroWheel: { width: 32 },
+  stickersRow: { flexDirection: "row", alignSelf: "center" },
+  sticker: { paddingHorizontal: 2 },
+});
 let result = require("set").fileFinishedImporting("modules/stickers/native/StickerPickerEmptyState.tsx");
 
 export default function _default() {
@@ -52,10 +59,16 @@ export default function _default() {
     obj.track(closure_1_8.PREMIUM_UPSELL_VIEWED, obj);
   }, items1);
   obj = { children: null };
-  obj = { style: tmp.header, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  obj = {
+    style: tmp.header,
+    accessibilityRole: "header",
+    variant: "heading-lg/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = require("../../../intl/index.native.tsx").intl;
   obj[4] = intl.string(require("../../../intl/index.native.tsx").t.HEm04J);
-  const items2 = [callback2(require("../../../design/components/Text/native/Text.tsx").Text, obj), , , ];
+  const items2 = [callback2(require("../../../design/components/Text/native/Text.tsx").Text, obj), , ,];
   obj1 = { style: tmp.blurb, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = require("../../../intl/index.native.tsx").intl;
   obj1[3] = intl2.string(require("../../../intl/index.native.tsx").t.FnNud4);
@@ -72,7 +85,7 @@ export default function _default() {
           closure_1_3(id.id);
         },
         style: lib.sticker,
-        children: null
+        children: null,
       };
       obj = { sticker: id, isFocused: closure_2 === id.id };
       obj[3] = closure_1_11(closure_1_14, obj);
@@ -81,7 +94,7 @@ export default function _default() {
         id = id.id;
       }
       return closure_1_11(lib(closure_1_2[17]).PressableOpacity, obj, id);
-    })
+    }),
   });
   const obj3 = { style: tmp.premiumButton, children: null };
   const obj4 = { icon: null, text: null, variant: "active", size: "sm", onPress: null };
@@ -97,7 +110,7 @@ export default function _default() {
           closure_1_3(id.id);
         },
         style: lib.sticker,
-        children: null
+        children: null,
       };
       obj = { sticker: id, isFocused: closure_2 === id.id };
       obj[3] = closure_1_11(closure_1_14, obj);
@@ -106,7 +119,7 @@ export default function _default() {
         id = id.id;
       }
       return closure_1_11(lib(closure_1_2[17]).PressableOpacity, obj, id);
-    })
+    }),
   };
   obj5[0] = analyticsLocations(8215);
   obj5[1] = tmp.nitroWheel;
@@ -120,4 +133,4 @@ export default function _default() {
   items2[3] = callback2(View, obj3);
   obj[0] = items2;
   return callback3(View, obj);
-};
+}

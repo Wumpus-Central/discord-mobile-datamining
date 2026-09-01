@@ -47,7 +47,15 @@ function getAdaptiveImageCompressionQuality(width, ADAPTIVE_COMPRESSION_CONFIG) 
 }
 const CompressionQuality = ME.CompressionQuality;
 let obj = { SMALL: 921600, MEDIUM: 2073600, LARGE: 3686400, VERY_LARGE: 8294400 };
-obj = { useAdaptiveCompression: true, veryHighQuality: 0.8, highQuality: 0.7, mediumQuality: 0.6, lowQuality: 0.5, veryLowQuality: 0.4, useOriginalIfSmaller: true };
+obj = {
+  useAdaptiveCompression: true,
+  veryHighQuality: 0.8,
+  highQuality: 0.7,
+  mediumQuality: 0.6,
+  lowQuality: 0.5,
+  veryLowQuality: 0.4,
+  useOriginalIfSmaller: true,
+};
 let prototype;
 prototype = function ImageEncodingLadder() {
   return Object.create(new.target.prototype);
@@ -86,7 +94,10 @@ prototype["clampDimensions"] = function clampDimensions(width, height, arg2, arg
     }
   }
   const bound4 = Math.min(bound2 / bound, bound3 / bound1);
-  obj = { targetWidth: Math.max(1, Math.round(width * bound4)), targetHeight: Math.max(1, Math.round(height * bound4)) };
+  obj = {
+    targetWidth: Math.max(1, Math.round(width * bound4)),
+    targetHeight: Math.max(1, Math.round(height * bound4)),
+  };
   return obj;
 };
 let result = set.fileFinishedImporting("modules/media_uploads/ImageEncodingLadder.tsx");

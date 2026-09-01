@@ -10,12 +10,17 @@ let result = require("set").fileFinishedImporting("modules/parent_tools/hooks/us
 export const useActionsForDisplayType = function useActionsForDisplayType(displayType) {
   const _require = displayType;
   const items = [closure_2];
-  return require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items, () => closure_1_2.getActionsForDisplayType(closure_0));
+  return require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(
+    items,
+    () => closure_1_2.getActionsForDisplayType(closure_0),
+  );
 };
 export const useActionTotalsForDisplayType = function useActionTotalsForDisplayType(displayType) {
   const _require = displayType;
   const items = [closure_2];
-  return require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_2.getTotalForDisplayType(closure_0));
+  return require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () =>
+    closure_1_2.getTotalForDisplayType(closure_0),
+  );
 };
 export const useHasActionForAnyDisplayType = function useHasActionForAnyDisplayType() {
   const items = [closure_2];
@@ -27,7 +32,10 @@ export const useHasActionForAnyDisplayType = function useHasActionForAnyDisplayT
 export const useFormattedTotalForDisplayType = function useFormattedTotalForDisplayType(displayType) {
   const _require = displayType;
   const items = [closure_2];
-  let num = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_2.getTotalForDisplayType(closure_0));
+  let num = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
+    items,
+    () => closure_1_2.getTotalForDisplayType(closure_0),
+  );
   if (num == null) {
     num = 0;
   }

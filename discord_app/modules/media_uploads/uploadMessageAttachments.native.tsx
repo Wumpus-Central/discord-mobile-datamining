@@ -10,7 +10,7 @@ function _uploadMessageAttachments() {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0, attachments) {
+    const iter = (function* (arg0, attachments) {
       if (set === 2) {
         set = 3;
         HermesBuiltin.throwTypeError();
@@ -44,7 +44,13 @@ function _uploadMessageAttachments() {
               dependencyMap = undefined;
               c3 = undefined;
               c4 = undefined;
-              ({ channelId: c0, message: closure_1, nonce: c2, items: c3, shouldUploadFailureSendNotification: c4 } = callback);
+              ({
+                channelId: c0,
+                message: closure_1,
+                nonce: c2,
+                items: c3,
+                shouldUploadFailureSendNotification: c4,
+              } = callback);
               set = undefined;
               closure_6 = undefined;
               closure_7 = undefined;

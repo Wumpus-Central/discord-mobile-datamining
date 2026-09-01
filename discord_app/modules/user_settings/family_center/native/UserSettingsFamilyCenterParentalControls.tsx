@@ -17,7 +17,9 @@ createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { paddingBottom: ThemesDefault.space.PX_16 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { paddingBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/user_settings/family_center/native/UserSettingsFamilyCenterParentalControls.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/family_center/native/UserSettingsFamilyCenterParentalControls.tsx",
+);
 
 export default function FamilyCenterParentalControlsSettings() {
   let tmp = callback4();
@@ -109,7 +111,7 @@ export default function FamilyCenterParentalControlsSettings() {
   obj[0] = intl.string(stackNavigation(selectedSubPage[15]).t["+o1pDZ"]);
   obj[1] = items2.CONTENT_AND_SOCIAL;
   obj[2] = callback2(importDefault(selectedSubPage[18]), {});
-  items2 = [obj, ];
+  items2 = [obj];
   obj = { label: null, id: null, page: null };
   const intl2 = tmp2(tmp3[15]).intl;
   obj[0] = intl2.string(stackNavigation(selectedSubPage[15]).t.OAuOHD);
@@ -123,7 +125,10 @@ export default function FamilyCenterParentalControlsSettings() {
       const tab = closure_1_1(selectedSubPage[21]).selectTab(items2[arg0].id);
     },
     pageWidth: tmp8,
-    defaultIndex: Math.max(items2.findIndex((id) => id.id === selectedSubPage), 0)
+    defaultIndex: Math.max(
+      items2.findIndex((id) => id.id === selectedSubPage),
+      0,
+    ),
   };
   const segmentedControlState = stackNavigation(selectedSubPage[20]).useSegmentedControlState(obj1);
   obj2 = { value: tmp6(importDefault(selectedSubPage[10]).FAMILY_CENTER).analyticsLocations, children: null };
@@ -147,7 +152,7 @@ export default function FamilyCenterParentalControlsSettings() {
     const obj8 = { state: null };
     obj8[0] = segmentedControlState;
     obj7[1] = tmp22(tmp2(tmp3[24]).SegmentedControl, obj8);
-    const items3 = [tmp22(id, obj7), ];
+    const items3 = [tmp22(id, obj7)];
     const obj9 = { style: null, children: null };
     obj9[0] = tmp.container;
     const obj10 = { children: null };
@@ -164,4 +169,4 @@ export default function FamilyCenterParentalControlsSettings() {
     tmp27 = obj2;
   }
   return callback2(stackNavigation(selectedSubPage[9]).AnalyticsLocationProvider, tmp27);
-};
+}

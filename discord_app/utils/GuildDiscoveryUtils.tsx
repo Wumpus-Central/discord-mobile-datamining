@@ -16,7 +16,7 @@ function _startLurking() {
     closure_3 = arg3;
     c7 = 0;
     c8 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       if (shouldNavigate === 2) {
         shouldNavigate = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -240,8 +240,37 @@ function _startLurking() {
   return applyArgumentsResult;
 }
 function makeDiscoverableGuild(body) {
-  const obj = { id: body.id, name: body.name, description: body.description, splash: body.splash, banner: body.banner, icon: body.icon, features: new Set(body.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: null, preferredLocale: null, discoverySplash: null, emojis: null, emojiCount: null, stickers: null, stickerCount: null, keywords: null };
-  ({ approximate_presence_count: obj[7], approximate_member_count: obj[8], premium_subscription_count: obj[9], preferred_locale: obj[10], discovery_splash: obj[11], emojis: obj[12], emoji_count: obj[13], stickers: obj[14], sticker_count: obj[15], keywords: obj[16] } = body);
+  const obj = {
+    id: body.id,
+    name: body.name,
+    description: body.description,
+    splash: body.splash,
+    banner: body.banner,
+    icon: body.icon,
+    features: new Set(body.features),
+    presenceCount: null,
+    memberCount: null,
+    premiumSubscriptionCount: null,
+    preferredLocale: null,
+    discoverySplash: null,
+    emojis: null,
+    emojiCount: null,
+    stickers: null,
+    stickerCount: null,
+    keywords: null,
+  };
+  ({
+    approximate_presence_count: obj[7],
+    approximate_member_count: obj[8],
+    premium_subscription_count: obj[9],
+    preferred_locale: obj[10],
+    discovery_splash: obj[11],
+    emojis: obj[12],
+    emoji_count: obj[13],
+    stickers: obj[14],
+    sticker_count: obj[15],
+    keywords: obj[16],
+  } = body);
   return obj;
 }
 function _getDiscoverableGuild() {
@@ -251,7 +280,7 @@ function _getDiscoverableGuild() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -352,7 +381,7 @@ function _fetchPublicDiscoveryGuild() {
     c2 = 0;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -454,7 +483,15 @@ function _fetchPublicDiscoveryGuild() {
 ({ AnalyticEvents: error, SearchTypes: closure_8, Endpoints: c9, Routes: c10 } = ME);
 const result = require("set").fileFinishedImporting("utils/GuildDiscoveryUtils.tsx");
 
-export const AnalyticsContexts = { SEARCH: "Search", RECOMMENDED: "Recommended", POPULAR: "Popular", RECOMMENDED_E3: "Recommended - E3", HEADER: "Header", GLOBAL_DISCOVERY: "Global Discovery", FORWARD_BREADCRUMB: "Forward Breadcrumb" };
+export const AnalyticsContexts = {
+  SEARCH: "Search",
+  RECOMMENDED: "Recommended",
+  POPULAR: "Popular",
+  RECOMMENDED_E3: "Recommended - E3",
+  HEADER: "Header",
+  GLOBAL_DISCOVERY: "Global Discovery",
+  FORWARD_BREADCRUMB: "Forward Breadcrumb",
+};
 export const IOS_MINIMUM_MEMBER_COUNT = ">1000";
 export const MINIMUM_MEMBER_COUNT = ">200";
 export const startLurking = function startLurking(id, c4, arg2, c42) {
@@ -498,16 +535,35 @@ export const trackSearchFailed = function trackSearchFailed(error) {
   error = error.error;
   ({ categoryId, willRequestRetry, isRequestRetry } = error);
   let obj = expandEventPropertiesDefault;
-  obj = { category_id: categoryId, request_status: error.status, request_error_code: error.code, will_request_retry: willRequestRetry, is_request_retry: isRequestRetry };
+  obj = {
+    category_id: categoryId,
+    request_status: error.status,
+    request_error_code: error.code,
+    will_request_retry: willRequestRetry,
+    is_request_retry: isRequestRetry,
+  };
   obj.track(constants.GUILD_DISCOVERY_SEARCH_FAILED, obj);
 };
-export const trackGuildDiscoveryGetFeaturedGuildsFailed = function trackGuildDiscoveryGetFeaturedGuildsFailed(category_id) {
-  expandEventPropertiesDefault.track(constants.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: category_id.categoryId });
+export const trackGuildDiscoveryGetFeaturedGuildsFailed = function trackGuildDiscoveryGetFeaturedGuildsFailed(
+  category_id,
+) {
+  expandEventPropertiesDefault.track(constants.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, {
+    category_id: category_id.categoryId,
+  });
 };
 export const trackSearchResultsViewed = function trackSearchResultsViewed(guildResults) {
   ({ loadId, searchId, query, analyticsContext, categoryId, isTagSearch } = guildResults);
   let obj = expandEventPropertiesDefault;
-  obj = { search_type: isTagSearch ? tmp.GUILD_DISCOVERY_TAG : tmp.GUILD_DISCOVERY, load_id: loadId, search_id: searchId, total_results: null, guild_ids: null, query: null, location: null, category_id: null };
+  obj = {
+    search_type: isTagSearch ? tmp.GUILD_DISCOVERY_TAG : tmp.GUILD_DISCOVERY,
+    load_id: loadId,
+    search_id: searchId,
+    total_results: null,
+    guild_ids: null,
+    query: null,
+    location: null,
+    category_id: null,
+  };
   let length = null;
   if (undefined !== guildResults.guildResults) {
     length = guildResults.length;

@@ -19,15 +19,15 @@ class UserSearchItems {
     obj.actions = {
       POST_CONNECTION_OPEN: obj.handlePostConnectionOpen,
       WRITE_CACHES(arg0, arg1) {
-            return obj.handleWriteCaches(arg1);
-          }
+        return obj.handleWriteCaches(arg1);
+      },
     };
     return obj;
   }
 }
 const prototype = UserSearchItems.prototype;
 prototype["getAll"] = function getAll() {
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -89,7 +89,9 @@ prototype["getAll"] = function getAll() {
           const _performance = performance;
           closure_2 = performance.now();
           const _HermesInternal = HermesInternal;
-          logger.log("asynchronously loaded in " + closure_2 - closure_0 + "ms (userSearchItems: " + length.length + ")");
+          logger.log(
+            "asynchronously loaded in " + closure_2 - closure_0 + "ms (userSearchItems: " + length.length + ")",
+          );
           c3 = 3;
           obj = { value: null, done: true };
           obj[0] = length;
@@ -102,14 +104,12 @@ prototype["getAll"] = function getAll() {
     }
   })();
 };
-prototype["resetInMemoryState"] = function resetInMemoryState() {
-
-};
+prototype["resetInMemoryState"] = function resetInMemoryState() {};
 Object.defineProperty(prototype, "shouldUseCache", {
   get: function shouldUseCache() {
     return !c10;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   c10 = true;
@@ -195,7 +195,7 @@ set.actions = {
   POST_CONNECTION_OPEN: set.handlePostConnectionOpen,
   WRITE_CACHES(arg0, arg1) {
     return obj.handleWriteCaches(arg1);
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/app_database/modules/UserSearchItems.tsx");
 

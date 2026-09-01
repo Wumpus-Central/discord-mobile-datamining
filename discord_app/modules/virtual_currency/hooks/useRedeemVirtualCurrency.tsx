@@ -30,7 +30,11 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
     onSignFailure = order.onSignFailure;
   }
   let obj = entitlements(11354);
-  const orderSigning = require("../../payments/hooks/useOrderSigning.tsx").useOrderSigning({ order, errorSource: "orb_redeem_orders_api", onSignFailure });
+  const orderSigning = require("../../payments/hooks/useOrderSigning.tsx").useOrderSigning({
+    order,
+    errorSource: "orb_redeem_orders_api",
+    onSignFailure,
+  });
   const signOrder = orderSigning.signOrder;
   const _reportError = orderSigning.reportError;
   if (enabled) {
@@ -44,7 +48,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -166,7 +170,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
     })();
   });
   const items = [signOrder, _reportError];
-  const tmp11 = _reportError(function() {
+  const tmp11 = _reportError(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -197,7 +201,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
       onRedeemFail(arg0) {
         callback2(arg0);
         callback3(false);
-      }
+      },
     };
     return obj.redeemVirtualCurrencyForSKU(obj);
   }, []);

@@ -85,4 +85,4 @@ export default function useSortedSectionCommands(sectionId) {
     const commands = memo;
   }
   return { sortOrder, setSortOrder, commands, canSort };
-};
+}

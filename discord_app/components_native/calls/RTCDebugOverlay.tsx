@@ -29,7 +29,7 @@ function Section(arg0) {
   ({ title, children } = arg0);
   let obj = { children: null };
   const items = [title, ":"];
-  const items1 = [callback2(Text, { children: items }), ];
+  const items1 = [callback2(Text, { children: items })];
   obj = { style: callback3().indent, children };
   items1[1] = callback(closure_5, obj);
   obj[0] = items1;
@@ -65,7 +65,7 @@ function ObjectKV(obj) {
       return tmp4Result;
     }
     obj1 = { style: row.row, children: null };
-    const items = [tmp, ": ", ];
+    const items = [tmp, ": "];
     if (typeof closure_1_17 !== "function") {
       HermesBuiltin.throwTypeError();
     }
@@ -77,7 +77,11 @@ function ObjectKV(obj) {
 function RTCDebugGeneral() {
   let obj = guildId(589);
   const items = [closure_9];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ guildId: store.getGuildId(), channelId: store.getChannelId() }), []);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => ({ guildId: store.getGuildId(), channelId: store.getChannelId() }),
+    [],
+  );
   guildId = stateFromStoresObject.guildId;
   const channelId = stateFromStoresObject.channelId;
   const items1 = [closure_8];
@@ -93,7 +97,12 @@ function RTCDebugGeneral() {
   if (null != stateFromStores) {
     name = stateFromStores.name;
   }
-  obj = { title: "general", children: tmp5(ObjectKV, { obj: { guild: obj, channel: { id: channelId, name: channelId(4674)(stateFromStores1) } } }) };
+  obj = {
+    title: "general",
+    children: tmp5(ObjectKV, {
+      obj: { guild: obj, channel: { id: channelId, name: channelId(4674)(stateFromStores1) } },
+    }),
+  };
   obj[1] = name;
   return closure_14(Section, obj);
 }
@@ -112,12 +121,15 @@ function RTCDebugContext(context) {
         if (null != closure_1_25[inbound]) {
           tmp4 = closure_1_14(tmp3, {});
         }
-        const items = [tmp4, , , ];
+        const items = [tmp4, , ,];
         obj = { title: "transport", children: closure_1_14(closure_1_21, obj) };
         obj = { obj: mediaEngineConnectionId.transport };
         items[1] = closure_1_14(closure_1_20, obj);
         const outbound = mediaEngineConnectionId.rtp.outbound;
-        items[2] = closure_1_14(closure_1_20, { title: "outbound", children: outbound.map((data) => callback(closure_22, { data }, arg1)) });
+        items[2] = closure_1_14(closure_1_20, {
+          title: "outbound",
+          children: outbound.map((data) => callback(closure_22, { data }, arg1)),
+        });
         inbound = mediaEngineConnectionId.rtp.inbound;
         const keys = Object.keys(inbound);
         let tmp6Result = null;
@@ -137,9 +149,7 @@ function RTCDebugContext(context) {
 let c4 = importAllResult;
 ({ View: c5, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-function asString(arg0) {
-
-}
+function asString(arg0) {}
 let obj = { container: null, scroller: null, indent: null, row: null, text: null, buttonClose: null };
 obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -181,9 +191,18 @@ let closure_25 = {
     const items = [closure_9];
     obj = {
       obj: obj.useStateFromStoresObject(items, () => {
-        const obj = { mediaSessionId: store.getMediaSessionId(), state: store.getState(), hostname: callback(table[16]).getShortHostname(store.getHostname()), quality: store.getQuality(), averagePing: store.getAveragePing(), lastPing: store.getLastPing(), outboundLossRate: store.getOutboundLossRate(), duration: store.getDuration() };
+        const obj = {
+          mediaSessionId: store.getMediaSessionId(),
+          state: store.getState(),
+          hostname: callback(table[16]).getShortHostname(store.getHostname()),
+          quality: store.getQuality(),
+          averagePing: store.getAveragePing(),
+          lastPing: store.getLastPing(),
+          outboundLossRate: store.getOutboundLossRate(),
+          duration: store.getDuration(),
+        };
         return obj;
-      }, [])
+      }, []),
     };
     return callback(ObjectKV, obj);
   },
@@ -193,13 +212,21 @@ let closure_25 = {
     const items = [allActiveStreamKeys];
     const items1 = [first];
     obj = {
-      obj: obj.useStateFromStoresObject(items, () => {
-        const obj = { mediaSessionId: closure_1_11.getMediaSessionId(first), hostname: closure_1_1(closure_1_3[16]).getShortHostname(closure_1_11.getHostname(first)), quality: closure_1_11.getQuality(first) };
-        return obj;
-      }, items1)
+      obj: obj.useStateFromStoresObject(
+        items,
+        () => {
+          const obj = {
+            mediaSessionId: closure_1_11.getMediaSessionId(first),
+            hostname: closure_1_1(closure_1_3[16]).getShortHostname(closure_1_11.getHostname(first)),
+            quality: closure_1_11.getQuality(first),
+          };
+          return obj;
+        },
+        items1,
+      ),
     };
     return callback(ObjectKV, obj);
-  }
+  },
 };
 const result = require("set").fileFinishedImporting("components_native/calls/RTCDebugOverlay.tsx");
 
@@ -213,11 +240,11 @@ export default function RTCDebugOverlay(arg0) {
   let obj = { top: true, left: true, right: true, bottom: true, style: items, children: null };
   items = [tmp.container, style];
   obj = { style: tmp.scroller, indicatorStyle: "white", children: null };
-  const items1 = [callback(RTCDebugGeneral, {}), ];
+  const items1 = [callback(RTCDebugGeneral, {})];
   const values = Object.values(MediaEngineContextTypes);
   items1[1] = values.map((context) => callback2(closure_26, { context }, context));
   obj[2] = items1;
-  const items2 = [callback2(closure_6, obj), ];
+  const items2 = [callback2(closure_6, obj)];
   obj = { style: tmp.buttonClose, children: null };
   obj1 = { text: null, onPress: null };
   const intl = getSystemLocale.intl;
@@ -227,4 +254,4 @@ export default function RTCDebugOverlay(arg0) {
   items2[1] = callback(closure_5, obj);
   obj[5] = items2;
   return callback2(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-};
+}

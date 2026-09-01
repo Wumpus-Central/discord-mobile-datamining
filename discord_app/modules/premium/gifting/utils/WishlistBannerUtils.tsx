@@ -4,7 +4,12 @@ import noop from "../../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 
 const useMemo = noop.useMemo;
-let obj = { FULL_WISHLIST: "FULL_WISHLIST", MIXED: "MIXED", SHOP_ONLY: "SHOP_ONLY", SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY" };
+let obj = {
+  FULL_WISHLIST: "FULL_WISHLIST",
+  MIXED: "MIXED",
+  SHOP_ONLY: "SHOP_ONLY",
+  SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY",
+};
 obj = { FULL_WISHLIST: null, MIXED: null, SHOP_ONLY: null, SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY: null };
 obj = { title: null, getSubtitle: null, showIcons: false };
 let intl = getSystemLocale.intl;
@@ -50,15 +55,17 @@ export const getBannerMode = function getBannerMode(wishlistInDmLength) {
     SHOP_ONLY = obj.MIXED;
   } else {
     if (displayItems.length > 0) {
-      if (displayItems.every((arg0) => {
-        ({ sku, source } = arg0);
-        let isGameItemSKUResult = source === callback(table[2]).WishlistItemSource.POPULAR;
-        if (isGameItemSKUResult) {
-          isGameItemSKUResult = callback(table[3]).isGameItemSKU(sku);
-          const tmpResult = callback(table[3]);
-        }
-        return isGameItemSKUResult;
-      })) {
+      if (
+        displayItems.every((arg0) => {
+          ({ sku, source } = arg0);
+          let isGameItemSKUResult = source === callback(table[2]).WishlistItemSource.POPULAR;
+          if (isGameItemSKUResult) {
+            isGameItemSKUResult = callback(table[3]).isGameItemSKU(sku);
+            const tmpResult = callback(table[3]);
+          }
+          return isGameItemSKUResult;
+        })
+      ) {
         SHOP_ONLY = obj.SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY;
       }
     }
@@ -80,15 +87,17 @@ export const useWishlistBannerConfig = function useWishlistBannerConfig(totalUno
       SHOP_ONLY = recipientName.MIXED;
     } else {
       if (arr.length > 0) {
-        if (arr.every((arg0) => {
-          ({ sku, source } = arg0);
-          let isGameItemSKUResult = source === callback(table[2]).WishlistItemSource.POPULAR;
-          if (isGameItemSKUResult) {
-            isGameItemSKUResult = callback(table[3]).isGameItemSKU(sku);
-            const tmpResult = callback(table[3]);
-          }
-          return isGameItemSKUResult;
-        })) {
+        if (
+          arr.every((arg0) => {
+            ({ sku, source } = arg0);
+            let isGameItemSKUResult = source === callback(table[2]).WishlistItemSource.POPULAR;
+            if (isGameItemSKUResult) {
+              isGameItemSKUResult = callback(table[3]).isGameItemSKU(sku);
+              const tmpResult = callback(table[3]);
+            }
+            return isGameItemSKUResult;
+          })
+        ) {
           SHOP_ONLY = recipientName.SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY;
         }
       }

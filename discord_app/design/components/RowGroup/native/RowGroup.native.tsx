@@ -10,7 +10,11 @@ require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { container: { overflow: "hidden" }, content: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.TABLEROW_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.TABLEROW_BACKGROUND_DEFAULT,
+  borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+  padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+};
 createCacheKey[1] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("design/components/RowGroup/native/RowGroup.native.tsx");

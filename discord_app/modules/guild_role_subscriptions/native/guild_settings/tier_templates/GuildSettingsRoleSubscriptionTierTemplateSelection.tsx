@@ -30,7 +30,16 @@ function TierTemplatesRenderer(groupListingId) {
     if (null != templates) {
       tmp3 = null;
       if (0 !== templates.length) {
-        obj = { data: null, horizontal: true, contentContainerStyle: null, keyExtractor: null, ItemSeparatorComponent: null, decelerationRate: "fast", snapToInterval: null, renderItem: null };
+        obj = {
+          data: null,
+          horizontal: true,
+          contentContainerStyle: null,
+          keyExtractor: null,
+          ItemSeparatorComponent: null,
+          decelerationRate: "fast",
+          snapToInterval: null,
+          renderItem: null,
+        };
         obj[0] = templates;
         obj1 = { paddingLeft: null, paddingRight: null };
         obj1[0] = c16;
@@ -45,7 +54,13 @@ function TierTemplatesRenderer(groupListingId) {
         };
         obj[6] = guildId(17367).CARD_WIDTH + c16;
         obj[7] = function renderItem(item) {
-          return closure_1_14(groupListingId(closure_1_3[10]), { template: item.item, priceTiers: tiers, guildId, groupListingId, editGroupId: guildId });
+          return closure_1_14(groupListingId(closure_1_3[10]), {
+            template: item.item,
+            priceTiers: tiers,
+            guildId,
+            groupListingId,
+            editGroupId: guildId,
+          });
         };
         tmp3 = callback(closure_9, obj);
       }
@@ -113,7 +128,7 @@ function GuildSettingsRoleSubscriptionTierTemplateSelectionComponent(guildId) {
       groupListingId,
       onAfterTierCreation() {
         navigation.navigate(closure_1_13.ROLE_SUBSCRIPTIONS_TIERS);
-      }
+      },
     };
     const result = stateFromStores(groupListingId[20]).openTierCreationModal(obj);
   }, items3);
@@ -124,7 +139,7 @@ function GuildSettingsRoleSubscriptionTierTemplateSelectionComponent(guildId) {
         let obj = { onPress: closure_7, style: closure_1.startFromScratch, activeOpacity: 0.5, children: null };
         obj = { style: closure_1.editIcon, children: closure_1_14(closure_1_0(closure_1_3[21]).PencilIcon, obj) };
         obj = { color: closure_1.editIcon.color, size: "xs" };
-        const items = [closure_1_14(closure_1_8, obj), ];
+        const items = [closure_1_14(closure_1_8, obj)];
         obj1 = { children: null };
         const obj2 = { variant: "text-md/medium", color: "interactive-text-active", children: null };
         const intl = closure_1_0(closure_1_3[22]).intl;
@@ -137,7 +152,7 @@ function GuildSettingsRoleSubscriptionTierTemplateSelectionComponent(guildId) {
       headerTitle() {
         return callback(closure_8, {});
       },
-      headerLeft: guildId(groupListingId[23]).getHeaderBackButton(callback)
+      headerLeft: guildId(groupListingId[23]).getHeaderBackButton(callback),
     };
     navigation.setOptions(obj);
   }, items4);
@@ -151,11 +166,18 @@ function GuildSettingsRoleSubscriptionTierTemplateSelectionComponent(guildId) {
   obj1 = { style: items5, children: null };
   items5 = [tmp.container, { paddingBottom: importDefault(groupListingId[16])().bottom }];
   obj2 = { variant: "heading-xl/semibold", style: items6, children: null };
-  items6 = [, ];
+  items6 = [,];
   ({ title: arr7[0], text: arr7[1] } = tmp);
   let intl = tmp2(tmp3[22]).intl;
   obj2[2] = intl.string(guildId(groupListingId[22]).t.uYFiKr);
-  const items7 = [callback(guildId(groupListingId[9]).Text, obj2), callback(guildId(groupListingId[27]).Spacer, { size: 8 }), , , , , ];
+  const items7 = [
+    callback(guildId(groupListingId[9]).Text, obj2),
+    callback(guildId(groupListingId[27]).Spacer, { size: 8 }),
+    ,
+    ,
+    ,
+    ,
+  ];
   let obj3 = { variant: "text-sm/medium", style: tmp.text, children: null };
   const intl2 = tmp2(tmp3[22]).intl;
   obj3[2] = intl2.string(guildId(groupListingId[22]).t["ne+rg6"]);
@@ -163,7 +185,9 @@ function GuildSettingsRoleSubscriptionTierTemplateSelectionComponent(guildId) {
   items7[3] = callback(guildId(groupListingId[27]).Spacer, { size: 8 });
   const obj4 = { variant: "text-sm/medium", style: tmp.text, children: null };
   const intl3 = tmp2(tmp3[22]).intl;
-  obj4[2] = intl3.format(guildId(groupListingId[22]).t.iQML2g, { creatorPortalUrl: "https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons" });
+  obj4[2] = intl3.format(guildId(groupListingId[22]).t.iQML2g, {
+    creatorPortalUrl: "https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons",
+  });
   items7[4] = callback(guildId(groupListingId[9]).Text, obj4);
   items7[5] = callback(guildId(groupListingId[27]).Spacer, { size: 24 });
   const obj5 = { templates: stateFromStores, loading: null, error: null, guildId: null, groupListingId: null };
@@ -183,7 +207,14 @@ function GuildSettingsRoleSubscriptionTierTemplateSelectionComponent(guildId) {
 ({ AnalyticEvents: closure_12, GuildSettingsSections: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let c16 = 16;
-createCacheKey = { container: { marginTop: 16 }, title: null, text: null, activityIndicator: null, editIcon: null, startFromScratch: null };
+createCacheKey = {
+  container: { marginTop: 16 },
+  title: null,
+  text: null,
+  activityIndicator: null,
+  editIcon: null,
+  startFromScratch: null,
+};
 createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginLeft: 16, marginRight: 16 };
@@ -193,7 +224,9 @@ createCacheKey[4] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, margi
 createCacheKey[5] = { display: "flex", flexDirection: "row", alignItems: "center", marginRight: 12 };
 let closure_17 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, marginRight: 4 };
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildSettingsRoleSubscriptionTierTemplateSelection.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildSettingsRoleSubscriptionTierTemplateSelection.tsx",
+);
 
 export default function GuildSettingsRoleSubscriptionTierTemplateSelection(guildId) {
   let obj = { guildId: guildId.guildId, children: null };
@@ -201,4 +234,4 @@ export default function GuildSettingsRoleSubscriptionTierTemplateSelection(guild
   const merged = Object.assign(guildId);
   obj[1] = callback(GuildSettingsRoleSubscriptionTierTemplateSelectionComponent, obj);
   return callback(useGroupListingsFetchContext.GroupListingsFetchContextProvider, obj);
-};
+}

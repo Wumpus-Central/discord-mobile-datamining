@@ -33,7 +33,7 @@ Object.defineProperty(prototype, "length", {
   get: function length() {
     return this.queue.length;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["_drainIfNecessary"] = function _drainIfNecessary() {
   let self = this;
@@ -68,7 +68,14 @@ prototype["_drainIfNecessary"] = function _drainIfNecessary() {
             }
             const logger2 = tmp2.logger;
             const _HermesInternal = HermesInternal;
-            logger2.info("Rate limited. Delaying draining of queue for " + defaultRetryAfter + " ms. LogId:" + tmp3 + " QueueLength: " + tmp2.queue.length);
+            logger2.info(
+              "Rate limited. Delaying draining of queue for " +
+                defaultRetryAfter +
+                " ms. LogId:" +
+                tmp3 +
+                " QueueLength: " +
+                tmp2.queue.length,
+            );
             tmp2.pendingRetryItem = arr;
             const _setTimeout = setTimeout;
             tmp2.timeout = setTimeout(() => {

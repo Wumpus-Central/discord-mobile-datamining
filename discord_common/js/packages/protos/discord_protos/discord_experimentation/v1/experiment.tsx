@@ -4,24 +4,116 @@ import now from "../../../google/protobuf/timestamp.tsx";
 import defineProperty from "../../../google/protobuf/wrappers.tsx";
 import defineProperty2 from "rules.tsx";
 import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5 } from "../../../../../../../_runtime/metro/01307__.js";
+import {
+  MessageType,
+  MessageType as MessageType2,
+  MessageType as MessageType3,
+  MessageType as MessageType4,
+  MessageType as MessageType5,
+} from "../../../../../../../_runtime/metro/01307__.js";
 
 require = arg1;
 let obj = { EXCLUSIVE: 0, [0]: "EXCLUSIVE", SYNCED: 1, [1]: "SYNCED", PRE_ALLOCATED: 2, [2]: "PRE_ALLOCATED" };
-obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", USER: 1, [1]: "USER", INSTALLATION: 2, [2]: "INSTALLATION", GUILD: 3, [3]: "GUILD", CUSTOM: 4, [4]: "CUSTOM" };
-obj = { SURFACE_UNSPECIFIED: 0, [0]: "SURFACE_UNSPECIFIED", API: 1, [1]: "API", APP: 2, [2]: "APP", DEVELOPER_PORTAL: 3, [3]: "DEVELOPER_PORTAL", ADMIN_PANEL: 4, [4]: "ADMIN_PANEL", ADS_BUDGET_AB: 5, [5]: "ADS_BUDGET_AB", AV_WORKER: 6, [6]: "AV_WORKER", SEO: 7, [7]: "SEO", MARKETING: 8, [8]: "MARKETING" };
+obj = {
+  UNSPECIFIED: 0,
+  [0]: "UNSPECIFIED",
+  USER: 1,
+  [1]: "USER",
+  INSTALLATION: 2,
+  [2]: "INSTALLATION",
+  GUILD: 3,
+  [3]: "GUILD",
+  CUSTOM: 4,
+  [4]: "CUSTOM",
+};
+obj = {
+  SURFACE_UNSPECIFIED: 0,
+  [0]: "SURFACE_UNSPECIFIED",
+  API: 1,
+  [1]: "API",
+  APP: 2,
+  [2]: "APP",
+  DEVELOPER_PORTAL: 3,
+  [3]: "DEVELOPER_PORTAL",
+  ADMIN_PANEL: 4,
+  [4]: "ADMIN_PANEL",
+  ADS_BUDGET_AB: 5,
+  [5]: "ADS_BUDGET_AB",
+  AV_WORKER: 6,
+  [6]: "AV_WORKER",
+  SEO: 7,
+  [7]: "SEO",
+  MARKETING: 8,
+  [8]: "MARKETING",
+};
 const obj1 = { ENABLED: 0, [0]: "ENABLED", DISABLED: 1, [1]: "DISABLED" };
-const obj2 = { FULL: 0, [0]: "FULL", FORCE_CONTROL: 3, [3]: "FORCE_CONTROL", OVERRIDES_ONLY: 4, [4]: "OVERRIDES_ONLY", OFF: 5, [5]: "OFF" };
+const obj2 = {
+  FULL: 0,
+  [0]: "FULL",
+  FORCE_CONTROL: 3,
+  [3]: "FORCE_CONTROL",
+  OVERRIDES_ONLY: 4,
+  [4]: "OVERRIDES_ONLY",
+  OFF: 5,
+  [5]: "OFF",
+};
 const obj3 = { DEFAULT: 0, [0]: "DEFAULT", HOLDOUT: 1, [1]: "HOLDOUT", NUMBERLINE: 2, [2]: "NUMBERLINE" };
-const obj4 = { CUSTOM_UNIT_PREFIX_UNSPECIFIED: 0, [0]: "CUSTOM_UNIT_PREFIX_UNSPECIFIED", SEO_URL_SLUG: 1, [1]: "SEO_URL_SLUG" };
-const obj5 = { EXPOSURE_POINT_ID_UNSPECIFIED: 0, [0]: "EXPOSURE_POINT_ID_UNSPECIFIED", SEO_INSTALLATION_PAGE_LOAD: 1, [1]: "SEO_INSTALLATION_PAGE_LOAD", MARKETING_INSTALLATION_PAGE_LOAD: 2, [2]: "MARKETING_INSTALLATION_PAGE_LOAD" };
+const obj4 = {
+  CUSTOM_UNIT_PREFIX_UNSPECIFIED: 0,
+  [0]: "CUSTOM_UNIT_PREFIX_UNSPECIFIED",
+  SEO_URL_SLUG: 1,
+  [1]: "SEO_URL_SLUG",
+};
+const obj5 = {
+  EXPOSURE_POINT_ID_UNSPECIFIED: 0,
+  [0]: "EXPOSURE_POINT_ID_UNSPECIFIED",
+  SEO_INSTALLATION_PAGE_LOAD: 1,
+  [1]: "SEO_INSTALLATION_PAGE_LOAD",
+  MARKETING_INSTALLATION_PAGE_LOAD: 2,
+  [2]: "MARKETING_INSTALLATION_PAGE_LOAD",
+};
 const obj6 = { DEFAULT: 0, [0]: "DEFAULT", OFF: 1, [1]: "OFF", OVERRIDES_ONLY: 2, [2]: "OVERRIDES_ONLY" };
-const obj7 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", CONTROL: 1, [1]: "CONTROL", TREATMENT: 2, [2]: "TREATMENT", OVERRIDE: 3, [3]: "OVERRIDE" };
-const obj8 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", ACTIVE: 1, [1]: "ACTIVE", UNUSED: 2, [2]: "UNUSED", BURNED: 3, [3]: "BURNED", PRESERVED: 4, [4]: "PRESERVED" };
-const obj9 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", DRAFT: 1, [1]: "DRAFT", MEASUREMENT: 2, [2]: "MEASUREMENT", ROLLING_OUT: 4, [4]: "ROLLING_OUT", ARCHIVED: 6, [6]: "ARCHIVED", AA_MODE: 7, [7]: "AA_MODE", PAUSED: 8, [8]: "PAUSED" };
+const obj7 = {
+  UNSPECIFIED: 0,
+  [0]: "UNSPECIFIED",
+  CONTROL: 1,
+  [1]: "CONTROL",
+  TREATMENT: 2,
+  [2]: "TREATMENT",
+  OVERRIDE: 3,
+  [3]: "OVERRIDE",
+};
+const obj8 = {
+  UNSPECIFIED: 0,
+  [0]: "UNSPECIFIED",
+  ACTIVE: 1,
+  [1]: "ACTIVE",
+  UNUSED: 2,
+  [2]: "UNUSED",
+  BURNED: 3,
+  [3]: "BURNED",
+  PRESERVED: 4,
+  [4]: "PRESERVED",
+};
+const obj9 = {
+  UNSPECIFIED: 0,
+  [0]: "UNSPECIFIED",
+  DRAFT: 1,
+  [1]: "DRAFT",
+  MEASUREMENT: 2,
+  [2]: "MEASUREMENT",
+  ROLLING_OUT: 4,
+  [4]: "ROLLING_OUT",
+  ARCHIVED: 6,
+  [6]: "ARCHIVED",
+  AA_MODE: 7,
+  [7]: "AA_MODE",
+  PAUSED: 8,
+  [8]: "PAUSED",
+};
 class Experiment$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
     items[0] = { no: 1, name: "id", kind: "scalar", T: 6 };
     items[1] = { no: 2, name: "name", kind: "scalar", T: 9 };
     items[2] = {
@@ -29,8 +121,8 @@ class Experiment$Type extends MessageType {
       name: "created_at",
       kind: "message",
       T() {
-            return callback(1336).Timestamp;
-          }
+        return callback(1336).Timestamp;
+      },
     };
     items[3] = { no: 4, name: "creator_id", kind: "scalar", T: 6 };
     items[4] = { no: 5, name: "version", kind: "scalar", T: 5 };
@@ -39,8 +131,8 @@ class Experiment$Type extends MessageType {
       name: "edited_at",
       kind: "message",
       T() {
-            return callback(1336).Timestamp;
-          }
+        return callback(1336).Timestamp;
+      },
     };
     items[6] = { no: 7, name: "editor_id", kind: "scalar", T: 6 };
     items[7] = { no: 8, name: "title", kind: "scalar", T: 9 };
@@ -50,16 +142,16 @@ class Experiment$Type extends MessageType {
       name: "hypothesis",
       kind: "message",
       T() {
-            return callback(1337).StringValue;
-          }
+        return callback(1337).StringValue;
+      },
     };
     items[10] = {
       no: 11,
       name: "tech_spec_link",
       kind: "message",
       T() {
-            return callback(1337).StringValue;
-          }
+        return callback(1337).StringValue;
+      },
     };
     items[11] = { no: 12, name: "revision", kind: "scalar", T: 5 };
     items[12] = { no: 13, name: "hash_key", kind: "scalar", T: 9 };
@@ -68,9 +160,9 @@ class Experiment$Type extends MessageType {
       name: "unit_type",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.Experiment.UnitType", closure_4];
-            return items;
-          }
+        const items = ["discord_protos.discord_experimentation.v1.Experiment.UnitType", closure_4];
+        return items;
+      },
     };
     items[14] = {
       no: 15,
@@ -78,8 +170,8 @@ class Experiment$Type extends MessageType {
       kind: "message",
       repeat: 1,
       T() {
-            return closure_16;
-          }
+        return closure_16;
+      },
     };
     items[15] = {
       no: 16,
@@ -87,17 +179,17 @@ class Experiment$Type extends MessageType {
       kind: "message",
       repeat: 1,
       T() {
-            return callback(7637).Rule;
-          }
+        return callback(7637).Rule;
+      },
     };
     items[16] = {
       no: 18,
       name: "phase",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.Phase", closure_14];
-            return items;
-          }
+        const items = ["discord_protos.discord_experimentation.v1.Phase", closure_14];
+        return items;
+      },
     };
     items[17] = {
       no: 19,
@@ -105,9 +197,9 @@ class Experiment$Type extends MessageType {
       kind: "enum",
       repeat: 1,
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.Experiment.Surface", closure_5];
-            return items;
-          }
+        const items = ["discord_protos.discord_experimentation.v1.Experiment.Surface", closure_5];
+        return items;
+      },
     };
     items[18] = { no: 20, name: "owning_team_id", kind: "scalar", T: 9 };
     items[19] = { no: 21, name: "cached_notification_channel_id", kind: "scalar", T: 6 };
@@ -116,18 +208,18 @@ class Experiment$Type extends MessageType {
       name: "exposure_tracking",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.Experiment.ExposureTracking", closure_6];
-            return items;
-          }
+        const items = ["discord_protos.discord_experimentation.v1.Experiment.ExposureTracking", closure_6];
+        return items;
+      },
     };
     items[21] = {
       no: 25,
       name: "assignment_mode",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.Experiment.AssignmentMode", closure_7];
-            return items;
-          }
+        const items = ["discord_protos.discord_experimentation.v1.Experiment.AssignmentMode", closure_7];
+        return items;
+      },
     };
     items[22] = { no: 23, name: "enable_edit_raw_json_ui", kind: "scalar", T: 8 };
     items[23] = {
@@ -135,8 +227,8 @@ class Experiment$Type extends MessageType {
       name: "dynamic_config_size_limit_override",
       kind: "message",
       T() {
-            return callback(1337).Int32Value;
-          }
+        return callback(1337).Int32Value;
+      },
     };
     items[24] = { no: 24, name: "winning_variation_id", kind: "scalar", T: 5 };
     items[25] = { no: 34, name: "extra_outcome_context", kind: "scalar", T: 9 };
@@ -145,9 +237,9 @@ class Experiment$Type extends MessageType {
       name: "type",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.Experiment.Type", closure_8];
-            return items;
-          }
+        const items = ["discord_protos.discord_experimentation.v1.Experiment.Type", closure_8];
+        return items;
+      },
     };
     items[27] = { no: 27, name: "is_template", kind: "scalar", T: 8 };
     items[28] = { no: 28, name: "field_numbers_to_copy", kind: "scalar", repeat: 1, T: 5 };
@@ -157,16 +249,16 @@ class Experiment$Type extends MessageType {
       name: "debug_config",
       kind: "message",
       T() {
-            return closure_18;
-          }
+        return closure_18;
+      },
     };
     items[31] = {
       no: 31,
       name: "expected_end_date",
       kind: "message",
       T() {
-            return callback(1336).Timestamp;
-          }
+        return callback(1336).Timestamp;
+      },
     };
     items[32] = { no: 32, name: "is_automated_change", kind: "scalar", T: 8 };
     items[33] = { no: 44, name: "suppress_editor_mention", kind: "scalar", T: 8 };
@@ -175,25 +267,25 @@ class Experiment$Type extends MessageType {
       name: "archive_at",
       kind: "message",
       T() {
-            return callback(1336).Timestamp;
-          }
+        return callback(1336).Timestamp;
+      },
     };
     items[35] = {
       no: 35,
       name: "guild_experiment_version",
       kind: "message",
       T() {
-            return callback(1337).Int32Value;
-          }
+        return callback(1337).Int32Value;
+      },
     };
     items[36] = {
       no: 36,
       name: "custom_unit_prefix",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.Experiment.CustomUnitPrefix", closure_9];
-            return items;
-          }
+        const items = ["discord_protos.discord_experimentation.v1.Experiment.CustomUnitPrefix", closure_9];
+        return items;
+      },
     };
     items[37] = {
       no: 45,
@@ -201,9 +293,9 @@ class Experiment$Type extends MessageType {
       kind: "enum",
       repeat: 1,
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.Experiment.ExposurePointId", closure_10];
-            return items;
-          }
+        const items = ["discord_protos.discord_experimentation.v1.Experiment.ExposurePointId", closure_10];
+        return items;
+      },
     };
     items[38] = { no: 47, name: "dynamic_config_model", kind: "scalar", T: 9 };
     items[39] = { no: 37, name: "growthbook_tags", kind: "scalar", repeat: 2, T: 9 };
@@ -222,9 +314,13 @@ class Experiment$Type extends MessageType {
       name: "eligibility_persistence",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.Experiment.EligibilityPersistence", closure_11, "ELIGIBILITY_PERSISTENCE_"];
-            return items;
-          }
+        const items = [
+          "discord_protos.discord_experimentation.v1.Experiment.EligibilityPersistence",
+          closure_11,
+          "ELIGIBILITY_PERSISTENCE_",
+        ];
+        return items;
+      },
     };
     tmp = new tmp("discord_protos.discord_experimentation.v1.Experiment", items, T);
     // ThrowIfThisInitialized (0x7c)
@@ -233,7 +329,42 @@ class Experiment$Type extends MessageType {
 }
 const prototype = Experiment$Type.prototype;
 prototype["create"] = function create(arr) {
-  obj = { id: "0", name: "", creatorId: "0", version: 0, editorId: "0", title: "", description: "", revision: 0, hashKey: "", unitType: 0, variations: [], rules: [], phase: 0, surfaces: [], owningTeamId: "", cachedNotificationChannelId: "0", exposureTracking: 0, assignmentMode: 0, enableEditRawJsonUi: false, winningVariationId: 0, extraOutcomeContext: "", type: 0, isTemplate: false, fieldNumbersToCopy: [], engineFeatureFlags: [], isAutomatedChange: false, suppressEditorMention: false, customUnitPrefix: 0, exposurePoints: [], dynamicConfigModel: "", growthbookTags: [], allocateRightToLeft: false, isManaged: false, eligibilityPersistence: 0 };
+  obj = {
+    id: "0",
+    name: "",
+    creatorId: "0",
+    version: 0,
+    editorId: "0",
+    title: "",
+    description: "",
+    revision: 0,
+    hashKey: "",
+    unitType: 0,
+    variations: [],
+    rules: [],
+    phase: 0,
+    surfaces: [],
+    owningTeamId: "",
+    cachedNotificationChannelId: "0",
+    exposureTracking: 0,
+    assignmentMode: 0,
+    enableEditRawJsonUi: false,
+    winningVariationId: 0,
+    extraOutcomeContext: "",
+    type: 0,
+    isTemplate: false,
+    fieldNumbersToCopy: [],
+    engineFeatureFlags: [],
+    isAutomatedChange: false,
+    suppressEditorMention: false,
+    customUnitPrefix: 0,
+    exposurePoints: [],
+    dynamicConfigModel: "",
+    growthbookTags: [],
+    allocateRightToLeft: false,
+    isManaged: false,
+    eligibilityPersistence: 0,
+  };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -275,8 +406,16 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   if (id.createdAt) {
     const Timestamp = now.Timestamp;
     const tagResult2 = tag.tag(3, _mod1307.WireType.LengthDelimited);
-    const joined = Timestamp.internalBinaryWrite(id.createdAt, tag.tag(3, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = Timestamp.internalBinaryWrite(id.createdAt, tag.tag(3, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = Timestamp.internalBinaryWrite(
+      id.createdAt,
+      tag.tag(3, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = Timestamp.internalBinaryWrite(
+      id.createdAt,
+      tag.tag(3, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if ("0" !== id.creatorId) {
     tag.tag(4, _mod1307.WireType.Bit64).fixed64(id.creatorId);
@@ -289,8 +428,16 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   if (id.editedAt) {
     const Timestamp2 = now.Timestamp;
     const tagResult5 = tag.tag(6, _mod1307.WireType.LengthDelimited);
-    const joined1 = Timestamp2.internalBinaryWrite(id.editedAt, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = Timestamp2.internalBinaryWrite(id.editedAt, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = Timestamp2.internalBinaryWrite(
+      id.editedAt,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult1 = Timestamp2.internalBinaryWrite(
+      id.editedAt,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if ("0" !== id.editorId) {
     tag.tag(7, _mod1307.WireType.Bit64).fixed64(id.editorId);
@@ -307,14 +454,30 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   if (id.hypothesis) {
     const StringValue = defineProperty.StringValue;
     const tagResult9 = tag.tag(10, _mod1307.WireType.LengthDelimited);
-    const joined2 = StringValue.internalBinaryWrite(id.hypothesis, tag.tag(10, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = StringValue.internalBinaryWrite(id.hypothesis, tag.tag(10, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined2 = StringValue.internalBinaryWrite(
+      id.hypothesis,
+      tag.tag(10, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult2 = StringValue.internalBinaryWrite(
+      id.hypothesis,
+      tag.tag(10, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (id.techSpecLink) {
     const StringValue2 = defineProperty.StringValue;
     const tagResult10 = tag.tag(11, _mod1307.WireType.LengthDelimited);
-    const joined3 = StringValue2.internalBinaryWrite(id.techSpecLink, tag.tag(11, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = StringValue2.internalBinaryWrite(id.techSpecLink, tag.tag(11, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined3 = StringValue2.internalBinaryWrite(
+      id.techSpecLink,
+      tag.tag(11, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult3 = StringValue2.internalBinaryWrite(
+      id.techSpecLink,
+      tag.tag(11, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (0 !== id.revision) {
     tag.tag(12, _mod1307.WireType.Varint).int32(id.revision);
@@ -335,7 +498,11 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
       let tmp44 = require;
       let tmp45 = dependencyMap;
       let tagResult14 = tag.tag(15, _mod1307.WireType.LengthDelimited);
-      let internalBinaryWriteResult4 = closure_16.internalBinaryWrite(id.variations[num15], tagResult14.fork(), writeUnknownFields);
+      let internalBinaryWriteResult4 = closure_16.internalBinaryWrite(
+        id.variations[num15],
+        tagResult14.fork(),
+        writeUnknownFields,
+      );
       let joined4 = internalBinaryWriteResult4.join();
       num15 = num15 + 1;
       length = id.variations.length;
@@ -348,7 +515,11 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
       let tmp48 = dependencyMap;
       let Rule = defineProperty2.Rule;
       let tagResult15 = tag.tag(16, _mod1307.WireType.LengthDelimited);
-      let internalBinaryWriteResult5 = Rule.internalBinaryWrite(id.rules[num16], tagResult15.fork(), writeUnknownFields);
+      let internalBinaryWriteResult5 = Rule.internalBinaryWrite(
+        id.rules[num16],
+        tagResult15.fork(),
+        writeUnknownFields,
+      );
       let joined5 = internalBinaryWriteResult5.join();
       num16 = num16 + 1;
       length2 = id.rules.length;
@@ -394,8 +565,16 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   if (id.dynamicConfigSizeLimitOverride) {
     const Int32Value = defineProperty.Int32Value;
     const tagResult23 = tag.tag(46, _mod1307.WireType.LengthDelimited);
-    const joined7 = Int32Value.internalBinaryWrite(id.dynamicConfigSizeLimitOverride, tag.tag(46, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult6 = Int32Value.internalBinaryWrite(id.dynamicConfigSizeLimitOverride, tag.tag(46, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined7 = Int32Value.internalBinaryWrite(
+      id.dynamicConfigSizeLimitOverride,
+      tag.tag(46, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult6 = Int32Value.internalBinaryWrite(
+      id.dynamicConfigSizeLimitOverride,
+      tag.tag(46, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (0 !== id.winningVariationId) {
     tag.tag(24, _mod1307.WireType.Varint).int32(id.winningVariationId);
@@ -439,16 +618,30 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   }
   if (id.debugConfig) {
     const tagResult30 = tag.tag(30, _mod1307.WireType.LengthDelimited);
-    const joined9 = closure_18.internalBinaryWrite(id.debugConfig, tag.tag(30, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult7 = closure_18.internalBinaryWrite(id.debugConfig, tag.tag(30, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined9 = closure_18
+      .internalBinaryWrite(id.debugConfig, tag.tag(30, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields)
+      .join();
+    const internalBinaryWriteResult7 = closure_18.internalBinaryWrite(
+      id.debugConfig,
+      tag.tag(30, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (id.expectedEndDate) {
     joined10 = require;
     joined10 = dependencyMap;
     const Timestamp3 = now.Timestamp;
     const tagResult31 = tag.tag(31, _mod1307.WireType.LengthDelimited);
-    joined10 = Timestamp3.internalBinaryWrite(id.expectedEndDate, tag.tag(31, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult8 = Timestamp3.internalBinaryWrite(id.expectedEndDate, tag.tag(31, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    joined10 = Timestamp3.internalBinaryWrite(
+      id.expectedEndDate,
+      tag.tag(31, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult8 = Timestamp3.internalBinaryWrite(
+      id.expectedEndDate,
+      tag.tag(31, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (false !== id.isAutomatedChange) {
     joined10 = require;
@@ -467,16 +660,32 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
     joined10 = dependencyMap;
     const Timestamp4 = now.Timestamp;
     const tagResult34 = tag.tag(33, _mod1307.WireType.LengthDelimited);
-    joined10 = Timestamp4.internalBinaryWrite(id.archiveAt, tag.tag(33, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult9 = Timestamp4.internalBinaryWrite(id.archiveAt, tag.tag(33, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    joined10 = Timestamp4.internalBinaryWrite(
+      id.archiveAt,
+      tag.tag(33, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult9 = Timestamp4.internalBinaryWrite(
+      id.archiveAt,
+      tag.tag(33, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (id.guildExperimentVersion) {
     joined10 = require;
     joined10 = dependencyMap;
     const Int32Value2 = defineProperty.Int32Value;
     const tagResult35 = tag.tag(35, _mod1307.WireType.LengthDelimited);
-    joined10 = Int32Value2.internalBinaryWrite(id.guildExperimentVersion, tag.tag(35, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult10 = Int32Value2.internalBinaryWrite(id.guildExperimentVersion, tag.tag(35, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    joined10 = Int32Value2.internalBinaryWrite(
+      id.guildExperimentVersion,
+      tag.tag(35, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult10 = Int32Value2.internalBinaryWrite(
+      id.guildExperimentVersion,
+      tag.tag(35, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (0 !== id.customUnitPrefix) {
     joined10 = require;
@@ -533,8 +742,18 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
     joined10 = require;
     joined10 = dependencyMap;
     const tagResult42 = tag.tag(43, _mod1307.WireType.LengthDelimited);
-    joined10 = closure_15.internalBinaryWrite(id.numberLineSettings, tag.tag(43, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult11 = closure_15.internalBinaryWrite(id.numberLineSettings, tag.tag(43, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    joined10 = closure_15
+      .internalBinaryWrite(
+        id.numberLineSettings,
+        tag.tag(43, _mod1307.WireType.LengthDelimited).fork(),
+        writeUnknownFields,
+      )
+      .join();
+    const internalBinaryWriteResult11 = closure_15.internalBinaryWrite(
+      id.numberLineSettings,
+      tag.tag(43, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (0 !== id.eligibilityPersistence) {
     joined10 = require;
@@ -562,11 +781,11 @@ class Experiment_NumberLineSettings$Type extends MessageType2 {
       name: "mode",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings.Mode", closure_3];
-            return items;
-          }
+        const items = ["discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings.Mode", closure_3];
+        return items;
+      },
     };
-    items = [, , ];
+    items = [, ,];
     items[0] = obj;
     items[1] = { no: 2, name: "linked_id", kind: "scalar", T: 6 };
     items[2] = { no: 3, name: "shared_control", kind: "scalar", T: 8 };
@@ -673,17 +892,48 @@ let items = [
     T() {
       const items = ["discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings.Mode", closure_3];
       return items;
-    }
+    },
   },
   { no: 2, name: "linked_id", kind: "scalar", T: 6 },
-  { no: 3, name: "shared_control", kind: "scalar", T: 8 }
+  { no: 3, name: "shared_control", kind: "scalar", T: 8 },
 ];
-let tmp8 = new "DEFAULT"("discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings", items, tmp5, tmp4, "create", tmp3, "internalBinaryRead", "internalBinaryWrite", tmp2, Experiment_NumberLineSettings$Type, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, experimentType, "DEFAULT", items, new.target, exports);
+let tmp8 = new "DEFAULT"(
+  "discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings",
+  items,
+  tmp5,
+  tmp4,
+  "create",
+  tmp3,
+  "internalBinaryRead",
+  "internalBinaryWrite",
+  tmp2,
+  Experiment_NumberLineSettings$Type,
+  tmp,
+  arg1,
+  dependencyMap,
+  obj,
+  obj,
+  obj,
+  obj1,
+  obj2,
+  obj3,
+  obj4,
+  obj5,
+  obj6,
+  obj7,
+  obj8,
+  obj9,
+  experimentType,
+  "DEFAULT",
+  items,
+  new.target,
+  exports,
+);
 // ThrowIfThisInitialized (0x7c)
 let closure_15 = tmp8;
 class Variation$Type extends MessageType3 {
   constructor() {
-    items = [, , , , , , ];
+    items = [, , , , , ,];
     items[0] = { no: 1, name: "id", kind: "scalar", T: 5 };
     items[1] = { no: 2, name: "label", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "target_allocation", kind: "scalar", T: 5 };
@@ -693,8 +943,8 @@ class Variation$Type extends MessageType3 {
       kind: "message",
       repeat: 1,
       T() {
-            return closure_17;
-          }
+        return closure_17;
+      },
     };
     obj = { no: 5, name: "type", kind: "enum", T: null };
     class T {
@@ -711,8 +961,8 @@ class Variation$Type extends MessageType3 {
       name: "configuration",
       kind: "message",
       T() {
-            return callback(table[3]).StringValue;
-          }
+        return callback(table[3]).StringValue;
+      },
     };
     items[6] = { no: 7, name: "owning_experiment_id", kind: "scalar", T: 6 };
     tmp = new tmp("discord_protos.discord_experimentation.v1.Variation", items, T);
@@ -824,7 +1074,11 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeU
       let tmp11 = require;
       let tmp12 = dependencyMap;
       let tagResult3 = tag.tag(4, _mod1307.WireType.LengthDelimited);
-      let internalBinaryWriteResult = variationType.internalBinaryWrite(id.buckets[num4], tagResult3.fork(), writeUnknownFields);
+      let internalBinaryWriteResult = variationType.internalBinaryWrite(
+        id.buckets[num4],
+        tagResult3.fork(),
+        writeUnknownFields,
+      );
       let joined = internalBinaryWriteResult.join();
       num4 = num4 + 1;
       length = id.buckets.length;
@@ -837,8 +1091,16 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeU
   if (id.configuration) {
     const StringValue = defineProperty.StringValue;
     const tagResult5 = tag.tag(6, _mod1307.WireType.LengthDelimited);
-    const joined1 = StringValue.internalBinaryWrite(id.configuration, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = StringValue.internalBinaryWrite(id.configuration, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = StringValue.internalBinaryWrite(
+      id.configuration,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult1 = StringValue.internalBinaryWrite(
+      id.configuration,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if ("0" !== id.owningExperimentId) {
     tag.tag(7, _mod1307.WireType.Bit64).fixed64(id.owningExperimentId);
@@ -865,7 +1127,7 @@ const items1 = [
     repeat: 1,
     T() {
       return closure_17;
-    }
+    },
   },
   {
     no: 5,
@@ -874,7 +1136,7 @@ const items1 = [
     T() {
       const items = ["discord_protos.discord_experimentation.v1.Variation.Type", closure_12];
       return items;
-    }
+    },
   },
   {
     no: 6,
@@ -882,18 +1144,52 @@ const items1 = [
     kind: "message",
     T() {
       return callback(table[3]).StringValue;
-    }
+    },
   },
-
 ];
 const obj11 = { no: 7, name: "owning_experiment_id", kind: "scalar", T: 6 };
 items1[6] = obj11;
-tmp2 = new tmp2("discord_protos.discord_experimentation.v1.Variation", items1, tmp5, tmp4, "create", Variation$Type, "internalBinaryRead", "internalBinaryWrite", tmp2, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, experimentType, tmp8, items1, new.target, exports, obj11, undefined, 8, 7);
+tmp2 = new tmp2(
+  "discord_protos.discord_experimentation.v1.Variation",
+  items1,
+  tmp5,
+  tmp4,
+  "create",
+  Variation$Type,
+  "internalBinaryRead",
+  "internalBinaryWrite",
+  tmp2,
+  undefined,
+  tmp,
+  arg1,
+  dependencyMap,
+  obj,
+  obj,
+  obj,
+  obj1,
+  obj2,
+  obj3,
+  obj4,
+  obj5,
+  obj6,
+  obj7,
+  obj8,
+  obj9,
+  experimentType,
+  tmp8,
+  items1,
+  new.target,
+  exports,
+  obj11,
+  undefined,
+  8,
+  7,
+);
 // ThrowIfThisInitialized (0x7c)
 let closure_16 = tmp2;
 class Bucket$Type extends MessageType4 {
   constructor() {
-    items = [, , ];
+    items = [, ,];
     items[0] = { no: 1, name: "start", kind: "scalar", T: 5 };
     items[1] = { no: 2, name: "stop", kind: "scalar", T: 5 };
     items[2] = {
@@ -901,9 +1197,9 @@ class Bucket$Type extends MessageType4 {
       name: "type",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.Bucket.Type", closure_13];
-            return items;
-          }
+        const items = ["discord_protos.discord_experimentation.v1.Bucket.Type", closure_13];
+        return items;
+      },
     };
     tmp = new tmp("discord_protos.discord_experimentation.v1.Bucket", items, new.target);
     // ThrowIfThisInitialized (0x7c)
@@ -999,7 +1295,10 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(start, tag, wri
   }
   return tag;
 };
-const items2 = [{ no: 1, name: "start", kind: "scalar", T: 5 }, { no: 2, name: "stop", kind: "scalar", T: 5 }, ];
+const items2 = [
+  { no: 1, name: "start", kind: "scalar", T: 5 },
+  { no: 2, name: "stop", kind: "scalar", T: 5 },
+];
 const obj12 = {
   no: 3,
   name: "type",
@@ -1007,14 +1306,51 @@ const obj12 = {
   T() {
     const items = ["discord_protos.discord_experimentation.v1.Bucket.Type", closure_13];
     return items;
-  }
+  },
 };
 items2[2] = obj12;
-const variationType = new Variation$Type("discord_protos.discord_experimentation.v1.Bucket", items2, tmp5, Bucket$Type, "create", Variation$Type, "internalBinaryRead", "internalBinaryWrite", items2, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, experimentType, tmp8, tmp2, new.target, exports, obj12, undefined, 8, 7, 6, 4);
+const variationType = new Variation$Type(
+  "discord_protos.discord_experimentation.v1.Bucket",
+  items2,
+  tmp5,
+  Bucket$Type,
+  "create",
+  Variation$Type,
+  "internalBinaryRead",
+  "internalBinaryWrite",
+  items2,
+  undefined,
+  tmp,
+  arg1,
+  dependencyMap,
+  obj,
+  obj,
+  obj,
+  obj1,
+  obj2,
+  obj3,
+  obj4,
+  obj5,
+  obj6,
+  obj7,
+  obj8,
+  obj9,
+  experimentType,
+  tmp8,
+  tmp2,
+  new.target,
+  exports,
+  obj12,
+  undefined,
+  8,
+  7,
+  6,
+  4,
+);
 // ThrowIfThisInitialized (0x7c)
 class DebugConfig$Type extends MessageType5 {
   constructor() {
-    items = [, , , , , ];
+    items = [, , , , ,];
     items[0] = { no: 1, name: "enable_decision_logging", kind: "scalar", T: 8 };
     items[1] = { no: 2, name: "metrics_sample_rate", kind: "scalar", T: 1 };
     items[2] = { no: 3, name: "log_context_on_failure", kind: "scalar", T: 8 };
@@ -1028,7 +1364,14 @@ class DebugConfig$Type extends MessageType5 {
 }
 const prototype5 = DebugConfig$Type.prototype;
 prototype5["create"] = function create(arr) {
-  obj = { enableDecisionLogging: false, metricsSampleRate: 0, logContextOnFailure: false, logRawHeaders: false, tagFilterMetrics: false, decisionLogSampleRate: 0 };
+  obj = {
+    enableDecisionLogging: false,
+    metricsSampleRate: 0,
+    logContextOnFailure: false,
+    logRawHeaders: false,
+    tagFilterMetrics: false,
+    decisionLogSampleRate: 0,
+  };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -1133,13 +1476,56 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(enableDecisionL
   }
   return tag;
 };
-const items3 = [{ no: 1, name: "enable_decision_logging", kind: "scalar", T: 8 }, { no: 2, name: "metrics_sample_rate", kind: "scalar", T: 1 }, { no: 3, name: "log_context_on_failure", kind: "scalar", T: 8 }, { no: 4, name: "log_raw_headers", kind: "scalar", T: 8 }, { no: 5, name: "tag_filter_metrics", kind: "scalar", T: 8 }, ];
+const items3 = [
+  { no: 1, name: "enable_decision_logging", kind: "scalar", T: 8 },
+  { no: 2, name: "metrics_sample_rate", kind: "scalar", T: 1 },
+  { no: 3, name: "log_context_on_failure", kind: "scalar", T: 8 },
+  { no: 4, name: "log_raw_headers", kind: "scalar", T: 8 },
+  { no: 5, name: "tag_filter_metrics", kind: "scalar", T: 8 },
+];
 const obj13 = { no: 6, name: "decision_log_sample_rate", kind: "scalar", T: 1 };
 items3[5] = obj13;
-let tmp11 = new "internalBinaryRead"("discord_protos.discord_experimentation.v1.DebugConfig", items3, tmp5, Bucket$Type, "create", DebugConfig$Type, "internalBinaryRead", items3, new.target, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, experimentType, tmp8, tmp2, variationType, exports, obj13, undefined, 8, 7);
+let tmp11 = new "internalBinaryRead"(
+  "discord_protos.discord_experimentation.v1.DebugConfig",
+  items3,
+  tmp5,
+  Bucket$Type,
+  "create",
+  DebugConfig$Type,
+  "internalBinaryRead",
+  items3,
+  new.target,
+  undefined,
+  tmp,
+  arg1,
+  dependencyMap,
+  obj,
+  obj,
+  obj,
+  obj1,
+  obj2,
+  obj3,
+  obj4,
+  obj5,
+  obj6,
+  obj7,
+  obj8,
+  obj9,
+  experimentType,
+  tmp8,
+  tmp2,
+  variationType,
+  exports,
+  obj13,
+  undefined,
+  8,
+  7,
+);
 // ThrowIfThisInitialized (0x7c)
 let closure_18 = tmp11;
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx",
+);
 
 export const Experiment_NumberLineSettings_Mode = obj;
 export const Experiment_UnitType = obj;

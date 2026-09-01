@@ -51,4 +51,4 @@ export default function useVideoReadyTimeout(streamId) {
     return obj;
   }
   STREAM = tmp(tmp2[4]).MediaEngineContextTypes.STREAM;
-};
+}

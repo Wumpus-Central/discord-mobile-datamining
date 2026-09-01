@@ -12,7 +12,9 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ slider: { marginTop: 4 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx",
+);
 
 export default function UserSettingsVoiceOutputOptions() {
   const tmp = callback2();
@@ -59,13 +61,13 @@ export default function UserSettingsVoiceOutputOptions() {
     onValueChange(arg0) {
       return callback(table[10]).setOutputVolume(arg0);
     },
-    accessibilityLabel: null
+    accessibilityLabel: null,
   };
   const intl3 = stateFromStores1(1236).intl;
   obj2[3] = intl3.string(stateFromStores1(1236).t.xPHVBs);
   obj1[1] = callback(VolumeSliderDefault, obj2);
   obj[1] = callback(View, obj1);
-  const items4 = [callback(stateFromStores1(5599).TableRow, obj), ];
+  const items4 = [callback(stateFromStores1(5599).TableRow, obj)];
   let tmp9Result = null != stateFromStores1;
   if (tmp9Result) {
     const obj3 = { label: null, subLabel: null };
@@ -86,4 +88,4 @@ export default function UserSettingsVoiceOutputOptions() {
   items4[1] = tmp9Result;
   obj[2] = items4;
   return closure_10(stateFromStores1(10062).UserSettingsTableRowGroup, obj);
-};
+}

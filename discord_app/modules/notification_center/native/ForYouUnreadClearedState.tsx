@@ -12,8 +12,22 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { marginBottom: 4, marginHorizontal: 24, alignItems: "center", flexDirection: "row" }, imageContainer: null, icon: null, headerText: null };
-createCacheKey = { width: 48, height: 48, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_400, opacity: 0.16, borderRadius: ThemesDefault.radii.xl, marginRight: 16, justifyContent: "center", alignItems: "center" };
+createCacheKey = {
+  container: { marginBottom: 4, marginHorizontal: 24, alignItems: "center", flexDirection: "row" },
+  imageContainer: null,
+  icon: null,
+  headerText: null,
+};
+createCacheKey = {
+  width: 48,
+  height: 48,
+  backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_400,
+  opacity: 0.16,
+  borderRadius: ThemesDefault.radii.xl,
+  marginRight: 16,
+  justifyContent: "center",
+  alignItems: "center",
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { margin: 12, position: "absolute", color: ThemesDefault.unsafe_rawColors.GREEN_400 };
 createCacheKey[3] = { marginBottom: 2 };
@@ -25,14 +39,19 @@ export const ForYouUnreadClearedState = function ForYouUnreadClearedState() {
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.imageContainer };
-  const items = [callback(View, obj), , ];
+  const items = [callback(View, obj), ,];
   obj = { source: registerAssetDefault, style: tmp.icon, color: tmp.icon.color };
   items[1] = callback(Button.Icon, obj);
   obj1 = { children: null };
-  const obj2 = { color: "mobile-text-heading-primary", variant: "text-md/semibold", style: tmp.headerText, children: null };
+  const obj2 = {
+    color: "mobile-text-heading-primary",
+    variant: "text-md/semibold",
+    style: tmp.headerText,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj2[3] = intl.string(getSystemLocale.t.DonStq);
-  const items1 = [callback(Text.Text, obj2), ];
+  const items1 = [callback(Text.Text, obj2)];
   const obj3 = { color: "text-default", variant: "text-md/medium", children: null };
   const intl2 = getSystemLocale.intl;
   obj3[2] = intl2.string(getSystemLocale.t.jXFsai);

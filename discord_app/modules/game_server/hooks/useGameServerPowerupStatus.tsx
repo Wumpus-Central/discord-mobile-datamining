@@ -9,14 +9,18 @@ export default function useGameServerPowerupStatus(arg0) {
   const _require = arg0;
   const items = [closure_4];
   const items1 = [arg0];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const stateForGuild = closure_1_4.getStateForGuild(closure_0);
-    let entitlements;
-    if (stateForGuild != null) {
-      entitlements = stateForGuild.entitlements;
-    }
-    return entitlements;
-  }, items1);
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const stateForGuild = closure_1_4.getStateForGuild(closure_0);
+      let entitlements;
+      if (stateForGuild != null) {
+        entitlements = stateForGuild.entitlements;
+      }
+      return entitlements;
+    },
+    items1,
+  );
   const tmp2 = stateFromStores(12123)(arg0);
   dependencyMap = tmp2;
   const items2 = [tmp2, stateFromStores];
@@ -37,4 +41,4 @@ export default function useGameServerPowerupStatus(arg0) {
       return obj;
     }
   }, items2);
-};
+}

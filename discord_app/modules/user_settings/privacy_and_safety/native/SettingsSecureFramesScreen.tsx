@@ -37,12 +37,25 @@ function UserListItem(userId) {
   }, items3);
   let tmp8Result = null != stateFromStores;
   if (tmp8Result) {
-    obj = { user: null, guildId: "Array", size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093 };
+    obj = {
+      user: null,
+      guildId: "Array",
+      size: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093,
+    };
     obj[0] = stateFromStores;
     obj[2] = tmp(tmp2[14]).AvatarSizes.REFRESH_MEDIUM_32;
     tmp8Result = tmp8(tmp(tmp2[14]).Avatar, obj);
   }
-  obj = { icon: tmp8Result, subLabel: null, label: null, start: null, end: null, onPress: null, onLongPress: null, trailing: null };
+  obj = {
+    icon: tmp8Result,
+    subLabel: null,
+    label: null,
+    start: null,
+    end: null,
+    onPress: null,
+    onLongPress: null,
+    trailing: null,
+  };
   const intl = tmp(tmp2[15]).intl;
   obj1 = { count: secureFramesUserVerifiedKeys.length };
   obj[1] = intl.formatToPlainString(userId(analyticsLocations[15]).t["/MBjYF"], obj1);
@@ -87,7 +100,7 @@ function SettingsSecureFramesFooter() {
     obj = { variant: "text-sm/semibold", color: "text-default", children: null };
     const intl = tmp2(tmp3[15]).intl;
     obj[2] = intl.string(tmp2(tmp3[15]).t["5b3FNI"]);
-    const items2 = [callback(tmp2(tmp3[20]).Text, obj), , ];
+    const items2 = [callback(tmp2(tmp3[20]).Text, obj), ,];
     obj1 = { style: null, children: null };
     obj2 = { minHeight: null };
     obj2[0] = secureFramesVerifiedUserIds.length * token;
@@ -121,7 +134,9 @@ createCacheKey[2] = { flexGrow: 1, gap: ThemesDefault.space.PX_8 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { USER: "USER" };
 let obj2 = { flexGrow: 1, gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SettingsSecureFramesScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/privacy_and_safety/native/SettingsSecureFramesScreen.tsx",
+);
 
 export default function SettingsSecureFramesScreen() {
   const tmp = callback3();
@@ -130,7 +145,7 @@ export default function SettingsSecureFramesScreen() {
   obj = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["9Q/PQv"]);
-  const items = [callback(Text.Text, obj), ];
+  const items = [callback(Text.Text, obj)];
   obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = getSystemLocale.intl;
   const obj2 = { helpArticle: getCurrentUserSigningKey.getSecureFramesHelpdeskArticle() };
@@ -140,4 +155,4 @@ export default function SettingsSecureFramesScreen() {
   const items1 = [callback2(View, obj), callback(SettingsSecureFramesFooter, {})];
   obj[1] = items1;
   return callback2(View, obj);
-};
+}

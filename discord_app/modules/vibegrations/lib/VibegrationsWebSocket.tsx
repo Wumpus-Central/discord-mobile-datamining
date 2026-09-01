@@ -2,8 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/vibegrations/lib/VibegrationsWebSocket.tsx");
-class VibegrationsWebSocket {
-}
+class VibegrationsWebSocket {}
 const prototype = VibegrationsWebSocket.prototype;
 prototype["open"] = function open(ticket) {
   const self = this;
@@ -139,8 +138,7 @@ prototype["sendCaptureAck"] = function sendCaptureAck(id, accepted, code, messag
         obj[3] = code;
         obj[4] = message;
         socket.send(JSON.stringify(obj));
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }
 };
@@ -158,8 +156,7 @@ prototype["sendControlAck"] = function sendControlAck(id, failed, response, mess
         obj[3] = response;
         obj[4] = message;
         socket.send(JSON.stringify(obj));
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }
 };
@@ -175,8 +172,7 @@ prototype["sendAppIconAck"] = function sendAppIconAck(arg0, failed) {
         obj[1] = arg0;
         obj[2] = failed;
         socket.send(JSON.stringify(obj));
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }
 };

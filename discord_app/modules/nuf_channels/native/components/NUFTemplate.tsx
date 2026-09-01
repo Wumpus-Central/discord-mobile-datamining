@@ -24,12 +24,18 @@ export default function NUFActionSheetTemplate(arg0) {
   ({ title, description, imageSrc, onCTAPress, CTALabel } = arg0);
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-  const items = [callback(Text.Text, obj), , , ];
+  obj = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: title,
+  };
+  const items = [callback(Text.Text, obj), , ,];
   obj = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: description };
   items[1] = callback(Text.Text, obj);
   items[2] = callback(closure_3, { source: imageSrc, style: tmp.image });
   items[3] = callback(Button.Button, { text: CTALabel, size: "md", onPress: onCTAPress, grow: true });
   obj[1] = items;
   return callback2(closure_2, obj);
-};
+}

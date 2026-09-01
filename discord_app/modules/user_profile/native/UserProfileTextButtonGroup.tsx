@@ -8,7 +8,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { flexDirection: "row", flexWrap: "wrap", gap: 12 }, buttonArea: { flexGrow: 1 } });
+let closure_6 = createCacheKey.createStyles({
+  container: { flexDirection: "row", flexWrap: "wrap", gap: 12 },
+  buttonArea: { flexGrow: 1 },
+});
 let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileTextButtonGroup.tsx");
 
 export default function UserProfileTextButtonGroup(arg0) {
@@ -28,7 +31,7 @@ export default function UserProfileTextButtonGroup(arg0) {
   }
   if (null == primaryButton) {
     let obj = { style: null, children: null };
-    items = [, ];
+    items = [,];
     items[0] = items.container;
     items[1] = style;
     obj[0] = items;
@@ -46,15 +49,15 @@ export default function UserProfileTextButtonGroup(arg0) {
     const items2 = [items.container, style];
     obj[0] = items2;
     obj1 = { style: null, children: null };
-    const items3 = [items.buttonArea, ];
+    const items3 = [items.buttonArea];
     const obj2 = { minWidth: null };
     obj2[0] = result;
     items3[1] = obj2;
     obj1[0] = items3;
     obj1[1] = primaryButton;
-    const items4 = [callback(View, obj1), ];
+    const items4 = [callback(View, obj1)];
     const obj3 = { style: null, children: null };
-    const items5 = [items.buttonArea, ];
+    const items5 = [items.buttonArea];
     const obj4 = { minWidth: null };
     obj4[0] = result;
     items5[1] = obj4;
@@ -64,4 +67,4 @@ export default function UserProfileTextButtonGroup(arg0) {
     obj[1] = items4;
     callback2(View, obj);
   }
-};
+}

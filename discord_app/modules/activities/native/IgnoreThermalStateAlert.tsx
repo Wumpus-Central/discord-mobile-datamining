@@ -7,7 +7,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" } });
+let closure_5 = createCacheKey.createStyles({
+  text: { marginTop: 16, lineHeight: 20, textAlign: "center" },
+  header: { textAlign: "center" },
+});
 let result = require("set").fileFinishedImporting("modules/activities/native/IgnoreThermalStateAlert.tsx");
 
 export const IgnoreThermalStateAlert = function IgnoreThermalStateAlert(onConfirm) {
@@ -29,7 +32,7 @@ export const IgnoreThermalStateAlert = function IgnoreThermalStateAlert(onConfir
   obj = { style: tmp2.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl3 = onConfirm(1236).intl;
   obj[3] = intl3.string(onConfirm(1236).t.v5X4fZ);
-  const items = [callback(onConfirm(4474).Text, obj), ];
+  const items = [callback(onConfirm(4474).Text, obj)];
   obj = { style: tmp2.text, variant: "text-md/medium", children: null };
   const intl4 = onConfirm(1236).intl;
   obj[2] = intl4.string(onConfirm(1236).t.VOgTjy);

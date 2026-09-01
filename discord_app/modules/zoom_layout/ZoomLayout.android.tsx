@@ -40,7 +40,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         const Commands = closure_1_0(closure_1_2[3]).Commands;
         Commands.unzoom(tmp.current, flag);
       }
-    }
+    },
   }));
   let obj = {};
   const merged = Object.assign(arg0);

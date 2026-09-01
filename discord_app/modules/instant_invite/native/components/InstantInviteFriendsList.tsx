@@ -23,7 +23,7 @@ function FriendsEmptyComponent() {
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.MBQBI7);
   ({ emptyTitle: obj2[2], emptyBody: obj2[3] } = tmp);
-  const items = [callback(Button.RefreshEmptyState, obj), ];
+  const items = [callback(Button.RefreshEmptyState, obj)];
   obj = {
     onPress() {
       let obj = callback2(4445);
@@ -38,7 +38,7 @@ function FriendsEmptyComponent() {
     accessibilityRole: "link",
     accessibilityLabel: null,
     hitSlop: null,
-    children: null
+    children: null,
   };
   const intl3 = getSystemLocale.intl;
   obj[2] = intl3.string(getSystemLocale.t.a7FVbE);
@@ -55,7 +55,9 @@ function FriendsEmptyComponent() {
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 createCacheKey = {};
-const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
+const merged = Object.assign(
+  importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18),
+);
 createCacheKey.textTransform = "none";
 createCacheKey.lineHeight = 24;
 createCacheKey[0] = createCacheKey;
@@ -67,7 +69,9 @@ createCacheKey[1] = obj1;
 createCacheKey[2] = { textAlign: "center" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const importDefaultResult1 = importDefaultResult;
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteFriendsList.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/instant_invite/native/components/InstantInviteFriendsList.tsx",
+);
 
 export default function InstantInviteFriendsList(code) {
   code = code.code;
@@ -78,14 +82,35 @@ export default function InstantInviteFriendsList(code) {
   const items = [onPressAvatar, onInviteSent, code, source, data.length];
   const callback = data.useCallback((index) => {
     index = index.index;
-    return source(onPressAvatar(onInviteSent[12]), { start: 0 === index, end: index === data.length - 1, row: index.item, onPressAvatar, onInviteSent, code, source });
+    return source(onPressAvatar(onInviteSent[12]), {
+      start: 0 === index,
+      end: index === data.length - 1,
+      row: index.item,
+      onPressAvatar,
+      onInviteSent,
+      code,
+      source,
+    });
   }, items);
-  let obj = { contentContainerStyle: null, bounces: false, renderItem: null, data: null, keyExtractor: null, keyboardShouldPersistTaps: "always", ListEmptyComponent: null };
-  obj = { paddingBottom: onPressAvatar(onInviteSent[5]).space.PX_16 + onPressAvatar(onInviteSent[13])({ isKeyboardAwareOnAndroid: false }).insets.bottom, paddingHorizontal: onPressAvatar(onInviteSent[5]).space.PX_12 };
+  let obj = {
+    contentContainerStyle: null,
+    bounces: false,
+    renderItem: null,
+    data: null,
+    keyExtractor: null,
+    keyboardShouldPersistTaps: "always",
+    ListEmptyComponent: null,
+  };
+  obj = {
+    paddingBottom:
+      onPressAvatar(onInviteSent[5]).space.PX_16 +
+      onPressAvatar(onInviteSent[13])({ isKeyboardAwareOnAndroid: false }).insets.bottom,
+    paddingHorizontal: onPressAvatar(onInviteSent[5]).space.PX_12,
+  };
   obj[0] = obj;
   obj[2] = callback;
   obj[3] = data;
   obj[4] = keyExtractor;
   obj[6] = FriendsEmptyComponent;
   return source(code(onInviteSent[14]).BottomSheetFlatList, obj);
-};
+}

@@ -7,7 +7,9 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationQuestUnsupportedAlertModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/age_assurance/native/AgeVerificationQuestUnsupportedAlertModal.tsx",
+);
 
 export default function AgeVerificationQuestUnsupportedAlertModal() {
   let obj = { title: null, content: null, actions: null };
@@ -22,4 +24,4 @@ export default function AgeVerificationQuestUnsupportedAlertModal() {
   obj[0] = jsx(getAlertModalItemKey.AlertActionButton, { text: null }, "got-it");
   obj[2] = jsx(getAlertModalItemKey.AlertActions, { text: null });
   return jsx(getAlertModalItemKey.AlertModal, { text: null });
-};
+}

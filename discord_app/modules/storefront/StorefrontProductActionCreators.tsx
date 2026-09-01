@@ -14,7 +14,7 @@ function _maybeFetchProductsWithSkus() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (fromServer === 2) {
         fromServer = 3;
         HermesBuiltin.throwTypeError();
@@ -94,7 +94,13 @@ function _maybeFetchProductsWithSkus() {
                   let obj7 = lib(length[7]);
                   let obj3 = { url: null, query: null, rejectWithError: true };
                   obj3[0] = constants.STOREFRONT_PRODUCTS_WITH_SKUS;
-                  const obj4 = { product_ids: null, locale: null, with_bundled_skus: true, include_google_sku_ids: true, ignore_cache: null };
+                  const obj4 = {
+                    product_ids: null,
+                    locale: null,
+                    with_bundled_skus: true,
+                    include_google_sku_ids: true,
+                    ignore_cache: null,
+                  };
                   obj4[0] = length;
                   obj4[1] = locale.locale;
                   obj4[4] = ignoreCache;
@@ -186,7 +192,7 @@ function _maybeFetchProductsBySkuIds() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (fromServer === 2) {
         fromServer = 3;
         HermesBuiltin.throwTypeError();
@@ -248,7 +254,13 @@ function _maybeFetchProductsBySkuIds() {
                   let obj7 = lib(length[7]);
                   let obj3 = { url: null, query: null, rejectWithError: true };
                   obj3[0] = constants.STOREFRONT_PRODUCTS_BY_SKU_IDS;
-                  const obj4 = { sku_ids: null, locale: null, with_bundled_skus: true, include_google_sku_ids: true, ignore_cache: null };
+                  const obj4 = {
+                    sku_ids: null,
+                    locale: null,
+                    with_bundled_skus: true,
+                    include_google_sku_ids: true,
+                    ignore_cache: null,
+                  };
                   obj4[0] = length;
                   obj4[1] = locale.locale;
                   obj4[4] = ignoreCache;

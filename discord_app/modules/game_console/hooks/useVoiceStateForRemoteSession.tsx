@@ -14,4 +14,4 @@ export default function useVoiceStateForRemoteSession() {
     voiceStateForSession = voiceStateForSession.getVoiceStateForSession(id, remoteSessionId.getRemoteSessionId());
     return voiceStateForSession;
   }, []);
-};
+}

@@ -7,7 +7,13 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ title: { marginLeft: 24 }, indicators: { marginBottom: -36 }, carousel: { marginTop: 16 }, carouselCard: { marginLeft: 8 }, lastCarouselCard: { marginRight: 8 } });
+let closure_8 = createCacheKey.createStyles({
+  title: { marginLeft: 24 },
+  indicators: { marginBottom: -36 },
+  carousel: { marginTop: 16 },
+  carouselCard: { marginLeft: 8 },
+  lastCarouselCard: { marginRight: 8 },
+});
 const result = require("set").fileFinishedImporting("modules/premium/native/PremiumPerkCarousel.tsx");
 
 export default function PremiumPerkCarousel(arg0) {
@@ -37,7 +43,7 @@ export default function PremiumPerkCarousel(arg0) {
   length = perks.length;
   obj = { style, children: null };
   obj = { style: tmp.title, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-  const items1 = [callback2(onItemChange(first[6]).Text, obj), , ];
+  const items1 = [callback2(onItemChange(first[6]).Text, obj), ,];
   obj1 = {
     style: items2,
     width,
@@ -45,7 +51,7 @@ export default function PremiumPerkCarousel(arg0) {
     pageIndictor: false,
     scrollViewProps: obj3,
     children: perks.map((arg0, arg1) => {
-      const items = [lib.carouselCard, ];
+      const items = [lib.carouselCard];
       let lastCarouselCard = null;
       if (length - 1 === arg1) {
         lastCarouselCard = lib.lastCarouselCard;
@@ -56,11 +62,15 @@ export default function PremiumPerkCarousel(arg0) {
       obj.variant = onItemChange(first[5]).PerkCardVariant.NARROW;
       obj.style = items;
       return closure_1_6(lib(first[5]), obj, arg1);
-    })
+    }),
   };
   items2 = [tmp.carousel, { height: perkCardHeight + 8 }];
   items1[1] = callback2(importDefault(first[7]), obj1);
-  items1[2] = callback2(onItemChange(first[8]).CarouselPagination, { containerStyle: tmp.indicators, numberOfItems: perks.length, currentIndex: first });
+  items1[2] = callback2(onItemChange(first[8]).CarouselPagination, {
+    containerStyle: tmp.indicators,
+    numberOfItems: perks.length,
+    currentIndex: first,
+  });
   obj[1] = items1;
   return callback3(View, obj);
-};
+}

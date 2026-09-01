@@ -47,7 +47,12 @@ export default {
       closure_2 = v4Result;
       let HCAPTCHA = callback(closure_1_2[11]).CaptchaTypes.HCAPTCHA;
       obj1 = callback2(closure_1_2[6]);
-      obj = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey: callback, captcha_flow_key: v4Result };
+      obj = {
+        captcha_event_name: "initial-load",
+        captcha_service: HCAPTCHA,
+        sitekey: callback,
+        captcha_flow_key: v4Result,
+      };
       obj1.track(closure_1_9.CAPTCHA_EVENT, obj);
       obj = { name: callback(closure_1_2[8]).MetricEvents.CAPTCHA_EVENT, tags: null };
       let items = ["event_name:" + "initial-load", "captcha_service:" + HCAPTCHA];
@@ -67,7 +72,12 @@ export default {
               if (data !== tmp17(closure_2_2[13]).CaptchaError.ERROR) {
                 if (data !== tmp17(closure_2_2[13]).CaptchaError.EXPIRED) {
                   const HCAPTCHA2 = tmp17(closure_2_2[11]).CaptchaTypes.HCAPTCHA;
-                  let obj = { captcha_event_name: "verify", captcha_service: null, sitekey: null, captcha_flow_key: null };
+                  let obj = {
+                    captcha_event_name: "verify",
+                    captcha_service: null,
+                    sitekey: null,
+                    captcha_flow_key: null,
+                  };
                   obj[1] = HCAPTCHA2;
                   obj[2] = callback;
                   obj[3] = closure_2;
@@ -76,7 +86,7 @@ export default {
                   obj = { name: null, tags: null };
                   obj[0] = tmp17(closure_2_2[8]).MetricEvents.CAPTCHA_EVENT;
                   const _HermesInternal3 = HermesInternal;
-                  const items = ["event_name:" + "verify", ];
+                  const items = ["event_name:" + "verify"];
                   const _HermesInternal4 = HermesInternal;
                   items[1] = "captcha_service:" + HCAPTCHA2;
                   obj[1] = items;
@@ -98,7 +108,7 @@ export default {
             obj2 = { name: null, tags: null };
             obj2[0] = callback(closure_2_2[8]).MetricEvents.CAPTCHA_EVENT;
             const _HermesInternal = HermesInternal;
-            const items1 = ["event_name:" + data, ];
+            const items1 = ["event_name:" + data];
             const _HermesInternal2 = HermesInternal;
             items1[1] = "captcha_service:" + HCAPTCHA;
             obj2[1] = items1;
@@ -111,9 +121,13 @@ export default {
           }
           callback2(closure_2_2[14]).pop();
         },
-        rqdata: callback2
+        rqdata: callback2,
       };
-      callback2(closure_1_2[14]).pushLazy(callback(closure_1_2[16])(closure_1_2[15], closure_1_2.paths), obj1, "hcaptcha");
+      callback2(closure_1_2[14]).pushLazy(
+        callback(closure_1_2[16])(closure_1_2[15], closure_1_2.paths),
+        obj1,
+        "hcaptcha",
+      );
     });
   },
   showRecaptcha() {
@@ -125,7 +139,12 @@ export default {
       const v4Result = obj.v4();
       closure_2 = v4Result;
       const HCAPTCHA = self(closure_1_2[11]).CaptchaTypes.HCAPTCHA;
-      obj = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey: closure_1_8, captcha_flow_key: v4Result };
+      obj = {
+        captcha_event_name: "initial-load",
+        captcha_service: HCAPTCHA,
+        sitekey: closure_1_8,
+        captcha_flow_key: v4Result,
+      };
       closure_1_1(closure_1_2[6]).track(closure_1_9.CAPTCHA_EVENT, obj);
       const obj2 = closure_1_1(closure_1_2[6]);
       obj = { name: self(closure_1_2[8]).MetricEvents.CAPTCHA_EVENT, tags: null };
@@ -137,7 +156,12 @@ export default {
         lib.closeCaptcha();
         const RECAPTCHA = self(closure_2_2[11]).CaptchaTypes.RECAPTCHA;
         let obj = closure_2_1(closure_2_2[6]);
-        obj = { captcha_event_name: "verify", captcha_service: RECAPTCHA, sitekey: closure_2_8, captcha_flow_key: closure_2 };
+        obj = {
+          captcha_event_name: "verify",
+          captcha_service: RECAPTCHA,
+          sitekey: closure_2_8,
+          captcha_flow_key: closure_2,
+        };
         obj.track(closure_2_9.CAPTCHA_EVENT, obj);
         obj = { name: self(closure_2_2[8]).MetricEvents.CAPTCHA_EVENT, tags: null };
         const items = ["event_name:" + "verify", "captcha_service:" + RECAPTCHA];
@@ -150,7 +174,12 @@ export default {
         const EXPIRED = self(closure_2_2[13]).CaptchaError.EXPIRED;
         const RECAPTCHA = self(closure_2_2[11]).CaptchaTypes.RECAPTCHA;
         let obj = closure_2_1(closure_2_2[6]);
-        obj = { captcha_event_name: EXPIRED, captcha_service: RECAPTCHA, sitekey: closure_2_8, captcha_flow_key: closure_2 };
+        obj = {
+          captcha_event_name: EXPIRED,
+          captcha_service: RECAPTCHA,
+          sitekey: closure_2_8,
+          captcha_flow_key: closure_2,
+        };
         obj.track(closure_2_9.CAPTCHA_EVENT, obj);
         obj = { name: self(closure_2_2[8]).MetricEvents.CAPTCHA_EVENT, tags: null };
         const items = ["event_name:" + EXPIRED, "captcha_service:" + RECAPTCHA];
@@ -161,7 +190,7 @@ export default {
         callback(self(closure_2_2[13]).CaptchaError.EXPIRED);
       });
     });
-  }
+  },
 };
 export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
   siteKey = siteKey.siteKey;
@@ -202,7 +231,7 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
               obj = { name: null, tags: null };
               obj[0] = tmp10(tmp11[8]).MetricEvents.CAPTCHA_EVENT;
               const _HermesInternal3 = HermesInternal;
-              const items = ["event_name:" + "verify", ];
+              const items = ["event_name:" + "verify"];
               const _HermesInternal4 = HermesInternal;
               items[1] = "captcha_service:" + HCAPTCHA2;
               obj[1] = items;
@@ -224,7 +253,7 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
         obj2 = { name: null, tags: null };
         obj2[0] = siteKey(closure_1_2[8]).MetricEvents.CAPTCHA_EVENT;
         const _HermesInternal = HermesInternal;
-        const items1 = ["event_name:" + data, ];
+        const items1 = ["event_name:" + data];
         const _HermesInternal2 = HermesInternal;
         items1[1] = "captcha_service:" + HCAPTCHA;
         obj2[1] = items1;
@@ -238,7 +267,7 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
         const obj5 = closure_1_1(closure_1_2[6]);
       }
     },
-    languageCode: stateFromStores
+    languageCode: stateFromStores,
   };
   let obj2 = siteKey(514);
   const merged1 = Object.assign(merged);
@@ -260,7 +289,7 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
               obj = { name: null, tags: null };
               obj[0] = tmp10(tmp11[8]).MetricEvents.CAPTCHA_EVENT;
               const _HermesInternal3 = HermesInternal;
-              const items = ["event_name:" + "verify", ];
+              const items = ["event_name:" + "verify"];
               const _HermesInternal4 = HermesInternal;
               items[1] = "captcha_service:" + HCAPTCHA2;
               obj[1] = items;
@@ -282,7 +311,7 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
         obj2 = { name: null, tags: null };
         obj2[0] = siteKey(closure_1_2[8]).MetricEvents.CAPTCHA_EVENT;
         const _HermesInternal = HermesInternal;
-        const items1 = ["event_name:" + data, ];
+        const items1 = ["event_name:" + data];
         const _HermesInternal2 = HermesInternal;
         items1[1] = "captcha_service:" + HCAPTCHA;
         obj2[1] = items1;
@@ -296,6 +325,6 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
         const obj5 = closure_1_1(closure_1_2[6]);
       }
     },
-    languageCode: stateFromStores
+    languageCode: stateFromStores,
   });
 };

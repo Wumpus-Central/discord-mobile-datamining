@@ -15,13 +15,34 @@ let c3 = importDefaultResult;
 [tmp7, tmp8] = importDefaultResult(require("items").Gradients.PREMIUM_TIER_2, 2);
 let items = [tmp7, tmp8, tmp7, tmp8, tmp7];
 let closure_12 = [0, 0.25, 0.5, 0.75, 1];
-createCacheKey = { pill: null, tab: null, indicator: null, gradientLayer: null, gradientTrack: null, gradientFill: null, tabText: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, padding: ThemesDefault.space.PX_4 };
+createCacheKey = {
+  pill: null,
+  tab: null,
+  indicator: null,
+  gradientLayer: null,
+  gradientTrack: null,
+  gradientFill: null,
+  tabText: null,
+};
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  alignSelf: "flex-start",
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND,
+  padding: ThemesDefault.space.PX_4,
+};
 createCacheKey[0] = createCacheKey;
 const importDefaultResultResult = importDefaultResult(require("items").Gradients.PREMIUM_TIER_2, 2);
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4 };
 let obj1 = { paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4 };
-createCacheKey[2] = { position: "absolute", left: 0, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_INDICATOR_BACKGROUND, overflow: "hidden" };
+createCacheKey[2] = {
+  position: "absolute",
+  left: 0,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_INDICATOR_BACKGROUND,
+  overflow: "hidden",
+};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey[3] = {};
 let obj4 = {};
@@ -32,12 +53,26 @@ createCacheKey[4] = obj4;
 createCacheKey[5] = { flex: 1 };
 createCacheKey[6] = { fontStyle: "italic" };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let closure_14 = { code: "function BuyNitroPlanSelectorTierToggleTsx1(){const{nitroProgress}=this.__closure;return{opacity:nitroProgress.get()};}" };
-let closure_15 = { code: "function BuyNitroPlanSelectorTierToggleTsx2(){const{gradientFlowX}=this.__closure;return{transform:[{translateX:gradientFlowX.get()}]};}" };
-let closure_16 = { code: "function BuyNitroPlanSelectorTierToggleTsx3(){const{indicatorX,indicatorWidth}=this.__closure;return{transform:[{translateX:indicatorX.get()}],width:indicatorWidth.get()};}" };
-let obj2 = { position: "absolute", left: 0, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_INDICATOR_BACKGROUND, overflow: "hidden" };
+let closure_14 = {
+  code: "function BuyNitroPlanSelectorTierToggleTsx1(){const{nitroProgress}=this.__closure;return{opacity:nitroProgress.get()};}",
+};
+let closure_15 = {
+  code: "function BuyNitroPlanSelectorTierToggleTsx2(){const{gradientFlowX}=this.__closure;return{transform:[{translateX:gradientFlowX.get()}]};}",
+};
+let closure_16 = {
+  code: "function BuyNitroPlanSelectorTierToggleTsx3(){const{indicatorX,indicatorWidth}=this.__closure;return{transform:[{translateX:indicatorX.get()}],width:indicatorWidth.get()};}",
+};
+let obj2 = {
+  position: "absolute",
+  left: 0,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_INDICATOR_BACKGROUND,
+  overflow: "hidden",
+};
 let obj3 = {};
-let result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/plan_selector/BuyNitroPlanSelectorTierToggle.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/premium_marketing/native/components/plan_selector/BuyNitroPlanSelectorTierToggle.tsx",
+);
 
 export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
   selectedTier = selectedTier.selectedTier;
@@ -69,7 +104,9 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
     if (callback) {
       num = 1;
     }
-    const result = sharedValue.set(callback(sharedValue1[9]).withTiming(num, callback(sharedValue1[10]).timingStandard));
+    const result = sharedValue.set(
+      callback(sharedValue1[9]).withTiming(num, callback(sharedValue1[10]).timingStandard),
+    );
   }, items);
   let tmp3Result = tmp3(tmp4[8]);
   sharedValue1 = tmp3Result.useSharedValue(0);
@@ -168,7 +205,7 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
   let tmp23 = null != tmp12;
   if (tmp23) {
     obj = { pointerEvents: "none", style: null, children: null };
-    const items3 = [tmp.indicator, , ];
+    const items3 = [tmp.indicator, ,];
     ({ y: obj9[0], height: obj9[1] } = tmp12);
     items3[1] = { top: null, height: null };
     items3[2] = tmp20;
@@ -192,7 +229,7 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
     obj1 = { top: null, height: null };
     const tmp26 = sharedValue(tmp4[12]);
   }
-  const items6 = [tmp23, ];
+  const items6 = [tmp23];
   const NITRO_PLAN_TIERS = tmp3(tmp4[14]).NITRO_PLAN_TIERS;
   items6[1] = NITRO_PLAN_TIERS.map((arg0) => {
     const callback = arg0;
@@ -219,7 +256,7 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
       },
       accessibilityRole: "tab",
       accessibilityState: obj,
-      children: null
+      children: null,
     };
     obj = { selected: tmp, disabled: sharedValue1 };
     obj = { variant: "heading-sm/extrabold", color: str, style: closure_3.tabText, children: null };
@@ -235,4 +272,4 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
   });
   obj[3] = items6;
   return closure_10(ref, obj);
-};
+}

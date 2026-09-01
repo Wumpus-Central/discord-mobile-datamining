@@ -41,10 +41,20 @@ function IdentityApplicationRow(arg0) {
   }
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/action_sheet/SelectConnectionActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/roles/native/action_sheet/SelectConnectionActionSheet.tsx",
+);
 
 export default function SelectConnectionActionSheet(arg0) {
-  ({ addConnection: require, excludedConnections: importDefault, excludedApplications: dependencyMap, integrations, onCompleteApplication: closure_3, gameApplicationIds, onCompleteIdentityApplication } = arg0);
+  ({
+    addConnection: require,
+    excludedConnections: importDefault,
+    excludedApplications: dependencyMap,
+    integrations,
+    onCompleteApplication: closure_3,
+    gameApplicationIds,
+    onCompleteIdentityApplication,
+  } = arg0);
   closure_5 = undefined;
   closure_5 = useThemeDefault();
   let obj = { title: null };
@@ -87,7 +97,7 @@ export default function SelectConnectionActionSheet(arg0) {
       onPress() {
         icon(icon.type);
         closure_2_1(closure_2_2[13]).hideActionSheet();
-      }
+      },
     };
     return closure_1_6(closure_1_0(closure_1_2[5]).TableRow, obj, "row-" + icon.type);
   });
@@ -125,13 +135,17 @@ export default function SelectConnectionActionSheet(arg0) {
   if (null != onCompleteIdentityApplication) {
     let mapped2 = found2.map((applicationId) => {
       closure_0 = applicationId;
-      return closure_1_6(closure_1_8, {
-        applicationId,
-        onPress() {
-          closure_1_4(closure_0);
-          closure_2_1(closure_2_2[13]).hideActionSheet();
-        }
-      }, "row-identity-" + applicationId);
+      return closure_1_6(
+        closure_1_8,
+        {
+          applicationId,
+          onPress() {
+            closure_1_4(closure_0);
+            closure_2_1(closure_2_2[13]).hideActionSheet();
+          },
+        },
+        "row-identity-" + applicationId,
+      );
     });
   } else {
     mapped2 = [];
@@ -154,7 +168,12 @@ export default function SelectConnectionActionSheet(arg0) {
     items.push(intl4.string(tmp3(1236).t.y3ZnnU));
   }
   tmp3Result = tmp3(9260);
-  obj = { pageWidth: 0, defaultIndex: first, onSetActiveIndex: tmp5[1], items: items.map((id) => ({ id, label: id, page: null })) };
+  obj = {
+    pageWidth: 0,
+    defaultIndex: first,
+    onSetActiveIndex: tmp5[1],
+    items: items.map((id) => ({ id, label: id, page: null })),
+  };
   const segmentedControlState = tmp3Result.useSegmentedControlState(obj);
   if (1 === first) {
     if (tmp10) {
@@ -167,7 +186,12 @@ export default function SelectConnectionActionSheet(arg0) {
       tmp15 = mapped2;
     }
   }
-  obj = { scrollable: true, header: callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), startExpanded: true, children: null };
+  obj = {
+    scrollable: true,
+    header: callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj),
+    startExpanded: true,
+    children: null,
+  };
   if (num > 0) {
     obj1 = { children: null };
     const obj2 = { state: null };
@@ -177,12 +201,15 @@ export default function SelectConnectionActionSheet(arg0) {
   } else {
     tmp2Result = null;
   }
-  const items1 = [tmp2Result, ];
+  const items1 = [tmp2Result];
   const obj3 = { children: null };
   const tmp16 = closure_7;
   const tmp4 = callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
-  obj3[0] = callback2(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, children: callback2(TableRowGroupTitle.TableRowGroup, { hasIcons: true, children: tmp15 }) });
+  obj3[0] = callback2(SafeAreaPaddingView.SafeAreaPaddingView, {
+    bottom: true,
+    children: callback2(TableRowGroupTitle.TableRowGroup, { hasIcons: true, children: tmp15 }),
+  });
   items1[1] = callback2(BottomSheetModal.BottomSheetScrollView, obj3);
   obj[3] = items1;
   return tmp16(ActionSheet.ActionSheet, obj);
-};
+}

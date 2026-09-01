@@ -38,12 +38,14 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
   obj[1] = { textAlign: "center", color: TEXT_FEEDBACK_WARNING };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/MessageBlock.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/MessageBlock.tsx",
+);
 
 export default function MessageBlock(children) {
   const tmp = callback(children.color);
   obj = { style: tmp.container, children: jsx(Button.LegacyText, obj) };
   obj = { style: tmp.text, children: children.children };
   return <View style={tmp.text}>{arg0.children}</View>;
-};
+}
 export const MessageBlockColors = obj;

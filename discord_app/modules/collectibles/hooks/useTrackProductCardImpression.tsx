@@ -6,7 +6,11 @@ import { AnalyticEvents } from "../../../Constants.tsx";
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useTrackProductCardImpression.tsx");
 
-export const useTrackProductCardImpression = function useTrackProductCardImpression(categoryStoreListingId, mobile_home, featured_block) {
+export const useTrackProductCardImpression = function useTrackProductCardImpression(
+  categoryStoreListingId,
+  mobile_home,
+  featured_block,
+) {
   const _require = categoryStoreListingId;
   importDefault = mobile_home;
   let str = featured_block;
@@ -32,7 +36,7 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
   if (collectiblesAnalyticsContext != null) {
     sessionId = collectiblesAnalyticsContext.sessionId;
   }
-  const items1 = [sessionId, , , , , , , , , ];
+  const items1 = [sessionId, , , , , , , , ,];
   let categoryPosition;
   if (collectiblesAnalyticsContext != null) {
     categoryPosition = collectiblesAnalyticsContext.categoryPosition;
@@ -66,14 +70,28 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
     }
     let strikeThroughPriceAmountForCollectiblesProduct;
     if (null != stateFromStores) {
-      strikeThroughPriceAmountForCollectiblesProduct = categoryStoreListingId(str[7]).getStrikeThroughPriceAmountForCollectiblesProduct(tmp, _undefined, true);
+      strikeThroughPriceAmountForCollectiblesProduct = categoryStoreListingId(
+        str[7],
+      ).getStrikeThroughPriceAmountForCollectiblesProduct(tmp, _undefined, true);
       const obj2 = categoryStoreListingId(str[7]);
     }
     let sessionId;
     if (collectiblesAnalyticsContext != null) {
       sessionId = tmp10.sessionId;
     }
-    obj = { collectibles_shop_session_id: sessionId, sku_id: categoryStoreListingId, display_price: null, display_price_currency: null, display_price_strikethrough: null, position: null, page_type: null, page_category: null, page_section: null, type: null, category_position: null };
+    obj = {
+      collectibles_shop_session_id: sessionId,
+      sku_id: categoryStoreListingId,
+      display_price: null,
+      display_price_currency: null,
+      display_price_strikethrough: null,
+      position: null,
+      page_type: null,
+      page_category: null,
+      page_section: null,
+      type: null,
+      category_position: null,
+    };
     let amount;
     if (priceForCollectiblesProduct != null) {
       amount = priceForCollectiblesProduct.amount;
@@ -128,12 +146,15 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
       tmp.current = null;
     }
   }, items2);
-  const effect = obj5.useEffect(() => () => {
-    if (null !== ref.current) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
-    }
-  }, items3);
+  const effect = obj5.useEffect(
+    () => () => {
+      if (null !== ref.current) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(tmp.current);
+        tmp.current = null;
+      }
+    },
+    items3,
+  );
   return { handleCardVisibilityChange };
 };

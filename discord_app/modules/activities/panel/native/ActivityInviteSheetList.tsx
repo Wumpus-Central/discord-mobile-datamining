@@ -23,7 +23,7 @@ function FriendsEmptyComponent() {
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.MBQBI7);
   ({ emptyTitle: obj2[2], emptyBody: obj2[3] } = tmp);
-  const items = [callback(Button.RefreshEmptyState, obj), ];
+  const items = [callback(Button.RefreshEmptyState, obj)];
   obj = {
     onPress() {
       let obj = callback2(4445);
@@ -38,7 +38,7 @@ function FriendsEmptyComponent() {
     accessibilityRole: "link",
     accessibilityLabel: null,
     hitSlop: null,
-    children: null
+    children: null,
   };
   const intl3 = getSystemLocale.intl;
   obj[2] = intl3.string(getSystemLocale.t.a7FVbE);
@@ -55,7 +55,9 @@ function FriendsEmptyComponent() {
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 createCacheKey = {};
-const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
+const merged = Object.assign(
+  importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18),
+);
 createCacheKey.textTransform = "none";
 createCacheKey.lineHeight = 24;
 createCacheKey[0] = createCacheKey;
@@ -79,15 +81,36 @@ export default function ActivityInviteSheetList(data) {
   const items = [error, isSubmitting, getSendState, onPressAvatar, onInviteSent, data.length];
   const callback = isSubmitting.useCallback((arg0) => {
     ({ item, index } = arg0);
-    const obj = { start: 0 === index, end: index === data.length - 1, row: item, onPressAvatar, onInviteSent, isSubmitting, error, sendState: getSendState(item) };
+    const obj = {
+      start: 0 === index,
+      end: index === data.length - 1,
+      row: item,
+      onPressAvatar,
+      onInviteSent,
+      isSubmitting,
+      error,
+      sendState: getSendState(item),
+    };
     return onInviteSent(error(getSendState[12]), obj);
   }, items);
-  let obj = { contentContainerStyle: null, bounces: false, renderItem: null, data: null, keyExtractor: null, keyboardShouldPersistTaps: "always", ListEmptyComponent: null };
-  obj = { paddingBottom: error(getSendState[13])({ isKeyboardAwareOnAndroid: false }).insets.bottom + error(getSendState[5]).space.PX_16, paddingHorizontal: error(getSendState[5]).space.PX_12 };
+  let obj = {
+    contentContainerStyle: null,
+    bounces: false,
+    renderItem: null,
+    data: null,
+    keyExtractor: null,
+    keyboardShouldPersistTaps: "always",
+    ListEmptyComponent: null,
+  };
+  obj = {
+    paddingBottom:
+      error(getSendState[13])({ isKeyboardAwareOnAndroid: false }).insets.bottom + error(getSendState[5]).space.PX_16,
+    paddingHorizontal: error(getSendState[5]).space.PX_12,
+  };
   obj[0] = obj;
   obj[2] = callback;
   obj[3] = data;
   obj[4] = keyExtractor;
   obj[6] = FriendsEmptyComponent;
   return onInviteSent(data(getSendState[14]).BottomSheetFlatList, obj);
-};
+}

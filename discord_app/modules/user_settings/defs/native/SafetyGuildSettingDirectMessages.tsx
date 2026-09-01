@@ -67,7 +67,15 @@ createToggle = {
     const tmp = callback();
     if (tmp === closure_6) {
       const _require = !arg0;
-      let obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null, onCancel: null };
+      let obj = {
+        title: null,
+        body: null,
+        confirmText: null,
+        cancelText: null,
+        confirmColor: null,
+        onConfirm: null,
+        onCancel: null,
+      };
       const intl = require("../../../../intl/index.native.tsx").intl;
       obj[0] = intl.string(require("../../../../intl/index.native.tsx").t.Hq4ApA);
       const intl2 = require("../../../../intl/index.native.tsx").intl;
@@ -114,9 +122,11 @@ createToggle = {
       isParentallyControlled = tmp2 === closure_6;
     }
     return isParentallyControlled;
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SafetyGuildSettingDirectMessages.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/SafetyGuildSettingDirectMessages.tsx",
+);
 
 export default createToggle;

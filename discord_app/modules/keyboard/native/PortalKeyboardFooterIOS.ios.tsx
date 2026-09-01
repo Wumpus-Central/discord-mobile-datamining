@@ -6,10 +6,20 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 createCacheKey = { keyboardStickyFooter: null };
-createCacheKey = { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 1, flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
+createCacheKey = {
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  right: 0,
+  zIndex: 1,
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
+};
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-let closure_6 = { code: "function PortalKeyboardFooterIOSIosTsx1(){const{interpolate,progress,bottom,followSystemKeyboard,keyboardType,KeyboardTypes,animatedSheetIndex,height,EXPRESSION_FOOTER_HEIGHT}=this.__closure;const offset=interpolate(progress.get(),[0,1],[0,bottom]);const shouldFollowKeyboard=followSystemKeyboard||keyboardType.get()===KeyboardTypes.EXPRESSION;if(shouldFollowKeyboard&&animatedSheetIndex.get()>=0){return{transform:[{translateY:height.get()+offset}]};}return{transform:[{translateY:interpolate(animatedSheetIndex.get(),[-1,0],[EXPRESSION_FOOTER_HEIGHT+bottom,0],'clamp')}]};}" };
+let closure_6 = {
+  code: "function PortalKeyboardFooterIOSIosTsx1(){const{interpolate,progress,bottom,followSystemKeyboard,keyboardType,KeyboardTypes,animatedSheetIndex,height,EXPRESSION_FOOTER_HEIGHT}=this.__closure;const offset=interpolate(progress.get(),[0,1],[0,bottom]);const shouldFollowKeyboard=followSystemKeyboard||keyboardType.get()===KeyboardTypes.EXPRESSION;if(shouldFollowKeyboard&&animatedSheetIndex.get()>=0){return{transform:[{translateY:height.get()+offset}]};}return{transform:[{translateY:interpolate(animatedSheetIndex.get(),[-1,0],[EXPRESSION_FOOTER_HEIGHT+bottom,0],'clamp')}]};}",
+};
 const result = require("set").fileFinishedImporting("modules/keyboard/native/PortalKeyboardFooterIOS.ios.tsx");
 
 export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
@@ -65,7 +75,7 @@ export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
       obj2 = { translateY: null };
       tmpResult = tmp(tmp2[7]);
       value1 = animatedSheetIndex.get();
-      items1 = [, ];
+      items1 = [,];
       items1[0] = tmp(tmp2[9]).EXPRESSION_FOOTER_HEIGHT + tmp4;
       items1[1] = 0;
       obj2[0] = tmpResult.interpolate(value1, [-1, 0], items1, "clamp");
@@ -75,7 +85,17 @@ export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
       return;
     }
   }
-  obj = { interpolate: animatedSheetIndex(4217).interpolate, progress, bottom, followSystemKeyboard: flag, keyboardType: keyboardTypeSharedValue, KeyboardTypes: animatedSheetIndex(1626).KeyboardTypes, animatedSheetIndex, height, EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(691).EXPRESSION_FOOTER_HEIGHT };
+  obj = {
+    interpolate: animatedSheetIndex(4217).interpolate,
+    progress,
+    bottom,
+    followSystemKeyboard: flag,
+    keyboardType: keyboardTypeSharedValue,
+    KeyboardTypes: animatedSheetIndex(1626).KeyboardTypes,
+    animatedSheetIndex,
+    height,
+    EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(691).EXPRESSION_FOOTER_HEIGHT,
+  };
   S.__closure = obj;
   S.__workletHash = 9444646970651;
   S.__initData = keyboardTypeSharedValue;
@@ -87,4 +107,4 @@ export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
   }, items);
   obj = { style: memo, children: height(animatedSheetIndex(4347).PortalHost, { name: str }) };
   return height(flag(4217).View, obj);
-};
+}

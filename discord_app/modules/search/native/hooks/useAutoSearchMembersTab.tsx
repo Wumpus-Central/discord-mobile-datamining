@@ -50,7 +50,10 @@ export const useAutoSearchMembersTab = function useAutoSearchMembersTab(searchCo
     }
   }, items);
   const items1 = [searchContext];
-  const effect1 = React.useEffect(() => () => {
-    const result = closure_1_1(closure_1_2[6]).cleanupGuildMemberTab(closure_0);
-  }, items1);
+  const effect1 = React.useEffect(
+    () => () => {
+      const result = closure_1_1(closure_1_2[6]).cleanupGuildMemberTab(closure_0);
+    },
+    items1,
+  );
 };

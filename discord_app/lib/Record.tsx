@@ -2,8 +2,7 @@
 import set from "../../_runtime/00002_set.js";
 
 let Record;
-class Record {
-}
+class Record {}
 const prototype = Record.prototype;
 prototype["toJS"] = function toJS() {
   const merged = Object.assign(this);
@@ -114,8 +113,7 @@ prototype["update"] = function update(arg0, arg1, arg2) {
   }
 };
 const result = set.fileFinishedImporting("lib/Record.tsx");
-class TypedRecord {
-}
+class TypedRecord {}
 const prototype2 = TypedRecord.prototype;
 prototype2["toJS"] = function toJS() {
   const merged = Object.assign(this);

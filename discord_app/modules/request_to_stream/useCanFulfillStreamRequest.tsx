@@ -60,7 +60,7 @@ function canFulfillStreamRequest(channel_id, arg1) {
         const items2 = [false, obj.ALREADY_STREAMING];
         let items4 = items2;
       } else if (channelId === channel_id.channel_id) {
-        const items3 = [, ];
+        const items3 = [,];
         if (!videoPermission) {
           items3[0] = false;
           items3[1] = obj.NO_PERMISSION;
@@ -83,7 +83,14 @@ function canFulfillStreamRequest(channel_id, arg1) {
   }
 }
 ({ ActivityGamePlatforms: c10, ActivityTypes: unpackModuleId } = ME);
-let obj = { NOT_IN_VOICE_CHANNEL: "NOT_IN_VOICE_CHANNEL", NOT_RUNNING_GAME: "NOT_RUNNING_GAME", ALREADY_STREAMING: "ALREADY_STREAMING", NO_PERMISSION: "NO_PERMISSION", PENDING_REQUEST: "PENDING_REQUEST", EXPIRED: "EXPIRED" };
+let obj = {
+  NOT_IN_VOICE_CHANNEL: "NOT_IN_VOICE_CHANNEL",
+  NOT_RUNNING_GAME: "NOT_RUNNING_GAME",
+  ALREADY_STREAMING: "ALREADY_STREAMING",
+  NO_PERMISSION: "NO_PERMISSION",
+  PENDING_REQUEST: "PENDING_REQUEST",
+  EXPIRED: "EXPIRED",
+};
 const result = require("set").fileFinishedImporting("modules/request_to_stream/useCanFulfillStreamRequest.tsx");
 
 export default function useCanFulfillStreamRequest(arg0) {
@@ -93,7 +100,19 @@ export default function useCanFulfillStreamRequest(arg0) {
     flag = false;
   }
   const items = [closure_3, closure_5, closure_8, closure_2, closure_9, closure_6, closure_7];
-  return _require(flag[11]).useStateFromStores(items, () => closure_1_13(closure_0, flag, closure_1_3, closure_1_5, closure_1_8, closure_1_2, closure_1_9, closure_1_6, closure_1_7));
-};
+  return _require(flag[11]).useStateFromStores(items, () =>
+    closure_1_13(
+      closure_0,
+      flag,
+      closure_1_3,
+      closure_1_5,
+      closure_1_8,
+      closure_1_2,
+      closure_1_9,
+      closure_1_6,
+      closure_1_7,
+    ),
+  );
+}
 export const StreamRequestUnfulfillableReason = obj;
 export { canFulfillStreamRequest };

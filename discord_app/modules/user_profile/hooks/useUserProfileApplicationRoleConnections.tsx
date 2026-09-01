@@ -23,4 +23,4 @@ export default function useUserProfileApplicationRoleConnections(arg0) {
     }
     return null == prop ? closure_1_4 : stateFromStores.applicationRoleConnections;
   }, items1);
-};
+}

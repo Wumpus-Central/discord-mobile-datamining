@@ -46,7 +46,7 @@ const pressable = createToggle.createPressable({
     const intl3 = getSystemLocale.intl;
     obj1[0] = intl3.string(getSystemLocale.t["2jxGer"]);
     obj1[1] = handleLogout;
-    const items = [callback(getAlertModalItemKey.AlertActionButton, obj1), ];
+    const items = [callback(getAlertModalItemKey.AlertActionButton, obj1)];
     const obj2 = { variant: "secondary", text: null };
     const intl4 = getSystemLocale.intl;
     obj2[1] = intl4.string(getSystemLocale.t["13/7kX"]);
@@ -54,7 +54,7 @@ const pressable = createToggle.createPressable({
     obj[0] = items;
     obj[2] = callback2(closure_4, obj);
     obj.openAlert("logout", callback(getAlertModalItemKey.AlertModal, obj));
-  }
+  },
 });
 let obj = {
   useTitle() {
@@ -76,7 +76,7 @@ let obj = {
     const intl3 = getSystemLocale.intl;
     obj1[0] = intl3.string(getSystemLocale.t["2jxGer"]);
     obj1[1] = handleLogout;
-    const items = [callback(getAlertModalItemKey.AlertActionButton, obj1), ];
+    const items = [callback(getAlertModalItemKey.AlertActionButton, obj1)];
     const obj2 = { variant: "secondary", text: null };
     const intl4 = getSystemLocale.intl;
     obj2[1] = intl4.string(getSystemLocale.t["13/7kX"]);
@@ -84,7 +84,7 @@ let obj = {
     obj[0] = items;
     obj[2] = callback2(closure_4, obj);
     obj.openAlert("logout", callback(getAlertModalItemKey.AlertModal, obj));
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/user_settings/defs/native/LogoutSetting.tsx");
 

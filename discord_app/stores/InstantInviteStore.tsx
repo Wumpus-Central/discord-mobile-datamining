@@ -16,8 +16,7 @@ let c10 = false;
 let c11 = false;
 let map = new Map();
 const Store = initializeDefault.Store;
-class InstantInviteStore extends Store {
-}
+class InstantInviteStore extends Store {}
 const prototype = InstantInviteStore.prototype;
 prototype["getInvite"] = function getInvite(arg0) {
   let obj = arg1;
@@ -206,7 +205,7 @@ const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("stores/InstantInviteStore.tsx");
 

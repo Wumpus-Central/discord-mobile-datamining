@@ -28,7 +28,7 @@ function _withErrorHandling() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -182,21 +182,33 @@ export default {
     const intl = tmp(1236).intl;
     const tmpResult = sendRequest;
     const intl2 = tmp(1236).intl;
-    withErrorHandling(() => closure_0, intl.string(require("../../intl/index.native.tsx").t.T8sBLJ), intl2.string(require("../../intl/index.native.tsx").t.imcb5u));
+    withErrorHandling(
+      () => closure_0,
+      intl.string(require("../../intl/index.native.tsx").t.T8sBLJ),
+      intl2.string(require("../../intl/index.native.tsx").t.imcb5u),
+    );
   },
   deleteForumTag(closure_0, id) {
     const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-    const obj = { url: closure_5.FORUM_TAG(closure_0, id), rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+    const obj = {
+      url: closure_5.FORUM_TAG(closure_0, id),
+      rejectWithError:
+        require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+    };
     _require = HTTP.del(obj);
     const intl = require("../../intl/index.native.tsx").intl;
     const obj2 = sendRequest;
     const intl2 = require("../../intl/index.native.tsx").intl;
-    withErrorHandling(() => closure_0, intl.string(require("../../intl/index.native.tsx").t["0ZkNDU"]), intl2.string(require("../../intl/index.native.tsx").t.imcb5u));
+    withErrorHandling(
+      () => closure_0,
+      intl.string(require("../../intl/index.native.tsx").t["0ZkNDU"]),
+      intl2.string(require("../../intl/index.native.tsx").t.imcb5u),
+    );
   },
   updateForumPostTags(id, arg1) {
     closure_0 = id;
     closure_1 = arg1;
-    return callback(function*() {
+    return callback(function* () {
       closure_0 = tmp4;
       const obj2 = v0(7509);
       yield obj2.unarchiveThreadIfNecessary(closure_1_0);
@@ -217,11 +229,19 @@ export default {
   },
   markPostAsSeen(arg0, feedItemId, timestampMillis) {
     const obj = markAnalyticsFeedItemSeen;
-    const result = obj.markAnalyticsFeedItemSeen(prototype.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
+    const result = obj.markAnalyticsFeedItemSeen(
+      prototype.getForumPostSeenManagerId(arg0),
+      feedItemId,
+      timestampMillis,
+    );
   },
   markPostAsUnseen(arg0, feedItemId, timestampMillis) {
     const obj = markAnalyticsFeedItemSeen;
-    const result = obj.markAnalyticsFeedItemUnseen(prototype.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
+    const result = obj.markAnalyticsFeedItemUnseen(
+      prototype.getForumPostSeenManagerId(arg0),
+      feedItemId,
+      timestampMillis,
+    );
   },
   flushSeenItems(arg0, IMMEDIATE_WITH_COOLDOWN) {
     if (IMMEDIATE_WITH_COOLDOWN === undefined) {
@@ -236,7 +256,7 @@ export default {
     closure_2 = closure_1_5;
     const callback = c1;
     closure_4 = c2;
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp3;
       obj1 = { type: "FORUM_SEARCH_START", channelId: null };
       obj1[1] = closure_1_1;
@@ -282,5 +302,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "FORUM_SEARCH_CLEAR", channelId: id };
     obj.dispatch(obj);
-  }
+  },
 };

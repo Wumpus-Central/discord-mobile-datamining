@@ -3,9 +3,23 @@ import set from "../../../_runtime/00002_set.js";
 import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import ApexExperiment from "../experiments/apex/index.tsx";
 
-let obj = { 1: null, 2: { capSampleRate: true, capChannelCount: false, condition: "krisp" }, 3: { capSampleRate: true, capChannelCount: false, condition: "noiseSuppression" }, 4: { capSampleRate: true, capChannelCount: false, condition: "echoCancellation" }, 5: { capSampleRate: true, capChannelCount: false, condition: "any" }, 6: { capSampleRate: true, capChannelCount: true, condition: "krisp" }, 7: { capSampleRate: true, capChannelCount: true, condition: "noiseSuppression" }, 8: { capSampleRate: true, capChannelCount: true, condition: "echoCancellation" } };
+let obj = {
+  1: null,
+  2: { capSampleRate: true, capChannelCount: false, condition: "krisp" },
+  3: { capSampleRate: true, capChannelCount: false, condition: "noiseSuppression" },
+  4: { capSampleRate: true, capChannelCount: false, condition: "echoCancellation" },
+  5: { capSampleRate: true, capChannelCount: false, condition: "any" },
+  6: { capSampleRate: true, capChannelCount: true, condition: "krisp" },
+  7: { capSampleRate: true, capChannelCount: true, condition: "noiseSuppression" },
+  8: { capSampleRate: true, capChannelCount: true, condition: "echoCancellation" },
+};
 obj[8] = { capSampleRate: true, capChannelCount: true, condition: "any" };
-let closure_2 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-08-audio-fidelity", defaultConfig: { capSampleRate: false, capChannelCount: false, condition: "none" }, variations: obj });
+let closure_2 = ApexExperiment.createApexExperiment({
+  kind: "user",
+  name: "2026-08-audio-fidelity",
+  defaultConfig: { capSampleRate: false, capChannelCount: false, condition: "none" },
+  variations: obj,
+});
 const result = set.fileFinishedImporting("modules/media_engine/AudioFidelityExperiment.tsx");
 
 export const getAudioFidelityExperimentConfig = function getAudioFidelityExperimentConfig(location) {
@@ -32,7 +46,8 @@ export const getVoiceFidelityCaps = function getVoiceFidelityCaps(location, kris
       flag = krispEnabled.echoCancellationEnabled;
     } else if ("any" === condition) {
       flag = krispEnabled.krispEnabled || krispEnabled.noiseSuppressionEnabled || krispEnabled.echoCancellationEnabled;
-      const tmp6 = krispEnabled.krispEnabled || krispEnabled.noiseSuppressionEnabled || krispEnabled.echoCancellationEnabled;
+      const tmp6 =
+        krispEnabled.krispEnabled || krispEnabled.noiseSuppressionEnabled || krispEnabled.echoCancellationEnabled;
     } else {
       flag = false;
       if ("none" !== condition) {

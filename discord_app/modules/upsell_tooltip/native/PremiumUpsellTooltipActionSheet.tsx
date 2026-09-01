@@ -14,24 +14,62 @@ require = arg1;
 noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, img: null, header: null, title: null, description: null, nitroWheel: null, buttonContainer: null };
-createCacheKey = { justifyContent: "center", paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  container: null,
+  img: null,
+  header: null,
+  title: null,
+  description: null,
+  nitroWheel: null,
+  buttonContainer: null,
+};
+createCacheKey = {
+  justifyContent: "center",
+  paddingTop: ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignSelf: "center", width: 231, height: 231, borderRadius: ThemesDefault.radii.sm, marginBottom: 16 };
+createCacheKey[1] = {
+  alignSelf: "center",
+  width: 231,
+  height: 231,
+  borderRadius: ThemesDefault.radii.sm,
+  marginBottom: 16,
+};
 createCacheKey[2] = { flexDirection: "row", justifyContent: "center" };
 createCacheKey[3] = { textAlign: "center", marginBottom: 8 };
 let obj1 = { alignSelf: "center", width: 231, height: 231, borderRadius: ThemesDefault.radii.sm, marginBottom: 16 };
 createCacheKey[4] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_24 };
 const obj2 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_24 };
-createCacheKey[5] = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, width: 32, height: 32, marginTop: -2, marginLeft: -16 };
-const obj3 = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, width: 32, height: 32, marginTop: -2, marginLeft: -16 };
+createCacheKey[5] = {
+  tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  width: 32,
+  height: 32,
+  marginTop: -2,
+  marginLeft: -16,
+};
+const obj3 = {
+  tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  width: 32,
+  height: 32,
+  marginTop: -2,
+  marginLeft: -16,
+};
 createCacheKey[6] = { gap: ThemesDefault.space.PX_8 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { gap: ThemesDefault.space.PX_8 };
 let result = require("set").fileFinishedImporting("modules/upsell_tooltip/native/PremiumUpsellTooltipActionSheet.tsx");
 
 export default function PremiumUpsellTooltipActionSheet(arg0) {
-  ({ imageSource, dismissibleContent: require, primaryButtonIcon, secondaryButtonText, onDismiss: importDefault, onPrimaryButtonPress: dependencyMap, onSecondaryButtonPress: closure_3 } = arg0);
+  ({
+    imageSource,
+    dismissibleContent: require,
+    primaryButtonIcon,
+    secondaryButtonText,
+    onDismiss: importDefault,
+    onPrimaryButtonPress: dependencyMap,
+    onSecondaryButtonPress: closure_3,
+  } = arg0);
   ({ title, backdropProps, description, descriptionStyle, imageStyle, primaryButtonText } = arg0);
   let tmp = callback();
   let obj = { startExpanded: true };
@@ -59,13 +97,27 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
     obj[1] = imageSource;
     tmp2Result = tmp2(closure_3, obj);
   }
-  const items1 = [tmp2Result, , , ];
+  const items1 = [tmp2Result, , ,];
   obj1 = { style: tmp.header, children: null };
-  const items2 = [closure_6(Button.NitroWheel, { style: tmp.nitroWheel }), closure_6(Text.Text, { variant: "heading-xl/bold", style: tmp.title, color: "mobile-text-heading-primary", accessibilityRole: "header", children: title })];
+  const items2 = [
+    closure_6(Button.NitroWheel, { style: tmp.nitroWheel }),
+    closure_6(Text.Text, {
+      variant: "heading-xl/bold",
+      style: tmp.title,
+      color: "mobile-text-heading-primary",
+      accessibilityRole: "header",
+      children: title,
+    }),
+  ];
   obj1[1] = items2;
   items1[1] = closure_7(closure_4, obj1);
   const items3 = [tmp.description, descriptionStyle];
-  items1[2] = closure_6(Text.Text, { style: items3, variant: "text-md/medium", color: "text-default", children: description });
+  items1[2] = closure_6(Text.Text, {
+    style: items3,
+    variant: "text-md/medium",
+    color: "text-default",
+    children: description,
+  });
   const obj4 = { style: tmp.buttonContainer, children: null };
   const obj5 = {
     variant: "active",
@@ -82,17 +134,20 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
       const obj = closure_1_1(closure_1_2[11]);
       const tmp2 = closure_1_2;
       tmp4 = null != PRIMARY && PRIMARY !== closure_1_5.DISMISS;
-      const result = closure_1_0(closure_1_2[6]).UNSAFE_markDismissibleContentAsDismissed(closure_0, { forceTrack: true, dismissAction: PRIMARY });
+      const result = closure_1_0(closure_1_2[6]).UNSAFE_markDismissibleContentAsDismissed(closure_0, {
+        forceTrack: true,
+        dismissAction: PRIMARY,
+      });
     },
     icon: null,
-    size: "lg"
+    size: "lg",
   };
   let primaryButtonIconResult;
   if (primaryButtonIcon != null) {
     primaryButtonIconResult = primaryButtonIcon();
   }
   obj5[3] = primaryButtonIconResult;
-  const items4 = [closure_6(Button2.Button, obj5), ];
+  const items4 = [closure_6(Button2.Button, obj5)];
   tmp2Result = null;
   if (null != secondaryButtonText) {
     const obj6 = { variant: "secondary", text: null, onPress: null, size: "lg" };
@@ -111,7 +166,10 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
       const obj = closure_1_1(closure_1_2[11]);
       const tmp3 = closure_1_2;
       tmp5 = null != DISMISS && DISMISS !== closure_1_5.DISMISS;
-      const result = closure_1_0(closure_1_2[6]).UNSAFE_markDismissibleContentAsDismissed(closure_0, { forceTrack: true, dismissAction: DISMISS });
+      const result = closure_1_0(closure_1_2[6]).UNSAFE_markDismissibleContentAsDismissed(closure_0, {
+        forceTrack: true,
+        dismissAction: DISMISS,
+      });
     };
     tmp2Result = tmp2(tmp3(4928).Button, obj6);
   }
@@ -121,4 +179,4 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
   obj[1] = items1;
   obj.children = closure_7(closure_4, obj);
   return closure_6(Background.BottomSheet, obj);
-};
+}

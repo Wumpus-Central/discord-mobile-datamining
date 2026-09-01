@@ -70,42 +70,48 @@ const memoResult = importAllResult.memo(function InstantInviteShareApps(onItemPr
       }
       obj[1] = tmpResult;
       return closure_1_9(closure_1_5, obj, type.type);
-    })
+    }),
   };
   items = [tmp.contentContainer, onItemPressed.contentContainerStyle];
-  const children = <closure_6 contentContainerStyle={items} showsHorizontalScrollIndicator={false} horizontal>{arr.map((type) => {
-    ({ fullIcon, getLabel, icon, IconComponent, onPress: onItemPressed } = type);
-    obj = { style: obj, children: null };
-    obj = { maxWidth: 76 * callback };
-    if (null != fullIcon) {
-      obj = { image: null, label: null, onPress: null, maxFontSizeMultiplier: 2 };
-      obj[0] = fullIcon;
-      obj[1] = getLabel();
-      obj[2] = function onPress() {
-        return closure_1_0(closure_0);
-      };
-      let tmpResult = tmp(onItemPressed(_undefined[9]).ImageButton, obj);
-    } else {
-      if (null == IconComponent) {
-        if (icon == null) {
-          icon = callback(tmp4[11]);
+  const children = (
+    <closure_6 contentContainerStyle={items} showsHorizontalScrollIndicator={false} horizontal>
+      {arr.map((type) => {
+        ({ fullIcon, getLabel, icon, IconComponent, onPress: onItemPressed } = type);
+        obj = { style: obj, children: null };
+        obj = { maxWidth: 76 * callback };
+        if (null != fullIcon) {
+          obj = { image: null, label: null, onPress: null, maxFontSizeMultiplier: 2 };
+          obj[0] = fullIcon;
+          obj[1] = getLabel();
+          obj[2] = function onPress() {
+            return closure_1_0(closure_0);
+          };
+          let tmpResult = tmp(onItemPressed(_undefined[9]).ImageButton, obj);
+        } else {
+          if (null == IconComponent) {
+            if (icon == null) {
+              icon = callback(tmp4[11]);
+            }
+            IconComponent = icon;
+          }
+          obj1 = { variant: "secondary", icon: null, label: null, onPress: null, maxFontSizeMultiplier: 2 };
+          obj1[1] = IconComponent;
+          obj1[2] = getLabel();
+          obj1[3] = function onPress() {
+            return closure_1_0(closure_0);
+          };
+          tmpResult = tmp(onItemPressed(_undefined[10]).IconButton, obj1);
+          tmp4 = _undefined;
         }
-        IconComponent = icon;
-      }
-      obj1 = { variant: "secondary", icon: null, label: null, onPress: null, maxFontSizeMultiplier: 2 };
-      obj1[1] = IconComponent;
-      obj1[2] = getLabel();
-      obj1[3] = function onPress() {
-        return closure_1_0(closure_0);
-      };
-      tmpResult = tmp(onItemPressed(_undefined[10]).IconButton, obj1);
-      tmp4 = _undefined;
-    }
-    obj[1] = tmpResult;
-    return closure_1_9(closure_1_5, obj, type.type);
-  })}</closure_6>;
+        obj[1] = tmpResult;
+        return closure_1_9(closure_1_5, obj, type.type);
+      })}
+    </closure_6>
+  );
   return jsx(onItemPressed(5652).GestureDetector, { gesture, children });
 });
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteShareApps.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/instant_invite/native/components/InstantInviteShareApps.tsx",
+);
 
 export default memoResult;

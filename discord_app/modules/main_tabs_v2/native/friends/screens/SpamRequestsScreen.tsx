@@ -7,7 +7,9 @@ import { RelationshipTypes } from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SpamRequestsScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/friends/screens/SpamRequestsScreen.tsx",
+);
 
 export default function SpamRequestsScreen(navigation) {
   navigation = navigation.navigation;
@@ -15,10 +17,18 @@ export default function SpamRequestsScreen(navigation) {
   let stateFromStoresArray;
   let stateFromStoresArray1;
   let callback;
-  analyticsLocations = stateFromStoresArray(stateFromStoresArray1[6])(stateFromStoresArray(stateFromStoresArray1[7]).FRIEND_REQUESTS).analyticsLocations;
+  analyticsLocations = stateFromStoresArray(stateFromStoresArray1[6])(
+    stateFromStoresArray(stateFromStoresArray1[7]).FRIEND_REQUESTS,
+  ).analyticsLocations;
   let obj = analyticsLocations(stateFromStoresArray1[8]);
   const items = [closure_4];
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => analyticsLocations(stateFromStoresArray1[9]).getPendingRelationshipIds(mutableRelationships.getMutableRelationships()).spamIds);
+  stateFromStoresArray = obj.useStateFromStoresArray(
+    items,
+    () =>
+      analyticsLocations(stateFromStoresArray1[9]).getPendingRelationshipIds(
+        mutableRelationships.getMutableRelationships(),
+      ).spamIds,
+  );
   obj = { name: null };
   const tmp = stateFromStoresArray1;
   const tmp2 = stateFromStoresArray(stateFromStoresArray1[6]);
@@ -28,18 +38,24 @@ export default function SpamRequestsScreen(navigation) {
   const tmp5 = stateFromStoresArray(stateFromStoresArray1[10]);
   const items1 = [closure_5];
   const items2 = [stateFromStoresArray];
-  stateFromStoresArray1 = analyticsLocations(stateFromStoresArray1[8]).useStateFromStoresArray(items1, () => {
-    const mapped = stateFromStoresArray.map((arg0) => user.getUser(arg0));
-    return mapped.filter((arg0) => null != arg0);
-  }, items2);
+  stateFromStoresArray1 = analyticsLocations(stateFromStoresArray1[8]).useStateFromStoresArray(
+    items1,
+    () => {
+      const mapped = stateFromStoresArray.map((arg0) => user.getUser(arg0));
+      return mapped.filter((arg0) => null != arg0);
+    },
+    items2,
+  );
   const items3 = [analyticsLocations];
   callback = callback.useCallback((id) => {
-    stateFromStoresArray(stateFromStoresArray1[12])({ userId: id.id, localUser: id, sourceAnalyticsLocations: analyticsLocations });
+    stateFromStoresArray(stateFromStoresArray1[12])({
+      userId: id.id,
+      localUser: id,
+      sourceAnalyticsLocations: analyticsLocations,
+    });
   }, items3);
   const items4 = [callback, stateFromStoresArray1];
-  const callback1 = callback.useCallback(() => {
-
-  }, []);
+  const callback1 = callback.useCallback(() => {}, []);
   if (0 !== stateFromStoresArray1.length) {
     obj = { getItemProps: null, getSectionProps: null, sections: null };
     obj[0] = tmp9;
@@ -51,4 +67,4 @@ export default function SpamRequestsScreen(navigation) {
     navigation.goBack();
   }
   const obj3 = analyticsLocations(stateFromStoresArray1[8]);
-};
+}

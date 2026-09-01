@@ -14,17 +14,19 @@ export default function newIntlMessagesProvider() {
   return new Promise((arg0) => {
     closure_0 = arg0;
     closure_2.keysRequest((arr) => {
-      closure_1_2.valuesResult(arr.map((code) => {
-        const result = callback(1274).runtimeHashMessageKey(code);
-        const tmp4 = callback(1236).t[result];
-        let str = "";
-        if (null != tmp4) {
-          const intl = callback(1236).intl;
-          str = intl.reserialize(tmp4);
-        }
-        return str;
-      }));
+      closure_1_2.valuesResult(
+        arr.map((code) => {
+          const result = callback(1274).runtimeHashMessageKey(code);
+          const tmp4 = callback(1236).t[result];
+          let str = "";
+          if (null != tmp4) {
+            const intl = callback(1236).intl;
+            str = intl.reserialize(tmp4);
+          }
+          return str;
+        }),
+      );
       callback(true);
     });
   });
-};
+}

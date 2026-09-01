@@ -31,8 +31,7 @@ const regExp = new RegExp("^(?:" + "channel-" + "|" + "guild-" + ")");
 let closure_6 = [];
 const map = new Map();
 const PersistedStore = initializeDefault.PersistedStore;
-class NavigationHistoryStore extends PersistedStore {
-}
+class NavigationHistoryStore extends PersistedStore {}
 const prototype = NavigationHistoryStore.prototype;
 prototype["initialize"] = function initialize(history) {
   this.waitFor(closure_2);
@@ -109,7 +108,7 @@ const navigationHistoryStore = new NavigationHistoryStore(dispatcherDefault, {
       }
       return flag;
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/NavigationHistoryStore.tsx");
 

@@ -11,7 +11,7 @@ export default {
     closure_3 = current;
     closure_4 = arg4;
     closure_5 = arg5;
-    return callback(function*() {
+    return callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -44,7 +44,15 @@ export default {
                 toISOStringResult = obj1.add(tmp21, "s").toISOString();
                 const addResult = obj1.add(tmp21, "s");
               }
-              obj1 = { guildId: null, userId: null, communicationDisabledUntilTimestamp: null, duration: null, reason: null, location: null, moderatorReportId: null };
+              obj1 = {
+                guildId: null,
+                userId: null,
+                communicationDisabledUntilTimestamp: null,
+                duration: null,
+                reason: null,
+                location: null,
+                moderatorReportId: null,
+              };
               obj1[0] = v0;
               obj1[1] = dependencyMap;
               obj1[2] = toISOStringResult;
@@ -76,5 +84,5 @@ export default {
         }
       }
     })();
-  }
+  },
 };

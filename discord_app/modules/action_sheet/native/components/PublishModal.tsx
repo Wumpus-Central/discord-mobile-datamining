@@ -11,8 +11,17 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 noopAll;
 ({ View: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
-createCacheKey = { alertContainer: { paddingTop: 16 }, alertLoading: { paddingTop: 62, paddingBottom: 46 }, alertBodyText: null };
-createCacheKey = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
+createCacheKey = {
+  alertContainer: { paddingTop: 16 },
+  alertLoading: { paddingTop: 62, paddingBottom: 46 },
+  alertBodyText: null,
+};
+createCacheKey = {
+  marginBottom: 16,
+  fontSize: 16,
+  lineHeight: 24,
+  color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_400,
+};
 createCacheKey[2] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/action_sheet/native/components/PublishModal.tsx");
@@ -63,4 +72,4 @@ export default function PublishModal(channelId) {
     obj[1] = jsx(Button.LegacyText, tmp12);
     return <closure_4 style={null}>{null}</closure_4>;
   }
-};
+}

@@ -178,4 +178,4 @@ export default function useFocusHelper() {
     obj2.commitState();
   });
   return obj2;
-};
+}

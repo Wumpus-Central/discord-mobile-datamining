@@ -18,8 +18,20 @@ const memoResult = importAllResult.memo(function BountiesBannerBackground(arg0) 
   const items = [closure_5];
   obj = { style, children: null };
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj = { source: { uri }, style: closure_3.absoluteFillObject, resizeMode: "cover", muted: true, disableFocus: true, paused: stateFromStores, importantForAccessibility: "no-hide-descendants" };
-  const items1 = [callback(VideoComponent.VideoComponent, obj), callback(LinearGradientDefault, { colors: closure_9, locations: closure_8, style: closure_3.absoluteFillObject }), children];
+  obj = {
+    source: { uri },
+    style: closure_3.absoluteFillObject,
+    resizeMode: "cover",
+    muted: true,
+    disableFocus: true,
+    paused: stateFromStores,
+    importantForAccessibility: "no-hide-descendants",
+  };
+  const items1 = [
+    callback(VideoComponent.VideoComponent, obj),
+    callback(LinearGradientDefault, { colors: closure_9, locations: closure_8, style: closure_3.absoluteFillObject }),
+    children,
+  ];
   obj[1] = items1;
   return callback2(closure_4, obj);
 });

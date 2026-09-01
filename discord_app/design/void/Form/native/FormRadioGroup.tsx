@@ -25,7 +25,7 @@ export default function FormRadioGroup(arg0) {
     obj1[3] = accessibilityLabel;
     obj1[4] = children;
     obj[0] = callback(context2.TableRadioGroup, obj1);
-    const items = [callback(View, obj), ];
+    const items = [callback(View, obj)];
     let tmp13Result = null;
     if (null != hint) {
       const obj2 = { style: null, children: null };
@@ -50,4 +50,4 @@ export default function FormRadioGroup(arg0) {
     const tmp6 = FormSectionDefault;
   }
   return tmp11Result;
-};
+}

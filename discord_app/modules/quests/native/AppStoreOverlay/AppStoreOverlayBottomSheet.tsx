@@ -27,7 +27,7 @@ function AppStoreOverlayFooter(arg0) {
   obj = { style: tmp.footer, onLayout, children: null };
   const memo1 = React.useMemo(() => ({ paddingBottom: Math.max(bottom, closure_1_8) }), items1);
   obj = { pointerEvents: "none", style: tmp.footerGradient, colors: memo, start: constants.START, end: constants.END };
-  const items2 = [callback(token(4940), obj), ];
+  const items2 = [callback(token(4940), obj)];
   obj1 = { style: memo1, children: null };
   const obj2 = { size: "lg", text: null, onPress: null };
   const intl = bottom(1236).intl;
@@ -40,24 +40,62 @@ function AppStoreOverlayFooter(arg0) {
 }
 ({ MEDIA_MODAL_KEY: closure_6, VerticalGradient: error } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { headerBar: { zIndex: 1 }, container: null, containerWithHeader: null, iconContainer: null, icon: null, textBlock: null, mediaSection: null, header: null, bodyContainer: null, footer: null, footerGradient: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  headerBar: { zIndex: 1 },
+  container: null,
+  containerWithHeader: null,
+  iconContainer: null,
+  icon: null,
+  textBlock: null,
+  mediaSection: null,
+  header: null,
+  bodyContainer: null,
+  footer: null,
+  footerGradient: null,
+};
+createCacheKey = {
+  paddingTop: ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_16,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { paddingTop: 110 };
-createCacheKey[3] = { width: 84, height: 84, borderRadius: ThemesDefault.radii.xl, overflow: "hidden", borderWidth: 6, borderColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey[3] = {
+  width: 84,
+  height: 84,
+  borderRadius: ThemesDefault.radii.xl,
+  overflow: "hidden",
+  borderWidth: 6,
+  borderColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+};
 createCacheKey[4] = { width: 72, height: 72 };
-let obj1 = { width: 84, height: 84, borderRadius: ThemesDefault.radii.xl, overflow: "hidden", borderWidth: 6, borderColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let obj1 = {
+  width: 84,
+  height: 84,
+  borderRadius: ThemesDefault.radii.xl,
+  overflow: "hidden",
+  borderWidth: 6,
+  borderColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+};
 createCacheKey[5] = { gap: ThemesDefault.space.PX_4 };
 let obj2 = { gap: ThemesDefault.space.PX_4 };
 createCacheKey[6] = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[7] = { width: "100%", height: 156, overflow: "hidden", position: "absolute", top: 0, left: 0, right: 0 };
 createCacheKey[8] = { flex: 1, minHeight: 0 };
 let obj3 = { gap: ThemesDefault.space.PX_8 };
-createCacheKey[9] = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[9] = {
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 createCacheKey[10] = { position: "absolute", top: -32, right: 0, left: 0, height: 32 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayBottomSheet.tsx");
+let obj4 = {
+  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/quests/native/AppStoreOverlay/AppStoreOverlayBottomSheet.tsx",
+);
 
 export default function AppStoreOverlayBottomSheet(metadata) {
   metadata = metadata.metadata;
@@ -105,7 +143,7 @@ export default function AppStoreOverlayBottomSheet(metadata) {
     onInstallPress(metadata(onDismiss[17]).AppStoreOverlaySurfaces.MAIN_CTA);
     onOpen(onDismiss[18])(metadata.storeUrl);
   }, items2);
-  const items3 = [, , , ];
+  const items3 = [, , ,];
   ({ appId: arr4[0], platform: arr4[1], storeUrl: arr4[2] } = metadata);
   items3[3] = onInstallPress;
   const items4 = [callback1];
@@ -126,9 +164,17 @@ export default function AppStoreOverlayBottomSheet(metadata) {
   }
   const items5 = [first];
   const memo = obj.useMemo(() => ({ paddingBottom: first + 32 }), items5);
-  obj = { ref: bottomSheetRef, scrollable: true, handleDisabled: true, startHeight: 0.7 * onOpen(onDismiss[14])().height, onDismiss: callback, footer: callback(AppStoreOverlayFooter, { onInstallPress: callback1, onLayout: callback4 }), children: null };
+  obj = {
+    ref: bottomSheetRef,
+    scrollable: true,
+    handleDisabled: true,
+    startHeight: 0.7 * onOpen(onDismiss[14])().height,
+    onDismiss: callback,
+    footer: callback(AppStoreOverlayFooter, { onInstallPress: callback1, onLayout: callback4 }),
+    children: null,
+  };
   obj = { variant: "overlay", style: tmp.headerBar, onPress: bottomSheetClose };
-  const items6 = [callback(metadata(onDismiss[22]).ActionSheetHeaderBar, obj), ];
+  const items6 = [callback(metadata(onDismiss[22]).ActionSheetHeaderBar, obj)];
   obj1 = { style: tmp.bodyContainer, contentContainerStyle: memo, children: null };
   let tmp18Result = null != headerUrl;
   if (tmp18Result) {
@@ -142,8 +188,8 @@ export default function AppStoreOverlayBottomSheet(metadata) {
     obj2[1] = tmp18(tmp2(tmp3[24]), obj3);
     tmp18Result = tmp18(closure_5, obj2);
   }
-  const items7 = [tmp18Result, ];
-  const items8 = [tmp.container, ];
+  const items7 = [tmp18Result];
+  const items8 = [tmp.container];
   const obj5 = { style: items8, children: null };
   items8[1] = null != headerUrl && tmp.containerWithHeader;
   tmp18Result = null != metadata.iconUrl;
@@ -161,9 +207,16 @@ export default function AppStoreOverlayBottomSheet(metadata) {
     obj6[1] = tmp18(tmp2(tmp3[24]), obj7);
     tmp18Result = tmp18(tmp21, obj6);
   }
-  const items9 = [tmp18Result, , , , ];
+  const items9 = [tmp18Result, , , ,];
   const obj9 = { style: tmp.textBlock, children: null };
-  const items10 = [callback(metadata(onDismiss[25]).Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: metadata.title }), ];
+  const items10 = [
+    callback(metadata(onDismiss[25]).Text, {
+      variant: "heading-xl/bold",
+      color: "mobile-text-heading-primary",
+      accessibilityRole: "header",
+      children: metadata.title,
+    }),
+  ];
   let tmp18Result1 = null != metadata.subtitle;
   if (tmp18Result1) {
     tmp18Result1 = "" !== metadata.subtitle;
@@ -191,7 +244,7 @@ export default function AppStoreOverlayBottomSheet(metadata) {
     const obj14 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp6(tmp3[13]).intl;
     obj14[2] = intl.string(tmp6(tmp3[13]).t["EV1W/L"]);
-    const items11 = [tmp18(tmp6(tmp3[25]).Text, obj14), ];
+    const items11 = [tmp18(tmp6(tmp3[25]).Text, obj14)];
     const obj15 = { media: null, onGetGamePress: null };
     obj15[0] = metadata.media;
     obj15[1] = callback3;
@@ -216,4 +269,4 @@ export default function AppStoreOverlayBottomSheet(metadata) {
   items6[1] = closure_10(metadata(onDismiss[23]).BottomSheetScrollView, obj1);
   obj[6] = items6;
   return closure_10(metadata(onDismiss[21]).BottomSheet, obj);
-};
+}

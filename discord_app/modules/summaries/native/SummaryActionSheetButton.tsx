@@ -11,8 +11,20 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: { flexDirection: "column", justifyContent: "center", alignItems: "center", paddingVertical: 8, width: 78 }, iconBox: null, icon: null, name: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.round, border: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  container: { flexDirection: "column", justifyContent: "center", alignItems: "center", paddingVertical: 8, width: 78 },
+  iconBox: null,
+  icon: null,
+  name: null,
+};
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.round,
+  border: 1,
+  overflow: "hidden",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { margin: 12, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -29,7 +41,16 @@ export const SummaryActionSheetButton = function SummaryActionSheetButton(label)
   obj = { style: items, children: callback(Button.Icon, obj) };
   items = [tmp.iconBox];
   obj = { style: tmp.icon, source: iconSource };
-  const items1 = [callback(View, obj), callback(Text.Text, { style: tmp.name, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: label })];
+  const items1 = [
+    callback(View, obj),
+    callback(Text.Text, {
+      style: tmp.name,
+      variant: "text-xs/medium",
+      color: "interactive-text-default",
+      lineClamp: 1,
+      children: label,
+    }),
+  ];
   obj[4] = items1;
   return callback2(PressableBase.PressableOpacity, obj);
 };

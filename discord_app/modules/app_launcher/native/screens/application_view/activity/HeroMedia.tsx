@@ -12,7 +12,9 @@ import createCacheKey from "../../../../../../design/components/Styles/native/cr
 require = arg1;
 noopAll;
 let closure_7 = createCacheKey.createStyles({ mediaBackground: { backgroundColor: "black" } });
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx",
+);
 
 export default function HeroMedia(width) {
   ({ applicationId, containerHeight } = width);
@@ -28,7 +30,7 @@ export default function HeroMedia(width) {
     bound = Math.min(tmp8, ACTION_SHEET_MAX_WIDTH);
   }
   const diff = bound - 2 * DEFAULT_CONTENT_PADDING;
-  const rounded = Math.floor(9 * diff / 16);
+  const rounded = Math.floor((9 * diff) / 16);
   const tmp13 = useEmbeddedActivityBackgroundDefault({ applicationId, size: diff, names: ["embedded_cover"] });
   let tmp2Result = tmp2(589);
   const items = [closure_3];
@@ -51,7 +53,19 @@ export default function HeroMedia(width) {
   if (null != tmp18) {
     tmp21Result = null;
     if ("" !== tmp18) {
-      let obj = { muted: true, paused: null, src: null, height: null, width: null, poster: null, resizeMode: "cover", accessibilityLabel: null, style: null, videoStyle: null, postponeRender: false };
+      let obj = {
+        muted: true,
+        paused: null,
+        src: null,
+        height: null,
+        width: null,
+        poster: null,
+        resizeMode: "cover",
+        accessibilityLabel: null,
+        style: null,
+        videoStyle: null,
+        postponeRender: false,
+      };
       obj[1] = stateFromStores;
       if (null != tmp18) {
         if ("" !== tmp18) {
@@ -74,7 +88,7 @@ export default function HeroMedia(width) {
         obj1 = { applicationName: null };
         obj1[0] = str3;
         obj[7] = intl.formatToPlainString(tmp2(1236).t["Af+EQD"], obj1);
-        const items1 = [tmp.mediaBackground, , ];
+        const items1 = [tmp.mediaBackground, ,];
         const obj2 = { maxHeight: null };
         obj2[0] = rounded;
         items1[1] = obj2;
@@ -102,7 +116,7 @@ export default function HeroMedia(width) {
     }
   }
   return tmp21Result;
-};
+}
 export const useHeroMediaDimensions = function useHeroMediaDimensions(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
@@ -119,6 +133,6 @@ export const useHeroMediaDimensions = function useHeroMediaDimensions(arg0) {
     bound = Math.min(tmp5, ACTION_SHEET_MAX_WIDTH);
   }
   const diff = bound - 2 * DEFAULT_CONTENT_PADDING;
-  obj = { width: diff, height: Math.floor(9 * diff / 16) };
+  obj = { width: diff, height: Math.floor((9 * diff) / 16) };
   return obj;
 };

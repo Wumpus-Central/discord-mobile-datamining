@@ -15,7 +15,7 @@ function _computeNativeDisplayPair() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -53,10 +53,14 @@ function _computeNativeDisplayPair() {
                 if (null != rTCConnection) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    const mLSPairwiseFingerprint = rTCConnection.getMLSPairwiseFingerprint(closure_1_9, closure_0, (arg0) => {
-                      const uint8Array = new Uint8Array(arg0);
-                      return callback(uint8Array);
-                    });
+                    const mLSPairwiseFingerprint = rTCConnection.getMLSPairwiseFingerprint(
+                      closure_1_9,
+                      closure_0,
+                      (arg0) => {
+                        const uint8Array = new Uint8Array(arg0);
+                        return callback(uint8Array);
+                      },
+                    );
                   });
                   closure_3 = 1;
                   c4 = 1;
@@ -127,7 +131,10 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
   obj = userId(stateFromStores[9]);
   const items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => id.getId());
-  FROZEN(stateFromStores[10])(stateFromStores !== userId, "[useSecureFramesPairwiseFingerprint] Should not pass current user id.");
+  FROZEN(stateFromStores[10])(
+    stateFromStores !== userId,
+    "[useSecureFramesPairwiseFingerprint] Should not pass current user id.",
+  );
   const tmp4 = first(first1.useState(null), 2);
   first = tmp4[0];
   callback = tmp4[1];
@@ -135,91 +142,98 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
   first1 = tmp6[0];
   closure_6 = tmp6[1];
   const items1 = [stateFromStores2];
-  stateFromStores1 = userId(stateFromStores[9]).useStateFromStores(items1, () => stateFromStores2.getSecureFramesRosterMapEntry(userId));
+  stateFromStores1 = userId(stateFromStores[9]).useStateFromStores(items1, () =>
+    stateFromStores2.getSecureFramesRosterMapEntry(userId),
+  );
   let obj2 = userId(stateFromStores[9]);
   const items2 = [stateFromStores2];
-  stateFromStores2 = userId(stateFromStores[9]).useStateFromStores(items2, () => stateFromStores2.getSecureFramesRosterMapEntry(stateFromStores));
+  stateFromStores2 = userId(stateFromStores[9]).useStateFromStores(items2, () =>
+    stateFromStores2.getSecureFramesRosterMapEntry(stateFromStores),
+  );
   const items3 = [userId];
-  callback = first1.useCallback(callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else if (closure_1_7.supports(closure_1_10.MLS_PAIRWISE_FINGERPRINTS)) {
-            c1 = 2;
-            v0 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = (function computeNativeDisplayPair(c0) {
-              const self = this;
-              const apply = closure_12.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            })(v0);
-            return obj1;
-          } else {
-            let obj3 = v0(closure_1_2[11]);
-            c1 = 1;
-            v0 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = obj3.computeBoundPairwiseFingerprint(v0);
-            return obj2;
-          }
+  callback = first1.useCallback(
+    callback(function* () {
+      if (v0 === 2) {
+        v0 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          if (1 === tmp4) {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          v0 = 2;
+          if (0 === c1) {
             if (arg0 === 1) {
               v0 = 3;
               throw arg1;
             } else if (arg0 === 2) {
               v0 = 3;
-              obj3 = { value: null, done: true };
-              obj3[0] = arg1;
-              return obj3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else if (closure_1_7.supports(closure_1_10.MLS_PAIRWISE_FINGERPRINTS)) {
+              c1 = 2;
+              v0 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = (function computeNativeDisplayPair(c0) {
+                const self = this;
+                const apply = closure_12.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(v0);
+              return obj1;
+            } else {
+              let obj3 = v0(closure_1_2[11]);
+              c1 = 1;
+              v0 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = obj3.computeBoundPairwiseFingerprint(v0);
+              return obj2;
             }
-          } else if (arg0 === 1) {
+          } else {
+            if (1 === tmp4) {
+              if (arg0 === 1) {
+                v0 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                v0 = 3;
+                obj3 = { value: null, done: true };
+                obj3[0] = arg1;
+                return obj3;
+              }
+            } else if (arg0 === 1) {
+              v0 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              v0 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
             v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
           }
-          v0 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
+        } catch (tmp9) {
+          v0 = tmp;
+          throw tmp9;
         }
-      } catch (tmp9) {
-        v0 = tmp;
-        throw tmp9;
       }
-    }
-  }), items3);
+    }),
+    items3,
+  );
   closure_10 = first1.useRef(0);
   obj = first1.useRef(null);
   closure_12 = first1.useRef(false);
@@ -248,12 +262,15 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
       }
     }
   }, items4);
-  const effect1 = first1.useEffect(() => () => {
-    if (null != ref.current) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-    }
-  }, []);
+  const effect1 = first1.useEffect(
+    () => () => {
+      if (null != ref.current) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(tmp.current);
+      }
+    },
+    [],
+  );
   const items5 = [first, first1];
   return first1.useMemo(() => {
     let fingerprint;

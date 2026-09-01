@@ -16,21 +16,25 @@ const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUploa
   let obj = canUpload(589);
   const items = [closure_5, closure_3];
   const items1 = [channelId, canUpload, tmp];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    let tmp = null;
-    if (!closure_2) {
-      let uploads = null;
-      if (canUpload) {
-        uploads = null;
-        if (null == closure_1_3.getActiveCommand(channelId)) {
-          uploads = closure_1_5.getUploads(tmp5, closure_1_4.ChannelMessage);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let tmp = null;
+      if (!closure_2) {
+        let uploads = null;
+        if (canUpload) {
+          uploads = null;
+          if (null == closure_1_3.getActiveCommand(channelId)) {
+            uploads = closure_1_5.getUploads(tmp5, closure_1_4.ChannelMessage);
+          }
+          tmp5 = channelId;
         }
-        tmp5 = channelId;
+        tmp = uploads;
       }
-      tmp = uploads;
-    }
-    return tmp;
-  }, items1);
+      return tmp;
+    },
+    items1,
+  );
   let tmp4 = null;
   if (null != stateFromStores) {
     obj = { attachments: null, channelId: null };

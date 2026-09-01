@@ -11,5 +11,19 @@ const importDefaultResultResult = importDefaultResult(obj);
 const result = set.fileFinishedImporting("modules/visual_effect_view/native/VisualEffectViewIOS.tsx");
 
 export default importDefaultResultResult;
-export const BLUR_EFFECT_NAMES = ["UIBlurEffectStyleLight", "UIBlurEffectStyleExtraLight", "UIBlurEffectStyleDark", "UIBlurEffectStyleSystemUltraThinMaterialLight", "UIBlurEffectStyleSystemUltraThinMaterialDark", "UIBlurEffectStyleSystemThinMaterialLight", "UIBlurEffectStyleSystemThinMaterialDark", "UIBlurEffectStyleSystemMaterialLight", "UIBlurEffectStyleSystemMaterialDark", "UIBlurEffectStyleSystemThickMaterialLight", "UIBlurEffectStyleSystemThickMaterialDark", "UIBlurEffectStyleSystemChromeMaterialLight", "UIBlurEffectStyleSystemChromeMaterialDark"];
+export const BLUR_EFFECT_NAMES = [
+  "UIBlurEffectStyleLight",
+  "UIBlurEffectStyleExtraLight",
+  "UIBlurEffectStyleDark",
+  "UIBlurEffectStyleSystemUltraThinMaterialLight",
+  "UIBlurEffectStyleSystemUltraThinMaterialDark",
+  "UIBlurEffectStyleSystemThinMaterialLight",
+  "UIBlurEffectStyleSystemThinMaterialDark",
+  "UIBlurEffectStyleSystemMaterialLight",
+  "UIBlurEffectStyleSystemMaterialDark",
+  "UIBlurEffectStyleSystemThickMaterialLight",
+  "UIBlurEffectStyleSystemThickMaterialDark",
+  "UIBlurEffectStyleSystemChromeMaterialLight",
+  "UIBlurEffectStyleSystemChromeMaterialDark",
+];
 export const MODERN_IOS_BLURS_EFFECTS_AVAILABLE = tmp2;

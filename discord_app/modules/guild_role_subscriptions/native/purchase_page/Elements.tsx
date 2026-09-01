@@ -18,15 +18,36 @@ require = arg1;
 ({ TouchableOpacity: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { toggleTruncateButton: null, arrowButton: null, arrowButtonText: null, arrowButtonIcon: null };
-createCacheKey = { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: ThemesDefault.colors.TEXT_DEFAULT, marginTop: 2 };
+createCacheKey = {
+  alignSelf: "flex-start",
+  borderBottomWidth: 0.8,
+  borderColor: ThemesDefault.colors.TEXT_DEFAULT,
+  marginTop: 2,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+createCacheKey[1] = {
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 16,
+  height: 40,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 createCacheKey[2] = { flexGrow: 1, flexShrink: 1 };
-let obj1 = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+let obj1 = {
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 16,
+  height: 40,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 createCacheKey[3] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/Elements.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/purchase_page/Elements.tsx",
+);
 
 export const TruncatedText = function TruncatedText(lineClamp) {
   let num = lineClamp.lineClamp;
@@ -100,7 +121,7 @@ export const ArrowButton = function ArrowButton(arg0) {
   const tmp = callback4();
   let obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
   obj = { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text };
-  const items = [callback2(Text.Text, obj), ];
+  const items = [callback2(Text.Text, obj)];
   obj = { size: Button.Icon.Sizes.SMALL, source: registerAssetDefault, style: tmp.arrowButtonIcon };
   items[1] = callback2(Button.Icon, obj);
   obj[3] = items;
@@ -112,7 +133,10 @@ export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPla
   const obj2 = getRoleEmojisAll;
   const tmp2 = _require;
   const items = [closure_8];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_8.get(id.id));
+  const stateFromStores =
+    require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () =>
+      closure_1_8.get(id.id),
+    );
   const price = useStoreFrontPriceDefault(stateFromStores, obj.useNativeIAPPayments().storeFront).price;
   let str = "No Price Available";
   if (null != price) {

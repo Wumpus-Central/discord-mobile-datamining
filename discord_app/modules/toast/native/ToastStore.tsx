@@ -27,7 +27,7 @@ const toastStore = new ToastStore(dispatcherDefault, {
   },
   TOAST_CLOSE: function handleClose() {
     c0 = null;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/toast/native/ToastStore.tsx");
 

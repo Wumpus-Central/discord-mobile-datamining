@@ -16,12 +16,20 @@ let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.borderRadius = ThemesDefault.radii.xl;
 createCacheKey.overflow = "hidden";
 createCacheKey[0] = createCacheKey;
-let obj1 = { flex: 1, marginTop: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xl, width: "100%", borderWidth: 1 };
+let obj1 = {
+  flex: 1,
+  marginTop: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.xl,
+  width: "100%",
+  borderWidth: 1,
+};
 let merged1 = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
 obj1.shadowColor = "#000000";
 createCacheKey[1] = obj1;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceChannelList.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/appearance/native/components/SettingsAppearanceChannelList.tsx",
+);
 
 export default function ChannelListPreview(useGradientBackground) {
   ({ themes, themeIndex, animatedStyles } = useGradientBackground);
@@ -51,7 +59,7 @@ export default function ChannelListPreview(useGradientBackground) {
       return null;
     }
   }, items);
-  const items1 = [tmp.channelPreviewCardContainer, animatedStyles.borderNormal, ];
+  const items1 = [tmp.channelPreviewCardContainer, animatedStyles.borderNormal];
   let bgSurfaceHigh = !useGradientBackground;
   if (!useGradientBackground) {
     bgSurfaceHigh = animatedStyles.bgSurfaceHigh;
@@ -72,7 +80,7 @@ export default function ChannelListPreview(useGradientBackground) {
     tmp7 = callback(closure_4, obj);
     const tmp4Result = tmp4(14894);
   }
-  const items2 = [tmp7, , ];
+  const items2 = [tmp7, ,];
   obj1 = {
     contentContainerStyle: { paddingVertical: ThemesDefault.space.PX_16 },
     data,
@@ -81,10 +89,13 @@ export default function ChannelListPreview(useGradientBackground) {
       return id.id;
     },
     showsVerticalScrollIndicator: false,
-    importantForAccessibility: "no-hide-descendants"
+    importantForAccessibility: "no-hide-descendants",
   };
   items2[1] = callback(animatedStyles(8105).FlashList, obj1);
-  items2[2] = callback(SettingsAppearanceChannelListPreviewNitroUpsellComponentDefault, { visible: isNitroLocked, theme: themes[themeIndex] });
+  items2[2] = callback(SettingsAppearanceChannelListPreviewNitroUpsellComponentDefault, {
+    visible: isNitroLocked,
+    theme: themes[themeIndex],
+  });
   obj[4] = items2;
   return closure_6(_modDef4217.View, obj);
-};
+}

@@ -8,7 +8,7 @@ function _handleFavoritesGuildAddSuggestedChannel() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -98,7 +98,9 @@ function _handleFavoritesGuildAddSuggestedChannel() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/favorites/onboarding/handleFavoritesGuildAddSuggestedChannel.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/favorites/onboarding/handleFavoritesGuildAddSuggestedChannel.tsx",
+);
 
 export default function handleFavoritesGuildAddSuggestedChannel() {
   const self = this;
@@ -109,4 +111,4 @@ export default function handleFavoritesGuildAddSuggestedChannel() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

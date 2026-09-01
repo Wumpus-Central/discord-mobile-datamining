@@ -17,7 +17,7 @@ function _executeMessageComponentInteraction() {
     c4 = 0;
     c5 = 0;
     c3 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -55,7 +55,17 @@ function _executeMessageComponentInteraction() {
               let constants;
               c7 = undefined;
               c8 = undefined;
-              ({ componentType: c0, messageId: c1, messageFlags: c2, customId: c3, componentId: c4, applicationId: c5, channelId: c6, guildId: c7, localState: c8 } = callback);
+              ({
+                componentType: c0,
+                messageId: c1,
+                messageFlags: c2,
+                customId: c3,
+                componentId: c4,
+                applicationId: c5,
+                channelId: c6,
+                guildId: c7,
+                localState: c8,
+              } = callback);
               closure_9 = undefined;
               let obj6;
               sessionId = 1;
@@ -125,7 +135,17 @@ function _executeMessageComponentInteraction() {
                   obj1 = callback(8026);
                   const result = obj1.queueInteractionComponentState(callback2, closure_9, c8, sessionId);
                 }
-                obj6 = { type: null, nonce: null, guild_id: null, channel_id: null, message_flags: null, message_id: null, application_id: null, session_id: null, data: null };
+                obj6 = {
+                  type: null,
+                  nonce: null,
+                  guild_id: null,
+                  channel_id: null,
+                  message_flags: null,
+                  message_id: null,
+                  application_id: null,
+                  session_id: null,
+                  data: null,
+                };
                 obj6[0] = callback(1955).InteractionTypes.MESSAGE_COMPONENT;
                 obj6[1] = closure_9;
                 obj6[2] = c7;
@@ -245,7 +265,12 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
                   tmp28 = tmp29;
                 }
                 if (!tmp28) {
-                  obj = { type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION", applicationId: null, channelId: null, guildId: null };
+                  obj = {
+                    type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION",
+                    applicationId: null,
+                    channelId: null,
+                    guildId: null,
+                  };
                   obj[1] = applicationId;
                   obj[2] = channelId;
                   if (tmp9 == null) {
@@ -265,7 +290,12 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
               }
             }
             if (ok.body.code === constants.UNKNOWN_INTEGRATION) {
-              obj = { type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION", applicationId: null, channelId: null, guildId: null };
+              obj = {
+                type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION",
+                applicationId: null,
+                channelId: null,
+                guildId: null,
+              };
               obj[1] = applicationId;
               obj[2] = channelId;
               let tmp20 = tmp9;
@@ -296,7 +326,18 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
   }
 }
 ({ Endpoints: closure_6, AbortCodes: error, MessageStates: closure_8, MessageFlags: c9 } = ME);
-let obj = { SENDING: 0, [0]: "SENDING", CREATED: 1, [1]: "CREATED", FAILED: 2, [2]: "FAILED", TIMED_OUT: 3, [3]: "TIMED_OUT", EPHEMERAL_SUCCESS: 4, [4]: "EPHEMERAL_SUCCESS" };
+let obj = {
+  SENDING: 0,
+  [0]: "SENDING",
+  CREATED: 1,
+  [1]: "CREATED",
+  FAILED: 2,
+  [2]: "FAILED",
+  TIMED_OUT: 3,
+  [3]: "TIMED_OUT",
+  EPHEMERAL_SUCCESS: 4,
+  [4]: "EPHEMERAL_SUCCESS",
+};
 let result = require("set").fileFinishedImporting("modules/interactions/InteractionUtils.tsx");
 
 export const getInteractionTimeoutTimestamp = function getInteractionTimeoutTimestamp(arg0) {
@@ -312,7 +353,9 @@ export const getInteractionTimeoutTimestamp = function getInteractionTimeoutTime
   }
   sum = Date.now();
 };
-export const getInteractionInitialResponseDeadlineTimestamp = function getInteractionInitialResponseDeadlineTimestamp(arg0) {
+export const getInteractionInitialResponseDeadlineTimestamp = function getInteractionInitialResponseDeadlineTimestamp(
+  arg0,
+) {
   if (null != arg0) {
     if ("" !== arg0) {
       const _Number = Number;

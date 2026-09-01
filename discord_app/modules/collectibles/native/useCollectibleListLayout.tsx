@@ -12,9 +12,9 @@ export default function useCollectibleListLayout() {
     size: tmp[0],
     onLayout: callback2((nativeEvent) => {
       callback((nativeEvent.nativeEvent.layout.width - 64) / 3);
-    }, [])
+    }, []),
   };
-};
+}
 export const GUTTER_SIZE = 16;
 export const ROW_SIZE = 3;
 export const COLLECTIBLE_ROW_HEIGHT = 114;

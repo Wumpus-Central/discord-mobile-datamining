@@ -37,7 +37,22 @@ function ChatBlockedAlert(arg0) {
   obj.onConfirm = onConfirm;
   obj = { style: tmp2.body, children: null };
   obj = { source: registerAssetDefault, size: tmp8(1297).Icon.Sizes.CUSTOM, style: tmp2.mainIcon };
-  const items = [closure_16(Button.Icon, obj), closure_16(Text.Text, { style: tmp2.title, accessibilityRole: "header", variant: "heading-md/medium", color: "mobile-text-heading-primary", children: title }), closure_16(Text.Text, { style: tmp2.description, variant: "text-sm/medium", color: "text-default", children: description })];
+  const items = [
+    closure_16(Button.Icon, obj),
+    closure_16(Text.Text, {
+      style: tmp2.title,
+      accessibilityRole: "header",
+      variant: "heading-md/medium",
+      color: "mobile-text-heading-primary",
+      children: title,
+    }),
+    closure_16(Text.Text, {
+      style: tmp2.description,
+      variant: "text-sm/medium",
+      color: "text-default",
+      children: description,
+    }),
+  ];
   obj[1] = items;
   obj.children = callback4(View, obj);
   return closure_16(componentDidMountDefault, obj);
@@ -101,13 +116,21 @@ let closure_5 = ["guildName"];
 noopAll;
 ({ AnalyticEvents: map1, UserSettingsSections: closure_14 } = ME);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-createCacheKey = { wrapper: { padding: 16 }, body: { flexDirection: "column", alignItems: "center" }, mainIcon: null, title: null, description: null };
+createCacheKey = {
+  wrapper: { padding: 16 },
+  body: { flexDirection: "column", alignItems: "center" },
+  mainIcon: null,
+  title: null,
+  description: null,
+};
 createCacheKey = { width: 48, height: 48, tintColor: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL, marginBottom: 16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { marginBottom: 16, textAlign: "center" };
 createCacheKey[4] = { textAlign: "center" };
 let closure_18 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_automod/native/AutomodUserProfileQuarantineAlert.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_automod/native/AutomodUserProfileQuarantineAlert.tsx",
+);
 
 export default function AutomodUserProfileQuarantineAlert(guildId) {
   guildId = guildId.guildId;
@@ -127,15 +150,21 @@ export default function AutomodUserProfileQuarantineAlert(guildId) {
   }
   const items3 = [closure_10];
   const items4 = [guildId, stateFromStores];
-  const stateFromStores2 = guildId(647).useStateFromStores(items3, () => {
-    if (null == guildId) {
-      return null;
-    } else {
-      const automodQuarantinedGuildMemberFlags = guildId(closure_1_2[21]).getAutomodQuarantinedGuildMemberFlags(closure_1_10.getMember(tmp, stateFromStores));
-      const obj = guildId(closure_1_2[21]);
-      return guildId(closure_1_2[21]).getAutomodReason(automodQuarantinedGuildMemberFlags);
-    }
-  }, items4);
+  const stateFromStores2 = guildId(647).useStateFromStores(
+    items3,
+    () => {
+      if (null == guildId) {
+        return null;
+      } else {
+        const automodQuarantinedGuildMemberFlags = guildId(closure_1_2[21]).getAutomodQuarantinedGuildMemberFlags(
+          closure_1_10.getMember(tmp, stateFromStores),
+        );
+        const obj = guildId(closure_1_2[21]);
+        return guildId(closure_1_2[21]).getAutomodReason(automodQuarantinedGuildMemberFlags);
+      }
+    },
+    items4,
+  );
   stateFromStores(4945)(() => {
     let obj = stateFromStores(closure_1_2[23]);
     obj = { type: closure_1_12, guild_id: guildId, other_user_id: stateFromStores };
@@ -161,4 +190,4 @@ export default function AutomodUserProfileQuarantineAlert(guildId) {
   obj1 = { automodReason: stateFromStores2, guildName: str };
   const merged2 = Object.assign(guildId);
   tmp13 = callback3(PerServerProfileAlert, obj1);
-};
+}

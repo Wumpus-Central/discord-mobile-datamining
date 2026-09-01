@@ -14,7 +14,7 @@ function _createGuildFromTemplate() {
     c9 = 0;
     c10 = 0;
     c8 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c10 === 2) {
         c10 = 3;
         HermesBuiltin.throwTypeError();
@@ -46,7 +46,15 @@ function _createGuildFromTemplate() {
               c8 = 1;
               obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
               obj1[0] = constants.GUILDS;
-              const obj2 = { name: null, icon: null, channels: null, system_channel_id: null, roles: null, guild_template_code: null, staff_only: null };
+              const obj2 = {
+                name: null,
+                icon: null,
+                channels: null,
+                system_channel_id: null,
+                roles: null,
+                guild_template_code: null,
+                staff_only: null,
+              };
               obj2[0] = callback;
               obj2[1] = callback2;
               ({ channels: obj10[2], system_channel_id: obj10[3], roles: obj10[4], code: obj10[5] } = dependencyMap);
@@ -119,5 +127,5 @@ export default {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  }
+  },
 };

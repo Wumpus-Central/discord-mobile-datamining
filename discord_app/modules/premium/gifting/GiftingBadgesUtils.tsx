@@ -8,20 +8,24 @@ import closure_3 from "../../../stores/UserStore.tsx";
 let closure_2 = initialize.getSingleRequirementThreshold;
 let result = set.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
-export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier) {
+export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPercent(
+  badgeProgress,
+  currentTier,
+  nextTier,
+) {
   const tmp = callback(currentTier);
   const tmp2 = callback(nextTier);
   if (null != nextTier) {
     let num6 = 100;
     if (tmp2 > 0) {
-      num6 = badgeProgress / tmp2 * 100;
+      num6 = (badgeProgress / tmp2) * 100;
     }
     let num3 = num6;
   } else {
     num3 = 100;
     if (tmp > 0) {
       const _Math = Math;
-      num3 = Math.min(tmp, badgeProgress) / tmp * 100;
+      num3 = (Math.min(tmp, badgeProgress) / tmp) * 100;
     }
   }
   return Math.min(Math.max(num3, 0), 100);
@@ -81,7 +85,9 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     return flag;
   });
   tmpResult = tmp(4298);
-  const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1373).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(
+    tmp(1373).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
+  );
   if (tmp4) {
     tmp4 = stateFromStores;
   }

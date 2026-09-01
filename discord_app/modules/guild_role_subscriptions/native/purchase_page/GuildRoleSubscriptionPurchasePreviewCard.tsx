@@ -31,7 +31,11 @@ function EmojiGallery(arg0) {
   const substr = emojiIds.slice(0, maxEmojis);
   const diff = emojiIds.length - maxEmojis;
   let obj = { style: tmp.emojiGallery, children: null };
-  const items = [...substr.map((id) => closure_1_8(closure_1_1(closure_1_3[12]), { size: 30, fontSize: 20, guildId: closure_0, id }, id))];
+  const items = [
+    ...substr.map((id) =>
+      closure_1_8(closure_1_1(closure_1_3[12]), { size: 30, fontSize: 20, guildId: closure_0, id }, id),
+    ),
+  ];
   let tmp3Result = diff > 0;
   if (tmp3Result) {
     obj = { style: null, children: null };
@@ -54,11 +58,11 @@ function BenefitShowCase(arg0) {
     obj[2] = title;
     tmp3 = callback2(Text.Text, obj);
   }
-  const children = [tmp3, ];
+  const children = [tmp3];
   let tmpResult = null != description;
   if (tmpResult) {
     obj = { children: null };
-    const items1 = [callback2(Button.Spacer, { size: 2 }), ];
+    const items1 = [callback2(Button.Spacer, { size: 2 })];
     obj = { variant: "text-sm/medium", color: "interactive-text-default", children: null };
     obj[2] = description;
     items1[1] = callback2(Text.Text, obj);
@@ -82,7 +86,7 @@ function ChannelBenefitShowCase(description) {
     obj = { size: null, source: null };
     obj[0] = tmp(1297).Icon.Sizes.REFRESH_SMALL_16;
     obj[1] = tmp(4981).getChannelIcon(stateFromStores);
-    const items2 = [callback2(tmp(1297).Icon, obj), callback2(tmp(1297).Spacer, { size: 4 }), ];
+    const items2 = [callback2(tmp(1297).Icon, obj), callback2(tmp(1297).Spacer, { size: 4 })];
     obj1 = { variant: "text-md/semibold", color: "text-default", children: null };
     obj1[2] = tmp4;
     items2[2] = callback2(tmp(4474).Text, obj1);
@@ -99,7 +103,11 @@ function ShowAllButton(onPress) {
   obj = { variant: "text-sm/semibold", color: "interactive-text-hover", style: { marginTop: -1 }, children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["hub6t/"]);
-  const items = [callback2(Text.Text, obj), callback2(Button.Spacer, { size: 3 }), callback2(closure_6, { style: tmp.showAllButtonUnderline })];
+  const items = [
+    callback2(Text.Text, obj),
+    callback2(Button.Spacer, { size: 3 }),
+    callback2(closure_6, { style: tmp.showAllButtonUnderline }),
+  ];
   obj[0] = items;
   obj[3] = callback3(closure_6, obj);
   return callback2(closure_5, obj);
@@ -107,26 +115,111 @@ function ShowAllButton(onPress) {
 noopAll;
 ({ TouchableOpacity: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
-createCacheKey = { container: null, header: null, image: null, separator: null, contentContainer: null, contentHeader: null, emojiGallery: null, emojiTruncatedContainer: null, showAllButton: null, showAllButtonUnderline: null };
-createCacheKey = { padding: 16, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
+createCacheKey = {
+  container: null,
+  header: null,
+  image: null,
+  separator: null,
+  contentContainer: null,
+  contentHeader: null,
+  emojiGallery: null,
+  emojiTruncatedContainer: null,
+  showAllButton: null,
+  showAllButtonUnderline: null,
+};
+createCacheKey = {
+  padding: 16,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row" };
 createCacheKey[2] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.xl };
 let obj1 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.xl };
-createCacheKey[3] = { width: "100%", height: 1, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER, marginVertical: 16 };
-let obj2 = { width: "100%", height: 1, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER, marginVertical: 16 };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopRightRadius: ThemesDefault.radii.sm, borderTopLeftRadius: ThemesDefault.radii.sm, padding: 16 };
+createCacheKey[3] = {
+  width: "100%",
+  height: 1,
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER,
+  marginVertical: 16,
+};
+let obj2 = {
+  width: "100%",
+  height: 1,
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER,
+  marginVertical: 16,
+};
+createCacheKey[4] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderTopRightRadius: ThemesDefault.radii.sm,
+  borderTopLeftRadius: ThemesDefault.radii.sm,
+  padding: 16,
+};
 createCacheKey[5] = { textTransform: "uppercase" };
 createCacheKey[6] = { flexDirection: "row" };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopRightRadius: ThemesDefault.radii.sm, borderTopLeftRadius: ThemesDefault.radii.sm, padding: 16 };
-createCacheKey[7] = { width: 32, height: 32, display: "flex", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingTop: 1 };
-let obj4 = { width: 32, height: 32, display: "flex", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingTop: 1 };
-createCacheKey[8] = { paddingVertical: 16, paddingHorizontal: 20, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderBottomLeftRadius: ThemesDefault.radii.sm, borderBottomRightRadius: ThemesDefault.radii.sm };
-let obj5 = { paddingVertical: 16, paddingHorizontal: 20, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderBottomLeftRadius: ThemesDefault.radii.sm, borderBottomRightRadius: ThemesDefault.radii.sm };
-createCacheKey[9] = { position: "absolute", left: 0, right: 0, height: 1, bottom: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+let obj3 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderTopRightRadius: ThemesDefault.radii.sm,
+  borderTopLeftRadius: ThemesDefault.radii.sm,
+  padding: 16,
+};
+createCacheKey[7] = {
+  width: 32,
+  height: 32,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  paddingTop: 1,
+};
+let obj4 = {
+  width: 32,
+  height: 32,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  paddingTop: 1,
+};
+createCacheKey[8] = {
+  paddingVertical: 16,
+  paddingHorizontal: 20,
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderBottomLeftRadius: ThemesDefault.radii.sm,
+  borderBottomRightRadius: ThemesDefault.radii.sm,
+};
+let obj5 = {
+  paddingVertical: 16,
+  paddingHorizontal: 20,
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderBottomLeftRadius: ThemesDefault.radii.sm,
+  borderBottomRightRadius: ThemesDefault.radii.sm,
+};
+createCacheKey[9] = {
+  position: "absolute",
+  left: 0,
+  right: 0,
+  height: 1,
+  bottom: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj6 = { position: "absolute", left: 0, right: 0, height: 1, bottom: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchasePreviewCard.tsx");
+let obj6 = {
+  position: "absolute",
+  left: 0,
+  right: 0,
+  height: 1,
+  bottom: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchasePreviewCard.tsx",
+);
 
 export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
   listingId = listingId.listingId;
@@ -152,16 +245,32 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
     str = "";
   }
   obj1 = { source: { uri: str }, style: tmp.image };
-  const items = [closure_8(guildId(5493), obj1), closure_8(listingId(1297).Spacer, { size: 16 }), ];
+  const items = [closure_8(guildId(5493), obj1), closure_8(listingId(1297).Spacer, { size: 16 })];
   obj2 = { children: null };
-  const items1 = [closure_8(listingId(4474).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: callback(obj1.useName(listingId), 1)[0] }), closure_8(listingId(1297).Spacer, { size: 4 }), closure_8(listingId(4474).Text, { variant: "heading-md/medium", color: "text-default", children: formattedSubscriptionPlan })];
+  const items1 = [
+    closure_8(listingId(4474).Text, {
+      variant: "heading-md/semibold",
+      color: "mobile-text-heading-primary",
+      children: callback(obj1.useName(listingId), 1)[0],
+    }),
+    closure_8(listingId(1297).Spacer, { size: 4 }),
+    closure_8(listingId(4474).Text, {
+      variant: "heading-md/medium",
+      color: "text-default",
+      children: formattedSubscriptionPlan,
+    }),
+  ];
   obj2[0] = items1;
   items[2] = closure_9(closure_6, obj2);
   obj[1] = items;
-  const items2 = [closure_9(closure_6, obj), closure_8(listingId(1297).Spacer, { size: 16 }), closure_8(guildId(16135), { listingId }), ];
+  const items2 = [
+    closure_9(closure_6, obj),
+    closure_8(listingId(1297).Spacer, { size: 16 }),
+    closure_8(guildId(16135), { listingId }),
+  ];
   let tmp8Result2 = length > 0 || size > 0 || length2 > 0;
   if (tmp8Result2) {
-    const items3 = [tmp10(tmp4(1297).Spacer, { size: 24 }), , ];
+    const items3 = [tmp10(tmp4(1297).Spacer, { size: 24 }), ,];
     obj3 = { style: null, children: null };
     obj3[0] = tmp.contentContainer;
     obj4 = { renderGap: null, children: null };
@@ -175,7 +284,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
       const intl = tmp4(1236).intl;
       obj6[0] = intl.string(tmp4(1236).t.ebOU2b);
       obj6[1] = size;
-      const items4 = [tmp10(ContentHeader, obj6), tmp10(tmp4(1297).Spacer, { size: 8 }), , ];
+      const items4 = [tmp10(ContentHeader, obj6), tmp10(tmp4(1297).Spacer, { size: 8 }), ,];
       const obj7 = { emojiIds: null, guildId: null, maxEmojis: 5 };
       const items5 = [];
       HermesBuiltin.arraySpread(first, 0);
@@ -186,7 +295,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
       obj5[0] = items4;
       tmp8Result = tmp8(tmp9, obj5);
     }
-    const items6 = [tmp8Result, , ];
+    const items6 = [tmp8Result, ,];
     tmp8Result = null;
     if (null != first3) {
       const obj8 = { children: null };
@@ -196,7 +305,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
       obj10[0] = length;
       obj9[0] = intl2.formatToPlainString(tmp4(1236).t.y7dUrm, obj10);
       obj9[1] = length;
-      const items7 = [tmp10(ContentHeader, obj9), tmp10(tmp4(1297).Spacer, { size: 12 }), , ];
+      const items7 = [tmp10(ContentHeader, obj9), tmp10(tmp4(1297).Spacer, { size: 12 }), ,];
       ({ ref_id: obj19[0], description: obj19[1] } = first3);
       items7[2] = tmp10(ChannelBenefitShowCase, { channelId: null, description: null });
       items7[3] = tmp10(tmp4(1297).Spacer, { size: 6 });
@@ -214,7 +323,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
       obj14[0] = length2;
       obj13[0] = intl3.formatToPlainString(tmp4(1236).t.MR7oOF, obj14);
       obj13[1] = length2;
-      const items8 = [tmp10(ContentHeader, obj13), tmp10(tmp4(1297).Spacer, { size: 12 }), , ];
+      const items8 = [tmp10(ContentHeader, obj13), tmp10(tmp4(1297).Spacer, { size: 12 }), ,];
       ({ name: obj23[0], description: obj23[1] } = first4);
       items8[2] = tmp10(BenefitShowCase, { title: null, description: null });
       items8[3] = tmp10(tmp4(1297).Spacer, { size: 6 });
@@ -241,4 +350,4 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
   items2[3] = tmp8Result2;
   obj[1] = items2;
   return closure_9(closure_6, obj);
-};
+}

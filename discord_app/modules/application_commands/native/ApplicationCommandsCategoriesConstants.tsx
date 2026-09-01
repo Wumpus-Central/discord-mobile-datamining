@@ -1,7 +1,9 @@
 // discord_app/modules/application_commands/native/ApplicationCommandsCategoriesConstants.tsx
 import set from "../../../../_runtime/00002_set.js";
 
-const result = set.fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategoriesConstants.tsx");
+const result = set.fileFinishedImporting(
+  "modules/application_commands/native/ApplicationCommandsCategoriesConstants.tsx",
+);
 
 export const ICON_SIZE = 24;
 export const NODE_SIZE = 32;

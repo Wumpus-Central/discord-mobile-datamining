@@ -11,8 +11,7 @@ function handleChange(expand) {
 }
 let closure_0 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class ChannelListVoiceCategoryStore extends PersistedStore {
-}
+class ChannelListVoiceCategoryStore extends PersistedStore {}
 const prototype = ChannelListVoiceCategoryStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let obj = arg0;
@@ -38,7 +37,10 @@ prototype["getState"] = function getState() {
 };
 ChannelListVoiceCategoryStore.displayName = "ChannelListVoiceCategoryStore";
 ChannelListVoiceCategoryStore.persistKey = "ChannelListVoiceCategoryStore";
-const channelListVoiceCategoryStore = new ChannelListVoiceCategoryStore(dispatcherDefault, { VOICE_CATEGORY_COLLAPSE: handleChange, VOICE_CATEGORY_EXPAND: handleChange });
+const channelListVoiceCategoryStore = new ChannelListVoiceCategoryStore(dispatcherDefault, {
+  VOICE_CATEGORY_COLLAPSE: handleChange,
+  VOICE_CATEGORY_EXPAND: handleChange,
+});
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/ChannelListVoiceCategoryStore.tsx");
 
 export default channelListVoiceCategoryStore;

@@ -18,28 +18,54 @@ createToggle = {
   useDescription: function useExperimentOverrideActiveDescription() {
     let obj = initialize;
     const items = [closure_2];
-    const stateFromStores = obj.useStateFromStores(items, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
+    const stateFromStores = obj.useStateFromStores(
+      items,
+      () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length,
+    );
     const items1 = [closure_3];
     const obj2 = initialize;
-    obj = { label: "Experiments overridden: ", value: stateFromStores + initialize.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length).toString() };
-    return jsx(DevToolsContentSortButtons.DevToolsContentSubLabel, { label: "Experiments overridden: ", value: stateFromStores + initialize.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length).toString() });
+    obj = {
+      label: "Experiments overridden: ",
+      value:
+        stateFromStores +
+        initialize
+          .useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length)
+          .toString(),
+    };
+    return jsx(DevToolsContentSortButtons.DevToolsContentSubLabel, {
+      label: "Experiments overridden: ",
+      value:
+        stateFromStores +
+        initialize
+          .useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length)
+          .toString(),
+    });
   },
   usePredicate: function useHasExperimentOverrideActive() {
     const staffOrDeveloperSettingPredicate = useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
     const obj = useStaffOrDeveloperSettingPredicate;
     const items = [closure_2];
-    const stateFromStores = initialize.useStateFromStores(items, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
+    const stateFromStores = initialize.useStateFromStores(
+      items,
+      () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length,
+    );
     const obj2 = initialize;
     const items1 = [closure_3];
     const obj3 = initialize;
-    return stateFromStores + initialize.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length) > 0 && staffOrDeveloperSettingPredicate;
+    return (
+      stateFromStores +
+        initialize.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length) >
+        0 && staffOrDeveloperSettingPredicate
+    );
   },
   onPress: function handleExperimentOverrideActivePress() {
     navigateToDevTools.navigateToDevTools({ screenKey: "experiments" });
   },
-  withArrow: true
+  withArrow: true,
 };
 createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ExperimentOverrideActiveSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/ExperimentOverrideActiveSetting.tsx",
+);
 
 export default createToggle;

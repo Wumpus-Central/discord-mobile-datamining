@@ -9,22 +9,64 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { root: null, closeButton: null, content: null, container: null, footer: null, header: null, headerText: null, body: null, noticeHeader: null, buttonWrapper: null };
-createCacheKey = { display: "flex", flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: "100%", paddingTop: ThemesDefault.space.PX_24 };
+createCacheKey = {
+  root: null,
+  closeButton: null,
+  content: null,
+  container: null,
+  footer: null,
+  header: null,
+  headerText: null,
+  body: null,
+  noticeHeader: null,
+  buttonWrapper: null,
+};
+createCacheKey = {
+  display: "flex",
+  flexDirection: "column",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  height: "100%",
+  paddingTop: ThemesDefault.space.PX_24,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginRight: 8, alignSelf: "flex-end" };
 createCacheKey[2] = { flexGrow: 1, padding: ThemesDefault.space.PX_16 };
 let obj1 = { flexGrow: 1, padding: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { display: "flex", flexDirection: "column", height: "100%", marginTop: ThemesDefault.space.PX_24 };
 let obj2 = { display: "flex", flexDirection: "column", height: "100%", marginTop: ThemesDefault.space.PX_24 };
-createCacheKey[4] = { flexGrow: 0, flexShrink: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, paddingVertical: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
-let obj3 = { flexGrow: 0, flexShrink: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, paddingVertical: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[5] = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[4] = {
+  flexGrow: 0,
+  flexShrink: 1,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  paddingVertical: ThemesDefault.space.PX_24,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
+let obj3 = {
+  flexGrow: 0,
+  flexShrink: 1,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  paddingVertical: ThemesDefault.space.PX_24,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
+createCacheKey[5] = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginBottom: ThemesDefault.space.PX_16,
+};
 let obj4 = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[6] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
 let obj5 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
-createCacheKey[7] = { padding: ThemesDefault.space.PX_24, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-let obj6 = { padding: ThemesDefault.space.PX_24, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[7] = {
+  padding: ThemesDefault.space.PX_24,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
+let obj6 = {
+  padding: ThemesDefault.space.PX_24,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[8] = { marginBottom: ThemesDefault.space.PX_4 };
 let obj7 = { marginBottom: ThemesDefault.space.PX_4 };
 createCacheKey[9] = { marginBottom: ThemesDefault.space.PX_4 };
@@ -67,7 +109,7 @@ export default function ClearAllIncomingRequestsConfirmationModal(incomingReques
   obj[4] = function onPress() {
     return callback(callback1[6]).pop();
   };
-  const items2 = [callback2(callback(callback1[11]), obj), ];
+  const items2 = [callback2(callback(callback1[11]), obj)];
   obj1 = { style: tmp.container, children: null };
   const obj2 = { style: tmp.content, children: null };
   const obj3 = { children: null };
@@ -76,26 +118,41 @@ export default function ClearAllIncomingRequestsConfirmationModal(incomingReques
   const intl2 = _require(callback1[8]).intl;
   obj5[2] = intl2.string(_require(callback1[8]).t.eVjfAu);
   obj4[1] = callback2(_require(callback1[13]).Text, obj5);
-  const items3 = [callback2(closure_5, obj4), ];
+  const items3 = [callback2(closure_5, obj4)];
   const obj6 = { style: tmp.body, children: null };
-  const obj7 = { style: tmp.noticeHeader, variant: "text-xs/normal", color: "mobile-text-heading-primary", children: null };
+  const obj7 = {
+    style: tmp.noticeHeader,
+    variant: "text-xs/normal",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl3 = _require(callback1[8]).intl;
-  obj7[3] = intl3.format(_require(callback1[8]).t.jaXsA3, { incomingRequestCount: incomingRequestCount.incomingPendingRequestCount });
+  obj7[3] = intl3.format(_require(callback1[8]).t.jaXsA3, {
+    incomingRequestCount: incomingRequestCount.incomingPendingRequestCount,
+  });
   obj6[1] = callback2(_require(callback1[13]).Text, obj7);
   items3[1] = callback2(closure_5, obj6);
   obj3[0] = items3;
   obj2[1] = callback3(closure_8, obj3);
-  const items4 = [callback2(closure_6, obj2), ];
+  const items4 = [callback2(closure_6, obj2)];
   const obj8 = { style: tmp.footer, children: null };
   const obj9 = { bottom: true, children: null };
   const obj10 = { children: null };
   const obj11 = { style: tmp.buttonWrapper, children: null };
-  const obj12 = { disabled: tmp3, loading: tmp3, variant: "destructive", size: "md", text: null, onPress: null, grow: true };
+  const obj12 = {
+    disabled: tmp3,
+    loading: tmp3,
+    variant: "destructive",
+    size: "md",
+    text: null,
+    onPress: null,
+    grow: true,
+  };
   const intl4 = _require(callback1[8]).intl;
   obj12[4] = intl4.string(_require(callback1[8]).t.Eq9seb);
   obj12[5] = callback2;
   obj11[1] = callback2(_require(callback1[14]).Button, obj12);
-  const items5 = [callback2(closure_5, obj11), ];
+  const items5 = [callback2(closure_5, obj11)];
   const obj13 = { style: tmp.buttonWrapper, children: null };
   const obj14 = { variant: "secondary", size: "md", text: null, onPress: null, grow: true };
   const intl5 = _require(callback1[8]).intl;
@@ -112,4 +169,4 @@ export default function ClearAllIncomingRequestsConfirmationModal(incomingReques
   obj[1] = items2;
   obj[1] = callback3(closure_5, obj);
   return callback2(_require(callback1[10]).SafeAreaPaddingView, obj);
-};
+}

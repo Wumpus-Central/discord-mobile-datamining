@@ -20,12 +20,21 @@ require = arg1;
 function BalanceWidget(arg0) {
   ({ onPress, style, accessibilityLabel, accessibilityState, children } = arg0);
   const tmp = callback3();
-  let obj = { onPress, style: items, accessible: true, accessibilityRole: "button", accessibilityLabel, accessibilityState, activeOpacity: 0.8, children: null };
+  let obj = {
+    onPress,
+    style: items,
+    accessible: true,
+    accessibilityRole: "button",
+    accessibilityLabel,
+    accessibilityState,
+    activeOpacity: 0.8,
+    children: null,
+  };
   items = [tmp.pressable, style];
   obj = { variant: "text-sm/semibold", color: "text-default", style: tmp.label, children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.gGtZpz);
-  const items1 = [callback(Text.Text, obj), ];
+  const items1 = [callback(Text.Text, obj)];
   obj = { style: tmp.pill, children };
   items1[1] = callback(View, obj);
   obj[7] = items1;
@@ -42,12 +51,18 @@ class OrbsOnboardingMenuDismissibleContent {
     obj[1] = closure_8.VIRTUAL_CURRENCY_MOBILE_ONBOARDING;
     obj[2] = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
-      if (markAsDismissed.visibleContent === style(closure_1_2[11]).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL) {
+      if (
+        markAsDismissed.visibleContent ===
+        style(closure_1_2[11]).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL
+      ) {
         function handleOnboardingPress() {
           markAsDismissed(closure_1_7.TAKE_ACTION);
           let obj = closure_1_1(closure_1_2[12]);
           obj.track(closure_1_5.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
-          obj = { filter: closure_1_9.VIRTUAL_CURRENCY, fromContent: markAsDismissed(closure_1_2[14]).QuestContent.MOBILE_ORBS_ONBOARDING_DC };
+          obj = {
+            filter: closure_1_9.VIRTUAL_CURRENCY,
+            fromContent: markAsDismissed(closure_1_2[14]).QuestContent.MOBILE_ORBS_ONBOARDING_DC,
+          };
           markAsDismissed(closure_1_2[13]).openQuestHome(obj);
         }
         let obj = { onPress: null, style: null, accessibilityLabel: null, children: null };
@@ -102,12 +117,20 @@ function BalanceWidgetMenu(style) {
       obj.track(closure_1_5.ORB_BALANCE_ACTION_SHEET_ACTION, obj);
       closure_1_1(closure_1_2[17]).hideActionSheet();
       const obj3 = closure_1_1(closure_1_2[17]);
-      obj = { mergeExistingRoutes: true, filter: closure_1_9.VIRTUAL_CURRENCY, fromContent: closure_1_0(closure_1_2[14]).QuestContent.ORBS_BALANCE_MENU };
+      obj = {
+        mergeExistingRoutes: true,
+        filter: closure_1_9.VIRTUAL_CURRENCY,
+        fromContent: closure_1_0(closure_1_2[14]).QuestContent.ORBS_BALANCE_MENU,
+      };
       closure_1_0(closure_1_2[13]).openQuestHome(obj);
     };
     obj[2] = obj1;
     obj[3] = closure_1_1(closure_1_2[20]).YOU_SCREEN;
-    obj1.openLazy(() => callback(paths[19])(paths[18], paths.paths).then((arg0) => arg0.default), "BalanceWidgetMenu", obj);
+    obj1.openLazy(
+      () => callback(paths[19])(paths[18], paths.paths).then((arg0) => arg0.default),
+      "BalanceWidgetMenu",
+      obj,
+    );
   }, items);
   obj = { onPress: callback, style: style.style, accessibilityLabel: null, children: null };
   let intl = str(1236).intl;
@@ -126,7 +149,16 @@ function BalanceWidgetMenu(style) {
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_15 = createCacheKey.createStyles(() => {
   let obj = { pressable: null, label: null, pill: null, loadingContainer: null };
-  obj = { flex: 1, flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md };
+  obj = {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    flexWrap: "wrap",
+    gap: ThemesDefault.space.PX_8,
+    paddingHorizontal: ThemesDefault.space.PX_8,
+    paddingVertical: ThemesDefault.space.PX_8,
+    borderRadius: ThemesDefault.radii.md,
+  };
   obj[0] = obj;
   obj[1] = { flex: 1 };
   obj[2] = { alignItems: "center" };
@@ -141,9 +173,7 @@ export default function BalanceWidgetMenuWrapper(style) {
   UNSAFE_isDismissibleContentDismissed;
   if (null == balance) {
     obj = { onPress: null, style: null, accessibilityLabel: null, accessibilityState: null, children: null };
-    obj[0] = function onPress() {
-
-    };
+    obj[0] = function onPress() {};
     obj[1] = style.style;
     const intl = tmp2(1236).intl;
     obj[2] = intl.string(tmp2(1236).t.cKwv4k);
@@ -165,5 +195,5 @@ export default function BalanceWidgetMenuWrapper(style) {
     tmp7 = BalanceWidgetMenu;
   }
   return tmp6Result;
-};
+}
 export { OrbsOnboardingMenuDismissibleContent };

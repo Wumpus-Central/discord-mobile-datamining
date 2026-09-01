@@ -21,4 +21,4 @@ export default function trackCacheSkipped(arg0, message) {
   }
   obj[3] = stack;
   obj.track(AnalyticEvents.CACHE_STORE_CACHE_SKIPPED, obj);
-};
+}

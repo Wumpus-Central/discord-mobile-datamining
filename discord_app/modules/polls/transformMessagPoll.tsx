@@ -9,4 +9,4 @@ export default function transformMessagePoll(expiry) {
   const merged = Object.assign(expiry);
   obj.expiry = hooksDefault(expiry.expiry);
   return obj;
-};
+}

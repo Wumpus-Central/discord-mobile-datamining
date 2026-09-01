@@ -12,13 +12,17 @@ export default function useCreateThreadViewProps(arg0) {
   let obj = defaultAreStatesEqual;
   const items = [closure_3];
   const items1 = [tmp];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    let parentChannelId;
-    if (parentChannelId != null) {
-      parentChannelId = parentChannelId.parentChannelId;
-    }
-    return closure_1_3.getChannel(parentChannelId);
-  }, items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let parentChannelId;
+      if (parentChannelId != null) {
+        parentChannelId = parentChannelId.parentChannelId;
+      }
+      return closure_1_3.getChannel(parentChannelId);
+    },
+    items1,
+  );
   let tmp3 = null;
   if (null != tmp) {
     tmp3 = null;
@@ -30,4 +34,4 @@ export default function useCreateThreadViewProps(arg0) {
     }
   }
   return tmp3;
-};
+}

@@ -60,9 +60,15 @@ export default function StandardEmojiContent(nonce) {
   isFavoriteEmoji = obj3.useIsFavoriteEmoji(guildId, memo);
   obj = { style: obj.emojiContainer, children: null };
   obj = { surrogate: emojiNode.surrogate };
-  const items1 = [callback(Emoji, obj), ];
+  const items1 = [callback(Emoji, obj)];
   obj1 = { style: obj.emojiDescriptionWrapper, children: null };
-  const items2 = [callback(emojiNode(isFavoriteEmoji[9]).Text, { variant: "text-md/bold", color: "mobile-text-heading-primary", children: memo(isFavoriteEmoji[13])(emojiNode.content) }), ];
+  const items2 = [
+    callback(emojiNode(isFavoriteEmoji[9]).Text, {
+      variant: "text-md/bold",
+      color: "mobile-text-heading-primary",
+      children: memo(isFavoriteEmoji[13])(emojiNode.content),
+    }),
+  ];
   obj2 = { variant: "text-sm/medium", children: null };
   const intl = emojiNode(isFavoriteEmoji[14]).intl;
   obj2[1] = intl.string(emojiNode(isFavoriteEmoji[14]).t.sXdH8c);
@@ -70,7 +76,7 @@ export default function StandardEmojiContent(nonce) {
   obj1[1] = items2;
   items1[1] = callback2(View, obj1);
   obj[1] = items1;
-  const items3 = [callback2(View, obj), , ];
+  const items3 = [callback2(View, obj), ,];
   obj3 = { style: obj.divider };
   items3[1] = callback(emojiNode(isFavoriteEmoji[15]).FormDivider, obj3);
   const obj4 = { style: obj.ctaContainer, children: null };
@@ -101,4 +107,4 @@ export default function StandardEmojiContent(nonce) {
   items3[2] = callback(View, obj4);
   obj6[0] = items3;
   return callback2(closure_8, obj6);
-};
+}

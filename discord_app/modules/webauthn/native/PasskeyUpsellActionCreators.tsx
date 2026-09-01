@@ -12,7 +12,9 @@ export default {
   openPasskeyUpsell() {
     if (!obj.UNSAFE_isDismissibleContentDismissed(DismissibleContent.DismissibleContent.PASSWORDLESS_UPSELL)) {
       const self = this;
-      const markDismissibleContentAsShown = tmp(1375).requestMarkDismissibleContentAsShown(tmp(1373).DismissibleContent.PASSWORDLESS_UPSELL);
+      const markDismissibleContentAsShown = tmp(1375).requestMarkDismissibleContentAsShown(
+        tmp(1373).DismissibleContent.PASSWORDLESS_UPSELL,
+      );
       const result = this.openPasskeyUpsellPromoSheet();
       const tmpResult = tmp(1375);
     }
@@ -31,5 +33,5 @@ export default {
   },
   openPasskeyUpsellPromoModal(closure_0) {
     _modDef4723.pushLazy(asyncRequireImpl(14321, dependencyMap.paths), closure_0, PASSKEY_UPSELL_KEY);
-  }
+  },
 };

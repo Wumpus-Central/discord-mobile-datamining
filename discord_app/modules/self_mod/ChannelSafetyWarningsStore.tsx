@@ -12,20 +12,23 @@ function handleConnectionOpen() {
     safetyWarnings = safetyWarnings.safetyWarnings;
     if (null != safetyWarnings) {
       table[safetyWarnings.id] = safetyWarnings;
-      if (safetyWarnings.some((type) => {
-        let tmp2 = type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1 || type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
-        if (tmp2) {
-          tmp2 = null != type.dismiss_timestamp;
-        }
-        if (tmp2) {
-          const _Date = Date;
-          const date = new Date(type.dismiss_timestamp);
-          const _Date2 = Date;
-          const time = date.getTime();
-          tmp2 = time <= Date.now() - closure_1;
-        }
-        return tmp2;
-      })) {
+      if (
+        safetyWarnings.some((type) => {
+          let tmp2 =
+            type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1 || type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
+          if (tmp2) {
+            tmp2 = null != type.dismiss_timestamp;
+          }
+          if (tmp2) {
+            const _Date = Date;
+            const date = new Date(type.dismiss_timestamp);
+            const _Date2 = Date;
+            const time = date.getTime();
+            tmp2 = time <= Date.now() - closure_1;
+          }
+          return tmp2;
+        })
+      ) {
         obj.add(safetyWarnings.id);
       } else {
         obj.delete(safetyWarnings.id);
@@ -41,13 +44,21 @@ function handleConnectionOpen() {
   });
 }
 let closure_1 = 5 * setDefault.Millis.SECOND;
-let obj = { STRANGER_DANGER: 1, [1]: "STRANGER_DANGER", INAPPROPRIATE_CONVERSATION_TIER_1: 2, [2]: "INAPPROPRIATE_CONVERSATION_TIER_1", INAPPROPRIATE_CONVERSATION_TIER_2: 3, [3]: "INAPPROPRIATE_CONVERSATION_TIER_2", LIKELY_ATO: 4, [4]: "LIKELY_ATO" };
+let obj = {
+  STRANGER_DANGER: 1,
+  [1]: "STRANGER_DANGER",
+  INAPPROPRIATE_CONVERSATION_TIER_1: 2,
+  [2]: "INAPPROPRIATE_CONVERSATION_TIER_1",
+  INAPPROPRIATE_CONVERSATION_TIER_2: 3,
+  [3]: "INAPPROPRIATE_CONVERSATION_TIER_2",
+  LIKELY_ATO: 4,
+  [4]: "LIKELY_ATO",
+};
 let closure_3 = [];
 let closure_4 = {};
 let set = new Set();
 const Store = initializeDefault.Store;
-class ChannelSafetyWarningsStore extends Store {
-}
+class ChannelSafetyWarningsStore extends Store {}
 const prototype = ChannelSafetyWarningsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_0);
@@ -76,20 +87,23 @@ obj = {
     const safetyWarnings = channel.safetyWarnings;
     if (null != safetyWarnings) {
       dependencyMap[channel.id] = safetyWarnings;
-      if (safetyWarnings.some((type) => {
-        let tmp2 = type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1 || type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
-        if (tmp2) {
-          tmp2 = null != type.dismiss_timestamp;
-        }
-        if (tmp2) {
-          const _Date = Date;
-          const date = new Date(type.dismiss_timestamp);
-          const _Date2 = Date;
-          const time = date.getTime();
-          tmp2 = time <= Date.now() - closure_1;
-        }
-        return tmp2;
-      })) {
+      if (
+        safetyWarnings.some((type) => {
+          let tmp2 =
+            type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1 || type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
+          if (tmp2) {
+            tmp2 = null != type.dismiss_timestamp;
+          }
+          if (tmp2) {
+            const _Date = Date;
+            const date = new Date(type.dismiss_timestamp);
+            const _Date2 = Date;
+            const time = date.getTime();
+            tmp2 = time <= Date.now() - closure_1;
+          }
+          return tmp2;
+        })
+      ) {
         obj.add(channel.id);
       } else {
         obj.delete(channel.id);
@@ -117,20 +131,24 @@ obj = {
       safetyWarnings = safetyWarnings.safetyWarnings;
       if (null != safetyWarnings) {
         table[safetyWarnings.id] = safetyWarnings;
-        if (safetyWarnings.some((type) => {
-          let tmp2 = type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1 || type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
-          if (tmp2) {
-            tmp2 = null != type.dismiss_timestamp;
-          }
-          if (tmp2) {
-            const _Date = Date;
-            const date = new Date(type.dismiss_timestamp);
-            const _Date2 = Date;
-            const time = date.getTime();
-            tmp2 = time <= Date.now() - closure_1;
-          }
-          return tmp2;
-        })) {
+        if (
+          safetyWarnings.some((type) => {
+            let tmp2 =
+              type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1 ||
+              type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
+            if (tmp2) {
+              tmp2 = null != type.dismiss_timestamp;
+            }
+            if (tmp2) {
+              const _Date = Date;
+              const date = new Date(type.dismiss_timestamp);
+              const _Date2 = Date;
+              const time = date.getTime();
+              tmp2 = time <= Date.now() - closure_1;
+            }
+            return tmp2;
+          })
+        ) {
           obj.add(safetyWarnings.id);
         } else {
           obj.delete(safetyWarnings.id);
@@ -195,7 +213,7 @@ obj = {
   },
   ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: function handleAcknowledgeChannelSafetyWarningTooltip(channelId) {
     set.add(channelId.channelId);
-  }
+  },
 };
 const channelSafetyWarningsStore = new ChannelSafetyWarningsStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/self_mod/ChannelSafetyWarningsStore.tsx");

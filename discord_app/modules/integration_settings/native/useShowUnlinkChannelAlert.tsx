@@ -3,39 +3,44 @@ import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/integration_settings/native/useShowUnlinkChannelAlert.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/integration_settings/native/useShowUnlinkChannelAlert.tsx",
+);
 
 export default function useShowUnlinkChannelAlert(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
   const items = [arg0, arg2];
-  callback = React.useCallback(callback(function*() {
-    closure_0 = tmp3;
-    c3 = 1;
-    yield v0(closure_1_2[2]).removeLinkedLobby(closure_1_0);
-    if (1 === tmp7) {
-      c3 = 0;
-      obj1 = v0(closure_1_2[3]);
-      const obj2 = { title: null, body: null };
-      const intl = closure_1_0(closure_1_2[4]).intl;
-      obj2[0] = intl.string(closure_1_0(closure_1_2[4]).t.vFzPFj);
-      const intl2 = closure_1_0(closure_1_2[4]).intl;
-      obj2[1] = intl2.string(closure_1_0(closure_1_2[4]).t["6D5WVg"]);
-      obj1.show(obj2);
-      c4 = 3;
-    } else if (arg0 === 1) {
-      c4 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      if (callback != null) {
-        callback();
+  callback = React.useCallback(
+    callback(function* () {
+      closure_0 = tmp3;
+      c3 = 1;
+      yield v0(closure_1_2[2]).removeLinkedLobby(closure_1_0);
+      if (1 === tmp7) {
+        c3 = 0;
+        obj1 = v0(closure_1_2[3]);
+        const obj2 = { title: null, body: null };
+        const intl = closure_1_0(closure_1_2[4]).intl;
+        obj2[0] = intl.string(closure_1_0(closure_1_2[4]).t.vFzPFj);
+        const intl2 = closure_1_0(closure_1_2[4]).intl;
+        obj2[1] = intl2.string(closure_1_0(closure_1_2[4]).t["6D5WVg"]);
+        obj1.show(obj2);
+        c4 = 3;
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        if (callback != null) {
+          callback();
+        }
+        c3 = 0;
       }
       c3 = 0;
-    }
-    c3 = 0;
-    return arg1;
-  }), items);
+      return arg1;
+    }),
+    items,
+  );
   const items1 = [arg1, callback];
   return React.useCallback(() => {
     let obj = callback2(4858);
@@ -53,4 +58,4 @@ export default function useShowUnlinkChannelAlert(arg0, arg1, arg2) {
     obj[5] = callback2(4947).Colors.RED;
     obj.show(obj);
   }, items1);
-};
+}

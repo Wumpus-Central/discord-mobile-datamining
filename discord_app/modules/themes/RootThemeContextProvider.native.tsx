@@ -13,10 +13,15 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
   let manaTypeConsolidationExperiment;
   let obj = manaTypeConsolidationExperiment(589);
   let items = [closure_4, closure_5];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ saturation: closure_4.saturation, contrast: closure_4.contrast, theme: theme.theme }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    saturation: closure_4.saturation,
+    contrast: closure_4.contrast,
+    theme: theme.theme,
+  }));
   ({ saturation, contrast } = stateFromStoresObject);
   const tmp4 = getGuildThemeNameDefault();
-  manaTypeConsolidationExperiment = manaTypeConsolidationExperiment(8004).useManaTypeConsolidationExperiment("RootThemeContextProvider");
+  manaTypeConsolidationExperiment =
+    manaTypeConsolidationExperiment(8004).useManaTypeConsolidationExperiment("RootThemeContextProvider");
   const obj2 = manaTypeConsolidationExperiment(8004);
   [][0] = manaTypeConsolidationExperiment;
   const plainTextExperiment = manaTypeConsolidationExperiment(14224).usePlainTextExperiment("RootThemeContextProvider");
@@ -48,7 +53,10 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
       tmpResult.setThemeFlag(num2, REDUCED_CONTRAST_ENABLED);
     }
   } else if (tmp4.theme === ThemeTypes.LIGHT) {
-    let setThemeFlagResult1 = tmp(4204).setThemeFlag(0, tmp(4204).ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED);
+    let setThemeFlagResult1 = tmp(4204).setThemeFlag(
+      0,
+      tmp(4204).ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED,
+    );
     const tmpResult1 = tmp(4204);
   } else {
     setThemeFlagResult1 = tmp(4204).setThemeFlag(0, tmp(4204).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);

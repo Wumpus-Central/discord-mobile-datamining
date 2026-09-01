@@ -87,7 +87,16 @@ prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endp
     }
     tmp2 = value;
   }
-  obj = { initialSendTimestamp: Date.now(), endpoint, apiResponseTimestamp: null, wasSuccessful: false, callerSource: closure_1, adRequestId: null, previousAdDecision: tmp2, placement: tmp };
+  obj = {
+    initialSendTimestamp: Date.now(),
+    endpoint,
+    apiResponseTimestamp: null,
+    wasSuccessful: false,
+    callerSource: closure_1,
+    adRequestId: null,
+    previousAdDecision: tmp2,
+    placement: tmp,
+  };
   let pendingRequests = this.pendingRequests;
   const result = pendingRequests.set(endpoint, obj);
   const timerId = setTimeout(() => {

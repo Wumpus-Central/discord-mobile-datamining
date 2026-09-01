@@ -71,7 +71,7 @@ function guardPrivateCallForChannel(id, arg1) {
     if (channel.type !== constants.GUILD_VOICE) {
       if (null != id) {
         if (id.id !== channel.id) {
-          _require = callback(function*() {
+          _require = callback(function* () {
             if (c2 === 2) {
               c2 = 3;
               HermesBuiltin.throwTypeError();
@@ -206,7 +206,7 @@ export const handleJoinCall = function handleJoinCall(channel, flag) {
   }
   function _onConfirm() {
     const self = this;
-    const tmp = closure_1_3(function*() {
+    const tmp = closure_1_3(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -292,7 +292,7 @@ export const handleStartCall = function handleStartCall(channel, flag) {
   }
   function _onConfirm2() {
     const self = this;
-    const tmp = closure_1_3(function*() {
+    const tmp = closure_1_3(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -418,7 +418,7 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
   }
   function _onConfirm3() {
     const self = this;
-    const tmp = closure_1_3(function*() {
+    const tmp = closure_1_3(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -511,7 +511,7 @@ export const handleRedesignJoinCall = function handleRedesignJoinCall(id) {
   }
   function _onConfirm4() {
     const self = this;
-    const tmp = closure_1_3(function*() {
+    const tmp = closure_1_3(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();

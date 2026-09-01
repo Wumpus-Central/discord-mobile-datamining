@@ -25,7 +25,21 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
     const intl = getSystemLocale.intl;
     markAsSpoilerTitle = intl.string(getSystemLocale.t["gsI+xC"]);
   }
-  ({ setNoExtractUI, shouldShowCursor, onBeginFocus, onEndBlur, onChangeContentSize, onMaxHeightChanged, onSelectionOrTextChange, onTextFlushed, onPasteImage, onPasteCommand, onTapAction, onRequestSend, verticalInset } = markAsSpoilerTitle);
+  ({
+    setNoExtractUI,
+    shouldShowCursor,
+    onBeginFocus,
+    onEndBlur,
+    onChangeContentSize,
+    onMaxHeightChanged,
+    onSelectionOrTextChange,
+    onTextFlushed,
+    onPasteImage,
+    onPasteCommand,
+    onTapAction,
+    onRequestSend,
+    verticalInset,
+  } = markAsSpoilerTitle);
   const tmp3 = callback();
   let obj = useTheme;
   const theme = obj.useTheme();
@@ -60,8 +74,62 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
     num2 = 1;
   }
   const tmp4Result1 = set;
-  obj = { accessible, accessibilityLabel: tmp11, children: tmp12, editable, keyboardAppearance: num2, keyboardType: str, markAsSpoilerTitle, maxHeight: tmp9(11603)(onMaxHeightChanged), onBeginFocus, onEndBlur, onChangeContentSize, onSelectionOrTextChange, onTextFlushed, onPasteImage, onPasteCommand, onTapAction, onRequestSend, placeholder, placeholderColor: tmp3.placeholderColor.color, ref, selectionColor: hexWithOpacityResult, setNoExtractUI, shouldShowCursor, style: tmp3.style, textColor: tmp3.textColor.color, verticalInset };
-  return jsx(__INTERNAL_VIEW_CONFIG.default, { accessible, accessibilityLabel: tmp11, children: tmp12, editable, keyboardAppearance: num2, keyboardType: str, markAsSpoilerTitle, maxHeight: tmp9(11603)(onMaxHeightChanged), onBeginFocus, onEndBlur, onChangeContentSize, onSelectionOrTextChange, onTextFlushed, onPasteImage, onPasteCommand, onTapAction, onRequestSend, placeholder, placeholderColor: tmp3.placeholderColor.color, ref, selectionColor: hexWithOpacityResult, setNoExtractUI, shouldShowCursor, style: tmp3.style, textColor: tmp3.textColor.color, verticalInset });
+  obj = {
+    accessible,
+    accessibilityLabel: tmp11,
+    children: tmp12,
+    editable,
+    keyboardAppearance: num2,
+    keyboardType: str,
+    markAsSpoilerTitle,
+    maxHeight: tmp9(11603)(onMaxHeightChanged),
+    onBeginFocus,
+    onEndBlur,
+    onChangeContentSize,
+    onSelectionOrTextChange,
+    onTextFlushed,
+    onPasteImage,
+    onPasteCommand,
+    onTapAction,
+    onRequestSend,
+    placeholder,
+    placeholderColor: tmp3.placeholderColor.color,
+    ref,
+    selectionColor: hexWithOpacityResult,
+    setNoExtractUI,
+    shouldShowCursor,
+    style: tmp3.style,
+    textColor: tmp3.textColor.color,
+    verticalInset,
+  };
+  return jsx(__INTERNAL_VIEW_CONFIG.default, {
+    accessible,
+    accessibilityLabel: tmp11,
+    children: tmp12,
+    editable,
+    keyboardAppearance: num2,
+    keyboardType: str,
+    markAsSpoilerTitle,
+    maxHeight: tmp9(11603)(onMaxHeightChanged),
+    onBeginFocus,
+    onEndBlur,
+    onChangeContentSize,
+    onSelectionOrTextChange,
+    onTextFlushed,
+    onPasteImage,
+    onPasteCommand,
+    onTapAction,
+    onRequestSend,
+    placeholder,
+    placeholderColor: tmp3.placeholderColor.color,
+    ref,
+    selectionColor: hexWithOpacityResult,
+    setNoExtractUI,
+    shouldShowCursor,
+    style: tmp3.style,
+    textColor: tmp3.textColor.color,
+    verticalInset,
+  });
 });
 forwardRefResult.displayName = "ChatInputNativeComponent";
 const result = require("set").fileFinishedImporting("modules/chat_input/native/ChatInputNativeComponent.tsx");

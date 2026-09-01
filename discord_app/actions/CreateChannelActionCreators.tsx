@@ -46,7 +46,12 @@ export default {
       tmp7 = availableTags.length > 0;
     }
     if (tmp7) {
-      obj.available_tags = availableTags.map((name) => ({ name: name.name, emoji_id: name.emojiId, emoji_name: name.emojiName, moderated: name.moderated }));
+      obj.available_tags = availableTags.map((name) => ({
+        name: name.name,
+        emoji_id: name.emojiId,
+        emoji_name: name.emojiName,
+        moderated: name.moderated,
+      }));
     }
     if (null != gameId) {
       obj.game_id = gameId;
@@ -61,7 +66,13 @@ export default {
         obj.branch_id = guildId.branchId;
       }
     }
-    obj = { url: closure_6.GUILD_CHANNELS(guildId), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    obj = {
+      url: closure_6.GUILD_CHANNELS(guildId),
+      body: obj,
+      oldFormErrors: true,
+      trackedActionData: null,
+      rejectWithError: null,
+    };
     const tmp = permissionOverwrites;
     const tmpResult = permissionOverwrites(4713);
     obj[3] = {
@@ -86,7 +97,7 @@ export default {
         }
         obj[2] = type;
         return obj.exact(obj);
-      }
+      },
     };
     obj1 = {
       event: guildId(503).NetworkActionNames.CHANNEL_CREATE,
@@ -110,29 +121,43 @@ export default {
         }
         obj[2] = type;
         return obj.exact(obj);
-      }
+      },
     };
     obj[4] = guildId(530).rejectWithMigratedError();
     const obj6 = guildId(530);
-    return tmpResult.post(obj).then((body) => {
-      if (closure_1_3.isOptInEnabled(guildId)) {
-        let obj = permissionOverwrites(closure_1_2[8]);
-        obj = { flags: null };
-        obj[0] = closure_1_7.OPT_IN_ENABLED;
-        const result = obj.updateChannelOverrideSettings(tmp, body.body.id, obj, guildId(closure_1_2[9]).NotificationLabels.OptedIn);
-      }
-      const result1 = permissionOverwrites(closure_1_2[10]).checkGuildTemplateDirty(tmp);
-      return body;
-    }, (body) => {
-      let obj = permissionOverwrites(table[3]);
-      obj = { type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: body.body };
-      obj.dispatch(obj);
-      throw body;
-    });
+    return tmpResult.post(obj).then(
+      (body) => {
+        if (closure_1_3.isOptInEnabled(guildId)) {
+          let obj = permissionOverwrites(closure_1_2[8]);
+          obj = { flags: null };
+          obj[0] = closure_1_7.OPT_IN_ENABLED;
+          const result = obj.updateChannelOverrideSettings(
+            tmp,
+            body.body.id,
+            obj,
+            guildId(closure_1_2[9]).NotificationLabels.OptedIn,
+          );
+        }
+        const result1 = permissionOverwrites(closure_1_2[10]).checkGuildTemplateDirty(tmp);
+        return body;
+      },
+      (body) => {
+        let obj = permissionOverwrites(table[3]);
+        obj = { type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: body.body };
+        obj.dispatch(obj);
+        throw body;
+      },
+    );
   },
   createRoleSubscriptionTemplateChannel(closure_0, name, type, topic) {
     let obj = _modDef4713;
-    obj = { url: closure_6.GUILD_CHANNELS(closure_0), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    obj = {
+      url: closure_6.GUILD_CHANNELS(closure_0),
+      body: obj,
+      oldFormErrors: true,
+      trackedActionData: null,
+      rejectWithError: null,
+    };
     obj = { name, type, topic };
     obj[3] = {
       event: encodeProperties.NetworkActionNames.CHANNEL_CREATE,
@@ -155,7 +180,7 @@ export default {
         }
         obj[2] = type;
         return obj.exact(obj);
-      }
+      },
     };
     obj1 = {
       event: encodeProperties.NetworkActionNames.CHANNEL_CREATE,
@@ -178,9 +203,9 @@ export default {
         }
         obj[2] = type;
         return obj.exact(obj);
-      }
+      },
     };
     obj[4] = sendRequest.rejectWithMigratedError();
     return obj.post(obj);
-  }
+  },
 };

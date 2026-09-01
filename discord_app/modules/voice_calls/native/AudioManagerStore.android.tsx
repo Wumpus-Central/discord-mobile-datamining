@@ -17,8 +17,7 @@ const invalidAndroidDevice = enforcing.getInvalidAndroidDevice();
 const invalidAndroidDevice2 = enforcing.getInvalidAndroidDevice();
 let c9 = false;
 const Store = initializeDefault.Store;
-class AudioManagerStore extends Store {
-}
+class AudioManagerStore extends Store {}
 const prototype = AudioManagerStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
@@ -107,7 +106,7 @@ const audioManagerStore = new AudioManagerStore(dispatcherDefault, {
         tmpResult.setActiveAudioDevice(device);
       }
     }
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/voice_calls/native/AudioManagerStore.android.tsx");
 

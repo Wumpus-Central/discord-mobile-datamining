@@ -15,20 +15,44 @@ const require = arg1;
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = ["transparent", "black"];
-createCacheKey = { root: { position: "relative" }, contentRow: null, heroText: null, heroImageColumn: null, heroImageSkeleton: null, heroImagePositioner: null, heroImageMask: null, heroImageFadeGradient: null, heroImageMaskRemainder: null };
+createCacheKey = {
+  root: { position: "relative" },
+  contentRow: null,
+  heroText: null,
+  heroImageColumn: null,
+  heroImageSkeleton: null,
+  heroImagePositioner: null,
+  heroImageMask: null,
+  heroImageFadeGradient: null,
+  heroImageMaskRemainder: null,
+};
 createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_12, minHeight: 140 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flex: 1, minWidth: 120, gap: ThemesDefault.space.PX_4, justifyContent: "center" };
 createCacheKey[3] = { flex: 1, alignItems: "flex-end" };
 let obj1 = { flex: 1, minWidth: 120, gap: ThemesDefault.space.PX_4, justifyContent: "center" };
-createCacheKey[4] = { width: 86, height: 86, marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_16 };
-createCacheKey[5] = { position: "absolute", left: "50%", right: -CARD_PADDING, top: -CARD_PADDING, bottom: 0, overflow: "hidden" };
+createCacheKey[4] = {
+  width: 86,
+  height: 86,
+  marginTop: ThemesDefault.space.PX_12,
+  marginBottom: ThemesDefault.space.PX_16,
+};
+createCacheKey[5] = {
+  position: "absolute",
+  left: "50%",
+  right: -CARD_PADDING,
+  top: -CARD_PADDING,
+  bottom: 0,
+  overflow: "hidden",
+};
 createCacheKey[6] = { flex: 1, flexDirection: "row" };
 createCacheKey[7] = { width: 130 };
 createCacheKey[8] = { flex: 1, backgroundColor: "black" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { width: 86, height: 86, marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetTopHeroLayout.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/application_widget/native/UserProfileApplicationWidgetTopHeroLayout.tsx",
+);
 
 export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   ({ topConfig, resolveFieldValue, numberFormat } = header);
@@ -36,29 +60,70 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   const tmp = callback4();
   [tmp3, c0] = callback(React.useState(null), 2);
   let obj = resolvedValuesFromUserApplicationIdentityProfile;
-  const textComponentValues = obj.resolveTextComponentValues(topConfig.components.title, resolveFieldValue, numberFormat, true);
+  const textComponentValues = obj.resolveTextComponentValues(
+    topConfig.components.title,
+    resolveFieldValue,
+    numberFormat,
+    true,
+  );
   obj1 = resolvedValuesFromUserApplicationIdentityProfile;
-  const textComponentValues1 = obj1.resolveTextComponentValues(topConfig.components.subtitle_1, resolveFieldValue, numberFormat);
+  const textComponentValues1 = obj1.resolveTextComponentValues(
+    topConfig.components.subtitle_1,
+    resolveFieldValue,
+    numberFormat,
+  );
   let obj2 = resolvedValuesFromUserApplicationIdentityProfile;
-  const textComponentValues2 = obj2.resolveTextComponentValues(topConfig.components.subtitle_2, resolveFieldValue, numberFormat);
+  const textComponentValues2 = obj2.resolveTextComponentValues(
+    topConfig.components.subtitle_2,
+    resolveFieldValue,
+    numberFormat,
+  );
   let obj3 = resolvedValuesFromUserApplicationIdentityProfile;
   const hero_image = topConfig.components.hero_image;
   let image;
-  const textComponentValues3 = obj3.resolveTextComponentValues(topConfig.components.subtitle_3, resolveFieldValue, numberFormat);
+  const textComponentValues3 = obj3.resolveTextComponentValues(
+    topConfig.components.subtitle_3,
+    resolveFieldValue,
+    numberFormat,
+  );
   if (hero_image != null) {
     image = hero_image.fields.image;
   }
-  const items = [require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx").ResolvedValueType.MEDIA];
+  const items = [
+    require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx").ResolvedValueType.MEDIA,
+  ];
   const fieldValue = resolveFieldValue(image, items);
   const tmp2 = callback(React.useState(null), 2);
   obj = { style: tmp.root, children: null };
-  const items1 = [header.header, , ];
+  const items1 = [header.header, ,];
   obj = { style: tmp.contentRow, children: null };
   obj1 = { style: tmp.heroText, children: null };
-  const userProfileCardRadius = require("../../user_profile/native/UserProfileSharedStyles.tsx").useUserProfileCardRadius();
-  const items2 = [callback2(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), callback2(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), callback2(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), callback2(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
+  const userProfileCardRadius =
+    require("../../user_profile/native/UserProfileSharedStyles.tsx").useUserProfileCardRadius();
+  const items2 = [
+    callback2(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, {
+      field: textComponentValues,
+      variant: "text-lg/medium",
+      color: "text-default",
+    }),
+    callback2(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, {
+      field: textComponentValues1,
+      variant: "text-sm/normal",
+      color: "text-muted",
+    }),
+    callback2(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, {
+      field: textComponentValues2,
+      variant: "text-sm/normal",
+      color: "text-muted",
+    }),
+    callback2(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, {
+      field: textComponentValues3,
+      variant: "text-sm/normal",
+      color: "text-muted",
+    }),
+  ];
   obj1[1] = items2;
-  const items3 = [callback3(closure_6, obj1), ];
+  const items3 = [callback3(closure_6, obj1)];
   obj2 = { style: tmp.heroImageColumn, children: null };
   let tmp15Result = null == fieldValue || null == tmp3;
   if (tmp15Result) {
@@ -73,7 +138,7 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   let tmp15Result1 = null != fieldValue;
   if (tmp15Result1) {
     const obj4 = { style: null, pointerEvents: "none", onLayout: null, children: null };
-    const items4 = [tmp.heroImagePositioner, ];
+    const items4 = [tmp.heroImagePositioner];
     const obj5 = { borderTopRightRadius: null };
     obj5[0] = userProfileCardRadius;
     items4[1] = obj5;
@@ -96,7 +161,7 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
       ({ START: obj16[0], END: obj16[1] } = HorizontalGradient);
       obj9[2] = closure_10;
       obj9[3] = tmp.heroImageFadeGradient;
-      const items5 = [tmp15(LinearGradientDefault, obj9), ];
+      const items5 = [tmp15(LinearGradientDefault, obj9)];
       const obj10 = { style: null };
       obj10[0] = tmp.heroImageMaskRemainder;
       items5[1] = tmp15(tmp14, obj10);
@@ -117,4 +182,4 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   items1[2] = tmp15Result1;
   obj[1] = items1;
   return callback3(closure_6, obj);
-};
+}

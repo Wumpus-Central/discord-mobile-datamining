@@ -95,4 +95,4 @@ export default function formatClearAfterValue(arg0) {
     obj = isDiscordFrontendDevelopment;
     obj.assertNever(arg0);
   }
-};
+}

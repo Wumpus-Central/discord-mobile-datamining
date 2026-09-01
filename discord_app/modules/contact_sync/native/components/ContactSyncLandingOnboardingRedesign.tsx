@@ -13,8 +13,21 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
-createCacheKey = { content: null, headerImage: null, title: null, subtitle: null, buttonContainer: null, trailing: null };
-createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -ThemesDefault.space.PX_32 - require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
+createCacheKey = {
+  content: null,
+  headerImage: null,
+  title: null,
+  subtitle: null,
+  buttonContainer: null,
+  trailing: null,
+};
+createCacheKey = {
+  flex: 1,
+  justifyContent: "center",
+  alignItems: "center",
+  textAlign: "center",
+  marginTop: -ThemesDefault.space.PX_32 - require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT,
+};
 createCacheKey[0] = createCacheKey;
 const tmp4 = -ThemesDefault.space.PX_32;
 createCacheKey[1] = { height: 135, width: 216, marginBottom: ThemesDefault.space.PX_24 };
@@ -25,10 +38,20 @@ createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24 };
 let obj3 = { marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[4] = { height: 48, width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
 let obj4 = { height: 48, width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[5] = { paddingBottom: ThemesDefault.space.PX_4, justifyContent: "flex-end", paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[5] = {
+  paddingBottom: ThemesDefault.space.PX_4,
+  justifyContent: "flex-end",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const obj5 = { paddingBottom: ThemesDefault.space.PX_4, justifyContent: "flex-end", paddingHorizontal: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx");
+const obj5 = {
+  paddingBottom: ThemesDefault.space.PX_4,
+  justifyContent: "flex-end",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx",
+);
 
 export default function ContactSyncLandingOnboardingRedesign(onNext) {
   onNext = onNext.onNext;
@@ -38,25 +61,43 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
   let obj = { children: null };
   obj = { style: tmp.content, children: null };
   obj = { resizeMode: "contain", style: tmp.headerImage, source: null };
-  callback = React.useCallback(callback(function*() {
-    if (table === 2) {
-      table = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  callback = React.useCallback(
+    callback(function* () {
+      if (table === 2) {
+        table = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        table = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
+        try {
+          table = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              table = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              table = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const callback = tmp4;
+              obj1 = v0(table[8]);
+              v0 = 1;
+              table = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = obj1.requestPermission(closure_1_7.CONTACTS);
+              return obj1;
+            }
+          } else if (arg0 === 1) {
             table = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -65,37 +106,22 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
             obj[0] = arg1;
             return obj;
           } else {
-            const callback = tmp4;
-            obj1 = v0(table[8]);
-            v0 = 1;
-            table = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = obj1.requestPermission(closure_1_7.CONTACTS);
-            return obj1;
+            if (arg1) {
+              callback();
+            }
+            table = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          table = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          table = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          if (arg1) {
-            callback();
-          }
-          table = 3;
-          return { value: "HermesInternal", done: null };
+        } catch (tmp11) {
+          table = tmp;
+          throw tmp11;
         }
-      } catch (tmp11) {
-        table = tmp;
-        throw tmp11;
       }
-    }
-  }), items);
+    }),
+    items,
+  );
   obj[2] = registerAssetDefault;
-  const items1 = [callback2(closure_6, obj), , , , ];
+  const items1 = [callback2(closure_6, obj), , , ,];
   obj1 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1236).intl;
   obj1[2] = intl.string(onNext(1236).t["/G+nci"]);
@@ -114,7 +140,16 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
   items1[3] = callback2(closure_5, obj3);
   items1[4] = callback2(ContactSyncErrorDefault, { error });
   obj[1] = items1;
-  const items2 = [callback3(closure_5, obj), callback2(closure_5, { style: tmp.trailing, children: callback2(RedesignContactSyncDiscoverabilityFooterDefault, { discoverabilityEnabled, onValueChanged: setDiscoverabilityEnabled }) })];
+  const items2 = [
+    callback3(closure_5, obj),
+    callback2(closure_5, {
+      style: tmp.trailing,
+      children: callback2(RedesignContactSyncDiscoverabilityFooterDefault, {
+        discoverabilityEnabled,
+        onValueChanged: setDiscoverabilityEnabled,
+      }),
+    }),
+  ];
   obj[0] = items2;
   return callback3(closure_10, obj);
-};
+}

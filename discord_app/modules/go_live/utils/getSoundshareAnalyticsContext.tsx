@@ -29,4 +29,4 @@ export default function getSoundshareAnalyticsContext(sourcePid) {
     obj[2] = tmp;
     return obj;
   }
-};
+}

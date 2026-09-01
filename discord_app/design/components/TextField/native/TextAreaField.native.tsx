@@ -48,13 +48,13 @@ const forwardRefResult = importAllResult.forwardRef((isDisabled, ref) => {
   const result1 = getNodeText;
   const merged1 = Object.assign(result1.mergeProps(inputProps, focusProps));
   obj2.ref = innerRef;
-  const items = [, , ];
+  const items = [, ,];
   ({ padding: arr[0], text: arr[1] } = inputStyles);
   items[2] = tmp2.area;
   obj2.style = items;
   obj2.placeholderTextColor = inputStyles.placeholderText.color;
   obj2.multiline = true;
-  const items1 = [callback(useKeyboardBlurring.NativeTextInput, obj2), ];
+  const items1 = [callback(useKeyboardBlurring.NativeTextInput, obj2)];
   if (null == diff) {
     items1[1] = null;
     obj1.children = items1;

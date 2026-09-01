@@ -9,8 +9,7 @@ function reset() {
 }
 let closure_2 = [];
 const Store = initializeDefault.Store;
-class GlobalDiscoveryServersSearchLayoutStore extends Store {
-}
+class GlobalDiscoveryServersSearchLayoutStore extends Store {}
 const prototype = GlobalDiscoveryServersSearchLayoutStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_0, closure_1);
@@ -27,8 +26,10 @@ const globalDiscoveryServersSearchLayoutStore = new GlobalDiscoveryServersSearch
     if (null == counts) {
       return false;
     }
-  }
+  },
 });
-const result = require("set").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersSearchLayoutStore.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/global_discovery_servers/GlobalDiscoveryServersSearchLayoutStore.tsx",
+);
 
 export default globalDiscoveryServersSearchLayoutStore;

@@ -4,7 +4,9 @@ import getSystemLocale from "../../intl/index.native.tsx";
 import CreatorMonetizationApplicationState from "CreatorMonetizationEligibilityConstants.tsx";
 
 let closure_2 = CreatorMonetizationApplicationState.CreatorMonetizationApplicationState;
-const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx");
+const result = set.fileFinishedImporting(
+  "modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx",
+);
 
 export default function useIsCreatorMonetizationRequestRejected(latestRequest) {
   let state;
@@ -71,4 +73,4 @@ export default function useIsCreatorMonetizationRequestRejected(latestRequest) {
   }
   obj[1] = undefined;
   return obj;
-};
+}

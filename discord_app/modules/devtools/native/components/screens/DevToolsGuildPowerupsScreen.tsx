@@ -33,7 +33,7 @@ function _setWarningBoosts() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -118,7 +118,7 @@ function _sendPowerupsSystemMessage() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -186,7 +186,11 @@ function UserDCSwitchRow(dc) {
   dc = dc.dc;
   ({ isDismissed, handleToggleDismissState } = useToggleDismissibleContentDismissStateDefault(dc));
   const tmp = useToggleDismissibleContentDismissStateDefault(dc);
-  return callback4(TableSwitchRow.TableSwitchRow, { label: callback3(dc), value: isDismissed, onValueChange: handleToggleDismissState });
+  return callback4(TableSwitchRow.TableSwitchRow, {
+    label: callback3(dc),
+    value: isDismissed,
+    onValueChange: handleToggleDismissState,
+  });
 }
 function GuildDCSwitchRow(dc) {
   dc = dc.dc;
@@ -198,7 +202,9 @@ function GuildDCSwitchRow(dc) {
       const result = tmpResult.markContentAsDismissed(dc, guildId, false);
     } else {
       tmpResult = tmp(tmp2[19]);
-      const result1 = tmpResult.removeDismissedRecurringContent(dc(closure_1_2[20]).DismissibleContent.GUILD_POWERUP_NOTIFICATION);
+      const result1 = tmpResult.removeDismissedRecurringContent(
+        dc(closure_1_2[20]).DismissibleContent.GUILD_POWERUP_NOTIFICATION,
+      );
       const result2 = dc(closure_1_2[18]).unmarkContentAsDismissed(dc, guildId);
       const obj2 = dc(closure_1_2[18]);
     }
@@ -206,7 +212,14 @@ function GuildDCSwitchRow(dc) {
   return callback4(dc(5993).TableSwitchRow, { label: callback2(dc), value: dc.isDismissed, onValueChange: callback });
 }
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
-({ GUILD_DCS: unpackModuleId, SERVER_TAG_GUILD_DCS: closure_12, USER_DCS: map1, VANITY_URL_POWERUP_DCS: closure_14, getGuildDCString: closure_15, getUserDCString: closure_16 } = items);
+({
+  GUILD_DCS: unpackModuleId,
+  SERVER_TAG_GUILD_DCS: closure_12,
+  USER_DCS: map1,
+  VANITY_URL_POWERUP_DCS: closure_14,
+  getGuildDCString: closure_15,
+  getUserDCString: closure_16,
+} = items);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 createCacheKey = { container: null, scrollContainer: null, noGuildContainer: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
@@ -216,7 +229,9 @@ let obj1 = { padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 
 createCacheKey[2] = { flex: 1, justifyContent: "center", alignItems: "center", padding: ThemesDefault.space.PX_32 };
 let closure_20 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { flex: 1, justifyContent: "center", alignItems: "center", padding: ThemesDefault.space.PX_32 };
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsGuildPowerupsScreen.tsx",
+);
 
 export default function DevToolsGuildPowerupsScreen() {
   const tmp = callback5();
@@ -244,7 +259,10 @@ export default function DevToolsGuildPowerupsScreen() {
     return items.filter((GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK) => {
       let isContentDismissedResult = null != closure_0;
       if (isContentDismissedResult) {
-        isContentDismissedResult = closure_1_0(closure_1_2[18]).isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, tmp);
+        isContentDismissedResult = closure_1_0(closure_1_2[18]).isContentDismissed(
+          GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK,
+          tmp,
+        );
         const obj = closure_1_0(closure_1_2[18]);
       }
       return isContentDismissedResult;
@@ -266,15 +284,19 @@ export default function DevToolsGuildPowerupsScreen() {
   });
   if (null == stateFromStores) {
     obj = { style: null, children: null };
-    const items4 = [, ];
+    const items4 = [,];
     ({ container: arr7[0], noGuildContainer: arr7[1] } = tmp);
     obj[0] = items4;
-    obj[1] = callback4(tmp5(4474).Text, { variant: "heading-md/semibold", color: "text-muted", children: "No guild selected" });
+    obj[1] = callback4(tmp5(4474).Text, {
+      variant: "heading-md/semibold",
+      color: "text-muted",
+      children: "No guild selected",
+    });
     let tmp16Result = callback4(closure_6, obj);
   } else {
     obj = { style: null, contentContainerStyle: null, children: null };
     obj[0] = tmp.container;
-    const items5 = [tmp.scrollContainer, ];
+    const items5 = [tmp.scrollContainer];
     obj1 = { paddingBottom: null };
     obj1[0] = tmp4.bottom + ThemesDefault.space.PX_16;
     items5[1] = obj1;
@@ -291,13 +313,13 @@ export default function DevToolsGuildPowerupsScreen() {
       return stateFromStores(arr[15]).guildPowerupsResetNotifications();
     };
     obj2[2] = callback4(tmp5(5599).TableRow, obj3);
-    const items6 = [callback4(tmp5(5992).TableRowGroup, obj2), , , , , , ];
+    const items6 = [callback4(tmp5(5992).TableRowGroup, obj2), , , , , ,];
     const obj4 = { title: "Warning State", hasIcons: false, children: null };
     const obj5 = { label: "Set Half Boosts expiring in 1 day", onPress: null };
     obj5[1] = function onPress() {
       return closure_1_21(stateFromStores, arr.slice(Math.floor(arr.length / 2)), false);
     };
-    const items7 = [callback4(tmp5(5599).TableRow, obj5), ];
+    const items7 = [callback4(tmp5(5599).TableRow, obj5)];
     const obj6 = { label: "Reset End Date", onPress: null };
     obj6[1] = function onPress() {
       return closure_1_21(stateFromStores, closure_2, true);
@@ -309,10 +331,14 @@ export default function DevToolsGuildPowerupsScreen() {
     obj7[2] = closure_13.map((dc) => callback(closure_24, { dc }, dc));
     items6[2] = callback4(tmp5(5992).TableRowGroup, obj7);
     const obj8 = { title: "Guild Level DCs", hasIcons: false, children: null };
-    obj8[2] = closure_11.map((dc) => closure_1_18(closure_1_25, { dc, guildId: stateFromStores, isDismissed: closure_1.includes(dc) }, dc));
+    obj8[2] = closure_11.map((dc) =>
+      closure_1_18(closure_1_25, { dc, guildId: stateFromStores, isDismissed: closure_1.includes(dc) }, dc),
+    );
     items6[3] = callback4(tmp5(5992).TableRowGroup, obj8);
     const obj9 = { title: "Server Tag Guild Level DCs", hasIcons: false, children: null };
-    obj9[2] = closure_12.map((dc) => closure_1_18(closure_1_25, { dc, guildId: stateFromStores, isDismissed: closure_1.includes(dc) }, dc));
+    obj9[2] = closure_12.map((dc) =>
+      closure_1_18(closure_1_25, { dc, guildId: stateFromStores, isDismissed: closure_1.includes(dc) }, dc),
+    );
     items6[4] = callback4(tmp5(5992).TableRowGroup, obj9);
     const obj10 = { title: "Powerup Rollback DCs", hasIcons: false, children: null };
     obj10[2] = closure_14.map((dc) => callback(closure_24, { dc }, dc));
@@ -338,4 +364,4 @@ export default function DevToolsGuildPowerupsScreen() {
     const tmp17 = closure_5;
   }
   return tmp16Result;
-};
+}

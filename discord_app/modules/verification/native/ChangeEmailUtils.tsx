@@ -12,7 +12,7 @@ function _saveEmail() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -100,7 +100,9 @@ function _saveEmail() {
                   length = store.getState().routes.length;
                   c6 = callback(store(closure_2[4]).VerificationModalScenes.CONFIRM_EMAIL_CHANGE_CODE);
                   if (-1 === c6) {
-                    const replaced1 = store.replace(store(closure_2[4]).VerificationModalScenes.CONFIRM_EMAIL_CHANGE_CODE);
+                    const replaced1 = store.replace(
+                      store(closure_2[4]).VerificationModalScenes.CONFIRM_EMAIL_CHANGE_CODE,
+                    );
                   }
                 }
                 store.pop(length - c6 - 1);

@@ -36,7 +36,10 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
           initialBaseProductSkuId = productByStoreListingId.skuId;
           const _Math = Math;
           const variants = productByStoreListingId.variants;
-          initialVariantIndex = Math.max(0, variants.findIndex((skuId) => skuId.skuId === initialProductSkuId));
+          initialVariantIndex = Math.max(
+            0,
+            variants.findIndex((skuId) => skuId.skuId === initialProductSkuId),
+          );
         }
       }
     }
@@ -54,21 +57,33 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
   return initialCategorySkuId(() => {
     if (null != initialBaseProductSkuId) {
       if (null != initialCategorySkuId) {
-        let obj = { initialProductSkuId: null, initialVariantIndex: null, initialCategorySkuId: null, productIndex: null, categoryIndex: null };
+        let obj = {
+          initialProductSkuId: null,
+          initialVariantIndex: null,
+          initialCategorySkuId: null,
+          productIndex: null,
+          categoryIndex: null,
+        };
         obj[0] = tmp;
         obj[1] = initialVariantIndex;
         obj[2] = tmp6;
         let bound;
         if (null != products) {
           const _Math = Math;
-          bound = Math.max(0, obj3.findIndex((skuId) => skuId.skuId === closure_3));
+          bound = Math.max(
+            0,
+            obj3.findIndex((skuId) => skuId.skuId === closure_3),
+          );
         }
         obj[3] = bound;
         obj = categories;
         let bound1;
         if (null != categories) {
           const _Math2 = Math;
-          bound1 = Math.max(0, obj.findIndex((skuId) => skuId.skuId === closure_2));
+          bound1 = Math.max(
+            0,
+            obj.findIndex((skuId) => skuId.skuId === closure_2),
+          );
         }
         obj[4] = bound1;
         obj3 = products;

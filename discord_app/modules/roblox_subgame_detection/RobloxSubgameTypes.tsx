@@ -27,5 +27,10 @@ export const ROBLOX_DEFERRED_WEB_URL = (arg0) => {
   if (typeof ROBLOX_WEB_URL !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  return "https://ro.blox.com/Ebh5?af_dp=" + encodeURIComponent("roblox://placeId=" + arg0) + "&af_web_dp=" + encodeURIComponent("https://www.roblox.com/games/start?placeId=" + arg0);
+  return (
+    "https://ro.blox.com/Ebh5?af_dp=" +
+    encodeURIComponent("roblox://placeId=" + arg0) +
+    "&af_web_dp=" +
+    encodeURIComponent("https://www.roblox.com/games/start?placeId=" + arg0)
+  );
 };

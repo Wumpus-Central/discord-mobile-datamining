@@ -11,8 +11,24 @@ import set from "../../../../utils/PlatformUtils.tsx";
 const require = arg1;
 ({ View: c5, Image: closure_6, Pressable: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { flex: { flex: 1 }, flexCenterRow: { flexDirection: "row", alignItems: "center" }, nameContainer: null, activeNameContainer: null, usernameContainer: null, emojiText: null, colon: null, username: null, emojiImage: null, overflowIcon: null };
-createCacheKey = { paddingVertical: 4, borderRadius: ThemesDefault.radii.xs, alignItems: "center", flexDirection: "row" };
+createCacheKey = {
+  flex: { flex: 1 },
+  flexCenterRow: { flexDirection: "row", alignItems: "center" },
+  nameContainer: null,
+  activeNameContainer: null,
+  usernameContainer: null,
+  emojiText: null,
+  colon: null,
+  username: null,
+  emojiImage: null,
+  overflowIcon: null,
+};
+createCacheKey = {
+  paddingVertical: 4,
+  borderRadius: ThemesDefault.radii.xs,
+  alignItems: "center",
+  flexDirection: "row",
+};
 createCacheKey[2] = createCacheKey;
 let num = 4;
 if (set.isAndroid()) {
@@ -31,7 +47,12 @@ set = { fontSize: 13, color: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[7] = set;
 createCacheKey[8] = { width: 30, height: 30, resizeMode: "contain" };
 let obj2 = { fontSize: 16, padding: num2, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[9] = { paddingLeft: ThemesDefault.space.PX_8, alignItems: "center", flexDirection: "row", height: "100%" };
+createCacheKey[9] = {
+  paddingLeft: ThemesDefault.space.PX_8,
+  alignItems: "center",
+  flexDirection: "row",
+  height: "100%",
+};
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let result = set.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalEmoji/EmojiRow.tsx");
 
@@ -67,7 +88,7 @@ export const EmojiRow = function EmojiRow(guildId) {
       onEdit() {
         callback(true);
       },
-      onSelectRolesForEmoji
+      onSelectRolesForEmoji,
     });
   }, items1);
   const items2 = [callback];
@@ -82,7 +103,16 @@ export const EmojiRow = function EmojiRow(guildId) {
   callback2 = React.useCallback(() => {
     callback();
   }, items3);
-  obj = { icon: null, trailing: null, label: null, disabled: null, onPress: null, onLongPress: null, start: null, end: null };
+  obj = {
+    icon: null,
+    trailing: null,
+    label: null,
+    disabled: null,
+    onPress: null,
+    onLongPress: null,
+    start: null,
+    end: null,
+  };
   obj = {
     onPress() {
       let obj = emoji(onSelectRolesForEmoji[17]);
@@ -92,7 +122,7 @@ export const EmojiRow = function EmojiRow(guildId) {
       obj.open(obj);
     },
     disabled: emoji.available,
-    children: null
+    children: null,
   };
   obj1 = { style: tmp.emojiImage, source: null };
   const obj2 = { uri: null };
@@ -112,11 +142,15 @@ export const EmojiRow = function EmojiRow(guildId) {
     obj6[2] = nickname;
     tmp12Result = tmp12(tmp5(tmp6[15]).LegacyText, obj6);
   }
-  const items4 = [tmp12Result, ];
-  const obj7 = { numberOfLines: 1, style: tmp.username, children: emoji(onSelectRolesForEmoji[21]).getUserTag(emoji.user) };
+  const items4 = [tmp12Result];
+  const obj7 = {
+    numberOfLines: 1,
+    style: tmp.username,
+    children: emoji(onSelectRolesForEmoji[21]).getUserTag(emoji.user),
+  };
   items4[1] = callback(guildId(onSelectRolesForEmoji[15]).LegacyText, obj7);
   obj5[1] = items4;
-  const items5 = [closure_10(closure_5, obj5), , ];
+  const items5 = [closure_10(closure_5, obj5), ,];
   obj8 = { user: emoji.user, guildId, size: tmp5(tmp6[15]).AvatarSizes.XSMALL };
   items5[1] = callback(guildId(onSelectRolesForEmoji[15]).Avatar, obj8);
   tmp12Result = null;
@@ -152,9 +186,19 @@ export const EmojiRow = function EmojiRow(guildId) {
       function updateName(arg0) {
         callback(arg0);
       }
-      const obj12 = { autoCorrect: false, numberOfLines: 1, returnKeyType: "done", autoCapitalize: "none", autoFocus: true, onBlur: null, style: null, onChangeText: null, value: null };
+      const obj12 = {
+        autoCorrect: false,
+        numberOfLines: 1,
+        returnKeyType: "done",
+        autoCapitalize: "none",
+        autoFocus: true,
+        onBlur: null,
+        style: null,
+        onChangeText: null,
+        value: null,
+      };
       obj12[5] = handleNameBlur;
-      const items6 = [, ];
+      const items6 = [,];
       ({ emojiText: arr8[0], flex: arr8[1] } = tmp);
       obj12[6] = items6;
       obj12[7] = updateName;
@@ -171,7 +215,27 @@ export const EmojiRow = function EmojiRow(guildId) {
     return tmp12(guildId(onSelectRolesForEmoji[16]).TableRow, obj);
   }
   const obj13 = { style: tmp.nameContainer, children: null };
-  const items7 = [callback(guildId(onSelectRolesForEmoji[14]).Text, { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" }), callback(guildId(onSelectRolesForEmoji[14]).Text, { lineClamp: 1, style: tmp.emojiText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: first }), callback(guildId(onSelectRolesForEmoji[14]).Text, { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" })];
+  const items7 = [
+    callback(guildId(onSelectRolesForEmoji[14]).Text, {
+      style: tmp.colon,
+      variant: "text-md/medium",
+      color: "text-muted",
+      children: ":",
+    }),
+    callback(guildId(onSelectRolesForEmoji[14]).Text, {
+      lineClamp: 1,
+      style: tmp.emojiText,
+      variant: "text-md/medium",
+      color: "mobile-text-heading-primary",
+      children: first,
+    }),
+    callback(guildId(onSelectRolesForEmoji[14]).Text, {
+      style: tmp.colon,
+      variant: "text-md/medium",
+      color: "text-muted",
+      children: ":",
+    }),
+  ];
   obj13[1] = items7;
   tmp12Result1 = tmp15(tmp16, obj13);
 };

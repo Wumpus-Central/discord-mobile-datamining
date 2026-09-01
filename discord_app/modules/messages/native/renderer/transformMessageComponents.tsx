@@ -162,7 +162,15 @@ function transformToRowGeneratedComponent(message, accessory) {
                     if (VISUAL_PLACEHOLDER === tmp(tmp2[14]).MediaGalleryItemType.IMAGE) {
                       str2 = "image";
                     }
-                    let obj6 = { type: null, mediaItem: null, isSpoilered: null, isAuthorBot: null, shouldObscureSpoiler: null, shouldAgeVerify: null, enabledContentHarmTypeFlags: null };
+                    let obj6 = {
+                      type: null,
+                      mediaItem: null,
+                      isSpoilered: null,
+                      isAuthorBot: null,
+                      shouldObscureSpoiler: null,
+                      shouldAgeVerify: null,
+                      enabledContentHarmTypeFlags: null,
+                    };
                     obj6[0] = str2;
                     ({ media: obj25[1], spoiler: spoiler2 } = accessory);
                     if (spoiler2 == null) {
@@ -176,7 +184,12 @@ function transformToRowGeneratedComponent(message, accessory) {
                     let unfurledMediaItemObscurityProps = tmp(tmp2[13]).getUnfurledMediaItemObscurityProps(obj6);
                     const isObscured2 = unfurledMediaItemObscurityProps.isObscured;
                     let isVerifiedTeenResult = isObscured2;
-                    ({ isSpoiler: isSpoiler2, spoilerDescription: spoilerDescription2, obscureDescription: obscureDescription2, obscureAwaitingScan: obscureAwaitingScan2 } = unfurledMediaItemObscurityProps);
+                    ({
+                      isSpoiler: isSpoiler2,
+                      spoilerDescription: spoilerDescription2,
+                      obscureDescription: obscureDescription2,
+                      obscureAwaitingScan: obscureAwaitingScan2,
+                    } = unfurledMediaItemObscurityProps);
                     if (isObscured2) {
                       isVerifiedTeenResult = tmp(tmp2[15]).isVerifiedTeen();
                       const tmpResult10 = tmp(tmp2[15]);
@@ -236,7 +249,15 @@ function transformToRowGeneratedComponent(message, accessory) {
                         }
                         str = str2;
                       }
-                      obj = { type: null, mediaItem: null, isSpoilered: null, isAuthorBot: null, shouldObscureSpoiler: null, enabledContentHarmTypeFlags: null, shouldAgeVerify: null };
+                      obj = {
+                        type: null,
+                        mediaItem: null,
+                        isSpoilered: null,
+                        isAuthorBot: null,
+                        shouldObscureSpoiler: null,
+                        enabledContentHarmTypeFlags: null,
+                        shouldAgeVerify: null,
+                      };
                       obj[0] = str;
                       ({ media: obj4[1], spoiler } = media);
                       if (spoiler == null) {
@@ -250,7 +271,8 @@ function transformToRowGeneratedComponent(message, accessory) {
                       const unfurledMediaItemObscurityProps = tmp4Result.getUnfurledMediaItemObscurityProps(obj);
                       const isObscured = unfurledMediaItemObscurityProps.isObscured;
                       let isVerifiedTeenResult = isObscured;
-                      ({ isSpoiler, spoilerDescription, obscureDescription, obscureAwaitingScan } = unfurledMediaItemObscurityProps);
+                      ({ isSpoiler, spoilerDescription, obscureDescription, obscureAwaitingScan } =
+                        unfurledMediaItemObscurityProps);
                       if (isObscured) {
                         tmp4Result = tmp4(tmp3[15]);
                         isVerifiedTeenResult = tmp4Result.isVerifiedTeen();
@@ -327,7 +349,15 @@ function transformToRowGeneratedComponent(message, accessory) {
               }
               return tmp44;
             } else if (tmp(tmp2[6]).ComponentType.FILE === type) {
-              let obj9 = { type: "file", mediaItem: null, isSpoilered: null, isAuthorBot: null, shouldObscureSpoiler: null, shouldAgeVerify: null, enabledContentHarmTypeFlags: null };
+              let obj9 = {
+                type: "file",
+                mediaItem: null,
+                isSpoilered: null,
+                isAuthorBot: null,
+                shouldObscureSpoiler: null,
+                shouldAgeVerify: null,
+                enabledContentHarmTypeFlags: null,
+              };
               ({ file: obj16[1], spoiler } = accessory);
               if (spoiler == null) {
                 spoiler = false;
@@ -340,7 +370,8 @@ function transformToRowGeneratedComponent(message, accessory) {
               const unfurledMediaItemObscurityProps1 = tmp(tmp2[13]).getUnfurledMediaItemObscurityProps(obj9);
               let isObscured = unfurledMediaItemObscurityProps1.isObscured;
               let isVerifiedTeenResult1 = isObscured;
-              ({ isSpoiler, spoilerDescription, obscureDescription, obscureAwaitingScan } = unfurledMediaItemObscurityProps1);
+              ({ isSpoiler, spoilerDescription, obscureDescription, obscureAwaitingScan } =
+                unfurledMediaItemObscurityProps1);
               if (isObscured) {
                 isVerifiedTeenResult1 = tmp(tmp2[15]).isVerifiedTeen();
                 const tmpResult12 = tmp(tmp2[15]);
@@ -426,7 +457,10 @@ function transformToRowGeneratedComponent(message, accessory) {
                     const tmp6 = enabledContentHarmTypeFlags(accessory, shouldObscureSpoiler);
                     if (checkpointData.version === shouldAgeVerify.V2025) {
                       const _Intl = Intl;
-                      const numberFormat = new Intl.NumberFormat(tmp(tmp2[8]).intl.currentLocale, { notation: "compact", compactDisplay: "short" });
+                      const numberFormat = new Intl.NumberFormat(tmp(tmp2[8]).intl.currentLocale, {
+                        notation: "compact",
+                        compactDisplay: "short",
+                      });
                       const obj14 = {};
                       const merged10 = Object.assign(tmp6);
                       const obj15 = {};
@@ -551,7 +585,10 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
         const size = {};
         const merged = Object.assign(file);
         let tmp4Result = hasFlag;
-        size.srcIsAnimated = tmp4Result.hasFlag(file.flags, messageAttachmentToUnfurledMediaItem.UnfurledMediaItemFlags.IS_ANIMATED);
+        size.srcIsAnimated = tmp4Result.hasFlag(
+          file.flags,
+          messageAttachmentToUnfurledMediaItem.UnfurledMediaItemFlags.IS_ANIMATED,
+        );
         if (!shouldShowMedia.shouldShowMedia) {
           size.height = 0;
           size.width = 0;
@@ -586,13 +623,16 @@ let c10 = importDefaultResult;
 let result = require("set").fileFinishedImporting("modules/messages/native/renderer/transformMessageComponents.tsx");
 
 export default function transformMessageComponents(message, arr) {
-  obj = { type: "textDisplayComponent", parserState: obj(7631).getInitialParserStateFromMessage(message.message, closure_7) };
+  obj = {
+    type: "textDisplayComponent",
+    parserState: obj(7631).getInitialParserStateFromMessage(message.message, closure_7),
+  };
   obj = {};
   const merged = Object.assign(message);
   obj.markdownConfigs = { textDisplayComponent: obj };
   const mapped = arr.map((arg0) => closure_1_8(obj, arg0));
   return mapped.filter(obj(1471).isNotNullish);
-};
+}
 export const getUnfurledMediaItemType = function getUnfurledMediaItemType(arg0) {
   ({ width, height, contentType } = arg0);
   if (null != width) {

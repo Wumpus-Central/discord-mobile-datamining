@@ -3,7 +3,12 @@ import set from "../../../../_runtime/00002_set.js";
 import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import keys from "../../../../_runtime/00644_keys.js";
 
-let obj = keys.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "HermesInternal" }));
+let obj = keys.create(() => ({
+  errors: {},
+  registrationOptions: {},
+  submitting: false,
+  registrationVariant: "HermesInternal",
+}));
 const result = set.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
 export const useRegistrationUIStore = obj;

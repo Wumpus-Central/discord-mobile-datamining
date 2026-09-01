@@ -5,7 +5,9 @@ import closure_5 from "../../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumFeaturesPromotionalLogo.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/native/gifting/PremiumFeaturesPromotionalLogo.tsx",
+);
 
 export default function PremiumFeaturesPromotionalLogo(arg0) {
   ({ rotatingAvatarImageUrl, promoRotatingStyle, shouldAnimate } = arg0);
@@ -62,5 +64,9 @@ export default function PremiumFeaturesPromotionalLogo(arg0) {
     }
     return tmp13;
   }
-  tmp13 = jsx(tmp9(tmp2[8]), { style: promoRotatingStyle, resizeMode: "contain", source: { uri: rotatingAvatarImageUrl } });
-};
+  tmp13 = jsx(tmp9(tmp2[8]), {
+    style: promoRotatingStyle,
+    resizeMode: "contain",
+    source: { uri: rotatingAvatarImageUrl },
+  });
+}

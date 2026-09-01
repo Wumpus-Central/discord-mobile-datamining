@@ -6,15 +6,23 @@ import closure_2 from "../../../../stores/UserStore.tsx";
 import { SafetyWarningTypes } from "../../ChannelSafetyWarningsStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx",
+);
 
 export const useInappropriateConversationsTiers = function useInappropriateConversationsTiers(channel) {
   let obj = InappropriateConversationExperiment;
-  const isEligibleForInappropriateConversationWarning = obj.useIsEligibleForInappropriateConversationWarning({ location: "context-menu-item" });
+  const isEligibleForInappropriateConversationWarning = obj.useIsEligibleForInappropriateConversationWarning({
+    location: "context-menu-item",
+  });
   const items = [closure_2];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = initialize;
-  const inappropriateConversationBannerForChannel = useInappropriateConversationBannerForChannel.useInappropriateConversationBannerForChannel(channel.id, "context-menu-item");
+  const inappropriateConversationBannerForChannel =
+    useInappropriateConversationBannerForChannel.useInappropriateConversationBannerForChannel(
+      channel.id,
+      "context-menu-item",
+    );
   let isStaffResult;
   if (stateFromStores != null) {
     isStaffResult = stateFromStores.isStaff();

@@ -31,10 +31,32 @@ function AutocompleteLabel(text) {
 }
 ({ ChannelTypes: closure_8, Fonts } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { row: null, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, labelRow: null };
-createCacheKey = { height: require("AUTOCOMPLETE_ROW_HEIGHT").AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = {
+  row: null,
+  leading: null,
+  trailing: null,
+  username: null,
+  emoji: null,
+  emojiImage: null,
+  emojiText: null,
+  stickerContainer: null,
+  commandChoiceLoadingContainer: null,
+  commandChoiceLoadingItem: null,
+  autocompleteIcon: null,
+  gameIcon: null,
+  labelRow: null,
+};
+createCacheKey = {
+  height: require("AUTOCOMPLETE_ROW_HEIGHT").AUTOCOMPLETE_ROW_HEIGHT,
+  paddingVertical: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { fontSize: 16, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+createCacheKey[1] = {
+  fontSize: 16,
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+  fontFamily: Fonts.PRIMARY_SEMIBOLD,
+};
 let obj1 = { fontSize: 16, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 createCacheKey[2] = { fontSize: 14, color: ThemesDefault.colors.TEXT_MUTED };
 const obj2 = { fontSize: 14, color: ThemesDefault.colors.TEXT_MUTED };
@@ -44,12 +66,38 @@ createCacheKey[5] = { resizeMode: "contain" };
 let obj3 = { color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
 createCacheKey[6] = { lineHeight: 32, fontSize: 27, textAlign: "center", color: ThemesDefault.colors.TEXT_DEFAULT };
 const obj4 = { lineHeight: 32, fontSize: 27, textAlign: "center", color: ThemesDefault.colors.TEXT_DEFAULT };
-createCacheKey[7] = { width: 56, height: 56, marginHorizontal: 4, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[7] = {
+  width: 56,
+  height: 56,
+  marginHorizontal: 4,
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[8] = { flex: 1, justifyContent: "center" };
-const obj5 = { width: 56, height: 56, marginHorizontal: 4, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[9] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+const obj5 = {
+  width: 56,
+  height: 56,
+  marginHorizontal: 4,
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  borderRadius: ThemesDefault.radii.sm,
+};
+createCacheKey[9] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  height: 16,
+  borderRadius: ThemesDefault.radii.lg,
+  alignSelf: "flex-start",
+};
 createCacheKey[10] = { opacity: 0.6 };
-const obj6 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+const obj6 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  height: 16,
+  borderRadius: ThemesDefault.radii.lg,
+  alignSelf: "flex-start",
+};
 createCacheKey[11] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
 const obj7 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[12] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
@@ -70,7 +118,14 @@ const obj9 = {
       }
       return nickname;
     });
-    obj = { DEPRECATED_style: tmp.row, onPress, accessibilityRole: "menuitem", label: null, leading: null, trailing: null };
+    obj = {
+      DEPRECATED_style: tmp.row,
+      onPress,
+      accessibilityRole: "menuitem",
+      label: null,
+      leading: null,
+      trailing: null,
+    };
     if (nick == null) {
       nick = stateFromStores;
     }
@@ -81,7 +136,7 @@ const obj9 = {
     obj[3] = closure_9(AutocompleteLabel, { text: nick });
     obj = { status, user, size: tmp2(1297).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
     obj[4] = closure_9(user(1297).Avatar, obj);
-    const items1 = [, ];
+    const items1 = [,];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
     obj[5] = closure_9(guildId(9771), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
     return closure_9(user(8363).FormRow, obj);
@@ -111,7 +166,7 @@ const obj9 = {
     colorString = colorString.colorString;
     ({ onPress, showDescription, name } = colorString);
     let obj = { onPress, accessibilityRole: "menuitem", label: null, trailing: null };
-    const items = [callback3().leading, ];
+    const items = [callback3().leading];
     let tmp5;
     if (null != colorString) {
       obj = { color: null };
@@ -141,7 +196,13 @@ const obj9 = {
     obj = { source: channelIconWithGuild, style: tmp.autocompleteIcon };
     const tmp9 = callback(Button.Icon, obj);
     const channelName = computeChannelName.computeChannelName(channel, closure_7, closure_6);
-    obj = { onPress: onPress.onPress, accessibilityRole: "menuitem", leading: tmp9, label: callback(AutocompleteLabel, { text: channelName }), trailing: null };
+    obj = {
+      onPress: onPress.onPress,
+      accessibilityRole: "menuitem",
+      leading: tmp9,
+      label: callback(AutocompleteLabel, { text: channelName }),
+      trailing: null,
+    };
     obj1 = { style: tmp.trailing, variant: "text-sm/medium", color: "text-muted", children: null };
     let name = null != category;
     if (name) {
@@ -157,7 +218,7 @@ const obj9 = {
     const tmp = callback3();
     if ("" !== url) {
       let obj = { style: null, source: null };
-      const items = [, ];
+      const items = [,];
       ({ emoji: arr2[0], emojiImage: arr2[1] } = tmp);
       obj[0] = items;
       obj = { uri: null };
@@ -168,18 +229,27 @@ const obj9 = {
     } else {
       tmp2 = callback;
       obj = { style: null, allowFontScaling: false, children: null };
-      const items1 = [, ];
+      const items1 = [,];
       ({ emoji: arr[0], emojiText: arr[1] } = tmp);
       obj[0] = items1;
       obj[2] = surrogates;
       tmp5 = callback(Button.LegacyText, obj);
     }
-    obj1 = { onPress, accessibilityRole: "menuitem", leading: tmp5, label: tmp2(AutocompleteLabel, { text: ":" + name + ":" }) };
+    obj1 = {
+      onPress,
+      accessibilityRole: "menuitem",
+      leading: tmp5,
+      label: tmp2(AutocompleteLabel, { text: ":" + name + ":" }),
+    };
     return tmp2(Form.FormRow, obj1);
   },
   EmojiPremiumUpsell(arg0) {
     ({ results, onPress } = arg0);
-    return callback(Form.FormRow, { onPress, accessibilityRole: "menuitem", label: callback(ChannelAutocompleteEmojiUpsellDefault, { results }) });
+    return callback(Form.FormRow, {
+      onPress,
+      accessibilityRole: "menuitem",
+      label: callback(ChannelAutocompleteEmojiUpsellDefault, { results }),
+    });
   },
   Choice(arg0) {
     ({ choice, onPress } = arg0);
@@ -201,7 +271,14 @@ const obj9 = {
     ({ sticker, onPress, onLongPress, isInteracting } = arg0);
     let obj = useStickerPackCategories;
     const shouldAnimateSticker = obj.useShouldAnimateSticker(isInteracting);
-    obj = { accessibilityRole: "menuitem", style: callback3().stickerContainer, onPress, onLongPress, pointerEvents: "box-only", children: callback(StickerDefault, { sticker, size: 40, animated: shouldAnimateSticker }) };
+    obj = {
+      accessibilityRole: "menuitem",
+      style: callback3().stickerContainer,
+      onPress,
+      onLongPress,
+      pointerEvents: "box-only",
+      children: callback(StickerDefault, { sticker, size: 40, animated: shouldAnimateSticker }),
+    };
     return callback(PressableBase.PressableOpacity, obj);
   },
   Label(text) {
@@ -226,8 +303,13 @@ const obj9 = {
       tmp6Result = tmp6(preloadDefault, obj);
       tmp8 = tmp6;
     }
-    return tmp8(Form.FormRow, { onPress: game.onPress, accessibilityRole: "menuitem", leading: tmp6Result, label: tmp8(AutocompleteLabel, obj3) });
-  }
+    return tmp8(Form.FormRow, {
+      onPress: game.onPress,
+      accessibilityRole: "menuitem",
+      leading: tmp6Result,
+      label: tmp8(AutocompleteLabel, obj3),
+    });
+  },
 };
 const result = require("set").fileFinishedImporting("modules/autocompleter/native/Autocomplete.tsx");
 

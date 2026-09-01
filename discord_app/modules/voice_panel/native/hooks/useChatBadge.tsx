@@ -18,4 +18,4 @@ export default function useChatBadge(arg0) {
     }
     return str;
   });
-};
+}

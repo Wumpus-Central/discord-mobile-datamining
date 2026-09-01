@@ -46,7 +46,15 @@ export const UserProfileAnalyticsProvider = (children) => {
       obj[1] = analyticsLocations;
       const merged = Object.assign(value);
       const result = obj.trackUserProfileAction(obj);
-      obj = { profileUi: "USER_PROFILE", timeToInteractiveMs: null, timeToLoadMs: null, timeToFetchMs: null, viewStartedAt: null, fetchStartedAt: null, analyticsLocations: null };
+      obj = {
+        profileUi: "USER_PROFILE",
+        timeToInteractiveMs: null,
+        timeToLoadMs: null,
+        timeToFetchMs: null,
+        viewStartedAt: null,
+        fetchStartedAt: null,
+        analyticsLocations: null,
+      };
       obj[1] = tmp2.current;
       let diff;
       if (null != openedAt) {
@@ -90,7 +98,17 @@ export const useCreateUserProfileAnalyticsContext = function useCreateUserProfil
   }
   const items = [sessionId, layout, userId, guildId, channelId, messageId, roleId, sourceSessionId, flag];
   return channelId.useMemo(() => {
-    const obj = { sessionId: layout(guildId[4]).v4(), sourceSessionId: null, layout: null, userId: null, guildId: null, channelId: null, messageId: null, roleId: null, showGuildProfile: null };
+    const obj = {
+      sessionId: layout(guildId[4]).v4(),
+      sourceSessionId: null,
+      layout: null,
+      userId: null,
+      guildId: null,
+      channelId: null,
+      messageId: null,
+      roleId: null,
+      showGuildProfile: null,
+    };
     let tmp = sourceSessionId;
     if (sourceSessionId == null) {
       tmp = sessionId;
@@ -154,6 +172,6 @@ export const useUserProfileAnalyticsContext = function useUserProfileAnalyticsCo
         const merged1 = Object.assign(arg0);
         const result = obj.trackUserProfileWishlistAction(obj);
       }
-    }, items3)
+    }, items3),
   };
 };

@@ -3,6 +3,4 @@ import set from "../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/quests/useInGameQuestConnectState.tsx");
 
-export function useInGameQuestConnectState(quest) {
-
-}
+export function useInGameQuestConnectState(quest) {}

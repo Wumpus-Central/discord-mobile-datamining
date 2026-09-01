@@ -29,7 +29,7 @@ function _handleConnectionOpen() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, rendererCrashReason) {
+    return (function* (arg0, rendererCrashReason) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -193,11 +193,21 @@ let c22 = true;
 let c23 = null;
 let c24 = null;
 const Store = initializeDefault.Store;
-class GatewayConnectionStore extends Store {
-}
+class GatewayConnectionStore extends Store {}
 const prototype = GatewayConnectionStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_6, closure_7, closure_8, closure_9, closure_10, closure_11, closure_12, closure_13, closure_14, closure_5);
+  this.waitFor(
+    closure_6,
+    closure_7,
+    closure_8,
+    closure_9,
+    closure_10,
+    closure_11,
+    closure_12,
+    closure_13,
+    closure_14,
+    closure_5,
+  );
   const items = [closure_9];
   this.syncWith(items, handleMediaEngineChange);
   const items1 = [closure_13];
@@ -424,10 +434,15 @@ const gatewayConnectionStore = new GatewayConnectionStore(dispatcherDefault, {
     if (socket.isSessionEstablished()) {
       if ("userIds" in userIds) {
         const obj2 = applyDefault(userIds.userIds);
-        const item = applyDefault(userIds.userIds).chunk(100).forEach((userIds) => {
-          const socket = userIds(closure_1_3[13]).socket;
-          const guildMembers = socket.requestGuildMembers(userIds.guildIds, { userIds, presences: userIds.presences });
-        });
+        const item = applyDefault(userIds.userIds)
+          .chunk(100)
+          .forEach((userIds) => {
+            const socket = userIds(closure_1_3[13]).socket;
+            const guildMembers = socket.requestGuildMembers(userIds.guildIds, {
+              userIds,
+              presences: userIds.presences,
+            });
+          });
         const chunkResult = applyDefault(userIds.userIds).chunk(100);
       } else {
         const socket2 = require("GatewaySocketSingleton.tsx").socket;
@@ -509,7 +524,9 @@ const gatewayConnectionStore = new GatewayConnectionStore(dispatcherDefault, {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = store.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((streamKey) => callback(4544).decodeStreamKey(streamKey).ownerId === id.getId());
+        _require = allActiveStreamKeys.find(
+          (streamKey) => callback(4544).decodeStreamKey(streamKey).ownerId === id.getId(),
+        );
         const allActiveStreamKeys1 = store.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((arg0) => arg0 !== closure_0);
         const item = found.forEach((streamKey) => {
@@ -588,7 +605,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(dispatcherDefault, {
       const localVoiceState = handleIdentify.localVoiceState;
       localVoiceState.update();
     }
-  }
+  },
 });
 let obj = {
   START_SESSION: function handleSessionStart() {
@@ -792,10 +809,15 @@ let obj = {
     if (socket.isSessionEstablished()) {
       if ("userIds" in userIds) {
         const obj2 = applyDefault(userIds.userIds);
-        const item = applyDefault(userIds.userIds).chunk(100).forEach((userIds) => {
-          const socket = userIds(closure_1_3[13]).socket;
-          const guildMembers = socket.requestGuildMembers(userIds.guildIds, { userIds, presences: userIds.presences });
-        });
+        const item = applyDefault(userIds.userIds)
+          .chunk(100)
+          .forEach((userIds) => {
+            const socket = userIds(closure_1_3[13]).socket;
+            const guildMembers = socket.requestGuildMembers(userIds.guildIds, {
+              userIds,
+              presences: userIds.presences,
+            });
+          });
         const chunkResult = applyDefault(userIds.userIds).chunk(100);
       } else {
         const socket2 = require("GatewaySocketSingleton.tsx").socket;
@@ -877,7 +899,9 @@ let obj = {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = store.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((streamKey) => callback(4544).decodeStreamKey(streamKey).ownerId === id.getId());
+        _require = allActiveStreamKeys.find(
+          (streamKey) => callback(4544).decodeStreamKey(streamKey).ownerId === id.getId(),
+        );
         const allActiveStreamKeys1 = store.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((arg0) => arg0 !== closure_0);
         const item = found.forEach((streamKey) => {
@@ -956,7 +980,7 @@ let obj = {
       const localVoiceState = handleIdentify.localVoiceState;
       localVoiceState.update();
     }
-  }
+  },
 };
 const tmp3 = new timestampDefault("ConnectionStore");
 let result = require("set").fileFinishedImporting("modules/gateway/GatewayConnectionStore.tsx");

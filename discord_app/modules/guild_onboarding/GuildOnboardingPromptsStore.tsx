@@ -92,8 +92,7 @@ let closure_13 = [];
 let closure_14 = [];
 let closure_15 = [];
 const Store = initializeDefault.Store;
-class GuildOnboardingPromptsStore extends Store {
-}
+class GuildOnboardingPromptsStore extends Store {}
 const prototype = GuildOnboardingPromptsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_5, closure_3);
@@ -319,7 +318,15 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
   },
   GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: function handleSuccess(guildId) {
     guildId = guildId.guildId;
-    ({ prompts, defaultChannelIds, responses, onboardingPromptsSeen, onboardingResponsesSeen, connections, additionalConnections } = guildId);
+    ({
+      prompts,
+      defaultChannelIds,
+      responses,
+      onboardingPromptsSeen,
+      onboardingResponsesSeen,
+      connections,
+      additionalConnections,
+    } = guildId);
     c11 = false;
     ({ enabled, mode, belowRequirements } = guildId);
     const tmp = onboardingStatus.getOnboardingStatus(guildId) === GuildOnboardingStatus.READY;
@@ -371,7 +378,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
       onboardingPromptsSeen: null,
       onboardingResponsesSeen: null,
       connections: null,
-      additionalConnections: null
+      additionalConnections: null,
     };
     let items = responses;
     if (tmp) {
@@ -596,7 +603,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
     if (null != dependencyMap[mode.guildId]) {
       tmp.mode = mode.mode;
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsStore.tsx");
 

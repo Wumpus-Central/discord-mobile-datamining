@@ -30,14 +30,16 @@ export default function useGetOrFetchApplications(arg0) {
     }
   }, items);
   const items1 = [closure_4];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => items1.map((arg0) => {
-    let application;
-    if (null != arg0) {
-      application = application.getApplication(arg0);
-    }
-    return application;
-  }));
-};
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () =>
+    items1.map((arg0) => {
+      let application;
+      if (null != arg0) {
+        application = application.getApplication(arg0);
+      }
+      return application;
+    }),
+  );
+}
 export const useGetOrFetchApplication = function useGetOrFetchApplication(applicationId, fetchesApplication) {
   let flag = fetchesApplication;
   if (fetchesApplication === undefined) {
@@ -71,11 +73,13 @@ export const useGetOrFetchApplication = function useGetOrFetchApplication(applic
     }
   }, items2);
   const items3 = [closure_4];
-  return items1(589).useStateFromStoresArray(items3, () => items1.map((arg0) => {
-    let application;
-    if (null != arg0) {
-      application = application.getApplication(arg0);
-    }
-    return application;
-  }))[0];
+  return items1(589).useStateFromStoresArray(items3, () =>
+    items1.map((arg0) => {
+      let application;
+      if (null != arg0) {
+        application = application.getApplication(arg0);
+      }
+      return application;
+    }),
+  )[0];
 };

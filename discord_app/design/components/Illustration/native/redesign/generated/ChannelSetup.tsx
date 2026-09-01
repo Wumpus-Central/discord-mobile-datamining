@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/ChannelSetup.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/ChannelSetup.tsx",
+);
 
 export const getChannelSetupSource = function getChannelSetupSource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getChannelSetupSource = function getChannelSetupSource(theme) {
     },
     light() {
       return callback(17256);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useChannelSetupSource = function useChannelSetupSource() {
     },
     light() {
       return callback(17256);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const ChannelSetup = function ChannelSetup(arg0) {
     },
     light() {
       return callback(17256);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

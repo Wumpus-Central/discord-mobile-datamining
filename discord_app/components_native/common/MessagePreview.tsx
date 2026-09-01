@@ -14,7 +14,10 @@ export default function MessagePreview(channelId) {
   let jumpTargetId;
   let obj = onBeforeJumpToMessage(589);
   const items = [closure_4];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ messages: closure_4.messages, jumpTargetId: closure_4.jumpTargetId }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    messages: closure_4.messages,
+    jumpTargetId: closure_4.jumpTargetId,
+  }));
   jumpTargetId = stateFromStoresObject.jumpTargetId;
   const items1 = [jumpTargetId, onBeforeJumpToMessage];
   const memo = React.useMemo(() => {
@@ -25,9 +28,22 @@ export default function MessagePreview(channelId) {
     obj[2] = onBeforeJumpToMessage;
     return obj;
   }, items1);
-  const effect = React.useEffect(() => () => {
-    callback(table[6]).clearMessages();
-  }, []);
-  obj = { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation: closure_6 };
-  return jsx(onBeforeJumpToMessage(12918).ChatPreview, { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation: closure_6 });
-};
+  const effect = React.useEffect(
+    () => () => {
+      callback(table[6]).clearMessages();
+    },
+    [],
+  );
+  obj = {
+    channelId: channelId.channelId,
+    messages: stateFromStoresObject.messages,
+    jumpToChatProps: memo,
+    analyticsLocation: closure_6,
+  };
+  return jsx(onBeforeJumpToMessage(12918).ChatPreview, {
+    channelId: channelId.channelId,
+    messages: stateFromStoresObject.messages,
+    jumpToChatProps: memo,
+    analyticsLocation: closure_6,
+  });
+}

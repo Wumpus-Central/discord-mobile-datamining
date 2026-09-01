@@ -13,7 +13,7 @@ function _fetchAppliedGuildBoostsForGuild() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       dependencyMap = tmp2;
       obj1 = flag;
       if (flag === undefined) {
@@ -59,7 +59,7 @@ function _fetchAppliedGuildBoostsForUser() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       let callback = tmp2;
       if (flag === undefined) {
         flag = false;
@@ -104,7 +104,7 @@ function fetchGuildBoostSlots() {
 }
 function _fetchGuildBoostSlots() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const callback = tmp2;
     closure_0 = tmp5;
     closure_1_1(709).dispatch({ type: "GUILD_BOOST_SLOTS_FETCH" });
@@ -115,7 +115,12 @@ function _fetchGuildBoostSlots() {
     obj1[2] = closure_1_0(530).rejectWithMigratedError();
     yield HTTP.get(obj1);
     const body = arg1.body;
-    closure_0 = body.map((subscription_id) => closure_5.createFromServer(subscription_id, subscriptionById.getSubscriptionById(subscription_id.subscription_id)));
+    closure_0 = body.map((subscription_id) =>
+      closure_5.createFromServer(
+        subscription_id,
+        subscriptionById.getSubscriptionById(subscription_id.subscription_id),
+      ),
+    );
     const obj = callback(709);
     const obj4 = { type: "GUILD_BOOST_SLOTS_FETCH_SUCCESS", guildBoostSlots: null };
     obj4[1] = closure_0;
@@ -133,7 +138,7 @@ function _fetchGuildBoostSlots() {
 }
 function _fetchAppliedBoostsCooldown() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -236,7 +241,7 @@ function _applyToGuild() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -370,7 +375,7 @@ function _unapplyFromGuild() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -469,7 +474,7 @@ function _cancelGuildBoostSlot() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const table = tmp2;
       let callback = tmp5;
       const HTTP = lib(closure_1_2[5]).HTTP;
@@ -498,7 +503,7 @@ function _uncancelGuildBoostSlot() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const table = tmp2;
       let callback = tmp5;
       const HTTP = lib(closure_1_2[5]).HTTP;

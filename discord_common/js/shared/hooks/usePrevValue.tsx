@@ -13,4 +13,4 @@ export default function usePrevValue(current) {
     tmp2.current = current;
   }
   return tmp.current;
-};
+}

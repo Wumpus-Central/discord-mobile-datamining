@@ -10,7 +10,7 @@ function _testCaptcha() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();
@@ -80,8 +80,22 @@ function _testCaptcha() {
 }
 const result = require("set").fileFinishedImporting("modules/captcha/tooling/CaptchaTestActionCreators.tsx");
 
-export const CaptchaDeciderType = { HCAPTCHA_RQDATA: "hCaptchaRqdata", SMITE_RQDATA: "SmiteRqdata", RECAPTCHA: "Recaptcha", RECAPTCHA_ENTERPRISE: "RecaptchaEnterprise" };
-export const HCaptchaDifficulty = { EASY: 1, [1]: "EASY", MODERATE: 2, [2]: "MODERATE", DIFFICULT: 3, [3]: "DIFFICULT", VERY_DIFFICULT: 4, [4]: "VERY_DIFFICULT" };
+export const CaptchaDeciderType = {
+  HCAPTCHA_RQDATA: "hCaptchaRqdata",
+  SMITE_RQDATA: "SmiteRqdata",
+  RECAPTCHA: "Recaptcha",
+  RECAPTCHA_ENTERPRISE: "RecaptchaEnterprise",
+};
+export const HCaptchaDifficulty = {
+  EASY: 1,
+  [1]: "EASY",
+  MODERATE: 2,
+  [2]: "MODERATE",
+  DIFFICULT: 3,
+  [3]: "DIFFICULT",
+  VERY_DIFFICULT: 4,
+  [4]: "VERY_DIFFICULT",
+};
 export const testCaptcha = function testCaptcha(arg0, arg1) {
   const self = this;
   const apply = _testCaptcha.apply;

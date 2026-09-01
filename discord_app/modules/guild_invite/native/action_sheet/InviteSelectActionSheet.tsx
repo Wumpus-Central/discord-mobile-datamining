@@ -13,12 +13,18 @@ createCacheKey = { content: null };
 createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_invite/native/action_sheet/InviteSelectActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_invite/native/action_sheet/InviteSelectActionSheet.tsx",
+);
 
 export default function InviteSelectActionSheet(arg0) {
   ({ options, onChange: require } = arg0);
   ({ title, value } = arg0);
-  let obj = { contentStyles: callback().content, header: jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title }), children: null };
+  let obj = {
+    contentStyles: callback().content,
+    header: jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title }),
+    children: null,
+  };
   obj = {
     value,
     onChange(arg0) {
@@ -26,7 +32,13 @@ export default function InviteSelectActionSheet(arg0) {
       closure_1_1(closure_1_2[7]).hideActionSheet();
     },
     hasIcons: false,
-    children: options.map((value) => callback2(callback(table[8]).TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
+    children: options.map((value) =>
+      callback2(
+        callback(table[8]).TableRadioRow,
+        { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel },
+        "" + value.value,
+      ),
+    ),
   };
   obj[2] = jsx(context.TableRadioGroup, {
     value,
@@ -35,7 +47,13 @@ export default function InviteSelectActionSheet(arg0) {
       closure_1_1(closure_1_2[7]).hideActionSheet();
     },
     hasIcons: false,
-    children: options.map((value) => callback2(callback(table[8]).TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
+    children: options.map((value) =>
+      callback2(
+        callback(table[8]).TableRadioRow,
+        { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel },
+        "" + value.value,
+      ),
+    ),
   });
   return jsx(Background.BottomSheet, {
     value,
@@ -44,6 +62,12 @@ export default function InviteSelectActionSheet(arg0) {
       closure_1_1(closure_1_2[7]).hideActionSheet();
     },
     hasIcons: false,
-    children: options.map((value) => callback2(callback(table[8]).TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
+    children: options.map((value) =>
+      callback2(
+        callback(table[8]).TableRadioRow,
+        { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel },
+        "" + value.value,
+      ),
+    ),
   });
-};
+}

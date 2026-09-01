@@ -43,12 +43,24 @@ const memoResult = importAllResult.memo(function MessagesItemEmptyState() {
   obj[1] = registerAssetDefault;
   obj[2] = tmp.image;
   obj[1] = callback(closure_4, obj);
-  const items = [callback(closure_5, obj), , , ];
-  obj1 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.title, maxFontSizeMultiplier: 2, children: null };
+  const items = [callback(closure_5, obj), , ,];
+  obj1 = {
+    color: "mobile-text-heading-primary",
+    variant: "heading-lg/bold",
+    style: tmp.title,
+    maxFontSizeMultiplier: 2,
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj1[4] = intl.string(getSystemLocale.t["8JZof8"]);
   items[1] = callback(Text.Heading, obj1);
-  const obj2 = { color: "text-default", variant: "text-md/medium", style: tmp.body, maxFontSizeMultiplier: 2, children: null };
+  const obj2 = {
+    color: "text-default",
+    variant: "text-md/medium",
+    style: tmp.body,
+    maxFontSizeMultiplier: 2,
+    children: null,
+  };
   const intl2 = getSystemLocale.intl;
   obj2[4] = intl2.string(getSystemLocale.t["qm+H7x"]);
   items[2] = callback(Text.Text, obj2);
@@ -60,7 +72,9 @@ const memoResult = importAllResult.memo(function MessagesItemEmptyState() {
   obj[2] = items;
   return callback2(closure_5, obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemEmptyState.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/items/MessagesItemEmptyState.tsx",
+);
 
 export default memoResult;
 export const MESSAGES_ITEM_EMPTY_STATE_HEIGHT = 325;

@@ -59,7 +59,10 @@ function canFetchXboxProgramReward(canUseMonthlyOrbs) {
   }
   return flag;
 }
-let closure_5 = { [arg1(13381).RewardProgram.NITRO]: canFetchNitroProgramReward, [arg1(13381).RewardProgram.XBOX]: canFetchXboxProgramReward };
+let closure_5 = {
+  [arg1(13381).RewardProgram.NITRO]: canFetchNitroProgramReward,
+  [arg1(13381).RewardProgram.XBOX]: canFetchXboxProgramReward,
+};
 const result = require("set").fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
 
 export const isProgramRewardStale = function isProgramRewardStale(next_reward_date) {

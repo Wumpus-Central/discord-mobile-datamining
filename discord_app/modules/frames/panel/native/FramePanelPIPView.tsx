@@ -15,14 +15,23 @@ const memoResult = importAllResult.memo((transitionState) => {
   importAllResult = undefined;
   let landscapeSafeAreasConfig;
   const items = [landscapeSafeAreasConfig];
-  stateFromStores = transitionState(stateFromStores[5]).useStateFromStores(items, () => callback(landscapeSafeAreasConfig.getMainFrame()));
+  stateFromStores = transitionState(stateFromStores[5]).useStateFromStores(items, () =>
+    callback(landscapeSafeAreasConfig.getMainFrame()),
+  );
   const tmp2 = callback(stateFromStores);
   importAllResult = tmp2;
   let obj = transitionState(stateFromStores[5]);
   landscapeSafeAreasConfig = transitionState(stateFromStores[6]).useBaseActivityPanelPIPView().landscapeSafeAreasConfig;
   const items1 = [stateFromStores, landscapeSafeAreasConfig, tmp2, transitionCleanUp, transitionState];
   return importAllResult.useMemo(() => {
-    let obj = { transitionState, transitionCleanUp, pipOrientationLockState: closure_3, hasActivity: null != stateFromStores, context: transitionCleanUp(stateFromStores[7]), children: null };
+    let obj = {
+      transitionState,
+      transitionCleanUp,
+      pipOrientationLockState: closure_3,
+      hasActivity: null != stateFromStores,
+      context: transitionCleanUp(stateFromStores[7]),
+      children: null,
+    };
     obj = { layoutMode: closure_1_6.PIP, portraitSafeAreasConfig: closure_1_8, landscapeSafeAreasConfig };
     obj[5] = closure_1_9(transitionCleanUp(stateFromStores[8]), obj);
     return closure_1_9(transitionState(stateFromStores[6]).BaseActivityPanelPIPView, obj);

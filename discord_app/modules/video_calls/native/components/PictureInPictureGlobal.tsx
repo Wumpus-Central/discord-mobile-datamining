@@ -20,11 +20,20 @@ let c4 = importAllResult;
 ({ View: c5, StyleSheet: closure_6, TouchableOpacity: error } = get_ActivityIndicator);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 12;
-let obj = { container: { flex: 1, marginLeft: 12, marginRight: 12 }, elevationShadow: null, pip: null, background: null };
+let obj = {
+  container: { flex: 1, marginLeft: 12, marginRight: 12 },
+  elevationShadow: null,
+  pip: null,
+  background: null,
+};
 obj[1] = Button.generateBoxShadowStyle(require("Button").EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 obj = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[2] = obj;
-createCacheKey = { backgroundColor: ThemesDefault.colors.BLACK, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BLACK,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+};
 obj[3] = createCacheKey;
 let closure_18 = createCacheKey.createStyles(obj);
 let closure_19 = importAllResult.memo((channel) => {
@@ -38,7 +47,7 @@ let closure_19 = importAllResult.memo((channel) => {
   const tmp = callback4();
   let tmp4 = stateFromStores1(callback[14])(channel.id);
   let obj = channel(callback[15]);
-  const items = [closure_9, ];
+  const items = [closure_9];
   obj1 = closure_11;
   items[1] = closure_11;
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -72,13 +81,17 @@ let closure_19 = importAllResult.memo((channel) => {
   let tmp5Result = tmp5(tmp3[15]);
   const items2 = [closure_12];
   const items3 = [tmp10];
-  const stateFromStores2 = tmp5Result.useStateFromStores(items2, () => {
-    let isLocalVideoDisabledResult = null != stateFromStores1;
-    if (isLocalVideoDisabledResult) {
-      isLocalVideoDisabledResult = closure_1_12.isLocalVideoDisabled(tmp.id);
-    }
-    return isLocalVideoDisabledResult;
-  }, items3);
+  const stateFromStores2 = tmp5Result.useStateFromStores(
+    items2,
+    () => {
+      let isLocalVideoDisabledResult = null != stateFromStores1;
+      if (isLocalVideoDisabledResult) {
+        isLocalVideoDisabledResult = closure_1_12.isLocalVideoDisabled(tmp.id);
+      }
+      return isLocalVideoDisabledResult;
+    },
+    items3,
+  );
   tmp5Result = tmp5(tmp3[15]);
   const items4 = [closure_9, obj1];
   const stateFromStores3 = tmp5Result.useStateFromStores(items4, () => {
@@ -123,7 +136,10 @@ let closure_19 = importAllResult.memo((channel) => {
   if (tmp10 != null) {
     type = tmp10.type;
   }
-  const tmp19 = type === ParticipantTypes.ACTIVITY && stateFromStores1(callback[23])(tmp10.applicationId) && null == stateFromStores;
+  const tmp19 =
+    type === ParticipantTypes.ACTIVITY &&
+    stateFromStores1(callback[23])(tmp10.applicationId) &&
+    null == stateFromStores;
   let type1;
   if (tmp10 != null) {
     type1 = tmp10.type;
@@ -168,7 +184,7 @@ let closure_19 = importAllResult.memo((channel) => {
     obj2 = { style: null, children: null };
     obj2[0] = tmp.background;
     const obj3 = { style: null, children: null };
-    const items7 = [, , ];
+    const items7 = [, ,];
     ({ pip: arr8[0], elevationShadow: arr8[1] } = tmp);
     items7[2] = memo;
     obj3[0] = items7;
@@ -185,7 +201,7 @@ let closure_19 = importAllResult.memo((channel) => {
       obj4[3] = callback;
       tmp26Result = tmp26(tmp2Result, obj4);
     }
-    const items8 = [tmp26Result, , ];
+    const items8 = [tmp26Result, ,];
     tmp26Result = null != stateFromStores && !tmp19;
     if (tmp26Result) {
       const obj5 = { onSingleTap: null };
@@ -210,14 +226,24 @@ let closure_19 = importAllResult.memo((channel) => {
 });
 let closure_20 = importAllResult.memo((channel) => {
   channel = channel.channel;
-  [tmp2, tmp3] = callback(importAllResult.useState(() => constants.TOP_RIGHT), 2);
+  [tmp2, tmp3] = callback(
+    importAllResult.useState(() => constants.TOP_RIGHT),
+    2,
+  );
   const obj = { channel, preferredPosition: tmp2, onMove: tmp3, children: null };
-  const tmp = callback(importAllResult.useState(() => constants.TOP_RIGHT), 2);
+  const tmp = callback(
+    importAllResult.useState(() => constants.TOP_RIGHT),
+    2,
+  );
   obj[3] = callback3(closure_19, { channel });
   return callback3(PictureInPicturePositionsDefault, obj);
 });
-let closure_21 = { code: "function PictureInPictureGlobalTsx1(){const{withTiming,drawerState,STANDARD_EASING}=this.__closure;return withTiming(drawerState,{easing:STANDARD_EASING,duration:250});}" };
-let closure_22 = { code: "function PictureInPictureGlobalTsx2(){const{interpolate,animatedDrawerState,NAV_BAR_HEIGHT,PADDING,chatInputContainerHeight,PIP_AVOIDANCE_TAB_BAR_HEIGHT}=this.__closure;return{marginTop:interpolate(animatedDrawerState.get(),[0,1],[NAV_BAR_HEIGHT+PADDING,PADDING]),marginBottom:interpolate(animatedDrawerState.get(),[0,1],[chatInputContainerHeight+PADDING,PIP_AVOIDANCE_TAB_BAR_HEIGHT+PADDING])};}" };
+let closure_21 = {
+  code: "function PictureInPictureGlobalTsx1(){const{withTiming,drawerState,STANDARD_EASING}=this.__closure;return withTiming(drawerState,{easing:STANDARD_EASING,duration:250});}",
+};
+let closure_22 = {
+  code: "function PictureInPictureGlobalTsx2(){const{interpolate,animatedDrawerState,NAV_BAR_HEIGHT,PADDING,chatInputContainerHeight,PIP_AVOIDANCE_TAB_BAR_HEIGHT}=this.__closure;return{marginTop:interpolate(animatedDrawerState.get(),[0,1],[NAV_BAR_HEIGHT+PADDING,PADDING]),marginBottom:interpolate(animatedDrawerState.get(),[0,1],[chatInputContainerHeight+PADDING,PIP_AVOIDANCE_TAB_BAR_HEIGHT+PADDING])};}",
+};
 const result = require("set").fileFinishedImporting("modules/video_calls/native/components/PictureInPictureGlobal.tsx");
 
 export default function PictureInPictureGlobal(channel) {
@@ -249,13 +275,20 @@ export default function PictureInPictureGlobal(channel) {
     const items = [num(derivedValue[34]).NAV_BAR_HEIGHT + closure_1_17, closure_1_17];
     obj[0] = num(derivedValue[32]).interpolate(value, [0, 1], items);
     const obj2 = num(derivedValue[32]);
-    const items1 = [closure_1 + closure_1_17, ];
+    const items1 = [closure_1 + closure_1_17];
     value = derivedValue.get();
     items1[1] = num(derivedValue[35]).PIP_AVOIDANCE_TAB_BAR_HEIGHT + closure_1_17;
     obj[1] = num(derivedValue[32]).interpolate(value, [0, 1], items1);
     return obj;
   };
-  obj = { interpolate: tmp2(tmp3[32]).interpolate, animatedDrawerState: derivedValue, NAV_BAR_HEIGHT: tmp2(tmp3[34]).NAV_BAR_HEIGHT, PADDING: c17, chatInputContainerHeight: tmp4, PIP_AVOIDANCE_TAB_BAR_HEIGHT: tmp2(tmp3[35]).PIP_AVOIDANCE_TAB_BAR_HEIGHT };
+  obj = {
+    interpolate: tmp2(tmp3[32]).interpolate,
+    animatedDrawerState: derivedValue,
+    NAV_BAR_HEIGHT: tmp2(tmp3[34]).NAV_BAR_HEIGHT,
+    PADDING: c17,
+    chatInputContainerHeight: tmp4,
+    PIP_AVOIDANCE_TAB_BAR_HEIGHT: tmp2(tmp3[35]).PIP_AVOIDANCE_TAB_BAR_HEIGHT,
+  };
   fn2.__closure = obj;
   fn2.__workletHash = 8833756900366;
   fn2.__initData = closure_22;
@@ -265,6 +298,10 @@ export default function PictureInPictureGlobal(channel) {
   items = [absoluteFill.absoluteFill, { paddingLeft: rect.left, paddingRight: rect.right }];
   const tmp = callback4();
   let items1 = [tmp.container, animatedStyle];
-  obj1[2] = callback3(importDefault(derivedValue[32]).View, { style: items1, pointerEvents: "box-none", children: callback3(closure_20, { channel: channel.channel }) });
+  obj1[2] = callback3(importDefault(derivedValue[32]).View, {
+    style: items1,
+    pointerEvents: "box-none",
+    children: callback3(closure_20, { channel: channel.channel }),
+  });
   return callback3(closure_5, obj1);
-};
+}

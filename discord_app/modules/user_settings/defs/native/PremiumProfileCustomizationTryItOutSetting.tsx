@@ -13,15 +13,17 @@ obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.PREMIUM,
   unsearchable: true,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.PROFILE_CUSTOMIZATION_TRY_IT_OUT,
   getComponent() {
     return ProfileCustomizationTryItOutSettingScreen /* ProfileCustomizationTryItOutSettingScreen */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/PremiumProfileCustomizationTryItOutSetting.tsx");
+const result = set.fileFinishedImporting(
+  "modules/user_settings/defs/native/PremiumProfileCustomizationTryItOutSetting.tsx",
+);
 
 export default route;

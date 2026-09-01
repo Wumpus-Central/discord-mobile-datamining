@@ -12,7 +12,7 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.ADVANCED,
   useValue: explicitContentFromProto.DeveloperMode.useSetting,
-  onValueChange: explicitContentFromProto.DeveloperMode.updateSetting
+  onValueChange: explicitContentFromProto.DeveloperMode.updateSetting,
 });
 const obj = {
   useTitle() {
@@ -21,7 +21,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.ADVANCED,
   useValue: explicitContentFromProto.DeveloperMode.useSetting,
-  onValueChange: explicitContentFromProto.DeveloperMode.updateSetting
+  onValueChange: explicitContentFromProto.DeveloperMode.updateSetting,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DeveloperModeSetting.tsx");
 

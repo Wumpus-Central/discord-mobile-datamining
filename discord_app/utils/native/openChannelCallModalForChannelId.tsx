@@ -22,4 +22,4 @@ export default function openChannelCallModalForChannelId(arg0, arg1) {
       const obj3 = openChannelCallModal;
     }
   }
-};
+}

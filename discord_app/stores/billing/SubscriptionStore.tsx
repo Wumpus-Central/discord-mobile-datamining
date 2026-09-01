@@ -34,8 +34,7 @@ let c15 = null;
 let c16 = false;
 let c17 = null;
 const Store = initializeDefault.Store;
-class SubscriptionStore extends Store {
-}
+class SubscriptionStore extends Store {}
 const prototype = SubscriptionStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_0);
@@ -370,7 +369,7 @@ const subscriptionStore = new SubscriptionStore(dispatcherDefault, {
   SET_PREMIUM_TYPE_OVERRIDE: function handlePremiumTypeOverride() {
     return true;
   },
-  LOGOUT: reset
+  LOGOUT: reset,
 });
 const result = require("set").fileFinishedImporting("stores/billing/SubscriptionStore.tsx");
 

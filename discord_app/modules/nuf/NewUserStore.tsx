@@ -4,8 +4,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 
 let c0 = null;
 const PersistedStore = initializeDefault.PersistedStore;
-class NewUserStore extends PersistedStore {
-}
+class NewUserStore extends PersistedStore {}
 const prototype = NewUserStore.prototype;
 prototype["initialize"] = function initialize(type) {
   type = undefined;
@@ -32,7 +31,7 @@ const newUserStore = new NewUserStore(dispatcherDefault, {
   NUF_COMPLETE: function handleNUFCompleted() {
     c0 = null;
     newUserStore.persist();
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/nuf/NewUserStore.tsx");
 

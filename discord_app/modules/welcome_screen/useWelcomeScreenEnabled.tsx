@@ -29,7 +29,8 @@ export default function useWelcomeScreenEnabled(arg0, arg1) {
           return false;
         } else {
           const channel = closure_1_3.getChannel(closure_0);
-          let tmp9 = closure_0 === closure_1_5.getChannelId(closure_1) && null != channel && channel.getGuildId() === guild.id;
+          let tmp9 =
+            closure_0 === closure_1_5.getChannelId(closure_1) && null != channel && channel.getGuildId() === guild.id;
           if (tmp9) {
             tmp9 = closure_1_2(channel.type);
           }
@@ -40,4 +41,4 @@ export default function useWelcomeScreenEnabled(arg0, arg1) {
     }
     return false;
   });
-};
+}

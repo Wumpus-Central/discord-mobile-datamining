@@ -28,12 +28,16 @@ function PillWrapper(expressivePressState) {
   let obj2 = ManaContext;
   const tmp5 = callback3(variant, size);
   let obj3 = map;
-  let items = [obj3.useToken(ThemesDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT), , ];
+  let items = [obj3.useToken(ThemesDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT), ,];
   let obj4 = map;
   items[1] = obj4.useToken(ThemesDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
   let obj5 = map;
   items[2] = obj5.useToken(ThemesDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
-  const items1 = [ThemesDefault.unsafe_rawColors.PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS, ThemesDefault.unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS_2, ThemesDefault.unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS];
+  const items1 = [
+    ThemesDefault.unsafe_rawColors.PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS,
+    ThemesDefault.unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS_2,
+    ThemesDefault.unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS,
+  ];
   let tmp7 = null;
   if (shiny) {
     obj = { variant: null };
@@ -65,7 +69,7 @@ function PillWrapper(expressivePressState) {
         tmpResult = tmp(1363);
       }
       obj3 = { children: null };
-      const items3 = [tmp11Result, ];
+      const items3 = [tmp11Result];
       obj4 = { style: null, children: null };
       const items4 = [style, buttonPillStyles];
       obj4[0] = items4;
@@ -83,7 +87,7 @@ function PillWrapper(expressivePressState) {
   }
   const obj6 = { children: null };
   obj5[3] = items;
-  const items7 = [callback2(LinearGradientDefault, obj5), ];
+  const items7 = [callback2(LinearGradientDefault, obj5)];
   const items8 = [style, buttonPillStyles];
   const items9 = [children, tmp7];
   items7[1] = closure_8(_modDef4217.View, { style: items8, children: items9 });
@@ -109,8 +113,17 @@ class BasicButtonPill {
     }
     ({ expressiveRiveRef, expressivePressState } = global);
     tmp3 = closure_14(str, DEFAULT_BUTTON_SIZE);
-    obj = { variant: str, size: DEFAULT_BUTTON_SIZE, style: items, pressed, shiny: flag, expressiveRiveRef, expressivePressState, children: jsx(View, obj) };
-    items = [, ];
+    obj = {
+      variant: str,
+      size: DEFAULT_BUTTON_SIZE,
+      style: items,
+      pressed,
+      shiny: flag,
+      expressiveRiveRef,
+      expressivePressState,
+      children: jsx(View, obj),
+    };
+    items = [,];
     items[0] = tmp3.pill;
     items[1] = style;
     obj = { style: tmp3.childContainer, children };
@@ -160,8 +173,16 @@ class LoadingButtonPill {
       }
     }, items);
     tmp7 = closure_3(useLoadingStyles(flag, DEFAULT_BUTTON_SIZE), 2);
-    obj = { variant: str, size: DEFAULT_BUTTON_SIZE, style: items1, pressed, expressiveRiveRef, expressivePressState, children: null };
-    items1 = [, ];
+    obj = {
+      variant: str,
+      size: DEFAULT_BUTTON_SIZE,
+      style: items1,
+      pressed,
+      expressiveRiveRef,
+      expressivePressState,
+      children: null,
+    };
+    items1 = [,];
     items1[0] = tmp3.pill;
     items1[1] = style;
     tmp12 = jsx;
@@ -169,13 +190,13 @@ class LoadingButtonPill {
     tmp10 = jsxs;
     tmp11 = PillWrapper;
     tmp13 = closure_2;
-    items2 = [, ];
+    items2 = [,];
     items2[0] = tmp3.childContainer;
     items2[1] = tmp8;
-    items3 = [, ];
+    items3 = [,];
     items3[0] = jsx(require("../../../../modules/reanimated/ReanimatedRexport.tsx").View, { style: items2, children });
     obj = { style: items4, children: null };
-    items4 = [, ];
+    items4 = [,];
     items4[0] = tmp3.ellipsis;
     items4[1] = tmp9;
     if (tmp12Result) {
@@ -235,11 +256,19 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
     }
     return tmp6;
   };
-  let obj = { withSpring: tmp(tmp2[16]).withSpring, loading: flag, SUBTLE_SPRING: tmp(tmp2[17]).SUBTLE_SPRING, useReducedMotion: enabled, withDelay: tmp(tmp2[12]).withDelay, FADE_DELAY: c10, offsetY: num };
+  let obj = {
+    withSpring: tmp(tmp2[16]).withSpring,
+    loading: flag,
+    SUBTLE_SPRING: tmp(tmp2[17]).SUBTLE_SPRING,
+    useReducedMotion: enabled,
+    withDelay: tmp(tmp2[12]).withDelay,
+    FADE_DELAY: c10,
+    offsetY: num,
+  };
   fn.__closure = obj;
   fn.__workletHash = 9388603334085;
   fn.__initData = closure_18;
-  let items = [tmpResult.useAnimatedStyle(fn), ];
+  let items = [tmpResult.useAnimatedStyle(fn)];
   tmpResult = tmp(tmp2[12]);
   const fn2 = function l() {
     let obj = callback(num[16]);
@@ -274,7 +303,15 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
     }
     return tmp5;
   };
-  obj = { withSpring: tmp(tmp2[16]).withSpring, loading: flag, SUBTLE_SPRING: tmp(tmp2[17]).SUBTLE_SPRING, useReducedMotion: enabled, withDelay: tmp(tmp2[12]).withDelay, FADE_DELAY: c10, offsetY: num };
+  obj = {
+    withSpring: tmp(tmp2[16]).withSpring,
+    loading: flag,
+    SUBTLE_SPRING: tmp(tmp2[17]).SUBTLE_SPRING,
+    useReducedMotion: enabled,
+    withDelay: tmp(tmp2[12]).withDelay,
+    FADE_DELAY: c10,
+    offsetY: num,
+  };
   fn2.__closure = obj;
   fn2.__workletHash = 8255420825872;
   fn2.__initData = closure_19;
@@ -284,9 +321,18 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
 ({ View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let c10 = 300;
-const buttonPadding = MINIMUM_HIT_AREA.getButtonPadding(require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, require("MINIMUM_HIT_AREA").SMALL_BUTTON_ICON_SIZE);
-const buttonPadding2 = MINIMUM_HIT_AREA.getButtonPadding(require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_HEIGHT, require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_ICON_SIZE);
-const buttonPadding3 = MINIMUM_HIT_AREA.getButtonPadding(require("MINIMUM_HIT_AREA").LARGE_BUTTON_HEIGHT, require("MINIMUM_HIT_AREA").LARGE_BUTTON_ICON_SIZE);
+const buttonPadding = MINIMUM_HIT_AREA.getButtonPadding(
+  require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT,
+  require("MINIMUM_HIT_AREA").SMALL_BUTTON_ICON_SIZE,
+);
+const buttonPadding2 = MINIMUM_HIT_AREA.getButtonPadding(
+  require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_HEIGHT,
+  require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_ICON_SIZE,
+);
+const buttonPadding3 = MINIMUM_HIT_AREA.getButtonPadding(
+  require("MINIMUM_HIT_AREA").LARGE_BUTTON_HEIGHT,
+  require("MINIMUM_HIT_AREA").LARGE_BUTTON_ICON_SIZE,
+);
 let closure_14 = createCacheKey.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     let obj = { minHeight: null, minWidth: null, paddingHorizontal: null, paddingVertical: null };
@@ -314,7 +360,14 @@ let closure_14 = createCacheKey.createStyles((arg0, arg1) => {
   let obj3 = MINIMUM_HIT_AREA2;
   const buttonBorderRadius = obj3.getButtonBorderRadius(arg1);
   const obj2 = { pill: null, expressivePill: null, expressiveRiveFill: null, childContainer: null, ellipsis: null };
-  obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", borderWidth: MINIMUM_HIT_AREA2.BUTTON_BORDER_WIDTH, borderRadius: buttonBorderRadius };
+  obj3 = {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+    borderWidth: MINIMUM_HIT_AREA2.BUTTON_BORDER_WIDTH,
+    borderRadius: buttonBorderRadius,
+  };
   const merged = Object.assign(obj);
   obj2[0] = obj3;
   obj2[1] = { overflow: "hidden", borderRadius: buttonBorderRadius };
@@ -323,8 +376,12 @@ let closure_14 = createCacheKey.createStyles((arg0, arg1) => {
   obj2[4] = { position: "absolute", height: "100%", width: "100%", justifyContent: "center", alignItems: "center" };
   return obj2;
 });
-let closure_18 = { code: "function ButtonPillNativeTsx1(){const{withSpring,loading,SUBTLE_SPRING,useReducedMotion,withDelay,FADE_DELAY,offsetY}=this.__closure;const opacityTransition=withSpring(loading?0:1,SUBTLE_SPRING,'animate-always');if(useReducedMotion){return{opacity:loading?opacityTransition:withDelay(FADE_DELAY,opacityTransition),transform:[{translateY:0}]};}return{opacity:opacityTransition,transform:[{translateY:withSpring(loading?-1*offsetY:0,SUBTLE_SPRING)}]};}" };
-let closure_19 = { code: "function ButtonPillNativeTsx2(){const{withSpring,loading,SUBTLE_SPRING,useReducedMotion,withDelay,FADE_DELAY,offsetY}=this.__closure;const opacityTransition=withSpring(loading?1:0,SUBTLE_SPRING,'animate-always');if(useReducedMotion){return{opacity:loading?withDelay(FADE_DELAY,opacityTransition):opacityTransition,transform:[{translateY:0}]};}return{opacity:opacityTransition,transform:[{translateY:withSpring(loading?0:offsetY,SUBTLE_SPRING)}]};}" };
+let closure_18 = {
+  code: "function ButtonPillNativeTsx1(){const{withSpring,loading,SUBTLE_SPRING,useReducedMotion,withDelay,FADE_DELAY,offsetY}=this.__closure;const opacityTransition=withSpring(loading?0:1,SUBTLE_SPRING,'animate-always');if(useReducedMotion){return{opacity:loading?opacityTransition:withDelay(FADE_DELAY,opacityTransition),transform:[{translateY:0}]};}return{opacity:opacityTransition,transform:[{translateY:withSpring(loading?-1*offsetY:0,SUBTLE_SPRING)}]};}",
+};
+let closure_19 = {
+  code: "function ButtonPillNativeTsx2(){const{withSpring,loading,SUBTLE_SPRING,useReducedMotion,withDelay,FADE_DELAY,offsetY}=this.__closure;const opacityTransition=withSpring(loading?1:0,SUBTLE_SPRING,'animate-always');if(useReducedMotion){return{opacity:loading?withDelay(FADE_DELAY,opacityTransition):opacityTransition,transform:[{translateY:0}]};}return{opacity:opacityTransition,transform:[{translateY:withSpring(loading?0:offsetY,SUBTLE_SPRING)}]};}",
+};
 const result = require("set").fileFinishedImporting("design/components/Button/native/ButtonPill.native.tsx");
 
 export const ButtonPill = function ButtonPill(loading) {

@@ -30,4 +30,4 @@ export default function MobileQuestPreviewContainer(title) {
   const items = [tmp4, title.children];
   obj[1] = items;
   return closure_4(View, obj);
-};
+}

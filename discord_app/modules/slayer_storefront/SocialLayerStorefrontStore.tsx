@@ -41,8 +41,7 @@ let closure_20 = {};
 let set2 = new Set();
 let c22 = null;
 const Store = initializeDefault.Store;
-class SocialLayerStorefrontStore extends Store {
-}
+class SocialLayerStorefrontStore extends Store {}
 const prototype = SocialLayerStorefrontStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_1);
@@ -416,18 +415,24 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(dispatcherDefa
     obj = {};
     const merged = Object.assign(obj);
   },
-  SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START: function handleSocialLayerStorefrontAnnouncementFetchStart(guildId) {
+  SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START: function handleSocialLayerStorefrontAnnouncementFetchStart(
+    guildId,
+  ) {
     const obj = {};
     const merged = Object.assign(obj);
     obj[guildId.guildId] = { state: "loading" };
   },
-  SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: function handleSocialLayerStorefrontAnnouncementFetchSuccess(arg0) {
+  SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: function handleSocialLayerStorefrontAnnouncementFetchSuccess(
+    arg0,
+  ) {
     const obj = {};
     ({ guildId, announcement } = arg0);
     const merged = Object.assign(obj);
     obj[guildId] = { state: "success", announcement };
   },
-  SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE: function handleSocialLayerStorefrontAnnouncementFetchFailure(guildId) {
+  SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE: function handleSocialLayerStorefrontAnnouncementFetchFailure(
+    guildId,
+  ) {
     const obj = {};
     const merged = Object.assign(obj);
     obj[guildId.guildId] = { state: "error" };
@@ -589,7 +594,7 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(dispatcherDefa
   },
   SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_FAILURE: function handleLaunchAnnouncementFetchFailure() {
     c22 = null;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontStore.tsx");
 

@@ -9,5 +9,13 @@ const result = set.fileFinishedImporting("modules/experiments/fetchExperiments.t
 export const fetchExperiments = function fetchExperiments(arg0) {
   ({ withGuildExperiments, headers, context } = arg0);
   const HTTP = sendRequest.HTTP;
-  return HTTP.get({ url: Endpoints.EXPERIMENTS, query: { with_guild_experiments: withGuildExperiments }, headers, context, retries: 3, oldFormErrors: true, rejectWithError: false });
+  return HTTP.get({
+    url: Endpoints.EXPERIMENTS,
+    query: { with_guild_experiments: withGuildExperiments },
+    headers,
+    context,
+    retries: 3,
+    oldFormErrors: true,
+    rejectWithError: false,
+  });
 };

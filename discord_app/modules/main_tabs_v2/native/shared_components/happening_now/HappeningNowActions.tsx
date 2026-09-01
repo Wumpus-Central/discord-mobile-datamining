@@ -23,9 +23,29 @@ let c3 = importAllResult;
 ({ AnalyticEvents: c10, InstantInviteSources: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = { actionCard: null, actionCardImage: null };
-obj = { flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: 8, borderWidth: 1, borderRadius: ThemesDefault.radii.lg, height: HAPPENING_NOW_CARD_HEIGHT, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+obj = {
+  flex: 1,
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: 8,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.lg,
+  height: HAPPENING_NOW_CARD_HEIGHT,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 obj[0] = obj;
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, height: 44, width: "100%", alignItems: "center", justifyContent: "center", marginBottom: 4, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  height: 44,
+  width: "100%",
+  alignItems: "center",
+  justifyContent: "center",
+  marginBottom: 4,
+  borderRadius: ThemesDefault.radii.sm,
+};
 obj[1] = createCacheKey;
 let closure_14 = createCacheKey.createStyles(obj);
 let closure_15 = importAllResult.memo((panelVariant) => {
@@ -37,11 +57,16 @@ let closure_15 = importAllResult.memo((panelVariant) => {
   const tmp = callback3();
   let obj = { onPress, style: tmp.actionCard, width: "medium", panelVariant: flag, children: null };
   obj = { style: tmp.actionCardImage, children: callback(closure_5, { source: imageSource }) };
-  const items = [callback(closure_4, obj), callback(Text.Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2, children: text })];
+  const items = [
+    callback(closure_4, obj),
+    callback(Text.Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2, children: text }),
+  ];
   obj[4] = items;
   return callback2(HAPPENING_NOW_CARD_MARGIN_RIGHTDefault, obj);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowActions.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowActions.tsx",
+);
 
 export const HappeningNowCardCreateChannel = function HappeningNowCardCreateChannel(guildId) {
   guildId = guildId.guildId;

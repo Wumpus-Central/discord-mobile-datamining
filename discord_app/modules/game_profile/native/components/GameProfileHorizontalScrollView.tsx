@@ -16,6 +16,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   obj[1] = <ScrollView ref={arg1} />;
   return jsx(LegacyBaseButton.GestureDetector, { ref });
 });
-const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileHorizontalScrollView.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/game_profile/native/components/GameProfileHorizontalScrollView.tsx",
+);
 
 export default forwardRefResult;

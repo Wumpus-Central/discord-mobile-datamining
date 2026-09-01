@@ -43,6 +43,8 @@ const memoResult = importAllResult.memo(function GuildTextChannelRow(channel) {
   obj.onPress = callback;
   return jsx(onPress(id[6]), {});
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GuildTextChannelRow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/search/native/components/list/rows/GuildTextChannelRow.tsx",
+);
 
 export default memoResult;

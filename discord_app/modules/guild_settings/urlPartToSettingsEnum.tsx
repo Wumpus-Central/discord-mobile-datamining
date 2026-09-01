@@ -16,4 +16,4 @@ export default function urlPartToSettingsEnum(arg0, str) {
       return arg0[formatted];
     }
   }
-};
+}

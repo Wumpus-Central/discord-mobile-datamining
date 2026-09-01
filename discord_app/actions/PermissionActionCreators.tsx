@@ -30,5 +30,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "PERMISSION_CONTINUE_NONELEVATED_PROCESS", pid };
     obj.dispatch(obj);
-  }
+  },
 };

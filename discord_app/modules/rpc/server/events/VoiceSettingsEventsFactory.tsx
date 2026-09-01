@@ -13,7 +13,10 @@ export default function createVoiceSettingsEventHandlers(arg0, arg1) {
   let obj = {};
   obj = { scope: null, handler: null };
   obj = {};
-  const items = [require("../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx").OAuth2Scopes.RPC, require("../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx").OAuth2Scopes.RPC_VOICE_READ];
+  const items = [
+    require("../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx").OAuth2Scopes.RPC,
+    require("../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx").OAuth2Scopes.RPC_VOICE_READ,
+  ];
   obj[constants.ANY] = items;
   obj[0] = obj;
   obj[1] = function handler() {
@@ -43,7 +46,7 @@ export default function createVoiceSettingsEventHandlers(arg0, arg1) {
           return tmp4;
         }
       };
-    }
+    },
   };
   return obj;
-};
+}

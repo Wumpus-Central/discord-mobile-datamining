@@ -13,7 +13,14 @@ noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, inner: null, text: null, image: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, gap: 16, paddingHorizontal: 16, justifyContent: "center", flexDirection: "column" };
+createCacheKey = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  gap: 16,
+  paddingHorizontal: 16,
+  justifyContent: "center",
+  flexDirection: "column",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center" };
 createCacheKey[2] = { marginTop: 24, textAlign: "center" };
@@ -28,7 +35,7 @@ export default function ErrorResult(error) {
   let obj = { bottom: true, style: tmp.container, children: null };
   obj = { style: tmp.inner, children: null };
   obj = { source: registerAssetDefault, style: tmp.image };
-  const items = [callback(closure_3, obj), ];
+  const items = [callback(closure_3, obj)];
   obj1 = { style: tmp.text, variant: "text-md/medium", children: null };
   if (error == null) {
     const intl = tmp3(1236).intl;
@@ -37,7 +44,7 @@ export default function ErrorResult(error) {
   obj1[2] = error;
   items[1] = callback(Text.Text, obj1);
   obj[1] = items;
-  const items1 = [closure_6(closure_4, obj), ];
+  const items1 = [closure_6(closure_4, obj)];
   let tmp6Result = null;
   if (!error.hideFooter) {
     const obj2 = { size: "lg", text: null, onPress: null };
@@ -51,4 +58,4 @@ export default function ErrorResult(error) {
   items1[1] = tmp6Result;
   obj[2] = items1;
   return closure_6(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-};
+}

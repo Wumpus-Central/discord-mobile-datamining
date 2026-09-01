@@ -15,8 +15,14 @@ function Header(arg0) {
   ({ description, title } = arg0);
   const tmp = callback3();
   let obj = { top: true, style: tmp.headerContainer, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-  const items = [callback(Text.Text, obj), , ];
+  obj = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: title,
+  };
+  const items = [callback(Text.Text, obj), ,];
   obj = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: description };
   items[1] = callback(Text.Text, obj);
   items[2] = callback(FormSeparatorDefault, { style: tmp.separator });
@@ -35,7 +41,7 @@ function Footer(arg0) {
     tmp5 = require;
   }
   let obj = { style: null, children: null };
-  const items = [callback3().footerContainer, ];
+  const items = [callback3().footerContainer];
   obj = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   items[1] = obj;
   obj[0] = items;
@@ -45,17 +51,33 @@ function Footer(arg0) {
 }
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, scrollContainer: null, headerContainer: null, title: null, subtitle: null, separator: null, footerContainer: null };
+createCacheKey = {
+  container: null,
+  scrollContainer: null,
+  headerContainer: null,
+  title: null,
+  subtitle: null,
+  separator: null,
+  footerContainer: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: "100%" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 1 };
-createCacheKey[2] = { position: "relative", paddingTop: 48, paddingBottom: 8, paddingHorizontal: 16, alignItems: "center" };
+createCacheKey[2] = {
+  position: "relative",
+  paddingTop: 48,
+  paddingBottom: 8,
+  paddingHorizontal: 16,
+  alignItems: "center",
+};
 createCacheKey[3] = { marginTop: 12, textAlign: "center" };
 createCacheKey[4] = { marginTop: 8, textAlign: "center" };
 createCacheKey[5] = { marginTop: 24 };
 createCacheKey[6] = { width: "100%", padding: 16 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierEditStep.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierEditStep.tsx",
+);
 
 export default function GuildRoleSubscriptionTierEditStep(scrollable) {
   const merged = Object.assign(scrollable, Object.create(null));
@@ -80,8 +102,14 @@ export default function GuildRoleSubscriptionTierEditStep(scrollable) {
     obj[0] = tmp2.container;
     obj = {};
     const merged1 = Object.assign(merged);
-    const items1 = [callback(Header, obj), , ];
-    obj1 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
+    const items1 = [callback(Header, obj), ,];
+    obj1 = {
+      keyboardShouldPersistTaps: "handled",
+      showsVerticalScrollIndicator: false,
+      alwaysBounceVertical: false,
+      contentContainerStyle: null,
+      children: null,
+    };
     const items2 = [tmp2.scrollContainer];
     obj1[3] = items2;
     obj1[4] = merged.children;
@@ -97,7 +125,7 @@ export default function GuildRoleSubscriptionTierEditStep(scrollable) {
     obj3[0] = tmp2.container;
     const obj4 = {};
     const merged3 = Object.assign(merged);
-    const items3 = [callback(Header, obj4), merged.children, ];
+    const items3 = [callback(Header, obj4), merged.children];
     const obj5 = {};
     const merged4 = Object.assign(merged);
     obj5.onProceed = callback;
@@ -105,4 +133,4 @@ export default function GuildRoleSubscriptionTierEditStep(scrollable) {
     obj3[1] = items3;
   }
   return closure_7(closure_4, obj3);
-};
+}

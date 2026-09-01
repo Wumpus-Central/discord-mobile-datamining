@@ -90,4 +90,4 @@ export default function getPrivateChannelCall(id) {
   obj[2] = isInChannelResult;
   obj[3] = C;
   return obj;
-};
+}

@@ -27,7 +27,7 @@ let obj = {
       ({ channelId: obj2[0], chatOpen: obj2[1] } = result);
       return obj;
     }
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/rpc/server/commands/voiceChannelChat.tsx");
 

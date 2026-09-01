@@ -3,14 +3,18 @@ import _modDef12281 from "native/components/HubEmailConnectionModalActionCreator
 import closure_2 from "../../stores/InviteStore.tsx";
 import importDefaultResult from "../../../_runtime/00012_apply.js";
 
-let closure_3 = importDefaultResult.throttle((code) => {
-  invite = invite.getInvite(code.code);
-  _modDef12281.open({ invite });
-}, 1000, { trailing: false });
+let closure_3 = importDefaultResult.throttle(
+  (code) => {
+    invite = invite.getInvite(code.code);
+    _modDef12281.open({ invite });
+  },
+  1000,
+  { trailing: false },
+);
 const obj = {
   onOpenHubInvite(invite) {
     callback(invite);
-  }
+  },
 };
 const result = require("set").fileFinishedImporting("modules/hub/HubUtils.native.tsx");
 

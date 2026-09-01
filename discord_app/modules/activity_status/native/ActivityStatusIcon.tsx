@@ -15,4 +15,4 @@ export default function ActivityStatusIcon(arg0) {
   obj[1] = items;
   const merged1 = Object.assign(merged);
   return <icon size="xxs" style={null} color="status-positive" />;
-};
+}

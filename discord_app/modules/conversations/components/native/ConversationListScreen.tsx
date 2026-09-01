@@ -22,7 +22,11 @@ function keyExtractor(conversationId) {
 }
 let c5 = importAllResult;
 ({ ActivityIndicator: closure_6, View: error } = get_ActivityIndicator);
-({ MAX_CONVERSATIONS_PER_CHANNEL: c9, MOBILE_FETCH_LIMIT: c10, MOBILE_PREVIEW_MESSAGE_COUNT: unpackModuleId } = CONVERSATION_COLORS);
+({
+  MAX_CONVERSATIONS_PER_CHANNEL: c9,
+  MOBILE_FETCH_LIMIT: c10,
+  MOBILE_PREVIEW_MESSAGE_COUNT: unpackModuleId,
+} = CONVERSATION_COLORS);
 let closure_13 = { waitForInteraction: false, itemVisiblePercentThreshold: 50, minimumViewTime: 1000 };
 let obj = { container: null, content: null, spinner: null };
 obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
@@ -41,7 +45,11 @@ let closure_18 = importAllResult.memo(() => {
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.LJuFRG);
   obj[1] = jsx(Text.Text, { variant: "text-md/normal", color: "text-muted", children: null });
-  return <closure_7 variant="text-md/normal" color="text-muted">{null}</closure_7>;
+  return (
+    <closure_7 variant="text-md/normal" color="text-muted">
+      {null}
+    </closure_7>
+  );
 });
 let obj4 = { paddingVertical: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
 let result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationListScreen.tsx");
@@ -62,13 +70,17 @@ export default function ConversationListScreen() {
   const tmp3 = guildId;
   const items = [stateFromStores1];
   const items1 = [channelId];
-  const stateFromStoresArray = _require(guildId[15]).useStateFromStoresArray(items, () => {
-    let channelConversations = stateFromStores1.getChannelConversations(_handleEndReached);
-    if (channelConversations == null) {
-      channelConversations = [];
-    }
-    return channelConversations.map((id) => id.id);
-  }, items1);
+  const stateFromStoresArray = _require(guildId[15]).useStateFromStoresArray(
+    items,
+    () => {
+      let channelConversations = stateFromStores1.getChannelConversations(_handleEndReached);
+      if (channelConversations == null) {
+        channelConversations = [];
+      }
+      return channelConversations.map((id) => id.id);
+    },
+    items1,
+  );
   const items2 = [stateFromStoresArray, channelId];
   const memo = importAllResult.useMemo(() => {
     const substr = stateFromStoresArray.slice();
@@ -78,11 +90,19 @@ export default function ConversationListScreen() {
   let obj4 = _require(guildId[15]);
   const items3 = [stateFromStores1];
   const items4 = [channelId];
-  let stateFromStores = _require(guildId[15]).useStateFromStores(items3, () => null == stateFromStores1.getEdgeMarker(_handleEndReached, "before"), items4);
+  let stateFromStores = _require(guildId[15]).useStateFromStores(
+    items3,
+    () => null == stateFromStores1.getEdgeMarker(_handleEndReached, "before"),
+    items4,
+  );
   const obj5 = _require(guildId[15]);
   const items5 = [stateFromStores1];
   const items6 = [channelId];
-  stateFromStores1 = _require(guildId[15]).useStateFromStores(items5, () => stateFromStores1.isPendingFetch(_handleEndReached), items6);
+  stateFromStores1 = _require(guildId[15]).useStateFromStores(
+    items5,
+    () => stateFromStores1.isPendingFetch(_handleEndReached),
+    items6,
+  );
   _require = undefined;
   _handleEndReached = function _handleEndReached(arg0) {
     const self = this;
@@ -94,7 +114,7 @@ export default function ConversationListScreen() {
     }
     return applyArgumentsResult;
   };
-  _require = conversationBackoffRef(function*() {
+  _require = conversationBackoffRef(function* () {
     if (ref === 2) {
       ref = 3;
       HermesBuiltin.throwTypeError();
@@ -129,7 +149,15 @@ export default function ConversationListScreen() {
                   if (arr[0].conversationId === channelConversations[channelConversations.length - 1].id) {
                     c2 = 1;
                     let obj2 = callback(guildId[17]);
-                    obj1 = { channelId: null, guildId: null, direction: "before", anchor: null, limit: null, throwOnError: true, hydrateMessages: null };
+                    obj1 = {
+                      channelId: null,
+                      guildId: null,
+                      direction: "before",
+                      anchor: null,
+                      limit: null,
+                      throwOnError: true,
+                      hydrateMessages: null,
+                    };
                     obj1[0] = tmp33;
                     obj1[1] = c2;
                     obj1[3] = arr[arr.length - 1].conversationId;
@@ -241,7 +269,17 @@ export default function ConversationListScreen() {
       continue;
     }
   }, items9);
-  obj = { data: memo, renderItem, keyExtractor, contentContainerStyle: tmp.content, onEndReached: null, ListEmptyComponent: null, ListFooterComponent: null, onViewableItemsChanged: null, viewabilityConfig: null };
+  obj = {
+    data: memo,
+    renderItem,
+    keyExtractor,
+    contentContainerStyle: tmp.content,
+    onEndReached: null,
+    ListEmptyComponent: null,
+    ListFooterComponent: null,
+    onViewableItemsChanged: null,
+    viewabilityConfig: null,
+  };
   let tmp16;
   if (stateFromStores) {
     tmp16 = callback;
@@ -251,6 +289,28 @@ export default function ConversationListScreen() {
   obj[6] = memo1;
   obj[7] = callback1;
   obj[8] = closure_13;
-  obj[1] = jsx(tmp2(tmp3[19]).FlashList, { data: memo, renderItem, keyExtractor, contentContainerStyle: tmp.content, onEndReached: null, ListEmptyComponent: null, ListFooterComponent: null, onViewableItemsChanged: null, viewabilityConfig: null });
-  return <memo data={memo} renderItem={renderItem} keyExtractor={keyExtractor} contentContainerStyle={tmp.content} onEndReached={null} ListEmptyComponent={null} ListFooterComponent={null} onViewableItemsChanged={null} viewabilityConfig={null} />;
-};
+  obj[1] = jsx(tmp2(tmp3[19]).FlashList, {
+    data: memo,
+    renderItem,
+    keyExtractor,
+    contentContainerStyle: tmp.content,
+    onEndReached: null,
+    ListEmptyComponent: null,
+    ListFooterComponent: null,
+    onViewableItemsChanged: null,
+    viewabilityConfig: null,
+  });
+  return (
+    <memo
+      data={memo}
+      renderItem={renderItem}
+      keyExtractor={keyExtractor}
+      contentContainerStyle={tmp.content}
+      onEndReached={null}
+      ListEmptyComponent={null}
+      ListFooterComponent={null}
+      onViewableItemsChanged={null}
+      viewabilityConfig={null}
+    />
+  );
+}

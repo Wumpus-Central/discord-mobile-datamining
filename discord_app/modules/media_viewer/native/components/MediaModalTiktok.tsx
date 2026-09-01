@@ -206,7 +206,16 @@ const memoResult = importAllResult.memo((style) => {
     });
     return str.toString();
   }, items2);
-  obj = { ref, style: style.style, source: null, baseURL: "https://www.tiktok.com/player/v1/", injectedJavaScript: "\n  window.addEventListener('message', function(event) {\n    if (!event.data[\"x-tiktok-player\"]) {\n      return;\n    }\n    window.ReactNativeWebView.postMessage(JSON.stringify(event.data));\n  }, true);\n", onDataReceived: null, playerState: null };
+  obj = {
+    ref,
+    style: style.style,
+    source: null,
+    baseURL: "https://www.tiktok.com/player/v1/",
+    injectedJavaScript:
+      "\n  window.addEventListener('message', function(event) {\n    if (!event.data[\"x-tiktok-player\"]) {\n      return;\n    }\n    window.ReactNativeWebView.postMessage(JSON.stringify(event.data));\n  }, true);\n",
+    onDataReceived: null,
+    playerState: null,
+  };
   obj = {};
   const tmp2 = visible;
   const tmp2Result = visible(controls[7]);
@@ -269,7 +278,7 @@ export const createTiktokVideoControls = function createTiktokVideoControls() {
         }
       }, []);
     },
-    props: obj
+    props: obj,
   };
   obj = {
     ref,
@@ -292,7 +301,7 @@ export const createTiktokVideoControls = function createTiktokVideoControls() {
       if (closure_0 != null) {
         tmp(c3, closure_4);
       }
-    }
+    },
   };
   return obj;
 };

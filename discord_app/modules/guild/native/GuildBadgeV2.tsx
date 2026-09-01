@@ -36,7 +36,7 @@ export default function GuildBadgeV2(arg0) {
     return tmp10;
   }
   tmp4 = callback();
-};
+}
 export const hasGuildBadge = function hasGuildBadge(fromGuildProfileResult) {
   const guildTraits = GuildVisibility.getGuildTraits(fromGuildProfileResult);
   const obj = GuildVisibility;

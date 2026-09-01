@@ -56,14 +56,39 @@ export const isPendingScanVersion = function isPendingScanVersion(contentScanVer
   }
   return tmp2;
 };
-export const TrackMediaRedactionActionType = { EXPLICIT_MEDIA_LEARN_MORE_VIEWED: "explicit_media_learn_more_viewed", EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS: "explicit_media_learn_more_click_settings", EXPLICIT_MEDIA_LEARN_MORE_CLICK_LEARN_MORE: "explicit_media_learn_more_click_learn_more", EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS: "explicit_media_learn_more_click_dismiss", EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE: "explicit_media_learn_more_click_false_positive", EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY: "explicit_media_learn_more_click_age_verify_reverify", EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE: "explicit_media_learn_more_click_age_verify_learn_more", EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED: "explicit_media_false_positive_viewed", EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM: "explicit_media_false_positive_click_confirm", EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL: "explicit_media_false_positive_click_cancel", EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED: "explicit_media_sender_false_positive_button_clicked", EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT: "explicit_media_false_positive_clyde_message_sent" };
-export const TrackMediaRedactionContext = { EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW: "explicit_media_obscured_false_positive_flow", EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW: "explicit_media_sender_false_positive_flow", EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED: "explicit_media_message_send_blocked", EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED: "explicit_media_add_media_to_forum_post_blocked" };
+export const TrackMediaRedactionActionType = {
+  EXPLICIT_MEDIA_LEARN_MORE_VIEWED: "explicit_media_learn_more_viewed",
+  EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS: "explicit_media_learn_more_click_settings",
+  EXPLICIT_MEDIA_LEARN_MORE_CLICK_LEARN_MORE: "explicit_media_learn_more_click_learn_more",
+  EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS: "explicit_media_learn_more_click_dismiss",
+  EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE: "explicit_media_learn_more_click_false_positive",
+  EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY: "explicit_media_learn_more_click_age_verify_reverify",
+  EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE: "explicit_media_learn_more_click_age_verify_learn_more",
+  EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED: "explicit_media_false_positive_viewed",
+  EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM: "explicit_media_false_positive_click_confirm",
+  EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL: "explicit_media_false_positive_click_cancel",
+  EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED: "explicit_media_sender_false_positive_button_clicked",
+  EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT: "explicit_media_false_positive_clyde_message_sent",
+};
+export const TrackMediaRedactionContext = {
+  EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW: "explicit_media_obscured_false_positive_flow",
+  EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW: "explicit_media_sender_false_positive_flow",
+  EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED: "explicit_media_message_send_blocked",
+  EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED: "explicit_media_add_media_to_forum_post_blocked",
+};
 export const trackMediaRedactionAction = function trackMediaRedactionAction(arg0) {
   ({ channelId, messageId } = arg0);
   if (null != channelId) {
     if (null != messageId) {
       const channel = store.getChannel(channelId);
-      let obj = { action: null, guild_id: null, channel_id: null, message_id: null, user_is_underage: null, context: null };
+      let obj = {
+        action: null,
+        guild_id: null,
+        channel_id: null,
+        message_id: null,
+        user_is_underage: null,
+        context: null,
+      };
       obj[0] = tmp;
       let guild_id;
       if (channel != null) {
@@ -103,7 +128,15 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
       if (0 !== num) {
         const channel = store.getChannel(channelId);
         let obj = expandEventPropertiesDefault;
-        obj = { channel_id: null, guild_id: null, message_id: null, embed_ids: null, user_is_underage: null, scan_timeout_duration: null, attachment_ids_v2: null };
+        obj = {
+          channel_id: null,
+          guild_id: null,
+          message_id: null,
+          embed_ids: null,
+          user_is_underage: null,
+          scan_timeout_duration: null,
+          attachment_ids_v2: null,
+        };
         obj[0] = channelId;
         let guild_id;
         if (channel != null) {
@@ -156,7 +189,14 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
   ({ channelId, numOfAttachmentsPendingScan, numOfEmbedsPendingScan } = arg0);
   if (null != channelId) {
     const channel = store.getChannel(channelId);
-    let obj = { channel_id: null, guild_id: null, num_of_attachments: null, num_of_attachments_pending_scan: null, num_of_embeds: null, num_of_embeds_pending_scan: null };
+    let obj = {
+      channel_id: null,
+      guild_id: null,
+      num_of_attachments: null,
+      num_of_attachments_pending_scan: null,
+      num_of_embeds: null,
+      num_of_embeds_pending_scan: null,
+    };
     obj[0] = channelId;
     let guild_id;
     if (channel != null) {
@@ -180,7 +220,16 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
   }
 };
 export const trackRedactableMessageLoaded = function trackRedactableMessageLoaded(arg0) {
-  ({ messageId, channelId, numOfSelfHarmAttachments, numOfGoreAttachments, numOfExplicitAttachments, numOfSelfHarmEmbeds, numOfGoreEmbeds, numOfExplicitEmbeds } = arg0);
+  ({
+    messageId,
+    channelId,
+    numOfSelfHarmAttachments,
+    numOfGoreAttachments,
+    numOfExplicitAttachments,
+    numOfSelfHarmEmbeds,
+    numOfGoreEmbeds,
+    numOfExplicitEmbeds,
+  } = arg0);
   let tmp = numOfExplicitAttachments > 0;
   ({ numOfAttachments, numOfEmbeds } = arg0);
   if (!tmp) {
@@ -190,7 +239,23 @@ export const trackRedactableMessageLoaded = function trackRedactableMessageLoade
     if (null != messageId) {
       const channel = store.getChannel(channelId);
       let obj = expandEventPropertiesDefault;
-      obj = { message_id: null, channel_id: null, channel_type: null, guild_id: null, num_of_attachments: null, num_of_gore_attachments: null, num_of_explicit_attachments: null, num_of_self_harm_attachments: null, num_of_embeds: null, num_of_gore_embeds: null, num_of_explicit_embeds: null, num_of_self_harm_embeds: null, has_redactable_explicit: null, has_redactable_gore: null, has_redactable_self_harm: null };
+      obj = {
+        message_id: null,
+        channel_id: null,
+        channel_type: null,
+        guild_id: null,
+        num_of_attachments: null,
+        num_of_gore_attachments: null,
+        num_of_explicit_attachments: null,
+        num_of_self_harm_attachments: null,
+        num_of_embeds: null,
+        num_of_gore_embeds: null,
+        num_of_explicit_embeds: null,
+        num_of_self_harm_embeds: null,
+        has_redactable_explicit: null,
+        has_redactable_gore: null,
+        has_redactable_self_harm: null,
+      };
       obj[0] = messageId;
       obj[1] = channelId;
       let type;
@@ -223,7 +288,16 @@ export const trackExplicitMediaScanComplete = function trackExplicitMediaScanCom
   if (null != channelId) {
     const channel = store.getChannel(channelId);
     let obj = expandEventPropertiesDefault;
-    obj = { message_id: null, channel_id: null, channel_type: null, guild_id: null, num_of_attachments: null, num_of_explicit_attachments: null, num_of_embeds: null, num_of_explicit_embeds: null };
+    obj = {
+      message_id: null,
+      channel_id: null,
+      channel_type: null,
+      guild_id: null,
+      num_of_attachments: null,
+      num_of_explicit_attachments: null,
+      num_of_embeds: null,
+      num_of_explicit_embeds: null,
+    };
     obj[0] = tmp;
     obj[1] = channelId;
     let type;
@@ -270,7 +344,7 @@ export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitM
           embeds: embeds.map((arg0) => {
             arg0.contentScanVersion = -1;
             return arg0;
-          })
+          }),
         };
         obj = { message: message.merge(obj) };
         return message.merge(obj);
@@ -291,7 +365,9 @@ export const isObscuredMediaBelowConstraints = function isObscuredMediaBelowCons
   return tmp;
 };
 export const shouldAgeVerifyForExplicitMedia = function shouldAgeVerifyForExplicitMedia() {
-  let isFeatureAgeGatedResult = isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
+  let isFeatureAgeGatedResult = isFeatureAgeGated2.isFeatureAgeGated(
+    AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
+  );
   const obj = isFeatureAgeGated2;
   if (isFeatureAgeGatedResult) {
     isFeatureAgeGatedResult = obj2.shouldShowTiggerPawtect();
@@ -299,7 +375,9 @@ export const shouldAgeVerifyForExplicitMedia = function shouldAgeVerifyForExplic
   return isFeatureAgeGatedResult;
 };
 export const useShouldAgeVerifyForExplicitMedia = function useShouldAgeVerifyForExplicitMedia() {
-  let isFeatureAgeGated = isFeatureAgeGated2.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
+  let isFeatureAgeGated = isFeatureAgeGated2.useIsFeatureAgeGated(
+    AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
+  );
   const obj = isFeatureAgeGated2;
   if (isFeatureAgeGated) {
     isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
@@ -307,7 +385,9 @@ export const useShouldAgeVerifyForExplicitMedia = function useShouldAgeVerifyFor
   return isFeatureAgeGated;
 };
 export const useShouldAgeVerifyForReason = function useShouldAgeVerifyForReason(obscureReason) {
-  let isFeatureAgeGated = isFeatureAgeGated2.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
+  let isFeatureAgeGated = isFeatureAgeGated2.useIsFeatureAgeGated(
+    AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
+  );
   const obj = isFeatureAgeGated2;
   const tmp = require;
   if (isFeatureAgeGated) {

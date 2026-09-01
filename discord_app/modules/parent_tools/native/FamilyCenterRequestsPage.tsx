@@ -25,7 +25,9 @@ function FamilyCenterMaxConnectionsBlurb() {
   const tmp5 = importDefault;
   useAgeSpecificText;
   const intl = tmp2(1236).intl;
-  intl.formatToPlainString(messagesProxyDefault["1/PzIj"], { maxConnections: useIsInAdultAgeGroupDefault() ? closure_5 : closure_6 });
+  intl.formatToPlainString(messagesProxyDefault["1/PzIj"], {
+    maxConnections: useIsInAdultAgeGroupDefault() ? closure_5 : closure_6,
+  });
   const intl2 = tmp2(1236).intl;
   let tmp10 = null;
   if (hasMaxConnections) {
@@ -45,7 +47,9 @@ function FamilyCenterHelpLineInfo() {
   set;
   if (shouldShowHelplineLink) {
     const intl2 = tmp2(1236).intl;
-    let formatResult = intl2.format(messagesProxyDefault["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
+    let formatResult = intl2.format(messagesProxyDefault["KOwsf/"], {
+      helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line",
+    });
   } else {
     formatResult = null;
     if (tmp6) {
@@ -63,7 +67,7 @@ function FamilyCenterHelpLineInfo() {
     obj1[0] = tmp.supportHeader;
     const intl3 = tmp2(1236).intl;
     obj1[2] = intl3.string(messagesProxyDefault["7/tVhv"]);
-    const items = [callback(tmp2(4474).Text, obj1), ];
+    const items = [callback(tmp2(4474).Text, obj1)];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", children: null };
     obj2[2] = formatResult;
     items[1] = callback(tmp2(4474).Text, obj2);
@@ -77,7 +81,13 @@ noopAll;
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: c5, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: closure_6 } = items);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: null };
-createCacheKey = { display: "flex", paddingTop: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_12, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, borderTopWidth: 1 };
+createCacheKey = {
+  display: "flex",
+  paddingTop: ThemesDefault.space.PX_12,
+  marginTop: ThemesDefault.space.PX_12,
+  borderTopColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderTopWidth: 1,
+};
 createCacheKey[0] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { container: { display: "flex", marginTop: ThemesDefault.space.PX_16 }, supportHeader: null };
@@ -96,9 +106,16 @@ export default function FamilyCenterRequestsPage() {
   let obj = { style: tmp.scrollView, children: null };
   obj = { bottom: true, children: null };
   obj = { style: tmp.container, children: null };
-  const items = [callback(FamilyCenterParentalConsentNoticeDefault, {}), callback(FamilyCenterLinkingBannerParentContentDefault, {}), callback(FamilyCenterAcceptedLinkRowDefault, {}), callback(FamilyCenterPendingLinkRowDefault, {}), callback(FamilyCenterMaxConnectionsBlurb, {}), callback(FamilyCenterHelpLineInfo, {})];
+  const items = [
+    callback(FamilyCenterParentalConsentNoticeDefault, {}),
+    callback(FamilyCenterLinkingBannerParentContentDefault, {}),
+    callback(FamilyCenterAcceptedLinkRowDefault, {}),
+    callback(FamilyCenterPendingLinkRowDefault, {}),
+    callback(FamilyCenterMaxConnectionsBlurb, {}),
+    callback(FamilyCenterHelpLineInfo, {}),
+  ];
   obj[1] = items;
   obj[1] = callback2(closure_3, obj);
   obj[1] = callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
   return callback(closure_4, obj);
-};
+}

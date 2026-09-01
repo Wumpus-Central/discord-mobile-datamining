@@ -27,7 +27,7 @@ function _fetchAndUpdateTask() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_1 = tmp2;
       const obj2 = callback(table[4]);
       closure_1 = yield obj2.getCurrentTask();
@@ -119,7 +119,7 @@ export const useOnTaskComplete = function useOnTaskComplete() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -197,7 +197,7 @@ export const useOnTaskComplete = function useOnTaskComplete() {
     })();
   });
   const items = [navigation, task, setTask];
-  return React.useCallback(function() {
+  return React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

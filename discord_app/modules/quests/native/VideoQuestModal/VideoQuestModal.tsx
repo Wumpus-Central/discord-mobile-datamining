@@ -13,7 +13,15 @@ let c4 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: true };
 let obj = { WATCH_VIDEO: 0, [0]: "WATCH_VIDEO", POST_WATCH_VIDEO: 1, [1]: "POST_WATCH_VIDEO" };
-obj = { root: { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM }, pillarboxed: { alignSelf: "center" }, wrapper: { flexDirection: "column", flexGrow: 1, flexShrink: 1, zIndex: 1 }, contentWrapper: { flex: 1 }, contentBackground: null, modalContentWrapper: null, backgroundWrapper: null };
+obj = {
+  root: { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM },
+  pillarboxed: { alignSelf: "center" },
+  wrapper: { flexDirection: "column", flexGrow: 1, flexShrink: 1, zIndex: 1 },
+  contentWrapper: { flex: 1 },
+  contentBackground: null,
+  modalContentWrapper: null,
+  backgroundWrapper: null,
+};
 createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.borderRadius = ThemesDefault.radii.lg;
@@ -29,8 +37,12 @@ obj3.pointerEvents = "none";
 obj3.zIndex = 1;
 obj[6] = obj3;
 let closure_11 = createCacheKey.createStyles(obj);
-let closure_12 = { code: "function VideoQuestModalTsx1(){const{withSpring,clamp,postWatchAnimationState,BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG,interpolate,CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y}=this.__closure;return{opacity:withSpring(clamp(postWatchAnimationState.get(),0,1),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG),transform:[{translateY:withSpring(interpolate(postWatchAnimationState.get(),[0,1],[CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y,0]),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)}]};}" };
-let closure_13 = { code: "function VideoQuestModalTsx2(){const{withSpring,interpolate,postWatchAnimationState,safeAreaInsets,BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG}=this.__closure;return{transform:[{translateY:withSpring(interpolate(postWatchAnimationState.get(),[0,1],[safeAreaInsets.top,0]),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)}],opacity:withSpring(postWatchAnimationState.get(),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)};}" };
+let closure_12 = {
+  code: "function VideoQuestModalTsx1(){const{withSpring,clamp,postWatchAnimationState,BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG,interpolate,CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y}=this.__closure;return{opacity:withSpring(clamp(postWatchAnimationState.get(),0,1),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG),transform:[{translateY:withSpring(interpolate(postWatchAnimationState.get(),[0,1],[CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y,0]),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)}]};}",
+};
+let closure_13 = {
+  code: "function VideoQuestModalTsx2(){const{withSpring,interpolate,postWatchAnimationState,safeAreaInsets,BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG}=this.__closure;return{transform:[{translateY:withSpring(interpolate(postWatchAnimationState.get(),[0,1],[safeAreaInsets.top,0]),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)}],opacity:withSpring(postWatchAnimationState.get(),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)};}",
+};
 let closure_14 = importAllResult.memo((sourceQuestContent) => {
   ({ onClose, initialStep } = sourceQuestContent);
   sourceQuestContent = sourceQuestContent.sourceQuestContent;
@@ -59,7 +71,12 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
       }
       callback2(arg0);
       obj = initialStep(quest[9]);
-      obj = { questId: quest.id, event: arg0 ? tmp5.QUEST_VIDEO_FULLSCREEN_ENTERED : tmp5.QUEST_VIDEO_FULLSCREEN_EXITED, properties: obj, sourceQuestContent };
+      obj = {
+        questId: quest.id,
+        event: arg0 ? tmp5.QUEST_VIDEO_FULLSCREEN_ENTERED : tmp5.QUEST_VIDEO_FULLSCREEN_EXITED,
+        properties: obj,
+        sourceQuestContent,
+      };
       obj = { video_session_id: videoSessionId };
       obj.trackQuestEvent(obj);
     }, items);
@@ -81,7 +98,7 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
     const memo = obj1.useMemo(() => {
       let tmp2 = null;
       if (null != bound) {
-        const items = [pillarboxed.pillarboxed, ];
+        const items = [pillarboxed.pillarboxed];
         obj = { width: null };
         obj[0] = tmp;
         items[1] = obj;
@@ -129,7 +146,14 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
         return obj;
       }
     }
-    obj = { withSpring: null, clamp: null, postWatchAnimationState: null, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: null, interpolate: null, CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y: -100 };
+    obj = {
+      withSpring: null,
+      clamp: null,
+      postWatchAnimationState: null,
+      BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: null,
+      interpolate: null,
+      CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y: -100,
+    };
     obj[0] = tmp(tmp2[13]).withSpring;
     obj[1] = tmp(tmp2[12]).clamp;
     obj[2] = sharedValue;
@@ -148,7 +172,7 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
         obj = { translateY: null };
         obj3 = initialStep(quest[13]);
         obj4 = initialStep(quest[12]);
-        items = [, ];
+        items = [,];
         items[0] = closure_12.top;
         items[1] = 0;
         obj[0] = obj3.withSpring(obj4.interpolate(closure_11.get(), [0, 1], items), closure_9);
@@ -160,7 +184,13 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
         return obj;
       }
     }
-    obj = { withSpring: null, interpolate: null, postWatchAnimationState: null, safeAreaInsets: null, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: null };
+    obj = {
+      withSpring: null,
+      interpolate: null,
+      postWatchAnimationState: null,
+      safeAreaInsets: null,
+      BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: null,
+    };
     obj[0] = tmp(tmp2[13]).withSpring;
     obj[1] = tmp(tmp2[12]).interpolate;
     obj[2] = sharedValue;
@@ -184,19 +214,19 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
     const items5 = [tmp15.modalContentWrapper, memo];
     obj2[0] = items5;
     let obj3 = { style: null, children: null };
-    const items6 = [tmp15.backgroundWrapper, ];
+    const items6 = [tmp15.backgroundWrapper];
     let obj4 = { height: null };
     obj4[0] = height;
     items6[1] = obj4;
     obj3[0] = items6;
     let tmp16Result = tmp16(tmp2[15]);
     let obj5 = { style: null };
-    const items7 = [tmp15.contentBackground, ];
+    const items7 = [tmp15.contentBackground];
     const obj6 = { top: null };
     obj6[0] = tmp29.top;
     items7[1] = obj6;
     obj5[0] = items7;
-    const items8 = [callback(sourceQuestContent(tmp2[15]), obj5), , ];
+    const items8 = [callback(sourceQuestContent(tmp2[15]), obj5), ,];
     const obj7 = { style: null };
     const items9 = [tmp15.contentBackground, animatedStyle1];
     obj7[0] = items9;
@@ -207,9 +237,9 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
     obj8[1] = callback(sourceQuestContent(tmp2[16]), { align: "top" });
     items8[2] = callback(tmp16Result, obj8);
     obj3[1] = items8;
-    const items10 = [callback(first, obj3), ];
+    const items10 = [callback(first, obj3)];
     const obj9 = { top: true, style: null, children: null };
-    const items11 = [tmp15.wrapper, ];
+    const items11 = [tmp15.wrapper];
     const obj10 = { height: null };
     obj10[0] = height;
     items11[1] = obj10;
@@ -221,7 +251,15 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
       if (bound == null) {
         bound = width;
       }
-      const obj12 = { contentWidth: null, isFullscreen: null, onNavigateToPostWatchVideo: null, onClose: null, onEnd: null, setIsFullscreen: null, sourceQuestContent: null };
+      const obj12 = {
+        contentWidth: null,
+        isFullscreen: null,
+        onNavigateToPostWatchVideo: null,
+        onClose: null,
+        onEnd: null,
+        setIsFullscreen: null,
+        sourceQuestContent: null,
+      };
       obj12[0] = bound;
       obj12[1] = tmp12;
       obj12[2] = callback2;
@@ -232,7 +270,7 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
       tmp33Result = tmp33(tmp16(tmp2[18]), obj12);
       const tmp16Result1 = tmp16(tmp2[18]);
     }
-    const items12 = [tmp33Result, ];
+    const items12 = [tmp33Result];
     tmp33Result = first === tmp24.POST_WATCH_VIDEO;
     if (tmp33Result) {
       const obj13 = { onClose: null, onRestartVideo: null, sourceQuestContent: null };
@@ -285,9 +323,13 @@ const memoResult = importAllResult.memo(function VideoQuestModal(questContentPos
             questContentPosition: closure_0,
             sourceQuestContent: closure_4,
             children() {
-              return closure_1_7(closure_1_14, { initialStep: closure_3, onClose: closure_1, sourceQuestContent: closure_4 });
-            }
-          })
+              return closure_1_7(closure_1_14, {
+                initialStep: closure_3,
+                onClose: closure_1,
+                sourceQuestContent: closure_4,
+              });
+            },
+          }),
         };
         obj[1] = closure_1_7(closure_1_0(closure_1_2[10]).QuestDockGestureContextProvider, obj);
         return closure_1_7(closure_1_1(closure_1_2[7]).Provider, obj);

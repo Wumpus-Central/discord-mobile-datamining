@@ -8,7 +8,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ tagsContainer: { display: "flex", flexDirection: "row", flexWrap: "wrap" }, saveButton: { marginTop: 8, marginHorizontal: 16, marginBottom: 16 }, subtitle: { marginTop: 4 } });
+let closure_9 = createCacheKey.createStyles({
+  tagsContainer: { display: "flex", flexDirection: "row", flexWrap: "wrap" },
+  saveButton: { marginTop: 8, marginHorizontal: 16, marginBottom: 16 },
+  subtitle: { marginTop: 4 },
+});
 const result = require("set").fileFinishedImporting("modules/forums/native/ForumPostTagsActionSheet.tsx");
 
 export default function ForumPostTagsActionSheet(thread) {
@@ -59,7 +63,7 @@ export default function ForumPostTagsActionSheet(thread) {
       return tmp;
     },
     header: null,
-    children: null
+    children: null,
   };
   obj = { title, subtitle: null, subtitleStyle: null };
   const intl2 = tmp4(1236).intl;
@@ -85,9 +89,8 @@ export default function ForumPostTagsActionSheet(thread) {
         obj[2] = toggleTag;
         obj[3] = hasItem;
         return toggleTag(flag(closure_1_2[10]), obj, id.id);
-      })
+      }),
     }),
-
   ];
   const obj2 = { style: tmp3.saveButton, children: null };
   const obj3 = { text: null, onPress: null };
@@ -109,4 +112,4 @@ export default function ForumPostTagsActionSheet(thread) {
   items[1] = toggleTag(closure_5, obj2);
   obj[2] = items;
   return callback2(thread(5989).ActionSheet, obj);
-};
+}

@@ -21,13 +21,17 @@ export default function VibegrationsMessageAuthor(userId) {
   let obj = userId(589);
   const items1 = [closure_4];
   const items2 = [userId];
-  const stateFromStores = obj.useStateFromStores(items1, () => {
-    let user = null;
-    if (null != userId) {
-      user = closure_1_4.getUser(tmp);
-    }
-    return userId(closure_1_1[6]).resolveMessageAuthor(userId, user, closure_1_4.getCurrentUser());
-  }, items2);
+  const stateFromStores = obj.useStateFromStores(
+    items1,
+    () => {
+      let user = null;
+      if (null != userId) {
+        user = closure_1_4.getUser(tmp);
+      }
+      return userId(closure_1_1[6]).resolveMessageAuthor(userId, user, closure_1_4.getCurrentUser());
+    },
+    items2,
+  );
   userId(4322);
   let tmp8 = null;
   if (null != stateFromStores) {
@@ -36,7 +40,7 @@ export default function VibegrationsMessageAuthor(userId) {
     obj = { size: null, user: null, guildId: "r" };
     obj[0] = tmp3(1297).AvatarSizes.SIZE_16;
     obj[1] = stateFromStores;
-    const items3 = [callback(tmp3(1297).Avatar, obj), ];
+    const items3 = [callback(tmp3(1297).Avatar, obj)];
     obj1 = { variant: "text-xs/semibold", color: "text-muted", children: null };
     obj1[2] = tmp7;
     items3[1] = callback(tmp3(4474).Text, obj1);
@@ -44,4 +48,4 @@ export default function VibegrationsMessageAuthor(userId) {
     tmp8 = callback2(View, obj);
   }
   return tmp8;
-};
+}

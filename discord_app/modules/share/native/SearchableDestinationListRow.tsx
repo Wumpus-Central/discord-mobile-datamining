@@ -47,4 +47,4 @@ export default function SearchableDestinationListRow(result) {
       return jsx(onPressDestination(10650), {});
     }
   }
-};
+}

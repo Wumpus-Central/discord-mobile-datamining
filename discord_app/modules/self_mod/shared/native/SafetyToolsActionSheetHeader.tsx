@@ -7,7 +7,10 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { navbarContainer: { display: "flex", flexDirection: "row", justifyContent: "center" }, navbarLeft: null };
+createCacheKey = {
+  navbarContainer: { display: "flex", flexDirection: "row", justifyContent: "center" },
+  navbarLeft: null,
+};
 createCacheKey = { position: "absolute", left: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
@@ -37,7 +40,14 @@ export default function SafetyToolsActionSheetHeader(channelId) {
       return lib(obj.getHeaderBackButton(callback), obj);
     }, items1);
   }
-  const items2 = [memo, callback(channelId(recipientId[7]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: title })];
+  const items2 = [
+    memo,
+    callback(channelId(recipientId[7]).Text, {
+      variant: "heading-lg/bold",
+      color: "mobile-text-heading-primary",
+      children: title,
+    }),
+  ];
   obj[1] = items2;
   return callback(warningType, obj);
-};
+}

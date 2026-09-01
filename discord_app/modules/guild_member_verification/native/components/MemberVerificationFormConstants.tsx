@@ -3,7 +3,9 @@ import set from "../../../../../_runtime/00002_set.js";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 
 let c2 = 0.5625;
-const result = set.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationFormConstants.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_member_verification/native/components/MemberVerificationFormConstants.tsx",
+);
 
 export const BANNER_RATIO_HEIGHT_16_9 = 0.5625;
 export const AVATAR_SIZE = 76;

@@ -36,7 +36,9 @@ const forwardRefResult = importAllResult.forwardRef((style, ref) => {
   }
   obj[4] = hexWithOpacityResult;
   const merged1 = Object.assign(merged);
-  return <TextInput ref={arg1} style={items} keyboardAppearance={null} placeholderTextColor={null} selectionColor={null} />;
+  return (
+    <TextInput ref={arg1} style={items} keyboardAppearance={null} placeholderTextColor={null} selectionColor={null} />
+  );
 });
 forwardRefResult.displayName = "VoidTextInput";
 const result = require("set").fileFinishedImporting("design/void/TextInput/native/TextInput.tsx");

@@ -9,8 +9,19 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, containerWithActionSheet: null, title: null, titleWithActionSheet: null, actionSheetButton: null };
-createCacheKey = { display: "flex", gap: 6, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  container: null,
+  containerWithActionSheet: null,
+  title: null,
+  titleWithActionSheet: null,
+  actionSheetButton: null,
+};
+createCacheKey = {
+  display: "flex",
+  gap: 6,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_8,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { textAlign: "center" };
@@ -78,7 +89,20 @@ export default function QuestBottomSheetHeader(quest) {
   const tmp3Result5 = quest(ref[11]);
   const isSponsoredPlayQuestResult = quest(ref[12]).isSponsoredPlayQuest(quest);
   c11 = isSponsoredPlayQuestResult;
-  const items3 = [null != completedAt, hasWatchVideoTasksResult, step, first, memo1, gameTitle, defaultRewardNameWithArticle, targetMinutes, hasWatchVideoOnMobileTasks, isInGameQuestResult, isSponsoredPlayQuestResult, quest.config];
+  const items3 = [
+    null != completedAt,
+    hasWatchVideoTasksResult,
+    step,
+    first,
+    memo1,
+    gameTitle,
+    defaultRewardNameWithArticle,
+    targetMinutes,
+    hasWatchVideoOnMobileTasks,
+    isInGameQuestResult,
+    isSponsoredPlayQuestResult,
+    quest.config,
+  ];
   const memo2 = obj.useMemo(() => {
     if (ref) {
       const intl7 = quest(ref[13]).intl;
@@ -154,7 +178,7 @@ export default function QuestBottomSheetHeader(quest) {
       const result = obj.setAccessibilityFocus(obj);
     }
   }, items4);
-  const items5 = [tmp.container, ];
+  const items5 = [tmp.container];
   let containerWithActionSheet = withActionSheet;
   if (withActionSheet) {
     containerWithActionSheet = tmp.containerWithActionSheet;
@@ -163,9 +187,16 @@ export default function QuestBottomSheetHeader(quest) {
   items5[1] = containerWithActionSheet;
   let tmp24Result = null != memo2;
   if (tmp24Result) {
-    obj = { ref: null, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: null, children: null };
+    obj = {
+      ref: null,
+      variant: "redesign/heading-18/bold",
+      color: "mobile-text-heading-primary",
+      accessibilityRole: "header",
+      style: null,
+      children: null,
+    };
     obj[0] = ref;
-    const items6 = [tmp.title, ];
+    const items6 = [tmp.title];
     let titleWithActionSheet = withActionSheet;
     if (withActionSheet) {
       titleWithActionSheet = tmp.titleWithActionSheet;
@@ -176,7 +207,7 @@ export default function QuestBottomSheetHeader(quest) {
     tmp24Result = targetMinutes(tmp3(tmp4[20]).Text, obj);
     const tmp24 = targetMinutes;
   }
-  const items7 = [tmp24Result, ];
+  const items7 = [tmp24Result];
   if (withActionSheet) {
     obj1 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     let intl = tmp3(tmp4[13]).intl;
@@ -191,4 +222,4 @@ export default function QuestBottomSheetHeader(quest) {
   items7[1] = withActionSheet;
   obj[1] = items7;
   return memo1(c5, obj);
-};
+}

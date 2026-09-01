@@ -14,7 +14,10 @@ export default function useActivityTimer(start) {
   importDefault = undefined;
   const interval = new first(4362).Interval();
   first = callback(callback3(interval), 1)[0];
-  const tmp3 = callback(callback3(() => Date.now()), 2);
+  const tmp3 = callback(
+    callback3(() => Date.now()),
+    2,
+  );
   importDefault = tmp3[1];
   const items = [first];
   callback2(() => {
@@ -26,7 +29,7 @@ export default function useActivityTimer(start) {
   const diff1 = tmp3[0] - start;
   const bound = Math.max(Math.min(diff1 / setDefault.Millis.SECOND, result), 0);
   return { elapsed: bound, duration: result, percentage: Math.max(Math.min(bound / result, 1), 0) };
-};
+}
 export const formatTime = function formatTime(arg0) {
   const rounded = Math.floor(arg0);
   const result = rounded % setDefault.Seconds.MINUTE;

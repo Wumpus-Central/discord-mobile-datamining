@@ -11,9 +11,16 @@ import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
 import ME from "../../Constants.tsx";
 
 require = arg1;
-({ ENTITY_TYPES_REQUIRED_CHANNEL_ID: closure_6, ENTITY_TYPES_REQUIRED_ENTITY_METADATA: error, GuildScheduledEventStatus: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: c9 } = GUILD_EVENT_MAX_NAME_LENGTH);
+({
+  ENTITY_TYPES_REQUIRED_CHANNEL_ID: closure_6,
+  ENTITY_TYPES_REQUIRED_ENTITY_METADATA: error,
+  GuildScheduledEventStatus: closure_8,
+  MAX_RSVP_USER_DISPLAY_COUNT: c9,
+} = GUILD_EVENT_MAX_NAME_LENGTH);
 ({ Endpoints: c10, Routes: unpackModuleId } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventsActionCreators.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/GuildScheduledEventsActionCreators.tsx",
+);
 
 export default {
   startEvent(arg0, arg1) {
@@ -49,7 +56,18 @@ export default {
     } else {
       let obj = /^data:/;
     }
-    obj = { name: entityType.name, description: entityType.description, image, privacy_level: entityType.privacyLevel, scheduled_start_time: entityType.scheduledStartTime, scheduled_end_time: entityType.scheduledEndTime, entity_type: entityType.entityType, channel_id: channelId, entity_metadata: entityMetadata, recurrence_rule: EditGuildEventScreens.recurrenceRuleToServer(entityType.recurrenceRule) };
+    obj = {
+      name: entityType.name,
+      description: entityType.description,
+      image,
+      privacy_level: entityType.privacyLevel,
+      scheduled_start_time: entityType.scheduledStartTime,
+      scheduled_end_time: entityType.scheduledEndTime,
+      entity_type: entityType.entityType,
+      channel_id: channelId,
+      entity_metadata: entityMetadata,
+      recurrence_rule: EditGuildEventScreens.recurrenceRuleToServer(entityType.recurrenceRule),
+    };
     const HTTP = sendRequest.HTTP;
     obj = { url: closure_10.GUILD_EVENT(arg2, arg0), body: obj, rejectWithError: null };
     const obj3 = EditGuildEventScreens;
@@ -57,7 +75,18 @@ export default {
     return HTTP.patch(obj);
   },
   createGuildEvent(first, id) {
-    let obj = { name: first.name, description: first.description, image: first.image, privacy_level: first.privacyLevel, scheduled_start_time: first.scheduledStartTime, scheduled_end_time: first.scheduledEndTime, entity_type: first.entityType, channel_id: first.channelId, entity_metadata: first.entityMetadata, recurrence_rule: EditGuildEventScreens.recurrenceRuleToServer(first.recurrenceRule) };
+    let obj = {
+      name: first.name,
+      description: first.description,
+      image: first.image,
+      privacy_level: first.privacyLevel,
+      scheduled_start_time: first.scheduledStartTime,
+      scheduled_end_time: first.scheduledEndTime,
+      entity_type: first.entityType,
+      channel_id: first.channelId,
+      entity_metadata: first.entityMetadata,
+      recurrence_rule: EditGuildEventScreens.recurrenceRuleToServer(first.recurrenceRule),
+    };
     const HTTP = sendRequest.HTTP;
     obj = { url: closure_10.GUILD_EVENTS_FOR_GUILD(id), body: obj, rejectWithError: null };
     const obj2 = EditGuildEventScreens;
@@ -67,7 +96,7 @@ export default {
   fetchGuildEvent(closure_1_0, closure_1_1) {
     closure_0 = closure_1_0;
     closure_1 = closure_1_1;
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp2;
       let body = tmp5;
       obj1 = { url: null, rejectWithError: null };
@@ -85,7 +114,7 @@ export default {
   },
   fetchGuildEventsForGuild(first) {
     closure_0 = first;
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp2;
       let body = tmp5;
       obj1 = { url: null, rejectWithError: null };
@@ -106,7 +135,7 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = found;
-    return callback(function*() {
+    return callback(function* () {
       let obj5 = tmp2;
       let body = tmp5;
       obj1 = { url: null, query: null, rejectWithError: null };
@@ -139,12 +168,15 @@ export default {
   },
   deleteGuildEvent(closure_1_0, c1) {
     const HTTP = sendRequest.HTTP;
-    const obj = { url: closure_10.GUILD_EVENT(c1, closure_1_0), rejectWithError: sendRequest.rejectWithMigratedError() };
+    const obj = {
+      url: closure_10.GUILD_EVENT(c1, closure_1_0),
+      rejectWithError: sendRequest.rejectWithMigratedError(),
+    };
     return HTTP.del(obj);
   },
   getGuildEventsForCurrentUser(arg0) {
     closure_0 = arg0;
-    return callback(function*() {
+    return callback(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -199,7 +231,11 @@ export default {
           } else {
             body = arg1.body;
             obj = closure_1_1(709);
-            const obj5 = { type: "GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS", guildScheduledEventUsers: null, guildId: null };
+            const obj5 = {
+              type: "GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS",
+              guildScheduledEventUsers: null,
+              guildId: null,
+            };
             obj5[1] = body;
             obj5[2] = body;
             obj.dispatch(obj5);
@@ -218,7 +254,7 @@ export default {
     closure_1 = arg1;
     closure_2 = closure_1_2;
     const callback = c3;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -250,7 +286,14 @@ export default {
               id = undefined;
               id = id.getId();
               c3 = 1;
-              obj1 = { type: "GUILD_SCHEDULED_EVENT_USER_ADD", userId: null, guildId: null, guildEventId: null, guildEventExceptionId: null, response: null };
+              obj1 = {
+                type: "GUILD_SCHEDULED_EVENT_USER_ADD",
+                userId: null,
+                guildId: null,
+                guildEventId: null,
+                guildEventExceptionId: null,
+                response: null,
+              };
               obj1[1] = id;
               obj1[2] = closure_1_2;
               obj1[3] = closure_1_0;
@@ -275,7 +318,14 @@ export default {
             c3 = 0;
             closure_1 = closure_2;
             obj2 = closure_1_1(closure_1_2[10]);
-            const obj5 = { type: "GUILD_SCHEDULED_EVENT_USER_REMOVE", userId: null, guildId: null, guildEventId: null, guildEventExceptionId: null, response: null };
+            const obj5 = {
+              type: "GUILD_SCHEDULED_EVENT_USER_REMOVE",
+              userId: null,
+              guildId: null,
+              guildEventId: null,
+              guildEventExceptionId: null,
+              response: null,
+            };
             obj5[1] = id;
             obj5[2] = closure_2;
             obj5[3] = id;
@@ -315,7 +365,7 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = closure_1_2;
-    return callback(function*() {
+    return callback(function* () {
       if (rsvp === 2) {
         rsvp = 3;
         HermesBuiltin.throwTypeError();
@@ -351,7 +401,14 @@ export default {
               if (null != rsvp) {
                 c3 = 1;
                 let obj4 = closure_1_1(closure_1_2[10]);
-                obj1 = { type: "GUILD_SCHEDULED_EVENT_USER_REMOVE", userId: null, guildId: null, guildEventId: null, guildEventExceptionId: null, response: null };
+                obj1 = {
+                  type: "GUILD_SCHEDULED_EVENT_USER_REMOVE",
+                  userId: null,
+                  guildId: null,
+                  guildEventId: null,
+                  guildEventExceptionId: null,
+                  response: null,
+                };
                 obj1[1] = id;
                 obj1[2] = closure_1_2;
                 obj1[3] = closure_1_0;
@@ -375,7 +432,14 @@ export default {
           } else if (1 === tmp7) {
             c3 = 0;
             obj2 = closure_1_1(closure_1_2[10]);
-            obj4 = { type: "GUILD_SCHEDULED_EVENT_USER_ADD", userId: null, guildId: null, guildEventId: null, guildEventExceptionId: null, response: null };
+            obj4 = {
+              type: "GUILD_SCHEDULED_EVENT_USER_ADD",
+              userId: null,
+              guildId: null,
+              guildEventId: null,
+              guildEventExceptionId: null,
+              response: null,
+            };
             obj4[1] = id;
             obj4[2] = closure_2;
             obj4[3] = id;
@@ -418,7 +482,7 @@ export default {
     const callback = arg3;
     closure_4 = arg4;
     const self = this;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -534,7 +598,7 @@ export default {
       tmp = closure_9;
     }
     const callback = tmp;
-    return callback(function*() {
+    return callback(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -596,7 +660,13 @@ export default {
           } else {
             closure_0 = arg1;
             let obj6 = closure_1_1(709);
-            obj6 = { type: "GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS", guildEventId: null, guildScheduledEventUsers: null, guildId: null, guildEventExceptionId: null };
+            obj6 = {
+              type: "GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS",
+              guildEventId: null,
+              guildScheduledEventUsers: null,
+              guildId: null,
+              guildEventExceptionId: null,
+            };
             obj6[1] = closure_0;
             obj6[2] = closure_0.body;
             obj6[3] = dependencyMap;
@@ -617,18 +687,29 @@ export default {
   createGuildEventException(arg0, guild_id, id) {
     ({ original_scheduled_start_time, scheduled_start_time, scheduled_end_time, is_canceled } = arg0);
     const HTTP = sendRequest.HTTP;
-    const obj = { url: closure_10.GUILD_EVENT_EXCEPTIONS(guild_id, id), body: { original_scheduled_start_time, scheduled_start_time, scheduled_end_time, is_canceled }, rejectWithError: sendRequest.rejectWithMigratedError() };
+    const obj = {
+      url: closure_10.GUILD_EVENT_EXCEPTIONS(guild_id, id),
+      body: { original_scheduled_start_time, scheduled_start_time, scheduled_end_time, is_canceled },
+      rejectWithError: sendRequest.rejectWithMigratedError(),
+    };
     return HTTP.post(obj);
   },
   updateGuildEventException(arg0, guild_id, id, c2) {
     ({ scheduled_start_time, scheduled_end_time, is_canceled } = arg0);
     const HTTP = sendRequest.HTTP;
-    const obj = { url: closure_10.GUILD_EVENT_EXCEPTION(guild_id, id, c2), body: { scheduled_start_time, scheduled_end_time, is_canceled }, rejectWithError: sendRequest.rejectWithMigratedError() };
+    const obj = {
+      url: closure_10.GUILD_EVENT_EXCEPTION(guild_id, id, c2),
+      body: { scheduled_start_time, scheduled_end_time, is_canceled },
+      rejectWithError: sendRequest.rejectWithMigratedError(),
+    };
     return HTTP.patch(obj);
   },
   deleteGuildEventException(guild_id, id, event_exception_id) {
     const HTTP = sendRequest.HTTP;
-    const obj = { url: closure_10.GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id), rejectWithError: sendRequest.rejectWithMigratedError() };
+    const obj = {
+      url: closure_10.GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id),
+      rejectWithError: sendRequest.rejectWithMigratedError(),
+    };
     return HTTP.del(obj);
   },
   deleteRecurrence(c1, closure_1_0, c2, closure_1_3) {
@@ -645,5 +726,5 @@ export default {
       obj[0] = date.toISOString();
       return self.createGuildEventException(obj, c1, closure_1_0);
     }
-  }
+  },
 };

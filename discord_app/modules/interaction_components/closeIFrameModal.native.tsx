@@ -12,4 +12,4 @@ export default function closeIFrameModal(applicationId) {
   obj.popWithKey(closure_2);
   obj = { type: "INTERACTION_IFRAME_MODAL_CLOSE", applicationId };
   dispatcherDefault.dispatch(obj);
-};
+}

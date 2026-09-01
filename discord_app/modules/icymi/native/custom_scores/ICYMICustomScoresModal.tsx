@@ -30,11 +30,11 @@ export default function ICYMICustomScoresModal() {
           const merged1 = Object.assign(merged);
           return callback2(callback(table[6]).GenericHeaderTitle, { title: children.children });
         },
-        headerTitleAlign: "center"
+        headerTitleAlign: "center",
       };
     },
     initialRouteName: "default",
-    children: null
+    children: null,
   };
   obj = {
     name: "default",
@@ -48,7 +48,7 @@ export default function ICYMICustomScoresModal() {
     },
     getComponent() {
       return lib(16044).default;
-    }
+    },
   };
   const items = [
     callback(closure_5.Screen, obj),
@@ -60,9 +60,9 @@ export default function ICYMICustomScoresModal() {
       },
       getComponent() {
         return lib(16045).default;
-      }
-    })
+      },
+    }),
   ];
   obj[2] = items;
   return callback2(closure_5.Navigator, obj);
-};
+}

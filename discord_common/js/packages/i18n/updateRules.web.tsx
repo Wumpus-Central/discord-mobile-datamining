@@ -43,4 +43,4 @@ export default function updateRules(paragraph) {
   };
   paragraph.link = obj;
   return paragraph;
-};
+}

@@ -33,17 +33,17 @@ class AttachmentIcon {
     obj = {
       style: tmp.attachmentFileIcon,
       source: closure_3.useMemo(() => {
-            const obj = fileName(closure_1_2[19]);
-            let str = fileName;
-            if (fileName == null) {
-              str = "";
-            }
-            let tmp2 = closure_1_9[obj.classifyFileName(obj, str)];
-            if (tmp2 == null) {
-              tmp2 = closure_1_1(closure_1_2[16]);
-            }
-            return tmp2;
-          }, items)
+        const obj = fileName(closure_1_2[19]);
+        let str = fileName;
+        if (fileName == null) {
+          str = "";
+        }
+        let tmp2 = closure_1_9[obj.classifyFileName(obj, str)];
+        if (tmp2 == null) {
+          tmp2 = closure_1_1(closure_1_2[16]);
+        }
+        return tmp2;
+      }, items),
     };
     return jsx(Image, obj);
   }
@@ -62,12 +62,19 @@ function FilenameText(fileName) {
     tmp5 = "" !== fileName;
   }
   if (tmp5) {
-    obj = { style: null, ellipsizeMode: "middle", lineClamp: 1, variant: "text-xs/medium", color: "mobile-text-heading-primary", children: null };
+    obj = {
+      style: null,
+      ellipsizeMode: "middle",
+      lineClamp: 1,
+      variant: "text-xs/medium",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj[0] = tmp.attachmentFileName;
     obj[5] = fileName;
     tmp5 = callback(Text.Text, obj);
   }
-  const items = [tmp5, ];
+  const items = [tmp5];
   obj = { style: tmp.attachmentFileName, lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: null };
   let str3 = "UNKNOWN";
   if (null != match) {
@@ -97,13 +104,37 @@ let c3 = importAllResult;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let obj = { fileInfoAttachmentPreviewFile: null, attachmentFileIcon: null, attachmentFileName: null, videoIcon: null };
-obj = { flexDirection: "row", alignItems: "center", overflow: "hidden", borderRadius: ThemesDefault.radii.sm, height: 75, padding: 12, flex: 1, gap: ThemesDefault.space.PX_8 };
+obj = {
+  flexDirection: "row",
+  alignItems: "center",
+  overflow: "hidden",
+  borderRadius: ThemesDefault.radii.sm,
+  height: 75,
+  padding: 12,
+  flex: 1,
+  gap: ThemesDefault.space.PX_8,
+};
 obj[0] = obj;
 obj[1] = { height: 32, width: 24 };
 obj[2] = { paddingRight: 4, paddingLeft: 4, maxWidth: 136 };
 obj[3] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center" };
 let closure_8 = createCacheKey.createStyles(obj);
-createCacheKey = { archive: registerAssetDefault, acrobat: registerAssetDefault2, ae: registerAssetDefault3, ai: registerAssetDefault4, audio: registerAssetDefault5, code: registerAssetDefault6, document: registerAssetDefault7, image: registerAssetDefault8, photoshop: registerAssetDefault9, sketch: registerAssetDefault10, spreadsheet: registerAssetDefault11, unknown: registerAssetDefault12, video: registerAssetDefault13, webcode: registerAssetDefault14 };
+createCacheKey = {
+  archive: registerAssetDefault,
+  acrobat: registerAssetDefault2,
+  ae: registerAssetDefault3,
+  ai: registerAssetDefault4,
+  audio: registerAssetDefault5,
+  code: registerAssetDefault6,
+  document: registerAssetDefault7,
+  image: registerAssetDefault8,
+  photoshop: registerAssetDefault9,
+  sketch: registerAssetDefault10,
+  spreadsheet: registerAssetDefault11,
+  unknown: registerAssetDefault12,
+  video: registerAssetDefault13,
+  webcode: registerAssetDefault14,
+};
 let closure_13 = importAllResult.memo((borderRadius) => {
   ({ uri, width, height, style, fileName } = borderRadius);
   let obj = { uri, width, height };
@@ -204,7 +235,14 @@ export default function AttachmentPreview(height) {
         if (tmp7Result.isIOS()) {
           obj = { style: null, children: null };
           obj[0] = style;
-          obj1 = { style: null, source: null, muted: true, paused: true, resizeMode: "cover", preventsDisplaySleepDuringVideoPlayback: false };
+          obj1 = {
+            style: null,
+            source: null,
+            muted: true,
+            paused: true,
+            resizeMode: "cover",
+            preventsDisplaySleepDuringVideoPlayback: false,
+          };
           obj2 = { height: null, width: null };
           obj2[0] = num;
           obj2[1] = width;
@@ -233,7 +271,7 @@ export default function AttachmentPreview(height) {
       obj5[3] = borderRadius;
       obj5[4] = style;
       obj5[5] = fileName;
-      const items = [callback(closure_13, obj5), ];
+      const items = [callback(closure_13, obj5)];
       const obj6 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj6[0] = videoIcon;
@@ -255,5 +293,5 @@ export default function AttachmentPreview(height) {
     }
   }
   return tmp9;
-};
+}
 export { AttachmentIcon };

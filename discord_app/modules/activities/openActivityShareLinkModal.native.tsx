@@ -13,7 +13,9 @@ export const openActivityShareLinkModal = function openActivityShareLinkModal(ar
   let obj = getBestActiveInput;
   obj.dismissKeyboard();
   obj = { applicationId, customId, linkId, message, onShare };
-  _modDef4723.pushLazy(asyncRequireImpl(14140, dependencyMap.paths), obj, ACTIVITY_SHARE_LINK_MODAL, { presentation: "modal" });
+  _modDef4723.pushLazy(asyncRequireImpl(14140, dependencyMap.paths), obj, ACTIVITY_SHARE_LINK_MODAL, {
+    presentation: "modal",
+  });
 };
 export const closeActivityShareLinkModal = function closeActivityShareLinkModal() {
   _modDef4723.popWithKey(ACTIVITY_SHARE_LINK_MODAL);

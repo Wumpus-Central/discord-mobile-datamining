@@ -26,4 +26,4 @@ export default function reportMalformedStorageValues(arg0) {
     }
     tmp5 = 0 === malformedValueCountResult && 0 === malformedEntryCountResult;
   }
-};
+}

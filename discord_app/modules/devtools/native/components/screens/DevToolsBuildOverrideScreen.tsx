@@ -17,7 +17,7 @@ obj[0] = obj;
 createCacheKey = { padding: ThemesDefault.space.PX_16 };
 obj[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(obj);
-let items = [{ label: "Branch Name", value: "branch", icon: jsx(require("TagIcon").TagIcon, {}) }, ];
+let items = [{ label: "Branch Name", value: "branch", icon: jsx(require("TagIcon").TagIcon, {}) }];
 let obj2 = { label: "Branch Name", value: "branch", icon: jsx(require("TagIcon").TagIcon, {}) };
 items[1] = { label: "Commit SHA", value: "id", icon: jsx(require("HashmarkIcon").HashmarkIcon, {}) };
 let obj3 = { label: "Commit SHA", value: "id", icon: jsx(require("HashmarkIcon").HashmarkIcon, {}) };
@@ -60,7 +60,7 @@ const memoResult = importAllResult.memo(() => {
       const obj = first(5981);
       const result = first(4193).presentCopiedToClipboard();
     };
-    const items1 = [tmp7(tmp3(5599).TableRow, obj1), , ];
+    const items1 = [tmp7(tmp3(5599).TableRow, obj1), ,];
     let obj3 = { icon: null, label: "Refresh Override", onPress: null, arrow: true };
     obj3[0] = tmp7(tmp3(14759).RefreshIcon, {});
     obj3[2] = tmp3(11360).refreshBuildOverride;
@@ -72,7 +72,7 @@ const memoResult = importAllResult.memo(() => {
     obj2[2] = items1;
     tmp10Result = tmp10(tmp3(5992).TableRowGroup, obj2);
   }
-  const items2 = [tmp10Result, , , ];
+  const items2 = [tmp10Result, , ,];
   let str = "";
   if (null != stateFromStores) {
     str = "New";
@@ -88,7 +88,7 @@ const memoResult = importAllResult.memo(() => {
       value = value.value;
       ({ icon, label } = value);
       return callback(first(7693).TableRadioRow, { value, label, icon }, value);
-    })
+    }),
   });
   const found1 = items.find((value) => value.value === first.type);
   let label1;
@@ -119,7 +119,7 @@ const memoResult = importAllResult.memo(() => {
       value = value.value;
       ({ icon, label } = value);
       return callback(first(7693).TableRadioRow, { value, label, icon }, value);
-    })
+    }),
   };
   const tmp8 = ScrollView;
   obj7[1] = jsx(first(7705).TextInput, {
@@ -134,7 +134,7 @@ const memoResult = importAllResult.memo(() => {
     autoCapitalize: "none",
     autoCorrect: false,
     autoComplete: "off",
-    isClearable: true
+    isClearable: true,
   });
   obj6[2] = jsx(first(5599).TableRow, { icon, label: null });
   items2[2] = jsx(first(5992).TableRowGroup, { title: label1, hasIcons: true, children: null });
@@ -153,12 +153,14 @@ const memoResult = importAllResult.memo(() => {
         first(1471).assertNever(tmp.type);
         const obj = first(1471);
       }
-    }
+    },
   });
   obj8[1] = items2;
   obj[2] = jsxs(first(4926).Stack, { spacing: 16, children: null });
   return <tmp8 />;
 });
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsBuildOverrideScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsBuildOverrideScreen.tsx",
+);
 
 export default memoResult;

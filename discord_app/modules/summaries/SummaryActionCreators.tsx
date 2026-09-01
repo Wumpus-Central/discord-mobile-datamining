@@ -27,7 +27,7 @@ function _fetchSummary() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -106,7 +106,14 @@ function _fetchSummary() {
               c5 = 0;
             }
             obj1 = timestamp(aPIError[7]);
-            const obj4 = { type: "RECEIVE_CHANNEL_SUMMARY", channelId: null, summary: null, error: null, requestedAt: null, receivedAt: null };
+            const obj4 = {
+              type: "RECEIVE_CHANNEL_SUMMARY",
+              channelId: null,
+              summary: null,
+              error: null,
+              requestedAt: null,
+              receivedAt: null,
+            };
             obj4[1] = callback;
             obj4[2] = body;
             obj4[3] = aPIError;
@@ -154,7 +161,7 @@ function _fetchSummaries() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -253,7 +260,14 @@ function _fetchSummaries() {
             obj1 = callback2(12);
             closure_4 = obj1.takeRight(closure_4, 75);
             obj2 = callback2(709);
-            obj4 = { type: "RECEIVE_CHANNEL_SUMMARIES", channelId: null, summaries: null, error: null, requestedAt: null, receivedAt: null };
+            obj4 = {
+              type: "RECEIVE_CHANNEL_SUMMARIES",
+              channelId: null,
+              summaries: null,
+              error: null,
+              requestedAt: null,
+              receivedAt: null,
+            };
             obj4[1] = callback;
             obj4[2] = closure_4;
             if (dependencyMap == null) {
@@ -341,7 +355,7 @@ function fetchChannelAffinities() {
 }
 function _fetchChannelAffinities() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c6 === 2) {
       c6 = 3;
       HermesBuiltin.throwTypeError();
@@ -424,7 +438,13 @@ function _fetchChannelAffinities() {
             }
           }
           obj1 = aPIError(body[7]);
-          obj4 = { type: "RECEIVE_CHANNEL_AFFINITIES", affinities: null, error: null, requestedAt: null, receivedAt: null };
+          obj4 = {
+            type: "RECEIVE_CHANNEL_AFFINITIES",
+            affinities: null,
+            error: null,
+            requestedAt: null,
+            receivedAt: null,
+          };
           obj4[1] = channel_affinities;
           callback = aPIError;
           if (aPIError == null) {
@@ -476,7 +496,7 @@ function _fetchSummariesBulk() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -624,7 +644,14 @@ function _fetchSummariesBulk() {
               summaries = _undefined.body.summaries;
             }
             obj1 = flag(709);
-            const obj9 = { type: "RECEIVE_CHANNEL_SUMMARIES_BULK", requestedAt: null, receivedAt: null, summaries: null, requestArgs: null, error: null };
+            const obj9 = {
+              type: "RECEIVE_CHANNEL_SUMMARIES_BULK",
+              requestedAt: null,
+              receivedAt: null,
+              summaries: null,
+              requestArgs: null,
+              error: null,
+            };
             obj9[1] = closure_3;
             const _Date = Date;
             obj9[2] = Date.now();
@@ -678,7 +705,7 @@ function useChannelSummaries(channelIds) {
   const effect = React.useEffect(() => {
     function _fetch() {
       const self = this;
-      const tmp = closure_2_3(function*() {
+      const tmp = closure_2_3(function* () {
         closure_0 = tmp3;
         c3 = 1;
         yield closure_2_15();
@@ -752,7 +779,7 @@ function _deleteSummary() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -840,7 +867,16 @@ let closure_10 = {};
 let closure_11 = {};
 const result = require("set").fileFinishedImporting("modules/summaries/SummaryActionCreators.tsx");
 
-export default { setSummaryFeedback, updateVisibleMessages, setSelectedSummary, setHighlightedSummary, fetchSummaries, fetchSummariesBulk, useChannelSummaries, deleteSummary };
+export default {
+  setSummaryFeedback,
+  updateVisibleMessages,
+  setSelectedSummary,
+  setHighlightedSummary,
+  fetchSummaries,
+  fetchSummariesBulk,
+  useChannelSummaries,
+  deleteSummary,
+};
 export { fetchSummary };
 export { fetchSummaries };
 export { setHighlightedSummary };
@@ -881,7 +917,7 @@ export const useMaybeFetchChannelAffinitiesAndSummaries = function useMaybeFetch
   const effect = React.useEffect(() => {
     function _fetch() {
       const self = this;
-      const tmp = closure_2_3(function*() {
+      const tmp = closure_2_3(function* () {
         closure_0 = tmp3;
         c3 = 1;
         yield closure_2_15();

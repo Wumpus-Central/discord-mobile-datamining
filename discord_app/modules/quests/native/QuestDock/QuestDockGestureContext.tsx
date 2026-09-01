@@ -9,7 +9,12 @@ import createFakeSharedValue from "../../../reanimated/ReanimatedHelperTypes.tsx
 const require = arg1;
 let c3 = importAllResult;
 ({ QUEST_DOCK_COLLAPSED_HEIGHT: closure_6, QUEST_DOCK_EXPANDED_HEIGHT: error } = QUEST_DOCK_COLLAPSED_HEIGHT);
-let obj = { questDockWrapperSpecs: null, windowDimensions: null, activeQuestDockMode: null, minExpandedContentHeight: null };
+let obj = {
+  questDockWrapperSpecs: null,
+  windowDimensions: null,
+  activeQuestDockMode: null,
+  minExpandedContentHeight: null,
+};
 obj[0] = createFakeSharedValue.createFakeSharedValue({ width: 0, height: 0, x: 0, y: 0, prevDeltaY: 0 });
 obj[1] = createFakeSharedValue.createFakeSharedValue({ width: 0, height: 0, maxContentHeight: 0, landscape: false });
 obj[2] = createFakeSharedValue.createFakeSharedValue(QuestDockMode.COLLAPSED);
@@ -27,22 +32,57 @@ const memoResult = importAllResult.memo(function QuestDockGestureContextProvider
   const tmp2 = sharedValue2;
   obj = { width: null, height: null, x: 0, y: -8, prevDeltaY: 0 };
   const obj5 = sharedValue(sharedValue2[7]);
-  obj[0] = sharedValue(sharedValue2[9]).getQuestDockCollapsedWidth(size.width, youBarHorizontalMargin, youBarHorizontalMargin);
+  obj[0] = sharedValue(sharedValue2[9]).getQuestDockCollapsedWidth(
+    size.width,
+    youBarHorizontalMargin,
+    youBarHorizontalMargin,
+  );
   obj[1] = closure_6;
   const sharedValue1 = obj5.useSharedValue(obj);
   const obj7 = sharedValue(sharedValue2[9]);
   const obj8 = sharedValue(sharedValue2[7]);
-  sharedValue2 = obj8.useSharedValue(sharedValue(sharedValue2[9]).isSoftDismissed(obj.questDockSoftDismissedAt) ? tmp6.SOFT_DISMISSED : tmp6.COLLAPSED);
+  sharedValue2 = obj8.useSharedValue(
+    sharedValue(sharedValue2[9]).isSoftDismissed(obj.questDockSoftDismissedAt) ? tmp6.SOFT_DISMISSED : tmp6.COLLAPSED,
+  );
   const obj9 = sharedValue(sharedValue2[9]);
   sharedValue3 = tmp(tmp2[7]).useSharedValue(closure_7);
   const items = [sharedValue];
-  const effect = obj.useEffect(() => sharedValue1(sharedValue2[10])((arg0) => {
-    ({ width, height } = arg0);
-    const result = closure_0.set({ width, height, landscape: width > height, maxContentHeight: height });
-  }), items);
+  const effect = obj.useEffect(
+    () =>
+      sharedValue1(sharedValue2[10])((arg0) => {
+        ({ width, height } = arg0);
+        const result = closure_0.set({ width, height, landscape: width > height, maxContentHeight: height });
+      }),
+    items,
+  );
   const items1 = [sharedValue, sharedValue1, sharedValue2, sharedValue3];
-  obj1 = { value: obj.useMemo(() => ({ windowDimensions: sharedValue, questDockWrapperSpecs: sharedValue1, activeQuestDockMode: sharedValue2, minExpandedContentHeight: sharedValue3 }), items1), children: children.children };
-  return <context.Provider value={obj.useMemo(() => ({ windowDimensions: sharedValue, questDockWrapperSpecs: sharedValue1, activeQuestDockMode: sharedValue2, minExpandedContentHeight: sharedValue3 }), items1)}>{arg0.children}</context.Provider>;
+  obj1 = {
+    value: obj.useMemo(
+      () => ({
+        windowDimensions: sharedValue,
+        questDockWrapperSpecs: sharedValue1,
+        activeQuestDockMode: sharedValue2,
+        minExpandedContentHeight: sharedValue3,
+      }),
+      items1,
+    ),
+    children: children.children,
+  };
+  return (
+    <context.Provider
+      value={obj.useMemo(
+        () => ({
+          windowDimensions: sharedValue,
+          questDockWrapperSpecs: sharedValue1,
+          activeQuestDockMode: sharedValue2,
+          minExpandedContentHeight: sharedValue3,
+        }),
+        items1,
+      )}
+    >
+      {arg0.children}
+    </context.Provider>
+  );
 });
 let result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockGestureContext.tsx");
 

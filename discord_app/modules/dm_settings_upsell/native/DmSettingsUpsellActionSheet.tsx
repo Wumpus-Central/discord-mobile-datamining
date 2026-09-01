@@ -9,7 +9,15 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, headerImage: null, title: null, body: null, guildContainer: null, guildInfo: null, footer: null };
+createCacheKey = {
+  container: null,
+  headerImage: null,
+  title: null,
+  body: null,
+  guildContainer: null,
+  guildInfo: null,
+  footer: null,
+};
 createCacheKey = { paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignSelf: "center", width: 73, height: 86 };
@@ -17,8 +25,24 @@ createCacheKey[2] = { textAlign: "center", alignSelf: "center", width: 250 };
 createCacheKey[3] = { textAlign: "center" };
 createCacheKey[4] = { paddingVertical: ThemesDefault.space.PX_16 };
 let obj1 = { paddingVertical: ThemesDefault.space.PX_16 };
-createCacheKey[5] = { marginTop: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12, padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md };
-let obj2 = { marginTop: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12, padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md };
+createCacheKey[5] = {
+  marginTop: ThemesDefault.space.PX_4,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_12,
+  padding: ThemesDefault.space.PX_12,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.md,
+};
+let obj2 = {
+  marginTop: ThemesDefault.space.PX_4,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_12,
+  padding: ThemesDefault.space.PX_12,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[6] = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
@@ -45,7 +69,7 @@ export default function DmSettingsUpsellActionSheet(guildId) {
     obj1 = { source: null, style: null };
     obj1[0] = stateFromStores(11011);
     obj1[1] = tmp.headerImage;
-    const items2 = [callback(closure_5, obj1), , , , , , ];
+    const items2 = [callback(closure_5, obj1), , , , , ,];
     let obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: null, children: null };
     obj2[2] = tmp.title;
     let intl = tmp2(1236).intl;
@@ -63,13 +87,13 @@ export default function DmSettingsUpsellActionSheet(guildId) {
     const obj6 = { variant: "eyebrow", color: "text-default", children: null };
     const intl3 = tmp2(1236).intl;
     obj6[2] = intl3.string(tmp2(1236).t.KPB2iw);
-    const items3 = [callback(tmp2(4474).Text, obj6), ];
+    const items3 = [callback(tmp2(4474).Text, obj6)];
     const obj7 = { style: null, children: null };
     obj7[0] = tmp.guildInfo;
     const obj8 = { guild: null, size: null };
     obj8[0] = stateFromStores;
     obj8[1] = tmp2(6004).GuildIconSizes.SMALL_32;
-    const items4 = [callback(stateFromStores(6004), obj8), ];
+    const items4 = [callback(stateFromStores(6004), obj8)];
     const obj9 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj9[2] = stateFromStores.name;
     items4[1] = callback(tmp2(4474).Text, obj9);
@@ -116,7 +140,10 @@ export default function DmSettingsUpsellActionSheet(guildId) {
         stateFromStores(closure_1_2[19]).hideActionSheet();
         stateFromStores(closure_1_2[20])(tmp);
         const obj = stateFromStores(closure_1_2[19]);
-        guildId(closure_1_2[8]).trackEvent(guildId(closure_1_2[8]).DmUpsellActionTypes.MODAL_GUILD_SETTINGS_CLICKED, guildId);
+        guildId(closure_1_2[8]).trackEvent(
+          guildId(closure_1_2[8]).DmUpsellActionTypes.MODAL_GUILD_SETTINGS_CLICKED,
+          guildId,
+        );
         const obj2 = guildId(closure_1_2[8]);
       }
     };
@@ -128,4 +155,4 @@ export default function DmSettingsUpsellActionSheet(guildId) {
     const tmp12 = stateFromStores(6004);
   }
   return tmp6;
-};
+}

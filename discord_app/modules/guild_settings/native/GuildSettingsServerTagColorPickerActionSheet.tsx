@@ -8,33 +8,97 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-({ GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: closure_6, GUILD_TAG_BADGE_PALETTE_PRESETS: error, GuildTagBadgeSize: closure_8 } = items);
+({
+  GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: closure_6,
+  GUILD_TAG_BADGE_PALETTE_PRESETS: error,
+  GuildTagBadgeSize: closure_8,
+} = items);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 const PX_16 = ThemesDefault.space.PX_16;
 let closure_12 = { leading: true, trailing: true };
 let closure_13 = createCacheKey.createStyles((width) => {
-  let obj = { container: null, preview: null, previewChiplet: null, colorTabs: null, saturationValuePicker: null, saturationValueColorBox: null, saturationValueColorBoxInner: null, selector: null, huePicker: null, hueColorBarInner: null, hexInput: null, buttonGroup: null };
+  let obj = {
+    container: null,
+    preview: null,
+    previewChiplet: null,
+    colorTabs: null,
+    saturationValuePicker: null,
+    saturationValueColorBox: null,
+    saturationValueColorBoxInner: null,
+    selector: null,
+    huePicker: null,
+    hueColorBarInner: null,
+    hexInput: null,
+    buttonGroup: null,
+  };
   obj = { paddingHorizontal: PX_16, paddingBottom: ThemesDefault.space.PX_16 };
   obj[0] = obj;
-  obj = { alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_24, paddingVertical: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+  obj = {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: ThemesDefault.space.PX_24,
+    paddingVertical: ThemesDefault.space.PX_12,
+    borderRadius: ThemesDefault.radii.sm,
+    borderWidth: 1,
+    borderColor: ThemesDefault.colors.BORDER_MUTED,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  };
   obj[1] = obj;
-  obj[2] = { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 0, columnGap: ThemesDefault.space.PX_8 };
+  obj[2] = {
+    backgroundColor: "transparent",
+    paddingHorizontal: 0,
+    paddingVertical: 0,
+    columnGap: ThemesDefault.space.PX_8,
+  };
   obj[3] = { alignSelf: "center", width };
   obj[4] = { alignSelf: "center" };
-  obj1 = { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 0, columnGap: ThemesDefault.space.PX_8 };
+  obj1 = {
+    backgroundColor: "transparent",
+    paddingHorizontal: 0,
+    paddingVertical: 0,
+    columnGap: ThemesDefault.space.PX_8,
+  };
   obj[5] = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
   obj[6] = { width, minWidth: width, height: 160, minHeight: 160 };
   const obj2 = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-  obj[7] = { width: 16, height: 16, borderRadius: ThemesDefault.radii.round, borderColor: ThemesDefault.unsafe_rawColors.WHITE };
+  obj[7] = {
+    width: 16,
+    height: 16,
+    borderRadius: ThemesDefault.radii.round,
+    borderColor: ThemesDefault.unsafe_rawColors.WHITE,
+  };
   obj[8] = { alignSelf: "center" };
   obj[9] = { width, minWidth: width, height: 24 };
-  const obj3 = { width: 16, height: 16, borderRadius: ThemesDefault.radii.round, borderColor: ThemesDefault.unsafe_rawColors.WHITE };
-  obj[10] = { height: 48, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_12, textAlign: "center" };
-  const obj4 = { height: 48, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_12, textAlign: "center" };
+  const obj3 = {
+    width: 16,
+    height: 16,
+    borderRadius: ThemesDefault.radii.round,
+    borderColor: ThemesDefault.unsafe_rawColors.WHITE,
+  };
+  obj[10] = {
+    height: 48,
+    borderRadius: ThemesDefault.radii.sm,
+    borderWidth: 1,
+    borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT,
+    backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+    paddingHorizontal: ThemesDefault.space.PX_12,
+    textAlign: "center",
+  };
+  const obj4 = {
+    height: 48,
+    borderRadius: ThemesDefault.radii.sm,
+    borderWidth: 1,
+    borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT,
+    backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+    paddingHorizontal: ThemesDefault.space.PX_12,
+    textAlign: "center",
+  };
   obj[11] = { marginTop: ThemesDefault.space.PX_24 };
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagColorPickerActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_settings/native/GuildSettingsServerTagColorPickerActionSheet.tsx",
+);
 
 export default function GuildSettingsServerTagColorPickerActionSheet(secondaryColor) {
   ({ tag, badge, primaryColor } = secondaryColor);
@@ -147,7 +211,7 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
     return tmp;
   }, items);
   const items1 = [primaryColor, secondaryColor];
-  callback1 = obj.useCallback((arg0) => "primary" === arg0 ? primaryColor : secondaryColor, items1);
+  callback1 = obj.useCallback((arg0) => ("primary" === arg0 ? primaryColor : secondaryColor), items1);
   callback2 = obj.useCallback((arg0, str) => {
     let formatted;
     if (str != null) {
@@ -179,7 +243,9 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
     let obj = primaryColor(onSelectColor[7]);
     const hsvToRgbWorkletResult = obj.hsvToRgbWorklet({ h: value, s: value, v: value1 });
     const obj2 = primaryColor(onSelectColor[8]);
-    const formatted = primaryColor(onSelectColor[8]).rgbToHex(hsvToRgbWorkletResult[0], hsvToRgbWorkletResult[1], hsvToRgbWorkletResult[2]).toUpperCase();
+    const formatted = primaryColor(onSelectColor[8])
+      .rgbToHex(hsvToRgbWorkletResult[0], hsvToRgbWorkletResult[1], hsvToRgbWorkletResult[2])
+      .toUpperCase();
     callback4(formatted);
     callback2(colorChannel, formatted);
     obj = { colorChannel, hex: formatted };
@@ -271,7 +337,7 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
     let obj = { id: "primary", label: null, page: null };
     const intl = primaryColor(onSelectColor[12]).intl;
     obj[1] = intl.string(primaryColor(onSelectColor[12]).t.PHT1N2);
-    const items = [obj, ];
+    const items = [obj];
     obj = { id: "secondary", label: null, page: null };
     const intl2 = primaryColor(onSelectColor[12]).intl;
     obj[1] = intl2.string(primaryColor(onSelectColor[12]).t["9/wzjF"]);
@@ -280,7 +346,11 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
   }, []);
   const tmp15Result2 = primaryColor(onSelectColor[11]);
   const items12 = [first1, first2, callback5, table[badge] >= 2, first4, onSelectColor];
-  const segmentedControlState = primaryColor(onSelectColor[13]).useSegmentedControlState({ items: memo, pageWidth: bound, onSetActiveIndex: callback10 });
+  const segmentedControlState = primaryColor(onSelectColor[13]).useSegmentedControlState({
+    items: memo,
+    pageWidth: bound,
+    onSetActiveIndex: callback10,
+  });
   let str2 = "WUMP";
   const callback11 = obj.useCallback(() => {
     if (null != obj.hex2rgb2hsv(first4)) {
@@ -334,8 +404,21 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
   let intl2 = tmp15(tmp2[12]).intl;
   obj2[1] = intl2.formatToPlainString(primaryColor(onSelectColor[12]).t.R1AXap, { tag: str2 });
   obj2[2] = tmp4.preview;
-  const obj3 = { guildTag: str2, guildBadge: null, textVariant: "heading-xxl/semibold", textStyle: null, badgeSize: null, containerStyles: null };
-  const obj4 = { badge, width: closure_8.SIZE_36, height: closure_8.SIZE_36, primaryTintColor: first1, secondaryTintColor: null };
+  const obj3 = {
+    guildTag: str2,
+    guildBadge: null,
+    textVariant: "heading-xxl/semibold",
+    textStyle: null,
+    badgeSize: null,
+    containerStyles: null,
+  };
+  const obj4 = {
+    badge,
+    width: closure_8.SIZE_36,
+    height: closure_8.SIZE_36,
+    primaryTintColor: first1,
+    secondaryTintColor: null,
+  };
   let tmp44;
   if (table[badge] >= 2) {
     tmp44 = first2;
@@ -346,7 +429,7 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
   obj3[4] = closure_8.SIZE_36;
   obj3[5] = tmp4.previewChiplet;
   obj2[3] = first3(primaryColor(onSelectColor[18]).BaseGuildTagChiplet, obj3);
-  const items13 = [first3(first1, obj2), , , , ];
+  const items13 = [first3(first1, obj2), , , ,];
   let tmp40Result = null;
   if (table[badge] >= 2) {
     const obj5 = { style: null, children: null };
@@ -357,8 +440,29 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
     tmp40Result = tmp40(tmp42, obj5);
   }
   items13[1] = tmp40Result;
-  items13[2] = first3(secondaryColor(onSelectColor[22]), { hue: sharedValue, saturation: sharedValue1, value: sharedValue2, saturationValuePickerStyle: tmp4.saturationValuePicker, saturationValueColorBoxStyle: tmp4.saturationValueColorBox, saturationValueColorBoxInnerStyle: tmp4.saturationValueColorBoxInner, saturationValueSelectorStyle: tmp4.selector, huePickerStyle: tmp4.huePicker, hueColorBarInnerStyle: tmp4.hueColorBarInner, hueSliderStyle: tmp4.selector, onPanUpdate: callback6, onPanFinalize: callback7 });
-  const obj8 = { accessibilityLabel: null, value: null, onChangeText: null, maxLength: 7, autoCapitalize: "characters", autoCorrect: false, style: null };
+  items13[2] = first3(secondaryColor(onSelectColor[22]), {
+    hue: sharedValue,
+    saturation: sharedValue1,
+    value: sharedValue2,
+    saturationValuePickerStyle: tmp4.saturationValuePicker,
+    saturationValueColorBoxStyle: tmp4.saturationValueColorBox,
+    saturationValueColorBoxInnerStyle: tmp4.saturationValueColorBoxInner,
+    saturationValueSelectorStyle: tmp4.selector,
+    huePickerStyle: tmp4.huePicker,
+    hueColorBarInnerStyle: tmp4.hueColorBarInner,
+    hueSliderStyle: tmp4.selector,
+    onPanUpdate: callback6,
+    onPanFinalize: callback7,
+  });
+  const obj8 = {
+    accessibilityLabel: null,
+    value: null,
+    onChangeText: null,
+    maxLength: 7,
+    autoCapitalize: "characters",
+    autoCorrect: false,
+    style: null,
+  };
   const intl3 = tmp15(tmp2[12]).intl;
   obj8[0] = intl3.string(primaryColor(onSelectColor[12]).t["ozfa/h"]);
   obj8[1] = first4;
@@ -371,7 +475,7 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
   obj10[1] = intl4.string(primaryColor(onSelectColor[12]).t["R3BPH+"]);
   obj10[2] = callback11;
   obj10[3] = null == primaryColor(onSelectColor[8]).hex2rgb2hsv(first4);
-  const items14 = [first3(primaryColor(onSelectColor[24]).Button, obj10), ];
+  const items14 = [first3(primaryColor(onSelectColor[24]).Button, obj10)];
   const obj11 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl5 = tmp15(tmp2[12]).intl;
   obj11[2] = intl5.string(primaryColor(onSelectColor[12]).t.yBZMsQ);
@@ -382,4 +486,4 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
   obj1[2] = items13;
   obj[3] = closure_10(primaryColor(onSelectColor[17]).Stack, obj1);
   return first3(primaryColor(onSelectColor[15]).BottomSheet, obj);
-};
+}

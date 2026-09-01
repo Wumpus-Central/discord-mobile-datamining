@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/message_request/hooks/useRequi
 
 export default function useRequireConfirmationOnAccept() {
   return setDefault();
-};
+}

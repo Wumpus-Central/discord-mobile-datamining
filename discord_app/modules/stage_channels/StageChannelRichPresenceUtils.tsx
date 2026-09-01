@@ -16,7 +16,15 @@ function unpackStageChannelParty(c17) {
             const tmp4 = callback(str.split(":"), 5);
             const _parseInt = parseInt;
             const parsed = parseInt(tmp4[3], 16);
-            const obj = { guildId: null, channelId: null, size: null, userIsSpeaker: null, guildIsPartnered: null, guildIsVerified: null, stageInstanceId: null };
+            const obj = {
+              guildId: null,
+              channelId: null,
+              size: null,
+              userIsSpeaker: null,
+              guildIsPartnered: null,
+              guildIsVerified: null,
+              stageInstanceId: null,
+            };
             obj[0] = tmp4[1];
             obj[1] = tmp4[2];
             obj[2] = tmp2;

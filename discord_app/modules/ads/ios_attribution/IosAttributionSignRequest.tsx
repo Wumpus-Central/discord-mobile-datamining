@@ -10,7 +10,7 @@ function _fetchIosAttributionSignedPayloads() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -60,7 +60,14 @@ function _fetchIosAttributionSignedPayloads() {
             } else {
               c5 = 1;
               const HTTP = callback(530).HTTP;
-              let obj2 = { url: null, body: null, failImmediatelyWhenRateLimited: true, rejectWithError: true, timeout: 5000, signal: null };
+              let obj2 = {
+                url: null,
+                body: null,
+                failImmediatelyWhenRateLimited: true,
+                rejectWithError: true,
+                timeout: 5000,
+                signal: null,
+              };
               obj2[0] = constants.ADS_IOS_ATTRIBUTION_SIGN_PAYLOAD;
               const obj3 = { metadata_sealed: null, impression_id: null, specs: null };
               obj3[0] = callback;

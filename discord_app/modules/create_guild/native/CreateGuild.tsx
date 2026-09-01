@@ -9,8 +9,19 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { flex: { flex: 1 }, contentContainer: null, header: null, description: null, iconUploader: null, hint: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16, paddingBottom: 16 };
+createCacheKey = {
+  flex: { flex: 1 },
+  contentContainer: null,
+  header: null,
+  description: null,
+  iconUploader: null,
+  hint: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  paddingHorizontal: 16,
+  paddingBottom: 16,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { lineHeight: 18, textAlign: "center", marginBottom: 24 };
@@ -49,14 +60,29 @@ export default function CreateGuild(arg0) {
       const result = obj.setAccessibilityFocus(obj);
     }
   }, items);
-  let obj = { style: tmp.flex, contentInset: { top: 0 }, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: tmp.contentContainer, children: null };
-  obj = { ref, style: tmp.header, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  let obj = {
+    style: tmp.flex,
+    contentInset: { top: 0 },
+    automaticallyAdjustContentInsets: false,
+    keyboardShouldPersistTaps: "handled",
+    alwaysBounceVertical: false,
+    contentContainerStyle: tmp.contentContainer,
+    children: null,
+  };
+  obj = {
+    ref,
+    style: tmp.header,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   if (customTitle == null) {
     const intl = tmp4(1236).intl;
     customTitle = intl.string(tmp4(1236).t.XioBx6);
   }
   obj[5] = customTitle;
-  const items1 = [closure_7(isScreenReaderEnabled(4474).Text, obj), , , , , , , ];
+  const items1 = [closure_7(isScreenReaderEnabled(4474).Text, obj), , , , , , ,];
   obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   if (customDescription == null) {
     const intl2 = tmp4(1236).intl;
@@ -64,8 +90,22 @@ export default function CreateGuild(arg0) {
   }
   obj1[3] = customDescription;
   items1[1] = closure_7(isScreenReaderEnabled(4474).Text, obj1);
-  items1[2] = closure_7(ref(11371), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
-  const obj3 = { isClearable: true, label: null, errorMessage: null, value: null, onChange: null, autoFocus: null, autoCorrect: false, returnKeyType: "done" };
+  items1[2] = closure_7(ref(11371), {
+    iconBackgroundColor: tmp.contentContainer.backgroundColor,
+    style: tmp.iconUploader,
+    onPress: onIconPress,
+    icon: guild.icon,
+  });
+  const obj3 = {
+    isClearable: true,
+    label: null,
+    errorMessage: null,
+    value: null,
+    onChange: null,
+    autoFocus: null,
+    autoCorrect: false,
+    returnKeyType: "done",
+  };
   const intl3 = tmp4(1236).intl;
   obj3[1] = intl3.string(isScreenReaderEnabled(1236).t.dBih7e);
   let firstFieldErrorMessage;
@@ -135,4 +175,4 @@ export default function CreateGuild(arg0) {
   items1[7] = tmp9Result;
   obj[6] = closure_8(isScreenReaderEnabled(4926).Stack, { children: items1 });
   return closure_7(ScrollView, obj);
-};
+}

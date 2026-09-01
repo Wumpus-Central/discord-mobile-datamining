@@ -32,7 +32,39 @@ import registerAsset29 from "../../../../../_runtime/15051_registerAsset.js";
 import registerAsset30 from "../../../../../_runtime/15052_registerAsset.js";
 import registerAsset31 from "../../../../../_runtime/15053_registerAsset.js";
 
-const obj = { bg: registerAsset, cs: registerAsset2, da: registerAsset3, de: registerAsset4, el: registerAsset5, "en-GB": registerAsset6, "en-US": registerAsset7, "es-ES": registerAsset8, "es-419": registerAsset9, fi: registerAsset10, fr: registerAsset11, hi: registerAsset12, hr: registerAsset13, hu: registerAsset14, it: registerAsset15, ja: registerAsset16, ko: registerAsset17, lt: registerAsset18, nl: registerAsset19, no: registerAsset20, pl: registerAsset21, "pt-BR": registerAsset22, ro: registerAsset23, ru: registerAsset24, "sv-SE": registerAsset25, th: registerAsset26, tr: registerAsset27, uk: registerAsset28, vi: registerAsset29, "zh-CN": registerAsset30, "zh-TW": registerAsset31 };
+const obj = {
+  bg: registerAsset,
+  cs: registerAsset2,
+  da: registerAsset3,
+  de: registerAsset4,
+  el: registerAsset5,
+  "en-GB": registerAsset6,
+  "en-US": registerAsset7,
+  "es-ES": registerAsset8,
+  "es-419": registerAsset9,
+  fi: registerAsset10,
+  fr: registerAsset11,
+  hi: registerAsset12,
+  hr: registerAsset13,
+  hu: registerAsset14,
+  it: registerAsset15,
+  ja: registerAsset16,
+  ko: registerAsset17,
+  lt: registerAsset18,
+  nl: registerAsset19,
+  no: registerAsset20,
+  pl: registerAsset21,
+  "pt-BR": registerAsset22,
+  ro: registerAsset23,
+  ru: registerAsset24,
+  "sv-SE": registerAsset25,
+  th: registerAsset26,
+  tr: registerAsset27,
+  uk: registerAsset28,
+  vi: registerAsset29,
+  "zh-CN": registerAsset30,
+  "zh-TW": registerAsset31,
+};
 const result = set.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
 export const flags = obj;

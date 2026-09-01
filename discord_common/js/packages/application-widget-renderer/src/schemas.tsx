@@ -40,7 +40,10 @@ obj1[1] = z14.partialRecord(z15.string(), objectResult1);
 const objectResult2 = z12.object(obj1);
 const z16 = _mod12676.z;
 const z17 = _mod12676.z;
-const partialRecordResult = z16.partialRecord(z17.enum(ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface), objectResult2);
+const partialRecordResult = z16.partialRecord(
+  z17.enum(ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface),
+  objectResult2,
+);
 const result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/schemas.tsx");
 
 export const applicationWidgetStaticFieldConfigSchema = objectResult;

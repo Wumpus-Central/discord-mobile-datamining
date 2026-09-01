@@ -8,7 +8,7 @@ import { GuildFeatures } from "../../../../Constants.tsx";
 
 const require = arg1;
 let obj = { skuId: require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 };
-let items = [obj, , , , , , ];
+let items = [obj, , , , , ,];
 obj = { skuId: require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_LEVEL_2_SKU_ID, threshold: 2 };
 items[1] = obj;
 obj = { skuId: require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_LEVEL_3_SKU_ID, threshold: 2 };
@@ -21,12 +21,16 @@ items[5] = { skuId: require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_F
 const obj3 = { skuId: require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, threshold: 1 };
 items[6] = { skuId: require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
 const obj4 = { skuId: require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useBoostToUnlockFeaturedPowerup.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/powerups/hooks/useBoostToUnlockFeaturedPowerup.tsx",
+);
 
 export default function useBoostToUnlockFeaturedPowerup(arg0) {
   const _require = arg0;
   items = [closure_6];
-  const stateFromStores = _require(available[7]).useStateFromStores(items, () => closure_1_6.getStateForGuild(closure_0));
+  const stateFromStores = _require(available[7]).useStateFromStores(items, () =>
+    closure_1_6.getStateForGuild(closure_0),
+  );
   available = stateFromStores(available[8])(arg0).available;
   const obj = _require(available[7]);
   const items1 = [closure_5];
@@ -39,7 +43,10 @@ export default function useBoostToUnlockFeaturedPowerup(arg0) {
     }
     return true === hasItem;
   });
-  first = stateFromStores1(first.useState(() => Math.random()), 1)[0];
+  first = stateFromStores1(
+    first.useState(() => Math.random()),
+    1,
+  )[0];
   const items2 = [stateFromStores, available, stateFromStores1, first];
   return first.useMemo(() => {
     if (null != stateFromStores) {
@@ -90,4 +97,4 @@ export default function useBoostToUnlockFeaturedPowerup(arg0) {
       const tmp24 = closure_1_9;
     }
   }, items2);
-};
+}

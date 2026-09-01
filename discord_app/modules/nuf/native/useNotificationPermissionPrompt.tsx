@@ -13,7 +13,9 @@ export default function useNotificationPermissionPrompt() {
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => connected.isConnected());
   const obj = stateFromStores(589);
   const items1 = [closure_6, closure_4];
-  const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => stateFromStores1(table[6])(closure_4, closure_6));
+  const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () =>
+    stateFromStores1(table[6])(closure_4, closure_6),
+  );
   const items2 = [stateFromStores, stateFromStores1];
   const effect = React.useEffect(() => {
     if (stateFromStores) {
@@ -31,4 +33,4 @@ export default function useNotificationPermissionPrompt() {
   const guildOpenNudge = stateFromStores(16112).useGuildOpenNudge();
   const obj3 = stateFromStores(16112);
   const postCallDisconnectNudge = stateFromStores(16114).usePostCallDisconnectNudge();
-};
+}

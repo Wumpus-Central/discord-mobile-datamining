@@ -25,7 +25,7 @@ function _fetchBadgeDirectory() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -147,7 +147,7 @@ function _fetchBadgeDirectory() {
                 throw body;
               } else if (arg0 !== 2) {
                 body = body.body;
-                const items1 = [authStore, "result:success", , ];
+                const items1 = [authStore, "result:success", ,];
                 let str = "non_empty";
                 if (0 === body.badges.length) {
                   str = "empty";
@@ -207,7 +207,7 @@ function _fetchBadge() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();

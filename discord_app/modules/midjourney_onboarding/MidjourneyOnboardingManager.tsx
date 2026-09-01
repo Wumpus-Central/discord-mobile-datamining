@@ -15,7 +15,7 @@ class MidjourneyOnboardingManager extends tmp2 {
 }
 MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   channel = channel.channel;
-  return callback(function*() {
+  return callback(function* () {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       HermesBuiltin.throwTypeError();

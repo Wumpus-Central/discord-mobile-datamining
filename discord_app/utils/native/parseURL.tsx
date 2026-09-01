@@ -19,23 +19,26 @@ function parseQuery(arg0) {
     const _Object = Object;
     const _Object2 = Object;
     const entries = Object.entries(parseDefault.parse(arg0));
-    return Object.fromEntries(entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
-      const items = [tmp, ];
-      let first = tmp2;
-      if (Array.isArray(tmp2)) {
-        first = tmp2[0];
-      }
-      items[1] = first;
-      return items;
-    }));
+    return Object.fromEntries(
+      entries.map((arg0) => {
+        [tmp, tmp2] = arg0;
+        const items = [tmp];
+        let first = tmp2;
+        if (Array.isArray(tmp2)) {
+          first = tmp2[0];
+        }
+        items[1] = first;
+        return items;
+      }),
+    );
   } catch (err) {
     return {};
   }
 }
 ({ AnalyticEvents: c4, GuildSettingsSections: c5, GuildSettingsSubsections: closure_6, LinkingTypes: error } = ME);
 ({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: c9 } = items);
-({ MobileWebRedirectCheckoutDeepLinkActions: unpackModuleId, MobileWebRedirectCheckoutDeepLinkQueryKeys: closure_12 } = CustomCheckoutFlow);
+({ MobileWebRedirectCheckoutDeepLinkActions: unpackModuleId, MobileWebRedirectCheckoutDeepLinkQueryKeys: closure_12 } =
+  CustomCheckoutFlow);
 const re13 = /feature\/([\w-]+)/;
 const re14 = /feature\/boost\/([0-9]+)/;
 const re15 = /users\/(\d+)/;
@@ -118,7 +121,14 @@ export default function parseURL(arg0) {
                       obj5[0] = fingerprint;
                       obj5[1] = attemptId;
                       obj5[2] = installationId;
-                      const obj6 = { type: null, applicationId: null, customId: null, referrerId: null, linkId: null, isDeepLink: null };
+                      const obj6 = {
+                        type: null,
+                        applicationId: null,
+                        customId: null,
+                        referrerId: null,
+                        linkId: null,
+                        isDeepLink: null,
+                      };
                       obj6[0] = closure_7.ACTIVITY;
                       obj6[1] = findCodedLinkResult.code;
                       obj6[2] = custom_id;
@@ -134,7 +144,12 @@ export default function parseURL(arg0) {
                             if (tmp5(4466).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
                               if (tmp5(4466).CodedLinkType.QUESTS_EMBED !== type) {
                                 if (tmp5(4466).CodedLinkType.GAME_PROFILE === type) {
-                                  const obj7 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
+                                  const obj7 = {
+                                    fingerprint: null,
+                                    attemptId: null,
+                                    installationId: null,
+                                    payload: null,
+                                  };
                                   obj7[0] = fingerprint;
                                   obj7[1] = attemptId;
                                   obj7[2] = installationId;
@@ -153,7 +168,12 @@ export default function parseURL(arg0) {
                                           if (tmp9 === constants2.ORBS) {
                                             let FEATURED_PAGE = constants3.ORBS;
                                           }
-                                          const obj9 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
+                                          const obj9 = {
+                                            fingerprint: null,
+                                            attemptId: null,
+                                            installationId: null,
+                                            payload: null,
+                                          };
                                           obj9[0] = fingerprint;
                                           obj9[1] = attemptId;
                                           obj9[2] = installationId;
@@ -285,7 +305,12 @@ export default function parseURL(arg0) {
           obj23[2] = installationId;
           const obj24 = { type: null, guildId: null, channelId: null, diceCount: null, diceSides: null };
           obj24[0] = closure_7.ROLL_DICE;
-          ({ guildId: obj64[1], channelId: obj64[2], diceCount: obj64[3], diceSides: obj64[4] } = tryParseDiceRollLinkResult);
+          ({
+            guildId: obj64[1],
+            channelId: obj64[2],
+            diceCount: obj64[3],
+            diceSides: obj64[4],
+          } = tryParseDiceRollLinkResult);
           obj23[3] = obj24;
           return obj23;
         } else {
@@ -629,4 +654,4 @@ export default function parseURL(arg0) {
     }
     const uRLResult = UrlDefault;
   }
-};
+}

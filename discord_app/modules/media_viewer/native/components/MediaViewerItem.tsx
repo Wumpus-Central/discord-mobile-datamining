@@ -192,7 +192,12 @@ export const MediaViewerItem = importAllResult.memo((index) => {
     const numberOfTapsResult1 = Gesture2.Tap().runOnJS(true).enabled(!memo).numberOfTaps(1);
     const maxDistanceResult1 = Gesture2.Tap().runOnJS(true).enabled(!memo).numberOfTaps(1).maxDistance(num3);
     const Gesture3 = tmp(tmp2[11]).Gesture;
-    const onStartResult1 = Gesture2.Tap().runOnJS(true).enabled(!memo).numberOfTaps(1).maxDistance(num3).onStart(callback4);
+    const onStartResult1 = Gesture2.Tap()
+      .runOnJS(true)
+      .enabled(!memo)
+      .numberOfTaps(1)
+      .maxDistance(num3)
+      .onStart(callback4);
     const TapResult2 = Gesture3.Tap();
     let tmp6 = tmp3;
     if (memo) {
@@ -207,14 +212,27 @@ export const MediaViewerItem = importAllResult.memo((index) => {
     const numberOfTapsResult2 = Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1);
     const maxDistanceResult2 = Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1).maxDistance(num);
     const Gesture4 = tmp(tmp2[11]).Gesture;
-    const onStartResult2 = Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1).maxDistance(num).onStart(callback6);
+    const onStartResult2 = Gesture3.Tap()
+      .runOnJS(true)
+      .enabled(tmp6)
+      .numberOfTaps(1)
+      .maxDistance(num)
+      .onStart(callback6);
     const Gesture5 = tmp(tmp2[11]).Gesture;
-    const ExclusiveResult = Gesture4.Exclusive(Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1).maxDistance(num).onStart(callback6), onStartResult, onStartResult1);
+    const ExclusiveResult = Gesture4.Exclusive(
+      Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1).maxDistance(num).onStart(callback6),
+      onStartResult,
+      onStartResult1,
+    );
     const LongPressResult = Gesture5.LongPress();
     const runOnJSResult3 = Gesture5.LongPress().runOnJS(true);
     const enabledResult3 = Gesture5.LongPress().runOnJS(true).enabled(!memo);
     const Gesture6 = tmp(tmp2[11]).Gesture;
-    return Gesture6.Simultaneous(ExclusiveResult, Gesture5.LongPress().runOnJS(true).enabled(!memo).onStart(callback3), panGesture);
+    return Gesture6.Simultaneous(
+      ExclusiveResult,
+      Gesture5.LongPress().runOnJS(true).enabled(!memo).onStart(callback3),
+      panGesture,
+    );
   }, items7);
   closure_24 = obj.useRef(false);
   const items8 = [callback1, tmp2, tmp4];
@@ -225,7 +243,20 @@ export const MediaViewerItem = importAllResult.memo((index) => {
       tmp.current = true;
     }
   }, items8);
-  obj = { gesture: memo1, children: windowHeight(tmp7(tmp8[12]), { entranceAnimationDriver, index, originLayout, panGestureConfig, renderMedia, source, windowWidth: tmp2, windowHeight: tmp4, useItemVisible }) };
+  obj = {
+    gesture: memo1,
+    children: windowHeight(tmp7(tmp8[12]), {
+      entranceAnimationDriver,
+      index,
+      originLayout,
+      panGestureConfig,
+      renderMedia,
+      source,
+      windowWidth: tmp2,
+      windowHeight: tmp4,
+      useItemVisible,
+    }),
+  };
   const tmp27 = windowHeight(index(panGestureConfig[11]).GestureDetector, obj);
   if (closure_7) {
     obj = { ref: null, style: null, minimumZoomScale: 1, maximumZoomScale: null, onZoomChanged: null, children: null };
@@ -239,7 +270,20 @@ export const MediaViewerItem = importAllResult.memo((index) => {
     obj[5] = tmp27;
     let tmp26Result = tmp26(tmp7(tmp8[13]), obj);
   } else {
-    const obj2 = { ref: null, style: null, automaticallyAdjustContentInsets: false, showsHorizontalScrollIndicator: false, showsVerticalScrollIndicator: false, minimumZoomScale: 1, maximumZoomScale: null, centerContent: true, scrollEventThrottle: 16, onScroll: null, pointerEvents: null, children: null };
+    const obj2 = {
+      ref: null,
+      style: null,
+      automaticallyAdjustContentInsets: false,
+      showsHorizontalScrollIndicator: false,
+      showsVerticalScrollIndicator: false,
+      minimumZoomScale: 1,
+      maximumZoomScale: null,
+      centerContent: true,
+      scrollEventThrottle: 16,
+      onScroll: null,
+      pointerEvents: null,
+      children: null,
+    };
     obj2[0] = ref;
     const obj3 = { width: null, height: null };
     obj3[0] = tmp2;

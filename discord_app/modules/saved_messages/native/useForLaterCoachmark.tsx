@@ -29,7 +29,14 @@ export default function useForLaterCoachmark(targetRef) {
   closure_1 = tmp6;
   const items2 = [tmp4[1], first];
   const memo = React.useMemo(() => {
-    const obj = { title: null, description: null, position: "bottom", visible: null, onDismiss: null, renderImgComponent: null };
+    const obj = {
+      title: null,
+      description: null,
+      position: "bottom",
+      visible: null,
+      onDismiss: null,
+      renderImgComponent: null,
+    };
     const intl = first(closure_1_2[10]).intl;
     obj[0] = intl.string(first(closure_1_2[10]).t.qPbFK2);
     const intl2 = first(closure_1_2[10]).intl;
@@ -46,4 +53,4 @@ export default function useForLaterCoachmark(targetRef) {
   tmpResult = tmp(8973);
   const coachmark = tmpResult.useCoachmark(targetRef, memo);
   return tmp4[1];
-};
+}

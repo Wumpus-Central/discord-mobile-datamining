@@ -7,7 +7,9 @@ import { MuteUntilSeconds } from "../../../user_settings/UserSettingsConstants.t
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx",
+);
 
 export default function MuteUserElement(user) {
   user = user.user;
@@ -61,4 +63,4 @@ export default function MuteUserElement(user) {
     const tmp12 = channelId(tmp3[11]);
   }
   return tmp9;
-};
+}

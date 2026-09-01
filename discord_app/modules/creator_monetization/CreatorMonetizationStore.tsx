@@ -6,8 +6,7 @@ let map = new Map();
 let map1 = new Map();
 let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
 const Store = initializeDefault.Store;
-class CreatorMonetizationStore extends Store {
-}
+class CreatorMonetizationStore extends Store {}
 const prototype = CreatorMonetizationStore.prototype;
 prototype["getPriceTiersFetchStateForGuildAndType"] = function getPriceTiersFetchStateForGuildAndType(arg0, arg1) {
   let value = map1.get(arg0);
@@ -70,7 +69,7 @@ obj = {
     }
     const value = obj.get(guildId);
     const result1 = value.set(guildId.priceTierType, obj.FETCHED);
-  }
+  },
 };
 const creatorMonetizationStore = new CreatorMonetizationStore(dispatcherDefault, obj);
 let result = require("set").fileFinishedImporting("modules/creator_monetization/CreatorMonetizationStore.tsx");

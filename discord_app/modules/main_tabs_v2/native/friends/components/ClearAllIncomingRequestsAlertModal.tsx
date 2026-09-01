@@ -18,7 +18,7 @@ function handleConfirm() {
 }
 function _handleConfirm() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();
@@ -81,19 +81,23 @@ function _handleConfirm() {
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ClearAllIncomingRequestsAlertModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/friends/components/ClearAllIncomingRequestsAlertModal.tsx",
+);
 
 export default function ClearAllIncomingRequestsAlertModal(incomingRequestCount) {
   let obj = { title: null, content: null, actions: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.z2pFjo);
   const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.formatToPlainString(getSystemLocale.t["0nTvEw"], { incomingRequestCount: incomingRequestCount.incomingRequestCount });
+  obj[1] = intl2.formatToPlainString(getSystemLocale.t["0nTvEw"], {
+    incomingRequestCount: incomingRequestCount.incomingRequestCount,
+  });
   obj = { children: null };
   obj = { variant: "destructive", onPress: handleConfirm, text: null };
   const intl3 = getSystemLocale.intl;
   obj[2] = intl3.string(getSystemLocale.t["cY+Oob"]);
-  const items = [callback2(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
+  const items = [callback2(getAlertModalItemKey.AlertActionButton, obj, "confirm")];
   obj1 = { variant: "secondary", text: null };
   const intl4 = getSystemLocale.intl;
   obj1[1] = intl4.string(getSystemLocale.t["ETE/oC"]);
@@ -101,4 +105,4 @@ export default function ClearAllIncomingRequestsAlertModal(incomingRequestCount)
   obj[0] = items;
   obj[2] = callback3(getAlertModalItemKey.AlertActions, obj);
   return callback2(getAlertModalItemKey.AlertModal, obj);
-};
+}

@@ -83,82 +83,85 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
     tmp18 = source;
   }
   const items = [str, guildId, updateSubscriptionsSettings, subscriptionsSettings, first, first1, isFullServerGating];
-  callback = obj2.useCallback(first(function*() {
-    if (description === 2) {
-      description = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  callback = obj2.useCallback(
+    first(function* () {
+      if (description === 2) {
+        description = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        description = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
+        try {
+          description = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              description = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              description = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_0 = tmp2;
+              let tmp11 = null != closure_1_6;
+              if (tmp11) {
+                description = undefined;
+                if (description != null) {
+                  description = description.description;
+                }
+                tmp11 = arr !== description;
+              }
+              if (tmp11) {
+                tmp11 = 0 !== arr.length;
+              }
+              obj1 = {};
+              if (tmp11) {
+                obj1.description = arr;
+              }
+              if (null != closure_1_4) {
+                obj1.cover_image = closure_1_4.uri;
+              }
+              if (closure_1_3 !== closure_1_7) {
+                obj1.full_server_gate = closure_1_7;
+              }
+              let obj2 = v0(closure_1_3[12]);
+              if (obj2.isEmpty(obj1)) {
+                description = 3;
+              } else {
+                v0 = 1;
+                description = 1;
+                obj2 = { value: null, done: false };
+                obj2[0] = closure_1_9(closure_1_0, obj1);
+                return obj2;
+              }
+            }
+          } else if (arg0 === 1) {
             description = 3;
             throw arg1;
-          } else if (arg0 === 2) {
-            description = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_0 = tmp2;
-            let tmp11 = null != closure_1_6;
-            if (tmp11) {
-              description = undefined;
-              if (description != null) {
-                description = description.description;
-              }
-              tmp11 = arr !== description;
-            }
-            if (tmp11) {
-              tmp11 = 0 !== arr.length;
-            }
-            obj1 = {};
-            if (tmp11) {
-              obj1.description = arr;
-            }
-            if (null != closure_1_4) {
-              obj1.cover_image = closure_1_4.uri;
-            }
-            if (closure_1_3 !== closure_1_7) {
-              obj1.full_server_gate = closure_1_7;
-            }
-            let obj2 = v0(closure_1_3[12]);
-            if (obj2.isEmpty(obj1)) {
-              description = 3;
-            } else {
-              v0 = 1;
-              description = 1;
-              obj2 = { value: null, done: false };
-              obj2[0] = closure_1_9(closure_1_0, obj1);
-              return obj2;
-            }
+          } else if (arg0 !== 2) {
+            callback(null);
           }
-        } else if (arg0 === 1) {
           description = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          callback(null);
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } catch (tmp17) {
+          description = tmp;
+          throw tmp17;
         }
-        description = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } catch (tmp17) {
-        description = tmp;
-        throw tmp17;
       }
-    }
-  }), items);
+    }),
+    items,
+  );
   const items1 = [navigation, tmp15, loading, callback];
   const layoutEffect = obj2.useLayoutEffect(() => {
     if (loading) {
@@ -191,7 +194,12 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   obj = { contentContainerStyle: null, children: null };
   obj1 = { paddingBottom: tmp5(tmp2[10])({}).insets.bottom + tmp5(tmp2[17]).space.PX_16 };
   obj[0] = obj1;
-  const items3 = [updateSubscriptionsSettings(navigation(isFullServerGating[18]), { isFullServerGating: first1, onChange: tmp6Result[1] }), ];
+  const items3 = [
+    updateSubscriptionsSettings(navigation(isFullServerGating[18]), {
+      isFullServerGating: first1,
+      onChange: tmp6Result[1],
+    }),
+  ];
   obj2 = { cover: tmp18, setCover: tmp9, description: null, setDescription: null };
   if (str == null) {
     let description2;
@@ -210,10 +218,12 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   return error(first1, obj);
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx",
+);
 
 export default function GuildSettingsRoleSubscriptionsGroupEdit(guildId) {
   guildId = guildId.guildId;
   const obj = { guildId, children: callback2(GuildSettingsRoleSubscriptionsGroupEditInner, { guildId }) };
   return callback2(ApplicationRejectedNoticeDefault, obj);
-};
+}

@@ -20,13 +20,13 @@ obj = {
     return "" + intl.string(getSystemLocale.t.XxRj7f) + " \u2022 " + intl2.string(messagesProxyDefault.FTawSP);
   },
   usePredicate: useAgeVerificationRunner.useShowAssignedAgeGroupSettings,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.AGE_GROUP,
   getComponent() {
     return SettingsAgeGroupHeader /* SettingsAgeGroupHeader */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupAssignedAdultSetting.tsx");

@@ -122,7 +122,7 @@ let obj = {
       clearTimeout(c7);
       c7 = null;
     }
-  }
+  },
 };
 const subscription = dispatcherDefault.subscribe("LOGOUT", obj.reset);
 let result = set.fileFinishedImporting("modules/collectibles/CollectiblesShopManager.tsx");

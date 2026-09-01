@@ -30,8 +30,13 @@ function FramePreviewOverrideSection() {
     obj = { variant: "heading-md/semibold", style: null, children: "Frame Preview Override" };
     obj[1] = tmp.sectionTitle;
     obj[1] = callback3(require("../../../../design/components/Text/native/Text.tsx").Text, obj);
-    const items = [callback3(closure_6, obj), , , , ];
-    obj1 = { variant: "text-sm/normal", style: null, children: "Overrides every profile-frame preview with a frame pushed to this device. Tap Load after Cap (or pushFrameOverride.mjs) pushes one." };
+    const items = [callback3(closure_6, obj), , , ,];
+    obj1 = {
+      variant: "text-sm/normal",
+      style: null,
+      children:
+        "Overrides every profile-frame preview with a frame pushed to this device. Tap Load after Cap (or pushFrameOverride.mjs) pushes one.",
+    };
     obj1[1] = tmp.description;
     items[1] = callback3(require("../../../../design/components/Text/native/Text.tsx").Text, obj1);
     const obj2 = { variant: "text-xs/normal", style: null, children: null };
@@ -44,13 +49,19 @@ function FramePreviewOverrideSection() {
     obj3[2] = function onPress() {
       callback();
     };
-    items[3] = callback3(require("../../../../design/components/Button/native/BaseTextButton.native.tsx").BaseTextButton, obj3);
+    items[3] = callback3(
+      require("../../../../design/components/Button/native/BaseTextButton.native.tsx").BaseTextButton,
+      obj3,
+    );
     let tmp13Result = null != tmp2;
     if (tmp13Result) {
       const obj4 = { pillStyle: null, text: "Clear override", onPress: null };
       obj4[0] = tmp.secondaryButton;
       obj4[2] = tmp4;
-      tmp13Result = callback3(require("../../../../design/components/Button/native/BaseTextButton.native.tsx").BaseTextButton, obj4);
+      tmp13Result = callback3(
+        require("../../../../design/components/Button/native/BaseTextButton.native.tsx").BaseTextButton,
+        obj4,
+      );
     }
     items[4] = tmp13Result;
     obj[1] = items;
@@ -69,28 +80,77 @@ function FramePreviewOverrideSection() {
         str4 = "";
       }
       const _HermesInternal = HermesInternal;
-      str3 = "Showing \"" + frameKey + "\" \u00B7 " + length + " layer" + str4;
+      str3 = 'Showing "' + frameKey + '" \u00B7 ' + length + " layer" + str4;
     }
   }
 }
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { container: null, scrollContainer: null, section: null, sectionHeader: null, sectionTitle: null, inputContainer: null, inputWrapper: null, inputLabel: null, statusText: null, statusSuccess: null, statusError: null, statusLoading: null, previewContainer: null, previewButton: null, secondaryButton: null, description: null, placeholder: null, placeholderText: null };
+createCacheKey = {
+  container: null,
+  scrollContainer: null,
+  section: null,
+  sectionHeader: null,
+  sectionTitle: null,
+  inputContainer: null,
+  inputWrapper: null,
+  inputLabel: null,
+  statusText: null,
+  statusSuccess: null,
+  statusError: null,
+  statusLoading: null,
+  previewContainer: null,
+  previewButton: null,
+  secondaryButton: null,
+  description: null,
+  placeholder: null,
+  placeholderText: null,
+};
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
 let obj1 = { padding: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, padding: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, padding: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
+createCacheKey[2] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.lg,
+  padding: ThemesDefault.space.PX_16,
+  marginBottom: ThemesDefault.space.PX_16,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+};
+let obj2 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.lg,
+  padding: ThemesDefault.space.PX_16,
+  marginBottom: ThemesDefault.space.PX_16,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+};
 createCacheKey[3] = { flexDirection: "row", alignItems: "center", marginBottom: ThemesDefault.space.PX_16 };
 let obj3 = { flexDirection: "row", alignItems: "center", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[4] = { flex: 1, color: ThemesDefault.colors.TEXT_DEFAULT };
 let obj4 = { flex: 1, color: ThemesDefault.colors.TEXT_DEFAULT };
 createCacheKey[5] = { marginBottom: ThemesDefault.space.PX_16 };
 let obj5 = { marginBottom: ThemesDefault.space.PX_16 };
-createCacheKey[6] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, padding: ThemesDefault.space.PX_4 };
-const obj6 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, padding: ThemesDefault.space.PX_4 };
-createCacheKey[7] = { marginBottom: ThemesDefault.space.PX_8, color: ThemesDefault.colors.TEXT_DEFAULT, fontWeight: "600" };
+createCacheKey[6] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+  padding: ThemesDefault.space.PX_4,
+};
+const obj6 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+  padding: ThemesDefault.space.PX_4,
+};
+createCacheKey[7] = {
+  marginBottom: ThemesDefault.space.PX_8,
+  color: ThemesDefault.colors.TEXT_DEFAULT,
+  fontWeight: "600",
+};
 let obj7 = { marginBottom: ThemesDefault.space.PX_8, color: ThemesDefault.colors.TEXT_DEFAULT, fontWeight: "600" };
 createCacheKey[8] = { marginTop: ThemesDefault.space.PX_8, fontSize: 12, fontWeight: "500" };
 let obj8 = { marginTop: ThemesDefault.space.PX_8, fontSize: 12, fontWeight: "500" };
@@ -102,23 +162,63 @@ createCacheKey[11] = { color: ThemesDefault.colors.TEXT_MUTED };
 let obj11 = { color: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[12] = { marginBottom: ThemesDefault.space.PX_16 };
 let obj12 = { marginBottom: ThemesDefault.space.PX_16 };
-createCacheKey[13] = { backgroundColor: "#23a55a", borderRadius: ThemesDefault.radii.md, paddingVertical: ThemesDefault.space.PX_12, alignItems: "center" };
-let obj13 = { backgroundColor: "#23a55a", borderRadius: ThemesDefault.radii.md, paddingVertical: ThemesDefault.space.PX_12, alignItems: "center" };
-createCacheKey[14] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.md, paddingVertical: ThemesDefault.space.PX_12, alignItems: "center", marginTop: ThemesDefault.space.PX_8 };
-let obj14 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.md, paddingVertical: ThemesDefault.space.PX_12, alignItems: "center", marginTop: ThemesDefault.space.PX_8 };
+createCacheKey[13] = {
+  backgroundColor: "#23a55a",
+  borderRadius: ThemesDefault.radii.md,
+  paddingVertical: ThemesDefault.space.PX_12,
+  alignItems: "center",
+};
+let obj13 = {
+  backgroundColor: "#23a55a",
+  borderRadius: ThemesDefault.radii.md,
+  paddingVertical: ThemesDefault.space.PX_12,
+  alignItems: "center",
+};
+createCacheKey[14] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  borderRadius: ThemesDefault.radii.md,
+  paddingVertical: ThemesDefault.space.PX_12,
+  alignItems: "center",
+  marginTop: ThemesDefault.space.PX_8,
+};
+let obj14 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  borderRadius: ThemesDefault.radii.md,
+  paddingVertical: ThemesDefault.space.PX_12,
+  alignItems: "center",
+  marginTop: ThemesDefault.space.PX_8,
+};
 createCacheKey[15] = { color: ThemesDefault.colors.TEXT_MUTED, marginBottom: ThemesDefault.space.PX_12 };
 let obj15 = { color: ThemesDefault.colors.TEXT_MUTED, marginBottom: ThemesDefault.space.PX_12 };
-createCacheKey[16] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.md, borderWidth: 2, borderStyle: "dashed", borderColor: ThemesDefault.colors.BORDER_MUTED, padding: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", minHeight: 120 };
-let obj16 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.md, borderWidth: 2, borderStyle: "dashed", borderColor: ThemesDefault.colors.BORDER_MUTED, padding: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", minHeight: 120 };
+createCacheKey[16] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 2,
+  borderStyle: "dashed",
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+  padding: ThemesDefault.space.PX_32,
+  alignItems: "center",
+  justifyContent: "center",
+  minHeight: 120,
+};
+let obj16 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 2,
+  borderStyle: "dashed",
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+  padding: ThemesDefault.space.PX_32,
+  alignItems: "center",
+  justifyContent: "center",
+  minHeight: 120,
+};
 createCacheKey[17] = { color: ThemesDefault.colors.TEXT_MUTED, textAlign: "center", fontSize: 14 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 function UnpurchasedCollectiblesShopCardV2(arg0) {
   [tmp2, require] = callback(React.useState(0), 2);
   const layoutEffect = React.useLayoutEffect(() => {
     const getPurchase = closure_1_8.getPurchase;
-    closure_1_8.getPurchase = () => {
-
-    };
+    closure_1_8.getPurchase = () => {};
     closure_1_8.emitChange();
     getPurchase(1);
     return () => {
@@ -197,17 +297,34 @@ export default function _default() {
   obj2 = { style: tmp.sectionHeader, children: callback3(tmp2(tmp3[10]).Text, obj3) };
   const items4 = [callback3(closure_6, obj2), callback3(_require(first[14]).ShopSkipCategoriesFilter, {})];
   obj1[1] = items4;
-  const items5 = [callback4(closure_6, obj1), , , ];
+  const items5 = [callback4(closure_6, obj1), , ,];
   const obj4 = { style: tmp.section, children: null };
   obj3 = { variant: "heading-md/semibold", style: tmp.sectionTitle, children: "Shop Settings" };
   const tmp10 = str(first[13])({ logPerf: false, stalePurchasesOK: true, noOp: tmp7 });
   const tmp21 = closure_5;
   const tmp9 = str;
-  const items6 = [callback3(closure_6, { style: tmp.sectionHeader, children: callback3(_require(first[10]).Text, obj6) }), ];
+  const items6 = [
+    callback3(closure_6, { style: tmp.sectionHeader, children: callback3(_require(first[10]).Text, obj6) }),
+  ];
   const obj7 = { style: tmp.inputContainer, children: null };
-  const items7 = [callback3(_require(first[10]).Text, { variant: "text-md/semibold", style: tmp.inputLabel, children: "Primary Product SKU ID" }), , , , ];
+  const items7 = [
+    callback3(_require(first[10]).Text, {
+      variant: "text-md/semibold",
+      style: tmp.inputLabel,
+      children: "Primary Product SKU ID",
+    }),
+    ,
+    ,
+    ,
+  ];
   const obj9 = { style: tmp.inputWrapper, children: null };
-  const obj10 = { value: str, onChangeText: tmp13[1], placeholder: "Enter product SKU ID (e.g., 1366494385482502184)", returnKeyType: "done", style: null };
+  const obj10 = {
+    value: str,
+    onChangeText: tmp13[1],
+    placeholder: "Enter product SKU ID (e.g., 1366494385482502184)",
+    returnKeyType: "done",
+    style: null,
+  };
   const obj5 = { style: tmp.sectionHeader, children: callback3(_require(first[10]).Text, obj6) };
   const obj8 = { variant: "text-md/semibold", style: tmp.inputLabel, children: "Primary Product SKU ID" };
   obj10[4] = { fontSize: 14, padding: tmp9(first[8]).space.PX_12 };
@@ -219,7 +336,7 @@ export default function _default() {
   }
   if (tmp18Result) {
     const obj12 = { variant: "text-xs/normal", style: null, children: "Loading products..." };
-    const items8 = [, ];
+    const items8 = [,];
     ({ statusText: arr9[0], statusLoading: arr9[1] } = tmp);
     obj12[1] = items8;
     tmp18Result = tmp18(tmp2(tmp3[10]).Text, obj12);
@@ -233,7 +350,7 @@ export default function _default() {
   }
   if (tmp18Result) {
     const obj13 = { variant: "text-xs/normal", style: null, children: "Product not found" };
-    const items9 = [, ];
+    const items9 = [,];
     ({ statusText: arr10[0], statusError: arr10[1] } = tmp);
     obj13[1] = items9;
     tmp18Result = tmp18(tmp2(tmp3[10]).Text, obj13);
@@ -242,7 +359,7 @@ export default function _default() {
   let tmp20Result = null != first;
   if (tmp20Result) {
     const obj14 = { variant: "text-xs/normal", style: null, children: null };
-    const items10 = [, ];
+    const items10 = [,];
     ({ statusText: arr11[0], statusSuccess: arr11[1] } = tmp);
     obj14[1] = items10;
     const items11 = ["Found: ", first.name];
@@ -256,7 +373,9 @@ export default function _default() {
   items5[1] = callback4(closure_6, obj4);
   const obj15 = { style: tmp.section, children: null };
   const obj11 = { fontSize: 14, padding: tmp9(first[8]).space.PX_12 };
-  const items12 = [callback3(closure_6, { style: tmp.sectionHeader, children: callback3(_require(first[10]).Text, obj17) }), ];
+  const items12 = [
+    callback3(closure_6, { style: tmp.sectionHeader, children: callback3(_require(first[10]).Text, obj17) }),
+  ];
   if (null != first) {
     if (null != tmp16[0]) {
       const obj18 = { children: null };
@@ -265,7 +384,7 @@ export default function _default() {
       const obj20 = { product: null };
       obj20[0] = first;
       obj19[1] = tmp18(UnpurchasedCollectiblesShopCardV2, obj20);
-      const items13 = [tmp18(tmp19, obj19), ];
+      const items13 = [tmp18(tmp19, obj19)];
       const obj21 = { pillStyle: null, text: "Show Collectibles Modal", onPress: null };
       obj21[0] = tmp.previewButton;
       obj21[2] = function onPress() {
@@ -290,4 +409,4 @@ export default function _default() {
   }
   const obj16 = { style: tmp.sectionHeader, children: callback3(_require(first[10]).Text, obj17) };
   tmp20Result = tmp18(tmp19, { style: tmp.placeholder, children: callback4(_require(first[10]).Text, obj23) });
-};
+}

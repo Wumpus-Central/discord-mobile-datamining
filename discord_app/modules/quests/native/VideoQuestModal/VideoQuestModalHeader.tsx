@@ -9,13 +9,30 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { videoContentHeaderWrapper: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" }, videoContentHeading: null, subheader: null, textShadow: null };
+createCacheKey = {
+  videoContentHeaderWrapper: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" },
+  videoContentHeading: null,
+  subheader: null,
+  textShadow: null,
+};
 createCacheKey = { flexDirection: "column", flexShrink: 1, gap: ThemesDefault.space.PX_4 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { opacity: 0.6 };
-createCacheKey[3] = { margin: -15, padding: 15, textShadowColor: ThemesDefault.colors.BLACK, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 15 };
+createCacheKey[3] = {
+  margin: -15,
+  padding: 15,
+  textShadowColor: ThemesDefault.colors.BLACK,
+  textShadowOffset: { width: 0, height: 0 },
+  textShadowRadius: 15,
+};
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { margin: -15, padding: 15, textShadowColor: ThemesDefault.colors.BLACK, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 15 };
+let obj1 = {
+  margin: -15,
+  padding: 15,
+  textShadowColor: ThemesDefault.colors.BLACK,
+  textShadowOffset: { width: 0, height: 0 },
+  textShadowRadius: 15,
+};
 let result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalHeader.tsx");
 
 export default function VideoQuestModalHeader(showCurrentVideoTime) {
@@ -49,7 +66,10 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
     completedAt = userStatus.completedAt;
   }
   if (null == completedAt) {
-    const videoQuestProgressRemainingAccessibilityLabel = tmp3(11111).getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp8);
+    const videoQuestProgressRemainingAccessibilityLabel = tmp3(11111).getVideoQuestProgressRemainingAccessibilityLabel(
+      questTaskDetails,
+      tmp8,
+    );
     const tmp3Result = tmp3(11111);
   }
   obj = { style: items, children: null };
@@ -62,9 +82,15 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   obj1 = { variant: "heading-md/semibold", color: "text-overlay-light", style: textShadow2, children: null };
   const intl = tmp3(1236).intl;
   obj1[3] = intl.formatToPlainString(quest(1236).t.EQa7os, { questName: quest.config.messages.questName });
-  const items1 = [closure_5(quest(4474).Text, obj1), ];
-  const obj3 = { variant: "heading-sm/semibold", color: "text-overlay-light", accessibilityLabel: videoQuestProgressRemainingAccessibilityLabel, style: null, children: null };
-  const items2 = [tmp2.subheader, ];
+  const items1 = [closure_5(quest(4474).Text, obj1)];
+  const obj3 = {
+    variant: "heading-sm/semibold",
+    color: "text-overlay-light",
+    accessibilityLabel: videoQuestProgressRemainingAccessibilityLabel,
+    style: null,
+    children: null,
+  };
+  const items2 = [tmp2.subheader];
   if (textShadow) {
     textShadow = tmp2.textShadow;
   }
@@ -80,7 +106,10 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   obj3[4] = gamePublisher;
   items1[1] = closure_5(quest(4474).Text, obj3);
   obj[1] = items1;
-  const items3 = [closure_6(View, obj), closure_5(questTaskDetails(14749), { iconColor: closeButtonIconColor, onClose })];
+  const items3 = [
+    closure_6(View, obj),
+    closure_5(questTaskDetails(14749), { iconColor: closeButtonIconColor, onClose }),
+  ];
   obj[1] = items3;
   return closure_6(View, obj);
-};
+}

@@ -7,8 +7,13 @@ import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 noopAll;
-let closure_4 = createCacheKey.createStyles({ container: { justifyContent: "center" }, error: { paddingHorizontal: 16, textAlign: "center" } });
-let closure_5 = { code: "function ContactSyncErrorTsx1(){const{withTiming,hasError,ERROR_HEIGHT}=this.__closure;return{height:withTiming(hasError?ERROR_HEIGHT:0)};}" };
+let closure_4 = createCacheKey.createStyles({
+  container: { justifyContent: "center" },
+  error: { paddingHorizontal: 16, textAlign: "center" },
+});
+let closure_5 = {
+  code: "function ContactSyncErrorTsx1(){const{withTiming,hasError,ERROR_HEIGHT}=this.__closure;return{height:withTiming(hasError?ERROR_HEIGHT:0)};}",
+};
 const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncError.tsx");
 
 export default function ContactSyncError(error) {
@@ -30,12 +35,19 @@ export default function ContactSyncError(error) {
     obj = { height: obj.withTiming(num) };
     return obj;
   };
-  obj = { withTiming: require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming, hasError: tmp2, ERROR_HEIGHT: 44 };
+  obj = {
+    withTiming: require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming,
+    hasError: tmp2,
+    ERROR_HEIGHT: 44,
+  };
   fn.__closure = obj;
   fn.__workletHash = 14558247431913;
   fn.__initData = closure_5;
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj = { style: items, children: jsx(require("../../../../design/components/Text/native/Text.tsx").Text, obj1) };
   items = [tmp.container, error.style, animatedStyle];
-  return jsx(_modDef4217.View, { style: items, children: jsx(require("../../../../design/components/Text/native/Text.tsx").Text, obj1) });
-};
+  return jsx(_modDef4217.View, {
+    style: items,
+    children: jsx(require("../../../../design/components/Text/native/Text.tsx").Text, obj1),
+  });
+}

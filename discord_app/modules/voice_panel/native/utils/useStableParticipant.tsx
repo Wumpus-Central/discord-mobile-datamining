@@ -26,80 +26,118 @@ export default function useStableParticipant(arg0, arg1, arg2) {
   dependencyMap = arg2;
   const items = [closure_3, closure_6, closure_4, closure_5];
   const items1 = [arg0, arg1, arg2];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    if (null != callback) {
-      const participant = closure_1_3.getParticipant(callback2, tmp);
-      if (null == participant) {
-        const user = closure_1_6.getUser(tmp);
-        if (null != user) {
-          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: "LottieFiles AE 3.0.2", isSelf: "" };
-          obj[0] = closure_1_7.USER;
-          obj[1] = tmp;
-          obj[2] = user;
-          const id = closure_1_4.getId();
-          obj[5] = callback(4673).getName(dependencyMap, tmp3, user);
-          const obj5 = callback(4673);
-          obj[6] = callback(8904).getAvatarDecoration(user, dependencyMap);
-          obj[10] = user.id === id;
-          return obj;
-        }
-      } else {
-        const tmp15 = callback2(9591)(participant);
-        const type = participant.type;
-        if (closure_1_7.ACTIVITY === type) {
-          obj = { type: null, id: null, applicationId: null };
-          obj[0] = participant.type;
-          obj[1] = tmp;
-          obj[2] = participant.applicationId;
-          return obj;
+  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      if (null != callback) {
+        const participant = closure_1_3.getParticipant(callback2, tmp);
+        if (null == participant) {
+          const user = closure_1_6.getUser(tmp);
+          if (null != user) {
+            let obj = {
+              type: null,
+              id: null,
+              user: null,
+              selfVideo: false,
+              canRenderVideo: false,
+              userNick: null,
+              userAvatarDecoration: null,
+              streamId: "flex",
+              ringing: null,
+              hasVideo: "LottieFiles AE 3.0.2",
+              isSelf: "",
+            };
+            obj[0] = closure_1_7.USER;
+            obj[1] = tmp;
+            obj[2] = user;
+            const id = closure_1_4.getId();
+            obj[5] = callback(4673).getName(dependencyMap, tmp3, user);
+            const obj5 = callback(4673);
+            obj[6] = callback(8904).getAvatarDecoration(user, dependencyMap);
+            obj[10] = user.id === id;
+            return obj;
+          }
         } else {
-          if (tmp16.STREAM !== type) {
-            if (tmp16.HIDDEN_STREAM !== type) {
-              if (tmp16.USER === type) {
-                obj = { type: null, id: null, user: null, selfVideo: null, userNick: null, userAvatarDecoration: null, streamId: null, ringing: null, hasVideo: null, canRenderVideo: null, isSelf: null };
-                obj[0] = participant.type;
-                obj[1] = tmp;
-                ({ user: obj[2], voiceState } = participant);
-                let flag;
-                const id1 = closure_1_4.getId();
-                if (voiceState != null) {
-                  flag = voiceState.selfVideo;
+          const tmp15 = callback2(9591)(participant);
+          const type = participant.type;
+          if (closure_1_7.ACTIVITY === type) {
+            obj = { type: null, id: null, applicationId: null };
+            obj[0] = participant.type;
+            obj[1] = tmp;
+            obj[2] = participant.applicationId;
+            return obj;
+          } else {
+            if (tmp16.STREAM !== type) {
+              if (tmp16.HIDDEN_STREAM !== type) {
+                if (tmp16.USER === type) {
+                  obj = {
+                    type: null,
+                    id: null,
+                    user: null,
+                    selfVideo: null,
+                    userNick: null,
+                    userAvatarDecoration: null,
+                    streamId: null,
+                    ringing: null,
+                    hasVideo: null,
+                    canRenderVideo: null,
+                    isSelf: null,
+                  };
+                  obj[0] = participant.type;
+                  obj[1] = tmp;
+                  ({ user: obj[2], voiceState } = participant);
+                  let flag;
+                  const id1 = closure_1_4.getId();
+                  if (voiceState != null) {
+                    flag = voiceState.selfVideo;
+                  }
+                  if (flag == null) {
+                    flag = false;
+                  }
+                  obj[3] = flag;
+                  ({ userNick: obj[4], userAvatarDecoration: obj[5], streamId } = participant);
+                  obj[6] = streamId;
+                  obj[7] = participant.ringing;
+                  obj[8] = tmp15;
+                  let tmp7 = tmp15;
+                  if (tmp15) {
+                    tmp7 = !closure_1_5.isLocalVideoDisabled(participant.user.id);
+                  }
+                  obj[9] = tmp7;
+                  obj[10] = participant.user.id === id1;
+                  return obj;
                 }
-                if (flag == null) {
-                  flag = false;
-                }
-                obj[3] = flag;
-                ({ userNick: obj[4], userAvatarDecoration: obj[5], streamId } = participant);
-                obj[6] = streamId;
-                obj[7] = participant.ringing;
-                obj[8] = tmp15;
-                let tmp7 = tmp15;
-                if (tmp15) {
-                  tmp7 = !closure_1_5.isLocalVideoDisabled(participant.user.id);
-                }
-                obj[9] = tmp7;
-                obj[10] = participant.user.id === id1;
-                return obj;
               }
             }
+            obj1 = {
+              type: null,
+              id: null,
+              user: null,
+              userNick: null,
+              streamId: null,
+              streamGuildId: null,
+              hasVideo: null,
+              isSelf: null,
+            };
+            obj1[0] = participant.type;
+            obj1[1] = tmp;
+            ({ user: obj2[2], userNick: obj2[3], streamId: streamId2 } = participant);
+            const id2 = closure_1_4.getId();
+            obj1[4] = streamId2;
+            const guildId = participant.stream.guildId;
+            obj1[5] = guildId;
+            obj1[6] = tmp15;
+            obj1[7] = participant.user.id === id2;
+            return obj1;
           }
-          obj1 = { type: null, id: null, user: null, userNick: null, streamId: null, streamGuildId: null, hasVideo: null, isSelf: null };
-          obj1[0] = participant.type;
-          obj1[1] = tmp;
-          ({ user: obj2[2], userNick: obj2[3], streamId: streamId2 } = participant);
-          const id2 = closure_1_4.getId();
-          obj1[4] = streamId2;
-          const guildId = participant.stream.guildId;
-          obj1[5] = guildId;
-          obj1[6] = tmp15;
-          obj1[7] = participant.user.id === id2;
-          return obj1;
         }
+        tmp3 = callback2;
       }
-      tmp3 = callback2;
-    }
-  }, items1, areStableParticipantsEqual);
-};
+    },
+    items1,
+    areStableParticipantsEqual,
+  );
+}
 export const isStableStreamParticipant = function isStableStreamParticipant(controlsHidden) {
   let type;
   if (controlsHidden != null) {

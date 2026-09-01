@@ -31,15 +31,23 @@ function useFetchWishlist(wishlistId) {
   let stateFromStores;
   obj = wishlistId(source[7]);
   let items = [closure_9];
-  const tmp2 = first(obj.useStateFromStoresArray(items, () => {
-    if (null == wishlistId) {
-      const items = [null, "success", undefined, undefined];
-      let items1 = items;
-    } else {
-      items1 = [closure_1_9.getWishlist(tmp), closure_1_9.getStatus(tmp), closure_1_9.getError(tmp), closure_1_9.getUpdatedAt(tmp)];
-    }
-    return items1;
-  }), 4);
+  const tmp2 = first(
+    obj.useStateFromStoresArray(items, () => {
+      if (null == wishlistId) {
+        const items = [null, "success", undefined, undefined];
+        let items1 = items;
+      } else {
+        items1 = [
+          closure_1_9.getWishlist(tmp),
+          closure_1_9.getStatus(tmp),
+          closure_1_9.getError(tmp),
+          closure_1_9.getUpdatedAt(tmp),
+        ];
+      }
+      return items1;
+    }),
+    4,
+  );
   first = tmp2[0];
   React = tmp5;
   useEffect = tmp6;
@@ -53,7 +61,9 @@ function useFetchWishlist(wishlistId) {
     }
     return items;
   }, items1);
-  const getOrFetchStorefrontPricesForSkuIds = wishlistId(source[10]).useGetOrFetchStorefrontPricesForSkuIds({ skuIds: memo });
+  const getOrFetchStorefrontPricesForSkuIds = wishlistId(source[10]).useGetOrFetchStorefrontPricesForSkuIds({
+    skuIds: memo,
+  });
   const obj2 = wishlistId(source[10]);
   const items2 = [stateFromStores];
   stateFromStores = wishlistId(source[7]).useStateFromStores(items2, () => {
@@ -120,50 +130,67 @@ export const useFetchWishlists = function useFetchWishlists(wishlistIdsAndUsers)
   obj = wishlistIdsAndUsers(stateFromStoresArray2[7]);
   const items = [closure_9];
   const items1 = [wishlistIdsAndUsers];
-  const wishlists = obj.useStateFromStoresArray(items, () => wishlistIdsAndUsers.map((wishlistId) => {
-    wishlistId = wishlistId.wishlistId;
-    let wishlist = null;
-    if (null != wishlistId) {
-      wishlist = wishlist.getWishlist(wishlistId);
-    }
-    return wishlist;
-  }), items1);
+  const wishlists = obj.useStateFromStoresArray(
+    items,
+    () =>
+      wishlistIdsAndUsers.map((wishlistId) => {
+        wishlistId = wishlistId.wishlistId;
+        let wishlist = null;
+        if (null != wishlistId) {
+          wishlist = wishlist.getWishlist(wishlistId);
+        }
+        return wishlist;
+      }),
+    items1,
+  );
   const items2 = [closure_9];
   const items3 = [wishlistIdsAndUsers];
-  const isFetching = wishlistIdsAndUsers(stateFromStoresArray2[7]).useStateFromStores(items2, () => wishlistIdsAndUsers.some((wishlistId) => {
-    wishlistId = wishlistId.wishlistId;
-    let isFetchingResult = null != wishlistId;
-    if (isFetchingResult) {
-      isFetchingResult = fetching.isFetching(wishlistId);
-    }
-    return isFetchingResult;
-  }), items3);
+  const isFetching = wishlistIdsAndUsers(stateFromStoresArray2[7]).useStateFromStores(
+    items2,
+    () =>
+      wishlistIdsAndUsers.some((wishlistId) => {
+        wishlistId = wishlistId.wishlistId;
+        let isFetchingResult = null != wishlistId;
+        if (isFetchingResult) {
+          isFetchingResult = fetching.isFetching(wishlistId);
+        }
+        return isFetchingResult;
+      }),
+    items3,
+  );
   let obj2 = wishlistIdsAndUsers(stateFromStoresArray2[7]);
   const items4 = [closure_9];
   const items5 = [wishlistIdsAndUsers];
-  const errors = wishlistIdsAndUsers(stateFromStoresArray2[7]).useStateFromStoresArray(items4, () => wishlistIdsAndUsers.map((wishlistId) => {
-    wishlistId = wishlistId.wishlistId;
-    error = undefined;
-    if (null != wishlistId) {
-      error = error.getError(wishlistId);
-    }
-    return error;
-  }), items5);
+  const errors = wishlistIdsAndUsers(stateFromStoresArray2[7]).useStateFromStoresArray(
+    items4,
+    () =>
+      wishlistIdsAndUsers.map((wishlistId) => {
+        wishlistId = wishlistId.wishlistId;
+        error = undefined;
+        if (null != wishlistId) {
+          error = error.getError(wishlistId);
+        }
+        return error;
+      }),
+    items5,
+  );
   const obj3 = wishlistIdsAndUsers(stateFromStoresArray2[7]);
   const items6 = [closure_6];
-  stateFromStoresArray2 = wishlistIdsAndUsers(stateFromStoresArray2[7]).useStateFromStoresArray(items6, () => wishlistIdsAndUsers.map((wishlistId) => {
-    wishlistId = wishlistId.wishlistId;
-    let tmp2;
-    if (null != wishlistId) {
-      wishlistSettings = wishlistSettings.getWishlistSettings(tmp, wishlistId);
-      let updated_at;
-      if (wishlistSettings != null) {
-        updated_at = wishlistSettings.updated_at;
+  stateFromStoresArray2 = wishlistIdsAndUsers(stateFromStoresArray2[7]).useStateFromStoresArray(items6, () =>
+    wishlistIdsAndUsers.map((wishlistId) => {
+      wishlistId = wishlistId.wishlistId;
+      let tmp2;
+      if (null != wishlistId) {
+        wishlistSettings = wishlistSettings.getWishlistSettings(tmp, wishlistId);
+        let updated_at;
+        if (wishlistSettings != null) {
+          updated_at = wishlistSettings.updated_at;
+        }
+        tmp2 = updated_at;
       }
-      tmp2 = updated_at;
-    }
-    return tmp2;
-  }));
+      return tmp2;
+    }),
+  );
   const items7 = [wishlistIdsAndUsers, stateFromStoresArray2];
   memo = React.useMemo(() => {
     obj = {};
@@ -337,23 +364,29 @@ export const useCurrentUserWishlist = function useCurrentUserWishlist() {
   let stateFromStores1;
   userProfile = undefined;
   const items1 = [closure_8];
-  stateFromStores1 = stateFromStores(userProfile[7]).useStateFromStores(items1, () => closure_1_8.getUser(stateFromStores));
+  stateFromStores1 = stateFromStores(userProfile[7]).useStateFromStores(items1, () =>
+    closure_1_8.getUser(stateFromStores),
+  );
   const obj2 = stateFromStores(userProfile[7]);
   const items2 = [closure_6];
   const items3 = [stateFromStores];
-  const stateFromStoresObject = stateFromStores(userProfile[7]).useStateFromStoresObject(items2, () => {
-    userProfile = null;
-    if (null != stateFromStores) {
-      userProfile = closure_1_6.getUserProfile(tmp);
-    }
-    obj = { userProfile, wishlistId: null };
-    let firstWishlistId = null;
-    if (null != stateFromStores) {
-      firstWishlistId = closure_1_6.getFirstWishlistId(tmp);
-    }
-    obj[1] = firstWishlistId;
-    return obj;
-  }, items3);
+  const stateFromStoresObject = stateFromStores(userProfile[7]).useStateFromStoresObject(
+    items2,
+    () => {
+      userProfile = null;
+      if (null != stateFromStores) {
+        userProfile = closure_1_6.getUserProfile(tmp);
+      }
+      obj = { userProfile, wishlistId: null };
+      let firstWishlistId = null;
+      if (null != stateFromStores) {
+        firstWishlistId = closure_1_6.getFirstWishlistId(tmp);
+      }
+      obj[1] = firstWishlistId;
+      return obj;
+    },
+    items3,
+  );
   userProfile = stateFromStoresObject.userProfile;
   const wishlistId = stateFromStoresObject.wishlistId;
   const items4 = [stateFromStores1, stateFromStores, userProfile];
@@ -386,19 +419,23 @@ export const useFetchWishlistAndProfileInfoForUser = function useFetchWishlistAn
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getUser(stateFromStores));
   const items1 = [closure_6];
   const items2 = [recipientUserId];
-  const stateFromStoresObject = _require(userProfile[7]).useStateFromStoresObject(items1, () => {
-    userProfile = null;
-    if (null != stateFromStores) {
-      userProfile = closure_1_6.getUserProfile(tmp);
-    }
-    obj = { userProfile, wishlistId: null };
-    let firstWishlistId = null;
-    if (null != stateFromStores) {
-      firstWishlistId = closure_1_6.getFirstWishlistId(tmp);
-    }
-    obj[1] = firstWishlistId;
-    return obj;
-  }, items2);
+  const stateFromStoresObject = _require(userProfile[7]).useStateFromStoresObject(
+    items1,
+    () => {
+      userProfile = null;
+      if (null != stateFromStores) {
+        userProfile = closure_1_6.getUserProfile(tmp);
+      }
+      obj = { userProfile, wishlistId: null };
+      let firstWishlistId = null;
+      if (null != stateFromStores) {
+        firstWishlistId = closure_1_6.getFirstWishlistId(tmp);
+      }
+      obj[1] = firstWishlistId;
+      return obj;
+    },
+    items2,
+  );
   userProfile = stateFromStoresObject.userProfile;
   const wishlistId = stateFromStoresObject.wishlistId;
   const items3 = [stateFromStores, recipientUserId, userProfile];

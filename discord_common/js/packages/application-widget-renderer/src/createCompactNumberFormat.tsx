@@ -17,7 +17,9 @@ function toAsciiDigits(arg0, get) {
   }
   return str;
 }
-let result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/createCompactNumberFormat.tsx");
+let result = set.fileFinishedImporting(
+  "../discord_common/js/packages/application-widget-renderer/src/createCompactNumberFormat.tsx",
+);
 
 export const createCompactNumberFormat = function createCompactNumberFormat(stateFromStores) {
   const numberFormat = new Intl.NumberFormat(stateFromStores, { useGrouping: false });
@@ -146,7 +148,7 @@ export const createCompactNumberFormat = function createCompactNumberFormat(stat
           const _Math4 = Math;
           const tmp29 = 10 ** -Math.max(Math.min(num10 - 1, 0), -15);
           const _Math5 = Math;
-          const result2 = Math.floor(result1 * tmp29) / tmp29 * num7;
+          const result2 = (Math.floor(result1 * tmp29) / tmp29) * num7;
           const _Number = Number;
           let tmp32 = arg0;
           if (Number.isFinite(result2)) {
@@ -156,6 +158,6 @@ export const createCompactNumberFormat = function createCompactNumberFormat(stat
         }
       }
       return numberFormat1.format(arg0);
-    }
+    },
   };
 };

@@ -30,7 +30,7 @@ class BaseActivityPanelSystemUIManager {
       obj[0] = !tmp10;
       tmp7Result = tmp7(tmp9, obj);
     }
-    items = [, ];
+    items = [,];
     items[0] = tmp7Result;
     tmp11 = jsx;
     tmp12 = require("pushStackEntry");
@@ -47,7 +47,10 @@ let c3 = importAllResult;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 const memoResult = importAllResult.memo(() => {
   const context = importAllResult.useContext(useActivityWebViewLockDefault);
-  return callback(BaseActivityPanelSystemUIManager, { mode: context.mode, isWindowLandscape: context.wrapperDimensions.isWindowLandscape });
+  return callback(BaseActivityPanelSystemUIManager, {
+    mode: context.mode,
+    isWindowLandscape: context.wrapperDimensions.isWindowLandscape,
+  });
 });
 const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelSystemUIManager.tsx");
 

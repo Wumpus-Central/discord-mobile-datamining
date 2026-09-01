@@ -41,4 +41,4 @@ export default function SecureFramesStreamVerificationBottomSheet(channelId) {
   obj[3] = stateFromStores;
   obj[4] = callback;
   return <tmp3 helpArticle={null} />;
-};
+}

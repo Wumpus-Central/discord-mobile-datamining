@@ -20,14 +20,18 @@ function GuildVoiceChannelSubtitle(channel) {
   let obj = channel(id[9]);
   const items = [closure_5];
   const items1 = [channel.id];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    const stageInstanceByChannel = closure_1_5.getStageInstanceByChannel(channel.id);
-    let topic;
-    if (stageInstanceByChannel != null) {
-      topic = stageInstanceByChannel.topic;
-    }
-    return topic;
-  }, items1);
+  stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      const stageInstanceByChannel = closure_1_5.getStageInstanceByChannel(channel.id);
+      let topic;
+      if (stageInstanceByChannel != null) {
+        topic = stageInstanceByChannel.topic;
+      }
+      return topic;
+    },
+    items1,
+  );
   const items2 = [stateFromStores, voiceStates, id, guild_id];
   obj = {
     style: callback().subtitle,
@@ -150,128 +154,132 @@ function GuildVoiceChannelSubtitle(channel) {
         }
         obj11 = channel(id[5]);
       }
-    }, items2)
+    }, items2),
   };
-  return <stateFromStores style={callback().subtitle}>{guild_id.useMemo(() => {
-    let tmp2 = null;
-    if (null != stateFromStores) {
-      let obj = { subtitle: null, muted: false, layout: null, channelId: null, guildId: null };
-      obj[0] = tmp;
-      obj[2] = closure_1_6;
-      obj[3] = id;
-      obj[4] = guild_id;
-      return channel(id[10]).renderChannelSubtitle(obj);
-    } else {
-      obj = voiceStates;
-      let formatToPlainStringResult = null;
-      if (!obj11.isLayoutCompact(closure_1_6)) {
-        formatToPlainStringResult = null;
-        if (0 !== obj.length) {
-          if (1 === length) {
-            const intl2 = channel(id[7]).intl;
-            const first = obj[0];
-            let nick;
-            if (first != tmp2) {
-              const member5 = first.member;
-              if (member5 != tmp2) {
-                nick = member5.nick;
+  return (
+    <stateFromStores style={callback().subtitle}>
+      {guild_id.useMemo(() => {
+        let tmp2 = null;
+        if (null != stateFromStores) {
+          let obj = { subtitle: null, muted: false, layout: null, channelId: null, guildId: null };
+          obj[0] = tmp;
+          obj[2] = closure_1_6;
+          obj[3] = id;
+          obj[4] = guild_id;
+          return channel(id[10]).renderChannelSubtitle(obj);
+        } else {
+          obj = voiceStates;
+          let formatToPlainStringResult = null;
+          if (!obj11.isLayoutCompact(closure_1_6)) {
+            formatToPlainStringResult = null;
+            if (0 !== obj.length) {
+              if (1 === length) {
+                const intl2 = channel(id[7]).intl;
+                const first = obj[0];
+                let nick;
+                if (first != tmp2) {
+                  const member5 = first.member;
+                  if (member5 != tmp2) {
+                    nick = member5.nick;
+                  }
+                }
+                if (nick == tmp2) {
+                  const first1 = obj[0];
+                  tmp2 = first1 == tmp2;
+                  let user;
+                  if (!tmp2) {
+                    user = first1.user;
+                  }
+                  nick = voiceStates(id[6]).getName(user);
+                  const obj7 = voiceStates(id[6]);
+                }
+                obj = { a: null };
+                obj[0] = nick;
+                formatToPlainStringResult = intl2.formatToPlainString(channel(id[7]).t["/GCyII"], obj);
+              } else if (2 !== length) {
+                const intl3 = channel(id[7]).intl;
+                const first2 = obj[0];
+                let nick1;
+                if (first2 != tmp2) {
+                  const member = first2.member;
+                  if (member != tmp2) {
+                    nick1 = member.nick;
+                  }
+                }
+                if (nick1 == tmp2) {
+                  obj = voiceStates(id[6]);
+                  const first3 = obj[0];
+                  let user1;
+                  if (first3 != tmp2) {
+                    user1 = first3.user;
+                  }
+                  nick1 = obj.getName(user1);
+                }
+                obj1 = { a: null, b: null, n: null };
+                obj1[0] = nick1;
+                let nick2;
+                if (obj[1] != tmp2) {
+                  const member2 = tmp9.member;
+                  if (member2 != tmp2) {
+                    nick2 = member2.nick;
+                  }
+                }
+                if (nick2 == tmp2) {
+                  let obj2 = voiceStates(id[6]);
+                  let user2;
+                  if (obj[1] != tmp2) {
+                    user2 = tmp13.user;
+                  }
+                  nick2 = obj2.getName(user2);
+                }
+                obj1[1] = nick2;
+                obj1[2] = obj.length - 2;
+                formatToPlainStringResult = intl3.formatToPlainString(channel(id[7]).t.o2nmbk, obj1);
               }
             }
-            if (nick == tmp2) {
-              const first1 = obj[0];
-              tmp2 = first1 == tmp2;
-              let user;
-              if (!tmp2) {
-                user = first1.user;
-              }
-              nick = voiceStates(id[6]).getName(user);
-              const obj7 = voiceStates(id[6]);
-            }
-            obj = { a: null };
-            obj[0] = nick;
-            formatToPlainStringResult = intl2.formatToPlainString(channel(id[7]).t["/GCyII"], obj);
-          } else if (2 !== length) {
-            const intl3 = channel(id[7]).intl;
-            const first2 = obj[0];
-            let nick1;
-            if (first2 != tmp2) {
-              const member = first2.member;
-              if (member != tmp2) {
-                nick1 = member.nick;
+            const intl = channel(id[7]).intl;
+            const first4 = obj[0];
+            let nick3;
+            if (first4 != tmp2) {
+              const member3 = first4.member;
+              if (member3 != tmp2) {
+                nick3 = member3.nick;
               }
             }
-            if (nick1 == tmp2) {
-              obj = voiceStates(id[6]);
-              const first3 = obj[0];
-              let user1;
-              if (first3 != tmp2) {
-                user1 = first3.user;
+            if (nick3 == tmp2) {
+              const first5 = obj[0];
+              let user3;
+              if (first5 != tmp2) {
+                user3 = first5.user;
               }
-              nick1 = obj.getName(user1);
+              nick3 = voiceStates(id[6]).getName(user3);
+              const obj4 = voiceStates(id[6]);
             }
-            obj1 = { a: null, b: null, n: null };
-            obj1[0] = nick1;
-            let nick2;
+            obj2 = { a: null, b: null };
+            obj2[0] = nick3;
+            let nick4;
             if (obj[1] != tmp2) {
-              const member2 = tmp9.member;
-              if (member2 != tmp2) {
-                nick2 = member2.nick;
+              const member4 = tmp25.member;
+              if (member4 != tmp2) {
+                nick4 = member4.nick;
               }
             }
-            if (nick2 == tmp2) {
-              let obj2 = voiceStates(id[6]);
-              let user2;
+            if (nick4 == tmp2) {
+              let user4;
               if (obj[1] != tmp2) {
-                user2 = tmp13.user;
+                user4 = tmp29.user;
               }
-              nick2 = obj2.getName(user2);
+              nick4 = voiceStates(id[6]).getName(user4);
+              const obj6 = voiceStates(id[6]);
             }
-            obj1[1] = nick2;
-            obj1[2] = obj.length - 2;
-            formatToPlainStringResult = intl3.formatToPlainString(channel(id[7]).t.o2nmbk, obj1);
+            obj2[1] = nick4;
+            formatToPlainStringResult = intl.formatToPlainString(channel(id[7]).t["2efxiV"], obj2);
           }
+          obj11 = channel(id[5]);
         }
-        const intl = channel(id[7]).intl;
-        const first4 = obj[0];
-        let nick3;
-        if (first4 != tmp2) {
-          const member3 = first4.member;
-          if (member3 != tmp2) {
-            nick3 = member3.nick;
-          }
-        }
-        if (nick3 == tmp2) {
-          const first5 = obj[0];
-          let user3;
-          if (first5 != tmp2) {
-            user3 = first5.user;
-          }
-          nick3 = voiceStates(id[6]).getName(user3);
-          const obj4 = voiceStates(id[6]);
-        }
-        obj2 = { a: null, b: null };
-        obj2[0] = nick3;
-        let nick4;
-        if (obj[1] != tmp2) {
-          const member4 = tmp25.member;
-          if (member4 != tmp2) {
-            nick4 = member4.nick;
-          }
-        }
-        if (nick4 == tmp2) {
-          let user4;
-          if (obj[1] != tmp2) {
-            user4 = tmp29.user;
-          }
-          nick4 = voiceStates(id[6]).getName(user4);
-          const obj6 = voiceStates(id[6]);
-        }
-        obj2[1] = nick4;
-        formatToPlainStringResult = intl.formatToPlainString(channel(id[7]).t["2efxiV"], obj2);
-      }
-      obj11 = channel(id[5]);
-    }
-  }, items2)}</stateFromStores>;
+      }, items2)}
+    </stateFromStores>
+  );
 }
 function GuildVoiceChannelExtras(arg0) {
   ({ channel, users } = arg0);
@@ -294,7 +302,11 @@ function GuildVoiceChannelExtras(arg0) {
   return <View style={tmp.subtitle}>{null}</View>;
 }
 let c3 = importAllResult;
-let closure_8 = createCacheKey.createStyles({ users: { marginTop: 4 }, subtitle: { marginEnd: 16 }, trailing: { paddingVertical: 4, alignItems: "center", alignSelf: "center" } });
+let closure_8 = createCacheKey.createStyles({
+  users: { marginTop: 4 },
+  subtitle: { marginEnd: 16 },
+  trailing: { paddingVertical: 4, alignItems: "center", alignSelf: "center" },
+});
 const memoResult = importAllResult.memo(function GuildVoiceChannelRow(channel) {
   channel = channel.channel;
   ({ voiceStates, trailing, onPress } = channel);
@@ -322,6 +334,8 @@ const memoResult = importAllResult.memo(function GuildVoiceChannelRow(channel) {
   obj[5] = <GuildVoiceChannelExtras channel={channel} voiceStates={voiceStates} users={mapped} />;
   return jsx(onPress(16243), { onPress: callback, voiceStates, channel, subtitle: null, trailing: null, extras: null });
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx",
+);
 
 export default memoResult;

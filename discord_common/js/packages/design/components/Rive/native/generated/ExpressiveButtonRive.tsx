@@ -6,10 +6,45 @@ import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
-let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
+let closure_3 = [
+  "fallback",
+  "artboard",
+  "stateMachine",
+  "defaultViewModelInstance",
+  "dataBinding",
+  "onDataBindingChange",
+];
 let c5 = importAllResult;
-let closure_7 = { "Mobile Expressive Button Lightmode": { posy: "number", posx: "number", buttonColor: "color", cornerRadius: "number", pressed: "boolean" }, Ambient_Lightmode: { posy: "number", posx: "number", buttonColor: "color", cornerRadius: "number", pressed: "boolean" }, "Mobile Expressive Button Dark Mode": { posy: "number", posx: "number", buttonColor: "color", cornerRadius: "number", pressed: "boolean" }, Ambient: { posy: "number", posx: "number", buttonColor: "color", cornerRadius: "number", pressed: "boolean" } };
-let closure_8 = { "Mobile Expressive Button Lightmode": ["Instance"], Ambient_Lightmode: ["Instance"], "Mobile Expressive Button Dark Mode": ["Instance"], Ambient: ["Instance"] };
+let closure_7 = {
+  "Mobile Expressive Button Lightmode": {
+    posy: "number",
+    posx: "number",
+    buttonColor: "color",
+    cornerRadius: "number",
+    pressed: "boolean",
+  },
+  Ambient_Lightmode: {
+    posy: "number",
+    posx: "number",
+    buttonColor: "color",
+    cornerRadius: "number",
+    pressed: "boolean",
+  },
+  "Mobile Expressive Button Dark Mode": {
+    posy: "number",
+    posx: "number",
+    buttonColor: "color",
+    cornerRadius: "number",
+    pressed: "boolean",
+  },
+  Ambient: { posy: "number", posx: "number", buttonColor: "color", cornerRadius: "number", pressed: "boolean" },
+};
+let closure_8 = {
+  "Mobile Expressive Button Lightmode": ["Instance"],
+  Ambient_Lightmode: ["Instance"],
+  "Mobile Expressive Button Dark Mode": ["Instance"],
+  Ambient: ["Instance"],
+};
 let closure_9 = {
   "Mobile Expressive Button Lightmode": function MobileExpressiveButtonLightmodeBindings(arg0) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = arg0);
@@ -51,7 +86,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       cornerRadius1 = onDataBindingChange.cornerRadius;
     }
-    const numberBinding2 = BaseRive.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
+    const numberBinding2 = BaseRive.useNumberBinding(
+      "cornerRadius",
+      instance,
+      cornerRadius,
+      cornerRadius1,
+      playIfNeeded,
+    );
     const tmpResult1 = BaseRive;
     let pressed;
     if (dataBinding != null) {
@@ -104,7 +145,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       cornerRadius1 = onDataBindingChange.cornerRadius;
     }
-    const numberBinding2 = BaseRive.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
+    const numberBinding2 = BaseRive.useNumberBinding(
+      "cornerRadius",
+      instance,
+      cornerRadius,
+      cornerRadius1,
+      playIfNeeded,
+    );
     const tmpResult1 = BaseRive;
     let pressed;
     if (dataBinding != null) {
@@ -157,7 +204,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       cornerRadius1 = onDataBindingChange.cornerRadius;
     }
-    const numberBinding2 = BaseRive.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
+    const numberBinding2 = BaseRive.useNumberBinding(
+      "cornerRadius",
+      instance,
+      cornerRadius,
+      cornerRadius1,
+      playIfNeeded,
+    );
     const tmpResult1 = BaseRive;
     let pressed;
     if (dataBinding != null) {
@@ -210,7 +263,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       cornerRadius1 = onDataBindingChange.cornerRadius;
     }
-    const numberBinding2 = BaseRive.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
+    const numberBinding2 = BaseRive.useNumberBinding(
+      "cornerRadius",
+      instance,
+      cornerRadius,
+      cornerRadius1,
+      playIfNeeded,
+    );
     const tmpResult1 = BaseRive;
     let pressed;
     if (dataBinding != null) {
@@ -222,7 +281,7 @@ let closure_9 = {
     }
     const booleanBinding = BaseRive.useBooleanBinding("pressed", instance, pressed, pressed1, playIfNeeded);
     return null;
-  }
+  },
 };
 let closure_10 = importAllResult.forwardRef(function ExpressiveButtonRiveInner(defaultViewModelInstance, ref) {
   ({ fallback, artboard } = defaultViewModelInstance);
@@ -251,7 +310,16 @@ let closure_10 = importAllResult.forwardRef(function ExpressiveButtonRiveInner(d
   }, items);
   const tmp = callback(defaultViewModelInstance, closure_3);
   let merged = Object.assign(tmp);
-  return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: dataBinding(onDataBindingChange[4]), artboard: str, artboardProperties: closure_7, artboardViewModelInstances: closure_8, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
+  return jsx(str(onDataBindingChange[3]).BaseRive, {
+    ref,
+    src: dataBinding(onDataBindingChange[4]),
+    artboard: str,
+    artboardProperties: closure_7,
+    artboardViewModelInstances: closure_8,
+    defaultViewModelInstance: str2,
+    stateMachine: defaultViewModelInstance.stateMachine,
+    renderDataBinding: callback,
+  });
 });
 const forwardRefResult = importAllResult.forwardRef(function ExpressiveButtonRiveWithBoundary(fallback, ref) {
   let obj = { fallback: fallback.fallback, children: null };
@@ -260,6 +328,8 @@ const forwardRefResult = importAllResult.forwardRef(function ExpressiveButtonRiv
   obj[1] = <closure_10 ref={arg1} />;
   return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/ExpressiveButtonRive.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/design/components/Rive/native/generated/ExpressiveButtonRive.tsx",
+);
 
 export const ExpressiveButtonRive = forwardRefResult;

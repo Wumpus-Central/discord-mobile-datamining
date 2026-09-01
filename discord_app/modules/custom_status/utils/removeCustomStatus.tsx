@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/custom_status/utils/removeCust
 
 export default function removeCustomStatus() {
   setCustomStatusDefault({ text: "", emojiInfo: null, clearAfter: null });
-};
+}

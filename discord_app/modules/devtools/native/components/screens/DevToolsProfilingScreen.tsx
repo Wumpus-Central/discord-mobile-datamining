@@ -20,7 +20,9 @@ createCacheKey.padding = 16;
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { fontFamily: require("ME").Fonts.CODE_BOLD };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsProfilingScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsProfilingScreen.tsx",
+);
 
 export default function DevToolsProfilingScreen() {
   [r10008, require] = componentRenderStats(React.useState(false), 2);
@@ -40,27 +42,48 @@ export default function DevToolsProfilingScreen() {
     const obj2 = { variant: "danger", arrow: true, label: "Reset Stats", onPress: null };
     obj2[3] = callback;
     obj1[2] = tmp8(tmp4(5599).TableRow, obj2);
-    let items = [tmp8(tmp4(5992).TableRowGroup, obj1), ];
+    let items = [tmp8(tmp4(5992).TableRowGroup, obj1)];
     const _Object = Object;
     const keys = Object.keys(componentRenderStats);
     items[1] = keys.map((arg0) => {
       ({ mount, update, nestedUpdate } = componentRenderStats[arg0]);
-      let items = [{ stat: mount, label: "Mount" }, { stat: update, label: "Update" }, { stat: nestedUpdate, label: "Nested Update" }];
-      return closure_1_5(closure_1_0(5992).TableRowGroup, {
-        title: "Component Profiler Target: '" + arg0 + "'",
-        hasIcons: false,
-        children: items.map((stat) => {
-          stat = stat.stat;
-          let obj = { subLabel: null, label: null };
-          obj = { children: null };
-          obj = { variant: "text-sm/medium", color: "text-subtle", style: closure_1.monospace, children: "Count - " + stat.count };
-          const items = [closure_1_5(closure_1_0(closure_1_1[11]).Text, obj), closure_1_5(closure_1_0(closure_1_1[11]).Text, { variant: "text-sm/medium", color: "text-subtle", style: closure_1.monospace, children: "Mean - " + stat.mean })];
-          obj[0] = items;
-          obj[0] = closure_1_7(closure_1_6, obj);
-          obj[1] = stat.label;
-          return closure_1_5(closure_1_0(closure_1_1[10]).TableRow, obj, arg1);
-        })
-      }, arg0);
+      let items = [
+        { stat: mount, label: "Mount" },
+        { stat: update, label: "Update" },
+        { stat: nestedUpdate, label: "Nested Update" },
+      ];
+      return closure_1_5(
+        closure_1_0(5992).TableRowGroup,
+        {
+          title: "Component Profiler Target: '" + arg0 + "'",
+          hasIcons: false,
+          children: items.map((stat) => {
+            stat = stat.stat;
+            let obj = { subLabel: null, label: null };
+            obj = { children: null };
+            obj = {
+              variant: "text-sm/medium",
+              color: "text-subtle",
+              style: closure_1.monospace,
+              children: "Count - " + stat.count,
+            };
+            const items = [
+              closure_1_5(closure_1_0(closure_1_1[11]).Text, obj),
+              closure_1_5(closure_1_0(closure_1_1[11]).Text, {
+                variant: "text-sm/medium",
+                color: "text-subtle",
+                style: closure_1.monospace,
+                children: "Mean - " + stat.mean,
+              }),
+            ];
+            obj[0] = items;
+            obj[0] = closure_1_7(closure_1_6, obj);
+            obj[1] = stat.label;
+            return closure_1_5(closure_1_0(closure_1_1[10]).TableRow, obj, arg1);
+          }),
+        },
+        arg0,
+      );
     });
     obj[0] = items;
     let tmp8Result = tmp10(closure_6, obj);
@@ -81,4 +104,4 @@ export default function DevToolsProfilingScreen() {
   obj7[1] = items2;
   obj[1] = closure_7(Stack.Stack, obj7);
   return closure_5(closure_4, obj);
-};
+}

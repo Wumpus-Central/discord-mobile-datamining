@@ -11,16 +11,46 @@ const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let closure_10 = importDefaultResult1.createAnimatedComponent(require("Button").Icon);
-let obj = { container: null, textCentered: null, labelGroup: null, titleContainer: null, floatingNuxContainer: null, floatingNux: null, arrowLeft: null, uppercase: null, selectionBorder: null, a11yThemeList: null, a11yThemeListScroll: null };
+let obj = {
+  container: null,
+  textCentered: null,
+  labelGroup: null,
+  titleContainer: null,
+  floatingNuxContainer: null,
+  floatingNux: null,
+  arrowLeft: null,
+  uppercase: null,
+  selectionBorder: null,
+  a11yThemeList: null,
+  a11yThemeListScroll: null,
+};
 obj = { gap: ThemesDefault.space.PX_24, alignItems: "center" };
 obj[0] = obj;
 obj[1] = { textAlign: "center" };
 createCacheKey = { gap: ThemesDefault.space.PX_4, alignItems: "center" };
 obj[2] = createCacheKey;
-obj[3] = { minHeight: 20, marginTop: ThemesDefault.space.PX_4, flexDirection: "row", justifyContent: "center", alignItems: "center" };
-let obj2 = { minHeight: 20, marginTop: ThemesDefault.space.PX_4, flexDirection: "row", justifyContent: "center", alignItems: "center" };
+obj[3] = {
+  minHeight: 20,
+  marginTop: ThemesDefault.space.PX_4,
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+};
+let obj2 = {
+  minHeight: 20,
+  marginTop: ThemesDefault.space.PX_4,
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+};
 obj[4] = { position: "absolute", left: ThemesDefault.space.PX_24 };
-let obj4 = { borderRadius: ThemesDefault.radii.lg, flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_4, paddingRight: ThemesDefault.space.PX_8 };
+let obj4 = {
+  borderRadius: ThemesDefault.radii.lg,
+  flexDirection: "row",
+  alignItems: "center",
+  padding: ThemesDefault.space.PX_4,
+  paddingRight: ThemesDefault.space.PX_8,
+};
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 obj4.shadowColor = "#000000";
 obj[5] = obj4;
@@ -28,13 +58,33 @@ let items = [{ rotate: "90deg" }];
 obj[6] = { transform: items };
 obj[7] = { textTransform: "uppercase" };
 let obj3 = { position: "absolute", left: ThemesDefault.space.PX_24 };
-obj[8] = { position: "absolute", alignSelf: "center", width: importDefaultResult.THEME_ITEM_WIDTH, height: importDefaultResult.THEME_ITEM_HEIGHT, borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT, borderWidth: 2 };
+obj[8] = {
+  position: "absolute",
+  alignSelf: "center",
+  width: importDefaultResult.THEME_ITEM_WIDTH,
+  height: importDefaultResult.THEME_ITEM_HEIGHT,
+  borderRadius: ThemesDefault.radii.md,
+  borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT,
+  borderWidth: 2,
+};
 obj[9] = { flexDirection: "row" };
 obj[10] = { flexGrow: 0 };
 let closure_11 = createCacheKey.createStyles(obj);
-let closure_12 = { code: "function SettingsAppearanceThemeCarouselTsx1(){const{withTiming,isMidnightNuxVisible,timingStandard}=this.__closure;return{opacity:withTiming(isMidnightNuxVisible.get()?1:0,timingStandard),pointerEvents:isMidnightNuxVisible.get()?'auto':'none'};}" };
-let obj5 = { position: "absolute", alignSelf: "center", width: importDefaultResult.THEME_ITEM_WIDTH, height: importDefaultResult.THEME_ITEM_HEIGHT, borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT, borderWidth: 2 };
-let result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceThemeCarousel.tsx");
+let closure_12 = {
+  code: "function SettingsAppearanceThemeCarouselTsx1(){const{withTiming,isMidnightNuxVisible,timingStandard}=this.__closure;return{opacity:withTiming(isMidnightNuxVisible.get()?1:0,timingStandard),pointerEvents:isMidnightNuxVisible.get()?'auto':'none'};}",
+};
+let obj5 = {
+  position: "absolute",
+  alignSelf: "center",
+  width: importDefaultResult.THEME_ITEM_WIDTH,
+  height: importDefaultResult.THEME_ITEM_HEIGHT,
+  borderRadius: ThemesDefault.radii.md,
+  borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT,
+  borderWidth: 2,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/appearance/native/components/SettingsAppearanceThemeCarousel.tsx",
+);
 
 export default function SettingsAppearanceThemeCarousel(themes) {
   themes = themes.themes;
@@ -111,7 +161,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
           }
         }
       },
-      isNew: false
+      isNew: false,
     });
   }, items3);
   let obj3 = themes(isPreview[4]);
@@ -134,7 +184,11 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       return obj;
     }
   }
-  obj = { withTiming: themes(isPreview[11]).withTiming, isMidnightNuxVisible: sharedValue, timingStandard: themes(isPreview[12]).timingStandard };
+  obj = {
+    withTiming: themes(isPreview[11]).withTiming,
+    isMidnightNuxVisible: sharedValue,
+    timingStandard: themes(isPreview[12]).timingStandard,
+  };
   L.__closure = obj;
   L.__workletHash = 3854555745742;
   L.__initData = closure_12;
@@ -148,8 +202,13 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     obj1[2] = tmp2(tmp3[5]).IconSizes.SMALL_20;
     tmp13 = callback(sharedValue1, obj1);
   }
-  const items4 = [tmp13, ];
-  obj2 = { animated: true, style: animatedStyles.headerPrimary, variant: "heading-sm/semibold", children: obj8.getName() };
+  const items4 = [tmp13];
+  obj2 = {
+    animated: true,
+    style: animatedStyles.headerPrimary,
+    variant: "heading-sm/semibold",
+    children: obj8.getName(),
+  };
   obj8 = themes[currentThemeIndex];
   items4[1] = callback(themes(isPreview[15]).Text, obj2);
   obj[1] = items4;
@@ -158,8 +217,21 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       obj3 = { children: null };
       const obj4 = { pointerEvents: "none", style: null };
       obj4[1] = tmp.selectionBorder;
-      const items5 = [tmp17(tmp12, obj4), ];
-      const obj5 = { ref: null, data: null, renderItem: null, style: null, width: null, height: null, loop: false, pagingEnabled: true, defaultIndex: null, onSnapToItem: null, scrollAnimationDuration: 200, onProgressChange: null };
+      const items5 = [tmp17(tmp12, obj4)];
+      const obj5 = {
+        ref: null,
+        data: null,
+        renderItem: null,
+        style: null,
+        width: null,
+        height: null,
+        loop: false,
+        pagingEnabled: true,
+        defaultIndex: null,
+        onSnapToItem: null,
+        scrollAnimationDuration: 200,
+        onProgressChange: null,
+      };
       obj5[0] = ref;
       obj5[1] = themes;
       obj5[2] = callback;
@@ -174,14 +246,17 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       obj5[11] = function onProgressChange(arg0, arg1) {
         const rounded = Math.round(arg1);
         if (rounded !== ref.current) {
-          const result = themes(isPreview[18]).triggerHapticFeedback(themes(isPreview[18]).HapticFeedbackTypes.IMPACT_LIGHT);
+          const result = themes(isPreview[18]).triggerHapticFeedback(
+            themes(isPreview[18]).HapticFeedbackTypes.IMPACT_LIGHT,
+          );
           tmp2.current = rounded;
           callback(rounded);
           const obj = themes(isPreview[18]);
         }
         if (closure_4) {
           const _Math = Math;
-          const tmp11 = arg1 < closure_8 + Math.ceil(deviceWidth / (ref.THEME_ITEM_WIDTH + ref.THEME_ITEM_HORIZONTAL_MARGIN)) / 2;
+          const tmp11 =
+            arg1 < closure_8 + Math.ceil(deviceWidth / (ref.THEME_ITEM_WIDTH + ref.THEME_ITEM_HORIZONTAL_MARGIN)) / 2;
           if (tmp11) {
             const result1 = sharedValue1.set(true);
           }
@@ -210,7 +285,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       }
       obj8[3] = stringResult;
       const obj9 = { children: null };
-      const items7 = [tmp17Result, ];
+      const items7 = [tmp17Result];
       const obj10 = { style: null, children: null };
       obj10[0] = tmp.labelGroup;
       const items8 = [tmp18, tmp17(tmp24, obj8)];
@@ -222,7 +297,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       const obj12 = { style: null, children: null };
       obj12[0] = tmp.floatingNuxContainer;
       const obj13 = { style: null, children: null };
-      const items9 = [tmp.floatingNux, animatedStyle, , ];
+      const items9 = [tmp.floatingNux, animatedStyle, ,];
       ({ bgSurfaceOverlay: arr11[2], borderFaint: arr11[3] } = animatedStyles);
       obj13[0] = items9;
       const obj14 = { style: null, source: null, size: null };
@@ -230,7 +305,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       obj14[0] = items10;
       obj14[1] = currentThemeIndex(tmp3[20]);
       obj14[2] = tmp2(tmp3[5]).IconSizes.REFRESH_SMALL_16;
-      const items11 = [tmp17(sharedValue1, obj14), ];
+      const items11 = [tmp17(sharedValue1, obj14)];
       const obj15 = { animated: true, style: null, variant: "eyebrow", maxFontSizeMultiplier: 1.5, children: null };
       const items12 = [animatedStyles.textNormal, tmp.uppercase];
       obj15[1] = items12;
@@ -265,9 +340,9 @@ export default function SettingsAppearanceThemeCarousel(themes) {
         isSelected: arg1 === currentThemeIndex,
         onPress() {
           return closure_1_5(closure_0);
-        }
+        },
       };
       return ref(closure_1_4, obj, "theme-" + arg1);
-    })
+    }),
   });
-};
+}

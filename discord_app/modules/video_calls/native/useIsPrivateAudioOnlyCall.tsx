@@ -22,33 +22,50 @@ export default function useIsPrivateAudioOnlyCall(id) {
   const items1 = [id];
   let tmp3 = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(id.id).length > 0;
   if (!tmp3) {
-    tmp3 = isActivityParticipant(callback(obj.useStateFromStores(items, () => {
-      const items = [closure_1_4.getSelectedParticipant(_private.id), closure_1_4.getParticipantsVersion(_private.id)];
-      return items;
-    }, items1, areParticipantStatesEqual), 1)[0]);
+    tmp3 = isActivityParticipant(
+      callback(
+        obj.useStateFromStores(
+          items,
+          () => {
+            const items = [
+              closure_1_4.getSelectedParticipant(_private.id),
+              closure_1_4.getParticipantsVersion(_private.id),
+            ];
+            return items;
+          },
+          items1,
+          areParticipantStatesEqual,
+        ),
+        1,
+      )[0],
+    );
   }
   dependencyMap = tmp3;
   obj = initialize;
   const tmp = _require;
   const items2 = [closure_7, closure_6, closure_5];
   const items3 = [id, tmp3];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
-    let isPrivateResult = _private.isPrivate();
-    if (isPrivateResult) {
-      isPrivateResult = !closure_1_7.hasVideo(tmp.id);
-    }
-    if (isPrivateResult) {
-      isPrivateResult = !closure_1;
-    }
-    if (isPrivateResult) {
-      isPrivateResult = 0 === closure_1_5.getAllApplicationStreamsForChannel(tmp.id).length;
-    }
-    if (isPrivateResult) {
-      isPrivateResult = 0 === closure_1_5.getAllActiveStreamsForChannel(tmp.id).length;
-    }
-    if (isPrivateResult) {
-      isPrivateResult = !closure_1_6.isVideoEnabled();
-    }
-    return isPrivateResult;
-  }, items3);
-};
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items2,
+    () => {
+      let isPrivateResult = _private.isPrivate();
+      if (isPrivateResult) {
+        isPrivateResult = !closure_1_7.hasVideo(tmp.id);
+      }
+      if (isPrivateResult) {
+        isPrivateResult = !closure_1;
+      }
+      if (isPrivateResult) {
+        isPrivateResult = 0 === closure_1_5.getAllApplicationStreamsForChannel(tmp.id).length;
+      }
+      if (isPrivateResult) {
+        isPrivateResult = 0 === closure_1_5.getAllActiveStreamsForChannel(tmp.id).length;
+      }
+      if (isPrivateResult) {
+        isPrivateResult = !closure_1_6.isVideoEnabled();
+      }
+      return isPrivateResult;
+    },
+    items3,
+  );
+}

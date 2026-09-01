@@ -49,7 +49,11 @@ prototype["search"] = function search(str) {
       const values = applyDefault.chain(mutablePrivateChannels.getMutablePrivateChannels()).values();
       const found = values.filter(trimmed1(11935).filterGroupDMs);
       const mapped = found.map((id) => {
-        const items = [id, trimmed1(closure_1_2[3]).matchGroupDM(id, trimmed1), closure_1_4.getScoreWithoutFetchingLatest(id.id)];
+        const items = [
+          id,
+          trimmed1(closure_1_2[3]).matchGroupDM(id, trimmed1),
+          closure_1_4.getScoreWithoutFetchingLatest(id.id),
+        ];
         return items;
       });
       const found1 = mapped.filter((arg0) => {
@@ -64,10 +68,12 @@ prototype["search"] = function search(str) {
         return diff;
       });
       const chainResult = applyDefault.chain(mutablePrivateChannels.getMutablePrivateChannels());
-      items = sorted.map((arg0) => {
-        [tmp] = arg0;
-        return tmp;
-      }).value();
+      items = sorted
+        .map((arg0) => {
+          [tmp] = arg0;
+          return tmp;
+        })
+        .value();
       const iter = sorted.map((arg0) => {
         [tmp] = arg0;
         return tmp;
@@ -82,7 +88,17 @@ prototype["processResults"] = function processResults() {
   const userSearch = this.userSearch;
   this.userIndexes = userSearch.filter(this.searchQueryString);
   let obj = _toPropertyKey;
-  obj = { data: this.userIndexes, withGuildMembers: true, withAffinitySuggestions: true, withFriends: true, withFriendSuggestions: false, withFriendRequests: false, withFriendRequestsIncoming: false, withFriendRequestsOutgoing: false, excludeCurrentUser: true };
+  obj = {
+    data: this.userIndexes,
+    withGuildMembers: true,
+    withAffinitySuggestions: true,
+    withFriends: true,
+    withFriendSuggestions: false,
+    withFriendRequests: false,
+    withFriendRequestsIncoming: false,
+    withFriendRequestsOutgoing: false,
+    excludeCurrentUser: true,
+  };
   const result = obj.parseUserSearchResults(obj);
   let arr3 = result;
   if (this.groupDMs.length > 0) {
@@ -125,8 +141,7 @@ prototype["getCount"] = function getCount() {
 };
 const map = new Map();
 const Store = initializeDefault.Store;
-class SearchPeopleTabStoreImpl extends Store {
-}
+class SearchPeopleTabStoreImpl extends Store {}
 const prototype2 = SearchPeopleTabStoreImpl.prototype;
 prototype2["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_4);
@@ -186,7 +201,7 @@ const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(dispatcherDefault,
       value.teardown();
     }
     map.delete(id);
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/search/native/stores/SearchPeopleTabStore.tsx");
 

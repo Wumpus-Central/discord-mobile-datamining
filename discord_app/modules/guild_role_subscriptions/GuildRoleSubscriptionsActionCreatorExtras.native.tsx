@@ -6,9 +6,12 @@ import closure_4 from "native/RoleTierEditStore.tsx";
 import MAX_SUBSCRIPTION_TIERS from "GuildRoleSubscriptionsConstants.tsx";
 
 require = arg1;
-({ GUILD_ROLE_SUBSCRIPTION_TIER_CREATION_KEY: c5, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: closure_6 } = MAX_SUBSCRIPTION_TIERS);
+({ GUILD_ROLE_SUBSCRIPTION_TIER_CREATION_KEY: c5, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: closure_6 } =
+  MAX_SUBSCRIPTION_TIERS);
 const NEW_LISTING_EDIT_STATE_ID = "NEW_LISTING_EDIT_STATE_ID";
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsActionCreatorExtras.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/GuildRoleSubscriptionsActionCreatorExtras.native.tsx",
+);
 
 export const NEW_LISTING_EDIT_STATE_ID = "NEW_LISTING_EDIT_STATE_ID";
 export const openTierCreationModal = function openTierCreationModal(arg0) {

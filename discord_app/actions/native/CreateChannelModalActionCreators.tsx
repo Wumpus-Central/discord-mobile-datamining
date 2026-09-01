@@ -40,5 +40,5 @@ export default {
   },
   close() {
     _modDef4723.popWithKey(CREATE_CHANNEL_MODAL_KEY);
-  }
+  },
 };

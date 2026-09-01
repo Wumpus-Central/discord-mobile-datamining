@@ -26,7 +26,7 @@ function _fetchApplication() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -150,7 +150,7 @@ function _fetchApplication() {
 let obj = {
   createApplication(arg0) {
     ({ name: require, guildId: importDefault, type: dependencyMap, teamId: closure_3 } = arg0);
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp2;
       let body = tmp5;
       const HTTP = closure_1_0(530).HTTP;
@@ -185,7 +185,7 @@ let obj = {
     }
     const includeTeam = obj.includeTeam;
     closure_2 = Object.assign(obj, Object.create(null));
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp2;
       let body = tmp5;
       const HTTP = closure_1_0(530).HTTP;
@@ -207,7 +207,7 @@ let obj = {
   },
   transferApplication(arg0) {
     ({ applicationId: require, teamId: importDefault } = arg0);
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp2;
       let body = tmp5;
       const HTTP = closure_1_0(530).HTTP;
@@ -232,7 +232,7 @@ let obj = {
     if (arg1 === undefined) {
       flag = true;
     }
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -294,10 +294,12 @@ let obj = {
                 const obj2 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
                 obj2[0] = closure_1_7.APPLICATIONS_PUBLIC;
                 const _URLSearchParams = URLSearchParams;
-                const str = new URLSearchParams(arr.map((arg0) => {
-                  const items = ["application_ids", arg0];
-                  return items;
-                }));
+                const str = new URLSearchParams(
+                  arr.map((arg0) => {
+                    const items = ["application_ids", arg0];
+                    return items;
+                  }),
+                );
                 obj2[1] = str.toString();
                 obj2[3] = closure_1_0(closure_1_2[6]).rejectWithMigratedError();
                 c4 = 2;
@@ -331,7 +333,12 @@ let obj = {
             const set = new Set(body.map((id) => id.id));
             c3 = set;
             c4 = found.filter((arg0) => !set.has(arg0));
-            const obj5 = { type: "APPLICATIONS_FETCH_SUCCESS", applications: null, unknownApplicationIds: null, isHydrated: true };
+            const obj5 = {
+              type: "APPLICATIONS_FETCH_SUCCESS",
+              applications: null,
+              unknownApplicationIds: null,
+              isHydrated: true,
+            };
             obj5[1] = closure_1.body;
             obj5[2] = c4;
             closure_1_1(closure_1_2[5]).dispatch(obj5);
@@ -354,7 +361,7 @@ let obj = {
       }
     })();
   },
-  fetchApplication
+  fetchApplication,
 };
 obj = {
   getQueryId: ME.QueryIds.APPLICATIONS,
@@ -388,7 +395,7 @@ obj = {
       result = importDefaultResult.isFetchingApplication(id);
     }
     return result;
-  }
+  },
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult, obj);
 let result = require("set").fileFinishedImporting("modules/applications/ApplicationActionCreators.tsx");
@@ -402,17 +409,21 @@ export const useApplicationWithLoggedOutContext = function useApplicationWithLog
   const data = tmp.data;
   error = tmp.error;
   const obj = {
-    app: require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-      if (null == data) {
-        const application = closure_1_4.getApplication(closure_0);
-        if (null != application) {
-          return closure_1_5.createFromServer(application);
+    app: require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+      items,
+      () => {
+        if (null == data) {
+          const application = closure_1_4.getApplication(closure_0);
+          if (null != application) {
+            return closure_1_5.createFromServer(application);
+          }
         }
-      }
-      return data;
-    }, items1),
+        return data;
+      },
+      items1,
+    ),
     isLoading: tmp.isLoading,
-    error
+    error,
   };
   items = [closure_4];
   items1 = [arg0, data];

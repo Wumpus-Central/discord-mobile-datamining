@@ -12,9 +12,15 @@ if (set.isAndroid()) {
   num = 32;
 }
 const internal = ThemesDefault.internal;
-const semanticColor = internal.resolveSemanticColor(ThemesDefault.themes.DARK, ThemesDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
+const semanticColor = internal.resolveSemanticColor(
+  ThemesDefault.themes.DARK,
+  ThemesDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE,
+);
 const internal2 = ThemesDefault.internal;
-const semanticColor1 = internal2.resolveSemanticColor(ThemesDefault.themes.LIGHT, ThemesDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
+const semanticColor1 = internal2.resolveSemanticColor(
+  ThemesDefault.themes.LIGHT,
+  ThemesDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE,
+);
 const systemVersionMajor = DCDDeviceManager.getSystemVersionMajor();
 let frozen = Object.freeze({ foreground: true });
 let closure_6 = Object.freeze({});
@@ -25,7 +31,11 @@ export const FORM_ROW_VERTICAL_PADDING = num;
 export const RIPPLE_DARK_COLOR = semanticColor;
 export const RIPPLE_LIGHT_COLOR = semanticColor1;
 export const ANDROID_FOREGROUND_RIPPLE = frozen;
-export const TitleStyleType = { DEFAULT: "default", ANDROID_NO_BORDER: "no_border", NO_BORDER_OR_MARGIN: "no_border_or_margin" };
+export const TitleStyleType = {
+  DEFAULT: "default",
+  ANDROID_NO_BORDER: "no_border",
+  NO_BORDER_OR_MARGIN: "no_border_or_margin",
+};
 export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
   ({ radius, cornerRadius, color } = arg0);
   ({ foreground, borderless } = arg0);

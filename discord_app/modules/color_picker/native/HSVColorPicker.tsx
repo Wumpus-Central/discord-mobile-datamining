@@ -15,7 +15,15 @@ const result = require("set").fileFinishedImporting("modules/color_picker/native
 
 export default function HSVColorPicker(arg0) {
   ({ hue, saturation, value, onPanUpdate, onPanFinalize } = arg0);
-  ({ saturationValuePickerStyle, saturationValueColorBoxStyle, saturationValueColorBoxInnerStyle, saturationValueSelectorStyle, huePickerStyle, hueColorBarInnerStyle, hueSliderStyle } = arg0);
+  ({
+    saturationValuePickerStyle,
+    saturationValueColorBoxStyle,
+    saturationValueColorBoxInnerStyle,
+    saturationValueSelectorStyle,
+    huePickerStyle,
+    hueColorBarInnerStyle,
+    hueSliderStyle,
+  } = arg0);
   let obj = _mod4217;
   const sharedValue = obj.useSharedValue(0);
   const tmp = callback();
@@ -31,7 +39,17 @@ export default function HSVColorPicker(arg0) {
   if (hue == null) {
     tmp11 = sharedValue;
   }
-  obj = { hue: tmp11, saturation: null, value: null, style: null, colorBoxStyle: null, colorBoxInnerStyle: null, selectorStyle: null, onPanUpdate: null, onPanFinalize: null };
+  obj = {
+    hue: tmp11,
+    saturation: null,
+    value: null,
+    style: null,
+    colorBoxStyle: null,
+    colorBoxInnerStyle: null,
+    selectorStyle: null,
+    onPanUpdate: null,
+    onPanFinalize: null,
+  };
   if (saturation == null) {
     saturation = sharedValue1;
   }
@@ -46,12 +64,19 @@ export default function HSVColorPicker(arg0) {
   obj[6] = saturationValueSelectorStyle;
   obj[7] = onPanUpdate;
   obj[8] = onPanFinalize;
-  const items = [closure_4(ColorBoxDefault, obj), ];
+  const items = [closure_4(ColorBoxDefault, obj)];
   const tmp10 = ColorBoxDefault;
   if (hue == null) {
     hue = sharedValue;
   }
-  items[1] = closure_4(HuePickerDefault, { hue, style: huePickerStyle, colorBarInnerStyle: hueColorBarInnerStyle, sliderStyle: hueSliderStyle, onPanUpdate, onPanFinalize });
+  items[1] = closure_4(HuePickerDefault, {
+    hue,
+    style: huePickerStyle,
+    colorBarInnerStyle: hueColorBarInnerStyle,
+    sliderStyle: hueSliderStyle,
+    onPanUpdate,
+    onPanFinalize,
+  });
   obj[1] = items;
   return tmp6(tmp7, obj);
-};
+}

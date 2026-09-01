@@ -4,14 +4,16 @@ import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const CustomTypingIndicatorAnnounceActionSheet = "CustomTypingIndicatorAnnounceActionSheet";
-const result = set.fileFinishedImporting("modules/custom_typing_indicator/native/openCustomTypingIndicatorAnnounceActionSheet.tsx");
+const result = set.fileFinishedImporting(
+  "modules/custom_typing_indicator/native/openCustomTypingIndicatorAnnounceActionSheet.tsx",
+);
 
 export const openCustomTypingIndicatorAnnounceActionSheet = function openCustomTypingIndicatorAnnounceActionSheet() {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = {
     markAsDismissed() {
       return callback(table[0]).hideActionSheet(closure_3);
-    }
+    },
   };
   obj.openLazy(asyncRequireImpl(11541, dependencyMap.paths), CustomTypingIndicatorAnnounceActionSheet, obj);
 };

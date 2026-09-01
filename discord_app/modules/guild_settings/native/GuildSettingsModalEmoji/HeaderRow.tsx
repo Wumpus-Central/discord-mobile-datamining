@@ -26,7 +26,7 @@ function HeaderRow(guild) {
   c7 = undefined;
   function _handleImagePicker() {
     const self = this;
-    const tmp = lib(function*() {
+    const tmp = lib(function* () {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -103,36 +103,39 @@ function HeaderRow(guild) {
                     let obj = lib(upload[11]);
                     obj = { guildId: lib.id, image, name: combined, roles, originalMd5 };
                     const uploadEmojiResult = obj.uploadEmoji(obj);
-                    obj.uploadEmoji(obj).then(() => {
-                      let obj = closure_1_1(closure_1_2[12]);
-                      obj = { guild_id: image.id, upload_id: closure_6 };
-                      return obj.track(closure_1_10.EMOJI_UPLOAD_COMPLETED, obj);
-                    }).catch((body) => {
-                      body = body.body;
-                      if (null == body) {
-                        if (null != undefined) {
-                          closure_1_5(undefined);
+                    obj
+                      .uploadEmoji(obj)
+                      .then(() => {
+                        let obj = closure_1_1(closure_1_2[12]);
+                        obj = { guild_id: image.id, upload_id: closure_6 };
+                        return obj.track(closure_1_10.EMOJI_UPLOAD_COMPLETED, obj);
+                      })
+                      .catch((body) => {
+                        body = body.body;
+                        if (null == body) {
+                          if (null != undefined) {
+                            closure_1_5(undefined);
+                          }
+                        } else if (body.code === closure_2_9.TOO_MANY_EMOJI) {
+                          const intl3 = image(upload[13]).intl;
+                          let stringResult = intl3.string(image(upload[13]).t["jP/Rqm"]);
+                        } else if (body.code === tmp.TOO_MANY_ANIMATED_EMOJI) {
+                          const intl2 = image(upload[13]).intl;
+                          stringResult = intl2.string(image(upload[13]).t["6v5dP/"]);
+                        } else if (null != body.image) {
+                          let obj = callback(upload[12]);
+                          obj = { guild_id: null, file_size: null, upload_id: null };
+                          obj[0] = image.id;
+                          const _Buffer = Buffer;
+                          obj[1] = Buffer.byteLength(image);
+                          obj[2] = closure_1_6;
+                          obj.track(closure_2_10.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, obj);
+                          const intl = image(upload[13]).intl;
+                          obj = { maxSize: null };
+                          obj[0] = closure_2_12;
+                          stringResult = intl.formatToPlainString(image(upload[13]).t.kIO9jy, obj);
                         }
-                      } else if (body.code === closure_2_9.TOO_MANY_EMOJI) {
-                        const intl3 = image(upload[13]).intl;
-                        let stringResult = intl3.string(image(upload[13]).t["jP/Rqm"]);
-                      } else if (body.code === tmp.TOO_MANY_ANIMATED_EMOJI) {
-                        const intl2 = image(upload[13]).intl;
-                        stringResult = intl2.string(image(upload[13]).t["6v5dP/"]);
-                      } else if (null != body.image) {
-                        let obj = callback(upload[12]);
-                        obj = { guild_id: null, file_size: null, upload_id: null };
-                        obj[0] = image.id;
-                        const _Buffer = Buffer;
-                        obj[1] = Buffer.byteLength(image);
-                        obj[2] = closure_1_6;
-                        obj.track(closure_2_10.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, obj);
-                        const intl = image(upload[13]).intl;
-                        obj = { maxSize: null };
-                        obj[0] = closure_2_12;
-                        stringResult = intl.formatToPlainString(image(upload[13]).t.kIO9jy, obj);
-                      }
-                    });
+                      });
                   };
                   closure_0 = upload;
                   let tmp22;
@@ -197,7 +200,7 @@ function HeaderRow(guild) {
   const tmp6 = callback(React.useState(""), 2);
   obj[0] = "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 1;
   obj[1] = intl.string(guild(1236).t.N2qTQ3);
-  let items = [obj, , , ];
+  let items = [obj, , ,];
   let intl2 = guild(1236).intl;
   obj = { maxSize: EMOJI_MAX_FILESIZE_KB };
   obj1 = { id: null, text: null };
@@ -236,7 +239,7 @@ function HeaderRow(guild) {
     obj5[4] = uploadDisabled;
     canCreateExpressions = tmp13(tmp7(4928).Button, obj5);
   }
-  const items1 = [canCreateExpressions, , ];
+  const items1 = [canCreateExpressions, ,];
   let tmp13Result = null != tmp5;
   if (tmp13Result) {
     const obj6 = { style: null, variant: "text-sm/medium", color: "text-feedback-critical", children: null };
@@ -247,7 +250,10 @@ function HeaderRow(guild) {
   let obj7 = { children: null };
   items1[1] = tmp13Result;
   let obj8 = { style: tmp.uploadInstructionsContainer, children: null };
-  const items2 = [closure_14(guild(4474).Text, { variant: "text-sm/medium", color: "text-muted", children: description }), , ];
+  const items2 = [
+    closure_14(guild(4474).Text, { variant: "text-sm/medium", color: "text-muted", children: description }),
+    ,
+  ];
   const obj9 = { variant: "text-xs/bold", color: "text-muted", style: tmp.uploadInstructionsHeading, children: null };
   const intl6 = tmp7(1236).intl;
   const stringResult2 = intl4.string(guild(1236).t["8Vr5Qd"]);
@@ -263,8 +269,14 @@ function HeaderRow(guild) {
     renderItem: function renderUploadInstructionsListItem(item) {
       item = item.item;
       const items = ["\u2022", " ", item.text];
-      return closure_1_13(guild(closure_1_2[17]).Text, { style: lib.uploadListItem, variant: "text-xs/medium", color: "text-muted", accessibilityLabel: item.text, children: items });
-    }
+      return closure_1_13(guild(closure_1_2[17]).Text, {
+        style: lib.uploadListItem,
+        variant: "text-xs/medium",
+        color: "text-muted",
+        accessibilityLabel: item.text,
+        children: items,
+      });
+    },
   });
   obj8[1] = items2;
   items1[2] = closure_13(c6, obj8);
@@ -275,7 +287,14 @@ function HeaderRow(guild) {
 ({ View: closure_6, FlatList: error } = get_ActivityIndicator);
 ({ AbortCodes: c9, AnalyticEvents: c10, UPLOAD_SMALL_SIZE: unpackModuleId } = ME);
 ({ jsxs: map1, jsx: closure_14, Fragment: closure_15 } = jsxProd);
-createCacheKey = { uploadInstructionsContainer: null, uploadInstructionsHeading: null, uploadInstructionsList: null, headerContainer: null, errorText: null, uploadListItem: null };
+createCacheKey = {
+  uploadInstructionsContainer: null,
+  uploadInstructionsHeading: null,
+  uploadInstructionsList: null,
+  headerContainer: null,
+  errorText: null,
+  uploadListItem: null,
+};
 createCacheKey = { marginTop: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginVertical: ThemesDefault.space.PX_12 };
@@ -288,7 +307,9 @@ let obj3 = { marginTop: ThemesDefault.space.PX_8 };
 createCacheKey[5] = { paddingRight: ThemesDefault.space.PX_8 };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { paddingRight: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalEmoji/HeaderRow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/native/GuildSettingsModalEmoji/HeaderRow.tsx",
+);
 
 export const ConnectedHeaderRow = function ConnectedHeaderRow(arg0) {
   if (arg0 == null) {

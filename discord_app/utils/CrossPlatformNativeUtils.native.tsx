@@ -4,33 +4,21 @@ import set from "../../_runtime/00002_set.js";
 const result = set.fileFinishedImporting("utils/CrossPlatformNativeUtils.native.tsx");
 
 export default {
-  clearNavigationHistory() {
-
-  },
-  flushDNSCache() {
-
-  },
+  clearNavigationHistory() {},
+  flushDNSCache() {},
   flushCookies() {
     return Promise.resolve();
   },
-  setApplicationBackgroundColor() {
-
-  },
+  setApplicationBackgroundColor() {},
   setZoomFactor() {
     return false;
   },
-  focus() {
-
-  },
+  focus() {},
   submitLiveCrashReport() {
     return Promise.resolve();
   },
-  getPidFromDesktopSource() {
-
-  },
-  getAudioPid() {
-
-  },
+  getPidFromDesktopSource() {},
+  getAudioPid() {},
   generateSessionFromPid() {
     return "";
   },
@@ -39,5 +27,5 @@ export default {
   },
   getDiscordIsElevated() {
     return null;
-  }
+  },
 };

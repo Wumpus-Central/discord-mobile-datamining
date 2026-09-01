@@ -28,7 +28,7 @@ function EmptyCustomizeCommunity(setTab) {
   importDefault = obj1.useStateFromStores(items, () => guildId.getGuildId());
   obj = { style: tmp.emptyContainer, children: null };
   obj = { style: tmp.emptyContainerImage, source: importDefault(obj.isThemeDark(useThemeDefault()) ? 11150 : 11151) };
-  const items1 = [closure_16(closure_5, obj), , ];
+  const items1 = [closure_16(closure_5, obj), ,];
   obj1 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1236).intl;
   obj1[1] = intl.string(setTab(1236).t.leKHQz);
@@ -40,7 +40,7 @@ function EmptyCustomizeCommunity(setTab) {
       if (null != closure_1) {
         setTab(closure_1_12.BROWSE);
       }
-    }
+    },
   });
   items1[2] = closure_16(setTab(4474).Text, obj2);
   obj[1] = items1;
@@ -49,7 +49,7 @@ function EmptyCustomizeCommunity(setTab) {
 function PromptTitle(item) {
   item = item.item;
   let obj = { style: callback3().titleContainer, children: null };
-  const items = [item.title, ];
+  const items = [item.title];
   let tmp3Result = null;
   if (item.required) {
     obj = { variant: "text-md/bold", color: "text-feedback-critical", children: null };
@@ -57,7 +57,11 @@ function PromptTitle(item) {
     tmp3Result = tmp3(Text.Text, obj);
   }
   items[1] = tmp3Result;
-  obj[1] = closure_17(Text.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: items });
+  obj[1] = closure_17(Text.Heading, {
+    variant: "text-md/semibold",
+    color: "mobile-text-heading-primary",
+    children: items,
+  });
   return closure_16(closure_4, obj);
 }
 function PromptHelpText(arg0) {
@@ -101,8 +105,12 @@ function PromptHelpText(arg0) {
     selectedRoleIds: memo,
     selectedChannelIds: memo1,
     itemHook(children) {
-      return callback2(callback(found[22]).Text, { variant: "text-xs/medium", color: "mobile-text-heading-primary", children }, arg1);
-    }
+      return callback2(
+        callback(found[22]).Text,
+        { variant: "text-xs/medium", color: "mobile-text-heading-primary", children },
+        arg1,
+      );
+    },
   };
   const tmp = callback3();
   const tmp2 = require;
@@ -132,7 +140,7 @@ function ConnectionsPrompt(guildId) {
     obj[0] = tmp.connectionsTitle;
     const intl = tmp2(1236).intl;
     obj[3] = intl.string(tmp2(1236).t.eDVMrA);
-    const items1 = [callback(tmp2(4474).Text, obj), , ];
+    const items1 = [callback(tmp2(4474).Text, obj), ,];
     obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl2 = tmp2(1236).intl;
     obj1[2] = intl2.string(tmp2(1236).t.BozOXu);
@@ -229,7 +237,9 @@ function DropdownPrompt(guildId) {
   isNew = _prompt.isNew;
   let obj = guildId(isNew[17]);
   const items = [closure_11];
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => closure_1_11.getOnboardingResponsesForPrompt(guildId, _prompt.id));
+  stateFromStoresArray = obj.useStateFromStoresArray(items, () =>
+    closure_1_11.getOnboardingResponsesForPrompt(guildId, _prompt.id),
+  );
   const mapped = stateFromStoresArray.map((arg0) => {
     closure_0 = arg0;
     const options = _prompt.options;
@@ -262,7 +272,14 @@ function DropdownPrompt(guildId) {
     obj[0] = obj2.withSequence(withTimingResult, obj5.withDelay(500, guildId(isNew[37]).withTiming(combined1, obj)));
     return obj;
   };
-  obj = { isNew, brandColor: token, withSequence: guildId(isNew[36]).withSequence, withTiming: guildId(isNew[37]).withTiming, Easing: guildId(isNew[36]).Easing, withDelay: guildId(isNew[36]).withDelay };
+  obj = {
+    isNew,
+    brandColor: token,
+    withSequence: guildId(isNew[36]).withSequence,
+    withTiming: guildId(isNew[37]).withTiming,
+    Easing: guildId(isNew[36]).Easing,
+    withDelay: guildId(isNew[36]).withDelay,
+  };
   fn.__closure = obj;
   fn.__workletHash = 16609373875235;
   fn.__initData = closure_25;
@@ -293,7 +310,7 @@ function DropdownPrompt(guildId) {
         }
       },
       canBeNew: !_prompt.isNew,
-      returnToCustomize: true
+      returnToCustomize: true,
     };
     obj.openLazy(guildId(isNew[41])(isNew[40], isNew.paths), "DropdownOptions", obj);
   }, items1);
@@ -308,7 +325,7 @@ function DropdownPrompt(guildId) {
     ({ badge: obj6[2], badgeText: obj6[3] } = tmp);
     isNew2 = callback(tmp2(tmp3[20]).TextBadge, obj1);
   }
-  const items3 = [isNew2, callback(PromptTitle, { item: _prompt }), , ];
+  const items3 = [isNew2, callback(PromptTitle, { item: _prompt }), ,];
   obj2 = { style: tmp.dropdownContainer, onPress: callback, children: null };
   let tmp10Result = 0 === found.length;
   if (tmp10Result) {
@@ -318,8 +335,11 @@ function DropdownPrompt(guildId) {
     obj3[3] = intl2.string(tmp2(tmp3[21]).t.GmSvdA);
     tmp10Result = tmp10(tmp2(tmp3[22]).Text, obj3);
   }
-  const items4 = [tmp10Result, found.map((id) => callback(closure_24, { option: id }, id.id)), ];
-  const obj4 = { style: tmp.dropdownIconContainer, children: callback(handleSelectOption, { style: tmp.dropdownIcon, source: _prompt(isNew[43]) }) };
+  const items4 = [tmp10Result, found.map((id) => callback(closure_24, { option: id }, id.id))];
+  const obj4 = {
+    style: tmp.dropdownIconContainer,
+    children: callback(handleSelectOption, { style: tmp.dropdownIcon, source: _prompt(isNew[43]) }),
+  };
   items4[2] = callback(token, obj4);
   obj2[2] = items4;
   items3[2] = closure_17(guildId(isNew[42]).PressableHighlight, obj2);
@@ -338,7 +358,9 @@ function MultipleChoicePrompt(guildId) {
   isNew = _prompt.isNew;
   let obj = guildId(isNew[17]);
   const items = [closure_11];
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => closure_1_11.getOnboardingResponsesForPrompt(guildId, _prompt.id));
+  stateFromStoresArray = obj.useStateFromStoresArray(items, () =>
+    closure_1_11.getOnboardingResponsesForPrompt(guildId, _prompt.id),
+  );
   handleSelectOption = _prompt(isNew[38])(guildId).handleSelectOption;
   obj1 = guildId(isNew[35]);
   token = obj1.useToken(_prompt(isNew[13]).colors.BACKGROUND_BRAND);
@@ -365,7 +387,14 @@ function MultipleChoicePrompt(guildId) {
     obj[0] = obj2.withSequence(withTimingResult, obj5.withDelay(500, guildId(isNew[37]).withTiming(combined1, obj)));
     return obj;
   };
-  obj = { isNew, brandColor: token, withSequence: guildId(isNew[36]).withSequence, withTiming: guildId(isNew[37]).withTiming, Easing: guildId(isNew[36]).Easing, withDelay: guildId(isNew[36]).withDelay };
+  obj = {
+    isNew,
+    brandColor: token,
+    withSequence: guildId(isNew[36]).withSequence,
+    withTiming: guildId(isNew[37]).withTiming,
+    Easing: guildId(isNew[36]).Easing,
+    withDelay: guildId(isNew[36]).withDelay,
+  };
   fn.__closure = obj;
   fn.__workletHash = 12802766002208;
   fn.__initData = closure_27;
@@ -381,7 +410,7 @@ function MultipleChoicePrompt(guildId) {
     ({ badge: obj6[2], badgeText: obj6[3] } = tmp);
     isNew2 = callback(tmp2(tmp3[20]).TextBadge, obj1);
   }
-  const items2 = [isNew2, callback(PromptTitle, { item: _prompt }), , ];
+  const items2 = [isNew2, callback(PromptTitle, { item: _prompt }), ,];
   const options = _prompt.options;
   items2[2] = options.map((id) => {
     closure_0 = id;
@@ -408,7 +437,7 @@ function MultipleChoicePrompt(guildId) {
         }
       },
       suppressMemberCount: true,
-      canBeNew: !_prompt.isNew
+      canBeNew: !_prompt.isNew,
     };
     return closure_1_16(_prompt(isNew[44]), obj, id.id);
   });
@@ -419,24 +448,105 @@ function MultipleChoicePrompt(guildId) {
 ({ View: c4, Image: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ GuildOnboardingTab: closure_12, OnboardingPromptType: map1 } = serverPromptToClientPrompt);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-createCacheKey = { container: null, sheetTitle: null, promptContainer: null, titleContainer: null, badge: null, badgeText: null, dropdownContainer: null, emptyDropdownText: null, dropdownPill: null, emojiContainer: null, dropdownIconContainer: null, dropdownIcon: null, optionTextEmoji: null, optionImageEmoji: null, helpText: null, sectionSeparator: null, emptyContainer: null, emptyContainerImage: null, emptyContainerHeader: null, connectionsContainer: null, connectionsPromptContainer: null, connectionsTitle: null };
+createCacheKey = {
+  container: null,
+  sheetTitle: null,
+  promptContainer: null,
+  titleContainer: null,
+  badge: null,
+  badgeText: null,
+  dropdownContainer: null,
+  emptyDropdownText: null,
+  dropdownPill: null,
+  emojiContainer: null,
+  dropdownIconContainer: null,
+  dropdownIcon: null,
+  optionTextEmoji: null,
+  optionImageEmoji: null,
+  helpText: null,
+  sectionSeparator: null,
+  emptyContainer: null,
+  emptyContainerImage: null,
+  emptyContainerHeader: null,
+  connectionsContainer: null,
+  connectionsPromptContainer: null,
+  connectionsTitle: null,
+};
 createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_16 };
 let obj1 = { marginTop: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { position: "relative", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: ThemesDefault.space.PX_12, padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.md, borderWidth: 2, borderStyle: "solid" };
-let obj2 = { position: "relative", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: ThemesDefault.space.PX_12, padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.md, borderWidth: 2, borderStyle: "solid" };
+createCacheKey[2] = {
+  position: "relative",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  marginTop: ThemesDefault.space.PX_12,
+  padding: ThemesDefault.space.PX_12,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 2,
+  borderStyle: "solid",
+};
+let obj2 = {
+  position: "relative",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  marginTop: ThemesDefault.space.PX_12,
+  padding: ThemesDefault.space.PX_12,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 2,
+  borderStyle: "solid",
+};
 createCacheKey[3] = { flexDirection: "row", alignItems: "center", marginBottom: ThemesDefault.space.PX_12 };
 createCacheKey[4] = { position: "absolute", top: -6, right: -6 };
 createCacheKey[5] = { fontWeight: "bold" };
 let obj3 = { flexDirection: "row", alignItems: "center", marginBottom: ThemesDefault.space.PX_12 };
-createCacheKey[6] = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, padding: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_32, minHeight: 48, marginBottom: ThemesDefault.space.PX_12, display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", position: "relative" };
-let obj4 = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, padding: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_32, minHeight: 48, marginBottom: ThemesDefault.space.PX_12, display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", position: "relative" };
+createCacheKey[6] = {
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  padding: ThemesDefault.space.PX_8,
+  paddingRight: ThemesDefault.space.PX_32,
+  minHeight: 48,
+  marginBottom: ThemesDefault.space.PX_12,
+  display: "flex",
+  flexDirection: "row",
+  flexWrap: "wrap",
+  alignItems: "center",
+  position: "relative",
+};
+let obj4 = {
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  padding: ThemesDefault.space.PX_8,
+  paddingRight: ThemesDefault.space.PX_32,
+  minHeight: 48,
+  marginBottom: ThemesDefault.space.PX_12,
+  display: "flex",
+  flexDirection: "row",
+  flexWrap: "wrap",
+  alignItems: "center",
+  position: "relative",
+};
 createCacheKey[7] = { marginVertical: ThemesDefault.space.PX_12, marginLeft: ThemesDefault.space.PX_4 };
 let obj5 = { marginVertical: ThemesDefault.space.PX_12, marginLeft: ThemesDefault.space.PX_4 };
-createCacheKey[8] = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 6, marginRight: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, display: "flex", flexDirection: "row", alignItems: "center" };
+createCacheKey[8] = {
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  padding: 6,
+  marginRight: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_8,
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+};
 createCacheKey[9] = { display: "flex", alignItems: "center" };
-let obj6 = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 6, marginRight: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, display: "flex", flexDirection: "row", alignItems: "center" };
+let obj6 = {
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  padding: 6,
+  marginRight: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_8,
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+};
 createCacheKey[10] = { position: "absolute", right: ThemesDefault.space.PX_4, top: ThemesDefault.space.PX_12 };
 createCacheKey[11] = { height: 32, width: 32 };
 createCacheKey[12] = { fontSize: 18, lineHeight: 22, marginRight: 6 };
@@ -444,13 +554,25 @@ createCacheKey[13] = { height: 22, width: 22, marginRight: 6 };
 let obj7 = { position: "absolute", right: ThemesDefault.space.PX_4, top: ThemesDefault.space.PX_12 };
 createCacheKey[14] = { marginTop: ThemesDefault.space.PX_4 };
 let obj8 = { marginTop: ThemesDefault.space.PX_4 };
-createCacheKey[15] = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_16, height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[15] = {
+  marginTop: ThemesDefault.space.PX_24,
+  marginBottom: ThemesDefault.space.PX_16,
+  height: 1,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 createCacheKey[16] = { height: 400, display: "flex", alignItems: "center", justifyContent: "center" };
-let obj9 = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_16, height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj9 = {
+  marginTop: ThemesDefault.space.PX_24,
+  marginBottom: ThemesDefault.space.PX_16,
+  height: 1,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 createCacheKey[17] = { width: 120, height: 80, marginBottom: ThemesDefault.space.PX_16 };
 let obj11 = {};
 let obj10 = { width: 120, height: 80, marginBottom: ThemesDefault.space.PX_16 };
-const merged = Object.assign(importDefaultResult(require("ME").Fonts.DISPLAY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
+const merged = Object.assign(
+  importDefaultResult(require("ME").Fonts.DISPLAY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18),
+);
 obj11.marginBottom = ThemesDefault.space.PX_4;
 createCacheKey[18] = obj11;
 createCacheKey[19] = { marginTop: ThemesDefault.space.PX_12 };
@@ -459,8 +581,12 @@ createCacheKey[20] = { marginTop: ThemesDefault.space.PX_12 };
 const obj13 = { marginTop: ThemesDefault.space.PX_12 };
 createCacheKey[21] = { marginBottom: ThemesDefault.space.PX_4 };
 let closure_19 = createCacheKey.createStyles(createCacheKey);
-let closure_25 = { code: "function CustomizeCommunityTsx1(){const{isNew,brandColor,withSequence,withTiming,Easing,withDelay}=this.__closure;const rawBorderColor=isNew?brandColor+\"FF\":brandColor+\"00\";const borderColor=withSequence(withTiming(rawBorderColor,{duration:1,easing:Easing.in(Easing.ease)}),withDelay(500,withTiming(brandColor+\"00\",{duration:300,easing:Easing.out(Easing.ease)})));return{borderColor:borderColor};}" };
-let closure_27 = { code: "function CustomizeCommunityTsx2(){const{isNew,brandColor,withSequence,withTiming,Easing,withDelay}=this.__closure;const rawBorderColor=isNew?brandColor+\"FF\":brandColor+\"00\";const borderColor=withSequence(withTiming(rawBorderColor,{duration:1,easing:Easing.in(Easing.ease)}),withDelay(500,withTiming(brandColor+\"00\",{duration:300,easing:Easing.out(Easing.ease)})));return{borderColor:borderColor};}" };
+let closure_25 = {
+  code: 'function CustomizeCommunityTsx1(){const{isNew,brandColor,withSequence,withTiming,Easing,withDelay}=this.__closure;const rawBorderColor=isNew?brandColor+"FF":brandColor+"00";const borderColor=withSequence(withTiming(rawBorderColor,{duration:1,easing:Easing.in(Easing.ease)}),withDelay(500,withTiming(brandColor+"00",{duration:300,easing:Easing.out(Easing.ease)})));return{borderColor:borderColor};}',
+};
+let closure_27 = {
+  code: 'function CustomizeCommunityTsx2(){const{isNew,brandColor,withSequence,withTiming,Easing,withDelay}=this.__closure;const rawBorderColor=isNew?brandColor+"FF":brandColor+"00";const borderColor=withSequence(withTiming(rawBorderColor,{duration:1,easing:Easing.in(Easing.ease)}),withDelay(500,withTiming(brandColor+"00",{duration:300,easing:Easing.out(Easing.ease)})));return{borderColor:borderColor};}',
+};
 const obj14 = { marginBottom: ThemesDefault.space.PX_4 };
 let result = require("set").fileFinishedImporting("modules/guild_onboarding/native/CustomizeCommunity.tsx");
 
@@ -471,7 +597,9 @@ export default function CustomizeCommunity(guildId) {
   const bottom = stateFromStores(1628)().bottom;
   let obj = guildId(589);
   const items = [closure_9];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_9.hasUnread(guildId, closure_1_15.GUILD_ONBOARDING_QUESTION));
+  stateFromStores = obj.useStateFromStores(items, () =>
+    closure_1_9.hasUnread(guildId, closure_1_15.GUILD_ONBOARDING_QUESTION),
+  );
   obj1 = guildId(589);
   const items1 = [closure_8];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
@@ -498,11 +626,21 @@ export default function CustomizeCommunity(guildId) {
     }
   }, items2);
   const items3 = [guildId];
-  const effect1 = React.useEffect(() => null != guildId ? (() => {
-    closure_1_0(closure_1_2[30]).ackGuildFeature(closure_0, closure_1_15.GUILD_ONBOARDING_QUESTION, closure_1_11.ackIdForGuild(closure_0));
-    const obj = closure_1_0(closure_1_2[30]);
-    const result = closure_1_1(closure_1_2[31]).updateOnboardingResponses(closure_0);
-  }) : undefined, items3);
+  const effect1 = React.useEffect(
+    () =>
+      null != guildId
+        ? () => {
+            closure_1_0(closure_1_2[30]).ackGuildFeature(
+              closure_0,
+              closure_1_15.GUILD_ONBOARDING_QUESTION,
+              closure_1_11.ackIdForGuild(closure_0),
+            );
+            const obj = closure_1_0(closure_1_2[30]);
+            const result = closure_1_1(closure_1_2[31]).updateOnboardingResponses(closure_0);
+          }
+        : undefined,
+    items3,
+  );
   const items4 = [guildId];
   const callback = React.useCallback((type) => {
     type = type.type;
@@ -543,14 +681,18 @@ export default function CustomizeCommunity(guildId) {
       const obj6 = { count: null };
       obj6[0] = newOnboardingPrompts.length + newAnswersCount;
       obj5[3] = intl.format(tmp4(1236).t.iB5Gqe, obj6);
-      const items5 = [callback(tmp4(4474).Text, obj5), newOnboardingPrompts.map(callback), onboardingPromptsWithNewAnswers.map(callback), ];
+      const items5 = [
+        callback(tmp4(4474).Text, obj5),
+        newOnboardingPrompts.map(callback),
+        onboardingPromptsWithNewAnswers.map(callback),
+      ];
       const obj7 = { style: null };
       obj7[0] = tmp.sectionSeparator;
       items5[3] = callback(closure_4, obj7);
       obj4[0] = items5;
       tmp24Result = tmp24(closure_18, obj4);
     }
-    const items6 = [tmp24Result, , ];
+    const items6 = [tmp24Result, ,];
     tmp24Result = onboardingPrompts.length > 0;
     if (tmp24Result) {
       const obj8 = { children: null };
@@ -558,7 +700,7 @@ export default function CustomizeCommunity(guildId) {
       obj9[0] = tmp.sheetTitle;
       const intl2 = tmp4(1236).intl;
       obj9[3] = intl2.string(tmp4(1236).t.BGkaer);
-      const items7 = [callback(tmp4(4474).Text, obj9), , ];
+      const items7 = [callback(tmp4(4474).Text, obj9), ,];
       const obj10 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl3 = tmp4(1236).intl;
       obj10[2] = intl3.string(tmp4(1236).t.r6Vm8T);
@@ -576,4 +718,4 @@ export default function CustomizeCommunity(guildId) {
     const tmp25 = closure_6;
   }
   return tmp24Result1;
-};
+}

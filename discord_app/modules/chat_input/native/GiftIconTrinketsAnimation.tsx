@@ -13,8 +13,28 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 
 require = arg1;
 let closure_6 = createCacheKey.createStyles((width) => {
-  const containerRefresh = { position: "absolute", top: 0, left: 0, width, height: width, overflow: "visible", marginLeft: 0, zIndex: 0 };
-  return { containerRefresh, trinketsRefresh: { zIndex: 4, position: "absolute", pointerEvents: "none", width: "175%", height: "175%", top: "-37.5%", left: "-37.5%" } };
+  const containerRefresh = {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width,
+    height: width,
+    overflow: "visible",
+    marginLeft: 0,
+    zIndex: 0,
+  };
+  return {
+    containerRefresh,
+    trinketsRefresh: {
+      zIndex: 4,
+      position: "absolute",
+      pointerEvents: "none",
+      width: "175%",
+      height: "175%",
+      top: "-37.5%",
+      left: "-37.5%",
+    },
+  };
 });
 const memoResult = importAllResult.memo((trinketsAnimationUrl) => {
   trinketsAnimationUrl = trinketsAnimationUrl.trinketsAnimationUrl;

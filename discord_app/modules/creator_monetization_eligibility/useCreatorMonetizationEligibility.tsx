@@ -4,7 +4,9 @@ import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../_runtime/00019_noop.js";
 import { CreatorMonetizationApplicationState as closure_6 } from "CreatorMonetizationEligibilityConstants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx",
+);
 
 export default function useCreatorMonetizationEligibility(arg0) {
   closure_0 = arg0;
@@ -19,7 +21,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -77,7 +79,28 @@ export default function useCreatorMonetizationEligibility(arg0) {
               throw arg1;
             } else if (arg0 !== 2) {
               lib = arg1;
-              const obj2 = { isEligibleForMonetization: null, hasSufficientMembers: null, hasEnabled2FA: null, meetsServerAgeRequirement: null, meetsOwnerAgeRequirement: null, noRecentViolations: null, weeklyCommunicators: null, hasMemberRetention: null, notNSFW: null, canApply: null, isApplicationPending: null, actionRequired: null, minimumAgeInDays: null, minimumOwnerAgeInYears: null, minimumSize: null, latestRequest: null, rejection: null, guildMemberCount: null, communicatorCount: null, retentionScore: null };
+              const obj2 = {
+                isEligibleForMonetization: null,
+                hasSufficientMembers: null,
+                hasEnabled2FA: null,
+                meetsServerAgeRequirement: null,
+                meetsOwnerAgeRequirement: null,
+                noRecentViolations: null,
+                weeklyCommunicators: null,
+                hasMemberRetention: null,
+                notNSFW: null,
+                canApply: null,
+                isApplicationPending: null,
+                actionRequired: null,
+                minimumAgeInDays: null,
+                minimumOwnerAgeInYears: null,
+                minimumSize: null,
+                latestRequest: null,
+                rejection: null,
+                guildMemberCount: null,
+                communicatorCount: null,
+                retentionScore: null,
+              };
               obj2[0] = lib.sufficient;
               obj2[1] = lib.size;
               obj2[2] = lib.mfa;
@@ -149,7 +172,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
       }
     })();
   });
-  callback = React.useCallback(function() {
+  callback = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -169,6 +192,6 @@ export default function useCreatorMonetizationEligibility(arg0) {
       if (null != closure_0) {
         callback(tmp);
       }
-    }, items)
+    }, items),
   };
-};
+}

@@ -8,14 +8,17 @@ export const useFocus = function useFocus() {
   const tmp = callback(React.useState(false), 2);
   callback = tmp[1];
   return {
-    focusProps: React.useMemo(() => ({
-      onFocus() {
-        return callback(true);
-      },
-      onBlur() {
-        return callback(false);
-      }
-    }), []),
-    isFocused: tmp[0]
+    focusProps: React.useMemo(
+      () => ({
+        onFocus() {
+          return callback(true);
+        },
+        onBlur() {
+          return callback(false);
+        },
+      }),
+      [],
+    ),
+    isFocused: tmp[0],
   };
 };

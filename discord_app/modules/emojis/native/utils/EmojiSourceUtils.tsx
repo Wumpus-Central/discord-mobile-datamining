@@ -10,7 +10,7 @@ function _getEmojiSource() {
     closure_1 = arg1;
     c6 = 0;
     c7 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();

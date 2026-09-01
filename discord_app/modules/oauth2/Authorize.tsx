@@ -54,7 +54,22 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
     if (str4 == null) {
       str4 = "";
     }
-    obj = { clientId: null, scopes: null, responseType: null, redirectUri: null, codeChallenge: null, codeChallengeMethod: null, state: null, permissions: null, channelId: null, guildId: null, prompt: null, disableGuildSelect: null, integrationType: null, nonce: null };
+    obj = {
+      clientId: null,
+      scopes: null,
+      responseType: null,
+      redirectUri: null,
+      codeChallenge: null,
+      codeChallengeMethod: null,
+      state: null,
+      permissions: null,
+      channelId: null,
+      guildId: null,
+      prompt: null,
+      disableGuildSelect: null,
+      integrationType: null,
+      nonce: null,
+    };
     obj[0] = str4;
     let str5 = parsed.scope;
     if (str5 == null) {
@@ -68,7 +83,13 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
     })(guild_id);
     const parts = str5.replace(/\+/g, " ").split(" ");
     obj[1] = parts.filter((arg0) => arg0.length > 0);
-    ({ response_type: obj3[2], redirect_uri: obj3[3], code_challenge: obj3[4], code_challenge_method: obj3[5], state: obj3[6] } = parsed);
+    ({
+      response_type: obj3[2],
+      redirect_uri: obj3[3],
+      code_challenge: obj3[4],
+      code_challenge_method: obj3[5],
+      state: obj3[6],
+    } = parsed);
     obj[7] = deserializeResult;
     obj[8] = channel_id;
     obj[9] = tmp11;
@@ -82,6 +103,5 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
     obj[12] = NumberResult;
     obj[13] = parsed.nonce;
     return obj;
-  } catch (err) {
-  }
+  } catch (err) {}
 };

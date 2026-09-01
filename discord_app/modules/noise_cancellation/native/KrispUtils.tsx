@@ -14,9 +14,5 @@ export const getKrispModel = function getKrispModel() {
     }
   });
 };
-export function setKrispSuppressionLevel() {
-
-}
-export function setKrispModelOverride() {
-
-}
+export function setKrispSuppressionLevel() {}
+export function setKrispModelOverride() {}

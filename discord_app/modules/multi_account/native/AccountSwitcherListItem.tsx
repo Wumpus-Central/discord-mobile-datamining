@@ -48,7 +48,20 @@ class AccountStatusIcon {
 noopAll;
 ({ Pressable: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ accountListTag: { marginLeft: 12, flex: 1 }, tagContainer: { display: "flex", flexDirection: "row" }, accountSwitcherListItem: { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", paddingVertical: 8, paddingHorizontal: 16 }, username: { flexShrink: 1 }, accountInfo: { flex: 1, minWidth: "30%", display: "flex", flexDirection: "row", alignItems: "center" } });
+let closure_11 = createCacheKey.createStyles({
+  accountListTag: { marginLeft: 12, flex: 1 },
+  tagContainer: { display: "flex", flexDirection: "row" },
+  accountSwitcherListItem: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+  },
+  username: { flexShrink: 1 },
+  accountInfo: { flex: 1, minWidth: "30%", display: "flex", flexDirection: "row", alignItems: "center" },
+});
 const result = require("set").fileFinishedImporting("modules/multi_account/native/AccountSwitcherListItem.tsx");
 
 export default function AccountSwitcherListItem(arg0) {
@@ -85,7 +98,14 @@ export default function AccountSwitcherListItem(arg0) {
     obj = { selected: null };
     obj[0] = tmp7;
     const radioA11yNative = tmp2(4205).useRadioA11yNative(obj);
-    obj1 = { accessibilityRole: null, accessibilityState: null, accessibilityHint: null, style: null, delayLongPress: null, onPress: null };
+    obj1 = {
+      accessibilityRole: null,
+      accessibilityState: null,
+      accessibilityHint: null,
+      style: null,
+      delayLongPress: null,
+      onPress: null,
+    };
     ({ accessibilityRole: obj7[0], accessibilityState: obj7[1] } = radioA11yNative);
     let stringResult;
     if (!tmp7) {
@@ -97,12 +117,12 @@ export default function AccountSwitcherListItem(arg0) {
     obj1[4] = delayLongPress;
     obj1[5] = onPressUser;
     const merged = Object.assign(sortHandlers);
-    const items2 = [leading, , ];
+    const items2 = [leading, ,];
     obj2 = { style: null, children: null };
     obj2[0] = tmp.accountInfo;
     const obj3 = { user: null, guildId: "Array" };
     obj3[0] = obj2;
-    const items3 = [callback(tmp2(1297).Avatar, obj3), ];
+    const items3 = [callback(tmp2(1297).Avatar, obj3)];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.accountListTag;
     const obj5 = { style: null, children: null };
@@ -117,7 +137,7 @@ export default function AccountSwitcherListItem(arg0) {
     const obj7 = { mode: "username", identifiable: null };
     obj7[1] = str;
     obj6[4] = nameFromUserDefault.getUserTag(obj2, obj7);
-    const items4 = [callback(tmp2(4474).Text, obj6), ];
+    const items4 = [callback(tmp2(4474).Text, obj6)];
     let tmp18Result = !stateFromStores;
     if (!stateFromStores) {
       tmp18Result = !obj2.hasUniqueUsername();
@@ -151,5 +171,5 @@ export default function AccountSwitcherListItem(arg0) {
     obj10[2] = intl3.string(tmp2(1236).t.tYX2ps);
     tmp8 = callback(tmp2(4474).Text, obj10);
   }
-};
+}
 export { AccountStatusIcon };

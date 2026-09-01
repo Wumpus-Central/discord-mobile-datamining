@@ -9,14 +9,24 @@ import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBa
 
 require = arg1;
 ({ PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY: c4, PremiumTypes: c5 } = GuildFeatures);
-keys = keys.create(() => ({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: null }));
+keys = keys.create(() => ({
+  productId: "",
+  initiatedPurchaseFromNewFlow: false,
+  isPaymentSuccess: false,
+  mobileWebRedirectCheckoutStatus: null,
+}));
 const result = require("set").fileFinishedImporting("modules/premium/native/PremiumPlanPurchasedStore.tsx");
 
 export const usePremiumPlanPurchasedStore = keys;
 export const setInitiatedPurchaseFromNewFlow = function setInitiatedPurchaseFromNewFlow(arg0) {
   ({ productId: require, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap } = arg0);
   batchUpdates.batchUpdates(() => {
-    closure_1_6.setState({ productId: closure_0, initiatedPurchaseFromNewFlow: true, onPaymentSuccess: closure_1, onPaymentDismiss: closure_2 });
+    closure_1_6.setState({
+      productId: closure_0,
+      initiatedPurchaseFromNewFlow: true,
+      onPaymentSuccess: closure_1,
+      onPaymentDismiss: closure_2,
+    });
   });
 };
 export const setPaymentSuccess = function setPaymentSuccess() {
@@ -32,7 +42,9 @@ export const setPaymentSuccess = function setPaymentSuccess() {
 };
 export const setMobileWebRedirectCheckoutStatus = function setMobileWebRedirectCheckoutStatus(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_6.setState({ mobileWebRedirectCheckoutStatus: closure_0 }));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
+    closure_1_6.setState({ mobileWebRedirectCheckoutStatus: closure_0 }),
+  );
 };
 export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutStatus(arg0) {
   const _require = arg0;
@@ -49,7 +61,9 @@ export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutSta
         openPremiumPlanSelectionActionSheetDefault(obj);
         const tmp3 = openPremiumPlanSelectionActionSheetDefault;
       }
-      require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_6.setState({ isPaymentSuccess: true, mobileWebRedirectCheckoutStatus: closure_0 }));
+      require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
+        closure_1_6.setState({ isPaymentSuccess: true, mobileWebRedirectCheckoutStatus: closure_0 }),
+      );
       if (null != onPaymentSuccess) {
         onPaymentSuccess(tmp13);
       }
@@ -82,6 +96,13 @@ export const reset = function reset() {
         str = "dismissed";
       }
     }
-    closure_1_6.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "accessible", onPaymentDismiss: "Error" });
+    closure_1_6.setState({
+      productId: "",
+      initiatedPurchaseFromNewFlow: false,
+      isPaymentSuccess: false,
+      mobileWebRedirectCheckoutStatus: str,
+      onPaymentSuccess: "accessible",
+      onPaymentDismiss: "Error",
+    });
   });
 };

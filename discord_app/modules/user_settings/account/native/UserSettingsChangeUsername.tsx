@@ -20,21 +20,38 @@ function UsernameStatusMessage(showHint) {
   obj = { type: showHint(14365).NameValidationState.AVAILABLE, message: null };
   const P2 = showHint(4705).P;
   obj[1] = P2.select();
-  const withResult = match.with(obj, (children) => callback(showHint(4474).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
-  return match.with(obj, (children) => callback(showHint(4474).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })).with(obj, (children) => callback(showHint(4474).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
-    let tmp = null;
-    if (showHint) {
-      const obj = { variant: "text-xs/medium", color: "text-default", children: null };
-      const intl = showHint(closure_1_3[12]).intl;
-      obj[2] = intl.string(showHint(closure_1_3[12]).t.z7c4bP);
-      tmp = closure_1_11(showHint(closure_1_3[11]).Text, obj);
-    }
-    return tmp;
-  });
+  const withResult = match.with(obj, (children) =>
+    callback(showHint(4474).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
+  );
+  return match
+    .with(obj, (children) =>
+      callback(showHint(4474).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
+    )
+    .with(obj, (children) =>
+      callback(showHint(4474).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children }),
+    )
+    .otherwise(() => {
+      let tmp = null;
+      if (showHint) {
+        const obj = { variant: "text-xs/medium", color: "text-default", children: null };
+        const intl = showHint(closure_1_3[12]).intl;
+        obj[2] = intl.string(showHint(closure_1_3[12]).t.z7c4bP);
+        tmp = closure_1_11(showHint(closure_1_3[11]).Text, obj);
+      }
+      return tmp;
+    });
 }
 ({ View: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { background: null, container: null, inputs: null, username: null, discriminator: null, divider: null, dividerInner: null };
+createCacheKey = {
+  background: null,
+  container: null,
+  inputs: null,
+  username: null,
+  discriminator: null,
+  divider: null,
+  dividerInner: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: 16 };
@@ -43,10 +60,16 @@ createCacheKey[3] = { flex: 2 };
 createCacheKey[4] = { flex: 1 };
 createCacheKey[5] = { width: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
 let obj1 = { width: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
-createCacheKey[6] = { flex: 1, marginVertical: 12, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
+createCacheKey[6] = {
+  flex: 1,
+  marginVertical: 12,
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED,
+};
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { flex: 1, marginVertical: 12, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsChangeUsername.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/account/native/UserSettingsChangeUsername.tsx",
+);
 
 export default function UserSettingsChangeUsername() {
   let tmp = callback();
@@ -133,7 +156,7 @@ export default function UserSettingsChangeUsername() {
         closure_0 = arg0;
         c3 = 0;
         c4 = 0;
-        return (function*(arg0) {
+        return (function* (arg0) {
           closure_2 = tmp5;
           let v6OrEarlierAPIError = tmp2;
           if (null == closure_1_1) {
@@ -160,7 +183,7 @@ export default function UserSettingsChangeUsername() {
           return lib;
         })();
       });
-      obj[0] = function() {
+      obj[0] = function () {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -202,7 +225,7 @@ export default function UserSettingsChangeUsername() {
           tmp = closure_1_11(closure_1_0(closure_1_3[21]).HeaderTextButton, obj);
         }
         return tmp;
-      }
+      },
     });
   }, items3);
   if (null == stateFromStores) {
@@ -227,7 +250,20 @@ export default function UserSettingsChangeUsername() {
       tmp31 = obj;
     }
     if (canEditDiscriminatorResult) {
-      obj = { ref: null, containerStyle: null, keyboardType: "numeric", value: null, onChange: null, onSubmitEditing: null, placeholder: "1337", returnKeyType: "done", autoCapitalize: "none", isClearable: true, leadingText: "#", maxLength: 4 };
+      obj = {
+        ref: null,
+        containerStyle: null,
+        keyboardType: "numeric",
+        value: null,
+        onChange: null,
+        onSubmitEditing: null,
+        placeholder: "1337",
+        returnKeyType: "done",
+        autoCapitalize: "none",
+        isClearable: true,
+        leadingText: "#",
+        maxLength: 4,
+      };
       obj[0] = ref;
       obj[1] = tmp.discriminator;
       obj[3] = first1;
@@ -243,16 +279,27 @@ export default function UserSettingsChangeUsername() {
     const obj2 = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     obj2[0] = tmp.background;
     let tmp32Result = tmp32(tmp2(tmp3[22]).TextInput, obj1);
-    const items4 = [closure_11(tmp5(tmp3[23]), {}), ];
+    const items4 = [closure_11(tmp5(tmp3[23]), {})];
     obj3 = { style: null, children: null };
     obj3[0] = tmp.container;
     obj4 = { children: null };
     let intl = tmp2(tmp3[12]).intl;
     obj4[0] = intl.string(tmp2(tmp3[12]).t.IEpCBQ);
-    const items5 = [closure_11(tmp5(tmp3[24]), obj4), , ];
+    const items5 = [closure_11(tmp5(tmp3[24]), obj4), ,];
     obj5 = { style: null, children: null };
     obj5[0] = tmp.inputs;
-    obj6 = { containerStyle: null, textContentType: "username", value: null, enableAndroidSanitizedInputWorkaround: null, onChange: null, onSubmitEditing: null, placeholder: null, returnKeyType: null, autoCapitalize: "none", autoFocus: true };
+    obj6 = {
+      containerStyle: null,
+      textContentType: "username",
+      value: null,
+      enableAndroidSanitizedInputWorkaround: null,
+      onChange: null,
+      onSubmitEditing: null,
+      placeholder: null,
+      returnKeyType: null,
+      autoCapitalize: "none",
+      autoFocus: true,
+    };
     obj6[0] = tmp.username;
     obj6[2] = first;
     obj6[3] = stateFromStores.hasUniqueUsername();
@@ -276,7 +323,7 @@ export default function UserSettingsChangeUsername() {
       str6 = "next";
     }
     obj6[7] = str6;
-    const items6 = [closure_11(tmp2(tmp3[22]).TextInput, obj6), , ];
+    const items6 = [closure_11(tmp2(tmp3[22]).TextInput, obj6), ,];
     const hasUniqueUsernameResult2 = stateFromStores.hasUniqueUsername();
     tmp32Result = !hasUniqueUsernameResult2;
     if (!hasUniqueUsernameResult2) {
@@ -307,4 +354,4 @@ export default function UserSettingsChangeUsername() {
   }
   const tmp16 = !hasUniqueUsernameResult1;
   const tmp2Result = navigation(first[16]);
-};
+}

@@ -9,12 +9,24 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { top: ThemesDefault.space.PX_12, bottom: ThemesDefault.space.PX_12, left: ThemesDefault.space.PX_12, right: ThemesDefault.space.PX_12 };
+let obj = {
+  top: ThemesDefault.space.PX_12,
+  bottom: ThemesDefault.space.PX_12,
+  left: ThemesDefault.space.PX_12,
+  right: ThemesDefault.space.PX_12,
+};
 obj = { aboutSection: null };
-obj = { borderRadius: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
+obj = {
+  borderRadius: ThemesDefault.space.PX_16,
+  backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT,
+  padding: ThemesDefault.space.PX_16,
+  gap: ThemesDefault.space.PX_8,
+};
 obj[0] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
-const result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayAboutSection.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/quests/native/AppStoreOverlay/AppStoreOverlayAboutSection.tsx",
+);
 
 export default function AppStoreOverlayAboutSection(children) {
   let _require;
@@ -41,10 +53,26 @@ export default function AppStoreOverlayAboutSection(children) {
   obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp8(tmp9[6]).intl;
   obj[2] = intl2.string(_require(first[6]).t.CI0vSJ);
-  const items1 = [callback2(_require(first[7]).Text, obj), callback2(_require(first[7]).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: num, onTextLayout: callback, children: children.description }), ];
+  const items1 = [
+    callback2(_require(first[7]).Text, obj),
+    callback2(_require(first[7]).Text, {
+      variant: "text-sm/medium",
+      color: "text-default",
+      lineClamp: num,
+      onTextLayout: callback,
+      children: children.description,
+    }),
+  ];
   let tmp13Result = true === first;
   if (tmp13Result) {
-    obj = { hitSlop: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, children: null };
+    obj = {
+      hitSlop: null,
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      accessibilityState: null,
+      onPress: null,
+      children: null,
+    };
     obj[0] = obj;
     obj[2] = stringResult;
     obj1 = { expanded: null };
@@ -59,4 +87,4 @@ export default function AppStoreOverlayAboutSection(children) {
   items1[2] = tmp13Result;
   obj[1] = items1;
   return closure_7(closure_5, obj);
-};
+}

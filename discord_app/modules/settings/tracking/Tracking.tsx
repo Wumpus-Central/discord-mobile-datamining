@@ -12,7 +12,14 @@ export const trackSettingSearchInputFocused = function trackSettingSearchInputFo
 };
 export const trackSettingSearchResultPress = function trackSettingSearchResultPress(setting) {
   let obj = expandEventPropertiesDefault;
-  obj = { setting: setting.setting, title: setting.title, route: setting.route, search_result_position: setting.searchResultPosition, num_search_results: setting.numSearchResults, search_session_id: getSearchSessionIdDefault.getSearchSessionId() };
+  obj = {
+    setting: setting.setting,
+    title: setting.title,
+    route: setting.route,
+    search_result_position: setting.searchResultPosition,
+    num_search_results: setting.numSearchResults,
+    search_session_id: getSearchSessionIdDefault.getSearchSessionId(),
+  };
   obj.track(AnalyticEvents.USER_SETTINGS_SEARCH_RESULT_PRESS, obj);
 };
 export const trackSettingSearchQueryEntered = function trackSettingSearchQueryEntered() {
@@ -22,6 +29,9 @@ export const trackSettingSearchQueryEntered = function trackSettingSearchQueryEn
 };
 export const trackSettingSearchClosed = function trackSettingSearchClosed(searchSessionDuration) {
   let obj = expandEventPropertiesDefault;
-  obj = { search_session_id: getSearchSessionIdDefault.getSearchSessionId(), search_session_duration_ms: searchSessionDuration.searchSessionDuration };
+  obj = {
+    search_session_id: getSearchSessionIdDefault.getSearchSessionId(),
+    search_session_duration_ms: searchSessionDuration.searchSessionDuration,
+  };
   obj.track(AnalyticEvents.USER_SETTINGS_SEARCH_CLOSED, obj);
 };

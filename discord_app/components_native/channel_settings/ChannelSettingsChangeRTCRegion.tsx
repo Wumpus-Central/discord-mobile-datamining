@@ -14,7 +14,10 @@ import importAllResult from "../../../_runtime/00019_noop.js";
 require = arg1;
 const AUTOMATIC_RTC_REGION = "AUTOMATIC_RTC_REGION";
 createCacheKey = { form: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
@@ -26,7 +29,16 @@ class ChannelSettingsChangeRTCRegion extends PureComponent {
     channel = applyArgumentsResult.props.channel;
     tmp3 = AUTOMATIC_RTC_REGION;
     regions = closure_5.getRegions(channel.getGuildId());
-    obj = { id: AUTOMATIC_RTC_REGION, name: null, sample_hostname: "", sample_port: 0, vip: false, deprecated: false, optimal: false, hidden: false };
+    obj = {
+      id: AUTOMATIC_RTC_REGION,
+      name: null,
+      sample_hostname: "",
+      sample_port: 0,
+      vip: false,
+      deprecated: false,
+      optimal: false,
+      hidden: false,
+    };
     intl = require("getSystemLocale").intl;
     obj[1] = intl.string(require("getSystemLocale").t.JEmsap);
     items = [];
@@ -36,14 +48,17 @@ class ChannelSettingsChangeRTCRegion extends PureComponent {
       items1 = [];
       num = 0;
       tmp4 = items1;
-      arraySpreadResult = HermesBuiltin.arraySpread(regions.filter((deprecated) => {
-        deprecated = deprecated.deprecated;
-        let tmp = !deprecated;
-        if (!deprecated) {
-          tmp = !deprecated.hidden;
-        }
-        return tmp;
-      }), 0);
+      arraySpreadResult = HermesBuiltin.arraySpread(
+        regions.filter((deprecated) => {
+          deprecated = deprecated.deprecated;
+          let tmp = !deprecated;
+          if (!deprecated) {
+            tmp = !deprecated.hidden;
+          }
+          return tmp;
+        }),
+        0,
+      );
       tmp6 = push;
       tmp7 = items1;
       tmp8 = items;
@@ -98,7 +113,7 @@ prototype["renderRegions"] = function renderRegions() {
       return self.handleSetRegion(arg0);
     },
     hasIcons: false,
-    children: mapped
+    children: mapped,
   });
 };
 prototype["render"] = function render() {
@@ -106,7 +121,9 @@ prototype["render"] = function render() {
   return jsx(Form.Form, { style: callback2(this.context).form, children: this.renderRegions() });
 };
 ChannelSettingsChangeRTCRegion.contextType = require("ManaContext").ThemeContext;
-const result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx");
+const result = require("set").fileFinishedImporting(
+  "components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx",
+);
 
 export default function ConnectedChannelSettingsChangeRTCRegion(channelId) {
   channelId = channelId.channelId;
@@ -114,4 +131,4 @@ export default function ConnectedChannelSettingsChangeRTCRegion(channelId) {
   const channel = channelId(589).useStateFromStores(items, () => closure_1_4.getChannel(channelId));
   _modDef38(null != channel, "ConnectedChannelSettingsChangeRTCRegion: channel cannot be undefined");
   return <ChannelSettingsChangeRTCRegion channel={channel} />;
-};
+}

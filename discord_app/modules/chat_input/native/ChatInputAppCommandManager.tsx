@@ -37,14 +37,40 @@ function areResolvedGamesEqual(size, size2) {
   }
 }
 let c5 = importAllResult;
-({ extractGameMentionIds: unpackModuleId, GAME_MENTION_RAW_RE_GLOBAL: closure_12, GAME_MENTION_SENTINEL: map1 } = regExp);
+({
+  extractGameMentionIds: unpackModuleId,
+  GAME_MENTION_RAW_RE_GLOBAL: closure_12,
+  GAME_MENTION_SENTINEL: map1,
+} = regExp);
 let obj = { commandOption: null, commandErrorOption: null, gameMention: null, autocomplete: null };
-obj = { backgroundColor: ThemesDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: ThemesDefault.colors.TEXT_DEFAULT, borderRadius: ThemesDefault.radii.xs, fontSize: 14 };
+obj = {
+  backgroundColor: ThemesDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND,
+  color: ThemesDefault.colors.TEXT_DEFAULT,
+  borderRadius: ThemesDefault.radii.xs,
+  fontSize: 14,
+};
 obj[0] = obj;
-createCacheKey = { backgroundColor: ThemesDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL, borderRadius: ThemesDefault.radii.xs, fontSize: 14 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND,
+  color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL,
+  borderRadius: ThemesDefault.radii.xs,
+  fontSize: 14,
+};
 obj[1] = createCacheKey;
-obj[2] = { backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND, color: ThemesDefault.colors.MENTION_FOREGROUND, borderRadius: ThemesDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
-let obj2 = { backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND, color: ThemesDefault.colors.MENTION_FOREGROUND, borderRadius: ThemesDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
+obj[2] = {
+  backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND,
+  color: ThemesDefault.colors.MENTION_FOREGROUND,
+  borderRadius: ThemesDefault.radii.xs,
+  fontSize: 14,
+  fontWeight: "bold",
+};
+let obj2 = {
+  backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND,
+  color: ThemesDefault.colors.MENTION_FOREGROUND,
+  borderRadius: ThemesDefault.radii.xs,
+  fontSize: 14,
+  fontWeight: "bold",
+};
 obj[3] = { color: ThemesDefault.colors.TEXT_BRAND, fontWeight: "bold" };
 let closure_14 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
@@ -71,10 +97,14 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   applicationCommandOptionValueParser = first(commandsDisabled[15]).useApplicationCommandOptionValueParser({ channel });
   let obj = first(commandsDisabled[15]);
   const items = [stateFromStores1];
-  stateFromStores = first(commandsDisabled[13]).useStateFromStores(items, () => stateFromStores1.getActiveCommand(channel.id));
+  stateFromStores = first(commandsDisabled[13]).useStateFromStores(items, () =>
+    stateFromStores1.getActiveCommand(channel.id),
+  );
   let obj2 = first(commandsDisabled[13]);
   const items1 = [stateFromStores];
-  stateFromStores1 = first(commandsDisabled[13]).useStateFromStores(items1, () => stateFromStores.getLastResponseNonce(channel.id));
+  stateFromStores1 = first(commandsDisabled[13]).useStateFromStores(items1, () =>
+    stateFromStores.getLastResponseNonce(channel.id),
+  );
   const obj3 = first(commandsDisabled[13]);
   let text = first(commandsDisabled[16]).getTextBeforeFirstOption(chatInputStateRef.current.text).text;
   let substr = text.slice(1);
@@ -82,7 +112,11 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   const tmp6 = callback(applicationCommandOptionValueParser.useState(ref.current), 2);
   closure_9 = tmp6[1];
   const obj4 = first(commandsDisabled[16]);
-  commands = channel(commandsDisabled[17]).useCachedResults({ type: "channel", channel }, first(commandsDisabled[18]).ApplicationCommandType.CHAT, tmp6[0]).commands;
+  commands = channel(commandsDisabled[17]).useCachedResults(
+    { type: "channel", channel },
+    first(commandsDisabled[18]).ApplicationCommandType.CHAT,
+    tmp6[0],
+  ).commands;
   closure_11 = applicationCommandOptionValueParser.useRef(undefined);
   first = undefined;
   closure_1 = undefined;
@@ -100,74 +134,104 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
     });
   }, []);
   const items2 = [first];
-  const memo = applicationCommandOptionValueParser.useMemo(() => first.filter((closure_0) => null == gameById.getGameById(closure_0)), items2);
+  const memo = applicationCommandOptionValueParser.useMemo(
+    () => first.filter((closure_0) => null == gameById.getGameById(closure_0)),
+    items2,
+  );
   const obj6 = channel(commandsDisabled[17]);
   const games = first(commandsDisabled[12]).useGames(memo);
   const obj7 = first(commandsDisabled[12]);
   const items3 = [ref, commands, closure_9];
   const items4 = [first];
-  stateFromStores2 = first(commandsDisabled[13]).useStateFromStores(items3, () => {
-    if (0 === first.length) {
-      return null;
-    } else {
-      const currentUser = commands.getCurrentUser();
-      if (currentUser != null) {
-        const nsfwAllowed = currentUser.nsfwAllowed;
-      }
-      const _Map = Map;
-      const map = new Map();
-      for (const item10017 of tmp) {
-        let tmp8 = item10017;
-        let tmp9 = ref;
-        let game = ref.getGame(item10017);
-        let tmp11 = game;
-        if (null == game) {
-          let tmp19 = gameById;
-          let tmp20 = item10017;
-          let gameById = gameById.getGameById(tmp8);
-          if (null != gameById) {
-            let tmp23 = item10017;
-            let tmp24 = gameById;
-            let result = map.set(tmp8, tmp22);
-          }
-        } else {
-          let tmp12 = first;
-          let tmp13 = commandsDisabled;
-          let obj2 = first(commandsDisabled[14]);
-          let tmp14 = game;
-          if (!obj2.isGameProfileObscured(tmp11, nsfwAllowed)) {
-            let tmp15 = item10017;
-            let obj = { id: null, name: null, icon: null };
-            obj[0] = tmp8;
-            let tmp16 = game;
-            ({ name: obj3[1], media } = tmp11);
-            let icon;
-            if (media != null) {
-              icon = media.icon;
-            }
-            if (icon == null) {
-              icon = null;
-            }
-            obj[2] = icon;
-            let result1 = map.set(tmp8, obj);
-          }
+  stateFromStores2 = first(commandsDisabled[13]).useStateFromStores(
+    items3,
+    () => {
+      if (0 === first.length) {
+        return null;
+      } else {
+        const currentUser = commands.getCurrentUser();
+        if (currentUser != null) {
+          const nsfwAllowed = currentUser.nsfwAllowed;
         }
-        continue;
+        const _Map = Map;
+        const map = new Map();
+        for (const item10017 of tmp) {
+          let tmp8 = item10017;
+          let tmp9 = ref;
+          let game = ref.getGame(item10017);
+          let tmp11 = game;
+          if (null == game) {
+            let tmp19 = gameById;
+            let tmp20 = item10017;
+            let gameById = gameById.getGameById(tmp8);
+            if (null != gameById) {
+              let tmp23 = item10017;
+              let tmp24 = gameById;
+              let result = map.set(tmp8, tmp22);
+            }
+          } else {
+            let tmp12 = first;
+            let tmp13 = commandsDisabled;
+            let obj2 = first(commandsDisabled[14]);
+            let tmp14 = game;
+            if (!obj2.isGameProfileObscured(tmp11, nsfwAllowed)) {
+              let tmp15 = item10017;
+              let obj = { id: null, name: null, icon: null };
+              obj[0] = tmp8;
+              let tmp16 = game;
+              ({ name: obj3[1], media } = tmp11);
+              let icon;
+              if (media != null) {
+                icon = media.icon;
+              }
+              if (icon == null) {
+                icon = null;
+              }
+              obj[2] = icon;
+              let result1 = map.set(tmp8, obj);
+            }
+          }
+          continue;
+        }
+        let tmp26 = null;
+        if (map.size > 0) {
+          tmp26 = map;
+        }
+        return tmp26;
       }
-      let tmp26 = null;
-      if (map.size > 0) {
-        tmp26 = map;
-      }
-      return tmp26;
-    }
-  }, items4, callback1);
-  const items5 = [stateFromStores, channel, chatInputRef, chatInputStateRef, commandsDisabled, stateFromStores1, applicationCommandOptionValueParser, commands, tmp, callback];
+    },
+    items4,
+    callback1,
+  );
+  const items5 = [
+    stateFromStores,
+    channel,
+    chatInputRef,
+    chatInputStateRef,
+    commandsDisabled,
+    stateFromStores1,
+    applicationCommandOptionValueParser,
+    commands,
+    tmp,
+    callback,
+  ];
   callback1 = applicationCommandOptionValueParser.useCallback(() => {
     const current = lib.current;
     let text = current.text;
     ({ editId, focused, selectionStart, selectionEnd } = current);
     callback(text);
-    let obj = { activeCommand: stateFromStores, channel, commandsDisabled, editId, focused, lastCommandAutocompleteResponseNonce: stateFromStores1, queryCommands: commands, selectionStart, selectionEnd, text };
+    let obj = {
+      activeCommand: stateFromStores,
+      channel,
+      commandsDisabled,
+      editId,
+      focused,
+      lastCommandAutocompleteResponseNonce: stateFromStores1,
+      queryCommands: commands,
+      selectionStart,
+      selectionEnd,
+      text,
+    };
     if (null == ref.current) {
       obj = { props: null, ref: null, optionValueParser: null, styles: null };
       obj[0] = obj;
@@ -282,7 +346,7 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
     },
     updateState() {
       return callback();
-    }
+    },
   }));
   return null;
 });

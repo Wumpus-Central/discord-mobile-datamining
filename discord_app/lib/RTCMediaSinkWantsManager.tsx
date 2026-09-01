@@ -472,7 +472,10 @@ class RTCMediaSinkWantsManager extends tmp2 {
     timeout = new require("start").Timeout();
     tmp11.offscreenTimeout = timeout;
     WindowVisibilityVideoManager = require("isIncomingVideoEnabled").WindowVisibilityVideoManager;
-    onResult = WindowVisibilityVideoManager.on(require("isIncomingVideoEnabled").WindowVisibilityEvent.IncomingVideoEnabledChanged, tmp11.incomingVideoEnabledChanged);
+    onResult = WindowVisibilityVideoManager.on(
+      require("isIncomingVideoEnabled").WindowVisibilityEvent.IncomingVideoEnabledChanged,
+      tmp11.incomingVideoEnabledChanged,
+    );
     return tmp11;
   }
 }
@@ -576,7 +579,10 @@ prototype["setConnection"] = function setConnection(c3, arg1) {
   const self = this;
   const connection = this.connection;
   if (connection != null) {
-    connection.removeListener(BaseConnectionEvent.BaseConnectionEvent.LocalVideoDisabled, self.handleLocalVideoDisabled);
+    connection.removeListener(
+      BaseConnectionEvent.BaseConnectionEvent.LocalVideoDisabled,
+      self.handleLocalVideoDisabled,
+    );
   }
   const connection2 = self.connection;
   if (connection2 != null) {
@@ -702,7 +708,10 @@ prototype["reset"] = function reset() {
   }
   self.latestWants = obj;
   const WindowVisibilityVideoManager = tmp3(9578).WindowVisibilityVideoManager;
-  WindowVisibilityVideoManager.off(isIncomingVideoEnabled.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
+  WindowVisibilityVideoManager.off(
+    isIncomingVideoEnabled.WindowVisibilityEvent.IncomingVideoEnabledChanged,
+    self.incomingVideoEnabledChanged,
+  );
 };
 prototype["setSelectedParticipant"] = function setSelectedParticipant(selectedParticipantId) {
   let self = this;
@@ -727,13 +736,15 @@ prototype["setSelectedParticipant"] = function setSelectedParticipant(selectedPa
     } else {
       self.selectedParticipantId = null;
     }
-    return self.update(items.filter((arg0) => {
-      let length;
-      if (self.videoSsrcs[arg0] != null) {
-        length = arr.length;
-      }
-      return length > 1;
-    }));
+    return self.update(
+      items.filter((arg0) => {
+        let length;
+        if (self.videoSsrcs[arg0] != null) {
+          length = arr.length;
+        }
+        return length > 1;
+      }),
+    );
   }
 };
 prototype["setPipOpen"] = function setPipOpen(pipOpen) {

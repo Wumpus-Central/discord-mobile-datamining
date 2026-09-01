@@ -78,7 +78,30 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     if (str == null) {
       str = "";
     }
-    obj = { title: null, subtitle: null, ctaText: null, coverImage: null, coverImageOverlayText: null, parentChannelId: null, threadId: null, postThread: null, messageId: null, canAccess: null, guildId: null, guildName: null, authorId: null, authorName: null, channelName: null, avatarUrl: null, shouldShowBlurredThumbnailImage: null, shouldContainMediaWithBackground: null, shouldSpoiler: null, obscureAwaitingScan: false, flags: null, contentScanVersion: null };
+    obj = {
+      title: null,
+      subtitle: null,
+      ctaText: null,
+      coverImage: null,
+      coverImageOverlayText: null,
+      parentChannelId: null,
+      threadId: null,
+      postThread: null,
+      messageId: null,
+      canAccess: null,
+      guildId: null,
+      guildName: null,
+      authorId: null,
+      authorName: null,
+      channelName: null,
+      avatarUrl: null,
+      shouldShowBlurredThumbnailImage: null,
+      shouldContainMediaWithBackground: null,
+      shouldSpoiler: null,
+      obscureAwaitingScan: false,
+      flags: null,
+      contentScanVersion: null,
+    };
     obj[0] = str;
     obj[1] = mediaPostEmbedData.description;
     obj[2] = stringResult;

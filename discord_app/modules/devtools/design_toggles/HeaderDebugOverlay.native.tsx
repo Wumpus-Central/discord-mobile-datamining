@@ -10,8 +10,23 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 noopAll;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = { "os-drawn": "OS-Drawn", "custom-drawn": "Custom-Drawn", "js-stack": "JS Stack", sheet: "Sheet", bespoke: "Bespoke" };
-createCacheKey = { tintWash: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, pointerEvents: "none", opacity: 0.15 }, badgeContainer: { position: "absolute", bottom: 2, right: 4, pointerEvents: "none" }, badge: null, "color-os-drawn": null, "color-custom-drawn": null, "color-js-stack": null, "color-sheet": null, "color-bespoke": null };
+let closure_7 = {
+  "os-drawn": "OS-Drawn",
+  "custom-drawn": "Custom-Drawn",
+  "js-stack": "JS Stack",
+  sheet: "Sheet",
+  bespoke: "Bespoke",
+};
+createCacheKey = {
+  tintWash: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, pointerEvents: "none", opacity: 0.15 },
+  badgeContainer: { position: "absolute", bottom: 2, right: 4, pointerEvents: "none" },
+  badge: null,
+  "color-os-drawn": null,
+  "color-custom-drawn": null,
+  "color-js-stack": null,
+  "color-sheet": null,
+  "color-bespoke": null,
+};
 createCacheKey = { paddingHorizontal: 4, paddingVertical: 1, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.TEXT_LINK };
@@ -40,7 +55,7 @@ export default function useHeaderDebugOverlay(arg0, arg1) {
     obj = { style: null };
     const items = [tmp3.tintWash, tmp8];
     obj[0] = items;
-    const items1 = [callback(View, obj), ];
+    const items1 = [callback(View, obj)];
     obj = { style: null, children: null };
     obj[0] = tmp3.badgeContainer;
     obj1 = { style: null, children: null };
@@ -57,4 +72,4 @@ export default function useHeaderDebugOverlay(arg0, arg1) {
     return null;
   }
   tmp2 = useDesignToggleDefault("show_header_debug_info");
-};
+}

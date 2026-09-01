@@ -276,11 +276,17 @@ function findFirstOrLastMentionedItem(scrollPosValue) {
 let c4 = importAllResult;
 ({ FastListRenderSections: c10, useGuildWrapperSize: unpackModuleId, GUILD_LIST_WIDTH } = GUILD_ITEM_SIZE);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = CONNECTION_BANNER_HEIGHT);
-let closure_15 = createCacheKey.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH } });
+let closure_15 = createCacheKey.createStyles({
+  wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH },
+});
 let closure_17 = { beforeItem: "children", afterItem: "c" };
 let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "Array" };
-let closure_20 = { code: "function GuildsBarUnreadBarsTsx1(){const{scrollPosValue}=this.__closure;return scrollPosValue.get();}" };
-let closure_21 = { code: "function GuildsBarUnreadBarsTsx2(position,lastPosition){const{runOnJS,debouncedUpdate}=this.__closure;if(position!==lastPosition){runOnJS(debouncedUpdate)();}}" };
+let closure_20 = {
+  code: "function GuildsBarUnreadBarsTsx1(){const{scrollPosValue}=this.__closure;return scrollPosValue.get();}",
+};
+let closure_21 = {
+  code: "function GuildsBarUnreadBarsTsx2(position,lastPosition){const{runOnJS,debouncedUpdate}=this.__closure;if(position!==lastPosition){runOnJS(debouncedUpdate)();}}",
+};
 const memoResult = importAllResult.memo(function GuildsBarUnreadBars(fastList) {
   fastList = fastList.fastList;
   let _require = fastList;
@@ -296,35 +302,54 @@ const memoResult = importAllResult.memo(function GuildsBarUnreadBars(fastList) {
   const result = callback() / 2;
   mobileQuestDockHeight = result;
   let obj = memo;
-  [tmp5, youBarTotalHeight] = youBarTotalHeight(memo.useState(() => {
-    let guildId = paddingEnd.getGuildId();
-    if (guildId == null) {
-      guildId = null;
-    }
-    return closure_1_19(closure_0, paddingStart.getPrivateChannelMentionCount() > 0, guildId, top2, mobileQuestDockHeight);
-  }), 2);
+  [tmp5, youBarTotalHeight] = youBarTotalHeight(
+    memo.useState(() => {
+      let guildId = paddingEnd.getGuildId();
+      if (guildId == null) {
+        guildId = null;
+      }
+      return closure_1_19(
+        closure_0,
+        paddingStart.getPrivateChannelMentionCount() > 0,
+        guildId,
+        top2,
+        mobileQuestDockHeight,
+      );
+    }),
+    2,
+  );
   let items = [fastList, top, result];
   ({ beforeItem, afterItem } = tmp5);
-  memo = memo.useMemo(() => top2(mobileQuestDockHeight[14])(() => {
-    let guildId = closure_1_7.getGuildId();
-    if (guildId == null) {
-      guildId = null;
-    }
-    closure_0 = closure_1_19(closure_0, closure_1_6.getPrivateChannelMentionCount() > 0, guildId, closure_1, closure_2);
-    callback((afterItem) => {
-      if (afterItem === closure_0) {
-        let tmp4 = afterItem;
-      } else {
-        tmp4 = tmp;
-        if (closure_1_1(closure_1_2[15])(afterItem.afterItem, tmp.afterItem)) {
-          tmp4 = tmp;
+  memo = memo.useMemo(
+    () =>
+      top2(mobileQuestDockHeight[14])(() => {
+        let guildId = closure_1_7.getGuildId();
+        if (guildId == null) {
+          guildId = null;
         }
-        const tmp2 = closure_1_1;
-        const tmp3 = closure_1_2;
-      }
-      return tmp4;
-    });
-  }, 100), items);
+        closure_0 = closure_1_19(
+          closure_0,
+          closure_1_6.getPrivateChannelMentionCount() > 0,
+          guildId,
+          closure_1,
+          closure_2,
+        );
+        callback((afterItem) => {
+          if (afterItem === closure_0) {
+            let tmp4 = afterItem;
+          } else {
+            tmp4 = tmp;
+            if (closure_1_1(closure_1_2[15])(afterItem.afterItem, tmp.afterItem)) {
+              tmp4 = tmp;
+            }
+            const tmp2 = closure_1_1;
+            const tmp3 = closure_1_2;
+          }
+          return tmp4;
+        });
+      }, 100),
+    items,
+  );
   const items1 = [memo];
   const effect = memo.useEffect(() => {
     const items = [paddingStart, paddingEnd, closure_1_8];
@@ -337,13 +362,22 @@ const memoResult = importAllResult.memo(function GuildsBarUnreadBars(fastList) {
   scrollPosValue = fastList.scrollPosValue;
   const tmp = top2;
   let tmp2 = mobileQuestDockHeight;
-  let tmp4 = youBarTotalHeight(memo.useState(() => {
-    let guildId = paddingEnd.getGuildId();
-    if (guildId == null) {
-      guildId = null;
-    }
-    return closure_1_19(closure_0, paddingStart.getPrivateChannelMentionCount() > 0, guildId, top2, mobileQuestDockHeight);
-  }), 2);
+  let tmp4 = youBarTotalHeight(
+    memo.useState(() => {
+      let guildId = paddingEnd.getGuildId();
+      if (guildId == null) {
+        guildId = null;
+      }
+      return closure_1_19(
+        closure_0,
+        paddingStart.getPrivateChannelMentionCount() > 0,
+        guildId,
+        top2,
+        mobileQuestDockHeight,
+      );
+    }),
+    2,
+  );
   class D {
     constructor() {
       return scrollPosValue.get();
@@ -387,7 +421,7 @@ const memoResult = importAllResult.memo(function GuildsBarUnreadBars(fastList) {
   const items2 = [tmp9.wrapper, top2, mobileQuestDockHeight, youBarTotalHeight];
   const memo1 = obj.useMemo(() => {
     let obj = { style: items, paddingStart: top2, paddingEnd: mobileQuestDockHeight + 4 + youBarTotalHeight };
-    items = [lib.wrapper, ];
+    items = [lib.wrapper];
     obj = { top: top2, bottom: mobileQuestDockHeight + youBarTotalHeight };
     items[1] = obj;
     return obj;
@@ -395,7 +429,13 @@ const memoResult = importAllResult.memo(function GuildsBarUnreadBars(fastList) {
   paddingStart = memo1.paddingStart;
   paddingEnd = memo1.paddingEnd;
   const items3 = [fastList, paddingStart, paddingEnd];
-  obj = { style: memo1.style, collapsable: false, pointerEvents: "box-none", testID: "guilds-bar-unread-bars", children: null };
+  obj = {
+    style: memo1.style,
+    collapsable: false,
+    pointerEvents: "box-none",
+    testID: "guilds-bar-unread-bars",
+    children: null,
+  };
   callback = obj.useCallback((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
@@ -405,7 +445,11 @@ const memoResult = importAllResult.memo(function GuildsBarUnreadBars(fastList) {
     lib.scrollToLocation(obj);
   }, items3);
   obj[4] = jsx(tmp(tmp2[18]), { beforeItem, afterItem, scrollToLocation: callback, compact: true });
-  return <scrollPosValue style={memo1.style} collapsable={false} pointerEvents="box-none" testID="guilds-bar-unread-bars">{null}</scrollPosValue>;
+  return (
+    <scrollPosValue style={memo1.style} collapsable={false} pointerEvents="box-none" testID="guilds-bar-unread-bars">
+      {null}
+    </scrollPosValue>
+  );
 });
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarUnreadBars.tsx");
 

@@ -22,7 +22,15 @@ const ChannelFlags = set3.ChannelFlags;
 const Permissions = sum.Permissions;
 let closure_15 = importAllResult.combine(Permissions.VIEW_CHANNEL, Permissions.ADMINISTRATOR);
 let closure_16 = new timestampDefault("GuildsRequiringChannelSync");
-let closure_17 = { NewGuild: "new_guild", OwnershipChange: "ownership_change", RolePermissions: "role_permissions", RoleSubscriptionTags: "role_subscription_tags", MemberRoles: "member_roles", ChannelVisibleParentHidden: "channel_visible_parent_hidden", Unknown: "unknown" };
+let closure_17 = {
+  NewGuild: "new_guild",
+  OwnershipChange: "ownership_change",
+  RolePermissions: "role_permissions",
+  RoleSubscriptionTags: "role_subscription_tags",
+  MemberRoles: "member_roles",
+  ChannelVisibleParentHidden: "channel_visible_parent_hidden",
+  Unknown: "unknown",
+};
 let closure_18 = { ConnectionOpen: "connection_open", GuildCreate: "guild_create", BackgroundSync: "background_sync" };
 class GuildsRequiringChannelSync {
   constructor() {
@@ -30,20 +38,20 @@ class GuildsRequiringChannelSync {
     closure_0 = obj;
     obj.actions = {
       BACKGROUND_SYNC(arg0, arg1) {
-            return obj.handleBackgroundSync(arg0, arg1);
-          },
+        return obj.handleBackgroundSync(arg0, arg1);
+      },
       CONNECTION_OPEN(arg0, arg1) {
-            return obj.handleConnectionOpen(arg0, arg1);
-          },
+        return obj.handleConnectionOpen(arg0, arg1);
+      },
       GUILD_CREATE(arg0, arg1) {
-            return obj.handleGuildCreate(arg0, arg1);
-          },
+        return obj.handleGuildCreate(arg0, arg1);
+      },
       CHANNEL_SYNC(arg0, arg1) {
-            return obj.handleChannelSync(arg0, arg1);
-          },
+        return obj.handleChannelSync(arg0, arg1);
+      },
       UNMARK_RESYNC_GUILDS(guildIds, database) {
-            return obj.handleUnmarkResyncGuilds(guildIds, database);
-          }
+        return obj.handleUnmarkResyncGuilds(guildIds, database);
+      },
     };
     return obj;
   }
@@ -314,7 +322,10 @@ prototype["handleGuild"] = function handleGuild(channels, database, BackgroundSy
       if (roles == null) {
         roles = [];
       }
-      ({ rolesAreDifferent, allRoleIds } = self.processMemberRoleIds(null != selfMember ? selfMember.roles : [], roles));
+      ({ rolesAreDifferent, allRoleIds } = self.processMemberRoleIds(
+        null != selfMember ? selfMember.roles : [],
+        roles,
+      ));
       if (rolesAreDifferent) {
         MemberRoles = tmp2.MemberRoles;
       }
@@ -350,7 +361,11 @@ prototype["handleGuild"] = function handleGuild(channels, database, BackgroundSy
       if (flag2) {
         break;
       } else {
-        result = self.hasNewlyVisibleChannelWithHiddenParent(channels.id, channels.channels.writes, channels.channels.deletes);
+        result = self.hasNewlyVisibleChannelWithHiddenParent(
+          channels.id,
+          channels.channels.writes,
+          channels.channels.deletes,
+        );
         break;
       }
       if (result) {
@@ -364,7 +379,12 @@ prototype["handleGuild"] = function handleGuild(channels, database, BackgroundSy
           let tmp22 = self;
           let tmp23 = database;
           let tmp24 = ChannelVisibleParentHidden;
-          let markGuildForResyncResult = self.markGuildForResync(channels.id, database, BackgroundSync, ChannelVisibleParentHidden);
+          let markGuildForResyncResult = self.markGuildForResync(
+            channels.id,
+            database,
+            BackgroundSync,
+            ChannelVisibleParentHidden,
+          );
         } else {
           let unmarkGuildForResyncResult = self.unmarkGuildForResync(channels.id, database);
         }
@@ -380,7 +400,12 @@ prototype["handleChannelSync"] = function handleChannelSync(integrity_check, dat
     this.unmarkGuildForResync(tmp, database);
   }
 };
-prototype["markGuildForResync"] = function markGuildForResync(id, database, BackgroundSync, ChannelVisibleParentHidden) {
+prototype["markGuildForResync"] = function markGuildForResync(
+  id,
+  database,
+  BackgroundSync,
+  ChannelVisibleParentHidden,
+) {
   obj = obj(514);
   const v4Result = obj.v4();
   obj = { guild_id: id, request_id: v4Result, trigger: BackgroundSync, change_type: ChannelVisibleParentHidden };
@@ -394,7 +419,11 @@ prototype["unmarkGuildForResync"] = function unmarkGuildForResync(id, database) 
   const result = itemsDefault.guildsRequiringChannelSyncTransaction(database);
   result.delete(id);
 };
-prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleChannelWithHiddenParent(id, channels, deleted_channel_ids) {
+prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleChannelWithHiddenParent(
+  id,
+  channels,
+  deleted_channel_ids,
+) {
   let items = deleted_channel_ids;
   if (deleted_channel_ids === undefined) {
     items = [];
@@ -517,17 +546,18 @@ prototype["anyChannelRecordsObfuscated"] = function anyChannelRecordsObfuscated(
   return null != values.find((isObfuscated) => isObfuscated.isObfuscated());
 };
 prototype["anyChannelsObfuscated"] = function anyChannelsObfuscated(channels) {
-  return null != channels.find((flags) => {
-    let num = flags.flags;
-    if (num == null) {
-      num = 0;
-    }
-    return callback(table[16]).hasFlag(num, constants.OBFUSCATED);
-  });
+  return (
+    null !=
+    channels.find((flags) => {
+      let num = flags.flags;
+      if (num == null) {
+        num = 0;
+      }
+      return callback(table[16]).hasFlag(num, constants.OBFUSCATED);
+    })
+  );
 };
-prototype["resetInMemoryState"] = function resetInMemoryState() {
-
-};
+prototype["resetInMemoryState"] = function resetInMemoryState() {};
 obj = Object.create(GuildsRequiringChannelSync.prototype);
 obj.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
@@ -544,7 +574,7 @@ obj.actions = {
   },
   UNMARK_RESYNC_GUILDS(guildIds, database) {
     return obj.handleUnmarkResyncGuilds(guildIds, database);
-  }
+  },
 };
 let tmp4 = new timestampDefault("GuildsRequiringChannelSync");
 let result = set2.fileFinishedImporting("modules/app_database/modules/GuildsRequiringChannelSync.tsx");

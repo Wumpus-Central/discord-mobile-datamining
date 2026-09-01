@@ -59,12 +59,12 @@ function Integration(integration) {
     obj2[0] = integration.guild;
     obj2[1] = tmp(6004).GuildIconSizes.SMALL;
     obj2[2] = legacyClassComponentStyles.integrationGuildIcon;
-    const items4 = [callback3(GuildIconSizesDefault, obj2), , ];
+    const items4 = [callback3(GuildIconSizesDefault, obj2), ,];
     const obj3 = { style: null, children: null };
     obj3[0] = legacyClassComponentStyles.integrationTextRowContainer;
     const obj4 = { lineClamp: 1, variant: "text-sm/medium", children: null };
     obj4[2] = integration.guild.name;
-    const items5 = [callback3(tmp(4474).Text, obj4), ];
+    const items5 = [callback3(tmp(4474).Text, obj4)];
     const tmp16 = callback3;
     const tmp18 = GuildIconSizesDefault;
     const value = getPlatformUserUrlDefault.get(integration.type);
@@ -117,45 +117,142 @@ function RowSwitch(label) {
   return callback3(TableSwitchRow.TableSwitchRow, { label: label.label });
 }
 let c5 = importAllResult;
-({ FRIEND_SYNC_PLATFORM_TYPES: c9, ACTIVITY_PLATFORM_TYPES: c10, PlatformTypes: unpackModuleId, HelpdeskArticles: closure_12, Fonts } = ME);
+({
+  FRIEND_SYNC_PLATFORM_TYPES: c9,
+  ACTIVITY_PLATFORM_TYPES: c10,
+  PlatformTypes: unpackModuleId,
+  HelpdeskArticles: closure_12,
+  Fonts,
+} = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-createCacheKey = { platformIcon: { marginRight: 4 }, connectedApplicationIdentityIcon: null, deleteConnectionIcon: null, container: null, connectedAccountItem: null, connectedAccountTopContainer: null, connectedAccountContentContainer: null, integrationContainer: null, integrationContainerInternal: null, integrationTextRowContainer: null, integrationErrorText: null, integrationCategoryLabel: null, integrationGuildIcon: null, integrationJoinButton: null, divider: null, alertInfoBox: null, alertBodyText: null, metadataContainer: null, metadataItemsContainer: null, metadataRefreshButton: null, metadataRefreshButtonDisabled: null, metadataRefreshIcon: null, metadataBannerContainer: null, newBadge: null, rowDivider: null, addDetailsButton: null, learnMoreButton: null, relinkButton: null, relinkText: null };
+createCacheKey = {
+  platformIcon: { marginRight: 4 },
+  connectedApplicationIdentityIcon: null,
+  deleteConnectionIcon: null,
+  container: null,
+  connectedAccountItem: null,
+  connectedAccountTopContainer: null,
+  connectedAccountContentContainer: null,
+  integrationContainer: null,
+  integrationContainerInternal: null,
+  integrationTextRowContainer: null,
+  integrationErrorText: null,
+  integrationCategoryLabel: null,
+  integrationGuildIcon: null,
+  integrationJoinButton: null,
+  divider: null,
+  alertInfoBox: null,
+  alertBodyText: null,
+  metadataContainer: null,
+  metadataItemsContainer: null,
+  metadataRefreshButton: null,
+  metadataRefreshButtonDisabled: null,
+  metadataRefreshIcon: null,
+  metadataBannerContainer: null,
+  newBadge: null,
+  rowDivider: null,
+  addDetailsButton: null,
+  learnMoreButton: null,
+  relinkButton: null,
+  relinkText: null,
+};
 createCacheKey = { borderRadius: null, marginRight: 4 };
 createCacheKey[0] = Button.getIconSize(require("Button").Icon.Sizes.LARGE);
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginRight: 10, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[3] = { marginHorizontal: 8, marginVertical: 4 };
 let obj1 = { marginRight: 10, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[4] = { borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
-Button = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopLeftRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopRightRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
+createCacheKey[4] = {
+  borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  overflow: "hidden",
+};
+Button = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  borderTopLeftRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+  borderTopRightRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+};
 createCacheKey[5] = Button;
 createCacheKey[6] = { marginTop: 8, gap: 8 };
-let obj2 = { borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
-createCacheKey[7] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, marginTop: 12, paddingVertical: 4, borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, flexDirection: "column", alignItems: "center" };
+let obj2 = {
+  borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  overflow: "hidden",
+};
+createCacheKey[7] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  marginTop: 12,
+  paddingVertical: 4,
+  borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+  flexDirection: "column",
+  alignItems: "center",
+};
 createCacheKey[8] = { alignItems: "center", flexDirection: "row" };
 createCacheKey[9] = { alignItems: "flex-start", flexDirection: "column", flex: 1 };
 createCacheKey[10] = { alignItems: "center", marginTop: 4, marginBottom: 8 };
 createCacheKey[11] = { marginVertical: 0 };
 createCacheKey[12] = { margin: 8 };
 createCacheKey[13] = { alignSelf: "center", marginEnd: 8, marginStart: 8 };
-let obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, marginTop: 12, paddingVertical: 4, borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, flexDirection: "column", alignItems: "center" };
-createCacheKey[14] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1, marginVertical: 8, marginHorizontal: 16 };
+let obj4 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  marginTop: 12,
+  paddingVertical: 4,
+  borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+  flexDirection: "column",
+  alignItems: "center",
+};
+createCacheKey[14] = {
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  height: 1,
+  marginVertical: 8,
+  marginHorizontal: 16,
+};
 createCacheKey[15] = { marginTop: 8 };
 let obj5 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1, marginVertical: 8, marginHorizontal: 16 };
 let obj6 = { marginTop: 16 };
 let merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_DEFAULT, 16));
 createCacheKey[16] = obj6;
-createCacheKey[17] = { display: "flex", flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, padding: 8, marginLeft: 16, marginRight: 16 };
-createCacheKey[18] = { display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", alignContent: "flex-start", paddingRight: 8, flexShrink: 1 };
+createCacheKey[17] = {
+  display: "flex",
+  flexDirection: "row",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.xs,
+  padding: 8,
+  marginLeft: 16,
+  marginRight: 16,
+};
+createCacheKey[18] = {
+  display: "flex",
+  flexDirection: "row",
+  flexWrap: "wrap",
+  alignItems: "center",
+  alignContent: "flex-start",
+  paddingRight: 8,
+  flexShrink: 1,
+};
 createCacheKey[19] = { alignSelf: "center", marginLeft: "auto" };
 createCacheKey[20] = { opacity: 0.5 };
 createCacheKey[21] = { height: 16, width: 16 };
-createCacheKey[22] = { justifyContent: "center", flexWrap: "wrap", alignItems: "center", paddingHorizontal: 16, paddingVertical: 14 };
+createCacheKey[22] = {
+  justifyContent: "center",
+  flexWrap: "wrap",
+  alignItems: "center",
+  paddingHorizontal: 16,
+  paddingVertical: 14,
+};
 createCacheKey[23] = { marginRight: 4 };
 createCacheKey[24] = { flexBasis: "100%", height: 12 };
 createCacheKey[25] = { paddingHorizontal: 16, flexGrow: 0, marginRight: 12 };
 createCacheKey[26] = { paddingHorizontal: 16, flexGrow: 0 };
-let obj7 = { display: "flex", flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, padding: 8, marginLeft: 16, marginRight: 16 };
+let obj7 = {
+  display: "flex",
+  flexDirection: "row",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.xs,
+  padding: 8,
+  marginLeft: 16,
+  marginRight: 16,
+};
 createCacheKey[27] = { paddingVertical: 8, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round };
 createCacheKey[28] = { marginTop: 8 };
 createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
@@ -164,7 +261,16 @@ class ConnectedAccount extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
-    obj = { isVisible: 1 === applyArgumentsResult.props.account.visibility, isMetadataVisible: 1 === applyArgumentsResult.props.account.metadataVisibility, inProgressVisibility: null, inProgressMetadataVisibility: null, showActivity: applyArgumentsResult.props.account.showActivity, friendSync: applyArgumentsResult.props.account.friendSync, metadataRefreshing: false, metadataAlreadyRefreshed: false };
+    obj = {
+      isVisible: 1 === applyArgumentsResult.props.account.visibility,
+      isMetadataVisible: 1 === applyArgumentsResult.props.account.metadataVisibility,
+      inProgressVisibility: null,
+      inProgressMetadataVisibility: null,
+      showActivity: applyArgumentsResult.props.account.showActivity,
+      friendSync: applyArgumentsResult.props.account.friendSync,
+      metadataRefreshing: false,
+      metadataAlreadyRefreshed: false,
+    };
     applyArgumentsResult.state = obj;
     applyArgumentsResult.handleDisconnect = function handleDisconnect() {
       const tmp2 = closure_1_16(lib.context);
@@ -180,7 +286,7 @@ class ConnectedAccount extends PureComponent {
         obj1 = { style: null, variant: "text-md/medium", children: null };
         obj1[0] = tmp2.alertBodyText;
         obj1[2] = formatResult;
-        const items = [closure_1_14(tmp6(tmp4[17]).Text, obj1), ];
+        const items = [closure_1_14(tmp6(tmp4[17]).Text, obj1)];
         const obj2 = { style: null, children: null };
         obj2[0] = tmp2.alertInfoBox;
         let tmp3Result = tmp3(tmp4[23]);
@@ -193,7 +299,15 @@ class ConnectedAccount extends PureComponent {
         tmp8 = closure_1_15(closure_1_6, obj);
       }
       tmp3Result = tmp3(tmp4[24]);
-      const obj4 = { title: null, body: null, cancelText: null, children: null, confirmText: null, onConfirm: null, confirmColor: null };
+      const obj4 = {
+        title: null,
+        body: null,
+        cancelText: null,
+        children: null,
+        confirmText: null,
+        onConfirm: null,
+        confirmColor: null,
+      };
       const intl3 = tmp6(tmp4[16]).intl;
       obj4[0] = intl3.formatToPlainString(lib(closure_1_2[16]).t.U5x12f, { name: value.name });
       obj4[1] = formatResult;
@@ -217,7 +331,7 @@ class ConnectedAccount extends PureComponent {
       c4 = 0;
       c5 = 0;
       c3 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         closure_2 = tmp3;
         const account = closure_1_1.props.account;
         let num5 = 0;
@@ -260,7 +374,7 @@ class ConnectedAccount extends PureComponent {
         return arg1;
       })();
     });
-    applyArgumentsResult.handleVisibilityChange = function() {
+    applyArgumentsResult.handleVisibilityChange = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -277,7 +391,7 @@ class ConnectedAccount extends PureComponent {
       c4 = 0;
       c5 = 0;
       c3 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         closure_2 = tmp3;
         const account = closure_1_1.props.account;
         let num5 = 0;
@@ -320,7 +434,7 @@ class ConnectedAccount extends PureComponent {
         return arg1;
       })();
     });
-    applyArgumentsResult.handleMetadataVisibilityChange = function() {
+    applyArgumentsResult.handleMetadataVisibilityChange = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -337,7 +451,7 @@ class ConnectedAccount extends PureComponent {
       c4 = 0;
       c5 = 0;
       c3 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         closure_2 = tmp3;
         const account = closure_1_1.props.account;
         obj1 = { friendSync: null };
@@ -361,7 +475,7 @@ class ConnectedAccount extends PureComponent {
         return arg1;
       })();
     });
-    applyArgumentsResult.handleFriendSyncChange = function() {
+    applyArgumentsResult.handleFriendSyncChange = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -378,7 +492,7 @@ class ConnectedAccount extends PureComponent {
       c4 = 0;
       c5 = 0;
       c3 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         closure_2 = tmp3;
         const account = closure_1_1.props.account;
         obj1 = { showActivity: null };
@@ -402,7 +516,7 @@ class ConnectedAccount extends PureComponent {
         return arg1;
       })();
     });
-    applyArgumentsResult.handleShowActivityChange = function() {
+    applyArgumentsResult.handleShowActivityChange = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -540,11 +654,13 @@ prototype["renderMetadata"] = function renderMetadata() {
   function handleRefresh() {
     self.setState({ metadataRefreshing: true });
     const obj = self(closure_1_2[13]);
-    self(closure_1_2[13]).refresh(account.type, account.id).finally(() => {
-      const timerId = setTimeout(() => {
-        state.setState({ metadataRefreshing: false, metadataAlreadyRefreshed: true });
-      }, 2000);
-    });
+    self(closure_1_2[13])
+      .refresh(account.type, account.id)
+      .finally(() => {
+        const timerId = setTimeout(() => {
+          state.setState({ metadataRefreshing: false, metadataAlreadyRefreshed: true });
+        }, 2000);
+      });
   }
   if (0 === redditMetadataItems.length) {
     let obj12 = self(5227);
@@ -557,14 +673,14 @@ prototype["renderMetadata"] = function renderMetadata() {
       return null;
     } else {
       obj1 = { style: null, children: null };
-      const items = [, ];
+      const items = [,];
       ({ metadataContainer: arr4[0], metadataBannerContainer: arr4[1] } = tmp);
       obj1[0] = items;
       const obj2 = { text: null, style: null };
       const intl4 = tmp2(1236).intl;
       obj2[0] = intl4.string(tmp2(1236).t.y2b7CA);
       obj2[1] = tmp.newBadge;
-      const items1 = [callback3(tmp2(1297).TextBadge, obj2), , , , ];
+      const items1 = [callback3(tmp2(1297).TextBadge, obj2), , , ,];
       const obj3 = { variant: "text-xs/normal", children: null };
       const intl5 = tmp2(1236).intl;
       obj3[1] = intl5.string(tmp2(1236).t.eH16Gn);
@@ -610,13 +726,21 @@ prototype["renderMetadata"] = function renderMetadata() {
       const tmp21 = callback4;
     }
   } else {
-    const obj9 = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, disabled: null, style: null, children: null };
+    const obj9 = {
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      hitSlop: null,
+      onPress: null,
+      disabled: null,
+      style: null,
+      children: null,
+    };
     const intl3 = tmp2(1236).intl;
     obj9[1] = intl3.string(tmp2(1236).t.wzzjk9);
     obj9[2] = { top: 8, right: 8, bottom: 8, left: 8 };
     obj9[3] = handleRefresh;
     obj9[4] = intl2;
-    const items2 = [tmp.metadataRefreshButton, ];
+    const items2 = [tmp.metadataRefreshButton];
     let metadataRefreshButtonDisabled = intl2;
     if (intl2) {
       metadataRefreshButtonDisabled = tmp.metadataRefreshButtonDisabled;
@@ -682,14 +806,14 @@ prototype["renderIntegrationsRow"] = function renderIntegrationsRow() {
       let obj = { children: null };
       obj = { style: null };
       obj[0] = tmp.divider;
-      const items = [callback3(View, obj), ];
+      const items = [callback3(View, obj)];
       obj = { style: null, children: null };
       obj[0] = { paddingHorizontal: 16, paddingVertical: 8 };
       obj1 = { style: null, variant: "eyebrow", color: "mobile-text-heading-primary", children: null };
       obj1[0] = tmp.integrationCategoryLabel;
       const intl = getSystemLocale.intl;
       obj1[3] = intl.string(getSystemLocale.t.fOe3fZ);
-      const items1 = [callback3(Text.Text, obj1), ];
+      const items1 = [callback3(Text.Text, obj1)];
       const integrations = account.integrations;
       items1[1] = integrations.map((id) => callback(closure_17, { integration: id }, id.id));
       obj[1] = items1;
@@ -720,7 +844,14 @@ prototype["render"] = function render() {
   } else {
     name = account.name;
   }
-  obj = { accessible: true, accessibilityLabel: value.name, style: tmp.platformIcon, size: Button2.Icon.Sizes.LARGE, source: null, disableColor: true };
+  obj = {
+    accessible: true,
+    accessibilityLabel: value.name,
+    style: tmp.platformIcon,
+    size: Button2.Icon.Sizes.LARGE,
+    source: null,
+    disableColor: true,
+  };
   let obj3 = getAvatarURL;
   let obj4 = AccessibilityAnnouncer;
   const icon = value.icon;
@@ -745,9 +876,9 @@ prototype["render"] = function render() {
   const obj6 = { style: tmp.connectedAccountTopContainer, children: null };
   const result4 = self.renderVisibilityCheckRow();
   obj6[1] = closure_14(TableRowInner.TableRow, { label: name, icon: tmp7Result, trailing: tmp7Result });
-  const items = [closure_14(View, obj6), ];
+  const items = [closure_14(View, obj6)];
   const obj7 = { style: tmp.connectedAccountContentContainer, children: null };
-  const items1 = [self.renderUpsell(), self.renderMetadata(), , ];
+  const items1 = [self.renderUpsell(), self.renderMetadata(), ,];
   const items2 = [result4, result3, result2, result1];
   items1[2] = callback4(TableRowGroupTitle.TableRowGroup, { hasIcons: false, children: items2 });
   items1[3] = result;

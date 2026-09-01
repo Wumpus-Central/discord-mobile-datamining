@@ -16,7 +16,15 @@ function ChannelSubtitle(arg0) {
   } else {
     obj = {};
     const merged = Object.assign(textProps);
-    obj = { content: null, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null };
+    obj = {
+      content: null,
+      muted: null,
+      channelId: null,
+      guildId: null,
+      layout: null,
+      color: "text-muted",
+      disableAnimatedEmoji: null,
+    };
     obj[0] = channelSubtitleData.subtitle;
     if (muted == null) {
       muted = false;
@@ -27,11 +35,21 @@ function ChannelSubtitle(arg0) {
     obj[4] = layout;
     obj[6] = !("voice" === channelSubtitleData.type && connected);
     obj.children = tmp(10199).renderMessagePreviewMarkup(obj);
-    return jsx(tmp(4474).Text, { content: null, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null });
+    return jsx(tmp(4474).Text, {
+      content: null,
+      muted: null,
+      channelId: null,
+      guildId: null,
+      layout: null,
+      color: "text-muted",
+      disableAnimatedEmoji: null,
+    });
   }
 }
 noopAll;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx",
+);
 
 export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
   ({ subtitle, layout } = arg0);
@@ -46,7 +64,15 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
       obj.children = subtitle;
       let tmp9 = jsx(Text.Text, {});
     } else {
-      obj = { channelId: null, guildId: null, layout: null, subtitle: null, muted: null, connected: null, textProps: null };
+      obj = {
+        channelId: null,
+        guildId: null,
+        layout: null,
+        subtitle: null,
+        muted: null,
+        connected: null,
+        textProps: null,
+      };
       obj[0] = tmp2;
       obj[1] = tmp3;
       obj[2] = layout;
@@ -54,7 +80,17 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
       obj[4] = tmp;
       obj[5] = tmp4;
       obj[6] = obj;
-      tmp9 = <ChannelSubtitle channelId={null} guildId={null} layout={null} subtitle={null} muted={null} connected={null} textProps={null} />;
+      tmp9 = (
+        <ChannelSubtitle
+          channelId={null}
+          guildId={null}
+          layout={null}
+          subtitle={null}
+          muted={null}
+          connected={null}
+          textProps={null}
+        />
+      );
     }
     return tmp9;
   }

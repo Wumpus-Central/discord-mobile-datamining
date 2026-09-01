@@ -21,10 +21,12 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue,
-  onValueChange
+  onValueChange,
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DisplayNameStylesAccessibilitySetting.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/DisplayNameStylesAccessibilitySetting.tsx",
+);
 
 export default createToggle;
 export { useValue };

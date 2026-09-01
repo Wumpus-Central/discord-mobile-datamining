@@ -7,8 +7,13 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormChannelPicker.tsx");
+let closure_6 = createCacheKey.createStyles({
+  container: { alignItems: "center", flexDirection: "row" },
+  content: { marginStart: 8, flexGrow: 1 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/FormChannelPicker.tsx",
+);
 
 export default function FormChannelPicker(channelId) {
   channelId = channelId.channelId;
@@ -22,9 +27,7 @@ export default function FormChannelPicker(channelId) {
   stateFromStores = obj.useStateFromStores(items, () => onChange.getChannel(channelId), items1);
   let stringResult = importDefault(stateFromStores[6])(stateFromStores);
   if (onChange == null) {
-    onChange = () => {
-
-    };
+    onChange = () => {};
   }
   obj = {
     style: items2,
@@ -38,9 +41,13 @@ export default function FormChannelPicker(channelId) {
       }
       obj[1] = id;
       obj[2] = onChange;
-      obj.openLazy(channelId(stateFromStores[10])(stateFromStores[9], stateFromStores.paths), "ChannelSelectorActionSheet", obj);
+      obj.openLazy(
+        channelId(stateFromStores[10])(stateFromStores[9], stateFromStores.paths),
+        "ChannelSelectorActionSheet",
+        obj,
+      );
     },
-    children: null
+    children: null,
   };
   items2 = [tmp4.container, importDefault(stateFromStores[4])().textInput];
   let tmp10 = null;
@@ -54,7 +61,7 @@ export default function FormChannelPicker(channelId) {
     tmp10 = callback(TextIcon, { size: "sm" });
     const tmp5Result = tmp5(tmp2[11]);
   }
-  const items3 = [tmp10, , ];
+  const items3 = [tmp10, ,];
   obj = { style: tmp4.content, variant: "text-md/medium", color: null, children: null };
   let str = "text-muted";
   if (null != channelId) {
@@ -68,7 +75,10 @@ export default function FormChannelPicker(channelId) {
   obj[3] = stringResult;
   items3[1] = callback(channelId(stateFromStores[13]).Text, obj);
   const tmpResult = importDefault(stateFromStores[7]);
-  items3[2] = callback(channelId(stateFromStores[15]).Icon, { size: channelId(stateFromStores[15]).Icon.Sizes.MEDIUM, source: importDefault(stateFromStores[16]) });
+  items3[2] = callback(channelId(stateFromStores[15]).Icon, {
+    size: channelId(stateFromStores[15]).Icon.Sizes.MEDIUM,
+    source: importDefault(stateFromStores[16]),
+  });
   obj[3] = items3;
   return tmp8(tmpResult, obj);
-};
+}

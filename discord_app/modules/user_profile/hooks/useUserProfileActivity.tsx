@@ -27,7 +27,7 @@ export default function useUserProfileActivity(arg0) {
   tmpResult = tmp(tmp2[5]);
   const items2 = [closure_4];
   stateFromStores2 = tmpResult.useStateFromStores(items2, () => closure_1_4.getUserOutbox(closure_0));
-  const items3 = [stateFromStores1, ];
+  const items3 = [stateFromStores1];
   let entries;
   if (stateFromStores2 != null) {
     entries = stateFromStores2.entries;
@@ -93,4 +93,4 @@ export default function useUserProfileActivity(arg0) {
   }, items3);
   obj = { live: tmp7Result.live, recent: tmp7Result.recent, stream: tmp4, outbox: stateFromStores2 };
   return obj;
-};
+}

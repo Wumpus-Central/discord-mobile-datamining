@@ -39,7 +39,15 @@ function FocusedActivityAccessibilityLayer(activityName) {
     tmp10 = _require;
   }
   obj = { style: tmp.fill, children: null };
-  obj = { nativeID: "voice-panel-activity-" + channelId, accessibilityViewIsModal: tmp3, onAccessibilityEscape: null, accessibilityElementsHidden: null, importantForAccessibility: null, style: null, children: null };
+  obj = {
+    nativeID: "voice-panel-activity-" + channelId,
+    accessibilityViewIsModal: tmp3,
+    onAccessibilityEscape: null,
+    accessibilityElementsHidden: null,
+    importantForAccessibility: null,
+    style: null,
+    children: null,
+  };
   let tmp16;
   if (tmp3) {
     tmp16 = callback1;
@@ -53,8 +61,19 @@ function FocusedActivityAccessibilityLayer(activityName) {
   obj[4] = str;
   obj[5] = tmp.fill;
   obj[6] = children;
-  const items = [closure_8(tmp10(tmp8[8]).AccessibilityView, obj), ];
-  obj1 = { ref, style: absoluteFill.absoluteFill, pointerEvents: null, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, accessibilityElementsHidden: null, importantForAccessibility: null, onPress: null };
+  const items = [closure_8(tmp10(tmp8[8]).AccessibilityView, obj)];
+  obj1 = {
+    ref,
+    style: absoluteFill.absoluteFill,
+    pointerEvents: null,
+    accessible: true,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    accessibilityElementsHidden: null,
+    importantForAccessibility: null,
+    onPress: null,
+  };
   let str2 = "auto";
   let str3 = "auto";
   if (tmp3) {
@@ -93,4 +112,4 @@ export default function ActivityAccessibilityLayer(isActivityFocused) {
     }
   }
   children = merged.children;
-};
+}

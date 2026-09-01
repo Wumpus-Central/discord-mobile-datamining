@@ -11,7 +11,7 @@ function _getMyContentInventory() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -136,7 +136,7 @@ function _getContentInventoryOutbox() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -243,7 +243,7 @@ function _deleteContentInventoryEntryHistory() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       closure_5 = tmp3;
       c7 = 1;
       callback(709).dispatch({ type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START" });
@@ -307,7 +307,7 @@ function _postTrackToContentInventory() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();

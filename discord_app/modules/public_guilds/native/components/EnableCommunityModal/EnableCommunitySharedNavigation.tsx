@@ -9,9 +9,15 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ container: { flex: 1, height: "100%" }, modal: { height: "100%", flex: 1, justifyContent: "space-between" }, button: { flexGrow: 0, paddingLeft: 16, paddingTop: 16, paddingRight: 16 } });
+let closure_10 = createCacheKey.createStyles({
+  container: { flex: 1, height: "100%" },
+  modal: { height: "100%", flex: 1, justifyContent: "space-between" },
+  button: { flexGrow: 0, paddingLeft: 16, paddingTop: 16, paddingRight: 16 },
+});
 createCacheKey = { STEP_1: "STEP_1", STEP_2: "STEP_2", STEP_3: "STEP_3" };
-const result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/EnableCommunitySharedNavigation.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/public_guilds/native/components/EnableCommunityModal/EnableCommunitySharedNavigation.tsx",
+);
 
 export const EnableCommunityModalSteps = createCacheKey;
 export const EnableCommunityModalScreen = function EnableCommunityModalScreen(arg0) {
@@ -69,7 +75,7 @@ export const EnableCommunityModalScreen = function EnableCommunityModalScreen(ar
     obj1 = { style: null, children: null };
     obj1[0] = { flexGrow: 1 };
     obj1[1] = children;
-    const items3 = [callback(hasItem, obj1), ];
+    const items3 = [callback(hasItem, obj1)];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.button;
     if (buttonText == null) {

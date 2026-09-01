@@ -13,7 +13,7 @@ function _uploadDebugLogFiles() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -149,7 +149,7 @@ function _uploadAppLogFiles() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -309,12 +309,36 @@ function _uploadAppLogFiles() {
                     const _JSON2 = JSON;
                     const json = JSON.stringify(lib(closure_3[16])(), undefined, 2);
                     const _HermesInternal3 = HermesInternal;
-                    logger = "\n    " + tmp42 + "\n\n    " + result + "\n\n    Metadata:\n    " + json + "\n\n    ChannelStore:\n    " + JSON.stringify(debugInfo.getDebugInfo(), undefined, 2) + "\n\n    Logs:\n    " + lib + "\n\n    System logs:\n    " + lib2 + "\n\n    LibDiscore logs:\n    " + closure_4 + "\n\n    Push Notifications:\n    " + closure_3 + "\n    ";
+                    logger =
+                      "\n    " +
+                      tmp42 +
+                      "\n\n    " +
+                      result +
+                      "\n\n    Metadata:\n    " +
+                      json +
+                      "\n\n    ChannelStore:\n    " +
+                      JSON.stringify(debugInfo.getDebugInfo(), undefined, 2) +
+                      "\n\n    Logs:\n    " +
+                      lib +
+                      "\n\n    System logs:\n    " +
+                      lib2 +
+                      "\n\n    LibDiscore logs:\n    " +
+                      closure_4 +
+                      "\n\n    Push Notifications:\n    " +
+                      closure_3 +
+                      "\n    ";
                     let obj6 = lib2(closure_3[9]);
                     obj6.clear();
                     getSystemLog = c6.DEBUG_LOG(callback, "discord_app_logs");
                     const HTTP = callback(closure_3[17]).HTTP;
-                    obj5 = { url: null, body: null, retries: 3, headers: null, oldFormErrors: true, rejectWithError: false };
+                    obj5 = {
+                      url: null,
+                      body: null,
+                      retries: 3,
+                      headers: null,
+                      oldFormErrors: true,
+                      rejectWithError: false,
+                    };
                     obj5[0] = getSystemLog;
                     obj5[1] = logger;
                     obj5[3] = { "Content-Type": "text/plain" };

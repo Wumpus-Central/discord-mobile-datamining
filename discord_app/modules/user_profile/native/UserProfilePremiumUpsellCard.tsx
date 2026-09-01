@@ -33,7 +33,11 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   const items2 = [analyticsLocations];
   const callback1 = React.useCallback(() => {
     obj = { analyticsLocation: obj, analyticsLocations, premiumFeatureCardOrder: null };
-    obj = { page: closure_1_5.USER_SETTINGS, section: closure_1_6.SETTINGS_CUSTOMIZE_PROFILE_TRY_IT_OUT, object: closure_1_4.BUTTON_CTA };
+    obj = {
+      page: closure_1_5.USER_SETTINGS,
+      section: closure_1_6.SETTINGS_CUSTOMIZE_PROFILE_TRY_IT_OUT,
+      object: closure_1_4.BUTTON_CTA,
+    };
     obj[2] = navigation(closure_1_2[11]).PremiumFeatureCardOrder.TIER_2_LEADING;
     analyticsLocations(closure_1_2[10])(obj);
   }, items2);
@@ -62,6 +66,16 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   } else {
     stringResult1 = string(t.Tii53U);
   }
-  obj[4] = jsx(navigation(4474).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
-  return jsx(tmp(14276), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
+  obj[4] = jsx(navigation(4474).Text, {
+    variant: "text-sm/normal",
+    maxFontSizeMultiplier: 2.5,
+    children: stringResult1,
+  });
+  return jsx(tmp(14276), {
+    style: tmp3.container,
+    ctaText: null,
+    showLinearGradient: true,
+    onPress: null,
+    children: null,
+  });
 };

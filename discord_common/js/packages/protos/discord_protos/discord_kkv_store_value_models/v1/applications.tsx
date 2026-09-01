@@ -2,13 +2,26 @@
 import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
 import now from "../../../google/protobuf/timestamp.tsx";
 import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3 } from "../../../../../../../_runtime/metro/01307__.js";
+import {
+  MessageType,
+  MessageType as MessageType2,
+  MessageType as MessageType3,
+} from "../../../../../../../_runtime/metro/01307__.js";
 
 require = arg1;
-let obj = { UNSPECIFIED_DISCLOSURE: 0, [0]: "UNSPECIFIED_DISCLOSURE", IP_LOCATION: 1, [1]: "IP_LOCATION", DISPLAYS_ADVERTISEMENTS: 2, [2]: "DISPLAYS_ADVERTISEMENTS", PARTNER_SDK_DATA_SHARING_MESSAGE: 3, [3]: "PARTNER_SDK_DATA_SHARING_MESSAGE" };
+let obj = {
+  UNSPECIFIED_DISCLOSURE: 0,
+  [0]: "UNSPECIFIED_DISCLOSURE",
+  IP_LOCATION: 1,
+  [1]: "IP_LOCATION",
+  DISPLAYS_ADVERTISEMENTS: 2,
+  [2]: "DISPLAYS_ADVERTISEMENTS",
+  PARTNER_SDK_DATA_SHARING_MESSAGE: 3,
+  [3]: "PARTNER_SDK_DATA_SHARING_MESSAGE",
+};
 class ApplicationUserRoleConnection$Type extends MessageType {
   constructor() {
-    items = [, , , ];
+    items = [, , ,];
     items[0] = { no: 1, name: "metadata", kind: "map", K: 9, V: { kind: "scalar", T: 9 } };
     items[1] = { no: 2, name: "platform_name", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "platform_username", kind: "scalar", T: 9 };
@@ -112,7 +125,9 @@ prototype["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       str2 = stringResult;
     }
     const _globalThis = globalThis;
-    error = new Error("unknown map entry field for field discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection.metadata");
+    error = new Error(
+      "unknown map entry field for field discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection.metadata",
+    );
     throw error;
   }
   if (str2 == null) {
@@ -161,8 +176,24 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(metadata, tag, w
   }
   return tag;
 };
-let items = [{ no: 1, name: "metadata", kind: "map", K: 9, V: { kind: "scalar", T: 9 } }, { no: 2, name: "platform_name", kind: "scalar", T: 9 }, { no: 3, name: "platform_username", kind: "scalar", T: 9 }, { no: 4, name: "version", kind: "scalar", T: 6 }];
-const tmp6 = new "binaryReadMap1"("discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection", items, tmp4, tmp3, "create", "internalBinaryRead", tmp2, "internalBinaryWrite", tmp, ApplicationUserRoleConnection$Type);
+let items = [
+  { no: 1, name: "metadata", kind: "map", K: 9, V: { kind: "scalar", T: 9 } },
+  { no: 2, name: "platform_name", kind: "scalar", T: 9 },
+  { no: 3, name: "platform_username", kind: "scalar", T: 9 },
+  { no: 4, name: "version", kind: "scalar", T: 6 },
+];
+const tmp6 = new "binaryReadMap1"(
+  "discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection",
+  items,
+  tmp4,
+  tmp3,
+  "create",
+  "internalBinaryRead",
+  tmp2,
+  "internalBinaryWrite",
+  tmp,
+  ApplicationUserRoleConnection$Type,
+);
 // ThrowIfThisInitialized (0x7c)
 class AcknowledgedApplicationDisclosure$Type extends MessageType2 {
   constructor() {
@@ -171,21 +202,25 @@ class AcknowledgedApplicationDisclosure$Type extends MessageType2 {
       name: "disclosure_type",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType", closure_3];
-            return items;
-          }
+        const items = ["discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType", closure_3];
+        return items;
+      },
     };
-    items = [, ];
+    items = [,];
     items[0] = obj;
     items[1] = {
       no: 2,
       name: "acked_at",
       kind: "message",
       T() {
-            return callback(table[2]).Timestamp;
-          }
+        return callback(table[2]).Timestamp;
+      },
     };
-    tmp = new tmp("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosure", items, new.target);
+    tmp = new tmp(
+      "discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosure",
+      items,
+      new.target,
+    );
     // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
@@ -268,8 +303,16 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(disclosureType,
   if (disclosureType.ackedAt) {
     const Timestamp = now.Timestamp;
     const tagResult1 = tag.tag(2, _mod1307.WireType.LengthDelimited);
-    const joined = Timestamp.internalBinaryWrite(disclosureType.ackedAt, tag.tag(2, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = Timestamp.internalBinaryWrite(disclosureType.ackedAt, tag.tag(2, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = Timestamp.internalBinaryWrite(
+      disclosureType.ackedAt,
+      tag.tag(2, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = Timestamp.internalBinaryWrite(
+      disclosureType.ackedAt,
+      tag.tag(2, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -288,7 +331,7 @@ obj = {
   T() {
     const items = ["discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType", closure_3];
     return items;
-  }
+  },
 };
 const items1 = [
   obj,
@@ -298,10 +341,27 @@ const items1 = [
     kind: "message",
     T() {
       return callback(table[2]).Timestamp;
-    }
-  }
+    },
+  },
 ];
-tmp2 = new tmp2("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosure", items1, tmp4, AcknowledgedApplicationDisclosure$Type, "create", "internalBinaryRead", tmp2, "internalBinaryWrite", items1, undefined, arg1, dependencyMap, obj, new.target, tmp6, new.target);
+tmp2 = new tmp2(
+  "discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosure",
+  items1,
+  tmp4,
+  AcknowledgedApplicationDisclosure$Type,
+  "create",
+  "internalBinaryRead",
+  tmp2,
+  "internalBinaryWrite",
+  items1,
+  undefined,
+  arg1,
+  dependencyMap,
+  obj,
+  new.target,
+  tmp6,
+  new.target,
+);
 // ThrowIfThisInitialized (0x7c)
 let closure_4 = tmp2;
 class AcknowledgedApplicationDisclosures$Type extends MessageType3 {
@@ -312,12 +372,16 @@ class AcknowledgedApplicationDisclosures$Type extends MessageType3 {
       kind: "message",
       repeat: 1,
       T() {
-            return closure_4;
-          }
+        return closure_4;
+      },
     };
     items = [];
     items[0] = obj;
-    tmp = new tmp("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosures", items, new.target);
+    tmp = new tmp(
+      "discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosures",
+      items,
+      new.target,
+    );
     // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
@@ -395,7 +459,11 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(ackedDisclosure
       let tmp2 = require;
       let tmp3 = dependencyMap;
       let tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
-      let internalBinaryWriteResult = closure_4.internalBinaryWrite(ackedDisclosures.ackedDisclosures[num], tagResult.fork(), writeUnknownFields);
+      let internalBinaryWriteResult = closure_4.internalBinaryWrite(
+        ackedDisclosures.ackedDisclosures[num],
+        tagResult.fork(),
+        writeUnknownFields,
+      );
       let joined = internalBinaryWriteResult.join();
       num = num + 1;
       length = ackedDisclosures.ackedDisclosures.length;
@@ -418,12 +486,28 @@ obj = {
   repeat: 1,
   T() {
     return closure_4;
-  }
+  },
 };
 const items2 = [obj];
 // ThrowIfThisInitialized (0x7c)
-let tmp8 = new "internalBinaryWrite"("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosures", items2, tmp4, AcknowledgedApplicationDisclosure$Type, "create", "internalBinaryRead", AcknowledgedApplicationDisclosures$Type, "internalBinaryWrite", items2, undefined, arg1, dependencyMap, obj);
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx");
+let tmp8 = new "internalBinaryWrite"(
+  "discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosures",
+  items2,
+  tmp4,
+  AcknowledgedApplicationDisclosure$Type,
+  "create",
+  "internalBinaryRead",
+  AcknowledgedApplicationDisclosures$Type,
+  "internalBinaryWrite",
+  items2,
+  undefined,
+  arg1,
+  dependencyMap,
+  obj,
+);
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx",
+);
 
 export const ApplicationDisclosureType = obj;
 export const ApplicationUserRoleConnection = tmp6;

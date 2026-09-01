@@ -42,7 +42,7 @@ let obj = {
   },
   useValue: useDataToSupportQuests3PSettingValue,
   onValueChange: onDataToSupportQuests3PSettingValueChange,
-  useIsDisabled: useDataToSupportQuests3PSettingIsDisabled
+  useIsDisabled: useDataToSupportQuests3PSettingIsDisabled,
 };
 const toggle = createToggle.createToggle(obj);
 obj = {
@@ -54,7 +54,7 @@ obj = {
   usePredicate: apexExperiment.useIsAdTopicOptOutClientEnabled,
   useValue: useDataToSupportQuests3PSettingValue,
   onValueChange: onDataToSupportQuests3PSettingValueChange,
-  useIsDisabled: useDataToSupportQuests3PSettingIsDisabled
+  useIsDisabled: useDataToSupportQuests3PSettingIsDisabled,
 };
 const toggle1 = createToggle.createToggle(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx");

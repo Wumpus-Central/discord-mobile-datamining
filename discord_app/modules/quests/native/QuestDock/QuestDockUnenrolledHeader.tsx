@@ -14,17 +14,54 @@ require = arg1;
 let c4 = importAllResult;
 ({ AccessibilityInfo: c5, View: closure_6 } = get_ActivityIndicator);
 const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QUEST_DOCK_COLLAPSED_HEIGHT.QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
-({ QUEST_DOCK_CONTENT_BORDER_RADII: c9, QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED: c10, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: unpackModuleId, QUEST_DOCK_COLLAPSED_HEIGHT } = QUEST_DOCK_COLLAPSED_HEIGHT);
+({
+  QUEST_DOCK_CONTENT_BORDER_RADII: c9,
+  QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED: c10,
+  QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: unpackModuleId,
+  QUEST_DOCK_COLLAPSED_HEIGHT,
+} = QUEST_DOCK_COLLAPSED_HEIGHT);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-let obj = { questDockHeader: { alignItems: "center", justifyContent: "space-between", flexDirection: "row", height: QUEST_DOCK_COLLAPSED_HEIGHT, overflow: "hidden", paddingRight: 16, paddingLeft: 8, position: "absolute", zIndex: 2 }, wreathImage: { height: 35, marginRight: 4, width: 35 }, questDockHeaderPrimary: { alignItems: "center", flexDirection: "row" }, logo: { marginTop: 2 }, questDockHeaderSecondary: { flexGrow: 0, flexShrink: 0 }, questDockHeaderContentCollapsed: { justifyContent: "center", position: "absolute", bottom: 0, top: 0, right: 0 }, questDockHeaderContentExpanded: { alignItems: "center", flexDirection: "row", gap: 8 }, questDockHeaderActionDisclosures: { alignItems: "center", display: "flex", flexDirection: "row", gap: 4 }, questDockHeaderActionDisclosuresIcon: { height: 14, width: 14 }, questDockHeaderActionSeparator: null, questDockHeaderTertiaryContent: null };
+let obj = {
+  questDockHeader: {
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: "row",
+    height: QUEST_DOCK_COLLAPSED_HEIGHT,
+    overflow: "hidden",
+    paddingRight: 16,
+    paddingLeft: 8,
+    position: "absolute",
+    zIndex: 2,
+  },
+  wreathImage: { height: 35, marginRight: 4, width: 35 },
+  questDockHeaderPrimary: { alignItems: "center", flexDirection: "row" },
+  logo: { marginTop: 2 },
+  questDockHeaderSecondary: { flexGrow: 0, flexShrink: 0 },
+  questDockHeaderContentCollapsed: { justifyContent: "center", position: "absolute", bottom: 0, top: 0, right: 0 },
+  questDockHeaderContentExpanded: { alignItems: "center", flexDirection: "row", gap: 8 },
+  questDockHeaderActionDisclosures: { alignItems: "center", display: "flex", flexDirection: "row", gap: 4 },
+  questDockHeaderActionDisclosuresIcon: { height: 14, width: 14 },
+  questDockHeaderActionSeparator: null,
+  questDockHeaderTertiaryContent: null,
+};
 obj = { backgroundColor: ThemesDefault.colors.TEXT_DEFAULT, opacity: 0.2, height: 18, width: 1.5 };
 obj[9] = obj;
 obj[10] = { opacity: 0.7 };
 let closure_16 = createCacheKey.createStyles(obj);
 function questDockHeaderLayoutAnimation(currentOriginX) {
   obj = { initialValues: obj, animations: null };
-  obj = { originX: currentOriginX.currentOriginX, originY: currentOriginX.currentOriginY, width: currentOriginX.currentWidth, height: currentOriginX.currentHeight };
-  obj = { originX: CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetOriginX, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED), originY: null, height: null, width: null };
+  obj = {
+    originX: currentOriginX.currentOriginX,
+    originY: currentOriginX.currentOriginY,
+    width: currentOriginX.currentWidth,
+    height: currentOriginX.currentHeight,
+  };
+  obj = {
+    originX: CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetOriginX, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),
+    originY: null,
+    height: null,
+    width: null,
+  };
   const obj4 = CONFIG_NEVER_ANIMATE;
   obj[1] = CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetOriginY, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
   const obj5 = CONFIG_NEVER_ANIMATE;
@@ -37,14 +74,30 @@ function questDockHeaderLayoutAnimation(currentOriginX) {
 createCacheKey = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
 questDockHeaderLayoutAnimation.__closure = createCacheKey;
 questDockHeaderLayoutAnimation.__workletHash = 6787168806966;
-questDockHeaderLayoutAnimation.__initData = { code: "function questDockHeaderLayoutAnimation_QuestDockUnenrolledHeaderTsx1(values){const{withSpring,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:withSpring(values.targetOriginX,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),originY:withSpring(values.targetOriginY,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),height:withSpring(values.targetHeight,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),width:withSpring(values.targetWidth,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)}};}" };
-let closure_18 = { code: "function QuestDockUnenrolledHeaderTsx2(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_CONTENT_BORDER_RADII,questDockBorderRadius,withSpring,questDockAnimatedBorderRadius,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,questDockWrapperSpecs,QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED}=this.__closure;return{borderTopLeftRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:questDockBorderRadius,borderTopRightRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:questDockBorderRadius,borderBottomLeftRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:withSpring(questDockAnimatedBorderRadius.get(),QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),borderBottomRightRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:withSpring(questDockAnimatedBorderRadius.get(),QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),width:activeQuestDockMode.get()===QuestDockMode.EXPANDED?questDockWrapperSpecs.get().width-QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED*2:questDockWrapperSpecs.get().width,transform:[{translateX:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)},{translateY:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)}]};}" };
-let closure_19 = { code: "function QuestDockUnenrolledHeaderTsx3(){const{withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?0:1,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)};}" };
-let closure_20 = { code: "function QuestDockUnenrolledHeaderTsx4(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED}=this.__closure;return{right:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED*-1:0};}" };
-let closure_21 = { code: "function QuestDockUnenrolledHeaderTsx5(){const{withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)};}" };
-let closure_22 = { code: "function QuestDockUnenrolledHeaderTsx6(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED}=this.__closure;return{right:activeQuestDockMode.get()===QuestDockMode.EXPANDED?0:QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED};}" };
-let closure_23 = { code: "function QuestDockUnenrolledHeaderTsx7(){const{activeQuestDockMode,QuestDockMode}=this.__closure;return{pointerEvents:activeQuestDockMode.get()===QuestDockMode.EXPANDED?'auto':'none'};}" };
-let closure_24 = { code: "function QuestDockUnenrolledHeaderTsx8(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_CONTENT_BORDER_RADII,questDockBorderRadius,withSpring,questDockAnimatedBorderRadius,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,questDockWrapperSpecs}=this.__closure;return{borderRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:questDockBorderRadius,borderBottomLeftRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:withSpring(questDockAnimatedBorderRadius.get(),QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),borderBottomRightRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:withSpring(questDockAnimatedBorderRadius.get(),QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),width:questDockWrapperSpecs.get().width};}" };
+questDockHeaderLayoutAnimation.__initData = {
+  code: "function questDockHeaderLayoutAnimation_QuestDockUnenrolledHeaderTsx1(values){const{withSpring,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:withSpring(values.targetOriginX,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),originY:withSpring(values.targetOriginY,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),height:withSpring(values.targetHeight,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),width:withSpring(values.targetWidth,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)}};}",
+};
+let closure_18 = {
+  code: "function QuestDockUnenrolledHeaderTsx2(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_CONTENT_BORDER_RADII,questDockBorderRadius,withSpring,questDockAnimatedBorderRadius,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,questDockWrapperSpecs,QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED}=this.__closure;return{borderTopLeftRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:questDockBorderRadius,borderTopRightRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:questDockBorderRadius,borderBottomLeftRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:withSpring(questDockAnimatedBorderRadius.get(),QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),borderBottomRightRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:withSpring(questDockAnimatedBorderRadius.get(),QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),width:activeQuestDockMode.get()===QuestDockMode.EXPANDED?questDockWrapperSpecs.get().width-QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED*2:questDockWrapperSpecs.get().width,transform:[{translateX:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)},{translateY:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)}]};}",
+};
+let closure_19 = {
+  code: "function QuestDockUnenrolledHeaderTsx3(){const{withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?0:1,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)};}",
+};
+let closure_20 = {
+  code: "function QuestDockUnenrolledHeaderTsx4(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED}=this.__closure;return{right:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED*-1:0};}",
+};
+let closure_21 = {
+  code: "function QuestDockUnenrolledHeaderTsx5(){const{withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)};}",
+};
+let closure_22 = {
+  code: "function QuestDockUnenrolledHeaderTsx6(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED}=this.__closure;return{right:activeQuestDockMode.get()===QuestDockMode.EXPANDED?0:QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED};}",
+};
+let closure_23 = {
+  code: "function QuestDockUnenrolledHeaderTsx7(){const{activeQuestDockMode,QuestDockMode}=this.__closure;return{pointerEvents:activeQuestDockMode.get()===QuestDockMode.EXPANDED?'auto':'none'};}",
+};
+let closure_24 = {
+  code: "function QuestDockUnenrolledHeaderTsx8(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_CONTENT_BORDER_RADII,questDockBorderRadius,withSpring,questDockAnimatedBorderRadius,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,questDockWrapperSpecs}=this.__closure;return{borderRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:questDockBorderRadius,borderBottomLeftRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:withSpring(questDockAnimatedBorderRadius.get(),QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),borderBottomRightRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:withSpring(questDockAnimatedBorderRadius.get(),QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),width:questDockWrapperSpecs.get().width};}",
+};
 const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
   let obj = questCreative(questDockWrapperSpecs[10]);
   questCreative = obj.useQuestCreative();
@@ -62,14 +115,21 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
     obj = questCreative(questDockWrapperSpecs[12]);
   }, []);
   let items = [questCreative];
-  const memo = token.useMemo(() => ({ type: questCreative(questDockWrapperSpecs[13]).AdCreativeType.QUEST, quest: questCreative }), items);
+  const memo = token.useMemo(
+    () => ({ type: questCreative(questDockWrapperSpecs[13]).AdCreativeType.QUEST, quest: questCreative }),
+    items,
+  );
   obj1 = questCreative(questDockWrapperSpecs[14]);
   const items1 = [questCreative];
   const tmp5 = callback(token.useState(false), 2);
   callback = token.useCallback(() => {
     let obj = activeQuestDockMode(questDockWrapperSpecs[15]);
     obj = { quest: questCreative, isTargetedDisclosure: true, trackingCtx: null };
-    obj = { content: questCreative(questDockWrapperSpecs[16]).QuestContent.QUEST_BAR_MOBILE, ctaContent: questCreative(questDockWrapperSpecs[17]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE, sourceQuestContent: questCreative(questDockWrapperSpecs[16]).QuestContent.QUEST_BAR_MOBILE };
+    obj = {
+      content: questCreative(questDockWrapperSpecs[16]).QuestContent.QUEST_BAR_MOBILE,
+      ctaContent: questCreative(questDockWrapperSpecs[17]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE,
+      sourceQuestContent: questCreative(questDockWrapperSpecs[16]).QuestContent.QUEST_BAR_MOBILE,
+    };
     obj[2] = obj;
     obj.showModal(obj);
   }, items1);
@@ -91,7 +151,14 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
     constructor() {
       obj = activeQuestDockMode;
       tmp = closure_1_7;
-      obj = { borderTopLeftRadius: activeQuestDockMode.get() === closure_1_7.EXPANDED ? closure_1_9 : closure_4, borderTopRightRadius: obj.get() === tmp.EXPANDED ? closure_1_9 : closure_4, borderBottomLeftRadius: null, borderBottomRightRadius: null, width: null, transform: null };
+      obj = {
+        borderTopLeftRadius: activeQuestDockMode.get() === closure_1_7.EXPANDED ? closure_1_9 : closure_4,
+        borderTopRightRadius: obj.get() === tmp.EXPANDED ? closure_1_9 : closure_4,
+        borderBottomLeftRadius: null,
+        borderBottomRightRadius: null,
+        width: null,
+        transform: null,
+      };
       if (obj.get() === tmp.EXPANDED) {
         withSpringResult = closure_1_9;
       } else {
@@ -133,7 +200,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
       }
       obj1 = { translateX: obj5.withSpring(num2, closure_1_8) };
       tmp17 = closure_1_8;
-      items = [, ];
+      items = [,];
       items[0] = obj1;
       tmp15Result = tmp15(tmp16[9]);
       num3 = 0;
@@ -146,7 +213,17 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
       return obj;
     }
   }
-  obj = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII: closure_9, questDockBorderRadius: token, withSpring: tmp(tmp2[9]).withSpring, questDockAnimatedBorderRadius: tmp16, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_11 };
+  obj = {
+    activeQuestDockMode,
+    QuestDockMode,
+    QUEST_DOCK_CONTENT_BORDER_RADII: closure_9,
+    questDockBorderRadius: token,
+    withSpring: tmp(tmp2[9]).withSpring,
+    questDockAnimatedBorderRadius: tmp16,
+    QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
+    questDockWrapperSpecs,
+    QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_11,
+  };
   K.__closure = obj;
   K.__workletHash = 15527986377887;
   K.__initData = closure_18;
@@ -163,7 +240,12 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
       return obj;
     }
   }
-  obj = { withSpring: tmp(tmp2[9]).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  obj = {
+    withSpring: tmp(tmp2[9]).withSpring,
+    activeQuestDockMode,
+    QuestDockMode,
+    QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
+  };
   X.__closure = obj;
   X.__workletHash = 15527972438968;
   X.__initData = closure_19;
@@ -191,7 +273,12 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
     obj = { opacity: obj.withSpring(num, closure_1_8) };
     return obj;
   };
-  obj2 = { withSpring: tmp(tmp2[9]).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  obj2 = {
+    withSpring: tmp(tmp2[9]).withSpring,
+    activeQuestDockMode,
+    QuestDockMode,
+    QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
+  };
   fn2.__closure = obj2;
   fn2.__workletHash = 11647269239934;
   fn2.__initData = closure_21;
@@ -227,7 +314,12 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
   const tmpResult5 = questCreative(questDockWrapperSpecs[22]);
   const fn3 = function x() {
     let obj = activeQuestDockMode;
-    obj = { borderRadius: activeQuestDockMode.get() === closure_1_7.EXPANDED ? closure_1_9 : token, borderBottomLeftRadius: null, borderBottomRightRadius: null, width: null };
+    obj = {
+      borderRadius: activeQuestDockMode.get() === closure_1_7.EXPANDED ? closure_1_9 : token,
+      borderBottomLeftRadius: null,
+      borderBottomRightRadius: null,
+      width: null,
+    };
     if (obj.get() === closure_1_7.EXPANDED) {
       let withSpringResult = closure_1_9;
     } else {
@@ -246,14 +338,34 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
     return obj;
   };
   const tmpResult6 = questCreative(questDockWrapperSpecs[22]);
-  fn3.__closure = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII: closure_9, questDockBorderRadius: token, withSpring: questCreative(questDockWrapperSpecs[9]).withSpring, questDockAnimatedBorderRadius: tmp16, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs };
+  fn3.__closure = {
+    activeQuestDockMode,
+    QuestDockMode,
+    QUEST_DOCK_CONTENT_BORDER_RADII: closure_9,
+    questDockBorderRadius: token,
+    withSpring: questCreative(questDockWrapperSpecs[9]).withSpring,
+    questDockAnimatedBorderRadius: tmp16,
+    QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
+    questDockWrapperSpecs,
+  };
   fn3.__workletHash = 16321960714067;
   fn3.__initData = closure_24;
   const animatedStyle5 = tmpResult6.useAnimatedStyle(fn3);
   const tmp24 = callback3();
-  let obj3 = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII: closure_9, questDockBorderRadius: token, withSpring: questCreative(questDockWrapperSpecs[9]).withSpring, questDockAnimatedBorderRadius: tmp16, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs };
+  let obj3 = {
+    activeQuestDockMode,
+    QuestDockMode,
+    QUEST_DOCK_CONTENT_BORDER_RADII: closure_9,
+    questDockBorderRadius: token,
+    withSpring: questCreative(questDockWrapperSpecs[9]).withSpring,
+    questDockAnimatedBorderRadius: tmp16,
+    QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
+    questDockWrapperSpecs,
+  };
   const questBarHeroBlurhash = questCreative.config.assets.questBarHeroBlurhash;
-  const questGameLogotypeAssetUrl = questCreative(questDockWrapperSpecs[23]).useQuestGameLogotypeAssetUrl(questCreative);
+  const questGameLogotypeAssetUrl = questCreative(questDockWrapperSpecs[23]).useQuestGameLogotypeAssetUrl(
+    questCreative,
+  );
   let obj4 = { style: items2, layout: questDockHeaderLayoutAnimation, children: null };
   items2 = [tmp24.questDockHeader, animatedStyle];
   let tmp11Result = tmp11(tmp2[24]);
@@ -267,7 +379,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
       let tmp31 = callback2(tmp11(tmp2[25]), obj5);
       let tmp30 = callback2;
     }
-    const items3 = [tmp31, , ];
+    const items3 = [tmp31, ,];
     const obj6 = { style: null, children: null };
     obj6[0] = tmp24.questDockHeaderPrimary;
     tmp11Result = tmp11(tmp2[27]);
@@ -279,7 +391,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
     const obj7 = { source: null, resizeMode: "contain", style: null };
     obj7[0] = tmp11Result1;
     obj7[2] = tmp24.wreathImage;
-    const items4 = [tmp30(tmp11Result, obj7), ];
+    const items4 = [tmp30(tmp11Result, obj7)];
     const obj8 = { assetUrl: null, height: 36, maxWidth: 120, style: null };
     obj8[0] = questGameLogotypeAssetUrl;
     obj8[3] = tmp24.logo;
@@ -305,7 +417,14 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
       constructor() {
         obj = activeQuestDockMode;
         tmp = closure_1_7;
-        obj = { borderTopLeftRadius: activeQuestDockMode.get() === closure_1_7.EXPANDED ? closure_1_9 : closure_4, borderTopRightRadius: obj.get() === tmp.EXPANDED ? closure_1_9 : closure_4, borderBottomLeftRadius: null, borderBottomRightRadius: null, width: null, transform: null };
+        obj = {
+          borderTopLeftRadius: activeQuestDockMode.get() === closure_1_7.EXPANDED ? closure_1_9 : closure_4,
+          borderTopRightRadius: obj.get() === tmp.EXPANDED ? closure_1_9 : closure_4,
+          borderBottomLeftRadius: null,
+          borderBottomRightRadius: null,
+          width: null,
+          transform: null,
+        };
         if (obj.get() === tmp.EXPANDED) {
           withSpringResult = closure_1_9;
         } else {
@@ -347,7 +466,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
         }
         obj1 = { translateX: obj5.withSpring(num2, closure_1_8) };
         tmp17 = closure_1_8;
-        items = [, ];
+        items = [,];
         items[0] = obj1;
         tmp15Result = tmp15(tmp16[9]);
         num3 = 0;
@@ -372,7 +491,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
     const tmp11Result4 = tmp11(tmp2[24]);
     const obj15 = { onPress: null, accessibilityRole: "button", style: null, children: null };
     obj15[0] = callback;
-    const items7 = [, ];
+    const items7 = [,];
     ({ questDockHeaderActionDisclosures: arr8[0], questDockHeaderTertiaryContent: arr8[1] } = tmp24);
     obj15[2] = items7;
     const obj16 = { children: null };
@@ -390,14 +509,14 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
     }
     const intl2 = tmp(tmp2[32]).intl;
     obj17[2] = intl2.string(tmp(tmp2[32]).t.o6FLcF);
-    const items8 = [tmp30(tmp42, obj17), ];
+    const items8 = [tmp30(tmp42, obj17)];
     const obj18 = { color: null, style: null };
     obj18[0] = tmp11(tmp2[8]).colors.INTERACTIVE_TEXT_ACTIVE;
     obj18[1] = tmp24.questDockHeaderActionDisclosuresIcon;
     items8[1] = tmp30(tmp(tmp2[34]).CircleQuestionIcon, obj18);
     obj16[0] = items8;
     obj15[3] = tmp26(closure_15, obj16);
-    const items9 = [tmp30(tmp(tmp2[33]).PressableOpacity, obj15), , ];
+    const items9 = [tmp30(tmp(tmp2[33]).PressableOpacity, obj15), ,];
     const obj19 = { style: null };
     obj19[0] = tmp24.questDockHeaderActionSeparator;
     items9[1] = tmp30(closure_6, obj19);

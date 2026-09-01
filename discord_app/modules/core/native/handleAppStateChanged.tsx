@@ -45,4 +45,4 @@ export default function handleAppStateChanged(state) {
     tmp2(698).track(constants.APP_BACKGROUND, {});
     const tmp2Result1 = tmp2(698);
   }
-};
+}

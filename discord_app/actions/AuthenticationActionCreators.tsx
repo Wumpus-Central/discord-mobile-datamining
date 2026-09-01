@@ -77,7 +77,13 @@ obj = {
     obj = login(self[8]);
     obj.dispatch({ type: "LOGIN", isPasswordAttempt: true });
     obj1 = login(self[12]);
-    obj = { url: closure_9.LOGIN, body: { login, password, undelete, login_source: source, gift_code_sku_id: giftCodeSKUId }, retries: 2, oldFormErrors: true, trackedActionData: null };
+    obj = {
+      url: closure_9.LOGIN,
+      body: { login, password, undelete, login_source: source, gift_code_sku_id: giftCodeSKUId },
+      retries: 2,
+      oldFormErrors: true,
+      trackedActionData: null,
+    };
     obj = { event: isMultiAccount(self[13]).NetworkActionNames.USER_LOGIN, properties: null };
     let code;
     if (invite != null) {
@@ -97,104 +103,122 @@ obj = {
     const tmp = self;
     const tmp3 = isMultiAccount;
     const tmp3Result = isMultiAccount(self[14]);
-    return obj1.post(obj).then((body) => {
-      body = body.body;
-      const token = body.token;
-      ({ mfa, sms, webauthn, ticket, backup, user_id, required_actions, totp, login_instance_id } = body);
-      obj = login(self[8]);
-      obj.dispatch({ type: "LOGIN_ATTEMPTED", user_id, required_actions });
-      if (mfa) {
-        let tmpResult = tmp(tmp2[8]);
-        obj = { type: "LOGIN_MFA_STEP", ticket: null, sms: null, webauthn: null, totp: null, backup: null, loginInstanceId: null };
-        obj[1] = ticket;
-        obj[2] = sms;
-        obj[3] = webauthn;
-        obj[4] = totp;
-        obj[5] = backup;
-        obj[6] = login_instance_id;
-        tmpResult.dispatch(obj);
-      } else if (isMultiAccount) {
-        self.switchAccountToken(token);
-      } else {
-        tmpResult = tmp(tmp2[8]);
-        obj = { type: "LOGIN_SUCCESS", token: null };
-        obj[1] = token;
-        tmpResult.dispatch(obj);
-      }
-    }, (body) => {
-      const v6OrEarlierAPIError = new isMultiAccount(self[15]).V6OrEarlierAPIError(body);
-      if (null != body.body) {
+    return obj1.post(obj).then(
+      (body) => {
         body = body.body;
-        let suspended_user_token;
-        if (body != null) {
-          suspended_user_token = body.suspended_user_token;
+        const token = body.token;
+        ({ mfa, sms, webauthn, ticket, backup, user_id, required_actions, totp, login_instance_id } = body);
+        obj = login(self[8]);
+        obj.dispatch({ type: "LOGIN_ATTEMPTED", user_id, required_actions });
+        if (mfa) {
+          let tmpResult = tmp(tmp2[8]);
+          obj = {
+            type: "LOGIN_MFA_STEP",
+            ticket: null,
+            sms: null,
+            webauthn: null,
+            totp: null,
+            backup: null,
+            loginInstanceId: null,
+          };
+          obj[1] = ticket;
+          obj[2] = sms;
+          obj[3] = webauthn;
+          obj[4] = totp;
+          obj[5] = backup;
+          obj[6] = login_instance_id;
+          tmpResult.dispatch(obj);
+        } else if (isMultiAccount) {
+          self.switchAccountToken(token);
+        } else {
+          tmpResult = tmp(tmp2[8]);
+          obj = { type: "LOGIN_SUCCESS", token: null };
+          obj[1] = token;
+          tmpResult.dispatch(obj);
         }
-        if (null != suspended_user_token) {
-          const body3 = body.body;
-          let suspended_user_token1;
-          if (body3 != null) {
-            suspended_user_token1 = body3.suspended_user_token;
+      },
+      (body) => {
+        const v6OrEarlierAPIError = new isMultiAccount(self[15]).V6OrEarlierAPIError(body);
+        if (null != body.body) {
+          body = body.body;
+          let suspended_user_token;
+          if (body != null) {
+            suspended_user_token = body.suspended_user_token;
           }
-          obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: null };
-          obj[1] = suspended_user_token1;
-          login(tmp[8]).dispatch(obj);
-          throw v6OrEarlierAPIError;
-        }
-      }
-      const body2 = body.body;
-      let code;
-      if (body2 != null) {
-        code = body2.code;
-      }
-      if (code === closure_1_12.ACCOUNT_SCHEDULED_FOR_DELETION) {
-        if (null != password) {
-          if ("" !== tmp6) {
-            obj = { type: "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", credentials: null };
-            obj1 = { login: null, password: null };
-            obj1[0] = login;
-            obj1[1] = tmp6;
-            obj[1] = obj1;
+          if (null != suspended_user_token) {
+            const body3 = body.body;
+            let suspended_user_token1;
+            if (body3 != null) {
+              suspended_user_token1 = body3.suspended_user_token;
+            }
+            obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: null };
+            obj[1] = suspended_user_token1;
             login(tmp[8]).dispatch(obj);
-            const obj9 = login(tmp[8]);
-          }
-          throw v6OrEarlierAPIError;
-        }
-      }
-      if (code === closure_1_12.ACCOUNT_DISABLED) {
-        if (null != password) {
-          if ("" !== tmp7) {
-            let obj5 = login(tmp[8]);
-            let obj2 = { type: "LOGIN_ACCOUNT_DISABLED", credentials: null };
-            const obj3 = { login: null, password: null };
-            obj3[0] = login;
-            obj3[1] = tmp7;
-            obj2[1] = obj3;
-            obj5.dispatch(obj2);
+            throw v6OrEarlierAPIError;
           }
         }
-      }
-      if (code === closure_1_12.PHONE_VERIFICATION_REQUIRED) {
-        obj2 = login(tmp[8]);
-        const obj4 = { type: "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED", credentials: null };
-        obj5 = { login: null, password: null };
-        obj5[0] = login;
-        obj5[1] = password;
-        obj4[1] = obj5;
-        obj2.dispatch(obj4);
-      } else {
-        obj = login(tmp[8]);
-        const obj6 = { type: "LOGIN_FAILURE", error: null };
-        obj6[1] = v6OrEarlierAPIError;
-        obj.dispatch(obj6);
-      }
-    });
+        const body2 = body.body;
+        let code;
+        if (body2 != null) {
+          code = body2.code;
+        }
+        if (code === closure_1_12.ACCOUNT_SCHEDULED_FOR_DELETION) {
+          if (null != password) {
+            if ("" !== tmp6) {
+              obj = { type: "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", credentials: null };
+              obj1 = { login: null, password: null };
+              obj1[0] = login;
+              obj1[1] = tmp6;
+              obj[1] = obj1;
+              login(tmp[8]).dispatch(obj);
+              const obj9 = login(tmp[8]);
+            }
+            throw v6OrEarlierAPIError;
+          }
+        }
+        if (code === closure_1_12.ACCOUNT_DISABLED) {
+          if (null != password) {
+            if ("" !== tmp7) {
+              let obj5 = login(tmp[8]);
+              let obj2 = { type: "LOGIN_ACCOUNT_DISABLED", credentials: null };
+              const obj3 = { login: null, password: null };
+              obj3[0] = login;
+              obj3[1] = tmp7;
+              obj2[1] = obj3;
+              obj5.dispatch(obj2);
+            }
+          }
+        }
+        if (code === closure_1_12.PHONE_VERIFICATION_REQUIRED) {
+          obj2 = login(tmp[8]);
+          const obj4 = { type: "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED", credentials: null };
+          obj5 = { login: null, password: null };
+          obj5[0] = login;
+          obj5[1] = password;
+          obj4[1] = obj5;
+          obj2.dispatch(obj4);
+        } else {
+          obj = login(tmp[8]);
+          const obj6 = { type: "LOGIN_FAILURE", error: null };
+          obj6[1] = v6OrEarlierAPIError;
+          obj.dispatch(obj6);
+        }
+      },
+    );
   },
   loginMFAv2(arg0) {
     const self = this;
     ({ isMultiAccount: require, loginInstanceId } = arg0);
     ({ code, ticket, source, giftCodeSKUId, mfaType } = arg0);
     obj = self(4713);
-    obj = { url: closure_9.LOGIN_MFA(mfaType), body: null, retries: 2, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
+    obj = {
+      url: closure_9.LOGIN_MFA(mfaType),
+      body: null,
+      retries: 2,
+      oldFormErrors: true,
+      trackedActionData: null,
+      rejectWithError: true,
+    };
     obj = { code, ticket, login_source: source, gift_code_sku_id: giftCodeSKUId, login_instance_id: null };
     if (loginInstanceId == null) {
       loginInstanceId = authStore.getLoginInstanceId();
@@ -204,42 +228,51 @@ obj = {
     obj[4] = { event: encodeProperties.NetworkActionNames.USER_LOGIN_MFA };
     obj1 = { event: encodeProperties.NetworkActionNames.USER_LOGIN_MFA };
     const postResult = obj.post(obj);
-    return obj.post(obj).then((body) => {
-      if (closure_0) {
-        self.switchAccountToken(body.body.token);
-      } else {
-        obj = self(closure_1_3[8]);
-        obj = { type: "LOGIN_SUCCESS", token: null };
-        obj[1] = body.body.token;
-        obj.dispatch(obj);
-      }
-    }).catch((body) => {
-      if (null != body.body) {
-        if (null != body.body.suspended_user_token) {
-          obj = self(table[8]);
-          obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: null };
-          obj[1] = body.body.suspended_user_token;
+    return obj
+      .post(obj)
+      .then((body) => {
+        if (closure_0) {
+          self.switchAccountToken(body.body.token);
+        } else {
+          obj = self(closure_1_3[8]);
+          obj = { type: "LOGIN_SUCCESS", token: null };
+          obj[1] = body.body.token;
           obj.dispatch(obj);
         }
-      }
-      body = body.body;
-      let code;
-      if (body != null) {
-        code = body.code;
-      }
-      if (code === constants.MFA_INVALID_CODE) {
-        const _Error = Error;
-        error = new Error(body.body.message);
-        throw error;
-      } else {
-        throw body;
-      }
-    });
+      })
+      .catch((body) => {
+        if (null != body.body) {
+          if (null != body.body.suspended_user_token) {
+            obj = self(table[8]);
+            obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: null };
+            obj[1] = body.body.suspended_user_token;
+            obj.dispatch(obj);
+          }
+        }
+        body = body.body;
+        let code;
+        if (body != null) {
+          code = body.code;
+        }
+        if (code === constants.MFA_INVALID_CODE) {
+          const _Error = Error;
+          error = new Error(body.body.message);
+          throw error;
+        } else {
+          throw body;
+        }
+      });
   },
   authenticatePasswordless(arg0) {
-    ({ authenticateFunc: require, conditionalMediationAbortController: importDefault, source: importAll, giftCodeSKUId: dependencyMap, isMultiAccount: closure_4 } = arg0);
+    ({
+      authenticateFunc: require,
+      conditionalMediationAbortController: importDefault,
+      source: importAll,
+      giftCodeSKUId: dependencyMap,
+      isMultiAccount: closure_4,
+    } = arg0);
     const self = this;
-    return self(function*() {
+    return self(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -406,38 +439,47 @@ obj = {
     isMultiAccount = isMultiAccount.isMultiAccount;
     ({ ticket, credential, source, giftCodeSKUId } = isMultiAccount);
     obj = self(4713);
-    obj = { url: closure_9.WEBAUTHN_CONDITIONAL_UI_LOGIN, body: { credential, ticket, source, giftCodeSKUId }, retries: 1, trackedActionData: null, rejectWithError: true };
+    obj = {
+      url: closure_9.WEBAUTHN_CONDITIONAL_UI_LOGIN,
+      body: { credential, ticket, source, giftCodeSKUId },
+      retries: 1,
+      trackedActionData: null,
+      rejectWithError: true,
+    };
     obj = { event: isMultiAccount(503).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
     obj[3] = obj;
     const postResult = obj.post(obj);
-    return obj.post(obj).then((body) => {
-      body = body.body;
-      const token = body.token;
-      ({ user_id, required_actions } = body);
-      obj = self(closure_1_3[8]);
-      obj.dispatch({ type: "LOGIN_ATTEMPTED", user_id, required_actions });
-      if (isMultiAccount) {
-        self.switchAccountToken(token);
-      } else {
-        obj = { type: "LOGIN_SUCCESS", token: null };
-        obj[1] = token;
-        self(closure_1_3[8]).dispatch(obj);
-        const tmpResult = self(closure_1_3[8]);
-      }
-    }).catch((body) => {
-      let aPIError = body;
-      if (body instanceof isMultiAccount(table[14]).HTTPResponseError) {
-        if (null != body.body.suspended_user_token) {
-          obj = self(tmp2[8]);
-          obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: null };
-          obj[1] = body.body.suspended_user_token;
-          obj.dispatch(obj);
+    return obj
+      .post(obj)
+      .then((body) => {
+        body = body.body;
+        const token = body.token;
+        ({ user_id, required_actions } = body);
+        obj = self(closure_1_3[8]);
+        obj.dispatch({ type: "LOGIN_ATTEMPTED", user_id, required_actions });
+        if (isMultiAccount) {
+          self.switchAccountToken(token);
         } else {
-          aPIError = new isMultiAccount(tmp2[15]).APIError(body);
+          obj = { type: "LOGIN_SUCCESS", token: null };
+          obj[1] = token;
+          self(closure_1_3[8]).dispatch(obj);
+          const tmpResult = self(closure_1_3[8]);
         }
-      }
-      throw aPIError;
-    });
+      })
+      .catch((body) => {
+        let aPIError = body;
+        if (body instanceof isMultiAccount(table[14]).HTTPResponseError) {
+          if (null != body.body.suspended_user_token) {
+            obj = self(tmp2[8]);
+            obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: null };
+            obj[1] = body.body.suspended_user_token;
+            obj.dispatch(obj);
+          } else {
+            aPIError = new isMultiAccount(tmp2[15]).APIError(body);
+          }
+        }
+        throw aPIError;
+      });
   },
   loginToken(c0, arg1) {
     const self = this;
@@ -464,7 +506,7 @@ obj = {
   oneTimeLogin(arg0) {
     closure_0 = arg0;
     const self = this;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -610,7 +652,11 @@ obj = {
     const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx").Storage;
     obj[3] = Storage2.get(closure_11);
     obj[1] = obj;
-    obj[3] = { event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames.USER_LOGOUT, properties: obj2 };
+    obj[3] = {
+      event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames
+        .USER_LOGOUT,
+      properties: obj2,
+    };
     let tmp4 = null != arg2;
     if (tmp4) {
       let str = setSecondaryTokenAll.getToken(arg2);
@@ -625,9 +671,14 @@ obj = {
       const obj6 = setSecondaryTokenAll;
     }
     const merged = Object.assign(tmp4);
-    obj1 = { event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames.USER_LOGOUT, properties: obj2 };
+    obj1 = {
+      event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames
+        .USER_LOGOUT,
+      properties: obj2,
+    };
     const tmp3 = _require;
-    obj.rejectWithError = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    obj.rejectWithError =
+      require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     const tmp3Result = sendRequest;
     return obj.post(obj).finally(() => {
       let tmp2 = null != closure_2;
@@ -682,7 +733,7 @@ obj = {
   },
   verify(arg0) {
     closure_0 = arg0;
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
       const obj7 = closure_1_1(4713);
@@ -729,7 +780,7 @@ obj = {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    return callback(function*() {
+    return callback(function* () {
       if (token === 2) {
         token = 3;
         HermesBuiltin.throwTypeError();
@@ -868,8 +919,15 @@ obj = {
     })();
   },
   resetPasswordMFAv2(arg0) {
-    ({ method: require, code: importDefault, ticket: importAll, password: dependencyMap, token: closure_4, source: closure_5 } = arg0);
-    return callback(function*() {
+    ({
+      method: require,
+      code: importDefault,
+      ticket: importAll,
+      password: dependencyMap,
+      token: closure_4,
+      source: closure_5,
+    } = arg0);
+    return callback(function* () {
       const obj5 = v02(closure_1_3[8]);
       obj5.dispatch({ type: "LOGIN_MFA" });
       obj1 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
@@ -892,7 +950,7 @@ obj = {
   },
   forgotPassword(closure_1_6) {
     closure_0 = closure_1_6;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -1014,56 +1072,59 @@ obj = {
       obj = { url: null, retries: 2, oldFormErrors: true, rejectWithError: true };
       obj[0] = closure_9.AUTH_LOCATION_METADATA;
       const value = HTTP.get(obj);
-      nextPromise = value.then((body) => {
-        clearTimeout(closure_4);
-        if (null == authenticationConsentRequired.getAuthenticationConsentRequired()) {
-          let flag;
-          if (body != null) {
-            body = body.body;
+      nextPromise = value.then(
+        (body) => {
+          clearTimeout(closure_4);
+          if (null == authenticationConsentRequired.getAuthenticationConsentRequired()) {
+            let flag;
             if (body != null) {
-              flag = body.consent_required;
+              body = body.body;
+              if (body != null) {
+                flag = body.consent_required;
+              }
+            }
+            if (flag == null) {
+              flag = true;
+            }
+            obj = callback(709);
+            obj = { type: "SET_CONSENT_REQUIRED", consentRequired: null };
+            obj[1] = flag;
+            obj.dispatch(obj);
+          }
+          let country_code;
+          if (body != null) {
+            const body2 = body.body;
+            if (body2 != null) {
+              country_code = body2.country_code;
             }
           }
-          if (flag == null) {
-            flag = true;
+          callback(709).dispatch({ type: "SET_LOCATION_METADATA", countryCode: country_code });
+          c17 = null;
+          let prop;
+          if (body != null) {
+            const body3 = body.body;
+            if (body3 != null) {
+              prop = body3.promotional_email_opt_in;
+            }
           }
-          obj = callback(709);
-          obj = { type: "SET_CONSENT_REQUIRED", consentRequired: null };
-          obj[1] = flag;
-          obj.dispatch(obj);
-        }
-        let country_code;
-        if (body != null) {
-          const body2 = body.body;
-          if (body2 != null) {
-            country_code = body2.country_code;
+          if (null != prop) {
+            obj = { required: null, checked: null, preChecked: null };
+            ({ required: obj4[0], pre_checked: obj4[1], pre_checked: obj4[2] } = body.body.promotional_email_opt_in);
+            callback2(obj);
           }
-        }
-        callback(709).dispatch({ type: "SET_LOCATION_METADATA", countryCode: country_code });
-        c17 = null;
-        let prop;
-        if (body != null) {
-          const body3 = body.body;
-          if (body3 != null) {
-            prop = body3.promotional_email_opt_in;
-          }
-        }
-        if (null != prop) {
-          obj = { required: null, checked: null, preChecked: null };
-          ({ required: obj4[0], pre_checked: obj4[1], pre_checked: obj4[2] } = body.body.promotional_email_opt_in);
-          callback2(obj);
-        }
-      }, () => {
-        clearTimeout(closure_4);
-        callback(709).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
-        c17 = null;
-      });
+        },
+        () => {
+          clearTimeout(closure_4);
+          callback(709).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
+          c17 = null;
+        },
+      );
     }
     return nextPromise;
   },
   closeSuspendedUser() {
     dispatcherDefault.dispatch({ type: "CLOSE_SUSPENDED_USER" });
-  }
+  },
 };
 let tmp4 = new timestampDefault("AuthenticationActionCreators");
 let result = require("set").fileFinishedImporting("actions/AuthenticationActionCreators.tsx");

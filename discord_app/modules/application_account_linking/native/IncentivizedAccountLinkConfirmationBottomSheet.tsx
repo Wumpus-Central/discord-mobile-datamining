@@ -14,7 +14,9 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 noopAll;
 let c7 = 150;
-const result = require("set").fileFinishedImporting("modules/application_account_linking/native/IncentivizedAccountLinkConfirmationBottomSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/application_account_linking/native/IncentivizedAccountLinkConfirmationBottomSheet.tsx",
+);
 
 export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   let obj = initialize;
@@ -81,4 +83,4 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
     callback(4445).hideActionSheet();
   };
   return tmp9(PromoSheet.PromoSheet, obj9);
-};
+}

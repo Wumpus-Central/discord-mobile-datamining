@@ -57,10 +57,42 @@ export const JoinActivityButton = function JoinActivityButton(user) {
   }
   embeddedActivityLocationChannelId = obj.getEmbeddedActivityLocationChannelId(_location);
   let tmp5Result = tmp5(JOINED[20]);
-  closure_7 = tmp5Result.useStateFromStores([], () => closure_1_1(activity[21])({ channelId: closure_6, userId: user.id, activity }));
+  closure_7 = tmp5Result.useStateFromStores([], () =>
+    closure_1_1(activity[21])({ channelId: closure_6, userId: user.id, activity }),
+  );
   tmp5Result = tmp5(JOINED[20]);
-  const items = [analyticsLocations, closure_8, closure_7, closure_11, closure_12, closure_14, closure_10, closure_9, closure_13, onAction];
-  const stateFromStores = tmp5Result.useStateFromStores(items, () => closure_1_1(activity[22])({ isEmbedded: true, user, currentUser: closure_1, activity, application, channelId: closure_7, ChannelStore: analyticsLocations, GuildStore: closure_1_8, GuildMemberCountStore: closure_7, RelationshipStore: closure_1_11, SelectedChannelStore: closure_1_12, VoiceStateStore: closure_1_14, PermissionStore: closure_1_10, LocalActivityStore: closure_1_9, SelfPresenceStore: closure_1_13, EmbeddedActivitiesStore: onAction }));
+  const items = [
+    analyticsLocations,
+    closure_8,
+    closure_7,
+    closure_11,
+    closure_12,
+    closure_14,
+    closure_10,
+    closure_9,
+    closure_13,
+    onAction,
+  ];
+  const stateFromStores = tmp5Result.useStateFromStores(items, () =>
+    closure_1_1(activity[22])({
+      isEmbedded: true,
+      user,
+      currentUser: closure_1,
+      activity,
+      application,
+      channelId: closure_7,
+      ChannelStore: analyticsLocations,
+      GuildStore: closure_1_8,
+      GuildMemberCountStore: closure_7,
+      RelationshipStore: closure_1_11,
+      SelectedChannelStore: closure_1_12,
+      VoiceStateStore: closure_1_14,
+      PermissionStore: closure_1_10,
+      LocalActivityStore: closure_1_9,
+      SelfPresenceStore: closure_1_13,
+      EmbeddedActivitiesStore: onAction,
+    }),
+  );
   let tmp8 = null;
   if (importDefault(JOINED[23])(activity)) {
     tmp8 = null;
@@ -81,7 +113,12 @@ export const JoinActivityButton = function JoinActivityButton(user) {
         obj[3] = stateFromStores === JOINED;
         obj[4] = function onPress() {
           onAction({ action: "PRESS_JOIN_BUTTON" });
-          closure_1_1(activity[27])({ applicationId: application.id, activityChannelId: closure_7, locationObject: {}, analyticsLocations });
+          closure_1_1(activity[27])({
+            applicationId: application.id,
+            activityChannelId: closure_7,
+            locationObject: {},
+            analyticsLocations,
+          });
           closure_1_1(activity[28]).hideAllActionSheets();
         };
         jsx(tmp5(JOINED[24]).Button, { text: null, icon: null, variant: "active", disabled: null, onPress: null });
@@ -99,8 +136,38 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   analyticsLocations = contextDefault().analyticsLocations;
   closure_6 = { id: application.id, deeplink_uri: application.deepLinkUri };
   let obj = defaultAreStatesEqual;
-  const items = [analyticsLocations, closure_8, closure_7, closure_11, closure_12, closure_14, closure_10, closure_9, closure_13, onAction];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_1(closure_1_2[22])({ user: closure_0, currentUser: closure_1, activity: closure_2, application, channelId: null, isEmbedded: false, ChannelStore: analyticsLocations, GuildStore: closure_1_8, GuildMemberCountStore: closure_1_7, RelationshipStore: closure_1_11, SelectedChannelStore: closure_1_12, VoiceStateStore: closure_1_14, PermissionStore: closure_1_10, LocalActivityStore: closure_1_9, SelfPresenceStore: closure_1_13, EmbeddedActivitiesStore: onAction }));
+  const items = [
+    analyticsLocations,
+    closure_8,
+    closure_7,
+    closure_11,
+    closure_12,
+    closure_14,
+    closure_10,
+    closure_9,
+    closure_13,
+    onAction,
+  ];
+  const stateFromStores = obj.useStateFromStores(items, () =>
+    closure_1_1(closure_1_2[22])({
+      user: closure_0,
+      currentUser: closure_1,
+      activity: closure_2,
+      application,
+      channelId: null,
+      isEmbedded: false,
+      ChannelStore: analyticsLocations,
+      GuildStore: closure_1_8,
+      GuildMemberCountStore: closure_1_7,
+      RelationshipStore: closure_1_11,
+      SelectedChannelStore: closure_1_12,
+      VoiceStateStore: closure_1_14,
+      PermissionStore: closure_1_10,
+      LocalActivityStore: closure_1_9,
+      SelfPresenceStore: closure_1_13,
+      EmbeddedActivitiesStore: onAction,
+    }),
+  );
   let tmp3 = null;
   if (null != application) {
     tmp3 = null;
@@ -119,7 +186,16 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
       obj[3] = function onPress() {
         onAction({ action: "PRESS_JOIN_BUTTON" });
         let obj = closure_1_1(closure_1_2[29]);
-        obj = { userId: id.id, sessionId: session_id.session_id, application: closure_6, channelId: null, messageId: null, applicationActivity: session_id, source: "UserProfile", analyticsLocations };
+        obj = {
+          userId: id.id,
+          sessionId: session_id.session_id,
+          application: closure_6,
+          channelId: null,
+          messageId: null,
+          applicationActivity: session_id,
+          source: "UserProfile",
+          analyticsLocations,
+        };
         const joined = obj.join(obj);
         closure_1_1(closure_1_2[28]).hideAllActionSheets();
       };
@@ -147,7 +223,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
       obj[1] = sync_id(8052);
       obj[3] = tmp.icon;
       obj[1] = jsx(Button.Icon, { size: null, source: null, disableColor: true, style: null });
-      obj[3] = callback(function*() {
+      obj[3] = callback(function* () {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -366,7 +442,7 @@ export const ConnectPlatformButton = function ConnectPlatformButton(type) {
           let obj = callback(table[44]);
           obj = { screen: constants.CONNECTIONS };
           return obj.openUserSettings(obj);
-        }
+        },
       });
     };
     return jsx(tmp4(tmp3[24]).Button, { platform: null });
@@ -391,7 +467,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
       }
       obj = { text: null, variant: "secondary", onPress: null };
       obj[0] = stringResult;
-      obj[2] = onAction(function*() {
+      obj[2] = onAction(function* () {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();

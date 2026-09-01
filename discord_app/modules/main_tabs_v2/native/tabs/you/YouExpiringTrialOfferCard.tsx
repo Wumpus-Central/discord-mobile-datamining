@@ -16,7 +16,13 @@ const require = arg1;
 ({ AnalyticEvents: closure_6, HelpdeskArticles: error, HorizontalGradient: closure_8, NoticeTypes: c9 } = ME);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = 10 * setDefault.Millis.SECOND;
-createCacheKey = { header: { flexDirection: "row", alignItems: "flex-start", marginBottom: 16, marginRight: 32 }, closeButton: { position: "absolute", top: 16, right: 16 }, closeIcon: null, linearGradient: null, primaryCTA: null };
+createCacheKey = {
+  header: { flexDirection: "row", alignItems: "flex-start", marginBottom: 16, marginRight: 32 },
+  closeButton: { position: "absolute", top: 16, right: 16 },
+  closeIcon: null,
+  linearGradient: null,
+  primaryCTA: null,
+};
 createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { width: "100%", height: "100%", position: "absolute", overflow: "hidden" };
@@ -122,8 +128,15 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
         const obj5 = { variant: "heading-sm/medium", color: "text-default", children: null };
         obj5[2] = formatResult;
         obj[1] = closure_12(tmp4(4474).Text, obj5);
-        const items2 = [closure_12(premiumTrialOffer, obj), , ];
-        const obj6 = { style: null, accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
+        const items2 = [closure_12(premiumTrialOffer, obj), ,];
+        const obj6 = {
+          style: null,
+          accessibilityRole: "button",
+          accessibilityLabel: null,
+          hitSlop: null,
+          onPress: null,
+          children: null,
+        };
         obj6[0] = tmp3.closeButton;
         const intl4 = tmp4(1236).intl;
         obj6[2] = intl4.string(tmp4(1236).t.cpT0Cq);
@@ -193,4 +206,4 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
     return null;
   }
   const tmp7 = useCountdownDefault;
-};
+}

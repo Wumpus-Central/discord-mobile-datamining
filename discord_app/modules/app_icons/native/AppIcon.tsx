@@ -34,4 +34,4 @@ export default function AppIcon(size) {
   items = [tmp.container, { width: num, height: num, borderWidth: num2 }, size.style];
   obj = { style: tmp.image, source: getIconById(size.id).iconSource };
   return <closure_4 style={tmp.image} source={getIconById(arg0.id).iconSource} />;
-};
+}

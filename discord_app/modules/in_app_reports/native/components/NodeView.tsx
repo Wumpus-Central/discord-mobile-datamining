@@ -27,13 +27,20 @@ function HeaderView(node) {
     tmp6 = "" !== header;
   }
   if (tmp6) {
-    obj = { ref: null, style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+    obj = {
+      ref: null,
+      style: null,
+      variant: "heading-xl/extrabold",
+      color: "mobile-text-heading-primary",
+      accessibilityRole: "header",
+      children: null,
+    };
     obj[0] = node.headerRef;
     obj[1] = tmp.header;
     obj[5] = header;
     tmp6 = callback2(Text.Text, obj);
   }
-  const items = [tmp6, , ];
+  const items = [tmp6, ,];
   let tmp9 = null;
   if (null != subheader) {
     tmp9 = null;
@@ -65,7 +72,7 @@ function InfoView(node) {
   let tmp4 = null;
   if (null != info) {
     let obj = { style: null, children: null };
-    const items = [tmp.infoBox, ];
+    const items = [tmp.infoBox];
     obj = { backgroundColor: null };
     let obj2 = hexToRgba;
     obj[0] = obj2.hexWithOpacity(tmp.infoBox.backgroundColor, 0.1);
@@ -73,7 +80,7 @@ function InfoView(node) {
     obj[0] = items;
     obj = { size: "md", color: null };
     obj[1] = tmp.infoBox.backgroundColor;
-    const items1 = [callback2(CircleInformationIcon.CircleInformationIcon, obj), ];
+    const items1 = [callback2(CircleInformationIcon.CircleInformationIcon, obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.infoBoxText;
     obj2 = { variant: "text-sm/normal", color: "interactive-text-active", includeFontPadding: true, children: null };
@@ -96,10 +103,25 @@ function ChildItem(child) {
   if (child.nodeMap[tmp4] != null) {
     const report_type = tmp8.report_type;
   }
-  obj = { style: tmp.childButton, accessibilityRole: "button", onPress: callback(React.useState(() => () => closure_1.onPress(closure_0)), 1)[0], children: null };
+  obj = {
+    style: tmp.childButton,
+    accessibilityRole: "button",
+    onPress: callback(
+      React.useState(() => () => closure_1.onPress(closure_0)),
+      1,
+    )[0],
+    children: null,
+  };
   obj = { style: tmp.childContainer, children: null };
   obj1 = { style: tmp.childContent, children: null };
-  const items1 = [callback2(child(4474).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
+  const items1 = [
+    callback2(child(4474).Text, {
+      style: tmp.childButtonText,
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      children: tmp3,
+    }),
+  ];
   if (stateFromStores) {
     stateFromStores = null != report_type;
   }
@@ -127,7 +149,11 @@ function ChildrenView(node) {
       obj[0] = tmp.childrenContainer;
       obj[1] = children.map((child) => {
         const tmp = closure_1_4(child, 2);
-        return closure_1_16(closure_1_21, { child, nodeMap: closure_1, onPress: closure_0 }, "" + tmp[0] + "+" + tmp[1]);
+        return closure_1_16(
+          closure_1_21,
+          { child, nodeMap: closure_1, onPress: closure_0 },
+          "" + tmp[0] + "+" + tmp[1],
+        );
       });
       tmp2 = callback2(closure_6, obj);
     }
@@ -140,8 +166,30 @@ function NullComponent() {
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ AnalyticEvents: map1, ChannelTypes: closure_14 } = ME);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-createCacheKey = { container: null, scrollView: null, childrenContainer: null, headerContainer: null, header: null, subheader: null, description: null, infoBox: null, infoBoxText: null, childButton: null, childContainer: null, childContent: null, childButtonText: null, debugText: null };
-createCacheKey = { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 };
+createCacheKey = {
+  container: null,
+  scrollView: null,
+  childrenContainer: null,
+  headerContainer: null,
+  header: null,
+  subheader: null,
+  description: null,
+  infoBox: null,
+  infoBoxText: null,
+  childButton: null,
+  childContainer: null,
+  childContent: null,
+  childButtonText: null,
+  debugText: null,
+};
+createCacheKey = {
+  flex: 1,
+  alignSelf: "stretch",
+  justifyContent: "flex-start",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  marginTop: 30,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, alignSelf: "stretch", marginTop: 24 };
 createCacheKey[2] = { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 };
@@ -149,17 +197,59 @@ createCacheKey[3] = { alignSelf: "stretch", marginBottom: 24, paddingHorizontal:
 createCacheKey[4] = { marginBottom: 8, textAlign: "center" };
 createCacheKey[5] = { lineHeight: 20, marginBottom: 8, textAlign: "center" };
 createCacheKey[6] = { lineHeight: 16, marginBottom: 8, textAlign: "center" };
-createCacheKey[7] = { alignSelf: "stretch", alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.BLUE_345, borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.unsafe_rawColors.BLUE_345, borderWidth: 1, padding: 8, flexDirection: "row", marginBottom: 16, marginHorizontal: 16 };
+createCacheKey[7] = {
+  alignSelf: "stretch",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.unsafe_rawColors.BLUE_345,
+  borderRadius: ThemesDefault.radii.xs,
+  borderColor: ThemesDefault.unsafe_rawColors.BLUE_345,
+  borderWidth: 1,
+  padding: 8,
+  flexDirection: "row",
+  marginBottom: 16,
+  marginHorizontal: 16,
+};
 createCacheKey[8] = { flex: 1, marginStart: 8 };
-let obj1 = { alignSelf: "stretch", alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.BLUE_345, borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.unsafe_rawColors.BLUE_345, borderWidth: 1, padding: 8, flexDirection: "row", marginBottom: 16, marginHorizontal: 16 };
+let obj1 = {
+  alignSelf: "stretch",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.unsafe_rawColors.BLUE_345,
+  borderRadius: ThemesDefault.radii.xs,
+  borderColor: ThemesDefault.unsafe_rawColors.BLUE_345,
+  borderWidth: 1,
+  padding: 8,
+  flexDirection: "row",
+  marginBottom: 16,
+  marginHorizontal: 16,
+};
 createCacheKey[9] = { marginBottom: 8, borderRadius: ThemesDefault.radii.xs };
 let obj2 = { marginBottom: 8, borderRadius: ThemesDefault.radii.xs };
-createCacheKey[10] = { minHeight: 60, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingVertical: 16, paddingStart: 16, paddingEnd: 8, borderRadius: ThemesDefault.radii.xs };
+createCacheKey[10] = {
+  minHeight: 60,
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "flex-start",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  paddingVertical: 16,
+  paddingStart: 16,
+  paddingEnd: 8,
+  borderRadius: ThemesDefault.radii.xs,
+};
 createCacheKey[11] = { flex: 1 };
 createCacheKey[12] = { lineHeight: 20 };
 createCacheKey[13] = { marginTop: 4, lineHeight: 16 };
 let closure_18 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { minHeight: 60, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingVertical: 16, paddingStart: 16, paddingEnd: 8, borderRadius: ThemesDefault.radii.xs };
+let obj3 = {
+  minHeight: 60,
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "flex-start",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  paddingVertical: 16,
+  paddingStart: 16,
+  paddingEnd: 8,
+  borderRadius: ThemesDefault.radii.xs,
+};
 let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/NodeView.tsx");
 
 export default function NodeView(node) {
@@ -240,7 +330,10 @@ export default function NodeView(node) {
   const tmp15 = callback(node.useState(false), 2);
   const first = tmp15[0];
   closure_15 = tmp15[1];
-  const tmp17 = callback(node.useState(() => ({})), 2);
+  const tmp17 = callback(
+    node.useState(() => ({})),
+    2,
+  );
   const first1 = tmp17[0];
   closure_17 = tmp17[1];
   const tmp19 = callback(node.useState(false), 2);
@@ -288,12 +381,16 @@ export default function NodeView(node) {
     }
   }, items3);
   const items4 = [navigation, node];
-  const effect2 = node.useEffect(() => navigation.addListener("beforeRemove", () => {
-    onNavigate = onNavigate.onNavigate;
-    if (onNavigate != null) {
-      onNavigate("..");
-    }
-  }), items4);
+  const effect2 = node.useEffect(
+    () =>
+      navigation.addListener("beforeRemove", () => {
+        onNavigate = onNavigate.onNavigate;
+        if (onNavigate != null) {
+          onNavigate("..");
+        }
+      }),
+    items4,
+  );
   const items5 = [node.is_auto_submit, first, onSubmit, node.id];
   const effect3 = node.useEffect(() => {
     let is_auto_submit = node.is_auto_submit;
@@ -429,7 +526,25 @@ export default function NodeView(node) {
   const tmp13 = callback(node.useState(false), 2);
   const tmp32 = history;
   obj1[0] = elements5.find((type) => type.type === skip);
-  const items8 = [first1(navigation(ref[32]), obj1), first1(callback, { node, headerRef: ref }), first1(callback1, { node }), , , , , , , , , , , , , , , ];
+  const items8 = [
+    first1(navigation(ref[32]), obj1),
+    first1(callback, { node, headerRef: ref }),
+    first1(callback1, { node }),
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+  ];
   let tmp33Result = null;
   if (null != found1) {
     obj2 = { element: null };
@@ -543,7 +658,7 @@ export default function NodeView(node) {
   let someResult = elements.some((type) => onNavigate.includes(type.type));
   if (someResult) {
     if (!tmp28) {
-      const items9 = [tmp28, , , , , ];
+      const items9 = [tmp28, , , , ,];
       if (userIsTeen) {
         const obj12 = { parents: null };
         obj12[0] = activeLinkUsers;
@@ -702,7 +817,7 @@ export default function NodeView(node) {
         obj[arg0] = arg1;
       }
       callback3(obj);
-    }
+    },
   });
   items8[16] = first1(ChildrenView, { node, onSelectChild: callback1, nodeMap });
   external_link = undefined;
@@ -720,7 +835,7 @@ export default function NodeView(node) {
   }
   items8[17] = tmp33Result13;
   obj[1] = items8;
-  const items10 = [closure_17(tmp32, obj), ];
+  const items10 = [closure_17(tmp32, obj)];
   const obj22 = { isModeratorReport: hasItem, disabled: null, button: null, hasError: null, onPress: null };
   const obj20 = {
     element: found,
@@ -734,7 +849,7 @@ export default function NodeView(node) {
         obj[arg0] = arg1;
       }
       callback3(obj);
-    }
+    },
   };
   const tmp35 = navigation(ref[32]);
   if (!tmp14) {
@@ -775,36 +890,41 @@ export default function NodeView(node) {
             }
             closure_1_20(items1);
           });
-          onSubmit(callback(items1)).then(() => {
-            closure_1_18(false);
-            let header;
-            if (closure_1_8[items1.successNodeId] != null) {
-              header = tmp2.header;
-            }
-            if (null != header) {
-              const AccessibilityAnnouncer = external_link(ref[27]).AccessibilityAnnouncer;
-              AccessibilityAnnouncer.announce(tmp2.header);
-            }
-            closure_1_20(items1);
-          }).catch(() => {
-            callback2(true);
-          }).finally(() => {
-            callback(false);
-          });
-          const catchPromise = onSubmit(callback(items1)).then(() => {
-            closure_1_18(false);
-            let header;
-            if (closure_1_8[items1.successNodeId] != null) {
-              header = tmp2.header;
-            }
-            if (null != header) {
-              const AccessibilityAnnouncer = external_link(ref[27]).AccessibilityAnnouncer;
-              AccessibilityAnnouncer.announce(tmp2.header);
-            }
-            closure_1_20(items1);
-          }).catch(() => {
-            callback2(true);
-          });
+          onSubmit(callback(items1))
+            .then(() => {
+              closure_1_18(false);
+              let header;
+              if (closure_1_8[items1.successNodeId] != null) {
+                header = tmp2.header;
+              }
+              if (null != header) {
+                const AccessibilityAnnouncer = external_link(ref[27]).AccessibilityAnnouncer;
+                AccessibilityAnnouncer.announce(tmp2.header);
+              }
+              closure_1_20(items1);
+            })
+            .catch(() => {
+              callback2(true);
+            })
+            .finally(() => {
+              callback(false);
+            });
+          const catchPromise = onSubmit(callback(items1))
+            .then(() => {
+              closure_1_18(false);
+              let header;
+              if (closure_1_8[items1.successNodeId] != null) {
+                header = tmp2.header;
+              }
+              if (null != header) {
+                const AccessibilityAnnouncer = external_link(ref[27]).AccessibilityAnnouncer;
+                AccessibilityAnnouncer.announce(tmp2.header);
+              }
+              closure_1_20(items1);
+            })
+            .catch(() => {
+              callback2(true);
+            });
         }
       }
     }
@@ -813,4 +933,4 @@ export default function NodeView(node) {
   items10[1] = first1(navigation(ref[53]), obj22);
   obj[3] = items10;
   return closure_17(external_link(ref[31]).SafeAreaPaddingView, obj);
-};
+}

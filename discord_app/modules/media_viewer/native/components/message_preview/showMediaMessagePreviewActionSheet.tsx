@@ -5,7 +5,9 @@ import closure_3 from "../../../../../stores/ChannelStore.tsx";
 import closure_4 from "../../../../../stores/UserStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/message_preview/showMediaMessagePreviewActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/media_viewer/native/components/message_preview/showMediaMessagePreviewActionSheet.tsx",
+);
 
 export default function showMediaMessagePreviewActionSheet(message) {
   message = message.message;
@@ -24,4 +26,4 @@ export default function showMediaMessagePreviewActionSheet(message) {
       }
     }
   }
-};
+}

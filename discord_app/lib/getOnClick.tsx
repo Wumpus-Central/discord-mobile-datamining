@@ -36,7 +36,7 @@ function _openInviteModal() {
     closure_1 = arg2;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (table === 2) {
         table = 3;
         HermesBuiltin.throwTypeError();
@@ -64,7 +64,13 @@ function _openInviteModal() {
               return obj;
             } else {
               obj1 = callback(table[16]);
-              obj1 = { type: "DISPLAYED_INVITE_SHOW", code: null, username: "Array", deeplinkAttemptId: "accessible", invite_instance_id: "Array" };
+              obj1 = {
+                type: "DISPLAYED_INVITE_SHOW",
+                code: null,
+                username: "Array",
+                deeplinkAttemptId: "accessible",
+                invite_instance_id: "Array",
+              };
               obj1[1] = closure_0;
               obj1[4] = callback;
               c3 = 1;
@@ -108,7 +114,7 @@ function _handleInviteCodedLink() {
     closure_1 = arg1;
     c6 = 0;
     c7 = 0;
-    return (function*(arg0, invite) {
+    return (function* (arg0, invite) {
       if (member === 2) {
         member = 3;
         HermesBuiltin.throwTypeError();
@@ -374,13 +380,17 @@ export default function getOnClick(url) {
             let searchParams2 = uRL.searchParams;
             const searchParams3 = uRL.searchParams;
             value = searchParams2.get("link_id");
-            const customActivityLinkParams = tmp7(tmp6[31]).getCustomActivityLinkParams(code, value, searchParams3.get("custom_id"));
+            const customActivityLinkParams = tmp7(tmp6[31]).getCustomActivityLinkParams(
+              code,
+              value,
+              searchParams3.get("custom_id"),
+            );
             url = undefined;
             url = pathname((arg0) => {
               closure_0 = arg0;
               c3 = 0;
               c4 = 0;
-              const iter = (function*(arg0) {
+              const iter = (function* (arg0) {
                 if (c4 === 2) {
                   c4 = 3;
                   HermesBuiltin.throwTypeError();
@@ -425,7 +435,15 @@ export default function getOnClick(url) {
                         obj1[0] = arg1;
                         return obj1;
                       } else {
-                        const obj2 = { channelId: null, applicationId: null, isStart: null, embeddedActivitiesManager: null, customId: null, referrerId: null, analyticsLocations: null };
+                        const obj2 = {
+                          channelId: null,
+                          applicationId: null,
+                          isStart: null,
+                          embeddedActivitiesManager: null,
+                          customId: null,
+                          referrerId: null,
+                          analyticsLocations: null,
+                        };
                         obj2[0] = c4;
                         obj2[1] = callback;
                         obj2[2] = null == closure_1_5;
@@ -461,20 +479,20 @@ export default function getOnClick(url) {
               return iter;
             });
             const tmp7Result = tmp7(tmp6[31]);
-            customActivityLinkParams.then(function() {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            }).catch(() => {
-
-            });
+            customActivityLinkParams
+              .then(function () {
+                const self = this;
+                const apply = closure_0.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })
+              .catch(() => {});
             flag2 = true;
-            const nextPromise = customActivityLinkParams.then(function() {
+            const nextPromise = customActivityLinkParams.then(function () {
               const self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {
@@ -504,7 +522,7 @@ export default function getOnClick(url) {
               closure_0 = arg0;
               c3 = 0;
               c4 = 0;
-              return (function*(arg0, customId) {
+              return (function* (arg0, customId) {
                 if (c4 === 2) {
                   c4 = 3;
                   HermesBuiltin.throwTypeError();
@@ -540,7 +558,11 @@ export default function getOnClick(url) {
                         c3 = 1;
                         c4 = 1;
                         obj1 = { value: null, done: false };
-                        obj1[0] = callback(closure_3_2[31]).getCustomActivityLinkParams(callback, value, searchParams2.get("custom_id"));
+                        obj1[0] = callback(closure_3_2[31]).getCustomActivityLinkParams(
+                          callback,
+                          value,
+                          searchParams2.get("custom_id"),
+                        );
                         return obj1;
                       }
                     } else if (arg0 === 1) {
@@ -553,7 +575,13 @@ export default function getOnClick(url) {
                       return obj;
                     } else {
                       customId = customId.customId;
-                      const obj2 = { targetApplicationId: null, channelId: null, analyticsLocations: null, customId: null, referrerId: null };
+                      const obj2 = {
+                        targetApplicationId: null,
+                        channelId: null,
+                        analyticsLocations: null,
+                        customId: null,
+                        referrerId: null,
+                      };
                       obj2[0] = callback;
                       obj2[1] = callback;
                       obj2[2] = uRL;
@@ -571,29 +599,32 @@ export default function getOnClick(url) {
               })();
             });
             const openPrivateChannelResult = tmp5(tmp6[33]).openPrivateChannel(obj);
-            tmp5(tmp6[33]).openPrivateChannel(obj).then(function() {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            }).catch(() => {
-
-            });
+            tmp5(tmp6[33])
+              .openPrivateChannel(obj)
+              .then(function () {
+                const self = this;
+                const apply = closure_0.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })
+              .catch(() => {});
             flag = true;
-            const nextPromise1 = tmp5(tmp6[33]).openPrivateChannel(obj).then(function() {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            });
+            const nextPromise1 = tmp5(tmp6[33])
+              .openPrivateChannel(obj)
+              .then(function () {
+                const self = this;
+                const apply = closure_0.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              });
           }
           return flag;
         }
@@ -626,7 +657,10 @@ export default function getOnClick(url) {
         }
         const str = _undefined.code;
         const tmp2 = _undefined(_undefined.code.split("-"), 2);
-        const result = url(closure_1_2[36]).openSocialLayerStorefrontProductDetailsModal({ skuId: _undefined(_undefined.code.split("-"), 2)[0], analyticsLocations: closure_1 });
+        const result = url(closure_1_2[36]).openSocialLayerStorefrontProductDetailsModal({
+          skuId: _undefined(_undefined.code.split("-"), 2)[0],
+          analyticsLocations: closure_1,
+        });
         return true;
       };
     }
@@ -639,7 +673,10 @@ export default function getOnClick(url) {
         }
         const str = _undefined.code;
         const tmp2 = _undefined(_undefined.code.split("-"), 2);
-        const result = url(closure_1_2[36]).openSocialLayerStorefrontProductDetailsModal({ skuId: _undefined(_undefined.code.split("-"), 2)[0], analyticsLocations: closure_1 });
+        const result = url(closure_1_2[36]).openSocialLayerStorefrontProductDetailsModal({
+          skuId: _undefined(_undefined.code.split("-"), 2)[0],
+          analyticsLocations: closure_1,
+        });
         return true;
       };
     }
@@ -800,4 +837,4 @@ export default function getOnClick(url) {
     }
     tmp2Result1 = tmp2(8036);
   }
-};
+}

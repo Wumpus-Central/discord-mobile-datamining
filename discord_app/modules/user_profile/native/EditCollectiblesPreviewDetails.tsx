@@ -54,7 +54,7 @@ function EditCollectiblesPreviewDescription(arg0) {
         tmp17 = callback(tmp(4474).Text, obj);
         const str = diffAsUnitsResult.days;
       }
-      const items1 = [tmp17, , ];
+      const items1 = [tmp17, ,];
       const intl2 = tmp(1236).intl;
       let toLocaleDateStringResult;
       if (purchase != null) {
@@ -76,7 +76,13 @@ function EditCollectiblesPreviewDescription(arg0) {
         const intl3 = tmp(1236).intl;
         const obj4 = { date: null };
         expiresAt = purchase.expiresAt;
-        obj4[0] = expiresAt.toLocaleDateString(stateFromStores, { minute: "numeric", hour: "numeric", day: "numeric", month: "long", year: "numeric" });
+        obj4[0] = expiresAt.toLocaleDateString(stateFromStores, {
+          minute: "numeric",
+          hour: "numeric",
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        });
         obj3[2] = intl3.format(tmp(1236).t.eZSTa5, obj4);
         tmp19Result = tmp19(tmp(4474).Text, obj3);
       }
@@ -115,7 +121,9 @@ function EditCollectiblesPreviewDescription(arg0) {
 }
 noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ productDetailsContainer: { width: "100%", marginTop: 16, alignItems: "center", gap: 2 } });
+let closure_8 = createCacheKey.createStyles({
+  productDetailsContainer: { width: "100%", marginTop: 16, alignItems: "center", gap: 2 },
+});
 let result = require("set").fileFinishedImporting("modules/user_profile/native/EditCollectiblesPreviewDetails.tsx");
 
 export default function EditCollectiblesPreviewDetails(previewSkuId) {
@@ -141,7 +149,7 @@ export default function EditCollectiblesPreviewDetails(previewSkuId) {
       }
       obj = { variant: "text-md/bold", color: "text-default", children: null };
       obj[2] = name;
-      const items = [closure_5(Text2.Text, obj), ];
+      const items = [closure_5(Text2.Text, obj)];
       obj = { user: null, product: null, purchase: null, nitroJoinCTA: null, nitroUpgradeCTA: null };
       obj[0] = user;
       obj[1] = product;
@@ -158,4 +166,4 @@ export default function EditCollectiblesPreviewDetails(previewSkuId) {
     }
   }
   return tmp5Result;
-};
+}

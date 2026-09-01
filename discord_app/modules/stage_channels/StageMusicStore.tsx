@@ -5,8 +5,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 let c0 = false;
 let c1 = false;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class StageMusicStore extends DeviceSettingsStore {
-}
+class StageMusicStore extends DeviceSettingsStore {}
 const prototype = StageMusicStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
@@ -34,7 +33,7 @@ const stageMusicStore = new StageMusicStore(dispatcherDefault, {
   },
   VOICE_CHANNEL_SELECT: function handleConnect() {
     c1 = false;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/stage_channels/StageMusicStore.tsx");
 

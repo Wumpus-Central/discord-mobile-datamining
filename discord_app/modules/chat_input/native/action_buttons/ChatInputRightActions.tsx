@@ -16,13 +16,24 @@ require = arg1;
 function LeftSlot(state) {
   state = state.state;
   ({ cleanup, channel, onPress, slotWidth, wrapperStyle } = state);
-  let obj = { visible: state !== ManaContext.TransitionStates.YEETED, initiallyVisible: state !== ManaContext.TransitionStates.ENTERED, enterDelayMs: closure_6, onExitComplete: cleanup };
+  let obj = {
+    visible: state !== ManaContext.TransitionStates.YEETED,
+    initiallyVisible: state !== ManaContext.TransitionStates.ENTERED,
+    enterDelayMs: closure_6,
+    onExitComplete: cleanup,
+  };
   ({ animatedStyle, isInteractive } = useChatInputFloatingBounceDefault(obj));
   obj = { style: items };
   items = [wrapperStyle, { width: slotWidth }, animatedStyle];
   const tmp = useChatInputFloatingBounceDefault(obj);
   const merged = Object.assign(FadeTransitionItem.interactivityProps(isInteractive));
-  obj.children = callback2(renderChatInputActionButtonGiftAndThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "PX_16", shouldShowThread: "lifecycle" });
+  obj.children = callback2(renderChatInputActionButtonGiftAndThreadDefault, {
+    canStartThreads: false,
+    channel,
+    onPress,
+    styleButton: "PX_16",
+    shouldShowThread: "lifecycle",
+  });
   return callback2(_modDef4217.View, obj);
 }
 let c4 = importAllResult;
@@ -50,14 +61,18 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   callback = tmp6;
   const tmp7 = callback(importAllResult.useState(true), 2);
   importAllResult = tmp7[1];
-  const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({
-    onDismissActions() {
-      return callback(false);
-    },
-    onShowActions() {
-      return callback(true);
-    }
-  }), []);
+  const imperativeHandle = importAllResult.useImperativeHandle(
+    ref,
+    () => ({
+      onDismissActions() {
+        return callback(false);
+      },
+      onShowActions() {
+        return callback(true);
+      },
+    }),
+    [],
+  );
   const items = [channel, onPressAction, sum, tmp6.leftSlot];
   const memo = importAllResult.useMemo(() => ({}), []);
   obj = { style: tmp6.container, children: null };
@@ -73,14 +88,20 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     tmp14Result = callback2(tmp(4204).TransitionItem, obj);
     const tmp14 = callback2;
   }
-  const items1 = [tmp14Result, ];
-  obj1 = { active: keyboardType === channel(1626).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression };
+  const items1 = [tmp14Result];
+  obj1 = {
+    active: keyboardType === channel(1626).KeyboardTypes.EXPRESSION,
+    showKeyboardIcon,
+    onPress: onPressExpression,
+  };
   items1[1] = callback2(onPressAction(11744), obj1);
   obj[1] = items1;
   return closure_8(View, obj);
 });
 forwardRefResult.displayName = "ChatInputRightActions";
 const memoResult = importAllResult.memo(forwardRefResult);
-const result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputRightActions.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/chat_input/native/action_buttons/ChatInputRightActions.tsx",
+);
 
 export default memoResult;

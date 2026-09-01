@@ -11,8 +11,7 @@ prototype = function SKUWishlistItemRecord(sku) {
   tmp.sku = sku.sku;
   return tmp;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["fromServer"] = function fromServer(sku) {
   const fromServer = closure_0.createFromServer(sku.sku);
   if (null == fromServer) {

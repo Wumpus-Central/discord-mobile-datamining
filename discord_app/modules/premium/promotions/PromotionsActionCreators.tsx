@@ -21,7 +21,7 @@ function fetchActivePromotions() {
 }
 function _fetchActivePromotions() {
   const self = this;
-  let tmp = callback(function*() {
+  let tmp = callback(function* () {
     let promotion_id = tmp3;
     let locale = 1;
     locale = locale.locale;
@@ -108,11 +108,18 @@ function dismissOutboundPromotionNotice() {
   dispatcherDefault.dispatch({ type: "OUTBOUND_PROMOTION_NOTICE_DISMISS" });
   const lastDismissedOutboundPromotionStartDate = closure_7.lastDismissedOutboundPromotionStartDate;
   if (null != lastDismissedOutboundPromotionStartDate) {
-    const PreloadedUserSettingsActionCreators = lastDismissedOutboundPromotionStartDate(1370).PreloadedUserSettingsActionCreators;
-    PreloadedUserSettingsActionCreators.updateAsync("userContent", (arg0) => {
-      const StringValue = lastDismissedOutboundPromotionStartDate(closure_1_2[12]).StringValue;
-      arg0.lastDismissedOutboundPromotionStartDate = StringValue.create({ value: lastDismissedOutboundPromotionStartDate });
-    }, lastDismissedOutboundPromotionStartDate(1370).UserSettingsDelay.INFREQUENT_USER_ACTION);
+    const PreloadedUserSettingsActionCreators =
+      lastDismissedOutboundPromotionStartDate(1370).PreloadedUserSettingsActionCreators;
+    PreloadedUserSettingsActionCreators.updateAsync(
+      "userContent",
+      (arg0) => {
+        const StringValue = lastDismissedOutboundPromotionStartDate(closure_1_2[12]).StringValue;
+        arg0.lastDismissedOutboundPromotionStartDate = StringValue.create({
+          value: lastDismissedOutboundPromotionStartDate,
+        });
+      },
+      lastDismissedOutboundPromotionStartDate(1370).UserSettingsDelay.INFREQUENT_USER_ACTION,
+    );
   }
 }
 function fetchActiveBogoPromotion() {
@@ -127,7 +134,7 @@ function fetchActiveBogoPromotion() {
 }
 function _fetchActiveBogoPromotion() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -229,7 +236,7 @@ function fetchClaimedOutboundPromotionCodes() {
 }
 function _fetchClaimedOutboundPromotionCodes() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const callback2 = tmp3;
     dependencyMap = 1;
     const HTTP = closure_1_0(530).HTTP;
@@ -284,7 +291,7 @@ export default {
   markOutboundPromotionsSeen() {
     dispatcherDefault.dispatch({ type: "OUTBOUND_PROMOTIONS_SEEN" });
   },
-  fetchActiveBogoPromotion
+  fetchActiveBogoPromotion,
 };
 export const maybeFetchActivePromotions = function maybeFetchActivePromotions(arg0) {
   let flag = arg0;

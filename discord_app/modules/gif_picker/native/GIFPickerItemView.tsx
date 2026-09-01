@@ -10,7 +10,14 @@ require = arg1;
 let c3 = importAllResult;
 let closure_6 = createCacheKey.createStyles((height) => {
   let obj = { container: null, gifImage: null, gifImageSelected: null };
-  obj = { paddingBottom: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: ThemesDefault.radii.xs, width: "100%", height, flex: 1 };
+  obj = {
+    paddingBottom: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING,
+    paddingHorizontal: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING / 2,
+    borderRadius: ThemesDefault.radii.xs,
+    width: "100%",
+    height,
+    flex: 1,
+  };
   obj[0] = obj;
   obj = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, flex: 1 };
   obj[1] = obj;
@@ -59,7 +66,15 @@ export default function GIFPickerItemView(onPressGIF) {
     }
     return first;
   }, items2);
-  let obj = { style: tmp.container, accessibilityRole: "button", accessibilityLabel: memo, accessibilityState: null, onPress: null, onLongPress: null, children: null };
+  let obj = {
+    style: tmp.container,
+    accessibilityRole: "button",
+    accessibilityLabel: memo,
+    accessibilityState: null,
+    onPress: null,
+    onLongPress: null,
+    children: null,
+  };
   let tmp7;
   if (null != selected) {
     obj = { selected: null };
@@ -70,7 +85,7 @@ export default function GIFPickerItemView(onPressGIF) {
   obj[4] = callback;
   obj[5] = callback1;
   if (true === selected) {
-    const items3 = [, ];
+    const items3 = [,];
     ({ gifImage: arr4[0], gifImageSelected: arr4[1] } = tmp);
     let gifImage = items3;
   } else {
@@ -79,5 +94,5 @@ export default function GIFPickerItemView(onPressGIF) {
   obj = { uri: item.src };
   obj[6] = jsx(item(index[12]), { style: gifImage, source: obj });
   return jsx(onPressGIF(index[11]).PressableOpacity, { uri: item.src });
-};
+}
 export const GIFPickerItemPlaceholder = memoResult;

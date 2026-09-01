@@ -37,13 +37,34 @@ function getBannerText(currentUser) {
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { accountWarning: null, accountWarningText: null, accountWarningButton: null };
-createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, height: 36, alignItems: "center", alignSelf: "stretch", flexDirection: "row", paddingHorizontal: 16 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.unsafe_rawColors.RED_400,
+  height: 36,
+  alignItems: "center",
+  alignSelf: "stretch",
+  flexDirection: "row",
+  paddingHorizontal: 16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, lineHeight: 16 };
-createCacheKey[2] = { borderWidth: 1, borderColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.xs, paddingHorizontal: 8, paddingVertical: 4 };
+createCacheKey[2] = {
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.WHITE,
+  borderRadius: ThemesDefault.radii.xs,
+  paddingHorizontal: 8,
+  paddingVertical: 4,
+};
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderWidth: 1, borderColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.xs, paddingHorizontal: 8, paddingVertical: 4 };
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountUnverifiedHeader.tsx");
+let obj1 = {
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.WHITE,
+  borderRadius: ThemesDefault.radii.xs,
+  paddingHorizontal: 8,
+  paddingVertical: 4,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/account/native/UserSettingsAccountUnverifiedHeader.tsx",
+);
 
 export default function UserSettingsAccountUnverifiedHeader() {
   const tmp = callback3();
@@ -58,7 +79,7 @@ export default function UserSettingsAccountUnverifiedHeader() {
     obj = { style: null, variant: "text-xs/bold", color: "text-overlay-light", children: null };
     obj[0] = tmp.accountWarningText;
     obj[3] = tmp4.title;
-    const items1 = [callback(tmp2(4474).Text, obj), ];
+    const items1 = [callback(tmp2(4474).Text, obj)];
     obj1 = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: null };
     obj1[0] = tmp.accountWarningButton;
     obj1[3] = tmp4.button;
@@ -67,5 +88,5 @@ export default function UserSettingsAccountUnverifiedHeader() {
     tmp5 = callback2(tmp2(5068).PressableOpacity, obj);
   }
   return tmp5;
-};
+}
 export { getBannerText };

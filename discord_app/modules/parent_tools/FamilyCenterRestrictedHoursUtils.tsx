@@ -56,12 +56,18 @@ function getScheduleRuleDateRange(rule) {
     if (null != rule.endTime) {
       const startTime = rule.startTime;
       const _Intl = Intl;
-      const dateTimeFormat = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
+      const dateTimeFormat = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, {
+        hour: "numeric",
+        minute: "2-digit",
+      });
       const _Date = Date;
       const date = new Date(2025, 0, 1, startTime.hours, startTime.minutes);
       const endTime = rule.endTime;
       const _Intl2 = Intl;
-      const dateTimeFormat1 = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
+      const dateTimeFormat1 = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, {
+        hour: "numeric",
+        minute: "2-digit",
+      });
       const _Date2 = Date;
       const date1 = new Date(2025, 0, 1, endTime.hours, endTime.minutes);
       const _HermesInternal = HermesInternal;
@@ -71,7 +77,15 @@ function getScheduleRuleDateRange(rule) {
   }
   return str;
 }
-const items = [create.DayOfWeek.SUNDAY, create.DayOfWeek.MONDAY, create.DayOfWeek.TUESDAY, create.DayOfWeek.WEDNESDAY, create.DayOfWeek.THURSDAY, create.DayOfWeek.FRIDAY, create.DayOfWeek.SATURDAY];
+const items = [
+  create.DayOfWeek.SUNDAY,
+  create.DayOfWeek.MONDAY,
+  create.DayOfWeek.TUESDAY,
+  create.DayOfWeek.WEDNESDAY,
+  create.DayOfWeek.THURSDAY,
+  create.DayOfWeek.FRIDAY,
+  create.DayOfWeek.SATURDAY,
+];
 let set = new Set(require("../debug/logAppStart.tsx"));
 const items1 = [items[0], items[6]];
 const set1 = new Set(items1);
@@ -84,7 +98,10 @@ export const getShortDayLabels = function getShortDayLabels(narrow) {
   return items.map((arg0, arg1) => dateTimeFormat.format(new Date(2025, 0, 5 + arg1)));
 };
 export const formatTime = function formatTime(hours) {
-  const dateTimeFormat = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
+  const dateTimeFormat = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, {
+    hour: "numeric",
+    minute: "2-digit",
+  });
   return dateTimeFormat.format(new Date(2025, 0, 1, hours.hours, hours.minutes));
 };
 export { formatDays };
@@ -114,14 +131,20 @@ export const formatRestrictedScheduleInAppSubtitle = function formatRestrictedSc
     if (null != startTime.endTime) {
       startTime = startTime.startTime;
       const _Intl = Intl;
-      const dateTimeFormat = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
+      const dateTimeFormat = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, {
+        hour: "numeric",
+        minute: "2-digit",
+      });
       const _Date = Date;
       const date = new Date(2025, 0, 1, startTime.hours, startTime.minutes);
       const endTime = startTime.endTime;
       const _Intl2 = Intl;
       const tmp4 = formatDays(startTime.days);
       const tmp6 = require;
-      const dateTimeFormat1 = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
+      const dateTimeFormat1 = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, {
+        hour: "numeric",
+        minute: "2-digit",
+      });
       const _Date2 = Date;
       const date1 = new Date(2025, 0, 1, endTime.hours, endTime.minutes);
       const startTime2 = startTime.startTime;

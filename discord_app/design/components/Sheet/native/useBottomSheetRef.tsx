@@ -13,6 +13,6 @@ export const useBottomSheetRef = function useBottomSheetRef() {
       if (current != null) {
         current.closeActionSheet();
       }
-    }, items)
+    }, items),
   };
 };

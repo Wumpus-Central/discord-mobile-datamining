@@ -11,7 +11,18 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ ScrollView: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { flex: { flex: 1 }, safePadding: null, contentContainer: null, guildIcon: null, guildName: null, title: null, subTitle: null, topicInput: null, buttonWrapper: null, error: null };
+createCacheKey = {
+  flex: { flex: 1 },
+  safePadding: null,
+  contentContainer: null,
+  guildIcon: null,
+  guildName: null,
+  title: null,
+  subTitle: null,
+  topicInput: null,
+  buttonWrapper: null,
+  error: null,
+};
 createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flex: 1 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { paddingHorizontal: 16 };
@@ -66,43 +77,54 @@ export default function ChannelPrompt(guildId) {
     navigation.setOptions(obj);
   }, items1);
   const items2 = [guildId, onSuccess, first];
-  callback = first.useCallback(onCancel(function*() {
-    closure_1 = tmp3;
-    closure_1_7(null);
-    closure_1_6(true);
-    const defaultChannel = closure_1_8.getDefaultChannel(closure_1_0);
-    c3 = 1;
-    const intl = closure_1_0(closure_1_2[12]).intl;
-    obj1 = { topic: null };
-    obj1[0] = c5;
-    const formatToPlainStringResult = intl.formatToPlainString(closure_1_0(closure_1_2[12]).t.V4lepJ, obj1);
-    const obj6 = closure_1_1(closure_1_2[13]);
-    if (defaultChannel != null) {
-      const parent_id = defaultChannel.parent_id;
-    }
-    yield obj6.createTextChannel(closure_1_0, c5, parent_id, formatToPlainStringResult);
-    if (1 === tmp7) {
+  callback = first.useCallback(
+    onCancel(function* () {
+      closure_1 = tmp3;
+      closure_1_7(null);
+      closure_1_6(true);
+      const defaultChannel = closure_1_8.getDefaultChannel(closure_1_0);
+      c3 = 1;
+      const intl = closure_1_0(closure_1_2[12]).intl;
+      obj1 = { topic: null };
+      obj1[0] = c5;
+      const formatToPlainStringResult = intl.formatToPlainString(closure_1_0(closure_1_2[12]).t.V4lepJ, obj1);
+      const obj6 = closure_1_1(closure_1_2[13]);
+      if (defaultChannel != null) {
+        const parent_id = defaultChannel.parent_id;
+      }
+      yield obj6.createTextChannel(closure_1_0, c5, parent_id, formatToPlainStringResult);
+      if (1 === tmp7) {
+        c3 = 0;
+        closure_0 = closure_2;
+        const aPIError = new closure_1_0(closure_1_2[14]).APIError(closure_0);
+        callback2(aPIError);
+        callback(false);
+        c5 = 3;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        v0();
+        c3 = 0;
+      }
       c3 = 0;
-      closure_0 = closure_2;
-      const aPIError = new closure_1_0(closure_1_2[14]).APIError(closure_0);
-      callback2(aPIError);
-      callback(false);
-      c5 = 3;
-    } else if (arg0 === 1) {
-      c5 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      v0();
-      c3 = 0;
-    }
-    c3 = 0;
-    return arg1;
-  }), items2);
+      return arg1;
+    }),
+    items2,
+  );
   let tmp14Result = null;
   if (null != stateFromStores) {
     obj = { top: true, style: null, children: null };
     obj[1] = tmp.safePadding;
-    obj = { style: null, contentInset: null, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: null, children: null };
+    obj = {
+      style: null,
+      contentInset: null,
+      automaticallyAdjustContentInsets: false,
+      keyboardShouldPersistTaps: "handled",
+      alwaysBounceVertical: false,
+      contentContainerStyle: null,
+      children: null,
+    };
     obj[0] = tmp.flex;
     obj[1] = { top: 0 };
     obj[5] = tmp.contentContainer;
@@ -117,12 +139,24 @@ export default function ChannelPrompt(guildId) {
       guildIconURL = tmp17Result.getGuildIconURL(obj2);
     }
     obj1[2] = guildIconURL;
-    const items3 = [closure_10(hasBack(tmp3[16]), obj1), , , , , , ];
-    let obj3 = { style: null, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
+    const items3 = [closure_10(hasBack(tmp3[16]), obj1), , , , , ,];
+    let obj3 = {
+      style: null,
+      lineClamp: 1,
+      variant: "text-sm/semibold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj3[0] = tmp.guildName;
     obj3[4] = stateFromStores.name;
     items3[1] = closure_10(tmp2(tmp3[18]).Text, obj3);
-    const obj4 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    const obj4 = {
+      style: null,
+      accessibilityRole: "header",
+      variant: "heading-xl/extrabold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj4[0] = tmp.title;
     let intl = tmp2(tmp3[12]).intl;
     obj4[4] = intl.string(tmp2(tmp3[12]).t["8VRa7d"]);
@@ -132,7 +166,18 @@ export default function ChannelPrompt(guildId) {
     const intl2 = tmp2(tmp3[12]).intl;
     obj5[3] = intl2.string(tmp2(tmp3[12]).t["+855Pm"]);
     items3[3] = closure_10(tmp2(tmp3[18]).Text, obj5);
-    let obj6 = { style: null, label: null, value: null, error: null, onChangeText: null, onSubmitEditing: null, maxLength: 100, placeholder: null, returnKeyType: "done", autoFocus: true };
+    let obj6 = {
+      style: null,
+      label: null,
+      value: null,
+      error: null,
+      onChangeText: null,
+      onSubmitEditing: null,
+      maxLength: 100,
+      placeholder: null,
+      returnKeyType: "done",
+      autoFocus: true,
+    };
     obj6[0] = tmp.topicInput;
     tmp17Result = tmp17(tmp3[19]);
     const intl3 = tmp2(tmp3[12]).intl;
@@ -182,4 +227,4 @@ export default function ChannelPrompt(guildId) {
     const tmp18 = hasBack(tmp3[16]);
   }
   return tmp14Result;
-};
+}

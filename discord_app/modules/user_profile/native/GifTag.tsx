@@ -11,7 +11,12 @@ import importDefaultResult from "../../../../_runtime/00689_n.js";
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;
 let obj = { gifTag: null, gifTagText: null };
-obj = { paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: 2, borderRadius: ThemesDefault.radii.xs, backgroundColor: null };
+obj = {
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  paddingVertical: 2,
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: null,
+};
 const importDefaultResultResult = importDefaultResult(ThemesDefault.unsafe_rawColors.WHITE);
 obj[3] = importDefaultResult(ThemesDefault.unsafe_rawColors.WHITE).alpha(0.9).css();
 obj[0] = obj;
@@ -29,5 +34,9 @@ export default function GifTag(style) {
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.I5gL2H);
   obj[2] = jsx(Text.Text, { variant: "text-sm/bold", color: "none", style: tmp.gifTagText, children: null });
-  return <View variant="text-sm/bold" color="none" style={tmp.gifTagText}>{null}</View>;
-};
+  return (
+    <View variant="text-sm/bold" color="none" style={tmp.gifTagText}>
+      {null}
+    </View>
+  );
+}

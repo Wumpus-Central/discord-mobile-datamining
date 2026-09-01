@@ -16,7 +16,7 @@ export default function useEntryActivityAndApplication(extra) {
   if (stateFromStores != null) {
     application_id = stateFromStores.application_id;
   }
-  const items1 = [application_id, ];
+  const items1 = [application_id];
   let application_id1;
   if ("application_id" in extra.extra) {
     application_id1 = extra.extra.application_id;
@@ -24,7 +24,13 @@ export default function useEntryActivityAndApplication(extra) {
   items1[1] = application_id1;
   const tmp7 = callback(first(5959)(items1), 2);
   first = tmp7[0];
-  obj = { activity: stateFromStores, embeddedActivity: null, anyMatchingApplication: null, activityApplication: null, fallbackApplication: null };
+  obj = {
+    activity: stateFromStores,
+    embeddedActivity: null,
+    anyMatchingApplication: null,
+    activityApplication: null,
+    fallbackApplication: null,
+  };
   const tmp = _require;
   const tmp4 = first(5959);
   const items2 = [closure_4];
@@ -43,4 +49,4 @@ export default function useEntryActivityAndApplication(extra) {
   obj[3] = first;
   obj[4] = tmp7[1];
   return obj;
-};
+}

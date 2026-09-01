@@ -15,7 +15,7 @@ function _fetchGuildJoinRequests() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -137,7 +137,14 @@ function _fetchGuildJoinRequests() {
             }
             closure_9 = lib.map(c6);
             obj = lib(709);
-            const obj6 = { type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS", status: null, requests: null, total: null, limit: null, guildId: null };
+            const obj6 = {
+              type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS",
+              status: null,
+              requests: null,
+              total: null,
+              limit: null,
+              guildId: null,
+            };
             obj6[1] = lib;
             obj6[2] = closure_9;
             obj6[3] = total;
@@ -180,7 +187,7 @@ function _fetchGuildJoinRequestsForUser() {
     closure_1 = arg1;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_4 = tmp2;
       closure_3 = tmp5;
       const HTTP = callback(closure_1_2[7]).HTTP;
@@ -219,7 +226,7 @@ function _removeGuildJoinRequest() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -313,7 +320,7 @@ function _ackUserGuildJoinRequest() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -429,7 +436,7 @@ function _updateGuildJoinRequest() {
     closure_4 = arg4;
     c7 = 0;
     c8 = 0;
-    const iter = (function*(arg0, arg1, arg2) {
+    const iter = (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -560,7 +567,7 @@ function _resetGuildJoinRequest() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -649,7 +656,7 @@ function _resetGuildJoinRequest() {
 }
 function _fetchRequestToJoinGuilds() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -727,7 +734,7 @@ function _fetchJoinRequestForInterview() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const table = tmp2;
       let callback = tmp5;
       const HTTP = lib(closure_1_2[7]).HTTP;
@@ -759,7 +766,7 @@ function _createOrEnterJoinRequestInterview() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       let body = tmp2;
       if (flag === undefined) {
         flag = true;
@@ -793,7 +800,9 @@ function _createOrEnterJoinRequestInterview() {
   return applyArgumentsResult;
 }
 ({ AbortCodes: error, Endpoints: closure_8 } = ME);
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestActionCreators.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/GuildJoinRequestActionCreators.tsx",
+);
 
 export default {
   fetchGuildJoinRequests(arg0) {
@@ -906,5 +915,5 @@ export default {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  }
+  },
 };

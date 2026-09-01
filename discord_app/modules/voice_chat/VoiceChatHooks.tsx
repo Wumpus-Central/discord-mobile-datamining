@@ -16,5 +16,7 @@ export const useIsConnectedToVoiceChannel = function useIsConnectedToVoiceChanne
 export const useIsConnectedToVoiceChannelForId = function useIsConnectedToVoiceChannelForId(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_2];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_3.isInChannel(id, closure_1_2.getId()));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_3.isInChannel(id, closure_1_2.getId()),
+  );
 };

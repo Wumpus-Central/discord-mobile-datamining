@@ -11,7 +11,14 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 ({ Platform, View: c3 } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
 let obj = { footer: null };
-obj = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12, paddingBottom: 0, backgroundColor: null, borderTopColor: null, borderTopWidth: 1 };
+obj = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_12,
+  paddingBottom: 0,
+  backgroundColor: null,
+  borderTopColor: null,
+  borderTopWidth: 1,
+};
 const PX_24 = ThemesDefault.space.PX_24;
 obj[3] = ThemesDefault.colors.BACKGROUND_BASE_LOWER;
 obj[4] = ThemesDefault.colors.BORDER_SUBTLE;
@@ -32,7 +39,17 @@ export default function BuyNitroMarketingFooter(arg0) {
   obj1[2] = applicationId;
   obj1[3] = onPaymentSuccess;
   obj1[4] = onPaymentDismiss;
-  obj[2] = jsx(BuyNitroPurchaseButtonDefault, { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null });
-  obj[1] = <closure_3 style={callback().footer} collapsable={false}>{null}</closure_3>;
+  obj[2] = jsx(BuyNitroPurchaseButtonDefault, {
+    location: null,
+    planSelection: null,
+    applicationId: null,
+    onPaymentSuccess: null,
+    onPaymentDismiss: null,
+  });
+  obj[1] = (
+    <closure_3 style={callback().footer} collapsable={false}>
+      {null}
+    </closure_3>
+  );
   return jsx(LegacyBaseButton.GestureDetector, { style: callback().footer, collapsable: false, children: null });
-};
+}

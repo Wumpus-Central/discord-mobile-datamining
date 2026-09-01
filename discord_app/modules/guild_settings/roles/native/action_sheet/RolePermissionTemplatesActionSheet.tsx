@@ -16,7 +16,9 @@ createCacheKey = { templateContainer: null };
 createCacheKey = { paddingVertical: 16, flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/action_sheet/RolePermissionTemplatesActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_settings/roles/native/action_sheet/RolePermissionTemplatesActionSheet.tsx",
+);
 
 export default function RolePermissionTemplatesActionSheet(guildId) {
   ({ permissionsEdited: require, onPermissionsChanged: importDefault } = guildId);
@@ -29,8 +31,15 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
   let intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.KgCkoQ);
   const tmp = callback();
-  obj = { header: jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: null }), startExpanded: true, children: null };
+  obj = {
+    header: jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: null }),
+    startExpanded: true,
+    children: null,
+  };
   obj = { style: tmp.templateContainer, children: jsx(GuildSettingsRoleTemplateDefault, obj1) };
   obj[2] = <View style={tmp.templateContainer}>{jsx(GuildSettingsRoleTemplateDefault, obj1)}</View>;
-  return jsx(ActionSheet.ActionSheet, { style: tmp.templateContainer, children: jsx(GuildSettingsRoleTemplateDefault, obj1) });
-};
+  return jsx(ActionSheet.ActionSheet, {
+    style: tmp.templateContainer,
+    children: jsx(GuildSettingsRoleTemplateDefault, obj1),
+  });
+}

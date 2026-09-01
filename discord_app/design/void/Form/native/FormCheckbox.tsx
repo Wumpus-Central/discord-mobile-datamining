@@ -12,4 +12,4 @@ const result = require("set").fileFinishedImporting("design/void/Form/native/For
 export default function FormCheckbox(selected) {
   const tmp = callback();
   return jsx(Button.Checkbox, { style: callback().checkbox, selected: selected.selected });
-};
+}

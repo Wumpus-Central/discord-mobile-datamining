@@ -56,7 +56,7 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
         }
         if (isMatch) {
           let tmp8 = item10006;
-          let items1 = [tmp2, ];
+          let items1 = [tmp2];
           let tmp9 = tmp3;
           items1[1] = tmp4;
           let arr = items.push(items1);
@@ -80,7 +80,7 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
         });
         const mapped = items.map((arg0) => {
           [str, tmp] = arg0;
-          return "" + str.toLowerCase() + "=\"" + tmp + "\"";
+          return "" + str.toLowerCase() + '="' + tmp + '"';
         });
         joined = mapped.join(", ");
       }
@@ -99,7 +99,7 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
 prototype["buildHeaders"] = function buildHeaders(arg0) {
   closure_0 = arg0;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     closure_2 = tmp4;
     closure_1 = closure_1_5;
     const buildHeadersForMd5 = closure_1_5.buildHeadersForMd5;

@@ -5,7 +5,10 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 noopAll;
-let closure_2 = createCacheKey.createStyles({ voiceStates: { paddingRight: 8 }, voiceStatesCollapsed: { paddingRight: 0, flexDirection: "row", flexWrap: "wrap", alignItems: "center" } });
+let closure_2 = createCacheKey.createStyles({
+  voiceStates: { paddingRight: 8 },
+  voiceStatesCollapsed: { paddingRight: 0, flexDirection: "row", flexWrap: "wrap", alignItems: "center" },
+});
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUsersItem.tsx");
 
 export default function VoiceUsersItem(children) {
@@ -15,10 +18,10 @@ export default function VoiceUsersItem(children) {
   if (!voiceStatesCollapsed) {
     voiceStates = tmp.voiceStates;
   }
-  const style = [voiceStates, ];
+  const style = [voiceStates];
   if (voiceStatesCollapsed) {
     voiceStatesCollapsed = tmp.voiceStatesCollapsed;
   }
   style[1] = voiceStatesCollapsed;
   return <View style={style}>{arg0.children}</View>;
-};
+}

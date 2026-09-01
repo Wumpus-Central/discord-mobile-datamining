@@ -38,7 +38,7 @@ export default function getURLForApplication(arg0) {
     tmp4 = closure_0;
   }
   return activityUrlOverride;
-};
+}
 export const getNonTestModeUrlForApplication = function getNonTestModeUrlForApplication(arg0) {
   if (null == ACTIVITY_APPLICATION_HOST) {
     return null;

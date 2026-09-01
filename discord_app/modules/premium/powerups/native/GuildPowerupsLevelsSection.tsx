@@ -45,7 +45,7 @@ export default function GuildPowerupsLevelsSection(arg0) {
   obj[0] = intl.string(listings(2401)["TXY/b0"]);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(listings(2401).aJv4PB);
-  const items1 = [callback(listings(12116), obj), ];
+  const items1 = [callback(listings(12116), obj)];
   obj = {
     cardMarginRight: PX_16,
     cardWidth: 250,
@@ -57,9 +57,9 @@ export default function GuildPowerupsLevelsSection(arg0) {
       obj = { style: cardContainer.cardContainer, children: closure_1_5(listings(cardContainer[10]), obj) };
       obj = { guildId: closure_0, powerup, nextPowerup: memo[index + 1], index, isScrollingRef: closure_4 };
       return closure_1_5(closure_4, obj, powerup.skuId);
-    })
+    }),
   };
   items1[1] = callback(items2.MarketingCardsScroller, obj);
   obj[0] = items1;
   return callback2(closure_6, obj);
-};
+}

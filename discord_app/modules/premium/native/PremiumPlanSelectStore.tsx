@@ -13,5 +13,7 @@ export const setIsPurchasing = function setIsPurchasing(arg0) {
     tmp = null;
   }
   dependencyMap = tmp;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_2.setState({ isPurchasing: closure_0, purchasingProductId: c1 }));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
+    closure_1_2.setState({ isPurchasing: closure_0, purchasingProductId: c1 }),
+  );
 };

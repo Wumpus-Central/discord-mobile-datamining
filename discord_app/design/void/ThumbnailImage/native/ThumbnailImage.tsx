@@ -13,4 +13,4 @@ const result = set.fileFinishedImporting("design/void/ThumbnailImage/native/Thum
 export default function LocalImageThumbnail(arg0) {
   const merged = Object.assign(arg0);
   return <_default />;
-};
+}

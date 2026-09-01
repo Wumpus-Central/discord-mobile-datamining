@@ -149,12 +149,42 @@ let closure_5 = ME.MEDIA_PROXY_MAX_TARGET_RESOLUTION;
 const tmp3 = /\.([a-zA-Z0-9]+)$/;
 const re6 = tmp3;
 const items = ["video/mp4", "video/webm"];
-let obj = { HERO: "hero", HERO_IMAGE: "hero_image", HERO_VIDEO: "hero_video", QUEST_BAR_HERO: "quest_bar_hero", QUEST_BAR_HERO_VIDEO: "quest_bar_hero_video", QUEST_BAR_HERO_IMAGE: "quest_bar_hero_image", REWARD: "reward", REWARD_IMAGE: "reward_image", GAME_TILE: "game_tile", LOGO_TYPE: "logo_type", COSPONSOR_LOGO_TYPE: "cosponsor_logo_type", VIDEO_PLAYER_VIDEO: "video_player_video", VIDEO_PLAYER_VIDEO_LOW_RES: "video_player_video_low_res", VIDEO_PLAYER_VIDEO_HLS: "video_player_video_hls", VIDEO_PLAYER_THUMBNAIL: "video_player_thumbnail", VIDEO_PLAYER_CAPTION: "video_player_caption", VIDEO_PLAYER_TRANSCRIPT: "video_player_transcript" };
+let obj = {
+  HERO: "hero",
+  HERO_IMAGE: "hero_image",
+  HERO_VIDEO: "hero_video",
+  QUEST_BAR_HERO: "quest_bar_hero",
+  QUEST_BAR_HERO_VIDEO: "quest_bar_hero_video",
+  QUEST_BAR_HERO_IMAGE: "quest_bar_hero_image",
+  REWARD: "reward",
+  REWARD_IMAGE: "reward_image",
+  GAME_TILE: "game_tile",
+  LOGO_TYPE: "logo_type",
+  COSPONSOR_LOGO_TYPE: "cosponsor_logo_type",
+  VIDEO_PLAYER_VIDEO: "video_player_video",
+  VIDEO_PLAYER_VIDEO_LOW_RES: "video_player_video_low_res",
+  VIDEO_PLAYER_VIDEO_HLS: "video_player_video_hls",
+  VIDEO_PLAYER_THUMBNAIL: "video_player_thumbnail",
+  VIDEO_PLAYER_CAPTION: "video_player_caption",
+  VIDEO_PLAYER_TRANSCRIPT: "video_player_transcript",
+};
 obj = { VIDEO: "video", VIDEO_LOW_RES: "videoLowRes", VIDEO_HLS: "videoHls" };
 obj = { VIDEO: "url", THUMBNAIL: "thumbnail", CAPTION: "caption", TRANSCRIPT: "transcript" };
 let obj1 = { TIER_1: 1, [1]: "TIER_1", TIER_2: 2, [2]: "TIER_2", TIER_3: 3, [3]: "TIER_3", TIER_4: 4, [4]: "TIER_4" };
-let closure_10 = { [obj.VIDEO_PLAYER_VIDEO]: { variant: obj.VIDEO, property: obj.VIDEO }, [obj.VIDEO_PLAYER_VIDEO_LOW_RES]: { variant: obj.VIDEO_LOW_RES, property: obj.VIDEO }, [obj.VIDEO_PLAYER_VIDEO_HLS]: { variant: obj.VIDEO_HLS, property: obj.VIDEO }, [obj.VIDEO_PLAYER_THUMBNAIL]: { variant: obj.VIDEO, property: obj.THUMBNAIL }, [obj.VIDEO_PLAYER_CAPTION]: { variant: obj.VIDEO, property: obj.CAPTION }, [obj.VIDEO_PLAYER_TRANSCRIPT]: { variant: obj.VIDEO, property: obj.TRANSCRIPT } };
-const obj8 = { [TIER_1]: metadataDefault, [TIER_2]: metadataDefault2, [TIER_3]: metadataDefault3, [TIER_4]: metadataDefault4 };
+let closure_10 = {
+  [obj.VIDEO_PLAYER_VIDEO]: { variant: obj.VIDEO, property: obj.VIDEO },
+  [obj.VIDEO_PLAYER_VIDEO_LOW_RES]: { variant: obj.VIDEO_LOW_RES, property: obj.VIDEO },
+  [obj.VIDEO_PLAYER_VIDEO_HLS]: { variant: obj.VIDEO_HLS, property: obj.VIDEO },
+  [obj.VIDEO_PLAYER_THUMBNAIL]: { variant: obj.VIDEO, property: obj.THUMBNAIL },
+  [obj.VIDEO_PLAYER_CAPTION]: { variant: obj.VIDEO, property: obj.CAPTION },
+  [obj.VIDEO_PLAYER_TRANSCRIPT]: { variant: obj.VIDEO, property: obj.TRANSCRIPT },
+};
+const obj8 = {
+  [TIER_1]: metadataDefault,
+  [TIER_2]: metadataDefault2,
+  [TIER_3]: metadataDefault3,
+  [TIER_4]: metadataDefault4,
+};
 ({ TIER_1, TIER_2, TIER_3, TIER_4 } = obj1);
 let result = set.fileFinishedImporting("modules/quests/lib/AssetUtils.tsx");
 
@@ -307,7 +337,10 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRI
     }
     if ("taskConfigV2" in quest.config) {
       const FirstPartyQuestTaskTypes = set2.FirstPartyQuestTaskTypes;
-      const tmp5 = quest.config.taskConfigV2.tasks[flag ? FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE : FirstPartyQuestTaskTypes.WATCH_VIDEO];
+      const tmp5 =
+        quest.config.taskConfigV2.tasks[
+          flag ? FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE : FirstPartyQuestTaskTypes.WATCH_VIDEO
+        ];
       let tmp9;
       if (tmp5 != null) {
         if (tmp5.assets[tmp7.variant] != null) {

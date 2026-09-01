@@ -34,13 +34,36 @@ require = arg1;
 ({ HelpdeskArticles: error, UserSettingsSections: closure_8 } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let obj = { NARROW: 0, [0]: "NARROW", WIDE: 1, [1]: "WIDE" };
-const frozen = Object.freeze({ [obj.NARROW]: { width: 300, height: 364, scaledFontHeight: 440 }, [obj.WIDE]: { width: 320, height: 364, scaledFontHeight: 440 } });
+const frozen = Object.freeze({
+  [obj.NARROW]: { width: 300, height: 364, scaledFontHeight: 440 },
+  [obj.WIDE]: { width: 320, height: 364, scaledFontHeight: 440 },
+});
 let closure_13 = createCacheKey.createStyles((arg0) => {
-  obj = { container: null, headerComponent: null, image: null, title: null, description: null, button: null, imageContainer: null, imageOverlayText: null, imageOverlayTextContainer: null, pillTextContainer: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, width: frozen[arg0].width };
+  obj = {
+    container: null,
+    headerComponent: null,
+    image: null,
+    title: null,
+    description: null,
+    button: null,
+    imageContainer: null,
+    imageOverlayText: null,
+    imageOverlayTextContainer: null,
+    pillTextContainer: null,
+  };
+  obj = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+    borderRadius: ThemesDefault.radii.sm,
+    width: frozen[arg0].width,
+  };
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
   obj[0] = obj;
-  obj = { width: "100%", borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+  obj = {
+    width: "100%",
+    borderTopLeftRadius: ThemesDefault.radii.sm,
+    borderTopRightRadius: ThemesDefault.radii.sm,
+    overflow: "hidden",
+  };
   obj[1] = obj;
   obj[2] = { width: "100%", borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
   obj[3] = { marginTop: 16, marginHorizontal: 16 };
@@ -58,7 +81,16 @@ let closure_13 = createCacheKey.createStyles((arg0) => {
   const tmp5 = arg0 === obj.NARROW && { height: "100%" };
   obj[7] = { color: ThemesDefault.colors.WHITE, fontSize: 14 };
   const obj3 = { color: ThemesDefault.colors.WHITE, fontSize: 14 };
-  obj[8] = { position: "absolute", bottom: "10%", borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, paddingHorizontal: 12, paddingVertical: 4, justifyContent: "center", alignItems: "center" };
+  obj[8] = {
+    position: "absolute",
+    bottom: "10%",
+    borderRadius: ThemesDefault.radii.round,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    justifyContent: "center",
+    alignItems: "center",
+  };
   obj[9] = { position: "absolute", width: "auto", top: -8, left: 10 };
   return obj;
 });
@@ -87,7 +119,7 @@ export default function PremiumPerkCard(variant) {
       const items = [tmp4.image, imageStyle];
       obj[0] = items;
       obj[1] = imageSrc;
-      const items1 = [callback(preloadDefault, obj), ];
+      const items1 = [callback(preloadDefault, obj)];
       obj1 = { style: null, children: null };
       obj1[0] = tmp4.imageOverlayTextContainer;
       const obj2 = { style: null, variant: "text-md/bold", children: null };
@@ -124,7 +156,7 @@ export default function PremiumPerkCard(variant) {
         tmp21 = bodyComponent;
       }
     }
-    const items3 = [tmp4.container, , ];
+    const items3 = [tmp4.container, ,];
     let tmp25 = WIDE === obj.NARROW;
     if (tmp25) {
       const obj5 = { height: null };
@@ -142,7 +174,7 @@ export default function PremiumPerkCard(variant) {
       obj7[1] = tmp4.pillTextContainer;
       tmp26 = callback(PillTextDefault, obj7);
     }
-    const items4 = [tmp26, tmp10, , , ];
+    const items4 = [tmp26, tmp10, , ,];
     const obj8 = { style: null, variant: "heading-lg/extrabold", accessibilityRole: "header", children: null };
     const items5 = [tmp4.title, titleStyle];
     obj8[0] = items5;
@@ -166,8 +198,26 @@ export default function PremiumPerkCard(variant) {
     obj6[1] = items4;
     return callback2(closure_4, obj6);
   }
+}
+export const PerkCardTypes = {
+  CUSTOM_PROFILE: "customProfile",
+  CLIENT_THEMES: "clientThemes",
+  SERVER_BOOSTS: "serverBoosts",
+  GREYED_SERVER_BOOSTS: "greyServerBoosts",
+  CUSTOM_APP_ICONS: "customAppIcons",
+  EMOJI: "emoji",
+  CUSTOM_SOUNDS: "customSounds",
+  STICKER: "sticker",
+  EARLY_ACCESS: "earlyAccess",
+  MEMBER_PRICING: "memberPricing",
+  LARGE_UPLOADS: "largeUploads",
+  HD_VIDEO: "hdVideo",
+  SUPER_REACTIONS: "superReactions",
+  ENTRACE_SOUNDS: "entranceSounds",
+  BADGE: "badge",
+  GREYED_BADGE: "greyBadge",
+  XBOX_GAME_PASS: "xboxGamePass",
 };
-export const PerkCardTypes = { CUSTOM_PROFILE: "customProfile", CLIENT_THEMES: "clientThemes", SERVER_BOOSTS: "serverBoosts", GREYED_SERVER_BOOSTS: "greyServerBoosts", CUSTOM_APP_ICONS: "customAppIcons", EMOJI: "emoji", CUSTOM_SOUNDS: "customSounds", STICKER: "sticker", EARLY_ACCESS: "earlyAccess", MEMBER_PRICING: "memberPricing", LARGE_UPLOADS: "largeUploads", HD_VIDEO: "hdVideo", SUPER_REACTIONS: "superReactions", ENTRACE_SOUNDS: "entranceSounds", BADGE: "badge", GREYED_BADGE: "greyBadge", XBOX_GAME_PASS: "xboxGamePass" };
 export const PerkCardVariant = obj;
 export const PERK_CARD_SIZES = frozen;
 export const usePerkCardHeight = function usePerkCardHeight(NARROW) {
@@ -202,7 +252,25 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
     obj = { shouldFetchSubscriptionPlans: !subscriptionPlansLoaded };
     obj.openUserSettings(obj);
   }, items);
-  obj = { customProfile: null, clientThemes: null, serverBoosts: null, greyServerBoosts: null, customAppIcons: null, emoji: null, customSounds: null, sticker: null, earlyAccess: null, memberPricing: null, largeUploads: null, hdVideo: null, superReactions: null, entranceSounds: null, badge: null, greyBadge: null, xboxGamePass: null };
+  obj = {
+    customProfile: null,
+    clientThemes: null,
+    serverBoosts: null,
+    greyServerBoosts: null,
+    customAppIcons: null,
+    emoji: null,
+    customSounds: null,
+    sticker: null,
+    earlyAccess: null,
+    memberPricing: null,
+    largeUploads: null,
+    hdVideo: null,
+    superReactions: null,
+    entranceSounds: null,
+    badge: null,
+    greyBadge: null,
+    xboxGamePass: null,
+  };
   obj = { title: null, description: null, imageSrc: null, buttonOnPress: null };
   const callback4 = React.useCallback(() => {
     obj = subscriptionPlansLoaded(6245);
@@ -289,7 +357,9 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   const intl22 = subscriptionPlansLoaded(1236).intl;
   obj10[0] = intl22.formatToPlainString(subscriptionPlansLoaded(1236).t.jqhAdL, { premiumMaxSize: formatSizeResult });
   const intl23 = subscriptionPlansLoaded(1236).intl;
-  obj10[1] = intl23.formatToPlainString(subscriptionPlansLoaded(1236).t["HI+cfm"], { premiumMaxSize: formatSizeResult });
+  obj10[1] = intl23.formatToPlainString(subscriptionPlansLoaded(1236).t["HI+cfm"], {
+    premiumMaxSize: formatSizeResult,
+  });
   obj10[2] = registerAssetDefault11;
   obj[10] = obj10;
   const obj11 = { title: null, description: null, imageSrc: null };

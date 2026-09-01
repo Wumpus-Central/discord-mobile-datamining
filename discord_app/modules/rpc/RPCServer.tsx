@@ -17,12 +17,8 @@ class RPCServer {
     obj[0] = function getCurrentUser() {
       return null;
     };
-    obj[1] = function onConnect() {
-
-    };
-    obj[2] = function onDisconnect() {
-
-    };
+    obj[1] = function onConnect() {};
+    obj[2] = function onDisconnect() {};
     obj[3] = {};
     obj[4] = {};
     set = new Set();
@@ -47,7 +43,11 @@ prototype["handleConnect"] = function handleConnect(v) {
   sockets.add(v);
   this.onConnect(v);
   obj = { v: v.version, config: obj };
-  obj = { cdn_host: window.GLOBAL_ENV.CDN_HOST, api_endpoint: window.GLOBAL_ENV.API_ENDPOINT, environment: "production" };
+  obj = {
+    cdn_host: window.GLOBAL_ENV.CDN_HOST,
+    api_endpoint: window.GLOBAL_ENV.API_ENDPOINT,
+    environment: "production",
+  };
   if (v.transport === TransportTypes.IPC) {
     const currentUser = self.getCurrentUser();
     if (null == currentUser) {
@@ -148,7 +148,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
       closure_1 = arg1;
       c4 = 0;
       c5 = 0;
-      return (function*(arg0, arg1) {
+      return (function* (arg0, arg1) {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -218,7 +218,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
         }
       })();
     });
-    return new Promise(function() {
+    return new Promise(function () {
       self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -263,123 +263,134 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
       }
     }
     throw new lib(closure_2[5])({ errorCode: closure_1_8.INVALID_PAYLOAD }, "Payload requires a nonce");
-  }).then((arg0) => {
-    closure_0 = arg0;
-    closure_0 = undefined;
-    closure_0 = self((arg0, arg1) => {
+  })
+    .then((arg0) => {
       closure_0 = arg0;
-      closure_1 = arg1;
-      c4 = 0;
-      c5 = 0;
-      return (function*(arg0, arg1) {
-        if (c5 === 2) {
-          c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+      closure_0 = undefined;
+      closure_0 = self((arg0, arg1) => {
+        closure_0 = arg0;
+        closure_1 = arg1;
+        c4 = 0;
+        c5 = 0;
+        return (function* (arg0, arg1) {
+          if (c5 === 2) {
+            c5 = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp4 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
           } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
+            try {
+              c5 = 2;
+              if (0 === c4) {
+                if (arg0 === 1) {
+                  c5 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c5 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  closure_3 = tmp5;
+                  closure_2 = tmp2;
+                  closure_2 = undefined;
+                  if (null != closure_0.validation) {
+                    c4 = 1;
+                    c5 = 1;
+                    obj1 = { value: null, done: false };
+                    obj1[0] = closure_0.getJoi();
+                    return obj1;
+                  } else {
+                    tmp29(closure_0);
+                    c5 = 3;
+                  }
+                }
+              } else if (arg0 === 1) {
                 c5 = 3;
                 throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_3 = tmp5;
-                closure_2 = tmp2;
-                closure_2 = undefined;
-                if (null != closure_0.validation) {
-                  c4 = 1;
-                  c5 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = closure_0.getJoi();
-                  return obj1;
-                } else {
-                  tmp29(closure_0);
-                  c5 = 3;
-                }
+              } else if (arg0 !== 2) {
+                closure_2 = arg1;
+                callback(closure_2[8])(null != closure_0.validation, "command.validation must not be null");
+                const args = closure_2_2.args;
+                closure_2.validate(args, closure_0.validation(closure_2), { convert: false }, (message) => {
+                  if (null == message) {
+                    callback(callback);
+                  } else {
+                    const obj = { errorCode: null };
+                    obj[0] = closure_3_8.INVALID_PAYLOAD;
+                    const tmp8 = new closure_3_1(closure_3_2[5])(obj, message.message);
+                    callback2(tmp8);
+                  }
+                });
               }
-            } else if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              closure_2 = arg1;
-              callback(closure_2[8])(null != closure_0.validation, "command.validation must not be null");
-              const args = closure_2_2.args;
-              closure_2.validate(args, closure_0.validation(closure_2), { convert: false }, (message) => {
-                if (null == message) {
-                  callback(callback);
-                } else {
-                  const obj = { errorCode: null };
-                  obj[0] = closure_3_8.INVALID_PAYLOAD;
-                  const tmp8 = new closure_3_1(closure_3_2[5])(obj, message.message);
-                  callback2(tmp8);
-                }
-              });
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } catch (tmp9) {
+              c5 = tmp;
+              throw tmp9;
             }
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } catch (tmp9) {
-            c5 = tmp;
-            throw tmp9;
           }
+        })();
+      });
+      return new Promise(function () {
+        self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
         }
-      })();
+        return applyArgumentsResult;
+      });
+    })
+    .then((handler) => {
+      if (lib.source.type === closure_1_4.POST_MESSAGE) {
+        let obj = self(closure_2[9]);
+        obj = { cmd: null, iframeId: null, args: null };
+        obj[0] = closure_2.cmd;
+        obj[1] = tmp.source.iframeId;
+        let args = closure_2.args;
+        if (args == null) {
+          args = {};
+        }
+        obj[2] = args;
+        const interceptRpcCommandResult = obj.interceptRpcCommand(obj);
+        if (null != interceptRpcCommandResult) {
+          return interceptRpcCommandResult.result;
+        }
+      }
+      obj = {
+        socket: tmp,
+        server: self,
+        cmd: closure_2.cmd,
+        evt: closure_2.evt,
+        nonce: closure_2.nonce,
+        args: null,
+        isSocketConnected: null,
+        signal: null,
+      };
+      let args1 = closure_2.args;
+      if (args1 == null) {
+        args1 = {};
+      }
+      obj[5] = args1;
+      obj[6] = function isSocketConnected() {
+        sockets = sockets.sockets;
+        return sockets.has(closure_1);
+      };
+      obj[7] = lib.abortController.signal;
+      return handler.handler(obj);
     });
-    return new Promise(function() {
-      self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    });
-  }).then((handler) => {
-    if (lib.source.type === closure_1_4.POST_MESSAGE) {
-      let obj = self(closure_2[9]);
-      obj = { cmd: null, iframeId: null, args: null };
-      obj[0] = closure_2.cmd;
-      obj[1] = tmp.source.iframeId;
-      let args = closure_2.args;
-      if (args == null) {
-        args = {};
-      }
-      obj[2] = args;
-      const interceptRpcCommandResult = obj.interceptRpcCommand(obj);
-      if (null != interceptRpcCommandResult) {
-        return interceptRpcCommandResult.result;
-      }
-    }
-    obj = { socket: tmp, server: self, cmd: closure_2.cmd, evt: closure_2.evt, nonce: closure_2.nonce, args: null, isSocketConnected: null, signal: null };
-    let args1 = closure_2.args;
-    if (args1 == null) {
-      args1 = {};
-    }
-    obj[5] = args1;
-    obj[6] = function isSocketConnected() {
-      sockets = sockets.sockets;
-      return sockets.has(closure_1);
-    };
-    obj[7] = lib.abortController.signal;
-    return handler.handler(obj);
-  });
   new Promise((arg0) => {
     if (null != closure_2.nonce) {
       if ("" !== tmp.nonce) {
@@ -414,123 +425,136 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
       }
     }
     throw new lib(closure_2[5])({ errorCode: closure_1_8.INVALID_PAYLOAD }, "Payload requires a nonce");
-  }).then((arg0) => {
-    closure_0 = arg0;
-    closure_0 = undefined;
-    closure_0 = self((arg0, arg1) => {
+  })
+    .then((arg0) => {
       closure_0 = arg0;
-      closure_1 = arg1;
-      c4 = 0;
-      c5 = 0;
-      return (function*(arg0, arg1) {
-        if (c5 === 2) {
-          c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+      closure_0 = undefined;
+      closure_0 = self((arg0, arg1) => {
+        closure_0 = arg0;
+        closure_1 = arg1;
+        c4 = 0;
+        c5 = 0;
+        return (function* (arg0, arg1) {
+          if (c5 === 2) {
+            c5 = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp4 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
           } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
+            try {
+              c5 = 2;
+              if (0 === c4) {
+                if (arg0 === 1) {
+                  c5 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c5 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  closure_3 = tmp5;
+                  closure_2 = tmp2;
+                  closure_2 = undefined;
+                  if (null != closure_0.validation) {
+                    c4 = 1;
+                    c5 = 1;
+                    obj1 = { value: null, done: false };
+                    obj1[0] = closure_0.getJoi();
+                    return obj1;
+                  } else {
+                    tmp29(closure_0);
+                    c5 = 3;
+                  }
+                }
+              } else if (arg0 === 1) {
                 c5 = 3;
                 throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_3 = tmp5;
-                closure_2 = tmp2;
-                closure_2 = undefined;
-                if (null != closure_0.validation) {
-                  c4 = 1;
-                  c5 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = closure_0.getJoi();
-                  return obj1;
-                } else {
-                  tmp29(closure_0);
-                  c5 = 3;
-                }
+              } else if (arg0 !== 2) {
+                closure_2 = arg1;
+                callback(closure_2[8])(null != closure_0.validation, "command.validation must not be null");
+                const args = closure_2_2.args;
+                closure_2.validate(args, closure_0.validation(closure_2), { convert: false }, (message) => {
+                  if (null == message) {
+                    callback(callback);
+                  } else {
+                    const obj = { errorCode: null };
+                    obj[0] = closure_3_8.INVALID_PAYLOAD;
+                    const tmp8 = new closure_3_1(closure_3_2[5])(obj, message.message);
+                    callback2(tmp8);
+                  }
+                });
               }
-            } else if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              closure_2 = arg1;
-              callback(closure_2[8])(null != closure_0.validation, "command.validation must not be null");
-              const args = closure_2_2.args;
-              closure_2.validate(args, closure_0.validation(closure_2), { convert: false }, (message) => {
-                if (null == message) {
-                  callback(callback);
-                } else {
-                  const obj = { errorCode: null };
-                  obj[0] = closure_3_8.INVALID_PAYLOAD;
-                  const tmp8 = new closure_3_1(closure_3_2[5])(obj, message.message);
-                  callback2(tmp8);
-                }
-              });
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } catch (tmp9) {
+              c5 = tmp;
+              throw tmp9;
             }
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } catch (tmp9) {
-            c5 = tmp;
-            throw tmp9;
           }
+        })();
+      });
+      return new Promise(function () {
+        self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
         }
-      })();
-    });
-    return new Promise(function() {
-      self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
+        return applyArgumentsResult;
+      });
+    })
+    .then((handler) => {
+      if (lib.source.type === closure_1_4.POST_MESSAGE) {
+        let obj = self(closure_2[9]);
+        obj = { cmd: null, iframeId: null, args: null };
+        obj[0] = closure_2.cmd;
+        obj[1] = tmp.source.iframeId;
+        let args = closure_2.args;
+        if (args == null) {
+          args = {};
+        }
+        obj[2] = args;
+        const interceptRpcCommandResult = obj.interceptRpcCommand(obj);
+        if (null != interceptRpcCommandResult) {
+          return interceptRpcCommandResult.result;
+        }
       }
-      return applyArgumentsResult;
-    });
-  }).then((handler) => {
-    if (lib.source.type === closure_1_4.POST_MESSAGE) {
-      let obj = self(closure_2[9]);
-      obj = { cmd: null, iframeId: null, args: null };
-      obj[0] = closure_2.cmd;
-      obj[1] = tmp.source.iframeId;
-      let args = closure_2.args;
-      if (args == null) {
-        args = {};
+      obj = {
+        socket: tmp,
+        server: self,
+        cmd: closure_2.cmd,
+        evt: closure_2.evt,
+        nonce: closure_2.nonce,
+        args: null,
+        isSocketConnected: null,
+        signal: null,
+      };
+      let args1 = closure_2.args;
+      if (args1 == null) {
+        args1 = {};
       }
-      obj[2] = args;
-      const interceptRpcCommandResult = obj.interceptRpcCommand(obj);
-      if (null != interceptRpcCommandResult) {
-        return interceptRpcCommandResult.result;
-      }
-    }
-    obj = { socket: tmp, server: self, cmd: closure_2.cmd, evt: closure_2.evt, nonce: closure_2.nonce, args: null, isSocketConnected: null, signal: null };
-    let args1 = closure_2.args;
-    if (args1 == null) {
-      args1 = {};
-    }
-    obj[5] = args1;
-    obj[6] = function isSocketConnected() {
-      sockets = sockets.sockets;
-      return sockets.has(closure_1);
-    };
-    obj[7] = lib.abortController.signal;
-    return handler.handler(obj);
-  }).then((arg0) => self.dispatch(closure_1, closure_2.nonce, closure_2.cmd, null, arg0)).catch((code) => self.error(closure_1, closure_2.nonce, closure_2.cmd, code.code, code.message));
+      obj[5] = args1;
+      obj[6] = function isSocketConnected() {
+        sockets = sockets.sockets;
+        return sockets.has(closure_1);
+      };
+      obj[7] = lib.abortController.signal;
+      return handler.handler(obj);
+    })
+    .then((arg0) => self.dispatch(closure_1, closure_2.nonce, closure_2.cmd, null, arg0))
+    .catch((code) => self.error(closure_1, closure_2.nonce, closure_2.cmd, code.code, code.message));
 };
 prototype["setCommandHandler"] = function setCommandHandler(arg0, arg1) {
   this.commands[arg0] = arg1;
@@ -597,13 +621,16 @@ prototype["isSubscribed"] = function isSubscribed(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const subscriptions = this.subscriptions;
-  return undefined !== subscriptions.find((socket) => {
-    let tmp = socket.socket.application.id === closure_0;
-    if (tmp) {
-      tmp = socket.evt === closure_1;
-    }
-    return tmp;
-  });
+  return (
+    undefined !==
+    subscriptions.find((socket) => {
+      let tmp = socket.socket.application.id === closure_0;
+      if (tmp) {
+        tmp = socket.evt === closure_1;
+      }
+      return tmp;
+    })
+  );
 };
 prototype["isChildSubscribed"] = function isChildSubscribed(arg0, arg1) {
   closure_0 = arg0;
@@ -612,13 +639,15 @@ prototype["isChildSubscribed"] = function isChildSubscribed(arg0, arg1) {
   if (tmp) {
     const self = this;
     const subscriptions = this.subscriptions;
-    tmp = undefined !== subscriptions.find((socket) => {
-      let tmp = socket.socket.application.parentId === closure_0;
-      if (tmp) {
-        tmp = socket.evt === closure_1;
-      }
-      return tmp;
-    });
+    tmp =
+      undefined !==
+      subscriptions.find((socket) => {
+        let tmp = socket.socket.application.parentId === closure_0;
+        if (tmp) {
+          tmp = socket.evt === closure_1;
+        }
+        return tmp;
+      });
   }
   return tmp;
 };
@@ -688,7 +717,12 @@ prototype["removeSubscriptions"] = function removeSubscriptions(abortController)
   applyDefault.remove(this.subscriptions, (socket) => socket.socket === closure_0);
   const result = this.dispatchIsSubscribedUpdate();
 };
-prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATIONSHIP_UPDATE, targetsFrame, closure_3, combined) {
+prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(
+  RELATIONSHIP_UPDATE,
+  targetsFrame,
+  closure_3,
+  combined,
+) {
   const self = this;
   closure_1 = RELATIONSHIP_UPDATE;
   closure_2 = targetsFrame;
@@ -756,9 +790,7 @@ prototype["storeWait"] = function storeWait(socket, arg1, timeout) {
   if (!tmp) {
     if (0 !== timeout) {
       closure_4 = applyDefault.uniqueId();
-      function removeSubscription() {
-
-      }
+      function removeSubscription() {}
       const promise = new Promise((arg0, closure_1) => {
         closure_0 = arg0;
         socket = closure_1;

@@ -6,7 +6,9 @@ import ME from "../../../../Constants.tsx";
 
 const require = arg1;
 ({ ChannelTypesSets: c5, MAX_UPLOAD_COUNT: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/useMediaKeyboardConfig.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/media_keyboard/native/components/useMediaKeyboardConfig.tsx",
+);
 
 export default function useMediaKeyboardConfig(arg0) {
   ({ channel, context } = arg0);
@@ -57,7 +59,17 @@ export default function useMediaKeyboardConfig(arg0) {
     if (target === constants.CHAT) {
       num = closure_1_6;
     }
-    const obj = { uploadLimit: num, disableWhenReachedLimit: target === constants.CHAT, includedUploadIds: null, fileTypes: null, canPostPolls: null, canStartThreads: null, isAppLauncherEnabled: null, uploadDisabled: null, draftType: null };
+    const obj = {
+      uploadLimit: num,
+      disableWhenReachedLimit: target === constants.CHAT,
+      includedUploadIds: null,
+      fileTypes: null,
+      canPostPolls: null,
+      canStartThreads: null,
+      isAppLauncherEnabled: null,
+      uploadDisabled: null,
+      draftType: null,
+    };
     let tmp6;
     if (target !== constants.CHAT) {
       const items = [tmp.option.name];
@@ -72,4 +84,4 @@ export default function useMediaKeyboardConfig(arg0) {
     obj[8] = mediaKeyboardDraftType;
     return obj;
   }, items);
-};
+}

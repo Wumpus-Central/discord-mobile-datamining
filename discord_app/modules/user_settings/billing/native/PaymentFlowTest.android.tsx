@@ -28,9 +28,9 @@ function TestView() {
   tmp2Result = tmp2(obj.useState(undefined), 2);
   first2 = tmp2Result[0];
   obj = { spacing: 16, style: tmp.container, children: null };
-  const items1 = [callback(first(first1[9]).Text, { variant: "text-lg/bold", children: "Android Payment Flow Test" }), ];
+  const items1 = [callback(first(first1[9]).Text, { variant: "text-lg/bold", children: "Android Payment Flow Test" })];
   obj = { style: tmp.title, variant: "text-md/bold", children: "Gift Purchase SKU" };
-  const items2 = [callback(first(first1[9]).Text, obj), , , , ];
+  const items2 = [callback(first(first1[9]).Text, obj), , , ,];
   obj1 = {
     containerStyle: tmp.textInput,
     label: "SKU ID",
@@ -39,11 +39,25 @@ function TestView() {
     onChange(arg0) {
       return callback(arg0);
     },
-    isClearable: true
+    isClearable: true,
   };
   items2[1] = callback(first(first1[11]).TextInput, obj1);
-  items2[2] = callback(first(first1[11]).TextInput, { containerStyle: tmp.textInput, label: "Gift Recipient ID", value: first1, placeholder: "Recipient User ID", onChange: tmp2Result[1], isClearable: true });
-  items2[3] = callback(first(first1[11]).TextInput, { containerStyle: tmp.textInput, label: "Gift Message (Optional)", value: first2, placeholder: "Here's a gift for you!", onChange: tmp2Result[1], isClearable: true });
+  items2[2] = callback(first(first1[11]).TextInput, {
+    containerStyle: tmp.textInput,
+    label: "Gift Recipient ID",
+    value: first1,
+    placeholder: "Recipient User ID",
+    onChange: tmp2Result[1],
+    isClearable: true,
+  });
+  items2[3] = callback(first(first1[11]).TextInput, {
+    containerStyle: tmp.textInput,
+    label: "Gift Message (Optional)",
+    value: first2,
+    placeholder: "Here's a gift for you!",
+    onChange: tmp2Result[1],
+    isClearable: true,
+  });
   let tmp15 = null === first;
   if (!tmp15) {
     tmp15 = null === first1;
@@ -67,7 +81,7 @@ function TestView() {
         callback(first1[13]).openLazy(first(first1[15])(first1[14], first1.paths), "SimpleRequestOTPActionSheet", obj);
         const obj3 = callback(first1[13]);
       }
-    }
+    },
   });
   obj4[0] = items2;
   items1[1] = closure_8(first(first1[10]).Card, obj4);

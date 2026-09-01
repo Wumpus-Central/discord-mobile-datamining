@@ -21,5 +21,5 @@ export default {
   finishSamsungAuthorization(arg0, arg1, closure_5) {
     const Samsung = NativeModules.Samsung;
     return Samsung.finishSamsungAuthorization(arg0, arg1, closure_5);
-  }
+  },
 };

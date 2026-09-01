@@ -6,7 +6,9 @@ import closure_4 from "../../../../stores/UserStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx",
+);
 
 export default function UserSettingsEditUserProfile(arg0) {
   let obj = stateFromStores(589);
@@ -31,4 +33,4 @@ export default function UserSettingsEditUserProfile(arg0) {
     const tmpResult = EditUserProfileBannerDefault;
   }
   return tmp7;
-};
+}

@@ -8,8 +8,7 @@ require = arg1;
 let closure_3 = { UNSET: "unset", FETCHING: "fetching", FAILED: "failed", SUCCEEDED: "succeeded" };
 let closure_4 = { guilds: {} };
 const Store = initializeDefault.Store;
-class GuildPopoutStore extends Store {
-}
+class GuildPopoutStore extends Store {}
 const prototype = GuildPopoutStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2);
@@ -60,7 +59,7 @@ const guildPopoutStore = new GuildPopoutStore(dispatcherDefault, {
     const merged = Object.assign(closure_4.guilds[guildId]);
     obj.fetchState = constants.FAILED;
     closure_4.guilds[guildId] = obj;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/guild_profile/GuildPopoutStore.tsx");
 

@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/frames/utils/getFramesManager.
 
 export default function getFramesManager() {
   return postMessageToWebView;
-};
+}

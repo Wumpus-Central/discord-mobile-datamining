@@ -21,7 +21,9 @@ function StreamingUserRow(user) {
   const tmp = callback2();
   let obj = user(589);
   const items = [closure_10];
-  let stateFromStores = obj.useStateFromStores(items, () => user(closure_1_2[27]).getStreamerActivityByUserId(user.id, closure_1_10));
+  let stateFromStores = obj.useStateFromStores(items, () =>
+    user(closure_1_2[27]).getStreamerActivityByUserId(user.id, closure_1_10),
+  );
   if (null != stateFromStores) {
     const intl2 = tmp3(1236).intl;
     if (null == stateFromStores.details) {
@@ -42,7 +44,7 @@ function StreamingUserRow(user) {
     }
     obj[1] = labelCallScreen;
     obj.subLabel = closure_11(tmp3(8363).FormSubLabel, obj);
-    const items1 = [closure_11(closure_16, obj), ];
+    const items1 = [closure_11(closure_16, obj)];
     let tmp10Result = user.id !== store.getId();
     if (tmp10Result) {
       obj1 = { style: null, children: null };
@@ -138,26 +140,65 @@ function StopRingButton(channelId) {
 }
 ({ View: c3, Platform } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let obj = { row: { flexDirection: "row" }, voiceStatusIcon: null, voiceStatusIconMargin: null, streamPreview: null, ringingButton: null, ringingButtonLabel: null, autoDisabledVideo: null, autoDisabledVideoLabel: null };
+let obj = {
+  row: { flexDirection: "row" },
+  voiceStatusIcon: null,
+  voiceStatusIconMargin: null,
+  streamPreview: null,
+  ringingButton: null,
+  ringingButtonLabel: null,
+  autoDisabledVideo: null,
+  autoDisabledVideoLabel: null,
+};
 obj = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8 };
 obj[1] = obj;
 obj[2] = { marginLeft: 8 };
 obj[3] = { marginHorizontal: 16, marginBottom: 16, alignItems: "center", flex: 1 };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.xs, height: 32, alignItems: "center", justifyContent: "center" };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: ThemesDefault.radii.xs,
+  height: 32,
+  alignItems: "center",
+  justifyContent: "center",
+};
 obj[4] = createCacheKey;
-obj[5] = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 14, lineHeight: 18, marginHorizontal: 16, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+obj[5] = {
+  fontFamily: Fonts.PRIMARY_SEMIBOLD,
+  fontSize: 14,
+  lineHeight: 18,
+  marginHorizontal: 16,
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+};
 obj[6] = { flexDirection: "row", alignItems: "center" };
 obj[7] = { marginLeft: 4 };
 let closure_14 = createCacheKey.createStyles(obj);
 let obj3 = { labelCallScreen: null, voiceStatusIcon: null, ringingButton: null, ringingButtonLabel: null };
-let obj2 = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 14, lineHeight: 18, marginHorizontal: 16, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let obj2 = {
+  fontFamily: Fonts.PRIMARY_SEMIBOLD,
+  fontSize: 14,
+  lineHeight: 18,
+  marginHorizontal: 16,
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+};
 obj3[0] = { fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 let obj4 = { fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj3[1] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8 };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.xs, height: 32, alignItems: "center", justifyContent: "center" };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: ThemesDefault.radii.xs,
+  height: 32,
+  alignItems: "center",
+  justifyContent: "center",
+};
 obj3[2] = createCacheKey;
 let obj5 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8 };
-obj3[3] = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 14, lineHeight: 18, marginHorizontal: 16, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+obj3[3] = {
+  fontFamily: Fonts.PRIMARY_SEMIBOLD,
+  fontSize: 14,
+  lineHeight: 18,
+  marginHorizontal: 16,
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+};
 let closure_15 = createCacheKey.createStyles(obj3);
 let closure_16 = importAllResult.memo((user) => {
   user = user.user;
@@ -185,7 +226,14 @@ let closure_16 = importAllResult.memo((user) => {
     if (isVideoEnabledResult) {
       isSelfMuteResult = closure_1_9.isSelfMute();
     }
-    const obj = { isSelfMute: isSelfMuteResult, localMute: closure_1_9.isLocalMute(user.id), localDeaf: null, localVideo: null, localVideoDisabled: null, localVideoAutoDisabled: null };
+    const obj = {
+      isSelfMute: isSelfMuteResult,
+      localMute: closure_1_9.isLocalMute(user.id),
+      localDeaf: null,
+      localVideo: null,
+      localVideoDisabled: null,
+      localVideoAutoDisabled: null,
+    };
     let isSelfDeafResult = isVideoEnabledResult;
     if (isVideoEnabledResult) {
       isSelfDeafResult = closure_1_9.isSelfDeaf();
@@ -199,7 +247,8 @@ let closure_16 = importAllResult.memo((user) => {
     obj[5] = closure_1_9.isLocalVideoAutoDisabled(user.id);
     return obj;
   });
-  ({ localMute, localDeaf, localVideo, localVideoDisabled, isSelfMute, localVideoAutoDisabled } = stateFromStoresObject);
+  ({ localMute, localDeaf, localVideo, localVideoDisabled, isSelfMute, localVideoAutoDisabled } =
+    stateFromStoresObject);
   let obj4 = user(589);
   const items2 = [closure_8];
   let tmp12 = localMute;
@@ -256,7 +305,7 @@ let closure_16 = importAllResult.memo((user) => {
     },
     label: name,
     leading: null,
-    trailing: null
+    trailing: null,
   };
   obj1 = { user, guildId: null, size: null, speaking: null };
   let guild_id;
@@ -281,7 +330,7 @@ let closure_16 = importAllResult.memo((user) => {
         obj3[2] = tmp19;
         tmp20Result = tmp20(tmp8(1297).Icon, obj3);
       }
-      const items3 = [tmp20Result, , , , ];
+      const items3 = [tmp20Result, , , ,];
       if (!tmp15) {
         items3[1] = null;
         tmp20Result = null;
@@ -345,7 +394,7 @@ let closure_16 = importAllResult.memo((user) => {
   let tmp35 = name;
   if (stateFromStores1) {
     const obj10 = { children: null };
-    const items4 = [name, ];
+    const items4 = [name];
     const obj11 = { variant: "text-md/semibold", lineClamp: 1, color: "status-positive", children: null };
     const intl = tmp8(1236).intl;
     const items5 = ["\u00A0", intl.string(tmp8(1236).t["pFO/Ph"])];
@@ -367,7 +416,7 @@ let closure_16 = importAllResult.memo((user) => {
     const obj14 = { source: null, size: null, disableColor: true };
     obj14[0] = tmp5(9594);
     obj14[1] = tmp8(1297).Icon.Sizes.EXTRA_SMALL;
-    const items6 = [tmp20(tmp8(1297).Icon, obj14), ];
+    const items6 = [tmp20(tmp8(1297).Icon, obj14)];
     const obj15 = { variant: "text-xs/medium", color: "text-default", style: null, children: null };
     obj15[2] = tmp2.autoDisabledVideoLabel;
     const intl3 = tmp8(1236).intl;
@@ -385,7 +434,13 @@ let closure_16 = importAllResult.memo((user) => {
   obj9.subLabel = stringResult;
   return closure_11(user(8363).FormRow, obj9);
 });
-let obj7 = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 14, lineHeight: 18, marginHorizontal: 16, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let obj7 = {
+  fontFamily: Fonts.PRIMARY_SEMIBOLD,
+  fontSize: 14,
+  lineHeight: 18,
+  marginHorizontal: 16,
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+};
 const memoResult = importAllResult.memo(function DisconnectedUserRow(user) {
   let id = user.user;
   let id2 = user.channel;
@@ -393,15 +448,19 @@ const memoResult = importAllResult.memo(function DisconnectedUserRow(user) {
   let obj = id(589);
   const items = [closure_6];
   const items1 = [id2.id, id.id];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    const call = closure_1_6.getCall(id2.id);
-    let hasItem = null != call;
-    if (hasItem) {
-      const ringing = call.ringing;
-      hasItem = ringing.includes(id.id);
-    }
-    return hasItem;
-  }, items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      const call = closure_1_6.getCall(id2.id);
+      let hasItem = null != call;
+      if (hasItem) {
+        const ringing = call.ringing;
+        hasItem = ringing.includes(id.id);
+      }
+      return hasItem;
+    },
+    items1,
+  );
   obj1 = id2(4673);
   const name = obj1.getName(id2.guild_id, id2.id, id);
   let obj2 = id(9865);
@@ -411,7 +470,7 @@ const memoResult = importAllResult.memo(function DisconnectedUserRow(user) {
     },
     label: null,
     leading: null,
-    trailing: null
+    trailing: null,
   };
   const canRing = obj2.useCanRing(id, "DisconnectedUserRow");
   obj = { text: name, style: null };

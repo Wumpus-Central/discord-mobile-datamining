@@ -5,7 +5,19 @@ import set from "../../../_runtime/00002_set.js";
 let set = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);
 const result = set.fileFinishedImporting("modules/go_live/Constants.tsx");
 
-export const StreamIssueReportReasons = { BLACK_SCREEN: "BLACK_SCREEN", BLURRY: "BLURRY", LAGGING: "LAGGING", OUT_OF_SYNC: "OUT_OF_SYNC", AUDIO_MISSING: "AUDIO_MISSING", AUDIO_POOR: "AUDIO_POOR", GAME_ISSUE: "GAME_ISSUE", STREAM_STOPPED: "STREAM_STOPPED", NO_ISSUE: "NO_ISSUE", OTHER: "OTHER", VIBES_OFF: "VIBES_OFF" };
+export const StreamIssueReportReasons = {
+  BLACK_SCREEN: "BLACK_SCREEN",
+  BLURRY: "BLURRY",
+  LAGGING: "LAGGING",
+  OUT_OF_SYNC: "OUT_OF_SYNC",
+  AUDIO_MISSING: "AUDIO_MISSING",
+  AUDIO_POOR: "AUDIO_POOR",
+  GAME_ISSUE: "GAME_ISSUE",
+  STREAM_STOPPED: "STREAM_STOPPED",
+  NO_ISSUE: "NO_ISSUE",
+  OTHER: "OTHER",
+  VIBES_OFF: "VIBES_OFF",
+};
 export const DARWIN_SOUNDSHARE_VERSION = ">=19.0.0";
 export const DARWIN_SCKIT_VERSION = ">=22.0.0";
 export const DARWIN_SCKIT_AUDIO_VERSION = ">=22.0.0";

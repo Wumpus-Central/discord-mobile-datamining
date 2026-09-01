@@ -21,7 +21,12 @@ function FramePanelHeaderContentInner(arg0) {
   const items = [frame.applicationId];
   const first = callback(useGetOrFetchApplicationsDefault(items), 1)[0];
   let obj = useBaseActivityPanelHeaderContent;
-  const baseActivityPanelHeaderContent = obj.useBaseActivityPanelHeaderContent({ landscape, setMode, wrapperOffset, pipState });
+  const baseActivityPanelHeaderContent = obj.useBaseActivityPanelHeaderContent({
+    landscape,
+    setMode,
+    wrapperOffset,
+    pipState,
+  });
   ({ gesture, headerWrapperStyles, headerStyles } = baseActivityPanelHeaderContent);
   obj1 = useBaseActivityPanelHeaderContent;
   const minimizeAndQuestButtonContainerStyles = obj1.useMinimizeAndQuestButtonContainerStyles();
@@ -31,7 +36,7 @@ function FramePanelHeaderContentInner(arg0) {
   }
   const tmp7Result = closure_7(_modDef16607, { applicationId: id });
   obj = { hasConnectedActivity: true, gesture, headerWrapperStyles, headerStyles, landscape, children: null };
-  const items1 = [minimizeAndQuestButtonContainerStyles.buttonContainer, ];
+  const items1 = [minimizeAndQuestButtonContainerStyles.buttonContainer];
   let prop;
   if (landscape) {
     prop = minimizeAndQuestButtonContainerStyles.buttonContainerLandscape;
@@ -49,7 +54,7 @@ function FramePanelHeaderContentInner(arg0) {
     }
     tmp15 = name;
   }
-  const items2 = [closure_7(_modDef16611, { activityName: tmp15, setMode }), , ];
+  const items2 = [closure_7(_modDef16611, { activityName: tmp15, setMode }), ,];
   obj1 = { applicationId: frame.applicationId };
   items2[1] = closure_7(QuestActivityButtonInnerDefault, obj1);
   let tmp17 = null;
@@ -58,7 +63,7 @@ function FramePanelHeaderContentInner(arg0) {
   }
   items2[2] = tmp17;
   obj[1] = items2;
-  const items3 = [closure_8(tmp12, obj), , ];
+  const items3 = [closure_8(tmp12, obj), ,];
   let tmp18 = null;
   if (!landscape) {
     tmp18 = tmp7Result;

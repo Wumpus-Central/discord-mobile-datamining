@@ -41,7 +41,9 @@ function resortListState(value) {
   if (null == id) {
     c4 = null;
     let tmp7 = applyDefault;
-    const found = applyDefault(store.getAllThreadsForParent(value.channelId)).filter((isArchivedThread) => isArchivedThread.isArchivedThread());
+    const found = applyDefault(store.getAllThreadsForParent(value.channelId)).filter((isArchivedThread) =>
+      isArchivedThread.isArchivedThread(),
+    );
     const found1 = found.filter((appliedTags) => {
       if (0 !== size.size) {
         if (sortOrder(closure_1_2[8]).ThreadSearchTagSetting.MATCH_SOME === closure_2) {
@@ -117,8 +119,7 @@ function resortListState(value) {
 const map = new Map();
 let closure_12 = [];
 const Store = initializeDefault.Store;
-class ArchivedThreadsStore extends Store {
-}
+class ArchivedThreadsStore extends Store {}
 const prototype = ArchivedThreadsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_5, closure_7, closure_6);
@@ -242,25 +243,27 @@ const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
     map.clear();
   },
   THREAD_DELETE: function handleThreadDelete(channel) {
-    if (!(function removeThreadIdFromAllLists(id) {
-      closure_0 = id;
-      let flag = false;
-      const values = closure_8.values();
-      const iter = values[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        let tmp3 = nextResult;
-        let threads = nextResult.threads;
-        if (threads.indexOf(id) >= 0) {
-          let tmp4 = nextResult;
-          let threads1 = tmp3.threads;
-          tmp3.threads = threads1.filter((arg0) => arg0 !== closure_0);
-          flag = true;
+    if (
+      !(function removeThreadIdFromAllLists(id) {
+        closure_0 = id;
+        let flag = false;
+        const values = closure_8.values();
+        const iter = values[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp3 = nextResult;
+          let threads = nextResult.threads;
+          if (threads.indexOf(id) >= 0) {
+            let tmp4 = nextResult;
+            let threads1 = tmp3.threads;
+            tmp3.threads = threads1.filter((arg0) => arg0 !== closure_0);
+            flag = true;
+          }
+          continue;
         }
-        continue;
-      }
-      return flag;
-    })(channel.channel.id)) {
+        return flag;
+      })(channel.channel.id)
+    ) {
       return false;
     }
   },
@@ -338,7 +341,14 @@ const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
         value.threads = threads.concat(found.map((id) => id.id));
         const channel = store.getChannel(value.channelId);
         if (tmp9) {
-          const obj = { guildId: null, channelId: null, numArchivedThreads: null, hasMoreThreads: null, filterTagIds: null, sortOrder: null };
+          const obj = {
+            guildId: null,
+            channelId: null,
+            numArchivedThreads: null,
+            hasMoreThreads: null,
+            filterTagIds: null,
+            sortOrder: null,
+          };
           ({ guild_id: obj4[0], id: obj4[1] } = channel);
           obj[2] = value.threads.length;
           obj[3] = tagFilter.hasMore;
@@ -412,7 +422,7 @@ const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
       continue;
     }
     return flag ? undefined : false;
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/threads/ArchivedThreadsStore.tsx");
 

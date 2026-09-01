@@ -62,7 +62,11 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
     discoverableVoiceState = VoiceStateStore.getDiscoverableVoiceStateForUser(userId);
   }
 }
-let closure_6 = { ChannelStore: importDefaultResult, PermissionStore: importDefaultResult1, VoiceStateStore: importDefaultResult2 };
+let closure_6 = {
+  ChannelStore: importDefaultResult,
+  PermissionStore: importDefaultResult1,
+  VoiceStateStore: importDefaultResult2,
+};
 let closure_7 = Object.freeze({ voiceState: "children", voiceChannel: "c" });
 const result = require("set").fileFinishedImporting("modules/activity_status/useUserVoiceActivity.tsx");
 
@@ -71,12 +75,16 @@ export default function useUserVoiceActivity(userId) {
   const guildId = userId.guildId;
   const items = [closure_2, importDefaultResult1, importDefaultResult2];
   const items1 = [guildId, userId];
-  return userId(guildId[4]).useStateFromStoresObject(items, () => {
-    let obj = { userId, guildId };
-    obj = { ChannelStore: closure_1_2, PermissionStore: closure_1_3, VoiceStateStore: closure_1_4 };
-    return closure_1_8(obj, obj);
-  }, items1);
-};
+  return userId(guildId[4]).useStateFromStoresObject(
+    items,
+    () => {
+      let obj = { userId, guildId };
+      obj = { ChannelStore: closure_1_2, PermissionStore: closure_1_3, VoiceStateStore: closure_1_4 };
+      return closure_1_8(obj, obj);
+    },
+    items1,
+  );
+}
 export const getUserVoiceState = function getUserVoiceState(arg0) {
   ({ userId, guildId } = arg0);
   let tmp = arg1;

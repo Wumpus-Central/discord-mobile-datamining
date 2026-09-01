@@ -17,7 +17,9 @@ createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 30, width: 30, alignItems: "center" };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_settings/audit_log/native/GuildSettingsModalAuditLogFilter.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/audit_log/native/GuildSettingsModalAuditLogFilter.tsx",
+);
 
 export default function GuildSettingsModalAuditLogFilter(data) {
   data = data.data;
@@ -35,22 +37,25 @@ export default function GuildSettingsModalAuditLogFilter(data) {
   const tmp6 = callback(navigation.useState(""), 2);
   first = tmp6[0];
   const items = [first, data];
-  const memo = navigation.useMemo(() => ({
-    data: data.filter((label) => {
-      const formatted = closure_5.toLowerCase();
-      return closure_1_1(closure_1_2[14])(formatted, label.label.toLowerCase());
+  const memo = navigation.useMemo(
+    () => ({
+      data: data.filter((label) => {
+        const formatted = closure_5.toLowerCase();
+        return closure_1_1(closure_1_2[14])(formatted, label.label.toLowerCase());
+      }),
+      keyExtractor(value) {
+        if (null != value.value) {
+          let str = value.value.toString();
+          const str2 = value.value;
+        } else {
+          str = value.index;
+          str = str.toString();
+        }
+        return str;
+      },
     }),
-    keyExtractor(value) {
-      if (null != value.value) {
-        let str = value.value.toString();
-        const str2 = value.value;
-      } else {
-        str = value.index;
-        str = str.toString();
-      }
-      return str;
-    }
-  }), items);
+    items,
+  );
   data = memo.data;
   const items1 = [filterType, navigation];
   const effect = navigation.useEffect(() => {
@@ -110,7 +115,14 @@ export default function GuildSettingsModalAuditLogFilter(data) {
       }
       return tmp4Result;
     }
-    obj = { start: 0 === index, end: index === data.length - 1, icon: null, label: null, onPress: null, trailing: null };
+    obj = {
+      start: 0 === index,
+      end: index === data.length - 1,
+      icon: null,
+      label: null,
+      onPress: null,
+      trailing: null,
+    };
     if (selected === closure_1_8.USER) {
       obj1 = { style: null, children: null };
       obj1[0] = obj.allUsersIconContainer;
@@ -143,7 +155,7 @@ export default function GuildSettingsModalAuditLogFilter(data) {
     stringResult = intl.string(tmp4(tmp3[9]).t["5h0QOP"]);
   }
   obj[1] = closure_9(data(guildId[22]).SearchField, { size: "md", placeholder: stringResult, onChange: tmp6[1] });
-  const items4 = [closure_9(first, obj), , ];
+  const items4 = [closure_9(first, obj), ,];
   if (0 === data.length) {
     obj = { body: null, title: null, Illustration: null };
     const intl4 = tmp4(tmp3[9]).intl;
@@ -168,7 +180,7 @@ export default function GuildSettingsModalAuditLogFilter(data) {
   items4[2] = closure_9(data(guildId[25]).NavScrim, {});
   obj3[0] = items4;
   return closure_11(closure_10, obj3);
-};
+}
 export const createAuditLogFilterUserData = function createAuditLogFilterUserData(arg0) {
   const _require = arg0;
   const items = [];
@@ -231,7 +243,9 @@ export const createAuditLogFilterUserData = function createAuditLogFilterUserDat
 export const createAuditLogFilterActionData = function createAuditLogFilterActionData(closure_4) {
   const _require = closure_4;
   const obj = getPermissionChanges;
-  const mapped = require("../AuditLogUtils.tsx").ACTION_FILTER_ITEMS().map((label, index) => ({ label: label.label, value: label.value, selected: closure_0 === label.value, index }));
+  const mapped = require("../AuditLogUtils.tsx")
+    .ACTION_FILTER_ITEMS()
+    .map((label, index) => ({ label: label.label, value: label.value, selected: closure_0 === label.value, index }));
   return mapped.sort((selected, selected2) => {
     let num = -1;
     if (!selected.selected) {

@@ -9,18 +9,23 @@ let result = require("set").fileFinishedImporting("modules/home_drawer/native/is
 
 export const useIsHomeDrawerChannelMuted = function useIsHomeDrawerChannelMuted() {
   const items = [closure_2, closure_4];
-  return initialize.useStateFromStores(items, () => (type) => {
-    const tmp = callback(type.type);
-    if (tmp) {
-      if (muted.isMuted(type.id)) {
-        return true;
+  return initialize.useStateFromStores(
+    items,
+    () => (type) => {
+      const tmp = callback(type.type);
+      if (tmp) {
+        if (muted.isMuted(type.id)) {
+          return true;
+        }
       }
-    }
-    const tmp3 = tmp ? type.parent_id : type.id;
-    let result = null != tmp3;
-    if (result) {
-      result = guildOrCategoryOrChannelMuted.isGuildOrCategoryOrChannelMuted(type.guild_id, tmp3);
-    }
-    return result;
-  }, [], initialize.statesWillNeverBeEqual);
+      const tmp3 = tmp ? type.parent_id : type.id;
+      let result = null != tmp3;
+      if (result) {
+        result = guildOrCategoryOrChannelMuted.isGuildOrCategoryOrChannelMuted(type.guild_id, tmp3);
+      }
+      return result;
+    },
+    [],
+    initialize.statesWillNeverBeEqual,
+  );
 };

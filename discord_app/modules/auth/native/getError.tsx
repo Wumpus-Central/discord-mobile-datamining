@@ -14,4 +14,4 @@ export default function getError(arg0, arg1) {
     tmp2 = first;
   }
   return tmp2;
-};
+}

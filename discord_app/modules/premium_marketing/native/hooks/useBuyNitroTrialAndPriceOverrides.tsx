@@ -7,7 +7,9 @@ let set = new Set();
 obj[0] = set;
 obj[1] = new Map();
 let closure_1 = keys.create(() => obj);
-const result = set.fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroTrialAndPriceOverrides.tsx");
+const result = set.fileFinishedImporting(
+  "modules/premium_marketing/native/hooks/useBuyNitroTrialAndPriceOverrides.tsx",
+);
 
 export const useBuyNitroTrialUnavailableTiers = function useBuyNitroTrialUnavailableTiers() {
   return store((trialUnavailableTiers) => trialUnavailableTiers.trialUnavailableTiers);

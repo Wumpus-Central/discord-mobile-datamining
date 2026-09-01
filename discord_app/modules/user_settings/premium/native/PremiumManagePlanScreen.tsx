@@ -8,4 +8,4 @@ const result = require("set").fileFinishedImporting("modules/user_settings/premi
 
 export default function PremiumPlanSelectSettingScreen() {
   return jsx(ManagePlanHeaderDefault, {});
-};
+}

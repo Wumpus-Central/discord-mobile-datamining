@@ -27,9 +27,14 @@ function getWindowDimensionsWorklet(arg0) {
   }
   return value;
 }
-getWindowDimensionsWorklet.__closure = { windowDimensionsSharedValueIgnoringKeyboard: mutable1, windowDimensionsSharedValue: mutable };
+getWindowDimensionsWorklet.__closure = {
+  windowDimensionsSharedValueIgnoringKeyboard: mutable1,
+  windowDimensionsSharedValue: mutable,
+};
 getWindowDimensionsWorklet.__workletHash = 17271034964949;
-getWindowDimensionsWorklet.__initData = { code: "function getWindowDimensionsWorklet_useWindowDimensionsSharedValueNativeTsx1(params=undefined){const{windowDimensionsSharedValueIgnoringKeyboard,windowDimensionsSharedValue}=this.__closure;return(params===null||params===void 0?void 0:params.ignoreKeyboard)===true?windowDimensionsSharedValueIgnoringKeyboard.get():windowDimensionsSharedValue.get();}" };
+getWindowDimensionsWorklet.__initData = {
+  code: "function getWindowDimensionsWorklet_useWindowDimensionsSharedValueNativeTsx1(params=undefined){const{windowDimensionsSharedValueIgnoringKeyboard,windowDimensionsSharedValue}=this.__closure;return(params===null||params===void 0?void 0:params.ignoreKeyboard)===true?windowDimensionsSharedValueIgnoringKeyboard.get():windowDimensionsSharedValue.get();}",
+};
 const result = set.fileFinishedImporting("modules/screen/useWindowDimensionsSharedValue.native.tsx");
 
 export default function useWindowDimensionsSharedValue() {
@@ -38,5 +43,5 @@ export default function useWindowDimensionsSharedValue() {
     ignoreKeyboard = tmp.ignoreKeyboard;
   }
   return true === ignoreKeyboard ? mutable1 : mutable;
-};
+}
 export { getWindowDimensionsWorklet };

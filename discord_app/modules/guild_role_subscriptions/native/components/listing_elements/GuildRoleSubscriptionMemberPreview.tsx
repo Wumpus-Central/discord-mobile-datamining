@@ -14,13 +14,22 @@ require = arg1;
 noopAll;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, avatar: null, content: null, contextRow: null };
-createCacheKey = { flexDirection: "row", padding: 16, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  flexDirection: "row",
+  padding: 16,
+  borderRadius: ThemesDefault.radii.xs,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 40, height: 40, borderRadius: 20 };
 createCacheKey[2] = { marginStart: 16 };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionMemberPreview.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionMemberPreview.tsx",
+);
 
 export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscriptionMemberPreview(content) {
   content = content.content;
@@ -55,7 +64,7 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
     obj = { style: null, source: null };
     obj[0] = tmp3.avatar;
     obj[1] = source;
-    const items2 = [callback(tmp6(5493), obj), ];
+    const items2 = [callback(tmp6(5493), obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp3.content;
     const obj2 = { style: null, children: null };
@@ -66,10 +75,10 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
     obj4[0] = int2hslRawAll.int2hex(role.color);
     obj3[2] = obj4;
     obj3[3] = tmp8;
-    const items3 = [callback(tmp4(4474).Text, obj3), , , ];
+    const items3 = [callback(tmp4(4474).Text, obj3), , ,];
     let tmp12Result = null;
     if (null != roleIconData) {
-      const items4 = [tmp14(tmp4(1297).Spacer, { size: 4 }), ];
+      const items4 = [tmp14(tmp4(1297).Spacer, { size: 4 })];
       const obj5 = { name: null, source: null, unicodeEmoji: null, size: 16 };
       obj5[0] = role.name;
       let tmp19;
@@ -91,7 +100,7 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
     items3[2] = callback(tmp4(1297).Spacer, { size: 8 });
     items3[3] = callback(tmp4(4474).Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" });
     obj2[1] = items3;
-    const items5 = [closure_8(View, obj2), ];
+    const items5 = [closure_8(View, obj2)];
     const obj8 = { variant: "text-md/normal", color: "text-default", style: null, children: null };
     obj8[2] = textStyle;
     obj8[3] = content;

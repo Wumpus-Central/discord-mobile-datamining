@@ -30,20 +30,24 @@ const memoResult = importAllResult.memo(function GIFPickerSearchSuggestions(onCl
     obj[0] = tmp.footerSuggestionsTitle;
     const intl = tmp2(1236).intl;
     obj[3] = intl.string(tmp2(1236).t["3JGJo2"]);
-    const items1 = [callback(tmp2(4474).Text, obj), ];
+    const items1 = [callback(tmp2(4474).Text, obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.suggestionsContainer;
     obj1[1] = stateFromStoresArray.map((text) => {
       closure_0 = text;
-      return closure_1_5(onClickSuggestion(closure_1_2[9]).Button, {
-        size: "sm",
-        variant: "secondary",
-        hitSlop: closure_1_1(closure_1_2[5]).space.PX_8,
+      return closure_1_5(
+        onClickSuggestion(closure_1_2[9]).Button,
+        {
+          size: "sm",
+          variant: "secondary",
+          hitSlop: closure_1_1(closure_1_2[5]).space.PX_8,
+          text,
+          onPress() {
+            return text(text);
+          },
+        },
         text,
-        onPress() {
-          return text(text);
-        }
-      }, text);
+      );
     });
     items1[1] = callback(View, obj1);
     obj[1] = items1;

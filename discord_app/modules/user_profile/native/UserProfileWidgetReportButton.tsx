@@ -33,7 +33,7 @@ export default function UserProfileWidgetReportButton(arg0) {
       obj = { size: "sm", color: callback2(712).colors.TEXT_MUTED };
       obj.children = callback3(callback(8798).MoreHorizontalIcon, obj);
       return callback3(closure_3, obj);
-    }
+    },
   };
   return jsx(ContextMenu.ContextMenu, {
     items,
@@ -47,6 +47,6 @@ export default function UserProfileWidgetReportButton(arg0) {
       obj = { size: "sm", color: callback2(712).colors.TEXT_MUTED };
       obj.children = callback3(callback(8798).MoreHorizontalIcon, obj);
       return callback3(closure_3, obj);
-    }
+    },
   });
-};
+}

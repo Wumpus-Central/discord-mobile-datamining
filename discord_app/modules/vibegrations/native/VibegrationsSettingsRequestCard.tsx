@@ -9,13 +9,31 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { card: null, chips: null, chip: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.md,
+  padding: ThemesDefault.space.PX_12,
+  marginTop: ThemesDefault.space.PX_8,
+  gap: ThemesDefault.space.PX_8,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_4 };
 let obj1 = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_4 };
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
+createCacheKey[2] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: ThemesDefault.radii.round,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_4,
+};
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
+let obj2 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: ThemesDefault.radii.round,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_4,
+};
 const result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsSettingsRequestCard.tsx");
 
 export default function VibegrationsSettingsRequestCard(projectId) {
@@ -53,7 +71,7 @@ export default function VibegrationsSettingsRequestCard(projectId) {
   obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = tmp2(1236).intl;
   obj[2] = intl.string(request(3501).wgDhiQ);
-  const items2 = [callback(projectId(4474).Text, obj), , , ];
+  const items2 = [callback(projectId(4474).Text, obj), , ,];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -83,4 +101,4 @@ export default function VibegrationsSettingsRequestCard(projectId) {
   }
   const intl2 = tmp2(1236).intl;
   note = intl2.string(tmp8(3501)["V+DBhs"]);
-};
+}

@@ -2,7 +2,9 @@
 import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/pollConnectionStats.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/media-engine/pollConnectionStats.tsx",
+);
 
 export default function pollConnectionStats(on) {
   const _require = on;
@@ -18,7 +20,7 @@ export default function pollConnectionStats(on) {
   }
   function _pollStats() {
     const self = this;
-    const tmp = pollStats(function*() {
+    const tmp = pollStats(function* () {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -59,7 +61,9 @@ export default function pollConnectionStats(on) {
                 items = [];
                 closure_0 = items;
                 let tmp17 = closure_1_0;
-                let eachConnectionResult = closure_1_0.eachConnection((connection) => arr.push({ connection, stats: connection.emitStats() }));
+                let eachConnectionResult = closure_1_0.eachConnection((connection) =>
+                  arr.push({ connection, stats: connection.emitStats() }),
+                );
                 items = [];
                 let tmp19 = items;
                 closure_0 = items[Symbol.iterator]();
@@ -147,4 +151,4 @@ export default function pollConnectionStats(on) {
     return true;
   });
   let timerId = setTimeout(pollStats, require("Stats.tsx").STATS_INTERVAL);
-};
+}

@@ -21,11 +21,11 @@ class CacheManager extends tmp3 {
       POST_CONNECTION_OPEN: applyArgumentsResult.handleConnectionOpen,
       CONNECTION_CLOSED: applyArgumentsResult.handleConnectionClose,
       APP_STATE_UPDATE(arg0) {
-            return applyArgumentsResult.handleAppStateUpdate(arg0);
-          },
+        return applyArgumentsResult.handleAppStateUpdate(arg0);
+      },
       WINDOW_FOCUS(arg0) {
-            return applyArgumentsResult.handleWindowFocus(arg0);
-          }
+        return applyArgumentsResult.handleWindowFocus(arg0);
+      },
     };
     return applyArgumentsResult;
   }

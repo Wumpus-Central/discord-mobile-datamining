@@ -58,4 +58,4 @@ export default function parsePollResultSystemMessageEmbed(fields) {
     }
     return obj;
   }
-};
+}

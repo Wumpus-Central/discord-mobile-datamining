@@ -2,23 +2,71 @@
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { isAvatarDecorationRecord, isNameplateRecord } from "../../../../../collectibles/records/AvatarDecorationRecord.tsx";
+import {
+  isAvatarDecorationRecord,
+  isNameplateRecord,
+} from "../../../../../collectibles/records/AvatarDecorationRecord.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { card: null, overlayContainer: null, selected: null, claimed: null, checkmark: null, checkmarkContainer: null, textContainer: null };
-obj = { height: 178, width: 150, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", borderWidth: 1, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderColor: ThemesDefault.colors.BORDER_SUBTLE, margin: ThemesDefault.space.PX_4 };
+let obj = {
+  card: null,
+  overlayContainer: null,
+  selected: null,
+  claimed: null,
+  checkmark: null,
+  checkmarkContainer: null,
+  textContainer: null,
+};
+obj = {
+  height: 178,
+  width: 150,
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  margin: ThemesDefault.space.PX_4,
+};
 obj[0] = obj;
-obj[1] = { position: "absolute", top: 10, zIndex: 2, display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "75%" };
+obj[1] = {
+  position: "absolute",
+  top: 10,
+  zIndex: 2,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "100%",
+  height: "75%",
+};
 createCacheKey = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
 obj[2] = createCacheKey;
 obj[3] = { opacity: 0.4 };
 obj[4] = { position: "absolute", opacity: 1, fontWeight: "bold" };
-obj[5] = { position: "absolute", top: 10, zIndex: 3, display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "75%" };
-obj[6] = { position: "absolute", bottom: 20, left: 0, right: 0, paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "flex-start" };
+obj[5] = {
+  position: "absolute",
+  top: 10,
+  zIndex: 3,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "100%",
+  height: "75%",
+};
+obj[6] = {
+  position: "absolute",
+  bottom: 20,
+  left: 0,
+  right: 0,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  alignItems: "flex-start",
+};
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_10 = importAllResult.memo((rewardSkuId) => {
   rewardSkuId = rewardSkuId.rewardSkuId;
@@ -37,12 +85,20 @@ let closure_10 = importAllResult.memo((rewardSkuId) => {
     return null;
   } else {
     const first = product.items[0];
-    const items1 = [tmp.card, ];
+    const items1 = [tmp.card];
     let selected = isSelected;
     if (isSelected) {
       selected = tmp.selected;
     }
-    obj = { style: null, onPress: null, activeOpacity: 0.8, disabled: null, accessibilityRole: null, accessibilityState: null, children: null };
+    obj = {
+      style: null,
+      onPress: null,
+      activeOpacity: 0.8,
+      disabled: null,
+      accessibilityRole: null,
+      accessibilityState: null,
+      children: null,
+    };
     items1[1] = selected;
     obj[0] = items1;
     obj[1] = function onPress() {
@@ -51,7 +107,7 @@ let closure_10 = importAllResult.memo((rewardSkuId) => {
     obj[3] = claimed;
     obj[4] = accessibilityRole;
     obj[5] = accessibilityState;
-    const items2 = [tmp.overlayContainer, ];
+    const items2 = [tmp.overlayContainer];
     let claimed2 = claimed;
     if (claimed) {
       claimed2 = tmp.claimed;
@@ -72,7 +128,7 @@ let closure_10 = importAllResult.memo((rewardSkuId) => {
       tmp7Result = tmp7(importDefault(tmp3[12]), obj2);
     }
     obj[1] = tmp7Result;
-    const items3 = [closure_7(View, obj), , ];
+    const items3 = [closure_7(View, obj), ,];
     tmp7Result = claimed;
     if (claimed) {
       const obj3 = { style: null, children: null };
@@ -85,9 +141,15 @@ let closure_10 = importAllResult.memo((rewardSkuId) => {
     items3[1] = tmp7Result;
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.textContainer;
-    const obj6 = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityRole: "header", children: null };
+    const obj6 = {
+      variant: "heading-sm/bold",
+      color: "mobile-text-heading-primary",
+      lineClamp: 1,
+      accessibilityRole: "header",
+      children: null,
+    };
     obj6[4] = product.name;
-    const items4 = [closure_7(tmp2(tmp3[14]).Text, obj6), ];
+    const items4 = [closure_7(tmp2(tmp3[14]).Text, obj6)];
     const intl = tmp2(tmp3[15]).intl;
     const string = intl.string;
     const t = tmp2(tmp3[15]).t;
@@ -105,9 +167,20 @@ let closure_10 = importAllResult.memo((rewardSkuId) => {
     return closure_8(tmp2(tmp3[10]).PressableOpacity, obj);
   }
 });
-let closure_11 = createCacheKey.createStyles({ grid: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" } });
-let obj2 = { position: "absolute", bottom: 20, left: 0, right: 0, paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "flex-start" };
-const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx");
+let closure_11 = createCacheKey.createStyles({
+  grid: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" },
+});
+let obj2 = {
+  position: "absolute",
+  bottom: 20,
+  left: 0,
+  right: 0,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  alignItems: "flex-start",
+};
+const result = require("set").fileFinishedImporting(
+  "modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx",
+);
 
 export default function GiftingSKUCardsGrid(arg0) {
   ({ rewardsToDisplay, claimableRewards: require, onSelect: importDefault, highlightedSkuId: dependencyMap } = arg0);
@@ -115,7 +188,16 @@ export default function GiftingSKUCardsGrid(arg0) {
     style: callback3().grid,
     children: rewardsToDisplay.map((rewardSkuId) => {
       closure_0 = rewardSkuId;
-      return closure_1_7(closure_1_10, { rewardSkuId, claimed: !closure_0.some((arg0) => arg0 === closure_0), isSelected: closure_2 === rewardSkuId, onSelect: closure_1 }, rewardSkuId);
-    })
+      return closure_1_7(
+        closure_1_10,
+        {
+          rewardSkuId,
+          claimed: !closure_0.some((arg0) => arg0 === closure_0),
+          isSelected: closure_2 === rewardSkuId,
+          onSelect: closure_1,
+        },
+        rewardSkuId,
+      );
+    }),
   });
-};
+}

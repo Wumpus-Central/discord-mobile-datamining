@@ -45,8 +45,21 @@ function MessageContent(arg0) {
   const obj5 = message(7525);
   const timestampAccessibilityLabel = message(7525).getTimestampAccessibilityLabel(extractTimestampResult);
   closure_5 = useHasEnhancedRoleColorsDefault(thread.guild_id, stateFromStores.id);
-  obj = { user: stateFromStores, timestamp: timestampString, accessibilityLabel: timestampAccessibilityLabel, children: null };
-  obj = { lineClamp: 1, ellipsizeMode: "tail", lineBreakMode: "tail", style: tmp.subtextContent, variant: "text-sm/medium", color: "text-default", children: null };
+  obj = {
+    user: stateFromStores,
+    timestamp: timestampString,
+    accessibilityLabel: timestampAccessibilityLabel,
+    children: null,
+  };
+  obj = {
+    lineClamp: 1,
+    ellipsizeMode: "tail",
+    lineBreakMode: "tail",
+    style: tmp.subtextContent,
+    variant: "text-sm/medium",
+    color: "text-default",
+    children: null,
+  };
   const intl = message(1236).intl;
   obj1 = {
     usernameHook(arg0, arg1) {
@@ -70,8 +83,12 @@ function MessageContent(arg0) {
       return closure_1_9(closure_1_17, obj, arg1);
     },
     messageTextHook(arg0, arg1) {
-      return closure_1_9(message(_undefined[21]).LegacyText, { children: callback(_undefined[22])(message, { formatInline: true, allowGameMentions: true }).content }, arg1);
-    }
+      return closure_1_9(
+        message(_undefined[21]).LegacyText,
+        { children: callback(_undefined[22])(message, { formatInline: true, allowGameMentions: true }).content },
+        arg1,
+      );
+    },
   };
   obj[6] = intl.format(message(1236).t.M79KAH, obj1);
   obj[3] = callback(message(4474).Text, obj);
@@ -93,11 +110,17 @@ function SubstringRow(arg0) {
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.row;
-    items = [children, , ];
+    items = [children, ,];
     obj1 = { style: null };
     obj1[0] = tmp.dividerDot;
     items[1] = callback(View, obj1);
-    const obj2 = { style: null, accessibilityLabel: null, variant: "text-sm/medium", color: "text-muted", children: null };
+    const obj2 = {
+      style: null,
+      accessibilityLabel: null,
+      variant: "text-sm/medium",
+      color: "text-muted",
+      children: null,
+    };
     obj2[0] = tmp.timestamp;
     obj2[1] = accessibilityLabel;
     const _HermesInternal = HermesInternal;
@@ -118,7 +141,7 @@ function Username(usernameColor) {
   items = [usernameColor, tmp];
   const memo = importAllResult.useMemo(() => {
     if (null != usernameColor) {
-      items = [user.username, ];
+      items = [user.username];
       const obj = { color: null };
       obj[0] = tmp;
       items[1] = obj;
@@ -140,24 +163,48 @@ function Username(usernameColor) {
     obj[1] = roleColors;
     shouldShowRoleDot = callback(tmp3(1297).RoleDot, obj);
   }
-  const items1 = [shouldShowRoleDot, ];
+  const items1 = [shouldShowRoleDot];
   let tmp10;
   if (tmp5) {
     tmp10 = processColorStringsArray;
   }
   obj = { children: null };
-  items1[1] = callback(usernameColor(4474).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", gradientColors: tmp10, style: memo, children: nickname });
+  items1[1] = callback(usernameColor(4474).Text, {
+    variant: "text-sm/semibold",
+    color: "mobile-text-heading-primary",
+    gradientColors: tmp10,
+    style: memo,
+    children: nickname,
+  });
   obj[0] = items1;
   return closure_10(closure_11, obj);
 }
 let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-let items = [, ];
+let items = [,];
 ({ CHANNEL_NAME_CHANGE: arr[0], THREAD_STARTER_MESSAGE: arr[1] } = require("ME").MessageTypes);
-let obj = { row: { flexDirection: "row" }, subtextContent: { lineHeight: 18, flexShrink: 1 }, timestamp: { lineHeight: 18 }, username: null, dividerDot: null };
-obj = { fontSize: 14, lineHeight: 18, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.TEXT_SUBTLE };
+let obj = {
+  row: { flexDirection: "row" },
+  subtextContent: { lineHeight: 18, flexShrink: 1 },
+  timestamp: { lineHeight: 18 },
+  username: null,
+  dividerDot: null,
+};
+obj = {
+  fontSize: 14,
+  lineHeight: 18,
+  fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD,
+  color: ThemesDefault.colors.TEXT_SUBTLE,
+};
 obj[3] = obj;
-createCacheKey = { width: 4, height: 4, marginHorizontal: 4, borderRadius: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, alignSelf: "center" };
+createCacheKey = {
+  width: 4,
+  height: 4,
+  marginHorizontal: 4,
+  borderRadius: 2,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  alignSelf: "center",
+};
 obj[4] = createCacheKey;
 let closure_13 = createCacheKey.createStyles(obj);
 let closure_14 = importAllResult.memo((thread) => {
@@ -213,7 +260,16 @@ let closure_14 = importAllResult.memo((thread) => {
     }
   }, items3);
   obj = { user: stateFromStores, timestamp: thread.timestamp, accessibilityLabel, children: null };
-  obj = { lineClamp: 1, ellipsizeMode: "tail", lineBreakMode: "tail", style: tmp.subtextContent, accessibilityLabel, variant: "text-sm/medium", color: "text-default", children: null };
+  obj = {
+    lineClamp: 1,
+    ellipsizeMode: "tail",
+    lineBreakMode: "tail",
+    style: tmp.subtextContent,
+    accessibilityLabel,
+    variant: "text-sm/medium",
+    color: "text-default",
+    children: null,
+  };
   const intl = tmp2(tmp3[16]).intl;
   obj1 = {
     usernameHook(arg0, arg1) {
@@ -242,7 +298,7 @@ let closure_14 = importAllResult.memo((thread) => {
       obj[3] = tmp9;
       obj[4] = "dot" === closure_3 && null != colorString;
       return closure_1_9(closure_1_17, obj, arg1);
-    }
+    },
   };
   obj[7] = intl.format(thread(stateFromStores1[16]).t.imPXd5, obj1);
   obj[3] = callback(thread(stateFromStores1[15]).Text, obj);
@@ -272,6 +328,10 @@ export const ThreadSubtext = function ThreadSubtext(thread) {
   let tmpResult = tmp(7525);
   const timestampString = tmpResult.getTimestampString(lastMessageTimestamp);
   tmpResult = tmp(7525);
-  obj = { thread, timestamp: timestampString, accessibilityLabel: tmpResult.getTimestampAccessibilityLabel(lastMessageTimestamp) };
+  obj = {
+    thread,
+    timestamp: timestampString,
+    accessibilityLabel: tmpResult.getTimestampAccessibilityLabel(lastMessageTimestamp),
+  };
   return callback(closure_14, obj);
 };

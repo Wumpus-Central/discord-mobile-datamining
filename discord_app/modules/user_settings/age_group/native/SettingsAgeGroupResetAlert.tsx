@@ -6,12 +6,14 @@ import { useNavigation } from "../../../../design/components/Navigator/native/us
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let c6 = "settings-age-group-reset";
-const result = require("set").fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupResetAlert.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/age_group/native/SettingsAgeGroupResetAlert.tsx",
+);
 
 export default function SettingsAgeGroupResetAlert() {
   function _handleConfirm(arg0) {
     const self = this;
-    const tmp = closure_1_3(function*() {
+    const tmp = closure_1_3(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -110,17 +112,30 @@ export default function SettingsAgeGroupResetAlert() {
       }
       return applyArgumentsResult;
     },
-    text: null
+    text: null,
   };
   const intl3 = require("../../../../intl/index.native.tsx").intl;
   obj1[2] = intl3.string(_handleConfirm(2919).V822Mp);
-  const items = [callback(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton, obj1, "confirm"), ];
+  const items = [
+    callback(
+      require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton,
+      obj1,
+      "confirm",
+    ),
+  ];
   let obj2 = { variant: "secondary", text: null };
   const intl4 = require("../../../../intl/index.native.tsx").intl;
   obj2[1] = intl4.string(require("../../../../intl/index.native.tsx").t["ETE/oC"]);
-  items[1] = callback(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton, obj2, "cancel");
+  items[1] = callback(
+    require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton,
+    obj2,
+    "cancel",
+  );
   obj[0] = items;
-  obj[2] = callback2(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActions, obj);
+  obj[2] = callback2(
+    require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActions,
+    obj,
+  );
   return callback(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertModal, obj);
-};
+}
 export const SETTINGS_AGE_GROUP_RESET_ALERT_ID = "settings-age-group-reset";

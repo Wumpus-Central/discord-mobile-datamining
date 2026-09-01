@@ -61,7 +61,9 @@ function useName(arg0, arg1, arg2) {
   closure_1 = arg1;
   dependencyMap = arg2;
   const items = [closure_4, closure_3, closure_5];
-  return require("../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_6(closure_0, closure_1, closure_2));
+  return require("../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_6(closure_0, closure_1, closure_2),
+  );
 }
 const result = require("set").fileFinishedImporting("utils/NicknameUtils.tsx");
 

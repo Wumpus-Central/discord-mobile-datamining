@@ -16,7 +16,19 @@ let obj = { CAN_JOIN: "can_join", CANNOT_JOIN: "cannot_join", JOINED: "joined" }
 const result = set.fileFinishedImporting("modules/activities/utils/getActivityJoinability.tsx");
 
 export default function getActivityJoinability(arg0) {
-  ({ user, activity, channelId, isEmbedded, ChannelStore, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, EmbeddedActivitiesStore } = arg0);
+  ({
+    user,
+    activity,
+    channelId,
+    isEmbedded,
+    ChannelStore,
+    GuildStore,
+    GuildMemberCountStore,
+    RelationshipStore,
+    SelectedChannelStore,
+    VoiceStateStore,
+    EmbeddedActivitiesStore,
+  } = arg0);
   if (isEmbedded) {
     if (isEmbedded) {
       const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
@@ -34,7 +46,18 @@ export default function getActivityJoinability(arg0) {
     } else {
       if (isEmbedded) {
         if (null != channelId) {
-          obj = { userId: null, activity: null, channelId: null, currentUser: null, application: null, isActivitiesEnabledForCurrentPlatform: null, ChannelStore: null, VoiceStateStore: null, PermissionStore: null, GuildStore: null };
+          obj = {
+            userId: null,
+            activity: null,
+            channelId: null,
+            currentUser: null,
+            application: null,
+            isActivitiesEnabledForCurrentPlatform: null,
+            ChannelStore: null,
+            VoiceStateStore: null,
+            PermissionStore: null,
+            GuildStore: null,
+          };
           obj[0] = user.id;
           obj[1] = activity;
           obj[2] = channelId;
@@ -130,5 +153,5 @@ export default function getActivityJoinability(arg0) {
     const tmp8 = getCurrentUserPresenceActivityDefault;
   }
   return obj.JOINED;
-};
+}
 export const ActivityJoinability = obj;

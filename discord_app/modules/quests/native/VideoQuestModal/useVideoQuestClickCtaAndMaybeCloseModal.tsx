@@ -2,7 +2,9 @@
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/useVideoQuestClickCtaAndMaybeCloseModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/quests/native/VideoQuestModal/useVideoQuestClickCtaAndMaybeCloseModal.tsx",
+);
 
 export const useVideoQuestClickCtaAndMaybeCloseModal = function useVideoQuestClickCtaAndMaybeCloseModal(quest) {
   quest = quest.quest;
@@ -18,7 +20,12 @@ export const useVideoQuestClickCtaAndMaybeCloseModal = function useVideoQuestCli
     }
     obj2 = quest(sourceQuestContent[3]);
     const tmp3 = quest;
-    obj = { content, ctaContent: tmp2(tmp[5]).QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
+    obj = {
+      content,
+      ctaContent: tmp2(tmp[5]).QuestContentCTA.OPEN_GAME_LINK,
+      impressionId: getQuestImpressionId(),
+      sourceQuestContent,
+    };
     quest(sourceQuestContent[4]).openGameLinkDirectly(tmp3, obj);
   }, items);
 };

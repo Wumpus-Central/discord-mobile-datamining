@@ -4,7 +4,9 @@ import closure_2 from "SubscriptionRoleStore.tsx";
 import { UserGuildRoleSubscriptionRelationship as closure_3 } from "GuildRoleSubscriptionsConstants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx",
+);
 
 export default function useUserRoleSubscriptionRelationship() {
   let items = [closure_2];
@@ -28,7 +30,7 @@ export default function useUserRoleSubscriptionRelationship() {
     }
     return IN_SUBSCRIPTION_SERVER;
   });
-};
+}
 export const getUserRoleSubscriptionRelationship = function getUserRoleSubscriptionRelationship() {
   let tmp = arg0;
   if (arg0 === undefined) {

@@ -22,22 +22,35 @@ function EffectTile(arg0) {
     OpWJ3f = messagesProxyDefault.OpWJ3f;
   }
   const stringResult = intl.string(OpWJ3f);
-  let obj = { onPress: onClick, accessibilityRole: "button", accessibilityLabel: stringResult, accessibilityState: { selected }, children: null };
-  const items = [tmp.effectCard, ];
+  let obj = {
+    onPress: onClick,
+    accessibilityRole: "button",
+    accessibilityLabel: stringResult,
+    accessibilityState: { selected },
+    children: null,
+  };
+  const items = [tmp.effectCard];
   const displayNameStylesEffectConfig = DISPLAY_NAME_STYLES_EFFECT_NAMES.useDisplayNameStylesEffectConfig(effectId);
   if (selected) {
     selected = tmp.effectCardSelected;
   }
   obj = { style: items, children: null };
   items[1] = selected;
-  obj1 = { userId, userName: stringResult, effectDisplayType: null, pendingDisplayNameStyles: null, style: null, variant: "text-md/semibold" };
+  obj1 = {
+    userId,
+    userName: stringResult,
+    effectDisplayType: null,
+    pendingDisplayNameStyles: null,
+    style: null,
+    variant: "text-md/semibold",
+  };
   const tmp2Result = DISPLAY_NAME_STYLES_EFFECT_NAMES;
   const tmp8 = closure_6;
   const tmp9 = closure_8;
   obj1[2] = DisplayNameStyleColorPreset.EffectDisplayType.STATIC;
   obj1[3] = displayNameStylesEffectConfig.previewStyles;
   obj1[4] = tmp.effectName;
-  const items1 = [closure_7(AVERAGE_FONT_WIDTH_RATIODefault, obj1), ];
+  const items1 = [closure_7(AVERAGE_FONT_WIDTH_RATIODefault, obj1)];
   if (showNewDot) {
     const obj2 = { style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
     obj2[0] = tmp.tileNewDot;
@@ -50,19 +63,73 @@ function EffectTile(arg0) {
 }
 ({ View: c5, Pressable: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { header: { paddingTop: 4 }, headerTrailing: { justifyContent: "center", alignItems: "center" }, container: { flex: 1 }, contentContainer: null, gridContainer: null, effectCard: null, effectCardSelected: null, effectName: null, tileNewDot: null };
+createCacheKey = {
+  header: { paddingTop: 4 },
+  headerTrailing: { justifyContent: "center", alignItems: "center" },
+  container: { flex: 1 },
+  contentContainer: null,
+  gridContainer: null,
+  effectCard: null,
+  effectCardSelected: null,
+  effectName: null,
+  tileNewDot: null,
+};
 createCacheKey = { padding: ThemesDefault.space.PX_8, paddingLeft: ThemesDefault.space.PX_16, alignItems: "center" };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { flexWrap: "wrap", width: 350 };
-createCacheKey[5] = { width: 109, height: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", alignItems: "center" };
-let obj1 = { width: 109, height: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", alignItems: "center" };
+createCacheKey[5] = {
+  width: 109,
+  height: 80,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: ThemesDefault.radii.sm,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  justifyContent: "center",
+  alignItems: "center",
+};
+let obj1 = {
+  width: 109,
+  height: 80,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: ThemesDefault.radii.sm,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  justifyContent: "center",
+  alignItems: "center",
+};
 createCacheKey[6] = { borderColor: ThemesDefault.colors.CONTROL_BRAND_FOREGROUND };
 createCacheKey[7] = { textAlign: "center" };
 let obj2 = { borderColor: ThemesDefault.colors.CONTROL_BRAND_FOREGROUND };
-createCacheKey[8] = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8, width: ThemesDefault.space.PX_8, height: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.space.PX_8 / 2, backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND, shadowColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND, shadowRadius: ThemesDefault.space.PX_4, shadowOpacity: 1, elevation: 4 };
+createCacheKey[8] = {
+  position: "absolute",
+  top: ThemesDefault.space.PX_8,
+  right: ThemesDefault.space.PX_8,
+  width: ThemesDefault.space.PX_8,
+  height: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.space.PX_8 / 2,
+  backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND,
+  shadowColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND,
+  shadowRadius: ThemesDefault.space.PX_4,
+  shadowOpacity: 1,
+  elevation: 4,
+};
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8, width: ThemesDefault.space.PX_8, height: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.space.PX_8 / 2, backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND, shadowColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND, shadowRadius: ThemesDefault.space.PX_4, shadowOpacity: 1, elevation: 4 };
-let result = require("set").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesEffectPickerSheet.tsx");
+let obj3 = {
+  position: "absolute",
+  top: ThemesDefault.space.PX_8,
+  right: ThemesDefault.space.PX_8,
+  width: ThemesDefault.space.PX_8,
+  height: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.space.PX_8 / 2,
+  backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND,
+  shadowColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND,
+  shadowRadius: ThemesDefault.space.PX_4,
+  shadowOpacity: 1,
+  elevation: 4,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/display_name_styles/native/DisplayNameStylesEffectPickerSheet.tsx",
+);
 
 export default function DisplayNameStylesEffectPickerSheet(userId) {
   userId = userId.userId;
@@ -115,18 +182,22 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     obj6[2] = tmp.gridContainer;
     obj6[3] = visibleEffectOrder.map((effectId) => {
       closure_0 = effectId;
-      return callback2(closure_1_10, {
-        userId: closure_0,
+      return callback2(
+        closure_1_10,
+        {
+          userId: closure_0,
+          effectId,
+          selected: effectId === first,
+          showNewDot: _undefined.has(effectId),
+          onClick() {
+            closure_1_7(closure_0);
+            if (closure_1_2.has(closure_0)) {
+              closure_1_3(closure_0);
+            }
+          },
+        },
         effectId,
-        selected: effectId === first,
-        showNewDot: _undefined.has(effectId),
-        onClick() {
-          closure_1_7(closure_0);
-          if (closure_1_2.has(closure_0)) {
-            closure_1_3(closure_0);
-          }
-        }
-      }, effectId);
+      );
     });
     obj5[1] = callback2(tmp2(4926).Stack, obj6);
     obj4[1] = callback2(closure_5, obj5);
@@ -134,4 +205,4 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     tmp9 = callback2(tmp2(5622).BottomSheet, obj);
   }
   return tmp9;
-};
+}

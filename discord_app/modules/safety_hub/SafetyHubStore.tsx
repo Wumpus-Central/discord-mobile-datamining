@@ -41,8 +41,7 @@ let c25 = false;
 const NONE = AgeCheckStatus.NONE;
 let c27 = null;
 const Store = initializeDefault.Store;
-class SafetyHubStore extends Store {
-}
+class SafetyHubStore extends Store {}
 const prototype = SafetyHubStore.prototype;
 prototype["isFetching"] = function isFetching() {
   return c9;
@@ -119,7 +118,15 @@ obj = {
     c9 = true;
   },
   SAFETY_HUB_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
-    ({ classifications, accountStanding, isDsaEligible, isAppealEligible, username, appealEligibility, expressiveModalV2Enabled } = arg0);
+    ({
+      classifications,
+      accountStanding,
+      isDsaEligible,
+      isAppealEligible,
+      username,
+      appealEligibility,
+      expressiveModalV2Enabled,
+    } = arg0);
     closure_6 = createAggregatorDefault(classifications, "id");
     c9 = false;
     c10 = true;
@@ -189,7 +196,9 @@ obj = {
       c25 = true;
     }
   },
-  SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function handleSafetyHubRequestAgeVerificationSuccess(verificationWebviewUrl) {
+  SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function handleSafetyHubRequestAgeVerificationSuccess(
+    verificationWebviewUrl,
+  ) {
     verificationWebviewUrl = verificationWebviewUrl.verificationWebviewUrl;
     c24 = null;
     c25 = false;
@@ -201,36 +210,38 @@ obj = {
   },
   SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN: handleSafetyHubRequestAgeVerificationResetModalAction,
   SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE: handleSafetyHubRequestAgeVerificationResetModalAction,
-  SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS: function handleSafetyHubAutomatedUnderageAppealSubmitSuccessAction(arg0) {
-    if (arg0 == null) {
-      HermesBuiltin.throwTypeError();
-    } else {
-      const LOADING = AgeCheckStatus.LOADING;
-      for (const key10002 in closure_6) {
-        let tmp7 = key10002;
-        let tmp8 = dependencyMap;
-        if (!dependencyMap[key10002].is_coppa) {
-          continue;
-        } else {
-          let tmp = dependencyMap;
-          obj = { status: null };
-          let tmp2 = require;
-          let tmp3 = dependencyMap;
-          obj[0] = ContentIdType.AppealStatusType.REVIEW_PENDING;
-          dependencyMap[key10002].appeal_status = obj;
+  SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS:
+    function handleSafetyHubAutomatedUnderageAppealSubmitSuccessAction(arg0) {
+      if (arg0 == null) {
+        HermesBuiltin.throwTypeError();
+      } else {
+        const LOADING = AgeCheckStatus.LOADING;
+        for (const key10002 in closure_6) {
+          let tmp7 = key10002;
+          let tmp8 = dependencyMap;
+          if (!dependencyMap[key10002].is_coppa) {
+            continue;
+          } else {
+            let tmp = dependencyMap;
+            obj = { status: null };
+            let tmp2 = require;
+            let tmp3 = dependencyMap;
+            obj[0] = ContentIdType.AppealStatusType.REVIEW_PENDING;
+            dependencyMap[key10002].appeal_status = obj;
+            continue;
+          }
           continue;
         }
-        continue;
       }
-    }
-  },
-  SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED: function handleSafetyHubExpressiveModalV2VerificationSubmittedAction(arg0) {
-    if (arg0 == null) {
-      HermesBuiltin.throwTypeError();
-    } else {
-      const LOADING = AgeCheckStatus.LOADING;
-    }
-  },
+    },
+  SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED:
+    function handleSafetyHubExpressiveModalV2VerificationSubmittedAction(arg0) {
+      if (arg0 == null) {
+        HermesBuiltin.throwTypeError();
+      } else {
+        const LOADING = AgeCheckStatus.LOADING;
+      }
+    },
   SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL: function handleSafetyHubAgeVerificationStartPoll(arg0) {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
@@ -248,7 +259,9 @@ obj = {
       closure_23 = closure_23 + 1;
     }
   },
-  SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function handleSafetyHubCheckAgeVerificationCheckSuccess(success) {
+  SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function handleSafetyHubCheckAgeVerificationCheckSuccess(
+    success,
+  ) {
     if (success.success) {
       let FAILURE = AgeCheckStatus.SUCCESS;
     } else if (c23 < closure_5) {
@@ -270,7 +283,7 @@ obj = {
     DIDNT_VIOLATE_POLICY = AppealIngestionSignal.DIDNT_VIOLATE_POLICY;
     c20 = "";
     closure_15 = [];
-  }
+  },
 };
 const safetyHubStore = new SafetyHubStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/safety_hub/SafetyHubStore.tsx");

@@ -27,7 +27,13 @@ export const useTimeUntilNextBadge = function useTimeUntilNextBadge() {
         const addResult1 = obj.add(tenureReqNumMonths, "months").add(1, "day");
         const obj5 = premiumSince(closure_1_2[1])(tmp2);
         const addResult2 = premiumSince(closure_1_2[1])(tmp2).add(tenureReqNumMonths, "months");
-        obj[0] = Math.max(0, premiumSince(closure_1_2[1])(tmp2).add(tenureReqNumMonths, "months").add(1, "day").diff(premiumSince(closure_1_2[1])(), "days"));
+        obj[0] = Math.max(
+          0,
+          premiumSince(closure_1_2[1])(tmp2)
+            .add(tenureReqNumMonths, "months")
+            .add(1, "day")
+            .diff(premiumSince(closure_1_2[1])(), "days"),
+        );
         const _Math2 = Math;
         const _Math3 = Math;
         obj[1] = Math.max(0, Math.round(addResult1.diff(premiumSince(closure_1_2[1])(), "months", true)));

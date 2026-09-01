@@ -7,4 +7,4 @@ const result = set.fileFinishedImporting("modules/messages/isSystemMessage.tsx")
 export default function isSystemMessage(type) {
   const USER_MESSAGE = set2.MessageTypesSets.USER_MESSAGE;
   return !USER_MESSAGE.has(type.type);
-};
+}

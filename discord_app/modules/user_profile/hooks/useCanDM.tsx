@@ -13,7 +13,10 @@ export default function useCanDM(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
   const items = [closure_4];
-  closure_2 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => id.getId() === closure_0);
+  closure_2 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => id.getId() === closure_0,
+  );
   const obj = initialize;
   const items1 = [closure_3];
   closure_3 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
@@ -51,7 +54,7 @@ export default function useCanDM(arg0, arg1) {
     }
     return tmp;
   });
-};
+}
 export const canDm = function canDm(userId, guildId) {
   let isLurkingResult = null != guildId;
   id = id.getId();

@@ -10,7 +10,9 @@ require = arg1;
 noopAll;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ emailPhoneNote: { marginTop: 8, marginBottom: 12 } });
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/UserVerification.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/form_fields/UserVerification.tsx",
+);
 
 export default function UserVerification(arg0) {
   ({ verification, field } = arg0);
@@ -26,7 +28,7 @@ export default function UserVerification(arg0) {
       tmp5 = callback(BaseIdentityVerificationFieldDefault, obj);
       const tmp4 = BaseIdentityVerificationFieldDefault;
     }
-    const items = [tmp5, , ];
+    const items = [tmp5, ,];
     obj = { passesVerification: null, platform: null };
     obj[0] = verification[MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.EMAIL];
     obj[1] = MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.EMAIL;
@@ -46,4 +48,4 @@ export default function UserVerification(arg0) {
     obj1[0] = items;
     return closure_5(closure_4, obj1);
   }
-};
+}

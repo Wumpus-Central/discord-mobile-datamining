@@ -13,7 +13,12 @@ function mergeApexExperiments(experimentsMetadata, registeredExperiments) {
   let obj = {};
   function _loop() {
     variants = variants.variants;
-    const mapped = variants.map((id) => ({ id: id.id, label: "Variant " + id.id + ": " + id.label, shortLabel: "Variant " + id.id, type: id.type }));
+    const mapped = variants.map((id) => ({
+      id: id.id,
+      label: "Variant " + id.id + ": " + id.label,
+      shortLabel: "Variant " + id.id,
+      type: id.type,
+    }));
     const set = new Set(mapped.map((id) => id.id));
     if (null != set[closure_2]) {
       const _Object = Object;
@@ -24,7 +29,13 @@ function mergeApexExperiments(experimentsMetadata, registeredExperiments) {
     } else {
       mapped2 = [];
     }
-    obj = { system: callback(obj[4]).ExperimentSystem.APEX, kind: callback(obj[5]).UnitTypeToKind[variants.unitType], name: variants.name, title: variants.title, variants: items.sort((id, id2) => id.id - id2.id) };
+    obj = {
+      system: callback(obj[4]).ExperimentSystem.APEX,
+      kind: callback(obj[5]).UnitTypeToKind[variants.unitType],
+      name: variants.name,
+      title: variants.title,
+      variants: items.sort((id, id2) => id.id - id2.id),
+    };
     items = [...mapped2];
     obj[closure_2] = obj;
   }
@@ -54,7 +65,12 @@ function mergeApexExperiments(experimentsMetadata, registeredExperiments) {
       let keys = Object.keys(tmp14.variations);
       obj[4] = keys.map((arg0) => {
         const NumberResult = Number(arg0);
-        obj = { id: NumberResult, label: "Variant " + NumberResult, shortLabel: "Variant " + NumberResult, type: callback(obj[3]).Variation_Type.UNSPECIFIED };
+        obj = {
+          id: NumberResult,
+          label: "Variant " + NumberResult,
+          shortLabel: "Variant " + NumberResult,
+          type: callback(obj[3]).Variation_Type.UNSPECIFIED,
+        };
         return obj;
       });
       obj[tmp13] = obj;
@@ -93,18 +109,24 @@ export const getApexExperiments = function getApexExperiments() {
 };
 export const useApexExperiments = function useApexExperiments() {
   callback2(() => {
-    const apexExperimentsMetadata = stateFromStores(stateFromStores1[6]).fetchApexExperimentsMetadata(stateFromStores(stateFromStores1[3]).Experiment_Surface.APP);
+    const apexExperimentsMetadata = stateFromStores(stateFromStores1[6]).fetchApexExperimentsMetadata(
+      stateFromStores(stateFromStores1[3]).Experiment_Surface.APP,
+    );
   }, []);
   let obj = stateFromStores(stateFromStores1[7]);
   const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => store.getExperimentsMetadata());
   const items1 = [closure_5];
-  stateFromStores1 = stateFromStores(stateFromStores1[7]).useStateFromStores(items1, () => store.getRegisteredExperiments());
+  stateFromStores1 = stateFromStores(stateFromStores1[7]).useStateFromStores(items1, () =>
+    store.getRegisteredExperiments(),
+  );
   const items2 = [stateFromStores, stateFromStores1];
   const obj2 = stateFromStores(stateFromStores1[7]);
   const tmp4 = callback3(() => closure_1_7(stateFromStores, stateFromStores1), items2);
   const items3 = [closure_5];
-  const stateFromStores2 = stateFromStores(stateFromStores1[7]).useStateFromStores(items3, () => store.getClientOverrides());
+  const stateFromStores2 = stateFromStores(stateFromStores1[7]).useStateFromStores(items3, () =>
+    store.getClientOverrides(),
+  );
   obj = { experiments: tmp4, overridesInfo: callback3(() => closure_1_8(stateFromStores2), items4) };
   items4 = [stateFromStores2];
   return obj;

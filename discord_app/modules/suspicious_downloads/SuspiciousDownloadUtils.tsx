@@ -87,8 +87,7 @@ export const isSuspiciousDownload = function isSuspiciousDownload(localUri) {
             return tmp10;
           }
         }
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }
 };

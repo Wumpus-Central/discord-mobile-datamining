@@ -34,7 +34,8 @@ function watchStream(stream, forceMultiple) {
       }
       if (!forceMultiple) {
         const allActiveStreamsForChannel = authStore.getAllActiveStreamsForChannel(channelId);
-        forceMultiple = allActiveStreamsForChannel.filter((ownerId) => ownerId.ownerId !== id.getId()).length >= MAX_VALUE;
+        forceMultiple =
+          allActiveStreamsForChannel.filter((ownerId) => ownerId.ownerId !== id.getId()).length >= MAX_VALUE;
       }
       const obj2 = isStreamKey;
       const tmp12 = require;
@@ -89,7 +90,7 @@ function _fetchStreamPreview() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -217,7 +218,7 @@ function _notifyStreamStart() {
     c2 = 0;
     c1 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       c4 = 1;
       obj1 = { url: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
       obj1[0] = closure_1_13.STREAM_NOTIFY(callback);
@@ -355,7 +356,12 @@ export const notifyStreamStart = function notifyStreamStart() {
 export const updateStreamSettings = function updateStreamSettings(noTrack) {
   if (true !== noTrack.noTrack) {
     let obj = isPremiumResolution;
-    const result = obj.trackStreamSettingsUpdate(noTrack.preset, noTrack.resolution, noTrack.frameRate, noTrack.soundshareEnabled);
+    const result = obj.trackStreamSettingsUpdate(
+      noTrack.preset,
+      noTrack.resolution,
+      noTrack.frameRate,
+      noTrack.soundshareEnabled,
+    );
   }
   obj = { type: "STREAM_UPDATE_SETTINGS" };
   const merged = Object.assign(noTrack);

@@ -120,7 +120,9 @@ export default function connectStores(items, arg1) {
           return closure_2_4(closure_0, { ref: forwardedConnectStoresRef });
         };
         FluxContainer.displayName = combined;
-        const forwardRefResult = closure_1_3.forwardRef((childProps, forwardedConnectStoresRef) => closure_2_4(FluxContainer, { childProps, forwardedConnectStoresRef }));
+        const forwardRefResult = closure_1_3.forwardRef((childProps, forwardedConnectStoresRef) =>
+          closure_2_4(FluxContainer, { childProps, forwardedConnectStoresRef }),
+        );
         forwardRefResult.displayName = "ForwardRef(" + combined + ")";
         return forwardRefResult;
       };
@@ -238,4 +240,4 @@ export default function connectStores(items, arg1) {
     FluxContainer.displayName = combined;
     return FluxContainer;
   };
-};
+}

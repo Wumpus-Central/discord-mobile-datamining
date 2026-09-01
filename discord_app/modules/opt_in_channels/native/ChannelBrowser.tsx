@@ -18,10 +18,31 @@ function keyExtractor(section) {
 }
 let c4 = importAllResult;
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let obj = { container: { flex: 1 }, header: null, categoryContainer: null, categoryTitle: null, channelTitle: null, selectAllContainer: null, selectAllCheckbox: null, newBadge: null, nuxCard: null, nuxCloseContainer: null, nuxHeader: null, nuxHeaderText: null, nuxBody: null };
+let obj = {
+  container: { flex: 1 },
+  header: null,
+  categoryContainer: null,
+  categoryTitle: null,
+  channelTitle: null,
+  selectAllContainer: null,
+  selectAllCheckbox: null,
+  newBadge: null,
+  nuxCard: null,
+  nuxCloseContainer: null,
+  nuxHeader: null,
+  nuxHeaderText: null,
+  nuxBody: null,
+};
 obj = { marginTop: ThemesDefault.space.PX_12, marginHorizontal: ThemesDefault.space.PX_16 };
 obj[1] = obj;
-createCacheKey = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingTop: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  paddingTop: ThemesDefault.space.PX_24,
+  paddingBottom: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.md,
+};
 obj[2] = createCacheKey;
 obj[3] = { marginBottom: 0 };
 obj[4] = { flexDirection: "row", alignItems: "center" };
@@ -30,11 +51,34 @@ let items = [{ scale: 0.75 }];
 obj[6] = { marginRight: ThemesDefault.space.PX_4, transform: items };
 obj[7] = { fontFamily: require("ME").Fonts.DISPLAY_EXTRABOLD };
 let obj2 = { marginRight: ThemesDefault.space.PX_4, transform: items };
-obj[8] = { position: "relative", padding: 0, marginTop: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, marginBottom: 0, borderRadius: ThemesDefault.radii.md, alignItems: "center" };
-let obj3 = { position: "relative", padding: 0, marginTop: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, marginBottom: 0, borderRadius: ThemesDefault.radii.md, alignItems: "center" };
+obj[8] = {
+  position: "relative",
+  padding: 0,
+  marginTop: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_16,
+  marginBottom: 0,
+  borderRadius: ThemesDefault.radii.md,
+  alignItems: "center",
+};
+let obj3 = {
+  position: "relative",
+  padding: 0,
+  marginTop: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_16,
+  marginBottom: 0,
+  borderRadius: ThemesDefault.radii.md,
+  alignItems: "center",
+};
 obj[9] = { position: "absolute", color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, top: 16, right: 16 };
 let obj4 = { position: "absolute", color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, top: 16, right: 16 };
-obj[10] = { width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", padding: 16, borderBottomLeftRadius: ThemesDefault.radii.lg, borderBottomRightRadius: ThemesDefault.radii.lg };
+obj[10] = {
+  width: "100%",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  alignItems: "center",
+  padding: 16,
+  borderBottomLeftRadius: ThemesDefault.radii.lg,
+  borderBottomRightRadius: ThemesDefault.radii.lg,
+};
 obj[11] = { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 };
 obj[12] = { textAlign: "center", marginBottom: 4 };
 let closure_15 = createCacheKey.createStyles(obj);
@@ -44,7 +88,9 @@ let closure_17 = importAllResult.memo((channel) => {
   const tmp = callback3();
   let obj = channel(589);
   const items = [closure_10];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.isChannelOptedIn(channel.guild_id, channel.id));
+  const stateFromStores = obj.useStateFromStores(items, () =>
+    closure_1_10.isChannelOptedIn(channel.guild_id, channel.id),
+  );
   obj1 = channel(4205);
   const checkboxA11yNative = obj1.useCheckboxA11yNative({ checked: stateFromStores });
   obj = {
@@ -54,7 +100,7 @@ let closure_17 = importAllResult.memo((channel) => {
     },
     accessibilityRole: null,
     accessibilityState: null,
-    children: null
+    children: null,
   };
   let str = "text";
   if ("null" !== channel.id) {
@@ -67,7 +113,7 @@ let closure_17 = importAllResult.memo((channel) => {
   }
   obj[3] = accessibilityState;
   obj = { style: tmp.categoryTitle, title: onChannelClick(4674)(channel), lineClamp: 1 };
-  const items1 = [closure_12(channel(5992).TableRowGroupTitle, obj), ];
+  const items1 = [closure_12(channel(5992).TableRowGroupTitle, obj)];
   let tmp10Result = null;
   if ("null" !== channel.id) {
     obj1 = { style: null, accessibilityRole: null, accessibilityState: null, children: null };
@@ -78,7 +124,7 @@ let closure_17 = importAllResult.memo((channel) => {
     const obj3 = { checked: null };
     obj3[0] = stateFromStores;
     obj2[1] = tmp8(tmp4(7684).FormCheckbox, obj3);
-    const items2 = [tmp8(View, obj2), ];
+    const items2 = [tmp8(View, obj2)];
     const obj4 = { variant: "text-xs/semibold", color: "interactive-text-default", children: null };
     const intl = tmp4(1236).intl;
     obj4[2] = intl.string(tmp4(1236).t.mSQwnW);
@@ -101,17 +147,23 @@ let closure_18 = importAllResult.memo((channel) => {
   [tmp3, c3] = callback(importAllResult.useState(0), 2);
   obj1 = channel(onChannelClick[15]);
   const items = [closure_10];
-  let stateFromStores = obj1.useStateFromStores(items, () => closure_1_10.isChannelOptedIn(channel.guild_id, channel.id));
+  let stateFromStores = obj1.useStateFromStores(items, () =>
+    closure_1_10.isChannelOptedIn(channel.guild_id, channel.id),
+  );
   let obj2 = channel(onChannelClick[15]);
   const items1 = [closure_6];
   const items2 = [channel.id, guild];
-  let stateFromStores1 = obj2.useStateFromStores(items1, () => {
-    let id;
-    if (guild != null) {
-      id = guild.id;
-    }
-    return closure_1_6.shouldIndicateNewChannel(id, channel.id);
-  }, items2);
+  let stateFromStores1 = obj2.useStateFromStores(
+    items1,
+    () => {
+      let id;
+      if (guild != null) {
+        id = guild.id;
+      }
+      return closure_1_6.shouldIndicateNewChannel(id, channel.id);
+    },
+    items2,
+  );
   let obj3 = channel(onChannelClick[15]);
   const items3 = [closure_10];
   const stateFromStores2 = obj3.useStateFromStores(items3, () => {
@@ -152,7 +204,17 @@ let closure_18 = importAllResult.memo((channel) => {
     obj = { isRulesChannel: null };
     obj[0] = rulesChannelId === channel.id;
     const channelIconComponent = tmp4(tmp5[34]).getChannelIconComponent(channel, obj);
-    obj = { start: null, end: null, disabled: null, icon: null, label: null, subLabel: null, subLabelLineClamp: 1, onPress: null, checked: null };
+    obj = {
+      start: null,
+      end: null,
+      disabled: null,
+      icon: null,
+      label: null,
+      subLabel: null,
+      subLabelLineClamp: 1,
+      onPress: null,
+      checked: null,
+    };
     obj[0] = isFirst;
     obj[1] = isLast;
     obj[2] = stateFromStores2;
@@ -174,7 +236,7 @@ let closure_18 = importAllResult.memo((channel) => {
     obj4[2] = token;
     obj4[3] = tmp15;
     obj4[4] = tmp10;
-    const items5 = [callback2(tmp4(tmp5[28]).Text, obj4), ];
+    const items5 = [callback2(tmp4(tmp5[28]).Text, obj4)];
     if (stateFromStores1) {
       const obj5 = { style: null, onLayout: null, children: null };
       const obj6 = { marginLeft: null };
@@ -217,7 +279,14 @@ let closure_18 = importAllResult.memo((channel) => {
   }
   tmp10 = guild(onChannelClick[29])(channel);
 });
-let obj5 = { width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", padding: 16, borderBottomLeftRadius: ThemesDefault.radii.lg, borderBottomRightRadius: ThemesDefault.radii.lg };
+let obj5 = {
+  width: "100%",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  alignItems: "center",
+  padding: 16,
+  borderBottomLeftRadius: ThemesDefault.radii.lg,
+  borderBottomRightRadius: ThemesDefault.radii.lg,
+};
 let result = require("set").fileFinishedImporting("modules/opt_in_channels/native/ChannelBrowser.tsx");
 
 export default function ChannelBrowser(guildId) {
@@ -244,7 +313,9 @@ export default function ChannelBrowser(guildId) {
   let obj3 = guildId(onChannelClick[16]);
   filterCategoriesByQuery = obj3.useFilterCategoriesByQuery(guildId, stateFromStores1, stateFromStores2, tmp2[0]);
   let obj4 = guildId(onChannelClick[17]);
-  let result = obj4.useIsDismissibleContentDismissed_UNSAFE(guildId(onChannelClick[18]).DismissibleContent.CHANNEL_BROWSER_NUX);
+  let result = obj4.useIsDismissibleContentDismissed_UNSAFE(
+    guildId(onChannelClick[18]).DismissibleContent.CHANNEL_BROWSER_NUX,
+  );
   let obj5 = guildId(onChannelClick[16]);
   channelBrowserSections = obj5.useChannelBrowserSections(guildId, filterCategoriesByQuery, 64);
   const items3 = [filterCategoriesByQuery, channelBrowserSections];
@@ -282,7 +353,10 @@ export default function ChannelBrowser(guildId) {
   const effect = filterCategoriesByQuery.useEffect(() => {
     let obj = guildId(onChannelClick[17]);
     obj = { dismissAction: constants.DISMISS };
-    const result = obj.UNSAFE_markDismissibleContentAsDismissed(guildId(onChannelClick[18]).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX, obj);
+    const result = obj.UNSAFE_markDismissibleContentAsDismissed(
+      guildId(onChannelClick[18]).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX,
+      obj,
+    );
   });
   const items4 = [stateFromStores, result1, onChannelClick];
   obj = { style: tmp.container, children: null };
@@ -312,10 +386,10 @@ export default function ChannelBrowser(guildId) {
     size: "md",
     onChange(arg0) {
       return callback(arg0);
-    }
+    },
   };
   obj[1] = callback2(guildId(onChannelClick[20]).SearchField, obj1);
-  const items5 = [callback2(channelBrowserSections, obj), ];
+  const items5 = [callback2(channelBrowserSections, obj)];
   let tmp16Result = null;
   if (!result) {
     obj2 = { style: null, children: null };
@@ -324,13 +398,16 @@ export default function ChannelBrowser(guildId) {
     obj3[0] = function onPress() {
       let obj = guildId(onChannelClick[17]);
       obj = { dismissAction: constants.DISMISS };
-      const result = obj.UNSAFE_markDismissibleContentAsDismissed(guildId(onChannelClick[18]).DismissibleContent.CHANNEL_BROWSER_NUX, obj);
+      const result = obj.UNSAFE_markDismissibleContentAsDismissed(
+        guildId(onChannelClick[18]).DismissibleContent.CHANNEL_BROWSER_NUX,
+        obj,
+      );
     };
     const intl = tmp5(tmp4[24]).intl;
     obj3[2] = intl.string(tmp5(tmp4[24]).t.cpT0Cq);
     obj3[3] = tmp.nuxCloseContainer;
     obj3[4] = tmp18(tmp5(tmp4[25]).CircleXIcon, {});
-    const items6 = [tmp18(tmp5(tmp4[23]).PressableOpacity, obj3), , ];
+    const items6 = [tmp18(tmp5(tmp4[23]).PressableOpacity, obj3), ,];
     obj4 = { source: null };
     obj4[0] = tmp3(tmp4[27]);
     items6[1] = tmp18(tmp3(tmp4[26]), obj4);
@@ -342,7 +419,7 @@ export default function ChannelBrowser(guildId) {
     const intl2 = tmp5(tmp4[24]).intl;
     obj7[2] = intl2.string(tmp5(tmp4[24]).t.utqWEC);
     obj6[1] = tmp18(tmp5(tmp4[28]).Text, obj7);
-    const items7 = [tmp18(tmp17, obj6), , ];
+    const items7 = [tmp18(tmp17, obj6), ,];
     const obj8 = { variant: "text-sm/normal", color: "text-default", style: null, children: null };
     obj8[2] = tmp.nuxBody;
     const intl3 = tmp5(tmp4[24]).intl;
@@ -359,14 +436,26 @@ export default function ChannelBrowser(guildId) {
     tmp16Result = tmp16(tmp5(tmp4[22]).Card, obj2);
     const tmp3Result = tmp3(tmp4[26]);
   }
-  const obj10 = { ListHeaderComponent: tmp16Result, accessibilityLabel: null, renderItem: null, data: null, contentContainerStyle: null, keyExtractor: null };
+  const obj10 = {
+    ListHeaderComponent: tmp16Result,
+    accessibilityLabel: null,
+    renderItem: null,
+    data: null,
+    contentContainerStyle: null,
+    keyExtractor: null,
+  };
   const intl5 = tmp5(tmp4[24]).intl;
   obj10[1] = intl5.string(guildId(onChannelClick[24]).t.et6wav);
   obj10[2] = callback;
   obj10[3] = memo;
-  obj10[4] = { paddingBottom: importDefault(onChannelClick[13])({ includeKeyboardHeight: true }).insets.bottom + importDefault(onChannelClick[12]).space.PX_16, paddingHorizontal: importDefault(onChannelClick[12]).space.PX_16 };
+  obj10[4] = {
+    paddingBottom:
+      importDefault(onChannelClick[13])({ includeKeyboardHeight: true }).insets.bottom +
+      importDefault(onChannelClick[12]).space.PX_16,
+    paddingHorizontal: importDefault(onChannelClick[12]).space.PX_16,
+  };
   obj10[5] = keyExtractor;
   items5[1] = callback2(guildId(onChannelClick[21]).FlashList, obj10);
   obj[1] = items5;
   return closure_13(channelBrowserSections, obj);
-};
+}

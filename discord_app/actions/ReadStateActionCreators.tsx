@@ -17,7 +17,15 @@ function ack(channelId, location, arg2, arg3, messageId) {
     flag2 = false;
   }
   let obj = dispatcherDefault;
-  obj = { type: "CHANNEL_ACK", channelId, messageId, immediate: flag, force: flag2, context: CURRENT_APP_CONTEXT, location };
+  obj = {
+    type: "CHANNEL_ACK",
+    channelId,
+    messageId,
+    immediate: flag,
+    force: flag2,
+    context: CURRENT_APP_CONTEXT,
+    location,
+  };
   obj.dispatch(obj);
 }
 function ackCategory(id, arg1, arg2, arg3) {
@@ -79,7 +87,15 @@ export const ackChannel = function ackChannel(channel, arg1) {
       let tmpResult = tmp(11);
       const _Date = Date;
       tmpResult = tmp(709);
-      let obj = { type: "CHANNEL_ACK", channelId: null, messageId: null, immediate: null, force: null, context: null, location: null };
+      let obj = {
+        type: "CHANNEL_ACK",
+        channelId: null,
+        messageId: null,
+        immediate: null,
+        force: null,
+        context: null,
+        location: null,
+      };
       obj[1] = id;
       obj[2] = tmpResult.fromTimestamp(Date.now());
       obj[3] = true;
@@ -89,7 +105,15 @@ export const ackChannel = function ackChannel(channel, arg1) {
       tmpResult.dispatch(obj);
       const fromTimestampResult = tmpResult.fromTimestamp(Date.now());
     } else {
-      obj = { type: "CHANNEL_ACK", channelId: null, messageId: "y", immediate: "has", force: null, context: "\u{1F60E}", location: 6 };
+      obj = {
+        type: "CHANNEL_ACK",
+        channelId: null,
+        messageId: "y",
+        immediate: "has",
+        force: null,
+        context: "\u{1F60E}",
+        location: 6,
+      };
       obj[1] = id;
       obj[3] = true;
       obj[4] = true;

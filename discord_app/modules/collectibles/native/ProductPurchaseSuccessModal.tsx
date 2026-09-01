@@ -32,7 +32,7 @@ function CancelButton(arg0) {
       return closure_1_12(closure_1_0(closeButtonIcon[12]).XSmallIcon, { size: "lg", style });
     },
     accessibilityLabel: null,
-    displayMode: "minimal"
+    displayMode: "minimal",
   };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
@@ -63,14 +63,14 @@ function ProductPurchaseGradientBackground(product) {
       const primary2 = tmp.primary;
       const toHexStringResult = primary2.toHexString();
       if (closure_1) {
-        const items1 = [toHexStringResult, , ];
+        const items1 = [toHexStringResult, ,];
         const secondary2 = tmp.secondary;
         items1[1] = secondary2.toHexString();
         const tertiary = tmp.tertiary;
         items1[2] = tertiary.toHexString();
         items2 = items1;
       } else {
-        items2 = [toHexStringResult, , , , ];
+        items2 = [toHexStringResult, , , ,];
         const primary = tmp.primary;
         items2[1] = primary.toHexString();
         const secondary = tmp.secondary;
@@ -81,7 +81,13 @@ function ProductPurchaseGradientBackground(product) {
     }
     return items2;
   }, items);
-  obj = { style: tmp.backdrop, start: constants.START, end: constants.END, locations: null != tertiary ? [0, 0.6, 0.85] : [0, 0.05, 0.6, 0.95, 1], colors: memo };
+  obj = {
+    style: tmp.backdrop,
+    start: constants.START,
+    end: constants.END,
+    locations: null != tertiary ? [0, 0.6, 0.85] : [0, 0.05, 0.6, 0.95, 1],
+    colors: memo,
+  };
   return callback(importDefault(token[21]), obj);
 }
 ({ Image: closure_6, ScrollView: error, View: closure_8 } = get_ActivityIndicator);
@@ -96,7 +102,22 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = { root: null, header: null, headerLeading: null, imageBackground: null, backdrop: null, main: null, curtain: null, body: null, preview: null, previewBundle: null, messages: null, title: null, footer: null, cta: null };
+  let obj = {
+    root: null,
+    header: null,
+    headerLeading: null,
+    imageBackground: null,
+    backdrop: null,
+    main: null,
+    curtain: null,
+    body: null,
+    preview: null,
+    previewBundle: null,
+    messages: null,
+    title: null,
+    footer: null,
+    cta: null,
+  };
   obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
   obj[0] = obj;
   obj = { flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
@@ -111,7 +132,14 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
   if (arg0 === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
     num = 1;
   }
-  const obj2 = { flexDirection: "row", justifyContent: "center", alignItems: "center", flex: num, marginTop: null, marginHorizontal: null };
+  const obj2 = {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    flex: num,
+    marginTop: null,
+    marginHorizontal: null,
+  };
   let str = 0;
   if (arg0 === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
     str = "20%";
@@ -132,7 +160,14 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
     const merged = Object.assign(obj8);
     obj[8] = obj2;
     obj[9] = { flex: 1, justifyContent: "flex-start", alignItems: "center", minHeight: 250 };
-    const obj4 = { paddingTop: null, minHeight: null, flexDirection: "column", alignItems: "center", justifyContent: "flex-start", gap: null };
+    const obj4 = {
+      paddingTop: null,
+      minHeight: null,
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "flex-start",
+      gap: null,
+    };
     obj4[0] = tmp(712).space.PX_24;
     let str2;
     if (arg0 === tmp3(1950).CollectiblesItemType.AVATAR_DECORATION) {
@@ -157,9 +192,15 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
   }
   obj8 = {};
 });
-let closure_18 = { code: "function ProductPurchaseSuccessModalTsx1(){const{interpolate,springInput,isProfilePreview}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0.1,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[isProfilePreview?0.6:0,1])}]};}" };
-let closure_19 = { code: "function ProductPurchaseSuccessModalTsx2(){const{interpolate,springInput}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[0.75,1])}]};}" };
-let closure_20 = { code: "function ProductPurchaseSuccessModalTsx3(){const{interpolate,linearInput}=this.__closure;return{opacity:interpolate(linearInput.get(),[0,1],[0.5,0])};}" };
+let closure_18 = {
+  code: "function ProductPurchaseSuccessModalTsx1(){const{interpolate,springInput,isProfilePreview}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0.1,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[isProfilePreview?0.6:0,1])}]};}",
+};
+let closure_19 = {
+  code: "function ProductPurchaseSuccessModalTsx2(){const{interpolate,springInput}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[0.75,1])}]};}",
+};
+let closure_20 = {
+  code: "function ProductPurchaseSuccessModalTsx3(){const{interpolate,linearInput}=this.__closure;return{opacity:interpolate(linearInput.get(),[0,1],[0.5,0])};}",
+};
 let closure_21 = [80, 79, 78, 75, 72, 50, 45, 35, 70];
 let closure_22 = tinycolorDefault("black").toHexString();
 let obj5 = tinycolorDefault("black");
@@ -199,7 +240,9 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
     const substr = arr.slice(1);
     if (null != first) {
       if (0 === substr.length) {
-        const result = stateFromStores(sharedValue[17]).triggerHapticFeedback(stateFromStores(sharedValue[17]).HapticFeedbackTypes.IMPACT_HEAVY);
+        const result = stateFromStores(sharedValue[17]).triggerHapticFeedback(
+          stateFromStores(sharedValue[17]).HapticFeedbackTypes.IMPACT_HEAVY,
+        );
         const obj3 = stateFromStores(sharedValue[17]);
       }
       if (null != first) {
@@ -209,10 +252,14 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
       stateFromStores.current = substr;
     }
     if (substr.length >= closure_1_21.length / 2) {
-      const result1 = stateFromStores(sharedValue[17]).triggerHapticFeedback(stateFromStores(sharedValue[17]).HapticFeedbackTypes.IMPACT_LIGHT);
+      const result1 = stateFromStores(sharedValue[17]).triggerHapticFeedback(
+        stateFromStores(sharedValue[17]).HapticFeedbackTypes.IMPACT_LIGHT,
+      );
       const obj2 = stateFromStores(sharedValue[17]);
     } else {
-      const result2 = stateFromStores(sharedValue[17]).triggerHapticFeedback(stateFromStores(sharedValue[17]).HapticFeedbackTypes.IMPACT_MEDIUM);
+      const result2 = stateFromStores(sharedValue[17]).triggerHapticFeedback(
+        stateFromStores(sharedValue[17]).HapticFeedbackTypes.IMPACT_MEDIUM,
+      );
       const obj = stateFromStores(sharedValue[17]);
     }
   }, []);
@@ -228,7 +275,10 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
   const avatarDecorationPreviewSizes = tmp2Result.useAvatarDecorationPreviewSizes();
   ({ avatarSize, avatarDecorationSize } = avatarDecorationPreviewSizes);
   let items1 = [closure_9];
-  stateFromStores = stateFromStores(sharedValue[24]).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
+  stateFromStores = stateFromStores(sharedValue[24]).useStateFromStores(
+    items1,
+    () => useReducedMotion.useReducedMotion,
+  );
   let tmp12 = product.type === tmp2(tmp3[9]).CollectiblesItemType.PROFILE_EFFECT;
   if (!tmp12) {
     tmp12 = product.type === tmp2(tmp3[9]).CollectiblesItemType.PROFILE_FRAME;
@@ -257,7 +307,10 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
   }, items2);
   const tmp2Result3 = stateFromStores(sharedValue[14]);
   const fn = function l() {
-    let obj = { opacity: stateFromStores(sharedValue[14]).interpolate(sharedValue.get(), [0, 1], [0.1, 1]), transform: null };
+    let obj = {
+      opacity: stateFromStores(sharedValue[14]).interpolate(sharedValue.get(), [0, 1], [0.1, 1]),
+      transform: null,
+    };
     const obj2 = stateFromStores(sharedValue[14]);
     let num = 0;
     const value = sharedValue.get();
@@ -277,7 +330,10 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
   const animatedStyle = stateFromStores(sharedValue[14]).useAnimatedStyle(fn);
   const tmp2Result4 = stateFromStores(sharedValue[14]);
   const fn2 = function n() {
-    let obj = { opacity: stateFromStores(sharedValue[14]).interpolate(sharedValue.get(), [0, 1], [0, 1]), transform: null };
+    let obj = {
+      opacity: stateFromStores(sharedValue[14]).interpolate(sharedValue.get(), [0, 1], [0, 1]),
+      transform: null,
+    };
     obj = { scale: null };
     const obj2 = stateFromStores(sharedValue[14]);
     obj[0] = stateFromStores(sharedValue[14]).interpolate(sharedValue.get(), [0, 1], [0.75, 1]);
@@ -335,8 +391,8 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
       let tmp30 = callback;
       let tmp31 = callback;
     }
-    const items3 = [tmp29, , ];
-    const items4 = [tmp6.main, ];
+    const items3 = [tmp29, ,];
+    const items4 = [tmp6.main];
     let str;
     if (useCategoryImage) {
       str = "rgba(0, 0, 0, 0.3)";
@@ -357,7 +413,7 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
       showOrbBalancePill = tmp31(tmp2(tmp3[32]).BalanceWidgetPill, obj9);
     }
     obj8[1] = showOrbBalancePill;
-    const items5 = [tmp31(tmp28, obj8), ];
+    const items5 = [tmp31(tmp28, obj8)];
     let toHexStringResult;
     if (backgroundColors != null) {
       const label = backgroundColors.label;
@@ -371,7 +427,7 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
     obj10[1] = onCancel;
     items5[1] = tmp31(CancelButton, obj10);
     obj7[1] = items5;
-    const items6 = [tmp27(tmp28, obj7), , ];
+    const items6 = [tmp27(tmp28, obj7), ,];
     const obj11 = { style: null, contentContainerStyle: null, alwaysBounceVertical: false, children: null };
     obj11[0] = { flex: 1 };
     obj11[1] = tmp6.body;
@@ -385,8 +441,20 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
       obj13[1] = tmp26;
       let tmp30Result = null != tmp25;
       if (tmp30Result) {
-        const obj14 = { deco: null, pfx: null, nameplate: null, previewAssets: null, disableStaticBackground: true, size: "large", targetSize: null };
-        ({ firstAvatarDecoration: obj35[0], firstProfileEffect: obj35[1], firstNameplate: obj35[2] } = shopProductItems);
+        const obj14 = {
+          deco: null,
+          pfx: null,
+          nameplate: null,
+          previewAssets: null,
+          disableStaticBackground: true,
+          size: "large",
+          targetSize: null,
+        };
+        ({
+          firstAvatarDecoration: obj35[0],
+          firstProfileEffect: obj35[1],
+          firstNameplate: obj35[2],
+        } = shopProductItems);
         obj14[3] = product.previewAssets;
         obj14[6] = tmp25;
         tmp30Result = tmp30(tmp4(tmp3[33]), obj14);
@@ -420,7 +488,7 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
       }
     }
     obj12[1] = tmp30Result;
-    const items8 = [tmp31(tmp4(tmp3[14]).View, obj12), ];
+    const items8 = [tmp31(tmp4(tmp3[14]).View, obj12)];
     const obj19 = { style: null, children: null };
     const items9 = [tmp6.messages, animatedStyle1];
     obj19[0] = items9;
@@ -433,7 +501,7 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
       const obj21 = { itemName: null };
       obj21[0] = product.name;
       obj20[3] = intl3.format(tmp2(tmp3[13]).t.YNaxMp, obj21);
-      const items10 = [tmp31(tmp2(tmp3[38]).Text, obj20), ];
+      const items10 = [tmp31(tmp2(tmp3[38]).Text, obj20)];
       const obj22 = { variant: "text-md/medium", color: "text-overlay-light", style: null, children: null };
       obj22[2] = tmp6.title;
       let result = tmp2(tmp3[39]).isPremiumCollectiblesProduct(product);
@@ -494,4 +562,4 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
   tmp29 = callback(ProductPurchaseGradientBackground, { product });
   tmp30 = callback;
   tmp31 = callback;
-};
+}

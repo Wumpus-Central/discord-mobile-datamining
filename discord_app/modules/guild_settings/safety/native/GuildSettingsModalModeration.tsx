@@ -66,7 +66,11 @@ class GuildSettingsModalModeration extends PureComponent {
     applyArgumentsResult.handleSaveChanges = function handleSaveChanges() {
       const guild = applyArgumentsResult.props.guild;
       let obj = closure_1_1(closure_1_2[8]);
-      obj = { verificationLevel: guild.verificationLevel, explicitContentFilter: guild.explicitContentFilter, ownerConfiguredContentLevel: guild.ownerConfiguredContentLevel };
+      obj = {
+        verificationLevel: guild.verificationLevel,
+        explicitContentFilter: guild.explicitContentFilter,
+        ownerConfiguredContentLevel: guild.ownerConfiguredContentLevel,
+      };
       obj.saveGuild(guild.id, obj);
     };
     return applyArgumentsResult;
@@ -179,7 +183,7 @@ prototype["render"] = function render() {
   let obj = { contentContainerStyle: items, children: null };
   items = [{ paddingTop: 16 }, this.props.contentContainerStyle];
   obj = { style: callback2(this.context).stack, spacing: ThemesDefault.space.PX_24, children: null };
-  const items1 = [this.renderVerificationLevelSection(), this.renderExplicitContentFilter(), ];
+  const items1 = [this.renderVerificationLevelSection(), this.renderExplicitContentFilter()];
   if (canManageGuild) {
     obj = { guild: null, hasChanges: null };
     obj[0] = guild;
@@ -211,7 +215,9 @@ prototype["handleExplicitContentFilterChange"] = function handleExplicitContentF
   obj.updateGuild(obj);
 };
 GuildSettingsModalModeration.contextType = require("ManaContext").ThemeContext;
-const result = require("set").fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalModeration.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/safety/native/GuildSettingsModalModeration.tsx",
+);
 
 export default function ConnectedGuildSettingsModalModeration(contentContainerStyle) {
   let guild;
@@ -228,7 +234,14 @@ export default function ConnectedGuildSettingsModalModeration(contentContainerSt
   [][0] = closure_4;
   let tmp5 = null;
   if (null != guild) {
-    obj = { navigation: null, guild: null, submitting: null, hasChanges: null, canManageGuild: null, contentContainerStyle: null };
+    obj = {
+      navigation: null,
+      guild: null,
+      submitting: null,
+      hasChanges: null,
+      canManageGuild: null,
+      contentContainerStyle: null,
+    };
     obj[0] = navigation;
     obj[1] = guild;
     obj[2] = submitting;
@@ -238,4 +251,4 @@ export default function ConnectedGuildSettingsModalModeration(contentContainerSt
     tmp5 = callback(GuildSettingsModalModeration, obj);
   }
   return tmp5;
-};
+}

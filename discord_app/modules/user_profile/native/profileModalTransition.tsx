@@ -34,7 +34,7 @@ export const useReportProfileModalTransition = function useReportProfileModalTra
         }
       }),
       navigation.addListener("transitionEnd", leave),
-      navigation.addListener("gestureCancel", leave)
+      navigation.addListener("gestureCancel", leave),
     ];
     return () => {
       const item = items.forEach((arg0) => arg0());
@@ -50,9 +50,12 @@ export const useReportProfileModalTransition = function useReportProfileModalTra
   }, items);
 };
 export const useIsProfileModalTransitioning = function useIsProfileModalTransitioning() {
-  return React.useSyncExternalStore((arg0) => {
-    closure_0 = arg0;
-    set.add(arg0);
-    return () => closure_1_4.delete(closure_0);
-  }, () => closure_3 > 0);
+  return React.useSyncExternalStore(
+    (arg0) => {
+      closure_0 = arg0;
+      set.add(arg0);
+      return () => closure_1_4.delete(closure_0);
+    },
+    () => closure_3 > 0,
+  );
 };

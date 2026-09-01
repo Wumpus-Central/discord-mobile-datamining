@@ -25,6 +25,8 @@ const memoResult = importAllResult.memo(function VoicePanelChannelOptInNotice(ch
   obj[1] = jsx(channel(5599).TableRow, { IconComponent: channel(13582).ChannelListMagnifyingGlassIcon });
   return jsx(analyticsSection(6006), { IconComponent: channel(13582).ChannelListMagnifyingGlassIcon });
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelChannelOptInNotice.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/shared/VoicePanelChannelOptInNotice.tsx",
+);
 
 export default memoResult;

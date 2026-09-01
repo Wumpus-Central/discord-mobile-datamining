@@ -30,4 +30,4 @@ export default function useExternalPipAspectRatioUpdater(arg0, arg1, stateFromSt
       }
     });
   }, items);
-};
+}

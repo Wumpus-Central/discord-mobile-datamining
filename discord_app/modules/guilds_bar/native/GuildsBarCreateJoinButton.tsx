@@ -13,7 +13,7 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 function _handleCreateJoinGuildPress() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -80,7 +80,12 @@ function _handleCreateJoinGuildPress() {
           lib.acknowledgeTooltip(constants2.GUILD_TOOLTIP);
           if (obj11.isAtGuildCapAndNonPremium()) {
             obj = lib2(c2[12]);
-            const obj5 = { initialUpsellKey: null, analyticsLocation: null, analyticsLocations: null, analyticsProperties: null };
+            const obj5 = {
+              initialUpsellKey: null,
+              analyticsLocation: null,
+              analyticsLocations: null,
+              analyticsProperties: null,
+            };
             obj5[0] = constants3.GUILD_CAP;
             const obj6 = { page: null };
             obj6[0] = constants.CREATE_JOIN_GUILD_MODAL;
@@ -128,26 +133,39 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
   }
   const items1 = [enabled];
   obj = { style: tmp.stretch, children: null };
-  const memo = importAllResult.useMemo(() => ({
-    onPress() {
-      if (closure_0) {
-        if (!obj.isAtGuildCapAndNonPremium()) {
-          closure_1_1(closure_1_2[17])(closure_1_8);
+  const memo = importAllResult.useMemo(
+    () => ({
+      onPress() {
+        if (closure_0) {
+          if (!obj.isAtGuildCapAndNonPremium()) {
+            closure_1_1(closure_1_2[17])(closure_1_8);
+          }
         }
-      }
-      (function handleCreateJoinGuildPress() {
-        const self = this;
-        const apply = closure_14.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      })();
-    }
-  }), items1);
-  obj = { selected: stateFromStores, circle: false, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: "never", label: "always", expandedChildren: "GuildProgress", children: "GUILD_PROGRESS_INITIALIZE" };
+        (function handleCreateJoinGuildPress() {
+          const self = this;
+          const apply = closure_14.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        })();
+      },
+    }),
+    items1,
+  );
+  obj = {
+    selected: stateFromStores,
+    circle: false,
+    unread: false,
+    styles: obj.useGuildsBarAnimatedWrapperStyles(),
+    overState: "y",
+    config: "never",
+    label: "always",
+    expandedChildren: "GuildProgress",
+    children: "GUILD_PROGRESS_INITIALIZE",
+  };
   obj[5] = memo;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const tmp8 = View;
@@ -156,9 +174,35 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
   obj[7] = jsx(enabled(15944).HomeDrawerAddServerRowExpandedChildren, {});
   const colors = ThemesDefault.colors;
   obj1 = { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj[8] = jsx(enabled(9224).CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  obj[1] = jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: false, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: "never", label: "always", expandedChildren: "GuildProgress", children: "GUILD_PROGRESS_INITIALIZE" });
-  return <tmp8 selected={stateFromStores} circle={false} unread={false} styles={obj.useGuildsBarAnimatedWrapperStyles()} overState="y" config="never" label="always" expandedChildren="GuildProgress">{"GUILD_PROGRESS_INITIALIZE"}</tmp8>;
+  obj[8] = jsx(enabled(9224).CirclePlusIcon, {
+    size: "md",
+    color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
+  });
+  obj[1] = jsx(UnreadIndicatorDefault, {
+    selected: stateFromStores,
+    circle: false,
+    unread: false,
+    styles: obj.useGuildsBarAnimatedWrapperStyles(),
+    overState: "y",
+    config: "never",
+    label: "always",
+    expandedChildren: "GuildProgress",
+    children: "GUILD_PROGRESS_INITIALIZE",
+  });
+  return (
+    <tmp8
+      selected={stateFromStores}
+      circle={false}
+      unread={false}
+      styles={obj.useGuildsBarAnimatedWrapperStyles()}
+      overState="y"
+      config="never"
+      label="always"
+      expandedChildren="GuildProgress"
+    >
+      {"GUILD_PROGRESS_INITIALIZE"}
+    </tmp8>
+  );
 });
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
 

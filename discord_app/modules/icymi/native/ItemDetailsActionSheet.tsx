@@ -70,7 +70,12 @@ export default function ItemDetailsActionSheet(arg0) {
   if (str == null) {
     str = "";
   }
-  obj2 = { showGradient: true, startExpanded: true, header: tmp16(tmp(10735).ActionSheetIconHeader, obj1), children: null };
+  obj2 = {
+    showGradient: true,
+    startExpanded: true,
+    header: tmp16(tmp(10735).ActionSheetIconHeader, obj1),
+    children: null,
+  };
   obj1[2] = str;
   let tmp16Result = result;
   if (result) {
@@ -79,7 +84,7 @@ export default function ItemDetailsActionSheet(arg0) {
     obj3[1] = stateFromStores1;
     tmp16Result = tmp16(tmp(16047).ChannelScoreSettings, obj3);
   }
-  const items3 = [tmp16Result, , ];
+  const items3 = [tmp16Result, ,];
   let tmp15Result = null != stateFromStores2 && null != stateFromStores1;
   if (tmp15Result) {
     if (result) {
@@ -88,7 +93,7 @@ export default function ItemDetailsActionSheet(arg0) {
       result = tmp16(View, obj4);
     }
     const obj5 = { children: null };
-    const items4 = [result, ];
+    const items4 = [result];
     const obj6 = { guild: null };
     obj6[0] = stateFromStores1;
     items4[1] = tmp16(tmp(16047).GuildScoreSettings, obj6);
@@ -113,4 +118,4 @@ export default function ItemDetailsActionSheet(arg0) {
   items3[2] = tmp16Result;
   obj2[3] = items3;
   return closure_9(ActionSheet.ActionSheet, obj2);
-};
+}

@@ -55,4 +55,4 @@ export default function useActivityShelfItems(enableFilter) {
     }
     return found;
   }, items1);
-};
+}

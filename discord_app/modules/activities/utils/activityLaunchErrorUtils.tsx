@@ -12,7 +12,7 @@ function _getActivityLaunchErrorInfo() {
     closure_1 = arg1;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (closure_6 === 2) {
         closure_6 = 3;
         HermesBuiltin.throwTypeError();

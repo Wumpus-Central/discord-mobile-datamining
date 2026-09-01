@@ -21,16 +21,18 @@ export const AppStartInfo = {
     return tmp2;
   },
   getAppStartInfo() {
-    return callback(function*() {
+    return callback(function* () {
       let callback = 0;
       let obj5 = closure_1_0(closure_1_1[3]);
       callback = yield obj5.getAppStartedTimestamp();
       if (callback <= 0) {
         const _Error = Error;
-        error = new Error("NativeTTIManager.getAppStartedTimestamp() returned an invalid timestamp. That's unexpected!");
+        error = new Error(
+          "NativeTTIManager.getAppStartedTimestamp() returned an invalid timestamp. That's unexpected!",
+        );
         throw error;
       }
-      const items = [callback(4339).getAppStartType(), , ];
+      const items = [callback(4339).getAppStartType(), ,];
       const obj12 = callback(4339);
       items[1] = callback(4339).getLaunchScenario();
       const obj13 = callback(4339);
@@ -51,5 +53,5 @@ export const AppStartInfo = {
       obj[2] = obj5;
       return obj;
     })();
-  }
+  },
 };

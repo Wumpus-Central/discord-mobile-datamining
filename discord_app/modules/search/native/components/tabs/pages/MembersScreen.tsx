@@ -123,7 +123,11 @@ function SearchableMembersScreen(searchContext) {
   const tmp4Result2 = searchContext(647);
   const items9 = [tmp7];
   const items10 = [searchContext];
-  stateFromStores5 = searchContext(647).useStateFromStores(items9, () => closure_1_12.isInitialSearchQuery(searchContext), items10);
+  stateFromStores5 = searchContext(647).useStateFromStores(
+    items9,
+    () => closure_1_12.isInitialSearchQuery(searchContext),
+    items10,
+  );
   const tmp4Result3 = searchContext(647);
   const items11 = [tmp5];
   stateFromStores6 = searchContext(647).useStateFromStores(items11, () => stateFromStores6.getIsFetching(closure_3));
@@ -145,14 +149,37 @@ function SearchableMembersScreen(searchContext) {
       }
     }
   }, items12);
-  const items13 = [stateFromStores, stateFromStores6, stateFromStores5, guildId, stateFromStores3, callback, fullscreenPlaceholderCount];
+  const items13 = [
+    stateFromStores,
+    stateFromStores6,
+    stateFromStores5,
+    guildId,
+    stateFromStores3,
+    callback,
+    fullscreenPlaceholderCount,
+  ];
   const memo = stateFromStores.useMemo(() => {
     let items = [];
     const item = stateFromStores.forEach((record) => {
       items = arg1;
       const member = stateFromStores3.getMember(closure_1_1, record.record.id);
       let obj = { type: closure_2_14.GUILD_CHANNEL_MEMBER, props: null };
-      obj = { type: closure_2_16.NONE, user: record.record, nickname: null, usernameColor: null, roleColors: null, isNameplatedRow: true, premiumSince: null, isOwner: null, guildId: null, onLongPress: null, onPress: null, start: null, end: null, canShowDisplayNameStylesFont: true };
+      obj = {
+        type: closure_2_16.NONE,
+        user: record.record,
+        nickname: null,
+        usernameColor: null,
+        roleColors: null,
+        isNameplatedRow: true,
+        premiumSince: null,
+        isOwner: null,
+        guildId: null,
+        onLongPress: null,
+        onPress: null,
+        start: null,
+        end: null,
+        canShowDisplayNameStylesFont: true,
+      };
       let nick;
       if (member != null) {
         nick = member.nick;
@@ -214,13 +241,31 @@ function SearchableMembersScreen(searchContext) {
   } else {
     if (stateFromStores5) {
       if (null != stateFromStores4) {
-        obj1 = { onUserPress: null, onUserLongPress: null, channelId: null, guildId: null, disableStickySections: true, listStyleOverride: null, isNameplatedList: true, canShowDisplayNameStylesFont: true };
+        obj1 = {
+          onUserPress: null,
+          onUserLongPress: null,
+          channelId: null,
+          guildId: null,
+          disableStickySections: true,
+          listStyleOverride: null,
+          isNameplatedList: true,
+          canShowDisplayNameStylesFont: true,
+        };
         obj1[0] = callback1;
         obj1[1] = callback2;
         obj1[2] = stateFromStores4;
         obj1[3] = guildId;
         obj1[5] = tmp.userList;
-        tmp25 = jsx(tmp2(11187), { onUserPress: null, onUserLongPress: null, channelId: null, guildId: null, disableStickySections: true, listStyleOverride: null, isNameplatedList: true, canShowDisplayNameStylesFont: true });
+        tmp25 = jsx(tmp2(11187), {
+          onUserPress: null,
+          onUserLongPress: null,
+          channelId: null,
+          guildId: null,
+          disableStickySections: true,
+          listStyleOverride: null,
+          isNameplatedList: true,
+          canShowDisplayNameStylesFont: true,
+        });
       }
     }
     obj2 = { contentContainerStyle: null, data: null };
@@ -250,12 +295,23 @@ function ThreadMembersScreen(searchContext) {
   const items1 = [closure_12];
   const items2 = [searchContext];
   if (!stateFromStores) {
-    if (obj2.useStateFromStores(items1, () => closure_1_12.isInitialSearchQuery(searchContext) && !closure_1_12.isTagsEmpty(searchContext), items2)) {
+    if (
+      obj2.useStateFromStores(
+        items1,
+        () => closure_1_12.isInitialSearchQuery(searchContext) && !closure_1_12.isTagsEmpty(searchContext),
+        items2,
+      )
+    ) {
       obj = { channelId: null, guildId: null, onUserPress: null, disableStickySections: true };
       obj[0] = channelId;
       obj[1] = guildId;
       obj[2] = searchContext(1891).dismissGlobalKeyboard;
-      let tmp7 = jsx(channelId(16270), { channelId: null, guildId: null, onUserPress: null, disableStickySections: true });
+      let tmp7 = jsx(channelId(16270), {
+        channelId: null,
+        guildId: null,
+        onUserPress: null,
+        disableStickySections: true,
+      });
       const tmp6 = channelId(16270);
     }
     return tmp7;
@@ -265,7 +321,10 @@ function ThreadMembersScreen(searchContext) {
 let c4 = importAllResult;
 ({ MESSAGE_PLACEHOLDER_ITEM_SIZE: map1, SearchListItemTypes: closure_14 } = MessageEmbedTypes);
 ({ RelationshipTypes: closure_16, SearchTypes: closure_17 } = ME);
-let closure_19 = createCacheKey.createStyles({ container: { flex: 1, flexGrow: 1 }, userList: { backgroundColor: "transparent" } });
+let closure_19 = createCacheKey.createStyles({
+  container: { flex: 1, flexGrow: 1 },
+  userList: { backgroundColor: "transparent" },
+});
 const memoResult = importAllResult.memo(function MembersScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const tmp = callback();
@@ -280,7 +339,12 @@ const memoResult = importAllResult.memo(function MembersScreen(searchContext) {
     obj1[0] = searchContext.channelId;
     obj1[2] = tmp.userList;
     obj1[3] = dismissGlobalKeyboard.dismissGlobalKeyboard;
-    obj[1] = jsx(_modDef11756, { channelId: null, disableStickySections: true, listStyleOverride: null, onUserPress: null });
+    obj[1] = jsx(_modDef11756, {
+      channelId: null,
+      disableStickySections: true,
+      listStyleOverride: null,
+      onUserPress: null,
+    });
     obj[1] = <View style={null}>{null}</View>;
     return jsx(context.AnalyticsLocationProvider, { style: null, children: null });
   } else if (tmp5.THREAD === type) {

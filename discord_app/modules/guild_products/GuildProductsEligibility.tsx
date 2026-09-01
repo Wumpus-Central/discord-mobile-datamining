@@ -9,25 +9,29 @@ export const useGuildEligibleForGuildProducts = function useGuildEligibleForGuil
   const _require = id;
   const items = [closure_2];
   const items1 = [id];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    if (null == closure_0) {
-      return false;
-    } else {
-      const guild = closure_1_2.getGuild(tmp);
-      let tmp4 = null != guild;
-      if (tmp4) {
-        const features = guild.features;
-        let hasItem = features.has(closure_1_3.COMMUNITY);
-        if (!hasItem) {
-          const features2 = guild.features;
-          hasItem = features2.has(tmp5.GUILD_PRODUCTS);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      if (null == closure_0) {
+        return false;
+      } else {
+        const guild = closure_1_2.getGuild(tmp);
+        let tmp4 = null != guild;
+        if (tmp4) {
+          const features = guild.features;
+          let hasItem = features.has(closure_1_3.COMMUNITY);
+          if (!hasItem) {
+            const features2 = guild.features;
+            hasItem = features2.has(tmp5.GUILD_PRODUCTS);
+          }
+          tmp4 = hasItem;
+          tmp5 = closure_1_3;
         }
-        tmp4 = hasItem;
-        tmp5 = closure_1_3;
+        return tmp4;
       }
-      return tmp4;
-    }
-  }, items1);
+    },
+    items1,
+  );
 };
 export const isGuildEligibleForGuildProducts = function isGuildEligibleForGuildProducts(id) {
   if (null == id) {

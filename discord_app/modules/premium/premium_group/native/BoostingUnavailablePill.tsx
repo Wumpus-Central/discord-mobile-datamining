@@ -23,7 +23,17 @@ function handlePress() {
 let closure_5 = SubscriptionStatusTypes.getPremiumGroupProductName;
 const jsx = jsxProd.jsx;
 let obj = { premiumGroupBanner: null, pgUnavailable: null, pgUnavailableText: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flexDirection: "row", gap: 12, padding: 12, justifyContent: "center", borderColor: ThemesDefault.colors.STATUS_WARNING, borderWidth: 1, borderRadius: ThemesDefault.radii.lg, marginBottom: 12 };
+obj = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  flexDirection: "row",
+  gap: 12,
+  padding: 12,
+  justifyContent: "center",
+  borderColor: ThemesDefault.colors.STATUS_WARNING,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.lg,
+  marginBottom: 12,
+};
 obj[0] = obj;
 obj[1] = { flex: 1, justifyContent: "center" };
 obj[2] = { textAlign: "center" };
@@ -39,8 +49,13 @@ export default function BoostingUnavailablePill(style) {
   obj1 = { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null };
   const intl = getSystemLocale.intl;
   obj1[3] = intl.string(getSystemLocale.t["5nrJDO"]);
-  obj[1] = jsx(Text.Text, { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null });
+  obj[1] = jsx(Text.Text, {
+    variant: "text-md/normal",
+    color: "interactive-text-active",
+    style: tmp.pgUnavailableText,
+    children: null,
+  });
   obj[1] = <closure_4 style={tmp.pgUnavailable}>{null}</closure_4>;
   obj[2] = <closure_4 style={tmp.pgUnavailable}>{null}</closure_4>;
   return <closure_3 style={tmp.pgUnavailable}>{null}</closure_3>;
-};
+}

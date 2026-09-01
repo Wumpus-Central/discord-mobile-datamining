@@ -55,6 +55,6 @@ export default function useAutocompleter(searchOptions) {
         str = query;
       }
       options.search(str);
-    }, items2)
+    }, items2),
   };
-};
+}

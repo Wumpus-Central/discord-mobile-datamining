@@ -8,7 +8,9 @@ import { ContentDismissActionType } from "../../dismissible_content/DismissibleC
 const require = arg1;
 let closure_6 = 90 * setDefault.Millis.DAY;
 let closure_7 = 90 * setDefault.Millis.DAY;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useWishlistSuggestionsDismissibleContent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_profile/hooks/useWishlistSuggestionsDismissibleContent.tsx",
+);
 
 export default function useWishlistSuggestionsDismissibleContent(userId) {
   userId = userId.userId;
@@ -40,29 +42,43 @@ export default function useWishlistSuggestionsDismissibleContent(userId) {
   const tmp3 = callback(React.useState(false), 2);
   const items = [closure_4];
   const items1 = [wishlist, userId];
-  const stateFromStores = userId(wishlist[5]).useStateFromStores(items, () => {
-    let num = 0;
-    if (null != wishlist) {
-      const wishlistSettings = closure_1_4.getWishlistSettings(userId, tmp.id);
-      let num2;
-      if (wishlistSettings != null) {
-        num2 = wishlistSettings.updated_at;
+  const stateFromStores = userId(wishlist[5]).useStateFromStores(
+    items,
+    () => {
+      let num = 0;
+      if (null != wishlist) {
+        const wishlistSettings = closure_1_4.getWishlistSettings(userId, tmp.id);
+        let num2;
+        if (wishlistSettings != null) {
+          num2 = wishlistSettings.updated_at;
+        }
+        if (num2 == null) {
+          num2 = 0;
+        }
+        const date = new Date(num2);
+        num = date.valueOf();
       }
-      if (num2 == null) {
-        num2 = 0;
-      }
-      const date = new Date(num2);
-      num = date.valueOf();
-    }
-    return num;
-  }, items1);
+      return num;
+    },
+    items1,
+  );
   const obj2 = userId(wishlist[5]);
   obj = { showAfterTimestamp: stateFromStores + closure_7, cooldownDurationMs: closure_6 };
-  const tmp2Result = tmp2(userId(wishlist[6]).useSelectedTimeRecurringDismissibleContent(userId(wishlist[7]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS, obj, undefined, true), 2);
+  const tmp2Result = tmp2(
+    userId(wishlist[6]).useSelectedTimeRecurringDismissibleContent(
+      userId(wishlist[7]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS,
+      obj,
+      undefined,
+      true,
+    ),
+    2,
+  );
   React = tmp10;
   if (hasFetchedWishlist) {
-    hasFetchedWishlist = tmp2Result[0] === userId(wishlist[7]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS || tmp4 || !tmp;
-    const tmp11 = tmp2Result[0] === userId(wishlist[7]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS || tmp4 || !tmp;
+    hasFetchedWishlist =
+      tmp2Result[0] === userId(wishlist[7]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS || tmp4 || !tmp;
+    const tmp11 =
+      tmp2Result[0] === userId(wishlist[7]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS || tmp4 || !tmp;
   }
   obj = {
     isVisible: hasFetchedWishlist,
@@ -70,8 +86,8 @@ export default function useWishlistSuggestionsDismissibleContent(userId) {
     markAsDismissed: obj.useCallback(() => {
       _undefined(false);
       callback(closure_1_5.USER_DISMISS);
-    }, items2)
+    }, items2),
   };
   items2 = [tmp2Result[1]];
   return obj;
-};
+}

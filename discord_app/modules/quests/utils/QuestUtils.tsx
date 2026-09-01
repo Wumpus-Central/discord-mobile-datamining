@@ -44,7 +44,10 @@ export const canLaunchActivity = function canLaunchActivity(quest) {
   }
   return hasPlayActivityTaskResult;
 };
-export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEntrypoints(stateFromStores, closure_1_16) {
+export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEntrypoints(
+  stateFromStores,
+  closure_1_16,
+) {
   const map = new Map();
   while (tmp !== undefined) {
     let tmp3 = callback;
@@ -113,26 +116,35 @@ export const shouldShowBountiesGivenFilters = function shouldShowBountiesGivenFi
   const someResult = filters.some((group) => "task" === group.group);
   let tmp2 = !someResult;
   if (!someResult) {
-    tmp2 = 0 === filters.length || filters.some((group) => {
-      let tmp = "reward" === group.group;
-      if (tmp) {
-        tmp = group.filter === constants.VIRTUAL_CURRENCY;
-      }
-      return tmp;
-    });
-    const tmp3 = 0 === filters.length || filters.some((group) => {
-      let tmp = "reward" === group.group;
-      if (tmp) {
-        tmp = group.filter === constants.VIRTUAL_CURRENCY;
-      }
-      return tmp;
-    });
+    tmp2 =
+      0 === filters.length ||
+      filters.some((group) => {
+        let tmp = "reward" === group.group;
+        if (tmp) {
+          tmp = group.filter === constants.VIRTUAL_CURRENCY;
+        }
+        return tmp;
+      });
+    const tmp3 =
+      0 === filters.length ||
+      filters.some((group) => {
+        let tmp = "reward" === group.group;
+        if (tmp) {
+          tmp = group.filter === constants.VIRTUAL_CURRENCY;
+        }
+        return tmp;
+      });
   }
   return tmp2;
 };
 export const setQuestHomeUtmContext = function setQuestHomeUtmContext(arg0) {
   ({ questId, fromContent, utmSource, utmMedium } = arg0);
   state = state.getState();
-  const obj = { utmSourceCurrent: utmSource, utmMediumCurrent: utmMedium, utmCampaignCurrent: questId, utmContentCurrent: getQuestContentName.getQuestContentName(fromContent) };
+  const obj = {
+    utmSourceCurrent: utmSource,
+    utmMediumCurrent: utmMedium,
+    utmCampaignCurrent: questId,
+    utmContentCurrent: getQuestContentName.getQuestContentName(fromContent),
+  };
   state.setUtmCurrentContext(obj);
 };

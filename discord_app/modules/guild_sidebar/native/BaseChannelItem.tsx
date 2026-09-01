@@ -53,8 +53,23 @@ class BaseChannelSubtitle {
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: c5, CHANNEL_TITLE_LINE_HEIGHT: closure_6 } = hairlineWidth);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles((arg0) => {
-  let obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
-  obj = { borderRadius: ThemesDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: ThemesDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
+  let obj = {
+    rowPaddingNoIcon: { paddingHorizontal: 6 },
+    rowSelected: null,
+    unreadIndicator: null,
+    channelIcon: null,
+    redesignedChannelIcon: null,
+    channelIconNormal: null,
+    channelIconUnread: null,
+    channelIconMuted: null,
+    channel: null,
+    channelNameContainer: null,
+    channelName: null,
+  };
+  obj = {
+    borderRadius: ThemesDefault.modules.mobile.CHANNEL_ITEM_RADIUS,
+    backgroundColor: ThemesDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED,
+  };
   obj[1] = obj;
   obj = { left: -ThemesDefault.space.PX_8 };
   obj[2] = obj;
@@ -74,7 +89,13 @@ let closure_10 = createCacheKey.createStyles((arg0) => {
   obj[6] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
   const obj2 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
   obj[7] = { tintColor: ThemesDefault.colors.ICON_MUTED };
-  obj[8] = { paddingHorizontal: 8, paddingVertical: 8, flexDirection: "row", alignItems: "center", position: "relative" };
+  obj[8] = {
+    paddingHorizontal: 8,
+    paddingVertical: 8,
+    flexDirection: "row",
+    alignItems: "center",
+    position: "relative",
+  };
   obj[9] = { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "center" };
   const obj4 = { flexGrow: 1, textAlign: "left", lineHeight: closure_6, opacity: null };
   if (arg0 === createCacheKey.MUTED) {
@@ -84,7 +105,15 @@ let closure_10 = createCacheKey.createStyles((arg0) => {
   obj[10] = obj4;
   return obj;
 });
-createCacheKey = { SELECTED: "Selected", LOCKED: "Locked", MUTED: "Muted", RELEVANT: "Relevant", UNREAD_LESS_IMPORTANT: "UnreadLessImportant", UNREAD_IMPORTANT: "UnreadImportant", DEFAULT: "Default" };
+createCacheKey = {
+  SELECTED: "Selected",
+  LOCKED: "Locked",
+  MUTED: "Muted",
+  RELEVANT: "Relevant",
+  UNREAD_LESS_IMPORTANT: "UnreadLessImportant",
+  UNREAD_IMPORTANT: "UnreadImportant",
+  DEFAULT: "Default",
+};
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/BaseChannelItem.tsx");
 
 export default function BaseChannelItem(mode) {
@@ -106,7 +135,7 @@ export default function BaseChannelItem(mode) {
   let items = [hideIcon, mode, tmp2];
   let obj = {
     style: React.useMemo(() => {
-      const items = [channel.channel, , ];
+      const items = [channel.channel, ,];
       let rowPaddingNoIcon = hideIcon;
       if (hideIcon) {
         rowPaddingNoIcon = tmp.rowPaddingNoIcon;
@@ -115,10 +144,10 @@ export default function BaseChannelItem(mode) {
       items[2] = mode === closure_1_11.SELECTED && channel.rowSelected;
       return items;
     }, items),
-    children: null
+    children: null,
   };
   if (hideIcon) {
-    const items1 = [tmp5, , , ];
+    const items1 = [tmp5, , ,];
     let tmp14 = !hideIcon;
     if (!hideIcon) {
       tmp14 = icon;
@@ -151,7 +180,7 @@ export default function BaseChannelItem(mode) {
     const tmp6 = closure_8;
     const tmp9 = hideIcon(10250);
   }
-};
+}
 export const ChannelModes = createCacheKey;
 export { BaseChannelSubtitle };
 export const BaseChannelIcon = function BaseChannelIcon(arg0) {
@@ -235,7 +264,10 @@ export const BaseChannelName = function BaseChannelName(mode) {
       } else if (mode === tmp6.MUTED) {
         obj = { variant: "text-md/medium", color: "text-muted" };
       } else {
-        obj = mode === tmp6.SELECTED ? { variant: "text-md/medium", color: "redesign-channel-name-text" } : { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
+        obj =
+          mode === tmp6.SELECTED
+            ? { variant: "text-md/medium", color: "redesign-channel-name-text" }
+            : { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
       }
     }
     obj = { experimental_useNativeText: true };
@@ -244,7 +276,7 @@ export const BaseChannelName = function BaseChannelName(mode) {
     const items = [tmp.channelName, textStyle];
     obj.style = items;
     obj.children = name;
-    const items1 = [tmp4(tmp5, obj), ];
+    const items1 = [tmp4(tmp5, obj)];
     obj1 = { mode: null, subtitle: null };
     obj1[0] = mode;
     obj1[1] = subtitle;

@@ -5,7 +5,9 @@ import closure_3 from "../GuildPowerupsStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx",
+);
 
 export default function useGuildPowerupRollbackNotificationConfig(guildId, location) {
   const _require = guildId;
@@ -62,4 +64,4 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
     }
   }
   return tmp5;
-};
+}

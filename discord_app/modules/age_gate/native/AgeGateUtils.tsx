@@ -12,7 +12,7 @@ import set from "../../../../_runtime/00002_set.js";
 require = arg1;
 const GuildNSFWContentLevel = ME.GuildNSFWContentLevel;
 const Permissions = ME.Permissions;
-const items = [, ];
+const items = [,];
 ({ EXPLICIT: arr[0], AGE_RESTRICTED: arr[1] } = GuildNSFWContentLevel);
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/age_gate/native/AgeGateUtils.tsx");
@@ -83,7 +83,11 @@ export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
     currentUser = currentUser.getCurrentUser();
     if (null != guild) {
       if (null != currentUser) {
-        const tmp9 = closure_4.can(Permissions.ADMINISTRATOR, guild) || closure_4.can(Permissions.MANAGE_GUILD, guild) || closure_4.can(Permissions.KICK_MEMBERS, guild) || closure_4.can(Permissions.BAN_MEMBERS, guild);
+        const tmp9 =
+          closure_4.can(Permissions.ADMINISTRATOR, guild) ||
+          closure_4.can(Permissions.MANAGE_GUILD, guild) ||
+          closure_4.can(Permissions.KICK_MEMBERS, guild) ||
+          closure_4.can(Permissions.BAN_MEMBERS, guild);
         let nsfwAllowed = currentUser.nsfwAllowed;
         if (nsfwAllowed) {
           nsfwAllowed = resolveNsfwTogglesWithDefaults.getViewNsfwGuildsOrDefault();

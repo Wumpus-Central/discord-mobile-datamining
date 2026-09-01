@@ -189,8 +189,7 @@ function handleChannelUpdate(channel) {
 let closure_12 = {};
 let set = new Set();
 const Store = initializeDefault.Store;
-class GatedChannelStore extends Store {
-}
+class GatedChannelStore extends Store {}
 const prototype = GatedChannelStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_5, closure_6, closure_7, closure_8, closure_2, closure_9);
@@ -311,9 +310,11 @@ const gatedChannelStore = new GatedChannelStore(dispatcherDefault, {
       obj2.delete(guildId);
     }
   },
-  GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: function handleRoleSubscriptionsRestrictionsFetchFailure(guildId) {
+  GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: function handleRoleSubscriptionsRestrictionsFetchFailure(
+    guildId,
+  ) {
     set.add(guildId.guildId);
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/channel/GatedChannelStore.tsx");
 

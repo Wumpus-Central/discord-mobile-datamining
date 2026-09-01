@@ -2,10 +2,17 @@
 import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-08-shop-standalone-pdp-mobile", kind: "user", defaultConfig: { standalonePdpEnabled: false }, variations: { 0: { standalonePdpEnabled: false }, 1: { standalonePdpEnabled: true } } });
+const apexExperiment = ApexExperiment.createApexExperiment({
+  name: "2026-08-shop-standalone-pdp-mobile",
+  kind: "user",
+  defaultConfig: { standalonePdpEnabled: false },
+  variations: { 0: { standalonePdpEnabled: false }, 1: { standalonePdpEnabled: true } },
+});
 const result = set.fileFinishedImporting("modules/collectibles/experiments/ShopStandalonePdpMobileExperiment.tsx");
 
 export default apexExperiment;
-export const useIsShopStandalonePdpMobileEnabled = function useIsShopStandalonePdpMobileEnabled(product_details_action_sheet) {
+export const useIsShopStandalonePdpMobileEnabled = function useIsShopStandalonePdpMobileEnabled(
+  product_details_action_sheet,
+) {
   return apexExperiment.useConfig({ location: product_details_action_sheet }).standalonePdpEnabled;
 };

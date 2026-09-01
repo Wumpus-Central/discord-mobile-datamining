@@ -12,7 +12,7 @@ const require = arg1;
 noopAll;
 ({ GuildSettingsSections: closure_6, PlatformTypes } = ME);
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-let items = [, ];
+let items = [,];
 ({ TWITCH: arr[0], YOUTUBE: arr[1] } = PlatformTypes);
 createCacheKey = { screenContainer: null, screenContent: null, platformIcon: null };
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
@@ -21,7 +21,9 @@ createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { width: 24, height: 24 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { paddingTop: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/integrations/native/GuildSettingsModalIntegrations.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/integrations/native/GuildSettingsModalIntegrations.tsx",
+);
 
 export default function GuildSettingsModalIntegrations(contentContainerStyle) {
   let _require;
@@ -102,7 +104,7 @@ export default function GuildSettingsModalIntegrations(contentContainerStyle) {
       };
       tmp15Result = tmp15(tmp(tmp2[16]).TableRow, obj2);
     }
-    const items4 = [tmp15Result, , , ];
+    const items4 = [tmp15Result, , ,];
     if (canManageWebhooks) {
       obj3 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
       const intl3 = tmp(tmp2[17]).intl;
@@ -180,5 +182,5 @@ export default function GuildSettingsModalIntegrations(contentContainerStyle) {
     const tmp14 = closure_9;
   }
   return tmp11;
-};
+}
 export const SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS = items;

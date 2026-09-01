@@ -64,7 +64,9 @@ function moveBadgeInDisplayOrder(value, index, clampResult) {
 }
 moveBadgeInDisplayOrder.__closure = {};
 moveBadgeInDisplayOrder.__workletHash = 15133920248237;
-moveBadgeInDisplayOrder.__initData = { code: "function moveBadgeInDisplayOrder_PendingBadgeSettingsTsx1(badgeIds,fromIndex,toIndex){if(fromIndex===toIndex||fromIndex<0||fromIndex>=badgeIds.length){return badgeIds;}const next=[...badgeIds];const[moved]=next.splice(fromIndex,1);next.splice(Math.min(Math.max(toIndex,0),next.length),0,moved);return next;}" };
+moveBadgeInDisplayOrder.__initData = {
+  code: "function moveBadgeInDisplayOrder_PendingBadgeSettingsTsx1(badgeIds,fromIndex,toIndex){if(fromIndex===toIndex||fromIndex<0||fromIndex>=badgeIds.length){return badgeIds;}const next=[...badgeIds];const[moved]=next.splice(fromIndex,1);next.splice(Math.min(Math.max(toIndex,0),next.length),0,moved);return next;}",
+};
 let result = require("set").fileFinishedImporting("modules/badges/PendingBadgeSettings.tsx");
 
 export const setPendingBadgeDisplayOrder = function setPendingBadgeDisplayOrder(items) {
@@ -100,7 +102,11 @@ export const setPendingBadgeHiddenBadges = function setPendingBadgeHiddenBadges(
   dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp4 });
 };
 export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "category", pendingBadgeHiddenBadges: "limit" });
+  dispatcherDefault.dispatch({
+    type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
+    pendingBadgeDisplayOrder: "category",
+    pendingBadgeHiddenBadges: "limit",
+  });
 };
 export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stateFromStoresArray, arg1) {
   ({ pendingBadgeDisplayOrder, pendingBadgeHiddenBadges } = arg1);

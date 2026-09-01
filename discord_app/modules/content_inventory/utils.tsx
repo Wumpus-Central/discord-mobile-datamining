@@ -144,7 +144,7 @@ let closure_6 = {
   monthsAgo(count) {
     const intl = getSystemLocale.intl;
     return intl.formatToPlainString(getSystemLocale.t.ITymou, { count });
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/content_inventory/utils.tsx");
 
@@ -248,7 +248,7 @@ export const A11Y_FORMAT_SET = {
   monthsAgo(count) {
     const intl = getSystemLocale.intl;
     return intl.formatToPlainString(getSystemLocale.t.nmSbST, { count });
-  }
+  },
 };
 export { formatEndedTimestamp };
 export const formatEntryTimestamp = function formatEntryTimestamp(contentInventoryEntry, locale, time, arg3) {

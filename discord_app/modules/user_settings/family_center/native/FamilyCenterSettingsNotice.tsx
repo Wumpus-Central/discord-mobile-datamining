@@ -7,7 +7,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx",
+);
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
   let obj = activeLinkUserIds(8772);
@@ -21,7 +23,7 @@ export default function FamilyCenterSettingsParentalControlsNotice() {
       obj = { recipientIds: activeLinkUserIds };
       closure_1_1(closure_1_2[7]).openPrivateChannel(obj);
     },
-    count: activeLinkUserIds.length
+    count: activeLinkUserIds.length,
   };
   return jsx(SafetySettingsNoticeDefault, {
     label: messagesProxyDefault.i284fU,
@@ -32,6 +34,6 @@ export default function FamilyCenterSettingsParentalControlsNotice() {
       obj = { recipientIds: activeLinkUserIds };
       closure_1_1(closure_1_2[7]).openPrivateChannel(obj);
     },
-    count: activeLinkUserIds.length
+    count: activeLinkUserIds.length,
   });
-};
+}

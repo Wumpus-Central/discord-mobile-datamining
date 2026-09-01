@@ -263,7 +263,15 @@ prototype["render"] = function render() {
   });
   return <props.component>{items}</props.component>;
 };
-TransitionGroup.defaultProps = { component: "span", transitionAppear: true, transitionLeave: true, transitionEnter: true, childFactory: null };
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/transition-group/TransitionGroup.tsx");
+TransitionGroup.defaultProps = {
+  component: "span",
+  transitionAppear: true,
+  transitionLeave: true,
+  transitionEnter: true,
+  childFactory: null,
+};
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/transition-group/TransitionGroup.tsx",
+);
 
 export { TransitionGroup };

@@ -18,7 +18,12 @@ let num = 16;
 if (set.isAndroid()) {
   num = 0;
 }
-let closure_7 = createCacheKey.createStyles({ volumerSlider: { flexDirection: "row", alignItems: "center" }, leftIcon: { marginRight: num }, rightIcon: { marginLeft: num }, volumerSliderNative: { flex: 1, marginVertical: -10, backgroundColor: "transparent" } });
+let closure_7 = createCacheKey.createStyles({
+  volumerSlider: { flexDirection: "row", alignItems: "center" },
+  leftIcon: { marginRight: num },
+  rightIcon: { marginLeft: num },
+  volumerSliderNative: { flex: 1, marginVertical: -10, backgroundColor: "transparent" },
+});
 const result = set.fileFinishedImporting("components_native/common/VolumeSlider.tsx");
 
 export default function VolumeSlider(maxTrackTintColor) {
@@ -41,8 +46,18 @@ export default function VolumeSlider(maxTrackTintColor) {
   obj = { style: items, children: null };
   items = [tmp4.volumerSlider, maxTrackTintColor.style];
   obj = { style: tmp4.leftIcon };
-  const items1 = [callback(VoiceXIcon.VoiceXIcon, obj), , ];
-  obj1 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
+  const items1 = [callback(VoiceXIcon.VoiceXIcon, obj), ,];
+  obj1 = {
+    style: tmp4.volumerSliderNative,
+    value: null,
+    minimumValue: 0,
+    maximumValue: null,
+    minimumTrackTintColor: null,
+    maximumTrackTintColor: null,
+    accessibilityLabel: null,
+    onValueChange: null,
+    onResponderGrant: null,
+  };
   let tmp5Result = tmp5(4968);
   obj1[1] = tmp5Result.amplitudeToPerceptual(value);
   obj1[3] = maxVolume;
@@ -69,4 +84,4 @@ export default function VolumeSlider(maxTrackTintColor) {
   items1[2] = callback(VoiceNormalIcon.VoiceNormalIcon, { style: tmp4.rightIcon });
   obj[1] = items1;
   return closure_6(View, obj);
-};
+}

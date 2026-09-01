@@ -11,17 +11,145 @@ import closure_4 from "../stores/MediaEngineStore.tsx";
 import DesktopSources from "../../discord_common/js/packages/media-engine/Constants.tsx";
 
 require = arg1;
-function noop() {
-
-}
+function noop() {}
 ({ Features: c5, MediaEngineContextTypes: closure_6, MediaTypes: error, SpeakingFlags: closure_8 } = DesktopSources);
-let obj = { IDENTIFY: 0, [0]: "IDENTIFY", SELECT_PROTOCOL: 1, [1]: "SELECT_PROTOCOL", READY: 2, [2]: "READY", HEARTBEAT: 3, [3]: "HEARTBEAT", SELECT_PROTOCOL_ACK: 4, [4]: "SELECT_PROTOCOL_ACK", SPEAKING: 5, [5]: "SPEAKING", HEARTBEAT_ACK: 6, [6]: "HEARTBEAT_ACK", RESUME: 7, [7]: "RESUME", HELLO: 8, [8]: "HELLO", RESUMED: 9, [9]: "RESUMED", CLIENT_CONNECT: 11, [11]: "CLIENT_CONNECT", VIDEO: 12, [12]: "VIDEO", CLIENT_DISCONNECT: 13, [13]: "CLIENT_DISCONNECT", SESSION_UPDATE: 14, [14]: "SESSION_UPDATE", MEDIA_SINK_WANTS: 15, [15]: "MEDIA_SINK_WANTS", VOICE_BACKEND_VERSION: 16, [16]: "VOICE_BACKEND_VERSION", CHANNEL_OPTIONS_UPDATE: 17, [17]: "CHANNEL_OPTIONS_UPDATE", FLAGS: 18, [18]: "FLAGS", PLATFORM: 20, [20]: "PLATFORM", DAVE_PROTOCOL_PREPARE_TRANSITION: 21, [21]: "DAVE_PROTOCOL_PREPARE_TRANSITION", DAVE_PROTOCOL_EXECUTE_TRANSITION: 22, [22]: "DAVE_PROTOCOL_EXECUTE_TRANSITION", DAVE_PROTOCOL_READY_FOR_TRANSITION: 23, [23]: "DAVE_PROTOCOL_READY_FOR_TRANSITION", DAVE_PROTOCOL_PREPARE_EPOCH: 24, [24]: "DAVE_PROTOCOL_PREPARE_EPOCH", MLS_EXTERNAL_SENDER_PACKAGE: 25, [25]: "MLS_EXTERNAL_SENDER_PACKAGE", MLS_KEY_PACKAGE: 26, [26]: "MLS_KEY_PACKAGE", MLS_PROPOSALS: 27, [27]: "MLS_PROPOSALS", MLS_COMMIT_WELCOME: 28, [28]: "MLS_COMMIT_WELCOME", MLS_PREPARE_COMMIT_TRANSITION: 29, [29]: "MLS_PREPARE_COMMIT_TRANSITION", MLS_WELCOME: 30, [30]: "MLS_WELCOME", MLS_INVALID_COMMIT_WELCOME: 31, [31]: "MLS_INVALID_COMMIT_WELCOME", CLIENT_CANNOT_REACH_RTC_SERVER: 32, [32]: "CLIENT_CANNOT_REACH_RTC_SERVER", SFU_UPDATE: 33, [33]: "SFU_UPDATE" };
-obj = { AUTHENTICATION_FAILED: 4004, [4004]: "AUTHENTICATION_FAILED", INVALID_SESSION: 4006, [4006]: "INVALID_SESSION", SERVER_NOT_FOUND: 4011, [4011]: "SERVER_NOT_FOUND", SERVER_CRASH: 4015, [4015]: "SERVER_CRASH", CANCELED: 4016, [4016]: "CANCELED", HEARTBEAT_TIMEOUT: 4800, [4800]: "HEARTBEAT_TIMEOUT", UNRESUMABLE: 4801, [4801]: "UNRESUMABLE", RESET_BACKOFF: 4802, [4802]: "RESET_BACKOFF", REPEATED_MLS_INVALID_MESSAGES: 4803, [4803]: "REPEATED_MLS_INVALID_MESSAGES" };
-let closure_12 = { DISCONNECTED: 0, [0]: "DISCONNECTED", CONNECTING: 1, [1]: "CONNECTING", IDENTIFYING: 2, [2]: "IDENTIFYING", RESUMING: 3, [3]: "RESUMING", CONNECTED: 4, [4]: "CONNECTED", RECONNECTING: 5, [5]: "RECONNECTING" };
+let obj = {
+  IDENTIFY: 0,
+  [0]: "IDENTIFY",
+  SELECT_PROTOCOL: 1,
+  [1]: "SELECT_PROTOCOL",
+  READY: 2,
+  [2]: "READY",
+  HEARTBEAT: 3,
+  [3]: "HEARTBEAT",
+  SELECT_PROTOCOL_ACK: 4,
+  [4]: "SELECT_PROTOCOL_ACK",
+  SPEAKING: 5,
+  [5]: "SPEAKING",
+  HEARTBEAT_ACK: 6,
+  [6]: "HEARTBEAT_ACK",
+  RESUME: 7,
+  [7]: "RESUME",
+  HELLO: 8,
+  [8]: "HELLO",
+  RESUMED: 9,
+  [9]: "RESUMED",
+  CLIENT_CONNECT: 11,
+  [11]: "CLIENT_CONNECT",
+  VIDEO: 12,
+  [12]: "VIDEO",
+  CLIENT_DISCONNECT: 13,
+  [13]: "CLIENT_DISCONNECT",
+  SESSION_UPDATE: 14,
+  [14]: "SESSION_UPDATE",
+  MEDIA_SINK_WANTS: 15,
+  [15]: "MEDIA_SINK_WANTS",
+  VOICE_BACKEND_VERSION: 16,
+  [16]: "VOICE_BACKEND_VERSION",
+  CHANNEL_OPTIONS_UPDATE: 17,
+  [17]: "CHANNEL_OPTIONS_UPDATE",
+  FLAGS: 18,
+  [18]: "FLAGS",
+  PLATFORM: 20,
+  [20]: "PLATFORM",
+  DAVE_PROTOCOL_PREPARE_TRANSITION: 21,
+  [21]: "DAVE_PROTOCOL_PREPARE_TRANSITION",
+  DAVE_PROTOCOL_EXECUTE_TRANSITION: 22,
+  [22]: "DAVE_PROTOCOL_EXECUTE_TRANSITION",
+  DAVE_PROTOCOL_READY_FOR_TRANSITION: 23,
+  [23]: "DAVE_PROTOCOL_READY_FOR_TRANSITION",
+  DAVE_PROTOCOL_PREPARE_EPOCH: 24,
+  [24]: "DAVE_PROTOCOL_PREPARE_EPOCH",
+  MLS_EXTERNAL_SENDER_PACKAGE: 25,
+  [25]: "MLS_EXTERNAL_SENDER_PACKAGE",
+  MLS_KEY_PACKAGE: 26,
+  [26]: "MLS_KEY_PACKAGE",
+  MLS_PROPOSALS: 27,
+  [27]: "MLS_PROPOSALS",
+  MLS_COMMIT_WELCOME: 28,
+  [28]: "MLS_COMMIT_WELCOME",
+  MLS_PREPARE_COMMIT_TRANSITION: 29,
+  [29]: "MLS_PREPARE_COMMIT_TRANSITION",
+  MLS_WELCOME: 30,
+  [30]: "MLS_WELCOME",
+  MLS_INVALID_COMMIT_WELCOME: 31,
+  [31]: "MLS_INVALID_COMMIT_WELCOME",
+  CLIENT_CANNOT_REACH_RTC_SERVER: 32,
+  [32]: "CLIENT_CANNOT_REACH_RTC_SERVER",
+  SFU_UPDATE: 33,
+  [33]: "SFU_UPDATE",
+};
+obj = {
+  AUTHENTICATION_FAILED: 4004,
+  [4004]: "AUTHENTICATION_FAILED",
+  INVALID_SESSION: 4006,
+  [4006]: "INVALID_SESSION",
+  SERVER_NOT_FOUND: 4011,
+  [4011]: "SERVER_NOT_FOUND",
+  SERVER_CRASH: 4015,
+  [4015]: "SERVER_CRASH",
+  CANCELED: 4016,
+  [4016]: "CANCELED",
+  HEARTBEAT_TIMEOUT: 4800,
+  [4800]: "HEARTBEAT_TIMEOUT",
+  UNRESUMABLE: 4801,
+  [4801]: "UNRESUMABLE",
+  RESET_BACKOFF: 4802,
+  [4802]: "RESET_BACKOFF",
+  REPEATED_MLS_INVALID_MESSAGES: 4803,
+  [4803]: "REPEATED_MLS_INVALID_MESSAGES",
+};
+let closure_12 = {
+  DISCONNECTED: 0,
+  [0]: "DISCONNECTED",
+  CONNECTING: 1,
+  [1]: "CONNECTING",
+  IDENTIFYING: 2,
+  [2]: "IDENTIFYING",
+  RESUMING: 3,
+  [3]: "RESUMING",
+  CONNECTED: 4,
+  [4]: "CONNECTED",
+  RECONNECTING: 5,
+  [5]: "RECONNECTING",
+};
 let closure_13 = 20 * setDefault.Millis.SECOND;
 const MINUTE = setDefault.Millis.MINUTE;
 let closure_15 = 5 * setDefault.Millis.SECOND;
-obj = { Connecting: "connecting", Connect: "connect", Disconnect: "disconnect", Resuming: "resuming", Ready: "ready", SfuUpdate: "sfu-update", Speaking: "speaking", Video: "video", Ping: "ping", ClientConnect: "client-connect", ClientDisconnect: "client-disconnect", Codecs: "codecs", MediaSessionId: "media-session-id", MediaSinkWants: "media-sink-wants", VoiceBackendVersion: "voice-backend-version", KeyframeInterval: "keyframe-interval", ChannelOptionsUpdateSecureFramesProtocol: "update-secure-frames-protocol", Flags: "flags", Platform: "platform", SDP: "sdp", Encryption: "encryption", BandwidthEstimationExperiment: "bandwidth-estimation-experiment", SecureFramesInit: "secure-frames-init", SecureFramesPrepareTransition: "secure-frames-prepare-transition", SecureFramesExecuteTransition: "secure-frames-execute-transition", SecureFramesPrepareEpoch: "secure-frames-prepare-epoch", MLSExternalSenderPackage: "mls-external-sender-package", MLSProposals: "mls-proposals", MLSPrepareCommitTransition: "mls-prepare-commit-transition", MLSWelcome: "mls-welcome", ReceiveMessage: "receive-message", SendMessage: "send-message" };
+obj = {
+  Connecting: "connecting",
+  Connect: "connect",
+  Disconnect: "disconnect",
+  Resuming: "resuming",
+  Ready: "ready",
+  SfuUpdate: "sfu-update",
+  Speaking: "speaking",
+  Video: "video",
+  Ping: "ping",
+  ClientConnect: "client-connect",
+  ClientDisconnect: "client-disconnect",
+  Codecs: "codecs",
+  MediaSessionId: "media-session-id",
+  MediaSinkWants: "media-sink-wants",
+  VoiceBackendVersion: "voice-backend-version",
+  KeyframeInterval: "keyframe-interval",
+  ChannelOptionsUpdateSecureFramesProtocol: "update-secure-frames-protocol",
+  Flags: "flags",
+  Platform: "platform",
+  SDP: "sdp",
+  Encryption: "encryption",
+  BandwidthEstimationExperiment: "bandwidth-estimation-experiment",
+  SecureFramesInit: "secure-frames-init",
+  SecureFramesPrepareTransition: "secure-frames-prepare-transition",
+  SecureFramesExecuteTransition: "secure-frames-execute-transition",
+  SecureFramesPrepareEpoch: "secure-frames-prepare-epoch",
+  MLSExternalSenderPackage: "mls-external-sender-package",
+  MLSProposals: "mls-proposals",
+  MLSPrepareCommitTransition: "mls-prepare-commit-transition",
+  MLSWelcome: "mls-welcome",
+  ReceiveMessage: "receive-message",
+  SendMessage: "send-message",
+};
 onDefault;
 class RTCControlSocket extends tmp3 {
   constructor(arg0) {
@@ -74,7 +202,14 @@ prototype["createWebSocket"] = function createWebSocket() {
   obj = self(4558);
   self.connectionStartTime = obj.now();
   self.helloTimeout = setTimeout(() => {
-    self.handleClose(false, 0, "The connection timed out after " + self(closure_1_2[7]).now() - self.connectionStartTime + " ms - did not receive OP_HELLO in time.");
+    self.handleClose(
+      false,
+      0,
+      "The connection timed out after " +
+        self(closure_1_2[7]).now() -
+        self.connectionStartTime +
+        " ms - did not receive OP_HELLO in time.",
+    );
   }, closure_13);
   obj = { location: "RTCControlSocket", supportsSfuUpdate: closure_4.supports(constants.UDP_ENDPOINT_UPDATE) };
   const webSocket = new WebSocket("" + self.url + "?v=" + self(13463).getVoiceGatewayProtocolVersion(obj));
@@ -171,7 +306,17 @@ prototype["createWebSocket"] = function createWebSocket() {
           } else {
             VIDEO = constants.VIDEO;
           }
-          obj = { type: VIDEO, rid: rid.rid, ssrc: rid.ssrc, rtxSsrc: rid.rtx_ssrc, active: rid.active, quality: rid.quality, maxBitrate: rid.max_bitrate, maxFrameRate: rid.max_framerate, maxResolution: null };
+          obj = {
+            type: VIDEO,
+            rid: rid.rid,
+            ssrc: rid.ssrc,
+            rtxSsrc: rid.rtx_ssrc,
+            active: rid.active,
+            quality: rid.quality,
+            maxBitrate: rid.max_bitrate,
+            maxFrameRate: rid.max_framerate,
+            maxResolution: null,
+          };
           let tmp5;
           if (null != rid.max_resolution) {
             obj = { type: null, width: null, height: null };
@@ -280,8 +425,7 @@ prototype["send"] = function send(arg0) {
       self.emit(obj.SendMessage, arg0, tmp);
       try {
         webSocket.send(json);
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }
 };
@@ -296,8 +440,7 @@ prototype["sendBinary"] = function sendBinary(MLS_COMMIT_WELCOME, uint8Array) {
       const result = uint8Array.set(uint8Array, 1);
       try {
         webSocket.send(uint8Array.buffer);
-      } catch (err) {
-      }
+      } catch (err) {}
     }
   }
 };
@@ -337,10 +480,18 @@ prototype["doResume"] = function doResume() {
   if (str2 == null) {
     str2 = "";
   }
-  logger.info("[RESUME] resuming session. serverId=" + serverId + " channelId=" + str + " sessionId=" + str2 + " seqAck=" + num);
+  logger.info(
+    "[RESUME] resuming session. serverId=" + serverId + " channelId=" + str + " sessionId=" + str2 + " seqAck=" + num,
+  );
   self.emit(obj.Resuming);
   self.connectionState = constants3.RESUMING;
-  obj = { token: self.token, session_id: self.sessionId, server_id: self.serverId, channel_id: self.channelId, seq_ack: num };
+  obj = {
+    token: self.token,
+    session_id: self.sessionId,
+    server_id: self.serverId,
+    channel_id: self.channelId,
+    seq_ack: num,
+  };
   self.send(obj.RESUME, obj);
 };
 prototype["handleHello"] = function handleHello(d) {
@@ -379,7 +530,9 @@ prototype["handleHello"] = function handleHello(d) {
   if (heartbeatInterval == null) {
     heartbeatInterval = "??";
   }
-  logger.info("[HELLO] heartbeat interval: " + heartbeatInterval + ", version: " + self.serverVersion + ", took " + diff + " ms");
+  logger.info(
+    "[HELLO] heartbeat interval: " + heartbeatInterval + ", version: " + self.serverVersion + ", took " + diff + " ms",
+  );
   self.startHeartbeater();
 };
 prototype["handleReady"] = function handleReady(experiments) {
@@ -406,7 +559,17 @@ prototype["handleReady"] = function handleReady(experiments) {
       } else {
         VIDEO = constants.VIDEO;
       }
-      obj = { type: VIDEO, rid: rid.rid, ssrc: rid.ssrc, rtxSsrc: rid.rtx_ssrc, active: rid.active, quality: rid.quality, maxBitrate: rid.max_bitrate, maxFrameRate: rid.max_framerate, maxResolution: null };
+      obj = {
+        type: VIDEO,
+        rid: rid.rid,
+        ssrc: rid.ssrc,
+        rtxSsrc: rid.rtx_ssrc,
+        active: rid.active,
+        quality: rid.quality,
+        maxBitrate: rid.max_bitrate,
+        maxFrameRate: rid.max_framerate,
+        maxResolution: null,
+      };
       let tmp5;
       if (null != rid.max_resolution) {
         obj = { type: null, width: null, height: null };
@@ -457,7 +620,17 @@ prototype["handleClose"] = function handleClose(arg0, arg1, arg2) {
             str = flag.toString();
             const result = backoff.fail(() => self.reconnect(flag, closure_2, closure_0)) / 1000;
             const _HermesInternal = HermesInternal;
-            logger2.warn("[WS CLOSED] (clean: " + str + ", code: " + arg1 + ", reason: " + arg2 + ") retrying in " + result.toFixed(2) + " seconds.");
+            logger2.warn(
+              "[WS CLOSED] (clean: " +
+                str +
+                ", code: " +
+                arg1 +
+                ", reason: " +
+                arg2 +
+                ") retrying in " +
+                result.toFixed(2) +
+                " seconds.",
+            );
             const failResult = backoff.fail(() => self.reconnect(flag, closure_2, closure_0));
           }
         }
@@ -647,11 +820,30 @@ prototype["identify"] = function identify(streamParameters, arg1, arg2) {
   this.sessionId = sessionId;
   this.token = token;
   this.connectionState = constants3.IDENTIFYING;
-  obj = { server_id: serverId, channel_id: channelId, user_id: userId, session_id: sessionId, token, max_dave_protocol_version: maxDaveProtocolVersion, video, streams: null };
+  obj = {
+    server_id: serverId,
+    channel_id: channelId,
+    user_id: userId,
+    session_id: sessionId,
+    token,
+    max_dave_protocol_version: maxDaveProtocolVersion,
+    video,
+    streams: null,
+  };
   let mapped;
   if (streamParameters != null) {
     mapped = streamParameters.map((type) => {
-      obj = { type: type.type, rid: type.rid, ssrc: type.ssrc, active: type.active, quality: type.quality, rtx_ssrc: type.rtxSsrc, max_bitrate: type.maxBitrate, max_framerate: type.maxFrameRate, max_resolution: null };
+      obj = {
+        type: type.type,
+        rid: type.rid,
+        ssrc: type.ssrc,
+        active: type.active,
+        quality: type.quality,
+        rtx_ssrc: type.rtxSsrc,
+        max_bitrate: type.maxBitrate,
+        max_framerate: type.maxFrameRate,
+        max_resolution: null,
+      };
       let tmp;
       if (null != type.maxResolution) {
         obj = { type: null, width: null, height: null };
@@ -757,7 +949,15 @@ prototype["selectProtocol"] = function selectProtocol(protocol, rTCConnectionId,
           obj = {};
           const merged = Object.assign(sdp);
           const codecs = sdp.codecs;
-          obj.codecs = codecs.map((name) => ({ name: name.name, type: name.type, priority: 1000 * name.priority, payload_type: name.payloadType, rtx_payload_type: name.rtxPayloadType, encode: name.encode, decode: name.decode }));
+          obj.codecs = codecs.map((name) => ({
+            name: name.name,
+            type: name.type,
+            priority: 1000 * name.priority,
+            payload_type: name.payloadType,
+            rtx_payload_type: name.rtxPayloadType,
+            encode: name.encode,
+            decode: name.decode,
+          }));
           obj.rtc_connection_id = rTCConnectionId;
           tmp = obj;
         }
@@ -784,7 +984,15 @@ prototype["selectProtocol"] = function selectProtocol(protocol, rTCConnectionId,
       obj1 = {};
       const merged1 = Object.assign(sdp);
       const codecs1 = sdp.codecs;
-      obj1.codecs = codecs1.map((name) => ({ name: name.name, type: name.type, priority: 1000 * name.priority, payload_type: name.payloadType, rtx_payload_type: name.rtxPayloadType, encode: name.encode, decode: name.decode }));
+      obj1.codecs = codecs1.map((name) => ({
+        name: name.name,
+        type: name.type,
+        priority: 1000 * name.priority,
+        payload_type: name.payloadType,
+        rtx_payload_type: name.rtxPayloadType,
+        encode: name.encode,
+        decode: name.decode,
+      }));
       obj1.rtc_connection_id = rTCConnectionId;
       obj1.experiments = _selectedExperiments;
       tmp = obj1;
@@ -796,7 +1004,17 @@ prototype["selectProtocol"] = function selectProtocol(protocol, rTCConnectionId,
   this.send(obj.SELECT_PROTOCOL, obj2);
 };
 prototype["updateSession"] = function updateSession(codecs) {
-  obj = { codecs: codecs.map((name) => ({ name: name.name, type: name.type, priority: 1000 * name.priority, payload_type: name.payloadType, rtx_payload_type: name.rtxPayloadType, encode: name.encode, decode: name.decode })) };
+  obj = {
+    codecs: codecs.map((name) => ({
+      name: name.name,
+      type: name.type,
+      priority: 1000 * name.priority,
+      payload_type: name.payloadType,
+      rtx_payload_type: name.rtxPayloadType,
+      encode: name.encode,
+      decode: name.decode,
+    })),
+  };
   codecs = codecs.codecs;
   this.send(obj.SESSION_UPDATE, obj);
 };
@@ -821,7 +1039,17 @@ prototype["video"] = function video(audio_ssrc, video_ssrc, rtx_ssrc, arr) {
   let mapped;
   if (arr != null) {
     mapped = arr.map((type) => {
-      obj = { type: type.type, rid: type.rid, ssrc: type.ssrc, active: type.active, quality: type.quality, rtx_ssrc: type.rtxSsrc, max_bitrate: type.maxBitrate, max_framerate: type.maxFrameRate, max_resolution: null };
+      obj = {
+        type: type.type,
+        rid: type.rid,
+        ssrc: type.ssrc,
+        active: type.active,
+        quality: type.quality,
+        rtx_ssrc: type.rtxSsrc,
+        max_bitrate: type.maxBitrate,
+        max_framerate: type.maxFrameRate,
+        max_resolution: null,
+      };
       let tmp;
       if (null != type.maxResolution) {
         obj = { type: null, width: null, height: null };

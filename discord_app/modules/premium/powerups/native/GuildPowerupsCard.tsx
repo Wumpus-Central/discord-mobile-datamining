@@ -42,7 +42,7 @@ export default function GuildPowerupsCard(status) {
   if (status != null) {
     type = status.type;
   }
-  const items = ["active" === type && tmp2.cardActive, , , ];
+  const items = ["active" === type && tmp2.cardActive, , ,];
   let type1;
   if (status != null) {
     type1 = status.type;
@@ -58,4 +58,4 @@ export default function GuildPowerupsCard(status) {
   obj.children = children;
   obj[1] = jsx(PressableCard.Card, { border: "faint", radius: 16, shadow: "none" });
   return <View border="faint" radius={16} shadow="none" />;
-};
+}

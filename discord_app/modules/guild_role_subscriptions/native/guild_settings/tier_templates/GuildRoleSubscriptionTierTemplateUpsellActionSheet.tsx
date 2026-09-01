@@ -19,8 +19,21 @@ require = arg1;
 ({ GuildSettingsSections: error, GuildSettingsSubsections: closure_8 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-createCacheKey = { container: null, videoContainer: null, info: null, title: null, subtitle: null, footer: null, button: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
+createCacheKey = {
+  container: null,
+  videoContainer: null,
+  info: null,
+  title: null,
+  subtitle: null,
+  footer: null,
+  button: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  padding: 16,
+  paddingTop: 24,
+  justifyContent: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[2] = { marginTop: 16, alignItems: "center" };
@@ -30,7 +43,9 @@ createCacheKey[5] = { marginTop: 32 };
 createCacheKey[6] = { marginBottom: 8 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUpsellActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUpsellActionSheet.tsx",
+);
 
 export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed } = arg0);
@@ -56,18 +71,31 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
       }
       c2(result);
     },
-    children: null
+    children: null,
   };
   obj1 = { accessibilityRole: "image", accessibilityLabel: null, children: null };
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t.gCgirr);
-  obj1[2] = callback2(markAsDismissed(8602), { style: tmp.videoContainer, src: closure_12, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true });
-  const items2 = [callback2(View, obj1), , ];
+  obj1[2] = callback2(markAsDismissed(8602), {
+    style: tmp.videoContainer,
+    src: closure_12,
+    width: tmp3,
+    height: tmp3 / 1.7289156626506024,
+    muted: true,
+    paused: stateFromStores,
+    ariaHidden: true,
+  });
+  const items2 = [callback2(View, obj1), ,];
   const obj3 = { style: tmp.info, children: null };
-  const obj4 = { variant: "heading-lg/semibold", style: tmp.title, color: "mobile-text-heading-primary", children: null };
+  const obj4 = {
+    variant: "heading-lg/semibold",
+    style: tmp.title,
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl2 = getSystemLocale.intl;
   obj4[3] = intl2.string(getSystemLocale.t.gCgirr);
-  const items3 = [callback2(Text.Text, obj4), ];
+  const items3 = [callback2(Text.Text, obj4)];
   const obj5 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
   const intl3 = getSystemLocale.intl;
   obj5[3] = intl3.string(getSystemLocale.t.fLMZFw);
@@ -81,11 +109,16 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   const intl4 = getSystemLocale.intl;
   obj8[0] = intl4.string(getSystemLocale.t.BQq86h);
   obj8[1] = function onPress() {
-    markAsDismissed(_undefined[16]).open(closure_0, closure_1_7.ROLE_SUBSCRIPTIONS_TIERS, undefined, closure_1_8.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
+    markAsDismissed(_undefined[16]).open(
+      closure_0,
+      closure_1_7.ROLE_SUBSCRIPTIONS_TIERS,
+      undefined,
+      closure_1_8.ROLE_SUBSCRIPTION_TIER_TEMPLATE,
+    );
     markAsDismissed(closure_1_9.UNKNOWN);
   };
   obj7[1] = callback2(Button.Button, obj8);
-  const items5 = [callback2(View, obj7), ];
+  const items5 = [callback2(View, obj7)];
   const obj9 = { style: tmp.button, children: null };
   const obj10 = { text: null, onPress: null, variant: "secondary" };
   const intl5 = getSystemLocale.intl;
@@ -100,4 +133,4 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   obj[2] = items2;
   obj[1] = callback3(View, obj);
   return callback2(Background.BottomSheet, obj);
-};
+}

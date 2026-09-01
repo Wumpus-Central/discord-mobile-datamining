@@ -4,7 +4,9 @@ import closure_4 from "../../../../stores/ChannelStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/SearchableSelectActionComponent.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/native/actions/SearchableSelectActionComponent.tsx",
+);
 
 export default function SearchableSelectActionComponent(defaultValues) {
   const _require = defaultValues;
@@ -16,7 +18,10 @@ export default function SearchableSelectActionComponent(defaultValues) {
   if (componentStateContext != null) {
     modal = componentStateContext.modal;
   }
-  guild_id(customId[5])(null != modal, "SearchableSelectActionComponent must be rendered inside a modal ComponentStateContext");
+  guild_id(customId[5])(
+    null != modal,
+    "SearchableSelectActionComponent must be rendered inside a modal ComponentStateContext",
+  );
   let channelId;
   let tmp4Result = tmp4(tmp2[5]);
   if (componentStateContext != null) {
@@ -33,7 +38,10 @@ export default function SearchableSelectActionComponent(defaultValues) {
   }
   const items = [defaultValues.defaultValues, guild_id];
   let memo = obj.useMemo(() => {
-    let snowflakeSelectDefaultValues = defaultValues(customId[6]).getSnowflakeSelectDefaultValues(defaultValues.defaultValues, guild_id);
+    let snowflakeSelectDefaultValues = defaultValues(customId[6]).getSnowflakeSelectDefaultValues(
+      defaultValues.defaultValues,
+      guild_id,
+    );
     if (snowflakeSelectDefaultValues == null) {
       snowflakeSelectDefaultValues = [];
     }
@@ -83,7 +91,14 @@ export default function SearchableSelectActionComponent(defaultValues) {
       if (type4 === tmp(tmp2[7]).ComponentType.LABEL) {
         tmp22 = first;
       }
-      obj = { channelId: null, guildId: null, containerId: null, onSubmit: null, labelComponent: null, allowEmpty: null };
+      obj = {
+        channelId: null,
+        guildId: null,
+        containerId: null,
+        onSubmit: null,
+        labelComponent: null,
+        allowEmpty: null,
+      };
       obj[0] = componentStateContext.channelId;
       obj[1] = guild_id;
       obj[2] = customId;
@@ -125,4 +140,4 @@ export default function SearchableSelectActionComponent(defaultValues) {
     }
   }
   memo = state.selectedOptions;
-};
+}

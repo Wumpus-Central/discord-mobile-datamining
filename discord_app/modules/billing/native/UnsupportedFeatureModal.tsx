@@ -27,7 +27,7 @@ export default function UnsupportedFeatureModal(onDismiss) {
       obj[2] = intl.string(onDismiss(1236).t.I22zuX);
       obj[1] = callback(onDismiss(4474).Text, obj);
       return callback(closure_3, obj);
-    }
+    },
   };
   obj[0] = obj;
   obj[1] = obj;
@@ -47,6 +47,6 @@ export default function UnsupportedFeatureModal(onDismiss) {
       obj[2] = intl.string(onDismiss(1236).t.I22zuX);
       obj[1] = callback(onDismiss(4474).Text, obj);
       return callback(closure_3, obj);
-    }
+    },
   });
-};
+}

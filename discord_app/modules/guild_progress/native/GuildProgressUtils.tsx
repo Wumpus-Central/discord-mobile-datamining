@@ -24,7 +24,10 @@ function useIOSCompletionStates(guild) {
   const guildPopulated = require("../GuildProgressHooks.tsx").useGuildPopulated(guild);
   const obj3 = usePermissions;
   const items1 = [closure_3];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_3.getDefaultChannel(guild.id));
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => closure_1_3.getDefaultChannel(guild.id),
+  );
   const obj4 = initialize;
   if (null != stateFromStores1) {
     const items2 = [stateFromStores1];
@@ -65,7 +68,10 @@ function useIOSCompletionStates(guild) {
   const obj5 = usePermissions;
   const tmp8 = closure_6;
   const items6 = [tmp8];
-  const stateFromStores4 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items6, () => closure_1_6.getProgress(guild.id));
+  const stateFromStores4 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items6,
+    () => closure_1_6.getProgress(guild.id),
+  );
   if (stateFromStores) {
     const ServerSetupBoostCtaExperiment = tmp(12152).ServerSetupBoostCtaExperiment;
     const enabled = ServerSetupBoostCtaExperiment.getConfig({ location: "GuildProgress" }).enabled;
@@ -81,7 +87,17 @@ function useIOSCompletionStates(guild) {
     if (!hasItem) {
       hasItem = length === length2;
     }
-    obj = { guildPopulated: null, guildPersonalized: null, guildMessaged: null, guildBoosted: null, showBoostStep: null, completed: null, dismissed: null, numFinished: null, totalSteps: null };
+    obj = {
+      guildPopulated: null,
+      guildPersonalized: null,
+      guildMessaged: null,
+      guildBoosted: null,
+      showBoostStep: null,
+      completed: null,
+      dismissed: null,
+      numFinished: null,
+      totalSteps: null,
+    };
     obj[0] = guildPopulated;
     obj[1] = guildPersonalized;
     obj[2] = stateFromStores2;
@@ -100,7 +116,18 @@ function useIOSCompletionStates(guild) {
     obj[8] = items7.length;
     return obj;
   } else {
-    return { guildPopulated: false, guildPersonalized: false, guildMessaged: false, guildChannelCreated: false, guildBoosted: false, showBoostStep: false, completed: true, dismissed: true, numFinished: 0, totalSteps: 0 };
+    return {
+      guildPopulated: false,
+      guildPersonalized: false,
+      guildMessaged: false,
+      guildChannelCreated: false,
+      guildBoosted: false,
+      showBoostStep: false,
+      completed: true,
+      dismissed: true,
+      numFinished: 0,
+      totalSteps: 0,
+    };
   }
   const tmpResult1 = initialize;
 }
@@ -133,7 +160,7 @@ export const useGuildProgressStep = function useGuildProgressStep(guild) {
     const intl = getSystemLocale.intl;
     stringResult = intl.string(getSystemLocale.t.q9n0Ta);
   }
-  const items = [stringResult, , ];
+  const items = [stringResult, ,];
   let stringResult1 = null;
   if (!guildPersonalized) {
     const intl2 = getSystemLocale.intl;
@@ -160,7 +187,7 @@ export const useGuildProgressStep = function useGuildProgressStep(guild) {
     const intl5 = getSystemLocale.intl;
     found = intl5.string(getSystemLocale.t["+Gyklt"]);
   }
-  let obj = { percentComplete: Math.max(3, 100 * length / totalSteps), subtitle: null, completed: null };
+  let obj = { percentComplete: Math.max(3, (100 * length) / totalSteps), subtitle: null, completed: null };
   if (length < totalSteps) {
     const intl7 = getSystemLocale.intl;
     obj = { currStep: null, total: null, step: null };
@@ -179,7 +206,9 @@ export const useGuildProgressStep = function useGuildProgressStep(guild) {
 export const useIsEligibleForGuildProgress = function useIsEligibleForGuildProgress(guild) {
   const _require = guild;
   const items = [closure_5];
-  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.can(closure_1_9.ADMINISTRATOR, closure_0));
+  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_5.can(closure_1_9.ADMINISTRATOR, closure_0),
+  );
   const obj = initialize;
   const obj2 = DISCORD_EPOCHDefault;
   if (stateFromStores) {

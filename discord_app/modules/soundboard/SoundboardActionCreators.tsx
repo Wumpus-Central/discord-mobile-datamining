@@ -9,7 +9,7 @@ import MAX_FAVORITES from "../user_settings/UserSettingsConstants.tsx";
 const require = arg1;
 function _fetchDefaultSoundsFromApi2() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     let callback2 = tmp3;
     c3 = 1;
     const HTTP = closure_1_0(closure_1_2[5]).HTTP;
@@ -106,7 +106,7 @@ function _maybeFetchSoundboardSounds() {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_3 = tmp3;
       let table = tmp2;
       const _performance2 = performance;
@@ -155,7 +155,7 @@ function _uploadSound() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       c1 = tmp2;
       ({ guildId: c0, name: c1, sound: c2, volume: c3, emojiId: c4, emojiName: c5 } = callback);
       yield "PX_16";
@@ -192,7 +192,7 @@ function _updateSound() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       c1 = tmp2;
       ({ guildId: c0, soundId: c1, name: c2, volume: c3, emojiId: c4, emojiName: c5 } = callback);
       yield "PX_16";
@@ -229,7 +229,7 @@ function _deleteSound() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -302,7 +302,7 @@ function _fetchSoundGuildData() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -438,40 +438,50 @@ export const deleteSound = function deleteSound() {
 };
 export const addFavoriteSound = function addFavoriteSound(soundId) {
   const _require = soundId;
-  const FrecencyUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
-  FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", (soundIds) => {
-    let obj = closure_1_1(closure_1_2[13]);
-    if (obj.size(soundIds.soundIds) >= closure_1_8) {
-      obj = { title: null, body: null };
-      const intl = soundId(tmp2[15]).intl;
-      obj[0] = intl.string(soundId(tmp2[15]).t["+XYXtZ"]);
-      const intl2 = soundId(tmp2[15]).intl;
-      obj = { count: null };
-      obj[0] = tmp3;
-      obj[1] = intl2.formatToPlainString(soundId(tmp2[15]).t.JaIyFi, obj);
-      closure_1_1(tmp2[14]).show(obj);
-      let flag = false;
-      const tmpResult = closure_1_1(tmp2[14]);
-    } else {
-      soundIds = soundIds.soundIds;
-      const hasItem = soundIds.includes(soundId);
-      flag = !hasItem;
-      if (!hasItem) {
+  const FrecencyUserSettingsActionCreators =
+    require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
+  FrecencyUserSettingsActionCreators.updateAsync(
+    "favoriteSoundboardSounds",
+    (soundIds) => {
+      let obj = closure_1_1(closure_1_2[13]);
+      if (obj.size(soundIds.soundIds) >= closure_1_8) {
+        obj = { title: null, body: null };
+        const intl = soundId(tmp2[15]).intl;
+        obj[0] = intl.string(soundId(tmp2[15]).t["+XYXtZ"]);
+        const intl2 = soundId(tmp2[15]).intl;
+        obj = { count: null };
+        obj[0] = tmp3;
+        obj[1] = intl2.formatToPlainString(soundId(tmp2[15]).t.JaIyFi, obj);
+        closure_1_1(tmp2[14]).show(obj);
+        let flag = false;
+        const tmpResult = closure_1_1(tmp2[14]);
+      } else {
         soundIds = soundIds.soundIds;
-        soundIds.push(tmp4);
+        const hasItem = soundIds.includes(soundId);
+        flag = !hasItem;
+        if (!hasItem) {
+          soundIds = soundIds.soundIds;
+          soundIds.push(tmp4);
+        }
+        tmp4 = soundId;
       }
-      tmp4 = soundId;
-    }
-    return flag;
-  }, constants.INFREQUENT_USER_ACTION);
+      return flag;
+    },
+    constants.INFREQUENT_USER_ACTION,
+  );
 };
 export const removeFavoriteSound = function removeFavoriteSound(soundId) {
   const _require = soundId;
-  const FrecencyUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
-  FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", (soundIds) => {
-    soundIds = soundIds.soundIds;
-    soundIds.soundIds = soundIds.filter((arg0) => arg0 !== closure_0);
-  }, constants.INFREQUENT_USER_ACTION);
+  const FrecencyUserSettingsActionCreators =
+    require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
+  FrecencyUserSettingsActionCreators.updateAsync(
+    "favoriteSoundboardSounds",
+    (soundIds) => {
+      soundIds = soundIds.soundIds;
+      soundIds.soundIds = soundIds.filter((arg0) => arg0 !== closure_0);
+    },
+    constants.INFREQUENT_USER_ACTION,
+  );
 };
 export const fetchSoundGuildData = function fetchSoundGuildData() {
   const self = this;

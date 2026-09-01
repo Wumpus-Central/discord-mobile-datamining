@@ -5,7 +5,9 @@ import closure_5 from "../../../../../stores/ChannelStore.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/channel/AppLauncherChannelOption.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/options/channel/AppLauncherChannelOption.tsx",
+);
 
 export default function AppLauncherChannelOption(option) {
   option = option.option;
@@ -15,16 +17,19 @@ export default function AppLauncherChannelOption(option) {
   closure_7 = undefined;
   let stateFromStores;
   ({ style, autoFocus, hasError } = option);
-  let tmp = callback(React.useState(() => {
-    let channelId = null;
-    if (null != closure_1) {
-      channelId = null;
-      if ("channelMention" === tmp.type) {
-        channelId = tmp.channelId;
+  let tmp = callback(
+    React.useState(() => {
+      let channelId = null;
+      if (null != closure_1) {
+        channelId = null;
+        if ("channelMention" === tmp.type) {
+          channelId = tmp.channelId;
+        }
       }
-    }
-    return channelId;
-  }), 2);
+      return channelId;
+    }),
+    2,
+  );
   first = tmp[0];
   closure_7 = tmp[1];
   let obj = option(onChannelPress[4]);
@@ -42,7 +47,16 @@ export default function AppLauncherChannelOption(option) {
       onChannelPress({ channel: null });
     }
   }, items2);
-  obj = { style, option, hasError, selected: null != stateFromStores, selectedItemName: null, leading: null, onPress: null, autoFocus: null };
+  obj = {
+    style,
+    option,
+    hasError,
+    selected: null != stateFromStores,
+    selectedItemName: null,
+    leading: null,
+    onPress: null,
+    autoFocus: null,
+  };
   let tmp10;
   const tmp3 = option;
   const tmp4 = onChannelPress;
@@ -69,10 +83,14 @@ export default function AppLauncherChannelOption(option) {
         closure_7(id);
         callback({ channel });
       },
-      onActionSheetDismiss: closure_3
+      onActionSheetDismiss: closure_3,
     };
-    obj.openLazy(option(onChannelPress[10])(onChannelPress[9], onChannelPress.paths), option(onChannelPress[7]).APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY, obj);
+    obj.openLazy(
+      option(onChannelPress[10])(onChannelPress[9], onChannelPress.paths),
+      option(onChannelPress[7]).APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY,
+      obj,
+    );
   };
   obj[7] = autoFocus;
   return first(importDefault(onChannelPress[6]), obj);
-};
+}

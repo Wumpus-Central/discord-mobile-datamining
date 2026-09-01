@@ -11,23 +11,25 @@ const result = set.fileFinishedImporting("modules/contact_sync/native/components
 export default function useBackHandlerSkipPhoneScreens(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
-  require("../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx").useNavigatorBackPressHandler(() => {
-    if (null != closure_1) {
-      tmp();
-    } else {
-      let arr = state;
-      const items = [, , ];
-      ({ ADD_PHONE: arr2[0], VERIFY_PHONE: arr2[1], VERIFY_PASSWORD: arr2[2] } = closure_1_3);
-      const routes = state.getState().routes;
-      if (routes.length <= 2) {
-        arr = arr.pop();
-      } else if (items.includes(routes[routes.length - 2].name)) {
-        arr = arr.pop(routes.length - 1);
+  require("../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx").useNavigatorBackPressHandler(
+    () => {
+      if (null != closure_1) {
+        tmp();
+      } else {
+        let arr = state;
+        const items = [, ,];
+        ({ ADD_PHONE: arr2[0], VERIFY_PHONE: arr2[1], VERIFY_PASSWORD: arr2[2] } = closure_1_3);
+        const routes = state.getState().routes;
+        if (routes.length <= 2) {
+          arr = arr.pop();
+        } else if (items.includes(routes[routes.length - 2].name)) {
+          arr = arr.pop(routes.length - 1);
+        }
       }
-    }
-    return true;
-  });
-};
+      return true;
+    },
+  );
+}
 export const useBackHandlerMinimizeApp = function useBackHandlerMinimizeApp() {
   useNavigatorBackPressHandler.useNavigatorBackPressHandler(() => {
     MinimizeApp = MinimizeApp.MinimizeApp;

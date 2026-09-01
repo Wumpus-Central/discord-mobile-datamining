@@ -44,23 +44,43 @@ function upsertAccount(accountId, accessToken) {
       obj = { additional_types: "" + closure_1_17.TRACK + "," + closure_1_17.EPISODE };
       obj[1] = obj;
       const value = SpotifyAPI.get(accountId, accessToken, obj);
-      value.then((body) => {
-        closure_0 = body;
-        body = body.body;
-        if (null != body) {
-          closure_1_53(closure_0, accessToken, body).then(() => closure_0);
-          const promise = closure_1_53(closure_0, accessToken, body);
-        } else {
+      value
+        .then((body) => {
+          closure_0 = body;
+          body = body.body;
+          if (null != body) {
+            closure_1_53(closure_0, accessToken, body).then(() => closure_0);
+            const promise = closure_1_53(closure_0, accessToken, body);
+          } else {
+            obj = accessToken(closure_1_2[13]);
+            obj = {
+              type: "SPOTIFY_PLAYER_STATE",
+              accountId: null,
+              track: null,
+              volumePercent: 0,
+              isPlaying: false,
+              repeat: false,
+              position: 0,
+              context: null,
+            };
+            obj[1] = closure_0;
+            obj.dispatch(obj);
+          }
+        })
+        .catch(() => {
           obj = accessToken(closure_1_2[13]);
-          obj = { type: "SPOTIFY_PLAYER_STATE", accountId: null, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-          obj[1] = closure_0;
+          obj = {
+            type: "SPOTIFY_PLAYER_STATE",
+            accountId,
+            track: null,
+            volumePercent: 0,
+            isPlaying: false,
+            repeat: false,
+            position: 0,
+            context: null,
+          };
           obj.dispatch(obj);
-        }
-      }).catch(() => {
-        obj = accessToken(closure_1_2[13]);
-        obj = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-        obj.dispatch(obj);
-      });
+        });
     }, closure_29);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
@@ -189,7 +209,18 @@ function activitySync(userId, activity, arg2) {
                   str = "started";
                 }
                 const _HermesInternal = HermesInternal;
-                logger.info("Listen along " + str + ": " + socket.accountId + " to " + userId + " playing " + sync_id + " on " + device.name);
+                logger.info(
+                  "Listen along " +
+                    str +
+                    ": " +
+                    socket.accountId +
+                    " to " +
+                    userId +
+                    " playing " +
+                    sync_id +
+                    " on " +
+                    device.name,
+                );
               }
             }
             const _Date = Date;
@@ -439,7 +470,7 @@ function updatePlayerState(arg0, arg1, device) {
       obj1.is_active = true;
     }
     if (null != context) {
-      const items = [, ];
+      const items = [,];
       ({ PLAYLIST: arr3[0], ALBUM: arr3[1] } = constants2);
       if (items.includes(context.type)) {
         let context2 = spotifyStore.getPlayerState(arg0);
@@ -454,14 +485,16 @@ function updatePlayerState(arg0, arg1, device) {
           const obj2 = { url: null };
           obj2[0] = context.href;
           const value = SpotifyAPI.get(arg0, arg1, obj2);
-          resolved = value.then((body) => body.body).catch((status) => {
-            if (status) {
-              if (404 === status.status) {
-                return null;
+          resolved = value
+            .then((body) => body.body)
+            .catch((status) => {
+              if (status) {
+                if (404 === status.status) {
+                  return null;
+                }
               }
-            }
-            throw status;
-          });
+              throw status;
+            });
           const nextPromise = value.then((body) => body.body);
         }
       }
@@ -481,7 +514,17 @@ function updatePlayerState(arg0, arg1, device) {
         tmp = null;
       }
       let obj = obj1(closure_1_2[13]);
-      obj = { type: "SPOTIFY_PLAYER_STATE", accountId: closure_0, track: obj3, volumePercent: null, isPlaying: null, repeat: null, position: null, context: null, device: null };
+      obj = {
+        type: "SPOTIFY_PLAYER_STATE",
+        accountId: closure_0,
+        track: obj3,
+        volumePercent: null,
+        isPlaying: null,
+        repeat: null,
+        position: null,
+        context: null,
+        device: null,
+      };
       let num = 0;
       if (null != obj1) {
         num = tmp3.volume_percent;
@@ -539,7 +582,13 @@ function updatePlayerState(arg0, arg1, device) {
     }
   }
 }
-({ getSpotifyResourceType: map1, isSpotifyParty: closure_14, SPOTIFY_PARTY_PREFIX: closure_15, SpotifyEndpoints: closure_16, SpotifyResourceTypes: closure_17 } = SPOTIFY_APP_PROTOCOL);
+({
+  getSpotifyResourceType: map1,
+  isSpotifyParty: closure_14,
+  SPOTIFY_PARTY_PREFIX: closure_15,
+  SpotifyEndpoints: closure_16,
+  SpotifyResourceTypes: closure_17,
+} = SPOTIFY_APP_PROTOCOL);
 const PlatformTypes = ME.PlatformTypes;
 ({ ActivityFlags: closure_19, AnalyticEvents: closure_20 } = ME);
 let closure_21 = importDefaultResult.get(PlatformTypes.SPOTIFY);
@@ -584,23 +633,43 @@ class SpotifySocket {
       obj = { additional_types: "" + closure_1_17.TRACK + "," + closure_1_17.EPISODE };
       obj[1] = obj;
       const value = SpotifyAPI.get(accountId, accessToken, obj);
-      value.then((body) => {
-        closure_0 = body;
-        body = body.body;
-        if (null != body) {
-          closure_1_53(closure_0, accessToken, body).then(() => closure_0);
-          const promise = closure_1_53(closure_0, accessToken, body);
-        } else {
+      value
+        .then((body) => {
+          closure_0 = body;
+          body = body.body;
+          if (null != body) {
+            closure_1_53(closure_0, accessToken, body).then(() => closure_0);
+            const promise = closure_1_53(closure_0, accessToken, body);
+          } else {
+            obj = accessToken(closure_1_2[13]);
+            obj = {
+              type: "SPOTIFY_PLAYER_STATE",
+              accountId: null,
+              track: null,
+              volumePercent: 0,
+              isPlaying: false,
+              repeat: false,
+              position: 0,
+              context: null,
+            };
+            obj[1] = closure_0;
+            obj.dispatch(obj);
+          }
+        })
+        .catch(() => {
           obj = accessToken(closure_1_2[13]);
-          obj = { type: "SPOTIFY_PLAYER_STATE", accountId: null, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-          obj[1] = closure_0;
+          obj = {
+            type: "SPOTIFY_PLAYER_STATE",
+            accountId,
+            track: null,
+            volumePercent: 0,
+            isPlaying: false,
+            repeat: false,
+            position: 0,
+            context: null,
+          };
           obj.dispatch(obj);
-        }
-      }).catch(() => {
-        obj = accessToken(closure_1_2[13]);
-        obj = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-        obj.dispatch(obj);
-      });
+        });
     }, closure_29);
     obj.accountId = global;
     obj.accessToken = arg1;
@@ -621,7 +690,7 @@ Object.defineProperty(prototype, "connected", {
     }
     return hasItem;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["connect"] = function connect() {
   const self = this;
@@ -647,90 +716,162 @@ prototype["connect"] = function connect() {
         const promise = closure_1_53(closure_0, accessToken, body);
       } else {
         obj = accessToken(closure_1_2[13]);
-        obj = { type: "SPOTIFY_PLAYER_STATE", accountId: null, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
+        obj = {
+          type: "SPOTIFY_PLAYER_STATE",
+          accountId: null,
+          track: null,
+          volumePercent: 0,
+          isPlaying: false,
+          repeat: false,
+          position: 0,
+          context: null,
+        };
         obj[1] = closure_0;
         obj.dispatch(obj);
       }
     });
-    const catchPromise = value.then((body) => {
-      closure_0 = body;
-      body = body.body;
-      if (null != body) {
-        closure_1_53(closure_0, accessToken, body).then(() => closure_0);
-        const promise = closure_1_53(closure_0, accessToken, body);
-      } else {
+    const catchPromise = value
+      .then((body) => {
+        closure_0 = body;
+        body = body.body;
+        if (null != body) {
+          closure_1_53(closure_0, accessToken, body).then(() => closure_0);
+          const promise = closure_1_53(closure_0, accessToken, body);
+        } else {
+          obj = accessToken(closure_1_2[13]);
+          obj = {
+            type: "SPOTIFY_PLAYER_STATE",
+            accountId: null,
+            track: null,
+            volumePercent: 0,
+            isPlaying: false,
+            repeat: false,
+            position: 0,
+            context: null,
+          };
+          obj[1] = closure_0;
+          obj.dispatch(obj);
+        }
+      })
+      .catch(() => {
         obj = accessToken(closure_1_2[13]);
-        obj = { type: "SPOTIFY_PLAYER_STATE", accountId: null, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-        obj[1] = closure_0;
+        obj = {
+          type: "SPOTIFY_PLAYER_STATE",
+          accountId,
+          track: null,
+          volumePercent: 0,
+          isPlaying: false,
+          repeat: false,
+          position: 0,
+          context: null,
+        };
         obj.dispatch(obj);
-      }
-    }).catch(() => {
-      obj = accessToken(closure_1_2[13]);
-      obj = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-      obj.dispatch(obj);
-    });
-    value.then((body) => {
-      closure_0 = body;
-      body = body.body;
-      if (null != body) {
-        closure_1_53(closure_0, accessToken, body).then(() => closure_0);
-        const promise = closure_1_53(closure_0, accessToken, body);
-      } else {
+      });
+    value
+      .then((body) => {
+        closure_0 = body;
+        body = body.body;
+        if (null != body) {
+          closure_1_53(closure_0, accessToken, body).then(() => closure_0);
+          const promise = closure_1_53(closure_0, accessToken, body);
+        } else {
+          obj = accessToken(closure_1_2[13]);
+          obj = {
+            type: "SPOTIFY_PLAYER_STATE",
+            accountId: null,
+            track: null,
+            volumePercent: 0,
+            isPlaying: false,
+            repeat: false,
+            position: 0,
+            context: null,
+          };
+          obj[1] = closure_0;
+          obj.dispatch(obj);
+        }
+      })
+      .catch(() => {
         obj = accessToken(closure_1_2[13]);
-        obj = { type: "SPOTIFY_PLAYER_STATE", accountId: null, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-        obj[1] = closure_0;
+        obj = {
+          type: "SPOTIFY_PLAYER_STATE",
+          accountId,
+          track: null,
+          volumePercent: 0,
+          isPlaying: false,
+          repeat: false,
+          position: 0,
+          context: null,
+        };
         obj.dispatch(obj);
-      }
-    }).catch(() => {
-      obj = accessToken(closure_1_2[13]);
-      obj = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-      obj.dispatch(obj);
-    }).then(() => {
-      accountId._requestedConnect = false;
-      const webSocket = new WebSocket("wss://dealer.spotify.com/?access_token=" + accountId.accessToken);
-      accountId.socket = webSocket;
-      ({ handleOpen, socket } = accountId);
-      socket.onopen = handleOpen.bind(accountId);
-      ({ handleMessage, socket: socket2 } = accountId);
-      socket2.onmessage = handleMessage.bind(accountId);
-      ({ handleClose, socket: socket3, socket: socket4 } = accountId);
-      const bindResult = handleClose.bind(accountId);
-      socket4.onerror = bindResult;
-      socket3.onclose = bindResult;
-    }).catch((arg0) => {
-      closure_1_34.error(arg0);
-      accountId._requestedConnect = false;
-      accountId.handleClose();
-    });
-    const nextPromise1 = value.then((body) => {
-      closure_0 = body;
-      body = body.body;
-      if (null != body) {
-        closure_1_53(closure_0, accessToken, body).then(() => closure_0);
-        const promise = closure_1_53(closure_0, accessToken, body);
-      } else {
+      })
+      .then(() => {
+        accountId._requestedConnect = false;
+        const webSocket = new WebSocket("wss://dealer.spotify.com/?access_token=" + accountId.accessToken);
+        accountId.socket = webSocket;
+        ({ handleOpen, socket } = accountId);
+        socket.onopen = handleOpen.bind(accountId);
+        ({ handleMessage, socket: socket2 } = accountId);
+        socket2.onmessage = handleMessage.bind(accountId);
+        ({ handleClose, socket: socket3, socket: socket4 } = accountId);
+        const bindResult = handleClose.bind(accountId);
+        socket4.onerror = bindResult;
+        socket3.onclose = bindResult;
+      })
+      .catch((arg0) => {
+        closure_1_34.error(arg0);
+        accountId._requestedConnect = false;
+        accountId.handleClose();
+      });
+    const nextPromise1 = value
+      .then((body) => {
+        closure_0 = body;
+        body = body.body;
+        if (null != body) {
+          closure_1_53(closure_0, accessToken, body).then(() => closure_0);
+          const promise = closure_1_53(closure_0, accessToken, body);
+        } else {
+          obj = accessToken(closure_1_2[13]);
+          obj = {
+            type: "SPOTIFY_PLAYER_STATE",
+            accountId: null,
+            track: null,
+            volumePercent: 0,
+            isPlaying: false,
+            repeat: false,
+            position: 0,
+            context: null,
+          };
+          obj[1] = closure_0;
+          obj.dispatch(obj);
+        }
+      })
+      .catch(() => {
         obj = accessToken(closure_1_2[13]);
-        obj = { type: "SPOTIFY_PLAYER_STATE", accountId: null, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-        obj[1] = closure_0;
+        obj = {
+          type: "SPOTIFY_PLAYER_STATE",
+          accountId,
+          track: null,
+          volumePercent: 0,
+          isPlaying: false,
+          repeat: false,
+          position: 0,
+          context: null,
+        };
         obj.dispatch(obj);
-      }
-    }).catch(() => {
-      obj = accessToken(closure_1_2[13]);
-      obj = { type: "SPOTIFY_PLAYER_STATE", accountId, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null };
-      obj.dispatch(obj);
-    }).then(() => {
-      accountId._requestedConnect = false;
-      const webSocket = new WebSocket("wss://dealer.spotify.com/?access_token=" + accountId.accessToken);
-      accountId.socket = webSocket;
-      ({ handleOpen, socket } = accountId);
-      socket.onopen = handleOpen.bind(accountId);
-      ({ handleMessage, socket: socket2 } = accountId);
-      socket2.onmessage = handleMessage.bind(accountId);
-      ({ handleClose, socket: socket3, socket: socket4 } = accountId);
-      const bindResult = handleClose.bind(accountId);
-      socket4.onerror = bindResult;
-      socket3.onclose = bindResult;
-    });
+      })
+      .then(() => {
+        accountId._requestedConnect = false;
+        const webSocket = new WebSocket("wss://dealer.spotify.com/?access_token=" + accountId.accessToken);
+        accountId.socket = webSocket;
+        ({ handleOpen, socket } = accountId);
+        socket.onopen = handleOpen.bind(accountId);
+        ({ handleMessage, socket: socket2 } = accountId);
+        socket2.onmessage = handleMessage.bind(accountId);
+        ({ handleClose, socket: socket3, socket: socket4 } = accountId);
+        const bindResult = handleClose.bind(accountId);
+        socket4.onerror = bindResult;
+        socket3.onclose = bindResult;
+      });
   }
 };
 prototype["disconnect"] = function disconnect() {
@@ -742,8 +883,7 @@ prototype["disconnect"] = function disconnect() {
     if (socket != null) {
       socket.close();
     }
-  } catch (err) {
-  }
+  } catch (err) {}
 };
 prototype["ping"] = function ping() {
   if (this.connected) {
@@ -779,7 +919,11 @@ prototype["handleMessage"] = function handleMessage(data) {
         if (uri.startsWith(c22)) {
           const _decodeURIComponent = decodeURIComponent;
           self.connectionId = decodeURIComponent(uri.split(tmp15)[1]);
-          const result = apiRequest.subscribePlayerStateNotifications(self.accountId, self.accessToken, self.connectionId);
+          const result = apiRequest.subscribePlayerStateNotifications(
+            self.accountId,
+            self.accessToken,
+            self.connectionId,
+          );
           const obj = apiRequest;
         }
         tmp15 = c22;
@@ -812,13 +956,18 @@ prototype["handleClose"] = function handleClose() {
       const backoff = this.backoff;
       const _Math = Math;
       const _HermesInternal = HermesInternal;
-      logger.info("WS Disconnected. Next retry in " + Math.round(backoff.fail(() => {
-        if (!self._requestedDisconnect) {
-          self.connect();
-        }
-      })) + "ms");
-    } catch (err) {
-    }
+      logger.info(
+        "WS Disconnected. Next retry in " +
+          Math.round(
+            backoff.fail(() => {
+              if (!self._requestedDisconnect) {
+                self.connect();
+              }
+            }),
+          ) +
+          "ms",
+      );
+    } catch (err) {}
   }
 };
 prototype["handleEvent"] = function handleEvent(arg0) {
@@ -834,8 +983,7 @@ prototype["handleEvent"] = function handleEvent(arg0) {
   }
 };
 const Store = initializeDefault.Store;
-class SpotifyStore extends Store {
-}
+class SpotifyStore extends Store {}
 const prototype2 = SpotifyStore.prototype;
 prototype2["initialize"] = function initialize() {
   this.waitFor(closure_7, closure_8, closure_9, closure_10, closure_6, closure_11, closure_12);
@@ -1289,7 +1437,16 @@ const spotifyStore = new SpotifyStore(dispatcherDefault, {
       if (null != tmp10) {
         if (!tmp22) {
           timeout3.start(tmp10.duration - position + closure_26, () => {
-            account(closure_1_2[13]).dispatch({ type: "SPOTIFY_PLAYER_STATE", accountId: account.id, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null });
+            account(closure_1_2[13]).dispatch({
+              type: "SPOTIFY_PLAYER_STATE",
+              accountId: account.id,
+              track: null,
+              volumePercent: 0,
+              isPlaying: false,
+              repeat: false,
+              position: 0,
+              context: null,
+            });
           });
         }
         if (null == closure_4) {
@@ -1300,11 +1457,22 @@ const spotifyStore = new SpotifyStore(dispatcherDefault, {
           obj4 = timeout4;
         } else {
           const _HermesInternal = HermesInternal;
-          logger.info("Listen along active but playback stopped or track changed. Stopping listen along in " + closure_26 + "ms");
+          logger.info(
+            "Listen along active but playback stopped or track changed. Stopping listen along in " + closure_26 + "ms",
+          );
           timeout4.start(closure_26, () => {
             closure_1_34.info("Stopping listening along");
             account(closure_1_2[19])();
-            account(closure_1_2[13]).dispatch({ type: "SPOTIFY_PLAYER_STATE", accountId: account.id, track: null, volumePercent: 0, isPlaying: false, repeat: false, position: 0, context: null });
+            account(closure_1_2[13]).dispatch({
+              type: "SPOTIFY_PLAYER_STATE",
+              accountId: account.id,
+              track: null,
+              volumePercent: 0,
+              isPlaying: false,
+              repeat: false,
+              position: 0,
+              context: null,
+            });
           });
         }
         let tmp55 = flag;
@@ -1324,7 +1492,16 @@ const spotifyStore = new SpotifyStore(dispatcherDefault, {
               obj1[2] = accountId;
               tmp25Result.dispatch(obj1);
               tmp25Result = tmp25(698);
-              obj2 = { party_platform: null, track_id: null, has_images: true, details: null, state: null, album_id: null, author_ids: null, author_names: null };
+              obj2 = {
+                party_platform: null,
+                track_id: null,
+                has_images: true,
+                details: null,
+                state: null,
+                album_id: null,
+                author_ids: null,
+                author_names: null,
+              };
               obj2[0] = PlatformTypes.SPOTIFY;
               obj2[1] = tmp10.id;
               obj2[3] = tmp10.album.name;
@@ -1508,7 +1685,7 @@ const spotifyStore = new SpotifyStore(dispatcherDefault, {
       c44 = null;
       obj4 = c44;
     }
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/spotify/SpotifyStore.tsx");
 

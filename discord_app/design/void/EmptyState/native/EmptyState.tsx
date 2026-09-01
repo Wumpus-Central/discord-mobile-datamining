@@ -11,7 +11,14 @@ noopAll;
 ({ View: obj1, Image: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, emptyImage: null, emptyTitle: null, emptyBody: null };
-createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 36, paddingBottom: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+createCacheKey = {
+  flex: 1,
+  justifyContent: "center",
+  alignItems: "center",
+  paddingHorizontal: 36,
+  paddingBottom: 80,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, maxWidth: 300, maxHeight: 200 };
 createCacheKey[2] = { marginTop: 20, textTransform: "uppercase" };
@@ -23,7 +30,13 @@ export default function EmptyState(Illustration) {
   const tmp = callback2();
   AccessibilityAnnouncer;
   if (null != Illustration.Illustration) {
-    let obj = { accessible: false, importantForAccessibility: "no", accessibilityRole: "none", resizeMode: "contain", style: null };
+    let obj = {
+      accessible: false,
+      importantForAccessibility: "no",
+      accessibilityRole: "none",
+      resizeMode: "contain",
+      style: null,
+    };
     const items = [tmp.emptyImage, Illustration.imageStyle];
     obj[4] = items;
     let tmp8Result = callback(Illustration.Illustration, obj);
@@ -44,11 +57,17 @@ export default function EmptyState(Illustration) {
   ({ body, title } = Illustration);
   obj1 = { style: items2, accessible: true, children: null };
   items2 = [tmp.container, Illustration.style];
-  const items3 = [tmp8Result, , , ];
+  const items3 = [tmp8Result, , ,];
   let tmp14 = null;
   ({ children, bodyStyle } = Illustration);
   if (null != title) {
-    const obj2 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: null, children: null };
+    const obj2 = {
+      variant: "heading-lg/semibold",
+      color: "mobile-text-heading-primary",
+      maxFontSizeMultiplier: 2,
+      style: null,
+      children: null,
+    };
     const items4 = [tmp.emptyTitle, tmp11];
     obj2[3] = items4;
     obj2[4] = title;
@@ -57,7 +76,13 @@ export default function EmptyState(Illustration) {
   items3[1] = tmp14;
   let tmp16 = null;
   if (null != body) {
-    const obj3 = { variant: "text-md/medium", color: "text-muted", maxFontSizeMultiplier: 2, style: null, children: null };
+    const obj3 = {
+      variant: "text-md/medium",
+      color: "text-muted",
+      maxFontSizeMultiplier: 2,
+      style: null,
+      children: null,
+    };
     const items5 = [tmp.emptyBody, bodyStyle];
     obj3[3] = items5;
     obj3[4] = body;
@@ -67,4 +92,4 @@ export default function EmptyState(Illustration) {
   items3[3] = children;
   obj1[2] = items3;
   return closure_5(closure_2, obj1);
-};
+}

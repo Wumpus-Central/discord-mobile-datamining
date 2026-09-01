@@ -21,12 +21,38 @@ require = arg1;
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let width = Dimensions.get("window").width;
-createCacheKey = { container: null, carousel: null, cardWrapper: null, card: null, templateTitle: null, templateSubtitle: null, templateContentWrapper: null, templateContent: null, templateContentText: null, templateButton: null, sliderContainer: null, slider: null, sliderLabels: null, sliderLabel: null };
+createCacheKey = {
+  container: null,
+  carousel: null,
+  cardWrapper: null,
+  card: null,
+  templateTitle: null,
+  templateSubtitle: null,
+  templateContentWrapper: null,
+  templateContent: null,
+  templateContentText: null,
+  templateButton: null,
+  sliderContainer: null,
+  slider: null,
+  sliderLabels: null,
+  sliderLabel: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { width: 300, alignSelf: "center", paddingHorizontal: 10, flex: 1 };
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm, borderStyle: "solid", borderWidth: 1, flex: 1, flexDirection: "column", marginVertical: 16, padding: 16, paddingTop: 20 };
+createCacheKey[3] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.sm,
+  borderStyle: "solid",
+  borderWidth: 1,
+  flex: 1,
+  flexDirection: "column",
+  marginVertical: 16,
+  padding: 16,
+  paddingTop: 20,
+};
 createCacheKey[4] = { alignItems: "center", textAlign: "center", paddingBottom: 16 };
 createCacheKey[5] = { paddingBottom: 16 };
 createCacheKey[6] = { flex: 1, justifyContent: "flex-start" };
@@ -35,12 +61,35 @@ createCacheKey[8] = { flex: 1, marginLeft: 12 };
 createCacheKey[9] = { justifyContent: "flex-end", flexGrow: 0, paddingTop: 16 };
 createCacheKey[10] = { alignItems: "center" };
 createCacheKey[11] = { marginTop: 8, width: 300, maxWidth: "72%" };
-createCacheKey[12] = { alignItems: "center", flexDirection: "row", justifyContent: "space-between", marginBottom: 16, textAlign: "center", width: 380, maxWidth: "85%" };
+createCacheKey[12] = {
+  alignItems: "center",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  marginBottom: 16,
+  textAlign: "center",
+  width: 380,
+  maxWidth: "85%",
+};
 createCacheKey[13] = { marginHorizontal: 0, width: "25%", textAlign: "center", alignItems: "center" };
 let closure_17 = createCacheKey.createStyles(createCacheKey);
-let closure_18 = { code: "function GuildSettingsRoleTemplateTsx1(value){const{interpolate,sheetWidth,parallaxScrollingOffset,Extrapolation,inactiveOpacity}=this.__closure;const translate=interpolate(value,[-1,0,1],[-sheetWidth+parallaxScrollingOffset,0,sheetWidth-parallaxScrollingOffset]);const zIndex=Math.round(interpolate(value,[-1,0,1],[0,sheetWidth,0],Extrapolation.CLAMP));return{transform:[{translateX:translate}],opacity:interpolate(value,[-1,0,1],[inactiveOpacity,1,inactiveOpacity],Extrapolation.CLAMP),zIndex:zIndex};}" };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm, borderStyle: "solid", borderWidth: 1, flex: 1, flexDirection: "column", marginVertical: 16, padding: 16, paddingTop: 20 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleTemplate.tsx");
+let closure_18 = {
+  code: "function GuildSettingsRoleTemplateTsx1(value){const{interpolate,sheetWidth,parallaxScrollingOffset,Extrapolation,inactiveOpacity}=this.__closure;const translate=interpolate(value,[-1,0,1],[-sheetWidth+parallaxScrollingOffset,0,sheetWidth-parallaxScrollingOffset]);const zIndex=Math.round(interpolate(value,[-1,0,1],[0,sheetWidth,0],Extrapolation.CLAMP));return{transform:[{translateX:translate}],opacity:interpolate(value,[-1,0,1],[inactiveOpacity,1,inactiveOpacity],Extrapolation.CLAMP),zIndex:zIndex};}",
+};
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.sm,
+  borderStyle: "solid",
+  borderWidth: 1,
+  flex: 1,
+  flexDirection: "column",
+  marginVertical: 16,
+  padding: 16,
+  paddingTop: 20,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/roles/native/GuildSettingsRoleTemplate.tsx",
+);
 
 export default function GuildSettingsRoleTemplate(arg0) {
   ({ onSelect: require, location: importDefault, guildId: dependencyMap } = arg0);
@@ -109,7 +158,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
   class V {
     constructor(arg0) {
       obj = onSelect(guildId[13]);
-      items = [, , ];
+      items = [, ,];
       items[0] = -closure_8 + closure_11;
       items[1] = 0;
       items[2] = closure_8 - closure_11;
@@ -123,7 +172,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
       items2[0] = { translateX: interpolateResult };
       rounded = Math.round(obj2.interpolate(arg0, [-1, 0, 1], items1, onSelect(guildId[13]).Extrapolation.CLAMP));
       obj4 = onSelect(guildId[13]);
-      items3 = [, , ];
+      items3 = [, ,];
       items3[0] = c10;
       items3[1] = 1;
       items3[2] = c10;
@@ -132,7 +181,13 @@ export default function GuildSettingsRoleTemplate(arg0) {
       return obj;
     }
   }
-  obj = { interpolate: tmp11(4217).interpolate, sheetWidth: first1, parallaxScrollingOffset: bound, Extrapolation: tmp11(4217).Extrapolation, inactiveOpacity: num };
+  obj = {
+    interpolate: tmp11(4217).interpolate,
+    sheetWidth: first1,
+    parallaxScrollingOffset: bound,
+    Extrapolation: tmp11(4217).Extrapolation,
+    inactiveOpacity: num,
+  };
   V.__closure = obj;
   V.__workletHash = 1786335394860;
   V.__initData = closure_18;
@@ -142,8 +197,20 @@ export default function GuildSettingsRoleTemplate(arg0) {
   obj = { ref, style: tmp.container, children: null };
   obj1 = { style: tmp.sliderContainer, children: null };
   tmp4 = useIsWindowLargeDefault();
-  let items2 = [callback2(ref1, { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: callback2(_modDef8381, obj3) }), ];
-  let obj2 = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: callback2(_modDef8381, obj3) };
+  let items2 = [
+    callback2(ref1, {
+      accessible: false,
+      accessibilityElementsHidden: true,
+      importantForAccessibility: "no-hide-descendants",
+      children: callback2(_modDef8381, obj3),
+    }),
+  ];
+  let obj2 = {
+    accessible: false,
+    accessibilityElementsHidden: true,
+    importantForAccessibility: "no-hide-descendants",
+    children: callback2(_modDef8381, obj3),
+  };
   items2[1] = callback2(ref1, {
     style: tmp.sliderLabels,
     children: values.map((title) => {
@@ -164,16 +231,16 @@ export default function GuildSettingsRoleTemplate(arg0) {
             current.scrollTo(obj);
           }
         },
-        children: null
+        children: null,
       };
       obj = { selected: first === arg1 };
       obj[3] = closure_1_14(closure_1_0(closure_1_2[18]).Text, { variant: "text-sm/medium", children: title() });
       obj[1] = closure_1_14(closure_1_0(closure_1_2[17]).PressableOpacity, obj);
       return closure_1_14(ref1, obj, title());
-    })
+    }),
   });
   obj1[1] = items2;
-  let items3 = [callback3(ref1, obj1), ];
+  let items3 = [callback3(ref1, obj1)];
   let obj4 = {
     style: tmp.sliderLabels,
     children: values.map((title) => {
@@ -194,16 +261,16 @@ export default function GuildSettingsRoleTemplate(arg0) {
             current.scrollTo(obj);
           }
         },
-        children: null
+        children: null,
       };
       obj = { selected: first === arg1 };
       obj[3] = closure_1_14(closure_1_0(closure_1_2[18]).Text, { variant: "text-sm/medium", children: title() });
       obj[1] = closure_1_14(closure_1_0(closure_1_2[17]).PressableOpacity, obj);
       return closure_1_14(ref1, obj, title());
-    })
+    }),
   };
   const items4 = [tmp.carousel, { minHeight: rounded }];
   items3[1] = callback2(ref1, { style: items4, children: callback2(PaginationDefault, obj6) });
   obj[2] = items3;
   return callback3(ref1, obj);
-};
+}

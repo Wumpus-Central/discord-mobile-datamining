@@ -11,7 +11,9 @@ import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx"
 
 function useObscuredContentNonFriendsDmSettingValue() {
   const obj = useExplicitContentSettingOrDefault;
-  return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentNonFriendDm)();
+  return redactionSettingToRenderedString.redactionSettingToRenderedString(
+    obj.useExplicitContentSettingOrDefault().explicitContentNonFriendDm,
+  )();
 }
 function onObscuredContentNonFriendsDmOnPress() {
   let obj = resolveExplicitContentSettingWithDefaults;
@@ -41,14 +43,14 @@ const pressable = createToggle.createPressable({
   onPress: onObscuredContentNonFriendsDmOnPress,
   useSearchTerms: function getSearchTerms() {
     const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
+    const items = [intl.string(getSystemLocale.t["N/oRI+"]), ,];
     const intl2 = getSystemLocale.intl;
     items[1] = intl2.string(getSystemLocale.t.QVdYsK);
     const intl3 = getSystemLocale.intl;
     items[2] = intl3.string(getSystemLocale.t["5mnTa7"]);
     return items;
   },
-  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
+  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled,
 });
 let obj = {
   useTitle: function getTitle() {
@@ -62,16 +64,18 @@ let obj = {
   onPress: onObscuredContentNonFriendsDmOnPress,
   useSearchTerms: function getSearchTerms() {
     const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
+    const items = [intl.string(getSystemLocale.t["N/oRI+"]), ,];
     const intl2 = getSystemLocale.intl;
     items[1] = intl2.string(getSystemLocale.t.QVdYsK);
     const intl3 = getSystemLocale.intl;
     items[2] = intl3.string(getSystemLocale.t["5mnTa7"]);
     return items;
   },
-  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
+  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled,
 };
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersNonFriendsDMsSetting.tsx");
+let result = set.fileFinishedImporting(
+  "modules/user_settings/defs/native/ExplicitMediaFiltersNonFriendsDMsSetting.tsx",
+);
 
 export default pressable;
 export { useObscuredContentNonFriendsDmSettingValue };

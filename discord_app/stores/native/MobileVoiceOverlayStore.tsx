@@ -10,8 +10,7 @@ import isMetaQuest from "../../modules/device/MetaQuestUtils.android.tsx";
 const AnalyticEvents = ME.AnalyticEvents;
 let c4 = false;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class MobileVoiceOverlayStore extends DeviceSettingsStore {
-}
+class MobileVoiceOverlayStore extends DeviceSettingsStore {}
 const prototype = MobileVoiceOverlayStore.prototype;
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return { enabled: c4 };
@@ -44,7 +43,7 @@ const mobileVoiceOverlayStore = new MobileVoiceOverlayStore(dispatcherDefault, {
     obj = { enabled: enabled.enabled };
     obj.track(AnalyticEvents.MOBILE_OVERLAY_TOGGLED, obj);
     enabled = enabled.enabled;
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/native/MobileVoiceOverlayStore.tsx");
 

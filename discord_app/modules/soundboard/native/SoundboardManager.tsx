@@ -58,7 +58,7 @@ let prototype = function SoundboardManager() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -158,7 +158,7 @@ let prototype = function SoundboardManager() {
     iter.next();
     return iter;
   });
-  applyArgumentsResult._playSoundWithListener = function() {
+  applyArgumentsResult._playSoundWithListener = function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -170,8 +170,7 @@ let prototype = function SoundboardManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp4 {
-}
+class prototype extends tmp4 {}
 prototype = new prototype();
 const tmp3 = new timestampDefault("SoundboardManagerNative");
 let result = require("set").fileFinishedImporting("modules/soundboard/native/SoundboardManager.tsx");

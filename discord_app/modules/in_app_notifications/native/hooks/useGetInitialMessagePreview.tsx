@@ -3,7 +3,9 @@ import closure_2 from "../../../../../_runtime/00019_noop.js";
 import closure_3 from "../../../../records/MessageRecord.tsx";
 import { MessageSnapshotRecord } from "../../../../records/MessageRecord.tsx";
 
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/hooks/useGetInitialMessagePreview.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_notifications/native/hooks/useGetInitialMessagePreview.tsx",
+);
 
 export const useGetInitialMessagePreview = function useGetInitialMessagePreview(message) {
   message = message.message;

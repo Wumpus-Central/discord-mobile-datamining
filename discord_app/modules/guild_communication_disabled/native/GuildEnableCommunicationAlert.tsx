@@ -11,12 +11,21 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 noopAll;
-({ CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: error, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8 } = getFriendlyDurationString);
+({ CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: error, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8 } =
+  getFriendlyDurationString);
 ({ AnalyticEvents: c9, Fonts } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { fontFamily: Fonts.PRIMARY_SEMIBOLD };
-let closure_12 = createCacheKey.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, cta: { paddingTop: 8 }, countdown: createCacheKey });
-const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx");
+let closure_12 = createCacheKey.createStyles({
+  wrapper: { padding: 16 },
+  body: { paddingTop: 16 },
+  description: { lineHeight: 18 },
+  cta: { paddingTop: 8 },
+  countdown: createCacheKey,
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx",
+);
 
 export default function GuildEnableCommunicationAlert(guildId) {
   guildId = guildId.guildId;
@@ -26,7 +35,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
   closure_3 = undefined;
   function _handleConfirmRemoveTimeout(arg0, arg1) {
     const self = this;
-    const tmp = callback(function*() {
+    const tmp = callback(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -147,11 +156,11 @@ export default function GuildEnableCommunicationAlert(guildId) {
         num = new Date(tmp);
       }
       return closure_1_10(userId(countdown[19]), { style: countdown.countdown, deadline: num, withUnits: true });
-    }
+    },
   });
-  const items = [closure_10(guildId(4474).Text, obj), ];
+  const items = [closure_10(guildId(4474).Text, obj)];
   let obj2 = { style: items1, variant: "text-sm/medium", children: null };
-  items1 = [, ];
+  items1 = [,];
   ({ cta: arr2[0], description: arr2[1] } = tmp2);
   const intl5 = tmp9(1236).intl;
   obj2[2] = intl5.format(guildId(1236).t.KtENkK, { link: closure_8 });
@@ -159,4 +168,4 @@ export default function GuildEnableCommunicationAlert(guildId) {
   obj[1] = items;
   obj.children = tmp11(tmp12, obj);
   return closure_10(tmp7, obj);
-};
+}

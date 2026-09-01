@@ -35,13 +35,53 @@ require = arg1;
 let c3 = importAllResult;
 ({ View: c4, ActivityIndicator: c5, TouchableWithoutFeedback: closure_6 } = get_ActivityIndicator);
 let error = importDefaultResult;
-({ SubscriptionIntervalTypes: unpackModuleId, PremiumSubscriptionSKUs: closure_12, PremiumGiftStyles: map1 } = GuildFeatures);
+({
+  SubscriptionIntervalTypes: unpackModuleId,
+  PremiumSubscriptionSKUs: closure_12,
+  PremiumGiftStyles: map1,
+} = GuildFeatures);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-createCacheKey = { giftGroupCard: { overflow: "hidden", marginTop: 8 }, giftGroupCardRefresh: null, title: null, arrow: null, subtitle: null, titleContainer: null, groupCardHeader: null, groupCardHeaderLegacy: null, rowArrow: null, giftIcon: null, generateGiftRow: null, generateGiftRowLegacy: null, generateGiftRowText: null, generateGiftButton: null, loading: null, generateButtonContainer: null, groupCardHeaderOpen: null, groupCardHeaderOpenRefresh: null, subtitleContainer: null, socialLayerSubtitleContainer: null };
-createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.CARD_BORDER_DEFAULT, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.TABLEROW_BACKGROUND_DEFAULT };
+createCacheKey = {
+  giftGroupCard: { overflow: "hidden", marginTop: 8 },
+  giftGroupCardRefresh: null,
+  title: null,
+  arrow: null,
+  subtitle: null,
+  titleContainer: null,
+  groupCardHeader: null,
+  groupCardHeaderLegacy: null,
+  rowArrow: null,
+  giftIcon: null,
+  generateGiftRow: null,
+  generateGiftRowLegacy: null,
+  generateGiftRowText: null,
+  generateGiftButton: null,
+  loading: null,
+  generateButtonContainer: null,
+  groupCardHeaderOpen: null,
+  groupCardHeaderOpenRefresh: null,
+  subtitleContainer: null,
+  socialLayerSubtitleContainer: null,
+};
+createCacheKey = {
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.CARD_BORDER_DEFAULT,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.TABLEROW_BACKGROUND_DEFAULT,
+};
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-let obj1 = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey[2] = {
+  fontSize: 16,
+  lineHeight: 20,
+  fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+};
+let obj1 = {
+  fontSize: 16,
+  lineHeight: 20,
+  fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD,
+  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+};
 createCacheKey[3] = { color: ThemesDefault.colors.ICON_SUBTLE };
 createCacheKey[4] = { fontSize: 14, lineHeight: 18 };
 createCacheKey[5] = { marginLeft: 8, flex: 1 };
@@ -105,7 +145,7 @@ prototype["renderGenerateGiftCodeRow"] = function renderGenerateGiftCodeRow() {
   obj = { variant: "text-xs/medium", color: "text-subtle", style: tmp.generateGiftRowText, children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.lELyPj);
-  const items = [callback(Text.Text, obj), ];
+  const items = [callback(Text.Text, obj)];
   obj = { style: tmp.generateButtonContainer, children: null };
   obj1 = { style: tmp.generateGiftButton, children: null };
   const obj2 = { text: null, size: "sm", onPress: null };
@@ -127,8 +167,13 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   if (isGameItemSKUResult) {
     isGameItemSKUResult = null != application;
   }
-  obj = { accessibilityRole: "button", accessibilityState: { expanded: isOpen }, onPress: this.handleToggleOpen, children: null };
-  const items = [tmp.groupCardHeader, ];
+  obj = {
+    accessibilityRole: "button",
+    accessibilityState: { expanded: isOpen },
+    onPress: this.handleToggleOpen,
+    children: null,
+  };
+  const items = [tmp.groupCardHeader];
   let prop = null;
   if (isOpen) {
     prop = tmp.groupCardHeaderOpenRefresh;
@@ -153,9 +198,16 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
       tmp6Result = tmp6(tmp2(1297).Icon, obj2);
     }
   }
-  const items1 = [tmp6Result, , ];
+  const items1 = [tmp6Result, ,];
   const obj3 = { style: tmp.titleContainer, children: null };
-  const items2 = [closure_14(Text.Text, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children }), ];
+  const items2 = [
+    closure_14(Text.Text, {
+      variant: "heading-sm/semibold",
+      color: "mobile-text-heading-primary",
+      accessibilityRole: "header",
+      children,
+    }),
+  ];
   let socialLayerSubtitleContainer = isGameItemSKUResult;
   if (isGameItemSKUResult) {
     socialLayerSubtitleContainer = tmp.socialLayerSubtitleContainer;
@@ -171,7 +223,7 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
     tmp6Result = tmp6(GameIconDefault, obj6);
     const tmp17 = GameIconDefault;
   }
-  const items4 = [tmp6Result, ];
+  const items4 = [tmp6Result];
   const obj7 = { variant: "text-md/normal", color: "text-subtle", style: tmp.subtitle, children: null };
   const intl = tmp2(1236).intl;
   const format = intl.format;
@@ -276,10 +328,10 @@ prototype["render"] = function render() {
   const props = this.props;
   ({ giftCodes, sku } = props);
   let obj = { style: items, children: null };
-  items = [, ];
+  items = [,];
   ({ giftGroupCard: arr[0], giftGroupCardRefresh: arr[1] } = loading);
   ({ entitlements, isFetching } = props);
-  const items1 = [this.renderCardHeader(sku), ];
+  const items1 = [this.renderCardHeader(sku)];
   if (!this.state.isOpen) {
     items1[1] = null;
     obj[1] = items1;
@@ -296,7 +348,12 @@ prototype["render"] = function render() {
         result = self.renderGenerateGiftCodeRow();
       }
       obj = { children: null };
-      const items2 = [result, giftCodes.map((code) => closure_1_14(closure_1_1(closure_1_2[35]), { giftCode: code, sku, isFirst: 0 === arg1 }, code.code))];
+      const items2 = [
+        result,
+        giftCodes.map((code) =>
+          closure_1_14(closure_1_1(closure_1_2[35]), { giftCode: code, sku, isFirst: 0 === arg1 }, code.code),
+        ),
+      ];
       obj[0] = items2;
       tmpResult = tmp(importAllResult.Fragment, obj);
     }
@@ -307,7 +364,13 @@ prototype["render"] = function render() {
 };
 EntitlementGiftGroupCard.contextType = require("ManaContext").ThemeContext;
 let obj7 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-let items = [importDefaultResult1, importDefaultResult4, importDefaultResult, importDefaultResult2, importDefaultResult3];
+let items = [
+  importDefaultResult1,
+  importDefaultResult4,
+  importDefaultResult,
+  importDefaultResult2,
+  importDefaultResult3,
+];
 const tmp11 = importDefaultResult5.connectStores(items, (arg0) => {
   ({ skuId, subscriptionPlanId, giftStyle: require } = arg0);
   const value = importDefaultResult4.get(skuId);
@@ -316,7 +379,14 @@ const tmp11 = importDefaultResult5.connectStores(items, (arg0) => {
     error = new Error("SKU was unavailable while rendering gift.");
     throw error;
   } else {
-    let obj = { sku: null, isFetching: null, loadedAt: null, application: null, subscriptionPlan: null, giftCodes: null };
+    let obj = {
+      sku: null,
+      isFetching: null,
+      loadedAt: null,
+      application: null,
+      subscriptionPlan: null,
+      giftCodes: null,
+    };
     obj[0] = value;
     obj[1] = importDefaultResult2.getUserGiftCodesFetchingForSKUAndPlan(skuId, subscriptionPlanId);
     obj[2] = importDefaultResult2.getUserGiftCodesLoadedAtForSKUAndPlan(skuId, subscriptionPlanId);
@@ -327,7 +397,11 @@ const tmp11 = importDefaultResult5.connectStores(items, (arg0) => {
       orFetchSubscriptionPlan = obj.getOrFetchSubscriptionPlan(subscriptionPlanId);
     }
     obj[4] = orFetchSubscriptionPlan;
-    const forGifterSKUAndPlan = importDefaultResult2.getForGifterSKUAndPlan(importDefaultResult1.getId(), skuId, subscriptionPlanId);
+    const forGifterSKUAndPlan = importDefaultResult2.getForGifterSKUAndPlan(
+      importDefaultResult1.getId(),
+      skuId,
+      subscriptionPlanId,
+    );
     const found = forGifterSKUAndPlan.filter((isClaimed) => !isClaimed.isClaimed);
     obj[5] = found.filter((giftStyle) => giftStyle.giftStyle === closure_0);
     return obj;

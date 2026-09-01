@@ -8,7 +8,18 @@ import { LibdiscoreBatchStoreRefactorExperiment } from "../libdiscore/libdiscore
 
 const require = arg1;
 function parseServerGuildSticker(item10023) {
-  const obj = { id: item10023.id, tags: item10023.tags, type: item10023.type, name: item10023.name, description: item10023.description, format_type: item10023.format_type, guild_id: item10023.guild_id, available: item10023.available, version: item10023.version, user_id: item10023.user_id };
+  const obj = {
+    id: item10023.id,
+    tags: item10023.tags,
+    type: item10023.type,
+    name: item10023.name,
+    description: item10023.description,
+    format_type: item10023.format_type,
+    guild_id: item10023.guild_id,
+    available: item10023.available,
+    version: item10023.version,
+    user_id: item10023.user_id,
+  };
   obj[TypeTag] = "GuildSticker";
   return obj;
 }
@@ -57,7 +68,9 @@ function deriveStickerMetadata(arg0, tags) {
       obj1[0] = tmp(5212).StickerMetadataTypes.CORRELATED_EMOJI;
       obj1[1] = byName.surrogates;
       items.push(obj1);
-      byName.forEachDiversity((surrogates) => items.push({ type: items(closure_1_2[4]).StickerMetadataTypes.CORRELATED_EMOJI, value: surrogates.surrogates }));
+      byName.forEachDiversity((surrogates) =>
+        items.push({ type: items(closure_1_2[4]).StickerMetadataTypes.CORRELATED_EMOJI, value: surrogates.surrogates }),
+      );
     }
     const obj5 = parseRawEmojiObjectDefault;
   }
@@ -139,106 +152,131 @@ prototype["stateWrapper"] = function stateWrapper() {
   return this.database;
 };
 GuildStickersStore.displayName = "GuildStickersStore";
-const guildStickersStore = new GuildStickersStore({
-  LOGOUT(arg0, clear) {
-    return clear.clear();
-  },
-  BACKGROUND_SYNC(arg0, clear) {
-    return clear.clear();
-  },
-  RESET_SOCKET(arg0, clear) {
-    return clear.clear();
-  },
-  CONNECTION_OPEN(arg0, getPartitionKeys) {
-    ({ guilds, unavailableGuilds } = arg0);
-    const set = new Set(guilds.map((id) => id.id));
-    for (const item10017 of unavailableGuilds) {
-      let addResult = set.add(item10017);
-      continue;
-    }
-    const partitionKeys = getPartitionKeys.getPartitionKeys();
-    for (const item10028 of partitionKeys) {
-      let tmp3 = item10028;
-      if (!set.has(item10028)) {
-        let tmp4 = item10028;
-        let removePartitionResult = arg1.removePartition(tmp3);
+const guildStickersStore = new GuildStickersStore(
+  {
+    LOGOUT(arg0, clear) {
+      return clear.clear();
+    },
+    BACKGROUND_SYNC(arg0, clear) {
+      return clear.clear();
+    },
+    RESET_SOCKET(arg0, clear) {
+      return clear.clear();
+    },
+    CONNECTION_OPEN(arg0, getPartitionKeys) {
+      ({ guilds, unavailableGuilds } = arg0);
+      const set = new Set(guilds.map((id) => id.id));
+      for (const item10017 of unavailableGuilds) {
+        let addResult = set.add(item10017);
+        continue;
       }
-      continue;
-    }
-    const iter = guilds[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp7 = syncStickers;
-      let tmp8 = syncStickers(nextResult.id, nextResult.stickers, getPartitionKeys);
-      continue;
-    }
-  },
-  GUILD_CREATE(guild, setPartition) {
-    if (null == guild.guild.joined_at) {
-      return false;
-    } else {
-      syncStickers(guild.guild.id, guild.guild.stickers, setPartition);
-    }
-  },
-  GUILD_DELETE(guild, removePartition) {
-    removePartition.removePartition(guild.guild.id);
-  },
-  GUILD_STICKERS_CREATE_SUCCESS(sticker, setRecord) {
-    sticker = sticker.sticker;
-    const obj = { id: sticker.id, tags: sticker.tags, type: sticker.type, name: sticker.name, description: sticker.description, format_type: sticker.format_type, guild_id: sticker.guild_id, available: sticker.available, version: sticker.version, user_id: sticker.user_id };
-    obj[TypeTag] = "GuildSticker";
-    setRecord.setRecord(sticker.guildId, sticker.sticker.id, obj);
-  },
-  GUILD_STICKER_FETCH_SUCCESS(sticker, setRecord) {
-    sticker = sticker.sticker;
-    const obj = { id: sticker.id, tags: sticker.tags, type: sticker.type, name: sticker.name, description: sticker.description, format_type: sticker.format_type, guild_id: sticker.guild_id, available: sticker.available, version: sticker.version, user_id: sticker.user_id };
-    obj[TypeTag] = "GuildSticker";
-    setRecord.setRecord(sticker.sticker.guild_id, sticker.sticker.id, obj);
-  },
-  GUILD_STICKERS_UPDATE(guildId, getPartition) {
-    const partition = getPartition.getPartition(guildId.guildId);
-    const tmp2 = parseServerGuildStickers(guildId.stickers);
-    if (null != partition) {
-      for (const key10012 in tmp2) {
-        let tmp9 = key10012;
-        let tmp10 = tmp2[key10012];
-        let tmp11 = partition[key10012];
-        let tmp4 = null != tmp11;
-        if (tmp4) {
-          tmp4 = null == tmp10.user_id;
-        }
-        if (tmp4) {
-          tmp4 = null != tmp11.user_id;
-        }
-        if (!tmp4) {
-          continue;
-        } else {
-          let obj = {};
-          let tmp5 = obj;
-          let tmp6 = tmp10;
-          let merged = Object.assign(tmp10);
-          obj.user_id = tmp11.user_id;
-          tmp2[key10012] = obj;
-          continue;
+      const partitionKeys = getPartitionKeys.getPartitionKeys();
+      for (const item10028 of partitionKeys) {
+        let tmp3 = item10028;
+        if (!set.has(item10028)) {
+          let tmp4 = item10028;
+          let removePartitionResult = arg1.removePartition(tmp3);
         }
         continue;
       }
-    }
-    getPartition.setPartition(guildId.guildId, tmp2);
+      const iter = guilds[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let tmp7 = syncStickers;
+        let tmp8 = syncStickers(nextResult.id, nextResult.stickers, getPartitionKeys);
+        continue;
+      }
+    },
+    GUILD_CREATE(guild, setPartition) {
+      if (null == guild.guild.joined_at) {
+        return false;
+      } else {
+        syncStickers(guild.guild.id, guild.guild.stickers, setPartition);
+      }
+    },
+    GUILD_DELETE(guild, removePartition) {
+      removePartition.removePartition(guild.guild.id);
+    },
+    GUILD_STICKERS_CREATE_SUCCESS(sticker, setRecord) {
+      sticker = sticker.sticker;
+      const obj = {
+        id: sticker.id,
+        tags: sticker.tags,
+        type: sticker.type,
+        name: sticker.name,
+        description: sticker.description,
+        format_type: sticker.format_type,
+        guild_id: sticker.guild_id,
+        available: sticker.available,
+        version: sticker.version,
+        user_id: sticker.user_id,
+      };
+      obj[TypeTag] = "GuildSticker";
+      setRecord.setRecord(sticker.guildId, sticker.sticker.id, obj);
+    },
+    GUILD_STICKER_FETCH_SUCCESS(sticker, setRecord) {
+      sticker = sticker.sticker;
+      const obj = {
+        id: sticker.id,
+        tags: sticker.tags,
+        type: sticker.type,
+        name: sticker.name,
+        description: sticker.description,
+        format_type: sticker.format_type,
+        guild_id: sticker.guild_id,
+        available: sticker.available,
+        version: sticker.version,
+        user_id: sticker.user_id,
+      };
+      obj[TypeTag] = "GuildSticker";
+      setRecord.setRecord(sticker.sticker.guild_id, sticker.sticker.id, obj);
+    },
+    GUILD_STICKERS_UPDATE(guildId, getPartition) {
+      const partition = getPartition.getPartition(guildId.guildId);
+      const tmp2 = parseServerGuildStickers(guildId.stickers);
+      if (null != partition) {
+        for (const key10012 in tmp2) {
+          let tmp9 = key10012;
+          let tmp10 = tmp2[key10012];
+          let tmp11 = partition[key10012];
+          let tmp4 = null != tmp11;
+          if (tmp4) {
+            tmp4 = null == tmp10.user_id;
+          }
+          if (tmp4) {
+            tmp4 = null != tmp11.user_id;
+          }
+          if (!tmp4) {
+            continue;
+          } else {
+            let obj = {};
+            let tmp5 = obj;
+            let tmp6 = tmp10;
+            let merged = Object.assign(tmp10);
+            obj.user_id = tmp11.user_id;
+            tmp2[key10012] = obj;
+            continue;
+          }
+          continue;
+        }
+      }
+      getPartition.setPartition(guildId.guildId, tmp2);
+    },
+    CACHED_STICKERS_LOADED(arg0, setPartition) {
+      while (tmp !== undefined) {
+        let tmp3 = callback;
+        let tmp4 = callback(tmp2, 2);
+        let tmp5 = parseServerGuildStickers;
+        let setPartitionResult = setPartition.setPartition(tmp4[0], parseServerGuildStickers(tmp4[1]));
+        continue;
+      }
+    },
+    GUILD_STICKERS_FETCH_SUCCESS(guildId, setPartition) {
+      setPartition.setPartition(guildId.guildId, parseServerGuildStickers(guildId.stickers));
+    },
   },
-  CACHED_STICKERS_LOADED(arg0, setPartition) {
-    while (tmp !== undefined) {
-      let tmp3 = callback;
-      let tmp4 = callback(tmp2, 2);
-      let tmp5 = parseServerGuildStickers;
-      let setPartitionResult = setPartition.setPartition(tmp4[0], parseServerGuildStickers(tmp4[1]));
-      continue;
-    }
-  },
-  GUILD_STICKERS_FETCH_SUCCESS(guildId, setPartition) {
-    setPartition.setPartition(guildId.guildId, parseServerGuildStickers(guildId.stickers));
-  }
-}, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());
+  LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode(),
+);
 let result = require("set").fileFinishedImporting("modules/stickers/GuildStickersStore.tsx");
 
 export default guildStickersStore;

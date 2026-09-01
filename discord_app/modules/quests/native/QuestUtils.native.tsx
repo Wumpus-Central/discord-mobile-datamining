@@ -21,7 +21,12 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11339, dependencyMap.paths), closure_6, { questId, questContent, questContentPosition, sourceQuestContent });
+  return ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11339, dependencyMap.paths), closure_6, {
+    questId,
+    questContent,
+    questContentPosition,
+    sourceQuestContent,
+  });
 }
 function viewReward(quest) {
   quest = quest.quest;
@@ -59,7 +64,7 @@ function _handleRewardClaim() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -99,7 +104,11 @@ function _handleRewardClaim() {
               constants = 2;
               c6 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = logger(closure_1_2[14]).claimQuestReward(logger.id, defaultPlatform, logger(closure_1_2[15]).QuestContent.QUEST_HOME_MOBILE);
+              obj2[0] = logger(closure_1_2[14]).claimQuestReward(
+                logger.id,
+                defaultPlatform,
+                logger(closure_1_2[15]).QuestContent.QUEST_HOME_MOBILE,
+              );
               return obj2;
             }
           } else if (1 === tmp8) {
@@ -155,7 +164,7 @@ function _handleRewardClaimThenView() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -193,7 +202,17 @@ function _handleRewardClaimThenView() {
               c6 = undefined;
               c7 = undefined;
               c8 = undefined;
-              ({ quest: c0, questContent: c1, questContentPosition: c2, product: c3, hideActionSheet: c4, currentUserHasVerifiedEmailOrPhone: c5, currentUserHasVerifiedEmail: c6, onSuccess: c7, sourceQuestContent: c8 } = lib);
+              ({
+                quest: c0,
+                questContent: c1,
+                questContentPosition: c2,
+                product: c3,
+                hideActionSheet: c4,
+                currentUserHasVerifiedEmailOrPhone: c5,
+                currentUserHasVerifiedEmail: c6,
+                onSuccess: c7,
+                sourceQuestContent: c8,
+              } = lib);
               closure_9 = undefined;
               c3 = 1;
               c4 = 1;
@@ -218,7 +237,12 @@ function _handleRewardClaimThenView() {
                   let obj4 = lib(10927);
                 }
                 if (obj9.hasQuestRewardCode(lib.config)) {
-                  const obj2 = { questId: null, questContent: null, questContentPosition: null, sourceQuestContent: null };
+                  const obj2 = {
+                    questId: null,
+                    questContent: null,
+                    questContentPosition: null,
+                    sourceQuestContent: null,
+                  };
                   obj2[0] = lib.id;
                   obj2[1] = callback;
                   obj2[2] = dependencyMap;
@@ -268,7 +292,14 @@ function _handleRewardClaimThenView() {
           } else {
             closure_9 = arg1;
             if (closure_9) {
-              obj = { quest: null, product: null, questContent: null, questContentPosition: null, onSuccess: null, sourceQuestContent: null };
+              obj = {
+                quest: null,
+                product: null,
+                questContent: null,
+                questContentPosition: null,
+                onSuccess: null,
+                sourceQuestContent: null,
+              };
               obj[0] = lib;
               obj[1] = c3;
               obj[2] = callback;
@@ -301,12 +332,19 @@ function _handleRewardClaimThenView() {
   return applyArgumentsResult;
 }
 noopAll;
-({ QuestsExperimentLocations: c5, QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_6, QUEST_REWARD_DETAILS_BOTTOM_SHEET_KEY: error, QuestVariants: closure_8 } = QuestsExperimentLocations);
+({
+  QuestsExperimentLocations: c5,
+  QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_6,
+  QUEST_REWARD_DETAILS_BOTTOM_SHEET_KEY: error,
+  QuestVariants: closure_8,
+} = QuestsExperimentLocations);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let result = require("set").fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
 
 export const openRewardDetailsBottomSheet = function openRewardDetailsBottomSheet(questId) {
-  return ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11336, dependencyMap.paths), closure_7, { questId: questId.questId });
+  return ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11336, dependencyMap.paths), closure_7, {
+    questId: questId.questId,
+  });
 };
 export { viewReward };
 export const handleRewardClaimThenView = function handleRewardClaimThenView(arg0) {
@@ -384,7 +422,9 @@ export const isHeroVideoSupported = function isHeroVideoSupported(memo) {
   return tmp2;
 };
 export const openDiscordQuestsFAQ = function openDiscordQuestsFAQ() {
-  _modDef4190.openURL("https://support.discord.com/hc/en-us/articles/22225719947543-Discord-Quests-FAQ#h_01HVPBZR5FBM7QBFR9KDBASXP5");
+  _modDef4190.openURL(
+    "https://support.discord.com/hc/en-us/articles/22225719947543-Discord-Quests-FAQ#h_01HVPBZR5FBM7QBFR9KDBASXP5",
+  );
 };
 export const getPrimaryCtaIcon = function getPrimaryCtaIcon(quest, arg1) {
   let flag = arg1;
@@ -430,7 +470,7 @@ export const showQuestUnavailableAlert = function showQuestUnavailableAlert() {
   const intl3 = getSystemLocale.intl;
   obj1[0] = intl3.string(getSystemLocale.t.H0vjGc);
   obj1[1] = _manuallyStartConsoleQuest.fetchCurrentQuests;
-  const items = [callback2(getAlertModalItemKey.AlertActionButton, obj1), ];
+  const items = [callback2(getAlertModalItemKey.AlertActionButton, obj1)];
   const obj2 = { text: null, variant: "secondary" };
   const intl4 = getSystemLocale.intl;
   obj2[0] = intl4.string(getSystemLocale.t["6XS10x"]);

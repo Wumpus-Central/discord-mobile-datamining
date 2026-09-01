@@ -45,7 +45,16 @@ BillingFacetRecord["createFromOrder"] = function createFromOrder(billing_facet) 
     if (typeof BillingFacetRecord !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const tmp10 = new BillingFacetRecord("Trying to call a non-function", billing_facet, BillingFacetRecord, new.target, payment_gateway, payment_source_id, currency, invoiceFromOrder);
+    const tmp10 = new BillingFacetRecord(
+      "Trying to call a non-function",
+      billing_facet,
+      BillingFacetRecord,
+      new.target,
+      payment_gateway,
+      payment_source_id,
+      currency,
+      invoiceFromOrder,
+    );
     // ThrowIfThisInitialized (0x7c)
     tmp10.paymentGateway = payment_gateway;
     if (payment_source_id == null) {
@@ -72,7 +81,7 @@ Object.defineProperty(BillingFacetRecord.prototype, "fiatCurrency", {
     }
     return currency;
   },
-  set: undefined
+  set: undefined,
 });
 let OrderRecord;
 class OrderRecord extends tmp2 {
@@ -119,7 +128,19 @@ class OrderRecord extends tmp2 {
 }
 const prototype = OrderRecord.prototype;
 OrderRecord["createFromServer"] = function createFromServer(id) {
-  const obj = { id: id.id, status: id.status, revision: id.revision, orderLineItems: id.order_line_items, billingFacetRecord: BillingFacetRecord.createFromOrder(id), externalGatewayFacet: null, giftingFacet: null, checkoutContextRecord: null, createdAt: null, unsatisfiedConstraints: null, subscriptionFacet: null };
+  const obj = {
+    id: id.id,
+    status: id.status,
+    revision: id.revision,
+    orderLineItems: id.order_line_items,
+    billingFacetRecord: BillingFacetRecord.createFromOrder(id),
+    externalGatewayFacet: null,
+    giftingFacet: null,
+    checkoutContextRecord: null,
+    createdAt: null,
+    unsatisfiedConstraints: null,
+    subscriptionFacet: null,
+  };
   let prop = id.external_gateway_facet;
   if (prop == null) {
     prop = null;

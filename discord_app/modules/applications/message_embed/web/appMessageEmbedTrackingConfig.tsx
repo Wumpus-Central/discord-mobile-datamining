@@ -2,7 +2,9 @@
 import closure_0 from "../../../../stores/AuthenticationStore.tsx";
 import { LinkType } from "../MessageEmbedConstants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx",
+);
 
 export const trackingConfigWithDefaults = function trackingConfigWithDefaults(id) {
   let str;
@@ -12,7 +14,19 @@ export const trackingConfigWithDefaults = function trackingConfigWithDefaults(id
   if (str == null) {
     str = "0";
   }
-  const obj = { id: str, linkType: null, referrerId: null, activityCustomId: null, onView: null, onLinkCopied: null, guildId: null, channelId: null, messageId: null, isDeadEnd: null, appEmbedState: null };
+  const obj = {
+    id: str,
+    linkType: null,
+    referrerId: null,
+    activityCustomId: null,
+    onView: null,
+    onLinkCopied: null,
+    guildId: null,
+    channelId: null,
+    messageId: null,
+    isDeadEnd: null,
+    appEmbedState: null,
+  };
   let linkType;
   if (id != null) {
     linkType = id.linkType;

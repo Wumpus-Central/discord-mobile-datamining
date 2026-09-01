@@ -21,10 +21,20 @@ import ME from "../../Constants.tsx";
 require = arg1;
 handleConnectionOpenDefault;
 ({ SearchTypes: c10, SearchTokenTypes } = ME);
-({ SearchPopoutModes: closure_12, IS_SEARCH_ANSWER_TOKEN: map1, IS_SEARCH_FILTER_TOKEN: closure_14, SearchModes: closure_15, ME } = ME);
+({
+  SearchPopoutModes: closure_12,
+  IS_SEARCH_ANSWER_TOKEN: map1,
+  IS_SEARCH_FILTER_TOKEN: closure_14,
+  SearchModes: closure_15,
+  ME,
+} = ME);
 let c16 = 2592000;
 let c17 = 31536000;
-let obj = { [SearchTokenTypes.FILTER_BEFORE]: true, [SearchTokenTypes.FILTER_AFTER]: true, [SearchTokenTypes.FILTER_ON]: true };
+let obj = {
+  [SearchTokenTypes.FILTER_BEFORE]: true,
+  [SearchTokenTypes.FILTER_AFTER]: true,
+  [SearchTokenTypes.FILTER_ON]: true,
+};
 let closure_19 = new getMatchDefault();
 let tmp4 = new getMatchDefault();
 let closure_20 = new getMatchDefault();
@@ -165,7 +175,11 @@ export const getGuildIdFromSearchContext = function getGuildIdFromSearchContext(
   return searchContext.guildId;
 };
 export const isGuildLikeSearchContext = function isGuildLikeSearchContext(searchContext) {
-  return searchContext.type === constants.GUILD || searchContext.type === constants.GUILD_CHANNEL || searchContext.type === constants.THREAD;
+  return (
+    searchContext.type === constants.GUILD ||
+    searchContext.type === constants.GUILD_CHANNEL ||
+    searchContext.type === constants.THREAD
+  );
 };
 export const getChannelIdFromSearchContext = function getChannelIdFromSearchContext(searchContext) {
   const type = searchContext.type;
@@ -515,7 +529,7 @@ export const quoteChannelName = function quoteChannelName(channelName) {
   let combined = channelName;
   if (null != channelName.match(/([\\" ])/g)) {
     const _HermesInternal = HermesInternal;
-    combined = "\"" + channelName.replaceAll(/([\\"])/g, (arg0, arg1) => "\\" + arg1) + "\"";
+    combined = '"' + channelName.replaceAll(/([\\"])/g, (arg0, arg1) => "\\" + arg1) + '"';
   }
   return combined;
 };
@@ -528,40 +542,42 @@ export const getFlattenedAutocompleteResults = function getFlattenedAutocomplete
       if (0 !== results.results.length) {
         let group = results.group;
         results = results.results;
-        group = group.concat(results.map((result) => {
-          let tmp = str;
-          if (null != result.channel) {
-            let combined = str;
-            if (null != str.match(/([\\" ])/g)) {
-              const _HermesInternal = HermesInternal;
-              combined = "\"" + str.replaceAll(/([\\"])/g, (arg0, arg1) => "\\" + arg1) + "\"";
-            }
-            tmp = combined;
-          }
-          let combined1 = tmp;
-          if (closure_0.type === closure_2_12.FILTER_ALL) {
-            const group = result.group;
-            const tmp8 = callback(closure_2_2[11])[group];
-            let key;
-            if (tmp8 != null) {
-              key = tmp8.key;
-            }
-            let tmp10 = null != key;
-            if (tmp10) {
-              let key1;
-              if (tmp8 != null) {
-                key1 = tmp8.key;
+        group = group.concat(
+          results.map((result) => {
+            let tmp = str;
+            if (null != result.channel) {
+              let combined = str;
+              if (null != str.match(/([\\" ])/g)) {
+                const _HermesInternal = HermesInternal;
+                combined = '"' + str.replaceAll(/([\\"])/g, (arg0, arg1) => "\\" + arg1) + '"';
               }
-              tmp10 = "" !== key1;
+              tmp = combined;
             }
-            combined1 = tmp;
-            if (tmp10) {
-              const _HermesInternal2 = HermesInternal;
-              combined1 = "" + tmp8.key + " " + tmp;
+            let combined1 = tmp;
+            if (closure_0.type === closure_2_12.FILTER_ALL) {
+              const group = result.group;
+              const tmp8 = callback(closure_2_2[11])[group];
+              let key;
+              if (tmp8 != null) {
+                key = tmp8.key;
+              }
+              let tmp10 = null != key;
+              if (tmp10) {
+                let key1;
+                if (tmp8 != null) {
+                  key1 = tmp8.key;
+                }
+                tmp10 = "" !== key1;
+              }
+              combined1 = tmp;
+              if (tmp10) {
+                const _HermesInternal2 = HermesInternal;
+                combined1 = "" + tmp8.key + " " + tmp;
+              }
             }
-          }
-          return { result, group: closure_0.group, resultText: combined1 };
-        }));
+            return { result, group: closure_0.group, resultText: combined1 };
+          }),
+        );
       }
     }
   });
@@ -657,7 +673,7 @@ export const getChannelDisplayName = function getChannelDisplayName(isDM) {
   let combined = str;
   if (null != str.match(/([\\" ])/g)) {
     const _HermesInternal = HermesInternal;
-    combined = "\"" + str.replaceAll(/([\\"])/g, (arg0, arg1) => "\\" + arg1) + "\"";
+    combined = '"' + str.replaceAll(/([\\"])/g, (arg0, arg1) => "\\" + arg1) + '"';
   }
   let combined1 = combined;
   if (flag) {

@@ -6,9 +6,11 @@ import GuildFeatures from "../../../premium/PremiumConstants.tsx";
 const require = arg1;
 const PremiumTypes = GuildFeatures.PremiumTypes;
 const SubscriptionIntervalTypes = GuildFeatures.SubscriptionIntervalTypes;
-let items = [, ];
+let items = [,];
 ({ TIER_2: arr[0], TIER_0: arr[1] } = PremiumTypes);
-let result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPlanSelection.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/premium_marketing/native/hooks/useBuyNitroPlanSelection.tsx",
+);
 
 export const NITRO_PLAN_TIERS = items;
 export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) {
@@ -210,7 +212,16 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
       }
       tmp43 = premiumTier === tmp7;
     }
-    obj = { tier: null, setTier: null, productId: null, setProductId: null, item: null, priceString: null, isDiscounted: null, isTrial: null };
+    obj = {
+      tier: null,
+      setTier: null,
+      productId: null,
+      setProductId: null,
+      item: null,
+      priceString: null,
+      isDiscounted: null,
+      isTrial: null,
+    };
     obj[0] = TIER_2;
     obj[1] = callback;
     obj[2] = first;
@@ -227,7 +238,17 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
       }
       tmp45 = discountedPriceString;
     }
-    obj1 = { selection: null, items: null, priceStringByProductId: null, unavailableProductIds: null, bogoEligible: null, hasDiscountOffer: null, trialTier: null, trialId: null, discounted: null };
+    obj1 = {
+      selection: null,
+      items: null,
+      priceStringByProductId: null,
+      unavailableProductIds: null,
+      bogoEligible: null,
+      hasDiscountOffer: null,
+      trialTier: null,
+      trialId: null,
+      discounted: null,
+    };
     obj[5] = tmp45;
     obj[6] = null != found2 && found2.productId === obj.id && null != discountedPriceString;
     obj[7] = tmp43;

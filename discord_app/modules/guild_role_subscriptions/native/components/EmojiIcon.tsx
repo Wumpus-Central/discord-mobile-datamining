@@ -81,4 +81,4 @@ export default function EmojiIcon(size) {
     tmp9 = importDefault;
   }
   return tmp8Result;
-};
+}

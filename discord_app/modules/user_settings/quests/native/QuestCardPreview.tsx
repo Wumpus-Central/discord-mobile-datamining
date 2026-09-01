@@ -16,9 +16,13 @@ export const QuestCardPreview = function QuestCardPreview(quest) {
       let obj = { title: null, children: null };
       const intl = quest(closure_1_2[4]).intl;
       obj[0] = intl.string(quest(closure_1_2[4]).t.BDUDau);
-      obj = { quest, containerPadding: closure_1_1(closure_1_2[6]).space.PX_16, sourceQuestContent: quest(closure_1_2[2]).QuestContent.INTERNAL_PREVIEW_TOOL };
+      obj = {
+        quest,
+        containerPadding: closure_1_1(closure_1_2[6]).space.PX_16,
+        sourceQuestContent: quest(closure_1_2[2]).QuestContent.INTERNAL_PREVIEW_TOOL,
+      };
       obj[1] = closure_1_3(quest(closure_1_2[5]).QuestCard, obj);
       return closure_1_3(closure_1_1(closure_1_2[3]), obj);
-    }
+    },
   });
 };

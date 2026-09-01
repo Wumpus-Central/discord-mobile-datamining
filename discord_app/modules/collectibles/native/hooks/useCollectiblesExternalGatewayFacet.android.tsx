@@ -4,7 +4,9 @@ import noop from "../../../../../_runtime/00019_noop.js";
 import closure_3 from "../../../../stores/UserStore.tsx";
 
 const useMemo = noop.useMemo;
-const result = set.fileFinishedImporting("modules/collectibles/native/hooks/useCollectiblesExternalGatewayFacet.android.tsx");
+const result = set.fileFinishedImporting(
+  "modules/collectibles/native/hooks/useCollectiblesExternalGatewayFacet.android.tsx",
+);
 
 export default function useCollectiblesExternalGatewayFacet(arg0) {
   const _require = arg0;
@@ -23,4 +25,4 @@ export default function useCollectiblesExternalGatewayFacet(arg0) {
       return obj;
     }
   }, items1);
-};
+}

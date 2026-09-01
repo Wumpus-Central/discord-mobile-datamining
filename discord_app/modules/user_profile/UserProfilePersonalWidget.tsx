@@ -15,7 +15,7 @@ function createDefaultFieldsSection() {
   obj = { key: `field-${tmp}`, title: "", description: "" };
   const sum = tmp + 1;
   closure_5 = sum;
-  items = [obj, , , ];
+  items = [obj, , ,];
   obj = { key: `field-${tmp3}`, title: "", description: "" };
   const sum1 = tmp3 + 1;
   closure_5 = sum1;
@@ -329,7 +329,9 @@ export const createDefaultPersonalWidget = function createDefaultPersonalWidget(
   return obj;
 };
 export const isPersonalWidgetNew = function isPersonalWidgetNew() {
-  return !UNSAFE_isDismissibleContentDismissed.UNSAFE_isDismissibleContentDismissed(DismissibleContent.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE);
+  return !UNSAFE_isDismissibleContentDismissed.UNSAFE_isDismissibleContentDismissed(
+    DismissibleContent.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE,
+  );
 };
 export const parsePersonalWidgetSections = function parsePersonalWidgetSections(sections) {
   if (null == sections) {

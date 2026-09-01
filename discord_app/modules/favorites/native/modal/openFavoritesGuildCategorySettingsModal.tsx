@@ -9,4 +9,4 @@ export default function openFavoritesGuildCategorySettingsModal(categoryId) {
   let obj = _modDef4723;
   obj = { categoryId };
   obj.pushLazy(asyncRequireImpl(15701, dependencyMap.paths), obj);
-};
+}

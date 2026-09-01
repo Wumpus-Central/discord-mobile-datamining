@@ -31,7 +31,7 @@ const toggle = createToggle.createToggle({
     const hasFlagResult = obj.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_EMAIL);
     obj = { phone, email: hasFlagResult };
     const result = _updateDiscoverabilityDefault.updateDiscoverability(obj);
-  }
+  },
 });
 let obj = {
   useTitle() {
@@ -55,7 +55,7 @@ let obj = {
     const hasFlagResult = obj.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_EMAIL);
     obj = { phone, email: hasFlagResult };
     const result = _updateDiscoverabilityDefault.updateDiscoverability(obj);
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/user_settings/defs/native/DiscoveryByPhoneSetting.tsx");
 

@@ -35,10 +35,15 @@ function CatEarsBackdrop() {
   obj = { style: items, children: null };
   items = [tmp.mascotContainer, { left: result, right: result }, animatedStyle];
   obj = { style: items1, children: null };
-  items1 = [tmp.mascotLayer, ];
+  items1 = [tmp.mascotLayer];
   obj1 = { top: -138 * result1, left: tmp6, right: tmp6 };
   items1[1] = obj1;
-  const obj2 = { source: { uri: top(16525) }, style: tmp.mascotImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+  const obj2 = {
+    source: { uri: top(16525) },
+    style: tmp.mascotImage,
+    accessibilityElementsHidden: true,
+    importantForAccessibility: "no-hide-descendants",
+  };
   obj[1] = callback(closure_4, obj2);
   obj[1] = callback(closure_5, obj);
   return callback(top(4217).View, obj);
@@ -47,7 +52,7 @@ function FeatureRow(arg0) {
   ({ icon, text } = arg0);
   const tmp = callback3();
   let obj = { style: tmp.featureRow, children: null };
-  const items = [icon, ];
+  const items = [icon];
   obj = { variant: "text-sm/medium", color: "text-subtle", style: tmp.featureText, children: text };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
@@ -55,7 +60,17 @@ function FeatureRow(arg0) {
 }
 ({ Image: c4, StyleSheet, View: c5 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { mascotContainer: null, mascotLayer: null, mascotImage: null, framePreviewImage: null, container: null, headerText: null, featureRow: null, featureText: null, featureRows: null };
+createCacheKey = {
+  mascotContainer: null,
+  mascotLayer: null,
+  mascotImage: null,
+  framePreviewImage: null,
+  container: null,
+  headerText: null,
+  featureRow: null,
+  featureText: null,
+  featureRows: null,
+};
 createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.pointerEvents = "none";
@@ -64,18 +79,30 @@ const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey[1] = {};
 createCacheKey[2] = { width: "100%", aspectRatio: 1.8324022346368716 };
 createCacheKey[3] = { width: "100%", aspectRatio: 3.25, resizeMode: "contain" };
-createCacheKey[4] = { padding: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16 };
+createCacheKey[4] = {
+  padding: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_24,
+  gap: ThemesDefault.space.PX_16,
+};
 createCacheKey[5] = { textAlign: "center" };
 let obj1 = {};
-let obj2 = { padding: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16 };
+let obj2 = {
+  padding: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_24,
+  gap: ThemesDefault.space.PX_16,
+};
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16 };
 createCacheKey[7] = { flex: 1 };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16 };
 createCacheKey[8] = { gap: ThemesDefault.space.PX_32 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let closure_12 = { code: "function CollectiblesMobileAnnouncementActionSheetTsx1(){const{animatedPosition,safeAreaTop,MASCOT_SAFE_AREA_NUDGE}=this.__closure;return{transform:[{translateY:animatedPosition.get()+safeAreaTop-MASCOT_SAFE_AREA_NUDGE}]};}" };
+let closure_12 = {
+  code: "function CollectiblesMobileAnnouncementActionSheetTsx1(){const{animatedPosition,safeAreaTop,MASCOT_SAFE_AREA_NUDGE}=this.__closure;return{transform:[{translateY:animatedPosition.get()+safeAreaTop-MASCOT_SAFE_AREA_NUDGE}]};}",
+};
 let obj4 = { gap: ThemesDefault.space.PX_32 };
-let result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesMobileAnnouncementActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/CollectiblesMobileAnnouncementActionSheet.tsx",
+);
 
 export default function CollectiblesMobileAnnouncementActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -97,11 +124,14 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const effect = React.useEffect(() => {
     closure_2.current = markAsDismissed;
   }, items);
-  const effect1 = React.useEffect(() => () => {
-    if (!ref.current) {
-      ref2.current(closure_1_8.AUTO_DISMISS);
-    }
-  }, []);
+  const effect1 = React.useEffect(
+    () => () => {
+      if (!ref.current) {
+        ref2.current(closure_1_8.AUTO_DISMISS);
+      }
+    },
+    [],
+  );
   const items1 = [markAsDismissed];
   const items2 = [markAsDismissed];
   const callback = React.useCallback(() => {
@@ -118,9 +148,20 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const memo = React.useMemo(() => callback2(closure_13, {}), []);
   obj = { onDismiss: callback1, backdropChildren: memo, children: null };
   obj = { style: tmp.container, children: null };
-  obj1 = { source: { uri: metadataDefault }, style: tmp.framePreviewImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-  const items3 = [callback(closure_4, obj1), , , ];
-  const obj3 = { variant: "heading-xl/bold", color: "text-strong", accessibilityRole: "header", style: tmp.headerText, children: null };
+  obj1 = {
+    source: { uri: metadataDefault },
+    style: tmp.framePreviewImage,
+    accessibilityElementsHidden: true,
+    importantForAccessibility: "no-hide-descendants",
+  };
+  const items3 = [callback(closure_4, obj1), , ,];
+  const obj3 = {
+    variant: "heading-xl/bold",
+    color: "text-strong",
+    accessibilityRole: "header",
+    style: tmp.headerText,
+    children: null,
+  };
   const intl2 = tmp2(1236).intl;
   obj3[4] = intl2.string(markAsDismissed(1236).t.vRCvqo);
   items3[1] = callback(markAsDismissed(4474).Text, obj3);
@@ -128,13 +169,16 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const obj5 = { icon: callback(markAsDismissed(6256).PaintIllocon, { size: 32 }), text: null };
   const intl3 = tmp2(1236).intl;
   obj5[1] = intl3.string(markAsDismissed(1236).t["6ZWB0C"]);
-  const items4 = [callback(FeatureRow, obj5), , ];
+  const items4 = [callback(FeatureRow, obj5), ,];
   const obj6 = { icon: callback(markAsDismissed(6256).HeartIllocon, { size: 32 }), text: null };
   const intl4 = tmp2(1236).intl;
   obj6[1] = intl4.string(markAsDismissed(1236).t.MkVbBY);
   items4[1] = callback(FeatureRow, obj6);
   const obj2 = { uri: metadataDefault };
-  items4[2] = callback(FeatureRow, { icon: callback(markAsDismissed(6256).ShopIllocon, { size: 32 }), text: stringResult });
+  items4[2] = callback(FeatureRow, {
+    icon: callback(markAsDismissed(6256).ShopIllocon, { size: 32 }),
+    text: stringResult,
+  });
   obj4[1] = items4;
   items3[2] = callback2(closure_5, obj4);
   const obj8 = { size: "lg", text: null, onPress: null };
@@ -145,4 +189,4 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   obj[1] = items3;
   obj[2] = callback2(closure_5, obj);
   return callback(markAsDismissed(5622).BottomSheet, obj);
-};
+}

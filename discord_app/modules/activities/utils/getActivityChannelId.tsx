@@ -32,4 +32,4 @@ export default function getActivityChannelId(userId) {
     }
   }
   return tmp3;
-};
+}

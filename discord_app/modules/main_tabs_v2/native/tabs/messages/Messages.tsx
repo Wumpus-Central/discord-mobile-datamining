@@ -16,7 +16,9 @@ let closure_9 = createCacheKey.createStyles(() => {
   obj[0] = obj;
   return obj;
 });
-let closure_10 = { code: "function MessagesTsx1(event){const{scrollPosition,handleGuildsNavigationScroll}=this.__closure;scrollPosition.set(event.contentOffset.y);handleGuildsNavigationScroll(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);}" };
+let closure_10 = {
+  code: "function MessagesTsx1(event){const{scrollPosition,handleGuildsNavigationScroll}=this.__closure;scrollPosition.set(event.contentOffset.y);handleGuildsNavigationScroll(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);}",
+};
 const memoResult = importAllResult.memo(function Messages(style) {
   let sharedValue;
   let dataKey;
@@ -33,7 +35,9 @@ const memoResult = importAllResult.memo(function Messages(style) {
   const youBarTotalHeight1 = obj3.useYouBarTotalHeight(-16);
   const tmp4 = dataKey(sections[7]);
   const tmp5 = sharedValue;
-  ({ headerSize, listItemHeight, listItemSizes, listItemSuggestedFriendHeight, listLeft, listTop } = dataKey(sections[12])());
+  ({ headerSize, listItemHeight, listItemSizes, listItemSuggestedFriendHeight, listLeft, listTop } = dataKey(
+    sections[12],
+  )());
   const tmp11 = dataKey(sections[13])();
   dataKey = tmp11.dataKey;
   sections = tmp11.sections;
@@ -45,7 +49,9 @@ const memoResult = importAllResult.memo(function Messages(style) {
   dataKey(sections[15])({ listRef: ref, listRefHappeningNow: ref1 });
   dataKey(sections[16])();
   const obj5 = dataKey(sections[14]);
-  const commonTriggerPoint = sharedValue(sections[17]).useCommonTriggerPoint(sharedValue(sections[18]).DmGdmListRenderTriggerPoint);
+  const commonTriggerPoint = sharedValue(sections[17]).useCommonTriggerPoint(
+    sharedValue(sections[18]).DmGdmListRenderTriggerPoint,
+  );
   const items = [dataKey];
   const effect = externalScrollEventHandler.useEffect(() => {
     if (null != dataKey) {
@@ -92,7 +98,21 @@ const memoResult = importAllResult.memo(function Messages(style) {
   O.__closure = { scrollPosition: sharedValue, handleGuildsNavigationScroll: externalScrollEventHandler };
   O.__workletHash = 5461403437592;
   O.__initData = closure_10;
-  obj = { accessibilityLabel: null, data: null, handleScrollAnimated: null, insetEnd: null, listItemHeight: null, listItemSizes: null, listItemSuggestedFriendHeight: null, listLeft: null, listRefHappeningNow: null, listTop: null, recycleItems: null, scrollIndicatorInsetBottom: null, scrollPosition: null };
+  obj = {
+    accessibilityLabel: null,
+    data: null,
+    handleScrollAnimated: null,
+    insetEnd: null,
+    listItemHeight: null,
+    listItemSizes: null,
+    listItemSuggestedFriendHeight: null,
+    listLeft: null,
+    listRefHappeningNow: null,
+    listTop: null,
+    recycleItems: null,
+    scrollIndicatorInsetBottom: null,
+    scrollPosition: null,
+  };
   const obj8 = sharedValue(sections[9]);
   const intl = sharedValue(sections[26]).intl;
   obj[0] = intl.string(sharedValue(sections[26]).t.OIgYlQ);
@@ -112,7 +132,7 @@ const memoResult = importAllResult.memo(function Messages(style) {
   obj1 = { style: items1, children: null };
   items1 = [tmp.container, style.style];
   obj2 = { backgroundColor: tmp.container.backgroundColor, children: null };
-  const items2 = [callback(dataKey(sections[28]), { height: headerSize, scrollPosition: sharedValue }), , ];
+  const items2 = [callback(dataKey(sections[28]), { height: headerSize, scrollPosition: sharedValue }), ,];
   if (tmp11.showFullscreenEmptyState) {
     let tmp22Result = tmp22(tmp2(tmp3[29]), {});
   } else {

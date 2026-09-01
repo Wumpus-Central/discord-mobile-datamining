@@ -39,7 +39,7 @@ function VerifiedIcon(arg0) {
     obj[0] = tmp4(11179);
     obj[1] = PLATFORM_TWITTER;
     const merged = Object.assign(obj);
-    const items = [callback(tmp2(1297).Icon, obj), ];
+    const items = [callback(tmp2(1297).Icon, obj)];
     obj1 = { source: null, color: null };
     obj1[0] = tmp4(11180);
     obj1[1] = WHITE;
@@ -56,7 +56,18 @@ let c3 = importAllResult;
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const REFRESH_SMALL_16 = require("Button").Icon.Sizes.REFRESH_SMALL_16;
 const iconSize = Button.getIconSize(REFRESH_SMALL_16);
-obj = { cardContainer: obj, refreshCardTitle: null, connectedAccountName: null, connectedAccountNameText: null, verifiedIconContainer: null, verifiedIcon: null, connectionMetadata: null, metadataItem: null, poweredByContainer: null, applicationIcon: null };
+obj = {
+  cardContainer: obj,
+  refreshCardTitle: null,
+  connectedAccountName: null,
+  connectedAccountNameText: null,
+  verifiedIconContainer: null,
+  verifiedIcon: null,
+  connectionMetadata: null,
+  metadataItem: null,
+  poweredByContainer: null,
+  applicationIcon: null,
+};
 obj = { paddingBottom: CARD_PADDING - 12 };
 Button = { marginBottom: ThemesDefault.space.PX_8 };
 obj[1] = Button;
@@ -149,13 +160,15 @@ let closure_18 = importAllResult.memo((userId) => {
     }, items);
     const callback1 = createdAtDate.useCallback(() => {
       trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
-      const result = userId(trackUserProfileAction[23]).triggerHapticFeedback(userId(trackUserProfileAction[23]).HapticFeedbackTypes.IMPACT_LIGHT);
+      const result = userId(trackUserProfileAction[23]).triggerHapticFeedback(
+        userId(trackUserProfileAction[23]).HapticFeedbackTypes.IMPACT_LIGHT,
+      );
       const obj = userId(trackUserProfileAction[23]);
       userId(trackUserProfileAction[24]).copy(account.name);
       const obj2 = userId(trackUserProfileAction[24]);
       const result1 = userId(trackUserProfileAction[25]).presentCopiedToClipboard();
     }, items1);
-    const items2 = [account.name, createdAtDate, ];
+    const items2 = [account.name, createdAtDate];
     let name;
     if (value != null) {
       name = value.name;
@@ -211,7 +224,7 @@ let closure_18 = importAllResult.memo((userId) => {
     obj[1] = token1;
     obj[2] = tmp.connectedAccountNameText;
     obj[4] = account.name;
-    const items4 = [callback(tmp2(tmp3[27]).Text, obj), ];
+    const items4 = [callback(tmp2(tmp3[27]).Text, obj)];
     let tmp29Result = null;
     if (account.verified) {
       obj1 = { theme: null, isTwitterVerifiedAccount: null };
@@ -232,7 +245,7 @@ let closure_18 = importAllResult.memo((userId) => {
         obj2[2] = intl.format(tmp2(tmp3[26]).t["9rfonh"], obj3);
         tmp29Result = tmp29(tmp2(tmp3[27]).Text, obj2);
       }
-      const items5 = [tmp29Result, ];
+      const items5 = [tmp29Result];
       let tmp29Result1 = null;
       if (tmp12) {
         const obj4 = { style: null, children: null };
@@ -246,7 +259,17 @@ let closure_18 = importAllResult.memo((userId) => {
       tmp27Result = tmp27(closure_14, obj5);
       const tmp34 = closure_14;
     }
-    const obj6 = { label: null, subLabel: null, icon: null, trailing: null, onPress: null, onLongPress: null, accessibilityLabel: null, accessibilityHint: null, accessibilityRole: "button" };
+    const obj6 = {
+      label: null,
+      subLabel: null,
+      icon: null,
+      trailing: null,
+      onPress: null,
+      onLongPress: null,
+      accessibilityLabel: null,
+      accessibilityHint: null,
+      accessibilityRole: "button",
+    };
     obj6[0] = tmp27Result;
     obj6[1] = tmp27Result;
     const obj7 = { size: null, source: null };
@@ -336,7 +359,15 @@ let closure_19 = importAllResult.memo((application) => {
     const intl = application(str[26]).intl;
     return intl.formatToPlainString(application(str[26]).t.OKzaN3, { name: application.name });
   }, items2);
-  obj = { label: str, icon: null, onPress: null, onLongPress: null, accessibilityLabel: null, accessibilityHint: null, accessibilityRole: "button" };
+  obj = {
+    label: str,
+    icon: null,
+    onPress: null,
+    onLongPress: null,
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    accessibilityRole: "button",
+  };
   let tmp8Result;
   if (null != iconSource) {
     obj = { size: null, source: null, style: null };
@@ -369,7 +400,7 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
       tmp7 = callback(tmp2(4474).Text, obj);
     }
   }
-  const items = [tmp7, , ];
+  const items = [tmp7, ,];
   let tmp9 = null;
   if (null != roleConnectionMetadataItems) {
     tmp9 = null;
@@ -388,7 +419,7 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
   obj4[2] = intl.format(applicationRoleConnection(1236).t.zIT9YA, {
     applicationHook() {
       return applicationRoleConnection.application.name;
-    }
+    },
   });
   obj3[1] = callback(applicationRoleConnection(4474).Text, obj4);
   items[2] = callback(View, obj3);
@@ -404,12 +435,16 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
   const obj5 = {
     applicationHook() {
       return applicationRoleConnection.application.name;
-    }
+    },
   };
   const tmp5 = closure_13;
   const tmp5Result = closure_13(closure_14, obj2);
   const tmp6 = closure_14;
-  obj6[2] = callback(applicationRoleConnection(1297).Icon, { size: applicationRoleConnection(1297).Icon.Sizes.MEDIUM, source: applicationIconSource, disableColor: true });
+  obj6[2] = callback(applicationRoleConnection(1297).Icon, {
+    size: applicationRoleConnection(1297).Icon.Sizes.MEDIUM,
+    source: applicationIconSource,
+    disableColor: true,
+  });
   return callback(applicationRoleConnection(5599).TableRow, obj6);
 });
 let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConnections.tsx");
@@ -432,11 +467,23 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   ({ connections, appIdentities } = theme(12514)(userId));
   if (!stateFromStores) {
     const items2 = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(connections.map((account) => closure_1_12(closure_1_18, { account, theme, locale: closure_2, userId }, account.id)), 0);
-    arraySpreadResult = HermesBuiltin.arraySpread(appIdentities.map((application) => {
-      const identity = application.identity;
-      return callback(closure_19, { identity, application: application.application }, "" + identity.application_id + "-" + identity.provider_issued_user_id);
-    }), arraySpreadResult);
+    let arraySpreadResult = HermesBuiltin.arraySpread(
+      connections.map((account) =>
+        closure_1_12(closure_1_18, { account, theme, locale: closure_2, userId }, account.id),
+      ),
+      0,
+    );
+    arraySpreadResult = HermesBuiltin.arraySpread(
+      appIdentities.map((application) => {
+        const identity = application.identity;
+        return callback(
+          closure_19,
+          { identity, application: application.application },
+          "" + identity.application_id + "-" + identity.provider_issued_user_id,
+        );
+      }),
+      arraySpreadResult,
+    );
     obj = { style: null, title: null, titleStyle: null, children: null };
     const items3 = [tmp.cardContainer, userId.style];
     obj[0] = items3;
@@ -458,7 +505,9 @@ export const UserProfileApplicationRoleConnectionsCard = function UserProfileApp
   const items = [closure_6];
   if (!obj.useStateFromStores(items, () => obj.hidePersonalInformation)) {
     if (0 !== arr.length) {
-      const mapped = arr.map((application) => callback(closure_20, { applicationRoleConnection: application }, application.application.id));
+      const mapped = arr.map((application) =>
+        callback(closure_20, { applicationRoleConnection: application }, application.application.id),
+      );
       obj = { style: null, title: null, titleStyle: null, children: null };
       const items1 = [tmp.cardContainer, style];
       obj[0] = items1;

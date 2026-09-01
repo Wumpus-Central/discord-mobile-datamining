@@ -13,7 +13,15 @@ const jsx = jsxProd.jsx;
 let obj = { captionText: null, labelContainer: null };
 obj = { fontFamily: ME.Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.WHITE, fontSize: 12 };
 obj[0] = obj;
-const obj1 = { backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 2, position: "absolute", right: 6, bottom: 6 };
+const obj1 = {
+  backgroundColor: null,
+  borderRadius: null,
+  paddingHorizontal: 8,
+  paddingVertical: 2,
+  position: "absolute",
+  right: 6,
+  bottom: 6,
+};
 obj1[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj1[1] = ThemesDefault.radii.xs;
 obj[1] = obj1;

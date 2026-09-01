@@ -3,7 +3,9 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/MessageRequestNotification.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_notifications/native/MessageRequestNotification.tsx",
+);
 
 export default function MessageRequestInAppNotification(notification) {
   notification = notification.notification;
@@ -38,4 +40,4 @@ export default function MessageRequestInAppNotification(notification) {
   obj[3] = callback;
   obj[4] = notification;
   return jsx(author(10255).NotificationPressable, { text: null });
-};
+}

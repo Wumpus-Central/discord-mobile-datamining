@@ -3,7 +3,7 @@ import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
 function buildRequestHashPayload(arg0, platform) {
-  const items = [arg0, platform.platform, , , , , ];
+  const items = [arg0, platform.platform, , , , ,];
   let str = "";
   if (null != platform.ageLower) {
     const _String = String;
@@ -40,7 +40,7 @@ function _requestPlayIntegrityToken() {
     c2 = 0;
     c1 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const tmp8 = (function getPlayIntegrityCloudProjectNumber() {
         if ("production" === PROJECT_ENV) {
           return 179099419678;
@@ -84,7 +84,7 @@ function _getAgeSignalIntegrityToken() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();

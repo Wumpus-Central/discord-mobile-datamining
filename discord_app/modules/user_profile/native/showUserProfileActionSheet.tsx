@@ -46,33 +46,54 @@ export default showUserProfileActionSheet;
 export const getUserProfileActionSheetKey = function getUserProfileActionSheetKey(userId) {
   return "UserProfile" + userId;
 };
-export const getUserProfileBlockedSpeedBumpActionSheetKey = function getUserProfileBlockedSpeedBumpActionSheetKey(arg0) {
+export const getUserProfileBlockedSpeedBumpActionSheetKey = function getUserProfileBlockedSpeedBumpActionSheetKey(
+  arg0,
+) {
   return "UserProfileBlockedSpeedBump" + arg0;
 };
-export const getUserProfileIgnoredSpeedBumpActionSheetKey = function getUserProfileIgnoredSpeedBumpActionSheetKey(arg0) {
+export const getUserProfileIgnoredSpeedBumpActionSheetKey = function getUserProfileIgnoredSpeedBumpActionSheetKey(
+  arg0,
+) {
   return "UserProfileIgnoredSpeedBump" + arg0;
 };
 export const showUserProfileActionSheetPostConnection = function showUserProfileActionSheetPostConnection(arg0) {
   closure_0 = arg0;
-  addPostConnectionCallback(callback(function*() {
-    if (paths === 2) {
-      paths = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  addPostConnectionCallback(
+    callback(function* () {
+      if (paths === 2) {
+        paths = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        paths = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
+        try {
+          paths = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              paths = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              paths = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const userId = tmp4;
+              c1 = 1;
+              paths = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_0(paths[4])(paths[3], paths.paths);
+              return obj1;
+            }
+          } else if (arg0 === 1) {
             paths = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -81,32 +102,17 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
             obj[0] = arg1;
             return obj;
           } else {
-            const userId = tmp4;
-            c1 = 1;
-            paths = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(paths[4])(paths[3], paths.paths);
-            return obj1;
+            if (null != _default.getUser(userId.userId)) {
+              closure_1_6(userId);
+            }
+            paths = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          paths = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          paths = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          if (null != _default.getUser(userId.userId)) {
-            closure_1_6(userId);
-          }
-          paths = 3;
-          return { value: "HermesInternal", done: null };
+        } catch (tmp14) {
+          paths = tmp;
+          throw tmp14;
         }
-      } catch (tmp14) {
-        paths = tmp;
-        throw tmp14;
       }
-    }
-  }));
+    }),
+  );
 };

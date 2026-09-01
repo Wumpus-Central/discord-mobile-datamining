@@ -80,7 +80,10 @@ export const useShareSearchResults = function useShareSearchResults(targetDestin
     tmp8 = queryMode;
     obj4 = items2;
   }
-  const tmp9 = channelFilter(flag.useState({ query: quickSwitcherOptions.query, queryMode: tmp8, resultTypes: obj4 }), 2);
+  const tmp9 = channelFilter(
+    flag.useState({ query: quickSwitcherOptions.query, queryMode: tmp8, resultTypes: obj4 }),
+    2,
+  );
   first = tmp9[0];
   closure_10 = tmp11;
   const items3 = [tmp9[1]];
@@ -124,9 +127,42 @@ export const useShareSearchResults = function useShareSearchResults(targetDestin
   stateFromStores1 = tmpResult.useStateFromStores(items6, () => query.getFrequentlyWithoutFetchingLatest());
   const obj3 = targetDestination(originDestination[6]);
   const items7 = [stateFromStores];
-  stateFromStores2 = targetDestination(originDestination[7]).useStateFromStores(items7, () => stateFromStores.isConnected());
+  stateFromStores2 = targetDestination(originDestination[7]).useStateFromStores(items7, () =>
+    stateFromStores.isConnected(),
+  );
   closure_17 = tmp20;
-  obj = { results: obj2.useMemo(() => selectedDestinations(originDestination[10])({ results, hasQuery: closure_17, queryMode: queryMode2, targetDestination, frequentChannels: stateFromStores1, selectedDestinations, pinnedDestinations: current, originDestination, channelFilter, includeMissingDMs: flag, isConnected: stateFromStores2 }), items8), updateSearchText: callback };
-  items8 = [results, "" !== query, queryMode2, targetDestination, stateFromStores1, selectedDestinations, current, originDestination, channelFilter, flag, stateFromStores2];
+  obj = {
+    results: obj2.useMemo(
+      () =>
+        selectedDestinations(originDestination[10])({
+          results,
+          hasQuery: closure_17,
+          queryMode: queryMode2,
+          targetDestination,
+          frequentChannels: stateFromStores1,
+          selectedDestinations,
+          pinnedDestinations: current,
+          originDestination,
+          channelFilter,
+          includeMissingDMs: flag,
+          isConnected: stateFromStores2,
+        }),
+      items8,
+    ),
+    updateSearchText: callback,
+  };
+  items8 = [
+    results,
+    "" !== query,
+    queryMode2,
+    targetDestination,
+    stateFromStores1,
+    selectedDestinations,
+    current,
+    originDestination,
+    channelFilter,
+    flag,
+    stateFromStores2,
+  ];
   return obj;
 };

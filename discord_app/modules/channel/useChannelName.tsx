@@ -93,7 +93,7 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
                   stringResult = str;
                   if (flag2) {
                     const _HermesInternal3 = HermesInternal;
-                    stringResult = "#\"" + str.replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\"";
+                    stringResult = '#"' + str.replace(/\\/g, "\\\\").replace(/"/g, '\\"') + '"';
                     const str9 = str.replace(/\\/g, "\\\\");
                   }
                 }
@@ -112,7 +112,7 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
                 }
                 if (flag2) {
                   const _HermesInternal2 = HermesInternal;
-                  let combined1 = "#\"" + str.replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\"";
+                  let combined1 = '#"' + str.replace(/\\/g, "\\\\").replace(/"/g, '\\"') + '"';
                   const str4 = str.replace(/\\/g, "\\\\");
                 } else {
                   combined1 = str;
@@ -120,7 +120,7 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
                     combined1 = str;
                     if (channel.isThread()) {
                       const _HermesInternal = HermesInternal;
-                      combined1 = "\"" + str + "\"";
+                      combined1 = '"' + str + '"';
                     }
                   }
                 }
@@ -156,7 +156,7 @@ export default function useChannelName(arg0) {
     }
     return tmp2;
   });
-};
+}
 export const computeDefaultGroupDmNameFromUserIds = function computeDefaultGroupDmNameFromUserIds(arr, getUser) {
   const _require = arg2;
   const mapped = arr.map(getUser.getUser);
@@ -254,8 +254,8 @@ export const computeGroupDmName = function computeGroupDmName(isObfuscated) {
 };
 export { computeChannelName };
 export const escapeChannelName = function escapeChannelName(channelName) {
-  return channelName.replace(/\\/g, "\\\\").replace(/"/g, "\\\"");
+  return channelName.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
 };
 export const unescapeChannelName = function unescapeChannelName(str) {
-  return str.replace(/\\"/g, "\"").replace(/\\\\/g, "\\");
+  return str.replace(/\\"/g, '"').replace(/\\\\/g, "\\");
 };

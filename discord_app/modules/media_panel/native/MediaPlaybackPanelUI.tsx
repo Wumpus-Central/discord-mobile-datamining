@@ -12,22 +12,63 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: error, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelModes);
-createCacheKey = { wrapperAnimationPresets: { opacity: 0 }, wrapper: { position: "absolute", top: 0, left: 0, zIndex: 1 }, mask: null, maskElevation: null, maskEmptyElevation: null, content: null };
-createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, overflow: "hidden", borderWidth: 1, borderRadius: ThemesDefault.radii.xl, borderColor: ThemesDefault.colors.CHAT_BORDER };
+createCacheKey = {
+  wrapperAnimationPresets: { opacity: 0 },
+  wrapper: { position: "absolute", top: 0, left: 0, zIndex: 1 },
+  mask: null,
+  maskElevation: null,
+  maskEmptyElevation: null,
+  content: null,
+};
+createCacheKey = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  overflow: "hidden",
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.xl,
+  borderColor: ThemesDefault.colors.CHAT_BORDER,
+};
 createCacheKey[2] = createCacheKey;
 let merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW_HOVER);
 createCacheKey[3] = {};
-createCacheKey[4] = { xOffset: 0, yOffset: 0, shadowColorIos: "#000000", shadowOpacity: 0, shadowRadius: 0, elevation: 0, shadowColorAndroid: "#000000" };
+createCacheKey[4] = {
+  xOffset: 0,
+  yOffset: 0,
+  shadowColorIos: "#000000",
+  shadowOpacity: 0,
+  shadowRadius: 0,
+  elevation: 0,
+  shadowColorAndroid: "#000000",
+};
 createCacheKey[5] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let closure_13 = { code: "function MediaPlaybackPanelUITsx1(){const{mode,windowDimensions,canShowPIP}=this.__closure;return{mode:mode.get(),windowDimensions:windowDimensions,canShowPIP:canShowPIP.get()};}" };
-let closure_14 = { code: "function MediaPlaybackPanelUITsx2(props,previous){const{cheapWorkletShallowEqual,MediaPlaybackPanelModes,updateSharedValueIfChanged,wrapperDimensions,wrapperOffset}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:modeToSet,windowDimensions:windowDimensions,canShowPIP:canShowPIP}=props;switch(modeToSet){case MediaPlaybackPanelModes.PIP:{const{width:width,height:height}=canShowPIP?{width:120,height:120}:{width:0,height:0};updateSharedValueIfChanged(wrapperDimensions,{width:width,height:height});break;}case MediaPlaybackPanelModes.DISMISSED:updateSharedValueIfChanged(wrapperOffset,{y:windowDimensions.height});break;default:modeToSet;}}" };
-let closure_15 = { code: "function MediaPlaybackPanelUITsx3(){const{mode,wrapperDimensions,pipAvoidanceSpecs,wrapperOffset,windowDimensions,safeArea,pipState}=this.__closure;return{mode:mode.get(),wrapperDimensions:wrapperDimensions.get(),pipAvoidanceSpecs:pipAvoidanceSpecs.get(),wrapperOffset:wrapperOffset.get(),windowDimensions:windowDimensions,safeArea:safeArea,pipState:pipState.get()};}" };
-let closure_16 = { code: "function MediaPlaybackPanelUITsx4(props,previous){const{cheapWorkletShallowEqual,MediaPlaybackPanelModes,getClampedPIPPosition,safeArea,disableHorizontalSafeAreas,wrapperOpacity,animateWrapperTranslation,wrapperTranslationX,wrapperTranslationY}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,wrapperDimensions:wrapperDimensions,pipAvoidanceSpecs:pipAvoidanceSpecs,wrapperOffset:wrapperOffset,windowDimensions:windowDimensions,pipState:pipState}=props;let x=0;let y=0;const{gestureActive:gestureActive}=wrapperOffset;const{x:pipX,y:pipY}=pipState;switch(mode){case MediaPlaybackPanelModes.PIP:{const clampedPosition=getClampedPIPPosition({pipX:pipX,pipY:pipY,width:120,height:120,windowDimensions:windowDimensions,safeArea:safeArea,bottomAvoidanceRegion:pipAvoidanceSpecs.bottom,topAvoidanceRegion:pipAvoidanceSpecs.top,positionOffset:gestureActive?wrapperOffset:undefined,disableHorizontalSafeAreas:disableHorizontalSafeAreas});x=clampedPosition.x;y=clampedPosition.y;wrapperOpacity.set(1);break;}case MediaPlaybackPanelModes.DISMISSED:{y=wrapperDimensions.height;wrapperOpacity.set(0);break;}}const previousPIPState=previous===null||previous===void 0?void 0:previous.pipState;const pipPositionChanged=pipX!==(previousPIPState===null||previousPIPState===void 0?void 0:previousPIPState.x)||pipY!==(previousPIPState===null||previousPIPState===void 0?void 0:previousPIPState.y);const shouldAnimateForPIP=mode===MediaPlaybackPanelModes.PIP&&pipPositionChanged&&!wrapperOffset.gestureActive;animateWrapperTranslation.set(shouldAnimateForPIP||mode!==MediaPlaybackPanelModes.PIP);wrapperTranslationX.set(x);wrapperTranslationY.set(y);}" };
-let closure_17 = { code: "function MediaPlaybackPanelUITsx5(){const{withTiming,wrapperOpacity,timingFast,animateWrapperTranslation,withSpring,wrapperTranslationX,MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS,wrapperTranslationY,wrapperDimensions,wrapperElevationStyles}=this.__closure;const opacity=withTiming(wrapperOpacity.get(),timingFast,'respect-motion-settings');return{transform:[{translateX:animateWrapperTranslation.get()?withSpring(wrapperTranslationX.get(),MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS,'animate-always'):wrapperTranslationX.get()},{translateY:animateWrapperTranslation.get()?withSpring(wrapperTranslationY.get(),MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS,animateWrapperTranslation.get()?'respect-motion-settings':'animate-never'):wrapperTranslationY.get()}],opacity:opacity,width:wrapperDimensions.get().width,height:wrapperDimensions.get().height,...wrapperElevationStyles};}" };
-let closure_18 = { code: "function MediaPlaybackPanelUITsx6(){const{withSpring,borderRadius,BORDER_RADIUS_PHYSICS,maskElevationStyles}=this.__closure;return{borderRadius:withSpring(borderRadius,BORDER_RADIUS_PHYSICS,'animate-always'),...maskElevationStyles};}" };
-let closure_19 = { code: "function MediaPlaybackPanelUITsx7(){const{windowDimensions}=this.__closure;const{height:height,width:width}=windowDimensions;return{position:'absolute',top:0,left:0,width:width,height:height,overflow:'hidden'};}" };
-let closure_20 = { code: "function MediaPlaybackPanelUITsx8(){const{styles}=this.__closure;const topBorderRadius=0;const top=0;return{flexDirection:'column',backgroundColor:styles.content.backgroundColor,borderTopStartRadius:topBorderRadius,borderTopEndRadius:topBorderRadius,top:top,overflow:'hidden'};}" };
+let closure_13 = {
+  code: "function MediaPlaybackPanelUITsx1(){const{mode,windowDimensions,canShowPIP}=this.__closure;return{mode:mode.get(),windowDimensions:windowDimensions,canShowPIP:canShowPIP.get()};}",
+};
+let closure_14 = {
+  code: "function MediaPlaybackPanelUITsx2(props,previous){const{cheapWorkletShallowEqual,MediaPlaybackPanelModes,updateSharedValueIfChanged,wrapperDimensions,wrapperOffset}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:modeToSet,windowDimensions:windowDimensions,canShowPIP:canShowPIP}=props;switch(modeToSet){case MediaPlaybackPanelModes.PIP:{const{width:width,height:height}=canShowPIP?{width:120,height:120}:{width:0,height:0};updateSharedValueIfChanged(wrapperDimensions,{width:width,height:height});break;}case MediaPlaybackPanelModes.DISMISSED:updateSharedValueIfChanged(wrapperOffset,{y:windowDimensions.height});break;default:modeToSet;}}",
+};
+let closure_15 = {
+  code: "function MediaPlaybackPanelUITsx3(){const{mode,wrapperDimensions,pipAvoidanceSpecs,wrapperOffset,windowDimensions,safeArea,pipState}=this.__closure;return{mode:mode.get(),wrapperDimensions:wrapperDimensions.get(),pipAvoidanceSpecs:pipAvoidanceSpecs.get(),wrapperOffset:wrapperOffset.get(),windowDimensions:windowDimensions,safeArea:safeArea,pipState:pipState.get()};}",
+};
+let closure_16 = {
+  code: "function MediaPlaybackPanelUITsx4(props,previous){const{cheapWorkletShallowEqual,MediaPlaybackPanelModes,getClampedPIPPosition,safeArea,disableHorizontalSafeAreas,wrapperOpacity,animateWrapperTranslation,wrapperTranslationX,wrapperTranslationY}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,wrapperDimensions:wrapperDimensions,pipAvoidanceSpecs:pipAvoidanceSpecs,wrapperOffset:wrapperOffset,windowDimensions:windowDimensions,pipState:pipState}=props;let x=0;let y=0;const{gestureActive:gestureActive}=wrapperOffset;const{x:pipX,y:pipY}=pipState;switch(mode){case MediaPlaybackPanelModes.PIP:{const clampedPosition=getClampedPIPPosition({pipX:pipX,pipY:pipY,width:120,height:120,windowDimensions:windowDimensions,safeArea:safeArea,bottomAvoidanceRegion:pipAvoidanceSpecs.bottom,topAvoidanceRegion:pipAvoidanceSpecs.top,positionOffset:gestureActive?wrapperOffset:undefined,disableHorizontalSafeAreas:disableHorizontalSafeAreas});x=clampedPosition.x;y=clampedPosition.y;wrapperOpacity.set(1);break;}case MediaPlaybackPanelModes.DISMISSED:{y=wrapperDimensions.height;wrapperOpacity.set(0);break;}}const previousPIPState=previous===null||previous===void 0?void 0:previous.pipState;const pipPositionChanged=pipX!==(previousPIPState===null||previousPIPState===void 0?void 0:previousPIPState.x)||pipY!==(previousPIPState===null||previousPIPState===void 0?void 0:previousPIPState.y);const shouldAnimateForPIP=mode===MediaPlaybackPanelModes.PIP&&pipPositionChanged&&!wrapperOffset.gestureActive;animateWrapperTranslation.set(shouldAnimateForPIP||mode!==MediaPlaybackPanelModes.PIP);wrapperTranslationX.set(x);wrapperTranslationY.set(y);}",
+};
+let closure_17 = {
+  code: "function MediaPlaybackPanelUITsx5(){const{withTiming,wrapperOpacity,timingFast,animateWrapperTranslation,withSpring,wrapperTranslationX,MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS,wrapperTranslationY,wrapperDimensions,wrapperElevationStyles}=this.__closure;const opacity=withTiming(wrapperOpacity.get(),timingFast,'respect-motion-settings');return{transform:[{translateX:animateWrapperTranslation.get()?withSpring(wrapperTranslationX.get(),MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS,'animate-always'):wrapperTranslationX.get()},{translateY:animateWrapperTranslation.get()?withSpring(wrapperTranslationY.get(),MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS,animateWrapperTranslation.get()?'respect-motion-settings':'animate-never'):wrapperTranslationY.get()}],opacity:opacity,width:wrapperDimensions.get().width,height:wrapperDimensions.get().height,...wrapperElevationStyles};}",
+};
+let closure_18 = {
+  code: "function MediaPlaybackPanelUITsx6(){const{withSpring,borderRadius,BORDER_RADIUS_PHYSICS,maskElevationStyles}=this.__closure;return{borderRadius:withSpring(borderRadius,BORDER_RADIUS_PHYSICS,'animate-always'),...maskElevationStyles};}",
+};
+let closure_19 = {
+  code: "function MediaPlaybackPanelUITsx7(){const{windowDimensions}=this.__closure;const{height:height,width:width}=windowDimensions;return{position:'absolute',top:0,left:0,width:width,height:height,overflow:'hidden'};}",
+};
+let closure_20 = {
+  code: "function MediaPlaybackPanelUITsx8(){const{styles}=this.__closure;const topBorderRadius=0;const top=0;return{flexDirection:'column',backgroundColor:styles.content.backgroundColor,borderTopStartRadius:topBorderRadius,borderTopEndRadius:topBorderRadius,top:top,overflow:'hidden'};}",
+};
 let obj1 = {};
 let obj2 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let result = require("set").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelUI.tsx");
@@ -40,7 +81,14 @@ export default function MediaPlaybackPanelUI() {
   ({ wrapperDimensions, wrapperOffset } = mode(wrapperOffset(16801)));
   let obj = wrapperDimensions(4217);
   const fn = function p() {
-    return { position: "absolute", top: 0, left: 0, width: wrapperOffset.width, height: wrapperOffset.height, overflow: "hidden" };
+    return {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: wrapperOffset.width,
+      height: wrapperOffset.height,
+      overflow: "hidden",
+    };
   };
   fn.__closure = { windowDimensions: tmp4 };
   fn.__workletHash = 5768037716653;
@@ -103,7 +151,13 @@ export default function MediaPlaybackPanelUI() {
       }
     }
   };
-  obj = { cheapWorkletShallowEqual: wrapperDimensions(9209).cheapWorkletShallowEqual, MediaPlaybackPanelModes: canShowPIP, updateSharedValueIfChanged: wrapperOffset(10991), wrapperDimensions, wrapperOffset };
+  obj = {
+    cheapWorkletShallowEqual: wrapperDimensions(9209).cheapWorkletShallowEqual,
+    MediaPlaybackPanelModes: canShowPIP,
+    updateSharedValueIfChanged: wrapperOffset(10991),
+    wrapperDimensions,
+    wrapperOffset,
+  };
   fn3.__closure = obj;
   fn3.__workletHash = 5458787116551;
   fn3.__initData = maskEmptyElevation;
@@ -121,11 +175,27 @@ export default function MediaPlaybackPanelUI() {
   let obj8 = wrapperDimensions(4217);
   class R {
     constructor() {
-      obj = { mode: mode.get(), wrapperDimensions: wrapperDimensions.get(), pipAvoidanceSpecs: pipAvoidanceSpecs.get(), wrapperOffset: wrapperOffset.get(), windowDimensions: closure_4, safeArea: closure_3, pipState: pipState.get() };
+      obj = {
+        mode: mode.get(),
+        wrapperDimensions: wrapperDimensions.get(),
+        pipAvoidanceSpecs: pipAvoidanceSpecs.get(),
+        wrapperOffset: wrapperOffset.get(),
+        windowDimensions: closure_4,
+        safeArea: closure_3,
+        pipState: pipState.get(),
+      };
       return obj;
     }
   }
-  R.__closure = { mode, wrapperDimensions, pipAvoidanceSpecs, wrapperOffset, windowDimensions: tmp10, safeArea: tmp9, pipState };
+  R.__closure = {
+    mode,
+    wrapperDimensions,
+    pipAvoidanceSpecs,
+    wrapperOffset,
+    windowDimensions: tmp10,
+    safeArea: tmp9,
+    pipState,
+  };
   R.__workletHash = 4950432193502;
   R.__initData = maskElevation;
   class C {
@@ -140,7 +210,18 @@ export default function MediaPlaybackPanelUI() {
         tmp7 = canShowPIP;
         if (canShowPIP.PIP === mode) {
           tmpResult = tmp(tmp2[15]);
-          obj = { pipX: null, pipY: null, width: 120, height: 120, windowDimensions: null, safeArea: null, bottomAvoidanceRegion: null, topAvoidanceRegion: null, positionOffset: null, disableHorizontalSafeAreas: null };
+          obj = {
+            pipX: null,
+            pipY: null,
+            width: 120,
+            height: 120,
+            windowDimensions: null,
+            safeArea: null,
+            bottomAvoidanceRegion: null,
+            topAvoidanceRegion: null,
+            positionOffset: null,
+            disableHorizontalSafeAreas: null,
+          };
           obj[0] = x;
           obj[1] = y;
           obj[4] = tmp5;
@@ -200,7 +281,17 @@ export default function MediaPlaybackPanelUI() {
       return;
     }
   }
-  obj = { cheapWorkletShallowEqual: wrapperDimensions(9209).cheapWorkletShallowEqual, MediaPlaybackPanelModes: canShowPIP, getClampedPIPPosition: wrapperDimensions(16600).getClampedPIPPosition, safeArea: tmp9, disableHorizontalSafeAreas: tmp18, wrapperOpacity: sharedValue2, animateWrapperTranslation: sharedValue3, wrapperTranslationX: sharedValue, wrapperTranslationY: sharedValue1 };
+  obj = {
+    cheapWorkletShallowEqual: wrapperDimensions(9209).cheapWorkletShallowEqual,
+    MediaPlaybackPanelModes: canShowPIP,
+    getClampedPIPPosition: wrapperDimensions(16600).getClampedPIPPosition,
+    safeArea: tmp9,
+    disableHorizontalSafeAreas: tmp18,
+    wrapperOpacity: sharedValue2,
+    animateWrapperTranslation: sharedValue3,
+    wrapperTranslationX: sharedValue,
+    wrapperTranslationY: sharedValue1,
+  };
   C.__closure = obj;
   C.__workletHash = 10793489581273;
   C.__initData = animatedStyle1;
@@ -221,7 +312,11 @@ export default function MediaPlaybackPanelUI() {
           obj = wrapperDimensions(closure_2[16]);
           value = closure_11.get();
           obj2 = closure_12;
-          withTimingResult = obj.withTiming(value, wrapperDimensions(closure_2[17]).timingFast, "respect-motion-settings");
+          withTimingResult = obj.withTiming(
+            value,
+            wrapperDimensions(closure_2[17]).timingFast,
+            "respect-motion-settings",
+          );
           if (closure_12.get()) {
             tmpResult = tmp(tmp2[18]);
             tmp7 = closure_9;
@@ -232,7 +327,7 @@ export default function MediaPlaybackPanelUI() {
             tmp5 = closure_9;
             withSpringResult = closure_9.get();
           }
-          items = [, ];
+          items = [,];
           items[0] = { translateX: withSpringResult };
           if (obj2.get()) {
             tmpResult1 = tmp(tmp2[18]);
@@ -248,13 +343,29 @@ export default function MediaPlaybackPanelUI() {
             tmp9 = closure_10;
             withSpringResult1 = closure_10.get();
           }
-          obj = { transform: items, opacity: withTimingResult, width: wrapperDimensions.get().width, height: wrapperDimensions.get().height };
+          obj = {
+            transform: items,
+            opacity: withTimingResult,
+            width: wrapperDimensions.get().width,
+            height: wrapperDimensions.get().height,
+          };
           items[1] = { translateY: withSpringResult1 };
           merged = Object.assign(maskElevation);
           return obj;
         }
       }
-      obj1 = { withTiming: null, wrapperOpacity: null, timingFast: null, animateWrapperTranslation: null, withSpring: null, wrapperTranslationX: null, MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: null, wrapperTranslationY: null, wrapperDimensions: null, wrapperElevationStyles: null };
+      obj1 = {
+        withTiming: null,
+        wrapperOpacity: null,
+        timingFast: null,
+        animateWrapperTranslation: null,
+        withSpring: null,
+        wrapperTranslationX: null,
+        MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: null,
+        wrapperTranslationY: null,
+        wrapperDimensions: null,
+        wrapperElevationStyles: null,
+      };
       obj1[0] = tmp6(4479).withTiming;
       obj1[1] = sharedValue2;
       obj1[2] = tmp6(4482).timingFast;
@@ -289,15 +400,14 @@ export default function MediaPlaybackPanelUI() {
       B.__workletHash = 7035830192327;
       B.__initData = animatedStyle2;
       animatedStyle2 = tmp6Result.useAnimatedStyle(B);
-      let items = [animatedStyle1, , ];
+      let items = [animatedStyle1, ,];
       ({ wrapper: arr[1], wrapperAnimationPresets: arr[2] } = tmp8);
       const items1 = [
         obj1.useMemo(() => {
-              const items = [animatedStyle1, , ];
-              ({ wrapper: arr[1], wrapperAnimationPresets: arr[2] } = closure_2);
-              return items;
-            }, items),
-
+          const items = [animatedStyle1, ,];
+          ({ wrapper: arr[1], wrapperAnimationPresets: arr[2] } = closure_2);
+          return items;
+        }, items),
       ];
       const items2 = [animatedStyle2, tmp8.mask];
       items1[1] = obj1.useMemo(() => {
@@ -307,7 +417,14 @@ export default function MediaPlaybackPanelUI() {
       [tmp30, tmp31] = callback(items1, 2);
       const tmp29 = callback(items1, 2);
       const fn4 = function b() {
-        return { flexDirection: "column", backgroundColor: wrapperDimensions.content.backgroundColor, borderTopStartRadius: 0, borderTopEndRadius: 0, top: 0, overflow: "hidden" };
+        return {
+          flexDirection: "column",
+          backgroundColor: wrapperDimensions.content.backgroundColor,
+          borderTopStartRadius: 0,
+          borderTopEndRadius: 0,
+          top: 0,
+          overflow: "hidden",
+        };
       };
       const obj3 = { styles: null };
       obj3[0] = tmp;
@@ -342,7 +459,15 @@ export default function MediaPlaybackPanelUI() {
       obj7[1] = sharedValue2(tmp2(4217).View, obj8);
       class R {
         constructor() {
-          obj = { mode: mode.get(), wrapperDimensions: wrapperDimensions.get(), pipAvoidanceSpecs: pipAvoidanceSpecs.get(), wrapperOffset: wrapperOffset.get(), windowDimensions: closure_4, safeArea: closure_3, pipState: pipState.get() };
+          obj = {
+            mode: mode.get(),
+            wrapperDimensions: wrapperDimensions.get(),
+            pipAvoidanceSpecs: pipAvoidanceSpecs.get(),
+            wrapperOffset: wrapperOffset.get(),
+            windowDimensions: closure_4,
+            safeArea: closure_3,
+            pipState: pipState.get(),
+          };
           return obj;
         }
       }
@@ -351,4 +476,4 @@ export default function MediaPlaybackPanelUI() {
     }
   }
   maskEmptyElevation = tmp8.maskEmptyElevation;
-};
+}

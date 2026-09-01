@@ -33,7 +33,7 @@ let closure_4 = keys.createStore((arg0, arg1) => {
         callback(705).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
         const obj = callback(705);
       }
-    }
+    },
   };
   return obj;
 });
@@ -44,14 +44,23 @@ Storage.asyncGet(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, (arg0
     return closure_1_4.setState(obj);
   });
 });
-let result = require("set").fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx",
+);
 
 export const useCommunicationDisabledNoticeStore = function useCommunicationDisabledNoticeStore(arg0) {
-  const tmp = callback(identity.useStoreWithEqualityFn(closure_4, (arg0) => {
-    const items = [, ];
-    ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
-    return items;
-  }, isIterable.shallow), 2);
+  const tmp = callback(
+    identity.useStoreWithEqualityFn(
+      closure_4,
+      (arg0) => {
+        const items = [,];
+        ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
+        return items;
+      },
+      isIterable.shallow,
+    ),
+    2,
+  );
   const first = tmp[0];
   let items = [!first.has(arg0), tmp[1]];
   return items;

@@ -17,15 +17,17 @@ createToggle = {
     return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   useTrailing: require("useAppearanceSettingTrailing").useAppearanceSettingTrailing,
-  screen: createToggle
+  screen: createToggle,
 };
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_THEME_PICKER,
   getComponent() {
     return ThemeTypes /* ThemeTypes */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx",
+);
 
 export default createToggle;

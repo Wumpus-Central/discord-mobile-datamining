@@ -21,7 +21,17 @@ function updateWithLatestInvite(channelId, arg1) {
   let obj = getDefaultInviteExpiration;
   let maxAge = obj.getDefaultInviteExpiration({ guild });
   invite = invite.getInvite(channelId, { targetType, targetUserId, targetApplicationId });
-  obj = { channelId, maxAge: null, maxUses: null, temporary: null, flags: null, targetType: null, targetUserId: null, targetApplicationId: null, roleIds: null };
+  obj = {
+    channelId,
+    maxAge: null,
+    maxUses: null,
+    temporary: null,
+    flags: null,
+    targetType: null,
+    targetUserId: null,
+    targetApplicationId: null,
+    roleIds: null,
+  };
   if (null != invite) {
     maxAge = invite.maxAge;
   }
@@ -61,8 +71,7 @@ isGuildMemberDefault.INVITE_OPTIONS_UNLIMITED.value;
 let CLOSED = FormStates.CLOSED;
 let c15 = false;
 const Store = initializeDefault.Store;
-class CreateInviteModalStore extends Store {
-}
+class CreateInviteModalStore extends Store {}
 const prototype = CreateInviteModalStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_9, closure_10, closure_11);
@@ -98,7 +107,7 @@ Object.defineProperty(prototype, "onClose", {
   get: function onClose() {
     return closure_8;
   },
-  set: undefined
+  set: undefined,
 });
 CreateInviteModalStore.displayName = "CreateInviteModalStore";
 const createInviteModalStore = new CreateInviteModalStore(dispatcherDefault, {
@@ -157,7 +166,11 @@ const createInviteModalStore = new CreateInviteModalStore(dispatcherDefault, {
     c4 = null;
     c15 = false;
     _modDef38(null != closure_6, "No invite settings for generated invite");
-    updateWithLatestInvite(channelId.channelId, { targetType: closure_6.targetType, targetUserId: closure_6.targetUserId, targetApplicationId: closure_6.targetApplicationId });
+    updateWithLatestInvite(channelId.channelId, {
+      targetType: closure_6.targetType,
+      targetUserId: closure_6.targetUserId,
+      targetApplicationId: closure_6.targetApplicationId,
+    });
   },
   CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE: function handleGenerateInviteFailure(message) {
     c5 = null;
@@ -167,7 +180,7 @@ const createInviteModalStore = new CreateInviteModalStore(dispatcherDefault, {
   CREATE_INVITE_MODAL_CLOSE: function handleModalClose() {
     CLOSED = FormStates.CLOSED;
     c8 = undefined;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/CreateInviteModalStore.tsx");
 

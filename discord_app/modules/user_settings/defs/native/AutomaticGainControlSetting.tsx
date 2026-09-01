@@ -19,9 +19,11 @@ createToggle = {
   useDescription: function useAutomaticGainControlSettingDescription() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["6EjbvA"]);
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AutomaticGainControlSetting.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/AutomaticGainControlSetting.tsx",
+);
 
 export default createToggle;

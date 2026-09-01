@@ -57,14 +57,29 @@ export default function useScreenshareUtils(arg0) {
   importDefault = tmp;
   dependencyMap = tmp2;
   const items = [stateFromStores1];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => stateFromStores1.supports(constants.VIDEO));
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => stateFromStores1.supports(constants.VIDEO),
+  );
   let obj = initialize;
-  const showMobileGoLiveUpsell = apexExperimentDefault.useConfig({ location: "useScreenshareUtils" }).showMobileGoLiveUpsell;
+  const showMobileGoLiveUpsell = apexExperimentDefault.useConfig({
+    location: "useScreenshareUtils",
+  }).showMobileGoLiveUpsell;
   let obj2 = apexExperimentDefault;
   const items1 = [showMobileGoLiveUpsell];
-  stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => showMobileGoLiveUpsell.getCurrentUserActiveStream());
+  stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () =>
+    showMobileGoLiveUpsell.getCurrentUserActiveStream(),
+  );
   const analyticsLocations = contextDefault().analyticsLocations;
-  const items2 = [stateFromStores1, arg0, stateFromStores, tmp, closure_8 >= 12, showMobileGoLiveUpsell, analyticsLocations];
+  const items2 = [
+    stateFromStores1,
+    arg0,
+    stateFromStores,
+    tmp,
+    closure_8 >= 12,
+    showMobileGoLiveUpsell,
+    analyticsLocations,
+  ];
   return stateFromStores.useMemo(() => {
     let tmp = null != stateFromStores1;
     if (tmp) {
@@ -132,7 +147,7 @@ export default function useScreenshareUtils(arg0) {
     const intl2 = callback(1236).intl;
     stringResult = intl2.string(callback(1236).t.fjBNo1);
   }, items2);
-};
+}
 export const handleCloseScreenshare = function handleCloseScreenshare() {
   const currentUserActiveStream = authStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {

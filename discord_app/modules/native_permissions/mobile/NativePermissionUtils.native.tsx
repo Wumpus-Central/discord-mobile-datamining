@@ -30,7 +30,7 @@ function _combineStatuses() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -184,8 +184,7 @@ if (isMetaQuest) {
 }
 HermesBuiltin.arraySpread(items9, tmp8);
 let NativePermissionIOSUtils;
-class NativePermissionIOSUtils extends NativePermissionBaseUtils {
-}
+class NativePermissionIOSUtils extends NativePermissionBaseUtils {}
 const prototype = NativePermissionIOSUtils.prototype;
 prototype["requestPermissionCore"] = function requestPermissionCore(arg0, arg1) {
   return this.performRequest(NativePermissionIOSUtils.requestPermissionLookup, arg0, arg1);
@@ -220,12 +219,24 @@ prototype["openAlertModal"] = function openAlertModal(arg0) {
   obj[0] = intl.string(getSystemLocale.t.sMFVrS);
   obj[1] = body;
   obj[2] = onConfirm;
-  obj.openAlert("permission-denied", jsx(React.lazy(() => callback(paths[11])(paths[10], paths.paths)), { title: null, body: null, onConfirm: null }));
+  obj.openAlert(
+    "permission-denied",
+    jsx(
+      React.lazy(() => callback(paths[11])(paths[10], paths.paths)),
+      { title: null, body: null, onConfirm: null },
+    ),
+  );
 };
-set = { [NativePermissionTypes.CAMERA]: () => combineStatuses(items2), [NativePermissionTypes.HEADSET_CAMERA]: NativeModules.NativePermissionManager.requestHeadsetCameraAuthorization };
+set = {
+  [NativePermissionTypes.CAMERA]: () => combineStatuses(items2),
+  [NativePermissionTypes.HEADSET_CAMERA]: NativeModules.NativePermissionManager.requestHeadsetCameraAuthorization,
+};
 if (set.isAndroid()) {
   let fn = () => {
-    const items = [NativeModules.NativePermissionManager.requestMicrophoneAuthorization, NativeModules.NativePermissionManager.requestModifyAudioAuthorization];
+    const items = [
+      NativeModules.NativePermissionManager.requestMicrophoneAuthorization,
+      NativeModules.NativePermissionManager.requestModifyAudioAuthorization,
+    ];
     return combineStatuses(items);
   };
 } else {
@@ -236,10 +247,16 @@ set[NativePermissionTypes.PHOTOS] = NativeModules.NativePermissionManager.reques
 set[NativePermissionTypes.CONTACTS] = NativeModules.NativePermissionManager.requestContactsAuthorization;
 set[NativePermissionTypes.INPUT_MONITORING] = () => Promise.resolve(constants.AUTHORIZED);
 NativePermissionIOSUtils.requestPermissionLookup = set;
-set = { [NativePermissionTypes.CAMERA]: () => combineStatuses(items7), [NativePermissionTypes.HEADSET_CAMERA]: NativeModules.NativePermissionManager.hasHeadsetCameraAuthorization };
+set = {
+  [NativePermissionTypes.CAMERA]: () => combineStatuses(items7),
+  [NativePermissionTypes.HEADSET_CAMERA]: NativeModules.NativePermissionManager.hasHeadsetCameraAuthorization,
+};
 if (set.isAndroid()) {
   let fn2 = () => {
-    const items = [NativeModules.NativePermissionManager.hasMicrophoneAuthorization, NativeModules.NativePermissionManager.hasModifyAudioAuthorization];
+    const items = [
+      NativeModules.NativePermissionManager.hasMicrophoneAuthorization,
+      NativeModules.NativePermissionManager.hasModifyAudioAuthorization,
+    ];
     return combineStatuses(items);
   };
 } else {

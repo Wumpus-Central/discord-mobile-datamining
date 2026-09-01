@@ -19,11 +19,19 @@ import ApexExperiment from "../experiments/apex/index.tsx";
 
 require = arg1;
 ({ AnalyticEvents: c5, MessageFlags: closure_6 } = ME);
-({ MAX_SCHEDULE_TIME_AFTER_CREATION_SECONDS: closure_8, MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS: c9, MAX_SCHEDULED_MESSAGES_PER_USER: c10, MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: unpackModuleId } = MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS);
+({
+  MAX_SCHEDULE_TIME_AFTER_CREATION_SECONDS: closure_8,
+  MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS: c9,
+  MAX_SCHEDULED_MESSAGES_PER_USER: c10,
+  MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: unpackModuleId,
+} = MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS);
 class ScheduledMessagesConfig {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
-    tmp2 = require("../../../_runtime/metro/00038__.js")(null != arg1.limit, "Config is missing scheduled message limit");
+    tmp2 = require("../../../_runtime/metro/00038__.js")(
+      null != arg1.limit,
+      "Config is missing scheduled message limit",
+    );
     obj.enabled = global;
     obj.limit = arg1.limit;
     return obj;
@@ -47,7 +55,7 @@ let obj1 = {
     obj.enabled = true;
     obj.limit = parsed.limit;
     return obj;
-  }
+  },
 };
 obj1[2] = (arg0) => {
   const parsed = JSON.parse(arg0);
@@ -69,7 +77,7 @@ export const scheduledMessageLogger = tmp4;
 export const parseContentAndFlagsForSilentMessage = function parseContentAndFlagsForSilentMessage(arg0) {
   ({ content, flags } = arg0);
   const tmp2 = callback(regExpDefault(content), 2);
-  const items = [, ];
+  const items = [,];
   if (tmp2[0]) {
     items[0] = tmp2[1];
     if (flags == null) {
@@ -103,7 +111,11 @@ export const unparseContentAndFlagsForSilentMessage = function unparseContentAnd
 };
 export const trackScheduledMessageTimePickerOpened = function trackScheduledMessageTimePickerOpened(arg0) {
   ({ entryPoint, isEditing, channelId } = arg0);
-  expandEventPropertiesDefault.track(constants.SCHEDULED_MESSAGE_TIME_PICKER_OPENED, { entry_point: entryPoint, is_editing: isEditing, channel_id: channelId });
+  expandEventPropertiesDefault.track(constants.SCHEDULED_MESSAGE_TIME_PICKER_OPENED, {
+    entry_point: entryPoint,
+    is_editing: isEditing,
+    channel_id: channelId,
+  });
 };
 export const useCanUseScheduledMessages = function useCanUseScheduledMessages() {
   return store.useConfig({ location: "useCanUseScheduledMessages" }).enabled;
@@ -181,7 +193,9 @@ export const useScheduledMessagesLimit = function useScheduledMessagesLimit(Sche
   const config = store.useConfig(obj);
   const items = [closure_4];
   if (config.enabled) {
-    if (obj2.useStateFromStores(items, () => callback(table[14]).isPremium(currentUser.getCurrentUser(), TIER_2.TIER_2))) {
+    if (
+      obj2.useStateFromStores(items, () => callback(table[14]).isPremium(currentUser.getCurrentUser(), TIER_2.TIER_2))
+    ) {
       obj = { limit: null, isUpgradable: false };
       obj[0] = closure_10;
     } else {
@@ -193,14 +207,33 @@ export const useScheduledMessagesLimit = function useScheduledMessagesLimit(Sche
   }
 };
 export const convertServerScheduledMessageSend = function convertServerScheduledMessageSend(body) {
-  obj = { userId: body.user_id, scheduledMessageId: body.scheduled_message_id, sendAtTimestamp: body.send_at_timestamp, createArgs: obj, state: body.state, attachmentUploads: null, record: null };
+  obj = {
+    userId: body.user_id,
+    scheduledMessageId: body.scheduled_message_id,
+    sendAtTimestamp: body.send_at_timestamp,
+    createArgs: obj,
+    state: body.state,
+    attachmentUploads: null,
+    record: null,
+  };
   const create_args = body.create_args;
-  obj = { channelId: create_args.channel_id, content: create_args.content, type: create_args.type, flags: create_args.flags, messageReference: create_args.message_reference };
+  obj = {
+    channelId: create_args.channel_id,
+    content: create_args.content,
+    type: create_args.type,
+    flags: create_args.flags,
+    messageReference: create_args.message_reference,
+  };
   let attachment_uploads = body.attachment_uploads;
   if (attachment_uploads == null) {
     attachment_uploads = [];
   }
-  obj[5] = attachment_uploads.map((filename) => ({ filename: filename.filename, uploadedFilename: filename.uploaded_filename, description: filename.description, title: filename.title }));
+  obj[5] = attachment_uploads.map((filename) => ({
+    filename: filename.filename,
+    uploadedFilename: filename.uploaded_filename,
+    description: filename.description,
+    title: filename.title,
+  }));
   obj = {};
   const merged = Object.assign(body.message_preview);
   obj.timestamp = body.send_at_timestamp;
@@ -243,5 +276,11 @@ export const getMessageForState = function getMessageForState(state) {
   }
 };
 export const convertServerScheduledMessageCreateArgs = function convertServerScheduledMessageCreateArgs(channelId) {
-  return { channelId: channelId.channel_id, content: channelId.content, type: channelId.type, flags: channelId.flags, messageReference: channelId.message_reference };
+  return {
+    channelId: channelId.channel_id,
+    content: channelId.content,
+    type: channelId.type,
+    flags: channelId.flags,
+    messageReference: channelId.message_reference,
+  };
 };

@@ -5,7 +5,9 @@ import closure_10 from "../../index.native.tsx";
 
 const re2 = /\n{2,}$/;
 const re3 = /(?:^|\n)( *)$/;
-let regExp = new RegExp("^" + "(%INDENT_CAPTURE_PATTERN%)((?:[*-]|\\d+\\.)) +".replace("%INDENT_CAPTURE_PATTERN%", " *"));
+let regExp = new RegExp(
+  "^" + "(%INDENT_CAPTURE_PATTERN%)((?:[*-]|\\d+\\.)) +".replace("%INDENT_CAPTURE_PATTERN%", " *"),
+);
 const re5 = / *\n$/;
 let regExp1 = new RegExp("^( *)((?:[*-]|\\d+\\.)) [\\s\\S]+?(?:\\n(?! )(?!\\1(?:[*-]|\\d+\\.) )|$)");
 const regExp2 = new RegExp("^\\n" + require("../debug/logAppStart.tsx"));
@@ -71,7 +73,13 @@ obj.parse = function parse(arg0, arg1, arg2) {
   if (null != match) {
     num3 = match[1].length;
   }
-  regExp = new RegExp("(%INDENT_CAPTURE_PATTERN%)((?:[*-]|\\d+\\.)) +[^\\n]*(?:\\n(?!%INDENT_CAPTURE_PATTERN%(?:[*-]|\\d+\\.) )[^\\n]*)*(\n|$)".replaceAll("%INDENT_CAPTURE_PATTERN%", " {" + num3 + "," + num3 + 1 + "}"), "gm");
+  regExp = new RegExp(
+    "(%INDENT_CAPTURE_PATTERN%)((?:[*-]|\\d+\\.)) +[^\\n]*(?:\\n(?!%INDENT_CAPTURE_PATTERN%(?:[*-]|\\d+\\.) )[^\\n]*)*(\n|$)".replaceAll(
+      "%INDENT_CAPTURE_PATTERN%",
+      " {" + num3 + "," + num3 + 1 + "}",
+    ),
+    "gm",
+  );
   regExp1 = new RegExp("^ {1," + num2 + "}", "gm");
   const match1 = str3.match(regExp);
   _modDef38(null != match1, "markup list items can not be parsed.");
@@ -124,7 +132,7 @@ obj.parse = function parse(arg0, arg1, arg2) {
         return type;
       });
     }),
-    consumedLeadingNewline: isMatch
+    consumedLeadingNewline: isMatch,
   };
 };
 const result = require("set").fileFinishedImporting("modules/markup/MarkupListRule.tsx");

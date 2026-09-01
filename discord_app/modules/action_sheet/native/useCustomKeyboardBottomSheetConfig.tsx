@@ -3,7 +3,9 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import closure_4 from "../../a11y/AccessibilityStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx",
+);
 
 export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
   let flag = forceMaxHeight.forceMaxHeight;
@@ -42,7 +44,18 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
     }
     return tmp3;
   }));
-  let obj = { animateOnMount, enablePanDownToClose: flag2, accessible: null, contentHeight: null, containerHeight: null, enableDynamicSizing: false, initialPosition: null, keyboardBehavior: "extend", android_keyboardInputMode: null, snapPoints: null };
+  let obj = {
+    animateOnMount,
+    enablePanDownToClose: flag2,
+    accessible: null,
+    contentHeight: null,
+    containerHeight: null,
+    enableDynamicSizing: false,
+    initialPosition: null,
+    keyboardBehavior: "extend",
+    android_keyboardInputMode: null,
+    snapPoints: null,
+  };
   const memo = maximum.useMemo(() => {
     if (flag) {
       const items = [maximum, maximum];
@@ -85,4 +98,4 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
   obj[8] = str;
   obj[9] = memo;
   return obj;
-};
+}

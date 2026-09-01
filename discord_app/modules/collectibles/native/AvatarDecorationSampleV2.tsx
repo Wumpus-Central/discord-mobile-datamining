@@ -14,7 +14,14 @@ noopAll;
 let c8 = 0.8333333333333334;
 let closure_9 = createCacheKey.createStyles((arg0) => {
   let obj = { avatar: null, solidAvatar: null, avatarDecoration: null };
-  obj = { position: "absolute", height: arg0 * c8, width: arg0 * c8, borderRadius: arg0 * c8 / 2, opacity: 0.8, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+  obj = {
+    position: "absolute",
+    height: arg0 * c8,
+    width: arg0 * c8,
+    borderRadius: (arg0 * c8) / 2,
+    opacity: 0.8,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  };
   obj[0] = obj;
   obj[1] = { opacity: 1 };
   obj[2] = { position: "absolute" };
@@ -26,8 +33,11 @@ export default function AvatarDecorationSampleV2(arg0) {
   ({ item, size, avatarSource } = arg0);
   ({ animate, threeTierBundle } = arg0);
   const tmp = callback(size);
-  _modDef38(item.type === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION, "Item must be Avatar Decoration");
-  const items = [tmp.avatar, ];
+  _modDef38(
+    item.type === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION,
+    "Item must be Avatar Decoration",
+  );
+  const items = [tmp.avatar];
   let solidAvatar = null != avatarSource;
   if (!solidAvatar) {
     solidAvatar = true === threeTierBundle;
@@ -42,10 +52,14 @@ export default function AvatarDecorationSampleV2(arg0) {
   }
   obj = { children: null };
   obj[2] = avatarSource;
-  const items1 = [closure_5(closure_3, obj), ];
-  obj = { style: tmp.avatarDecoration, accessibilityLabel: item.label, children: tmp8(tmp2(8097), { avatarDecoration: item, size, animate }) };
+  const items1 = [closure_5(closure_3, obj)];
+  obj = {
+    style: tmp.avatarDecoration,
+    accessibilityLabel: item.label,
+    children: tmp8(tmp2(8097), { avatarDecoration: item, size, animate }),
+  };
   items1[1] = closure_5(closure_4, obj);
   obj[0] = items1;
   return closure_7(closure_6, obj);
-};
+}
 export const avatarPlaceholderSizeRatio = 0.8333333333333334;

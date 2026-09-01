@@ -76,11 +76,14 @@ export const canOpenUrlScheme = function canOpenUrlScheme(closure_3) {
     const promise = new Promise((arg0) => {
       closure_0 = arg0;
       const canOpenURLResult = closure_1_3.canOpenURL("" + closure_0 + "://app");
-      closure_1_3.canOpenURL("" + closure_0 + "://app").then((arg0) => {
-        callback(arg0);
-      }).catch(() => {
-        callback(false);
-      });
+      closure_1_3
+        .canOpenURL("" + closure_0 + "://app")
+        .then((arg0) => {
+          callback(arg0);
+        })
+        .catch(() => {
+          callback(false);
+        });
     });
     return promise;
   }

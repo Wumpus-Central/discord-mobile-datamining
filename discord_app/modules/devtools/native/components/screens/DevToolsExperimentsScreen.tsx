@@ -42,13 +42,15 @@ function UserExperimentDebugView(id) {
   const experimentServerAssignment = obj2.useExperimentServerAssignment(experiment, tmp7);
   let obj3 = applyDefault;
   const tmp = callback3();
-  const mapped = obj3.sortBy(store.getRecentExposures(constants2.USER, id.id), (arg0) => {
-    [, tmp] = arg0;
-    return -tmp;
-  }).map((arg0) => {
-    [tmp, tmp2] = arg0;
-    return "" + new Date(tmp2).toLocaleString() + " (" + tmp + ")";
-  });
+  const mapped = obj3
+    .sortBy(store.getRecentExposures(constants2.USER, id.id), (arg0) => {
+      [, tmp] = arg0;
+      return -tmp;
+    })
+    .map((arg0) => {
+      [tmp, tmp2] = arg0;
+      return "" + new Date(tmp2).toLocaleString() + " (" + tmp + ")";
+    });
   if (experiment.system === trackExposureToExperiment.ExperimentSystem.LEGACY) {
     let NOT_ELIGIBLE = experimentAssignment;
     if (experimentAssignment == null) {
@@ -67,11 +69,12 @@ function UserExperimentDebugView(id) {
   obj = { label: str, subLabel: null };
   let str4;
   if (null == experimentServerAssignment) {
-    str4 = "Warning: Server did not send any experiment config. You may need to check the \"Send to Client\" box in the admin UI.";
+    str4 =
+      'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.';
   }
   obj1 = { title: "Overview", hasIcons: false, children: tmp17(tmp8(5599).TableRow, obj) };
   obj[1] = str4;
-  const items = [closure_11(TableRowGroupTitle.TableRowGroup, obj1), closure_11(Button.Spacer, { size: 16 }), , , , , ];
+  const items = [closure_11(TableRowGroupTitle.TableRowGroup, obj1), closure_11(Button.Spacer, { size: 16 }), , , , ,];
   let str5 = "None";
   let str6 = "None";
   if (null != experimentServerAssignment) {
@@ -98,7 +101,11 @@ function UserExperimentDebugView(id) {
   });
   const tmp15 = closure_12;
   const tmp16 = View;
-  items[6] = closure_11(TableRowGroupTitle.TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: closure_11(TableRowInner.TableRow, { label: str5 }) });
+  items[6] = closure_11(TableRowGroupTitle.TableRowGroup, {
+    title: "Recent Exposures",
+    hasIcons: false,
+    children: closure_11(TableRowInner.TableRow, { label: str5 }),
+  });
   obj[1] = items;
   return tmp15(tmp16, obj);
 }
@@ -108,13 +115,15 @@ function GuildExperimentDebugView(arg0) {
   const loadedGuildExperiment = store.getLoadedGuildExperiment(id);
   obj = applyDefault;
   const tmp = callback3();
-  let mapped = obj.sortBy(store.getRecentExposures(constants2.GUILD, id), (arg0) => {
-    [, tmp] = arg0;
-    return -tmp;
-  }).map((arg0) => {
-    [tmp, tmp2] = arg0;
-    return "" + new Date(tmp2).toLocaleString() + " (" + tmp + ")";
-  });
+  let mapped = obj
+    .sortBy(store.getRecentExposures(constants2.GUILD, id), (arg0) => {
+      [, tmp] = arg0;
+      return -tmp;
+    })
+    .map((arg0) => {
+      [tmp, tmp2] = arg0;
+      return "" + new Date(tmp2).toLocaleString() + " (" + tmp + ")";
+    });
   obj1 = applyDefault;
   const sortByResult = obj.sortBy(store.getRecentExposures(constants2.GUILD, id), (arg0) => {
     [, tmp] = arg0;
@@ -158,13 +167,27 @@ function GuildExperimentDebugView(arg0) {
   obj1 = { label: "Current Assignments: " + joined, subLabel: null };
   let str = null;
   if (null == loadedGuildExperiment) {
-    str = "Warning: Server did not send any experiment config. You may need to check the 'Send to Client' box in the admin UI.";
+    str =
+      "Warning: Server did not send any experiment config. You may need to check the 'Send to Client' box in the admin UI.";
   }
   const sortByResult1 = obj1.sortBy(guildsArray.getGuildsArray(), (name) => name.name.toLowerCase());
   const tmp17 = closure_12;
   const tmp18 = View;
   obj1[1] = str;
-  const items1 = [closure_11(obj(5992).TableRowGroup, { title: "Overview", hasIcons: false, children: closure_11(obj(5599).TableRow, obj1) }), closure_11(obj(1297).Spacer, { size: 16 }), , , , , , , ];
+  const items1 = [
+    closure_11(obj(5992).TableRowGroup, {
+      title: "Overview",
+      hasIcons: false,
+      children: closure_11(obj(5599).TableRow, obj1),
+    }),
+    closure_11(obj(1297).Spacer, { size: 16 }),
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+  ];
   obj3 = { title: "Guild Assignments", hasIcons: false, children: null };
   const obj2 = { title: "Overview", hasIcons: false, children: closure_11(obj(5599).TableRow, obj1) };
   obj3[2] = closure_11(obj(5599).TableRow, { label: items.join("\n") });
@@ -177,14 +200,26 @@ function GuildExperimentDebugView(arg0) {
     str3 = JSON.stringify(loadedGuildExperiment, undefined, 2);
   }
   const obj4 = { label: items.join("\n") };
-  items1[4] = closure_11(obj(5992).TableRowGroup, { title: "Server Descriptor", hasIcons: false, children: closure_11(obj(5599).TableRow, { label: str3 }) });
+  items1[4] = closure_11(obj(5992).TableRowGroup, {
+    title: "Server Descriptor",
+    hasIcons: false,
+    children: closure_11(obj(5599).TableRow, { label: str3 }),
+  });
   items1[5] = closure_11(obj(1297).Spacer, { size: 16 });
   if (null != override) {
     const _JSON2 = JSON;
     str2 = JSON.stringify(override, undefined, 2);
   }
-  const obj5 = { title: "Server Descriptor", hasIcons: false, children: closure_11(obj(5599).TableRow, { label: str3 }) };
-  items1[6] = closure_11(obj(5992).TableRowGroup, { title: "Override Descriptor", hasIcons: false, children: closure_11(obj(5599).TableRow, { label: str2 }) });
+  const obj5 = {
+    title: "Server Descriptor",
+    hasIcons: false,
+    children: closure_11(obj(5599).TableRow, { label: str3 }),
+  };
+  items1[6] = closure_11(obj(5992).TableRowGroup, {
+    title: "Override Descriptor",
+    hasIcons: false,
+    children: closure_11(obj(5599).TableRow, { label: str2 }),
+  });
   items1[7] = closure_11(obj(1297).Spacer, { size: 16 });
   if (0 === mapped.length) {
     mapped = tmp19(tmp20(5599).TableRow, { label: "none" });
@@ -206,7 +241,7 @@ class ExperimentDetails {
     obj = require("regExp");
     uRLForExperiment = obj.getURLForExperiment(id);
     closure_1 = uRLForExperiment;
-    items = [, ];
+    items = [,];
     items[0] = uRLForExperiment;
     items[1] = onCopyLink;
     obj = { style: null, children: null };
@@ -214,7 +249,12 @@ class ExperimentDetails {
     callback = closure_4.useCallback(() => {
       onCopyLink(closure_1_2[29]).copy(uRLForExperiment, () => {
         let obj = closure_1_1(closure_1_2[30]);
-        obj = { key: "experiment-link-copied", content: "Copied experiment link", IconComponent: closure_1_0(closure_1_2[31]).CircleCheckIcon, iconColor: "status-positive" };
+        obj = {
+          key: "experiment-link-copied",
+          content: "Copied experiment link",
+          IconComponent: closure_1_0(closure_1_2[31]).CircleCheckIcon,
+          iconColor: "status-positive",
+        };
         obj.open(obj);
         if (callback != null) {
           callback();
@@ -230,18 +270,26 @@ class ExperimentDetails {
       title: "Experiment Assignments",
       hasIcons: false,
       children: options.map((arg0, arg1) => {
-            ({ label, isDestructive, onPress } = arg0);
-            let variant = "default";
-            if (isDestructive) {
-              variant = "danger";
-            }
-            return closure_11(onCopyLink(table[23]).TableRow, { variant, label, onPress }, arg1);
-          })
+        ({ label, isDestructive, onPress } = arg0);
+        let variant = "default";
+        if (isDestructive) {
+          variant = "danger";
+        }
+        return closure_11(onCopyLink(table[23]).TableRow, { variant, label, onPress }, arg1);
+      }),
     };
-    items1 = [, , ];
+    items1 = [, ,];
     items1[0] = jsx(require("TableRowGroupTitle").TableRowGroup, obj2);
     obj3 = { style: tmp.copyExperimentLink, children: null };
-    obj4 = { title: "Share", hasIcons: false, children: jsx(require("TableRowInner").TableRow, { label: "Copy Link", subLabel: uRLForExperiment, onPress: callback }) };
+    obj4 = {
+      title: "Share",
+      hasIcons: false,
+      children: jsx(require("TableRowInner").TableRow, {
+        label: "Copy Link",
+        subLabel: uRLForExperiment,
+        onPress: callback,
+      }),
+    };
     obj3[1] = jsx(require("TableRowGroupTitle").TableRowGroup, obj4);
     items1[1] = jsx(View, obj3);
     if ("guild" === experiment.kind) {
@@ -312,7 +360,7 @@ let closure_14 = importAllResult.memo((id) => {
           map(closure_2_2[21]).overrideBucket(closure_1_2.system, label, label.id);
           const obj = map(closure_2_2[21]);
           items(closure_2_2[22]).hideActionSheet("UserSettingsExperimentBucket");
-        }
+        },
       });
     });
     let obj = {
@@ -322,7 +370,7 @@ let closure_14 = importAllResult.memo((id) => {
         map(closure_1_2[21]).overrideBucket(system.system, map, null);
         const obj = map(closure_1_2[21]);
         items(closure_1_2[22]).hideActionSheet("UserSettingsExperimentBucket");
-      }
+      },
     };
     items.push(obj);
     obj = { default: closure_1_18 };
@@ -333,7 +381,7 @@ let closure_14 = importAllResult.memo((id) => {
       options: items,
       onCopyLink(arg0) {
         return items(system[22]).hideActionSheet("UserSettingsExperimentBucket");
-      }
+      },
     };
     override(experiment[22]).openLazy(Promise.resolve(obj), "UserSettingsExperimentBucket", obj);
   }, items1);
@@ -387,14 +435,27 @@ const memoResult = importAllResult.memo(() => {
   let obj2 = experiments(experiments2[14]);
   let obj3 = experiments(experiments2[14]);
   const tmp12 = overridesInfo(experiments2[13])();
-  const bestMatches = obj2.getBestMatches(obj3.sortEntries(experiments(experiments2[14]).getEntries(memo), memo1), tmp3);
+  const bestMatches = obj2.getBestMatches(
+    obj3.sortEntries(experiments(experiments2[14]).getEntries(memo), memo1),
+    tmp3,
+  );
   const items2 = [bestMatches.length];
   const items3 = [bestMatches, memo1];
   const memo2 = memo1.useMemo(() => {
     const items = [bestMatches.length];
     return items;
   }, items2);
-  const callback = memo1.useCallback((arg0, arg1) => closure_1_11(closure_1_14, { id: bestMatches[arg1].id, experiment: bestMatches[arg1].experiment, override: memo1[bestMatches[arg1].id], start: 0 === arg1, end: arg1 === bestMatches.length - 1 }), items3);
+  const callback = memo1.useCallback(
+    (arg0, arg1) =>
+      closure_1_11(closure_1_14, {
+        id: bestMatches[arg1].id,
+        experiment: bestMatches[arg1].experiment,
+        override: memo1[bestMatches[arg1].id],
+        start: 0 === arg1,
+        end: arg1 === bestMatches.length - 1,
+      }),
+    items3,
+  );
   const obj5 = experiments(experiments2[14]);
   if (obj6.isEmpty(memo)) {
     obj = { Illustration: null, title: "No Experiments", body: "No experiments are currently running." };
@@ -408,12 +469,20 @@ const memoResult = importAllResult.memo(() => {
     obj2 = { size: "md", onChange: null };
     obj2[1] = tmp4;
     obj1[1] = callback(tmp5(tmp6[18]).SearchField, obj2);
-    const items4 = [callback(bestMatches, obj1), ];
-    obj3 = { style: null, sections: null, estimatedListSize: "windowSize", itemSize: null, insetEnd: null, renderItem: null };
+    const items4 = [callback(bestMatches, obj1)];
+    obj3 = {
+      style: null,
+      sections: null,
+      estimatedListSize: "windowSize",
+      itemSize: null,
+      insetEnd: null,
+      renderItem: null,
+    };
     obj3[0] = tmp.listContainer;
     obj3[1] = memo2;
     obj3[3] = tmp12;
-    obj3[4] = overridesInfo(experiments2[12])({ includeKeyboardHeight: true }).insets.bottom + tmp11(tmp6[9]).space.PX_16;
+    obj3[4] =
+      overridesInfo(experiments2[12])({ includeKeyboardHeight: true }).insets.bottom + tmp11(tmp6[9]).space.PX_16;
     obj3[5] = callback;
     items4[1] = callback(tmp11(tmp6[19]), obj3);
     obj[1] = items4;
@@ -422,7 +491,9 @@ const memoResult = importAllResult.memo(() => {
   }
   return tmp19;
 });
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsExperimentsScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsExperimentsScreen.tsx",
+);
 
 export default memoResult;
 export { ExperimentDetails };

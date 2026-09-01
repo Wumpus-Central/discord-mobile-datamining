@@ -27,7 +27,7 @@ const toggle = createToggle.createToggle({
     let obj = expandEventPropertiesDefault;
     obj = { update_type: constants.ACCOUNT, voice_activity_notifications };
     obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
-  }
+  },
 });
 let obj = {
   useTitle() {
@@ -46,7 +46,7 @@ let obj = {
     let obj = expandEventPropertiesDefault;
     obj = { update_type: constants.ACCOUNT, voice_activity_notifications };
     obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/VoiceActivityNotificationSetting.tsx");
 

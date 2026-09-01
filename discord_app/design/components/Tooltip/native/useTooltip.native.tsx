@@ -59,7 +59,7 @@ export const useTooltip = function useTooltip(ref, memo) {
         c5 = 0;
         c6 = 0;
         c4 = 0;
-        return (function*(arg0) {
+        return (function* (arg0) {
           dependencyMap = tmp3;
           c4 = 1;
           const measurements = closure_2_0(closure_2_2[9]).getMeasurements(surfaceRef.surfaceRef, ref);
@@ -152,7 +152,7 @@ export const useTooltipHelper = function useTooltipHelper(ref, targetRef, callba
         c5 = 0;
         c6 = 0;
         c4 = 0;
-        return (function*(arg0) {
+        return (function* (arg0) {
           dependencyMap = tmp3;
           c4 = 1;
           const measurements = closure_2_0(closure_2_2[9]).getMeasurements(surfaceRef.surfaceRef, ref);

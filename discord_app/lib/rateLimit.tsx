@@ -41,4 +41,4 @@ export default function rateLimit(arg0, arg1, arg2) {
     }
   }
   return wrapper;
-};
+}

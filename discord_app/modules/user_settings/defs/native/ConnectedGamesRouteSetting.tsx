@@ -14,13 +14,13 @@ obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL,
   IconComponent: FriendsIcon.FriendsIcon,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.CONTENT_AND_SOCIAL,
   getComponent() {
     return ContentAndSocialSettings.ConnectedGamesPage;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ConnectedGamesRouteSetting.tsx");

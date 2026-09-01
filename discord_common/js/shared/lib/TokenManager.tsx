@@ -88,25 +88,28 @@ function encryptAndStoreTokens() {
     const _Object = Object;
     const entries = Object.entries(closure_10);
     let items = [];
-    HermesBuiltin.arraySpread(entries.map((arg0) => {
-      [tmp, obj] = arg0;
-      const items = [tmp, ];
-      let result;
-      if (closure_6 != null) {
-        result = obj2.isEncryptionAvailable();
-      }
-      let combined = obj;
-      if (result) {
-        combined = obj;
-        if (!obj.startsWith(closure_4)) {
-          const _HermesInternal = HermesInternal;
-          combined = "" + tmp4 + obj2.encryptString(obj);
+    HermesBuiltin.arraySpread(
+      entries.map((arg0) => {
+        [tmp, obj] = arg0;
+        const items = [tmp];
+        let result;
+        if (closure_6 != null) {
+          result = obj2.isEncryptionAvailable();
         }
-        tmp4 = closure_4;
-      }
-      items[1] = combined;
-      return items;
-    }), 0);
+        let combined = obj;
+        if (result) {
+          combined = obj;
+          if (!obj.startsWith(closure_4)) {
+            const _HermesInternal = HermesInternal;
+            combined = "" + tmp4 + obj2.encryptString(obj);
+          }
+          tmp4 = closure_4;
+        }
+        items[1] = combined;
+        return items;
+      }),
+      0,
+    );
     closure_11 = items.reduce((arg0, arg1) => {
       [tmp, tmp2] = arg1;
       arg0[tmp] = tmp2;
@@ -208,10 +211,13 @@ export const init = function init() {
         obj = { decryptedToken: null, wasEncrypted: false };
       });
       let items = [];
-      HermesBuiltin.arraySpread(mapped.filter((arg0) => {
-        [, tmp] = arg0;
-        return null != tmp;
-      }), 0);
+      HermesBuiltin.arraySpread(
+        mapped.filter((arg0) => {
+          [, tmp] = arg0;
+          return null != tmp;
+        }),
+        0,
+      );
       closure_10 = items.reduce((arg0, arg1) => {
         [tmp, tmp2] = arg1;
         arg0[tmp] = tmp2;

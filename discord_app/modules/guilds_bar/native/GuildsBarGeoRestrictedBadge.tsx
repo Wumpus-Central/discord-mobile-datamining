@@ -8,9 +8,27 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 import importAllResult from "../../../../_runtime/00019_noop.js";
 
 let obj = { badgeImageContainer: null, badgeImage: null };
-obj = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: ThemesDefault.colors.STATUS_WARNING_BACKGROUND, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };
+obj = {
+  position: "absolute",
+  bottom: -3,
+  right: -3,
+  height: 22,
+  width: 22,
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  backgroundColor: ThemesDefault.colors.STATUS_WARNING_BACKGROUND,
+  borderWidth: 3,
+  borderRadius: 11,
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+};
 obj[0] = obj;
-createCacheKey = { height: 16, width: 16, opacity: require("result").DARK_1_LIGHT_08, tintColor: ThemesDefault.colors.BLACK };
+createCacheKey = {
+  height: 16,
+  width: 16,
+  opacity: require("result").DARK_1_LIGHT_08,
+  tintColor: ThemesDefault.colors.BLACK,
+};
 obj[1] = createCacheKey;
 let closure_4 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GuildsBarGeoRestrictedBadge(style) {

@@ -35,7 +35,7 @@ let closure_4 = identity.createWithEqualityFn((arg0) => {
           return obj;
         });
       });
-    }
+    },
   };
 });
 const result = set.fileFinishedImporting("modules/polls/PollsInteractionStore.tsx");

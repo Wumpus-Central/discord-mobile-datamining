@@ -79,7 +79,7 @@ function SoundCategoryItem(style) {
     },
     accessibilityRole: "button",
     accessibilityLabel: name,
-    children: null
+    children: null,
   };
   const obj3 = { style: items, children: null };
   items = [tmp.item, style.style];
@@ -92,7 +92,7 @@ function SoundCategoryItem(style) {
     obj4[1] = tmp6;
     tmp14Result = tmp14(tmp2(1297).Icon, obj4);
   }
-  const items1 = [tmp14Result, ];
+  const items1 = [tmp14Result];
   if (locked) {
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.lockContainer;
@@ -114,26 +114,71 @@ const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ View: c5, FlatList: closure_6 } = get_ActivityIndicator);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT: c9, NODE_SIZE, NODE_MARGIN } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { container: null, item: null, fadedItem: null, activeItem: null, guildItem: null, keyboardItem: null, lockContainer: null, lock: null };
-obj = { borderTopWidth: StyleSheet.hairlineWidth, paddingHorizontal: 8, flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+let obj = {
+  container: null,
+  item: null,
+  fadedItem: null,
+  activeItem: null,
+  guildItem: null,
+  keyboardItem: null,
+  lockContainer: null,
+  lock: null,
+};
+obj = {
+  borderTopWidth: StyleSheet.hairlineWidth,
+  paddingHorizontal: 8,
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderTopColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 obj[0] = obj;
-createCacheKey = { margin: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
+createCacheKey = {
+  margin: NODE_MARGIN,
+  height: NODE_SIZE,
+  width: NODE_SIZE,
+  borderRadius: NODE_SIZE / 2,
+  alignItems: "center",
+  justifyContent: "center",
+};
 obj[1] = createCacheKey;
 obj[2] = { opacity: 0.5 };
 obj[3] = { opacity: 1, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 obj[4] = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 };
 obj[5] = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE };
 let obj2 = { opacity: 1, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-obj[6] = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
-let obj3 = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
+obj[6] = {
+  width: 12,
+  height: 12,
+  position: "absolute",
+  bottom: 0,
+  end: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+};
+let obj3 = {
+  width: 12,
+  height: 12,
+  position: "absolute",
+  bottom: 0,
+  end: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+};
 obj[7] = { width: 7.5, height: 7.5, tintColor: ThemesDefault.colors.TEXT_DEFAULT };
 let closure_12 = createCacheKey.createStyles(obj);
-let closure_14 = importAllResult.memo(importAllResult.forwardRef((arg0, ref) => {
-  const obj = {};
-  const merged = Object.assign(arg0);
-  obj.ref = ref;
-  return callback(closure_6, obj);
-}));
+let closure_14 = importAllResult.memo(
+  importAllResult.forwardRef((arg0, ref) => {
+    const obj = {};
+    const merged = Object.assign(arg0);
+    obj.ref = ref;
+    return callback(closure_6, obj);
+  }),
+);
 let obj4 = { width: 7.5, height: 7.5, tintColor: ThemesDefault.colors.TEXT_DEFAULT };
 const memoResult = importAllResult.memo(function SoundboardSoundPickerCategories(guildId) {
   guildId = guildId.guildId;
@@ -199,8 +244,10 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerCategories
   }, items1);
   let obj = guildId(listRef[20]);
   const items2 = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items2, () => categoryIndex(listRef[21]).canUseSoundboardEverywhere(stateFromStores.getCurrentUser()));
-  const items3 = [stateFromStores, guildId, callback2, categoryIndex, , ];
+  stateFromStores = obj.useStateFromStores(items2, () =>
+    categoryIndex(listRef[21]).canUseSoundboardEverywhere(stateFromStores.getCurrentUser()),
+  );
+  const items3 = [stateFromStores, guildId, callback2, categoryIndex, ,];
   ({ activeItem: arr4[4], fadedItem: arr4[5] } = tmp);
   callback3 = importAllResult.useCallback((arg0) => {
     ({ item, index } = arg0);
@@ -238,8 +285,8 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerCategories
         return String(key.key);
       },
       renderItem: callback3,
-      showsHorizontalScrollIndicator: false
-    })
+      showsHorizontalScrollIndicator: false,
+    }),
   ];
   obj[1] = items5;
   obj[1] = callback2(closure_5, obj);

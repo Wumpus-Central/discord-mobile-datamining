@@ -17,7 +17,10 @@ export const useCanShowTooltip = function useCanShowTooltip(SCREENSHARE_SWIPE_UP
   }
   const items = [closure_4];
   const items1 = [flag2, flag, SCREENSHARE_SWIPE_UP_CONTROLS];
-  const stateFromStores = _require(flag2[2]).useStateFromStores(items, () => closure_1_4.canShowTooltip(closure_0) && flag2);
+  const stateFromStores = _require(flag2[2]).useStateFromStores(
+    items,
+    () => closure_1_4.canShowTooltip(closure_0) && flag2,
+  );
   const effect = React.useEffect(() => {
     if (flag2) {
       flag(flag2[3]).attemptToShowTooltip(closure_0, flag);

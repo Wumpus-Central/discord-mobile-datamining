@@ -25,7 +25,7 @@ export default function UsernameText(color) {
     str = user.toString();
   } else {
     obj = { children: null };
-    const items = [user.toString(), ];
+    const items = [user.toString()];
     obj = {};
     const merged = Object.assign(obj);
     obj.color = "text-muted";
@@ -40,7 +40,7 @@ export default function UsernameText(color) {
   let tmp13 = str;
   if (tmp4) {
     const obj2 = { children: null };
-    const items2 = [name, " ", ];
+    const items2 = [name, " "];
     const obj3 = {};
     const merged2 = Object.assign(obj);
     obj3.color = "text-muted";
@@ -52,4 +52,4 @@ export default function UsernameText(color) {
   }
   obj1.children = tmp13;
   return closure_4(Text.Text, obj1);
-};
+}

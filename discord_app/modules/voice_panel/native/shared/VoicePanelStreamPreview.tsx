@@ -16,16 +16,37 @@ let closure_8 = importDefaultResult.createAnimatedComponent(Pressable);
 let closure_9 = importDefaultResult.createAnimatedComponent(require("Button").Button);
 let closure_10 = { duration: 200 };
 let obj = { roundedCard: null, streamPreviewImage: null, ownStreamTextContainer: null, ownStreamText: null };
-obj = { position: "absolute", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
+obj = {
+  position: "absolute",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "100%",
+  height: "100%",
+  backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND,
+};
 obj[0] = obj;
 obj[1] = { position: "absolute", width: "100%", height: "100%", opacity: 0.5 };
 const importDefaultResult1 = importDefaultResult;
-obj[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, borderRadius: ThemesDefault.radii.sm, marginHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16 };
+obj[2] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM,
+  borderRadius: ThemesDefault.radii.sm,
+  marginHorizontal: ThemesDefault.space.PX_16,
+};
+createCacheKey = {
+  textAlign: "center",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_16,
+};
 obj[3] = createCacheKey;
 let closure_11 = createCacheKey.createStyles(obj);
-let closure_12 = { code: "function VoicePanelStreamPreviewTsx1(){const{mode,withTiming,OPACITY_TIMING}=this.__closure;if(mode==null){return{opacity:1};}return{opacity:withTiming(mode.get()==='pip'?0:1,OPACITY_TIMING)};}" };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, borderRadius: ThemesDefault.radii.sm, marginHorizontal: ThemesDefault.space.PX_16 };
+let closure_12 = {
+  code: "function VoicePanelStreamPreviewTsx1(){const{mode,withTiming,OPACITY_TIMING}=this.__closure;if(mode==null){return{opacity:1};}return{opacity:withTiming(mode.get()==='pip'?0:1,OPACITY_TIMING)};}",
+};
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM,
+  borderRadius: ThemesDefault.radii.sm,
+  marginHorizontal: ThemesDefault.space.PX_16,
+};
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelStreamPreview.tsx");
 
 export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
@@ -49,17 +70,21 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   let obj = mode(589);
   const items = [closure_4, closure_5];
   const items1 = [stream];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    let tmp2 = null != stream;
-    if (tmp2) {
-      tmp2 = tmp.ownerId === closure_1_5.getId();
-    }
-    if (tmp2) {
-      tmp2 = null == closure_1_4.getStreamerActiveStreamMetadataForStream(mode(closure_1_2[11]).encodeStreamKey(tmp));
-      const obj = mode(closure_1_2[11]);
-    }
-    return tmp2;
-  }, items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let tmp2 = null != stream;
+      if (tmp2) {
+        tmp2 = tmp.ownerId === closure_1_5.getId();
+      }
+      if (tmp2) {
+        tmp2 = null == closure_1_4.getStreamerActiveStreamMetadataForStream(mode(closure_1_2[11]).encodeStreamKey(tmp));
+        const obj = mode(closure_1_2[11]);
+      }
+      return tmp2;
+    },
+    items1,
+  );
   obj1 = mode(4217);
   class T {
     constructor() {
@@ -103,7 +128,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     obj1[2] = tmp.streamPreviewImage;
     tmp14 = callback(tmp2(4217).Image, obj1);
   }
-  const items2 = [tmp14, ];
+  const items2 = [tmp14];
   const obj3 = { style: animatedStyle, layout, children: null };
   const tmp11 = closure_7;
   const tmp12 = closure_8;

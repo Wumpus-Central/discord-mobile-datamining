@@ -11,8 +11,7 @@ const frozen = Object.freeze({ channelAffinities: [], lastFetched: 0 });
 let obj = {};
 let merged = Object.assign(frozen);
 const PersistedStore = initializeDefault.PersistedStore;
-class ChannelAffinitiesV2Store extends PersistedStore {
-}
+class ChannelAffinitiesV2Store extends PersistedStore {}
 const prototype = ChannelAffinitiesV2Store.prototype;
 prototype["initialize"] = function initialize(channelAffinities) {
   if (null != channelAffinities) {
@@ -20,10 +19,12 @@ prototype["initialize"] = function initialize(channelAffinities) {
     obj.lastFetched = channelAffinities.lastFetched;
     const _Map = Map;
     channelAffinities = obj.channelAffinities;
-    map = new Map(channelAffinities.map((channelId) => {
-      const items = [channelId.channelId, channelId];
-      return items;
-    }));
+    map = new Map(
+      channelAffinities.map((channelId) => {
+        const items = [channelId.channelId, channelId];
+        return items;
+      }),
+    );
   }
 };
 prototype["shouldFetch"] = function shouldFetch() {
@@ -77,10 +78,12 @@ obj = {
     c2 = false;
     obj.channelAffinities = affineChannels.affineChannels;
     const channelAffinities = obj.channelAffinities;
-    map = new Map(channelAffinities.map((channelId) => {
-      const items = [channelId.channelId, channelId];
-      return items;
-    }));
+    map = new Map(
+      channelAffinities.map((channelId) => {
+        const items = [channelId.channelId, channelId];
+        return items;
+      }),
+    );
   },
   LOAD_CHANNEL_AFFINITIES_V2_FAILURE: function handleLoadChannelAffinitiesFailure() {
     c2 = false;
@@ -90,7 +93,7 @@ obj = {
     const merged = Object.assign(frozen);
     map = new Map();
     c2 = false;
-  }
+  },
 };
 const channelAffinitiesV2Store = new ChannelAffinitiesV2Store(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx");

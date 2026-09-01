@@ -15,7 +15,9 @@ let obj = keys.create((arg0) => {
   };
   return obj;
 });
-const result = set.fileFinishedImporting("modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx");
+const result = set.fileFinishedImporting(
+  "modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx",
+);
 
 export const GUILD_SELECT_ALL_SERVERS_OPTION_ID = "0";
 export const useUserSafetySettingsSelectedGuildStore = obj;

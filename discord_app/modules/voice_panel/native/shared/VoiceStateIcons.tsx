@@ -34,8 +34,20 @@ function VideoDisabledSvgIcon(size) {
   const items = [iconStyle, flattenResult];
   obj.style = items;
   obj.viewBox = "0 0 24 24";
-  const items1 = [callback(inlineStyles.Path, { d: "M8.48485 19H13C15.2091 19 17 17.2091 17 15L19.563 17.0504C20.5451 17.8361 22 17.1368 22 15.8791V8.12094C22 7.35968 21.467 6.80301 20.8285 6.65636L8.48485 19Z", fill: tintColor }), callback(inlineStyles.Path, { d: "M14.9873 5.52783C14.4019 5.192 13.7233 5 13 5H6C3.79086 5 2 6.79086 2 9V15C2 15.9811 2.35325 16.8798 2.93949 17.5757L14.9873 5.52783Z", fill: tintColor }), ];
-  obj = { d: "M21.2785 2.70712C20.888 2.31659 20.2549 2.31659 19.8643 2.70711L2.70711 19.8643C2.31658 20.2549 2.31658 20.888 2.70711 21.2785L2.72146 21.2929C3.11199 21.6834 3.74515 21.6834 4.13567 21.2929L21.2929 4.13568C21.6834 3.74515 21.6834 3.11199 21.2929 2.72147L21.2785 2.70712Z", fill: tmp4.redTint.tintColor };
+  const items1 = [
+    callback(inlineStyles.Path, {
+      d: "M8.48485 19H13C15.2091 19 17 17.2091 17 15L19.563 17.0504C20.5451 17.8361 22 17.1368 22 15.8791V8.12094C22 7.35968 21.467 6.80301 20.8285 6.65636L8.48485 19Z",
+      fill: tintColor,
+    }),
+    callback(inlineStyles.Path, {
+      d: "M14.9873 5.52783C14.4019 5.192 13.7233 5 13 5H6C3.79086 5 2 6.79086 2 9V15C2 15.9811 2.35325 16.8798 2.93949 17.5757L14.9873 5.52783Z",
+      fill: tintColor,
+    }),
+  ];
+  obj = {
+    d: "M21.2785 2.70712C20.888 2.31659 20.2549 2.31659 19.8643 2.70711L2.70711 19.8643C2.31658 20.2549 2.31658 20.888 2.70711 21.2785L2.72146 21.2929C3.11199 21.6834 3.74515 21.6834 4.13567 21.2929L21.2929 4.13568C21.6834 3.74515 21.6834 3.11199 21.2929 2.72147L21.2785 2.70712Z",
+    fill: tmp4.redTint.tintColor,
+  };
   items1[2] = callback(inlineStyles.Path, obj);
   obj.children = items1;
   return callback2(inlineStylesDefault, obj);
@@ -55,7 +67,7 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   const tmp = callback3();
   if (isStableVoiceStateEqual.MuteDeafenIconState.DEAFENED_SERVER === state) {
-    const items = [style, ];
+    const items = [style];
     let redTint = null;
     if (!alwaysWhite) {
       redTint = tmp.redTint;
@@ -70,7 +82,7 @@ const memoResult = importAllResult.memo((arg0) => {
     obj[0] = items1;
     return callback(tmp2(9812).HeadphonesSlashIcon, obj);
   } else if (tmp2(9809).MuteDeafenIconState.MUTED_SERVER === state) {
-    const items2 = [style, ];
+    const items2 = [style];
     let redTint1 = null;
     if (!alwaysWhite) {
       redTint1 = tmp.redTint;

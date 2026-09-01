@@ -15,7 +15,10 @@ import createCacheKey from "../../design/components/Styles/native/createStyles.t
 require = arg1;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ uploadIcon: { position: "absolute", right: -7, top: -7 }, avatar: { height: 64, width: 64, borderRadius: 32 } });
+let closure_11 = createCacheKey.createStyles({
+  uploadIcon: { position: "absolute", right: -7, top: -7 },
+  avatar: { height: 64, width: 64, borderRadius: 32 },
+});
 const result = require("set").fileFinishedImporting("components_native/common/IconUploader.tsx");
 
 export default function IconUploader(disabled) {
@@ -25,9 +28,7 @@ export default function IconUploader(disabled) {
   }
   let fn = disabled.makeURL;
   if (fn === undefined) {
-    fn = function u(icon) {
-
-    };
+    fn = function u(icon) {};
   }
   let str = disabled.type;
   if (str === undefined) {
@@ -37,7 +38,7 @@ export default function IconUploader(disabled) {
   dependencyMap = undefined;
   function _handleChangeIcon(arg0) {
     const self = this;
-    const tmp = _handleChangeIcon(function*() {
+    const tmp = _handleChangeIcon(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -141,7 +142,7 @@ export default function IconUploader(disabled) {
     obj[1] = obj1.makeSource(fnResult);
     tmp7 = callback(closure_6, obj);
   }
-  const items1 = [tmp7, ];
+  const items1 = [tmp7];
   let tmp16 = null;
   if (!flag) {
     obj1 = { style: null, source: null };
@@ -173,4 +174,4 @@ export default function IconUploader(disabled) {
     tmp22 = callback(closure_5, obj2);
   }
   return tmp22;
-};
+}

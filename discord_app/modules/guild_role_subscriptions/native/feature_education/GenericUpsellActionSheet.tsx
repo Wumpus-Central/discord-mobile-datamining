@@ -16,7 +16,9 @@ createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16, flex: 1 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const obj1 = { marginBottom: ThemesDefault.space.PX_16, flex: 1 };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/GenericUpsellActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/feature_education/GenericUpsellActionSheet.tsx",
+);
 
 export default function GenericUpsellActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -33,15 +35,33 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
     },
     handleDisabled: true,
     header: null,
-    children: null
+    children: null,
   };
   obj = { children: null };
-  const items = [callback(preloadDefault, { source: imageSource, style: tmp.image }), callback(markAsDismissed(5937).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose })];
+  const items = [
+    callback(preloadDefault, { source: imageSource, style: tmp.image }),
+    callback(markAsDismissed(5937).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose }),
+  ];
   obj[0] = items;
   obj[4] = callback2(View, obj);
   const obj2 = { style: tmp.content, children: null };
-  const items1 = [callback(markAsDismissed(4474).Text, { accessibilityRole: "header", variant: "heading-xl/medium", color: "mobile-text-heading-primary", children: header }), callback(markAsDismissed(1297).Spacer, { size: 12 }), callback(markAsDismissed(4474).Text, { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: body }), callback(markAsDismissed(4928).Button, { variant: "primary", grow: true, onPress: onCTAPress, text: cta })];
+  const items1 = [
+    callback(markAsDismissed(4474).Text, {
+      accessibilityRole: "header",
+      variant: "heading-xl/medium",
+      color: "mobile-text-heading-primary",
+      children: header,
+    }),
+    callback(markAsDismissed(1297).Spacer, { size: 12 }),
+    callback(markAsDismissed(4474).Text, {
+      style: tmp.description,
+      variant: "text-sm/medium",
+      color: "text-default",
+      children: body,
+    }),
+    callback(markAsDismissed(4928).Button, { variant: "primary", grow: true, onPress: onCTAPress, text: cta }),
+  ];
   obj2[1] = items1;
   obj[5] = callback2(View, obj2);
   return callback(markAsDismissed(5622).BottomSheet, obj);
-};
+}

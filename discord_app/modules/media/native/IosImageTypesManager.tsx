@@ -10,15 +10,12 @@ let c4 = null;
 let c5 = null;
 let c6 = null;
 initializeDefault;
-class IosImageTypesManager extends tmp3 {
-}
+class IosImageTypesManager extends tmp3 {}
 const prototype = IosImageTypesManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const result = this.initializeSupportedImageTypes();
 };
-prototype["_terminate"] = function _terminate() {
-
-};
+prototype["_terminate"] = function _terminate() {};
 prototype["initializeSupportedImageTypes"] = function initializeSupportedImageTypes() {
   if (null === closure_3) {
     try {

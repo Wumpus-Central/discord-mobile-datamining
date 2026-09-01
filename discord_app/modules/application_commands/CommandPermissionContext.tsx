@@ -52,7 +52,11 @@ function computePermissions(isPrivate) {
       return obj;
     }
   }
-  obj = { computedPermissions: fromStringAll.deserialize(0), hasBaseAccessPermissions: true, hasSendMessagesPermission: true };
+  obj = {
+    computedPermissions: fromStringAll.deserialize(0),
+    hasBaseAccessPermissions: true,
+    hasSendMessagesPermission: true,
+  };
   return obj;
 }
 ({ ChannelTypes: map1, Permissions: closure_14 } = ME);
@@ -98,13 +102,27 @@ export const buildPermissionContext = function buildPermissionContext(channel, i
     }
     const isViewingRolesResult = viewingRoles.isViewingRoles(undefined);
     const tmp17 = computePermissions;
-    obj = { context: null, userId: null, roleIds: null, isImpersonating: null, commandTypes: null, computedPermissions: null, hasBaseAccessPermissions: null, hasSendMessagesPermission: null, allowNsfw: null };
+    obj = {
+      context: null,
+      userId: null,
+      roleIds: null,
+      isImpersonating: null,
+      commandTypes: null,
+      computedPermissions: null,
+      hasBaseAccessPermissions: null,
+      hasSendMessagesPermission: null,
+      allowNsfw: null,
+    };
     obj[0] = obj;
     obj[1] = id;
     obj[2] = items;
     obj[3] = isViewingRolesResult;
     obj[4] = items;
-    ({ computedPermissions: obj3[5], hasBaseAccessPermissions: obj3[6], hasSendMessagesPermission: obj3[7] } = computePermissions(obj, isThreadResult));
+    ({
+      computedPermissions: obj3[5],
+      hasBaseAccessPermissions: obj3[6],
+      hasSendMessagesPermission: obj3[7],
+    } = computePermissions(obj, isThreadResult));
     let tmp24 = flag;
     if (tmp24) {
       let tmp25 = !(obj instanceof tmp);
@@ -203,7 +221,17 @@ export const usePermissionContext = function usePermissionContext(channel, items
         isThreadResult = obj.isThread();
       }
       const tmpResult = closure_1_15(memo, isThreadResult);
-      obj = { context: tmp2, userId: stateFromStores, roleIds: stateFromStoresArray, commandTypes: closure_1, isImpersonating: stateFromStores2, computedPermissions: tmpResult.computedPermissions, hasBaseAccessPermissions: tmpResult.hasBaseAccessPermissions, hasSendMessagesPermission: tmpResult.hasSendMessagesPermission, allowNsfw: viewNsfwCommandsOrDefault };
+      obj = {
+        context: tmp2,
+        userId: stateFromStores,
+        roleIds: stateFromStoresArray,
+        commandTypes: closure_1,
+        isImpersonating: stateFromStores2,
+        computedPermissions: tmpResult.computedPermissions,
+        hasBaseAccessPermissions: tmpResult.hasBaseAccessPermissions,
+        hasSendMessagesPermission: tmpResult.hasSendMessagesPermission,
+        allowNsfw: viewNsfwCommandsOrDefault,
+      };
       return obj;
     }, items7);
   }

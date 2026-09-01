@@ -14,27 +14,90 @@ const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let obj = { duration: 200, easing: null };
 obj[1] = Easing.out(require("../../reanimated/ReanimatedRexport.tsx").Easing.ease);
-obj = { container: null, optionButton: null, optionTextEmoji: null, optionImageEmoji: null, optionText: null, checkIcon: null, newBadgeWrapper: null, newBadge: null, roleCount: null };
-obj = { borderRadius: ThemesDefault.radii.md, borderWidth: 2, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: 8 };
+obj = {
+  container: null,
+  optionButton: null,
+  optionTextEmoji: null,
+  optionImageEmoji: null,
+  optionText: null,
+  checkIcon: null,
+  newBadgeWrapper: null,
+  newBadge: null,
+  roleCount: null,
+};
+obj = {
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 2,
+  borderStyle: "solid",
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginBottom: 8,
+};
 obj[0] = obj;
 obj[1] = { paddingVertical: 12, paddingHorizontal: 16, display: "flex", flexDirection: "row", alignItems: "center" };
 obj[2] = { fontSize: 24, lineHeight: 24, marginRight: 12, paddingTop: 5 };
 obj[3] = { height: 24, width: 24, marginRight: 12 };
 obj[4] = { flexShrink: 1 };
-createCacheKey = { position: "absolute", top: -6, right: -6, width: 20, height: 20, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center" };
+createCacheKey = {
+  position: "absolute",
+  top: -6,
+  right: -6,
+  width: 20,
+  height: 20,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderRadius: 10,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
 obj[5] = createCacheKey;
 obj[6] = { position: "absolute", top: -6, right: -6 };
 obj[7] = { fontWeight: "bold" };
-obj[8] = { position: "absolute", top: -6, right: 24, paddingVertical: 2, paddingHorizontal: 6, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center" };
+obj[8] = {
+  position: "absolute",
+  top: -6,
+  right: 24,
+  paddingVertical: 2,
+  paddingHorizontal: 6,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderRadius: 10,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
 let closure_12 = createCacheKey.createStyles(obj);
-let closure_13 = { code: "function GuildOnboardingPromptOptionButtonTsx1(){const{selected,withTiming,Easing,useReducedMotion,withSequence,withSpring}=this.__closure;const rawOpacity=selected?1:0;const opacity=withTiming(rawOpacity,{duration:150,easing:Easing.out(Easing.ease)});const rawScale=selected?1:0.7;const scale=useReducedMotion?rawScale:withSequence(withSpring(rawScale*1.2,{stiffness:80,damping:6,mass:0.3}),withSpring(rawScale,{stiffness:80,damping:6,mass:0.3}));return{opacity:opacity,transform:[{scale:scale}]};}" };
-let closure_14 = { code: "function GuildOnboardingPromptOptionButtonTsx2(){const{showMemberCount,withDelay,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity=showMemberCount?1:0;const opacity=withDelay(showMemberCount?400:0,withTiming(rawOpacity,{duration:150,easing:Easing.out(Easing.ease)}));const rawTranslate=showMemberCount?0:16;const translateX=useReducedMotion?rawTranslate:withDelay(showMemberCount?400:0,withTiming(rawTranslate,{duration:200,easing:Easing.out(Easing.ease)}));return{opacity:opacity,transform:[{translateX:translateX}]};}" };
-let closure_15 = { code: "function GuildOnboardingPromptOptionButtonTsx3(){const{withTiming,selected,SELECTION_TIMING}=this.__closure;return withTiming(selected?1:0,SELECTION_TIMING);}" };
-let closure_16 = { code: "function GuildOnboardingPromptOptionButtonTsx4(){const{withTiming,isNew,SELECTION_TIMING}=this.__closure;return withTiming(isNew?1:0,SELECTION_TIMING);}" };
-let closure_17 = { code: "function GuildOnboardingPromptOptionButtonTsx5(){const{interpolateColor,newProgress,unselectedBorderColor,newBorderColor,selectedProgress,selectedBorderColor,selectedBackgroundColor}=this.__closure;const currentUnselectedBorderColor=interpolateColor(newProgress.get(),[0,1],[unselectedBorderColor,newBorderColor]);return{borderColor:interpolateColor(selectedProgress.get(),[0,1],[currentUnselectedBorderColor,selectedBorderColor]),backgroundColor:interpolateColor(selectedProgress.get(),[0,1],['transparent',selectedBackgroundColor])};}" };
-let closure_18 = { code: "function GuildOnboardingPromptOptionButtonTsx6(){const{useReducedMotion,scale}=this.__closure;return useReducedMotion?{}:{transform:[{scale:scale.get()}]};}" };
-let obj2 = { position: "absolute", top: -6, right: 24, paddingVertical: 2, paddingHorizontal: 6, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center" };
-let result = require("set").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingPromptOptionButton.tsx");
+let closure_13 = {
+  code: "function GuildOnboardingPromptOptionButtonTsx1(){const{selected,withTiming,Easing,useReducedMotion,withSequence,withSpring}=this.__closure;const rawOpacity=selected?1:0;const opacity=withTiming(rawOpacity,{duration:150,easing:Easing.out(Easing.ease)});const rawScale=selected?1:0.7;const scale=useReducedMotion?rawScale:withSequence(withSpring(rawScale*1.2,{stiffness:80,damping:6,mass:0.3}),withSpring(rawScale,{stiffness:80,damping:6,mass:0.3}));return{opacity:opacity,transform:[{scale:scale}]};}",
+};
+let closure_14 = {
+  code: "function GuildOnboardingPromptOptionButtonTsx2(){const{showMemberCount,withDelay,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity=showMemberCount?1:0;const opacity=withDelay(showMemberCount?400:0,withTiming(rawOpacity,{duration:150,easing:Easing.out(Easing.ease)}));const rawTranslate=showMemberCount?0:16;const translateX=useReducedMotion?rawTranslate:withDelay(showMemberCount?400:0,withTiming(rawTranslate,{duration:200,easing:Easing.out(Easing.ease)}));return{opacity:opacity,transform:[{translateX:translateX}]};}",
+};
+let closure_15 = {
+  code: "function GuildOnboardingPromptOptionButtonTsx3(){const{withTiming,selected,SELECTION_TIMING}=this.__closure;return withTiming(selected?1:0,SELECTION_TIMING);}",
+};
+let closure_16 = {
+  code: "function GuildOnboardingPromptOptionButtonTsx4(){const{withTiming,isNew,SELECTION_TIMING}=this.__closure;return withTiming(isNew?1:0,SELECTION_TIMING);}",
+};
+let closure_17 = {
+  code: "function GuildOnboardingPromptOptionButtonTsx5(){const{interpolateColor,newProgress,unselectedBorderColor,newBorderColor,selectedProgress,selectedBorderColor,selectedBackgroundColor}=this.__closure;const currentUnselectedBorderColor=interpolateColor(newProgress.get(),[0,1],[unselectedBorderColor,newBorderColor]);return{borderColor:interpolateColor(selectedProgress.get(),[0,1],[currentUnselectedBorderColor,selectedBorderColor]),backgroundColor:interpolateColor(selectedProgress.get(),[0,1],['transparent',selectedBackgroundColor])};}",
+};
+let closure_18 = {
+  code: "function GuildOnboardingPromptOptionButtonTsx6(){const{useReducedMotion,scale}=this.__closure;return useReducedMotion?{}:{transform:[{scale:scale.get()}]};}",
+};
+let obj2 = {
+  position: "absolute",
+  top: -6,
+  right: 24,
+  paddingVertical: 2,
+  paddingHorizontal: 6,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderRadius: 10,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/guild_onboarding/native/GuildOnboardingPromptOptionButton.tsx",
+);
 
 export default function PromptOptionButton(option) {
   option = option.option;
@@ -110,7 +173,10 @@ export default function PromptOptionButton(option) {
         num3 = 1.2;
         withSpringResult = tmp2Result1.withSpring(1.2 * num2, { stiffness: 80, damping: 6, mass: 0.3 });
         tmp2Result2 = tmp2(tmp3[12]);
-        withSequenceResult = tmp2Result.withSequence(withSpringResult, tmp2Result2.withSpring(num2, { stiffness: 80, damping: 6, mass: 0.3 }));
+        withSequenceResult = tmp2Result.withSequence(
+          withSpringResult,
+          tmp2Result2.withSpring(num2, { stiffness: 80, damping: 6, mass: 0.3 }),
+        );
       }
       items = [];
       items[0] = { scale: withSequenceResult };
@@ -118,7 +184,14 @@ export default function PromptOptionButton(option) {
       return obj1;
     }
   }
-  obj = { selected, withTiming: option(4479).withTiming, Easing: option(4217).Easing, useReducedMotion: stateFromStores1, withSequence: option(4217).withSequence, withSpring: option(4927).withSpring };
+  obj = {
+    selected,
+    withTiming: option(4479).withTiming,
+    Easing: option(4217).Easing,
+    useReducedMotion: stateFromStores1,
+    withSequence: option(4217).withSequence,
+    withSpring: option(4927).withSpring,
+  };
   R.__closure = obj;
   R.__workletHash = 8281627194581;
   R.__initData = closure_13;
@@ -132,7 +205,10 @@ export default function PromptOptionButton(option) {
       const _Math = Math;
       const roleIds = option.roleIds;
       let items2 = [];
-      HermesBuiltin.arraySpread(roleIds.map((arg0) => table[arg0]), 0);
+      HermesBuiltin.arraySpread(
+        roleIds.map((arg0) => table[arg0]),
+        0,
+      );
       const _Math2 = Math;
       num = HermesBuiltin.apply(items2, Math);
     }
@@ -221,7 +297,13 @@ export default function PromptOptionButton(option) {
       return obj1;
     }
   }
-  obj = { showMemberCount: first, withDelay: tmp2(4217).withDelay, withTiming: tmp2(4479).withTiming, Easing: tmp2(4217).Easing, useReducedMotion: stateFromStores1 };
+  obj = {
+    showMemberCount: first,
+    withDelay: tmp2(4217).withDelay,
+    withTiming: tmp2(4479).withTiming,
+    Easing: tmp2(4217).Easing,
+    useReducedMotion: stateFromStores1,
+  };
   V.__closure = obj;
   V.__workletHash = 9518487706997;
   V.__initData = token;
@@ -251,7 +333,7 @@ export default function PromptOptionButton(option) {
     tmp21 = null != name;
   }
   closure_13 = tmp21;
-  const items5 = [tmp21, , , ];
+  const items5 = [tmp21, , ,];
   const emoji3 = option.emoji;
   let name1;
   if (emoji3 != null) {
@@ -335,13 +417,13 @@ export default function PromptOptionButton(option) {
   class W {
     constructor() {
       obj = option(onSelect[7]);
-      items = [, ];
+      items = [,];
       items[0] = closure_14;
       items[1] = closure_15;
       obj = { borderColor: null, backgroundColor: null };
       interpolateColorResult = obj.interpolateColor(closure_19.get(), [0, 1], items);
       obj3 = option(onSelect[7]);
-      items1 = [, ];
+      items1 = [,];
       items1[0] = interpolateColorResult;
       items1[1] = closure_16;
       obj[0] = obj3.interpolateColor(closure_18.get(), [0, 1], items1);
@@ -353,11 +435,27 @@ export default function PromptOptionButton(option) {
     }
   }
   const tmp2Result7 = option(4217);
-  W.__closure = { interpolateColor: option(4217).interpolateColor, newProgress: derivedValue1, unselectedBorderColor: token, newBorderColor: token1, selectedProgress: derivedValue, selectedBorderColor: token2, selectedBackgroundColor: token3 };
+  W.__closure = {
+    interpolateColor: option(4217).interpolateColor,
+    newProgress: derivedValue1,
+    unselectedBorderColor: token,
+    newBorderColor: token1,
+    selectedProgress: derivedValue,
+    selectedBorderColor: token2,
+    selectedBackgroundColor: token3,
+  };
   W.__workletHash = 1340353593596;
   W.__initData = token3;
   const animatedStyle2 = tmp2Result7.useAnimatedStyle(W);
-  let obj3 = { interpolateColor: option(4217).interpolateColor, newProgress: derivedValue1, unselectedBorderColor: token, newBorderColor: token1, selectedProgress: derivedValue, selectedBorderColor: token2, selectedBackgroundColor: token3 };
+  let obj3 = {
+    interpolateColor: option(4217).interpolateColor,
+    newProgress: derivedValue1,
+    unselectedBorderColor: token,
+    newBorderColor: token1,
+    selectedProgress: derivedValue,
+    selectedBorderColor: token2,
+    selectedBackgroundColor: token3,
+  };
   class K {
     constructor() {
       if (closure_4) {
@@ -411,7 +509,7 @@ export default function PromptOptionButton(option) {
     accessibilityRole,
     accessibilityState,
     accessibilityLabel: memo,
-    children: null
+    children: null,
   };
   items7 = [tmp.optionButton];
   let id1;
@@ -462,9 +560,15 @@ export default function PromptOptionButton(option) {
     tmp38Result = tmp38(closure_5, obj6);
     const tmp39 = closure_5;
   }
-  const items8 = [tmp38Result, ];
+  const items8 = [tmp38Result];
   const obj9 = { style: tmp.optionText, children: null };
-  const items9 = [callback2(option(4474).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: option.title }), ];
+  const items9 = [
+    callback2(option(4474).Text, {
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      children: option.title,
+    }),
+  ];
   let tmp44Result = null != option.description && option.description.length > 0;
   if (tmp44Result) {
     const obj11 = { variant: "text-xs/medium", color: "text-default", children: null };
@@ -475,10 +579,16 @@ export default function PromptOptionButton(option) {
   obj9[1] = items9;
   items8[1] = closure_10(closure_5, obj9);
   obj5[8] = items8;
-  const items10 = [closure_10(option(5068).PressableOpacity, obj5), , , ];
+  const items10 = [closure_10(option(5068).PressableOpacity, obj5), , ,];
   tmp44Result = null;
   if (num > 0) {
-    const obj12 = { accessible: false, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, style: null, children: null };
+    const obj12 = {
+      accessible: false,
+      importantForAccessibility: "no-hide-descendants",
+      accessibilityElementsHidden: true,
+      style: null,
+      children: null,
+    };
     const items11 = [tmp.roleCount, animatedStyle1];
     obj12[3] = items11;
     const obj13 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
@@ -514,4 +624,4 @@ export default function PromptOptionButton(option) {
   items10[3] = canBeNew;
   obj4[1] = items10;
   return closure_10(selected(4217).View, obj4);
-};
+}

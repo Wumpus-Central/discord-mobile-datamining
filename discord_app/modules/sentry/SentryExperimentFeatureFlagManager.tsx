@@ -218,8 +218,7 @@ let prototype = function SentryExperimentFeatureFlagManager() {
   applyArgumentsResult.stores = result1.set(closure_4, syncAllExperimentFlags);
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp3 {
-}
+class prototype extends tmp3 {}
 prototype = new prototype();
 let result = set.fileFinishedImporting("modules/sentry/SentryExperimentFeatureFlagManager.tsx");
 

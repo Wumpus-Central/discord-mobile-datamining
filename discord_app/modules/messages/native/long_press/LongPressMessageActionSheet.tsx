@@ -13,14 +13,28 @@ import ME from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-({ AnalyticEvents: map1, AnalyticsPages: closure_14, ChannelTypes: closure_15, GuildFeatures: closure_16, LOCAL_BOT_ID: closure_17, MessageAttachmentFlags: closure_18, MessageFlags: closure_19, MessageStates: closure_20, MessageTypes: closure_21, MessageTypesSets: closure_22, Permissions: closure_23 } = ME);
+({
+  AnalyticEvents: map1,
+  AnalyticsPages: closure_14,
+  ChannelTypes: closure_15,
+  GuildFeatures: closure_16,
+  LOCAL_BOT_ID: closure_17,
+  MessageAttachmentFlags: closure_18,
+  MessageFlags: closure_19,
+  MessageStates: closure_20,
+  MessageTypes: closure_21,
+  MessageTypesSets: closure_22,
+  Permissions: closure_23,
+} = ME);
 let result = require("set").fileFinishedImporting("modules/messages/native/long_press/LongPressMessageActionSheet.tsx");
 
 export default function LongPressMessageActionSheet(analyticsLocation) {
   const _require = analyticsLocation;
   let props = analyticsLocations;
   const tmp3 = analyticsLocation;
-  analyticsLocations = analyticsLocations(analyticsLocation[12])(analyticsLocations(analyticsLocation[13]).MESSAGE_LONG_PRESS_MENU).analyticsLocations;
+  analyticsLocations = analyticsLocations(analyticsLocation[12])(
+    analyticsLocations(analyticsLocation[13]).MESSAGE_LONG_PRESS_MENU,
+  ).analyticsLocations;
   analyticsLocation = analyticsLocation.analyticsLocation;
   if (undefined === analyticsLocation) {
     analyticsLocation = {};
@@ -60,19 +74,31 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   let obj4 = _require(tmp3[19]);
   const items2 = [actionSheetSource];
   const tmp4 = analyticsLocations(analyticsLocation[12]);
-  [tmp14, tmp15] = message(obj4.useStateFromStoresArray(items2, () => {
-    const items = [actionSheetSource.isMessageReminder(channel.id, message.id), actionSheetSource.isMessageBookmarked(channel.id, message.id)];
-    return items;
-  }), 2);
+  [tmp14, tmp15] = message(
+    obj4.useStateFromStoresArray(items2, () => {
+      const items = [
+        actionSheetSource.isMessageReminder(channel.id, message.id),
+        actionSheetSource.isMessageBookmarked(channel.id, message.id),
+      ];
+      return items;
+    }),
+    2,
+  );
   let obj5 = _require(tmp3[18]);
   const hasForLaterAccess = obj5.useHasForLaterAccess("LongPressMessageActionSheet");
   let obj6 = _require(tmp3[20]);
   const isNonModInLockedThread = obj6.useIsNonModInLockedThread(channel);
   id = undefined;
-  const tmp13 = message(obj4.useStateFromStoresArray(items2, () => {
-    const items = [actionSheetSource.isMessageReminder(channel.id, message.id), actionSheetSource.isMessageBookmarked(channel.id, message.id)];
-    return items;
-  }), 2);
+  const tmp13 = message(
+    obj4.useStateFromStoresArray(items2, () => {
+      const items = [
+        actionSheetSource.isMessageReminder(channel.id, message.id),
+        actionSheetSource.isMessageBookmarked(channel.id, message.id),
+      ];
+      return items;
+    }),
+    2,
+  );
   if (channel != null) {
     id = channel.id;
   }
@@ -91,7 +117,11 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   const canResult = props.can(props.MANAGE_MESSAGES, channel);
   const tmpResultResult = props(tmp3[21])(id);
   tmp8Result = tmp8(tmp3[24]);
-  const canToggleGuildOfficialMessages = tmp8Result.useCanToggleGuildOfficialMessages(message, channel, "LongPressMessageActionSheet");
+  const canToggleGuildOfficialMessages = tmp8Result.useCanToggleGuildOfficialMessages(
+    message,
+    channel,
+    "LongPressMessageActionSheet",
+  );
   let hasFlagResult = message.hasFlag(props.CROSSPOSTED);
   let tmp33 = !hasFlagResult;
   const canResult1 = props.can(props.SEND_MESSAGES, channel);
@@ -160,14 +190,15 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   const attachments = message.attachments;
   let tmp52 = message.author.id === id1;
   if (tmp52) {
-    let tmp53 = attachments.filter((flags) => {
-      let tmp = null == flags.flags;
-      if (!tmp) {
-        tmp = !analyticsLocation(analyticsLocation[27]).hasFlag(flags.flags, props.IS_THUMBNAIL);
-        const obj = analyticsLocation(analyticsLocation[27]);
-      }
-      return tmp;
-    }).length > 1;
+    let tmp53 =
+      attachments.filter((flags) => {
+        let tmp = null == flags.flags;
+        if (!tmp) {
+          tmp = !analyticsLocation(analyticsLocation[27]).hasFlag(flags.flags, props.IS_THUMBNAIL);
+          const obj = analyticsLocation(analyticsLocation[27]);
+        }
+        return tmp;
+      }).length > 1;
     if (!tmp53) {
       tmp53 = "" !== message.content;
     }
@@ -175,7 +206,9 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   }
   const tmp8Result1 = tmp8(tmp3[20]);
   const items3 = [selectedMedia];
-  const stateFromStores = tmp8(tmp3[19]).useStateFromStores(items3, () => selectedMedia.hasReportedMessage(message.channel_id, message.id));
+  const stateFromStores = tmp8(tmp3[19]).useStateFromStores(items3, () =>
+    selectedMedia.hasReportedMessage(message.channel_id, message.id),
+  );
   tmp8(tmp3[30]);
   if (guild != null) {
     id = guild.id;
@@ -189,18 +222,38 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
       icon: props(analyticsLocation(analyticsLocation[31]).ActionSheetRow.Icon, { IconComponent }),
       label,
       onPress() {
-        const result = label(analyticsLocation[32]).longPressMessageOptionHandler({ actionSheetSource: closure_1_7, analyticsLocations: closure_1_1, channel: closure_1_4, chatInputRef: closure_1_5, label, message: closure_1_3, onBack: closure_1_9, onActionExecuted: closure_1, selectedMedia: closure_1_6, disabled });
+        const result = label(analyticsLocation[32]).longPressMessageOptionHandler({
+          actionSheetSource: closure_1_7,
+          analyticsLocations: closure_1_1,
+          channel: closure_1_4,
+          chatInputRef: closure_1_5,
+          label,
+          message: closure_1_3,
+          onBack: closure_1_9,
+          onActionExecuted: closure_1,
+          selectedMedia: closure_1_6,
+          disabled,
+        });
       },
       variant,
-      disabled
+      disabled,
     };
   }
   function render(items5) {
     let obj = { value: analyticsLocations, children: null };
-    obj = { showGradient: true, startExpanded: analyticsLocation(analyticsLocation[34]).isMetaQuest(), header: null, children: null };
+    obj = {
+      showGradient: true,
+      startExpanded: analyticsLocation(analyticsLocation[34]).isMetaQuest(),
+      header: null,
+      children: null,
+    };
     const obj3 = analyticsLocation(analyticsLocation[34]);
     const tmp2 = analyticsLocation;
-    let shouldShowEmojiRowResult = analyticsLocation(analyticsLocation[35]).shouldShowEmojiRow(closure_8, message, closure_10);
+    let shouldShowEmojiRowResult = analyticsLocation(analyticsLocation[35]).shouldShowEmojiRow(
+      closure_8,
+      message,
+      closure_10,
+    );
     if (shouldShowEmojiRowResult) {
       obj = { message: null, channel: null };
       obj[0] = message;
@@ -210,13 +263,23 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
     obj[2] = shouldShowEmojiRowResult;
     let mapped;
     if (items5 != null) {
-      mapped = items5.map((arr) => callback2(callback(table[31]).ActionSheetRow.Group, {
-        hasIcons: true,
-        children: arr.map((arg0, arg1) => {
-          ({ icon, arrow, label, onPress, variant, disabled } = arg0);
-          return callback2(callback(table[31]).ActionSheetRow, { icon, arrow, label, onPress, variant, disabled }, arg1);
-        })
-      }, arg1));
+      mapped = items5.map((arr) =>
+        callback2(
+          callback(table[31]).ActionSheetRow.Group,
+          {
+            hasIcons: true,
+            children: arr.map((arg0, arg1) => {
+              ({ icon, arrow, label, onPress, variant, disabled } = arg0);
+              return callback2(
+                callback(table[31]).ActionSheetRow,
+                { icon, arrow, label, onPress, variant, disabled },
+                arg1,
+              );
+            }),
+          },
+          arg1,
+        ),
+      );
     }
     obj[3] = mapped;
     obj[1] = props(analyticsLocation(analyticsLocation[33]).ActionSheet, obj);
@@ -524,7 +587,22 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
         }
         const items = [];
         if (hasFlagResult) {
-          items.push(props, props, props, props, props, props, props, props4, props11, props, props, props, props, props5);
+          items.push(
+            props,
+            props,
+            props,
+            props,
+            props,
+            props,
+            props,
+            props4,
+            props11,
+            props,
+            props,
+            props,
+            props,
+            props5,
+          );
         }
         let tmp22 = closure_10;
         if (closure_10) {
@@ -532,7 +610,22 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
           const obj2 = analyticsLocation(analyticsLocation[27]);
         }
         if (!tmp22) {
-          items.push(props, props, props4, props6, props11, props, props, props, props, props, props, props, props, props5);
+          items.push(
+            props,
+            props,
+            props4,
+            props6,
+            props11,
+            props,
+            props,
+            props,
+            props,
+            props,
+            props,
+            props,
+            props,
+            props5,
+          );
         }
         if (obj3.hasFlag(message.flags, props.EPHEMERAL)) {
           items.push(props, props, props1, props7, props8, props9);
@@ -736,8 +829,35 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
         props = new.target;
         props = new Set(items10.filter((arg0) => !set.has(arg0)));
         const items11 = [props, props, props, props];
-        const items12 = [items11, , ];
-        const items13 = [props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props1, props2, props3];
+        const items12 = [items11, ,];
+        const items13 = [
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props,
+          props1,
+          props2,
+          props3,
+        ];
         items12[1] = items13;
         const items14 = [props4, props5, props6, props7, props8, props9, props10, props11];
         items12[2] = items14;
@@ -761,7 +881,6 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
         props = items10.unshift(props7);
       }
       tmp68 = isMatch;
-    } catch (err) {
-    }
+    } catch (err) {}
   }
-};
+}

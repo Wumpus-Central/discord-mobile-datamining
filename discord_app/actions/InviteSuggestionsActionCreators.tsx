@@ -7,7 +7,13 @@ import _computeRows from "../stores/InviteSuggestionsStore.tsx";
 const result = set2.fileFinishedImporting("actions/InviteSuggestionsActionCreators.tsx");
 
 export const loadInviteSuggestions = function loadInviteSuggestions(arg0) {
-  ({ omitUserIds: require, guild: importDefault, channel: dependencyMap, applicationId: closure_3, inviteTargetType: closure_4 } = arg0);
+  ({
+    omitUserIds: require,
+    guild: importDefault,
+    channel: dependencyMap,
+    applicationId: closure_3,
+    inviteTargetType: closure_4,
+  } = arg0);
   const userAffinitiesV2 = fetchUserAffinitiesV2.fetchUserAffinitiesV2();
   return userAffinitiesV2.then(() => {
     let obj = closure_1_1(closure_1_2[2]);
@@ -16,7 +22,14 @@ export const loadInviteSuggestions = function loadInviteSuggestions(arg0) {
       const _Set = Set;
       set = new Set();
     }
-    obj = { type: "LOAD_INVITE_SUGGESTIONS", omitUserIds: set, guild: closure_1, channel: closure_2, applicationId: closure_3, inviteTargetType: closure_4 };
+    obj = {
+      type: "LOAD_INVITE_SUGGESTIONS",
+      omitUserIds: set,
+      guild: closure_1,
+      channel: closure_2,
+      applicationId: closure_3,
+      inviteTargetType: closure_4,
+    };
     obj.dispatch(obj);
   });
 };

@@ -10,7 +10,13 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ container: { flex: 1, padding: 16, justifyContent: "center", alignItems: "center" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, resend: { marginTop: 16, width: "100%" }, change: { marginTop: 8, width: "100%" } });
+let closure_11 = createCacheKey.createStyles({
+  container: { flex: 1, padding: 16, justifyContent: "center", alignItems: "center" },
+  title: { marginTop: 16, textAlign: "center" },
+  body: { marginTop: 8, lineHeight: 18, textAlign: "center" },
+  resend: { marginTop: 16, width: "100%" },
+  change: { marginTop: 8, width: "100%" },
+});
 let result = require("set").fileFinishedImporting("modules/verification/native/components/ResendEmail.tsx");
 
 export default function ResendEmail() {
@@ -52,8 +58,14 @@ export default function ResendEmail() {
   callback = React.useCallback(() => {
     navigation.push(closure_1_8.ENTER_EMAIL);
   }, items3);
-  const items4 = [callback2(navigation(6256).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const items4 = [callback2(navigation(6256).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , ,];
+  obj = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   let intl = navigation(1236).intl;
   obj[4] = intl.string(navigation(1236).t.fUtddV);
   items4[1] = callback2(navigation(4474).Text, obj);
@@ -96,4 +108,4 @@ export default function ResendEmail() {
   items4[4] = tmp16Result;
   obj[1] = items4;
   return closure_10(View, obj);
-};
+}

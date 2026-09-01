@@ -20,7 +20,10 @@ export const useShouldShowInlineGuildCapUpsell = function useShouldShowInlineGui
   });
   const obj2 = initialize;
   const items2 = [closure_4];
-  const stateFromStoresObject = initialize.useStateFromStoresObject(items2, () => !callback2(4139).isPremium(currentUser.getCurrentUser()));
+  const stateFromStoresObject = initialize.useStateFromStoresObject(
+    items2,
+    () => !callback2(4139).isPremium(currentUser.getCurrentUser()),
+  );
   if (stateFromStores) {
     stateFromStores = stateFromStores1;
   }

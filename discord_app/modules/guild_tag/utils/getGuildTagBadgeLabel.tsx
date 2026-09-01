@@ -134,4 +134,4 @@ export default function getGuildTagBadgeLabel(arg0) {
   } else {
     isDiscordFrontendDevelopment.assertNever(arg0);
   }
-};
+}

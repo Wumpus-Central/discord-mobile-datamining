@@ -9,11 +9,17 @@ prototype = function ProfileFrameRecord(arg0) {
   const tmp2 = new prototype(arg0, new.target, new.target, tmp);
   // ThrowIfThisInitialized (0x7c)
   tmp2.type = CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
-  ({ label: tmp2.label, layers: tmp2.layers, innerWidth: tmp2.innerWidth, overflowTop: tmp2.overflowTop, overflowBottom: tmp2.overflowBottom, overflowHorizontal: tmp2.overflowHorizontal } = arg0);
+  ({
+    label: tmp2.label,
+    layers: tmp2.layers,
+    innerWidth: tmp2.innerWidth,
+    overflowTop: tmp2.overflowTop,
+    overflowBottom: tmp2.overflowBottom,
+    overflowHorizontal: tmp2.overflowHorizontal,
+  } = arg0);
   return tmp2;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["fromServer"] = function fromServer(arg0) {
   ({ inner_width, overflow_top, overflow_bottom, overflow_horizontal } = arg0);
   let obj = Object.create(null);
@@ -32,7 +38,14 @@ prototype["fromServer"] = function fromServer(arg0) {
   tmp3 = new tmp3(obj, merged, obj, this);
   // ThrowIfThisInitialized (0x7c)
   tmp3.type = CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
-  ({ label: tmp6.label, layers: tmp6.layers, innerWidth: tmp6.innerWidth, overflowTop: tmp6.overflowTop, overflowBottom: tmp6.overflowBottom, overflowHorizontal: tmp6.overflowHorizontal } = obj);
+  ({
+    label: tmp6.label,
+    layers: tmp6.layers,
+    innerWidth: tmp6.innerWidth,
+    overflowTop: tmp6.overflowTop,
+    overflowBottom: tmp6.overflowBottom,
+    overflowHorizontal: tmp6.overflowHorizontal,
+  } = obj);
   return tmp3;
 };
 const result = require("set").fileFinishedImporting("modules/collectibles/records/ProfileFrameRecord.tsx");

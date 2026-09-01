@@ -15,7 +15,7 @@ function _isAccessibleChannelOrThreadPath() {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       let guild2 = tmp2;
       let throwTypeErrorResult = callback;
       ({ guildId: c0, channelId: obj5 } = callback);
@@ -67,7 +67,10 @@ function _isAccessibleChannelOrThreadPath() {
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = guild2;
                   throwTypeErrorResult = guild2;
-                  throwTypeErrorResult = callback(guild2[8]).canAccessVibegrations(guild2, "isAccessibleChannelOrThreadPath");
+                  throwTypeErrorResult = callback(guild2[8]).canAccessVibegrations(
+                    guild2,
+                    "isAccessibleChannelOrThreadPath",
+                  );
                   const obj34 = callback(guild2[8]);
                 }
                 c5 = 3;
@@ -242,7 +245,10 @@ function _isAccessibleChannelOrThreadPath() {
                                         throwTypeErrorResult = constants2;
                                         if (constants2.GAME_SERVERS === tmp31) {
                                           obj12 = callback(guild2[17]);
-                                          let gameServerEnabled = obj12.getGameServerEnabled(callback, "isAccessibleChannelOrThreadPath");
+                                          let gameServerEnabled = obj12.getGameServerEnabled(
+                                            callback,
+                                            "isAccessibleChannelOrThreadPath",
+                                          );
                                           if (gameServerEnabled) {
                                             gameServerEnabled = null != guild2;
                                           }
@@ -261,7 +267,10 @@ function _isAccessibleChannelOrThreadPath() {
                                             obj10 = callback(guild2[18]);
                                             c5 = 3;
                                             const obj16 = { value: null, done: true };
-                                            obj16[0] = obj10.isGuildOfficialMessagesEnabled(guild2, "isAccessibleChannelOrThreadPath");
+                                            obj16[0] = obj10.isGuildOfficialMessagesEnabled(
+                                              guild2,
+                                              "isAccessibleChannelOrThreadPath",
+                                            );
                                             return obj16;
                                           } else {
                                             throwTypeErrorResult = unsafeMutableRoles2;
@@ -270,7 +279,10 @@ function _isAccessibleChannelOrThreadPath() {
                                               obj8 = callback(guild2[19]);
                                               c5 = 3;
                                               const obj17 = { value: null, done: true };
-                                              obj17[0] = obj8.canUseGuildSpace(guild2, "isAccessibleChannelOrThreadPath");
+                                              obj17[0] = obj8.canUseGuildSpace(
+                                                guild2,
+                                                "isAccessibleChannelOrThreadPath",
+                                              );
                                               return obj17;
                                             } else {
                                               throwTypeErrorResult = guild2;
@@ -388,4 +400,4 @@ export default function isAccessibleChannelOrThreadPath() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

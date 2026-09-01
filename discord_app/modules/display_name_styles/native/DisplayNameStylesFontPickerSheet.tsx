@@ -11,22 +11,96 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ View: c5, Pressable: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { header: { paddingTop: 4 }, headerTrailing: { justifyContent: "center", alignItems: "center" }, container: { flex: 1 }, contentContainer: null, gridContainer: null, fontCard: null, fontCardSelected: null, fontText: null, tileNewDot: null, nonLatinDisclaimer: null, disclaimerText: null };
+createCacheKey = {
+  header: { paddingTop: 4 },
+  headerTrailing: { justifyContent: "center", alignItems: "center" },
+  container: { flex: 1 },
+  contentContainer: null,
+  gridContainer: null,
+  fontCard: null,
+  fontCardSelected: null,
+  fontText: null,
+  tileNewDot: null,
+  nonLatinDisclaimer: null,
+  disclaimerText: null,
+};
 createCacheKey = { padding: ThemesDefault.space.PX_8, alignItems: "center" };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { flexWrap: "wrap", maxWidth: 350 };
-createCacheKey[5] = { width: 79, height: 79, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", alignItems: "center" };
-let obj1 = { width: 79, height: 79, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", alignItems: "center" };
+createCacheKey[5] = {
+  width: 79,
+  height: 79,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: ThemesDefault.radii.sm,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  justifyContent: "center",
+  alignItems: "center",
+};
+let obj1 = {
+  width: 79,
+  height: 79,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: ThemesDefault.radii.sm,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  justifyContent: "center",
+  alignItems: "center",
+};
 createCacheKey[6] = { borderColor: ThemesDefault.colors.CONTROL_BRAND_FOREGROUND };
 createCacheKey[7] = { fontSize: 24, lineHeight: 34, textAlign: "center", textAlignVertical: "center" };
 let obj2 = { borderColor: ThemesDefault.colors.CONTROL_BRAND_FOREGROUND };
-createCacheKey[8] = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8, width: ThemesDefault.space.PX_8, height: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.space.PX_8 / 2, backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND, shadowColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND, shadowRadius: ThemesDefault.space.PX_4, shadowOpacity: 1, elevation: 4 };
-let obj3 = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8, width: ThemesDefault.space.PX_8, height: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.space.PX_8 / 2, backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND, shadowColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND, shadowRadius: ThemesDefault.space.PX_4, shadowOpacity: 1, elevation: 4 };
-createCacheKey[9] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm, marginTop: ThemesDefault.space.PX_16 };
+createCacheKey[8] = {
+  position: "absolute",
+  top: ThemesDefault.space.PX_8,
+  right: ThemesDefault.space.PX_8,
+  width: ThemesDefault.space.PX_8,
+  height: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.space.PX_8 / 2,
+  backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND,
+  shadowColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND,
+  shadowRadius: ThemesDefault.space.PX_4,
+  shadowOpacity: 1,
+  elevation: 4,
+};
+let obj3 = {
+  position: "absolute",
+  top: ThemesDefault.space.PX_8,
+  right: ThemesDefault.space.PX_8,
+  width: ThemesDefault.space.PX_8,
+  height: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.space.PX_8 / 2,
+  backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND,
+  shadowColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND,
+  shadowRadius: ThemesDefault.space.PX_4,
+  shadowOpacity: 1,
+  elevation: 4,
+};
+createCacheKey[9] = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  paddingVertical: ThemesDefault.space.PX_8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.sm,
+  marginTop: ThemesDefault.space.PX_16,
+};
 createCacheKey[10] = { flex: 1 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm, marginTop: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFontPickerSheet.tsx");
+let obj4 = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_12,
+  paddingVertical: ThemesDefault.space.PX_8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.sm,
+  marginTop: ThemesDefault.space.PX_16,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/display_name_styles/native/DisplayNameStylesFontPickerSheet.tsx",
+);
 
 export default function DisplayNameStylesFontPickerSheet(displayName) {
   ({ selectedFontId, onSelectFont } = displayName);
@@ -56,7 +130,9 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   }, []);
   let items = [first !== selectedFontId, first, onSelectFont];
   callback = first.useCallback(() => {
-    const result = onSelectFont(_undefined[12]).triggerHapticFeedback(onSelectFont(_undefined[12]).HapticFeedbackTypes.IMPACT_MEDIUM);
+    const result = onSelectFont(_undefined[12]).triggerHapticFeedback(
+      onSelectFont(_undefined[12]).HapticFeedbackTypes.IMPACT_MEDIUM,
+    );
     if (closure_6) {
       onSelectFont(first);
     }
@@ -107,9 +183,9 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
           accessibilityRole: "button",
           accessibilityLabel: intl.string(callback(_undefined[20])(arg0)),
           accessibilityState: { selected: tmp6 },
-          children: null
+          children: null,
         };
-        const items = [hasItem.fontCard, ];
+        const items = [hasItem.fontCard];
         let fontCardSelected = tmp6;
         if (arg0 === first) {
           fontCardSelected = tmp12.fontCardSelected;
@@ -121,7 +197,14 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
           str = "mobile-text-heading-primary";
         }
         const items1 = [hasItem.fontText, { fontFamily: PRIMARY_SEMIBOLD }];
-        const items2 = [closure_1_8(onSelectFont(_undefined[22]).Text, { variant: "text-lg/semibold", color: str, style: items1, children: "Gg" }), ];
+        const items2 = [
+          closure_1_8(onSelectFont(_undefined[22]).Text, {
+            variant: "text-lg/semibold",
+            color: str,
+            style: items1,
+            children: "Gg",
+          }),
+        ];
         if (hasItem) {
           obj = { style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
           obj[0] = tmp12.tileNewDot;
@@ -131,9 +214,8 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
         obj[1] = items2;
         obj[4] = closure_1_9(closure_5, obj);
         return closure_1_8(closure_6, obj, arg0);
-      })
+      }),
     }),
-
   ];
   if (tmp14Result) {
     tmp14Result = hasNonLatinLettersResult;
@@ -141,7 +223,7 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   if (tmp14Result) {
     const obj7 = { style: null, children: null };
     obj7[0] = tmp.nonLatinDisclaimer;
-    let items2 = [tmp11(tmp2(4433).CircleInformationIcon, { size: "sm" }), ];
+    let items2 = [tmp11(tmp2(4433).CircleInformationIcon, { size: "sm" })];
     const obj8 = { variant: "text-xs/normal", color: "text-subtle", style: null, children: null };
     obj8[2] = tmp.disclaimerText;
     const intl3 = tmp2(1236).intl;
@@ -155,4 +237,4 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   obj4[1] = closure_9(closure_5, obj5);
   obj[2] = callback2(closure_5, obj4);
   return callback2(onSelectFont(5622).BottomSheet, obj);
-};
+}

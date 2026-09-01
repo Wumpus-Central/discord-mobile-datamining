@@ -62,10 +62,10 @@ class Notifications {
     obj = { zIndex: 1, children: null };
     obj1 = { value: tmp2(require("QUICK_SWITCHER").NOTIFICATIONS).analyticsLocations, children: null };
     obj2 = { style: items, children: null };
-    items = [, ];
+    items = [,];
     items[0] = tmp.container;
     items[1] = global.style;
-    items1 = [, , , ];
+    items1 = [, , ,];
     items1[0] = jsx(closure_12, { nestedInLaunchPad: flag, inNestedNavigator: flag2 });
     items1[1] = jsx(require("NotificationCenterBannerImpl"), {});
     items1[2] = jsx(require("YouBarNavigatorScreens").NotificationCenterForYou, { nestedInLaunchPad: flag });
@@ -84,13 +84,13 @@ class ThemedNotifications {
     closure_1 = tmp2;
     tmp3 = closure_10();
     closure_2 = tmp3;
-    items = [, , ];
+    items = [, ,];
     items[0] = tmp3;
     items[1] = tmp2;
     items[2] = top;
     memo = closure_3.useMemo(() => {
       if (closure_1) {
-        const items = [tmp.containerOuterTablet, ];
+        const items = [tmp.containerOuterTablet];
         const obj = { paddingTop: null };
         obj[0] = top;
         items[1] = obj;
@@ -106,7 +106,7 @@ class ThemedNotifications {
     tmp8 = jsx;
     tmp6 = jsxs;
     tmp7 = View;
-    items1 = [, ];
+    items1 = [,];
     items1[0] = jsx(require("getMixedGradientColor"), { absolute: true });
     obj1 = { gradient: tmp, children: null };
     obj2 = {};
@@ -129,17 +129,56 @@ class ThemedNotifications {
 }
 let c3 = importAllResult;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-let obj = { containerOuter: { flex: 1 }, containerOuterTablet: null, container: null, headerTitle: null, actionButtons: null, headerClose: null, headerText: null, headerBorder: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: ThemesDefault.space.PX_8, flex: 1 };
+let obj = {
+  containerOuter: { flex: 1 },
+  containerOuterTablet: null,
+  container: null,
+  headerTitle: null,
+  actionButtons: null,
+  headerClose: null,
+  headerText: null,
+  headerBorder: null,
+};
+obj = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  flex: 1,
+};
 obj[1] = obj;
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm, flexGrow: 1 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderTopLeftRadius: ThemesDefault.radii.sm,
+  borderTopRightRadius: ThemesDefault.radii.sm,
+  flexGrow: 1,
+};
 obj[2] = createCacheKey;
 obj[3] = { height: 56, marginHorizontal: 16, flexDirection: "row", alignItems: "center" };
 obj[4] = { flexDirection: "row", gap: 12 };
-obj[5] = { marginRight: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_32, width: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg };
+obj[5] = {
+  marginRight: ThemesDefault.space.PX_16,
+  height: ThemesDefault.space.PX_32,
+  width: ThemesDefault.space.PX_32,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.lg,
+};
 obj[6] = { flex: 1, marginTop: 2 };
-let obj2 = { marginRight: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_32, width: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg };
-obj[7] = { left: 0, bottom: 0, height: 1, width: "100%", position: "absolute", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj2 = {
+  marginRight: ThemesDefault.space.PX_16,
+  height: ThemesDefault.space.PX_32,
+  width: ThemesDefault.space.PX_32,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.radii.lg,
+};
+obj[7] = {
+  left: 0,
+  bottom: 0,
+  height: 1,
+  width: "100%",
+  position: "absolute",
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 let closure_10 = createCacheKey.createStyles(obj);
 let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
   nestedInLaunchPad = nestedInLaunchPad.nestedInLaunchPad;
@@ -167,8 +206,15 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
     obj1[1] = intl.string(tmp5(1236).t["13/7kX"]);
     obj1[2] = goBack;
     obj1[3] = tmp12(tmp5(15991).LeftBackIconWithBadge, {});
-    const items1 = [tmp12(tmp5(5068).PressableOpacity, obj1), , ];
-    const obj2 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: null, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
+    const items1 = [tmp12(tmp5(5068).PressableOpacity, obj1), ,];
+    const obj2 = {
+      color: "mobile-text-heading-primary",
+      variant: "heading-lg/bold",
+      style: null,
+      maxFontSizeMultiplier: 1.75,
+      accessibilityRole: "header",
+      children: null,
+    };
     obj2[2] = tmp.headerText;
     const intl2 = tmp5(1236).intl;
     obj2[5] = intl2.string(tmp5(1236).t.HcoRu0);
@@ -183,7 +229,7 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
       let tmp2Result = tmp2(15992);
       obj5[1] = tmp5(7604).SavedMessageSortTypes.BOOKMARK;
       obj5[2] = callback;
-      const items2 = [tmp12(tmp2Result, obj5), ];
+      const items2 = [tmp12(tmp2Result, obj5)];
       const obj6 = { type: null, onOpen: null };
       tmp2Result = tmp2(15992);
       obj6[0] = tmp5(7604).SavedMessageSortTypes.REMINDER;
@@ -200,13 +246,22 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
   }
   const obj7 = { children: null };
   obj[1] = tmp10Result;
-  const items4 = [closure_7(require("../../../../../components_native/common/SafeAreaView.tsx").SafeAreaPaddingView, obj), ];
+  const items4 = [
+    closure_7(require("../../../../../components_native/common/SafeAreaView.tsx").SafeAreaPaddingView, obj),
+  ];
   const items5 = [tmp.headerBorder];
   items4[1] = closure_7(View, { style: items5 });
   obj7[0] = items4;
   return closure_9(View, obj7);
 });
-let obj3 = { left: 0, bottom: 0, height: 1, width: "100%", position: "absolute", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj3 = {
+  left: 0,
+  bottom: 0,
+  height: 1,
+  width: "100%",
+  position: "absolute",
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/notifications/Notifications.tsx");
 
 export default Notifications;

@@ -16,7 +16,7 @@ const pressable = createToggle.createPressable({
   onPress: function onPrivacyPolicyPress() {
     _modDef4190.openURL(MarketingURLs.PRIVACY);
   },
-  withArrow: true
+  withArrow: true,
 });
 const obj = {
   useTitle() {
@@ -27,7 +27,7 @@ const obj = {
   onPress: function onPrivacyPolicyPress() {
     _modDef4190.openURL(MarketingURLs.PRIVACY);
   },
-  withArrow: true
+  withArrow: true,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/SafetyPrivacyPolicySetting.tsx");
 

@@ -30,12 +30,21 @@ class InteractionModal {
     obj = require("getData");
     modalState = obj.useModalState(global, onClose);
     error = modalState.error;
-    ({ components, applicationIconURL, applicationName, submissionState, validators, validationErrors, setValidationErrors, onSubmit } = modalState);
+    ({
+      components,
+      applicationIconURL,
+      applicationName,
+      submissionState,
+      validators,
+      validationErrors,
+      setValidationErrors,
+      onSubmit,
+    } = modalState);
     insets = require("useSafeAreaInsetsKeyboardAware")({ includeKeyboardHeight: true }).insets;
     tmp5 = jsxs;
     tmp6 = View;
     obj = { style: items, children: null };
-    items = [, ];
+    items = [,];
     items[0] = tmp.modal;
     items[1] = { paddingTop: insets.top, paddingBottom: insets.bottom };
     obj1 = { style: tmp.header, children: null };
@@ -44,9 +53,16 @@ class InteractionModal {
     obj5 = require("getAvatarURL");
     obj2[1] = obj5.makeSource(applicationIconURL);
     obj2[2] = require("Button").AvatarSizes.SMALL;
-    items1 = [, , ];
+    items1 = [, ,];
     items1[0] = jsx(require("Button").Avatar, obj2);
-    obj3 = { style: tmp.titleView, children: jsx(require("Text").Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: global.title }) };
+    obj3 = {
+      style: tmp.titleView,
+      children: jsx(require("Text").Text, {
+        variant: "heading-xl/semibold",
+        color: "mobile-text-heading-primary",
+        children: global.title,
+      }),
+    };
     items1[1] = jsx(View, obj3);
     obj4 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     intl = require("getSystemLocale").intl;
@@ -57,9 +73,14 @@ class InteractionModal {
     obj4[4] = jsx(require("XSmallIcon").XSmallIcon, obj5);
     items1[2] = jsx(require("PressableBase").PressableOpacity, obj4);
     obj1[1] = items1;
-    items2 = [, ];
+    items2 = [,];
     items2[0] = jsxs(View, obj1);
-    obj6 = { style: tmp.scroll, contentContainerStyle: tmp.modalContent, keyboardShouldPersistTaps: "handled", children: null };
+    obj6 = {
+      style: tmp.scroll,
+      contentContainerStyle: tmp.modalContent,
+      keyboardShouldPersistTaps: "handled",
+      children: null,
+    };
     tmp7Result = null;
     tmp8 = ScrollView;
     if (null != error) {
@@ -76,14 +97,14 @@ class InteractionModal {
       }
     }
     obj9 = { children: null };
-    items3 = [, ];
+    items3 = [,];
     items3[0] = tmp7Result;
     obj10 = { messageType: require("Button").HelpMessageTypes.WARNING, children: null };
     intl2 = require("getSystemLocale").intl;
     obj10[1] = intl2.format(require("getSystemLocale").t["dSTy/w"], { applicationName });
     items3[1] = tmp7(require("Button").HelpMessage, obj10);
     obj9[0] = items3;
-    items4 = [, , ];
+    items4 = [, ,];
     items4[0] = tmp5(tmp6, obj9);
     obj11 = { modal: global, validators, validationErrors, setValidationErrors, children: null };
     tmp2Result = require("renderComponents");
@@ -107,15 +128,34 @@ noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const interaction_modal = "interaction_modal";
-createCacheKey = { modal: null, scroll: null, modalContent: null, header: null, titleView: null, icon: null, footer: null, closeButton: null, closeIcon: null, error: null };
+createCacheKey = {
+  modal: null,
+  scroll: null,
+  modalContent: null,
+  header: null,
+  titleView: null,
+  icon: null,
+  footer: null,
+  closeButton: null,
+  closeIcon: null,
+  error: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { flexGrow: 1, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
 let obj1 = { flexGrow: 1, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
-createCacheKey[3] = { flexDirection: "row", marginBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[3] = {
+  flexDirection: "row",
+  marginBottom: ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 createCacheKey[4] = { flex: 1 };
-let obj2 = { flexDirection: "row", marginBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj2 = {
+  flexDirection: "row",
+  marginBottom: ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 createCacheKey[5] = { marginRight: ThemesDefault.space.PX_8 };
 let obj3 = { marginRight: ThemesDefault.space.PX_8 };
 createCacheKey[6] = { marginTop: "auto", marginBottom: ThemesDefault.space.PX_16 };

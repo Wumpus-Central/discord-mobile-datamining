@@ -10,7 +10,7 @@ function _applyStaffBuildOverride() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -130,7 +130,7 @@ function _applyPublicBuildOverride() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -238,7 +238,7 @@ function _applyPublicBuildOverride() {
 }
 function _clearBuildOverride() {
   const self = this;
-  const tmp = importDefaultResult(function*() {
+  const tmp = importDefaultResult(function* () {
     closure_1 = tmp2;
     const HTTP = closure_1_0(closure_1_1[3]).HTTP;
     obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
@@ -262,7 +262,7 @@ closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c2 = 0;
   c1 = 0;
-  return (function*(arg0) {
+  return (function* (arg0) {
     if (table === 2) {
       table = 3;
       HermesBuiltin.throwTypeError();
@@ -314,7 +314,7 @@ closure_0 = importDefaultResult((arg0) => {
     }
   })();
 });
-const f88783 = function() {
+const f88783 = function () {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -358,22 +358,31 @@ export const clearBuildOverride = function clearBuildOverride() {
 };
 export const getPublicBuildOverrideLink = function getPublicBuildOverrideLink(arg0) {
   const HTTP = callback(530).HTTP;
-  let obj = { url: callback(4393).getAPIEndpoint("/__development/create_build_override_link"), body: arg0, headers: null, oldFormErrors: true, rejectWithError: false };
+  let obj = {
+    url: callback(4393).getAPIEndpoint("/__development/create_build_override_link"),
+    body: arg0,
+    headers: null,
+    oldFormErrors: true,
+    rejectWithError: false,
+  };
   let str = token.getToken();
   if (str == null) {
     str = "";
   }
   obj[2] = { Authorization: str };
   const obj2 = callback(4393);
-  return HTTP.post(obj).then((body) => ({ url: body.body.url, error: false }), (status) => {
-    if (400 === status.status) {
-      let obj = { url: false, error: null };
-      obj[1] = status.body;
-    } else {
-      obj = { url: false, error: null };
-      const _HermesInternal = HermesInternal;
-      obj[1] = "Error making API request (" + status.status + ")";
-    }
-    return obj;
-  });
+  return HTTP.post(obj).then(
+    (body) => ({ url: body.body.url, error: false }),
+    (status) => {
+      if (400 === status.status) {
+        let obj = { url: false, error: null };
+        obj[1] = status.body;
+      } else {
+        obj = { url: false, error: null };
+        const _HermesInternal = HermesInternal;
+        obj[1] = "Error making API request (" + status.status + ")";
+      }
+      return obj;
+    },
+  );
 };

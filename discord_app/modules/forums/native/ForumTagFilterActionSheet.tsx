@@ -36,11 +36,21 @@ function EmojiIcon(arg0) {
     emojiName = "";
   }
   obj[4] = emojiName;
-  return jsx(EmojiDefault, { style: tmp.emoji, textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: null, name: null });
+  return jsx(EmojiDefault, {
+    style: tmp.emoji,
+    textEmojiStyle: tmp.textEmoji,
+    fastImageStyle: tmp.imageEmoji,
+    src: null,
+    name: null,
+  });
 }
 ({ useForumChannelStore: closure_6, useForumChannelStoreApi: error } = set);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: c9, AnalyticsSections: c10 } = ME);
-let closure_12 = createCacheKey.createStyles({ emoji: { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" }, imageEmoji: { height: 18, width: 18 }, textEmoji: { fontSize: 14, lineHeight: 20 } });
+let closure_12 = createCacheKey.createStyles({
+  emoji: { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" },
+  imageEmoji: { height: 18, width: 18 },
+  textEmoji: { fontSize: 14, lineHeight: 20 },
+});
 let result = set.fileFinishedImporting("modules/forums/native/ForumTagFilterActionSheet.tsx");
 
 export default function ForumPostTagsActionSheet(channel) {
@@ -73,7 +83,7 @@ export default function ForumPostTagsActionSheet(channel) {
     onPress() {
       callback(new Set());
     },
-    label: null
+    label: null,
   };
   const intl3 = tmp4(tmp5[11]).intl;
   obj2[1] = intl3.string(channel(first[11]).t.VkKicb);
@@ -81,7 +91,7 @@ export default function ForumPostTagsActionSheet(channel) {
     onPress() {
       callback(new Set());
     },
-    label: null
+    label: null,
   });
   obj1[1] = jsx(channel(first[10]).BottomSheetTitleHeader, { title: null, subtitle: null, leading: null });
   const obj3 = { children: null };
@@ -128,8 +138,8 @@ export default function ForumPostTagsActionSheet(channel) {
         }
       };
       return closure_1_11(channel(first[15]).TableCheckboxRow, obj, emojiId.id);
-    })
+    }),
   });
   obj1[2] = jsx(channel(first[13]).BottomSheetScrollView, { children: null });
   return jsx(channel(first[9]).ActionSheet, { scrollable: true, header: null, children: null });
-};
+}

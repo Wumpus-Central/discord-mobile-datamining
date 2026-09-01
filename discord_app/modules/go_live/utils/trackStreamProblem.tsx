@@ -14,7 +14,19 @@ export default function trackStreamProblem(arg0) {
   }
   ({ category, variant } = arg0);
   let obj = expandEventPropertiesDefault;
-  obj = { reason: problem, category, reason_variant: variant, streamer_user_id: stream.ownerId, stream_channel_id: stream.channelId, guild_id: stream.guildId, application_id: null, application_name: null, location: null, rating: null, feedback: null };
+  obj = {
+    reason: problem,
+    category,
+    reason_variant: variant,
+    streamer_user_id: stream.ownerId,
+    stream_channel_id: stream.channelId,
+    guild_id: stream.guildId,
+    application_id: null,
+    application_name: null,
+    location: null,
+    rating: null,
+    feedback: null,
+  };
   let id = null;
   if (null != streamApplication) {
     id = streamApplication.id;
@@ -30,4 +42,4 @@ export default function trackStreamProblem(arg0) {
   obj[10] = feedback;
   const merged = Object.assign(analyticsData);
   obj.track(AnalyticEvents.STREAM_REPORT_PROBLEM, obj);
-};
+}

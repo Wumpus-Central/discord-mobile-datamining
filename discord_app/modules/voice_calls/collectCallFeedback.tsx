@@ -24,14 +24,23 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
         if (rTCConnection != null) {
           voiceDurationStats = rTCConnection.getVoiceDurationStats();
         }
-        let obj = { channel_id: null, channel_type: null, guild_id: null, rtc_connection_id: null, duration: null, media_session_id: null };
+        let obj = {
+          channel_id: null,
+          channel_type: null,
+          guild_id: null,
+          rtc_connection_id: null,
+          duration: null,
+          media_session_id: null,
+        };
         ({ id: obj4[0], type: obj4[1] } = channel);
         obj[2] = channel.getGuildId();
         obj[3] = obj1.getRTCConnectionId();
         obj[4] = obj1.getDuration();
         obj[5] = obj1.getMediaSessionId();
         const guildId = obj1.getGuildId();
-        const merged = Object.assign(collectGuildAnalyticsMetadata.getVoiceStateMetadata(guildId, obj1.getChannelId(), videoEnabled));
+        const merged = Object.assign(
+          collectGuildAnalyticsMetadata.getVoiceStateMetadata(guildId, obj1.getChannelId(), videoEnabled),
+        );
         let duration_muted_ms;
         if (voiceDurationStats != null) {
           duration_muted_ms = voiceDurationStats.duration_muted_ms;
@@ -46,14 +55,21 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
           obj = {};
           const merged1 = Object.assign(obj);
           let tmp5Result = tmp5(9791);
-          const lastUsedVideoBackgroundOption = tmp5Result.getLastUsedVideoBackgroundOption(currentUser.getCurrentUser());
+          const lastUsedVideoBackgroundOption = tmp5Result.getLastUsedVideoBackgroundOption(
+            currentUser.getCurrentUser(),
+          );
           const videoDevices = store.getVideoDevices();
           const tmp22 = videoDevices[store.getVideoDeviceId(store)];
           let name;
           if (tmp22 != null) {
             name = tmp22.name;
           }
-          obj1 = { video_device_name: null, video_hardware_scaling_enabled: null, video_effect_type: null, video_effect_detail: null };
+          obj1 = {
+            video_device_name: null,
+            video_hardware_scaling_enabled: null,
+            video_effect_type: null,
+            video_effect_detail: null,
+          };
           obj1[0] = name;
           obj1[1] = store.getHardwareEncoding();
           tmp5Result = tmp5(9788);
@@ -77,4 +93,4 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
     }
   }
   arg0();
-};
+}

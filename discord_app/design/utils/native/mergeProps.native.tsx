@@ -26,24 +26,26 @@ const result = set.fileFinishedImporting("design/utils/native/mergeProps.native.
 export { chainCallbacks };
 export const mergeRefs = function mergeRefs(ref, ref2) {
   const items = [...arguments];
-  return 1 === items.length ? items[0] : ((current) => {
-    const iter = items[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp3 = nextResult;
-      if (typeof nextResult === "function") {
-        let tmp5 = nextResult;
-        let tmp3Result = tmp3(current);
-      } else {
-        let tmp7 = nextResult;
-        if (null != tmp3) {
-          let tmp4 = nextResult;
-          tmp3.current = current;
+  return 1 === items.length
+    ? items[0]
+    : (current) => {
+        const iter = items[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp3 = nextResult;
+          if (typeof nextResult === "function") {
+            let tmp5 = nextResult;
+            let tmp3Result = tmp3(current);
+          } else {
+            let tmp7 = nextResult;
+            if (null != tmp3) {
+              let tmp4 = nextResult;
+              tmp3.current = current;
+            }
+          }
+          continue;
         }
-      }
-      continue;
-    }
-  });
+      };
 };
 export const mergeProps = function mergeProps(inputProps, focusProps, arg2) {
   const items = [...arguments];

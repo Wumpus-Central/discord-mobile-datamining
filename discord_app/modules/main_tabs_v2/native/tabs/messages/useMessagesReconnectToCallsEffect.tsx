@@ -5,7 +5,9 @@ import closure_4 from "../../../../gateway/GatewayConnectionStore.tsx";
 import closure_5 from "../../../../../stores/ChannelStore.tsx";
 import closure_6 from "../../../../../stores/views/PrivateChannelSortStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx",
+);
 
 export default function useMessagesReconnectToCallsEffect() {
   const effect = React.useEffect(() => {
@@ -48,4 +50,4 @@ export default function useMessagesReconnectToCallsEffect() {
       closure_1_4.removeChangeListener(isGatewayConnectedListener);
     };
   }, []);
-};
+}

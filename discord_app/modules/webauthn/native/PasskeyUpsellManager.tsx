@@ -16,7 +16,12 @@ initializeDefault;
 class PasskeyUpsellManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handlePasskeyUpsellShow, LOGIN_RESET: applyArgumentsResult.handleLogout, LOGIN_SUCCESS: applyArgumentsResult.handleLoginSuccess, LOGOUT: applyArgumentsResult.handleLogout };
+    applyArgumentsResult.actions = {
+      POST_CONNECTION_OPEN: applyArgumentsResult.handlePasskeyUpsellShow,
+      LOGIN_RESET: applyArgumentsResult.handleLogout,
+      LOGIN_SUCCESS: applyArgumentsResult.handleLoginSuccess,
+      LOGOUT: applyArgumentsResult.handleLogout,
+    };
     map = new Map();
     result = map.set(closure_3, applyArgumentsResult.handlePasskeyUpsellShow);
     result1 = result.set(closure_4, applyArgumentsResult.handlePasskeyUpsellShow);

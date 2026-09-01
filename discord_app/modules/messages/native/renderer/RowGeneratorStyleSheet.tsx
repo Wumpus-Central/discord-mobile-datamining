@@ -10,7 +10,7 @@ export const processColorOrThrow = function processColorOrThrow(arg0) {
   if (null == tmp) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("Unable to parse color: \"" + arg0 + "\"");
+    error = new Error('Unable to parse color: "' + arg0 + '"');
     throw error;
   } else {
     return tmp;

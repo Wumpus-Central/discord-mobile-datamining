@@ -25,7 +25,7 @@ function UserSettingsDebugLogsFiltersActionSheet(arg0) {
   obj1[0] = intl2.string(getSystemLocale.t.wzzjk9);
   obj1[1] = onRefresh;
   obj[1] = callback(TableRowInner.TableRow, obj1);
-  const items = [callback(TableRowGroupTitle.TableRowGroup, obj), , ];
+  const items = [callback(TableRowGroupTitle.TableRowGroup, obj), ,];
   const obj2 = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
   const intl3 = getSystemLocale.intl;
   obj2[0] = intl3.string(getSystemLocale.t.gePre2);
@@ -34,7 +34,7 @@ function UserSettingsDebugLogsFiltersActionSheet(arg0) {
   const obj3 = { label: null, value: "newest" };
   const intl4 = getSystemLocale.intl;
   obj3[0] = intl4.string(getSystemLocale.t.eoXe0r);
-  const items1 = [callback(TableRadioRow.TableRadioRow, obj3), ];
+  const items1 = [callback(TableRadioRow.TableRadioRow, obj3)];
   const obj4 = { label: null, value: "oldest" };
   const intl5 = getSystemLocale.intl;
   obj4[0] = intl5.string(getSystemLocale.t.mmeWUF);
@@ -47,7 +47,9 @@ function UserSettingsDebugLogsFiltersActionSheet(arg0) {
 }
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsDebugLogsActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/dev_tools/native/UserSettingsDebugLogsActionSheet.tsx",
+);
 
 export const openUserSettingsDebugLogsFiltersActionSheet = function openUserSettingsDebugLogsFiltersActionSheet(arg0) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;

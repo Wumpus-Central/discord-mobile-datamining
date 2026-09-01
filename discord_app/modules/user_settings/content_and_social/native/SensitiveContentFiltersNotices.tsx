@@ -8,7 +8,9 @@ import { resolveGoreSettingWithDefaults } from "../../../explicit_media_redactio
 
 require = arg1;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx",
+);
 
 export const SensitiveContentFiltersTeenNotice = function SensitiveContentFiltersTeenNotice() {
   let obj = resolveGoreSettingWithDefaults;
@@ -19,7 +21,7 @@ export const SensitiveContentFiltersTeenNotice = function SensitiveContentFilter
       const obj = closure_1_1(closure_1_2[6]);
       obj.openURL(closure_1_1(closure_1_2[7]).getArticleURL(closure_0));
     },
-    noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE
+    noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
   };
   return jsx(SafetySettingsNoticeDefault, {
     label: require("../../../../intl/index.native.tsx").t.EUo0yj,
@@ -27,7 +29,7 @@ export const SensitiveContentFiltersTeenNotice = function SensitiveContentFilter
       const obj = closure_1_1(closure_1_2[6]);
       obj.openURL(closure_1_1(closure_1_2[7]).getArticleURL(closure_0));
     },
-    noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE
+    noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
   });
 };
 export const SensitiveContentFiltersAgeVerificationNotice = function SensitiveContentFiltersAgeVerificationNotice() {
@@ -38,7 +40,7 @@ export const SensitiveContentFiltersAgeVerificationNotice = function SensitiveCo
       obj = { entryPoint: callback(8684).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
       const result = obj.showAgeVerificationGetStartedModal(obj);
     },
-    noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE
+    noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE,
   };
   return jsx(SafetySettingsNoticeDefault, {
     label: getSystemLocale.t.OX4ybh,
@@ -47,6 +49,6 @@ export const SensitiveContentFiltersAgeVerificationNotice = function SensitiveCo
       obj = { entryPoint: callback(8684).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
       const result = obj.showAgeVerificationGetStartedModal(obj);
     },
-    noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE
+    noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE,
   });
 };

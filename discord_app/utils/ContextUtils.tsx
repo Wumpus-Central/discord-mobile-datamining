@@ -27,7 +27,7 @@ export default function createDefinedContext() {
       } else {
         return (children) => closure_2_1(context.Provider, { value: context, children: children.children });
       }
-    }
+    },
   ];
   return items;
-};
+}

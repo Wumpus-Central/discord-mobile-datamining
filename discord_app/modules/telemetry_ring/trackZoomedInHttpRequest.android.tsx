@@ -13,6 +13,5 @@ export default function trackZoomedInHttpRequest(arg0) {
     const merged = Object.assign(arg0);
     obj.source = "zoomed_in";
     obj.append(AnalyticEvents.HTTP_REQUEST, obj);
-  } catch (err) {
-  }
-};
+  } catch (err) {}
+}

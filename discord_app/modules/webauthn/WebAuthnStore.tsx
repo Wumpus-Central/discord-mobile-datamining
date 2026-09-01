@@ -7,8 +7,7 @@ let c2 = false;
 let closure_3 = [];
 let c4 = false;
 const Store = initializeDefault.Store;
-class WebAuthnStore extends Store {
-}
+class WebAuthnStore extends Store {}
 const prototype = WebAuthnStore.prototype;
 prototype["hasFetchedCredentials"] = function hasFetchedCredentials() {
   return c2;
@@ -17,7 +16,7 @@ Object.defineProperty(prototype, "hasCredentials", {
   get: function hasCredentials() {
     return closure_3.length > 0;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getCredentials"] = function getCredentials() {
   return closure_3;
@@ -96,7 +95,7 @@ const webAuthnStore = new WebAuthnStore(dispatcherDefault, {
     } else {
       return false;
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/webauthn/WebAuthnStore.tsx");
 

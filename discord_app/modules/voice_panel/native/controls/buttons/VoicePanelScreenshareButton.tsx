@@ -17,9 +17,17 @@ if (isMetaQuest.isMetaQuest()) {
 isMetaQuest = { circle: null, iconContainer: null };
 isMetaQuest = { width: "100%", height: "100%", borderRadius: ThemesDefault.radii.round };
 isMetaQuest[0] = isMetaQuest;
-isMetaQuest[1] = { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" };
+isMetaQuest[1] = {
+  position: "absolute",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "100%",
+  height: "100%",
+};
 let closure_9 = createCacheKey.createStyles(isMetaQuest);
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx",
+);
 
 export default function ScreenshareButton(arg0) {
   let channelId;
@@ -32,7 +40,9 @@ export default function ScreenshareButton(arg0) {
   let obj = channelId(isFeatureEnabled[10]);
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
   const items = [closure_4];
-  const stateFromStores = channelId(isFeatureEnabled[11]).useStateFromStores(items, () => closure_1_4.getChannel(channelId));
+  const stateFromStores = channelId(isFeatureEnabled[11]).useStateFromStores(items, () =>
+    closure_1_4.getChannel(channelId),
+  );
   isActive(isFeatureEnabled[12])(null != stateFromStores, "null channel in VoicePanelScreenshareButton");
   const tmp8 = isActive(isFeatureEnabled[13])(stateFromStores);
   isActive = tmp8.isActive;
@@ -61,7 +71,14 @@ export default function ScreenshareButton(arg0) {
   if (isActive) {
     color = voicePanelButtonStyles.iconFillSelected.color;
   }
-  obj = { onPress: callback, disabled: !isFeatureEnabled, props, accessibilityLabel: null, style: null, children: null };
+  obj = {
+    onPress: callback,
+    disabled: !isFeatureEnabled,
+    props,
+    accessibilityLabel: null,
+    style: null,
+    children: null,
+  };
   let tmpResult = tmp(tmp2[15]);
   const intl = tmp4(tmp2[16]).intl;
   const string = intl.string;
@@ -78,11 +95,11 @@ export default function ScreenshareButton(arg0) {
   }
   obj[4] = iconBgSelected;
   const items2 = [tmp3.circle, { backgroundColor }];
-  const items3 = [callback(isActive(isFeatureEnabled[17]), { style: items2 }), ];
+  const items3 = [callback(isActive(isFeatureEnabled[17]), { style: items2 })];
   obj = { style: tmp3.iconContainer, children: null };
   tmpResult = tmp(tmp2[17]);
   obj[1] = callback(MobilePhoneShareIcon, { color });
   items3[1] = callback(tmpResult, obj);
   obj[5] = items3;
   return closure_7(tmpResult, obj);
-};
+}

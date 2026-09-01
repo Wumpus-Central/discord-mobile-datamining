@@ -14,8 +14,7 @@ let closure_7 = {};
 let closure_8 = {};
 let closure_9 = {};
 const Store = initializeDefault.Store;
-class GuildDirectoryStore extends Store {
-}
+class GuildDirectoryStore extends Store {}
 const prototype = GuildDirectoryStore.prototype;
 prototype["isFetching"] = function isFetching() {
   return c4;
@@ -273,7 +272,7 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
       set.add(set(closure_1_1[1]).guildDirectoryEntryFromServer(entry).guildId);
     });
     closure_9[channelId.channelId] = set;
-  }
+  },
 });
 let result = set2.fileFinishedImporting("modules/directory_channels/GuildDirectoryStore.tsx");
 

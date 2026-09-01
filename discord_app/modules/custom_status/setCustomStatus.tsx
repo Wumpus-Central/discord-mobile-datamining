@@ -62,7 +62,14 @@ export default function setCustomStatus(arg0) {
   if (null != analyticsContext) {
     _location = analyticsContext.location;
   }
-  obj = { location: _location, emoji_type: null, text_len: null, clear_after: null, prompt_type: null, location_stack: null };
+  obj = {
+    location: _location,
+    emoji_type: null,
+    text_len: null,
+    clear_after: null,
+    prompt_type: null,
+    location_stack: null,
+  };
   let tmp11 = null;
   if (null != emojiInfo) {
     let str6 = "unicode";
@@ -87,4 +94,4 @@ export default function setCustomStatus(arg0) {
   obj[5] = analyticsLocations;
   expandEventPropertiesDefault.track(AnalyticEvents.CUSTOM_STATUS_UPDATED, obj);
   return updateSettingResult;
-};
+}

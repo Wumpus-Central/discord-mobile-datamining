@@ -18,52 +18,86 @@ export default function useReactionPermissions(guild_id) {
   let obj = _require(stateFromStores[6]);
   const items = [closure_6];
   const items1 = [guild_id];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    let canChatInGuildResult = null == guild_id;
-    if (!canChatInGuildResult) {
-      canChatInGuildResult = closure_1_6.canChatInGuild(tmp);
-    }
-    return canChatInGuildResult;
-  }, items1);
+  stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let canChatInGuildResult = null == guild_id;
+      if (!canChatInGuildResult) {
+        canChatInGuildResult = closure_1_6.canChatInGuild(tmp);
+      }
+      return canChatInGuildResult;
+    },
+    items1,
+  );
   const items2 = [closure_4];
   const items3 = [guild_id];
-  const stateFromStores1 = _require(stateFromStores[6]).useStateFromStores(items2, () => {
-    let isLurkingResult = null != guild_id;
-    if (isLurkingResult) {
-      isLurkingResult = closure_1_4.isLurking(tmp);
-    }
-    return isLurkingResult;
-  }, items3);
+  const stateFromStores1 = _require(stateFromStores[6]).useStateFromStores(
+    items2,
+    () => {
+      let isLurkingResult = null != guild_id;
+      if (isLurkingResult) {
+        isLurkingResult = closure_1_4.isLurking(tmp);
+      }
+      return isLurkingResult;
+    },
+    items3,
+  );
   const obj2 = _require(stateFromStores[6]);
   const tmp2 = stateFromStores;
   const items4 = [closure_5];
   const items5 = [guild_id];
-  const stateFromStores2 = _require(stateFromStores[6]).useStateFromStores(items4, () => {
-    let isCurrentUserGuestResult = null != guild_id;
-    if (isCurrentUserGuestResult) {
-      isCurrentUserGuestResult = closure_1_5.isCurrentUserGuest(tmp);
-    }
-    return isCurrentUserGuestResult;
-  }, items5);
+  const stateFromStores2 = _require(stateFromStores[6]).useStateFromStores(
+    items4,
+    () => {
+      let isCurrentUserGuestResult = null != guild_id;
+      if (isCurrentUserGuestResult) {
+        isCurrentUserGuestResult = closure_1_5.isCurrentUserGuest(tmp);
+      }
+      return isCurrentUserGuestResult;
+    },
+    items5,
+  );
   const obj3 = _require(stateFromStores[6]);
   const items6 = [closure_7];
   const items7 = [stateFromStores, guild_id];
-  const stateFromStores3 = _require(stateFromStores[6]).useStateFromStores(items6, () => {
-    let canResult = stateFromStores;
-    if (stateFromStores) {
-      canResult = closure_1_7.can(closure_1_8.ADD_REACTIONS, closure_0);
-    }
-    return canResult;
-  }, items7);
+  const stateFromStores3 = _require(stateFromStores[6]).useStateFromStores(
+    items6,
+    () => {
+      let canResult = stateFromStores;
+      if (stateFromStores) {
+        canResult = closure_1_7.can(closure_1_8.ADD_REACTIONS, closure_0);
+      }
+      return canResult;
+    },
+    items7,
+  );
   const obj4 = _require(stateFromStores[6]);
-  const currentUserAutomodQuaratinedProfile = _require(stateFromStores[7]).useCurrentUserAutomodQuaratinedProfile(guild_id);
+  const currentUserAutomodQuaratinedProfile = _require(stateFromStores[7]).useCurrentUserAutomodQuaratinedProfile(
+    guild_id,
+  );
   const obj5 = _require(stateFromStores[7]);
   _require(stateFromStores[9]);
   if (null == guild_id) {
-    obj = { disableReactionReads: true, disableReactionCreates: true, disableReactionUpdates: true, isLurking: false, isGuest: false, isPendingMember: false };
+    obj = {
+      disableReactionReads: true,
+      disableReactionCreates: true,
+      disableReactionUpdates: true,
+      isLurking: false,
+      isGuest: false,
+      isPendingMember: false,
+    };
   } else {
     obj = {};
-    obj = { channel: null, canChat: null, renderReactions: true, canAddNewReactions: null, isLurking: null, communicationDisabled: null, isActiveChannelOrUnarchivableThread: null, isAutomodQuarantined: null };
+    obj = {
+      channel: null,
+      canChat: null,
+      renderReactions: true,
+      canAddNewReactions: null,
+      isLurking: null,
+      communicationDisabled: null,
+      isActiveChannelOrUnarchivableThread: null,
+      isAutomodQuarantined: null,
+    };
     obj[0] = guild_id;
     obj[1] = stateFromStores;
     obj[3] = stateFromStores3;
@@ -77,4 +111,4 @@ export default function useReactionPermissions(guild_id) {
     obj.isPendingMember = false;
   }
   return obj;
-};
+}

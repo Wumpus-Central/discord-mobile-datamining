@@ -109,7 +109,7 @@ export const Pile = function Pile(aria_label) {
         obj1[0] = tmp6;
         obj1[1] = num7;
         obj1[2] = num6;
-        const items = [obj1, ];
+        const items = [obj1];
         if (type.type === closure_1_0(closure_1_2[7]).PileOverflow) {
           const obj2 = { minWidth: null };
           obj2[0] = tmp6;
@@ -134,7 +134,7 @@ export const Pile = function Pile(aria_label) {
       } else {
         return null;
       }
-    })
+    }),
   };
   Children = tmp2.Children;
   return length(View, obj);

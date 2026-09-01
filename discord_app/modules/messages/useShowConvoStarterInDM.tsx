@@ -29,64 +29,69 @@ export const useShowConvoStarterInDM = function useShowConvoStarterInDM(channel)
   if (tmp) {
     recipientId = channel.getRecipientId();
   }
-  const strangerDangerWarning = require("../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx").useStrangerDangerWarning(channel.id);
+  const strangerDangerWarning =
+    require("../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx").useStrangerDangerWarning(channel.id);
   const hasFlagResult = channel.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
   const obj = useStrangerDangerWarning;
   const items = [recipientId, closure_3, strangerDangerWarning, hasFlagResult];
   const items1 = [strangerDangerWarning, tmp, channel.id, recipientId, hasFlagResult];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    if (ref2.current !== id.id) {
-      ref.current = false;
-      tmp.current = tmp2.id;
-    }
-    if (null != strangerDangerWarning) {
-      return false;
-    } else if (messageRequest) {
-      if (messageRequest.isMessageRequest(tmp2.id)) {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      if (ref2.current !== id.id) {
+        ref.current = false;
+        tmp.current = tmp2.id;
+      }
+      if (null != strangerDangerWarning) {
         return false;
-      } else {
-        if (null != recipientId) {
-          if (strangerDangerWarning.getRelationshipType(tmp5) === closure_1_7.BLOCKED) {
-            return false;
-          }
-        }
-        if (null != recipientId) {
-          const user = hasFlagResult.getUser(tmp5);
-          if (null != user) {
-            if (user.hasFlag(closure_1_8.PROVISIONAL_ACCOUNT)) {
+      } else if (messageRequest) {
+        if (messageRequest.isMessageRequest(tmp2.id)) {
+          return false;
+        } else {
+          if (null != recipientId) {
+            if (strangerDangerWarning.getRelationshipType(tmp5) === closure_1_7.BLOCKED) {
               return false;
             }
           }
-        }
-        const messages = recipientId.getMessages(tmp2.id);
-        const hasMoreBefore = messages.hasMoreBefore;
-        let tmp10 = !hasMoreBefore;
-        if (!hasMoreBefore) {
-          tmp10 = !messages.hasMoreAfter;
-        }
-        if (tmp10) {
-          tmp10 = messages.length < 25;
-        }
-        let current = messages.ready;
-        const result = recipientId.hasCurrentUserSentWaveBlockingMessage(tmp2.id);
-        if (!current) {
-          current = ref.current;
-        }
-        if (current) {
-          let tmp13 = closure_6;
-          if (!closure_6) {
-            tmp13 = tmp10;
+          if (null != recipientId) {
+            const user = hasFlagResult.getUser(tmp5);
+            if (null != user) {
+              if (user.hasFlag(closure_1_8.PROVISIONAL_ACCOUNT)) {
+                return false;
+              }
+            }
           }
-          current = tmp13;
+          const messages = recipientId.getMessages(tmp2.id);
+          const hasMoreBefore = messages.hasMoreBefore;
+          let tmp10 = !hasMoreBefore;
+          if (!hasMoreBefore) {
+            tmp10 = !messages.hasMoreAfter;
+          }
+          if (tmp10) {
+            tmp10 = messages.length < 25;
+          }
+          let current = messages.ready;
+          const result = recipientId.hasCurrentUserSentWaveBlockingMessage(tmp2.id);
+          if (!current) {
+            current = ref.current;
+          }
+          if (current) {
+            let tmp13 = closure_6;
+            if (!closure_6) {
+              tmp13 = tmp10;
+            }
+            current = tmp13;
+          }
+          if (current) {
+            current = !result;
+          }
+          ref.current = current;
+          return current;
         }
-        if (current) {
-          current = !result;
-        }
-        ref.current = current;
-        return current;
+      } else {
+        return false;
       }
-    } else {
-      return false;
-    }
-  }, items1);
+    },
+    items1,
+  );
 };

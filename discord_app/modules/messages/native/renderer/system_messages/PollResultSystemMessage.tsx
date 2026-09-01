@@ -4,7 +4,9 @@ import set2 from "../../../../emojis/EmojiConstants.tsx";
 import parsePollResultSystemMessageEmbedDefault from "../../../../polls/parsePollResultSystemMessageEmbed.tsx";
 
 const EMOJI_URL_BASE_SIZE = set2.EMOJI_URL_BASE_SIZE;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx",
+);
 
 export const createPollResultSystemMessage = function createPollResultSystemMessage(message) {
   const tmp3 = parsePollResultSystemMessageEmbedDefault(message.message.embeds[0]);
@@ -37,7 +39,7 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
     } else {
       const _Math = Math;
       const _HermesInternal = HermesInternal;
-      const combined = "" + Math.round(tmp3.victorAnswerVotes / tmp3.totalVotes * 100) + "%";
+      const combined = "" + Math.round((tmp3.victorAnswerVotes / tmp3.totalVotes) * 100) + "%";
       if (null == tmp3.victorAnswerId) {
         const intl2 = tmp21(1236).intl;
         const obj3 = {};

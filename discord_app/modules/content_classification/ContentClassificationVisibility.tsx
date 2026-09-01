@@ -5,11 +5,19 @@ import AgeRestrictionStatus from "../../../discord_common/js/shared/shared-const
 import closure_2 from "../../stores/UserStore.tsx";
 
 require = arg1;
-let obj = { DISPLAY: "display", BLOCK_UNDERAGE: "block_underage", BLOCK_CHANNEL_RESTRICTION: "block_channel_restriction" };
+let obj = {
+  DISPLAY: "display",
+  BLOCK_UNDERAGE: "block_underage",
+  BLOCK_CHANNEL_RESTRICTION: "block_channel_restriction",
+};
 let result = require("set").fileFinishedImporting("modules/content_classification/ContentClassificationVisibility.tsx");
 
 export const ContentClassificationVisibility = obj;
-export const getContentClassificationVisibility = function getContentClassificationVisibility(contentClassification, channel, nsfwAllowed) {
+export const getContentClassificationVisibility = function getContentClassificationVisibility(
+  contentClassification,
+  channel,
+  nsfwAllowed,
+) {
   if (null != contentClassification) {
     obj = contentClassificationToAgeRestrictionConclusion;
     obj = { type: null, data: null };

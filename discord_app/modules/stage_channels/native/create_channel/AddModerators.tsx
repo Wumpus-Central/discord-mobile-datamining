@@ -44,10 +44,16 @@ export default function AddModerators(guildId) {
     const mapped = found.map((row) => {
       row = row.row;
       if (row.rowType === constants.ROLE) {
-        let moderatorOverwrite = callback(5359).createModeratorOverwrite(row.id, callback(1955).PermissionOverwriteType.ROLE);
+        let moderatorOverwrite = callback(5359).createModeratorOverwrite(
+          row.id,
+          callback(1955).PermissionOverwriteType.ROLE,
+        );
         const obj2 = callback(5359);
       } else {
-        moderatorOverwrite = callback(5359).createModeratorOverwrite(row.id, callback(1955).PermissionOverwriteType.MEMBER);
+        moderatorOverwrite = callback(5359).createModeratorOverwrite(
+          row.id,
+          callback(1955).PermissionOverwriteType.MEMBER,
+        );
         const obj = callback(5359);
       }
       return moderatorOverwrite;
@@ -74,7 +80,11 @@ export default function AddModerators(guildId) {
       stringResult = intl.string(guildId(navigation[13]).t["5Wxrcd"]);
     }
     guildId = stringResult;
-    navigation.setOptions({ headerRight: first ? (() => callback(stringResult(table[14]).HeaderSubmittingIndicator, {})) : (() => closure_2_8(guildId(navigation[15]).HeaderActionButton, { text: closure_0, onPress: closure_1_6 })) });
+    navigation.setOptions({
+      headerRight: first
+        ? () => callback(stringResult(table[14]).HeaderSubmittingIndicator, {})
+        : () => closure_2_8(guildId(navigation[15]).HeaderActionButton, { text: closure_0, onPress: closure_1_6 }),
+    });
   }, items1);
   obj = { style: tmp3.addMembersContainer, children: null };
   obj = { style: tmp3.moderatorDescriptionContainer, children: null };
@@ -82,7 +92,7 @@ export default function AddModerators(guildId) {
   let intl = guildId(navigation[13]).intl;
   obj1[2] = intl.string(guildId(navigation[13]).t.f7VbhF);
   obj[1] = callback(guildId(navigation[16]).Text, obj1);
-  const items2 = [callback(first1, obj), , ];
+  const items2 = [callback(first1, obj), ,];
   if (null != tmp10[1].message) {
     let obj2 = { style: null, children: null };
     obj2[0] = tmp3.errorMessage;
@@ -93,7 +103,14 @@ export default function AddModerators(guildId) {
     tmp = tmp20(tmp19, obj2);
   }
   items2[1] = tmp;
-  const obj4 = { channel: null, guild, permission: guildId(navigation[19]).MODERATE_STAGE_CHANNEL_PERMISSIONS, inputDesc: null, pendingAdditions: null, setPendingAdditions: null };
+  const obj4 = {
+    channel: null,
+    guild,
+    permission: guildId(navigation[19]).MODERATE_STAGE_CHANNEL_PERMISSIONS,
+    inputDesc: null,
+    pendingAdditions: null,
+    setPendingAdditions: null,
+  };
   let intl2 = tmp4(tmp5[13]).intl;
   obj4[3] = intl2.string(guildId(navigation[13]).t["Ch6+n4"]);
   obj4[4] = first1;
@@ -101,4 +118,4 @@ export default function AddModerators(guildId) {
   items2[2] = callback(merged(navigation[18]), obj4);
   obj[1] = items2;
   return closure_9(first1, obj);
-};
+}

@@ -9,7 +9,15 @@ let obj = { LEGACY: "legacy", APEX: "apex" };
 const result = require("set").fileFinishedImporting("modules/experiments/ExperimentManager.tsx");
 
 export const trackExposureToExperiment = function trackExposureToExperiment(id, descriptor, location) {
-  obj = { experimentId: id, descriptor, location: null, location_stack: null, fingerprint: null, excluded: null, exposureType: null };
+  obj = {
+    experimentId: id,
+    descriptor,
+    location: null,
+    location_stack: null,
+    fingerprint: null,
+    excluded: null,
+    exposureType: null,
+  };
   let _location;
   if (location != null) {
     _location = location.location;
@@ -39,12 +47,26 @@ export const trackExposureToExperiment = function trackExposureToExperiment(id, 
 };
 export const registerUserExperiment = function registerUserExperiment(id) {
   id = id.id;
-  registerExperiment({ experimentId: id, experimentType: constants.USER, title: id.title, description: id.description, buckets: id.buckets, commonTriggerPoint: id.commonTriggerPoint });
+  registerExperiment({
+    experimentId: id,
+    experimentType: constants.USER,
+    title: id.title,
+    description: id.description,
+    buckets: id.buckets,
+    commonTriggerPoint: id.commonTriggerPoint,
+  });
   return { id };
 };
 export const registerGuildExperiment = function registerGuildExperiment(id) {
   id = id.id;
-  registerExperiment({ experimentId: id, experimentType: constants.GUILD, title: id.title, description: id.description, buckets: id.buckets, commonTriggerPoint: id.commonTriggerPoint });
+  registerExperiment({
+    experimentId: id,
+    experimentType: constants.GUILD,
+    title: id.title,
+    description: id.description,
+    buckets: id.buckets,
+    commonTriggerPoint: id.commonTriggerPoint,
+  });
   return { id };
 };
 export const ExperimentSystem = obj;

@@ -15,7 +15,10 @@ function GameRow(gameId) {
   let _require;
   let obj = importDefaultResult1;
   const data = obj.useGame(gameId).data;
-  obj = { gameId, source: require("../../../game_profile/GameProfileAnalyticUtils.tsx").GameProfileSources.VoiceChannelGames };
+  obj = {
+    gameId,
+    source: require("../../../game_profile/GameProfileAnalyticUtils.tsx").GameProfileSources.VoiceChannelGames,
+  };
   const tmp4Result = useOpenGameProfileModalDefault(obj);
   _require = tmp4Result;
   if (null == data) {
@@ -36,7 +39,14 @@ function GameRow(gameId) {
       obj1[1] = name;
       let obj2 = obj1;
     } else {
-      obj2 = { icon: null, label: null, arrow: true, onPress: null, accessibilityRole: "button", accessibilityLabel: null };
+      obj2 = {
+        icon: null,
+        label: null,
+        arrow: true,
+        onPress: null,
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+      };
       obj2[0] = tmp7;
       obj2[1] = name;
       obj2[3] = function onPress() {

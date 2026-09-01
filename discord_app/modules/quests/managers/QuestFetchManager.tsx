@@ -39,7 +39,9 @@ class QuestFetchManager extends tmp2 {
       applyArgumentsResult.hasHandledConnectionOpen = true;
       if (applyArgumentsResult.hasHandledConnectionOpen) {
         if (isEligibleForQuests) {
-          let DEFAULT_QUEST_FETCH_JITTER_CONFIG = tmp5(tmp6[8]).getQuestFetchReconnectJitterConfig({ location: "QuestFetchManager" });
+          let DEFAULT_QUEST_FETCH_JITTER_CONFIG = tmp5(tmp6[8]).getQuestFetchReconnectJitterConfig({
+            location: "QuestFetchManager",
+          });
           const tmp5Result = tmp5(tmp6[8]);
         }
         const _Math = Math;
@@ -56,19 +58,19 @@ class QuestFetchManager extends tmp2 {
           const _Math3 = Math;
           const _Math4 = Math;
           const _window2 = window;
-          tmp.initialQuestHomeHeroFetchTimerId = window.setTimeout(() => {
-            try {
-              const questHomeHero = lib(table[5]).fetchQuestHomeHero();
-            } catch (err) {
-            }
-          }, rounded + Math.floor(Math.random() * questHomeHeroJitterMs));
+          tmp.initialQuestHomeHeroFetchTimerId = window.setTimeout(
+            () => {
+              try {
+                const questHomeHero = lib(table[5]).fetchQuestHomeHero();
+              } catch (err) {}
+            },
+            rounded + Math.floor(Math.random() * questHomeHeroJitterMs),
+          );
         }
       }
       DEFAULT_QUEST_FETCH_JITTER_CONFIG = tmp5(tmp6[8]).DEFAULT_QUEST_FETCH_JITTER_CONFIG;
     };
-    applyArgumentsResult.handleRunningGamesChange = function handleRunningGamesChange() {
-
-    };
+    applyArgumentsResult.handleRunningGamesChange = function handleRunningGamesChange() {};
     applyArgumentsResult.handleUserSettingsProtoUpdate = function handleUserSettingsProtoUpdate(settings) {
       let wasSaved = !("localization" in settings.settings.proto);
       if (!wasSaved) {
@@ -98,7 +100,15 @@ class QuestFetchManager extends tmp2 {
       applyArgumentsResult.lastFetchedQuestForLocaleChangeAt = 0;
       applyArgumentsResult.hasHandledConnectionOpen = false;
     };
-    applyArgumentsResult.actions = { QUESTS_FETCH_CURRENT_QUESTS_BEGIN: applyArgumentsResult.handleQuestsFetchCurrentQuestsBegin, POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen, RUNNING_GAMES_CHANGE: applyArgumentsResult.handleRunningGamesChange, RUNNING_NON_GAMES_CHANGE: applyArgumentsResult.handleRunningGamesChange, USER_SETTINGS_PROTO_UPDATE: applyArgumentsResult.handleUserSettingsProtoUpdate, START_SESSION: applyArgumentsResult.handleStartSession, LOGOUT: applyArgumentsResult.handleLogout };
+    applyArgumentsResult.actions = {
+      QUESTS_FETCH_CURRENT_QUESTS_BEGIN: applyArgumentsResult.handleQuestsFetchCurrentQuestsBegin,
+      POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen,
+      RUNNING_GAMES_CHANGE: applyArgumentsResult.handleRunningGamesChange,
+      RUNNING_NON_GAMES_CHANGE: applyArgumentsResult.handleRunningGamesChange,
+      USER_SETTINGS_PROTO_UPDATE: applyArgumentsResult.handleUserSettingsProtoUpdate,
+      START_SESSION: applyArgumentsResult.handleStartSession,
+      LOGOUT: applyArgumentsResult.handleLogout,
+    };
     return applyArgumentsResult;
   }
 }
@@ -110,7 +120,13 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
   }
   if (isEligibleForQuests) {
     obj = { category: "quests.fetch", message: "QuestFetchManager._fetch triggered", data: null };
-    obj = { callerSource: null, storeSize: null, lastFetchedCurrentQuests: null, msSinceLastFetch: null, isFetchingCurrentQuests: null };
+    obj = {
+      callerSource: null,
+      storeSize: null,
+      lastFetchedCurrentQuests: null,
+      msSinceLastFetch: null,
+      isFetchingCurrentQuests: null,
+    };
     obj[0] = arg0;
     obj[1] = closure_3.quests.size;
     obj[2] = closure_3.lastFetchedCurrentQuests;

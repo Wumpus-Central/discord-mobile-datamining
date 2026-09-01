@@ -39,8 +39,7 @@ let c2 = false;
 let c3 = false;
 let c4 = false;
 const PersistedStore = initializeDefault.PersistedStore;
-class NUFStore extends PersistedStore {
-}
+class NUFStore extends PersistedStore {}
 const prototype = NUFStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_1, closure_0);
@@ -54,13 +53,13 @@ Object.defineProperty(prototype, "showMentionsInNotificationTab", {
   get: function showMentionsInNotificationTab() {
     return c4;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "showQuickSwitcher", {
   get: function showQuickSwitcher() {
     return c3;
   },
-  set: undefined
+  set: undefined,
 });
 NUFStore.displayName = "NUFStore";
 NUFStore.persistKey = "NUFStore";
@@ -69,7 +68,7 @@ const nUFStore = new NUFStore(dispatcherDefault, {
     c2 = true;
   },
   CACHE_LOADED_LAZY: handleCacheOrSocketLoaded,
-  CONNECTION_OPEN: handleCacheOrSocketLoaded
+  CONNECTION_OPEN: handleCacheOrSocketLoaded,
 });
 const result = require("set").fileFinishedImporting("stores/native/NUFStore.tsx");
 

@@ -76,7 +76,14 @@ function AlertModalBackdrop() {
     };
     return obj;
   };
-  obj = { withAlertModalSpring, sharedVisible: tmp4, sharedTransitionState: first, TransitionStates: context(4204).TransitionStates, runOnJS: context(4217).runOnJS, cleanUp: context };
+  obj = {
+    withAlertModalSpring,
+    sharedVisible: tmp4,
+    sharedTransitionState: first,
+    TransitionStates: context(4204).TransitionStates,
+    runOnJS: context(4217).runOnJS,
+    cleanUp: context,
+  };
   fn.__closure = obj;
   fn.__workletHash = 4470729133936;
   fn.__initData = closure_22;
@@ -201,7 +208,7 @@ class AlertModal {
           tmp11 = tmp7;
           str2 = "animate-always";
           obj1[0] = tmp5Result.withSpring(num, tmp7, "animate-always", undefined);
-          items = [, ];
+          items = [,];
           items[0] = obj1;
           if (1 === obj.get()) {
             result1 = [0, -20, -34][obj4.get(obj4)];
@@ -232,11 +239,25 @@ class AlertModal {
         return obj;
       }
     }
-    obj = { sharedVisible: tmp11, sharedTransitionState: first, TransitionStates: require("ManaContext").TransitionStates, runOnJS: require("../../../../modules/reanimated/ReanimatedRexport.tsx").runOnJS, cleanUp: context, windowHeight: height, ALERT_MODAL_MARGIN: 16, safeAreaTop: top, safeAreaBottom: bottom, withAlertModalSpring, sharedIndex: sharedValue, sharedTopHeight: context2, useReducedMotion: enabled };
+    obj = {
+      sharedVisible: tmp11,
+      sharedTransitionState: first,
+      TransitionStates: require("ManaContext").TransitionStates,
+      runOnJS: require("../../../../modules/reanimated/ReanimatedRexport.tsx").runOnJS,
+      cleanUp: context,
+      windowHeight: height,
+      ALERT_MODAL_MARGIN: 16,
+      safeAreaTop: top,
+      safeAreaBottom: bottom,
+      withAlertModalSpring,
+      sharedIndex: sharedValue,
+      sharedTopHeight: context2,
+      useReducedMotion: enabled,
+    };
     B.__closure = obj;
     B.__workletHash = 655123755546;
     B.__initData = closure_24;
-    items1 = [, ];
+    items1 = [,];
     items1[0] = context1;
     items1[1] = sharedValue;
     animatedStyle = obj2.useAnimatedStyle(B);
@@ -277,24 +298,30 @@ class AlertModal {
       accessibilityElementsHidden: 0 !== context1,
       style: items2,
       onLayout(nativeEvent) {
-            const result = context2.set(nativeEvent.nativeEvent.layout.height);
-          },
-      children: null
+        const result = context2.set(nativeEvent.nativeEvent.layout.height);
+      },
+      children: null,
     };
-    items2 = [, ];
+    items2 = [,];
     items2[0] = tmp3.content;
     items2[1] = animatedStyle;
     obj2 = { style: tmp3.overflow, children: null };
     tmp19 = jsxs;
     tmp17 = bottom;
     tmp18 = closure_7;
-    items3 = [, , , ];
+    items3 = [, , ,];
     items3[0] = header;
     obj3 = { spacing: 8, style: items4, children: null };
     items4 = [];
     items4[0] = tmp3.body;
-    items5 = [, ];
-    items5[0] = tmp16(require("Text").Text, { ref, variant: "heading-lg/bold", accessibilityRole: "header", color: "mobile-text-heading-primary", children: title });
+    items5 = [,];
+    items5[0] = tmp16(require("Text").Text, {
+      ref,
+      variant: "heading-lg/bold",
+      accessibilityRole: "header",
+      color: "mobile-text-heading-primary",
+      children: title,
+    });
     tmp16Result = null;
     if (null != content) {
       str2 = "";
@@ -360,7 +387,12 @@ function useSharedAnimationState() {
       const result1 = sharedValue.set(1);
     }
   };
-  obj = { TransitionStates: tmp3(tmp4[9]).TransitionStates, sharedVisible: sharedValue, runOnJS: tmp3(tmp4[11]).runOnJS, cleanUp: context1 };
+  obj = {
+    TransitionStates: tmp3(tmp4[9]).TransitionStates,
+    sharedVisible: sharedValue,
+    runOnJS: tmp3(tmp4[11]).runOnJS,
+    cleanUp: context1,
+  };
   fn2.__closure = obj;
   fn2.__workletHash = 9486923983340;
   fn2.__initData = closure_28;
@@ -396,7 +428,7 @@ class AlertActionButton {
       c2 = 0;
       c4 = 0;
       c3 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (c4 === 2) {
           c4 = 3;
           HermesBuiltin.throwTypeError();
@@ -472,7 +504,7 @@ class AlertActionButton {
         }
       })();
     });
-    obj.onPress = function() {
+    obj.onPress = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -487,8 +519,23 @@ class AlertActionButton {
 }
 ({ View: error, StyleSheet: closure_8, ScrollView: c9 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-let obj = { root: { flex: 1, position: "relative", justifyContent: "center", alignItems: "center", paddingHorizontal: 16 }, content: null, overflow: null, body: null, contentText: null };
-obj = { backgroundColor: ThemesDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT, margin: 16, width: "100%", maxWidth: 400, height: "100%", borderRadius: ThemesDefault.radii.xl, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj = {
+  root: { flex: 1, position: "relative", justifyContent: "center", alignItems: "center", paddingHorizontal: 16 },
+  content: null,
+  overflow: null,
+  body: null,
+  contentText: null,
+};
+obj = {
+  backgroundColor: ThemesDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT,
+  margin: 16,
+  width: "100%",
+  maxWidth: 400,
+  height: "100%",
+  borderRadius: ThemesDefault.radii.xl,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 let merged = Object.assign(ThemesDefault.shadows.SHADOW_TOP_HIGH);
 obj[1] = obj;
 obj[2] = { width: "100%", height: "100%", overflow: "hidden", padding: 24, position: "relative" };
@@ -500,17 +547,27 @@ let context = importAllResult.createContext(require("ManaContext").TransitionSta
 let context2 = importAllResult.createContext(require("sum").NOOP);
 const context4 = importAllResult.createContext("");
 const context5 = importAllResult.createContext(null);
-let closure_22 = { code: "function AlertModalNativeTsx1(){const{withAlertModalSpring,sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withAlertModalSpring(sharedVisible.get(),function(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}})};}" };
-let closure_24 = { code: "function AlertModalNativeTsx2(){const{sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp,windowHeight,ALERT_MODAL_MARGIN,safeAreaTop,safeAreaBottom,withAlertModalSpring,sharedIndex,sharedTopHeight,useReducedMotion}=this.__closure;var _CARD_OFFSETS$sharedI;function onComplete(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}}const CARD_OFFSETS=[0,-20,-34];const maxHeight=windowHeight-ALERT_MODAL_MARGIN*2-Math.max(safeAreaTop,safeAreaBottom)*2;return{position:'absolute',opacity:withAlertModalSpring(sharedVisible.get(),onComplete),zIndex:10-sharedIndex.get(),height:sharedIndex.get()>0?sharedTopHeight.get():'auto',maxHeight:maxHeight,transform:useReducedMotion?[]:[{scale:withAlertModalSpring(sharedVisible.get()===1?1-sharedIndex.get()*0.1:0.7)},{translateY:withAlertModalSpring(sharedVisible.get()===1?(_CARD_OFFSETS$sharedI=CARD_OFFSETS[sharedIndex.get()])!==null&&_CARD_OFFSETS$sharedI!==void 0?_CARD_OFFSETS$sharedI:sharedVisible.get()*-12:50-sharedIndex.get()*50)}]};}" };
+let closure_22 = {
+  code: "function AlertModalNativeTsx1(){const{withAlertModalSpring,sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withAlertModalSpring(sharedVisible.get(),function(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}})};}",
+};
+let closure_24 = {
+  code: "function AlertModalNativeTsx2(){const{sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp,windowHeight,ALERT_MODAL_MARGIN,safeAreaTop,safeAreaBottom,withAlertModalSpring,sharedIndex,sharedTopHeight,useReducedMotion}=this.__closure;var _CARD_OFFSETS$sharedI;function onComplete(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}}const CARD_OFFSETS=[0,-20,-34];const maxHeight=windowHeight-ALERT_MODAL_MARGIN*2-Math.max(safeAreaTop,safeAreaBottom)*2;return{position:'absolute',opacity:withAlertModalSpring(sharedVisible.get(),onComplete),zIndex:10-sharedIndex.get(),height:sharedIndex.get()>0?sharedTopHeight.get():'auto',maxHeight:maxHeight,transform:useReducedMotion?[]:[{scale:withAlertModalSpring(sharedVisible.get()===1?1-sharedIndex.get()*0.1:0.7)},{translateY:withAlertModalSpring(sharedVisible.get()===1?(_CARD_OFFSETS$sharedI=CARD_OFFSETS[sharedIndex.get()])!==null&&_CARD_OFFSETS$sharedI!==void 0?_CARD_OFFSETS$sharedI:sharedVisible.get()*-12:50-sharedIndex.get()*50)}]};}",
+};
 function withAlertModalSpring(value, fn2) {
   return CONFIG_NEVER_ANIMATE.withSpring(value, createCacheKey, "animate-always", fn2);
 }
 let obj2 = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, MODAL_SPRING: createCacheKey };
 withAlertModalSpring.__closure = obj2;
 withAlertModalSpring.__workletHash = 15556562210180;
-withAlertModalSpring.__initData = { code: "function withAlertModalSpring_AlertModalNativeTsx3(value,callback){const{withSpring,MODAL_SPRING}=this.__closure;return withSpring(value,MODAL_SPRING,'animate-always',callback);}" };
-let closure_27 = { code: "function AlertModalNativeTsx4(){const{sharedTransitionState}=this.__closure;return sharedTransitionState.get();}" };
-let closure_28 = { code: "function AlertModalNativeTsx5(transitionState){const{TransitionStates,sharedVisible,runOnJS,cleanUp}=this.__closure;if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1){sharedVisible.set(0);}else{runOnJS(cleanUp)();}}else{sharedVisible.set(1);}}" };
+withAlertModalSpring.__initData = {
+  code: "function withAlertModalSpring_AlertModalNativeTsx3(value,callback){const{withSpring,MODAL_SPRING}=this.__closure;return withSpring(value,MODAL_SPRING,'animate-always',callback);}",
+};
+let closure_27 = {
+  code: "function AlertModalNativeTsx4(){const{sharedTransitionState}=this.__closure;return sharedTransitionState.get();}",
+};
+let closure_28 = {
+  code: "function AlertModalNativeTsx5(transitionState){const{TransitionStates,sharedVisible,runOnJS,cleanUp}=this.__closure;if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1){sharedVisible.set(0);}else{runOnJS(cleanUp)();}}else{sharedVisible.set(1);}}",
+};
 const memoResult = importAllResult.memo(() => {
   const tmp = callback6();
   let items = tmp;
@@ -556,7 +613,13 @@ const memoResult = importAllResult.memo(() => {
     let obj = { value: sharedValue, children: null };
     obj = { value: value3, children: null };
     obj = { value: value2, children: null };
-    obj1 = { value: num, children: closure_1_10(closure_1_18.Provider, { value, children: closure_1_10(closure_1_6.Suspense, { fallback: null, children: node }) }) };
+    obj1 = {
+      value: num,
+      children: closure_1_10(closure_1_18.Provider, {
+        value,
+        children: closure_1_10(closure_1_6.Suspense, { fallback: null, children: node }),
+      }),
+    };
     obj[1] = closure_1_10(closure_1_17.Provider, obj1);
     obj[1] = closure_1_10(closure_1_15.Provider, obj);
     obj[1] = closure_1_10(closure_1_16.Provider, obj);
@@ -593,7 +656,10 @@ export const showConfirmModal = function showConfirmModal(arg0) {
   let obj = useAlertStore2;
   obj = { title, content, extraContent, actions: null };
   obj = { children: null };
-  const items = [callback4(AlertActionButton, { variant, text: confirmText, onPress: onConfirm }), callback4(AlertActionButton, { variant: "secondary", text: cancelText, onPress: onCancel })];
+  const items = [
+    callback4(AlertActionButton, { variant, text: confirmText, onPress: onConfirm }),
+    callback4(AlertActionButton, { variant: "secondary", text: cancelText, onPress: onCancel }),
+  ];
   obj[0] = items;
   obj[3] = callback5(closure_12, obj);
   obj.openAlert(key, callback4(AlertModal, obj), onCloseCallback, { dismissable });

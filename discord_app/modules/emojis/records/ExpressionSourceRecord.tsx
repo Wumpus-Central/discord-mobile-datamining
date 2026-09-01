@@ -24,7 +24,7 @@ function _getEmojiSourceData() {
     c4 = 0;
     c5 = 0;
     c3 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       closure_2 = tmp3;
       let obj3 = null;
       c3 = 1;
@@ -83,7 +83,18 @@ class ExpressionSourceGuildRecord extends tmp2 {
   constructor(arg0) {
     tmp = new ExpressionSourceGuildRecord(new.target, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ id: tmp.id, name: tmp.name, icon: tmp.icon, description: tmp.description, features: tmp.features, premiumTier: tmp.premiumTier, premiumSubscriberCount: tmp.premiumSubscriberCount, presenceCount: tmp.presenceCount, memberCount: tmp.memberCount, emojis: tmp.emojis } = global);
+    ({
+      id: tmp.id,
+      name: tmp.name,
+      icon: tmp.icon,
+      description: tmp.description,
+      features: tmp.features,
+      premiumTier: tmp.premiumTier,
+      premiumSubscriberCount: tmp.premiumSubscriberCount,
+      presenceCount: tmp.presenceCount,
+      memberCount: tmp.memberCount,
+      emojis: tmp.emojis,
+    } = global);
     return tmp;
   }
 }
@@ -118,7 +129,7 @@ prototype["isDiscoverable"] = function isDiscoverable() {
 };
 ExpressionSourceGuildRecord["getGuildFromEmojiId"] = function getGuildFromEmojiId(arg0) {
   closure_0 = arg0;
-  return callback(function*() {
+  return callback(function* () {
     closure_1 = tmp5;
     let type = tmp2;
     type = yield closure_1_7(closure_1_0);
@@ -137,7 +148,13 @@ ExpressionSourceGuildRecord["getGuildFromEmojiId"] = function getGuildFromEmojiI
   })();
 };
 ExpressionSourceGuildRecord["_mapCommon"] = function _mapCommon(id) {
-  obj = { id: id.id, name: id.name, icon: id.icon, description: id.description, features: areSetsEqual.toSetInplace(id.features) };
+  obj = {
+    id: id.id,
+    name: id.name,
+    icon: id.icon,
+    description: id.description,
+    features: areSetsEqual.toSetInplace(id.features),
+  };
   return obj;
 };
 ExpressionSourceGuildRecord["createFromGuildRecord"] = function createFromGuildRecord(joinedEmojiSourceGuildRecord) {
@@ -157,7 +174,18 @@ ExpressionSourceGuildRecord["createFromGuildRecord"] = function createFromGuildR
   }
   const tmp3 = new ExpressionSourceGuildRecord(str, _mapCommonResult, premiumTier);
   // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp3.id, name: tmp3.name, icon: tmp3.icon, description: tmp3.description, features: tmp3.features, premiumTier: tmp3.premiumTier, premiumSubscriberCount: tmp3.premiumSubscriberCount, presenceCount: tmp3.presenceCount, memberCount: tmp3.memberCount, emojis: tmp3.emojis } = obj);
+  ({
+    id: tmp3.id,
+    name: tmp3.name,
+    icon: tmp3.icon,
+    description: tmp3.description,
+    features: tmp3.features,
+    premiumTier: tmp3.premiumTier,
+    premiumSubscriberCount: tmp3.premiumSubscriberCount,
+    presenceCount: tmp3.presenceCount,
+    memberCount: tmp3.memberCount,
+    emojis: tmp3.emojis,
+  } = obj);
   return tmp3;
 };
 ExpressionSourceGuildRecord["createFromDiscoverableGuild"] = function createFromDiscoverableGuild(emojis) {
@@ -175,7 +203,18 @@ ExpressionSourceGuildRecord["createFromDiscoverableGuild"] = function createFrom
   }
   const tmp3 = new ExpressionSourceGuildRecord(str, _mapCommonResult, memberCount);
   // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp3.id, name: tmp3.name, icon: tmp3.icon, description: tmp3.description, features: tmp3.features, premiumTier: tmp3.premiumTier, premiumSubscriberCount: tmp3.premiumSubscriberCount, presenceCount: tmp3.presenceCount, memberCount: tmp3.memberCount, emojis: tmp3.emojis } = obj);
+  ({
+    id: tmp3.id,
+    name: tmp3.name,
+    icon: tmp3.icon,
+    description: tmp3.description,
+    features: tmp3.features,
+    premiumTier: tmp3.premiumTier,
+    premiumSubscriberCount: tmp3.premiumSubscriberCount,
+    presenceCount: tmp3.presenceCount,
+    memberCount: tmp3.memberCount,
+    emojis: tmp3.emojis,
+  } = obj);
   return tmp3;
 };
 ExpressionSourceGuildRecord["createFromServer"] = function createFromServer(id) {
@@ -183,14 +222,31 @@ ExpressionSourceGuildRecord["createFromServer"] = function createFromServer(id) 
   const _mapCommonResult = ExpressionSourceGuildRecord._mapCommon(id);
   let str = obj;
   const merged = Object.assign(_mapCommonResult);
-  ({ premium_tier: obj.premiumTier, premium_subscription_count: obj.premiumSubscriberCount, approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, emojis: obj.emojis } = id);
+  ({
+    premium_tier: obj.premiumTier,
+    premium_subscription_count: obj.premiumSubscriberCount,
+    approximate_presence_count: obj.presenceCount,
+    approximate_member_count: obj.memberCount,
+    emojis: obj.emojis,
+  } = id);
   if (typeof ExpressionSourceGuildRecord !== "function") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }
   const tmp3 = new ExpressionSourceGuildRecord(str, _mapCommonResult);
   // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp3.id, name: tmp3.name, icon: tmp3.icon, description: tmp3.description, features: tmp3.features, premiumTier: tmp3.premiumTier, premiumSubscriberCount: tmp3.premiumSubscriberCount, presenceCount: tmp3.presenceCount, memberCount: tmp3.memberCount, emojis: tmp3.emojis } = obj);
+  ({
+    id: tmp3.id,
+    name: tmp3.name,
+    icon: tmp3.icon,
+    description: tmp3.description,
+    features: tmp3.features,
+    premiumTier: tmp3.premiumTier,
+    premiumSubscriberCount: tmp3.premiumSubscriberCount,
+    presenceCount: tmp3.presenceCount,
+    memberCount: tmp3.memberCount,
+    emojis: tmp3.emojis,
+  } = obj);
   return tmp3;
 };
 ExpressionSourceGuildRecord["createFromGuildType"] = function createFromGuildType(guild) {
@@ -212,8 +268,7 @@ prototype2 = function ExpressionSourceApplicationRecord(arg0) {
   ({ id: tmp.id, name: tmp.name } = arg0);
   return tmp;
 }.prototype;
-class prototype2 extends tmp2 {
-}
+class prototype2 extends tmp2 {}
 prototype2["createFromServer"] = function createFromServer(arg0) {
   ({ id, name } = arg0);
   if (typeof prototype2 !== "function") {

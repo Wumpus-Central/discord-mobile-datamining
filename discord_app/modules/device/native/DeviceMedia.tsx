@@ -28,7 +28,14 @@ export default {
         let obj = assets(500);
         if (!obj.isIOS()) {
           dependencyMap = tmp2 + 1;
-          obj = { batchSize: null, endCursor: null, lastAssetIndex: null, lastNodeImageUri: null, extensions: null, onFetched: null };
+          obj = {
+            batchSize: null,
+            endCursor: null,
+            lastAssetIndex: null,
+            lastNodeImageUri: null,
+            extensions: null,
+            onFetched: null,
+          };
           obj[0] = batchSize;
           obj[1] = tmp3;
           obj[2] = lastAssetIndex;
@@ -174,7 +181,7 @@ export default {
           obj[4] = !num;
           closure_2_4.setState(obj);
         });
-      }
+      },
     });
   },
   useAssets() {
@@ -182,5 +189,5 @@ export default {
   },
   useHasReachedEnd() {
     return state((hasReachedEnd) => hasReachedEnd.hasReachedEnd);
-  }
+  },
 };

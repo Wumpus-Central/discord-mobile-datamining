@@ -34,7 +34,9 @@ function MessageRequestAnimation(color) {
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ buttonContainer: { position: "relative" } });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx",
+);
 
 export default function MessageRequestsButton(alternateVariant) {
   let flag = alternateVariant.alternateVariant;
@@ -81,7 +83,14 @@ export default function MessageRequestsButton(alternateVariant) {
     obj[2] = items2;
     return closure_8(View, obj);
   } else {
-    const obj2 = { source: null, IconComponent: null, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
+    const obj2 = {
+      source: null,
+      IconComponent: null,
+      accessibilityLabel: null,
+      buttonText: null,
+      badge: null,
+      badgePosition: "right",
+    };
     obj2[0] = registerAssetDefault;
     obj2[1] = MessageRequestAnimation;
     const intl = tmp3(1236).intl;
@@ -96,4 +105,4 @@ export default function MessageRequestsButton(alternateVariant) {
     return callback(ButtonBadgeDefault, obj2);
   }
   tmp2 = callback2();
-};
+}

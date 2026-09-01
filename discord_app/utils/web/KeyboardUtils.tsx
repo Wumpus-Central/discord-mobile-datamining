@@ -98,7 +98,9 @@ function keyToCode(toLocaleLowerCase) {
               }
               if (tmp27 === true) {
                 const tmp39 = keyCodeDefault;
-                const replaced = toLocaleLowerCase.replace(/^(right|left) (shift|meta|ctrl|alt)$/, "$2").replace("meta", "command");
+                const replaced = toLocaleLowerCase
+                  .replace(/^(right|left) (shift|meta|ctrl|alt)$/, "$2")
+                  .replace("meta", "command");
                 let str13 = "pause/break";
                 if ("pause" !== replaced) {
                   str13 = "pause/break";
@@ -110,10 +112,10 @@ function keyToCode(toLocaleLowerCase) {
                 const str8 = toLocaleLowerCase.replace(/^(right|left) (shift|meta|ctrl|alt)$/, "$2");
               } else if (tmp19 === true) {
                 parsed = set[toLocaleLowerCase];
-              } else if (KEYBOARD_KEY === tmp18.MOUSE_BUTTON === true) {
+              } else if ((KEYBOARD_KEY === tmp18.MOUSE_BUTTON) === true) {
                 const _parseInt2 = parseInt;
                 parsed = parseInt(toLocaleLowerCase.replace("MOUSE", ""), 10);
-              } else if (KEYBOARD_KEY === tmp18.GAMEPAD_BUTTON === true) {
+              } else if ((KEYBOARD_KEY === tmp18.GAMEPAD_BUTTON) === true) {
                 const _parseInt = parseInt;
                 parsed = parseInt(toLocaleLowerCase.replace("GAMEPAD", ""), 10);
               } else {
@@ -275,7 +277,11 @@ function codeToKey(items1) {
     const keyboardEventShapeFromKeycode = normalizeKey.getKeyboardEventShapeFromKeycode(tmp2);
     let tmp8 = null;
     if (null != keyboardEventShapeFromKeycode) {
-      tmp8 = getCodeToKeyLanguageCorrection(keyboardEventShapeFromKeycode.keyCode, keyboardEventShapeFromKeycode.key, tmp3);
+      tmp8 = getCodeToKeyLanguageCorrection(
+        keyboardEventShapeFromKeycode.keyCode,
+        keyboardEventShapeFromKeycode.key,
+        tmp3,
+      );
     }
     return tmp8;
   }
@@ -362,7 +368,32 @@ function toKeyNames(arr) {
   return mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
 }
 set = Object.freeze(set);
-items = [["META", "\u2318"], ["CMD", "\u2318"], ["RIGHT META", "RIGHT \u2318"], ["RIGHT CMD", "RIGHT \u2318"], ["SHIFT", "\u21E7"], ["RIGHT SHIFT", "RIGHT \u21E7"], ["ALT", "\u2325"], ["RIGHT ALT", "RIGHT \u2325"], ["CTRL", "\u2303"], ["RIGHT CTRL", "RIGHT \u2303"], ["ENTER", "\u21B5"], ["BACKSPACE", "\u232B"], ["DEL", "\u2326"], ["ESC", "\u238B"], ["PAGEUP", "\u21DE"], ["PAGEDOWN", "\u21DF"], ["UP", "\u2191"], ["DOWN", "\u2193"], ["LEFT", "\u2190"], ["RIGHT", "\u2192"], ["HOME", "\u2196"], ["END", "\u2198"], ["TAB", "\u21E5"], ["SPACE", "\u2423"]];
+items = [
+  ["META", "\u2318"],
+  ["CMD", "\u2318"],
+  ["RIGHT META", "RIGHT \u2318"],
+  ["RIGHT CMD", "RIGHT \u2318"],
+  ["SHIFT", "\u21E7"],
+  ["RIGHT SHIFT", "RIGHT \u21E7"],
+  ["ALT", "\u2325"],
+  ["RIGHT ALT", "RIGHT \u2325"],
+  ["CTRL", "\u2303"],
+  ["RIGHT CTRL", "RIGHT \u2303"],
+  ["ENTER", "\u21B5"],
+  ["BACKSPACE", "\u232B"],
+  ["DEL", "\u2326"],
+  ["ESC", "\u238B"],
+  ["PAGEUP", "\u21DE"],
+  ["PAGEDOWN", "\u21DF"],
+  ["UP", "\u2191"],
+  ["DOWN", "\u2193"],
+  ["LEFT", "\u2190"],
+  ["RIGHT", "\u2192"],
+  ["HOME", "\u2196"],
+  ["END", "\u2198"],
+  ["TAB", "\u21E5"],
+  ["SPACE", "\u2423"],
+];
 const re20 = /shift|meta|ctrl|alt$/;
 const result = set.fileFinishedImporting("utils/web/KeyboardUtils.tsx");
 
@@ -485,25 +516,33 @@ export const toCombo = function toCombo(shortcut) {
     }
     const str2 = shortcut.replace(/numpad plus/i, "");
     const str4 = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus");
-    const parts = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, KEYBOARD_KEY(13556).modKey).split("+");
+    const parts = shortcut
+      .replace(/numpad plus/i, "")
+      .replace(/NUMPAD \+/i, "numpad plus")
+      .replace(/mod/i, KEYBOARD_KEY(13556).modKey)
+      .split("+");
     const mapped = parts.map((str) => str.trim().replace("plus", "+"));
     return mapped.reduce((arr) => {
-      let tmp3 = closure_1_16((function toUglyKey(str) {
-        const obj = dependencyMap[Symbol.iterator]();
-        while (obj !== undefined) {
-          let tmp3 = callback;
-          let tmp4 = callback(tmp2, 2);
-          [str, tmp5] = tmp4;
-          if (tmp5 === str.toUpperCase()) {
-            let tmp6 = str;
-            let tmp8 = obj;
-            let formatted = str.toLowerCase();
-            obj.return();
-            return formatted;
+      let tmp3 = closure_1_16(
+        (function toUglyKey(str) {
+          const obj = dependencyMap[Symbol.iterator]();
+          while (obj !== undefined) {
+            let tmp3 = callback;
+            let tmp4 = callback(tmp2, 2);
+            [str, tmp5] = tmp4;
+            if (tmp5 === str.toUpperCase()) {
+              let tmp6 = str;
+              let tmp8 = obj;
+              let formatted = str.toLowerCase();
+              obj.return();
+              return formatted;
+            }
           }
-        }
-        return str;
-      })(arg1), closure_0, KEYBOARD_KEY);
+          return str;
+        })(arg1),
+        closure_0,
+        KEYBOARD_KEY,
+      );
       if (null != tmp3) {
         items = [KEYBOARD_KEY, tmp3, closure_0];
         arr.push(items);
@@ -629,22 +668,25 @@ export const areKeyCombosEqual = function areKeyCombosEqual(arr) {
   if (arg2 === undefined) {
     flag = false;
   }
-  return arr.length === arg1.length && arr.every((arg0, arg1) => {
-    [tmp, tmp2, tmp3] = arg0;
-    const tmp4 = closure_1_4(table[arg1], 3);
-    let tmp5 = tmp === tmp4[0];
-    if (tmp5) {
-      tmp5 = tmp2 === tmp4[1];
-    }
-    if (tmp5) {
-      let tmp7 = !flag;
-      if (flag) {
-        tmp7 = tmp3 === tmp4[2];
+  return (
+    arr.length === arg1.length &&
+    arr.every((arg0, arg1) => {
+      [tmp, tmp2, tmp3] = arg0;
+      const tmp4 = closure_1_4(table[arg1], 3);
+      let tmp5 = tmp === tmp4[0];
+      if (tmp5) {
+        tmp5 = tmp2 === tmp4[1];
       }
-      tmp5 = tmp7;
-    }
-    return tmp5;
-  });
+      if (tmp5) {
+        let tmp7 = !flag;
+        if (flag) {
+          tmp7 = tmp3 === tmp4[2];
+        }
+        tmp5 = tmp7;
+      }
+      return tmp5;
+    })
+  );
 };
 export const isKeyboardActivatedMouseEvent = function isKeyboardActivatedMouseEvent(obj) {
   let tmp = null != obj && typeof obj === "object";

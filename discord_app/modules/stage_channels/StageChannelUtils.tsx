@@ -19,22 +19,24 @@ export const fillChunk = function fillChunk(arg0, arg1, arg2) {
     tmp = arg1;
   }
   _require = tmp;
-  return require("../../../_runtime/00012_apply.js").chunk(arg0, arg1).reduce((arg0, arg1) => {
-    if (closure_0 <= arg1.length) {
-      const items = [];
-      items[HermesBuiltin.arraySpread(arg0, 0)] = arg1;
-      return items;
-    } else {
-      const items1 = [];
-      const _Array = Array;
-      let arraySpreadResult = HermesBuiltin.arraySpread(arg1, 0);
-      const array = new Array(tmp - arg1.length);
-      arraySpreadResult = HermesBuiltin.arraySpread(array.fill(null), arraySpreadResult);
-      const items2 = [];
-      items2[HermesBuiltin.arraySpread(arg0, 0)] = items1;
-      return items2;
-    }
-  }, []);
+  return require("../../../_runtime/00012_apply.js")
+    .chunk(arg0, arg1)
+    .reduce((arg0, arg1) => {
+      if (closure_0 <= arg1.length) {
+        const items = [];
+        items[HermesBuiltin.arraySpread(arg0, 0)] = arg1;
+        return items;
+      } else {
+        const items1 = [];
+        const _Array = Array;
+        let arraySpreadResult = HermesBuiltin.arraySpread(arg1, 0);
+        const array = new Array(tmp - arg1.length);
+        arraySpreadResult = HermesBuiltin.arraySpread(array.fill(null), arraySpreadResult);
+        const items2 = [];
+        items2[HermesBuiltin.arraySpread(arg0, 0)] = items1;
+        return items2;
+      }
+    }, []);
 };
 export const summarizeUsernamesParticipating = function summarizeUsernamesParticipating(arg0, arg1, arg2, arg3) {
   let length = arg3;
@@ -62,29 +64,30 @@ export const summarizeUsernamesParticipating = function summarizeUsernamesPartic
     intl.formatToPlainString(getSystemLocale.t.GhkJ21, obj);
   }
 };
-export const summarizeUsernamesParticipatingWithSpeakerNickname = function summarizeUsernamesParticipatingWithSpeakerNickname(arg0, arg1, arg2) {
-  let length = arg2;
-  if (arg2 == null) {
-    length = arg0.length;
-  }
-  if (1 === length) {
-    if (null != arg1) {
-      return arg1;
+export const summarizeUsernamesParticipatingWithSpeakerNickname =
+  function summarizeUsernamesParticipatingWithSpeakerNickname(arg0, arg1, arg2) {
+    let length = arg2;
+    if (arg2 == null) {
+      length = arg0.length;
     }
-  }
-  if (null == arg1) {
-    const intl2 = getSystemLocale.intl;
-    let obj = { count: null };
-    obj[0] = length;
-    intl2.formatToPlainString(getSystemLocale.t.chmM9N, obj);
-  } else {
-    const intl = getSystemLocale.intl;
-    obj = { name: null, count: null };
-    obj[0] = arg1;
-    obj[1] = length - 1;
-    intl.formatToPlainString(getSystemLocale.t.GhkJ21, obj);
-  }
-};
+    if (1 === length) {
+      if (null != arg1) {
+        return arg1;
+      }
+    }
+    if (null == arg1) {
+      const intl2 = getSystemLocale.intl;
+      let obj = { count: null };
+      obj[0] = length;
+      intl2.formatToPlainString(getSystemLocale.t.chmM9N, obj);
+    } else {
+      const intl = getSystemLocale.intl;
+      obj = { name: null, count: null };
+      obj[0] = arg1;
+      obj[1] = length - 1;
+      intl.formatToPlainString(getSystemLocale.t.GhkJ21, obj);
+    }
+  };
 export const getRemoveModeratorTooltipHint = function getRemoveModeratorTooltipHint(arg0, arg1) {
   if (RowType.OWNER === arg0) {
     const intl3 = getSystemLocale.intl;
@@ -115,14 +118,23 @@ export const getRemoveModeratorTooltipHint = function getRemoveModeratorTooltipH
 };
 export const getStageChannelMetadata = function getStageChannelMetadata(channel_id) {
   stageInstanceByChannel = stageInstanceByChannel.getStageInstanceByChannel(channel_id.id);
-  const obj = { channel_id: channel_id.id, guild_id: channel_id.guild_id, topic: null, media_session_id: null, request_to_speak_state: null, stage_instance_id: null };
+  const obj = {
+    channel_id: channel_id.id,
+    guild_id: channel_id.guild_id,
+    topic: null,
+    media_session_id: null,
+    request_to_speak_state: null,
+    stage_instance_id: null,
+  };
   let topic;
   if (stageInstanceByChannel != null) {
     topic = stageInstanceByChannel.topic;
   }
   obj[2] = topic;
   obj[3] = mediaSessionId.getMediaSessionId();
-  obj[4] = applyOverwritesAll.canEveryoneRole(Permissions.REQUEST_TO_SPEAK, channel_id) ? closure_6.EVERYONE : closure_6.NO_ONE;
+  obj[4] = applyOverwritesAll.canEveryoneRole(Permissions.REQUEST_TO_SPEAK, channel_id)
+    ? closure_6.EVERYONE
+    : closure_6.NO_ONE;
   let id;
   if (stageInstanceByChannel != null) {
     id = stageInstanceByChannel.id;

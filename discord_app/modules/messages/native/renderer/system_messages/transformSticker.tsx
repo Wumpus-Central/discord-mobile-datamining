@@ -24,14 +24,15 @@ export const transformSticker = function transformSticker(tmp5Result1) {
   }
   obj.url = str2;
   const NativeLottieRenderMode = tmp(7908).NativeLottieRenderMode;
-  obj.renderMode = setting === StickerAnimationSettings.ALWAYS_ANIMATE ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
+  obj.renderMode =
+    setting === StickerAnimationSettings.ALWAYS_ANIMATE ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
   tmpResult = tmp(7860);
   obj = {
     expensive() {
       const intl = tmp5Result1(closure_1_1[4]).intl;
       return intl.formatToPlainString(tmp5Result1(closure_1_1[4]).t.rk6pOw, { stickerName: tmp5Result1.name });
     },
-    cheap: null
+    cheap: null,
   };
   let intl = tmp(1236).intl;
   obj[1] = intl.string(require("../../../../../intl/index.native.tsx").t["fT+Yjp"]);

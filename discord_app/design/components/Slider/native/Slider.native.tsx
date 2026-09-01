@@ -7,7 +7,14 @@ import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { flex: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: null, maximumTrackTintColor: null, startIcon: null, endIcon: null };
+createCacheKey = {
+  container: { flex: 1, flexDirection: "row", alignItems: "center" },
+  slider: { flex: 1 },
+  minimumTrackTintColor: null,
+  maximumTrackTintColor: null,
+  startIcon: null,
+  endIcon: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.SLIDER_TRACK_BACKGROUND };
@@ -42,7 +49,7 @@ export const Slider = function Slider(step) {
     obj[1] = startIcon;
     tmp6 = callback(tmp5, obj);
   }
-  const items1 = [tmp6, , ];
+  const items1 = [tmp6, ,];
   obj = {};
   const merged1 = Object.assign(merged);
   const items2 = [tmp2.slider, step.style];

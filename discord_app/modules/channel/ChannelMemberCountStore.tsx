@@ -10,8 +10,7 @@ let closure_5 = {};
 let closure_6 = {};
 let c7 = null;
 const PersistedStore = initializeDefault.PersistedStore;
-class ChannelMemberCountStore extends PersistedStore {
-}
+class ChannelMemberCountStore extends PersistedStore {}
 const prototype = ChannelMemberCountStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let tmp = arg0;
@@ -64,7 +63,7 @@ const channelMemberCountStore = new ChannelMemberCountStore(dispatcherDefault, {
       closure_6[channelId.channelId] = obj;
     }
     return true;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/channel/ChannelMemberCountStore.tsx");
 

@@ -25,10 +25,16 @@ const toggle = createToggle.createToggle({
     if (flag == null) {
       flag = true;
     }
-    const isEligibleForInappropriateConversationWarning = InappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
+    const isEligibleForInappropriateConversationWarning =
+      InappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({
+        location: "user_settings_mobile_redesign",
+      });
     const obj = InappropriateConversationExperiment;
     let tmp4 = !flag;
-    const isEligibleForInappropriateConversationDefaultOn = InappropriateConversationsDefaultOn.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
+    const isEligibleForInappropriateConversationDefaultOn =
+      InappropriateConversationsDefaultOn.useIsEligibleForInappropriateConversationDefaultOn({
+        location: "user_settings_mobile_redesign",
+      });
     if (!flag) {
       tmp4 = isEligibleForInappropriateConversationWarning;
     }
@@ -36,7 +42,7 @@ const toggle = createToggle.createToggle({
       tmp4 = !isEligibleForInappropriateConversationDefaultOn;
     }
     return tmp4;
-  }
+  },
 });
 let obj = {
   useTitle() {
@@ -53,10 +59,16 @@ let obj = {
     if (flag == null) {
       flag = true;
     }
-    const isEligibleForInappropriateConversationWarning = InappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
+    const isEligibleForInappropriateConversationWarning =
+      InappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({
+        location: "user_settings_mobile_redesign",
+      });
     const obj = InappropriateConversationExperiment;
     let tmp4 = !flag;
-    const isEligibleForInappropriateConversationDefaultOn = InappropriateConversationsDefaultOn.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
+    const isEligibleForInappropriateConversationDefaultOn =
+      InappropriateConversationsDefaultOn.useIsEligibleForInappropriateConversationDefaultOn({
+        location: "user_settings_mobile_redesign",
+      });
     if (!flag) {
       tmp4 = isEligibleForInappropriateConversationWarning;
     }
@@ -64,7 +76,7 @@ let obj = {
       tmp4 = !isEligibleForInappropriateConversationDefaultOn;
     }
     return tmp4;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DirectMessageSafetyAlertsSetting.tsx");
 

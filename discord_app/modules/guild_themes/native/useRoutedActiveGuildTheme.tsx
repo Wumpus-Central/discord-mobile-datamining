@@ -174,4 +174,4 @@ export default function useRoutedActiveGuildTheme() {
   }
   const tmp3 = callback(React.useState(getActiveGuildThemeGuildIdSnapshot), 2);
   return resolveSavedActiveGuildTheme.useActiveGuildThemeForGuildId(tmp4);
-};
+}

@@ -8,7 +8,12 @@ import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx"
 require = arg1;
 function onImageDescriptionSettingValueChange(viewImageDescriptions) {
   let obj = UserSettingsText;
-  obj = { videoUploadQuality: closure_2.videoUploadQuality, viewImageDescriptions, lowQualityImageMode: closure_2.lowQualityImageMode, dataSavingMode: closure_2.dataSavingMode };
+  obj = {
+    videoUploadQuality: closure_2.videoUploadQuality,
+    viewImageDescriptions,
+    lowQualityImageMode: closure_2.lowQualityImageMode,
+    dataSavingMode: closure_2.dataSavingMode,
+  };
   obj.setImageDescriptions(obj);
 }
 createToggle = {
@@ -21,7 +26,7 @@ createToggle = {
     const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
     return ViewImageDescriptions.useSetting();
   },
-  onValueChange: onImageDescriptionSettingValueChange
+  onValueChange: onImageDescriptionSettingValueChange,
 };
 createToggle = createToggle.createToggle(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ImageDescriptionsSetting.tsx");

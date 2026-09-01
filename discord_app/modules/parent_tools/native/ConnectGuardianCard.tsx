@@ -9,14 +9,36 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, compactContainer: null, card: null, countdown: null, divider: null, compactDividerFlush: null, dividerLine: null, dividerText: null, buttonGroup: null };
+createCacheKey = {
+  container: null,
+  compactContainer: null,
+  card: null,
+  countdown: null,
+  divider: null,
+  compactDividerFlush: null,
+  dividerLine: null,
+  dividerText: null,
+  buttonGroup: null,
+};
 createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignSelf: "center", gap: ThemesDefault.space.PX_16 };
 let obj1 = { alignSelf: "center", gap: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { alignSelf: "center", padding: ThemesDefault.space.PX_12, borderWidth: 1, borderRadius: ThemesDefault.radii.lg, borderColor: ThemesDefault.colors.BORDER_NORMAL };
+createCacheKey[2] = {
+  alignSelf: "center",
+  padding: ThemesDefault.space.PX_12,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.lg,
+  borderColor: ThemesDefault.colors.BORDER_NORMAL,
+};
 createCacheKey[3] = { textAlign: "center" };
-let obj2 = { alignSelf: "center", padding: ThemesDefault.space.PX_12, borderWidth: 1, borderRadius: ThemesDefault.radii.lg, borderColor: ThemesDefault.colors.BORDER_NORMAL };
+let obj2 = {
+  alignSelf: "center",
+  padding: ThemesDefault.space.PX_12,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.lg,
+  borderColor: ThemesDefault.colors.BORDER_NORMAL,
+};
 createCacheKey[4] = { flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[5] = { paddingHorizontal: 0 };
 let obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
@@ -69,12 +91,13 @@ export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
     obj[1] = tmp6(tmp3[6]).space.PX_8;
     obj1 = { size: 160, text: null };
     obj1[1] = tmp16;
-    const items3 = [callback2(tmp2(tmp3[16]).QRCodeWithOverlay, obj1), ];
+    const items3 = [callback2(tmp2(tmp3[16]).QRCodeWithOverlay, obj1)];
     const obj2 = { style: null, variant: "text-xs/normal", children: null };
     obj2[0] = tmp.countdown;
     const stringResult = intl5.string(tmp6(tmp3[14]).RfkLDs);
     const _HermesInternal = HermesInternal;
-    obj2[2] = "" + stringResult + " " + tmp2(tmp3[18]).getTimeFormat(86400 * days + 3600 * hours + 60 * minutes + seconds);
+    obj2[2] =
+      "" + stringResult + " " + tmp2(tmp3[18]).getTimeFormat(86400 * days + 3600 * hours + 60 * minutes + seconds);
     items3[1] = callback2(tmp2(tmp3[17]).Text, obj2);
     obj[2] = items3;
     obj[1] = callback3(tmp2(tmp3[15]).Stack, obj);
@@ -82,7 +105,7 @@ export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
     if ("none" === shareActions) {
       return tmp22;
     } else {
-      const items4 = [tmp.divider, ];
+      const items4 = [tmp.divider];
       let compactDividerFlush = tmp23;
       if ("compact" === shareActions) {
         compactDividerFlush = tmp.compactDividerFlush;
@@ -92,7 +115,7 @@ export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
       obj3[0] = items4;
       const obj4 = { style: null };
       obj4[0] = tmp.dividerLine;
-      const items5 = [tmp18(tmp19, obj4), , ];
+      const items5 = [tmp18(tmp19, obj4), ,];
       const obj5 = { style: null, variant: "text-sm/medium", color: "text-muted", children: null };
       obj5[0] = tmp.dividerText;
       const intl = tmp2(tmp3[13]).intl;
@@ -107,7 +130,7 @@ export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
       if ("compact" === shareActions) {
         const obj7 = { style: null, children: null };
         obj7[0] = tmp.compactContainer;
-        const items6 = [tmp22, tmp20Result, ];
+        const items6 = [tmp22, tmp20Result];
         const obj8 = { variant: "secondary", size: "md", text: null, icon: null, disabled: null, onPress: null };
         const intl4 = tmp2(tmp3[13]).intl;
         obj8[2] = intl4.string(tmp2(tmp3[13]).t.Ej3B3Y);
@@ -123,7 +146,7 @@ export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
         const obj10 = { spacing: null, style: null, children: null };
         obj10[0] = tmp6(tmp3[6]).space.PX_32;
         obj10[1] = tmp.container;
-        const items7 = [tmp22, tmp20Result, ];
+        const items7 = [tmp22, tmp20Result];
         const obj11 = { style: null, children: null };
         obj11[0] = tmp.buttonGroup;
         const obj12 = { variant: "secondary", size: "md", text: null, disabled: null, onPress: null };
@@ -131,7 +154,7 @@ export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
         obj12[2] = intl2.string(tmp2(tmp3[13]).t.Ej3B3Y);
         obj12[3] = "" === linkCode;
         obj12[4] = callback;
-        const items8 = [tmp18(tmp2(tmp3[19]).Button, obj12), ];
+        const items8 = [tmp18(tmp2(tmp3[19]).Button, obj12)];
         const obj13 = { variant: "secondary", size: "md", text: null, disabled: null, onPress: null };
         const intl3 = tmp2(tmp3[13]).intl;
         obj13[2] = intl3.string(tmp2(tmp3[13]).t.WqhZss);

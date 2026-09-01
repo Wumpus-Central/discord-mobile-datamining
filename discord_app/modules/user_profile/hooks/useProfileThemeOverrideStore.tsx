@@ -17,7 +17,7 @@ let tmp2 = keys.create()((arg0) => {
     },
     setSavedClientTheme(savedClientTheme) {
       return callback({ savedClientTheme });
-    }
+    },
   };
 });
 let closure_4 = tmp2;

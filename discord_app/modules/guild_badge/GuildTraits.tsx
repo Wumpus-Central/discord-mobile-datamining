@@ -18,7 +18,9 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
     if (null == fromGuildProfileResult) {
       let num3 = 0;
       if (tmp5) {
-        let num4 = fromGuildPropertiesWithAdditionalFields.isGuildRecord(fromGuildProfileResult) ? fromGuildProfileResult.premiumSubscriberCount : fromGuildProfileResult.premiumSubscriptionCount;
+        let num4 = fromGuildPropertiesWithAdditionalFields.isGuildRecord(fromGuildProfileResult)
+          ? fromGuildProfileResult.premiumSubscriberCount
+          : fromGuildProfileResult.premiumSubscriptionCount;
         if (num4 == null) {
           num4 = 0;
         }
@@ -30,7 +32,16 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
       } else {
         NONE = constants2.NONE;
       }
-      obj = { verified: null, partnered: null, community: null, staff: null, visibility: null, premium: null, premiumSubscriberCount: null, premiumTier: null };
+      obj = {
+        verified: null,
+        partnered: null,
+        community: null,
+        staff: null,
+        visibility: null,
+        premium: null,
+        premiumSubscriberCount: null,
+        premiumTier: null,
+      };
       obj[0] = set.has(tmp2.VERIFIED);
       obj[1] = set.has(tmp2.PARTNERED);
       obj[2] = set.has(tmp2.COMMUNITY);

@@ -8,12 +8,15 @@ export default function ContactSyncBackToLanding(arg0) {
   const _require = arg0;
   dependencyMap = require("../../../../design/components/Navigator/native/useNavigation.native.tsx").useNavigation();
   const obj = useNavigation;
-  return require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderBackButton(() => {
-    if (null != lib.navigateToLandingPage) {
-      const result = lib.navigateToLandingPage();
-    } else {
-      lib(table[2]).goBackToLanding(table);
-      const obj2 = lib(table[2]);
-    }
-  }, true)(arg0);
-};
+  return require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderBackButton(
+    () => {
+      if (null != lib.navigateToLandingPage) {
+        const result = lib.navigateToLandingPage();
+      } else {
+        lib(table[2]).goBackToLanding(table);
+        const obj2 = lib(table[2]);
+      }
+    },
+    true,
+  )(arg0);
+}

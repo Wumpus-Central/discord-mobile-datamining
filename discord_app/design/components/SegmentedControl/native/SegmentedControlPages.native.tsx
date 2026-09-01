@@ -49,7 +49,10 @@ function SegmentedControlPage(children) {
   S.__workletHash = 13786543795395;
   S.__initData = closure_20;
   const animatedProps = obj1.useAnimatedProps(S);
-  const tmp6 = index(activePageRangeStart.useState(() => reportedPageIndex.get() !== index), 2);
+  const tmp6 = index(
+    activePageRangeStart.useState(() => reportedPageIndex.get() !== index),
+    2,
+  );
   first = tmp6[0];
   closure_8 = tmp8;
   let obj2 = reportedPageIndex(scrollTargetPageIndex[4]);
@@ -104,13 +107,16 @@ function SegmentedControlPage(children) {
   A.__workletHash = 10465509086469;
   A.__initData = closure_23;
   const animatedStyle = reportedPageIndex(scrollTargetPageIndex[4]).useAnimatedStyle(A);
-  const tmp13 = index(activePageRangeStart.useState(() => {
-    let tmp2 = index >= activePageRangeStart.get();
-    if (tmp2) {
-      tmp2 = index <= activePageRangeEnd.get();
-    }
-    return !tmp2;
-  }), 2);
+  const tmp13 = index(
+    activePageRangeStart.useState(() => {
+      let tmp2 = index >= activePageRangeStart.get();
+      if (tmp2) {
+        tmp2 = index <= activePageRangeEnd.get();
+      }
+      return !tmp2;
+    }),
+    2,
+  );
   closure_11 = tmp14;
   const obj5 = reportedPageIndex(scrollTargetPageIndex[4]);
   let tmp2 = reportedPageIndex;
@@ -153,29 +159,75 @@ function SegmentedControlPage(children) {
   return activePageRangeEnd(pageIndex(scrollTargetPageIndex[4]).View, obj1, index);
 }
 let closure_6 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").ScrollView);
-let closure_7 = { code: "function SegmentedControlPagesNativeTsx1(){const{activeIndex}=this.__closure;return activeIndex.get();}" };
-let closure_8 = { code: "function SegmentedControlPagesNativeTsx2(value){const{runOnJS,updateCurrentActiveIndex}=this.__closure;runOnJS(updateCurrentActiveIndex)(value);}" };
-let closure_9 = { code: "function SegmentedControlPagesNativeTsx3(){const{pageIndex}=this.__closure;return pageIndex.get();}" };
-let closure_10 = { code: "function SegmentedControlPagesNativeTsx4(value){const{activeIndex}=this.__closure;activeIndex.set(value);}" };
-let closure_11 = { code: "function SegmentedControlPagesNativeTsx5(contentOffset,contentSize){const{pageWidth,pageIndex,roundIfClose,reportedPageIndex,runOnJS,onPageChanged}=this.__closure;if(pageWidth===0){return;}pageIndex.set(Math.min(Math.max(roundIfClose(contentOffset.x/pageWidth,1e-4),0),roundIfClose(contentSize.width/pageWidth,1e-4)-1));const pageFullyVisible=pageIndex.get()%1===0;if(pageFullyVisible&&reportedPageIndex.get()!==pageIndex.get()){reportedPageIndex.set(pageIndex.get());runOnJS(onPageChanged)(pageIndex.get());}}" };
-let closure_12 = { code: "function SegmentedControlPagesNativeTsx6(event){const{scrollTarget,onBeginDragWorklet}=this.__closure;var _onBeginDragWorklet;scrollTarget.set(-1);(_onBeginDragWorklet=onBeginDragWorklet)===null||_onBeginDragWorklet===void 0||_onBeginDragWorklet(event);}" };
-let closure_13 = { code: "function SegmentedControlPagesNativeTsx7(event){const{onEndDragWorklet}=this.__closure;var _onEndDragWorklet;(_onEndDragWorklet=onEndDragWorklet)===null||_onEndDragWorklet===void 0||_onEndDragWorklet(event);}" };
-let closure_14 = { code: "function SegmentedControlPagesNativeTsx8({contentOffset:contentOffset,contentSize:contentSize}){const{scrollTarget,roundIfClose,runOnJS,refreshScrollOffset,resolvePageIndex}=this.__closure;if(scrollTarget.get()!==-1){const hasReachedTarget=roundIfClose(contentOffset.x-scrollTarget.get(),1e-4)===0;if(hasReachedTarget){scrollTarget.set(-1);}else{const page=scrollTarget.get();runOnJS(refreshScrollOffset)(page);}}resolvePageIndex(contentOffset,contentSize);}" };
-let closure_15 = { code: "function SegmentedControlPagesNativeTsx9(event){const{lastScrollOffsetX,onScrollWorklet,itemCount,pageWidth,activeIndex,runOnJS,refreshScrollOffset,scrollOverflow,scrollTarget,roundIfClose,resolvePageIndex}=this.__closure;var _onScrollWorklet;const{contentOffset:contentOffset,contentSize:contentSize}=event;if(contentSize.width===0){return;}if(lastScrollOffsetX.get()===contentOffset.x){return;}lastScrollOffsetX.set(contentOffset.x);(_onScrollWorklet=onScrollWorklet)===null||_onScrollWorklet===void 0||_onScrollWorklet(event);const expectedContentSize=itemCount*pageWidth;if(Math.round(expectedContentSize)%Math.round(contentSize.width)!==0){const page=activeIndex.get()*pageWidth;runOnJS(refreshScrollOffset)(page);return;}if(contentOffset.x<0){scrollOverflow.set(contentOffset.x);}else if(contentOffset.x>contentSize.width-pageWidth){scrollOverflow.set(contentOffset.x-(contentSize.width-pageWidth));}else{scrollOverflow.set(0);}if(scrollTarget.get()!==-1){const hasReachedTarget=roundIfClose(contentOffset.x-scrollTarget.get(),1e-4)===0;if(hasReachedTarget){scrollTarget.set(-1);}else{return;}}resolvePageIndex(contentOffset,contentSize);}" };
-let closure_16 = { code: "function SegmentedControlPagesNativeTsx10(){const{scrollTarget,roundIfClose,pageWidth}=this.__closure;if(scrollTarget.get()===-1){return-1;}return roundIfClose(scrollTarget.get()/pageWidth,1e-4);}" };
-let closure_17 = { code: "function SegmentedControlPagesNativeTsx11(){const{pageIndex,scrollTargetPageIndex}=this.__closure;const idx=pageIndex.get();let lo=Math.floor(idx);let hi=Math.ceil(idx);const target=scrollTargetPageIndex.get();if(target!==-1){lo=Math.min(lo,target);hi=Math.max(hi,target);}return[lo,hi];}" };
-let closure_18 = { code: "function SegmentedControlPagesNativeTsx12(range,prev){const{visiblePageRange}=this.__closure;if(prev==null||prev[0]!==range[0]||prev[1]!==range[1]){visiblePageRange.set(range);}}" };
-let closure_19 = { code: "function SegmentedControlPagesNativeTsx13(){const{pageIndex,index,scrollTargetPageIndex}=this.__closure;if(Math.floor(pageIndex.get())===index||Math.ceil(pageIndex.get())===index){return true;}if(scrollTargetPageIndex.get()===index){return true;}return false;}" };
-let closure_20 = { code: "function SegmentedControlPagesNativeTsx14(){const{reportedPageIndex,index}=this.__closure;const isHidden=reportedPageIndex.get()!==index;return{pointerEvents:isHidden?'none':'box-none'};}" };
-let closure_21 = { code: "function SegmentedControlPagesNativeTsx15(){const{reportedPageIndex,index}=this.__closure;return reportedPageIndex.get()!==index;}" };
-let closure_22 = { code: "function SegmentedControlPagesNativeTsx16(hidden){const{runOnJS,setIsAccessibilityHidden}=this.__closure;runOnJS(setIsAccessibilityHidden)(hidden);}" };
-let closure_23 = { code: "function SegmentedControlPagesNativeTsx17(){const{isVisibleOnScreen}=this.__closure;return{display:isVisibleOnScreen.get()?'flex':'none',flex:1};}" };
-let closure_24 = { code: "function SegmentedControlPagesNativeTsx18(){const{activePageRangeStart,activePageRangeEnd}=this.__closure;return[activePageRangeStart.get(),activePageRangeEnd.get()];}" };
-let closure_25 = { code: "function SegmentedControlPagesNativeTsx19([start,end]){const{index,runOnJS,setFreeze}=this.__closure;const isInActiveRange=index>=start&&index<=end;runOnJS(setFreeze)(!isInActiveRange);}" };
-let closure_27 = { code: "function SegmentedControlPagesNativeTsx20(min,max){const{activePageRangeStart,activePageRangeEnd}=this.__closure;activePageRangeStart.set(Math.min(activePageRangeStart.get(),min));activePageRangeEnd.set(Math.max(activePageRangeEnd.get(),max));}" };
-let closure_28 = { code: "function SegmentedControlPagesNativeTsx21(){const{activeIndex,pressedIndex}=this.__closure;return{activeIndex:activeIndex.get(),pressedIndex:pressedIndex.get()};}" };
-let closure_29 = { code: "function SegmentedControlPagesNativeTsx22({activeIndex:activeIndex,pressedIndex:pressedIndex}){const{expandActivePageRange}=this.__closure;let min=activeIndex;let max=activeIndex;if(pressedIndex!==-1){min=Math.min(activeIndex,pressedIndex);max=Math.max(activeIndex,pressedIndex);}expandActivePageRange(Math.floor(min),Math.ceil(max));}" };
-let result = require("set").fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlPages.native.tsx");
+let closure_7 = {
+  code: "function SegmentedControlPagesNativeTsx1(){const{activeIndex}=this.__closure;return activeIndex.get();}",
+};
+let closure_8 = {
+  code: "function SegmentedControlPagesNativeTsx2(value){const{runOnJS,updateCurrentActiveIndex}=this.__closure;runOnJS(updateCurrentActiveIndex)(value);}",
+};
+let closure_9 = {
+  code: "function SegmentedControlPagesNativeTsx3(){const{pageIndex}=this.__closure;return pageIndex.get();}",
+};
+let closure_10 = {
+  code: "function SegmentedControlPagesNativeTsx4(value){const{activeIndex}=this.__closure;activeIndex.set(value);}",
+};
+let closure_11 = {
+  code: "function SegmentedControlPagesNativeTsx5(contentOffset,contentSize){const{pageWidth,pageIndex,roundIfClose,reportedPageIndex,runOnJS,onPageChanged}=this.__closure;if(pageWidth===0){return;}pageIndex.set(Math.min(Math.max(roundIfClose(contentOffset.x/pageWidth,1e-4),0),roundIfClose(contentSize.width/pageWidth,1e-4)-1));const pageFullyVisible=pageIndex.get()%1===0;if(pageFullyVisible&&reportedPageIndex.get()!==pageIndex.get()){reportedPageIndex.set(pageIndex.get());runOnJS(onPageChanged)(pageIndex.get());}}",
+};
+let closure_12 = {
+  code: "function SegmentedControlPagesNativeTsx6(event){const{scrollTarget,onBeginDragWorklet}=this.__closure;var _onBeginDragWorklet;scrollTarget.set(-1);(_onBeginDragWorklet=onBeginDragWorklet)===null||_onBeginDragWorklet===void 0||_onBeginDragWorklet(event);}",
+};
+let closure_13 = {
+  code: "function SegmentedControlPagesNativeTsx7(event){const{onEndDragWorklet}=this.__closure;var _onEndDragWorklet;(_onEndDragWorklet=onEndDragWorklet)===null||_onEndDragWorklet===void 0||_onEndDragWorklet(event);}",
+};
+let closure_14 = {
+  code: "function SegmentedControlPagesNativeTsx8({contentOffset:contentOffset,contentSize:contentSize}){const{scrollTarget,roundIfClose,runOnJS,refreshScrollOffset,resolvePageIndex}=this.__closure;if(scrollTarget.get()!==-1){const hasReachedTarget=roundIfClose(contentOffset.x-scrollTarget.get(),1e-4)===0;if(hasReachedTarget){scrollTarget.set(-1);}else{const page=scrollTarget.get();runOnJS(refreshScrollOffset)(page);}}resolvePageIndex(contentOffset,contentSize);}",
+};
+let closure_15 = {
+  code: "function SegmentedControlPagesNativeTsx9(event){const{lastScrollOffsetX,onScrollWorklet,itemCount,pageWidth,activeIndex,runOnJS,refreshScrollOffset,scrollOverflow,scrollTarget,roundIfClose,resolvePageIndex}=this.__closure;var _onScrollWorklet;const{contentOffset:contentOffset,contentSize:contentSize}=event;if(contentSize.width===0){return;}if(lastScrollOffsetX.get()===contentOffset.x){return;}lastScrollOffsetX.set(contentOffset.x);(_onScrollWorklet=onScrollWorklet)===null||_onScrollWorklet===void 0||_onScrollWorklet(event);const expectedContentSize=itemCount*pageWidth;if(Math.round(expectedContentSize)%Math.round(contentSize.width)!==0){const page=activeIndex.get()*pageWidth;runOnJS(refreshScrollOffset)(page);return;}if(contentOffset.x<0){scrollOverflow.set(contentOffset.x);}else if(contentOffset.x>contentSize.width-pageWidth){scrollOverflow.set(contentOffset.x-(contentSize.width-pageWidth));}else{scrollOverflow.set(0);}if(scrollTarget.get()!==-1){const hasReachedTarget=roundIfClose(contentOffset.x-scrollTarget.get(),1e-4)===0;if(hasReachedTarget){scrollTarget.set(-1);}else{return;}}resolvePageIndex(contentOffset,contentSize);}",
+};
+let closure_16 = {
+  code: "function SegmentedControlPagesNativeTsx10(){const{scrollTarget,roundIfClose,pageWidth}=this.__closure;if(scrollTarget.get()===-1){return-1;}return roundIfClose(scrollTarget.get()/pageWidth,1e-4);}",
+};
+let closure_17 = {
+  code: "function SegmentedControlPagesNativeTsx11(){const{pageIndex,scrollTargetPageIndex}=this.__closure;const idx=pageIndex.get();let lo=Math.floor(idx);let hi=Math.ceil(idx);const target=scrollTargetPageIndex.get();if(target!==-1){lo=Math.min(lo,target);hi=Math.max(hi,target);}return[lo,hi];}",
+};
+let closure_18 = {
+  code: "function SegmentedControlPagesNativeTsx12(range,prev){const{visiblePageRange}=this.__closure;if(prev==null||prev[0]!==range[0]||prev[1]!==range[1]){visiblePageRange.set(range);}}",
+};
+let closure_19 = {
+  code: "function SegmentedControlPagesNativeTsx13(){const{pageIndex,index,scrollTargetPageIndex}=this.__closure;if(Math.floor(pageIndex.get())===index||Math.ceil(pageIndex.get())===index){return true;}if(scrollTargetPageIndex.get()===index){return true;}return false;}",
+};
+let closure_20 = {
+  code: "function SegmentedControlPagesNativeTsx14(){const{reportedPageIndex,index}=this.__closure;const isHidden=reportedPageIndex.get()!==index;return{pointerEvents:isHidden?'none':'box-none'};}",
+};
+let closure_21 = {
+  code: "function SegmentedControlPagesNativeTsx15(){const{reportedPageIndex,index}=this.__closure;return reportedPageIndex.get()!==index;}",
+};
+let closure_22 = {
+  code: "function SegmentedControlPagesNativeTsx16(hidden){const{runOnJS,setIsAccessibilityHidden}=this.__closure;runOnJS(setIsAccessibilityHidden)(hidden);}",
+};
+let closure_23 = {
+  code: "function SegmentedControlPagesNativeTsx17(){const{isVisibleOnScreen}=this.__closure;return{display:isVisibleOnScreen.get()?'flex':'none',flex:1};}",
+};
+let closure_24 = {
+  code: "function SegmentedControlPagesNativeTsx18(){const{activePageRangeStart,activePageRangeEnd}=this.__closure;return[activePageRangeStart.get(),activePageRangeEnd.get()];}",
+};
+let closure_25 = {
+  code: "function SegmentedControlPagesNativeTsx19([start,end]){const{index,runOnJS,setFreeze}=this.__closure;const isInActiveRange=index>=start&&index<=end;runOnJS(setFreeze)(!isInActiveRange);}",
+};
+let closure_27 = {
+  code: "function SegmentedControlPagesNativeTsx20(min,max){const{activePageRangeStart,activePageRangeEnd}=this.__closure;activePageRangeStart.set(Math.min(activePageRangeStart.get(),min));activePageRangeEnd.set(Math.max(activePageRangeEnd.get(),max));}",
+};
+let closure_28 = {
+  code: "function SegmentedControlPagesNativeTsx21(){const{activeIndex,pressedIndex}=this.__closure;return{activeIndex:activeIndex.get(),pressedIndex:pressedIndex.get()};}",
+};
+let closure_29 = {
+  code: "function SegmentedControlPagesNativeTsx22({activeIndex:activeIndex,pressedIndex:pressedIndex}){const{expandActivePageRange}=this.__closure;let min=activeIndex;let max=activeIndex;if(pressedIndex!==-1){min=Math.min(activeIndex,pressedIndex);max=Math.max(activeIndex,pressedIndex);}expandActivePageRange(Math.floor(min),Math.ceil(max));}",
+};
+let result = require("set").fileFinishedImporting(
+  "design/components/SegmentedControl/native/SegmentedControlPages.native.tsx",
+);
 
 export const SegmentedControlPages = function SegmentedControlPages(onEndDragWorklet) {
   ({ state, nativeGesture, onBeginDragWorklet } = onEndDragWorklet);
@@ -305,7 +357,9 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
       const obj3 = activeIndex(sharedValue3[5]);
       const tmp13 = activeIndex;
       const tmp14 = sharedValue3;
-      const result = sharedValue.set(Math.min(bound, activeIndex(sharedValue3[5]).roundIfClose(width.width / tmp, 0.0001) - 1));
+      const result = sharedValue.set(
+        Math.min(bound, activeIndex(sharedValue3[5]).roundIfClose(width.width / tmp, 0.0001) - 1),
+      );
       const result1 = sharedValue.get() % 1;
       let tmp4 = result1 === 0;
       if (result1 === 0) {
@@ -321,7 +375,14 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
       const obj4 = activeIndex(sharedValue3[5]);
     }
   }
-  obj = { pageWidth, pageIndex: sharedValue, roundIfClose: activeIndex(sharedValue3[5]).roundIfClose, reportedPageIndex: sharedValue1, runOnJS: activeIndex(sharedValue3[4]).runOnJS, onPageChanged: callback1 };
+  obj = {
+    pageWidth,
+    pageIndex: sharedValue,
+    roundIfClose: activeIndex(sharedValue3[5]).roundIfClose,
+    reportedPageIndex: sharedValue1,
+    runOnJS: activeIndex(sharedValue3[4]).runOnJS,
+    onPageChanged: callback1,
+  };
   te.__closure = obj;
   te.__workletHash = 11872880107296;
   te.__initData = sharedValue1;
@@ -361,7 +422,13 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
     }
     callback3(contentOffset, contentOffset.contentSize);
   }
-  obj2 = { scrollTarget, roundIfClose: activeIndex(sharedValue3[5]).roundIfClose, runOnJS: activeIndex(sharedValue3[4]).runOnJS, refreshScrollOffset: callback2, resolvePageIndex: callback3 };
+  obj2 = {
+    scrollTarget,
+    roundIfClose: activeIndex(sharedValue3[5]).roundIfClose,
+    runOnJS: activeIndex(sharedValue3[4]).runOnJS,
+    refreshScrollOffset: callback2,
+    resolvePageIndex: callback3,
+  };
   re.__closure = obj2;
   re.__workletHash = 10636475595563;
   re.__initData = closure_14;
@@ -401,7 +468,19 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
       obj4 = sharedValue2;
     }
   }
-  obj3 = { lastScrollOffsetX: sharedValue2, onScrollWorklet, itemCount: length, pageWidth, activeIndex, runOnJS: activeIndex(sharedValue3[4]).runOnJS, refreshScrollOffset: callback2, scrollOverflow, scrollTarget, roundIfClose: activeIndex(sharedValue3[5]).roundIfClose, resolvePageIndex: callback3 };
+  obj3 = {
+    lastScrollOffsetX: sharedValue2,
+    onScrollWorklet,
+    itemCount: length,
+    pageWidth,
+    activeIndex,
+    runOnJS: activeIndex(sharedValue3[4]).runOnJS,
+    refreshScrollOffset: callback2,
+    scrollOverflow,
+    scrollTarget,
+    roundIfClose: activeIndex(sharedValue3[5]).roundIfClose,
+    resolvePageIndex: callback3,
+  };
   ne.__closure = obj3;
   ne.__workletHash = 9933659944135;
   ne.__initData = closure_15;
@@ -463,7 +542,10 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   SegmentedControlPagesNativeTsx22.__closure = { expandActivePageRange: callback4 };
   SegmentedControlPagesNativeTsx22.__workletHash = 4886047206415;
   SegmentedControlPagesNativeTsx22.__initData = closure_29;
-  const animatedReaction2 = activeIndex(sharedValue3[4]).useAnimatedReaction(SegmentedControlPagesNativeTsx21, SegmentedControlPagesNativeTsx22);
+  const animatedReaction2 = activeIndex(sharedValue3[4]).useAnimatedReaction(
+    SegmentedControlPagesNativeTsx21,
+    SegmentedControlPagesNativeTsx22,
+  );
   const items7 = [sharedValue3, sharedValue4];
   const obj14 = activeIndex(sharedValue3[4]);
   [c21, c22] = sharedValue4(items7, 2);
@@ -513,7 +595,25 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   if (0 === pageWidth) {
     return null;
   } else {
-    obj5 = { ref: null, style: null, contentOffset: null, keyboardShouldPersistTaps: "handled", showsHorizontalScrollIndicator: false, pagingEnabled: true, snapToInterval: null, snapToAlignment: "center", decelerationRate: "fast", centerContent: true, bounces: null, horizontal: true, accessibilityRole: "none", onScroll: null, disableIntervalMomentum: true, scrollEventThrottle: null, children: null };
+    obj5 = {
+      ref: null,
+      style: null,
+      contentOffset: null,
+      keyboardShouldPersistTaps: "handled",
+      showsHorizontalScrollIndicator: false,
+      pagingEnabled: true,
+      snapToInterval: null,
+      snapToAlignment: "center",
+      decelerationRate: "fast",
+      centerContent: true,
+      bounces: null,
+      horizontal: true,
+      accessibilityRole: "none",
+      onScroll: null,
+      disableIntervalMomentum: true,
+      scrollEventThrottle: null,
+      children: null,
+    };
     obj5[0] = pagerRef;
     const items8 = [memo, style];
     obj5[1] = items8;
@@ -526,7 +626,22 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
       num = 32;
     }
     obj5[15] = num;
-    obj5[16] = items.map((item, index) => pagerRef(closure_1_26, { index, activePageRangeStart: c21, activePageRangeEnd: c22, reportedPageIndex: sharedValue1, pageIndex: sharedValue, scrollTargetPageIndex: derivedValue, style: memo, item }, index));
+    obj5[16] = items.map((item, index) =>
+      pagerRef(
+        closure_1_26,
+        {
+          index,
+          activePageRangeStart: c21,
+          activePageRangeEnd: c22,
+          reportedPageIndex: sharedValue1,
+          pageIndex: sharedValue,
+          scrollTargetPageIndex: derivedValue,
+          style: memo,
+          item,
+        },
+        index,
+      ),
+    );
     let tmp27Result = tmp27(scrollTarget, obj5);
     if (null != nativeGesture) {
       const obj6 = { gesture: null, children: null };

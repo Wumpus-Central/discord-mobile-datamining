@@ -12,7 +12,11 @@ const require = arg1;
 createCacheKey = { container: null, requestsButtonContainer: null, emptyContainer: null, buttonContainer: null };
 createCacheKey = { paddingTop: ThemesDefault.space.PX_8, flex: 1 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
+createCacheKey[1] = {
+  marginHorizontal: ThemesDefault.space.PX_16,
+  borderRadius: ThemesDefault.radii.lg,
+  overflow: "hidden",
+};
 createCacheKey[2] = { justifyContent: "center", flexGrow: 1 };
 let obj1 = { marginHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
 createCacheKey[3] = { flexDirection: "row", marginBottom: ThemesDefault.space.PX_16, width: "100%" };
@@ -25,12 +29,19 @@ export default function FriendsScreen() {
   navigation = obj.useNavigation();
   let tmp2 = callback2();
   importDefault = tmp2;
-  analyticsLocations = importDefault(analyticsLocations[8])(importDefault(analyticsLocations[9]).FRIENDS_LIST).analyticsLocations;
+  analyticsLocations = importDefault(analyticsLocations[8])(
+    importDefault(analyticsLocations[9]).FRIENDS_LIST,
+  ).analyticsLocations;
   const bottom = importDefault(analyticsLocations[10])().bottom;
   const tmp3 = importDefault(analyticsLocations[8]);
   let items = [spam, outgoing];
   const stateFromStoresObject = navigation(analyticsLocations[11]).useStateFromStoresObject(items, () => {
-    const obj = { incoming: navigation(analyticsLocations[12]).getIncomingFriendRequestCount(items), outgoing: null, spam: null, pendingIgnored: null };
+    const obj = {
+      incoming: navigation(analyticsLocations[12]).getIncomingFriendRequestCount(items),
+      outgoing: null,
+      spam: null,
+      pendingIgnored: null,
+    };
     items = [spam, outgoing];
     const obj2 = navigation(analyticsLocations[12]);
     const items1 = [spam, outgoing];
@@ -52,7 +63,10 @@ export default function FriendsScreen() {
     lib(analyticsLocations[14])(obj);
   }, items1);
   const callback1 = bottom.useCallback((defaultSelectedUserId) => {
-    navigation.navigate("friends", { screen: "new-message", params: { defaultSelectedUserId: defaultSelectedUserId.id, sourcePage: "Friends Screen" } });
+    navigation.navigate("friends", {
+      screen: "new-message",
+      params: { defaultSelectedUserId: defaultSelectedUserId.id, sourcePage: "Friends Screen" },
+    });
   }, items2);
   const effect = bottom.useEffect(() => {
     lib(analyticsLocations[15])({ tab_opened: null });
@@ -88,14 +102,14 @@ export default function FriendsScreen() {
   const memo1 = bottom.useMemo(() => {
     let obj = { style: lib.container, children: null };
     if (incoming + outgoing + spam <= 0) {
-      const items = [null, ];
+      const items = [null];
       obj = { title: null, fullHeight: true, containerStyle: null, illustration: null, children: null };
       const intl3 = navigation(analyticsLocations[19]).intl;
       obj[0] = intl3.string(navigation(analyticsLocations[19]).t["oi+B4p"]);
       obj[2] = tmp3.emptyContainer;
       obj[3] = navigation(analyticsLocations[22]).WumpusCouchSpotIllustration;
       obj = { style: null, children: null };
-      const items1 = [tmp3.buttonContainer, ];
+      const items1 = [tmp3.buttonContainer];
       obj1 = { paddingBottom: null };
       obj1[0] = bottom;
       items1[1] = obj1;
@@ -148,7 +162,19 @@ export default function FriendsScreen() {
     }
   }, items4);
   obj = { value: analyticsLocations, children: null };
-  const items5 = [pendingIgnored(importDefault(analyticsLocations[24]), { onSelectUser: callback, handleMessage: callback1, actions: memo, withAffinitySuggestions: false, withGameFriends: true, defaultNoResultsFound: memo1, hideSearchOnDefaultNoResults: true, disableThemedGradient: true }), pendingIgnored(navigation(analyticsLocations[25]).TTIFirstContentfulPaint, { label: "friends" })];
+  const items5 = [
+    pendingIgnored(importDefault(analyticsLocations[24]), {
+      onSelectUser: callback,
+      handleMessage: callback1,
+      actions: memo,
+      withAffinitySuggestions: false,
+      withGameFriends: true,
+      defaultNoResultsFound: memo1,
+      hideSearchOnDefaultNoResults: true,
+      disableThemedGradient: true,
+    }),
+    pendingIgnored(navigation(analyticsLocations[25]).TTIFirstContentfulPaint, { label: "friends" }),
+  ];
   obj[1] = items5;
   return callback(navigation(analyticsLocations[8]).AnalyticsLocationProvider, obj);
-};
+}

@@ -7,7 +7,8 @@ const result = require("set").fileFinishedImporting("modules/forums/native/hooks
 
 export const useIsForumChannelSearchActive = function useIsForumChannelSearchActive(channelId) {
   const _require = channelId;
-  let canSearchForumPostsByChannelId = require("useCanSearchForumPostsByChannelId.tsx").useCanSearchForumPostsByChannelId(channelId);
+  let canSearchForumPostsByChannelId =
+    require("useCanSearchForumPostsByChannelId.tsx").useCanSearchForumPostsByChannelId(channelId);
   initialize;
   [][0] = channelId;
   if (canSearchForumPostsByChannelId) {

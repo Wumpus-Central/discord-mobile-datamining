@@ -3,7 +3,9 @@ import closure_2 from "../../../../_runtime/00019_noop.js";
 import closure_3 from "../../application_commands/ApplicationCommandFrecencyStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useFilterAndSortToOnlyFrecentCommands.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/hooks/useFilterAndSortToOnlyFrecentCommands.tsx",
+);
 
 export default function useFilterAndSortToOnlyFrecentCommands(commands) {
   commands = commands.commands;
@@ -18,10 +20,14 @@ export default function useFilterAndSortToOnlyFrecentCommands(commands) {
   const obj = commands(length[2]);
   topCommands = commands(length[3]).useTopCommands(commandContext);
   const items = [commands];
-  memo = commandContext.useMemo(() => commands.reduce((arg0, id) => {
-    arg0[id.id] = id;
-    return arg0;
-  }, {}), items);
+  memo = commandContext.useMemo(
+    () =>
+      commands.reduce((arg0, id) => {
+        arg0[id.id] = id;
+        return arg0;
+      }, {}),
+    items,
+  );
   const items1 = [topCommands, memo, commandContext, length];
   return commandContext.useMemo(() => {
     const mapped = topCommands.map((arg0) => table[arg0]);
@@ -32,4 +38,4 @@ export default function useFilterAndSortToOnlyFrecentCommands(commands) {
     });
     return sorted.slice(0, length);
   }, items1);
-};
+}

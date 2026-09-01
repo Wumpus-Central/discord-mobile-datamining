@@ -39,9 +39,13 @@ export default function UserProfileEditNoteModal(arg0) {
   tmp2Result = tmp2(5495);
   obj2[2] = tmp2Result.getHeaderCloseButton(handleClose);
   obj2[3] = function render() {
-    return handleClose(closure_1_0(closure_1_2[8]).default, { userId: closure_0, onSave: closure_1, onClose: handleClose });
+    return handleClose(closure_1_0(closure_1_2[8]).default, {
+      userId: closure_0,
+      onSave: closure_1,
+      onClose: handleClose,
+    });
   };
   obj1[0] = obj2;
   obj[3] = obj1;
   return handleClose(NavigationStack.Navigator, obj);
-};
+}

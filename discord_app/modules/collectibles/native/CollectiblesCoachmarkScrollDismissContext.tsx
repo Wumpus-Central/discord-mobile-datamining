@@ -8,14 +8,18 @@ const context = importAllResult.createContext({
   registerDismiss(arg0) {
     return NOOP;
   },
-  handleDismissCoachmarkOnScroll: "Array"
+  handleDismissCoachmarkOnScroll: "Array",
 });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesCoachmarkScrollDismissContext.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/CollectiblesCoachmarkScrollDismissContext.tsx",
+);
 
 export const useCollectiblesCoachmarkScrollDismissContext = function useCollectiblesCoachmarkScrollDismissContext() {
   return importAllResult.useContext(closure_3);
 };
-export const CollectiblesCoachmarkScrollDismissProvider = function CollectiblesCoachmarkScrollDismissProvider(children) {
+export const CollectiblesCoachmarkScrollDismissProvider = function CollectiblesCoachmarkScrollDismissProvider(
+  children,
+) {
   importAllResult = undefined;
   closure_1 = undefined;
   let callback;
@@ -50,5 +54,11 @@ export const CollectiblesCoachmarkScrollDismissProvider = function CollectiblesC
     }
   }, []);
   const items = [callback, callback1];
-  return callback(callback1.Provider, { value: importAllResult.useMemo(() => ({ registerDismiss: callback, handleDismissCoachmarkOnScroll: callback1 }), items), children: children.children });
+  return callback(callback1.Provider, {
+    value: importAllResult.useMemo(
+      () => ({ registerDismiss: callback, handleDismissCoachmarkOnScroll: callback1 }),
+      items,
+    ),
+    children: children.children,
+  });
 };

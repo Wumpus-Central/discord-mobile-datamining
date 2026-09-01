@@ -5,10 +5,22 @@ import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
-let obj = { PROFILE_FRAME: "profile_frame", PROFILE_EFFECT: "profile_effect", AVATAR_DECORATION: "avatar_decoration", NAMEPLATE: "nameplate" };
+let obj = {
+  PROFILE_FRAME: "profile_frame",
+  PROFILE_EFFECT: "profile_effect",
+  AVATAR_DECORATION: "avatar_decoration",
+  NAMEPLATE: "nameplate",
+};
 const result = set.fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookAnalyticsUtils.tsx");
 
-export const ShopThisLookMenuAction = { MENU_VIEWED: "menu_viewed", COACHMARK_VIEWED: "coachmark_viewed", COACHMARK_CTA_CLICKED: "coachmark_cta_clicked", COACHMARK_DISMISSED: "coachmark_dismissed", RED_DOT_VIEWED: "red_dot_viewed", RED_DOT_DISMISSED: "red_dot_dismissed" };
+export const ShopThisLookMenuAction = {
+  MENU_VIEWED: "menu_viewed",
+  COACHMARK_VIEWED: "coachmark_viewed",
+  COACHMARK_CTA_CLICKED: "coachmark_cta_clicked",
+  COACHMARK_DISMISSED: "coachmark_dismissed",
+  RED_DOT_VIEWED: "red_dot_viewed",
+  RED_DOT_DISMISSED: "red_dot_dismissed",
+};
 export const ShopThisLookRowAction = { ROW_VIEWED: "row_viewed", ROW_CLICKED: "row_clicked" };
 export const ShopThisLookProductType = obj;
 export const trackShopThisLookMenuAction = function trackShopThisLookMenuAction(COACHMARK_CTA_CLICKED, ACTION_SHEET) {

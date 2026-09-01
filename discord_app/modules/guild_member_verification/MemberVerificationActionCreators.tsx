@@ -17,7 +17,7 @@ function _fetchVerificationForm() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_4 = tmp3;
       closure_3 = tmp5;
       let body = lib;
@@ -89,7 +89,7 @@ function _updateVerificationForm() {
     closure_3 = arg3;
     c6 = 0;
     c7 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -179,7 +179,7 @@ function _updateVerificationFormDescription() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -267,7 +267,7 @@ function _enableVerificationForm() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -344,7 +344,7 @@ function _submitVerificationForm() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (c9 === 2) {
         c9 = 3;
         HermesBuiltin.throwTypeError();
@@ -525,7 +525,9 @@ function _submitVerificationForm() {
   return applyArgumentsResult;
 }
 ({ AnalyticEvents: closure_8, Endpoints: c9 } = ME);
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/MemberVerificationActionCreators.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/MemberVerificationActionCreators.tsx",
+);
 
 export default {
   fetchVerificationForm(guildId, inviteKeyForGuildId) {
@@ -596,9 +598,16 @@ export default {
   reportApplication(arg0) {
     ({ guild, guildJoinRequest, guildJoinRequestUser, reason, reasonOther, responses } = arg0);
     let obj = expandEventPropertiesDefault;
-    obj = { application_id: guildJoinRequest.joinRequestId, applicant_id: guildJoinRequestUser.id, guild_id: guild.id, reason, reason_other: reasonOther, responses };
+    obj = {
+      application_id: guildJoinRequest.joinRequestId,
+      applicant_id: guildJoinRequestUser.id,
+      guild_id: guild.id,
+      reason,
+      reason_other: reasonOther,
+      responses,
+    };
     obj.track(constants.GUILD_MEMBER_APPLICATION_REPORTED, obj);
-  }
+  },
 };
 export const DISABLE_JOIN_REQUEST_COACHMARK = -1;
 export const showCoachmark = function showCoachmark(guildId) {

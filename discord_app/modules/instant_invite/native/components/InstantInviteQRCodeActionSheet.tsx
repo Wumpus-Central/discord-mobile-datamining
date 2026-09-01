@@ -14,14 +14,38 @@ const require = arg1;
 ({ InstantInviteSources: error, RelationshipTypes: closure_8 } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { container: null, iconContainer: null, icon: null, code: null };
-createCacheKey = { padding: ThemesDefault.space.PX_12, display: "flex", alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_24 };
+createCacheKey = {
+  padding: ThemesDefault.space.PX_12,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: ThemesDefault.space.PX_24,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center" };
-createCacheKey[2] = { padding: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.lg + ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.WHITE };
+createCacheKey[1] = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  justifyContent: "center",
+  alignItems: "center",
+};
+createCacheKey[2] = {
+  padding: ThemesDefault.space.PX_4,
+  borderRadius: ThemesDefault.radii.lg + ThemesDefault.space.PX_4,
+  backgroundColor: ThemesDefault.colors.WHITE,
+};
 createCacheKey[3] = { alignSelf: "center" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { padding: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.lg + ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.WHITE };
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteQRCodeActionSheet.tsx");
+let obj1 = {
+  padding: ThemesDefault.space.PX_4,
+  borderRadius: ThemesDefault.radii.lg + ThemesDefault.space.PX_4,
+  backgroundColor: ThemesDefault.colors.WHITE,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/instant_invite/native/components/InstantInviteQRCodeActionSheet.tsx",
+);
 
 export default function InstantInviteQRCodeActionSheet(location) {
   const tmp = callback2();
@@ -92,7 +116,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
       plainText = tmp12.plainText;
     }
     obj6[3] = plainText;
-    const items2 = [callback(frozenDefault, obj6), ];
+    const items2 = [callback(frozenDefault, obj6)];
     let tmp19Result = null != tmp13;
     if (tmp19Result) {
       obj7 = { style: null, children: null };
@@ -106,7 +130,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
     const obj9 = { children: null };
     items2[1] = tmp19Result;
     obj9[0] = items2;
-    const items3 = [closure_10(View, obj9), ];
+    const items3 = [closure_10(View, obj9)];
     tmp19Result = null != tmp12;
     if (tmp19Result) {
       const obj10 = { variant: "text-md/normal", children: null };
@@ -134,4 +158,4 @@ export default function InstantInviteQRCodeActionSheet(location) {
       tmp12 = obj11;
     }
   }
-};
+}

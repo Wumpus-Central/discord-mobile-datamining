@@ -51,7 +51,14 @@ function ToastContent(content) {
     obj[1] = content();
     let tmp4 = callback2(View, obj);
   } else {
-    obj = { onTextLayout: null, style: null, lineClamp: 3, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
+    obj = {
+      onTextLayout: null,
+      style: null,
+      lineClamp: 3,
+      variant: "text-sm/semibold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj[0] = content.onTextLayout;
     obj[1] = tmp.contentContainer;
     obj[5] = content;
@@ -61,7 +68,16 @@ function ToastContent(content) {
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, multilineContainer: null, contentContainer: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.radii.xxl, padding: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.MOBILE_TOAST_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  borderRadius: ThemesDefault.radii.xxl,
+  padding: ThemesDefault.space.PX_8,
+  paddingRight: ThemesDefault.space.PX_12,
+  backgroundColor: ThemesDefault.colors.MOBILE_TOAST_BACKGROUND_DEFAULT,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderWidth: 1,
+};
 let merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingLeft: ThemesDefault.space.PX_12 };
@@ -77,7 +93,7 @@ export default function Toast(arg0) {
   const tmp = callback3();
   [tmp3, c0] = callback(React.useState(false), 2);
   closure_1 = React.useRef(false);
-  const items = [tmp.container, , ];
+  const items = [tmp.container, ,];
   let multilineContainer = null;
   callback = React.useCallback((nativeEvent) => {
     if (!ref.current) {
@@ -91,7 +107,10 @@ export default function Toast(arg0) {
   const obj = { style: items, accessibilityElementsHidden: true, children: null };
   items[1] = multilineContainer;
   items[2] = containerStyle;
-  const items1 = [callback2(ToastIcon, { icon, iconColor, IconComponent, recolorLegacyIcon }), callback2(ToastContent, { content, onTextLayout: callback })];
+  const items1 = [
+    callback2(ToastIcon, { icon, iconColor, IconComponent, recolorLegacyIcon }),
+    callback2(ToastContent, { content, onTextLayout: callback }),
+  ];
   obj[2] = items1;
   return closure_7(View, obj);
-};
+}

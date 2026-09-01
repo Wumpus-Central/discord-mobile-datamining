@@ -18,12 +18,12 @@ const forwardRefResult = importAllResult.forwardRef((backgroundColor, ref) => {
   const merged = Object.assign(backgroundColor, Object.create(null));
   const tmp2 = useSharedStylesDefault();
   let obj = { children: null };
-  const items = [, , ];
+  const items = [, ,];
   ({ avatarBackground: arr[0], avatarPosition: arr[1] } = tmp2);
   items[2] = { backgroundColor: backgroundColor.backgroundColor };
-  const items1 = [callback(View, { style: items }), ];
+  const items1 = [callback(View, { style: items })];
   obj = { ref, style: items2, size };
-  items2 = [, ];
+  items2 = [,];
   ({ avatar: arr3[0], avatarPosition: arr3[1] } = tmp2);
   const merged1 = Object.assign(merged);
   items1[1] = callback(_modDef8106, obj);

@@ -6,8 +6,12 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c4 = importAllResult;
-let closure_7 = { code: "function ExpressionPickerKeyboardTsx1(){const{bottomSheetIndex}=this.__closure;return Math.max(bottomSheetIndex.get(),0)>0;}" };
-let closure_8 = { code: "function ExpressionPickerKeyboardTsx2(){const{bottomSheetExpandingOrExpanded,maximum,minimum}=this.__closure;return{height:bottomSheetExpandingOrExpanded.get()?maximum:minimum};}" };
+let closure_7 = {
+  code: "function ExpressionPickerKeyboardTsx1(){const{bottomSheetIndex}=this.__closure;return Math.max(bottomSheetIndex.get(),0)>0;}",
+};
+let closure_8 = {
+  code: "function ExpressionPickerKeyboardTsx2(){const{bottomSheetExpandingOrExpanded,maximum,minimum}=this.__closure;return{height:bottomSheetExpandingOrExpanded.get()?maximum:minimum};}",
+};
 const memoResult = importAllResult.memo(function ExpressionPickerKeyboard(channel) {
   const chatInputRef = channel.chatInputRef;
   const onClose = channel.onClose;
@@ -65,7 +69,9 @@ const memoResult = importAllResult.memo(function ExpressionPickerKeyboard(channe
     current.backspace();
   }, items3);
   const obj3 = chatInputRef(transitionState[5]);
-  const keyboardContextForType = chatInputRef(transitionState[9]).useKeyboardContextForType(chatInputRef(transitionState[8]).KeyboardTypes.EXPRESSION);
+  const keyboardContextForType = chatInputRef(transitionState[9]).useKeyboardContextForType(
+    chatInputRef(transitionState[8]).KeyboardTypes.EXPRESSION,
+  );
   const tmp12 = onClose(transitionState[10])();
   minimum = tmp12.minimum;
   maximum = tmp12.maximum;
@@ -108,9 +114,34 @@ const memoResult = importAllResult.memo(function ExpressionPickerKeyboard(channe
       }
     }
   }, items5);
-  obj = { ref, animatedIndex: sharedValue, animatedPosition: sharedValue1, forceMaxHeight: isScreenReaderEnabled, chatInputRef, animationConfigs: isScreenReaderEnabled, onClose: callback4, renderExpressionFooter: true, transitionState, children: null };
+  obj = {
+    ref,
+    animatedIndex: sharedValue,
+    animatedPosition: sharedValue1,
+    forceMaxHeight: isScreenReaderEnabled,
+    chatInputRef,
+    animationConfigs: isScreenReaderEnabled,
+    onClose: callback4,
+    renderExpressionFooter: true,
+    transitionState,
+    children: null,
+  };
   const obj6 = chatInputRef(transitionState[4]);
-  obj = { nativeID: "expression-picker-sheet", style: animatedStyle, children: first(onClose(transitionState[13]), { bottomSheetRef: ref, bottomSheetIndex: sharedValue, onBackspace: callback3, onPressEmoji: callback, onPressGIF: callback1, onPressSticker: callback2, channel: channel.channel, expressionType: keyboardContextForType, inPortalKeyboard: true }) };
+  obj = {
+    nativeID: "expression-picker-sheet",
+    style: animatedStyle,
+    children: first(onClose(transitionState[13]), {
+      bottomSheetRef: ref,
+      bottomSheetIndex: sharedValue,
+      onBackspace: callback3,
+      onPressEmoji: callback,
+      onPressGIF: callback1,
+      onPressSticker: callback2,
+      channel: channel.channel,
+      expressionType: keyboardContextForType,
+      inPortalKeyboard: true,
+    }),
+  };
   obj[9] = first(onClose(transitionState[4]).View, obj);
   return first(onClose(transitionState[12]), obj, "expression-picker-" + isScreenReaderEnabled);
 });

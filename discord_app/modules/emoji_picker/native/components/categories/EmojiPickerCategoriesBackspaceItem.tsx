@@ -5,7 +5,9 @@ import { NODE_MARGIN } from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoriesBackspaceItem.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/emoji_picker/native/components/categories/EmojiPickerCategoriesBackspaceItem.tsx",
+);
 
 export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
   onBackspace = onBackspace.onBackspace;
@@ -43,7 +45,16 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
       current.cancel();
     };
   });
-  obj = { hitSlop: obj, style, accessibilityRole: "keyboardkey", accessibilityLabel: null, delayLongPress: 500, onPressOut: null, onLongPress: null, children: null };
+  obj = {
+    hitSlop: obj,
+    style,
+    accessibilityRole: "keyboardkey",
+    accessibilityLabel: null,
+    delayLongPress: 500,
+    onPressOut: null,
+    onLongPress: null,
+    children: null,
+  };
   obj = { top: NODE_MARGIN, bottom: NODE_MARGIN, right: NODE_MARGIN, left: NODE_MARGIN };
   const intl = onBackspace(1236).intl;
   obj[3] = intl.string(onBackspace(1236).t["4SnBzF"]);
@@ -52,4 +63,4 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
   const items2 = [iconStyle, { opacity: 0.5 }];
   obj[7] = jsx(onBackspace(9211).BackspaceIcon, { style: items2 });
   return <Pressable top={NODE_MARGIN} bottom={NODE_MARGIN} right={NODE_MARGIN} left={NODE_MARGIN} />;
-};
+}

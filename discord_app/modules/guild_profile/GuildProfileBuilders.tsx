@@ -61,13 +61,41 @@ function buildGuildProfileTraitsFromServer(arg0, arg1) {
   return fillResult;
 }
 function buildGuildProfileFromServer(profile) {
-  let reduced = { id: profile.id, name: profile.name, description: null, icon: null, customBanner: null, onlineCount: null, memberCount: null, brandColorPrimary: null, visibility: null, traits: null, gameApplicationIds: null, gameActivity: null, games: null, features: null, tag: null, badge: null, badgeColorPrimary: null, badgeColorSecondary: null, badgeHash: null, premiumSubscriberCount: null, premiumTier: null };
+  let reduced = {
+    id: profile.id,
+    name: profile.name,
+    description: null,
+    icon: null,
+    customBanner: null,
+    onlineCount: null,
+    memberCount: null,
+    brandColorPrimary: null,
+    visibility: null,
+    traits: null,
+    gameApplicationIds: null,
+    gameActivity: null,
+    games: null,
+    features: null,
+    tag: null,
+    badge: null,
+    badgeColorPrimary: null,
+    badgeColorSecondary: null,
+    badgeHash: null,
+    premiumSubscriberCount: null,
+    premiumTier: null,
+  };
   let str = profile.description;
   if (str == null) {
     str = "";
   }
   reduced[2] = str;
-  ({ icon_hash: obj[3], custom_banner_hash: obj[4], online_count: obj[5], member_count: obj[6], brand_color_primary } = profile);
+  ({
+    icon_hash: obj[3],
+    custom_banner_hash: obj[4],
+    online_count: obj[5],
+    member_count: obj[6],
+    brand_color_primary,
+  } = profile);
   let tmp = null;
   if (null != brand_color_primary) {
     tmp = null;
@@ -104,7 +132,15 @@ function buildGuildProfileFromServer(profile) {
     features = [];
   }
   reduced[13] = features;
-  ({ tag: obj[14], badge: obj[15], badge_color_primary: obj[16], badge_color_secondary: obj[17], badge_hash: obj[18], premium_subscription_count: obj[19], premium_tier: obj[20] } = profile);
+  ({
+    tag: obj[14],
+    badge: obj[15],
+    badge_color_primary: obj[16],
+    badge_color_secondary: obj[17],
+    badge_hash: obj[18],
+    premium_subscription_count: obj[19],
+    premium_tier: obj[20],
+  } = profile);
   return reduced;
 }
 const EmojiDisambiguations = getEmojiToGroupId.EmojiDisambiguations;
@@ -190,7 +226,10 @@ export const buildGuildProfileUpdateForServer = function buildGuildProfileUpdate
 };
 export const buildTopGamesFromServer = function buildTopGamesFromServer(top_games) {
   return top_games.reduce((arg0, game_application_id) => {
-    arg0[game_application_id.game_application_id] = { level: game_application_id.activity_level, score: game_application_id.activity_score };
+    arg0[game_application_id.game_application_id] = {
+      level: game_application_id.activity_level,
+      score: game_application_id.activity_score,
+    };
     return arg0;
   }, {});
 };
@@ -203,7 +242,28 @@ export const buildGuildProfileFromInvite = function buildGuildProfileFromInvite(
   if (null == tmp) {
     let tmp5 = null;
     if (null != guild) {
-      const obj = { id: null, name: null, description: null, icon: null, customBanner: null, onlineCount: null, memberCount: null, visibility: null, traits: null, gameApplicationIds: null, gameActivity: null, features: null, brandColorPrimary: null, tag: null, badge: null, badgeHash: null, badgeColorPrimary: null, badgeColorSecondary: null, premiumSubscriberCount: null, premiumTier: null };
+      const obj = {
+        id: null,
+        name: null,
+        description: null,
+        icon: null,
+        customBanner: null,
+        onlineCount: null,
+        memberCount: null,
+        visibility: null,
+        traits: null,
+        gameApplicationIds: null,
+        gameActivity: null,
+        features: null,
+        brandColorPrimary: null,
+        tag: null,
+        badge: null,
+        badgeHash: null,
+        badgeColorPrimary: null,
+        badgeColorSecondary: null,
+        premiumSubscriberCount: null,
+        premiumTier: null,
+      };
       ({ id: obj[0], name: obj[1], description } = guild);
       if (description == null) {
         description = "";

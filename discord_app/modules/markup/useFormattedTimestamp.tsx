@@ -5,7 +5,7 @@ import closure_4 from "../../../_runtime/00019_noop.js";
 
 const require = arg1;
 let items = [2 * setDefault.Seconds.MINUTE, setDefault.Seconds.SECOND];
-const items1 = [items, , , ];
+const items1 = [items, , ,];
 const items2 = [5 * setDefault.Seconds.MINUTE, setDefault.Seconds.MINUTE];
 items1[1] = items2;
 const items3 = [45 * setDefault.Seconds.MINUTE, 2 * setDefault.Seconds.MINUTE];
@@ -18,7 +18,7 @@ let result = require("set").fileFinishedImporting("modules/markup/useFormattedTi
 export default function useFormattedTimestamp(format) {
   const _require = format;
   const forceUpdate = require("../../../_runtime/07185_useForceUpdate.js").useForceUpdate();
-  const items = [forceUpdate, , ];
+  const items = [forceUpdate, ,];
   ({ format: arr[1], parsed: arr[2] } = format);
   const effect = React.useEffect(() => {
     if ("R" === format.format) {
@@ -52,4 +52,4 @@ export default function useFormattedTimestamp(format) {
     formatted = format.formatted;
   }
   return formatted;
-};
+}

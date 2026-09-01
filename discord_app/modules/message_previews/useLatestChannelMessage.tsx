@@ -16,15 +16,18 @@ export default function useLatestChannelMessage(arg0) {
   let callback;
   ({ guild_id: c1, id } = arg0);
   let items = [closure_5];
-  const tmp = callback(flag(id[3]).useStateFromStoresArray(items, () => {
-    if (flag) {
-      const items = [null, true];
-      let items1 = items;
-    } else {
-      items1 = [closure_1_5.message(c1, id), closure_1_5.isLatest(c1, id)];
-    }
-    return items1;
-  }), 2);
+  const tmp = callback(
+    flag(id[3]).useStateFromStoresArray(items, () => {
+      if (flag) {
+        const items = [null, true];
+        let items1 = items;
+      } else {
+        items1 = [closure_1_5.message(c1, id), closure_1_5.isLatest(c1, id)];
+      }
+      return items1;
+    }),
+    2,
+  );
   callback = tmp2;
   let items1 = [id, tmp[1]];
   useEffect(() => {
@@ -38,4 +41,4 @@ export default function useLatestChannelMessage(arg0) {
     }
   }, items1);
   return tmp[0];
-};
+}

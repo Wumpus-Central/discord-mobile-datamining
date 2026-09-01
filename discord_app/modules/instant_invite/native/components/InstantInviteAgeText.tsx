@@ -10,8 +10,12 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 noopAll;
 ({ jsxs: c4, jsx: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ inviteAgeContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" } });
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteAgeText.tsx");
+let closure_6 = createCacheKey.createStyles({
+  inviteAgeContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/instant_invite/native/components/InstantInviteAgeText.tsx",
+);
 
 export default function InstantInviteAgeText(style) {
   ({ channel: require, callbackActionSheet: dependencyMap, canEditInvite } = style);
@@ -38,7 +42,7 @@ export default function InstantInviteAgeText(style) {
     obj[0] = str2;
     const items2 = [tmp2(9911).maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
     obj[1] = items2;
-    const items3 = [closure_4(tmp2(4474).Text, obj), ];
+    const items3 = [closure_4(tmp2(4474).Text, obj)];
     if (canEditInvite) {
       obj1 = { onPress: null, accessibilityRole: "link", accessibilityLabel: null, hitSlop: null, children: null };
       obj1[0] = function onPress() {
@@ -67,4 +71,4 @@ export default function InstantInviteAgeText(style) {
     const tmp8 = View;
   }
   return tmp7Result;
-};
+}

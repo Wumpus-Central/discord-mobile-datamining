@@ -12,7 +12,9 @@ require = arg1;
 let result = require("set").fileFinishedImporting("modules/video_calls/native/useOnConnectToConsole.tsx");
 
 export const onConnectToConsole = function onConnectToConsole(channel, closure_0) {
-  const result = UNSAFE_isDismissibleContentDismissed.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.DONUT_MOBILE_NUX);
+  const result = UNSAFE_isDismissibleContentDismissed.UNSAFE_markDismissibleContentAsDismissed(
+    DismissibleContent.DismissibleContent.DONUT_MOBILE_NUX,
+  );
   if (closure_0.twoWayLink) {
     if (!closure_0.revoked) {
       _beginConsoleTransfer.beginConsoleTransfer(channel, closure_0.type);
@@ -34,7 +36,9 @@ export const useOnConnectToConsole = function useOnConnectToConsole(channel, acc
   closure_1 = account;
   let items = [channel, account];
   return React.useCallback(() => {
-    const result = channel(closure_1_2[2]).UNSAFE_markDismissibleContentAsDismissed(channel(closure_1_2[3]).DismissibleContent.DONUT_MOBILE_NUX);
+    const result = channel(closure_1_2[2]).UNSAFE_markDismissibleContentAsDismissed(
+      channel(closure_1_2[3]).DismissibleContent.DONUT_MOBILE_NUX,
+    );
     if (account.twoWayLink) {
       if (!tmp2.revoked) {
         channel(tmp4[6]).beginConsoleTransfer(channel, tmp2.type);

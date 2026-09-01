@@ -16,7 +16,9 @@ export default function useWithPostLoginRouting(arg0, arg1) {
   const first = tmp[0];
   closure_3 = tmp[1];
   const items = [closure_6];
-  loginStatus = _require(first[5]).useStateFromStoresObject(items, () => ({ loginStatus: loginStatus.getLoginStatus() })).loginStatus;
+  loginStatus = _require(first[5]).useStateFromStoresObject(items, () => ({
+    loginStatus: loginStatus.getLoginStatus(),
+  })).loginStatus;
   const items1 = [arg0, arg1, loginStatus, first];
   const effect = React.useEffect(() => {
     if (closure_2 !== closure_1_7.LOGGING_IN) {
@@ -65,7 +67,7 @@ export default function useWithPostLoginRouting(arg0, arg1) {
         closure_0 = arg0;
         c3 = 0;
         c4 = 0;
-        return (function*(arg0) {
+        return (function* (arg0) {
           if (c4 === 2) {
             c4 = 3;
             HermesBuiltin.throwTypeError();
@@ -127,7 +129,7 @@ export default function useWithPostLoginRouting(arg0, arg1) {
           }
         })();
       });
-      obj[3] = function() {
+      obj[3] = function () {
         const self = this;
         const apply = closure_2.apply;
         if (typeof apply === "unknown") {
@@ -155,4 +157,4 @@ export default function useWithPostLoginRouting(arg0, arg1) {
     }
     callback(loginStatus);
   }, items1);
-};
+}

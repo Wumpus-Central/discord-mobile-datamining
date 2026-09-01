@@ -61,11 +61,20 @@ export const createSystemMessageContent = function createSystemMessageContent(me
   } else if (tmp.GUILD_BOOST === type) {
     return createUserPremiumGuildSubscriptionSystemMessage.createUserPremiumGuildSubscriptionSystemMessage(message);
   } else if (tmp.GUILD_BOOST_TIER_1 === type) {
-    return createUserPremiumGuildSubscriptionTierAchievedSystemMessage.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, closure_3.TIER_1);
+    return createUserPremiumGuildSubscriptionTierAchievedSystemMessage.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(
+      message,
+      closure_3.TIER_1,
+    );
   } else if (tmp.GUILD_BOOST_TIER_2 === type) {
-    return createUserPremiumGuildSubscriptionTierAchievedSystemMessage.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, closure_3.TIER_2);
+    return createUserPremiumGuildSubscriptionTierAchievedSystemMessage.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(
+      message,
+      closure_3.TIER_2,
+    );
   } else if (tmp.GUILD_BOOST_TIER_3 === type) {
-    return createUserPremiumGuildSubscriptionTierAchievedSystemMessage.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, closure_3.TIER_3);
+    return createUserPremiumGuildSubscriptionTierAchievedSystemMessage.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(
+      message,
+      closure_3.TIER_3,
+    );
   } else if (tmp.CHANNEL_FOLLOW_ADD === type) {
     return createChannelFollowAddSystemMessage.createChannelFollowAddSystemMessage(message);
   } else if (tmp.GUILD_STREAM === type) {
@@ -75,9 +84,13 @@ export const createSystemMessageContent = function createSystemMessageContent(me
   } else if (tmp.GUILD_DISCOVERY_REQUALIFIED === type) {
     return createGuildDiscoveryDisqualifiedSystemMessage.createGuildDiscoveryRequalifiedSystemMessage(message);
   } else if (tmp.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING === type) {
-    return createGuildDiscoveryDisqualifiedSystemMessage.createGuildDiscoveryGracePeriodInitialWarningSystemMessage(message);
+    return createGuildDiscoveryDisqualifiedSystemMessage.createGuildDiscoveryGracePeriodInitialWarningSystemMessage(
+      message,
+    );
   } else if (tmp.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING === type) {
-    return createGuildDiscoveryDisqualifiedSystemMessage.createGuildDiscoveryGracePeriodFinalWarningSystemMessage(message);
+    return createGuildDiscoveryDisqualifiedSystemMessage.createGuildDiscoveryGracePeriodFinalWarningSystemMessage(
+      message,
+    );
   } else {
     if (tmp.CHAT_INPUT_COMMAND !== type) {
       if (tmp.CONTEXT_MENU_COMMAND !== type) {
@@ -104,7 +117,9 @@ export const createSystemMessageContent = function createSystemMessageContent(me
         } else if (tmp.STAGE_RAISE_HAND === type) {
           return createStageRaiseHandSystemMessage.createStageRaiseHandSystemMessage(message);
         } else if (tmp.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION === type) {
-          return createApplicationSubscriptionPurchaseSystemMessage.createApplicationSubscriptionPurchaseSystemMessage(message);
+          return createApplicationSubscriptionPurchaseSystemMessage.createApplicationSubscriptionPurchaseSystemMessage(
+            message,
+          );
         } else {
           if (tmp.PRIVATE_CHANNEL_INTEGRATION_ADDED !== type) {
             if (tmp.PRIVATE_CHANNEL_INTEGRATION_REMOVED !== type) {
@@ -133,7 +148,9 @@ export const createSystemMessageContent = function createSystemMessageContent(me
                       } else if (tmp.VOICE_SESSION === type) {
                         return createVoiceSessionSystemMessage.createVoiceSessionSystemMessage(message);
                       } else if (tmp.FRIEND_REQUEST_ACCEPTED === type) {
-                        return createFriendRequestAcceptedSystemMessage.createFriendRequestAcceptedSystemMessage(message);
+                        return createFriendRequestAcceptedSystemMessage.createFriendRequestAcceptedSystemMessage(
+                          message,
+                        );
                       } else if (tmp.GIFTING_PROMPT === type) {
                         return createGiftIntentSystemMessage.createGiftIntentSystemMessage(message);
                       } else {
@@ -146,7 +163,10 @@ export const createSystemMessageContent = function createSystemMessageContent(me
               }
             }
           }
-          return createPrivateChannelIntegrationSystemMessage.createPrivateChannelIntegrationSystemMessage(message, message.message.type);
+          return createPrivateChannelIntegrationSystemMessage.createPrivateChannelIntegrationSystemMessage(
+            message,
+            message.message.type,
+          );
         }
       }
     }

@@ -15,14 +15,19 @@ const require = arg1;
 ({ ScrollView: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { wrap: null, inputRow: null, buttons: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_12 };
 let obj1 = { padding: ThemesDefault.space.PX_12 };
 createCacheKey[2] = { padding: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { padding: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/slayer_storefront/native/devtools/SlayerStorefrontDevTools.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/slayer_storefront/native/devtools/SlayerStorefrontDevTools.tsx",
+);
 
 export default function SlayerStorefrontDevTools() {
   const tmp = callback2();
@@ -51,7 +56,7 @@ export default function SlayerStorefrontDevTools() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -134,7 +139,7 @@ export default function SlayerStorefrontDevTools() {
     })();
   });
   const items2 = [trimmed];
-  callback = React.useCallback(function() {
+  callback = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -163,10 +168,22 @@ export default function SlayerStorefrontDevTools() {
     });
   }, items4);
   obj[0] = ThemesDefault.space.PX_16;
-  obj[1] = ThemesDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom;
+  obj[1] =
+    ThemesDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom;
   obj[1] = obj;
-  obj1 = { style: tmp.inputRow, children: callback(require("../../../../design/components/TextInput/native/TextInput.native.tsx").TextInput, { label: "SKU ID", value: str, onChange: tmp4, placeholder: "1234567890123456789", autoCapitalize: "none", autoCorrect: false, keyboardType: "number-pad" }) };
-  const items5 = [callback(closure_7, obj1), , , ];
+  obj1 = {
+    style: tmp.inputRow,
+    children: callback(require("../../../../design/components/TextInput/native/TextInput.native.tsx").TextInput, {
+      label: "SKU ID",
+      value: str,
+      onChange: tmp4,
+      placeholder: "1234567890123456789",
+      autoCapitalize: "none",
+      autoCorrect: false,
+      keyboardType: "number-pad",
+    }),
+  };
+  const items5 = [callback(closure_7, obj1), , ,];
   let str2;
   if (stateFromStores != null) {
     str2 = stateFromStores.name;
@@ -177,7 +194,9 @@ export default function SlayerStorefrontDevTools() {
   const tmp16 = closure_6;
   const tmp18 = closure_7;
   const tmp9 = callback(React.useState(null), 2);
-  items5[1] = callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, { label: "Name: " + str2 });
+  items5[1] = callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, {
+    label: "Name: " + str2,
+  });
   let str3;
   if (stateFromStores != null) {
     str3 = stateFromStores.applicationId;
@@ -186,7 +205,9 @@ export default function SlayerStorefrontDevTools() {
     str3 = "N/A";
   }
   const obj2 = { label: "Name: " + str2 };
-  items5[2] = callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, { label: "Application ID: " + str3 });
+  items5[2] = callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, {
+    label: "Application ID: " + str3,
+  });
   let tmp15Result = null != tmp10;
   if (tmp15Result) {
     const obj4 = { label: null };
@@ -195,11 +216,31 @@ export default function SlayerStorefrontDevTools() {
     tmp15Result = tmp15(tmp5(5599).TableRow, obj4);
   }
   items5[3] = tmp15Result;
-  const items6 = [closure_11(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, { title: "SKU", hasIcons: false, children: items5 }), ];
+  const items6 = [
+    closure_11(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, {
+      title: "SKU",
+      hasIcons: false,
+      children: items5,
+    }),
+  ];
   const obj5 = { style: tmp.buttons, children: null };
-  const items7 = [callback(require("../../../../design/components/Button/native/Button.native.tsx").Button, { text: "Open Self Purchase Success", onPress: callback1, disabled: 0 === trimmed.length, loading: tmp8 }), callback(require("../../../../design/components/Button/native/Button.native.tsx").Button, { text: "Open Gift Purchase Success", onPress: callback2, disabled: 0 === trimmed.length, loading: tmp8, variant: "secondary" })];
+  const items7 = [
+    callback(require("../../../../design/components/Button/native/Button.native.tsx").Button, {
+      text: "Open Self Purchase Success",
+      onPress: callback1,
+      disabled: 0 === trimmed.length,
+      loading: tmp8,
+    }),
+    callback(require("../../../../design/components/Button/native/Button.native.tsx").Button, {
+      text: "Open Gift Purchase Success",
+      onPress: callback2,
+      disabled: 0 === trimmed.length,
+      loading: tmp8,
+      variant: "secondary",
+    }),
+  ];
   obj5[1] = items7;
-  const items8 = [closure_11(tmp18, obj5), ];
+  const items8 = [closure_11(tmp18, obj5)];
   let str5;
   if (stateFromStores1 != null) {
     str5 = stateFromStores1.username;
@@ -210,12 +251,28 @@ export default function SlayerStorefrontDevTools() {
   const obj8 = { spacing: 16, children: null };
   const obj9 = { title: "Purchase Success Modals", hasIcons: false, children: null };
   const obj3 = { label: "Application ID: " + str3 };
-  const obj6 = { text: "Open Self Purchase Success", onPress: callback1, disabled: 0 === trimmed.length, loading: tmp8 };
-  const obj7 = { text: "Open Gift Purchase Success", onPress: callback2, disabled: 0 === trimmed.length, loading: tmp8, variant: "secondary" };
-  items8[1] = callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, { label: "Gift recipient: " + str5 + " (self)" });
+  const obj6 = {
+    text: "Open Self Purchase Success",
+    onPress: callback1,
+    disabled: 0 === trimmed.length,
+    loading: tmp8,
+  };
+  const obj7 = {
+    text: "Open Gift Purchase Success",
+    onPress: callback2,
+    disabled: 0 === trimmed.length,
+    loading: tmp8,
+    variant: "secondary",
+  };
+  items8[1] = callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, {
+    label: "Gift recipient: " + str5 + " (self)",
+  });
   obj9[2] = items8;
-  items6[1] = closure_11(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, obj9);
+  items6[1] = closure_11(
+    require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup,
+    obj9,
+  );
   obj8[1] = items6;
   obj[2] = closure_11(require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, obj8);
   return callback(tmp16, obj);
-};
+}

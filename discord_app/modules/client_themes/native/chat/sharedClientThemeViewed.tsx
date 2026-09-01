@@ -7,6 +7,10 @@ const result = set.fileFinishedImporting("modules/client_themes/native/chat/shar
 
 export const handleSharedClientThemeViewed = function handleSharedClientThemeViewed() {
   let obj = trackImpression;
-  obj = { type: encodeProperties.ImpressionTypes.VIEW, name: encodeProperties.ImpressionNames.CUSTOM_THEME_SHARE, properties: {} };
+  obj = {
+    type: encodeProperties.ImpressionTypes.VIEW,
+    name: encodeProperties.ImpressionNames.CUSTOM_THEME_SHARE,
+    properties: {},
+  };
   obj.trackImpression(obj);
 };

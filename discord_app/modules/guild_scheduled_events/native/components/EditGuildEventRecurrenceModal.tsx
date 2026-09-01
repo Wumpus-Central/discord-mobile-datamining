@@ -15,7 +15,9 @@ createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { TIME: "TIME" };
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventRecurrenceModal.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/EditGuildEventRecurrenceModal.tsx",
+);
 
 export default function EditGuildEventRecurrenceModal(guildEvent) {
   guildEvent = guildEvent.guildEvent;
@@ -31,7 +33,7 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   closure_13 = undefined;
   function _handleSave() {
     const self = this;
-    const tmp = scheduleForRecurrenceWithException(function*() {
+    const tmp = scheduleForRecurrenceWithException(function* () {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();
@@ -119,10 +121,13 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   const tmp6 = callback(React.useState(null), 2);
   first = tmp6[0];
   closure_8 = tmp6[1];
-  const tmp8 = callback(useLazyAPIPromiseDefault(() => {
-    const result = recurrenceId(1891).dismissGlobalKeyboard();
-    return closure_1_1(9672)(guildEvent, recurrenceId, c5, dependencyMap);
-  }), 2);
+  const tmp8 = callback(
+    useLazyAPIPromiseDefault(() => {
+      const result = recurrenceId(1891).dismissGlobalKeyboard();
+      return closure_1_1(9672)(guildEvent, recurrenceId, c5, dependencyMap);
+    }),
+    2,
+  );
   callback2 = tmp8[0];
   error = tmp8[1].error;
   let items = [error];
@@ -163,7 +168,7 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
     render() {
       let obj = { action: closure_13, children: null };
       obj = { guildEvent, recurrenceId, schedule: c5, onChange: handleScheduleChange };
-      const items = [first(closure_1_1(9679), obj), ];
+      const items = [first(closure_1_1(9679), obj)];
       let tmp4Result = null;
       if (null != first) {
         obj = { variant: "text-md/normal", color: "text-feedback-critical", children: null };
@@ -174,8 +179,14 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
       obj[1] = items;
       return closure_8(closure_1_1(9678), obj);
     },
-    fullscreen: true
+    fullscreen: true,
   };
-  obj1 = { screens: { [closure_10.TIME]: obj }, initialRouteName: error.TIME, cardShadowEnabled: false, cardOverlayEnabled: false, cardStyle: tmp.cardStyle };
+  obj1 = {
+    screens: { [closure_10.TIME]: obj },
+    initialRouteName: error.TIME,
+    cardShadowEnabled: false,
+    cardOverlayEnabled: false,
+    cardStyle: tmp.cardStyle,
+  };
   return first(guildEvent(6008).Navigator, obj1);
-};
+}

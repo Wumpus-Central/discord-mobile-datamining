@@ -9,8 +9,7 @@ let c2 = false;
 let closure_3 = {};
 let closure_4 = {};
 const Store = initializeDefault.Store;
-class FamilyCenterControlledSettingsStore extends Store {
-}
+class FamilyCenterControlledSettingsStore extends Store {}
 const prototype = FamilyCenterControlledSettingsStore.prototype;
 prototype["getSettings"] = function getSettings(arg0) {
   return dependencyMap[arg0];
@@ -40,7 +39,7 @@ Object.defineProperty(prototype, "isLoading", {
   get: function isLoading() {
     return c2;
   },
-  set: undefined
+  set: undefined,
 });
 FamilyCenterControlledSettingsStore.displayName = "FamilyCenterControlledSettingsStore";
 const familyCenterControlledSettingsStore = new FamilyCenterControlledSettingsStore(dispatcherDefault, {
@@ -71,7 +70,7 @@ const familyCenterControlledSettingsStore = new FamilyCenterControlledSettingsSt
     closure_3 = {};
     closure_4 = {};
     c2 = false;
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterControlledSettingsStore.tsx");
 

@@ -8,8 +8,7 @@ import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ Endpoints: c5, MAX_UPLOAD_COUNT: closure_6 } = ME);
-class MessageAttachmentUploadTarget {
-}
+class MessageAttachmentUploadTarget {}
 const prototype = MessageAttachmentUploadTarget.prototype;
 prototype["getCreateAttachmentURL"] = function getCreateAttachmentURL(arg0) {
   return closure_5.MESSAGE_CREATE_ATTACHMENT_UPLOAD(arg0);
@@ -35,9 +34,16 @@ Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
   get: function shouldReactNativeCompressUploads() {
     return true;
   },
-  set: undefined
+  set: undefined,
 });
-const obj = { MESSAGE_ATTACHMENT: 0, [0]: "MESSAGE_ATTACHMENT", GUILD_PRODUCT_ATTACHMENT: 1, [1]: "GUILD_PRODUCT_ATTACHMENT", GRAVITY_ATTACHMENT: 2, [2]: "GRAVITY_ATTACHMENT" };
+const obj = {
+  MESSAGE_ATTACHMENT: 0,
+  [0]: "MESSAGE_ATTACHMENT",
+  GUILD_PRODUCT_ATTACHMENT: 1,
+  [1]: "GUILD_PRODUCT_ATTACHMENT",
+  GRAVITY_ATTACHMENT: 2,
+  [2]: "GRAVITY_ATTACHMENT",
+};
 const result = require("set").fileFinishedImporting("lib/uploader/UploadTargets.tsx");
 
 export const UploadTargets = obj;

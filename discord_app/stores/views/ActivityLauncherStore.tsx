@@ -122,8 +122,7 @@ let closure_7 = {};
 let closure_8 = {};
 let c9 = 120000;
 const Store = initializeDefault.Store;
-class ActivityLauncherStore extends Store {
-}
+class ActivityLauncherStore extends Store {}
 const prototype = ActivityLauncherStore.prototype;
 prototype["initialize"] = function initialize() {
   const items = [closure_3, closure_4];
@@ -161,7 +160,7 @@ const activityLauncherStore = new ActivityLauncherStore(dispatcherDefault, {
     } else {
       delete tmp[tmp2];
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/views/ActivityLauncherStore.tsx");
 

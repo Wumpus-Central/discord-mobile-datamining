@@ -4,9 +4,15 @@ import asyncRequireImpl from "../../../../../../_runtime/02009_asyncRequireImpl.
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openGuildPowerupsBottomSheet from "openGuildPowerupsBottomSheet.tsx";
 
-const result = set.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsMultiPerkBottomSheet.tsx");
+const result = set.fileFinishedImporting(
+  "modules/premium/powerups/native/utils/openGuildPowerupsMultiPerkBottomSheet.tsx",
+);
 
 export default function openGuildPowerupsMultiPerkBottomSheet(arg0) {
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj.openLazy(asyncRequireImpl(12111, dependencyMap.paths), openGuildPowerupsBottomSheet.GUILD_POWERUPS_BOTTOM_SHEET_KEY, arg0);
-};
+  obj.openLazy(
+    asyncRequireImpl(12111, dependencyMap.paths),
+    openGuildPowerupsBottomSheet.GUILD_POWERUPS_BOTTOM_SHEET_KEY,
+    arg0,
+  );
+}

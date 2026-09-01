@@ -11,7 +11,7 @@ function _safeTransitionTo() {
     closure_1 = arg1;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -165,4 +165,4 @@ export default function safeTransitionTo() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

@@ -24,4 +24,4 @@ export default function useDispatchOpenActivity(connectedEmbeddedActivity) {
       obj.dispatch(obj);
     }
   }, items);
-};
+}

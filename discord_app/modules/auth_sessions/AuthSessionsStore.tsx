@@ -7,8 +7,7 @@ function handleInit() {
 }
 let closure_0 = [];
 const Store = initializeDefault.Store;
-class AuthSessionsStore extends Store {
-}
+class AuthSessionsStore extends Store {}
 AuthSessionsStore.prototype["getSessions"] = function getSessions() {
   return closure_0;
 };
@@ -44,7 +43,7 @@ const authSessionsStore = new AuthSessionsStore(dispatcherDefault, {
     if (!c1) {
       return false;
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/auth_sessions/AuthSessionsStore.tsx");
 

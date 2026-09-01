@@ -30,7 +30,7 @@ export default function VoiceActivityStatus(hideText) {
       obj[3] = items;
       tmp5 = callback(UserProfileVoiceActivityIconDefault, obj);
     }
-    const items1 = [tmp5, ];
+    const items1 = [tmp5];
     if (flag) {
       obj = { children: null };
       items1[1] = tmp9;
@@ -71,4 +71,4 @@ export default function VoiceActivityStatus(hideText) {
     tmp3Result = null;
   }
   return tmp3Result;
-};
+}

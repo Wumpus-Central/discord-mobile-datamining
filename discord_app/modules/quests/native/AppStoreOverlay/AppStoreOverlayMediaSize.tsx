@@ -97,34 +97,36 @@ export const useAppStoreOverlayMediaSizes = function useAppStoreOverlayMediaSize
     c0 = false;
     const item = c0.forEach((arg0) => {
       closure_0 = arg0;
-      let size = closure_2_4.getSize(arg0, (arg0, arg1) => {
-        closure_0 = arg0;
-        closure_1 = arg1;
-        if (!closure_0) {
-          closure_2_1((get) => {
-            const size = { width: closure_0, height: closure_1 };
-            const size2 = get.get(closure_0);
-            let width;
-            if (size2 != null) {
-              width = size2.width;
-            }
-            if (width !== size.width) {
-              const _Map = Map;
-              map = new Map(get);
-              let result = map.set(closure_0, size);
-            } else {
-              let height;
+      let size = closure_2_4.getSize(
+        arg0,
+        (arg0, arg1) => {
+          closure_0 = arg0;
+          closure_1 = arg1;
+          if (!closure_0) {
+            closure_2_1((get) => {
+              const size = { width: closure_0, height: closure_1 };
+              const size2 = get.get(closure_0);
+              let width;
               if (size2 != null) {
-                height = size2.height;
+                width = size2.width;
               }
-              result = get;
-            }
-            return result;
-          });
-        }
-      }, () => {
-
-      });
+              if (width !== size.width) {
+                const _Map = Map;
+                map = new Map(get);
+                let result = map.set(closure_0, size);
+              } else {
+                let height;
+                if (size2 != null) {
+                  height = size2.height;
+                }
+                result = get;
+              }
+              return result;
+            });
+          }
+        },
+        () => {},
+      );
     });
     return () => {
       c0 = true;

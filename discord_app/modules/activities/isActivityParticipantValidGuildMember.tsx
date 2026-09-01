@@ -9,4 +9,4 @@ export default function isActivityParticipantValidGuildMember(member) {
     tmp = "" !== member.member.user.username;
   }
   return tmp;
-};
+}

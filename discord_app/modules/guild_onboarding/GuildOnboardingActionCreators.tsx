@@ -61,24 +61,38 @@ function _updateOnboardingResponses(guildId, arg1) {
       obj2[2] = obj;
       obj1[1] = obj2;
       const postResult = HTTP.post(obj1);
-      let catchPromise = HTTP.post(obj1).then((body) => {
-        if (null != body.body) {
-          obj = callback(obj[11]);
-          obj = { type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS", guildId: null, options: null, prompts_seen: null, options_seen: null };
-          obj[1] = closure_0;
-          obj[2] = body.body.onboarding_responses;
-          obj[3] = body.body.onboarding_prompts_seen;
-          obj[4] = body.body.onboarding_responses_seen;
-          obj.dispatch(obj);
-        }
-      }).catch((arg0) => {
-        obj = callback(obj[12]);
-        return obj.captureException(arg0);
-      });
+      let catchPromise = HTTP.post(obj1)
+        .then((body) => {
+          if (null != body.body) {
+            obj = callback(obj[11]);
+            obj = {
+              type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS",
+              guildId: null,
+              options: null,
+              prompts_seen: null,
+              options_seen: null,
+            };
+            obj[1] = closure_0;
+            obj[2] = body.body.onboarding_responses;
+            obj[3] = body.body.onboarding_prompts_seen;
+            obj[4] = body.body.onboarding_responses_seen;
+            obj.dispatch(obj);
+          }
+        })
+        .catch((arg0) => {
+          obj = callback(obj[12]);
+          return obj.captureException(arg0);
+        });
       const nextPromise = HTTP.post(obj1).then((body) => {
         if (null != body.body) {
           obj = callback(obj[11]);
-          obj = { type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS", guildId: null, options: null, prompts_seen: null, options_seen: null };
+          obj = {
+            type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS",
+            guildId: null,
+            options: null,
+            prompts_seen: null,
+            options_seen: null,
+          };
           obj[1] = closure_0;
           obj[2] = body.body.onboarding_responses;
           obj[3] = body.body.onboarding_prompts_seen;
@@ -95,26 +109,43 @@ function _updateOnboardingResponses(guildId, arg1) {
       obj4[2] = obj;
       obj3[1] = obj4;
       const putResult = HTTP.put(obj3);
-      catchPromise = HTTP.put(obj3).then((body) => {
-        if (null != body.body) {
-          obj = callback(obj[11]);
-          obj = { type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS", guildId: null, options: null, prompts_seen: null, options_seen: null };
-          obj[1] = closure_0;
-          obj[2] = body.body.onboarding_responses;
-          obj[3] = body.body.onboarding_prompts_seen;
-          obj[4] = body.body.onboarding_responses_seen;
-          obj.dispatch(obj);
-        }
-      }).catch((cause) => {
-        obj = callback(obj[12]);
-        obj = { cause };
-        error = new Error("Failed to update onboarding responses for guild " + closure_0 + ": " + cause.statusCode, obj);
-        obj.captureException(error);
-      });
+      catchPromise = HTTP.put(obj3)
+        .then((body) => {
+          if (null != body.body) {
+            obj = callback(obj[11]);
+            obj = {
+              type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS",
+              guildId: null,
+              options: null,
+              prompts_seen: null,
+              options_seen: null,
+            };
+            obj[1] = closure_0;
+            obj[2] = body.body.onboarding_responses;
+            obj[3] = body.body.onboarding_prompts_seen;
+            obj[4] = body.body.onboarding_responses_seen;
+            obj.dispatch(obj);
+          }
+        })
+        .catch((cause) => {
+          obj = callback(obj[12]);
+          obj = { cause };
+          error = new Error(
+            "Failed to update onboarding responses for guild " + closure_0 + ": " + cause.statusCode,
+            obj,
+          );
+          obj.captureException(error);
+        });
       const nextPromise1 = HTTP.put(obj3).then((body) => {
         if (null != body.body) {
           obj = callback(obj[11]);
-          obj = { type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS", guildId: null, options: null, prompts_seen: null, options_seen: null };
+          obj = {
+            type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS",
+            guildId: null,
+            options: null,
+            prompts_seen: null,
+            options_seen: null,
+          };
           obj[1] = closure_0;
           obj[2] = body.body.onboarding_responses;
           obj[3] = body.body.onboarding_prompts_seen;
@@ -139,7 +170,14 @@ let obj = {
         withoutResult = [];
       }
       dispatch = dispatcherDefault.dispatch;
-      obj = { type: "GUILD_ONBOARDING_SELECT_OPTION", guildId: null, promptId: null, optionId: null, selected: null, removedOptionIds: null };
+      obj = {
+        type: "GUILD_ONBOARDING_SELECT_OPTION",
+        guildId: null,
+        promptId: null,
+        optionId: null,
+        selected: null,
+        removedOptionIds: null,
+      };
       obj[1] = guildId;
       obj[2] = id;
       obj[3] = id2;
@@ -162,12 +200,21 @@ let obj = {
     if (closure_5.isViewingRoles(guildId)) {
       const obj5 = updateImpersonating;
       const obj6 = importDefaultResult;
-      const result = obj5.updateImpersonatedRoles(guildId, obj6.difference(importDefaultResult.union(roles, items2), differenceResult1));
+      const result = obj5.updateImpersonatedRoles(
+        guildId,
+        obj6.difference(importDefaultResult.union(roles, items2), differenceResult1),
+      );
       const obj7 = importDefaultResult;
     } else {
       if (tmp2) {
         let obj = dispatcherDefault;
-        obj = { type: "GUILD_MEMBER_UPDATE_LOCAL", guildId: null, roles: null, addedRoleIds: null, removedRoleIds: null };
+        obj = {
+          type: "GUILD_MEMBER_UPDATE_LOCAL",
+          guildId: null,
+          roles: null,
+          addedRoleIds: null,
+          removedRoleIds: null,
+        };
         obj[1] = guildId;
         const obj3 = importDefaultResult;
         obj[2] = obj3.difference(importDefaultResult.union(roles, items2), differenceResult1);
@@ -232,12 +279,18 @@ let obj = {
     obj.channels_granted = tmp2Result.getFlattenedChannels(guildId, set, found, true).length;
     obj.guild_onboarding_covered_channel_ids = arr3.map((id) => id.id);
     obj.guild_onboarding_uncovered_channel_ids = arr4.map((id) => id.id);
-    ({ connected: obj9.provider_connections_connected, notConnected: obj9.provider_connections_not_connected } = providerConnectionState);
-    ({ connected: obj9.application_connections_connected, notConnected: obj9.application_connections_not_connected } = applicationConnectionState);
+    ({ connected: obj9.provider_connections_connected, notConnected: obj9.provider_connections_not_connected } =
+      providerConnectionState);
+    ({ connected: obj9.application_connections_connected, notConnected: obj9.application_connections_not_connected } =
+      applicationConnectionState);
     obj8.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj);
     const tmp2Result3 = items1(4700);
     const tmp2Result4 = items1(5478);
-    tmp2Result4.ackGuildFeature(guildId, ReadStateTypes.GUILD_ONBOARDING_QUESTION, DISCORD_EPOCHDefault.fromTimestamp(Date.now()));
+    tmp2Result4.ackGuildFeature(
+      guildId,
+      ReadStateTypes.GUILD_ONBOARDING_QUESTION,
+      DISCORD_EPOCHDefault.fromTimestamp(Date.now()),
+    );
     _updateOnboardingResponses(guildId, true);
     if (closure_5.isFullServerPreview(guildId)) {
       const result = tmp2(5473).updateImpersonatedChannels(guildId, items, []);
@@ -296,7 +349,7 @@ let obj = {
   },
   resetOnboarding(arg0) {
     closure_0 = arg0;
-    return callback(function*() {
+    return callback(function* () {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -361,7 +414,7 @@ let obj = {
         }
       }
     })();
-  }
+  },
 };
 let result = require("set").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingActionCreators.tsx");
 

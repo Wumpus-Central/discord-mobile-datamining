@@ -142,8 +142,7 @@ if (require("set").isPlatformEmbedded) {
       _modDef5355.disconnect();
     });
     const powerMonitor3 = setDefault2.powerMonitor;
-    class IdleStore extends r10079 {
-    }
+    class IdleStore extends r10079 {}
     powerMonitor3.on("lock-screen", () => {
       c12 = true;
       closure_3 = Date.now();
@@ -201,8 +200,7 @@ if (require("set").isPlatformEmbedded) {
     }
   }, 500);
   const Store = initializeDefault.Store;
-  class IdleStore extends r10079 {
-  }
+  class IdleStore extends r10079 {}
   const prototype = IdleStore.prototype;
   prototype["initialize"] = function initialize() {
     this.waitFor(closure_4);
@@ -227,7 +225,18 @@ if (require("set").isPlatformEmbedded) {
     return c12;
   };
   IdleStore.displayName = "IdleStore";
-  obj = { IDLE: null, AFK: null, SPEAKING: null, APP_STATE_UPDATE: null, OVERLAY_SET_NOT_IDLE: null, CHANNEL_SELECT: null, VOICE_CHANNEL_SELECT: null, WINDOW_FOCUS: null, OVERLAY_INITIALIZE: null, OVERLAY_SET_INPUT_LOCKED: null };
+  obj = {
+    IDLE: null,
+    AFK: null,
+    SPEAKING: null,
+    APP_STATE_UPDATE: null,
+    OVERLAY_SET_NOT_IDLE: null,
+    CHANNEL_SELECT: null,
+    VOICE_CHANNEL_SELECT: null,
+    WINDOW_FOCUS: null,
+    OVERLAY_INITIALIZE: null,
+    OVERLAY_SET_INPUT_LOCKED: null,
+  };
   obj[0] = function handleIdle(idle) {
     idle = idle.idle;
   };

@@ -39,7 +39,7 @@ function _postMessageToWebView() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const table = tmp3;
       c4 = 1;
       yield closure_1_11.injectJavaScript(closure_1_1(closure_1_2[11])(closure_0));
@@ -157,7 +157,8 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
           if (tmp2.data === closure_1_7) {
             const connectedActivityLocation1 = closure_1_6.getConnectedActivityLocation();
             if (null != connectedActivityLocation1) {
-              const selfEmbeddedActivityForLocation1 = closure_1_6.getSelfEmbeddedActivityForLocation(connectedActivityLocation1);
+              const selfEmbeddedActivityForLocation1 =
+                closure_1_6.getSelfEmbeddedActivityForLocation(connectedActivityLocation1);
               let applicationId;
               if (selfEmbeddedActivityForLocation1 != null) {
                 applicationId = selfEmbeddedActivityForLocation1.applicationId;
@@ -198,7 +199,9 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
       if (null != connectedActivityLocation) {
         selfEmbeddedActivityForLocation = obj.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
       }
-      const embeddedActivityLocationChannelId = self(table[18]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
+      const embeddedActivityLocationChannelId = self(table[18]).getEmbeddedActivityLocationChannelId(
+        connectedActivityLocation,
+      );
       basicChannel = basicChannel.getBasicChannel(embeddedActivityLocationChannelId);
       let compositeInstanceId;
       if (selfEmbeddedActivityForLocation != null) {
@@ -210,7 +213,14 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
       }
       const obj2 = self(table[18]);
       const tmp9 = callback;
-      obj = { channel_id: embeddedActivityLocationChannelId, application_id: applicationId, activity_session_id: compositeInstanceId, thermal_state: rawThermalState.rawThermalState, guild_id: null, media_session_id: null };
+      obj = {
+        channel_id: embeddedActivityLocationChannelId,
+        application_id: applicationId,
+        activity_session_id: compositeInstanceId,
+        thermal_state: rawThermalState.rawThermalState,
+        guild_id: null,
+        media_session_id: null,
+      };
       let guild_id;
       if (basicChannel != null) {
         guild_id = basicChannel.guild_id;
@@ -274,7 +284,12 @@ prototype["showLaunchErrorModal"] = function showLaunchErrorModal(message) {
 };
 prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled() {
   let obj = dispatcherDefault2;
-  obj = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
+  obj = {
+    key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED",
+    content: null,
+    icon: null,
+    iconColor: "status-positive",
+  };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.JfA7IK);
   obj[2] = registerAssetDefault;
@@ -316,7 +331,12 @@ prototype["clearEmbeddedActivityState"] = function clearEmbeddedActivityState(_l
   let obj = _runPrimaryAppCommandOrJoinEmbeddedActivity;
   obj = { location: _location, applicationId, showFeedback };
   obj.stopEmbeddedActivity(obj);
-  obj = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null };
+  obj = {
+    type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE",
+    applicationId,
+    lockState: null,
+    pictureInPictureLockState: null,
+  };
   dispatcherDefault.dispatch(obj);
 };
 prototype["releaseIframeId"] = function releaseIframeId() {

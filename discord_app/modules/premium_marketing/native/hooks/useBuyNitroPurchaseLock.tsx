@@ -27,9 +27,11 @@ keys = {
   },
   setInitialLoadComplete(promotionMarketingComponent) {
     store.setState({ hasCompletedInitialLoad: promotionMarketingComponent });
-  }
+  },
 };
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPurchaseLock.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium_marketing/native/hooks/useBuyNitroPurchaseLock.tsx",
+);
 
 export const useIsBuyNitroPurchaseBlocked = function useIsBuyNitroPurchaseBlocked() {
   let stateFromStores = store((hasCompletedInitialLoad) => {

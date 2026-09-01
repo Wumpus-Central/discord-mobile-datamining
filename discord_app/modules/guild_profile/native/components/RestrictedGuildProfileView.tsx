@@ -15,7 +15,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/RestrictedGuildProfileView.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_profile/native/components/RestrictedGuildProfileView.tsx",
+);
 
 export default function RestrictedGuildProfileView() {
   let obj = GuildProfileBackground;
@@ -29,7 +31,7 @@ export default function RestrictedGuildProfileView() {
   obj[2] = GuildProfileBackground.DiagonalGradient.END;
   let obj4 = GuildProfileBackground;
   obj[3] = obj4.getBackgroundForProfile(tmp2, token);
-  const items = [callback(LinearGradientDefault, obj), , ];
+  const items = [callback(LinearGradientDefault, obj), ,];
   obj1 = { style: styles.header, children: null };
   const obj2 = { style: styles.avatarBackground, children: null };
   const obj3 = { size: null, value: "?", selected: false, textStyle: null };
@@ -43,7 +45,7 @@ export default function RestrictedGuildProfileView() {
   const obj5 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj5[2] = intl.string(getSystemLocale.t.wZmueu);
-  const items1 = [callback(Text.Text, obj5), ];
+  const items1 = [callback(Text.Text, obj5)];
   const obj6 = { variant: "text-md/medium", color: "text-subtle", children: null };
   const intl2 = getSystemLocale.intl;
   obj6[2] = intl2.string(getSystemLocale.t["8mfCqY"]);
@@ -52,4 +54,4 @@ export default function RestrictedGuildProfileView() {
   items[2] = callback2(View, obj4);
   obj[1] = items;
   return callback2(View, obj);
-};
+}

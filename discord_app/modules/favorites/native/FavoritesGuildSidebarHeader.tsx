@@ -20,7 +20,9 @@ function EmptyBody() {
       tmp3(tmp2[7])({ source: "favorites_empty_sidebar" });
     } else {
       const tmp3Result = tmp3(tmp2[8]);
-      tmp3Result.openLazy(tmp(tmp2[10])(tmp2[9], tmp2.paths), tmp(tmp2[11]).FAVORITES_UPSELL_SHEET_KEY, { source: "favorites_empty_sidebar" });
+      tmp3Result.openLazy(tmp(tmp2[10])(tmp2[9], tmp2.paths), tmp(tmp2[11]).FAVORITES_UPSELL_SHEET_KEY, {
+        source: "favorites_empty_sidebar",
+      });
       const tmp4 = tmp(tmp2[10])(tmp2[9], tmp2.paths);
     }
   }, []);
@@ -31,26 +33,31 @@ function EmptyBody() {
 }
 function PlaceholderRows() {
   const tmp = callback4();
-  let obj = { style: tmp.placeholderRows, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+  let obj = {
+    style: tmp.placeholderRows,
+    accessibilityElementsHidden: true,
+    importantForAccessibility: "no-hide-descendants",
+    children: null,
+  };
   obj = { style: tmp.placeholderRow, children: null };
   obj = { size: "sm", color: ThemesDefault.colors.ICON_MUTED };
-  const items = [callback2(TextIcon.TextIcon, obj), ];
-  const items1 = [, ];
+  const items = [callback2(TextIcon.TextIcon, obj)];
+  const items1 = [,];
   ({ placeholderBar: arr2[0], placeholderBarShort: arr2[1] } = tmp);
   items[1] = callback2(View, { style: items1 });
   obj[1] = items;
-  const items2 = [callback3(View, obj), , ];
+  const items2 = [callback3(View, obj), ,];
   obj1 = { style: tmp.placeholderRow, children: null };
-  const items3 = [callback2(VoiceNormalIcon.VoiceNormalIcon, { size: "sm", color: ThemesDefault.colors.ICON_MUTED }), ];
-  const items4 = [, ];
+  const items3 = [callback2(VoiceNormalIcon.VoiceNormalIcon, { size: "sm", color: ThemesDefault.colors.ICON_MUTED })];
+  const items4 = [,];
   ({ placeholderBar: arr5[0], placeholderBarLong: arr5[1] } = tmp);
   items3[1] = callback2(View, { style: items4 });
   obj1[1] = items3;
   items2[1] = callback3(View, obj1);
   const obj3 = { style: tmp.placeholderRow, children: null };
   const obj2 = { size: "sm", color: ThemesDefault.colors.ICON_MUTED };
-  const items5 = [callback2(ChatIcon.ChatIcon, { size: "sm", color: ThemesDefault.colors.ICON_MUTED }), ];
-  const items6 = [, ];
+  const items5 = [callback2(ChatIcon.ChatIcon, { size: "sm", color: ThemesDefault.colors.ICON_MUTED })];
+  const items6 = [,];
   ({ placeholderBar: arr7[0], placeholderBarShort: arr7[1] } = tmp);
   items5[1] = callback2(View, { style: items6 });
   obj3[1] = items5;
@@ -59,17 +66,55 @@ function PlaceholderRows() {
   return callback3(View, obj);
 }
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-createCacheKey = { copy: null, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
+createCacheKey = {
+  copy: null,
+  divider: null,
+  placeholderRows: null,
+  placeholderRow: null,
+  placeholderBar: null,
+  placeholderBarShort: null,
+  placeholderBarLong: null,
+};
 createCacheKey = { paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 1, marginTop: ThemesDefault.space.PX_12, marginHorizontal: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj1 = { height: 1, marginTop: ThemesDefault.space.PX_12, marginHorizontal: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[1] = {
+  height: 1,
+  marginTop: ThemesDefault.space.PX_12,
+  marginHorizontal: ThemesDefault.space.PX_16,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
+let obj1 = {
+  height: 1,
+  marginTop: ThemesDefault.space.PX_12,
+  marginHorizontal: ThemesDefault.space.PX_16,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_8 };
 let obj2 = { paddingTop: ThemesDefault.space.PX_8 };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16 };
-let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[4] = { height: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-const obj4 = { height: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
+createCacheKey[3] = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
+let obj3 = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  paddingVertical: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
+createCacheKey[4] = {
+  height: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+};
+const obj4 = {
+  height: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+};
 createCacheKey[5] = { width: ThemesDefault.space.PX_80 };
 const obj5 = { width: ThemesDefault.space.PX_80 };
 createCacheKey[6] = { width: ThemesDefault.space.PX_128 };
@@ -87,7 +132,7 @@ export default function FavoritesGuildSidebarHeader() {
     obj[0] = tmp.divider;
     tmp7 = callback2(View, obj);
   }
-  const items = [tmp7, , ];
+  const items = [tmp7, ,];
   obj = { spacing: tmp6(712).space.PX_8, style: tmp.copy, children: null };
   obj1 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp4(1236).intl;
@@ -107,4 +152,4 @@ export default function FavoritesGuildSidebarHeader() {
   items[2] = tmp3Result;
   obj[1] = items;
   return closure_7(Stack.Stack, obj);
-};
+}

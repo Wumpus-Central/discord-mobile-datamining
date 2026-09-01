@@ -20,7 +20,10 @@ export const useScheduledMessageDraftCoachmarkState = function useScheduledMessa
   dependencyMap = result;
   let obj = channel(4298);
   const items = [closure_4];
-  const stateFromStores = channel(589).useStateFromStores(items, () => null != scheduledMessage.getScheduledMessage(channel.id));
+  const stateFromStores = channel(589).useStateFromStores(
+    items,
+    () => null != scheduledMessage.getScheduledMessage(channel.id),
+  );
   if (isEligible) {
     isEligible = draftText.trim().length > 10;
   }

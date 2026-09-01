@@ -5,7 +5,9 @@ import preloadDefault from "../../../../../components_native/common/FastImage.ts
 import metadataDefault from "../../../../../../discord_assets/assets/mana/asset-library/generated/ServerIconTheCrewExample-2x.png.js";
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconTheCrewExample.native.tsx");
+const result = set.fileFinishedImporting(
+  "design/components/mana-assets/native/generated/ServerIconTheCrewExample.native.tsx",
+);
 
 export const ServerIconTheCrewExample = function ServerIconTheCrewExample(width) {
   let num = width.width;
@@ -21,7 +23,14 @@ export const ServerIconTheCrewExample = function ServerIconTheCrewExample(width)
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  let obj = {
+    fadeDuration: 0,
+    source: null,
+    style: null,
+    accessible: null,
+    accessibilityLabel: null,
+    resizeMode: null,
+  };
   obj = { uri: metadataDefault };
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };

@@ -11,7 +11,20 @@ export const openDetailsActionSheet = function openDetailsActionSheet(arg0) {
   ({ guildId, channelId } = arg0);
   _modDef8622.itemInteracted(id, type, "overflow_menu");
   const obj = _modDef8622;
-  _modDef8622.feedItemActioned({ itemId: id, itemType: type, actionParameters: { actionGestureType: "press", actionTargetElement: "overflow_menu_button", actionIntentType: "open", actionDestinationType: null } });
+  _modDef8622.feedItemActioned({
+    itemId: id,
+    itemType: type,
+    actionParameters: {
+      actionGestureType: "press",
+      actionTargetElement: "overflow_menu_button",
+      actionIntentType: "open",
+      actionDestinationType: null,
+    },
+  });
   const obj2 = _modDef8622;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(16046, dependencyMap.paths), "ItemDetailsActionSheet", { guildId, channelId, id });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(16046, dependencyMap.paths), "ItemDetailsActionSheet", {
+    guildId,
+    channelId,
+    id,
+  });
 };

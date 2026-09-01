@@ -5,7 +5,13 @@ import HELLO_KEY from "KvCacheVersionConstants.tsx";
 import set from "../../../../_runtime/00002_set.js";
 
 let set = importDefault;
-({ HELLO_KEY: c3, VERSION_TO_FORCE_RESYNCING_ALL_DATA: c4, VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY: c5, VERSION_TO_SKIP_READING_THE_DATABASE: closure_6, VERSION_TO_SKIP_READING_THE_DATABASE_KEY: error } = HELLO_KEY);
+({
+  HELLO_KEY: c3,
+  VERSION_TO_FORCE_RESYNCING_ALL_DATA: c4,
+  VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY: c5,
+  VERSION_TO_SKIP_READING_THE_DATABASE: closure_6,
+  VERSION_TO_SKIP_READING_THE_DATABASE_KEY: error,
+} = HELLO_KEY);
 let closure_8 = new timestampDefault("KvCacheVersion");
 class KvCacheVersion {
   constructor() {
@@ -14,21 +20,21 @@ class KvCacheVersion {
     obj.hasSuccessfullyConnected = false;
     obj.actions = {
       BACKGROUND_SYNC(arg0, database) {
-            return obj.handleWrite(database);
-          },
+        return obj.handleWrite(database);
+      },
       CONNECTION_OPEN() {
-            return obj.handleConnectionOpen();
-          },
+        return obj.handleConnectionOpen();
+      },
       WRITE_CACHES(arg0, database) {
-            return obj.handleWrite(database);
-          }
+        return obj.handleWrite(database);
+      },
     };
     return obj;
   }
 }
 const prototype = KvCacheVersion.prototype;
 prototype["okAsync"] = function okAsync(closure_0) {
-  return callback(function*() {
+  return callback(function* () {
     closure_1 = tmp2;
     closure_0 = tmp5;
     const obj2 = closure_1_0(closure_1_1[3]);
@@ -50,7 +56,7 @@ prototype["canUseGuildVersions"] = function canUseGuildVersions() {
   return resolved;
 };
 prototype["doesDatabaseVersionMatchJsConstants"] = function doesDatabaseVersionMatchJsConstants() {
-  return callback(function*() {
+  return callback(function* () {
     let version = tmp5;
     version = tmp2;
     const obj2 = closure_1_0(closure_1_1[3]);
@@ -103,7 +109,7 @@ set.actions = {
   },
   WRITE_CACHES(arg0, database) {
     return obj.handleWrite(database);
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/app_database/modules/KvCacheVersion.tsx");
 

@@ -1,7 +1,9 @@
 // discord_app/modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemSlimEmoji.tsx
 import set from "../../../../../../_runtime/00002_set.js";
 
-const result = set.fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemSlimEmoji.tsx");
+const result = set.fileFinishedImporting(
+  "modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemSlimEmoji.tsx",
+);
 
 export default function getEmojiPickerDataRowItemSlimEmoji(isSectionNitroLocked) {
   const _require = isSectionNitroLocked;
@@ -37,6 +39,6 @@ export default function getEmojiPickerDataRowItemSlimEmoji(isSectionNitroLocked)
         }
       }
     }),
-    isSectionNitroLocked: true === isSectionNitroLocked.isSectionNitroLocked
+    isSectionNitroLocked: true === isSectionNitroLocked.isSectionNitroLocked,
   };
-};
+}

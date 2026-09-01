@@ -20,10 +20,21 @@ class SearchListContentAuthor {
     author = global.author;
     tmp = closure_7();
     obj = { style: tmp.author, children: null };
-    obj = { source: global.avatarSource, size: require("Button").AvatarSizes.SIZE_16, style: tmp.avatar, avatarDecoration: author.avatarDecoration };
-    items = [, ];
+    obj = {
+      source: global.avatarSource,
+      size: require("Button").AvatarSizes.SIZE_16,
+      style: tmp.avatar,
+      avatarDecoration: author.avatarDecoration,
+    };
+    items = [,];
     items[0] = jsx(require("Button").Avatar, obj);
-    obj1 = { style: tmp.authorName, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
+    obj1 = {
+      style: tmp.authorName,
+      variant: "text-xs/medium",
+      color: "interactive-text-default",
+      lineClamp: 1,
+      children: null,
+    };
     obj4 = require("nameFromUser");
     obj1[4] = obj4.getName(author);
     items[1] = jsx(require("Text").Text, obj1);
@@ -43,7 +54,7 @@ function SearchListPrivateChannel(channel) {
     obj[0] = channel;
     obj[1] = Button.AvatarSizes.SIZE_16;
     obj[1] = callback(FacepileGroupDMAvatarDefault, obj);
-    const items = [callback(tmp6, obj), ];
+    const items = [callback(tmp6, obj)];
     obj1 = { style: null, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
     obj1[0] = tmp.channelName;
     obj1[4] = tmp4;
@@ -55,7 +66,7 @@ function SearchListPrivateChannel(channel) {
     obj[0] = tmp.privateChannelIcon;
     const obj2 = { style: null, size: "xs", color: "interactive-text-default" };
     obj2[0] = tmp.icon;
-    const items1 = [callback(ForumIcon.ForumIcon, obj2), ];
+    const items1 = [callback(ForumIcon.ForumIcon, obj2)];
     const obj3 = { variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
     const intl = getSystemLocale.intl;
     obj3[3] = intl.string(getSystemLocale.t.ACgJhM);
@@ -74,32 +85,73 @@ class SearchListGuildChannel {
     obj = { style: tmp.channel, children: null };
     channelIcon = obj.getChannelIcon(channel, { ignoreTraits: true });
     obj1 = { size: require("Button").Icon.Sizes.REFRESH_SMALL_16, source: channelIcon, color: tmp.channelIcon.color };
-    items = [, ];
+    items = [,];
     items[0] = jsx(require("Button").Icon, obj1);
-    obj2 = { style: tmp.channelName, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: tmp2 };
+    obj2 = {
+      style: tmp.channelName,
+      variant: "text-xs/medium",
+      color: "interactive-text-default",
+      lineClamp: 1,
+      children: tmp2,
+    };
     items[1] = jsx(require("Text").Text, obj2);
     obj[1] = items;
     return jsxs(View, obj);
   }
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { channelName: { flexShrink: 1, marginStart: 4 }, channelIcon: null, avatar: null, channel: null, author: null, authorName: null, container: null, content: null, footer: null, thumbnail: null, privateChannelIcon: null, icon: null, gdmIcon: null };
+createCacheKey = {
+  channelName: { flexShrink: 1, marginStart: 4 },
+  channelIcon: null,
+  avatar: null,
+  channel: null,
+  author: null,
+  authorName: null,
+  container: null,
+  content: null,
+  footer: null,
+  thumbnail: null,
+  privateChannelIcon: null,
+  icon: null,
+  gdmIcon: null,
+};
 createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginRight: 2 };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[4] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[5] = { flexShrink: 1, marginStart: 2 };
-createCacheKey[6] = { flex: 1, padding: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
+createCacheKey[6] = {
+  flex: 1,
+  padding: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  overflow: "hidden",
+};
 createCacheKey[7] = { paddingTop: 12, paddingHorizontal: 12, paddingBottom: 4 };
 createCacheKey[8] = { flexDirection: "column", paddingTop: 4, paddingHorizontal: 12, paddingBottom: 12, gap: 4 };
 let obj1 = { flex: 1, padding: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
-createCacheKey[9] = { flex: 1, overflow: "hidden", borderTopRightRadius: ThemesDefault.radii.lg, borderTopLeftRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[9] = {
+  flex: 1,
+  overflow: "hidden",
+  borderTopRightRadius: ThemesDefault.radii.lg,
+  borderTopLeftRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderBottomWidth: 1,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 createCacheKey[10] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[11] = { marginRight: 4 };
 createCacheKey[12] = { width: 18 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { flex: 1, overflow: "hidden", borderTopRightRadius: ThemesDefault.radii.lg, borderTopLeftRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj2 = {
+  flex: 1,
+  overflow: "hidden",
+  borderTopRightRadius: ThemesDefault.radii.lg,
+  borderTopLeftRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderBottomWidth: 1,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 const result = require("set").fileFinishedImporting("modules/search/native/components/list/SearchListCard.tsx");
 
 export { SearchListContentAuthor };
@@ -121,7 +173,7 @@ export const SearchListCardContent = function SearchListCardContent(arg0) {
     obj[3] = label;
     tmp3 = callback(Text.Text, obj);
   }
-  const items = [tmp3, ];
+  const items = [tmp3];
   let tmp4 = subLabel;
   if (typeof subLabel === "string") {
     obj = { variant: "text-sm/normal", color: "text-default", lineClamp: 1, children: null };

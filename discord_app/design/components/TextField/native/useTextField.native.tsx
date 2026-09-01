@@ -38,7 +38,7 @@ export const useTextFieldState = function useTextFieldState(onClear) {
         onClear();
       }
     }, items1),
-    hasValue: first.length > 0
+    hasValue: first.length > 0,
   };
   return obj;
 };
@@ -97,65 +97,69 @@ export const useTextField = function useTextField(onClear, ref) {
         onClear();
       }
     }, items2),
-    hasValue: first.length > 0
+    hasValue: first.length > 0,
   };
   const items3 = [ref, obj];
-  const imperativeHandle = obj.useImperativeHandle(ref, () => ({
-    blur() {
-      const current = closure_1.current;
-      if (current != null) {
-        current.blur();
-      }
-    },
-    focus() {
-      const current = closure_1.current;
-      if (current != null) {
-        current.focus();
-      }
-    },
-    isFocused() {
-      const current = closure_1.current;
-      let isFocusedResult;
-      if (current != null) {
-        isFocusedResult = current.isFocused();
-      }
-      return true === isFocusedResult;
-    },
-    getText() {
-      return closure_2.value;
-    },
-    setText(arg0) {
-      if ("" === arg0) {
-        closure_2.clear();
-      } else {
+  const imperativeHandle = obj.useImperativeHandle(
+    ref,
+    () => ({
+      blur() {
         const current = closure_1.current;
         if (current != null) {
-          obj = { text: null };
-          obj[0] = arg0;
-          current.setNativeProps(obj);
+          current.blur();
         }
-        closure_2.setTextValue(arg0);
-      }
-    },
-    measure(arg0) {
-      const current = closure_1.current;
-      if (current != null) {
-        current.measure(arg0);
-      }
-    },
-    measureInWindow(arg0) {
-      const current = closure_1.current;
-      if (current != null) {
-        current.measureInWindow(arg0);
-      }
-    },
-    measureLayout(arg0, arg1, arg2) {
-      const current = closure_1.current;
-      if (current != null) {
-        current.measureLayout(arg0, arg1, arg2);
-      }
-    }
-  }), items3);
+      },
+      focus() {
+        const current = closure_1.current;
+        if (current != null) {
+          current.focus();
+        }
+      },
+      isFocused() {
+        const current = closure_1.current;
+        let isFocusedResult;
+        if (current != null) {
+          isFocusedResult = current.isFocused();
+        }
+        return true === isFocusedResult;
+      },
+      getText() {
+        return closure_2.value;
+      },
+      setText(arg0) {
+        if ("" === arg0) {
+          closure_2.clear();
+        } else {
+          const current = closure_1.current;
+          if (current != null) {
+            obj = { text: null };
+            obj[0] = arg0;
+            current.setNativeProps(obj);
+          }
+          closure_2.setTextValue(arg0);
+        }
+      },
+      measure(arg0) {
+        const current = closure_1.current;
+        if (current != null) {
+          current.measure(arg0);
+        }
+      },
+      measureInWindow(arg0) {
+        const current = closure_1.current;
+        if (current != null) {
+          current.measureInWindow(arg0);
+        }
+      },
+      measureLayout(arg0, arg1, arg2) {
+        const current = closure_1.current;
+        if (current != null) {
+          current.measureLayout(arg0, arg1, arg2);
+        }
+      },
+    }),
+    items3,
+  );
   obj1 = { innerRef: ref, state: obj, inputProps: null };
   const obj2 = {};
   const merged1 = Object.assign(onClear);

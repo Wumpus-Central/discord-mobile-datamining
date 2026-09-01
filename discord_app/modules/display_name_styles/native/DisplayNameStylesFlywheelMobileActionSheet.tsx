@@ -15,17 +15,39 @@ let closure_11 = createCacheKey.createStyles(() => {
   let obj = { content: null, imageContainer: null, image: null, title: null, subtitle: null, actions: null };
   obj = { alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
   obj[0] = obj;
-  obj = { width: "100%", height: 162, alignItems: "center", justifyContent: "center", marginVertical: ThemesDefault.space.PX_24 };
+  obj = {
+    width: "100%",
+    height: 162,
+    alignItems: "center",
+    justifyContent: "center",
+    marginVertical: ThemesDefault.space.PX_24,
+  };
   obj[1] = obj;
   obj[2] = { width: "100%", height: "100%" };
-  obj[3] = { textAlign: "center", fontFamily: constants.GINTO_NORD_EXTRA_BOLD, textTransform: "uppercase", marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12 };
-  obj1 = { textAlign: "center", fontFamily: constants.GINTO_NORD_EXTRA_BOLD, textTransform: "uppercase", marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12 };
+  obj[3] = {
+    textAlign: "center",
+    fontFamily: constants.GINTO_NORD_EXTRA_BOLD,
+    textTransform: "uppercase",
+    marginTop: ThemesDefault.space.PX_12,
+    marginBottom: ThemesDefault.space.PX_16,
+    paddingTop: ThemesDefault.space.PX_12,
+  };
+  obj1 = {
+    textAlign: "center",
+    fontFamily: constants.GINTO_NORD_EXTRA_BOLD,
+    textTransform: "uppercase",
+    marginTop: ThemesDefault.space.PX_12,
+    marginBottom: ThemesDefault.space.PX_16,
+    paddingTop: ThemesDefault.space.PX_12,
+  };
   obj[4] = { textAlign: "center", marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_32 };
   const obj2 = { textAlign: "center", marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_32 };
   obj[5] = { gap: ThemesDefault.space.PX_12, width: "100%" };
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelMobileActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/display_name_styles/native/DisplayNameStylesFlywheelMobileActionSheet.tsx",
+);
 
 export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -54,18 +76,24 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const items1 = [result, markAsDismissed];
   const items2 = [markAsDismissed];
   const callback = obj.useCallback(() => {
-    markAsDismissed(_undefined[13]).openUserSettings({ screen: _undefined ? closure_1_6.PROFILE_CUSTOMIZATION : closure_1_6.PROFILE_CUSTOMIZATION_TRY_IT_OUT }, () => {
-      closure_1_0(closure_1_2[14]).runAfterInteractions(() => {
-        let obj = closure_1_0(closure_1_2[13]);
-        obj = { screen: closure_1_6.DISPLAY_NAME_STYLES };
-        obj.openUserSettings(obj, () => {
-          callback(closure_1_8.TAKE_ACTION);
-          let obj = closure_1_0(closure_1_2[15]);
-          obj = { dismissAction: closure_1_8.INDIRECT_ACTION };
-          const result = obj.UNSAFE_markDismissibleContentAsDismissed(closure_1_0(closure_1_2[16]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK, obj);
+    markAsDismissed(_undefined[13]).openUserSettings(
+      { screen: _undefined ? closure_1_6.PROFILE_CUSTOMIZATION : closure_1_6.PROFILE_CUSTOMIZATION_TRY_IT_OUT },
+      () => {
+        closure_1_0(closure_1_2[14]).runAfterInteractions(() => {
+          let obj = closure_1_0(closure_1_2[13]);
+          obj = { screen: closure_1_6.DISPLAY_NAME_STYLES };
+          obj.openUserSettings(obj, () => {
+            callback(closure_1_8.TAKE_ACTION);
+            let obj = closure_1_0(closure_1_2[15]);
+            obj = { dismissAction: closure_1_8.INDIRECT_ACTION };
+            const result = obj.UNSAFE_markDismissibleContentAsDismissed(
+              closure_1_0(closure_1_2[16]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK,
+              obj,
+            );
+          });
         });
-      });
-    });
+      },
+    );
   }, items1);
   const items3 = [markAsDismissed];
   const callback1 = obj.useCallback(() => {
@@ -83,15 +111,15 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
         current.closeActionSheet();
       }
       markAsDismissed(closure_1_8.USER_DISMISS);
-    }
+    },
   };
-  const items4 = [callback(markAsDismissed(5937).ActionSheetHeaderBar, obj1), , , , ];
+  const items4 = [callback(markAsDismissed(5937).ActionSheetHeaderBar, obj1), , , ,];
   obj2 = { style: tmp6.imageContainer, children: null };
   let tmp14Result = enabled;
   if (enabled) {
     tmp14Result = tmp14(tmp2(6256).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
-  const items5 = [tmp14Result, ];
+  const items5 = [tmp14Result];
   if (enabled) {
     items5[1] = !enabled;
     obj2[1] = items5;
@@ -122,7 +150,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     const intl3 = tmp2(1236).intl;
     obj7[0] = intl3.string(tmp2(1236).t["4P5I8V"]);
     obj7[3] = callback;
-    const items6 = [tmp14(tmp2(4928).Button, obj7), ];
+    const items6 = [tmp14(tmp2(4928).Button, obj7)];
     const obj8 = { text: null, variant: "secondary", size: "lg", onPress: null };
     const intl4 = tmp2(1236).intl;
     obj8[0] = intl4.string(tmp2(1236).t.TulDPl);
@@ -152,4 +180,4 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     }
     tmp2Result = tmp2(500);
   }
-};
+}

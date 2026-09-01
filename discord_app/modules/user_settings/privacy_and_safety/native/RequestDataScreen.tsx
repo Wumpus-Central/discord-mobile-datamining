@@ -12,7 +12,11 @@ obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(() => <closure_2 style={callback().container}>{jsx(_modDef14468, {})}</closure_2>);
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/RequestDataScreen.tsx");
+const memoResult = importAllResult.memo(() => (
+  <closure_2 style={callback().container}>{jsx(_modDef14468, {})}</closure_2>
+));
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/privacy_and_safety/native/RequestDataScreen.tsx",
+);
 
 export default memoResult;

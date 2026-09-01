@@ -94,7 +94,11 @@ export const getAccountUpdateForUpdateRequest = function getAccountUpdateForUpda
     } else if (pendingAvatar.assetOrigin === AssetOriginTypes.AssetOriginTypes.ARCHIVED_ASSET) {
       obj.avatarId = pendingAvatar.originalAsset.id;
     } else {
-      ({ imageUri: obj.avatar, description: obj.avatarDescription, originalMd5: obj.avatarOriginalMd5 } = pendingAvatar);
+      ({
+        imageUri: obj.avatar,
+        description: obj.avatarDescription,
+        originalMd5: obj.avatarOriginalMd5,
+      } = pendingAvatar);
     }
   }
   if (undefined !== closure_1_0.pendingAvatarDecoration) {
@@ -117,7 +121,11 @@ export const getGuildMemberChangesForUpdateRequest = function getGuildMemberChan
     } else if (pendingAvatar.assetOrigin === AssetOriginTypes.AssetOriginTypes.ARCHIVED_ASSET) {
       obj.avatarId = pendingAvatar.originalAsset.id;
     } else {
-      ({ imageUri: obj.avatar, description: obj.avatarDescription, originalMd5: obj.avatarOriginalMd5 } = pendingAvatar);
+      ({
+        imageUri: obj.avatar,
+        description: obj.avatarDescription,
+        originalMd5: obj.avatarOriginalMd5,
+      } = pendingAvatar);
     }
   }
   if (undefined !== pendingAvatar.pendingNickname) {

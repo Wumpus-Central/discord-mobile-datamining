@@ -18,7 +18,7 @@ const GuildFeatures = ME.GuildFeatures;
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = { tier: BoostedGuildTiers.NONE, title: null, IconComponent: "r" };
 obj[1] = intl.string(require("getSystemLocale").t.tfVXhP);
-let items = [obj, , , ];
+let items = [obj, , ,];
 obj = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null };
 obj[1] = intl2.string(require("getSystemLocale").t.nzXtaS);
 obj[2] = require("BoostGemOutlineIcon").BoostGemOutlineIcon;
@@ -39,8 +39,24 @@ let closure_15 = createCacheKey.createStyles((arg0) => {
   obj[1] = obj;
   obj[2] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
   obj1 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
-  obj[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.lg, width: ThemesDefault.space.PX_64, height: ThemesDefault.space.PX_64, overflow: "hidden", alignItems: "center", justifyContent: "center" };
-  const obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.lg, width: ThemesDefault.space.PX_64, height: ThemesDefault.space.PX_64, overflow: "hidden", alignItems: "center", justifyContent: "center" };
+  obj[3] = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+    borderRadius: ThemesDefault.radii.lg,
+    width: ThemesDefault.space.PX_64,
+    height: ThemesDefault.space.PX_64,
+    overflow: "hidden",
+    alignItems: "center",
+    justifyContent: "center",
+  };
+  const obj2 = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+    borderRadius: ThemesDefault.radii.lg,
+    width: ThemesDefault.space.PX_64,
+    height: ThemesDefault.space.PX_64,
+    overflow: "hidden",
+    alignItems: "center",
+    justifyContent: "center",
+  };
   obj[4] = { gap: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
   return obj;
 });
@@ -57,27 +73,31 @@ const memoResult = importAllResult.memo(function GuildSettingsModalStickers(guil
   let obj = guildId(guild[15]);
   items = [stickers];
   let items1 = [guildId];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    guild = stickers.getGuild(guildId);
-    let hasItem;
-    if (guild != null) {
-      const features = guild.features;
-      hasItem = features.has(closure_1_10.MORE_STICKERS);
-    }
-    if (true !== hasItem) {
-      let premiumTier;
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => {
+      guild = stickers.getGuild(guildId);
+      let hasItem;
       if (guild != null) {
-        premiumTier = guild.premiumTier;
+        const features = guild.features;
+        hasItem = features.has(closure_1_10.MORE_STICKERS);
       }
-      if (premiumTier == null) {
-        premiumTier = closure_1_9.NONE;
+      if (true !== hasItem) {
+        let premiumTier;
+        if (guild != null) {
+          premiumTier = guild.premiumTier;
+        }
+        if (premiumTier == null) {
+          premiumTier = closure_1_9.NONE;
+        }
+        guildTier = premiumTier;
+      } else {
+        guildTier = closure_1_9.TIER_3;
       }
-      guildTier = premiumTier;
-    } else {
-      guildTier = closure_1_9.TIER_3;
-    }
-    return { guild, guildTier };
-  }, items1);
+      return { guild, guildTier };
+    },
+    items1,
+  );
   guild = stateFromStoresObject.guild;
   guildTier = stateFromStoresObject.guildTier;
   obj1 = guildId(guild[16]);
@@ -98,7 +118,7 @@ const memoResult = importAllResult.memo(function GuildSettingsModalStickers(guil
     obj[1] = tmp3.label;
     let intl = tmp4(tmp2[8]).intl;
     obj[2] = intl.string(tmp4(tmp2[8]).t.yxVsBJ);
-    const items2 = [callback(tmp4(tmp2[20]).Text, obj), , , , ];
+    const items2 = [callback(tmp4(tmp2[20]).Text, obj), , , ,];
     obj1 = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
     obj1[2] = tmp3.label;
     const intl2 = tmp4(tmp2[8]).intl;
@@ -184,7 +204,7 @@ const memoResult = importAllResult.memo(function GuildSettingsModalStickers(guil
             const obj2 = { variant: "heading-sm/semibold", color: "text-strong", style: null, children: null };
             obj2[2] = closure_1.label;
             obj2[3] = tmp2.name;
-            items = [closure_1_12(closure_1_0(closure_1_2[20]).Text, obj2), ];
+            items = [closure_1_12(closure_1_0(closure_1_2[20]).Text, obj2)];
             let tmp16Result = null;
             if (null != user) {
               obj = { style: null, children: null };
@@ -193,7 +213,7 @@ const memoResult = importAllResult.memo(function GuildSettingsModalStickers(guil
               obj3[0] = user;
               obj3[1] = tmp10(tmp11[30]).AvatarSizes.XSMALL_20;
               obj3[2] = closure_0;
-              const items1 = [tmp9(tmp10(tmp11[30]).Avatar, obj3), ];
+              const items1 = [tmp9(tmp10(tmp11[30]).Avatar, obj3)];
               const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: null };
               obj4[2] = closure_1_1(tmp11[31]).getName(user);
               items1[1] = tmp9(tmp10(tmp11[20]).Text, obj4);
@@ -221,7 +241,7 @@ const memoResult = importAllResult.memo(function GuildSettingsModalStickers(guil
             obj[3] = fn;
             return closure_1_12(closure_1_0(closure_1_2[27]).TableRow, obj, arg1);
           }
-        })
+        }),
       ];
       obj3[1] = items;
       return closure_1_13(guildId(guild[26]).TableRowGroup, obj3, tier);
@@ -232,6 +252,8 @@ const memoResult = importAllResult.memo(function GuildSettingsModalStickers(guil
   }
   tmp = importDefault;
 });
-let result = require("set").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickers.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickers.tsx",
+);
 
 export default memoResult;

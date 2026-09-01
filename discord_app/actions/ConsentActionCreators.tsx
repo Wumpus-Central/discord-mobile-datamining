@@ -41,7 +41,11 @@ const result = set.fileFinishedImporting("actions/ConsentActionCreators.tsx");
 
 export const fetchConsents = function fetchConsents() {
   const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.SETTINGS_CONSENT, oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
+  const obj = {
+    url: Endpoints.SETTINGS_CONSENT,
+    oldFormErrors: true,
+    rejectWithError: sendRequest.rejectWithMigratedError(),
+  };
   const value = HTTP.get(obj);
   return value.then(handleRequestSuccess, (body) => {
     error = new Error(body.body.message);

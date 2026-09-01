@@ -21,7 +21,7 @@ export default function UserProfileConfirmRemoveFriend(userDisplayName) {
   const intl3 = getSystemLocale.intl;
   obj[1] = intl3.string(getSystemLocale.t.cvSt1J);
   obj[2] = userDisplayName.onConfirm;
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm-remove"), ];
+  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm-remove")];
   obj1 = { variant: "secondary", text: null };
   const intl4 = getSystemLocale.intl;
   obj1[1] = intl4.string(getSystemLocale.t["eN6+rI"]);
@@ -29,4 +29,4 @@ export default function UserProfileConfirmRemoveFriend(userDisplayName) {
   obj[0] = items;
   obj[2] = callback2(getAlertModalItemKey.AlertActions, obj);
   return callback(getAlertModalItemKey.AlertModal, obj);
-};
+}

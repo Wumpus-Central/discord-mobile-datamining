@@ -24,7 +24,15 @@ export default function useSimilarGames(arg0) {
   tmp3Result = tmp3(589);
   const items = [closure_2];
   const items1 = [tmp7];
-  const stateFromStores = tmp3Result.useStateFromStores(items, () => data.some((closure_0) => null == game.getGame(closure_0) && !game.hasNoData(closure_0) && !game.didFetchingFail(closure_0)), items1);
+  const stateFromStores = tmp3Result.useStateFromStores(
+    items,
+    () =>
+      data.some(
+        (closure_0) =>
+          null == game.getGame(closure_0) && !game.hasNoData(closure_0) && !game.didFetchingFail(closure_0),
+      ),
+    items1,
+  );
   data(589);
   const items2 = [closure_2, closure_3];
   [][0] = tmp7;
@@ -33,9 +41,9 @@ export default function useSimilarGames(arg0) {
     obj[1] = closure_6;
   } else {
     obj = { isFetching: null, similarGames: null };
-    obj[0] = null == error && null == data || isLoading || stateFromStores;
+    obj[0] = (null == error && null == data) || isLoading || stateFromStores;
     obj[1] = tmp11;
-    const tmp13 = null == error && null == data || isLoading || stateFromStores;
+    const tmp13 = (null == error && null == data) || isLoading || stateFromStores;
   }
   return obj;
-};
+}

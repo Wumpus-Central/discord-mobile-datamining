@@ -59,11 +59,13 @@ function handleVoiceStateUpdates(voiceStates) {
 initializeDefault;
 let prototype = function VoiceChannelSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.actions = { CHANNEL_UPDATES: handleChannelUpdates, VOICE_STATE_UPDATES: handleVoiceStateUpdates };
+  applyArgumentsResult.actions = {
+    CHANNEL_UPDATES: handleChannelUpdates,
+    VOICE_STATE_UPDATES: handleVoiceStateUpdates,
+  };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 const result = require("set").fileFinishedImporting("stores/VoiceChannelSettingsManager.tsx");
 

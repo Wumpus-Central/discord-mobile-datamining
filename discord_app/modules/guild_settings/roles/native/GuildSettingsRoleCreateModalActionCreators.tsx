@@ -4,7 +4,9 @@ import asyncRequireImpl from "../../../../../_runtime/02009_asyncRequireImpl.js"
 import _modDef4723 from "../../../../actions/ModalActionCreators.tsx";
 
 const GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY = "GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY";
-const result = set.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleCreateModalActionCreators.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_settings/roles/native/GuildSettingsRoleCreateModalActionCreators.tsx",
+);
 
 export default {
   open() {
@@ -12,5 +14,5 @@ export default {
   },
   close() {
     _modDef4723.popWithKey(GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);
-  }
+  },
 };

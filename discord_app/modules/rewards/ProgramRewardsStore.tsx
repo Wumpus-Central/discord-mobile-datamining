@@ -86,10 +86,17 @@ function updateTtl() {
   }
   networkTtlCache.setTtl(tmp4);
 }
-let obj = { NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD: "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD", CACHE_SHOULD_NOT_FETCH: "CACHE_SHOULD_NOT_FETCH" };
+let obj = {
+  NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD: "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD",
+  CACHE_SHOULD_NOT_FETCH: "CACHE_SHOULD_NOT_FETCH",
+};
 let c6 = 86400000;
 const networkTtlCache = new require("NetworkTtlCacheStatus").NetworkTtlCache({ ttlMs: 86400000 });
-let closure_8 = { MORE_THAN_24H_BEFORE_REWARD: "MORE_THAN_24H_BEFORE_REWARD", LESS_THAN_24H_BEFORE_REWARD: "LESS_THAN_24H_BEFORE_REWARD", PAST_REWARD_DATE: "PAST_REWARD_DATE" };
+let closure_8 = {
+  MORE_THAN_24H_BEFORE_REWARD: "MORE_THAN_24H_BEFORE_REWARD",
+  LESS_THAN_24H_BEFORE_REWARD: "LESS_THAN_24H_BEFORE_REWARD",
+  PAST_REWARD_DATE: "PAST_REWARD_DATE",
+};
 const PersistedStore = initializeDefault.PersistedStore;
 class ProgramRewardsStore extends PersistedStore {
   constructor() {
@@ -122,7 +129,17 @@ class ProgramRewardsStore extends PersistedStore {
         obj[StringResult] = tmp8;
         continue;
       }
-      obj = { status: applyArgumentsResult.getStatus(), isFetching: applyArgumentsResult.isFetching(), isFetched: applyArgumentsResult.isFetched(), hasCachedValue: applyArgumentsResult.hasCachedValue(), isError: applyArgumentsResult.isError(), isReady: applyArgumentsResult.isReady(), shouldFetch: applyArgumentsResult.shouldFetch(), fetchedAt: null, rewards: null };
+      obj = {
+        status: applyArgumentsResult.getStatus(),
+        isFetching: applyArgumentsResult.isFetching(),
+        isFetched: applyArgumentsResult.isFetched(),
+        hasCachedValue: applyArgumentsResult.hasCachedValue(),
+        isError: applyArgumentsResult.isError(),
+        isReady: applyArgumentsResult.isReady(),
+        shouldFetch: applyArgumentsResult.shouldFetch(),
+        fetchedAt: null,
+        rewards: null,
+      };
       const cache = state.cache;
       let fetchedAt;
       if (cache != null) {
@@ -174,7 +191,7 @@ class ProgramRewardsStore extends PersistedStore {
         },
         getPurgeVars() {
           return { rewards: null };
-        }
+        },
       };
     };
     return applyArgumentsResult;
@@ -470,7 +487,7 @@ obj = {
     obj = networkTtlCache;
   },
   CURRENT_USER_UPDATE: updateTtl,
-  CONNECTION_OPEN: updateTtl
+  CONNECTION_OPEN: updateTtl,
 };
 const programRewardsStore = new ProgramRewardsStore(dispatcherDefault, obj);
 let result = require("set").fileFinishedImporting("modules/rewards/ProgramRewardsStore.tsx");

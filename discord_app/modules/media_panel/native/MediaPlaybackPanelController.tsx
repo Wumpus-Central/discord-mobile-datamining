@@ -10,7 +10,9 @@ import { MorphablePanelModes } from "../../panels/morphable/native/MorphablePane
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-let closure_12 = { code: "function MediaPlaybackPanelControllerTsx1(){const{mode,MediaPlaybackPanelModes,MorphablePanelModes}=this.__closure;switch(mode.get()){case MediaPlaybackPanelModes.PIP:{return MorphablePanelModes.PIP;}default:{return MorphablePanelModes.UNDEFINED;}}}" };
+let closure_12 = {
+  code: "function MediaPlaybackPanelControllerTsx1(){const{mode,MediaPlaybackPanelModes,MorphablePanelModes}=this.__closure;switch(mode.get()){case MediaPlaybackPanelModes.PIP:{return MorphablePanelModes.PIP;}default:{return MorphablePanelModes.UNDEFINED;}}}",
+};
 let result = require("set").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelController.tsx");
 
 export default function MediaPlaybackPanelController(children) {
@@ -97,7 +99,10 @@ export default function MediaPlaybackPanelController(children) {
   closure_14 = tmp14;
   const obj11 = sharedValue(sharedValue1[9]);
   const items2 = [sharedValue5];
-  stateFromStores = sharedValue(sharedValue1[13]).useStateFromStores(items2, () => sharedValue5.getActivityPanelMode() === constants.PIP);
+  stateFromStores = sharedValue(sharedValue1[13]).useStateFromStores(
+    items2,
+    () => sharedValue5.getActivityPanelMode() === constants.PIP,
+  );
   const items3 = [sharedValue4, tmp14, stateFromStores];
   const layoutEffect = sharedValue2.useLayoutEffect(() => {
     let tmp2 = !closure_14;
@@ -106,5 +111,25 @@ export default function MediaPlaybackPanelController(children) {
     }
     const result = sharedValue4.set(tmp2);
   }, items3);
-  return first(derivedValue(sharedValue1[14]).Provider, { value: sharedValue3(sharedValue2.useState(() => ({ mode: sharedValue, setMode: closure_12, morphablePanelMode: derivedValue, wrapperDimensions: sharedValue1, useReducedMotion: sharedValue3, pipState: sharedValue2, pipAvoidanceSpecs: closure_5, dismissToPipGestureRef: closure_10, dismissPanel: closure_13, scrollPosition: sharedValue5, canShowPIP: sharedValue4, lockScrolling: sharedValue6, wrapperOffset: closure_9 })), 1)[0], children: children.children });
-};
+  return first(derivedValue(sharedValue1[14]).Provider, {
+    value: sharedValue3(
+      sharedValue2.useState(() => ({
+        mode: sharedValue,
+        setMode: closure_12,
+        morphablePanelMode: derivedValue,
+        wrapperDimensions: sharedValue1,
+        useReducedMotion: sharedValue3,
+        pipState: sharedValue2,
+        pipAvoidanceSpecs: closure_5,
+        dismissToPipGestureRef: closure_10,
+        dismissPanel: closure_13,
+        scrollPosition: sharedValue5,
+        canShowPIP: sharedValue4,
+        lockScrolling: sharedValue6,
+        wrapperOffset: closure_9,
+      })),
+      1,
+    )[0],
+    children: children.children,
+  });
+}

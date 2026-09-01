@@ -10,9 +10,16 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 const require = arg1;
 ({ Image: c3, Pressable: c4 } = get_ActivityIndicator);
 let obj = { unavailableGuilds: null, unavailableGuildsIcon: null };
-obj = { marginTop: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_PADDING, justifyContent: "center", alignItems: "center" };
+obj = {
+  marginTop: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
+  justifyContent: "center",
+  alignItems: "center",
+};
 obj[0] = obj;
-createCacheKey = { width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
+createCacheKey = {
+  width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
+  height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
+};
 obj[1] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GuildsBarItemUnavailableGuilds() {

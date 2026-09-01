@@ -10,13 +10,17 @@ export const useCanSendStageStartNotification = function useCanSendStageStartNot
   const _require = first;
   const items = [closure_3];
   const items1 = [first];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let canResult = null != closure_0;
-    if (canResult) {
-      canResult = closure_1_3.can(closure_1_4.MENTION_EVERYONE, tmp);
-    }
-    return canResult;
-  }, items1);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let canResult = null != closure_0;
+      if (canResult) {
+        canResult = closure_1_3.can(closure_1_4.MENTION_EVERYONE, tmp);
+      }
+      return canResult;
+    },
+    items1,
+  );
 };
 export const useDefaultSendStartStageNotificationToggle = function useDefaultSendStartStageNotificationToggle(first) {
   let guild_id;

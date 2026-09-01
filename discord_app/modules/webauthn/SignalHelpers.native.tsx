@@ -11,7 +11,7 @@ const prototype = function SignalHelpers() {
 prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredentials(c0, id, found) {
   closure_0 = c0;
   closure_1 = id;
-  return callback(function*() {
+  return callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -76,7 +76,7 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
 };
 prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(c0, result, username, username2) {
   closure_0 = c0;
-  return callback(function*() {
+  return callback(function* () {
     if (c2 === 2) {
       c2 = 3;
       HermesBuiltin.throwTypeError();
@@ -149,7 +149,7 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(c0, re
 };
 prototype["signalUnknownCredential"] = function signalUnknownCredential(c0, cred_id) {
   closure_0 = c0;
-  return callback(function*() {
+  return callback(function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();

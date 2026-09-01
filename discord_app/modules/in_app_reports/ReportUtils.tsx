@@ -29,7 +29,7 @@ function _getReportMenu() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_3 = tmp4;
       const HTTP = lib(closure_1_2[5]).HTTP;
       obj1 = { url: null, query: null, rejectWithError: false };
@@ -69,7 +69,7 @@ function _getReportMenuForModeratorReport() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_3 = tmp4;
       const HTTP = lib(closure_1_2[5]).HTTP;
       obj1 = { url: null, query: null, rejectWithError: false };
@@ -109,7 +109,7 @@ function _getUnauthenticatedReportMenu() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_3 = tmp4;
       const HTTP = lib(closure_1_2[5]).HTTP;
       obj1 = { url: null, query: null, rejectWithError: false };
@@ -149,7 +149,7 @@ function _submitHeadlessReport() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -249,7 +249,7 @@ function _verifyUnauthenticatedReport() {
     closure_2 = arg2;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const HTTP = callback(table[5]).HTTP;
       obj1 = { url: null, body: null, rejectWithError: false };
       obj1[0] = closure_1_7.VERIFY_UNAUTHENTICATED_REPORT(callback);
@@ -273,7 +273,7 @@ function _verifyUnauthenticatedReport() {
 }
 function _getDsaExperiment() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const HTTP = v0(closure_1_2[5]).HTTP;
     obj1 = { url: null, rejectWithError: false };
     obj1[0] = closure_1_7.DSA_EXPERIMENT_UNAUTHENTICATED;
@@ -291,7 +291,7 @@ function _getDsaExperiment() {
 }
 function _fetchUrfCapabilities() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const HTTP = v0(closure_1_2[5]).HTTP;
     obj1 = { url: null, rejectWithError: false };
     obj1[0] = closure_1_7.DSA_CAPABILITIES;
@@ -313,7 +313,7 @@ function _submitReportSecondLook() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const HTTP = callback(table[5]).HTTP;
       obj1 = { url: null, body: null, rejectWithError: false };
       obj1[0] = closure_1_7.SUBMIT_REPORT_SECOND_LOOK;
@@ -360,7 +360,18 @@ function genSubmitData(version, name, arr, email_token) {
   if (str == null) {
     str = "en";
   }
-  obj = { channel_id: "Array", message_id: "category", stage_instance_id: "forEach", guild_id: "window", guild_scheduled_event_id: "HermesInternal", user_id: "w", email_token: "__closure", application_id: "__closure", entrypoint: "__closure", widget_id: "__closure" };
+  obj = {
+    channel_id: "Array",
+    message_id: "category",
+    stage_instance_id: "forEach",
+    guild_id: "window",
+    guild_scheduled_event_id: "HermesInternal",
+    user_id: "w",
+    email_token: "__closure",
+    application_id: "__closure",
+    entrypoint: "__closure",
+    widget_id: "__closure",
+  };
   obj[2] = str;
   obj[3] = arr.map((nodeRef) => nodeRef.nodeRef);
   obj[4] = arr.reduce((arg0, arg1) => {
@@ -379,11 +390,15 @@ function genSubmitData(version, name, arr, email_token) {
       textInput = {};
     }
     const entries = Object.entries(textInput);
-    const merged2 = Object.assign(Object.fromEntries(entries.map((arg0) => {
-      [tmp, ] = arg0;
-      const items = [tmp, tmp2];
-      return items;
-    })));
+    const merged2 = Object.assign(
+      Object.fromEntries(
+        entries.map((arg0) => {
+          [tmp] = arg0;
+          const items = [tmp, tmp2];
+          return items;
+        }),
+      ),
+    );
     return obj;
   }, {});
   if (name.name !== ReportNames.ReportNames.MESSAGE) {
@@ -458,7 +473,11 @@ function genSubmitData(version, name, arr, email_token) {
               const merged15 = Object.assign(obj);
               obj7.name = name.name;
               obj7.application_id = name.record.id;
-              ({ contextualGuildId: obj5.guild_id, contextualChannelId: obj5.channel_id, entrypoint: obj5.entrypoint } = name);
+              ({
+                contextualGuildId: obj5.guild_id,
+                contextualChannelId: obj5.channel_id,
+                entrypoint: obj5.entrypoint,
+              } = name);
               tmp3 = obj7;
             } else if (name.name === tmp(8757).ReportNames.WIDGET) {
               const obj8 = {};
@@ -562,11 +581,15 @@ export const submitReport = function submitReport(language, name, arr) {
           textInput = {};
         }
         const entries = Object.entries(textInput);
-        const merged2 = Object.assign(Object.fromEntries(entries.map((arg0) => {
-          [tmp, ] = arg0;
-          const items = [tmp, tmp2];
-          return items;
-        })));
+        const merged2 = Object.assign(
+          Object.fromEntries(
+            entries.map((arg0) => {
+              [tmp] = arg0;
+              const items = [tmp, tmp2];
+              return items;
+            }),
+          ),
+        );
         return obj;
       }, {});
       let tmp15 = null;
@@ -665,13 +688,18 @@ export const sendUnauthenticatedReportPincode = function sendUnauthenticatedRepo
   const result = closure_7.SEND_UNAUTHENTICATED_REPORT_PINCODE(name);
   if (0 < email.length) {
     do {
-      num = (num << 5) + num + email.charCodeAt(num2) | 0;
+      num = ((num << 5) + num + email.charCodeAt(num2)) | 0;
       num2 = num2 + 1;
       num3 = num;
       length = email.length;
     } while (num2 < length);
   }
-  obj = { url: "" + result + "?b=" + str.toString(36), body: obj, rejectWithError: false, failImmediatelyWhenRateLimited: true };
+  obj = {
+    url: "" + result + "?b=" + str.toString(36),
+    body: obj,
+    rejectWithError: false,
+    failImmediatelyWhenRateLimited: true,
+  };
   obj = { name, email };
   return HTTP.post(obj);
 };
@@ -734,7 +762,17 @@ export const getModeratorReportEndpointSafely = function getModeratorReportEndpo
 };
 export const trackCloseReportModalAnalytics = function trackCloseReportModalAnalytics(_onSubmit, c12, first) {
   let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { report_type: _onSubmit.name, report_id: first, navigation_history: c12, message_id: null, stage_instance_id: null, guild_scheduled_event_id: null, guild_id: null, channel_id: null, application_id: null };
+  obj = {
+    report_type: _onSubmit.name,
+    report_id: first,
+    navigation_history: c12,
+    message_id: null,
+    stage_instance_id: null,
+    guild_scheduled_event_id: null,
+    guild_id: null,
+    channel_id: null,
+    application_id: null,
+  };
   if (_onSubmit.name === ReportNames.ReportNames.MESSAGE) {
     let id = _onSubmit.record.id;
   }
@@ -779,55 +817,64 @@ export const showInAppReportsFeedbackModal = function showInAppReportsFeedbackMo
   obj.dispatch(obj);
 };
 export const areRequiredElementsUnfilled = function areRequiredElementsUnfilled(arg0, textInput) {
-  ({ freeTextElements, dropdownElements, countrySelectElement, radioGroupElements, multiSelectElement, contentUrlInputElement } = arg0);
+  ({
+    freeTextElements,
+    dropdownElements,
+    countrySelectElement,
+    radioGroupElements,
+    multiSelectElement,
+    contentUrlInputElement,
+  } = arg0);
   textInput = textInput.textInput;
   const multiSelect = textInput.multiSelect;
-  let someResult = freeTextElements.some((should_submit_data) => {
-    let tmp = true === should_submit_data.should_submit_data;
-    if (tmp) {
-      let tmp4;
-      if (textInput != null) {
-        tmp4 = tmp2[should_submit_data.name];
-      }
-      let tmp5 = null == tmp4;
-      if (!tmp5) {
-        let value;
-        if (tmp2 != null) {
-          value = tmp2[should_submit_data.name].value;
+  let someResult =
+    freeTextElements.some((should_submit_data) => {
+      let tmp = true === should_submit_data.should_submit_data;
+      if (tmp) {
+        let tmp4;
+        if (textInput != null) {
+          tmp4 = tmp2[should_submit_data.name];
         }
-        tmp5 = "" === value;
-      }
-      if (!tmp5) {
-        let isValid;
-        if (tmp2 != null) {
-          if (tmp2[should_submit_data.name] != null) {
-            isValid = tmp8.isValid;
+        let tmp5 = null == tmp4;
+        if (!tmp5) {
+          let value;
+          if (tmp2 != null) {
+            value = tmp2[should_submit_data.name].value;
           }
+          tmp5 = "" === value;
         }
-        tmp5 = !isValid;
-      }
-      tmp = tmp5;
-    }
-    return tmp;
-  }) || dropdownElements.some((should_submit_data) => {
-    let tmp = true === should_submit_data.should_submit_data;
-    if (tmp) {
-      let tmp4;
-      if (textInput != null) {
-        tmp4 = tmp2[should_submit_data.name];
-      }
-      let tmp5 = null == tmp4;
-      if (!tmp5) {
-        let value;
-        if (tmp2 != null) {
-          value = tmp2[should_submit_data.name].value;
+        if (!tmp5) {
+          let isValid;
+          if (tmp2 != null) {
+            if (tmp2[should_submit_data.name] != null) {
+              isValid = tmp8.isValid;
+            }
+          }
+          tmp5 = !isValid;
         }
-        tmp5 = "" === value;
+        tmp = tmp5;
       }
-      tmp = tmp5;
-    }
-    return tmp;
-  });
+      return tmp;
+    }) ||
+    dropdownElements.some((should_submit_data) => {
+      let tmp = true === should_submit_data.should_submit_data;
+      if (tmp) {
+        let tmp4;
+        if (textInput != null) {
+          tmp4 = tmp2[should_submit_data.name];
+        }
+        let tmp5 = null == tmp4;
+        if (!tmp5) {
+          let value;
+          if (tmp2 != null) {
+            value = tmp2[should_submit_data.name].value;
+          }
+          tmp5 = "" === value;
+        }
+        tmp = tmp5;
+      }
+      return tmp;
+    });
   if (!someResult) {
     let should_submit_data;
     if (countrySelectElement != null) {
@@ -922,8 +969,16 @@ export const areRequiredElementsUnfilled = function areRequiredElementsUnfilled(
   }
   return someResult;
 };
-export const TrackIarSettingsUpsellsActionType = { SETTINGS_UPSELLS_VIEWED: "SETTINGS_UPSELLS_VIEWED", SETTINGS_UPSELLS_APPLY_CLICKED: "SETTINGS_UPSELLS_APPLY_CLICKED", SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED: "SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED" };
-export const useTrackSettingsUpsellsAction = function useTrackSettingsUpsellsAction(reportType, reportSubType, reportId) {
+export const TrackIarSettingsUpsellsActionType = {
+  SETTINGS_UPSELLS_VIEWED: "SETTINGS_UPSELLS_VIEWED",
+  SETTINGS_UPSELLS_APPLY_CLICKED: "SETTINGS_UPSELLS_APPLY_CLICKED",
+  SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED: "SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED",
+};
+export const useTrackSettingsUpsellsAction = function useTrackSettingsUpsellsAction(
+  reportType,
+  reportSubType,
+  reportId,
+) {
   closure_0 = reportType;
   closure_1 = reportSubType;
   closure_2 = reportId;
@@ -932,7 +987,13 @@ export const useTrackSettingsUpsellsAction = function useTrackSettingsUpsellsAct
     closure_0 = arg0;
     return (action) => {
       let obj = callback(table[11]);
-      obj = { report_id: closure_1_2, report_type: name.name, report_subtype: closure_1_1, settings_upsells_type: name, action };
+      obj = {
+        report_id: closure_1_2,
+        report_type: name.name,
+        report_subtype: closure_1_1,
+        settings_upsells_type: name,
+        action,
+      };
       obj.trackWithMetadata(closure_2_6.IAR_SETTINGS_UPSELLS_ACTION, obj);
     };
   }, items);

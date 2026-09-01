@@ -9,7 +9,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { wrapper: null, buttonWrapper: null, spacer: null, iconColor: null };
-createCacheKey = { display: "flex", flexDirection: "row", padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  display: "flex",
+  flexDirection: "row",
+  padding: 12,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { width: 8 };
@@ -55,7 +60,7 @@ export default function ResourceChannelButtons(channel) {
       obj[1] = callback2(tmp(tmp2[9]).Button, obj1);
       tmp11 = callback2(tmp10, obj);
     }
-    const items1 = [tmp11, , ];
+    const items1 = [tmp11, ,];
     let tmp14 = null != first && null != tmp7;
     if (tmp14) {
       const obj3 = { style: null };
@@ -87,4 +92,4 @@ export default function ResourceChannelButtons(channel) {
     tmp9Result = null;
   }
   return tmp9Result;
-};
+}

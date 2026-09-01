@@ -3,12 +3,34 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
-let obj = { DISMISSED: 0, [0]: "DISMISSED", COMMAND: 1, [1]: "COMMAND", ACTIVITY: 2, [2]: "ACTIVITY", BACK: 3, [3]: "BACK", OAUTH_MODAL: 4, [4]: "OAUTH_MODAL" };
+let obj = {
+  DISMISSED: 0,
+  [0]: "DISMISSED",
+  COMMAND: 1,
+  [1]: "COMMAND",
+  ACTIVITY: 2,
+  [2]: "ACTIVITY",
+  BACK: 3,
+  [3]: "BACK",
+  OAUTH_MODAL: 4,
+  [4]: "OAUTH_MODAL",
+};
 let context = importAllResult.createContext(undefined);
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherContext.tsx");
 
 export const AppLauncherKeyboardCloseReason = obj;
-export const AppLauncherBottomSheetExpandReason = { GESTURE: 0, [0]: "GESTURE", KEYBOARD: 1, [1]: "KEYBOARD", APP_VIEW: 2, [2]: "APP_VIEW", COMMAND_VIEW: 3, [3]: "COMMAND_VIEW", OTHER: 4, [4]: "OTHER" };
+export const AppLauncherBottomSheetExpandReason = {
+  GESTURE: 0,
+  [0]: "GESTURE",
+  KEYBOARD: 1,
+  [1]: "KEYBOARD",
+  APP_VIEW: 2,
+  [2]: "APP_VIEW",
+  COMMAND_VIEW: 3,
+  [3]: "COMMAND_VIEW",
+  OTHER: 4,
+  [4]: "OTHER",
+};
 export const AppLauncherContext = context;
 export const useAppLauncherChatInputRefDummy = function useAppLauncherChatInputRefDummy(noop) {
   noop = noop.noop;
@@ -33,7 +55,7 @@ export const useAppLauncherChatInputRefDummy = function useAppLauncherChatInputR
         error = new Error("use useRequiredAppLauncherContext and provide a ChatInputRef");
         throw error;
       }
-    }
+    },
   });
 };
 export const useRequiredAppLauncherContext = function useRequiredAppLauncherContext() {
@@ -77,11 +99,23 @@ export const useAppLauncherContext = function useAppLauncherContext() {
         error = new Error("use useRequiredAppLauncherContext and provide a ChatInputRef");
         throw error;
       }
-    }
+    },
   };
   const ref = sharedValue.useRef(obj);
   const items = [defaultAppLauncherWidth, TEXT, ref, sharedValue, sharedValue1];
-  const memo = sharedValue.useMemo(() => ({ keyboardCloseReasonRef: c0, bottomSheetIndex: sharedValue, bottomSheetPosition: sharedValue1, bottomSheetExpandReasonRef: closure_1, chatInputRef: ref, width: defaultAppLauncherWidth, entrypoint: TEXT, onActivityItemSelected: "Boolean" }), items);
+  const memo = sharedValue.useMemo(
+    () => ({
+      keyboardCloseReasonRef: c0,
+      bottomSheetIndex: sharedValue,
+      bottomSheetPosition: sharedValue1,
+      bottomSheetExpandReasonRef: closure_1,
+      chatInputRef: ref,
+      width: defaultAppLauncherWidth,
+      entrypoint: TEXT,
+      onActivityItemSelected: "Boolean",
+    }),
+    items,
+  );
   context = sharedValue.useContext(TEXT);
   if (context == null) {
     context = memo;

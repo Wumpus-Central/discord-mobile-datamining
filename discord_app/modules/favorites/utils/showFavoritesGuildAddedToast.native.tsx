@@ -13,4 +13,4 @@ export default function showFavoritesGuildAddedToast() {
   obj[1] = intl.string(getSystemLocale.t["4tSWQg"]);
   obj[2] = StarIcon.StarIcon;
   obj.open(obj);
-};
+}

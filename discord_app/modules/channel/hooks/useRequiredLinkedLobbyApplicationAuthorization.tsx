@@ -20,11 +20,16 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
   }
   let obj = application_id(stateFromStores[3]);
   let items = [closure_5];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ authorizationsFetchState: closure_1_5.getFetchState(), applicationOAuth2Token: closure_1_5.getNewestTokenForApplication(application_id) }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    authorizationsFetchState: closure_1_5.getFetchState(),
+    applicationOAuth2Token: closure_1_5.getNewestTokenForApplication(application_id),
+  }));
   const authorizationsFetchState = stateFromStoresObject.authorizationsFetchState;
   const applicationOAuth2Token = stateFromStoresObject.applicationOAuth2Token;
   const items1 = [closure_4];
-  stateFromStores = application_id(stateFromStores[3]).useStateFromStores(items1, () => closure_1_4.getApplication(application_id));
+  stateFromStores = application_id(stateFromStores[3]).useStateFromStores(items1, () =>
+    closure_1_4.getApplication(application_id),
+  );
   const obj2 = application_id(stateFromStores[3]);
   const items2 = [closure_4];
   let stateFromStores1 = application_id(stateFromStores[3]).useStateFromStores(items2, () => {
@@ -101,7 +106,11 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
     tmp14 = authorizationsFetchState !== FetchState.FETCHED || null == stateFromStores || !tmp10;
     const tmp16 = authorizationsFetchState !== FetchState.FETCHED || null == stateFromStores || !tmp10;
   }
-  obj = { showLinkedLobbyApplicationLoadingIndicator: tmp14, requiredLinkedLobbyApplication: null, shouldRelaunchLinkedLobbyApplication: null };
+  obj = {
+    showLinkedLobbyApplicationLoadingIndicator: tmp14,
+    requiredLinkedLobbyApplication: null,
+    shouldRelaunchLinkedLobbyApplication: null,
+  };
   let tmp17 = null;
   if (null == applicationOAuth2Token && null != stateFromStores && tmp10) {
     let tmp18 = stateFromStores;
@@ -116,4 +125,4 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
   obj[1] = tmp17;
   obj[2] = tmp13;
   return obj;
-};
+}

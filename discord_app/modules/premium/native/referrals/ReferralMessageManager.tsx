@@ -18,7 +18,9 @@ function handleReferralMessages(type) {
           const userOffer = getPaymentGateway.fetchUserOffer("ReferralMessageManager");
           const tmpResult = getPaymentGateway;
         }
-        tmp6 = null == premiumTypeSubscription && closure_4.shouldFetchReferralOffer(tmp9(11).extractTimestamp(type.content));
+        tmp6 =
+          null == premiumTypeSubscription &&
+          closure_4.shouldFetchReferralOffer(tmp9(11).extractTimestamp(type.content));
       }
       obj3 = DISCORD_EPOCHDefault;
       tmp9 = importDefault;

@@ -12,8 +12,21 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 ({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: c4 } = ARBITRARY_LARGE_OFFSET);
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-createCacheKey = { title: null, titleContent: null, text: null, row: null, rowLabel: null, rowLabelText: null, rowSublabel: null };
-createCacheKey = { marginBottom: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+createCacheKey = {
+  title: null,
+  titleContent: null,
+  text: null,
+  row: null,
+  rowLabel: null,
+  rowLabelText: null,
+  rowSublabel: null,
+};
+createCacheKey = {
+  marginBottom: ThemesDefault.space.PX_12,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_4,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 createCacheKey[2] = { flexShrink: 1 };
@@ -41,8 +54,15 @@ export default function UserProfileCard(arg0) {
     if (tmp3Result) {
       obj = { style: null, children: null };
       obj[0] = tmp2.titleContent;
-      const items1 = [titleLeadingIcon, , ];
-      obj1 = { style: null, accessibilityRole: "header", variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: null };
+      const items1 = [titleLeadingIcon, ,];
+      obj1 = {
+        style: null,
+        accessibilityRole: "header",
+        variant: "text-sm/medium",
+        color: "text-strong",
+        lineClamp: 1,
+        children: null,
+      };
       obj1[0] = tmp2.text;
       obj1[5] = title;
       items1[1] = callback(Text.Text, obj1);
@@ -57,7 +77,7 @@ export default function UserProfileCard(arg0) {
   const items3 = [tmp3Result, children];
   obj.children = items3;
   return closure_6(View, obj);
-};
+}
 export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   ({ label, sublabel, hint, isDestructive, labelColor, arrow } = arg0);
   ({ icon, disabled, onPress } = arg0);
@@ -73,14 +93,26 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   if (isDestructive) {
     str2 = "text-feedback-critical";
   }
-  let obj = { style: tmp.row, accessibilityRole: "button", accessibilityLabel: label, disabled, onPress, children: null };
+  let obj = {
+    style: tmp.row,
+    accessibilityRole: "button",
+    accessibilityLabel: label,
+    disabled,
+    onPress,
+    children: null,
+  };
   obj = { style: tmp.rowLabel, children: null };
   obj = { size: closure_4, color: str };
-  const items = [callback(icon, obj), , , ];
+  const items = [callback(icon, obj), , ,];
   if (labelColor == null) {
     labelColor = str2;
   }
-  items[1] = callback(Text.Text, { variant: "text-md/semibold", color: labelColor, style: tmp.rowLabelText, children: label });
+  items[1] = callback(Text.Text, {
+    variant: "text-md/semibold",
+    color: labelColor,
+    style: tmp.rowLabelText,
+    children: label,
+  });
   tmp6Result = null != hint;
   if (tmp6Result) {
     const obj2 = { size: null, color: null };
@@ -94,7 +126,7 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   }
   items[3] = tmp6Result;
   obj[1] = items;
-  const items1 = [closure_6(View, obj), ];
+  const items1 = [closure_6(View, obj)];
   let tmp6Result1 = null != sublabel;
   if (tmp6Result1) {
     const obj3 = { style: null, children: null };
@@ -108,5 +140,7 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
 };
 export const UserProfileCardRows = function UserProfileCardRows(children) {
   const Children = React.Children;
-  return callback(closure_7, { children: Children.map(children.children, (children) => callback(React.Fragment, { children }, arg1)) });
+  return callback(closure_7, {
+    children: Children.map(children.children, (children) => callback(React.Fragment, { children }, arg1)),
+  });
 };

@@ -3,10 +3,20 @@ import set from "../../../_runtime/00002_set.js";
 import hooksDefault from "../../../_runtime/04075_hooks.js";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
 
-({ UpcomingGuildEventNoticeTypes: obj1, NEW_EVENT_WINDOW_MILLISECONDS: c3, EVENT_STARTING_SOON_WINDOW_MILLISECONDS: c4, ACKED_RECENTLY_WINDOW_DAYS: c5 } = GUILD_EVENT_MAX_NAME_LENGTH);
+({
+  UpcomingGuildEventNoticeTypes: obj1,
+  NEW_EVENT_WINDOW_MILLISECONDS: c3,
+  EVENT_STARTING_SOON_WINDOW_MILLISECONDS: c4,
+  ACKED_RECENTLY_WINDOW_DAYS: c5,
+} = GUILD_EVENT_MAX_NAME_LENGTH);
 const result = set.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventUtils.tsx");
 
-export const getNextShownUpcomingEventNoticeType = function getNextShownUpcomingEventNoticeType(guildScheduledEvent, arg1, arg2, flag) {
+export const getNextShownUpcomingEventNoticeType = function getNextShownUpcomingEventNoticeType(
+  guildScheduledEvent,
+  arg1,
+  arg2,
+  flag,
+) {
   const obj = hooksDefault();
   const time = new Date(guildScheduledEvent.scheduled_start_time).getTime();
   const diff = time - closure_4;

@@ -61,7 +61,18 @@ function roundFPCountdownUnits(arg0) {
     return obj2;
   }
 }
-let obj = { SHORT_TIME_LEFT: 0, [0]: "SHORT_TIME_LEFT", LONG_TIME_LEFT: 1, [1]: "LONG_TIME_LEFT", ENDS_IN: 2, [2]: "ENDS_IN", SHORT_TIME: 3, [3]: "SHORT_TIME", CREDITS_ENDS_IN: 4, [4]: "CREDITS_ENDS_IN" };
+let obj = {
+  SHORT_TIME_LEFT: 0,
+  [0]: "SHORT_TIME_LEFT",
+  LONG_TIME_LEFT: 1,
+  [1]: "LONG_TIME_LEFT",
+  ENDS_IN: 2,
+  [2]: "ENDS_IN",
+  SHORT_TIME: 3,
+  [3]: "SHORT_TIME",
+  CREDITS_ENDS_IN: 4,
+  [4]: "CREDITS_ENDS_IN",
+};
 const result = set.fileFinishedImporting("modules/billing/hooks/useFPDurationLeft.tsx");
 
 export default function useFPDurationLeft(toDate) {
@@ -100,6 +111,6 @@ export default function useFPDurationLeft(toDate) {
     obj2[2] = getSystemLocale.t.Y4FNdL;
   }
   roundFPCountdownUnits(useCountdownDefault(toDate.toDate(), 60000));
-};
+}
 export const CountDownMessageTypes = obj;
 export { roundFPCountdownUnits };

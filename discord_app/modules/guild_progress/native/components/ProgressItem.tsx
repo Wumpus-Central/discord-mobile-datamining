@@ -39,12 +39,22 @@ export default function ProgressItem(onPress) {
     }
     onPress();
   }, items);
-  const items1 = [tmp.formCTA, ];
+  const items1 = [tmp.formCTA];
   let formCTAFullWidth;
   if (fullWidth) {
     formCTAFullWidth = tmp.formCTAFullWidth;
   }
-  obj = { variant: "row-button", style: items1, onPress: callback, iconSource: source, iconStyle, title, subtitle: description, completed: isCompleted, trailing: null };
+  obj = {
+    variant: "row-button",
+    style: items1,
+    onPress: callback,
+    iconSource: source,
+    iconStyle,
+    title,
+    subtitle: description,
+    completed: isCompleted,
+    trailing: null,
+  };
   items1[1] = formCTAFullWidth;
   let renderEndComponentResult;
   if (renderEndComponent != null) {
@@ -54,6 +64,28 @@ export default function ProgressItem(onPress) {
     renderEndComponentResult = null;
   }
   obj[8] = renderEndComponentResult;
-  obj[1] = jsx(onPress(analyticsSetupType[7]).FormCTA, { variant: "row-button", style: items1, onPress: callback, iconSource: source, iconStyle, title, subtitle: description, completed: isCompleted, trailing: null });
-  return <View variant="row-button" style={items1} onPress={callback} iconSource={source} iconStyle={iconStyle} title={title} subtitle={description} completed={isCompleted} trailing={null} />;
-};
+  obj[1] = jsx(onPress(analyticsSetupType[7]).FormCTA, {
+    variant: "row-button",
+    style: items1,
+    onPress: callback,
+    iconSource: source,
+    iconStyle,
+    title,
+    subtitle: description,
+    completed: isCompleted,
+    trailing: null,
+  });
+  return (
+    <View
+      variant="row-button"
+      style={items1}
+      onPress={callback}
+      iconSource={source}
+      iconStyle={iconStyle}
+      title={title}
+      subtitle={description}
+      completed={isCompleted}
+      trailing={null}
+    />
+  );
+}

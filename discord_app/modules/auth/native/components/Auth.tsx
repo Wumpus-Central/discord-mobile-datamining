@@ -29,7 +29,7 @@ function getInitialAuthRouteStack() {
     obj1 = canUseMultiAccountMobile;
     obj = { name: null };
     obj[0] = AuthStates.WELCOME;
-    items1 = [obj, ];
+    items1 = [obj];
     obj1 = { name: null };
     obj1[0] = AuthStates.LOGIN;
     items1[1] = obj1;
@@ -68,11 +68,11 @@ function NavigatorWithCaptchaHook() {
   const tmp16 = closure_10;
   const tmp7 = callback(importAllResult.useState(first[first.length - 1].name), 2);
   obj[0] = registerAsset;
-  const children = [callback2(BackgroundImageDefault, obj), ];
+  const children = [callback2(BackgroundImageDefault, obj)];
   if (tmp5) {
     obj = { value: null, children: null };
     obj[0] = tmp11;
-    const items1 = [tmp6.wideOuterContainer, ];
+    const items1 = [tmp6.wideOuterContainer];
     let tmp24 = null;
     if (tmp13) {
       obj1 = { paddingBottom: null };
@@ -82,7 +82,7 @@ function NavigatorWithCaptchaHook() {
     const obj2 = { style: null, children: null };
     items1[1] = tmp24;
     obj2[0] = items1;
-    const items2 = [tmp6.wideCard, , ];
+    const items2 = [tmp6.wideCard, ,];
     let tmp25 = null;
     if (null != tmp8) {
       let num = obj[tmp8];
@@ -96,12 +96,31 @@ function NavigatorWithCaptchaHook() {
     items2[1] = tmp25;
     let obj4 = null;
     if (tmp13) {
-      obj4 = { maxHeight: "100%", height: "100%", marginTop: 32, borderBottomLeftRadius: 0, borderBottomRightRadius: 0 };
+      obj4 = {
+        maxHeight: "100%",
+        height: "100%",
+        marginTop: 32,
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
+      };
     }
     const obj5 = { style: null, children: null };
     items2[2] = obj4;
     obj5[0] = items2;
-    const obj6 = { screens: null, containerStyle: null, viewStyle: null, headerStatusBarHeight: 0, cardOverlayEnabled: false, cardShadowEnabled: false, initialRouteStack: null, onWillFocus: null, onStateChange: null, headerStyle: null, headerLeftContainerStyle: null, disableHeaderAnimation: true };
+    const obj6 = {
+      screens: null,
+      containerStyle: null,
+      viewStyle: null,
+      headerStatusBarHeight: 0,
+      cardOverlayEnabled: false,
+      cardShadowEnabled: false,
+      initialRouteStack: null,
+      onWillFocus: null,
+      onStateChange: null,
+      headerStyle: null,
+      headerLeftContainerStyle: null,
+      disableHeaderAnimation: true,
+    };
     obj6[0] = closure_14;
     obj6[1] = tmp6.cardContainer;
     let transparent = null;
@@ -128,7 +147,15 @@ function NavigatorWithCaptchaHook() {
     let tmp17Result = tmp17(tmp(7746).WideAuthScrollContext.Provider, obj);
     tmpResult = tmp(501);
   } else {
-    const obj8 = { screens: null, viewStyle: null, containerStyle: null, headerBackTitle: null, initialRouteStack: null, onWillFocus: null, headerStyle: null };
+    const obj8 = {
+      screens: null,
+      viewStyle: null,
+      containerStyle: null,
+      headerBackTitle: null,
+      initialRouteStack: null,
+      onWillFocus: null,
+      headerStyle: null,
+    };
     obj8[0] = headerTitle;
     ({ transparent: obj4[1], transparent: obj4[2] } = tmp6);
     const intl = tmp(1236).intl;
@@ -146,56 +173,58 @@ let c4 = importAllResult;
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 headerTitle = headerTitle.getAllAuthScreens();
 headerTitle = Object.entries(headerTitle);
-let closure_14 = Object.fromEntries(headerTitle.map((arg0) => {
-  [tmp, tmp2] = arg0;
-  const items = [tmp, ];
-  obj = {};
-  let merged = Object.assign(tmp2);
-  obj.headerMode = "screen";
-  obj = null;
-  if (tmp2.fullscreen) {
-    obj = { fullscreen: false, headerTransparent: false };
-  }
-  let merged1 = Object.assign(obj);
-  let tmp6 = null;
-  if (tmp !== AuthStates.MFA) {
-    tmp6 = null;
-    if (tmp !== tmp5.WELCOME) {
-      obj = { headerLeft: null };
-      obj[0] = function headerLeft(arg0) {
-        function backImage() {
-          return callback2(callback(table[8]).HeaderBackImage, {});
-        }
-        obj = headerLeft;
-        if (null != headerLeft.headerLeft) {
-          obj = {};
-          const merged = Object.assign(arg0);
-          obj.backImage = backImage;
-          let headerLeftResult = obj.headerLeft(obj);
-        } else {
-          obj = {};
-          const merged1 = Object.assign(arg0);
-          obj.backImage = backImage;
-          headerLeftResult = closure_1_9(closure_1_0(closure_1_2[9]).BackButtonWithTracking, obj);
-        }
-        return headerLeftResult;
-      };
-      tmp6 = obj;
+let closure_14 = Object.fromEntries(
+  headerTitle.map((arg0) => {
+    [tmp, tmp2] = arg0;
+    const items = [tmp];
+    obj = {};
+    let merged = Object.assign(tmp2);
+    obj.headerMode = "screen";
+    obj = null;
+    if (tmp2.fullscreen) {
+      obj = { fullscreen: false, headerTransparent: false };
     }
-  }
-  const merged2 = Object.assign(tmp6);
-  const items1 = [, , ];
-  ({ REGISTER_IDENTITY: arr2[0], LOGIN: arr2[1], AGE_GATE_UNDERAGE: arr2[2] } = AuthStates);
-  let tmp8 = null;
-  if (set.has(tmp)) {
-    obj1 = { cardStyleInterpolator: null };
-    obj1[0] = createStackNavigator.CardStyleInterpolators.forFadeFromCenter;
-    tmp8 = obj1;
-  }
-  const merged3 = Object.assign(tmp8);
-  items[1] = obj;
-  return items;
-}));
+    let merged1 = Object.assign(obj);
+    let tmp6 = null;
+    if (tmp !== AuthStates.MFA) {
+      tmp6 = null;
+      if (tmp !== tmp5.WELCOME) {
+        obj = { headerLeft: null };
+        obj[0] = function headerLeft(arg0) {
+          function backImage() {
+            return callback2(callback(table[8]).HeaderBackImage, {});
+          }
+          obj = headerLeft;
+          if (null != headerLeft.headerLeft) {
+            obj = {};
+            const merged = Object.assign(arg0);
+            obj.backImage = backImage;
+            let headerLeftResult = obj.headerLeft(obj);
+          } else {
+            obj = {};
+            const merged1 = Object.assign(arg0);
+            obj.backImage = backImage;
+            headerLeftResult = closure_1_9(closure_1_0(closure_1_2[9]).BackButtonWithTracking, obj);
+          }
+          return headerLeftResult;
+        };
+        tmp6 = obj;
+      }
+    }
+    const merged2 = Object.assign(tmp6);
+    const items1 = [, ,];
+    ({ REGISTER_IDENTITY: arr2[0], LOGIN: arr2[1], AGE_GATE_UNDERAGE: arr2[2] } = AuthStates);
+    let tmp8 = null;
+    if (set.has(tmp)) {
+      obj1 = { cardStyleInterpolator: null };
+      obj1[0] = createStackNavigator.CardStyleInterpolators.forFadeFromCenter;
+      tmp8 = obj1;
+    }
+    const merged3 = Object.assign(tmp8);
+    items[1] = obj;
+    return items;
+  }),
+);
 let num = 540;
 if (require("_crypto").hasWebAuthn) {
   num = 600;
@@ -203,16 +232,34 @@ if (require("_crypto").hasWebAuthn) {
 let obj = {};
 obj[AuthStates.LOGIN] = num;
 obj[AuthStates.MFA] = 600;
-obj = { transparent: { backgroundColor: "transparent" }, cardContainer: { flex: 1, position: "relative", backgroundColor: "transparent" }, wideOuterContainer: { flex: 1, justifyContent: "center" }, wideCard: null, wideHeaderFlat: null, wideHeader: null };
-headerTitle = { backgroundColor: "transparent", borderRadius: ThemesDefault.radii.lg, maxWidth: 600, alignSelf: "center", width: "100%", maxHeight: "90%", overflow: "hidden", height: 520 };
+obj = {
+  transparent: { backgroundColor: "transparent" },
+  cardContainer: { flex: 1, position: "relative", backgroundColor: "transparent" },
+  wideOuterContainer: { flex: 1, justifyContent: "center" },
+  wideCard: null,
+  wideHeaderFlat: null,
+  wideHeader: null,
+};
+headerTitle = {
+  backgroundColor: "transparent",
+  borderRadius: ThemesDefault.radii.lg,
+  maxWidth: 600,
+  alignSelf: "center",
+  width: "100%",
+  maxHeight: "90%",
+  overflow: "hidden",
+  height: 520,
+};
 obj[3] = headerTitle;
 obj[4] = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey = { borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  borderBottomWidth: StyleSheet.hairlineWidth,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 obj[5] = createCacheKey;
 let closure_16 = createCacheKey.createStyles(obj);
-const context = importAllResult.createContext(() => {
-
-});
+const context = importAllResult.createContext(() => {});
 let obj2 = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function Auth() {
   const effect = importAllResult.useEffect(() => {
@@ -222,7 +269,10 @@ const memoResult = importAllResult.memo(function Auth() {
   const layoutEffect = importAllResult.useLayoutEffect(() => callback(7220).trackAppUIViewed(), []);
   usePortraitOrientationOnlyDefault();
   closure_0 = importAllResult.useRef(undefined);
-  return callback2(context.Provider, { value: importAllResult.useCallback(() => callback(closure_1_2[9]).getTrackRegTransition(callback), [])(), children: callback2(NavigatorWithCaptchaHook, {}) });
+  return callback2(context.Provider, {
+    value: importAllResult.useCallback(() => callback(closure_1_2[9]).getTrackRegTransition(callback), [])(),
+    children: callback2(NavigatorWithCaptchaHook, {}),
+  });
 });
 let result = require("set").fileFinishedImporting("modules/auth/native/components/Auth.tsx");
 

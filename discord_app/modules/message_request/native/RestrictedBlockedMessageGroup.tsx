@@ -12,7 +12,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { toggle: null };
-createCacheKey = { marginLeft: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET, marginVertical: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  marginLeft: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET,
+  marginVertical: ThemesDefault.space.PX_8,
+};
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/message_request/native/RestrictedBlockedMessageGroup.tsx");
@@ -25,16 +28,22 @@ export default function RestrictedBlockedMessageGroup(arg0) {
   callback = React.useCallback(() => {
     _undefined((arg0) => !arg0);
   }, []);
-  let obj = { style: tmp.toggle, accessibilityRole: "button", accessibilityState: { expanded: mapped }, onPress: callback, children: null };
+  let obj = {
+    style: tmp.toggle,
+    accessibilityRole: "button",
+    accessibilityState: { expanded: mapped },
+    onPress: callback,
+    children: null,
+  };
   obj = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl = getSystemLocale.intl;
   obj = { count: messages.length };
   obj[2] = intl.format(getSystemLocale.t["+FcYM/"], obj);
   obj[4] = callback2(Text.Text, obj);
-  const children = [callback2(PressableBase.PressableOpacity, obj), ];
+  const children = [callback2(PressableBase.PressableOpacity, obj)];
   if (mapped) {
     mapped = messages.map((id) => closure_1_5(closure_1_4, { children: callback(id) }, id.id));
   }
   children[1] = mapped;
   return closure_6(View, { children });
-};
+}

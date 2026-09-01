@@ -85,7 +85,8 @@ export default function fitCardsInGrid(arg0) {
         let tmp16 = obj;
         let tmp17 = obj;
         let merged = Object.assign(obj);
-        obj.unusedSpace = availableWidth * availableHeight - (result2 * obj.columns + (obj.columns - 1) * gutterSize) * sum2;
+        obj.unusedSpace =
+          availableWidth * availableHeight - (result2 * obj.columns + (obj.columns - 1) * gutterSize) * sum2;
         obj.overscroll = availableHeight - sum2;
         obj.cardSize = result2;
         tmp13 = tmp12;
@@ -99,4 +100,4 @@ export default function fitCardsInGrid(arg0) {
     } while (num <= cardCount);
   }
   return { columns: tmp.columns, cardSize: tmp.cardSize };
-};
+}

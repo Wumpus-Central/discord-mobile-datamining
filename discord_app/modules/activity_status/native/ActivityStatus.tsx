@@ -11,7 +11,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let closure_13 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4 }, icon: { marginTop: 1 }, emoji: { marginRight: 0 } });
+let closure_13 = createCacheKey.createStyles({
+  container: { flexDirection: "row", alignItems: "center", gap: 4 },
+  icon: { marginTop: 1 },
+  emoji: { marginRight: 0 },
+});
 const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityStatus.tsx");
 
 export default function ActivityStatus(guildId) {
@@ -91,7 +95,14 @@ export default function ActivityStatus(guildId) {
       if (stateFromStores1 != null) {
         found = stateFromStores1.find(tmp5(9248));
       }
-      obj = { game: null, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
+      obj = {
+        game: null,
+        iconStyle: null,
+        textStyle: null,
+        maxFontSizeMultiplier: null,
+        hideIcon: null,
+        hideText: null,
+      };
       obj[0] = found;
       const items4 = [tmp.icon, iconStyle];
       obj[1] = items4;
@@ -111,7 +122,14 @@ export default function ActivityStatus(guildId) {
         });
       }
       if (null != found1) {
-        obj = { activity: null, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
+        obj = {
+          activity: null,
+          iconStyle: null,
+          textStyle: null,
+          maxFontSizeMultiplier: null,
+          hideIcon: null,
+          hideText: null,
+        };
         obj[0] = found1;
         const items5 = [tmp.icon, iconStyle];
         obj[1] = items5;
@@ -123,7 +141,14 @@ export default function ActivityStatus(guildId) {
       } else {
         tmp18Result = null;
         if (null != voiceChannel) {
-          obj1 = { channel: null, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
+          obj1 = {
+            channel: null,
+            iconStyle: null,
+            textStyle: null,
+            maxFontSizeMultiplier: null,
+            hideIcon: null,
+            hideText: null,
+          };
           obj1[0] = voiceChannel;
           const items6 = [tmp.icon, iconStyle];
           obj1[1] = items6;
@@ -151,7 +176,7 @@ export default function ActivityStatus(guildId) {
           obj2[3] = tmp.emoji;
           tmp25 = callback(tmp5(9220), obj2);
         }
-        const items7 = [tmp25, ];
+        const items7 = [tmp25];
         let tmp27 = null != memo.state;
         if (tmp27) {
           const obj3 = { variant: "text-xs/normal", style: null, maxFontSizeMultiplier: null, children: null };
@@ -171,13 +196,20 @@ export default function ActivityStatus(guildId) {
     }
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.container;
-    const items8 = [tmp18Result, , ];
+    const items8 = [tmp18Result, ,];
     let tmp31 = null != tmp18Result;
     if (tmp31) {
       tmp31 = null != tmp21;
     }
     if (tmp31) {
-      const obj6 = { variant: "text-xs/normal", style: null, maxFontSizeMultiplier: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+      const obj6 = {
+        variant: "text-xs/normal",
+        style: null,
+        maxFontSizeMultiplier: null,
+        accessibilityElementsHidden: true,
+        importantForAccessibility: "no-hide-descendants",
+        children: null,
+      };
       obj6[1] = textStyle;
       obj6[2] = maxFontSizeMultiplier;
       obj6[5] = DOT_UNICODE;
@@ -189,4 +221,4 @@ export default function ActivityStatus(guildId) {
     return closure_12(View, obj5);
   }
   tmp2Result = userId(589);
-};
+}

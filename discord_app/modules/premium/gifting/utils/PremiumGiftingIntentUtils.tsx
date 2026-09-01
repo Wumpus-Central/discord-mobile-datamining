@@ -6,7 +6,7 @@ import GuildFeatures from "../../PremiumConstants.tsx";
 const GiftIntentType = GuildFeatures.GiftIntentType;
 const AnalyticsLocations = ME.AnalyticsLocations;
 const items = [AnalyticsLocations.FRIEND_ANNIVERSARIES_CHAT, GiftIntentType.FRIEND_ANNIVERSARY];
-const items1 = [items, , ];
+const items1 = [items, ,];
 const items2 = [AnalyticsLocations.FRIEND_ANNIVERSARIES_ACTION_BUTTON, GiftIntentType.FRIEND_ANNIVERSARY];
 items1[1] = items2;
 const items3 = [AnalyticsLocations.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK, GiftIntentType.FRIEND_ANNIVERSARY];
@@ -17,7 +17,11 @@ const result = set.fileFinishedImporting("modules/premium/gifting/utils/PremiumG
 export const getPremiumGiftingIntentAnalyticsLocation = function getPremiumGiftingIntentAnalyticsLocation(arg0) {
   if (arg0 === GiftIntentType.FRIEND_ANNIVERSARY) {
     let obj = { chat: null, actionButton: null, actionButtonCoachmark: null };
-    ({ FRIEND_ANNIVERSARIES_CHAT: obj2[0], FRIEND_ANNIVERSARIES_ACTION_BUTTON: obj2[1], FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK: obj2[2] } = AnalyticsLocations);
+    ({
+      FRIEND_ANNIVERSARIES_CHAT: obj2[0],
+      FRIEND_ANNIVERSARIES_ACTION_BUTTON: obj2[1],
+      FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK: obj2[2],
+    } = AnalyticsLocations);
   } else {
     obj = {};
   }

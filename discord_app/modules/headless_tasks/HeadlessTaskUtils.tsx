@@ -12,5 +12,5 @@ export default {
     Storage.asyncGet(TOKEN_KEY, () => {
       callback();
     });
-  }
+  },
 };

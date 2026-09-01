@@ -14,5 +14,8 @@ export const setPushToTalkState = function setPushToTalkState(isActive, arg1) {
   obj = { type: "PUSH_TO_TALK_STATE_CHANGE", isActive, isPriority: flag };
   obj.dispatch(obj);
   mediaEngine = mediaEngine.getMediaEngine();
-  mediaEngine.eachConnection((setForceAudioInput) => setForceAudioInput.setForceAudioInput(closure_0, flag, false), MediaEngineContextTypes.DEFAULT);
+  mediaEngine.eachConnection(
+    (setForceAudioInput) => setForceAudioInput.setForceAudioInput(closure_0, flag, false),
+    MediaEngineContextTypes.DEFAULT,
+  );
 };

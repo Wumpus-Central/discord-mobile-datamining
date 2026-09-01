@@ -6,8 +6,7 @@ import set from "../../_runtime/00002_set.js";
 
 let set = new Set();
 const PersistedStore = initializeDefault.PersistedStore;
-class ExpandedGuildFolderStore extends PersistedStore {
-}
+class ExpandedGuildFolderStore extends PersistedStore {}
 const prototype = ExpandedGuildFolderStore.prototype;
 prototype["initialize"] = function initialize(expandedFolders) {
   if (null != expandedFolders) {
@@ -75,7 +74,7 @@ const expandedGuildFolderStore = new ExpandedGuildFolderStore(dispatcherDefault,
       const _Set = Set;
       set = new Set();
     }
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/ExpandedGuildFolderStore.tsx");
 

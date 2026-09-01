@@ -36,8 +36,7 @@ function updateExistingSettings() {
 let closure_3 = {};
 let closure_4 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class UserSettingsOverridesStore extends PersistedStore {
-}
+class UserSettingsOverridesStore extends PersistedStore {}
 const prototype = UserSettingsOverridesStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let obj = arg0;
@@ -72,7 +71,7 @@ let items = [
     const Storage2 = Storage3.Storage;
     Storage2.remove("UserSettingsStoreOverrides");
     return obj;
-  }
+  },
 ];
 UserSettingsOverridesStore.migrations = items;
 const userSettingsOverridesStore = new UserSettingsOverridesStore(dispatcherDefault, {
@@ -140,7 +139,7 @@ const userSettingsOverridesStore = new UserSettingsOverridesStore(dispatcherDefa
   },
   LOGIN_SUCCESS: function handleLogInSuccess() {
     closure_3 = {};
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsOverridesStore.tsx");
 

@@ -5,7 +5,9 @@ import { AnalyticEvents } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/media_keyboard/native/components/MediaKeyboardActionSheet.tsx",
+);
 
 export default function MediaKeyboardActionSheet(onAttachPress) {
   onAttachPress = onAttachPress.onAttachPress;
@@ -15,7 +17,19 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
   let sharedValue;
   let memo;
   let callback2;
-  ({ channel, draftType, uploadLimit, disableWhenReachedLimit, includedUploadIds, extensions, allowCamera, onPressCamera, onPressItem, onLongPressItem, onManageLimited } = onAttachPress);
+  ({
+    channel,
+    draftType,
+    uploadLimit,
+    disableWhenReachedLimit,
+    includedUploadIds,
+    extensions,
+    allowCamera,
+    onPressCamera,
+    onPressItem,
+    onLongPressItem,
+    onManageLimited,
+  } = onAttachPress);
   let obj = onAttachPress(onClose[4]);
   sharedValue = obj.useSharedValue(-1);
   let items = [onAttachPress];
@@ -24,10 +38,8 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
     const intl = onAttachPress(onClose[5]).intl;
     obj[0] = intl.string(onAttachPress(onClose[5]).t.RgIi2B);
     obj[1] = onAttachPress(onClose[6]).PollsIcon;
-    obj[2] = function onPress() {
-
-    };
-    const items = [obj, ];
+    obj[2] = function onPress() {};
+    const items = [obj];
     obj = { text: null, IconComponent: null, onPress: null, disabled: false };
     const intl2 = onAttachPress(onClose[5]).intl;
     obj[0] = intl2.string(onAttachPress(onClose[5]).t["8Hvr3+"]);
@@ -37,7 +49,10 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
     return items;
   }, items);
   const items1 = [sharedValue, onBack];
-  const callback = onBack.useCallback(() => callback2(onViewAll(onClose[8]), { animatedIndex: sharedValue, onPress: onBack }), items1);
+  const callback = onBack.useCallback(
+    () => callback2(onViewAll(onClose[8]), { animatedIndex: sharedValue, onPress: onBack }),
+    items1,
+  );
   const items2 = [onClose];
   const callback1 = onBack.useCallback(() => {
     let obj = onAttachPress(onClose[9]);
@@ -61,11 +76,9 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
   const memo1 = onBack.useMemo(() => {
     let obj = {
       canPostPolls: false,
-      onHeightChange() {
-
-      },
+      onHeightChange() {},
       uploadDisabled: false,
-      overflowButtons: null
+      overflowButtons: null,
     };
     obj = { text: null, IconComponent: null, onPress: null, disabled: false };
     const intl = onAttachPress(onClose[5]).intl;
@@ -76,6 +89,29 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
     obj[3] = items;
     return callback2(onViewAll(onClose[13]), obj);
   }, items3);
-  obj = { handleComponent: callback, scrollable: true, startExpanded: onAttachPress(onClose[16]).isMetaQuest(), onExpand: callback1, onDismiss: callback2, animatedIndex: sharedValue, footer: memo1, children: callback2(onViewAll(onClose[17]), { channel, draftType, onPressCamera, onAttachPress, onPressItem, onLongPressItem, onViewAll, onManageLimited, includedUploadIds, extensions, allowCamera, uploadLimit, disableWhenReachedLimit }) };
+  obj = {
+    handleComponent: callback,
+    scrollable: true,
+    startExpanded: onAttachPress(onClose[16]).isMetaQuest(),
+    onExpand: callback1,
+    onDismiss: callback2,
+    animatedIndex: sharedValue,
+    footer: memo1,
+    children: callback2(onViewAll(onClose[17]), {
+      channel,
+      draftType,
+      onPressCamera,
+      onAttachPress,
+      onPressItem,
+      onLongPressItem,
+      onViewAll,
+      onManageLimited,
+      includedUploadIds,
+      extensions,
+      allowCamera,
+      uploadLimit,
+      disableWhenReachedLimit,
+    }),
+  };
   return callback2(onAttachPress(onClose[15]).BottomSheet, obj);
-};
+}

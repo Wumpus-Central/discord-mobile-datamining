@@ -5,14 +5,36 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function AccessibleNativeStackNavigator(arg0) {
-  ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
+  ({
+    id,
+    initialRouteName,
+    UNSTABLE_routeNamesChangeBehavior,
+    children,
+    layout,
+    screenListeners,
+    screenOptions,
+    screenLayout,
+    UNSTABLE_router,
+  } = arg0);
   let merged = Object.assign(arg0, Object.create(null));
   let obj = descriptors(accessibilityNativeStackOptions[3]);
-  const navigationBuilder = obj.useNavigationBuilder(descriptors(accessibilityNativeStackOptions[3]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
+  const navigationBuilder = obj.useNavigationBuilder(descriptors(accessibilityNativeStackOptions[3]).StackRouter, {
+    id,
+    initialRouteName,
+    UNSTABLE_routeNamesChangeBehavior,
+    children,
+    layout,
+    screenListeners,
+    screenOptions,
+    screenLayout,
+    UNSTABLE_router,
+  });
   descriptors = navigationBuilder.descriptors;
   accessibilityNativeStackOptions = undefined;
   ({ state, describe, navigation, NavigationContent } = navigationBuilder);
-  accessibilityNativeStackOptions = descriptors(accessibilityNativeStackOptions[2]).useAccessibilityNativeStackOptions();
+  accessibilityNativeStackOptions = descriptors(
+    accessibilityNativeStackOptions[2],
+  ).useAccessibilityNativeStackOptions();
   const items = [descriptors, accessibilityNativeStackOptions];
   obj = { children: null };
   const memo = React.useMemo(() => {
@@ -54,11 +76,13 @@ function AccessibleNativeStackNavigator(arg0) {
   obj[0] = jsx(descriptors(accessibilityNativeStackOptions[4]).NativeStackView, {});
   return <NavigationContent />;
 }
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx",
+);
 
 export default function createAccessibleNativeStackNavigator(arg0) {
   return createStandardNavigationFactories.createNavigatorFactory(AccessibleNativeStackNavigator)(arg0);
-};
+}
 export const useAccessibilityPatchedDescriptors = function useAccessibilityPatchedDescriptors(filteredDescriptors) {
   const _require = filteredDescriptors;
   accessibilityNativeStackOptions = _require(accessibilityNativeStackOptions[2]).useAccessibilityNativeStackOptions();

@@ -177,7 +177,14 @@ function getUsersFromMessage(arg0) {
 }
 const isPrivate = createChannelRecord.isPrivate;
 const UserFlags = ME.UserFlags;
-let closure_11 = { UPDATE_USERS: "UPDATE_USERS", USER_RESULTS: "USER_RESULTS", QUERY_SET: "QUERY_SET", QUERY_CLEAR: "QUERY_CLEAR", REQUEST_DEBUG_STATE: "REQUEST_DEBUG_STATE", DEBUG_STATE: "DEBUG_STATE" };
+let closure_11 = {
+  UPDATE_USERS: "UPDATE_USERS",
+  USER_RESULTS: "USER_RESULTS",
+  QUERY_SET: "QUERY_SET",
+  QUERY_CLEAR: "QUERY_CLEAR",
+  REQUEST_DEBUG_STATE: "REQUEST_DEBUG_STATE",
+  DEBUG_STATE: "DEBUG_STATE",
+};
 class UserSearchContext {
   constructor(arg0, arg1) {
     num = importDefault;
@@ -259,7 +266,14 @@ prototype["clearQuery"] = function clearQuery() {
 };
 prototype["setQuery"] = function setQuery(closure_0) {
   ({ boosters, boosterFallback } = closure_0);
-  const obj = { query: closure_0.query, filters: closure_0.filters, blacklist: closure_0.blacklist, boosters: null, boosterFallback: null, limit: null };
+  const obj = {
+    query: closure_0.query,
+    filters: closure_0.filters,
+    blacklist: closure_0.blacklist,
+    boosters: null,
+    boosterFallback: null,
+    limit: null,
+  };
   if (boosters == null) {
     boosters = {};
   }
@@ -306,83 +320,83 @@ class UserSearchManager extends tmp2 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       LOGOUT() {
-            return applyArgumentsResult._handleLogout();
-          },
+        return applyArgumentsResult._handleLogout();
+      },
       POST_CONNECTION_OPEN() {
-            return applyArgumentsResult._handleConnectionOpen();
-          },
+        return applyArgumentsResult._handleConnectionOpen();
+      },
       CONNECTION_OPEN_SUPPLEMENTAL(guilds) {
-            return applyArgumentsResult._handleConnectionOpenSupplemental(guilds);
-          },
+        return applyArgumentsResult._handleConnectionOpenSupplemental(guilds);
+      },
       OVERLAY_INITIALIZE(arg0) {
-            return applyArgumentsResult._handleOverlayInitialize(arg0);
-          },
+        return applyArgumentsResult._handleOverlayInitialize(arg0);
+      },
       CURRENT_USER_UPDATE(user) {
-            return applyArgumentsResult._handleCurrentUserUpdate(user);
-          },
+        return applyArgumentsResult._handleCurrentUserUpdate(user);
+      },
       GUILD_CREATE(guild) {
-            return applyArgumentsResult._handleGuildCreate(guild);
-          },
+        return applyArgumentsResult._handleGuildCreate(guild);
+      },
       GUILD_MEMBERS_CHUNK_BATCH(arg0) {
-            return applyArgumentsResult._handleGuildMembersChunkBatch(arg0);
-          },
+        return applyArgumentsResult._handleGuildMembersChunkBatch(arg0);
+      },
       GUILD_MEMBER_ADD(nick) {
-            return applyArgumentsResult._handleGuildMemberUpdate(nick);
-          },
+        return applyArgumentsResult._handleGuildMemberUpdate(nick);
+      },
       GUILD_MEMBER_UPDATE(nick) {
-            return applyArgumentsResult._handleGuildMemberUpdate(nick);
-          },
+        return applyArgumentsResult._handleGuildMemberUpdate(nick);
+      },
       RELATIONSHIP_ADD(relationship) {
-            return applyArgumentsResult._handleRelationshipAdd(relationship);
-          },
+        return applyArgumentsResult._handleRelationshipAdd(relationship);
+      },
       RELATIONSHIP_UPDATE(relationship) {
-            return applyArgumentsResult._handleRelationshipUpdate(relationship);
-          },
+        return applyArgumentsResult._handleRelationshipUpdate(relationship);
+      },
       RELATIONSHIP_REMOVE(relationship) {
-            return applyArgumentsResult._handleRelationshipRemove(relationship);
-          },
+        return applyArgumentsResult._handleRelationshipRemove(relationship);
+      },
       CHANNEL_CREATE(channel) {
-            return applyArgumentsResult._handleDMCreate(channel);
-          },
+        return applyArgumentsResult._handleDMCreate(channel);
+      },
       CHANNEL_UPDATES(arg0) {
-            return applyArgumentsResult._handleDMUpdates(arg0);
-          },
+        return applyArgumentsResult._handleDMUpdates(arg0);
+      },
       CHANNEL_RECIPIENT_ADD(isMember) {
-            return applyArgumentsResult._handleRecipientChanges(isMember);
-          },
+        return applyArgumentsResult._handleRecipientChanges(isMember);
+      },
       PASSIVE_UPDATE_V2(arg0) {
-            return applyArgumentsResult._handlePassiveUpdateV2(arg0);
-          },
+        return applyArgumentsResult._handlePassiveUpdateV2(arg0);
+      },
       THREAD_LIST_SYNC(arg0) {
-            return applyArgumentsResult._handleThreadListSync(arg0);
-          },
+        return applyArgumentsResult._handleThreadListSync(arg0);
+      },
       LOAD_FORUM_POSTS(guildId) {
-            return applyArgumentsResult._handleLoadForumPosts(guildId);
-          },
+        return applyArgumentsResult._handleLoadForumPosts(guildId);
+      },
       LOAD_MESSAGES_SUCCESS(messages) {
-            return applyArgumentsResult._handleLoadMessagesSuccess(messages);
-          },
+        return applyArgumentsResult._handleLoadMessagesSuccess(messages);
+      },
       SEARCH_MESSAGES_SUCCESS(data) {
-            return applyArgumentsResult._handleSearchMessagesSuccess(data);
-          },
+        return applyArgumentsResult._handleSearchMessagesSuccess(data);
+      },
       LOAD_THREADS_SUCCESS(guildId) {
-            return applyArgumentsResult._handleLoadThreadsSuccess(guildId);
-          },
+        return applyArgumentsResult._handleLoadThreadsSuccess(guildId);
+      },
       LOAD_ARCHIVED_THREADS_SUCCESS(guildId) {
-            return applyArgumentsResult._handleLoadThreadsSuccess(guildId);
-          },
+        return applyArgumentsResult._handleLoadThreadsSuccess(guildId);
+      },
       LOAD_PINNED_MESSAGES_SUCCESS(pins) {
-            return applyArgumentsResult._handleLoadPinnedMessagesSuccess(pins);
-          },
+        return applyArgumentsResult._handleLoadPinnedMessagesSuccess(pins);
+      },
       GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS(arg0) {
-            return applyArgumentsResult._handleGuildScheduledEventUsersFetchSuccess(arg0);
-          },
+        return applyArgumentsResult._handleGuildScheduledEventUsersFetchSuccess(arg0);
+      },
       MESSAGE_CREATE(message) {
-            return applyArgumentsResult._handleMessageCreateOrUpdate(message);
-          },
+        return applyArgumentsResult._handleMessageCreateOrUpdate(message);
+      },
       MESSAGE_UPDATE(message) {
-            return applyArgumentsResult._handleMessageCreateOrUpdate(message);
-          }
+        return applyArgumentsResult._handleMessageCreateOrUpdate(message);
+      },
     };
     applyArgumentsResult._handleLogout = function _handleLogout() {
       applyArgumentsResult.rebootWebworker();
@@ -508,7 +522,7 @@ class UserSearchManager extends tmp2 {
               });
             }
             return items;
-          })
+          }),
         ];
         guilds.updateUsers(items, "connection_open_supplemental");
       }, 3000);
@@ -793,7 +807,10 @@ class UserSearchManager extends tmp2 {
     };
     applyArgumentsResult._handleLoadMessagesSuccess = function _handleLoadMessagesSuccess(messages) {
       messages = messages.messages;
-      applyArgumentsResult.updateUsers(messages.flatMap((message) => callback({ message })), "load_messages_success");
+      applyArgumentsResult.updateUsers(
+        messages.flatMap((message) => callback({ message })),
+        "load_messages_success",
+      );
     };
     applyArgumentsResult._handleLoadPinnedMessagesSuccess = function _handleLoadPinnedMessagesSuccess(pins) {
       pins = pins.pins;
@@ -857,32 +874,33 @@ class UserSearchManager extends tmp2 {
     applyArgumentsResult._handleMessageCreateOrUpdate = function _handleMessageCreateOrUpdate(message) {
       applyArgumentsResult.updateUsers(closure_1_16({ message: message.message }), "message_create_or_update");
     };
-    applyArgumentsResult._handleGuildScheduledEventUsersFetchSuccess = function _handleGuildScheduledEventUsersFetchSuccess(arg0) {
-      ({ guildId: closure_0, guildScheduledEventUsers } = arg0);
-      const items = [];
-      const item = guildScheduledEventUsers.forEach((member) => {
-        member = member.member;
-        const tmp = closure_1_12(member.user);
-        if (null != tmp) {
-          if (member != null) {
-            const nick = member.nick;
-          }
+    applyArgumentsResult._handleGuildScheduledEventUsersFetchSuccess =
+      function _handleGuildScheduledEventUsersFetchSuccess(arg0) {
+        ({ guildId: closure_0, guildScheduledEventUsers } = arg0);
+        const items = [];
+        const item = guildScheduledEventUsers.forEach((member) => {
+          member = member.member;
+          const tmp = closure_1_12(member.user);
           if (null != tmp) {
-            let tmp3 = null;
-            if (null != nick) {
-              tmp3 = null;
-              if ("" !== nick) {
-                tmp3 = nick;
-              }
+            if (member != null) {
+              const nick = member.nick;
             }
-            tmp.nicknames[tmp2] = tmp3;
+            if (null != tmp) {
+              let tmp3 = null;
+              if (null != nick) {
+                tmp3 = null;
+                if ("" !== nick) {
+                  tmp3 = nick;
+                }
+              }
+              tmp.nicknames[tmp2] = tmp3;
+            }
+            items.push(tmp);
+            tmp2 = closure_0;
           }
-          items.push(tmp);
-          tmp2 = closure_0;
-        }
-      });
-      applyArgumentsResult.updateUsers(items, "guild_scheduled_event_users_fetch_success");
-    };
+        });
+        applyArgumentsResult.updateUsers(items, "guild_scheduled_event_users_fetch_success");
+      };
     return applyArgumentsResult;
   }
 }
@@ -923,7 +941,16 @@ prototype2["updateUsers"] = function updateUsers(arr) {
         let obj3 = _modDef1208;
         let obj = { action: null, userFields: null };
         obj[0] = arg1;
-        obj = { userIsNull: null, idIsNull: true, usernameIsNull: null, isBot: null, isFriend: null, isProvisional: null, globalNameIsNull: null, usersArrayLength: null };
+        obj = {
+          userIsNull: null,
+          idIsNull: true,
+          usernameIsNull: null,
+          isBot: null,
+          isFriend: null,
+          isProvisional: null,
+          globalNameIsNull: null,
+          usersArrayLength: null,
+        };
         let tmp22 = item10007;
         obj[0] = null == tmp2;
         let username;

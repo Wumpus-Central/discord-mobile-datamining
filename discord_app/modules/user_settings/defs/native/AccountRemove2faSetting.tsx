@@ -31,7 +31,7 @@ const pressable = createToggle.createPressable({
     return null !== getSMSBackupDisabledMessage.use2FARemoveDisableReason();
   },
   useDescription: getSMSBackupDisabledMessage.use2FARemoveDisableReason,
-  usePredicate: useIs2FAEnabled.useIsTOTPEnabled
+  usePredicate: useIs2FAEnabled.useIsTOTPEnabled,
 });
 let obj = {
   useTitle() {
@@ -57,7 +57,7 @@ let obj = {
     return null !== getSMSBackupDisabledMessage.use2FARemoveDisableReason();
   },
   useDescription: getSMSBackupDisabledMessage.use2FARemoveDisableReason,
-  usePredicate: useIs2FAEnabled.useIsTOTPEnabled
+  usePredicate: useIs2FAEnabled.useIsTOTPEnabled,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");
 

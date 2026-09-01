@@ -89,51 +89,49 @@ class RedesignDiscoverabilityModal {
     obj = {
       headerStyle: tmp.header,
       screens: closure_3.useMemo(() => {
-            if (null == fn) {
-              fn = () => {
-
-              };
-            }
-            let obj = {};
-            obj = {
-              ignoreKeyboard: true,
-              impressionName: onComplete(closure_1_2[16]).ImpressionNames.DISCOVERABILITY,
-              fullscreen: true,
-              headerLeft() {
-                return null;
-              },
-              headerTitle() {
-                return null;
-              },
-              headerRight(arg0) {
-                const obj = { insideNavigator: true };
-                const merged = Object.assign(arg0);
-                obj.onPress = function onPress() {
-                  return callback(true);
-                };
-                return closure_1_7(closure_1_1(closure_1_2[17]), obj);
-              },
-              render() {
-                return closure_1_7(closure_1_9, { onComplete: fn });
-              }
+        if (null == fn) {
+          fn = () => {};
+        }
+        let obj = {};
+        obj = {
+          ignoreKeyboard: true,
+          impressionName: onComplete(closure_1_2[16]).ImpressionNames.DISCOVERABILITY,
+          fullscreen: true,
+          headerLeft() {
+            return null;
+          },
+          headerTitle() {
+            return null;
+          },
+          headerRight(arg0) {
+            const obj = { insideNavigator: true };
+            const merged = Object.assign(arg0);
+            obj.onPress = function onPress() {
+              return callback(true);
             };
-            obj[onComplete(closure_1_2[12]).DiscoverabilityScenes.LANDING] = obj;
-            obj = {
-              ignoreKeyboard: true,
-              impressionName: onComplete(closure_1_2[16]).ImpressionNames.DISCOVERABILITY,
-              fullscreen: true,
-              headerTitle() {
-                return null;
-              },
-              render() {
-                return closure_1_7(closure_1_10, { onComplete: fn });
-              }
-            };
-            obj[onComplete(closure_1_2[12]).DiscoverabilityScenes.NAME] = obj;
-            return obj;
-          }, items),
+            return closure_1_7(closure_1_1(closure_1_2[17]), obj);
+          },
+          render() {
+            return closure_1_7(closure_1_9, { onComplete: fn });
+          },
+        };
+        obj[onComplete(closure_1_2[12]).DiscoverabilityScenes.LANDING] = obj;
+        obj = {
+          ignoreKeyboard: true,
+          impressionName: onComplete(closure_1_2[16]).ImpressionNames.DISCOVERABILITY,
+          fullscreen: true,
+          headerTitle() {
+            return null;
+          },
+          render() {
+            return closure_1_7(closure_1_10, { onComplete: fn });
+          },
+        };
+        obj[onComplete(closure_1_2[12]).DiscoverabilityScenes.NAME] = obj;
+        return obj;
+      }, items),
       initialRouteName: require("keys").DiscoverabilityScenes.LANDING,
-      headerBackTitle: null
+      headerBackTitle: null,
     };
     items = [];
     items[0] = onComplete;
@@ -143,12 +141,28 @@ class RedesignDiscoverabilityModal {
   }
 }
 createCacheKey = { header: null, container: null };
-createCacheKey = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
+createCacheKey = {
+  borderBottomWidth: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  shadowColor: "transparent",
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingBottom: 44, paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
+createCacheKey[1] = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  justifyContent: "center",
+  paddingBottom: 44,
+  paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32,
+};
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 RedesignDiscoverabilityModal.modalConfig = { animation: require("ME").ModalAnimation.SLIDE_IN_OUT };
-const obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingBottom: 44, paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
+const obj1 = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  justifyContent: "center",
+  paddingBottom: 44,
+  paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32,
+};
 let result = require("set").fileFinishedImporting("modules/nuf/native/components/RedesignDiscoverabilityModal.tsx");
 
 export default RedesignDiscoverabilityModal;

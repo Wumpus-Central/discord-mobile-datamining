@@ -3,7 +3,12 @@ import set from "../../../../_runtime/00002_set.js";
 import usePremiumGroupExperimentDefault from "../../premium/experiments/PremiumGroupExperiment.tsx";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-one-day-fractional-nitro", kind: "user", defaultConfig: false, variations: { 1: true } });
+const apexExperiment = ApexExperiment.createApexExperiment({
+  name: "2026-04-one-day-fractional-nitro",
+  kind: "user",
+  defaultConfig: false,
+  variations: { 1: true },
+});
 const result = set.fileFinishedImporting("modules/collectibles/experiments/OneDayFractionalNitroExperiment.tsx");
 
 export default apexExperiment;

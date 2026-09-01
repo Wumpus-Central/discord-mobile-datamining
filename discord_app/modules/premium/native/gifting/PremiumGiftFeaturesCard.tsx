@@ -28,9 +28,21 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
   obj = useThemeAndReducedMotionAwareAssetUrl;
   const themeAndReducedMotionAwareAssetUrl = obj.useThemeAndReducedMotionAwareAssetUrl(config.avatarAsset, true);
   obj = { theme: "dark", children: null };
-  obj = { style: callback4(config.isLargeSize).promotionDetailsContainer, colors: [4294967102, 4294967053], children: null };
+  obj = {
+    style: callback4(config.isLargeSize).promotionDetailsContainer,
+    colors: [4294967102, 4294967053],
+    children: null,
+  };
   const tmp = callback4(config.isLargeSize);
-  const items = [callback2(AnimatedImageDefault, { imageUrl: themeAndReducedMotionAwareAssetUrl, title: config.header, subtitle: config.mobileBody, subtitleColor: "text-default", shouldAnimate: isSelected }), ];
+  const items = [
+    callback2(AnimatedImageDefault, {
+      imageUrl: themeAndReducedMotionAwareAssetUrl,
+      title: config.header,
+      subtitle: config.mobileBody,
+      subtitleColor: "text-default",
+      shouldAnimate: isSelected,
+    }),
+  ];
   obj2 = { variant: "primary-overlay", text: null, onPress: null };
   const intl = getSystemLocale.intl;
   obj2[1] = intl.string(getSystemLocale.t.Ve9Ge6);
@@ -70,10 +82,31 @@ obj10[1] = { marginTop: ThemesDefault.space.PX_12 };
 let obj12 = { marginTop: ThemesDefault.space.PX_12 };
 obj10[2] = { marginTop: ThemesDefault.space.PX_8 };
 let closure_17 = createCacheKey.createStyles(() => {
-  obj = { promotional: null, card: null, logo: null, promotionalLogo: null, promotionalLogoSingleLine: null, promotionalLogoSmallCompact: null, pricing: null, featureTitle: null, features: null, button: null, promotionalButton: null, featureIcon: null, featureText: null, promotionalCardImage: null, promotionalBackground: null, promotionDetailsContainer: null };
+  obj = {
+    promotional: null,
+    card: null,
+    logo: null,
+    promotionalLogo: null,
+    promotionalLogoSingleLine: null,
+    promotionalLogoSmallCompact: null,
+    pricing: null,
+    featureTitle: null,
+    features: null,
+    button: null,
+    promotionalButton: null,
+    featureIcon: null,
+    featureText: null,
+    promotionalCardImage: null,
+    promotionalBackground: null,
+    promotionDetailsContainer: null,
+  };
   obj = { overflow: "hidden", borderRadius: ThemesDefault.radii.sm };
   obj[0] = obj;
-  obj = { justifyContent: "flex-start", borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BG_SURFACE_RAISED };
+  obj = {
+    justifyContent: "flex-start",
+    borderRadius: ThemesDefault.radii.sm,
+    backgroundColor: ThemesDefault.colors.BG_SURFACE_RAISED,
+  };
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
   obj[1] = obj;
   obj[2] = { marginTop: ThemesDefault.space.PX_40, marginStart: ThemesDefault.space.PX_24 };
@@ -101,7 +134,14 @@ let closure_17 = createCacheKey.createStyles(() => {
   obj[13] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 };
   obj[14] = { position: "absolute", height: 300, width: 150, right: 0 };
   const tmp2 = createTextStyleDefault;
-  obj[15] = { marginHorizontal: ThemesDefault.space.PX_24, marginTop: ThemesDefault.space.PX_20, marginBottom: ThemesDefault.space.PX_32, padding: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm };
+  obj[15] = {
+    marginHorizontal: ThemesDefault.space.PX_24,
+    marginTop: ThemesDefault.space.PX_20,
+    marginBottom: ThemesDefault.space.PX_32,
+    padding: ThemesDefault.space.PX_12,
+    gap: ThemesDefault.space.PX_12,
+    borderRadius: ThemesDefault.radii.sm,
+  };
   return obj;
 });
 let obj13 = { marginTop: ThemesDefault.space.PX_8 };
@@ -119,7 +159,9 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   obj = initialize;
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    marketingComponentByType = marketingComponentByType.getMarketingComponentByType(_undefined(table[11]).MarketingComponentType.GIFT_PLAN_SELECTION_CARD_BANNER);
+    marketingComponentByType = marketingComponentByType.getMarketingComponentByType(
+      _undefined(table[11]).MarketingComponentType.GIFT_PLAN_SELECTION_CARD_BANNER,
+    );
     let prop = null;
     if (null != marketingComponentByType) {
       prop = null;
@@ -139,7 +181,8 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   if (stateFromStores != null) {
     backgroundAsset = stateFromStores.backgroundAsset;
   }
-  const themeAndReducedMotionAwareAssetUrl1 = require("../../promotions/MarketingComponentHooks.tsx").useThemeAndReducedMotionAwareAssetUrl(backgroundAsset);
+  const themeAndReducedMotionAwareAssetUrl1 =
+    require("../../promotions/MarketingComponentHooks.tsx").useThemeAndReducedMotionAwareAssetUrl(backgroundAsset);
   let tmp9 = null != claimableRewards;
   if (tmp9) {
     tmp9 = 1 === claimableRewards.length;
@@ -167,7 +210,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   }
   const tmp14 = usePremiumProductPricingStringDefault(premiumType, constants.YEAR);
   [tmp18, c0] = callback(importAllResult.useState(0), 2);
-  const items1 = [tmp10.card, style, ];
+  const items1 = [tmp10.card, style];
   let promotional = promotionalButton;
   callback = importAllResult.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.height);
@@ -186,7 +229,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     obj[2] = obj1;
     tmp22 = callback2(tmp11(5493), obj);
   }
-  const items2 = [tmp22, ];
+  const items2 = [tmp22];
   obj2 = { premiumType, opacity: null, style: null };
   let num3 = 1;
   tmp11Result = tmp11(8095);
@@ -194,7 +237,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     num3 = 0.82;
   }
   obj2[1] = num3;
-  const items3 = [tmp10.card, style, ];
+  const items3 = [tmp10.card, style];
   let promotional2 = promotionalButton;
   if (promotionalButton) {
     promotional2 = tmp10.promotional;
@@ -205,18 +248,23 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   if (promotionalButton) {
     let tmp29 = null != stateFromStores;
     if (tmp29) {
-      const obj3 = { giftPlanSelectionCardBannerComponent: null, claimableRewards: null, isSelected: null, onLayout: null };
+      const obj3 = {
+        giftPlanSelectionCardBannerComponent: null,
+        claimableRewards: null,
+        isSelected: null,
+        onLayout: null,
+      };
       obj3[0] = stateFromStores;
       obj3[1] = claimableRewards;
       obj3[2] = isSelected;
       obj3[3] = callback;
       tmp29 = callback2(tmp11(10527), obj3);
     }
-    const items4 = [tmp29, ];
+    const items4 = [tmp29];
     let tmp31 = null != themeAndReducedMotionAwareAssetUrl1;
     if (tmp31) {
       const obj4 = { style: null, resizeMode: "cover", source: null };
-      const items5 = [tmp10.promotionalBackground, ];
+      const items5 = [tmp10.promotionalBackground];
       const obj5 = { top: null };
       obj5[0] = tmp18;
       items5[1] = obj5;
@@ -236,8 +284,8 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     obj8[0] = premiumType;
     tmp20Result = callback2(tmp11(8355), obj8);
   }
-  const items6 = [tmp20Result, , , , , , ];
-  const items7 = [tmp10.logo, , ];
+  const items6 = [tmp20Result, , , , , ,];
+  const items7 = [tmp10.logo, ,];
   if (!promotionalButton) {
     items7[1] = promotionalButton;
     let promotionalLogoSmallCompact = promotionalButton;
@@ -293,7 +341,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
         return tmp20(tmp21, obj);
       }
     }
-    const items10 = [tmp10.button, obj10[str], ];
+    const items10 = [tmp10.button, obj10[str]];
     if (promotionalButton) {
       promotionalButton = tmp10.promotionalButton;
     }

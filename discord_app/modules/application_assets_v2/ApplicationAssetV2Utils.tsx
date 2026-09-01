@@ -11,11 +11,23 @@ export const getApplicationAssetUrl = function getApplicationAssetUrl(closure_1,
     const _location = location;
     const _window = window;
     const _HermesInternal2 = HermesInternal;
-    let str5 = new URL("" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/app-assets/" + closure_1 + "/" + asset_id.asset_id + ".webp");
+    let str5 = new URL(
+      "" +
+        location.protocol +
+        "//" +
+        window.GLOBAL_ENV.CDN_HOST +
+        "/app-assets/" +
+        closure_1 +
+        "/" +
+        asset_id.asset_id +
+        ".webp",
+    );
   } else {
     const _URL = URL;
     const _HermesInternal = HermesInternal;
-    str5 = new URL("" + sendRequest.getAPIBaseURL() + "/applications/" + closure_1 + "/app-assets/" + asset_id.asset_id + ".webp");
+    str5 = new URL(
+      "" + sendRequest.getAPIBaseURL() + "/applications/" + closure_1 + "/app-assets/" + asset_id.asset_id + ".webp",
+    );
     const obj = sendRequest;
   }
   if (null != width) {

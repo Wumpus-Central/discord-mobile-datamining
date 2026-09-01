@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/Tier048Px.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/Tier048Px.tsx",
+);
 
 export const getTier048PxSource = function getTier048PxSource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getTier048PxSource = function getTier048PxSource(theme) {
     },
     light() {
       return callback(13168);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useTier048PxSource = function useTier048PxSource() {
     },
     light() {
       return callback(13168);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const Tier048Px = function Tier048Px(arg0) {
     },
     light() {
       return callback(13168);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

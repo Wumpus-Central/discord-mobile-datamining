@@ -15,7 +15,14 @@ function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, clea
   ({ canStartThreads, channel, shouldShowThread, styleButtonWrapper } = styleButton);
   let obj = { cleanup, state, children: null };
   if (shouldShowThread) {
-    obj = { accessible: null, accessibilityLabel: null, disabled: null, IconComponent: null, onPress: null, style: null };
+    obj = {
+      accessible: null,
+      accessibilityLabel: null,
+      disabled: null,
+      IconComponent: null,
+      onPress: null,
+      style: null,
+    };
     obj[0] = accessible;
     const intl = onPress(1236).intl;
     obj[1] = intl.string(onPress(1236).t["4WNcpu"]);
@@ -57,15 +64,39 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonGiftOrThre
   const token = obj.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   let items = [arg0];
   const obj2 = map;
-  obj = { style: callback(token, require("../../../../design/tokens/native/useToken.tsx").useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN)).container, children: null };
+  obj = {
+    style: callback(
+      token,
+      require("../../../../design/tokens/native/useToken.tsx").useToken(
+        ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN,
+      ),
+    ).container,
+    children: null,
+  };
   const memo = importAllResult.useMemo(() => {
     const items = [closure_0];
     return items;
   }, items);
-  obj = { items: memo, renderItem: renderChatInputActionButtonGiftAndThread, getItemKey: getChatInputActionButtonGiftAndThreadKey };
-  obj[1] = jsx(require("../../../../../discord_common/js/packages/design/native.tsx").TransitionGroup, { items: memo, renderItem: renderChatInputActionButtonGiftAndThread, getItemKey: getChatInputActionButtonGiftAndThreadKey });
-  return <View items={memo} renderItem={renderChatInputActionButtonGiftAndThread} getItemKey={getChatInputActionButtonGiftAndThreadKey} />;
+  obj = {
+    items: memo,
+    renderItem: renderChatInputActionButtonGiftAndThread,
+    getItemKey: getChatInputActionButtonGiftAndThreadKey,
+  };
+  obj[1] = jsx(require("../../../../../discord_common/js/packages/design/native.tsx").TransitionGroup, {
+    items: memo,
+    renderItem: renderChatInputActionButtonGiftAndThread,
+    getItemKey: getChatInputActionButtonGiftAndThreadKey,
+  });
+  return (
+    <View
+      items={memo}
+      renderItem={renderChatInputActionButtonGiftAndThread}
+      getItemKey={getChatInputActionButtonGiftAndThreadKey}
+    />
+  );
 });
-const result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButtonGiftOrThread.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/chat_input/native/action_buttons/ChatInputActionButtonGiftOrThread.tsx",
+);
 
 export default memoResult;

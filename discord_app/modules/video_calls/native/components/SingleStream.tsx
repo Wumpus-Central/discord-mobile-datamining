@@ -22,7 +22,7 @@ export default function SingleStream(channel) {
       const participant = closure_1_1(closure_1_2[5]).selectParticipant(channel.id, null);
     },
     participant: channel.participant,
-    style: { flex: 1 }
+    style: { flex: 1 },
   };
   return jsx(StreamTextOverlayDefault, {
     gestureEnabled: true,
@@ -35,6 +35,6 @@ export default function SingleStream(channel) {
       const participant = closure_1_1(closure_1_2[5]).selectParticipant(channel.id, null);
     },
     participant: channel.participant,
-    style: { flex: 1 }
+    style: { flex: 1 },
   });
-};
+}

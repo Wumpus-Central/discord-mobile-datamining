@@ -3,8 +3,12 @@ import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-let closure_4 = { code: "function useVisibilityTransitionTsx1(){const{withTiming,visibility,visible,entranceTiming,exitTiming,runOnJS,animationCallbackJSThread}=this.__closure;return{opacity:withTiming(visibility,visible?entranceTiming:exitTiming,'respect-motion-settings',function(){'worklet';runOnJS(animationCallbackJSThread)();})};}" };
-let closure_5 = { code: "function useVisibilityTransitionTsx2(){const{runOnJS,animationCallbackJSThread}=this.__closure;runOnJS(animationCallbackJSThread)();}" };
+let closure_4 = {
+  code: "function useVisibilityTransitionTsx1(){const{withTiming,visibility,visible,entranceTiming,exitTiming,runOnJS,animationCallbackJSThread}=this.__closure;return{opacity:withTiming(visibility,visible?entranceTiming:exitTiming,'respect-motion-settings',function(){'worklet';runOnJS(animationCallbackJSThread)();})};}",
+};
+let closure_5 = {
+  code: "function useVisibilityTransitionTsx2(){const{runOnJS,animationCallbackJSThread}=this.__closure;runOnJS(animationCallbackJSThread)();}",
+};
 const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useVisibilityTransition.tsx");
 
 export const useVisibilityTransition = function useVisibilityTransition(visible) {
@@ -45,7 +49,15 @@ export const useVisibilityTransition = function useVisibilityTransition(visible)
     obj[0] = obj.withTiming(num, visible ? entranceTiming : exitTiming, "respect-motion-settings", fn);
     return obj;
   };
-  obj = { withTiming: visible(entranceTiming[3]).withTiming, visibility: num, visible, entranceTiming, exitTiming, runOnJS: visible(entranceTiming[2]).runOnJS, animationCallbackJSThread: callback };
+  obj = {
+    withTiming: visible(entranceTiming[3]).withTiming,
+    visibility: num,
+    visible,
+    entranceTiming,
+    exitTiming,
+    runOnJS: visible(entranceTiming[2]).runOnJS,
+    animationCallbackJSThread: callback,
+  };
   fn.__closure = obj;
   fn.__workletHash = 12648900540770;
   fn.__initData = callback;

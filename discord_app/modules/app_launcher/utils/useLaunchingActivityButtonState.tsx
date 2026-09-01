@@ -37,8 +37,14 @@ export default function useLaunchingActivityButtonState(applicationId) {
     return tmp3;
   });
   if (null == getOrFetchApplication) {
-    stateFromStores1 = null != stateFromStores && stateFromStores.isLaunching && stateFromStores.componentId === applicationId.launchingComponentId;
-    const tmp6 = null != stateFromStores && stateFromStores.isLaunching && stateFromStores.componentId === applicationId.launchingComponentId;
+    stateFromStores1 =
+      null != stateFromStores &&
+      stateFromStores.isLaunching &&
+      stateFromStores.componentId === applicationId.launchingComponentId;
+    const tmp6 =
+      null != stateFromStores &&
+      stateFromStores.isLaunching &&
+      stateFromStores.componentId === applicationId.launchingComponentId;
   } else {
     const tmpResult = tmp(tmp2[5]);
   }
@@ -62,4 +68,4 @@ export default function useLaunchingActivityButtonState(applicationId) {
   }
   obj[1] = tmp7;
   return obj;
-};
+}

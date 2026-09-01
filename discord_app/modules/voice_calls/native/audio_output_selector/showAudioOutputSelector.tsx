@@ -8,7 +8,9 @@ import VOICE_PANEL_SETTINGS_KEY from "../../../voice_panel/native/header/VoicePa
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let closure_4 = VOICE_PANEL_SETTINGS_KEY.VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY;
-const result = set.fileFinishedImporting("modules/voice_calls/native/audio_output_selector/showAudioOutputSelector.tsx");
+const result = set.fileFinishedImporting(
+  "modules/voice_calls/native/audio_output_selector/showAudioOutputSelector.tsx",
+);
 
 export const showAudioOutputSelector = function showAudioOutputSelector(channelId, closure_1) {
   let obj = set2;

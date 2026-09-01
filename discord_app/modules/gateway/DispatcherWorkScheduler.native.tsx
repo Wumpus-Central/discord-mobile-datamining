@@ -5,7 +5,12 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 import _trackAppBackgrounded from "BasicWorkScheduler.tsx";
 import DISPATCHER_STANDARD_TIMEOUT_MS from "DispatcherWorkConstants.tsx";
 
-({ DISPATCHER_CALLBACK_MAX_TIME_REMAINING_MS: obj1, NATIVE_WORK_BACKOFF_MS: c3, NATIVE_WORK_DEADLINE_MS: c4, WorkIdleDeadline: c5 } = DISPATCHER_STANDARD_TIMEOUT_MS);
+({
+  DISPATCHER_CALLBACK_MAX_TIME_REMAINING_MS: obj1,
+  NATIVE_WORK_BACKOFF_MS: c3,
+  NATIVE_WORK_DEADLINE_MS: c4,
+  WorkIdleDeadline: c5,
+} = DISPATCHER_STANDARD_TIMEOUT_MS);
 const AppStates = ME.AppStates;
 const BasicWorkScheduler = _trackAppBackgrounded.BasicWorkScheduler;
 class DispatcherWorkScheduler extends BasicWorkScheduler {
@@ -32,7 +37,16 @@ prototype["_queueIdleCallback"] = function _queueIdleCallback() {
       const _setTimeout = setTimeout;
       self._flushIdleHandler = setTimeout(() => {
         ({ _processWorkCallback, _consecutiveFlushesBeforeQueueEmpty } = self);
-        _processWorkCallback(new closure_1_5(Math.max(Math.max(0, closure_1_4 - (performance.now() - closure_0)) + closure_1_3 * _consecutiveFlushesBeforeQueueEmpty, closure_1_2), false));
+        _processWorkCallback(
+          new closure_1_5(
+            Math.max(
+              Math.max(0, closure_1_4 - (performance.now() - closure_0)) +
+                closure_1_3 * _consecutiveFlushesBeforeQueueEmpty,
+              closure_1_2,
+            ),
+            false,
+          ),
+        );
       }, 1);
     }
   }
@@ -53,7 +67,13 @@ export const createDispatcherWorkScheduler = function createDispatcherWorkSchedu
     HermesBuiltin.throwTypeError();
   }
   importDefault = undefined;
-  const tmp3 = new DispatcherWorkScheduler("Trying to call a non-function", tmp, DispatcherWorkScheduler, new.target, undefined);
+  const tmp3 = new DispatcherWorkScheduler(
+    "Trying to call a non-function",
+    tmp,
+    DispatcherWorkScheduler,
+    new.target,
+    undefined,
+  );
   // ThrowIfThisInitialized (0x7c)
   importDefault = tmp3;
   const subscription = dispatcherDefault.subscribe("APP_STATE_UPDATE", (arg0) => {

@@ -12,7 +12,9 @@ function updateProduct(currencyCode) {
   const result = currencyCode.price / 100;
   if ("BG" === c14) {
     if (formatted === CurrencyCodes.EUR) {
-      let formatDualPriceForBGResult = formatSingleCurrencyPrice.formatDualPriceForBG(result, { convertToMajorUnits: false });
+      let formatDualPriceForBGResult = formatSingleCurrencyPrice.formatDualPriceForBG(result, {
+        convertToMajorUnits: false,
+      });
       const obj2 = formatSingleCurrencyPrice;
     }
     let obj = {};
@@ -81,8 +83,7 @@ let c12 = false;
 let c13 = false;
 let c14 = null;
 const Store = initializeDefault.Store;
-class IAPStore extends Store {
-}
+class IAPStore extends Store {}
 const prototype = IAPStore.prototype;
 prototype["getProducts"] = function getProducts() {
   return c6;
@@ -171,7 +172,7 @@ const iAPStore = new IAPStore(dispatcherDefault, {
   },
   GPLAY_SET_USER_COUNTRY: function handleSetUserCountry(countryCode) {
     countryCode = countryCode.countryCode;
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/native/IAPStore.android.tsx");
 

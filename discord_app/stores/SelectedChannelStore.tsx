@@ -109,7 +109,15 @@ function handleConnectionOpen(sessionId) {
   }
   if (_require) {
     const Storage = require("../../discord_common/js/packages/storage/Storage.tsx").Storage;
-    const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
+    const obj = {
+      selectedChannelId: null,
+      selectedVoiceChannelId: null,
+      lastChannelFollowingDestination: null,
+      lastConnectedTime: null,
+      selectedChannelIds: null,
+      mostRecentSelectedTextChannelIds: null,
+      knownThreadIds: null,
+    };
     obj[0] = closure_6;
     obj[1] = c8;
     obj[2] = closure_7;
@@ -122,18 +130,21 @@ function handleConnectionOpen(sessionId) {
     const found = combined.filter(require("../utils/GlobalUtils.tsx").isNotNullish);
     const tmp9Result = tmp9(12);
     const uniqResult = found.uniq();
-    obj[6] = found.uniq().filter((arg0) => {
-      basicChannel = basicChannel.getBasicChannel(arg0);
-      let hasItem = set2.has(arg0);
-      if (!hasItem) {
-        let hasItem1 = null != basicChannel;
-        if (hasItem1) {
-          hasItem1 = set.has(basicChannel.type);
+    obj[6] = found
+      .uniq()
+      .filter((arg0) => {
+        basicChannel = basicChannel.getBasicChannel(arg0);
+        let hasItem = set2.has(arg0);
+        if (!hasItem) {
+          let hasItem1 = null != basicChannel;
+          if (hasItem1) {
+            hasItem1 = set.has(basicChannel.type);
+          }
+          hasItem = hasItem1;
         }
-        hasItem = hasItem1;
-      }
-      return hasItem;
-    }).value();
+        return hasItem;
+      })
+      .value();
     const result = Storage.set(SelectedChannelStore, obj);
     const iter = found.uniq().filter((arg0) => {
       basicChannel = basicChannel.getBasicChannel(arg0);
@@ -168,7 +179,15 @@ function navigateAwayFromChannel(id, guild_id, parent_id) {
   }
   if (flag) {
     const Storage = Storage3.Storage;
-    const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
+    const obj = {
+      selectedChannelId: null,
+      selectedVoiceChannelId: null,
+      lastChannelFollowingDestination: null,
+      lastConnectedTime: null,
+      selectedChannelIds: null,
+      mostRecentSelectedTextChannelIds: null,
+      knownThreadIds: null,
+    };
     obj[0] = closure_6;
     obj[1] = c8;
     obj[2] = closure_7;
@@ -181,18 +200,21 @@ function navigateAwayFromChannel(id, guild_id, parent_id) {
     const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
     const obj4 = applyDefault;
     const uniqResult = found.uniq();
-    obj[6] = found.uniq().filter((arg0) => {
-      basicChannel = basicChannel.getBasicChannel(arg0);
-      let hasItem = set2.has(arg0);
-      if (!hasItem) {
-        let hasItem1 = null != basicChannel;
-        if (hasItem1) {
-          hasItem1 = set.has(basicChannel.type);
+    obj[6] = found
+      .uniq()
+      .filter((arg0) => {
+        basicChannel = basicChannel.getBasicChannel(arg0);
+        let hasItem = set2.has(arg0);
+        if (!hasItem) {
+          let hasItem1 = null != basicChannel;
+          if (hasItem1) {
+            hasItem1 = set.has(basicChannel.type);
+          }
+          hasItem = hasItem1;
         }
-        hasItem = hasItem1;
-      }
-      return hasItem;
-    }).value();
+        return hasItem;
+      })
+      .value();
     const result = Storage.set(SelectedChannelStore, obj);
     const iter = found.uniq().filter((arg0) => {
       basicChannel = basicChannel.getBasicChannel(arg0);
@@ -221,14 +243,20 @@ let closure_26 = {};
 let closure_27 = {};
 let set = new Set();
 const Store = initializeDefault.Store;
-class SelectedChannelStore extends Store {
-}
+class SelectedChannelStore extends Store {}
 const prototype = SelectedChannelStore.prototype;
 prototype["initialize"] = function initialize() {
   const Storage = Storage3.Storage;
   let value = Storage.get(SelectedChannelStore);
   if (value == null) {
-    const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null };
+    const obj = {
+      selectedChannelId: null,
+      selectedVoiceChannelId: null,
+      lastChannelFollowingDestination: null,
+      lastConnectedTime: null,
+      selectedChannelIds: null,
+      mostRecentSelectedTextChannelIds: null,
+    };
     obj[0] = closure_6;
     obj[1] = closure_8;
     obj[2] = closure_7;
@@ -241,7 +269,12 @@ prototype["initialize"] = function initialize() {
     const _Set = Set;
     set = new Set(value.knownThreadIds);
   }
-  ({ selectedVoiceChannelId: closure_8, lastChannelFollowingDestination: closure_7, lastConnectedTime: closure_9, mostRecentSelectedTextChannelIds } = value);
+  ({
+    selectedVoiceChannelId: closure_8,
+    lastChannelFollowingDestination: closure_7,
+    lastConnectedTime: closure_9,
+    mostRecentSelectedTextChannelIds,
+  } = value);
   if (mostRecentSelectedTextChannelIds == null) {
     mostRecentSelectedTextChannelIds = {};
   }
@@ -492,7 +525,15 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         const StringResult = String(guildId);
       }
       const Storage = Storage3.Storage;
-      const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
+      const obj = {
+        selectedChannelId: null,
+        selectedVoiceChannelId: null,
+        lastChannelFollowingDestination: null,
+        lastConnectedTime: null,
+        selectedChannelIds: null,
+        mostRecentSelectedTextChannelIds: null,
+        knownThreadIds: null,
+      };
       obj[0] = channelId;
       obj[1] = closure_8;
       obj[2] = closure_7;
@@ -505,18 +546,21 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
       const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
       const obj5 = applyDefault;
       const uniqResult = found.uniq();
-      obj[6] = found.uniq().filter((arg0) => {
-        basicChannel = basicChannel.getBasicChannel(arg0);
-        let hasItem = set2.has(arg0);
-        if (!hasItem) {
-          let hasItem1 = null != basicChannel;
-          if (hasItem1) {
-            hasItem1 = set.has(basicChannel.type);
+      obj[6] = found
+        .uniq()
+        .filter((arg0) => {
+          basicChannel = basicChannel.getBasicChannel(arg0);
+          let hasItem = set2.has(arg0);
+          if (!hasItem) {
+            let hasItem1 = null != basicChannel;
+            if (hasItem1) {
+              hasItem1 = set.has(basicChannel.type);
+            }
+            hasItem = hasItem1;
           }
-          hasItem = hasItem1;
-        }
-        return hasItem;
-      }).value();
+          return hasItem;
+        })
+        .value();
       const result = Storage.set(SelectedChannelStore, obj);
     }
   },
@@ -600,7 +644,15 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         }
       }
       const Storage = Storage3.Storage;
-      const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
+      const obj = {
+        selectedChannelId: null,
+        selectedVoiceChannelId: null,
+        lastChannelFollowingDestination: null,
+        lastConnectedTime: null,
+        selectedChannelIds: null,
+        mostRecentSelectedTextChannelIds: null,
+        knownThreadIds: null,
+      };
       obj[0] = closure_6;
       obj[1] = closure_8;
       obj[2] = closure_7;
@@ -613,18 +665,21 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
       const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
       const obj5 = applyDefault;
       const uniqResult = found.uniq();
-      obj[6] = found.uniq().filter((arg0) => {
-        basicChannel = basicChannel.getBasicChannel(arg0);
-        let hasItem = set2.has(arg0);
-        if (!hasItem) {
-          let hasItem1 = null != basicChannel;
-          if (hasItem1) {
-            hasItem1 = set.has(basicChannel.type);
+      obj[6] = found
+        .uniq()
+        .filter((arg0) => {
+          basicChannel = basicChannel.getBasicChannel(arg0);
+          let hasItem = set2.has(arg0);
+          if (!hasItem) {
+            let hasItem1 = null != basicChannel;
+            if (hasItem1) {
+              hasItem1 = set.has(basicChannel.type);
+            }
+            hasItem = hasItem1;
           }
-          hasItem = hasItem1;
-        }
-        return hasItem;
-      }).value();
+          return hasItem;
+        })
+        .value();
       const result = Storage.set(SelectedChannelStore, obj);
       const iter = found.uniq().filter((arg0) => {
         basicChannel = basicChannel.getBasicChannel(arg0);
@@ -651,7 +706,15 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
       delete tmp[tmp2];
       delete tmp[tmp2];
       const Storage = Storage3.Storage;
-      const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
+      const obj = {
+        selectedChannelId: null,
+        selectedVoiceChannelId: null,
+        lastChannelFollowingDestination: null,
+        lastConnectedTime: null,
+        selectedChannelIds: null,
+        mostRecentSelectedTextChannelIds: null,
+        knownThreadIds: null,
+      };
       obj[0] = closure_6;
       obj[1] = c8;
       obj[2] = closure_7;
@@ -664,18 +727,21 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
       const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
       const obj4 = applyDefault;
       const uniqResult = found.uniq();
-      obj[6] = found.uniq().filter((arg0) => {
-        basicChannel = basicChannel.getBasicChannel(arg0);
-        let hasItem = set2.has(arg0);
-        if (!hasItem) {
-          let hasItem1 = null != basicChannel;
-          if (hasItem1) {
-            hasItem1 = set.has(basicChannel.type);
+      obj[6] = found
+        .uniq()
+        .filter((arg0) => {
+          basicChannel = basicChannel.getBasicChannel(arg0);
+          let hasItem = set2.has(arg0);
+          if (!hasItem) {
+            let hasItem1 = null != basicChannel;
+            if (hasItem1) {
+              hasItem1 = set.has(basicChannel.type);
+            }
+            hasItem = hasItem1;
           }
-          hasItem = hasItem1;
-        }
-        return hasItem;
-      }).value();
+          return hasItem;
+        })
+        .value();
       const result = Storage.set(SelectedChannelStore, obj);
     }
   },
@@ -707,25 +773,36 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
       }
     }
     const Storage = Storage3.Storage;
-    const obj = { selectedChannelId: closure_6, selectedVoiceChannelId: channelId, lastChannelFollowingDestination: closure_7, lastConnectedTime: closure_9, selectedChannelIds: dependencyMap, mostRecentSelectedTextChannelIds: closure_27, knownThreadIds: null };
+    const obj = {
+      selectedChannelId: closure_6,
+      selectedVoiceChannelId: channelId,
+      lastChannelFollowingDestination: closure_7,
+      lastConnectedTime: closure_9,
+      selectedChannelIds: dependencyMap,
+      mostRecentSelectedTextChannelIds: closure_27,
+      knownThreadIds: null,
+    };
     const values = applyDefault(dependencyMap).values();
     const obj2 = applyDefault(dependencyMap);
     const combined = values.concat(applyDefault.values(closure_27));
     const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
     const obj4 = applyDefault;
     const uniqResult = found.uniq();
-    obj[6] = found.uniq().filter((arg0) => {
-      basicChannel = basicChannel.getBasicChannel(arg0);
-      let hasItem = set2.has(arg0);
-      if (!hasItem) {
-        let hasItem1 = null != basicChannel;
-        if (hasItem1) {
-          hasItem1 = set.has(basicChannel.type);
+    obj[6] = found
+      .uniq()
+      .filter((arg0) => {
+        basicChannel = basicChannel.getBasicChannel(arg0);
+        let hasItem = set2.has(arg0);
+        if (!hasItem) {
+          let hasItem1 = null != basicChannel;
+          if (hasItem1) {
+            hasItem1 = set.has(basicChannel.type);
+          }
+          hasItem = hasItem1;
         }
-        hasItem = hasItem1;
-      }
-      return hasItem;
-    }).value();
+        return hasItem;
+      })
+      .value();
     const result = Storage.set(SelectedChannelStore, obj);
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
@@ -749,30 +826,49 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
           interval = setInterval(() => {
             closure_9 = Date.now();
             const Storage = callback(595).Storage;
-            const obj = { selectedChannelId: closure_6, selectedVoiceChannelId: c8, lastChannelFollowingDestination: closure_7, lastConnectedTime: closure_9, selectedChannelIds: closure_25, mostRecentSelectedTextChannelIds: closure_27, knownThreadIds: null };
+            const obj = {
+              selectedChannelId: closure_6,
+              selectedVoiceChannelId: c8,
+              lastChannelFollowingDestination: closure_7,
+              lastConnectedTime: closure_9,
+              selectedChannelIds: closure_25,
+              mostRecentSelectedTextChannelIds: closure_27,
+              knownThreadIds: null,
+            };
             const values = callback2(12)(closure_25).values();
             const obj2 = callback2(12)(closure_25);
             const combined = values.concat(callback2(12).values(closure_27));
             const found = combined.filter(callback(1471).isNotNullish);
             const obj4 = callback2(12);
             const uniqResult = found.uniq();
-            obj[6] = found.uniq().filter((arg0) => {
-              basicChannel = basicChannel.getBasicChannel(arg0);
-              let hasItem = set2.has(arg0);
-              if (!hasItem) {
-                let hasItem1 = null != basicChannel;
-                if (hasItem1) {
-                  hasItem1 = set.has(basicChannel.type);
+            obj[6] = found
+              .uniq()
+              .filter((arg0) => {
+                basicChannel = basicChannel.getBasicChannel(arg0);
+                let hasItem = set2.has(arg0);
+                if (!hasItem) {
+                  let hasItem1 = null != basicChannel;
+                  if (hasItem1) {
+                    hasItem1 = set.has(basicChannel.type);
+                  }
+                  hasItem = hasItem1;
                 }
-                hasItem = hasItem1;
-              }
-              return hasItem;
-            }).value();
+                return hasItem;
+              })
+              .value();
             const result = Storage.set(closure_24, obj);
           }, 60000);
         }
         const Storage2 = callback(595).Storage;
-        let obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
+        let obj = {
+          selectedChannelId: null,
+          selectedVoiceChannelId: null,
+          lastChannelFollowingDestination: null,
+          lastConnectedTime: null,
+          selectedChannelIds: null,
+          mostRecentSelectedTextChannelIds: null,
+          knownThreadIds: null,
+        };
         obj[0] = closure_6;
         obj[1] = channelId;
         obj[2] = closure_7;
@@ -786,18 +882,21 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         let found = combined.filter(callback(1471).isNotNullish);
         const obj11 = callback2(12);
         let uniqResult = found.uniq();
-        obj[6] = found.uniq().filter((arg0) => {
-          basicChannel = basicChannel.getBasicChannel(arg0);
-          let hasItem = set2.has(arg0);
-          if (!hasItem) {
-            let hasItem1 = null != basicChannel;
-            if (hasItem1) {
-              hasItem1 = set.has(basicChannel.type);
+        obj[6] = found
+          .uniq()
+          .filter((arg0) => {
+            basicChannel = basicChannel.getBasicChannel(arg0);
+            let hasItem = set2.has(arg0);
+            if (!hasItem) {
+              let hasItem1 = null != basicChannel;
+              if (hasItem1) {
+                hasItem1 = set.has(basicChannel.type);
+              }
+              hasItem = hasItem1;
             }
-            hasItem = hasItem1;
-          }
-          return hasItem;
-        }).value();
+            return hasItem;
+          })
+          .value();
         let result = Storage2.set(closure_24, obj);
         const iter2 = found.uniq().filter((arg0) => {
           basicChannel = basicChannel.getBasicChannel(arg0);
@@ -836,7 +935,15 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
           channelId = null;
         }
         let Storage = callback(595).Storage;
-        obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
+        obj = {
+          selectedChannelId: null,
+          selectedVoiceChannelId: null,
+          lastChannelFollowingDestination: null,
+          lastConnectedTime: null,
+          selectedChannelIds: null,
+          mostRecentSelectedTextChannelIds: null,
+          knownThreadIds: null,
+        };
         obj[0] = closure_6;
         obj[1] = channelId;
         obj[2] = closure_7;
@@ -850,18 +957,21 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         const found1 = combined1.filter(callback(1471).isNotNullish);
         const obj5 = callback2(12);
         const uniqResult1 = found1.uniq();
-        obj[6] = found1.uniq().filter((arg0) => {
-          basicChannel = basicChannel.getBasicChannel(arg0);
-          let hasItem = set2.has(arg0);
-          if (!hasItem) {
-            let hasItem1 = null != basicChannel;
-            if (hasItem1) {
-              hasItem1 = set.has(basicChannel.type);
+        obj[6] = found1
+          .uniq()
+          .filter((arg0) => {
+            basicChannel = basicChannel.getBasicChannel(arg0);
+            let hasItem = set2.has(arg0);
+            if (!hasItem) {
+              let hasItem1 = null != basicChannel;
+              if (hasItem1) {
+                hasItem1 = set.has(basicChannel.type);
+              }
+              hasItem = hasItem1;
             }
-            hasItem = hasItem1;
-          }
-          return hasItem;
-        }).value();
+            return hasItem;
+          })
+          .value();
         const result1 = Storage.set(closure_24, obj);
         const iter = found1.uniq().filter((arg0) => {
           basicChannel = basicChannel.getBasicChannel(arg0);
@@ -890,7 +1000,15 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
       obj[0] = channelId;
       obj[1] = channelId.guildId;
       const Storage = Storage3.Storage;
-      obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
+      obj = {
+        selectedChannelId: null,
+        selectedVoiceChannelId: null,
+        lastChannelFollowingDestination: null,
+        lastConnectedTime: null,
+        selectedChannelIds: null,
+        mostRecentSelectedTextChannelIds: null,
+        knownThreadIds: null,
+      };
       obj[0] = closure_6;
       obj[1] = closure_8;
       obj[2] = obj;
@@ -903,18 +1021,21 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
       const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
       const obj5 = applyDefault;
       const uniqResult = found.uniq();
-      obj[6] = found.uniq().filter((arg0) => {
-        basicChannel = basicChannel.getBasicChannel(arg0);
-        let hasItem = set2.has(arg0);
-        if (!hasItem) {
-          let hasItem1 = null != basicChannel;
-          if (hasItem1) {
-            hasItem1 = set.has(basicChannel.type);
+      obj[6] = found
+        .uniq()
+        .filter((arg0) => {
+          basicChannel = basicChannel.getBasicChannel(arg0);
+          let hasItem = set2.has(arg0);
+          if (!hasItem) {
+            let hasItem1 = null != basicChannel;
+            if (hasItem1) {
+              hasItem1 = set.has(basicChannel.type);
+            }
+            hasItem = hasItem1;
           }
-          hasItem = hasItem1;
-        }
-        return hasItem;
-      }).value();
+          return hasItem;
+        })
+        .value();
       const result = Storage.set(SelectedChannelStore, obj);
       const iter = found.uniq().filter((arg0) => {
         basicChannel = basicChannel.getBasicChannel(arg0);
@@ -939,7 +1060,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
     c8 = null;
     const Storage = Storage3.Storage;
     Storage.remove(SelectedChannelStore);
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/SelectedChannelStore.tsx");
 

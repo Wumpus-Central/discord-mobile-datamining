@@ -5,7 +5,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ content: { margin: "auto", overflow: "visible", justifyContent: "center", textAlign: "center", alignItems: "center" }, title: { textAlign: "center", textTransform: "uppercase", lineHeight: 50 } });
+let closure_6 = createCacheKey.createStyles({
+  content: { margin: "auto", overflow: "visible", justifyContent: "center", textAlign: "center", alignItems: "center" },
+  title: { textAlign: "center", textTransform: "uppercase", lineHeight: 50 },
+});
 const result = require("set").fileFinishedImporting("modules/safety_flows/native/OverviewScreen.tsx");
 
 export default function OverviewScreen() {
@@ -32,7 +35,7 @@ export default function OverviewScreen() {
   obj = { variant: "display-lg", style: tmp.title, children: null };
   const intl = task(1236).intl;
   obj[2] = intl.string(navigation(2663).RRamMH);
-  const items1 = [callback(task(4474).Text, obj), , ];
+  const items1 = [callback(task(4474).Text, obj), ,];
   obj1 = { variant: "text-md/medium", color: "text-strong", children: null };
   const intl2 = task(1236).intl;
   obj1[2] = intl2.string(navigation(2663).I2Ctk1);
@@ -51,7 +54,7 @@ export default function OverviewScreen() {
   }
   const obj3 = { children: null };
   const obj4 = { children: null };
-  const items2 = [callback(task(5992).TableRowGroup, { hasIcons: true, children: mapped }), ];
+  const items2 = [callback(task(5992).TableRowGroup, { hasIcons: true, children: mapped })];
   const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl3 = tmp2(1236).intl;
   obj5[2] = intl3.string(navigation(2663)["0TnUrG"]);
@@ -60,9 +63,9 @@ export default function OverviewScreen() {
   items1[2] = closure_5(task(4926).Stack, obj2);
   obj[2] = items1;
   obj4[0] = closure_5(task(4926).Stack, obj);
-  const items3 = [callback(task(8693).ModalContent, obj4), ];
+  const items3 = [callback(task(8693).ModalContent, obj4)];
   const obj6 = { children: null };
-  const items4 = [callback(navigation(17454), {}), ];
+  const items4 = [callback(navigation(17454), {})];
   const obj7 = { variant: "primary", text: null, onPress: null };
   const intl4 = tmp2(1236).intl;
   obj7[1] = intl4.string(navigation(2663).Ks6opt);
@@ -72,4 +75,4 @@ export default function OverviewScreen() {
   items3[1] = closure_5(task(11499).ModalFooter, obj6);
   obj3[0] = items3;
   return closure_5(task(8692).ModalScreen, obj3);
-};
+}

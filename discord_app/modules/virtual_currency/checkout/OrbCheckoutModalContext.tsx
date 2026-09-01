@@ -17,7 +17,9 @@ function useOrbCheckoutModalContextProvider(value) {
   ({ onSignFailure, order } = value);
   let obj = skuId(onCheckoutSuccess[5]);
   const items = [redeemVirtualCurrency];
-  stateFromStores = obj.useStateFromStores(items, () => loadId(onCheckoutSuccess[6]).canUseShopDiscounts(redeemVirtualCurrency.getCurrentUser()));
+  stateFromStores = obj.useStateFromStores(items, () =>
+    loadId(onCheckoutSuccess[6]).canUseShopDiscounts(redeemVirtualCurrency.getCurrentUser()),
+  );
   obj1 = skuId(onCheckoutSuccess[5]);
   const items1 = [closure_7];
   const items2 = [skuId];
@@ -74,7 +76,12 @@ function useOrbCheckoutModalContextProvider(value) {
     const tmpResult2 = tmp(tmp2[11]);
   }
   const tmpResult1 = skuId(onCheckoutSuccess[9]);
-  redeemVirtualCurrency = skuId(onCheckoutSuccess[12]).useRedeemVirtualCurrency({ skuId, loadId, order, onSignFailure });
+  redeemVirtualCurrency = skuId(onCheckoutSuccess[12]).useRedeemVirtualCurrency({
+    skuId,
+    loadId,
+    order,
+    onSignFailure,
+  });
   redeemVirtualCurrency = redeemVirtualCurrency.redeemVirtualCurrency;
   const items4 = [skuId, loadId, redeemVirtualCurrency, onCheckoutSuccess];
   ({ isSubmitting, error } = redeemVirtualCurrency);
@@ -97,18 +104,27 @@ function useOrbCheckoutModalContextProvider(value) {
       });
     }, items4),
     isRedeeming: isSubmitting,
-    orbRedemptionError: error
+    orbRedemptionError: error,
   };
   return obj1;
 }
 ({ useContext: c3, useCallback: c4, useMemo: c5, createContext } = noop);
 const jsx = jsxProd.jsx;
-let obj = { skuId: "123", skuProductLine: null, skuApplicationId: "r", loadId: "PX_16", analyticsLocations: null, analyticsSourceLocation: null, isRedeeming: null, orbRedemptionError: "lg", orbProductContext: null, onRedeemVirtualCurrency: true };
+let obj = {
+  skuId: "123",
+  skuProductLine: null,
+  skuApplicationId: "r",
+  loadId: "PX_16",
+  analyticsLocations: null,
+  analyticsSourceLocation: null,
+  isRedeeming: null,
+  orbRedemptionError: "lg",
+  orbProductContext: null,
+  onRedeemVirtualCurrency: true,
+};
 obj[3] = v1.v4();
 obj[4] = [];
-obj[9] = function onRedeemVirtualCurrency() {
-
-};
+obj[9] = function onRedeemVirtualCurrency() {};
 let closure_9 = createContext(obj);
 let result = set.fileFinishedImporting("modules/virtual_currency/checkout/OrbCheckoutModalContext.tsx");
 
@@ -118,7 +134,18 @@ export const OrbCheckoutModalContextProvider = function OrbCheckoutModalContextP
   let value = { skuId, loadId, onCheckoutSuccess: onCheckoutSuccess.onCheckoutSuccess };
   ({ analyticsSourceLocation, children } = onCheckoutSuccess);
   const tmp = useOrbCheckoutModalContextProvider(value);
-  value = { skuId, skuProductLine: tmp.skuProductLine, skuApplicationId: tmp.skuApplicationId, loadId, analyticsLocations: null, analyticsSourceLocation: null, orbProductContext: null, onRedeemVirtualCurrency: null, isRedeeming: null, orbRedemptionError: null };
+  value = {
+    skuId,
+    skuProductLine: tmp.skuProductLine,
+    skuApplicationId: tmp.skuApplicationId,
+    loadId,
+    analyticsLocations: null,
+    analyticsSourceLocation: null,
+    orbProductContext: null,
+    onRedeemVirtualCurrency: null,
+    isRedeeming: null,
+    orbRedemptionError: null,
+  };
   ({ orbProductContext, onRedeemVirtualCurrency, isRedeeming, orbRedemptionError } = tmp);
   if (analyticsLocations == null) {
     analyticsLocations = [];

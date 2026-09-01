@@ -40,7 +40,13 @@ function mergeMessage(self, id) {
   }
   messageRecord = createMinimalMessageRecord.createMessageRecord(id);
 }
-({ MAX_MESSAGES_PER_CHANNEL: c4, MAX_LOADED_MESSAGES: c5, MAX_MESSAGE_CACHE_SIZE: closure_6, TRUNCATED_MESSAGE_VIEW_SIZE: error, MessageStates: closure_8 } = ME);
+({
+  MAX_MESSAGES_PER_CHANNEL: c4,
+  MAX_LOADED_MESSAGES: c5,
+  MAX_MESSAGE_CACHE_SIZE: closure_6,
+  TRUNCATED_MESSAGE_VIEW_SIZE: error,
+  MessageStates: closure_8,
+} = ME);
 let closure_9 = new timestampDefault("ChannelMessages");
 let MessageCache;
 class MessageCache {
@@ -76,19 +82,19 @@ Object.defineProperty(prototype, "wasAtEdge", {
   get: function wasAtEdge() {
     return this._wasAtEdge;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "wasAtEdge", {
   get: undefined,
   set: function wasAtEdge(_wasAtEdge) {
     this._wasAtEdge = _wasAtEdge;
-  }
+  },
 });
 Object.defineProperty(prototype, "length", {
   get: function length() {
     return this._messages.length;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["clear"] = function clear() {
   this._map = {};
@@ -375,7 +381,29 @@ prototype2["mutate"] = function mutate(obj, flag) {
   }
   obj._before = cloneResult1;
   if (obj instanceof Function) {
-    ({ ready: tmp2.ready, jumpType: tmp2.jumpType, jumpTargetId: tmp2.jumpTargetId, jumpTargetOffset: tmp2.jumpTargetOffset, jumpSequenceId: tmp2.jumpSequenceId, jumped: tmp2.jumped, jumpedToPresent: tmp2.jumpedToPresent, jumpFlash: tmp2.jumpFlash, jumpReturnTargetId: tmp2.jumpReturnTargetId, onJumpComplete: tmp2.onJumpComplete, focusTargetId: tmp2.focusTargetId, focusSequenceId: tmp2.focusSequenceId, hasMoreBefore: tmp2.hasMoreBefore, hasMoreAfter: tmp2.hasMoreAfter, loadingMore: tmp2.loadingMore, revealedMessageId: tmp2.revealedMessageId, cached: tmp2.cached, hasFetched: tmp2.hasFetched, error: tmp2.error, initialScrollSequenceId: tmp2.initialScrollSequenceId, suppressRowAnimationSequenceId: tmp2.suppressRowAnimationSequenceId } = self);
+    ({
+      ready: tmp2.ready,
+      jumpType: tmp2.jumpType,
+      jumpTargetId: tmp2.jumpTargetId,
+      jumpTargetOffset: tmp2.jumpTargetOffset,
+      jumpSequenceId: tmp2.jumpSequenceId,
+      jumped: tmp2.jumped,
+      jumpedToPresent: tmp2.jumpedToPresent,
+      jumpFlash: tmp2.jumpFlash,
+      jumpReturnTargetId: tmp2.jumpReturnTargetId,
+      onJumpComplete: tmp2.onJumpComplete,
+      focusTargetId: tmp2.focusTargetId,
+      focusSequenceId: tmp2.focusSequenceId,
+      hasMoreBefore: tmp2.hasMoreBefore,
+      hasMoreAfter: tmp2.hasMoreAfter,
+      loadingMore: tmp2.loadingMore,
+      revealedMessageId: tmp2.revealedMessageId,
+      cached: tmp2.cached,
+      hasFetched: tmp2.hasFetched,
+      error: tmp2.error,
+      initialScrollSequenceId: tmp2.initialScrollSequenceId,
+      suppressRowAnimationSequenceId: tmp2.suppressRowAnimationSequenceId,
+    } = self);
     obj(obj);
   } else if (typeof obj === "object") {
     if (undefined !== obj.ready) {
@@ -427,8 +455,12 @@ prototype2["mutate"] = function mutate(obj, flag) {
     obj.hasFetched = undefined !== obj.hasFetched ? obj.hasFetched : self.hasFetched;
     obj.error = undefined !== obj.error ? obj.error : self.error;
     obj.onJumpComplete = undefined !== obj.onJumpComplete ? obj.onJumpComplete : self.onJumpComplete;
-    obj.initialScrollSequenceId = undefined !== obj.initialScrollSequenceId ? obj.initialScrollSequenceId : self.initialScrollSequenceId;
-    obj.suppressRowAnimationSequenceId = undefined !== obj.suppressRowAnimationSequenceId ? obj.suppressRowAnimationSequenceId : self.suppressRowAnimationSequenceId;
+    obj.initialScrollSequenceId =
+      undefined !== obj.initialScrollSequenceId ? obj.initialScrollSequenceId : self.initialScrollSequenceId;
+    obj.suppressRowAnimationSequenceId =
+      undefined !== obj.suppressRowAnimationSequenceId
+        ? obj.suppressRowAnimationSequenceId
+        : self.suppressRowAnimationSequenceId;
   }
   return obj;
 };
@@ -436,7 +468,7 @@ Object.defineProperty(prototype2, "length", {
   get: function length() {
     return this._array.length;
   },
-  set: undefined
+  set: undefined,
 });
 prototype2["toArray"] = function toArray() {
   const items = [...this._array];
@@ -741,7 +773,7 @@ prototype2["indexOf"] = function indexOf(arg0) {
 };
 prototype2["hasPresent"] = function hasPresent() {
   const self = this;
-  return this._after.length > 0 && self._after.wasAtEdge || !self.hasMoreAfter;
+  return (this._after.length > 0 && self._after.wasAtEdge) || !self.hasMoreAfter;
 };
 prototype2["hasBeforeCached"] = function hasBeforeCached(before) {
   const self = this;
@@ -933,7 +965,10 @@ prototype2["mergeDelta"] = function mergeDelta(new_messages, modified_messages, 
     const _array = _before._array;
     const found = _array.filter((id) => !set.has(id.id));
     const mapped = set.map((message) => set(4737).createMessageRecord(message));
-    const combined = found.concat(mapped, items1.map((message) => set(4737).createMessageRecord(message)));
+    const combined = found.concat(
+      mapped,
+      items1.map((message) => set(4737).createMessageRecord(message)),
+    );
     _before._array = combined.sort((id, id2) => callback(11).compare(id.id, id2.id));
   });
 };
@@ -1146,7 +1181,9 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
               ({ _array: _array2, _array } = _map);
               _array[_array2.indexOf(tmp2)] = tmp;
             } else {
-              closure_1_2(closure_1_3[7]).insert(_map._array, tmp, (id, id2) => callback(table[5]).compare(id.id, id2.id));
+              closure_1_2(closure_1_3[7]).insert(_map._array, tmp, (id, id2) =>
+                callback(table[5]).compare(id.id, id2.id),
+              );
               const obj = closure_1_2(closure_1_3[7]);
             }
           }, true);
@@ -1209,7 +1246,16 @@ prototype2["receiveReactionInAppNotification"] = function receiveReactionInAppNo
 };
 prototype2["loadStart"] = function loadStart(jump) {
   const self = this;
-  const obj = { loadingMore: true, jumped: null != jump, jumpedToPresent: null, jumpTargetId: null, jumpTargetOffset: null, jumpReturnTargetId: null, onJumpComplete: null, ready: null };
+  const obj = {
+    loadingMore: true,
+    jumped: null != jump,
+    jumpedToPresent: null,
+    jumpTargetId: null,
+    jumpTargetOffset: null,
+    jumpReturnTargetId: null,
+    onJumpComplete: null,
+    ready: null,
+  };
   let flag;
   if (jump != null) {
     flag = jump.present;
@@ -1306,7 +1352,26 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
       if (jumpType == null) {
         jumpType = GuildThemeSourcePreference.JumpType.ANIMATED;
       }
-      obj = { ready: true, loadingMore: false, jumpType: null, jumpFlash: null, jumped: null, jumpedToPresent: null, jumpTargetId: null, jumpTargetOffset: null, jumpSequenceId: null, jumpReturnTargetId: null, onJumpComplete: null, hasMoreBefore: null, hasMoreAfter: null, cached: null, hasFetched: null, error: false, initialScrollSequenceId: null, suppressRowAnimationSequenceId: null };
+      obj = {
+        ready: true,
+        loadingMore: false,
+        jumpType: null,
+        jumpFlash: null,
+        jumped: null,
+        jumpedToPresent: null,
+        jumpTargetId: null,
+        jumpTargetOffset: null,
+        jumpSequenceId: null,
+        jumpReturnTargetId: null,
+        onJumpComplete: null,
+        hasMoreBefore: null,
+        hasMoreAfter: null,
+        cached: null,
+        hasFetched: null,
+        error: false,
+        initialScrollSequenceId: null,
+        suppressRowAnimationSequenceId: null,
+      };
       obj[2] = jumpType;
       let flag8;
       if (jump != null) {
@@ -1452,7 +1517,9 @@ prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
     closure_0 = arg0;
     return !closure_0.some((id) => id.id === id.id);
   });
-  const item = found.forEach((arg0) => closure_1_2(closure_1_3[7]).insert(reversed, arg0, (id, id2) => callback(table[5]).compare(id.id, id2.id)));
+  const item = found.forEach((arg0) =>
+    closure_1_2(closure_1_3[7]).insert(reversed, arg0, (id, id2) => callback(table[5]).compare(id.id, id2.id)),
+  );
   let cached = !stale;
   if (!stale) {
     cached = self.cached;

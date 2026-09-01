@@ -44,7 +44,11 @@ let c4 = importAllResult;
 ({ Pressable: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
 ({ THUMBNAIL_WIDTH_MARGIN: error, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = THUMBNAIL_MARGIN);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ containerPortrait: { height: 60 }, thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 }, thumbnailImagePortrait: { height: THUMBNAIL_HEIGHT, width: "100%" } });
+let closure_11 = createCacheKey.createStyles({
+  containerPortrait: { height: 60 },
+  thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 },
+  thumbnailImagePortrait: { height: THUMBNAIL_HEIGHT, width: "100%" },
+});
 let closure_12 = importAllResult.memo((onSelect) => {
   ({ source, index } = onSelect);
   onSelect = onSelect.onSelect;
@@ -59,7 +63,16 @@ let closure_12 = importAllResult.memo((onSelect) => {
   const callback = importAllResult.useCallback(() => onSelect(index), items);
   let obj = { style: items1, children: null };
   items1 = [tmp.thumbnailButtonPortrait, thumbnailStyle];
-  obj = { needsOffscreenAlphaCompositing: true, renderToHardwareTextureAndroid: true, accessibilityRole: "imagebutton", accessibilityLabel: "Thumbnail preview, " + index + 1 + " of " + numSources, accessibilityHint: "Double tap to focus", accessibilityState: { selected: selectedIndex === index }, onPress: callback, children: null };
+  obj = {
+    needsOffscreenAlphaCompositing: true,
+    renderToHardwareTextureAndroid: true,
+    accessibilityRole: "imagebutton",
+    accessibilityLabel: "Thumbnail preview, " + index + 1 + " of " + numSources,
+    accessibilityHint: "Double tap to focus",
+    accessibilityState: { selected: selectedIndex === index },
+    onPress: callback,
+    children: null,
+  };
   obj = { style: tmp.thumbnailImagePortrait, source: null, enableAnimation: false };
   let thumbnail = first.thumbnail;
   if (thumbnail == null) {
@@ -71,7 +84,9 @@ let closure_12 = importAllResult.memo((onSelect) => {
   obj[1] = closure_9(closure_5, obj);
   return closure_8(onSelect(4217).View, obj);
 });
-let closure_13 = { code: "function MediaViewerThumbnailsTsx1(){const{scrollEnabled}=this.__closure;return{scrollEnabled:scrollEnabled.get()};}" };
+let closure_13 = {
+  code: "function MediaViewerThumbnailsTsx1(){const{scrollEnabled}=this.__closure;return{scrollEnabled:scrollEnabled.get()};}",
+};
 const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaViewerThumbnails.tsx");
 
 export default function MediaViewerThumbnails(syncer) {
@@ -124,7 +139,18 @@ export default function MediaViewerThumbnails(syncer) {
   first = thumbnailScrollPositions(obj.useSelectedMediaSource(syncer), 1)[0];
   const items1 = [sources, first, onSelect, useThumbnailStyle];
   const items2 = [sources.length];
-  const callback = headerBufferStyle.useCallback((arg0, index) => useThumbnailStyle(closure_1_12, { index, source: sources[index], numSources: sources.length, selectedIndex: first, onSelect, useThumbnailStyle }), items1);
+  const callback = headerBufferStyle.useCallback(
+    (arg0, index) =>
+      useThumbnailStyle(closure_1_12, {
+        index,
+        source: sources[index],
+        numSources: sources.length,
+        selectedIndex: first,
+        onSelect,
+        useThumbnailStyle,
+      }),
+    items1,
+  );
   const memo1 = headerBufferStyle.useMemo(() => {
     const items = [sources.length];
     return items;
@@ -139,10 +165,40 @@ export default function MediaViewerThumbnails(syncer) {
   const items3 = [headerBufferStyle];
   const animatedProps = sources(variableWidthThumbnailsEnabled[8]).useAnimatedProps(fn);
   const items4 = [footerBufferStyle];
-  const callback1 = headerBufferStyle.useCallback(() => useThumbnailStyle(index(variableWidthThumbnailsEnabled[14]), { style: headerBufferStyle }), items3);
+  const callback1 = headerBufferStyle.useCallback(
+    () => useThumbnailStyle(index(variableWidthThumbnailsEnabled[14]), { style: headerBufferStyle }),
+    items3,
+  );
   const items5 = [index];
-  callback2 = headerBufferStyle.useCallback(() => useThumbnailStyle(index(variableWidthThumbnailsEnabled[14]), { style: footerBufferStyle }), items4);
+  callback2 = headerBufferStyle.useCallback(
+    () => useThumbnailStyle(index(variableWidthThumbnailsEnabled[14]), { style: footerBufferStyle }),
+    items4,
+  );
   const memo2 = headerBufferStyle.useMemo(() => index.get(), items5);
-  obj = { ref, style: tmp.containerPortrait, sections: memo1, stickyHeaderFooter: true, disableContentWrappers: true, automaticallyAdjustContentInsets: false, showsVerticalScrollIndicator: false, showsHorizontalScrollIndicator: false, initialScrollOrientation: "center", initialScrollItem: memo2, itemSize, renderItem: callback, onScroll, horizontal: true, headerSize: headerBufferSize, footerSize: footerBufferSize, renderHeader: callback1, renderFooter: callback2, onEndReached, endReachedThreshold: onEndReachedThreshold, chunkBase: screenWidth, snapToOffsets: memo, animatedProps };
+  obj = {
+    ref,
+    style: tmp.containerPortrait,
+    sections: memo1,
+    stickyHeaderFooter: true,
+    disableContentWrappers: true,
+    automaticallyAdjustContentInsets: false,
+    showsVerticalScrollIndicator: false,
+    showsHorizontalScrollIndicator: false,
+    initialScrollOrientation: "center",
+    initialScrollItem: memo2,
+    itemSize,
+    renderItem: callback,
+    onScroll,
+    horizontal: true,
+    headerSize: headerBufferSize,
+    footerSize: footerBufferSize,
+    renderHeader: callback1,
+    renderFooter: callback2,
+    onEndReached,
+    endReachedThreshold: onEndReachedThreshold,
+    chunkBase: screenWidth,
+    snapToOffsets: memo,
+    animatedProps,
+  };
   return useThumbnailStyle(sources(variableWidthThumbnailsEnabled[15]).AnimatedFastList, obj);
-};
+}

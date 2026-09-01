@@ -21,4 +21,4 @@ export default function PasskeyUpsellPromoModal(arg0) {
   obj[1] = obj;
   const initialRouteStack = [obj];
   return jsx(Modal.Modal, { screens, initialRouteStack });
-};
+}

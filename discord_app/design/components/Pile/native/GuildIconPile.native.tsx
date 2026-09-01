@@ -17,13 +17,20 @@ export const GuildIconPile = function GuildIconPile(arg0) {
   ({ size, names } = arg0);
   const countResult = Children.count(children);
   const tmp4 = GuildIconSizes.ImageSizes[size];
-  let obj = { "aria-label": getListSummaryLabel.getListSummaryLabel(names, totalCount), shape: SolidCutout.CutoutShape.RoundedRect, size: tmp4, gap: null, depthX: 0.25, children: null };
+  let obj = {
+    "aria-label": getListSummaryLabel.getListSummaryLabel(names, totalCount),
+    shape: SolidCutout.CutoutShape.RoundedRect,
+    size: tmp4,
+    gap: null,
+    depthX: 0.25,
+    children: null,
+  };
   let num = 3;
   if (tmp4 <= 40) {
     num = 2;
   }
   obj[3] = num;
-  const items = [children, ];
+  const items = [children];
   let tmp6 = null != totalCount && countResult < totalCount;
   if (tmp6) {
     obj = { size: null, borderRadius: null, value: null };

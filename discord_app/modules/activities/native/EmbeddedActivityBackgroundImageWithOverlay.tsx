@@ -13,7 +13,9 @@ createCacheKey = { flex: 1, opacity: 0.6, backgroundColor: ThemesDefault.colors.
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let closure_9 = ["embedded_background"];
-const result = require("set").fileFinishedImporting("modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx",
+);
 
 export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
   ({ application, dimensionsStyle, borderRadius, resizeMode } = arg0);
@@ -55,7 +57,7 @@ export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
           return callback(true);
         };
         const obj2 = { style: null };
-        const items = [tmp.overlay, ];
+        const items = [tmp.overlay];
         const obj3 = { borderRadius: null };
         obj3[0] = borderRadius;
         items[1] = obj3;
@@ -67,4 +69,4 @@ export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
     }
   }
   return tmp7Result;
-};
+}

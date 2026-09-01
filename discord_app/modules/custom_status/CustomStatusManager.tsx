@@ -18,7 +18,7 @@ let prototype = function CustomStatusManager() {
     },
     USER_SETTINGS_PROTO_UPDATE() {
       return applyArgumentsResult.handleUserSettingsProtoUpdate();
-    }
+    },
   };
   applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
     applyArgumentsResult.handleCommonUpdates();
@@ -48,10 +48,14 @@ let prototype = function CustomStatusManager() {
           const date1 = new Date();
           const diff = time - date1.getTime();
           if (diff > 0) {
-            closure_8.start(diff, () => {
-              const CustomStatusSetting = callback(table[4]).CustomStatusSetting;
-              CustomStatusSetting.updateSetting(undefined);
-            }, true);
+            closure_8.start(
+              diff,
+              () => {
+                const CustomStatusSetting = callback(table[4]).CustomStatusSetting;
+                CustomStatusSetting.updateSetting(undefined);
+              },
+              true,
+            );
           } else {
             const CustomStatusSetting2 = applyArgumentsResult(4166).CustomStatusSetting;
             CustomStatusSetting2.updateSetting(undefined);
@@ -79,11 +83,15 @@ let prototype = function CustomStatusManager() {
           const date1 = new Date();
           const diff = time - date1.getTime();
           if (diff > 0) {
-            closure_6.start(diff, () => {
-              obj = { nextStatus: constants2.ONLINE, analyticsContext: { location: obj } };
-              obj = { object: constants.CUSTOM_STATUS_MANAGER };
-              callback(table[5])(obj);
-            }, true);
+            closure_6.start(
+              diff,
+              () => {
+                obj = { nextStatus: constants2.ONLINE, analyticsContext: { location: obj } };
+                obj = { object: constants.CUSTOM_STATUS_MANAGER };
+                callback(table[5])(obj);
+              },
+              true,
+            );
           } else {
             let obj = { nextStatus: null, analyticsContext: null };
             obj[0] = tmp4.ONLINE;
@@ -111,10 +119,14 @@ let prototype = function CustomStatusManager() {
     }
     if (tmp) {
       const PreloadedUserSettingsActionCreators = applyArgumentsResult(1370).PreloadedUserSettingsActionCreators;
-      PreloadedUserSettingsActionCreators.updateAsync("status", (arg0) => {
-        const UInt64Value = callback(table[7]).UInt64Value;
-        arg0.statusCreatedAtMs = UInt64Value.create({ value: "" + Date.now() });
-      }, applyArgumentsResult(1370).UserSettingsDelay.INFREQUENT_USER_ACTION);
+      PreloadedUserSettingsActionCreators.updateAsync(
+        "status",
+        (arg0) => {
+          const UInt64Value = callback(table[7]).UInt64Value;
+          arg0.statusCreatedAtMs = UInt64Value.create({ value: "" + Date.now() });
+        },
+        applyArgumentsResult(1370).UserSettingsDelay.INFREQUENT_USER_ACTION,
+      );
     }
   };
   applyArgumentsResult.manageExpiringFocusMode = function manageExpiringFocusMode() {
@@ -130,9 +142,13 @@ let prototype = function CustomStatusManager() {
         const date1 = new Date();
         const diff = time - date1.getTime();
         if (diff > 0) {
-          closure_7.start(diff, () => {
-            callback(table[8]).setFocusMode(false);
-          }, true);
+          closure_7.start(
+            diff,
+            () => {
+              callback(table[8]).setFocusMode(false);
+            },
+            true,
+          );
         } else {
           applyArgumentsResult(10173).setFocusMode(false);
           closure_7.stop();
@@ -146,8 +162,7 @@ let prototype = function CustomStatusManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp6 {
-}
+class prototype extends tmp6 {}
 prototype = new prototype();
 let result = require("set").fileFinishedImporting("modules/custom_status/CustomStatusManager.tsx");
 

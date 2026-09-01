@@ -20,10 +20,24 @@ function AddEmojiButton(channel) {
   const callback = React.useCallback(() => {
     onOpenPicker();
     let obj = channel(onPressEmoji[10]);
-    obj = { pickerIntention: closure_1_8.REACTION, autoFocus: false, startExpanded: false, onPressEmoji, channel, reactionType: channel(onPressEmoji[11]).ReactionTypes.NORMAL };
+    obj = {
+      pickerIntention: closure_1_8.REACTION,
+      autoFocus: false,
+      startExpanded: false,
+      onPressEmoji,
+      channel,
+      reactionType: channel(onPressEmoji[11]).ReactionTypes.NORMAL,
+    };
     const result = obj.openEmojiPickerActionSheet(obj);
   }, items);
-  let obj = { onPress: callback, style: items1, accessible: true, accessibilityLabel: null, disabled: null, children: null };
+  let obj = {
+    onPress: callback,
+    style: items1,
+    accessible: true,
+    accessibilityLabel: null,
+    disabled: null,
+    children: null,
+  };
   items1 = [callback3().emoji];
   const intl = channel(onPressEmoji[7]).intl;
   obj[3] = intl.string(channel(onPressEmoji[7]).t.lfIHs4);
@@ -89,25 +103,55 @@ function ReactActionSheetBase(content) {
     }, []);
     let items = [content.id, str, first1, sendMessage];
     _require = undefined;
-    callback = obj.useCallback(callback(function*() {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+    callback = obj.useCallback(
+      callback(function* () {
+        if (dependencyMap === 2) {
+          dependencyMap = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          dependencyMap = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
+          try {
+            dependencyMap = 2;
+            if (0 === v0) {
+              if (arg0 === 1) {
+                dependencyMap = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                dependencyMap = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                closure_0 = tmp4;
+                closure_1_5(true);
+                v0(8622).itemInteracted(closure_1_0.id, closure_1_6, "press_reply_send");
+                const obj5 = v0(8622);
+                obj1 = { itemId: null, itemType: null, actionParameters: null };
+                obj1[0] = closure_1_0.id;
+                obj1[1] = closure_1_6;
+                obj1[2] = {
+                  actionGestureType: "press",
+                  actionTargetElement: "reply_button",
+                  actionIntentType: "reply",
+                  actionDestinationType: null,
+                };
+                v0(8622).feedItemActioned(obj1);
+                v0 = 1;
+                dependencyMap = 1;
+                const obj2 = { value: null, done: false };
+                obj2[0] = dependencyMap(closure_1_7);
+                return obj2;
+              }
+            } else if (arg0 === 1) {
               dependencyMap = 3;
               throw arg1;
             } else if (arg0 === 2) {
@@ -116,46 +160,24 @@ function ReactActionSheetBase(content) {
               obj[0] = arg1;
               return obj;
             } else {
-              closure_0 = tmp4;
-              closure_1_5(true);
-              v0(8622).itemInteracted(closure_1_0.id, closure_1_6, "press_reply_send");
-              const obj5 = v0(8622);
-              obj1 = { itemId: null, itemType: null, actionParameters: null };
-              obj1[0] = closure_1_0.id;
-              obj1[1] = closure_1_6;
-              obj1[2] = { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null };
-              v0(8622).feedItemActioned(obj1);
-              v0 = 1;
-              dependencyMap = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = dependencyMap(closure_1_7);
-              return obj2;
+              callback(false);
+              callback2("");
+              dependencyMap = 3;
+              return { value: "HermesInternal", done: null };
             }
-          } else if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            callback(false);
-            callback2("");
-            dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+          } catch (tmp10) {
+            dependencyMap = tmp;
+            throw tmp10;
           }
-        } catch (tmp10) {
-          dependencyMap = tmp;
-          throw tmp10;
         }
-      }
-    }), items);
+      }),
+      items,
+    );
     _require = callback((arg0) => {
       closure_0 = arg0;
       c2 = 0;
       c3 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (c3 === 2) {
           c3 = 3;
           HermesBuiltin.throwTypeError();
@@ -189,7 +211,12 @@ function ReactActionSheetBase(content) {
                 obj1 = { itemId: null, itemType: null, actionParameters: null };
                 obj1[0] = user.id;
                 obj1[1] = closure_1_6;
-                obj1[2] = { actionGestureType: "press", actionTargetElement: "reaction_picker_button", actionIntentType: "open", actionDestinationType: null };
+                obj1[2] = {
+                  actionGestureType: "press",
+                  actionTargetElement: "reaction_picker_button",
+                  actionIntentType: "open",
+                  actionDestinationType: null,
+                };
                 onPressEmoji(sendMessage[15]).feedItemActioned(obj1);
                 c2 = 1;
                 c3 = 1;
@@ -218,7 +245,7 @@ function ReactActionSheetBase(content) {
       })();
     });
     let items1 = [content.id, str, onPressEmoji];
-    callback1 = obj.useCallback(function() {
+    callback1 = obj.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -244,7 +271,7 @@ function ReactActionSheetBase(content) {
     obj[0] = ref(hotwheels_gaming_activity, obj);
     let obj2 = { style: null, children: null };
     obj2[0] = tmp.container;
-    const items3 = [tmp.preview, ];
+    const items3 = [tmp.preview];
     let loading = null;
     if (null == tmp14) {
       loading = tmp.loading;
@@ -264,7 +291,7 @@ function ReactActionSheetBase(content) {
     obj7[0] = tmp5(tmp6[24]).OverlayOpacity.LEVEL_7;
     obj7[1] = tmp5(tmp6[24]).OverlayOpacity.LEVEL_8;
     obj6[4] = obj7;
-    const items4 = [ref(tmp19Result, obj6), ];
+    const items4 = [ref(tmp19Result, obj6)];
     const obj8 = { gradient: null, children: null };
     obj8[0] = onPressEmoji(tmp6[17])();
     const obj9 = { style: null, children: null };
@@ -278,9 +305,9 @@ function ReactActionSheetBase(content) {
     obj5[1] = items4;
     obj4[2] = c10(hotwheels_gaming_activity, obj5);
     obj3[1] = ref(tmp19Result, obj4);
-    const items6 = [ref(hotwheels_gaming_activity, obj3), ];
+    const items6 = [ref(hotwheels_gaming_activity, obj3)];
     if (null != tmp14) {
-      const items7 = [tmp.emojis, ];
+      const items7 = [tmp.emojis];
       let submitting = null;
       if (first) {
         submitting = tmp.submitting;
@@ -292,51 +319,65 @@ function ReactActionSheetBase(content) {
       const substr = frequentlyUsedReactionEmojis.slice(0, memo - 1);
       const items8 = [
         substr.map((id) => {
-              const lib = id;
-              if (null != id.id) {
-                let obj = { onPress: null, style: null, disabled: null, children: null };
-                obj[0] = function onPress() {
-                  return closure_1_11(closure_0);
-                };
-                obj[1] = closure_3.emoji;
-                obj[2] = first;
-                obj = { style: null, source: null };
-                const items = [, ];
-                ({ defaultEmoji: arr[0], emojiImage: arr[1] } = closure_3);
-                obj[0] = items;
-                obj = { uri: null };
-                let obj3 = onPressEmoji(sendMessage[28]);
-                ({ id: obj5[0], animated: obj5[1] } = id);
-                obj[0] = obj3.getEmojiURL({ id: null, animated: null, size: 48 });
-                obj[1] = obj;
-                obj[3] = ref(onPressEmoji(sendMessage[27]), obj);
-                let tmp11 = ref(lib(sendMessage[12]).PressableHighlight, obj, id.id);
-                obj1 = { id: null, animated: null, size: 48 };
-                const tmp9 = onPressEmoji(sendMessage[27]);
-              } else {
-                const obj2 = { onPress: null, style: null, disabled: null, children: null };
-                obj2[0] = function onPress() {
-                  return closure_1_11(closure_0);
-                };
-                obj2[1] = closure_3.emoji;
-                obj2[2] = first;
-                obj3 = { variant: "text-md/medium", color: "interactive-text-default", style: null, allowFontScaling: false, children: null };
-                const items1 = [, ];
-                ({ defaultEmoji: arr2[0], emojiText: arr2[1] } = closure_3);
-                obj3[2] = items1;
-                obj3[4] = id.surrogates;
-                obj2[3] = ref(lib(sendMessage[21]).Text, obj3);
-                tmp11 = ref(lib(sendMessage[12]).PressableHighlight, obj2, id.surrogates);
-              }
-              return tmp11;
-            }),
-
+          const lib = id;
+          if (null != id.id) {
+            let obj = { onPress: null, style: null, disabled: null, children: null };
+            obj[0] = function onPress() {
+              return closure_1_11(closure_0);
+            };
+            obj[1] = closure_3.emoji;
+            obj[2] = first;
+            obj = { style: null, source: null };
+            const items = [,];
+            ({ defaultEmoji: arr[0], emojiImage: arr[1] } = closure_3);
+            obj[0] = items;
+            obj = { uri: null };
+            let obj3 = onPressEmoji(sendMessage[28]);
+            ({ id: obj5[0], animated: obj5[1] } = id);
+            obj[0] = obj3.getEmojiURL({ id: null, animated: null, size: 48 });
+            obj[1] = obj;
+            obj[3] = ref(onPressEmoji(sendMessage[27]), obj);
+            let tmp11 = ref(lib(sendMessage[12]).PressableHighlight, obj, id.id);
+            obj1 = { id: null, animated: null, size: 48 };
+            const tmp9 = onPressEmoji(sendMessage[27]);
+          } else {
+            const obj2 = { onPress: null, style: null, disabled: null, children: null };
+            obj2[0] = function onPress() {
+              return closure_1_11(closure_0);
+            };
+            obj2[1] = closure_3.emoji;
+            obj2[2] = first;
+            obj3 = {
+              variant: "text-md/medium",
+              color: "interactive-text-default",
+              style: null,
+              allowFontScaling: false,
+              children: null,
+            };
+            const items1 = [,];
+            ({ defaultEmoji: arr2[0], emojiText: arr2[1] } = closure_3);
+            obj3[2] = items1;
+            obj3[4] = id.surrogates;
+            obj2[3] = ref(lib(sendMessage[21]).Text, obj3);
+            tmp11 = ref(lib(sendMessage[12]).PressableHighlight, obj2, id.surrogates);
+          }
+          return tmp11;
+        }),
       ];
       const obj13 = { onOpenPicker: null, channel: null, onPressEmoji: null, disabled: null };
       obj13[0] = function onOpenPicker() {
         let obj = onPressEmoji(sendMessage[15]);
         obj.itemInteracted(lib.id, hotwheels_gaming_activity, "press_reply_reaction_picker");
-        obj = { itemId: lib.id, itemType: hotwheels_gaming_activity, actionParameters: { actionGestureType: "press", actionTargetElement: "reaction_picker_button", actionIntentType: "open", actionDestinationType: null } };
+        obj = {
+          itemId: lib.id,
+          itemType: hotwheels_gaming_activity,
+          actionParameters: {
+            actionGestureType: "press",
+            actionTargetElement: "reaction_picker_button",
+            actionIntentType: "open",
+            actionDestinationType: null,
+          },
+        };
         onPressEmoji(sendMessage[15]).feedItemActioned(obj);
       };
       obj13[1] = channel;
@@ -344,10 +385,18 @@ function ReactActionSheetBase(content) {
       obj13[3] = first;
       items8[1] = tmp23(AddEmojiButton, obj13);
       obj12[1] = items8;
-      const items9 = [tmp25(tmp24, obj12), ];
+      const items9 = [tmp25(tmp24, obj12)];
       const obj14 = { style: null, children: null };
       obj14[0] = tmp.inputRow;
-      const obj15 = { containerStyle: null, grow: true, isRound: true, placeholder: null, value: null, onChange: null, isDisabled: null };
+      const obj15 = {
+        containerStyle: null,
+        grow: true,
+        isRound: true,
+        placeholder: null,
+        value: null,
+        onChange: null,
+        isDisabled: null,
+      };
       obj15[0] = tmp.input;
       const intl4 = tmp5(tmp6[7]).intl;
       const obj16 = { username: null };
@@ -356,7 +405,7 @@ function ReactActionSheetBase(content) {
       obj15[4] = first1;
       obj15[5] = tmp10;
       obj15[6] = first;
-      const items10 = [tmp23(tmp5(tmp6[29]).TextInput, obj15), ];
+      const items10 = [tmp23(tmp5(tmp6[29]).TextInput, obj15)];
       const obj17 = { accessibilityLabel: null, icon: null, size: "md", onPress: null, disabled: null, loading: null };
       const intl5 = tmp5(tmp6[7]).intl;
       obj17[0] = intl5.string(tmp5(tmp6[7]).t.oeb1vg);
@@ -387,8 +436,28 @@ function ReactActionSheetBase(content) {
   str = "hotwheels_gaming_activity";
 }
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-createCacheKey = { header: { width: "100%", display: "flex", alignItems: "center", padding: 8 }, container: { gap: 12 }, preview: null, loading: null, base: null, contentContainer: null, inputRow: null, input: null, emojis: null, submitting: null, emoji: null, defaultEmoji: null, emojiImage: null, emojiText: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
+createCacheKey = {
+  header: { width: "100%", display: "flex", alignItems: "center", padding: 8 },
+  container: { gap: 12 },
+  preview: null,
+  loading: null,
+  base: null,
+  contentContainer: null,
+  inputRow: null,
+  input: null,
+  emojis: null,
+  submitting: null,
+  emoji: null,
+  defaultEmoji: null,
+  emojiImage: null,
+  emojiText: null,
+};
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.md,
+  overflow: "hidden",
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_STRONG,
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { opacity: 0.5 };
 createCacheKey[4] = { position: "relative" };
@@ -399,12 +468,20 @@ createCacheKey[7] = { flex: 1, borderRadius: ThemesDefault.radii.round };
 createCacheKey[8] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 createCacheKey[9] = { opacity: 0.6 };
 let obj2 = { flex: 1, borderRadius: ThemesDefault.radii.round };
-createCacheKey[10] = { padding: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
+createCacheKey[10] = {
+  padding: 8,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND,
+};
 createCacheKey[11] = { width: 24, height: 24 };
 createCacheKey[12] = { resizeMode: "contain", width: 24, height: 24 };
 createCacheKey[13] = { lineHeight: 24, fontSize: 20, textAlign: "center", paddingTop: 2 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { padding: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
+let obj3 = {
+  padding: 8,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND,
+};
 let result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/ReactActionSheet.tsx");
 
 export default function ReactActionSheet(arg0) {
@@ -418,7 +495,7 @@ export default function ReactActionSheet(arg0) {
     obj[0] = callback2(ReactActionSheetBase, obj);
     return callback2(context.ICYMIContextProvider, obj);
   }
-};
+}
 export const getStatusReplyContent = function getStatusReplyContent(reply) {
   ({ username, status, emojiStr, attachments, isForward } = reply);
   if (isForward === undefined) {

@@ -5,7 +5,9 @@ import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsProfilingUseStateFromStores.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsProfilingUseStateFromStores.tsx",
+);
 
 export const DevToolsProfilingUseStateFromStores = function DevToolsProfilingUseStateFromStores() {
   let obj = first(str[3]);
@@ -48,17 +50,39 @@ export const DevToolsProfilingUseStateFromStores = function DevToolsProfilingUse
     const result = first(str[3]).setUseStateFromStoresSpecificHookFilter(first1);
   }, items4);
   const ref = str2.useRef(null);
-  obj = { title: "useStateFromStores Profiling", hasIcons: false, children: callback2(first(str[6]).TableSwitchRow, { label: "Enable useStateFromStores profiling", subLabel: "May require app restart after changes.", onValueChange: tmp3[1], value: first }) };
-  const children = [callback2(first(str[5]).TableRowGroup, obj), ];
+  obj = {
+    title: "useStateFromStores Profiling",
+    hasIcons: false,
+    children: callback2(first(str[6]).TableSwitchRow, {
+      label: "Enable useStateFromStores profiling",
+      subLabel: "May require app restart after changes.",
+      onValueChange: tmp3[1],
+      value: first,
+    }),
+  };
+  const children = [callback2(first(str[5]).TableRowGroup, obj)];
   let tmp16Result = null;
   if (first) {
     obj = { title: "useStateFromStores Config", hasIcons: false, children: null };
     obj1 = { label: "Execution time window threshold", subLabel: null };
     obj2 = { children: null };
-    obj3 = { variant: "text-xs/medium", color: "text-subtle", style: null, children: "Time window to wait for before reporting violations." };
+    obj3 = {
+      variant: "text-xs/medium",
+      color: "text-subtle",
+      style: null,
+      children: "Time window to wait for before reporting violations.",
+    };
     obj3[2] = { marginBottom: 4 };
-    const items6 = [tmp18(tmp(tmp2[4]).Text, obj3), ];
-    obj4 = { size: "sm", defaultValue: null, onChange: null, keyboardType: "numeric", leadingIcon: null, trailingText: "ms", ref: null };
+    const items6 = [tmp18(tmp(tmp2[4]).Text, obj3)];
+    obj4 = {
+      size: "sm",
+      defaultValue: null,
+      onChange: null,
+      keyboardType: "numeric",
+      leadingIcon: null,
+      trailingText: "ms",
+      ref: null,
+    };
     obj4[1] = str.toString();
     obj4[2] = function onChange(arg0) {
       const NumberResult = Number(arg0);
@@ -77,13 +101,25 @@ export const DevToolsProfilingUseStateFromStores = function DevToolsProfilingUse
     items6[1] = tmp18(tmp(tmp2[8]).TextField, obj4);
     obj2[0] = items6;
     obj1[1] = tmp16(tmp17, obj2);
-    const items7 = [tmp18(tmp(tmp2[7]).TableRow, obj1), , , ];
+    const items7 = [tmp18(tmp(tmp2[7]).TableRow, obj1), , ,];
     const obj5 = { label: "Cumulative execution time warning threshold", subLabel: null };
     const obj6 = { children: null };
-    const obj7 = { variant: "text-xs/medium", color: "text-subtle", style: null, children: "Total execution time limit for hooks before reporting violations." };
+    const obj7 = {
+      variant: "text-xs/medium",
+      color: "text-subtle",
+      style: null,
+      children: "Total execution time limit for hooks before reporting violations.",
+    };
     obj7[2] = { marginBottom: 4 };
-    const items8 = [tmp18(tmp(tmp2[4]).Text, obj7), ];
-    const obj8 = { size: "sm", defaultValue: null, keyboardType: "numeric", leadingIcon: null, trailingText: "ms", onChange: null };
+    const items8 = [tmp18(tmp(tmp2[4]).Text, obj7)];
+    const obj8 = {
+      size: "sm",
+      defaultValue: null,
+      keyboardType: "numeric",
+      leadingIcon: null,
+      trailingText: "ms",
+      onChange: null,
+    };
     obj8[1] = str2.toString();
     obj8[3] = tmp(tmp2[9]).TimerIcon;
     obj8[5] = function onChange(arg0) {
@@ -95,10 +131,22 @@ export const DevToolsProfilingUseStateFromStores = function DevToolsProfilingUse
     items7[1] = tmp18(tmp(tmp2[7]).TableRow, obj5);
     const obj9 = { label: "Cumulative execution count warning threshold", subLabel: null };
     const obj10 = { children: null };
-    const obj11 = { variant: "text-xs/medium", color: "text-subtle", style: null, children: "Execution counts limit for hooks before reporting violations." };
+    const obj11 = {
+      variant: "text-xs/medium",
+      color: "text-subtle",
+      style: null,
+      children: "Execution counts limit for hooks before reporting violations.",
+    };
     obj11[2] = { marginBottom: 4 };
-    const items9 = [tmp18(tmp(tmp2[4]).Text, obj11), ];
-    const obj12 = { size: "sm", defaultValue: null, keyboardType: "numeric", leadingIcon: null, trailingText: "times", onChange: null };
+    const items9 = [tmp18(tmp(tmp2[4]).Text, obj11)];
+    const obj12 = {
+      size: "sm",
+      defaultValue: null,
+      keyboardType: "numeric",
+      leadingIcon: null,
+      trailingText: "times",
+      onChange: null,
+    };
     obj12[1] = str3.toString();
     obj12[3] = tmp(tmp2[10]).AnalyticsIcon;
     obj12[5] = function onChange(arg0) {
@@ -110,10 +158,26 @@ export const DevToolsProfilingUseStateFromStores = function DevToolsProfilingUse
     items7[2] = tmp18(tmp(tmp2[7]).TableRow, obj9);
     const obj13 = { label: "Track specific hook", subLabel: null };
     const obj14 = { children: null };
-    const obj15 = { variant: "text-xs/medium", color: "text-subtle", style: null, children: "Include a specific hook in the profiling regardless of limits." };
+    const obj15 = {
+      variant: "text-xs/medium",
+      color: "text-subtle",
+      style: null,
+      children: "Include a specific hook in the profiling regardless of limits.",
+    };
     obj15[2] = { marginBottom: 4 };
-    const items10 = [tmp18(tmp(tmp2[4]).Text, obj15), ];
-    const obj16 = { size: "sm", keyboardType: "email-address", autoCapitalize: "none", autoCorrect: false, defaultValue: null, placeholder: "hookName", leadingIcon: null, trailingIcon: null, trailingPressableProps: null, onChange: null };
+    const items10 = [tmp18(tmp(tmp2[4]).Text, obj15)];
+    const obj16 = {
+      size: "sm",
+      keyboardType: "email-address",
+      autoCapitalize: "none",
+      autoCorrect: false,
+      defaultValue: null,
+      placeholder: "hookName",
+      leadingIcon: null,
+      trailingIcon: null,
+      trailingPressableProps: null,
+      onChange: null,
+    };
     obj16[4] = first1;
     obj16[6] = tmp(tmp2[11]).LettersIcon;
     obj16[7] = tmp(tmp2[12]).TrashIcon;

@@ -65,13 +65,12 @@ const prototype = function UrgentSystemDMManagerBase(handleShowUrgentMessageAler
     MESSAGE_CREATE() {
       closure_1_8(closure_0.handleShowUrgentMessageAlert);
     },
-    CHANNEL_SELECT: maybeClearUrgentMessage
+    CHANNEL_SELECT: maybeClearUrgentMessage,
   };
   tmp2.handleShowUrgentMessageAlert = handleShowUrgentMessageAlert;
   return tmp2;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 const result = require("set").fileFinishedImporting("modules/urgent_system_dm/UrgentSystemDMManagerBase.tsx");
 
 export default prototype;

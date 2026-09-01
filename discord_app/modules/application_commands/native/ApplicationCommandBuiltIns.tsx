@@ -5,20 +5,27 @@ import closure_4 from "../../../stores/UserStore.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
-let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN, applicationId: require("TRUE_OPTION_NAME").BuiltInSectionId.BUILT_IN };
+let obj = {
+  id: "-15",
+  untranslatedName: "leave",
+  displayName: "leave",
+  type: require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN,
+  applicationId: require("TRUE_OPTION_NAME").BuiltInSectionId.BUILT_IN,
+};
 Object.defineProperty(obj, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t["26C4oi"]);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t["26C4oi"]);
   },
-  set: undefined
+  set: undefined,
 });
 obj.predicate = function predicate(channel) {
   channel = channel.channel;
@@ -69,6 +76,8 @@ obj.execute = function execute(arg0, channel) {
   }
 };
 const items = [obj];
-const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandBuiltIns.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/application_commands/native/ApplicationCommandBuiltIns.tsx",
+);
 
 export default items;

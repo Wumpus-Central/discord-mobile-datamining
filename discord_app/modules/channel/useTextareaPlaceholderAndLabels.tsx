@@ -90,4 +90,4 @@ export default function useTextareaPlaceholderAndLabels(isCreatingThread) {
   const intl12 = getSystemLocale.intl;
   obj12[1] = intl12.string(getSystemLocale.t.MKDeyL);
   obj9 = obj12;
-};
+}

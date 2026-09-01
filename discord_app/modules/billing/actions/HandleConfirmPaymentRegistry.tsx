@@ -6,14 +6,21 @@ import { PaymentSourceTypes } from "../../../../discord_common/js/shared/Constan
 
 require = arg1;
 ({ Endpoints: c4, REDIRECTED_PAYMENT_SOURCES: c5 } = ME);
-obj = { [PaymentSourceTypes.GIROPAY]: obj, [PaymentSourceTypes.SOFORT]: obj, [PaymentSourceTypes.PRZELEWY24]: obj1, [PaymentSourceTypes.BANCONTACT]: obj2, [PaymentSourceTypes.EPS]: obj3, [PaymentSourceTypes.IDEAL]: obj4 };
+obj = {
+  [PaymentSourceTypes.GIROPAY]: obj,
+  [PaymentSourceTypes.SOFORT]: obj,
+  [PaymentSourceTypes.PRZELEWY24]: obj1,
+  [PaymentSourceTypes.BANCONTACT]: obj2,
+  [PaymentSourceTypes.EPS]: obj3,
+  [PaymentSourceTypes.IDEAL]: obj4,
+};
 obj = {
   confirmationType: "stripe_redirect_confirmation",
   constructStripeConfirmPaymentHandler(name) {
     obj = { name: name.paymentSource.billingAddress.name };
     obj = { stripeConfirmPayment: name.stripe.confirmGiropayPayment, paymentMethod: { billing_details: obj } };
     return obj;
-  }
+  },
 };
 obj = {
   confirmationType: "stripe_redirect_confirmation",
@@ -21,9 +28,12 @@ obj = {
     paymentSource = paymentSource.paymentSource;
     obj = { country: paymentSource.billingAddress.country };
     obj = { name: paymentSource.billingAddress.name, email: paymentSource.email };
-    obj = { stripeConfirmPayment: paymentSource.stripe.confirmSofortPayment, paymentMethod: { sofort: obj, billing_details: obj } };
+    obj = {
+      stripeConfirmPayment: paymentSource.stripe.confirmSofortPayment,
+      paymentMethod: { sofort: obj, billing_details: obj },
+    };
     return obj;
-  }
+  },
 };
 let obj5 = { [PaymentSourceTypes.SEPA_DEBIT]: obj6, [PaymentSourceTypes.PIX]: obj7 };
 class PaymentConfirmationHandler {
@@ -76,7 +86,9 @@ class StripePaymentConfirmationHandler extends PaymentConfirmationHandler {
         tmp5 = closure_2;
         obj = require("_validatePaymentSourceBillingAddress");
         str = "Invalid Payment Source Type - redirect or direct confirmation handlers not found.";
-        throw obj.dispatchConfirmationError("Invalid Payment Source Type - redirect or direct confirmation handlers not found.");
+        throw obj.dispatchConfirmationError(
+          "Invalid Payment Source Type - redirect or direct confirmation handlers not found.",
+        );
       }
       return tmp15;
     }
@@ -85,7 +97,7 @@ class StripePaymentConfirmationHandler extends PaymentConfirmationHandler {
 const prototype = StripePaymentConfirmationHandler.prototype;
 prototype["getStripe"] = function getStripe() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -151,7 +163,7 @@ prototype["getStripe"] = function getStripe() {
 };
 prototype["getPaymentIntentInfo"] = function getPaymentIntentInfo() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     let body = tmp4;
     const HTTP = closure_1_0(table[5]).HTTP;
     obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
@@ -170,7 +182,7 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
   return self(() => {
     let paymentMethod = 0;
     c4 = 0;
-    return (function*() {
+    return (function* () {
       c1 = tmp2;
       const callback = yield paymentMethod.getStripe();
       const handlerRegistry = paymentMethod.handlerRegistry;
@@ -188,7 +200,8 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
       if (closure_1 == null) {
         c0 = "";
       }
-      obj4[1] = aPIBaseURL + c4.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(paymentMethod.paymentSourceType, c0, "success");
+      obj4[1] =
+        aPIBaseURL + c4.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(paymentMethod.paymentSourceType, c0, "success");
       c4 = yield stripeConfirmPayment(callback, obj4, { handleActions: false });
       const paymentIntent = c4.paymentIntent;
       error = c4.error;
@@ -218,7 +231,7 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
 prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentSource(arg0) {
   ({ clientSecret: require, paymentMethodId: importAll } = arg0);
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -304,7 +317,7 @@ prototype["confirmDirectPaymentSource"] = function confirmDirectPaymentSource(ar
   return callback(() => {
     let stripeConfirmPayment = 0;
     let paymentMethod = 0;
-    return (function*() {
+    return (function* () {
       c0 = tmp2;
       const callback = yield stripeConfirmPayment.getStripe();
       const handlerRegistry = stripeConfirmPayment.handlerRegistry;
@@ -338,7 +351,7 @@ prototype["confirmDirectPaymentSource"] = function confirmDirectPaymentSource(ar
 };
 prototype["confirmPayment"] = function confirmPayment() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -477,7 +490,9 @@ prototype2["handleAdyenConfirmation"] = function handleAdyenConfirmation() {
   const self = this;
   const adyen_redirect_url = this.payment.adyen_redirect_url;
   if (null == adyen_redirect_url) {
-    throw _validatePaymentSourceBillingAddress.dispatchConfirmationError("redirect url cannot be null on a redirect for adyen.");
+    throw _validatePaymentSourceBillingAddress.dispatchConfirmationError(
+      "redirect url cannot be null on a redirect for adyen.",
+    );
   } else {
     if (set.has(self.paymentSource.type)) {
       self.performRedirect(adyen_redirect_url);

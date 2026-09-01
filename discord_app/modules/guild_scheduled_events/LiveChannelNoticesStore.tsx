@@ -7,8 +7,7 @@ import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
 const GuildScheduledEventStatus = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventStatus;
 let closure_1 = { hiddenEventsAndStages: [] };
 const PersistedStore = initializeDefault.PersistedStore;
-class LiveChannelNoticesStore extends PersistedStore {
-}
+class LiveChannelNoticesStore extends PersistedStore {}
 const prototype = LiveChannelNoticesStore.prototype;
 prototype["initialize"] = function initialize(hiddenEventsAndStages) {
   if (tmp) {
@@ -86,7 +85,7 @@ const liveChannelNoticesStore = new LiveChannelNoticesStore(dispatcherDefault, {
       const prop = closure_1.hiddenEventsAndStages;
       closure_1.hiddenEventsAndStages = prop.filter((arg0) => arg0 !== combined);
     }
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/guild_scheduled_events/LiveChannelNoticesStore.tsx");
 

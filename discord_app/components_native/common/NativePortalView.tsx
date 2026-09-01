@@ -133,7 +133,7 @@ export function createPortalControls(portal) {
           lib2.remove();
         };
       }, items);
-    }
+    },
   };
 }
 export const markPortalAlive = function markPortalAlive(portal) {

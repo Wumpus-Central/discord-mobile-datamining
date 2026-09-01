@@ -14,7 +14,19 @@ const require = arg1;
 let c3 = importAllResult;
 ({ EMOJI_URL_BASE_SIZE: error, EmojiIntention: closure_8 } = set);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { emoji: { width: 24, height: 24 }, customEmoji: { width: 24, height: 24 }, textEmoji: null, emojiRow: null, emojiPressable: null, selectedEmojiPressable: null, emojiWrapper: null, selectedEmojiWrapper: null, chooseEmojiButton: null, customReactionOverlay: null, selectedCustomReactionIcon: null };
+let obj = {
+  emoji: { width: 24, height: 24 },
+  customEmoji: { width: 24, height: 24 },
+  textEmoji: null,
+  emojiRow: null,
+  emojiPressable: null,
+  selectedEmojiPressable: null,
+  emojiWrapper: null,
+  selectedEmojiWrapper: null,
+  chooseEmojiButton: null,
+  customReactionOverlay: null,
+  selectedCustomReactionIcon: null,
+};
 let num = 20;
 if (set.isIOS()) {
   num = 24;
@@ -39,8 +51,34 @@ obj[7] = set;
 let obj4 = { borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_8, margin: 2 };
 obj[8] = { color: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
 let obj6 = { color: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
-obj[9] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, height: 24, width: 24, position: "absolute", right: -8, bottom: -8, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", borderColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderWidth: 2, boxSizing: "content-box" };
-let obj7 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, height: 24, width: 24, position: "absolute", right: -8, bottom: -8, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", borderColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderWidth: 2, boxSizing: "content-box" };
+obj[9] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  height: 24,
+  width: 24,
+  position: "absolute",
+  right: -8,
+  bottom: -8,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+  borderColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  borderWidth: 2,
+  boxSizing: "content-box",
+};
+let obj7 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  height: 24,
+  width: 24,
+  position: "absolute",
+  right: -8,
+  bottom: -8,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+  borderColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  borderWidth: 2,
+  boxSizing: "content-box",
+};
 obj[10] = { height: 12, width: 12, color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
 let closure_12 = createCacheKey.createStyles(obj);
 let closure_13 = importAllResult.memo((emoji) => {
@@ -57,16 +95,16 @@ let closure_13 = importAllResult.memo((emoji) => {
       return callback(emoji);
     },
     style: null,
-    children: null
+    children: null,
   };
-  const items1 = [tmp.emojiPressable, ];
+  const items1 = [tmp.emojiPressable];
   let prop;
   if (selected) {
     prop = tmp.selectedEmojiPressable;
   }
   items1[1] = prop;
   obj[3] = items1;
-  const items2 = [tmp.emojiWrapper, ];
+  const items2 = [tmp.emojiWrapper];
   let selectedEmojiWrapper;
   if (selected) {
     selectedEmojiWrapper = tmp.selectedEmojiWrapper;
@@ -120,13 +158,20 @@ export default importAllResult.memo((selectedEmoji) => {
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const found = frequentlyUsedReactionEmojis.filter((emoji) => {
     let obj = onPressEmoji(substr[15]);
-    obj = { emoji, channel: "Array", intention: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093 };
+    obj = {
+      emoji,
+      channel: "Array",
+      intention: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055359227687093,
+    };
     obj[2] = constants.DEFAULT_REACT_EMOJI;
     return !obj.isEmojiFilteredOrLocked(obj);
   });
   substr = found.slice(0, rounded - 1);
   const items1 = [substr, selectedEmoji];
-  memo = memo.useMemo(() => substr.findIndex((emoji) => closure_1_0(closure_1_2[16]).areEmojisEqual(closure_0, emoji)), items1);
+  memo = memo.useMemo(
+    () => substr.findIndex((emoji) => closure_1_0(closure_1_2[16]).areEmojisEqual(closure_0, emoji)),
+    items1,
+  );
   const items2 = [onPressEmoji];
   closure_4 = memo.useCallback((arg0) => {
     onPressEmoji(arg0, true);
@@ -149,28 +194,33 @@ export default importAllResult.memo((selectedEmoji) => {
       }
       return tmp;
     }),
-
   ];
   obj = {
     accessibilityRole: "button",
     onPress() {
       let obj = selectedEmoji(substr[17]);
-      obj = { onPressEmoji: closure_5, channel: "r", pickerIntention: true, reactionType: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", startExpanded: null };
+      obj = {
+        onPressEmoji: closure_5,
+        channel: "r",
+        pickerIntention: true,
+        reactionType: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz",
+        startExpanded: null,
+      };
       obj[2] = closure_1_8.DEFAULT_REACT_EMOJI;
       obj[3] = selectedEmoji(substr[18]).ReactionTypes.NORMAL;
       const result = obj.openEmojiPickerActionSheet(obj, "stack");
     },
     style: null,
-    children: null
+    children: null,
   };
-  const items6 = [selectedCustomReactionIcon.emojiPressable, ];
+  const items6 = [selectedCustomReactionIcon.emojiPressable];
   let selectedEmojiPressable = tmp8;
   if (-1 === memo) {
     selectedEmojiPressable = selectedCustomReactionIcon.selectedEmojiPressable;
   }
   items6[1] = selectedEmojiPressable;
   obj[2] = items6;
-  const items7 = [selectedCustomReactionIcon.emojiWrapper, ];
+  const items7 = [selectedCustomReactionIcon.emojiWrapper];
   let selectedEmojiWrapper = tmp8;
   if (-1 === memo) {
     selectedEmojiWrapper = selectedCustomReactionIcon.selectedEmojiWrapper;
@@ -203,7 +253,7 @@ export default importAllResult.memo((selectedEmoji) => {
     }
     const obj4 = { children: null };
     obj2[4] = url;
-    obj2 = [, ];
+    obj2 = [,];
     obj2[0] = tmp7(emojiURL, obj2);
     const obj5 = { style: null, children: null };
     obj5[0] = selectedCustomReactionIcon.customReactionOverlay;

@@ -38,10 +38,21 @@ function updateContextMenuState(absoluteX, absoluteY, closure_17) {
   }
   const result3 = activeIndex.set(-1);
 }
-keys = { INDEX_BOUNDS_WIDTH_OFFSET: 2, INDEX_BOUNDS_HEIGHT_OFFSET: 3, INDEX_BOUNDS_PAGE_Y_OFFSET: 1, INDEX_BOUNDS_PAGE_X_OFFSET: 0, INDEX_BOUNDS_OFFSET: 4, runOnJS: require("../../../../modules/reanimated/ReanimatedRexport.tsx").runOnJS, triggerHapticFeedback: require("HapticFeedbackTypes").triggerHapticFeedback, HapticFeedbackTypes: require("HapticFeedbackTypes").HapticFeedbackTypes };
+keys = {
+  INDEX_BOUNDS_WIDTH_OFFSET: 2,
+  INDEX_BOUNDS_HEIGHT_OFFSET: 3,
+  INDEX_BOUNDS_PAGE_Y_OFFSET: 1,
+  INDEX_BOUNDS_PAGE_X_OFFSET: 0,
+  INDEX_BOUNDS_OFFSET: 4,
+  runOnJS: require("../../../../modules/reanimated/ReanimatedRexport.tsx").runOnJS,
+  triggerHapticFeedback: require("HapticFeedbackTypes").triggerHapticFeedback,
+  HapticFeedbackTypes: require("HapticFeedbackTypes").HapticFeedbackTypes,
+};
 updateContextMenuState.__closure = keys;
 updateContextMenuState.__workletHash = 10158111154044;
-updateContextMenuState.__initData = { code: "function updateContextMenuState_ContextMenuStateNativeTsx1(absoluteX,absoluteY,state){const{INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_OFFSET,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;const{pan:pan,itemMeasurements:itemMeasurements,activeIndex:activeIndex}=state;pan.set(absoluteY);const bounds=itemMeasurements.get();let offset=0;while(offset<bounds.length){const width=bounds[offset+INDEX_BOUNDS_WIDTH_OFFSET];const height=bounds[offset+INDEX_BOUNDS_HEIGHT_OFFSET];const pageY=bounds[offset+INDEX_BOUNDS_PAGE_Y_OFFSET];const pageX=bounds[offset+INDEX_BOUNDS_PAGE_X_OFFSET];const lowerY=pageY;const upperY=pageY+height;const lowerX=pageX;const upperX=pageX+width;if(absoluteY>=lowerY&&absoluteY<=upperY&&absoluteX>=lowerX&&absoluteX<=upperX){const index=offset/INDEX_BOUNDS_OFFSET;if(activeIndex.get()!==index){activeIndex.set(index);runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_LIGHT);}return;}offset+=INDEX_BOUNDS_OFFSET;}activeIndex.set(-1);}" };
+updateContextMenuState.__initData = {
+  code: "function updateContextMenuState_ContextMenuStateNativeTsx1(absoluteX,absoluteY,state){const{INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_OFFSET,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;const{pan:pan,itemMeasurements:itemMeasurements,activeIndex:activeIndex}=state;pan.set(absoluteY);const bounds=itemMeasurements.get();let offset=0;while(offset<bounds.length){const width=bounds[offset+INDEX_BOUNDS_WIDTH_OFFSET];const height=bounds[offset+INDEX_BOUNDS_HEIGHT_OFFSET];const pageY=bounds[offset+INDEX_BOUNDS_PAGE_Y_OFFSET];const pageX=bounds[offset+INDEX_BOUNDS_PAGE_X_OFFSET];const lowerY=pageY;const upperY=pageY+height;const lowerX=pageX;const upperX=pageX+width;if(absoluteY>=lowerY&&absoluteY<=upperY&&absoluteX>=lowerX&&absoluteX<=upperX){const index=offset/INDEX_BOUNDS_OFFSET;if(activeIndex.get()!==index){activeIndex.set(index);runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_LIGHT);}return;}offset+=INDEX_BOUNDS_OFFSET;}activeIndex.set(-1);}",
+};
 let result = require("set").fileFinishedImporting("design/components/ContextMenu/native/ContextMenuState.native.tsx");
 
 export const INDEX_BOUNDS_OFFSET = 4;
@@ -52,7 +63,9 @@ export const INDEX_BOUNDS_HEIGHT_OFFSET = 3;
 export const ContextMenuStore = keys;
 export const showContextMenu = function showContextMenu(arg0) {
   const _require = arg0;
-  require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_3.setState({ menu: closure_0 }));
+  require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
+    closure_1_3.setState({ menu: closure_0 }),
+  );
 };
 export const hideContextMenu = function hideContextMenu() {
   batchUpdates.batchUpdates(() => {
@@ -76,7 +89,10 @@ export const useContextMenuState = function useContextMenuState() {
   const obj2 = sharedValue(sharedValue1[3]);
   const sharedValue2 = sharedValue(sharedValue1[3]).useSharedValue(-1);
   const items = [sharedValue, sharedValue1, sharedValue2];
-  return sharedValue2.useMemo(() => ({ pan: sharedValue, itemMeasurements: sharedValue1, activeIndex: sharedValue2 }), items);
+  return sharedValue2.useMemo(
+    () => ({ pan: sharedValue, itemMeasurements: sharedValue1, activeIndex: sharedValue2 }),
+    items,
+  );
 };
 export const resetContextMenuState = function resetContextMenuState(contextMenuState) {
   ({ activeIndex, pan, itemMeasurements } = contextMenuState);

@@ -9,8 +9,19 @@ import importDefaultResult from "../../../../modules/rebrand/native/TextStyles.t
 
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: { paddingTop: 16, paddingHorizontal: 16 }, title: importDefaultResult(require("ME").Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.TEXT_SUBTLE, 12, { uppercase: true, marginBottom: 6 }), card: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = {
+  container: { paddingTop: 16, paddingHorizontal: 16 },
+  title: importDefaultResult(require("ME").Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.TEXT_SUBTLE, 12, {
+    uppercase: true,
+    marginBottom: 6,
+  }),
+  card: null,
+};
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.xs,
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 createCacheKey[2] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("design/void/CardSection/native/CardSection.tsx");
@@ -29,7 +40,7 @@ export default function CardSection(arg0) {
     obj[2] = title;
     tmp4 = callback(_modDef8391, obj);
   }
-  const items2 = [tmp4, , ];
+  const items2 = [tmp4, ,];
   let tmp8 = null;
   if (null != headerComponent) {
     tmp8 = headerComponent;
@@ -46,4 +57,4 @@ export default function CardSection(arg0) {
   items2[2] = tmp9;
   obj[3] = items2;
   return closure_4(View, obj);
-};
+}

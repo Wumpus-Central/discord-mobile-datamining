@@ -16,7 +16,7 @@ function GuildDirectoryEditDescription(entry) {
       closure_1 = arg1;
       c3 = 0;
       c4 = 0;
-      return (function*(arg0, arg1) {
+      return (function* (arg0, arg1) {
         if (c4 === 2) {
           c4 = 3;
           HermesBuiltin.throwTypeError();
@@ -85,11 +85,17 @@ function GuildDirectoryEditDescription(entry) {
   let obj = { top: true, style: tmp.safeArea, children: null };
   obj = { style: tmp.container, keyboardShouldPersistTaps: "handled", children: null };
   obj = { style: tmp.header, children: null };
-  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  obj1 = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = entry(1236).intl;
   obj1[4] = intl.format(entry(1236).t.w9tsNk, { guildName: entry.name });
   obj[1] = callback(entry(4474).Text, obj1);
-  const items = [callback(closure_5, obj), ];
+  const items = [callback(closure_5, obj)];
   const obj3 = {
     onSubmit(arg0, arg1) {
       const self = this;
@@ -103,7 +109,7 @@ function GuildDirectoryEditDescription(entry) {
     },
     buttonLabel: null,
     entry: null,
-    directoryChannelId: null
+    directoryChannelId: null,
   };
   const intl2 = entry(1236).intl;
   obj3[1] = intl2.string(entry(1236).t["R3BPH+"]);
@@ -125,7 +131,9 @@ createCacheKey[2] = { marginBottom: 8, textAlign: "center" };
 createCacheKey[3] = { alignItems: "center", justifyContent: "center", padding: 16 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 const EDIT_DESCRIPTION = "EDIT_DESCRIPTION";
-const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEditDescriptionModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/directory_channels/native/components/GuildDirectoryEditDescriptionModal.tsx",
+);
 
 export default function GuildDirectoryEditDescriptionModal(arg0) {
   let obj = { screens: null, initialRouteName: null };
@@ -133,17 +141,20 @@ export default function GuildDirectoryEditDescriptionModal(arg0) {
   obj = {};
   obj = {
     fullscreen: true,
-    headerLeft: require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderCloseButton(_modDef11881.close),
+    headerLeft:
+      require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderCloseButton(
+        _modDef11881.close,
+      ),
     headerTitle() {
       return null;
     },
     render() {
       const merged = Object.assign(closure_0);
       return closure_1_7(closure_1_10, {});
-    }
+    },
   };
   obj[EDIT_DESCRIPTION] = obj;
   obj[0] = obj;
   obj[1] = EDIT_DESCRIPTION;
   return callback(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, obj);
-};
+}

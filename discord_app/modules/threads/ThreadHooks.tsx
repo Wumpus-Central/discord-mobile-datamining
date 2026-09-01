@@ -30,31 +30,38 @@ function useCanUnarchiveThread(channel) {
   const items1 = [closure_8, closure_7];
   const items2 = [channel];
   _require = channel;
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
-    channel = null;
-    if (null != closure_0) {
-      channel = closure_1_7.getChannel(tmp.parent_id);
-    }
-    let canResult = null != channel;
-    if (canResult) {
-      canResult = closure_1_8.can(closure_1_10.SEND_MESSAGES_IN_THREADS, tmp);
-    }
-    if (canResult) {
-      canResult = closure_1_8.can(closure_1_10.SEND_MESSAGES, channel);
-    }
-    return canResult;
-  }, items2);
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => {
+      channel = null;
+      if (null != closure_0) {
+        channel = closure_1_7.getChannel(tmp.parent_id);
+      }
+      let canResult = null != channel;
+      if (canResult) {
+        canResult = closure_1_8.can(closure_1_10.SEND_MESSAGES_IN_THREADS, tmp);
+      }
+      if (canResult) {
+        canResult = closure_1_8.can(closure_1_10.SEND_MESSAGES, channel);
+      }
+      return canResult;
+    },
+    items2,
+  );
   const obj2 = initialize;
   const items3 = [closure_8];
-  const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => {
-    const items = [closure_1_8];
-    const first = closure_1_4(items, 1)[0];
-    let canResult = null != closure_0;
-    if (canResult) {
-      canResult = first.can(closure_1_10.MANAGE_THREADS, closure_0);
-    }
-    return canResult;
-  });
+  const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items3,
+    () => {
+      const items = [closure_1_8];
+      const first = closure_1_4(items, 1)[0];
+      let canResult = null != closure_0;
+      if (canResult) {
+        canResult = first.can(closure_1_10.MANAGE_THREADS, closure_0);
+      }
+      return canResult;
+    },
+  );
   if (stateFromStores) {
     stateFromStores = stateFromStores1;
   }
@@ -112,7 +119,13 @@ function canUnarchiveThread(parent_id) {
 }
 ({ Permissions: c10, MessageFlags: unpackModuleId, ChannelTypes: closure_12 } = ME);
 let items = [{ id: 1, label: "On", config: { enabled: true } }];
-const importDefaultResultResult = importDefaultResult({ id: "2022-07_voice_in_threads", label: "Voice in Threads", kind: "guild", defaultConfig: { enabled: false }, treatments: items });
+const importDefaultResultResult = importDefaultResult({
+  id: "2022-07_voice_in_threads",
+  label: "Voice in Threads",
+  kind: "guild",
+  defaultConfig: { enabled: false },
+  treatments: items,
+});
 const result = require("set").fileFinishedImporting("modules/threads/ThreadHooks.tsx");
 
 export const VoiceInThreadsExperiment = importDefaultResultResult;
@@ -121,15 +134,24 @@ export const useCanStartPublicThread = function useCanStartPublicThread(type) {
   const items = [closure_8];
   const items1 = [type];
   let flag = false;
-  if (obj.useStateFromStores(items, () => {
-    if (forumLikeChannel.isForumLikeChannel()) {
-      let SEND_MESSAGES = closure_1_10.SEND_MESSAGES;
-    } else {
-      SEND_MESSAGES = closure_1_2(closure_1_3[9]).combine(closure_1_10.CREATE_PUBLIC_THREADS, closure_1_10.READ_MESSAGE_HISTORY);
-      const obj = closure_1_2(closure_1_3[9]);
-    }
-    return closure_1_8.can(SEND_MESSAGES, forumLikeChannel);
-  }, items1)) {
+  if (
+    obj.useStateFromStores(
+      items,
+      () => {
+        if (forumLikeChannel.isForumLikeChannel()) {
+          let SEND_MESSAGES = closure_1_10.SEND_MESSAGES;
+        } else {
+          SEND_MESSAGES = closure_1_2(closure_1_3[9]).combine(
+            closure_1_10.CREATE_PUBLIC_THREADS,
+            closure_1_10.READ_MESSAGE_HISTORY,
+          );
+          const obj = closure_1_2(closure_1_3[9]);
+        }
+        return closure_1_8.can(SEND_MESSAGES, forumLikeChannel);
+      },
+      items1,
+    )
+  ) {
     flag = false;
     if (THREADED_CHANNEL_TYPES.has(type.type)) {
       flag = true;
@@ -212,15 +234,24 @@ export const useCanStartThread = function useCanStartThread(channel) {
   const items = [closure_8];
   const items1 = [channel];
   let flag = false;
-  if (obj.useStateFromStores(items, () => {
-    if (forumLikeChannel.isForumLikeChannel()) {
-      let SEND_MESSAGES = closure_1_10.SEND_MESSAGES;
-    } else {
-      SEND_MESSAGES = closure_1_2(closure_1_3[9]).combine(closure_1_10.CREATE_PUBLIC_THREADS, closure_1_10.READ_MESSAGE_HISTORY);
-      const obj = closure_1_2(closure_1_3[9]);
-    }
-    return closure_1_8.can(SEND_MESSAGES, forumLikeChannel);
-  }, items1)) {
+  if (
+    obj.useStateFromStores(
+      items,
+      () => {
+        if (forumLikeChannel.isForumLikeChannel()) {
+          let SEND_MESSAGES = closure_1_10.SEND_MESSAGES;
+        } else {
+          SEND_MESSAGES = closure_1_2(closure_1_3[9]).combine(
+            closure_1_10.CREATE_PUBLIC_THREADS,
+            closure_1_10.READ_MESSAGE_HISTORY,
+          );
+          const obj = closure_1_2(closure_1_3[9]);
+        }
+        return closure_1_8.can(SEND_MESSAGES, forumLikeChannel);
+      },
+      items1,
+    )
+  ) {
     flag = false;
     if (THREADED_CHANNEL_TYPES.has(channel.type)) {
       flag = true;
@@ -249,11 +280,19 @@ export const useCanViewThreadForMessage = function useCanViewThreadForMessage(ha
   const _require = hasFlag;
   const items = [closure_7];
   const items1 = [hasFlag];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_7.getChannel(stateFromStores(closure_1_3[11]).castMessageIdAsChannelId(hasFlag.id)), items1);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_7.getChannel(stateFromStores(closure_1_3[11]).castMessageIdAsChannelId(hasFlag.id)),
+    items1,
+  );
   const obj = initialize;
   const items2 = [closure_8];
   const items3 = [stateFromStores];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => closure_1_8.can(closure_1_10.VIEW_CHANNEL, stateFromStores), items3);
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items2,
+    () => closure_1_8.can(closure_1_10.VIEW_CHANNEL, stateFromStores),
+    items3,
+  );
   let hasFlagResult = hasFlag.hasFlag(constants2.HAS_THREAD);
   if (hasFlagResult) {
     hasFlagResult = null != stateFromStores && stateFromStores1;
@@ -265,9 +304,18 @@ export const useHasActiveThreads = function useHasActiveThreads(channel) {
   const _require = channel;
   const items = [closure_9, closure_8];
   return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
-    const activeJoinedThreadsForParent = closure_1_9.getActiveJoinedThreadsForParent(activeJoinedRelevantThreadsForParent.guild_id, activeJoinedRelevantThreadsForParent.id);
-    activeJoinedRelevantThreadsForParent = closure_1_9.getActiveJoinedRelevantThreadsForParent(activeJoinedRelevantThreadsForParent.guild_id, activeJoinedRelevantThreadsForParent.id);
-    const activeUnjoinedThreadsForParent = closure_1_9.getActiveUnjoinedThreadsForParent(activeJoinedRelevantThreadsForParent.guild_id, activeJoinedRelevantThreadsForParent.id);
+    const activeJoinedThreadsForParent = closure_1_9.getActiveJoinedThreadsForParent(
+      activeJoinedRelevantThreadsForParent.guild_id,
+      activeJoinedRelevantThreadsForParent.id,
+    );
+    activeJoinedRelevantThreadsForParent = closure_1_9.getActiveJoinedRelevantThreadsForParent(
+      activeJoinedRelevantThreadsForParent.guild_id,
+      activeJoinedRelevantThreadsForParent.id,
+    );
+    const activeUnjoinedThreadsForParent = closure_1_9.getActiveUnjoinedThreadsForParent(
+      activeJoinedRelevantThreadsForParent.guild_id,
+      activeJoinedRelevantThreadsForParent.id,
+    );
     let obj = closure_1_1(closure_1_3[12])(activeJoinedRelevantThreadsForParent);
     const someResult = obj.some((channel) => closure_8.can(constants.VIEW_CHANNEL, channel.channel));
     const someResult1 = closure_1_1(closure_1_3[12])(activeJoinedThreadsForParent).some((channel) => {
@@ -278,7 +326,9 @@ export const useHasActiveThreads = function useHasActiveThreads(channel) {
       return canResult;
     });
     const obj2 = closure_1_1(closure_1_3[12])(activeJoinedThreadsForParent);
-    let someResult2 = closure_1_1(closure_1_3[12])(activeUnjoinedThreadsForParent).some((arg0) => closure_8.can(constants.VIEW_CHANNEL, arg0));
+    let someResult2 = closure_1_1(closure_1_3[12])(activeUnjoinedThreadsForParent).some((arg0) =>
+      closure_8.can(constants.VIEW_CHANNEL, arg0),
+    );
     let tmp7 = someResult;
     if (!someResult) {
       tmp7 = someResult1;
@@ -297,27 +347,37 @@ export const useHasActiveThreads = function useHasActiveThreads(channel) {
 export const useCanManageThread = function useCanManageThread(channel) {
   const _require = channel;
   const items = [closure_7];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let parent_id;
-    if (parent_id != null) {
-      parent_id = parent_id.parent_id;
-    }
-    return closure_1_7.getChannel(parent_id);
-  });
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let parent_id;
+      if (parent_id != null) {
+        parent_id = parent_id.parent_id;
+      }
+      return closure_1_7.getChannel(parent_id);
+    },
+  );
   const obj = initialize;
   const items1 = [closure_8];
   const items2 = [stateFromStores];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
-    let canResult = null != stateFromStores;
-    if (canResult) {
-      canResult = closure_1_8.can(closure_1_10.MANAGE_THREADS, tmp);
-    }
-    return canResult;
-  }, items2);
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => {
+      let canResult = null != stateFromStores;
+      if (canResult) {
+        canResult = closure_1_8.can(closure_1_10.MANAGE_THREADS, tmp);
+      }
+      return canResult;
+    },
+    items2,
+  );
   const obj2 = initialize;
   const items3 = [closure_6];
   let tmp4 = null != channel;
-  const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => id.getId());
+  const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items3,
+    () => id.getId(),
+  );
   if (tmp4) {
     tmp4 = null != stateFromStores;
   }
@@ -454,7 +514,9 @@ export const useCanRemoveThreadMember = function useCanRemoveThreadMember(channe
 export const useHasPermissionToJoinThreadVoice = function useHasPermissionToJoinThreadVoice(isThread) {
   const _require = isThread;
   const items = [closure_8];
-  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.can(closure_1_10.CONNECT, closure_0));
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_8.can(closure_1_10.CONNECT, closure_0),
+  );
   let tmp3 = null != isThread;
   if (tmp3) {
     const isThreadResult = isThread.isThread();
@@ -548,15 +610,18 @@ export const useCanJoinThreadVoice = function useCanJoinThreadVoice(channel) {
 export const useIsNonModInLockedThread = function useIsNonModInLockedThread(channel) {
   const _require = channel;
   let items = [closure_8];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const items = [closure_1_8];
-    const first = closure_1_4(items, 1)[0];
-    let canResult = null != closure_0;
-    if (canResult) {
-      canResult = first.can(closure_1_10.MANAGE_THREADS, closure_0);
-    }
-    return canResult;
-  });
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const items = [closure_1_8];
+      const first = closure_1_4(items, 1)[0];
+      let canResult = null != closure_0;
+      if (canResult) {
+        canResult = first.can(closure_1_10.MANAGE_THREADS, closure_0);
+      }
+      return canResult;
+    },
+  );
   const obj = initialize;
   return channel.isLockedThread() && !stateFromStores;
 };

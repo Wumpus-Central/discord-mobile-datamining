@@ -8,7 +8,15 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ ImageBackground: c4, View: c5 } = get_ActivityIndicator);
 createCacheKey = { cardContainer: null, cardImageBackground: null, cardImage: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", shadowColor: "#000", shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 8, elevation: 8 };
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.md,
+  overflow: "hidden",
+  shadowColor: "#000",
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.3,
+  shadowRadius: 8,
+  elevation: 8,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center" };
 createCacheKey[2] = { width: "100%", height: "100%", resizeMode: "cover" };
@@ -97,4 +105,4 @@ export default function SlayerStorefrontItemCard(sku) {
     }
   }
   return tmp6;
-};
+}

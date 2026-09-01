@@ -30,16 +30,16 @@ class EditCollectibleListItem {
       style: tmp.pressable,
       disabled: isSelected,
       onPress() {
-            const result = closure_1_0(closure_1_2[8]).triggerHapticFeedback(closure_1_1(closure_1_2[9]).IMPACT_LIGHT);
-            callback();
-          },
+        const result = closure_1_0(closure_1_2[8]).triggerHapticFeedback(closure_1_1(closure_1_2[9]).IMPACT_LIGHT);
+        callback();
+      },
       onLongPress,
       accessibilityRole,
       accessibilityLabel,
       accessibilityState: { selected: isSelected },
-      children: null
+      children: null,
     };
-    items = [, , , ];
+    items = [, , ,];
     items[0] = tmp.item;
     selected = null;
     tmp3 = View;
@@ -54,11 +54,33 @@ class EditCollectibleListItem {
   }
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { pressable: null, item: null, selected: null, optionCell: null, optionCellText: null, newIcon: null, lockIcon: null };
+createCacheKey = {
+  pressable: null,
+  item: null,
+  selected: null,
+  optionCell: null,
+  optionCellText: null,
+  newIcon: null,
+  lockIcon: null,
+};
 createCacheKey = { marginTop: 10, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderWidth: 2, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
-let obj1 = { borderWidth: 2, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
+createCacheKey[1] = {
+  borderWidth: 2,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  alignItems: "center",
+  justifyContent: "center",
+};
+let obj1 = {
+  borderWidth: 2,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[2] = { borderColor: ThemesDefault.colors.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE };
 createCacheKey[3] = { justifyContent: "center", alignItems: "center" };
 createCacheKey[4] = { marginTop: 4 };
@@ -66,7 +88,9 @@ createCacheKey[5] = { position: "absolute", top: -12, right: 5 };
 createCacheKey[6] = { position: "absolute", top: -12, right: -10 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 const obj2 = { borderColor: ThemesDefault.colors.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE };
-let result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesEditUserProfileListItems.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/CollectiblesEditUserProfileListItems.tsx",
+);
 
 export { EditCollectibleListItem };
 export const EditCollectiblesListItemNone = function EditCollectiblesListItemNone(asDefault) {
@@ -74,7 +98,7 @@ export const EditCollectiblesListItemNone = function EditCollectiblesListItemNon
   let obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
   obj = { source: registerAssetDefault, size: Button.IconSizes.LARGE };
-  const items = [callback(Button.Icon, obj), ];
+  const items = [callback(Button.Icon, obj)];
   obj = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
   const intl = getSystemLocale.intl;
   const string = intl.string;
@@ -104,11 +128,11 @@ export const EditCollectiblesListItemShop = function EditCollectiblesListItemSho
       obj = { analyticsLocations, analyticsSource, screen: closure_1_6.FEATURED_PAGE };
       const result = obj.openCollectiblesShopMobile(obj);
       analyticsLocations(closure_1_2[16]).hideActionSheet();
-    }, items)
+    }, items),
   };
   const merged1 = Object.assign(merged);
   obj = { source: analyticsLocations(8093), size: analyticsSource(1297).IconSizes.LARGE };
-  const items1 = [callback(analyticsSource(1297).Icon, obj), , ];
+  const items1 = [callback(analyticsSource(1297).Icon, obj), ,];
   obj = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp2.optionCellText, children: null };
   const intl = analyticsSource(1236).intl;
   obj[3] = intl.string(analyticsSource(1236).t.pWG4ze);
@@ -138,7 +162,7 @@ export const EditCollectiblesListItemProduct = function EditCollectiblesListItem
   }
   obj = { isSelected };
   const merged1 = Object.assign(merged);
-  const items1 = [children, ];
+  const items1 = [children];
   if (null == purchase) {
     if (!result) {
       obj = { style: null, isNew: null };

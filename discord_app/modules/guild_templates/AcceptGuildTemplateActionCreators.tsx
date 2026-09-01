@@ -23,30 +23,33 @@ export default {
       obj = { name: closure_1, icon: dependencyMap };
       obj[3] = code(530).rejectWithMigratedError();
       let obj3 = code(530);
-      HTTP.post(obj).then((body) => {
-        body = body.body;
-        let obj = callback2(709);
-        obj = { type: "GUILD_TEMPLATE_ACCEPT_SUCCESS", code: callback, guild: body };
-        obj.dispatch(obj);
-        if (closure_2_3.isConnected()) {
-          const result = closure_2_4.addConditionalChangeListener(() => {
-            if (null != closure_3_4.getGuild(body.id)) {
-              body(table[5]).transitionToGuild(tmp.id);
-              body(tmp);
-              return false;
-            }
-          });
-        } else {
-          callback(6186).transitionToGuild(body.id);
-          body(body);
-          const obj3 = callback(6186);
-        }
-      }, (body) => {
-        let obj = callback2(709);
-        obj = { type: "GUILD_TEMPLATE_ACCEPT_FAILURE", code: closure_0 };
-        obj.dispatch(obj);
-        callback2(body.body);
-      });
+      HTTP.post(obj).then(
+        (body) => {
+          body = body.body;
+          let obj = callback2(709);
+          obj = { type: "GUILD_TEMPLATE_ACCEPT_SUCCESS", code: callback, guild: body };
+          obj.dispatch(obj);
+          if (closure_2_3.isConnected()) {
+            const result = closure_2_4.addConditionalChangeListener(() => {
+              if (null != closure_3_4.getGuild(body.id)) {
+                body(table[5]).transitionToGuild(tmp.id);
+                body(tmp);
+                return false;
+              }
+            });
+          } else {
+            callback(6186).transitionToGuild(body.id);
+            body(body);
+            const obj3 = callback(6186);
+          }
+        },
+        (body) => {
+          let obj = callback2(709);
+          obj = { type: "GUILD_TEMPLATE_ACCEPT_FAILURE", code: closure_0 };
+          obj.dispatch(obj);
+          callback2(body.body);
+        },
+      );
     });
-  }
+  },
 };

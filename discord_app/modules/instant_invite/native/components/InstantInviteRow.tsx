@@ -15,7 +15,20 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 const require = arg1;
 ({ setSendState: c9, useInstantInviteSendStates: c10 } = setSendState);
 let obj = { acronym: null };
-obj = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center", overflow: "hidden", marginTop: 0, marginRight: 10, borderColor: ThemesDefault.colors.BORDER_MUTED, borderStyle: "solid", borderWidth: 2 };
+obj = {
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+  marginTop: 0,
+  marginRight: 10,
+  borderColor: ThemesDefault.colors.BORDER_MUTED,
+  borderStyle: "solid",
+  borderWidth: 2,
+};
 obj[0] = obj;
 let closure_13 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function InstantInviteRow(row) {
@@ -132,7 +145,13 @@ const memoResult = importAllResult.memo(function InstantInviteRow(row) {
               if (tmp7(tmp8[14]).RowTypes.GROUP_DM === type) {
                 if (null != tmp) {
                   let obj3 = code(tmp8[15]);
-                  let obj = { inviteKey: null, type: null, channel: null, location: "Invite Action Sheet", inviteAnalyticsMetadata: null };
+                  let obj = {
+                    inviteKey: null,
+                    type: null,
+                    channel: null,
+                    location: "Invite Action Sheet",
+                    inviteAnalyticsMetadata: null,
+                  };
                   obj[0] = tmp;
                   obj[1] = tmp7(tmp8[15]).InvitePropertiesType.GROUP_DM;
                   obj[2] = closure_1_4.getChannel(tmp3);
@@ -145,7 +164,13 @@ const memoResult = importAllResult.memo(function InstantInviteRow(row) {
               } else if (tmp7(tmp8[14]).RowTypes.CHANNEL === type) {
                 if (null != tmp) {
                   obj = code(tmp8[15]);
-                  obj1 = { inviteKey: null, type: null, channel: null, location: "Invite Action Sheet", inviteAnalyticsMetadata: null };
+                  obj1 = {
+                    inviteKey: null,
+                    type: null,
+                    channel: null,
+                    location: "Invite Action Sheet",
+                    inviteAnalyticsMetadata: null,
+                  };
                   obj1[0] = tmp;
                   obj1[1] = tmp7(tmp8[15]).InvitePropertiesType.CHANNEL;
                   obj1[2] = closure_1_4.getChannel(tmp3);
@@ -159,7 +184,13 @@ const memoResult = importAllResult.memo(function InstantInviteRow(row) {
             }
           }
           if (null != tmp) {
-            obj3 = { inviteKey: null, type: null, user: null, location: "Invite Action Sheet", inviteAnalyticsMetadata: null };
+            obj3 = {
+              inviteKey: null,
+              type: null,
+              user: null,
+              location: "Invite Action Sheet",
+              inviteAnalyticsMetadata: null,
+            };
             obj3[0] = tmp;
             obj3[1] = tmp7(tmp8[15]).InvitePropertiesType.USER;
             obj3[2] = closure_1_8.getUser(tmp3);
@@ -172,7 +203,17 @@ const memoResult = importAllResult.memo(function InstantInviteRow(row) {
           }
         }
       }
-      const obj5 = { start: null, end: null, icon: null, label: null, trailing: null, onPress: null, disabled: null, accessibilityActions: null, onAccessibilityAction: null };
+      const obj5 = {
+        start: null,
+        end: null,
+        icon: null,
+        label: null,
+        trailing: null,
+        onPress: null,
+        disabled: null,
+        accessibilityActions: null,
+        onAccessibilityAction: null,
+      };
       obj5[0] = start;
       obj5[1] = end;
       obj5[2] = tmp15;
@@ -189,10 +230,26 @@ const memoResult = importAllResult.memo(function InstantInviteRow(row) {
       obj5[6] = tmp30;
       obj5[7] = tmp18;
       obj5[8] = T;
-      return jsx(tmp2(tmp3[24]).TableRow, { start: null, end: null, icon: null, label: null, trailing: null, onPress: null, disabled: null, accessibilityActions: null, onAccessibilityAction: null });
+      return jsx(tmp2(tmp3[24]).TableRow, {
+        start: null,
+        end: null,
+        icon: null,
+        label: null,
+        trailing: null,
+        onPress: null,
+        disabled: null,
+        accessibilityActions: null,
+        onAccessibilityAction: null,
+      });
     }
     user = user.getUser(id);
-    let obj7 = { importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, onPress: null, style: null, children: null };
+    let obj7 = {
+      importantForAccessibility: "no-hide-descendants",
+      accessibilityElementsHidden: true,
+      onPress: null,
+      style: null,
+      children: null,
+    };
     obj7[2] = function onPress(stopPropagation) {
       stopPropagation.stopPropagation();
       if (onPressAvatar != null) {

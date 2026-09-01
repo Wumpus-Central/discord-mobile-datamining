@@ -8,28 +8,31 @@ const result = require("set").fileFinishedImporting("modules/media_channel/useSh
 export default function useShouldHideMediaOptions(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
-    const channel = closure_1_2.getChannel(closure_0);
-    let parent_id;
-    if (channel != null) {
-      parent_id = channel.parent_id;
-    }
-    let channel1 = null;
-    if (null != parent_id) {
-      channel1 = null;
-      if (channel.isForumPost()) {
-        let parent_id1;
-        if (channel != null) {
-          parent_id1 = channel.parent_id;
-        }
-        channel1 = closure_1_2.getChannel(parent_id1);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
+    items,
+    () => {
+      const channel = closure_1_2.getChannel(closure_0);
+      let parent_id;
+      if (channel != null) {
+        parent_id = channel.parent_id;
       }
-    }
-    return channel1;
-  });
+      let channel1 = null;
+      if (null != parent_id) {
+        channel1 = null;
+        if (channel.isForumPost()) {
+          let parent_id1;
+          if (channel != null) {
+            parent_id1 = channel.parent_id;
+          }
+          channel1 = closure_1_2.getChannel(parent_id1);
+        }
+      }
+      return channel1;
+    },
+  );
   let hasFlagResult;
   if (stateFromStores != null) {
     hasFlagResult = stateFromStores.hasFlag(ChannelFlags.HIDE_MEDIA_DOWNLOAD_OPTIONS);
   }
   return true === hasFlagResult;
-};
+}

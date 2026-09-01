@@ -35,4 +35,4 @@ export default function ProfileBanner(bannerHeight) {
   }
   obj[1] = tmp3Result;
   return <View style={items}>{null}</View>;
-};
+}

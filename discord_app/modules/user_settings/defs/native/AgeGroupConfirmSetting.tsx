@@ -24,7 +24,7 @@ const pressable = createToggle.createPressable({
     const result = obj.showAgeVerificationGetStartedModal(obj);
   },
   withArrow: true,
-  usePredicate: useAgeVerificationRunner.useShowAssignedAgeGroupSettings
+  usePredicate: useAgeVerificationRunner.useShowAssignedAgeGroupSettings,
 });
 let obj = {
   useTitle() {
@@ -42,7 +42,7 @@ let obj = {
     const result = obj.showAgeVerificationGetStartedModal(obj);
   },
   withArrow: true,
-  usePredicate: useAgeVerificationRunner.useShowAssignedAgeGroupSettings
+  usePredicate: useAgeVerificationRunner.useShowAssignedAgeGroupSettings,
 };
 let result = set.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupConfirmSetting.tsx");
 

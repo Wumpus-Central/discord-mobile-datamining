@@ -21,7 +21,10 @@ const memoResult = importAllResult.memo(function MainTabs() {
   obj = { style: items, children: null };
   items = [callback3().container, { marginLeft: rect.left, marginRight: rect.right }];
   obj = { gradient: tmp, children: null };
-  const items1 = [callback(getMixedGradientColorDefault, { absolute: true, mix: isCustomThemeActive }), callback(_modDef15594, {})];
+  const items1 = [
+    callback(getMixedGradientColorDefault, { absolute: true, mix: isCustomThemeActive }),
+    callback(_modDef15594, {}),
+  ];
   obj[1] = items1;
   obj[1] = callback2(ManaContext.ThemeContextProvider, obj);
   return callback(View, obj);

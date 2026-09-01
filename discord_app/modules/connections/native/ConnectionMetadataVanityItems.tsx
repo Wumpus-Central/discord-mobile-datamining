@@ -46,7 +46,7 @@ function VanityMetric(label) {
     obj[0] = sum;
     children = intl2.format(label, obj);
   }
-  style = [callback3().connectedAccountVanityMetadata, ];
+  style = [callback3().connectedAccountVanityMetadata];
   style[1] = style;
   return callback(Text.Text, { variant: "text-xs/normal", color: "text-muted", style, children });
 }
@@ -55,21 +55,37 @@ function VanityItem(style) {
   ({ label, imageSrc, imageAlt } = style);
   const tmp = callback3();
   let obj = { style: items, children: null };
-  items = [, , ];
+  items = [, ,];
   ({ connectedAccountVanityMetadata: arr[0], connectedAccountVanityMetadataItem: arr[1] } = tmp);
   items[2] = style;
-  obj = { source: imageSrc, accessibilityLabel: imageAlt, style: tmp.connectedAccountVanityMetadataItemIcon, disableColor: true };
-  const items1 = [callback(Button.Icon, obj), callback(Text.Text, { variant: "text-xs/normal", color: "text-muted", style, children: label })];
+  obj = {
+    source: imageSrc,
+    accessibilityLabel: imageAlt,
+    style: tmp.connectedAccountVanityMetadataItemIcon,
+    disableColor: true,
+  };
+  const items1 = [
+    callback(Button.Icon, obj),
+    callback(Text.Text, { variant: "text-xs/normal", color: "text-muted", style, children: label }),
+  ];
   obj[1] = items1;
   return callback2(View, obj);
 }
 function VanityTag(arg0) {
   ({ label, style, textStyle } = arg0);
   const tmp = callback3();
-  const items = [, , ];
+  const items = [, ,];
   ({ connectedAccountVanityMetadata: arr[0], connectedAccountVanityMetadataTag: arr[1] } = tmp);
   items[2] = style;
-  return callback(View, { style: items, children: callback(Text.Text, { variant: "text-xs/normal", color: "text-muted", style: textStyle, children: label }) });
+  return callback(View, {
+    style: items,
+    children: callback(Text.Text, {
+      variant: "text-xs/normal",
+      color: "text-muted",
+      style: textStyle,
+      children: label,
+    }),
+  });
 }
 function VanityDate(arg0) {
   ({ date, label, locale, style } = arg0);
@@ -86,8 +102,21 @@ function VanityDate(arg0) {
 noopAll;
 ({ MetadataFields: c4, MetadataItemTypes: c5 } = OperatorTypes);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 }, connectedAccountVanityMetadataItem: { flexDirection: "row", alignItems: "center" }, connectedAccountVanityMetadataItemIcon: { height: 18, width: 18, marginRight: 8 }, connectedAccountVanityMetadataTag: null, paypalVerifiedTag: null, paypalVerifiedTagText: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 };
+createCacheKey = {
+  connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 },
+  connectedAccountVanityMetadataItem: { flexDirection: "row", alignItems: "center" },
+  connectedAccountVanityMetadataItemIcon: { height: 18, width: 18, marginRight: 8 },
+  connectedAccountVanityMetadataTag: null,
+  paypalVerifiedTag: null,
+  paypalVerifiedTagText: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.md,
+  paddingHorizontal: 8,
+  paddingVertical: 1,
+  marginRight: 8,
+};
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND };
 let obj1 = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND };
@@ -311,7 +340,9 @@ export const generateTikTokMetadataItems = function generateTikTokMetadataItems(
   }
   return items;
 };
-export const generateRoleConnectionMetadataItems = function generateRoleConnectionMetadataItems(applicationRoleConnection) {
+export const generateRoleConnectionMetadataItems = function generateRoleConnectionMetadataItems(
+  applicationRoleConnection,
+) {
   closure_0 = applicationRoleConnection;
   const items = [];
   const keys = Object.keys(applicationRoleConnection.metadata);
@@ -373,8 +404,7 @@ export const generateRoleConnectionMetadataItems = function generateRoleConnecti
               obj[1] = tmp8.name;
               items.push(callback(VanityTag, obj, tmp8.key));
             }
-          } catch (err) {
-          }
+          } catch (err) {}
         }
         const obj4 = applyDefault;
       }

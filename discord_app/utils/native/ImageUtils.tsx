@@ -19,7 +19,7 @@ function getSrcWithWidthAndHeight(animated) {
     flag = false;
   }
   const tmp = callback(src.split("?"), 2);
-  const items = [tmp[0], ];
+  const items = [tmp[0]];
   let obj = parseDefault;
   items[1] = obj.parse(tmp[1]);
   [tmp5, tmp6] = callback(items, 2);
@@ -92,7 +92,10 @@ function getMobileOptimizedSrc(proxy_url, width, height, png) {
   let obj = useWindowDimensions;
   const size = obj.getWindowDimensions();
   const result = store.getPixelSizeForLayoutSize(size.width) * num;
-  const bound = Math.min(width > height ? result / width : store.getPixelSizeForLayoutSize(size.height / 2) * num / height, 1);
+  const bound = Math.min(
+    width > height ? result / width : (store.getPixelSizeForLayoutSize(size.height / 2) * num) / height,
+    1,
+  );
   let rounded1 = height;
   let rounded = width;
   if (bound < 1) {
@@ -101,7 +104,14 @@ function getMobileOptimizedSrc(proxy_url, width, height, png) {
     const _Math2 = Math;
     rounded1 = Math.ceil(height * bound);
   }
-  obj = { src: proxy_url, sourceWidth: width, sourceHeight: height, targetWidth: rounded, targetHeight: rounded1, format: tmp };
+  obj = {
+    src: proxy_url,
+    sourceWidth: width,
+    sourceHeight: height,
+    targetWidth: rounded,
+    targetHeight: rounded1,
+    format: tmp,
+  };
   return getSrcWithWidthAndHeight(obj);
 }
 function getPaletteForAvatarMobile(closure_0) {

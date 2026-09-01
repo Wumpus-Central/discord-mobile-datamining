@@ -29,8 +29,16 @@ function canSeeChannelSummaries(channel, flag, arg2) {
       const SUMMARIZEABLE = constants.SUMMARIZEABLE;
       const tmp4 = null != guild && guild.rulesChannelId === channel.id;
       const tmp6 = isGuildNSFW(guild);
-      flag4 = SUMMARIZEABLE.has(channel.type) && !channel.isNSFW() && !(null != guild && guild.rulesChannelId === channel.id) && !isGuildNSFW(guild);
-      const tmp8 = SUMMARIZEABLE.has(channel.type) && !channel.isNSFW() && !(null != guild && guild.rulesChannelId === channel.id) && !isGuildNSFW(guild);
+      flag4 =
+        SUMMARIZEABLE.has(channel.type) &&
+        !channel.isNSFW() &&
+        !(null != guild && guild.rulesChannelId === channel.id) &&
+        !isGuildNSFW(guild);
+      const tmp8 =
+        SUMMARIZEABLE.has(channel.type) &&
+        !channel.isNSFW() &&
+        !(null != guild && guild.rulesChannelId === channel.id) &&
+        !isGuildNSFW(guild);
     }
     let tmp9 = flag4;
     if (tmp9) {
@@ -133,39 +141,43 @@ export const useGuildEligibleForSummaries = function useGuildEligibleForSummarie
   const _require = arg0;
   const items = [closure_3];
   const items1 = [arg0];
-  return require("../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
-    let id;
-    if (lib != null) {
-      id = lib.id;
-    }
-    if (id == null) {
-      id = closure_1_7;
-    }
-    const guild = closure_1_3.getGuild(id);
-    let tmp4 = null != guild;
-    if (tmp4) {
-      id = guild.id;
-      let tmp5 = null != id;
-      if (tmp5) {
-        let isFavoritesGuildIdResult = id === closure_1_4;
-        if (!isFavoritesGuildIdResult) {
-          isFavoritesGuildIdResult = lib(closure_1_1[4]).isFavoritesGuildId(id);
-          const obj = lib(closure_1_1[4]);
-        }
-        tmp5 = isFavoritesGuildIdResult;
+  return require("../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
+    items,
+    () => {
+      let id;
+      if (lib != null) {
+        id = lib.id;
       }
-      let tmp10 = !tmp5;
-      if (!tmp5) {
-        const features = guild.features;
-        let hasItem = features.has(closure_1_6.SUMMARIES_ENABLED_GA);
-        if (hasItem) {
-          // // eliminated: always false
-          hasItem = flag2;
-        }
-        tmp10 = hasItem;
+      if (id == null) {
+        id = closure_1_7;
       }
-      tmp4 = tmp10;
-    }
-    return tmp4;
-  }, items1);
+      const guild = closure_1_3.getGuild(id);
+      let tmp4 = null != guild;
+      if (tmp4) {
+        id = guild.id;
+        let tmp5 = null != id;
+        if (tmp5) {
+          let isFavoritesGuildIdResult = id === closure_1_4;
+          if (!isFavoritesGuildIdResult) {
+            isFavoritesGuildIdResult = lib(closure_1_1[4]).isFavoritesGuildId(id);
+            const obj = lib(closure_1_1[4]);
+          }
+          tmp5 = isFavoritesGuildIdResult;
+        }
+        let tmp10 = !tmp5;
+        if (!tmp5) {
+          const features = guild.features;
+          let hasItem = features.has(closure_1_6.SUMMARIES_ENABLED_GA);
+          if (hasItem) {
+            // // eliminated: always false
+            hasItem = flag2;
+          }
+          tmp10 = hasItem;
+        }
+        tmp4 = tmp10;
+      }
+      return tmp4;
+    },
+    items1,
+  );
 };

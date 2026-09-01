@@ -200,23 +200,81 @@ function StageStreamAvatars(stage) {
 }
 let c3 = importAllResult;
 ({ PixelRatio, View: c4 } = get_ActivityIndicator);
-({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: error, STATUS_CUTOUT_SMALL: closure_8, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
+({
+  HAPPENING_NOW_CONTENT_HEIGHT,
+  HappeningNowCardTrackingType: error,
+  STATUS_CUTOUT_SMALL: closure_8,
+  HAPPENING_NOW_STAGE_PREVIEW_HEIGHT,
+} = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
 ({ ActivityTypes: c9, AnalyticEvents: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
 let items = [registerAssetDefault, registerAssetDefault2];
-let obj = { content: { flexShrink: 1, gap: 2 }, avatarStackContainer: null, cardAvatar: null, cardImage: null, cardImageStream: null, cardImageAsset: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageStreamPreview: null, cardImageStreamLive: null, stageStreamLiveText: null, stagePreviewWrapper: null };
-obj = { backgroundColor: ThemesDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: ThemesDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
+let obj = {
+  content: { flexShrink: 1, gap: 2 },
+  avatarStackContainer: null,
+  cardAvatar: null,
+  cardImage: null,
+  cardImageStream: null,
+  cardImageAsset: null,
+  cardImageAssetContainer: null,
+  cardImageAssetBackground: null,
+  cardImageStreamPreview: null,
+  cardImageStreamLive: null,
+  stageStreamLiveText: null,
+  stagePreviewWrapper: null,
+};
+obj = {
+  backgroundColor: ThemesDefault.colors.STAGE_CARD_PILL_BG,
+  padding: 2,
+  borderRadius: ThemesDefault.radii.xl,
+  position: "absolute",
+  alignSelf: "center",
+  bottom: 0,
+};
 obj[1] = obj;
 obj[2] = { marginBottom: 2 };
-obj[3] = { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12, position: "relative" };
+obj[3] = {
+  height: HAPPENING_NOW_CONTENT_HEIGHT,
+  minWidth: HAPPENING_NOW_CONTENT_HEIGHT,
+  marginRight: 12,
+  position: "relative",
+};
 obj[4] = { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, position: "relative" };
 createCacheKey = { flex: 1, width: "100%", borderRadius: ThemesDefault.radii.sm - 1 };
 obj[5] = createCacheKey;
-obj[6] = { height: "100%", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG, borderRadius: ThemesDefault.radii.sm, shadowOffset: { width: 0, height: 0 }, shadowRadius: 5, shadowOpacity: 0.32, elevation: 10 };
-let obj2 = { height: "100%", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG, borderRadius: ThemesDefault.radii.sm, shadowOffset: { width: 0, height: 0 }, shadowRadius: 5, shadowOpacity: 0.32, elevation: 10 };
-obj[7] = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj3 = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+obj[6] = {
+  height: "100%",
+  backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG,
+  borderRadius: ThemesDefault.radii.sm,
+  shadowOffset: { width: 0, height: 0 },
+  shadowRadius: 5,
+  shadowOpacity: 0.32,
+  elevation: 10,
+};
+let obj2 = {
+  height: "100%",
+  backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG,
+  borderRadius: ThemesDefault.radii.sm,
+  shadowOffset: { width: 0, height: 0 },
+  shadowRadius: 5,
+  shadowOpacity: 0.32,
+  elevation: 10,
+};
+obj[7] = {
+  width: HAPPENING_NOW_CONTENT_HEIGHT,
+  height: HAPPENING_NOW_CONTENT_HEIGHT,
+  borderRadius: ThemesDefault.radii.sm,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
+let obj3 = {
+  width: HAPPENING_NOW_CONTENT_HEIGHT,
+  height: HAPPENING_NOW_CONTENT_HEIGHT,
+  borderRadius: ThemesDefault.radii.sm,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+};
 obj[8] = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[9] = { top: 4, left: 4, position: "absolute" };
 obj[10] = { fontSize: 10, lineHeight: 13, fontFamily: require("sum").Fonts.PRIMARY_BOLD };
@@ -293,7 +351,13 @@ const memoResult = importAllResult.memo((userId) => {
       STATUS_CARD = closure_1_7.STATUS_CARD;
     }
     let obj = guildId(index[15]);
-    obj = { type: STATUS_CARD, order: index, guild_id: guildId, highlighted_user_ids: items, destination_channel_id: null };
+    obj = {
+      type: STATUS_CARD,
+      order: index,
+      guild_id: guildId,
+      highlighted_user_ids: items,
+      destination_channel_id: null,
+    };
     items = [userId];
     let channelId;
     if (stream != null) {
@@ -305,7 +369,9 @@ const memoResult = importAllResult.memo((userId) => {
       userId(tmp6[17])(tmp6[16], tmp6.paths).then((arg0) => arg0.default(channelId.channelId, true));
       const promise2 = userId(tmp6[17])(tmp6[16], tmp6.paths);
     } else {
-      userId(tmp6[17])(tmp6[18], tmp6.paths).then((arg0) => arg0.default({ userId: closure_0, localUser: closure_6, sourceAnalyticsLocations: closure_5 }));
+      userId(tmp6[17])(tmp6[18], tmp6.paths).then((arg0) =>
+        arg0.default({ userId: closure_0, localUser: closure_6, sourceAnalyticsLocations: closure_5 }),
+      );
       const promise = userId(tmp6[17])(tmp6[18], tmp6.paths);
     }
   }, items2);
@@ -329,7 +395,15 @@ const memoResult = importAllResult.memo((userId) => {
       type2 = activity.type;
     }
     if (type2 === constants.CUSTOM_STATUS) {
-      obj = { fullwidth: null, user: null, guildId: null, activity: null, userTitle: null, onPress: null, panelVariant: null };
+      obj = {
+        fullwidth: null,
+        user: null,
+        guildId: null,
+        activity: null,
+        userTitle: null,
+        onPress: null,
+        panelVariant: null,
+      };
       obj[0] = fullwidth;
       obj[1] = stateFromStores;
       obj[2] = guildId;
@@ -356,7 +430,7 @@ const memoResult = importAllResult.memo((userId) => {
         obj4[2] = getOrFetchApplication;
         obj4[3] = stream;
         obj3[1] = tmp23(IconOrPreview, obj4);
-        const items3 = [tmp23(stream, obj3), ];
+        const items3 = [tmp23(stream, obj3)];
         tmp23Result = null;
         if (null != stateFromStores1) {
           const obj5 = { user: null, stage: null };
@@ -367,7 +441,7 @@ const memoResult = importAllResult.memo((userId) => {
         const obj6 = { children: null };
         items3[1] = tmp23Result;
         obj2[1] = items3;
-        const items4 = [tmp25(stream, obj2), ];
+        const items4 = [tmp25(stream, obj2)];
         const obj7 = { stage: null, renderingContext: null, guildId: null, streamingUser: null };
         obj7[0] = stateFromStores1;
         obj7[1] = renderingContext;
@@ -387,10 +461,18 @@ const memoResult = importAllResult.memo((userId) => {
         obj10[2] = getOrFetchApplication;
         obj10[3] = stream;
         obj9[1] = tmp23(IconOrPreview, obj10);
-        const items5 = [tmp23(stream, obj9), ];
+        const items5 = [tmp23(stream, obj9)];
         const obj11 = { style: null, children: null };
         obj11[0] = tmp.content;
-        const obj12 = { user: null, avatarDecoration: null, size: null, guildId: null, status: null, style: null, autoStatusCutout: null };
+        const obj12 = {
+          user: null,
+          avatarDecoration: null,
+          size: null,
+          guildId: null,
+          status: null,
+          style: null,
+          autoStatusCutout: null,
+        };
         obj12[0] = stateFromStores;
         obj12[1] = stateFromStores.avatarDecoration;
         obj12[2] = tmp4(tmp3[24]).AvatarSizes.XSMALL;
@@ -398,7 +480,7 @@ const memoResult = importAllResult.memo((userId) => {
         obj12[4] = status;
         obj12[5] = tmp.cardAvatar;
         obj12[6] = closure_8;
-        const items6 = [tmp23(tmp4(tmp3[24]).Avatar, obj12), , ];
+        const items6 = [tmp23(tmp4(tmp3[24]).Avatar, obj12), ,];
         const obj13 = { noMargin: true, children: null };
         obj13[1] = name;
         items6[1] = tmp23(tmp4(tmp3[22]).HappeningNowCardHeader, obj13);
@@ -418,6 +500,8 @@ const memoResult = importAllResult.memo((userId) => {
   }
   const tmp4Result = userId(index[13]);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivity.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivity.tsx",
+);
 
 export default memoResult;

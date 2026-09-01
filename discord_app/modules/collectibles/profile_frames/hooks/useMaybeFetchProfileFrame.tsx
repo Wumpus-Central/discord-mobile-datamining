@@ -4,12 +4,15 @@ import useProfileFrameDefault from "useProfileFrame.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx",
+);
 
 export default function useMaybeFetchProfileFrame(arg0, location) {
   const _require = arg0;
   let tmp = useFramePreviewOverrideFrameDefault();
-  const isProfileFramesEnabled = require("../../experiments/CollectiblesProfileFramesExperiment.tsx").useIsProfileFramesEnabled(location);
+  const isProfileFramesEnabled =
+    require("../../experiments/CollectiblesProfileFramesExperiment.tsx").useIsProfileFramesEnabled(location);
   const tmp3 = useProfileFrameDefault(arg0);
   importDefault = tmp4;
   const items = [null == tmp && isProfileFramesEnabled && null != arg0 && null == tmp3, arg0];
@@ -27,4 +30,4 @@ export default function useMaybeFetchProfileFrame(arg0, location) {
     tmp = tmp6;
   }
   return tmp;
-};
+}

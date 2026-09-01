@@ -8,18 +8,44 @@ import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexpor
 
 const require = arg1;
 createCacheKey = { checkbox: null, unselected: null, selected: null, checkmark: null };
-createCacheKey = { width: ThemesDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, height: ThemesDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_RADIUS, borderWidth: ThemesDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_WIDTH, borderColor: ThemesDefault.colors.CHECKBOX_BORDER_DEFAULT };
+createCacheKey = {
+  width: ThemesDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT,
+  height: ThemesDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT,
+  flexGrow: 0,
+  flexShrink: 0,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: ThemesDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_RADIUS,
+  borderWidth: ThemesDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_WIDTH,
+  borderColor: ThemesDefault.colors.CHECKBOX_BORDER_DEFAULT,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.CHECKBOX_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.CHECKBOX_BORDER_DEFAULT };
-let obj1 = { backgroundColor: ThemesDefault.colors.CHECKBOX_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.CHECKBOX_BORDER_DEFAULT };
-createCacheKey[2] = { borderColor: ThemesDefault.colors.CHECKBOX_BORDER_SELECTED_DEFAULT, backgroundColor: ThemesDefault.colors.CHECKBOX_BACKGROUND_SELECTED_DEFAULT };
-let obj2 = { borderColor: ThemesDefault.colors.CHECKBOX_BORDER_SELECTED_DEFAULT, backgroundColor: ThemesDefault.colors.CHECKBOX_BACKGROUND_SELECTED_DEFAULT };
+createCacheKey[1] = {
+  backgroundColor: ThemesDefault.colors.CHECKBOX_BACKGROUND_DEFAULT,
+  borderColor: ThemesDefault.colors.CHECKBOX_BORDER_DEFAULT,
+};
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.CHECKBOX_BACKGROUND_DEFAULT,
+  borderColor: ThemesDefault.colors.CHECKBOX_BORDER_DEFAULT,
+};
+createCacheKey[2] = {
+  borderColor: ThemesDefault.colors.CHECKBOX_BORDER_SELECTED_DEFAULT,
+  backgroundColor: ThemesDefault.colors.CHECKBOX_BACKGROUND_SELECTED_DEFAULT,
+};
+let obj2 = {
+  borderColor: ThemesDefault.colors.CHECKBOX_BORDER_SELECTED_DEFAULT,
+  backgroundColor: ThemesDefault.colors.CHECKBOX_BACKGROUND_SELECTED_DEFAULT,
+};
 createCacheKey[3] = { tintColor: ThemesDefault.colors.CHECKBOX_ICON_ACTIVE };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
 const obj3 = { tintColor: ThemesDefault.colors.CHECKBOX_ICON_ACTIVE };
 let closure_6 = importDefaultResult.createAnimatedComponent(IconSizesDefault);
-let closure_7 = { code: "function FormCheckboxNativeTsx1(){const{withSpring,checked,selected,unselected,SUBTLE_SPRING}=this.__closure;const defaultAnimation={borderColor:withSpring(checked?selected.borderColor:unselected.borderColor,SUBTLE_SPRING,'animate-always'),backgroundColor:withSpring(checked?selected.backgroundColor:unselected.backgroundColor,SUBTLE_SPRING,'animate-always')};return defaultAnimation;}" };
-let closure_8 = { code: "function FormCheckboxNativeTsx2(){const{useReducedMotion,withSpring,checked,SUBTLE_SPRING}=this.__closure;const uncheckedScale=useReducedMotion?1:0.5;return{opacity:withSpring(checked?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(checked?1:uncheckedScale,SUBTLE_SPRING)}]};}" };
+let closure_7 = {
+  code: "function FormCheckboxNativeTsx1(){const{withSpring,checked,selected,unselected,SUBTLE_SPRING}=this.__closure;const defaultAnimation={borderColor:withSpring(checked?selected.borderColor:unselected.borderColor,SUBTLE_SPRING,'animate-always'),backgroundColor:withSpring(checked?selected.backgroundColor:unselected.backgroundColor,SUBTLE_SPRING,'animate-always')};return defaultAnimation;}",
+};
+let closure_8 = {
+  code: "function FormCheckboxNativeTsx2(){const{useReducedMotion,withSpring,checked,SUBTLE_SPRING}=this.__closure;const uncheckedScale=useReducedMotion?1:0.5;return{opacity:withSpring(checked?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(checked?1:uncheckedScale,SUBTLE_SPRING)}]};}",
+};
 const result = require("set").fileFinishedImporting("design/components/Forms/native/FormCheckbox.native.tsx");
 
 export const FormCheckbox = function FormCheckbox(checked) {
@@ -41,7 +67,10 @@ export const FormCheckbox = function FormCheckbox(checked) {
     } else {
       borderColor = unselected.borderColor;
     }
-    obj = { borderColor: obj.withSpring(borderColor, tmp(tmp2[9]).SUBTLE_SPRING, "animate-always"), backgroundColor: null };
+    obj = {
+      borderColor: obj.withSpring(borderColor, tmp(tmp2[9]).SUBTLE_SPRING, "animate-always"),
+      backgroundColor: null,
+    };
     if (enabled) {
       let backgroundColor = checked.backgroundColor;
     } else {
@@ -50,7 +79,13 @@ export const FormCheckbox = function FormCheckbox(checked) {
     obj[1] = enabled(unselected[8]).withSpring(backgroundColor, enabled(unselected[9]).SUBTLE_SPRING, "animate-always");
     return obj;
   };
-  obj = { withSpring: enabled(unselected[8]).withSpring, checked, selected, unselected, SUBTLE_SPRING: enabled(unselected[9]).SUBTLE_SPRING };
+  obj = {
+    withSpring: enabled(unselected[8]).withSpring,
+    checked,
+    selected,
+    unselected,
+    SUBTLE_SPRING: enabled(unselected[9]).SUBTLE_SPRING,
+  };
   fn.__closure = obj;
   fn.__workletHash = 11278373524374;
   fn.__initData = closure_7;
@@ -76,7 +111,12 @@ export const FormCheckbox = function FormCheckbox(checked) {
     obj[1] = items;
     return obj;
   };
-  obj = { useReducedMotion: enabled, withSpring: enabled(unselected[8]).withSpring, checked, SUBTLE_SPRING: enabled(unselected[9]).SUBTLE_SPRING };
+  obj = {
+    useReducedMotion: enabled,
+    withSpring: enabled(unselected[8]).withSpring,
+    checked,
+    SUBTLE_SPRING: enabled(unselected[9]).SUBTLE_SPRING,
+  };
   fn2.__closure = obj;
   fn2.__workletHash = 13939484082835;
   fn2.__initData = closure_8;

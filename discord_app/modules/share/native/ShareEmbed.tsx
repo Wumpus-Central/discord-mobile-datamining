@@ -8,8 +8,24 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-createCacheKey = { container: null, containerRevamp: null, thumbnail: null, contentContainer: null, authorView: null, authorThumbnail: null, loadingSpinner: null };
-createCacheKey = { flexDirection: "row", height: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+createCacheKey = {
+  container: null,
+  containerRevamp: null,
+  thumbnail: null,
+  contentContainer: null,
+  authorView: null,
+  authorThumbnail: null,
+  loadingSpinner: null,
+};
+createCacheKey = {
+  flexDirection: "row",
+  height: 80,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderColor: ThemesDefault.colors.BORDER_STRONG,
+  borderWidth: 1,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderWidth: 0 };
 createCacheKey[2] = { width: 80 };
@@ -86,8 +102,14 @@ export default function ShareEmbed(embed) {
         obj[1] = obj;
         tmp5 = closure_1_5(memo3, obj);
       }
-      const items = [tmp5, ];
-      obj1 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", ellipsizeMode: "tail", lineClamp: 1, children: null };
+      const items = [tmp5];
+      obj1 = {
+        variant: "text-xs/semibold",
+        color: "mobile-text-heading-primary",
+        ellipsizeMode: "tail",
+        lineClamp: 1,
+        children: null,
+      };
       obj1[4] = author.name;
       items[1] = closure_1_5(embed(isLoadingEmbed[6]).Text, obj1);
       obj[1] = items;
@@ -101,7 +123,14 @@ export default function ShareEmbed(embed) {
     }
     let tmp2 = null;
     if (null != title) {
-      const obj = { style: null, variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, ellipsizeMode: "tail", children: null };
+      const obj = {
+        style: null,
+        variant: "text-xs/semibold",
+        color: "mobile-text-heading-primary",
+        lineClamp: 1,
+        ellipsizeMode: "tail",
+        children: null,
+      };
       obj[0] = { marginVertical: 1 };
       obj[5] = title;
       tmp2 = closure_1_5(embed(isLoadingEmbed[6]).Text, obj);
@@ -118,7 +147,14 @@ export default function ShareEmbed(embed) {
     if (null == memo3) {
       tmp = null;
       if (null != description) {
-        const obj = { style: null, variant: "text-xs/medium", color: "text-default", lineClamp: 1, ellipsizeMode: "tail", children: null };
+        const obj = {
+          style: null,
+          variant: "text-xs/medium",
+          color: "text-default",
+          lineClamp: 1,
+          ellipsizeMode: "tail",
+          children: null,
+        };
         obj[0] = { marginVertical: 1 };
         obj[5] = description;
         tmp = closure_1_5(embed(isLoadingEmbed[6]).Text, obj);
@@ -127,7 +163,7 @@ export default function ShareEmbed(embed) {
     return tmp;
   }, items4);
   if (null != embed) {
-    const items5 = [tmp.container, ];
+    const items5 = [tmp.container];
     let containerRevamp;
     if (embed.isRevamp) {
       containerRevamp = tmp.containerRevamp;
@@ -144,7 +180,7 @@ export default function ShareEmbed(embed) {
         tmp9Result = tmp9(memo3, obj);
       }
       obj = { children: null };
-      const items6 = [tmp9Result, ];
+      const items6 = [tmp9Result];
       obj1 = { style: null, children: null };
       obj1[0] = tmp.contentContainer;
       const items7 = [memo2, memo3, memo4, tmp7];
@@ -160,4 +196,4 @@ export default function ShareEmbed(embed) {
     tmp9Result = null;
   }
   return tmp9Result;
-};
+}

@@ -11,7 +11,7 @@ function _trackAndroidArtProfileSnapshotAsync() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -45,12 +45,19 @@ function _trackAndroidArtProfileSnapshotAsync() {
               closure_4 = undefined;
               c5 = undefined;
               let obj2;
-              const javaBaselineProfileCompilationStatus = callback2(closure_1_2[3]).getJavaBaselineProfileCompilationStatus();
+              const javaBaselineProfileCompilationStatus = callback2(
+                closure_1_2[3],
+              ).getJavaBaselineProfileCompilationStatus();
               const obj7 = callback2(closure_1_2[3]);
               const catchPromise = javaBaselineProfileCompilationStatus.catch(() => obj2);
               const obj8 = callback(closure_1_2[4]);
-              const items = [catchPromise, callback(closure_1_2[4]).timeoutPromise(10000).then(() => obj2)];
-              const items1 = [Promise.race(items), ];
+              const items = [
+                catchPromise,
+                callback(closure_1_2[4])
+                  .timeoutPromise(10000)
+                  .then(() => obj2),
+              ];
+              const items1 = [Promise.race(items)];
               const timeoutPromiseResult = callback(closure_1_2[4]).timeoutPromise(10000);
               items1[1] = callback2(closure_1_2[3]).getAndroidArtProfileTelemetry();
               closure_4 = 1;
@@ -118,7 +125,5 @@ export const trackAndroidArtProfileSnapshot = function trackAndroidArtProfileSna
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  })(closure_16, arg1).catch(() => {
-
-  });
+  })(closure_16, arg1).catch(() => {});
 };

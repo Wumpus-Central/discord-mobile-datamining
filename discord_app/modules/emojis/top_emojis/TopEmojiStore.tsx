@@ -5,8 +5,7 @@ import dispatcherDefault from "../../../Dispatcher.tsx";
 let obj = { topEmojisByGuildId: {} };
 let closure_2 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class TopEmojiStore extends PersistedStore {
-}
+class TopEmojiStore extends PersistedStore {}
 const prototype = TopEmojiStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let tmp = arg0;
@@ -38,7 +37,7 @@ obj = {
     ({ guildId, topEmojisMetadata } = arg0);
     obj.topEmojisByGuildId[guildId] = topEmojisMetadata.map((emojiId) => emojiId.emojiId);
     closure_2[guildId] = false;
-  }
+  },
 };
 const topEmojiStore = new TopEmojiStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/emojis/top_emojis/TopEmojiStore.tsx");

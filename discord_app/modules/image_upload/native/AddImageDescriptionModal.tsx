@@ -21,7 +21,9 @@ function AddDescription(id) {
   const tmp = callback3();
   let obj = channelId(stateFromStores[8]);
   const items = [closure_9];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_9.getUpload(channelId, id, closure_1_8.ChannelMessage));
+  stateFromStores = obj.useStateFromStores(items, () =>
+    closure_1_9.getUpload(channelId, id, closure_1_8.ChannelMessage),
+  );
   ({ width, height } = source);
   let num = 1;
   if (null != width) {
@@ -65,17 +67,20 @@ function AddDescription(id) {
         let obj = closure_1_0(closure_1_2[13]);
         const intl = closure_1_0(closure_1_2[14]).intl;
         obj = {};
-        const renderHeaderTextButton = obj.getRenderHeaderTextButton(intl.string(closure_1_0(closure_1_2[14]).t["R3BPH+"]), () => {
-          let obj = closure_1_1(closure_1_2[15]);
-          obj = {};
-          const merged = Object.assign(closure_2);
-          obj.description = ref.current;
-          obj.update(closure_0, closure_1, closure_1_8.ChannelMessage, obj);
-          closure_1_1(closure_1_2[16]).close();
-        });
+        const renderHeaderTextButton = obj.getRenderHeaderTextButton(
+          intl.string(closure_1_0(closure_1_2[14]).t["R3BPH+"]),
+          () => {
+            let obj = closure_1_1(closure_1_2[15]);
+            obj = {};
+            const merged = Object.assign(closure_2);
+            obj.description = ref.current;
+            obj.update(closure_0, closure_1, closure_1_8.ChannelMessage, obj);
+            closure_1_1(closure_1_2[16]).close();
+          },
+        );
         let merged = Object.assign(arg0);
         return renderHeaderTextButton(obj);
-      }
+      },
     });
   }, items3);
   obj = { ref: ref1, style: tmp.contentContainer, contentContainerStyle: null, children: null };
@@ -83,8 +88,18 @@ function AddDescription(id) {
   obj[2] = obj;
   obj1 = { style: tmp.imageContainer, children: callback(closure_6, { style: items4, source }) };
   items4 = [tmp.image, { aspectRatio: num, maxHeight: tmp6.height / 2 }];
-  const items5 = [callback(navigation, obj1), ];
-  const obj2 = { ref, containerStyle: null, label: null, placeholder: null, value: null, onChange: null, placeholderTextColor: null, maxLength: 1000, autoFocus: true };
+  const items5 = [callback(navigation, obj1)];
+  const obj2 = {
+    ref,
+    containerStyle: null,
+    label: null,
+    placeholder: null,
+    value: null,
+    onChange: null,
+    placeholderTextColor: null,
+    maxLength: 1000,
+    autoFocus: true,
+  };
   const tmp2Result = channelId(stateFromStores[10]);
   obj2[1] = { paddingTop: id(stateFromStores[7]).space.PX_16 };
   let intl = tmp2(tmp3[14]).intl;
@@ -122,4 +137,4 @@ export default function AddImageDescriptionModal(arg0) {
     return closure_1_10(closure_1_13, { source: closure_0, channelId: closure_1, id: closure_2 });
   };
   return callback(_modDef10661, obj);
-};
+}

@@ -10,7 +10,15 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: null, title: null, itemContainer: null, guildInfo: null, guildName: null, eventName: null };
+createCacheKey = {
+  container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
+  borderColor: null,
+  title: null,
+  itemContainer: null,
+  guildInfo: null,
+  guildName: null,
+  eventName: null,
+};
 createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { lineHeight: 16, marginBottom: 8 };
@@ -20,7 +28,9 @@ createCacheKey[5] = { lineHeight: 18, marginStart: 8 };
 createCacheKey[6] = { lineHeight: 20, marginTop: 8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 8 };
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsGuildScheduledEventPreview.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_reports/native/components/InAppReportsGuildScheduledEventPreview.tsx",
+);
 
 export default function GuildScheduledEventPreview(event) {
   event = event.event;
@@ -38,9 +48,9 @@ export default function GuildScheduledEventPreview(event) {
     obj[0] = tmp.title;
     const intl = tmp2(1236).intl;
     obj[3] = intl.string(tmp2(1236).t.SDTOL7);
-    const items1 = [callback(tmp2(4474).Text, obj), ];
+    const items1 = [callback(tmp2(4474).Text, obj)];
     obj1 = { style: null, children: null };
-    const items2 = [tmp.itemContainer, ];
+    const items2 = [tmp.itemContainer];
     const obj2 = { borderColor: null };
     obj2[0] = tmp2(4326).hexWithOpacity(tmp.borderColor.color, 0.08);
     items2[1] = obj2;
@@ -51,13 +61,13 @@ export default function GuildScheduledEventPreview(event) {
     obj4[0] = stateFromStores;
     const hexWithOpacityResult = tmp2(4326).hexWithOpacity(tmp.borderColor.color, 0.08);
     obj4[1] = tmp2(6004).GuildIconSizes.XXSMALL;
-    const items3 = [callback(GuildIconSizesDefault, obj4), ];
+    const items3 = [callback(GuildIconSizesDefault, obj4)];
     const obj5 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj5[0] = tmp.guildName;
     obj5[3] = stateFromStores.name;
     items3[1] = callback(tmp2(4474).Text, obj5);
     obj3[1] = items3;
-    const items4 = [callback2(View, obj3), ];
+    const items4 = [callback2(View, obj3)];
     const obj6 = { style: null, variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     obj6[0] = tmp.eventName;
     obj6[3] = event.name;
@@ -67,4 +77,4 @@ export default function GuildScheduledEventPreview(event) {
     obj[1] = items1;
     return callback2(View, obj);
   }
-};
+}

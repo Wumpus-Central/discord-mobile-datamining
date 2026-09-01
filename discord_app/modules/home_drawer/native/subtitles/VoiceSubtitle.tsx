@@ -19,4 +19,4 @@ export default function VoiceSubtitle(arg0) {
   obj[1] = Math.max(voiceUsers.length - 2, 0);
   obj[3] = intl.format(getSystemLocale.t.r1Vkoc, obj);
   return jsx(Text.Text, { users: null, overflowCount: null });
-};
+}

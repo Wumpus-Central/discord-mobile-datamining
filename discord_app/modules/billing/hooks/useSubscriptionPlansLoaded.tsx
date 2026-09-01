@@ -60,9 +60,13 @@ export const useSubscriptionPlansLoaded = function useSubscriptionPlansLoaded() 
   items = tmp;
   const items1 = [closure_2, closure_3, closure_4];
   const items2 = [tmp];
-  return items(589).useStateFromStores(items1, () => {
-    items = [closure_1_2, closure_1_3, closure_1_4];
-    return closure_1_6(items, items);
-  }, items2);
+  return items(589).useStateFromStores(
+    items1,
+    () => {
+      items = [closure_1_2, closure_1_3, closure_1_4];
+      return closure_1_6(items, items);
+    },
+    items2,
+  );
 };
 export { getSubscriptionPlansLoaded };

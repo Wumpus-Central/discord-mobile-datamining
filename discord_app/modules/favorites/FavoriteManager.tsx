@@ -90,11 +90,20 @@ function handleThreadMemberUpdate(joinTimestamp) {
 initializeDefault;
 let prototype = function FavoriteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.actions = { CHANNEL_DELETE: handleChannelDelete, CATEGORY_COLLAPSE: handleCategoryCollapse, CATEGORY_EXPAND: handleCategoryExpand, CATEGORY_COLLAPSE_ALL: handleCategoryCollapseAll, CATEGORY_EXPAND_ALL: handleCategoryExpandAll, LOGOUT: handleLogout, THREAD_CREATE: handleThreadCreate, THREAD_MEMBERS_UPDATE: handleThreadMembersUpdate, THREAD_MEMBER_UPDATE: handleThreadMemberUpdate };
+  applyArgumentsResult.actions = {
+    CHANNEL_DELETE: handleChannelDelete,
+    CATEGORY_COLLAPSE: handleCategoryCollapse,
+    CATEGORY_EXPAND: handleCategoryExpand,
+    CATEGORY_COLLAPSE_ALL: handleCategoryCollapseAll,
+    CATEGORY_EXPAND_ALL: handleCategoryExpandAll,
+    LOGOUT: handleLogout,
+    THREAD_CREATE: handleThreadCreate,
+    THREAD_MEMBERS_UPDATE: handleThreadMembersUpdate,
+    THREAD_MEMBER_UPDATE: handleThreadMemberUpdate,
+  };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp3 {
-}
+class prototype extends tmp3 {}
 prototype = new prototype();
 let result = require("set").fileFinishedImporting("modules/favorites/FavoriteManager.tsx");
 

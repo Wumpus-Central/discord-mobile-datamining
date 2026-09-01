@@ -10,7 +10,7 @@ function _upsertSavedMessage() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const table = tmp2;
       closure_1 = tmp5;
       const HTTP = lib(closure_1_2[3]).HTTP;
@@ -39,7 +39,7 @@ function _deleteSavedMessage() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const HTTP = lib(530).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_5.DELETE_SAVED_MESSAGE(lib.channelId, lib.messageId);
@@ -59,7 +59,7 @@ function _deleteSavedMessage() {
 }
 function _fetchAndUpdateSavedMessages() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (isStale === 2) {
       isStale = 3;
       HermesBuiltin.throwTypeError();

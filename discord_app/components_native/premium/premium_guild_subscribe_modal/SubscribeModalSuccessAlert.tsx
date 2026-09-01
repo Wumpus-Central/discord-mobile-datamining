@@ -30,18 +30,38 @@ class PremiumPaymentGuildAnimation {
 }
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { wrapper: { paddingHorizontal: 24, paddingBottom: 16, paddingTop: 4, alignItems: "stretch" }, animation: { width: "auto", height: 112, alignSelf: "center" }, text: { lineHeight: 18, textAlign: "center" }, activated: null, activatedBackground: null, activatedImage: null, successInfo: null };
+createCacheKey = {
+  wrapper: { paddingHorizontal: 24, paddingBottom: 16, paddingTop: 4, alignItems: "stretch" },
+  animation: { width: "auto", height: 112, alignSelf: "center" },
+  text: { lineHeight: 18, textAlign: "center" },
+  activated: null,
+  activatedBackground: null,
+  activatedImage: null,
+  successInfo: null,
+};
 createCacheKey = { padding: 2, borderRadius: ThemesDefault.radii.xs, marginTop: 8 };
 createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: 12, paddingHorizontal: 20, alignItems: "center" };
+createCacheKey[4] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  paddingVertical: 12,
+  paddingHorizontal: 20,
+  alignItems: "center",
+};
 createCacheKey[5] = { width: 220 };
 createCacheKey[6] = { marginTop: 24 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { ENTRY: "entry", IDLE: "idle" };
 let closure_12 = { [obj2.ENTRY]: { BEG: 0, END: 180 }, [obj2.IDLE]: { BEG: 180, END: 360 } };
 PremiumPaymentGuildAnimation.Scenes = obj2;
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: 12, paddingHorizontal: 20, alignItems: "center" };
-const result = require("set").fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/SubscribeModalSuccessAlert.tsx");
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  paddingVertical: 12,
+  paddingHorizontal: 20,
+  alignItems: "center",
+};
+const result = require("set").fileFinishedImporting(
+  "components_native/premium/premium_guild_subscribe_modal/SubscribeModalSuccessAlert.tsx",
+);
 
 export default function SubscribeModalSuccessAlert(arg0) {
   ({ guildId: require, guildBoostSlots } = arg0);
@@ -53,7 +73,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   let someResult = null != guildBoostSlots;
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuild(closure_0));
   if (someResult) {
-    someResult = guildBoostSlots.some((premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription);
+    someResult = guildBoostSlots.some(
+      (premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription,
+    );
   }
   let num;
   if (guildBoostSlots != null) {
@@ -84,9 +106,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
       } else if (tmp.Scenes.IDLE === currentScene) {
         return dependencyMap(true);
       }
-    }
+    },
   };
-  const items1 = [callback2(PremiumPaymentGuildAnimation, obj), ];
+  const items1 = [callback2(PremiumPaymentGuildAnimation, obj)];
   obj1 = { style: tmp.activated, start: null, end: null, colors: null, children: null };
   const tmp11 = componentDidMountDefault;
   obj1[1] = keys.HorizontalGradient.START;
@@ -104,7 +126,7 @@ export default function SubscribeModalSuccessAlert(arg0) {
   obj3[1] = tmp8Result;
   obj2[1] = callback2(tmp15, obj3);
   obj1[4] = callback2(closure_5, obj2);
-  const items2 = [callback2(tmp14, obj1), ];
+  const items2 = [callback2(tmp14, obj1)];
   const obj4 = { style: tmp.successInfo, children: null };
   const obj5 = { style: tmp.text, variant: "text-sm/medium", children: null };
   const intl2 = tmp2(1236).intl;
@@ -117,7 +139,7 @@ export default function SubscribeModalSuccessAlert(arg0) {
   }
   const obj6 = { children: null };
   obj5[2] = stringResult;
-  const items3 = [callback2(Text.Text, obj5), ];
+  const items3 = [callback2(Text.Text, obj5)];
   const obj7 = { style: tmp.text, variant: "text-sm/medium", children: null };
   const intl3 = tmp2(1236).intl;
   obj7[2] = intl3.format(getSystemLocale.t.r0IGsP, { guildName: stateFromStores.name, guildSubscriptionQuantity: num });
@@ -128,4 +150,4 @@ export default function SubscribeModalSuccessAlert(arg0) {
   items1[1] = closure_10(closure_5, obj6);
   obj[3] = items1;
   return closure_10(tmp11, obj);
-};
+}

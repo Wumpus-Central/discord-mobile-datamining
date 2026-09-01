@@ -8,8 +8,15 @@ const require = arg1;
 noopAll;
 ({ ScrollView: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { paddingHorizontal: 16, paddingVertical: 24 }, permissionContainer: { flexDirection: "row", marginTop: 8 }, permissionIcon: { marginTop: 1 }, permissionText: { flexShrink: 1, marginLeft: 12 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedAppPermissions.tsx");
+let closure_7 = createCacheKey.createStyles({
+  container: { paddingHorizontal: 16, paddingVertical: 24 },
+  permissionContainer: { flexDirection: "row", marginTop: 8 },
+  permissionIcon: { marginTop: 1 },
+  permissionText: { flexShrink: 1, marginLeft: 12 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/authorized_apps/native/UserSettingsAuthedAppPermissions.tsx",
+);
 
 export default function UserSettingsAuthedAppPermissions(oauth2Token) {
   closure_0 = undefined;
@@ -52,7 +59,7 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
         continue;
       }
       obj = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: _undefined.name };
-      const children = [closure_1_5(callback(_undefined2[7]).Text, obj), , , ];
+      const children = [closure_1_5(callback(_undefined2[7]).Text, obj), , ,];
       obj = { variant: "heading-sm/semibold", color: "text-default", children: null };
       const intl2 = callback(_undefined2[6]).intl;
       obj[2] = intl2.string(callback(_undefined2[6]).t.xrmhRX);
@@ -60,7 +67,7 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
       children[2] = items.map((children) => {
         let obj = { style: items.permissionContainer, children: null };
         obj = { style: items.permissionIcon, size: "xs", color: closure_1_1(closure_1_2[9]).colors.STATUS_POSITIVE };
-        items = [, ];
+        items = [,];
         items[0] = closure_1_5(items(closure_1_2[8]).CircleCheckIcon, obj);
         obj = { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children };
         items[1] = closure_1_5(items(closure_1_2[7]).Text, obj);
@@ -79,7 +86,7 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
             obj = { style: null, disclosure: null };
             obj[0] = items.permissionIcon;
             obj[1] = toFixed;
-            items = [closure_2_5(tmp(tmp2[11]).DisclosureIcon, obj), ];
+            items = [closure_2_5(tmp(tmp2[11]).DisclosureIcon, obj)];
             obj1 = { style: null, variant: "text-sm/normal", children: null };
             obj1[0] = items.permissionText;
             obj1[2] = textForDisclosure;
@@ -92,6 +99,6 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
       }
       children[3] = mapped;
       return closure_1_6(closure_1_4, { children });
-    })()
+    })(),
   });
-};
+}

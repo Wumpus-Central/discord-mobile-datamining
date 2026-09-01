@@ -12,7 +12,7 @@ function _fetchGuildIntegrationsApplications() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const table = tmp2;
       let callback2 = tmp5;
       const HTTP = callback(closure_1_2[4]).HTTP;

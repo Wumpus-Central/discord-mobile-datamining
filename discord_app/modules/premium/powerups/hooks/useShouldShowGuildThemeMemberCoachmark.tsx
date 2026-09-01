@@ -35,4 +35,4 @@ export default function useShouldShowGuildThemeMemberCoachmark(guildId) {
     tmp7 = serverThemeEnabled;
   }
   return tmp7;
-};
+}

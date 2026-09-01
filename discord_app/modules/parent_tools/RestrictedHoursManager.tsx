@@ -75,10 +75,13 @@ function scheduleUpcomingWarning() {
     } else {
       const _Math = Math;
       const _setTimeout = setTimeout;
-      timeout = setTimeout(() => {
-        c8 = null;
-        callback();
-      }, Math.max(0, 60 * (tmp7.minutesUntil - 16) * 1000));
+      timeout = setTimeout(
+        () => {
+          c8 = null;
+          callback();
+        },
+        Math.max(0, 60 * (tmp7.minutesUntil - 16) * 1000),
+      );
     }
   }
 }
@@ -142,7 +145,12 @@ class RestrictedHoursManager extends tmp2 {
     map = new Map();
     result = map.set(closure_4, handleScheduleUpdate);
     applyArgumentsResult.stores = result.set(closure_5, handleScheduleUpdate);
-    obj = { POST_CONNECTION_OPEN: handleScheduleUpdate, CURRENT_USER_UPDATE: handleScheduleUpdate, NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: handleScreenDowntimeReminderChanged, LOGOUT: handleLogout };
+    obj = {
+      POST_CONNECTION_OPEN: handleScheduleUpdate,
+      CURRENT_USER_UPDATE: handleScheduleUpdate,
+      NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: handleScreenDowntimeReminderChanged,
+      LOGOUT: handleLogout,
+    };
     applyArgumentsResult.actions = obj;
     return applyArgumentsResult;
   }

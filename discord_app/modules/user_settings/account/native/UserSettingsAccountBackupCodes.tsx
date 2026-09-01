@@ -35,7 +35,9 @@ createCacheKey = { generateCode: null };
 createCacheKey = { color: ThemesDefault.colors.TEXT_BRAND };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountBackupCodes.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/account/native/UserSettingsAccountBackupCodes.tsx",
+);
 
 export default function UserSettingsAccountBackupCodes(headerLabel) {
   headerLabel = headerLabel.headerLabel;
@@ -64,13 +66,20 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     return { usedCodes, unusedCodes };
   }, items1);
   ({ usedCodes, unusedCodes } = memo);
-  const effect = React.useEffect(() => () => {
-    callback(table[13]).clearBackupCodes();
-  }, []);
+  const effect = React.useEffect(
+    () => () => {
+      callback(table[13]).clearBackupCodes();
+    },
+    [],
+  );
   obj = { spacing: ThemesDefault.space.PX_24, style: null, children: null };
   obj = { paddingHorizontal: token, paddingTop: ThemesDefault.space.PX_16 };
   obj[1] = obj;
-  const items2 = [headerLabel.map((children) => callback2(stateFromStores(4474).Text, { variant: "text-sm/medium", children }, arg1)), , , ];
+  const items2 = [
+    headerLabel.map((children) => callback2(stateFromStores(4474).Text, { variant: "text-sm/medium", children }, arg1)),
+    ,
+    ,
+  ];
   let tmp10Result = unusedCodes.length > 0;
   if (tmp10Result) {
     obj1 = { title: null, hasIcons: false, children: null };
@@ -111,4 +120,4 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
   items2[3] = tmp10Result1;
   obj[2] = items2;
   return closure_6(tmp11, { children: closure_7(stateFromStores(4926).Stack, obj) });
-};
+}

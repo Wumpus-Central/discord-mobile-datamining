@@ -22,8 +22,7 @@ const prototype = function RevenueError(errorHandlingBehavior) {
   tmp.skipReportingToSentry = flag;
   return tmp;
 }.prototype;
-class prototype extends Error {
-}
+class prototype extends Error {}
 const result = set.fileFinishedImporting("modules/revenue_components/errors/RevenueError.tsx");
 
 export const RevenueError = prototype;

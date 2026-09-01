@@ -51,8 +51,7 @@ function callConnect() {
 let closure_7 = {};
 let closure_8 = {};
 const Store = initializeDefault.Store;
-class CallStore extends Store {
-}
+class CallStore extends Store {}
 const prototype = CallStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_4, closure_5);
@@ -125,7 +124,14 @@ const callStore = new CallStore(dispatcherDefault, {
   },
   CALL_CREATE: function handleCallCreate(channelId) {
     channelId = channelId.channelId;
-    let obj = { channelId, messageId: channelId.messageId, region: channelId.region, ringing: Object.keys(channelId.ongoingRings), unavailable: false, regionUpdated: false };
+    let obj = {
+      channelId,
+      messageId: channelId.messageId,
+      region: channelId.region,
+      ringing: Object.keys(channelId.ongoingRings),
+      unavailable: false,
+      regionUpdated: false,
+    };
     closure_7[channelId] = obj;
     if (null != dependencyMap2[channelId]) {
       delete tmp[tmp2];
@@ -187,7 +193,7 @@ const callStore = new CallStore(dispatcherDefault, {
     if (null == channelId.channelId) {
       closure_8 = {};
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/CallStore.tsx");
 

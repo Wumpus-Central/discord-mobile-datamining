@@ -6,7 +6,12 @@ import ApexExperiment from "../experiments/apex/index.tsx";
 require = arg1;
 ApexExperiment = { 1: null };
 ApexExperiment[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-02-mana-playground-access", kind: "user", defaultConfig: { enabled: false }, variations: ApexExperiment });
+const apexExperiment = ApexExperiment.createApexExperiment({
+  name: "2026-02-mana-playground-access",
+  kind: "user",
+  defaultConfig: { enabled: false },
+  variations: ApexExperiment,
+});
 const result = require("set").fileFinishedImporting("modules/design/PlaygroundAccessExperiment.tsx");
 
 export default apexExperiment;

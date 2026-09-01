@@ -7,7 +7,7 @@ import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 require = arg1;
 class HelpArticle$Type extends MessageType {
   constructor() {
-    items = [, , ];
+    items = [, ,];
     items[0] = { no: 1, name: "id", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "link_text", kind: "scalar", T: 9 };
     items[2] = {
@@ -15,8 +15,8 @@ class HelpArticle$Type extends MessageType {
       name: "link_text_localized",
       kind: "message",
       T() {
-            return callback(table[2]).LocalizedString;
-          }
+        return callback(table[2]).LocalizedString;
+      },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.HelpArticle", items, new.target);
     // ThrowIfThisInitialized (0x7c)
@@ -58,7 +58,12 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         let tmp24 = LocalizedString;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
-        obj.linkTextLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.linkTextLocalized);
+        obj.linkTextLocalized = LocalizedString.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.linkTextLocalized,
+        );
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -107,8 +112,16 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   if (id.linkTextLocalized) {
     const LocalizedString = create.LocalizedString;
     const tagResult2 = tag.tag(3, _mod1307.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(id.linkTextLocalized, tag.tag(3, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(id.linkTextLocalized, tag.tag(3, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = LocalizedString.internalBinaryWrite(
+      id.linkTextLocalized,
+      tag.tag(3, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(
+      id.linkTextLocalized,
+      tag.tag(3, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -129,11 +142,21 @@ let items = [
     kind: "message",
     T() {
       return callback(table[2]).LocalizedString;
-    }
-  }
+    },
+  },
 ];
-prototype = new prototype("discord_protos.premium_marketing.v1.HelpArticle", items, tmp, HelpArticle$Type, prototype, items, arg1);
+prototype = new prototype(
+  "discord_protos.premium_marketing.v1.HelpArticle",
+  items,
+  tmp,
+  HelpArticle$Type,
+  prototype,
+  items,
+  arg1,
+);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/help_article.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/help_article.tsx",
+);
 
 export const HelpArticle = prototype;

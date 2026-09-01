@@ -8,7 +8,7 @@ const result = set.fileFinishedImporting("modules/keyboard/native/useCustomKeybo
 export default function useCustomKeyboardHeight() {
   _require = require("../../window/native/AppEntryKeyContext.tsx").useAppEntryKey();
   return computeEntryStateDefault((arg0) => arg0.byAppEntry[closure_0].customKeyboardHeight);
-};
+}
 export const getCustomKeyboardHeight = function getCustomKeyboardHeight(arg0) {
   let DEFAULT_APP_ENTRY_KEY = arg0;
   if (arg0 === undefined) {

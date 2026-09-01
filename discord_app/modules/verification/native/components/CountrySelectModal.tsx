@@ -20,14 +20,17 @@ export default function CountrySelectModal() {
         },
         onCountrySelected(countryCode) {
           return callback(7771).setCountryCode(countryCode);
-        }
+        },
       });
     };
     obj[0] = obj;
     return obj;
   }, []);
-  const effect = React.useEffect(() => () => {
-    callback(6046).runAfterInteractions(callback(7799).setCountrySelectorClosed, 400);
-  }, []);
+  const effect = React.useEffect(
+    () => () => {
+      callback(6046).runAfterInteractions(callback(7799).setCountrySelectorClosed, 400);
+    },
+    [],
+  );
   return jsx(NavigationStack.Navigator, { screens, initialRouteName: "COUNTRY_SELECT" });
-};
+}

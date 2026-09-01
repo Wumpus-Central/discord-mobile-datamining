@@ -4,7 +4,9 @@ import closure_5 from "../../../../records/UserRecord.tsx";
 import { MessageStates } from "../../../../Constants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx",
+);
 
 export const useGuildSettingsRoleExampleMessage = function useGuildSettingsRoleExampleMessage(intl) {
   closure_0 = intl;

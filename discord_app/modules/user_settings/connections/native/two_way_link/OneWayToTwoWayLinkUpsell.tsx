@@ -18,8 +18,21 @@ function OneWayToTwoWayNewTag(markAsDismissed) {
   return callback(markAsDismissed(1297).NewTag, { containerStyle: callback3().newContainer, variant: "text-xs/bold" });
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, header: null, titleContainer: null, title: null, body: null, newContainer: null, reconnectButton: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, margin: 16, padding: 12, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = {
+  container: null,
+  header: null,
+  titleContainer: null,
+  title: null,
+  body: null,
+  newContainer: null,
+  reconnectButton: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  margin: 16,
+  padding: 12,
+  borderRadius: ThemesDefault.radii.sm,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", marginBottom: 4, alignItems: "center" };
 createCacheKey[2] = { flexGrow: 1, flexShrink: 1 };
@@ -33,7 +46,9 @@ createCacheKey[5] = { paddingHorizontal: 6, width: "auto", alignSelf: "flex-star
 createCacheKey[6] = { marginTop: 8 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 const importDefaultResult1 = importDefaultResult;
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/OneWayToTwoWayLinkUpsell.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/OneWayToTwoWayLinkUpsell.tsx",
+);
 
 export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newIndicatorDismissibleContent) {
   newIndicatorDismissibleContent = newIndicatorDismissibleContent.newIndicatorDismissibleContent;
@@ -54,14 +69,21 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
           tmp2 = closure_1_6(closure_1_9, obj);
         }
         return tmp2;
-      }
+      },
     }),
-    callback(newIndicatorDismissibleContent(4474).Text, { style: tmp.title, variant: "text-md/semibold", children: title })
+    callback(newIndicatorDismissibleContent(4474).Text, {
+      style: tmp.title,
+      variant: "text-md/semibold",
+      children: title,
+    }),
   ];
   obj[1] = items1;
   const items2 = [callback2(View, obj), img];
   obj[1] = items2;
-  const items3 = [callback2(View, obj), callback(newIndicatorDismissibleContent(4474).Text, { style: tmp.body, variant: "text-sm/medium", children: body }), ];
+  const items3 = [
+    callback2(View, obj),
+    callback(newIndicatorDismissibleContent(4474).Text, { style: tmp.body, variant: "text-sm/medium", children: body }),
+  ];
   const obj4 = { style: tmp.reconnectButton, children: null };
   const obj5 = { text: null, onPress: null };
   const intl = newIndicatorDismissibleContent(1236).intl;

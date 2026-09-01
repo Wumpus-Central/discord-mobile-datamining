@@ -123,7 +123,7 @@ function RestrictedHoursScreen(visible) {
   obj1 = { style: items2, children: null };
   items2 = [tmp.container, { paddingTop: top, paddingBottom: bottom }, animatedStyle];
   obj2 = { style: tmp.backgroundFill, pointerEvents: "none" };
-  const items3 = [callback2(closure_5, obj2), , , ];
+  const items3 = [callback2(closure_5, obj2), , ,];
   obj3 = { style: items4, pointerEvents: "none", children: null };
   items4 = [tmp.assetLayers, animatedStyle1];
   obj4 = { source: tmp6(tmp3[16]), resizeMode: "cover", style: tmp.sunbeamGradient };
@@ -131,8 +131,14 @@ function RestrictedHoursScreen(visible) {
   items3[1] = callback2(sharedValue(sharedValue1[11]).View, obj3);
   obj5 = { style: items5, children: null };
   items5 = [tmp.content, animatedStyle2];
-  obj6 = { style: tmp.riveContainer, children: callback2(tmp6(tmp3[17]).TeenScreenTimeRive, { artboard: "Teen Screen Time Illo", stateMachine: "State Machine 1" }) };
-  const items6 = [callback2(closure_5, obj6), ];
+  obj6 = {
+    style: tmp.riveContainer,
+    children: callback2(tmp6(tmp3[17]).TeenScreenTimeRive, {
+      artboard: "Teen Screen Time Illo",
+      stateMachine: "State Machine 1",
+    }),
+  };
+  const items6 = [callback2(closure_5, obj6)];
   obj7 = { variant: "text-lg/medium", color: "text-overlay-light", style: tmp.description, children: formatResult };
   items6[1] = callback2(onLogin(sharedValue1[18]).Text, obj7);
   obj5[1] = items6;
@@ -143,21 +149,43 @@ function RestrictedHoursScreen(visible) {
   obj9[3] = intl3.format(sharedValue(sharedValue1[14]).iqeKDz, {
     username: stateFromStores,
     loginHook(children) {
-      return closure_1_7(onLogin(sharedValue1[18]).Text, { variant: "text-sm/normal", color: "text-link", onPress: onLogin, children }, arg1);
-    }
+      return closure_1_7(
+        onLogin(sharedValue1[18]).Text,
+        { variant: "text-sm/normal", color: "text-link", onPress: onLogin, children },
+        arg1,
+      );
+    },
   });
   obj8[1] = callback2(onLogin(sharedValue1[18]).Text, obj9);
   items3[3] = callback2(closure_5, obj8);
   obj1[1] = items3;
-  const items7 = [callback3(sharedValue(sharedValue1[11]).View, obj1), callback2(RestrictedHoursLogoutBlockingLayer, { visible: visible.logoutRequestInFlight })];
+  const items7 = [
+    callback3(sharedValue(sharedValue1[11]).View, obj1),
+    callback2(RestrictedHoursLogoutBlockingLayer, { visible: visible.logoutRequestInFlight }),
+  ];
   obj[1] = items7;
   return callback3(onLogin(sharedValue1[15]).ModalScreen, obj);
 }
 ({ StyleSheet, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let c9 = "rgb(0, 3, 40)";
-createCacheKey = { container: null, backgroundFill: null, assetLayers: null, sunbeamGradient: null, riveContainer: null, content: null, description: null, footer: null, logoutBlockingLayer: null };
-createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_24 };
+createCacheKey = {
+  container: null,
+  backgroundFill: null,
+  assetLayers: null,
+  sunbeamGradient: null,
+  riveContainer: null,
+  content: null,
+  description: null,
+  footer: null,
+  logoutBlockingLayer: null,
+};
+createCacheKey = {
+  flex: 1,
+  justifyContent: "center",
+  alignItems: "center",
+  paddingHorizontal: ThemesDefault.space.PX_24,
+};
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -185,9 +213,15 @@ obj6.backgroundColor = "rgb(0, 3, 40)";
 createCacheKey[8] = obj6;
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let closure_11 = { MAIN: "main" };
-let closure_13 = { code: "function RestrictedHoursModalTsx1(){const{backgroundOpacity}=this.__closure;return{opacity:backgroundOpacity.get()};}" };
-let closure_14 = { code: "function RestrictedHoursModalTsx2(){const{gradientOpacity}=this.__closure;return{opacity:gradientOpacity.get()};}" };
-let closure_15 = { code: "function RestrictedHoursModalTsx3(){const{contentOpacity,contentScale}=this.__closure;return{opacity:contentOpacity.get(),transform:[{scale:contentScale.get()}]};}" };
+let closure_13 = {
+  code: "function RestrictedHoursModalTsx1(){const{backgroundOpacity}=this.__closure;return{opacity:backgroundOpacity.get()};}",
+};
+let closure_14 = {
+  code: "function RestrictedHoursModalTsx2(){const{gradientOpacity}=this.__closure;return{opacity:gradientOpacity.get()};}",
+};
+let closure_15 = {
+  code: "function RestrictedHoursModalTsx3(){const{contentOpacity,contentScale}=this.__closure;return{opacity:contentOpacity.get(),transform:[{scale:contentScale.get()}]};}",
+};
 let obj5 = { position: "absolute", bottom: ThemesDefault.space.PX_32, alignSelf: "center", zIndex: 2 };
 let result = require("set").fileFinishedImporting("modules/parent_tools/native/RestrictedHoursModal.tsx");
 
@@ -208,12 +242,14 @@ export default function RestrictedHoursModal() {
       tmp.current = true;
       callback(true);
       const obj = tmp4(6052);
-      tmp4(6052).logout("restricted_hours").finally(() => {
-        if (ref.current) {
-          closure_1.current = false;
-          callback(false);
-        }
-      });
+      tmp4(6052)
+        .logout("restricted_hours")
+        .finally(() => {
+          if (ref.current) {
+            closure_1.current = false;
+            callback(false);
+          }
+        });
       const logoutResult = tmp4(6052).logout("restricted_hours");
     }
   }, []);
@@ -221,15 +257,18 @@ export default function RestrictedHoursModal() {
   let obj = callback(6008);
   const items = [callback, tmp4];
   const items1 = [tmp];
-  const navigatorScreens = obj.useNavigatorScreens(() => ({
-    [closure_1_11.MAIN]: {
-      headerShown: false,
-      gestureEnabled: false,
-      render() {
-        return closure_1_7(closure_1_16, { onLogin: closure_0, logoutRequestInFlight: closure_1 });
-      }
-    }
-  }), items);
+  const navigatorScreens = obj.useNavigatorScreens(
+    () => ({
+      [closure_1_11.MAIN]: {
+        headerShown: false,
+        gestureEnabled: false,
+        render() {
+          return closure_1_7(closure_1_16, { onLogin: closure_0, logoutRequestInFlight: closure_1 });
+        },
+      },
+    }),
+    items,
+  );
   const effect1 = React.useEffect(() => {
     let current = callback;
     if (!callback) {
@@ -243,4 +282,4 @@ export default function RestrictedHoursModal() {
   useBackPressHandlerDefault(() => true);
   obj = { screens: navigatorScreens, initialRouteName: constants.MAIN };
   return callback2(callback(11501).Modal, obj);
-};
+}

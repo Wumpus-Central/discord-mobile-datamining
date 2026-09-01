@@ -10,10 +10,15 @@ let result = require("set").fileFinishedImporting("modules/stage_channels/useTog
 export default function useToggleRequestToSpeak(id) {
   const _require = id;
   const items = [closure_5];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => id2.getId());
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    id2.getId(),
+  );
   const tmp4 = useAudienceRequestToSpeakStateDefault(stateFromStores, id.id);
   importDefault = tmp4;
-  const tmp5 = tmp4 === require("useAudienceRequestToSpeakState.tsx").RequestToSpeakStates.REQUESTED_TO_SPEAK || tmp4 === require("useAudienceRequestToSpeakState.tsx").RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+  const tmp5 =
+    tmp4 === require("useAudienceRequestToSpeakState.tsx").RequestToSpeakStates.REQUESTED_TO_SPEAK ||
+    tmp4 ===
+      require("useAudienceRequestToSpeakState.tsx").RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
   dependencyMap = tmp5;
   const tmp6 = first(React.useState(tmp5), 2);
   first = tmp6[0];
@@ -41,7 +46,7 @@ export default function useToggleRequestToSpeak(id) {
         }
         callback2(!first);
       }
-    }
+    },
   ];
   return items2;
-};
+}

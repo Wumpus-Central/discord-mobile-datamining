@@ -36,7 +36,11 @@ export const yearsSince = function yearsSince(friendsSince) {
   const obj = _mod3718;
   return Math.round(obj.differenceInMonths(new Date(), friendsSince) / 12);
 };
-export const categorizeFriendAnniversariesByAffinity = function categorizeFriendAnniversariesByAffinity(closure_11, arg1, flag) {
+export const categorizeFriendAnniversariesByAffinity = function categorizeFriendAnniversariesByAffinity(
+  closure_11,
+  arg1,
+  flag,
+) {
   const highestAffinity = new Set();
   const highAffinity = new Set();
   if (flag) {

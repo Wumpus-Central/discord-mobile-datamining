@@ -24,7 +24,9 @@ import { CodedLinkExtendedType } from "../../../messages/native/renderer/row_dat
 require = arg1;
 let closure_11 = ["embedded_cover"];
 let c12 = 512;
-let result = require("set").fileFinishedImporting("modules/applications/message_embed/native/createAppMessageEmbed.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/applications/message_embed/native/createAppMessageEmbed.tsx",
+);
 
 export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
   ({ appId, message } = arg0);
@@ -45,7 +47,11 @@ export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
     }
     let messageResult = dependencyMap;
     obj1 = ContentClassificationVisibility;
-    const contentClassificationVisibility = obj1.getContentClassificationVisibility(application.contentClassification, channel, nsfwAllowed);
+    const contentClassificationVisibility = obj1.getContentClassificationVisibility(
+      application.contentClassification,
+      channel,
+      nsfwAllowed,
+    );
     if (contentClassificationVisibility !== ContentClassificationVisibility.ContentClassificationVisibility.DISPLAY) {
       let intl = getEmbedThemeColorsDefault(theme).baseColors;
       if (contentClassificationVisibility === tmp3(11514).ContentClassificationVisibility.BLOCK_UNDERAGE) {
@@ -245,7 +251,14 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
       bot = application.bot;
     }
     if (null != bot) {
-      obj = { appId: null, botId: null, analyticsLocations: null, commandOrigin: null, referrerId: null, customId: null };
+      obj = {
+        appId: null,
+        botId: null,
+        analyticsLocations: null,
+        commandOrigin: null,
+        referrerId: null,
+        customId: null,
+      };
       obj[0] = appId.appId;
       obj[1] = application.bot.id;
       const items1 = [tmp2(5973).APP_MESSAGE_EMBED];
@@ -267,7 +280,13 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
     if (bestActiveInput != null) {
       let obj2 = { type: null, context: null };
       obj2[0] = tmp14(1626).KeyboardTypes.APP_LAUNCHER;
-      let obj3 = { initialRouteName: null, initiallyExpanded: true, applicationId: null, referrerId: null, customId: null };
+      let obj3 = {
+        initialRouteName: null,
+        initiallyExpanded: true,
+        applicationId: null,
+        referrerId: null,
+        customId: null,
+      };
       obj3[0] = AppLauncherRouteName.APPLICATION_VIEW;
       obj3[2] = appId.appId;
       obj3[3] = id;
@@ -280,8 +299,19 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
   } else if ("add_app" === actionId) {
     if (null != application) {
       let obj4 = installApplication;
-      obj4 = { applicationId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, source: "app_message_embed" };
-      ({ id: obj6[0], customInstallUrl: obj6[1], installParams: obj6[2], integrationTypesConfig: obj6[3] } = application);
+      obj4 = {
+        applicationId: null,
+        customInstallUrl: null,
+        installParams: null,
+        integrationTypesConfig: null,
+        source: "app_message_embed",
+      };
+      ({
+        id: obj6[0],
+        customInstallUrl: obj6[1],
+        installParams: obj6[2],
+        integrationTypesConfig: obj6[3],
+      } = application);
       obj4.installApplication(obj4);
     }
   } else if ("link_copied" === actionId) {

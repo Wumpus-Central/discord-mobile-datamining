@@ -15,4 +15,4 @@ export default function subscribeToSafeAreaInsets(arg0) {
       callback(safeAreaInsets);
     }
   });
-};
+}

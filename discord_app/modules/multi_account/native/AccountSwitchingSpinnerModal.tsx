@@ -17,7 +17,9 @@ class AccountSwitchingSpinnerModal {
   }
 }
 noopAll;
-let closure_4 = createCacheKey.createStyles({ switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center" } });
+let closure_4 = createCacheKey.createStyles({
+  switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center" },
+});
 createCacheKey = { animation: require("keys").ModalAnimation.FADE, closable: false };
 AccountSwitchingSpinnerModal.modalConfig = createCacheKey;
 const result = require("set").fileFinishedImporting("modules/multi_account/native/AccountSwitchingSpinnerModal.tsx");

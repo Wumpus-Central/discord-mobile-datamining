@@ -27,10 +27,22 @@ let obj = keys.create((arg0, arg1) => {
       if (arg2 === undefined) {
         tmp2 = null;
       }
-      return callback({ isRecording: true, microphoneEnabled: flag, currentSurveyId: tmp, currentSurveyConfig: tmp2, stepStartedTime: Date.now() });
+      return callback({
+        isRecording: true,
+        microphoneEnabled: flag,
+        currentSurveyId: tmp,
+        currentSurveyConfig: tmp2,
+        stepStartedTime: Date.now(),
+      });
     },
     stopRecording() {
-      return callback({ isRecording: false, microphoneEnabled: false, currentStep: 0, stepStartedTime: null, isCompleted: false });
+      return callback({
+        isRecording: false,
+        microphoneEnabled: false,
+        currentStep: 0,
+        stepStartedTime: null,
+        isCompleted: false,
+      });
     },
     setIsUploading(isUploading) {
       return callback({ isUploading });
@@ -62,7 +74,7 @@ let obj = keys.create((arg0, arg1) => {
     completeActionSheet() {
       callback(15524).handleStopAndSend();
       callback({ currentStep: 0, stepStartedTime: null, isCompleted: false });
-    }
+    },
   };
 });
 const result = set.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingStore.tsx");

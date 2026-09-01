@@ -57,5 +57,5 @@ export default function NativeLottieView(accessibilityLabel) {
     }
   }, items);
   return <closure_4 ref={ref} style={{ width, height, opacity }} />;
-};
+}
 export const NativeLottieRenderMode = obj;

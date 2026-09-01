@@ -16,7 +16,7 @@ const memoResult = importAllResult.memo(function GuildSettingsModalStickerInfoAc
   let callback;
   function _onDeleteSticker() {
     const self = this;
-    const tmp = stateFromStores(function*() {
+    const tmp = stateFromStores(function* () {
       if (v02 === 2) {
         v02 = 3;
         HermesBuiltin.throwTypeError();
@@ -142,7 +142,7 @@ const memoResult = importAllResult.memo(function GuildSettingsModalStickerInfoAc
     obj3[2] = function onPress() {
       closure_1_1(hideActionSheet[17])({ guildId: closure_0, stickerId: closure_1 });
     };
-    const items2 = [callback2(tmp(tmp2[15]).TableRow, obj3), ];
+    const items2 = [callback2(tmp(tmp2[15]).TableRow, obj3)];
     const obj4 = { icon: null, trailing: null, label: null, variant: "danger", disabled: null, onPress: null };
     obj4[0] = callback2(tmp(tmp2[18]).TrashIcon, { color: "text-feedback-critical" });
     tmp8Result = null;
@@ -174,6 +174,8 @@ const memoResult = importAllResult.memo(function GuildSettingsModalStickerInfoAc
   }
   return tmp8Result;
 });
-const result = require("set").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickerInfoActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickerInfoActionSheet.tsx",
+);
 
 export default memoResult;

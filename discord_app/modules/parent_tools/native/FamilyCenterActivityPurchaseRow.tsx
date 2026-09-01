@@ -12,7 +12,14 @@ require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, textContainer: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
+createCacheKey = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderBottomWidth: 1,
+  paddingVertical: 12,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "column", flexShrink: 1 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
@@ -57,12 +64,18 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     obj[1] = product;
     obj[2] = isSubscription;
     obj[3] = subscriptionPlanId;
-    const items = [closure_4(AvatarDecorationPreviewImageDefault, obj), ];
+    const items = [closure_4(AvatarDecorationPreviewImageDefault, obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.textContainer;
-    const obj2 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
+    const obj2 = {
+      variant: "text-md/semibold",
+      color: "interactive-text-active",
+      ellipsizeMode: "tail",
+      lineClamp: 1,
+      children: null,
+    };
     obj2[4] = combined;
-    const items1 = [closure_4(tmp5(4474).Text, obj2), ];
+    const items1 = [closure_4(tmp5(4474).Text, obj2)];
     const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
     obj3[2] = formatPriceResult;
     items1[1] = closure_4(tmp5(4474).Text, obj3);
@@ -72,4 +85,4 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     return closure_5(View, obj);
   }
   const tmp2 = importDefault;
-};
+}

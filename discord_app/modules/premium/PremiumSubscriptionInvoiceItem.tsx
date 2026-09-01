@@ -60,5 +60,16 @@ export const coalesceInvoiceItems = function coalesceInvoiceItems(arr) {
   });
 };
 export const createInvoiceItemFromServer = function createInvoiceItemFromServer(id) {
-  return { id: id.id, subscriptionPlanId: id.subscription_plan_id, subscriptionPlanPrice: id.subscription_plan_price, amount: id.amount, quantity: id.quantity, discounts: id.discounts, unitPrice: id.unit_price, tax: id.tax, taxCode: id.tax_code, nominalTaxRate: id.nominal_tax_rate };
+  return {
+    id: id.id,
+    subscriptionPlanId: id.subscription_plan_id,
+    subscriptionPlanPrice: id.subscription_plan_price,
+    amount: id.amount,
+    quantity: id.quantity,
+    discounts: id.discounts,
+    unitPrice: id.unit_price,
+    tax: id.tax,
+    taxCode: id.tax_code,
+    nominalTaxRate: id.nominal_tax_rate,
+  };
 };

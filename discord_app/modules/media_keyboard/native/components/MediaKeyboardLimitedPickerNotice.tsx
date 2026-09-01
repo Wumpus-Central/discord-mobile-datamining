@@ -6,14 +6,21 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { flexDirection: "row", paddingHorizontal: 16, paddingVertical: 16, alignItems: "center" }, absoluteContainer: { position: "absolute" }, text: { flex: 1 }, button: { marginLeft: 16 } });
-const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardLimitedPickerNotice.tsx");
+let closure_6 = createCacheKey.createStyles({
+  container: { flexDirection: "row", paddingHorizontal: 16, paddingVertical: 16, alignItems: "center" },
+  absoluteContainer: { position: "absolute" },
+  text: { flex: 1 },
+  button: { marginLeft: 16 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/media_keyboard/native/components/MediaKeyboardLimitedPickerNotice.tsx",
+);
 
 export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   onHeightChange = onHeightChange.onHeightChange;
   const tmp = callback2();
   const items = [onHeightChange];
-  const items1 = [tmp.container, ];
+  const items1 = [tmp.container];
   let absoluteContainer;
   const callback = React.useCallback((nativeEvent) => {
     if (onHeightChange != null) {
@@ -28,7 +35,7 @@ export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   obj = { style: tmp.text, variant: "text-sm/normal", children: null };
   const intl = onHeightChange(1236).intl;
   obj[2] = intl.string(onHeightChange(1236).t["5g7NcN"]);
-  const items2 = [callback(onHeightChange(4474).Text, obj), ];
+  const items2 = [callback(onHeightChange(4474).Text, obj)];
   obj = { style: tmp.button, children: null };
   obj1 = { size: "sm", variant: "tertiary", text: null, onPress: null };
   const intl2 = onHeightChange(1236).intl;
@@ -38,4 +45,4 @@ export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   items2[1] = callback(View, obj);
   obj[2] = items2;
   return closure_5(View, obj);
-};
+}

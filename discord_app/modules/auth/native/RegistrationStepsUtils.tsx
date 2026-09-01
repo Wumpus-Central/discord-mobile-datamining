@@ -29,7 +29,7 @@ function _handleNextOrSubmitRegistration() {
     closure_2 = arg2;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -120,7 +120,7 @@ function _handleRegistrationSubmit() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       let authenticationErrorsFromAPIError = tmp3;
       const result = closure_1_4.registrationUsernameSuggestion();
       const registrationOptions = state.getState().registrationOptions;
@@ -186,10 +186,26 @@ function _handleRegistrationSubmit() {
   return applyArgumentsResult;
 }
 noopAll;
-({ setRegistrationErrors: closure_6, setSubmitting: error, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: c9 } = useRegistrationUIStore);
-({ authStateToRegisterTransitionStep: c10, RegisterTransitionSteps: unpackModuleId, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationTransitionActionTypes);
-const items = [, , , , ];
-({ WELCOME: arr[0], REGISTER_IDENTITY: arr[1], REGISTER_DISPLAY_NAME: arr[2], REGISTER_ACCOUNT_INFORMATION: arr[3], AGE_GATE: arr[4] } = AuthStates);
+({
+  setRegistrationErrors: closure_6,
+  setSubmitting: error,
+  useRegistrationUIStore: closure_8,
+  clearRegistrationErrorMessage: c9,
+} = useRegistrationUIStore);
+({
+  authStateToRegisterTransitionStep: c10,
+  RegisterTransitionSteps: unpackModuleId,
+  RegistrationSteps: closure_12,
+  RegistrationTransitionActionTypes: map1,
+} = RegistrationTransitionActionTypes);
+const items = [, , , ,];
+({
+  WELCOME: arr[0],
+  REGISTER_IDENTITY: arr[1],
+  REGISTER_DISPLAY_NAME: arr[2],
+  REGISTER_ACCOUNT_INFORMATION: arr[3],
+  AGE_GATE: arr[4],
+} = AuthStates);
 let result = require("set").fileFinishedImporting("modules/auth/native/RegistrationStepsUtils.tsx");
 
 export function getRegistrationSteps() {
@@ -205,14 +221,17 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     headerShown: false,
     render() {
       return callback4(callback2(15539), {});
-    }
+    },
   };
   obj[AuthStates.WELCOME] = obj;
   obj = {
     ignoreKeyboard: true,
     fullscreen: true,
     impressionName: encodeProperties.ImpressionNames.USER_REGISTRATION,
-    impressionProperties: { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.IDENTITY },
+    impressionProperties: {
+      impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW,
+      step: constants.IDENTITY,
+    },
     headerTitle,
     headerLeft(arg0) {
       const obj = {};
@@ -233,12 +252,23 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     },
     render() {
       return callback4(callback(15546).RegisterIdentity, {});
-    }
+    },
   };
   obj[AuthStates.REGISTER_IDENTITY] = obj;
-  const obj2 = { ignoreKeyboard: true, fullscreen: true, impressionName: encodeProperties.ImpressionNames.USER_REGISTRATION, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
+  const obj2 = {
+    ignoreKeyboard: true,
+    fullscreen: true,
+    impressionName: encodeProperties.ImpressionNames.USER_REGISTRATION,
+    impressionProperties: null,
+    headerTitle: null,
+    headerLeft: null,
+    render: null,
+  };
   obj1 = { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.IDENTITY };
-  obj2[3] = { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.DISPLAY_NAME };
+  obj2[3] = {
+    impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW,
+    step: constants.DISPLAY_NAME,
+  };
   obj2[4] = headerTitle;
   obj2[5] = function headerLeft(arg0) {
     const obj = {};
@@ -261,9 +291,23 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     return callback4(callback2(15558), {});
   };
   obj[AuthStates.REGISTER_DISPLAY_NAME] = obj2;
-  const obj4 = { ignoreKeyboard: true, fullscreen: true, impressionName: encodeProperties.ImpressionNames.USER_REGISTRATION, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
-  const obj3 = { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.DISPLAY_NAME };
-  obj4[3] = { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.ACCOUNT_INFORMATION };
+  const obj4 = {
+    ignoreKeyboard: true,
+    fullscreen: true,
+    impressionName: encodeProperties.ImpressionNames.USER_REGISTRATION,
+    impressionProperties: null,
+    headerTitle: null,
+    headerLeft: null,
+    render: null,
+  };
+  const obj3 = {
+    impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW,
+    step: constants.DISPLAY_NAME,
+  };
+  obj4[3] = {
+    impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW,
+    step: constants.ACCOUNT_INFORMATION,
+  };
   obj4[4] = headerTitle;
   obj4[5] = function headerLeft(arg0) {
     const obj = {};
@@ -286,8 +330,18 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     return callback4(callback2(15559), {});
   };
   obj[AuthStates.REGISTER_ACCOUNT_INFORMATION] = obj4;
-  const obj6 = { ignoreKeyboard: true, impressionName: encodeProperties.ImpressionNames.USER_VERIFY_PHONE, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
-  const obj5 = { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.ACCOUNT_INFORMATION };
+  const obj6 = {
+    ignoreKeyboard: true,
+    impressionName: encodeProperties.ImpressionNames.USER_VERIFY_PHONE,
+    impressionProperties: null,
+    headerTitle: null,
+    headerLeft: null,
+    render: null,
+  };
+  const obj5 = {
+    impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW,
+    step: constants.ACCOUNT_INFORMATION,
+  };
   obj6[2] = { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW };
   obj6[3] = headerTitle;
   obj6[4] = function headerLeft(arg0) {
@@ -301,7 +355,14 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     return callback4(callback2(15565), {});
   };
   obj[AuthStates.VERIFY_PHONE] = obj6;
-  const obj8 = { ignoreKeyboard: true, fullscreen: true, impressionName: encodeProperties.ImpressionNames.USER_LOGIN, impressionProperties: null, headerTitle: null, render: null };
+  const obj8 = {
+    ignoreKeyboard: true,
+    fullscreen: true,
+    impressionName: encodeProperties.ImpressionNames.USER_LOGIN,
+    impressionProperties: null,
+    headerTitle: null,
+    render: null,
+  };
   const obj7 = { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW };
   obj8[3] = { impression_group: encodeProperties.ImpressionGroups.USER_LOGIN_FLOW };
   obj8[4] = headerTitle;
@@ -316,7 +377,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     headerShown: false,
     render() {
       return callback4(callback2(15567), { inContainer: true });
-    }
+    },
   };
   obj[AuthStates.ACCOUNT_DISABLED_OR_DELETION_SCHEDULED] = {
     ignoreKeyboard: true,
@@ -325,7 +386,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     render(arg0) {
       const merged = Object.assign(arg0);
       return callback4(callback2(15568), {});
-    }
+    },
   };
   obj[AuthStates.COUNTRY_SELECT] = {
     ignoreKeyboard: true,
@@ -338,9 +399,9 @@ export const getAllAuthScreens = function getAllAuthScreens() {
         },
         onCountrySelected(countryCode) {
           return callback(table[19]).setCountryCode(countryCode);
-        }
+        },
       });
-    }
+    },
   };
   obj[AuthStates.EXTERNAL_LINK] = {
     ignoreKeyboard: true,
@@ -348,7 +409,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     render(arg0) {
       const merged = Object.assign(arg0);
       return callback4(callback2(15572), {});
-    }
+    },
   };
   const obj9 = { impression_group: encodeProperties.ImpressionGroups.USER_LOGIN_FLOW };
   obj[AuthStates.AGE_GATE] = {
@@ -375,7 +436,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     },
     render() {
       return callback4(callback2(15573), {});
-    }
+    },
   };
   const obj10 = {
     ignoreKeyboard: true,
@@ -401,14 +462,17 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     },
     render() {
       return callback4(callback2(15573), {});
-    }
+    },
   };
   obj[AuthStates.AGE_GATE_UNDERAGE] = {
     ignoreKeyboard: true,
     fullscreen: true,
     impressionName: encodeProperties.ImpressionNames.USER_AGE_GATE_UNDERAGE,
     impressionProperties(existingUser) {
-      return { impression_group: callback(503).ImpressionGroups.USER_REGISTRATION_FLOW, existing_user: existingUser.existingUser };
+      return {
+        impression_group: callback(503).ImpressionGroups.USER_REGISTRATION_FLOW,
+        existing_user: existingUser.existingUser,
+      };
     },
     headerTitle,
     render(arg0, arg1) {
@@ -417,9 +481,9 @@ export const getAllAuthScreens = function getAllAuthScreens() {
       return callback4(callback2(15577), {
         onClose() {
           return closure_0.popToTop();
-        }
+        },
       });
-    }
+    },
   };
   obj[AuthStates.COMPANION_REMOTE_AUTH] = {
     ignoreKeyboard: true,
@@ -427,7 +491,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     headerTitle,
     render() {
       return callback4(callback(15578).CompanionRemoteAuth, {});
-    }
+    },
   };
   return obj;
 };
@@ -465,7 +529,11 @@ export const getNextRegistrationTransitionStep = function getNextRegistrationTra
     return callback2(tmp2);
   }
 };
-export const handleNextOrSubmitRegistration = function handleNextOrSubmitRegistration(REGISTER_DISPLAY_NAME, closure_0, closure_1_4) {
+export const handleNextOrSubmitRegistration = function handleNextOrSubmitRegistration(
+  REGISTER_DISPLAY_NAME,
+  closure_0,
+  closure_1_4,
+) {
   const self = this;
   const apply = _handleNextOrSubmitRegistration.apply;
   if (typeof apply === "unknown") {

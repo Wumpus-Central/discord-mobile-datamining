@@ -17,7 +17,9 @@ createCacheKey = { container: { alignItems: "center" }, divider: null };
 createCacheKey = { height: 1, width: 48, marginTop: 12, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsLinkedLobby.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/sidebar/details/ChannelDetailsLinkedLobby.tsx",
+);
 
 export default function ChannelDetailsLinkedLobby(channel) {
   channel = channel.channel;
@@ -49,7 +51,7 @@ export default function ChannelDetailsLinkedLobby(channel) {
     }
     obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
     const obj2 = { children: null };
-    const items1 = [formatResult, "  \u2022  ", ];
+    const items1 = [formatResult, "  \u2022  "];
     intl = getSystemLocale.intl;
     BPDKoA = getSystemLocale.t.BPDKoA;
     const obj3 = { helpdeskArticle: null };
@@ -58,7 +60,7 @@ export default function ChannelDetailsLinkedLobby(channel) {
     items1[2] = intl.format(BPDKoA, obj3);
     obj2[0] = items1;
     obj1[2] = closure_6(closure_5, obj2);
-    const items2 = [closure_7(Text, obj1), ];
+    const items2 = [closure_7(Text, obj1)];
     const obj4 = { style: null };
     divider = divider.divider;
     obj4[0] = divider;
@@ -69,4 +71,4 @@ export default function ChannelDetailsLinkedLobby(channel) {
     const tmp5 = closure_5;
     const tmp8 = combinedDefault;
   }
-};
+}

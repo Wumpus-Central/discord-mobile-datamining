@@ -38,9 +38,25 @@ const memoResult = importAllResult.memo((transitionState) => {
       const obj = transitionCleanUp(stateFromStores[9]);
     }
   }, items1);
-  const items2 = [stateFromStores, memo, landscapeSafeAreasConfig, portraitSafeAreasConfig, transitionCleanUp, transitionState, callback];
+  const items2 = [
+    stateFromStores,
+    memo,
+    landscapeSafeAreasConfig,
+    portraitSafeAreasConfig,
+    transitionCleanUp,
+    transitionState,
+    callback,
+  ];
   return portraitSafeAreasConfig.useMemo(() => {
-    let obj = { transitionState, transitionCleanUp, updateActivityPanelModeToPIP: callback, hasActivity: null != stateFromStores, context: transitionCleanUp(stateFromStores[7]), header: memo, children: null };
+    let obj = {
+      transitionState,
+      transitionCleanUp,
+      updateActivityPanelModeToPIP: callback,
+      hasActivity: null != stateFromStores,
+      context: transitionCleanUp(stateFromStores[7]),
+      header: memo,
+      children: null,
+    };
     obj = { layoutMode: callback.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig };
     obj[6] = closure_1_8(transitionCleanUp(stateFromStores[10]), obj);
     return closure_1_8(transitionState(stateFromStores[6]).BaseActivityPanelFocusedView, obj);

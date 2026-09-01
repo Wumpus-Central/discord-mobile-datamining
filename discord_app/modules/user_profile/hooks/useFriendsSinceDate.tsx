@@ -10,17 +10,26 @@ const result = require("set").fileFinishedImporting("modules/user_profile/hooks/
 export const useFriendsSinceDate = function useFriendsSinceDate(userId) {
   const _require = userId;
   const items = [closure_2];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => locale.locale);
+  const stateFromStores =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
+      items,
+      () => locale.locale,
+    );
   const obj = defaultAreStatesEqual;
   const items1 = [closure_3];
   const items2 = [userId];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
-    let since = null;
-    if (closure_1_3.getRelationshipType(closure_0) === closure_1_4.FRIEND) {
-      since = closure_1_3.getSince(closure_0);
-    }
-    return since;
-  }, items2);
+  const stateFromStores1 =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
+      items1,
+      () => {
+        let since = null;
+        if (closure_1_3.getRelationshipType(closure_0) === closure_1_4.FRIEND) {
+          since = closure_1_3.getSince(closure_0);
+        }
+        return since;
+      },
+      items2,
+    );
   const obj2 = defaultAreStatesEqual;
   return require("../../connections/ConnectionsUtils.tsx").getCreatedAtDate(stateFromStores1, stateFromStores);
 };

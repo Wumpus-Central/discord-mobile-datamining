@@ -14,8 +14,21 @@ import int2hslRaw from "../../../../../discord_common/js/shared/utils/ColorUtils
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, row: null, content: null, warningContainer: null, infoContainer: null, errorContainer: null, successContainer: null };
-createCacheKey = { padding: ThemesDefault.space.PX_8, borderWidth: 1, borderStyle: "solid", gap: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  container: null,
+  row: null,
+  content: null,
+  warningContainer: null,
+  infoContainer: null,
+  errorContainer: null,
+  successContainer: null,
+};
+createCacheKey = {
+  padding: ThemesDefault.space.PX_8,
+  borderWidth: 1,
+  borderStyle: "solid",
+  gap: ThemesDefault.space.PX_8,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "row", alignItems: "center" };
 createCacheKey[2] = { flex: 1, marginLeft: ThemesDefault.space.PX_8 };
@@ -54,7 +67,7 @@ export default function HelpMessage(children) {
     xs = ThemesDefault.radii.xs;
   }
   const tmp3 = callback2();
-  const items = [tmp3.container, , ];
+  const items = [tmp3.container, ,];
   if (int2hslRaw.WARNING === messageType) {
     let successContainer = tmp3.warningContainer;
   } else if (tmp6.INFO === messageType) {
@@ -85,10 +98,13 @@ export default function HelpMessage(children) {
     obj3[0] = ThemesDefault.unsafe_rawColors.GREEN_400;
     tmp7 = callback(CircleCheckIcon.CircleCheckIcon, obj3);
   }
-  const items1 = [tmp7, callback(Text.Text, { style: tmp3.content, color: str, variant: textVariant, children: children.children })];
+  const items1 = [
+    tmp7,
+    callback(Text.Text, { style: tmp3.content, color: str, variant: textVariant, children: children.children }),
+  ];
   obj[1] = items1;
   const items2 = [closure_5(View, obj), children.button];
   obj[1] = items2;
   return closure_5(View, obj);
-};
+}
 export const HelpMessageTypes = int2hslRaw;

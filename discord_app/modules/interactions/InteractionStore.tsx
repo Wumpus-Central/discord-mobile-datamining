@@ -37,8 +37,7 @@ let c11;
 let c12;
 let closure_13 = {};
 const Store = initializeDefault.Store;
-class InteractionStore extends Store {
-}
+class InteractionStore extends Store {}
 const prototype = InteractionStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_5);
@@ -139,7 +138,14 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
       closure_9[messageId] = nonce;
       closure_10[nonce] = messageId;
     }
-    closure_8[nonce] = { state: InteractionState.InteractionState.QUEUED, data, onCreate, onCancel, onSuccess, onFailure };
+    closure_8[nonce] = {
+      state: InteractionState.InteractionState.QUEUED,
+      data,
+      onCreate,
+      onCancel,
+      onSuccess,
+      onFailure,
+    };
   },
   INTERACTION_CREATE: function handleInteractionCreate(nonce) {
     nonce = nonce.nonce;
@@ -390,7 +396,7 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
         tmp7 = null != interaction && null != messageId;
       }
     }
-  }
+  },
 });
 const result2 = require("set").fileFinishedImporting("modules/interactions/InteractionStore.tsx");
 

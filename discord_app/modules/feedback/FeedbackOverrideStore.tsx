@@ -6,12 +6,9 @@ import optOutEligibilityCheck from "FeedbackManager.tsx";
 require = arg1;
 let closure_2 = {};
 const Store = initializeDefault.Store;
-class HotspotStore extends Store {
-}
+class HotspotStore extends Store {}
 const prototype = HotspotStore.prototype;
-prototype["initialize"] = function initialize() {
-
-};
+prototype["initialize"] = function initialize() {};
 prototype["getFeedbackConfig"] = function getFeedbackConfig(ACTIVITY) {
   return table[ACTIVITY];
 };
@@ -29,7 +26,7 @@ const hotspotStore = new HotspotStore(dispatcherDefault, {
   },
   FEEDBACK_OVERRIDE_CLEAR: function handleClearFeedbackOverride(arg0) {
     delete tmp[tmp2];
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/feedback/FeedbackOverrideStore.tsx");
 

@@ -9,7 +9,10 @@ obj = { 1: null };
 obj[1] = { questFetchJitterMs: 60 * setDefault.Millis.SECOND, questHomeHeroJitterMs: 60 * setDefault.Millis.SECOND };
 obj[3] = obj;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
-const obj1 = { questFetchJitterMs: 60 * setDefault.Millis.SECOND, questHomeHeroJitterMs: 60 * setDefault.Millis.SECOND };
+const obj1 = {
+  questFetchJitterMs: 60 * setDefault.Millis.SECOND,
+  questHomeHeroJitterMs: 60 * setDefault.Millis.SECOND,
+};
 const result = set.fileFinishedImporting("modules/quests/experiments/QuestFetchReconnectJitterExperiment.tsx");
 
 export default apexExperiment;

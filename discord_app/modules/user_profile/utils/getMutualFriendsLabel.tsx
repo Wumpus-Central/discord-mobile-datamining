@@ -22,4 +22,4 @@ export default function getMutualFriendsLabel(arg0) {
     stringResult = intl.formatToPlainString(getSystemLocale.t["5s9jl+"], obj);
   }
   return stringResult;
-};
+}

@@ -24,13 +24,16 @@ prototype["checkForNewerBuild"] = function checkForNewerBuild() {
     dispatcherDefault.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_STARTED" });
     let obj = dispatcherDefault;
     const obj2 = _checkForNewerBuild;
-    _checkForNewerBuild.checkForNewerBuild().then((newBuild) => {
-      let obj = callback(709);
-      obj = { type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild };
-      obj.dispatch(obj);
-    }, () => {
-      callback(709).dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
-    });
+    _checkForNewerBuild.checkForNewerBuild().then(
+      (newBuild) => {
+        let obj = callback(709);
+        obj = { type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild };
+        obj.dispatch(obj);
+      },
+      () => {
+        callback(709).dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
+      },
+    );
     const checkForNewerBuildResult = _checkForNewerBuild.checkForNewerBuild();
   }
 };
@@ -67,7 +70,7 @@ const mobileNativeUpdateStore = new MobileNativeUpdateStore(dispatcherDefault, {
   },
   MOBILE_NATIVE_UPDATE_CHECK_FINISHED: function handleCheckFinished(newBuild) {
     const obj = { lastCheck: new Date(), checking: false, newBuild: newBuild.newBuild };
-  }
+  },
 });
 let obj = {
   MOBILE_NATIVE_UPDATE_CHECK_STARTED: function handleCheckStarted() {
@@ -82,7 +85,7 @@ let obj = {
   },
   MOBILE_NATIVE_UPDATE_CHECK_FINISHED: function handleCheckFinished(newBuild) {
     const obj = { lastCheck: new Date(), checking: false, newBuild: newBuild.newBuild };
-  }
+  },
 };
 const tmp3 = new timestampDefault("MobileNativeUpdateStore");
 const result = set.fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateStore.tsx");

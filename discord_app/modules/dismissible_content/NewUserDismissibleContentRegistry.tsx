@@ -6,17 +6,48 @@ import closure_4 from "DismissibleContentFrameworkStore.tsx";
 import { useDcfNewUserCooldown } from "DcfNewUserCooldownExperiment.tsx";
 
 require = arg1;
-let closure_5 = { [arg1(1373).DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0, [arg1(1373).DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER]: 0, [arg1(1373).DismissibleContent.SEEN_LAUNCH_WELCOME]: 0, [arg1(1373).DismissibleContent.SEEN_OLD_DESIGN]: 0, [arg1(1373).DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0, [arg1(1373).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP]: 0, [arg1(1373).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_FLIP]: 0, [arg1(1373).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE]: 0, [arg1(1373).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE]: 0, [arg1(1373).DismissibleContent.WHATS_NEW_SERVER_PROFILE_FLIP]: 0, [arg1(1373).DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE]: 0, [arg1(1373).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD]: 0, [arg1(1373).DismissibleContent.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0, [arg1(1373).DismissibleContent.TRIAL_NUX_EMOJI_BUTTON]: 0, [arg1(1373).DismissibleContent.TRIAL_NUX_EMOJI_PICKER]: 0, [arg1(1373).DismissibleContent.TRIAL_NUX_STREAM_COACH_MARK]: 0, [arg1(1373).DismissibleContent.OVERLAY_OOP_SETTINGS_NUX]: 0, [arg1(1373).DismissibleContent.OVERLAY_OOP_WELCOME_NUX]: 0, [arg1(1373).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_NUX]: 0, [arg1(1373).DismissibleContent.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX]: 0, [arg1(1373).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX]: 0, [arg1(1373).DismissibleContent.REVERSE_TRIAL_NITRO_TAB_BADGE_V2]: 0, [arg1(1373).DismissibleContent.PERMADECOS_NITRO_TAB_NEW_BADGE]: 0, [arg1(1373).DismissibleContent.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0, [arg1(1373).DismissibleContent.BOGO_2025_ANNOUNCEMENT_MODAL]: 0, [arg1(1373).DismissibleContent.NITRO_DROP_REWARD]: 0, [arg1(1373).DismissibleContent.BOUNTIES_SWIPE_UP_NUX]: 0 };
-const result = require("set").fileFinishedImporting("modules/dismissible_content/NewUserDismissibleContentRegistry.tsx");
+let closure_5 = {
+  [arg1(1373).DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0,
+  [arg1(1373).DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER]: 0,
+  [arg1(1373).DismissibleContent.SEEN_LAUNCH_WELCOME]: 0,
+  [arg1(1373).DismissibleContent.SEEN_OLD_DESIGN]: 0,
+  [arg1(1373).DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0,
+  [arg1(1373).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP]: 0,
+  [arg1(1373).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_FLIP]: 0,
+  [arg1(1373).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE]: 0,
+  [arg1(1373).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE]: 0,
+  [arg1(1373).DismissibleContent.WHATS_NEW_SERVER_PROFILE_FLIP]: 0,
+  [arg1(1373).DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE]: 0,
+  [arg1(1373).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD]: 0,
+  [arg1(1373).DismissibleContent.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0,
+  [arg1(1373).DismissibleContent.TRIAL_NUX_EMOJI_BUTTON]: 0,
+  [arg1(1373).DismissibleContent.TRIAL_NUX_EMOJI_PICKER]: 0,
+  [arg1(1373).DismissibleContent.TRIAL_NUX_STREAM_COACH_MARK]: 0,
+  [arg1(1373).DismissibleContent.OVERLAY_OOP_SETTINGS_NUX]: 0,
+  [arg1(1373).DismissibleContent.OVERLAY_OOP_WELCOME_NUX]: 0,
+  [arg1(1373).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_NUX]: 0,
+  [arg1(1373).DismissibleContent.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX]: 0,
+  [arg1(1373).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX]: 0,
+  [arg1(1373).DismissibleContent.REVERSE_TRIAL_NITRO_TAB_BADGE_V2]: 0,
+  [arg1(1373).DismissibleContent.PERMADECOS_NITRO_TAB_NEW_BADGE]: 0,
+  [arg1(1373).DismissibleContent.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0,
+  [arg1(1373).DismissibleContent.BOGO_2025_ANNOUNCEMENT_MODAL]: 0,
+  [arg1(1373).DismissibleContent.NITRO_DROP_REWARD]: 0,
+  [arg1(1373).DismissibleContent.BOUNTIES_SWIPE_UP_NUX]: 0,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/dismissible_content/NewUserDismissibleContentRegistry.tsx",
+);
 
 export const useNewUserDismissibleContent = function useNewUserDismissibleContent(arr) {
   _require = require("DcfNewUserCooldownExperiment.tsx").useDcfNewUserCooldown();
   let obj = useDcfNewUserCooldown;
   const items = [closure_3, closure_4];
-  const stateFromStoresObject = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresObject(items, () => {
-    obj = { userId: id.getId(), newUserMinAgeRequiredOverridden: obj.newUserMinAgeRequiredOverridden };
-    return obj;
-  });
+  const stateFromStoresObject =
+    require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresObject(items, () => {
+      obj = { userId: id.getId(), newUserMinAgeRequiredOverridden: obj.newUserMinAgeRequiredOverridden };
+      return obj;
+    });
   const userId = stateFromStoresObject.userId;
   let found = arr;
   if (!stateFromStoresObject.newUserMinAgeRequiredOverridden) {

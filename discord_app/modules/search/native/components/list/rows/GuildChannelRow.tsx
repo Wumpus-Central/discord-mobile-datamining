@@ -22,7 +22,12 @@ function GuildChannelLabel(channel) {
   return <closure_4 channel={channel} layout={closure_5} name={tmp2} />;
 }
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
-let obj = { container: { paddingVertical: 10 }, content: { flexDirection: "row", alignItems: "center" }, iconContainer: { marginRight: 0 }, simpleIcon: null };
+let obj = {
+  container: { paddingVertical: 10 },
+  content: { flexDirection: "row", alignItems: "center" },
+  iconContainer: { marginRight: 0 },
+  simpleIcon: null,
+};
 obj = { width: 20, height: 20, marginRight: 8, tintColor: ThemesDefault.colors.TEXT_MUTED };
 obj[3] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
@@ -32,7 +37,12 @@ const memoResult = importAllResult.memo(function GuildChannelRow(channel) {
   const merged = Object.assign(channel, Object.create(null));
   const tmp2 = callback();
   let obj = LaunchpadChannelIcon;
-  const channelAccessibilityProps = obj.getChannelAccessibilityProps({ channel, unread: false, mentionCount: 0, voiceStates });
+  const channelAccessibilityProps = obj.getChannelAccessibilityProps({
+    channel,
+    unread: false,
+    mentionCount: 0,
+    voiceStates,
+  });
   obj = { style: tmp2.simpleIcon, source: getChannelIcon.getSimpleChannelIcon(channel) };
   const obj3 = getChannelIcon;
   obj = {};

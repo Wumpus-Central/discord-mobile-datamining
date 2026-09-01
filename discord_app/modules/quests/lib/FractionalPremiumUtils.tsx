@@ -9,7 +9,9 @@ const result = set.fileFinishedImporting("modules/quests/lib/FractionalPremiumUt
 
 export const getDurationStringOfFractionalPremium = function getDurationStringOfFractionalPremium(arr) {
   let obj = getPremiumPlanItem;
-  const fractionalPremiumUnitsHoursFromSkuIds = obj.getFractionalPremiumUnitsHoursFromSkuIds(arr.map((skuId) => skuId.skuId));
+  const fractionalPremiumUnitsHoursFromSkuIds = obj.getFractionalPremiumUnitsHoursFromSkuIds(
+    arr.map((skuId) => skuId.skuId),
+  );
   if (fractionalPremiumUnitsHoursFromSkuIds % 24 === 0) {
     const intl2 = tmp(1236).intl;
     obj = { days: null };
@@ -32,7 +34,8 @@ export const getFractionalPremiumQuestRewardName = function getFractionalPremium
   const found = rewards.filter((type) => type.type === callback(table[2]).QuestRewardTypes.FRACTIONAL_PREMIUM);
   const flatMapResult = found.flatMap((quantity) => Array(quantity.quantity).fill(quantity.skuId));
   let obj = { days: null, hours: null, minutes: null };
-  const fractionalPremiumUnitsHoursFromSkuIds = getPremiumPlanItem.getFractionalPremiumUnitsHoursFromSkuIds(flatMapResult);
+  const fractionalPremiumUnitsHoursFromSkuIds =
+    getPremiumPlanItem.getFractionalPremiumUnitsHoursFromSkuIds(flatMapResult);
   obj[0] = getSystemLocale.t.fYmirx;
   obj[1] = getSystemLocale.t["C3RO+g"];
   obj[2] = getSystemLocale.t.r77oHc;

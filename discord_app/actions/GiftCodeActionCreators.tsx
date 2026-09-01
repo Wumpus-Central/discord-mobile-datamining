@@ -28,7 +28,7 @@ function _resolveGiftCode() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -160,7 +160,9 @@ function _resolveGiftCode() {
                   someResult = items.some(c6);
                 }
                 if (true === someResult) {
-                  const clientOutdatedAcceptGiftError = new callback(flag2[10]).ClientOutdatedAcceptGiftError("Client update required to redeem this gift");
+                  const clientOutdatedAcceptGiftError = new callback(flag2[10]).ClientOutdatedAcceptGiftError(
+                    "Client update required to redeem this gift",
+                  );
                   throw clientOutdatedAcceptGiftError;
                 }
               }
@@ -247,7 +249,7 @@ export default {
       tmp = null;
     }
     c1 = tmp;
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp3;
       obj1 = { type: "GIFT_CODES_FETCH", skuId: null, subscriptionPlanId: null };
       obj1[1] = closure_1_0;
@@ -299,7 +301,7 @@ export default {
       tmp2 = null;
     }
     c2 = tmp2;
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp3;
       obj1 = { type: "GIFT_CODE_CREATE_START", skuId: null, subscriptionPlanId: null };
       obj1[1] = closure_1_0;
@@ -332,7 +334,7 @@ export default {
   },
   revokeGiftCode(code) {
     closure_0 = code;
-    return callback(function*() {
+    return callback(function* () {
       closure_0 = tmp3;
       obj1 = { type: "GIFT_CODE_REVOKE", code: null };
       obj1[1] = closure_1_0;
@@ -365,7 +367,7 @@ export default {
   },
   openNativeGiftCodeModal(arg0) {
     _modDef8478.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
-  }
+  },
 };
 export { resolveGiftCode };
 export { reportUnexpectedGiftCodeError };

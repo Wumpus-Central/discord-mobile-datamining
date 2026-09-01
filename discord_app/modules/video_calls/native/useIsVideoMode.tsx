@@ -16,11 +16,12 @@ export default function useIsVideoMode() {
     let tmp2 = null != channel;
     if (tmp2) {
       tmp2 = closure_2.getAllActiveStreams().length > 0 || closure_6.hasVideo(channel.id) || closure_4.isVideoEnabled();
-      const tmp3 = closure_2.getAllActiveStreams().length > 0 || closure_6.hasVideo(channel.id) || closure_4.isVideoEnabled();
+      const tmp3 =
+        closure_2.getAllActiveStreams().length > 0 || closure_6.hasVideo(channel.id) || closure_4.isVideoEnabled();
     }
     return tmp2;
   });
-};
+}
 export const isVideoMode = function isVideoMode(closure_9, closure_11, closure_8, closure_12, closure_10) {
   let obj = closure_9;
   if (closure_9 === undefined) {

@@ -54,8 +54,7 @@ const map1 = new Map();
 let closure_5 = {};
 const map2 = new Map();
 const Store = initializeDefault.Store;
-class InviteStore extends Store {
-}
+class InviteStore extends Store {}
 const prototype = InviteStore.prototype;
 prototype["getInvite"] = function getInvite(arg0) {
   return map.get(arg0);
@@ -209,7 +208,7 @@ const inviteStore = new InviteStore(dispatcherDefault, {
     } else {
       return false;
     }
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/InviteStore.tsx");
 

@@ -113,13 +113,16 @@ function handleConnectionOpenOrLogout() {
   closure_4 = {};
   return true;
 }
-let obj = { GENTLE_AMBIENT: "GENTLE_AMBIENT", GENTLE_AMBIENT_WITH_INTRO: "GENTLE_AMBIENT_WITH_INTRO", HIGH_CONTRAST: "HIGH_CONTRAST" };
+let obj = {
+  GENTLE_AMBIENT: "GENTLE_AMBIENT",
+  GENTLE_AMBIENT_WITH_INTRO: "GENTLE_AMBIENT_WITH_INTRO",
+  HIGH_CONTRAST: "HIGH_CONTRAST",
+};
 let closure_4 = {};
 let closure_5 = {};
 let c6 = null;
 const Store = initializeDefault.Store;
-class VoiceChannelAnimationStateStoreClass extends Store {
-}
+class VoiceChannelAnimationStateStoreClass extends Store {}
 const prototype = VoiceChannelAnimationStateStoreClass.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_1);
@@ -240,7 +243,7 @@ obj = {
     }
   },
   CONNECTION_OPEN: handleConnectionOpenOrLogout,
-  LOGOUT: handleConnectionOpenOrLogout
+  LOGOUT: handleConnectionOpenOrLogout,
 };
 const voiceChannelAnimationStateStoreClass = new VoiceChannelAnimationStateStoreClass(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/channel/VoiceChannelAnimationStateStore.tsx");

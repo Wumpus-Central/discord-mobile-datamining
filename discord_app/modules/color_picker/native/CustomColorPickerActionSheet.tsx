@@ -20,16 +20,20 @@ function SuggestedColors(arg0) {
       obj[0] = tmp.suggestedColorsContainer;
       obj[1] = suggestedColors.map((color) => {
         closure_0 = color;
-        return closure_1_6(closure_1_1(suggestedColor[6]), {
-          color,
-          style: suggestedColor.suggestedColor,
-          selected: color === closure_1,
-          onSelect() {
-            if (null != closure_0) {
-              tmp(closure_0);
-            }
-          }
-        }, "" + color + "-" + arg1);
+        return closure_1_6(
+          closure_1_1(suggestedColor[6]),
+          {
+            color,
+            style: suggestedColor.suggestedColor,
+            selected: color === closure_1,
+            onSelect() {
+              if (null != closure_0) {
+                tmp(closure_0);
+              }
+            },
+          },
+          "" + color + "-" + arg1,
+        );
       });
       tmp2 = callback(View, obj);
     }
@@ -63,7 +67,9 @@ export default function CustomColorPickerActionSheet(arg0) {
   function updateInputHexValueFromHsv(h) {
     const hsvToRgbWorkletResult = onSelect(14252).hsvToRgbWorklet(h);
     const obj = onSelect(14252);
-    dependencyMap(onSelect(4326).rgbToHex(hsvToRgbWorkletResult[0], hsvToRgbWorkletResult[1], hsvToRgbWorkletResult[2]));
+    dependencyMap(
+      onSelect(4326).rgbToHex(hsvToRgbWorkletResult[0], hsvToRgbWorkletResult[1], hsvToRgbWorkletResult[2]),
+    );
   }
   let obj = onSelect(688);
   let tmp = callback2();
@@ -146,7 +152,7 @@ export default function CustomColorPickerActionSheet(arg0) {
       const result2 = sharedValue2.set(hex2rgb2hsvResult.v / 100);
     }
   };
-  const items3 = [sharedValue2(onSelect(7705).TextInput, obj3), , ];
+  const items3 = [sharedValue2(onSelect(7705).TextInput, obj3), ,];
   const obj4 = { suggestedColors: null, onSelect: null, color: null };
   const obj8 = onSelect(4217);
   const tmp13 = updateInputHexValueFromHsv;
@@ -179,10 +185,10 @@ export default function CustomColorPickerActionSheet(arg0) {
       let obj = onSelect(4217);
       obj = { h: sharedValue.get(), s: sharedValue1.get(), v: sharedValue2.get() };
       obj.runOnJS(updateInputHexValueFromHsv)(obj);
-    }
+    },
   };
   items3[2] = sharedValue2(tmp16(14253), obj5);
   obj2[1] = items3;
   obj[3] = tmp13(tmp14, obj2);
   return sharedValue2(onSelect(5622).BottomSheet, obj);
-};
+}

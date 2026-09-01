@@ -14,8 +14,12 @@ obj.bottom = undefined;
 obj.zIndex = 2;
 obj[0] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
-let closure_8 = { code: "function QuestDockContentCollapsedTsx1(){const{withSpring,activeQuestDockMode,QuestDockMode,hideOnExpand,QUEST_DOCK_MODE_CHANGE_PHYSICS}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.COLLAPSED||!hideOnExpand?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS)};}" };
-let closure_9 = { code: "function QuestDockContentCollapsedTsx2(){const{activeQuestDockMode,QuestDockMode,hideOnExpand}=this.__closure;return{pointerEvents:activeQuestDockMode.get()===QuestDockMode.COLLAPSED||!hideOnExpand?'auto':'none'};}" };
+let closure_8 = {
+  code: "function QuestDockContentCollapsedTsx1(){const{withSpring,activeQuestDockMode,QuestDockMode,hideOnExpand,QUEST_DOCK_MODE_CHANGE_PHYSICS}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.COLLAPSED||!hideOnExpand?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS)};}",
+};
+let closure_9 = {
+  code: "function QuestDockContentCollapsedTsx2(){const{activeQuestDockMode,QuestDockMode,hideOnExpand}=this.__closure;return{pointerEvents:activeQuestDockMode.get()===QuestDockMode.COLLAPSED||!hideOnExpand?'auto':'none'};}",
+};
 const memoResult = importAllResult.memo(function QuestDockContentCollapsed(children) {
   let hideOnExpand = children.hideOnExpand;
   let tmp = undefined === hideOnExpand;
@@ -23,7 +27,9 @@ const memoResult = importAllResult.memo(function QuestDockContentCollapsed(child
     tmp = hideOnExpand;
   }
   hideOnExpand = tmp;
-  const activeQuestDockMode = importAllResult.useContext(hideOnExpand(14697).QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = importAllResult.useContext(
+    hideOnExpand(14697).QuestDockGestureContext,
+  ).activeQuestDockMode;
   let obj = hideOnExpand(4217);
   const fn = function l() {
     let obj = hideOnExpand(closure_1_2[8]);
@@ -37,7 +43,13 @@ const memoResult = importAllResult.memo(function QuestDockContentCollapsed(child
     obj = { opacity: obj.withSpring(num, closure_1_5) };
     return obj;
   };
-  obj = { withSpring: hideOnExpand(4927).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
+  obj = {
+    withSpring: hideOnExpand(4927).withSpring,
+    activeQuestDockMode,
+    QuestDockMode,
+    hideOnExpand: tmp,
+    QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5,
+  };
   fn.__closure = obj;
   fn.__workletHash = 13361221764426;
   fn.__initData = closure_8;

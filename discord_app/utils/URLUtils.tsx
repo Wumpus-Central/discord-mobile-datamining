@@ -45,9 +45,26 @@ const Routes = ME.Routes;
 const re5 = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i;
 const re6 = /^.*\.discordapp\.net$/;
 const re7 = /^.*\.media\.discordapp\.net$/;
-let set = new Set(["media.tenor.com", "media.tenor.co", "c.tenor.com", "static.klipy.com", "media.giphy.com", "i.giphy.com"]);
-const regExp = new RegExp("(?:(?:(?:[a-z]+:)?//)|www\\.)(?:[^\\s:@]+(?::[^\\s@]*)?@)?(?:localhost|" + ipDefault.v4().source + "|(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+(?:(?:[a-z\\u00a1-\\uffff]{2,})))(?::\\d{2,5})?(?:[/?#][^\\s\"]*)?", "ig");
-const items = [window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.INVITE_HOST, window.GLOBAL_ENV.GIFT_CODE_HOST, window.GLOBAL_ENV.GUILD_TEMPLATE_HOST];
+let set = new Set([
+  "media.tenor.com",
+  "media.tenor.co",
+  "c.tenor.com",
+  "static.klipy.com",
+  "media.giphy.com",
+  "i.giphy.com",
+]);
+const regExp = new RegExp(
+  "(?:(?:(?:[a-z]+:)?//)|www\\.)(?:[^\\s:@]+(?::[^\\s@]*)?@)?(?:localhost|" +
+    ipDefault.v4().source +
+    '|(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+(?:(?:[a-z\\u00a1-\\uffff]{2,})))(?::\\d{2,5})?(?:[/?#][^\\s"]*)?',
+  "ig",
+);
+const items = [
+  window.GLOBAL_ENV.CDN_HOST,
+  window.GLOBAL_ENV.INVITE_HOST,
+  window.GLOBAL_ENV.GIFT_CODE_HOST,
+  window.GLOBAL_ENV.GUILD_TEMPLATE_HOST,
+];
 const set1 = new Set(items);
 let result = set.fileFinishedImporting("utils/URLUtils.tsx");
 
@@ -335,5 +352,5 @@ export default {
     } catch (err) {
       return null;
     }
-  }
+  },
 };

@@ -26,16 +26,20 @@ class JoinRequestActionSheet {
     obj = require("initialize");
     items = [];
     items[0] = closure_7;
-    items1 = [, ];
+    items1 = [,];
     items1[0] = user;
     items1[1] = userId;
-    stateFromStores = obj.useStateFromStores(items, () => {
-      user = closure_1_7.getUser(userId);
-      if (null == user) {
-        user = new closure_1_6(user);
-      }
-      return user;
-    }, items1);
+    stateFromStores = obj.useStateFromStores(
+      items,
+      () => {
+        user = closure_1_7.getUser(userId);
+        if (null == user) {
+          user = new closure_1_6(user);
+        }
+        return user;
+      },
+      items1,
+    );
     closure_4 = stateFromStores;
     tmp5 = user;
     id = undefined;
@@ -95,7 +99,7 @@ class JoinRequestActionSheet {
         }
       }
     }
-    items4 = [, , ];
+    items4 = [, ,];
     items4[0] = guildId;
     ({ applicationStatus: arr5[1], userId: arr5[2] } = joinRequest);
     effect = obj3.useEffect(() => {
@@ -103,7 +107,7 @@ class JoinRequestActionSheet {
       obj = { guildId, applicationStatus: joinRequest.applicationStatus, applicationUserId: joinRequest.userId };
       const result = obj.trackMemberApplicationViewed(obj);
     }, items4);
-    items5 = [, ];
+    items5 = [,];
     items5[0] = guildId;
     items5[1] = stateFromStores;
     effect1 = obj3.useEffect(() => {
@@ -117,7 +121,13 @@ class JoinRequestActionSheet {
         tmp = isNonUserBotResult;
       }
       if (!tmp) {
-        obj = { type: "action_sheet", withMutualGuilds: true, withMutualFriends: true, dispatchWait: true, guildId: null };
+        obj = {
+          type: "action_sheet",
+          withMutualGuilds: true,
+          withMutualFriends: true,
+          dispatchWait: true,
+          guildId: null,
+        };
         obj[4] = guildId;
         user(userId[21])(obj.id, obj.getAvatarURL(guildId, 80), obj);
         const tmp7 = user(userId[21]);
@@ -140,11 +150,18 @@ class JoinRequestActionSheet {
       obj2[1] = primaryColor;
       obj2[2] = secondaryColor;
       tmp27 = jsxs;
-      obj3 = { ref: null, handleDisabled: true, scrollable: true, startExpanded: true, contentStyles: null, children: null };
+      obj3 = {
+        ref: null,
+        handleDisabled: true,
+        scrollable: true,
+        startExpanded: true,
+        contentStyles: null,
+        children: null,
+      };
       obj3[0] = bottomSheetRef;
       obj3[4] = tmp.noPadding;
       obj4 = { scrollsToTop: false, style: null, ref: null, onScroll: null, children: null };
-      items6 = [, ];
+      items6 = [,];
       items6[0] = tmp.container;
       obj5 = { backgroundColor: null };
       obj5[0] = int2hexResult;
@@ -163,7 +180,7 @@ class JoinRequestActionSheet {
       obj7[1] = jsx(require("OpenInterviewButton"), obj8);
       obj6[0] = jsx(closure_4, obj7);
       obj4[4] = jsx(closure_4, obj6);
-      items7 = [, ];
+      items7 = [,];
       items7[0] = jsx(require("BottomSheetModal").BottomSheetScrollView, obj4);
       obj9 = { variant: "floating", tabStyle: null, onPress: null };
       obj10 = { backgroundColor: null };
@@ -180,9 +197,15 @@ class JoinRequestActionSheet {
 }
 let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ container: { flex: 1 }, profileContainer: { position: "relative" }, noPadding: { paddingHorizontal: 0 } });
+let closure_11 = createCacheKey.createStyles({
+  container: { flex: 1 },
+  profileContainer: { position: "relative" },
+  noPadding: { paddingHorizontal: 0 },
+});
 const memoResult = importAllResult.memo(JoinRequestActionSheet);
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx",
+);
 
 export default memoResult;
 export { JoinRequestActionSheet };

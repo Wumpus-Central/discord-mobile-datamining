@@ -6,8 +6,7 @@ import keys from "../../../../_runtime/00644_keys.js";
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 const obj = keys.create(() => ({ isMuted: false }));
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.MediaPlayerManager);
-class MediaPlayerMuteManager {
-}
+class MediaPlayerMuteManager {}
 const prototype = MediaPlayerMuteManager.prototype;
 prototype["initialize"] = function initialize() {
   this.muteSubscription = nativeEventEmitter.addListener("MediaPlayerMuteStateChanged", (isMuted) => {

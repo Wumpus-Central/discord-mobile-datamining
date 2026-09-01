@@ -6,5 +6,9 @@ import EntitlementFeatureNames from "../../../../discord_common/js/shared/shared
 const result = set.fileFinishedImporting("modules/scheduled_messages/native/openScheduledMessagesLimitUpsell.tsx");
 
 export default function openScheduledMessagesLimitUpsell(arg0) {
-  openPremiumUpsellActionSheetDefault(EntitlementFeatureNames.EntitlementFeatureNames.SCHEDULED_MESSAGES, undefined, arg0);
-};
+  openPremiumUpsellActionSheetDefault(
+    EntitlementFeatureNames.EntitlementFeatureNames.SCHEDULED_MESSAGES,
+    undefined,
+    arg0,
+  );
+}

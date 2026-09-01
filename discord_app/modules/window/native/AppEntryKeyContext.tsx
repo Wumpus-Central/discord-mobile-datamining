@@ -18,7 +18,7 @@ export const useAppEntryKey = function useAppEntryKey() {
   const effect = context.useEffect(() => {
     if (!tmp) {
       c4 = true;
-      closure_1_1.warn("AppEntryKey context was not provided; falling back to default entry key \"main\".");
+      closure_1_1.warn('AppEntryKey context was not provided; falling back to default entry key "main".');
     }
   }, items);
   if (context == null) {

@@ -13,7 +13,16 @@ import { PlatformTypes } from "../../../Constants.tsx";
 import { HUBS_IN_ONBOARDING_COUNTRIES as closure_10 } from "../../hub/HubConstants.tsx";
 
 require = arg1;
-let obj = { REGISTRATION: "Registration", ADD_AVATAR: "Add Avatar", CONTACT_SYNC: "Contact Sync", GUILD_TEMPLATE: "Guild Template", STUDENT_HUB: "Student Hub", NEW_USER_INTENT: "New User Intent", ACCEPT_INVITE: "Accept Invite", DISCOVERABILITY: "Discoverability" };
+let obj = {
+  REGISTRATION: "Registration",
+  ADD_AVATAR: "Add Avatar",
+  CONTACT_SYNC: "Contact Sync",
+  GUILD_TEMPLATE: "Guild Template",
+  STUDENT_HUB: "Student Hub",
+  NEW_USER_INTENT: "New User Intent",
+  ACCEPT_INVITE: "Accept Invite",
+  DISCOVERABILITY: "Discoverability",
+};
 obj = {
   key: obj.ADD_AVATAR,
   shouldShowStep() {
@@ -24,7 +33,7 @@ obj = {
     }
     return null == avatar;
   },
-  transitionToStep: require("handlePressNext").openAddAvatarModal
+  transitionToStep: require("handlePressNext").openAddAvatarModal,
 };
 obj = {
   key: obj.CONTACT_SYNC,
@@ -45,7 +54,7 @@ obj = {
     }
     return tmp3;
   },
-  transitionToStep: require("handleNameInputScreenOrSuggestions").openContactSyncModalOnboarding
+  transitionToStep: require("handleNameInputScreenOrSuggestions").openContactSyncModalOnboarding,
 };
 const items = [
   obj,
@@ -54,7 +63,7 @@ const items = [
     shouldShowStep() {
       return null == store.getLocalAccount(PlatformTypes.CONTACTS);
     },
-    transitionToStep: require("_startContactSyncForDiscoverability").openDiscoverabilityModal
+    transitionToStep: require("_startContactSyncForDiscoverability").openDiscoverabilityModal,
   },
   obj,
   {
@@ -72,8 +81,11 @@ const items = [
       }
     },
     transitionToStep() {
-      const result = _startContactSyncForDiscoverability.transitionToHubEmailConnectionModal(keys.ModalAnimation.SLIDE_IN, true);
-    }
+      const result = _startContactSyncForDiscoverability.transitionToHubEmailConnectionModal(
+        keys.ModalAnimation.SLIDE_IN,
+        true,
+      );
+    },
   },
   {
     key: obj.GUILD_TEMPLATE,
@@ -82,23 +94,22 @@ const items = [
     },
     transitionToStep() {
       return _startContactSyncForDiscoverability.transitionToNUFGuildTemplatesModal(keys.ModalAnimation.SLIDE_IN);
-    }
+    },
   },
-
 ];
 let obj1 = {
   key: obj.DISCOVERABILITY,
   shouldShowStep() {
     return null == store.getLocalAccount(PlatformTypes.CONTACTS);
   },
-  transitionToStep: require("_startContactSyncForDiscoverability").openDiscoverabilityModal
+  transitionToStep: require("_startContactSyncForDiscoverability").openDiscoverabilityModal,
 };
 items[5] = {
   key: obj.ACCEPT_INVITE,
   shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
   transitionToStep() {
     dispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
-  }
+  },
 };
 initializeDefault;
 let prototype = function NewUserManager() {
@@ -109,14 +120,14 @@ let prototype = function NewUserManager() {
   applyArgumentsResult.actions = {
     ONBOARDING_STEP(guildId) {
       closure_0.handleOnboardingStep(guildId);
-    }
+    },
   };
   closure_0 = undefined;
   importDefault = applyArgumentsResult;
   closure_0 = callback((arg0) => {
     closure_0 = arg0;
     let transitionToStep = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -273,7 +284,7 @@ let prototype = function NewUserManager() {
     iter.next();
     return iter;
   });
-  applyArgumentsResult.handleOnboardingStep = function() {
+  applyArgumentsResult.handleOnboardingStep = function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -285,15 +296,14 @@ let prototype = function NewUserManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 let obj2 = {
   key: obj.ACCEPT_INVITE,
   shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
   transitionToStep() {
     dispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
-  }
+  },
 };
 let result = require("set").fileFinishedImporting("modules/nuf/native/NewUserManager.tsx");
 

@@ -6,7 +6,18 @@ const re1 = /^((https:\/\/)?(discord\.gg\/)|(discord\.com\/)(invite\/)?)?[A-Za-z
 const re2 = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
 const re3 = /^(.*)#[0-9]{1,5}$/;
 const re4 = /^(https:\/\/)?(discord\.com\/discovery\/game\/)([0-9-]+)\/?/;
-let closure_5 = ["@", "#", ":", "```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage"];
+let closure_5 = [
+  "@",
+  "#",
+  ":",
+  "```",
+  "discord",
+  "hypesquad",
+  "system message",
+  "system mesage",
+  "sustem message",
+  "sustem mesage",
+];
 let closure_6 = ["discordtag", "everyone", "here", "discord nitro", "discord"];
 const result = set.fileFinishedImporting("utils/ValidationUtils.tsx");
 
@@ -37,5 +48,5 @@ export default {
   },
   isDiscoveryLink(arg0) {
     return regex5.test(arg0);
-  }
+  },
 };

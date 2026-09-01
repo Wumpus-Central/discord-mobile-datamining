@@ -121,8 +121,7 @@ const map4 = new Map();
 let set = new Set();
 let closure_9 = { botUserIdToAppUsage: {} };
 const PersistedStore = initializeDefault.PersistedStore;
-class ApplicationStore extends PersistedStore {
-}
+class ApplicationStore extends PersistedStore {}
 const prototype = ApplicationStore.prototype;
 prototype["initialize"] = function initialize(botUserIdToAppUsage) {
   if (null != botUserIdToAppUsage) {
@@ -505,7 +504,7 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
   },
   APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess,
   APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess,
-  APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess
+  APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess,
 });
 let result = set.fileFinishedImporting("modules/applications/ApplicationStore.tsx");
 

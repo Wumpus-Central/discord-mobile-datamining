@@ -21,14 +21,37 @@ function Subblocks(style) {
   });
 }
 noopAll;
-let closure_5 = createCacheKey.createStyles({ container: { display: "flex", width: "100%", flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 }, featuredSubblock: { flex: 1, flexBasis: 400, maxWidth: "100%" } });
+let closure_5 = createCacheKey.createStyles({
+  container: {
+    display: "flex",
+    width: "100%",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: ThemesDefault.space.PX_12,
+    paddingHorizontal: ThemesDefault.space.PX_16,
+  },
+  featuredSubblock: { flex: 1, flexBasis: 400, maxWidth: "100%" },
+});
 const result = require("set").fileFinishedImporting("modules/collectibles/native/FeaturedBlock.tsx");
 
 export default function FeaturedBlock(featuredBlock) {
   const tmp = callback();
-  let obj = { value: contextDefault(QUICK_SWITCHERDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations, children: null };
-  obj = { style: tmp.container, children: <Subblocks value={contextDefault(QUICK_SWITCHERDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations}>{null}</Subblocks> };
+  let obj = {
+    value: contextDefault(QUICK_SWITCHERDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations,
+    children: null,
+  };
+  obj = {
+    style: tmp.container,
+    children: (
+      <Subblocks value={contextDefault(QUICK_SWITCHERDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations}>
+        {null}
+      </Subblocks>
+    ),
+  };
   obj = { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock };
   obj[1] = <View featuredBlock={arg0.featuredBlock} style={tmp.featuredSubblock} />;
-  return jsx(context.AnalyticsLocationProvider, { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock });
-};
+  return jsx(context.AnalyticsLocationProvider, {
+    featuredBlock: featuredBlock.featuredBlock,
+    style: tmp.featuredSubblock,
+  });
+}

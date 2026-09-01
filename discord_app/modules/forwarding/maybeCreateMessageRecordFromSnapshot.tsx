@@ -15,7 +15,21 @@ export default function maybeCreateMessageRecordFromSnapshot(merge) {
   }
   let mergeResult = merge;
   if (null != tmp) {
-    const obj = { content: null, attachments: null, embeds: null, flags: null, components: null, editedTimestamp: null, timestamp: null, codedLinks: null, reactions: null, messageSnapshots: null, stickers: null, stickerItems: null, customRenderedContent: null };
+    const obj = {
+      content: null,
+      attachments: null,
+      embeds: null,
+      flags: null,
+      components: null,
+      editedTimestamp: null,
+      timestamp: null,
+      codedLinks: null,
+      reactions: null,
+      messageSnapshots: null,
+      stickers: null,
+      stickerItems: null,
+      customRenderedContent: null,
+    };
     obj[0] = tmp.message.content;
     obj[1] = tmp.message.attachments;
     obj[2] = tmp.message.embeds;
@@ -30,4 +44,4 @@ export default function maybeCreateMessageRecordFromSnapshot(merge) {
     mergeResult = merge.merge(obj);
   }
   return mergeResult;
-};
+}

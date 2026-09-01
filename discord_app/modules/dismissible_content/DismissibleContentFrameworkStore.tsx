@@ -11,7 +11,16 @@ import set from "../../../_runtime/00002_set.js";
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = new timestampDefault("DCF");
 let c5 = false;
-let obj = { numberOfDCsShownToday: 0, dailyCapPeriodStart: null, dismissibleContentSeenDuringSession: null, dailyCapOverridden: false, newUserMinAgeRequiredOverridden: false, renderedAtTimestamps: null, lastDismissed: null, seenForGuildId: null };
+let obj = {
+  numberOfDCsShownToday: 0,
+  dailyCapPeriodStart: null,
+  dismissibleContentSeenDuringSession: null,
+  dailyCapOverridden: false,
+  newUserMinAgeRequiredOverridden: false,
+  renderedAtTimestamps: null,
+  lastDismissed: null,
+  seenForGuildId: null,
+};
 let set = new Set();
 obj[2] = set;
 const tmp2 = new timestampDefault("DCF");
@@ -19,8 +28,7 @@ obj[5] = new Map();
 let map = new Map();
 obj[7] = new Map();
 const PersistedStore = initializeDefault.PersistedStore;
-class DismissibleContentFrameworkStore extends PersistedStore {
-}
+class DismissibleContentFrameworkStore extends PersistedStore {}
 const prototype = DismissibleContentFrameworkStore.prototype;
 prototype["initialize"] = function initialize(numberOfDCsShownToday) {
   if (null != numberOfDCsShownToday) {
@@ -55,19 +63,19 @@ Object.defineProperty(prototype, "dailyCapOverridden", {
   get: function dailyCapOverridden(FlashList, arg1) {
     return obj.dailyCapOverridden;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "newUserMinAgeRequiredOverridden", {
   get: function newUserMinAgeRequiredOverridden() {
     return obj.newUserMinAgeRequiredOverridden;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "lastDismissed", {
   get: function lastDismissed() {
     return obj.lastDismissed;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getRenderedAtTimestamp"] = function getRenderedAtTimestamp(closure_0) {
   const renderedAtTimestamps = obj.renderedAtTimestamps;
@@ -130,7 +138,7 @@ const items = [
   (arg0) => {
     const merged = Object.assign(arg0);
     return {};
-  }
+  },
 ];
 DismissibleContentFrameworkStore.migrations = items;
 obj = {
@@ -234,7 +242,7 @@ obj = {
     const set = new Set();
     obj.seenForGuildId = new Map();
     obj.lastDismissed = null;
-  }
+  },
 };
 const dismissibleContentFrameworkStore = new DismissibleContentFrameworkStore(dispatcherDefault, obj);
 let result = set.fileFinishedImporting("modules/dismissible_content/DismissibleContentFrameworkStore.tsx");

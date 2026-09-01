@@ -82,7 +82,7 @@ class Timer extends PureComponent {
         num5 = 1000;
         _Math2 = Math;
         num6 = 86400;
-        result = require("../../../../index.native.tsx") / 1000 % 86400;
+        result = (require("../../../../index.native.tsx") / 1000) % 86400;
         num7 = 3600;
         num = Math.floor(result / 3600);
         _Math3 = Math;

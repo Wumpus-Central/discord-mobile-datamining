@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/device/getMediaPerformanceClas
 
 export default function getMediaPerformanceClass() {
   return DCDDeviceManager.getDeviceMediaPerformanceClass();
-};
+}

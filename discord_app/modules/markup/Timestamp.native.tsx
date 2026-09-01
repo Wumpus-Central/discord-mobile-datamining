@@ -29,6 +29,6 @@ export default function Timestamp(node) {
       obj = { key: "TIMESTAMP", content: node.full };
       obj.open(obj);
     },
-    children: itemsDefault(node)
+    children: itemsDefault(node),
   });
-};
+}

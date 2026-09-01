@@ -7,7 +7,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 createCacheKey = { editIcon: null, xs: null, sm: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = {
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 24, height: 24, borderRadius: ThemesDefault.radii.md };
 const obj1 = { width: 24, height: 24, borderRadius: ThemesDefault.radii.md };
@@ -26,8 +30,16 @@ export default function EditIcon(style) {
   const tmp = callback();
   React = tmp;
   const items = [tmp, style, str];
-  return <View style={React.useMemo(() => {
-    const iconContainerStyle = [editIcon.editIcon, "sm" === str ? editIcon.sm : editIcon.xs, style];
-    return { iconContainerStyle };
-  }, items).iconContainerStyle}>{jsx(style(str[5]).PencilIcon, { size: str })}</View>;
-};
+  return (
+    <View
+      style={
+        React.useMemo(() => {
+          const iconContainerStyle = [editIcon.editIcon, "sm" === str ? editIcon.sm : editIcon.xs, style];
+          return { iconContainerStyle };
+        }, items).iconContainerStyle
+      }
+    >
+      {jsx(style(str[5]).PencilIcon, { size: str })}
+    </View>
+  );
+}

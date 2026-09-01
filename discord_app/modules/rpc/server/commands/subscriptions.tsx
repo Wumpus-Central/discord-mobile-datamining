@@ -8,7 +8,7 @@ const require = arg1;
 let obj = {
   handler(arg0) {
     ({ server: require, socket: importDefault, evt: dependencyMap, args: closure_3 } = arg0);
-    return callback(function*() {
+    return callback(function* () {
       if (initialSubscriptionPayload === 2) {
         initialSubscriptionPayload = 3;
         HermesBuiltin.throwTypeError();
@@ -89,7 +89,10 @@ let obj = {
             return obj;
           } else {
             closure_1 = arg1;
-            if (null != closure_1.validate(initialSubscriptionPayload, closure_0.validation(closure_1), { convert: false }).error) {
+            if (
+              null !=
+              closure_1.validate(initialSubscriptionPayload, closure_0.validation(closure_1), { convert: false }).error
+            ) {
               let obj5 = { errorCode: null };
               obj5[0] = closure_1_5.INVALID_PAYLOAD;
               const tmp64 = new closure_1_1(9503)(obj5, "Invalid subscription parameters provided");
@@ -101,12 +104,20 @@ let obj = {
           obj6[1] = closure_1;
           closure_2 = closure_0.handler(obj6);
           obj5 = closure_1_0(14157);
-          initialSubscriptionPayload = obj5.getInitialSubscriptionPayload(closure_1, closure_2, initialSubscriptionPayload);
+          initialSubscriptionPayload = obj5.getInitialSubscriptionPayload(
+            closure_1,
+            closure_2,
+            initialSubscriptionPayload,
+          );
           const promise = new Promise((arg0) => {
             setImmediate(() => {
               closure_1_0.addSubscription(closure_1_1, closure_1_2, closure_1_3, closure_2);
               if (null != closure_3) {
-                const result = closure_1_0.dispatchToSubscriptions(closure_1_2, (socket) => socket.socket.id === id.id, closure_3);
+                const result = closure_1_0.dispatchToSubscriptions(
+                  closure_1_2,
+                  (socket) => socket.socket.id === id.id,
+                  closure_3,
+                );
               }
             });
             arg0({ evt: closure_2 });
@@ -121,7 +132,7 @@ let obj = {
         }
       }
     })();
-  }
+  },
 };
 obj = {
   handler(arg0) {
@@ -139,7 +150,7 @@ obj = {
       obj[0] = evt;
       return obj;
     }
-  }
+  },
 };
 let result = require("set").fileFinishedImporting("modules/rpc/server/commands/subscriptions.tsx");
 

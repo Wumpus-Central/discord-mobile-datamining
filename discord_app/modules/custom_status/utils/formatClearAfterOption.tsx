@@ -107,4 +107,4 @@ export default function formatClearAfterOption(arg0) {
     obj = isDiscordFrontendDevelopment;
     obj.assertNever(arg0);
   }
-};
+}

@@ -8,7 +8,9 @@ import metadataDefault from "../../../../../../discord_assets/assets/mana/asset-
 
 const Image = get_ActivityIndicator.Image;
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DiscordNitroLockupLogo.native.tsx");
+const result = set.fileFinishedImporting(
+  "design/components/mana-assets/native/generated/DiscordNitroLockupLogo.native.tsx",
+);
 
 export const DiscordNitroLockupLogo = function DiscordNitroLockupLogo(color) {
   let ICON_STRONG = color.color;
@@ -42,7 +44,23 @@ export const DiscordNitroLockupLogo = function DiscordNitroLockupLogo(color) {
     }
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
-  obj1 = { fadeDuration: 0, source: { uri: metadataDefault }, style: items, accessible, accessibilityLabel, resizeMode };
+  obj1 = {
+    fadeDuration: 0,
+    source: { uri: metadataDefault },
+    style: items,
+    accessible,
+    accessibilityLabel,
+    resizeMode,
+  };
   items = [{ width: num * num3, height: num2 * num3 }, tmp6];
-  return <Image fadeDuration={0} source={{ uri: metadataDefault }} style={items} accessible={accessible} accessibilityLabel={accessibilityLabel} resizeMode={resizeMode} />;
+  return (
+    <Image
+      fadeDuration={0}
+      source={{ uri: metadataDefault }}
+      style={items}
+      accessible={accessible}
+      accessibilityLabel={accessibilityLabel}
+      resizeMode={resizeMode}
+    />
+  );
 };

@@ -56,10 +56,16 @@ export default {
     const tmp2 = MAX_FAVORITESDefault;
     const subscription = dispatcherDefault.subscribe("CONNECTION_OPEN", handleConnectionOpen);
     const obj = dispatcherDefault;
-    const subscription1 = dispatcherDefault.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", handleUserSettingsProtoEnqueueUpdate);
+    const subscription1 = dispatcherDefault.subscribe(
+      "USER_SETTINGS_PROTO_ENQUEUE_UPDATE",
+      handleUserSettingsProtoEnqueueUpdate,
+    );
     const obj2 = dispatcherDefault;
-    const subscription2 = dispatcherDefault.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", handleUserSettingsProtoLoadIfNecessary);
+    const subscription2 = dispatcherDefault.subscribe(
+      "USER_SETTINGS_PROTO_LOAD_IF_NECESSARY",
+      handleUserSettingsProtoLoadIfNecessary,
+    );
     const obj3 = dispatcherDefault;
     const subscription3 = dispatcherDefault.subscribe("APP_STATE_UPDATE", handleAppStateUpdate);
-  }
+  },
 };

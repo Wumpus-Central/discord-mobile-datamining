@@ -20,7 +20,7 @@ export default function ScheduledMessageCardActionButtons(arg0) {
   obj[2] = function action() {
     return closure_1_0(closure_1_2[3]).sendScheduledMessageNow(closure_0.scheduledMessageId);
   };
-  const items = [obj, , , ];
+  const items = [obj, , ,];
   obj = { label: null, IconComponent: null, action: null };
   const intl2 = getSystemLocale.intl;
   obj[0] = intl2.string(getSystemLocale.t.ZXE1s4);
@@ -34,7 +34,11 @@ export default function ScheduledMessageCardActionButtons(arg0) {
   obj[0] = intl3.string(getSystemLocale.t.SBcdAN);
   obj[1] = ClockIcon.ClockIcon;
   obj[2] = function action() {
-    return closure_1_0(closure_1_2[3]).openRescheduleMessageActionSheet(closure_0.scheduledMessageId, closure_0.sendAtTimestamp, closure_0.createArgs.channelId);
+    return closure_1_0(closure_1_2[3]).openRescheduleMessageActionSheet(
+      closure_0.scheduledMessageId,
+      closure_0.sendAtTimestamp,
+      closure_0.createArgs.channelId,
+    );
   };
   items[2] = obj;
   obj1 = { label: null, IconComponent: null, action: null, variant: "destructive" };
@@ -60,6 +64,6 @@ export default function ScheduledMessageCardActionButtons(arg0) {
       obj.disabled = closure_1;
       obj.icon = closure_1_1(closure_1_2[9]);
       return closure_1_3(closure_1_0(closure_1_2[8]).IconButton, obj);
-    }
+    },
   });
-};
+}

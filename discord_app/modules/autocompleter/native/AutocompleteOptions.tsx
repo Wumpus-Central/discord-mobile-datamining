@@ -15,10 +15,19 @@ import set from "../../emojis/EmojiConstants.tsx";
 
 const require = arg1;
 ({ AutoCompleteResultTypes: c10, MAX_AUTOCOMPLETE_RESULTS: unpackModuleId } = ME);
-({ MENTION_SENTINEL: closure_12, EMOJI_SENTINEL: map1, CHANNEL_SENTINEL: closure_14, COMMAND_SENTINEL: closure_15 } = regExp);
+({
+  MENTION_SENTINEL: closure_12,
+  EMOJI_SENTINEL: map1,
+  CHANNEL_SENTINEL: closure_14,
+  COMMAND_SENTINEL: closure_15,
+} = regExp);
 ({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = set);
 let c20 = false;
-let closure_21 = applyDefault.debounce(_executeCommandDefault, require("TRUE_OPTION_NAME").AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
+let closure_21 = applyDefault.debounce(
+  _executeCommandDefault,
+  require("TRUE_OPTION_NAME").AUTOCOMPLETE_OPTION_DEBOUNCE_TIME,
+  { leading: true, trailing: true },
+);
 let result = set.fileFinishedImporting("modules/autocompleter/native/AutocompleteOptions.tsx");
 
 export const getAutocompleteOptions = function getAutocompleteOptions(channel, arg1, setting) {
@@ -35,7 +44,17 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
     stores: items,
     queryResults(query, canMentionEveryone) {
       let obj = flag(flag2[14]);
-      obj = { query, channel: closure_0, canMentionEveryone: null, canMentionHere: null, canMentionUsers: null, canMentionRoles: null, includeAllGuildUsers: null, includeNonMentionableRoles: null, request: null };
+      obj = {
+        query,
+        channel: closure_0,
+        canMentionEveryone: null,
+        canMentionHere: null,
+        canMentionUsers: null,
+        canMentionRoles: null,
+        includeAllGuildUsers: null,
+        includeNonMentionableRoles: null,
+        request: null,
+      };
       canMentionEveryone = undefined;
       if (canMentionEveryone != null) {
         canMentionEveryone = canMentionEveryone.canMentionEveryone;
@@ -83,14 +102,14 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         ...roles.map((arg0) => {
           const merged = Object.assign(arg0);
           return { type: constants.ROLE };
-        })
+        }),
       ];
       const tmpResult = flag(flag2[12]);
       return flag(flag2[12])(items).value();
     },
     matches(arg0, arg1) {
       return flag(flag2[14]).matchSentinel(arg0, arg1, closure_12);
-    }
+    },
   };
   items = [closure_8, closure_5];
   obj = {
@@ -112,7 +131,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
     },
     matches() {
       return false;
-    }
+    },
   };
   items1 = [closure_5];
   obj = {
@@ -138,7 +157,11 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         result = obj.queryChannelResults(obj);
       }
       const channels = result.channels;
-      return channels.map((channel) => ({ type: constants.CHANNEL, channel, category: channel.getChannel(channel.parent_id) }));
+      return channels.map((channel) => ({
+        type: constants.CHANNEL,
+        channel,
+        category: channel.getChannel(channel.parent_id),
+      }));
     },
     matches(arg0, arg1) {
       const isPrivateResult = _private.isPrivate();
@@ -148,7 +171,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         const obj = flag(flag2[14]);
       }
       return matchSentinelResult;
-    }
+    },
   };
   let items2 = [closure_4, closure_3];
   return {
@@ -195,29 +218,38 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
             }
             const items4 = [];
             const unlocked = queryEmojiResultsResult.emojis.unlocked;
-            let arraySpreadResult = HermesBuiltin.arraySpread(items1.map((sticker) => {
-              sticker = sticker.sticker;
-              return { type: constants.STICKER, name: sticker.name, sticker };
-            }), 0);
-            arraySpreadResult = HermesBuiltin.arraySpread(items5, HermesBuiltin.arraySpread(unlocked.map((name) => {
-              let obj = { type: constants.EMOJI, name: name.name, url: null, surrogates: null };
-              if (null != name.id) {
-                obj = { id: null, animated: null, size: null };
-                ({ id: obj3[0], animated: obj3[1] } = name);
-                obj[2] = closure_19;
-                let url = callback2(1431).getEmojiURL(obj);
-                const obj2 = callback2(1431);
-              } else {
-                url = name.url;
-              }
-              obj[2] = url;
-              let surrogates;
-              if (null == name.id) {
-                surrogates = name.surrogates;
-              }
-              obj[3] = surrogates;
-              return obj;
-            }), arraySpreadResult));
+            let arraySpreadResult = HermesBuiltin.arraySpread(
+              items1.map((sticker) => {
+                sticker = sticker.sticker;
+                return { type: constants.STICKER, name: sticker.name, sticker };
+              }),
+              0,
+            );
+            arraySpreadResult = HermesBuiltin.arraySpread(
+              items5,
+              HermesBuiltin.arraySpread(
+                unlocked.map((name) => {
+                  let obj = { type: constants.EMOJI, name: name.name, url: null, surrogates: null };
+                  if (null != name.id) {
+                    obj = { id: null, animated: null, size: null };
+                    ({ id: obj3[0], animated: obj3[1] } = name);
+                    obj[2] = closure_19;
+                    let url = callback2(1431).getEmojiURL(obj);
+                    const obj2 = callback2(1431);
+                  } else {
+                    url = name.url;
+                  }
+                  obj[2] = url;
+                  let surrogates;
+                  if (null == name.id) {
+                    surrogates = name.surrogates;
+                  }
+                  obj[3] = surrogates;
+                  return obj;
+                }),
+                arraySpreadResult,
+              ),
+            );
             return items4;
           }
         }
@@ -237,7 +269,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
           tmp2 = tmp6;
         }
         return tmp2;
-      }
+      },
     },
     [closure_16.SLASHES]: {
       queryResults() {
@@ -256,7 +288,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
           tmp = !tmp4;
         }
         return tmp;
-      }
+      },
     },
     [closure_16.SLASHES_DISCOVERY]: {
       queryResults() {
@@ -274,7 +306,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
           tmp = 0 === arg1.length;
         }
         return tmp;
-      }
+      },
     },
     [closure_16.CHOICES]: {
       stores: items2,
@@ -347,7 +379,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
       },
       matches() {
         return false;
-      }
-    }
+      },
+    },
   };
 };

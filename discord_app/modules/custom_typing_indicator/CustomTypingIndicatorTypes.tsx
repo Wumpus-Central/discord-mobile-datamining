@@ -2,7 +2,11 @@
 import set from "../../../_runtime/00002_set.js";
 import create from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 
-let obj = { emojis: [], typingSuggestion: create.TypingSuggestion.UNSPECIFIED, animation: create.TypingIndicatorAnimation.UNSPECIFIED };
+let obj = {
+  emojis: [],
+  typingSuggestion: create.TypingSuggestion.UNSPECIFIED,
+  animation: create.TypingIndicatorAnimation.UNSPECIFIED,
+};
 const result = set.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorTypes.tsx");
 
 export const CUSTOM_TYPING_INDICATOR_EMOJI_COUNT = 3;
@@ -39,7 +43,7 @@ export const serializeTypingIndicatorStyle = function serializeTypingIndicatorSt
       return obj;
     }),
     animation: typingIndicatorStyle.animation,
-    typing_suggestion: typingIndicatorStyle.typingSuggestion
+    typing_suggestion: typingIndicatorStyle.typingSuggestion,
   };
 };
 export const parseServerTypingIndicatorStyle = function parseServerTypingIndicatorStyle(typing_indicator_style) {

@@ -52,6 +52,6 @@ export default function OnboardingHomeScrollView(children) {
     scrollEventThrottle: 16,
     style: callback().guildFeedBackground,
     contentContainerStyle: React.useMemo(() => ({ paddingBottom: 16 + bottom, marginTop: headerOffset }), items2),
-    children: children.children
+    children: children.children,
   });
-};
+}

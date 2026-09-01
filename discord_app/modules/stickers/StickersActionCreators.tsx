@@ -17,7 +17,7 @@ function _fetchStickerPack() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       closure_3 = tmp2;
       body = tmp5;
       obj1 = { url: null, rejectWithError: null };
@@ -50,7 +50,7 @@ function _fetchStickerPacks() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       dependencyMap = tmp3;
       let sticker_packs = tmp2;
       obj1 = locale;
@@ -125,7 +125,7 @@ function _fetchSticker() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -219,7 +219,7 @@ function _fetchGuildStickersWithCreator() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -310,7 +310,7 @@ function _deleteGuildSticker() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -381,7 +381,7 @@ function _createGuildSticker() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const table = tmp2;
       let lib = tmp5;
       guildId = guildId.guildId;
@@ -395,7 +395,7 @@ function _createGuildSticker() {
       if ("mobile" === guildId.platform) {
         const obj2 = { name: "name", value: null };
         obj2[1] = tmp33.name;
-        const items = [obj2, , ];
+        const items = [obj2, ,];
         const obj3 = { name: "tags", value: null };
         obj3[1] = tmp33.tags;
         items[1] = obj3;
@@ -449,7 +449,7 @@ function _updateGuildSticker() {
     closure_2 = arg2;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const HTTP = callback(530).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_9.GUILD_STICKER(callback, closure_1);
@@ -553,58 +553,68 @@ export const clearStickerPreview = function clearStickerPreview(channelId, draft
 };
 export const favoriteSticker = function favoriteSticker(id) {
   const _require = id;
-  const FrecencyUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
-  FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", (stickerIds) => {
-    stickerIds = stickerIds.stickerIds;
-    let tmp = stickerIds;
-    if (closure_1_6.totalUnavailableGuilds <= 0) {
-      let found = stickerIds;
-      if (closure_1_4.isConnected()) {
-        found = stickerIds.filter((arg0) => null != stickerById.getStickerById(arg0));
-      }
-      tmp = found;
-    }
-    stickerIds.stickerIds = tmp;
-    let obj = closure_1_1(closure_1_2[14]);
-    if (obj.size(stickerIds.stickerIds) >= closure_1_10) {
-      obj = { title: null, body: null };
-      const intl = id(tmp5[16]).intl;
-      obj[0] = intl.string(id(tmp5[16]).t["+XYXtZ"]);
-      const intl2 = id(tmp5[16]).intl;
-      obj = { count: null };
-      obj[0] = tmp6;
-      obj[1] = intl2.formatToPlainString(id(tmp5[16]).t.JaIyFi, obj);
-      closure_1_1(tmp5[15]).show(obj);
-      let flag = false;
-      const tmp4Result = closure_1_1(tmp5[15]);
-    } else {
+  const FrecencyUserSettingsActionCreators =
+    require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
+  FrecencyUserSettingsActionCreators.updateAsync(
+    "favoriteStickers",
+    (stickerIds) => {
       stickerIds = stickerIds.stickerIds;
-      const hasItem = stickerIds.includes(id);
-      flag = !hasItem;
-      if (!hasItem) {
-        const stickerIds1 = stickerIds.stickerIds;
-        stickerIds1.push(tmp7);
+      let tmp = stickerIds;
+      if (closure_1_6.totalUnavailableGuilds <= 0) {
+        let found = stickerIds;
+        if (closure_1_4.isConnected()) {
+          found = stickerIds.filter((arg0) => null != stickerById.getStickerById(arg0));
+        }
+        tmp = found;
       }
-      tmp7 = id;
-    }
-    return flag;
-  }, constants.INFREQUENT_USER_ACTION);
+      stickerIds.stickerIds = tmp;
+      let obj = closure_1_1(closure_1_2[14]);
+      if (obj.size(stickerIds.stickerIds) >= closure_1_10) {
+        obj = { title: null, body: null };
+        const intl = id(tmp5[16]).intl;
+        obj[0] = intl.string(id(tmp5[16]).t["+XYXtZ"]);
+        const intl2 = id(tmp5[16]).intl;
+        obj = { count: null };
+        obj[0] = tmp6;
+        obj[1] = intl2.formatToPlainString(id(tmp5[16]).t.JaIyFi, obj);
+        closure_1_1(tmp5[15]).show(obj);
+        let flag = false;
+        const tmp4Result = closure_1_1(tmp5[15]);
+      } else {
+        stickerIds = stickerIds.stickerIds;
+        const hasItem = stickerIds.includes(id);
+        flag = !hasItem;
+        if (!hasItem) {
+          const stickerIds1 = stickerIds.stickerIds;
+          stickerIds1.push(tmp7);
+        }
+        tmp7 = id;
+      }
+      return flag;
+    },
+    constants.INFREQUENT_USER_ACTION,
+  );
 };
 export const unfavoriteSticker = function unfavoriteSticker(id) {
   const _require = id;
-  const FrecencyUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
-  FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", (stickerIds) => {
-    stickerIds = stickerIds.stickerIds;
-    stickerIds.stickerIds = stickerIds.filter((arg0) => arg0 !== closure_0);
-    const stickerIds1 = stickerIds.stickerIds;
-    let tmp = stickerIds1;
-    if (closure_1_6.totalUnavailableGuilds <= 0) {
-      let found = stickerIds1;
-      if (closure_1_4.isConnected()) {
-        found = stickerIds1.filter((arg0) => null != stickerById.getStickerById(arg0));
+  const FrecencyUserSettingsActionCreators =
+    require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
+  FrecencyUserSettingsActionCreators.updateAsync(
+    "favoriteStickers",
+    (stickerIds) => {
+      stickerIds = stickerIds.stickerIds;
+      stickerIds.stickerIds = stickerIds.filter((arg0) => arg0 !== closure_0);
+      const stickerIds1 = stickerIds.stickerIds;
+      let tmp = stickerIds1;
+      if (closure_1_6.totalUnavailableGuilds <= 0) {
+        let found = stickerIds1;
+        if (closure_1_4.isConnected()) {
+          found = stickerIds1.filter((arg0) => null != stickerById.getStickerById(arg0));
+        }
+        tmp = found;
       }
-      tmp = found;
-    }
-    stickerIds.stickerIds = tmp;
-  }, constants.INFREQUENT_USER_ACTION);
+      stickerIds.stickerIds = tmp;
+    },
+    constants.INFREQUENT_USER_ACTION,
+  );
 };

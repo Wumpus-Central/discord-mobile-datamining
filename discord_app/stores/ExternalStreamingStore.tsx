@@ -26,7 +26,7 @@ function _getTwitchGame() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       closure_3 = tmp2;
       let name = tmp3;
       if (null != closure_1_14[closure_0]) {
@@ -106,7 +106,7 @@ prototype["_checkTwitch"] = function _checkTwitch(accessToken, arg1) {
   }
   let thumbnail_url = tmp;
   let game_id = this;
-  return title(function*() {
+  return title(function* () {
     if (c8 === 2) {
       c8 = 3;
       HermesBuiltin.throwTypeError();
@@ -177,8 +177,13 @@ prototype["_checkTwitch"] = function _checkTwitch(accessToken, arg1) {
             if (null == thumbnail_url) {
               let obj8 = callback(closure_1_2[6]);
               const refreshAccessTokenResult = obj8.refreshAccessToken(accessToken.type, accessToken.id);
-              catchPromise = obj8.refreshAccessToken(accessToken.type, accessToken.id).then((arg0) => name._checkTwitch(accessToken, arg0)).catch(() => null);
-              const nextPromise = obj8.refreshAccessToken(accessToken.type, accessToken.id).then((arg0) => name._checkTwitch(accessToken, arg0));
+              catchPromise = obj8
+                .refreshAccessToken(accessToken.type, accessToken.id)
+                .then((arg0) => name._checkTwitch(accessToken, arg0))
+                .catch(() => null);
+              const nextPromise = obj8
+                .refreshAccessToken(accessToken.type, accessToken.id)
+                .then((arg0) => name._checkTwitch(accessToken, arg0));
             }
           }
           c8 = 3;
@@ -311,7 +316,7 @@ prototype["_checkYouTube"] = function _checkYouTube(c0, arg1) {
   }
   c1 = tmp;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (constants === 2) {
       constants = 3;
       HermesBuiltin.throwTypeError();
@@ -355,7 +360,13 @@ prototype["_checkYouTube"] = function _checkYouTube(c0, arg1) {
                 arr = 1;
                 const HTTP = closure_1_0(closure_1_2[5]).HTTP;
                 let get = HTTP.get;
-                obj1 = { url: "https://www.googleapis.com/youtube/v3/liveBroadcasts", query: null, headers: null, oldFormErrors: true, rejectWithError: false };
+                obj1 = {
+                  url: "https://www.googleapis.com/youtube/v3/liveBroadcasts",
+                  query: null,
+                  headers: null,
+                  oldFormErrors: true,
+                  rejectWithError: false,
+                };
                 obj1[1] = { part: "id,snippet", broadcastStatus: "active", broadcastType: "all" };
                 if (null != closure_1_1) {
                   let accessToken = closure_1_1;
@@ -385,8 +396,13 @@ prototype["_checkYouTube"] = function _checkYouTube(c0, arg1) {
           }
           let obj5 = closure_1_1(closure_1_2[6]);
           const refreshAccessTokenResult = obj5.refreshAccessToken(closure_1_0.type, closure_1_0.id);
-          obj5.refreshAccessToken(closure_1_0.type, closure_1_0.id).then((arg0) => id._checkYouTube(c0, arg0)).catch(() => null);
-          const nextPromise = obj5.refreshAccessToken(closure_1_0.type, closure_1_0.id).then((arg0) => id._checkYouTube(c0, arg0));
+          obj5
+            .refreshAccessToken(closure_1_0.type, closure_1_0.id)
+            .then((arg0) => id._checkYouTube(c0, arg0))
+            .catch(() => null);
+          const nextPromise = obj5
+            .refreshAccessToken(closure_1_0.type, closure_1_0.id)
+            .then((arg0) => id._checkYouTube(c0, arg0));
         } else if (arg0 === 1) {
           constants = 3;
           throw arg1;
@@ -408,7 +424,10 @@ prototype["_checkYouTube"] = function _checkYouTube(c0, arg1) {
             snippet = closure_1.snippet;
             arr = snippet.title;
             thumbnails = snippet.thumbnails;
-            const assetFromImageURL = closure_1_0(closure_1_2[8]).getAssetFromImageURL(constants.YOUTUBE, thumbnails.high.url);
+            const assetFromImageURL = closure_1_0(closure_1_2[8]).getAssetFromImageURL(
+              constants.YOUTUBE,
+              thumbnails.high.url,
+            );
             length = assetFromImageURL;
             if (assetFromImageURL == null) {
               length = undefined;
@@ -467,14 +486,16 @@ prototype["_check"] = function _check() {
         closure_11 = timestamp + closure_8;
       }
       const found = accounts.filter((type) => items.includes(type.type));
-      Promise.allSettled(found.map((type) => {
-        if (type.type === closure_1_6.TWITCH) {
-          let _checkTwitchResult = self._checkTwitch(type);
-        } else {
-          _checkTwitchResult = self._checkYouTube(type);
-        }
-        return _checkTwitchResult;
-      })).then((arr) => {
+      Promise.allSettled(
+        found.map((type) => {
+          if (type.type === closure_1_6.TWITCH) {
+            let _checkTwitchResult = self._checkTwitch(type);
+          } else {
+            _checkTwitchResult = self._checkYouTube(type);
+          }
+          return _checkTwitchResult;
+        }),
+      ).then((arr) => {
         obj = self;
         if (self._started) {
           const iter = arr.find((status) => {
@@ -502,14 +523,16 @@ prototype["_check"] = function _check() {
         }
         obj._scheduleCheck();
       });
-      const allSettledResult = Promise.allSettled(found.map((type) => {
-        if (type.type === closure_1_6.TWITCH) {
-          let _checkTwitchResult = self._checkTwitch(type);
-        } else {
-          _checkTwitchResult = self._checkYouTube(type);
-        }
-        return _checkTwitchResult;
-      }));
+      const allSettledResult = Promise.allSettled(
+        found.map((type) => {
+          if (type.type === closure_1_6.TWITCH) {
+            let _checkTwitchResult = self._checkTwitch(type);
+          } else {
+            _checkTwitchResult = self._checkYouTube(type);
+          }
+          return _checkTwitchResult;
+        }),
+      );
       tmp5 = PlatformTypes;
     }
   }
@@ -524,8 +547,7 @@ prototype["_scheduleCheck"] = function _scheduleCheck() {
 let obj = Object.create(StreamingPoller.prototype);
 obj._started = false;
 const Store = initializeDefault.Store;
-class ExternalStreamingStore extends Store {
-}
+class ExternalStreamingStore extends Store {}
 const prototype2 = ExternalStreamingStore.prototype;
 prototype2["initialize"] = function initialize() {
   if (closure_5.enabled) {
@@ -552,7 +574,7 @@ obj = {
   },
   USER_CONNECTIONS_UPDATE() {
     return obj._check();
-  }
+  },
 };
 const externalStreamingStore = new ExternalStreamingStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("stores/ExternalStreamingStore.tsx");

@@ -21,7 +21,9 @@ createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: 38 }
 createCacheKey[3] = { textAlign: "center" };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: 38 };
-const result = require("set").fileFinishedImporting("modules/verification/native/components/ChangeEmailCollectReasons.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/verification/native/components/ChangeEmailCollectReasons.tsx",
+);
 
 export default function ChangeEmailCollectReasons(changeEmailReason) {
   changeEmailReason = changeEmailReason.changeEmailReason;
@@ -60,11 +62,17 @@ export default function ChangeEmailCollectReasons(changeEmailReason) {
     obj[2] = tmp.background;
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    obj1 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    obj1 = {
+      style: null,
+      accessibilityRole: "header",
+      variant: "heading-xl/extrabold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj1[0] = tmp.title;
     const intl = tmp2(tmp3[16]).intl;
     obj1[4] = intl.string(tmp2(tmp3[16]).t["41NIIh"]);
-    const items4 = [callback(tmp2(tmp3[15]).Text, obj1), , ];
+    const items4 = [callback(tmp2(tmp3[15]).Text, obj1), ,];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.radioGroup;
     obj2[1] = tmp8;
@@ -80,4 +88,4 @@ export default function ChangeEmailCollectReasons(changeEmailReason) {
     tmp9 = callback(closure_5, obj);
   }
   return tmp9;
-};
+}

@@ -34,7 +34,13 @@ function getConsoleInfo(type) {
   }
 }
 createCacheKey = { consoleIconContainer: null, consoleIcon: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.round, padding: 8, margin: -3, borderWidth: 3, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.round,
+  padding: 8,
+  margin: -3,
+  borderWidth: 3,
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { tintColor: ThemesDefault.colors.WHITE };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
@@ -60,5 +66,5 @@ export default function VoicePanelConsoleFacepile() {
     return closure_1_5(lib2(closure_1_2[9]), obj);
   }, items1);
   return jsx(require("../../../../design/void/native.tsx").SummarizedIconRow, { items, renderItem, offsetAmount: -3 });
-};
+}
 export { getConsoleInfo };

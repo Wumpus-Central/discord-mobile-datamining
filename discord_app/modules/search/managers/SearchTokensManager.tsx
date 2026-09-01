@@ -9,7 +9,10 @@ initializeDefault;
 class SearchTokensManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    obj = { USER_SETTINGS_PROTO_UPDATE: require("SearchTokenTypes").refreshSearchTokens, POST_CONNECTION_OPEN: require("SearchTokenTypes").refreshSearchTokens };
+    obj = {
+      USER_SETTINGS_PROTO_UPDATE: require("SearchTokenTypes").refreshSearchTokens,
+      POST_CONNECTION_OPEN: require("SearchTokenTypes").refreshSearchTokens,
+    };
     applyArgumentsResult.actions = obj;
     return applyArgumentsResult;
   }

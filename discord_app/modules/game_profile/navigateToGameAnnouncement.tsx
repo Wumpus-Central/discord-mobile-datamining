@@ -10,7 +10,7 @@ function _navigateToGameAnnouncement() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (guild === 2) {
         guild = 3;
         HermesBuiltin.throwTypeError();
@@ -177,4 +177,4 @@ export default function navigateToGameAnnouncement() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

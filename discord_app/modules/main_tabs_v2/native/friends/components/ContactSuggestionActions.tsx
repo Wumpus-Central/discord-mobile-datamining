@@ -3,7 +3,12 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import { Easing, Easing as Easing2, Easing as Easing3, Easing as Easing4 } from "../../../../reanimated/ReanimatedRexport.tsx";
+import {
+  Easing,
+  Easing as Easing2,
+  Easing as Easing3,
+  Easing as Easing4,
+} from "../../../../reanimated/ReanimatedRexport.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
@@ -17,16 +22,36 @@ obj[1] = Easing3.in(require("../../../../reanimated/ReanimatedRexport.tsx").Easi
 let obj1 = { duration: 250, easing: null };
 obj1[1] = Easing4.out(require("../../../../reanimated/ReanimatedRexport.tsx").Easing.quad);
 let closure_11 = { mass: 1, stiffness: 172, damping: 17.3 };
-let obj2 = { icon: { position: "absolute", top: 4, zIndex: 2, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, opacity: 0 } };
+let obj2 = {
+  icon: { position: "absolute", top: 4, zIndex: 2, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, opacity: 0 },
+};
 let closure_12 = createCacheKey.createStyles(obj2);
-let closure_13 = { code: "function ContactSuggestionActionsTsx1(){const{right,opacity,scale}=this.__closure;return{right:right.get(),opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };
-let closure_14 = { code: "function ContactSuggestionActionsTsx2(){const{buttonOpacity}=this.__closure;return{opacity:buttonOpacity.get()};}" };
+let closure_13 = {
+  code: "function ContactSuggestionActionsTsx1(){const{right,opacity,scale}=this.__closure;return{right:right.get(),opacity:opacity.get(),transform:[{scale:scale.get()}]};}",
+};
+let closure_14 = {
+  code: "function ContactSuggestionActionsTsx2(){const{buttonOpacity}=this.__closure;return{opacity:buttonOpacity.get()};}",
+};
 let closure_15 = { code: "function ContactSuggestionActionsTsx3(){const{added}=this.__closure;return added.get();}" };
-let closure_16 = { code: "function ContactSuggestionActionsTsx4(added){const{animate,runOnJS,finishAnimationCallback,scale,withTiming,SCALE_CONFIG,opacity,OPACITY_CONFIG,buttonOpacity,right,withSpring,SPRING_CONFIG,withDelay,OPACITY_OUT_CONFIG,TRANSLATE_OUT_CONFIG}=this.__closure;if(!animate){runOnJS(finishAnimationCallback)();return;}if(added){scale.set(withTiming(1,SCALE_CONFIG));opacity.set(withTiming(1,OPACITY_CONFIG));buttonOpacity.set(withTiming(0,OPACITY_CONFIG));right.set(withSpring(12,SPRING_CONFIG,'respect-motion-settings',function(finished){if(!finished)return;opacity.set(withDelay(1000,withTiming(0,OPACITY_OUT_CONFIG)));scale.set(withDelay(1000,withTiming(0.5,SCALE_CONFIG)));right.set(withDelay(1000,withTiming(-8,TRANSLATE_OUT_CONFIG,'respect-motion-settings',function(finished){if(finished)runOnJS(finishAnimationCallback)();})));}));}else{buttonOpacity.set(1);scale.set(0.5);opacity.set(0);right.set(30);}}" };
-let closure_17 = { code: "function ContactSuggestionActionsTsx5(finished){const{opacity,withDelay,withTiming,OPACITY_OUT_CONFIG,scale,SCALE_CONFIG,right,TRANSLATE_OUT_CONFIG,runOnJS,finishAnimationCallback}=this.__closure;if(!finished)return;opacity.set(withDelay(1000,withTiming(0,OPACITY_OUT_CONFIG)));scale.set(withDelay(1000,withTiming(0.5,SCALE_CONFIG)));right.set(withDelay(1000,withTiming(-8,TRANSLATE_OUT_CONFIG,'respect-motion-settings',function(finished){if(finished)runOnJS(finishAnimationCallback)();})));}" };
-let closure_18 = { code: "function ContactSuggestionActionsTsx6(finished){const{runOnJS,finishAnimationCallback}=this.__closure;if(finished)runOnJS(finishAnimationCallback)();}" };
-let obj3 = { position: "absolute", top: 4, zIndex: 2, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, opacity: 0 };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionActions.tsx");
+let closure_16 = {
+  code: "function ContactSuggestionActionsTsx4(added){const{animate,runOnJS,finishAnimationCallback,scale,withTiming,SCALE_CONFIG,opacity,OPACITY_CONFIG,buttonOpacity,right,withSpring,SPRING_CONFIG,withDelay,OPACITY_OUT_CONFIG,TRANSLATE_OUT_CONFIG}=this.__closure;if(!animate){runOnJS(finishAnimationCallback)();return;}if(added){scale.set(withTiming(1,SCALE_CONFIG));opacity.set(withTiming(1,OPACITY_CONFIG));buttonOpacity.set(withTiming(0,OPACITY_CONFIG));right.set(withSpring(12,SPRING_CONFIG,'respect-motion-settings',function(finished){if(!finished)return;opacity.set(withDelay(1000,withTiming(0,OPACITY_OUT_CONFIG)));scale.set(withDelay(1000,withTiming(0.5,SCALE_CONFIG)));right.set(withDelay(1000,withTiming(-8,TRANSLATE_OUT_CONFIG,'respect-motion-settings',function(finished){if(finished)runOnJS(finishAnimationCallback)();})));}));}else{buttonOpacity.set(1);scale.set(0.5);opacity.set(0);right.set(30);}}",
+};
+let closure_17 = {
+  code: "function ContactSuggestionActionsTsx5(finished){const{opacity,withDelay,withTiming,OPACITY_OUT_CONFIG,scale,SCALE_CONFIG,right,TRANSLATE_OUT_CONFIG,runOnJS,finishAnimationCallback}=this.__closure;if(!finished)return;opacity.set(withDelay(1000,withTiming(0,OPACITY_OUT_CONFIG)));scale.set(withDelay(1000,withTiming(0.5,SCALE_CONFIG)));right.set(withDelay(1000,withTiming(-8,TRANSLATE_OUT_CONFIG,'respect-motion-settings',function(finished){if(finished)runOnJS(finishAnimationCallback)();})));}",
+};
+let closure_18 = {
+  code: "function ContactSuggestionActionsTsx6(finished){const{runOnJS,finishAnimationCallback}=this.__closure;if(finished)runOnJS(finishAnimationCallback)();}",
+};
+let obj3 = {
+  position: "absolute",
+  top: 4,
+  zIndex: 2,
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  opacity: 0,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/friends/components/ContactSuggestionActions.tsx",
+);
 
 export const ContactSuggestionActions = function ContactSuggestionActions(user) {
   user = user.user;
@@ -137,7 +162,9 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
               const result = closure_7.set(obj.withDelay(1000, closure_1_0(closure_1_2[7]).withTiming(0, closure_1_8)));
               const obj2 = closure_1_0(closure_1_2[7]);
               const obj3 = closure_1_0(closure_1_2[3]);
-              const result1 = closure_6.set(obj3.withDelay(1000, closure_1_0(closure_1_2[7]).withTiming(0.5, closure_1_9)));
+              const result1 = closure_6.set(
+                obj3.withDelay(1000, closure_1_0(closure_1_2[7]).withTiming(0.5, closure_1_9)),
+              );
               const obj4 = closure_1_0(closure_1_2[7]);
               const obj6 = closure_1_0(closure_1_2[7]);
               const fn = function n(arg0) {
@@ -152,11 +179,27 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
               fn.__closure = obj;
               fn.__workletHash = 5242616772399;
               fn.__initData = closure_1_18;
-              const result2 = closure_5.set(closure_1_0(closure_1_2[3]).withDelay(1000, obj6.withTiming(-8, closure_1_10, "respect-motion-settings", fn)));
+              const result2 = closure_5.set(
+                closure_1_0(closure_1_2[3]).withDelay(
+                  1000,
+                  obj6.withTiming(-8, closure_1_10, "respect-motion-settings", fn),
+                ),
+              );
               const obj5 = closure_1_0(closure_1_2[3]);
             }
           };
-          obj = { opacity: null, withDelay: null, withTiming: null, OPACITY_OUT_CONFIG: null, scale: null, SCALE_CONFIG: null, right: null, TRANSLATE_OUT_CONFIG: null, runOnJS: null, finishAnimationCallback: null };
+          obj = {
+            opacity: null,
+            withDelay: null,
+            withTiming: null,
+            OPACITY_OUT_CONFIG: null,
+            scale: null,
+            SCALE_CONFIG: null,
+            right: null,
+            TRANSLATE_OUT_CONFIG: null,
+            runOnJS: null,
+            finishAnimationCallback: null,
+          };
           obj[0] = closure_7;
           tmp32 = user;
           tmp33 = onAddSuggestion;
@@ -210,7 +253,23 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
       return;
     }
   }
-  obj = { animate, runOnJS: user(onAddSuggestion[3]).runOnJS, finishAnimationCallback: callback, scale: sharedValue1, withTiming: user(onAddSuggestion[7]).withTiming, SCALE_CONFIG: callback, opacity: sharedValue2, OPACITY_CONFIG: sharedValue2, buttonOpacity: sharedValue3, right: sharedValue, withSpring: user(onAddSuggestion[8]).withSpring, SPRING_CONFIG: closure_11, withDelay: user(onAddSuggestion[3]).withDelay, OPACITY_OUT_CONFIG: sharedValue3, TRANSLATE_OUT_CONFIG: obj1 };
+  obj = {
+    animate,
+    runOnJS: user(onAddSuggestion[3]).runOnJS,
+    finishAnimationCallback: callback,
+    scale: sharedValue1,
+    withTiming: user(onAddSuggestion[7]).withTiming,
+    SCALE_CONFIG: callback,
+    opacity: sharedValue2,
+    OPACITY_CONFIG: sharedValue2,
+    buttonOpacity: sharedValue3,
+    right: sharedValue,
+    withSpring: user(onAddSuggestion[8]).withSpring,
+    SPRING_CONFIG: closure_11,
+    withDelay: user(onAddSuggestion[3]).withDelay,
+    OPACITY_OUT_CONFIG: sharedValue3,
+    TRANSLATE_OUT_CONFIG: obj1,
+  };
   D.__closure = obj;
   D.__workletHash = 6602847520399;
   D.__initData = closure_16;
@@ -220,7 +279,7 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
   items2 = [tmp.icon, animatedStyle];
   obj2 = { source: added(onAddSuggestion[10]), color: tmp.icon.color };
   obj1[2] = sharedValue(user(onAddSuggestion[9]).Icon, obj2);
-  const items3 = [sharedValue(added(onAddSuggestion[3]).View, obj1), ];
+  const items3 = [sharedValue(added(onAddSuggestion[3]).View, obj1)];
   obj3 = { style: animatedStyle1, children: null };
   obj4 = { variant: "secondary", size: str, grow: false, text: null, onPress: null };
   const intl = user(onAddSuggestion[12]).intl;

@@ -16,12 +16,19 @@ export function consumeNextFavoritesGuildViewSource() {
   manual_browsing = "manual_browsing";
   return manual_browsing;
 }
-export const trackFavoritesGuildAddToFavorites = function trackFavoritesGuildAddToFavorites(source, type, total_favorites) {
+export const trackFavoritesGuildAddToFavorites = function trackFavoritesGuildAddToFavorites(
+  source,
+  type,
+  total_favorites,
+) {
   let obj = expandEventPropertiesDefault;
   obj = { source, channel_type: type, total_favorites };
   obj.track(AnalyticEvents.FAVORITES_GUILD_ADD_TO_FAVORITES, obj);
 };
-export const trackFavoritesGuildRemoveFromFavorites = function trackFavoritesGuildRemoveFromFavorites(channel_type, length) {
+export const trackFavoritesGuildRemoveFromFavorites = function trackFavoritesGuildRemoveFromFavorites(
+  channel_type,
+  length,
+) {
   let obj = expandEventPropertiesDefault;
   obj = { channel_type, total_favorites: length };
   obj.track(AnalyticEvents.FAVORITES_GUILD_REMOVE_FROM_FAVORITES, obj);
@@ -29,7 +36,10 @@ export const trackFavoritesGuildRemoveFromFavorites = function trackFavoritesGui
 export const trackFavoritesGuildOrderUpdated = function trackFavoritesGuildOrderUpdated() {
   expandEventPropertiesDefault.track(AnalyticEvents.FAVORITES_GUILD_ORDER_UPDATED);
 };
-export const trackFavoritesGuildVisibilitySettingToggled = function trackFavoritesGuildVisibilitySettingToggled(auto, is_visible) {
+export const trackFavoritesGuildVisibilitySettingToggled = function trackFavoritesGuildVisibilitySettingToggled(
+  auto,
+  is_visible,
+) {
   let obj = expandEventPropertiesDefault;
   obj = { source: auto, is_visible };
   obj.track(AnalyticEvents.FAVORITES_GUILD_SETTING_TOGGLED, obj);

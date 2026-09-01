@@ -205,7 +205,8 @@ prototype["compute"] = function compute() {
         if (arg1 >= closure_1_2.maxSamples) {
           return false;
         } else {
-          score.score = score.score + closure_1 * obj.computeWeight(closure_1.diff(maxByResult(closure_1[1])(arg0), "days"));
+          score.score =
+            score.score + closure_1 * obj.computeWeight(closure_1.diff(maxByResult(closure_1[1])(arg0), "days"));
         }
         obj = closure_1_2;
       });
@@ -239,13 +240,15 @@ prototype["compute"] = function compute() {
   });
   const found = mapped.filter((arg0) => null !== arg0);
   let arr2 = applyDefault(self.usageHistory);
-  const mapped1 = found.sortBy((arg0) => {
-    [, tmp] = arg0;
-    return -tmp;
-  }).map((arg0) => {
-    [tmp] = arg0;
-    return tmp;
-  });
+  const mapped1 = found
+    .sortBy((arg0) => {
+      [, tmp] = arg0;
+      return -tmp;
+    })
+    .map((arg0) => {
+      [tmp] = arg0;
+      return tmp;
+    });
   const sortByResult = found.sortBy((arg0) => {
     [, tmp] = arg0;
     return -tmp;
@@ -262,13 +265,13 @@ Object.defineProperty(prototype, "frequently", {
     }
     return self._frequently;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "frequently", {
   get: undefined,
   set: function frequently(_frequently) {
     this._frequently = _frequently;
-  }
+  },
 });
 const result = set.fileFinishedImporting("lib/Frecency.tsx");
 

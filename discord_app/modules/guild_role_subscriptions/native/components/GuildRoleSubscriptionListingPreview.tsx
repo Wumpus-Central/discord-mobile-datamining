@@ -20,8 +20,12 @@ function PriceTier(arg0) {
   const merged = Object.assign(arg0, Object.create(null));
   const tmp2 = callback4();
   let obj = { style: tmp2.priceGroup, children: null };
-  obj = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: formatSingleCurrencyPrice.formatPrice(price, currency) };
-  const items = [callback2(Text.Text, obj), ];
+  obj = {
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: formatSingleCurrencyPrice.formatPrice(price, currency),
+  };
+  const items = [callback2(Text.Text, obj)];
   obj = { style: tmp2.priceInterval, variant: "eyebrow", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
   obj1 = { period: null };
@@ -40,7 +44,16 @@ function Header(onPress) {
   let str = callback(getRoleEmojisAll.useImage(listingId), 1)[0];
   const obj3 = getRoleEmojisAll;
   obj = { style: tmp.header, children: null };
-  const items = [callback2(Text.Text, { variant: "heading-md/semibold", color: "interactive-text-active", children: callback(obj1.useName(listingId), 1)[0] }), , , , ];
+  const items = [
+    callback2(Text.Text, {
+      variant: "heading-md/semibold",
+      color: "interactive-text-active",
+      children: callback(obj1.useName(listingId), 1)[0],
+    }),
+    ,
+    ,
+    ,
+  ];
   obj = { style: tmp.image, source: null };
   obj4 = getRoleEmojisAll;
   const tmp3 = closure_7;
@@ -53,15 +66,20 @@ function Header(onPress) {
   obj1 = {};
   const merged = Object.assign(callback(obj.useSubscriptionPlan(listingId), 1)[0]);
   items[2] = callback2(PriceTier, obj1);
-  items[3] = callback2(GuildPremiumRoleSubscribeButton.GuildPremiumRoleSubscribeButton, { onPress: onPress.onSubscribePress });
-  items[4] = callback2(Text.Text, { variant: "text-sm/medium", children: callback(obj4.useDescription(listingId), 1)[0] });
+  items[3] = callback2(GuildPremiumRoleSubscribeButton.GuildPremiumRoleSubscribeButton, {
+    onPress: onPress.onSubscribePress,
+  });
+  items[4] = callback2(Text.Text, {
+    variant: "text-sm/medium",
+    children: callback(obj4.useDescription(listingId), 1)[0],
+  });
   obj[1] = items;
   return tmp3(tmp4, obj);
 }
 function Content(arg0) {
   ({ children, noBackground, style } = arg0);
   const tmp = callback4();
-  style = [tmp.content, , ];
+  style = [tmp.content, ,];
   let contentWithBackground = true !== noBackground;
   if (contentWithBackground) {
     contentWithBackground = tmp.contentWithBackground;
@@ -85,7 +103,7 @@ function LabeledSection(arg0) {
   obj = {};
   const merged1 = Object.assign(merged);
   obj.label = label;
-  const items = [callback2(SectionLabel, obj), ];
+  const items = [callback2(SectionLabel, obj)];
   obj = {};
   const merged2 = Object.assign(merged);
   obj.children = children;
@@ -129,7 +147,11 @@ class BenefitsSection {
           benefitSpacing = benefitSpacing.benefitSpacing;
         }
         let obj = { style: benefitSpacing, children: null };
-        obj = { guildId: closure_0, benefit, isInteractive: listingId !== closure_1_0(closure_1_3[14]).NEW_LISTING_EDIT_STATE_ID };
+        obj = {
+          guildId: closure_0,
+          benefit,
+          isInteractive: listingId !== closure_1_0(closure_1_3[14]).NEW_LISTING_EDIT_STATE_ID,
+        };
         obj[1] = closure_1_6(closure_1_0(closure_1_3[13]).GuildRoleSubscriptionBenefitPreview, obj);
         return closure_1_6(closure_1_5, obj, closure_1_0(closure_1_3[9]).getBenefitKey(benefit));
       });
@@ -154,8 +176,29 @@ class BenefitsSection {
 }
 noopAll;
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-createCacheKey = { container: { padding: 16 }, header: null, image: null, priceGroup: null, priceInterval: null, content: null, contentWithBackground: null, separator: null, sectionLabel: null, benefitSpacing: null, roundedBenefitsContainer: null, footer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderTopStartRadius: 8, borderTopEndRadius: 8, display: "flex", flexDirection: "column", alignItems: "center", padding: 16 };
+createCacheKey = {
+  container: { padding: 16 },
+  header: null,
+  image: null,
+  priceGroup: null,
+  priceInterval: null,
+  content: null,
+  contentWithBackground: null,
+  separator: null,
+  sectionLabel: null,
+  benefitSpacing: null,
+  roundedBenefitsContainer: null,
+  footer: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderTopStartRadius: 8,
+  borderTopEndRadius: 8,
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  padding: 16,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { width: 80, height: 80, borderRadius: 40, marginTop: 16 };
 createCacheKey[3] = { marginTop: 16, alignItems: "center" };
@@ -167,13 +210,23 @@ createCacheKey[7] = { width: "100%", height: 1, marginTop: 16, backgroundColor: 
 createCacheKey[8] = { paddingVertical: 16 };
 createCacheKey[9] = { marginTop: 16 };
 let obj2 = { width: "100%", height: 1, marginTop: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[10] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, padding: 16 };
+createCacheKey[10] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.lg,
+  padding: 16,
+};
 createCacheKey[11] = { borderBottomStartRadius: 8, borderBottomEndRadius: 8, height: 16 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { FLAT: 0, [0]: "FLAT", ROUNDED: 1, [1]: "ROUNDED" };
 BenefitsSection.Looks = obj4;
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, padding: 16 };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionListingPreview.tsx");
+let obj3 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.lg,
+  padding: 16,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionListingPreview.tsx",
+);
 
 export { BenefitsSection };
 export const GuildRoleSubscriptionListingPreview = function GuildRoleSubscriptionListingPreview(arg0) {
@@ -188,7 +241,7 @@ export const GuildRoleSubscriptionListingPreview = function GuildRoleSubscriptio
   obj = {};
   const role = obj2.useRole(listingId, guildId);
   const merged = Object.assign(arg0);
-  const items = [callback2(Header, obj), , , , ];
+  const items = [callback2(Header, obj), , , ,];
   obj1 = { label: null, children: null };
   const intl = getSystemLocale.intl;
   obj1[0] = intl.string(getSystemLocale.t.FJZmYx);
@@ -197,7 +250,7 @@ export const GuildRoleSubscriptionListingPreview = function GuildRoleSubscriptio
   let tmp4Result = first.length > 0;
   if (tmp4Result) {
     obj2 = { children: null };
-    const items1 = [tmp6(Separator, {}), ];
+    const items1 = [tmp6(Separator, {})];
     const obj3 = { guildId: null, benefits: null, label: null, listingId: null };
     obj3[0] = guildId;
     obj3[1] = first;
@@ -211,7 +264,7 @@ export const GuildRoleSubscriptionListingPreview = function GuildRoleSubscriptio
   tmp4Result = first1.length > 0;
   if (tmp4Result) {
     obj4 = { children: null };
-    const items2 = [tmp6(Separator, {}), ];
+    const items2 = [tmp6(Separator, {})];
     const obj5 = { guildId: null, benefits: null, label: null, listingId: null };
     obj5[0] = guildId;
     obj5[1] = first1;

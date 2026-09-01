@@ -13,7 +13,9 @@ const require = arg1;
 ({ DirectoryEntryCategories: c9, getHubCategories: c10 } = DirectoryEntryTypes);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ container: { marginHorizontal: 16, gap: 24 } });
-const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEditDescriptionTemplate.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/directory_channels/native/components/GuildDirectoryEditDescriptionTemplate.tsx",
+);
 
 export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
   ({ onSubmit: require, entry, directoryChannelId } = buttonLabel);
@@ -24,7 +26,7 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
   c6 = undefined;
   function _handleSubmit() {
     const self = this;
-    const tmp = callback2(function*() {
+    const tmp = callback2(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -138,7 +140,18 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
   const arr = callback(directoryChannelId);
   [obj3, c6] = first1(obj1.useState(null), 2);
   obj = { style: tmp.container, children: null };
-  obj = { label: null, description: null, value: null, onChange: null, placeholder: null, maxLength: 200, status: null, errorMessage: null, submitBehavior: "blurAndSubmit", returnKeyType: "done" };
+  obj = {
+    label: null,
+    description: null,
+    value: null,
+    onChange: null,
+    placeholder: null,
+    maxLength: 200,
+    status: null,
+    errorMessage: null,
+    submitBehavior: "blurAndSubmit",
+    returnKeyType: "done",
+  };
   const intl = tmp2(tmp3[11]).intl;
   obj[0] = intl.string(require(first[11]).t.FFFAGt);
   const intl2 = tmp2(tmp3[11]).intl;
@@ -157,7 +170,7 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
     anyErrorMessage = obj2.getAnyErrorMessage();
   }
   obj[7] = anyErrorMessage;
-  const items1 = [closure_11(require(first[10]).TextArea, obj), , ];
+  const items1 = [closure_11(require(first[10]).TextArea, obj), ,];
   obj1 = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
   const intl4 = tmp2(tmp3[11]).intl;
   obj1[0] = intl4.string(require(first[11]).t.Olo8FB);
@@ -166,7 +179,9 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
     _handleSubmit.dismiss();
     callback2(arg0);
   };
-  obj1[4] = arr.map((label) => callback3(callback(first[13]).TableRadioRow, { label: label.label, value: label.value }, label.value));
+  obj1[4] = arr.map((label) =>
+    callback3(callback(first[13]).TableRadioRow, { label: label.label, value: label.value }, label.value),
+  );
   items1[1] = closure_11(require(first[12]).TableRadioGroup, obj1);
   let tmp17 = 0 === first1.length;
   if (!tmp17) {
@@ -186,9 +201,9 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
     },
     loading: tmp11,
     text: buttonLabel.buttonLabel,
-    size: "lg"
+    size: "lg",
   };
   items1[2] = closure_11(require(first[14]).Button, obj2);
   obj[1] = items1;
   return closure_12(c6, obj);
-};
+}

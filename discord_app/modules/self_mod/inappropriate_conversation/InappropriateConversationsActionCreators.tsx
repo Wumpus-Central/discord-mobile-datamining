@@ -5,7 +5,9 @@ import ME from "../../../Constants.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 
 const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsActionCreators.tsx");
+const result = set.fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/InappropriateConversationsActionCreators.tsx",
+);
 
 export const playVibingWumpusMusic = function playVibingWumpusMusic() {
   dispatcherDefault.dispatch({ type: "VIBING_WUMPUS_PLAY_MUSIC" });
@@ -21,7 +23,10 @@ export const deleteAllSafetyWarnings = function deleteAllSafetyWarnings(arg0) {
   const obj = { url: Endpoints.DELETE_SAFETY_WARNINGS(arg0), rejectWithError: sendRequest.rejectWithMigratedError() };
   return HTTP.del(obj);
 };
-export const markAsInappropriateConversation = function markAsInappropriateConversation(id, INAPPROPRIATE_CONVERSATION_TIER_1) {
+export const markAsInappropriateConversation = function markAsInappropriateConversation(
+  id,
+  INAPPROPRIATE_CONVERSATION_TIER_1,
+) {
   const HTTP = sendRequest.HTTP;
   obj = { url: Endpoints.ADD_SAFETY_WARNING(id), body: obj, rejectWithError: null };
   obj = { safety_warning_type: INAPPROPRIATE_CONVERSATION_TIER_1 };

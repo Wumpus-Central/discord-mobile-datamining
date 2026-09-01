@@ -113,5 +113,5 @@ export default {
       }
     }
     return null;
-  }
+  },
 };

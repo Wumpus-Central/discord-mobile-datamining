@@ -10,7 +10,9 @@ function getRevealProgress(scrollY, lastBountyScrollOffset, height3) {
 }
 getRevealProgress.__closure = {};
 getRevealProgress.__workletHash = 9769647749947;
-getRevealProgress.__initData = { code: "function getRevealProgress_useBountiesRecapScrollTsx1(scrollOffset,startOffset,revealHeight){if(revealHeight<=0){return 0;}return(scrollOffset-startOffset)/revealHeight;}" };
+getRevealProgress.__initData = {
+  code: "function getRevealProgress_useBountiesRecapScrollTsx1(scrollOffset,startOffset,revealHeight){if(revealHeight<=0){return 0;}return(scrollOffset-startOffset)/revealHeight;}",
+};
 const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesRecapScroll.tsx");
 
 export const RECAP_SNAP_EPSILON = 2;
@@ -31,7 +33,7 @@ export const useBountiesRecapScroll = function useBountiesRecapScroll(listRef) {
     }
   }, items);
   const items1 = [offsets.lastBounty, callback];
-  const items2 = [enabled, , , , ];
+  const items2 = [enabled, , , ,];
   ({ fullRecap: arr3[1], lastBounty: arr3[2], revealHeight: arr3[3] } = offsets);
   items2[4] = callback;
   const callback1 = listRef.useCallback(() => {
@@ -63,6 +65,6 @@ export const useBountiesRecapScroll = function useBountiesRecapScroll(listRef) {
       if (enabled) {
         callback2(contentOffset.contentOffset.y);
       }
-    }, items3)
+    }, items3),
   };
 };

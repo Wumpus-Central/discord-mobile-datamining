@@ -11,7 +11,14 @@ export default function dispatchAutoDisableVideo(arg0, arg1) {
   dependencyMap = arg1;
   dispatcherDefault.wait(() => {
     let obj = callback(table[1]);
-    obj = { type: "AUDIO_SET_LOCAL_VIDEO_DISABLED", context: closure_1_2.DEFAULT, userId: callback, videoToggleState: table, persist: false, isAutomatic: true };
+    obj = {
+      type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
+      context: closure_1_2.DEFAULT,
+      userId: callback,
+      videoToggleState: table,
+      persist: false,
+      isAutomatic: true,
+    };
     obj.dispatch(obj);
   });
-};
+}

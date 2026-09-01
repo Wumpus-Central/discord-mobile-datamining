@@ -11,7 +11,15 @@ const result = require("set").fileFinishedImporting("modules/threads/native/useC
 
 export default function useCreateThread(arg0) {
   let analyticsLocations;
-  ({ parentChannel, parentMessageId, threadSettings, privateThreadMode, location: _location, onThreadCreated, useDefaultThreadName } = arg0);
+  ({
+    parentChannel,
+    parentMessageId,
+    threadSettings,
+    privateThreadMode,
+    location: _location,
+    onThreadCreated,
+    useDefaultThreadName,
+  } = arg0);
   analyticsLocations = contextDefault().analyticsLocations;
   let obj = analyticsLocations(8161);
   obj = {
@@ -40,13 +48,13 @@ export default function useCreateThread(arg0) {
             closure_2_1(closure_2_2[9]).setUploads(obj);
             const obj3 = closure_2_1(closure_2_2[9]);
           }
-        }
+        },
       };
       obj.sendMessage(id.id, closure_1_1(closure_1_2[7]).parse(id, arg2), undefined, obj);
-    }
+    },
   };
   return obj.useCreateThreadCommon(obj);
-};
+}
 export const useCreateForumPost = function useCreateForumPost(parentChannel) {
   parentChannel = parentChannel.parentChannel;
   let _require = parentChannel;
@@ -59,7 +67,7 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       let obj7 = tmp4;
       obj7 = new analyticsLocations(closure_2_2[10])();
       const kestrelConfig = guildId(closure_2_2[11]).getKestrelConfig({ location: "native.useCreateForumPost" });
@@ -93,7 +101,7 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
     })();
   });
   const items = [analyticsLocations, parentChannel];
-  callback = React.useCallback(function() {
+  callback = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

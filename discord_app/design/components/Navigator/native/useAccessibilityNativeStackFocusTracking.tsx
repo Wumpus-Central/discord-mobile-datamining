@@ -1,7 +1,9 @@
 // discord_app/design/components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx
 import closure_2 from "../../../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx",
+);
 
 export const useAccessibilityNativeStackFocusTracking = function useAccessibilityNativeStackFocusTracking() {
   return React.useMemo(() => {
@@ -17,7 +19,7 @@ export const useAccessibilityNativeStackFocusTracking = function useAccessibilit
       },
       beforeRemove() {
         c0 = true;
-      }
+      },
     };
   }, []);
 };

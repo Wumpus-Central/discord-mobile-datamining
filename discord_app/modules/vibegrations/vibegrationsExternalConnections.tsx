@@ -22,7 +22,17 @@ function externalConnectionOffer(nextResult) {
   }
   return tmp;
 }
-let set = new Set(["bad_request", "bad_connection_type", "unknown_project", "not_declared", "not_configured", "not_deployed", "child_error", "child_malformed", "child_unavailable"]);
+let set = new Set([
+  "bad_request",
+  "bad_connection_type",
+  "unknown_project",
+  "not_declared",
+  "not_configured",
+  "not_deployed",
+  "child_error",
+  "child_malformed",
+  "child_unavailable",
+]);
 const result = set.fileFinishedImporting("modules/vibegrations/vibegrationsExternalConnections.tsx");
 
 export { externalConnectionOffer };

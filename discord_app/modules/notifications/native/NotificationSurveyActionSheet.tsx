@@ -9,7 +9,10 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function trackOpen() {
-  expandEventPropertiesDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Notification Feedback Sheet", source: "Notification End" });
+  expandEventPropertiesDefault.track(AnalyticEvents.OPEN_POPOUT, {
+    type: "Notification Feedback Sheet",
+    source: "Notification End",
+  });
 }
 noopAll;
 const result = require("set").fileFinishedImporting("modules/notifications/native/NotificationSurveyActionSheet.tsx");
@@ -19,7 +22,7 @@ export default function NotificationSurveyActionSheet(arg0) {
   let obj = { value: constants.TOO_MANY, label: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.pLeQp0);
-  const items = [obj, , ];
+  const items = [obj, ,];
   obj = { value: constants.IRRELEVANT, label: null };
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.tuwPcC);
@@ -28,7 +31,16 @@ export default function NotificationSurveyActionSheet(arg0) {
   const intl3 = getSystemLocale.intl;
   obj[1] = intl3.string(getSystemLocale.t.glUMhg);
   items[2] = obj;
-  obj1 = { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, trackOpen: null, trackReport: null };
+  obj1 = {
+    headerLabel: null,
+    showHeaderCloseButton: true,
+    hideDontShowAgainCheckbox: true,
+    ratingsBodyLabel: null,
+    reasonsHeaderLabel: null,
+    reasons: null,
+    trackOpen: null,
+    trackReport: null,
+  };
   const intl4 = getSystemLocale.intl;
   obj1[0] = intl4.string(getSystemLocale.t.wGioO1);
   const intl5 = getSystemLocale.intl;
@@ -58,5 +70,14 @@ export default function NotificationSurveyActionSheet(arg0) {
       const obj3 = closure_1_0(closure_1_2[8]);
     }
   };
-  return jsx(closeActionSheetDefault, { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, trackOpen: null, trackReport: null });
-};
+  return jsx(closeActionSheetDefault, {
+    headerLabel: null,
+    showHeaderCloseButton: true,
+    hideDontShowAgainCheckbox: true,
+    ratingsBodyLabel: null,
+    reasonsHeaderLabel: null,
+    reasons: null,
+    trackOpen: null,
+    trackReport: null,
+  });
+}

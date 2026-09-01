@@ -8,4 +8,4 @@ const result = set.fileFinishedImporting("modules/action_sheet/native/useActionS
 
 export default function useActionSheetHeight() {
   return useWindowDimensionsDefault().height * closure_2;
-};
+}

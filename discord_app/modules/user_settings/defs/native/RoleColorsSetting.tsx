@@ -19,7 +19,7 @@ function useRoleColorSettingOptions() {
     let obj = { label: null, value: "username" };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.YEOEi6);
-    const items = [obj, , ];
+    const items = [obj, ,];
     obj = { label: null, value: "dot" };
     const intl2 = callback(1236).intl;
     obj[0] = intl2.string(callback(1236).t.mQaro3);
@@ -39,7 +39,7 @@ createToggle = {
   parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue: useRoleColorSettingValue,
   onValueChange: onRoleColorSettingValueChange,
-  useOptions: useRoleColorSettingOptions
+  useOptions: useRoleColorSettingOptions,
 };
 createToggle = createToggle.createRadio(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/RoleColorsSetting.tsx");

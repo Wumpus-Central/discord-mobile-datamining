@@ -3,10 +3,18 @@ import PermissionOverwriteType from "../../flow/Server.tsx";
 import closure_2 from "LocalInteractionComponentStateStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/interaction_components/StringSelectActionComponentUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/StringSelectActionComponentUtils.tsx",
+);
 
-export const getInitialStringSelectOptions = function getInitialStringSelectOptions(selectionActionComponent, containerId) {
-  interactionComponentState = interactionComponentState.getInteractionComponentState(containerId, selectionActionComponent.id);
+export const getInitialStringSelectOptions = function getInitialStringSelectOptions(
+  selectionActionComponent,
+  containerId,
+) {
+  interactionComponentState = interactionComponentState.getInteractionComponentState(
+    containerId,
+    selectionActionComponent.id,
+  );
   let type;
   if (interactionComponentState != null) {
     type = interactionComponentState.type;

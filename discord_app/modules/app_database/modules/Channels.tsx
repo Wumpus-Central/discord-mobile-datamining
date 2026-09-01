@@ -13,35 +13,35 @@ class Channels {
     obj.privateChannels = [];
     obj.actions = {
       BACKGROUND_SYNC(arg0, arg1) {
-            return obj.handleBackgroundSync(arg0, arg1);
-          },
+        return obj.handleBackgroundSync(arg0, arg1);
+      },
       CHANNEL_CREATE(channel) {
-            return obj.putOne(channel.channel, arg1);
-          },
+        return obj.putOne(channel.channel, arg1);
+      },
       CHANNEL_DELETE(channel) {
-            return obj.deleteOne(channel.channel.guild_id, channel.channel.id, arg1);
-          },
+        return obj.deleteOne(channel.channel.guild_id, channel.channel.id, arg1);
+      },
       CHANNEL_RECIPIENT_ADD(channelId) {
-            return obj.handleChannelRecipientAdd(channelId, arg1);
-          },
+        return obj.handleChannelRecipientAdd(channelId, arg1);
+      },
       CHANNEL_RECIPIENT_REMOVE(channelId) {
-            return obj.handleChannelRecipientRemove(channelId, arg1);
-          },
+        return obj.handleChannelRecipientRemove(channelId, arg1);
+      },
       CHANNEL_UPDATES(channels) {
-            return obj.putMany(channels.channels, arg1);
-          },
+        return obj.putMany(channels.channels, arg1);
+      },
       CONNECTION_OPEN_SUPPLEMENTAL(arg0, arg1) {
-            return obj.handleConnectionOpenSupplemental(arg0, arg1);
-          },
+        return obj.handleConnectionOpenSupplemental(arg0, arg1);
+      },
       CONNECTION_OPEN(arg0, arg1) {
-            return obj.handleConnectionOpen(arg0, arg1);
-          },
+        return obj.handleConnectionOpen(arg0, arg1);
+      },
       GUILD_CREATE(arg0, arg1) {
-            return obj.handleGuildCreate(arg0, arg1);
-          },
+        return obj.handleGuildCreate(arg0, arg1);
+      },
       GUILD_DELETE(arg0, arg1) {
-            return obj.handleGuildDelete(arg0, arg1);
-          }
+        return obj.handleGuildDelete(arg0, arg1);
+      },
     };
     return obj;
   }
@@ -212,7 +212,7 @@ obj.actions = {
   },
   GUILD_DELETE(arg0, arg1) {
     return obj.handleGuildDelete(arg0, arg1);
-  }
+  },
 };
 let result = set.fileFinishedImporting("modules/app_database/modules/Channels.tsx");
 

@@ -12,8 +12,7 @@ let closure_5 = {};
 let closure_6 = {};
 let c7 = 0;
 const Store = initializeDefault.Store;
-class CertifiedDeviceStore extends Store {
-}
+class CertifiedDeviceStore extends Store {}
 const prototype = CertifiedDeviceStore.prototype;
 prototype["initialize"] = function initialize() {
   const Storage = Storage2.Storage;
@@ -126,7 +125,7 @@ const certifiedDeviceStore = new CertifiedDeviceStore(dispatcherDefault, {
     const Storage = Storage2.Storage;
     const result = Storage.set(CertifiedDeviceStore, tmp);
     closure_7 = closure_7 + 1;
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/CertifiedDeviceStore.tsx");
 

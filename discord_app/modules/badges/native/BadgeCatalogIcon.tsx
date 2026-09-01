@@ -37,16 +37,16 @@ export default function BadgeCatalogIcon(style) {
           abortController = new AbortController();
           const svgXml = tmp3(tmp4[4]).loadSvgXml(tmp, abortController.signal);
           const tmp3Result = tmp3(tmp4[4]);
-          svgXml.then((arg0) => {
-            if (!abortController.signal.aborted) {
-              const obj = { url: null, xml: null };
-              obj[0] = abortController;
-              obj[1] = arg0;
-              closure_1_2(obj);
-            }
-          }).catch(() => {
-
-          });
+          svgXml
+            .then((arg0) => {
+              if (!abortController.signal.aborted) {
+                const obj = { url: null, xml: null };
+                obj[0] = abortController;
+                obj[1] = arg0;
+                closure_1_2(obj);
+              }
+            })
+            .catch(() => {});
           return () => abortController.abort();
         }
         obj = complex_icon_animated_url(_undefined[4]);
@@ -83,7 +83,11 @@ export default function BadgeCatalogIcon(style) {
       tmp15Result = tmp15(complex_icon_animated_url(8241).SvgXml, obj1);
     }
     obj[2] = tmp15Result;
-    return <View style={null} aria-hidden>{null}</View>;
+    return (
+      <View style={null} aria-hidden>
+        {null}
+      </View>
+    );
   } else {
     if (tmp5[0] === complex_icon_animated_url) {
       const obj2 = { style: null, "aria-hidden": true };
@@ -106,4 +110,4 @@ export default function BadgeCatalogIcon(style) {
     return <View {...obj} />;
   }
   let tmp3 = callback(React.useState(null), 2);
-};
+}

@@ -47,6 +47,8 @@ const memoResult = importAllResult.memo(function EmojiPickerCategoryIcon(id) {
     return jsx(NitroWheelIcon.NitroWheelIcon, {});
   }
 });
-const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx",
+);
 
 export default memoResult;

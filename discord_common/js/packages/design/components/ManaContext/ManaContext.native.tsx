@@ -5,7 +5,9 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 let c0 = importAllResult;
 const obj = {};
 const context = importAllResult.createContext(obj);
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx",
+);
 
 export const ManaContext = context;
 export const useManaContext = () => importAllResult.useContext(context);

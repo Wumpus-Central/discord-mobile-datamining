@@ -21,7 +21,9 @@ function useGoogleSkuIds(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
   const items = [closure_6];
-  isFetchingGoogleSkus = _require(isFetchingGoogleSkus[5]).useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
+  isFetchingGoogleSkus = _require(isFetchingGoogleSkus[5]).useStateFromStores(items, () =>
+    fetchingGoogleSkus.isFetchingGoogleSkus(),
+  );
   closure_3 = React.useRef([]);
   const fetchError = callback(React.useState(null), 2);
   callback = fetchError[1];
@@ -29,7 +31,7 @@ function useGoogleSkuIds(arg0, arg1) {
   const effect = React.useEffect(() => {
     function _fetch() {
       const self = this;
-      const tmp = callback(function*() {
+      const tmp = callback(function* () {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
@@ -160,7 +162,13 @@ let closure_8 = { nativePaymentsConnected: true, storeFront: null };
 const tmp2 = new timestampDefault("NativePaymentHooks.android.tsx");
 let result = require("set").fileFinishedImporting("modules/payments/native/hooks/NativePaymentHooks.android.tsx");
 
-export default { useNativeIAPPayments, useGoogleSkuIds, useCreateSubscription, useCancelSubscription, useResubscribeSubscription };
+export default {
+  useNativeIAPPayments,
+  useGoogleSkuIds,
+  useCreateSubscription,
+  useCancelSubscription,
+  useResubscribeSubscription,
+};
 export { useNativeIAPPayments };
 export { useGoogleSkuIds };
 export { useResubscribeSubscription };

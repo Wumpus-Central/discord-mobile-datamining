@@ -29,20 +29,56 @@ export const isRemoteAcked = function isRemoteAcked(addResult, closure_1) {
   }
   return acked;
 };
-export const incomingFriendRequestLocalItem = function incomingFriendRequestLocalItem(user, since, origin_application_id) {
+export const incomingFriendRequestLocalItem = function incomingFriendRequestLocalItem(
+  user,
+  since,
+  origin_application_id,
+) {
   let obj = DISCORD_EPOCHDefault;
   const fromTimestampResult = obj.fromTimestamp(new Date(since).getTime());
-  obj = { acked: false, forceUnacked: true, other_user: user, kind: "notification-center-item", local_id: "incoming_friend_requests_" + user.id + "_" + fromTimestampResult, deeplink: "https://discord.com/users/" + user.id, type: NotificationCenterScenes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, id: fromTimestampResult, applicationId: origin_application_id };
+  obj = {
+    acked: false,
+    forceUnacked: true,
+    other_user: user,
+    kind: "notification-center-item",
+    local_id: "incoming_friend_requests_" + user.id + "_" + fromTimestampResult,
+    deeplink: "https://discord.com/users/" + user.id,
+    type: NotificationCenterScenes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
+    id: fromTimestampResult,
+    applicationId: origin_application_id,
+  };
   return obj;
 };
-export const incomingGameFriendRequestLocalItem = function incomingGameFriendRequestLocalItem(user, since, applicationId) {
+export const incomingGameFriendRequestLocalItem = function incomingGameFriendRequestLocalItem(
+  user,
+  since,
+  applicationId,
+) {
   let obj = DISCORD_EPOCHDefault;
   const fromTimestampResult = obj.fromTimestamp(new Date(since).getTime());
-  obj = { acked: false, forceUnacked: true, other_user: user, kind: "notification-center-item", local_id: "incoming_game_friend_requests_" + user.id + "_" + fromTimestampResult, deeplink: "https://discord.com/users/" + user.id, type: NotificationCenterScenes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS, id: fromTimestampResult, applicationId };
+  obj = {
+    acked: false,
+    forceUnacked: true,
+    other_user: user,
+    kind: "notification-center-item",
+    local_id: "incoming_game_friend_requests_" + user.id + "_" + fromTimestampResult,
+    deeplink: "https://discord.com/users/" + user.id,
+    type: NotificationCenterScenes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS,
+    id: fromTimestampResult,
+    applicationId,
+  };
   return obj;
 };
 export const mobileNativeUpdateAvailableLocalItem = function mobileNativeUpdateAvailableLocalItem(newBuild) {
-  const obj = { acked: false, enableBadge: true, id: null, kind: "notification-center-item", local_id: null, type: null, deeplink: null };
+  const obj = {
+    acked: false,
+    enableBadge: true,
+    id: null,
+    kind: "notification-center-item",
+    local_id: null,
+    type: null,
+    deeplink: null,
+  };
   const obj2 = DISCORD_EPOCHDefault;
   obj[2] = obj2.fromTimestamp(new Date().getTime());
   obj[4] = "mobile_update_available_" + newBuild.build;

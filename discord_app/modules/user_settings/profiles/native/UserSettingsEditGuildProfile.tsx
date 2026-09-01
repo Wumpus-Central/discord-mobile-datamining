@@ -11,10 +11,19 @@ const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { guildSelector: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.none, borderTopWidth: StyleSheet.hairlineWidth, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden" };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.none,
+  borderTopWidth: StyleSheet.hairlineWidth,
+  borderBottomWidth: StyleSheet.hairlineWidth,
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  overflow: "hidden",
+};
 createCacheKey[0] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditGuildProfile.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/profiles/native/UserSettingsEditGuildProfile.tsx",
+);
 
 export default function UserSettingsEditGuildProfile() {
   function onSelectGuild(id) {
@@ -73,15 +82,19 @@ export default function UserSettingsEditGuildProfile() {
               obj[0] = closure_0;
               obj[1] = closure_1;
               obj[2] = closure_4;
-              obj.openLazy(closure_1_0(closure_1_2[19])(closure_1_2[18], closure_1_2.paths), "GuildSelectComponentActionSheet", obj);
+              obj.openLazy(
+                closure_1_0(closure_1_2[19])(closure_1_2[18], closure_1_2.paths),
+                "GuildSelectComponentActionSheet",
+                obj,
+              );
             }
           },
           hasEdits: closure_3,
-          resetPending
+          resetPending,
         });
       };
       obj[1] = callback(tmp5(tmp3[14]).TableRow, obj1);
-      const items3 = [callback(onSelectGuild, obj), ];
+      const items3 = [callback(onSelectGuild, obj)];
       const obj3 = { currentUser: null };
       obj3[0] = stateFromStores;
       const _HermesInternal = HermesInternal;
@@ -92,4 +105,4 @@ export default function UserSettingsEditGuildProfile() {
     }
   }
   return callback(guild(resetPending[13]), {});
-};
+}

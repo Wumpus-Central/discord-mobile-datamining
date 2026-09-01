@@ -28,24 +28,16 @@ prototype["addOnPipModeWillChangeListener"] = function addOnPipModeWillChangeLis
   const eventEmitter = this.eventEmitter;
   return eventEmitter.addListener("onPipModeWillChange", arg0);
 };
-prototype["setSelectedStream"] = function setSelectedStream() {
-
-};
-prototype["setFocusedStream"] = function setFocusedStream() {
-
-};
-prototype["setMirrored"] = function setMirrored() {
-
-};
+prototype["setSelectedStream"] = function setSelectedStream() {};
+prototype["setFocusedStream"] = function setFocusedStream() {};
+prototype["setMirrored"] = function setMirrored() {};
 prototype["setPipAspectRatio"] = function setPipAspectRatio(width, height) {
   ExternalPip.setPipAspectRatio(width, height);
 };
 prototype["refreshPipUi"] = function refreshPipUi() {
   ExternalPip.refreshPipUi();
 };
-prototype["updateSourceTrackingView"] = function updateSourceTrackingView() {
-
-};
+prototype["updateSourceTrackingView"] = function updateSourceTrackingView() {};
 prototype["setEnabled"] = function setEnabled(_enabled) {
   this._enabled = _enabled;
   ExternalPip.setEnabled(this._enabled);

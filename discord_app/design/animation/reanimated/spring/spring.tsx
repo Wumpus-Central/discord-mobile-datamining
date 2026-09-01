@@ -29,10 +29,22 @@ function withSpring(value, SUBTLE_SPRING, fn, fn2) {
   }
   return _mod4217.withSpring(value, tmp5, fn2);
 }
-withSpring.__closure = { accessibilityPreferencesSharedValue: mutable.accessibilityPreferencesSharedValue, CONFIG_NEVER_ANIMATE, ReduceMotion: _mod4217.ReduceMotion, REAwithSpring: _mod4217.withSpring };
+withSpring.__closure = {
+  accessibilityPreferencesSharedValue: mutable.accessibilityPreferencesSharedValue,
+  CONFIG_NEVER_ANIMATE,
+  ReduceMotion: _mod4217.ReduceMotion,
+  REAwithSpring: _mod4217.withSpring,
+};
 withSpring.__workletHash = 14783154107972;
-withSpring.__initData = { code: "function withSpring_springTsx1(toValue,config,shouldAnimate='respect-motion-settings',callback){const{accessibilityPreferencesSharedValue,CONFIG_NEVER_ANIMATE,ReduceMotion,REAwithSpring}=this.__closure;const reducedMotionEnabled=accessibilityPreferencesSharedValue.get().reduceMotion;const animate=shouldAnimate==='animate-always'||shouldAnimate==='respect-motion-settings'&&!reducedMotionEnabled;const configForRea=!animate?CONFIG_NEVER_ANIMATE:shouldAnimate==='animate-always'?{...(config!==null&&config!==void 0?config:{}),reduceMotion:ReduceMotion.Never}:config;return REAwithSpring(toValue,configForRea,callback);}" };
-let obj = { accessibilityPreferencesSharedValue: mutable.accessibilityPreferencesSharedValue, CONFIG_NEVER_ANIMATE, ReduceMotion: _mod4217.ReduceMotion, REAwithSpring: _mod4217.withSpring };
+withSpring.__initData = {
+  code: "function withSpring_springTsx1(toValue,config,shouldAnimate='respect-motion-settings',callback){const{accessibilityPreferencesSharedValue,CONFIG_NEVER_ANIMATE,ReduceMotion,REAwithSpring}=this.__closure;const reducedMotionEnabled=accessibilityPreferencesSharedValue.get().reduceMotion;const animate=shouldAnimate==='animate-always'||shouldAnimate==='respect-motion-settings'&&!reducedMotionEnabled;const configForRea=!animate?CONFIG_NEVER_ANIMATE:shouldAnimate==='animate-always'?{...(config!==null&&config!==void 0?config:{}),reduceMotion:ReduceMotion.Never}:config;return REAwithSpring(toValue,configForRea,callback);}",
+};
+let obj = {
+  accessibilityPreferencesSharedValue: mutable.accessibilityPreferencesSharedValue,
+  CONFIG_NEVER_ANIMATE,
+  ReduceMotion: _mod4217.ReduceMotion,
+  REAwithSpring: _mod4217.withSpring,
+};
 const result = set.fileFinishedImporting("design/animation/reanimated/spring/spring.tsx");
 
 export { withSpring };

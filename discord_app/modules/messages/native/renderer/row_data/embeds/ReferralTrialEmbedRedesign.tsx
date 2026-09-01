@@ -10,11 +10,27 @@ import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_9 } from "../../../../../pr
 import { createCacheKey } from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbedRedesign.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbedRedesign.tsx",
+);
 
-export const createReferralTrialEmbedRedesign = function createReferralTrialEmbedRedesign(message, theme, id, relevantUserTrialOffer) {
+export const createReferralTrialEmbedRedesign = function createReferralTrialEmbedRedesign(
+  message,
+  theme,
+  id,
+  relevantUserTrialOffer,
+) {
   if (null != message.author) {
-    let obj = { titleColor: null, headerTextColor: null, bodyTextColor: null, footerTextColor: null, subTextColor: null, backgroundColor: null, acceptLabelColor: null, linkTextColor: null };
+    let obj = {
+      titleColor: null,
+      headerTextColor: null,
+      bodyTextColor: null,
+      footerTextColor: null,
+      subTextColor: null,
+      backgroundColor: null,
+      acceptLabelColor: null,
+      linkTextColor: null,
+    };
     obj[0] = ThemesDefault.colors.TEXT_DEFAULT;
     obj[1] = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
     obj[2] = ThemesDefault.colors.TEXT_SUBTLE;
@@ -23,7 +39,10 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
     obj[5] = ThemesDefault.colors.BACKGROUND_MOD_NORMAL;
     obj[6] = ThemesDefault.colors.WHITE;
     obj[7] = ThemesDefault.colors.TEXT_LINK;
-    const tmp42 = require("../../../../../../design/components/Styles/native/createStyles.tsx").createNativeStyleProperties(obj)(theme);
+    const tmp42 =
+      require("../../../../../../design/components/Styles/native/createStyles.tsx").createNativeStyleProperties(obj)(
+        theme,
+      );
     ({ titleColor, headerTextColor, bodyTextColor, backgroundColor } = tmp42);
     ({ footerTextColor, subTextColor, acceptLabelColor, linkTextColor } = tmp42);
     channel = channel.getChannel(message.getChannelId());
@@ -57,7 +76,16 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
             obj2[1] = tmp41(1995).getArticleURL(HelpdeskArticles.REFERRAL_PROGRAM);
             obj2[2] = linkTextColor;
             obj1[1] = obj2;
-            const obj3 = { titleText: null, titleColor: null, headerImageUrl: null, headerText: null, headerColor: null, backgroundColor: null, borderColor: null, learnMoreLink: null };
+            const obj3 = {
+              titleText: null,
+              titleColor: null,
+              headerImageUrl: null,
+              headerText: null,
+              headerColor: null,
+              backgroundColor: null,
+              borderColor: null,
+              learnMoreLink: null,
+            };
             obj3[0] = formatToPlainStringResult;
             obj3[1] = titleColor;
             const tmp41Result1 = tmp41(1995);
@@ -113,7 +141,9 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
               if (!tmp15) {
                 tmp39Result = tmp39(7964);
                 const expiresAt = relevantUserTrialOffer.expiresAt;
-                const referralTrialOfferExpirationCopy = tmp39Result.getReferralTrialOfferExpirationCopy(expiresAt.getTime());
+                const referralTrialOfferExpirationCopy = tmp39Result.getReferralTrialOfferExpirationCopy(
+                  expiresAt.getTime(),
+                );
                 const intl = tmp39(1236).intl;
                 const subscriptionTrial = relevantUserTrialOffer.subscriptionTrial;
                 let interval;
@@ -225,7 +255,18 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
             const formatToPartsResult = intl11.formatToParts(tmp39(1236).t.yisueA, obj1);
           }
         }
-        const obj16 = { titleText: "", titleColor: null, headerImageUrl: null, headerText: "", headerColor: null, backgroundColor: null, borderColor: null, bodyText: null, bodyTextColor: null, canBeAccepted: false };
+        const obj16 = {
+          titleText: "",
+          titleColor: null,
+          headerImageUrl: null,
+          headerText: "",
+          headerColor: null,
+          backgroundColor: null,
+          borderColor: null,
+          bodyText: null,
+          bodyTextColor: null,
+          canBeAccepted: false,
+        };
         obj16[1] = titleColor;
         obj16[2] = tmp41(7963);
         obj16[4] = headerTextColor;

@@ -2,7 +2,7 @@
 import set from "../../../_runtime/00002_set.js";
 
 const obj = { SUCCESS: 0, [0]: "SUCCESS", INTERRUPTED: 1, [1]: "INTERRUPTED" };
-const items = [, ];
+const items = [,];
 ({ SUCCESS: arr[0], INTERRUPTED: arr[1] } = obj);
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/soundboard/SoundboardConstants.tsx");

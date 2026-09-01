@@ -117,7 +117,11 @@ prototype["onSpeaking"] = function onSpeaking(arg0) {
       const participation = self.participation;
       participation.stop();
     }
-    const speakingDurationMilestones = self.computeSpeakingDurationMilestones(self.connected.lastStartTime, self.speaking.lastStartTime, self.speaking.lastElapsed);
+    const speakingDurationMilestones = self.computeSpeakingDurationMilestones(
+      self.connected.lastStartTime,
+      self.speaking.lastStartTime,
+      self.speaking.lastElapsed,
+    );
   }
 };
 prototype["onListening"] = function onListening(arg0, arg1) {
@@ -161,7 +165,11 @@ prototype["onDeafened"] = function onDeafened(flag2) {
     deafened.stop();
   }
 };
-prototype["computeSpeakingDurationMilestones"] = function computeSpeakingDurationMilestones(lastStartTime, lastStartTime2, lastElapsed) {
+prototype["computeSpeakingDurationMilestones"] = function computeSpeakingDurationMilestones(
+  lastStartTime,
+  lastStartTime2,
+  lastElapsed,
+) {
   const self = this;
   closure_1 = lastStartTime;
   closure_2 = lastStartTime2;
@@ -228,7 +236,11 @@ prototype["stop"] = function stop() {
   muted.stop();
   this.noiseCancellation.value = false;
   this.spatialAudio.value = false;
-  const speakingDurationMilestones = this.computeSpeakingDurationMilestones(this.connected.lastStartTime, this.speaking.lastStartTime, this.speaking.lastElapsed);
+  const speakingDurationMilestones = this.computeSpeakingDurationMilestones(
+    this.connected.lastStartTime,
+    this.speaking.lastStartTime,
+    this.speaking.lastElapsed,
+  );
 };
 prototype["getDurationStats"] = function getDurationStats() {
   let self = this;
@@ -239,8 +251,22 @@ prototype["getDurationStats"] = function getDurationStats() {
   if (null != lastStartTime) {
     num = timestampProducer.now() - lastStartTime;
   }
-  const speakingDurationMilestones = self.computeSpeakingDurationMilestones(self.connected.lastStartTime, self.speaking.lastStartTime, self.speaking.lastElapsed);
-  let obj = { duration_listening_ms: listening.elapsed().asMilliseconds(), duration_speaking_ms: null, duration_participation_ms: null, duration_connected_ms: null, duration_muted_ms: null, duration_deafened_ms: null, duration_noise_cancellation_enabled_ms: null, duration_spatial_ms: null, speech_event_count: null };
+  const speakingDurationMilestones = self.computeSpeakingDurationMilestones(
+    self.connected.lastStartTime,
+    self.speaking.lastStartTime,
+    self.speaking.lastElapsed,
+  );
+  let obj = {
+    duration_listening_ms: listening.elapsed().asMilliseconds(),
+    duration_speaking_ms: null,
+    duration_participation_ms: null,
+    duration_connected_ms: null,
+    duration_muted_ms: null,
+    duration_deafened_ms: null,
+    duration_noise_cancellation_enabled_ms: null,
+    duration_spatial_ms: null,
+    speech_event_count: null,
+  };
   listening = self.listening;
   const speaking = self.speaking;
   const elapsedResult = listening.elapsed();
@@ -266,14 +292,16 @@ prototype["getDurationStats"] = function getDurationStats() {
     const timesUntilSpeakingDurationMilestonesMs = self.timesUntilSpeakingDurationMilestonesMs;
     return timesUntilSpeakingDurationMilestonesMs.has(arg0);
   });
-  let merged = Object.assign(found.reduce((arg0, arg1) => {
-    const obj = {};
-    const merged = Object.assign(arg0);
-    const timesUntilSpeakingDurationMilestonesMs = self.timesUntilSpeakingDurationMilestonesMs;
-    const combined = "time_to_first_" + arg1 + "ms_speech_ms";
-    obj[combined] = timesUntilSpeakingDurationMilestonesMs.get(arg1);
-    return obj;
-  }, {}));
+  let merged = Object.assign(
+    found.reduce((arg0, arg1) => {
+      const obj = {};
+      const merged = Object.assign(arg0);
+      const timesUntilSpeakingDurationMilestonesMs = self.timesUntilSpeakingDurationMilestonesMs;
+      const combined = "time_to_first_" + arg1 + "ms_speech_ms";
+      obj[combined] = timesUntilSpeakingDurationMilestonesMs.get(arg1);
+      return obj;
+    }, {}),
+  );
   const found1 = closure_3.filter((arg0) => {
     const speakingMinimumChunks = self.speakingMinimumChunks;
     let hasItem = speakingMinimumChunks.has(arg0);
@@ -282,33 +310,35 @@ prototype["getDurationStats"] = function getDurationStats() {
     }
     return hasItem;
   });
-  const merged1 = Object.assign(found1.reduce((arg0, arg1) => {
-    const obj = {};
-    const merged = Object.assign(arg0);
-    const speakingMinimumChunks = self.speakingMinimumChunks;
-    const combined = "duration_speaking_gte_" + arg1 + "ms_ms";
-    num = speakingMinimumChunks.get(arg1);
-    if (num == null) {
-      num = 0;
-    }
-    let num2 = 0;
-    if (num >= arg1) {
-      num2 = tmp4;
-    }
-    obj[combined] = num + num2;
-    const speakingMinimumChunkCounts = self.speakingMinimumChunkCounts;
-    const combined1 = "speech_event_count_gte_" + arg1 + "ms";
-    let num3 = speakingMinimumChunkCounts.get(arg1);
-    if (num3 == null) {
-      num3 = 0;
-    }
-    let num4 = 0;
-    if (num >= arg1) {
-      num4 = 1;
-    }
-    obj[combined1] = num3 + num4;
-    return obj;
-  }, {}));
+  const merged1 = Object.assign(
+    found1.reduce((arg0, arg1) => {
+      const obj = {};
+      const merged = Object.assign(arg0);
+      const speakingMinimumChunks = self.speakingMinimumChunks;
+      const combined = "duration_speaking_gte_" + arg1 + "ms_ms";
+      num = speakingMinimumChunks.get(arg1);
+      if (num == null) {
+        num = 0;
+      }
+      let num2 = 0;
+      if (num >= arg1) {
+        num2 = tmp4;
+      }
+      obj[combined] = num + num2;
+      const speakingMinimumChunkCounts = self.speakingMinimumChunkCounts;
+      const combined1 = "speech_event_count_gte_" + arg1 + "ms";
+      let num3 = speakingMinimumChunkCounts.get(arg1);
+      if (num3 == null) {
+        num3 = 0;
+      }
+      let num4 = 0;
+      if (num >= arg1) {
+        num4 = 1;
+      }
+      obj[combined1] = num3 + num4;
+      return obj;
+    }, {}),
+  );
   return obj;
 };
 

@@ -7,8 +7,7 @@ import dispatcherDefault from "../Dispatcher.tsx";
 let obj = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null };
 const HOUR = setDefault.Millis.HOUR;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class RTCRegionStore extends DeviceSettingsStore {
-}
+class RTCRegionStore extends DeviceSettingsStore {}
 const prototype = RTCRegionStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let tmp = arg0;
@@ -75,7 +74,7 @@ let items = [
     }
     delete tmp[tmp2];
     return preferredRegion;
-  }
+  },
 ];
 RTCRegionStore.migrations = items;
 obj = {
@@ -85,7 +84,7 @@ obj = {
       obj.preferredRegions = latencyRankedRegions.latencyRankedRegions;
     }
     obj.lastTestTimestamp = Date.now();
-  }
+  },
 };
 const rTCRegionStore = new RTCRegionStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("stores/RTCRegionStore.tsx");

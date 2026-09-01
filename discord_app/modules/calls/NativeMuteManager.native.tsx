@@ -99,8 +99,7 @@ obj.handleAudioRouteChange = function handleAudioRouteChange() {
 };
 importDefaultResult.addChangeListener(obj.handleAudioRouteChange);
 let subscription = importDefaultResult1.subscribe("VOICE_CHANNEL_SELECT", obj.handleVoiceChannelSelect);
-class NativeMuteManagerWrapper {
-}
+class NativeMuteManagerWrapper {}
 const prototype2 = NativeMuteManagerWrapper.prototype;
 prototype2["nativeMuteChanged"] = function nativeMuteChanged(arg0) {
   obj.nativeMuteChanged(arg0);

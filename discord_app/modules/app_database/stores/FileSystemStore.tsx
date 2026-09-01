@@ -16,13 +16,24 @@ class FileSystemStore extends Store {
     closure_0 = undefined;
     obj = {
       APP_STATE_UPDATE(arg0) {
-            return obj.handleAppStateUpdate(arg0);
-          },
+        return obj.handleAppStateUpdate(arg0);
+      },
       POST_CONNECTION_OPEN() {
-            return obj.handlePostConnectionOpen();
-          }
+        return obj.handlePostConnectionOpen();
+      },
     };
-    tmp3 = new tmp3(require("dispatcher"), obj, new.target, tmp3, tmp2, new.target, closure_0, undefined, tmp, closure_1);
+    tmp3 = new tmp3(
+      require("dispatcher"),
+      obj,
+      new.target,
+      tmp3,
+      tmp2,
+      new.target,
+      closure_0,
+      undefined,
+      tmp,
+      closure_1,
+    );
     // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp3;
     tmp3.isLowDisk = false;
@@ -46,7 +57,7 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
 };
 function refresh() {
   const self = this;
-  return callback2(function*() {
+  return callback2(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -150,14 +161,27 @@ function refresh() {
 }
 prototype["refresh"] = refresh;
 closure_0 = undefined;
-tmp = new tmp(dispatcherDefault, {
-  APP_STATE_UPDATE(arg0) {
-    return obj.handleAppStateUpdate(arg0);
+tmp = new tmp(
+  dispatcherDefault,
+  {
+    APP_STATE_UPDATE(arg0) {
+      return obj.handleAppStateUpdate(arg0);
+    },
+    POST_CONNECTION_OPEN() {
+      return obj.handlePostConnectionOpen();
+    },
   },
-  POST_CONNECTION_OPEN() {
-    return obj.handlePostConnectionOpen();
-  }
-}, tmp2, FileSystemStore, tmp, Object, importDefault, new.target, undefined, globalThis, refresh, dependencyMap);
+  tmp2,
+  FileSystemStore,
+  tmp,
+  Object,
+  importDefault,
+  new.target,
+  undefined,
+  globalThis,
+  refresh,
+  dependencyMap,
+);
 // ThrowIfThisInitialized (0x7c)
 closure_0 = tmp;
 tmp.isLowDisk = false;
@@ -170,7 +194,7 @@ let obj = {
   },
   POST_CONNECTION_OPEN() {
     return obj.handlePostConnectionOpen();
-  }
+  },
 };
 const tmp4 = new timestampDefault("FileSystemStore");
 const result1 = require("set").fileFinishedImporting("modules/app_database/stores/FileSystemStore.tsx");

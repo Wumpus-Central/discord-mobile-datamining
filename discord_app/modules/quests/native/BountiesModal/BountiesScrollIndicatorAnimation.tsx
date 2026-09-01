@@ -10,7 +10,9 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 require = arg1;
 let closure_7 = createCacheKey.createStyles(() => ({ container: { width: 80, height: 80 } }));
-const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx",
+);
 
 export default function BountiesScrollIndicatorAnimation(startAnimation) {
   const visible = startAnimation.visible;
@@ -26,7 +28,14 @@ export default function BountiesScrollIndicatorAnimation(startAnimation) {
       tmp7((arg0) => arg0 + 1);
     }
   }
-  obj = { style: tmp.container, children: jsx(ManaContext.BountiesScrollIndicatorRive, { stateMachine: "State Machine 1", fit: "contain", dataBinding: obj }, tmp6) };
+  obj = {
+    style: tmp.container,
+    children: jsx(
+      ManaContext.BountiesScrollIndicatorRive,
+      { stateMachine: "State Machine 1", fit: "contain", dataBinding: obj },
+      tmp6,
+    ),
+  };
   obj = { color: token, startAnimation: !startAnimation.isFadingInContent };
   return <View color={token} startAnimation={!arg0.isFadingInContent} />;
-};
+}

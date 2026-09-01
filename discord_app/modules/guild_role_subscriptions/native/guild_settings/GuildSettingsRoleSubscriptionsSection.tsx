@@ -29,7 +29,7 @@ function HasCreatedListingsSection(arg0) {
   obj[3] = function onPress() {
     return callback(closure_1_6.ROLE_SUBSCRIPTIONS_BASIC);
   };
-  const items1 = [callback(TableRowInner.TableRow, obj, "guild-role-subscriptions-basic"), , , ];
+  const items1 = [callback(TableRowInner.TableRow, obj, "guild-role-subscriptions-basic"), , ,];
   const obj2 = { label: null, arrow: true, icon: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj2[0] = intl3.string(getSystemLocale.t.pXbGYc);
@@ -68,7 +68,9 @@ function HasCreatedListingsSection(arg0) {
 noopAll;
 ({ GuildFeatures: c5, GuildSettingsSections: closure_6 } = ME);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsSection.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsSection.tsx",
+);
 
 export default function GuildSettingsRoleSubscriptionsSection(guild) {
   guild = guild.guild;
@@ -85,4 +87,4 @@ export default function GuildSettingsRoleSubscriptionsSection(guild) {
     }
   }
   return tmp;
-};
+}

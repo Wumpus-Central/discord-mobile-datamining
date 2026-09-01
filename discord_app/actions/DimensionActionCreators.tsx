@@ -7,7 +7,14 @@ let result = set.fileFinishedImporting("actions/DimensionActionCreators.tsx");
 export default {
   updateChannelDimensions(id, eventTimestamp, scrollTop, scrollHeight, offsetHeight, arg5) {
     let obj = dispatcherDefault;
-    obj = { type: "UPDATE_CHANNEL_DIMENSIONS", channelId: id, timestamp: eventTimestamp, scrollTop, scrollHeight, offsetHeight };
+    obj = {
+      type: "UPDATE_CHANNEL_DIMENSIONS",
+      channelId: id,
+      timestamp: eventTimestamp,
+      scrollTop,
+      scrollHeight,
+      offsetHeight,
+    };
     obj.dispatch(obj);
     if (arg5 != null) {
       arg5();
@@ -39,5 +46,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "UPDATE_GUILD_LIST_DIMENSIONS", scrollTop };
     obj.dispatch(obj);
-  }
+  },
 };

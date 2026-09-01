@@ -10,12 +10,26 @@ const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { card: null, channel: null, channelName: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: 10, paddingVertical: 8 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  overflow: "hidden",
+  borderRadius: 10,
+  paddingVertical: 8,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", flexDirection: "row", alignItems: "center", paddingVertical: 4, justifyContent: "space-between", paddingRight: 12 };
+createCacheKey[1] = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  paddingVertical: 4,
+  justifyContent: "space-between",
+  paddingRight: 12,
+};
 createCacheKey[2] = { display: "flex", flexDirection: "row", alignItems: "center" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMockChannels.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/notifications/settings/native/NotificationSettingsMockChannels.tsx",
+);
 
 export default function NotificationSettingsMockChannels(unreadSetting) {
   const tmp = callback2();
@@ -23,7 +37,7 @@ export default function NotificationSettingsMockChannels(unreadSetting) {
   let obj = { badged: true, unread: true, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, name: null };
   const intl = require("../../../../intl/index.native.tsx").intl;
   obj[3] = intl.string(require("../../../../intl/index.native.tsx").t.EjLobP);
-  let items = [obj, , ];
+  let items = [obj, ,];
   obj = { badged: false, unread: true, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS, name: null };
   const intl2 = require("../../../../intl/index.native.tsx").intl;
   obj[3] = intl2.string(require("../../../../intl/index.native.tsx").t.Wgpwpp);
@@ -41,7 +55,7 @@ export default function NotificationSettingsMockChannels(unreadSetting) {
       let obj = { style: lib.channel, children: null };
       obj = { style: lib.channelName, children: null };
       obj = { unread: unread.unread, resolvedUnreadSetting: unread.resolvedUnreadSetting };
-      const items = [closure_1_5(closure_1_1(closure_1_2[7]), obj), , ];
+      const items = [closure_1_5(closure_1_1(closure_1_2[7]), obj), ,];
       obj1 = { style: { marginLeft: 12 }, size: "xs", color: null };
       let str;
       if (unread.resolvedUnreadSetting === closure_1_4.ONLY_MENTIONS) {
@@ -58,7 +72,7 @@ export default function NotificationSettingsMockChannels(unreadSetting) {
       obj2[3] = unread.name;
       items[2] = closure_1_5(lib(closure_1_2[9]).Text, obj2);
       obj[1] = items;
-      const items1 = [closure_1_6(closure_1_3, obj), ];
+      const items1 = [closure_1_6(closure_1_3, obj)];
       let num = 0;
       if (unread.badged) {
         num = 1;
@@ -66,6 +80,6 @@ export default function NotificationSettingsMockChannels(unreadSetting) {
       items1[1] = closure_1_5(lib(closure_1_2[10]).Badge, { value: num });
       obj[1] = items1;
       return closure_1_6(closure_1_3, obj, unread.name);
-    })
+    }),
   });
-};
+}

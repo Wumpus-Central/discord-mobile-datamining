@@ -17,7 +17,16 @@ require = arg1;
 let c5 = importAllResult;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { background: null, container: null, title: null, prompt: null, input: null, redesignInput: null, button: null, hint: null };
+let obj = {
+  background: null,
+  container: null,
+  title: null,
+  prompt: null,
+  input: null,
+  redesignInput: null,
+  button: null,
+  hint: null,
+};
 obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
 obj[1] = { paddingVertical: 12, paddingHorizontal: 16 };
@@ -42,7 +51,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   let first;
   function _handleSubmit() {
     const self = this;
-    const tmp = _undefined(function*() {
+    const tmp = _undefined(function* () {
       if (v02 === 2) {
         v02 = 3;
         HermesBuiltin.throwTypeError();
@@ -198,20 +207,40 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       }
       return applyArgumentsResult;
     }
-    const items2 = [tmp15, ];
+    const items2 = [tmp15];
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    obj1 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    obj1 = {
+      style: null,
+      accessibilityRole: "header",
+      variant: "heading-xl/extrabold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj1[0] = tmp.title;
     let intl = tmp3(1236).intl;
     obj1[4] = intl.string(tmp3(1236).t["x+d9t3"]);
-    const items3 = [callback(tmp3(4474).Text, obj1), , , , ];
+    const items3 = [callback(tmp3(4474).Text, obj1), , , ,];
     obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj2[0] = tmp.prompt;
     const intl2 = tmp3(1236).intl;
     obj2[3] = intl2.string(tmp3(1236).t.vaZmAx);
     items3[1] = callback(tmp3(4474).Text, obj2);
-    let obj3 = { style: null, textStyle: null, label: null, textContentType: "password", keyboardType: "default", secureTextEntry: true, value: null, onChangeText: null, onSubmitEditing: null, error: null, returnKeyType: "done", autoCapitalize: "none", autoFocus: true };
+    let obj3 = {
+      style: null,
+      textStyle: null,
+      label: null,
+      textContentType: "password",
+      keyboardType: "default",
+      secureTextEntry: true,
+      value: null,
+      onChangeText: null,
+      onSubmitEditing: null,
+      error: null,
+      returnKeyType: "done",
+      autoCapitalize: "none",
+      autoFocus: true,
+    };
     ({ input: obj7[0], redesignInput: obj7[1] } = tmp);
     const intl3 = tmp3(1236).intl;
     obj3[2] = intl3.string(tmp3(1236).t["CIGa+7"]);
@@ -255,7 +284,9 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   return tmp13Result;
 });
 let obj2 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-let result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsConfirmPassword.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/account/native/UserSettingsConfirmPassword.tsx",
+);
 
 export default forwardRefResult;
 export const UserSettingsConfirmPasswordWrapped = function UserSettingsConfirmPasswordWrapped() {

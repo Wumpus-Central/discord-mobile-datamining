@@ -9,9 +9,16 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ animatedListContainer: { overflow: "hidden" }, expandCTALabelContainer: { alignItems: "center" } });
-let closure_10 = { code: "function ExpandableListTsx1(){const{expanded,collapsedListHeight,remainingListHeight}=this.__closure;if(expanded&&collapsedListHeight.get()!==0&&remainingListHeight.get()!==0){return collapsedListHeight.get()+remainingListHeight.get();}return collapsedListHeight.get();}" };
-let closure_11 = { code: "function ExpandableListTsx2(){const{collapsedListHeight,withTiming,containerHeight,timingStandard}=this.__closure;if(collapsedListHeight.get()!==0){return{height:withTiming(containerHeight.get(),timingStandard)};}else{return{};}}" };
+let closure_9 = createCacheKey.createStyles({
+  animatedListContainer: { overflow: "hidden" },
+  expandCTALabelContainer: { alignItems: "center" },
+});
+let closure_10 = {
+  code: "function ExpandableListTsx1(){const{expanded,collapsedListHeight,remainingListHeight}=this.__closure;if(expanded&&collapsedListHeight.get()!==0&&remainingListHeight.get()!==0){return collapsedListHeight.get()+remainingListHeight.get();}return collapsedListHeight.get();}",
+};
+let closure_11 = {
+  code: "function ExpandableListTsx2(){const{collapsedListHeight,withTiming,containerHeight,timingStandard}=this.__closure;if(collapsedListHeight.get()!==0){return{height:withTiming(containerHeight.get(),timingStandard)};}else{return{};}}",
+};
 let result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/ExpandableList.tsx");
 
 export default function ExpandableList(items) {
@@ -109,7 +116,12 @@ export default function ExpandableList(items) {
       return obj;
     }
   }
-  obj = { collapsedListHeight: sharedValue, withTiming: memo1(4479).withTiming, containerHeight: derivedValue, timingStandard: memo1(4482).timingStandard };
+  obj = {
+    collapsedListHeight: sharedValue,
+    withTiming: memo1(4479).withTiming,
+    containerHeight: derivedValue,
+    timingStandard: memo1(4482).timingStandard,
+  };
   A.__closure = obj;
   A.__workletHash = 2086836441465;
   A.__initData = derivedValue;
@@ -120,7 +132,7 @@ export default function ExpandableList(items) {
     onLayout(nativeEvent) {
       const result = sharedValue.set(nativeEvent.nativeEvent.layout.height);
     },
-    children: null
+    children: null,
   };
   let tmp18 = !showsExpandCTAOverride;
   if (!showsExpandCTAOverride) {
@@ -135,7 +147,7 @@ export default function ExpandableList(items) {
     }
     return arg0({ isLastRow });
   });
-  const items6 = [closure_6(first, obj1), ];
+  const items6 = [closure_6(first, obj1)];
   let tmp16Result = memo1.length > 0;
   if (tmp16Result) {
     obj2 = { onLayout: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
@@ -156,7 +168,7 @@ export default function ExpandableList(items) {
   }
   items6[1] = tmp16Result;
   obj[1] = items6;
-  const items7 = [first(_modDef4217.View, obj), ];
+  const items7 = [first(_modDef4217.View, obj)];
   if (!showsExpandCTAOverride) {
     obj3 = { children: null };
     items7[1] = showsExpandCTAOverride;
@@ -204,5 +216,5 @@ export default function ExpandableList(items) {
     obj7[0] = obj5;
     tmp16Result = tmp16(tmp17, obj7);
   }
-};
+}
 export const COLLAPSED_LIST_ITEM_MAX = 4;

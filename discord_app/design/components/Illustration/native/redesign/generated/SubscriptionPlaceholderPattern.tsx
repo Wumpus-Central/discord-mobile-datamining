@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx",
+);
 
 export const getSubscriptionPlaceholderPatternSource = function getSubscriptionPlaceholderPatternSource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getSubscriptionPlaceholderPatternSource = function getSubscriptionP
     },
     light() {
       return callback(13163);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useSubscriptionPlaceholderPatternSource = function useSubscriptionP
     },
     light() {
       return callback(13163);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const SubscriptionPlaceholderPattern = function SubscriptionPlaceholderPa
     },
     light() {
       return callback(13163);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

@@ -10,7 +10,7 @@ require = arg1;
 let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", EXPRESSIVE: 1, [1]: "EXPRESSIVE", PRIMARY: 2, [2]: "PRIMARY" };
 class MarketingPageBanner$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , ];
+    items = [, , , , , , , ,];
     items[0] = { no: 1, name: "asset_url", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "header", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "body", kind: "scalar", T: 9 };
@@ -20,24 +20,24 @@ class MarketingPageBanner$Type extends MessageType {
       name: "button",
       kind: "message",
       T() {
-            return callback(8455).CTAButton;
-          }
+        return callback(8455).CTAButton;
+      },
     };
     items[5] = {
       no: 6,
       name: "help_article",
       kind: "message",
       T() {
-            return callback(8454).HelpArticle;
-          }
+        return callback(8454).HelpArticle;
+      },
     };
     items[6] = {
       no: 7,
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
-          }
+        return callback(8453).LocalizedString;
+      },
     };
     obj = { no: 8, name: "body_localized", kind: "message", T: null };
     class T {
@@ -52,9 +52,13 @@ class MarketingPageBanner$Type extends MessageType {
       name: "button_variant",
       kind: "enum",
       T() {
-            const items = ["discord_protos.premium_marketing.v1.MarketingPageBannerButtonVariant", closure_3, "MARKETING_PAGE_BANNER_BUTTON_VARIANT_"];
-            return items;
-          }
+        const items = [
+          "discord_protos.premium_marketing.v1.MarketingPageBannerButtonVariant",
+          closure_3,
+          "MARKETING_PAGE_BANNER_BUTTON_VARIANT_",
+        ];
+        return items;
+      },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.MarketingPageBanner", items, T);
     // ThrowIfThisInitialized (0x7c)
@@ -116,7 +120,12 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         let tmp29 = LocalizedString2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
-        obj.headerLocalized = LocalizedString2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.headerLocalized);
+        obj.headerLocalized = LocalizedString2.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.headerLocalized,
+        );
       } else if (8 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
@@ -183,26 +192,58 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
   if (assetUrl.button) {
     const CTAButton = create3.CTAButton;
     const tagResult4 = tag.tag(5, _mod1307.WireType.LengthDelimited);
-    const joined = CTAButton.internalBinaryWrite(assetUrl.button, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = CTAButton.internalBinaryWrite(assetUrl.button, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = CTAButton.internalBinaryWrite(
+      assetUrl.button,
+      tag.tag(5, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = CTAButton.internalBinaryWrite(
+      assetUrl.button,
+      tag.tag(5, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (assetUrl.helpArticle) {
     const HelpArticle = create2.HelpArticle;
     const tagResult5 = tag.tag(6, _mod1307.WireType.LengthDelimited);
-    const joined1 = HelpArticle.internalBinaryWrite(assetUrl.helpArticle, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = HelpArticle.internalBinaryWrite(assetUrl.helpArticle, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = HelpArticle.internalBinaryWrite(
+      assetUrl.helpArticle,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult1 = HelpArticle.internalBinaryWrite(
+      assetUrl.helpArticle,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (assetUrl.headerLocalized) {
     const LocalizedString = create.LocalizedString;
     const tagResult6 = tag.tag(7, _mod1307.WireType.LengthDelimited);
-    const joined2 = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(7, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(7, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined2 = LocalizedString.internalBinaryWrite(
+      assetUrl.headerLocalized,
+      tag.tag(7, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult2 = LocalizedString.internalBinaryWrite(
+      assetUrl.headerLocalized,
+      tag.tag(7, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (assetUrl.bodyLocalized) {
     const LocalizedString2 = create.LocalizedString;
     const tagResult7 = tag.tag(8, _mod1307.WireType.LengthDelimited);
-    const joined3 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(8, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(8, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined3 = LocalizedString2.internalBinaryWrite(
+      assetUrl.bodyLocalized,
+      tag.tag(8, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult3 = LocalizedString2.internalBinaryWrite(
+      assetUrl.bodyLocalized,
+      tag.tag(8, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (0 !== assetUrl.buttonVariant) {
     tag.tag(9, _mod1307.WireType.Varint).int32(assetUrl.buttonVariant);
@@ -229,7 +270,7 @@ let items = [
     kind: "message",
     T() {
       return callback(8455).CTAButton;
-    }
+    },
   },
   {
     no: 6,
@@ -237,7 +278,7 @@ let items = [
     kind: "message",
     T() {
       return callback(8454).HelpArticle;
-    }
+    },
   },
   {
     no: 7,
@@ -245,10 +286,9 @@ let items = [
     kind: "message",
     T() {
       return callback(8453).LocalizedString;
-    }
+    },
   },
-,
-
+  ,
 ];
 obj = { no: 8, name: "body_localized", kind: "message", T: null };
 class T {
@@ -263,13 +303,29 @@ items[8] = {
   name: "button_variant",
   kind: "enum",
   T() {
-    const items = ["discord_protos.premium_marketing.v1.MarketingPageBannerButtonVariant", closure_3, "MARKETING_PAGE_BANNER_BUTTON_VARIANT_"];
+    const items = [
+      "discord_protos.premium_marketing.v1.MarketingPageBannerButtonVariant",
+      closure_3,
+      "MARKETING_PAGE_BANNER_BUTTON_VARIANT_",
+    ];
     return items;
-  }
+  },
 };
-prototype = new prototype("discord_protos.premium_marketing.v1.MarketingPageBanner", items, tmp, T, MarketingPageBanner$Type, prototype, items, arg1, dependencyMap);
+prototype = new prototype(
+  "discord_protos.premium_marketing.v1.MarketingPageBanner",
+  items,
+  tmp,
+  T,
+  MarketingPageBanner$Type,
+  prototype,
+  items,
+  arg1,
+  dependencyMap,
+);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/marketing_page_banner.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/marketing_page_banner.tsx",
+);
 
 export const MarketingPageBannerButtonVariant = obj;
 export const MarketingPageBanner = prototype;

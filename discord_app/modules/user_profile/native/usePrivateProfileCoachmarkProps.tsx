@@ -9,7 +9,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 require = arg1;
 function PrivateProfileCoachmarkImage() {
-  return <View style={callback().imageContainer}>{jsx(PrivateProfileAbstractUI.PrivateProfileAbstractUI, { width: 100, height: 67, resizeMode: "contain" })}</View>;
+  return (
+    <View style={callback().imageContainer}>
+      {jsx(PrivateProfileAbstractUI.PrivateProfileAbstractUI, { width: 100, height: 67, resizeMode: "contain" })}
+    </View>
+  );
 }
 let closure_7 = createCacheKey.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 const result = require("set").fileFinishedImporting("modules/user_profile/native/usePrivateProfileCoachmarkProps.tsx");
@@ -38,7 +42,17 @@ export const usePrivateProfileCoachmarkProps = function usePrivateProfileCoachma
   stringResult1 = intl.string(tmp(_hogEy[8]).t.bnNxW1);
   const items = [stringResult1, markAsDismissed, visibleContent];
   return stringResult1.useMemo(() => {
-    let obj = { title: null, description: null, position: "top", visible: null, onDismiss: null, renderImgComponent: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
+    let obj = {
+      title: null,
+      description: null,
+      position: "top",
+      visible: null,
+      onDismiss: null,
+      renderImgComponent: null,
+      buttonLabel: null,
+      buttonVariant: "primary",
+      onButtonPress: null,
+    };
     const intl = visibleContent(markAsDismissed[8]).intl;
     obj[0] = intl.string(visibleContent(markAsDismissed[8]).t.Ve4nS1);
     obj[1] = stringResult1;

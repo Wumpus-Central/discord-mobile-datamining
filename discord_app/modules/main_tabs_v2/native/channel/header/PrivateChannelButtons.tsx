@@ -26,11 +26,32 @@ const tmp4 = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.XSM
 let closure_22 = tmp4;
 let obj = { direction: require("Button").CutoutDirection.RIGHT, radius: tmp4 / 2 + 3, inset: -6 };
 let closure_24 = createCacheKey.createStyles(() => {
-  obj = { privateChannelButtonsWrapper: { flexDirection: "row", gap: 12, paddingEnd: 1 }, button: null, disabledButton: null, overflowBadge: null };
-  obj = { borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, minHeight: ThemesDefault.space.PX_32, minWidth: ThemesDefault.space.PX_32, padding: ThemesDefault.space.PX_4, justifyContent: "center", flexDirection: "row", alignItems: "center" };
+  obj = {
+    privateChannelButtonsWrapper: { flexDirection: "row", gap: 12, paddingEnd: 1 },
+    button: null,
+    disabledButton: null,
+    overflowBadge: null,
+  };
+  obj = {
+    borderRadius: ThemesDefault.modules.button.BORDER_RADIUS,
+    minHeight: ThemesDefault.space.PX_32,
+    minWidth: ThemesDefault.space.PX_32,
+    padding: ThemesDefault.space.PX_4,
+    justifyContent: "center",
+    flexDirection: "row",
+    alignItems: "center",
+  };
   obj[1] = obj;
   obj[2] = { opacity: 0.6 };
-  obj = { backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: ThemesDefault.radii.round, width: closure_22, height: closure_22, justifyContent: "center", alignItems: "center", marginLeft: -6 };
+  obj = {
+    backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND,
+    borderRadius: ThemesDefault.radii.round,
+    width: closure_22,
+    height: closure_22,
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: -6,
+  };
   obj[3] = obj;
   return obj;
 });
@@ -62,15 +83,20 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
   let tmp2Result = tmp2(589);
   const items1 = [application];
   const items2 = [stateFromStores];
-  const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => {
-    let isInChannelResult = null != stateFromStores;
-    if (isInChannelResult) {
-      isInChannelResult = application.isInChannel(tmp.id);
-    }
-    return isInChannelResult;
-  }, items2);
+  const stateFromStores1 = tmp2Result.useStateFromStores(
+    items1,
+    () => {
+      let isInChannelResult = null != stateFromStores;
+      if (isInChannelResult) {
+        isInChannelResult = application.isInChannel(tmp.id);
+      }
+      return isInChannelResult;
+    },
+    items2,
+  );
   tmp2Result = tmp2(11029);
-  inappropriateConversationSafetyToolsWarningForChannel = tmp2Result.useInappropriateConversationSafetyToolsWarningForChannel(channelId);
+  inappropriateConversationSafetyToolsWarningForChannel =
+    tmp2Result.useInappropriateConversationSafetyToolsWarningForChannel(channelId);
   closure_6 = tmp7;
   const items3 = [totalParticipantCount, closure_10];
   let stateFromStores2 = channelId(589).useStateFromStores(items3, () => {
@@ -99,7 +125,9 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
   });
   const tmp2Result1 = channelId(589);
   const items4 = [visibleParticipants];
-  const stateFromStores3 = channelId(589).useStateFromStores(items4, () => visibleParticipants.supports(constants.VIDEO));
+  const stateFromStores3 = channelId(589).useStateFromStores(items4, () =>
+    visibleParticipants.supports(constants.VIDEO),
+  );
   const tmp2Result2 = channelId(589);
   let id;
   if (stateFromStores != null) {
@@ -185,7 +213,11 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
     if (null != stateFromStores) {
       const guildId = obj2.getGuildId();
       const isThreadResult = obj2.isThread();
-      const channelDetailsSearchContext = channelId(tmp2[25]).getChannelDetailsSearchContext(channelId, guildId, isThreadResult);
+      const channelDetailsSearchContext = channelId(tmp2[25]).getChannelDetailsSearchContext(
+        channelId,
+        guildId,
+        isThreadResult,
+      );
       const tmpResult = channelId(tmp2[25]);
       obj = { searchContext: null, searchLocation: null };
       obj[0] = channelDetailsSearchContext;
@@ -195,7 +227,14 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
     }
   }, items10);
   const items11 = [recipientId, stateFromStores, application];
-  const items12 = [null != inappropriateConversationSafetyToolsWarningForChannel && null != recipientId, tmp.button, callback2, channelId, recipientId, , ];
+  const items12 = [
+    null != inappropriateConversationSafetyToolsWarningForChannel && null != recipientId,
+    tmp.button,
+    callback2,
+    channelId,
+    recipientId,
+    ,
+  ];
   let id1;
   callback3 = obj8.useCallback(() => {
     let tmp2 = null != recipientId;
@@ -215,7 +254,11 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
       obj[0] = recipientId;
       obj[1] = stateFromStores;
       obj[2] = application;
-      screenIndex(closure_2[28]).openLazy(channelId(closure_2[30])(closure_2[29], closure_2.paths), "AppDMOptionsBottomSheet", obj);
+      screenIndex(closure_2[28]).openLazy(
+        channelId(closure_2[30])(closure_2[29], closure_2.paths),
+        "AppDMOptionsBottomSheet",
+        obj,
+      );
       const obj3 = screenIndex(closure_2[28]);
     }
   }, items11);
@@ -270,7 +313,7 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
       const intl3 = tmp2(1236).intl;
       obj1[2] = intl3.string(tmp2(1236).t["5h0QOP"]);
       obj1[4] = callback(tmp2(6235).MagnifyingGlassIcon, { size: "sm" });
-      const items13 = [callback(tmp2(5068).PressableOpacity, obj1), ];
+      const items13 = [callback(tmp2(5068).PressableOpacity, obj1)];
       let obj2 = { style: null, onPress: null, accessibilityLabel: null, accessibilityRole: "button", children: null };
       obj2[0] = tmp.button;
       obj2[1] = callback3;
@@ -295,9 +338,16 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
     } else {
       stringResult = string(t.focH1t);
     }
-    let obj4 = { accessibilityLabel: null, accessibilityRole: "button", style: null, onPress: null, disabled: null, children: null };
+    let obj4 = {
+      accessibilityLabel: null,
+      accessibilityRole: "button",
+      style: null,
+      onPress: null,
+      disabled: null,
+      children: null,
+    };
     obj4[0] = stringResult;
-    const items14 = [tmp.button, , ];
+    const items14 = [tmp.button, ,];
     let num2;
     if (tmp14) {
       num2 = 1;
@@ -348,20 +398,19 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
         const items15 = [
           tmp29Result,
           visibleParticipants.map((user) => {
-                  const diff = visibleParticipants.length - 1;
-                  let num = -6;
-                  if (0 === arg1) {
-                    num = screenIndex(tmp4[17]).space.PX_4;
-                  }
-                  obj = { style: { marginLeft: num }, user: user.user, guildId: "r", size: false, cutout: false };
-                  obj[3] = channelId(closure_2[15]).AvatarSizes.XSMALL;
-                  if (arg1 !== diff) {
-                    const tmp7 = closure_1_23;
-                  }
-                  obj[4] = tmp7;
-                  return closure_1_20(channelId(closure_2[15]).CutoutableAvatarImage, obj, user.id);
-                }),
-
+            const diff = visibleParticipants.length - 1;
+            let num = -6;
+            if (0 === arg1) {
+              num = screenIndex(tmp4[17]).space.PX_4;
+            }
+            obj = { style: { marginLeft: num }, user: user.user, guildId: "r", size: false, cutout: false };
+            obj[3] = channelId(closure_2[15]).AvatarSizes.XSMALL;
+            if (arg1 !== diff) {
+              const tmp7 = closure_1_23;
+            }
+            obj[4] = tmp7;
+            return closure_1_20(channelId(closure_2[15]).CutoutableAvatarImage, obj, user.id);
+          }),
         ];
         let tmp32Result = totalParticipantCount > 5;
         if (tmp32Result) {
@@ -375,18 +424,25 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
         }
         items15[2] = tmp32Result;
         obj4[5] = items15;
-        const items17 = [tmp24(tmp2(5068).PressableOpacity, obj4), , ];
+        const items17 = [tmp24(tmp2(5068).PressableOpacity, obj4), ,];
         tmp32Result = null;
         if (!isMultiUserDMResult) {
           tmp32Result = null;
           if (!stateFromStores1) {
-            const items18 = [tmp.button, ];
+            const items18 = [tmp.button];
             if (stateFromStores2) {
               let disabledButton1 = tmp.disabledButton;
             } else {
               disabledButton1 = null;
             }
-            const obj10 = { style: null, onPress: null, disabled: null, accessibilityLabel: null, accessibilityRole: "button", children: null };
+            const obj10 = {
+              style: null,
+              onPress: null,
+              disabled: null,
+              accessibilityLabel: null,
+              accessibilityRole: "button",
+              children: null,
+            };
             items18[1] = disabledButton1;
             obj10[0] = items18;
             obj10[1] = callback1;
@@ -411,6 +467,8 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
   }
   return tmp24Result;
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/PrivateChannelButtons.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/channel/header/PrivateChannelButtons.tsx",
+);
 
 export default memoResult;

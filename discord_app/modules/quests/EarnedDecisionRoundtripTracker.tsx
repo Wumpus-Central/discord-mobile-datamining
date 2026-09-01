@@ -28,7 +28,11 @@ function trackRoundtrip(apiResponseTimestamp) {
       tmp10 = obj;
     }
     const merged1 = Object.assign(tmp10);
-    ({ callerSource: obj3.caller_source, requestId: obj3.request_id, fetchedAt: obj3.fetched_at } = apiResponseTimestamp);
+    ({
+      callerSource: obj3.caller_source,
+      requestId: obj3.request_id,
+      fetchedAt: obj3.fetched_at,
+    } = apiResponseTimestamp);
     const obj2 = expandEventPropertiesDefault;
     const tmp2 = require;
     obj.is_foregrounded = isForegrounded.isForegrounded();
@@ -49,7 +53,15 @@ prototype["recordEarnedRequestAttempt"] = function recordEarnedRequestAttempt(ar
   const self = this;
   closure_0 = arg0;
   let pendingRequests = this.pendingRequests;
-  const result = pendingRequests.set(arg0, { initialSendTimestamp: Date.now(), endpoint: "/quests/earned-decision", apiResponseTimestamp: null, wasSuccessful: false, callerSource, requestId: null, fetchedAt: null });
+  const result = pendingRequests.set(arg0, {
+    initialSendTimestamp: Date.now(),
+    endpoint: "/quests/earned-decision",
+    apiResponseTimestamp: null,
+    wasSuccessful: false,
+    callerSource,
+    requestId: null,
+    fetchedAt: null,
+  });
   const timerId = setTimeout(() => {
     const pendingRequests = self.pendingRequests;
     const value = pendingRequests.get(closure_0);

@@ -5,7 +5,11 @@ import VoiceMessageRecordingStatus from "VoiceMessagesUIStore.tsx";
 import { useTooltip } from "../../../design/components/Tooltip/native/useTooltip.native.tsx";
 
 const require = arg1;
-({ hideVoiceMessagesTooltip: c4, showVoiceMessagesTooltip: c5, useVoiceMessagesUIStore: closure_6 } = VoiceMessageRecordingStatus);
+({
+  hideVoiceMessagesTooltip: c4,
+  showVoiceMessagesTooltip: c5,
+  useVoiceMessagesUIStore: closure_6,
+} = VoiceMessageRecordingStatus);
 const result = require("set").fileFinishedImporting("modules/voice_messages/native/useVoiceMessageTooltip.tsx");
 
 export default function useVoiceMessageTooltip() {
@@ -43,4 +47,4 @@ export default function useVoiceMessageTooltip() {
   const tooltip = obj.useTooltip(ref, memo);
   obj = { tooltipTargetRef: ref, showVoiceMessagesTooltip: closure_5 };
   return obj;
-};
+}

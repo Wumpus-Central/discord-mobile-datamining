@@ -4,8 +4,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 
 let closure_0 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class GuildPromptsStore extends PersistedStore {
-}
+class GuildPromptsStore extends PersistedStore {}
 const prototype = GuildPromptsStore.prototype;
 prototype["initialize"] = function initialize(obj) {
   for (const key10004 in arg0) {
@@ -61,7 +60,7 @@ const guildPromptsStore = new GuildPromptsStore(dispatcherDefault, {
       flag = true;
     }
     return flag;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/guild/GuildPromptsStore.tsx");
 

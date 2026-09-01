@@ -137,8 +137,7 @@ function handleRelationshipUpdate() {
 }
 let closure_8 = {};
 const Store = initializeDefault.Store;
-class GuildOfficialMessagesStore extends Store {
-}
+class GuildOfficialMessagesStore extends Store {}
 const prototype = GuildOfficialMessagesStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3, closure_4, closure_5, closure_6);
@@ -699,7 +698,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
   },
   RELATIONSHIP_ADD: handleRelationshipUpdate,
   RELATIONSHIP_REMOVE: handleRelationshipUpdate,
-  RELATIONSHIP_UPDATE: handleRelationshipUpdate
+  RELATIONSHIP_UPDATE: handleRelationshipUpdate,
 });
 let result = require("set").fileFinishedImporting("modules/messages/GuildOfficialMessagesStore.tsx");
 

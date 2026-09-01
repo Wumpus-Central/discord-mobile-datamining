@@ -19,7 +19,7 @@ require = arg1;
 function MaybeClearBuildOverride() {
   function _clearOverride() {
     const self = this;
-    const tmp = closure_1_3(function*() {
+    const tmp = closure_1_3(function* () {
       const callback = tmp3;
       c3 = 1;
       closure_1_0(true);
@@ -51,17 +51,20 @@ function MaybeClearBuildOverride() {
   const _require = tmp[1];
   let obj = initialize;
   const items = [closure_8];
-  if (null == obj.useStateFromStores(items, () => {
-    const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
-    let id;
-    if (overrides != null) {
-      const tmp4 = overrides[callback(undefined, table[8]).DEVICE_FIELD];
-      if (tmp4 != null) {
-        id = tmp4.id;
+  if (
+    null ==
+    obj.useStateFromStores(items, () => {
+      const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
+      let id;
+      if (overrides != null) {
+        const tmp4 = overrides[callback(undefined, table[8]).DEVICE_FIELD];
+        if (tmp4 != null) {
+          id = tmp4.id;
+        }
       }
-    }
-    return id;
-  })) {
+      return id;
+    })
+  ) {
     return null;
   } else {
     obj = { variant: "secondary", loading: null, text: null, onPress: null };
@@ -84,7 +87,20 @@ function MaybeClearBuildOverride() {
 let c5 = importAllResult;
 ({ NativeModules: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createLegacyClassComponentStyles({ buttons: { position: "absolute", right: 32, bottom: 32, left: 32, gap: 12 }, debugLogsContainer: { position: "absolute", right: 32, top: 64, display: "flex", flexDirection: "row", alignItems: "center", gap: 12 }, error: { marginTop: 24, textAlign: "center" }, text: { textAlign: "center" } });
+let closure_11 = createCacheKey.createLegacyClassComponentStyles({
+  buttons: { position: "absolute", right: 32, bottom: 32, left: 32, gap: 12 },
+  debugLogsContainer: {
+    position: "absolute",
+    right: 32,
+    top: 64,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+  },
+  error: { marginTop: 24, textAlign: "center" },
+  text: { textAlign: "center" },
+});
 const PureComponent = importAllResult.PureComponent;
 class ErrorBoundary extends PureComponent {
   constructor() {
@@ -158,10 +174,10 @@ prototype["render"] = function render() {
       str = "Unknown Error";
     }
     obj[3] = str;
-    const items = [closure_9(Text.Text, obj), , ];
+    const items = [closure_9(Text.Text, obj), ,];
     obj = { style: null, children: null };
     obj[0] = tmp.buttons;
-    const items1 = [closure_9(MaybeClearBuildOverride, {}), ];
+    const items1 = [closure_9(MaybeClearBuildOverride, {})];
     obj1 = { text: null, onPress: null };
     const intl3 = tmp3(1236).intl;
     obj1[0] = intl3.string(getSystemLocale.t["4n8OJn"]);

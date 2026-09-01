@@ -25,6 +25,6 @@ export function createFakeSharedValue(COLLAPSED) {
     modify() {
       error = new Error("FakeSharedValue: You cannot modify a shared value, please use a real one");
       throw error;
-    }
+    },
   };
 }

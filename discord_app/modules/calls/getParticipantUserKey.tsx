@@ -6,4 +6,4 @@ const result = set.fileFinishedImporting("modules/calls/getParticipantUserKey.ts
 export default function getParticipantUserKey(str, id) {
   const formatted = str.toLowerCase();
   return "" + formatted.padEnd(32, "!") + id.id;
-};
+}

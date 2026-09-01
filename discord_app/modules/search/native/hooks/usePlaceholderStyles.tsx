@@ -5,7 +5,9 @@ import { FADE_LAYOUT_ANIMATION_DURATION as closure_4 } from "../../SearchConstan
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-let closure_5 = { code: "function usePlaceholderStylesTsx1(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}" };
+let closure_5 = {
+  code: "function usePlaceholderStylesTsx1(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}",
+};
 const result = require("set").fileFinishedImporting("modules/search/native/hooks/usePlaceholderStyles.tsx");
 
 export const useFullscreenPlaceholderCount = function useFullscreenPlaceholderCount(arg0) {
@@ -58,7 +60,10 @@ export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(
           tmp19 = closure_1_2;
           obj1[1] = closure_0(closure_1_2[6]).STANDARD_EASING;
           num4 = -1;
-          obj[0] = tmp2Result.withRepeat(obj5.withSequence(withTimingResult, withTimingResult1, obj9.withTiming(0.5, obj1)), -1);
+          obj[0] = tmp2Result.withRepeat(
+            obj5.withSequence(withTimingResult, withTimingResult1, obj9.withTiming(0.5, obj1)),
+            -1,
+          );
           tmp5 = obj;
         } else {
           tmp2Result1 = tmp2(tmp3[5]);
@@ -73,7 +78,15 @@ export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(
       return tmp5;
     }
   }
-  obj = { useReducedMotion: stateFromStores, visible, withRepeat: require("../../../reanimated/ReanimatedRexport.tsx").withRepeat, withSequence: require("../../../reanimated/ReanimatedRexport.tsx").withSequence, withTiming: require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming, STANDARD_EASING: require("../../../../design/void/native.tsx").STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: closure_4 };
+  obj = {
+    useReducedMotion: stateFromStores,
+    visible,
+    withRepeat: require("../../../reanimated/ReanimatedRexport.tsx").withRepeat,
+    withSequence: require("../../../reanimated/ReanimatedRexport.tsx").withSequence,
+    withTiming: require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming,
+    STANDARD_EASING: require("../../../../design/void/native.tsx").STANDARD_EASING,
+    FADE_LAYOUT_ANIMATION_DURATION: closure_4,
+  };
   A.__closure = obj;
   A.__workletHash = 9750536800906;
   A.__initData = closure_5;

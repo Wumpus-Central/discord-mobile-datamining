@@ -3,7 +3,9 @@ import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/billing/native/subscription/useCancelSubscriptionParams.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/billing/native/subscription/useCancelSubscriptionParams.tsx",
+);
 
 export default function useCancelSubscriptionParams(arg0) {
   closure_0 = arg0;
@@ -24,4 +26,4 @@ export default function useCancelSubscriptionParams(arg0) {
     }
     return tmp2;
   }, items);
-};
+}

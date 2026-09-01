@@ -19,9 +19,14 @@ function BaseIdentityVerificationField(icon) {
     obj[0] = tmp.icon;
     tmp4 = callback(icon, obj);
   }
-  const items = [tmp4, , ];
+  const items = [tmp4, ,];
   const items1 = [tmp.label];
-  items[1] = callback(Text.Text, { style: items1, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label });
+  items[1] = callback(Text.Text, {
+    style: items1,
+    variant: "text-md/medium",
+    color: "mobile-text-heading-primary",
+    children: label,
+  });
   if (passesVerification) {
     obj = { style: null, accessible: true, accessibilityLabel: null, children: null };
     obj[0] = tmp.verifiedContainer;
@@ -45,14 +50,25 @@ function BaseIdentityVerificationField(icon) {
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, icon: null, label: null, verifiedContainer: null, ctaButton: null };
-createCacheKey = { padding: 8, marginTop: 8, borderRadius: ThemesDefault.radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = {
+  padding: 8,
+  marginTop: 8,
+  borderRadius: ThemesDefault.radii.sm,
+  height: 48,
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginLeft: 4, marginRight: 8 };
 createCacheKey[2] = { flex: 1, marginLeft: 4, lineHeight: 20 };
 createCacheKey[3] = { paddingVertical: 7, paddingHorizontal: 4, flexDirection: "row", alignItems: "center" };
 createCacheKey[4] = { flexGrow: 0, alignSelf: "center", paddingHorizontal: 16 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/IdentityVerificationField.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/form_fields/IdentityVerificationField.tsx",
+);
 
 export default function IdentityVerificationField(arg0) {
   ({ platform, passesVerification } = arg0);
@@ -93,13 +109,14 @@ export default function IdentityVerificationField(arg0) {
         callback2(paths[10]).open();
       };
     } else {
-      fn = tmp(4302).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
-        let obj = callback2(paths[11]);
-        obj = { reason: callback(paths[14]).ChangePhoneReason.GUILD_PHONE_REQUIRED };
-        obj.pushLazy(callback(paths[13])(paths[12], paths.paths), obj);
-      }) : (() => {
-
-      });
+      fn =
+        tmp(4302).UserVerificationFieldPlatforms.PHONE === platform
+          ? () => {
+              let obj = callback2(paths[11]);
+              obj = { reason: callback(paths[14]).ChangePhoneReason.GUILD_PHONE_REQUIRED };
+              obj.pushLazy(callback(paths[13])(paths[12], paths.paths), obj);
+            }
+          : () => {};
     }
     let obj = { label: null, icon: null, passesVerification: null, onPress: null };
     obj[0] = stringResult1;
@@ -108,4 +125,4 @@ export default function IdentityVerificationField(arg0) {
     obj[3] = fn;
     return callback(BaseIdentityVerificationField, obj);
   }
-};
+}

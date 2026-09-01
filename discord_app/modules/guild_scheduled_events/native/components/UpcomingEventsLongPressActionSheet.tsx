@@ -11,7 +11,9 @@ const require = arg1;
 noopAll;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ headerIcon: { marginRight: 16 } });
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/UpcomingEventsLongPressActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/UpcomingEventsLongPressActionSheet.tsx",
+);
 
 export default function UpcomingEventsLongPressActionSheet(guildId) {
   guildId = guildId.guildId;
@@ -33,7 +35,7 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   obj[0] = callback(View, obj);
   const intl = guildId(1236).intl;
   obj[1] = intl.string(guildId(1236).t.tlopTM);
-  const items2 = [callback(guildId(5621).BottomSheetTitleHeader, obj), , ];
+  const items2 = [callback(guildId(5621).BottomSheetTitleHeader, obj), ,];
   const obj2 = { leading: null, label: null, onPress: null };
   const tmp9 = stateFromStores1(6004);
   obj2[0] = callback(guildId(1297).Icon, { source: stateFromStores1(11945) });
@@ -69,4 +71,4 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   items2[2] = callback(guildId(8363).FormRow, obj5);
   obj7[0] = items2;
   return tmp6(guildId(5989).ActionSheet, obj7);
-};
+}

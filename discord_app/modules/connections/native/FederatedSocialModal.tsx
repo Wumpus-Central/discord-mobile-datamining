@@ -9,7 +9,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ container: { padding: 16 }, description: { textAlign: "center" }, input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 } });
+let closure_9 = createCacheKey.createStyles({
+  container: { padding: 16 },
+  description: { textAlign: "center" },
+  input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 },
+});
 const result = require("set").fileFinishedImporting("modules/connections/native/FederatedSocialModal.tsx");
 
 export default function FederatedSocialModal(platformType) {
@@ -28,7 +32,9 @@ export default function FederatedSocialModal(platformType) {
   let obj = { headerTitle: null, headerLeft: null, render: null };
   let intl2 = require("../../../intl/index.native.tsx").intl;
   obj[0] = intl2.formatToPlainString(require("../../../intl/index.native.tsx").t["ImMhq+"], { serviceName: name });
-  obj[1] = require("../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderBackButton(platformType.onClose);
+  obj[1] = require("../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderBackButton(
+    platformType.onClose,
+  );
   obj[2] = function render() {
     ({ location: closure_0, successRedirect: closure_1, platformType } = platformType);
     const onClose = platformType.onClose;
@@ -37,7 +43,7 @@ export default function FederatedSocialModal(platformType) {
     closure_6 = undefined;
     function _tryHandle() {
       const self = this;
-      const tmp = onClose(function*() {
+      const tmp = onClose(function* () {
         if (v02 === 2) {
           v02 = 3;
           HermesBuiltin.throwTypeError();
@@ -167,8 +173,21 @@ export default function FederatedSocialModal(platformType) {
     obj = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
     const intl2 = platformType(tmp7[7]).intl;
     obj[3] = intl2.formatToPlainString(platformType(closure_1_2[7]).t["7TByKh"], { serviceName: name });
-    const items = [closure_1_7(platformType(closure_1_2[12]).Text, obj), , ];
-    obj1 = { autoFocus: true, style: tmp.input, label: null, placeholder: null, error: null, returnKeyType: "done", onChangeText: null, onSubmitEditing: null, clearButtonVisibility: null, autoCapitalize: "none", autoComplete: "off", autoCorrect: false };
+    const items = [closure_1_7(platformType(closure_1_2[12]).Text, obj), ,];
+    obj1 = {
+      autoFocus: true,
+      style: tmp.input,
+      label: null,
+      placeholder: null,
+      error: null,
+      returnKeyType: "done",
+      onChangeText: null,
+      onSubmitEditing: null,
+      clearButtonVisibility: null,
+      autoCapitalize: "none",
+      autoComplete: "off",
+      autoCorrect: false,
+    };
     const tmp6 = closure_1_1;
     const validateHandleResult = obj2.validateHandle(first, platformType);
     const intl3 = platformType(tmp7[7]).intl;
@@ -188,5 +207,8 @@ export default function FederatedSocialModal(platformType) {
     return closure_1_8(platformType(closure_1_2[11]).SafeAreaPaddingView, obj);
   };
   screens[0] = obj;
-  return callback(require("../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { initialRouteName: "root", screens });
-};
+  return callback(require("../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, {
+    initialRouteName: "root",
+    screens,
+  });
+}

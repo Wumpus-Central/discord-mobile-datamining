@@ -102,7 +102,10 @@ class QuestProgressManager extends tmp4 {
       if (null != value) {
         if (null != value.config) {
           if (null != value.userStatus) {
-            const questTaskDetails = lib(7469).getQuestTaskDetails(value, lib(5394).FirstPartyQuestTaskTypesSets.DESKTOP);
+            const questTaskDetails = lib(7469).getQuestTaskDetails(
+              value,
+              lib(5394).FirstPartyQuestTaskTypesSets.DESKTOP,
+            );
             const _Math = Math;
             const diff = questTaskDetails.targetSeconds - questTaskDetails.progressSeconds;
             const bound = Math.max(0, diff * applyArgumentsResult(687).Millis.SECOND);
@@ -162,14 +165,23 @@ class QuestProgressManager extends tmp4 {
               const currentUserActiveStream = closure_2_7.getCurrentUserActiveStream();
               if (null == currentUserActiveStream) {
                 const _HermesInternal3 = HermesInternal;
-                closure_2_16.log("~ initiateHeartbeat -> Attempted to beat for stream quest but no active stream, terminating heartbeat for questId: " + tmp2);
+                closure_2_16.log(
+                  "~ initiateHeartbeat -> Attempted to beat for stream quest but no active stream, terminating heartbeat for questId: " +
+                    tmp2,
+                );
                 obj.terminateHeartbeat(tmp2, tmp);
               } else {
                 const _HermesInternal4 = HermesInternal;
                 const timerIdResult = timerId(tmp15[25]);
                 closure_2_16.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + tmp2);
                 const encodeStreamKeyResult = timerId(tmp15[25]).encodeStreamKey(currentUserActiveStream);
-                obj = { questId: null, streamKey: null, applicationId: null, executablePath: null, executableFingerprint: null };
+                obj = {
+                  questId: null,
+                  streamKey: null,
+                  applicationId: null,
+                  executablePath: null,
+                  executableFingerprint: null,
+                };
                 obj[0] = tmp2;
                 obj[1] = encodeStreamKeyResult;
                 obj[2] = applicationId;
@@ -196,7 +208,9 @@ class QuestProgressManager extends tmp4 {
             const result = obj.set(tmp2, timerId);
           } else {
             const _HermesInternal = HermesInternal;
-            closure_2_16.log("~ initiateHeartbeat -> Quest " + tmp2 + " is no longer actively progressing, terminating heartbeat");
+            closure_2_16.log(
+              "~ initiateHeartbeat -> Quest " + tmp2 + " is no longer actively progressing, terminating heartbeat",
+            );
             obj.terminateHeartbeat(tmp2, tmp);
           }
         }
@@ -248,7 +262,9 @@ class QuestProgressManager extends tmp4 {
       closure_1_16.log("~ handleSendHeartbeatSuccess -> Heartbeat succeeded for questId: " + questId + ")");
       if (null != questId.userStatus.completedAt) {
         const _HermesInternal = HermesInternal;
-        closure_1_16.log("~ handleSendHeartbeatSuccess -> Quest " + questId + " completed, terminating any heartbeats for it");
+        closure_1_16.log(
+          "~ handleSendHeartbeatSuccess -> Quest " + questId + " completed, terminating any heartbeats for it",
+        );
         const _Object = Object;
         const keys = Object.keys(lib.heartbeats);
         for (const item10030 of keys) {
@@ -263,61 +279,72 @@ class QuestProgressManager extends tmp4 {
     };
     obj = {
       QUESTS_FETCH_CURRENT_QUESTS_SUCCESS() {
-            const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
-            return lib.syncHeartbeats(items, "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS");
-          },
+        const items = [
+          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
+          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
+        ];
+        return lib.syncHeartbeats(items, "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS");
+      },
       QUESTS_ENROLL_SUCCESS() {
-            const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
-            return lib.syncHeartbeats(items, "QUESTS_ENROLL_SUCCESS", (config) => {
-              let hasItem = null != config;
-              if (hasItem) {
-                const features = config.config.features;
-                hasItem = features.includes(callback(table[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
-              }
-              return !hasItem;
-            });
-          },
+        const items = [
+          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
+          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
+          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
+        ];
+        return lib.syncHeartbeats(items, "QUESTS_ENROLL_SUCCESS", (config) => {
+          let hasItem = null != config;
+          if (hasItem) {
+            const features = config.config.features;
+            hasItem = features.includes(callback(table[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
+          }
+          return !hasItem;
+        });
+      },
       QUESTS_SEND_HEARTBEAT_SUCCESS: applyArgumentsResult.handleSendHeartbeatSuccess,
       QUESTS_SEND_HEARTBEAT_FAILURE: applyArgumentsResult.handleSendHeartbeatFailure,
       QUESTS_PREVIEW_UPDATE_SUCCESS() {
-            const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
-            return lib.syncHeartbeats(items, "QUESTS_PREVIEW_UPDATE_SUCCESS");
-          },
+        const items = [
+          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
+          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
+          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
+        ];
+        return lib.syncHeartbeats(items, "QUESTS_PREVIEW_UPDATE_SUCCESS");
+      },
       RUNNING_GAMES_CHANGE() {
-            const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
-            return lib.syncHeartbeats(items, "RUNNING_GAMES_CHANGE");
-          },
+        const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+        return lib.syncHeartbeats(items, "RUNNING_GAMES_CHANGE");
+      },
       RUNNING_NON_GAMES_CHANGE() {
-            const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
-            return lib.syncHeartbeats(items, "RUNNING_NON_GAMES_CHANGE");
-          },
+        const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+        return lib.syncHeartbeats(items, "RUNNING_NON_GAMES_CHANGE");
+      },
       STREAM_START() {
-            const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
-            return lib.syncHeartbeats(items, "STREAM_START");
-          },
+        const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        return lib.syncHeartbeats(items, "STREAM_START");
+      },
       STREAM_CREATE() {
-            const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
-            return lib.syncHeartbeats(items, "STREAM_CREATE");
-          },
+        const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        return lib.syncHeartbeats(items, "STREAM_CREATE");
+      },
       STREAM_CLOSE() {
-            const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
-            return lib.syncHeartbeats(items, "STREAM_CLOSE");
-          },
+        const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        return lib.syncHeartbeats(items, "STREAM_CLOSE");
+      },
       PASSIVE_UPDATE_V2() {
-            const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
-            return lib.syncHeartbeats(items, "PASSIVE_UPDATE_V2");
-          },
+        const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        return lib.syncHeartbeats(items, "PASSIVE_UPDATE_V2");
+      },
       VOICE_STATE_UPDATES() {
-            const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
-            return lib.syncHeartbeats(items, "VOICE_STATE_UPDATES");
-          },
+        const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        return lib.syncHeartbeats(items, "VOICE_STATE_UPDATES");
+      },
       EMBEDDED_ACTIVITY_LAUNCH_SUCCESS(applicationId) {
-            callback(applicationId.applicationId);
-          },
+        callback(applicationId.applicationId);
+      },
       FRAME_LAUNCH: null,
       FRAME_STOP: null,
       EMBEDDED_ACTIVITY_UPDATE_V2: null,
-      QUEST_APPLICATION_START_TIMER: null
+      QUEST_APPLICATION_START_TIMER: null,
     };
     closure_0 = undefined;
     closure_1 = applyArgumentsResult;
@@ -325,7 +352,7 @@ class QuestProgressManager extends tmp4 {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      const iter = (function*(arg0) {
+      const iter = (function* (arg0) {
         if (c4 === 2) {
           c4 = 3;
           HermesBuiltin.throwTypeError();
@@ -455,9 +482,7 @@ class QuestProgressManager extends tmp4 {
   }
 }
 const prototype = QuestProgressManager.prototype;
-prototype["syncHeartbeats"] = function syncHeartbeats(items, EMBEDDED_ACTIVITY_UPDATE_V2, arg2) {
-
-};
+prototype["syncHeartbeats"] = function syncHeartbeats(items, EMBEDDED_ACTIVITY_UPDATE_V2, arg2) {};
 prototype["getActivelyProgressingQuests"] = function getActivelyProgressingQuests(closure_1) {
   const self = this;
   if (set2.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === closure_1) {
@@ -475,7 +500,12 @@ prototype["getActivelyProgressingPlayOnDesktopQuests"] = function getActivelyPro
   const runningGames = store.getRunningGames();
   const runningNonGames = store.getRunningNonGames();
   const quests = closure_10.quests;
-  logger.log("~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ", runningGames, "Running non-games: ", runningNonGames);
+  logger.log(
+    "~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ",
+    runningGames,
+    "Running non-games: ",
+    runningNonGames,
+  );
   let obj = {};
   let iter = runningGames[Symbol.iterator]();
   let nextResult = iter.next();
@@ -574,7 +604,10 @@ prototype["getActivelyProgressingPlayOnDesktopQuests"] = function getActivelyPro
     let _loopResult = _loop(iter2.next());
     continue;
   }
-  logger.log("~ getActivelyProgressingPlayOnDesktopQuestIds -> Actively progressing questIds: ", Array.from(map.keys()));
+  logger.log(
+    "~ getActivelyProgressingPlayOnDesktopQuestIds -> Actively progressing questIds: ",
+    Array.from(map.keys()),
+  );
   return map;
 };
 prototype["getActivelyProgressingStreamOnDesktopQuests"] = function getActivelyProgressingStreamOnDesktopQuests() {
@@ -589,7 +622,10 @@ prototype["getActivelyProgressingStreamOnDesktopQuests"] = function getActivelyP
     if (null == streamerActiveStreamMetadata) {
       return map;
     } else {
-      logger.log("~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ", streamerActiveStreamMetadata);
+      logger.log(
+        "~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ",
+        streamerActiveStreamMetadata,
+      );
       const id = streamerActiveStreamMetadata.id;
       if (null == id) {
         return map;
@@ -622,7 +658,10 @@ prototype["getActivelyProgressingStreamOnDesktopQuests"] = function getActivelyP
           continue;
         }
         const _Array = Array;
-        logger.log("~ getActivelyProgressingStreamOnDesktopQuestIds -> Actively progressing questIds: ", Array.from(map.keys()));
+        logger.log(
+          "~ getActivelyProgressingStreamOnDesktopQuestIds -> Actively progressing questIds: ",
+          Array.from(map.keys()),
+        );
         return map;
       }
     }

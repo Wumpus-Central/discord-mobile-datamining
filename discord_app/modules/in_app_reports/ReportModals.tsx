@@ -18,7 +18,7 @@ function _submitHamReportForFirstDM() {
     c3 = 0;
     c5 = 0;
     c4 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       closure_2 = tmp4;
       const callback = closure_1;
       c4 = 1;
@@ -60,7 +60,7 @@ function _submitReportForInappropriateConversationSafetyAlert() {
     c4 = 0;
     c6 = 0;
     c5 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       closure_3 = tmp4;
       const callback = callback2;
       callback2 = dependencyMap;
@@ -119,7 +119,10 @@ export const showReportModalForGuildDirectoryEntry = function showReportModalFor
   obj1 = { onSubmit: arg1 };
   _showReportModal.showReportModal(obj, {}, obj1);
 };
-export const showReportModalForMessage = function showReportModalForMessage(message, mobile_media_message_preview_action_sheet) {
+export const showReportModalForMessage = function showReportModalForMessage(
+  message,
+  mobile_media_message_preview_action_sheet,
+) {
   let obj = { message_id: message.id, channel_id: message.channel_id };
   obj1 = collectGuildAnalyticsMetadataDefault;
   obj = { report_type: ReportNames.ReportNames.MESSAGE };
@@ -209,7 +212,12 @@ export const showReportModalForUser = function showReportModalForUser(closure_0,
   obj1 = { onSubmit: closure_2, appContext: closure_3 };
   _showReportModal.showReportModal(obj, {}, obj1);
 };
-export const showStaffTestReportModalForUser = function showStaffTestReportModalForUser(id, contextualGuildId, onSubmit, appContext) {
+export const showStaffTestReportModalForUser = function showStaffTestReportModalForUser(
+  id,
+  contextualGuildId,
+  onSubmit,
+  appContext,
+) {
   let obj = { reported_user_id: id.id };
   obj1 = collectGuildAnalyticsMetadataDefault;
   obj = { report_type: ReportNames.ReportNames.USER };
@@ -219,7 +227,10 @@ export const showStaffTestReportModalForUser = function showStaffTestReportModal
   obj1 = { onSubmit, isEligibleForFeedback: false, appContext };
   _showReportModal.showReportModal(obj, { variant: "staff" }, obj1);
 };
-export const showUnauthenticatedReportModalForUser = function showUnauthenticatedReportModalForUser(emailToken, onClose) {
+export const showUnauthenticatedReportModalForUser = function showUnauthenticatedReportModalForUser(
+  emailToken,
+  onClose,
+) {
   const tmp = new closure_6({});
   let obj = { reported_user_id: tmp.id };
   obj1 = collectGuildAnalyticsMetadataDefault;
@@ -230,7 +241,10 @@ export const showUnauthenticatedReportModalForUser = function showUnauthenticate
   obj1 = { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken };
   _showReportModal.showReportModal(obj, {}, obj1);
 };
-export const showUnauthenticatedReportModalForGuild = function showUnauthenticatedReportModalForGuild(emailToken, onClose) {
+export const showUnauthenticatedReportModalForGuild = function showUnauthenticatedReportModalForGuild(
+  emailToken,
+  onClose,
+) {
   let obj = fromGuildPropertiesWithAdditionalFields;
   const result = obj.dangerouslyConstructGuildRecordFromUntypedObject({});
   obj = { guild_id: result.id };
@@ -242,43 +256,59 @@ export const showUnauthenticatedReportModalForGuild = function showUnauthenticat
   obj2 = { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken };
   obj5.showReportModal({ name: ReportNames.UnauthenticatedReportNames.GUILD, record: result }, {}, obj2);
 };
-export const showUnauthenticatedReportModalForTida = function showUnauthenticatedReportModalForTida(emailToken, onClose) {
+export const showUnauthenticatedReportModalForTida = function showUnauthenticatedReportModalForTida(
+  emailToken,
+  onClose,
+) {
   let obj = collectGuildAnalyticsMetadataDefault;
   obj = { report_type: ReportNames.UnauthenticatedReportNames.MEDIA_TAKEDOWN };
   const merged = Object.assign({});
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
   obj = { name: ReportNames.UnauthenticatedReportNames.MEDIA_TAKEDOWN };
-  _showReportModal.showReportModal(obj, {}, { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken });
+  _showReportModal.showReportModal(
+    obj,
+    {},
+    { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken },
+  );
 };
-export const showUnauthenticatedReportModalForMessage = function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
+export const showUnauthenticatedReportModalForMessage = function showUnauthenticatedReportModalForMessage(
+  emailToken,
+  onClose,
+) {
   let obj = collectGuildAnalyticsMetadataDefault;
   obj = { report_type: ReportNames.UnauthenticatedReportNames.MESSAGE };
   const merged = Object.assign({ message_id: "children", channel_id: "c" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
   const tmp = new closure_5({});
   obj = { name: ReportNames.UnauthenticatedReportNames.MESSAGE, record: tmp };
-  _showReportModal.showReportModal(obj, {}, { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken });
+  _showReportModal.showReportModal(
+    obj,
+    {},
+    { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken },
+  );
 };
-export const submitReportForInappropriateConversationSafetyAlert = function submitReportForInappropriateConversationSafetyAlert(closure_1_5, arg1, arg2) {
-  const self = this;
-  const apply = _submitReportForInappropriateConversationSafetyAlert.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
-export const showReportModalForInappropriateConversationSafetyAlert = function showReportModalForInappropriateConversationSafetyAlert(closure_6) {
-  let obj = { message_id: closure_6.id, channel_id: closure_6.channel_id };
-  obj1 = collectGuildAnalyticsMetadataDefault;
-  obj = { report_type: ReportNames.ReportNames.MESSAGE };
-  const merged = Object.assign(obj);
-  obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  obj = { name: ReportNames.ReportNames.MESSAGE, record: closure_6 };
-  obj1 = { onSubmit: arg1 };
-  _showReportModal.showReportModal(obj, { variant: "safety_alerts_v1" }, obj1);
-};
+export const submitReportForInappropriateConversationSafetyAlert =
+  function submitReportForInappropriateConversationSafetyAlert(closure_1_5, arg1, arg2) {
+    const self = this;
+    const apply = _submitReportForInappropriateConversationSafetyAlert.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
+export const showReportModalForInappropriateConversationSafetyAlert =
+  function showReportModalForInappropriateConversationSafetyAlert(closure_6) {
+    let obj = { message_id: closure_6.id, channel_id: closure_6.channel_id };
+    obj1 = collectGuildAnalyticsMetadataDefault;
+    obj = { report_type: ReportNames.ReportNames.MESSAGE };
+    const merged = Object.assign(obj);
+    obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
+    obj = { name: ReportNames.ReportNames.MESSAGE, record: closure_6 };
+    obj1 = { onSubmit: arg1 };
+    _showReportModal.showReportModal(obj, { variant: "safety_alerts_v1" }, obj1);
+  };
 export const showReportModalForWidget = function showReportModalForWidget(closure_0, closure_1) {
   let obj = _showReportModal;
   obj = { name: ReportNames.ReportNames.WIDGET, widget_id: null, user_id: null, widget: null };
@@ -304,7 +334,17 @@ export const showReportModalForApp = function showReportModalForApp(arg0) {
   obj4.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: ReportNames.ReportNames.APPLICATION });
   obj1 = { report_type: ReportNames.ReportNames.APPLICATION };
   const obj6 = _showReportModal;
-  obj6.showReportModal({ name: ReportNames.ReportNames.APPLICATION, record: application, contextualGuildId, contextualChannelId, entrypoint }, {}, { onSubmit, appContext });
+  obj6.showReportModal(
+    {
+      name: ReportNames.ReportNames.APPLICATION,
+      record: application,
+      contextualGuildId,
+      contextualChannelId,
+      entrypoint,
+    },
+    {},
+    { onSubmit, appContext },
+  );
 };
 export const showReportToModMessageModal = function showReportToModMessageModal(message) {
   let obj = _showReportModal;

@@ -86,7 +86,13 @@ prototype["recordMessageSendAttempt"] = function recordMessageSendAttempt(closur
   if (num2 == null) {
     num2 = 0;
   }
-  obj = { initialSendTimestamp: Date.now(), apiResponseTimestamp: null, gatewaySeenTimestamp: null, channelId: closure_1_0, attachmentCount: sum };
+  obj = {
+    initialSendTimestamp: Date.now(),
+    apiResponseTimestamp: null,
+    gatewaySeenTimestamp: null,
+    channelId: closure_1_0,
+    attachmentCount: sum,
+  };
   sum = num + num2;
   let pendingMessages = this.pendingMessages;
   const result = pendingMessages.set(closure_1, obj);
@@ -150,7 +156,7 @@ const messageRoundtripTrackerStoreClass = new MessageRoundtripTrackerStoreClass(
     if (!optimistic) {
       const result = messageRoundtripTrackerStoreClass.recordGatewayResponse(nonce);
     }
-  }
+  },
 });
 let obj = {
   MESSAGE_CREATE: function handleMessageCreate(optimistic) {
@@ -162,7 +168,7 @@ let obj = {
     if (!optimistic) {
       const result = messageRoundtripTrackerStoreClass.recordGatewayResponse(nonce);
     }
-  }
+  },
 };
 const tmp2 = new timestampDefault("MessageRoundtripTrackerStore");
 let result = require("set").fileFinishedImporting("modules/messages/MessageRoundtripTrackerStore.tsx");

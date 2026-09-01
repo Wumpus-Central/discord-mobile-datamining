@@ -59,7 +59,16 @@ export const resolveResponseTtl = function resolveResponseTtl(responseTtlSeconds
   }
 };
 export const questAdDecisionFromAdDecision = function questAdDecisionFromAdDecision(response_ttl_seconds, creative) {
-  let obj = { creative: creative.creative, fetchedAt: creative.fetchedAt, ttlMillis: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
+  let obj = {
+    creative: creative.creative,
+    fetchedAt: creative.fetchedAt,
+    ttlMillis: null,
+    adDecisionData: null,
+    adContext: null,
+    metadataSealed: null,
+    trafficMetadataSealed: null,
+    provenanceMetadataSealed: null,
+  };
   response_ttl_seconds = response_ttl_seconds.response_ttl_seconds;
   if (null == response_ttl_seconds) {
     let tmp3 = closure_2;
@@ -79,7 +88,16 @@ export const questAdDecisionFromAdDecision = function questAdDecisionFromAdDecis
   if (ad_identifiers != null) {
     ad_id = ad_identifiers.ad_id;
   }
-  obj = { ad_id, adset_id: null, ad_set_id: null, campaign_id: null, creative_id: null, creative_type: null, decision_id: null, is_targeted: null };
+  obj = {
+    ad_id,
+    adset_id: null,
+    ad_set_id: null,
+    campaign_id: null,
+    creative_id: null,
+    creative_type: null,
+    decision_id: null,
+    is_targeted: null,
+  };
   const ad_identifiers2 = response_ttl_seconds.ad_identifiers;
   let adset_id;
   if (ad_identifiers2 != null) {
@@ -113,6 +131,11 @@ export const questAdDecisionFromAdDecision = function questAdDecisionFromAdDecis
   obj[6] = creative.requestId;
   obj[7] = null != response_ttl_seconds.ad_identifiers;
   obj[3] = obj;
-  ({ ad_context: obj[4], metadata_sealed: obj[5], traffic_metadata_sealed: obj[6], provenance_metadata_sealed: obj[7] } = response_ttl_seconds);
+  ({
+    ad_context: obj[4],
+    metadata_sealed: obj[5],
+    traffic_metadata_sealed: obj[6],
+    provenance_metadata_sealed: obj[7],
+  } = response_ttl_seconds);
   return obj;
 };

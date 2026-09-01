@@ -94,11 +94,15 @@ const forwardRefResult = importAllResult.forwardRef((color, ref) => {
     }
   }, items1);
   const items2 = [callback];
-  const imperativeHandle = obj.useImperativeHandle(ref, () => ({
-    play() {
-      return callback();
-    }
-  }), items2);
+  const imperativeHandle = obj.useImperativeHandle(
+    ref,
+    () => ({
+      play() {
+        return callback();
+      },
+    }),
+    items2,
+  );
   const items3 = [start, autoPlay, callback];
   obj = { style: obj, children: null };
   const callback1 = obj.useCallback(() => {
@@ -111,7 +115,16 @@ const forwardRefResult = importAllResult.forwardRef((color, ref) => {
       }
     }
   }, items3);
-  obj1 = { ref, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null };
+  obj1 = {
+    ref,
+    source: color.dotLottie,
+    colorFilters: null,
+    hardwareAccelerationAndroid: true,
+    loop: false,
+    onAnimationLoaded: null,
+    resizeMode: "cover",
+    style: null,
+  };
   let tmp21;
   const tmp19 = c4;
   const tmp3Result = require(autoPlay[6]);

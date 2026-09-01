@@ -5,7 +5,9 @@ import GenericHeaderTitle from "../HeaderShared.tsx";
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper.tsx";
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx");
+const result = set.fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx",
+);
 
 export default function PressableNavigatorModalIcon(onPress) {
   let goBack = onPress.onPress;
@@ -27,5 +29,8 @@ export default function PressableNavigatorModalIcon(onPress) {
   }
   obj = { isModal: true, children: tmp(GenericHeaderTitle.HeaderIconButton, obj) };
   obj[2] = stringResult;
-  return jsx(PressableNavigatorButtonWrapperDefault, { isModal: true, children: tmp(GenericHeaderTitle.HeaderIconButton, obj) });
-};
+  return jsx(PressableNavigatorButtonWrapperDefault, {
+    isModal: true,
+    children: tmp(GenericHeaderTitle.HeaderIconButton, obj),
+  });
+}

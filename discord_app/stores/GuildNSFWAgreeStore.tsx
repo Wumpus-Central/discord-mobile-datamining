@@ -8,8 +8,7 @@ require = arg1;
 const GuildNSFWAgreeStore = "GuildNSFWAgreeStore";
 let closure_3 = {};
 const Store = initializeDefault.Store;
-class GuildNSFWAgreeStore extends Store {
-}
+class GuildNSFWAgreeStore extends Store {}
 const prototype = GuildNSFWAgreeStore.prototype;
 prototype["initialize"] = function initialize() {
   const Storage = Storage2.Storage;
@@ -39,7 +38,7 @@ const guildNSFWAgreeStore = new GuildNSFWAgreeStore(dispatcherDefault, {
     closure_3[guildId.guildId] = true;
     const Storage = Storage2.Storage;
     const result = Storage.set(GuildNSFWAgreeStore, closure_3);
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("stores/GuildNSFWAgreeStore.tsx");
 

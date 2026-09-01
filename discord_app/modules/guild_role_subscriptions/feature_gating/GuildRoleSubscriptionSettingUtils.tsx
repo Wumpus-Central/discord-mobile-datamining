@@ -53,23 +53,31 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
   obj = initialize;
   const items = [closure_3];
   const items1 = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    let canResult = null != closure_0;
-    if (canResult) {
-      canResult = closure_1_3.can(closure_1_6.ADMINISTRATOR, tmp);
-    }
-    return canResult;
-  }, items1);
+  stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let canResult = null != closure_0;
+      if (canResult) {
+        canResult = closure_1_3.can(closure_1_6.ADMINISTRATOR, tmp);
+      }
+      return canResult;
+    },
+    items1,
+  );
   const items2 = [closure_4];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
-    let tmp3 = null != closure_0;
-    if (tmp3) {
-      tmp3 = closure_1_2(tmp2, tmp);
-    }
-    return tmp3;
-  });
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items2,
+    () => {
+      let tmp3 = null != closure_0;
+      if (tmp3) {
+        tmp3 = closure_1_2(tmp2, tmp);
+      }
+      return tmp3;
+    },
+  );
   const obj2 = initialize;
-  const isUserInCreatorMonetizationEligibleCountry = require("../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx").useIsUserInCreatorMonetizationEligibleCountry();
+  const isUserInCreatorMonetizationEligibleCountry =
+    require("../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx").useIsUserInCreatorMonetizationEligibleCountry();
   useShouldHideGuildPurchaseEntryPoints;
   if (stateFromStores != null) {
     const id = stateFromStores.id;
@@ -77,7 +85,13 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
   if (null == stateFromStores) {
     let NONE = obj.NONE;
   } else {
-    obj = { guild: null, isOwner: null, canManageGuildRoleSubscriptions: null, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
+    obj = {
+      guild: null,
+      isOwner: null,
+      canManageGuildRoleSubscriptions: null,
+      isUserInCreatorMonetizationEligibleCountry: null,
+      shouldRestrictUpdatingRoleSubscriptionSettings: null,
+    };
     obj[0] = stateFromStores;
     obj[1] = stateFromStores1;
     obj[2] = stateFromStores;
@@ -90,10 +104,14 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
 const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
 ({ GuildFeatures: c5, Permissions: closure_6 } = ME);
 let obj = { NONE: 0, [0]: "NONE", VISIBLE: 1, [1]: "VISIBLE" };
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx",
+);
 
 export const GuildRoleSubscriptionSettingsVisibility = obj;
-export const canSeeGuildRoleSubscriptionSettingsContent = function canSeeGuildRoleSubscriptionSettingsContent(canManageGuildRoleSubscriptions) {
+export const canSeeGuildRoleSubscriptionSettingsContent = function canSeeGuildRoleSubscriptionSettingsContent(
+  canManageGuildRoleSubscriptions,
+) {
   ({ guild, isOwner, shouldRestrictUpdatingRoleSubscriptionSettings } = canManageGuildRoleSubscriptions);
   let prop = canManageGuildRoleSubscriptions.canManageGuildRoleSubscriptions;
   if (prop) {
@@ -136,7 +154,13 @@ export const getGuildRoleSubscriptionSettingsVisibility = function getGuildRoleS
   if (null == guild) {
     return obj.NONE;
   } else {
-    obj = { guild: null, isOwner: null, canManageGuildRoleSubscriptions: null, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
+    obj = {
+      guild: null,
+      isOwner: null,
+      canManageGuildRoleSubscriptions: null,
+      isUserInCreatorMonetizationEligibleCountry: null,
+      shouldRestrictUpdatingRoleSubscriptionSettings: null,
+    };
     obj[0] = guild;
     obj[1] = isGuildOwner(guild, currentUser.getCurrentUser());
     let canResult = null != guild;
@@ -158,13 +182,17 @@ export const useCanManageGuildRoleSubscriptions = function useCanManageGuildRole
   const _require = guild;
   const items = [closure_3];
   const items1 = [guild];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let canResult = null != closure_0;
-    if (canResult) {
-      canResult = closure_1_3.can(closure_1_6.ADMINISTRATOR, tmp);
-    }
-    return canResult;
-  }, items1);
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let canResult = null != closure_0;
+      if (canResult) {
+        canResult = closure_1_3.can(closure_1_6.ADMINISTRATOR, tmp);
+      }
+      return canResult;
+    },
+    items1,
+  );
 };
 export const canManageGuildRoleSubscriptions = function canManageGuildRoleSubscriptions(stateFromStores) {
   let canResult = null != stateFromStores;

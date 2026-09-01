@@ -6,15 +6,176 @@ import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
-let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
+let closure_3 = [
+  "fallback",
+  "artboard",
+  "stateMachine",
+  "defaultViewModelInstance",
+  "dataBinding",
+  "onDataBindingChange",
+];
 let c5 = importAllResult;
-let closure_7 = { MAIN: { reducedMotion: "boolean", twoFriends: "boolean", AnimationState: "number", "Avatar01/ShadowVisibility": "number", "Avatar01/StrokeVisibility": "number", "Avatar01/UsernameVisibility": "number", "Avatar01/Stroke": "color", "Avatar01/Fill": "color", "Avatar01/Username": "string", "Avatar01/img": "image", "Avatar02/ShadowVisibility": "number", "Avatar02/StrokeVisibility": "number", "Avatar02/UsernameVisibility": "number", "Avatar02/Stroke": "color", "Avatar02/Fill": "color", "Avatar02/Username": "string", "Avatar02/img": "image", "Avatar03/ShadowVisibility": "number", "Avatar03/StrokeVisibility": "number", "Avatar03/UsernameVisibility": "number", "Avatar03/Stroke": "color", "Avatar03/Fill": "color", "Avatar03/Username": "string", "Avatar03/img": "image", "Avatar04/ShadowVisibility": "number", "Avatar04/StrokeVisibility": "number", "Avatar04/UsernameVisibility": "number", "Avatar04/Stroke": "color", "Avatar04/Fill": "color", "Avatar04/Username": "string", "Avatar04/img": "image", "Avatar05/ShadowVisibility": "number", "Avatar05/StrokeVisibility": "number", "Avatar05/UsernameVisibility": "number", "Avatar05/Stroke": "color", "Avatar05/Fill": "color", "Avatar05/Username": "string", "Avatar05/img": "image", ConnectorColor: "color" }, Sidekick: { reducedMotion: "boolean", twoFriends: "boolean", AnimationState: "number", "Avatar01/ShadowVisibility": "number", "Avatar01/StrokeVisibility": "number", "Avatar01/UsernameVisibility": "number", "Avatar01/Stroke": "color", "Avatar01/Fill": "color", "Avatar01/Username": "string", "Avatar01/img": "image", "Avatar02/ShadowVisibility": "number", "Avatar02/StrokeVisibility": "number", "Avatar02/UsernameVisibility": "number", "Avatar02/Stroke": "color", "Avatar02/Fill": "color", "Avatar02/Username": "string", "Avatar02/img": "image", "Avatar03/ShadowVisibility": "number", "Avatar03/StrokeVisibility": "number", "Avatar03/UsernameVisibility": "number", "Avatar03/Stroke": "color", "Avatar03/Fill": "color", "Avatar03/Username": "string", "Avatar03/img": "image", "Avatar04/ShadowVisibility": "number", "Avatar04/StrokeVisibility": "number", "Avatar04/UsernameVisibility": "number", "Avatar04/Stroke": "color", "Avatar04/Fill": "color", "Avatar04/Username": "string", "Avatar04/img": "image", "Avatar05/ShadowVisibility": "number", "Avatar05/StrokeVisibility": "number", "Avatar05/UsernameVisibility": "number", "Avatar05/Stroke": "color", "Avatar05/Fill": "color", "Avatar05/Username": "string", "Avatar05/img": "image", ConnectorColor: "color" }, Avatar: { ShadowVisibility: "number", StrokeVisibility: "number", UsernameVisibility: "number", Stroke: "color", Fill: "color", Username: "string", img: "image" }, Username: { ShadowVisibility: "number", StrokeVisibility: "number", UsernameVisibility: "number", Stroke: "color", Fill: "color", Username: "string", img: "image" }, "Friends 01 Rotation": { reducedMotion: "boolean", twoFriends: "boolean", AnimationState: "number", "Avatar01/ShadowVisibility": "number", "Avatar01/StrokeVisibility": "number", "Avatar01/UsernameVisibility": "number", "Avatar01/Stroke": "color", "Avatar01/Fill": "color", "Avatar01/Username": "string", "Avatar01/img": "image", "Avatar02/ShadowVisibility": "number", "Avatar02/StrokeVisibility": "number", "Avatar02/UsernameVisibility": "number", "Avatar02/Stroke": "color", "Avatar02/Fill": "color", "Avatar02/Username": "string", "Avatar02/img": "image", "Avatar03/ShadowVisibility": "number", "Avatar03/StrokeVisibility": "number", "Avatar03/UsernameVisibility": "number", "Avatar03/Stroke": "color", "Avatar03/Fill": "color", "Avatar03/Username": "string", "Avatar03/img": "image", "Avatar04/ShadowVisibility": "number", "Avatar04/StrokeVisibility": "number", "Avatar04/UsernameVisibility": "number", "Avatar04/Stroke": "color", "Avatar04/Fill": "color", "Avatar04/Username": "string", "Avatar04/img": "image", "Avatar05/ShadowVisibility": "number", "Avatar05/StrokeVisibility": "number", "Avatar05/UsernameVisibility": "number", "Avatar05/Stroke": "color", "Avatar05/Fill": "color", "Avatar05/Username": "string", "Avatar05/img": "image", ConnectorColor: "color" } };
-let closure_8 = { MAIN: ["threeFriends", "twoFriends-reducedMotion", "threeFriends-reducedMotion", "twoFriends"], Sidekick: ["threeFriends", "twoFriends-reducedMotion", "threeFriends-reducedMotion", "twoFriends"], Avatar: ["Instance 03", "Instance 05", "Instance 04", "Instance 02", "Instance 01"], Username: ["Instance 03", "Instance 05", "Instance 04", "Instance 02", "Instance 01"], "Friends 01 Rotation": ["threeFriends", "twoFriends-reducedMotion", "threeFriends-reducedMotion", "twoFriends"] };
+let closure_7 = {
+  MAIN: {
+    reducedMotion: "boolean",
+    twoFriends: "boolean",
+    AnimationState: "number",
+    "Avatar01/ShadowVisibility": "number",
+    "Avatar01/StrokeVisibility": "number",
+    "Avatar01/UsernameVisibility": "number",
+    "Avatar01/Stroke": "color",
+    "Avatar01/Fill": "color",
+    "Avatar01/Username": "string",
+    "Avatar01/img": "image",
+    "Avatar02/ShadowVisibility": "number",
+    "Avatar02/StrokeVisibility": "number",
+    "Avatar02/UsernameVisibility": "number",
+    "Avatar02/Stroke": "color",
+    "Avatar02/Fill": "color",
+    "Avatar02/Username": "string",
+    "Avatar02/img": "image",
+    "Avatar03/ShadowVisibility": "number",
+    "Avatar03/StrokeVisibility": "number",
+    "Avatar03/UsernameVisibility": "number",
+    "Avatar03/Stroke": "color",
+    "Avatar03/Fill": "color",
+    "Avatar03/Username": "string",
+    "Avatar03/img": "image",
+    "Avatar04/ShadowVisibility": "number",
+    "Avatar04/StrokeVisibility": "number",
+    "Avatar04/UsernameVisibility": "number",
+    "Avatar04/Stroke": "color",
+    "Avatar04/Fill": "color",
+    "Avatar04/Username": "string",
+    "Avatar04/img": "image",
+    "Avatar05/ShadowVisibility": "number",
+    "Avatar05/StrokeVisibility": "number",
+    "Avatar05/UsernameVisibility": "number",
+    "Avatar05/Stroke": "color",
+    "Avatar05/Fill": "color",
+    "Avatar05/Username": "string",
+    "Avatar05/img": "image",
+    ConnectorColor: "color",
+  },
+  Sidekick: {
+    reducedMotion: "boolean",
+    twoFriends: "boolean",
+    AnimationState: "number",
+    "Avatar01/ShadowVisibility": "number",
+    "Avatar01/StrokeVisibility": "number",
+    "Avatar01/UsernameVisibility": "number",
+    "Avatar01/Stroke": "color",
+    "Avatar01/Fill": "color",
+    "Avatar01/Username": "string",
+    "Avatar01/img": "image",
+    "Avatar02/ShadowVisibility": "number",
+    "Avatar02/StrokeVisibility": "number",
+    "Avatar02/UsernameVisibility": "number",
+    "Avatar02/Stroke": "color",
+    "Avatar02/Fill": "color",
+    "Avatar02/Username": "string",
+    "Avatar02/img": "image",
+    "Avatar03/ShadowVisibility": "number",
+    "Avatar03/StrokeVisibility": "number",
+    "Avatar03/UsernameVisibility": "number",
+    "Avatar03/Stroke": "color",
+    "Avatar03/Fill": "color",
+    "Avatar03/Username": "string",
+    "Avatar03/img": "image",
+    "Avatar04/ShadowVisibility": "number",
+    "Avatar04/StrokeVisibility": "number",
+    "Avatar04/UsernameVisibility": "number",
+    "Avatar04/Stroke": "color",
+    "Avatar04/Fill": "color",
+    "Avatar04/Username": "string",
+    "Avatar04/img": "image",
+    "Avatar05/ShadowVisibility": "number",
+    "Avatar05/StrokeVisibility": "number",
+    "Avatar05/UsernameVisibility": "number",
+    "Avatar05/Stroke": "color",
+    "Avatar05/Fill": "color",
+    "Avatar05/Username": "string",
+    "Avatar05/img": "image",
+    ConnectorColor: "color",
+  },
+  Avatar: {
+    ShadowVisibility: "number",
+    StrokeVisibility: "number",
+    UsernameVisibility: "number",
+    Stroke: "color",
+    Fill: "color",
+    Username: "string",
+    img: "image",
+  },
+  Username: {
+    ShadowVisibility: "number",
+    StrokeVisibility: "number",
+    UsernameVisibility: "number",
+    Stroke: "color",
+    Fill: "color",
+    Username: "string",
+    img: "image",
+  },
+  "Friends 01 Rotation": {
+    reducedMotion: "boolean",
+    twoFriends: "boolean",
+    AnimationState: "number",
+    "Avatar01/ShadowVisibility": "number",
+    "Avatar01/StrokeVisibility": "number",
+    "Avatar01/UsernameVisibility": "number",
+    "Avatar01/Stroke": "color",
+    "Avatar01/Fill": "color",
+    "Avatar01/Username": "string",
+    "Avatar01/img": "image",
+    "Avatar02/ShadowVisibility": "number",
+    "Avatar02/StrokeVisibility": "number",
+    "Avatar02/UsernameVisibility": "number",
+    "Avatar02/Stroke": "color",
+    "Avatar02/Fill": "color",
+    "Avatar02/Username": "string",
+    "Avatar02/img": "image",
+    "Avatar03/ShadowVisibility": "number",
+    "Avatar03/StrokeVisibility": "number",
+    "Avatar03/UsernameVisibility": "number",
+    "Avatar03/Stroke": "color",
+    "Avatar03/Fill": "color",
+    "Avatar03/Username": "string",
+    "Avatar03/img": "image",
+    "Avatar04/ShadowVisibility": "number",
+    "Avatar04/StrokeVisibility": "number",
+    "Avatar04/UsernameVisibility": "number",
+    "Avatar04/Stroke": "color",
+    "Avatar04/Fill": "color",
+    "Avatar04/Username": "string",
+    "Avatar04/img": "image",
+    "Avatar05/ShadowVisibility": "number",
+    "Avatar05/StrokeVisibility": "number",
+    "Avatar05/UsernameVisibility": "number",
+    "Avatar05/Stroke": "color",
+    "Avatar05/Fill": "color",
+    "Avatar05/Username": "string",
+    "Avatar05/img": "image",
+    ConnectorColor: "color",
+  },
+};
+let closure_8 = {
+  MAIN: ["threeFriends", "twoFriends-reducedMotion", "threeFriends-reducedMotion", "twoFriends"],
+  Sidekick: ["threeFriends", "twoFriends-reducedMotion", "threeFriends-reducedMotion", "twoFriends"],
+  Avatar: ["Instance 03", "Instance 05", "Instance 04", "Instance 02", "Instance 01"],
+  Username: ["Instance 03", "Instance 05", "Instance 04", "Instance 02", "Instance 01"],
+  "Friends 01 Rotation": ["threeFriends", "twoFriends-reducedMotion", "threeFriends-reducedMotion", "twoFriends"],
+};
 let closure_9 = {
   MAIN: function MAINBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     let prop60 = require;
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let twoFriends;
     if (dataBinding != null) {
@@ -34,7 +195,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
-    const numberBinding = BaseRive.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
+    const numberBinding = BaseRive.useNumberBinding(
+      "AnimationState",
+      instance,
+      AnimationState,
+      AnimationState1,
+      playIfNeeded,
+    );
     const prop60Result = BaseRive;
     let prop;
     if (dataBinding != null) {
@@ -64,7 +231,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop5 = onDataBindingChange["Avatar01/UsernameVisibility"];
     }
-    const numberBinding3 = BaseRive.useNumberBinding("Avatar01/UsernameVisibility", instance, prop4, prop5, playIfNeeded);
+    const numberBinding3 = BaseRive.useNumberBinding(
+      "Avatar01/UsernameVisibility",
+      instance,
+      prop4,
+      prop5,
+      playIfNeeded,
+    );
     const prop60Result3 = BaseRive;
     let prop6;
     if (dataBinding != null) {
@@ -114,7 +287,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop15 = onDataBindingChange["Avatar02/ShadowVisibility"];
     }
-    const numberBinding4 = BaseRive.useNumberBinding("Avatar02/ShadowVisibility", instance, prop14, prop15, playIfNeeded);
+    const numberBinding4 = BaseRive.useNumberBinding(
+      "Avatar02/ShadowVisibility",
+      instance,
+      prop14,
+      prop15,
+      playIfNeeded,
+    );
     const prop60Result8 = BaseRive;
     let prop16;
     if (dataBinding != null) {
@@ -124,7 +303,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop17 = onDataBindingChange["Avatar02/StrokeVisibility"];
     }
-    const numberBinding5 = BaseRive.useNumberBinding("Avatar02/StrokeVisibility", instance, prop16, prop17, playIfNeeded);
+    const numberBinding5 = BaseRive.useNumberBinding(
+      "Avatar02/StrokeVisibility",
+      instance,
+      prop16,
+      prop17,
+      playIfNeeded,
+    );
     const prop60Result9 = BaseRive;
     let prop18;
     if (dataBinding != null) {
@@ -134,7 +319,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop19 = onDataBindingChange["Avatar02/UsernameVisibility"];
     }
-    const numberBinding6 = BaseRive.useNumberBinding("Avatar02/UsernameVisibility", instance, prop18, prop19, playIfNeeded);
+    const numberBinding6 = BaseRive.useNumberBinding(
+      "Avatar02/UsernameVisibility",
+      instance,
+      prop18,
+      prop19,
+      playIfNeeded,
+    );
     const prop60Result10 = BaseRive;
     let prop20;
     if (dataBinding != null) {
@@ -184,7 +375,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop29 = onDataBindingChange["Avatar03/ShadowVisibility"];
     }
-    const numberBinding7 = BaseRive.useNumberBinding("Avatar03/ShadowVisibility", instance, prop28, prop29, playIfNeeded);
+    const numberBinding7 = BaseRive.useNumberBinding(
+      "Avatar03/ShadowVisibility",
+      instance,
+      prop28,
+      prop29,
+      playIfNeeded,
+    );
     const prop60Result15 = BaseRive;
     let prop30;
     if (dataBinding != null) {
@@ -194,7 +391,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop31 = onDataBindingChange["Avatar03/StrokeVisibility"];
     }
-    const numberBinding8 = BaseRive.useNumberBinding("Avatar03/StrokeVisibility", instance, prop30, prop31, playIfNeeded);
+    const numberBinding8 = BaseRive.useNumberBinding(
+      "Avatar03/StrokeVisibility",
+      instance,
+      prop30,
+      prop31,
+      playIfNeeded,
+    );
     const prop60Result16 = BaseRive;
     let prop32;
     if (dataBinding != null) {
@@ -204,7 +407,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop33 = onDataBindingChange["Avatar03/UsernameVisibility"];
     }
-    const numberBinding9 = BaseRive.useNumberBinding("Avatar03/UsernameVisibility", instance, prop32, prop33, playIfNeeded);
+    const numberBinding9 = BaseRive.useNumberBinding(
+      "Avatar03/UsernameVisibility",
+      instance,
+      prop32,
+      prop33,
+      playIfNeeded,
+    );
     const prop60Result17 = BaseRive;
     let prop34;
     if (dataBinding != null) {
@@ -254,7 +463,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop43 = onDataBindingChange["Avatar04/ShadowVisibility"];
     }
-    const numberBinding10 = BaseRive.useNumberBinding("Avatar04/ShadowVisibility", instance, prop42, prop43, playIfNeeded);
+    const numberBinding10 = BaseRive.useNumberBinding(
+      "Avatar04/ShadowVisibility",
+      instance,
+      prop42,
+      prop43,
+      playIfNeeded,
+    );
     const prop60Result22 = BaseRive;
     let prop44;
     if (dataBinding != null) {
@@ -264,7 +479,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop45 = onDataBindingChange["Avatar04/StrokeVisibility"];
     }
-    const numberBinding11 = BaseRive.useNumberBinding("Avatar04/StrokeVisibility", instance, prop44, prop45, playIfNeeded);
+    const numberBinding11 = BaseRive.useNumberBinding(
+      "Avatar04/StrokeVisibility",
+      instance,
+      prop44,
+      prop45,
+      playIfNeeded,
+    );
     const prop60Result23 = BaseRive;
     let prop46;
     if (dataBinding != null) {
@@ -274,7 +495,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop47 = onDataBindingChange["Avatar04/UsernameVisibility"];
     }
-    const numberBinding12 = BaseRive.useNumberBinding("Avatar04/UsernameVisibility", instance, prop46, prop47, playIfNeeded);
+    const numberBinding12 = BaseRive.useNumberBinding(
+      "Avatar04/UsernameVisibility",
+      instance,
+      prop46,
+      prop47,
+      playIfNeeded,
+    );
     const prop60Result24 = BaseRive;
     let prop48;
     if (dataBinding != null) {
@@ -324,7 +551,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop57 = onDataBindingChange["Avatar05/ShadowVisibility"];
     }
-    const numberBinding13 = BaseRive.useNumberBinding("Avatar05/ShadowVisibility", instance, prop56, prop57, playIfNeeded);
+    const numberBinding13 = BaseRive.useNumberBinding(
+      "Avatar05/ShadowVisibility",
+      instance,
+      prop56,
+      prop57,
+      playIfNeeded,
+    );
     const prop60Result29 = BaseRive;
     let prop58;
     if (dataBinding != null) {
@@ -334,7 +567,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop59 = onDataBindingChange["Avatar05/StrokeVisibility"];
     }
-    const numberBinding14 = BaseRive.useNumberBinding("Avatar05/StrokeVisibility", instance, prop58, prop59, playIfNeeded);
+    const numberBinding14 = BaseRive.useNumberBinding(
+      "Avatar05/StrokeVisibility",
+      instance,
+      prop58,
+      prop59,
+      playIfNeeded,
+    );
     const prop60Result30 = BaseRive;
     prop60 = undefined;
     if (dataBinding != null) {
@@ -400,7 +639,13 @@ let closure_9 = {
   Sidekick: function SidekickBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     let prop60 = require;
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let twoFriends;
     if (dataBinding != null) {
@@ -420,7 +665,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
-    const numberBinding = BaseRive.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
+    const numberBinding = BaseRive.useNumberBinding(
+      "AnimationState",
+      instance,
+      AnimationState,
+      AnimationState1,
+      playIfNeeded,
+    );
     const prop60Result = BaseRive;
     let prop;
     if (dataBinding != null) {
@@ -450,7 +701,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop5 = onDataBindingChange["Avatar01/UsernameVisibility"];
     }
-    const numberBinding3 = BaseRive.useNumberBinding("Avatar01/UsernameVisibility", instance, prop4, prop5, playIfNeeded);
+    const numberBinding3 = BaseRive.useNumberBinding(
+      "Avatar01/UsernameVisibility",
+      instance,
+      prop4,
+      prop5,
+      playIfNeeded,
+    );
     const prop60Result3 = BaseRive;
     let prop6;
     if (dataBinding != null) {
@@ -500,7 +757,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop15 = onDataBindingChange["Avatar02/ShadowVisibility"];
     }
-    const numberBinding4 = BaseRive.useNumberBinding("Avatar02/ShadowVisibility", instance, prop14, prop15, playIfNeeded);
+    const numberBinding4 = BaseRive.useNumberBinding(
+      "Avatar02/ShadowVisibility",
+      instance,
+      prop14,
+      prop15,
+      playIfNeeded,
+    );
     const prop60Result8 = BaseRive;
     let prop16;
     if (dataBinding != null) {
@@ -510,7 +773,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop17 = onDataBindingChange["Avatar02/StrokeVisibility"];
     }
-    const numberBinding5 = BaseRive.useNumberBinding("Avatar02/StrokeVisibility", instance, prop16, prop17, playIfNeeded);
+    const numberBinding5 = BaseRive.useNumberBinding(
+      "Avatar02/StrokeVisibility",
+      instance,
+      prop16,
+      prop17,
+      playIfNeeded,
+    );
     const prop60Result9 = BaseRive;
     let prop18;
     if (dataBinding != null) {
@@ -520,7 +789,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop19 = onDataBindingChange["Avatar02/UsernameVisibility"];
     }
-    const numberBinding6 = BaseRive.useNumberBinding("Avatar02/UsernameVisibility", instance, prop18, prop19, playIfNeeded);
+    const numberBinding6 = BaseRive.useNumberBinding(
+      "Avatar02/UsernameVisibility",
+      instance,
+      prop18,
+      prop19,
+      playIfNeeded,
+    );
     const prop60Result10 = BaseRive;
     let prop20;
     if (dataBinding != null) {
@@ -570,7 +845,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop29 = onDataBindingChange["Avatar03/ShadowVisibility"];
     }
-    const numberBinding7 = BaseRive.useNumberBinding("Avatar03/ShadowVisibility", instance, prop28, prop29, playIfNeeded);
+    const numberBinding7 = BaseRive.useNumberBinding(
+      "Avatar03/ShadowVisibility",
+      instance,
+      prop28,
+      prop29,
+      playIfNeeded,
+    );
     const prop60Result15 = BaseRive;
     let prop30;
     if (dataBinding != null) {
@@ -580,7 +861,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop31 = onDataBindingChange["Avatar03/StrokeVisibility"];
     }
-    const numberBinding8 = BaseRive.useNumberBinding("Avatar03/StrokeVisibility", instance, prop30, prop31, playIfNeeded);
+    const numberBinding8 = BaseRive.useNumberBinding(
+      "Avatar03/StrokeVisibility",
+      instance,
+      prop30,
+      prop31,
+      playIfNeeded,
+    );
     const prop60Result16 = BaseRive;
     let prop32;
     if (dataBinding != null) {
@@ -590,7 +877,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop33 = onDataBindingChange["Avatar03/UsernameVisibility"];
     }
-    const numberBinding9 = BaseRive.useNumberBinding("Avatar03/UsernameVisibility", instance, prop32, prop33, playIfNeeded);
+    const numberBinding9 = BaseRive.useNumberBinding(
+      "Avatar03/UsernameVisibility",
+      instance,
+      prop32,
+      prop33,
+      playIfNeeded,
+    );
     const prop60Result17 = BaseRive;
     let prop34;
     if (dataBinding != null) {
@@ -640,7 +933,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop43 = onDataBindingChange["Avatar04/ShadowVisibility"];
     }
-    const numberBinding10 = BaseRive.useNumberBinding("Avatar04/ShadowVisibility", instance, prop42, prop43, playIfNeeded);
+    const numberBinding10 = BaseRive.useNumberBinding(
+      "Avatar04/ShadowVisibility",
+      instance,
+      prop42,
+      prop43,
+      playIfNeeded,
+    );
     const prop60Result22 = BaseRive;
     let prop44;
     if (dataBinding != null) {
@@ -650,7 +949,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop45 = onDataBindingChange["Avatar04/StrokeVisibility"];
     }
-    const numberBinding11 = BaseRive.useNumberBinding("Avatar04/StrokeVisibility", instance, prop44, prop45, playIfNeeded);
+    const numberBinding11 = BaseRive.useNumberBinding(
+      "Avatar04/StrokeVisibility",
+      instance,
+      prop44,
+      prop45,
+      playIfNeeded,
+    );
     const prop60Result23 = BaseRive;
     let prop46;
     if (dataBinding != null) {
@@ -660,7 +965,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop47 = onDataBindingChange["Avatar04/UsernameVisibility"];
     }
-    const numberBinding12 = BaseRive.useNumberBinding("Avatar04/UsernameVisibility", instance, prop46, prop47, playIfNeeded);
+    const numberBinding12 = BaseRive.useNumberBinding(
+      "Avatar04/UsernameVisibility",
+      instance,
+      prop46,
+      prop47,
+      playIfNeeded,
+    );
     const prop60Result24 = BaseRive;
     let prop48;
     if (dataBinding != null) {
@@ -710,7 +1021,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop57 = onDataBindingChange["Avatar05/ShadowVisibility"];
     }
-    const numberBinding13 = BaseRive.useNumberBinding("Avatar05/ShadowVisibility", instance, prop56, prop57, playIfNeeded);
+    const numberBinding13 = BaseRive.useNumberBinding(
+      "Avatar05/ShadowVisibility",
+      instance,
+      prop56,
+      prop57,
+      playIfNeeded,
+    );
     const prop60Result29 = BaseRive;
     let prop58;
     if (dataBinding != null) {
@@ -720,7 +1037,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop59 = onDataBindingChange["Avatar05/StrokeVisibility"];
     }
-    const numberBinding14 = BaseRive.useNumberBinding("Avatar05/StrokeVisibility", instance, prop58, prop59, playIfNeeded);
+    const numberBinding14 = BaseRive.useNumberBinding(
+      "Avatar05/StrokeVisibility",
+      instance,
+      prop58,
+      prop59,
+      playIfNeeded,
+    );
     const prop60Result30 = BaseRive;
     prop60 = undefined;
     if (dataBinding != null) {
@@ -793,7 +1116,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       ShadowVisibility1 = onDataBindingChange.ShadowVisibility;
     }
-    const numberBinding = BaseRive.useNumberBinding("ShadowVisibility", instance, ShadowVisibility, ShadowVisibility1, playIfNeeded);
+    const numberBinding = BaseRive.useNumberBinding(
+      "ShadowVisibility",
+      instance,
+      ShadowVisibility,
+      ShadowVisibility1,
+      playIfNeeded,
+    );
     let tmpResult = tmp(4211);
     let StrokeVisibility;
     if (dataBinding != null) {
@@ -803,7 +1132,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       StrokeVisibility1 = onDataBindingChange.StrokeVisibility;
     }
-    const numberBinding1 = tmpResult.useNumberBinding("StrokeVisibility", instance, StrokeVisibility, StrokeVisibility1, playIfNeeded);
+    const numberBinding1 = tmpResult.useNumberBinding(
+      "StrokeVisibility",
+      instance,
+      StrokeVisibility,
+      StrokeVisibility1,
+      playIfNeeded,
+    );
     tmpResult = tmp(4211);
     let UsernameVisibility;
     if (dataBinding != null) {
@@ -813,7 +1148,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       UsernameVisibility1 = onDataBindingChange.UsernameVisibility;
     }
-    const numberBinding2 = tmpResult.useNumberBinding("UsernameVisibility", instance, UsernameVisibility, UsernameVisibility1, playIfNeeded);
+    const numberBinding2 = tmpResult.useNumberBinding(
+      "UsernameVisibility",
+      instance,
+      UsernameVisibility,
+      UsernameVisibility1,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let Stroke;
     if (dataBinding != null) {
@@ -866,7 +1207,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       ShadowVisibility1 = onDataBindingChange.ShadowVisibility;
     }
-    const numberBinding = BaseRive.useNumberBinding("ShadowVisibility", instance, ShadowVisibility, ShadowVisibility1, playIfNeeded);
+    const numberBinding = BaseRive.useNumberBinding(
+      "ShadowVisibility",
+      instance,
+      ShadowVisibility,
+      ShadowVisibility1,
+      playIfNeeded,
+    );
     let tmpResult = tmp(4211);
     let StrokeVisibility;
     if (dataBinding != null) {
@@ -876,7 +1223,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       StrokeVisibility1 = onDataBindingChange.StrokeVisibility;
     }
-    const numberBinding1 = tmpResult.useNumberBinding("StrokeVisibility", instance, StrokeVisibility, StrokeVisibility1, playIfNeeded);
+    const numberBinding1 = tmpResult.useNumberBinding(
+      "StrokeVisibility",
+      instance,
+      StrokeVisibility,
+      StrokeVisibility1,
+      playIfNeeded,
+    );
     tmpResult = tmp(4211);
     let UsernameVisibility;
     if (dataBinding != null) {
@@ -886,7 +1239,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       UsernameVisibility1 = onDataBindingChange.UsernameVisibility;
     }
-    const numberBinding2 = tmpResult.useNumberBinding("UsernameVisibility", instance, UsernameVisibility, UsernameVisibility1, playIfNeeded);
+    const numberBinding2 = tmpResult.useNumberBinding(
+      "UsernameVisibility",
+      instance,
+      UsernameVisibility,
+      UsernameVisibility1,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let Stroke;
     if (dataBinding != null) {
@@ -932,7 +1291,13 @@ let closure_9 = {
   "Friends 01 Rotation": function Friends01RotationBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     let prop60 = require;
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     let twoFriends;
     if (dataBinding != null) {
@@ -952,7 +1317,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
-    const numberBinding = BaseRive.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
+    const numberBinding = BaseRive.useNumberBinding(
+      "AnimationState",
+      instance,
+      AnimationState,
+      AnimationState1,
+      playIfNeeded,
+    );
     const prop60Result = BaseRive;
     let prop;
     if (dataBinding != null) {
@@ -982,7 +1353,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop5 = onDataBindingChange["Avatar01/UsernameVisibility"];
     }
-    const numberBinding3 = BaseRive.useNumberBinding("Avatar01/UsernameVisibility", instance, prop4, prop5, playIfNeeded);
+    const numberBinding3 = BaseRive.useNumberBinding(
+      "Avatar01/UsernameVisibility",
+      instance,
+      prop4,
+      prop5,
+      playIfNeeded,
+    );
     const prop60Result3 = BaseRive;
     let prop6;
     if (dataBinding != null) {
@@ -1032,7 +1409,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop15 = onDataBindingChange["Avatar02/ShadowVisibility"];
     }
-    const numberBinding4 = BaseRive.useNumberBinding("Avatar02/ShadowVisibility", instance, prop14, prop15, playIfNeeded);
+    const numberBinding4 = BaseRive.useNumberBinding(
+      "Avatar02/ShadowVisibility",
+      instance,
+      prop14,
+      prop15,
+      playIfNeeded,
+    );
     const prop60Result8 = BaseRive;
     let prop16;
     if (dataBinding != null) {
@@ -1042,7 +1425,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop17 = onDataBindingChange["Avatar02/StrokeVisibility"];
     }
-    const numberBinding5 = BaseRive.useNumberBinding("Avatar02/StrokeVisibility", instance, prop16, prop17, playIfNeeded);
+    const numberBinding5 = BaseRive.useNumberBinding(
+      "Avatar02/StrokeVisibility",
+      instance,
+      prop16,
+      prop17,
+      playIfNeeded,
+    );
     const prop60Result9 = BaseRive;
     let prop18;
     if (dataBinding != null) {
@@ -1052,7 +1441,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop19 = onDataBindingChange["Avatar02/UsernameVisibility"];
     }
-    const numberBinding6 = BaseRive.useNumberBinding("Avatar02/UsernameVisibility", instance, prop18, prop19, playIfNeeded);
+    const numberBinding6 = BaseRive.useNumberBinding(
+      "Avatar02/UsernameVisibility",
+      instance,
+      prop18,
+      prop19,
+      playIfNeeded,
+    );
     const prop60Result10 = BaseRive;
     let prop20;
     if (dataBinding != null) {
@@ -1102,7 +1497,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop29 = onDataBindingChange["Avatar03/ShadowVisibility"];
     }
-    const numberBinding7 = BaseRive.useNumberBinding("Avatar03/ShadowVisibility", instance, prop28, prop29, playIfNeeded);
+    const numberBinding7 = BaseRive.useNumberBinding(
+      "Avatar03/ShadowVisibility",
+      instance,
+      prop28,
+      prop29,
+      playIfNeeded,
+    );
     const prop60Result15 = BaseRive;
     let prop30;
     if (dataBinding != null) {
@@ -1112,7 +1513,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop31 = onDataBindingChange["Avatar03/StrokeVisibility"];
     }
-    const numberBinding8 = BaseRive.useNumberBinding("Avatar03/StrokeVisibility", instance, prop30, prop31, playIfNeeded);
+    const numberBinding8 = BaseRive.useNumberBinding(
+      "Avatar03/StrokeVisibility",
+      instance,
+      prop30,
+      prop31,
+      playIfNeeded,
+    );
     const prop60Result16 = BaseRive;
     let prop32;
     if (dataBinding != null) {
@@ -1122,7 +1529,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop33 = onDataBindingChange["Avatar03/UsernameVisibility"];
     }
-    const numberBinding9 = BaseRive.useNumberBinding("Avatar03/UsernameVisibility", instance, prop32, prop33, playIfNeeded);
+    const numberBinding9 = BaseRive.useNumberBinding(
+      "Avatar03/UsernameVisibility",
+      instance,
+      prop32,
+      prop33,
+      playIfNeeded,
+    );
     const prop60Result17 = BaseRive;
     let prop34;
     if (dataBinding != null) {
@@ -1172,7 +1585,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop43 = onDataBindingChange["Avatar04/ShadowVisibility"];
     }
-    const numberBinding10 = BaseRive.useNumberBinding("Avatar04/ShadowVisibility", instance, prop42, prop43, playIfNeeded);
+    const numberBinding10 = BaseRive.useNumberBinding(
+      "Avatar04/ShadowVisibility",
+      instance,
+      prop42,
+      prop43,
+      playIfNeeded,
+    );
     const prop60Result22 = BaseRive;
     let prop44;
     if (dataBinding != null) {
@@ -1182,7 +1601,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop45 = onDataBindingChange["Avatar04/StrokeVisibility"];
     }
-    const numberBinding11 = BaseRive.useNumberBinding("Avatar04/StrokeVisibility", instance, prop44, prop45, playIfNeeded);
+    const numberBinding11 = BaseRive.useNumberBinding(
+      "Avatar04/StrokeVisibility",
+      instance,
+      prop44,
+      prop45,
+      playIfNeeded,
+    );
     const prop60Result23 = BaseRive;
     let prop46;
     if (dataBinding != null) {
@@ -1192,7 +1617,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop47 = onDataBindingChange["Avatar04/UsernameVisibility"];
     }
-    const numberBinding12 = BaseRive.useNumberBinding("Avatar04/UsernameVisibility", instance, prop46, prop47, playIfNeeded);
+    const numberBinding12 = BaseRive.useNumberBinding(
+      "Avatar04/UsernameVisibility",
+      instance,
+      prop46,
+      prop47,
+      playIfNeeded,
+    );
     const prop60Result24 = BaseRive;
     let prop48;
     if (dataBinding != null) {
@@ -1242,7 +1673,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop57 = onDataBindingChange["Avatar05/ShadowVisibility"];
     }
-    const numberBinding13 = BaseRive.useNumberBinding("Avatar05/ShadowVisibility", instance, prop56, prop57, playIfNeeded);
+    const numberBinding13 = BaseRive.useNumberBinding(
+      "Avatar05/ShadowVisibility",
+      instance,
+      prop56,
+      prop57,
+      playIfNeeded,
+    );
     const prop60Result29 = BaseRive;
     let prop58;
     if (dataBinding != null) {
@@ -1252,7 +1689,13 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop59 = onDataBindingChange["Avatar05/StrokeVisibility"];
     }
-    const numberBinding14 = BaseRive.useNumberBinding("Avatar05/StrokeVisibility", instance, prop58, prop59, playIfNeeded);
+    const numberBinding14 = BaseRive.useNumberBinding(
+      "Avatar05/StrokeVisibility",
+      instance,
+      prop58,
+      prop59,
+      playIfNeeded,
+    );
     const prop60Result30 = BaseRive;
     prop60 = undefined;
     if (dataBinding != null) {
@@ -1314,7 +1757,7 @@ let closure_9 = {
     }
     prop60 = BaseRive.useColorBinding("ConnectorColor", instance, prop60, prop60, playIfNeeded);
     return null;
-  }
+  },
 };
 let closure_10 = importAllResult.forwardRef(function CheckpointFriendsRiveInner(defaultViewModelInstance, ref) {
   ({ fallback, artboard } = defaultViewModelInstance);
@@ -1343,7 +1786,16 @@ let closure_10 = importAllResult.forwardRef(function CheckpointFriendsRiveInner(
   }, items);
   const tmp = callback(defaultViewModelInstance, closure_3);
   let merged = Object.assign(tmp);
-  return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: dataBinding(onDataBindingChange[4]), artboard: str, artboardProperties: closure_7, artboardViewModelInstances: closure_8, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
+  return jsx(str(onDataBindingChange[3]).BaseRive, {
+    ref,
+    src: dataBinding(onDataBindingChange[4]),
+    artboard: str,
+    artboardProperties: closure_7,
+    artboardViewModelInstances: closure_8,
+    defaultViewModelInstance: str2,
+    stateMachine: defaultViewModelInstance.stateMachine,
+    renderDataBinding: callback,
+  });
 });
 const forwardRefResult = importAllResult.forwardRef(function CheckpointFriendsRiveWithBoundary(fallback, ref) {
   let obj = { fallback: fallback.fallback, children: null };
@@ -1352,6 +1804,8 @@ const forwardRefResult = importAllResult.forwardRef(function CheckpointFriendsRi
   obj[1] = <closure_10 ref={arg1} />;
   return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CheckpointFriendsRive.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/design/components/Rive/native/generated/CheckpointFriendsRive.tsx",
+);
 
 export const CheckpointFriendsRive = forwardRefResult;

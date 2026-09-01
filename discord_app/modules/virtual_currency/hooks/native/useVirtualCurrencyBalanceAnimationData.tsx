@@ -4,9 +4,13 @@ import closure_4 from "../../../../../_runtime/00019_noop.js";
 import closure_5 from "../../../a11y/AccessibilityStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/virtual_currency/hooks/native/useVirtualCurrencyBalanceAnimationData.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/virtual_currency/hooks/native/useVirtualCurrencyBalanceAnimationData.tsx",
+);
 
-export const useVirtualCurrencyBalanceAnimationData = function useVirtualCurrencyBalanceAnimationData(initialRenderedBalance) {
+export const useVirtualCurrencyBalanceAnimationData = function useVirtualCurrencyBalanceAnimationData(
+  initialRenderedBalance,
+) {
   initialRenderedBalance = initialRenderedBalance.initialRenderedBalance;
   const balance = initialRenderedBalance.balance;
   let stateFromStores;
@@ -20,7 +24,10 @@ export const useVirtualCurrencyBalanceAnimationData = function useVirtualCurrenc
   closure_10 = undefined;
   let callback2;
   const items = [closure_5];
-  stateFromStores = initialRenderedBalance(stateFromStores[3]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  stateFromStores = initialRenderedBalance(stateFromStores[3]).useStateFromStores(
+    items,
+    () => useReducedMotion.useReducedMotion,
+  );
   let tmp2 = currentAnimationType(React.useState(null), 2);
   currentAnimationType = tmp2[0];
   React = tmp2[1];
@@ -33,9 +40,7 @@ export const useVirtualCurrencyBalanceAnimationData = function useVirtualCurrenc
   closure_9 = tmp7[1];
   const tmp9 = balance(stateFromStores[4])(balance);
   closure_10 = tmp9;
-  const onValueChange = React.useCallback(() => {
-
-  }, []);
+  const onValueChange = React.useCallback(() => {}, []);
   const items1 = [currentAnimationType];
   const onValueReached = React.useCallback(() => {
     closure_5.current = null;

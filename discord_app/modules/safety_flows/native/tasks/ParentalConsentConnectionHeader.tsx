@@ -15,12 +15,20 @@ require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { row: null, logOut: null };
-createCacheKey = { height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT,
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", left: ThemesDefault.space.PX_16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { position: "absolute", left: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx",
+);
 
 export const ParentalConsentConnectionNavbar = function ParentalConsentConnectionNavbar() {
   const tmp = callback2();
@@ -44,14 +52,19 @@ export const ParentalConsentConnectionNavbar = function ParentalConsentConnectio
     onPress() {
       return callback(table[10]).logout("safety_flows_parental_consent_connection");
     },
-    children: null
+    children: null,
   };
   const intl = getSystemLocale.intl;
   obj1[5] = intl.string(messagesProxyDefault["3HuGuY"]);
-  const items1 = [callback(Text.Text, obj1), ];
+  const items1 = [callback(Text.Text, obj1)];
   let tmp5Result = null != stateFromStores;
   if (tmp5Result) {
-    const obj2 = { accessibilityRole: "header", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const obj2 = {
+      accessibilityRole: "header",
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj2[3] = stateFromStores;
     tmp5Result = tmp5(Text.Text, obj2);
   }

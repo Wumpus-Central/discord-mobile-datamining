@@ -16,9 +16,18 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let obj = { container: null, avatar: null, avatarContainer: null, textContainer: null, text: null };
-obj = { display: "flex", flexDirection: "row", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
+obj = {
+  display: "flex",
+  flexDirection: "row",
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderBottomWidth: 1,
+  paddingVertical: 12,
+};
 obj[0] = obj;
-createCacheKey = { borderRadius: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = {
+  borderRadius: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 obj[1] = createCacheKey;
 obj[2] = { marginRight: 12, alignItems: "flex-start" };
 obj[3] = { display: "flex", flexDirection: "column", flexShrink: 1 };
@@ -46,14 +55,21 @@ const memoResult = importAllResult.memo((action) => {
     obj1[1] = stateFromStores;
     obj1[4] = stateFromStores.avatarDecoration;
     obj[1] = callback(tmp6(1297).Avatar, obj1);
-    const items1 = [callback(View, obj), ];
+    const items1 = [callback(View, obj)];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.textContainer;
-    const obj3 = { style: null, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
+    const obj3 = {
+      style: null,
+      variant: "text-md/semibold",
+      color: "interactive-text-active",
+      ellipsizeMode: "tail",
+      lineClamp: 1,
+      children: null,
+    };
     obj3[0] = tmp.text;
     tmp3Result = tmp3(4322);
     obj3[5] = tmp3Result.getName(stateFromStores);
-    const items2 = [callback(tmp6(4474).Text, obj3), ];
+    const items2 = [callback(tmp6(4474).Text, obj3)];
     const obj4 = { variant: "text-xs/medium", color: "channels-default", children: null };
     const _Date = Date;
     const date = new Date(extractTimestampResult);
@@ -67,9 +83,40 @@ const memoResult = importAllResult.memo((action) => {
 });
 const unpackModuleId = memoResult;
 memoResult.displayName = "FamilyCenterActivityRowUser";
-let obj2 = { container: { display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, avatar: null, avatarText: null, text: null, headerContainer: null, badge: null, header: null, headerAndIconContainer: null };
-let obj3 = { display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
-obj2[1] = { borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: 40, width: 40, margin: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, marginRight: 12 };
+let obj2 = {
+  container: {
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "row",
+    borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+    borderBottomWidth: 1,
+    paddingVertical: 12,
+  },
+  avatar: null,
+  avatarText: null,
+  text: null,
+  headerContainer: null,
+  badge: null,
+  header: null,
+  headerAndIconContainer: null,
+};
+let obj3 = {
+  display: "flex",
+  alignItems: "center",
+  flexDirection: "row",
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderBottomWidth: 1,
+  paddingVertical: 12,
+};
+obj2[1] = {
+  borderRadius: ThemesDefault.radii.md,
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  height: 40,
+  width: 40,
+  margin: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  marginRight: 12,
+};
 createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT };
 obj2[2] = createCacheKey;
 obj2[3] = { display: "flex", flexDirection: "column", flexShrink: 1 };
@@ -102,7 +149,7 @@ const memoResult1 = importAllResult.memo((action) => {
     obj[2] = stateFromStores;
     let tmp6Result = tmp6(6004);
     obj[3] = tmp2(6004).GuildIconSizes.NORMAL;
-    const items1 = [callback(tmp6Result, obj), ];
+    const items1 = [callback(tmp6Result, obj)];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.text;
     const obj2 = { style: null, children: null };
@@ -118,14 +165,21 @@ const memoResult1 = importAllResult.memo((action) => {
       obj4[2] = tmp6(7673).Sizes.SMALL;
       tmp11Result = tmp11(tmp6Result, obj4);
     }
-    const items2 = [tmp11Result, ];
-    const obj5 = { style: null, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
+    const items2 = [tmp11Result];
+    const obj5 = {
+      style: null,
+      variant: "text-md/semibold",
+      color: "interactive-text-active",
+      ellipsizeMode: "tail",
+      lineClamp: 1,
+      children: null,
+    };
     obj5[0] = tmp.header;
     obj5[5] = stateFromStores.name;
     items2[1] = callback(tmp2(4474).Text, obj5);
     obj3[1] = items2;
     obj2[1] = closure_9(View, obj3);
-    const items3 = [callback(View, obj2), ];
+    const items3 = [callback(View, obj2)];
     tmp11Result = null;
     if (undefined !== stateFromStores.approximateMemberCount) {
       const obj6 = { variant: "text-xs/medium", color: "channels-default", children: null };
@@ -143,7 +197,15 @@ const memoResult1 = importAllResult.memo((action) => {
   }
 });
 memoResult1.displayName = "FamilyCenterActivityRowGuild";
-let obj4 = { borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: 40, width: 40, margin: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, marginRight: 12 };
+let obj4 = {
+  borderRadius: ThemesDefault.radii.md,
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  height: 40,
+  width: 40,
+  margin: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  marginRight: 12,
+};
 const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityRow.tsx");
 
 export default function FamilyCenterActivityRow(action) {
@@ -178,7 +240,15 @@ export default function FamilyCenterActivityRow(action) {
       } else {
         const giftRowDisplayInfo = tmp(14510).getGiftRowDisplayInfo(giftInfo);
         ({ skuId, subscriptionPlanId, price, gifterUserId, claimed, offeredAt, claimedAt } = giftRowDisplayInfo);
-        obj = { skuId: null, subscriptionPlanId: null, price: null, gifterUserId: null, claimed: null, offeredAt: null, claimedAt: null };
+        obj = {
+          skuId: null,
+          subscriptionPlanId: null,
+          price: null,
+          gifterUserId: null,
+          claimed: null,
+          offeredAt: null,
+          claimedAt: null,
+        };
         obj[0] = skuId;
         obj[1] = subscriptionPlanId;
         obj[2] = price;
@@ -205,4 +275,4 @@ export default function FamilyCenterActivityRow(action) {
     tmpResult3 = tmp(7338);
   }
   tmpResult2 = getEmptyActivityFormatter;
-};
+}

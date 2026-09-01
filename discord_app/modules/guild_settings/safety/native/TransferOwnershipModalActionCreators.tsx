@@ -5,7 +5,9 @@ import asyncRequireImpl from "../../../../../_runtime/02009_asyncRequireImpl.js"
 import _modDef4723 from "../../../../actions/ModalActionCreators.tsx";
 
 const TRANSFER_OWNERSHIP_MODAL_KEY = "TRANSFER_OWNERSHIP_MODAL_KEY";
-const result = set.fileFinishedImporting("modules/guild_settings/safety/native/TransferOwnershipModalActionCreators.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_settings/safety/native/TransferOwnershipModalActionCreators.tsx",
+);
 
 export default {
   open(guild, toUser) {
@@ -17,5 +19,5 @@ export default {
     dispatcherDefault.wait(() => {
       callback(table[0]).popWithKey(closure_3);
     });
-  }
+  },
 };

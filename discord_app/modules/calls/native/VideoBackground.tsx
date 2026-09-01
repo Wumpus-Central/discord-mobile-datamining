@@ -47,15 +47,17 @@ function useDominantRGBFromImage(arg0, arg1) {
           const ImageManager2 = closure_1_6.ImageManager;
           dominantColorsLocalAsset = ImageManager2.getDominantColors(closure_1_7.resolveAssetSource(tmp));
         }
-        dominantColorsLocalAsset.then((arg0) => {
-          if (callback()) {
-            const obj = { r: null, g: null, b: null };
-            [obj[0], obj[1], obj[2]] = closure_1_3(arg0[0], 3);
-            callback2(obj);
-            closure_1_1(closure_1_2[8]).cachedDominantColors[closure_0] = obj;
-            const tmp3 = closure_1_3(arg0[0], 3);
-          }
-        }).catch(closure_1_8);
+        dominantColorsLocalAsset
+          .then((arg0) => {
+            if (callback()) {
+              const obj = { r: null, g: null, b: null };
+              [obj[0], obj[1], obj[2]] = closure_1_3(arg0[0], 3);
+              callback2(obj);
+              closure_1_1(closure_1_2[8]).cachedDominantColors[closure_0] = obj;
+              const tmp3 = closure_1_3(arg0[0], 3);
+            }
+          })
+          .catch(closure_1_8);
         const nextPromise = dominantColorsLocalAsset.then((arg0) => {
           if (callback()) {
             const obj = { r: null, g: null, b: null };
@@ -106,7 +108,7 @@ class VideoBackground {
       if (renderVideoDetailsResult == null) {
         renderVideoDetailsResult = null;
       }
-      items = [, , , ];
+      items = [, , ,];
       items[0] = global.style;
       items[1] = tmp2.videoBackground;
       tmp13 = null;
@@ -137,7 +139,7 @@ class VideoBackground {
       tmp18 = obj1;
       tmp19 = merged;
       merged1 = Object.assign(merged);
-      items1 = [, ];
+      items1 = [,];
       items1[0] = avatarStyle;
       items1[1] = tmp15;
       obj1.avatarStyle = items1;
@@ -150,7 +152,7 @@ class VideoBackground {
         obj2[1] = { x: 0, y: 0 };
         obj2[2] = { x: 0, y: 1 };
         obj2[3] = items;
-        items2 = [, ];
+        items2 = [,];
         items2[0] = tmp21;
         items2[1] = renderVideoDetailsResult;
         obj2[4] = items2;
@@ -160,7 +162,7 @@ class VideoBackground {
         tmp23 = View;
         obj3 = { style: null, children: null };
         obj3[0] = items;
-        items3 = [, ];
+        items3 = [,];
         items3[0] = tmp21;
         items3[1] = renderVideoDetailsResult;
         obj3[1] = items3;
@@ -173,7 +175,10 @@ class VideoBackground {
 let c4 = importAllResult;
 ({ View: c5, NativeModules: closure_6, Image: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ videoBackground: { alignItems: "center" }, videoDetailsSpacer: { paddingTop: 12 } });
+let closure_11 = createCacheKey.createStyles({
+  videoBackground: { alignItems: "center" },
+  videoDetailsSpacer: { paddingTop: 12 },
+});
 const memoizeResult = importDefaultResult.memoize((num) => {
   let tmp = null;
   if (null != num) {

@@ -12,11 +12,13 @@ class I18nLink {
     ({ output, state } = global);
     tmp = node;
     tmp2 = closure_2;
-    alwaysShowLinkDecorations = closure_3.useContext(require("context").AccessibilityPreferencesContext).alwaysShowLinkDecorations;
+    alwaysShowLinkDecorations = closure_3.useContext(
+      require("context").AccessibilityPreferencesContext,
+    ).alwaysShowLinkDecorations;
     obj2 = require("map");
     token = obj2.useToken(require("Themes").colors.TEXT_LINK);
     closure_2 = token;
-    items = [, ];
+    items = [,];
     items[0] = token;
     items[1] = alwaysShowLinkDecorations;
     memo = closure_3.useMemo(() => {
@@ -43,11 +45,21 @@ class I18nLink {
         return obj.openURL(alwaysShowLinkDecorations(token[7]).sanitizeUrl(node.target));
       };
     }
-    obj = { accessible: true, accessibilityRole: "link", onPress: obj.onClick, style: memo, children: output(node.content, state) };
+    obj = {
+      accessible: true,
+      accessibilityRole: "link",
+      onPress: obj.onClick,
+      style: memo,
+      children: output(node.content, state),
+    };
     return jsx(require("Button").LegacyText, obj);
   }
 }
-let closure_5 = { strong: { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD }, italic: { fontStyle: "italic" }, underline: { textDecorationLine: "underline" } };
+let closure_5 = {
+  strong: { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD },
+  italic: { fontStyle: "italic" },
+  underline: { textDecorationLine: "underline" },
+};
 let obj = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD };
 const result = require("set").fileFinishedImporting("i18n/native/updateRules.tsx");
 
@@ -61,19 +73,31 @@ export default function updateRules(paragraph) {
   obj = {};
   const merged1 = Object.assign(paragraph.strong);
   obj.react = function react(content, arg1, key) {
-    return callback2(callback(1297).LegacyText, { style: closure_5.strong, children: arg1(content.content, key) }, key.key);
+    return callback2(
+      callback(1297).LegacyText,
+      { style: closure_5.strong, children: arg1(content.content, key) },
+      key.key,
+    );
   };
   paragraph.strong = obj;
   obj = {};
   const merged2 = Object.assign(paragraph.em);
   obj.react = function react(content, arg1, key) {
-    return callback2(callback(1297).LegacyText, { style: closure_5.italic, children: arg1(content.content, key) }, key.key);
+    return callback2(
+      callback(1297).LegacyText,
+      { style: closure_5.italic, children: arg1(content.content, key) },
+      key.key,
+    );
   };
   paragraph.em = obj;
   obj1 = {};
   const merged3 = Object.assign(paragraph.u);
   obj1.react = function react(content, arg1, key) {
-    return callback2(callback(1297).LegacyText, { style: closure_5.underline, children: arg1(content.content, key) }, key.key);
+    return callback2(
+      callback(1297).LegacyText,
+      { style: closure_5.underline, children: arg1(content.content, key) },
+      key.key,
+    );
   };
   paragraph.u = obj1;
   const obj2 = {};
@@ -83,5 +107,5 @@ export default function updateRules(paragraph) {
   };
   paragraph.link = obj2;
   return paragraph;
-};
+}
 export { I18nLink };

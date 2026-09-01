@@ -14,7 +14,14 @@ const require = arg1;
 ({ Permissions: closure_8, PlatformTypes: c9 } = ME);
 let result = require("set").fileFinishedImporting("modules/connections/ConnectionsUtils.tsx");
 
-export const officialApplicationIds = ["426537812993638400", "1042836142560645130", "296023718839451649", "979802510766268446", "1031611223235637258", "512333785338216465"];
+export const officialApplicationIds = [
+  "426537812993638400",
+  "1042836142560645130",
+  "296023718839451649",
+  "979802510766268446",
+  "1031611223235637258",
+  "512333785338216465",
+];
 export const ConnectionConfigurationRuleOperator = { AND: 0, [0]: "AND", OR: 1, [1]: "OR" };
 export const getCallbackParamsFromURL = function getCallbackParamsFromURL(c0) {
   let obj = isDiscordProxiedAssetUrlDefault;
@@ -380,7 +387,11 @@ export const getCreatedAtDate = function getCreatedAtDate(date, locale) {
         const _isNaN = isNaN;
         toLocaleDateStringResult = null;
         if (!isNaN(date.getTime())) {
-          toLocaleDateStringResult = date.toLocaleDateString(locale, { month: "short", day: "numeric", year: "numeric" });
+          toLocaleDateStringResult = date.toLocaleDateString(locale, {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+          });
         }
       }
       return toLocaleDateStringResult;
@@ -394,7 +405,9 @@ export const useShowLinkedRolesAdminNux = function useShowLinkedRolesAdminNux(ar
   return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const sortedRoles = closure_1_3.getSortedRoles(lib.id);
     const someResult = sortedRoles.some((tags) => null === tags.tags.guild_connections);
-    const result = lib(closure_1_2[11]).UNSAFE_isDismissibleContentDismissed(lib(closure_1_2[12]).DismissibleContent.CONNECTIONS_NUX);
+    const result = lib(closure_1_2[11]).UNSAFE_isDismissibleContentDismissed(
+      lib(closure_1_2[12]).DismissibleContent.CONNECTIONS_NUX,
+    );
     let tmp4 = !someResult;
     const obj2 = lib(closure_1_2[11]);
     if (!someResult) {

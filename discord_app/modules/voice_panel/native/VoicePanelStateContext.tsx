@@ -7,7 +7,43 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 import set from "../../../../_runtime/00002_set.js";
 
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsModes);
-let obj = { channelId: "context-not-initialized", channelType: "e", connected: "Array", contentDimensions: false, controlsSpecs: null, dismissPanel: null, dismissToPIPGestureRef: null, dragScrolling: null, focused: null, generateStateLocker: null, guildId: null, hideControls: null, isCall: null, isFocusedVideoZoomed: null, layoutManager: null, mode: null, morphablePanelMode: null, mountedCards: null, pipAvoidanceSpecs: null, preJoinContentSize: null, safeArea: null, scrollPosition: null, setControlsMode: null, setFocused: null, setIsFocusedVideoZoomed: null, setMode: null, setShowFloatingCTA: "M9 1H7v1h2V1ZM9 7H7v2h2V7Z", showControls: null, showFloatingCTA: "", streamOutputSinkStack: "", windowDimensions: null, wrapperDimensions: "default", useReducedMotion: false, wrapperOffset: false, panelCardStillInPIP: false };
+let obj = {
+  channelId: "context-not-initialized",
+  channelType: "e",
+  connected: "Array",
+  contentDimensions: false,
+  controlsSpecs: null,
+  dismissPanel: null,
+  dismissToPIPGestureRef: null,
+  dragScrolling: null,
+  focused: null,
+  generateStateLocker: null,
+  guildId: null,
+  hideControls: null,
+  isCall: null,
+  isFocusedVideoZoomed: null,
+  layoutManager: null,
+  mode: null,
+  morphablePanelMode: null,
+  mountedCards: null,
+  pipAvoidanceSpecs: null,
+  preJoinContentSize: null,
+  safeArea: null,
+  scrollPosition: null,
+  setControlsMode: null,
+  setFocused: null,
+  setIsFocusedVideoZoomed: null,
+  setMode: null,
+  setShowFloatingCTA: "M9 1H7v1h2V1ZM9 7H7v2h2V7Z",
+  showControls: null,
+  showFloatingCTA: "",
+  streamOutputSinkStack: "",
+  windowDimensions: null,
+  wrapperDimensions: "default",
+  useReducedMotion: false,
+  wrapperOffset: false,
+  panelCardStillInPIP: false,
+};
 obj[2] = createFakeSharedValue.createFakeSharedValue(false);
 obj[3] = createFakeSharedValue.createFakeSharedValue({ width: 0, height: 0 });
 obj = { mode: VoicePanelControlsModes.FLOATING_DEFAULT, locked: false, height: CONTROLS_HEIGHT, pushToTalk: false };
@@ -64,7 +100,16 @@ obj[27] = function showControls() {
 obj[28] = createFakeSharedValue.createFakeSharedValue(null);
 obj[29] = {};
 obj[30] = createFakeSharedValue.createFakeSharedValue({ width: 0, height: 0, landscape: false });
-obj[31] = createFakeSharedValue.createFakeSharedValue({ drawerWidth: 0, drawerHeight: 0, drawerX: 0, drawerY: 0, pipX: 0, pipY: 0, animated: true, mode: VoicePanelModes.PANEL });
+obj[31] = createFakeSharedValue.createFakeSharedValue({
+  drawerWidth: 0,
+  drawerHeight: 0,
+  drawerX: 0,
+  drawerY: 0,
+  pipX: 0,
+  pipY: 0,
+  animated: true,
+  mode: VoicePanelModes.PANEL,
+});
 obj[32] = createFakeSharedValue.createFakeSharedValue(false);
 obj[33] = createFakeSharedValue.createFakeSharedValue({ gestureActive: false, x: 0, y: 0 });
 obj[34] = createFakeSharedValue.createFakeSharedValue(false);

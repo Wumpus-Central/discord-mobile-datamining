@@ -25,7 +25,7 @@ function SkeletonGrid(accessibilityLabel) {
     let tmp4 = jsx;
     let tmp5 = View;
     obj = { style: null, children: null };
-    let items1 = [tmp.skeletonRow, ];
+    let items1 = [tmp.skeletonRow];
     obj1 = { width: null };
     obj1[0] = tmp3;
     items1[1] = obj1;
@@ -34,16 +34,38 @@ function SkeletonGrid(accessibilityLabel) {
       let obj = { width: num, style: null };
       obj = { marginBottom: CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP };
       obj[1] = obj;
-      return jsx(sharedValueDefault, { marginBottom: CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP }, "" + num + "-" + arg1);
+      return jsx(
+        sharedValueDefault,
+        { marginBottom: CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP },
+        "" + num + "-" + arg1,
+      );
     });
     let _HermesInternal = HermesInternal;
-    arr = items.push(<View key={"row-" + num} style={null}>{null}</View>);
+    arr = items.push(
+      <View key={"row-" + num} style={null}>
+        {null}
+      </View>,
+    );
   }
-  return <View style={tmp.skeletonGrid} accessibilityRole="list" accessibilityLabel={arg0.accessibilityLabel} accessibilityState={{ busy: true }} accessible>{items}</View>;
+  return (
+    <View
+      style={tmp.skeletonGrid}
+      accessibilityRole="list"
+      accessibilityLabel={arg0.accessibilityLabel}
+      accessibilityState={{ busy: true }}
+      accessible
+    >
+      {items}
+    </View>
+  );
 }
 noopAll;
 createCacheKey = { skeletonGrid: { flex: 1, alignItems: "center" }, skeletonRow: null };
-createCacheKey = { flexDirection: "row", gap: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP };
+createCacheKey = {
+  flexDirection: "row",
+  gap: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP,
+  paddingBottom: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP,
+};
 createCacheKey[1] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/collectibles/native/FeedProductList.tsx");
@@ -61,7 +83,12 @@ export default function FeedProductList(arg0) {
     obj[1] = tmp2;
     obj[2] = accessibilityLabel;
     obj[3] = tmp3;
-    tmp7 = jsx(ShopCardGridItemDefault, { products: null, preferVCPrice: null, accessibilityLabel: null, disableBundleStaticBackground: null });
+    tmp7 = jsx(ShopCardGridItemDefault, {
+      products: null,
+      preferVCPrice: null,
+      accessibilityLabel: null,
+      disableBundleStaticBackground: null,
+    });
   }
   return tmp7;
-};
+}

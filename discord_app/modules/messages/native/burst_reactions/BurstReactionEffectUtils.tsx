@@ -15,7 +15,7 @@ function _generateAnimationSource() {
     c9 = 0;
     c10 = 0;
     c8 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       if (c10 === 2) {
         c10 = 3;
         HermesBuiltin.throwTypeError();
@@ -170,10 +170,10 @@ function _generateAnimationSource() {
             const _JSON = JSON;
             closure_6 = JSON.stringify(lib2);
             if (null == lib.id) {
-              closure_6 = closure_6.replace(/"a":{"a":0,"k":\[64,64/, "\"a\":{\"a\":0,\"k\":[36,36");
+              closure_6 = closure_6.replace(/"a":{"a":0,"k":\[64,64/, '"a":{"a":0,"k":[36,36');
               obj4 = lib(500);
               if (obj4.isAndroid()) {
-                closure_6 = closure_6.replace(/"w":128,"h":128/, "\"w\":72,\"h\":72");
+                closure_6 = closure_6.replace(/"w":128,"h":128/, '"w":72,"h":72');
               }
             }
             const ImageManager = closure_5.ImageManager;
@@ -211,7 +211,7 @@ function _generateAnimationSourceFromLocalImage() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -354,7 +354,9 @@ function _generateAnimationSourceFromLocalImage() {
   return applyArgumentsResult;
 }
 ({ NativeModules: c5, Image: closure_6 } = get_ActivityIndicator);
-const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx",
+);
 
 export const useBurstReactionAnimationSource = function useBurstReactionAnimationSource(channelId) {
   channelId = channelId.channelId;
@@ -368,7 +370,7 @@ export const useBurstReactionAnimationSource = function useBurstReactionAnimatio
   const effect = React.useEffect(() => {
     function _getSource() {
       let self = this;
-      const tmp = emoji(function*() {
+      const tmp = emoji(function* () {
         if (c3 === 2) {
           c3 = 3;
           HermesBuiltin.throwTypeError();
@@ -456,7 +458,9 @@ export const useBurstReactionAnimationSource = function useBurstReactionAnimatio
   }, items);
   return tmp[0];
 };
-export const useSuperReactionAnimationSourceFromLocalImage = function useSuperReactionAnimationSourceFromLocalImage(animationSource) {
+export const useSuperReactionAnimationSourceFromLocalImage = function useSuperReactionAnimationSourceFromLocalImage(
+  animationSource,
+) {
   animationSource = animationSource.animationSource;
   const localImageSource = animationSource.localImageSource;
   closure_2 = undefined;
@@ -466,7 +470,7 @@ export const useSuperReactionAnimationSourceFromLocalImage = function useSuperRe
   const effect = React.useEffect(() => {
     function _getSource2() {
       let self = this;
-      const tmp = callback(function*() {
+      const tmp = callback(function* () {
         if (c3 === 2) {
           c3 = 3;
           HermesBuiltin.throwTypeError();

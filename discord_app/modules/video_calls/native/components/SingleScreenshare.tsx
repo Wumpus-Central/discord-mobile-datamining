@@ -27,7 +27,7 @@ export default function SingleScreenshare(channel) {
       closure_1_2();
       const participant = channel(closure_1_1[7]).selectParticipant(channel.id, null);
     },
-    containerStyle: null
+    containerStyle: null,
   };
   const tmp = callback();
   const tmp3 = jsx;
@@ -37,4 +37,4 @@ export default function SingleScreenshare(channel) {
   }
   obj[3] = stageStreamContainer;
   return tmp3(channel(10107), obj);
-};
+}

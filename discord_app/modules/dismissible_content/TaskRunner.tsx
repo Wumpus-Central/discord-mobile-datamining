@@ -2,8 +2,7 @@
 import set from "../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("modules/dismissible_content/TaskRunner.tsx");
-class TaskRunner {
-}
+class TaskRunner {}
 const prototype = TaskRunner.prototype;
 prototype["schedule"] = function schedule(arg0, arg1) {
   const self = this;

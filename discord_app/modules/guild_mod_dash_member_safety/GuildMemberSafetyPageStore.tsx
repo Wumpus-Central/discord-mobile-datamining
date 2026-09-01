@@ -11,7 +11,9 @@ import { items } from "GuildMemberSafetyPagination.tsx";
 
 require = arg1;
 let closure_5 = 3 * setDefault.Millis.SECOND;
-let result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyPageStore.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_mod_dash_member_safety/GuildMemberSafetyPageStore.tsx",
+);
 class GuildMemberSafetyPageStore {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -46,7 +48,10 @@ prototype["initialize"] = function initialize() {
     const guildMemberSafetyMembers = new getGuildMemberSecondaryIndexes.GuildMemberSafetyMembers(self.guildId);
     self._members = guildMemberSafetyMembers;
     ({ guildId, _members } = self);
-    const guildMemberSafetyPagination = new items /* items */.GuildMemberSafetyPagination(guildId, _members.values(self.getSearchIndex()));
+    const guildMemberSafetyPagination = new items /* items */.GuildMemberSafetyPagination(
+      guildId,
+      _members.values(self.getSearchIndex()),
+    );
     self._pagination = guildMemberSafetyPagination;
   }
 };
@@ -54,7 +59,7 @@ Object.defineProperty(prototype, "isInitialized", {
   get: function isInitialized() {
     return this._initialized;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["reset"] = function reset() {
   let flag = arg0;
@@ -88,13 +93,14 @@ Object.defineProperty(prototype, "searchChunkSize", {
       num = 0;
       if (self._initialized) {
         const _pagination = self._pagination;
-        num = items /* items */.getSearchChunkLimit(_pagination.getPaginationState());
+        num = items /* items */
+          .getSearchChunkLimit(_pagination.getPaginationState());
         const obj = items;
       }
     }
     return num;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getMember"] = function getMember(id) {
   const self = this;
@@ -136,15 +142,29 @@ prototype["countMembersByIndex"] = function countMembersByIndex(searchIndex) {
   }
   return num;
 };
-prototype["_checkUpdatesForPaginationUpdate"] = function _checkUpdatesForPaginationUpdate(enhanceNewMemberResult, isIncludedInSearchResults2) {
-  let tmp = null != isIncludedInSearchResults2.isIncludedInSearchResults && isIncludedInSearchResults2.isIncludedInSearchResults !== enhanceNewMemberResult.isIncludedInSearchResults;
+prototype["_checkUpdatesForPaginationUpdate"] = function _checkUpdatesForPaginationUpdate(
+  enhanceNewMemberResult,
+  isIncludedInSearchResults2,
+) {
+  let tmp =
+    null != isIncludedInSearchResults2.isIncludedInSearchResults &&
+    isIncludedInSearchResults2.isIncludedInSearchResults !== enhanceNewMemberResult.isIncludedInSearchResults;
   if (!tmp) {
-    tmp = null != isIncludedInSearchResults2.isCurrentGuildMemberByTimestamp && isIncludedInSearchResults2.isCurrentGuildMemberByTimestamp !== enhanceNewMemberResult.isCurrentGuildMemberByTimestamp;
-    const tmp2 = null != isIncludedInSearchResults2.isCurrentGuildMemberByTimestamp && isIncludedInSearchResults2.isCurrentGuildMemberByTimestamp !== enhanceNewMemberResult.isCurrentGuildMemberByTimestamp;
+    tmp =
+      null != isIncludedInSearchResults2.isCurrentGuildMemberByTimestamp &&
+      isIncludedInSearchResults2.isCurrentGuildMemberByTimestamp !==
+        enhanceNewMemberResult.isCurrentGuildMemberByTimestamp;
+    const tmp2 =
+      null != isIncludedInSearchResults2.isCurrentGuildMemberByTimestamp &&
+      isIncludedInSearchResults2.isCurrentGuildMemberByTimestamp !==
+        enhanceNewMemberResult.isCurrentGuildMemberByTimestamp;
   }
   return tmp;
 };
-prototype["_getIsIncludedInSearch"] = function _getIsIncludedInSearch(enhanceNewMemberResult, isIncludedInSearchResults) {
+prototype["_getIsIncludedInSearch"] = function _getIsIncludedInSearch(
+  enhanceNewMemberResult,
+  isIncludedInSearchResults,
+) {
   const self = this;
   if (null == this._search) {
     const items = [false, false];
@@ -207,7 +227,11 @@ prototype["_rawUpdateMember"] = function _rawUpdateMember(id, isIncludedInSearch
         return items1;
       } else {
         const _members3 = self._members;
-        enhanceNewMemberResult = _members3.enhanceNewMember(trueMember, self.getSearchState(), isIncludedInSearchResults);
+        enhanceNewMemberResult = _members3.enhanceNewMember(
+          trueMember,
+          self.getSearchState(),
+          isIncludedInSearchResults,
+        );
         flag4 = true;
       }
     }
@@ -398,13 +422,15 @@ prototype["updateMembersByMemberIds"] = function updateMembersByMemberIds(items)
   self = this;
   if (null != this._members) {
     if (self._initialized) {
-      return self.updateClientMembers(items.reduce((arr, id) => {
-        const trueMember = closure_1_3.getTrueMember(self.guildId, id);
-        if (null != trueMember) {
-          arr.push(trueMember);
-        }
-        return arr;
-      }, []));
+      return self.updateClientMembers(
+        items.reduce((arr, id) => {
+          const trueMember = closure_1_3.getTrueMember(self.guildId, id);
+          if (null != trueMember) {
+            arr.push(trueMember);
+          }
+          return arr;
+        }, []),
+      );
     }
   }
   return false;
@@ -413,9 +439,18 @@ prototype["updateMembersSort"] = function updateMembersSort(selectedSort) {
   const self = this;
   closure_0 = selectedSort;
   return new Promise((arg0) => {
-    const items = [...selectedSort(self[8]).cloneDeep(self.getMembersByIndex(closure_0(self[4]).MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER)[0])];
+    const items = [
+      ...selectedSort(self[8]).cloneDeep(
+        self.getMembersByIndex(closure_0(self[4]).MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER)[0],
+      ),
+    ];
     let obj = selectedSort(self[8]);
-    HermesBuiltin.arraySpread(selectedSort(self[8]).cloneDeep(self.getMembersByIndex(selectedSort(self[4]).MemberSafetySecondaryIndex.NEW_GUILD_MEMBER)[0]), tmp);
+    HermesBuiltin.arraySpread(
+      selectedSort(self[8]).cloneDeep(
+        self.getMembersByIndex(selectedSort(self[4]).MemberSafetySecondaryIndex.NEW_GUILD_MEMBER)[0],
+      ),
+      tmp,
+    );
     const item = items.forEach((joinedAt) => {
       let obj = closure_1_0(closure_1_1[9]);
       _search = _search._search;
@@ -461,13 +496,17 @@ prototype["updateSearchedMembersByMemberIds"] = function updateSearchedMembersBy
   if (null != this._search) {
     if (null != self._members) {
       if (self._initialized) {
-        return self.updateClientMembers(memberIds.reduce((arr, id) => {
-          const trueMember = closure_1_3.getTrueMember(self.guildId, id);
-          if (null != trueMember) {
-            arr.push(trueMember);
-          }
-          return arr;
-        }, []), self._search.requiresUsernameMatch, 0 !== self.lastRefreshTimestamp);
+        return self.updateClientMembers(
+          memberIds.reduce((arr, id) => {
+            const trueMember = closure_1_3.getTrueMember(self.guildId, id);
+            if (null != trueMember) {
+              arr.push(trueMember);
+            }
+            return arr;
+          }, []),
+          self._search.requiresUsernameMatch,
+          0 !== self.lastRefreshTimestamp,
+        );
       }
     }
   }
@@ -507,7 +546,9 @@ prototype["refreshNewMembersAndSearchResults"] = function refreshNewMembersAndSe
         self._scheduleRefresh(NumberResult);
         let obj = apply;
         const _members = self._members;
-        const cloneDeepResult = obj.cloneDeep(_members.values(getGuildMemberSecondaryIndexes.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER));
+        const cloneDeepResult = obj.cloneDeep(
+          _members.values(getGuildMemberSecondaryIndexes.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER),
+        );
         let flag2 = false;
         for (const item10031 of cloneDeepResult) {
           let _members2 = self._members;
@@ -576,7 +617,9 @@ prototype["updateSearchState"] = function updateSearchState(selectedSort) {
         }
         let obj = apply;
         const _members = self._members;
-        const cloneDeepResult = obj.cloneDeep(_members.values(getGuildMemberSecondaryIndexes.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER));
+        const cloneDeepResult = obj.cloneDeep(
+          _members.values(getGuildMemberSecondaryIndexes.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER),
+        );
         let flag2 = BooleanResult !== self._search.hasDefaultQuery;
         for (const item10048 of cloneDeepResult) {
           let tmp11 = item10048;
@@ -689,7 +732,9 @@ prototype["getPaginationState"] = function getPaginationState() {
     }
     return paginationState;
   }
-  paginationState = items /* items */.createDefaultMemberSafetyPaginationState();
+  paginationState =
+    items /* items */
+      .createDefaultMemberSafetyPaginationState();
 };
 prototype["getPaginatedMembers"] = function getPaginatedMembers() {
   const self = this;

@@ -6,11 +6,21 @@ import closure_3 from "../../../stores/GuildStore.tsx";
 import closure_4 from "../../../stores/UserStore.tsx";
 
 const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
-let items = [, , , , ];
-({ CREATOR_MONETIZABLE_PROVISIONAL: arr[0], CREATOR_MONETIZABLE: arr[1], CREATOR_MONETIZABLE_WHITEGLOVE: arr[2], CREATOR_MONETIZABLE_DISABLED: arr[3], CREATOR_MONETIZABLE_RESTRICTED: arr[4] } = ME.GuildFeatures);
-const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/feature_education/OnboardingV2Utils.tsx");
+let items = [, , , ,];
+({
+  CREATOR_MONETIZABLE_PROVISIONAL: arr[0],
+  CREATOR_MONETIZABLE: arr[1],
+  CREATOR_MONETIZABLE_WHITEGLOVE: arr[2],
+  CREATOR_MONETIZABLE_DISABLED: arr[3],
+  CREATOR_MONETIZABLE_RESTRICTED: arr[4],
+} = ME.GuildFeatures);
+const result = set.fileFinishedImporting(
+  "modules/creator_monetization_eligibility/feature_education/OnboardingV2Utils.tsx",
+);
 
-export const useCanSeeCreatorMonetizationOnboardingV2Upsell = function useCanSeeCreatorMonetizationOnboardingV2Upsell(id) {
+export const useCanSeeCreatorMonetizationOnboardingV2Upsell = function useCanSeeCreatorMonetizationOnboardingV2Upsell(
+  id,
+) {
   const _require = id;
   items = [closure_3];
   stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => closure_1_3.getGuild(closure_0));
@@ -18,7 +28,9 @@ export const useCanSeeCreatorMonetizationOnboardingV2Upsell = function useCanSee
   const items1 = [closure_4];
   const stateFromStores1 = _require(stateFromStores[4]).useStateFromStores(items1, () => currentUser.getCurrentUser());
   const obj2 = _require(stateFromStores[4]);
-  const guildRoleSubscriptionSettingsVisibility = _require(stateFromStores[5]).useGuildRoleSubscriptionSettingsVisibility(stateFromStores);
+  const guildRoleSubscriptionSettingsVisibility = _require(
+    stateFromStores[5],
+  ).useGuildRoleSubscriptionSettingsVisibility(stateFromStores);
   if (null == stateFromStores) {
     return false;
   } else {
@@ -44,7 +56,8 @@ export const canSeeCreatorMonetizationOnboardingV2Upsell = function canSeeCreato
       return false;
     } else {
       const guildRoleSubscriptionSettingsVisibility = guild(6107).getGuildRoleSubscriptionSettingsVisibility(guild);
-      let tmp5 = guildRoleSubscriptionSettingsVisibility === guild(6107).GuildRoleSubscriptionSettingsVisibility.VISIBLE;
+      let tmp5 =
+        guildRoleSubscriptionSettingsVisibility === guild(6107).GuildRoleSubscriptionSettingsVisibility.VISIBLE;
       const obj = guild(6107);
       const tmp7 = isGuildOwner(guild, currentUser);
       if (tmp5) {

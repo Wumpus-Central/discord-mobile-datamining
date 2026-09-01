@@ -23,7 +23,14 @@ require = arg1;
 function RowGroup(children) {
   const rows = children.rows;
   let obj = { spacing: 8, children: null };
-  const items = [callback(Text.Text, { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-muted", children: children.title }), ];
+  const items = [
+    callback(Text.Text, {
+      accessibilityRole: "header",
+      variant: "text-sm/semibold",
+      color: "text-muted",
+      children: children.title,
+    }),
+  ];
   obj = {
     hasIcons: true,
     children: rows.map((header) => {
@@ -36,7 +43,7 @@ function RowGroup(children) {
       }
       obj[2] = closure_3(callback(5599).TableRow.Icon, { variant: str, IconComponent });
       return closure_3(callback(5599).TableRow, obj, header);
-    })
+    }),
   };
   items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);
   obj[1] = items;
@@ -56,63 +63,96 @@ export default function FamilyCenterDataConfirmation() {
   const intl4 = getSystemLocale.intl;
   const stringResult2 = intl3.string(messagesProxyDefault["n73g+V"]);
   const intl5 = getSystemLocale.intl;
-  const ageSpecificText = obj.useAgeSpecificText(intl4.string(messagesProxyDefault["5x3taM"]), intl5.string(messagesProxyDefault.WZwGFX));
+  const ageSpecificText = obj.useAgeSpecificText(
+    intl4.string(messagesProxyDefault["5x3taM"]),
+    intl5.string(messagesProxyDefault.WZwGFX),
+  );
   obj1 = useAgeSpecificText;
   const intl6 = getSystemLocale.intl;
   const stringResult3 = intl4.string(messagesProxyDefault["5x3taM"]);
   const intl7 = getSystemLocale.intl;
-  const ageSpecificText1 = obj1.useAgeSpecificText(intl6.string(messagesProxyDefault.FcKkcr), intl7.string(messagesProxyDefault.PQtDFk));
+  const ageSpecificText1 = obj1.useAgeSpecificText(
+    intl6.string(messagesProxyDefault.FcKkcr),
+    intl7.string(messagesProxyDefault.PQtDFk),
+  );
   let obj2 = useAgeSpecificText;
   const intl8 = getSystemLocale.intl;
   const stringResult4 = intl6.string(messagesProxyDefault.FcKkcr);
   const intl9 = getSystemLocale.intl;
-  const ageSpecificText2 = obj2.useAgeSpecificText(intl8.string(messagesProxyDefault["dES/2r"]), intl9.string(messagesProxyDefault.ep6mdN));
+  const ageSpecificText2 = obj2.useAgeSpecificText(
+    intl8.string(messagesProxyDefault["dES/2r"]),
+    intl9.string(messagesProxyDefault.ep6mdN),
+  );
   let obj3 = useAgeSpecificText;
   const intl10 = getSystemLocale.intl;
   const stringResult5 = intl8.string(messagesProxyDefault["dES/2r"]);
   const intl11 = getSystemLocale.intl;
-  const ageSpecificText3 = obj3.useAgeSpecificText(intl10.string(messagesProxyDefault.GWPcQg), intl11.string(messagesProxyDefault.yFnKIg));
+  const ageSpecificText3 = obj3.useAgeSpecificText(
+    intl10.string(messagesProxyDefault.GWPcQg),
+    intl11.string(messagesProxyDefault.yFnKIg),
+  );
   let obj4 = useAgeSpecificText;
   const intl12 = getSystemLocale.intl;
   const stringResult6 = intl10.string(messagesProxyDefault.GWPcQg);
   const intl13 = getSystemLocale.intl;
-  const ageSpecificText4 = obj4.useAgeSpecificText(intl12.string(messagesProxyDefault["30+sih"]), intl13.string(messagesProxyDefault["0cuLn1"]));
+  const ageSpecificText4 = obj4.useAgeSpecificText(
+    intl12.string(messagesProxyDefault["30+sih"]),
+    intl13.string(messagesProxyDefault["0cuLn1"]),
+  );
   let obj5 = useAgeSpecificText;
   const intl14 = getSystemLocale.intl;
   const stringResult7 = intl12.string(messagesProxyDefault["30+sih"]);
   const intl15 = getSystemLocale.intl;
-  const ageSpecificText5 = obj5.useAgeSpecificText(intl14.string(messagesProxyDefault.tHTyRh), intl15.string(messagesProxyDefault.TeNlMb));
+  const ageSpecificText5 = obj5.useAgeSpecificText(
+    intl14.string(messagesProxyDefault.tHTyRh),
+    intl15.string(messagesProxyDefault.TeNlMb),
+  );
   let obj6 = useAgeSpecificText;
   const intl16 = getSystemLocale.intl;
   const stringResult8 = intl14.string(messagesProxyDefault.tHTyRh);
   const intl17 = getSystemLocale.intl;
-  const ageSpecificText6 = obj6.useAgeSpecificText(intl16.string(messagesProxyDefault.PfveQ6), intl17.string(messagesProxyDefault["f7ofm/"]));
+  const ageSpecificText6 = obj6.useAgeSpecificText(
+    intl16.string(messagesProxyDefault.PfveQ6),
+    intl17.string(messagesProxyDefault["f7ofm/"]),
+  );
   let obj7 = useAgeSpecificText;
   const intl18 = getSystemLocale.intl;
   const stringResult9 = intl16.string(messagesProxyDefault.PfveQ6);
   const intl19 = getSystemLocale.intl;
-  const ageSpecificText7 = obj7.useAgeSpecificText(intl18.string(messagesProxyDefault.MKeCj3), intl19.string(messagesProxyDefault.HdcGGl));
+  const ageSpecificText7 = obj7.useAgeSpecificText(
+    intl18.string(messagesProxyDefault.MKeCj3),
+    intl19.string(messagesProxyDefault.HdcGGl),
+  );
   let obj8 = useAgeSpecificText;
   const intl20 = getSystemLocale.intl;
   const stringResult10 = intl18.string(messagesProxyDefault.MKeCj3);
   const intl21 = getSystemLocale.intl;
-  const ageSpecificText8 = obj8.useAgeSpecificText(intl20.string(messagesProxyDefault.wZejZr), intl21.string(messagesProxyDefault.tdgcf1));
+  const ageSpecificText8 = obj8.useAgeSpecificText(
+    intl20.string(messagesProxyDefault.wZejZr),
+    intl21.string(messagesProxyDefault.tdgcf1),
+  );
   let obj9 = useAgeSpecificText;
   const intl22 = getSystemLocale.intl;
   const stringResult11 = intl20.string(messagesProxyDefault.wZejZr);
   const intl23 = getSystemLocale.intl;
-  const ageSpecificText9 = obj9.useAgeSpecificText(intl22.string(messagesProxyDefault.ASf7XN), intl23.string(messagesProxyDefault["82y87X"]));
+  const ageSpecificText9 = obj9.useAgeSpecificText(
+    intl22.string(messagesProxyDefault.ASf7XN),
+    intl23.string(messagesProxyDefault["82y87X"]),
+  );
   let obj10 = useAgeSpecificText;
   const intl24 = getSystemLocale.intl;
   const stringResult12 = intl22.string(messagesProxyDefault.ASf7XN);
   const intl25 = getSystemLocale.intl;
   obj = { header: null, description: null, IconComponent: null };
-  const ageSpecificText10 = obj10.useAgeSpecificText(intl24.string(messagesProxyDefault["0QDVFN"]), intl25.string(messagesProxyDefault["1xBHHV"]));
+  const ageSpecificText10 = obj10.useAgeSpecificText(
+    intl24.string(messagesProxyDefault["0QDVFN"]),
+    intl25.string(messagesProxyDefault["1xBHHV"]),
+  );
   const intl26 = getSystemLocale.intl;
   obj[0] = intl26.string(messagesProxyDefault["/zMYZX"]);
   obj[1] = ageSpecificText;
   obj[2] = UserPlusIcon.UserPlusIcon;
-  const items = [obj, , , , , , ];
+  const items = [obj, , , , , ,];
   obj = { header: null, description: null, IconComponent: null };
   const intl27 = getSystemLocale.intl;
   obj[0] = intl27.string(messagesProxyDefault["44NEx6"]);
@@ -152,7 +192,7 @@ export default function FamilyCenterDataConfirmation() {
   obj6[0] = intl34.string(messagesProxyDefault.kyT6pZ);
   obj6[1] = ageSpecificText6;
   obj6[2] = ClockIcon.ClockIcon;
-  const items1 = [obj6, , ];
+  const items1 = [obj6, ,];
   obj7 = { header: null, description: null, IconComponent: null };
   const intl35 = getSystemLocale.intl;
   obj7[0] = intl35.string(messagesProxyDefault["52ld7c"]);
@@ -166,12 +206,17 @@ export default function FamilyCenterDataConfirmation() {
   obj8[2] = SettingsIcon.SettingsIcon;
   items1[2] = obj8;
   obj9 = { spacing: 24, children: null };
-  const items2 = [callback(RowGroup, { title: stringResult, rows: items }), callback(RowGroup, { title: stringResult1, rows: items1 }), ];
+  const items2 = [
+    callback(RowGroup, { title: stringResult, rows: items }),
+    callback(RowGroup, { title: stringResult1, rows: items1 }),
+  ];
   obj10 = { title: stringResult2, rows: null };
   const stringResult13 = intl24.string(messagesProxyDefault["0QDVFN"]);
-  const items3 = [{ header: ageSpecificText9, description: ageSpecificText10, IconComponent: XSmallIcon.XSmallIcon, negative: true }];
+  const items3 = [
+    { header: ageSpecificText9, description: ageSpecificText10, IconComponent: XSmallIcon.XSmallIcon, negative: true },
+  ];
   obj10[1] = items3;
   items2[2] = callback(RowGroup, obj10);
   obj9[1] = items2;
   return callback2(Stack.Stack, obj9);
-};
+}

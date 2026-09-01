@@ -20,13 +20,13 @@ createToggle = {
       const harvestStatus = callback(14464).fetchHarvestStatus();
       return true;
     }, []);
-  }
+  },
 };
 createToggle = {
   route: require("ME").UserSettingsSections.DATA_AND_PRIVACY,
   getComponent() {
     return DataAndPrivacySettings /* DataAndPrivacySettings */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DataAndPrivacySetting.tsx");

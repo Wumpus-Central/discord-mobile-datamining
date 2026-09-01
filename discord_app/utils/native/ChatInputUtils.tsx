@@ -126,7 +126,7 @@ export function createInputRefTracker(id, screenIndex) {
           closure_1_3.delete(tmp2);
         }
       }
-    }
+    },
   };
   return obj;
 }

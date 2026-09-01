@@ -21,6 +21,6 @@ export const CollectiblesAnalyticsProvider = function CollectiblesAnalyticsProvi
       const merged1 = Object.assign(newValue);
       return {};
     }, items),
-    children: children.children
+    children: children.children,
   });
 };

@@ -11,7 +11,10 @@ export default function GuildPicker(isGuildIncluded) {
   const guildId = isGuildIncluded.guildId;
   const onChange = isGuildIncluded.onChange;
   dependencyMap = undefined;
-  ({ options: c2, selectedGuild } = onChange(13634)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId }));
+  ({ options: c2, selectedGuild } = onChange(13634)({
+    isGuildIncluded: isGuildIncluded.isGuildIncluded,
+    selectedGuildId: guildId,
+  }));
   let name;
   const tmp2 = onChange(13634)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
   const tmp3 = jsx;
@@ -39,9 +42,9 @@ export default function GuildPicker(isGuildIncluded) {
       obj[3] = guildId;
       obj.openLazy(guildId(_undefined[6])(_undefined[5], _undefined.paths), closure_1_4, obj);
     },
-    placeholder: null
+    placeholder: null,
   };
   let intl = guildId(1236).intl;
   obj[2] = intl.string(guildId(1236).t.etZ9tX);
   return tmp3(onChange(13635), obj);
-};
+}

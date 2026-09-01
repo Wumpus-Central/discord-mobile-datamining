@@ -27,10 +27,10 @@ function ProfilePreviewWrapper(children) {
       }
     },
     style: tmp.collectiblePreview,
-    children: null
+    children: null,
   };
   obj = { style: tmp.profilePreviewContainer, children: null };
-  const items = [children.children, ];
+  const items = [children.children];
   obj = { style: tmp.profilePreviewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items1 = ["" + tmp.profilePreviewGradient.color + "00", tmp.profilePreviewGradient.color];
   obj[3] = items1;
@@ -69,17 +69,25 @@ function AvatarDecorationPreview(product) {
       }
     },
     style: callback3().collectiblePreview,
-    children: callback(AvatarDecorationProductPreviewDefault, { product: product.product })
+    children: callback(AvatarDecorationProductPreviewDefault, { product: product.product }),
   });
 }
 function NameplatePreview(product) {
-  return callback(closure_4, { style: callback3().collectiblePreview, children: callback(NameplateUserDefault, { product: product.product }) });
+  return callback(closure_4, {
+    style: callback3().collectiblePreview,
+    children: callback(NameplateUserDefault, { product: product.product }),
+  });
 }
 noopAll;
 ({ Pressable: c3, View: c4, StyleSheet } = get_ActivityIndicator);
 ({ EXTERNAL_PRODUCT_SKU_IDS: c5, ShopCtaEnum: closure_6 } = items);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { collectiblePreview: null, profilePreviewContainer: null, profilePreview: null, profilePreviewGradient: null };
+createCacheKey = {
+  collectiblePreview: null,
+  profilePreviewContainer: null,
+  profilePreview: null,
+  profilePreviewGradient: null,
+};
 createCacheKey = { marginTop: ThemesDefault.space.PX_12, position: "relative", height: 280 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "relative", flex: 1, alignItems: "center", overflow: "hidden" };

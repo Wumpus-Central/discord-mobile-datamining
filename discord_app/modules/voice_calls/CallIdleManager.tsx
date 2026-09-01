@@ -34,7 +34,10 @@ function disconnect() {
     const currentClientVoiceChannelId1 = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null);
     if (null != currentClientVoiceChannelId1) {
       const intl = getSystemLocale.intl;
-      trackInviteDefault.sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(getSystemLocale.t.XYof5G, { number: 3 }));
+      trackInviteDefault.sendBotMessage(
+        currentClientVoiceChannelId1,
+        intl.formatToPlainString(getSystemLocale.t.XYof5G, { number: 3 }),
+      );
       const obj3 = trackInviteDefault;
       const voiceChannel = _modDef5355.selectVoiceChannel(null);
       const obj4 = _modDef5355;
@@ -104,11 +107,14 @@ let prototype = function CallIdleManager() {
       idleTimeout.stop();
     }
   };
-  applyArgumentsResult.actions = { VOICE_STATE_UPDATES: applyArgumentsResult.handleVoiceStateUpdates, CONNECTION_CLOSED: applyArgumentsResult.handleConnectionClosed, EMBEDDED_ACTIVITY_CLOSE: applyArgumentsResult.handleEmbeddedActivityDisconnect };
+  applyArgumentsResult.actions = {
+    VOICE_STATE_UPDATES: applyArgumentsResult.handleVoiceStateUpdates,
+    CONNECTION_CLOSED: applyArgumentsResult.handleConnectionClosed,
+    EMBEDDED_ACTIVITY_CLOSE: applyArgumentsResult.handleEmbeddedActivityDisconnect,
+  };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype = new prototype();
 const result = require("set").fileFinishedImporting("modules/voice_calls/CallIdleManager.tsx");
 

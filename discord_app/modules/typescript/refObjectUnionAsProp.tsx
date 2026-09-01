@@ -5,4 +5,4 @@ const result = set.fileFinishedImporting("modules/typescript/refObjectUnionAsPro
 
 export default function refObjectUnionAsProp(arg0) {
   return arg0;
-};
+}

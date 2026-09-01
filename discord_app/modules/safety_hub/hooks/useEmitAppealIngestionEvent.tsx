@@ -10,7 +10,9 @@ const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/us
 
 export const useEmitAppealIngestionEvent = function useEmitAppealIngestionEvent() {
   let items = [closure_4];
-  stateFromStores = stateFromStores(safetyHubAccountStanding[4]).useStateFromStores(items, () => store.getAppealClassificationId());
+  stateFromStores = stateFromStores(safetyHubAccountStanding[4]).useStateFromStores(items, () =>
+    store.getAppealClassificationId(),
+  );
   let obj = stateFromStores(safetyHubAccountStanding[4]);
   const tmp3 = closure_4;
   let tmp5 = stateFromStores;
@@ -26,7 +28,14 @@ export const useEmitAppealIngestionEvent = function useEmitAppealIngestionEvent(
   const items2 = [safetyHubAccountStanding.state, stateFromStores, safetyHubClassification, stateFromStores1];
   return stateFromStores1.useCallback((action) => {
     let obj = safetyHubClassification(safetyHubAccountStanding[7]);
-    obj = { action, account_standing: safetyHubAccountStanding.state, classification_ids: null, source: null, is_dsa_eligible: null, violation_type: null };
+    obj = {
+      action,
+      account_standing: safetyHubAccountStanding.state,
+      classification_ids: null,
+      source: null,
+      is_dsa_eligible: null,
+      violation_type: null,
+    };
     let tmp2 = null;
     if (null != stateFromStores) {
       const _Number = Number;

@@ -15,7 +15,14 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
   ({ uploaderFile, colors } = useAttachmentUploadPreview);
   if (null != uploaderFile) {
     if (useAttachmentUploadPreview.useAttachmentUploadPreview) {
-      let obj = { type: null, messageSendError: null, failureState: null, disableBackgroundColor: true, bodyTextColor: null, iconURL: null };
+      let obj = {
+        type: null,
+        messageSendError: null,
+        failureState: null,
+        disableBackgroundColor: true,
+        bodyTextColor: null,
+        iconURL: null,
+      };
       obj[0] = MessageEmbedTypes.TEXT;
       const intl3 = getSystemLocale.intl;
       obj[1] = intl3.string(getSystemLocale.t.lBLP4u);
@@ -51,8 +58,15 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
     obj[4] = colors.failedMessageBodyTextColor;
     return obj;
   }
-};
+}
 export const createAutomodBlockedMessageEmbed = function createAutomodBlockedMessageEmbed(errorMessage) {
-  const obj = { type: MessageEmbedTypes.TEXT, messageSendError: errorMessage.errorMessage, failureState: MessageFailureState.AUTO_MODERATION_BLOCKED_MESSAGE, disableBackgroundColor: true, bodyTextColor: errorMessage.colors.automodBlockedBodyTextColor, iconURL: frozen.getAssetUriForEmbed(registerAssetDefault) };
+  const obj = {
+    type: MessageEmbedTypes.TEXT,
+    messageSendError: errorMessage.errorMessage,
+    failureState: MessageFailureState.AUTO_MODERATION_BLOCKED_MESSAGE,
+    disableBackgroundColor: true,
+    bodyTextColor: errorMessage.colors.automodBlockedBodyTextColor,
+    iconURL: frozen.getAssetUriForEmbed(registerAssetDefault),
+  };
   return obj;
 };

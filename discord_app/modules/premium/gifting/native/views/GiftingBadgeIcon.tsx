@@ -11,4 +11,4 @@ export default function GiftingBadgeIcon(size) {
   const source = { uri: size.icon };
   const style = [{ width: size, height: size }, size.style];
   return <Image source={source} style={style} />;
-};
+}

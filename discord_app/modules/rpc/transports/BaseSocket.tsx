@@ -35,7 +35,7 @@ Object.defineProperty(prototype, "transport", {
   get: function transport(arg0) {
     return this.source.type;
   },
-  set: undefined
+  set: undefined,
 });
 
 export default BaseSocket;

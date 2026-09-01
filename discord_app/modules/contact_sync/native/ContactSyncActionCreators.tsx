@@ -10,7 +10,7 @@ function _updateDiscoverability() {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (constants2 === 2) {
         constants2 = 3;
         HermesBuiltin.throwTypeError();
@@ -80,7 +80,12 @@ function _updateDiscoverability() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            const obj3 = { has_name: null, discoverable_phone: null, discoverable_email: null, contact_sync_enabled: null };
+            const obj3 = {
+              has_name: null,
+              discoverable_phone: null,
+              discoverable_email: null,
+              contact_sync_enabled: null,
+            };
             obj3[0] = typeof name === "string";
             callback2 = phone;
             if (phone == null) {
@@ -122,7 +127,7 @@ closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
-  return (function*(arg0) {
+  return (function* (arg0) {
     if (c4 === 2) {
       c4 = 3;
       HermesBuiltin.throwTypeError();
@@ -198,7 +203,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
   closure_1 = arg1;
   c4 = 0;
   c5 = 0;
-  return (function*(arg0, arg1) {
+  return (function* (arg0, arg1) {
     if (constants === 2) {
       constants = 3;
       HermesBuiltin.throwTypeError();
@@ -349,7 +354,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
 const result = require("set").fileFinishedImporting("modules/contact_sync/native/ContactSyncActionCreators.tsx");
 
 export default {
-  updateName: function() {
+  updateName: function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -369,7 +374,7 @@ export default {
     }
     return applyArgumentsResult;
   },
-  updateContactSyncEnabled: function() {
+  updateContactSyncEnabled: function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -378,5 +383,5 @@ export default {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  }
+  },
 };

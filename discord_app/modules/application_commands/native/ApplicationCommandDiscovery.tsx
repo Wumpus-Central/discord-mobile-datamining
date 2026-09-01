@@ -19,11 +19,18 @@ require = arg1;
 ({ BuiltInSectionId: closure_8, DISCOVERY_COMMANDS_QUERY_LIMIT: c9 } = TRUE_OPTION_NAME);
 ({ AnalyticEvents: closure_12, SectionListElementType: map1 } = ME);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-createCacheKey = { discoveryWrapper: { flex: 1 }, noCommandsImage: { height: 50, width: 50, marginBottom: 16 }, noCommandsContainer: { padding: 0, height: 100 }, commandsList: null };
+createCacheKey = {
+  discoveryWrapper: { flex: 1 },
+  noCommandsImage: { height: 50, width: 50, marginBottom: 16 },
+  noCommandsContainer: { padding: 0, height: 100 },
+  commandsList: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
 createCacheKey[3] = createCacheKey;
 let closure_17 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandDiscovery.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/application_commands/native/ApplicationCommandDiscovery.tsx",
+);
 
 export default function ApplicationCommandDiscovery(channel) {
   ({ onPressSlashItem: require, onHeightChange } = channel);
@@ -106,7 +113,10 @@ export default function ApplicationCommandDiscovery(channel) {
           if (0 === data.data.length) {
             let sum = callback(closure_1_3[8]).APPLICATION_SECTION_HEADER_HEIGHT + 160;
           } else {
-            sum = arg0 + (callback(closure_1_3[8]).APPLICATION_SECTION_HEADER_HEIGHT + (callback + closure_1_10) * data.data.length);
+            sum =
+              arg0 +
+              (callback(closure_1_3[8]).APPLICATION_SECTION_HEADER_HEIGHT +
+                (callback + closure_1_10) * data.data.length);
           }
           return sum;
         }, 0);
@@ -167,38 +177,42 @@ export default function ApplicationCommandDiscovery(channel) {
     return items;
   }, items4);
   const items5 = [memo];
-  closure_19 = obj1.useMemo(() => onHeightChange(12).throttle((arg0) => {
-    let num = 0;
-    if (0 < closure_18.length) {
-      let num2 = 0;
-      let num3 = 0;
-      if (0 === tmp[0]) {
-        const sum = num3 + 1;
-        const sum1 = num2 + 1;
-        num = sum;
-        while (sum1 < closure_18.length) {
-          num2 = sum1;
-          num3 = sum;
-          if (0 === tmp5[sum1]) {
-            continue;
-          } else {
-            num2 = sum1;
-            num3 = sum;
+  closure_19 = obj1.useMemo(
+    () =>
+      onHeightChange(12).throttle((arg0) => {
+        let num = 0;
+        if (0 < closure_18.length) {
+          let num2 = 0;
+          let num3 = 0;
+          if (0 === tmp[0]) {
+            const sum = num3 + 1;
+            const sum1 = num2 + 1;
             num = sum;
-            if (arg0 < tmp5[sum1]) {
-              break;
+            while (sum1 < closure_18.length) {
+              num2 = sum1;
+              num3 = sum;
+              if (0 === tmp5[sum1]) {
+                continue;
+              } else {
+                num2 = sum1;
+                num3 = sum;
+                num = sum;
+                if (arg0 < tmp5[sum1]) {
+                  break;
+                }
+              }
+              continue;
             }
+          } else {
+            num2 = 0;
+            num3 = 0;
+            num = 0;
           }
-          continue;
         }
-      } else {
-        num2 = 0;
-        num3 = 0;
-        num = 0;
-      }
-    }
-    callback(num);
-  }, 100), items5);
+        callback(num);
+      }, 100),
+    items5,
+  );
   const items6 = [bound];
   const items7 = [channel.guild_id, callback, sectionDescriptors, first];
   const callback4 = obj1.useCallback((arg0, arg1) => {
@@ -341,10 +355,19 @@ export default function ApplicationCommandDiscovery(channel) {
     renderItem: null,
     renderSectionHeader: null,
     getItemLayout: null,
-    stickySectionHeadersEnabled: true
+    stickySectionHeadersEnabled: true,
   };
   let obj4 = null;
-  const memo1 = obj1.useMemo(() => filteredSectionId(onHeightChange(11967), { onPressSection: callback, sections: sectionDescriptors, selectedIndex: first, guildId: channel.guild_id }), items7);
+  const memo1 = obj1.useMemo(
+    () =>
+      filteredSectionId(onHeightChange(11967), {
+        onPressSection: callback,
+        sections: sectionDescriptors,
+        selectedIndex: first,
+        guildId: channel.guild_id,
+      }),
+    items7,
+  );
   if (discovery.loading) {
     obj4 = { minIndexForVisible: 1 };
   }
@@ -375,7 +398,7 @@ export default function ApplicationCommandDiscovery(channel) {
   obj3[11] = function renderSectionHeader(section) {
     section = section.section;
     let obj = { section: section.section, guildId: channel.guild_id };
-    const children = [filteredSectionId(onHeightChange(11965), obj, section.section.id), ];
+    const children = [filteredSectionId(onHeightChange(11965), obj, section.section.id)];
     let tmp3Result = 0 === section.data.length;
     if (tmp3Result) {
       obj = { lightSource: null, darkSource: null, body: null, containerStyle: null, imageStyle: null };
@@ -395,4 +418,4 @@ export default function ApplicationCommandDiscovery(channel) {
   const items9 = [filteredSectionId(closure_7, obj3), memo1];
   obj2[1] = items9;
   return filterSection(first, obj2);
-};
+}

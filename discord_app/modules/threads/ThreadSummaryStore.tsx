@@ -27,7 +27,7 @@ const threadSummaryStore = new ThreadSummaryStore(dispatcherDefault, {
     c0 = true;
   },
   SUMMARIZE_THREAD_SUCCESS: handleSummarizeThreadFinish,
-  SUMMARIZE_THREAD_FAILURE: handleSummarizeThreadFinish
+  SUMMARIZE_THREAD_FAILURE: handleSummarizeThreadFinish,
 });
 const result = require("set").fileFinishedImporting("modules/threads/ThreadSummaryStore.tsx");
 

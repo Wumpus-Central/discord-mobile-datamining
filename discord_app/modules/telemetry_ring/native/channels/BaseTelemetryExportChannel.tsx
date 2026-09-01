@@ -70,7 +70,7 @@ prototype["stop"] = function stop() {
 };
 prototype["flushNow"] = function flushNow() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c0 === 2) {
       c0 = 3;
       HermesBuiltin.throwTypeError();
@@ -151,12 +151,15 @@ prototype["_kick"] = function _kick(arg0) {
   if (this.shouldRun()) {
     if (null == self._inflight) {
       const _drainOnceResult = self._drainOnce(arg0);
-      self._inflight = self._drainOnce(arg0).catch((arg0) => {
-        const _logger = self._logger;
-        _logger.warn("TelemetryRing export failed", arg0);
-      }).finally(() => {
-        self._inflight = null;
-      });
+      self._inflight = self
+        ._drainOnce(arg0)
+        .catch((arg0) => {
+          const _logger = self._logger;
+          _logger.warn("TelemetryRing export failed", arg0);
+        })
+        .finally(() => {
+          self._inflight = null;
+        });
       const catchPromise = self._drainOnce(arg0).catch((arg0) => {
         const _logger = self._logger;
         _logger.warn("TelemetryRing export failed", arg0);
@@ -171,7 +174,7 @@ prototype["_kick"] = function _kick(arg0) {
 prototype["_drainOnce"] = function _drainOnce(arg0) {
   closure_0 = arg0;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     closure_0 = tmp2;
     const budget = closure_1_1.getBudget(closure_1_0.mode);
     const _readAckedEndOffsetResult = closure_1_1._readAckedEndOffset();
@@ -228,7 +231,7 @@ prototype["_collectPages"] = function _collectPages(budget, arg1) {
   closure_0 = budget;
   closure_1 = arg1;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -308,7 +311,7 @@ prototype["_collectPages"] = function _collectPages(budget, arg1) {
 prototype["_exportPages"] = function _exportPages(closure_0, flush) {
   closure_1 = flush;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -403,6 +406,8 @@ prototype["_exportPages"] = function _exportPages(closure_0, flush) {
     }
   })();
 };
-let result = require("set").fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryExportChannel.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/telemetry_ring/native/channels/BaseTelemetryExportChannel.tsx",
+);
 
 export default BaseTelemetryExportChannel;

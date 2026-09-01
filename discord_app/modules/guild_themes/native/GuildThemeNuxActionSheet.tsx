@@ -58,21 +58,25 @@ export default function GuildThemeNuxActionSheet(guildId) {
   const items1 = [callback1];
   const items2 = [guildId];
   const items3 = [guildId, stateFromStores];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => {
-    const guildThemeSnapshot = callback1.getGuildThemeSnapshot(guildId);
-    let tmp2 = null;
-    if (null != guildThemeSnapshot) {
-      tmp2 = null;
-      if (guildThemeSnapshot.enabled) {
-        let themeSettings = guildThemeSnapshot.themeSettings;
-        if (themeSettings == null) {
-          themeSettings = null;
+  const stateFromStores1 = obj1.useStateFromStores(
+    items1,
+    () => {
+      const guildThemeSnapshot = callback1.getGuildThemeSnapshot(guildId);
+      let tmp2 = null;
+      if (null != guildThemeSnapshot) {
+        tmp2 = null;
+        if (guildThemeSnapshot.enabled) {
+          let themeSettings = guildThemeSnapshot.themeSettings;
+          if (themeSettings == null) {
+            themeSettings = null;
+          }
+          tmp2 = themeSettings;
         }
-        tmp2 = themeSettings;
       }
-    }
-    return tmp2;
-  }, items2);
+      return tmp2;
+    },
+    items2,
+  );
   const effect = React.useEffect(() => {
     if (stateFromStores !== guildId) {
       markAsDismissed(_undefined[14]).hideActionSheet(closure_1_12);
@@ -92,86 +96,89 @@ export default function GuildThemeNuxActionSheet(guildId) {
   }, items4);
   const items5 = [guildId, tmp10, markAsDismissed, stateFromStores];
   const items6 = [callback1];
-  callback2 = React.useCallback(callback(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  callback2 = React.useCallback(
+    callback(function* () {
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === v02) {
-          if (arg0 === 1) {
+        try {
+          c5 = 2;
+          if (0 === v02) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const callback = tmp3;
+              closure_0 = tmp7;
+              if (closure_1_7 === closure_1_0) {
+                v02(true);
+                v0(null);
+                v0 = 1;
+                let obj3 = closure_1_0(closure_1_2[11]);
+                v02 = 2;
+                c5 = 1;
+                obj1 = { value: null, done: false };
+                obj1[0] = obj3.saveGuildThemeNuxPreference(tmp49, closure_1_6);
+                return obj1;
+              } else {
+                c5 = 3;
+              }
+            }
+          } else if (1 === tmp7) {
+            v0 = 0;
+            closure_0 = closure_2;
+            closure_1_13.error("Failed to save guild theme NUX preference", closure_0);
+            const intl = closure_1_0(closure_1_2[15]).intl;
+            v0(intl.string(closure_1_0(closure_1_2[15]).t.fEptJP));
+            v02(false);
+            c5 = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = undefined;
+            return obj2;
+          } else if (arg0 === 1) {
             c5 = 3;
             throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const callback = tmp3;
-            closure_0 = tmp7;
-            if (closure_1_7 === closure_1_0) {
-              v02(true);
-              v0(null);
-              v0 = 1;
-              let obj3 = closure_1_0(closure_1_2[11]);
-              v02 = 2;
-              c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj3.saveGuildThemeNuxPreference(tmp49, closure_1_6);
-              return obj1;
-            } else {
-              c5 = 3;
-            }
+          } else if (arg0 !== 2) {
+            v0 = 0;
+            c5.current = true;
+            callback(closure_1_9.TAKE_ACTION);
+            obj = closure_1_1(closure_1_2[14]);
+            obj.hideActionSheet(closure_1_12);
           }
-        } else if (1 === tmp7) {
           v0 = 0;
-          closure_0 = closure_2;
-          closure_1_13.error("Failed to save guild theme NUX preference", closure_0);
-          const intl = closure_1_0(closure_1_2[15]).intl;
-          v0(intl.string(closure_1_0(closure_1_2[15]).t.fEptJP));
-          v02(false);
           c5 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = undefined;
-          return obj2;
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          v0 = 0;
-          c5.current = true;
-          callback(closure_1_9.TAKE_ACTION);
-          obj = closure_1_1(closure_1_2[14]);
-          obj.hideActionSheet(closure_1_12);
-        }
-        v0 = 0;
-        c5 = 3;
-        obj3 = { value: null, done: true };
-        obj3[0] = arg1;
-        return obj3;
-      } catch (tmp39) {
-        closure_2 = tmp39;
-        if (tmp4 === v0) {
-          c5 = tmp2;
-          throw tmp39;
-        } else {
-          v02 = tmp;
+          obj3 = { value: null, done: true };
+          obj3[0] = arg1;
+          return obj3;
+        } catch (tmp39) {
+          closure_2 = tmp39;
+          if (tmp4 === v0) {
+            c5 = tmp2;
+            throw tmp39;
+          } else {
+            v02 = tmp;
+          }
         }
       }
-    }
-  }), items5);
+    }),
+    items5,
+  );
   const callback3 = React.useCallback(() => {
     callback1(closure_1_9.USER_DISMISS);
   }, items6);
@@ -188,8 +195,14 @@ export default function GuildThemeNuxActionSheet(guildId) {
   obj[1] = intl2.string(guildId(1236).t.cpT0Cq);
   obj[2] = callback3;
   obj[3] = tmp.container;
-  const items7 = [callback3(markAsDismissed(15752), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
-  obj = { accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
+  const items7 = [callback3(markAsDismissed(15752), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , ,];
+  obj = {
+    accessibilityRole: "header",
+    variant: "heading-xl/semibold",
+    color: "mobile-text-heading-primary",
+    style: tmp.title,
+    children: null,
+  };
   const intl3 = tmp2(1236).intl;
   obj[4] = intl3.string(guildId(1236).t.Q9zFy9);
   items7[1] = callback3(guildId(4474).Text, obj);
@@ -203,7 +216,7 @@ export default function GuildThemeNuxActionSheet(guildId) {
   const intl5 = tmp2(1236).intl;
   obj4[0] = intl5.string(guildId(1236).t.aN3RNQ);
   obj4[1] = guildId(4409).GuildThemeSourcePreference.GUILD;
-  const items8 = [callback3(guildId(7693).TableRadioRow, obj4), ];
+  const items8 = [callback3(guildId(7693).TableRadioRow, obj4)];
   const obj5 = { label: null, value: null };
   const intl6 = tmp2(1236).intl;
   obj5[0] = intl6.string(guildId(1236).t.js8y7t);
@@ -251,5 +264,5 @@ export default function GuildThemeNuxActionSheet(guildId) {
   items7[6] = callback3(closure_6, obj10);
   obj[4] = items7;
   return callback4(guildId(5622).BottomSheet, obj);
-};
+}
 export const GUILD_THEME_NUX_ACTION_SHEET_KEY = "GuildThemeNuxActionSheet";

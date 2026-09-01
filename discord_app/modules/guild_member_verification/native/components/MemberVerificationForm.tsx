@@ -11,8 +11,14 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 }, submitButton: { marginTop: 12, marginBottom: 12 }, error: { alignSelf: "center", paddingVertical: 16, fontSize: 16 } });
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationForm.tsx");
+let closure_12 = createCacheKey.createStyles({
+  container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 },
+  submitButton: { marginTop: 12, marginBottom: 12 },
+  error: { alignSelf: "center", paddingVertical: 16, fontSize: 16 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/MemberVerificationForm.tsx",
+);
 
 export default function MemberVerificationForm(guild) {
   guild = guild.guild;
@@ -28,7 +34,7 @@ export default function MemberVerificationForm(guild) {
   let memo1;
   function _handleSubmit() {
     const self = this;
-    const tmp = memo(function*() {
+    const tmp = memo(function* () {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -238,7 +244,9 @@ export default function MemberVerificationForm(guild) {
     if (stateFromStores != null) {
       const formFields = stateFromStores.formFields;
       if (formFields != null) {
-        someResult = formFields.some((field_type) => field_type.field_type !== callback(table[13]).VerificationFormFieldTypes.TERMS);
+        someResult = formFields.some(
+          (field_type) => field_type.field_type !== callback(table[13]).VerificationFormFieldTypes.TERMS,
+        );
       }
     }
     return someResult;
@@ -338,7 +346,7 @@ export default function MemberVerificationForm(guild) {
         }
       };
       obj[3] = userVerificationState;
-      const items8 = [memo1(tmp5(tmp3[17]), obj), , ];
+      const items8 = [memo1(tmp5(tmp3[17]), obj), ,];
       let tmp32Result = null;
       if (null != tmp26) {
         obj1 = { style: null, children: null };
@@ -378,4 +386,4 @@ export default function MemberVerificationForm(guild) {
   if (formFields2 == null) {
     formFields2 = [];
   }
-};
+}

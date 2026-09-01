@@ -17,7 +17,19 @@ export default function trackActivityProblem(arg0) {
     rating = null;
   }
   let obj = expandEventPropertiesDefault;
-  obj = { reason: problem, guild_id: null, channel_id: null, application_id: null, application_name: null, location: null, rating: null, feedback: null, embedded_activity_location_kind: null, rtc_connection_id: null, media_session_id: null };
+  obj = {
+    reason: problem,
+    guild_id: null,
+    channel_id: null,
+    application_id: null,
+    application_name: null,
+    location: null,
+    rating: null,
+    feedback: null,
+    embedded_activity_location_kind: null,
+    rtc_connection_id: null,
+    media_session_id: null,
+  };
   let guildId;
   if (channel != null) {
     guildId = channel.getGuildId();
@@ -44,4 +56,4 @@ export default function trackActivityProblem(arg0) {
   obj[8] = embeddedActivityLocation.kind;
   ({ rtc_connection_id: obj2[9], media_session_id: obj2[10] } = analyticsData);
   obj.track(AnalyticEvents.ACTIVITY_REPORT_PROBLEM, obj);
-};
+}

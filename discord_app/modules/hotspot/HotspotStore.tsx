@@ -9,8 +9,7 @@ const CONFERENCE_MODE_ENABLED = CONFERENCE_MODE_ENABLED2.CONFERENCE_MODE_ENABLED
 let set = new Set();
 let closure_4 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class HotspotStore extends PersistedStore {
-}
+class HotspotStore extends PersistedStore {}
 const prototype = HotspotStore.prototype;
 prototype["initialize"] = function initialize(hiddenHotspots) {
   if (null != hiddenHotspots) {
@@ -66,7 +65,7 @@ const items = [
       hiddenHotspots = [];
     }
     return { hiddenHotspots, hotspotOverrides: {} };
-  }
+  },
 ];
 HotspotStore.migrations = items;
 const hotspotStore = new HotspotStore(dispatcherDefault, {
@@ -90,7 +89,7 @@ const hotspotStore = new HotspotStore(dispatcherDefault, {
     } else {
       delete tmp[tmp2];
     }
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/hotspot/HotspotStore.tsx");
 

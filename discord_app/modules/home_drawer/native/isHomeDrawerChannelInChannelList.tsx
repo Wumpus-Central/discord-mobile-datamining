@@ -7,12 +7,17 @@ let result = require("set").fileFinishedImporting("modules/home_drawer/native/is
 
 export const useIsHomeDrawerChannelInChannelList = function useIsHomeDrawerChannelInChannelList() {
   const items = [closure_2];
-  return initialize.useStateFromStores(items, () => (guild_id) => {
-    const result = callback(table[2]).isOptInEnabledForGuild(guild_id.guild_id);
-    let result1 = !result;
-    if (result) {
-      result1 = channelRecordOrParentOptedIn.isChannelRecordOrParentOptedIn(guild_id);
-    }
-    return result1;
-  }, [], initialize.statesWillNeverBeEqual);
+  return initialize.useStateFromStores(
+    items,
+    () => (guild_id) => {
+      const result = callback(table[2]).isOptInEnabledForGuild(guild_id.guild_id);
+      let result1 = !result;
+      if (result) {
+        result1 = channelRecordOrParentOptedIn.isChannelRecordOrParentOptedIn(guild_id);
+      }
+      return result1;
+    },
+    [],
+    initialize.statesWillNeverBeEqual,
+  );
 };

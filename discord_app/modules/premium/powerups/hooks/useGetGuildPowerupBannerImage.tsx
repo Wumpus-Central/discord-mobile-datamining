@@ -21,7 +21,7 @@ export default function useGetGuildPowerupBannerImage(animatedImageUrl) {
     }
     staticImageUrl = animatedImageUrl.staticImageUrl;
   }
-};
+}
 export const getGuildPowerupBannerImage = function getGuildPowerupBannerImage(found, closure_1_4, arg2) {
   if (null != found) {
     if (!closure_1_4) {

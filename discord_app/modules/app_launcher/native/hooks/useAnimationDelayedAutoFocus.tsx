@@ -2,7 +2,9 @@
 import closure_2 from "../../../../../_runtime/00019_noop.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useAnimationDelayedAutoFocus.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/hooks/useAnimationDelayedAutoFocus.tsx",
+);
 
 export const useAnimationDelayedAutoFocus = function useAnimationDelayedAutoFocus(autoFocus, onPress) {
   const _require = autoFocus;

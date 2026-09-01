@@ -34,7 +34,7 @@ const toggle = createToggle.createToggle({
     const ActivityRestrictedGuilds = explicitContentFromProto.ActivityRestrictedGuilds;
     const items = [...sanitizedActivityRestrictedGuilds];
     ActivityRestrictedGuilds.updateSetting(items);
-  }
+  },
 });
 const obj = {
   useTitle() {
@@ -62,7 +62,7 @@ const obj = {
     const ActivityRestrictedGuilds = explicitContentFromProto.ActivityRestrictedGuilds;
     const items = [...sanitizedActivityRestrictedGuilds];
     ActivityRestrictedGuilds.updateSetting(items);
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/GuildSettingActivityStatus.tsx");
 

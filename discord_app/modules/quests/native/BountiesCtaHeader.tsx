@@ -22,7 +22,15 @@ function StarfieldBackground() {
   let obj = initialize;
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj = { source: null, style: null, resizeMode: "cover", muted: true, disableFocus: true, paused: null, importantForAccessibility: "no-hide-descendants" };
+  obj = {
+    source: null,
+    style: null,
+    resizeMode: "cover",
+    muted: true,
+    disableFocus: true,
+    paused: null,
+    importantForAccessibility: "no-hide-descendants",
+  };
   obj = { uri: metadataDefault };
   obj[0] = obj;
   obj[1] = absoluteFillObject.absoluteFillObject;
@@ -61,7 +69,7 @@ function BountiesCtaDescription(arg0) {
     if (!inlineLearnMore) {
       obj = { style: null, children: null };
       obj[0] = tmp.description;
-      const items = [tmp7, ];
+      const items = [tmp7];
       obj1 = { variant: "text-sm/medium", children: null };
       obj1[1] = formatResult;
       items[1] = callback(tmp5(4474).Text, obj1);
@@ -92,21 +100,34 @@ function BountiesCtaHeaderInner(bounties) {
   obj1 = bounties(589);
   const items = [closure_7];
   const items1 = [bounties];
-  const stateFromStores = obj1.useStateFromStores(items, () => bounties.some((id) => !closure_7.hasSeen(callback(table[16]).AdCreativeType.BOUNTY, id.id)), items1);
+  const stateFromStores = obj1.useStateFromStores(
+    items,
+    () => bounties.some((id) => !closure_7.hasSeen(callback(table[16]).AdCreativeType.BOUNTY, id.id)),
+    items1,
+  );
   let obj2 = bounties(11118);
   const QuestContent = bounties(5390).QuestContent;
-  const tmp8 = obj2.useBountiesExperience(constants2.QUEST_HOME_MOBILE).verticalScrollEnabled ? QuestContent.VIDEO_MODAL_MOBILE : QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
+  const tmp8 = obj2.useBountiesExperience(constants2.QUEST_HOME_MOBILE).verticalScrollEnabled
+    ? QuestContent.VIDEO_MODAL_MOBILE
+    : QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
   importDefault = tmp8;
   const items2 = [bounties, tmp8];
   const callback = importAllResult.useCallback(() => {
     let obj = bounties(closure_1_2[19]);
-    obj = { adContentId: closure_1_9, adCreativeType: bounties(closure_1_2[16]).AdCreativeType.BOUNTY, questContent: bounties(closure_1_2[18]).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE, questContentCTA: bounties(closure_1_2[20]).QuestContentCTA.START_BOUNTY, sourceQuestContent: bounties(closure_1_2[18]).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE, questContentPosition: 0 };
+    obj = {
+      adContentId: closure_1_9,
+      adCreativeType: bounties(closure_1_2[16]).AdCreativeType.BOUNTY,
+      questContent: bounties(closure_1_2[18]).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE,
+      questContentCTA: bounties(closure_1_2[20]).QuestContentCTA.START_BOUNTY,
+      sourceQuestContent: bounties(closure_1_2[18]).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE,
+      questContentPosition: 0,
+    };
     const result = obj.trackAdContentClicked(obj);
     obj = { bountyId: bounties[0].id, sourceQuestContent: callback };
     callback(closure_1_2[21]).showModal(obj);
   }, items2);
   obj = { ref: containerRef, style: tmp.container, children: null };
-  const items3 = [tmp.bannerClip, ];
+  const items3 = [tmp.bannerClip];
   let headerRoundedBottom = tmp13;
   if (!tmp10Result) {
     headerRoundedBottom = tmp.headerRoundedBottom;
@@ -114,7 +135,7 @@ function BountiesCtaHeaderInner(bounties) {
   obj = { style: items3, children: null };
   items3[1] = headerRoundedBottom;
   if (null != replaceHeaderMediaWith) {
-    const items4 = [tmp.headerReplaceMedia, ];
+    const items4 = [tmp.headerReplaceMedia];
     let headerRoundedBottom3 = tmp13;
     if (!tmp10Result) {
       headerRoundedBottom3 = tmp.headerRoundedBottom;
@@ -122,7 +143,7 @@ function BountiesCtaHeaderInner(bounties) {
     obj1 = { style: null, children: null };
     items4[1] = headerRoundedBottom3;
     obj1[0] = items4;
-    const items5 = [tmp12(StarfieldBackground, {}), , , ];
+    const items5 = [tmp12(StarfieldBackground, {}), , ,];
     obj2 = { style: null, children: null };
     obj2[0] = tmp.headerTitleSection;
     const obj3 = { style: null, children: null };
@@ -133,13 +154,13 @@ function BountiesCtaHeaderInner(bounties) {
       tmp12Result = tmp12(tmp4(1297).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
       const obj4 = { variant: "text-xs/bold", containerStyle: null, textStyle: null };
     }
-    const items6 = [tmp12Result, ];
+    const items6 = [tmp12Result];
     const obj5 = { variant: "text-lg/semibold", color: "text-strong", children: null };
     const intl2 = tmp4(1236).intl;
     obj5[2] = intl2.string(tmp4(1236).t.qetVDw);
     items6[1] = tmp12(tmp4(4474).Text, obj5);
     obj3[1] = items6;
-    const items7 = [tmp10(tmp11, obj3), ];
+    const items7 = [tmp10(tmp11, obj3)];
     const obj6 = { isEmptyOrCompleted: null, inlineLearnMore: true };
     obj6[0] = flag;
     items7[1] = tmp12(BountiesCtaDescription, obj6);
@@ -165,7 +186,7 @@ function BountiesCtaHeaderInner(bounties) {
   } else {
     const obj9 = { uri: null, style: null, children: null };
     obj9[0] = metadataDefault2;
-    const items8 = [tmp.header, ];
+    const items8 = [tmp.header];
     let headerRoundedBottom2 = tmp13;
     if (!tmp10Result) {
       headerRoundedBottom2 = tmp.headerRoundedBottom;
@@ -178,8 +199,8 @@ function BountiesCtaHeaderInner(bounties) {
       tmp12Result1 = tmp12(tmp4(1297).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
       const obj10 = { variant: "text-xs/bold", containerStyle: null, textStyle: null };
     }
-    const items9 = [tmp12Result1, ];
-    const items10 = [tmp.headerTextBox, ];
+    const items9 = [tmp12Result1];
+    const items10 = [tmp.headerTextBox];
     let headerTextBoxWithFooter = tmp10Result;
     if (tmp10Result) {
       headerTextBoxWithFooter = tmp.headerTextBoxWithFooter;
@@ -190,7 +211,7 @@ function BountiesCtaHeaderInner(bounties) {
     const obj12 = { variant: "text-lg/semibold", color: "text-strong", children: null };
     const intl = tmp4(1236).intl;
     obj12[2] = intl.string(tmp4(1236).t.qetVDw);
-    const items11 = [tmp12(tmp4(4474).Text, obj12), , ];
+    const items11 = [tmp12(tmp4(4474).Text, obj12), ,];
     const obj13 = { isEmptyOrCompleted: null };
     obj13[0] = flag;
     items11[1] = tmp12(BountiesCtaDescription, obj13);
@@ -212,11 +233,11 @@ function BountiesCtaHeaderInner(bounties) {
     const tmp27 = _modDef14684;
   }
   obj[1] = tmp10Result;
-  const items12 = [closure_11(closure_5, obj), ];
+  const items12 = [closure_11(closure_5, obj)];
   if (tmp10Result) {
     const obj15 = { style: null, children: null };
     obj15[0] = tmp.footerClip;
-    const items13 = [tmp12(StarfieldBackground, {}), footer, ];
+    const items13 = [tmp12(StarfieldBackground, {}), footer];
     if (!flag) {
       const obj16 = { style: null, children: null };
       obj16[0] = tmp.footerCta;
@@ -236,34 +257,135 @@ function BountiesCtaHeaderInner(bounties) {
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
-({ BountyCarouselEmptyStateReason: closure_8, DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: c9, QuestsExperimentLocations: c10 } = QuestsExperimentLocations);
+({
+  BountyCarouselEmptyStateReason: closure_8,
+  DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: c9,
+  QuestsExperimentLocations: c10,
+} = QuestsExperimentLocations);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles(() => {
-  let obj = { container: null, bannerClip: null, footerClip: null, header: null, headerReplaceMedia: null, headerTitleSection: null, headerHeadingGroup: null, headerReplaceMediaCta: null, headerRoundedBottom: null, newPill: null, newPillInline: null, newPillText: null, headerTextBox: null, headerTextBoxWithFooter: null, description: null, footerCta: null };
-  obj = { width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, borderBottomLeftRadius: ThemesDefault.radii.xxl, borderBottomRightRadius: ThemesDefault.radii.xxl, overflow: "hidden" };
+  let obj = {
+    container: null,
+    bannerClip: null,
+    footerClip: null,
+    header: null,
+    headerReplaceMedia: null,
+    headerTitleSection: null,
+    headerHeadingGroup: null,
+    headerReplaceMediaCta: null,
+    headerRoundedBottom: null,
+    newPill: null,
+    newPillInline: null,
+    newPillText: null,
+    headerTextBox: null,
+    headerTextBoxWithFooter: null,
+    description: null,
+    footerCta: null,
+  };
+  obj = {
+    width: "100%",
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+    borderWidth: 1,
+    borderColor: ThemesDefault.colors.BORDER_MUTED,
+    borderBottomLeftRadius: ThemesDefault.radii.xxl,
+    borderBottomRightRadius: ThemesDefault.radii.xxl,
+    overflow: "hidden",
+  };
   obj[0] = obj;
   obj[1] = { overflow: "hidden" };
-  obj = { overflow: "hidden", borderBottomLeftRadius: ThemesDefault.radii.xxl, borderBottomRightRadius: ThemesDefault.radii.xxl };
+  obj = {
+    overflow: "hidden",
+    borderBottomLeftRadius: ThemesDefault.radii.xxl,
+    borderBottomRightRadius: ThemesDefault.radii.xxl,
+  };
   obj[2] = obj;
-  obj[3] = { width: "100%", minHeight: 296, justifyContent: "flex-end", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+  obj[3] = {
+    width: "100%",
+    minHeight: 296,
+    justifyContent: "flex-end",
+    overflow: "hidden",
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  };
   obj[4] = { width: "100%", overflow: "hidden" };
-  obj1 = { width: "100%", minHeight: 296, justifyContent: "flex-end", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-  obj[5] = { paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_20, gap: ThemesDefault.space.PX_8 };
-  const obj2 = { paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_20, gap: ThemesDefault.space.PX_8 };
+  obj1 = {
+    width: "100%",
+    minHeight: 296,
+    justifyContent: "flex-end",
+    overflow: "hidden",
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  };
+  obj[5] = {
+    paddingTop: ThemesDefault.space.PX_12,
+    paddingBottom: ThemesDefault.space.PX_16,
+    paddingHorizontal: ThemesDefault.space.PX_20,
+    gap: ThemesDefault.space.PX_8,
+  };
+  const obj2 = {
+    paddingTop: ThemesDefault.space.PX_12,
+    paddingBottom: ThemesDefault.space.PX_16,
+    paddingHorizontal: ThemesDefault.space.PX_20,
+    gap: ThemesDefault.space.PX_8,
+  };
   obj[6] = { gap: ThemesDefault.space.PX_20 };
   const obj3 = { gap: ThemesDefault.space.PX_20 };
-  obj[7] = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_20 };
-  const obj4 = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_20 };
+  obj[7] = {
+    paddingTop: ThemesDefault.space.PX_16,
+    paddingBottom: ThemesDefault.space.PX_24,
+    paddingHorizontal: ThemesDefault.space.PX_20,
+  };
+  const obj4 = {
+    paddingTop: ThemesDefault.space.PX_16,
+    paddingBottom: ThemesDefault.space.PX_24,
+    paddingHorizontal: ThemesDefault.space.PX_20,
+  };
   obj[8] = { borderBottomLeftRadius: ThemesDefault.radii.xxl, borderBottomRightRadius: ThemesDefault.radii.xxl };
   const obj5 = { borderBottomLeftRadius: ThemesDefault.radii.xxl, borderBottomRightRadius: ThemesDefault.radii.xxl };
-  obj[9] = { position: "absolute", top: ThemesDefault.space.PX_12, left: ThemesDefault.space.PX_20, zIndex: 1, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
-  const obj6 = { position: "absolute", top: ThemesDefault.space.PX_12, left: ThemesDefault.space.PX_20, zIndex: 1, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
-  obj[10] = { alignSelf: "flex-start", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
-  const obj7 = { alignSelf: "flex-start", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
+  obj[9] = {
+    position: "absolute",
+    top: ThemesDefault.space.PX_12,
+    left: ThemesDefault.space.PX_20,
+    zIndex: 1,
+    backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT,
+    borderRadius: ThemesDefault.radii.round,
+    paddingHorizontal: ThemesDefault.space.PX_8,
+    paddingVertical: ThemesDefault.space.PX_4,
+  };
+  const obj6 = {
+    position: "absolute",
+    top: ThemesDefault.space.PX_12,
+    left: ThemesDefault.space.PX_20,
+    zIndex: 1,
+    backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT,
+    borderRadius: ThemesDefault.radii.round,
+    paddingHorizontal: ThemesDefault.space.PX_8,
+    paddingVertical: ThemesDefault.space.PX_4,
+  };
+  obj[10] = {
+    alignSelf: "flex-start",
+    backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT,
+    borderRadius: ThemesDefault.radii.round,
+    paddingHorizontal: ThemesDefault.space.PX_8,
+    paddingVertical: ThemesDefault.space.PX_4,
+  };
+  const obj7 = {
+    alignSelf: "flex-start",
+    backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT,
+    borderRadius: ThemesDefault.radii.round,
+    paddingHorizontal: ThemesDefault.space.PX_8,
+    paddingVertical: ThemesDefault.space.PX_4,
+  };
   obj[11] = { color: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
   const obj8 = { color: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
-  obj[12] = { paddingBottom: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_20, gap: ThemesDefault.space.PX_8 };
-  const obj9 = { paddingBottom: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_20, gap: ThemesDefault.space.PX_8 };
+  obj[12] = {
+    paddingBottom: ThemesDefault.space.PX_24,
+    paddingHorizontal: ThemesDefault.space.PX_20,
+    gap: ThemesDefault.space.PX_8,
+  };
+  const obj9 = {
+    paddingBottom: ThemesDefault.space.PX_24,
+    paddingHorizontal: ThemesDefault.space.PX_20,
+    gap: ThemesDefault.space.PX_8,
+  };
   obj[13] = { paddingBottom: ThemesDefault.space.PX_12 };
   obj[14] = { marginBottom: 16 };
   const obj10 = { paddingBottom: ThemesDefault.space.PX_12 };
@@ -290,7 +412,15 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
       obj.containerRef = containerRef;
       let tmp9Result = tmp9(BountiesCtaHeaderInner, obj);
     } else {
-      obj1 = { adContentId: null, adCreativeType: null, questContent: null, questContentPosition: 0, overrideVisibility: null, sourceQuestContent: null, children: null };
+      obj1 = {
+        adContentId: null,
+        adCreativeType: null,
+        questContent: null,
+        questContentPosition: 0,
+        overrideVisibility: null,
+        sourceQuestContent: null,
+        children: null,
+      };
       obj1[0] = closure_9;
       obj1[1] = tmp7(7446).AdCreativeType.BOUNTY;
       obj1[2] = tmp7(5390).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;

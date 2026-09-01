@@ -14,7 +14,15 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, card: null, contentContainer: null, imageContainer: null, gradient: null, headerContainer: null, badge: null };
+createCacheKey = {
+  container: null,
+  card: null,
+  contentContainer: null,
+  imageContainer: null,
+  gradient: null,
+  headerContainer: null,
+  badge: null,
+};
 createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: 0, overflow: "hidden" };
@@ -59,11 +67,14 @@ export default function GuildPowerupsPerkCard(arg0) {
     riveComponent = callback(tmp3Result, obj1);
     const tmp13 = callback;
   }
-  const items1 = [riveComponent, ];
+  const items1 = [riveComponent];
   const tmp9 = obj.isThemeDark(useThemeDefault()) ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"];
-  items1[1] = callback(LinearGradientDefault, { colors: obj.isThemeDark(useThemeDefault()) ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"], style: tmp2.gradient });
+  items1[1] = callback(LinearGradientDefault, {
+    colors: obj.isThemeDark(useThemeDefault()) ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"],
+    style: tmp2.gradient,
+  });
   obj[1] = items1;
-  const items2 = [closure_5(View, obj), , , ];
+  const items2 = [closure_5(View, obj), , ,];
   const obj3 = { style: tmp2.contentContainer, children: null };
   const obj4 = { style: tmp2.headerContainer, children: null };
   let str;
@@ -77,14 +88,14 @@ export default function GuildPowerupsPerkCard(arg0) {
   }
   obj5[1] = str2;
   obj5[2] = title;
-  const items3 = [callback(Text.Text, obj5), ];
+  const items3 = [callback(Text.Text, obj5)];
   let str3 = "text-sm/medium";
   if (manaTypeConsolidationExperiment) {
     str3 = "experimental/body-sm/normal";
   }
   items3[1] = callback(Text.Text, { variant: str3, children: description });
   obj4[1] = items3;
-  const items4 = [closure_5(View, obj4), ];
+  const items4 = [closure_5(View, obj4)];
   const obj6 = {};
   const merged1 = Object.assign(merged);
   obj6.status = status;
@@ -112,4 +123,4 @@ export default function GuildPowerupsPerkCard(arg0) {
   items2[3] = tmp15Result;
   obj[4] = items2;
   return closure_5(tmp3Result, obj);
-};
+}

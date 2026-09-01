@@ -17,7 +17,19 @@ export default function AppealIngestionSpam() {
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj = { bottom: true, style: tmp.container, children: jsx(Button.LegacyText, { children: "TODO - SPAM" }) };
-  obj[1] = jsx(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, style: tmp.container, children: jsx(Button.LegacyText, { children: "TODO - SPAM" }) });
-  obj[0] = <View bottom style={tmp.container}>{jsx(Button.LegacyText, { children: "TODO - SPAM" })}</View>;
-  return jsx(AppealIngestionModal.AppealIngestionModalScreen, { bottom: true, style: tmp.container, children: jsx(Button.LegacyText, { children: "TODO - SPAM" }) });
-};
+  obj[1] = jsx(SafeAreaPaddingView.SafeAreaPaddingView, {
+    bottom: true,
+    style: tmp.container,
+    children: jsx(Button.LegacyText, { children: "TODO - SPAM" }),
+  });
+  obj[0] = (
+    <View bottom style={tmp.container}>
+      {jsx(Button.LegacyText, { children: "TODO - SPAM" })}
+    </View>
+  );
+  return jsx(AppealIngestionModal.AppealIngestionModalScreen, {
+    bottom: true,
+    style: tmp.container,
+    children: jsx(Button.LegacyText, { children: "TODO - SPAM" }),
+  });
+}

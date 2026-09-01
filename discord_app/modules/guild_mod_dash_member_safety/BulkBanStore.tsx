@@ -7,8 +7,7 @@ import set from "../../../_runtime/00002_set.js";
 let set = new Set();
 const set1 = new Set();
 const Store = initializeDefault.Store;
-class BulkBanStore extends Store {
-}
+class BulkBanStore extends Store {}
 const prototype = BulkBanStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_0);
@@ -45,7 +44,7 @@ const bulkBanStore = new BulkBanStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     set.clear();
     set1.clear();
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/BulkBanStore.tsx");
 

@@ -7,7 +7,7 @@ import ME from "../../Constants.tsx";
 require = arg1;
 function _fetchBugReportConfig() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const HTTP = v0(closure_1_2[3]).HTTP;
     obj1 = { url: null, rejectWithError: false };
     obj1[0] = closure_1_6.BUG_REPORTS;
@@ -32,7 +32,7 @@ function _submitReport() {
     c4 = 0;
     c3 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -62,7 +62,7 @@ function _submitReport() {
               let priority = lib;
               obj1 = { name: "name", value: null };
               obj1[1] = lib.name;
-              let items = [obj1, , , ];
+              let items = [obj1, , ,];
               const obj2 = { name: "priority", value: null };
               const _HermesInternal2 = HermesInternal;
               obj2[1] = "" + lib.priority;
@@ -92,7 +92,9 @@ function _submitReport() {
               if (null != priority.experimentOverrides) {
                 const obj8 = { name: "experiment_overrides", value: null };
                 const experimentOverrides = priority.experimentOverrides;
-                const mapped = experimentOverrides.map((experimentId) => "" + experimentId.experimentId + ":" + experimentId.variantId);
+                const mapped = experimentOverrides.map(
+                  (experimentId) => "" + experimentId.experimentId + ":" + experimentId.variantId,
+                );
                 obj8[1] = mapped.join(", ");
                 items.push(obj8);
               }
@@ -264,7 +266,7 @@ export const getPriorities = function getPriorities() {
   obj[0] = intl.string(getSystemLocale.t.VwIij9);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.format(getSystemLocale.t.DOP8yY, {});
-  const items = [obj, , , ];
+  const items = [obj, , ,];
   obj = { title: null, description: null, emoji: "410336837563973632", value: 1 };
   const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t.rYfJop);

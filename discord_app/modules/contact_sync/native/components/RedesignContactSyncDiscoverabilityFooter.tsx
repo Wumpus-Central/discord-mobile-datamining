@@ -9,7 +9,9 @@ import TableSwitchRow from "../../../../design/components/TableRow/native/TableS
 
 const HelpdeskArticles = ME.HelpdeskArticles;
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/contact_sync/native/components/RedesignContactSyncDiscoverabilityFooter.tsx");
+const result = set.fileFinishedImporting(
+  "modules/contact_sync/native/components/RedesignContactSyncDiscoverabilityFooter.tsx",
+);
 
 export default function RedesignContactSyncDiscoverabilityFooter(arg0) {
   ({ discoverabilityEnabled, onValueChanged } = arg0);
@@ -24,4 +26,4 @@ export default function RedesignContactSyncDiscoverabilityFooter(arg0) {
   obj[2] = discoverabilityEnabled;
   obj[2] = jsx(TableSwitchRow.TableSwitchRow, { label: null, onValueChange: null, value: null });
   return jsx(TableRowGroupTitle.TableRowGroup, { label: null, onValueChange: null, value: null });
-};
+}

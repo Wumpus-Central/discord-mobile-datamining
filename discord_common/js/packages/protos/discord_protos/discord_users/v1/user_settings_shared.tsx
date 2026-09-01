@@ -6,7 +6,7 @@ import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 require = arg1;
 class Versions$Type extends MessageType {
   constructor() {
-    items = [, , ];
+    items = [, ,];
     items[0] = { no: 1, name: "client_version", kind: "scalar", T: 13 };
     items[1] = { no: 2, name: "server_version", kind: "scalar", T: 13 };
     items[2] = { no: 3, name: "data_version", kind: "scalar", T: 13 };
@@ -104,9 +104,23 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(clientVersion, t
   }
   return tag;
 };
-let items = [{ no: 1, name: "client_version", kind: "scalar", T: 13 }, { no: 2, name: "server_version", kind: "scalar", T: 13 }, { no: 3, name: "data_version", kind: "scalar", T: 13 }];
-prototype = new prototype("discord_protos.discord_users.v1.Versions", items, tmp, Versions$Type, prototype, items, arg1);
+let items = [
+  { no: 1, name: "client_version", kind: "scalar", T: 13 },
+  { no: 2, name: "server_version", kind: "scalar", T: 13 },
+  { no: 3, name: "data_version", kind: "scalar", T: 13 },
+];
+prototype = new prototype(
+  "discord_protos.discord_users.v1.Versions",
+  items,
+  tmp,
+  Versions$Type,
+  prototype,
+  items,
+  arg1,
+);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_users/v1/user_settings_shared.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/discord_users/v1/user_settings_shared.tsx",
+);
 
 export const Versions = prototype;

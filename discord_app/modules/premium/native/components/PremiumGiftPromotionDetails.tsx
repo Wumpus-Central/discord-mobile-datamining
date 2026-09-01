@@ -76,7 +76,9 @@ let closure_9 = createCacheKey.createStyles(() => {
   obj[2] = { flex: 1 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/premium/native/components/PremiumGiftPromotionDetails.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/native/components/PremiumGiftPromotionDetails.tsx",
+);
 
 export default function PremiumGiftPromotionDetails(arg0) {
   ({ imageUrl, titleVariant, titleColor, subtitleVariant, subtitleColor } = arg0);
@@ -92,7 +94,7 @@ export default function PremiumGiftPromotionDetails(arg0) {
     obj[2] = shouldAnimate;
     tmp4 = callback(AnimatedImage, obj);
   }
-  const items1 = [tmp4, ];
+  const items1 = [tmp4];
   obj = { style: tmp.textContainer, children: null };
   if (titleVariant == null) {
     titleVariant = "text-md/semibold";
@@ -103,7 +105,7 @@ export default function PremiumGiftPromotionDetails(arg0) {
   }
   obj1[1] = titleColor;
   obj1[2] = title;
-  const items2 = [callback(Text.Text, obj1), ];
+  const items2 = [callback(Text.Text, obj1)];
   if (subtitleVariant == null) {
     subtitleVariant = "text-sm/medium";
   }
@@ -118,4 +120,4 @@ export default function PremiumGiftPromotionDetails(arg0) {
   items1[1] = closure_8(View, obj);
   obj[1] = items1;
   return closure_8(View, obj);
-};
+}

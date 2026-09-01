@@ -20,29 +20,29 @@ class GuildRoomSpatialAudioManager extends tmp2 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       AUDIO_SET_AUDIO_MIXER_SETTINGS() {
-            return applyArgumentsResult.apply();
-          },
+        return applyArgumentsResult.apply();
+      },
       RTC_CONNECTION_STATE() {
-            return applyArgumentsResult.apply();
-          },
+        return applyArgumentsResult.apply();
+      },
       RTC_CONNECTION_USERS_MERGED() {
-            return applyArgumentsResult.apply();
-          },
+        return applyArgumentsResult.apply();
+      },
       MEDIA_SESSION_JOINED() {
-            return applyArgumentsResult.apply();
-          },
+        return applyArgumentsResult.apply();
+      },
       GUILD_ROOM_CONNECT() {
-            return applyArgumentsResult.apply();
-          },
+        return applyArgumentsResult.apply();
+      },
       GUILD_ROOM_UPDATE() {
-            return applyArgumentsResult.apply();
-          },
+        return applyArgumentsResult.apply();
+      },
       GUILD_ROOM_LOCAL_UPDATE() {
-            return applyArgumentsResult.apply();
-          },
+        return applyArgumentsResult.apply();
+      },
       GUILD_ROOM_DISCONNECT() {
-            return applyArgumentsResult.apply();
-          }
+        return applyArgumentsResult.apply();
+      },
     };
     applyArgumentsResult.reapplyForExperimentUpdate = function reapplyForExperimentUpdate() {
       if (applyArgumentsResult(closure_1_2[9]).GUILD_ROOM_SPATIAL_AUDIO_ENABLED) {
@@ -60,9 +60,7 @@ prototype["_initialize"] = function _initialize() {
   const result = new Map().set(closure_4, this.reapplyForExperimentUpdate);
   this.stores = result.set(closure_5, this.reapplyForExperimentUpdate);
 };
-prototype["_terminate"] = function _terminate() {
-
-};
+prototype["_terminate"] = function _terminate() {};
 prototype["isLivingRoomAvailable"] = function isLivingRoomAvailable() {
   if (GUILD_ROOM_SPATIAL_AUDIO_ENABLED.GUILD_ROOM_SPATIAL_AUDIO_ENABLED) {
     const guildId = store.getGuildId();
@@ -70,7 +68,9 @@ prototype["isLivingRoomAvailable"] = function isLivingRoomAvailable() {
     if (interactionsEnabled) {
       const obj = { guildId: null, location: "GuildRoomSpatialAudioManager" };
       obj[0] = guildId;
-      interactionsEnabled = GUILD_ROOMS_EXPERIMENT_ID.getGuildRoomsConfig(obj, { autoTrackExposure: false }).interactionsEnabled;
+      interactionsEnabled = GUILD_ROOMS_EXPERIMENT_ID.getGuildRoomsConfig(obj, {
+        autoTrackExposure: false,
+      }).interactionsEnabled;
       const tmpResult = GUILD_ROOMS_EXPERIMENT_ID;
     }
     return interactionsEnabled;
@@ -107,7 +107,10 @@ prototype["apply"] = function apply() {
               let tmp9 = closure_1_2;
               [tmp6, tmp7] = tmp5;
               let obj = callback(closure_1_2[9]);
-              let setUserPositionResult = setUserPosition.setUserPosition(tmp6, obj.livingRoomWorldPointToMediaEnginePoint(tmp7));
+              let setUserPositionResult = setUserPosition.setUserPosition(
+                tmp6,
+                obj.livingRoomWorldPointToMediaEnginePoint(tmp7),
+              );
               continue;
             }
           });

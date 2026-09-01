@@ -6,7 +6,9 @@ import { MobileUserSettings } from "../../user_settings/core/native/SettingsCons
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx",
+);
 
 export default function FamilyCenterParentalControlsDataAndPrivacy() {
   const memo = React.useMemo(() => {
@@ -17,7 +19,7 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     let obj2 = callback(1995);
     obj[0] = obj2.getArticleURL(constants.DATA_PRIVACY_CONTROLS);
     obj[1] = intl.format(callback(2369).Z5yJZy, obj);
-    const items1 = [obj, , , ];
+    const items1 = [obj, , ,];
     obj = { settings: items2, subLabel: null };
     items2 = [closure_5.PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION];
     const intl2 = memo(1236).intl;
@@ -49,4 +51,4 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     return obj.createList(obj);
   }, items);
   return jsx(_modDef14340, { node });
-};
+}

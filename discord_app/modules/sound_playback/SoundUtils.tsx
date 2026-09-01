@@ -92,7 +92,13 @@ export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChanne
     if (flag === undefined) {
       flag = false;
     }
-    const mobileAudioSound = new require("native/SoundUtils.tsx").MobileAudioSound(tmp13, arg0, num, outputChannel, flag);
+    const mobileAudioSound = new require("native/SoundUtils.tsx").MobileAudioSound(
+      tmp13,
+      arg0,
+      num,
+      outputChannel,
+      flag,
+    );
     if (null != arg2) {
       mobileAudioSound.playWithListener().then((arg0) => {
         if (arg0) {

@@ -26,30 +26,33 @@ obj = {
       timeout = 0;
     }
     const storeWaitResult = server.storeWait(socket.socket, () => closure_1_3.getGuild(closure_0), timeout);
-    return server.storeWait(socket.socket, () => closure_1_3.getGuild(closure_0), timeout).catch(() => {
-      throw new callback(table[5])({ errorCode: constants.GET_GUILD_TIMED_OUT }, "Request to get guild timed out.");
-    }).then((vanityURLCode) => {
-      if (null == vanityURLCode) {
-        let obj = { errorCode: null };
-        obj[0] = closure_1_4.INVALID_GUILD;
-        const _HermesInternal = HermesInternal;
-        let tmp5 = closure_1_0(closure_1_1[5]);
-        tmp5 = new tmp5(obj, "Invalid guild id: " + closure_0);
-        throw tmp5;
-      } else {
-        obj = { id: null, name: null, icon_url: null, members: null, vanity_url_code: null };
-        ({ id: obj[0], name: obj[1] } = vanityURLCode);
-        let tmp2 = closure_1_2(vanityURLCode, 128);
-        if (tmp2 == null) {
-          tmp2 = null;
+    return server
+      .storeWait(socket.socket, () => closure_1_3.getGuild(closure_0), timeout)
+      .catch(() => {
+        throw new callback(table[5])({ errorCode: constants.GET_GUILD_TIMED_OUT }, "Request to get guild timed out.");
+      })
+      .then((vanityURLCode) => {
+        if (null == vanityURLCode) {
+          let obj = { errorCode: null };
+          obj[0] = closure_1_4.INVALID_GUILD;
+          const _HermesInternal = HermesInternal;
+          let tmp5 = closure_1_0(closure_1_1[5]);
+          tmp5 = new tmp5(obj, "Invalid guild id: " + closure_0);
+          throw tmp5;
+        } else {
+          obj = { id: null, name: null, icon_url: null, members: null, vanity_url_code: null };
+          ({ id: obj[0], name: obj[1] } = vanityURLCode);
+          let tmp2 = closure_1_2(vanityURLCode, 128);
+          if (tmp2 == null) {
+            tmp2 = null;
+          }
+          obj[2] = tmp2;
+          obj[3] = [];
+          obj[4] = vanityURLCode.vanityURLCode;
+          return obj;
         }
-        obj[2] = tmp2;
-        obj[3] = [];
-        obj[4] = vanityURLCode.vanityURLCode;
-        return obj;
-      }
-    });
-  }
+      });
+  },
 };
 obj[RPCCommands.GET_GUILD] = obj;
 obj = {
@@ -67,7 +70,7 @@ obj = {
       return obj;
     });
     return obj;
-  }
+  },
 };
 obj[RPCCommands.GET_GUILDS] = obj;
 const result = set.fileFinishedImporting("modules/rpc/server/commands/guilds.tsx");

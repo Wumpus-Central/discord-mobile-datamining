@@ -15,18 +15,52 @@ require = arg1;
 function CoachmarkPreview() {
   const tmp = callback();
   let obj = { style: tmp.coachmarkImageContainer, children: null };
-  obj = { name: "Locke", suggestion: create.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null };
+  obj = {
+    name: "Locke",
+    suggestion: create.TypingSuggestion.YAPPING,
+    emojiSize: 16,
+    spacing: 8,
+    emojiGap: 4,
+    textVariant: "text-xs/medium",
+    textColor: "text-subtle",
+    textStyle: tmp.typingText,
+    emojiSource: null,
+  };
   const items = [metadataDefault, metadataDefault2, metadataDefault];
   obj[8] = items;
-  obj[1] = jsx(CustomTypingIndicatorDynamicAssetDefault, { name: "Locke", suggestion: create.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null });
-  return <View name="Locke" suggestion={create.TypingSuggestion.YAPPING} emojiSize={16} spacing={8} emojiGap={4} textVariant="text-xs/medium" textColor="text-subtle" textStyle={tmp.typingText} emojiSource={null} />;
+  obj[1] = jsx(CustomTypingIndicatorDynamicAssetDefault, {
+    name: "Locke",
+    suggestion: create.TypingSuggestion.YAPPING,
+    emojiSize: 16,
+    spacing: 8,
+    emojiGap: 4,
+    textVariant: "text-xs/medium",
+    textColor: "text-subtle",
+    textStyle: tmp.typingText,
+    emojiSource: null,
+  });
+  return (
+    <View
+      name="Locke"
+      suggestion={create.TypingSuggestion.YAPPING}
+      emojiSize={16}
+      spacing={8}
+      emojiGap={4}
+      textVariant="text-xs/medium"
+      textColor="text-subtle"
+      textStyle={tmp.typingText}
+      emojiSource={null}
+    />
+  );
 }
 createCacheKey = { coachmarkImageContainer: null, typingText: null };
 createCacheKey = { alignItems: "center", justifyContent: "center", paddingTop: ThemesDefault.space.PX_10 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { maxWidth: 100 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorProfileCoachmark.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/custom_typing_indicator/native/CustomTypingIndicatorProfileCoachmark.tsx",
+);
 
 export default function CustomTypingIndicatorProfileCoachmark(visible) {
   visible = visible.visible;
@@ -49,7 +83,18 @@ export default function CustomTypingIndicatorProfileCoachmark(visible) {
   }, items);
   const items1 = [stringResult, stringResult1, visible, str, callback, markAsDismissed];
   const memo = React.useMemo(() => {
-    let obj = { title: c3, description: stringResult1, visible, position: str, offsetY: null, onDismiss: null, renderImgComponent: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
+    let obj = {
+      title: c3,
+      description: stringResult1,
+      visible,
+      position: str,
+      offsetY: null,
+      onDismiss: null,
+      renderImgComponent: null,
+      buttonLabel: null,
+      buttonVariant: "primary",
+      onButtonPress: null,
+    };
     let PX_12;
     if ("top" === str) {
       PX_12 = markAsDismissed(str[6]).space.PX_12;
@@ -72,4 +117,4 @@ export default function CustomTypingIndicatorProfileCoachmark(visible) {
   }, items1);
   const coachmark = visible(str[10]).useCoachmark(visible.targetRef, memo);
   return null;
-};
+}

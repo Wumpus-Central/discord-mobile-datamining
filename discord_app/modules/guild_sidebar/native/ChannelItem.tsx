@@ -116,15 +116,32 @@ function DMChannelIcon(userId) {
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getUser(userId), items1);
   const items2 = [closure_6];
   const items3 = [userId];
-  const stateFromStoresObject = userId(589).useStateFromStoresObject(items2, () => ({ status: closure_1_6.getStatus(userId), isMobileOnline: closure_1_6.isMobileOnline(userId), isVROnline: closure_1_6.isVROnline(userId) }), items3);
+  const stateFromStoresObject = userId(589).useStateFromStoresObject(
+    items2,
+    () => ({
+      status: closure_1_6.getStatus(userId),
+      isMobileOnline: closure_1_6.isMobileOnline(userId),
+      isVROnline: closure_1_6.isVROnline(userId),
+    }),
+    items3,
+  );
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  obj = { user: stateFromStores, guildId: "o", size: "writing_hand_tone3", style: 2046820352, status: -1728053248, isMobileOnline: -1375731712, isVROnline: -1291845632, statusStyle: -1140850688 };
+  obj = {
+    user: stateFromStores,
+    guildId: "o",
+    size: "writing_hand_tone3",
+    style: 2046820352,
+    status: -1728053248,
+    isMobileOnline: -1375731712,
+    isVROnline: -1291845632,
+    statusStyle: -1140850688,
+  };
   obj[2] = userId(1297).AvatarSizes.XSMALL_20;
   obj[3] = tmp.dmAvatar;
   obj[4] = status;
   obj[5] = isMobileOnline;
   obj[6] = isVROnline;
-  const items4 = [tmp.avatarStatus, ];
+  const items4 = [tmp.avatarStatus];
   if (avatarStatusSelected) {
     avatarStatusSelected = tmp.avatarStatusSelected;
   }
@@ -136,10 +153,17 @@ let closure_3 = ["channel", "subtitle", "hideIcon", "children", "textStyle", "ch
 const ChannelTypes = ME.ChannelTypes;
 const Routes = ME.Routes;
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let items = [, ];
+let items = [,];
 ({ GUILD_VOICE: arr[0], GUILD_STAGE_VOICE: arr[1] } = ChannelTypes);
 let set = new Set(items);
-let obj = { channelIconLive: null, dmAvatar: null, avatarStatus: null, groupDmAvatar: null, channelInfoContainer: null, avatarStatusSelected: null };
+let obj = {
+  channelIconLive: null,
+  dmAvatar: null,
+  avatarStatus: null,
+  groupDmAvatar: null,
+  channelInfoContainer: null,
+  avatarStatusSelected: null,
+};
 obj = { tintColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
 obj[0] = obj;
 obj[1] = { marginRight: 8 };
@@ -163,7 +187,7 @@ export default importAllResult.memo((channel) => {
   if (null != channelInfo) {
     let obj = { style: null, children: null };
     obj[0] = tmp.channelInfoContainer;
-    const items = [channelInfo, ];
+    const items = [channelInfo];
     let tmp10 = null;
     if (isSubscriptionGated) {
       obj = { locked: null };
@@ -181,10 +205,14 @@ export default importAllResult.memo((channel) => {
   obj = { mode: tmp6, unread: null, hideIcon: null, name: null, icon: null, channelInfo: null, onPress: null };
   const tmp5 = importDefault(needSubscriptionToAccess[21])(channel.id);
   const tmp3Result = importDefault(needSubscriptionToAccess[13]);
-  obj[1] = tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_IMPORTANT || tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_LESS_IMPORTANT;
+  obj[1] =
+    tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_IMPORTANT ||
+    tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_LESS_IMPORTANT;
   obj[2] = hideIcon;
   obj1 = { mode: tmp6, name: null, subtitle: null, textStyle: null };
-  const tmp15 = tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_IMPORTANT || tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_LESS_IMPORTANT;
+  const tmp15 =
+    tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_IMPORTANT ||
+    tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_LESS_IMPORTANT;
   obj1[1] = channel(needSubscriptionToAccess[23]).computeChannelName(channel, closure_8, closure_7);
   obj1[2] = subtitle;
   obj1[3] = textStyle;
@@ -197,7 +225,9 @@ export default importAllResult.memo((channel) => {
   obj[6] = function onPress(arg0) {
     if (needSubscriptionToAccess) {
       if (closure_1_15.has(channel.type)) {
-        channel(needSubscriptionToAccess[24]).transitionTo(closure_1_10.CHANNEL(channel.guild_id, closure_1_11.ROLE_SUBSCRIPTIONS));
+        channel(needSubscriptionToAccess[24]).transitionTo(
+          closure_1_10.CHANNEL(channel.guild_id, closure_1_11.ROLE_SUBSCRIPTIONS),
+        );
         const obj = channel(needSubscriptionToAccess[24]);
       }
     }

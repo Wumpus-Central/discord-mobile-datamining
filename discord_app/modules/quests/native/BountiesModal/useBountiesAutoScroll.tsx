@@ -153,10 +153,13 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
     const result = sharedValue.set(1);
   }, items2);
   const items3 = [callback, callback1];
-  const effect1 = obj3.useEffect(() => () => {
-    callback();
-    callback2();
-  }, items3);
+  const effect1 = obj3.useEffect(
+    () => () => {
+      callback();
+      callback2();
+    },
+    items3,
+  );
   const items4 = [sum];
   const effect2 = obj3.useEffect(() => {
     closure_26.current = c9;
@@ -187,7 +190,9 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
           current = ref2.current;
         }
         if (!current) {
-          const result = closure_25.set(closure_1_0(closure_1_1[7]).withTiming(0.83, closure_1_0(closure_1_1[8]).timingSlow));
+          const result = closure_25.set(
+            closure_1_0(closure_1_1[7]).withTiming(0.83, closure_1_0(closure_1_1[8]).timingSlow),
+          );
           callback(true);
           const _setTimeout = setTimeout;
           closure_20.current = setTimeout(() => {
@@ -207,7 +212,17 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
     }
     return flag;
   }, items5);
-  const items6 = [activeBountyId, activeIndex, callback, callback1, listRef, callback2, sharedValue, callback4, slotHeight];
+  const items6 = [
+    activeBountyId,
+    activeIndex,
+    callback,
+    callback1,
+    listRef,
+    callback2,
+    sharedValue,
+    callback4,
+    slotHeight,
+  ];
   callback6 = obj3.useCallback(() => {
     let current = closure_18.current;
     if (!current) {
@@ -464,7 +479,7 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
       }
     }, items18),
     pauseCountdown: callback9,
-    resumeCountdown: callback10
+    resumeCountdown: callback10,
   };
   return obj;
 };

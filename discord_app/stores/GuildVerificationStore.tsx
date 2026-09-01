@@ -158,13 +158,28 @@ function recomputeGuild(guildId) {
               const items1 = [];
               HermesBuiltin.arraySpread(items, 0);
               const _Math2 = Math;
-              timerId = setTimeout(() => {
-                let obj = closure_1_1(closure_1_2[8]);
-                obj = { type: "GUILD_VERIFICATION_CHECK", guildId: closure_0 };
-                return obj.dispatch(obj);
-              }, HermesBuiltin.apply(items1, Math));
+              timerId = setTimeout(
+                () => {
+                  let obj = closure_1_1(closure_1_2[8]);
+                  obj = { type: "GUILD_VERIFICATION_CHECK", guildId: closure_0 };
+                  return obj.dispatch(obj);
+                },
+                HermesBuiltin.apply(items1, Math),
+              );
             }
-            let obj = { notClaimed: null, notEmailVerified: null, notPhoneVerified: null, newAccount: null, newMember: null, missingVerificationRole: null, verificationRole: null, canChat: null, accountDeadline: null, memberDeadline: null, timeoutRef: null };
+            let obj = {
+              notClaimed: null,
+              notEmailVerified: null,
+              notPhoneVerified: null,
+              newAccount: null,
+              newMember: null,
+              missingVerificationRole: null,
+              verificationRole: null,
+              canChat: null,
+              accountDeadline: null,
+              memberDeadline: null,
+              timeoutRef: null,
+            };
             obj[0] = flag6;
             obj[1] = flag5;
             obj[2] = flag4;
@@ -225,12 +240,19 @@ function handleCreateOrUpdateGuild(guild) {
 const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
 ({ VerificationLevels: closure_8, VerificationCriteria: c9, GuildFeatures: c10 } = ME);
 const GuildMemberFlags = GuildMemberFlags2.GuildMemberFlags;
-let closure_12 = { notClaimed: false, notEmailVerified: false, notPhoneVerified: false, newAccount: false, newMember: false, missingVerificationRole: false, canChat: true };
+let closure_12 = {
+  notClaimed: false,
+  notEmailVerified: false,
+  notPhoneVerified: false,
+  newAccount: false,
+  newMember: false,
+  missingVerificationRole: false,
+  canChat: true,
+};
 let set = new Set();
 let closure_14 = {};
 const Store = initializeDefault.Store;
-class GuildVerificationStore extends Store {
-}
+class GuildVerificationStore extends Store {}
 const prototype = GuildVerificationStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_5, closure_6, closure_7);
@@ -300,7 +322,7 @@ const guildVerificationStore = new GuildVerificationStore(dispatcherDefault, {
   },
   GUILD_VERIFICATION_CHECK: function handleGuildVerificationCheck(guildId) {
     recomputeGuild(guildId.guildId);
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/GuildVerificationStore.tsx");
 

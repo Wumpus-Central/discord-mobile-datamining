@@ -31,7 +31,14 @@ export const readInjectedIncodeParams = function readInjectedIncodeParams() {
               tmp2 = null;
               if (typeof interviewId === "string") {
                 if (null == theme) {
-                  obj = { apiUrl: null, sessionToken: null, consentId: null, interviewId: null, theme: null, method: null };
+                  obj = {
+                    apiUrl: null,
+                    sessionToken: null,
+                    consentId: null,
+                    interviewId: null,
+                    theme: null,
+                    method: null,
+                  };
                   obj[0] = apiUrl;
                   obj[1] = sessionToken;
                   obj[2] = consentId;
@@ -65,7 +72,15 @@ export const buildIncodeParamsInjection = function buildIncodeParamsInjection(ar
   const merged = Object.assign(arg0);
   obj.schemaVersion = 2;
   const json = JSON.stringify(JSON.stringify(obj));
-  return "if (window.location.origin === " + JSON.stringify(arg1) + ") { window." + c0 + " = JSON.parse(" + json + "); } true;";
+  return (
+    "if (window.location.origin === " +
+    JSON.stringify(arg1) +
+    ") { window." +
+    c0 +
+    " = JSON.parse(" +
+    json +
+    "); } true;"
+  );
 };
 export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str) {
   if (null == str) {
@@ -147,5 +162,11 @@ export const postIncodeFallbackRequest = function postIncodeFallbackRequest(arg0
 };
 export const buildIncodeFallbackSessionInjection = function buildIncodeFallbackSessionInjection(arg0) {
   const json = JSON.stringify(JSON.stringify(arg0));
-  return "(function(){var detail=JSON.parse(" + json + ");var key=" + JSON.stringify(c4) + ";var n=0;var apply=function(){var cb=window[key];if(typeof cb===\"function\"){cb(detail);return true;}return false;};if(apply()){return;}var id=setInterval(function(){n+=1;if(apply()||n>40){clearInterval(id);}},50);})();true;";
+  return (
+    "(function(){var detail=JSON.parse(" +
+    json +
+    ");var key=" +
+    JSON.stringify(c4) +
+    ';var n=0;var apply=function(){var cb=window[key];if(typeof cb==="function"){cb(detail);return true;}return false;};if(apply()){return;}var id=setInterval(function(){n+=1;if(apply()||n>40){clearInterval(id);}},50);})();true;'
+  );
 };

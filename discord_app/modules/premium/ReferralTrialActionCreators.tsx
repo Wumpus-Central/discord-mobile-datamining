@@ -16,7 +16,7 @@ function _fetchReferralEligibleUsers() {
     closure_2 = arg2;
     c6 = 0;
     c7 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -126,7 +126,7 @@ function _createReferralTrials() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -298,7 +298,7 @@ function _createReferralTrial() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       dependencyMap = tmp3;
       c4 = 1;
       const HTTP = lib(closure_1_2[5]).HTTP;
@@ -348,7 +348,7 @@ function _resolveReferralTrialOffer() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_3 = tmp3;
       c5 = 1;
       const HTTP = callback(closure_1_2[5]).HTTP;
@@ -426,7 +426,14 @@ obj.expiration = Date.now() + 600000;
 let map = new Map();
 let result = require("set").fileFinishedImporting("modules/premium/ReferralTrialActionCreators.tsx");
 
-export const ReferralOfferStatus = { REDEEMED: 1, [1]: "REDEEMED", PENDING: 2, [2]: "PENDING", CONVERTED: 3, [3]: "CONVERTED" };
+export const ReferralOfferStatus = {
+  REDEEMED: 1,
+  [1]: "REDEEMED",
+  PENDING: 2,
+  [2]: "PENDING",
+  CONVERTED: 3,
+  [3]: "CONVERTED",
+};
 export const CreateReferralStatus = obj;
 export const fetchReferralEligibleUsers = function fetchReferralEligibleUsers(closure_0, closure_02, closure_1) {
   const self = this;
@@ -444,70 +451,81 @@ export const fetchReferralsRemaining = function fetchReferralsRemaining() {
   const HTTP = sendRequest.HTTP;
   obj = { url: constants.GET_REFERRALS_REMAINING, oldFormErrors: true, rejectWithError: false };
   const value = HTTP.get(obj);
-  return value.then((body) => {
-    const map = new Map();
-    if (null != body.body) {
-      if (null != body.body.recipient_status) {
-        for (const key10014 in arg0.body.recipient_status) {
-          let tmp4 = key10014;
-          let result = map.set(key10014, arg0.body.recipient_status[key10014]);
-          continue;
+  return value.then(
+    (body) => {
+      const map = new Map();
+      if (null != body.body) {
+        if (null != body.body.recipient_status) {
+          for (const key10014 in arg0.body.recipient_status) {
+            let tmp4 = key10014;
+            let result = map.set(key10014, arg0.body.recipient_status[key10014]);
+            continue;
+          }
         }
       }
-    }
-    let num = 0;
-    if (null != body.body) {
-      num = 0;
-      if (null != body.body.referrals_remaining) {
-        num = body.body.referrals_remaining;
+      let num = 0;
+      if (null != body.body) {
+        num = 0;
+        if (null != body.body.referrals_remaining) {
+          num = body.body.referrals_remaining;
+        }
       }
-    }
-    obj = { type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS", referrals_remaining: num, sent_user_ids: null, refresh_at: null, recipient_status: null, has_eligible_friends: null, reminder_state_id: null };
-    if (null != body.body) {
-      if (null != body.body.sent_user_ids) {
-        const sent_user_ids = body.body.sent_user_ids;
+      obj = {
+        type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS",
+        referrals_remaining: num,
+        sent_user_ids: null,
+        refresh_at: null,
+        recipient_status: null,
+        has_eligible_friends: null,
+        reminder_state_id: null,
+      };
+      if (null != body.body) {
+        if (null != body.body.sent_user_ids) {
+          const sent_user_ids = body.body.sent_user_ids;
+        }
+        obj[2] = [];
+        body = body.body;
+        let refresh_at;
+        if (body != null) {
+          refresh_at = body.refresh_at;
+        }
+        if (refresh_at == null) {
+          refresh_at = null;
+        }
+        obj[3] = refresh_at;
+        obj[4] = map;
+        const body2 = body.body;
+        let flag;
+        if (body2 != null) {
+          flag = body2.has_eligible_friends;
+        }
+        if (flag == null) {
+          flag = false;
+        }
+        obj[5] = flag;
+        const body3 = body.body;
+        let reminder_state_id;
+        if (body3 != null) {
+          reminder_state_id = body3.reminder_state_id;
+        }
+        if (reminder_state_id == null) {
+          reminder_state_id = null;
+        }
+        obj[6] = reminder_state_id;
+        obj2.dispatch(obj);
       }
-      obj[2] = [];
-      body = body.body;
-      let refresh_at;
-      if (body != null) {
-        refresh_at = body.refresh_at;
+    },
+    (status) => {
+      status = undefined;
+      if (status != null) {
+        status = status.status;
       }
-      if (refresh_at == null) {
-        refresh_at = null;
+      if (404 !== status) {
+        callback(709).dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL" });
+        obj = callback(709);
       }
-      obj[3] = refresh_at;
-      obj[4] = map;
-      const body2 = body.body;
-      let flag;
-      if (body2 != null) {
-        flag = body2.has_eligible_friends;
-      }
-      if (flag == null) {
-        flag = false;
-      }
-      obj[5] = flag;
-      const body3 = body.body;
-      let reminder_state_id;
-      if (body3 != null) {
-        reminder_state_id = body3.reminder_state_id;
-      }
-      if (reminder_state_id == null) {
-        reminder_state_id = null;
-      }
-      obj[6] = reminder_state_id;
-      obj2.dispatch(obj);
-    }
-  }, (status) => {
-    status = undefined;
-    if (status != null) {
-      status = status.status;
-    }
-    if (404 !== status) {
-      callback(709).dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL" });
-      obj = callback(709);
-    }
-  });
+    },
+  );
 };
 export const createReferralTrials = function createReferralTrials(closure_0) {
   const self = this;

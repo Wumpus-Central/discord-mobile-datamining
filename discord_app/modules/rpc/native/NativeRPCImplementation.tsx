@@ -21,13 +21,18 @@ obj = {};
 const merged5 = Object.assign(messageEventsValidationDefault);
 const merged6 = Object.assign(RPC_AUTHENTICATED_SCOPE.createDiscordEnvironmentEvents(true));
 const merged7 = Object.assign(require("voiceSettingsEventHandlers").voiceSettingsEventHandlers);
-obj = { server: _modDef14179, commands: obj, events: obj, stores: items, transports: null, registerTransportsForEmbeddedPlatform: null };
+obj = {
+  server: _modDef14179,
+  commands: obj,
+  events: obj,
+  stores: items,
+  transports: null,
+  registerTransportsForEmbeddedPlatform: null,
+};
 items = [importDefaultResult1, importDefaultResult, importDefaultResult2];
 const items1 = [_modDef9499];
 obj[4] = items1;
-obj[5] = function registerTransportsForEmbeddedPlatform() {
-
-};
+obj[5] = function registerTransportsForEmbeddedPlatform() {};
 const result = require("set").fileFinishedImporting("modules/rpc/native/NativeRPCImplementation.tsx");
 
 export default obj;

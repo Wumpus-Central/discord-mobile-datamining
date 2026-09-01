@@ -20,7 +20,7 @@ obj = {
   perGuildMaxCount: 0,
   availableActionTypes: null,
   flags: null,
-  defaultActionTypes: null
+  defaultActionTypes: null,
 };
 let set = new Set();
 obj[4] = set;
@@ -38,9 +38,9 @@ const obj1 = {
   perGuildMaxCount: 6,
   availableActionTypes: null,
   flags: null,
-  defaultActionTypes: null
+  defaultActionTypes: null,
 };
-let items = [, , ];
+let items = [, ,];
 ({ BLOCK_MESSAGE: arr[0], FLAG_TO_CHANNEL: arr[1], USER_COMMUNICATION_DISABLED: arr[2] } = AutomodActionType);
 const set2 = new Set();
 obj1[4] = new Set(items);
@@ -60,9 +60,9 @@ const obj2 = {
   perGuildMaxCount: 1,
   availableActionTypes: null,
   flags: null,
-  defaultActionTypes: null
+  defaultActionTypes: null,
 };
-const items2 = [, ];
+const items2 = [,];
 ({ BLOCK_MESSAGE: arr3[0], FLAG_TO_CHANNEL: arr3[1] } = AutomodActionType);
 const set5 = new Set(items1);
 obj2[4] = new Set(items2);
@@ -82,9 +82,9 @@ const obj3 = {
   perGuildMaxCount: 1,
   availableActionTypes: null,
   flags: null,
-  defaultActionTypes: null
+  defaultActionTypes: null,
 };
-const items4 = [, ];
+const items4 = [,];
 ({ BLOCK_MESSAGE: arr5[0], FLAG_TO_CHANNEL: arr5[1] } = AutomodActionType);
 const set8 = new Set(items3);
 obj3[4] = new Set(items4);
@@ -104,9 +104,9 @@ const obj4 = {
   perGuildMaxCount: 1,
   availableActionTypes: null,
   flags: null,
-  defaultActionTypes: null
+  defaultActionTypes: null,
 };
-const items6 = [, , ];
+const items6 = [, ,];
 ({ BLOCK_MESSAGE: arr7[0], FLAG_TO_CHANNEL: arr7[1], USER_COMMUNICATION_DISABLED: arr7[2] } = AutomodActionType);
 const set11 = new Set(items5);
 obj4[4] = new Set(items6);
@@ -126,9 +126,9 @@ const obj5 = {
   perGuildMaxCount: 1,
   availableActionTypes: null,
   flags: null,
-  defaultActionTypes: null
+  defaultActionTypes: null,
 };
-const items8 = [, ];
+const items8 = [,];
 ({ QUARANTINE_USER: arr9[0], FLAG_TO_CHANNEL: arr9[1] } = AutomodActionType);
 const set14 = new Set(items7);
 obj5[4] = new Set(items8);
@@ -148,7 +148,7 @@ const obj6 = {
   perGuildMaxCount: 1,
   availableActionTypes: null,
   flags: null,
-  defaultActionTypes: null
+  defaultActionTypes: null,
 };
 const items10 = [AutomodActionType.FLAG_TO_CHANNEL];
 const set17 = new Set(items9);
@@ -162,7 +162,13 @@ obj[AutomodTriggerType.SERVER_POLICY] = obj6;
 const obj7 = { MEMBERS: "members", CONTENT: "content" };
 const obj8 = { [obj7.MEMBERS]: items12, [obj7.CONTENT]: items13 };
 items12 = [obj[AutomodTriggerType.USER_PROFILE]];
-items13 = [obj[AutomodTriggerType.SERVER_POLICY], obj[AutomodTriggerType.MENTION_SPAM], obj[AutomodTriggerType.ML_SPAM], obj[AutomodTriggerType.DEFAULT_KEYWORD_LIST], obj[AutomodTriggerType.KEYWORD]];
+items13 = [
+  obj[AutomodTriggerType.SERVER_POLICY],
+  obj[AutomodTriggerType.MENTION_SPAM],
+  obj[AutomodTriggerType.ML_SPAM],
+  obj[AutomodTriggerType.DEFAULT_KEYWORD_LIST],
+  obj[AutomodTriggerType.KEYWORD],
+];
 const result = set.fileFinishedImporting("modules/guild_automod/AutomodTriggerConfigs.tsx");
 
 export const AutomodTriggerConfigFlags = obj;
@@ -181,21 +187,25 @@ export const validateRuleByTriggerConfigOrThrow = function validateRuleByTrigger
   actions = actions.actions;
   closure_2 = undefined;
   closure_2 = tmp;
-  if (arr.filter((id) => {
-    let tmp = closure_0 !== id.id;
-    if (tmp) {
-      tmp = id.triggerType === triggerType;
-    }
-    return tmp;
-  }).length > obj[triggerType].perGuildMaxCount) {
+  if (
+    arr.filter((id) => {
+      let tmp = closure_0 !== id.id;
+      if (tmp) {
+        tmp = id.triggerType === triggerType;
+      }
+      return tmp;
+    }).length > obj[triggerType].perGuildMaxCount
+  ) {
     const _Error3 = Error;
     const _HermesInternal = HermesInternal;
     error = new Error("You have exceeded the maximum number of rules of type " + triggerType);
     throw error;
-  } else if (actions.some((type) => {
-    availableActionTypes = availableActionTypes.availableActionTypes;
-    return !availableActionTypes.has(type.type);
-  })) {
+  } else if (
+    actions.some((type) => {
+      availableActionTypes = availableActionTypes.availableActionTypes;
+      return !availableActionTypes.has(type.type);
+    })
+  ) {
     const _Error2 = Error;
     const error1 = new Error("You have provided an action that is not available for this trigger type");
     throw error1;
@@ -210,25 +220,28 @@ export const useAvailableTriggerTypes = function useAvailableTriggerTypes(arg0) 
   const items = [isUserProfileRuleEnabled];
   return React.useMemo(() => {
     const keys = Object.keys(closure_1_7);
-    return keys.reduce((arg0, arg1) => {
-      const found = closure_1_7[arg1].filter((type) => {
-        let tmp2 = type.type !== closure_1_3.SERVER_POLICY;
-        if (tmp2) {
-          let tmp3 = type.type === tmp.USER_PROFILE;
-          if (tmp3) {
-            tmp3 = !closure_0;
+    return keys.reduce(
+      (arg0, arg1) => {
+        const found = closure_1_7[arg1].filter((type) => {
+          let tmp2 = type.type !== closure_1_3.SERVER_POLICY;
+          if (tmp2) {
+            let tmp3 = type.type === tmp.USER_PROFILE;
+            if (tmp3) {
+              tmp3 = !closure_0;
+            }
+            let tmp5 = !tmp3;
+            if (!tmp3) {
+              tmp5 = type.perGuildMaxCount > 0;
+            }
+            tmp2 = tmp5;
           }
-          let tmp5 = !tmp3;
-          if (!tmp3) {
-            tmp5 = type.perGuildMaxCount > 0;
-          }
-          tmp2 = tmp5;
-        }
-        return tmp2;
-      });
-      arg0[arg1] = found.map((type) => type.type);
-      return arg0;
-    }, { [closure_1_6.MEMBERS]: [], [closure_1_6.CONTENT]: [] });
+          return tmp2;
+        });
+        arg0[arg1] = found.map((type) => type.type);
+        return arg0;
+      },
+      { [closure_1_6.MEMBERS]: [], [closure_1_6.CONTENT]: [] },
+    );
   }, items);
 };
 export const getDefaultTriggerMetadataForTriggerType = function getDefaultTriggerMetadataForTriggerType(arg0, arg1) {

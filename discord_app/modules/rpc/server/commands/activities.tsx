@@ -14,14 +14,17 @@ obj = {
     const result = recurseReplaceContentTree.validatePostMessageTransport(socket.socket.transport);
     const obj = recurseReplaceContentTree;
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
-  }
+  },
 };
-obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, obj);
+obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
+  RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS,
+  obj,
+);
 obj = {
   scope: require("activityInstanceConnectedParticipants").activityInstanceConnectedParticipantsScope,
   handler(socket) {
     socket = socket.socket;
-    return callback(function*() {
+    return callback(function* () {
       if (constants2 === 2) {
         constants2 = 3;
         HermesBuiltin.throwTypeError();
@@ -53,7 +56,9 @@ obj = {
               const obj9 = closure_1_0(closure_1_2[4]);
               const tmp38 = closure_1_0;
               const obj10 = closure_1_0(closure_1_2[4]);
-              const validateApplicationResult = closure_1_0(closure_1_2[4]).validateApplication(closure_1_0.application);
+              const validateApplicationResult = closure_1_0(closure_1_2[4]).validateApplication(
+                closure_1_0.application,
+              );
               if (obj11.hasApplicationFlag(closure_1_0.application, constants2.EMBEDDED)) {
                 const tmp26 = tmp46(tmp47[7])();
                 c3 = 1;
@@ -109,9 +114,12 @@ obj = {
         }
       }
     })();
-  }
+  },
 };
-obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.REQUEST_PROXY_TICKET_REFRESH, obj);
+obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
+  RPCCommands.REQUEST_PROXY_TICKET_REFRESH,
+  obj,
+);
 let result = require("set").fileFinishedImporting("modules/rpc/server/commands/activities.tsx");
 
 export default obj;

@@ -118,7 +118,7 @@ const memoResult = importAllResult.memo(function CutoutImage(cutoutTopLeftSize) 
     obj2[5] = imageBorderRadius;
     tmp16 = callback2(tmp(8241).Rect, obj2);
   }
-  const items1 = [tmp16, , , , , ];
+  const items1 = [tmp16, , , , ,];
   let tmp15Result = null;
   if (num > 0) {
     const obj3 = { cx: null, cy: null, r: null, fill: "black" };
@@ -158,12 +158,12 @@ const memoResult = importAllResult.memo(function CutoutImage(cutoutTopLeftSize) 
   if (num14 <= 0) {
     items1[5] = null;
     obj[3] = items1;
-    const items2 = [tmp12(tmp(8241).Mask, obj), ];
+    const items2 = [tmp12(tmp(8241).Mask, obj)];
     if (null == v4Result) {
       const obj7 = { children: null };
       items2[1] = null;
       obj7[0] = items2;
-      const items3 = [tmp12(tmp(8241).Defs, obj7), , , ];
+      const items3 = [tmp12(tmp(8241).Defs, obj7), , ,];
       let tmp15Result3 = null;
       if (null != imageBackgroundColor) {
         const obj8 = { height: null, width: null, fill: null, mask: null, clipPath: null };
@@ -179,7 +179,17 @@ const memoResult = importAllResult.memo(function CutoutImage(cutoutTopLeftSize) 
         items3[2] = null;
         let tmp15Result4 = null;
         if (null != borderStroke) {
-          const obj9 = { height: null, width: null, fill: "transparent", stroke: null, strokeWidth: null, mask: null, clipPath: null, rx: null, ry: null };
+          const obj9 = {
+            height: null,
+            width: null,
+            fill: "transparent",
+            stroke: null,
+            strokeWidth: null,
+            mask: null,
+            clipPath: null,
+            rx: null,
+            ry: null,
+          };
           obj9[0] = imageSize;
           obj9[1] = imageSize;
           obj9[3] = cutoutTopLeftSize.borderStrokeColor;

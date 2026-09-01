@@ -5,7 +5,9 @@ import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx",
+);
 
 export default function MoreButton(channel) {
   channel = channel.channel;
@@ -27,4 +29,4 @@ export default function MoreButton(channel) {
     }
   }
   return tmp2;
-};
+}

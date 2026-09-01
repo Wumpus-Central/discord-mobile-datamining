@@ -4,8 +4,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 
 let c0 = null;
 const Store = initializeDefault.Store;
-class UnclaimedGamesStore extends Store {
-}
+class UnclaimedGamesStore extends Store {}
 const prototype = UnclaimedGamesStore.prototype;
 prototype["getMap"] = function getMap() {
   return c0;
@@ -53,7 +52,7 @@ const unclaimedGamesStore = new UnclaimedGamesStore(dispatcherDefault, {
   },
   UNCLAIMED_GAMES_FETCH_SUCCESS: function handleFetchSuccess(guildIdToGameIds) {
     guildIdToGameIds = guildIdToGameIds.guildIdToGameIds;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/game_claim/UnclaimedGamesStore.tsx");
 

@@ -11,7 +11,7 @@ function _startAuthorizationNoHook() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -101,7 +101,9 @@ function _startAuthorizationNoHook() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/application_account_linking/native/startAuthorizationNoHook.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/application_account_linking/native/startAuthorizationNoHook.tsx",
+);
 
 export const startAuthorizationNoHook = function startAuthorizationNoHook(application, items) {
   const self = this;

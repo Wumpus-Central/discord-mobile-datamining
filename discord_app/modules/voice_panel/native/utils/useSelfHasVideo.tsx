@@ -13,4 +13,4 @@ export default function useSelfHasVideo(arg0) {
     const participant = closure_1_2.getParticipant(callback, closure_1_3.getId());
     return callback(closure_1_1[4]).canRenderParticipantVideo(participant, closure_1_4);
   });
-};
+}

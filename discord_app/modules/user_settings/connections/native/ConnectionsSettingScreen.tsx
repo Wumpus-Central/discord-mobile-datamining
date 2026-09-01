@@ -28,11 +28,13 @@ const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
         const intl = callback(1236).intl;
         obj.label = intl.string(callback(1236).t.OYkgVk);
         return callback2(callback(7607).HeaderTextButton, obj);
-      }
+      },
     });
   }, items);
   return jsx(tmp(14564).UserSettingsConnections, { selectedPlatformType });
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/ConnectionsSettingScreen.tsx",
+);
 
 export default memoResult;

@@ -15,7 +15,11 @@ export const useAddToWishlistGridItems = function useAddToWishlistGridItems(user
   let memo;
   closure_4 = undefined;
   let obj = wishlist(maxWishlistItemsToShow[2]);
-  const recommendationsForSingleUser = obj.useRecommendationsForSingleUser({ userId: userId.userId, numItems: numWishlistItemsToRecommend, source: userId.source });
+  const recommendationsForSingleUser = obj.useRecommendationsForSingleUser({
+    userId: userId.userId,
+    numItems: numWishlistItemsToRecommend,
+    source: userId.source,
+  });
   recommendations = recommendationsForSingleUser.recommendations;
   const status = recommendationsForSingleUser.status;
   let items = [wishlist];
@@ -47,7 +51,7 @@ export const useAddToWishlistGridItems = function useAddToWishlistGridItems(user
       }
       return mapped.slice(0, maxWishlistItemsToShow);
     }, items1),
-    status
+    status,
   };
   items1 = [recommendations, memo, tmp2, maxWishlistItemsToShow];
   return obj;

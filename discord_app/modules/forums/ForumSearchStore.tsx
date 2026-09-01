@@ -5,8 +5,7 @@ import closure_0 from "../../stores/ChannelStore.tsx";
 
 let closure_1 = {};
 const Store = initializeDefault.Store;
-class ForumSearchStore extends Store {
-}
+class ForumSearchStore extends Store {}
 const prototype = ForumSearchStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_0);
@@ -155,7 +154,7 @@ const forumSearchStore = new ForumSearchStore(dispatcherDefault, {
       delete tmp[tmp2];
     }
     return tmp4;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/forums/ForumSearchStore.tsx");
 

@@ -8,7 +8,10 @@ import SettingsItemAppIconDefault from "../../../app_icons/native/SettingsItemAp
 import createDismissiblePremiumNewBadgeRouteProps from "DismissiblePremiumNewBadgeRouteProps.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-const dismissiblePremiumNewBadgeRouteProps = createDismissiblePremiumNewBadgeRouteProps.createDismissiblePremiumNewBadgeRouteProps(DismissibleContent.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE);
+const dismissiblePremiumNewBadgeRouteProps =
+  createDismissiblePremiumNewBadgeRouteProps.createDismissiblePremiumNewBadgeRouteProps(
+    DismissibleContent.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE,
+  );
 ({ useTrailing, usePreNavigationAction } = dismissiblePremiumNewBadgeRouteProps);
 obj = {
   useTitle() {
@@ -22,13 +25,13 @@ obj = {
   usePredicate() {
     return fetchCurrentAppIcon.isAppIconsSupported();
   },
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.APP_ICONS,
   getComponent() {
     return require("../../app_icon/native/UserSettingsAppIcons.tsx").default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AppIconsSetting.tsx");

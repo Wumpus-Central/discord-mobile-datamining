@@ -23,7 +23,7 @@ let obj = {
     const obj2 = useAgeVerificationRunner;
     const obj3 = isFeatureAgeGated;
     return isFeatureAgeGated.useHasAgeGatedFeatures() && isAgeVerified && !isVerifiedTeen;
-  }
+  },
 };
 const createStaticResult = createToggle.createStatic({
   useTitle() {
@@ -42,7 +42,7 @@ const createStaticResult = createToggle.createStatic({
     const obj2 = useAgeVerificationRunner;
     const obj3 = isFeatureAgeGated;
     return isFeatureAgeGated.useHasAgeGatedFeatures() && isAgeVerified && !isVerifiedTeen;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupAdultSetting.tsx");
 

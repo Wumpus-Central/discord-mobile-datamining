@@ -18,7 +18,7 @@ function GuildRoleSubscriptionsSectionHeader() {
   obj = { variant: "eyebrow", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["KzCF/6"]);
-  const items = [callback(Text.Text, obj), ];
+  const items = [callback(Text.Text, obj)];
   obj = { style: tmp.sectionSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = getSystemLocale.intl;
   obj[3] = intl2.string(getSystemLocale.t["Y+ucR7"]);
@@ -40,8 +40,16 @@ noopAll;
 ({ View: c3, SectionList: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let c7 = "role-subscriptions";
-let closure_8 = createCacheKey.createStyles({ container: { flex: 1 }, list: { flex: 1 }, listContentContainer: { paddingHorizontal: 16 }, sectionHeader: { paddingVertical: 24 }, sectionSubtitle: { marginTop: 4 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptions.tsx");
+let closure_8 = createCacheKey.createStyles({
+  container: { flex: 1 },
+  list: { flex: 1 },
+  listContentContainer: { paddingHorizontal: 16 },
+  sectionHeader: { paddingVertical: 24 },
+  sectionSubtitle: { marginTop: 4 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptions.tsx",
+);
 
 export default function UserSettingsGuildRoleSubscriptions() {
   const tmp = callback3();
@@ -53,7 +61,16 @@ export default function UserSettingsGuildRoleSubscriptions() {
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    obj = { contentContainerStyle: null, style: null, sections: null, stickySectionHeadersEnabled: false, keyExtractor: null, renderSectionHeader: null, renderItem: null, ItemSeparatorComponent: null };
+    obj = {
+      contentContainerStyle: null,
+      style: null,
+      sections: null,
+      stickySectionHeadersEnabled: false,
+      keyExtractor: null,
+      renderSectionHeader: null,
+      renderItem: null,
+      ItemSeparatorComponent: null,
+    };
     ({ listContentContainer: obj3[0], list: obj3[1] } = tmp);
     obj1 = { key: null, data: null };
     obj1[0] = c7;
@@ -72,4 +89,4 @@ export default function UserSettingsGuildRoleSubscriptions() {
     tmp6Result = tmp6(closure_3, obj);
   }
   return tmp6Result;
-};
+}

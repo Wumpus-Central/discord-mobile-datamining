@@ -20,7 +20,7 @@ export default function useKeyboardActionSheetHeight() {
     minimum = Math.max(0, maximum - NAV_BAR_HEIGHT.NAV_BAR_HEIGHT_MULTILINE);
   }
   return { minimum, maximum };
-};
+}
 export const getKeyboardActionSheetHeight = function getKeyboardActionSheetHeight() {
   const safeAreaInsets = useSafeAreaInsets.getSafeAreaInsets();
   const obj = useSafeAreaInsets;

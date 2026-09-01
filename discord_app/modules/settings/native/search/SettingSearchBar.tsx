@@ -31,7 +31,33 @@ export default function SettingSearchBar() {
   const callback3 = React.useCallback((query) => {
     store.setState({ query });
   }, []);
-  obj = { ref: React.useRef(null), size: "md", onFocus: callback1, onBlur: callback2, onClear: callback, defaultValue: field.getField("query"), onChange: callback3 };
-  obj[1] = jsx(SearchField.SearchField, { ref: React.useRef(null), size: "md", onFocus: callback1, onBlur: callback2, onClear: callback, defaultValue: field.getField("query"), onChange: callback3 });
-  return <View ref={React.useRef(null)} size="md" onFocus={callback1} onBlur={callback2} onClear={callback} defaultValue={field.getField("query")} onChange={callback3} />;
-};
+  obj = {
+    ref: React.useRef(null),
+    size: "md",
+    onFocus: callback1,
+    onBlur: callback2,
+    onClear: callback,
+    defaultValue: field.getField("query"),
+    onChange: callback3,
+  };
+  obj[1] = jsx(SearchField.SearchField, {
+    ref: React.useRef(null),
+    size: "md",
+    onFocus: callback1,
+    onBlur: callback2,
+    onClear: callback,
+    defaultValue: field.getField("query"),
+    onChange: callback3,
+  });
+  return (
+    <View
+      ref={React.useRef(null)}
+      size="md"
+      onFocus={callback1}
+      onBlur={callback2}
+      onClear={callback}
+      defaultValue={field.getField("query")}
+      onChange={callback3}
+    />
+  );
+}

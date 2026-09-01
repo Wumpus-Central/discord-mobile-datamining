@@ -14,7 +14,13 @@ import ME from "../../Constants.tsx";
 require = arg1;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7507).ReactionTypes.VOTE);
+  reactions = reactions.getReactions(
+    channelId,
+    message.id,
+    { id, name: "", animated: false },
+    closure_9,
+    channel(7507).ReactionTypes.VOTE,
+  );
   channel = channel.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -35,14 +41,20 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
   const tmp5 = guildId(12);
   const tmp5Result = guildId(12)(Array.from(items));
   const rejectResult = guildId(12)(Array.from(items)).reject((id) => blockedOrIgnored.isBlockedOrIgnored(id.id));
-  const takeResult = guildId(12)(Array.from(items)).reject((id) => blockedOrIgnored.isBlockedOrIgnored(id.id)).take(tmp2);
-  return guildId(12)(Array.from(items)).reject((id) => blockedOrIgnored.isBlockedOrIgnored(id.id)).take(tmp2).map((arg0) => {
-    let id;
-    if (channel != null) {
-      id = channel.id;
-    }
-    return guildId(closure_1_2[16]).getName(guildId, id, arg0);
-  }).value();
+  const takeResult = guildId(12)(Array.from(items))
+    .reject((id) => blockedOrIgnored.isBlockedOrIgnored(id.id))
+    .take(tmp2);
+  return guildId(12)(Array.from(items))
+    .reject((id) => blockedOrIgnored.isBlockedOrIgnored(id.id))
+    .take(tmp2)
+    .map((arg0) => {
+      let id;
+      if (channel != null) {
+        id = channel.id;
+      }
+      return guildId(closure_1_2[16]).getName(guildId, id, arg0);
+    })
+    .value();
 }
 function formatVoterTooltipText(arr, arg1) {
   let first = arr;
@@ -131,10 +143,12 @@ export const useCanPostPollsInChannel = function useCanPostPollsInChannel(channe
       if (hasItem) {
         let isPrivateResult = obj.isPrivate();
         if (!isPrivateResult) {
-          isPrivateResult = closure_1_6.can(closure_1_11.SEND_MESSAGES, obj) && closure_1_6.can(closure_1_11.SEND_POLLS, obj);
+          isPrivateResult =
+            closure_1_6.can(closure_1_11.SEND_MESSAGES, obj) && closure_1_6.can(closure_1_11.SEND_POLLS, obj);
           const obj2 = closure_1_6;
           const tmp7 = closure_1_11;
-          const tmp8 = closure_1_6.can(closure_1_11.SEND_MESSAGES, obj) && closure_1_6.can(closure_1_11.SEND_POLLS, obj);
+          const tmp8 =
+            closure_1_6.can(closure_1_11.SEND_MESSAGES, obj) && closure_1_6.can(closure_1_11.SEND_POLLS, obj);
         }
         hasItem = isPrivateResult;
       }
@@ -146,17 +160,19 @@ export const useCanPostPollsInChannel = function useCanPostPollsInChannel(channe
 export const isPollCreationEmpty = function isPollCreationEmpty(c4, answers) {
   let tmp = 0 === c4.length;
   if (tmp) {
-    tmp = null == answers.find((text) => {
-      let trimmed;
-      if (text.text != null) {
-        trimmed = str.trim();
-      }
-      let tmp2 = null != trimmed;
-      if (tmp2) {
-        tmp2 = trimmed.length > 0;
-      }
-      return tmp2;
-    });
+    tmp =
+      null ==
+      answers.find((text) => {
+        let trimmed;
+        if (text.text != null) {
+          trimmed = str.trim();
+        }
+        let tmp2 = null != trimmed;
+        if (tmp2) {
+          tmp2 = trimmed.length > 0;
+        }
+        return tmp2;
+      });
   }
   return tmp;
 };
@@ -360,7 +376,7 @@ export const formatPollResultNotificationCenterText = function formatPollResultN
   ({ victorAnswerText, victorAnswerId } = totalVotes);
   if (totalVotes.totalVotes > 0) {
     const _Math = Math;
-    num = Math.round(tmp / totalVotes * 100);
+    num = Math.round((tmp / totalVotes) * 100);
   }
   if (0 === totalVotes) {
     const intl3 = getSystemLocale.intl;

@@ -35,7 +35,7 @@ prototype["getExportBatchSize"] = function getExportBatchSize() {
 prototype["exportEntries"] = function exportEntries(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return callback(function*() {
+  return callback(function* () {
     if (table === 2) {
       table = 3;
       HermesBuiltin.throwTypeError();
@@ -101,14 +101,16 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
               let num6 = 1;
               table = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = Promise.all(items.map((arg0, arg1) => {
-                let flush = closure_1;
-                ({ key, props } = arg0);
-                if (closure_1) {
-                  flush = arg1 === length.length - 1;
-                }
-                return closure_2_1(table[5]).track(key, props, { flush });
-              }));
+              obj2[0] = Promise.all(
+                items.map((arg0, arg1) => {
+                  let flush = closure_1;
+                  ({ key, props } = arg0);
+                  if (closure_1) {
+                    flush = arg1 === length.length - 1;
+                  }
+                  return closure_2_1(table[5]).track(key, props, { flush });
+                }),
+              );
               return obj2;
             }
           }
@@ -147,7 +149,15 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
 };
 let items = [require("TelemetryChannel").TelemetryChannel.ZOOMED];
 // ThrowIfThisInitialized (0x7c)
-let tmp5 = new "exportEntries"(importDefaultResult1, items, tmp, prototype, ZoomedInTelemetryImpl, "exportEntries", importDefaultResult1);
+let tmp5 = new "exportEntries"(
+  importDefaultResult1,
+  items,
+  tmp,
+  prototype,
+  ZoomedInTelemetryImpl,
+  "exportEntries",
+  importDefaultResult1,
+);
 const result = require("set").fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx");
 
 export default tmp5;

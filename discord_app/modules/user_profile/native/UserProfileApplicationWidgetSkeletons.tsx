@@ -12,7 +12,9 @@ createCacheKey = { skeleton: null };
 createCacheKey = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
 createCacheKey[0] = createCacheKey;
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetSkeletons.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_profile/native/UserProfileApplicationWidgetSkeletons.tsx",
+);
 
 export const ImageSkeleton = function ImageSkeleton(style) {
   const obj = { style: null };

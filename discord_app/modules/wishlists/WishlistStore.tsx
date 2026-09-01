@@ -10,8 +10,7 @@ import closure_5 from "records/WishlistRecord.tsx";
 ({ getWishlistSkuIds: c3, wishlistHasSkuId: c4 } = fromServer);
 let closure_6 = {};
 const Store = initializeDefault.Store;
-class WishlistStore extends Store {
-}
+class WishlistStore extends Store {}
 const prototype = WishlistStore.prototype;
 prototype["get"] = function get(arg0) {
   let obj = dependencyMap[arg0];
@@ -220,7 +219,7 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
     if (tmp2) {
       dependencyMap[firstWishlistId].updatedAt = undefined;
     }
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/wishlists/WishlistStore.tsx");
 

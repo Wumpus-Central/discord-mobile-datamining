@@ -4,7 +4,9 @@ import { MODE_CHANGE_PHYSICS } from "../../VoicePanelConstants.tsx";
 import { CALL_TILE_GUTTER } from "../card/VoicePanelCardConstants.tsx";
 
 const require = arg1;
-let closure_6 = { code: "function useControlsTranslationTsx1(){const{withSpring,wrapperSpecs,MODE_CHANGE_PHYSICS,useReducedMotion,CALL_TILE_GUTTER,viewHeight}=this.__closure;return{transform:[{translateX:withSpring(wrapperSpecs.get().x,MODE_CHANGE_PHYSICS)},{translateY:withSpring(!useReducedMotion.get()&&wrapperSpecs.get().hidden?wrapperSpecs.get().height+CALL_TILE_GUTTER+viewHeight.get():wrapperSpecs.get().y,MODE_CHANGE_PHYSICS)}]};}" };
+let closure_6 = {
+  code: "function useControlsTranslationTsx1(){const{withSpring,wrapperSpecs,MODE_CHANGE_PHYSICS,useReducedMotion,CALL_TILE_GUTTER,viewHeight}=this.__closure;return{transform:[{translateX:withSpring(wrapperSpecs.get().x,MODE_CHANGE_PHYSICS)},{translateY:withSpring(!useReducedMotion.get()&&wrapperSpecs.get().hidden?wrapperSpecs.get().height+CALL_TILE_GUTTER+viewHeight.get():wrapperSpecs.get().y,MODE_CHANGE_PHYSICS)}]};}",
+};
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useControlsTranslation.tsx");
 
 export default function useControlsTranslation(arg0, wrapperSpecs, viewHeight) {
@@ -19,7 +21,7 @@ export default function useControlsTranslation(arg0, wrapperSpecs, viewHeight) {
       obj3 = closure_0;
       tmp = closure_1_4;
       obj[0] = obj2.withSpring(closure_0.get().x, closure_1_4);
-      items = [, ];
+      items = [,];
       items[0] = obj;
       obj4 = closure_0(useReducedMotion[5]);
       if (!useReducedMotion.get()) {
@@ -40,9 +42,16 @@ export default function useControlsTranslation(arg0, wrapperSpecs, viewHeight) {
       return;
     }
   }
-  obj = { withSpring: _require(useReducedMotion[5]).withSpring, wrapperSpecs, MODE_CHANGE_PHYSICS, useReducedMotion, CALL_TILE_GUTTER, viewHeight };
+  obj = {
+    withSpring: _require(useReducedMotion[5]).withSpring,
+    wrapperSpecs,
+    MODE_CHANGE_PHYSICS,
+    useReducedMotion,
+    CALL_TILE_GUTTER,
+    viewHeight,
+  };
   S.__closure = obj;
   S.__workletHash = 11281989557090;
   S.__initData = closure_6;
   return obj.useAnimatedStyle(S);
-};
+}

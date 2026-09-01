@@ -27,7 +27,7 @@ createToggle = {
     const intl = getSystemLocale.intl;
     const items = [intl.string(getSystemLocale.t.nuFtHH)];
     return items;
-  }
+  },
 };
 createToggle = createToggle.createPressable(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InputModeSetting.tsx");

@@ -11,4 +11,4 @@ export default function isOnMetaQuest(platform) {
     platform = platform.platform;
   }
   return platform === ActivityGamePlatforms.META_QUEST;
-};
+}

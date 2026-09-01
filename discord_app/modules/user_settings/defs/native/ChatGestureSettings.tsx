@@ -44,13 +44,13 @@ const radio = createToggle.createRadio({
     obj[1] = intl.string(getSystemLocale.t["6eXLcJ"]);
     const intl2 = getSystemLocale.intl;
     obj[2] = intl2.string(getSystemLocale.t.ohhhDK);
-    const items = [obj, ];
+    const items = [obj];
     obj = { value: create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, label: null };
     const intl3 = getSystemLocale.intl;
     obj[1] = intl3.string(getSystemLocale.t["3tYNDS"]);
     items[1] = obj;
     return items;
-  }
+  },
 });
 let obj = {
   useTitle() {
@@ -79,13 +79,13 @@ let obj = {
     obj[1] = intl.string(getSystemLocale.t["6eXLcJ"]);
     const intl2 = getSystemLocale.intl;
     obj[2] = intl2.string(getSystemLocale.t.ohhhDK);
-    const items = [obj, ];
+    const items = [obj];
     obj = { value: create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, label: null };
     const intl3 = getSystemLocale.intl;
     obj[1] = intl3.string(getSystemLocale.t["3tYNDS"]);
     items[1] = obj;
     return items;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ChatGestureSettings.tsx");
 

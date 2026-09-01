@@ -14,8 +14,24 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 ({ AnalyticsSections: closure_8, MessageFlags: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { summaryContainer: { padding: 16, margin: 16, marginBottom: 24, justifyContent: "center", alignItems: "center" }, summaryContent: { textAlign: "center" }, summaryIconContainer: null, summaryIcon: null, summaryTopic: null, divider: null, actionsContainer: null };
-createCacheKey = { marginBottom: 8, borderRadius: ThemesDefault.radii.round, border: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+createCacheKey = {
+  summaryContainer: { padding: 16, margin: 16, marginBottom: 24, justifyContent: "center", alignItems: "center" },
+  summaryContent: { textAlign: "center" },
+  summaryIconContainer: null,
+  summaryIcon: null,
+  summaryTopic: null,
+  divider: null,
+  actionsContainer: null,
+};
+createCacheKey = {
+  marginBottom: 8,
+  borderRadius: ThemesDefault.radii.round,
+  border: 1,
+  overflow: "hidden",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { margin: 8, width: 20, height: 20, tintColor: ThemesDefault.colors.WHITE };
 createCacheKey[4] = { marginBottom: 4 };
@@ -134,21 +150,34 @@ export default function SummaryActionSheet(summary) {
   obj = { style: tmp.summaryContainer, children: null };
   const ref = React.useRef(null);
   obj2 = { style: tmp.summaryIcon, size: "custom" };
-  const items4 = [callback(View, { style: tmp.summaryIconContainer, children: callback(summary(message[25]).TopicsIcon, obj2) }), , ];
-  const items5 = [, ];
+  const items4 = [
+    callback(View, { style: tmp.summaryIconContainer, children: callback(summary(message[25]).TopicsIcon, obj2) }),
+    ,
+  ];
+  const items5 = [,];
   ({ summaryContent: arr6[0], summaryTopic: arr6[1] } = tmp);
-  items4[1] = callback(summary(message[26]).Text, { style: items5, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: summary.topic });
+  items4[1] = callback(summary(message[26]).Text, {
+    style: items5,
+    variant: "heading-md/extrabold",
+    color: "mobile-text-heading-primary",
+    children: summary.topic,
+  });
   const items6 = [tmp.summaryContent];
-  items4[2] = callback(summary(message[26]).Text, { style: items6, variant: "heading-md/medium", color: "text-default", children: summary.summShort });
+  items4[2] = callback(summary(message[26]).Text, {
+    style: items6,
+    variant: "heading-md/medium",
+    color: "text-default",
+    children: summary.summShort,
+  });
   obj[1] = items4;
-  const items7 = [callback2(View, obj), callback(View, { style: tmp.divider }), ];
+  const items7 = [callback2(View, obj), callback(View, { style: tmp.divider })];
   let obj6 = { style: tmp.actionsContainer, children: null };
   const obj7 = { label: null, iconSource: null, onPress: null };
   let intl = summary(message[15]).intl;
   obj7[0] = intl.string(summary(message[15]).t["NY/nlb"]);
   obj7[1] = channel(message[28]);
   obj7[2] = callback1;
-  const items8 = [callback(summary(message[27]).SummaryActionSheetButton, obj7), , , ];
+  const items8 = [callback(summary(message[27]).SummaryActionSheetButton, obj7), , ,];
   if (canStartPublicThread) {
     const obj8 = { label: null, iconSource: null, onPress: null };
     let intl2 = tmp16(tmp17[15]).intl;
@@ -179,7 +208,7 @@ export default function SummaryActionSheet(summary) {
   obj10[1] = items7;
   obj[1] = callback2(summary(message[24]).SafeAreaPaddingView, obj10);
   return callback(summary(message[23]).BottomSheet, obj);
-};
+}
 export const openSummaryDividerActionSheet = function openSummaryDividerActionSheet(channelId, summaryId) {
   const findSummaryResult = closure_7.findSummary(channelId, summaryId);
   if (null != findSummaryResult) {

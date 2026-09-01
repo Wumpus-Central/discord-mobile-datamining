@@ -4,7 +4,9 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import map from "../../../../../design/tokens/native/useToken.tsx";
 import getFontScale from "../../../../screen/native/useFontScale.tsx";
 
-let result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useScaledRowHeight.tsx");
+let result = set.fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/useScaledRowHeight.tsx",
+);
 
 export default function useScaledRowHeight() {
   const fontScale = getFontScale.useFontScale();
@@ -13,7 +15,7 @@ export default function useScaledRowHeight() {
   const obj2 = map;
   const token1 = map.useToken(ThemesDefault.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);
   return token + Math.max(fontScale * token1 - token1, 0);
-};
+}
 export const useScaledRowHeightData = function useScaledRowHeightData() {
   let obj = getFontScale;
   const fontScale = obj.useFontScale();

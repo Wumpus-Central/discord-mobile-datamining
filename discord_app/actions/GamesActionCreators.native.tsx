@@ -24,50 +24,45 @@ function fetchJoinSecret(application) {
   }
   id(709).dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: id, remotePartyId });
   const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-  obj = { url: closure_4.USER_ACTIVITY_JOIN(userId, sessionId, id), retries: 3, query: tmp2, oldFormErrors: true, rejectWithError: true };
+  obj = {
+    url: closure_4.USER_ACTIVITY_JOIN(userId, sessionId, id),
+    retries: 3,
+    query: tmp2,
+    oldFormErrors: true,
+    rejectWithError: true,
+  };
   const value = HTTP.get(obj);
-  return value.then((arg0) => f122398(arg0), () => {
-    let obj = id(application[7]);
-    obj = { type: "ACTIVITY_JOIN_FAILED", applicationId: id };
-    obj.dispatch(obj);
-    return false;
-  });
+  return value.then(
+    (arg0) => f122398(arg0),
+    () => {
+      let obj = id(application[7]);
+      obj = { type: "ACTIVITY_JOIN_FAILED", applicationId: id };
+      obj.dispatch(obj);
+      return false;
+    },
+  );
 }
 ({ Endpoints: c4, DiscordConnectDeeplinks: c5, WebBrowserType: closure_6, ActivityFlags: error } = ME);
 const result = require("set").fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 
 export default {
-  addGame() {
-
-  },
-  toggleOverlay() {
-
-  },
-  editName() {
-
-  },
+  addGame() {},
+  toggleOverlay() {},
+  editName() {},
   identifyGame() {
     error = new Error("not supported");
     return Promise.reject(error);
   },
-  getDetectableGames() {
-
-  },
-  reportUnverifiedGame() {
-
-  },
-  uploadIcon() {
-
-  },
-  deleteEntry() {
-
-  },
+  getDetectableGames() {},
+  reportUnverifiedGame() {},
+  uploadIcon() {},
+  deleteEntry() {},
   launch() {
     return Promise.resolve();
   },
   join(arg0) {
     closure_0 = arg0;
-    return callback(function*() {
+    return callback(function* () {
       if (table === 2) {
         table = 3;
         HermesBuiltin.throwTypeError();
@@ -116,7 +111,13 @@ export default {
                   obj2[0] = tmp14Result.launchFrame(obj1);
                   return obj2;
                 } else {
-                  let obj3 = { applicationId: null, activityChannelId: null, source: null, locationObject: null, analyticsLocations: null };
+                  let obj3 = {
+                    applicationId: null,
+                    activityChannelId: null,
+                    source: null,
+                    locationObject: null,
+                    analyticsLocations: null,
+                  };
                   obj3[0] = application.id;
                   c1 = channelId;
                   tmp14Result = tmp14(tmp13[11]);
@@ -157,7 +158,14 @@ export default {
                     if (null != join_url) {
                       id(application[6]).openURL(join_url, closure_1_6.SAFARI);
                       const obj3 = id(application[6]);
-                      let obj = { type: "ACTIVITY_JOIN", applicationId: null, parentApplicationId: null, secret: null, intent: null, embedded: null };
+                      let obj = {
+                        type: "ACTIVITY_JOIN",
+                        applicationId: null,
+                        parentApplicationId: null,
+                        secret: null,
+                        intent: null,
+                        embedded: null,
+                      };
                       ({ id: obj5[1], parent_id: obj5[2] } = application);
                       obj[3] = secret;
                       obj[4] = closure_1_8.PLAY;
@@ -181,7 +189,14 @@ export default {
                         const combined = "" + str.replace(/\/+$/, "") + closure_1_5.GAME_INVITE_FRAGMENT + secret;
                         id(application[6]).openURL(combined, closure_1_6.SAFARI);
                         const obj6 = id(application[6]);
-                        obj1 = { type: "ACTIVITY_JOIN", applicationId: null, parentApplicationId: null, secret: null, intent: null, embedded: null };
+                        obj1 = {
+                          type: "ACTIVITY_JOIN",
+                          applicationId: null,
+                          parentApplicationId: null,
+                          secret: null,
+                          intent: null,
+                          embedded: null,
+                        };
                         ({ id: obj8[1], parent_id: obj8[2] } = application);
                         obj1[3] = secret;
                         obj1[4] = closure_1_8.PLAY;
@@ -214,14 +229,23 @@ export default {
                   }
                   id(application[7]).dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: id, remotePartyId });
                   const HTTP = tmp(tmp2[8]).HTTP;
-                  obj = { url: closure_4.USER_ACTIVITY_JOIN(userId, sessionId, id), retries: 3, query: tmp8, oldFormErrors: true, rejectWithError: true };
+                  obj = {
+                    url: closure_4.USER_ACTIVITY_JOIN(userId, sessionId, id),
+                    retries: 3,
+                    query: tmp8,
+                    oldFormErrors: true,
+                    rejectWithError: true,
+                  };
                   const value = HTTP.get(obj);
-                  resolved = value.then((arg0) => f122398(arg0), () => {
-                    let obj = id(application[7]);
-                    obj = { type: "ACTIVITY_JOIN_FAILED", applicationId: id };
-                    obj.dispatch(obj);
-                    return false;
-                  });
+                  resolved = value.then(
+                    (arg0) => f122398(arg0),
+                    () => {
+                      let obj = id(application[7]);
+                      obj = { type: "ACTIVITY_JOIN_FAILED", applicationId: id };
+                      obj.dispatch(obj);
+                      return false;
+                    },
+                  );
                 })(tmp25);
               }
             }
@@ -262,5 +286,5 @@ export default {
   joinWithSecret(str) {
     const combined = "" + str.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + arg1;
     _modDef4190.openURL(combined, constants2.SAFARI);
-  }
+  },
 };

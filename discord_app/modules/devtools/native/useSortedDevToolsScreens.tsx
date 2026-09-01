@@ -69,7 +69,7 @@ export default function useSortedDevToolsScreens() {
     }
     return num2;
   });
-};
+}
 export const updateSortOrder = function updateSortOrder(closure_0, down) {
   const items = [...closure_3.sortedScreenKeys];
   const tmp = getSortedDevToolsScreens();

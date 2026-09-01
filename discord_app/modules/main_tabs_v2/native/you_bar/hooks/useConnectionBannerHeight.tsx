@@ -6,7 +6,9 @@ import { ConnectivityIndicatorState as closure_4 } from "../../../../connectivit
 import { CONNECTION_BANNER_HEIGHT } from "../YouBarConstants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx",
+);
 
 export const useConnectionBannerHeight = function useConnectionBannerHeight() {
   const config = apexExperimentDefault.useConfig({ location: "useConnectionBannerHeight" });

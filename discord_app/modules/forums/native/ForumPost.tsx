@@ -14,7 +14,11 @@ function ForumPostGrid(arg0) {
   ({ hasUnreads, thread } = arg0);
   const obj = { children: null };
   ({ firstMessage, isNew, media, parentChannel } = arg0);
-  const items = [callback(ForumPostGridHeaderDefault, { thread, hasUnreads, isNew }), callback(GIFIconDefault, { thread, hasUnreads, media }), callback(ForumPostGridFooterDefault, { thread, firstMessage, hasUnreads, parentChannel })];
+  const items = [
+    callback(ForumPostGridHeaderDefault, { thread, hasUnreads, isNew }),
+    callback(GIFIconDefault, { thread, hasUnreads, media }),
+    callback(ForumPostGridFooterDefault, { thread, firstMessage, hasUnreads, parentChannel }),
+  ];
   obj[0] = items;
   return callback2(closure_7, obj);
 }
@@ -28,7 +32,10 @@ function ConnectedForumPost(arg0) {
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getChannel(closure_0));
   let tmp3 = parent_id;
-  parent_id(firstMessage[9])(null != stateFromStores, "[Forum Post] The thread should not be null here. A store must have missed an update.");
+  parent_id(firstMessage[9])(
+    null != stateFromStores,
+    "[Forum Post] The thread should not be null here. A store must have missed an update.",
+  );
   parent_id = stateFromStores.parent_id;
   obj1 = require(firstMessage[8]);
   const items1 = [closure_3];
@@ -43,7 +50,11 @@ function ConnectedForumPost(arg0) {
   let obj4 = require(firstMessage[11]);
   const forumPostFirstMessageMarkup = obj4.useForumPostFirstMessageMarkup({ firstMessage, hasUnreads });
   ({ hasSpoilerEmbeds, content } = forumPostFirstMessageMarkup);
-  const forumPostMediaThumbnail = require(firstMessage[14]).useForumPostMediaThumbnail(firstMessage, stateFromStores1, hasSpoilerEmbeds);
+  const forumPostMediaThumbnail = require(firstMessage[14]).useForumPostMediaThumbnail(
+    firstMessage,
+    stateFromStores1,
+    hasSpoilerEmbeds,
+  );
   const obj6 = require(firstMessage[14]);
   const firstMediaIsEmbed = require(firstMessage[14]).useFirstMediaIsEmbed(firstMessage, hasSpoilerEmbeds);
   const obj7 = require(firstMessage[14]);
@@ -84,7 +95,18 @@ function ConnectedForumPost(arg0) {
         obj1 = { style: null, threadId: null, children: null };
         obj1[0] = style;
         obj1[1] = stateFromStores.id;
-        obj2 = { thread: null, parentChannel: null, firstMessage: null, messageContent: null, media: null, isEmbed: null, hasUnreads: null, isNew: null, firstMessageLoaded: null, isLocalDeviceMedia: false };
+        obj2 = {
+          thread: null,
+          parentChannel: null,
+          firstMessage: null,
+          messageContent: null,
+          media: null,
+          isEmbed: null,
+          hasUnreads: null,
+          isNew: null,
+          firstMessageLoaded: null,
+          isLocalDeviceMedia: false,
+        };
         obj2[0] = stateFromStores;
         obj2[1] = stateFromStores1;
         obj2[2] = firstMessage;
@@ -104,7 +126,18 @@ function ConnectedForumPost(arg0) {
     style = stateFromStores.id;
     obj3[1] = style;
     tmp3 = tmp3(tmp[13]);
-    obj4 = { thread: null, parentChannel: null, firstMessage: null, messageContent: null, media: null, hasUnreads: null, isNew: null, firstMessageLoaded: true, isLocalDeviceMedia: false, senderModifier: null };
+    obj4 = {
+      thread: null,
+      parentChannel: null,
+      firstMessage: null,
+      messageContent: null,
+      media: null,
+      hasUnreads: null,
+      isNew: null,
+      firstMessageLoaded: true,
+      isLocalDeviceMedia: false,
+      senderModifier: null,
+    };
     obj4[0] = stateFromStores;
     obj4[1] = stateFromStores1;
     obj4[2] = firstMessage;
@@ -146,9 +179,14 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
   const items = [closure_3];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getChannel(threadId));
   let tmp5 = null;
-  stateFromStores(38)(null != stateFromStores, "[Forum Post] The thread should not be null here. A store must have missed an update.");
+  stateFromStores(38)(
+    null != stateFromStores,
+    "[Forum Post] The thread should not be null here. A store must have missed an update.",
+  );
   const items1 = [closure_3];
-  const stateFromStores1 = threadId(589).useStateFromStores(items1, () => closure_1_3.getChannel(stateFromStores.parent_id));
+  const stateFromStores1 = threadId(589).useStateFromStores(items1, () =>
+    closure_1_3.getChannel(stateFromStores.parent_id),
+  );
   const obj2 = threadId(589);
   const tmp = threadId;
   const tmp4 = stateFromStores;
@@ -158,7 +196,17 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
   if (loaded) {
     obj = { style: null, children: null };
     obj[0] = style;
-    obj = { thread: null, parentChannel: null, firstMessage: null, messageContent: null, media: null, hasUnreads: true, isNew: false, firstMessageLoaded: null, isLocalDeviceMedia: true };
+    obj = {
+      thread: null,
+      parentChannel: null,
+      firstMessage: null,
+      messageContent: null,
+      media: null,
+      hasUnreads: true,
+      isNew: false,
+      firstMessageLoaded: null,
+      isLocalDeviceMedia: true,
+    };
     obj[0] = stateFromStores;
     obj[1] = stateFromStores1;
     obj[2] = firstMessage;

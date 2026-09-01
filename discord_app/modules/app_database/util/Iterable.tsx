@@ -11,7 +11,7 @@ class Chained {
 }
 const prototype = Chained.prototype;
 // ToPropertyKey (0xa4)
-prototype[prototype] = function() {
+prototype[prototype] = function () {
   return this;
 };
 prototype["next"] = function next() {

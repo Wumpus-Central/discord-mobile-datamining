@@ -15,7 +15,9 @@ import { MuteUntilSeconds } from "../../../../../user_settings/UserSettingsConst
 
 require = arg1;
 ({ ChannelTypes: c10, UserNotificationSettings: unpackModuleId } = ME);
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsUtils.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsUtils.tsx",
+);
 
 export const getMuteSettingLabel = function getMuteSettingLabel(channel, guild) {
   if (null != channel) {
@@ -65,7 +67,12 @@ export const handleUnmutePress = function handleUnmutePress(channelId, guildId) 
       const result = tmp7Result.setNotificationSettings(channel, { muted: false });
     } else {
       tmp7Result = tmp7(5487);
-      const result1 = tmp7Result.updateChannelOverrideSettings(guildId, channel.id, { muted: false, mute_config: null }, UserNotificationSettings.NotificationLabels.Unmuted);
+      const result1 = tmp7Result.updateChannelOverrideSettings(
+        guildId,
+        channel.id,
+        { muted: false, mute_config: null },
+        UserNotificationSettings.NotificationLabels.Unmuted,
+      );
     }
   }
 };
@@ -83,17 +90,32 @@ export const handleMuteSettingPress = function handleMuteSettingPress(arg0) {
       const result = tmp4Result.setNotificationSettings(channel, muteSettings);
     } else {
       tmp4Result = tmp4(5487);
-      const result1 = tmp4Result.updateChannelOverrideSettings(guildId, channel.id, muteSettings, UserNotificationSettings.NotificationLabels.Muted);
+      const result1 = tmp4Result.updateChannelOverrideSettings(
+        guildId,
+        channel.id,
+        muteSettings,
+        UserNotificationSettings.NotificationLabels.Muted,
+      );
     }
   } else if (null != guild) {
-    const result2 = _modDef5487.updateGuildNotificationSettings(guild.id, muteSettings, UserNotificationSettings.NotificationLabels.Muted);
+    const result2 = _modDef5487.updateGuildNotificationSettings(
+      guild.id,
+      muteSettings,
+      UserNotificationSettings.NotificationLabels.Muted,
+    );
     const obj5 = _modDef5487;
   }
 };
 export const getMuteSettings = function getMuteSettings(arg0) {
   let id = store.getChannel(arg0);
   if (null == id) {
-    const obj = { muteConfig: null, muted: null, messageNotifications: null, guildMuted: null, guildMessageNotifications: null };
+    const obj = {
+      muteConfig: null,
+      muted: null,
+      messageNotifications: null,
+      guildMuted: null,
+      guildMessageNotifications: null,
+    };
     obj[0] = undefined;
     obj[1] = undefined;
     obj[2] = undefined;
@@ -134,7 +156,7 @@ export const getMuteOptions = function getMuteOptions() {
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["8ot6gv"]);
   obj[1] = MuteUntilSeconds.MINUTES_15;
-  const items = [obj, , , , , ];
+  const items = [obj, , , , ,];
   obj = { label: null, duration: null };
   const intl2 = getSystemLocale.intl;
   obj[0] = intl2.string(getSystemLocale.t.UMWBZr);

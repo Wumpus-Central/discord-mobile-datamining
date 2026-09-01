@@ -42,7 +42,7 @@ class MFAModal {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      const iter = (function*(arg0) {
+      const iter = (function* (arg0) {
         if (c4 === 2) {
           c4 = 3;
           HermesBuiltin.throwTypeError();
@@ -121,10 +121,10 @@ class MFAModal {
       iter.next();
       return iter;
     });
-    items1 = [, ];
+    items1 = [,];
     items1[0] = finish;
     items1[1] = memo.ticket;
-    callback = c4.useCallback(function() {
+    callback = c4.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -135,7 +135,7 @@ class MFAModal {
       return applyArgumentsResult;
     }, items1);
     closure_6 = callback;
-    items2 = [, ];
+    items2 = [,];
     items2[0] = cancel;
     items2[1] = handleOnClose;
     callback1 = c4.useCallback(() => {
@@ -155,7 +155,7 @@ class MFAModal {
     closure_7 = callback1;
     items3 = [];
     items3[0] = memo.methods;
-    items4 = [, , ];
+    items4 = [, ,];
     items4[0] = callback1;
     items4[1] = memo.methods;
     items4[2] = flag;
@@ -171,7 +171,7 @@ class MFAModal {
       const items = [{ name: type }];
       return items;
     }, items3);
-    items5 = [, ];
+    items5 = [,];
     items5[0] = memo;
     items5[1] = callback;
     memo2 = c4.useMemo(() => {

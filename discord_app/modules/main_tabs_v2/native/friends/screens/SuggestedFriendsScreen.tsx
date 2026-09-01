@@ -14,7 +14,9 @@ createCacheKey = { flex: 1, paddingTop: ThemesDefault.space.PX_32 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SuggestedFriendsScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/friends/screens/SuggestedFriendsScreen.tsx",
+);
 
 export default function SuggestedFriendsScreen() {
   const tmp = callback2();
@@ -71,16 +73,14 @@ export default function SuggestedFriendsScreen() {
               return items;
             });
           },
-          location: closure_2_6.FRIENDS_SUGGESTED_FRIENDS_MODAL
+          location: closure_2_6.FRIENDS_SUGGESTED_FRIENDS_MODAL,
         });
-      }
+      },
     };
   }, items1);
-  callback2 = friendSuggestions.useCallback(() => {
-
-  }, []);
+  callback2 = friendSuggestions.useCallback(() => {}, []);
   let obj = { value: analyticsLocations, children: null };
-  const items2 = [callback(added(setAdded[12]), { absolute: true }), ];
+  const items2 = [callback(added(setAdded[12]), { absolute: true })];
   obj = { style: tmp.container, children: null };
   if (0 !== friendSuggestions.length) {
     obj = { sections: null, getItemProps: null, getSectionProps: null, insetStart: 8 };
@@ -103,4 +103,4 @@ export default function SuggestedFriendsScreen() {
   items2[1] = callback(callback, obj);
   obj[1] = items2;
   return closure_8(analyticsLocations(setAdded[6]).AnalyticsLocationProvider, obj);
-};
+}

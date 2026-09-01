@@ -66,7 +66,7 @@ function MediaViewer(arg0) {
       obj.backgroundColor = "black";
       value = closure_3.get();
       obj2 = closure_0(closure_2[5]);
-      items = [, , ];
+      items = [, ,];
       items[0] = -closure_2;
       items[1] = 0;
       items[2] = closure_2;
@@ -74,7 +74,14 @@ function MediaViewer(arg0) {
       return obj;
     }
   }
-  obj = { absoluteFillObject, windowHeight: height, entranceAnimationDriver: sharedValue, interpolate: require("../../../reanimated/ReanimatedRexport.tsx").interpolate, translatePos, closePosition: tmp9 };
+  obj = {
+    absoluteFillObject,
+    windowHeight: height,
+    entranceAnimationDriver: sharedValue,
+    interpolate: require("../../../reanimated/ReanimatedRexport.tsx").interpolate,
+    translatePos,
+    closePosition: tmp9,
+  };
   M.__closure = obj;
   M.__workletHash = 10332062530694;
   M.__initData = callback;
@@ -139,7 +146,16 @@ function MediaViewer(arg0) {
       return { opacity };
     }
   }
-  obj1 = { isClosing, hideRelayoutSharedValue: sharedValue1, overlayEnabled, isInteracting, withTiming: require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming, Easing: require("../../../reanimated/ReanimatedRexport.tsx").Easing, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, setShowHeader: tmp6 };
+  obj1 = {
+    isClosing,
+    hideRelayoutSharedValue: sharedValue1,
+    overlayEnabled,
+    isInteracting,
+    withTiming: require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming,
+    Easing: require("../../../reanimated/ReanimatedRexport.tsx").Easing,
+    runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS,
+    setShowHeader: tmp6,
+  };
   P.__closure = obj1;
   P.__workletHash = 14874736878670;
   P.__initData = closure_14;
@@ -155,7 +171,12 @@ function MediaViewer(arg0) {
       const obj = _undefined(4217);
     }
   };
-  obj2 = { overlayEnabled, isInteracting, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, setShowHeader: tmp6 };
+  obj2 = {
+    overlayEnabled,
+    isInteracting,
+    runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS,
+    setShowHeader: tmp6,
+  };
   fn.__closure = obj2;
   fn.__workletHash = 2199049578465;
   fn.__initData = closure_16;
@@ -179,7 +200,13 @@ function MediaViewer(arg0) {
     obj.opacity = num;
     return obj;
   }
-  obj3 = { absoluteFillObject, translatePos, hideRelayoutSharedValue: sharedValue1, withTiming: require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming, Easing: require("../../../reanimated/ReanimatedRexport.tsx").Easing };
+  obj3 = {
+    absoluteFillObject,
+    translatePos,
+    hideRelayoutSharedValue: sharedValue1,
+    withTiming: require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming,
+    Easing: require("../../../reanimated/ReanimatedRexport.tsx").Easing,
+  };
   le.__closure = obj3;
   le.__workletHash = 8244409104374;
   le.__initData = closure_17;
@@ -229,11 +256,50 @@ function MediaViewer(arg0) {
   obj4 = { style: closure_6.absoluteFill, onAccessibilityEscape: dismiss, onLayout: callback1, children: null };
   const obj15 = handleOrientationChange;
   obj5 = { barStyle: "light-content", hidden: !tmp5 };
-  const items5 = [translatePos(height(9530), obj5), translatePos(height(4217).View, { style: animatedStyle }), translatePos(height(4218), { ref: animatedRef, style: animatedStyle2, children: translatePos(closure_12, { entranceAnimationDriver: sharedValue, onContentSizeChange, onScroll, onLongPress, originLayout, panGestureConfig: mediaViewerPanGestureConfig, ref, renderMedia, sources, useItemVisible, windowHeight: height, windowWidth: width, index, zoomed }) }), , ];
+  const items5 = [
+    translatePos(height(9530), obj5),
+    translatePos(height(4217).View, { style: animatedStyle }),
+    translatePos(height(4218), {
+      ref: animatedRef,
+      style: animatedStyle2,
+      children: translatePos(closure_12, {
+        entranceAnimationDriver: sharedValue,
+        onContentSizeChange,
+        onScroll,
+        onLongPress,
+        originLayout,
+        panGestureConfig: mediaViewerPanGestureConfig,
+        ref,
+        renderMedia,
+        sources,
+        useItemVisible,
+        windowHeight: height,
+        windowWidth: width,
+        index,
+        zoomed,
+      }),
+    }),
+    ,
+  ];
   const obj6 = { style: items6, pointerEvents: null, children: null };
   items6 = [sharedValue(sharedValue1.useState(obj), 1)[0], animatedStyle1];
   let str = "none";
-  const tmp27 = translatePos(closure_12, { entranceAnimationDriver: sharedValue, onContentSizeChange, onScroll, onLongPress, originLayout, panGestureConfig: mediaViewerPanGestureConfig, ref, renderMedia, sources, useItemVisible, windowHeight: height, windowWidth: width, index, zoomed });
+  const tmp27 = translatePos(closure_12, {
+    entranceAnimationDriver: sharedValue,
+    onContentSizeChange,
+    onScroll,
+    onLongPress,
+    originLayout,
+    panGestureConfig: mediaViewerPanGestureConfig,
+    ref,
+    renderMedia,
+    sources,
+    useItemVisible,
+    windowHeight: height,
+    windowWidth: width,
+    index,
+    zoomed,
+  });
   const tmp28 = isClosing;
   const tmp29 = animatedRef;
   if (tmp5) {
@@ -251,8 +317,12 @@ let c4 = importAllResult;
 ({ View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = set.isAndroid();
-let closure_10 = { code: "function MediaViewerTsx1(){const{zoomed,pinching}=this.__closure;return!zoomed.get()&&!pinching.get();}" };
-let closure_11 = { code: "function MediaViewerTsx2(){const{scrollEnabled}=this.__closure;return{scrollEnabled:scrollEnabled.get()};}" };
+let closure_10 = {
+  code: "function MediaViewerTsx1(){const{zoomed,pinching}=this.__closure;return!zoomed.get()&&!pinching.get();}",
+};
+let closure_11 = {
+  code: "function MediaViewerTsx2(){const{scrollEnabled}=this.__closure;return{scrollEnabled:scrollEnabled.get()};}",
+};
 let closure_12 = importAllResult.memo((entranceAnimationDriver) => {
   entranceAnimationDriver = entranceAnimationDriver.entranceAnimationDriver;
   const onLongPress = entranceAnimationDriver.onLongPress;
@@ -287,13 +357,48 @@ let closure_12 = importAllResult.memo((entranceAnimationDriver) => {
   derivedValue = entranceAnimationDriver(originLayout[5]).useDerivedValue(T);
   const items = [sharedValue];
   const items1 = [sharedValue];
-  const callback = renderMedia.useCallback((nativeEvent) => sharedValue.set(2 === nativeEvent.nativeEvent.touches.length), items);
+  const callback = renderMedia.useCallback(
+    (nativeEvent) => sharedValue.set(2 === nativeEvent.nativeEvent.touches.length),
+    items,
+  );
   const callback1 = renderMedia.useCallback(() => sharedValue.set(false), items1);
   const obj2 = entranceAnimationDriver(originLayout[5]);
-  const mediaViewerPanGesture = entranceAnimationDriver(originLayout[6]).useMediaViewerPanGesture(panGestureConfig, derivedValue);
+  const mediaViewerPanGesture = entranceAnimationDriver(originLayout[6]).useMediaViewerPanGesture(
+    panGestureConfig,
+    derivedValue,
+  );
   panGestureGenerator = mediaViewerPanGesture.panGestureGenerator;
-  const items2 = [entranceAnimationDriver, onLongPress, originLayout, panGestureConfig, panGestureGenerator, renderMedia, sources, useItemVisible, windowHeight, windowWidth, zoomed];
-  const callback2 = renderMedia.useCallback((arg0, index) => windowWidth(entranceAnimationDriver(originLayout[7]).MediaViewerItem, { originLayout, renderMedia, onLongPress, windowWidth, windowHeight, panGestureConfig, entranceAnimationDriver, source: sources[index], index, zoomed, panGesture: panGestureGenerator(index), useItemVisible }), items2);
+  const items2 = [
+    entranceAnimationDriver,
+    onLongPress,
+    originLayout,
+    panGestureConfig,
+    panGestureGenerator,
+    renderMedia,
+    sources,
+    useItemVisible,
+    windowHeight,
+    windowWidth,
+    zoomed,
+  ];
+  const callback2 = renderMedia.useCallback(
+    (arg0, index) =>
+      windowWidth(entranceAnimationDriver(originLayout[7]).MediaViewerItem, {
+        originLayout,
+        renderMedia,
+        onLongPress,
+        windowWidth,
+        windowHeight,
+        panGestureConfig,
+        entranceAnimationDriver,
+        source: sources[index],
+        index,
+        zoomed,
+        panGesture: panGestureGenerator(index),
+        useItemVisible,
+      }),
+    items2,
+  );
   const obj3 = entranceAnimationDriver(originLayout[6]);
   class H {
     constructor() {
@@ -306,16 +411,50 @@ let closure_12 = importAllResult.memo((entranceAnimationDriver) => {
   H.__initData = derivedValue;
   const animatedProps = entranceAnimationDriver(originLayout[5]).useAnimatedProps(H);
   const obj4 = entranceAnimationDriver(originLayout[5]);
-  obj = { gesture: mediaViewerPanGesture.nativeGesture, children: windowWidth(entranceAnimationDriver(originLayout[10]).AnimatedFastList, obj) };
-  obj = { ref, style: useItemVisible.absoluteFill, sections: items3, onTouchStart: callback, onTouchEnd: callback1, onTouchCancel: callback1, initialScrollItem: onLongPress(originLayout[8])(index), automaticallyAdjustContentInsets: false, showsVerticalScrollIndicator: false, showsHorizontalScrollIndicator: false, itemSize: windowWidth, renderItem: callback2, onContentSizeChange, pagingEnabled: true, onScroll, scrollEventThrottle: 16, animatedProps, disableLegacyGestureHandling: true, chunkBase: windowWidth, horizontal: true };
+  obj = {
+    gesture: mediaViewerPanGesture.nativeGesture,
+    children: windowWidth(entranceAnimationDriver(originLayout[10]).AnimatedFastList, obj),
+  };
+  obj = {
+    ref,
+    style: useItemVisible.absoluteFill,
+    sections: items3,
+    onTouchStart: callback,
+    onTouchEnd: callback1,
+    onTouchCancel: callback1,
+    initialScrollItem: onLongPress(originLayout[8])(index),
+    automaticallyAdjustContentInsets: false,
+    showsVerticalScrollIndicator: false,
+    showsHorizontalScrollIndicator: false,
+    itemSize: windowWidth,
+    renderItem: callback2,
+    onContentSizeChange,
+    pagingEnabled: true,
+    onScroll,
+    scrollEventThrottle: 16,
+    animatedProps,
+    disableLegacyGestureHandling: true,
+    chunkBase: windowWidth,
+    horizontal: true,
+  };
   items3 = [sources.length];
   return windowWidth(entranceAnimationDriver(originLayout[9]).GestureDetector, obj);
 });
-let closure_13 = { code: "function MediaViewerTsx3(){const{absoluteFillObject,windowHeight,entranceAnimationDriver,interpolate,translatePos,closePosition}=this.__closure;return{...absoluteFillObject,height:windowHeight,backgroundColor:'black',opacity:Math.min(entranceAnimationDriver.get(),interpolate(translatePos.get(),[-closePosition,0,closePosition],[0,1,0]))};}" };
-let closure_14 = { code: "function MediaViewerTsx4(){const{isClosing,hideRelayoutSharedValue,overlayEnabled,isInteracting,withTiming,Easing,runOnJS,setShowHeader}=this.__closure;return{opacity:isClosing.get()||hideRelayoutSharedValue.get()?0:overlayEnabled.get()&&!isInteracting.get()?withTiming(1,{easing:Easing.linear,duration:150}):withTiming(0,{easing:Easing.linear,duration:75},'respect-motion-settings',function(){runOnJS(setShowHeader)(false);})};}" };
-let closure_15 = { code: "function MediaViewerTsx5(){const{runOnJS,setShowHeader}=this.__closure;runOnJS(setShowHeader)(false);}" };
-let closure_16 = { code: "function MediaViewerTsx6(){const{overlayEnabled,isInteracting,runOnJS,setShowHeader}=this.__closure;if(overlayEnabled.get()&&!isInteracting.get()){runOnJS(setShowHeader)(true);}}" };
-let closure_17 = { code: "function MediaViewerTsx7(){const{absoluteFillObject,translatePos,hideRelayoutSharedValue,withTiming,Easing}=this.__closure;return{...absoluteFillObject,alignItems:'center',justifyContent:'center',transform:[{translateY:translatePos.get()}],opacity:hideRelayoutSharedValue.get()?0:withTiming(1,{easing:Easing.linear,duration:75})};}" };
+let closure_13 = {
+  code: "function MediaViewerTsx3(){const{absoluteFillObject,windowHeight,entranceAnimationDriver,interpolate,translatePos,closePosition}=this.__closure;return{...absoluteFillObject,height:windowHeight,backgroundColor:'black',opacity:Math.min(entranceAnimationDriver.get(),interpolate(translatePos.get(),[-closePosition,0,closePosition],[0,1,0]))};}",
+};
+let closure_14 = {
+  code: "function MediaViewerTsx4(){const{isClosing,hideRelayoutSharedValue,overlayEnabled,isInteracting,withTiming,Easing,runOnJS,setShowHeader}=this.__closure;return{opacity:isClosing.get()||hideRelayoutSharedValue.get()?0:overlayEnabled.get()&&!isInteracting.get()?withTiming(1,{easing:Easing.linear,duration:150}):withTiming(0,{easing:Easing.linear,duration:75},'respect-motion-settings',function(){runOnJS(setShowHeader)(false);})};}",
+};
+let closure_15 = {
+  code: "function MediaViewerTsx5(){const{runOnJS,setShowHeader}=this.__closure;runOnJS(setShowHeader)(false);}",
+};
+let closure_16 = {
+  code: "function MediaViewerTsx6(){const{overlayEnabled,isInteracting,runOnJS,setShowHeader}=this.__closure;if(overlayEnabled.get()&&!isInteracting.get()){runOnJS(setShowHeader)(true);}}",
+};
+let closure_17 = {
+  code: "function MediaViewerTsx7(){const{absoluteFillObject,translatePos,hideRelayoutSharedValue,withTiming,Easing}=this.__closure;return{...absoluteFillObject,alignItems:'center',justifyContent:'center',transform:[{translateY:translatePos.get()}],opacity:hideRelayoutSharedValue.get()?0:withTiming(1,{easing:Easing.linear,duration:75})};}",
+};
 let result = set.fileFinishedImporting("modules/media_viewer/native/components/MediaViewer.tsx");
 
 export default importAllResult.memo((arg0) => {

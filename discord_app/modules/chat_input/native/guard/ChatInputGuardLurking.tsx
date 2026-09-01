@@ -16,13 +16,17 @@ const memoResult = importAllResult.memo(function ChatInputGuardLurking(channel) 
   let obj = channel(589);
   const items = [closure_5];
   const items1 = [guildId];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    let isLurkingResult = null != guildId;
-    if (isLurkingResult) {
-      isLurkingResult = closure_1_5.isLurking(tmp);
-    }
-    return { isLurking: isLurkingResult, lurkingSource: closure_1_5.getLurkingSourceForGuild(guildId) };
-  }, items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => {
+      let isLurkingResult = null != guildId;
+      if (isLurkingResult) {
+        isLurkingResult = closure_1_5.isLurking(tmp);
+      }
+      return { isLurking: isLurkingResult, lurkingSource: closure_1_5.getLurkingSourceForGuild(guildId) };
+    },
+    items1,
+  );
   ({ isLurking, lurkingSource } = stateFromStoresObject);
   const items2 = [guildId, channel.id];
   const callback = importAllResult.useCallback(() => {
@@ -51,7 +55,10 @@ const memoResult = importAllResult.memo(function ChatInputGuardLurking(channel) 
         channel = closure_1_6.getChannel(lurkingSourceForGuild.directoryChannelId);
         if (null != channel) {
           guildId = channel.getGuildId();
-          const result = channel(closure_1_3[10]).setHubProgressActionComplete(guildId, channel(closure_1_3[11]).HubProgressStep.JOIN_GUILD);
+          const result = channel(closure_1_3[10]).setHubProgressActionComplete(
+            guildId,
+            channel(closure_1_3[11]).HubProgressStep.JOIN_GUILD,
+          );
           const obj2 = channel(closure_1_3[10]);
         }
       }
@@ -73,7 +80,14 @@ const memoResult = importAllResult.memo(function ChatInputGuardLurking(channel) 
     type = lurkingSource.type;
   }
   if (type === constants.DIRECTORY_ENTRY) {
-    obj = { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
+    obj = {
+      type: "button-action",
+      message: null,
+      buttonSecondaryText: null,
+      buttonSecondaryOnPress: null,
+      buttonPrimaryText: null,
+      buttonPrimaryOnPress: null,
+    };
     const intl6 = tmp2(1236).intl;
     obj[1] = intl6.string(tmp2(1236).t.G42YmG);
     const intl7 = tmp2(1236).intl;
@@ -82,11 +96,25 @@ const memoResult = importAllResult.memo(function ChatInputGuardLurking(channel) 
     const intl8 = tmp2(1236).intl;
     obj[4] = intl8.string(tmp2(1236).t.RLch70);
     obj[5] = callback2;
-    let tmp15Result = jsx(guildId(12012), { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
+    let tmp15Result = jsx(guildId(12012), {
+      type: "button-action",
+      message: null,
+      buttonSecondaryText: null,
+      buttonSecondaryOnPress: null,
+      buttonPrimaryText: null,
+      buttonPrimaryOnPress: null,
+    });
     const tmp14 = guildId(12012);
   } else {
     if (channel.isReadonlyAnnouncementsChannel) {
-      obj = { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
+      obj = {
+        type: "button-action",
+        message: null,
+        buttonSecondaryText: null,
+        buttonSecondaryOnPress: null,
+        buttonPrimaryText: null,
+        buttonPrimaryOnPress: null,
+      };
       const intl3 = tmp2(1236).intl;
       obj[1] = intl3.string(tmp2(1236).t.Hl0Mqh);
       let stringResult;

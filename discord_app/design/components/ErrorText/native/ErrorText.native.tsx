@@ -23,7 +23,10 @@ export const ErrorText = function ErrorText(children) {
     }
   }, items);
   obj = { direction: "horizontal", spacing: 4, align: "flex-start", style: children.style, children: null };
-  const items1 = [callback(nodeText(7708).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }), callback(nodeText(4474).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })];
+  const items1 = [
+    callback(nodeText(7708).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }),
+    callback(nodeText(4474).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
+  ];
   obj[4] = items1;
   return callback2(nodeText(4926).Stack, obj);
 };

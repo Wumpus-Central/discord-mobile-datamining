@@ -10,4 +10,4 @@ export default function windowSourceMatches(str) {
     const tmp3 = callback(str.split(":"), 2);
     return "window" === tmp3[0] && tmp3[1] === arg1;
   }
-};
+}

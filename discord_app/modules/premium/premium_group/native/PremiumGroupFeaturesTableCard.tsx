@@ -25,12 +25,39 @@ class BetaPill {
 const View = get_ActivityIndicator.View;
 const Gradients = items3.Gradients;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { premiumGroupCard: null, headerContainer: null, betaPill: null, betaText: null, title: null, description: null };
-obj = { padding: 16, borderRadius: ThemesDefault.radii.sm - 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "flex-start" };
+let obj = {
+  premiumGroupCard: null,
+  headerContainer: null,
+  betaPill: null,
+  betaText: null,
+  title: null,
+  description: null,
+};
+obj = {
+  padding: 16,
+  borderRadius: ThemesDefault.radii.sm - 2,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  display: "flex",
+  alignItems: "flex-start",
+};
 obj[0] = obj;
 obj[1] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 4 };
-obj[2] = { backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
-let obj1 = { backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
+obj[2] = {
+  backgroundColor: ThemesDefault.colors.WHITE,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+  paddingHorizontal: 8,
+  paddingBottom: 2,
+};
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.WHITE,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+  paddingHorizontal: 8,
+  paddingBottom: 2,
+};
 obj[3] = { color: ThemesDefault.colors.BLACK, textAlign: "center", textTransform: "uppercase" };
 let obj2 = { color: ThemesDefault.colors.BLACK, textAlign: "center", textTransform: "uppercase" };
 obj[4] = { color: ThemesDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
@@ -57,7 +84,7 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     obj[0] = { x: 0, y: 0 };
     obj[1] = { x: 1, y: 0 };
     let obj2 = hexToRgba;
-    const items = [obj2.hexWithOpacity("#8547C6", 0.15), , ];
+    const items = [obj2.hexWithOpacity("#8547C6", 0.15), ,];
     const tmp2Result = tmp2(4940);
     items[1] = hexToRgba.hexWithOpacity("#B845C1", 0.15);
     const obj4 = hexToRgba;
@@ -69,7 +96,7 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     obj[0] = tmp.headerContainer;
     const items1 = [callback(tmp2(8240), { width: 181, height: 16 }), callback(BetaPill, {})];
     obj[1] = items1;
-    const items2 = [callback2(View, obj), , ];
+    const items2 = [callback2(View, obj), ,];
     obj1 = { variant: "text-sm/normal", style: null, children: null };
     obj1[1] = tmp.title;
     obj1[2] = subheaderString;
@@ -82,5 +109,5 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     obj[5] = callback2(tmp2Result, obj);
     return callback(Button.GradientBorder, obj);
   }
-};
+}
 export { BetaPill };

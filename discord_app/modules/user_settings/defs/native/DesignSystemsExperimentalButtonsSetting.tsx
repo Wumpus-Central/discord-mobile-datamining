@@ -10,15 +10,17 @@ obj = {
     return "Experimental Buttons";
   },
   parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_EXPERIMENTAL_BUTTONS,
   getComponent() {
     return UserSettingsDesignSystemExperimentalButtons /* UserSettingsDesignSystemExperimentalButtons */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsExperimentalButtonsSetting.tsx");
+const result = set.fileFinishedImporting(
+  "modules/user_settings/defs/native/DesignSystemsExperimentalButtonsSetting.tsx",
+);
 
 export default route;

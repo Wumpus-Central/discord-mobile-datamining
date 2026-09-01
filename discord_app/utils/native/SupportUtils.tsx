@@ -5,7 +5,7 @@ import closure_5 from "../../modules/user_settings/LocaleStore.tsx";
 const require = arg1;
 function _emailSupport() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       HermesBuiltin.throwTypeError();
@@ -39,18 +39,31 @@ function _emailSupport() {
             c2 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = obj1.getSubmitRequestURL((function getSessionInfo() {
-              const constants = v1(table[2]).getConstants();
-              let str2 = "N/A";
-              if (str.trim().length > 0) {
-                str2 = constants.Manifest;
-              }
-              const obj = v1(table[2]);
-              str = constants.Manifest;
-              const systemVersion = openURL(table[3]).getSystemVersion();
-              const obj2 = openURL(table[3]);
-              return "App version: " + constants.Version + "\n  Manifest: " + str2 + "\n  iOS version: " + systemVersion + "\n  Device: " + openURL(table[3]).getDeviceInfo() + "\n  Language: " + locale.locale;
-            })());
+            obj1[0] = obj1.getSubmitRequestURL(
+              (function getSessionInfo() {
+                const constants = v1(table[2]).getConstants();
+                let str2 = "N/A";
+                if (str.trim().length > 0) {
+                  str2 = constants.Manifest;
+                }
+                const obj = v1(table[2]);
+                str = constants.Manifest;
+                const systemVersion = openURL(table[3]).getSystemVersion();
+                const obj2 = openURL(table[3]);
+                return (
+                  "App version: " +
+                  constants.Version +
+                  "\n  Manifest: " +
+                  str2 +
+                  "\n  iOS version: " +
+                  systemVersion +
+                  "\n  Device: " +
+                  openURL(table[3]).getDeviceInfo() +
+                  "\n  Language: " +
+                  locale.locale
+                );
+              })(),
+            );
             return obj1;
           }
         } else if (arg0 === 1) {

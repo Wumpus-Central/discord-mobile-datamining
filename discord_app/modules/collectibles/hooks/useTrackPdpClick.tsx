@@ -29,7 +29,15 @@ export const useTrackPdpClick = function useTrackPdpClick(skuId) {
     if (arg1 == null) {
       tmp = skuId;
     }
-    obj = { sku_id: tmp, cta, shop_session_id: sessionId, card_id: cardId, product_sku_ids: productSkuIds, location_stack: analyticsLocations, discount_source: skuId(analyticsLocations[4]).getAnalyticsShopDiscountSource(shopDiscountSource) };
+    obj = {
+      sku_id: tmp,
+      cta,
+      shop_session_id: sessionId,
+      card_id: cardId,
+      product_sku_ids: productSkuIds,
+      location_stack: analyticsLocations,
+      discount_source: skuId(analyticsLocations[4]).getAnalyticsShopDiscountSource(shopDiscountSource),
+    };
     obj.track(sessionId.SHOP_PRODUCT_DETAIL_PAGE_CLICKED, obj);
   }, items);
 };

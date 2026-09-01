@@ -13,4 +13,4 @@ export default function getReactNativeSVGImageSource(arg0) {
     }
   }
   return first;
-};
+}

@@ -20,7 +20,7 @@ require = arg1;
 function SelectedServerIcon(guild) {
   guild = guild.guild;
   const tmp = callback3();
-  const items = [tmp.selectedServerIcon, , ];
+  const items = [tmp.selectedServerIcon, ,];
   let noServerContainer = null == guild;
   if (noServerContainer) {
     noServerContainer = tmp.noServerContainer;
@@ -99,14 +99,30 @@ function SelectedServersRow(selectedGuilds) {
     obj[2] = tmpResult.withTiming(num3);
     return obj;
   };
-  obj = { withTiming: selectedGuilds(4479).withTiming, selectedGuilds, SELECTED_SERVER_SIZE_WITH_BORDER: c15, tokens: first(712) };
+  obj = {
+    withTiming: selectedGuilds(4479).withTiming,
+    selectedGuilds,
+    SELECTED_SERVER_SIZE_WITH_BORDER: c15,
+    tokens: first(712),
+  };
   fn.__closure = obj;
   fn.__workletHash = 2911488630455;
   fn.__initData = closure_18;
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj = { style: items2, children: null };
   items2 = [callback3().selectedServersRowContainer, animatedStyle];
-  obj1 = { ref, sections: null, insetStart: null, insetEnd: null, renderItem: null, estimatedListSize: "windowSize", itemSize: null, horizontal: true, listId: "selected-servers-list", showsHorizontalScrollIndicator: false };
+  obj1 = {
+    ref,
+    sections: null,
+    insetStart: null,
+    insetEnd: null,
+    renderItem: null,
+    estimatedListSize: "windowSize",
+    itemSize: null,
+    horizontal: true,
+    listId: "selected-servers-list",
+    showsHorizontalScrollIndicator: false,
+  };
   let num = 3;
   const tmp = callback3();
   const tmp8 = c15;
@@ -153,15 +169,15 @@ function CutoutGuildBanner(guild) {
     let tmp11Result = tmp11(tmp12(5493), obj2);
   } else {
     const obj3 = { style: null };
-    const items2 = [, ];
+    const items2 = [,];
     ({ bannerImage: arr3[0], emptyBanner: arr3[1] } = tmp);
     obj3[0] = items2;
     tmp11Result = tmp11(tmp10, obj3);
   }
   obj[1] = tmp11Result;
-  const items3 = [closure_12(SolidCutoutDefault, obj), ];
+  const items3 = [closure_12(SolidCutoutDefault, obj)];
   const obj4 = { style: items4, guild, size: null, animate: null };
-  items4 = [, ];
+  items4 = [,];
   ({ guildIcon: arr5[0], guildIconBorder: arr5[1] } = tmp);
   const tmp13 = SolidCutoutDefault;
   const tmp9 = closure_13;
@@ -182,12 +198,43 @@ function FeaturedServer(guild) {
   const callback = React.useCallback(() => {
     handlePress(guild);
   }, items1);
-  obj = { underlayColor: tmp.pressableUnderlayColor.backgroundColor, unstable_pressDelay: 50, style: tmp.featuredServerContainer, onPress: callback, children: null };
-  const items2 = [callback2(CutoutGuildBanner, { guild }), ];
+  obj = {
+    underlayColor: tmp.pressableUnderlayColor.backgroundColor,
+    unstable_pressDelay: 50,
+    style: tmp.featuredServerContainer,
+    onPress: callback,
+    children: null,
+  };
+  const items2 = [callback2(CutoutGuildBanner, { guild })];
   obj = { style: tmp.featuredServerInnerContainer, children: null };
-  const items3 = [callback2(guild(4474).Text, { maxFontSizeMultiplier: 1, style: tmp.featuredServerTitle, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guild.name }), callback2(guild(4474).Text, { maxFontSizeMultiplier: 1, lineClamp: 2, variant: "text-xs/normal", color: "text-default", children: guild.description }), ];
+  const items3 = [
+    callback2(guild(4474).Text, {
+      maxFontSizeMultiplier: 1,
+      style: tmp.featuredServerTitle,
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      children: guild.name,
+    }),
+    callback2(guild(4474).Text, {
+      maxFontSizeMultiplier: 1,
+      lineClamp: 2,
+      variant: "text-xs/normal",
+      color: "text-default",
+      children: guild.description,
+    }),
+  ];
   const obj3 = { style: tmp.buttonContainer, children: null };
-  const obj4 = { accessibilityHint: "checkbox", accessibilityState: { checked: selected }, disabled: stateFromStores, icon: null, text: null, size: "sm", onPress: null, variant: null, grow: true };
+  const obj4 = {
+    accessibilityHint: "checkbox",
+    accessibilityState: { checked: selected },
+    disabled: stateFromStores,
+    icon: null,
+    text: null,
+    size: "sm",
+    onPress: null,
+    variant: null,
+    grow: true,
+  };
   let tmp7Result;
   if (selected) {
     const obj5 = { size: "sm", color: null };
@@ -228,21 +275,84 @@ function FeaturedServer(guild) {
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let c15 = 50;
 let closure_16 = createICYMIStyles.createICYMIStyles((margin) => {
-  let obj = { container: null, scrollContentContainer: null, footer: null, title: null, subtitle: null, separator: null, featuredServerContainer: null, featuredServerInnerContainer: null, buttonContainer: null, featuredServerTitle: null, guildIcon: null, bannerImage: null, emptyBanner: null, guildsScrollContainer: null, guildsColumn: null, selectedServersRowContainer: null, selectedServerIcon: null, noServerContainer: null, noServerExtraContainer: null, pressableUnderlayColor: null, guildIconBorder: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, position: "relative", flex: 1, marginHorizontal: margin.margin };
+  let obj = {
+    container: null,
+    scrollContentContainer: null,
+    footer: null,
+    title: null,
+    subtitle: null,
+    separator: null,
+    featuredServerContainer: null,
+    featuredServerInnerContainer: null,
+    buttonContainer: null,
+    featuredServerTitle: null,
+    guildIcon: null,
+    bannerImage: null,
+    emptyBanner: null,
+    guildsScrollContainer: null,
+    guildsColumn: null,
+    selectedServersRowContainer: null,
+    selectedServerIcon: null,
+    noServerContainer: null,
+    noServerExtraContainer: null,
+    pressableUnderlayColor: null,
+    guildIconBorder: null,
+  };
+  obj = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+    position: "relative",
+    flex: 1,
+    marginHorizontal: margin.margin,
+  };
   obj[0] = obj;
   obj = { paddingTop: ThemesDefault.space.PX_8 };
   obj[1] = obj;
-  obj[2] = { position: "absolute", bottom: 0, left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_8 };
-  obj1 = { position: "absolute", bottom: 0, left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_8 };
-  obj[3] = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_24 };
-  const obj2 = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_24 };
+  obj[2] = {
+    position: "absolute",
+    bottom: 0,
+    left: ThemesDefault.space.PX_24,
+    right: ThemesDefault.space.PX_24,
+    paddingBottom: ThemesDefault.space.PX_8,
+  };
+  obj1 = {
+    position: "absolute",
+    bottom: 0,
+    left: ThemesDefault.space.PX_24,
+    right: ThemesDefault.space.PX_24,
+    paddingBottom: ThemesDefault.space.PX_8,
+  };
+  obj[3] = {
+    marginTop: ThemesDefault.space.PX_24,
+    marginBottom: ThemesDefault.space.PX_8,
+    marginHorizontal: ThemesDefault.space.PX_24,
+  };
+  const obj2 = {
+    marginTop: ThemesDefault.space.PX_24,
+    marginBottom: ThemesDefault.space.PX_8,
+    marginHorizontal: ThemesDefault.space.PX_24,
+  };
   obj[4] = { marginHorizontal: ThemesDefault.space.PX_24 };
   const obj3 = { marginHorizontal: ThemesDefault.space.PX_24 };
   obj[5] = { height: hairlineWidth.hairlineWidth, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-  const obj4 = { height: hairlineWidth.hairlineWidth, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-  obj[6] = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, overflow: "hidden", marginHorizontal: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_8 };
-  const obj5 = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, overflow: "hidden", marginHorizontal: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_8 };
+  const obj4 = {
+    height: hairlineWidth.hairlineWidth,
+    width: "100%",
+    backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  };
+  obj[6] = {
+    borderRadius: ThemesDefault.radii.lg,
+    backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+    overflow: "hidden",
+    marginHorizontal: ThemesDefault.space.PX_8,
+    marginVertical: ThemesDefault.space.PX_8,
+  };
+  const obj5 = {
+    borderRadius: ThemesDefault.radii.lg,
+    backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+    overflow: "hidden",
+    marginHorizontal: ThemesDefault.space.PX_8,
+    marginVertical: ThemesDefault.space.PX_8,
+  };
   obj[7] = { marginHorizontal: ThemesDefault.space.PX_12, marginTop: 36 };
   const obj6 = { marginHorizontal: ThemesDefault.space.PX_12, marginTop: 36 };
   obj[8] = { marginBottom: ThemesDefault.space.PX_12, marginTop: margin.margin };
@@ -259,8 +369,26 @@ let closure_16 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj11 = { flex: 1, flexDirection: "column", gap: ThemesDefault.space.PX_16 };
   obj[15] = { height: c15, width: "100%", marginBottom: ThemesDefault.space.PX_24 };
   const obj12 = { height: c15, width: "100%", marginBottom: ThemesDefault.space.PX_24 };
-  obj[16] = { flex: 1, width: c15, height: c15, alignItems: "center", justifyContent: "center", borderColor: ThemesDefault.colors.BORDER_STRONG, borderRadius: ThemesDefault.radii.md, borderWidth: 1 };
-  const obj13 = { flex: 1, width: c15, height: c15, alignItems: "center", justifyContent: "center", borderColor: ThemesDefault.colors.BORDER_STRONG, borderRadius: ThemesDefault.radii.md, borderWidth: 1 };
+  obj[16] = {
+    flex: 1,
+    width: c15,
+    height: c15,
+    alignItems: "center",
+    justifyContent: "center",
+    borderColor: ThemesDefault.colors.BORDER_STRONG,
+    borderRadius: ThemesDefault.radii.md,
+    borderWidth: 1,
+  };
+  const obj13 = {
+    flex: 1,
+    width: c15,
+    height: c15,
+    alignItems: "center",
+    justifyContent: "center",
+    borderColor: ThemesDefault.colors.BORDER_STRONG,
+    borderRadius: ThemesDefault.radii.md,
+    borderWidth: 1,
+  };
   obj[17] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderStyle: "dashed" };
   obj[18] = { opacity: 0.4 };
   const obj14 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderStyle: "dashed" };
@@ -269,7 +397,9 @@ let closure_16 = createICYMIStyles.createICYMIStyles((margin) => {
   obj[20] = { borderRadius: ThemesDefault.radii.md };
   return obj;
 });
-let closure_18 = { code: "function ICYMIJoinGuildsScreenTsx1(){const{withTiming,selectedGuilds,SELECTED_SERVER_SIZE_WITH_BORDER,tokens}=this.__closure;return{opacity:withTiming(selectedGuilds.length>0?1:0),height:withTiming(selectedGuilds.length>0?SELECTED_SERVER_SIZE_WITH_BORDER:0),marginTop:withTiming(selectedGuilds.length>0?tokens.space.PX_24:0)};}" };
+let closure_18 = {
+  code: "function ICYMIJoinGuildsScreenTsx1(){const{withTiming,selectedGuilds,SELECTED_SERVER_SIZE_WITH_BORDER,tokens}=this.__closure;return{opacity:withTiming(selectedGuilds.length>0?1:0),height:withTiming(selectedGuilds.length>0?SELECTED_SERVER_SIZE_WITH_BORDER:0),marginTop:withTiming(selectedGuilds.length>0?tokens.space.PX_24:0)};}",
+};
 let result = require("set").fileFinishedImporting("modules/icymi/native/info_modal/ICYMIJoinGuildsScreen.tsx");
 
 export default function ICYMIJoinGuildsScreen() {
@@ -296,7 +426,10 @@ export default function ICYMIJoinGuildsScreen() {
   callback = React.useCallback((guildId) => {
     closure_0 = guildId;
     const ICYMIAnalytics = stateFromStoresArray(stateFromStores[26]).ICYMIAnalytics;
-    const result = ICYMIAnalytics.trackFeedOnboardingGuildToggled({ guildId: guildId.id, toggled: !first.has(guildId.id) });
+    const result = ICYMIAnalytics.trackFeedOnboardingGuildToggled({
+      guildId: guildId.id,
+      toggled: !first.has(guildId.id),
+    });
     if (first.has(guildId.id)) {
       tmp2((items) => {
         items.delete(guildId.id);
@@ -320,25 +453,95 @@ export default function ICYMIJoinGuildsScreen() {
   closure_10 = tmp13[1];
   const items4 = [first];
   const items5 = [stateFromStoresArray1, stateFromStores, first1, stateFromStoresArray.length];
-  const callback1 = React.useCallback(first(function*() {
-    if (dependencyMap === 2) {
-      dependencyMap = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  const callback1 = React.useCallback(
+    first(function* () {
+      if (dependencyMap === 2) {
+        dependencyMap = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        dependencyMap = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
+        try {
+          dependencyMap = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              dependencyMap = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              dependencyMap = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_0 = tmp4;
+              closure_1_10(true);
+              const _Array = Array;
+              v0 = 1;
+              dependencyMap = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = v0(8622).gravityJoinGuild(Array.from(closure_1_3), "icymi_info_modal");
+              return obj1;
+            }
+          } else if (1 === tmp4) {
+            if (arg0 === 1) {
+              dependencyMap = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              dependencyMap = 3;
+              const obj2 = { value: null, done: true };
+              obj2[0] = arg1;
+              return obj2;
+            } else if (arg1) {
+              let tmp52Result = tmp52(8622);
+              v0 = 2;
+              dependencyMap = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = tmp52Result.fetchDehydrated({ isReloading: true, forceRefresh: true });
+              return obj3;
+            } else {
+              tmp52Result = tmp52(4194);
+              const obj4 = { key: "ICYMIInfoModal", content: null };
+              const intl = closure_1_0(1236).intl;
+              obj4[1] = intl.string(closure_1_0(1236).t.CG4Hks);
+              tmp52Result.open(obj4);
+              let obj6 = v0(8622);
+              const dehydrated = obj6.fetchDehydrated();
+              let obj7 = v0(8622);
+              const guildChannelScores = obj7.getGuildChannelScores();
+              const recommendedGuilds = v0(8622).getRecommendedGuilds();
+              const obj9 = v0(8622);
+              v0(4723).popWithKey(closure_1_0(16055).ICYMI_INFO_MODAL_KEY);
+              dependencyMap = 3;
+              const obj5 = { value: null, done: true };
+              obj5[0] = undefined;
+              return obj5;
+            }
+          } else if (2 === tmp4) {
+            if (arg0 === 1) {
+              dependencyMap = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              dependencyMap = 3;
+              obj6 = { value: null, done: true };
+              obj6[0] = arg1;
+              return obj6;
+            } else {
+              obj1 = v0(8622);
+              v0 = 3;
+              dependencyMap = 1;
+              obj7 = { value: null, done: false };
+              obj7[0] = obj1.reloadICYMITab();
+              return obj7;
+            }
+          } else if (arg0 === 1) {
             dependencyMap = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -347,108 +550,48 @@ export default function ICYMIJoinGuildsScreen() {
             obj[0] = arg1;
             return obj;
           } else {
-            closure_0 = tmp4;
-            closure_1_10(true);
-            const _Array = Array;
-            v0 = 1;
-            dependencyMap = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = v0(8622).gravityJoinGuild(Array.from(closure_1_3), "icymi_info_modal");
-            return obj1;
-          }
-        } else if (1 === tmp4) {
-          if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else if (arg1) {
-            let tmp52Result = tmp52(8622);
-            v0 = 2;
-            dependencyMap = 1;
-            const obj3 = { value: null, done: false };
-            obj3[0] = tmp52Result.fetchDehydrated({ isReloading: true, forceRefresh: true });
-            return obj3;
-          } else {
-            tmp52Result = tmp52(4194);
-            const obj4 = { key: "ICYMIInfoModal", content: null };
-            const intl = closure_1_0(1236).intl;
-            obj4[1] = intl.string(closure_1_0(1236).t.CG4Hks);
-            tmp52Result.open(obj4);
-            let obj6 = v0(8622);
-            const dehydrated = obj6.fetchDehydrated();
-            let obj7 = v0(8622);
-            const guildChannelScores = obj7.getGuildChannelScores();
-            const recommendedGuilds = v0(8622).getRecommendedGuilds();
-            const obj9 = v0(8622);
+            const guildChannelScores1 = v0(8622).getGuildChannelScores();
+            const obj19 = v0(8622);
+            const recommendedGuilds1 = v0(8622).getRecommendedGuilds();
+            const obj20 = v0(8622);
             v0(4723).popWithKey(closure_1_0(16055).ICYMI_INFO_MODAL_KEY);
             dependencyMap = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = undefined;
-            return obj5;
+            return { value: "HermesInternal", done: null };
           }
-        } else if (2 === tmp4) {
-          if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          } else {
-            obj1 = v0(8622);
-            v0 = 3;
-            dependencyMap = 1;
-            obj7 = { value: null, done: false };
-            obj7[0] = obj1.reloadICYMITab();
-            return obj7;
-          }
-        } else if (arg0 === 1) {
-          dependencyMap = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          dependencyMap = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          const guildChannelScores1 = v0(8622).getGuildChannelScores();
-          const obj19 = v0(8622);
-          const recommendedGuilds1 = v0(8622).getRecommendedGuilds();
-          const obj20 = v0(8622);
-          v0(4723).popWithKey(closure_1_0(16055).ICYMI_INFO_MODAL_KEY);
-          dependencyMap = 3;
-          return { value: "HermesInternal", done: null };
+        } catch (tmp33) {
+          dependencyMap = tmp;
+          throw tmp33;
         }
-      } catch (tmp33) {
-        dependencyMap = tmp;
-        throw tmp33;
       }
-    }
-  }), items4);
+    }),
+    items4,
+  );
   const items6 = [first2, first, callback];
   const callback2 = React.useCallback(() => {
     if (first1 <= stateFromStores) {
       if (stateFromStoresArray.length < 150) {
         const sum = tmp + stateFromStoresArray(stateFromStores[30]).ICYMI_DISCOVERABLE_GUILDS_PAGE_SIZE;
         callback2(sum);
-        const popularGuildsFromCategories = stateFromStoresArray1(stateFromStores[27]).fetchPopularGuildsFromCategories(stateFromStoresArray1, sum);
+        const popularGuildsFromCategories = stateFromStoresArray1(stateFromStores[27]).fetchPopularGuildsFromCategories(
+          stateFromStoresArray1,
+          sum,
+        );
         const obj = stateFromStoresArray1(stateFromStores[27]);
       }
     }
   }, items5);
   callback3 = React.useCallback((item) => {
     item = item.item;
-    return closure_1_12(closure_1_21, { guild: item, loading: first2, selected: first.has(item.id), handlePress: callback }, item.id);
+    return closure_1_12(
+      closure_1_21,
+      { guild: item, loading: first2, selected: first.has(item.id), handlePress: callback },
+      item.id,
+    );
   }, items6);
   obj = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = stateFromStoresArray(stateFromStores[24]).intl;
   obj[3] = intl.string(stateFromStoresArray(stateFromStores[24]).t["19ldCF"]);
-  const children = [callback2(stateFromStoresArray(stateFromStores[21]).Text, obj), , , , , ];
+  const children = [callback2(stateFromStoresArray(stateFromStores[21]).Text, obj), , , , ,];
   obj = { variant: "text-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
   const intl2 = stateFromStoresArray(stateFromStores[24]).intl;
   obj[3] = intl2.string(stateFromStoresArray(stateFromStores[24]).t.u0KPUS);
@@ -456,7 +599,10 @@ export default function ICYMIJoinGuildsScreen() {
   children[2] = callback2(SelectedServersRow, { selectedGuilds: tmp9[0] });
   obj1 = { style: tmp.separator };
   children[3] = callback2(first1, obj1);
-  obj2 = { style: tmp.guildsScrollContainer, children: callback2(stateFromStoresArray(stateFromStores[31]).MasonryFlashList, obj3) };
+  obj2 = {
+    style: tmp.guildsScrollContainer,
+    children: callback2(stateFromStoresArray(stateFromStores[31]).MasonryFlashList, obj3),
+  };
   children[4] = callback2(first1, obj2);
   let tmp20Result = first.size >= 1;
   if (tmp20Result) {
@@ -475,4 +621,4 @@ export default function ICYMIJoinGuildsScreen() {
   }
   children[5] = tmp20Result;
   return closure_13(closure_14, { children });
-};
+}

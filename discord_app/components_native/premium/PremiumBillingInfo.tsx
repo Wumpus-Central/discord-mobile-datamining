@@ -42,7 +42,13 @@ class GoogleManagementLink {
 noopAll;
 ({ SubscriptionStatusTypes: c5, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = ME);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, externalSubtext: { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, billingContainer: null, billingRenewalInfo: null, billingManageGoogle: null };
+createCacheKey = {
+  title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
+  externalSubtext: { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
+  billingContainer: null,
+  billingRenewalInfo: null,
+  billingManageGoogle: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, marginTop: 8 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { marginTop: 4 };
@@ -54,27 +60,35 @@ export default function PremiumBillingInfo(subscription) {
   subscription = subscription.subscription;
   const tmp = callback4();
   let obj = createSubscriptionInvoicePreview;
-  obj = { subscriptionId: subscription.id, renewal: true, applyEntitlements: true, analyticsLocations: contextDefault(), analyticsLocation: QUICK_SWITCHERDefault.PREMIUM_BILLING_INFO };
+  obj = {
+    subscriptionId: subscription.id,
+    renewal: true,
+    applyEntitlements: true,
+    analyticsLocations: contextDefault(),
+    analyticsLocation: QUICK_SWITCHERDefault.PREMIUM_BILLING_INFO,
+  };
   const first = callback(obj.useFetchSubscriptionInvoicePreview(obj), 1)[0];
   createSubscriptionInvoicePreview;
   if (null == first) {
     return null;
   } else {
     let tmp2Result = tmp2(7147);
-    const externalManagementMessage = tmp2Result.getExternalManagementMessage(subscription, { shouldAllowExternalManagement: true });
+    const externalManagementMessage = tmp2Result.getExternalManagementMessage(subscription, {
+      shouldAllowExternalManagement: true,
+    });
     obj = { style: null, children: null };
     obj[0] = subscription.style;
     obj1 = { style: null, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
     obj1[0] = tmp.title;
     const intl = tmp2(1236).intl;
     obj1[4] = intl.string(tmp2(1236).t.Sb6wI1);
-    const items = [callback2(tmp2(4474).Text, obj1), , ];
+    const items = [callback2(tmp2(4474).Text, obj1), ,];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.billingContainer;
     const obj3 = { variant: "text-md/semibold", children: null };
     const intl2 = tmp2(1236).intl;
     obj3[1] = intl2.string(tmp2(1236).t.KXQjfc);
-    const items1 = [callback2(tmp2(4474).Text, obj3), , ];
+    const items1 = [callback2(tmp2(4474).Text, obj3), ,];
     const obj4 = { style: null, variant: "text-sm/medium", children: null };
     obj4[0] = tmp.billingRenewalInfo;
     tmp2Result = tmp2(13008);
@@ -97,5 +111,5 @@ export default function PremiumBillingInfo(subscription) {
     obj[1] = items;
     return callback3(View, obj);
   }
-};
+}
 export { GoogleManagementLink };

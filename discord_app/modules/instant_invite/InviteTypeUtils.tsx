@@ -8,7 +8,13 @@ import InviteSendStates from "Constants.tsx";
 const isEventUpcoming = scheduledEventSort.isEventUpcoming;
 ({ isGuildVocalChannelType: c3, isMultiUserDM: c4 } = createChannelRecord);
 ({ InviteTargetTypes: c5, InviteTypes: closure_6 } = InviteSendStates);
-let obj = { EVENT: "event", APPLICATION: "application", PROFILE: "profile", DEFAULT: "default", VOICE_CHANNEL: "voice_channel" };
+let obj = {
+  EVENT: "event",
+  APPLICATION: "application",
+  PROFILE: "profile",
+  DEFAULT: "default",
+  VOICE_CHANNEL: "voice_channel",
+};
 const result = set.fileFinishedImporting("modules/instant_invite/InviteTypeUtils.tsx");
 
 export const InviteTypes = InviteSendStates.InviteTypes;

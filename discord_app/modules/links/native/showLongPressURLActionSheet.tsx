@@ -46,7 +46,7 @@ export default function showLongPressURLActionSheet(urlString) {
   obj1[1] = function onPress() {
     closure_1_1(channelId[4]).openURL(str);
   };
-  const items1 = [obj1, , ];
+  const items1 = [obj1, ,];
   const obj2 = { label: null, onPress: null };
   const intl3 = str(channelId[1]).intl;
   obj2[0] = intl3.string(str(channelId[1]).t.WqhZss);
@@ -70,7 +70,12 @@ export default function showLongPressURLActionSheet(urlString) {
     const intl5 = tmp7(tmp8[1]).intl;
     obj4[0] = intl5.string(tmp7(tmp8[1]).t.aW2YlJ);
     obj4[1] = function onPress() {
-      closure_1_1(channelId[6])({ guildId: closure_1, channelId, messageId: closure_3, navigationSettings: { navigationReplace: true, safe: true } });
+      closure_1_1(channelId[6])({
+        guildId: closure_1,
+        channelId,
+        messageId: closure_3,
+        navigationSettings: { navigationReplace: true, safe: true },
+      });
     };
     items1.unshift(obj4);
   }
@@ -83,4 +88,4 @@ export default function showLongPressURLActionSheet(urlString) {
   obj5[1] = obj6;
   obj5[2] = items1;
   const result1 = str(channelId[7]).showSimpleActionSheet(obj5);
-};
+}

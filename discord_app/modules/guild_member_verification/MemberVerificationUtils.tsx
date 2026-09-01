@@ -40,7 +40,9 @@ export const isValidFormResponse = function isValidFormResponse(required) {
   }
 };
 export const removeInternalFields = function removeInternalFields(arr) {
-  return arr.filter((field_type) => field_type.field_type !== callback(table[2]).VerificationFormFieldTypes.VERIFICATION);
+  return arr.filter(
+    (field_type) => field_type.field_type !== callback(table[2]).VerificationFormFieldTypes.VERIFICATION,
+  );
 };
 export const isAutomaticApprovalFormField = function isAutomaticApprovalFormField(field_type) {
   field_type = undefined;

@@ -24,4 +24,4 @@ export default function getGamePlatform(type) {
     }
   }
   return tmp;
-};
+}

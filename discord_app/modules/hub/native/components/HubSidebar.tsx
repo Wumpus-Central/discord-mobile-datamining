@@ -22,7 +22,17 @@ function HubItem(arg0) {
     DEFAULT = ChannelModes.DEFAULT;
     tmp5 = tmp2;
   }
-  let obj = { style: callback2().container, accessibilityLabel: label, accessibilityRole: "menuitem", onPress: handleItemClick, disableHighlightOnPress: true, mode: DEFAULT, name: null, icon: null, channelInfo: null };
+  let obj = {
+    style: callback2().container,
+    accessibilityLabel: label,
+    accessibilityRole: "menuitem",
+    onPress: handleItemClick,
+    disableHighlightOnPress: true,
+    mode: DEFAULT,
+    name: null,
+    icon: null,
+    channelInfo: null,
+  };
   const tmp = callback2();
   obj[6] = callback(tmp5(11948).BaseChannelName, { name: label, mode: DEFAULT });
   obj[7] = callback(tmp5(11948).BaseChannelIcon, { mode: DEFAULT, IconComponent });
@@ -38,7 +48,11 @@ function HubItem(arg0) {
 noopAll;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, row: null };
-createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL,
+  marginHorizontal: 8,
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
@@ -75,7 +89,7 @@ export default function HubSidebar(guild) {
     obj[0] = row;
     obj = { guild: null };
     obj[0] = guild;
-    const items4 = [callback(stateFromStores(15802), obj), , , ];
+    const items4 = [callback(stateFromStores(15802), obj), , ,];
     obj1 = { active: null, IconComponent: null, label: null, handleItemClick: null, unreadCount: null };
     obj1[0] = stateFromStores1;
     obj1[1] = tmp(15192).CompassIcon;
@@ -101,7 +115,12 @@ export default function HubSidebar(guild) {
     const intl3 = tmp(1236).intl;
     obj3[1] = intl3.string(tmp(1236).t.MJQOuJ);
     obj3[2] = function handleItemClick() {
-      const result = guild(9909).handleOpenInviteActionsheet(guild, stateFromStores.id, dependencyMap, closure_1_6.GUILD_HEADER);
+      const result = guild(9909).handleOpenInviteActionsheet(
+        guild,
+        stateFromStores.id,
+        dependencyMap,
+        closure_1_6.GUILD_HEADER,
+      );
     };
     items4[3] = callback(HubItem, obj3);
     obj[1] = items4;
@@ -110,4 +129,4 @@ export default function HubSidebar(guild) {
     const tmp9 = closure_8;
   }
   return tmp9Result;
-};
+}

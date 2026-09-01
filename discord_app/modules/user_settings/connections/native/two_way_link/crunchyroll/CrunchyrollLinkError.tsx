@@ -9,7 +9,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkError.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkError.tsx",
+);
 
 export default function CrunchyrollLinkDiscordError(onClose) {
   let obj = useNavigation;
@@ -23,4 +25,4 @@ export default function CrunchyrollLinkDiscordError(onClose) {
   obj[2] = onClose.onClose;
   obj[3] = connectRetry;
   return jsx(TwoWayLinkError.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
-};
+}

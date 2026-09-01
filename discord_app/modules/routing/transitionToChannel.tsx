@@ -53,7 +53,11 @@ export const transitionToThreadMessage = function transitionToThreadMessage(chan
   const merged = Object.assign(arg2);
   obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id, id), obj);
 };
-export const tryTransitionToThreadMessage = function tryTransitionToThreadMessage(parentChannelId, threadId, messageId) {
+export const tryTransitionToThreadMessage = function tryTransitionToThreadMessage(
+  parentChannelId,
+  threadId,
+  messageId,
+) {
   let obj = store;
   const channel = store.getChannel(threadId);
   if (null != channel) {

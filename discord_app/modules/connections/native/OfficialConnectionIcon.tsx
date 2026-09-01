@@ -66,10 +66,22 @@ export default function OfficialConnectionIcon(arg0) {
   items1 = [style, obj];
   hex2intResult = tmp2Result.hex2int(roleColor);
   const items2 = [tmp.verifiedCheck, obj];
-  const items3 = [callback(Button.Icon, { style: items2, size: Button.Icon.Sizes.CUSTOM, source: registerAssetDefault, color: roleColor }), ];
+  const items3 = [
+    callback(Button.Icon, {
+      style: items2,
+      size: Button.Icon.Sizes.CUSTOM,
+      source: registerAssetDefault,
+      color: roleColor,
+    }),
+  ];
   const obj2 = { style: items2, size: Button.Icon.Sizes.CUSTOM, source: registerAssetDefault, color: roleColor };
   const items4 = [tmp.verifiedCheck, obj];
-  items3[1] = callback(Button.Icon, { style: items4, size: Button.Icon.Sizes.CUSTOM, source: registerAssetDefault2, color: PRIMARY_630 });
+  items3[1] = callback(Button.Icon, {
+    style: items4,
+    size: Button.Icon.Sizes.CUSTOM,
+    source: registerAssetDefault2,
+    color: PRIMARY_630,
+  });
   obj1[1] = items3;
   return callback2(View, obj1);
-};
+}

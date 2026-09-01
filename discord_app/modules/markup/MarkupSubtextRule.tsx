@@ -30,7 +30,7 @@ let obj = {
     obj.allowSubtext = false;
     obj[0] = t.parseInline(arg1, trimmed, obj);
     return obj;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/markup/MarkupSubtextRule.tsx");
 

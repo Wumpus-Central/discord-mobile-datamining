@@ -9,4 +9,4 @@ const result = set.fileFinishedImporting("modules/voice_panel/native/utils/close
 export default function closeVoicePanels() {
   const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
   ComponentDispatch.dispatch(ComponentActions.VOICE_PANEL_CLOSE);
-};
+}

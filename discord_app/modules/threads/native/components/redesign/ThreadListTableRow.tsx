@@ -11,14 +11,17 @@ function ThreadListTableRow(thread) {
   const onPress = thread.onPress;
   ({ start, end } = thread);
   const items = [onPress, thread.id];
-  const memo = importAllResult.useMemo(() => null != onPress ? (() => callback(id.id)) : undefined, items);
+  const memo = importAllResult.useMemo(() => (null != onPress ? () => callback(id.id) : undefined), items);
   let obj = { label: thread.name, subLabel: null, onPress: null, start: null, end: null, arrow: true };
   obj = { style: callback().subLabel, children: jsx(thread(onPress[6]).ThreadSubtext, { thread }) };
   obj[1] = <View style={callback().subLabel}>{jsx(thread(onPress[6]).ThreadSubtext, { thread })}</View>;
   obj[2] = memo;
   obj[3] = start;
   obj[4] = end;
-  return jsx(thread(onPress[5]).TableRow, { style: callback().subLabel, children: jsx(thread(onPress[6]).ThreadSubtext, { thread }) });
+  return jsx(thread(onPress[5]).TableRow, {
+    style: callback().subLabel,
+    children: jsx(thread(onPress[6]).ThreadSubtext, { thread }),
+  });
 }
 let closure_6 = createCacheKey.createStyles({ subLabel: { maxWidth: "100%", marginTop: 2 } });
 const memoResult = importAllResult.memo((threadId) => {
@@ -38,6 +41,8 @@ const memoResult = importAllResult.memo((threadId) => {
   }
   return tmp2;
 });
-const result = require("set").fileFinishedImporting("modules/threads/native/components/redesign/ThreadListTableRow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/threads/native/components/redesign/ThreadListTableRow.tsx",
+);
 
 export default memoResult;

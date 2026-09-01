@@ -51,4 +51,4 @@ export default function useInAppBrowserReturn(gameId) {
       tmp2 = closure_1_2;
     }
   }, items);
-};
+}

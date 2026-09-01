@@ -99,7 +99,21 @@ function getForumPostMedia(attachments, InlineAttachmentMedia) {
                 }
                 const obj2 = callback2(tmp13[9]);
               }
-              obj = { type: null, src: null, width: null, height: null, spoiler: null, flags: null, contentScanVersion: null, alt: null, isVideo: null, isThumbnail: null, attachmentId: null, mediaIndex: null, srcIsAnimated: null };
+              obj = {
+                type: null,
+                src: null,
+                width: null,
+                height: null,
+                spoiler: null,
+                flags: null,
+                contentScanVersion: null,
+                alt: null,
+                isVideo: null,
+                isThumbnail: null,
+                attachmentId: null,
+                mediaIndex: null,
+                srcIsAnimated: null,
+              };
               obj[0] = constants2.ATTACHMENT;
               obj[1] = str;
               obj[2] = width;
@@ -181,7 +195,18 @@ function useForumPostEmbeds(embeds, flag) {
                   obj = callback(closure_1_2[6]);
                   isVideoUrlResult = obj.isVideoUrl(proxyURL);
                 }
-                obj = { type: null, src: null, height: null, width: null, spoiler: null, flags: null, contentScanVersion: null, isVideo: null, mediaIndex: null, srcIsAnimated: null };
+                obj = {
+                  type: null,
+                  src: null,
+                  height: null,
+                  width: null,
+                  spoiler: null,
+                  flags: null,
+                  contentScanVersion: null,
+                  isVideo: null,
+                  mediaIndex: null,
+                  srcIsAnimated: null,
+                };
                 obj[0] = closure_1_11.EMBED;
                 let tmp6 = url;
                 if (null != proxyURL) {
@@ -215,7 +240,10 @@ function useForumPostEmbeds(embeds, flag) {
 }
 function useForumPostMediaProperties(firstResult, flag) {
   const InlineAttachmentMedia = explicitContentFromProto.InlineAttachmentMedia;
-  const items = [...getForumPostMedia(firstResult, InlineAttachmentMedia.useSetting()), ...useForumPostEmbeds(firstResult, flag)];
+  const items = [
+    ...getForumPostMedia(firstResult, InlineAttachmentMedia.useSetting()),
+    ...useForumPostEmbeds(firstResult, flag),
+  ];
   const InlineEmbedMedia = explicitContentFromProto.InlineEmbedMedia;
   if (null == firstResult) {
     let items1 = [];
@@ -227,55 +255,31 @@ function useForumPostMediaProperties(firstResult, flag) {
         const tmpResult = tmp(4739);
         const flattenComponentsResult = tmp(4739).flattenComponents(components);
         const arr = Array.from(tmp(4739).flattenComponents(components).values());
-        items1 = Array.from(tmp(4739).flattenComponents(components).values()).flatMap((type) => {
-          type = type.type;
-          if (callback(table[12]).ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = type);
-            if (spoiler == null) {
-              spoiler = false;
-            }
-            let tmpResult = tmp(tmp2[13]);
-            let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
-            let tmp6 = null;
-            if ("INVALID" !== unfurledMediaItemType) {
-              obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
-              obj[0] = constants.COMPONENT;
-              ({ proxyUrl: obj3[1], height } = media);
-              if (height == null) {
-                height = 0;
-              }
-              obj[2] = height;
-              let num = media.width;
-              if (num == null) {
-                num = 0;
-              }
-              obj[3] = num;
-              obj[4] = spoiler;
-              let contentScanMetadata = media.contentScanMetadata;
-              let version;
-              if (contentScanMetadata != null) {
-                version = contentScanMetadata.version;
-              }
-              obj[5] = version;
-              tmpResult = tmp(tmp2[8]);
-              obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
-              obj[8] = "VIDEO" === unfurledMediaItemType;
-              obj[10] = media;
-              tmp6 = obj;
-            }
-            return tmp6;
-          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
-            return items.map((arg0) => {
-              ({ media, spoiler } = arg0);
+        items1 = Array.from(tmp(4739).flattenComponents(components).values())
+          .flatMap((type) => {
+            type = type.type;
+            if (callback(table[12]).ComponentType.THUMBNAIL === type) {
+              ({ media, spoiler } = type);
               if (spoiler == null) {
                 spoiler = false;
               }
-              obj = callback(table[13]);
-              const unfurledMediaItemType = obj.getUnfurledMediaItemType(media);
-              let tmp4 = null;
+              let tmpResult = tmp(tmp2[13]);
+              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
-                obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
+                obj = {
+                  type: null,
+                  src: null,
+                  height: null,
+                  width: null,
+                  spoiler: null,
+                  contentScanVersion: null,
+                  flags: 0,
+                  srcIsAnimated: null,
+                  isVideo: null,
+                  mediaIndex: 0,
+                  srcUnfurledMediaItem: null,
+                };
                 obj[0] = constants.COMPONENT;
                 ({ proxyUrl: obj3[1], height } = media);
                 if (height == null) {
@@ -288,24 +292,74 @@ function useForumPostMediaProperties(firstResult, flag) {
                 }
                 obj[3] = num;
                 obj[4] = spoiler;
-                const contentScanMetadata = media.contentScanMetadata;
+                let contentScanMetadata = media.contentScanMetadata;
                 let version;
                 if (contentScanMetadata != null) {
                   version = contentScanMetadata.version;
                 }
                 obj[5] = version;
-                obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                tmpResult = tmp(tmp2[8]);
+                obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
                 obj[8] = "VIDEO" === unfurledMediaItemType;
                 obj[10] = media;
-                tmp4 = obj;
-                const tmpResult = tmp(tmp2[8]);
+                tmp6 = obj;
               }
-              return tmp4;
-            });
-          } else {
-            return null;
-          }
-        }).filter(tmp(1471).isNotNullish);
+              return tmp6;
+            } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+              const items = type.items;
+              return items.map((arg0) => {
+                ({ media, spoiler } = arg0);
+                if (spoiler == null) {
+                  spoiler = false;
+                }
+                obj = callback(table[13]);
+                const unfurledMediaItemType = obj.getUnfurledMediaItemType(media);
+                let tmp4 = null;
+                if ("INVALID" !== unfurledMediaItemType) {
+                  obj = {
+                    type: null,
+                    src: null,
+                    height: null,
+                    width: null,
+                    spoiler: null,
+                    contentScanVersion: null,
+                    flags: 0,
+                    srcIsAnimated: null,
+                    isVideo: null,
+                    mediaIndex: 0,
+                    srcUnfurledMediaItem: null,
+                  };
+                  obj[0] = constants.COMPONENT;
+                  ({ proxyUrl: obj3[1], height } = media);
+                  if (height == null) {
+                    height = 0;
+                  }
+                  obj[2] = height;
+                  let num = media.width;
+                  if (num == null) {
+                    num = 0;
+                  }
+                  obj[3] = num;
+                  obj[4] = spoiler;
+                  const contentScanMetadata = media.contentScanMetadata;
+                  let version;
+                  if (contentScanMetadata != null) {
+                    version = contentScanMetadata.version;
+                  }
+                  obj[5] = version;
+                  obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                  obj[8] = "VIDEO" === unfurledMediaItemType;
+                  obj[10] = media;
+                  tmp4 = obj;
+                  const tmpResult = tmp(tmp2[8]);
+                }
+                return tmp4;
+              });
+            } else {
+              return null;
+            }
+          })
+          .filter(tmp(1471).isNotNullish);
         const flatMapResult = Array.from(tmp(4739).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
@@ -317,7 +371,19 @@ function useForumPostMediaProperties(firstResult, flag) {
             let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
             let tmp6 = null;
             if ("INVALID" !== unfurledMediaItemType) {
-              obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
+              obj = {
+                type: null,
+                src: null,
+                height: null,
+                width: null,
+                spoiler: null,
+                contentScanVersion: null,
+                flags: 0,
+                srcIsAnimated: null,
+                isVideo: null,
+                mediaIndex: 0,
+                srcUnfurledMediaItem: null,
+              };
               obj[0] = constants.COMPONENT;
               ({ proxyUrl: obj3[1], height } = media);
               if (height == null) {
@@ -354,7 +420,19 @@ function useForumPostMediaProperties(firstResult, flag) {
               const unfurledMediaItemType = obj.getUnfurledMediaItemType(media);
               let tmp4 = null;
               if ("INVALID" !== unfurledMediaItemType) {
-                obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
+                obj = {
+                  type: null,
+                  src: null,
+                  height: null,
+                  width: null,
+                  spoiler: null,
+                  contentScanVersion: null,
+                  flags: 0,
+                  srcIsAnimated: null,
+                  isVideo: null,
+                  mediaIndex: 0,
+                  srcUnfurledMediaItem: null,
+                };
                 obj[0] = constants.COMPONENT;
                 ({ proxyUrl: obj3[1], height } = media);
                 if (height == null) {
@@ -456,55 +534,31 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
         const tmpResult = tmp(4739);
         const flattenComponentsResult = tmp(4739).flattenComponents(components);
         const arr = Array.from(tmp(4739).flattenComponents(components).values());
-        let found = Array.from(tmp(4739).flattenComponents(components).values()).flatMap((type) => {
-          type = type.type;
-          if (callback(table[12]).ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = type);
-            if (spoiler == null) {
-              spoiler = false;
-            }
-            let tmpResult = tmp(tmp2[13]);
-            let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
-            let tmp6 = null;
-            if ("INVALID" !== unfurledMediaItemType) {
-              obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
-              obj[0] = constants.COMPONENT;
-              ({ proxyUrl: obj3[1], height } = media);
-              if (height == null) {
-                height = 0;
-              }
-              obj[2] = height;
-              let num = media.width;
-              if (num == null) {
-                num = 0;
-              }
-              obj[3] = num;
-              obj[4] = spoiler;
-              let contentScanMetadata = media.contentScanMetadata;
-              let version;
-              if (contentScanMetadata != null) {
-                version = contentScanMetadata.version;
-              }
-              obj[5] = version;
-              tmpResult = tmp(tmp2[8]);
-              obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
-              obj[8] = "VIDEO" === unfurledMediaItemType;
-              obj[10] = media;
-              tmp6 = obj;
-            }
-            return tmp6;
-          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
-            return items.map((arg0) => {
-              ({ media, spoiler } = arg0);
+        let found = Array.from(tmp(4739).flattenComponents(components).values())
+          .flatMap((type) => {
+            type = type.type;
+            if (callback(table[12]).ComponentType.THUMBNAIL === type) {
+              ({ media, spoiler } = type);
               if (spoiler == null) {
                 spoiler = false;
               }
-              obj = callback(table[13]);
-              const unfurledMediaItemType = obj.getUnfurledMediaItemType(media);
-              let tmp4 = null;
+              let tmpResult = tmp(tmp2[13]);
+              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
-                obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
+                obj = {
+                  type: null,
+                  src: null,
+                  height: null,
+                  width: null,
+                  spoiler: null,
+                  contentScanVersion: null,
+                  flags: 0,
+                  srcIsAnimated: null,
+                  isVideo: null,
+                  mediaIndex: 0,
+                  srcUnfurledMediaItem: null,
+                };
                 obj[0] = constants.COMPONENT;
                 ({ proxyUrl: obj3[1], height } = media);
                 if (height == null) {
@@ -517,24 +571,74 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
                 }
                 obj[3] = num;
                 obj[4] = spoiler;
-                const contentScanMetadata = media.contentScanMetadata;
+                let contentScanMetadata = media.contentScanMetadata;
                 let version;
                 if (contentScanMetadata != null) {
                   version = contentScanMetadata.version;
                 }
                 obj[5] = version;
-                obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                tmpResult = tmp(tmp2[8]);
+                obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
                 obj[8] = "VIDEO" === unfurledMediaItemType;
                 obj[10] = media;
-                tmp4 = obj;
-                const tmpResult = tmp(tmp2[8]);
+                tmp6 = obj;
               }
-              return tmp4;
-            });
-          } else {
-            return null;
-          }
-        }).filter(tmp(1471).isNotNullish);
+              return tmp6;
+            } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+              const items = type.items;
+              return items.map((arg0) => {
+                ({ media, spoiler } = arg0);
+                if (spoiler == null) {
+                  spoiler = false;
+                }
+                obj = callback(table[13]);
+                const unfurledMediaItemType = obj.getUnfurledMediaItemType(media);
+                let tmp4 = null;
+                if ("INVALID" !== unfurledMediaItemType) {
+                  obj = {
+                    type: null,
+                    src: null,
+                    height: null,
+                    width: null,
+                    spoiler: null,
+                    contentScanVersion: null,
+                    flags: 0,
+                    srcIsAnimated: null,
+                    isVideo: null,
+                    mediaIndex: 0,
+                    srcUnfurledMediaItem: null,
+                  };
+                  obj[0] = constants.COMPONENT;
+                  ({ proxyUrl: obj3[1], height } = media);
+                  if (height == null) {
+                    height = 0;
+                  }
+                  obj[2] = height;
+                  let num = media.width;
+                  if (num == null) {
+                    num = 0;
+                  }
+                  obj[3] = num;
+                  obj[4] = spoiler;
+                  const contentScanMetadata = media.contentScanMetadata;
+                  let version;
+                  if (contentScanMetadata != null) {
+                    version = contentScanMetadata.version;
+                  }
+                  obj[5] = version;
+                  obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                  obj[8] = "VIDEO" === unfurledMediaItemType;
+                  obj[10] = media;
+                  tmp4 = obj;
+                  const tmpResult = tmp(tmp2[8]);
+                }
+                return tmp4;
+              });
+            } else {
+              return null;
+            }
+          })
+          .filter(tmp(1471).isNotNullish);
         const flatMapResult = Array.from(tmp(4739).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
@@ -546,7 +650,19 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
             let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
             let tmp6 = null;
             if ("INVALID" !== unfurledMediaItemType) {
-              obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
+              obj = {
+                type: null,
+                src: null,
+                height: null,
+                width: null,
+                spoiler: null,
+                contentScanVersion: null,
+                flags: 0,
+                srcIsAnimated: null,
+                isVideo: null,
+                mediaIndex: 0,
+                srcUnfurledMediaItem: null,
+              };
               obj[0] = constants.COMPONENT;
               ({ proxyUrl: obj3[1], height } = media);
               if (height == null) {
@@ -583,7 +699,19 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
               const unfurledMediaItemType = obj.getUnfurledMediaItemType(media);
               let tmp4 = null;
               if ("INVALID" !== unfurledMediaItemType) {
-                obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
+                obj = {
+                  type: null,
+                  src: null,
+                  height: null,
+                  width: null,
+                  spoiler: null,
+                  contentScanVersion: null,
+                  flags: 0,
+                  srcIsAnimated: null,
+                  isVideo: null,
+                  mediaIndex: 0,
+                  srcUnfurledMediaItem: null,
+                };
                 obj[0] = constants.COMPONENT;
                 ({ proxyUrl: obj3[1], height } = media);
                 if (height == null) {
@@ -620,7 +748,11 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
     found = [];
   }
 };
-export const useForumPostMediaThumbnail = function useForumPostMediaThumbnail(firstMessage, stateFromStores1, hasSpoilerEmbeds) {
+export const useForumPostMediaThumbnail = function useForumPostMediaThumbnail(
+  firstMessage,
+  stateFromStores1,
+  hasSpoilerEmbeds,
+) {
   closure_0 = stateFromStores1;
   let flag = hasSpoilerEmbeds;
   if (hasSpoilerEmbeds === undefined) {
@@ -664,55 +796,31 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
         const tmpResult = tmp(4739);
         const flattenComponentsResult = tmp(4739).flattenComponents(components);
         const arr = Array.from(tmp(4739).flattenComponents(components).values());
-        items = Array.from(tmp(4739).flattenComponents(components).values()).flatMap((type) => {
-          type = type.type;
-          if (callback(table[12]).ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = type);
-            if (spoiler == null) {
-              spoiler = false;
-            }
-            let tmpResult = tmp(tmp2[13]);
-            let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
-            let tmp6 = null;
-            if ("INVALID" !== unfurledMediaItemType) {
-              obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
-              obj[0] = constants.COMPONENT;
-              ({ proxyUrl: obj3[1], height } = media);
-              if (height == null) {
-                height = 0;
-              }
-              obj[2] = height;
-              let num = media.width;
-              if (num == null) {
-                num = 0;
-              }
-              obj[3] = num;
-              obj[4] = spoiler;
-              let contentScanMetadata = media.contentScanMetadata;
-              let version;
-              if (contentScanMetadata != null) {
-                version = contentScanMetadata.version;
-              }
-              obj[5] = version;
-              tmpResult = tmp(tmp2[8]);
-              obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
-              obj[8] = "VIDEO" === unfurledMediaItemType;
-              obj[10] = media;
-              tmp6 = obj;
-            }
-            return tmp6;
-          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
-            return items.map((arg0) => {
-              ({ media, spoiler } = arg0);
+        items = Array.from(tmp(4739).flattenComponents(components).values())
+          .flatMap((type) => {
+            type = type.type;
+            if (callback(table[12]).ComponentType.THUMBNAIL === type) {
+              ({ media, spoiler } = type);
               if (spoiler == null) {
                 spoiler = false;
               }
-              obj = callback(table[13]);
-              const unfurledMediaItemType = obj.getUnfurledMediaItemType(media);
-              let tmp4 = null;
+              let tmpResult = tmp(tmp2[13]);
+              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
-                obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
+                obj = {
+                  type: null,
+                  src: null,
+                  height: null,
+                  width: null,
+                  spoiler: null,
+                  contentScanVersion: null,
+                  flags: 0,
+                  srcIsAnimated: null,
+                  isVideo: null,
+                  mediaIndex: 0,
+                  srcUnfurledMediaItem: null,
+                };
                 obj[0] = constants.COMPONENT;
                 ({ proxyUrl: obj3[1], height } = media);
                 if (height == null) {
@@ -725,24 +833,74 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
                 }
                 obj[3] = num;
                 obj[4] = spoiler;
-                const contentScanMetadata = media.contentScanMetadata;
+                let contentScanMetadata = media.contentScanMetadata;
                 let version;
                 if (contentScanMetadata != null) {
                   version = contentScanMetadata.version;
                 }
                 obj[5] = version;
-                obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                tmpResult = tmp(tmp2[8]);
+                obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
                 obj[8] = "VIDEO" === unfurledMediaItemType;
                 obj[10] = media;
-                tmp4 = obj;
-                const tmpResult = tmp(tmp2[8]);
+                tmp6 = obj;
               }
-              return tmp4;
-            });
-          } else {
-            return null;
-          }
-        }).filter(tmp(1471).isNotNullish);
+              return tmp6;
+            } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+              const items = type.items;
+              return items.map((arg0) => {
+                ({ media, spoiler } = arg0);
+                if (spoiler == null) {
+                  spoiler = false;
+                }
+                obj = callback(table[13]);
+                const unfurledMediaItemType = obj.getUnfurledMediaItemType(media);
+                let tmp4 = null;
+                if ("INVALID" !== unfurledMediaItemType) {
+                  obj = {
+                    type: null,
+                    src: null,
+                    height: null,
+                    width: null,
+                    spoiler: null,
+                    contentScanVersion: null,
+                    flags: 0,
+                    srcIsAnimated: null,
+                    isVideo: null,
+                    mediaIndex: 0,
+                    srcUnfurledMediaItem: null,
+                  };
+                  obj[0] = constants.COMPONENT;
+                  ({ proxyUrl: obj3[1], height } = media);
+                  if (height == null) {
+                    height = 0;
+                  }
+                  obj[2] = height;
+                  let num = media.width;
+                  if (num == null) {
+                    num = 0;
+                  }
+                  obj[3] = num;
+                  obj[4] = spoiler;
+                  const contentScanMetadata = media.contentScanMetadata;
+                  let version;
+                  if (contentScanMetadata != null) {
+                    version = contentScanMetadata.version;
+                  }
+                  obj[5] = version;
+                  obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                  obj[8] = "VIDEO" === unfurledMediaItemType;
+                  obj[10] = media;
+                  tmp4 = obj;
+                  const tmpResult = tmp(tmp2[8]);
+                }
+                return tmp4;
+              });
+            } else {
+              return null;
+            }
+          })
+          .filter(tmp(1471).isNotNullish);
         const flatMapResult = Array.from(tmp(4739).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
@@ -754,7 +912,19 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
             let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
             let tmp6 = null;
             if ("INVALID" !== unfurledMediaItemType) {
-              obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
+              obj = {
+                type: null,
+                src: null,
+                height: null,
+                width: null,
+                spoiler: null,
+                contentScanVersion: null,
+                flags: 0,
+                srcIsAnimated: null,
+                isVideo: null,
+                mediaIndex: 0,
+                srcUnfurledMediaItem: null,
+              };
               obj[0] = constants.COMPONENT;
               ({ proxyUrl: obj3[1], height } = media);
               if (height == null) {
@@ -791,7 +961,19 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
               const unfurledMediaItemType = obj.getUnfurledMediaItemType(media);
               let tmp4 = null;
               if ("INVALID" !== unfurledMediaItemType) {
-                obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
+                obj = {
+                  type: null,
+                  src: null,
+                  height: null,
+                  width: null,
+                  spoiler: null,
+                  contentScanVersion: null,
+                  flags: 0,
+                  srcIsAnimated: null,
+                  isVideo: null,
+                  mediaIndex: 0,
+                  srcUnfurledMediaItem: null,
+                };
                 obj[0] = constants.COMPONENT;
                 ({ proxyUrl: obj3[1], height } = media);
                 if (height == null) {
@@ -852,55 +1034,31 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
         let tmpResult = tmp(4739);
         const flattenComponentsResult = tmp(4739).flattenComponents(components);
         const arr = Array.from(tmp(4739).flattenComponents(components).values());
-        items = Array.from(tmp(4739).flattenComponents(components).values()).flatMap((type) => {
-          type = type.type;
-          if (callback(table[12]).ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = type);
-            if (spoiler == null) {
-              spoiler = false;
-            }
-            let tmpResult = tmp(tmp2[13]);
-            let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
-            let tmp6 = null;
-            if ("INVALID" !== unfurledMediaItemType) {
-              obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
-              obj[0] = constants.COMPONENT;
-              ({ proxyUrl: obj3[1], height } = media);
-              if (height == null) {
-                height = 0;
-              }
-              obj[2] = height;
-              let num = media.width;
-              if (num == null) {
-                num = 0;
-              }
-              obj[3] = num;
-              obj[4] = spoiler;
-              let contentScanMetadata = media.contentScanMetadata;
-              let version;
-              if (contentScanMetadata != null) {
-                version = contentScanMetadata.version;
-              }
-              obj[5] = version;
-              tmpResult = tmp(tmp2[8]);
-              obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
-              obj[8] = "VIDEO" === unfurledMediaItemType;
-              obj[10] = media;
-              tmp6 = obj;
-            }
-            return tmp6;
-          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
-            return items.map((arg0) => {
-              ({ media, spoiler } = arg0);
+        items = Array.from(tmp(4739).flattenComponents(components).values())
+          .flatMap((type) => {
+            type = type.type;
+            if (callback(table[12]).ComponentType.THUMBNAIL === type) {
+              ({ media, spoiler } = type);
               if (spoiler == null) {
                 spoiler = false;
               }
-              obj = callback(table[13]);
-              const unfurledMediaItemType = obj.getUnfurledMediaItemType(media);
-              let tmp4 = null;
+              let tmpResult = tmp(tmp2[13]);
+              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
-                obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
+                obj = {
+                  type: null,
+                  src: null,
+                  height: null,
+                  width: null,
+                  spoiler: null,
+                  contentScanVersion: null,
+                  flags: 0,
+                  srcIsAnimated: null,
+                  isVideo: null,
+                  mediaIndex: 0,
+                  srcUnfurledMediaItem: null,
+                };
                 obj[0] = constants.COMPONENT;
                 ({ proxyUrl: obj3[1], height } = media);
                 if (height == null) {
@@ -913,24 +1071,74 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
                 }
                 obj[3] = num;
                 obj[4] = spoiler;
-                const contentScanMetadata = media.contentScanMetadata;
+                let contentScanMetadata = media.contentScanMetadata;
                 let version;
                 if (contentScanMetadata != null) {
                   version = contentScanMetadata.version;
                 }
                 obj[5] = version;
-                obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                tmpResult = tmp(tmp2[8]);
+                obj[7] = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
                 obj[8] = "VIDEO" === unfurledMediaItemType;
                 obj[10] = media;
-                tmp4 = obj;
-                const tmpResult = tmp(tmp2[8]);
+                tmp6 = obj;
               }
-              return tmp4;
-            });
-          } else {
-            return null;
-          }
-        }).filter(tmp(1471).isNotNullish);
+              return tmp6;
+            } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+              const items = type.items;
+              return items.map((arg0) => {
+                ({ media, spoiler } = arg0);
+                if (spoiler == null) {
+                  spoiler = false;
+                }
+                obj = callback(table[13]);
+                const unfurledMediaItemType = obj.getUnfurledMediaItemType(media);
+                let tmp4 = null;
+                if ("INVALID" !== unfurledMediaItemType) {
+                  obj = {
+                    type: null,
+                    src: null,
+                    height: null,
+                    width: null,
+                    spoiler: null,
+                    contentScanVersion: null,
+                    flags: 0,
+                    srcIsAnimated: null,
+                    isVideo: null,
+                    mediaIndex: 0,
+                    srcUnfurledMediaItem: null,
+                  };
+                  obj[0] = constants.COMPONENT;
+                  ({ proxyUrl: obj3[1], height } = media);
+                  if (height == null) {
+                    height = 0;
+                  }
+                  obj[2] = height;
+                  let num = media.width;
+                  if (num == null) {
+                    num = 0;
+                  }
+                  obj[3] = num;
+                  obj[4] = spoiler;
+                  const contentScanMetadata = media.contentScanMetadata;
+                  let version;
+                  if (contentScanMetadata != null) {
+                    version = contentScanMetadata.version;
+                  }
+                  obj[5] = version;
+                  obj[7] = tmp(tmp2[8]).hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                  obj[8] = "VIDEO" === unfurledMediaItemType;
+                  obj[10] = media;
+                  tmp4 = obj;
+                  const tmpResult = tmp(tmp2[8]);
+                }
+                return tmp4;
+              });
+            } else {
+              return null;
+            }
+          })
+          .filter(tmp(1471).isNotNullish);
         const flatMapResult = Array.from(tmp(4739).flattenComponents(components).values()).flatMap((type) => {
           type = type.type;
           if (callback(table[12]).ComponentType.THUMBNAIL === type) {
@@ -942,7 +1150,19 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
             let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
             let tmp6 = null;
             if ("INVALID" !== unfurledMediaItemType) {
-              obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
+              obj = {
+                type: null,
+                src: null,
+                height: null,
+                width: null,
+                spoiler: null,
+                contentScanVersion: null,
+                flags: 0,
+                srcIsAnimated: null,
+                isVideo: null,
+                mediaIndex: 0,
+                srcUnfurledMediaItem: null,
+              };
               obj[0] = constants.COMPONENT;
               ({ proxyUrl: obj3[1], height } = media);
               if (height == null) {
@@ -979,7 +1199,19 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
               const unfurledMediaItemType = obj.getUnfurledMediaItemType(media);
               let tmp4 = null;
               if ("INVALID" !== unfurledMediaItemType) {
-                obj = { type: null, src: null, height: null, width: null, spoiler: null, contentScanVersion: null, flags: 0, srcIsAnimated: null, isVideo: null, mediaIndex: 0, srcUnfurledMediaItem: null };
+                obj = {
+                  type: null,
+                  src: null,
+                  height: null,
+                  width: null,
+                  spoiler: null,
+                  contentScanVersion: null,
+                  flags: 0,
+                  srcIsAnimated: null,
+                  isVideo: null,
+                  mediaIndex: 0,
+                  srcUnfurledMediaItem: null,
+                };
                 obj[0] = constants.COMPONENT;
                 ({ proxyUrl: obj3[1], height } = media);
                 if (height == null) {
@@ -1025,7 +1257,10 @@ export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMedia
     message = message.getMessage(channel.id, DISCORD_EPOCHDefault.castChannelIdAsMessageId(channel.id));
     let tmp8 = null != message;
     if (tmp8) {
-      let tmp2 = uploads.length > 0 && null != uploads.find((isImage) => isImage.isImage || isImage.isVideo) && channel.isForumPost();
+      let tmp2 =
+        uploads.length > 0 &&
+        null != uploads.find((isImage) => isImage.isImage || isImage.isVideo) &&
+        channel.isForumPost();
       if (tmp2) {
         currentUser = currentUser.getCurrentUser();
         id = undefined;
@@ -1041,40 +1276,42 @@ export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMedia
         let tmp7 = 0 === message.attachments.length;
         if (!tmp7) {
           const attachments = message.attachments;
-          tmp7 = null == attachments.find((filename) => {
-            let flag = false;
-            if (null != filename) {
-              ({ height, width } = filename);
-              let tmp3 = callback(4671).isImageFile(filename.filename) && null != height;
-              if (tmp3) {
-                tmp3 = height > 0;
-              }
-              if (tmp3) {
-                tmp3 = null != width;
-              }
-              if (tmp3) {
-                tmp3 = width > 0;
-              }
-              flag = tmp3;
-              obj = callback(4671);
-            }
-            if (!flag) {
-              let tmp4 = null != filename;
-              if (tmp4) {
-                let isVideoFileResult = null != filename;
-                if (isVideoFileResult) {
-                  isVideoFileResult = callback(4671).isVideoFile(filename.filename);
-                  const obj2 = callback(4671);
+          tmp7 =
+            null ==
+            attachments.find((filename) => {
+              let flag = false;
+              if (null != filename) {
+                ({ height, width } = filename);
+                let tmp3 = callback(4671).isImageFile(filename.filename) && null != height;
+                if (tmp3) {
+                  tmp3 = height > 0;
                 }
-                if (isVideoFileResult) {
-                  isVideoFileResult = null != filename.proxy_url;
+                if (tmp3) {
+                  tmp3 = null != width;
                 }
-                tmp4 = isVideoFileResult;
+                if (tmp3) {
+                  tmp3 = width > 0;
+                }
+                flag = tmp3;
+                obj = callback(4671);
               }
-              flag = tmp4;
-            }
-            return flag;
-          });
+              if (!flag) {
+                let tmp4 = null != filename;
+                if (tmp4) {
+                  let isVideoFileResult = null != filename;
+                  if (isVideoFileResult) {
+                    isVideoFileResult = callback(4671).isVideoFile(filename.filename);
+                    const obj2 = callback(4671);
+                  }
+                  if (isVideoFileResult) {
+                    isVideoFileResult = null != filename.proxy_url;
+                  }
+                  tmp4 = isVideoFileResult;
+                }
+                flag = tmp4;
+              }
+              return flag;
+            });
         }
         tmp2 = tmp7;
       }
@@ -1084,14 +1321,17 @@ export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMedia
   }
 };
 export const messageContainsGifOrVideo = function messageContainsGifOrVideo(media) {
-  return media.reduce((containsVideo, isVideo) => {
-    obj = { containsVideo: containsVideo.containsVideo || isVideo.isVideo, containsGif: null };
-    let containsGif = containsVideo.containsGif;
-    if (!containsGif) {
-      containsGif = callback(table[6]).isAnimatedImageUrl(isVideo.src);
-      const obj2 = callback(table[6]);
-    }
-    obj[1] = containsGif;
-    return obj;
-  }, { containsVideo: false, containsGif: false });
+  return media.reduce(
+    (containsVideo, isVideo) => {
+      obj = { containsVideo: containsVideo.containsVideo || isVideo.isVideo, containsGif: null };
+      let containsGif = containsVideo.containsGif;
+      if (!containsGif) {
+        containsGif = callback(table[6]).isAnimatedImageUrl(isVideo.src);
+        const obj2 = callback(table[6]);
+      }
+      obj[1] = containsGif;
+      return obj;
+    },
+    { containsVideo: false, containsGif: false },
+  );
 };

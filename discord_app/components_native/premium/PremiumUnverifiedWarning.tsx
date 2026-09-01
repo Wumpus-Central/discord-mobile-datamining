@@ -14,8 +14,7 @@ createCacheKey = { color: ThemesDefault.unsafe_rawColors.RED_400, fontSize: 12, 
 createCacheKey[0] = createCacheKey;
 let closure_4 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
-class PremiumUnverifiedWarning extends PureComponent {
-}
+class PremiumUnverifiedWarning extends PureComponent {}
 PremiumUnverifiedWarning.prototype["render"] = function render() {
   let tmp3 = null;
   if (!this.props.verified) {

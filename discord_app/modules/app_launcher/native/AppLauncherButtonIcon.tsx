@@ -15,7 +15,7 @@ export const AppLauncherButtonIcon = function AppLauncherButtonIcon(style) {
   if (tmp3 === KeyboardTypes.KeyboardTypes.APP_LAUNCHER) {
     obj = {};
     const merged1 = Object.assign(merged);
-    const items = [style, ];
+    const items = [style];
     obj = { transform: null };
     const items1 = [{ rotate: "45deg" }];
     obj[0] = items1;

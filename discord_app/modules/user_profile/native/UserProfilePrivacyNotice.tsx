@@ -11,7 +11,16 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, icon: null, text: null, closeButton: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO, borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO,
+  borderRadius: ThemesDefault.radii.sm,
+  padding: ThemesDefault.space.PX_12,
+  flexDirection: "row",
+  alignItems: "flex-start",
+  gap: ThemesDefault.space.PX_8,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexShrink: 0, marginTop: 2 };
 createCacheKey[2] = { flex: 1 };
@@ -35,7 +44,9 @@ export default function UserProfilePrivacyNotice() {
     if (isInPrivateProfilesExperiment) {
       if (userIsTeen) {
         if (setting !== isInPrivateProfilesExperiment(userIsTeen[8]).ProfileVisibility.FRIENDS_AND_ALL_GUILDS) {
-          const items = [isInPrivateProfilesExperiment(userIsTeen[13]).DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE];
+          const items = [
+            isInPrivateProfilesExperiment(userIsTeen[13]).DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE,
+          ];
         }
         return [];
       }
@@ -45,16 +56,24 @@ export default function UserProfilePrivacyNotice() {
   [tmp9, isInPrivateProfilesExperiment] = setting(obj2.useSelectedDismissibleContent(memo), 2);
   const ProfileVisibility2 = isInPrivateProfilesExperiment(userIsTeen[12]).ProfileVisibility;
   const setting1 = ProfileVisibility2.useSetting();
-  const callback = React.useCallback((children) => callback(isInPrivateProfilesExperiment(userIsTeen[15]).Text, {
-    variant: "text-sm/normal",
-    color: "text-link",
-    onPress() {
-      let obj = callback(table[16]);
-      obj = { screen: constants.DATA_AND_PRIVACY };
-      return obj.openUserSettings(obj);
-    },
-    children
-  }, arg1), []);
+  const callback = React.useCallback(
+    (children) =>
+      callback(
+        isInPrivateProfilesExperiment(userIsTeen[15]).Text,
+        {
+          variant: "text-sm/normal",
+          color: "text-link",
+          onPress() {
+            let obj = callback(table[16]);
+            obj = { screen: constants.DATA_AND_PRIVACY };
+            return obj.openUserSettings(obj);
+          },
+          children,
+        },
+        arg1,
+      ),
+    [],
+  );
   if (tmp9 !== isInPrivateProfilesExperiment(userIsTeen[13]).DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE) {
     return null;
   } else {
@@ -71,7 +90,7 @@ export default function UserProfilePrivacyNotice() {
     obj = { style: null, children: null };
     obj[0] = tmp.icon;
     obj[1] = callback(tmp2(tmp3[17]).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
-    const items1 = [callback(View, obj), , ];
+    const items1 = [callback(View, obj), ,];
     obj1 = { style: null, variant: "text-sm/normal", color: "text-default", children: null };
     obj1[0] = tmp.text;
     const intl = tmp2(tmp3[9]).intl;
@@ -92,9 +111,11 @@ export default function UserProfilePrivacyNotice() {
     return callback2(View, obj);
   }
   const tmp8 = setting(obj2.useSelectedDismissibleContent(memo), 2);
-};
+}
 export const useIsPrivacyNoticeVisible = function useIsPrivacyNoticeVisible() {
-  isInPrivateProfilesExperiment = isInPrivateProfilesExperiment(userIsTeen[10]).useIsInPrivateProfilesExperiment("UserProfilePrivacyNotice");
+  isInPrivateProfilesExperiment = isInPrivateProfilesExperiment(userIsTeen[10]).useIsInPrivateProfilesExperiment(
+    "UserProfilePrivacyNotice",
+  );
   const obj = isInPrivateProfilesExperiment(userIsTeen[10]);
   userIsTeen = isInPrivateProfilesExperiment(userIsTeen[11]).useUserIsTeen();
   const ProfileVisibility = isInPrivateProfilesExperiment(userIsTeen[12]).ProfileVisibility;
@@ -104,12 +125,17 @@ export const useIsPrivacyNoticeVisible = function useIsPrivacyNoticeVisible() {
     if (isInPrivateProfilesExperiment) {
       if (userIsTeen) {
         if (setting !== isInPrivateProfilesExperiment(userIsTeen[8]).ProfileVisibility.FRIENDS_AND_ALL_GUILDS) {
-          const items = [isInPrivateProfilesExperiment(userIsTeen[13]).DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE];
+          const items = [
+            isInPrivateProfilesExperiment(userIsTeen[13]).DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE,
+          ];
         }
         return [];
       }
     }
   }, items);
   const obj2 = isInPrivateProfilesExperiment(userIsTeen[11]);
-  return setting(isInPrivateProfilesExperiment(userIsTeen[14]).useSelectedDismissibleContent(memo), 1)[0] === isInPrivateProfilesExperiment(userIsTeen[13]).DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE;
+  return (
+    setting(isInPrivateProfilesExperiment(userIsTeen[14]).useSelectedDismissibleContent(memo), 1)[0] ===
+    isInPrivateProfilesExperiment(userIsTeen[13]).DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE
+  );
 };

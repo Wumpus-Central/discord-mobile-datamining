@@ -25,57 +25,80 @@ function getOptionValue(arr) {
   return value;
 }
 let c3 = importDefaultResult;
-({ Permissions: error, MARKDOWN_SPOILER_WRAPPER: closure_8, ME: c9, DISPLAY_NAME_MAX_LENGTH, MAX_CHANNEL_NAME_LENGTH } = ME);
+({
+  Permissions: error,
+  MARKDOWN_SPOILER_WRAPPER: closure_8,
+  ME: c9,
+  DISPLAY_NAME_MAX_LENGTH,
+  MAX_CHANNEL_NAME_LENGTH,
+} = ME);
 ({ ALLOWED_DICE_SIDES, MAX_DICE_COUNT } = ROLL_DURATION_MS);
 let obj = {};
-obj = { id: BuiltInSectionId.BUILT_IN, type: require("ApplicationCommandSectionType").ApplicationCommandSectionType.BUILT_IN };
+obj = {
+  id: BuiltInSectionId.BUILT_IN,
+  type: require("ApplicationCommandSectionType").ApplicationCommandSectionType.BUILT_IN,
+};
 Object.defineProperty(obj, "name", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.fI5MTa);
   },
-  set: undefined
+  set: undefined,
 });
 obj[BuiltInSectionId.BUILT_IN] = obj;
-obj = { id: BuiltInSectionId.FRECENCY, type: require("ApplicationCommandSectionType").ApplicationCommandSectionType.BUILT_IN };
+obj = {
+  id: BuiltInSectionId.FRECENCY,
+  type: require("ApplicationCommandSectionType").ApplicationCommandSectionType.BUILT_IN,
+};
 Object.defineProperty(obj, "name", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t["+cGVV6"]);
   },
-  set: undefined
+  set: undefined,
 });
 obj[BuiltInSectionId.FRECENCY] = obj;
 let items = [...require("get untranslatedDescription").default];
-let obj1 = { id: "-1", untranslatedName: "shrug", displayName: "shrug", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+let obj1 = {
+  id: "-1",
+  untranslatedName: "shrug",
+  displayName: "shrug",
+  type: require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN_TEXT,
+  applicationId: BuiltInSectionId.BUILT_IN,
+};
 Object.defineProperty(obj1, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.j5xUSW);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj1, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.j5xUSW);
   },
-  set: undefined
+  set: undefined,
 });
-let obj2 = { name: "message", displayName: "message", type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING };
+let obj2 = {
+  name: "message",
+  displayName: "message",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+};
 Object.defineProperty(obj2, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.JewOrS);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj2, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.JewOrS);
   },
-  set: undefined
+  set: undefined,
 });
 const items1 = [obj2];
 obj1.options = items1;
@@ -94,35 +117,46 @@ obj1.execute = function execute(arr) {
 };
 items[tmp5] = obj1;
 const sum = tmp5 + 1;
-let obj3 = { id: "-2", untranslatedName: "tableflip", displayName: "tableflip", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+let obj3 = {
+  id: "-2",
+  untranslatedName: "tableflip",
+  displayName: "tableflip",
+  type: require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN_TEXT,
+  applicationId: BuiltInSectionId.BUILT_IN,
+};
 Object.defineProperty(obj3, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.nrQRce);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj3, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.nrQRce);
   },
-  set: undefined
+  set: undefined,
 });
-let obj4 = { name: "message", displayName: "message", type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING };
+let obj4 = {
+  name: "message",
+  displayName: "message",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+};
 Object.defineProperty(obj4, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.EI80tw);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj4, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.EI80tw);
   },
-  set: undefined
+  set: undefined,
 });
 const items2 = [obj4];
 obj3.options = items2;
@@ -141,35 +175,46 @@ obj3.execute = function execute(arr) {
 };
 items[sum] = obj3;
 const sum1 = sum + 1;
-let obj5 = { id: "-3", untranslatedName: "unflip", displayName: "unflip", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+let obj5 = {
+  id: "-3",
+  untranslatedName: "unflip",
+  displayName: "unflip",
+  type: require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN_TEXT,
+  applicationId: BuiltInSectionId.BUILT_IN,
+};
 Object.defineProperty(obj5, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.pnnn8e);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj5, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.pnnn8e);
   },
-  set: undefined
+  set: undefined,
 });
-let obj6 = { name: "message", displayName: "message", type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING };
+let obj6 = {
+  name: "message",
+  displayName: "message",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+};
 Object.defineProperty(obj6, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.ETs6go);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj6, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.ETs6go);
   },
-  set: undefined
+  set: undefined,
 });
 const items3 = [obj6];
 obj5.options = items3;
@@ -188,35 +233,46 @@ obj5.execute = function execute(arr) {
 };
 items[sum1] = obj5;
 const sum2 = sum1 + 1;
-let obj7 = { id: "-4", untranslatedName: "tts", displayName: "tts", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+let obj7 = {
+  id: "-4",
+  untranslatedName: "tts",
+  displayName: "tts",
+  type: require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN_TEXT,
+  applicationId: BuiltInSectionId.BUILT_IN,
+};
 Object.defineProperty(obj7, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.jZcIid);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj7, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.jZcIid);
   },
-  set: undefined
+  set: undefined,
 });
-let obj8 = { name: "message", displayName: "message", type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING };
+let obj8 = {
+  name: "message",
+  displayName: "message",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+};
 Object.defineProperty(obj8, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t["k+sw9g"]);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj8, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t["k+sw9g"]);
   },
-  set: undefined
+  set: undefined,
 });
 obj8.required = true;
 const items4 = [obj8];
@@ -247,35 +303,46 @@ obj7.execute = function execute(arr) {
 };
 items[sum2] = obj7;
 const sum3 = sum2 + 1;
-const obj9 = { id: "-5", untranslatedName: "me", displayName: "me", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+const obj9 = {
+  id: "-5",
+  untranslatedName: "me",
+  displayName: "me",
+  type: require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN_TEXT,
+  applicationId: BuiltInSectionId.BUILT_IN,
+};
 Object.defineProperty(obj9, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.UGO8fU);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj9, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.UGO8fU);
   },
-  set: undefined
+  set: undefined,
 });
-let obj10 = { name: "message", displayName: "message", type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING };
+let obj10 = {
+  name: "message",
+  displayName: "message",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+};
 Object.defineProperty(obj10, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.RWTgNd);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj10, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.RWTgNd);
   },
-  set: undefined
+  set: undefined,
 });
 obj10.required = true;
 const items5 = [obj10];
@@ -294,35 +361,46 @@ obj9.execute = function execute(arr) {
 };
 items[sum3] = obj9;
 const sum4 = sum3 + 1;
-const obj11 = { id: "-6", untranslatedName: "spoiler", displayName: "spoiler", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
+const obj11 = {
+  id: "-6",
+  untranslatedName: "spoiler",
+  displayName: "spoiler",
+  type: require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN_TEXT,
+  applicationId: BuiltInSectionId.BUILT_IN,
+};
 Object.defineProperty(obj11, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.v0eDdV);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj11, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.v0eDdV);
   },
-  set: undefined
+  set: undefined,
 });
-const obj12 = { name: "message", displayName: "message", type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING };
+const obj12 = {
+  name: "message",
+  displayName: "message",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+};
 Object.defineProperty(obj12, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.D13pbc);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj12, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.D13pbc);
   },
-  set: undefined
+  set: undefined,
 });
 obj12.required = true;
 const items6 = [obj12];
@@ -342,35 +420,46 @@ obj11.execute = function execute(arr) {
 };
 items[sum4] = obj11;
 const sum5 = sum4 + 1;
-const obj13 = { id: "-7", untranslatedName: "nick", displayName: "nick", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj13 = {
+  id: "-7",
+  untranslatedName: "nick",
+  displayName: "nick",
+  type: require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN,
+  applicationId: BuiltInSectionId.BUILT_IN,
+};
 Object.defineProperty(obj13, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t["jiHfS/"]);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj13, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t["jiHfS/"]);
   },
-  set: undefined
+  set: undefined,
 });
-const obj14 = { name: "new_nick", displayName: "new_nick", type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING };
+const obj14 = {
+  name: "new_nick",
+  displayName: "new_nick",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+};
 Object.defineProperty(obj14, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.WTSzVu);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj14, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.WTSzVu);
   },
-  set: undefined
+  set: undefined,
 });
 obj14.maxLength = DISPLAY_NAME_MAX_LENGTH;
 const items7 = [obj14];
@@ -382,7 +471,8 @@ obj13.predicate = function predicate(channel) {
     tmp = closure_5.can(constants.CHANGE_NICKNAME, channel) || closure_5.can(constants.MANAGE_NICKNAMES, channel);
     const obj = closure_5;
     const tmp2 = constants;
-    const tmp3 = closure_5.can(constants.CHANGE_NICKNAME, channel) || closure_5.can(constants.MANAGE_NICKNAMES, channel);
+    const tmp3 =
+      closure_5.can(constants.CHANGE_NICKNAME, channel) || closure_5.can(constants.MANAGE_NICKNAMES, channel);
   }
   return tmp;
 };
@@ -411,55 +501,75 @@ obj13.execute = function execute(arr) {
 };
 items[sum5] = obj13;
 const sum6 = sum5 + 1;
-const obj15 = { id: "-10", untranslatedName: "thread", displayName: "thread", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj15 = {
+  id: "-10",
+  untranslatedName: "thread",
+  displayName: "thread",
+  type: require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN,
+  applicationId: BuiltInSectionId.BUILT_IN,
+};
 Object.defineProperty(obj15, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.t6ZAS0);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj15, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.t6ZAS0);
   },
-  set: undefined
+  set: undefined,
 });
-const obj16 = { name: "name", displayName: "name", type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING };
+const obj16 = {
+  name: "name",
+  displayName: "name",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+};
 Object.defineProperty(obj16, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.TffOfY);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj16, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.TffOfY);
   },
-  set: undefined
+  set: undefined,
 });
 obj16.required = true;
 obj16.maxLength = MAX_CHANNEL_NAME_LENGTH;
-const items8 = [obj16, ];
-const obj17 = { name: "message", displayName: "message", type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING };
+const items8 = [obj16];
+const obj17 = {
+  name: "message",
+  displayName: "message",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+};
 Object.defineProperty(obj17, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.QXfSfU);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj17, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.QXfSfU);
   },
-  set: undefined
+  set: undefined,
 });
-Object.defineProperty(obj17, "maxLength", { get: () => useMessageMaxLength /* useMessageMaxLength */.getMaxMessageLength(), set: undefined });
+Object.defineProperty(obj17, "maxLength", {
+  get: () =>
+    useMessageMaxLength /* useMessageMaxLength */
+      .getMaxMessageLength(),
+  set: undefined,
+});
 obj17.required = true;
 items8[1] = obj17;
 obj15.options = items8;
@@ -477,7 +587,7 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
   closure_1 = arg1;
   c6 = 0;
   c7 = 0;
-  const iter = (function*(arg0, arg1) {
+  const iter = (function* (arg0, arg1) {
     if (c7 === 2) {
       c7 = 3;
       HermesBuiltin.throwTypeError();
@@ -540,7 +650,13 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             c6 = 2;
             c7 = 1;
             obj2 = { value: null, done: false };
-            obj2[0] = obj1.createThread(channel, dependencyMap, callback(692).ChannelTypes.PUBLIC_THREAD, obj2.getAutoArchiveDuration(channel, null), "Slash Command");
+            obj2[0] = obj1.createThread(
+              channel,
+              dependencyMap,
+              callback(692).ChannelTypes.PUBLIC_THREAD,
+              obj2.getAutoArchiveDuration(channel, null),
+              "Slash Command",
+            );
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -570,7 +686,7 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
   iter.next();
   return iter;
 });
-obj15.execute = function() {
+obj15.execute = function () {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -582,52 +698,67 @@ obj15.execute = function() {
 };
 items[sum6] = obj15;
 const sum7 = sum6 + 1;
-const obj18 = { id: "-11", untranslatedName: "kick", displayName: "kick", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj18 = {
+  id: "-11",
+  untranslatedName: "kick",
+  displayName: "kick",
+  type: require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN,
+  applicationId: BuiltInSectionId.BUILT_IN,
+};
 Object.defineProperty(obj18, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t["03N0UL"]);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj18, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t["03N0UL"]);
   },
-  set: undefined
+  set: undefined,
 });
-const obj19 = { name: "user", displayName: "user", type: require("PermissionOverwriteType").ApplicationCommandOptionType.USER };
+const obj19 = {
+  name: "user",
+  displayName: "user",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.USER,
+};
 Object.defineProperty(obj19, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.gF8IpD);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj19, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.gF8IpD);
   },
-  set: undefined
+  set: undefined,
 });
 obj19.required = true;
-const items9 = [obj19, ];
-const obj20 = { name: "reason", displayName: "reason", type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING };
+const items9 = [obj19];
+const obj20 = {
+  name: "reason",
+  displayName: "reason",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+};
 Object.defineProperty(obj20, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.QWldgj);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj20, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.QWldgj);
   },
-  set: undefined
+  set: undefined,
 });
 obj20.required = false;
 items9[1] = obj20;
@@ -642,7 +773,7 @@ obj18.execute = function execute(arr, guild) {
   let str;
   function _handler() {
     const self = this;
-    const tmp = str(function*() {
+    const tmp = str(function* () {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -773,52 +904,67 @@ obj18.execute = function execute(arr, guild) {
 };
 items[sum7] = obj18;
 const sum8 = sum7 + 1;
-const obj21 = { id: "-12", untranslatedName: "ban", displayName: "ban", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj21 = {
+  id: "-12",
+  untranslatedName: "ban",
+  displayName: "ban",
+  type: require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN,
+  applicationId: BuiltInSectionId.BUILT_IN,
+};
 Object.defineProperty(obj21, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.HWuskv);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj21, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.HWuskv);
   },
-  set: undefined
+  set: undefined,
 });
-const obj22 = { name: "user", displayName: "user", type: require("PermissionOverwriteType").ApplicationCommandOptionType.USER };
+const obj22 = {
+  name: "user",
+  displayName: "user",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.USER,
+};
 Object.defineProperty(obj22, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.z3XPjr);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj22, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.z3XPjr);
   },
-  set: undefined
+  set: undefined,
 });
 obj22.required = true;
-const items10 = [obj22, , ];
-const obj23 = { name: "delete_messages", displayName: "delete_messages", type: require("PermissionOverwriteType").ApplicationCommandOptionType.INTEGER };
+const items10 = [obj22, ,];
+const obj23 = {
+  name: "delete_messages",
+  displayName: "delete_messages",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.INTEGER,
+};
 Object.defineProperty(obj23, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.smrvA6);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj23, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.smrvA6);
   },
-  set: undefined
+  set: undefined,
 });
 obj23.required = true;
 Object.defineProperty(obj23, "choices", {
@@ -828,7 +974,7 @@ Object.defineProperty(obj23, "choices", {
     obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["4obaMS"]);
     const intl2 = getSystemLocale /* getSystemLocale */.intl;
     obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["4obaMS"]);
-    items = [obj, , , , , , ];
+    items = [obj, , , , , ,];
     obj = { name: null, displayName: null, value: null };
     const intl3 = getSystemLocale /* getSystemLocale */.intl;
     obj[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.RKpitY);
@@ -873,23 +1019,27 @@ Object.defineProperty(obj23, "choices", {
     items[6] = obj4;
     return items;
   },
-  set: undefined
+  set: undefined,
 });
 items10[1] = obj23;
-const obj24 = { name: "reason", displayName: "reason", type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING };
+const obj24 = {
+  name: "reason",
+  displayName: "reason",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+};
 Object.defineProperty(obj24, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.dG4noU);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj24, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.dG4noU);
   },
-  set: undefined
+  set: undefined,
 });
 obj24.required = false;
 items10[2] = obj24;
@@ -904,7 +1054,7 @@ obj21.execute = function execute(arr, guild) {
   let str;
   function _handler2() {
     const self = this;
-    const tmp = str(function*() {
+    const tmp = str(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -976,7 +1126,10 @@ obj21.execute = function execute(arr, guild) {
             }
             const obj2 = { user: null };
             obj2[0] = userTag;
-            closure_1_1(closure_1_2[20]).sendBotMessage(id.id, intl.formatToPlainString(closure_1_0(closure_1_2[10]).t.YflWdM, obj2));
+            closure_1_1(closure_1_2[20]).sendBotMessage(
+              id.id,
+              intl.formatToPlainString(closure_1_0(closure_1_2[10]).t.YflWdM, obj2),
+            );
             const obj8 = closure_1_1(closure_1_2[20]);
           }
           c5 = 3;
@@ -1043,78 +1196,98 @@ obj21.execute = function execute(arr, guild) {
 };
 items[sum8] = obj21;
 const sum9 = sum8 + 1;
-const obj25 = { id: "-13", untranslatedName: "timeout", displayName: "timeout", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj25 = {
+  id: "-13",
+  untranslatedName: "timeout",
+  displayName: "timeout",
+  type: require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN,
+  applicationId: BuiltInSectionId.BUILT_IN,
+};
 Object.defineProperty(obj25, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.KkPcep);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj25, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.KkPcep);
   },
-  set: undefined
+  set: undefined,
 });
-const obj26 = { name: "user", displayName: "user", type: require("PermissionOverwriteType").ApplicationCommandOptionType.USER };
+const obj26 = {
+  name: "user",
+  displayName: "user",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.USER,
+};
 Object.defineProperty(obj26, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.UU3VRm);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj26, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.UU3VRm);
   },
-  set: undefined
+  set: undefined,
 });
 obj26.required = true;
-const items11 = [obj26, , ];
-const obj27 = { name: "duration", displayName: "duration", type: require("PermissionOverwriteType").ApplicationCommandOptionType.INTEGER };
+const items11 = [obj26, ,];
+const obj27 = {
+  name: "duration",
+  displayName: "duration",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.INTEGER,
+};
 Object.defineProperty(obj27, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.SNqN1e);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj27, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.SNqN1e);
   },
-  set: undefined
+  set: undefined,
 });
 obj27.required = true;
 Object.defineProperty(obj27, "choices", {
-  get: () => callback2().map((arg0) => {
-    const obj = {};
-    const merged = Object.assign(arg0);
-    ({ label: obj.name, label: obj.displayName } = arg0);
-    return obj;
-  }),
-  set: undefined
+  get: () =>
+    callback2().map((arg0) => {
+      const obj = {};
+      const merged = Object.assign(arg0);
+      ({ label: obj.name, label: obj.displayName } = arg0);
+      return obj;
+    }),
+  set: undefined,
 });
 items11[1] = obj27;
-const obj28 = { name: "reason", displayName: "reason", type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING };
+const obj28 = {
+  name: "reason",
+  displayName: "reason",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+};
 Object.defineProperty(obj28, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.akHScA);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj28, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.akHScA);
   },
-  set: undefined
+  set: undefined,
 });
 obj28.required = false;
 items11[2] = obj28;
@@ -1129,7 +1302,7 @@ obj25.execute = function execute(arr, guild) {
   c3 = undefined;
   function _handler3() {
     const self = this;
-    const tmp = _undefined(function*() {
+    const tmp = _undefined(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -1178,7 +1351,13 @@ obj25.execute = function execute(arr, guild) {
                     error = new Error();
                     throw error;
                   } else {
-                    obj1 = { guildId: null, userId: null, communicationDisabledUntilTimestamp: null, duration: null, reason: null };
+                    obj1 = {
+                      guildId: null,
+                      userId: null,
+                      communicationDisabledUntilTimestamp: null,
+                      duration: null,
+                      reason: null,
+                    };
                     obj1[0] = tmp41.id;
                     obj1[1] = tmp15;
                     const obj8 = closure_1_1(closure_1_2[22]);
@@ -1275,55 +1454,75 @@ obj25.execute = function execute(arr, guild) {
 };
 items[sum9] = obj25;
 const sum10 = sum9 + 1;
-const obj29 = { id: "-14", untranslatedName: "msg", displayName: "msg", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj29 = {
+  id: "-14",
+  untranslatedName: "msg",
+  displayName: "msg",
+  type: require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN,
+  applicationId: BuiltInSectionId.BUILT_IN,
+};
 Object.defineProperty(obj29, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.Dg8XZw);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj29, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.Dg8XZw);
   },
-  set: undefined
+  set: undefined,
 });
-const obj30 = { name: "user", displayName: "user", type: require("PermissionOverwriteType").ApplicationCommandOptionType.USER };
+const obj30 = {
+  name: "user",
+  displayName: "user",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.USER,
+};
 Object.defineProperty(obj30, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t["KmVq/D"]);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj30, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t["KmVq/D"]);
   },
-  set: undefined
+  set: undefined,
 });
 obj30.required = true;
-const items12 = [obj30, ];
-const obj31 = { name: "message", displayName: "message", type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING };
+const items12 = [obj30];
+const obj31 = {
+  name: "message",
+  displayName: "message",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+};
 Object.defineProperty(obj31, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.oGUuOJ);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj31, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.oGUuOJ);
   },
-  set: undefined
+  set: undefined,
 });
 obj31.required = true;
-Object.defineProperty(obj31, "maxLength", { get: () => useMessageMaxLength /* useMessageMaxLength */.getMaxMessageLength(), set: undefined });
+Object.defineProperty(obj31, "maxLength", {
+  get: () =>
+    useMessageMaxLength /* useMessageMaxLength */
+      .getMaxMessageLength(),
+  set: undefined,
+});
 items12[1] = obj31;
 obj29.options = items12;
 obj29.execute = function execute(arr, channel) {
@@ -1333,7 +1532,7 @@ obj29.execute = function execute(arr, channel) {
   let str2;
   function _handler4(arg0) {
     const self = this;
-    const tmp = _handler4(function*() {
+    const tmp = _handler4(function* () {
       if (c0 === 2) {
         c0 = 3;
         HermesBuiltin.throwTypeError();
@@ -1445,53 +1644,68 @@ obj29.execute = function execute(arr, channel) {
   }
 };
 items[sum10] = obj29;
-const obj32 = { id: "-18", untranslatedName: "roll-dice", displayName: "roll-dice", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN, applicationId: BuiltInSectionId.BUILT_IN };
+const obj32 = {
+  id: "-18",
+  untranslatedName: "roll-dice",
+  displayName: "roll-dice",
+  type: require("PermissionOverwriteType").ApplicationCommandType.CHAT,
+  inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN,
+  applicationId: BuiltInSectionId.BUILT_IN,
+};
 Object.defineProperty(obj32, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.reVgOh);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj32, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.reVgOh);
   },
-  set: undefined
+  set: undefined,
 });
-const obj33 = { name: "count", displayName: "count", type: require("PermissionOverwriteType").ApplicationCommandOptionType.INTEGER };
+const obj33 = {
+  name: "count",
+  displayName: "count",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.INTEGER,
+};
 Object.defineProperty(obj33, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iSbJTZ, { max: MAX_DICE_COUNT });
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj33, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iSbJTZ, { max: MAX_DICE_COUNT });
   },
-  set: undefined
+  set: undefined,
 });
 obj33.minValue = 1;
 obj33.maxValue = MAX_DICE_COUNT;
-const items13 = [obj33, ];
-const obj34 = { name: "size", displayName: "size", type: require("PermissionOverwriteType").ApplicationCommandOptionType.INTEGER };
+const items13 = [obj33];
+const obj34 = {
+  name: "size",
+  displayName: "size",
+  type: require("PermissionOverwriteType").ApplicationCommandOptionType.INTEGER,
+};
 Object.defineProperty(obj34, "description", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.pV214H);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(obj34, "displayDescription", {
   get: () => {
     const intl = getSystemLocale /* getSystemLocale */.intl;
     return intl.string(getSystemLocale /* getSystemLocale */.t.pV214H);
   },
-  set: undefined
+  set: undefined,
 });
 obj34.choices = ALLOWED_DICE_SIDES.map((value) => ({ name: "D" + value, displayName: "D" + value, value }));
 items13[1] = obj34;
@@ -1538,25 +1752,27 @@ export const getBuiltInCommands = function getBuiltInCommands(commandTypes, arg1
   closure_0 = commandTypes;
   importDefault = arg2;
   enabled = importDefault(enabled[30]).getConfig({ location: "getBuiltInCommands" }).enabled;
-  return arg1 ? items : found.filter((type) => {
-    let hasItem = commandTypes.includes(type.type);
-    if (hasItem) {
-      let tmp3 = !closure_1;
-      if (closure_1) {
-        tmp3 = type.inputType === commandTypes(enabled[9]).ApplicationCommandInputType.BUILT_IN_TEXT;
-      }
-      if (!tmp3) {
-        tmp3 = type.inputType === commandTypes(enabled[9]).ApplicationCommandInputType.BUILT_IN_INTEGRATION;
-      }
-      hasItem = tmp3;
-    }
-    if (hasItem) {
-      let tmp8 = enabled;
-      if (!enabled) {
-        tmp8 = "roll-dice" !== type.untranslatedName;
-      }
-      hasItem = tmp8;
-    }
-    return hasItem;
-  });
+  return arg1
+    ? items
+    : found.filter((type) => {
+        let hasItem = commandTypes.includes(type.type);
+        if (hasItem) {
+          let tmp3 = !closure_1;
+          if (closure_1) {
+            tmp3 = type.inputType === commandTypes(enabled[9]).ApplicationCommandInputType.BUILT_IN_TEXT;
+          }
+          if (!tmp3) {
+            tmp3 = type.inputType === commandTypes(enabled[9]).ApplicationCommandInputType.BUILT_IN_INTEGRATION;
+          }
+          hasItem = tmp3;
+        }
+        if (hasItem) {
+          let tmp8 = enabled;
+          if (!enabled) {
+            tmp8 = "roll-dice" !== type.untranslatedName;
+          }
+          hasItem = tmp8;
+        }
+        return hasItem;
+      });
 };

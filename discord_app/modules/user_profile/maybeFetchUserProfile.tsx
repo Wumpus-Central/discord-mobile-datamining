@@ -112,7 +112,9 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       profileEffect = userProfile.profileEffect;
     }
     if (null != profileEffect) {
-      const result = require("../collectibles/CollectiblesActionCreators.tsx").maybeFetchCollectiblesProduct(profileEffect.skuId);
+      const result = require("../collectibles/CollectiblesActionCreators.tsx").maybeFetchCollectiblesProduct(
+        profileEffect.skuId,
+      );
       const obj2 = openCollectiblesShop;
     }
     if (null != guildId) {
@@ -124,14 +126,25 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       profileFrame = userProfile.profileFrame;
     }
     if (null != profileFrame) {
-      const result1 = require("../collectibles/CollectiblesActionCreators.tsx").maybeFetchCollectiblesProduct(profileFrame.skuId);
+      const result1 = require("../collectibles/CollectiblesActionCreators.tsx").maybeFetchCollectiblesProduct(
+        profileFrame.skuId,
+      );
       const obj3 = openCollectiblesShop;
     }
     if (null != closure_0) {
       require("../avatar/useAvatarColor.tsx").maybeFetchColors(closure_0);
       const obj4 = hasFetchedColors;
     }
-    obj = { type: null, withMutualGuilds: null, withMutualFriends: null, withMutualFriendsCount: null, guildId: null, joinRequestId: null, abortSignal: null, connectionsRoleId: null };
+    obj = {
+      type: null,
+      withMutualGuilds: null,
+      withMutualFriends: null,
+      withMutualFriendsCount: null,
+      guildId: null,
+      joinRequestId: null,
+      abortSignal: null,
+      connectionsRoleId: null,
+    };
     obj[0] = type;
     obj[1] = withMutualGuilds;
     obj[2] = flag2;
@@ -171,4 +184,4 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       return resolved;
     }
   }
-};
+}

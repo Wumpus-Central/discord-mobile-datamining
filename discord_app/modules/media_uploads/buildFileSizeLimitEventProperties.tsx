@@ -5,7 +5,17 @@ const result = set.fileFinishedImporting("modules/media_uploads/buildFileSizeLim
 
 export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEventProperties(arg0) {
   ({ guildId, channelId } = arg0);
-  ({ userIndividualFileSizeLimit, numAttachments, preCompressionFileSizes, preCompressionAggregateSize, postCompressionFileSizes, postCompressionAggregateSize, attachmentMimeTypes, errorType, kestrelVariant } = arg0);
+  ({
+    userIndividualFileSizeLimit,
+    numAttachments,
+    preCompressionFileSizes,
+    preCompressionAggregateSize,
+    postCompressionFileSizes,
+    postCompressionAggregateSize,
+    attachmentMimeTypes,
+    errorType,
+    kestrelVariant,
+  } = arg0);
   if (undefined !== channelId) {
     let obj = { channel_id: null };
     obj[0] = channelId;

@@ -17,12 +17,22 @@ createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BAS
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { opacity: 0 };
-createCacheKey[3] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8 };
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8 };
+createCacheKey[3] = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_8,
+  paddingBottom: ThemesDefault.space.PX_8,
+};
+let obj1 = {
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_8,
+  paddingBottom: ThemesDefault.space.PX_8,
+};
 createCacheKey[4] = { paddingHorizontal: ThemesDefault.space.PX_12 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { paddingHorizontal: ThemesDefault.space.PX_12 };
-const result = require("set").fileFinishedImporting("modules/message_request/native/RestrictedMessageRequestPreview.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/message_request/native/RestrictedMessageRequestPreview.tsx",
+);
 
 export default function RestrictedMessageRequestPreview(channelId) {
   channelId = channelId.channelId;
@@ -56,13 +66,17 @@ export default function RestrictedMessageRequestPreview(channelId) {
   }
   const items4 = [closure_9];
   const items5 = [first1];
-  const stateFromStores1 = channelId(589).useStateFromStores(items4, () => {
-    let user;
-    if (null != first1) {
-      user = closure_1_9.getUser(tmp);
-    }
-    return user;
-  }, items5);
+  const stateFromStores1 = channelId(589).useStateFromStores(
+    items4,
+    () => {
+      let user;
+      if (null != first1) {
+        user = closure_1_9.getUser(tmp);
+      }
+      return user;
+    },
+    items5,
+  );
   const items6 = [first];
   const effect = obj.useEffect(() => {
     if (!first) {
@@ -77,9 +91,16 @@ export default function RestrictedMessageRequestPreview(channelId) {
     if (null != stateFromStores1) {
       obj = { style: null, children: null };
       obj[0] = tmp.container;
-      obj = { ref: null, style: null, contentContainerStyle: null, onScrollBeginDrag: null, onContentSizeChange: null, children: null };
+      obj = {
+        ref: null,
+        style: null,
+        contentContainerStyle: null,
+        onScrollBeginDrag: null,
+        onContentSizeChange: null,
+        children: null,
+      };
       obj[0] = ref;
-      const items7 = [tmp.scroll, ];
+      const items7 = [tmp.scroll];
       let hidden = null;
       if (!first) {
         hidden = tmp.hidden;
@@ -109,14 +130,14 @@ export default function RestrictedMessageRequestPreview(channelId) {
       obj1 = { channel: null, user: null };
       obj1[0] = stateFromStores;
       obj1[1] = stateFromStores1;
-      const items8 = [callback(tmp2(16476), obj1), ];
+      const items8 = [callback(tmp2(16476), obj1)];
       obj2 = { channelId: null };
       obj2[0] = channelId;
       items8[1] = callback(tmp2(16478), obj2);
       obj[5] = items8;
-      const items9 = [closure_11(closure_5, obj), ];
+      const items9 = [closure_11(closure_5, obj)];
       const obj3 = { style: null, children: null };
-      const items10 = [tmp.footer, ];
+      const items10 = [tmp.footer];
       const obj4 = { paddingBottom: null };
       obj4[0] = tmp2(712).space.PX_8 + ref(1628)().bottom;
       items10[1] = obj4;
@@ -131,4 +152,4 @@ export default function RestrictedMessageRequestPreview(channelId) {
     }
   }
   return tmp13Result;
-};
+}

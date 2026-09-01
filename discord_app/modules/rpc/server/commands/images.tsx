@@ -68,9 +68,12 @@ let obj = {
       const _fetch = fetch;
       const response = fetch(text);
       const nextPromise = response.then((blob) => blob.blob());
-      return response.then((blob) => blob.blob()).then((arg0) => callback(table[6]).readFileAsBase64(arg0)).then((data_url) => ({ data_url }));
+      return response
+        .then((blob) => blob.blob())
+        .then((arg0) => callback(table[6]).readFileAsBase64(arg0))
+        .then((data_url) => ({ data_url }));
     }
-  }
+  },
 };
 const result = require("set").fileFinishedImporting("modules/rpc/server/commands/images.tsx");
 

@@ -26,11 +26,11 @@ export default function useBackPressHandler(stateFromStores) {
       }
     }
   }, items);
-};
+}
 export const BackPressHandler = {
   minimize() {
     MinimizeApp = MinimizeApp.MinimizeApp;
     MinimizeApp.minimizeApp();
     return true;
-  }
+  },
 };

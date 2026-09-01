@@ -22,4 +22,4 @@ export default function zipWithNext(arg0, arg1) {
     }
     return items;
   }
-};
+}

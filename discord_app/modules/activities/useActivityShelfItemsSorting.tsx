@@ -6,7 +6,8 @@ const result = require("set").fileFinishedImporting("modules/activities/useActiv
 
 export default function useActivityShelfItemsSorting(arg0) {
   const _require = arg0;
-  const FrecencyUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators =
+    require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
   const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   let items = [arg0];
   return React.useMemo(() => {
@@ -57,8 +58,12 @@ export default function useActivityShelfItemsSorting(arg0) {
       }
       let tmp8 = null != label_type;
       if (tmp8) {
-        tmp8 = label_type === items2(1955).EmbeddedActivityLabelTypes.NEW || label_type === items2(1955).EmbeddedActivityLabelTypes.UPDATED;
-        const tmp11 = label_type === items2(1955).EmbeddedActivityLabelTypes.NEW || label_type === items2(1955).EmbeddedActivityLabelTypes.UPDATED;
+        tmp8 =
+          label_type === items2(1955).EmbeddedActivityLabelTypes.NEW ||
+          label_type === items2(1955).EmbeddedActivityLabelTypes.UPDATED;
+        const tmp11 =
+          label_type === items2(1955).EmbeddedActivityLabelTypes.NEW ||
+          label_type === items2(1955).EmbeddedActivityLabelTypes.UPDATED;
         const tmp9 = items2;
       }
       return tmp8;
@@ -82,4 +87,4 @@ export default function useActivityShelfItemsSorting(arg0) {
     });
     return items2;
   }, items);
-};
+}

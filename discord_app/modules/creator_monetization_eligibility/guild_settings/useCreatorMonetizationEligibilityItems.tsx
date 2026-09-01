@@ -4,7 +4,9 @@ import closure_4 from "../../../../_runtime/00019_noop.js";
 import { HelpdeskArticles } from "../../../Constants.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx",
+);
 
 export default function useCreatorMonetizationEligibilityItems(arg0) {
   const _require = arg0;
@@ -23,25 +25,76 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
   isUserMFAEnabled = isMFAEnabled.isUserMFAEnabled;
   isModerationMFAEnabled = isMFAEnabled.isModerationMFAEnabled;
   let items = [isUserMFAEnabled, isModerationMFAEnabled, onEligibilityBecameStale, actions];
-  callback = isUserMFAEnabled.useCallback(sortedByIneligible(function*() {
-    if (c2 === 2) {
-      c2 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  callback = isUserMFAEnabled.useCallback(
+    sortedByIneligible(function* () {
+      if (c2 === 2) {
+        c2 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c2 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
+        try {
+          c2 = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              c2 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c2 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_0 = tmp4;
+              if (closure_1_4) {
+                if (!closure_1_5) {
+                  let result;
+                  if (c2 != null) {
+                    const onRequireModeratorMFAClick = c2.onRequireModeratorMFAClick;
+                    if (onRequireModeratorMFAClick != null) {
+                      result = onRequireModeratorMFAClick();
+                    }
+                  }
+                  c1 = 1;
+                  c2 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = result;
+                  return obj1;
+                }
+              } else {
+                let onEnableMFAClickResult;
+                if (c2 != null) {
+                  const onEnableMFAClick = c2.onEnableMFAClick;
+                  if (onEnableMFAClick != null) {
+                    onEnableMFAClickResult = onEnableMFAClick();
+                  }
+                }
+                c1 = 2;
+                c2 = 1;
+                const obj2 = { value: null, done: false };
+                obj2[0] = onEnableMFAClickResult;
+                return obj2;
+              }
+            }
+          } else if (1 === tmp4) {
+            if (arg0 === 1) {
+              c2 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c2 = 3;
+              const obj3 = { value: null, done: true };
+              obj3[0] = arg1;
+              return obj3;
+            }
+          } else if (arg0 === 1) {
             c2 = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -49,68 +102,20 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
-          } else {
-            closure_0 = tmp4;
-            if (closure_1_4) {
-              if (!closure_1_5) {
-                let result;
-                if (c2 != null) {
-                  const onRequireModeratorMFAClick = c2.onRequireModeratorMFAClick;
-                  if (onRequireModeratorMFAClick != null) {
-                    result = onRequireModeratorMFAClick();
-                  }
-                }
-                c1 = 1;
-                c2 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = result;
-                return obj1;
-              }
-            } else {
-              let onEnableMFAClickResult;
-              if (c2 != null) {
-                const onEnableMFAClick = c2.onEnableMFAClick;
-                if (onEnableMFAClick != null) {
-                  onEnableMFAClickResult = onEnableMFAClick();
-                }
-              }
-              c1 = 2;
-              c2 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = onEnableMFAClickResult;
-              return obj2;
-            }
           }
-        } else if (1 === tmp4) {
-          if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
+          if (c1 != null) {
+            tmp13();
           }
-        } else if (arg0 === 1) {
           c2 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c2 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          return { value: "HermesInternal", done: null };
+        } catch (tmp16) {
+          c2 = tmp;
+          throw tmp16;
         }
-        if (c1 != null) {
-          tmp13();
-        }
-        c2 = 3;
-        return { value: "HermesInternal", done: null };
-      } catch (tmp16) {
-        c2 = tmp;
-        throw tmp16;
       }
-    }
-  }), items);
+    }),
+    items,
+  );
   let obj2 = _require(actions[3]);
   enableMFAHook = _require(actions[4]).useEnableMFAHook({ onEnableMFAClick: callback });
   const items1 = [arg0, sortedByIneligible, isUserMFAEnabled, actions, isModerationMFAEnabled, enableMFAHook, callback];
@@ -119,7 +124,15 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       return null;
     } else {
       ({ minimumOwnerAgeInYears, minimumSize, noRecentViolations } = tmp);
-      let obj = { key: "no_violations_requirement", checkedLabel: null, uncheckedLabel: null, description: null, checked: null, actionLabel: null, actionHandler: null };
+      let obj = {
+        key: "no_violations_requirement",
+        checkedLabel: null,
+        uncheckedLabel: null,
+        description: null,
+        checked: null,
+        actionLabel: null,
+        actionHandler: null,
+      };
       const intl18 = callback(actions[5]).intl;
       obj[1] = intl18.string(callback(actions[5]).t["1lGNPZ"]);
       const intl19 = callback(actions[5]).intl;
@@ -145,7 +158,13 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       obj[6] = fn;
       const items = [obj];
       if (tmp3) {
-        obj = { key: "owner_age_requirement", checkedLabel: null, uncheckedLabel: null, description: null, checked: null };
+        obj = {
+          key: "owner_age_requirement",
+          checkedLabel: null,
+          uncheckedLabel: null,
+          description: null,
+          checked: null,
+        };
         const intl2 = tmp23(tmp24[5]).intl;
         obj[1] = intl2.string(tmp23(tmp24[5]).t["+F8haD"]);
         const intl3 = tmp23(tmp24[5]).intl;
@@ -158,7 +177,13 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
         items.push(obj);
       }
       if (tmp5) {
-        const obj2 = { key: "member_count_requirement", checkedLabel: null, uncheckedLabel: null, description: null, checked: null };
+        const obj2 = {
+          key: "member_count_requirement",
+          checkedLabel: null,
+          uncheckedLabel: null,
+          description: null,
+          checked: null,
+        };
         const intl5 = tmp23(tmp24[5]).intl;
         obj2[1] = intl5.string(tmp23(tmp24[5]).t.j7wXWo);
         const intl6 = tmp23(tmp24[5]).intl;
@@ -171,7 +196,13 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
         items.push(obj2);
       }
       if (tmp7) {
-        const obj4 = { key: "server_age_requirement", checkedLabel: null, uncheckedLabel: null, description: null, checked: null };
+        const obj4 = {
+          key: "server_age_requirement",
+          checkedLabel: null,
+          uncheckedLabel: null,
+          description: null,
+          checked: null,
+        };
         const intl8 = tmp23(tmp24[5]).intl;
         obj4[1] = intl8.string(tmp23(tmp24[5]).t.mjbvWw);
         const intl9 = tmp23(tmp24[5]).intl;
@@ -184,7 +215,13 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
         items.push(obj4);
       }
       if (null != tmp.weeklyCommunicators) {
-        const obj6 = { key: "weekly_communicator_count_requirement", checkedLabel: null, uncheckedLabel: null, description: null, checked: null };
+        const obj6 = {
+          key: "weekly_communicator_count_requirement",
+          checkedLabel: null,
+          uncheckedLabel: null,
+          description: null,
+          checked: null,
+        };
         const intl21 = tmp23(tmp24[5]).intl;
         obj6[1] = intl21.string(tmp23(tmp24[5]).t.Qw7qv4);
         const intl22 = tmp23(tmp24[5]).intl;
@@ -195,7 +232,13 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
         items.push(obj6);
       }
       if (null != tmp.hasMemberRetention) {
-        const obj7 = { key: "member_retention_requirement", checkedLabel: null, uncheckedLabel: null, description: null, checked: null };
+        const obj7 = {
+          key: "member_retention_requirement",
+          checkedLabel: null,
+          uncheckedLabel: null,
+          description: null,
+          checked: null,
+        };
         const intl24 = tmp23(tmp24[5]).intl;
         obj7[1] = intl24.string(tmp23(tmp24[5]).t.Qvq39M);
         const intl25 = tmp23(tmp24[5]).intl;
@@ -205,7 +248,13 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
         obj7[4] = tmp.hasMemberRetention;
         items.push(obj7);
       }
-      const obj8 = { key: "nsfw_requirement", checkedLabel: null, uncheckedLabel: null, description: null, checked: null };
+      const obj8 = {
+        key: "nsfw_requirement",
+        checkedLabel: null,
+        uncheckedLabel: null,
+        description: null,
+        checked: null,
+      };
       const intl11 = tmp23(tmp24[5]).intl;
       obj8[1] = intl11.string(callback(actions[5]).t.bymfTb);
       const intl12 = tmp23(tmp24[5]).intl;
@@ -242,7 +291,15 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
         if (!tmp11) {
           tmp11 = tmp13;
         }
-        const obj9 = { key: "2fa_requirement", checkedLabel: null, uncheckedLabel: null, description: null, checked: null, actionLabel: null, actionHandler: null };
+        const obj9 = {
+          key: "2fa_requirement",
+          checkedLabel: null,
+          uncheckedLabel: null,
+          description: null,
+          checked: null,
+          actionLabel: null,
+          actionHandler: null,
+        };
         const intl14 = tmp23(tmp24[5]).intl;
         obj9[1] = intl14.string(tmp23(tmp24[5]).t.NqVyFk);
         const intl15 = tmp23(tmp24[5]).intl;
@@ -277,4 +334,4 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       return items;
     }
   }, items1);
-};
+}

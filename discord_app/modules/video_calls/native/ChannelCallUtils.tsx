@@ -12,7 +12,12 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-({ UserSettingsSections: c4, AnalyticsPages: c5, InstantInviteSources: closure_6, RPC_APPLICATION_LOGGING_CATEGORY: error } = ME);
+({
+  UserSettingsSections: c4,
+  AnalyticsPages: c5,
+  InstantInviteSources: closure_6,
+  RPC_APPLICATION_LOGGING_CATEGORY: error,
+} = ME);
 let result = require("set").fileFinishedImporting("modules/video_calls/native/ChannelCallUtils.tsx");
 
 export const voiceSettings = function voiceSettings() {
@@ -56,7 +61,7 @@ export const openHideSelfStreamAndVideoConfirmDialog = function openHideSelfStre
           return closure_2_8(closure_0, obj);
         };
       });
-    }
+    },
   };
   obj.openLazy(obj);
 };
@@ -84,11 +89,19 @@ export const reportStreamIssue = function reportStreamIssue(stream) {
     if (videoStats == null) {
       videoStats = {};
     }
-    obj = { media_session_id: obj2.getMediaSessionId(encodeStreamKeyResult), rtc_connection_id: obj2.getRtcConnectionId(encodeStreamKeyResult), stream_region: obj2.getRegion(encodeStreamKeyResult), max_viewers: obj2.getMaxViewers(encodeStreamKeyResult) };
+    obj = {
+      media_session_id: obj2.getMediaSessionId(encodeStreamKeyResult),
+      rtc_connection_id: obj2.getRtcConnectionId(encodeStreamKeyResult),
+      stream_region: obj2.getRegion(encodeStreamKeyResult),
+      max_viewers: obj2.getMaxViewers(encodeStreamKeyResult),
+    };
     const merged = Object.assign(videoStats);
     const obj5 = closure_1_1(closure_1_2[7]);
     const tmp = stream;
-    obj5.openLazy(stream(closure_1_2[11])(closure_1_2[14], closure_1_2.paths), "StreamReportProblem" + stream.ownerId, { stream, analyticsData: obj });
+    obj5.openLazy(stream(closure_1_2[11])(closure_1_2[14], closure_1_2.paths), "StreamReportProblem" + stream.ownerId, {
+      stream,
+      analyticsData: obj,
+    });
   };
   return obj;
 };

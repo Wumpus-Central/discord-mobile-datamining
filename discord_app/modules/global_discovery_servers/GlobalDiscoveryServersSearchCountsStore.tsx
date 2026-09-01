@@ -5,8 +5,7 @@ import V6OrEarlierAPIError from "../../errors/index.tsx";
 
 require = arg1;
 const map = new Map();
-class SearchCountState {
-}
+class SearchCountState {}
 const prototype = SearchCountState.prototype;
 prototype["handleSearchCountStart"] = function handleSearchCountStart() {
   this.error = null;
@@ -23,8 +22,7 @@ prototype["handleSearchCountFailure"] = function handleSearchCountFailure(error)
   this.isFetching = false;
 };
 const Store = initializeDefault.Store;
-class GlobalDiscoveryServersSearchCountStore extends Store {
-}
+class GlobalDiscoveryServersSearchCountStore extends Store {}
 const prototype2 = GlobalDiscoveryServersSearchCountStore.prototype;
 prototype2["getIsInitialFetchComplete"] = function getIsInitialFetchComplete(arg0) {
   const value = map.get(arg0);
@@ -105,8 +103,10 @@ const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchC
         closure_1_2.delete(arg1);
       }
     });
-  }
+  },
 });
-let result = require("set").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersSearchCountsStore.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/global_discovery_servers/GlobalDiscoveryServersSearchCountsStore.tsx",
+);
 
 export default globalDiscoveryServersSearchCountStore;

@@ -34,7 +34,7 @@ class FormCTAButton {
     tmp5 = jsx;
     tmp6 = closure_0;
     tmp7 = closure_1;
-    items = [, , , ];
+    items = [, , ,];
     items[0] = tmp4.text;
     tmp8 = closure_10;
     if (closure_10.BRAND === BRAND) {
@@ -72,7 +72,7 @@ class FormCTAButton {
       obj[1] = tmp5(require("RowButtonWrapper").RowButton, obj1);
       tmp16 = obj;
     } else {
-      items1 = [, , ];
+      items1 = [, ,];
       items1[0] = tmp4.sectionBody;
       disabled2 = tmp2;
       if (tmp2) {
@@ -81,7 +81,15 @@ class FormCTAButton {
       items1[1] = disabled2;
       items1[2] = global.style;
       obj[0] = items1;
-      obj2 = { testID: null, accessibilityRole: "button", onPress: null, style: null, disabled: null, android_ripple: null, children: null };
+      obj2 = {
+        testID: null,
+        accessibilityRole: "button",
+        onPress: null,
+        style: null,
+        disabled: null,
+        android_ripple: null,
+        children: null,
+      };
       obj2[0] = testID;
       obj2[2] = onPress;
       obj2[3] = tmp4.button;
@@ -103,12 +111,26 @@ class FormCTAButton {
 }
 ({ ActivityIndicator: c3, Pressable: c4, Platform, StyleSheet, View: c5 } = get_ActivityIndicator);
 ({ ANDROID_FOREGROUND_RIPPLE: closure_6, getThemedRippleConfig: error } = semanticColor);
-createCacheKey = { rowButton: { paddingHorizontal: 16 }, sectionBody: {}, button: { minHeight: 44, justifyContent: "center" }, text: { lineHeight: 44, paddingHorizontal: 17, textAlign: "left" }, textBrand: null, textDanger: null, textWarning: null, alignLeft: null, disabled: null };
+createCacheKey = {
+  rowButton: { paddingHorizontal: 16 },
+  sectionBody: {},
+  button: { minHeight: 44, justifyContent: "center" },
+  text: { lineHeight: 44, paddingHorizontal: 17, textAlign: "left" },
+  textBrand: null,
+  textDanger: null,
+  textWarning: null,
+  alignLeft: null,
+  disabled: null,
+};
 createCacheKey = {};
-const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.CONTROL_BRAND_FOREGROUND, 16));
+const merged = Object.assign(
+  importDefaultResult(Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.CONTROL_BRAND_FOREGROUND, 16),
+);
 createCacheKey[4] = createCacheKey;
 let obj1 = {};
-const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL, 16));
+const merged1 = Object.assign(
+  importDefaultResult(Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL, 16),
+);
 createCacheKey[5] = obj1;
 const importDefaultResult1 = importDefaultResult;
 const obj2 = {};

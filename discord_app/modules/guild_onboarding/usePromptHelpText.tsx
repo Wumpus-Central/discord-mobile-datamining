@@ -20,14 +20,18 @@ export default function usePromptHelpText(arg0) {
   let obj = selectedRoleIds(589);
   const items = [closure_3];
   const items1 = [id, selectedRoleIds];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
-    if (null != id) {
-      let manyRoles = closure_1_3.getManyRoles(tmp, selectedRoleIds);
-    } else {
-      manyRoles = [];
-    }
-    return manyRoles;
-  }, items1);
+  const stateFromStoresArray = obj.useStateFromStoresArray(
+    items,
+    () => {
+      if (null != id) {
+        let manyRoles = closure_1_3.getManyRoles(tmp, selectedRoleIds);
+      } else {
+        manyRoles = [];
+      }
+      return manyRoles;
+    },
+    items1,
+  );
   obj1 = selectedRoleIds(589);
   const items2 = [id, closure_6, closure_5, closure_4];
   const stateFromStoresArray1 = obj1.useStateFromStoresArray(items2, () => {
@@ -103,7 +107,7 @@ export default function usePromptHelpText(arg0) {
     str2 = str4;
     str = str3;
   }
-};
+}
 export const useCustomizeCommunityPromptHelpText = function useCustomizeCommunityPromptHelpText(arg0) {
   ({ guild, prompt: _prompt, selectedRoleIds } = arg0);
   ({ selectedChannelIds: dependencyMap, itemHook } = arg0);
@@ -115,14 +119,18 @@ export const useCustomizeCommunityPromptHelpText = function useCustomizeCommunit
   let obj = selectedRoleIds(589);
   const items = [closure_3];
   const items1 = [id, selectedRoleIds];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
-    if (null != id) {
-      let manyRoles = closure_1_3.getManyRoles(tmp, selectedRoleIds);
-    } else {
-      manyRoles = [];
-    }
-    return manyRoles;
-  }, items1);
+  const stateFromStoresArray = obj.useStateFromStoresArray(
+    items,
+    () => {
+      if (null != id) {
+        let manyRoles = closure_1_3.getManyRoles(tmp, selectedRoleIds);
+      } else {
+        manyRoles = [];
+      }
+      return manyRoles;
+    },
+    items1,
+  );
   obj1 = selectedRoleIds(589);
   const items2 = [id, closure_6, closure_5, closure_4];
   const stateFromStoresArray1 = obj1.useStateFromStoresArray(items2, () => {
@@ -175,7 +183,17 @@ export const useCustomizeCommunityPromptHelpText = function useCustomizeCommunit
   }
   if (tmp5) {
     const intl2 = tmp2(1236).intl;
-    const obj2 = { channelCount: null, extraChannelCount: null, channel1: null, channel2: null, itemHook: null, roleCount: null, extraRoleCount: null, role1: null, role2: null };
+    const obj2 = {
+      channelCount: null,
+      extraChannelCount: null,
+      channel1: null,
+      channel2: null,
+      itemHook: null,
+      roleCount: null,
+      extraRoleCount: null,
+      role1: null,
+      role2: null,
+    };
     obj2[0] = stateFromStoresArray1.length;
     const _Math = Math;
     obj2[1] = Math.max(stateFromStoresArray1.length - 2, 0);

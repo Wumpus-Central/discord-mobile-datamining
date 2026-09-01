@@ -114,8 +114,7 @@ let closure_12 = {};
 let closure_13 = Object.freeze({});
 let closure_14 = Object.freeze({});
 const Store = initializeDefault.Store;
-class TypingStore extends Store {
-}
+class TypingStore extends Store {}
 const prototype = TypingStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_5);
@@ -323,7 +322,7 @@ const typingStore = new TypingStore(dispatcherDefault, {
       const tmp9 = handleTypingStop;
     }
     return tmp9Result;
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("stores/TypingStore.tsx");
 

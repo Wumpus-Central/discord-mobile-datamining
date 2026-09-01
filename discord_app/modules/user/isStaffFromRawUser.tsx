@@ -19,4 +19,4 @@ export default function isStaff(flags) {
     tmp = null != prop;
   }
   return tmp;
-};
+}

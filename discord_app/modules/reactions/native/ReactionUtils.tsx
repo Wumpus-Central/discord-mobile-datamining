@@ -32,7 +32,11 @@ export const handleOutOfSuperReactions = function handleOutOfSuperReactions(arg0
     if (!obj.isPremium(currentUser)) {
       obj = { onDismiss: null };
       obj[0] = arg0;
-      openLazyResult = ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9114, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
+      openLazyResult = ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+        asyncRequireImpl(9114, dependencyMap.paths),
+        "SuperReactionUpsellActionSheet",
+        obj,
+      );
       const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
     }
     return openLazyResult;
@@ -61,7 +65,11 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id,
       if (null != currentUser1) {
         let tmp13Result = tmp13(ReactionTypes[11]);
         if (!tmp13Result.isPremium(currentUser1)) {
-          importDefault(ReactionTypes[12]).openLazy(tmp13(ReactionTypes[14])(ReactionTypes[13], ReactionTypes.paths), "SuperReactionUpsellActionSheet", { onDismiss: "r" });
+          importDefault(ReactionTypes[12]).openLazy(
+            tmp13(ReactionTypes[14])(ReactionTypes[13], ReactionTypes.paths),
+            "SuperReactionUpsellActionSheet",
+            { onDismiss: "r" },
+          );
           const obj3 = importDefault(ReactionTypes[12]);
         }
       }
@@ -72,7 +80,14 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id,
       bestActiveInputForChannelId.closeCustomKeyboard();
     }
     _require(ReactionTypes[16]);
-    tmp10Result = { onPressEmoji: null, channel: null, pickerIntention: null, reactionType: null, analyticsObject: null, messageId: null };
+    tmp10Result = {
+      onPressEmoji: null,
+      channel: null,
+      pickerIntention: null,
+      reactionType: null,
+      analyticsObject: null,
+      messageId: null,
+    };
     tmp10Result[0] = function onPressEmoji(byName, burst) {
       id = channel.id;
       const obj = { burst };
@@ -132,7 +147,13 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
       }
       isPoll = true === isPollResult;
     }
-    let obj = { guild_id: null, channel_id: null, location_message_id: null, location_message_is_poll: null, location: null };
+    let obj = {
+      guild_id: null,
+      channel_id: null,
+      location_message_id: null,
+      location_message_is_poll: null,
+      location: null,
+    };
     obj[0] = guildId.getGuildId();
     obj[1] = channelId;
     obj[2] = messageId;
@@ -171,7 +192,10 @@ export const handleRemoveAllReactions = function handleRemoveAllReactions(arg0, 
   obj = { variant: "text-md/normal", children: null };
   const intl2 = require("../../../intl/index.native.tsx").intl;
   obj[1] = intl2.string(require("../../../intl/index.native.tsx").t.VpjOCo);
-  obj[1] = jsx(require("../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", children: null });
+  obj[1] = jsx(require("../../../design/components/Text/native/Text.tsx").Text, {
+    variant: "text-md/normal",
+    children: null,
+  });
   const intl3 = require("../../../intl/index.native.tsx").intl;
   obj[2] = intl3.string(require("../../../intl/index.native.tsx").t["ETE/oC"]);
   const intl4 = require("../../../intl/index.native.tsx").intl;

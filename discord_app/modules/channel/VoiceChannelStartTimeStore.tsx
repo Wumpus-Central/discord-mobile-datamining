@@ -19,8 +19,7 @@ function handleGuildReset(guild) {
 let set = new Set();
 let closure_5 = {};
 const Store = initializeDefault.Store;
-class VoiceChannelStartTimeStore extends Store {
-}
+class VoiceChannelStartTimeStore extends Store {}
 const prototype = VoiceChannelStartTimeStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3);
@@ -80,7 +79,7 @@ const voiceChannelStartTimeStore = new VoiceChannelStartTimeStore(dispatcherDefa
   },
   FETCH_CHANNEL_INFO: function handleFetchChannelInfo(guildId) {
     set.add(guildId.guildId);
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/channel/VoiceChannelStartTimeStore.tsx");
 

@@ -5,7 +5,9 @@ import closure_3 from "../../../stores/UserStore.tsx";
 import { MFALevels } from "../../../Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx",
+);
 
 export const useIsMFAEnabled = function useIsMFAEnabled() {
   let obj = defaultAreStatesEqual;

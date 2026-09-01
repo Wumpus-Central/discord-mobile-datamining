@@ -11,7 +11,14 @@ const require = arg1;
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let obj = { header: null, descriptionContainerStyle: null, buttonContainer: null };
-obj = { margin: 12, padding: 12, borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj = {
+  margin: 12,
+  padding: 12,
+  borderRadius: ThemesDefault.radii.sm,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderWidth: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 obj[0] = obj;
 obj[1] = { paddingTop: 4 };
 obj[2] = { marginTop: 12 };
@@ -66,7 +73,7 @@ const memoResult = importAllResult.memo((channel) => {
     obj[2] = tmp.header;
     obj = { event: null, showUserCount: false };
     obj[0] = tmp7;
-    const items2 = [callback2(tmp2(tmp3[16]).GuildEventCardHeader, obj), , ];
+    const items2 = [callback2(tmp2(tmp3[16]).GuildEventCardHeader, obj), ,];
     obj1 = { event: null, descriptionContainerStyle: null, condensed: null };
     obj1[0] = tmp7;
     obj1[1] = tmp.descriptionContainerStyle;
@@ -94,6 +101,8 @@ const memoResult = importAllResult.memo((channel) => {
   }
   canManageGuildEventResult = tmp2Result.useManageResourcePermissions(channel).canManageGuildEvent(tmp7);
 });
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx",
+);
 
 export default memoResult;

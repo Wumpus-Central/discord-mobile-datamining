@@ -74,7 +74,9 @@ class CollectiblesShopV2 {
       str = "collectibles mobile shop failed to connect to native payments isIOS: ";
       text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`;
       str2 = " isStable: ";
-      captureMessageResult = tmpResult.captureMessage(`${`collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`} isStable: ${require("isStable").isStable}`);
+      captureMessageResult = tmpResult.captureMessage(
+        `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`} isStable: ${require("isStable").isStable}`,
+      );
     }
     obj1 = {};
     merged = Object.assign(global);
@@ -85,10 +87,17 @@ class CollectiblesShopV2 {
   }
 }
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
-({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: unpackModuleId, CollectiblesMobileShopScreen: closure_12, CollectibleShopTab: map1 } = items);
+({
+  COLLECTIBLES_SHOP_CACHE_DURATION_MS: unpackModuleId,
+  CollectiblesMobileShopScreen: closure_12,
+  CollectibleShopTab: map1,
+} = items);
 ({ AnalyticEvents: closure_14, PaymentGateways: closure_15 } = ME);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-let closure_18 = createCacheKey.createStyles({ rootContainer: { height: "100%", width: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 } });
+let closure_18 = createCacheKey.createStyles({
+  rootContainer: { height: "100%", width: "100%" },
+  spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 },
+});
 function CollectiblesShopInternal(analyticsSource) {
   analyticsSource = analyticsSource.analyticsSource;
   const onNavigateAway = analyticsSource.onNavigateAway;
@@ -110,17 +119,24 @@ function CollectiblesShopInternal(analyticsSource) {
   const commonTriggerPoint = obj.useCommonTriggerPoint(analyticsSource(screen[13]).CollectiblesShopOpenTriggerPoint);
   obj1 = analyticsSource(screen[14]);
   let items = [isFetchingGoogleSkus];
-  const first = bypassGoogleSkuSync(obj1.useStateFromStoresArray(items, () => {
-    let num = isFetchingGoogleSkus.lastSuccessfulFetch;
-    if (num == null) {
-      num = 0;
-    }
-    const items = [num];
-    return items;
-  }), 1)[0];
+  const first = bypassGoogleSkuSync(
+    obj1.useStateFromStoresArray(items, () => {
+      let num = isFetchingGoogleSkus.lastSuccessfulFetch;
+      if (num == null) {
+        num = 0;
+      }
+      const items = [num];
+      return items;
+    }),
+    1,
+  )[0];
   let obj2 = analyticsSource(screen[14]);
   const items1 = [categories];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => ({ bypassGoogleSkuSync: categories.get("bypass_google_sku_sync"), noCache: categories.get("shop_disable_cache"), includeUnpublished: categories.get("shop_include_unpublished") }));
+  const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => ({
+    bypassGoogleSkuSync: categories.get("bypass_google_sku_sync"),
+    noCache: categories.get("shop_disable_cache"),
+    includeUnpublished: categories.get("shop_include_unpublished"),
+  }));
   bypassGoogleSkuSync = stateFromStoresObject.bypassGoogleSkuSync;
   noCache = stateFromStoresObject.noCache;
   includeUnpublished = stateFromStoresObject.includeUnpublished;
@@ -164,7 +180,11 @@ function CollectiblesShopInternal(analyticsSource) {
   } else {
     HOME = analyticsLocations.HOME;
   }
-  const maybeFetchCollectiblesShopHome = tmpResult.useMaybeFetchCollectiblesShopHome(HOME, { noCache, includeUnpublished, logPerf: true }, memo);
+  const maybeFetchCollectiblesShopHome = tmpResult.useMaybeFetchCollectiblesShopHome(
+    HOME,
+    { noCache, includeUnpublished, logPerf: true },
+    memo,
+  );
   ({ shopBlocks, fetchShopHomeError } = maybeFetchCollectiblesShopHome);
   const items3 = [categories, isFetchingCategories];
   const memo1 = obj3.useMemo(() => {
@@ -221,9 +241,11 @@ function CollectiblesShopInternal(analyticsSource) {
   const currentUserWishlist = analyticsSource(screen[23]).useCurrentUserWishlist();
   const tmpResult1 = analyticsSource(screen[23]);
   const items4 = [isFetchingCategories];
-  stateFromStores = analyticsSource(screen[14]).useStateFromStores(items4, () => analyticsSource(screen[24]).isThemeDark(isFetchingCategories.theme));
+  stateFromStores = analyticsSource(screen[14]).useStateFromStores(items4, () =>
+    analyticsSource(screen[24]).isThemeDark(isFetchingCategories.theme),
+  );
   tmp7Result = tmp7(tmp2[25]);
-  const items5 = [onNavigateAway(screen[11]).COLLECTIBLES_SHOP, ];
+  const items5 = [onNavigateAway(screen[11]).COLLECTIBLES_SHOP];
   if (stateFromStores.SHOP_ALL === screen) {
     let COLLECTIBLES_SHOP_HOME_SCREEN = tmp7(tmp2[11]).COLLECTIBLES_SHOP_INDEX_PAGE;
   } else if (tmp13.ORBS === screen) {
@@ -237,13 +259,17 @@ function CollectiblesShopInternal(analyticsSource) {
   const tmpResult2 = analyticsSource(screen[14]);
   navigation = analyticsSource(screen[26]).useNavigation();
   const items6 = [navigation, onNavigateAway];
-  const effect = obj3.useEffect(() => navigation.addListener("beforeRemove", (data) => {
-    if ("RESET" !== data.data.action.type) {
-      if (closure_1 != null) {
-        tmp();
-      }
-    }
-  }), items6);
+  const effect = obj3.useEffect(
+    () =>
+      navigation.addListener("beforeRemove", (data) => {
+        if ("RESET" !== data.data.action.type) {
+          if (closure_1 != null) {
+            tmp();
+          }
+        }
+      }),
+    items6,
+  );
   const items7 = [categories, bypassGoogleSkuSync, isFetchingGoogleSkus, isFetchingCategories];
   const memo2 = obj3.useMemo(() => {
     const items = [...categories.values()];
@@ -268,7 +294,9 @@ function CollectiblesShopInternal(analyticsSource) {
   }, items7);
   const tmpResult3 = analyticsSource(screen[26]);
   const tmp25 = Date.now() - first > currentUserIfAvailable;
-  const categoryIndex = analyticsSource(screen[29]).useCollectiblesShopDeepLinkProps({ categories: memo2 }).categoryIndex;
+  const categoryIndex = analyticsSource(screen[29]).useCollectiblesShopDeepLinkProps({
+    categories: memo2,
+  }).categoryIndex;
   constants = obj3.useRef({ [tmp13.SHOP_ALL]: false, [tmp13.FEATURED_PAGE]: false, [tmp13.ORBS]: false });
   const items8 = [analyticsLocations, analyticsSource, sessionId, includeUnpublished, screen, noCache];
   const effect1 = obj3.useEffect(() => {
@@ -288,7 +316,13 @@ function CollectiblesShopInternal(analyticsSource) {
     }
     obj[3] = str;
     obj.track(navigation.COLLECTIBLES_SHOP_VIEWED, obj);
-    obj = { sessionId, checkpoint: analyticsSource(tmp4[31]).CollectiblesShopPerfCheckpoint.SHOP_MOUNTED, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
+    obj = {
+      sessionId,
+      checkpoint: analyticsSource(tmp4[31]).CollectiblesShopPerfCheckpoint.SHOP_MOUNTED,
+      tab: null,
+      unpublishedCategoriesShown: null,
+      cacheDisabled: null,
+    };
     if (FEATURED_PAGE == null) {
       FEATURED_PAGE = stateFromStores.FEATURED_PAGE;
     }

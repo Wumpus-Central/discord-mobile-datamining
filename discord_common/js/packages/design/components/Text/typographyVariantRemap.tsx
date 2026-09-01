@@ -3,7 +3,9 @@ import map from "../../../tokens/typography/generated/TypographyVariantRemap.tsx
 import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Text/typographyVariantRemap.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/design/components/Text/typographyVariantRemap.tsx",
+);
 
 export const remapTypographyVariant = function remapTypographyVariant(enabledExperiments, variant, arg2) {
   const obj = map.TYPOGRAPHY_EXPERIMENT_REMAPS[Symbol.iterator]();

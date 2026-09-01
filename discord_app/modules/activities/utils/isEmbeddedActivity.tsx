@@ -8,4 +8,4 @@ const result = set.fileFinishedImporting("modules/activities/utils/isEmbeddedAct
 
 export default function isEmbeddedActivity(arg0) {
   return hasFlagDefault(arg0, ActivityFlags.EMBEDDED);
-};
+}

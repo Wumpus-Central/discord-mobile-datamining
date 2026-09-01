@@ -40,11 +40,15 @@ function HomeDrawerDMExpandedChildren(channel) {
     return tmp2;
   });
   const obj2 = channel(589);
-  const tmp3 = useMessagePreviewDefault(channel, { unread: channel(15934).useBaseChannelUnreadBadgeState(channel, false).unread });
+  const tmp3 = useMessagePreviewDefault(channel, {
+    unread: channel(15934).useBaseChannelUnreadBadgeState(channel, false).unread,
+  });
   closure_4 = tmp3;
   const obj3 = channel(15934);
   const items2 = [closure_7];
-  stateFromStores1 = channel(589).useStateFromStores(items2, () => closure_1_7.getChannelMuteConfig(channel.guild_id, channel.id));
+  stateFromStores1 = channel(589).useStateFromStores(items2, () =>
+    closure_1_7.getChannelMuteConfig(channel.guild_id, channel.id),
+  );
   const items3 = [stateFromStores1];
   memo = stateFromStores.useMemo(() => {
     if (null == stateFromStores1) {
@@ -64,7 +68,7 @@ function HomeDrawerDMExpandedChildren(channel) {
     }
     return obj;
   }, items3);
-  const items4 = [stateFromStores, memo, , ];
+  const items4 = [stateFromStores, memo, ,];
   ({ title: arr5[2], titleText: arr5[3] } = tmp);
   const items5 = [channel, tmp3, memo];
   const title = stateFromStores.useMemo(() => {
@@ -98,7 +102,14 @@ function HomeDrawerDMExpandedChildren(channel) {
   const subtitle = stateFromStores.useMemo(() => {
     let tmp2 = null;
     if (null != closure_4) {
-      const obj = { channel: null, message: null, variant: "text-xs/medium", color: "text-strong", layout: null, muted: null };
+      const obj = {
+        channel: null,
+        message: null,
+        variant: "text-xs/medium",
+        color: "text-strong",
+        layout: null,
+        muted: null,
+      };
       obj[0] = channel;
       obj[1] = tmp;
       obj[4] = channel(4171).ChannelListLayoutTypes.COZY;
@@ -110,7 +121,10 @@ function HomeDrawerDMExpandedChildren(channel) {
   return callback(channel(15896).HomeDrawerSharedItem, { title, subtitle });
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
+let closure_12 = createCacheKey.createStyles({
+  title: { flexDirection: "row", alignItems: "center", gap: 4 },
+  titleText: { flexShrink: 1 },
+});
 const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerDM.tsx");
 
 export default function HomeDrawerDMExpandedChildrenWrapper(channel) {
@@ -125,4 +139,4 @@ export default function HomeDrawerDMExpandedChildrenWrapper(channel) {
     }
   }
   return tmp2;
-};
+}

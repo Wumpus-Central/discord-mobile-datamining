@@ -62,8 +62,7 @@ prototype["remove"] = function remove(arg0) {
 let closure_4 = {};
 ({ NATIVE_SEARCH_HISTORY_STORAGE_KEY, NATIVE_SEARCH_HISTORY_STORE_DISPLAY_NAME } = MessageEmbedTypes);
 const PersistedStore = initializeDefault.PersistedStore;
-class SearchHistoryStore extends PersistedStore {
-}
+class SearchHistoryStore extends PersistedStore {}
 const prototype2 = SearchHistoryStore.prototype;
 prototype2["getState"] = function getState() {
   const searchHistories = {};
@@ -140,7 +139,7 @@ const searchHistoryStore = new SearchHistoryStore(dispatcherDefault, {
     }
     dependencyMap[id] = obj;
     obj.add(id.item);
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/search/native/stores/SearchHistoryStore.tsx");
 

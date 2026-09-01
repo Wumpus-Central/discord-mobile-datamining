@@ -19,8 +19,21 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 ({ View: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { topRowWrapper: { width: "100%", marginBottom: 10 }, rowWrapper: { width: "100%", marginVertical: 10 }, rowDetailsContainer: null, orbPaymentSourceDetails: null, sectionTitle: null, spinner: null, disclaimer: null, errorCard: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, padding: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  topRowWrapper: { width: "100%", marginBottom: 10 },
+  rowWrapper: { width: "100%", marginVertical: 10 },
+  rowDetailsContainer: null,
+  orbPaymentSourceDetails: null,
+  sectionTitle: null,
+  spinner: null,
+  disclaimer: null,
+  errorCard: null,
+};
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  padding: ThemesDefault.space.PX_16,
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center" };
 createCacheKey[4] = { marginBottom: ThemesDefault.space.PX_8 };
@@ -28,15 +41,28 @@ let obj1 = { marginBottom: ThemesDefault.space.PX_8 };
 createCacheKey[5] = { paddingVertical: ThemesDefault.space.PX_16, alignItems: "center" };
 createCacheKey[6] = { opacity: 0.5 };
 const obj2 = { paddingVertical: ThemesDefault.space.PX_16, alignItems: "center" };
-createCacheKey[7] = { borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
+createCacheKey[7] = {
+  borderRadius: ThemesDefault.radii.sm,
+  padding: ThemesDefault.space.PX_12,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
+};
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj3 = { borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
-const result = require("set").fileFinishedImporting("modules/virtual_currency/checkout/native/OrbCheckoutModalComponents.tsx");
+const obj3 = {
+  borderRadius: ThemesDefault.radii.sm,
+  padding: ThemesDefault.space.PX_12,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/virtual_currency/checkout/native/OrbCheckoutModalComponents.tsx",
+);
 
 export const OrbCheckoutErrorCard = function OrbCheckoutErrorCard(children) {
   let obj = { style: callback3().errorCard, children: null };
   obj = { direction: "horizontal", spacing: 8, align: "flex-start", children: null };
-  const items = [callback(CircleErrorIcon.CircleErrorIcon, { size: "sm", color: "mobile-text-heading-primary" }), callback(Text.Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: children.error })];
+  const items = [
+    callback(CircleErrorIcon.CircleErrorIcon, { size: "sm", color: "mobile-text-heading-primary" }),
+    callback(Text.Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: children.error }),
+  ];
   obj[3] = items;
   obj[1] = callback2(Stack.Stack, obj);
   return callback(closure_4, obj);
@@ -46,7 +72,7 @@ export const OrbCheckoutOrderSummary = function OrbCheckoutOrderSummary(product)
   const tmp = callback3();
   if (null == product) {
     let obj = { style: null, children: null };
-    const items = [, ];
+    const items = [,];
     ({ rowDetailsContainer: arr[0], spinner: arr[1] } = tmp);
     obj[0] = items;
     obj[1] = callback(closure_5, { size: "small" });
@@ -72,14 +98,17 @@ export const OrbCheckoutPaymentSourceDetails = function OrbCheckoutPaymentSource
   obj = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", style: tmp.sectionTitle, children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["zLch/S"]);
-  const items = [callback(Text.Text, obj), ];
+  const items = [callback(Text.Text, obj)];
   obj = { style: items1, children: null };
-  items1 = [, ];
+  items1 = [,];
   ({ rowDetailsContainer: arr2[0], orbPaymentSourceDetails: arr2[1] } = tmp);
   obj1 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl2 = getSystemLocale.intl;
   obj1[2] = intl2.string(getSystemLocale.t.y0WGqP);
-  const items2 = [callback(Text.Text, obj1), callback(OrbCheckoutAmountTagDefault, { orbAmount: orbAmount.orbBalance })];
+  const items2 = [
+    callback(Text.Text, obj1),
+    callback(OrbCheckoutAmountTagDefault, { orbAmount: orbAmount.orbBalance }),
+  ];
   obj[1] = items2;
   items[1] = callback2(closure_4, obj);
   obj[1] = items;
@@ -107,7 +136,16 @@ export const OrbCheckoutPurchaseButton = function OrbCheckoutPurchaseButton(onPr
   if (tmp3Result.isThemeDark(tmp2)) {
     str = "primary-overlay";
   }
-  obj = { variant: str, size: "lg", text: null, icon: null, iconPosition: "start", loading: null, onPress: null, disabled: null };
+  obj = {
+    variant: str,
+    size: "lg",
+    text: null,
+    icon: null,
+    iconPosition: "start",
+    loading: null,
+    onPress: null,
+    disabled: null,
+  };
   const intl = tmp3(1236).intl;
   obj[2] = intl.string(getSystemLocale.t["zLch/S"]);
   tmp3Result = tmp3(1363);

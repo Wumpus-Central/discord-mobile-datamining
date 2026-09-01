@@ -12,7 +12,7 @@ function _acceptMessageRequest() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -116,7 +116,10 @@ export const markAsMessageRequest = function markAsMessageRequest(id) {
 };
 export const rejectMessageRequest = function rejectMessageRequest(closure_0) {
   const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(closure_0), rejectWithError: sendRequest.rejectWithMigratedError() };
+  const obj = {
+    url: Endpoints.CHANNEL_RECIPIENT_ME(closure_0),
+    rejectWithError: sendRequest.rejectWithMigratedError(),
+  };
   return HTTP.del(obj);
 };
 export const rejectMessageRequestBatch = function rejectMessageRequestBatch(closure_0) {

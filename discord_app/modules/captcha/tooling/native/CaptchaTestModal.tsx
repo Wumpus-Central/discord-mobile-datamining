@@ -20,7 +20,7 @@ function CaptchaTestScreen(arg0) {
     closure_3 = undefined;
     function _sendCaptchaRequest(closure_5, arg1) {
       const self = this;
-      const tmp = callback2(function*() {
+      const tmp = callback2(function* () {
         if (c6 === 2) {
           c6 = 3;
           HermesBuiltin.throwTypeError();
@@ -120,7 +120,13 @@ function CaptchaTestScreen(arg0) {
     obj = { style: null, children: null };
     obj[0] = tmp5.content;
     obj1 = { children: null };
-    const items = [callback(first(first1[10]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: "Decider" }), ];
+    const items = [
+      callback(first(first1[10]).Text, {
+        variant: "heading-lg/bold",
+        color: "mobile-text-heading-primary",
+        children: "Decider",
+      }),
+    ];
     let obj2 = { withSpacing: true, value: null, options: null, onChange: null };
     obj2[1] = first;
     obj2[2] = closure_12;
@@ -133,11 +139,17 @@ function CaptchaTestScreen(arg0) {
     };
     items[1] = callback(first(first1[11]).RadioGroup, obj2);
     obj1[0] = items;
-    const items1 = [callback2(View, obj1), ];
+    const items1 = [callback2(View, obj1)];
     let tmp12Result = first === first(first1[8]).CaptchaDeciderType.HCAPTCHA_RQDATA;
     if (tmp12Result) {
       obj = { children: null };
-      const items2 = [tmp14(tmp15(tmp16[10]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: "Difficulty" }), ];
+      const items2 = [
+        tmp14(tmp15(tmp16[10]).Text, {
+          variant: "heading-lg/bold",
+          color: "mobile-text-heading-primary",
+          children: "Difficulty",
+        }),
+      ];
       let obj3 = { withSpacing: true, value: null, options: null, onChange: null };
       obj3[1] = first1;
       obj3[2] = closure_10;
@@ -152,12 +164,12 @@ function CaptchaTestScreen(arg0) {
     }
     items1[1] = tmp12Result;
     obj[1] = items1;
-    const items3 = [callback2(View, obj), ];
+    const items3 = [callback2(View, obj)];
     let obj4 = { style: null, children: null };
     obj4[0] = tmp5.footerContainer;
     const obj5 = { style: null };
     obj5[0] = tmp5.separator;
-    const items4 = [callback(View, obj5), ];
+    const items4 = [callback(View, obj5)];
     const obj6 = { bottom: true, style: null, children: null };
     obj6[1] = tmp5.footerButton;
     const obj7 = { onPress: null, text: "Submit" };
@@ -181,10 +193,22 @@ function CaptchaTestScreen(arg0) {
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, separator: null, footerContainer: null, footerButton: null, content: null };
-createCacheKey = { flex: 1, justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  flex: 1,
+  justifyContent: "space-between",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: ThemesDefault.space.PX_24 };
-let obj1 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: ThemesDefault.space.PX_24 };
+createCacheKey[1] = {
+  height: 1,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginVertical: ThemesDefault.space.PX_24,
+};
+let obj1 = {
+  height: 1,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginVertical: ThemesDefault.space.PX_24,
+};
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16 };
 let obj2 = { marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { paddingHorizontal: ThemesDefault.space.PX_16 };
@@ -192,7 +216,10 @@ let obj3 = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[4] = { margin: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = prop.map((label) => ({ name: label.label, value: label.value }));
-let items = [require("_testCaptcha").CaptchaDeciderType.HCAPTCHA_RQDATA, require("_testCaptcha").CaptchaDeciderType.SMITE_RQDATA];
+let items = [
+  require("_testCaptcha").CaptchaDeciderType.HCAPTCHA_RQDATA,
+  require("_testCaptcha").CaptchaDeciderType.SMITE_RQDATA,
+];
 let set = new Set(items);
 const mapped = prop1.map((label) => ({ name: label.label, value: label.value }));
 let closure_12 = mapped.filter((value) => set.has(value.value));
@@ -217,7 +244,7 @@ export default function CaptchaTestModal() {
       }),
       render() {
         return callback2(closure_14, {});
-      }
+      },
     };
     obj[closure_1_13.TEST_CAPTCHA] = obj;
     return obj;
@@ -226,4 +253,4 @@ export default function CaptchaTestModal() {
   const intl = require("../../../../intl/index.native.tsx").intl;
   obj[2] = intl.string(require("../../../../intl/index.native.tsx").t["13/7kX"]);
   return callback(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, obj);
-};
+}

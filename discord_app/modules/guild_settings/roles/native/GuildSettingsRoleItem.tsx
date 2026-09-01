@@ -12,8 +12,21 @@ let c4 = importAllResult;
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let c9 = "text-md/semibold";
-let obj = { row: { flexDirection: "row", gap: 4, alignItems: "center" }, everyone: null, label: null, sparkleIcon: null, container: null, gradient: null, image: null };
-obj = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, padding: 8 };
+let obj = {
+  row: { flexDirection: "row", gap: 4, alignItems: "center" },
+  everyone: null,
+  label: null,
+  sparkleIcon: null,
+  container: null,
+  gradient: null,
+  image: null,
+};
+obj = {
+  tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: 20,
+  padding: 8,
+};
 obj[1] = obj;
 text_md_semibold = require("Text").TextStyleSheet["text-md/semibold"];
 let num;
@@ -27,12 +40,28 @@ createCacheKey = { lineHeight: num + 1 };
 obj[2] = createCacheKey;
 obj[3] = { tintColor: ThemesDefault.colors.ICON_MUTED };
 let obj2 = { tintColor: ThemesDefault.colors.ICON_MUTED };
-obj[4] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" };
+obj[4] = {
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.round,
+  overflow: "hidden",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj[5] = {};
 obj[6] = { tintColor: "white" };
 let closure_10 = createCacheKey.createStyles(obj);
-let obj3 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" };
+let obj3 = {
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.round,
+  overflow: "hidden",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
 let obj4 = {};
 const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) {
   const tmp4 = callback3();
@@ -66,7 +95,16 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
   const items1 = [onMoveUp, onMoveDown];
   if (sorting) {
     if (!locked) {
-      const obj2 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, delayLongPress: 100, activeOpacity: 0.8, hitSlop: null };
+      const obj2 = {
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        accessibilityHint: null,
+        accessibilityActions: null,
+        onAccessibilityAction: null,
+        delayLongPress: 100,
+        activeOpacity: 0.8,
+        hitSlop: null,
+      };
       let intl3 = tmp5(tmp2[11]).intl;
       obj2[1] = intl3.string(tmp5(tmp2[11]).t["0dOFq+"]);
       let intl4 = tmp5(tmp2[11]).intl;
@@ -99,7 +137,7 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
           obj[2] = intl3.string(role(onMoveUp[11]).t.gm1Vej);
           const intl4 = role(onMoveUp[11]).intl;
           obj[3] = intl4.string(role(onMoveUp[11]).t.p89ACt);
-          name = onMoveDown(function*() {
+          name = onMoveDown(function* () {
             if (c2 === 2) {
               c2 = 3;
               HermesBuiltin.throwTypeError();
@@ -131,7 +169,11 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
                       c1 = 1;
                       c2 = 1;
                       obj1 = { value: null, done: false };
-                      obj1[0] = callback(closure_2_2[12]).putRoleConnectionsConfigurations(closure_1_4, closure_1_0.id, []);
+                      obj1[0] = callback(closure_2_2[12]).putRoleConnectionsConfigurations(
+                        closure_1_4,
+                        closure_1_0.id,
+                        [],
+                      );
                       return obj1;
                     }
                   }
@@ -154,7 +196,7 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
               }
             }
           });
-          obj[4] = function() {
+          obj[4] = function () {
             const self = this;
             const apply = closure_0.apply;
             if (typeof apply === "unknown") {
@@ -175,7 +217,20 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
       tmp15 = role.managed && !tmp8;
     }
     if (null != roleIcon) {
-      const obj6 = { onLongPress: null, onPress: null, disabled: null, draggable: null, dragHandlePressableProps: null, trailing: null, arrow: null, icon: null, label: null, subLabel: null, start: null, end: null };
+      const obj6 = {
+        onLongPress: null,
+        onPress: null,
+        disabled: null,
+        draggable: null,
+        dragHandlePressableProps: null,
+        trailing: null,
+        arrow: null,
+        icon: null,
+        label: null,
+        subLabel: null,
+        start: null,
+        end: null,
+      };
       obj6[0] = onLongPress;
       let fn;
       if (!sorting) {
@@ -210,7 +265,7 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
       obj10[1] = tmp4.label;
       obj10[2] = c9;
       obj10[4] = role.name;
-      const items2 = [callback(tmp5(tmp2[7]).Text, obj10), , ];
+      const items2 = [callback(tmp5(tmp2[7]).Text, obj10), ,];
       const tags2 = role.tags;
       let prop;
       if (tags2 != null) {
@@ -271,7 +326,7 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
               obj15[1] = { x: 0, y: 0 };
               obj15[2] = { x: 1, y: 0 };
               obj15[3] = tmp4.gradient;
-              const items4 = [callback(tmp(tmp2[18]), obj15), ];
+              const items4 = [callback(tmp(tmp2[18]), obj15)];
               const obj16 = { size: "md", style: null };
               obj16[1] = tmp4.image;
               items4[1] = callback(tmp5(tmp2[21]).ShieldUserIcon, obj16);
@@ -281,7 +336,7 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
             }
           }
         }
-        const items5 = [tmp4.container, ];
+        const items5 = [tmp4.container];
         const obj17 = { style: null, children: null };
         const obj18 = { backgroundColor: null };
         obj18[0] = null != role.colorString ? role.colorString : DEFAULT_ROLE_COLOR_HEX;

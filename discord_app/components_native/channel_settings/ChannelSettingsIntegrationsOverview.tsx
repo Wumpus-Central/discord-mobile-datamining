@@ -34,9 +34,7 @@ function LinkedLobbyFormSection(channel) {
     obj1[0] = getAvatarURLDefault.getApplicationIconSource({ id: null, icon: null });
     obj1[1] = tmp(1297).AvatarSizes.REFRESH_MEDIUM_32;
     obj[1] = callback(tmp(1297).Avatar, obj1);
-    obj[3] = function onPress() {
-
-    };
+    obj[3] = function onPress() {};
     obj[2] = callback(tmp(5599).TableRow, obj);
     tmp5 = callback(tmp(5992).TableRowGroup, obj);
     const obj2 = { id: null, icon: null };
@@ -47,10 +45,16 @@ function LinkedLobbyFormSection(channel) {
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { screenContainer: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  paddingTop: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsIntegrationsOverview.tsx");
+const result = require("set").fileFinishedImporting(
+  "components_native/channel_settings/ChannelSettingsIntegrationsOverview.tsx",
+);
 
 export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
   ({ channelId: require, canManageWebhooks, canUnlinkLobby } = arg0);
@@ -80,7 +84,7 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
       obj3[4] = function onPress() {
         return arr.push(closure_1_4.WEBHOOKS);
       };
-      const items1 = [tmp6(tmp(5599).TableRow, obj3), ];
+      const items1 = [tmp6(tmp(5599).TableRow, obj3)];
       const obj4 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
       const intl3 = tmp(1236).intl;
       obj4[0] = intl3.string(tmp(1236).t.OrV60r);
@@ -94,7 +98,7 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
       obj2[1] = items1;
       canManageWebhooks = tmp7(tmp(5992).TableRowGroup, obj2);
     }
-    const items2 = [canManageWebhooks, ];
+    const items2 = [canManageWebhooks];
     if (canUnlinkLobby) {
       canUnlinkLobby = null != stateFromStores.linkedLobby;
     }
@@ -109,4 +113,4 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
     tmp6Result = tmp6(tmp(8363).Form, obj);
   }
   return tmp6Result;
-};
+}

@@ -46,7 +46,14 @@ function DraggableContainer(children) {
       return obj;
     }
   }
-  obj = { windowDimensionsSharedValue: tmp5, insetsSharedValue: tmp4, clamp: _require(contentWidth[7]).clamp, dragBoundsPadding: num, contentWidth, contentHeight };
+  obj = {
+    windowDimensionsSharedValue: tmp5,
+    insetsSharedValue: tmp4,
+    clamp: _require(contentWidth[7]).clamp,
+    dragBoundsPadding: num,
+    contentWidth,
+    contentHeight,
+  };
   C.__closure = obj;
   C.__workletHash = 5314404716267;
   C.__initData = closure_12;
@@ -91,7 +98,7 @@ function DraggableContainer(children) {
       ({ x, y } = tmp2);
       obj3 = closure_0(contentWidth[11]);
       obj[0] = obj3.withSpring(x, closure_0(contentWidth[12]).springUnclamped);
-      items = [, ];
+      items = [,];
       items[0] = obj;
       obj1 = { translateY: null };
       obj5 = closure_0(contentWidth[11]);
@@ -102,11 +109,20 @@ function DraggableContainer(children) {
     }
   }
   const obj7 = _require(contentWidth[7]);
-  X.__closure = { getClampedPosition: callback, x, y, withSpring: _require(contentWidth[11]).withSpring, springUnclamped: _require(contentWidth[12]).springUnclamped };
+  X.__closure = {
+    getClampedPosition: callback,
+    x,
+    y,
+    withSpring: _require(contentWidth[11]).withSpring,
+    springUnclamped: _require(contentWidth[12]).springUnclamped,
+  };
   X.__workletHash = 5273315246744;
   X.__initData = closure_16;
   const animatedStyle = obj7.useAnimatedStyle(X);
-  obj3 = { gesture: panGesture, children: sharedValue1(importDefault(contentWidth[7]).View, { style: items1, children: children.children }) };
+  obj3 = {
+    gesture: panGesture,
+    children: sharedValue1(importDefault(contentWidth[7]).View, { style: items1, children: children.children }),
+  };
   items1 = [tmp.widgetContainer, animatedStyle];
   return sharedValue1(_require(contentWidth[10]).GestureDetector, obj3);
 }
@@ -127,18 +143,23 @@ function ScreenRecordingPip(surveyConfig) {
   const tmp7 = useScreenRecordingStore((isUploading) => isUploading.isUploading);
   const items = [tmp3, tmp4];
   const isStepCompleted = surveyConfig.useIsStepCompleted(tmp6);
-  const tmp9 = sharedValue(sharedValue1.useState(sharedValue1.useCallback(() => {
-    const rect = lib2.get();
-    const diff = lib.get().width - rect.right - closure_1_10;
-    return { x: diff - lib2(point[6]).space.PX_16, y: rect.top + lib2(point[6]).space.PX_16 };
-  }, items)), 2);
+  const tmp9 = sharedValue(
+    sharedValue1.useState(
+      sharedValue1.useCallback(() => {
+        const rect = lib2.get();
+        const diff = lib.get().width - rect.right - closure_1_10;
+        return { x: diff - lib2(point[6]).space.PX_16, y: rect.top + lib2(point[6]).space.PX_16 };
+      }, items),
+    ),
+    2,
+  );
   point = tmp9[0];
   let Button = _require;
   obj1 = _require(point[7]);
   sharedValue = obj1.useSharedValue(point.x);
   let obj2 = _require(point[7]);
   sharedValue1 = obj2.useSharedValue(point.y);
-  const items1 = [, , , ];
+  const items1 = [, , ,];
   ({ x: arr2[0], y: arr2[1] } = point);
   items1[2] = sharedValue;
   items1[3] = sharedValue1;
@@ -152,8 +173,16 @@ function ScreenRecordingPip(surveyConfig) {
     obj = { x: null, y: null };
     obj[0] = sharedValue;
     obj[1] = sharedValue1;
-    const items2 = [callback(tmp2(obj[16]), obj), ];
-    obj = { x: null, y: null, contentWidth: null, contentHeight: null, dragBoundsPadding: null, onChangePosition: null, children: null };
+    const items2 = [callback(tmp2(obj[16]), obj)];
+    obj = {
+      x: null,
+      y: null,
+      contentWidth: null,
+      contentHeight: null,
+      dragBoundsPadding: null,
+      onChangePosition: null,
+      children: null,
+    };
     obj[0] = sharedValue;
     obj[1] = sharedValue1;
     obj[2] = c10;
@@ -171,13 +200,11 @@ function ScreenRecordingPip(surveyConfig) {
       str = "Step " + tmp6 + 1;
     }
     obj2[3] = str;
-    const items3 = [callback(Button(obj[18]).Text, obj2), ];
+    const items3 = [callback(Button(obj[18]).Text, obj2)];
     if (tmp7) {
       Button = Button(obj[19]).Button;
       const obj3 = { loading: true, text: "", onPress: null };
-      obj3[2] = function onPress() {
-
-      };
+      obj3[2] = function onPress() {};
       let tmp16Result = tmp16(Button, obj3);
     } else {
       const obj4 = { style: null, children: null };
@@ -208,20 +235,55 @@ function ScreenRecordingPip(surveyConfig) {
 }
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let c10 = 100;
-createCacheKey = { widgetContainer: { position: "absolute" }, widget: null, stepText: null, stopButton: null, doneButton: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: 100, width: 100, gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xl };
+createCacheKey = {
+  widgetContainer: { position: "absolute" },
+  widget: null,
+  stepText: null,
+  stopButton: null,
+  doneButton: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  justifyContent: "center",
+  alignItems: "center",
+  height: 100,
+  width: 100,
+  gap: ThemesDefault.space.PX_8,
+  padding: ThemesDefault.space.PX_8,
+  borderRadius: ThemesDefault.radii.xl,
+};
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { textAlign: "center", maxWidth: 68 };
-createCacheKey[3] = { padding: ThemesDefault.space.PX_8, borderWidth: 1, borderColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round };
-let obj1 = { padding: ThemesDefault.space.PX_8, borderWidth: 1, borderColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round };
+createCacheKey[3] = {
+  padding: ThemesDefault.space.PX_8,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.WHITE,
+  borderRadius: ThemesDefault.radii.round,
+};
+let obj1 = {
+  padding: ThemesDefault.space.PX_8,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.WHITE,
+  borderRadius: ThemesDefault.radii.round,
+};
 createCacheKey[4] = { padding: ThemesDefault.space.PX_8 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let closure_12 = { code: "function ScreenRecordingPipTsx1(x,y){const{windowDimensionsSharedValue,insetsSharedValue,clamp,dragBoundsPadding,contentWidth,contentHeight}=this.__closure;const{width:windowWidth,height:windowHeight}=windowDimensionsSharedValue.get();const insets=insetsSharedValue.get();return{x:clamp(x,insets.left+dragBoundsPadding,windowWidth-insets.right-contentWidth-dragBoundsPadding),y:clamp(y,insets.top+dragBoundsPadding,windowHeight-insets.bottom-contentHeight-dragBoundsPadding)};}" };
-let closure_13 = { code: "function ScreenRecordingPipTsx2(){const{originalX,x,originalY,y}=this.__closure;originalX.set(x.get());originalY.set(y.get());}" };
-let closure_14 = { code: "function ScreenRecordingPipTsx3(event){const{getClampedPosition,originalX,originalY,x,y}=this.__closure;const{x:xClamped,y:yClamped}=getClampedPosition(originalX.get()+event.translationX,originalY.get()+event.translationY);x.set(xClamped);y.set(yClamped);}" };
-let closure_15 = { code: "function ScreenRecordingPipTsx4(){const{runOnJS,onChangePosition,x,y}=this.__closure;runOnJS(onChangePosition)({x:x.get(),y:y.get()});}" };
-let closure_16 = { code: "function ScreenRecordingPipTsx5(){const{getClampedPosition,x,y,withSpring,springUnclamped}=this.__closure;const{x:translateX,y:translateY}=getClampedPosition(x.get(),y.get());return{transform:[{translateX:withSpring(translateX,springUnclamped)},{translateY:withSpring(translateY,springUnclamped)}]};}" };
+let closure_12 = {
+  code: "function ScreenRecordingPipTsx1(x,y){const{windowDimensionsSharedValue,insetsSharedValue,clamp,dragBoundsPadding,contentWidth,contentHeight}=this.__closure;const{width:windowWidth,height:windowHeight}=windowDimensionsSharedValue.get();const insets=insetsSharedValue.get();return{x:clamp(x,insets.left+dragBoundsPadding,windowWidth-insets.right-contentWidth-dragBoundsPadding),y:clamp(y,insets.top+dragBoundsPadding,windowHeight-insets.bottom-contentHeight-dragBoundsPadding)};}",
+};
+let closure_13 = {
+  code: "function ScreenRecordingPipTsx2(){const{originalX,x,originalY,y}=this.__closure;originalX.set(x.get());originalY.set(y.get());}",
+};
+let closure_14 = {
+  code: "function ScreenRecordingPipTsx3(event){const{getClampedPosition,originalX,originalY,x,y}=this.__closure;const{x:xClamped,y:yClamped}=getClampedPosition(originalX.get()+event.translationX,originalY.get()+event.translationY);x.set(xClamped);y.set(yClamped);}",
+};
+let closure_15 = {
+  code: "function ScreenRecordingPipTsx4(){const{runOnJS,onChangePosition,x,y}=this.__closure;runOnJS(onChangePosition)({x:x.get(),y:y.get()});}",
+};
+let closure_16 = {
+  code: "function ScreenRecordingPipTsx5(){const{getClampedPosition,x,y,withSpring,springUnclamped}=this.__closure;const{x:translateX,y:translateY}=getClampedPosition(x.get(),y.get());return{transform:[{translateX:withSpring(translateX,springUnclamped)},{translateY:withSpring(translateY,springUnclamped)}]};}",
+};
 let obj2 = { padding: ThemesDefault.space.PX_8 };
 let result = require("set").fileFinishedImporting("modules/screen_recording/native/ScreenRecordingPip.tsx");
 
@@ -234,4 +296,4 @@ export default function ScreenRecordingPipConnected() {
     tmp2 = callback(ScreenRecordingPip, obj);
   }
   return tmp2;
-};
+}

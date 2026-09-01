@@ -19,8 +19,14 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetHandle(
     stringResult = string(t.dcl9MQ);
   }
   obj = { onPress, accessibilityLabel: stringResult, "aria-hidden": null == onPress };
-  return jsx(TwinButtons.ActionSheetDragHandle, { onPress, accessibilityLabel: stringResult, "aria-hidden": null == onPress });
+  return jsx(TwinButtons.ActionSheetDragHandle, {
+    onPress,
+    accessibilityLabel: stringResult,
+    "aria-hidden": null == onPress,
+  });
 });
-const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHandle.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/media_keyboard/native/components/MediaKeyboardBottomSheetHandle.tsx",
+);
 
 export default memoResult;

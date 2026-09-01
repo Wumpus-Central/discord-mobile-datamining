@@ -27,17 +27,65 @@ function compareUserItems(user, user2) {
 ({ AnalyticEvents: c10, AnalyticsSections: unpackModuleId, RelationshipTypes: closure_12 } = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = { Incoming: 0, [0]: "Incoming", Outgoing: 1, [1]: "Outgoing" };
-createCacheKey = { container: { flex: 1 }, noResultsContainer: null, clearAllContainer: null, clearAll: null, tabs: null };
+createCacheKey = {
+  container: { flex: 1 },
+  noResultsContainer: null,
+  clearAllContainer: null,
+  clearAll: null,
+  tabs: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, justifyContent: "flex-end", flexDirection: "row" };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, justifyContent: "flex-end", flexDirection: "row" };
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, minWidth: 2 * ThemesDefault.space.PX_64, borderRadius: ThemesDefault.radii.round, alignItems: "center", paddingVertical: 5, borderWidth: 3 };
-let obj2 = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, minWidth: 2 * ThemesDefault.space.PX_64, borderRadius: ThemesDefault.radii.round, alignItems: "center", paddingVertical: 5, borderWidth: 3 };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
+createCacheKey[2] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_16,
+  justifyContent: "flex-end",
+  flexDirection: "row",
+};
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_16,
+  justifyContent: "flex-end",
+  flexDirection: "row",
+};
+createCacheKey[3] = {
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  borderColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  minWidth: 2 * ThemesDefault.space.PX_64,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  paddingVertical: 5,
+  borderWidth: 3,
+};
+let obj2 = {
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  borderColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  minWidth: 2 * ThemesDefault.space.PX_64,
+  borderRadius: ThemesDefault.radii.round,
+  alignItems: "center",
+  paddingVertical: 5,
+  borderWidth: 3,
+};
+createCacheKey[4] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_8,
+};
 let closure_17 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendRequestsScreen.tsx");
+let obj3 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingBottom: ThemesDefault.space.PX_16,
+  paddingTop: ThemesDefault.space.PX_8,
+};
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/friends/screens/FriendRequestsScreen.tsx",
+);
 
 export default function FriendRequestsScreen() {
   let tmp = callback();
@@ -68,7 +116,9 @@ export default function FriendRequestsScreen() {
       const found = mapped.filter(Boolean);
       const result = stateFromStoresArray(16002).markNotificationCenterLocalItemsAcked(found);
       const obj = stateFromStoresArray(16002);
-      const result1 = stateFromStoresArray(16002).bulkMarkNotificationCenterItemsAcked(arr.filter((addResult) => !closure_1_0(closure_1_2[19]).isRemoteAcked(addResult, closure_1)));
+      const result1 = stateFromStoresArray(16002).bulkMarkNotificationCenterItemsAcked(
+        arr.filter((addResult) => !closure_1_0(closure_1_2[19]).isRemoteAcked(addResult, closure_1)),
+      );
       const obj2 = stateFromStoresArray(16002);
     }
   }, items1);
@@ -79,10 +129,13 @@ export default function FriendRequestsScreen() {
   }, []);
   obj1 = stateFromStoresArray(647);
   const items2 = [spamIds];
-  const tmp9 = gameRelationshipsByType(obj1.useStateFromStoresArray(items2, () => {
-    const items = [spamIds.getMutableRelationships(), spamIds.getVersion()];
-    return items;
-  }), 2);
+  const tmp9 = gameRelationshipsByType(
+    obj1.useStateFromStoresArray(items2, () => {
+      const items = [spamIds.getMutableRelationships(), spamIds.getVersion()];
+      return items;
+    }),
+    2,
+  );
   first = tmp9[0];
   dependencyMap = tmp11;
   let obj2 = stateFromStoresArray(12494);
@@ -102,32 +155,60 @@ export default function FriendRequestsScreen() {
   }, items3);
   first(5959)(memo);
   const items4 = [first, tmp9[1]];
-  const memo1 = gameRelationshipsByType1.useMemo(() => stateFromStoresArray(16362).getPendingRelationshipIds(first, dependencyMap), items4);
+  const memo1 = gameRelationshipsByType1.useMemo(
+    () => stateFromStoresArray(16362).getPendingRelationshipIds(first, dependencyMap),
+    items4,
+  );
   const pendingIncomingIds = memo1.pendingIncomingIds;
   pendingOutgoingIds = memo1.pendingOutgoingIds;
   spamIds = memo1.spamIds;
   const ignoredUserIds = memo1.ignoredUserIds;
   let obj4 = stateFromStoresArray(647);
   const items5 = [ignoredUserIds];
-  const items6 = [ignoredUserIds, gameRelationshipsByType, gameRelationshipsByType1, pendingIncomingIds, pendingOutgoingIds, spamIds];
-  const stateFromStores = obj4.useStateFromStores(items5, () => {
-    const mapped = pendingIncomingIds.map((arg0) => ({ user: authStore.getUser(arg0), isGameRelationship: false }));
-    const found = mapped.filter((user) => null != user.user);
-    const mapped1 = gameRelationshipsByType.map((applicationId) => ({ user: authStore.getUser(applicationId.id), isGameRelationship: true, applicationId: applicationId.applicationId }));
-    const found1 = mapped1.filter((user) => null != user.user);
-    const mapped2 = pendingOutgoingIds.map((arg0) => ({ user: authStore.getUser(arg0), isGameRelationship: false }));
-    const found2 = mapped2.filter((user) => null != user.user);
-    const mapped3 = gameRelationshipsByType1.map((applicationId) => ({ user: authStore.getUser(applicationId.id), isGameRelationship: true, applicationId: applicationId.applicationId }));
-    const found3 = mapped3.filter((user) => null != user.user);
-    const obj = { incoming: items.sort(navigation), outgoing: items1.sort(navigation), spam: null, ignoredUsers: null };
-    items = [...found1];
-    items1 = [...found3];
-    const mapped4 = spamIds.map((arg0) => ({ user: authStore.getUser(arg0) }));
-    obj[2] = mapped4.filter((user) => null != user.user);
-    const mapped5 = ignoredUserIds.map((arg0) => ({ user: authStore.getUser(arg0) }));
-    obj[3] = mapped5.filter((user) => null != user.user);
-    return obj;
-  }, items6, first(659));
+  const items6 = [
+    ignoredUserIds,
+    gameRelationshipsByType,
+    gameRelationshipsByType1,
+    pendingIncomingIds,
+    pendingOutgoingIds,
+    spamIds,
+  ];
+  const stateFromStores = obj4.useStateFromStores(
+    items5,
+    () => {
+      const mapped = pendingIncomingIds.map((arg0) => ({ user: authStore.getUser(arg0), isGameRelationship: false }));
+      const found = mapped.filter((user) => null != user.user);
+      const mapped1 = gameRelationshipsByType.map((applicationId) => ({
+        user: authStore.getUser(applicationId.id),
+        isGameRelationship: true,
+        applicationId: applicationId.applicationId,
+      }));
+      const found1 = mapped1.filter((user) => null != user.user);
+      const mapped2 = pendingOutgoingIds.map((arg0) => ({ user: authStore.getUser(arg0), isGameRelationship: false }));
+      const found2 = mapped2.filter((user) => null != user.user);
+      const mapped3 = gameRelationshipsByType1.map((applicationId) => ({
+        user: authStore.getUser(applicationId.id),
+        isGameRelationship: true,
+        applicationId: applicationId.applicationId,
+      }));
+      const found3 = mapped3.filter((user) => null != user.user);
+      const obj = {
+        incoming: items.sort(navigation),
+        outgoing: items1.sort(navigation),
+        spam: null,
+        ignoredUsers: null,
+      };
+      items = [...found1];
+      items1 = [...found3];
+      const mapped4 = spamIds.map((arg0) => ({ user: authStore.getUser(arg0) }));
+      obj[2] = mapped4.filter((user) => null != user.user);
+      const mapped5 = ignoredUserIds.map((arg0) => ({ user: authStore.getUser(arg0) }));
+      obj[3] = mapped5.filter((user) => null != user.user);
+      return obj;
+    },
+    items6,
+    first(659),
+  );
   const incoming = stateFromStores.incoming;
   const outgoing = stateFromStores.outgoing;
   const spam = stateFromStores.spam;
@@ -136,7 +217,7 @@ export default function FriendRequestsScreen() {
   const memo2 = gameRelationshipsByType1.useMemo(() => {
     obj = { incomingData: obj, incomingSection: null, outgoingData: null, outgoingSection: null };
     obj = { items: incoming, relationship: ignoredUsers.PENDING_INCOMING };
-    const items = [incoming.length, ];
+    const items = [incoming.length];
     let num = 0;
     if (spam.length + ignoredUsers.length > 0) {
       num = 1;
@@ -152,15 +233,18 @@ export default function FriendRequestsScreen() {
   const incomingData = memo2.incomingData;
   const outgoingData = memo2.outgoingData;
   ({ outgoingSection, incomingSection } = memo2);
-  const tmp19 = gameRelationshipsByType(gameRelationshipsByType1.useState(() => {
-    if (0 === incoming.length) {
-      if (outgoing.length > 0) {
-        let Incoming = closure_16.Outgoing;
+  const tmp19 = gameRelationshipsByType(
+    gameRelationshipsByType1.useState(() => {
+      if (0 === incoming.length) {
+        if (outgoing.length > 0) {
+          let Incoming = closure_16.Outgoing;
+        }
+        return Incoming;
       }
-      return Incoming;
-    }
-    Incoming = closure_16.Incoming;
-  }), 2);
+      Incoming = closure_16.Incoming;
+    }),
+    2,
+  );
   const first1 = tmp19[0];
   let Outgoing = tmp19[1];
   const items8 = [analyticsLocations];
@@ -198,7 +282,7 @@ export default function FriendRequestsScreen() {
           obj[2] = closure_1_14(tmp2(tmp3[33]).Text, obj);
           tmp4 = closure_1_14(tmp2(tmp3[32]).TableRow, obj);
         }
-        const children = [tmp4, ];
+        const children = [tmp4];
         let tmp6 = null;
         if (length2.length > 0) {
           obj = { onPress: null, label: null, trailing: null, arrow: true };
@@ -220,7 +304,16 @@ export default function FriendRequestsScreen() {
       const tmp = first1 === closure_16.Incoming ? incomingData : outgoingData;
       const items = tmp.items;
       obj = { type: "user", props: null };
-      obj = { type: null, user: null, onPress: null, mode: null, start: null, end: null, applicationId: null, isGameRelationship: null };
+      obj = {
+        type: null,
+        user: null,
+        onPress: null,
+        mode: null,
+        start: null,
+        end: null,
+        applicationId: null,
+        isGameRelationship: null,
+      };
       obj[0] = tmp.relationship;
       obj[1] = items[arg1].user;
       obj[2] = callback;
@@ -265,12 +358,12 @@ export default function FriendRequestsScreen() {
       }
       closure_16(Outgoing);
     },
-    items: null
+    items: null,
   };
   obj = { id: str.toString(), label: null, page: null };
   let intl = tmp4(1236).intl;
   obj[1] = intl.string(stateFromStoresArray(1236).t.bekioP);
-  const items10 = [obj, ];
+  const items10 = [obj];
   obj1 = { id: str2.toString(), label: null, page: null };
   let intl2 = tmp4(1236).intl;
   obj1[1] = intl2.string(stateFromStoresArray(1236).t.tWqcIF);
@@ -278,10 +371,10 @@ export default function FriendRequestsScreen() {
   obj[3] = items10;
   const segmentedControlState = stateFromStoresArray(9260).useSegmentedControlState(obj);
   obj2 = { value: analyticsLocations, children: null };
-  const items11 = [outgoingData(first(5070), { absolute: true }), ];
+  const items11 = [outgoingData(first(5070), { absolute: true })];
   obj3 = { style: tmp.container, children: null };
   obj4 = { style: tmp.tabs, children: outgoingData(tmp4(9762).SegmentedControl, { state: segmentedControlState }) };
-  const items12 = [outgoingData(pendingIncomingIds, obj4), , ];
+  const items12 = [outgoingData(pendingIncomingIds, obj4), ,];
   let tmp32Result = null;
   if (tmp28) {
     obj5 = { style: null, children: null };
@@ -290,7 +383,10 @@ export default function FriendRequestsScreen() {
     obj6[0] = tmp.clearAll;
     obj6[1] = function onPress() {
       const lazyResult = gameRelationshipsByType1.lazy(() => callback(paths[13])(paths[12], paths.paths));
-      stateFromStoresArray(4859).openAlert("clear-all-incoming-requests", outgoingData(lazyResult, { incomingRequestCount: incoming.length }));
+      stateFromStoresArray(4859).openAlert(
+        "clear-all-incoming-requests",
+        outgoingData(lazyResult, { incomingRequestCount: incoming.length }),
+      );
     };
     const obj7 = { variant: "text-sm/semibold", color: "text-brand", children: null };
     const intl3 = tmp4(1236).intl;
@@ -331,4 +427,4 @@ export default function FriendRequestsScreen() {
     obj2[1] = items11;
     return tmp31(tmp4(5953).AnalyticsLocationProvider, obj2);
   }
-};
+}

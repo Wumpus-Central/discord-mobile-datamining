@@ -14,9 +14,22 @@ require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, icon: null, text: null };
-createCacheKey = { padding: 10, marginVertical: 5, marginHorizontal: 15, borderRadius: ThemesDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", backgroundColor: require("result").DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+createCacheKey = {
+  padding: 10,
+  marginVertical: 5,
+  marginHorizontal: 15,
+  borderRadius: ThemesDefault.radii.xs,
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
+  backgroundColor: require("result").DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignSelf: "center", marginLeft: 15, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+createCacheKey[1] = {
+  alignSelf: "center",
+  marginLeft: 15,
+  color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_500,
+};
 let obj1 = { alignSelf: "center", marginLeft: 15, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
 createCacheKey[2] = { paddingLeft: 10, marginRight: 15, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
@@ -28,7 +41,7 @@ export default function SubscriptionRenewalMutationsNotice(arg0) {
   const tmp = callback2();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.icon };
-  const items = [callback(Button.WarningCircle, obj), ];
+  const items = [callback(Button.WarningCircle, obj)];
   obj = { style: tmp.text, children: null };
   const intl = getSystemLocale.intl;
   if (!subscription.hasExternalPlanChange) {
@@ -45,4 +58,4 @@ export default function SubscriptionRenewalMutationsNotice(arg0) {
     return closure_6(View, obj);
   }
   displayName = getPremiumPlanItem.getExternalPlanDisplayName(renewalMutations);
-};
+}

@@ -9,7 +9,12 @@ const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, image: null, title: null, description: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = {
+  alignItems: "center",
+  justifyContent: "center",
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: 12 };
 createCacheKey[2] = { textAlign: "center", marginBottom: 8 };
@@ -38,16 +43,30 @@ export default function ScreenshareParticipant(participant) {
     return tmpResult;
   }, items1);
   const tmp4 = callback3();
-  let obj = { gesture: onSingleTap(onDoubleTap[5])({ onSingleTapStart: callback, onDoubleTapStart: callback1 }), children: null };
+  let obj = {
+    gesture: onSingleTap(onDoubleTap[5])({ onSingleTapStart: callback, onDoubleTapStart: callback1 }),
+    children: null,
+  };
   obj = { style: items2, children: null };
   items2 = [tmp4.container, participant.containerStyle];
   obj = { source: onSingleTap(onDoubleTap[7]), style: tmp4.image };
-  const items3 = [callback(closure_5, obj), , , ];
-  obj1 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const items3 = [callback(closure_5, obj), , ,];
+  obj1 = {
+    style: tmp4.title,
+    accessibilityRole: "header",
+    variant: "heading-lg/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = participant(onDoubleTap[9]).intl;
   obj1[4] = intl.string(participant(onDoubleTap[9]).t.gMOwov);
   items3[1] = callback(participant(onDoubleTap[8]).Text, obj1);
-  const obj2 = { style: tmp4.description, variant: "text-sm/medium", color: "interactive-text-default", children: null };
+  const obj2 = {
+    style: tmp4.description,
+    variant: "text-sm/medium",
+    color: "interactive-text-default",
+    children: null,
+  };
   const intl2 = participant(onDoubleTap[9]).intl;
   obj2[3] = intl2.string(participant(onDoubleTap[9]).t.dKeLGt);
   items3[2] = callback(participant(onDoubleTap[8]).Text, obj2);
@@ -59,4 +78,4 @@ export default function ScreenshareParticipant(participant) {
   obj[1] = items3;
   obj[1] = callback2(closure_4, obj);
   return callback(participant(onDoubleTap[6]).GestureDetector, obj);
-};
+}

@@ -15,7 +15,7 @@ class ChatViewPopups {
     obj = require("useShowWelcomeModal");
     showWelcomeModal = obj.useShowWelcomeModal(guildId, global.channelId);
     closure_3 = showWelcomeModal;
-    items = [, , ];
+    items = [, ,];
     items[0] = guildId;
     items[1] = showWelcomeModal;
     items[2] = tmp;

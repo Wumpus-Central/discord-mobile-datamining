@@ -22,7 +22,7 @@ function _requestAgeVerification() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -136,7 +136,7 @@ function _requestIncodeMethodSession() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0, incode_parameters) {
+    return (function* (arg0, incode_parameters) {
       let session_token = tmp4;
       obj1 = { method: null, vendor: null };
       obj1[0] = closure_0;
@@ -197,7 +197,7 @@ function _initiateAgeVerification() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const HTTP = callback(table[5]).HTTP;
       obj1 = { url: null, body: null, rejectWithError: true };
       obj1[0] = closure_1_6.VERIFY_AGE;
@@ -235,7 +235,7 @@ function _initiateAgeVerificationV() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const HTTP = callback(table[5]).HTTP;
       obj1 = { url: null, body: null, rejectWithError: true };
       obj1[0] = closure_1_6.VERIFY_AGE_V2;
@@ -273,7 +273,7 @@ function _initiateSuspendedUserAgeVerificationV() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const suspendedUserToken = closure_1_4.getSuspendedUserToken();
       const HTTP = callback(table[5]).HTTP;
       obj1 = { url: null, body: null, rejectWithError: true };
@@ -303,7 +303,7 @@ function _requestAgeVerificationV() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (table === 2) {
         table = 3;
         HermesBuiltin.throwTypeError();
@@ -402,7 +402,7 @@ function _initiateSuspendedUserAgeVerification() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       c1 = tmp2;
       ({ classificationId: c0, method: c1 } = callback);
       yield "PX_16";
@@ -436,7 +436,7 @@ function _registerIncodeInterview() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -509,7 +509,7 @@ function _requestIncodeSessionBootstrap() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       closure_1 = tmp2;
       if (obj1 === undefined) {
         obj1 = {};
@@ -541,7 +541,7 @@ function _requestIncodeSessionBootstrap() {
 }
 function _getAgeVerificationMethods() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     v02(closure_1_2[6]).dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_START" });
     const obj6 = v02(closure_1_2[6]);
     if (obj7.isCurrentUserSuspended()) {
@@ -550,13 +550,15 @@ function _getAgeVerificationMethods() {
       promise = closure_1_22();
     }
     if (promise != null) {
-      const catchPromise = promise.then((body) => {
-        let obj = v1(709);
-        obj = { type: "AGE_VERIFICATION_METHODS_LOAD_SUCCESS", methods: body.body.methods };
-        obj.dispatch(obj);
-      }).catch(() => {
-        v1(709).dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_FAILURE" });
-      });
+      const catchPromise = promise
+        .then((body) => {
+          let obj = v1(709);
+          obj = { type: "AGE_VERIFICATION_METHODS_LOAD_SUCCESS", methods: body.body.methods };
+          obj.dispatch(obj);
+        })
+        .catch(() => {
+          v1(709).dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_FAILURE" });
+        });
       const nextPromise = promise.then((body) => {
         let obj = v1(709);
         obj = { type: "AGE_VERIFICATION_METHODS_LOAD_SUCCESS", methods: body.body.methods };
@@ -582,7 +584,11 @@ function fetchAgeVerificationMethods() {
 function fetchAgeVerificationMethodsSuspendedUser() {
   suspendedUserToken = suspendedUserToken.getSuspendedUserToken();
   const HTTP = sendRequest.HTTP;
-  return HTTP.post({ url: Endpoints.SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS, rejectWithError: true, body: { token: suspendedUserToken } });
+  return HTTP.post({
+    url: Endpoints.SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS,
+    rejectWithError: true,
+    body: { token: suspendedUserToken },
+  });
 }
 const result = require("set").fileFinishedImporting("modules/age_assurance/AgeVerificationURLActionCreators.tsx");
 

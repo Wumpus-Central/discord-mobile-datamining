@@ -2,17 +2,23 @@
 import closure_2 from "../UserGuildJoinRequestStore.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx",
+);
 
 export const useCurrentUserGuildJoinRequest = function useCurrentUserGuildJoinRequest(guildId) {
   const _require = guildId;
   const items = [closure_2];
   const items1 = [guildId];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let request = null;
-    if (null != closure_0) {
-      request = closure_1_2.getRequest(tmp);
-    }
-    return request;
-  }, items1);
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let request = null;
+      if (null != closure_0) {
+        request = closure_1_2.getRequest(tmp);
+      }
+      return request;
+    },
+    items1,
+  );
 };

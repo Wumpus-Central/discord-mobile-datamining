@@ -33,7 +33,10 @@ function ChannelPermissionSyncModule(channel) {
     const intl = channel(closure_1_3[15]).intl;
     obj[0] = intl.string(channel(closure_1_3[15]).t.YWMtRe);
     const intl2 = channel(closure_1_3[15]).intl;
-    obj = { channelName: channel(closure_1_3[16]).computeChannelName(closure_0, closure_1_13, closure_1_12, true), categoryName: null };
+    obj = {
+      channelName: channel(closure_1_3[16]).computeChannelName(closure_0, closure_1_13, closure_1_12, true),
+      categoryName: null,
+    };
     let obj4 = channel(closure_1_3[16]);
     obj[1] = channel(closure_1_3[16]).computeChannelName(category, closure_1_13, closure_1_12);
     obj[1] = intl2.format(channel(closure_1_3[15]).t["iKW+jY"], obj);
@@ -41,7 +44,7 @@ function ChannelPermissionSyncModule(channel) {
     obj[2] = intl3.string(channel(closure_1_3[15]).t.eW8Gy4);
     const intl4 = channel(closure_1_3[15]).intl;
     obj[3] = intl4.string(channel(closure_1_3[15]).t.s4uM3b);
-    closure_0 = closure_1_5(function*() {
+    closure_0 = closure_1_5(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -85,7 +88,11 @@ function ChannelPermissionSyncModule(channel) {
               c2 = 1;
               c3 = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = callback(closure_2_3[18]).checkChattableChannelThresholdMetAfterChannelPermissionDeny(closure_1_0, obj1[guild_id].deny, obj1[guild_id].allow);
+              obj2[0] = callback(closure_2_3[18]).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
+                closure_1_0,
+                obj1[guild_id].deny,
+                obj1[guild_id].allow,
+              );
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -113,7 +120,7 @@ function ChannelPermissionSyncModule(channel) {
         }
       }
     });
-    obj[4] = function() {
+    obj[4] = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -180,17 +187,13 @@ function AddPermission(isEditing) {
     obj1[0] = callback(tmp2(12291).PlusMediumIcon, {});
     const intl2 = tmp2(1236).intl;
     obj1[1] = intl2.string(tmp2(1236).t.fVWxvT);
-    obj1[2] = function onPress() {
-
-    };
-    const items = [callback(tmp2(5599).TableRow, obj1), ];
+    obj1[2] = function onPress() {};
+    const items = [callback(tmp2(5599).TableRow, obj1)];
     const obj2 = { icon: null, label: null, onPress: null };
     obj2[0] = callback(tmp2(12291).PlusMediumIcon, {});
     const intl3 = tmp2(1236).intl;
     obj2[1] = intl3.string(tmp2(1236).t.riesLt);
-    obj2[2] = function onPress() {
-
-    };
+    obj2[2] = function onPress() {};
     items[1] = callback(tmp2(5599).TableRow, obj2);
     obj[2] = items;
     obj[1] = callback2(tmp2(5992).TableRowGroup, obj);
@@ -202,7 +205,12 @@ function RoleRow(onDelete) {
   ({ role, isEditing, onSelect } = onDelete);
   ({ name, colorString, colorStrings } = role);
   const tmp = isEveryoneRole(role);
-  let obj = { label: callback(RoleLabel.RoleLabel, { name, color: colorString, colors: colorStrings }), arrow: !isEditing, icon: null, onPress: null };
+  let obj = {
+    label: callback(RoleLabel.RoleLabel, { name, color: colorString, colors: colorStrings }),
+    arrow: !isEditing,
+    icon: null,
+    onPress: null,
+  };
   let tmp2Result = null;
   if (isEditing) {
     tmp2Result = null;
@@ -251,16 +259,20 @@ function RoleOverwrites(guild) {
   obj1[0] = intl.string(guild(1236).t["LPJmL/"]);
   obj1[2] = found.map((id) => {
     closure_0 = id;
-    return closure_1_16(closure_1_22, {
-      role: id,
-      isEditing: closure_1,
-      onSelect() {
-        return closure_1_2(user.id);
+    return closure_1_16(
+      closure_1_22,
+      {
+        role: id,
+        isEditing: closure_1,
+        onSelect() {
+          return closure_1_2(user.id);
+        },
+        onDelete() {
+          return closure_1_3(user.id);
+        },
       },
-      onDelete() {
-        return closure_1_3(user.id);
-      }
-    }, id.id);
+      id.id,
+    );
   });
   obj[1] = callback(guild(5992).TableRowGroup, obj1);
   return callback(View, obj);
@@ -290,7 +302,9 @@ function MemberOverwrites(channel) {
   const guild_id = channel.guild_id;
   ({ isEditing: importDefault, onSelectRow: importAll, onDeleteRow: dependencyMap } = channel);
   const tmp = callback3();
-  const found = applyDefault(channel.permissionOverwrites).filter((type) => type.type === guild_id(table[29]).PermissionOverwriteType.MEMBER);
+  const found = applyDefault(channel.permissionOverwrites).filter(
+    (type) => type.type === guild_id(table[29]).PermissionOverwriteType.MEMBER,
+  );
   const mapped = found.map((id) => user.getUser(id.id));
   const found1 = mapped.filter(guild_id(1471).isNotNullish);
   const arr = applyDefault(channel.permissionOverwrites);
@@ -304,17 +318,21 @@ function MemberOverwrites(channel) {
     obj[0] = intl.string(tmp3(1236).t["9Oq93m"]);
     obj[2] = valueResult.map((id) => {
       closure_0 = id;
-      return closure_1_16(closure_1_24, {
-        guildId: closure_0,
-        user: id,
-        isEditing: closure_1,
-        onSelect() {
-          return closure_1_2(user.id);
+      return closure_1_16(
+        closure_1_24,
+        {
+          guildId: closure_0,
+          user: id,
+          isEditing: closure_1,
+          onSelect() {
+            return closure_1_2(user.id);
+          },
+          onDelete() {
+            return closure_1_3(user.id);
+          },
         },
-        onDelete() {
-          return closure_1_3(user.id);
-        }
-      }, id.id);
+        id.id,
+      );
     });
     obj[1] = callback(tmp3(5992).TableRowGroup, obj);
     tmp4 = callback(View, obj);
@@ -329,7 +347,9 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginHorizontal: ThemesDefault.space.PX_12 };
 let closure_18 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { marginHorizontal: ThemesDefault.space.PX_12 };
-let result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsOverview.tsx");
+let result = require("set").fileFinishedImporting(
+  "components_native/channel_settings/ChannelSettingsPermissionsOverview.tsx",
+);
 
 export default function ChannelSettingsPermissionsOverview(channelId) {
   channelId = channelId.channelId;
@@ -434,7 +454,7 @@ export default function ChannelSettingsPermissionsOverview(channelId) {
         }
         obj.label = stringResult;
         return closure_1_16(closure_1_0(closure_1_3[33]).HeaderTextButton, obj);
-      }
+      },
     });
   }, items6);
   let tmp11 = null;
@@ -448,7 +468,7 @@ export default function ChannelSettingsPermissionsOverview(channelId) {
       obj[1] = stateFromStores1;
       obj[2] = first;
       obj[3] = memo;
-      const items7 = [callback(CategorySync, obj), , , ];
+      const items7 = [callback(CategorySync, obj), , ,];
       obj1 = { isEditing: null };
       obj1[0] = first;
       items7[1] = callback(AddPermission, obj1);
@@ -488,4 +508,4 @@ export default function ChannelSettingsPermissionsOverview(channelId) {
     }
   }
   return tmp11;
-};
+}

@@ -57,11 +57,26 @@ export const selectVoiceChannelAdditional = function selectVoiceChannelAdditiona
         }
       }
     }
-    importDefault(flag[16])(() => {
-      let obj = id(flag[17]);
-      const v4Result = obj.v4();
-      obj = { type: "VOICE_CHANNEL_SELECT", guildId, channelId: id, currentVoiceChannelId: closure_1_7.getVoiceChannelId(), video: flag, stream: flag2, lockVoiceStateForResume: flag3, joinVoiceId: v4Result, bypassIdleUpdate: flag4 };
-      guildId(flag[18]).dispatch(obj);
-    }, id, flag2, flag);
+    importDefault(flag[16])(
+      () => {
+        let obj = id(flag[17]);
+        const v4Result = obj.v4();
+        obj = {
+          type: "VOICE_CHANNEL_SELECT",
+          guildId,
+          channelId: id,
+          currentVoiceChannelId: closure_1_7.getVoiceChannelId(),
+          video: flag,
+          stream: flag2,
+          lockVoiceStateForResume: flag3,
+          joinVoiceId: v4Result,
+          bypassIdleUpdate: flag4,
+        };
+        guildId(flag[18]).dispatch(obj);
+      },
+      id,
+      flag2,
+      flag,
+    );
   }
 };

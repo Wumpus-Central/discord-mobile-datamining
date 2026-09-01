@@ -91,7 +91,12 @@ const prototype = function BaseApplicationStreamingManager() {
     const obj2 = applyArgumentsResult(closure_1_2[13]);
     const tmp = applyArgumentsResult;
     const tmp2 = closure_1_2;
-    const encodeStreamKeyResult = obj2.encodeStreamKey({ streamType, guildId, channelId, ownerId: closure_1_4.getId() });
+    const encodeStreamKeyResult = obj2.encodeStreamKey({
+      streamType,
+      guildId,
+      channelId,
+      ownerId: closure_1_4.getId(),
+    });
     if (channel != null) {
       const isGuildStageVoiceResult = channel.isGuildStageVoice();
     }
@@ -282,7 +287,9 @@ const prototype = function BaseApplicationStreamingManager() {
                   if (timeout == null) {
                     timeout = new tmp21(tmp22[14]).Timeout();
                   }
-                  timeout.start(closure_1_14, () => encodeStreamKeyResult1(closure_1_2[11]).closeStream(encodeStreamKeyResult1, false));
+                  timeout.start(closure_1_14, () =>
+                    encodeStreamKeyResult1(closure_1_2[11]).closeStream(encodeStreamKeyResult1, false),
+                  );
                   closure_1_12[encodeStreamKeyResult1] = timeout;
                   const obj5 = closure_1_0(closure_1_2[13]);
                   tmp21 = closure_1_0;
@@ -360,11 +367,23 @@ const prototype = function BaseApplicationStreamingManager() {
   applyArgumentsResult.handleSessionReset = function handleSessionReset() {
     closure_18.clear();
   };
-  applyArgumentsResult.actions = { STREAM_WATCH: applyArgumentsResult.handleStreamWatch, STREAM_START: applyArgumentsResult.handleStreamStart, STREAM_CREATE: applyArgumentsResult.handleStreamCreate, STREAM_UPDATE: applyArgumentsResult.handleStreamUpdate, STREAM_DELETE: applyArgumentsResult.handleStreamDelete, STREAM_CLOSE: applyArgumentsResult.handleStreamClose, CALL_UPDATE: applyArgumentsResult.handleCallUpdate, CHANNEL_UPDATES: applyArgumentsResult.handleChannelUpdates, VOICE_CHANNEL_SELECT: applyArgumentsResult.handleVoiceChannelSelect, VOICE_STATE_UPDATES: applyArgumentsResult.handleVoiceStateUpdates, CONNECTION_CLOSED: applyArgumentsResult.handleSessionReset, LOGOUT: applyArgumentsResult.handleSessionReset };
+  applyArgumentsResult.actions = {
+    STREAM_WATCH: applyArgumentsResult.handleStreamWatch,
+    STREAM_START: applyArgumentsResult.handleStreamStart,
+    STREAM_CREATE: applyArgumentsResult.handleStreamCreate,
+    STREAM_UPDATE: applyArgumentsResult.handleStreamUpdate,
+    STREAM_DELETE: applyArgumentsResult.handleStreamDelete,
+    STREAM_CLOSE: applyArgumentsResult.handleStreamClose,
+    CALL_UPDATE: applyArgumentsResult.handleCallUpdate,
+    CHANNEL_UPDATES: applyArgumentsResult.handleChannelUpdates,
+    VOICE_CHANNEL_SELECT: applyArgumentsResult.handleVoiceChannelSelect,
+    VOICE_STATE_UPDATES: applyArgumentsResult.handleVoiceStateUpdates,
+    CONNECTION_CLOSED: applyArgumentsResult.handleSessionReset,
+    LOGOUT: applyArgumentsResult.handleSessionReset,
+  };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp7 {
-}
+class prototype extends tmp7 {}
 let result = set.fileFinishedImporting("modules/go_live/ApplicationStreamingManager.tsx");
 
 export default prototype;

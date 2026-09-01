@@ -8,7 +8,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { emojiContainer: { flexDirection: "row", alignItems: "center", marginHorizontal: 24 }, emojiIcon: null };
+createCacheKey = {
+  emojiContainer: { flexDirection: "row", alignItems: "center", marginHorizontal: 24 },
+  emojiIcon: null,
+};
 createCacheKey = { marginRight: 12, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
@@ -43,7 +46,7 @@ export default function ImageInputAnswerActionSheet(channelId) {
     obj = { style: null, children: null };
     obj[0] = tmp.emojiIcon;
     obj[1] = tmp3.renderImage;
-    const items = [callback(View, obj), ];
+    const items = [callback(View, obj)];
     const image2 = answer.image;
     let name;
     if (image2 != null) {
@@ -61,7 +64,7 @@ export default function ImageInputAnswerActionSheet(channelId) {
     const tmp10 = callback;
     const tmp9 = View;
   }
-  const items1 = [tmp6Result, callback(channelId(answer[11]).Spacer, { size: 21 }), ];
+  const items1 = [tmp6Result, callback(channelId(answer[11]).Spacer, { size: 21 })];
   const intl = tmp7(tmp2[13]).intl;
   const string = intl.string;
   const t = tmp7(tmp2[13]).t;
@@ -76,10 +79,9 @@ export default function ImageInputAnswerActionSheet(channelId) {
       onPress() {
         callback4();
         callback3();
-      }
+      },
     }),
-  ,
-
+    ,
   ];
   let tmp13Result = null;
   if (null != upload) {
@@ -111,4 +113,4 @@ export default function ImageInputAnswerActionSheet(channelId) {
   items1[2] = closure_7(channelId(answer[12]).ActionSheetRow.Group, { hasIcons: false, children: items2 });
   obj4[1] = items1;
   return closure_7(channelId(answer[9]).ActionSheet, obj4);
-};
+}

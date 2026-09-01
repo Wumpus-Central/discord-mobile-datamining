@@ -17,7 +17,9 @@ createCacheKey = { disclaimer: null };
 createCacheKey = { marginTop: ThemesDefault.space.PX_12, textAlign: "center" };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx",
+);
 
 export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
   ({ item, ctaText } = arg0);
@@ -74,4 +76,4 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
     format(tmp14, t);
     const obj11 = combinedDefault;
   }
-};
+}

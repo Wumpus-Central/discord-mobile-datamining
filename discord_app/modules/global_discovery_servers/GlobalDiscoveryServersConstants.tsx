@@ -4,11 +4,36 @@ import getSystemLocale from "../../intl/index.native.tsx";
 import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
-let obj = { FEATURED: "featured", GAMING: "gaming", MUSIC: "music", ENTERTAINMENT: "entertainment", TECH: "tech", EDUCATION: "education", HUBS: "hubs" };
+let obj = {
+  FEATURED: "featured",
+  GAMING: "gaming",
+  MUSIC: "music",
+  ENTERTAINMENT: "entertainment",
+  TECH: "tech",
+  EDUCATION: "education",
+  HUBS: "hubs",
+};
 const items = [obj.HUBS];
 let set = new Set(items);
-obj = { Clans: -3, [-3]: "Clans", Hub: -2, [-2]: "Hub", Communities: -1, [-1]: "Communities", Activity: 1, [1]: "Activity", Music: 2, [2]: "Music", Television: 3, [3]: "Television", Science: 5, [5]: "Science", Education: 6, [6]: "Education" };
-const items1 = [, , , , ];
+obj = {
+  Clans: -3,
+  [-3]: "Clans",
+  Hub: -2,
+  [-2]: "Hub",
+  Communities: -1,
+  [-1]: "Communities",
+  Activity: 1,
+  [1]: "Activity",
+  Music: 2,
+  [2]: "Music",
+  Television: 3,
+  [3]: "Television",
+  Science: 5,
+  [5]: "Science",
+  Education: 6,
+  [6]: "Education",
+};
+const items1 = [, , , ,];
 ({ Activity: arr2[0], Music: arr2[1], Television: arr2[2], Science: arr2[3], Education: arr2[4] } = obj);
 let closure_2 = ["en-GB"];
 const result = 10 * setDefault.Millis.MINUTE;
@@ -20,7 +45,14 @@ export const DISCOVERY_ALL_CATEGORIES_ID = -1;
 export const HUBS_CATEGORY_ID = -2;
 export const RAPIDASH_GUILDS_CATEGORY_ID = -3;
 export const GlobalDiscoveryServerTab = obj;
-export const GlobalDiscoveryServerEntrypoint = { UNKNOWN: "unknown", GUILDS_BAR: "guilds_bar", RTC_PANEL: "rtc_panel", PROFILE: "profile", GAME_LINK: "game_link", EMBED: "embed" };
+export const GlobalDiscoveryServerEntrypoint = {
+  UNKNOWN: "unknown",
+  GUILDS_BAR: "guilds_bar",
+  RTC_PANEL: "rtc_panel",
+  PROFILE: "profile",
+  GAME_LINK: "game_link",
+  EMBED: "embed",
+};
 export const SEARCH_DISABLED_SERVER_TABS = set;
 export const EMPTY_GUILD_IDS = [];
 export const SEARCH_RESULTS_FEATURED_PREFIX = "f";

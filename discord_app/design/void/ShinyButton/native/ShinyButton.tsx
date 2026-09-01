@@ -8,8 +8,22 @@ import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 let items = [{ rotate: "30deg" }];
-let closure_8 = createCacheKey.createStyles({ shinyButton: { overflow: "hidden" }, shineContainer: { width: "100%", height: "100%", position: "absolute", overflow: "hidden" }, shine: { width: 56, height: "500%", transform: items, backgroundColor: "rgba(255,255,255,0.1)", top: "-100%", alignItems: "center" }, shineInner: { width: 16, height: "100%", backgroundColor: "rgba(255,255,255,0.1)" } });
-let closure_9 = { code: "function ShinyButtonTsx1(){const{width,OFFSCREEN_OFFSET,withRepeat,withSequence,withTiming,withDelay,INITIAL_ANIMATION_DELAY,ANIMATION_DURATION}=this.__closure;if(width==null){return{transform:[{translateX:-OFFSCREEN_OFFSET}]};}return{transform:[{translateX:withRepeat(withSequence(withTiming(-OFFSCREEN_OFFSET,{duration:0},'animate-always'),withDelay(INITIAL_ANIMATION_DELAY,withTiming(width+OFFSCREEN_OFFSET,{duration:ANIMATION_DURATION},'animate-always'))),-1)}]};}" };
+let closure_8 = createCacheKey.createStyles({
+  shinyButton: { overflow: "hidden" },
+  shineContainer: { width: "100%", height: "100%", position: "absolute", overflow: "hidden" },
+  shine: {
+    width: 56,
+    height: "500%",
+    transform: items,
+    backgroundColor: "rgba(255,255,255,0.1)",
+    top: "-100%",
+    alignItems: "center",
+  },
+  shineInner: { width: 16, height: "100%", backgroundColor: "rgba(255,255,255,0.1)" },
+});
+let closure_9 = {
+  code: "function ShinyButtonTsx1(){const{width,OFFSCREEN_OFFSET,withRepeat,withSequence,withTiming,withDelay,INITIAL_ANIMATION_DELAY,ANIMATION_DURATION}=this.__closure;if(width==null){return{transform:[{translateX:-OFFSCREEN_OFFSET}]};}return{transform:[{translateX:withRepeat(withSequence(withTiming(-OFFSCREEN_OFFSET,{duration:0},'animate-always'),withDelay(INITIAL_ANIMATION_DELAY,withTiming(width+OFFSCREEN_OFFSET,{duration:ANIMATION_DURATION},'animate-always'))),-1)}]};}",
+};
 const result = require("set").fileFinishedImporting("design/void/ShinyButton/native/ShinyButton.tsx");
 
 export default function ShinyButton(disabled) {
@@ -61,14 +75,29 @@ export default function ShinyButton(disabled) {
       const obj6 = disabled(shineDisabled[8]);
       const withTimingResult = disabled(shineDisabled[8]).withTiming(-100, { duration: 0 }, "animate-always");
       const obj7 = disabled(shineDisabled[7]);
-      obj[0] = obj4.withRepeat(obj5.withSequence(withTimingResult, obj7.withDelay(750, disabled(shineDisabled[8]).withTiming(tmp + 100, { duration: 2000 }, "animate-always"))), -1);
+      obj[0] = obj4.withRepeat(
+        obj5.withSequence(
+          withTimingResult,
+          obj7.withDelay(750, disabled(shineDisabled[8]).withTiming(tmp + 100, { duration: 2000 }, "animate-always")),
+        ),
+        -1,
+      );
       const items1 = [obj];
       obj[0] = items1;
       const obj8 = disabled(shineDisabled[8]);
     }
     return obj;
   };
-  obj = { width: first, OFFSCREEN_OFFSET: 100, withRepeat: disabled(shineDisabled[7]).withRepeat, withSequence: disabled(shineDisabled[7]).withSequence, withTiming: disabled(shineDisabled[8]).withTiming, withDelay: disabled(shineDisabled[7]).withDelay, INITIAL_ANIMATION_DELAY: 750, ANIMATION_DURATION: 2000 };
+  obj = {
+    width: first,
+    OFFSCREEN_OFFSET: 100,
+    withRepeat: disabled(shineDisabled[7]).withRepeat,
+    withSequence: disabled(shineDisabled[7]).withSequence,
+    withTiming: disabled(shineDisabled[8]).withTiming,
+    withDelay: disabled(shineDisabled[7]).withDelay,
+    INITIAL_ANIMATION_DELAY: 750,
+    ANIMATION_DURATION: 2000,
+  };
   fn.__closure = obj;
   fn.__workletHash = 5550564727650;
   fn.__initData = c9;
@@ -111,4 +140,4 @@ export default function ShinyButton(disabled) {
     return tmp;
   };
   return jsx(importDefault(shineDisabled[9]), {});
-};
+}

@@ -32,9 +32,15 @@ function PriceTag(accessibilityLabel) {
     variant = "text-md/medium";
   }
   const obj = { children: null };
-  const items = [icon, ];
+  const items = [icon];
   const items1 = [callback3().priceTag, style];
-  items[1] = callback(Text.Text, { variant, style: items1, color: str, accessibilityLabel: accessibilityLabel.accessibilityLabel, children: priceFormatted });
+  items[1] = callback(Text.Text, {
+    variant,
+    style: items1,
+    color: str,
+    accessibilityLabel: accessibilityLabel.accessibilityLabel,
+    children: priceFormatted,
+  });
   obj[0] = items;
   return callback2(closure_10, obj);
 }
@@ -56,7 +62,7 @@ function OrbsPriceTag(arg0) {
     if (result) {
       result = discountPercentage >= tmp16(7299).DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
     }
-    const items = [tmp.priceTagRow, ];
+    const items = [tmp.priceTagRow];
     const canAfford = vcData.canAfford;
     let disabled = !canAfford;
     if (canAfford) {
@@ -82,7 +88,7 @@ function OrbsPriceTag(arg0) {
       obj[4] = intl.formatToPlainString(tmp16(1236).t.QfcKZ5, obj2);
       tmp7 = callback(PriceTag, obj);
     }
-    const items1 = [tmp7, , ];
+    const items1 = [tmp7, ,];
     const obj3 = { priceFormatted: null, variant: "text-md/semibold", icon: null, accessibilityLabel: null };
     obj3[0] = vcData.price.amount.toString();
     let tmp10Result;
@@ -138,7 +144,22 @@ noopAll;
 ({ Pressable: c3, View: c4 } = get_ActivityIndicator);
 ({ AnalyticsSections: error, CurrencyCodes: closure_8 } = ME);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { priceTag: { flexDirection: "row", alignItems: "center" }, strikedPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7 }, strikedOrbPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7, marginRight: 4 }, regularPrice: {}, nitroIcon: { width: 20, height: 20, marginLeft: 8, marginRight: 4 }, nitroIconSubscribeNow: { marginLeft: 0 }, container: { flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between" }, priceTagRow: { flexDirection: "row", alignItems: "center" }, priceTagColumn: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, underline: { textDecorationLine: "underline" }, subscribeNowPressable: null, androidTextPadding: null, orbsIcon: null, disabled: null };
+createCacheKey = {
+  priceTag: { flexDirection: "row", alignItems: "center" },
+  strikedPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7 },
+  strikedOrbPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7, marginRight: 4 },
+  regularPrice: {},
+  nitroIcon: { width: 20, height: 20, marginLeft: 8, marginRight: 4 },
+  nitroIconSubscribeNow: { marginLeft: 0 },
+  container: { flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between" },
+  priceTagRow: { flexDirection: "row", alignItems: "center" },
+  priceTagColumn: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 },
+  underline: { textDecorationLine: "underline" },
+  subscribeNowPressable: null,
+  androidTextPadding: null,
+  orbsIcon: null,
+  disabled: null,
+};
 createCacheKey = { marginBottom: -2, marginTop: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
 createCacheKey[10] = createCacheKey;
 createCacheKey[11] = { paddingBottom: 2 };
@@ -146,7 +167,16 @@ createCacheKey[12] = { marginRight: 4 };
 createCacheKey[13] = { opacity: 0.5 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 let closure_15 = createCacheKey.createStyles(() => {
-  const discount = { backgroundColor: "rgba(46, 204, 113, 0.25)", flexDirection: "row", flexShrink: 1, borderRadius: ThemesDefault.radii.xs - 1, paddingHorizontal: 6, marginLeft: 6, paddingTop: null, paddingBottom: null };
+  const discount = {
+    backgroundColor: "rgba(46, 204, 113, 0.25)",
+    flexDirection: "row",
+    flexShrink: 1,
+    borderRadius: ThemesDefault.radii.xs - 1,
+    paddingHorizontal: 6,
+    marginLeft: 6,
+    paddingTop: null,
+    paddingBottom: null,
+  };
   let num;
   if (obj2.isAndroid()) {
     num = 0;
@@ -209,7 +239,11 @@ export default function InlinePriceTag(arg0) {
       tmp13 = tmp11;
     }
     let tmp2Result = tmp2(10744);
-    const formattedPriceForCollectiblesProduct1 = tmp2Result.getFormattedPriceForCollectiblesProduct(product, true, true);
+    const formattedPriceForCollectiblesProduct1 = tmp2Result.getFormattedPriceForCollectiblesProduct(
+      product,
+      true,
+      true,
+    );
     tmp2Result = tmp2(7299);
     obj = { style: null, children: null };
     obj[0] = tmp.container;
@@ -217,7 +251,13 @@ export default function InlinePriceTag(arg0) {
     obj1[0] = tmp.priceTagColumn;
     obj2 = { style: null, children: null };
     obj2[0] = tmp.priceTagRow;
-    obj3 = { priceFormatted: null, variant: null, style: null, color: "interactive-text-active", accessibilityLabel: null };
+    obj3 = {
+      priceFormatted: null,
+      variant: null,
+      style: null,
+      color: "interactive-text-active",
+      accessibilityLabel: null,
+    };
     obj3[0] = formattedPriceForCollectiblesProduct;
     obj3[1] = "heading-md/semibold";
     obj3[2] = tmp13 ? tmp.strikedPrice : tmp.regularPrice;
@@ -225,7 +265,7 @@ export default function InlinePriceTag(arg0) {
     obj4 = { price: null };
     obj4[0] = formattedPriceForCollectiblesProduct;
     obj3[4] = intl.formatToPlainString(tmp2(1236).t.sPvyr8, obj4);
-    const items1 = [callback(PriceTag, obj3), , ];
+    const items1 = [callback(PriceTag, obj3), ,];
     let tmp17Result = null;
     if (product.type === tmp2(1950).CollectiblesItemType.BUNDLE) {
       tmp17Result = null;
@@ -239,7 +279,7 @@ export default function InlinePriceTag(arg0) {
     if (!(null != formattedPriceForCollectiblesProduct1 && tmp13)) {
       items1[2] = tmp21;
       obj2[1] = items1;
-      const items2 = [tmp15(tmp16, obj2), ];
+      const items2 = [tmp15(tmp16, obj2)];
       tmp17Result = null != formattedPriceForCollectiblesProduct1 && !tmp13;
       if (tmp17Result) {
         obj6 = { style: null, children: null };
@@ -253,10 +293,10 @@ export default function InlinePriceTag(arg0) {
         };
         obj7[1] = tmp.subscribeNowPressable;
         const obj8 = { color: "interactive-text-default", style: null };
-        const items3 = [, ];
+        const items3 = [,];
         ({ nitroIcon: arr4[0], nitroIconSubscribeNow: arr4[1] } = tmp);
         obj8[1] = items3;
-        const items4 = [tmp17(tmp2(8096).NitroWheelIcon, obj8), ];
+        const items4 = [tmp17(tmp2(8096).NitroWheelIcon, obj8)];
         let androidTextPadding;
         if (tmp2Result1.isAndroid()) {
           androidTextPadding = tmp.androidTextPadding;
@@ -267,7 +307,11 @@ export default function InlinePriceTag(arg0) {
         const obj10 = { price: null, subscribeNowHook: null };
         obj10[0] = formattedPriceForCollectiblesProduct1;
         obj10[1] = function subscribeNowHook(children) {
-          return closure_1_9(closure_1_0(4474).Text, { variant: "text-md/normal", style: underline.underline, children }, arg1);
+          return closure_1_9(
+            closure_1_0(4474).Text,
+            { variant: "text-md/normal", style: underline.underline, children },
+            arg1,
+          );
         };
         obj9[3] = intl3.format(tmp2(1236).t.Kxw2LT, obj10);
         items4[1] = tmp17(tmp2(4474).Text, obj9);
@@ -279,7 +323,7 @@ export default function InlinePriceTag(arg0) {
       }
       items2[1] = tmp17Result;
       obj1[1] = items2;
-      const items5 = [tmp15(tmp16, obj1), ];
+      const items5 = [tmp15(tmp16, obj1)];
       let tmp17Result1 = null != virtualCurrencyData.price;
       if (tmp17Result1) {
         const obj11 = { vcData: null, isProductDisabled: null, product: null, eligibleForShopDiscount: null };
@@ -293,7 +337,14 @@ export default function InlinePriceTag(arg0) {
       obj[1] = items5;
       return tmp15(tmp16, obj);
     } else {
-      const obj12 = { priceFormatted: null, variant: "text-md/medium", color: "interactive-text-active", accessibilityLabel: null, style: null, icon: null };
+      const obj12 = {
+        priceFormatted: null,
+        variant: "text-md/medium",
+        color: "interactive-text-active",
+        accessibilityLabel: null,
+        style: null,
+        icon: null,
+      };
       obj12[0] = formattedPriceForCollectiblesProduct1;
       const intl2 = tmp2(1236).intl;
       const obj13 = { price: null };
@@ -318,4 +369,4 @@ export default function InlinePriceTag(arg0) {
       tmp2Result2 = tmp2(500);
     }
   }
-};
+}

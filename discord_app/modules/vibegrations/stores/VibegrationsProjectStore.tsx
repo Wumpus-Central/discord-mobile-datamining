@@ -30,8 +30,7 @@ const map5 = new Map();
 let closure_13 = { status: "idle", truncated: false, count: 0 };
 const map6 = new Map();
 const Store = initializeDefault.Store;
-class VibegrationsProjectStore extends Store {
-}
+class VibegrationsProjectStore extends Store {}
 const prototype = VibegrationsProjectStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_1);
@@ -387,7 +386,7 @@ const vibegrationsProjectStore = new VibegrationsProjectStore(dispatcherDefault,
       const result = obj.set(projectId, num);
     }
     obj = map5;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/vibegrations/stores/VibegrationsProjectStore.tsx");
 

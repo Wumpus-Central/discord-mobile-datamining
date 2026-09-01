@@ -10,20 +10,55 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { title: null, footer: null, body: null, noticeContainer: null, innerContainer: null, secondInnerContainer: null, text: null, titleImage: null, item: null, button: null };
+createCacheKey = {
+  title: null,
+  footer: null,
+  body: null,
+  noticeContainer: null,
+  innerContainer: null,
+  secondInnerContainer: null,
+  text: null,
+  titleImage: null,
+  item: null,
+  button: null,
+};
 createCacheKey = { marginBottom: ThemesDefault.space.PX_4, textAlign: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { textAlign: "center" };
 let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16 };
-createCacheKey[3] = { borderRadius: ThemesDefault.radii.sm, marginVertical: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_16 };
+createCacheKey[3] = {
+  borderRadius: ThemesDefault.radii.sm,
+  marginVertical: ThemesDefault.space.PX_16,
+  padding: ThemesDefault.space.PX_16,
+};
 createCacheKey[4] = { flexDirection: "row", alignItems: "center", paddingBottom: 16 };
 createCacheKey[5] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[6] = { flex: 1 };
 createCacheKey[7] = { padding: 16, justifyContent: "center", alignItems: "center" };
-let obj2 = { borderRadius: ThemesDefault.radii.sm, marginVertical: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_16 };
-createCacheKey[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, marginRight: 16, height: 40, width: 40, borderRadius: 20, alignItems: "center", justifyContent: "center" };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, marginRight: 16, height: 40, width: 40, borderRadius: 20, alignItems: "center", justifyContent: "center" };
+let obj2 = {
+  borderRadius: ThemesDefault.radii.sm,
+  marginVertical: ThemesDefault.space.PX_16,
+  padding: ThemesDefault.space.PX_16,
+};
+createCacheKey[8] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  marginRight: 16,
+  height: 40,
+  width: 40,
+  borderRadius: 20,
+  alignItems: "center",
+  justifyContent: "center",
+};
+let obj3 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  marginRight: 16,
+  height: 40,
+  width: 40,
+  borderRadius: 20,
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[9] = { paddingTop: ThemesDefault.space.PX_16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { paddingTop: ThemesDefault.space.PX_16 };
@@ -34,7 +69,9 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   const tmp = callback3();
   const items = [onClick];
   const callback = React.useCallback(() => {
-    const result = onClick(closure_1_2[6]).UNSAFE_markDismissibleContentAsDismissed(onClick(closure_1_2[7]).DismissibleContent.GDM_INVITE_REMINDER);
+    const result = onClick(closure_1_2[6]).UNSAFE_markDismissibleContentAsDismissed(
+      onClick(closure_1_2[7]).DismissibleContent.GDM_INVITE_REMINDER,
+    );
     const obj = onClick(closure_1_2[6]);
     closure_1_1(closure_1_2[8]).hideActionSheet();
     onClick();
@@ -45,14 +82,14 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   obj[1] = callback(preloadDefault, obj);
   obj[3] = callback(View, obj);
   obj1 = { style: items1, children: null };
-  items1 = [tmp.footer, ];
+  items1 = [tmp.footer];
   const tmp3 = preloadDefault;
   items1[1] = { padding: 16, paddingBottom: useSafeAreaInsetsDefault().bottom + 16 };
   const obj3 = { text: null, onPress: null };
   const intl = onClick(1236).intl;
   obj3[0] = intl.string(onClick(1236).t["3PatSz"]);
   obj3[1] = callback;
-  const items2 = [callback(onClick(4928).Button, obj3), ];
+  const items2 = [callback(onClick(4928).Button, obj3)];
   const obj4 = { style: tmp.button, children: null };
   const obj5 = { text: null, onPress: null, variant: "tertiary" };
   const intl2 = onClick(1236).intl;
@@ -68,7 +105,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   const obj7 = { style: tmp.title, variant: "heading-lg/extrabold", accessibilityRole: "header", children: null };
   const intl3 = onClick(1236).intl;
   obj7[3] = intl3.string(onClick(1236).t["bkqux/"]);
-  const items3 = [callback(onClick(4474).Text, obj7), , ];
+  const items3 = [callback(onClick(4474).Text, obj7), ,];
   const obj8 = { style: tmp.body, variant: "text-md/medium", color: "text-muted", children: null };
   const intl4 = onClick(1236).intl;
   obj8[3] = intl4.string(onClick(1236).t.N6TdqN);
@@ -76,16 +113,16 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   const obj9 = { style: tmp.noticeContainer, children: null };
   const obj10 = { style: tmp.innerContainer, children: null };
   const obj2 = { padding: 16, paddingBottom: useSafeAreaInsetsDefault().bottom + 16 };
-  const items4 = [callback(View, { style: tmp.item, children: callback(onClick(9401).TimerIcon, { size: "sm" }) }), ];
+  const items4 = [callback(View, { style: tmp.item, children: callback(onClick(9401).TimerIcon, { size: "sm" }) })];
   const obj12 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl5 = onClick(1236).intl;
   obj12[3] = intl5.string(onClick(1236).t.Fq3DJb);
   items4[1] = callback(onClick(4474).Text, obj12);
   obj10[1] = items4;
-  const items5 = [callback2(View, obj10), ];
+  const items5 = [callback2(View, obj10)];
   const obj13 = { style: tmp.secondInnerContainer, children: null };
   const obj11 = { style: tmp.item, children: callback(onClick(9401).TimerIcon, { size: "sm" }) };
-  const items6 = [callback(View, { style: tmp.item, children: callback(onClick(4421).LinkIcon, { size: "sm" }) }), ];
+  const items6 = [callback(View, { style: tmp.item, children: callback(onClick(4421).LinkIcon, { size: "sm" }) })];
   const obj15 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl6 = onClick(1236).intl;
   obj15[3] = intl6.string(onClick(1236).t.XKbf2G);
@@ -97,4 +134,4 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   obj6[0] = items3;
   obj[5] = callback2(onClick(5624).BottomSheetScrollView, obj6);
   return callback(onClick(5622).BottomSheet, obj);
-};
+}

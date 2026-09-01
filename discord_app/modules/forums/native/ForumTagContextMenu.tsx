@@ -20,4 +20,4 @@ export default function ForumTagContextMenu(children) {
   };
   const items = [obj];
   return jsx(tagId(8792).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
-};
+}

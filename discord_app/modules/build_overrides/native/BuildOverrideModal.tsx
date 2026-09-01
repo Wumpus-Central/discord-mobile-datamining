@@ -10,11 +10,35 @@ const require = arg1;
 noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, content: null, imageWrapper: null, text: null, buildOverrideName: null, buildOverrideExpiration: null, buildOverrideInvalid: null, buttonWrapper: null, actionButton: null };
-createCacheKey = { flex: 1, height: "100%", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 };
+createCacheKey = {
+  container: null,
+  content: null,
+  imageWrapper: null,
+  text: null,
+  buildOverrideName: null,
+  buildOverrideExpiration: null,
+  buildOverrideInvalid: null,
+  buttonWrapper: null,
+  actionButton: null,
+};
+createCacheKey = {
+  flex: 1,
+  height: "100%",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  paddingHorizontal: 16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: 160, flex: 1, alignItems: "center" };
-createCacheKey[2] = { width: 100, height: 100, borderRadius: ThemesDefault.radii.round, marginBottom: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, alignItems: "center", justifyContent: "center" };
+createCacheKey[2] = {
+  width: 100,
+  height: 100,
+  borderRadius: ThemesDefault.radii.round,
+  marginBottom: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[3] = { lineHeight: 24, textAlign: "center" };
 createCacheKey[4] = { marginTop: 8 };
 createCacheKey[5] = { lineHeight: 24 };
@@ -22,7 +46,15 @@ createCacheKey[6] = { marginTop: 8 };
 createCacheKey[7] = { alignSelf: "stretch" };
 createCacheKey[8] = { marginBottom: 8 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { width: 100, height: 100, borderRadius: ThemesDefault.radii.round, marginBottom: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, alignItems: "center", justifyContent: "center" };
+const obj1 = {
+  width: 100,
+  height: 100,
+  borderRadius: ThemesDefault.radii.round,
+  marginBottom: 16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  alignItems: "center",
+  justifyContent: "center",
+};
 let result = require("set").fileFinishedImporting("modules/build_overrides/native/BuildOverrideModal.tsx");
 
 export default function BuildOverrideModal(overrideUrl) {
@@ -64,7 +96,10 @@ export default function BuildOverrideModal(overrideUrl) {
   obj = { top: true, bottom: true, style: tmp.container, children: null };
   obj = { style: tmp.content, children: null };
   const humanizeResult = tmp2Result.duration(obj3.diff(expiresAt)).humanize();
-  const items2 = [callback(closure_4, { style: tmp.imageWrapper, children: callback(closure_3, { source: tmp2Result }) }), , ];
+  const items2 = [
+    callback(closure_4, { style: tmp.imageWrapper, children: callback(closure_3, { source: tmp2Result }) }),
+    ,
+  ];
   const obj2 = { style: tmp.text, variant: "text-md/medium", children: null };
   const intl = tmp5(1236).intl;
   obj2[2] = intl.string(str(1236).t["6ILkNN"]);
@@ -74,7 +109,7 @@ export default function BuildOverrideModal(overrideUrl) {
     const obj4 = { style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj4[0] = tmp.buildOverrideName;
     obj4[3] = id;
-    const items3 = [tmp14(tmp5(4474).Text, obj4), ];
+    const items3 = [tmp14(tmp5(4474).Text, obj4)];
     const obj5 = { style: null, variant: "text-md/medium", color: "text-default", children: null };
     obj5[0] = tmp.buildOverrideExpiration;
     const intl3 = tmp5(1236).intl;
@@ -93,7 +128,7 @@ export default function BuildOverrideModal(overrideUrl) {
   }
   items2[2] = tmp14Result;
   obj[1] = items2;
-  const items4 = [closure_8(closure_4, obj), ];
+  const items4 = [closure_8(closure_4, obj)];
   const obj8 = { style: tmp.buttonWrapper, children: null };
   if (null != id) {
     const obj9 = { children: null };
@@ -110,7 +145,7 @@ export default function BuildOverrideModal(overrideUrl) {
       const result = str(closure_1_2[11]).setBuildOverrideFromLink(str);
     };
     obj10[1] = tmp14(tmp5(4928).Button, obj11);
-    const items5 = [tmp14(tmp13, obj10), ];
+    const items5 = [tmp14(tmp13, obj10)];
     const obj12 = { text: null, variant: "secondary", grow: true, onPress: null };
     const intl6 = tmp5(1236).intl;
     obj12[0] = intl6.string(tmp5(1236).t.b5KKph);
@@ -133,4 +168,4 @@ export default function BuildOverrideModal(overrideUrl) {
   items4[1] = callback(closure_4, obj8);
   obj[3] = items4;
   return closure_8(str(5553).SafeAreaPaddingView, obj);
-};
+}

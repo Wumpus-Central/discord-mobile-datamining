@@ -9,7 +9,9 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 noopAll;
 let closure_5 = createCacheKey.createStyles({ content: { width: "100%" } });
-const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimation.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/burst_reactions/BurstReactionAnimation.tsx",
+);
 
 export default function BurstReactionAnimation(arg0) {
   ({ onComplete, withFadeOut } = arg0);
@@ -19,7 +21,12 @@ export default function BurstReactionAnimation(arg0) {
   }
   const merged = Object.assign(arg0, Object.create(null));
   let obj = _generateAnimationSource;
-  const burstReactionAnimationSource = obj.useBurstReactionAnimationSource({ emoji, messageId, channelId, isFullscreen });
+  const burstReactionAnimationSource = obj.useBurstReactionAnimationSource({
+    emoji,
+    messageId,
+    channelId,
+    isFullscreen,
+  });
   initialize;
   [][0] = closure_3;
   if (null == burstReactionAnimationSource) {
@@ -45,4 +52,4 @@ export default function BurstReactionAnimation(arg0) {
     return jsx(importDefault(withFadeOut ? 7571 : 5944), { style: null, loop: false, speed: null });
   }
   tmp2 = callback();
-};
+}

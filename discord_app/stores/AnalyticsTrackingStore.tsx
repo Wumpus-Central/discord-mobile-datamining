@@ -27,7 +27,7 @@ encodeProperties = {
     return expandEventProperties.launchSignature;
   },
   scheduleWhenIdle: require("setOriginWindow").requestSafeIdleCallback,
-  sendUnloadRequest: require("sendUnloadRequest").sendUnloadRequest
+  sendUnloadRequest: require("sendUnloadRequest").sendUnloadRequest,
 };
 encodeProperties = {
   CONNECTION_OPEN(arg0) {
@@ -50,7 +50,7 @@ encodeProperties = {
   },
   SET_ANALYTICS_TOKEN(arg0) {
     return encodeProperties2.AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
-  }
+  },
 };
 items = [importDefaultResult];
 encodeProperties = encodeProperties.analyticsTrackingStoreMaker(encodeProperties);

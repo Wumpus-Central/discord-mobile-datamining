@@ -19,7 +19,16 @@ require = arg1;
 let c4 = importAllResult;
 ({ View: c5, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-let obj = { alert: null, titleText: null, divider: null, body: null, buttons: null, cancelButton: null, secondaryConfirm: null, gradient: null };
+let obj = {
+  alert: null,
+  titleText: null,
+  divider: null,
+  body: null,
+  buttons: null,
+  cancelButton: null,
+  secondaryConfirm: null,
+  gradient: null,
+};
 obj = { borderRadius: ThemesDefault.radii.sm, padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
 createCacheKey = { marginBottom: 16, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -125,7 +134,15 @@ prototype["renderHeader"] = function renderHeader() {
   if (null != title) {
     tmp3Result = null;
     if ("" !== title) {
-      let obj = { ref: null, accessible: true, accessibilityRole: "header", variant: "heading-md/extrabold", color: "text-default", style: null, children: null };
+      let obj = {
+        ref: null,
+        accessible: true,
+        accessibilityRole: "header",
+        variant: "heading-md/extrabold",
+        color: "text-default",
+        style: null,
+        children: null,
+      };
       obj[0] = self.titleRef;
       obj[5] = tmp.titleText;
       let renderContentResult = title;
@@ -134,7 +151,7 @@ prototype["renderHeader"] = function renderHeader() {
       }
       obj = { children: null };
       obj[6] = renderContentResult;
-      const items = [closure_7(Text.Text, obj), ];
+      const items = [closure_7(Text.Text, obj)];
       obj = { style: null };
       obj[0] = tmp.divider;
       items[1] = closure_7(closure_5, obj);
@@ -178,7 +195,14 @@ prototype["renderButtons"] = function renderButtons() {
     const intl = getSystemLocale.intl;
     confirmText = intl.string(getSystemLocale.t.BddRzS);
   }
-  ({ confirmColor, secondaryConfirmText, renderConfirmIcon, renderConfirmRightIcon, renderConfirmButton, isConfirmButtonDisabled } = props);
+  ({
+    confirmColor,
+    secondaryConfirmText,
+    renderConfirmIcon,
+    renderConfirmRightIcon,
+    renderConfirmButton,
+    isConfirmButtonDisabled,
+  } = props);
   let tmp15Result = null;
   if (!props.noDefaultButtons) {
     let tmp6;
@@ -227,7 +251,15 @@ prototype["renderButtons"] = function renderButtons() {
           }
         }
       }
-      const obj3 = { variant: null, onPress: null, text: null, loading: null, disabled: null, icon: null, iconPosition: null };
+      const obj3 = {
+        variant: null,
+        onPress: null,
+        text: null,
+        loading: null,
+        disabled: null,
+        icon: null,
+        iconPosition: null,
+      };
       obj3[0] = str;
       obj3[1] = self.handleConfirm;
       obj3[2] = confirmText;
@@ -285,7 +317,7 @@ prototype["render"] = function render() {
   let obj = { children: null };
   ({ style, isLandscape, onClose } = props);
   obj = { absolute: true, componentStyles: tmp.gradient };
-  const items = [callback(getMixedGradientColorDefault, obj), ];
+  const items = [callback(getMixedGradientColorDefault, obj)];
   obj = { onAccessibilityEscape: onClose, style: items1, children: null };
   items1 = [tmp.alert, style, { width }];
   const items2 = [this.renderHeader(), this.renderBody(), this.renderButtons(), this.renderFooter()];
@@ -311,7 +343,11 @@ const memoResult = importAllResult.memo((arg0) => {
   const size = useWindowDimensionsDefault();
   let obj = getIsScreenLandscape;
   const isScreenLandscape = obj.useIsScreenLandscape();
-  obj = { width: Math.min(0.9 * Math.min(size.width, size.height), 400), contentHeight: 0.7 * size.height, isLandscape: isScreenLandscape };
+  obj = {
+    width: Math.min(0.9 * Math.min(size.width, size.height), 400),
+    contentHeight: 0.7 * size.height,
+    isLandscape: isScreenLandscape,
+  };
   const merged = Object.assign(arg0);
   return callback(Alert, obj);
 });

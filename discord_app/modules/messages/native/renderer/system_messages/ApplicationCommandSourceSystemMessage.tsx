@@ -8,9 +8,13 @@ import getApplicationCommand from "../../../ApplicationCommands.tsx";
 
 const MessageTypes = ME.MessageTypes;
 const COMMAND_SENTINEL = regExp.COMMAND_SENTINEL;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/ApplicationCommandSourceSystemMessage.tsx");
+const result = set.fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/ApplicationCommandSourceSystemMessage.tsx",
+);
 
-export const createApplicationCommandSourceSystemMessage = function createApplicationCommandSourceSystemMessage(message) {
+export const createApplicationCommandSourceSystemMessage = function createApplicationCommandSourceSystemMessage(
+  message,
+) {
   message = message.message;
   let obj = getApplicationCommand;
   const applicationCommand = obj.getApplicationCommand(message.content);

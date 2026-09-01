@@ -8,7 +8,11 @@ import { Links } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-({ authStateToRegisterTransitionStep: error, RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: c9 } = RegistrationTransitionActionTypes);
+({
+  authStateToRegisterTransitionStep: error,
+  RegisterTransitionSteps: closure_8,
+  RegistrationTransitionActionTypes: c9,
+} = RegistrationTransitionActionTypes);
 const result = require("set").fileFinishedImporting("modules/auth/native/components/VerifyPhone.tsx");
 
 export default function VerifyPhone(phone) {
@@ -54,7 +58,7 @@ export default function VerifyPhone(phone) {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, token) {
+    return (function* (arg0, token) {
       closure_2 = tmp3;
       v0(true);
       v0 = 1;
@@ -105,7 +109,7 @@ export default function VerifyPhone(phone) {
     })();
   });
   const items1 = [phone, onPhoneTokenReceived, context];
-  callback = React.useCallback(function() {
+  callback = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -120,7 +124,7 @@ export default function VerifyPhone(phone) {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -176,7 +180,7 @@ export default function VerifyPhone(phone) {
     })();
   });
   const items2 = [callback];
-  const callback1 = React.useCallback(function() {
+  const callback1 = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -197,11 +201,31 @@ export default function VerifyPhone(phone) {
     }
     return tmp2;
   }, items3);
-  let obj = { title, description, error: tmp3, onCodeEntered: callback, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true };
+  let obj = {
+    title,
+    description,
+    error: tmp3,
+    onCodeEntered: callback,
+    codeType: null,
+    footer: null,
+    disabled: null,
+    loading: null,
+    disableKeyboardAvoidingView: true,
+  };
   const tmp7 = onPhoneTokenReceived(15553);
   obj[4] = require("../../../phone/native/CodeField.tsx").CodeType.NUMERIC;
   obj[5] = memo;
   obj[6] = tmp5;
   obj[7] = tmp[0];
-  return jsx(onPhoneTokenReceived(7803), { title, description, error: tmp3, onCodeEntered: callback, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true });
-};
+  return jsx(onPhoneTokenReceived(7803), {
+    title,
+    description,
+    error: tmp3,
+    onCodeEntered: callback,
+    codeType: null,
+    footer: null,
+    disabled: null,
+    loading: null,
+    disableKeyboardAvoidingView: true,
+  });
+}

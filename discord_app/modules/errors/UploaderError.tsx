@@ -11,8 +11,7 @@ const prototype = function UploaderError(body) {
   }
   return tmp;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 const result = require("set").fileFinishedImporting("modules/errors/UploaderError.tsx");
 
 export default prototype;

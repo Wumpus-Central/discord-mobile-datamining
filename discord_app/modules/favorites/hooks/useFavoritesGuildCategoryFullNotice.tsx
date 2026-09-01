@@ -42,4 +42,4 @@ export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
     }
   }
   return tmp6;
-};
+}

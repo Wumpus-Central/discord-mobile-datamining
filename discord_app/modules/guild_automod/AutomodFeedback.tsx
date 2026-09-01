@@ -3,7 +3,14 @@ import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 
 let obj = { BUG: "BUG", ALLOWED: "ALLOWED", MENTION_RAID_REMOVE_RESTRICTION: "MENTION_RAID_REMOVE_RESTRICTION" };
-obj = { LEGITIMATE_ACTIVITY: "LEGITIMATE_ACTIVITY", LEGITIMATE_ACCOUNTS: "LEGITIMATE_ACCOUNTS", LEGITIMATE_DMS: "LEGITIMATE_DMS", DM_SPAM: "DM_SPAM", JOIN_RAID: "JOIN_RAID", OTHER: "OTHER" };
+obj = {
+  LEGITIMATE_ACTIVITY: "LEGITIMATE_ACTIVITY",
+  LEGITIMATE_ACCOUNTS: "LEGITIMATE_ACCOUNTS",
+  LEGITIMATE_DMS: "LEGITIMATE_DMS",
+  DM_SPAM: "DM_SPAM",
+  JOIN_RAID: "JOIN_RAID",
+  OTHER: "OTHER",
+};
 const result = set.fileFinishedImporting("modules/guild_automod/AutomodFeedback.tsx");
 
 export const Feedback = obj;
@@ -12,7 +19,7 @@ export const generateFeedbackOptions = function generateFeedbackOptions() {
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["+MbOX4"]);
   obj[1] = obj.BUG;
-  const items = [obj, ];
+  const items = [obj];
   obj = { name: null, value: null };
   const intl2 = getSystemLocale.intl;
   obj[0] = intl2.string(getSystemLocale.t.CRsCRC);
@@ -32,4 +39,11 @@ export const getMostImportantRaidResolutionType = function getMostImportantRaidR
   }
   return DM_SPAM;
 };
-export const RaidLockdownFeedbackType = { DM_SPAM: "DM_SPAM", MENTION_SPAM: "MENTION_SPAM", CHANNEL_SPAM: "CHANNEL_SPAM", SUS_NEW_MEMBERS: "SUS_NEW_MEMBERS", CHANGING_SETTINGS: "CHANGING_SETTINGS", OTHER: "OTHER" };
+export const RaidLockdownFeedbackType = {
+  DM_SPAM: "DM_SPAM",
+  MENTION_SPAM: "MENTION_SPAM",
+  CHANNEL_SPAM: "CHANNEL_SPAM",
+  SUS_NEW_MEMBERS: "SUS_NEW_MEMBERS",
+  CHANGING_SETTINGS: "CHANGING_SETTINGS",
+  OTHER: "OTHER",
+};

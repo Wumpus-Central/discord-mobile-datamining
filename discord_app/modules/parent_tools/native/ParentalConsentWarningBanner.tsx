@@ -15,7 +15,13 @@ const View = get_ActivityIndicator.View;
 let closure_14 = 28 + ThemesDefault.space.PX_16;
 let closure_15 = [0.5875, 1];
 createCacheKey = { strip: null, pressable: null, label: null, link: null };
-createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -53,7 +59,7 @@ export default function ParentalConsentWarningBanner(children) {
   let items = [token];
   daysRemaining = undefined;
   const memo = React.useMemo(() => {
-    const items = [token, ];
+    const items = [token];
     const obj = token(daysRemaining[13])(token);
     items[1] = token(daysRemaining[13])(token).setAlpha(0).toRgbString();
     return items;
@@ -88,20 +94,28 @@ export default function ParentalConsentWarningBanner(children) {
     obj = { screen: closure_1_9.FAMILY_CENTER };
     lib(daysRemaining[16]).openUserSettings(obj);
   }, items1);
-  const callback1 = obj7.useCallback((children) => closure_1_11(lib(daysRemaining[17]).Text, { variant: "text-sm/medium", color: "text-strong", style: lib.link, children }, arg1), items2);
-  const items3 = [StyleSheet.absoluteFill, ];
+  const callback1 = obj7.useCallback(
+    (children) =>
+      closure_1_11(
+        lib(daysRemaining[17]).Text,
+        { variant: "text-sm/medium", color: "text-strong", style: lib.link, children },
+        arg1,
+      ),
+    items2,
+  );
+  const items3 = [StyleSheet.absoluteFill];
   let num2 = 0;
   if (isOnMainSurface) {
     num2 = closure_14;
   }
   items3[1] = { marginTop: num2 };
-  children = [closure_11(View, { style: items3, children: children.children }), ];
+  children = [closure_11(View, { style: items3, children: children.children })];
   let tmp18 = null;
   if (isOnMainSurface) {
     tmp18 = null;
     if (null != daysRemaining) {
       obj = { style: null, pointerEvents: "box-none", children: null };
-      const items5 = [tmp.strip, ];
+      const items5 = [tmp.strip];
       obj = { height: null };
       obj[0] = sum;
       items5[1] = obj;
@@ -111,12 +125,12 @@ export default function ParentalConsentWarningBanner(children) {
       obj1[2] = memo;
       obj1[3] = closure_15;
       ({ START: obj10[4], END: obj10[5] } = closure_10);
-      const items6 = [tmp15(Gfqlpa(obj[18]), obj1), ];
+      const items6 = [tmp15(Gfqlpa(obj[18]), obj1)];
       obj2 = { accessibilityRole: "button", accessibilityHint: null, onPress: null, style: null, children: null };
       const intl2 = intl(obj[19]).intl;
       obj2[1] = intl2.string(Gfqlpa(obj[20]).O2HKdA);
       obj2[2] = callback;
-      const items7 = [tmp.pressable, ];
+      const items7 = [tmp.pressable];
       obj3 = { paddingTop: null };
       obj3[0] = tmp2.top + 8;
       items7[1] = obj3;
@@ -148,4 +162,4 @@ export default function ParentalConsentWarningBanner(children) {
   }
   children[1] = tmp18;
   return closure_12(closure_13, { children });
-};
+}

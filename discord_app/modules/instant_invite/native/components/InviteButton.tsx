@@ -37,13 +37,39 @@ const memoResult = importAllResult.memo(function InviteButton(onPress) {
     flag = false;
   }
   let obj = { style: callback().buttonWrapper, children: null };
-  obj = { accessibilityRole: "none", size: "sm", variant: "secondary", text: stringResult1, onPress: onPress.onPressSend, disabled: null, grow: true };
+  obj = {
+    accessibilityRole: "none",
+    size: "sm",
+    variant: "secondary",
+    text: stringResult1,
+    onPress: onPress.onPressSend,
+    disabled: null,
+    grow: true,
+  };
   if (!disabled) {
     disabled = flag;
   }
   obj[5] = disabled;
-  obj[1] = jsx(Button.Button, { accessibilityRole: "none", size: "sm", variant: "secondary", text: stringResult1, onPress: onPress.onPressSend, disabled: null, grow: true });
-  return <View accessibilityRole="none" size="sm" variant="secondary" text={stringResult1} onPress={arg0.onPressSend} disabled={null} grow />;
+  obj[1] = jsx(Button.Button, {
+    accessibilityRole: "none",
+    size: "sm",
+    variant: "secondary",
+    text: stringResult1,
+    onPress: onPress.onPressSend,
+    disabled: null,
+    grow: true,
+  });
+  return (
+    <View
+      accessibilityRole="none"
+      size="sm"
+      variant="secondary"
+      text={stringResult1}
+      onPress={arg0.onPressSend}
+      disabled={null}
+      grow
+    />
+  );
 });
 const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InviteButton.tsx");
 

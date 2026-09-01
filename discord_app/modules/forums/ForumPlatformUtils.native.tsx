@@ -8,5 +8,5 @@ export default {
   getForumChannelPermissionText() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.LG9VAi);
-  }
+  },
 };

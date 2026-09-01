@@ -13,7 +13,9 @@ createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textDecorationLine: "underline" };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalConsentNotice.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/parent_tools/native/FamilyCenterParentalConsentNotice.tsx",
+);
 
 export default function FamilyCenterParentalConsentNotice() {
   const tmp = callback();
@@ -36,7 +38,18 @@ export default function FamilyCenterParentalConsentNotice() {
     if (null != daysRemaining) {
       if (daysRemaining >= 0) {
         function learnMoreHook(children) {
-          return closure_1_4(lib(closure_1_2[7]).Text, { variant: "text-sm/medium", color: "text-strong", style: lib.link, accessibilityRole: "link", onPress: closure_1, children }, arg1);
+          return closure_1_4(
+            lib(closure_1_2[7]).Text,
+            {
+              variant: "text-sm/medium",
+              color: "text-strong",
+              style: lib.link,
+              accessibilityRole: "link",
+              onPress: closure_1,
+              children,
+            },
+            arg1,
+          );
         }
         obj = { style: null, text: null };
         obj[0] = tmp.container;
@@ -58,4 +71,4 @@ export default function FamilyCenterParentalConsentNotice() {
     }
   }
   return null;
-};
+}

@@ -25,14 +25,18 @@ function isRefreshableAttachmentUrl(result) {
           pathname = pathname.pathname;
           return pathname.startsWith(arg0);
         });
-        hasItem = (set.has(result.hostname) || false) && Array.from(ATTACHMENT_PATH_PREFIXES).some((arg0) => {
-          pathname = pathname.pathname;
-          return pathname.startsWith(arg0);
-        });
-        const tmp9 = (set.has(result.hostname) || false) && Array.from(ATTACHMENT_PATH_PREFIXES).some((arg0) => {
-          pathname = pathname.pathname;
-          return pathname.startsWith(arg0);
-        });
+        hasItem =
+          (set.has(result.hostname) || false) &&
+          Array.from(ATTACHMENT_PATH_PREFIXES).some((arg0) => {
+            pathname = pathname.pathname;
+            return pathname.startsWith(arg0);
+          });
+        const tmp9 =
+          (set.has(result.hostname) || false) &&
+          Array.from(ATTACHMENT_PATH_PREFIXES).some((arg0) => {
+            pathname = pathname.pathname;
+            return pathname.startsWith(arg0);
+          });
       }
       tmp4 = hasItem;
     }
@@ -135,7 +139,7 @@ function _refreshAttachmentUrl() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const HTTP = callback(530).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_5.ATTACHMENTS_REFRESH_URLS;
@@ -163,7 +167,7 @@ function _maybeRefreshAttachmentUrl() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -256,7 +260,7 @@ function _maybeRefreshAttachmentUrl() {
   return applyArgumentsResult;
 }
 const HOUR = setDefault.Millis.HOUR;
-let items = [window.GLOBAL_ENV.CDN_HOST, ];
+let items = [window.GLOBAL_ENV.CDN_HOST];
 let substr;
 if (window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT != null) {
   substr = require("set");
@@ -269,10 +273,13 @@ function isAttachmentPathUrl(toURLSafeResult) {
     pathname = pathname.pathname;
     return pathname.startsWith(arg0);
   });
-  return (set.has(toURLSafeResult.hostname) || false) && Array.from(ATTACHMENT_PATH_PREFIXES).some((arg0) => {
-    pathname = pathname.pathname;
-    return pathname.startsWith(arg0);
-  });
+  return (
+    (set.has(toURLSafeResult.hostname) || false) &&
+    Array.from(ATTACHMENT_PATH_PREFIXES).some((arg0) => {
+      pathname = pathname.pathname;
+      return pathname.startsWith(arg0);
+    })
+  );
 }
 function getSignedAttachmentExpiration(searchParams) {
   searchParams = searchParams.searchParams;

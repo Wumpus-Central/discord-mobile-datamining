@@ -18,7 +18,15 @@ export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRe
   let obj = expandEventPropertiesDefault;
   obj = { type: closure_3, channel_id: channelId };
   obj.track(AnalyticEvents.OPEN_MODAL, obj);
-  obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, confirmColor: null };
+  obj = {
+    title: null,
+    body: null,
+    cancelText: null,
+    confirmText: null,
+    onConfirm: null,
+    onCancel: null,
+    confirmColor: null,
+  };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["66tnno"]);
   const intl2 = getSystemLocale.intl;
@@ -34,5 +42,9 @@ export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRe
 };
 export const onMarkAsNotSpamConfirmationModal = function onMarkAsNotSpamConfirmationModal(arg0) {
   ({ onConfirm, onCancel, channel } = arg0);
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12011, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12011, dependencyMap.paths), "SpamMessageHamActionSheet", {
+    channel,
+    onConfirm,
+    onCancel,
+  });
 };

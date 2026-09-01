@@ -47,13 +47,29 @@ export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase)
   } else {
     result = tmp9 / 2;
   }
-  obj = { style: { position: "absolute", top: result, left: 0, right: 0, bottom: 0 }, pointerEvents: "none", children: null };
+  obj = {
+    style: { position: "absolute", top: result, left: 0, right: 0, bottom: 0 },
+    pointerEvents: "none",
+    children: null,
+  };
   const items = [str, hex2rgbResult];
-  const items1 = [callback(LinearGradientDefault, { colors: items, style: { height: gradientHeight }, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1] }), callback(View, { style: { flex: 1, backgroundColor: hex2rgbResult } })];
+  const items1 = [
+    callback(LinearGradientDefault, {
+      colors: items,
+      style: { height: gradientHeight },
+      start: { x: 0, y: 0 },
+      end: { x: 0, y: 1 },
+      locations: [0, 1],
+    }),
+    callback(View, { style: { flex: 1, backgroundColor: hex2rgbResult } }),
+  ];
   obj[2] = items1;
   return closure_5(View, obj);
 };
 export const useChatInputFloatingOverlayStyle = function useChatInputFloatingOverlayStyle() {
-  const obj = { marginTop: -map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT) / 2, overflow: "visible" };
+  const obj = {
+    marginTop: -map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT) / 2,
+    overflow: "visible",
+  };
   return obj;
 };

@@ -15,8 +15,7 @@ let closure_4 = {};
 let closure_5 = {};
 let set = new Set();
 const Store = initializeDefault.Store;
-class ApplicationStreamPreviewStore extends Store {
-}
+class ApplicationStreamPreviewStore extends Store {}
 const prototype = ApplicationStreamPreviewStore.prototype;
 prototype["getPreviewURL"] = function getPreviewURL(closure_0, channelId, closure_2) {
   let obj = isStreamKey;
@@ -65,7 +64,11 @@ prototype["shouldFetchPreview"] = function shouldFetchPreview(c0, closure_1, clo
 };
 prototype["getPreviewURLForStreamKey"] = function getPreviewURLForStreamKey(streamKey) {
   const decodeStreamKeyResult = isStreamKey.decodeStreamKey(streamKey);
-  return this.getPreviewURL(decodeStreamKeyResult.guildId, decodeStreamKeyResult.channelId, decodeStreamKeyResult.ownerId);
+  return this.getPreviewURL(
+    decodeStreamKeyResult.guildId,
+    decodeStreamKeyResult.channelId,
+    decodeStreamKeyResult.ownerId,
+  );
 };
 prototype["getIsPreviewLoading"] = function getIsPreviewLoading(closure_0, closure_1, closure_2) {
   let obj = isStreamKey;
@@ -138,7 +141,7 @@ const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(dispatch
       }, false);
     }
     return reduced;
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/ApplicationStreamPreviewStore.tsx");
 

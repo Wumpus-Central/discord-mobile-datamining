@@ -64,4 +64,4 @@ export default function useGameAnnouncements(arg0, arg1) {
   obj[2] = guildId;
   obj[3] = stateFromStoresObject.isFetching;
   return obj;
-};
+}

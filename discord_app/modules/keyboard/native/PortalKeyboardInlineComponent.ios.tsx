@@ -60,7 +60,12 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
                 tmp.current = true;
                 const obj2 = messagesRef(4343);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
-                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(10993).getKeyboardActionSheetHeight().minimum, 0.25, 7);
+                const result1 = DCDChatManager3.customKeyboardWillShow(
+                  tmp38,
+                  messagesRef(10993).getKeyboardActionSheetHeight().minimum,
+                  0.25,
+                  7,
+                );
                 const obj3 = messagesRef(10993);
               }
             }

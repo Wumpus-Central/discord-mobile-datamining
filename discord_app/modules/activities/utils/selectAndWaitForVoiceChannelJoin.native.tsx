@@ -9,7 +9,7 @@ function _selectAndWaitForVoiceChannelJoin() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -133,9 +133,10 @@ function _selectAndWaitForVoiceChannelJoin() {
 const prototype = function JoinTimeoutError() {
   return HermesBuiltin.applyArguments(new.target, new.target);
 }.prototype;
-class prototype extends Error {
-}
-let result = require("set").fileFinishedImporting("modules/activities/utils/selectAndWaitForVoiceChannelJoin.native.tsx");
+class prototype extends Error {}
+let result = require("set").fileFinishedImporting(
+  "modules/activities/utils/selectAndWaitForVoiceChannelJoin.native.tsx",
+);
 
 export default function selectAndWaitForVoiceChannelJoin() {
   const self = this;
@@ -146,4 +147,4 @@ export default function selectAndWaitForVoiceChannelJoin() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

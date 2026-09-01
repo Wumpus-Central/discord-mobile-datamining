@@ -10,8 +10,7 @@ import NativePermissionsRequestOptions from "NativePermissionUtils.tsx";
 const NativePermissionTypes = NativePermissionStatus.NativePermissionTypes;
 const InputModes = ME.InputModes;
 initializeDefault;
-class NativePermissionManager extends tmp2 {
-}
+class NativePermissionManager extends tmp2 {}
 const prototype = NativePermissionManager.prototype;
 prototype["isEnabled"] = function isEnabled() {
   let isDesktopResult = set2.isDesktop();
@@ -39,7 +38,9 @@ prototype["_terminate"] = function _terminate() {
 };
 prototype["handleAudioSetMode"] = function handleAudioSetMode(mode) {
   if (mode.mode === InputModes.PUSH_TO_TALK) {
-    const permission = NativePermissionsRequestOptions.default.requestPermission(NativePermissionTypes.INPUT_MONITORING);
+    const permission = NativePermissionsRequestOptions.default.requestPermission(
+      NativePermissionTypes.INPUT_MONITORING,
+    );
     const _default = NativePermissionsRequestOptions.default;
   }
 };

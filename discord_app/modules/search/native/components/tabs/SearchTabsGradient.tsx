@@ -16,4 +16,4 @@ export default function SearchTabsGradient(state) {
     return items;
   }, items);
   return jsx(TabsGradientDefault, { state: state.state, colors });
-};
+}

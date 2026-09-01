@@ -37,7 +37,10 @@ export default function useAppsInThisServer(context) {
   obj1 = commandsByActiveSection(memo[5]);
   obj = { context, filters: null, options: null, allowFetch: true };
   obj = { commandTypes: null };
-  const items1 = [_require(memo[6]).ApplicationCommandType.CHAT, _require(memo[6]).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+  const items1 = [
+    _require(memo[6]).ApplicationCommandType.CHAT,
+    _require(memo[6]).ApplicationCommandType.PRIMARY_ENTRY_POINT,
+  ];
   obj[0] = items1;
   obj[1] = obj;
   obj1 = { placeholderCount: 0, limit: closure_7, includeFrecency: true };
@@ -45,12 +48,16 @@ export default function useAppsInThisServer(context) {
   const discovery = obj1.useDiscovery(obj);
   commandsByActiveSection = discovery.commandsByActiveSection;
   const items2 = [commandsByActiveSection];
-  memo = sortApplicationsViaFrecency.useMemo(() => commandsByActiveSection.reduce((add, data) => {
-    if (data.data.length > 0) {
-      add.add(tmp.id);
-    }
-    return add;
-  }, new Set()), items2);
+  memo = sortApplicationsViaFrecency.useMemo(
+    () =>
+      commandsByActiveSection.reduce((add, data) => {
+        if (data.data.length > 0) {
+          add.add(tmp.id);
+        }
+        return add;
+      }, new Set()),
+    items2,
+  );
   let result = tmp2Result.result;
   let sections;
   if (result != null) {
@@ -86,15 +93,17 @@ export default function useAppsInThisServer(context) {
   return {
     appsInThisServer: sortApplicationsViaFrecency.useMemo(() => {
       const obj = stateFromStores(memo[9]);
-      const found = stateFromStores(memo[9]).compact(sortApplicationsViaFrecency.map((application) => application.application)).filter((id) => {
-        let tmp = false === closure_1;
-        if (tmp) {
-          tmp = closure_1_1(closure_1_3[10])(id.id);
-        }
-        return !tmp;
-      });
+      const found = stateFromStores(memo[9])
+        .compact(sortApplicationsViaFrecency.map((application) => application.application))
+        .filter((id) => {
+          let tmp = false === closure_1;
+          if (tmp) {
+            tmp = closure_1_1(closure_1_3[10])(id.id);
+          }
+          return !tmp;
+        });
       return found.map((application) => ({ application }));
     }, items4),
-    isLoading: tmp13
+    isLoading: tmp13,
   };
-};
+}

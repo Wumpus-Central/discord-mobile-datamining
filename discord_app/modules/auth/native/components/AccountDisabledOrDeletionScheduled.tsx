@@ -18,7 +18,15 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
     PX_16 = space.PX_16;
     tmp4 = tmp;
   }
-  const container = { display: "flex", height: "100%", flex: 1, paddingBottom: PX_16, paddingHorizontal: null, backgroundColor: null, justifyContent: null };
+  const container = {
+    display: "flex",
+    height: "100%",
+    flex: 1,
+    paddingBottom: PX_16,
+    paddingHorizontal: null,
+    backgroundColor: null,
+    justifyContent: null,
+  };
   let num = 0;
   if (!arg0) {
     num = tmp4(712).space.PX_16;
@@ -34,9 +42,16 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
     str2 = "space-between";
   }
   container[6] = str2;
-  return { container, image: { marginBottom: 32, alignSelf: "center" }, title: { textAlign: "center", marginBottom: 8 }, description: { lineHeight: 18, marginBottom: 24, textAlign: "center" } };
+  return {
+    container,
+    image: { marginBottom: 32, alignSelf: "center" },
+    title: { textAlign: "center", marginBottom: 8 },
+    description: { lineHeight: 18, marginBottom: 24, textAlign: "center" },
+  };
 });
-const result = require("set").fileFinishedImporting("modules/auth/native/components/AccountDisabledOrDeletionScheduled.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/auth/native/components/AccountDisabledOrDeletionScheduled.tsx",
+);
 
 export default function AccountDisabledOrDeletionScheduled(handleLogin) {
   handleLogin = handleLogin.handleLogin;
@@ -102,16 +117,31 @@ export default function AccountDisabledOrDeletionScheduled(handleLogin) {
   obj = { contentStyle: { flexGrow: 1 }, children: null };
   obj = { style: tmp9.container, children: null };
   obj1 = { children: null };
-  const items4 = [callback(handleLogin(navigation[13]).WumpTrash, { style: tmp9.image }), callback(handleLogin(navigation[14]).Text, { style: tmp9.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult }), callback(handleLogin(navigation[14]).Text, { style: tmp9.description, variant: "text-sm/medium", color: "text-default", children: string2Result })];
+  const items4 = [
+    callback(handleLogin(navigation[13]).WumpTrash, { style: tmp9.image }),
+    callback(handleLogin(navigation[14]).Text, {
+      style: tmp9.title,
+      accessibilityRole: "header",
+      variant: "heading-xl/extrabold",
+      color: "mobile-text-heading-primary",
+      children: stringResult,
+    }),
+    callback(handleLogin(navigation[14]).Text, {
+      style: tmp9.description,
+      variant: "text-sm/medium",
+      color: "text-default",
+      children: string2Result,
+    }),
+  ];
   obj1[0] = items4;
-  const items5 = [callback2(closure_4, obj1), ];
+  const items5 = [callback2(closure_4, obj1)];
   const obj5 = { children: null };
   const obj6 = { children: null };
   const obj7 = { variant: "primary", text: null, onPress: null };
   const intl3 = tmp(tmp2[11]).intl;
   obj7[1] = intl3.string(handleLogin(navigation[11]).t.JhDw5o);
   obj7[2] = callback;
-  const items6 = [callback(handleLogin(navigation[16]).Button, obj7), ];
+  const items6 = [callback(handleLogin(navigation[16]).Button, obj7)];
   const obj8 = { variant: "secondary", text: null, onPress: null };
   const intl4 = tmp(tmp2[11]).intl;
   obj8[1] = intl4.string(handleLogin(navigation[11]).t.v51oiN);
@@ -123,4 +153,4 @@ export default function AccountDisabledOrDeletionScheduled(handleLogin) {
   obj[1] = items5;
   obj[1] = callback2(closure_4, obj);
   return callback(onReset(navigation[12]), obj);
-};
+}

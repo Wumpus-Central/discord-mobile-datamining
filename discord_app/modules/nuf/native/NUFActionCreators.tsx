@@ -17,7 +17,7 @@ function _startContactSyncForDiscoverability() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -136,16 +136,20 @@ export const previousOnboardingStep = function previousOnboardingStep() {
 };
 export const transitionToNUFGuildTemplatesModal = function transitionToNUFGuildTemplatesModal(SLIDE_IN) {
   closure_0 = SLIDE_IN;
-  _modDef4723.pushLazy(callback(function*() {
-    closure_1 = tmp5;
-    closure_0 = tmp2;
-    yield closure_1_0(paths[10])(paths[9], paths.paths);
-    closure_0 = arg1.default;
-    const obj = { animation: null };
-    obj[0] = closure_0;
-    closure_0.modalConfig = obj;
-    return closure_0;
-  }), {}, closure_12);
+  _modDef4723.pushLazy(
+    callback(function* () {
+      closure_1 = tmp5;
+      closure_0 = tmp2;
+      yield closure_1_0(paths[10])(paths[9], paths.paths);
+      closure_0 = arg1.default;
+      const obj = { animation: null };
+      obj[0] = closure_0;
+      closure_0.modalConfig = obj;
+      return closure_0;
+    }),
+    {},
+    closure_12,
+  );
 };
 export const transitionToHubEmailConnectionModal = function transitionToHubEmailConnectionModal(SLIDE_IN, arg1) {
   let flag = arg1;
@@ -163,21 +167,25 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
         const obj = callback2(709);
       }
     },
-    displayStudentPrompt: flag
+    displayStudentPrompt: flag,
   };
   obj.open(obj, SLIDE_IN);
 };
 export const openDiscoverabilityModal = function openDiscoverabilityModal() {
-  _modDef4723.pushLazy(callback(function*() {
-    closure_1 = tmp5;
-    let callback = tmp2;
-    yield closure_1_0(paths[10])(paths[13], paths.paths);
-    callback = arg1.default;
-    const obj = { animation: null };
-    obj[0] = callback(paths[14]).ModalAnimation.SLIDE_IN_OUT;
-    callback.modalConfig = obj;
-    return callback;
-  }), {}, closure_10);
+  _modDef4723.pushLazy(
+    callback(function* () {
+      closure_1 = tmp5;
+      let callback = tmp2;
+      yield closure_1_0(paths[10])(paths[13], paths.paths);
+      callback = arg1.default;
+      const obj = { animation: null };
+      obj[0] = callback(paths[14]).ModalAnimation.SLIDE_IN_OUT;
+      callback.modalConfig = obj;
+      return callback;
+    }),
+    {},
+    closure_10,
+  );
 };
 export const closeDiscoverabilityModal = function closeDiscoverabilityModal(skip) {
   let obj = _modDef4723;

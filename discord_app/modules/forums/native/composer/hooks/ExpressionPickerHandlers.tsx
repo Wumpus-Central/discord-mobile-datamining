@@ -1,7 +1,9 @@
 // discord_app/modules/forums/native/composer/hooks/ExpressionPickerHandlers.tsx
 import closure_0 from "../../../../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("modules/forums/native/composer/hooks/ExpressionPickerHandlers.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/forums/native/composer/hooks/ExpressionPickerHandlers.tsx",
+);
 
 export const usePressEmojiHandler = function usePressEmojiHandler(selection) {
   selection = selection.selection;
@@ -53,7 +55,7 @@ export const usePressGIFHandler = function usePressGIFHandler(selection) {
   const handleTextChange = selection.handleTextChange;
   const focusTextInput = selection.focusTextInput;
   const setSelection = selection.setSelection;
-  const items = [draftContent, focusTextInput, handleTextChange, , , ];
+  const items = [draftContent, focusTextInput, handleTextChange, , ,];
   ({ end: arr[3], start: arr[4] } = selection);
   items[5] = setSelection;
   return selection.useCallback((url) => {

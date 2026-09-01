@@ -9,14 +9,19 @@ let closure_3 = {};
 let CLOSED = FormStates.CLOSED;
 let c5 = null;
 const Store = initializeDefault.Store;
-class ChangeVanityURLModalStore extends Store {
-}
+class ChangeVanityURLModalStore extends Store {}
 const prototype = ChangeVanityURLModalStore.prototype;
 prototype["isOpen"] = function isOpen() {
   return CLOSED !== FormStates.CLOSED;
 };
 prototype["getProps"] = function getProps() {
-  return { submitting: CLOSED === FormStates.SUBMITTING, errorDetails: c5, errors: closure_3, guildId: closure_0, code: closure_1 };
+  return {
+    submitting: CLOSED === FormStates.SUBMITTING,
+    errorDetails: c5,
+    errors: closure_3,
+    guildId: closure_0,
+    code: closure_1,
+  };
 };
 ChangeVanityURLModalStore.displayName = "ChangeVanityURLModalStore";
 const changeVanityURLModalStore = new ChangeVanityURLModalStore(dispatcherDefault, {
@@ -37,7 +42,7 @@ const changeVanityURLModalStore = new ChangeVanityURLModalStore(dispatcherDefaul
     c0 = null;
     c1 = null;
     c5 = null;
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/ChangeVanityURLModalStore.tsx");
 

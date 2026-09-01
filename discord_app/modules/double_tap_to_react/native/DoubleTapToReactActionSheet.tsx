@@ -61,19 +61,23 @@ function EmojiConfetti(children) {
     const withTimingResult2 = top(closure_1_2[13]).withTiming(0, { duration: num });
     const obj15 = top(closure_1_2[13]);
     const withTimingResult3 = top(closure_1_2[13]).withTiming(0.3 * Math.random() + 0.5, { duration: 240 });
-    const result4 = obj3.set(obj13.withSequence(withTimingResult2, withTimingResult3, top(closure_1_2[13]).withTiming(0.5, { duration: 360 })));
+    const result4 = obj3.set(
+      obj13.withSequence(withTimingResult2, withTimingResult3, top(closure_1_2[13]).withTiming(0.5, { duration: 360 })),
+    );
     const obj16 = top(closure_1_2[13]);
     const obj17 = top(closure_1_2[12]);
     const obj18 = top(closure_1_2[13]);
     const withTimingResult4 = top(closure_1_2[13]).withTiming(0, { duration: num });
     const obj19 = top(closure_1_2[13]);
     const withTimingResult5 = top(closure_1_2[13]).withTiming(1, { duration: 360 });
-    const result5 = obj4.set(obj17.withSequence(withTimingResult4, withTimingResult5, top(closure_1_2[13]).withTiming(0, { duration: 240 })));
+    const result5 = obj4.set(
+      obj17.withSequence(withTimingResult4, withTimingResult5, top(closure_1_2[13]).withTiming(0, { duration: 240 })),
+    );
   });
   let obj5 = top(4945);
   const fn = function f() {
     let obj = { scale: sharedValue2.get() };
-    const items = [obj, ];
+    const items = [obj];
     let num = 1;
     if (true === left) {
       num = -1;
@@ -100,7 +104,14 @@ function EmojiConfetti(children) {
     obj[4] = sharedValue3.get();
     return obj;
   };
-  fn.__closure = { sizeValue: sharedValue2, left, rotationValue: sharedValue1, top, positionValue: sharedValue, opacityValue: sharedValue3 };
+  fn.__closure = {
+    sizeValue: sharedValue2,
+    left,
+    rotationValue: sharedValue1,
+    top,
+    positionValue: sharedValue,
+    opacityValue: sharedValue3,
+  };
   fn.__workletHash = 1455873119263;
   fn.__initData = closure_14;
   const style = top(4217).useAnimatedStyle(fn);
@@ -109,12 +120,29 @@ function EmojiConfetti(children) {
 function EmojiBurstAnimation(emojiComponent) {
   emojiComponent = emojiComponent.emojiComponent;
   const obj = { style: callback5().burstContainer, children: null };
-  const items = [callback3(EmojiConfetti, { emojiComponent, top: true, left: true, leading: true }), callback3(EmojiConfetti, { emojiComponent, top: true, right: true }), callback3(EmojiConfetti, { emojiComponent, bottom: true, left: true }), callback3(EmojiConfetti, { emojiComponent, bottom: true, right: true })];
+  const items = [
+    callback3(EmojiConfetti, { emojiComponent, top: true, left: true, leading: true }),
+    callback3(EmojiConfetti, { emojiComponent, top: true, right: true }),
+    callback3(EmojiConfetti, { emojiComponent, bottom: true, left: true }),
+    callback3(EmojiConfetti, { emojiComponent, bottom: true, right: true }),
+  ];
   obj[1] = items;
   return callback4(View, obj);
 }
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { emoji: { width: 48, height: 48, zIndex: 2 }, selectedCustomEmoji: { width: 48, height: 48 }, selectedTextEmoji: null, selectedEmojiText: null, content: null, emojiContainer: null, alignCenter: null, emojiSelectRow: null, header: null, emojiName: null, burstContainer: null };
+createCacheKey = {
+  emoji: { width: 48, height: 48, zIndex: 2 },
+  selectedCustomEmoji: { width: 48, height: 48 },
+  selectedTextEmoji: null,
+  selectedEmojiText: null,
+  content: null,
+  emojiContainer: null,
+  alignCenter: null,
+  emojiSelectRow: null,
+  header: null,
+  emojiName: null,
+  burstContainer: null,
+};
 let num = 36;
 if (set.isIOS()) {
   num = 48;
@@ -134,22 +162,61 @@ if (set.isIOS()) {
 }
 obj1[2] = num3;
 createCacheKey[3] = obj1;
-set = { flexDirection: "column", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_4, paddingTop: ThemesDefault.space.PX_32, paddingBottom: ThemesDefault.space.PX_12 };
+set = {
+  flexDirection: "column",
+  alignItems: "center",
+  paddingHorizontal: ThemesDefault.space.PX_4,
+  paddingTop: ThemesDefault.space.PX_32,
+  paddingBottom: ThemesDefault.space.PX_12,
+};
 createCacheKey[4] = set;
-createCacheKey[5] = { flexDirection: "row", backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 4, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.xl, justifyContent: "center", alignItems: "center" };
+createCacheKey[5] = {
+  flexDirection: "row",
+  backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+  borderColor: ThemesDefault.colors.BORDER_STRONG,
+  borderWidth: 4,
+  paddingVertical: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  borderRadius: ThemesDefault.radii.xl,
+  justifyContent: "center",
+  alignItems: "center",
+};
 createCacheKey[6] = { textAlign: "center" };
 set = { marginVertical: ThemesDefault.space.PX_24 };
 createCacheKey[7] = set;
-let obj3 = { flexDirection: "row", backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 4, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.xl, justifyContent: "center", alignItems: "center" };
-createCacheKey[8] = { marginBottom: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+let obj3 = {
+  flexDirection: "row",
+  backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+  borderColor: ThemesDefault.colors.BORDER_STRONG,
+  borderWidth: 4,
+  paddingVertical: ThemesDefault.space.PX_8,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  borderRadius: ThemesDefault.radii.xl,
+  justifyContent: "center",
+  alignItems: "center",
+};
+createCacheKey[8] = {
+  marginBottom: ThemesDefault.space.PX_8,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+};
 set = { marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[9] = set;
 createCacheKey[10] = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, zIndex: 0 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let closure_14 = { code: "function DoubleTapToReactActionSheetTsx1(){const{sizeValue,left,rotationValue,top,positionValue,opacityValue}=this.__closure;return{position:'absolute',transform:[{scale:sizeValue.get()},{rotate:(left===true?-1:1)*rotationValue.get()+\"deg\"}],top:top===true?-positionValue.get():positionValue.get(),left:left===true?-positionValue.get()*1.5:positionValue.get()*1.5,opacity:opacityValue.get()};}" };
-let closure_17 = { code: "function DoubleTapToReactActionSheetTsx2(){const{interpolate,sharedSaveValue}=this.__closure;return{transform:[{scale:interpolate(sharedSaveValue.get(),[0,1],[1,1.3])},{translateY:interpolate(sharedSaveValue.get(),[0,1],[0,-20])}]};}" };
-let closure_18 = { code: "function DoubleTapToReactActionSheetTsx3(){const{scaleChangeValue,opacityChangeValue}=this.__closure;return{transform:[{scale:scaleChangeValue.get()}],opacity:opacityChangeValue.get()};}" };
-let closure_19 = { code: "function DoubleTapToReactActionSheetTsx4(){const{runOnJS,setAnimateConfetti}=this.__closure;return runOnJS(setAnimateConfetti)(true);}" };
+let closure_14 = {
+  code: "function DoubleTapToReactActionSheetTsx1(){const{sizeValue,left,rotationValue,top,positionValue,opacityValue}=this.__closure;return{position:'absolute',transform:[{scale:sizeValue.get()},{rotate:(left===true?-1:1)*rotationValue.get()+\"deg\"}],top:top===true?-positionValue.get():positionValue.get(),left:left===true?-positionValue.get()*1.5:positionValue.get()*1.5,opacity:opacityValue.get()};}",
+};
+let closure_17 = {
+  code: "function DoubleTapToReactActionSheetTsx2(){const{interpolate,sharedSaveValue}=this.__closure;return{transform:[{scale:interpolate(sharedSaveValue.get(),[0,1],[1,1.3])},{translateY:interpolate(sharedSaveValue.get(),[0,1],[0,-20])}]};}",
+};
+let closure_18 = {
+  code: "function DoubleTapToReactActionSheetTsx3(){const{scaleChangeValue,opacityChangeValue}=this.__closure;return{transform:[{scale:scaleChangeValue.get()}],opacity:opacityChangeValue.get()};}",
+};
+let closure_19 = {
+  code: "function DoubleTapToReactActionSheetTsx4(){const{runOnJS,setAnimateConfetti}=this.__closure;return runOnJS(setAnimateConfetti)(true);}",
+};
 let result = set.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapToReactActionSheet.tsx");
 
 export default function DoubleTapToReactActionSheet(emoji) {
@@ -191,7 +258,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
       obj = { scale: null };
       obj3 = closure_0(closure_2[12]);
       obj[0] = obj3.interpolate(closure_8.get(), [0, 1], [1, 1.3]);
-      items = [, ];
+      items = [,];
       items[0] = obj;
       obj1 = { translateY: null };
       obj5 = closure_0(closure_2[12]);
@@ -241,12 +308,22 @@ export default function DoubleTapToReactActionSheet(emoji) {
         const obj = callback(first[12]);
         const obj2 = callback(first[13]);
         const withTimingResult = callback(first[13]).withTiming(0.7, { duration: 0 });
-        const result2 = set(obj.withSequence(withTimingResult, callback(first[16]).withSpring(1, { stiffness: 1500, damping: 60, mass: 3 })));
+        const result2 = set(
+          obj.withSequence(
+            withTimingResult,
+            callback(first[16]).withSpring(1, { stiffness: 1500, damping: 60, mass: 3 }),
+          ),
+        );
         const obj3 = callback(first[16]);
         const obj4 = callback(first[12]);
         const obj5 = callback(first[13]);
         const withTimingResult1 = callback(first[13]).withTiming(0.6, { duration: 0 });
-        const result3 = sharedValue2.set(obj4.withSequence(withTimingResult1, callback(first[16]).withSpring(1, { duration: 200, dampingRatio: 0.45, mass: 10, overshootClamping: true })));
+        const result3 = sharedValue2.set(
+          obj4.withSequence(
+            withTimingResult1,
+            callback(first[16]).withSpring(1, { duration: 200, dampingRatio: 0.45, mass: 10, overshootClamping: true }),
+          ),
+        );
         const obj6 = callback(first[16]);
       }
       const _setTimeout = setTimeout;
@@ -294,7 +371,13 @@ export default function DoubleTapToReactActionSheet(emoji) {
     }
     return url;
   }, items3);
-  obj = { style: tmp.emoji, fastImageStyle: tmp.selectedCustomEmoji, textEmojiStyle: tmp.selectedTextEmoji, name: null, src: null };
+  obj = {
+    style: tmp.emoji,
+    fastImageStyle: tmp.selectedCustomEmoji,
+    textEmojiStyle: tmp.selectedTextEmoji,
+    name: null,
+    src: null,
+  };
   let str = "";
   if (null == first.id) {
     str = first.surrogates;
@@ -303,25 +386,50 @@ export default function DoubleTapToReactActionSheet(emoji) {
   obj[4] = memo1;
   let tmp18Result = tmp18(stateFromStores(first[21]), obj);
   const items4 = [memo, first];
-  callback1 = obj.useCallback(callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  callback1 = obj.useCallback(
+    callback(function* () {
+      if (c3 === 2) {
+        c3 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === user) {
-          if (arg0 === 1) {
+        try {
+          c3 = 2;
+          if (0 === user) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_1 = tmp2;
+              closure_0 = tmp2;
+              if (closure_1_11) {
+                const DoubleTapReactionEmoji = closure_1_0(user[17]).DoubleTapReactionEmoji;
+                obj1 = { emojiId: null, emojiName: null, animated: null, disableDoubleTap: false };
+                obj1[0] = user.id;
+                obj1[1] = user.name;
+                obj1[2] = user.animated;
+                user = 1;
+                c3 = 1;
+                const obj2 = { value: null, done: false };
+                obj2[0] = DoubleTapReactionEmoji.updateSetting(obj1);
+                return obj2;
+              }
+            }
+          } else if (arg0 === 1) {
             c3 = 3;
             throw arg1;
           } else if (arg0 === 2) {
@@ -329,53 +437,31 @@ export default function DoubleTapToReactActionSheet(emoji) {
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
-          } else {
-            closure_1 = tmp2;
-            closure_0 = tmp2;
-            if (closure_1_11) {
-              const DoubleTapReactionEmoji = closure_1_0(user[17]).DoubleTapReactionEmoji;
-              obj1 = { emojiId: null, emojiName: null, animated: null, disableDoubleTap: false };
-              obj1[0] = user.id;
-              obj1[1] = user.name;
-              obj1[2] = user.animated;
-              user = 1;
-              c3 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = DoubleTapReactionEmoji.updateSetting(obj1);
-              return obj2;
-            }
           }
-        } else if (arg0 === 1) {
+          obj1 = closure_1_1(user[22]);
+          const obj3 = { emoji_id: null, emoji_name: null, emoji_animated: null, recommended: null, location: null };
+          obj3[0] = user.id;
+          obj3[1] = user.name;
+          obj3[2] = user.animated;
+          obj3[3] = ref.current;
+          obj3[4] = closure_1_1(user[23]).DOUBLE_TAP_TO_REACT_ACTION_SHEET;
+          obj1.track(closure_1_9.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj3);
+          const _setTimeout = setTimeout;
+          const timerId = setTimeout(() => {
+            let obj = tmp2(table[24]);
+            obj = { emoji: table };
+            return obj.showDoubleTapEmojiUpdatedToast(obj);
+          }, 500);
           c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          return { value: "HermesInternal", done: null };
+        } catch (tmp24) {
+          c3 = tmp;
+          throw tmp24;
         }
-        obj1 = closure_1_1(user[22]);
-        const obj3 = { emoji_id: null, emoji_name: null, emoji_animated: null, recommended: null, location: null };
-        obj3[0] = user.id;
-        obj3[1] = user.name;
-        obj3[2] = user.animated;
-        obj3[3] = ref.current;
-        obj3[4] = closure_1_1(user[23]).DOUBLE_TAP_TO_REACT_ACTION_SHEET;
-        obj1.track(closure_1_9.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj3);
-        const _setTimeout = setTimeout;
-        const timerId = setTimeout(() => {
-          let obj = tmp2(table[24]);
-          obj = { emoji: table };
-          return obj.showDoubleTapEmojiUpdatedToast(obj);
-        }, 500);
-        c3 = 3;
-        return { value: "HermesInternal", done: null };
-      } catch (tmp24) {
-        c3 = tmp;
-        throw tmp24;
       }
-    }
-  }), items4);
+    }),
+    items4,
+  );
   const items5 = [stateFromStores, sharedValue, callback1];
   const items6 = [callback1];
   callback2 = obj.useCallback(() => {
@@ -402,7 +488,14 @@ export default function DoubleTapToReactActionSheet(emoji) {
       fn.__initData = closure_1_19;
       const obj3 = callback(first[13]);
       const withTimingResult2 = obj5.withTiming(1, { duration: 100 }, undefined, fn);
-      const result1 = set(obj.withSequence(withTimingResult, withTimingResult1, withTimingResult2, callback(first[16]).withSpring(0, { stiffness: 2000, damping: 70, mass: 3 })));
+      const result1 = set(
+        obj.withSequence(
+          withTimingResult,
+          withTimingResult1,
+          withTimingResult2,
+          callback(first[16]).withSpring(0, { stiffness: 2000, damping: 70, mass: 3 }),
+        ),
+      );
       const obj7 = callback(first[16]);
     }
     if (null != ref.current) {
@@ -432,7 +525,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
   obj3 = { style: tmp.emojiContainer, children: null };
   let obj4 = { style: items7, children: null };
   items7 = [animatedStyle, animatedStyle1];
-  const items8 = [tmp18Result, ];
+  const items8 = [tmp18Result];
   tmp18Result = null;
   if (!stateFromStores) {
     tmp18Result = null;
@@ -444,15 +537,25 @@ export default function DoubleTapToReactActionSheet(emoji) {
   }
   items8[1] = tmp18Result;
   obj4[1] = items8;
-  const items9 = [callback1(stateFromStores(first[12]).View, obj4), ];
-  obj6 = { variant: "text-lg/semibold", style: tmp.selectedEmojiText, color: "interactive-text-default", children: "1" };
+  const items9 = [callback1(stateFromStores(first[12]).View, obj4)];
+  obj6 = {
+    variant: "text-lg/semibold",
+    style: tmp.selectedEmojiText,
+    color: "interactive-text-default",
+    children: "1",
+  };
   items9[1] = memo(_require(first[27]).Text, obj6);
   obj3[1] = items9;
-  const items10 = [callback1(closure_6, obj3), , , , , ];
+  const items10 = [callback1(closure_6, obj3), , , , ,];
   obj7 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.emojiName, children: ":" + first.name + ":" };
   items10[1] = memo(_require(first[27]).Text, obj7);
   const obj8 = { style: tmp.header, children: null };
-  const obj9 = { style: tmp.alignCenter, variant: "text-lg/bold", color: "mobile-text-heading-primary", children: null };
+  const obj9 = {
+    style: tmp.alignCenter,
+    variant: "text-lg/bold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = tmp3(tmp4[28]).intl;
   obj9[3] = intl.string(_require(first[28]).t.F6lRAI);
   const items11 = [memo(_require(first[27]).Text, obj9), memo(_require(first[29]).NewBadge, {})];
@@ -462,7 +565,11 @@ export default function DoubleTapToReactActionSheet(emoji) {
   const intl2 = tmp3(tmp4[28]).intl;
   obj10[3] = intl2.string(_require(first[28]).t.yIax8g);
   items10[3] = memo(_require(first[27]).Text, obj10);
-  items10[4] = memo(stateFromStores(first[30]), { style: tmp.emojiSelectRow, selectedEmoji: first, onPressEmoji: callback });
+  items10[4] = memo(stateFromStores(first[30]), {
+    style: tmp.emojiSelectRow,
+    selectedEmoji: first,
+    onPressEmoji: callback,
+  });
   const obj11 = { style: tmp.emojiSelectRow, selectedEmoji: first, onPressEmoji: callback };
   const tmp20 = stateFromStores(first[21]);
   const tmp3Result = _require(first[19]);
@@ -474,8 +581,15 @@ export default function DoubleTapToReactActionSheet(emoji) {
   } else {
     stringResult = string(t.tdsiO9);
   }
-  items10[5] = memo(_require(first[31]).Button, { grow: true, size: "lg", text: stringResult, variant: "primary", onPress: callback2, disabled: first1 });
+  items10[5] = memo(_require(first[31]).Button, {
+    grow: true,
+    size: "lg",
+    text: stringResult,
+    variant: "primary",
+    onPress: callback2,
+    disabled: first1,
+  });
   obj2[1] = items10;
   obj1[1] = callback1(closure_6, obj2);
   return memo(_require(first[26]).ActionSheet, obj1);
-};
+}

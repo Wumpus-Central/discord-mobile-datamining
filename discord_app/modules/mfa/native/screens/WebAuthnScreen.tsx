@@ -16,7 +16,7 @@ function AndroidAuthRadioGroup(setAuthenticator) {
   let obj = { value: obj1.ANDROID_PASSKEY, name: null };
   const intl = setAuthenticator(1236).intl;
   obj[1] = intl.string(setAuthenticator(1236).t.PVVXRI);
-  const items = [obj, ];
+  const items = [obj];
   obj = { value: obj1.AUTHENTICATE, name: null };
   const intl2 = setAuthenticator(1236).intl;
   obj[1] = intl2.string(setAuthenticator(1236).t.TKop3X);
@@ -29,7 +29,7 @@ function AndroidAuthRadioGroup(setAuthenticator) {
     },
     value: authenticatorSelection,
     disabled: inProgress,
-    withSpacing: true
+    withSpacing: true,
   };
   return jsx(setAuthenticator(1297).RadioGroup, {
     style: callback().radioItem,
@@ -39,15 +39,21 @@ function AndroidAuthRadioGroup(setAuthenticator) {
     },
     value: authenticatorSelection,
     disabled: inProgress,
-    withSpacing: true
+    withSpacing: true,
   });
 }
 createCacheKey = { radioItem: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { AUTHENTICATE: 0, [0]: "AUTHENTICATE", ANDROID_PASSKEY: 1, [1]: "ANDROID_PASSKEY" };
-let closure_8 = { [obj1.AUTHENTICATE]: NativeModules.DCDSecurityKeyManager.authenticate, [obj1.ANDROID_PASSKEY]: NativeModules.DCDSecurityKeyManager.authenticatePasskey };
+let closure_8 = {
+  [obj1.AUTHENTICATE]: NativeModules.DCDSecurityKeyManager.authenticate,
+  [obj1.ANDROID_PASSKEY]: NativeModules.DCDSecurityKeyManager.authenticatePasskey,
+};
 let result = require("set").fileFinishedImporting("modules/mfa/native/screens/WebAuthnScreen.tsx");
 
 export default function WebAuthnScreen() {
@@ -73,19 +79,33 @@ export default function WebAuthnScreen() {
     callback(true);
     const promise = memo(challenge);
     const nextPromise = memo(challenge).then((data) => callback({ mfaType: "webauthn", data }));
-    const nextPromise1 = memo(challenge).then((data) => callback({ mfaType: "webauthn", data })).then(() => callback4(true));
-    memo(challenge).then((data) => callback({ mfaType: "webauthn", data })).then(() => callback4(true)).catch((message) => {
-      if (message instanceof closure_1_0(closure_1_2[10]).HTTPResponseError) {
-        const intl = tmp(tmp2[6]).intl;
-        callback3(intl.string(tmp(tmp2[6]).t.xSCvBf));
-      } else {
-        const result = tmp(tmp2[11]).captureWebAuthnException(message, {});
-        callback3(message.message);
-        const tmpResult = tmp(tmp2[11]);
-      }
-    }).finally(() => callback2(false));
+    const nextPromise1 = memo(challenge)
+      .then((data) => callback({ mfaType: "webauthn", data }))
+      .then(() => callback4(true));
+    memo(challenge)
+      .then((data) => callback({ mfaType: "webauthn", data }))
+      .then(() => callback4(true))
+      .catch((message) => {
+        if (message instanceof closure_1_0(closure_1_2[10]).HTTPResponseError) {
+          const intl = tmp(tmp2[6]).intl;
+          callback3(intl.string(tmp(tmp2[6]).t.xSCvBf));
+        } else {
+          const result = tmp(tmp2[11]).captureWebAuthnException(message, {});
+          callback3(message.message);
+          const tmpResult = tmp(tmp2[11]);
+        }
+      })
+      .finally(() => callback2(false));
   }, items1);
-  obj = { headerText: null, subtitle: null, headerImage: null, content: null, submit: null, mfaMethod: "webauthn", error: null };
+  obj = {
+    headerText: null,
+    subtitle: null,
+    headerImage: null,
+    content: null,
+    submit: null,
+    mfaMethod: "webauthn",
+    error: null,
+  };
   const obj3 = finish(500);
   const tmp17 = importDefault;
   let intl = tmp(1236).intl;
@@ -121,5 +141,5 @@ export default function WebAuthnScreen() {
   obj[4] = challenge(MFAButtonDefault, obj1);
   obj[6] = tmp8;
   return challenge(tmp18, obj);
-};
+}
 export const AuthenticatorOption = obj1;

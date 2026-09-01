@@ -7,11 +7,11 @@ const result = set.fileFinishedImporting("modules/activities/utils/getIFrameSand
 export default function getIFrameSandboxAttributes(allowPopups) {
   let obj = closure_0;
   if (allowPopups.allowPopups) {
-    const items = [, ];
+    const items = [,];
     const arraySpreadResult = HermesBuiltin.arraySpread(tmp, 0);
     items[arraySpreadResult] = "allow-popups";
     items[arraySpreadResult + 1] = "allow-popups-to-escape-sandbox";
     obj = items;
   }
   return obj.join(" ");
-};
+}

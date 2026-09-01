@@ -36,7 +36,7 @@ prototype["search"] = function search(query, guildId) {
     fuzzy: false,
     filter() {
       return true;
-    }
+    },
   };
   const boosterMap1 = obj1.getBoosterMap(AutocompleterResultTypes.VOICE_CHANNEL);
   obj = {};
@@ -63,7 +63,11 @@ prototype["search"] = function search(query, guildId) {
     return obj;
   });
   const chainResult = apply.chain(queryChannelsResult);
-  this.textChannels = mapped.sort((lastMessageId, lastMessageId2) => callback(table[5]).compare(lastMessageId2.lastMessageId, lastMessageId.lastMessageId)).value();
+  this.textChannels = mapped
+    .sort((lastMessageId, lastMessageId2) =>
+      callback(table[5]).compare(lastMessageId2.lastMessageId, lastMessageId.lastMessageId),
+    )
+    .value();
   if (query.length > 0) {
     self.count = self.textChannels.length + self.voiceChannels.length;
   } else {
@@ -81,8 +85,7 @@ prototype["getCount"] = function getCount() {
 };
 const map = new Map();
 const Store = initializeDefault.Store;
-class SearchGuildChannelTabStore extends Store {
-}
+class SearchGuildChannelTabStore extends Store {}
 const prototype2 = SearchGuildChannelTabStore.prototype;
 prototype2["initialize"] = function initialize() {
   this.waitFor(closure_5);
@@ -142,7 +145,7 @@ const searchGuildChannelTabStore = new SearchGuildChannelTabStore(dispatcherDefa
   },
   SEARCH_GUILD_CHANNEL_TAB_CLEANUP: function handleSearchGuildChannelTabCleanup(id) {
     return map.delete(id.id);
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/search/native/stores/SearchGuildChannelTabStore.tsx");
 

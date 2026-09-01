@@ -22,7 +22,7 @@ function disconnectRemote() {
 }
 function _disconnectRemote() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const callback = tmp3;
     const awaitingRemoteSessionInfo = closure_1_6.getAwaitingRemoteSessionInfo();
     if (awaitingRemoteSessionInfo != null) {
@@ -56,7 +56,13 @@ function _disconnectRemote() {
     }
     const items = [];
     if (!tmp24) {
-      items.push(closure_1_17(awaitingRemoteSessionInfo.type, awaitingRemoteSessionInfo.deviceId, awaitingRemoteSessionInfo.commandId));
+      items.push(
+        closure_1_17(
+          awaitingRemoteSessionInfo.type,
+          awaitingRemoteSessionInfo.deviceId,
+          awaitingRemoteSessionInfo.commandId,
+        ),
+      );
     }
     if (null != nonce) {
       items.push(closure_1_14(nonce));
@@ -103,7 +109,7 @@ function getConnectNonce() {
 }
 function _getConnectNonce() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -204,7 +210,7 @@ function _fetchDevices() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -310,7 +316,7 @@ function _sendConnectVoiceCommand() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       if (c9 === 2) {
         c9 = 3;
         HermesBuiltin.throwTypeError();
@@ -381,7 +387,14 @@ function _sendConnectVoiceCommand() {
             c7 = 0;
             id = body.body.id;
             let obj7 = callback2(id[6]);
-            obj7 = { type: "WAIT_FOR_REMOTE_SESSION", sessionType: null, nonce: null, channelId: null, deviceId: null, commandId: null };
+            obj7 = {
+              type: "WAIT_FOR_REMOTE_SESSION",
+              sessionType: null,
+              nonce: null,
+              channelId: null,
+              deviceId: null,
+              commandId: null,
+            };
             obj7[1] = callback;
             obj7[2] = closure_3;
             obj7[3] = id.id;
@@ -433,7 +446,7 @@ function _cancelCommand() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -462,7 +475,12 @@ function _cancelCommand() {
             } else {
               closure_4 = tmp3;
               closure_3 = tmp7;
-              obj1 = { type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_START", platform: null, deviceId: null, commandId: null };
+              obj1 = {
+                type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_START",
+                platform: null,
+                deviceId: null,
+                commandId: null,
+              };
               obj1[1] = callback;
               obj1[2] = callback2;
               obj1[3] = dependencyMap;
@@ -481,7 +499,13 @@ function _cancelCommand() {
             c6 = 0;
             closure_3 = closure_5;
             obj3 = callback2(709);
-            const obj4 = { type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_FAIL", platform: null, deviceId: null, commandId: null, error: null };
+            const obj4 = {
+              type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_FAIL",
+              platform: null,
+              deviceId: null,
+              commandId: null,
+              error: null,
+            };
             obj4[1] = callback;
             obj4[2] = callback2;
             obj4[3] = dependencyMap;
@@ -500,7 +524,12 @@ function _cancelCommand() {
           } else {
             c6 = 0;
             obj = callback2(709);
-            const obj6 = { type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_SUCCESS", platform: null, deviceId: null, commandId: null };
+            const obj6 = {
+              type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_SUCCESS",
+              platform: null,
+              deviceId: null,
+              commandId: null,
+            };
             obj6[1] = callback;
             obj6[2] = callback2;
             obj6[3] = dependencyMap;
@@ -537,7 +566,7 @@ function _transferToPlayStation() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -678,7 +707,11 @@ export const connectToRemote = function connectToRemote(sessionId) {
 export const remoteVoiceStateUpdate = function remoteVoiceStateUpdate(remoteSessionId, arg1) {
   ({ selfMute, selfDeaf } = arg1);
   let obj = dispatcherDefault;
-  obj = { type: "REMOTE_COMMAND", sessionId: remoteSessionId, payload: { type: "VOICE_STATE_UPDATE", self_mute: selfMute, self_deaf: selfDeaf } };
+  obj = {
+    type: "REMOTE_COMMAND",
+    sessionId: remoteSessionId,
+    payload: { type: "VOICE_STATE_UPDATE", self_mute: selfMute, self_deaf: selfDeaf },
+  };
   obj.dispatch(obj);
   const sessionById = store.getSessionById(remoteSessionId);
   let os;
@@ -688,7 +721,10 @@ export const remoteVoiceStateUpdate = function remoteVoiceStateUpdate(remoteSess
       os = clientInfo.os;
     }
   }
-  expandEventPropertiesDefault.track(constants.REMOTE_COMMAND_SENT, { command_type: "VOICE_STATE_UPDATE", remote_platform: os });
+  expandEventPropertiesDefault.track(constants.REMOTE_COMMAND_SENT, {
+    command_type: "VOICE_STATE_UPDATE",
+    remote_platform: os,
+  });
 };
 export const remoteDisconnect = function remoteDisconnect(remoteSessionId) {
   let obj = dispatcherDefault;
@@ -702,7 +738,10 @@ export const remoteDisconnect = function remoteDisconnect(remoteSessionId) {
       os = clientInfo.os;
     }
   }
-  expandEventPropertiesDefault.track(constants.REMOTE_COMMAND_SENT, { command_type: "DISCONNECT", remote_platform: os });
+  expandEventPropertiesDefault.track(constants.REMOTE_COMMAND_SENT, {
+    command_type: "DISCONNECT",
+    remote_platform: os,
+  });
   disconnectRemote();
 };
 export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sessionId, arg1, first) {

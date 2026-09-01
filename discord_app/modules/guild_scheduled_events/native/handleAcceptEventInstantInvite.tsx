@@ -3,7 +3,9 @@ import generateAcceptInviteOptionsDefault from "../../../actions/InstantInviteAc
 import closure_3 from "../GuildScheduledEventStore.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx",
+);
 
 export default function handleAcceptEventInstantInvite(code) {
   let obj = guildScheduledEvent(9130);
@@ -30,4 +32,4 @@ export default function handleAcceptEventInstantInvite(code) {
     }
     tmpResult = guildScheduledEvent(7480);
   }
-};
+}

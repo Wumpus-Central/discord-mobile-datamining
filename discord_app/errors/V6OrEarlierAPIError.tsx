@@ -24,8 +24,7 @@ const prototype = function APIErrorWithDefaultMessage(arg0, arg1) {
   // ThrowIfThisInitialized (0x7c)
   return tmp;
 }.prototype;
-class prototype extends V6OrEarlierAPIError {
-}
+class prototype extends V6OrEarlierAPIError {}
 const result = set.fileFinishedImporting("errors/V6OrEarlierAPIError.tsx");
 
 export default prototype;

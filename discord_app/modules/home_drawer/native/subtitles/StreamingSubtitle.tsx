@@ -16,4 +16,4 @@ export default function StreamingSubtitle(arg0) {
   obj = { username: getNicknameDefault.getName(guildId, null, streamingUser) };
   obj[3] = intl.format(getSystemLocale.t.k5IKep, obj);
   return jsx(Text.Text, { username: getNicknameDefault.getName(guildId, null, streamingUser) });
-};
+}

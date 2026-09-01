@@ -9,7 +9,10 @@ const result = set.fileFinishedImporting("modules/user_profile/useProfileThemeVa
 export const useProfileThemeValues = function useProfileThemeValues(theme) {
   const _require = theme;
   const items = [closure_4];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => saturation.saturation);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
+    items,
+    () => saturation.saturation,
+  );
   const items1 = [theme, stateFromStores];
   return useMemo(() => {
     if (null == theme) {
@@ -18,11 +21,25 @@ export const useProfileThemeValues = function useProfileThemeValues(theme) {
       let obj = { theme: null, saturation: null };
       obj[0] = tmp;
       obj[1] = stateFromStores;
-      obj = { overlaySyncedWithUserTheme: null, overlay: null, sectionBox: null, dividerOpacity: null, rolePillBackgroundColor: null };
+      obj = {
+        overlaySyncedWithUserTheme: null,
+        overlay: null,
+        sectionBox: null,
+        dividerOpacity: null,
+        rolePillBackgroundColor: null,
+      };
       const internal3 = stateFromStores(closure_1_2[3]).internal;
-      obj[0] = internal3.resolveSemanticColor(tmp, stateFromStores(closure_1_2[3]).colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME, obj);
+      obj[0] = internal3.resolveSemanticColor(
+        tmp,
+        stateFromStores(closure_1_2[3]).colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME,
+        obj,
+      );
       const internal4 = stateFromStores(closure_1_2[3]).internal;
-      obj[1] = internal4.resolveSemanticColor(tmp, stateFromStores(closure_1_2[3]).colors.PROFILE_GRADIENT_OVERLAY, obj);
+      obj[1] = internal4.resolveSemanticColor(
+        tmp,
+        stateFromStores(closure_1_2[3]).colors.PROFILE_GRADIENT_OVERLAY,
+        obj,
+      );
       if (tmp === obj4.getThemes().LIGHT) {
         let OPACITY_WHITE_24 = tmp3(tmp4[3]).unsafe_rawColors.OPACITY_WHITE_24;
       } else {
@@ -38,7 +55,11 @@ export const useProfileThemeValues = function useProfileThemeValues(theme) {
       }
       obj[3] = num;
       const internal2 = tmp3(tmp4[3]).internal;
-      obj[4] = internal2.resolveSemanticColor(tmp, stateFromStores(closure_1_2[3]).colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND, obj);
+      obj[4] = internal2.resolveSemanticColor(
+        tmp,
+        stateFromStores(closure_1_2[3]).colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND,
+        obj,
+      );
       return obj;
     }
   }, items1);

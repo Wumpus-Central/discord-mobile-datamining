@@ -22,4 +22,4 @@ export default function useIsAppDM(arg0) {
     }
     return tmp;
   });
-};
+}

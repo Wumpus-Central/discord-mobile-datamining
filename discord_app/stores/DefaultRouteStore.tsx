@@ -9,8 +9,7 @@ const Routes = ME2.Routes;
 let obj = { lastViewedPath: null, lastViewedNonVoicePath: null };
 const LAST_VIEWED_PATH = "LAST_VIEWED_PATH";
 const PersistedStore = initializeDefault.PersistedStore;
-class DefaultRouteStore extends PersistedStore {
-}
+class DefaultRouteStore extends PersistedStore {}
 const prototype = DefaultRouteStore.prototype;
 prototype["initialize"] = function initialize() {
   let tmp = arg0;
@@ -30,7 +29,7 @@ Object.defineProperty(prototype, "defaultRoute", {
     }
     return ME;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "lastNonVoiceRoute", {
   get: function lastNonVoiceRoute() {
@@ -40,13 +39,13 @@ Object.defineProperty(prototype, "lastNonVoiceRoute", {
     }
     return ME;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "fallbackRoute", {
   get: function fallbackRoute() {
     return Routes.ME;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getState"] = function getState() {
   return obj;
@@ -60,7 +59,7 @@ const items = [
     const Storage2 = Storage3.Storage;
     Storage2.remove(LAST_VIEWED_PATH);
     return { lastViewedPath };
-  }
+  },
 ];
 DefaultRouteStore.migrations = items;
 obj = {
@@ -74,7 +73,7 @@ obj = {
   },
   LOGOUT: function handleLogout() {
     closure_4 = { lastViewedPath: null, lastViewedNonVoicePath: null };
-  }
+  },
 };
 const defaultRouteStore = new DefaultRouteStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("stores/DefaultRouteStore.tsx");

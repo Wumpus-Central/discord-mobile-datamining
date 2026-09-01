@@ -50,7 +50,7 @@ createToggle = {
   useDescription: function useSyncThemeAcrossClientsDescription() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.CRtkeH).trim();
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
 let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SyncThemeSetting.tsx");

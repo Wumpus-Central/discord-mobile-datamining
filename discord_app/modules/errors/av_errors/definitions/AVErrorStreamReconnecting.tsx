@@ -18,5 +18,5 @@ export const AVErrorStreamReconnectingDefinition = {
   },
   makeErrorContextKey(streamKey) {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;
-  }
+  },
 };

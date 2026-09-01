@@ -5,13 +5,21 @@ import Version from "BuildOverrideUtils.tsx";
 import { Version } from "BuildOverrideUtils.tsx";
 
 require = arg1;
-let obj = { NotResolved: 0, [0]: "NotResolved", Resolving: 1, [1]: "Resolving", Resolved: 2, [2]: "Resolved", Invalid: 3, [3]: "Invalid" };
+let obj = {
+  NotResolved: 0,
+  [0]: "NotResolved",
+  Resolving: 1,
+  [1]: "Resolving",
+  Resolved: 2,
+  [2]: "Resolved",
+  Invalid: 3,
+  [3]: "Invalid",
+};
 const NotResolved = obj.NotResolved;
 let c5 = null;
 let closure_6 = {};
 const Store = initializeDefault.Store;
-class BuildOverrideStore extends Store {
-}
+class BuildOverrideStore extends Store {}
 const prototype = BuildOverrideStore.prototype;
 prototype["getCurrentBuildOverride"] = function getCurrentBuildOverride() {
   if (Resolving === obj.NotResolved) {
@@ -85,7 +93,7 @@ obj = {
   CURRENT_BUILD_OVERRIDE_RESOLVED: function handleCurrentBuildOverrideResolved(overrides) {
     const Resolved = obj.Resolved;
     overrides = overrides.overrides;
-  }
+  },
 };
 const buildOverrideStore = new BuildOverrideStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/build_overrides/BuildOverrideStore.tsx");

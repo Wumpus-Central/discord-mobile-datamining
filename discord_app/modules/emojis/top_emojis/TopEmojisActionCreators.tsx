@@ -18,18 +18,21 @@ export const fetchTopEmojis = function fetchTopEmojis(guildId) {
     obj = { url: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = Endpoints.TOP_EMOJIS_FOR_GUILD(guildId);
     const value = HTTP.get(obj);
-    value.then((body) => {
-      let obj = closure_1_1(closure_1_2[2]);
-      obj = { type: "TOP_EMOJIS_FETCH_SUCCESS", guildId: closure_0, topEmojisMetadata: null };
-      const items = body.body.items;
-      const mapped = items.map((emojiId) => ({ emojiId: emojiId.emoji_id, rank: emojiId.emoji_rank }));
-      obj[2] = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
-      return obj.dispatch(obj);
-    }, () => {
-      let obj = closure_1_1(closure_1_2[2]);
-      obj = { type: "TOP_EMOJIS_FETCH_FAILURE", guildId: closure_0 };
-      return obj.dispatch(obj);
-    });
+    value.then(
+      (body) => {
+        let obj = closure_1_1(closure_1_2[2]);
+        obj = { type: "TOP_EMOJIS_FETCH_SUCCESS", guildId: closure_0, topEmojisMetadata: null };
+        const items = body.body.items;
+        const mapped = items.map((emojiId) => ({ emojiId: emojiId.emoji_id, rank: emojiId.emoji_rank }));
+        obj[2] = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
+        return obj.dispatch(obj);
+      },
+      () => {
+        let obj = closure_1_1(closure_1_2[2]);
+        obj = { type: "TOP_EMOJIS_FETCH_FAILURE", guildId: closure_0 };
+        return obj.dispatch(obj);
+      },
+    );
     const obj2 = dispatcherDefault;
   }
 };

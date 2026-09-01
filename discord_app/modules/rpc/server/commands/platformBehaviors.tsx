@@ -8,6 +8,6 @@ export default {
   [sum.RPCCommands.GET_PLATFORM_BEHAVIORS]: {
     handler() {
       return { iosKeyboardResizesView: true };
-    }
-  }
+    },
+  },
 };

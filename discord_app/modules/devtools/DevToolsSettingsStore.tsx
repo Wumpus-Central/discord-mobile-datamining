@@ -3,10 +3,17 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import dispatcherDefault from "../../Dispatcher.tsx";
 import closure_2 from "../../stores/DeveloperExperimentStore.tsx";
 
-let closure_3 = { sidebarWidth: 460, lastOpenTabId: null, lastOpenSubTabId: null, displayTools: false, showDevWidget: false, devWidgetPosition: { x: 0, y: 0 }, sortedScreenKeys: [] };
+let closure_3 = {
+  sidebarWidth: 460,
+  lastOpenTabId: null,
+  lastOpenSubTabId: null,
+  displayTools: false,
+  showDevWidget: false,
+  devWidgetPosition: { x: 0, y: 0 },
+  sortedScreenKeys: [],
+};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class DevToolsSettingsStore extends DeviceSettingsStore {
-}
+class DevToolsSettingsStore extends DeviceSettingsStore {}
 const prototype = DevToolsSettingsStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let tmp = arg0;
@@ -34,7 +41,7 @@ Object.defineProperty(prototype, "sidebarWidth", {
     }
     return num;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "lastOpenTabId", {
   get: function lastOpenTabId() {
@@ -44,7 +51,7 @@ Object.defineProperty(prototype, "lastOpenTabId", {
     }
     return lastOpenTabId;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "lastOpenSubTabId", {
   get: function lastOpenSubTabId() {
@@ -54,7 +61,7 @@ Object.defineProperty(prototype, "lastOpenSubTabId", {
     }
     return lastOpenSubTabId;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "displayTools", {
   get: function displayTools() {
@@ -64,7 +71,7 @@ Object.defineProperty(prototype, "displayTools", {
     }
     return displayTools;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "showDevWidget", {
   get: function showDevWidget(arg0) {
@@ -74,19 +81,19 @@ Object.defineProperty(prototype, "showDevWidget", {
     }
     return showDevWidget;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "devWidgetPosition", {
   get: function devWidgetPosition() {
     return closure_3.devWidgetPosition;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "sortedScreenKeys", {
   get: function sortedScreenKeys(arg0) {
     return closure_3.sortedScreenKeys;
   },
-  set: undefined
+  set: undefined,
 });
 DevToolsSettingsStore.displayName = "DevToolsSettingsStore";
 DevToolsSettingsStore.persistKey = "DevToolsSettingsStore";
@@ -97,7 +104,7 @@ const devToolsSettingsStore = new DevToolsSettingsStore(dispatcherDefault, {
       const merged = Object.assign(obj);
       const merged1 = Object.assign(settings.settings);
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/devtools/DevToolsSettingsStore.tsx");
 

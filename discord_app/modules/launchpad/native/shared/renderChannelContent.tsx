@@ -14,7 +14,18 @@ import set from "../../../../utils/PlatformUtils.tsx";
 
 require = arg1;
 function ChannelContent(arg0) {
-  ({ subtitle, resolvedUnreadSetting, locked, muted, lastMessageTimestampString, channel, channelCategoryName, mentionCount, mentionBadge, isSubscriptionGated } = arg0);
+  ({
+    subtitle,
+    resolvedUnreadSetting,
+    locked,
+    muted,
+    lastMessageTimestampString,
+    channel,
+    channelCategoryName,
+    mentionCount,
+    mentionBadge,
+    isSubscriptionGated,
+  } = arg0);
   ({ name, unread, connected, needSubscriptionToAccess } = arg0);
   const tmp = callback2();
   let tmp9Result = null != channel;
@@ -35,7 +46,7 @@ function ChannelContent(arg0) {
   }
   obj = { style: tmp.channelContent, children: null };
   obj = { style: tmp.channelContainer, children: null };
-  const items = [tmp.leftBox, ];
+  const items = [tmp.leftBox];
   let str = "center";
   if (isValidElementResult) {
     str = "space-between";
@@ -54,7 +65,7 @@ function ChannelContent(arg0) {
   }
   obj3[3] = resolvedUnreadSetting;
   obj3[4] = connected;
-  const items1 = [closure_7(_modDef16564, obj3), , ];
+  const items1 = [closure_7(_modDef16564, obj3), ,];
   tmp9Result = null;
   if (null != channelCategoryName) {
     const obj4 = { variant: "text-xs/bold", color: "text-muted", style: null, children: null };
@@ -68,7 +79,7 @@ function ChannelContent(arg0) {
     tmp11Result = isNSFWResult;
   }
   if (tmp11Result) {
-    const items2 = [tmp.channelTraits, ];
+    const items2 = [tmp.channelTraits];
     let num3 = 1;
     if (tmp9Result) {
       num3 = 1;
@@ -86,7 +97,7 @@ function ChannelContent(arg0) {
       obj7[2] = tmp.channelTraitIcon;
       tmp9Result = tmp9(LockIcon.LockIcon, obj7);
     }
-    const items3 = [tmp9Result, , ];
+    const items3 = [tmp9Result, ,];
     if (isNSFWResult) {
       const obj8 = { size: "xxs", color: "icon-muted", style: null };
       obj8[2] = tmp.channelTraitIcon;
@@ -104,7 +115,7 @@ function ChannelContent(arg0) {
   }
   items1[2] = tmp11Result;
   obj2[1] = items1;
-  const items4 = [closure_8(View, obj2), ];
+  const items4 = [closure_8(View, obj2)];
   let tmp9Result1 = null;
   if (isValidElementResult) {
     if (mentionCount == null) {
@@ -117,7 +128,7 @@ function ChannelContent(arg0) {
     const obj10 = { style: null, children: null };
     const obj11 = { paddingRight: null };
     obj11[0] = num5;
-    const items5 = [obj11, ];
+    const items5 = [obj11];
     const obj12 = { marginTop: null };
     obj12[0] = tmp4.messagePreview.margin.marginTop;
     items5[1] = obj12;
@@ -127,7 +138,7 @@ function ChannelContent(arg0) {
   }
   items4[1] = tmp9Result1;
   obj1[1] = items4;
-  const items6 = [closure_8(View, obj1), ];
+  const items6 = [closure_8(View, obj1)];
   const obj13 = { style: tmp9Result3 ? tmp.rightContentAbsolute : tmp.rightBox, children: null };
   let tmp9Result2 = obj;
   if (obj) {
@@ -135,15 +146,21 @@ function ChannelContent(arg0) {
     if (!muted) {
       num6 = SUBTITLE_OPACITY_NORMAL;
     }
-    const obj14 = { variant: "text-xs/medium", color: "text-muted", style: null, maxFontSizeMultiplier: 1.75, children: null };
+    const obj14 = {
+      variant: "text-xs/medium",
+      color: "text-muted",
+      style: null,
+      maxFontSizeMultiplier: 1.75,
+      children: null,
+    };
     const obj15 = { marginLeft: "auto", opacity: null };
     obj15[1] = num6;
     obj14[2] = obj15;
     obj14[4] = lastMessageTimestampString;
     tmp9Result2 = tmp9(Text.Text, obj14);
   }
-  const items7 = [tmp9Result2, , ];
-  const items8 = [{ alignItems: "center", paddingLeft: 4 }, ];
+  const items7 = [tmp9Result2, ,];
+  const items8 = [{ alignItems: "center", paddingLeft: 4 }];
   if (obj) {
     obj = { marginTop: 5 };
   }
@@ -166,7 +183,15 @@ let num = -1;
 if (set.isIOS()) {
   num = 2;
 }
-createCacheKey = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
+createCacheKey = {
+  channelContent: { flex: 1, marginTop: num },
+  channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
+  leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 },
+  rightBox: { flexDirection: "column", alignItems: "flex-end" },
+  rightContentAbsolute: { position: "absolute", right: 0, top: 0 },
+  channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" },
+  channelTraitIcon: null,
+};
 createCacheKey = { opacity: SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
 let num2 = 0;
 if (set.isAndroid()) {
@@ -180,4 +205,4 @@ const result = set.fileFinishedImporting("modules/launchpad/native/shared/render
 export default function renderChannelContent(arg0) {
   const merged = Object.assign(arg0);
   return callback(ChannelContent, {});
-};
+}

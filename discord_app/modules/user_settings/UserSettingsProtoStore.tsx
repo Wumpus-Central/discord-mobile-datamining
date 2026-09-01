@@ -66,11 +66,13 @@ obj = { ProtoClass: create2.FrecencyUserSettings, proto: null, lazyLoaded: true,
 const FrecencyUserSettings = create2.FrecencyUserSettings;
 obj[1] = FrecencyUserSettings.create();
 obj[3] = createEmptyEditInfo();
-let closure_7 = { [UserSettingsTypes.PRELOADED_USER_SETTINGS]: obj, [UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: obj };
+let closure_7 = {
+  [UserSettingsTypes.PRELOADED_USER_SETTINGS]: obj,
+  [UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: obj,
+};
 let c8 = false;
 const PersistedStore = initializeDefault.PersistedStore;
-class UserSettingsProtoStore extends PersistedStore {
-}
+class UserSettingsProtoStore extends PersistedStore {}
 const prototype = UserSettingsProtoStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   closure_0 = arg0;
@@ -114,9 +116,7 @@ prototype["initialize"] = function initialize(arg0) {
     const arr = applyDefault;
   }
 };
-prototype["getState"] = function getState() {
-
-};
+prototype["getState"] = function getState() {};
 prototype["computeState"] = function computeState() {
   return applyDefault.mapValues(closure_7, (ProtoClass) => {
     obj = { proto: callback(table[4]).protoToB64(ProtoClass.ProtoClass, ProtoClass.proto) };
@@ -135,19 +135,19 @@ Object.defineProperty(prototype, "settings", {
   get: function settings() {
     return obj.proto;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "frecencyWithoutFetchingLatest", {
   get: function frecencyWithoutFetchingLatest() {
     return obj.proto;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "wasMostRecentUpdateFromServer", {
   get: function wasMostRecentUpdateFromServer() {
     return c8;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getFullState"] = function getFullState() {
   return closure_7;
@@ -289,7 +289,10 @@ prototype["getGuildThemeSourcePreferenceOverride"] = function getGuildThemeSourc
 };
 prototype["resolveGuildThemeSourcePreference"] = function resolveGuildThemeSourcePreference(arg0) {
   const guildThemeSourcePreferenceOverride = this.getGuildThemeSourcePreferenceOverride(arg0);
-  return resolveDefaultGuildThemePreference.resolveGuildThemeSourcePreference(guildThemeSourcePreferenceOverride, this.getDefaultGuildThemePreference());
+  return resolveDefaultGuildThemePreference.resolveGuildThemeSourcePreference(
+    guildThemeSourcePreferenceOverride,
+    this.getDefaultGuildThemePreference(),
+  );
 };
 UserSettingsProtoStore.displayName = "UserSettingsProtoStore";
 UserSettingsProtoStore.persistKey = "UserSettingsProtoStore-Cache";
@@ -353,7 +356,10 @@ obj = {
       _modDef38(typeof obj.proto !== "string", "UserSettingsProto cannot be a string");
     }
     obj = b64ToProto;
-    ({ isDirty, proto, cleanupFuncs } = obj.runMigrations(obj.proto, MAX_FAVORITESDefault[UserSettingsTypes.PRELOADED_USER_SETTINGS]));
+    ({ isDirty, proto, cleanupFuncs } = obj.runMigrations(
+      obj.proto,
+      MAX_FAVORITESDefault[UserSettingsTypes.PRELOADED_USER_SETTINGS],
+    ));
     if (isDirty) {
       if (null != tmp6.editInfo.timeout) {
         const _clearTimeout = clearTimeout;
@@ -428,7 +434,7 @@ obj = {
       ProtoClass.proto = ProtoClass.create();
       ProtoClass.editInfo = callback();
     });
-  }
+  },
 };
 const userSettingsProtoStore = new UserSettingsProtoStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/user_settings/UserSettingsProtoStore.tsx");

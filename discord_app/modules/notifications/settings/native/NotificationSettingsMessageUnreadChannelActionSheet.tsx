@@ -10,7 +10,9 @@ import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFla
 
 const require = arg1;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnreadChannelActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/notifications/settings/native/NotificationSettingsMessageUnreadChannelActionSheet.tsx",
+);
 
 export default function NotificationSettingsMessageUnreadChannelActionSheet(channel) {
   const _require = channel;
@@ -34,7 +36,16 @@ export default function NotificationSettingsMessageUnreadChannelActionSheet(chan
     }
     obj = { flags: channel(closure_1_2[10]).withChannelUnreadFlags(channelIdFlags, UNREADS_ONLY_MENTIONS) };
     const NotificationLabel = channel(closure_1_2[11]).NotificationLabel;
-    const result = obj.updateChannelOverrideSettings(channel.channel.guild_id, channel.channel.id, obj, NotificationLabel.unreads(ONLY_MENTIONS));
+    const result = obj.updateChannelOverrideSettings(
+      channel.channel.guild_id,
+      channel.channel.id,
+      obj,
+      NotificationLabel.unreads(ONLY_MENTIONS),
+    );
   };
-  return jsx(NotificationSettingsMessageUnreadActionSheetDefault, { value: unread, disabledMentionOnlyWithReason: null, onChange: null });
-};
+  return jsx(NotificationSettingsMessageUnreadActionSheetDefault, {
+    value: unread,
+    disabledMentionOnlyWithReason: null,
+    onChange: null,
+  });
+}

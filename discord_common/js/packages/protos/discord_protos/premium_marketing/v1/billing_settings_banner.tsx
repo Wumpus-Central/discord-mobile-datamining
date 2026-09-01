@@ -10,7 +10,7 @@ import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 require = arg1;
 class BillingSettingsBanner$Type extends MessageType {
   constructor() {
-    items = [, , , , , , ];
+    items = [, , , , , ,];
     items[0] = { no: 1, name: "header", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "body", kind: "scalar", T: 9 };
     items[2] = {
@@ -18,24 +18,24 @@ class BillingSettingsBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(8463).ThemeAwareAsset;
-          }
+        return callback(8463).ThemeAwareAsset;
+      },
     };
     items[3] = {
       no: 4,
       name: "button",
       kind: "message",
       T() {
-            return callback(8455).CTAButton;
-          }
+        return callback(8455).CTAButton;
+      },
     };
     items[4] = {
       no: 5,
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
-          }
+        return callback(8453).LocalizedString;
+      },
     };
     obj = { no: 6, name: "body_localized", kind: "message", T: null };
     class T {
@@ -50,8 +50,8 @@ class BillingSettingsBanner$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(8454).HelpArticle;
-          }
+        return callback(8454).HelpArticle;
+      },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.BillingSettingsBanner", items, T);
     // ThrowIfThisInitialized (0x7c)
@@ -109,7 +109,12 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         let tmp34 = LocalizedString2;
         let tmp35 = pos;
         let tmp36 = readUnknownField;
-        obj.headerLocalized = LocalizedString2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.headerLocalized);
+        obj.headerLocalized = LocalizedString2.internalBinaryRead(
+          pos,
+          pos.uint32(),
+          readUnknownField,
+          obj.headerLocalized,
+        );
       } else if (6 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
@@ -174,32 +179,72 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wri
   if (header.asset) {
     const ThemeAwareAsset = create4.ThemeAwareAsset;
     const tagResult2 = tag.tag(3, _mod1307.WireType.LengthDelimited);
-    const joined = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = ThemeAwareAsset.internalBinaryWrite(
+      header.asset,
+      tag.tag(3, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(
+      header.asset,
+      tag.tag(3, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.button) {
     const CTAButton = create3.CTAButton;
     const tagResult3 = tag.tag(4, _mod1307.WireType.LengthDelimited);
-    const joined1 = CTAButton.internalBinaryWrite(header.button, tag.tag(4, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(header.button, tag.tag(4, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = CTAButton.internalBinaryWrite(
+      header.button,
+      tag.tag(4, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(
+      header.button,
+      tag.tag(4, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.headerLocalized) {
     const LocalizedString = create.LocalizedString;
     const tagResult4 = tag.tag(5, _mod1307.WireType.LengthDelimited);
-    const joined2 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(5, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined2 = LocalizedString.internalBinaryWrite(
+      header.headerLocalized,
+      tag.tag(5, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult2 = LocalizedString.internalBinaryWrite(
+      header.headerLocalized,
+      tag.tag(5, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.bodyLocalized) {
     const LocalizedString2 = create.LocalizedString;
     const tagResult5 = tag.tag(6, _mod1307.WireType.LengthDelimited);
-    const joined3 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined3 = LocalizedString2.internalBinaryWrite(
+      header.bodyLocalized,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult3 = LocalizedString2.internalBinaryWrite(
+      header.bodyLocalized,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (header.helpArticle) {
     const HelpArticle = create2.HelpArticle;
     const tagResult6 = tag.tag(7, _mod1307.WireType.LengthDelimited);
-    const joined4 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(7, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult4 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(7, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined4 = HelpArticle.internalBinaryWrite(
+      header.helpArticle,
+      tag.tag(7, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult4 = HelpArticle.internalBinaryWrite(
+      header.helpArticle,
+      tag.tag(7, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -220,7 +265,7 @@ let items = [
     kind: "message",
     T() {
       return callback(8463).ThemeAwareAsset;
-    }
+    },
   },
   {
     no: 4,
@@ -228,7 +273,7 @@ let items = [
     kind: "message",
     T() {
       return callback(8455).CTAButton;
-    }
+    },
   },
   {
     no: 5,
@@ -236,10 +281,9 @@ let items = [
     kind: "message",
     T() {
       return callback(8453).LocalizedString;
-    }
+    },
   },
-,
-
+  ,
 ];
 let obj = { no: 6, name: "body_localized", kind: "message", T: null };
 class T {
@@ -255,10 +299,20 @@ items[6] = {
   kind: "message",
   T() {
     return callback(8454).HelpArticle;
-  }
+  },
 };
-prototype = new prototype("discord_protos.premium_marketing.v1.BillingSettingsBanner", items, tmp, T, BillingSettingsBanner$Type, prototype, items);
+prototype = new prototype(
+  "discord_protos.premium_marketing.v1.BillingSettingsBanner",
+  items,
+  tmp,
+  T,
+  BillingSettingsBanner$Type,
+  prototype,
+  items,
+);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/billing_settings_banner.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/billing_settings_banner.tsx",
+);
 
 export const BillingSettingsBanner = prototype;

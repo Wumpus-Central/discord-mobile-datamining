@@ -29,13 +29,16 @@ export const useProfileSectionTabs = function useProfileSectionTabs(boardTabInde
   c4 = undefined;
   let num2;
   let obj = wishlistTabIndex;
-  [tmp2, tmp3] = callback(wishlistTabIndex.useState(() => {
-    if (boardTabIndex.WISHLIST === closure_0) {
-      return tmp2.WISHLIST;
-    } else {
-      return tmp2.WIDGETS === tmp ? tmp2.WIDGETS : tmp2.MAIN;
-    }
-  }), 2);
+  [tmp2, tmp3] = callback(
+    wishlistTabIndex.useState(() => {
+      if (boardTabIndex.WISHLIST === closure_0) {
+        return tmp2.WISHLIST;
+      } else {
+        return tmp2.WIDGETS === tmp ? tmp2.WIDGETS : tmp2.MAIN;
+      }
+    }),
+    2,
+  );
   c4 = tmp3;
   let num = wishlistTabIndex;
   if (boardTabIndex.WISHLIST !== tmp2) {
@@ -78,7 +81,7 @@ export const useProfileSectionTabs = function useProfileSectionTabs(boardTabInde
         activeIndex.setActiveIndex(tmp, false, true);
       }
     }, items1),
-    activeProfileTabSectionIndex: num2
+    activeProfileTabSectionIndex: num2,
   };
   return obj;
 };

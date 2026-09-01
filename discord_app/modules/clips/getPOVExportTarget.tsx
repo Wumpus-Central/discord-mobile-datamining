@@ -13,4 +13,4 @@ export default function getPOVExportTarget(duration_secs) {
       return obj;
     }
   }
-};
+}

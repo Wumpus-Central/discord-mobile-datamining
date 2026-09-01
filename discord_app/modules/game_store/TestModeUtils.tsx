@@ -23,15 +23,19 @@ export const useIsTestModeForApplication = function useIsTestModeForApplication(
   const _require = id;
   const items = [closure_3, closure_2];
   const items1 = [id];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let tmp2 = null != closure_0;
-    if (tmp2) {
-      let result = closure_1_3.inTestModeForApplication(tmp);
-      if (!result) {
-        result = closure_1_2.inDevModeForApplication(tmp);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      let tmp2 = null != closure_0;
+      if (tmp2) {
+        let result = closure_1_3.inTestModeForApplication(tmp);
+        if (!result) {
+          result = closure_1_2.inDevModeForApplication(tmp);
+        }
+        tmp2 = result;
       }
-      tmp2 = result;
-    }
-    return tmp2;
-  }, items1);
+      return tmp2;
+    },
+    items1,
+  );
 };

@@ -8,7 +8,9 @@ import { isGuildHomeChannel } from "../channel/ChannelConstants.tsx";
 require = arg1;
 handlePermissionsChangeDefault;
 handleConnectionOpenDefault;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/isSelectedFromHomeChannel.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_onboarding_home/isSelectedFromHomeChannel.native.tsx",
+);
 
 export default function isSelectedFromHomeChannel(id) {
   let coerceChannelRouteResult1;
@@ -63,4 +65,4 @@ export default function isSelectedFromHomeChannel(id) {
     }
   }
   return false;
-};
+}

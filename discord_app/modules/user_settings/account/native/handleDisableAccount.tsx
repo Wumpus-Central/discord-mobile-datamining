@@ -55,4 +55,4 @@ export default function handleDisableAccount() {
     showUserSettingsInputAlertDefault(tmp8);
     const str = string(t["CIGa+7"]);
   }
-};
+}

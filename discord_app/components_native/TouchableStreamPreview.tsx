@@ -31,17 +31,23 @@ function StreamPreviewContainer(disableTransition) {
   const stateFromStores1 = obj2.useStateFromStores(items1, () => !closure_1_10.can(closure_1_12.CONNECT, channel));
   const isChannelFullResult = obj.isChannelFull(channel, closure_11, closure_9);
   const items2 = [closure_11];
-  let stateFromStores2 = disableTransition(stream[15]).useStateFromStores(items2, () => closure_1_11.isInChannel(channel.id));
+  let stateFromStores2 = disableTransition(stream[15]).useStateFromStores(items2, () =>
+    closure_1_11.isInChannel(channel.id),
+  );
   const obj4 = disableTransition(stream[15]);
   const items3 = [closure_6, closure_7];
   const items4 = [channel.id, stream.ownerId];
-  const stateFromStores3 = disableTransition(stream[15]).useStateFromStores(items3, () => {
-    let isSelfStreamHiddenResult = stream.ownerId === closure_1_7.getId();
-    if (isSelfStreamHiddenResult) {
-      isSelfStreamHiddenResult = closure_1_6.isSelfStreamHidden(channel.id);
-    }
-    return isSelfStreamHiddenResult;
-  }, items4);
+  const stateFromStores3 = disableTransition(stream[15]).useStateFromStores(
+    items3,
+    () => {
+      let isSelfStreamHiddenResult = stream.ownerId === closure_1_7.getId();
+      if (isSelfStreamHiddenResult) {
+        isSelfStreamHiddenResult = closure_1_6.isSelfStreamHidden(channel.id);
+      }
+      return isSelfStreamHiddenResult;
+    },
+    items4,
+  );
   const intl = disableTransition(stream[16]).intl;
   let stringResult = intl.string(disableTransition(stream[16]).t["7Xq/nV"]);
   if (stateFromStores) {
@@ -102,30 +108,56 @@ function StreamPreviewContainer(disableTransition) {
   obj1 = { style: tmp.ctaBackground, children: null };
   const obj5 = disableTransition(stream[15]);
   obj2 = { style: tmp.ctaText, variant: "text-md/semibold", color: "text-overlay-light", children: stringResult1 };
-  obj1[1] = jsx(disableTransition(stream[24]).Text, { style: tmp.ctaText, variant: "text-md/semibold", color: "text-overlay-light", children: stringResult1 });
+  obj1[1] = jsx(disableTransition(stream[24]).Text, {
+    style: tmp.ctaText,
+    variant: "text-md/semibold",
+    color: "text-overlay-light",
+    children: stringResult1,
+  });
   obj[1] = <closure_4 style={tmp.ctaBackground}>{null}</closure_4>;
   obj[5] = <closure_4 style={tmp.ctaWrapper}>{null}</closure_4>;
   return jsx(onPress(stream[23]), { style: tmp.ctaWrapper, children: null });
 }
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
-createCacheKey = { touchable: { borderRadius: 5, overflow: "hidden" }, ctaWrapper: null, ctaBackground: null, ctaText: null };
+createCacheKey = {
+  touchable: { borderRadius: 5, overflow: "hidden" },
+  ctaWrapper: null,
+  ctaBackground: null,
+  ctaText: null,
+};
 createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.alignItems = "center";
 createCacheKey.justifyContent = "center";
 createCacheKey.backgroundColor = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.7);
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { height: 40, paddingHorizontal: 16, borderRadius: 20, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500, justifyContent: "center", alignItems: "center" };
+createCacheKey[2] = {
+  height: 40,
+  paddingHorizontal: 16,
+  borderRadius: 20,
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500,
+  justifyContent: "center",
+  alignItems: "center",
+};
 createCacheKey[3] = { lineHeight: 20 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { height: 40, paddingHorizontal: 16, borderRadius: 20, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500, justifyContent: "center", alignItems: "center" };
+let obj1 = {
+  height: 40,
+  paddingHorizontal: 16,
+  borderRadius: 20,
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500,
+  justifyContent: "center",
+  alignItems: "center",
+};
 let result = require("set").fileFinishedImporting("components_native/TouchableStreamPreview.tsx");
 
 export default function VoiceChannelSettingsStreamPreview(arg0) {
   const _require = arg0;
   let obj = initialize;
   const items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getStreamForUser(closure_0.userId, closure_0.guildId));
+  const stateFromStores = obj.useStateFromStores(items, () =>
+    closure_1_6.getStreamForUser(closure_0.userId, closure_0.guildId),
+  );
   const items1 = [closure_8];
   const stateFromStores1 = require("../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     let channel = null;
@@ -146,4 +178,4 @@ export default function VoiceChannelSettingsStreamPreview(arg0) {
     }
   }
   return tmp3;
-};
+}

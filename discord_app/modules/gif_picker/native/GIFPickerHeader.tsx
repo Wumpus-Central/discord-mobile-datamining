@@ -65,7 +65,13 @@ function FavoritesSearch(columnWidth) {
       callback(false);
     }
   }, []);
-  obj = { style: animatedStyle, pointerEvents: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+  obj = {
+    style: animatedStyle,
+    pointerEvents: null,
+    accessibilityElementsHidden: null,
+    importantForAccessibility: null,
+    children: null,
+  };
   let str = "auto";
   if (first) {
     str = "none";
@@ -82,8 +88,14 @@ function FavoritesSearch(columnWidth) {
   obj[3] = intl.string(columnWidth(ref[14]).t["+Kakw+"]);
   obj[4] = callback;
   obj[4] = closure_7(columnWidth(ref[12]).IconButton, obj);
-  const items1 = [closure_7(onQueryChange(ref[9]).View, obj), ];
-  obj1 = { style: items2, pointerEvents: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+  const items1 = [closure_7(onQueryChange(ref[9]).View, obj)];
+  obj1 = {
+    style: items2,
+    pointerEvents: null,
+    accessibilityElementsHidden: null,
+    importantForAccessibility: null,
+    children: null,
+  };
   items2 = [callback().favoritesSearch, animatedStyle1];
   let str3 = "none";
   if (first) {
@@ -108,7 +120,7 @@ function FavoritesSearch(columnWidth) {
       }
       return tmpResult;
     },
-    onBlur: callback1
+    onBlur: callback1,
   });
   items1[1] = closure_7(onQueryChange(ref[9]).View, obj1);
   obj2[0] = items1;
@@ -120,14 +132,38 @@ require("ME").GIFPickerResultTypes;
 let obj = { container: null, headerContainer: null, header: null, favoritesSearch: null };
 obj = { paddingVertical: ThemesDefault.space.PX_8 };
 obj[0] = obj;
-createCacheKey = { flexDirection: "row", justifyContent: "space-between", gap: require("transformFavoriteGifUrl").GIF_PICKER_GUTTER_SPACING };
+createCacheKey = {
+  flexDirection: "row",
+  justifyContent: "space-between",
+  gap: require("transformFavoriteGifUrl").GIF_PICKER_GUTTER_SPACING,
+};
 obj[1] = createCacheKey;
-obj[2] = { borderWidth: 1, borderColor: "transparent", paddingHorizontal: ThemesDefault.space.PX_8, height: require("InputHeights").InputHeights.MD, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+obj[2] = {
+  borderWidth: 1,
+  borderColor: "transparent",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  height: require("InputHeights").InputHeights.MD,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+};
 obj[3] = { position: "absolute", top: 0, end: 0, overflow: "hidden" };
 let closure_10 = createCacheKey.createStyles(obj);
-let closure_11 = { code: "function GIFPickerHeaderTsx1(){const{progress}=this.__closure;return{opacity:1-progress.get()};}" };
-let closure_12 = { code: "function GIFPickerHeaderTsx2(){const{progress,columnWidth}=this.__closure;return{width:progress.get()*columnWidth,opacity:progress.get()};}" };
-let obj2 = { borderWidth: 1, borderColor: "transparent", paddingHorizontal: ThemesDefault.space.PX_8, height: require("InputHeights").InputHeights.MD, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+let closure_11 = {
+  code: "function GIFPickerHeaderTsx1(){const{progress}=this.__closure;return{opacity:1-progress.get()};}",
+};
+let closure_12 = {
+  code: "function GIFPickerHeaderTsx2(){const{progress,columnWidth}=this.__closure;return{width:progress.get()*columnWidth,opacity:progress.get()};}",
+};
+let obj2 = {
+  borderWidth: 1,
+  borderColor: "transparent",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  height: require("InputHeights").InputHeights.MD,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+};
 const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
   ({ categoryType, onQueryClear } = arg0);
   ({ columnWidth, onQueryChange, onFavoritesQueryChange, searchInputRef } = arg0);
@@ -154,7 +190,7 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
     obj1[3] = intl4.formatToPlainString(tmp2(1236).t.UTypEu, obj2);
     const obj3 = { color: null, size: "sm" };
     obj3[0] = ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE;
-    const items = [tmp6(tmp2(10367).ChevronLargeLeftIcon, obj3), ];
+    const items = [tmp6(tmp2(10367).ChevronLargeLeftIcon, obj3)];
     if (categoryType === tmp8.TRENDING_GIFS) {
       const intl3 = tmp2(1236).intl;
       let stringResult = intl3.string(tmp2(1236).t.TsWCdW);
@@ -169,7 +205,7 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
     obj4[3] = stringResult;
     items[1] = tmp6(tmp2(4474).Text, obj4);
     obj1[4] = items;
-    const items1 = [closure_9(tmp2(5068).PressableOpacity, obj1), ];
+    const items1 = [closure_9(tmp2(5068).PressableOpacity, obj1)];
     let tmp6Result = categoryType === tmp8.FAVORITES;
     if (tmp6Result) {
       const obj5 = { columnWidth: null, onQueryChange: null };

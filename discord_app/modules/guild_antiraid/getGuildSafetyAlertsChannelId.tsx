@@ -9,4 +9,4 @@ export default function getGuildSafetyAlertsChannelId(safetyAlertsChannelId) {
     publicUpdatesChannelId = safetyAlertsChannelId.publicUpdatesChannelId;
   }
   return publicUpdatesChannelId;
-};
+}

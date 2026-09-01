@@ -37,7 +37,13 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
   return React.useCallback((questId) => {
     questId = questId.questId;
     const questContent = questId.questContent;
-    ({ questContentCTA: closure_2, questContentPosition: closure_3, questContentRowIndex: closure_4, trackGuildAndChannelMetadata: closure_5, sourceQuestContent } = questId);
+    ({
+      questContentCTA: closure_2,
+      questContentPosition: closure_3,
+      questContentRowIndex: closure_4,
+      trackGuildAndChannelMetadata: closure_5,
+      sourceQuestContent,
+    } = questId);
     let adMetadataSealed;
     let adTrafficMetadataSealed;
     adMetadataSealed = callback(closure_1_2[4]).getAdMetadataSealed(sourceQuestContent);
@@ -47,7 +53,14 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
     let obj3 = callback(closure_1_2[5]);
     const adUser = obj3.getAdUser(callback(closure_1_2[6]).getQuestContentName(questContent));
     adUser.then((advertisingId) => {
-      let obj = { questId, event: closure_2_4.QUEST_CONTENT_CLICKED, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
+      let obj = {
+        questId,
+        event: closure_2_4.QUEST_CONTENT_CLICKED,
+        properties: null,
+        trackGuildAndChannelMetadata: null,
+        shouldExtendSession: null,
+        sourceQuestContent: null,
+      };
       obj = {};
       const merged = Object.assign(callback(closure_2_2[6]).getContentProperties(questContent, closure_3, closure_4));
       const merged1 = Object.assign(closure_2_1(closure_2_2[7])());
@@ -134,11 +147,26 @@ export const useTrackAdContentClickedWithImpression = function useTrackAdContent
   const items1 = [callback];
   return React.useCallback((arg0) => {
     ({ adContentId: callback, relatedQuestId: closure_1, adCreativeType: closure_2, questContent } = arg0);
-    ({ questContentCTA: closure_4, questContentPosition: closure_5, questContentRowIndex: closure_6, trackGuildAndChannelMetadata: closure_7, sourceQuestContent: closure_8 } = arg0);
+    ({
+      questContentCTA: closure_4,
+      questContentPosition: closure_5,
+      questContentRowIndex: closure_6,
+      trackGuildAndChannelMetadata: closure_7,
+      sourceQuestContent: closure_8,
+    } = arg0);
     let obj = callback(closure_1_2[5]);
     const adUser = obj.getAdUser(callback(closure_1_2[6]).getQuestContentName(questContent));
     adUser.then((advertisingId) => {
-      let obj = { adContentId: closure_0, relatedQuestId: closure_1, adCreativeType: closure_2, event: closure_2_4.QUEST_CONTENT_CLICKED, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
+      let obj = {
+        adContentId: closure_0,
+        relatedQuestId: closure_1,
+        adCreativeType: closure_2,
+        event: closure_2_4.QUEST_CONTENT_CLICKED,
+        properties: null,
+        trackGuildAndChannelMetadata: null,
+        shouldExtendSession: null,
+        sourceQuestContent: null,
+      };
       obj = {};
       const merged = Object.assign(callback(closure_2_2[6]).getContentProperties(questContent, closure_5, closure_6));
       const merged1 = Object.assign(closure_2_1(closure_2_2[7])());
@@ -213,7 +241,9 @@ export const useQuestHomeEntrypointAnalyticsEvents = function useQuestHomeEntryp
   let callback3;
   let callback4;
   const QuestContent = questHomeHero(5390).QuestContent;
-  const tmp = shouldShowQuestHomeHeroContent ? QuestContent.QUEST_HOME_ENTRYPOINT_THEMED : QuestContent.QUEST_HOME_ENTRYPOINT;
+  const tmp = shouldShowQuestHomeHeroContent
+    ? QuestContent.QUEST_HOME_ENTRYPOINT_THEMED
+    : QuestContent.QUEST_HOME_ENTRYPOINT;
   dependencyMap = tmp;
   const items = [tmp];
   memo = memo.useMemo(() => {
@@ -265,5 +295,13 @@ export const useQuestHomeEntrypointAnalyticsEvents = function useQuestHomeEntryp
     obj.track(callback.QUEST_CONTENT_CLICKED, obj);
   }, items4);
   const items5 = [callback1, callback2, callback3, callback4];
-  return memo.useMemo(() => ({ handleMouseEnter: callback1, handleMouseLeave: callback2, handleOnboardingPopoutRender: callback3, handleEntrypointClick: callback4 }), items5);
+  return memo.useMemo(
+    () => ({
+      handleMouseEnter: callback1,
+      handleMouseLeave: callback2,
+      handleOnboardingPopoutRender: callback3,
+      handleEntrypointClick: callback4,
+    }),
+    items5,
+  );
 };

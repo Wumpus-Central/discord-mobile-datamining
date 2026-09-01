@@ -20,34 +20,43 @@ class UserSettingsInputAlert extends PureComponent {
       }
     };
     applyArgumentsResult.handleSubmit = function handleSubmit() {
-      ({ isLoading, onSubmit, onSuccess: closure_0, closeOnSuccess: closure_1, onError: closure_2, skipErrorMsgAbortCode: closure_3 } = applyArgumentsResult.props);
+      ({
+        isLoading,
+        onSubmit,
+        onSuccess: closure_0,
+        closeOnSuccess: closure_1,
+        onError: closure_2,
+        skipErrorMsgAbortCode: closure_3,
+      } = applyArgumentsResult.props);
       if (!isLoading) {
         isLoading = null == onSubmit;
       }
       if (!isLoading) {
         const onSubmitResult = onSubmit(applyArgumentsResult.state.input);
-        onSubmit(applyArgumentsResult.state.input).then(() => {
-          if (closure_0 != null) {
-            tmp();
-          }
-          if (closure_1) {
-            closure_1_0.close();
-          }
-        }).catch((body) => {
-          if (closure_2 != null) {
-            tmp(body);
-          }
-          if (body) {
-            if (body.body) {
-              const v6OrEarlierAPIError = new applyArgumentsResult(closure_2_2[2]).V6OrEarlierAPIError(body);
-              if (v6OrEarlierAPIError.code !== closure_3) {
-                const obj = { error: null };
-                obj[0] = v6OrEarlierAPIError.message;
-                closure_1_0.setState(obj);
+        onSubmit(applyArgumentsResult.state.input)
+          .then(() => {
+            if (closure_0 != null) {
+              tmp();
+            }
+            if (closure_1) {
+              closure_1_0.close();
+            }
+          })
+          .catch((body) => {
+            if (closure_2 != null) {
+              tmp(body);
+            }
+            if (body) {
+              if (body.body) {
+                const v6OrEarlierAPIError = new applyArgumentsResult(closure_2_2[2]).V6OrEarlierAPIError(body);
+                if (v6OrEarlierAPIError.code !== closure_3) {
+                  const obj = { error: null };
+                  obj[0] = v6OrEarlierAPIError.message;
+                  closure_1_0.setState(obj);
+                }
               }
             }
-          }
-        });
+          });
         const nextPromise = onSubmit(applyArgumentsResult.state.input).then(() => {
           if (closure_0 != null) {
             tmp();
@@ -76,8 +85,18 @@ prototype["renderContent"] = function renderContent() {
       obj[1] = helpText;
       tmp7 = callback(tmp5(4474).Text, obj);
     }
-    const items = [tmp7, ];
-    obj = { label: null, placeholder: null, secureTextEntry: null, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };
+    const items = [tmp7];
+    obj = {
+      label: null,
+      placeholder: null,
+      secureTextEntry: null,
+      returnKeyType: "done",
+      autoFocus: true,
+      status: null,
+      errorMessage: null,
+      onSubmitEditing: null,
+      onChange: null,
+    };
     obj[0] = tmp3;
     obj[1] = tmp;
     obj[2] = tmp2;
@@ -100,7 +119,15 @@ prototype["renderContent"] = function renderContent() {
 };
 prototype["render"] = function render() {
   ({ title, actionText, cancelText, confirmColor, useKeyboardAwareWrapper } = this.props);
-  let obj = { title, confirmText: actionText, confirmColor, onConfirm: this.handleSubmit, cancelText, onCancel: this.close, children: this.renderContent() };
+  let obj = {
+    title,
+    confirmText: actionText,
+    confirmColor,
+    onConfirm: this.handleSubmit,
+    cancelText,
+    onCancel: this.close,
+    children: this.renderContent(),
+  };
   const tmp5 = callback(componentDidMountDefault, obj);
   let tmpResult = tmp5;
   if (useKeyboardAwareWrapper) {

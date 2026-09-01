@@ -6,7 +6,11 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 let items = [{ scaleX: -1 }];
-let closure_7 = createCacheKey.createStyles({ clouds: { position: "absolute", top: 0, right: 0 }, wumpus: { position: "absolute", top: 22, right: 22, height: 90 }, wumpusLeft: { transform: items } });
+let closure_7 = createCacheKey.createStyles({
+  clouds: { position: "absolute", top: 0, right: 0 },
+  wumpus: { position: "absolute", top: 22, right: 22, height: 90 },
+  wumpusLeft: { transform: items },
+});
 const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesWumpus.tsx");
 
 export default function PremiumFeaturesWumpus(premiumType) {
@@ -38,8 +42,8 @@ export default function PremiumFeaturesWumpus(premiumType) {
   }, items);
   ({ wumpusImageSource, cloudsImageSource } = memo);
   let obj = { style: tmp.clouds, resizeMode: "contain", source: cloudsImageSource };
-  const items1 = [callback(premiumType(5493), obj), ];
-  const items2 = [tmp.wumpus, ];
+  const items1 = [callback(premiumType(5493), obj)];
+  const items2 = [tmp.wumpus];
   let wumpusLeft = premiumType === PremiumTypes.TIER_0;
   if (wumpusLeft) {
     wumpusLeft = tmp.wumpusLeft;
@@ -49,4 +53,4 @@ export default function PremiumFeaturesWumpus(premiumType) {
   items1[1] = callback(premiumType(5493), { style: items2, resizeMode: "contain", source: wumpusImageSource });
   obj[0] = items1;
   return closure_6(closure_5, obj);
-};
+}

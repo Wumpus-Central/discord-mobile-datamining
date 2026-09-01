@@ -96,7 +96,7 @@ function _isEligibleForBOGOPromotion() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*() {
+    const iter = (function* () {
       if (authStore === 2) {
         authStore = 3;
         HermesBuiltin.throwTypeError();
@@ -225,7 +225,12 @@ function _isEligibleForBOGOPromotion() {
                 return obj;
               }
               mostRecentPremiumTypeSubscription = store.getMostRecentPremiumTypeSubscription();
-              obj4 = { experimentEnabled: null, premiumSubscription: null, mostRecentSubscription: null, previousPremiumSubscription: null };
+              obj4 = {
+                experimentEnabled: null,
+                premiumSubscription: null,
+                mostRecentSubscription: null,
+                previousPremiumSubscription: null,
+              };
               obj4[0] = authStore;
               obj4[1] = store.getPremiumTypeSubscription();
               obj4[2] = mostRecentPremiumTypeSubscription;
@@ -263,7 +268,7 @@ function _isEligibleForBOGOPromotion() {
 }
 function _maybeFetchActiveBogoPromotion() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -372,7 +377,11 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
   const bogoPromotionGateEnabled = apexExperiment.useBogoPromotionGateEnabled("bogo eligibility hook");
   const obj3 = apexExperiment;
   const items = [closure_5];
-  const stateFromStoresObject = defaultAreStatesEqual.useStateFromStoresObject(items, () => ({ mostRecentSubscription: store.getMostRecentPremiumTypeSubscription(), premiumSubscription: store.getPremiumTypeSubscription(), previousPremiumSubscription: store.getPreviousPremiumTypeSubscription() }));
+  const stateFromStoresObject = defaultAreStatesEqual.useStateFromStoresObject(items, () => ({
+    mostRecentSubscription: store.getMostRecentPremiumTypeSubscription(),
+    premiumSubscription: store.getPremiumTypeSubscription(),
+    previousPremiumSubscription: store.getPreviousPremiumTypeSubscription(),
+  }));
   ({ mostRecentSubscription, premiumSubscription, previousPremiumSubscription } = stateFromStoresObject);
   const obj4 = defaultAreStatesEqual;
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();

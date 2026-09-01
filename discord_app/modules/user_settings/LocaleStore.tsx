@@ -9,7 +9,7 @@ import { systemLocale } from "../../intl/index.native.tsx";
 const require = arg1;
 function _getSystemLocale() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -132,8 +132,7 @@ let currentLocale = require("getSystemLocale").intl.currentLocale;
   closure_8 = arg0;
 });
 const Store = initializeDefault.Store;
-class LocaleStore extends Store {
-}
+class LocaleStore extends Store {}
 const prototype = LocaleStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_5);
@@ -161,13 +160,13 @@ Object.defineProperty(prototype, "locale", {
   get: function locale() {
     return currentLocale;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "systemLocale", {
   get: function systemLocale() {
     return systemLocale;
   },
-  set: undefined
+  set: undefined,
 });
 LocaleStore.displayName = "LocaleStore";
 const localeStore = new LocaleStore(dispatcherDefault, {
@@ -178,7 +177,7 @@ const localeStore = new LocaleStore(dispatcherDefault, {
   USER_SETTINGS_LOCALE_OVERRIDE: function handleLocaleOverride(locale) {
     locale = locale.locale;
     setAppLocale(locale);
-  }
+  },
 });
 let obj = {
   OVERLAY_INITIALIZE: handleUpdate,
@@ -188,7 +187,7 @@ let obj = {
   USER_SETTINGS_LOCALE_OVERRIDE: function handleLocaleOverride(locale) {
     locale = locale.locale;
     setAppLocale(locale);
-  }
+  },
 };
 const promise = (function getSystemLocale() {
   const self = this;

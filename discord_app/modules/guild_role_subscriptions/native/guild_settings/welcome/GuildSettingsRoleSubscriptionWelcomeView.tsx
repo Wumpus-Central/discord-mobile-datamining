@@ -66,11 +66,16 @@ class SectionContainer {
     tmp2 = jsxs;
     tmp3 = View;
     tmp4 = jsx;
-    items = [, , , ];
+    items = [, , ,];
     items[0] = jsx(View, obj);
     tmp5 = closure_0;
     tmp6 = closure_3;
-    obj1 = { style: tmp.sectionTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: title };
+    obj1 = {
+      style: tmp.sectionTitle,
+      variant: "heading-lg/extrabold",
+      color: "mobile-text-heading-primary",
+      children: title,
+    };
     items[1] = jsx(require("Text").Text, obj1);
     items[2] = children;
     tmp4Result = null != footer;
@@ -107,30 +112,36 @@ function StartEarningButton(isTermsAccepted) {
     let obj = closure_1_1(submitAcceptTermsRequest[15]);
     obj = {
       eligibility,
-      onRequireModeratorMFAClick() {
-
-      }
+      onRequireModeratorMFAClick() {},
     };
-    return obj.openLazy(isTermsAccepted(submitAcceptTermsRequest[17])(submitAcceptTermsRequest[16], submitAcceptTermsRequest.paths), isTermsAccepted(submitAcceptTermsRequest[18]).ELIGIBILITY_ACTION_SHEET_KEY, obj);
+    return obj.openLazy(
+      isTermsAccepted(submitAcceptTermsRequest[17])(submitAcceptTermsRequest[16], submitAcceptTermsRequest.paths),
+      isTermsAccepted(submitAcceptTermsRequest[18]).ELIGIBILITY_ACTION_SHEET_KEY,
+      obj,
+    );
   }, items1);
   obj = {
     style: tmp.tos,
     leading: callback(isTermsAccepted(submitAcceptTermsRequest[19]).FormRow.Checkbox, { selected: isTermsAccepted }),
-    label: callback(isTermsAccepted(submitAcceptTermsRequest[12]).Text, { variant: "text-xs/normal", color: "text-default", children: acceptTermsCheckboxText }),
+    label: callback(isTermsAccepted(submitAcceptTermsRequest[12]).Text, {
+      variant: "text-xs/normal",
+      color: "text-default",
+      children: acceptTermsCheckboxText,
+    }),
     onPress() {
       return callback(!isTermsAccepted);
-    }
+    },
   };
   obj = { style, children: null };
   let tmp13 = eligibleForMonetization;
   if (eligibleForMonetization) {
-    tmp13 = true === flag && !isTermsAccepted || true !== flag;
-    const tmp14 = true === flag && !isTermsAccepted || true !== flag;
+    tmp13 = (true === flag && !isTermsAccepted) || true !== flag;
+    const tmp14 = (true === flag && !isTermsAccepted) || true !== flag;
   }
   if (tmp13) {
     tmp13 = tmp10;
   }
-  const items2 = [tmp13, ];
+  const items2 = [tmp13];
   obj1 = { style: null, children: null };
   if (eligibleForMonetization) {
     obj1[0] = tmp.startEarningButton;
@@ -148,11 +159,11 @@ function StartEarningButton(isTermsAccepted) {
     obj2[2] = intl2.string(tmp5(tmp3[10]).t.NL5ZNS);
     obj2[3] = callback;
     obj1[1] = tmp9(tmp5(tmp3[20]).Button, obj2);
-    const items3 = [tmp9(tmp12, obj1), ];
+    const items3 = [tmp9(tmp12, obj1)];
     let tmp11Result = null != error;
     if (tmp11Result) {
       const obj3 = { children: null };
-      const items4 = [tmp9(tmp5(tmp3[21]).Spacer, { size: 12 }), ];
+      const items4 = [tmp9(tmp5(tmp3[21]).Spacer, { size: 12 })];
       const obj4 = { children: null };
       obj4[0] = error.getAnyErrorMessage();
       items4[1] = tmp9(tmp2(tmp3[9]), obj4);
@@ -214,7 +225,7 @@ class MarketingSections {
       tmp7 = jsxs;
       tmp8 = Fragment;
       obj2 = { children: null };
-      items = [, ];
+      items = [,];
       items[0] = tmp2;
       items[1] = tmp3;
       obj2[0] = items;
@@ -246,19 +257,43 @@ class MarketingSections {
 }
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-createCacheKey = { container: { flex: 1 }, contentContainer: { flex: 1, padding: 24 }, heroImage: { resizeMode: "cover", width: "100%" }, subtitle: { marginTop: 8 }, tos: null, startEarningButton: null, startEarningButtonContainer: null, startEarningFabContainer: null, divider: null, sectionTitle: null, sectionFooter: null, statusNoticeContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.sm, marginTop: 10 };
+createCacheKey = {
+  container: { flex: 1 },
+  contentContainer: { flex: 1, padding: 24 },
+  heroImage: { resizeMode: "cover", width: "100%" },
+  subtitle: { marginTop: 8 },
+  tos: null,
+  startEarningButton: null,
+  startEarningButtonContainer: null,
+  startEarningFabContainer: null,
+  divider: null,
+  sectionTitle: null,
+  sectionFooter: null,
+  statusNoticeContainer: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderRadius: ThemesDefault.radii.sm,
+  marginTop: 10,
+};
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { marginTop: 12 };
 createCacheKey[6] = { marginTop: 14 };
 createCacheKey[7] = { marginHorizontal: 24 };
-createCacheKey[8] = { width: "100%", height: 0.8, marginTop: 36, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+createCacheKey[8] = {
+  width: "100%",
+  height: 0.8,
+  marginTop: 36,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+};
 createCacheKey[9] = { marginTop: 36, marginBottom: 10 };
 createCacheKey[10] = { marginTop: 36 };
 createCacheKey[11] = { marginHorizontal: 0, marginTop: 14 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { width: "100%", height: 0.8, marginTop: 36, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx",
+);
 
 export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
   guild = guild.guild;
@@ -273,7 +308,14 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
   const navigation = obj.useNavigation();
   const tmp5 = ref(ref1[27])(guild);
   ({ eligibility, refreshEligibility } = tmp5);
-  ({ eligibleForMonetization, acceptTermsCheckboxText, wasRejectedInV1, isGuildOwner, eligibilityLoading, eligibilityError } = tmp5);
+  ({
+    eligibleForMonetization,
+    acceptTermsCheckboxText,
+    wasRejectedInV1,
+    isGuildOwner,
+    eligibilityLoading,
+    eligibilityError,
+  } = tmp5);
   obj1 = refreshEligibility(ref1[28]);
   const creatorMonetizationIneligibleReasons = obj1.useCreatorMonetizationIneligibleReasons(eligibility);
   let obj2 = React;
@@ -283,11 +325,13 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
   ref = React.useRef(true);
   let obj3 = refreshEligibility(ref1[30]);
   const items = [ref, refreshEligibility];
-  const focusEffect = obj3.useFocusEffect(React.useCallback(() => {
-    if (!ref.current) {
-      refreshEligibility();
-    }
-  }, items));
+  const focusEffect = obj3.useFocusEffect(
+    React.useCallback(() => {
+      if (!ref.current) {
+        refreshEligibility();
+      }
+    }, items),
+  );
   const effect = React.useEffect(() => {
     if (ref.current) {
       tmp.current = false;
@@ -297,7 +341,12 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
   const tmp9 = first(React.useState(false), 2);
   obj[0] = refreshEligibility(ref1[32]).ImpressionTypes.PANE;
   obj[1] = refreshEligibility(ref1[32]).ImpressionNames.ENABLE_CREATOR_MONETIZATION_ACCEPT_TERMS_LANDING;
-  obj[2] = { guild_id: guild.id, is_owner: isGuildOwner, is_eligible: eligibleForMonetization, ineligible_reasons: creatorMonetizationIneligibleReasons };
+  obj[2] = {
+    guild_id: guild.id,
+    is_owner: isGuildOwner,
+    is_eligible: eligibleForMonetization,
+    ineligible_reasons: creatorMonetizationIneligibleReasons,
+  };
   ref(ref1[31])(obj, { disableTrack: null == guild.id || null == eligibility });
   let tmp8Result = tmp8(obj2.useState(false), 2);
   [tmp19, tmp20] = tmp8Result;
@@ -338,14 +387,14 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
         obj3 = { source: null, resizeMethod: "scale", style: null };
         obj3[0] = tmp4(tmp3[38]);
         obj3[2] = tmp.heroImage;
-        const items3 = [callback(tmp4(tmp3[37]), obj3), ];
+        const items3 = [callback(tmp4(tmp3[37]), obj3)];
         const obj4 = { ref: null, style: null, collapsable: false, children: null };
         obj4[0] = ref1;
         obj4[1] = tmp.contentContainer;
         obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
         const intl2 = tmp2(tmp3[10]).intl;
         obj5[2] = intl2.string(tmp2(tmp3[10]).t.QYqDQ0);
-        const items4 = [callback(tmp2(tmp3[12]).Text, obj5), , , ];
+        const items4 = [callback(tmp2(tmp3[12]).Text, obj5), , ,];
         const obj6 = { style: null, variant: "text-sm/normal", color: "text-default", children: null };
         obj6[0] = tmp.subtitle;
         const intl3 = tmp2(tmp3[10]).intl;
@@ -357,7 +406,15 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
           const merged = Object.assign(tmp5);
           let tmp31Result = tmp31(ApplicationStatusNotice, obj7);
         } else {
-          const obj8 = { style: null, guildId: null, isTermsAccepted: null, setTermsAccepted: null, eligibleForMonetization: null, eligibility: null, acceptTermsCheckboxText: null };
+          const obj8 = {
+            style: null,
+            guildId: null,
+            isTermsAccepted: null,
+            setTermsAccepted: null,
+            eligibleForMonetization: null,
+            eligibility: null,
+            acceptTermsCheckboxText: null,
+          };
           obj8[0] = tmp.startEarningButtonContainer;
           obj8[1] = guild.id;
           obj8[2] = tmp10;
@@ -376,7 +433,7 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
         items3[1] = closure_12(closure_6, obj4);
         obj2[1] = items3;
         obj1[2] = closure_12(closure_6, obj2);
-        const items5 = [callback(closure_7, obj1), ];
+        const items5 = [callback(closure_7, obj1)];
         if (tmp31Result) {
           tmp31Result = eligibleForMonetization;
         }
@@ -384,7 +441,16 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
           tmp31Result = !wasRejectedInV1;
         }
         if (tmp31Result) {
-          const obj10 = { style: null, guildId: null, isTermsAccepted: null, setTermsAccepted: null, eligibleForMonetization: null, eligibility: null, acceptTermsCheckboxText: null, isFab: true };
+          const obj10 = {
+            style: null,
+            guildId: null,
+            isTermsAccepted: null,
+            setTermsAccepted: null,
+            eligibleForMonetization: null,
+            eligibility: null,
+            acceptTermsCheckboxText: null,
+            isFab: true,
+          };
           obj10[0] = tmp.startEarningFabContainer;
           obj10[1] = guild.id;
           obj10[2] = tmp10;
@@ -404,6 +470,6 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
     }
   }
   tmp30Result = callback(tmp4(tmp3[34]), {});
-};
+}
 export { SectionContainer };
 export { MarketingSections };

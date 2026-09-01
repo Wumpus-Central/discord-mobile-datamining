@@ -42,16 +42,22 @@ function canToggleCommunicationDisableOnUser(id, id2, items) {
 }
 const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
 const Permissions = ME.Permissions;
-const result = set.fileFinishedImporting("modules/guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx",
+);
 
 export default function useCanToggleCommunicationDisableOnUser(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
   let items = [closure_6, closure_4, closure_5];
   const items1 = [arg0, arg1];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const items = [closure_1_6, closure_1_4, closure_1_5];
-    return closure_1_8(closure_0, closure_1, items);
-  }, items1);
-};
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => {
+      const items = [closure_1_6, closure_1_4, closure_1_5];
+      return closure_1_8(closure_0, closure_1, items);
+    },
+    items1,
+  );
+}
 export { canToggleCommunicationDisableOnUser };

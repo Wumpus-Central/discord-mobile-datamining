@@ -2,7 +2,9 @@
 import closure_2 from "../../../../../../_runtime/00019_noop.js";
 import { AnalyticEvents } from "../../../../../Constants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/useAccountLinkStepTracking.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/useAccountLinkStepTracking.tsx",
+);
 
 export const useAccountLinkStepTracking = function useAccountLinkStepTracking(CRUNCHYROLL, locationStack) {
   closure_0 = CRUNCHYROLL;

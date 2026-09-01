@@ -15,7 +15,9 @@ createNativeStackNavigator = { container: { flex: 1 }, content: null };
 createNativeStackNavigator = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createNativeStackNavigator[1] = createNativeStackNavigator;
 let closure_8 = createCacheKey.createStyles(createNativeStackNavigator);
-const result = require("set").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandNavigator.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/application_commands/native/ContextMenuCommandNavigator.tsx",
+);
 
 export default function ContextMenuCommandNavigator() {
   const tmp = callback3();
@@ -38,7 +40,7 @@ export default function ContextMenuCommandNavigator() {
           return callback2(callback(table[9]).GenericHeaderTitle, { title: children.children });
         },
         headerTitleAlign: "center",
-        headerLeft: null
+        headerLeft: null,
       };
       if (navigation.getState().routes[0].key === navigation.route.key) {
         let renderModalCloseImage = lib(closure_1_2[9]).getRenderModalCloseImage(navigation);
@@ -51,7 +53,7 @@ export default function ContextMenuCommandNavigator() {
       let merged = Object.assign(closure_1);
       return obj;
     },
-    children: null
+    children: null,
   };
   obj1 = { name: "root", options: null, getComponent: null };
   let obj2 = { title: null };
@@ -76,10 +78,10 @@ export default function ContextMenuCommandNavigator() {
       },
       getComponent() {
         return lib(16450).default;
-      }
-    })
+      },
+    }),
   ];
   obj[1] = items1;
   obj[1] = callback2(Navigator, obj);
   return callback(View, obj);
-};
+}

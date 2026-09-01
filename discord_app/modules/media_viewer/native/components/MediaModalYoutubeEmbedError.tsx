@@ -8,7 +8,13 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { container: null, text: null };
-obj = { backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND, padding: ThemesDefault.space.PX_32, justifyContent: "center", alignItems: "center", flex: 1 };
+obj = {
+  backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND,
+  padding: ThemesDefault.space.PX_32,
+  justifyContent: "center",
+  alignItems: "center",
+  flex: 1,
+};
 obj[0] = obj;
 createCacheKey = { marginBottom: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_16 };
 obj[1] = createCacheKey;
@@ -17,7 +23,7 @@ const memoResult = importAllResult.memo(function MediaModalYoutubeEmbedError(vid
   videoId = videoId.videoId;
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
-  const items = [callback(videoId(9570).StreamFailed, { resizeMode: "contain" }), , ];
+  const items = [callback(videoId(9570).StreamFailed, { resizeMode: "contain" }), ,];
   obj = { style: tmp.text, variant: "text-md/semibold", color: "text-overlay-light", children: null };
   const intl = videoId(1236).intl;
   obj[3] = intl.string(videoId(1236).t.u7vKPs);
@@ -32,6 +38,8 @@ const memoResult = importAllResult.memo(function MediaModalYoutubeEmbedError(vid
   obj[1] = items;
   return callback2(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaModalYoutubeEmbedError.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/media_viewer/native/components/MediaModalYoutubeEmbedError.tsx",
+);
 
 export default memoResult;

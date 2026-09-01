@@ -4,9 +4,7 @@ import { RefreshControl } from "../../../_runtime/00017_get_ActivityIndicator.js
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-function noop() {
-
-}
+function noop() {}
 let c3 = importAllResult;
 const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
   ({ enabled, horizontal } = inActionSheet);
@@ -16,7 +14,15 @@ const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
   }
   inActionSheet = inActionSheet.inActionSheet;
   const keyExtractor = inActionSheet.keyExtractor;
-  ({ listFooterAlwaysMounted, insetStart, insetEnd, itemSize, keyboardDismissMode, keyboardShouldPersistTaps, listFooterSize } = inActionSheet);
+  ({
+    listFooterAlwaysMounted,
+    insetStart,
+    insetEnd,
+    itemSize,
+    keyboardDismissMode,
+    keyboardShouldPersistTaps,
+    listFooterSize,
+  } = inActionSheet);
   if (listFooterAlwaysMounted === undefined) {
     listFooterAlwaysMounted = false;
   }
@@ -31,11 +37,21 @@ const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
   }
   const scrollIndicatorInsetEnd = inActionSheet.scrollIndicatorInsetEnd;
   const scrollIndicatorInsetStart = inActionSheet.scrollIndicatorInsetStart;
-  ({ sectionHeaderIsSticky, renderItem, renderListFooter, renderListHeader, renderSectionHeader, renderSectionFooter, scrollEventThrottle, sectionHeaderSize } = inActionSheet);
+  ({
+    sectionHeaderIsSticky,
+    renderItem,
+    renderListFooter,
+    renderListHeader,
+    renderSectionHeader,
+    renderSectionFooter,
+    scrollEventThrottle,
+    sectionHeaderSize,
+  } = inActionSheet);
   if (sectionHeaderIsSticky === undefined) {
     sectionHeaderIsSticky = true;
   }
-  ({ sectionFooterSize, sections, showsHorizontalScrollIndicator, showsVerticalScrollIndicator, style } = inActionSheet);
+  ({ sectionFooterSize, sections, showsHorizontalScrollIndicator, showsVerticalScrollIndicator, style } =
+    inActionSheet);
   const merged = Object.assign(inActionSheet, Object.create(null));
   ({ onScroll, onScrollBeginDrag, onScrollEndDrag } = inActionSheet(keyExtractor[3])(merged, horizontal));
   const items = [keyExtractor];
@@ -95,7 +111,45 @@ const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
   } else {
     AnimatedFastList = tmp2(tmp3[5]);
   }
-  let obj = { accessibilityLabel, automaticallyAdjustsScrollIndicatorInsets: null == memo, batchesToRender: null, refreshControl: null, chunkBase: null, stickySectionsVariant: null, footerSize: null, getRecyclerKey: null, headerSize: null, horizontal: null, inActionSheet: null, insetStart: null, insetEnd: null, itemSize: null, keyboardDismissMode: null, keyboardShouldPersistTaps: null, onLayout: null, onScroll: null, onScrollBeginDrag: null, onScrollEndDrag: null, optimizeListItemRender: true, ref: null, renderItem: null, renderFooter: null, renderHeader: null, renderSection: null, renderSectionFooter: null, scrollEventThrottle: null, scrollIndicatorInsets: null, scrollPosValue: null, sections: null, sectionSize: null, sectionFooterSize: null, showsHorizontalScrollIndicator: null, showsVerticalScrollIndicator: null, stickyHeaderFooter: null, style: null };
+  let obj = {
+    accessibilityLabel,
+    automaticallyAdjustsScrollIndicatorInsets: null == memo,
+    batchesToRender: null,
+    refreshControl: null,
+    chunkBase: null,
+    stickySectionsVariant: null,
+    footerSize: null,
+    getRecyclerKey: null,
+    headerSize: null,
+    horizontal: null,
+    inActionSheet: null,
+    insetStart: null,
+    insetEnd: null,
+    itemSize: null,
+    keyboardDismissMode: null,
+    keyboardShouldPersistTaps: null,
+    onLayout: null,
+    onScroll: null,
+    onScrollBeginDrag: null,
+    onScrollEndDrag: null,
+    optimizeListItemRender: true,
+    ref: null,
+    renderItem: null,
+    renderFooter: null,
+    renderHeader: null,
+    renderSection: null,
+    renderSectionFooter: null,
+    scrollEventThrottle: null,
+    scrollIndicatorInsets: null,
+    scrollPosValue: null,
+    sections: null,
+    sectionSize: null,
+    sectionFooterSize: null,
+    showsHorizontalScrollIndicator: null,
+    showsVerticalScrollIndicator: null,
+    stickyHeaderFooter: null,
+    style: null,
+  };
   if ("nominal" !== renderAhead) {
     if ("half" === renderAhead) {
       let num = 14;

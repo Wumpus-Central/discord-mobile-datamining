@@ -8,8 +8,7 @@ const prototype = function VttParserError(arg0, error) {
   tmp.name = "ParserError";
   return tmp;
 }.prototype;
-class prototype extends Error {
-}
+class prototype extends Error {}
 const re1 = /([0-9]+)?:?([0-9]{2}):([0-9]{2}\.[0-9]{2,3})/;
 let result = set.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VttParser.tsx");
 
@@ -62,7 +61,18 @@ export const parseVtt = function parseVtt(text) {
           if (typeof obj !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          str9 = new str9("Missing blank line after signature", tmp3, parts1, tmp2, tmp, obj, parts, str9, tmp4, new.target);
+          str9 = new str9(
+            "Missing blank line after signature",
+            tmp3,
+            parts1,
+            tmp2,
+            tmp,
+            obj,
+            parts,
+            str9,
+            tmp4,
+            new.target,
+          );
           // ThrowIfThisInitialized (0x7c)
           str9.error = undefined;
           str9.name = "ParserError";
@@ -94,7 +104,20 @@ export const parseVtt = function parseVtt(text) {
               if (typeof closure_0 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              const tmp14 = new closure_2(combined, tmp6, tmp5, tmp4, tmp3, tmp2, "\n", tmp, closure_0, combined, 0, arg1);
+              const tmp14 = new closure_2(
+                combined,
+                tmp6,
+                tmp5,
+                tmp4,
+                tmp3,
+                tmp2,
+                "\n",
+                tmp,
+                closure_0,
+                combined,
+                0,
+                arg1,
+              );
               // ThrowIfThisInitialized (0x7c)
               tmp14.error = undefined;
               tmp14.name = "ParserError";
@@ -110,7 +133,20 @@ export const parseVtt = function parseVtt(text) {
                 if (typeof closure_0 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                const tmp23 = new closure_2(combined1, tmp6, tmp5, tmp4, tmp3, tmp2, "\n", tmp, closure_0, combined1, 0, arg1);
+                const tmp23 = new closure_2(
+                  combined1,
+                  tmp6,
+                  tmp5,
+                  tmp4,
+                  tmp3,
+                  tmp2,
+                  "\n",
+                  tmp,
+                  closure_0,
+                  combined1,
+                  0,
+                  arg1,
+                );
                 // ThrowIfThisInitialized (0x7c)
                 tmp23.error = undefined;
                 tmp23.name = "ParserError";
@@ -191,7 +227,26 @@ export const parseVtt = function parseVtt(text) {
                     if (typeof closure_0 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    const tmp42 = new closure_2(combined4, tmp6, closure_0, combined4, new.target, obj7, "\n", "", str10, num, num3, arg1, found, closure_2, parts1, globalThis, length, tmp31);
+                    const tmp42 = new closure_2(
+                      combined4,
+                      tmp6,
+                      closure_0,
+                      combined4,
+                      new.target,
+                      obj7,
+                      "\n",
+                      "",
+                      str10,
+                      num,
+                      num3,
+                      arg1,
+                      found,
+                      closure_2,
+                      parts1,
+                      globalThis,
+                      length,
+                      tmp31,
+                    );
                     // ThrowIfThisInitialized (0x7c)
                     tmp42.error = undefined;
                     tmp42.name = "ParserError";
@@ -278,7 +333,21 @@ export const parseVtt = function parseVtt(text) {
     if (typeof obj !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    tmp2 = new tmp2("Must start with \"WEBVTT\"", tmp3, obj, tmp2, new.target, "WEBVTT", parts, "\n", tmp4, str4, tmp5, prototype, strict);
+    tmp2 = new tmp2(
+      'Must start with "WEBVTT"',
+      tmp3,
+      obj,
+      tmp2,
+      new.target,
+      "WEBVTT",
+      parts,
+      "\n",
+      tmp4,
+      str4,
+      tmp5,
+      prototype,
+      strict,
+    );
     // ThrowIfThisInitialized (0x7c)
     tmp2.error = undefined;
     tmp2.name = "ParserError";

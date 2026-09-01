@@ -7,7 +7,9 @@ import ME from "../../Constants.tsx";
 
 require = arg1;
 ({ Endpoints: c5, Consents: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2ActionCreators.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/channel_affinities_v2/ChannelAffinitiesV2ActionCreators.tsx",
+);
 
 export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
   let flag = arg0;
@@ -27,25 +29,28 @@ export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
       }
       obj[1] = num;
       const value = HTTP.get(obj);
-      let nextPromise = value.then((body) => {
-        let obj = callback(709);
-        obj = {
-          type: "LOAD_CHANNEL_AFFINITIES_V2_SUCCESS",
-          affineChannels: channel_affinities.map((channelId) => {
-            const obj = { channelId: channelId.channel_id, score: null };
-            let num = channelId.score;
-            if (num == null) {
-              num = 0;
-            }
-            obj[1] = num;
-            return obj;
-          })
-        };
-        channel_affinities = body.body.channel_affinities;
-        obj.dispatch(obj);
-      }, () => {
-        callback(709).dispatch({ type: "LOAD_CHANNEL_AFFINITIES_V2_FAILURE" });
-      });
+      let nextPromise = value.then(
+        (body) => {
+          let obj = callback(709);
+          obj = {
+            type: "LOAD_CHANNEL_AFFINITIES_V2_SUCCESS",
+            affineChannels: channel_affinities.map((channelId) => {
+              const obj = { channelId: channelId.channel_id, score: null };
+              let num = channelId.score;
+              if (num == null) {
+                num = 0;
+              }
+              obj[1] = num;
+              return obj;
+            }),
+          };
+          channel_affinities = body.body.channel_affinities;
+          obj.dispatch(obj);
+        },
+        () => {
+          callback(709).dispatch({ type: "LOAD_CHANNEL_AFFINITIES_V2_FAILURE" });
+        },
+      );
     }
     return nextPromise;
   }

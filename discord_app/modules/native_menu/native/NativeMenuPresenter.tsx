@@ -8,7 +8,11 @@ const result = require("set").fileFinishedImporting("modules/native_menu/native/
 
 export default function MenuContainer() {
   const items = [closure_4];
-  const stateFromStoresObject = key(589).useStateFromStoresObject(items, () => ({ key: store.getKey(), menu: store.getMenu() }), []);
+  const stateFromStoresObject = key(589).useStateFromStoresObject(
+    items,
+    () => ({ key: store.getKey(), menu: store.getMenu() }),
+    [],
+  );
   key = stateFromStoresObject.key;
   const menu = stateFromStoresObject.menu;
   const items1 = [key];
@@ -28,4 +32,4 @@ export default function MenuContainer() {
     }
   }
   return tmp4;
-};
+}

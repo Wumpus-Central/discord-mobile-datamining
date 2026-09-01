@@ -54,7 +54,7 @@ export const useInviteActions = function useInviteActions(invite) {
       return obj.showShareActionSheet(obj, str2);
     });
   };
-  const items = [obj, , ];
+  const items = [obj, ,];
   obj = { label: null, iconSource: null, action: null };
   const intl2 = invite(1236).intl;
   obj[0] = intl2.string(invite(1236).t.OpuAlK);
@@ -75,7 +75,7 @@ export const useInviteActions = function useInviteActions(invite) {
   const intl3 = invite(1236).intl;
   obj1[0] = intl3.string(invite(1236).t.v6Yazx);
   obj1[1] = onInviteRevoked(10674).revoke;
-  dependencyMap = callback(function*() {
+  dependencyMap = callback(function* () {
     closure_0 = tmp3;
     c3 = 1;
     yield v0(closure_1_2[12]).revokeInvite(closure_1_0);
@@ -99,7 +99,7 @@ export const useInviteActions = function useInviteActions(invite) {
     c3 = 0;
     return arg1;
   });
-  obj1[3] = function() {
+  obj1[3] = function () {
     const self = this;
     const apply = closure_2.apply;
     if (typeof apply === "unknown") {

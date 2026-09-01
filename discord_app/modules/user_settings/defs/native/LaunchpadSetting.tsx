@@ -38,7 +38,7 @@ const radio = createToggle.createRadio({
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t["/gdTGA"]);
     obj[2] = LaunchPadTypes.GESTURE_FULL;
-    const items = [obj, , , ];
+    const items = [obj, , ,];
     obj = { label: null, subLabel: null, value: null };
     const intl3 = getSystemLocale.intl;
     obj[0] = intl3.string(getSystemLocale.t.dQN6qS);
@@ -61,7 +61,7 @@ const radio = createToggle.createRadio({
     obj1[2] = LaunchPadTypes.DISABLED;
     items[3] = obj1;
     return items;
-  }
+  },
 });
 let obj = {
   useTitle() {
@@ -92,7 +92,7 @@ let obj = {
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t["/gdTGA"]);
     obj[2] = LaunchPadTypes.GESTURE_FULL;
-    const items = [obj, , , ];
+    const items = [obj, , ,];
     obj = { label: null, subLabel: null, value: null };
     const intl3 = getSystemLocale.intl;
     obj[0] = intl3.string(getSystemLocale.t.dQN6qS);
@@ -115,7 +115,7 @@ let obj = {
     obj1[2] = LaunchPadTypes.DISABLED;
     items[3] = obj1;
     return items;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/LaunchpadSetting.tsx");
 

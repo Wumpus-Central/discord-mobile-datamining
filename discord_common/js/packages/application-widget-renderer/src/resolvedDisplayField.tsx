@@ -2,9 +2,16 @@
 import set from "../../../../../_runtime/00002_set.js";
 import resolveFieldValue2 from "resolvedValues.tsx";
 
-let result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx");
+let result = set.fileFinishedImporting(
+  "../discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx",
+);
 
-export const resolveTextComponentValues = function resolveTextComponentValues(subtitle_1, resolveFieldValue, numberFormat, arg3) {
+export const resolveTextComponentValues = function resolveTextComponentValues(
+  subtitle_1,
+  resolveFieldValue,
+  numberFormat,
+  arg3,
+) {
   let flag = arg3;
   if (arg3 === undefined) {
     flag = false;
@@ -70,7 +77,13 @@ export const resolveTextComponentValues = function resolveTextComponentValues(su
     return obj;
   }
 };
-export const resolveStatComponentValues = function resolveStatComponentValues(fields, closure_1, closure_2, formatDurationNarrow, arg4) {
+export const resolveStatComponentValues = function resolveStatComponentValues(
+  fields,
+  closure_1,
+  closure_2,
+  formatDurationNarrow,
+  arg4,
+) {
   let flag = arg4;
   if (arg4 === undefined) {
     flag = false;
@@ -126,7 +139,11 @@ export const resolveStatComponentValues = function resolveStatComponentValues(fi
     return obj;
   }
 };
-export const resolveSingleStringOrSkeleton = function resolveSingleStringOrSkeleton(componentConfig, description, resolveFieldValue) {
+export const resolveSingleStringOrSkeleton = function resolveSingleStringOrSkeleton(
+  componentConfig,
+  description,
+  resolveFieldValue,
+) {
   let tmp;
   if (componentConfig != null) {
     tmp = componentConfig.fields[description];

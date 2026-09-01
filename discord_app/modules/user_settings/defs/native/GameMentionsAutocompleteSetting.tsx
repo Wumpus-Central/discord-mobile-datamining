@@ -12,7 +12,7 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
   useValue: explicitContentFromProto.IncludeGameMentionsInAutocomplete.useSetting,
-  onValueChange: explicitContentFromProto.IncludeGameMentionsInAutocomplete.updateSetting
+  onValueChange: explicitContentFromProto.IncludeGameMentionsInAutocomplete.updateSetting,
 });
 const obj = {
   useTitle() {
@@ -21,7 +21,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
   useValue: explicitContentFromProto.IncludeGameMentionsInAutocomplete.useSetting,
-  onValueChange: explicitContentFromProto.IncludeGameMentionsInAutocomplete.updateSetting
+  onValueChange: explicitContentFromProto.IncludeGameMentionsInAutocomplete.updateSetting,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/GameMentionsAutocompleteSetting.tsx");
 

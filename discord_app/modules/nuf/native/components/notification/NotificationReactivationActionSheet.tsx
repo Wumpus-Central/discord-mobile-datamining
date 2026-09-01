@@ -22,7 +22,9 @@ let obj2 = { textAlign: "center", marginTop: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_8 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { marginTop: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx",
+);
 
 export default function NotificationReactivationActionSheet(location) {
   const _location = location.location;
@@ -30,9 +32,13 @@ export default function NotificationReactivationActionSheet(location) {
   const items = [_location];
   const items1 = [_location];
   const callback = React.useCallback(() => {
-    const pushNotificationPermission = _location(closure_1_2[8]).requestPushNotificationPermission(closure_1_6.ALLOW_TO_REQUEST, _location, () => {
-      callback(table[9]).hideActionSheet();
-    });
+    const pushNotificationPermission = _location(closure_1_2[8]).requestPushNotificationPermission(
+      closure_1_6.ALLOW_TO_REQUEST,
+      _location,
+      () => {
+        callback(table[9]).hideActionSheet();
+      },
+    );
   }, items);
   const callback1 = React.useCallback(() => {
     let obj = closure_1_1(closure_1_2[7]);
@@ -43,7 +49,7 @@ export default function NotificationReactivationActionSheet(location) {
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.image, source: registerAssetDefault, resizeMode: "contain" };
-  const items2 = [callback(closure_5, obj), , , ];
+  const items2 = [callback(closure_5, obj), , ,];
   obj1 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
   const intl = _location(1236).intl;
   obj1[3] = intl.string(_location(1236).t.a4bgO0);
@@ -57,7 +63,7 @@ export default function NotificationReactivationActionSheet(location) {
   const intl3 = _location(1236).intl;
   obj4[0] = intl3.string(_location(1236).t.a4bgO0);
   obj4[1] = callback;
-  const items3 = [callback(_location(4928).Button, obj4), ];
+  const items3 = [callback(_location(4928).Button, obj4)];
   const obj5 = { text: null, onPress: null, variant: "secondary" };
   const intl4 = _location(1236).intl;
   obj5[0] = intl4.string(_location(1236).t["/L3kom"]);
@@ -68,4 +74,4 @@ export default function NotificationReactivationActionSheet(location) {
   obj[1] = items2;
   obj[0] = callback2(closure_4, obj);
   return callback(_location(5622).BottomSheet, obj);
-};
+}

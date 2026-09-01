@@ -44,7 +44,10 @@ export default function GuildNSFW(channelId) {
   obj.channelId = channelId.channelId;
   const intl = tmp(1236).intl;
   obj.disagreement = intl.string(require("../../intl/index.native.tsx").t["/g10LC"]);
-  if (require("../../modules/age_assurance/AgeVerificationAnalyticsUtils.tsx").NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY !== modalType) {
+  if (
+    require("../../modules/age_assurance/AgeVerificationAnalyticsUtils.tsx").NsfwSpaceWarningModalType
+      .NSFW_CHANNEL_AGE_VERIFY !== modalType
+  ) {
     if (tmp(8684).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
       if (tmp(8684).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
         obj = { modalType: null, disagreementButtonVariant: "primary", onDisagree: null };
@@ -68,4 +71,4 @@ export default function GuildNSFW(channelId) {
   const tmp5 = callback(ageGateVerifyContentForGuild, closure_3);
   const merged3 = Object.assign(obj);
   return jsx(GatedContentDefault, { modalType, onAgree: callback, onDisagree: handleDisagree });
-};
+}

@@ -7,7 +7,10 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4 }, label: { flexShrink: 1 } });
+let closure_6 = createCacheKey.createStyles({
+  container: { flexDirection: "row", alignItems: "center", gap: 4 },
+  label: { flexShrink: 1 },
+});
 const result = require("set").fileFinishedImporting("modules/message_request/native/MessageRequestMutualServers.tsx");
 
 export default function MessageRequestMutualServers(textVariant) {
@@ -44,7 +47,7 @@ export default function MessageRequestMutualServers(textVariant) {
     obj1[2] = substr.map((guild) => closure_1_4(closure_1_1(closure_1_2[4]), { guild, size: iconSize }, guild.id));
     tmp9 = callback(tmp4(9270).GuildIconPile, obj1);
   }
-  const items1 = [tmp9, ];
+  const items1 = [tmp9];
   const obj2 = { variant: str, color: "text-muted", lineClamp: 1, style: tmp3.label, children: null };
   let combined = formatResult;
   if (null != suffix) {
@@ -66,4 +69,4 @@ export default function MessageRequestMutualServers(textVariant) {
     }
   }
   return tmp11Result;
-};
+}

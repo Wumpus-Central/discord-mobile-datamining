@@ -13,7 +13,11 @@ let require = arg1;
 createCacheKey = { container: null, textContainer: null, subtitle: null };
 createCacheKey = { alignItems: "center", padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
+createCacheKey[1] = {
+  alignItems: "center",
+  paddingHorizontal: ThemesDefault.space.PX_8,
+  gap: ThemesDefault.space.PX_8,
+};
 createCacheKey[2] = { textAlign: "center" };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
@@ -74,12 +78,12 @@ export default function WishlistNUXAddedItemActionSheet(product) {
   }, items3);
   obj = { children: null };
   obj = { style: tmp.container, children: null };
-  const items4 = [callback(stateFromStores(memo[15]), { renderPreview: callback2 }), , ];
+  const items4 = [callback(stateFromStores(memo[15]), { renderPreview: callback2 }), ,];
   obj1 = { style: tmp.textContainer, children: null };
   const obj2 = { variant: "heading-lg/extrabold", color: "text-strong", accessibilityRole: "header", children: null };
   const intl = require(memo[17]).intl;
   obj2[3] = intl.string(require(memo[17]).t["3T2jbf"]);
-  const items5 = [callback(require(memo[16]).Text, obj2), ];
+  const items5 = [callback(require(memo[16]).Text, obj2)];
   const obj3 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
   const intl2 = require(memo[17]).intl;
   obj3[3] = intl2.string(require(memo[17]).t.SXb73A);
@@ -91,7 +95,7 @@ export default function WishlistNUXAddedItemActionSheet(product) {
   const intl3 = require(memo[17]).intl;
   obj5[0] = intl3.string(require(memo[17]).t.tM4PUv);
   obj5[1] = callback;
-  const items6 = [callback(require(memo[19]).Button, obj5), ];
+  const items6 = [callback(require(memo[19]).Button, obj5)];
   const obj6 = { text: null, onPress: null, variant: "secondary", size: "lg", grow: true };
   const intl4 = require(memo[17]).intl;
   obj6[0] = intl4.string(require(memo[17]).t.TxBQzD);
@@ -102,4 +106,4 @@ export default function WishlistNUXAddedItemActionSheet(product) {
   obj[1] = items4;
   obj[0] = callback2(View, obj);
   return callback(require(memo[14]).BottomSheet, obj);
-};
+}

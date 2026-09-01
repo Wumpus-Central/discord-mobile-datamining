@@ -222,7 +222,7 @@ export default function ConnectedGuildSettingsModalBans(guildId) {
     let obj2 = { size: "md", onChange: null };
     obj2[1] = tmp14;
     obj1[1] = callback(tmp2(tmp3[24]).SearchField, obj2);
-    const items5 = [callback(users, obj1), ];
+    const items5 = [callback(users, obj1)];
     if ("" !== searchQuery) {
       if (0 === users.length) {
         const obj3 = { Illustration: null, body: null };
@@ -247,4 +247,4 @@ export default function ConnectedGuildSettingsModalBans(guildId) {
   const items6 = [tmp15Result, tmp18(guildId(bans[27]).NavScrim, {})];
   obj5[0] = items6;
   return closure_11(closure_12, obj5);
-};
+}

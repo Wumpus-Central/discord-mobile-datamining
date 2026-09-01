@@ -85,14 +85,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         callback(obj);
       });
     },
-    syncRules: null
+    syncRules: null,
   };
   closure_2 = callback((arg0) => {
     closure_0 = arg0;
     c6 = 0;
     c7 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -124,19 +124,28 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
               let callback2;
               rules = undefined;
               aPIError = undefined;
-              if ((function isSyncNeeded(closure_0) {
-                let num = table[closure_0];
-                const timestamp = Date.now();
-                if (num == null) {
-                  num = 0;
-                }
-                return timestamp - num > 20000;
-              })(callback)) {
+              if (
+                (function isSyncNeeded(closure_0) {
+                  let num = table[closure_0];
+                  const timestamp = Date.now();
+                  if (num == null) {
+                    num = 0;
+                  }
+                  return timestamp - num > 20000;
+                })(callback)
+              ) {
                 const _Date = Date;
                 c7[tmp41] = Date.now();
                 c4 = 1;
                 callback2 = function convertToRulesByTriggerType(arr) {
-                  const obj = { [closure_5.KEYWORD]: [], [closure_5.ML_SPAM]: [], [closure_5.DEFAULT_KEYWORD_LIST]: [], [closure_5.MENTION_SPAM]: [], [closure_5.USER_PROFILE]: [], [closure_5.SERVER_POLICY]: [] };
+                  const obj = {
+                    [closure_5.KEYWORD]: [],
+                    [closure_5.ML_SPAM]: [],
+                    [closure_5.DEFAULT_KEYWORD_LIST]: [],
+                    [closure_5.MENTION_SPAM]: [],
+                    [closure_5.USER_PROFILE]: [],
+                    [closure_5.SERVER_POLICY]: [],
+                  };
                   const item = arr.forEach((arg0) => {
                     let arr = obj[arg0.triggerType];
                     if (arr != null) {
@@ -197,7 +206,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       }
     })();
   });
-  obj[5] = function() {
+  obj[5] = function () {
     const self = this;
     const apply = closure_2.apply;
     if (typeof apply === "unknown") {
@@ -227,173 +236,185 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
   const _require = arg0;
   const tmp = first(React.useState(false), 2);
   dependencyMap = tmp[1];
-  const tmp2 = first(withEqualityFn((arg0) => {
-    const items = [, ];
-    ({ syncRules: arr[0], fetching: arr[1] } = arg0);
-    return items;
-  }, require("../../../_runtime/04106_isIterable.js").shallow), 2);
+  const tmp2 = first(
+    withEqualityFn((arg0) => {
+      const items = [,];
+      ({ syncRules: arr[0], fetching: arr[1] } = arg0);
+      return items;
+    }, require("../../../_runtime/04106_isIterable.js").shallow),
+    2,
+  );
   first = tmp2[0];
   const callback = tmp4;
-  const items = [tmp[0], ];
+  const items = [tmp[0]];
   const items1 = [arg0, tmp2[1], first];
-  items[1] = React.useCallback(callback(function*() {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  items[1] = React.useCallback(
+    callback(function* () {
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
+        try {
+          c4 = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_0 = tmp3;
+              if (!c3) {
+                if (null != closure_1_0) {
+                  c3 = 1;
+                  v0(true);
+                  v0 = 2;
+                  c4 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = closure_1_2(tmp20);
+                  return obj1;
+                }
+              }
+              c4 = 3;
+            }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            v0(false);
+            throw closure_2;
+          } else if (arg0 === 1) {
             c4 = 3;
             throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_0 = tmp3;
-            if (!c3) {
-              if (null != closure_1_0) {
-                c3 = 1;
-                v0(true);
-                v0 = 2;
-                c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_2(tmp20);
-                return obj1;
-              }
-            }
-            c4 = 3;
+          } else if (arg0 !== 2) {
+            c3 = 0;
+            v0(false);
           }
-        } else if (1 === tmp7) {
           c3 = 0;
           v0(false);
-          throw closure_2;
-        } else if (arg0 === 1) {
           c4 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          c3 = 0;
-          v0(false);
-        }
-        c3 = 0;
-        v0(false);
-        c4 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } catch (tmp24) {
-        closure_2 = tmp24;
-        if (tmp4 === c3) {
-          c4 = tmp2;
-          throw tmp24;
-        } else {
-          v0 = tmp;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } catch (tmp24) {
+          closure_2 = tmp24;
+          if (tmp4 === c3) {
+            c4 = tmp2;
+            throw tmp24;
+          } else {
+            v0 = tmp;
+          }
         }
       }
-    }
-  }), items1);
+    }),
+    items1,
+  );
   return items;
 };
 export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0) {
   let _require = arg0;
   const tmp = first(React.useState(false), 2);
   dependencyMap = tmp[1];
-  const tmp2 = first(withEqualityFn((arg0) => {
-    const items = [, ];
-    ({ syncRules: arr[0], fetching: arr[1] } = arg0);
-    return items;
-  }, require("../../../_runtime/04106_isIterable.js").shallow), 2);
+  const tmp2 = first(
+    withEqualityFn((arg0) => {
+      const items = [,];
+      ({ syncRules: arr[0], fetching: arr[1] } = arg0);
+      return items;
+    }, require("../../../_runtime/04106_isIterable.js").shallow),
+    2,
+  );
   first = tmp2[0];
   const callback = tmp4;
-  let items = [tmp[0], ];
+  let items = [tmp[0]];
   const items1 = [arg0, tmp2[1], first];
-  items[1] = React.useCallback(callback(function*() {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+  items[1] = React.useCallback(
+    callback(function* () {
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
+        try {
+          c4 = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_0 = tmp3;
+              if (!c3) {
+                if (null != closure_1_0) {
+                  c3 = 1;
+                  v0(true);
+                  v0 = 2;
+                  c4 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = closure_1_2(tmp20);
+                  return obj1;
+                }
+              }
+              c4 = 3;
+            }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            v0(false);
+            throw closure_2;
+          } else if (arg0 === 1) {
             c4 = 3;
             throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_0 = tmp3;
-            if (!c3) {
-              if (null != closure_1_0) {
-                c3 = 1;
-                v0(true);
-                v0 = 2;
-                c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_2(tmp20);
-                return obj1;
-              }
-            }
-            c4 = 3;
+          } else if (arg0 !== 2) {
+            c3 = 0;
+            v0(false);
           }
-        } else if (1 === tmp7) {
           c3 = 0;
           v0(false);
-          throw closure_2;
-        } else if (arg0 === 1) {
           c4 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          c3 = 0;
-          v0(false);
-        }
-        c3 = 0;
-        v0(false);
-        c4 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } catch (tmp24) {
-        closure_2 = tmp24;
-        if (tmp4 === c3) {
-          c4 = tmp2;
-          throw tmp24;
-        } else {
-          v0 = tmp;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } catch (tmp24) {
+          closure_2 = tmp24;
+          if (tmp4 === c3) {
+            c4 = tmp2;
+            throw tmp24;
+          } else {
+            v0 = tmp;
+          }
         }
       }
-    }
-  }), items1);
+    }),
+    items1,
+  );
   const tmp5 = first(items, 2);
   _require = tmp6;
   const items2 = [arg0, tmp5[1]];
   const effect = React.useEffect(() => {
-    callback(function*() {
+    callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();

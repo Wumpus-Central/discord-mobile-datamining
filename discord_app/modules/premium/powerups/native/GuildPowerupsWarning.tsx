@@ -10,7 +10,17 @@ const require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, contentContainer: null, warningText: null, text: null };
-createCacheKey = { flexDirection: "row", alignItems: "flex-start", padding: ThemesDefault.space.PX_24, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderWidth: 1, borderColor: ThemesDefault.colors.STATUS_WARNING, borderRadius: ThemesDefault.radii.lg, gap: ThemesDefault.space.PX_8, overflow: "hidden" };
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "flex-start",
+  padding: ThemesDefault.space.PX_24,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING,
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.STATUS_WARNING,
+  borderRadius: ThemesDefault.radii.lg,
+  gap: ThemesDefault.space.PX_8,
+  overflow: "hidden",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, gap: ThemesDefault.space.PX_4, alignItems: "center" };
 let obj1 = { flex: 1, gap: ThemesDefault.space.PX_4, alignItems: "center" };
@@ -37,7 +47,7 @@ export default function GuildPowerupsWarning(warnings) {
     obj[0] = tmp.contentContainer;
     obj1 = { color: null, size: "md" };
     obj1[0] = manaTypeConsolidationExperiment(712).colors.TEXT_FEEDBACK_WARNING;
-    let items = [callback(tmp2(7708).CircleErrorIcon, obj1), , , ];
+    let items = [callback(tmp2(7708).CircleErrorIcon, obj1), , ,];
     const obj2 = { variant: "text-md/semibold", color: "text-feedback-warning", style: null, children: null };
     obj2[2] = tmp.text;
     obj2[3] = tmp7;
@@ -58,9 +68,13 @@ export default function GuildPowerupsWarning(warnings) {
         if (manaTypeConsolidationExperiment) {
           str = "experimental/body-sm/normal";
         }
-        const items = [, ];
+        const items = [,];
         ({ warningText: arr[0], text: arr[1] } = callback);
-        return closure_1_4(callback(closure_1_2[8]).Text, { variant: str, color: "text-feedback-warning", style: items, children }, "warning-" + arg1);
+        return closure_1_4(
+          callback(closure_1_2[8]).Text,
+          { variant: str, color: "text-feedback-warning", style: items, children },
+          "warning-" + arg1,
+        );
       });
     }
     items[3] = mapped;
@@ -70,4 +84,4 @@ export default function GuildPowerupsWarning(warnings) {
     const tmp12 = closure_5;
   }
   return tmp10Result;
-};
+}

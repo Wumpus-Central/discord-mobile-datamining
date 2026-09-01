@@ -21,7 +21,9 @@ function HeaderBackButton(arg0) {
   const intl = getSystemLocale.intl;
   return HeaderBackImage.getHeaderTextButton(intl.string(getSystemLocale.t["13/7kX"]), onModalClose)(arg0);
 }
-const result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx",
+);
 
 export default function EnableCommunityModal() {
   const memo = React.useMemo(() => {
@@ -39,7 +41,7 @@ export default function EnableCommunityModal() {
       },
       render() {
         return callback3(callback2(17248), {});
-      }
+      },
     };
     obj = {
       headerRight,
@@ -48,7 +50,7 @@ export default function EnableCommunityModal() {
       },
       render() {
         return callback3(callback2(17260), {});
-      }
+      },
     };
     obj = {
       headerRight,
@@ -57,12 +59,24 @@ export default function EnableCommunityModal() {
       },
       render() {
         return callback3(callback2(17261), {});
-      }
+      },
     };
-    return { [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_1]: obj, [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_2]: obj, [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_3]: obj };
+    return {
+      [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_1]: obj,
+      [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_2]: obj,
+      [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_3]: obj,
+    };
   }, []);
-  let obj = { screens: memo, initialRouteName: EnableCommunityModalSteps.EnableCommunityModalSteps.STEP_1, headerBackTitle: null };
+  let obj = {
+    screens: memo,
+    initialRouteName: EnableCommunityModalSteps.EnableCommunityModalSteps.STEP_1,
+    headerBackTitle: null,
+  };
   let intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
-  return jsx(NavigationStack.Navigator, { screens: memo, initialRouteName: EnableCommunityModalSteps.EnableCommunityModalSteps.STEP_1, headerBackTitle: null });
-};
+  return jsx(NavigationStack.Navigator, {
+    screens: memo,
+    initialRouteName: EnableCommunityModalSteps.EnableCommunityModalSteps.STEP_1,
+    headerBackTitle: null,
+  });
+}

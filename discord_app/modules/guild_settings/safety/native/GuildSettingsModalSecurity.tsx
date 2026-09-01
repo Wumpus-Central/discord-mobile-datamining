@@ -14,15 +14,28 @@ const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ GuildFeatures: c10, MFALevels: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { wrapper: { flex: 1, justifyContent: "space-between", paddingTop: 99 }, center: null, label: null, image: null, infoWrapper: null, button: null };
-createCacheKey = { alignItems: "center", flexDirection: "column", paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+createCacheKey = {
+  wrapper: { flex: 1, justifyContent: "space-between", paddingTop: 99 },
+  center: null,
+  label: null,
+  image: null,
+  infoWrapper: null,
+  button: null,
+};
+createCacheKey = {
+  alignItems: "center",
+  flexDirection: "column",
+  paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { textAlign: "center", marginBottom: 8 };
 createCacheKey[3] = { width: 295, height: 142, marginHorizontal: 35 };
 createCacheKey[4] = { marginBottom: 40 };
 createCacheKey[5] = { alignSelf: "center", paddingHorizontal: 16, marginTop: 16 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalSecurity.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_settings/safety/native/GuildSettingsModalSecurity.tsx",
+);
 
 export default function GuildSettingsModalSecurity(guildId) {
   guildId = guildId.guildId;
@@ -69,7 +82,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   obj1 = { style: tmp.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1236).intl;
   obj1[3] = intl.string(guildId(1236).t.Wi9LEV);
-  const items4 = [callback2(guildId(4474).Text, obj1), , ];
+  const items4 = [callback2(guildId(4474).Text, obj1), ,];
   const obj2 = { style: tmp.button, children: null };
   const intl2 = tmp2(1236).intl;
   const string = intl2.string;
@@ -103,9 +116,9 @@ export default function GuildSettingsModalSecurity(guildId) {
   const obj5 = { children: null };
   items4[2] = tmp17Result;
   obj[1] = items4;
-  const items5 = [closure_13(closure_4, obj), ];
+  const items5 = [closure_13(closure_4, obj)];
   const obj6 = { style: tmp.center, children: null };
-  const items6 = [callback2(closure_5, { source: stateFromStores(14398), style: tmp.image, resizeMode: "contain" }), ];
+  const items6 = [callback2(closure_5, { source: stateFromStores(14398), style: tmp.image, resizeMode: "contain" })];
   const obj8 = { style: tmp.infoWrapper, children: null };
   const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl4 = tmp2(1236).intl;
@@ -118,4 +131,4 @@ export default function GuildSettingsModalSecurity(guildId) {
   const items7 = [closure_13(closure_4, obj), callback2(guildId(5939).NavScrim, {})];
   obj5[0] = items7;
   return closure_13(closure_14, obj5);
-};
+}

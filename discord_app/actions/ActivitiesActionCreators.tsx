@@ -48,17 +48,36 @@ export default {
       return obj.dispatch(obj);
     });
     const HTTP = applicationId(num[5]).HTTP;
-    obj = { url: constants.ACTIVITIES, body: { application_id: applicationId, token, duration: num, share_activity: share_activity.shareActivity, distributor, closed: flag, exePath, voice_channel_id: voiceChannelId, session_id: sessionId, media_session_id: mediaSessionId }, retries: 1, oldFormErrors: true, rejectWithError: true };
+    obj = {
+      url: constants.ACTIVITIES,
+      body: {
+        application_id: applicationId,
+        token,
+        duration: num,
+        share_activity: share_activity.shareActivity,
+        distributor,
+        closed: flag,
+        exePath,
+        voice_channel_id: voiceChannelId,
+        session_id: sessionId,
+        media_session_id: mediaSessionId,
+      },
+      retries: 1,
+      oldFormErrors: true,
+      rejectWithError: true,
+    };
     const postResult = HTTP.post(obj);
-    HTTP.post(obj).then((body) => {
-      let obj = distributor(num[4]);
-      obj = { type: "ACTIVITY_UPDATE_SUCCESS", applicationId, token: body.body.token, duration: num, distributor };
-      obj.dispatch(obj);
-    }).catch(() => {
-      let obj = distributor(num[4]);
-      obj = { type: "ACTIVITY_UPDATE_FAIL", applicationId };
-      obj.dispatch(obj);
-    });
+    HTTP.post(obj)
+      .then((body) => {
+        let obj = distributor(num[4]);
+        obj = { type: "ACTIVITY_UPDATE_SUCCESS", applicationId, token: body.body.token, duration: num, distributor };
+        obj.dispatch(obj);
+      })
+      .catch(() => {
+        let obj = distributor(num[4]);
+        obj = { type: "ACTIVITY_UPDATE_FAIL", applicationId };
+        obj.dispatch(obj);
+      });
   },
   sendActivityInvite(activity) {
     activity = activity.activity;
@@ -84,38 +103,58 @@ export default {
       const obj4 = importDefault(channel[6]);
       const tmp7 = importDefault;
       const tmp8 = channel;
-      return tmp7Result.sendMessage(channel.id, parsed, false, obj).then((body) => {
-        let obj = closure_1_1(channel[8]);
-        obj = { location: closure_1, invite_type: null, application_id: null, guild_id: null, channel_id: null, message_id: null };
-        if (activity.type === closure_1_6.LISTENING) {
-          let APPLICATION = closure_1_8.SPOTIFY;
-        } else {
-          APPLICATION = closure_1_8.APPLICATION;
-        }
-        obj[1] = APPLICATION;
-        obj[2] = activity.application_id;
-        obj[3] = channel.getGuildId();
-        obj[4] = channel.id;
-        let id = null;
-        if (null != body) {
-          id = body.body.id;
-        }
-        obj[5] = id;
-        obj.trackWithMetadata(closure_1_7.INVITE_SENT, obj);
-        const activitySessionKey = activity(channel[9]).getActivitySessionKey(tmp2);
-        if (null != activitySessionKey) {
-          activity(tmp[10]).markChannelInvited(activitySessionKey, tmp5.id);
-          const tmp8Result = activity(tmp[10]);
-        }
-        return Promise.resolve(channel);
-      }, (arg0) => Promise.reject(arg0));
+      return tmp7Result.sendMessage(channel.id, parsed, false, obj).then(
+        (body) => {
+          let obj = closure_1_1(channel[8]);
+          obj = {
+            location: closure_1,
+            invite_type: null,
+            application_id: null,
+            guild_id: null,
+            channel_id: null,
+            message_id: null,
+          };
+          if (activity.type === closure_1_6.LISTENING) {
+            let APPLICATION = closure_1_8.SPOTIFY;
+          } else {
+            APPLICATION = closure_1_8.APPLICATION;
+          }
+          obj[1] = APPLICATION;
+          obj[2] = activity.application_id;
+          obj[3] = channel.getGuildId();
+          obj[4] = channel.id;
+          let id = null;
+          if (null != body) {
+            id = body.body.id;
+          }
+          obj[5] = id;
+          obj.trackWithMetadata(closure_1_7.INVITE_SENT, obj);
+          const activitySessionKey = activity(channel[9]).getActivitySessionKey(tmp2);
+          if (null != activitySessionKey) {
+            activity(tmp[10]).markChannelInvited(activitySessionKey, tmp5.id);
+            const tmp8Result = activity(tmp[10]);
+          }
+          return Promise.resolve(channel);
+        },
+        (arg0) => Promise.reject(arg0),
+      );
     }
   },
   sendActivityInviteUser(userId) {
     const self = this;
     ({ type: importDefault, activity: dependencyMap, content: closure_3, location: require } = userId);
     const obj = _modDef4491;
-    return _modDef4491.ensurePrivateChannel(userId.userId).then((channelId) => self.sendActivityInvite({ channelId, type: closure_1, activity: closure_2, content: closure_3, location: closure_0 }));
+    return _modDef4491
+      .ensurePrivateChannel(userId.userId)
+      .then((channelId) =>
+        self.sendActivityInvite({
+          channelId,
+          type: closure_1,
+          activity: closure_2,
+          content: closure_3,
+          location: closure_0,
+        }),
+      );
   },
   getJoinSecret(arg0, arg1, arg2, arg3, arg4) {
     closure_0 = arg0;
@@ -123,7 +162,7 @@ export default {
     closure_2 = arg2;
     const callback = arg3;
     closure_4 = arg4;
-    return callback(function*() {
+    return callback(function* () {
       closure_0 = tmp4;
       obj1 = {};
       if (null != closure_1_3) {
@@ -147,8 +186,14 @@ export default {
   },
   subscribeActivities(items) {
     closure_0 = items;
-    return callback(function*() {
-      const mapped = v0.map((userId) => ({ user_id: userId.userId, application_id: userId.applicationId, party_id: userId.partyId, message_id: userId.messageId, channel_id: userId.channelId }));
+    return callback(function* () {
+      const mapped = v0.map((userId) => ({
+        user_id: userId.userId,
+        application_id: userId.applicationId,
+        party_id: userId.partyId,
+        message_id: userId.messageId,
+        channel_id: userId.channelId,
+      }));
       const HTTP = v0(closure_1_2[5]).HTTP;
       obj1 = { url: null, body: null, retries: 1, rejectWithError: null };
       obj1[0] = closure_1_5.USER_ACTIVITY_SUBSCRIBE;
@@ -159,5 +204,5 @@ export default {
       yield HTTP.post(obj1);
       return arg1.body;
     })();
-  }
+  },
 };

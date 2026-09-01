@@ -9,8 +9,7 @@ fromBlobDefault;
 const prototype = function DiscordMd5Native() {
   return HermesBuiltin.applyArguments(new.target, new.target);
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["fromFileUri"] = function fromFileUri(uri) {
   let num = arg1;
   if (arg1 === undefined) {

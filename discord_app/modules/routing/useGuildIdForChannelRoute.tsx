@@ -14,7 +14,7 @@ export default function useGuildIdForChannelRoute(getGuildId) {
     stateFromStores = getGuildId.getGuildId();
   }
   return stateFromStores;
-};
+}
 export const getGuildIdForGenericRedirect = function getGuildIdForGenericRedirect(channel) {
   if (!obj.isFavoritesGuildId(guildId.getGuildId())) {
     guildId = channel.getGuildId();

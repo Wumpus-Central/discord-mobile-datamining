@@ -3,7 +3,9 @@ import _modDef9728 from "../../guild_settings/GuildSettingsActionCreators.tsx";
 import closure_2 from "RoleTierEditStore.tsx";
 import { GuildSettingsSections } from "../../../Constants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/GuildRoleSettingsActionCreators.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/GuildRoleSettingsActionCreators.tsx",
+);
 
 export const pushTierEditScene = function pushTierEditScene(arr, arg1) {
   closure_2.resetImperatively();

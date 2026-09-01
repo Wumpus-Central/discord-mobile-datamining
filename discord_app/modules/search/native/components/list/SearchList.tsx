@@ -216,8 +216,25 @@ const memoResult = importAllResult.memo(function SearchList(arg0) {
     tmp8 = callback(tmp7, obj);
     const tmp3Result = _modDef16222;
   }
-  const items = [tmp8, ];
-  obj1 = { ref, overrideProps: null, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "handled", data: null, renderItem: null, onEndReachedThreshold: null, onEndReached: null, scrollsToTop: true, contentContainerStyle: null, keyExtractor: null, getItemType: null, ListHeaderComponent: null, ListFooterComponent: null, ItemSeparatorComponent: null, numColumns: null };
+  const items = [tmp8];
+  obj1 = {
+    ref,
+    overrideProps: null,
+    keyboardDismissMode: "on-drag",
+    keyboardShouldPersistTaps: "handled",
+    data: null,
+    renderItem: null,
+    onEndReachedThreshold: null,
+    onEndReached: null,
+    scrollsToTop: true,
+    contentContainerStyle: null,
+    keyExtractor: null,
+    getItemType: null,
+    ListHeaderComponent: null,
+    ListFooterComponent: null,
+    ItemSeparatorComponent: null,
+    numColumns: null,
+  };
   let obj2;
   if (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent) {
     obj2 = { importantForAccessibility: "no", scrollEnabled: false };

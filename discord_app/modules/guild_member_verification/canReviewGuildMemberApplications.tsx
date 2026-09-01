@@ -6,7 +6,9 @@ import { isValidFormResponse } from "MemberVerificationUtils.tsx";
 
 const require = arg1;
 ({ GuildFeatures: c4, Permissions: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/canReviewGuildMemberApplications.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/canReviewGuildMemberApplications.tsx",
+);
 
 export const canReviewGuildMemberApplications = function canReviewGuildMemberApplications(c0) {
   guild = guild.getGuild(c0);
@@ -24,7 +26,9 @@ export const canReviewGuildMemberApplications = function canReviewGuildMemberApp
 export const useCanReviewGuildMemberApplications = function useCanReviewGuildMemberApplications(guildId) {
   const _require = guildId;
   const items = [closure_2];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.getGuild(closure_0));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_2.getGuild(closure_0),
+  );
   let hasItem = null != stateFromStores;
   if (hasItem) {
     const features = stateFromStores.features;

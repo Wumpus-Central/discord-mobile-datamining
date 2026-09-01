@@ -17,7 +17,7 @@ function _addChannelToFavorites() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0, addFavoriteChannels) {
+    return (function* (arg0, addFavoriteChannels) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -89,7 +89,7 @@ function _removeChannelFromFavorites() {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0, removeFavoriteChannel) {
+    return (function* (arg0, removeFavoriteChannel) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -154,7 +154,9 @@ function _removeChannelFromFavorites() {
 }
 function openNoAccessUpsell() {
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj.openLazy(asyncRequireImpl(10311, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
+  obj.openLazy(asyncRequireImpl(10311, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, {
+    source: "channel_context_menu",
+  });
 }
 let result = require("set").fileFinishedImporting("modules/favorites/native/buildFavoritesSectionButtons.tsx");
 
@@ -222,4 +224,4 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
     }
   }
   return tmp6;
-};
+}

@@ -7,11 +7,17 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 const require = arg1;
 createCacheKey = { connectButton: null, connectText: null };
-createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, paddingLeft: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360,
+  paddingLeft: ThemesDefault.space.PX_8,
+  paddingRight: ThemesDefault.space.PX_8,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelConnectButton.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/controls/buttons/VoicePanelConnectButton.tsx",
+);
 
 export default function ConnectButton(props) {
   let _require;
@@ -65,18 +71,27 @@ export default function ConnectButton(props) {
       if (isAtMaxCapacity) {
         obj = { channelId: null };
         obj[0] = channelId;
-        lib(guildId[11]).openAlert(lib(guildId[13]).VOICE_PANEL_MAX_CAPACITY_KEY, isChannelContentGated(channelId(guildId[13]), obj));
+        lib(guildId[11]).openAlert(
+          lib(guildId[13]).VOICE_PANEL_MAX_CAPACITY_KEY,
+          isChannelContentGated(channelId(guildId[13]), obj),
+        );
         const obj7 = lib(guildId[11]);
       } else if (isChannelContentGated) {
         obj = { guildId: null, channelId: null };
         obj[0] = guildId;
         obj[1] = channelId;
-        lib(guildId[11]).openAlert(lib(guildId[14]).VOICE_PANEL_NSFW_KEY, isChannelContentGated(channelId(guildId[14]), obj));
+        lib(guildId[11]).openAlert(
+          lib(guildId[14]).VOICE_PANEL_NSFW_KEY,
+          isChannelContentGated(channelId(guildId[14]), obj),
+        );
         const obj5 = lib(guildId[11]);
       } else if (isChannelSpoilerGated) {
         obj1 = { channelId: null };
         obj1[0] = channelId;
-        lib(guildId[11]).openAlert(lib(guildId[15]).VOICE_PANEL_SPOILER_KEY, isChannelContentGated(channelId(guildId[15]), obj1));
+        lib(guildId[11]).openAlert(
+          lib(guildId[15]).VOICE_PANEL_SPOILER_KEY,
+          isChannelContentGated(channelId(guildId[15]), obj1),
+        );
         const obj3 = lib(guildId[11]);
       }
     } else {
@@ -97,4 +112,4 @@ export default function ConnectButton(props) {
     return isChannelContentGated(lib(guildId[18]).Text, obj);
   }, items2);
   return isChannelContentGated(tmp2(guildId[16]), obj);
-};
+}

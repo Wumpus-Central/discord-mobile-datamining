@@ -5,8 +5,7 @@ import set from "../../../_runtime/00002_set.js";
 
 let set = new Set();
 const PersistedStore = initializeDefault.PersistedStore;
-class RecentlyActiveCollapseStore extends PersistedStore {
-}
+class RecentlyActiveCollapseStore extends PersistedStore {}
 const prototype = RecentlyActiveCollapseStore.prototype;
 prototype["initialize"] = function initialize(guilds) {
   set.clear();
@@ -31,7 +30,7 @@ const recentlyActiveCollapseStore = new RecentlyActiveCollapseStore(dispatcherDe
     } else {
       obj.delete(guildId);
     }
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/opt_in_channels/RecentlyActiveCollapseStore.tsx");
 

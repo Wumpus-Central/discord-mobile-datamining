@@ -6,7 +6,14 @@ import Opcode from "../../../gateway/GatewaySocketOpcode.tsx";
 import noop from "../../../../lib/RTCControlSocket.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
-let closure_3 = { Gateway: "gateway", RtcControl: "rtc_control", RemoteAuth: "remote_auth", Spotify: "spotify", Rpc: "rpc", GameServerPing: "game_server_ping" };
+let closure_3 = {
+  Gateway: "gateway",
+  RtcControl: "rtc_control",
+  RemoteAuth: "remote_auth",
+  Spotify: "spotify",
+  Rpc: "rpc",
+  GameServerPing: "game_server_ping",
+};
 let closure_4 = {
   [AnalyticEvents.DEVICE_EVENT]: (data) => {
     data = data.data;
@@ -108,7 +115,13 @@ let closure_4 = {
       if (typeof action === "string") {
         tmp2 = action;
       }
-      const obj = { action: null, network_type: null, upload_bandwidth: null, download_bandwidth: null, vpn_active: null };
+      const obj = {
+        action: null,
+        network_type: null,
+        upload_bandwidth: null,
+        download_bandwidth: null,
+        vpn_active: null,
+      };
       obj[0] = tmp2;
       const network_type = data.network_type;
       let tmp3 = null;
@@ -154,7 +167,15 @@ let closure_4 = {
       if (typeof service_name === "string") {
         tmp2 = service_name;
       }
-      const obj = { service_name: null, action: null, detail: null, fgs_operation: null, fgs_configuration_type: null, guard_allowed: null, fgs_guard_reason: null };
+      const obj = {
+        service_name: null,
+        action: null,
+        detail: null,
+        fgs_operation: null,
+        fgs_configuration_type: null,
+        guard_allowed: null,
+        fgs_guard_reason: null,
+      };
       obj[0] = tmp2;
       const action = data.action;
       let tmp3 = null;
@@ -296,7 +317,7 @@ let closure_4 = {
       tmp = obj;
     }
     return tmp;
-  }
+  },
 };
 let closure_5 = {
   [AnalyticEvents.TOUCH_EVENT]: (data) => {
@@ -313,7 +334,25 @@ let closure_5 = {
       if (currentHermesInstrumentedStatsSummary == null) {
         currentHermesInstrumentedStatsSummary = null;
       }
-      obj = { touch_action_type: null, client_timestamp_ms: null, screen_x: null, screen_y: null, view_x: null, view_y: null, total_memory_mb: null, memory_breakdown: null, hermes_instrumented_stats_summary: null, view_hierarchy: null, gesture: null, window_name: null, hit_test_duration_us: null, distance: null, duration_ms: null, velocity: null, scale_factor: null };
+      obj = {
+        touch_action_type: null,
+        client_timestamp_ms: null,
+        screen_x: null,
+        screen_y: null,
+        view_x: null,
+        view_y: null,
+        total_memory_mb: null,
+        memory_breakdown: null,
+        hermes_instrumented_stats_summary: null,
+        view_hierarchy: null,
+        gesture: null,
+        window_name: null,
+        hit_test_duration_us: null,
+        distance: null,
+        duration_ms: null,
+        velocity: null,
+        scale_factor: null,
+      };
       obj[0] = tmp2;
       const client_timestamp_ms = data.client_timestamp_ms;
       let tmp6 = null;
@@ -790,7 +829,7 @@ let closure_5 = {
       }
     }
     return obj;
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInAnalyticBuilder.tsx");
 

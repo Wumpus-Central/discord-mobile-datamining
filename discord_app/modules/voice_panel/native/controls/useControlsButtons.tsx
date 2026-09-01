@@ -55,9 +55,11 @@ let closure_9 = {
   drawerToggle(arg0, arg1) {
     const merged = Object.assign(arg1);
     return jsx(VoicePanelDrawerToggleButtonDefault, {}, arg0);
-  }
+  },
 };
-let closure_10 = { code: "function useControlsButtonsTsx1(){const{getControlsDefaultWidth,windowDimensions,safeArea}=this.__closure;return getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);}" };
+let closure_10 = {
+  code: "function useControlsButtonsTsx1(){const{getControlsDefaultWidth,windowDimensions,safeArea}=this.__closure;return getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);}",
+};
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/useControlsButtons.tsx");
 
 export default function useControlsButtons() {
@@ -69,10 +71,17 @@ export default function useControlsButtons() {
   let obj = safeArea(16682);
   treatment = obj.useConfig({ location: "VoicePanelControlButtons" }).treatment;
   let items = [stateFromStores];
-  stateFromStores = windowDimensions(589).useStateFromStores(items, () => stateFromStores.getMode() === constants.PUSH_TO_TALK);
+  stateFromStores = windowDimensions(589).useStateFromStores(
+    items,
+    () => stateFromStores.getMode() === constants.PUSH_TO_TALK,
+  );
   let obj2 = windowDimensions(589);
   const fn = function o() {
-    return windowDimensions(table[19]).getControlsDefaultWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right);
+    return windowDimensions(table[19]).getControlsDefaultWidth(
+      windowDimensions.get().width,
+      safeArea.get().left,
+      safeArea.get().right,
+    );
   };
   obj = { getControlsDefaultWidth: windowDimensions(11846).getControlsDefaultWidth, windowDimensions, safeArea };
   fn.__closure = obj;
@@ -191,4 +200,4 @@ export default function useControlsButtons() {
     }
     return mapped;
   }, items1);
-};
+}

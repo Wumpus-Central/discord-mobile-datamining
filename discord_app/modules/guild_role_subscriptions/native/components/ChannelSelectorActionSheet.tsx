@@ -25,8 +25,17 @@ function ChannelRow(channel) {
     onChannelSelected(closure_1_2[13]).hideActionSheet();
     onChannelSelected(channel);
   }, items);
-  let obj = { style: tmp.channelRow, onPress: callback, accessible: true, accessibilityLabel: tmp4, channel, selected, disableHighlightOnPress: true, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS };
-  const children = [closure_11(onChannelSelected(15705), obj), ];
+  let obj = {
+    style: tmp.channelRow,
+    onPress: callback,
+    accessible: true,
+    accessibilityLabel: tmp4,
+    channel,
+    selected,
+    disableHighlightOnPress: true,
+    resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS,
+  };
+  const children = [closure_11(onChannelSelected(15705), obj)];
   if (selected) {
     obj = { style: null, source: null };
     obj[0] = tmp.selectedIcon;
@@ -39,14 +48,32 @@ function ChannelRow(channel) {
 }
 ({ Permissions: c9, Fonts } = ME);
 ({ jsx: unpackModuleId, Fragment: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { titleContainer: null, searchContainer: null, createChannelButton: null, createChannelLabel: null, bodyContainer: null, channelRow: null, selectedIcon: null };
+createCacheKey = {
+  titleContainer: null,
+  searchContainer: null,
+  createChannelButton: null,
+  createChannelLabel: null,
+  bodyContainer: null,
+  channelRow: null,
+  selectedIcon: null,
+};
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, padding: 16, width: "100%" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, width: "100%" };
 let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, width: "100%" };
-createCacheKey[2] = { alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flexDirection: "row", padding: 16 };
+createCacheKey[2] = {
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  flexDirection: "row",
+  padding: 16,
+};
 let obj3 = {};
-let obj2 = { alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flexDirection: "row", padding: 16 };
+let obj2 = {
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  flexDirection: "row",
+  padding: 16,
+};
 const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_LINK, 16));
 obj3.marginStart = 8;
 createCacheKey[3] = obj3;
@@ -55,7 +82,9 @@ createCacheKey[5] = { paddingHorizontal: 8, paddingVertical: 4 };
 createCacheKey[6] = { end: 16, top: 10, position: "absolute" };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/ChannelSelectorActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/ChannelSelectorActionSheet.tsx",
+);
 
 export default function ChannelSelectorActionSheet(guildId) {
   guildId = guildId.guildId;
@@ -72,46 +101,55 @@ export default function ChannelSelectorActionSheet(guildId) {
   let obj = guildId(589);
   let items = [closure_7, closure_8];
   const items1 = [guildId, first];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
-    const items = [];
-    const categories = closure_1_7.getCategories(guildId);
-    const iter = categories._categories[Symbol.iterator]();
-    while (iter !== undefined) {
-      let tmp2 = categories[iter.next().channel.id];
-      let tmp3 = tmp2;
-      let tmp4 = tmp2;
-      for (const item10020 of tmp2) {
-        let tmp5 = item10020;
-        let tmp6 = closure_1_8;
-        let tmp7 = closure_1_9;
-        let canResult = closure_1_8.can(closure_1_9.VIEW_CHANNEL, item10020.channel);
-        if (canResult) {
-          let hasItem = "" === first;
-          if (!hasItem) {
-            let tmp11 = item10020;
-            let name = tmp5.channel.name;
-            hasItem = name.includes(tmp9);
+  const stateFromStoresArray = obj.useStateFromStoresArray(
+    items,
+    () => {
+      const items = [];
+      const categories = closure_1_7.getCategories(guildId);
+      const iter = categories._categories[Symbol.iterator]();
+      while (iter !== undefined) {
+        let tmp2 = categories[iter.next().channel.id];
+        let tmp3 = tmp2;
+        let tmp4 = tmp2;
+        for (const item10020 of tmp2) {
+          let tmp5 = item10020;
+          let tmp6 = closure_1_8;
+          let tmp7 = closure_1_9;
+          let canResult = closure_1_8.can(closure_1_9.VIEW_CHANNEL, item10020.channel);
+          if (canResult) {
+            let hasItem = "" === first;
+            if (!hasItem) {
+              let tmp11 = item10020;
+              let name = tmp5.channel.name;
+              hasItem = name.includes(tmp9);
+            }
+            canResult = hasItem;
           }
-          canResult = hasItem;
-        }
-        if (canResult) {
-          let tmp12 = item10020;
-          let arr = items.push(tmp5.channel);
+          if (canResult) {
+            let tmp12 = item10020;
+            let arr = items.push(tmp5.channel);
+          }
+          continue;
         }
         continue;
       }
-      continue;
-    }
-    return items;
-  }, items1);
+      return items;
+    },
+    items1,
+  );
   obj = { scrollable: true, ref, header: null, children: null };
   obj = { style: tmp.titleContainer, children: null };
   if (title == null) {
     const intl = tmp5(1236).intl;
     title = intl.string(tmp5(1236).t.PDn2fR);
   }
-  obj[1] = closure_11(guildId(4474).Text, { accessibilityRole: "header", variant: "text-md/bold", color: "mobile-text-heading-primary", children: title });
-  const items2 = [closure_11(View, obj), , ];
+  obj[1] = closure_11(guildId(4474).Text, {
+    accessibilityRole: "header",
+    variant: "text-md/bold",
+    color: "mobile-text-heading-primary",
+    children: title,
+  });
+  const items2 = [closure_11(View, obj), ,];
   obj1 = { style: tmp.searchContainer, children: null };
   let obj2 = { size: "md", placeholder: null, onChange: null, onFocus: null };
   const intl2 = tmp5(1236).intl;
@@ -144,7 +182,11 @@ export default function ChannelSelectorActionSheet(guildId) {
           callback(channel);
         }
       };
-      obj2.pushLazy(guildId(closure_1_2[25])(closure_1_2[24], closure_1_2.paths), obj, closure_1_1(closure_1_2[27]).CREATE_CHANNEL_MODAL_KEY);
+      obj2.pushLazy(
+        guildId(closure_1_2[25])(closure_1_2[24], closure_1_2.paths),
+        obj,
+        closure_1_1(closure_1_2[27]).CREATE_CHANNEL_MODAL_KEY,
+      );
     };
     let str = tmp.createChannelLabel.color;
     str = undefined;
@@ -154,7 +196,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     const obj4 = { color: null, source: null };
     obj4[0] = str;
     obj4[1] = registerAssetDefault;
-    const items3 = [tmp8(tmp5(1297).Icon, obj4), ];
+    const items3 = [tmp8(tmp5(1297).Icon, obj4)];
     const obj5 = { style: null, variant: "text-md/medium", color: "text-link", children: null };
     obj5[0] = tmp.createChannelLabel;
     const intl3 = tmp5(1236).intl;
@@ -173,8 +215,12 @@ export default function ChannelSelectorActionSheet(guildId) {
     },
     renderItem(item) {
       item = item.item;
-      return closure_1_11(closure_1_15, { channel: item, onChannelSelected: closure_1, selected: item.id === closure_2 });
-    }
+      return closure_1_11(closure_1_15, {
+        channel: item,
+        onChannelSelected: closure_1,
+        selected: item.id === closure_2,
+      });
+    },
   });
   return closure_11(guildId(5989).ActionSheet, obj);
-};
+}

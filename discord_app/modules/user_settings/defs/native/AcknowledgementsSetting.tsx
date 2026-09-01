@@ -17,7 +17,7 @@ const pressable = createToggle.createPressable({
   onPress: function handleAcknowledgementsSettingPress() {
     _modDef4190.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
   },
-  withArrow: true
+  withArrow: true,
 });
 const obj = {
   useTitle() {
@@ -29,7 +29,7 @@ const obj = {
   onPress: function handleAcknowledgementsSettingPress() {
     _modDef4190.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
   },
-  withArrow: true
+  withArrow: true,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AcknowledgementsSetting.tsx");
 

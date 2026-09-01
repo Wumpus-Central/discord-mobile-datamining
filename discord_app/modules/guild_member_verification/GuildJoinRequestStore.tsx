@@ -85,23 +85,27 @@ const map = new Map();
 let closure_6 = {};
 let closure_8 = {};
 let c9 = false;
-function StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_ID(arg0) {
-
-}
-function StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_STATUS(arg0, arg1) {
-
-}
-const secondaryIndexMap = new require("version").SecondaryIndexMap(guildJoinRequestsIndex, (joinRequestId) => "" + joinRequestId.joinRequestId);
-const secondaryIndexMap1 = new require("version").SecondaryIndexMap(guildJoinRequestsIndex, (joinRequestId) => "" + joinRequestId.joinRequestId);
-const secondaryIndexMap2 = new require("version").SecondaryIndexMap(guildJoinRequestsIndex, (actionedAt) => "" + actionedAt.actionedAt);
+function StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_ID(arg0) {}
+function StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_STATUS(arg0, arg1) {}
+const secondaryIndexMap = new require("version").SecondaryIndexMap(
+  guildJoinRequestsIndex,
+  (joinRequestId) => "" + joinRequestId.joinRequestId,
+);
+const secondaryIndexMap1 = new require("version").SecondaryIndexMap(
+  guildJoinRequestsIndex,
+  (joinRequestId) => "" + joinRequestId.joinRequestId,
+);
+const secondaryIndexMap2 = new require("version").SecondaryIndexMap(
+  guildJoinRequestsIndex,
+  (actionedAt) => "" + actionedAt.actionedAt,
+);
 let closure_16 = {};
 let closure_17 = {};
 let closure_18 = {};
 let closure_19 = {};
 let closure_20 = 10 * setDefault.Seconds.MINUTE;
 const Store = initializeDefault.Store;
-class GuildJoinRequestStoreV2 extends Store {
-}
+class GuildJoinRequestStoreV2 extends Store {}
 const prototype = GuildJoinRequestStoreV2.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3);
@@ -266,7 +270,7 @@ const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(dispatcherDefault, {
   },
   GUILD_JOIN_REQUESTS_SET_SELECTED: function handleGuildJoinRequestSelect(guildId) {
     closure_18[guildId.guildId] = guildId.request;
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestStore.tsx");
 

@@ -34,7 +34,7 @@ function _postMessageToWebView() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       const table = tmp3;
       c4 = 1;
       yield closure_1_9.injectJavaScript(closure_1_1(closure_1_2[10])(closure_0));
@@ -158,7 +158,12 @@ class FramesNativeManager extends tmp5 {
     if (obj.isNotNullish(global)) {
       tmp3 = closure_1;
       obj2 = require("dispatcher");
-      obj = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId: null, lockState: null, pictureInPictureLockState: null };
+      obj = {
+        type: "FRAME_SET_ORIENTATION_LOCK_STATE",
+        frameId: null,
+        lockState: null,
+        pictureInPictureLockState: null,
+      };
       obj[1] = global;
       dispatchResult = obj2.dispatch(obj);
     }

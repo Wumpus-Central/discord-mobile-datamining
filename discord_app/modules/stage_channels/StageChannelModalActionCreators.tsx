@@ -45,7 +45,10 @@ function connectToStage(channel, flag) {
     return false;
   } else {
     allApplicationStreamsForChannel = allApplicationStreamsForChannel.getAllApplicationStreamsForChannel(channel.id);
-    const found = allApplicationStreamsForChannel.find((currentUserActiveStream) => !streamMarkedFull.isStreamMarkedFull(channel(table[13]).encodeStreamKey(currentUserActiveStream)));
+    const found = allApplicationStreamsForChannel.find(
+      (currentUserActiveStream) =>
+        !streamMarkedFull.isStreamMarkedFull(channel(table[13]).encodeStreamKey(currentUserActiveStream)),
+    );
     if (null != found) {
       require("../../actions/StreamActionCreators.tsx").watchStream(found, { noFocus: true });
       const obj6 = watchStream;
@@ -73,7 +76,10 @@ function connectAndOpen(channel, flag) {
     result = voiceChannelId !== channel.id;
   }
   if (result) {
-    result = require("../channel/shouldShowVoiceChannelChangeConfirmation.tsx").shouldShowVoiceChannelChangeConfirmation(channel);
+    result =
+      require("../channel/shouldShowVoiceChannelChangeConfirmation.tsx").shouldShowVoiceChannelChangeConfirmation(
+        channel,
+      );
     const obj = shouldShowVoiceChannelChangeConfirmation;
   }
   if (result) {
@@ -101,7 +107,7 @@ export const connectOrLurkStage = function connectOrLurkStage(closure_0, closure
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -196,7 +202,7 @@ export const connectOrLurkStage = function connectOrLurkStage(closure_0, closure
       }
     })();
   });
-  return new Promise(function() {
+  return new Promise(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

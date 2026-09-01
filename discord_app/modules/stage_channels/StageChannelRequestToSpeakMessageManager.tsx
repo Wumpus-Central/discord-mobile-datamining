@@ -17,7 +17,9 @@ class StageChannelRequestToSpeakMessageManager extends tmp2 {
     return applyArgumentsResult;
   }
 }
-StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceStates) {
+StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(
+  voiceStates,
+) {
   voiceStates = voiceStates.voiceStates;
   const item = voiceStates.forEach((requestToSpeakTimestamp) => {
     ({ channelId, userId } = requestToSpeakTimestamp);
@@ -30,7 +32,11 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = tmp11(tmp12[9]).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
+                  const result = tmp11(tmp12[9]).sendStageRequestToSpeakEphemeralMessage(
+                    channelId,
+                    user,
+                    requestToSpeakTimestamp,
+                  );
                   const tmp11Result = tmp11(tmp12[9]);
                 }
               } else {
@@ -59,6 +65,8 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
   });
 };
 const stageChannelRequestToSpeakMessageManager = new StageChannelRequestToSpeakMessageManager();
-let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelRequestToSpeakMessageManager.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/stage_channels/StageChannelRequestToSpeakMessageManager.tsx",
+);
 
 export default stageChannelRequestToSpeakMessageManager;

@@ -9,7 +9,14 @@ const require = arg1;
 ({ Linking: c4, ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  const container = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: "100%", display: "flex", justifyContent: null, paddingLeft: null, paddingRight: null };
+  const container = {
+    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    height: "100%",
+    display: "flex",
+    justifyContent: null,
+    paddingLeft: null,
+    paddingRight: null,
+  };
   let str = "center";
   if (arg0) {
     str = "space-between";
@@ -38,24 +45,29 @@ export default function ExternalLink(externalURL) {
   const effect = React.useEffect(() => {
     callback();
   }, items1);
-  obj = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: tmp.container, children: null };
+  obj = {
+    alwaysBounceVertical: false,
+    keyboardShouldPersistTaps: "handled",
+    contentContainerStyle: tmp.container,
+    children: null,
+  };
   obj = { children: null };
   obj1 = { children: null };
   const intl = externalURL(callback[8]).intl;
   obj1[0] = intl.string(externalURL(callback[8]).t["0Niu/F"]);
-  const items2 = [callback(importDefault(callback[7]), obj1), ];
+  const items2 = [callback(importDefault(callback[7]), obj1)];
   const obj2 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = externalURL(callback[8]).intl;
   obj2[3] = intl2.string(externalURL(callback[8]).t.nToOEg);
   items2[1] = callback(externalURL(callback[9]).Text, obj2);
   obj[0] = items2;
-  const items3 = [callback2(closure_6, obj), ];
+  const items3 = [callback2(closure_6, obj)];
   const obj3 = { children: null };
   const obj4 = { shrink: true, variant: "primary", text: null, onPress: null };
   const intl3 = externalURL(callback[8]).intl;
   obj4[2] = intl3.string(externalURL(callback[8]).t["2ixEBi"]);
   obj4[3] = callback;
-  const items4 = [callback(externalURL(callback[11]).Button, obj4), ];
+  const items4 = [callback(externalURL(callback[11]).Button, obj4)];
   const obj5 = { shrink: true, variant: "secondary", text: null, onPress: null };
   const intl4 = externalURL(callback[8]).intl;
   obj5[2] = intl4.string(externalURL(callback[8]).t.j3cG2p);
@@ -67,4 +79,4 @@ export default function ExternalLink(externalURL) {
   items3[1] = callback2(externalURL(callback[10]).ButtonGroup, obj3);
   obj[3] = items3;
   return callback2(closure_5, obj);
-};
+}

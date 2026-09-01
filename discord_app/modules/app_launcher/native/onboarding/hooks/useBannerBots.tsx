@@ -11,7 +11,13 @@ export const useBannerBots = function useBannerBots(context) {
   let first1;
   let obj = (function useAppsMap(context) {
     let apps;
-    apps = apps(11639).useApplicationsInContext({ context: context.context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+    apps = apps(11639).useApplicationsInContext({
+      context: context.context,
+      onlyWithCommands: true,
+      includeBuiltIn: false,
+      includeEmbeddedApps: false,
+      includeNonEmbeddedApps: true,
+    }).apps;
     const items = [apps];
     return React.useMemo(() => {
       const map = new Map();
@@ -22,12 +28,21 @@ export const useBannerBots = function useBannerBots(context) {
       return map;
     }, items);
   })({ context });
-  let apps = first1(11639).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+  let apps = first1(11639).useApplicationsInContext({
+    context,
+    onlyWithCommands: true,
+    includeBuiltIn: false,
+    includeEmbeddedApps: false,
+    includeNonEmbeddedApps: true,
+  }).apps;
   const obj2 = first1(11639);
   const tmp2 = first1;
   const obj3 = (function useCommandsMap(context) {
     let commands;
-    commands = commands(11639).useApplicationCommandsInContext({ context: context.context, includeBuiltIn: false }).commands;
+    commands = commands(11639).useApplicationCommandsInContext({
+      context: context.context,
+      includeBuiltIn: false,
+    }).commands;
     const items = [commands];
     return React.useMemo(() => {
       const map = new Map();
@@ -51,7 +66,7 @@ export const useBannerBots = function useBannerBots(context) {
           guild_id = channel.guild_id;
         }
         return closure_1_3.getGuild(guild_id);
-      })
+      }),
     };
     return context(8155).useTopCommands(obj);
   })({ context });
@@ -63,7 +78,9 @@ export const useBannerBots = function useBannerBots(context) {
   const activityApplications = first1(11610).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
   const obj4 = first1(11610);
   let items = [closure_4];
-  const stateFromStores = tmp2(589).useStateFromStores(items, () => recentApplicationCommandMetadata.getRecentApplicationCommandMetadata());
+  const stateFromStores = tmp2(589).useStateFromStores(items, () =>
+    recentApplicationCommandMetadata.getRecentApplicationCommandMetadata(),
+  );
   let value = null;
   if (null != stateFromStores) {
     value = obj.get(stateFromStores.applicationId);

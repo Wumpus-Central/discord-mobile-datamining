@@ -4,7 +4,16 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
 import _modDef7880 from "../../reactions/canAddNewReactions.tsx";
 
-let obj = { VIEW_PROFILE: "view_profile", ADD_REACTION: "add_reaction", ADD_QUICK_REACTION: "add_quick_reaction", REPLY: "reply", MESSAGE_ACTIONS_MENU: "message_actions_menu", EDIT_GDM: "edit_gdm", OPEN_PINS: "open_pins", JUMP_TO_MESSAGE: "jump_to_message" };
+let obj = {
+  VIEW_PROFILE: "view_profile",
+  ADD_REACTION: "add_reaction",
+  ADD_QUICK_REACTION: "add_quick_reaction",
+  REPLY: "reply",
+  MESSAGE_ACTIONS_MENU: "message_actions_menu",
+  EDIT_GDM: "edit_gdm",
+  OPEN_PINS: "open_pins",
+  JUMP_TO_MESSAGE: "jump_to_message",
+};
 let result = set.fileFinishedImporting("modules/messages/native/MessageAccessibilityActions.tsx");
 
 export const MessageAccessibilityAction = obj;

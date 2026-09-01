@@ -5,8 +5,7 @@ import dispatcherDefault from "../../../Dispatcher.tsx";
 let closure_0 = [];
 let c1 = null;
 const Store = initializeDefault.Store;
-class ApplicationDirectoryCategoriesStore extends Store {
-}
+class ApplicationDirectoryCategoriesStore extends Store {}
 const prototype = ApplicationDirectoryCategoriesStore.prototype;
 prototype["getLastFetchTimeMs"] = function getLastFetchTimeMs() {
   return c1;
@@ -23,8 +22,10 @@ const applicationDirectoryCategoriesStore = new ApplicationDirectoryCategoriesSt
   APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS: function handleFetchAppDirectoryCategoriesSuccess(categories) {
     categories = categories.categories;
     closure_1 = Date.now();
-  }
+  },
 });
-const result = require("set").fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryCategoriesStore.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/global_discovery_apps/stores/ApplicationDirectoryCategoriesStore.tsx",
+);
 
 export default applicationDirectoryCategoriesStore;

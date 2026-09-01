@@ -52,18 +52,20 @@ function updateUserGuildSettingsInternal(id, channel_overrides) {
   });
   closure_0 = id;
   if (true === obj.muted) {
-    if (obj5.setTimer(id, obj.mute_config, () => {
-      let channel_overrides;
-      if (table[key10044] != null) {
-        channel_overrides = tmp2.channel_overrides;
-      }
-      if (channel_overrides == null) {
-        channel_overrides = {};
-      }
-      const merged = Object.assign({ muted: false });
-      closure_1_30(key10044, { channel_overrides });
-      closure_1_1(closure_1_3[13]).dispatch({ type: "GUILD_MUTE_EXPIRED", guildId: key10044 });
-    })) {
+    if (
+      obj5.setTimer(id, obj.mute_config, () => {
+        let channel_overrides;
+        if (table[key10044] != null) {
+          channel_overrides = tmp2.channel_overrides;
+        }
+        if (channel_overrides == null) {
+          channel_overrides = {};
+        }
+        const merged = Object.assign({ muted: false });
+        closure_1_30(key10044, { channel_overrides });
+        closure_1_1(closure_1_3[13]).dispatch({ type: "GUILD_MUTE_EXPIRED", guildId: key10044 });
+      })
+    ) {
       obj.muted = false;
     }
   }
@@ -71,37 +73,43 @@ function updateUserGuildSettingsInternal(id, channel_overrides) {
   const item1 = tmp14Result.forEach(obj.channel_overrides, (muted) => {
     closure_0 = muted;
     if (true === muted.muted) {
-      if (closure_1_22.setTimer(muted.channel_id, muted.mute_config, () => {
-        const channel_id = muted.channel_id;
-        obj = { channel_id, muted: false };
-        let channel_overrides;
-        if (dependencyMap[muted] != null) {
-          channel_overrides = tmp3.channel_overrides;
-        }
-        if (channel_overrides == null) {
-          channel_overrides = {};
-        }
-        obj = { muted: false };
-        const merged = Object.assign(channel_overrides[channel_id]);
-        const merged1 = Object.assign(obj);
-        obj = { [channel_id]: obj };
-        let tmp8 = obj;
-        if (null != dependencyMap[muted]) {
-          let channel_overrides1;
-          if (tmp6 != null) {
-            channel_overrides1 = tmp6.channel_overrides;
+      if (
+        closure_1_22.setTimer(muted.channel_id, muted.mute_config, () => {
+          const channel_id = muted.channel_id;
+          obj = { channel_id, muted: false };
+          let channel_overrides;
+          if (dependencyMap[muted] != null) {
+            channel_overrides = tmp3.channel_overrides;
           }
-          if (channel_overrides1 == null) {
-            channel_overrides1 = {};
+          if (channel_overrides == null) {
+            channel_overrides = {};
           }
-          obj1 = {};
-          const merged2 = Object.assign(channel_overrides1);
-          const merged3 = Object.assign(obj);
-          tmp8 = obj1;
-        }
-        closure_2_30(muted, { channel_overrides: tmp8 });
-        closure_2_1(closure_2_3[13]).dispatch({ type: "CHANNEL_MUTE_EXPIRED", guildId: muted, channelId: muted.channel_id });
-      })) {
+          obj = { muted: false };
+          const merged = Object.assign(channel_overrides[channel_id]);
+          const merged1 = Object.assign(obj);
+          obj = { [channel_id]: obj };
+          let tmp8 = obj;
+          if (null != dependencyMap[muted]) {
+            let channel_overrides1;
+            if (tmp6 != null) {
+              channel_overrides1 = tmp6.channel_overrides;
+            }
+            if (channel_overrides1 == null) {
+              channel_overrides1 = {};
+            }
+            obj1 = {};
+            const merged2 = Object.assign(channel_overrides1);
+            const merged3 = Object.assign(obj);
+            tmp8 = obj1;
+          }
+          closure_2_30(muted, { channel_overrides: tmp8 });
+          closure_2_1(closure_2_3[13]).dispatch({
+            type: "CHANNEL_MUTE_EXPIRED",
+            guildId: muted,
+            channelId: muted.channel_id,
+          });
+        })
+      ) {
         muted.muted = false;
       }
     }
@@ -109,7 +117,9 @@ function updateUserGuildSettingsInternal(id, channel_overrides) {
   dependencyMap[id] = obj;
   let valueResult = null;
   if (null != dependencyMap[id].channel_overrides) {
-    const found = tmp14(12)(tmp19.channel_overrides).filter((mute_config) => callback(table[10]).computeIsMuted(mute_config));
+    const found = tmp14(12)(tmp19.channel_overrides).filter((mute_config) =>
+      callback(table[10]).computeIsMuted(mute_config),
+    );
     const arr3 = tmp14(12)(tmp19.channel_overrides);
     valueResult = found.map((channel_id) => channel_id.channel_id).value();
     const iter = found.map((channel_id) => channel_id.channel_id);
@@ -225,7 +235,20 @@ let closure_20 = { flags: 0 };
 let closure_21 = new resetDefault();
 let tmp5 = new resetDefault();
 let closure_22 = new resetDefault();
-let obj = { suppress_everyone: false, suppress_roles: false, mute_scheduled_events: false, mobile_push: true, muted: false, message_notifications: UserNotificationSettings.ALL_MESSAGES, flags: 0, channel_overrides: {}, notify_highlights: ME.HighlightSettings.NULL, hide_muted_channels: false, version: -1, mute_config: null };
+let obj = {
+  suppress_everyone: false,
+  suppress_roles: false,
+  mute_scheduled_events: false,
+  mobile_push: true,
+  muted: false,
+  message_notifications: UserNotificationSettings.ALL_MESSAGES,
+  flags: 0,
+  channel_overrides: {},
+  notify_highlights: ME.HighlightSettings.NULL,
+  hide_muted_channels: false,
+  version: -1,
+  mute_config: null,
+};
 obj = {};
 obj = {};
 let merged = Object.assign(obj);
@@ -242,8 +265,7 @@ let set1 = new Set();
 let closure_28 = {};
 let closure_29 = {};
 const PersistedStore = initializeDefault.PersistedStore;
-class UserGuildSettingsStoreClass extends PersistedStore {
-}
+class UserGuildSettingsStoreClass extends PersistedStore {}
 const prototype = UserGuildSettingsStoreClass.prototype;
 prototype["initialize"] = function initialize(useNewNotifications) {
   this.waitFor(closure_8, closure_9, closure_4, closure_5, closure_10);
@@ -264,7 +286,9 @@ prototype["initialize"] = function initialize(useNewNotifications) {
       const item = applyDefault.forEach(userGuildSettings, (channel_overrides) => {
         let valueResult = null;
         if (null != channel_overrides.channel_overrides) {
-          const found = callback(table[11])(channel_overrides.channel_overrides).filter((mute_config) => callback(table[10]).computeIsMuted(mute_config));
+          const found = callback(table[11])(channel_overrides.channel_overrides).filter((mute_config) =>
+            callback(table[10]).computeIsMuted(mute_config),
+          );
           const arr = callback(table[11])(channel_overrides.channel_overrides);
           valueResult = found.map((channel_id) => channel_id.channel_id).value();
           const iter = found.map((channel_id) => channel_id.channel_id);
@@ -282,7 +306,7 @@ Object.defineProperty(prototype, "mentionOnAllMessages", {
   get: function mentionOnAllMessages() {
     return c19;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isSuppressEveryoneEnabled"] = function isSuppressEveryoneEnabled(guildId) {
   if (dependencyMap[guildId] != null) {
@@ -509,7 +533,9 @@ prototype["resolveUnreadSetting"] = function resolveUnreadSetting(channel) {
       if (guildUnreadSetting !== tmp5.UNSET) {
         return guildUnreadSetting;
       } else {
-        self.resolvedMessageNotifications(channel) === UserNotificationSettings.ALL_MESSAGES ? tmp5.ALL_MESSAGES : tmp5.ONLY_MENTIONS;
+        self.resolvedMessageNotifications(channel) === UserNotificationSettings.ALL_MESSAGES
+          ? tmp5.ALL_MESSAGES
+          : tmp5.ONLY_MENTIONS;
       }
     }
   } else {
@@ -613,7 +639,8 @@ prototype["isChannelRecordOrParentOptedIn"] = function isChannelRecordOrParentOp
     const self = this;
     let isChannelOptedInResult = this.isChannelOptedIn(channel.guild_id, channel.id, arg1);
     if (!isChannelOptedInResult) {
-      isChannelOptedInResult = null != channel.parent_id && self.isChannelOptedIn(channel.guild_id, channel.parent_id, arg1);
+      isChannelOptedInResult =
+        null != channel.parent_id && self.isChannelOptedIn(channel.guild_id, channel.parent_id, arg1);
       const tmp4 = null != channel.parent_id && self.isChannelOptedIn(channel.guild_id, channel.parent_id, arg1);
     }
     tmp = isChannelOptedInResult;
@@ -732,13 +759,13 @@ Object.defineProperty(prototype, "accountNotificationSettings", {
   get: function accountNotificationSettings() {
     return closure_20;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "useNewNotifications", {
   get: function useNewNotifications() {
     return c18;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getGuildUnreadSetting"] = function getGuildUnreadSetting(guild_id) {
   if (c18) {
@@ -785,7 +812,9 @@ prototype["getChannelUnreadSetting"] = function getChannelUnreadSetting(guild_id
   if (obj.hasFlag(channelIdFlags, constants.UNREADS_ALL_MESSAGES)) {
     let ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
   } else {
-    ALL_MESSAGES = hasFlagAll.hasFlag(channelIdFlags, constants.UNREADS_ONLY_MENTIONS) ? tmp5.ONLY_MENTIONS : tmp5.UNSET;
+    ALL_MESSAGES = hasFlagAll.hasFlag(channelIdFlags, constants.UNREADS_ONLY_MENTIONS)
+      ? tmp5.ONLY_MENTIONS
+      : tmp5.UNSET;
     const tmp2Result = hasFlagAll;
   }
   return ALL_MESSAGES;
@@ -907,18 +936,20 @@ const userGuildSettingsStoreClass = new UserGuildSettingsStoreClass(dispatcherDe
         let tmp5 = dependencyMap[key10044];
         if (true === tmp5.muted) {
           let tmp6 = navigation;
-          if (navigation.setTimer(key10044, tmp5.mute_config, () => {
-            let channel_overrides;
-            if (table[key10044] != null) {
-              channel_overrides = tmp2.channel_overrides;
-            }
-            if (channel_overrides == null) {
-              channel_overrides = {};
-            }
-            const merged = Object.assign({ muted: false });
-            closure_1_30(key10044, { channel_overrides });
-            closure_1_1(closure_1_3[13]).dispatch({ type: "GUILD_MUTE_EXPIRED", guildId: key10044 });
-          })) {
+          if (
+            navigation.setTimer(key10044, tmp5.mute_config, () => {
+              let channel_overrides;
+              if (table[key10044] != null) {
+                channel_overrides = tmp2.channel_overrides;
+              }
+              if (channel_overrides == null) {
+                channel_overrides = {};
+              }
+              const merged = Object.assign({ muted: false });
+              closure_1_30(key10044, { channel_overrides });
+              closure_1_1(closure_1_3[13]).dispatch({ type: "GUILD_MUTE_EXPIRED", guildId: key10044 });
+            })
+          ) {
             tmp5.muted = false;
           }
         }
@@ -928,37 +959,43 @@ const userGuildSettingsStoreClass = new UserGuildSettingsStoreClass(dispatcherDe
         let item1 = arr2.forEach(tmp5.channel_overrides, (muted) => {
           closure_0 = muted;
           if (true === muted.muted) {
-            if (closure_1_22.setTimer(muted.channel_id, muted.mute_config, () => {
-              const channel_id = muted.channel_id;
-              obj = { channel_id, muted: false };
-              let channel_overrides;
-              if (dependencyMap[muted] != null) {
-                channel_overrides = tmp3.channel_overrides;
-              }
-              if (channel_overrides == null) {
-                channel_overrides = {};
-              }
-              obj = { muted: false };
-              const merged = Object.assign(channel_overrides[channel_id]);
-              const merged1 = Object.assign(obj);
-              obj = { [channel_id]: obj };
-              let tmp8 = obj;
-              if (null != dependencyMap[muted]) {
-                let channel_overrides1;
-                if (tmp6 != null) {
-                  channel_overrides1 = tmp6.channel_overrides;
+            if (
+              closure_1_22.setTimer(muted.channel_id, muted.mute_config, () => {
+                const channel_id = muted.channel_id;
+                obj = { channel_id, muted: false };
+                let channel_overrides;
+                if (dependencyMap[muted] != null) {
+                  channel_overrides = tmp3.channel_overrides;
                 }
-                if (channel_overrides1 == null) {
-                  channel_overrides1 = {};
+                if (channel_overrides == null) {
+                  channel_overrides = {};
                 }
-                obj1 = {};
-                const merged2 = Object.assign(channel_overrides1);
-                const merged3 = Object.assign(obj);
-                tmp8 = obj1;
-              }
-              closure_2_30(muted, { channel_overrides: tmp8 });
-              closure_2_1(closure_2_3[13]).dispatch({ type: "CHANNEL_MUTE_EXPIRED", guildId: muted, channelId: muted.channel_id });
-            })) {
+                obj = { muted: false };
+                const merged = Object.assign(channel_overrides[channel_id]);
+                const merged1 = Object.assign(obj);
+                obj = { [channel_id]: obj };
+                let tmp8 = obj;
+                if (null != dependencyMap[muted]) {
+                  let channel_overrides1;
+                  if (tmp6 != null) {
+                    channel_overrides1 = tmp6.channel_overrides;
+                  }
+                  if (channel_overrides1 == null) {
+                    channel_overrides1 = {};
+                  }
+                  obj1 = {};
+                  const merged2 = Object.assign(channel_overrides1);
+                  const merged3 = Object.assign(obj);
+                  tmp8 = obj1;
+                }
+                closure_2_30(muted, { channel_overrides: tmp8 });
+                closure_2_1(closure_2_3[13]).dispatch({
+                  type: "CHANNEL_MUTE_EXPIRED",
+                  guildId: muted,
+                  channelId: muted.channel_id,
+                });
+              })
+            ) {
               muted.muted = false;
             }
           }
@@ -1095,7 +1132,7 @@ const userGuildSettingsStoreClass = new UserGuildSettingsStoreClass(dispatcherDe
   },
   CHANNEL_MUTE_EXPIRED() {
     return true;
-  }
+  },
 });
 let result = set.fileFinishedImporting("stores/UserGuildSettingsStore.tsx");
 

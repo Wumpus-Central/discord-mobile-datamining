@@ -21,7 +21,7 @@ set = {
   eventName: "keyCommandShowDevTools",
   discoverabilityTitle: "Open DevTools Panel",
   onKeyCommand() {
-    return callback(function*() {
+    return callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -73,7 +73,7 @@ set = {
         }
       }
     })();
-  }
+  },
 };
 let items = [set];
 let result = set.fileFinishedImporting("modules/devtools/native/components/DevToolsLazy.tsx");
@@ -103,4 +103,4 @@ export default function DevToolsLazy() {
     }
   }
   return null;
-};
+}

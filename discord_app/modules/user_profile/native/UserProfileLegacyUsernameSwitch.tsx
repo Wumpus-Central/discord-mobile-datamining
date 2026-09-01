@@ -40,5 +40,11 @@ export default function UserProfileLegacyUsernameSwitch(pendingLegacyUsernameDis
       obj.setPendingChanges(obj);
     }
   };
-  return jsx(setting(14272).UserProfileEditFormSwitch, { value: !tmp4, label: null, subLabel: null, accessibilityLabel: null, onValueChange: null });
-};
+  return jsx(setting(14272).UserProfileEditFormSwitch, {
+    value: !tmp4,
+    label: null,
+    subLabel: null,
+    accessibilityLabel: null,
+    onValueChange: null,
+  });
+}

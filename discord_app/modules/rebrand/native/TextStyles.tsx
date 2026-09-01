@@ -35,4 +35,4 @@ export default function createTextStyle(fontFamily, color, arg2, uppercase) {
     obj.marginBottom = uppercase.marginBottom;
   }
   return obj;
-};
+}

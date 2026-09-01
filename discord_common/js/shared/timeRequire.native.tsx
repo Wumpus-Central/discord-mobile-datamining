@@ -13,7 +13,11 @@ export default function timeRequire(arg0, arg1) {
       const _Object = Object;
       const keys = Object.keys(modules);
       const _HermesInternal = HermesInternal;
-      isTracingDefault.mark("\u{1F3C3}", "Require " + arg0 + " (" + keys.filter((arg0) => modules[arg0].isInitialized).length + " modules)", diff);
+      isTracingDefault.mark(
+        "\u{1F3C3}",
+        "Require " + arg0 + " (" + keys.filter((arg0) => modules[arg0].isInitialized).length + " modules)",
+        diff,
+      );
       const obj = isTracingDefault;
     } else {
       const _HermesInternal2 = HermesInternal;
@@ -23,4 +27,4 @@ export default function timeRequire(arg0, arg1) {
     obj2 = modules;
   }
   return arg1();
-};
+}

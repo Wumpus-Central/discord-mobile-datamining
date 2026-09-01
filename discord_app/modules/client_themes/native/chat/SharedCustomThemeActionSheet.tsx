@@ -46,11 +46,19 @@ function PrimaryActionButton(onPressApply) {
 }
 ({ useEffect: c5, useLayoutEffect: closure_6, useRef: error } = noop);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { contentWrapper: { paddingHorizontal: 43.5, paddingVertical: 12 }, centeredText: { textAlign: "center" }, ctaContainer: { paddingHorizontal: 15, flexDirection: "column", display: "flex", gap: 6 }, nitroWheelButton: { marginStart: -2, width: 20, height: 20 }, getNitroButton: null };
+createCacheKey = {
+  contentWrapper: { paddingHorizontal: 43.5, paddingVertical: 12 },
+  centeredText: { textAlign: "center" },
+  ctaContainer: { paddingHorizontal: 15, flexDirection: "column", display: "flex", gap: 6 },
+  nitroWheelButton: { marginStart: -2, width: 20, height: 20 },
+  getNitroButton: null,
+};
 createCacheKey = { borderRadius: ThemesDefault.radii.round };
 createCacheKey[4] = createCacheKey;
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/client_themes/native/chat/SharedCustomThemeActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/client_themes/native/chat/SharedCustomThemeActionSheet.tsx",
+);
 
 export default function _default(message) {
   const sharedClientTheme = message.message.sharedClientTheme;
@@ -123,19 +131,22 @@ export default function _default(message) {
     ref.current = !first2;
   }, items2);
   const items3 = [ref];
-  callback2(() => () => {
-    if (ref.current) {
-      closure_1_0(closure_1_2[10]).clearPreviewTheme();
-      const obj = closure_1_0(closure_1_2[10]);
-      closure_1_0(closure_1_2[11]).refreshTheme();
-      const obj2 = closure_1_0(closure_1_2[11]);
-    }
-  }, items3);
+  callback2(
+    () => () => {
+      if (ref.current) {
+        closure_1_0(closure_1_2[10]).clearPreviewTheme();
+        const obj = closure_1_0(closure_1_2[10]);
+        closure_1_0(closure_1_2[11]).refreshTheme();
+        const obj2 = closure_1_0(closure_1_2[11]);
+      }
+    },
+    items3,
+  );
   obj = { ref: tmp2, backdropOpacity: 0, children: null };
   obj1 = { title: null };
   const intl = sharedClientTheme(first[14]).intl;
   obj1[0] = intl.string(importDefault(first[15])["3ej1LT"]);
-  const items4 = [callback4(sharedClientTheme(first[13]).BottomSheetTitleHeader, obj1), , ];
+  const items4 = [callback4(sharedClientTheme(first[13]).BottomSheetTitleHeader, obj1), ,];
   obj2 = { style: tmp.contentWrapper, children: null };
   let obj3 = { variant: "heading-md/medium", style: tmp.centeredText, children: null };
   const intl2 = sharedClientTheme(first[14]).intl;
@@ -169,9 +180,8 @@ export default function _default(message) {
           current.closeActionSheet();
           const obj5 = ref(first[9]);
         }
-      }
+      },
     }),
-
   ];
   const obj6 = { text: null, onPress: null, variant: "secondary" };
   const intl3 = sharedClientTheme(first[14]).intl;
@@ -191,4 +201,4 @@ export default function _default(message) {
   items4[2] = callback5(ref, obj4);
   obj[2] = items4;
   return callback5(sharedClientTheme(first[12]).BottomSheet, obj);
-};
+}

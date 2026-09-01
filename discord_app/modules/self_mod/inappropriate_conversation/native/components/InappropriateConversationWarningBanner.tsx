@@ -12,16 +12,22 @@ class InappropriateConversationWarningBanner {
     senderId = global.senderId;
     closure_3 = undefined;
     closure_4 = undefined;
-    items = [, , ];
+    items = [, ,];
     items[0] = channelId;
     items[1] = warningId;
     items[2] = senderId;
     effect = closure_3.useEffect(() => {
       let obj = channelId(senderId[4]);
-      obj = { channelId, warningId, senderId, warningType: closure_1_5.INAPPROPRIATE_CONVERSATION_TIER_2, viewName: channelId(senderId[4]).ViewNameTypes.SAFETY_WARNING_BANNER };
+      obj = {
+        channelId,
+        warningId,
+        senderId,
+        warningType: closure_1_5.INAPPROPRIATE_CONVERSATION_TIER_2,
+        viewName: channelId(senderId[4]).ViewNameTypes.SAFETY_WARNING_BANNER,
+      };
       obj.trackNamedViewEvent(obj);
     }, items);
-    items1 = [, , ];
+    items1 = [, ,];
     items1[0] = channelId;
     items1[1] = warningId;
     items1[2] = senderId;
@@ -38,7 +44,7 @@ class InappropriateConversationWarningBanner {
     items2[0] = closure_4;
     items3 = [];
     items3[0] = senderId;
-    items4 = [, ];
+    items4 = [,];
     items4[0] = channelId;
     items4[1] = warningId;
     stateFromStores = obj.useStateFromStores(items2, () => callback1.isBlocked(senderId), items3);
@@ -47,12 +53,12 @@ class InappropriateConversationWarningBanner {
       const result = channelId(senderId[6]).dismissChannelSafetyWarnings(channelId, items);
     }, items4);
     closure_4 = callback1;
-    items5 = [, , , ];
+    items5 = [, , ,];
     items5[0] = callback1;
     items5[1] = channelId;
     items5[2] = warningId;
     items5[3] = senderId;
-    items6 = [, , , ];
+    items6 = [, , ,];
     items6[0] = channelId;
     items6[1] = warningId;
     items6[2] = senderId;
@@ -71,22 +77,38 @@ class InappropriateConversationWarningBanner {
               obj.warningType = closure_2_5.INAPPROPRIATE_CONVERSATION_TIER_2;
               obj.senderId = closure_1_2;
               obj.analyticsBlockContext = closure_2_0(closure_2_2[4]).CtaEventTypes.USER_BANNER_BLOCK_CONFIRM;
-              obj.analyticsBlockAndReportContext = closure_2_0(closure_2_2[4]).CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM;
+              obj.analyticsBlockAndReportContext = closure_2_0(
+                closure_2_2[4],
+              ).CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM;
               obj.analyticsCancelContext = closure_2_0(closure_2_2[4]).CtaEventTypes.USER_BANNER_BLOCK_CANCEL;
               obj.onDismiss = closure_1_4;
               return closure_2_6(closure_0, obj);
             };
           });
-        }
+        },
       };
       obj.openLazy(obj);
     }, items5);
     callback3 = closure_3.useCallback(() => {
-      const result = channelId(senderId[10]).openSafetyToolsActionSheet(channelId, senderId, warningId, closure_1_5.INAPPROPRIATE_CONVERSATION_TIER_2);
+      const result = channelId(senderId[10]).openSafetyToolsActionSheet(
+        channelId,
+        senderId,
+        warningId,
+        closure_1_5.INAPPROPRIATE_CONVERSATION_TIER_2,
+      );
       callback(channelId(senderId[4]).CtaEventTypes.USER_BANNER_OPEN_SAFETY_TOOLS);
     }, items6);
     tmp9 = jsx;
-    obj = { channelId, warningId, senderId, warningType: SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2, header: null, description: null, onDismiss: null, buttons: null };
+    obj = {
+      channelId,
+      warningId,
+      senderId,
+      warningType: SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
+      header: null,
+      description: null,
+      onDismiss: null,
+      buttons: null,
+    };
     tmp10 = require("SafetyWarningBanner");
     intl = require("getSystemLocale").intl;
     obj[4] = intl.string(require("getSystemLocale").t.ZzlB5p);
@@ -114,7 +136,9 @@ class InappropriateConversationWarningBanner {
     return tmp9(tmp10, obj);
   }
 }
-let result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/components/InappropriateConversationWarningBanner.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/native/components/InappropriateConversationWarningBanner.tsx",
+);
 
 export default InappropriateConversationWarningBanner;
 export { InappropriateConversationWarningBanner };

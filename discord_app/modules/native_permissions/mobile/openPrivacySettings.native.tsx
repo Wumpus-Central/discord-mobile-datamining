@@ -14,4 +14,4 @@ export default function openPrivacySettings() {
     const DeviceSettingsManager = NativeModules.DeviceSettingsManager;
     DeviceSettingsManager.openPrivacySettings();
   }
-};
+}

@@ -57,14 +57,22 @@ function LocationText(channel) {
     obj[3] = tmp.separator;
     tmp5 = callback(channel(parentChannel[8]).Text, obj);
   }
-  const items1 = [tmp5, memo, ];
+  const items1 = [tmp5, memo];
   obj = { variant: "text-md/semibold", color: str, lineClamp: 1, style: tmp.secondaryText, children: _location };
   items1[2] = callback(channel(parentChannel[8]).Text, obj);
   obj[1] = items1;
   return closure_8(str, obj);
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, headerContent: null, primaryText: null, secondaryTextContainer: null, separator: null, icon: null, secondaryText: null };
+createCacheKey = {
+  container: null,
+  headerContent: null,
+  primaryText: null,
+  secondaryTextContainer: null,
+  separator: null,
+  icon: null,
+  secondaryText: null,
+};
 createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, flexDirection: "row", alignItems: "center" };
@@ -74,7 +82,9 @@ createCacheKey[4] = { marginHorizontal: 2 };
 createCacheKey[5] = { width: 16, height: 16 };
 createCacheKey[6] = { flex: 1 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/MessageNotificationHeader.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/in_app_notifications/native/MessageNotificationHeader.tsx",
+);
 
 export default function MessageNotificationHeader(locationTextColor) {
   ({ channel, parentChannel, guild, author } = locationTextColor);
@@ -137,13 +147,19 @@ export default function MessageNotificationHeader(locationTextColor) {
   obj1 = { style: tmp.headerContent, children: null };
   let tmp17Result = null != author;
   if (tmp17Result) {
-    const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: null };
+    const obj2 = {
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      lineClamp: 1,
+      style: null,
+      children: null,
+    };
     const items1 = [tmp.primaryText, tmp6];
     obj2[3] = items1;
     obj2[4] = author.nick;
     tmp17Result = tmp17(tmp2(4474).Text, obj2);
   }
-  const items2 = [tmp17Result, ];
+  const items2 = [tmp17Result];
   tmp17Result = null != tmp10;
   if (tmp17Result) {
     const obj3 = { location: null, channel: null, parentChannel: null, author: null, color: null };
@@ -158,21 +174,35 @@ export default function MessageNotificationHeader(locationTextColor) {
   obj1[1] = items2;
   obj[1] = closure_8(View, obj1);
   return closure_7(View, obj);
-};
+}
 export const SimpleNotificationHeader = function SimpleNotificationHeader(secondaryText) {
   secondaryText = secondaryText.secondaryText;
   ({ text, labelStyle } = secondaryText);
   const tmp = callback2();
   let obj = { style: tmp.container, children: null };
   const items = [tmp.primaryText, labelStyle];
-  const items1 = [callback(Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: items, children: text }), ];
+  const items1 = [
+    callback(Text.Text, {
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      lineClamp: 1,
+      style: items,
+      children: text,
+    }),
+  ];
   let tmp2Result = null != secondaryText;
   if (tmp2Result) {
     obj = { style: null, children: null };
     obj[0] = tmp.secondaryTextContainer;
-    obj = { variant: "text-md/bold", color: "text-muted", maxFontSizeMultiplier: 1.75, style: null, children: "\u00B7" };
+    obj = {
+      variant: "text-md/bold",
+      color: "text-muted",
+      maxFontSizeMultiplier: 1.75,
+      style: null,
+      children: "\u00B7",
+    };
     obj[3] = tmp.separator;
-    const items2 = [tmp4(tmp5(4474).Text, obj), ];
+    const items2 = [tmp4(tmp5(4474).Text, obj)];
     obj1 = { variant: "text-md/semibold", color: "text-muted", lineClamp: 1, style: null, children: null };
     obj1[3] = tmp.secondaryText;
     obj1[4] = secondaryText;

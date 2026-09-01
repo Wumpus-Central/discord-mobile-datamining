@@ -30,7 +30,7 @@ let items = [
     renderPage(autoFocusElement) {
       return callback(UserSettingsEditUserProfileDefault, { autoFocusElement: autoFocusElement.autoFocusElement });
     },
-    subSection: ProfileCustomizationSubsection.USER_PROFILE
+    subSection: ProfileCustomizationSubsection.USER_PROFILE,
   },
   {
     renderLabel() {
@@ -41,8 +41,8 @@ let items = [
     renderPage() {
       return callback(UserSettingsEditGuildProfileDefault, {});
     },
-    subSection: ProfileCustomizationSubsection.GUILD
-  }
+    subSection: ProfileCustomizationSubsection.GUILD,
+  },
 ];
 const memoResult = importAllResult.memo(() => {
   const tmp = callback3();
@@ -83,7 +83,12 @@ const memoResult = importAllResult.memo(() => {
     stateFromStores.setState({ subsection: first.subSection });
   };
   obj[4] = function onPageChangeStart(arg0, arg1) {
-    const obj = { hasEdits: stateFromStores, resetPending: callback(first[20]).resetAllPending, onHasEdits: callback(first[21]).dismissKeyboard, onConfirm: arg1 };
+    const obj = {
+      hasEdits: stateFromStores,
+      resetPending: callback(first[20]).resetAllPending,
+      onHasEdits: callback(first[21]).dismissKeyboard,
+      onConfirm: arg1,
+    };
     return callback2(first[19])(obj);
   };
   const segmentedControlState = tmp2Result.useSegmentedControlState(obj);
@@ -116,7 +121,11 @@ const memoResult = importAllResult.memo(() => {
   const items2 = [first1.subSection];
   const effect = obj1.useEffect(() => {
     let obj = callback2(first[25]);
-    obj = { settings_type: "user", subsection: first1.subSection, destination_pane: closure_1_14.SETTINGS_CUSTOMIZE_PROFILE };
+    obj = {
+      settings_type: "user",
+      subsection: first1.subSection,
+      destination_pane: closure_1_14.SETTINGS_CUSTOMIZE_PROFILE,
+    };
     obj.trackWithMetadata(closure_1_13.SETTINGS_PANE_VIEWED, obj);
   }, items2);
   const items3 = [guild];
@@ -127,77 +136,82 @@ const memoResult = importAllResult.memo(() => {
     }
     return callback(first[20]).resetAndCloseUserProfileForm;
   }, items3);
-  const effect2 = obj1.useEffect(() => () => {
-    closure_10.resetState();
-  }, []);
+  const effect2 = obj1.useEffect(
+    () => () => {
+      closure_10.resetState();
+    },
+    [],
+  );
   const items4 = [token, nativeStackNavigation, stateFromStores, tmp21, callback];
   const layoutEffect = obj1.useLayoutEffect(() => {
     obj = {
       contentStyle: obj,
       headerShadowVisible: false,
-      headerRight: closure_11 ? (() => callback2(callback(table[27]).HeaderSubmittingIndicator, {})) : ((arg0) => {
-        let obj = {};
-        const merged = Object.assign(arg0);
-        const intl = closure_1_0(closure_1_2[11]).intl;
-        obj.label = intl.string(closure_1_0(closure_1_2[11]).t["R3BPH+"]);
-        obj.disabled = !closure_10;
-        obj.onPress = closure_1_5(function*() {
-          if (c2 === 2) {
-            c2 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              c2 = 2;
-              if (0 === c1) {
+      headerRight: closure_11
+        ? () => callback2(callback(table[27]).HeaderSubmittingIndicator, {})
+        : (arg0) => {
+            let obj = {};
+            const merged = Object.assign(arg0);
+            const intl = closure_1_0(closure_1_2[11]).intl;
+            obj.label = intl.string(closure_1_0(closure_1_2[11]).t["R3BPH+"]);
+            obj.disabled = !closure_10;
+            obj.onPress = closure_1_5(function* () {
+              if (c2 === 2) {
+                c2 = 3;
+                HermesBuiltin.throwTypeError();
+              } else if (tmp3 === 3) {
                 if (arg0 === 1) {
-                  c2 = 3;
                   throw arg1;
                 } else if (arg0 === 2) {
-                  c2 = 3;
-                  obj = { value: null, done: true };
+                  let obj = { value: null, done: true };
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  closure_0 = tmp4;
-                  c1 = 1;
-                  c2 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = closure_1_12();
-                  return obj1;
+                  return { value: "HermesInternal", done: null };
                 }
-              } else if (arg0 === 1) {
-                c2 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c2 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
               } else {
-                if (false !== arg1) {
-                  callback(true);
+                try {
+                  c2 = 2;
+                  if (0 === c1) {
+                    if (arg0 === 1) {
+                      c2 = 3;
+                      throw arg1;
+                    } else if (arg0 === 2) {
+                      c2 = 3;
+                      obj = { value: null, done: true };
+                      obj[0] = arg1;
+                      return obj;
+                    } else {
+                      closure_0 = tmp4;
+                      c1 = 1;
+                      c2 = 1;
+                      obj1 = { value: null, done: false };
+                      obj1[0] = closure_1_12();
+                      return obj1;
+                    }
+                  } else if (arg0 === 1) {
+                    c2 = 3;
+                    throw arg1;
+                  } else if (arg0 === 2) {
+                    c2 = 3;
+                    obj = { value: null, done: true };
+                    obj[0] = arg1;
+                    return obj;
+                  } else {
+                    if (false !== arg1) {
+                      callback(true);
+                    }
+                    c2 = 3;
+                    return { value: "HermesInternal", done: null };
+                  }
+                } catch (tmp9) {
+                  c2 = tmp;
+                  throw tmp9;
                 }
-                c2 = 3;
-                return { value: "HermesInternal", done: null };
               }
-            } catch (tmp9) {
-              c2 = tmp;
-              throw tmp9;
-            }
-          }
-        });
-        return closure_1_15(closure_1_0(closure_1_2[28]).HeaderTextButton, obj);
-      })
+            });
+            return closure_1_15(closure_1_0(closure_1_2[28]).HeaderTextButton, obj);
+          },
     };
     obj = { backgroundColor: closure_0 };
     nativeStackNavigation.setOptions(obj);
@@ -220,7 +234,7 @@ const memoResult = importAllResult.memo(() => {
       onHasEdits: callback(first[21]).dismissKeyboard,
       onConfirm() {
         return closure_1_4.dispatch(action);
-      }
+      },
     };
     callback2(first[19])(obj);
   });
@@ -232,7 +246,10 @@ const memoResult = importAllResult.memo(() => {
   }, items5);
   obj = { style: tmp.container, onLayout: callback1, children: null };
   obj1 = { style: tmp.controls, children: callback(tmp2(tmp3[30]).Tabs, { state: segmentedControlState }) };
-  const items6 = [callback(handleSubmit2, obj1), callback(_require(first[31]).SegmentedControlPages, { state: segmentedControlState })];
+  const items6 = [
+    callback(handleSubmit2, obj1),
+    callback(_require(first[31]).SegmentedControlPages, { state: segmentedControlState }),
+  ];
   obj[2] = items6;
   return callback2(handleSubmit2, obj);
 });
@@ -245,8 +262,10 @@ let obj = {
   renderPage(autoFocusElement) {
     return callback(UserSettingsEditUserProfileDefault, { autoFocusElement: autoFocusElement.autoFocusElement });
   },
-  subSection: ProfileCustomizationSubsection.USER_PROFILE
+  subSection: ProfileCustomizationSubsection.USER_PROFILE,
 };
-const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/ProfileCustomizationSettingScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/profiles/native/ProfileCustomizationSettingScreen.tsx",
+);
 
 export default memoResult;

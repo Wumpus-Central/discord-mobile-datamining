@@ -8,4 +8,4 @@ export default function useGuildPowerupOnDeactivate(arg0, arg1) {
   onToggle = tmp.onToggle;
   const items = [onToggle];
   return { isLoading: tmp.isLoading, error: tmp.error, onDeactivate: React.useCallback(() => onToggle(false), items) };
-};
+}

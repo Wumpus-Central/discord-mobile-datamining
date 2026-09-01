@@ -31,7 +31,7 @@ function _handleOneRecipientInDM() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       const table = tmp2;
       const obj5 = callback(closure_1_2[13]);
       obj1 = { recipientIds: null, location: "New Group DM", onBeforeTransition: null };
@@ -60,7 +60,7 @@ function _handleInviteUsers() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -134,104 +134,106 @@ function _handleInviteUsers() {
                   if (store.getChannelId() === lib.id) {
                     if (lib.isDM()) {
                       let obj10 = lib(4727);
-                      obj10.showGuardCallAlert(callback(function*() {
-                        if (dependencyMap === 2) {
-                          dependencyMap = 3;
-                          HermesBuiltin.throwTypeError();
-                        } else if (tmp3 === 3) {
-                          if (arg0 === 1) {
-                            throw arg1;
-                          } else if (arg0 === 2) {
-                            let obj = { value: null, done: true };
-                            obj[0] = arg1;
-                            return obj;
-                          } else {
-                            return { value: "HermesInternal", done: null };
-                          }
-                        } else {
-                          try {
-                            dependencyMap = 2;
-                            if (0 === v0) {
-                              if (arg0 === 1) {
-                                dependencyMap = 3;
-                                throw arg1;
-                              } else if (arg0 === 2) {
-                                dependencyMap = 3;
-                                obj = { value: null, done: true };
-                                obj[0] = arg1;
-                                return obj;
-                              } else {
-                                closure_0 = tmp4;
-                                if (1 === v0.length) {
-                                  v0 = 2;
-                                  dependencyMap = 1;
-                                  obj1 = { value: null, done: false };
-                                  obj1[0] = closure_1_20(tmp33, dependencyMap);
-                                  return obj1;
-                                } else {
-                                  let obj5 = v0(4491);
-                                  v0 = 1;
-                                  dependencyMap = 1;
-                                  let obj2 = { value: null, done: false };
-                                  obj2[0] = obj5.addRecipients(closure_1_0.id, tmp33, undefined, dependencyMap);
-                                  return obj2;
-                                }
-                              }
+                      obj10.showGuardCallAlert(
+                        callback(function* () {
+                          if (dependencyMap === 2) {
+                            dependencyMap = 3;
+                            HermesBuiltin.throwTypeError();
+                          } else if (tmp3 === 3) {
+                            if (arg0 === 1) {
+                              throw arg1;
+                            } else if (arg0 === 2) {
+                              let obj = { value: null, done: true };
+                              obj[0] = arg1;
+                              return obj;
                             } else {
-                              if (1 === tmp4) {
-                                if (arg0 === 1) {
-                                  dependencyMap = 3;
-                                  throw arg1;
-                                } else if (arg0 === 2) {
-                                  dependencyMap = 3;
-                                  const obj3 = { value: null, done: true };
-                                  obj3[0] = arg1;
-                                  return obj3;
-                                }
-                              } else if (2 === tmp4) {
-                                if (arg0 === 1) {
-                                  dependencyMap = 3;
-                                  throw arg1;
-                                } else if (arg0 === 2) {
-                                  dependencyMap = 3;
-                                  const obj4 = { value: null, done: true };
-                                  obj4[0] = arg1;
-                                  return obj4;
-                                }
-                              } else if (arg0 === 1) {
-                                dependencyMap = 3;
-                                throw arg1;
-                              } else if (arg0 === 2) {
-                                dependencyMap = 3;
-                                obj = { value: null, done: true };
-                                obj[0] = arg1;
-                                return obj;
-                              } else {
-                                const tmp8 = v0(9871);
-                                const call = tmp8.call;
-                                if (typeof call === "unknown") {
-                                  tmp8(false, true);
-                                } else {
-                                  call(tmp9, false, true);
-                                }
-                                v0(12465)(closure_3);
-                                dependencyMap = 3;
-                                tmp9 = closure_3;
-                              }
-                              closure_3 = arg1;
-                              obj2 = closure_1_0(4727);
-                              v0 = 3;
-                              dependencyMap = 1;
-                              obj5 = { value: null, done: false };
-                              obj5[0] = obj2.monkeyPatchCall();
-                              return obj5;
+                              return { value: "HermesInternal", done: null };
                             }
-                          } catch (tmp26) {
-                            dependencyMap = tmp;
-                            throw tmp26;
+                          } else {
+                            try {
+                              dependencyMap = 2;
+                              if (0 === v0) {
+                                if (arg0 === 1) {
+                                  dependencyMap = 3;
+                                  throw arg1;
+                                } else if (arg0 === 2) {
+                                  dependencyMap = 3;
+                                  obj = { value: null, done: true };
+                                  obj[0] = arg1;
+                                  return obj;
+                                } else {
+                                  closure_0 = tmp4;
+                                  if (1 === v0.length) {
+                                    v0 = 2;
+                                    dependencyMap = 1;
+                                    obj1 = { value: null, done: false };
+                                    obj1[0] = closure_1_20(tmp33, dependencyMap);
+                                    return obj1;
+                                  } else {
+                                    let obj5 = v0(4491);
+                                    v0 = 1;
+                                    dependencyMap = 1;
+                                    let obj2 = { value: null, done: false };
+                                    obj2[0] = obj5.addRecipients(closure_1_0.id, tmp33, undefined, dependencyMap);
+                                    return obj2;
+                                  }
+                                }
+                              } else {
+                                if (1 === tmp4) {
+                                  if (arg0 === 1) {
+                                    dependencyMap = 3;
+                                    throw arg1;
+                                  } else if (arg0 === 2) {
+                                    dependencyMap = 3;
+                                    const obj3 = { value: null, done: true };
+                                    obj3[0] = arg1;
+                                    return obj3;
+                                  }
+                                } else if (2 === tmp4) {
+                                  if (arg0 === 1) {
+                                    dependencyMap = 3;
+                                    throw arg1;
+                                  } else if (arg0 === 2) {
+                                    dependencyMap = 3;
+                                    const obj4 = { value: null, done: true };
+                                    obj4[0] = arg1;
+                                    return obj4;
+                                  }
+                                } else if (arg0 === 1) {
+                                  dependencyMap = 3;
+                                  throw arg1;
+                                } else if (arg0 === 2) {
+                                  dependencyMap = 3;
+                                  obj = { value: null, done: true };
+                                  obj[0] = arg1;
+                                  return obj;
+                                } else {
+                                  const tmp8 = v0(9871);
+                                  const call = tmp8.call;
+                                  if (typeof call === "unknown") {
+                                    tmp8(false, true);
+                                  } else {
+                                    call(tmp9, false, true);
+                                  }
+                                  v0(12465)(closure_3);
+                                  dependencyMap = 3;
+                                  tmp9 = closure_3;
+                                }
+                                closure_3 = arg1;
+                                obj2 = closure_1_0(4727);
+                                v0 = 3;
+                                dependencyMap = 1;
+                                obj5 = { value: null, done: false };
+                                obj5[0] = obj2.monkeyPatchCall();
+                                return obj5;
+                              }
+                            } catch (tmp26) {
+                              dependencyMap = tmp;
+                              throw tmp26;
+                            }
                           }
-                        }
-                      }));
+                        }),
+                      );
                     } else if (lib.isGroupDM()) {
                       let obj8 = arr(4491);
                       c5 = 5;
@@ -324,7 +326,12 @@ function _handleInviteUsers() {
   return applyArgumentsResult;
 }
 ({ ActivityIndicator: closure_6, View: error } = get_ActivityIndicator);
-({ InstantInviteSources: map1, AnalyticEvents: closure_14, AnalyticsSections: closure_15, NEW_GROUP_DM_POPOUT_ID: closure_16 } = ME);
+({
+  InstantInviteSources: map1,
+  AnalyticEvents: closure_14,
+  AnalyticsSections: closure_15,
+  NEW_GROUP_DM_POPOUT_ID: closure_16,
+} = ME);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 createCacheKey = { button: null, container: null, instantInviteView: null, nameInputContainer: null, nameInput: null };
 createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
@@ -334,7 +341,12 @@ createCacheKey[2] = { flexShrink: 1, backgroundColor: ThemesDefault.colors.MOBIL
 let obj1 = { flexShrink: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[3] = { paddingHorizontal: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 let obj2 = { paddingHorizontal: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: 8, height: 40, width: "100%" };
+createCacheKey[4] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  marginBottom: 8,
+  height: 40,
+  width: "100%",
+};
 let closure_19 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: 8, height: 40, width: "100%" };
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/NewGroupDMScreen.tsx");
@@ -406,123 +418,126 @@ export default function NewGroupDMScreen(navigation) {
     obj.track(callback.OPEN_POPOUT, obj);
   }, items3);
   const items4 = [stateFromStores, navigation, memo, first, first2];
-  callback = obj3.useCallback(stateFromStores(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_1 = tmp3;
-            closure_0 = tmp7;
-            closure_0 = undefined;
-            closure_1_9(true);
-            c3 = 1;
-            const items = [];
-            HermesBuiltin.arraySpread(closure_1_11, HermesBuiltin.arraySpread(closure_1_6, 0));
-            c4 = 2;
-            c5 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = (function handleInviteUsers(c4, items, arg2) {
-              const self = this;
-              const apply = closure_22.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            })(c4, items, () => {
-              parent = parent.getParent();
-              return parent.goBack();
-            });
-            return obj1;
-          }
-        } else if (1 === tmp7) {
-          c3 = 0;
-          let obj4 = closure_1_1(closure_1_2[21]);
-          const obj2 = { key: "GROUP_DM_ADD_ERROR", content: null };
-          const intl = closure_1_0(closure_1_2[22]).intl;
-          obj2[1] = intl.string(closure_1_0(closure_1_2[22]).t["N/9OFy"]);
-          obj4.open(obj2);
-          callback(false);
-          c5 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = undefined;
-          return obj3;
+  callback = obj3.useCallback(
+    stateFromStores(function* () {
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          if (2 === tmp7) {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
             if (arg0 === 1) {
               c5 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              c3 = 0;
               c5 = 3;
-              obj4 = { value: null, done: true };
-              obj4[0] = arg1;
-              return obj4;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
             } else {
-              closure_0 = arg1;
-              c3 = 0;
-              let tmp10 = null == c4;
-              if (tmp10) {
-                tmp10 = null != closure_0;
-              }
-              if (tmp10) {
-                tmp10 = "" !== closure_10;
-              }
-              if (tmp10) {
-                obj1 = closure_1_1(closure_1_2[13]);
-                c4 = 3;
-                c5 = 1;
-                const obj5 = { value: null, done: false };
-                obj5[0] = obj1.setName(closure_0, closure_10);
-                return obj5;
-              }
+              closure_1 = tmp3;
+              closure_0 = tmp7;
+              closure_0 = undefined;
+              closure_1_9(true);
+              c3 = 1;
+              const items = [];
+              HermesBuiltin.arraySpread(closure_1_11, HermesBuiltin.arraySpread(closure_1_6, 0));
+              c4 = 2;
+              c5 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = (function handleInviteUsers(c4, items, arg2) {
+                const self = this;
+                const apply = closure_22.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(c4, items, () => {
+                parent = parent.getParent();
+                return parent.goBack();
+              });
+              return obj1;
             }
-          } else if (arg0 === 1) {
+          } else if (1 === tmp7) {
+            c3 = 0;
+            let obj4 = closure_1_1(closure_1_2[21]);
+            const obj2 = { key: "GROUP_DM_ADD_ERROR", content: null };
+            const intl = closure_1_0(closure_1_2[22]).intl;
+            obj2[1] = intl.string(closure_1_0(closure_1_2[22]).t["N/9OFy"]);
+            obj4.open(obj2);
+            callback(false);
             c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
+            const obj3 = { value: null, done: true };
+            obj3[0] = undefined;
+            return obj3;
+          } else {
+            if (2 === tmp7) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c3 = 0;
+                c5 = 3;
+                obj4 = { value: null, done: true };
+                obj4[0] = arg1;
+                return obj4;
+              } else {
+                closure_0 = arg1;
+                c3 = 0;
+                let tmp10 = null == c4;
+                if (tmp10) {
+                  tmp10 = null != closure_0;
+                }
+                if (tmp10) {
+                  tmp10 = "" !== closure_10;
+                }
+                if (tmp10) {
+                  obj1 = closure_1_1(closure_1_2[13]);
+                  c4 = 3;
+                  c5 = 1;
+                  const obj5 = { value: null, done: false };
+                  obj5[0] = obj1.setName(closure_0, closure_10);
+                  return obj5;
+                }
+              }
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            return { value: "HermesInternal", done: null };
           }
-          c5 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp37) {
-        closure_2 = tmp37;
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp37;
-        } else {
-          c4 = tmp;
+        } catch (tmp37) {
+          closure_2 = tmp37;
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp37;
+          } else {
+            c4 = tmp;
+          }
         }
       }
-    }
-  }), items4);
+    }),
+    items4,
+  );
   const items5 = [stateFromStores, first1, navigation, sum, tmp13, memo, first, callback, tmp];
   const layoutEffect = obj3.useLayoutEffect(() => {
     let obj = stateFromStores;
@@ -583,10 +598,13 @@ export default function NewGroupDMScreen(navigation) {
           if (isGroupDMResult) {
             stringResult = string(t.OYkgVk);
             obj = {};
-            const renderHeaderTextButton = getRenderHeaderTextButton(stringResult, stateFromStores(function*() {
-              yield closure_1_14();
-              return arg1;
-            }));
+            const renderHeaderTextButton = getRenderHeaderTextButton(
+              stringResult,
+              stateFromStores(function* () {
+                yield closure_1_14();
+                return arg1;
+              }),
+            );
             const merged = Object.assign(arg0);
             let tmp25 = closure_1_13;
             if (!closure_1_13) {
@@ -603,10 +621,13 @@ export default function NewGroupDMScreen(navigation) {
             result = renderHeaderTextButton(obj);
           } else {
             obj1 = {};
-            const renderHeaderTextButton1 = getRenderHeaderTextButton(string(t.CumH4u), stateFromStores(function*() {
-              yield closure_1_14();
-              return arg1;
-            }));
+            const renderHeaderTextButton1 = getRenderHeaderTextButton(
+              string(t.CumH4u),
+              stateFromStores(function* () {
+                yield closure_1_14();
+                return arg1;
+              }),
+            );
             const merged1 = Object.assign(arg0);
             obj1.disabled = closure_1_13;
             result = renderHeaderTextButton1(obj1);
@@ -615,7 +636,7 @@ export default function NewGroupDMScreen(navigation) {
           const tmp6 = stringResult(locationPage[23]);
         }
         return result;
-      }
+      },
     };
     options.setOptions(obj);
   }, items5);
@@ -656,7 +677,7 @@ export default function NewGroupDMScreen(navigation) {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (c4 === 2) {
           c4 = 3;
           HermesBuiltin.throwTypeError();
@@ -728,7 +749,7 @@ export default function NewGroupDMScreen(navigation) {
         }
       })();
     });
-    obj1[0] = function() {
+    obj1[0] = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -742,7 +763,7 @@ export default function NewGroupDMScreen(navigation) {
     isGroupDMResult = callback3(tmp22, obj);
     const tmp12Result = tmp12(tmp3[25]);
   }
-  const items6 = [isGroupDMResult, , ];
+  const items6 = [isGroupDMResult, ,];
   let tmp26 = null;
   if (flag) {
     obj2 = { style: null, children: null };
@@ -759,7 +780,17 @@ export default function NewGroupDMScreen(navigation) {
   items6[1] = tmp26;
   const tmp20 = importDefault(locationPage[24])();
   const tmp21 = closure_18;
-  items6[2] = callback3(importDefault(locationPage[29]), { rowMode: UserRowModes.TOGGLE, onSelectUser: callback1, disabledUserIds: memo, selectedUserIds: first, withAffinitySuggestions: true, withAlphabeticalSections: false, disableGradient: true, disableStickySections: importDefault(locationPage[24])(), focusOnAdd: false });
+  items6[2] = callback3(importDefault(locationPage[29]), {
+    rowMode: UserRowModes.TOGGLE,
+    onSelectUser: callback1,
+    disabledUserIds: memo,
+    selectedUserIds: first,
+    withAffinitySuggestions: true,
+    withAlphabeticalSections: false,
+    disableGradient: true,
+    disableStickySections: importDefault(locationPage[24])(),
+    focusOnAdd: false,
+  });
   obj[1] = items6;
   return tmp21(closure_7, obj);
-};
+}

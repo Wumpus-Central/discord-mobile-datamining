@@ -17,6 +17,6 @@ export default function useLatch(arg0) {
         tmp.current = false;
         callback();
       }
-    }, items)
+    }, items),
   };
-};
+}

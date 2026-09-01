@@ -21,17 +21,19 @@ export default function useWindowDimensions() {
     appEntryKey = obj.useAppEntryKey();
   }
   const items = [flag, appEntryKey];
-  return state(React.useMemo(() => {
-    if (closure_0) {
-      closure_0 = tmp;
-      let fn = (arg0) => arg0.byAppEntry[closure_0].windowDimensionsIgnoringKeyboard;
-    } else {
-      closure_0 = tmp;
-      fn = (arg0) => arg0.byAppEntry[closure_0].windowDimensions;
-    }
-    return fn;
-  }, items));
-};
+  return state(
+    React.useMemo(() => {
+      if (closure_0) {
+        closure_0 = tmp;
+        let fn = (arg0) => arg0.byAppEntry[closure_0].windowDimensionsIgnoringKeyboard;
+      } else {
+        closure_0 = tmp;
+        fn = (arg0) => arg0.byAppEntry[closure_0].windowDimensions;
+      }
+      return fn;
+    }, items),
+  );
+}
 export const getWindowDimensions = function getWindowDimensions(arg0) {
   let tmp = arg0;
   if (arg0 === undefined) {

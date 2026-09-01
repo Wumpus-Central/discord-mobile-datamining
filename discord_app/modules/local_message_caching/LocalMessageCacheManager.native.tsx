@@ -80,7 +80,7 @@ function _resumeSendingMessage() {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_3 = tmp5;
       let channel = tmp2;
       ({ file, sendMessageOptions: c1 } = lib);
@@ -119,7 +119,7 @@ function _rehydrateFailedMessages() {
     closure_0 = arg0;
     c8 = 0;
     c9 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -262,7 +262,9 @@ function _rehydrateFailedMessages() {
                         let tmp46 = closure_3;
                         let _HermesInternal3 = HermesInternal;
                         let str3 = "sending message with data ";
-                        let verboseResult1 = closure_11.verbose("sending message with data " + JSON.stringify(closure_3));
+                        let verboseResult1 = closure_11.verbose(
+                          "sending message with data " + JSON.stringify(closure_3),
+                        );
                         let tmp48 = callback4;
                         let tmp49 = closure_3;
                         message = 2;
@@ -336,9 +338,7 @@ function _getMessages(closure_1_2) {
   }
   return obj;
 }
-function _getMessage(arg0) {
-
-}
+function _getMessage(arg0) {}
 function _writeMessage(arg0, id) {
   let obj = closure_11;
   id = undefined;
@@ -390,7 +390,7 @@ class LocalMessageCacheManager extends tmp3 {
       tmp5 = tmp4;
       // AddOwnPrivateBySym (0x64)
       tmp6 = closure_3;
-      applyArgumentsResult.handlePostConnectionOpen = closure_3(function*() {
+      applyArgumentsResult.handlePostConnectionOpen = closure_3(function* () {
         if (c10 === 2) {
           c10 = 3;
           HermesBuiltin.throwTypeError();
@@ -660,7 +660,17 @@ class LocalMessageCacheManager extends tmp3 {
           c9 = undefined;
           c10 = undefined;
           c11 = undefined;
-          ({ content: c3, id: c4, channel_id: c5, tts: c6, nonce: c7, timestamp: c8, type: c9, flags: c10, state: c11 } = message2);
+          ({
+            content: c3,
+            id: c4,
+            channel_id: c5,
+            tts: c6,
+            nonce: c7,
+            timestamp: c8,
+            type: c9,
+            flags: c10,
+            state: c11,
+          } = message2);
           closure_1_10(() => {
             if (typeof closure_1_16 !== "function") {
               HermesBuiltin.throwTypeError();
@@ -673,7 +683,19 @@ class LocalMessageCacheManager extends tmp3 {
             if (null == obj) {
               obj = {};
             }
-            obj = { content: c3, type: _undefined, state: null, channel_id: null, tts: null, id: null, nonce: null, timestamp: null, flags: null, file: null, sendMessageOptions: null };
+            obj = {
+              content: c3,
+              type: _undefined,
+              state: null,
+              channel_id: null,
+              tts: null,
+              id: null,
+              nonce: null,
+              timestamp: null,
+              flags: null,
+              file: null,
+              sendMessageOptions: null,
+            };
             let SENDING = c11;
             if (c11 == null) {
               SENDING = _undefined.SENDING;
@@ -718,7 +740,7 @@ class LocalMessageCacheManager extends tmp3 {
         closure_0.handleChannelLoaded(channelId.channelId);
       };
       applyArgumentsResult.handleCacheLoaded = function handleCacheLoaded(arg0) {
-        const items = [, ];
+        const items = [,];
         ({ privateChannels: arr[0], initialGuildChannels: arr[1] } = arg0);
         for (const item10008 of items) {
           let tmp = item10008;
@@ -737,7 +759,7 @@ class LocalMessageCacheManager extends tmp3 {
         closure_0 = arg0;
         c2 = 0;
         c1 = 0;
-        return (function*(arg0) {
+        return (function* (arg0) {
           if (set === 2) {
             set = 3;
             HermesBuiltin.throwTypeError();
@@ -802,7 +824,7 @@ class LocalMessageCacheManager extends tmp3 {
           }
         })();
       });
-      applyArgumentsResult.handleChannelLoaded = function(arg0) {
+      applyArgumentsResult.handleChannelLoaded = function (arg0) {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -833,7 +855,17 @@ class LocalMessageCacheManager extends tmp3 {
           c9 = undefined;
           let callback;
           c11 = undefined;
-          ({ content: c3, id: c4, channel_id: c5, tts: c6, nonce: c7, timestamp: c8, type: c9, flags: c10, state: c11 } = message2);
+          ({
+            content: c3,
+            id: c4,
+            channel_id: c5,
+            tts: c6,
+            nonce: c7,
+            timestamp: c8,
+            type: c9,
+            flags: c10,
+            state: c11,
+          } = message2);
           callback(() => {
             if (typeof closure_1_16 !== "function") {
               HermesBuiltin.throwTypeError();
@@ -846,7 +878,19 @@ class LocalMessageCacheManager extends tmp3 {
             if (null == obj) {
               obj = {};
             }
-            obj = { content: c3, type: _undefined, state: null, channel_id: null, tts: null, id: null, nonce: null, timestamp: null, flags: null, file: null, sendMessageOptions: null };
+            obj = {
+              content: c3,
+              type: _undefined,
+              state: null,
+              channel_id: null,
+              tts: null,
+              id: null,
+              nonce: null,
+              timestamp: null,
+              flags: null,
+              file: null,
+              sendMessageOptions: null,
+            };
             let SENDING = c11;
             if (c11 == null) {
               SENDING = _undefined.SENDING;
@@ -1022,7 +1066,7 @@ prototype["_initialize"] = function _initialize() {
   const subscription7 = dispatcherDefault.subscribe("UPLOAD_PROGRESS", this.handleUploadProgress);
   const obj8 = dispatcherDefault;
   const subscription8 = dispatcherDefault.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
-  callback(function*() {
+  callback(function* () {
     if (c8 === 2) {
       c8 = 3;
       HermesBuiltin.throwTypeError();
@@ -1089,7 +1133,9 @@ prototype["_initialize"] = function _initialize() {
               let _Object = Object;
               let tmp48 = closure_0;
               let _HermesInternal2 = HermesInternal;
-              let verboseResult = closure_1_11.verbose("initialized with " + Object.keys(closure_0).length + " messages in local cache");
+              let verboseResult = closure_1_11.verbose(
+                "initialized with " + Object.keys(closure_0).length + " messages in local cache",
+              );
               let _Object2 = Object;
               let tmp50 = closure_0;
               values = Object.values(closure_0);
@@ -1145,7 +1191,9 @@ prototype["_initialize"] = function _initialize() {
                 let str2 = " {ready: ";
                 let str3 = ", cached: ";
                 let str4 = "}";
-                let verboseResult1 = closure_1_11.verbose("rehydrating cached messages " + channel_id + " {ready: " + ready + ", cached: " + cached + "}");
+                let verboseResult1 = closure_1_11.verbose(
+                  "rehydrating cached messages " + channel_id + " {ready: " + ready + ", cached: " + cached + "}",
+                );
                 let tmp21 = ready;
                 if (ready) {
                   let tmp22 = closure_3;

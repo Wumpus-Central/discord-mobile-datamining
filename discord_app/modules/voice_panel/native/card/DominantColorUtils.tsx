@@ -39,9 +39,12 @@ export const getCachedSourceFromURI = function getCachedSourceFromURI(avatarURI)
 export const useDominantRGBFromImage = function useDominantRGBFromImage(arg0) {
   const _require = arg0;
   importDefault = React.useRef(true);
-  const effect = React.useEffect(() => () => {
-    closure_1.current = false;
-  }, []);
+  const effect = React.useEffect(
+    () => () => {
+      closure_1.current = false;
+    },
+    [],
+  );
   let hexToRgbResult;
   if (null != arg0) {
     hexToRgbResult = store.get(arg0);
@@ -83,21 +86,23 @@ export const useDominantRGBFromImage = function useDominantRGBFromImage(arg0) {
         if (null != value) {
           if (typeof value === "number") {
             const ImageManager = closure_1_5.ImageManager;
-            let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(closure_1_6.resolveAssetSource(value));
+            let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(
+              closure_1_6.resolveAssetSource(value),
+            );
           } else {
             const ImageManager2 = closure_1_5.ImageManager;
             dominantColorsLocalAsset = ImageManager2.getDominantColors(closure_1_6.resolveAssetSource(value));
           }
-          dominantColorsLocalAsset.then((arg0) => {
-            const tmp = closure_1_3(arg0[0], 3);
-            const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
-            const result = closure_1_7.set(closure_0, obj);
-            if (ref.current) {
-              callback(obj);
-            }
-          }).catch(() => {
-
-          });
+          dominantColorsLocalAsset
+            .then((arg0) => {
+              const tmp = closure_1_3(arg0[0], 3);
+              const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
+              const result = closure_1_7.set(closure_0, obj);
+              if (ref.current) {
+                callback(obj);
+              }
+            })
+            .catch(() => {});
           const nextPromise = dominantColorsLocalAsset.then((arg0) => {
             const tmp = closure_1_3(arg0[0], 3);
             const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
@@ -123,9 +128,12 @@ export const useDominantRGBFromImage = function useDominantRGBFromImage(arg0) {
 export const useDominantColorFromImage = function useDominantColorFromImage(arg0) {
   const _require = arg0;
   importDefault = React.useRef(true);
-  const effect = React.useEffect(() => () => {
-    closure_1.current = false;
-  }, []);
+  const effect = React.useEffect(
+    () => () => {
+      closure_1.current = false;
+    },
+    [],
+  );
   let hexToRgbResult;
   if (null != arg0) {
     hexToRgbResult = store.get(arg0);
@@ -166,21 +174,23 @@ export const useDominantColorFromImage = function useDominantColorFromImage(arg0
         if (null != value) {
           if (typeof value === "number") {
             const ImageManager = closure_1_5.ImageManager;
-            let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(closure_1_6.resolveAssetSource(value));
+            let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(
+              closure_1_6.resolveAssetSource(value),
+            );
           } else {
             const ImageManager2 = closure_1_5.ImageManager;
             dominantColorsLocalAsset = ImageManager2.getDominantColors(closure_1_6.resolveAssetSource(value));
           }
-          dominantColorsLocalAsset.then((arg0) => {
-            const tmp = closure_1_3(arg0[0], 3);
-            const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
-            const result = closure_1_7.set(closure_0, obj);
-            if (ref.current) {
-              callback(obj);
-            }
-          }).catch(() => {
-
-          });
+          dominantColorsLocalAsset
+            .then((arg0) => {
+              const tmp = closure_1_3(arg0[0], 3);
+              const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
+              const result = closure_1_7.set(closure_0, obj);
+              if (ref.current) {
+                callback(obj);
+              }
+            })
+            .catch(() => {});
           const nextPromise = dominantColorsLocalAsset.then((arg0) => {
             const tmp = closure_1_3(arg0[0], 3);
             const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };

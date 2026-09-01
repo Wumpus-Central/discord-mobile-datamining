@@ -4,14 +4,23 @@ import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/fl
 import { useEnabledHarmTypesBitmaskForChannelAndAuthorId } from "useContentHarmTypes.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx",
+);
 
-export const useRedactableMediaAttachmentsForMessage = function useRedactableMediaAttachmentsForMessage(channelId, messageId, attachmentId) {
+export const useRedactableMediaAttachmentsForMessage = function useRedactableMediaAttachmentsForMessage(
+  channelId,
+  messageId,
+  attachmentId,
+) {
   const _require = channelId;
   dependencyMap = messageId;
   closure_2 = attachmentId;
   const items = [closure_2];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => attachmentId.getMessage(closure_0, closure_1));
+  const stateFromStores =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () =>
+      attachmentId.getMessage(closure_0, closure_1),
+    );
   let obj = defaultAreStatesEqual;
   closure_3 = require("useContentHarmTypes.tsx").useEnabledHarmTypesBitmaskForMessage(stateFromStores);
   if (null == stateFromStores) {
@@ -31,12 +40,19 @@ export const useRedactableMediaAttachmentsForMessage = function useRedactableMed
   }
   const obj2 = useEnabledHarmTypesBitmaskForChannelAndAuthorId;
 };
-export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmbedsForMessage(channelId, messageId, embedId) {
+export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmbedsForMessage(
+  channelId,
+  messageId,
+  embedId,
+) {
   const _require = channelId;
   dependencyMap = messageId;
   closure_2 = embedId;
   const items = [closure_2];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => embedId.getMessage(closure_0, closure_1));
+  const stateFromStores =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () =>
+      embedId.getMessage(closure_0, closure_1),
+    );
   let obj = defaultAreStatesEqual;
   closure_3 = require("useContentHarmTypes.tsx").useEnabledHarmTypesBitmaskForMessage(stateFromStores);
   if (null == stateFromStores) {

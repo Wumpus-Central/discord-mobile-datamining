@@ -9,7 +9,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPurchaseSuccess.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium_marketing/native/components/BuyNitroPurchaseSuccess.tsx",
+);
 
 export const presentBuyNitroPurchaseSuccess = function presentBuyNitroPurchaseSuccess(premiumTier) {
   let obj = useAlertStore;
@@ -31,5 +33,9 @@ export const presentBuyNitroPurchaseSuccess = function presentBuyNitroPurchaseSu
   const intl5 = tmp(1236).intl;
   obj[1] = intl5.string(getSystemLocale.t.TkTvBz);
   obj[2] = jsx(getAlertModalItemKey.AlertActionButton, { variant: "primary", text: null });
-  obj.openAlert("BuyNitroPurchaseSuccess", jsx(getAlertModalItemKey.AlertModal, { variant: "primary", text: null }), reset);
+  obj.openAlert(
+    "BuyNitroPurchaseSuccess",
+    jsx(getAlertModalItemKey.AlertModal, { variant: "primary", text: null }),
+    reset,
+  );
 };

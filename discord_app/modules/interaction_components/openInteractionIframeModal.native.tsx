@@ -8,7 +8,7 @@ function _openInteractionIframeModal() {
   const tmp = callback((arg0) => {
     closure_0 = arg0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -55,7 +55,9 @@ function _openInteractionIframeModal() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/openInteractionIframeModal.native.tsx",
+);
 
 export default function openInteractionIframeModal() {
   const self = this;
@@ -66,4 +68,4 @@ export default function openInteractionIframeModal() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

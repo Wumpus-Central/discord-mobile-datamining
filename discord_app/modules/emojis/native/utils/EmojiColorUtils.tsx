@@ -13,7 +13,7 @@ function _getFromCacheOrFallback2() {
     c2 = 0;
     c4 = 0;
     c3 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -129,7 +129,7 @@ function _getEmojiDominantColors() {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       closure_2 = tmp2;
       ({ emoji: c0, emojiSource: closure_1 } = c0);
       yield "PX_16";

@@ -19,7 +19,7 @@ const memoResult = importAllResult.memo(function UnreadBadge(arg0) {
   let tmp9Result = null;
   if (unread) {
     let obj = { style: null, children: null };
-    const items = [tmp.unreadBadge, tmp4.unreadBadge.position, ];
+    const items = [tmp.unreadBadge, tmp4.unreadBadge.position];
     obj = { width: null, height: null };
     obj[0] = tmp4.unreadBadge.size;
     obj[1] = tmp4.unreadBadge.size;

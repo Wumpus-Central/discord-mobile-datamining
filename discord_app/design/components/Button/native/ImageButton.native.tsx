@@ -19,21 +19,57 @@ let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   }
   const sum = arg1 + 2 * MEDIUM_BUTTON_PADDING;
   const buttonBorderRadius = MINIMUM_HIT_AREA.getButtonBorderRadius(arg0);
-  let obj = { paddingBottom: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
+  let obj = {
+    paddingBottom: ThemesDefault.space.PX_4,
+    gap: ThemesDefault.space.PX_8,
+    alignItems: "center",
+    alignSelf: "center",
+    flexGrow: null,
+  };
   let num = 0;
   if (arg2) {
     num = 1;
   }
   obj = { labelPressable: obj, pill: null, imageWrapper: null, image: null, imageDim: num };
   const tmpResult = MINIMUM_HIT_AREA;
-  obj[1] = { paddingHorizontal: 0, paddingVertical: 0, minHeight: sum, minWidth: sum, borderRadius: buttonBorderRadius, borderWidth: 0, outlineWidth: MINIMUM_HIT_AREA.BUTTON_BORDER_WIDTH, outlineColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, outlineStyle: "solid" };
+  obj[1] = {
+    paddingHorizontal: 0,
+    paddingVertical: 0,
+    minHeight: sum,
+    minWidth: sum,
+    borderRadius: buttonBorderRadius,
+    borderWidth: 0,
+    outlineWidth: MINIMUM_HIT_AREA.BUTTON_BORDER_WIDTH,
+    outlineColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT,
+    outlineStyle: "solid",
+  };
   obj[2] = { width: sum, height: sum, position: "relative" };
   obj[3] = { width: sum, height: sum };
-  obj1 = { paddingHorizontal: 0, paddingVertical: 0, minHeight: sum, minWidth: sum, borderRadius: buttonBorderRadius, borderWidth: 0, outlineWidth: MINIMUM_HIT_AREA.BUTTON_BORDER_WIDTH, outlineColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, outlineStyle: "solid" };
-  obj[4] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: ThemesDefault.colors.REDESIGN_IMAGE_BUTTON_PRESSED_BACKGROUND, borderRadius: buttonBorderRadius };
+  obj1 = {
+    paddingHorizontal: 0,
+    paddingVertical: 0,
+    minHeight: sum,
+    minWidth: sum,
+    borderRadius: buttonBorderRadius,
+    borderWidth: 0,
+    outlineWidth: MINIMUM_HIT_AREA.BUTTON_BORDER_WIDTH,
+    outlineColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT,
+    outlineStyle: "solid",
+  };
+  obj[4] = {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: ThemesDefault.colors.REDESIGN_IMAGE_BUTTON_PRESSED_BACKGROUND,
+    borderRadius: buttonBorderRadius,
+  };
   return obj;
 });
-let closure_9 = { code: "function ImageButtonNativeTsx1(){const{withSpring,pressed,ON_PRESS_SPRING}=this.__closure;return{opacity:withSpring(pressed.get()===1?1:0,ON_PRESS_SPRING,'animate-always')};}" };
+let closure_9 = {
+  code: "function ImageButtonNativeTsx1(){const{withSpring,pressed,ON_PRESS_SPRING}=this.__closure;return{opacity:withSpring(pressed.get()===1?1:0,ON_PRESS_SPRING,'animate-always')};}",
+};
 const forwardRefResult = importAllResult.forwardRef((size) => {
   let str = size.size;
   if (str === undefined) {
@@ -76,14 +112,18 @@ const forwardRefResult = importAllResult.forwardRef((size) => {
       return obj;
     }
   }
-  obj = { withSpring: onPressIn(sharedValue[8]).withSpring, pressed: sharedValue, ON_PRESS_SPRING: onPressIn(sharedValue[9]).ON_PRESS_SPRING };
+  obj = {
+    withSpring: onPressIn(sharedValue[8]).withSpring,
+    pressed: sharedValue,
+    ON_PRESS_SPRING: onPressIn(sharedValue[9]).ON_PRESS_SPRING,
+  };
   B.__closure = obj;
   B.__workletHash = 17257158773379;
   B.__initData = closure_9;
   obj = { style: tmp4.imageWrapper, children: null };
   obj1 = { source: image, style: tmp4.image };
   const animatedStyle = obj2.useAnimatedStyle(B);
-  const items2 = [callback(closure_5, obj1), ];
+  const items2 = [callback(closure_5, obj1)];
   const items3 = [tmp4.imageDim, animatedStyle];
   items2[1] = callback(onPressOut(sharedValue[7]).View, { style: items3 });
   obj[1] = items2;
@@ -106,8 +146,13 @@ const forwardRefResult = importAllResult.forwardRef((size) => {
     obj3.onPressIn = callback;
     obj3.onPressOut = callback1;
     obj3.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    const items4 = [tmp10(tmp2(tmp3[11]).BaseIconButton, obj3), ];
-    const obj4 = { variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier: null, children: null };
+    const items4 = [tmp10(tmp2(tmp3[11]).BaseIconButton, obj3)];
+    const obj4 = {
+      variant: "text-xs/medium",
+      color: "interactive-text-default",
+      maxFontSizeMultiplier: null,
+      children: null,
+    };
     obj4[2] = maxFontSizeMultiplier;
     obj4[3] = label;
     items4[1] = tmp10(tmp2(tmp3[12]).Text, obj4);

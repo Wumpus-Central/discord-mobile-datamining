@@ -13,7 +13,10 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => guildId.getGuildId());
   obj = { cooldownDurationMs: stateFromStores(687).Millis.WEEK, guildId: stateFromStores };
-  let result = require("../DismissibleContentUnsafeUtils.tsx").useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, obj);
+  let result = require("../DismissibleContentUnsafeUtils.tsx").useIsDismissibleContentDismissed_UNSAFE(
+    APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
+    obj,
+  );
   dependencyMap = result;
   const items1 = [APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, stateFromStores, result];
   obj = {
@@ -36,7 +39,11 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
           result1 = obj.removeDismissedRecurringContent(tmp2);
           let flag10 = false;
         } else {
-          const result2 = obj(result1[4]).addVersionedDismissedContent(tmp2, versionedDismissibleContentCurrentVersion, nextNumTimesDismissed);
+          const result2 = obj(result1[4]).addVersionedDismissedContent(
+            tmp2,
+            versionedDismissibleContentCurrentVersion,
+            nextNumTimesDismissed,
+          );
           flag10 = true;
           const objResult2 = obj(result1[4]);
         }
@@ -60,7 +67,13 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
             const objResult7 = obj(result1[4]);
             const _Date2 = Date;
             const timestamp = Date.now();
-            const result5 = objResult7.addSnowflakeBoundDismissedContent(tmp2, stateFromStores(result1[6]).fromTimestamp(timestamp + obj(result1[4]).SNOWFLAKE_BOUND_DISMISSIBLE_CONTENT_DURATION_MS), nextNumTimesDismissed1);
+            const result5 = objResult7.addSnowflakeBoundDismissedContent(
+              tmp2,
+              stateFromStores(result1[6]).fromTimestamp(
+                timestamp + obj(result1[4]).SNOWFLAKE_BOUND_DISMISSIBLE_CONTENT_DURATION_MS,
+              ),
+              nextNumTimesDismissed1,
+            );
             flag9 = true;
             const obj27 = stateFromStores(result1[6]);
           }
@@ -78,7 +91,10 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
               const objResult10 = obj(result1[5]);
             } else {
               const objResult11 = obj(result1[4]);
-              const result8 = objResult11.addTimeRecurringDismissedContent(tmp2, obj(result1[4]).getNextNumTimesDismissed(tmp2, {}));
+              const result8 = objResult11.addTimeRecurringDismissedContent(
+                tmp2,
+                obj(result1[4]).getNextNumTimesDismissed(tmp2, {}),
+              );
               flag8 = true;
               const objResult12 = obj(result1[4]);
             }
@@ -162,7 +178,14 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
                     } else {
                       const _Date = Date;
                       const timestamp1 = Date.now();
-                      const result17 = objResult24.UNSAFE_addSnowflakeBoundGuildDismissedContent(tmp2, stateFromStores(result1[6]).fromTimestamp(timestamp1 + obj(result1[4]).SNOWFLAKE_BOUND_DISMISSIBLE_CONTENT_DURATION_MS), tmp8, num2);
+                      const result17 = objResult24.UNSAFE_addSnowflakeBoundGuildDismissedContent(
+                        tmp2,
+                        stateFromStores(result1[6]).fromTimestamp(
+                          timestamp1 + obj(result1[4]).SNOWFLAKE_BOUND_DISMISSIBLE_CONTENT_DURATION_MS,
+                        ),
+                        tmp8,
+                        num2,
+                      );
                       flag3 = true;
                       const obj13 = stateFromStores(result1[6]);
                     }
@@ -195,7 +218,7 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
         }
         objResult3 = obj(result1[10]);
       }
-    }, items1)
+    }, items1),
   };
   return obj;
-};
+}

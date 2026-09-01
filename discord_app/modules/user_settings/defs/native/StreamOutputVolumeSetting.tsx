@@ -56,27 +56,29 @@ createToggle = {
     const obj = apexExperimentDefault;
     let items = [closure_3, closure_4];
     const obj2 = initialize;
-    return initialize.useStateFromStores(items, () => {
-      const items = [closure_3, closure_4];
-      [obj, obj2] = items;
-      const lastActiveStream = obj.getLastActiveStream();
-      let tmp2 = null;
-      if (null != lastActiveStream) {
-        tmp2 = null;
-        if (lastActiveStream.ownerId !== obj2.getId()) {
-          tmp2 = lastActiveStream;
+    return (
+      initialize.useStateFromStores(items, () => {
+        const items = [closure_3, closure_4];
+        [obj, obj2] = items;
+        const lastActiveStream = obj.getLastActiveStream();
+        let tmp2 = null;
+        if (null != lastActiveStream) {
+          tmp2 = null;
+          if (lastActiveStream.ownerId !== obj2.getId()) {
+            tmp2 = lastActiveStream;
+          }
         }
-      }
-      return null != tmp2;
-    }) && obj.getConfig({ location: "StreamOutputVolumeSetting" }).audioOutputPresent;
+        return null != tmp2;
+      }) && obj.getConfig({ location: "StreamOutputVolumeSetting" }).audioOutputPresent
+    );
   },
   useSearchTerms() {
     const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["3182VD"]), ];
+    const items = [intl.string(getSystemLocale.t["3182VD"])];
     const intl2 = getSystemLocale.intl;
     items[1] = intl2.string(getSystemLocale.t["DGq/PR"]);
     return items;
-  }
+  },
 };
 createToggle = createToggle.createVolumeSlider(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx");

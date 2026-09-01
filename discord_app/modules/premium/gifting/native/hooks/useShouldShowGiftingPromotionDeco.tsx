@@ -22,4 +22,4 @@ export default function useShouldShowGiftingPromotionDeco(arg0) {
     tmp6 = tmp4;
   }
   return tmp6;
-};
+}

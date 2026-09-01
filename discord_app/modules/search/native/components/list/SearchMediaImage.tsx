@@ -41,7 +41,7 @@ function SearchMediaObscurityIcon(obscureReason) {
     }
   }, items1);
   const items2 = [absoluteFill.absoluteFill, memo];
-  const children = [callback2(tmp2(tmp3[13]), { blurTheme: str, style: items2 }), ];
+  const children = [callback2(tmp2(tmp3[13]), { blurTheme: str, style: items2 })];
   let tmp9Result = null != memo1;
   if (tmp9Result) {
     obj = { style: null, children: null };
@@ -56,9 +56,13 @@ function SearchMediaObscurityIcon(obscureReason) {
 let c4 = importAllResult;
 ({ ImageBackground: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, Fragment: closure_12, jsxs: map1 } = jsxProd);
-let closure_14 = createCacheKey.createStyles({ container: { justifyContent: "center", alignItems: "center" }, sound: { justifyContent: "center", alignItems: "center" } });
+let closure_14 = createCacheKey.createStyles({
+  container: { justifyContent: "center", alignItems: "center" },
+  sound: { justifyContent: "center", alignItems: "center" },
+});
 let closure_16 = importAllResult.memo((containerWidth) => {
-  ({ mediaUrl, mediaHeight, mediaWidth, containerStyle, renderFallback, obscureReason, containerHeight } = containerWidth);
+  ({ mediaUrl, mediaHeight, mediaWidth, containerStyle, renderFallback, obscureReason, containerHeight } =
+    containerWidth);
   containerWidth = containerWidth.containerWidth;
   const scale = containerWidth.scale;
   const items = [containerHeight, containerWidth];
@@ -74,13 +78,20 @@ let closure_16 = importAllResult.memo((containerWidth) => {
           const items1 = [Math.round(mediaWidth * (result1 / mediaHeight)), result1];
           let items2 = items1;
         } else {
-          items2 = [result, ];
+          items2 = [result];
           const _Math = Math;
           items2[1] = Math.round(mediaHeight * (result / mediaWidth));
         }
         [tmp6, tmp7] = callback(items2, 2);
         let obj = containerHeight(1492);
-        obj = { src: null, sourceWidth: null, sourceHeight: null, targetWidth: null, targetHeight: null, format: "png" };
+        obj = {
+          src: null,
+          sourceWidth: null,
+          sourceHeight: null,
+          targetWidth: null,
+          targetHeight: null,
+          format: "png",
+        };
         obj[0] = mediaUrl;
         obj[1] = mediaWidth;
         obj[2] = mediaHeight;
@@ -150,7 +161,10 @@ export const SearchAttachmentMediaImage = function SearchAttachmentMediaImage(at
   let enabledHarmTypesBitmaskForChannelAndAuthorId;
   dependencyMap = undefined;
   let obj = attachment(10260);
-  enabledHarmTypesBitmaskForChannelAndAuthorId = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, attachment.authorId);
+  enabledHarmTypesBitmaskForChannelAndAuthorId = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(
+    channelId,
+    attachment.authorId,
+  );
   let num = attachment.flags;
   if (num == null) {
     num = 0;
@@ -162,7 +176,15 @@ export const SearchAttachmentMediaImage = function SearchAttachmentMediaImage(at
   }
   dependencyMap = hasFlagResult;
   const items = [attachment, enabledHarmTypesBitmaskForChannelAndAuthorId, hasFlagResult];
-  const memo = importAllResult.useMemo(() => attachment(_undefined[15]).getObscureReasonForAttachment(attachment, enabledHarmTypesBitmaskForChannelAndAuthorId, _undefined), items);
+  const memo = importAllResult.useMemo(
+    () =>
+      attachment(_undefined[15]).getObscureReasonForAttachment(
+        attachment,
+        enabledHarmTypesBitmaskForChannelAndAuthorId,
+        _undefined,
+      ),
+    items,
+  );
   tmp2Result = tmp2(8568);
   obj = {};
   const attachmentUrl = tmp2Result.getAttachmentUrl(attachment);
@@ -262,9 +284,18 @@ export const SearchComponentMediaImage = function SearchComponentMediaImage(unfu
   let enabledHarmTypesBitmaskForChannelAndAuthorId;
   let isChannelSpoilerGated;
   let obj = unfurledMediaItem(isBot[19]);
-  enabledHarmTypesBitmaskForChannelAndAuthorId = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, unfurledMediaItem.authorId);
+  enabledHarmTypesBitmaskForChannelAndAuthorId = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(
+    channelId,
+    unfurledMediaItem.authorId,
+  );
   isChannelSpoilerGated = unfurledMediaItem(isBot[21]).useIsChannelSpoilerGated(store.getChannel(channelId));
-  const items = [unfurledMediaItem, enabledHarmTypesBitmaskForChannelAndAuthorId, sources, isBot, isChannelSpoilerGated];
+  const items = [
+    unfurledMediaItem,
+    enabledHarmTypesBitmaskForChannelAndAuthorId,
+    sources,
+    isBot,
+    isChannelSpoilerGated,
+  ];
   obj = {};
   const memo = isChannelSpoilerGated.useMemo(() => {
     const obj = unfurledMediaItem(isBot[15]);

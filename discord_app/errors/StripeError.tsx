@@ -19,8 +19,7 @@ const prototype = function StripeError(error) {
   }
   return tmp;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 const result = require("set").fileFinishedImporting("errors/StripeError.tsx");
 
 export default prototype;

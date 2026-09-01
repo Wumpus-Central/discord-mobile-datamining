@@ -36,7 +36,13 @@ export default function useGuildPowerupsNewBadge(arg0) {
       tmp6 = closure_8;
     }
   }
-  const tmp7 = callback(require("../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx").useSelectedVersionedDismissibleContent(tmp6, num), 2);
+  const tmp7 = callback(
+    require("../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx").useSelectedVersionedDismissibleContent(
+      tmp6,
+      num,
+    ),
+    2,
+  );
   _require = tmp8;
   importDefault = tmp9;
   const items1 = [tmp7[0] === closure_8, tmp7[1]];
@@ -50,14 +56,17 @@ export default function useGuildPowerupsNewBadge(arg0) {
       if (closure_1) {
         callback(TAKE_ACTION);
       }
-    }, items1)
+    }, items1),
   };
   return obj;
-};
+}
 export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildPowerupsNewBadge(guildId) {
   const _require = guildId;
   const items = [closure_5];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.getStateForGuild(closure_0));
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_5.getStateForGuild(closure_0),
+  );
   let obj = initialize;
   const tmp2Result = num(12067)(guildId, stateFromStores);
   num = 0;

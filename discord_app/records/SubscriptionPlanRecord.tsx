@@ -9,7 +9,17 @@ class SubscriptionPlanRecord extends tmp2 {
   constructor(arg0) {
     tmp = new SubscriptionPlanRecord(new.target, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ id: tmp.id, name: tmp.name, interval: tmp.interval, intervalCount: tmp.intervalCount, taxInclusive: tmp.taxInclusive, skuId: tmp.skuId, currency: tmp.currency, price: tmp.price, prices: tmp.prices } = global);
+    ({
+      id: tmp.id,
+      name: tmp.name,
+      interval: tmp.interval,
+      intervalCount: tmp.intervalCount,
+      taxInclusive: tmp.taxInclusive,
+      skuId: tmp.skuId,
+      currency: tmp.currency,
+      price: tmp.price,
+      prices: tmp.prices,
+    } = global);
     return tmp;
   }
 }
@@ -27,13 +37,23 @@ SubscriptionPlanRecord["createFromServer"] = function createFromServer(prices) {
         obj = { countryCode: null, prices: null };
         obj[0] = tmp.prices[arg1].country_prices.country_code;
         prices = tmp3.country_prices.prices;
-        obj[1] = prices.map((amount) => ({ amount: amount.amount, currency: amount.currency, tax: 0, taxInclusive: tax_inclusive.tax_inclusive }));
+        obj[1] = prices.map((amount) => ({
+          amount: amount.amount,
+          currency: amount.currency,
+          tax: 0,
+          taxInclusive: tax_inclusive.tax_inclusive,
+        }));
         obj[0] = obj;
         const _Object = Object;
         const entries = Object.entries(tmp3.payment_source_prices);
         obj[1] = entries.reduce((arg0, arg1) => {
           [tmp, arr] = arg1;
-          arg0[tmp] = arr.map((amount) => ({ amount: amount.amount, currency: amount.currency, tax: 0, taxInclusive: tax_inclusive.tax_inclusive }));
+          arg0[tmp] = arr.map((amount) => ({
+            amount: amount.amount,
+            currency: amount.currency,
+            tax: 0,
+            taxInclusive: tax_inclusive.tax_inclusive,
+          }));
           return arg0;
         }, {});
         arg0[arg1] = obj;
@@ -45,7 +65,19 @@ SubscriptionPlanRecord["createFromServer"] = function createFromServer(prices) {
   if (typeof SubscriptionPlanRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp5 = new SubscriptionPlanRecord("Trying to call a non-function", tmp, SubscriptionPlanRecord, new.target, id, name, interval, interval_count, tax_inclusive, sku_id, currency);
+  const tmp5 = new SubscriptionPlanRecord(
+    "Trying to call a non-function",
+    tmp,
+    SubscriptionPlanRecord,
+    new.target,
+    id,
+    name,
+    interval,
+    interval_count,
+    tax_inclusive,
+    sku_id,
+    currency,
+  );
   // ThrowIfThisInitialized (0x7c)
   tmp5.id = id;
   tmp5.name = name;
@@ -74,7 +106,7 @@ Object.defineProperty(prototype, "premiumSubscriptionType", {
     }
     return closure_1.TIER_2;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["toServerData"] = function toServerData() {
   const self = this;
@@ -85,7 +117,18 @@ prototype["toServerData"] = function toServerData() {
     obj = { country_code: tmp.countryPrices.countryCode, prices: tmp.countryPrices.prices };
     obj[arg0] = obj;
   });
-  obj = { id: this.id, name: this.name, sku_id: this.skuId, interval: this.interval, interval_count: this.intervalCount, tax_inclusive: this.taxInclusive, currency: this.currency, price: this.price, prices: obj, price_tier: this.price };
+  obj = {
+    id: this.id,
+    name: this.name,
+    sku_id: this.skuId,
+    interval: this.interval,
+    interval_count: this.intervalCount,
+    tax_inclusive: this.taxInclusive,
+    currency: this.currency,
+    price: this.price,
+    prices: obj,
+    price_tier: this.price,
+  };
   return obj;
 };
 const result = require("set").fileFinishedImporting("records/SubscriptionPlanRecord.tsx");
@@ -95,7 +138,7 @@ export const getPriceFromServer = function getPriceFromServer(amount, taxInclusi
   return { amount: amount.amount, currency: amount.currency, tax: 0, taxInclusive };
 };
 export const isNoneSubscription = function isNoneSubscription(planId) {
-  const items = [, , , ];
+  const items = [, , ,];
   ({ NONE_MONTH: arr[0], NONE_3_MONTH: arr[1], NONE_6_MONTH: arr[2], NONE_YEAR: arr[3] } = closure_2);
   return items.includes(planId);
 };

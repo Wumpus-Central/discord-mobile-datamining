@@ -17,7 +17,9 @@ function AccountLinkLargeBanner(arg0) {
   let obj = require(analyticsLocations[10]);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  analyticsLocations = importDefault(analyticsLocations[11])(importDefault(analyticsLocations[12]).MOBILE_ACCOUNT_LINK_LARGE_BANNER).analyticsLocations;
+  analyticsLocations = importDefault(analyticsLocations[11])(
+    importDefault(analyticsLocations[12]).MOBILE_ACCOUNT_LINK_LARGE_BANNER,
+  ).analyticsLocations;
   const applicationAccountLinkBenefitConfig = application.applicationAccountLinkBenefitConfig;
   let reward_name;
   if (applicationAccountLinkBenefitConfig != null) {
@@ -33,18 +35,18 @@ function AccountLinkLargeBanner(arg0) {
     };
     obj[2] = tmp.closeButton;
     obj[3] = callback(tmp2(tmp3[15]).XSmallIcon, { size: "sm", color: "text-muted" });
-    const items1 = [callback(tmp2(tmp3[14]).PressableOpacity, obj), , , , ];
+    const items1 = [callback(tmp2(tmp3[14]).PressableOpacity, obj), , , ,];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.imagesContainer;
     const obj2 = { game: null, size: null };
     obj2[0] = application;
     obj2[1] = NORMAL;
-    const items2 = [callback(importDefault(tmp3[6]), obj2), , ];
+    const items2 = [callback(importDefault(tmp3[6]), obj2), ,];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.ellipsisContainer;
     const obj4 = { style: null };
     obj4[0] = tmp.ellipsisDot;
-    const items3 = [callback(View, obj4), , ];
+    const items3 = [callback(View, obj4), ,];
     const obj5 = { style: null };
     obj5[0] = tmp.ellipsisDot;
     items3[1] = callback(View, obj5);
@@ -102,18 +104,51 @@ let closure_14 = require("GameIcon").GameIconImageSize[NORMAL];
 let c15 = "heading-md/bold";
 let c16 = "text-sm/medium";
 const PX_162 = ThemesDefault.space.PX_16;
-let obj = { card: { padding: PX_12 }, closeButton: null, imagesContainer: null, ellipsisContainer: null, ellipsisDot: null, title: null, body: null, ctaContainer: null };
-obj = { position: "absolute", top: ThemesDefault.space.PX_12, right: ThemesDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
+let obj = {
+  card: { padding: PX_12 },
+  closeButton: null,
+  imagesContainer: null,
+  ellipsisContainer: null,
+  ellipsisDot: null,
+  title: null,
+  body: null,
+  ctaContainer: null,
+};
+obj = {
+  position: "absolute",
+  top: ThemesDefault.space.PX_12,
+  right: ThemesDefault.space.PX_12,
+  width: 24,
+  height: 24,
+  alignItems: "center",
+  justifyContent: "center",
+  zIndex: 1,
+};
 obj[1] = obj;
 obj[2] = { flexDirection: "row", alignItems: "center", justifyContent: "center" };
-createCacheKey = { flexDirection: "row", alignItems: "center", marginHorizontal: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4 };
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  marginHorizontal: ThemesDefault.space.PX_8,
+  gap: ThemesDefault.space.PX_4,
+};
 obj[3] = createCacheKey;
-obj[4] = { width: ThemesDefault.space.PX_4, height: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.space.PX_4 / 2, backgroundColor: ThemesDefault.colors.INTERACTIVE_MUTED };
+obj[4] = {
+  width: ThemesDefault.space.PX_4,
+  height: ThemesDefault.space.PX_4,
+  borderRadius: ThemesDefault.space.PX_4 / 2,
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_MUTED,
+};
 obj[5] = { marginTop: PX_16, textAlign: "center" };
 obj[6] = { marginTop: PX_4, textAlign: "center" };
 obj[7] = { marginTop: PX_162 };
 let closure_18 = createCacheKey.createStyles(obj);
-let obj2 = { width: ThemesDefault.space.PX_4, height: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.space.PX_4 / 2, backgroundColor: ThemesDefault.colors.INTERACTIVE_MUTED };
+let obj2 = {
+  width: ThemesDefault.space.PX_4,
+  height: ThemesDefault.space.PX_4,
+  borderRadius: ThemesDefault.space.PX_4 / 2,
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_MUTED,
+};
 const memoResult = importAllResult.memo((arg0) => {
   const merged = Object.assign(arg0);
   return callback(AccountLinkLargeBanner, {});

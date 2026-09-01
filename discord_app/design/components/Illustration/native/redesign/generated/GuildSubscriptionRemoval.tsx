@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/GuildSubscriptionRemoval.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/GuildSubscriptionRemoval.tsx",
+);
 
 export const getGuildSubscriptionRemovalSource = function getGuildSubscriptionRemovalSource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getGuildSubscriptionRemovalSource = function getGuildSubscriptionRe
     },
     light() {
       return callback(13277);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useGuildSubscriptionRemovalSource = function useGuildSubscriptionRe
     },
     light() {
       return callback(13277);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const GuildSubscriptionRemoval = function GuildSubscriptionRemoval(arg0) 
     },
     light() {
       return callback(13277);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

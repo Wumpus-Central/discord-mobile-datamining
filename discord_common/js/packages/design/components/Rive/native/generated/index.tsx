@@ -1,7 +1,9 @@
 // discord_common/js/packages/design/components/Rive/native/generated/index.tsx
 import set from "../../../../../../../../_runtime/00002_set.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/index.tsx");
+const result = set.fileFinishedImporting(
+  "../discord_common/js/packages/design/components/Rive/native/generated/index.tsx",
+);
 for (const key10018 in require("BoostThisServerRive")) {
   let tmp3 = key10018;
   arg5[key10018] = require("BoostThisServerRive")[key10018];

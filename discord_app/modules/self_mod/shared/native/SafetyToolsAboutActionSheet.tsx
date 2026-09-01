@@ -41,7 +41,14 @@ export default function SafetyToolsAboutScreen(channelId) {
   const callback = first.useCallback(() => {
     let obj = recipientId(warningId[9]);
     obj.hideActionSheet(callback2(channelId));
-    obj = { channelId, warningId, warningType, senderId: recipientId, cta: channelId(warningId[10]).CtaEventTypes.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS, isNudgeWarning: callback2 };
+    obj = {
+      channelId,
+      warningId,
+      warningType,
+      senderId: recipientId,
+      cta: channelId(warningId[10]).CtaEventTypes.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS,
+      isNudgeWarning: callback2,
+    };
     channelId(warningId[10]).trackCtaEvent(obj);
   }, items);
   HelpdeskArticles = first.useCallback(() => {
@@ -49,31 +56,45 @@ export default function SafetyToolsAboutScreen(channelId) {
       callback(true);
       let obj = channelId(warningId[11]);
       const reportFalsePositiveResult = channelId(warningId[11]).reportFalsePositive(channelId);
-      channelId(warningId[11]).reportFalsePositive(channelId).then(() => {
-        callback(false);
-        let obj = closure_1_0(closure_1_2[12]);
-        obj = { id: "safety-tools-report-false-positive", text: null };
-        const intl = closure_1_0(closure_1_2[13]).intl;
-        obj[1] = intl.string(closure_1_0(closure_1_2[13]).t.FhgVWi);
-        obj.showSafetyToast(obj);
-        closure_1_1(closure_1_2[9]).hideActionSheet(closure_1_6(closure_0));
-      }).catch(() => {
-        callback(false);
-        const intl = closure_1_0(closure_1_2[13]).intl;
-        closure_1_0(closure_1_2[14]).presentError(intl.string(closure_1_0(closure_1_2[13]).t.R0RpRX));
-      });
-      const nextPromise = channelId(warningId[11]).reportFalsePositive(channelId).then(() => {
-        callback(false);
-        let obj = closure_1_0(closure_1_2[12]);
-        obj = { id: "safety-tools-report-false-positive", text: null };
-        const intl = closure_1_0(closure_1_2[13]).intl;
-        obj[1] = intl.string(closure_1_0(closure_1_2[13]).t.FhgVWi);
-        obj.showSafetyToast(obj);
-        closure_1_1(closure_1_2[9]).hideActionSheet(closure_1_6(closure_0));
-      });
+      channelId(warningId[11])
+        .reportFalsePositive(channelId)
+        .then(() => {
+          callback(false);
+          let obj = closure_1_0(closure_1_2[12]);
+          obj = { id: "safety-tools-report-false-positive", text: null };
+          const intl = closure_1_0(closure_1_2[13]).intl;
+          obj[1] = intl.string(closure_1_0(closure_1_2[13]).t.FhgVWi);
+          obj.showSafetyToast(obj);
+          closure_1_1(closure_1_2[9]).hideActionSheet(closure_1_6(closure_0));
+        })
+        .catch(() => {
+          callback(false);
+          const intl = closure_1_0(closure_1_2[13]).intl;
+          closure_1_0(closure_1_2[14]).presentError(intl.string(closure_1_0(closure_1_2[13]).t.R0RpRX));
+        });
+      const nextPromise = channelId(warningId[11])
+        .reportFalsePositive(channelId)
+        .then(() => {
+          callback(false);
+          let obj = closure_1_0(closure_1_2[12]);
+          obj = { id: "safety-tools-report-false-positive", text: null };
+          const intl = closure_1_0(closure_1_2[13]).intl;
+          obj[1] = intl.string(closure_1_0(closure_1_2[13]).t.FhgVWi);
+          obj.showSafetyToast(obj);
+          closure_1_1(closure_1_2[9]).hideActionSheet(closure_1_6(closure_0));
+        });
     }
   }, items1);
-  obj = { hasHeaderBack: true, recipientId, warningId, warningType, headerTitle: null, channelId: null, onClose: null, children: null };
+  obj = {
+    hasHeaderBack: true,
+    recipientId,
+    warningId,
+    warningType,
+    headerTitle: null,
+    channelId: null,
+    onClose: null,
+    children: null,
+  };
   let intl = channelId(warningId[13]).intl;
   obj[4] = intl.string(channelId(warningId[13]).t.qI14KM);
   obj[5] = channelId;
@@ -85,23 +106,27 @@ export default function SafetyToolsAboutScreen(channelId) {
   let obj5 = recipientId(warningId[17]);
   obj2[0] = obj5.getArticleURL(HelpdeskArticles.SAFETY_ALERTS);
   obj1[2] = intl2.format(channelId(warningId[13]).t["njJ/Cg"], obj2);
-  const items2 = [callback(channelId(warningId[16]).Text, obj1), ];
+  const items2 = [callback(channelId(warningId[16]).Text, obj1)];
   const obj3 = { variant: "secondary", size: "lg", disabled: first, text: null, onPress: null };
   const intl3 = channelId(warningId[13]).intl;
   obj3[3] = intl3.string(channelId(warningId[13]).t.Xb2REN);
   obj3[4] = callback;
   items2[1] = callback(channelId(warningId[18]).Button, obj3);
   obj[1] = items2;
-  const items3 = [callback2(closure_5, obj), ];
+  const items3 = [callback2(closure_5, obj)];
   const obj4 = { variant: "text-md/medium", style: tmp3.reportFalsePositive, children: null };
   const intl4 = channelId(warningId[13]).intl;
   obj5 = {
     reportFalsePositiveHook(children) {
-      return closure_1_8(channelId(warningId[16]).Text, { variant: "text-sm/medium", color: "text-link", disabled: first, onPress: closure_7, children }, arg1);
-    }
+      return closure_1_8(
+        channelId(warningId[16]).Text,
+        { variant: "text-sm/medium", color: "text-link", disabled: first, onPress: closure_7, children },
+        arg1,
+      );
+    },
   };
   obj4[2] = intl4.format(channelId(warningId[13]).t["2uYViD"], obj5);
   items3[1] = callback(channelId(warningId[16]).Text, obj4);
   obj[7] = items3;
   return callback2(recipientId(warningId[15]), obj);
-};
+}

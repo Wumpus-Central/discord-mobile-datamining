@@ -9,7 +9,12 @@ require = arg1;
 function CoachmarkImg(arg0) {
   ({ source, decorationAsset } = arg0);
   const tmp = callback();
-  return jsx(Button.Avatar, { style: callback().image, source, avatarDecoration: { asset: decorationAsset }, size: Button.AvatarSizes.XXLARGE });
+  return jsx(Button.Avatar, {
+    style: callback().image,
+    source,
+    avatarDecoration: { asset: decorationAsset },
+    size: Button.AvatarSizes.XXLARGE,
+  });
 }
 let closure_6 = createCacheKey.createStyles({ image: { marginTop: 12 } });
 const result = require("set").fileFinishedImporting("modules/collectibles/native/ShopCoachmark.tsx");
@@ -23,7 +28,16 @@ export default function ShopCoachmark(markAsDismissed) {
   const decorationAsset = markAsDismissed.decorationAsset;
   const navigateToShop = markAsDismissed.navigateToShop;
   const renderImgComponent = markAsDismissed.renderImgComponent;
-  const items = [avatarSrc, decorationAsset, description, renderImgComponent, markAsDismissed, title, visible, navigateToShop];
+  const items = [
+    avatarSrc,
+    decorationAsset,
+    description,
+    renderImgComponent,
+    markAsDismissed,
+    title,
+    visible,
+    navigateToShop,
+  ];
   const memo = description.useMemo(() => {
     const obj = {
       title,
@@ -37,7 +51,7 @@ export default function ShopCoachmark(markAsDismissed) {
       renderImgComponent: null,
       buttonLabel: null,
       buttonVariant: "primary",
-      onButtonPress: null
+      onButtonPress: null,
     };
     let fn = renderImgComponent;
     if (renderImgComponent == null) {
@@ -51,4 +65,4 @@ export default function ShopCoachmark(markAsDismissed) {
   }, items);
   const coachmark = markAsDismissed(title[7]).useCoachmark(markAsDismissed.buttonRef, memo);
   return null;
-};
+}

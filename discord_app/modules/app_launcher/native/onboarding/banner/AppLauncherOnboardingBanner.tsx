@@ -8,7 +8,9 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingBanner.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingBanner.tsx",
+);
 
 export default function AppLauncherOnboardingBanner(arg0) {
   ({ context, visibleContent } = arg0);
@@ -25,4 +27,4 @@ export default function AppLauncherOnboardingBanner(arg0) {
   } else {
     return null;
   }
-};
+}

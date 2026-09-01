@@ -45,16 +45,21 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
   return obj;
 });
 createCacheKey = { START: 0, [0]: "START", END: 1, [1]: "END" };
-const result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx",
+);
 
 export default function PremiumUpsellSectionDivider(arg0) {
   ({ useTier0UpsellContent, position } = arg0);
   let lock = callback2(position);
   let obj = { style: lock.container, children: null };
-  obj = { style: lock.gradient, children: callback(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, { useTier0UpsellContent }) };
+  obj = {
+    style: lock.gradient,
+    children: callback(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, { useTier0UpsellContent }),
+  };
   let LockIcon = require;
   let WHITE = dependencyMap;
-  const items = [callback(closure_4, obj), , ];
+  const items = [callback(closure_4, obj), ,];
   obj = { style: lock.divider, start: keys.HorizontalGradient.START, end: keys.HorizontalGradient.END, colors: null };
   if (true === useTier0UpsellContent) {
     let PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_0;
@@ -89,7 +94,7 @@ export default function PremiumUpsellSectionDivider(arg0) {
     tmp3(tmp2, obj1);
     const tmp4Result = tmp4(4940);
   }
-};
+}
 export const PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT = 28;
 export const PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN = 6;
 export const PremiumUpsellSectionDividerPosition = createCacheKey;

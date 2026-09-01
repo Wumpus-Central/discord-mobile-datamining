@@ -11,7 +11,22 @@ class PromotionRecord extends tmp2 {
   constructor(arg0) {
     tmp3 = new PromotionRecord(tmp2, new.target, tmp, new.target, global, PromotionRecord);
     // ThrowIfThisInitialized (0x7c)
-    ({ id: tmp3.id, trialId: tmp3.trialId, startDate: tmp3.startDate, endDate: tmp3.endDate, outboundRedemptionEndDate: tmp3.outboundRedemptionEndDate, inboundHeaderText: tmp3.inboundHeaderText, inboundBodyText: tmp3.inboundBodyText, inboundHelpCenterLink: tmp3.inboundHelpCenterLink, outboundTitle: tmp3.outboundTitle, outboundRedemptionModalBody: tmp3.outboundRedemptionModalBody, outboundTermsAndConditions: tmp3.outboundTermsAndConditions, outboundRedemptionPageLink: tmp3.outboundRedemptionPageLink, outboundRedemptionUrlFormat: tmp3.outboundRedemptionUrlFormat, flags } = global);
+    ({
+      id: tmp3.id,
+      trialId: tmp3.trialId,
+      startDate: tmp3.startDate,
+      endDate: tmp3.endDate,
+      outboundRedemptionEndDate: tmp3.outboundRedemptionEndDate,
+      inboundHeaderText: tmp3.inboundHeaderText,
+      inboundBodyText: tmp3.inboundBodyText,
+      inboundHelpCenterLink: tmp3.inboundHelpCenterLink,
+      outboundTitle: tmp3.outboundTitle,
+      outboundRedemptionModalBody: tmp3.outboundRedemptionModalBody,
+      outboundTermsAndConditions: tmp3.outboundTermsAndConditions,
+      outboundRedemptionPageLink: tmp3.outboundRedemptionPageLink,
+      outboundRedemptionUrlFormat: tmp3.outboundRedemptionUrlFormat,
+      flags,
+    } = global);
     if (flags == null) {
       flags = 0;
     }
@@ -38,7 +53,13 @@ class PromotionRecord extends tmp2 {
       BLOCKLIST = require("CountryListMode").CountryListMode.BLOCKLIST;
     }
     tmp3.countryListMode = BLOCKLIST;
-    ({ promotionType: tmp3.promotionType, partnerId: tmp3.partnerId, marketingComponents: tmp3.marketingComponents, rewardSkuIds: tmp3.rewardSkuIds, bogoRewardEnabled } = global);
+    ({
+      promotionType: tmp3.promotionType,
+      partnerId: tmp3.partnerId,
+      marketingComponents: tmp3.marketingComponents,
+      rewardSkuIds: tmp3.rewardSkuIds,
+      bogoRewardEnabled,
+    } = global);
     if (bogoRewardEnabled == null) {
       bogoRewardEnabled = false;
     }
@@ -51,7 +72,32 @@ const prototype = PromotionRecord.prototype;
 PromotionRecord["createFromServer"] = function createFromServer(id) {
   const date = new Date(id.start_date);
   const date1 = new Date(id.end_date);
-  const obj = { id: id.id, trialId: id.trial_id, startDate: date, endDate: date1, outboundRedemptionEndDate: null, inboundHeaderText: null, inboundBodyText: null, inboundHelpCenterLink: null, outboundTitle: null, outboundRedemptionModalBody: null, outboundTermsAndConditions: null, outboundRedemptionPageLink: null, outboundRedemptionUrlFormat: null, flags: null, inboundRestrictedCountries: null, outboundRestrictedCountries: null, allowedCountries: null, countryListMode: null, promotionType: null, partnerId: null, marketingComponents: null, rewardSkuIds: null, bogoRewardEnabled: null, promotionKey: null };
+  const obj = {
+    id: id.id,
+    trialId: id.trial_id,
+    startDate: date,
+    endDate: date1,
+    outboundRedemptionEndDate: null,
+    inboundHeaderText: null,
+    inboundBodyText: null,
+    inboundHelpCenterLink: null,
+    outboundTitle: null,
+    outboundRedemptionModalBody: null,
+    outboundTermsAndConditions: null,
+    outboundRedemptionPageLink: null,
+    outboundRedemptionUrlFormat: null,
+    flags: null,
+    inboundRestrictedCountries: null,
+    outboundRestrictedCountries: null,
+    allowedCountries: null,
+    countryListMode: null,
+    promotionType: null,
+    partnerId: null,
+    marketingComponents: null,
+    rewardSkuIds: null,
+    bogoRewardEnabled: null,
+    promotionKey: null,
+  };
   let date2 = null;
   if (null != id.outbound_redemption_end_date) {
     const _Date = Date;
@@ -98,7 +144,12 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
     str8 = "";
   }
   obj[12] = str8;
-  ({ flags: obj[13], inbound_restricted_countries: obj[14], outbound_restricted_countries: obj[15], allowed_countries } = id);
+  ({
+    flags: obj[13],
+    inbound_restricted_countries: obj[14],
+    outbound_restricted_countries: obj[15],
+    allowed_countries,
+  } = id);
   if (allowed_countries == null) {
     allowed_countries = [];
   }
@@ -167,19 +218,19 @@ Object.defineProperty(prototype, "isBogo", {
   get: function isBogo() {
     return this.promotionType === CountryListMode /* CountryListMode */.PromotionTypes.BOGO;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isMarketingMoment", {
   get: function isMarketingMoment() {
     return this.promotionType === CountryListMode /* CountryListMode */.PromotionTypes.MARKETING_MOMENT;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasBogoReward", {
   get: function hasBogoReward() {
     return this.bogoRewardEnabled;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["hasFlag"] = function hasFlag(arg0) {
   return hasFlag.hasFlag(this.flags, arg0);

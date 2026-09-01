@@ -20,7 +20,7 @@ export default function AgeVerificationScreen() {
   obj = {
     onClose() {
       return onTaskComplete({ type: memo(stateFromStores[10]).TaskInputType.Empty });
-    }
+    },
   };
   const tmp2 = callback();
   const items1 = [onTaskComplete, stateFromStores];
@@ -38,7 +38,11 @@ export default function AgeVerificationScreen() {
   }, items1);
   const items2 = [memo];
   const effect1 = React.useEffect(() => {
-    const result = memo(stateFromStores[12]).trackAgeVerificationModalViewed(memo, memo(stateFromStores[12]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, memo(stateFromStores[12]).AgeVerificationModalEntryPoint.SAFETY_FLOWS);
+    const result = memo(stateFromStores[12]).trackAgeVerificationModalViewed(
+      memo,
+      memo(stateFromStores[12]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+      memo(stateFromStores[12]).AgeVerificationModalEntryPoint.SAFETY_FLOWS,
+    );
   }, items2);
   obj = { ImageComponent: null, title: null, subtitle: null, footer: null, submitting: null, children: null };
   const tmp5 = onTaskComplete(stateFromStores[9])(obj);
@@ -50,7 +54,7 @@ export default function AgeVerificationScreen() {
     handleOnHelpUrlHook() {
       const obj = onTaskComplete(stateFromStores[18]);
       obj.openUrl(onTaskComplete(stateFromStores[19]).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
-    }
+    },
   };
   obj[2] = intl2.format(onTaskComplete(stateFromStores[17]).RpMIT0, obj1);
   const obj2 = { children: null };
@@ -59,17 +63,39 @@ export default function AgeVerificationScreen() {
     onPress() {
       onTaskComplete(stateFromStores[21]).logout("age_verification_screen");
     },
-    children: null
+    children: null,
   };
   const obj4 = { variant: "text-sm/medium", color: "text-link", style: tmp2.helpLink, children: null };
   const intl3 = memo(stateFromStores[15]).intl;
   obj4[3] = intl3.string(memo(stateFromStores[15]).t["2jxGer"]);
-  obj3[2] = jsx(memo(stateFromStores[22]).Text, { variant: "text-sm/medium", color: "text-link", style: tmp2.helpLink, children: null });
-  obj2[0] = <Pressable accessibilityRole="button" onPress={function onPress() {
-    onTaskComplete(stateFromStores[21]).logout("age_verification_screen");
-  }}>{null}</Pressable>;
+  obj3[2] = jsx(memo(stateFromStores[22]).Text, {
+    variant: "text-sm/medium",
+    color: "text-link",
+    style: tmp2.helpLink,
+    children: null,
+  });
+  obj2[0] = (
+    <Pressable
+      accessibilityRole="button"
+      onPress={function onPress() {
+        onTaskComplete(stateFromStores[21]).logout("age_verification_screen");
+      }}
+    >
+      {null}
+    </Pressable>
+  );
   obj[3] = jsx(memo(stateFromStores[20]).ModalDisclaimer, { children: null });
   obj[4] = loading;
-  obj[5] = jsx(memo(stateFromStores[23]).AgeVerificationMethodsContainer, { ageVerificationMethods, modalSessionId: memo });
-  return jsx(onTaskComplete(stateFromStores[13]), { ImageComponent: null, title: null, subtitle: null, footer: null, submitting: null, children: null });
-};
+  obj[5] = jsx(memo(stateFromStores[23]).AgeVerificationMethodsContainer, {
+    ageVerificationMethods,
+    modalSessionId: memo,
+  });
+  return jsx(onTaskComplete(stateFromStores[13]), {
+    ImageComponent: null,
+    title: null,
+    subtitle: null,
+    footer: null,
+    submitting: null,
+    children: null,
+  });
+}

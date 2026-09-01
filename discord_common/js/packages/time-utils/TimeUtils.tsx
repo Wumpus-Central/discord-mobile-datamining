@@ -219,7 +219,12 @@ TimeSpan.fromHours = function fromHours(arg0) {
   obj.subtractOrZero = function subtractOrZero(milliseconds) {
     return closure_1_12.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
   };
-  ({ milliseconds: tmp2.milliseconds, milliseconds: tmp2.milliseconds, milliseconds: tmp2.milliseconds, milliseconds } = obj);
+  ({
+    milliseconds: tmp2.milliseconds,
+    milliseconds: tmp2.milliseconds,
+    milliseconds: tmp2.milliseconds,
+    milliseconds,
+  } = obj);
   if (!arg0) {
     num = 0;
   }
@@ -243,13 +248,13 @@ Object.defineProperty(prototype2, "lastElapsed", {
   get: function lastElapsed() {
     return this.timePassed;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype2, "lastStartTime", {
   get: function lastStartTime() {
     return this.startTime;
   },
-  set: undefined
+  set: undefined,
 });
 prototype2["start"] = function start() {
   const self = this;
@@ -356,7 +361,7 @@ TimeOut["startNew"] = function startNew(timeout) {
 TimeOut["waitFor"] = function waitFor(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return callback(function*() {
+  return callback(function* () {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -442,12 +447,29 @@ TimeOut["waitFor"] = function waitFor(arg0, arg1) {
     }
   })();
 };
-obj = { NONE: "NONE", SECONDS: "SECONDS", MINUTES: "MINUTES", HOURS: "HOURS", DAYS: "DAYS", WEEKS: "WEEKS", MONTHS: "MONTHS", YEARS: "YEARS" };
+obj = {
+  NONE: "NONE",
+  SECONDS: "SECONDS",
+  MINUTES: "MINUTES",
+  HOURS: "HOURS",
+  DAYS: "DAYS",
+  WEEKS: "WEEKS",
+  MONTHS: "MONTHS",
+  YEARS: "YEARS",
+};
 obj = { unit: obj.NONE, max: 0 };
-const items = [obj, { unit: obj.SECONDS, max: 1 }, { unit: obj.MINUTES, max: 60 }, { unit: obj.HOURS, max: 1440 }, { unit: obj.DAYS, max: 44640 }, { unit: obj.WEEKS, max: 40320 }, { unit: obj.MONTHS, max: 525600 }, { unit: obj.YEARS, max: Infinity }];
+const items = [
+  obj,
+  { unit: obj.SECONDS, max: 1 },
+  { unit: obj.MINUTES, max: 60 },
+  { unit: obj.HOURS, max: 1440 },
+  { unit: obj.DAYS, max: 44640 },
+  { unit: obj.WEEKS, max: 40320 },
+  { unit: obj.MONTHS, max: 525600 },
+  { unit: obj.YEARS, max: Infinity },
+];
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/time-utils/TimeUtils.tsx");
-class ControllableTimeStampProducer {
-}
+class ControllableTimeStampProducer {}
 const prototype4 = ControllableTimeStampProducer.prototype;
 prototype4["now"] = function now() {
   return this.time;
@@ -492,13 +514,13 @@ Object.defineProperty(prototype5, "value", {
     const stopwatch = this.stopwatch;
     stopwatch.toggle(state);
     this.state = state;
-  }
+  },
 });
 Object.defineProperty(prototype5, "value", {
   get: function value() {
     return this.state;
   },
-  set: undefined
+  set: undefined,
 });
 prototype5["reset"] = function reset() {
   const stopwatch = this.stopwatch;
@@ -552,17 +574,21 @@ export const TimeUnitMax = items;
 export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   closure_0 = arg0;
   importDefault = arg1;
-  const tmp2 = findLastIndexDefault(items, (unit) => f76918(unit.unit), items.findIndex((max) => {
-    max = max.max;
-    let tmp = max.unit === closure_1_10.NONE;
-    if (tmp) {
-      tmp = closure_0 === max;
-    }
-    if (!tmp) {
-      tmp = closure_0 < max;
-    }
-    return tmp;
-  }));
+  const tmp2 = findLastIndexDefault(
+    items,
+    (unit) => f76918(unit.unit),
+    items.findIndex((max) => {
+      max = max.max;
+      let tmp = max.unit === closure_1_10.NONE;
+      if (tmp) {
+        tmp = closure_0 === max;
+      }
+      if (!tmp) {
+        tmp = closure_0 < max;
+      }
+      return tmp;
+    }),
+  );
   if (null != tmp2) {
     return tmp2.unit;
   } else {
@@ -595,17 +621,21 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
   } else {
     closure_0 = rounded;
     const f76918 = (arg0) => closure_0.includes(arg0);
-    const tmp12 = f76918(4560)(items, (unit) => f76918(unit.unit), items.findIndex((max) => {
-      max = max.max;
-      let tmp = max.unit === closure_1_10.NONE;
-      if (tmp) {
-        tmp = closure_0 === max;
-      }
-      if (!tmp) {
-        tmp = closure_0 < max;
-      }
-      return tmp;
-    }));
+    const tmp12 = f76918(4560)(
+      items,
+      (unit) => f76918(unit.unit),
+      items.findIndex((max) => {
+        max = max.max;
+        let tmp = max.unit === closure_1_10.NONE;
+        if (tmp) {
+          tmp = closure_0 === max;
+        }
+        if (!tmp) {
+          tmp = closure_0 < max;
+        }
+        return tmp;
+      }),
+    );
     if (null != tmp12) {
       let unit = tmp12.unit;
     } else {

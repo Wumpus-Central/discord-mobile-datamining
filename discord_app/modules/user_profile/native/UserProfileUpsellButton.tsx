@@ -19,20 +19,29 @@ export default function UserProfileUpsellButton(analyticsObject) {
   const items = [analyticsLocations, analyticsObject];
   const effect = React.useEffect(() => {
     let obj = analyticsLocations(closure_1_2[7]);
-    obj = { type: closure_1_8.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON, location: obj, location_stack: analyticsLocations };
+    obj = {
+      type: closure_1_8.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON,
+      location: obj,
+      location_stack: analyticsLocations,
+    };
     obj = { page: closure_1_4.USER_SETTINGS, section: closure_1_6.USER_PROFILE, object: analyticsObject };
     obj.track(closure_1_7.PREMIUM_UPSELL_VIEWED, obj);
   }, items);
   obj = {
     onPress() {
       let obj = analyticsLocations(closure_1_2[9]);
-      obj = { initialUpsellKey: closure_1_5.CUSTOM_PROFILES, analyticsLocation: obj, analyticsLocations, analyticsProperties: obj1 };
+      obj = {
+        initialUpsellKey: closure_1_5.CUSTOM_PROFILES,
+        analyticsLocation: obj,
+        analyticsLocations,
+        analyticsProperties: obj1,
+      };
       obj = { page: closure_1_4.USER_SETTINGS, section: closure_1_6.USER_PROFILE, object: analyticsObject };
       const result = obj.handleShowUpsellAlert(obj);
     },
     variant: "active",
     text: null,
-    icon: null
+    icon: null,
   };
   if (label == null) {
     label = analyticsObject.label;
@@ -45,4 +54,4 @@ export default function UserProfileUpsellButton(analyticsObject) {
   obj = { color: "white", size: "sm", style: callback().nitroWheel };
   obj[3] = jsx(analyticsObject(8096).NitroWheelIcon, { color: "white", size: "sm", style: callback().nitroWheel });
   return jsx(analyticsObject(4928).Button, { color: "white", size: "sm", style: callback().nitroWheel });
-};
+}

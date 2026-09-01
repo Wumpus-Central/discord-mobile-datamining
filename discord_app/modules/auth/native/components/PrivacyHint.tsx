@@ -27,7 +27,15 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
   const tmp = callback3();
   let obj = useCheckboxA11yNative;
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: consent });
-  obj = { style: asCheckbox ? tmp.checkbox : tmp.radio, accessibilityState: checkboxA11yNative.accessibilityState, accessibilityRole: checkboxA11yNative.accessibilityRole, accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
+  obj = {
+    style: asCheckbox ? tmp.checkbox : tmp.radio,
+    accessibilityState: checkboxA11yNative.accessibilityState,
+    accessibilityRole: checkboxA11yNative.accessibilityRole,
+    accessibilityLabel: null,
+    onPress: null,
+    hitSlop: null,
+    children: null,
+  };
   const intl = tmp2(1236).intl;
   obj[3] = intl.string(getSystemLocale.t.Y7Kgvf);
   obj[4] = onToggleConsent.onToggleConsent;
@@ -43,10 +51,13 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
     tmp7Result = tmp7(tmp2(8363).FormRow.Radio, obj1);
     tmp9 = tmp7;
   }
-  const items = [tmp7Result, ];
+  const items = [tmp7Result];
   const obj2 = { variant: "text-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: null };
   const intl2 = tmp2(1236).intl;
-  obj2[3] = intl2.format(getSystemLocale.t.qMDAP0, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
+  obj2[3] = intl2.format(getSystemLocale.t.qMDAP0, {
+    termsURL: MarketingURLs.TERMS,
+    privacyURL: MarketingURLs.PRIVACY,
+  });
   items[1] = tmp9(Text.Text, obj2);
   obj[6] = items;
   return closure_9(closure_4, obj);
@@ -54,13 +65,20 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
 noopAll;
 ({ View: c3, Pressable: c4 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ multiItem: { flexDirection: "column", gap: 16 }, checkbox: { flexDirection: "row", alignItems: "flex-start", gap: 8 }, radio: { flexDirection: "row", alignItems: "center", gap: 8 }, checkboxLabel: { flex: 1 } });
+let closure_10 = createCacheKey.createStyles({
+  multiItem: { flexDirection: "column", gap: 16 },
+  checkbox: { flexDirection: "row", alignItems: "flex-start", gap: 8 },
+  radio: { flexDirection: "row", alignItems: "center", gap: 8 },
+  checkboxLabel: { flex: 1 },
+});
 const result = require("set").fileFinishedImporting("modules/auth/native/components/PrivacyHint.tsx");
 
 export default function PrivacyHint(arg0) {
   ({ consent, consentRequired, onToggleConsent } = arg0);
   let items1 = callback3();
-  const tmp2 = useRegistrationUIStore((registrationOptions) => null != registrationOptions.registrationOptions.email) && usePromoEmailConsentStore((required) => required.required);
+  const tmp2 =
+    useRegistrationUIStore((registrationOptions) => null != registrationOptions.registrationOptions.email) &&
+    usePromoEmailConsentStore((required) => required.required);
   if (!consentRequired) {
     if (tmp2) {
       let obj = { style: null, children: null };
@@ -81,7 +99,10 @@ export default function PrivacyHint(arg0) {
     }
   }
   obj = { style: items1.multiItem, children: null };
-  items1 = [callback(PromotionalEmailCheckBoxDefault, {}), callback(PrivacyPolicyCheckbox, { consent, onToggleConsent, asCheckbox: true })];
+  items1 = [
+    callback(PromotionalEmailCheckBoxDefault, {}),
+    callback(PrivacyPolicyCheckbox, { consent, onToggleConsent, asCheckbox: true }),
+  ];
   obj[1] = items1;
   tmp9Result = callback2(closure_3, obj);
-};
+}

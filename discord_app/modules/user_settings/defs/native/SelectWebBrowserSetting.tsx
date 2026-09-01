@@ -58,7 +58,7 @@ const radio = createToggle.createRadio({
   onValueChange: function onWebBrowserSettingValueChange(arg0) {
     const result = NativeModules.browserManagerSelectBrowser(Number(arg0));
   },
-  useOptions: useWebBrowserSettingOptions
+  useOptions: useWebBrowserSettingOptions,
 });
 let obj = {
   useTitle() {
@@ -72,7 +72,7 @@ let obj = {
   onValueChange: function onWebBrowserSettingValueChange(arg0) {
     const result = NativeModules.browserManagerSelectBrowser(Number(arg0));
   },
-  useOptions: useWebBrowserSettingOptions
+  useOptions: useWebBrowserSettingOptions,
 };
 let result = set.fileFinishedImporting("modules/user_settings/defs/native/SelectWebBrowserSetting.tsx");
 

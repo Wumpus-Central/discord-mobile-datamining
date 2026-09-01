@@ -10,13 +10,30 @@ import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { pillContainer: null, pillIcon: null, pillText: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md, height: 20, paddingHorizontal: 8 };
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.md,
+  height: 20,
+  paddingHorizontal: 8,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE, marginRight: 4 };
 const obj1 = { tintColor: ThemesDefault.colors.TEXT_SUBTLE, marginRight: 4 };
-createCacheKey[2] = { fontFamily: require("sum").Fonts.PRIMARY_NORMAL, color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18 };
+createCacheKey[2] = {
+  fontFamily: require("sum").Fonts.PRIMARY_NORMAL,
+  color: ThemesDefault.colors.TEXT_SUBTLE,
+  fontSize: 14,
+  lineHeight: 18,
+};
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { fontFamily: require("sum").Fonts.PRIMARY_NORMAL, color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18 };
+const obj2 = {
+  fontFamily: require("sum").Fonts.PRIMARY_NORMAL,
+  color: ThemesDefault.colors.TEXT_SUBTLE,
+  fontSize: 14,
+  lineHeight: 18,
+};
 const result = require("set").fileFinishedImporting("design/void/IconPill/native/IconPill.tsx");
 
 export default function IconPill(IconComponent) {
@@ -39,9 +56,9 @@ export default function IconPill(IconComponent) {
     tmp9 = callback(IconSizesDefault, obj);
     const tmp7 = IconSizesDefault;
   }
-  const items1 = [tmp9, ];
+  const items1 = [tmp9];
   const items2 = [tmp.pillText, textStyle];
   items1[1] = tmp8(_modDef8391, { style: items2, numberOfLines: 1, accessibilityLabel, children: text });
   obj[1] = items1;
   return closure_4(View, obj);
-};
+}

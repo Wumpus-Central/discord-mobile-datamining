@@ -33,9 +33,9 @@ export default function WebAuthnDeleteActionSheet(credential) {
   obj = { keyName: credential.name };
   obj[0] = intl.formatToPlainString(credential(1236).t.mI3CoL, obj);
   obj[1] = callback(credential(5990).ActionSheetCloseButton, { onPress: handleClose });
-  const items = [callback(credential(5621).BottomSheetTitleHeader, obj), , , ];
+  const items = [callback(credential(5621).BottomSheetTitleHeader, obj), , ,];
   obj1 = { style: tmp.content, children: null };
-  const items1 = [callback(closure_3, { source: registerAssetDefault }), ];
+  const items1 = [callback(closure_3, { source: registerAssetDefault })];
   const obj3 = { variant: "heading-md/normal", style: tmp.subtitle, children: null };
   const intl2 = credential(1236).intl;
   obj3[2] = intl2.string(credential(1236).t.IfTbc1);
@@ -61,28 +61,49 @@ export default function WebAuthnDeleteActionSheet(credential) {
     const obj2 = credential(closure_1_2[13]);
     const nextPromise = result.then(() => {
       let obj = callback2(4194);
-      obj = { key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
+      obj = {
+        key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY",
+        content: null,
+        icon: null,
+        IconComponent: null,
+        iconColor: "status-positive",
+      };
       const intl = callback(1236).intl;
       obj[1] = intl.string(callback(1236).t.ZnkeXs);
       obj[2] = callback2(10445);
       obj[3] = callback(4438).CircleCheckIcon;
       obj.open(obj);
     });
-    result.then(() => {
-      let obj = callback2(4194);
-      obj = { key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
-      const intl = callback(1236).intl;
-      obj[1] = intl.string(callback(1236).t.ZnkeXs);
-      obj[2] = callback2(10445);
-      obj[3] = callback(4438).CircleCheckIcon;
-      obj.open(obj);
-    }).catch((content) => {
-      let obj = callback2(4194);
-      obj = { key: "WEBAUTHN_CREDENTIAL_DELETE_ERROR_TOAST_KEY", content: content.message, icon: callback2(9594), IconComponent: callback(8736).WarningIcon, iconColor: "icon-feedback-critical" };
-      obj.open(obj);
-    }).finally(() => {
-      callback2(false);
-    });
+    result
+      .then(() => {
+        let obj = callback2(4194);
+        obj = {
+          key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY",
+          content: null,
+          icon: null,
+          IconComponent: null,
+          iconColor: "status-positive",
+        };
+        const intl = callback(1236).intl;
+        obj[1] = intl.string(callback(1236).t.ZnkeXs);
+        obj[2] = callback2(10445);
+        obj[3] = callback(4438).CircleCheckIcon;
+        obj.open(obj);
+      })
+      .catch((content) => {
+        let obj = callback2(4194);
+        obj = {
+          key: "WEBAUTHN_CREDENTIAL_DELETE_ERROR_TOAST_KEY",
+          content: content.message,
+          icon: callback2(9594),
+          IconComponent: callback(8736).WarningIcon,
+          iconColor: "icon-feedback-critical",
+        };
+        obj.open(obj);
+      })
+      .finally(() => {
+        callback2(false);
+      });
   };
   obj7[3] = deleting;
   obj7[4] = deleting;
@@ -90,4 +111,4 @@ export default function WebAuthnDeleteActionSheet(credential) {
   items[3] = callback(closure_4, obj6);
   obj[2] = items;
   return callback2(credential(5622).BottomSheet, obj);
-};
+}

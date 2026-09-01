@@ -6,6 +6,13 @@ const result = set.fileFinishedImporting("modules/sentry/addSentryBreadcrumb.nat
 
 export default function addSentryBreadcrumb(category) {
   let obj = addBreadcrumbAll;
-  obj = { type: "default", level: "info", category: category.category, message: category.message, data: category.data, timestamp: Date.now() };
+  obj = {
+    type: "default",
+    level: "info",
+    category: category.category,
+    message: category.message,
+    data: category.data,
+    timestamp: Date.now(),
+  };
   obj.addBreadcrumb(obj);
-};
+}

@@ -7,14 +7,20 @@ import { initialize } from "../../../../../discord_common/js/packages/flux/index
 
 const require = arg1;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannelPost.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/notifications/settings/native/NotificationSettingsChannelPost.tsx",
+);
 
 export const NotificationSettingsChannelPost = function NotificationSettingsChannelPost(channel) {
   const _require = channel;
   ({ guild_id: importDefault, id: dependencyMap } = channel.channel);
   let obj = initialize;
   const items = [closure_4];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ muted: closure_1_4.isChannelMuted(closure_1, closure_2), guildMuted: closure_1_4.isMuted(closure_1), newForumThreadsCreated: closure_1_4.getNewForumThreadsCreated(channel.channel) }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    muted: closure_1_4.isChannelMuted(closure_1, closure_2),
+    guildMuted: closure_1_4.isMuted(closure_1),
+    newForumThreadsCreated: closure_1_4.getNewForumThreadsCreated(channel.channel),
+  }));
   ({ muted, newForumThreadsCreated } = stateFromStoresObject);
   obj = { style: channel.style, children: null };
   obj = { title: null, hasIcons: false, children: null };
@@ -31,7 +37,20 @@ export const NotificationSettingsChannelPost = function NotificationSettingsChan
   obj1[3] = function onPress() {
     const result = closure_1_1(closure_1_2[8]).setForumThreadsCreated(channel.channel, !newForumThreadsCreated);
   };
-  obj[2] = jsx(require("../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx").TableCheckboxRow, { label: null, checked: null, disabled: null, onPress: null });
-  obj[1] = jsx(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, { title: null, hasIcons: false, children: null });
-  return <newForumThreadsCreated title={null} hasIcons={false}>{null}</newForumThreadsCreated>;
+  obj[2] = jsx(require("../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx").TableCheckboxRow, {
+    label: null,
+    checked: null,
+    disabled: null,
+    onPress: null,
+  });
+  obj[1] = jsx(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, {
+    title: null,
+    hasIcons: false,
+    children: null,
+  });
+  return (
+    <newForumThreadsCreated title={null} hasIcons={false}>
+      {null}
+    </newForumThreadsCreated>
+  );
 };

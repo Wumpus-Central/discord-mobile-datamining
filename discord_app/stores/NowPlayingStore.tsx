@@ -140,8 +140,7 @@ let c6 = false;
 let closure_7 = {};
 let closure_8 = {};
 const Store = initializeDefault.Store;
-class NowPlayingStore extends Store {
-}
+class NowPlayingStore extends Store {}
 const prototype = NowPlayingStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_2, closure_4);
@@ -152,19 +151,19 @@ Object.defineProperty(prototype, "games", {
   get: function games() {
     return closure_7;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "usersPlaying", {
   get: function usersPlaying() {
     return closure_8;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "gameIds", {
   get: function gameIds() {
     return Object.keys(closure_7);
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getNowPlaying"] = function getNowPlaying(arg0) {
   return table[arg0];
@@ -216,7 +215,7 @@ const nowPlayingStore = new NowPlayingStore(dispatcherDefault, {
       closure_0 = false !== closure_1_9(arg0) || closure_0;
     });
     return c0;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/NowPlayingStore.tsx");
 

@@ -32,7 +32,30 @@ const Linking = get_ActivityIndicator.Linking;
 SHARE_APPS_KEY = SHARE_APPS_KEY.SHARE_APPS_KEY;
 const SHARE_URLS = SHARE_APPS_KEY.SHARE_URLS;
 ({ InviteOptionsType: closure_6, SendTypes: error } = ME);
-let obj = { SHARE: 0, [0]: "SHARE", COPY: 1, [1]: "COPY", QR_CODE: 2, [2]: "QR_CODE", MESSAGES: 3, [3]: "MESSAGES", MAIL: 4, [4]: "MAIL", FB_MESSENGER: 5, [5]: "FB_MESSENGER", GMAIL: 6, [6]: "GMAIL", TELEGRAM: 7, [7]: "TELEGRAM", TWITTER: 8, [8]: "TWITTER", WHATSAPP: 9, [9]: "WHATSAPP", LINE: 10, [10]: "LINE" };
+let obj = {
+  SHARE: 0,
+  [0]: "SHARE",
+  COPY: 1,
+  [1]: "COPY",
+  QR_CODE: 2,
+  [2]: "QR_CODE",
+  MESSAGES: 3,
+  [3]: "MESSAGES",
+  MAIL: 4,
+  [4]: "MAIL",
+  FB_MESSENGER: 5,
+  [5]: "FB_MESSENGER",
+  GMAIL: 6,
+  [6]: "GMAIL",
+  TELEGRAM: 7,
+  [7]: "TELEGRAM",
+  TWITTER: 8,
+  [8]: "TWITTER",
+  WHATSAPP: 9,
+  [9]: "WHATSAPP",
+  LINE: 10,
+  [10]: "LINE",
+};
 obj = {
   type: obj.SHARE,
   icon: _modDef9948,
@@ -46,9 +69,9 @@ obj = {
   onPress(code) {
     ({ channel, message, location: _location } = code);
     return showInstantInviteActionSheet.handleOpenShareSheet(code.code, channel, message, _location);
-  }
+  },
 };
-const items = [obj, , , , , , , , , , ];
+const items = [obj, , , , , , , , , ,];
 obj = {
   type: obj.COPY,
   icon: registerAssetDefault3,
@@ -61,10 +84,17 @@ obj = {
   onPress(arg0) {
     ({ channel, code, location: _location } = arg0);
     return showInstantInviteActionSheet.handleCopy(code, channel, _location);
-  }
+  },
 };
 items[1] = obj;
-let obj1 = { type: obj.QR_CODE, icon: registerAssetDefault4, isAvailable: null, IconComponent: null, getLabel: null, onPress: null };
+let obj1 = {
+  type: obj.QR_CODE,
+  icon: registerAssetDefault4,
+  isAvailable: null,
+  IconComponent: null,
+  getLabel: null,
+  onPress: null,
+};
 obj1[2] = Promise.resolve(!isMetaQuest.isMetaQuest());
 obj1[3] = registerAssetDefault5;
 obj1[4] = function getLabel() {
@@ -195,7 +225,13 @@ obj3[5] = function onPress(channel) {
   });
 };
 items[4] = obj3;
-let obj4 = { type: obj.FB_MESSENGER, fullIcon: registerAssetDefault10, isAvailable: null, getLabel: null, onPress: null };
+let obj4 = {
+  type: obj.FB_MESSENGER,
+  fullIcon: registerAssetDefault10,
+  isAvailable: null,
+  getLabel: null,
+  onPress: null,
+};
 obj4[2] = showInstantInviteActionSheet.isAppInstalled(SHARE_APPS_KEY.MESSENGER);
 obj4[3] = function getLabel() {
   const intl = getSystemLocale.intl;
@@ -271,7 +307,7 @@ obj9[4] = function onPress(code) {
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.LINE](message));
 };
 items[10] = obj9;
-const items1 = [, ];
+const items1 = [,];
 [arr2[0], arr2[1]] = items;
 const result = set.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteConstants.tsx");
 

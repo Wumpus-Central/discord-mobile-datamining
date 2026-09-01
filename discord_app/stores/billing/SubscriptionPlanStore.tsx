@@ -53,9 +53,26 @@ function reset() {
   areArraysShallowlyEqual.clearObject(closure_14);
   const obj3 = areArraysShallowlyEqual;
   areArraysShallowlyEqual.clearObject(closure_15);
-  const items = [SubscriptionPlanInfo[SubscriptionPlans.NONE_MONTH], SubscriptionPlanInfo[SubscriptionPlans.NONE_YEAR], SubscriptionPlanInfo[SubscriptionPlans.NONE_3_MONTH], SubscriptionPlanInfo[SubscriptionPlans.NONE_6_MONTH]];
+  const items = [
+    SubscriptionPlanInfo[SubscriptionPlans.NONE_MONTH],
+    SubscriptionPlanInfo[SubscriptionPlans.NONE_YEAR],
+    SubscriptionPlanInfo[SubscriptionPlans.NONE_3_MONTH],
+    SubscriptionPlanInfo[SubscriptionPlans.NONE_6_MONTH],
+  ];
   const item = items.forEach((id) => {
-    callback(closure_3.createFromServer({ id: id.id, name: id.name, interval: id.interval, interval_count: id.intervalCount, tax_inclusive: true, sku_id: id.skuId, currency: constants.USD, price: 0, price_tier: 0 }));
+    callback(
+      closure_3.createFromServer({
+        id: id.id,
+        name: id.name,
+        interval: id.interval,
+        interval_count: id.intervalCount,
+        tax_inclusive: true,
+        sku_id: id.skuId,
+        currency: constants.USD,
+        price: 0,
+        price_tier: 0,
+      }),
+    );
   });
 }
 ({ CurrencyCodes: c4, PriceSetAssignmentPurchaseTypes: c5 } = ME);
@@ -68,15 +85,31 @@ let set = new Set();
 let set1 = new Set();
 let closure_14 = {};
 let closure_15 = {};
-let items = [SubscriptionPlanInfo[SubscriptionPlans.NONE_MONTH], SubscriptionPlanInfo[SubscriptionPlans.NONE_YEAR], SubscriptionPlanInfo[SubscriptionPlans.NONE_3_MONTH], SubscriptionPlanInfo[SubscriptionPlans.NONE_6_MONTH]];
+let items = [
+  SubscriptionPlanInfo[SubscriptionPlans.NONE_MONTH],
+  SubscriptionPlanInfo[SubscriptionPlans.NONE_YEAR],
+  SubscriptionPlanInfo[SubscriptionPlans.NONE_3_MONTH],
+  SubscriptionPlanInfo[SubscriptionPlans.NONE_6_MONTH],
+];
 let item = items.forEach((id) => {
-  callback(closure_3.createFromServer({ id: id.id, name: id.name, interval: id.interval, interval_count: id.intervalCount, tax_inclusive: true, sku_id: id.skuId, currency: constants.USD, price: 0, price_tier: 0 }));
+  callback(
+    closure_3.createFromServer({
+      id: id.id,
+      name: id.name,
+      interval: id.interval,
+      interval_count: id.intervalCount,
+      tax_inclusive: true,
+      sku_id: id.skuId,
+      currency: constants.USD,
+      price: 0,
+      price_tier: 0,
+    }),
+  );
 });
-let items1 = [, , ];
+let items1 = [, ,];
 ({ DAY: arr2[0], MONTH: arr2[1], YEAR: arr2[2] } = SubscriptionIntervalTypes);
 const Store = initializeDefault.Store;
-class SubscriptionPlanStore extends Store {
-}
+class SubscriptionPlanStore extends Store {}
 const prototype = SubscriptionPlanStore.prototype;
 prototype["getPlanIdsForSkus"] = function getPlanIdsForSkus(items) {
   items = [];
@@ -92,7 +125,10 @@ prototype["getPlanIdsForSkus"] = function getPlanIdsForSkus(items) {
     let arr = Array.from(set);
     let sorted = arr.sort((arg0, arg1) => {
       const index = closure_18.indexOf(tmp.interval);
-      return index - closure_18.indexOf(dependencyMap[arg1].interval) || dependencyMap[arg0].intervalCount - dependencyMap[arg1].intervalCount;
+      return (
+        index - closure_18.indexOf(dependencyMap[arg1].interval) ||
+        dependencyMap[arg0].intervalCount - dependencyMap[arg1].intervalCount
+      );
     });
     let push = items.push;
     items1 = [];
@@ -242,7 +278,7 @@ const subscriptionPlanStore = new SubscriptionPlanStore(dispatcherDefault, {
       continue;
     }
   },
-  LOGOUT: reset
+  LOGOUT: reset,
 });
 const result = set.fileFinishedImporting("stores/billing/SubscriptionPlanStore.tsx");
 

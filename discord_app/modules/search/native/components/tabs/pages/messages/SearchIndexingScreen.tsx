@@ -4,7 +4,9 @@ import closure_3 from "../../../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx",
+);
 
 export default function SearchIndexingScreen(searchContext) {
   searchContext = searchContext.searchContext;
@@ -16,4 +18,4 @@ export default function SearchIndexingScreen(searchContext) {
   }, items);
   const text = searchContext(11907).getIndexingErrorText(searchContext);
   return jsx(_modDef16222, { text });
-};
+}

@@ -48,7 +48,22 @@ function ChannelListItem(arg0) {
   ({ channel, index } = arg0);
   ({ totalCount, onPress } = arg0);
   const tmp = computeChannelNameDefault(channel);
-  return callback(TableRowInner.TableRow, { onPress, label: callback(Text.Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: computeChannelNameDefault(channel) }), icon: callback(ChannelIcon, { channel }), start: 0 === index, end: index === totalCount - 1 }, channel.id);
+  return callback(
+    TableRowInner.TableRow,
+    {
+      onPress,
+      label: callback(Text.Text, {
+        lineClamp: 1,
+        variant: "text-md/semibold",
+        color: "mobile-text-heading-primary",
+        children: computeChannelNameDefault(channel),
+      }),
+      icon: callback(ChannelIcon, { channel }),
+      start: 0 === index,
+      end: index === totalCount - 1,
+    },
+    channel.id,
+  );
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const AppLauncherChannelListActionSheet = "AppLauncherChannelListActionSheet";
@@ -56,7 +71,9 @@ createCacheKey = { channelIconWrapper: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 createCacheKey[0] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/channel/AppLauncherChannelListActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/options/channel/AppLauncherChannelListActionSheet.tsx",
+);
 
 export default function AppLauncherChannelListActionSheet(channel) {
   ({ onChannelPress: require, onActionSheetDismiss } = channel);
@@ -88,9 +105,9 @@ export default function AppLauncherChannelListActionSheet(channel) {
       if (current != null) {
         current.scrollToOffset({ offset: 0, animated: false });
       }
-    }
+    },
   };
-  const items1 = [ref(require(channel[12]).AppLauncherListSearchBar, obj), ];
+  const items1 = [ref(require(channel[12]).AppLauncherListSearchBar, obj)];
   if (0 === first1.length) {
     let tmp9Result = tmp9(tmp7(tmp8[12]).AppLauncherListEmptyState, {});
   } else {
@@ -107,7 +124,7 @@ export default function AppLauncherChannelListActionSheet(channel) {
           item({ channel: item });
           closure_1_1(closure_1_2[10]).hideActionSheet(closure_1_8);
           closure_1_1();
-        }
+        },
       });
     };
     tmp9Result = tmp9(tmp7(tmp8[12]).AppLauncherList, obj);
@@ -115,6 +132,6 @@ export default function AppLauncherChannelListActionSheet(channel) {
   items1[1] = tmp9Result;
   obj[2] = items1;
   return first1(require(channel[11]).AppLauncherCommandOptionActionSheet, obj);
-};
+}
 export const APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY = "AppLauncherChannelListActionSheet";
 export { ChannelIcon };

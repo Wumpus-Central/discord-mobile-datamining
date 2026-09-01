@@ -18,7 +18,7 @@ const volumeSlider = createToggle.createVolumeSlider({
   onValueChange(volume) {
     const items = [QUICK_SWITCHERDefault.USER_SETTINGS];
     return _fetchDefaultSoundsFromApi2.updateUserSoundboardVolume(volume, items);
-  }
+  },
 });
 const obj = {
   useTitle() {
@@ -31,7 +31,7 @@ const obj = {
   onValueChange(volume) {
     const items = [QUICK_SWITCHERDefault.USER_SETTINGS];
     return _fetchDefaultSoundsFromApi2.updateUserSoundboardVolume(volume, items);
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/SoundboardVolumeSetting.tsx");
 

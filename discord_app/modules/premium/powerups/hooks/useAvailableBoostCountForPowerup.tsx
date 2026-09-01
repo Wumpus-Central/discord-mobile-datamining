@@ -5,17 +5,27 @@ import closure_5 from "../GuildPowerupsStore.tsx";
 import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
 
 const require = arg1;
-({ GuildPowerupType: closure_6, POWERUPS_INCLUDED_IN_LEVEL: error, LEVEL_SKU_ID_TO_BOOSTING_TIER: closure_8 } = BoostedGuildTiers);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useAvailableBoostCountForPowerup.tsx");
+({
+  GuildPowerupType: closure_6,
+  POWERUPS_INCLUDED_IN_LEVEL: error,
+  LEVEL_SKU_ID_TO_BOOSTING_TIER: closure_8,
+} = BoostedGuildTiers);
+const result = require("set").fileFinishedImporting(
+  "modules/premium/powerups/hooks/useAvailableBoostCountForPowerup.tsx",
+);
 
 export default function useAvailableBoostCountForPowerup(arg0, arg1) {
   const _require = arg0;
   importDefault = arg1;
   let items = [closure_4];
-  const stateFromStores = _require(stateFromStores1[4]).useStateFromStores(items, () => closure_1_4.getGuild(closure_0));
+  const stateFromStores = _require(stateFromStores1[4]).useStateFromStores(items, () =>
+    closure_1_4.getGuild(closure_0),
+  );
   const obj = _require(stateFromStores1[4]);
   const items1 = [closure_5];
-  stateFromStores1 = _require(stateFromStores1[4]).useStateFromStores(items1, () => closure_1_5.getStateForGuild(closure_0));
+  stateFromStores1 = _require(stateFromStores1[4]).useStateFromStores(items1, () =>
+    closure_1_5.getStateForGuild(closure_0),
+  );
   const items2 = [arg1, stateFromStores1];
   const memo = React.useMemo(() => {
     if (null != closure_1) {
@@ -63,4 +73,4 @@ export default function useAvailableBoostCountForPowerup(arg0, arg1) {
     num = 0;
   }
   return Math.max(diff + num, 0);
-};
+}

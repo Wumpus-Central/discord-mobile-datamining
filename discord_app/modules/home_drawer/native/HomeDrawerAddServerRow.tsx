@@ -15,5 +15,9 @@ export const HomeDrawerAddServerRowExpandedChildren = function HomeDrawerAddServ
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.l5WIbf);
   obj[0] = jsx(Text.Text, { variant: "text-md/medium", color: "text-default", children: null });
-  return jsx(HomeDrawerSharedItem.HomeDrawerSharedItem, { variant: "text-md/medium", color: "text-default", children: null });
+  return jsx(HomeDrawerSharedItem.HomeDrawerSharedItem, {
+    variant: "text-md/medium",
+    color: "text-default",
+    children: null,
+  });
 };

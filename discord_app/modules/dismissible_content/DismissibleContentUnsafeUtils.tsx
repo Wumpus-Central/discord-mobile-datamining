@@ -124,7 +124,7 @@ function _UNSAFE_markDismissibleContentAsDismissed() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       dependencyMap = tmp2;
       if (obj1 === undefined) {
         obj1 = {};
@@ -180,7 +180,7 @@ function _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    const iter = (function*(arg0, arg1) {
+    const iter = (function* (arg0, arg1) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -276,7 +276,7 @@ function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -313,7 +313,11 @@ function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed() {
               c5 = 1;
               c6 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback(1375).UNSAFE_addTimeRecurringGuildDismissedContent(callback, closure_1, guildNextNumTimesDismissed);
+              obj1[0] = callback(1375).UNSAFE_addTimeRecurringGuildDismissedContent(
+                callback,
+                closure_1,
+                guildNextNumTimesDismissed,
+              );
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -355,7 +359,7 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
     closure_3 = arg3;
     c6 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -395,7 +399,12 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
               c6 = 1;
               c7 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = obj9.UNSAFE_addSnowflakeBoundGuildDismissedContent(callback, closure_1, dependencyMap, guildNextNumTimesDismissed);
+              obj2[0] = obj9.UNSAFE_addSnowflakeBoundGuildDismissedContent(
+                callback,
+                closure_1,
+                dependencyMap,
+                guildNextNumTimesDismissed,
+              );
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -431,16 +440,24 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
 let result = require("set").fileFinishedImporting("modules/dismissible_content/DismissibleContentUnsafeUtils.tsx");
 
 export { UNSAFE_isDismissibleContentDismissed };
-export const useIsDismissibleContentDismissed_UNSAFE = function useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, arg1) {
+export const useIsDismissibleContentDismissed_UNSAFE = function useIsDismissibleContentDismissed_UNSAFE(
+  APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
+  arg1,
+) {
   const _require = APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
   const items = [closure_4, closure_5];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_6(closure_0, obj));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
+    closure_1_6(closure_0, obj),
+  );
 };
-export const UNSAFE_markDismissibleContentAsDismissed = function UNSAFE_markDismissibleContentAsDismissed(DONUT_MOBILE_NUX, arg1) {
+export const UNSAFE_markDismissibleContentAsDismissed = function UNSAFE_markDismissibleContentAsDismissed(
+  DONUT_MOBILE_NUX,
+  arg1,
+) {
   const self = this;
   const apply = _UNSAFE_markDismissibleContentAsDismissed.apply;
   if (typeof apply === "unknown") {
@@ -450,56 +467,60 @@ export const UNSAFE_markDismissibleContentAsDismissed = function UNSAFE_markDism
   }
   return applyArgumentsResult;
 };
-export const UNSAFE_isSnowflakeBoundDismissibleContentDismissed = function UNSAFE_isSnowflakeBoundDismissibleContentDismissed(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, promotionId) {
-  let obj = useNewUserDismissibleContent;
-  if (obj.disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE)) {
-    return { isDismissed: true, lastDismissedSnowflakeId: null };
-  } else {
-    const userContent = closure_4.settings.userContent;
-    let prop;
-    if (userContent != null) {
-      if (userContent.recurringDismissibleContentStates[PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE] != null) {
-        prop = tmp5.lastDismissedObjectId;
+export const UNSAFE_isSnowflakeBoundDismissibleContentDismissed =
+  function UNSAFE_isSnowflakeBoundDismissibleContentDismissed(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, promotionId) {
+    let obj = useNewUserDismissibleContent;
+    if (obj.disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE)) {
+      return { isDismissed: true, lastDismissedSnowflakeId: null };
+    } else {
+      const userContent = closure_4.settings.userContent;
+      let prop;
+      if (userContent != null) {
+        if (userContent.recurringDismissibleContentStates[PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE] != null) {
+          prop = tmp5.lastDismissedObjectId;
+        }
       }
+      let tmp6 = null != prop;
+      if (tmp6) {
+        tmp6 = 1 !== DISCORD_EPOCHDefault.compare(promotionId, prop);
+        const obj2 = DISCORD_EPOCHDefault;
+      }
+      obj = { isDismissed: null, lastDismissedSnowflakeId: null };
+      obj[0] = tmp6;
+      obj[1] = prop;
+      return obj;
     }
-    let tmp6 = null != prop;
-    if (tmp6) {
-      tmp6 = 1 !== DISCORD_EPOCHDefault.compare(promotionId, prop);
-      const obj2 = DISCORD_EPOCHDefault;
+  };
+export const UNSAFE_markSingleUseGuildDismissibleContentAsDismissed =
+  function UNSAFE_markSingleUseGuildDismissibleContentAsDismissed(MOBILE_ACCOUNT_LINKING_BANNER, found1, arg2) {
+    const self = this;
+    const apply = _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
     }
-    obj = { isDismissed: null, lastDismissedSnowflakeId: null };
-    obj[0] = tmp6;
-    obj[1] = prop;
-    return obj;
-  }
-};
-export const UNSAFE_markSingleUseGuildDismissibleContentAsDismissed = function UNSAFE_markSingleUseGuildDismissibleContentAsDismissed(MOBILE_ACCOUNT_LINKING_BANNER, found1, arg2) {
-  const self = this;
-  const apply = _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
-export const UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed = function UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed(arg0, closure_0, arg2) {
-  const self = this;
-  const apply = _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
-export const UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed = function UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed(arg0, closure_0, closure_1, arg3) {
-  const self = this;
-  const apply = _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
+    return applyArgumentsResult;
+  };
+export const UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed =
+  function UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed(arg0, closure_0, arg2) {
+    const self = this;
+    const apply = _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
+export const UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed =
+  function UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed(arg0, closure_0, closure_1, arg3) {
+    const self = this;
+    const apply = _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };

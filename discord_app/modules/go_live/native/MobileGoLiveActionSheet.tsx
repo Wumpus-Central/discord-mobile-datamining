@@ -30,7 +30,7 @@ obj[2] = createCacheKey;
 obj[3] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 let closure_16 = createCacheKey.createStyles(obj);
 const MobileGoLiveActionSheet = "MobileGoLiveActionSheet";
-let items = [{ preset: ApplicationStreamPresets.PRESET_MOBILE_DEFAULT, enabled: true }, , ];
+let items = [{ preset: ApplicationStreamPresets.PRESET_MOBILE_DEFAULT, enabled: true }, ,];
 let obj4 = { preset: ApplicationStreamPresets.PRESET_MOBILE_PERFORMANCE, enabled: null };
 obj4[1] = !PlatformTypes.isIOS();
 items[1] = obj4;
@@ -64,7 +64,10 @@ const memoResult = importAllResult.memo(function MobileGoLiveActionSheet() {
   let guildPremiumTier = stateFromStoresObject1.guildPremiumTier;
   let obj2 = activeSourceId;
   const items2 = [user, guildPremiumTier];
-  callback = activeSourceId.useCallback((arg0) => user(callback[20]).canStreamWithPreset(arg0, user, guildPremiumTier), items2);
+  callback = activeSourceId.useCallback(
+    (arg0) => user(callback[20]).canStreamWithPreset(arg0, user, guildPremiumTier),
+    items2,
+  );
   let obj3 = user(callback[19]);
   const items3 = [closure_6];
   const stateFromStoresObject2 = obj3.useStateFromStoresObject(items3, () => {
@@ -90,7 +93,9 @@ const memoResult = importAllResult.memo(function MobileGoLiveActionSheet() {
   activeSourceId = stateFromStoresObject2.activeSourceId;
   let obj4 = guildPremiumTier(callback[21]);
   const goLiveUpsellVariant = obj4.useConfig({ location: "MobileGoLiveActionSheet" }).goLiveUpsellVariant;
-  analyticsLocations = guildPremiumTier(callback[22])(guildPremiumTier(callback[23]).MOBILE_GO_LIVE_ACTION_SHEET).analyticsLocations;
+  analyticsLocations = guildPremiumTier(callback[22])(
+    guildPremiumTier(callback[23]).MOBILE_GO_LIVE_ACTION_SHEET,
+  ).analyticsLocations;
   const tmp9 = callback2();
   closure_6 = tmp9;
   let tmp11 = preset === ApplicationStreamPresets.PRESET_MOBILE_DEFAULT;
@@ -148,11 +153,17 @@ const memoResult = importAllResult.memo(function MobileGoLiveActionSheet() {
     obj[0] = analyticsLocations;
     obj = { bottom: true, style: null, children: null };
     obj[1] = tmp9.wrapper;
-    obj1 = { style: null, variant: "redesign/heading-18/bold", color: "text-strong", accessibilityRole: "header", children: null };
+    obj1 = {
+      style: null,
+      variant: "redesign/heading-18/bold",
+      color: "text-strong",
+      accessibilityRole: "header",
+      children: null,
+    };
     obj1[0] = tmp9.header;
     let intl = tmp(tmp2[28]).intl;
     obj1[4] = intl.string(tmp7(tmp2[29]).CrNjqp);
-    const items5 = [callback(tmp(tmp2[33]).Text, obj1), , , , , ];
+    const items5 = [callback(tmp(tmp2[33]).Text, obj1), , , , ,];
     obj2 = { style: null, children: null };
     obj2[0] = tmp9.section;
     let tmp7Result = tmp7(tmp2[32]);
@@ -211,7 +222,7 @@ const memoResult = importAllResult.memo(function MobileGoLiveActionSheet() {
       const obj5 = { variant: "text-md/semibold", color: "text-strong", children: null };
       const intl5 = tmp2(tmp3[28]).intl;
       obj5[2] = intl5.string(guildPremiumTier(callback[29]).nMcXo1);
-      const items = [closure_1_14(user(callback[33]).Text, obj5), ];
+      const items = [closure_1_14(user(callback[33]).Text, obj5)];
       const tmp8Result = guildPremiumTier(callback[32]);
       items[1] = closure_1_14(user(callback[34]).BaseIconImage, { source: guildPremiumTier(callback[35]), size: "xs" });
       obj4[1] = items;

@@ -44,7 +44,7 @@ function ProductPreview(arg0) {
     if (productType !== tmp2(1950).CollectiblesItemType.PROFILE_FRAME) {
       let str = "75%";
     }
-    const items = [tmp.overlayContainer, , ];
+    const items = [tmp.overlayContainer, ,];
     if (!isPurchased) {
       isPurchased = isDisabled;
     }
@@ -83,7 +83,16 @@ function ProductPreviewInner(arg0) {
     return { width: COLLECTIBLES_SHOP_CARD_WIDTH, height: cardWidth(closure_1_2[5]).COLLECTIBLES_SHOP_CARD_HEIGHT };
   }, items);
   if (product.type === cardWidth(1950).CollectiblesItemType.BUNDLE) {
-    obj = { deco: null, pfx: null, nameplate: null, size: "small", previewAssets: null, disableStaticBackground: null, mutedStaticBackground: null, targetSize: null };
+    obj = {
+      deco: null,
+      pfx: null,
+      nameplate: null,
+      size: "small",
+      previewAssets: null,
+      disableStaticBackground: null,
+      mutedStaticBackground: null,
+      targetSize: null,
+    };
     obj[0] = firstAvatarDecoration;
     obj[1] = firstProfileEffect;
     obj[2] = firstNameplate;
@@ -157,8 +166,13 @@ function AssetTileInternal(solidBackground) {
   if (flag) {
     num = 1;
   }
-  obj = { style: null, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: null };
-  const items = [tmp.assetContainer, ];
+  obj = {
+    style: null,
+    importantForAccessibility: "no-hide-descendants",
+    accessibilityElementsHidden: true,
+    children: null,
+  };
+  const items = [tmp.assetContainer];
   obj = { backgroundColor: obj.hexToRgbaString(obj2.hexWithOpacity(token, num)) };
   items[1] = obj;
   obj[0] = items;
@@ -170,8 +184,24 @@ let c4 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 const diff = require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_HEIGHT - 2 * ThemesDefault.space.PX_16;
 let c9 = diff;
-let obj = { assetContainer: null, overlayContainer: null, profileEffectContainer: null, profileFrameContainer: null, externalProductImage: null, purchasedOrDisabled: null, overlayIcon: null };
-obj = { display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden", height: "100%", width: "100%", borderRadius: ThemesDefault.radii.sm };
+let obj = {
+  assetContainer: null,
+  overlayContainer: null,
+  profileEffectContainer: null,
+  profileFrameContainer: null,
+  externalProductImage: null,
+  purchasedOrDisabled: null,
+  overlayIcon: null,
+};
+obj = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+  height: "100%",
+  width: "100%",
+  borderRadius: ThemesDefault.radii.sm,
+};
 obj[0] = obj;
 createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -194,8 +224,15 @@ const memoResult = importAllResult.memo(function AssetTileV2(arg0) {
   let obj = useDefaultVariantIndex;
   const defaultVariantIndex = obj.useDefaultVariantIndex(product);
   obj = { solidBackground, children: null };
-  obj = { product: getProductOrbPrice.getSelectedProduct(product, defaultVariantIndex), isPurchased, isDisabled, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth };
-  const items = [callback2(ProductPreview, obj), , ];
+  obj = {
+    product: getProductOrbPrice.getSelectedProduct(product, defaultVariantIndex),
+    isPurchased,
+    isDisabled,
+    disableBundleStaticBackground,
+    muteBundleStaticBackground,
+    cardWidth,
+  };
+  const items = [callback2(ProductPreview, obj), ,];
   let tmp4Result = isPurchased;
   if (isPurchased) {
     tmp4Result = tmp4(PurchasedAssetOverlay, {});

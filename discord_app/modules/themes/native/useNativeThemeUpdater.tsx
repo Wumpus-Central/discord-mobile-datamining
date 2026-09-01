@@ -25,4 +25,4 @@ export default function useNativeThemeUpdater() {
       closure_2_3.removeChangeListener(handleThemeUpdate);
     };
   }, []);
-};
+}

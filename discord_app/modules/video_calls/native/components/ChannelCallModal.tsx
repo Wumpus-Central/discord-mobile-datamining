@@ -50,7 +50,13 @@ class ChannelCallModal {
   }
 }
 let c4 = importAllResult;
-({ useChannelCallOrientationHandlers: error, resetChannelCallStore: closure_8, useChannelCallStore: c9, setVoiceChatDrawerState: c10, useIsVoiceChatFocused: unpackModuleId } = VoiceChatDrawerState);
+({
+  useChannelCallOrientationHandlers: error,
+  resetChannelCallStore: closure_8,
+  useChannelCallStore: c9,
+  setVoiceChatDrawerState: c10,
+  useIsVoiceChatFocused: unpackModuleId,
+} = VoiceChatDrawerState);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = PIP_GESTURE_ACTIVE_OFFSET);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let closure_18 = importAllResult.memo((arg0) => {
@@ -81,16 +87,36 @@ let closure_18 = importAllResult.memo((arg0) => {
   return tmp4;
 });
 let closure_19 = { code: "function ChannelCallModalTsx1(){const{width}=this.__closure;return[0,-width];}" };
-let closure_20 = { code: "function ChannelCallModalTsx2(){const{runOnJS,dismissKeyboard}=this.__closure;runOnJS(dismissKeyboard)();}" };
-let closure_21 = { code: "function ChannelCallModalTsx3(){const{voiceChatDrawerStoreState}=this.__closure;return voiceChatDrawerStoreState;}" };
-let closure_22 = { code: "function ChannelCallModalTsx4(){const{translateX,width}=this.__closure;translateX.set(-width);}" };
-let closure_23 = { code: "function ChannelCallModalTsx5(){const{isSwipeToChatInProgress,translateX,width,voiceChatDrawerState,VoiceChatDrawerState}=this.__closure;const chatGestureFinished=!isSwipeToChatInProgress.get();const drawerIsInSettledPosition=translateX.get()===-width||translateX.get()===0;const chatOpen=voiceChatDrawerState.get()===VoiceChatDrawerState.OPEN;const chatClosed=voiceChatDrawerState.get()===VoiceChatDrawerState.CLOSED;if(chatGestureFinished&&drawerIsInSettledPosition){return translateX.get()===-width?VoiceChatDrawerState.OPEN:VoiceChatDrawerState.CLOSED;}else if(chatOpen&&translateX.get()>-width){return VoiceChatDrawerState.CLOSING;}else if(chatClosed&&translateX.get()<0){return VoiceChatDrawerState.OPENING;}else{return null;}}" };
-let closure_24 = { code: "function ChannelCallModalTsx6(state,previousState){const{runOnJS,setVoiceChatDrawerState,channelId,VoiceChatDrawerState,transitionToVoiceRoute,guildId}=this.__closure;if(state===previousState)return;if(state!=null&&state!==previousState){runOnJS(setVoiceChatDrawerState)(channelId,state);if(state===VoiceChatDrawerState.OPEN){runOnJS(transitionToVoiceRoute)(guildId,channelId);}}}" };
-let closure_25 = { code: "function ChannelCallModalTsx7(){const{voiceChatDrawerState}=this.__closure;return voiceChatDrawerState.get();}" };
-let closure_26 = { code: "function ChannelCallModalTsx8(drawerState,drawerStatePrev){const{VoiceChatDrawerState,translateX,withPanGestureTiming}=this.__closure;if(drawerState===VoiceChatDrawerState.CLOSED&&drawerStatePrev===VoiceChatDrawerState.OPEN){translateX.set(withPanGestureTiming(0));}}" };
-let closure_27 = { code: "function ChannelCallModalTsx9(){const{interpolate,translateY,maxVerticalTranslate}=this.__closure;return{flex:1,transform:[{translateY:interpolate(translateY.get(),[0,maxVerticalTranslate],[0,maxVerticalTranslate])}]};}" };
-let closure_28 = { code: "function ChannelCallModalTsx10(){const{immediate,translateX,width,withPanGestureTiming}=this.__closure;if(immediate===true){translateX.set(-width);}else{translateX.set(withPanGestureTiming(-width));}}" };
-let closure_29 = { code: "function ChannelCallModalTsx11(){const{translateX,withPanGestureTiming}=this.__closure;translateX.set(withPanGestureTiming(0));}" };
+let closure_20 = {
+  code: "function ChannelCallModalTsx2(){const{runOnJS,dismissKeyboard}=this.__closure;runOnJS(dismissKeyboard)();}",
+};
+let closure_21 = {
+  code: "function ChannelCallModalTsx3(){const{voiceChatDrawerStoreState}=this.__closure;return voiceChatDrawerStoreState;}",
+};
+let closure_22 = {
+  code: "function ChannelCallModalTsx4(){const{translateX,width}=this.__closure;translateX.set(-width);}",
+};
+let closure_23 = {
+  code: "function ChannelCallModalTsx5(){const{isSwipeToChatInProgress,translateX,width,voiceChatDrawerState,VoiceChatDrawerState}=this.__closure;const chatGestureFinished=!isSwipeToChatInProgress.get();const drawerIsInSettledPosition=translateX.get()===-width||translateX.get()===0;const chatOpen=voiceChatDrawerState.get()===VoiceChatDrawerState.OPEN;const chatClosed=voiceChatDrawerState.get()===VoiceChatDrawerState.CLOSED;if(chatGestureFinished&&drawerIsInSettledPosition){return translateX.get()===-width?VoiceChatDrawerState.OPEN:VoiceChatDrawerState.CLOSED;}else if(chatOpen&&translateX.get()>-width){return VoiceChatDrawerState.CLOSING;}else if(chatClosed&&translateX.get()<0){return VoiceChatDrawerState.OPENING;}else{return null;}}",
+};
+let closure_24 = {
+  code: "function ChannelCallModalTsx6(state,previousState){const{runOnJS,setVoiceChatDrawerState,channelId,VoiceChatDrawerState,transitionToVoiceRoute,guildId}=this.__closure;if(state===previousState)return;if(state!=null&&state!==previousState){runOnJS(setVoiceChatDrawerState)(channelId,state);if(state===VoiceChatDrawerState.OPEN){runOnJS(transitionToVoiceRoute)(guildId,channelId);}}}",
+};
+let closure_25 = {
+  code: "function ChannelCallModalTsx7(){const{voiceChatDrawerState}=this.__closure;return voiceChatDrawerState.get();}",
+};
+let closure_26 = {
+  code: "function ChannelCallModalTsx8(drawerState,drawerStatePrev){const{VoiceChatDrawerState,translateX,withPanGestureTiming}=this.__closure;if(drawerState===VoiceChatDrawerState.CLOSED&&drawerStatePrev===VoiceChatDrawerState.OPEN){translateX.set(withPanGestureTiming(0));}}",
+};
+let closure_27 = {
+  code: "function ChannelCallModalTsx9(){const{interpolate,translateY,maxVerticalTranslate}=this.__closure;return{flex:1,transform:[{translateY:interpolate(translateY.get(),[0,maxVerticalTranslate],[0,maxVerticalTranslate])}]};}",
+};
+let closure_28 = {
+  code: "function ChannelCallModalTsx10(){const{immediate,translateX,width,withPanGestureTiming}=this.__closure;if(immediate===true){translateX.set(-width);}else{translateX.set(withPanGestureTiming(-width));}}",
+};
+let closure_29 = {
+  code: "function ChannelCallModalTsx11(){const{translateX,withPanGestureTiming}=this.__closure;translateX.set(withPanGestureTiming(0));}",
+};
 let closure_30 = importAllResult.memo((channelId) => {
   channelId = channelId.channelId;
   let width = channelId;
@@ -203,7 +229,13 @@ let closure_30 = importAllResult.memo((channelId) => {
     }
     OPENING = tmp5.CLOSING;
   }
-  obj = { isSwipeToChatInProgress: sharedValue2, translateX: sharedValue, width, voiceChatDrawerState: derivedValue, VoiceChatDrawerState: c12 };
+  obj = {
+    isSwipeToChatInProgress: sharedValue2,
+    translateX: sharedValue,
+    width,
+    voiceChatDrawerState: derivedValue,
+    VoiceChatDrawerState: c12,
+  };
   ae.__closure = obj;
   ae.__workletHash = 16786813095205;
   ae.__initData = closure_23;
@@ -226,7 +258,14 @@ let closure_30 = importAllResult.memo((channelId) => {
     }
   }
   const tmp10Result = guildId(ref[23]);
-  te.__closure = { runOnJS: width(ref[16]).runOnJS, setVoiceChatDrawerState: width, channelId, VoiceChatDrawerState: c12, transitionToVoiceRoute: width(ref[22]).transitionToVoiceRoute, guildId };
+  te.__closure = {
+    runOnJS: width(ref[16]).runOnJS,
+    setVoiceChatDrawerState: width,
+    channelId,
+    VoiceChatDrawerState: c12,
+    transitionToVoiceRoute: width(ref[22]).transitionToVoiceRoute,
+    guildId,
+  };
   te.__workletHash = 14188334620807;
   te.__initData = closure_24;
   const animatedReaction = tmpResult.useAnimatedReaction(ae, te);
@@ -247,7 +286,11 @@ let closure_30 = importAllResult.memo((channelId) => {
       obj = width(ref[18]);
     }
   }
-  obj2 = { VoiceChatDrawerState: c12, translateX: sharedValue, withPanGestureTiming: tmp(tmp2[18]).withPanGestureTiming };
+  obj2 = {
+    VoiceChatDrawerState: c12,
+    translateX: sharedValue,
+    withPanGestureTiming: tmp(tmp2[18]).withPanGestureTiming,
+  };
   ne.__closure = obj2;
   ne.__workletHash = 260500087614;
   ne.__initData = closure_26;
@@ -256,7 +299,14 @@ let closure_30 = importAllResult.memo((channelId) => {
   if (!tmp15) {
     tmp24 = !tmp13;
   }
-  obj1 = { runOnJS: width(ref[16]).runOnJS, setVoiceChatDrawerState: width, channelId, VoiceChatDrawerState: c12, transitionToVoiceRoute: width(ref[22]).transitionToVoiceRoute, guildId };
+  obj1 = {
+    runOnJS: width(ref[16]).runOnJS,
+    setVoiceChatDrawerState: width,
+    channelId,
+    VoiceChatDrawerState: c12,
+    transitionToVoiceRoute: width(ref[22]).transitionToVoiceRoute,
+    guildId,
+  };
   const fn2 = function u() {
     const items = [0, -width];
     return items;
@@ -275,7 +325,15 @@ let closure_30 = importAllResult.memo((channelId) => {
   fn3.__workletHash = 4086900686382;
   fn3.__initData = closure_20;
   const callback = obj2.useCallback(fn3, []);
-  obj4 = { lowerBounds: -width, upperBounds: 0, translate: sharedValue, vertical: false, snapPositions: derivedValue1, onStart: callback, isGestureInProgress: sharedValue2 };
+  obj4 = {
+    lowerBounds: -width,
+    upperBounds: 0,
+    translate: sharedValue,
+    vertical: false,
+    snapPositions: derivedValue1,
+    onStart: callback,
+    isGestureInProgress: sharedValue2,
+  };
   const tmpResult1 = width(ref[16]);
   const obj17 = guildId(ref[18])(obj4);
   const items3 = [-c13, c13];
@@ -283,7 +341,13 @@ let closure_30 = importAllResult.memo((channelId) => {
   const items4 = [-obj, obj];
   const failOffsetYResult = guildId(ref[18])(obj4).enabled(tmp24).failOffsetY(items3);
   const activeOffsetXResult = guildId(ref[18])(obj4).enabled(tmp24).failOffsetY(items3).activeOffsetX(items4);
-  obj5 = { gestureEnabled: tmp16, height, maxTranslate: result, thresholdTranslate: 0.5 * height, translateY: sharedValue1 };
+  obj5 = {
+    gestureEnabled: tmp16,
+    height,
+    maxTranslate: result,
+    thresholdTranslate: 0.5 * height,
+    translateY: sharedValue1,
+  };
   const withRefResult = guildId(ref[18])(obj4).enabled(tmp24).failOffsetY(items3).activeOffsetX(items4).withRef(ref);
   const obj22 = guildId(ref[25])(obj5);
   const items5 = [channelId];
@@ -320,7 +384,7 @@ let closure_30 = importAllResult.memo((channelId) => {
     obj10[0] = tmp31;
     const obj11 = { channelId: null };
     obj11[0] = channelId;
-    const items7 = [callback5(closure_18, obj11), ];
+    const items7 = [callback5(closure_18, obj11)];
     const obj12 = { channel: null };
     obj12[0] = stateFromStores;
     items7[1] = callback5(ChannelCallCameraPreview, obj12);

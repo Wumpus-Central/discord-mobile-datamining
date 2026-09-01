@@ -12,7 +12,14 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 function NativeCheckoutStoreProvider(children) {
   ({ checkoutInitParameters: require, order } = children);
-  ({ paymentGateway: dependencyMap, orderRequired: closure_3, onOrderRetryCancellation: closure_4, initialSubscriptionFacet: closure_5, checkoutAnalyticsFields: View, analyticsInitialStep: closure_7 } = children);
+  ({
+    paymentGateway: dependencyMap,
+    orderRequired: closure_3,
+    onOrderRetryCancellation: closure_4,
+    initialSubscriptionFacet: closure_5,
+    checkoutAnalyticsFields: View,
+    analyticsInitialStep: closure_7,
+  } = children);
   closure_8 = undefined;
   let redux;
   let first;
@@ -38,7 +45,21 @@ function NativeCheckoutStoreProvider(children) {
     obj.payment_gateway = closure_2;
     return obj;
   });
-  first = callback(React.useState(() => closure_1_7({ order, checkoutInitParameters: closure_0, contextMetadata: closure_8, analyticsFields: closure_9, paymentGateway: closure_2, orderRequired: closure_3, onOrderRetryCancellation: closure_4, initialSubscriptionFacet: closure_5 })), 1)[0];
+  first = callback(
+    React.useState(() =>
+      closure_1_7({
+        order,
+        checkoutInitParameters: closure_0,
+        contextMetadata: closure_8,
+        analyticsFields: closure_9,
+        paymentGateway: closure_2,
+        orderRequired: closure_3,
+        onOrderRetryCancellation: closure_4,
+        initialSubscriptionFacet: closure_5,
+      }),
+    ),
+    1,
+  )[0];
   order(4945)(() => {
     if (null != closure_6) {
       let obj = closure_1_0(closure_1_2[17]);
@@ -77,23 +98,32 @@ function NativeCheckoutStoreProvider(children) {
     }
   }, items);
   const items1 = [first];
-  const effect1 = React.useEffect(() => () => {
-    state = state.getState();
-    const orderRecord = state.orderRecord;
-    if (null != orderRecord) {
-      let obj = closure_1_0(closure_1_2[19]);
-      obj = { checkoutSucceeded: null, order: null };
-      obj[0] = tmp2;
-      obj = { id: null, status: null };
-      ({ id: obj3[0], status: obj3[1] } = orderRecord);
-      obj[1] = obj;
-      obj.discardDraftOrder(obj);
-    }
-  }, items1);
-  return <closure_8 value={first}><redux.Provider value={first}>{arg0.children}</redux.Provider></closure_8>;
+  const effect1 = React.useEffect(
+    () => () => {
+      state = state.getState();
+      const orderRecord = state.orderRecord;
+      if (null != orderRecord) {
+        let obj = closure_1_0(closure_1_2[19]);
+        obj = { checkoutSucceeded: null, order: null };
+        obj[0] = tmp2;
+        obj = { id: null, status: null };
+        ({ id: obj3[0], status: obj3[1] } = orderRecord);
+        obj[1] = obj;
+        obj.discardDraftOrder(obj);
+      }
+    },
+    items1,
+  );
+  return (
+    <closure_8 value={first}>
+      <redux.Provider value={first}>{arg0.children}</redux.Provider>
+    </closure_8>
+  );
 }
 ({ createNativeStore: error, NativeCheckoutStoreContext: closure_8, NativeCheckoutStoreContextOrNull: c9 } = context);
-let closure_13 = createCacheKey.createStyles({ loadingSpinnerContainer: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" } });
+let closure_13 = createCacheKey.createStyles({
+  loadingSpinnerContainer: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" },
+});
 let result = require("set").fileFinishedImporting("modules/checkout/native/stores/NativeCheckoutStoreProvider.tsx");
 
 export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
@@ -147,7 +177,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -195,7 +225,14 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
               return obj1;
             } else {
               let country;
-              const obj2 = { orderLineItems: null, paymentGateway: null, isGift: null, subscriptionFacet: null, externalGatewayFacet: null, countryCode: null };
+              const obj2 = {
+                orderLineItems: null,
+                paymentGateway: null,
+                isGift: null,
+                subscriptionFacet: null,
+                externalGatewayFacet: null,
+                countryCode: null,
+              };
               obj2[0] = c0;
               obj2[1] = closure_1_1;
               obj2[2] = closure_1_2;
@@ -239,7 +276,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     return iter;
   });
   let items = [paymentGateway, onOrderCreated, isGift, storeFront, initialExternalGatewayFacet];
-  callback = obj.useCallback(function() {
+  callback = obj.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -255,17 +292,20 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     c4 = 0;
     c5 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       closure_2 = tmp3;
       c3 = 1;
       yield closure_1_14(callback);
       if (1 === tmp7) {
         c3 = 0;
         obj1 = callback(isGift[12]);
-        const result = obj1.showCheckoutOrderErrorModal(() => closure_1_14(closure_0), () => {
-          callback2(false);
-          callback();
-        });
+        const result = obj1.showCheckoutOrderErrorModal(
+          () => closure_1_14(closure_0),
+          () => {
+            callback2(false);
+            callback();
+          },
+        );
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
@@ -278,7 +318,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     })();
   });
   let items1 = [callback, onOrderRetryCancellation];
-  callback1 = obj.useCallback(function() {
+  callback1 = obj.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -288,7 +328,15 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     }
     return applyArgumentsResult;
   }, items1);
-  const items2 = [tmp6Result, orderRequired, callback1, defaultPlans, storeFront, activeSubscription, initialSubscriptionFacet];
+  const items2 = [
+    tmp6Result,
+    orderRequired,
+    callback1,
+    defaultPlans,
+    storeFront,
+    activeSubscription,
+    initialSubscriptionFacet,
+  ];
   const effect = obj.useEffect(() => {
     let tmp = ref;
     if (!ref.current) {
@@ -299,7 +347,15 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
           if (null != defaultPlans) {
             const push = items.push;
             const items1 = [];
-            HermesBuiltin.arraySpread(arr2.map((skuId) => ({ sku_id: skuId.skuId, subscription_plan_id: skuId.subscriptionPlanId, quantity: skuId.quantity, purchase_type: constants.SUBSCRIPTION })), 0);
+            HermesBuiltin.arraySpread(
+              arr2.map((skuId) => ({
+                sku_id: skuId.skuId,
+                subscription_plan_id: skuId.subscriptionPlanId,
+                quantity: skuId.quantity,
+                purchase_type: constants.SUBSCRIPTION,
+              })),
+              0,
+            );
             HermesBuiltin.apply(items1, items);
             let obj = { subscription_preview: null };
             obj = { currency: null, country_code: null };
@@ -345,7 +401,17 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     }
     let tmp15 = tmp16;
   } else {
-    obj = { checkoutInitParameters: null, order: null, paymentGateway: null, onOrderRetryCancellation: null, orderRequired: null, initialSubscriptionFacet: null, checkoutAnalyticsFields: null, analyticsInitialStep: null, children: null };
+    obj = {
+      checkoutInitParameters: null,
+      order: null,
+      paymentGateway: null,
+      onOrderRetryCancellation: null,
+      orderRequired: null,
+      initialSubscriptionFacet: null,
+      checkoutAnalyticsFields: null,
+      analyticsInitialStep: null,
+      children: null,
+    };
     obj1 = { skuIds: null, isGift: null, activeSubscription: null, referralTrialOfferId: null };
     obj1[0] = skuIds;
     obj1[1] = isGift;
@@ -359,7 +425,20 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     obj[6] = checkoutAnalyticsFields;
     obj[7] = analyticsInitialStep;
     obj[8] = orderRequired.children;
-    tmp15 = <callback checkoutInitParameters={null} order={null} paymentGateway={null} onOrderRetryCancellation={null} orderRequired={null} initialSubscriptionFacet={null} checkoutAnalyticsFields={null} analyticsInitialStep={null}>{null}</callback>;
+    tmp15 = (
+      <callback
+        checkoutInitParameters={null}
+        order={null}
+        paymentGateway={null}
+        onOrderRetryCancellation={null}
+        orderRequired={null}
+        initialSubscriptionFacet={null}
+        checkoutAnalyticsFields={null}
+        analyticsInitialStep={null}
+      >
+        {null}
+      </callback>
+    );
   }
   return tmp15;
-};
+}

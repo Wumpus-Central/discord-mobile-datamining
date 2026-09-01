@@ -25,15 +25,24 @@ const result5 = require("set").fileFinishedImporting("modules/clips/ClipsConstan
 export const ClipsLengthSettings = obj;
 export const ClipsViewerConnectivitySettings = { ALL: 0, [0]: "ALL", FRIENDS: 1, [1]: "FRIENDS" };
 export const ClipSaveTypes = { DECOUPLED: "decoupled", VIEWER: "viewer", STREAMER: "streamer", VOICE: "voice" };
-export const ClipsUserEducationType = { Error: 0, [0]: "Error", Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled" };
+export const ClipsUserEducationType = {
+  Error: 0,
+  [0]: "Error",
+  Disabled: 1,
+  [1]: "Disabled",
+  Enabled: 2,
+  [2]: "Enabled",
+};
 export const DEFAULT_SAVE_CLIP_KEYBIND = "alt+c";
 export const DEFAULT_SAVE_SCREENSHOT_KEYBIND = "f12";
 export const CLIPS_TOAST_DURATION = result2;
 export const ClipsLogger = tmp5;
 export const CURRENT_CLIP_METADATA_VERSION = 6;
 export const CLIPS_HARDWARE_CLASSIFICATION_VERSION = 2;
-export const WINDOWS_HARDWARE_MINIMUM_GPU_REGEX = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/;
-export const WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX = /(NVIDIA GeForce (RTX (20|30|40|50).*))|(.*Radeon RX (57|58|59|6|7|9).*)/;
+export const WINDOWS_HARDWARE_MINIMUM_GPU_REGEX =
+  /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/;
+export const WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX =
+  /(NVIDIA GeForce (RTX (20|30|40|50).*))|(.*Radeon RX (57|58|59|6|7|9).*)/;
 export const MIN_CLIP_DURATION_SECONDS = 0.1;
 export const CLIPS_EDIT_MODAL_KEY = "clips-edit";
 export const CLIPS_GALLERY_MODAL_KEY = "clips-gallery";
@@ -60,11 +69,45 @@ export const BYTES_PER_GB = 1073741824;
 export const MAX_TRANSIENT_STORAGE_BYTES = 16106127360;
 export const TRANSIENT_AUTOCLIP_DIRNAME = ".autoclip-cache";
 export const CLIP_NAME_MIN_CHAR_LENGTH = 0;
-export const ClipsTrackSuffixes = { ALL: ":all", APPLICATION: ":application", VOICE: ":voice", SOUNDBOARD: ":soundboard" };
-export const ClipSignalTypes = { MANUAL: "manual", DISTRIBUTED: "distributed", SHOUTING: "shouting", LAUGHTER: "laughter", GAME_EVENT: "game_event", SPEAKING: "speaking", SOUNDBOARD: "soundboard" };
-export const ClipsHardwareClassification = { UNKNOWN: "unknown", BELOW_MINIMUM: "below_minimum", MEETS_MINIMUM: "meets_minimum", MEETS_AUTO_ENABLE: "meets_auto_enable" };
-export const ClipsSaveNoOpReason = { MAX_CONCURRENT_SAVES: "max_concurrent_saves", NO_ELIGIBLE_SOURCE: "no_eligible_source", MODULE_NOT_LOADED: "module_not_loaded", BUFFER_WARMING_UP: "buffer_warming_up", BRIDGE_SHUTDOWN: "bridge_shutdown", RECORDING_NOT_READY: "recording_not_ready" };
-export const Emotion = { ANGER: "anger", CALM: "calm", DISGUST: "disgust", FEAR: "fear", HAPPY: "happy", NEUTRAL: "neutral", SAD: "sad", SURPRISED: "surprised" };
+export const ClipsTrackSuffixes = {
+  ALL: ":all",
+  APPLICATION: ":application",
+  VOICE: ":voice",
+  SOUNDBOARD: ":soundboard",
+};
+export const ClipSignalTypes = {
+  MANUAL: "manual",
+  DISTRIBUTED: "distributed",
+  SHOUTING: "shouting",
+  LAUGHTER: "laughter",
+  GAME_EVENT: "game_event",
+  SPEAKING: "speaking",
+  SOUNDBOARD: "soundboard",
+};
+export const ClipsHardwareClassification = {
+  UNKNOWN: "unknown",
+  BELOW_MINIMUM: "below_minimum",
+  MEETS_MINIMUM: "meets_minimum",
+  MEETS_AUTO_ENABLE: "meets_auto_enable",
+};
+export const ClipsSaveNoOpReason = {
+  MAX_CONCURRENT_SAVES: "max_concurrent_saves",
+  NO_ELIGIBLE_SOURCE: "no_eligible_source",
+  MODULE_NOT_LOADED: "module_not_loaded",
+  BUFFER_WARMING_UP: "buffer_warming_up",
+  BRIDGE_SHUTDOWN: "bridge_shutdown",
+  RECORDING_NOT_READY: "recording_not_ready",
+};
+export const Emotion = {
+  ANGER: "anger",
+  CALM: "calm",
+  DISGUST: "disgust",
+  FEAR: "fear",
+  HAPPY: "happy",
+  NEUTRAL: "neutral",
+  SAD: "sad",
+  SURPRISED: "surprised",
+};
 export const ClipCropPreset = obj;
 export const getClipCropAspectRatio = function getClipCropAspectRatio(arg0) {
   if (obj.PORTRAIT_9_16 === arg0) {
@@ -109,7 +152,24 @@ export const DEFAULT_TRACK_DURATION_SECONDS = 5;
 export const MIN_TRACK_DURATION_SECONDS = 1;
 export const DEFAULT_TRACK_POSITION = { x: 0.5, y: 0.5 };
 export const TextStrokeWidth = obj1;
-export const TEXT_STROKE_WIDTH_TO_FONT_SIZE_RATIO = { [obj1.NONE]: 0, [obj1.SMALL]: 0.0625, [obj1.MEDIUM]: 0.125, [obj1.LARGE]: 0.25 };
+export const TEXT_STROKE_WIDTH_TO_FONT_SIZE_RATIO = {
+  [obj1.NONE]: 0,
+  [obj1.SMALL]: 0.0625,
+  [obj1.MEDIUM]: 0.125,
+  [obj1.LARGE]: 0.25,
+};
 export const DEFAULT_TEXT_TRACK_STYLE = obj2;
 export const ClipType = { CLIP: "clip", SCREENSHOT: "screenshot", VOICE_CLIP: "voice_clip" };
-export const GameEventType = { UNCLASSIFIED: "unclassified", KILL: "kill", MULTIKILL: "multikill", DEATH: "death", ASSIST: "assist", ITEM: "item", VICTORY: "victory", DEFEAT: "defeat", LEVEL_UP: "level_up", TREASURE: "treasure", OBJECTIVE_KILL: "objective_kill" };
+export const GameEventType = {
+  UNCLASSIFIED: "unclassified",
+  KILL: "kill",
+  MULTIKILL: "multikill",
+  DEATH: "death",
+  ASSIST: "assist",
+  ITEM: "item",
+  VICTORY: "victory",
+  DEFEAT: "defeat",
+  LEVEL_UP: "level_up",
+  TREASURE: "treasure",
+  OBJECTIVE_KILL: "objective_kill",
+};

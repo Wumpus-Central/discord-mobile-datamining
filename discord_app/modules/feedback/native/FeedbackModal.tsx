@@ -25,7 +25,10 @@ function FeedbackForm(result) {
     titleLabel = intl.string(tmp6(tmp7[6]).t.vcqwCj);
   }
   obj[1] = titleLabel;
-  const items = [closure_7(require(first[5]).FormInput, obj, "channel-input"), closure_7(require(first[5]).FormDivider, {}), ];
+  const items = [
+    closure_7(require(first[5]).FormInput, obj, "channel-input"),
+    closure_7(require(first[5]).FormDivider, {}),
+  ];
   obj = { value: first, title: null, onChange: null, multiline: true, numberOfLines: 4, autoCorrect: true };
   if (descriptionLabel == null) {
     const intl2 = tmp6(tmp7[6]).intl;
@@ -36,7 +39,7 @@ function FeedbackForm(result) {
   obj[2] = tmp2[1];
   items[2] = closure_7(require(first[5]).FormInput, obj);
   obj[0] = items;
-  const items1 = [closure_8(require(first[5]).FormSection, obj), ];
+  const items1 = [closure_8(require(first[5]).FormSection, obj)];
   obj1 = { style: tmp.bottomContainer, children: null };
   let tmp8Result = !hideHelpdeskLink;
   if (!hideHelpdeskLink) {
@@ -49,7 +52,7 @@ function FeedbackForm(result) {
     obj2[3] = intl3.format(tmp6(tmp7[6]).t.ybi2tD, obj3);
     tmp8Result = tmp8(tmp6(tmp7[7]).Text, obj2);
   }
-  const items2 = [tmp8Result, ];
+  const items2 = [tmp8Result];
   const obj4 = { style: tmp.submitButton, children: null };
   let tmp13 = null == first;
   if (!tmp13) {
@@ -76,7 +79,11 @@ function FeedbackForm(result) {
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ helpDeskLabel: { lineHeight: 16, marginTop: 8 }, bottomContainer: { paddingHorizontal: 16 }, submitButton: { marginTop: 24, marginBottom: 24 } });
+let closure_9 = createCacheKey.createStyles({
+  helpDeskLabel: { lineHeight: 16, marginTop: 8 },
+  bottomContainer: { paddingHorizontal: 16 },
+  submitButton: { marginTop: 24, marginBottom: 24 },
+});
 let result = require("set").fileFinishedImporting("modules/feedback/native/FeedbackModal.tsx");
 
 export default function FeedbackModal(result) {
@@ -107,4 +114,4 @@ export default function FeedbackModal(result) {
   obj[0] = obj;
   obj[1] = obj;
   return callback2(_require(trackReport[11]).Navigator, obj);
-};
+}

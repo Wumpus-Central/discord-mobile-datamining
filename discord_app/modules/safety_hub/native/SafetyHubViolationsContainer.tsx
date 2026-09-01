@@ -26,7 +26,7 @@ function SafetyHubViolationsHeader(count) {
   const colors = ThemesDefault.colors;
   obj = { color: tmp8 ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_MUTED, size: "xs" };
   obj[1] = closure_11(WarningIcon.WarningIcon, obj);
-  const items2 = [closure_11(closure_6, obj), , ];
+  const items2 = [closure_11(closure_6, obj), ,];
   obj1 = { style: items3, children: null };
   items3 = [tmp.headerTextContainer];
   const intl = tmp7(1236).intl;
@@ -41,7 +41,7 @@ function SafetyHubViolationsHeader(count) {
     obj3[0] = str.toString();
     formatToPlainStringResult = formatToPlainString(t.fZAHBT, obj3);
   }
-  const items4 = [closure_11(Text.Text, { variant: "heading-sm/semibold", children: formatToPlainStringResult }), ];
+  const items4 = [closure_11(Text.Text, { variant: "heading-sm/semibold", children: formatToPlainStringResult })];
   const intl2 = tmp7(1236).intl;
   const string = intl2.string;
   const t2 = tmp7(1236).t;
@@ -70,7 +70,7 @@ function EmptyActiveState() {
   obj = { variant: "heading-sm/extrabold", children: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.reLFaV);
-  const items1 = [callback(Text.Text, obj), ];
+  const items1 = [callback(Text.Text, obj)];
   obj = { variant: "text-xs/normal", children: null };
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.ERdH1o);
@@ -90,14 +90,17 @@ function EmptyExpiredState() {
 }
 function RelativeIncidentTime(timestamp) {
   let obj = { style: callback3().incidentDate, children: null };
-  obj = { variant: "text-xs/medium", children: parseMessageEmbedForProps.getClassificationRelativeIncidentTime(timestamp.timestamp) };
+  obj = {
+    variant: "text-xs/medium",
+    children: parseMessageEmbedForProps.getClassificationRelativeIncidentTime(timestamp.timestamp),
+  };
   obj[1] = callback(Text.Text, obj);
   return callback(closure_6, obj);
 }
 function NewBadge() {
   const tmp = callback3();
   let obj = { style: items, children: null };
-  items = [, ];
+  items = [,];
   ({ incidentDate: arr[0], incidentDateNew: arr[1] } = tmp);
   obj = { variant: "text-xs/medium", color: "text-overlay-light", style: tmp.newText, children: null };
   const intl = getSystemLocale.intl;
@@ -118,7 +121,7 @@ function ClassificationDetail(classification) {
   obj1 = id(guild_metadata[17]);
   const isNewClassification = obj1.useIsNewClassification(classification);
   const items = [description, guild_metadata];
-  const items1 = [tmp.detailContainerOuter, ];
+  const items1 = [tmp.detailContainerOuter];
   let prop = null;
   const memo = React.useMemo(() => {
     function hook(children) {
@@ -173,7 +176,7 @@ function ClassificationDetail(classification) {
       obj = { classificationId: id, source: closure_1_8.StandingTab };
       obj.pushLazy(id(guild_metadata[21])(guild_metadata[20], guild_metadata.paths), obj);
     },
-    children: null
+    children: null,
   };
   obj1 = { style: items2, children: null };
   items2 = [tmp.detailContainerInner];
@@ -187,7 +190,10 @@ function ClassificationDetail(classification) {
     obj2[0] = extractTimestampResult;
     tmp8Result = tmp8(RelativeIncidentTime, obj2);
   }
-  const items3 = [tmp8Result, closure_11(tmp5(guild_metadata[11]).Text, { variant: "heading-md/normal", children: memo })];
+  const items3 = [
+    tmp8Result,
+    closure_11(tmp5(guild_metadata[11]).Text, { variant: "heading-md/normal", children: memo }),
+  ];
   obj1[1] = items3;
   obj[1] = closure_12(closure_6, obj1);
   obj[1] = closure_11(description(guild_metadata[9]), obj);
@@ -223,12 +229,12 @@ class SafetyHubViolationsContainer {
     items[0] = closure_7;
     stateFromStores = obj2.useStateFromStores(items, () => memo.getIsDsaEligible());
     closure_6 = stateFromStores;
-    items1 = [, ];
+    items1 = [,];
     items1[0] = classifications;
     items1[1] = first1;
     memo = closure_4.useMemo(() => classifications.slice(0, first1), items1);
     closure_7 = memo;
-    items2 = [, , , ];
+    items2 = [, , ,];
     items2[0] = first;
     items2[1] = safetyHubAccountStanding.state;
     items2[2] = memo;
@@ -236,7 +242,14 @@ class SafetyHubViolationsContainer {
     effect = closure_4.useEffect(() => {
       if (first) {
         let obj = first(698);
-        obj = { action: null, account_standing: null, classification_ids: null, source: null, is_violative_content_shown: false, is_dsa_eligible: null };
+        obj = {
+          action: null,
+          account_standing: null,
+          classification_ids: null,
+          source: null,
+          is_violative_content_shown: false,
+          is_dsa_eligible: null,
+        };
         obj[0] = closure_1_9.ViewViolationsDropdown;
         obj[1] = safetyHubAccountStanding.state;
         obj[2] = memo.map((id) => Number(id.id));
@@ -259,22 +272,23 @@ class SafetyHubViolationsContainer {
     obj1 = {
       status,
       onClick() {
-            return dependencyMap((arg0) => !arg0);
-          },
+        return dependencyMap((arg0) => !arg0);
+      },
       opened: first,
-      count: classifications.length
+      count: classifications.length,
     };
-    items4 = [, ];
+    items4 = [,];
     items4[0] = jsx(SafetyHubViolationsHeader, obj1);
     if (first) {
       obj2 = { style: null };
       items5 = [];
       items5[0] = tmp.separator;
       obj2[0] = items5;
-      items6 = [, , , , ];
+      items6 = [, , , ,];
       items6[0] = tmp13(tmp12, obj2);
       num2 = 0;
-      tmp14 = memo.length > 0 && memo.map((classification) => callback2(closure_20, { classification }, classification.id));
+      tmp14 =
+        memo.length > 0 && memo.map((classification) => callback2(closure_20, { classification }, classification.id));
       items6[1] = tmp14;
       tmp11Result = memo.length < classifications.length;
       if (tmp11Result) {
@@ -284,7 +298,7 @@ class SafetyHubViolationsContainer {
         items7 = [];
         items7[0] = tmp.separator;
         obj4[0] = items7;
-        items8 = [, ];
+        items8 = [,];
         items8[0] = tmp13(tmp12, obj4);
         obj5 = { style: null, children: null };
         items9 = [];
@@ -342,36 +356,166 @@ class SafetyHubViolationsContainer {
 ({ Pressable: c5, View: closure_6 } = get_ActivityIndicator);
 ({ SafetyHubAnalyticsActionSource: closure_8, SafetyHubAnalyticsActions: c9 } = SafetyHubView);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-createCacheKey = { connectedContainer: null, container: null, header: null, detailContainerOuter: null, detailContainerOuterNew: null, detailContainerInner: null, iconBackground: null, chevron: null, incidentDate: null, incidentDateNew: null, newText: null, emptyState: null, separator: null, moreButtonContainer: null, moreButton: null, headerTextContainer: null };
-createCacheKey = { display: "flex", marginTop: ThemesDefault.space.PX_12, marginBottom: 36, gap: ThemesDefault.space.PX_12 };
+createCacheKey = {
+  connectedContainer: null,
+  container: null,
+  header: null,
+  detailContainerOuter: null,
+  detailContainerOuterNew: null,
+  detailContainerInner: null,
+  iconBackground: null,
+  chevron: null,
+  incidentDate: null,
+  incidentDateNew: null,
+  newText: null,
+  emptyState: null,
+  separator: null,
+  moreButtonContainer: null,
+  moreButton: null,
+  headerTextContainer: null,
+};
+createCacheKey = {
+  display: "flex",
+  marginTop: ThemesDefault.space.PX_12,
+  marginBottom: 36,
+  gap: ThemesDefault.space.PX_12,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_8, width: "100%" };
-let obj1 = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_8, width: "100%" };
-createCacheKey[2] = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16, width: "100%" };
-let obj2 = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16, width: "100%" };
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_12, marginTop: 10 };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_12, marginTop: 10 };
-createCacheKey[4] = { borderColor: ThemesDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT, borderWidth: 1, borderStyle: "solid" };
-let obj4 = { borderColor: ThemesDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT, borderWidth: 1, borderStyle: "solid" };
+createCacheKey[1] = {
+  backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+  borderRadius: ThemesDefault.radii.md,
+  padding: ThemesDefault.space.PX_8,
+  width: "100%",
+};
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+  borderRadius: ThemesDefault.radii.md,
+  padding: ThemesDefault.space.PX_8,
+  width: "100%",
+};
+createCacheKey[2] = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_16,
+  width: "100%",
+};
+let obj2 = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_16,
+  width: "100%",
+};
+createCacheKey[3] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  borderRadius: ThemesDefault.radii.md,
+  padding: ThemesDefault.space.PX_12,
+  marginTop: 10,
+};
+let obj3 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  borderRadius: ThemesDefault.radii.md,
+  padding: ThemesDefault.space.PX_12,
+  marginTop: 10,
+};
+createCacheKey[4] = {
+  borderColor: ThemesDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT,
+  borderWidth: 1,
+  borderStyle: "solid",
+};
+let obj4 = {
+  borderColor: ThemesDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT,
+  borderWidth: 1,
+  borderStyle: "solid",
+};
 createCacheKey[5] = { display: "flex", gap: ThemesDefault.space.PX_8 };
 let obj5 = { display: "flex", gap: ThemesDefault.space.PX_8 };
-createCacheKey[6] = { display: "flex", borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", padding: 6 };
+createCacheKey[6] = {
+  display: "flex",
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  justifyContent: "center",
+  alignItems: "center",
+  padding: 6,
+};
 createCacheKey[7] = { marginLeft: "auto" };
-let obj6 = { display: "flex", borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", padding: 6 };
-createCacheKey[8] = { alignSelf: "flex-start", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.md, paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_8 };
-let obj7 = { alignSelf: "flex-start", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.md, paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_8 };
-createCacheKey[9] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
+let obj6 = {
+  display: "flex",
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  justifyContent: "center",
+  alignItems: "center",
+  padding: 6,
+};
+createCacheKey[8] = {
+  alignSelf: "flex-start",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.md,
+  paddingVertical: ThemesDefault.space.PX_4,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+};
+let obj7 = {
+  alignSelf: "flex-start",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: ThemesDefault.radii.md,
+  paddingVertical: ThemesDefault.space.PX_4,
+  paddingHorizontal: ThemesDefault.space.PX_8,
+};
+createCacheKey[9] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
+};
 createCacheKey[10] = { textTransform: "capitalize" };
-let obj8 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-createCacheKey[11] = { display: "flex", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.md, gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, paddingTop: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_24 };
-const obj9 = { display: "flex", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.md, gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, paddingTop: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_24 };
+let obj8 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
+};
+createCacheKey[11] = {
+  display: "flex",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  borderRadius: ThemesDefault.radii.md,
+  gap: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_8,
+  paddingTop: ThemesDefault.space.PX_24,
+  paddingBottom: ThemesDefault.space.PX_24,
+};
+const obj9 = {
+  display: "flex",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  borderRadius: ThemesDefault.radii.md,
+  gap: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_8,
+  paddingTop: ThemesDefault.space.PX_24,
+  paddingBottom: ThemesDefault.space.PX_24,
+};
 createCacheKey[12] = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: 10 };
 createCacheKey[13] = { display: "flex", alignItems: "center", justifyContent: "center" };
 const obj10 = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: 10 };
-createCacheKey[14] = { display: "flex", alignItems: "center", justifyContent: "center", borderBottomEndRadius: ThemesDefault.radii.xs, borderBottomStartRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 29, width: 207 };
+createCacheKey[14] = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderBottomEndRadius: ThemesDefault.radii.xs,
+  borderBottomStartRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  height: 29,
+  width: 207,
+};
 createCacheKey[15] = { flexShrink: 0, flexGrow: 1, gap: 2 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-const obj11 = { display: "flex", alignItems: "center", justifyContent: "center", borderBottomEndRadius: ThemesDefault.radii.xs, borderBottomStartRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 29, width: 207 };
+const obj11 = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderBottomEndRadius: ThemesDefault.radii.xs,
+  borderBottomStartRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  height: 29,
+  width: 207,
+};
 const result = require("set").fileFinishedImporting("modules/safety_hub/native/SafetyHubViolationsContainer.tsx");
 
 export default SafetyHubViolationsContainer;
@@ -386,7 +530,7 @@ export const ConnectedSafetyHubViolationsContainer = function ConnectedSafetyHub
     obj[0] = items;
     obj = { status: "active", classifications: null };
     obj[1] = activeSafetyHubClassifications;
-    const items1 = [callback(SafetyHubViolationsContainer, obj), ];
+    const items1 = [callback(SafetyHubViolationsContainer, obj)];
     obj1 = { status: "expired", classifications: null };
     obj1[1] = expiredSafetyHubClassifications;
     items1[1] = callback(SafetyHubViolationsContainer, obj1);

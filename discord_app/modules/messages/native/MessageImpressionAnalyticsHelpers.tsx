@@ -68,7 +68,7 @@ export const useShouldTrackAnnouncementMessageViews = function useShouldTrackAnn
   if (flag == null) {
     flag = false;
   }
-  const items = [, , , , ];
+  const items = [, , , ,];
   ({ type: arr[0], guild_id: arr[1] } = channel);
   items[2] = flag;
   items[3] = isMessagesReady;
@@ -94,19 +94,28 @@ export const useShouldTrackAnnouncementMessageViews = function useShouldTrackAnn
     return tmp;
   }, items);
 };
-export const useShouldTrackRichPresenceInviteEmbedViews = function useShouldTrackRichPresenceInviteEmbedViews(messages) {
+export const useShouldTrackRichPresenceInviteEmbedViews = function useShouldTrackRichPresenceInviteEmbedViews(
+  messages,
+) {
   messages = messages.messages;
   const isMessagesReady = messages.isMessagesReady;
   const items = [messages, isMessagesReady];
   return React.useMemo(() => {
     let someResult = isMessagesReady;
     if (isMessagesReady) {
-      someResult = messages.some((activity) => null != activity.activity && null != activity.activity.party_id && null != activity.application);
+      someResult = messages.some(
+        (activity) => null != activity.activity && null != activity.activity.party_id && null != activity.application,
+      );
     }
     return someResult;
   }, items);
 };
-export const handleAnnouncementMessageViewTracking = function handleAnnouncementMessageViewTracking(arr, shouldTrackAnnouncementMessageViews, guildId, channel) {
+export const handleAnnouncementMessageViewTracking = function handleAnnouncementMessageViewTracking(
+  arr,
+  shouldTrackAnnouncementMessageViews,
+  guildId,
+  channel,
+) {
   const _require = guildId;
   importDefault = channel;
   if (shouldTrackAnnouncementMessageViews) {
@@ -139,7 +148,14 @@ export const handleAnnouncementMessageViewTracking = function handleAnnouncement
                 guild_id = message.messageReference.guild_id;
               }
               if (!hasFlagResult) {
-                const obj = { type: null, messageId: null, channelId: null, guildId: null, sourceChannelId: null, sourceGuildId: null };
+                const obj = {
+                  type: null,
+                  messageId: null,
+                  channelId: null,
+                  guildId: null,
+                  sourceChannelId: null,
+                  sourceGuildId: null,
+                };
                 obj[0] = guildId(items[6]).MessageViewTrackingType.ANNOUNCEMENT;
                 obj[1] = message.id;
                 id = id.id;
@@ -156,12 +172,20 @@ export const handleAnnouncementMessageViewTracking = function handleAnnouncement
           id2 = id.id;
         }
       });
-      const result = importDefault(items[6]).handleMessageListVisibilityChange(items, _require(items[6]).MessageViewTrackingType.ANNOUNCEMENT);
+      const result = importDefault(items[6]).handleMessageListVisibilityChange(
+        items,
+        _require(items[6]).MessageViewTrackingType.ANNOUNCEMENT,
+      );
       let obj = importDefault(items[6]);
     }
   }
 };
-export const handleRichPresenceInviteEmbedViewTracking = function handleRichPresenceInviteEmbedViewTracking(arr, shouldTrackRichPresenceInviteEmbedViews, guildId, channel) {
+export const handleRichPresenceInviteEmbedViewTracking = function handleRichPresenceInviteEmbedViewTracking(
+  arr,
+  shouldTrackRichPresenceInviteEmbedViews,
+  guildId,
+  channel,
+) {
   const _require = guildId;
   importDefault = channel;
   if (shouldTrackRichPresenceInviteEmbedViews) {
@@ -179,7 +203,14 @@ export const handleRichPresenceInviteEmbedViewTracking = function handleRichPres
         hasFlagResult = null == message.application;
       }
       if (!hasFlagResult) {
-        const obj = { type: null, messageId: null, channelId: null, guildId: null, applicationId: null, linkType: null };
+        const obj = {
+          type: null,
+          messageId: null,
+          channelId: null,
+          guildId: null,
+          applicationId: null,
+          linkType: null,
+        };
         obj[0] = guildId(items[6]).MessageViewTrackingType.APP_EMBED;
         obj[1] = message.id;
         obj[2] = id.id;
@@ -189,7 +220,10 @@ export const handleRichPresenceInviteEmbedViewTracking = function handleRichPres
         items.push(obj);
       }
     });
-    const result = importDefault(items[6]).handleMessageListVisibilityChange(items, _require(items[6]).MessageViewTrackingType.APP_EMBED);
+    const result = importDefault(items[6]).handleMessageListVisibilityChange(
+      items,
+      _require(items[6]).MessageViewTrackingType.APP_EMBED,
+    );
     let obj = importDefault(items[6]);
   }
 };
@@ -204,7 +238,10 @@ export const useShouldTrackOfficialMessageViews = function useShouldTrackOfficia
   if (id == null) {
     id = null;
   }
-  isGuildOfficialMessagesEnabled = messages(isGuildOfficialMessagesEnabled[7]).useIsGuildOfficialMessagesEnabled(id, "useShouldTrackOfficialMessageViews");
+  isGuildOfficialMessagesEnabled = messages(isGuildOfficialMessagesEnabled[7]).useIsGuildOfficialMessagesEnabled(
+    id,
+    "useShouldTrackOfficialMessageViews",
+  );
   const items = [isGuildOfficialMessagesEnabled, isMessagesReady, messages];
   return React.useMemo(() => {
     let someResult = isGuildOfficialMessagesEnabled;
@@ -217,7 +254,12 @@ export const useShouldTrackOfficialMessageViews = function useShouldTrackOfficia
     return someResult;
   }, items);
 };
-export const handleOfficialMessageViewTracking = function handleOfficialMessageViewTracking(arr, shouldTrackOfficialMessageViews, guildId, channel) {
+export const handleOfficialMessageViewTracking = function handleOfficialMessageViewTracking(
+  arr,
+  shouldTrackOfficialMessageViews,
+  guildId,
+  channel,
+) {
   const _require = guildId;
   importDefault = channel;
   if (shouldTrackOfficialMessageViews) {
@@ -239,7 +281,10 @@ export const handleOfficialMessageViewTracking = function handleOfficialMessageV
           items.push(obj);
         }
       });
-      const result = importDefault(items[6]).handleMessageListVisibilityChange(items, _require(items[6]).MessageViewTrackingType.OFFICIAL_MESSAGE);
+      const result = importDefault(items[6]).handleMessageListVisibilityChange(
+        items,
+        _require(items[6]).MessageViewTrackingType.OFFICIAL_MESSAGE,
+      );
       let obj = importDefault(items[6]);
     }
   }
@@ -259,7 +304,12 @@ export const useShouldTrackVoiceInviteEmbedViews = function useShouldTrackVoiceI
     return someResult;
   }, items);
 };
-export const handleVoiceInviteEmbedViewTracking = function handleVoiceInviteEmbedViewTracking(arr, shouldTrackVoiceInviteEmbedViews, guildId, channel) {
+export const handleVoiceInviteEmbedViewTracking = function handleVoiceInviteEmbedViewTracking(
+  arr,
+  shouldTrackVoiceInviteEmbedViews,
+  guildId,
+  channel,
+) {
   const _require = guildId;
   importDefault = channel;
   if (shouldTrackVoiceInviteEmbedViews) {
@@ -317,7 +367,18 @@ export const handleVoiceInviteEmbedViewTracking = function handleVoiceInviteEmbe
                   let voiceStatesForChannelAlt = closure_1_5.getVoiceStatesForChannelAlt(tmp10, tmp13);
                   someResult = voiceStatesForChannelAlt.some((voiceState) => voiceState.voiceState.selfStream);
                 }
-                let obj = { type: null, messageId: null, channelId: null, guildId: null, inviteCode: null, inviteGuildId: null, inviteChannelId: null, inviteInstanceId: null, treatmentRendered: null, hasActiveStream: null };
+                let obj = {
+                  type: null,
+                  messageId: null,
+                  channelId: null,
+                  guildId: null,
+                  inviteCode: null,
+                  inviteGuildId: null,
+                  inviteChannelId: null,
+                  inviteInstanceId: null,
+                  treatmentRendered: null,
+                  hasActiveStream: null,
+                };
                 let tmp20 = someResult;
                 let tmp21 = items;
                 obj[0] = tmp7(tmp8[6]).MessageViewTrackingType.VOICE_INVITE_EMBED;
@@ -350,7 +411,10 @@ export const handleVoiceInviteEmbedViewTracking = function handleVoiceInviteEmbe
         }
       }
     });
-    const result = importDefault(items[6]).handleMessageListVisibilityChange(items, _require(items[6]).MessageViewTrackingType.VOICE_INVITE_EMBED);
+    const result = importDefault(items[6]).handleMessageListVisibilityChange(
+      items,
+      _require(items[6]).MessageViewTrackingType.VOICE_INVITE_EMBED,
+    );
     let obj = importDefault(items[6]);
   }
 };

@@ -5,7 +5,9 @@ import hasAtLeastOneGPlaySynced from "../CollectiblesUtils.tsx";
 import closure_3 from "../../../../stores/UserStore.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx",
+);
 
 export default function useMobileCollectiblesPurchaseSKU(product) {
   product = product.product;
@@ -21,4 +23,4 @@ export default function useMobileCollectiblesPurchaseSKU(product) {
   obj.platformSkuId = collectibleGoogleSkuId;
   obj.isFreeForStaffSelfPurchase = true;
   return useMobilePurchaseSKUDefault(obj);
-};
+}

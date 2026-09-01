@@ -28,7 +28,7 @@ let prototype = function AcceptInviteManager() {
     },
     REGISTER_SUCCESS() {
       return applyArgumentsResult._handleRegisterSuccess();
-    }
+    },
   };
   applyArgumentsResult._handleShowInvite = function _handleShowInvite(code) {
     code = code.code;
@@ -58,8 +58,16 @@ let prototype = function AcceptInviteManager() {
       const invite = closure_2_7.getInvite(set);
       let flag = null == invite;
       if (!flag) {
-        flag = invite.state !== closure_2_10.RESOLVED && invite.state !== closure_2_10.EXPIRED && invite.state !== closure_2_10.BANNED && invite.state !== closure_2_10.ERROR;
-        const tmp4 = invite.state !== closure_2_10.RESOLVED && invite.state !== closure_2_10.EXPIRED && invite.state !== closure_2_10.BANNED && invite.state !== closure_2_10.ERROR;
+        flag =
+          invite.state !== closure_2_10.RESOLVED &&
+          invite.state !== closure_2_10.EXPIRED &&
+          invite.state !== closure_2_10.BANNED &&
+          invite.state !== closure_2_10.ERROR;
+        const tmp4 =
+          invite.state !== closure_2_10.RESOLVED &&
+          invite.state !== closure_2_10.EXPIRED &&
+          invite.state !== closure_2_10.BANNED &&
+          invite.state !== closure_2_10.ERROR;
       }
       if (!flag) {
         if (null == invite.channel) {
@@ -114,7 +122,10 @@ let prototype = function AcceptInviteManager() {
                   let flag3 = closure_2_8.can(closure_2_11.VIEW_CHANNEL, closure_2_4.getChannel(target_channel_id));
                   if (flag3) {
                     const target_message_id = invite.target_message_id;
-                    tmp39(tmp40[9]).transitionTo(closure_2_12.CHANNEL(id, target_channel_id, target_message_id), { navigationReplace: true, openChannel: true });
+                    tmp39(tmp40[9]).transitionTo(closure_2_12.CHANNEL(id, target_channel_id, target_message_id), {
+                      navigationReplace: true,
+                      openChannel: true,
+                    });
                     flag3 = true;
                     const tmp39Result = tmp39(tmp40[9]);
                   }
@@ -139,7 +150,11 @@ let prototype = function AcceptInviteManager() {
           obj[1] = _isRegistration._isRegistration;
           obj[2] = closure_1;
           obj[3] = closure_2;
-          closure_2_1(closure_2_2[11]).pushLazy(applyArgumentsResult(closure_2_2[13])(closure_2_2[12], closure_2_2.paths), obj, closure_2_9);
+          closure_2_1(closure_2_2[11]).pushLazy(
+            applyArgumentsResult(closure_2_2[13])(closure_2_2[12], closure_2_2.paths),
+            obj,
+            closure_2_9,
+          );
           flag = false;
           const obj3 = closure_2_1(closure_2_2[11]);
         }
@@ -152,8 +167,7 @@ let prototype = function AcceptInviteManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp3 {
-}
+class prototype extends tmp3 {}
 prototype = new prototype();
 let result = require("set").fileFinishedImporting("modules/accept_invite/native/AcceptInviteManager.tsx");
 

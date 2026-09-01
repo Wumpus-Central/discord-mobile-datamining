@@ -10,7 +10,7 @@ function _fetchGuildForPopout() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       dependencyMap = tmp3;
       obj1 = { type: "GUILD_POPOUT_FETCH_START", guildId: null };
       obj1[1] = callback;

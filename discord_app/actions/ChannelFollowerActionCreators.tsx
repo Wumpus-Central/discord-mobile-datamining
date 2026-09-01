@@ -16,7 +16,7 @@ export default {
     return HTTP.post(obj);
   },
   fetchChannelFollowerStats(closure_0) {
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp3;
       closure_1_1(closure_1_2[3]).dispatch({ type: "CHANNEL_FOLLOWER_STATS_FETCH_START" });
       c3 = 1;
@@ -59,5 +59,5 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY", channelId };
     obj.dispatch(obj);
-  }
+  },
 };

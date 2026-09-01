@@ -14,16 +14,18 @@ obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.FAMILY_CENTER,
   unsearchable: true,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS,
   getComponent() {
     return FamilyCenterParentalControlsSettings /* FamilyCenterParentalControlsSettings */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/FamilyCenterSettingParentalControlsSetting.tsx");
+const result = set.fileFinishedImporting(
+  "modules/user_settings/defs/native/FamilyCenterSettingParentalControlsSetting.tsx",
+);
 
 export default route;
 export const FamilyCenterParentalControlsSetting = route;

@@ -14,7 +14,8 @@ export default function isMessagePinnable(arg0, isSystemDM) {
   if (!isSystemDMResult) {
     isActiveChannelOrUnarchivableThread = !isSystemMessageDefault(arg0);
   }
-  let isPrivateResult = closure_3.can(constants2.PIN_MESSAGES, isSystemDM) && closure_3.can(constants2.READ_MESSAGE_HISTORY, isSystemDM);
+  let isPrivateResult =
+    closure_3.can(constants2.PIN_MESSAGES, isSystemDM) && closure_3.can(constants2.READ_MESSAGE_HISTORY, isSystemDM);
   if (isActiveChannelOrUnarchivableThread) {
     if (!isPrivateResult) {
       isPrivateResult = isSystemDM.isPrivate();
@@ -35,4 +36,4 @@ export default function isMessagePinnable(arg0, isSystemDM) {
     isActiveChannelOrUnarchivableThread = isSystemDM.type !== constants.MEDIA_THREAD;
   }
   return isActiveChannelOrUnarchivableThread;
-};
+}

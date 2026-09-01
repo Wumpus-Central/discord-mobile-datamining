@@ -17,4 +17,4 @@ export default function trackVoiceAndVideoDebuggingSettingsUpdated(arg0, arg1, a
   obj[arg0] = arg1;
   obj.location_stack = location_stack;
   return obj.track(AnalyticEvents.VOICE_AND_VIDEO_SETTINGS_UPDATED, obj);
-};
+}

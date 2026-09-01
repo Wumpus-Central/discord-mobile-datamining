@@ -19,4 +19,4 @@ export default function isActionRequired() {
     tmp = Object.keys(obj.getState()).length > 0;
   }
   return tmp;
-};
+}

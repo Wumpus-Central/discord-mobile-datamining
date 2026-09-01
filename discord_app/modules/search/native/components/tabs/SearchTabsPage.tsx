@@ -132,8 +132,30 @@ export default function ConnectedSearchTabsPage(tab) {
   context = importAllResult.useContext(context);
   _modDef38(null != context, "[SearchTabsPageContext] Context should not be null.");
   let obj = { style: callback2().container, children: null };
-  obj = { isFocused: mapDefault(context.selectedTab) === tab, selectMediaTab: context.selectMediaTab, tab, searchContext, width };
-  obj[1] = <SearchTabsPage isFocused={mapDefault(context.selectedTab) === tab} selectMediaTab={context.selectMediaTab} tab={tab} searchContext={searchContext} width={width} />;
-  return <View isFocused={mapDefault(context.selectedTab) === tab} selectMediaTab={context.selectMediaTab} tab={tab} searchContext={searchContext} width={width} />;
-};
+  obj = {
+    isFocused: mapDefault(context.selectedTab) === tab,
+    selectMediaTab: context.selectMediaTab,
+    tab,
+    searchContext,
+    width,
+  };
+  obj[1] = (
+    <SearchTabsPage
+      isFocused={mapDefault(context.selectedTab) === tab}
+      selectMediaTab={context.selectMediaTab}
+      tab={tab}
+      searchContext={searchContext}
+      width={width}
+    />
+  );
+  return (
+    <View
+      isFocused={mapDefault(context.selectedTab) === tab}
+      selectMediaTab={context.selectMediaTab}
+      tab={tab}
+      searchContext={searchContext}
+      width={width}
+    />
+  );
+}
 export const SearchTabsPageContext = context;

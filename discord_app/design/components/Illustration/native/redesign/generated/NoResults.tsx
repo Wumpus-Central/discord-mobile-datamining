@@ -7,7 +7,9 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/NoResults.tsx");
+const result = require("set").fileFinishedImporting(
+  "design/components/Illustration/native/redesign/generated/NoResults.tsx",
+);
 
 export const getNoResultsSource = function getNoResultsSource(theme) {
   let obj = getIllustrationSource;
@@ -20,7 +22,7 @@ export const getNoResultsSource = function getNoResultsSource(theme) {
     },
     light() {
       return callback(8914);
-    }
+    },
   };
   return obj.getIllustrationSource(theme, obj);
 };
@@ -35,7 +37,7 @@ export const useNoResultsSource = function useNoResultsSource() {
     },
     light() {
       return callback(8914);
-    }
+    },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
@@ -50,7 +52,7 @@ export const NoResults = function NoResults(arg0) {
     },
     light() {
       return callback(8914);
-    }
+    },
   };
   obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);

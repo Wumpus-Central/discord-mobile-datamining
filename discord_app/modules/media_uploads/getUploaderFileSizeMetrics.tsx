@@ -30,7 +30,13 @@ export const getUploaderFileSizeMetrics = function getUploaderFileSizeMetrics(it
     }
     return preCompressionSize;
   });
-  const obj = { preCompressionFileSizes: mapped, postCompressionFileSizes: mapped1, preCompressionAggregateSize: null, postCompressionAggregateSize: null, numAttachments: null };
+  const obj = {
+    preCompressionFileSizes: mapped,
+    postCompressionFileSizes: mapped1,
+    preCompressionAggregateSize: null,
+    postCompressionAggregateSize: null,
+    numAttachments: null,
+  };
   if (items.totalPreCompressionSize > 0) {
     let totalPreCompressionSize = items.totalPreCompressionSize;
   } else {

@@ -26,7 +26,7 @@ function _handleLanguageChange() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -116,10 +116,20 @@ const memoResult = importAllResult.memo(function UserSettingsLocale() {
     obj[3] = closure_1_8(closure_1_4, obj);
     return closure_1_8(lib(closure_1_2[13]).TableRadioRow, obj, name);
   });
-  obj[1] = jsx(require("../../../../design/components/TableRow/native/TableRadioGroup.native.tsx").TableRadioGroup, { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null });
-  obj[1] = jsx(require("../../../../components_native/common/SafeAreaView.tsx").SafeAreaPaddingView, { bottom: true, children: null });
+  obj[1] = jsx(require("../../../../design/components/TableRow/native/TableRadioGroup.native.tsx").TableRadioGroup, {
+    defaultValue: stateFromStores,
+    onChange: handleLanguageChange,
+    hasIcons: true,
+    children: null,
+  });
+  obj[1] = jsx(require("../../../../components_native/common/SafeAreaView.tsx").SafeAreaPaddingView, {
+    bottom: true,
+    children: null,
+  });
   return <closure_5 bottom>{null}</closure_5>;
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/language_and_time/native/UserSettingsLocale.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/language_and_time/native/UserSettingsLocale.tsx",
+);
 
 export default memoResult;

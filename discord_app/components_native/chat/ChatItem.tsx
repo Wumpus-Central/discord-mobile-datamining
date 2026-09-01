@@ -44,7 +44,12 @@ const PX_4 = ThemesDefault.space.PX_4;
 let closure_14 = createCacheKey.createStyles((marginLeft, marginTop, paddingTop) => {
   const container = { position: "relative", overflow: "hidden", paddingTop };
   const offset = { marginTop: -marginTop, marginLeft: -marginLeft };
-  return { container, offset, gradient: { position: "absolute", bottom: 0, height: 24, width: "100%" }, itemRow: { backgroundColor: "transparent" } };
+  return {
+    container,
+    offset,
+    gradient: { position: "absolute", bottom: 0, height: 24, width: "100%" },
+    itemRow: { backgroundColor: "transparent" },
+  };
 });
 const result = require("set").fileFinishedImporting("components_native/chat/ChatItem.tsx");
 
@@ -79,7 +84,15 @@ export default function _default(rowGenerator) {
   const memo = messageSizeCacheRef.useMemo(() => {
     let obj = { constrainedWidth: first };
     rowGenerator.setOptions(obj);
-    obj = { roleStyle, rowType: lib.MESSAGE, changeType: roleStyle.NOOP, message, isFirst: true, canShowImages: true, canAddNewReactions: false };
+    obj = {
+      roleStyle,
+      rowType: lib.MESSAGE,
+      changeType: roleStyle.NOOP,
+      message,
+      isFirst: true,
+      canShowImages: true,
+      canAddNewReactions: false,
+    };
     const generateResult = rowGenerator.generate(obj);
     if (null != modifyRow) {
       tmp3(generateResult);
@@ -163,7 +176,7 @@ export default function _default(rowGenerator) {
     token = tmp9Result.useToken(backgroundColor);
     const items4 = [gradientColors, token];
     obj1 = { style: null, onLayout: null, pointerEvents: null, children: null };
-    const items5 = [tmp17.container, rowGenerator.style, ];
+    const items5 = [tmp17.container, rowGenerator.style];
     const obj2 = { height: null };
     obj2[0] = tmp23;
     items5[2] = obj2;
@@ -184,7 +197,7 @@ export default function _default(rowGenerator) {
     if (tmp31) {
       tmp31 = tmp27;
     }
-    const items6 = [tmp31, ];
+    const items6 = [tmp31];
     if (tmp24Result) {
       const obj3 = { colors: null, style: null };
       obj3[0] = memo2;
@@ -199,7 +212,7 @@ export default function _default(rowGenerator) {
     tmp9Result = tmp9(tmp10[14]);
     tmp9Result.isAndroid() ? PX_4 - 2 : PX_4;
   }
-};
+}
 export const DCDMessageView = require("__INTERNAL_VIEW_CONFIG").default;
 export const DCDSystemMessageView = require("__INTERNAL_VIEW_CONFIG").default;
 export const DCDAutoModerationSystemMessageView = require("__INTERNAL_VIEW_CONFIG").default;

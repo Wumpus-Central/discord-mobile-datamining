@@ -7,7 +7,9 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 noopAll;
 let closure_5 = createCacheKey.createStyles({ emojiRow: { flexDirection: "row", alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorGlyph.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/custom_typing_indicator/native/CustomTypingIndicatorGlyph.tsx",
+);
 
 export default function CustomTypingIndicatorGlyph(config) {
   let map = config.config;
@@ -19,7 +21,7 @@ export default function CustomTypingIndicatorGlyph(config) {
   dependencyMap = map(1942).getEffectiveCustomTypingIndicatorAnimation(map);
   const obj2 = map(1942);
   if (obj3.hasCustomTypingIndicatorEmojis(map.emojis)) {
-    let items = [tmp.emojiRow, ];
+    let items = [tmp.emojiRow];
     if (null == size) {
       let PX_4 = size(712).space.PX_4;
     } else {
@@ -32,10 +34,12 @@ export default function CustomTypingIndicatorGlyph(config) {
     obj[0] = items;
     items = map.emojis;
     map = items.map;
-    obj[1] = map((emoji, index) => closure_1_4(size(table[7]), { emoji, index, emojiCount: map.emojis.length, animation: table, size }, index));
+    obj[1] = map((emoji, index) =>
+      closure_1_4(size(table[7]), { emoji, index, emojiCount: map.emojis.length, animation: table, size }, index),
+    );
     tmp3(View, obj);
     const tmp4 = View;
   } else {
     return tmp3(tmp2(1297).Ellipsis, {});
   }
-};
+}

@@ -20,19 +20,38 @@ import { AnalyticEvents } from "../../Constants.tsx";
 import set from "../../../_runtime/00002_set.js";
 
 require = arg1;
-function addVersionedDismissedContent(GUILD_POWERUP_NOTIFICATION, versionedDismissibleContentCurrentVersion, nextNumTimesDismissed) {
+function addVersionedDismissedContent(
+  GUILD_POWERUP_NOTIFICATION,
+  versionedDismissibleContentCurrentVersion,
+  nextNumTimesDismissed,
+) {
   let obj = updateUserGuildSettings;
-  obj = { lastDismissedVersion: versionedDismissibleContentCurrentVersion, lastDismissedAtMs: Date.now().toString(), lastDismissedObjectId: "0", numTimesDismissed: nextNumTimesDismissed };
+  obj = {
+    lastDismissedVersion: versionedDismissibleContentCurrentVersion,
+    lastDismissedAtMs: Date.now().toString(),
+    lastDismissedObjectId: "0",
+    numTimesDismissed: nextNumTimesDismissed,
+  };
   return obj.updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, obj);
 }
 function addTimeRecurringDismissedContent(GUILD_POWERUP_NOTIFICATION, nextNumTimesDismissed) {
   let obj = updateUserGuildSettings;
-  obj = { lastDismissedVersion: 0, lastDismissedAtMs: Date.now().toString(), lastDismissedObjectId: "0", numTimesDismissed: nextNumTimesDismissed };
+  obj = {
+    lastDismissedVersion: 0,
+    lastDismissedAtMs: Date.now().toString(),
+    lastDismissedObjectId: "0",
+    numTimesDismissed: nextNumTimesDismissed,
+  };
   return obj.updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, obj);
 }
 function addSnowflakeBoundDismissedContent(GUILD_POWERUP_NOTIFICATION, arg1, nextNumTimesDismissed1) {
   let obj = updateUserGuildSettings;
-  obj = { lastDismissedVersion: 0, lastDismissedAtMs: Date.now().toString(), lastDismissedObjectId: arg1, numTimesDismissed: nextNumTimesDismissed1 };
+  obj = {
+    lastDismissedVersion: 0,
+    lastDismissedAtMs: Date.now().toString(),
+    lastDismissedObjectId: arg1,
+    numTimesDismissed: nextNumTimesDismissed1,
+  };
   return obj.updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, obj);
 }
 function markDismissibleContentAsDismissedPreProcessing(closure_0, closure_2) {
@@ -59,7 +78,7 @@ function _markLatestVersionDismissibleContentAsDismissed() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (table === 2) {
         table = 3;
         HermesBuiltin.throwTypeError();
@@ -158,7 +177,7 @@ function _markVersionedDismissibleContentAsDismissed() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -232,7 +251,7 @@ function _markSnowflakeBoundDismissibleContentAsDismissed() {
     closure_2 = arg2;
     c5 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -308,7 +327,7 @@ function _markTimeRecurringDismissibleContentAsDismissed() {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -380,7 +399,17 @@ function trackDismissibleContentShown(WISHLIST_MOBILE_NUX_ACTION_SHEET) {
   }
   [tmp3, tmp4] = callback(callback4(), 2);
   let obj = expandEventPropertiesDefault;
-  obj = { type: DismissibleContent.DismissibleContent[WISHLIST_MOBILE_NUX_ACTION_SHEET], unselected_content_types: null, content_count: null, fatigable_content_count: null, group_name: null, bypass_fatigue: null, guild_id: null, version: null, snowflake_id: null };
+  obj = {
+    type: DismissibleContent.DismissibleContent[WISHLIST_MOBILE_NUX_ACTION_SHEET],
+    unselected_content_types: null,
+    content_count: null,
+    fatigable_content_count: null,
+    group_name: null,
+    bypass_fatigue: null,
+    guild_id: null,
+    version: null,
+    snowflake_id: null,
+  };
   let mapped;
   if (tmp != null) {
     mapped = tmp.map((arg0) => callback(table[14]).DismissibleContent[arg0]);
@@ -463,7 +492,18 @@ function trackDismissibleContentDismissed(closure_0, guildId) {
       numTimesDismissed = num + 1;
     }
   }
-  obj = { type: DismissibleContent.DismissibleContent[closure_0], action: null, content_count: null, group_name: null, bypass_fatigue: null, guild_id: null, shown_duration: null, version: null, num_times_dismissed: null, snowflake_id: null };
+  obj = {
+    type: DismissibleContent.DismissibleContent[closure_0],
+    action: null,
+    content_count: null,
+    group_name: null,
+    bypass_fatigue: null,
+    guild_id: null,
+    shown_duration: null,
+    version: null,
+    num_times_dismissed: null,
+    snowflake_id: null,
+  };
   let dismissAction;
   if (guildId != null) {
     dismissAction = guildId.dismissAction;
@@ -499,9 +539,18 @@ function trackDismissibleContentDismissed(closure_0, guildId) {
   obj[9] = snowflakeId;
   expandEventPropertiesDefault.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj);
 }
-({ addCandidateContent: closure_8, removeCandidateContent: c9, isContentShown: c10, getCurrentlyShownCounts: unpackModuleId } = withContent);
+({
+  addCandidateContent: closure_8,
+  removeCandidateContent: c9,
+  isContentShown: c10,
+  getCurrentlyShownCounts: unpackModuleId,
+} = withContent);
 let c14 = 2592000000;
-let items = [require("DismissibleContent").DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, require("DismissibleContent").DismissibleContent.ACCOUNT_LINK_PROMPT, require("DismissibleContent").DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK];
+let items = [
+  require("DismissibleContent").DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS,
+  require("DismissibleContent").DismissibleContent.ACCOUNT_LINK_PROMPT,
+  require("DismissibleContent").DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK,
+];
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/dismissible_content/DismissibleContentUtils.tsx");
 
@@ -544,35 +593,92 @@ export { addTimeRecurringDismissedContent };
 export { addSnowflakeBoundDismissedContent };
 export const UNSAFE_addGuildDismissedContent = function UNSAFE_addGuildDismissedContent(closure_0, closure_1, arg2) {
   let obj = updateUserGuildSettings;
-  obj = { dismissed: true, lastDismissedVersion: 0, lastDismissedAtMs: Date.now().toString(), lastDismissedObjectId: "0", numTimesDismissed: arg2 };
+  obj = {
+    dismissed: true,
+    lastDismissedVersion: 0,
+    lastDismissedAtMs: Date.now().toString(),
+    lastDismissedObjectId: "0",
+    numTimesDismissed: arg2,
+  };
   return obj.updateGuildDismissedContent(closure_0, closure_1, obj);
 };
-export const UNSAFE_removeGuildDismissedContent = function UNSAFE_removeGuildDismissedContent(closure_0, closure_2, arg2) {
+export const UNSAFE_removeGuildDismissedContent = function UNSAFE_removeGuildDismissedContent(
+  closure_0,
+  closure_2,
+  arg2,
+) {
   let obj = updateUserGuildSettings;
-  obj = { dismissed: false, lastDismissedVersion: 0, lastDismissedAtMs: Date.now().toString(), lastDismissedObjectId: "0", numTimesDismissed: arg2 };
+  obj = {
+    dismissed: false,
+    lastDismissedVersion: 0,
+    lastDismissedAtMs: Date.now().toString(),
+    lastDismissedObjectId: "0",
+    numTimesDismissed: arg2,
+  };
   return obj.updateGuildDismissedContent(closure_0, closure_2, obj);
 };
-export const UNSAFE_addTimeRecurringGuildDismissedContent = function UNSAFE_addTimeRecurringGuildDismissedContent(closure_0, closure_1, guildNextNumTimesDismissed) {
+export const UNSAFE_addTimeRecurringGuildDismissedContent = function UNSAFE_addTimeRecurringGuildDismissedContent(
+  closure_0,
+  closure_1,
+  guildNextNumTimesDismissed,
+) {
   let obj = updateUserGuildSettings;
-  obj = { dismissed: false, lastDismissedVersion: 0, lastDismissedAtMs: Date.now().toString(), lastDismissedObjectId: "0", numTimesDismissed: guildNextNumTimesDismissed };
+  obj = {
+    dismissed: false,
+    lastDismissedVersion: 0,
+    lastDismissedAtMs: Date.now().toString(),
+    lastDismissedObjectId: "0",
+    numTimesDismissed: guildNextNumTimesDismissed,
+  };
   return obj.updateGuildDismissedContent(closure_0, closure_1, obj);
 };
-export const UNSAFE_removeTimeRecurringGuildDismissedContent = function UNSAFE_removeTimeRecurringGuildDismissedContent(closure_0, closure_2, numTimesDismissed) {
+export const UNSAFE_removeTimeRecurringGuildDismissedContent = function UNSAFE_removeTimeRecurringGuildDismissedContent(
+  closure_0,
+  closure_2,
+  numTimesDismissed,
+) {
   let obj = updateUserGuildSettings;
-  obj = { dismissed: false, lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed };
+  obj = {
+    dismissed: false,
+    lastDismissedVersion: 0,
+    lastDismissedAtMs: "0",
+    lastDismissedObjectId: "0",
+    numTimesDismissed,
+  };
   return obj.updateGuildDismissedContent(closure_0, closure_2, obj);
 };
-export const UNSAFE_addSnowflakeBoundGuildDismissedContent = function UNSAFE_addSnowflakeBoundGuildDismissedContent(closure_0, closure_1, closure_2, guildNextNumTimesDismissed) {
+export const UNSAFE_addSnowflakeBoundGuildDismissedContent = function UNSAFE_addSnowflakeBoundGuildDismissedContent(
+  closure_0,
+  closure_1,
+  closure_2,
+  guildNextNumTimesDismissed,
+) {
   let obj = updateUserGuildSettings;
-  obj = { dismissed: false, lastDismissedVersion: 0, lastDismissedAtMs: Date.now().toString(), lastDismissedObjectId: closure_1, numTimesDismissed: guildNextNumTimesDismissed };
+  obj = {
+    dismissed: false,
+    lastDismissedVersion: 0,
+    lastDismissedAtMs: Date.now().toString(),
+    lastDismissedObjectId: closure_1,
+    numTimesDismissed: guildNextNumTimesDismissed,
+  };
   return obj.updateGuildDismissedContent(closure_0, closure_2, obj);
 };
-export const UNSAFE_removeSnowflakeBoundGuildDismissedContent = function UNSAFE_removeSnowflakeBoundGuildDismissedContent(closure_0, closure_2, numTimesDismissed) {
-  let obj = updateUserGuildSettings;
-  obj = { dismissed: false, lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed };
-  return obj.updateGuildDismissedContent(closure_0, closure_2, obj);
-};
-export const isVersionedDismissibleContentDismissed = function isVersionedDismissibleContentDismissed(id, latestVersion) {
+export const UNSAFE_removeSnowflakeBoundGuildDismissedContent =
+  function UNSAFE_removeSnowflakeBoundGuildDismissedContent(closure_0, closure_2, numTimesDismissed) {
+    let obj = updateUserGuildSettings;
+    obj = {
+      dismissed: false,
+      lastDismissedVersion: 0,
+      lastDismissedAtMs: "0",
+      lastDismissedObjectId: "0",
+      numTimesDismissed,
+    };
+    return obj.updateGuildDismissedContent(closure_0, closure_2, obj);
+  };
+export const isVersionedDismissibleContentDismissed = function isVersionedDismissibleContentDismissed(
+  id,
+  latestVersion,
+) {
   let obj = useNewUserDismissibleContent;
   if (obj.disableNewUserDismissibleContent(id)) {
     return { isDismissed: true, lastDismissedVersion: null };
@@ -586,7 +692,8 @@ export const isVersionedDismissibleContentDismissed = function isVersionedDismis
     }
     let versionedDismissibleContentCurrentVersion = latestVersion;
     if (latestVersion == null) {
-      versionedDismissibleContentCurrentVersion = getVersionedDismissibleContentCurrentVersion.getVersionedDismissibleContentCurrentVersion(id);
+      versionedDismissibleContentCurrentVersion =
+        getVersionedDismissibleContentCurrentVersion.getVersionedDismissibleContentCurrentVersion(id);
       const tmpResult = getVersionedDismissibleContentCurrentVersion;
     }
     obj = { isDismissed: null, lastDismissedVersion: null };
@@ -596,7 +703,10 @@ export const isVersionedDismissibleContentDismissed = function isVersionedDismis
   }
   const tmp = require;
 };
-export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurringDismissibleContentDismissed(id, cooldownConfig) {
+export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurringDismissibleContentDismissed(
+  id,
+  cooldownConfig,
+) {
   let obj = useNewUserDismissibleContent;
   if (obj.disableNewUserDismissibleContent(id)) {
     return { isDismissed: true, lastDismissedAtMs: null };
@@ -644,77 +754,87 @@ export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurri
     }
   }
 };
-export const isTimeRecurringSnowflakeBoundDismissibleContentDismissed = function isTimeRecurringSnowflakeBoundDismissibleContentDismissed(THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, id, cooldownDurationMs) {
-  if (obj.disableNewUserDismissibleContent(THIRD_PARTY_OUTBOUND_PROMO_NAGBAR)) {
-    return true;
-  } else {
-    const userContent = store.settings.userContent;
-    let prop;
-    if (userContent != null) {
-      if (userContent.recurringDismissibleContentStates[THIRD_PARTY_OUTBOUND_PROMO_NAGBAR] != null) {
-        prop = tmp5.lastDismissedObjectId;
-      }
-    }
-    const userContent2 = store.settings.userContent;
-    let lastDismissedAtMs;
-    if (userContent2 != null) {
-      if (userContent2.recurringDismissibleContentStates[THIRD_PARTY_OUTBOUND_PROMO_NAGBAR] != null) {
-        lastDismissedAtMs = tmp7.lastDismissedAtMs;
-      }
-    }
-    if (null != lastDismissedAtMs) {
-      if ("0" !== lastDismissedAtMs) {
-        const _Number = Number;
-        const _Number2 = Number;
-        let NumberResult;
-        if (!Number.isNaN(Number(lastDismissedAtMs))) {
-          const _Number3 = Number;
-          NumberResult = Number(lastDismissedAtMs);
+export const isTimeRecurringSnowflakeBoundDismissibleContentDismissed =
+  function isTimeRecurringSnowflakeBoundDismissibleContentDismissed(
+    THIRD_PARTY_OUTBOUND_PROMO_NAGBAR,
+    id,
+    cooldownDurationMs,
+  ) {
+    if (obj.disableNewUserDismissibleContent(THIRD_PARTY_OUTBOUND_PROMO_NAGBAR)) {
+      return true;
+    } else {
+      const userContent = store.settings.userContent;
+      let prop;
+      if (userContent != null) {
+        if (userContent.recurringDismissibleContentStates[THIRD_PARTY_OUTBOUND_PROMO_NAGBAR] != null) {
+          prop = tmp5.lastDismissedObjectId;
         }
       }
-    }
-    let flag = false;
-    if (null != cooldownDurationMs) {
-      flag = false;
-      if (null != tmp8) {
-        const _Date = Date;
-        const sum = tmp8 + cooldownDurationMs.cooldownDurationMs;
-        const timestamp = Date.now();
-        let tmp15 = null == cooldownDurationMs.showAfterTimestamp;
-        if (!tmp15) {
-          tmp15 = timestamp >= cooldownDurationMs.showAfterTimestamp && tmp8 <= cooldownDurationMs.showAfterTimestamp;
-          const tmp16 = timestamp >= cooldownDurationMs.showAfterTimestamp && tmp8 <= cooldownDurationMs.showAfterTimestamp;
+      const userContent2 = store.settings.userContent;
+      let lastDismissedAtMs;
+      if (userContent2 != null) {
+        if (userContent2.recurringDismissibleContentStates[THIRD_PARTY_OUTBOUND_PROMO_NAGBAR] != null) {
+          lastDismissedAtMs = tmp7.lastDismissedAtMs;
         }
-        flag = timestamp < sum || !tmp15;
-        const tmp17 = timestamp < sum || !tmp15;
       }
+      if (null != lastDismissedAtMs) {
+        if ("0" !== lastDismissedAtMs) {
+          const _Number = Number;
+          const _Number2 = Number;
+          let NumberResult;
+          if (!Number.isNaN(Number(lastDismissedAtMs))) {
+            const _Number3 = Number;
+            NumberResult = Number(lastDismissedAtMs);
+          }
+        }
+      }
+      let flag = false;
+      if (null != cooldownDurationMs) {
+        flag = false;
+        if (null != tmp8) {
+          const _Date = Date;
+          const sum = tmp8 + cooldownDurationMs.cooldownDurationMs;
+          const timestamp = Date.now();
+          let tmp15 = null == cooldownDurationMs.showAfterTimestamp;
+          if (!tmp15) {
+            tmp15 = timestamp >= cooldownDurationMs.showAfterTimestamp && tmp8 <= cooldownDurationMs.showAfterTimestamp;
+            const tmp16 =
+              timestamp >= cooldownDurationMs.showAfterTimestamp && tmp8 <= cooldownDurationMs.showAfterTimestamp;
+          }
+          flag = timestamp < sum || !tmp15;
+          const tmp17 = timestamp < sum || !tmp15;
+        }
+      }
+      let tmp18 = null != prop;
+      if (tmp18) {
+        tmp18 = 1 !== DISCORD_EPOCHDefault.compare(id, prop);
+        const obj2 = DISCORD_EPOCHDefault;
+      }
+      if (flag) {
+        flag = tmp18;
+      }
+      return flag;
     }
-    let tmp18 = null != prop;
-    if (tmp18) {
-      tmp18 = 1 !== DISCORD_EPOCHDefault.compare(id, prop);
-      const obj2 = DISCORD_EPOCHDefault;
+    obj = useNewUserDismissibleContent;
+  };
+export const UNSAFE_isSingleUseGuildDismissibleContentDismissed =
+  function UNSAFE_isSingleUseGuildDismissibleContentDismissed(GDM_INVITE_REMINDER, guildId) {
+    if (obj.disableNewUserDismissibleContent(GDM_INVITE_REMINDER)) {
+      return true;
+    } else {
+      const guildDismissedContentState = store.getGuildDismissedContentState(guildId);
+      let tmp5 = null != guildDismissedContentState && null != guildDismissedContentState[GDM_INVITE_REMINDER];
+      if (tmp5) {
+        tmp5 = true === guildDismissedContentState[GDM_INVITE_REMINDER].dismissed;
+      }
+      return tmp5;
     }
-    if (flag) {
-      flag = tmp18;
-    }
-    return flag;
-  }
-  obj = useNewUserDismissibleContent;
-};
-export const UNSAFE_isSingleUseGuildDismissibleContentDismissed = function UNSAFE_isSingleUseGuildDismissibleContentDismissed(GDM_INVITE_REMINDER, guildId) {
-  if (obj.disableNewUserDismissibleContent(GDM_INVITE_REMINDER)) {
-    return true;
-  } else {
-    const guildDismissedContentState = store.getGuildDismissedContentState(guildId);
-    let tmp5 = null != guildDismissedContentState && null != guildDismissedContentState[GDM_INVITE_REMINDER];
-    if (tmp5) {
-      tmp5 = true === guildDismissedContentState[GDM_INVITE_REMINDER].dismissed;
-    }
-    return tmp5;
-  }
-  obj = useNewUserDismissibleContent;
-};
-export const useIsSingleUseGuildDismissibleContentDismissed = function useIsSingleUseGuildDismissibleContentDismissed(dismissibleContent, arg1) {
+    obj = useNewUserDismissibleContent;
+  };
+export const useIsSingleUseGuildDismissibleContentDismissed = function useIsSingleUseGuildDismissibleContentDismissed(
+  dismissibleContent,
+  arg1,
+) {
   const _require = dismissibleContent;
   closure_1 = arg1;
   const items = [closure_5];
@@ -724,8 +844,14 @@ export const useIsSingleUseGuildDismissibleContentDismissed = function useIsSing
       let flag2 = true;
       if (!obj.disableNewUserDismissibleContent(tmp)) {
         const guildDismissedContentState = closure_1_5.getGuildDismissedContentState(tmp3);
-        flag2 = null != guildDismissedContentState && null != guildDismissedContentState[tmp] && true === guildDismissedContentState[tmp].dismissed;
-        const tmp8 = null != guildDismissedContentState && null != guildDismissedContentState[tmp] && true === guildDismissedContentState[tmp].dismissed;
+        flag2 =
+          null != guildDismissedContentState &&
+          null != guildDismissedContentState[tmp] &&
+          true === guildDismissedContentState[tmp].dismissed;
+        const tmp8 =
+          null != guildDismissedContentState &&
+          null != guildDismissedContentState[tmp] &&
+          true === guildDismissedContentState[tmp].dismissed;
       }
       tmp2 = flag2;
       obj = dismissibleContent(closure_1_2[12]);
@@ -734,33 +860,46 @@ export const useIsSingleUseGuildDismissibleContentDismissed = function useIsSing
     return tmp2;
   });
 };
-export const UNSAFE_isTimeRecurringGuildDismissibleContentDismissed = function UNSAFE_isTimeRecurringGuildDismissibleContentDismissed(GDM_INVITE_REMINDER, guildId) {
-  if (obj.disableNewUserDismissibleContent(GDM_INVITE_REMINDER)) {
-    return true;
-  } else {
-    const guildDismissedContentState = store.getGuildDismissedContentState(guildId);
-    let tmp5 = null != guildDismissedContentState && null != guildDismissedContentState[GDM_INVITE_REMINDER] && null != guildDismissedContentState[GDM_INVITE_REMINDER].lastDismissedAtMs;
-    if (tmp5) {
-      tmp5 = "0" !== guildDismissedContentState[GDM_INVITE_REMINDER].lastDismissedAtMs;
+export const UNSAFE_isTimeRecurringGuildDismissibleContentDismissed =
+  function UNSAFE_isTimeRecurringGuildDismissibleContentDismissed(GDM_INVITE_REMINDER, guildId) {
+    if (obj.disableNewUserDismissibleContent(GDM_INVITE_REMINDER)) {
+      return true;
+    } else {
+      const guildDismissedContentState = store.getGuildDismissedContentState(guildId);
+      let tmp5 =
+        null != guildDismissedContentState &&
+        null != guildDismissedContentState[GDM_INVITE_REMINDER] &&
+        null != guildDismissedContentState[GDM_INVITE_REMINDER].lastDismissedAtMs;
+      if (tmp5) {
+        tmp5 = "0" !== guildDismissedContentState[GDM_INVITE_REMINDER].lastDismissedAtMs;
+      }
+      return tmp5;
     }
-    return tmp5;
-  }
-  obj = useNewUserDismissibleContent;
-};
-export const UNSAFE_isSnowflakeBoundGuildDismissibleContentDismissed = function UNSAFE_isSnowflakeBoundGuildDismissibleContentDismissed(GDM_INVITE_REMINDER, guildId) {
-  if (obj.disableNewUserDismissibleContent(GDM_INVITE_REMINDER)) {
-    return true;
-  } else {
-    const guildDismissedContentState = store.getGuildDismissedContentState(guildId);
-    let tmp5 = null != guildDismissedContentState && null != guildDismissedContentState[GDM_INVITE_REMINDER] && null != guildDismissedContentState[GDM_INVITE_REMINDER].lastDismissedObjectId;
-    if (tmp5) {
-      tmp5 = "0" !== guildDismissedContentState[GDM_INVITE_REMINDER].lastDismissedObjectId;
+    obj = useNewUserDismissibleContent;
+  };
+export const UNSAFE_isSnowflakeBoundGuildDismissibleContentDismissed =
+  function UNSAFE_isSnowflakeBoundGuildDismissibleContentDismissed(GDM_INVITE_REMINDER, guildId) {
+    if (obj.disableNewUserDismissibleContent(GDM_INVITE_REMINDER)) {
+      return true;
+    } else {
+      const guildDismissedContentState = store.getGuildDismissedContentState(guildId);
+      let tmp5 =
+        null != guildDismissedContentState &&
+        null != guildDismissedContentState[GDM_INVITE_REMINDER] &&
+        null != guildDismissedContentState[GDM_INVITE_REMINDER].lastDismissedObjectId;
+      if (tmp5) {
+        tmp5 = "0" !== guildDismissedContentState[GDM_INVITE_REMINDER].lastDismissedObjectId;
+      }
+      return tmp5;
     }
-    return tmp5;
-  }
-  obj = useNewUserDismissibleContent;
-};
-export const requestMarkDismissibleContentAsShown = function requestMarkDismissibleContentAsShown(PASSWORDLESS_UPSELL, guildId, anyOverlayRenderingLocked, stateFromStores1) {
+    obj = useNewUserDismissibleContent;
+  };
+export const requestMarkDismissibleContentAsShown = function requestMarkDismissibleContentAsShown(
+  PASSWORDLESS_UPSELL,
+  guildId,
+  anyOverlayRenderingLocked,
+  stateFromStores1,
+) {
   closure_0 = PASSWORDLESS_UPSELL;
   importDefault = guildId;
   if (!callback3(PASSWORDLESS_UPSELL)) {
@@ -812,16 +951,17 @@ export const requestMarkDismissibleContentAsShown = function requestMarkDismissi
 };
 export { markDismissibleContentAsDismissedPreProcessing };
 export { markDismissibleContentAsDismissedPostProcessing };
-export const markLatestVersionDismissibleContentAsDismissed = function markLatestVersionDismissibleContentAsDismissed() {
-  const self = this;
-  const apply = _markLatestVersionDismissibleContentAsDismissed.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
+export const markLatestVersionDismissibleContentAsDismissed =
+  function markLatestVersionDismissibleContentAsDismissed() {
+    const self = this;
+    const apply = _markLatestVersionDismissibleContentAsDismissed.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
 export const getGuildNextNumTimesDismissed = function getGuildNextNumTimesDismissed(closure_0, closure_1) {
   const guildDismissedContentState = store.getGuildDismissedContentState(closure_1);
   let tmp2;
@@ -839,7 +979,11 @@ export const getGuildNextNumTimesDismissed = function getGuildNextNumTimesDismis
 };
 export { getNextNumTimesDismissed };
 export { markVersionedDismissibleContentAsDismissed };
-export const markSnowflakeBoundDismissibleContentAsDismissed = function markSnowflakeBoundDismissibleContentAsDismissed(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, promotionId, arg2) {
+export const markSnowflakeBoundDismissibleContentAsDismissed = function markSnowflakeBoundDismissibleContentAsDismissed(
+  PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
+  promotionId,
+  arg2,
+) {
   const self = this;
   const apply = _markSnowflakeBoundDismissibleContentAsDismissed.apply;
   if (typeof apply === "unknown") {
@@ -849,7 +993,10 @@ export const markSnowflakeBoundDismissibleContentAsDismissed = function markSnow
   }
   return applyArgumentsResult;
 };
-export const markTimeRecurringDismissibleContentAsDismissed = function markTimeRecurringDismissibleContentAsDismissed(closure_1_15, arg1) {
+export const markTimeRecurringDismissibleContentAsDismissed = function markTimeRecurringDismissibleContentAsDismissed(
+  closure_1_15,
+  arg1,
+) {
   const self = this;
   const apply = _markTimeRecurringDismissibleContentAsDismissed.apply;
   if (typeof apply === "unknown") {

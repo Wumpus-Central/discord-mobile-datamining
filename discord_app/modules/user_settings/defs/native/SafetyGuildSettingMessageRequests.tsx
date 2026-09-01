@@ -18,7 +18,15 @@ require = arg1;
 function showMessageRequestRestrictionModal(arg0) {
   const _require = arg0;
   let obj = setDefault;
-  obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null, onCancel: null };
+  obj = {
+    title: null,
+    body: null,
+    confirmText: null,
+    cancelText: null,
+    confirmColor: null,
+    onConfirm: null,
+    onCancel: null,
+  };
   const intl = require("../../../../intl/index.native.tsx").intl;
   obj[0] = intl.string(require("../../../../intl/index.native.tsx").t.yAfu1p);
   const intl2 = require("../../../../intl/index.native.tsx").intl;
@@ -64,7 +72,8 @@ createToggle = {
     const setting = RestrictedGuildIds.useSetting();
     let hasItem = setting.includes(selectedGuildId2);
     const obj = useDefaultGuildsRestricted;
-    const tmp6 = selectedGuildId2 !== closure_6 || !useParentalControlledExplicitContentSettings.useIsParentallyControlled();
+    const tmp6 =
+      selectedGuildId2 !== closure_6 || !useParentalControlledExplicitContentSettings.useIsParentallyControlled();
     let tmp7 = !tmp6;
     if (tmp6) {
       if (selectedGuildId2 === tmp5) {
@@ -120,7 +129,8 @@ createToggle = {
     if (tmp5 === closure_6) {
       showMessageRequestRestrictionModal(!arg0);
     } else {
-      const sanitizedMessageRequestRestrictedGuilds = getSanitizedRestrictedGuilds.getSanitizedMessageRequestRestrictedGuilds();
+      const sanitizedMessageRequestRestrictedGuilds =
+        getSanitizedRestrictedGuilds.getSanitizedMessageRequestRestrictedGuilds();
       if (arg0) {
         sanitizedMessageRequestRestrictedGuilds.delete(tmp5);
       } else {
@@ -132,10 +142,12 @@ createToggle = {
       const obj4 = getSanitizedRestrictedGuilds;
       const tmp6 = require;
     }
-  }
+  },
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SafetyGuildSettingMessageRequests.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/defs/native/SafetyGuildSettingMessageRequests.tsx",
+);
 
 export default createToggle;
 export { showMessageRequestRestrictionModal };

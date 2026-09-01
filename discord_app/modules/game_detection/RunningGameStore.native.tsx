@@ -8,12 +8,9 @@ import closure_4 from "../../stores/LibraryApplicationStore.tsx";
 
 require = arg1;
 const Store = initializeDefault.Store;
-class RunningGameStore extends Store {
-}
+class RunningGameStore extends Store {}
 const prototype = RunningGameStore.prototype;
-prototype["initialize"] = function initialize() {
-
-};
+prototype["initialize"] = function initialize() {};
 prototype["getVisibleGame"] = function getVisibleGame() {
   return null;
 };
@@ -62,12 +59,15 @@ prototype["getOverlayOptionsForPID"] = function getOverlayOptionsForPID() {
 prototype["shouldElevateProcessForPID"] = function shouldElevateProcessForPID() {
   return false;
 };
-prototype["shouldContinueWithoutElevatedProcessForPID"] = function shouldContinueWithoutElevatedProcessForPID(closure_0) {
+prototype["shouldContinueWithoutElevatedProcessForPID"] = function shouldContinueWithoutElevatedProcessForPID(
+  closure_0,
+) {
   return false;
 };
-prototype["canCollectExecutableFingerprintsForRunningGames"] = function canCollectExecutableFingerprintsForRunningGames() {
-  return false;
-};
+prototype["canCollectExecutableFingerprintsForRunningGames"] =
+  function canCollectExecutableFingerprintsForRunningGames() {
+    return false;
+  };
 prototype["getCandidateGames"] = function getCandidateGames() {
   return [];
 };
@@ -105,14 +105,12 @@ Object.defineProperty(prototype, "canShowAdminWarning", {
   get: function canShowAdminWarning() {
     return false;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isDetectionEnabled"] = function isDetectionEnabled() {
   return false;
 };
-prototype["addExecutableTrackedByAnalytics"] = function addExecutableTrackedByAnalytics() {
-
-};
+prototype["addExecutableTrackedByAnalytics"] = function addExecutableTrackedByAnalytics() {};
 prototype["getSystemServiceStatus"] = function getSystemServiceStatus() {
   return { state: "unknown" };
 };
@@ -131,7 +129,13 @@ export const getRawOverlayGameStatus = function getRawOverlayGameStatus() {
   if (arg1 === undefined) {
     const items = [closure_3, closure_4, closure_2];
   }
-  return { source: DevToolsFocusedPidsTrackMode.OverlayGameStatusSource.UNKNOWN, enabledOOP: false, enabledLegacy: false, overlayMethod: DevToolsFocusedPidsTrackMode.OverlayMethod.Disabled, reason: "Dummy implementation" };
+  return {
+    source: DevToolsFocusedPidsTrackMode.OverlayGameStatusSource.UNKNOWN,
+    enabledOOP: false,
+    enabledLegacy: false,
+    overlayMethod: DevToolsFocusedPidsTrackMode.OverlayMethod.Disabled,
+    reason: "Dummy implementation",
+  };
 };
 export function isDetectionEnabled() {
   return false;

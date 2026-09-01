@@ -3,30 +3,38 @@ import useGetOrFetchApplicationsDefault from "../applications/useGetOrFetchAppli
 import closure_2 from "../../../_runtime/00019_noop.js";
 import set from "../../../_runtime/00002_set.js";
 
-let items = [require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED];
+let items = [
+  require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS,
+  require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED,
+  require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
+  require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED,
+];
 let set = new Set(items);
-const result = set.fileFinishedImporting("modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx");
+const result = set.fileFinishedImporting(
+  "modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx",
+);
 
-export const useGetOrFetchNotificationCenterItemsApplications = function useGetOrFetchNotificationCenterItemsApplications(stateFromStores1) {
-  importDefault = stateFromStores1;
-  let items = [stateFromStores1];
-  const memo = React.useMemo(() => {
-    set = new Set();
-    const items = [];
-    const item = set.forEach((applicationId) => {
-      applicationId = applicationId.applicationId;
-      if (closure_1_3.has(applicationId.type)) {
-        let hasItem = null == applicationId;
-        if (!hasItem) {
-          hasItem = set.has(applicationId);
+export const useGetOrFetchNotificationCenterItemsApplications =
+  function useGetOrFetchNotificationCenterItemsApplications(stateFromStores1) {
+    importDefault = stateFromStores1;
+    let items = [stateFromStores1];
+    const memo = React.useMemo(() => {
+      set = new Set();
+      const items = [];
+      const item = set.forEach((applicationId) => {
+        applicationId = applicationId.applicationId;
+        if (closure_1_3.has(applicationId.type)) {
+          let hasItem = null == applicationId;
+          if (!hasItem) {
+            hasItem = set.has(applicationId);
+          }
+          if (!hasItem) {
+            set.add(applicationId);
+            items.push(applicationId);
+          }
         }
-        if (!hasItem) {
-          set.add(applicationId);
-          items.push(applicationId);
-        }
-      }
-    });
-    return items;
-  }, items);
-  return useGetOrFetchApplicationsDefault(memo);
-};
+      });
+      return items;
+    }, items);
+    return useGetOrFetchApplicationsDefault(memo);
+  };

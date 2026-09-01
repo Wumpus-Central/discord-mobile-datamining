@@ -15,7 +15,13 @@ require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, header: null, body: null, buttonWrapper: null };
-createCacheKey = { padding: ThemesDefault.space.PX_16, flex: 1, alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  padding: ThemesDefault.space.PX_16,
+  flex: 1,
+  alignItems: "center",
+  justifyContent: "center",
+  gap: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { textAlign: "center" };
@@ -32,10 +38,20 @@ export default function AgeGateVerify(source) {
   obj1 = useAgeVerificationRunner;
   const maybePerformReactiveCheckForSource = obj1.useMaybePerformReactiveCheckForSource(source);
   obj = { top: true, style: tmp.container, children: null };
-  const items = [callback(AccountAgeTier10LargeBadge.ShieldSpotIllustration, {}), , , ];
-  obj = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: verifyTitle };
+  const items = [callback(AccountAgeTier10LargeBadge.ShieldSpotIllustration, {}), , ,];
+  obj = {
+    style: tmp.header,
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: verifyTitle,
+  };
   items[1] = callback(Text.Text, obj);
-  obj1 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: verifyGateDescription };
+  obj1 = {
+    style: tmp.body,
+    variant: "text-md/medium",
+    color: "interactive-text-default",
+    children: verifyGateDescription,
+  };
   items[2] = callback(Text.Text, obj1);
   let tmp7Result = null != verifyAgreementButtonText;
   if (tmp7Result) {
@@ -54,4 +70,4 @@ export default function AgeGateVerify(source) {
   items[3] = tmp7Result;
   obj[2] = items;
   return closure_5(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-};
+}

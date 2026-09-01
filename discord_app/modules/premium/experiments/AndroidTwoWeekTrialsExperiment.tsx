@@ -4,7 +4,12 @@ import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const obj = { 1: null, 2: { enabled: true, trialCTAEnabled: true } };
 obj[2] = { enabled: true, trialCTAEnabled: false };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-06-android-two-week-trials", kind: "user", defaultConfig: { enabled: false, trialCTAEnabled: false }, variations: obj });
+const apexExperiment = ApexExperiment.createApexExperiment({
+  name: "2026-06-android-two-week-trials",
+  kind: "user",
+  defaultConfig: { enabled: false, trialCTAEnabled: false },
+  variations: obj,
+});
 const result = set.fileFinishedImporting("modules/premium/experiments/AndroidTwoWeekTrialsExperiment.tsx");
 
 export const AndroidTwoWeekTrialsExperiment = apexExperiment;

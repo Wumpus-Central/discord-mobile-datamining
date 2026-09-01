@@ -18,7 +18,11 @@ import importAllResult from "../../../_runtime/00019_noop.js";
 require = arg1;
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 createCacheKey = { screenContainer: null, stackPadding: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
+  paddingTop: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 let closure_15 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
@@ -67,7 +71,9 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
       throw error;
     } else {
       obj = channel(channel[17]);
-      return channel(channel[17]).batchChannelUpdate(tmp, closure_7).then(() => arr.pop());
+      return channel(channel[17])
+        .batchChannelUpdate(tmp, closure_7)
+        .then(() => arr.pop());
     }
   }
   const props = this.props;
@@ -87,7 +93,11 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
     }
     _require = tmp3;
     const categories = store.getCategories(channel.getGuildId());
-    let arr = channel(channel[14])(categories._categories, categories, (channel) => channel.channel.type === channel.type);
+    let arr = channel(channel[14])(
+      categories._categories,
+      categories,
+      (channel) => channel.channel.type === channel.type,
+    );
     const found = arr.find((channel) => channel.channel.id === channel.id);
     if (null == found) {
       let _Error = Error;
@@ -175,7 +185,9 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
                   throw error;
                 } else {
                   obj = closure_1_1(closure_1_3[17]);
-                  closure_1_1(closure_1_3[17]).batchChannelUpdate(tmp, closure_7).then(() => arr.pop());
+                  closure_1_1(closure_1_3[17])
+                    .batchChannelUpdate(tmp, closure_7)
+                    .then(() => arr.pop());
                 }
               };
               obj[5] = saveUpdates;
@@ -190,7 +202,9 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
           throw error;
         } else {
           const obj6 = channel(channel[17]);
-          channel(channel[17]).batchChannelUpdate(tmp24, closure_7).then(() => arr.pop());
+          channel(channel[17])
+            .batchChannelUpdate(tmp24, closure_7)
+            .then(() => arr.pop());
           const batchChannelUpdateResult = channel(channel[17]).batchChannelUpdate(tmp24, closure_7);
         }
       });
@@ -201,12 +215,16 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
 prototype["renderCategory"] = function renderCategory(label) {
   const self = this;
   const _require = label;
-  return callback3(require("../../design/components/TableRow/native/TableRow.native.tsx").TableRow, {
-    label: label.name,
-    onPress() {
-      return self.handleSetCategory(label.id);
-    }
-  }, label.id);
+  return callback3(
+    require("../../design/components/TableRow/native/TableRow.native.tsx").TableRow,
+    {
+      label: label.name,
+      onPress() {
+        return self.handleSetCategory(label.id);
+      },
+    },
+    label.id,
+  );
 };
 prototype["renderCategories"] = function renderCategories() {
   const self = this;
@@ -247,8 +265,12 @@ prototype["render"] = function render() {
     const intl2 = tmp4(1236).intl;
     name = intl2.string(tmp4(1236).t.GSfOoo);
   }
-  obj = { variant: "text-md/medium", color: "text-muted", children: intl.formatToPlainString(first(1236).t.OqccVl, { categoryName: name }) };
-  const items = [closure_13(first(4474).Text, obj), , ];
+  obj = {
+    variant: "text-md/medium",
+    color: "text-muted",
+    children: intl.formatToPlainString(first(1236).t.OqccVl, { categoryName: name }),
+  };
+  const items = [closure_13(first(4474).Text, obj), ,];
   let tmp3Result = null;
   if (null != first) {
     tmp3Result = null;
@@ -274,7 +296,9 @@ prototype["render"] = function render() {
 };
 ChannelSettingsChangeCategory.contextType = require("ManaContext").ThemeContext;
 let obj1 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-let result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeCategory.tsx");
+let result = require("set").fileFinishedImporting(
+  "components_native/channel_settings/ChannelSettingsChangeCategory.tsx",
+);
 
 export default function ConnectedChannelSettingsChangeCategory(channelId) {
   channelId = channelId.channelId;
@@ -284,4 +308,4 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const navigation = channelId(1499).useNavigation();
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return callback3(ChannelSettingsChangeCategory, { channel, navigation });
-};
+}

@@ -4,8 +4,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 
 let c0 = false;
 const PersistedStore = initializeDefault.PersistedStore;
-class ParentalConsentStore extends PersistedStore {
-}
+class ParentalConsentStore extends PersistedStore {}
 const prototype = ParentalConsentStore.prototype;
 prototype["initialize"] = function initialize(shouldShowGuardianConnect) {
   let flag;
@@ -36,7 +35,7 @@ const parentalConsentStore = new ParentalConsentStore(dispatcherDefault, {
   NUF_COMPLETE: function handleNUFCompleted() {
     c0 = false;
     parentalConsentStore.persist();
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/parent_tools/ParentalConsentStore.tsx");
 

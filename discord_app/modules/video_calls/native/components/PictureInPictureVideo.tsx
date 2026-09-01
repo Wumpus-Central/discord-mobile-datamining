@@ -30,7 +30,17 @@ function areParticipantsEqual(arg0, arg1) {
 ({ TouchableOpacity: c4, View: c5 } = get_ActivityIndicator);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = VoiceChatDrawerState);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-let obj = { elevationShadow: null, background: null, backgroundPipFab: null, pip: null, pipFab: null, avatarContainer: null, activityPipContainer: null, thermalAlertIconContainer: null, thermalAlertIcon: null };
+let obj = {
+  elevationShadow: null,
+  background: null,
+  backgroundPipFab: null,
+  pip: null,
+  pipFab: null,
+  avatarContainer: null,
+  activityPipContainer: null,
+  thermalAlertIconContainer: null,
+  thermalAlertIcon: null,
+};
 obj[0] = Button.generateBoxShadowStyle(require("Button").EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 obj = { backgroundColor: ThemesDefault.colors.BLACK, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[1] = obj;
@@ -41,7 +51,17 @@ Button = { borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
 obj[4] = Button;
 obj[5] = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center" };
 obj[6] = { flex: 1, width: "100%" };
-obj[7] = { width: 22, height: 22, backgroundColor: "rgba(78, 80, 88, 0.48)", borderRadius: 11, justifyContent: "center", alignItems: "center", position: "absolute", top: 6, left: 6 };
+obj[7] = {
+  width: 22,
+  height: 22,
+  backgroundColor: "rgba(78, 80, 88, 0.48)",
+  borderRadius: 11,
+  justifyContent: "center",
+  alignItems: "center",
+  position: "absolute",
+  top: 6,
+  left: 6,
+};
 let obj2 = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[8] = { width: 14, height: 14, color: ThemesDefault.colors.WHITE };
 let closure_19 = createCacheKey.createStyles(obj);
@@ -79,13 +99,17 @@ let closure_20 = importAllResult.memo((channel) => {
   const items = [closure_9];
   const items1 = [pipParticipant];
   let type1;
-  const stateFromStores = channel(openVoice[20]).useStateFromStores(items, () => {
-    let isLocalVideoDisabledResult = null != pipParticipant;
-    if (isLocalVideoDisabledResult) {
-      isLocalVideoDisabledResult = closure_1_9.isLocalVideoDisabled(tmp.id);
-    }
-    return isLocalVideoDisabledResult;
-  }, items1);
+  const stateFromStores = channel(openVoice[20]).useStateFromStores(
+    items,
+    () => {
+      let isLocalVideoDisabledResult = null != pipParticipant;
+      if (isLocalVideoDisabledResult) {
+        isLocalVideoDisabledResult = closure_1_9.isLocalVideoDisabled(tmp.id);
+      }
+      return isLocalVideoDisabledResult;
+    },
+    items1,
+  );
   if (pipParticipant != null) {
     type1 = pipParticipant.type;
   }
@@ -184,7 +208,14 @@ let closure_20 = importAllResult.memo((channel) => {
     obj3[1] = onScreenshareTap;
     callback3(tmp6(tmp2[22]), obj3);
   } else {
-    const obj4 = { removeEmptyStateButton: true, removeEmptyStateImage: true, resizeMode: null, participant: null, onSingleTap: null, onDoubleTap: null };
+    const obj4 = {
+      removeEmptyStateButton: true,
+      removeEmptyStateImage: true,
+      resizeMode: null,
+      participant: null,
+      onSingleTap: null,
+      onDoubleTap: null,
+    };
     obj4[2] = tmp(tmp2[24]).ResizeMode.CONTAIN;
     obj4[3] = pipParticipant;
     obj4[4] = onPipTap;
@@ -200,41 +231,63 @@ let closure_22 = importAllResult.memo((arg0) => {
   let items = [closure_12];
   id = channel.id;
   leadingEdgeDebounce = undefined;
-  [tmp5, tmp6] = callback(obj.useStateFromStoresArray(items, () => {
-    const items = [closure_12.consumedRequestToRespondToSeriousThermalState(), closure_12.isReactingToThermalState()];
-    return items;
-  }), 2);
+  [tmp5, tmp6] = callback(
+    obj.useStateFromStoresArray(items, () => {
+      const items = [closure_12.consumedRequestToRespondToSeriousThermalState(), closure_12.isReactingToThermalState()];
+      return items;
+    }),
+    2,
+  );
   obj1 = id(leadingEdgeDebounce[20]);
   const items1 = [closure_12];
   const stateFromStores = obj1.useStateFromStores(items1, () => closure_12.isReactingToThermalState());
   let obj2 = id(leadingEdgeDebounce[20]);
   const items2 = [closure_7];
   const items3 = [id];
-  const tmp4 = callback(obj.useStateFromStoresArray(items, () => {
-    const items = [closure_12.consumedRequestToRespondToSeriousThermalState(), closure_12.isReactingToThermalState()];
-    return items;
-  }), 2);
-  [arr5, tmp9] = callback(obj2.useStateFromStores(items2, () => {
-    const items = [closure_1_7.getParticipants(id), closure_1_7.getVideoParticipants(id), closure_1_7.getParticipantsVersion(id)];
-    return items;
-  }, items3, areParticipantsEqual), 2);
+  const tmp4 = callback(
+    obj.useStateFromStoresArray(items, () => {
+      const items = [closure_12.consumedRequestToRespondToSeriousThermalState(), closure_12.isReactingToThermalState()];
+      return items;
+    }),
+    2,
+  );
+  [arr5, tmp9] = callback(
+    obj2.useStateFromStores(
+      items2,
+      () => {
+        const items = [
+          closure_1_7.getParticipants(id),
+          closure_1_7.getVideoParticipants(id),
+          closure_1_7.getParticipantsVersion(id),
+        ];
+        return items;
+      },
+      items3,
+      areParticipantsEqual,
+    ),
+    2,
+  );
   let obj3 = id(leadingEdgeDebounce[20]);
   const items4 = [closure_11];
   const items5 = [selfParticipant];
-  const stateFromStores1 = obj3.useStateFromStores(items4, () => {
-    let found = null;
-    if (null != selfParticipant) {
-      const speakers = closure_1_11.getSpeakers();
-      found = speakers.find((c12) => {
-        let isSpeakingResult = c12 !== user.user.id;
-        if (isSpeakingResult) {
-          isSpeakingResult = closure_1_11.isSpeaking(c12);
-        }
-        return isSpeakingResult;
-      });
-    }
-    return found;
-  }, items5);
+  const stateFromStores1 = obj3.useStateFromStores(
+    items4,
+    () => {
+      let found = null;
+      if (null != selfParticipant) {
+        const speakers = closure_1_11.getSpeakers();
+        found = speakers.find((c12) => {
+          let isSpeakingResult = c12 !== user.user.id;
+          if (isSpeakingResult) {
+            isSpeakingResult = closure_1_11.isSpeaking(c12);
+          }
+          return isSpeakingResult;
+        });
+      }
+      return found;
+    },
+    items5,
+  );
   let obj4 = id(leadingEdgeDebounce[29]);
   leadingEdgeDebounce = obj4.useLeadingEdgeDebounce(stateFromStores1, 1000);
   if (null != leadingEdgeDebounce) {
@@ -260,7 +313,7 @@ let closure_22 = importAllResult.memo((arg0) => {
         tmp25 = selfVideo;
       }
       obj = { style: null, children: null };
-      const items6 = [tmp.avatarContainer, ];
+      const items6 = [tmp.avatarContainer];
       obj = { backgroundColor: null };
       obj[0] = tmp23;
       items6[1] = obj;
@@ -275,7 +328,7 @@ let closure_22 = importAllResult.memo((arg0) => {
           let tmp30 = callback3(tmp20(tmp3[26]), obj1);
           const tmp20Result = tmp20(tmp3[26]);
         }
-        const items7 = [tmp30, ];
+        const items7 = [tmp30];
         let tmp28Result = null;
         if (tmp5) {
           obj2 = { style: null, children: null };
@@ -337,7 +390,7 @@ const memoResult = importAllResult.memo((arg0) => {
   obj = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
   const tmp6 = usePipDimensionsDefault(obj);
   obj1 = { style: isViewingActivity ? tmp.backgroundPipFab : tmp.background, children: null };
-  const items = [isViewingActivity ? tmp.pipFab : tmp.pip, , , ];
+  const items = [isViewingActivity ? tmp.pipFab : tmp.pip, , ,];
   ({ width, height } = useWindowDimensionsDefault());
   const tmp10 = closure_4;
   const tmp7 = useWindowDimensionsDefault();

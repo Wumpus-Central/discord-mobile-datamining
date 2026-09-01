@@ -18,14 +18,23 @@ const obj = {
   system_channel_id() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.NASFnq);
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsConstants.tsx");
 
 export const MAX_SUBCATEGORIES = 5;
 export const MAX_KEYWORDS = 10;
 export const MAX_KEYWORD_LENGTH = 30;
-export const GuildSettingsRoleEditSections = { DISPLAY: 0, [0]: "DISPLAY", PERMISSIONS: 1, [1]: "PERMISSIONS", MEMBERS: 2, [2]: "MEMBERS", VERIFICATIONS: 3, [3]: "VERIFICATIONS" };
+export const GuildSettingsRoleEditSections = {
+  DISPLAY: 0,
+  [0]: "DISPLAY",
+  PERMISSIONS: 1,
+  [1]: "PERMISSIONS",
+  MEMBERS: 2,
+  [2]: "MEMBERS",
+  VERIFICATIONS: 3,
+  [3]: "VERIFICATIONS",
+};
 export const ERROR_KEY_TO_LABEL_FUNC = obj;
 export const getSettingsErrorMessage = function getSettingsErrorMessage(arg0) {
   if (0 === Object.keys(arg0).length) {

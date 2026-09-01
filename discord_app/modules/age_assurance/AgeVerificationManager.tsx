@@ -42,10 +42,13 @@ let prototype = function AgeVerificationManager() {
     }
     let isFeatureAgeGatedResult = tmp5;
     if (channelId._previousAgeVerificationStatus !== prop) {
-      isFeatureAgeGatedResult = prop === applyArgumentsResult(closure_1_2[11]).AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
+      isFeatureAgeGatedResult =
+        prop === applyArgumentsResult(closure_1_2[11]).AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
     }
     if (isFeatureAgeGatedResult) {
-      isFeatureAgeGatedResult = applyArgumentsResult(closure_1_2[12]).isFeatureAgeGated(applyArgumentsResult(closure_1_2[13]).AgeGatedFeature.AGE_GATED_SPACES);
+      isFeatureAgeGatedResult = applyArgumentsResult(closure_1_2[12]).isFeatureAgeGated(
+        applyArgumentsResult(closure_1_2[13]).AgeGatedFeature.AGE_GATED_SPACES,
+      );
       let obj = applyArgumentsResult(closure_1_2[12]);
     }
     if (channelId._previousAgeVerificationStatus !== prop) {
@@ -109,11 +112,14 @@ let prototype = function AgeVerificationManager() {
       throw tmp25;
     }
   };
-  applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen, CURRENT_USER_UPDATE: applyArgumentsResult.handleCurrentUserUpdate, MESSAGE_CREATE: handleMessageCreate };
+  applyArgumentsResult.actions = {
+    POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen,
+    CURRENT_USER_UPDATE: applyArgumentsResult.handleCurrentUserUpdate,
+    MESSAGE_CREATE: handleMessageCreate,
+  };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp4 {
-}
+class prototype extends tmp4 {}
 prototype = new prototype();
 const tmp3 = new timestampDefault("AgeVerificationManager");
 let result = require("set").fileFinishedImporting("modules/age_assurance/AgeVerificationManager.tsx");

@@ -13,13 +13,13 @@ obj = {
     return intl.string(messagesProxyDefault.yyhs9L);
   },
   parent: MobileUserSettings.MobileUserSettings.SPONSORED_CONTENT_PREFERENCES,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.MANAGE_SPONSORED_CONTENT,
   getComponent() {
     return AdTopicRow /* AdTopicRow */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ManageSponsoredContentSetting.tsx");

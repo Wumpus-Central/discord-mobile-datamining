@@ -16,4 +16,4 @@ export default function isGuildsBarGuildLabelEqual(count, count2) {
     tmp = tmp2;
   }
   return tmp;
-};
+}

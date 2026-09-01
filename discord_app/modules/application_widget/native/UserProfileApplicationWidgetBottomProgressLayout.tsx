@@ -10,23 +10,64 @@ require = arg1;
 noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { root: null, image: null, content: null, progressContainer: null, progress: null, textContent: null, textLeft: null, progressText: null };
+createCacheKey = {
+  root: null,
+  image: null,
+  content: null,
+  progressContainer: null,
+  progress: null,
+  textContent: null,
+  textLeft: null,
+  progressText: null,
+};
 createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-obj1 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+createCacheKey[1] = {
+  width: 48,
+  height: 48,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+};
+obj1 = {
+  width: 48,
+  height: 48,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+};
 createCacheKey[2] = { flex: 1, gap: ThemesDefault.space.PX_4, minWidth: 0 };
 let obj2 = { flex: 1, gap: ThemesDefault.space.PX_4, minWidth: 0 };
-createCacheKey[3] = { width: "100%", height: 6, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-let obj3 = { width: "100%", height: 6, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-createCacheKey[4] = { height: 6, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.ICON_STRONG };
+createCacheKey[3] = {
+  width: "100%",
+  height: 6,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+};
+let obj3 = {
+  width: "100%",
+  height: 6,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+};
+createCacheKey[4] = {
+  height: 6,
+  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: ThemesDefault.colors.ICON_STRONG,
+};
 let obj4 = { height: 6, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.ICON_STRONG };
 createCacheKey[5] = { flexDirection: "row", justifyContent: "space-between", gap: ThemesDefault.space.PX_4 };
 createCacheKey[6] = { flex: 1, minWidth: 0 };
 createCacheKey[7] = { flexShrink: 0 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let obj5 = { flexDirection: "row", justifyContent: "space-between", gap: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetBottomProgressLayout.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/application_widget/native/UserProfileApplicationWidgetBottomProgressLayout.tsx",
+);
 
 export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   ({ bottomConfig, resolveFieldValue } = arg0);
@@ -72,9 +113,14 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
     tmp14 = callback(tmp3(12757).ImageSkeleton, obj2);
     tmp15 = callback;
   }
-  const items3 = [tmp14, ];
+  const items3 = [tmp14];
   const obj3 = { style: tmp.content, children: null };
-  const obj4 = { style: tmp.progressContainer, accessibilityRole: "progressbar", accessibilityValue: null, children: null };
+  const obj4 = {
+    style: tmp.progressContainer,
+    accessibilityRole: "progressbar",
+    accessibilityValue: null,
+    children: null,
+  };
   let num;
   if (iter2 != null) {
     num = iter2.value;
@@ -93,12 +139,12 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   obj5[2] = num2;
   obj4[2] = obj5;
   const obj6 = { style: null };
-  const items4 = [tmp.progress, ];
+  const items4 = [tmp.progress];
   let str = globalThis;
   items4[1] = { width: "" + progressPercentage + "%" };
   obj6[0] = items4;
   obj4[3] = tmp15(closure_3, obj6);
-  const items5 = [tmp15(closure_3, obj4), ];
+  const items5 = [tmp15(closure_3, obj4)];
   const obj8 = { style: tmp.textContent, children: null };
   const obj9 = { style: tmp.textLeft, children: null };
   if ("value" === singleStringOrSkeleton.status) {
@@ -108,7 +154,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   } else {
     tmp15Result = tmp15(tmp3(12757).TextSkeleton, { variant: "heading-sm/medium" });
   }
-  const items6 = [tmp15Result, ];
+  const items6 = [tmp15Result];
   if ("value" === singleStringOrSkeleton1.status) {
     const obj11 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 2, children: null };
     obj11[3] = singleStringOrSkeleton1.text;
@@ -118,7 +164,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   }
   items6[1] = tmp15Result;
   obj9[1] = items6;
-  const items7 = [closure_5(closure_3, obj9), ];
+  const items7 = [closure_5(closure_3, obj9)];
   if (null != iter) {
     const obj12 = { variant: "text-sm/medium", lineClamp: 1, style: null, children: null };
     obj12[2] = tmp.progressText;
@@ -143,4 +189,4 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
     obj[1] = items3;
     return tmp11(tmp12, obj);
   }
-};
+}

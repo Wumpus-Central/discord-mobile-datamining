@@ -18,7 +18,7 @@ let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GuildRoleSubscriptionsChannelHeader() {
   let obj = { style: callback3().header, children: null };
   obj = { source: registerAssetDefault, size: Button.Icon.Sizes.MEDIUM, disableColor: true };
-  const items = [callback(Button.Icon, obj), ];
+  const items = [callback(Button.Icon, obj)];
   obj = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["KzCF/6"]);
@@ -26,6 +26,8 @@ const memoResult = importAllResult.memo(function GuildRoleSubscriptionsChannelHe
   obj[1] = items;
   return callback2(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsChannelHeader.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsChannelHeader.tsx",
+);
 
 export default memoResult;

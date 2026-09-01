@@ -20,33 +20,49 @@ const memoResult = importAllResult.memo(function RevenueSmokeTestModal() {
           return callback2(callback(table[5]).GenericHeaderTitle, { title: children.children });
         },
         headerLeft: callback(closure_1_2[5]).getRenderModalCloseImage(navigation.navigation),
-        headerTitleAlign: "center"
+        headerTitleAlign: "center",
       };
       let merged = Object.assign(callback);
       let merged1 = Object.assign(closure_1_1(closure_1_2[6])());
       return obj;
     },
-    children: <Screen name="RunAllFlows" options={function options() {
-      return { title: "Run All Payment Flows" };
-    }} component={_modDef15299.RunAllFlows} />
+    children: (
+      <Screen
+        name="RunAllFlows"
+        options={function options() {
+          return { title: "Run All Payment Flows" };
+        }}
+        component={_modDef15299.RunAllFlows}
+      />
+    ),
   };
   ({ Navigator, Screen } = closure_4);
-  obj[2] = <Navigator screenOptions={function screenOptions(navigation) {
-    const obj = {
-      headerTitle(children) {
-        const merged = Object.assign(children, Object.create(null));
-        const merged1 = Object.assign(merged);
-        return callback2(callback(table[5]).GenericHeaderTitle, { title: children.children });
-      },
-      headerLeft: callback(closure_1_2[5]).getRenderModalCloseImage(navigation.navigation),
-      headerTitleAlign: "center"
-    };
-    let merged = Object.assign(callback);
-    let merged1 = Object.assign(closure_1_1(closure_1_2[6])());
-    return obj;
-  }}><Screen name="RunAllFlows" options={function options() {
-    return { title: "Run All Payment Flows" };
-  }} component={_modDef15299.RunAllFlows} /></Navigator>;
+  obj[2] = (
+    <Navigator
+      screenOptions={function screenOptions(navigation) {
+        const obj = {
+          headerTitle(children) {
+            const merged = Object.assign(children, Object.create(null));
+            const merged1 = Object.assign(merged);
+            return callback2(callback(table[5]).GenericHeaderTitle, { title: children.children });
+          },
+          headerLeft: callback(closure_1_2[5]).getRenderModalCloseImage(navigation.navigation),
+          headerTitleAlign: "center",
+        };
+        let merged = Object.assign(callback);
+        let merged1 = Object.assign(closure_1_1(closure_1_2[6])());
+        return obj;
+      }}
+    >
+      <Screen
+        name="RunAllFlows"
+        options={function options() {
+          return { title: "Run All Payment Flows" };
+        }}
+        component={_modDef15299.RunAllFlows}
+      />
+    </Navigator>
+  );
   return jsx(require("../../../payments/native/NativePaymentContext.tsx").NativePaymentContextProvider, {
     screenOptions(navigation) {
       const obj = {
@@ -56,15 +72,21 @@ const memoResult = importAllResult.memo(function RevenueSmokeTestModal() {
           return callback2(callback(table[5]).GenericHeaderTitle, { title: children.children });
         },
         headerLeft: callback(closure_1_2[5]).getRenderModalCloseImage(navigation.navigation),
-        headerTitleAlign: "center"
+        headerTitleAlign: "center",
       };
       let merged = Object.assign(callback);
       let merged1 = Object.assign(closure_1_1(closure_1_2[6])());
       return obj;
     },
-    children: <Screen name="RunAllFlows" options={function options() {
-      return { title: "Run All Payment Flows" };
-    }} component={_modDef15299.RunAllFlows} />
+    children: (
+      <Screen
+        name="RunAllFlows"
+        options={function options() {
+          return { title: "Run All Payment Flows" };
+        }}
+        component={_modDef15299.RunAllFlows}
+      />
+    ),
   });
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/billing/native/RevenueSmokeTestModal.tsx");

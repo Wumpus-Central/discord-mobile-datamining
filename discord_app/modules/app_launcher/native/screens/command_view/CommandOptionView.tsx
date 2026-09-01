@@ -12,20 +12,57 @@ import set from "../../../../../../_runtime/00002_set.js";
 const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let items = [require("PermissionOverwriteType").ApplicationCommandOptionType.STRING, require("PermissionOverwriteType").ApplicationCommandOptionType.INTEGER, require("PermissionOverwriteType").ApplicationCommandOptionType.ATTACHMENT, require("PermissionOverwriteType").ApplicationCommandOptionType.BOOLEAN, require("PermissionOverwriteType").ApplicationCommandOptionType.MENTIONABLE, require("PermissionOverwriteType").ApplicationCommandOptionType.USER, require("PermissionOverwriteType").ApplicationCommandOptionType.ROLE, require("PermissionOverwriteType").ApplicationCommandOptionType.CHANNEL, require("PermissionOverwriteType").ApplicationCommandOptionType.NUMBER];
+let items = [
+  require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+  require("PermissionOverwriteType").ApplicationCommandOptionType.INTEGER,
+  require("PermissionOverwriteType").ApplicationCommandOptionType.ATTACHMENT,
+  require("PermissionOverwriteType").ApplicationCommandOptionType.BOOLEAN,
+  require("PermissionOverwriteType").ApplicationCommandOptionType.MENTIONABLE,
+  require("PermissionOverwriteType").ApplicationCommandOptionType.USER,
+  require("PermissionOverwriteType").ApplicationCommandOptionType.ROLE,
+  require("PermissionOverwriteType").ApplicationCommandOptionType.CHANNEL,
+  require("PermissionOverwriteType").ApplicationCommandOptionType.NUMBER,
+];
 let set = new Set(items);
-createCacheKey = { optionDescription: { marginTop: 4 }, optionErrorContainer: { flexDirection: "row", alignItems: "center", marginTop: 4 }, optionErrorIcon: null, labelText: null };
+createCacheKey = {
+  optionDescription: { marginTop: 4 },
+  optionErrorContainer: { flexDirection: "row", alignItems: "center", marginTop: 4 },
+  optionErrorIcon: null,
+  labelText: null,
+};
 createCacheKey = { marginRight: 4, tintColor: ThemesDefault.colors.ICON_FEEDBACK_CRITICAL, alignItems: "center" };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { marginBottom: 8 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let items1 = [require("PermissionOverwriteType").ApplicationCommandOptionType.STRING, require("PermissionOverwriteType").ApplicationCommandOptionType.INTEGER, require("PermissionOverwriteType").ApplicationCommandOptionType.NUMBER];
+let items1 = [
+  require("PermissionOverwriteType").ApplicationCommandOptionType.STRING,
+  require("PermissionOverwriteType").ApplicationCommandOptionType.INTEGER,
+  require("PermissionOverwriteType").ApplicationCommandOptionType.NUMBER,
+];
 const result = set.fileFinishedImporting("modules/app_launcher/native/screens/command_view/CommandOptionView.tsx");
 
 export default function CommandOptionView(option) {
   option = option.option;
-  ({ editedOptions, onOptionViewLayout: importDefault, onPressOption: dependencyMap, onPressAttachmentOption: View, optionValidationResults, setFocusedOption: closure_4 } = option);
-  ({ style, autoFocusType, onDismiss, onStartEditing, onEndEditing, onOptionValueChange, channel, command, optionValues, isPreSelectedOption } = option);
+  ({
+    editedOptions,
+    onOptionViewLayout: importDefault,
+    onPressOption: dependencyMap,
+    onPressAttachmentOption: View,
+    optionValidationResults,
+    setFocusedOption: closure_4,
+  } = option);
+  ({
+    style,
+    autoFocusType,
+    onDismiss,
+    onStartEditing,
+    onEndEditing,
+    onOptionValueChange,
+    channel,
+    command,
+    optionValues,
+    isPreSelectedOption,
+  } = option);
   const tmp = callback();
   let obj = option(589);
   const items = [closure_4];
@@ -74,8 +111,22 @@ export default function CommandOptionView(option) {
       obj4[3] = option.displayName;
       tmp17Result = tmp17(tmp2(4474).Text, obj4);
     }
-    const items2 = [tmp17Result, , , ];
-    const obj5 = { option: null, onStartEditing: null, onEndEditing: null, onDismiss: null, onOptionValueChange: null, onFocus: null, onPress: null, onPressAttachmentOption: null, channel: null, autoFocusType: null, command: null, optionValues: null, hasError: null };
+    const items2 = [tmp17Result, , ,];
+    const obj5 = {
+      option: null,
+      onStartEditing: null,
+      onEndEditing: null,
+      onDismiss: null,
+      onOptionValueChange: null,
+      onFocus: null,
+      onPress: null,
+      onPressAttachmentOption: null,
+      channel: null,
+      autoFocusType: null,
+      command: null,
+      optionValues: null,
+      hasError: null,
+    };
     obj5[0] = option;
     obj5[1] = onStartEditing;
     obj5[2] = onEndEditing;
@@ -109,7 +160,7 @@ export default function CommandOptionView(option) {
       obj8[0] = tmp.optionErrorIcon;
       obj8[1] = tmp18(10407);
       obj8[2] = tmp2(1297).IconSizes.REFRESH_SMALL_16;
-      const items3 = [tmp17(tmp2(1297).Icon, obj8), ];
+      const items3 = [tmp17(tmp2(1297).Icon, obj8)];
       const obj9 = { variant: "text-xs/medium", color: "text-feedback-critical", children: null };
       obj9[2] = optionValidationResults[option.name].error;
       items3[1] = tmp17(tmp2(4474).Text, obj9);
@@ -126,4 +177,4 @@ export default function CommandOptionView(option) {
     return null;
   }
   const tmp2Result = option(11731);
-};
+}

@@ -11,14 +11,14 @@ let closure_4 = ["url", "autolink", "link", "mailto", "tel"];
 let obj = { enableBuildOverrides: false, enableEmojiClick: true };
 let closure_6 = importDefaultResult.once(() => {
   const items = [MarkupTextDefault({ enableBuildOverrides: true })];
-  const items1 = [parseLinkDefault.RULES, ];
+  const items1 = [parseLinkDefault.RULES];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 let closure_7 = importDefaultResult.once(() => {
   obj = importDefaultResult;
   const items = [MarkupTextDefault(obj)];
-  const items1 = [parseLinkDefault.RULES, ];
+  const items1 = [parseLinkDefault.RULES];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return obj.omit(combineMarkupRulesDefault(items1), "paragraph", "newline");
 });
@@ -30,14 +30,14 @@ let closure_8 = importDefaultResult.once(() => {
   obj.shouldCloseDefaultModals = true;
   obj.shouldStopPropagation = true;
   const merged1 = Object.assign({});
-  const items = [MarkupTextDefault(obj), , ];
+  const items = [MarkupTextDefault(obj), ,];
   const tmp = MarkupTextDefault;
   items[1] = MarkupText.createFetchingGameMentionRule();
   obj = { codeBlock: null };
   obj = { react: parseLinkDefault.RULES.text.react };
   obj[0] = obj;
   items[2] = obj;
-  const items1 = [parseLinkDefault.CHANNEL_TOPIC_RULES, ];
+  const items1 = [parseLinkDefault.CHANNEL_TOPIC_RULES];
   const obj2 = MarkupText;
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
@@ -50,14 +50,14 @@ let closure_9 = importDefaultResult.once(() => {
   obj.shouldCloseDefaultModals = true;
   obj.shouldStopPropagation = true;
   const merged1 = Object.assign({ emojiFocusable: false });
-  const items = [MarkupTextDefault(obj), , ];
+  const items = [MarkupTextDefault(obj), ,];
   const tmp = MarkupTextDefault;
   items[1] = MarkupText.createFetchingGameMentionRule();
   obj = { codeBlock: null };
   obj = { react: parseLinkDefault.RULES.text.react };
   obj[0] = obj;
   items[2] = obj;
-  const items1 = [parseLinkDefault.CHANNEL_TOPIC_RULES, ];
+  const items1 = [parseLinkDefault.CHANNEL_TOPIC_RULES];
   const obj2 = MarkupText;
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
@@ -68,7 +68,7 @@ let closure_10 = importDefaultResult.once(() => {
   const merged = Object.assign(obj);
   obj.enableEmojiClick = false;
   const items = [MarkupTextDefault(obj)];
-  const items1 = [parseLinkDefault.VOICE_CHANNEL_STATUS_RULES, ];
+  const items1 = [parseLinkDefault.VOICE_CHANNEL_STATUS_RULES];
   const tmp = MarkupTextDefault;
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
@@ -76,7 +76,7 @@ let closure_10 = importDefaultResult.once(() => {
 const importDefaultResult4 = importDefaultResult;
 let closure_11 = importDefaultResult.once(() => {
   const items = [MarkupTextDefault(obj)];
-  const items1 = [parseLinkDefault.EMBED_TITLE_RULES, ];
+  const items1 = [parseLinkDefault.EMBED_TITLE_RULES];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
@@ -84,21 +84,21 @@ const importDefaultResult5 = importDefaultResult;
 let closure_12 = importDefaultResult.once(() => {
   obj = importDefaultResult;
   const items = [MarkupTextDefault(obj)];
-  const items1 = [parseLinkDefault.EMBED_TITLE_RULES, ];
+  const items1 = [parseLinkDefault.EMBED_TITLE_RULES];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return obj.omit(combineMarkupRulesDefault(items1), closure_4);
 });
 const importDefaultResult6 = importDefaultResult;
 let closure_13 = importDefaultResult.once(() => {
   const items = [MarkupTextDefault(obj)];
-  const items1 = [parseLinkDefault.INLINE_REPLY_RULES, ];
+  const items1 = [parseLinkDefault.INLINE_REPLY_RULES];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 const importDefaultResult7 = importDefaultResult;
 let closure_14 = importDefaultResult.once(() => {
   const items = [MarkupTextDefault(obj)];
-  const items1 = [parseLinkDefault.GUILD_VERIFICATION_FORM_RULES, ];
+  const items1 = [parseLinkDefault.GUILD_VERIFICATION_FORM_RULES];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
@@ -108,7 +108,7 @@ let closure_15 = importDefaultResult.once(() => {
   const merged = Object.assign(obj);
   obj.shouldStopPropagation = true;
   const items = [MarkupTextDefault(obj)];
-  const items1 = [parseLinkDefault.GUILD_EVENT_RULES, ];
+  const items1 = [parseLinkDefault.GUILD_EVENT_RULES];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
@@ -117,17 +117,29 @@ let closure_16 = importDefaultResult.once(() => importDefaultResult.omit(callbac
 const importDefaultResult10 = importDefaultResult;
 let closure_17 = importDefaultResult.once(() => {
   const items = [MarkupTextDefault(obj)];
-  const items1 = [parseLinkDefault.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, ];
+  const items1 = [parseLinkDefault.AUTO_MODERATION_SYSTEM_MESSAGE_RULES];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 const importDefaultResult11 = importDefaultResult;
 let closure_18 = importDefaultResult.once(() => {
   const items = [MarkupTextDefault(obj)];
-  const items1 = [parseLinkDefault.RULES, ];
+  const items1 = [parseLinkDefault.RULES];
   const tmp = importDefaultResult;
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  const items2 = [combineMarkupRulesDefault(items1), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "list", "heading", "subtext", ...closure_4];
+  const items2 = [
+    combineMarkupRulesDefault(items1),
+    "paragraph",
+    "newline",
+    "strong",
+    "codeBlock",
+    "inlineCode",
+    "u",
+    "list",
+    "heading",
+    "subtext",
+    ...closure_4,
+  ];
   return tmp.omit.apply(items2);
 });
 obj = { text: parseLinkDefault.RULES.text };
@@ -167,12 +179,12 @@ const importDefaultResult28 = importDefaultResult;
 let closure_35 = importDefaultResult.once(() => reactParserForAll.astParserFor(callback12()));
 obj = {
   combineAndInjectMentionRule(arg0, arg1) {
-    const items = [arg0, ];
+    const items = [arg0];
     items[HermesBuiltin.arraySpread(arg1, 1)] = {};
     return combineMarkupRulesDefault(items);
   },
   createReactRules: MarkupTextDefault,
-  defaultReactRuleOptions: obj
+  defaultReactRuleOptions: obj,
 };
 Object.defineProperty(obj, "defaultRules", { get: () => callback(), set: undefined });
 Object.defineProperty(obj, "guildEventRules", { get: () => callback10(), set: undefined });

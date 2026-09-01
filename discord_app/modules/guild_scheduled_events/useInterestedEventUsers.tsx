@@ -14,11 +14,19 @@ export default function useInterestedEventUsers(arg0, arg1) {
   dependencyMap = arg1;
   let items = [stateFromStoresArray1];
   const items1 = [arg0];
-  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => Object.values(stateFromStoresArray1.getUsersForGuildEvent(closure_0, null)), items1);
+  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+    items,
+    () => Object.values(stateFromStoresArray1.getUsersForGuildEvent(closure_0, null)),
+    items1,
+  );
   const obj = initialize;
   const items2 = [stateFromStoresArray1];
   const items3 = [arg0, arg1];
-  stateFromStoresArray1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items2, () => Object.values(stateFromStoresArray1.getUsersForGuildEvent(closure_0, closure_1)), items3);
+  stateFromStoresArray1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+    items2,
+    () => Object.values(stateFromStoresArray1.getUsersForGuildEvent(closure_0, closure_1)),
+    items3,
+  );
   const items4 = [stateFromStoresArray, stateFromStoresArray1];
   return stateFromStoresArray(() => {
     function addUserToAllInterested(user_id) {
@@ -45,4 +53,4 @@ export default function useInterestedEventUsers(arg0, arg1) {
     const item1 = found1.forEach(addUserToAllInterested);
     return items;
   }, items4);
-};
+}

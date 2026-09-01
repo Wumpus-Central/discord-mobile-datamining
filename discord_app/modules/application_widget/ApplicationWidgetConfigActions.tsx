@@ -34,7 +34,7 @@ function fetchFeaturedWidgetConfigsFromApi() {
 }
 function _fetchFeaturedWidgetConfigsFromApi() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -82,9 +82,7 @@ function _fetchFeaturedWidgetConfigsFromApi() {
           obj1.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" });
           if (!closure_9.pending) {
             closure_9.fail(() => {
-              closure_8.one(undefined, closure_10).catch(() => {
-
-              });
+              closure_8.one(undefined, closure_10).catch(() => {});
             });
           }
           obj2 = callback(1208);
@@ -142,7 +140,7 @@ function fetchDeveloperWidgetConfigsFromApi() {
 }
 function _fetchDeveloperWidgetConfigsFromApi() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -238,7 +236,7 @@ function _fetchWidgetConfigsFromApi() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -303,7 +301,12 @@ function _fetchWidgetConfigsFromApi() {
           } else {
             body = body.body;
             obj = body(709);
-            const obj6 = { type: "APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS", applicationId: null, applications: null, configs: null };
+            const obj6 = {
+              type: "APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS",
+              applicationId: null,
+              applications: null,
+              configs: null,
+            };
             obj6[1] = callback;
             obj6[2] = callback2(body);
             obj6[3] = body;
@@ -390,14 +393,19 @@ export const fetchWidgetConfigs = function fetchWidgetConfigs(application_id, ar
     }
     return resolved;
   }
-  resolved = promiseDeduper1.one(application_id, () => (function fetchWidgetConfigsFromApi(closure_0) {
-    const self = this;
-    const apply = closure_15.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  })(closure_0), { force: flag });
+  resolved = promiseDeduper1.one(
+    application_id,
+    () =>
+      (function fetchWidgetConfigsFromApi(closure_0) {
+        const self = this;
+        const apply = closure_15.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      })(closure_0),
+    { force: flag },
+  );
 };

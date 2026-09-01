@@ -8,7 +8,12 @@ import closure_5 from "../../../stores/UserStore.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 
 let require = arg1;
-let closure_7 = { APP_TRANSACTION_UNAVAILABLE: "native_unavailable", APP_TRANSACTION_CANCELLED: "native_cancelled", APP_TRANSACTION_NETWORK_ERROR: "native_network", APP_TRANSACTION_ERROR: "native_error" };
+let closure_7 = {
+  APP_TRANSACTION_UNAVAILABLE: "native_unavailable",
+  APP_TRANSACTION_CANCELLED: "native_cancelled",
+  APP_TRANSACTION_NETWORK_ERROR: "native_network",
+  APP_TRANSACTION_ERROR: "native_error",
+};
 initializeDefault;
 class IOSUserIdentifiersManager extends tmp2 {
   constructor() {
@@ -18,8 +23,8 @@ class IOSUserIdentifiersManager extends tmp2 {
     applyArgumentsResult.syncedUserIds = set;
     applyArgumentsResult.actions = {
       POST_CONNECTION_OPEN() {
-            return applyArgumentsResult.onPostConnectionOpen();
-          }
+        return applyArgumentsResult.onPostConnectionOpen();
+      },
     };
     return applyArgumentsResult;
   }
@@ -27,7 +32,7 @@ class IOSUserIdentifiersManager extends tmp2 {
 const prototype = IOSUserIdentifiersManager.prototype;
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -96,7 +101,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
 };
 prototype["syncAppTransactionId"] = function syncAppTransactionId() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -139,21 +144,24 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
         } else if (1 === tmp7) {
           c3 = 0;
           closure_3 = closure_2;
-          appTransactionId.trackSync((function getNativeReason(closure_3) {
-            let code;
-            if (closure_3 != null) {
-              code = closure_3.code;
-            }
-            let str = "native_error";
-            if (typeof code === "string") {
-              let str2 = table[code];
-              if (str2 == null) {
-                str2 = "native_error";
+          appTransactionId.trackSync(
+            (function getNativeReason(closure_3) {
+              let code;
+              if (closure_3 != null) {
+                code = closure_3.code;
               }
-              str = str2;
-            }
-            return str;
-          })(closure_3), closure_3);
+              let str = "native_error";
+              if (typeof code === "string") {
+                let str2 = table[code];
+                if (str2 == null) {
+                  str2 = "native_error";
+                }
+                str = str2;
+              }
+              return str;
+            })(closure_3),
+            closure_3,
+          );
           c5 = 3;
           const obj2 = { value: null, done: true };
           obj2[0] = undefined;
@@ -236,7 +244,11 @@ prototype["trackSync"] = function trackSync(empty_id, c4, verified) {
     obj[0] = obj;
     obj.captureException(c4, obj);
   }
-  expandEventPropertiesDefault.track(AnalyticEvents.APP_TRANSACTION_ID_SYNCED, { success: "synced" === empty_id, reason: empty_id, verified });
+  expandEventPropertiesDefault.track(AnalyticEvents.APP_TRANSACTION_ID_SYNCED, {
+    success: "synced" === empty_id,
+    reason: empty_id,
+    verified,
+  });
 };
 const iOSUserIdentifiersManager = new IOSUserIdentifiersManager();
 const result = require("set").fileFinishedImporting("modules/user_identifiers/native/IOSUserIdentifiersManager.tsx");

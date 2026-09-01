@@ -25,9 +25,9 @@ export default function useGetGameForAppId(applicationId) {
     data = null;
   }
   obj[1] = data;
-  obj[2] = null != applicationId && null == getOrFetchApplication || game.isLoading;
+  obj[2] = (null != applicationId && null == getOrFetchApplication) || game.isLoading;
   return obj;
-};
+}
 export const useGetGamesForAppIds = function useGetGamesForAppIds(stateFromStoresArray) {
   const tmp = memo(5959)(stateFromStoresArray);
   const _require = tmp;

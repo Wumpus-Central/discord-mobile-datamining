@@ -10,8 +10,8 @@ export default function showEmojiOverflowActionSheet(arg0) {
   obj = {
     onClose() {
       return callback(table[0]).hideActionSheet("EmojiOverflowActionSheet");
-    }
+    },
   };
   const merged = Object.assign(arg0);
   obj.openLazy(asyncRequireImpl(17150, dependencyMap.paths), "EmojiOverflowActionSheet", obj);
-};
+}

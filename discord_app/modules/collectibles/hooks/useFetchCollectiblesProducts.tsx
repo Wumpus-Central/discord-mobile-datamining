@@ -13,17 +13,36 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
   const _require = first;
   dependencyMap = arg1;
   const items = [stateFromStoresArray2];
-  const stateFromStoresArray = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items, () => lib.map((arg0) => closure_4.get(arg0)));
+  const stateFromStoresArray =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items, () =>
+      lib.map((arg0) => closure_4.get(arg0)),
+    );
   let obj = defaultAreStatesEqual;
   const items1 = [stateFromStoresArray3];
-  const stateFromStoresArray1 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items1, () => lib.map((arg0) => product.getProduct(arg0)));
+  const stateFromStoresArray1 =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items1, () =>
+      lib.map((arg0) => product.getProduct(arg0)),
+    );
   const obj2 = defaultAreStatesEqual;
   const items2 = [stateFromStoresArray3];
-  stateFromStoresArray2 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items2, () => lib.map((closure_0) => productFetch.getProductFetch(closure_0)));
+  stateFromStoresArray2 =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items2, () =>
+      lib.map((closure_0) => productFetch.getProductFetch(closure_0)),
+    );
   const obj4 = defaultAreStatesEqual;
   const items3 = [stateFromStoresArray3];
-  stateFromStoresArray3 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items3, () => lib.map((closure_0) => productFetchBackedOff.isProductFetchBackedOff(closure_0)));
-  const items4 = [first, stateFromStoresArray, stateFromStoresArray2, stateFromStoresArray1, arg1, stateFromStoresArray3];
+  stateFromStoresArray3 =
+    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items3, () =>
+      lib.map((closure_0) => productFetchBackedOff.isProductFetchBackedOff(closure_0)),
+    );
+  const items4 = [
+    first,
+    stateFromStoresArray,
+    stateFromStoresArray2,
+    stateFromStoresArray1,
+    arg1,
+    stateFromStoresArray3,
+  ];
   stateFromStoresArray1(() => {
     const entries = lib.entries();
     while (tmp2 !== undefined) {

@@ -18,10 +18,14 @@ obj[1] = { width: 18, height: 18, alignItems: "center", justifyContent: "center"
 obj[2] = { marginLeft: 12, marginRight: 4 };
 let closure_11 = createCacheKey.createStyles(obj);
 createCacheKey = { START: 0, [0]: "START", END: 1, [1]: "END" };
-let items = [, ];
+let items = [,];
 ({ START: arr[0], END: arr[1] } = createCacheKey);
-let closure_14 = { code: "function SearchBarActivityIconTsx1(){const{interpolate,fadeAnimationState,ANIMATION_STATE_INPUT}=this.__closure;return{opacity:interpolate(fadeAnimationState.get(),ANIMATION_STATE_INPUT,[0,0.5])};}" };
-let closure_15 = { code: "function SearchBarActivityIconTsx2(){const{interpolate,fadeAnimationState,ANIMATION_STATE_INPUT}=this.__closure;return{opacity:interpolate(fadeAnimationState.get(),ANIMATION_STATE_INPUT,[1,0])};}" };
+let closure_14 = {
+  code: "function SearchBarActivityIconTsx1(){const{interpolate,fadeAnimationState,ANIMATION_STATE_INPUT}=this.__closure;return{opacity:interpolate(fadeAnimationState.get(),ANIMATION_STATE_INPUT,[0,0.5])};}",
+};
+let closure_15 = {
+  code: "function SearchBarActivityIconTsx2(){const{interpolate,fadeAnimationState,ANIMATION_STATE_INPUT}=this.__closure;return{opacity:interpolate(fadeAnimationState.get(),ANIMATION_STATE_INPUT,[1,0])};}",
+};
 const memoResult = importAllResult.memo(function SearchBarActivityIcon(searchContext) {
   searchContext = searchContext.searchContext;
   let stateFromStores;
@@ -30,20 +34,26 @@ const memoResult = importAllResult.memo(function SearchBarActivityIcon(searchCon
   let obj = searchContext(sharedValue[8]);
   items = [closure_6, closure_5];
   const items1 = [searchContext];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    const searchResultsQuery = closure_1_6.getSearchResultsQuery(searchContext);
-    const isInitialFetchComplete = closure_1_5.getIsInitialFetchComplete(searchContext(sharedValue[9]).getSearchTabFetchId(searchContext, closure_1_7, searchResultsQuery));
-    let tmp3 = !isInitialFetchComplete;
-    const obj = searchContext(sharedValue[9]);
-    const result = closure_1_6.isAutocompleteVisible(searchContext);
-    if (!isInitialFetchComplete) {
-      tmp3 = !isInitialSearchQueryResult;
-    }
-    if (tmp3) {
-      tmp3 = !result;
-    }
-    return tmp3;
-  }, items1);
+  stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      const searchResultsQuery = closure_1_6.getSearchResultsQuery(searchContext);
+      const isInitialFetchComplete = closure_1_5.getIsInitialFetchComplete(
+        searchContext(sharedValue[9]).getSearchTabFetchId(searchContext, closure_1_7, searchResultsQuery),
+      );
+      let tmp3 = !isInitialFetchComplete;
+      const obj = searchContext(sharedValue[9]);
+      const result = closure_1_6.isAutocompleteVisible(searchContext);
+      if (!isInitialFetchComplete) {
+        tmp3 = !isInitialSearchQueryResult;
+      }
+      if (tmp3) {
+        tmp3 = !result;
+      }
+      return tmp3;
+    },
+    items1,
+  );
   obj1 = searchContext(sharedValue[10]);
   sharedValue = obj1.useSharedValue(createCacheKey.START);
   const items2 = [stateFromStores, sharedValue];
@@ -64,7 +74,11 @@ const memoResult = importAllResult.memo(function SearchBarActivityIcon(searchCon
       return obj;
     }
   }
-  obj = { interpolate: searchContext(sharedValue[10]).interpolate, fadeAnimationState: sharedValue, ANIMATION_STATE_INPUT: items };
+  obj = {
+    interpolate: searchContext(sharedValue[10]).interpolate,
+    fadeAnimationState: sharedValue,
+    ANIMATION_STATE_INPUT: items,
+  };
   E.__closure = obj;
   E.__workletHash = 12880513119188;
   E.__initData = closure_14;
@@ -74,16 +88,20 @@ const memoResult = importAllResult.memo(function SearchBarActivityIcon(searchCon
     const obj = { opacity: searchContext(sharedValue[10]).interpolate(sharedValue.get(), closure_1_13, [1, 0]) };
     return obj;
   };
-  obj = { interpolate: searchContext(sharedValue[10]).interpolate, fadeAnimationState: sharedValue, ANIMATION_STATE_INPUT: items };
+  obj = {
+    interpolate: searchContext(sharedValue[10]).interpolate,
+    fadeAnimationState: sharedValue,
+    ANIMATION_STATE_INPUT: items,
+  };
   fn.__closure = obj;
   fn.__workletHash = 11061952032557;
   fn.__initData = closure_15;
   const animatedStyle1 = obj4.useAnimatedStyle(fn);
   obj1 = { style: animatedStyle, children: callback(ActivityIndicator, obj2) };
   obj2 = { color: tmp.spinnerColor.color, style: items3 };
-  items3 = [, ];
+  items3 = [,];
   ({ icon: arr4[0], spinner: arr4[1] } = tmp);
-  const items4 = [callback(stateFromStores(sharedValue[10]).View, obj1), ];
+  const items4 = [callback(stateFromStores(sharedValue[10]).View, obj1)];
   const obj3 = { style: animatedStyle1, children: null };
   obj4 = { style: tmp.icon, size: null, color: "interactive-text-default" };
   let str = "xs";

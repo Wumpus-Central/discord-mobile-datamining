@@ -8,8 +8,22 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ Image: c4, View: c5, StyleSheet } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { headerContainer: null, headerRow: null, icon: null, titleContainer: null, headerRight: null, rankPillContainer: null };
-createCacheKey = { height: 56, paddingHorizontal: ThemesDefault.space.PX_16, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", justifyContent: "center" };
+createCacheKey = {
+  headerContainer: null,
+  headerRow: null,
+  icon: null,
+  titleContainer: null,
+  headerRight: null,
+  rankPillContainer: null,
+};
+createCacheKey = {
+  height: 56,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  borderBottomWidth: StyleSheet.hairlineWidth,
+  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+  overflow: "hidden",
+  justifyContent: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 let obj1 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
@@ -19,10 +33,16 @@ createCacheKey[3] = { flex: 1, flexDirection: "row", alignItems: "center", gap: 
 createCacheKey[4] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[5] = { flex: 1, flexDirection: "row", alignItems: "center" };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let closure_10 = { code: "function GameProfileNavigationHeaderTsx1(){const{headerRightProgress}=this.__closure;return{opacity:headerRightProgress.get()};}" };
-let closure_11 = { code: "function GameProfileNavigationHeaderTsx2(){const{headerRightProgress}=this.__closure;return{opacity:1-headerRightProgress.get()};}" };
+let closure_10 = {
+  code: "function GameProfileNavigationHeaderTsx1(){const{headerRightProgress}=this.__closure;return{opacity:headerRightProgress.get()};}",
+};
+let closure_11 = {
+  code: "function GameProfileNavigationHeaderTsx2(){const{headerRightProgress}=this.__closure;return{opacity:1-headerRightProgress.get()};}",
+};
 let obj3 = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, minWidth: 0 };
-let result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileNavigationHeader.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/game_profile/native/components/GameProfileNavigationHeader.tsx",
+);
 
 export default function GameProfileNavigationHeader(game) {
   game = game.game;
@@ -104,7 +124,7 @@ export default function GameProfileNavigationHeader(game) {
   if (null != name) {
     obj = { style: null, children: null };
     obj[0] = tmp.headerContainer;
-    const items2 = [callback(tmp3(8984).BackgroundBlurFill, {}), ];
+    const items2 = [callback(tmp3(8984).BackgroundBlurFill, {})];
     obj = { style: null, children: null };
     obj[0] = tmp.headerRow;
     let tmp15Result = null != memo;
@@ -116,12 +136,17 @@ export default function GameProfileNavigationHeader(game) {
       obj1[1] = tmp.icon;
       tmp15Result = tmp15(closure_4, obj1);
     }
-    const items3 = [tmp15Result, , ];
+    const items3 = [tmp15Result, ,];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.titleContainer;
-    const obj4 = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
+    const obj4 = {
+      variant: "redesign/heading-18/bold",
+      color: "mobile-text-heading-primary",
+      lineClamp: 1,
+      children: null,
+    };
     obj4[3] = name;
-    const items4 = [callback(tmp3(4474).Heading, obj4), ];
+    const items4 = [callback(tmp3(4474).Heading, obj4)];
     let l30Rank;
     if (game != null) {
       l30Rank = game.l30Rank;
@@ -132,7 +157,7 @@ export default function GameProfileNavigationHeader(game) {
       obj5[0] = tmp.rankPillContainer;
       const obj6 = { rank: null, compact: true };
       obj6[0] = game.l30Rank;
-      const items5 = [tmp15(application(8842), obj6), ];
+      const items5 = [tmp15(application(8842), obj6)];
       const obj7 = { style: null, children: null };
       const items6 = [StyleSheet.absoluteFill, animatedStyle1];
       obj7[0] = items6;
@@ -161,4 +186,4 @@ export default function GameProfileNavigationHeader(game) {
     tmp13Result = tmp13(tmp14, obj);
   }
   return tmp13Result;
-};
+}

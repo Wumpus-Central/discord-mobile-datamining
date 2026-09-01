@@ -12,5 +12,5 @@ export default {
   },
   close() {
     _modDef4723.popWithKey(ENABLED_COMMUNITY_MODAL_KEY);
-  }
+  },
 };

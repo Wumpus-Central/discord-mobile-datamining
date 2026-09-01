@@ -15,8 +15,8 @@ class ParentalConsentManager extends tmp2 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       POST_CONNECTION_OPEN() {
-            return applyArgumentsResult.onPostConnectionOpen();
-          }
+        return applyArgumentsResult.onPostConnectionOpen();
+      },
     };
     return applyArgumentsResult;
   }
@@ -24,7 +24,7 @@ class ParentalConsentManager extends tmp2 {
 const prototype = ParentalConsentManager.prototype;
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();
@@ -125,7 +125,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
 prototype["performAgeCheck"] = function performAgeCheck(arg0) {
   closure_0 = arg0;
   const self = this;
-  return callback(function*() {
+  return callback(function* () {
     closure_1 = tmp3;
     c3 = 1;
     yield closure_1_1.collectAgeSignal();
@@ -190,7 +190,7 @@ prototype["performAgeCheck"] = function performAgeCheck(arg0) {
   })();
 };
 prototype["collectAgeSignal"] = function collectAgeSignal() {
-  return callback(function*() {
+  return callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();

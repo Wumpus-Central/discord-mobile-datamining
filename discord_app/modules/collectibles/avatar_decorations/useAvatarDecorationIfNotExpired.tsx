@@ -4,7 +4,9 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import { MAX_TIMEOUT_MS } from "../../../Constants.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx",
+);
 
 export default function useAvatarDecorationIfNotExpired(arg0) {
   closure_0 = arg0;
@@ -65,4 +67,4 @@ export default function useAvatarDecorationIfNotExpired(arg0) {
     tmp5 = arg0;
   }
   return tmp5;
-};
+}

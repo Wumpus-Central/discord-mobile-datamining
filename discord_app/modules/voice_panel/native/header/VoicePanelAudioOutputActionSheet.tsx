@@ -16,7 +16,10 @@ require = arg1;
 function VoicePanelAudioPhoneOutputSection() {
   let obj = availableDevices(647);
   const items = [closure_6];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ activeDevice: store.getActiveAudioDevice(), availableDevices: store.getAudioDevices() }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    activeDevice: store.getActiveAudioDevice(),
+    availableDevices: store.getAudioDevices(),
+  }));
   availableDevices = stateFromStoresObject.availableDevices;
   closure_1 = importAllResult.useCallback((arg0) => {
     availableDevices(9806).setAudioOutputDevice(arg0);
@@ -120,7 +123,9 @@ function VoicePanelAudioConsoleSection(channel) {
     }
   }, items3);
   let obj2 = channel(647);
-  const tmp8 = !channel(4298).useIsDismissibleContentDismissed_UNSAFE(channel(1373).DismissibleContent.DONUT_MOBILE_NUX);
+  const tmp8 = !channel(4298).useIsDismissibleContentDismissed_UNSAFE(
+    channel(1373).DismissibleContent.DONUT_MOBILE_NUX,
+  );
   closure_5 = tmp8;
   const items4 = [arr, tmp8];
   const effect = stateFromStores.useEffect(() => {
@@ -129,7 +134,9 @@ function VoicePanelAudioConsoleSection(channel) {
       tmp = arr.length > 0;
     }
     if (tmp) {
-      const result = channel(sessionId[22]).UNSAFE_markDismissibleContentAsDismissed(channel(sessionId[23]).DismissibleContent.DONUT_MOBILE_NUX);
+      const result = channel(sessionId[22]).UNSAFE_markDismissibleContentAsDismissed(
+        channel(sessionId[23]).DismissibleContent.DONUT_MOBILE_NUX,
+      );
       const obj = channel(sessionId[22]);
     }
   }, items4);
@@ -197,7 +204,7 @@ const memoResult = importAllResult.memo(function VoicePanelAudioOutputActionShee
     }
     obj1 = { children: null };
     const obj2 = { children: null };
-    const items1 = [isConnectedToVoiceChannel, ];
+    const items1 = [isConnectedToVoiceChannel];
     const obj3 = { channel: null };
     obj3[0] = stateFromStores;
     items1[1] = callback(VoicePanelAudioConsoleSection, obj3);
@@ -211,6 +218,8 @@ const memoResult = importAllResult.memo(function VoicePanelAudioOutputActionShee
   }
   return tmp5Result;
 });
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelAudioOutputActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/header/VoicePanelAudioOutputActionSheet.tsx",
+);
 
 export default memoResult;

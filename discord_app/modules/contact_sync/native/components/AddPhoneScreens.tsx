@@ -16,12 +16,20 @@ const require = arg1;
 createCacheKey = { container: null, redesignContainer: null, header: null, title: null, subtitle: null };
 createCacheKey = { paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
+createCacheKey[1] = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32,
+};
 createCacheKey[2] = { alignItems: "center" };
 createCacheKey[3] = { textAlign: "center" };
 createCacheKey[4] = { marginTop: 8, lineHeight: 18, textAlign: "center" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
+let obj1 = {
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32,
+};
 let result = require("set").fileFinishedImporting("modules/contact_sync/native/components/AddPhoneScreens.tsx");
 
 export const AddPhoneScreen = function AddPhoneScreen() {
@@ -29,10 +37,16 @@ export const AddPhoneScreen = function AddPhoneScreen() {
   _require = obj.useNavigation();
   const tmp = callback4();
   obj = { style: tmp.header, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  obj = {
+    style: tmp.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = require("../../../../intl/index.native.tsx").intl;
   obj[4] = intl.string(require("../../../../intl/index.native.tsx").t.Xgb497);
-  const items = [callback2(require("../../../../design/components/Text/native/Text.tsx").Text, obj), ];
+  const items = [callback2(require("../../../../design/components/Text/native/Text.tsx").Text, obj)];
   obj1 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = require("../../../../intl/index.native.tsx").intl;
   obj1[3] = intl2.string(require("../../../../intl/index.native.tsx").t.qFmzyo);
@@ -54,7 +68,7 @@ export const VerifyPhoneScreen = function VerifyPhoneScreen() {
       closure_0 = arg0;
       c3 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         let addedPhone = tmp5;
         let codeIntercepted = tmp2;
         lib(true);
@@ -135,7 +149,7 @@ export const VerifyPhoneScreen = function VerifyPhoneScreen() {
     },
     onVerified(arg0) {
       const result = closure_1_0(navigation[15]).verifyPhoneWithPassword(arg0, navigation);
-    }
+    },
   };
   return callback2(importDefault(navigation[19]), obj);
 };
@@ -178,14 +192,16 @@ export const VerifyPasswordScreen = function VerifyPasswordScreen() {
     style: tmp3.redesignContainer,
     onSubmit(closure_02) {
       callback(true);
-      return navigation(phoneToken[14]).addPhone(phoneToken, closure_02, callback(phoneToken[14]).ChangePhoneReason.CONTACT_SYNC);
+      return navigation(phoneToken[14]).addPhone(
+        phoneToken,
+        closure_02,
+        callback(phoneToken[14]).ChangePhoneReason.CONTACT_SYNC,
+      );
     },
     onError() {
       return callback(false);
     },
-    onSuccess() {
-
-    }
+    onSuccess() {},
   };
   return callback2(navigation(phoneToken[20]), obj);
 };

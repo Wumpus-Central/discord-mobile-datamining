@@ -49,7 +49,18 @@ function ThreadChannel(channel) {
   const items = [parent_id, ownerId, closure_10, closure_12, closure_11, user, parentChannel, fontScale];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => {
     const isMutedResult = ownerId.isMuted(id);
-    const obj = { user: closure_1_10.getUser(ownerId), parentChannel: parent_id.getChannel(parent_id), voiceStates: closure_1_12.getVoiceStatesForChannel(channel), hasVideo: closure_1_11.hasVideo(channel.id), isLocked: !fontScale.can(closure_1_14.CONNECT, channel), muted: isMutedResult, unread: null, mentionCount: null, isMentionLowImportance: null, selectedVoiceChannelId: null };
+    const obj = {
+      user: closure_1_10.getUser(ownerId),
+      parentChannel: parent_id.getChannel(parent_id),
+      voiceStates: closure_1_12.getVoiceStatesForChannel(channel),
+      hasVideo: closure_1_11.hasVideo(channel.id),
+      isLocked: !fontScale.can(closure_1_14.CONNECT, channel),
+      muted: isMutedResult,
+      unread: null,
+      mentionCount: null,
+      isMentionLowImportance: null,
+      selectedVoiceChannelId: null,
+    };
     let hasUnreadResult = !isMutedResult;
     if (!isMutedResult) {
       hasUnreadResult = user.hasUnread(tmp);
@@ -68,13 +79,20 @@ function ThreadChannel(channel) {
   ({ isLocked, muted, isMentionLowImportance, selectedVoiceChannelId } = stateFromStoresObject);
   let num = 0;
   const memo = importAllResult.useMemo(() => {
-    const style = [threadLineSegment.threadLineSegment, ];
+    const style = [threadLineSegment.threadLineSegment];
     let num = 0;
     const diff = threadCount - 1;
     if (0 === threadIndex) {
       num = 2;
     }
-    const obj = { top: num, height: null, borderTopRightRadius: null, borderTopLeftRadius: null, borderBottomRightRadius: null, borderBottomLeftRadius: null };
+    const obj = {
+      top: num,
+      height: null,
+      borderTopRightRadius: null,
+      borderTopLeftRadius: null,
+      borderBottomRightRadius: null,
+      borderBottomLeftRadius: null,
+    };
     let str = "100%";
     if (threadIndex === diff) {
       const _Math = Math;
@@ -116,7 +134,7 @@ function ThreadChannel(channel) {
     obj = { source: closure_1_16.CHANNEL_LIST };
     obj.transitionToThread(channel, obj);
   }, items2);
-  const items4 = [memo, , ];
+  const items4 = [memo, ,];
   obj = { color: tmp.threadLineSegment.backgroundColor, fontScale };
   const callback1 = obj3.useCallback(() => {
     if (channel.isForumPost()) {
@@ -140,10 +158,26 @@ function ThreadChannel(channel) {
     tmp14Result = tmp14(tmp15, obj2);
   }
   obj1[1] = tmp14Result;
-  const items5 = [callback2(id, obj1), , ];
+  const items5 = [callback2(id, obj1), ,];
   obj3 = { style: tmp.spineSpacer };
   items5[1] = callback2(id, obj3);
-  const obj4 = { onPress: callback, onLongPress: callback1, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, muted: null, unread: null, resolvedUnreadSetting: null, hideIcon: true, channelInfo: null, children: null };
+  const obj4 = {
+    onPress: callback,
+    onLongPress: callback1,
+    style: tmp.container,
+    accessible: true,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    accessibilityState: null,
+    channel: null,
+    selected: null,
+    muted: null,
+    unread: null,
+    resolvedUnreadSetting: null,
+    hideIcon: true,
+    channelInfo: null,
+    children: null,
+  };
   let tmp8Result = tmp8(obj[24]);
   obj4[5] = tmp8(obj[25])({ channel, unread, mentionCount });
   obj4[6] = { selected };
@@ -204,13 +238,33 @@ function ThreadChannel(channel) {
 let c3 = importAllResult;
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = hairlineWidth);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-let obj = { container: null, threadRow: null, unreadContainer: null, spineSpacer: null, unreadIcon: null, threadLineSegment: null };
-obj = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginStart: 2, marginEnd: 8, borderRadius: ThemesDefault.radii.md, flex: 1 };
+let obj = {
+  container: null,
+  threadRow: null,
+  unreadContainer: null,
+  spineSpacer: null,
+  unreadIcon: null,
+  threadLineSegment: null,
+};
+obj = {
+  marginVertical: CHANNEL_MARGIN_VERTICAL,
+  marginStart: 2,
+  marginEnd: 8,
+  borderRadius: ThemesDefault.radii.md,
+  flex: 1,
+};
 obj[0] = obj;
 obj[1] = { flex: 0, flexDirection: "row", alignSelf: "stretch" };
 obj[2] = { width: 8, alignItems: "flex-start", justifyContent: "flex-start" };
 obj[3] = { width: 28 };
-createCacheKey = { width: 8, height: 8, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, marginLeft: -4, marginTop: 12 };
+createCacheKey = {
+  width: 8,
+  height: 8,
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+  marginLeft: -4,
+  marginTop: 12,
+};
 obj[4] = createCacheKey;
 obj[5] = { backgroundColor: ThemesDefault.colors.SPINE_DEFAULT, width: 2, position: "absolute", left: 23 };
 let closure_20 = createCacheKey.createStyles(obj);
@@ -219,7 +273,10 @@ let closure_21 = importAllResult.memo((arg0) => {
   let obj = { width: 12, height: 16, style: null, children: null };
   obj = { position: "absolute", left: 23, top: callback(fontScale) / 2 - 16 + 2 };
   obj[2] = obj;
-  obj[3] = callback2(inlineStyles.Path, { fill: color, d: "M11 16C11.5523 16 12 15.5523 12 15C12 14.4477 11.5523 14 11 14H8C2.47715 14 2 8.52285 2 3V0H0V3H0.00542736C0 9.5 1.49449 16 8 16H11Z" });
+  obj[3] = callback2(inlineStyles.Path, {
+    fill: color,
+    d: "M11 16C11.5523 16 12 15.5523 12 15C12 14.4477 11.5523 14 11 14H8C2.47715 14 2 8.52285 2 3V0H0V3H0.00542736C0 9.5 1.49449 16 8 16H11Z",
+  });
   return callback2(inlineStylesDefault, obj);
 });
 let obj2 = { backgroundColor: ThemesDefault.colors.SPINE_DEFAULT, width: 2, position: "absolute", left: 23 };
@@ -242,4 +299,4 @@ export default function ConnectedThreadChannel(threadId) {
     tmp2 = callback2(ThreadChannel, obj);
   }
   return tmp2;
-};
+}

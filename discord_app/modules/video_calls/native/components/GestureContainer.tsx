@@ -14,9 +14,15 @@ createCacheKey = { background: null };
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BLACK };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let closure_9 = { code: "function GestureContainerTsx1({velocityY:velocityY}){const{position,THRESHOLD_VELOCITY,runOnJS,ModalActionCreators,withTiming,DECELERATED_EASING}=this.__closure;if(position.get()===1||velocityY>THRESHOLD_VELOCITY){runOnJS(ModalActionCreators.pop)();}else{position.set(withTiming(0,{duration:300,easing:DECELERATED_EASING}));}}" };
-let closure_10 = { code: "function GestureContainerTsx2({translationY:translationY}){const{THRESHOLD_TRANSLATE,position}=this.__closure;const boundedGestureY=Math.max(Math.min(translationY,THRESHOLD_TRANSLATE),0)/THRESHOLD_TRANSLATE;const easeOutCubic=1-Math.pow(1-boundedGestureY,3);position.set(easeOutCubic);}" };
-let closure_11 = { code: "function GestureContainerTsx3(){const{interpolate,position,height}=this.__closure;return{flex:1,transform:[{translateY:interpolate(position.get(),[0,1],[0,height*0.06])},{scale:interpolate(position.get(),[0,1],[1,0.9])}]};}" };
+let closure_9 = {
+  code: "function GestureContainerTsx1({velocityY:velocityY}){const{position,THRESHOLD_VELOCITY,runOnJS,ModalActionCreators,withTiming,DECELERATED_EASING}=this.__closure;if(position.get()===1||velocityY>THRESHOLD_VELOCITY){runOnJS(ModalActionCreators.pop)();}else{position.set(withTiming(0,{duration:300,easing:DECELERATED_EASING}));}}",
+};
+let closure_10 = {
+  code: "function GestureContainerTsx2({translationY:translationY}){const{THRESHOLD_TRANSLATE,position}=this.__closure;const boundedGestureY=Math.max(Math.min(translationY,THRESHOLD_TRANSLATE),0)/THRESHOLD_TRANSLATE;const easeOutCubic=1-Math.pow(1-boundedGestureY,3);position.set(easeOutCubic);}",
+};
+let closure_11 = {
+  code: "function GestureContainerTsx3(){const{interpolate,position,height}=this.__closure;return{flex:1,transform:[{translateY:interpolate(position.get(),[0,1],[0,height*0.06])},{scale:interpolate(position.get(),[0,1],[1,0.9])}]};}",
+};
 let result = require("set").fileFinishedImporting("modules/video_calls/native/components/GestureContainer.tsx");
 
 export default function GestureContainer(children) {
@@ -51,7 +57,14 @@ export default function GestureContainer(children) {
     }
     height(closure_1_2[8]).runOnJS(sharedValue(closure_1_2[10]).pop)();
   };
-  obj = { position: sharedValue, THRESHOLD_VELOCITY: 500, runOnJS: height(4217).runOnJS, ModalActionCreators: sharedValue(4723), withTiming: height(4479).withTiming, DECELERATED_EASING: height(1297).DECELERATED_EASING };
+  obj = {
+    position: sharedValue,
+    THRESHOLD_VELOCITY: 500,
+    runOnJS: height(4217).runOnJS,
+    ModalActionCreators: sharedValue(4723),
+    withTiming: height(4479).withTiming,
+    DECELERATED_EASING: height(1297).DECELERATED_EASING,
+  };
   fn.__closure = obj;
   fn.__workletHash = 10736744030668;
   fn.__initData = closure_9;
@@ -65,7 +78,7 @@ export default function GestureContainer(children) {
     let obj = { flex: 1, transform: null };
     obj = { translateY: height(closure_1_2[8]).interpolate(sharedValue.get(), [0, 1], items) };
     items = [0, 0.06 * height];
-    const items1 = [obj, ];
+    const items1 = [obj];
     obj = { scale: null };
     const obj3 = height(closure_1_2[8]);
     obj[0] = height(closure_1_2[8]).interpolate(sharedValue.get(), [0, 1], [1, 0.9]);
@@ -80,6 +93,9 @@ export default function GestureContainer(children) {
   obj1 = { style: tmp.background, children: null };
   const animatedStyle = height(4217).useAnimatedStyle(fn2);
   const obj8 = height(4217);
-  obj1[1] = jsx(height(5652).GestureDetector, { gesture: failOffsetXResult, children: jsx(sharedValue(4217).View, { style: animatedStyle, children: children.children }) });
+  obj1[1] = jsx(height(5652).GestureDetector, {
+    gesture: failOffsetXResult,
+    children: jsx(sharedValue(4217).View, { style: animatedStyle, children: children.children }),
+  });
   return <View style={tmp.background}>{null}</View>;
-};
+}

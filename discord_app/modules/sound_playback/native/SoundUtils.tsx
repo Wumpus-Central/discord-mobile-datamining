@@ -69,7 +69,7 @@ Object.defineProperty(prototype, "volume", {
   get: function volume() {
     return this._volume;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "volume", {
   get: undefined,
@@ -79,19 +79,19 @@ Object.defineProperty(prototype, "volume", {
       const DCDSoundManager = NativeModules.DCDSoundManager;
       DCDSoundManager.setVolume(tmp._key, _volume);
     }
-  }
+  },
 });
 Object.defineProperty(prototype, "duration", {
   get: function duration() {
     return this._duration;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "numberOfLoops", {
   get: function numberOfLoops() {
     return this._numberOfLoops;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "numberOfLoops", {
   get: undefined,
@@ -101,13 +101,84 @@ Object.defineProperty(prototype, "numberOfLoops", {
       const DCDSoundManager = NativeModules.DCDSoundManager;
       DCDSoundManager.setNumberOfLoops(tmp._key, _numberOfLoops);
     }
-  }
+  },
 });
-let obj = { NOTIFICATION: "notification", VOICE: "voice", RING_TONE: "ring_tone", MEDIA: "media", NOTIFICATION_NO_VIBRATION: "notification_no_vibration" };
-obj = { call_calling: obj.VOICE, call_ringing: null, call_ringing_halloween: null, camera_on: null, camera_off: null, deafen: null, disconnect: null, mention1: null, mention2: null, mention3: null, message1: null, message2: null, message3: null, mute: null, ptt_start: null, ptt_stop: null, reconnect: null, stage_waiting: null, stream_ended: null, stream_started: null, stream_user_joined: null, stream_user_left: null, soundboard_sound: null, undeafen: null, unmute: null, user_join: null, user_leave: null, user_moved: null, vibing_wumpus: null, activity_end: null, activity_launch: null, activity_user_join: null, activity_user_left: null };
+let obj = {
+  NOTIFICATION: "notification",
+  VOICE: "voice",
+  RING_TONE: "ring_tone",
+  MEDIA: "media",
+  NOTIFICATION_NO_VIBRATION: "notification_no_vibration",
+};
+obj = {
+  call_calling: obj.VOICE,
+  call_ringing: null,
+  call_ringing_halloween: null,
+  camera_on: null,
+  camera_off: null,
+  deafen: null,
+  disconnect: null,
+  mention1: null,
+  mention2: null,
+  mention3: null,
+  message1: null,
+  message2: null,
+  message3: null,
+  mute: null,
+  ptt_start: null,
+  ptt_stop: null,
+  reconnect: null,
+  stage_waiting: null,
+  stream_ended: null,
+  stream_started: null,
+  stream_user_joined: null,
+  stream_user_left: null,
+  soundboard_sound: null,
+  undeafen: null,
+  unmute: null,
+  user_join: null,
+  user_leave: null,
+  user_moved: null,
+  vibing_wumpus: null,
+  activity_end: null,
+  activity_launch: null,
+  activity_user_join: null,
+  activity_user_left: null,
+};
 obj[1] = isMetaQuest.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
 obj[2] = isMetaQuest.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
-({ VOICE: obj2[3], VOICE: obj2[4], VOICE: obj2[5], VOICE: obj2[6], NOTIFICATION: obj2[7], NOTIFICATION: obj2[8], NOTIFICATION: obj2[9], NOTIFICATION: obj2[10], NOTIFICATION: obj2[11], NOTIFICATION: obj2[12], VOICE: obj2[13], VOICE: obj2[14], VOICE: obj2[15], VOICE: obj2[16], VOICE: obj2[17], VOICE: obj2[18], VOICE: obj2[19], VOICE: obj2[20], VOICE: obj2[21], VOICE: obj2[22], VOICE: obj2[23], VOICE: obj2[24], VOICE: obj2[25], VOICE: obj2[26], VOICE: obj2[27], MEDIA: obj2[28], NOTIFICATION_NO_VIBRATION: obj2[29], NOTIFICATION_NO_VIBRATION: obj2[30], NOTIFICATION_NO_VIBRATION: obj2[31], NOTIFICATION_NO_VIBRATION: obj2[32] } = obj);
+({
+  VOICE: obj2[3],
+  VOICE: obj2[4],
+  VOICE: obj2[5],
+  VOICE: obj2[6],
+  NOTIFICATION: obj2[7],
+  NOTIFICATION: obj2[8],
+  NOTIFICATION: obj2[9],
+  NOTIFICATION: obj2[10],
+  NOTIFICATION: obj2[11],
+  NOTIFICATION: obj2[12],
+  VOICE: obj2[13],
+  VOICE: obj2[14],
+  VOICE: obj2[15],
+  VOICE: obj2[16],
+  VOICE: obj2[17],
+  VOICE: obj2[18],
+  VOICE: obj2[19],
+  VOICE: obj2[20],
+  VOICE: obj2[21],
+  VOICE: obj2[22],
+  VOICE: obj2[23],
+  VOICE: obj2[24],
+  VOICE: obj2[25],
+  VOICE: obj2[26],
+  VOICE: obj2[27],
+  MEDIA: obj2[28],
+  NOTIFICATION_NO_VIBRATION: obj2[29],
+  NOTIFICATION_NO_VIBRATION: obj2[30],
+  NOTIFICATION_NO_VIBRATION: obj2[31],
+  NOTIFICATION_NO_VIBRATION: obj2[32],
+} = obj);
 const result = set.fileFinishedImporting("modules/sound_playback/native/SoundUtils.tsx");
 let fn = (name, arg1, _volume, outputChannel) => {
   obj = Object.create(new.target.prototype);
@@ -122,7 +193,7 @@ Object.defineProperty(prototype2, "volume", {
   get: function volume() {
     return this._volume;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype2, "volume", {
   get: undefined,
@@ -132,7 +203,7 @@ Object.defineProperty(prototype2, "volume", {
     this.ensureSound().then((arg0) => {
       arg0.volume = closure_0;
     });
-  }
+  },
 });
 prototype2["loop"] = function loop() {
   this.ensureSound().then((play) => {
@@ -151,25 +222,28 @@ prototype2["playWithListener"] = function playWithListener() {
     const _self = arg0;
     closure_1 = arg1;
     const ensureSoundResult = _self.ensureSound();
-    _self.ensureSound().then((duration) => {
-      let tmp = null != duration.duration;
-      if (tmp) {
-        tmp = 0 !== duration.duration;
-      }
-      if (!tmp) {
-        dependencyMap("sound has no duration");
-      }
-      duration.play();
-      let num2 = 1;
-      if (obj.isIOS()) {
-        num2 = 1000;
-      }
-      const timerId = setTimeout(() => {
-        callback(true);
-      }, duration.duration * num2);
-    }).catch((arg0) => {
-      dependencyMap(arg0);
-    });
+    _self
+      .ensureSound()
+      .then((duration) => {
+        let tmp = null != duration.duration;
+        if (tmp) {
+          tmp = 0 !== duration.duration;
+        }
+        if (!tmp) {
+          dependencyMap("sound has no duration");
+        }
+        duration.play();
+        let num2 = 1;
+        if (obj.isIOS()) {
+          num2 = 1000;
+        }
+        const timerId = setTimeout(() => {
+          callback(true);
+        }, duration.duration * num2);
+      })
+      .catch((arg0) => {
+        dependencyMap(arg0);
+      });
   });
 };
 prototype2["pause"] = function pause() {

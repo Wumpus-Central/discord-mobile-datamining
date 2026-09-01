@@ -8,10 +8,20 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { ratingsLabel: { textAlign: "center" }, reasonsHeader: { marginBottom: 8 }, reasonsList: { overflow: "hidden", marginBottom: 12, padding: 0 }, reason: null, doNotShowAgainContainer: null };
+createCacheKey = {
+  ratingsLabel: { textAlign: "center" },
+  reasonsHeader: { marginBottom: 8 },
+  reasonsList: { overflow: "hidden", marginBottom: 12, padding: 0 },
+  reason: null,
+  doNotShowAgainContainer: null,
+};
 createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { paddingHorizontal: 0, paddingVertical: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[4] = {
+  paddingHorizontal: 0,
+  paddingVertical: 8,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { paddingHorizontal: 0, paddingVertical: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 const result = require("set").fileFinishedImporting("modules/feedback/native/FeedbackForm.tsx");
@@ -67,7 +77,7 @@ export const FeedbackForm = function FeedbackForm(otherKey) {
       obj = { style: null, variant: "eyebrow", color: "text-default", children: null };
       obj[0] = tmp.reasonsHeader;
       obj[3] = reasonsHeaderLabel;
-      const items2 = [callback(reasons(tmp3[11]).Text, obj), ];
+      const items2 = [callback(reasons(tmp3[11]).Text, obj)];
       obj1 = { border: "subtle", style: null, children: null };
       obj1[1] = tmp.reasonsList;
       obj1[2] = tmp13;
@@ -83,7 +93,7 @@ export const FeedbackForm = function FeedbackForm(otherKey) {
     obj2[3] = ratingsBodyLabel;
     tmp17 = callback(reasons(tmp3[11]).Text, obj2);
   }
-  const children = [tmp17, , , ];
+  const children = [tmp17, , ,];
   let rating = first.rating;
   const tmp16 = first;
   let tmp2 = otherKey;
@@ -104,7 +114,7 @@ export const FeedbackForm = function FeedbackForm(otherKey) {
       obj.reason = reason;
       callback(obj);
       onFeedbackChanged(obj);
-    }
+    },
   });
   children[2] = tmp14;
   let tmp20Result = null;

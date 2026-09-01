@@ -18,7 +18,7 @@ class EmptyState {
     tmp = closure_7();
     tmp3 = View;
     obj = { style: items, children: null };
-    items = [, ];
+    items = [,];
     items[0] = tmp.container;
     items[1] = containerStyle;
     tmp4 = null;
@@ -28,13 +28,13 @@ class EmptyState {
       tmp6 = Image;
       obj = { source: null, style: null };
       obj[0] = source;
-      items1 = [, ];
+      items1 = [,];
       items1[0] = tmp.image;
       items1[1] = imageStyle;
       obj[1] = items1;
       tmp4 = jsx(Image, obj);
     }
-    items2 = [, , , ];
+    items2 = [, , ,];
     items2[0] = tmp4;
     tmp7 = null;
     if (null != title) {
@@ -42,7 +42,7 @@ class EmptyState {
       tmp9 = closure_1;
       tmp10 = closure_2;
       obj1 = { style: null, children: null };
-      items3 = [, ];
+      items3 = [,];
       items3[0] = tmp.title;
       items3[1] = titleStyle;
       obj1[0] = items3;
@@ -52,7 +52,7 @@ class EmptyState {
     items2[1] = tmp7;
     tmp11 = jsx;
     tmp12 = closure_2;
-    items4 = [, ];
+    items4 = [,];
     items4[0] = tmp.body;
     items4[1] = bodyStyle;
     items2[2] = jsx(require("../../LegacyText/native/LegacyText.tsx"), { style: items4, children: body });
@@ -74,9 +74,17 @@ class EmptyState {
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { alignItems: "center", justifyContent: "center", padding: 16 }, title: null, body: null, image: null, cta: null };
+createCacheKey = {
+  container: { alignItems: "center", justifyContent: "center", padding: 16 },
+  title: null,
+  body: null,
+  image: null,
+  cta: null,
+};
 createCacheKey = {};
-let merged = Object.assign(importDefaultResult(Fonts.DISPLAY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16));
+let merged = Object.assign(
+  importDefaultResult(Fonts.DISPLAY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16),
+);
 createCacheKey.textAlign = "center";
 createCacheKey.marginBottom = 8;
 createCacheKey[1] = createCacheKey;

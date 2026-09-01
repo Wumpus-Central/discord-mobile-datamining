@@ -6,7 +6,16 @@ import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
 import ME from "../../Constants.tsx";
 
 ({ ChannelTypes: c3, Permissions: c4 } = ME);
-let obj = { CREATE: "CREATE", GAMING: "GAMING", FRIENDS: "FRIENDS", STUDY: "STUDY", CLUBS: "CLUBS", CREATORS: "CREATORS", LOCAL_COMMUNITY: "LOCAL_COMMUNITY", SCHOOL_CLUB: "SCHOOL_CLUB" };
+let obj = {
+  CREATE: "CREATE",
+  GAMING: "GAMING",
+  FRIENDS: "FRIENDS",
+  STUDY: "STUDY",
+  CLUBS: "CLUBS",
+  CREATORS: "CREATORS",
+  LOCAL_COMMUNITY: "LOCAL_COMMUNITY",
+  SCHOOL_CLUB: "SCHOOL_CLUB",
+};
 const result = set.fileFinishedImporting("modules/create_guild/CreateGuildConstants.tsx");
 
 export const GuildTemplateId = obj;
@@ -24,7 +33,7 @@ export const getGuildTemplatesMap = function getGuildTemplatesMap() {
   const intl3 = getSystemLocale.intl;
   obj1[2] = intl3.string(getSystemLocale.t.mobYpC);
   obj1[3] = constants.GUILD_CATEGORY;
-  const items = [obj1, , , , , ];
+  const items = [obj1, , , , ,];
   const obj2 = { id: "01", parent_id: "00", name: null, type: null };
   const intl4 = getSystemLocale.intl;
   obj2[2] = intl4.string(getSystemLocale.t.ao2wxq);
@@ -59,7 +68,7 @@ export const getGuildTemplatesMap = function getGuildTemplatesMap() {
   const intl10 = getSystemLocale.intl;
   obj8[2] = intl10.string(getSystemLocale.t.mobYpC);
   obj8[3] = constants.GUILD_CATEGORY;
-  const items1 = [obj8, , , , , , ];
+  const items1 = [obj8, , , , , ,];
   const obj9 = { id: "01", parent_id: "00", name: null, type: null };
   const intl11 = getSystemLocale.intl;
   obj9[2] = intl11.string(getSystemLocale.t.ao2wxq);
@@ -99,7 +108,7 @@ export const getGuildTemplatesMap = function getGuildTemplatesMap() {
   const intl18 = getSystemLocale.intl;
   obj16[2] = intl18.string(getSystemLocale.t["VCAA/X"]);
   obj16[3] = constants.GUILD_CATEGORY;
-  const items2 = [obj16, , , , , , , , , , , ];
+  const items2 = [obj16, , , , , , , , , , ,];
   const obj17 = { id: "01", parent_id: "00", name: null, type: null };
   const intl19 = getSystemLocale.intl;
   obj17[2] = intl19.string(getSystemLocale.t.GHQoEd);
@@ -164,7 +173,7 @@ export const getGuildTemplatesMap = function getGuildTemplatesMap() {
   const intl31 = getSystemLocale.intl;
   obj29[2] = intl31.string(getSystemLocale.t["VCAA/X"]);
   obj29[3] = constants.GUILD_CATEGORY;
-  const items3 = [obj29, , , , , , , , ];
+  const items3 = [obj29, , , , , , , ,];
   const obj30 = { id: "01", parent_id: "00", name: null, type: null };
   const intl32 = getSystemLocale.intl;
   obj30[2] = intl32.string(getSystemLocale.t.GHQoEd);
@@ -214,7 +223,7 @@ export const getGuildTemplatesMap = function getGuildTemplatesMap() {
   const intl41 = getSystemLocale.intl;
   obj39[2] = intl41.string(getSystemLocale.t["VCAA/X"]);
   obj39[3] = constants.GUILD_CATEGORY;
-  const items4 = [obj39, , , , , , , , , , ];
+  const items4 = [obj39, , , , , , , , , ,];
   const obj40 = { id: "01", parent_id: "00", name: null, type: null };
   const intl42 = getSystemLocale.intl;
   obj40[2] = intl42.string(getSystemLocale.t.GHQoEd);
@@ -274,7 +283,7 @@ export const getGuildTemplatesMap = function getGuildTemplatesMap() {
   const intl53 = getSystemLocale.intl;
   obj51[2] = intl53.string(getSystemLocale.t["VCAA/X"]);
   obj51[3] = constants.GUILD_CATEGORY;
-  const items5 = [obj51, , , , , , , , , , ];
+  const items5 = [obj51, , , , , , , , , ,];
   const obj52 = { id: "01", parent_id: "00", name: null, type: null };
   const intl54 = getSystemLocale.intl;
   obj52[2] = intl54.string(getSystemLocale.t.GHQoEd);
@@ -327,14 +336,21 @@ export const getGuildTemplatesMap = function getGuildTemplatesMap() {
   items5[10] = obj61;
   obj50[3] = items5;
   obj[obj.LOCAL_COMMUNITY] = obj50;
-  const obj62 = { id: obj.SCHOOL_CLUB, code: "Ctg7PUHcQmZu", label: null, channels: null, roles: null, system_channel_id: "11" };
+  const obj62 = {
+    id: obj.SCHOOL_CLUB,
+    code: "Ctg7PUHcQmZu",
+    label: null,
+    channels: null,
+    roles: null,
+    system_channel_id: "11",
+  };
   const intl64 = getSystemLocale.intl;
   obj62[2] = intl64.string(getSystemLocale.t.mmFA51);
   const obj63 = { id: "00", parent_id: null, name: null, type: null };
   const intl65 = getSystemLocale.intl;
   obj63[2] = intl65.string(getSystemLocale.t["VCAA/X"]);
   obj63[3] = constants.GUILD_CATEGORY;
-  const items6 = [obj63, , , , , , , , , , , ];
+  const items6 = [obj63, , , , , , , , , , ,];
   const obj64 = { id: "01", parent_id: "00", name: null, type: null };
   const intl66 = getSystemLocale.intl;
   obj64[2] = intl66.string(getSystemLocale.t.GHQoEd);
@@ -391,10 +407,27 @@ export const getGuildTemplatesMap = function getGuildTemplatesMap() {
   obj74[3] = constants.GUILD_VOICE;
   items6[11] = obj74;
   obj62[3] = items6;
-  const items7 = [{ id: "00", name: "@everyone", permissions: applyOverwritesAll.DEFAULT }, ];
-  const obj76 = { id: "01", name: "officers (example)", mentionable: true, hoist: true, permissions: null, color: 3066993 };
+  const items7 = [{ id: "00", name: "@everyone", permissions: applyOverwritesAll.DEFAULT }];
+  const obj76 = {
+    id: "01",
+    name: "officers (example)",
+    mentionable: true,
+    hoist: true,
+    permissions: null,
+    color: 3066993,
+  };
   const obj75 = { id: "00", name: "@everyone", permissions: applyOverwritesAll.DEFAULT };
-  obj76[4] = fromStringAll.combine(applyOverwritesAll.DEFAULT, constants2.MANAGE_ROLES, constants2.MANAGE_CHANNELS, constants2.KICK_MEMBERS, constants2.BAN_MEMBERS, constants2.MANAGE_NICKNAMES, constants2.MANAGE_GUILD_EXPRESSIONS, constants2.MANAGE_MESSAGES, constants2.SEND_TTS_MESSAGES);
+  obj76[4] = fromStringAll.combine(
+    applyOverwritesAll.DEFAULT,
+    constants2.MANAGE_ROLES,
+    constants2.MANAGE_CHANNELS,
+    constants2.KICK_MEMBERS,
+    constants2.BAN_MEMBERS,
+    constants2.MANAGE_NICKNAMES,
+    constants2.MANAGE_GUILD_EXPRESSIONS,
+    constants2.MANAGE_MESSAGES,
+    constants2.SEND_TTS_MESSAGES,
+  );
   items7[1] = obj76;
   obj62[4] = items7;
   obj[obj.SCHOOL_CLUB] = obj62;

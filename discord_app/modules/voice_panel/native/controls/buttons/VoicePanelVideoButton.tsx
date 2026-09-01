@@ -26,10 +26,16 @@ function VideoButtonRive(arg0) {
     VideoSlashIcon = tmp3(12477).VideoSlashIcon;
   }
   obj[2] = <VideoSlashIcon color={color} />;
-  obj[1] = jsx(ManaContext.CameraRive, { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null });
+  obj[1] = jsx(ManaContext.CameraRive, {
+    dataBinding: { fill: color, on: isVideoEnabled },
+    defaultViewModelInstance: null,
+    fallback: null,
+  });
   return <View dataBinding={{ fill: color, on: isVideoEnabled }} defaultViewModelInstance={null} fallback={null} />;
 }
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelVideoButton.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/controls/buttons/VoicePanelVideoButton.tsx",
+);
 
 export default function VideoButton(arg0) {
   let channelId;
@@ -62,7 +68,9 @@ export default function VideoButton(arg0) {
   stateFromStores1 = channelId(stateFromStores1[11]).useStateFromStores(items1, () => closure_8.isVideoEnabled());
   const obj4 = channelId(stateFromStores1[11]);
   const items2 = [closure_8];
-  stateFromStores2 = channelId(stateFromStores1[11]).useStateFromStores(items2, () => closure_8.supports(constants.VIDEO));
+  stateFromStores2 = channelId(stateFromStores1[11]).useStateFromStores(items2, () =>
+    closure_8.supports(constants.VIDEO),
+  );
   const items3 = [channelId, stateFromStores1, stateFromStores, stateFromStores2];
   if (stateFromStores2) {
     if (stateFromStores1) {
@@ -88,6 +96,13 @@ export default function VideoButton(arg0) {
     obj[4] = stateFromStores1 ? voicePanelButtonStyles.iconBgSelected : voicePanelButtonStyles.iconBg;
     const items4 = [color, stateFromStores1];
     obj[5] = obj.useMemo(() => closure_1_11(closure_1_12, { isVideoEnabled: stateFromStores1, color }), items4);
-    return jsx(tmp(tmp2[17]), { onPress: null, disabled: null, props: null, accessibilityLabel: null, style: null, children: null });
+    return jsx(tmp(tmp2[17]), {
+      onPress: null,
+      disabled: null,
+      props: null,
+      accessibilityLabel: null,
+      style: null,
+      children: null,
+    });
   }
-};
+}

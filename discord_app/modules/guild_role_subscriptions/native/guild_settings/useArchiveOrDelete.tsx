@@ -7,7 +7,9 @@ import { useFetchListingsForGuild } from "../../GuildRoleSubscriptionsHooks.tsx"
 
 const require = arg1;
 ({ useEffect: closure_6, useRef: error } = noop);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx",
+);
 
 export default function useArchiveOrDelete(guildId, groupListingId, editStateId) {
   const _require = guildId;
@@ -16,7 +18,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
   dependencyMap = arg3;
   function _handleArchiveOrDelete() {
     const self = this;
-    const tmp = callback(function*() {
+    const tmp = callback(function* () {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();
@@ -180,7 +182,14 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
           const obj = editStateId(4193);
         }
       }, items);
-      obj = { headerText: null, buttonText: null, descriptionText: null, handleArchiveOrDelete: null, deleting: null, archiving: null };
+      obj = {
+        headerText: null,
+        buttonText: null,
+        descriptionText: null,
+        handleArchiveOrDelete: null,
+        deleting: null,
+        archiving: null,
+      };
       obj[0] = formatToPlainStringResult;
       obj[1] = stringResult;
       obj[2] = intl3.string(tmp(1236).t["5/Jeg2"]);
@@ -218,4 +227,4 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
   intl10 = tmp(1236).intl;
   string = intl10.string;
   stringResult3 = string(tmp(1236).t.JoCdPC);
-};
+}

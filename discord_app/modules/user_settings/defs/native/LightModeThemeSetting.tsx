@@ -21,13 +21,13 @@ createToggle = {
   useTrailing() {
     return useSyncedModeThemeName.useSyncedModeThemeName(SystemTheme.LIGHT);
   },
-  screen: createToggle
+  screen: createToggle,
 };
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_LIGHT_MODE_THEME_PICKER,
   getComponent() {
     return SettingsAppearanceLightModeThemePickerScreen /* SettingsAppearanceLightModeThemePickerScreen */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/LightModeThemeSetting.tsx");

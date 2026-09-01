@@ -4,7 +4,12 @@ import ME from "../../../Constants.tsx";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 
 ({ BIO_MAX_LENGTH, BIO_MAX_LENGTH_INCREASED } = ME);
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-08-user-bio-max-length", kind: "user", defaultConfig: { maxLength: BIO_MAX_LENGTH }, variations: { 0: { maxLength: BIO_MAX_LENGTH }, 1: { maxLength: BIO_MAX_LENGTH_INCREASED } } });
+let closure_0 = ApexExperiment.createApexExperiment({
+  name: "2026-08-user-bio-max-length",
+  kind: "user",
+  defaultConfig: { maxLength: BIO_MAX_LENGTH },
+  variations: { 0: { maxLength: BIO_MAX_LENGTH }, 1: { maxLength: BIO_MAX_LENGTH_INCREASED } },
+});
 const result = set.fileFinishedImporting("modules/user_profile/experiments/BioMaxLengthExperiment.tsx");
 
 export const useBioMaxLength = function useBioMaxLength(location) {

@@ -6,8 +6,7 @@ import set from "../../../../_runtime/00002_set.js";
 let closure_0 = {};
 let set = new Set();
 const Store = initializeDefault.Store;
-class WalletBalanceStore extends Store {
-}
+class WalletBalanceStore extends Store {}
 const prototype = WalletBalanceStore.prototype;
 prototype["getBalance"] = function getBalance(arg0) {
   let tmp = table[arg0];
@@ -44,7 +43,7 @@ const walletBalanceStore = new WalletBalanceStore(dispatcherDefault, {
   LOGOUT: function reset() {
     closure_0 = {};
     set = new Set();
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/billing/stores/WalletBalanceStore.tsx");
 

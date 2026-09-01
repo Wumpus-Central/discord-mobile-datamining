@@ -5,7 +5,7 @@ import { Endpoints } from "../../Constants.tsx";
 const require = arg1;
 function _fetchReactiveCheckResult() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -92,7 +92,7 @@ function _fetchReactiveCheckResult() {
 }
 function _resetAgeVerification() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       HermesBuiltin.throwTypeError();

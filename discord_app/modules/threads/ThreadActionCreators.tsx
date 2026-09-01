@@ -21,7 +21,11 @@ require = arg1;
 function patchThread(id, body) {
   const _require = id;
   const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-  const obj = { url: closure_12.CHANNEL(id.id), body, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+  const obj = {
+    url: closure_12.CHANNEL(id.id),
+    body,
+    rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+  };
   const obj2 = sendRequest;
   return HTTP.patch(obj).then((body) => {
     let obj = closure_1_1(closure_1_2[11]);
@@ -56,7 +60,12 @@ export default {
     }
     const _require = channel;
     const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-    obj = { url: closure_12.CHANNEL(channel.id), body: obj, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+    obj = {
+      url: closure_12.CHANNEL(channel.id),
+      body: obj,
+      rejectWithError:
+        require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+    };
     const obj3 = sendRequest;
     return HTTP.patch(obj).then((body) => {
       let obj = closure_1_1(closure_1_2[11]);
@@ -78,7 +87,7 @@ export default {
   lockThread(channel) {
     closure_0 = channel;
     const self = this;
-    return callback(function*() {
+    return callback(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -143,7 +152,7 @@ export default {
   unlockThread(channel) {
     closure_0 = channel;
     const self = this;
-    return callback(function*() {
+    return callback(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -208,7 +217,7 @@ export default {
   unarchiveThread(channel, arg1) {
     closure_0 = channel;
     closure_1 = arg1;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -396,7 +405,7 @@ export default {
   unarchiveThreadIfNecessary(closure_1_0) {
     closure_0 = closure_1_0;
     const self = this;
-    return callback(function*() {
+    return callback(function* () {
       if (c0 === 2) {
         c0 = 3;
         HermesBuiltin.throwTypeError();
@@ -470,7 +479,12 @@ export default {
     let obj = { invitable };
     const _require = id;
     const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-    obj = { url: closure_12.CHANNEL(id.id), body: obj, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+    obj = {
+      url: closure_12.CHANNEL(id.id),
+      body: obj,
+      rejectWithError:
+        require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+    };
     const obj3 = sendRequest;
     return HTTP.patch(obj).then((body) => {
       let obj = closure_1_1(closure_1_2[11]);
@@ -492,7 +506,7 @@ export default {
   joinThread(c5, arg1) {
     closure_0 = c5;
     closure_1 = arg1;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -616,7 +630,7 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    return callback(function*() {
+    return callback(function* () {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -738,7 +752,11 @@ export default {
       obj.dispatch(obj);
     }
     const HTTP = sendRequest.HTTP;
-    obj = { url: closure_12.THREAD_MEMBER(channel.id), query: obj1, rejectWithError: sendRequest.rejectWithMigratedError() };
+    obj = {
+      url: closure_12.THREAD_MEMBER(channel.id),
+      query: obj1,
+      rejectWithError: sendRequest.rejectWithMigratedError(),
+    };
     return HTTP.del(obj);
   },
   removeMember(id, closure_1_1, location) {
@@ -768,7 +786,7 @@ export default {
     if (arg2 === undefined) {
       flag = false;
     }
-    return callback(function*() {
+    return callback(function* () {
       closure_0 = tmp3;
       obj1 = { type: "THREAD_UPDATE", channel: null };
       const obj2 = { flags: null };
@@ -807,7 +825,7 @@ export default {
     closure_0 = closure_5;
     closure_1 = closure_0;
     const self = this;
-    return callback(function*() {
+    return callback(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -981,7 +999,7 @@ export default {
     closure_0 = channel;
     closure_1 = muteSettings;
     const self = this;
-    return callback(function*() {
+    return callback(function* () {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();
@@ -1062,7 +1080,15 @@ export default {
       const HTTP = require(sortOrder[10]).HTTP;
       obj = { url: null, query: null, retries: 2, rejectWithError: true };
       obj[0] = closure_12.THREAD_SEARCH(channelId);
-      obj1 = { archived: true, sort_by: "last_message_time", sort_order: "desc", limit: null, tag: null, tag_setting: null, offset: null };
+      obj1 = {
+        archived: true,
+        sort_by: "last_message_time",
+        sort_order: "desc",
+        limit: null,
+        tag: null,
+        tag_setting: null,
+        offset: null,
+      };
       obj1[3] = PAGE_SIZE;
       let joined;
       if (tagFilter.size > 0) {
@@ -1075,42 +1101,65 @@ export default {
       obj1[6] = offset;
       obj[1] = obj1;
       const value = HTTP.get(obj);
-      value.then((body) => {
-        ({ threads, members } = body.body);
-        if (null == threads) {
-          let obj = channelId(sortOrder[11]);
-          obj = { type: "LOAD_ARCHIVED_THREADS_FAIL", channelId: null, sortOrder: null, tagFilter: null, tagSetting: null };
-          obj[1] = channelId;
-          obj[2] = sortOrder;
-          obj[3] = tagFilter;
-          obj[4] = tagSetting;
-          obj.dispatch(obj);
-        } else {
-          obj = { type: "LOAD_ARCHIVED_THREADS_SUCCESS", guildId: null, channelId: null, offset: null, sortOrder: null, tagFilter: null, tagSetting: null, threads: null, firstMessages: null, mostRecentMessages: null, members: null, owners: null, hasMore: null };
-          obj[1] = closure_0;
-          obj[2] = channelId;
-          obj[3] = offset;
-          obj[4] = sortOrder;
-          obj[5] = tagFilter;
-          obj[6] = tagSetting;
-          obj[7] = threads;
-          obj[8] = tmp2;
-          obj[9] = tmp3;
-          if (members == null) {
-            members = [];
+      value.then(
+        (body) => {
+          ({ threads, members } = body.body);
+          if (null == threads) {
+            let obj = channelId(sortOrder[11]);
+            obj = {
+              type: "LOAD_ARCHIVED_THREADS_FAIL",
+              channelId: null,
+              sortOrder: null,
+              tagFilter: null,
+              tagSetting: null,
+            };
+            obj[1] = channelId;
+            obj[2] = sortOrder;
+            obj[3] = tagFilter;
+            obj[4] = tagSetting;
+            obj.dispatch(obj);
+          } else {
+            obj = {
+              type: "LOAD_ARCHIVED_THREADS_SUCCESS",
+              guildId: null,
+              channelId: null,
+              offset: null,
+              sortOrder: null,
+              tagFilter: null,
+              tagSetting: null,
+              threads: null,
+              firstMessages: null,
+              mostRecentMessages: null,
+              members: null,
+              owners: null,
+              hasMore: null,
+            };
+            obj[1] = closure_0;
+            obj[2] = channelId;
+            obj[3] = offset;
+            obj[4] = sortOrder;
+            obj[5] = tagFilter;
+            obj[6] = tagSetting;
+            obj[7] = threads;
+            obj[8] = tmp2;
+            obj[9] = tmp3;
+            if (members == null) {
+              members = [];
+            }
+            obj[10] = members.map((arg0) => callback(table[18])(arg0));
+            const mapped = threads.map((owner) => owner.owner);
+            obj[11] = mapped.filter(closure_1_0(sortOrder[19]).isNotNullish);
+            obj[12] = tmp;
+            channelId(sortOrder[11]).dispatch(obj);
+            const obj3 = channelId(sortOrder[11]);
           }
-          obj[10] = members.map((arg0) => callback(table[18])(arg0));
-          const mapped = threads.map((owner) => owner.owner);
-          obj[11] = mapped.filter(closure_1_0(sortOrder[19]).isNotNullish);
-          obj[12] = tmp;
-          channelId(sortOrder[11]).dispatch(obj);
-          const obj3 = channelId(sortOrder[11]);
-        }
-      }, () => {
-        let obj = channelId(sortOrder[11]);
-        obj = { type: "LOAD_ARCHIVED_THREADS_FAIL", channelId, sortOrder, tagFilter, tagSetting };
-        obj.dispatch(obj);
-      });
+        },
+        () => {
+          let obj = channelId(sortOrder[11]);
+          obj = { type: "LOAD_ARCHIVED_THREADS_FAIL", channelId, sortOrder, tagFilter, tagSetting };
+          obj.dispatch(obj);
+        },
+      );
     }
   },
   searchThreads(closure_1_0, closure_1_1, c2, c3, c4) {
@@ -1120,9 +1169,10 @@ export default {
     const callback = c3;
     let MATCH_SOME = c4;
     if (c4 === undefined) {
-      MATCH_SOME = require("../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx").ThreadSearchTagSetting.MATCH_SOME;
+      MATCH_SOME = require("../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx")
+        .ThreadSearchTagSetting.MATCH_SOME;
     }
-    return callback(function*() {
+    return callback(function* () {
       let threads = tmp3;
       let body = tmp2;
       if (null != first_messages) {
@@ -1146,7 +1196,14 @@ export default {
       body = arg1.body;
       threads = body.threads;
       const most_recent_messages = body.most_recent_messages;
-      obj5 = { type: "LOAD_THREADS_SUCCESS", threads: null, members: null, guildId: null, firstMessages: null, mostRecentMessages: null };
+      obj5 = {
+        type: "LOAD_THREADS_SUCCESS",
+        threads: null,
+        members: null,
+        guildId: null,
+        firstMessages: null,
+        mostRecentMessages: null,
+      };
       obj5[1] = threads;
       obj5[2] = members;
       obj5[3] = body;
@@ -1176,22 +1233,24 @@ export default {
         const tmp5 = _require;
         const tmp5Result = sendRequest;
         const postResult = HTTP.post(obj);
-        return HTTP.post(obj).then(() => {
-          let obj = closure_1_1(closure_1_2[11]);
-          obj = { type: "SUMMARIZE_THREAD_SUCCESS", channelId: isThread.id };
-          obj.dispatch(obj);
-        }).catch(() => {
-          let obj = closure_1_1(closure_1_2[11]);
-          obj = { type: "SUMMARIZE_THREAD_FAILURE", channelId: isThread.id };
-          obj.dispatch(obj);
-          obj = { title: null, body: null };
-          const intl = isThread(closure_1_2[13]).intl;
-          obj[0] = intl.string(isThread(closure_1_2[13]).t.j2d6Km);
-          const intl2 = isThread(closure_1_2[13]).intl;
-          obj[1] = intl2.string(isThread(closure_1_2[13]).t.fEptJP);
-          closure_1_1(closure_1_2[12]).show(obj);
-        });
+        return HTTP.post(obj)
+          .then(() => {
+            let obj = closure_1_1(closure_1_2[11]);
+            obj = { type: "SUMMARIZE_THREAD_SUCCESS", channelId: isThread.id };
+            obj.dispatch(obj);
+          })
+          .catch(() => {
+            let obj = closure_1_1(closure_1_2[11]);
+            obj = { type: "SUMMARIZE_THREAD_FAILURE", channelId: isThread.id };
+            obj.dispatch(obj);
+            obj = { title: null, body: null };
+            const intl = isThread(closure_1_2[13]).intl;
+            obj[0] = intl.string(isThread(closure_1_2[13]).t.j2d6Km);
+            const intl2 = isThread(closure_1_2[13]).intl;
+            obj[1] = intl2.string(isThread(closure_1_2[13]).t.fEptJP);
+            closure_1_1(closure_1_2[12]).show(obj);
+          });
       }
     }
-  }
+  },
 };

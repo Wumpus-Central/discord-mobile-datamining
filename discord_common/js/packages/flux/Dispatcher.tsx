@@ -11,7 +11,22 @@ import { mark } from "../../shared/utils/profiling.tsx";
 function setDisplayName(arg0, displayName) {
   arg0.displayName = displayName;
 }
-let set = new Set(["APP_STATE_UPDATE", "CLEAR_CACHES", "CONNECTION_CLOSED", "CONNECTION_OPEN", "CONNECTION_RESUMED", "LOGIN_SUCCESS", "LOGIN", "LOGOUT", "MESSAGE_SEND_FAILED", "PUSH_NOTIFICATION_CLICK", "RESET_SOCKET", "SESSION_START", "UPLOAD_FAIL", "WRITE_CACHES"]);
+let set = new Set([
+  "APP_STATE_UPDATE",
+  "CLEAR_CACHES",
+  "CONNECTION_CLOSED",
+  "CONNECTION_OPEN",
+  "CONNECTION_RESUMED",
+  "LOGIN_SUCCESS",
+  "LOGIN",
+  "LOGOUT",
+  "MESSAGE_SEND_FAILED",
+  "PUSH_NOTIFICATION_CLICK",
+  "RESET_SOCKET",
+  "SESSION_START",
+  "UPLOAD_FAIL",
+  "WRITE_CACHES",
+]);
 const logger = new log.Logger("Flux");
 class ActionHandlersGraph {
   constructor() {
@@ -75,9 +90,7 @@ prototype["addDependencies"] = function addDependencies(arg0, arg1) {
   }
   self._invalidateCaches();
 };
-prototype["_validateDependencies"] = function _validateDependencies(arg0, arg1) {
-
-};
+prototype["_validateDependencies"] = function _validateDependencies(arg0, arg1) {};
 prototype["_invalidateCaches"] = function _invalidateCaches() {
   this._orderedCallbackTokens = null;
   this._orderedActionHandlers = {};
@@ -92,9 +105,7 @@ prototype["_bandToken"] = function _bandToken(band) {
     obj[0] = combined;
     obj[1] = band;
     obj[2] = {};
-    obj[3] = function storeDidChange(actionHandler) {
-
-    };
+    obj[3] = function storeDidChange(actionHandler) {};
     _dependencyGraph2.addNode(combined, obj);
     if (band > 0) {
       const _dependencyGraph3 = self._dependencyGraph;
@@ -304,7 +315,13 @@ prototype2["_dispatchWithDevtools"] = function _dispatchWithDevtools(type) {
 prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   const self = this;
   const _require = type;
-  self(38)(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: " + type.type + " Already dispatching: " + this._currentDispatchActionType);
+  self(38)(
+    null == this._currentDispatchActionType,
+    "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: " +
+      type.type +
+      " Already dispatching: " +
+      this._currentDispatchActionType,
+  );
   self(38)(type.type, "Dispatch.dispatch(...) called without an action type");
   if (set.has(type.type)) {
     const _HermesInternal = HermesInternal;
@@ -334,8 +351,7 @@ prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   try {
     const _HermesInternal3 = HermesInternal;
     tmp8(655).measure("DISPATCH[" + type.type + "]", type.type);
-  } catch (err) {
-  }
+  } catch (err) {}
 };
 prototype2["_dispatch"] = function _dispatch(closure_0, arg1) {
   let sum;

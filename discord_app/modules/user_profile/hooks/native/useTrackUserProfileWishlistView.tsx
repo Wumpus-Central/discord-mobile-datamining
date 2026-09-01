@@ -39,4 +39,4 @@ export default function useTrackUserProfileWishlistView(wishlistId) {
       ref.current = false;
     }
   }, items1);
-};
+}

@@ -25,7 +25,12 @@ export default function ConnectedMFA() {
   let tmpResult = tmp(589);
   const items = [closure_4];
   const items1 = [isMultiAccount];
-  const stateFromStores = tmpResult.useStateFromStores(items, () => ({ ticket: store.getMFATicket(), methods: store.getMFAMethods() }), [], statesAreEqual);
+  const stateFromStores = tmpResult.useStateFromStores(
+    items,
+    () => ({ ticket: store.getMFATicket(), methods: store.getMFAMethods() }),
+    [],
+    statesAreEqual,
+  );
   const items2 = [navigation];
   const callback = React.useCallback((arg0) => {
     ({ mfaType, data, ticket } = arg0);
@@ -36,7 +41,16 @@ export default function ConnectedMFA() {
   const callback1 = React.useCallback(() => {
     navigation.goBack();
   }, items2);
-  obj = { mfaChallenge: stateFromStores, finish: callback, handleOnClose: callback1, ignoreKeyboard: inContainer, containerStyle: null, headerStatusBarHeight: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
+  obj = {
+    mfaChallenge: stateFromStores,
+    finish: callback,
+    handleOnClose: callback1,
+    ignoreKeyboard: inContainer,
+    containerStyle: null,
+    headerStatusBarHeight: null,
+    headerLeftContainerStyle: null,
+    headerRightContainerStyle: null,
+  };
   let tmp9;
   if (inContainer) {
     tmp9 = closure_7;
@@ -67,4 +81,4 @@ export default function ConnectedMFA() {
     space[1] = tmp4(712).space.PX_12;
     const tmp11 = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
   }
-};
+}

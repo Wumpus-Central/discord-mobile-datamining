@@ -10,4 +10,4 @@ export default function showBanConfirmModal(closure_0) {
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
   _modDef4723.pushLazy(asyncRequireImpl(11431, dependencyMap.paths), closure_0);
-};
+}

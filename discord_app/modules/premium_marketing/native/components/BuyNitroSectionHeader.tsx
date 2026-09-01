@@ -20,8 +20,14 @@ export default function BuyNitroSectionHeader(arg0) {
     let tmp7 = title;
     if (-1 !== index) {
       obj = { children: null };
-      const items = [title.slice(0, index), , ];
-      obj = { variant: "text-sm/semibold", color: "text-link", accessibilityRole: "link", onPress: null, children: null };
+      const items = [title.slice(0, index), ,];
+      obj = {
+        variant: "text-sm/semibold",
+        color: "text-link",
+        accessibilityRole: "link",
+        onPress: null,
+        children: null,
+      };
       obj[3] = onPress;
       obj[4] = tmp5;
       items[1] = tmp(Text.Text, obj);
@@ -34,4 +40,4 @@ export default function BuyNitroSectionHeader(arg0) {
   }
   obj[4] = tmp4;
   return closure_2(Text.Text, obj);
-};
+}

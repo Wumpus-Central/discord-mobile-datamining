@@ -14,14 +14,14 @@ export default function useTruncatedGradientColors() {
   obj = {
     gradientColors: useMemo(() => {
       const obj = closure_1_1(closure_1_2[4])(token);
-      const items = [closure_1_1(closure_1_2[4])(token).alpha(0).hex(), ];
+      const items = [closure_1_1(closure_1_2[4])(token).alpha(0).hex()];
       const alphaResult = closure_1_1(closure_1_2[4])(token).alpha(0);
       const obj3 = closure_1_1(closure_1_2[4])(token);
       items[1] = closure_1_1(closure_1_2[4])(token).alpha(0.72).hex();
       return items;
     }, items),
-    gradientStyles: callback().gradient
+    gradientStyles: callback().gradient,
   };
   items = [token];
   return obj;
-};
+}

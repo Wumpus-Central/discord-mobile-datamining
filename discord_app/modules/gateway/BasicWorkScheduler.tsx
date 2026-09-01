@@ -4,7 +4,12 @@ import timestampDefault from "../debug/Logger.tsx";
 import WorkSchedulerTelemetryEvent from "WorkSchedulerTelemetry.tsx";
 import DISPATCHER_STANDARD_TIMEOUT_MS from "DispatcherWorkConstants.tsx";
 
-({ MAX_DISPATCHER_FLUSH_DEADLINE_TRIES: c3, DISPATCHER_STANDARD_TIMEOUT_MS: c4, DISPATCHER_IDEAL_TIME_LIMIT_MS: c5, DISPATCHER_LONG_TIMEOUT_MS: closure_6 } = DISPATCHER_STANDARD_TIMEOUT_MS);
+({
+  MAX_DISPATCHER_FLUSH_DEADLINE_TRIES: c3,
+  DISPATCHER_STANDARD_TIMEOUT_MS: c4,
+  DISPATCHER_IDEAL_TIME_LIMIT_MS: c5,
+  DISPATCHER_LONG_TIMEOUT_MS: closure_6,
+} = DISPATCHER_STANDARD_TIMEOUT_MS);
 let closure_7 = new timestampDefault("DispatcherWorkScheduler");
 const tmp3 = new timestampDefault("DispatcherWorkScheduler");
 const result = set.fileFinishedImporting("modules/gateway/BasicWorkScheduler.tsx");
@@ -43,7 +48,7 @@ Object.defineProperty(prototype, "_hasExceededMaxConsecutiveFlushes", {
   get: function _hasExceededMaxConsecutiveFlushes() {
     return this._consecutiveFlushesBeforeQueueEmpty >= closure_3;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["_processWorkCallback"] = function _processWorkCallback(arg0) {
   const self = this;
@@ -53,7 +58,10 @@ prototype["_processWorkCallback"] = function _processWorkCallback(arg0) {
       self._workCallbackFn();
       self.clearWorkTimeout();
       const telemetry2 = self.telemetry;
-      telemetry2.measure(WorkSchedulerTelemetryEvent.WorkSchedulerTelemetryMeasurement.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, self._consecutiveFlushesBeforeQueueEmpty);
+      telemetry2.measure(
+        WorkSchedulerTelemetryEvent.WorkSchedulerTelemetryMeasurement.COUNT_FLUSH_BEFORE_QUEUE_EMPTY,
+        self._consecutiveFlushesBeforeQueueEmpty,
+      );
       const telemetry3 = self.telemetry;
       telemetry3.track(WorkSchedulerTelemetryEvent.WorkSchedulerTelemetryEvent.EXCEEDED_MAX_CONSECUTIVE_FLUSHES);
       self._consecutiveFlushesBeforeQueueEmpty = 0;
@@ -71,7 +79,10 @@ prototype["_processWorkCallback"] = function _processWorkCallback(arg0) {
           const telemetry = self.telemetry;
           const _parseInt = parseInt;
           const _HermesInternal = HermesInternal;
-          telemetry.measure(WorkSchedulerTelemetryEvent.WorkSchedulerTelemetryMeasurement.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, parseInt("" + self._consecutiveFlushesBeforeQueueEmpty));
+          telemetry.measure(
+            WorkSchedulerTelemetryEvent.WorkSchedulerTelemetryMeasurement.COUNT_FLUSH_BEFORE_QUEUE_EMPTY,
+            parseInt("" + self._consecutiveFlushesBeforeQueueEmpty),
+          );
         }
         self._consecutiveFlushesBeforeQueueEmpty = 0;
         self._criticalWorkScheduled = false;
@@ -106,19 +117,19 @@ Object.defineProperty(prototype, "isBackgrounded", {
   get: function isBackgrounded() {
     return this._isBackgrounded;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasWorkScheduled", {
   get: function hasWorkScheduled() {
     return null != this._flushTimeoutHandler || null != this._flushIdleHandler;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isRequestIdleCallbackEnabled", {
   get: function isRequestIdleCallbackEnabled() {
     return this._enableRequestIdleCallback;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["clearWorkTimeout"] = function clearWorkTimeout() {
   const self = this;

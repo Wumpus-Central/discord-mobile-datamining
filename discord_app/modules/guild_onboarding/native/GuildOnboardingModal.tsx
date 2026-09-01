@@ -48,10 +48,14 @@ export default function GuildOnboardingModal(guildId) {
     return tmp2;
   });
   const items1 = [callback];
-  stateFromStoresArray = guildId(onClose[16]).useStateFromStoresArray(items1, () => callback.getOnboardingPromptsForOnboarding(guildId));
+  stateFromStoresArray = guildId(onClose[16]).useStateFromStoresArray(items1, () =>
+    callback.getOnboardingPromptsForOnboarding(guildId),
+  );
   let obj2 = guildId(onClose[16]);
   const items2 = [callback];
-  const stateFromStores1 = guildId(onClose[16]).useStateFromStores(items2, () => callback.getOnboardingConnections(guildId));
+  const stateFromStores1 = guildId(onClose[16]).useStateFromStores(items2, () =>
+    callback.getOnboardingConnections(guildId),
+  );
   const items3 = [guildId];
   callback = landingAnimation.useCallback((id, id2) => {
     const option = onFinish(onClose[17]).selectOption(guildId, id, id2, arg2);
@@ -67,7 +71,18 @@ export default function GuildOnboardingModal(guildId) {
       const obj = onFinish(onClose[18]);
     }
   }, items5);
-  const items6 = [guildId, stateFromStoresArray, stateFromStores1, callback, callback1, onFinish, onClose, landingAnimation, isFirstOpen, backShouldLeaveGuild];
+  const items6 = [
+    guildId,
+    stateFromStoresArray,
+    stateFromStores1,
+    callback,
+    callback1,
+    onFinish,
+    onClose,
+    landingAnimation,
+    isFirstOpen,
+    backShouldLeaveGuild,
+  ];
   if (isFirstOpen) {
     if (stateFromStores1.length > 0) {
       let PROMPT = callback1.CONNECTIONS;
@@ -80,4 +95,4 @@ export default function GuildOnboardingModal(guildId) {
     return jsx(tmp(tmp2[19]).Navigator, { screens: null, initialRouteName: null, headerBackTitle: null });
   }
   PROMPT = callback1.PROMPT;
-};
+}

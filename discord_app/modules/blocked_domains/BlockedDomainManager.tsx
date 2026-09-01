@@ -4,8 +4,7 @@ import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = arg1;
 initializeDefault;
-class BlockedDomainManager extends tmp2 {
-}
+class BlockedDomainManager extends tmp2 {}
 BlockedDomainManager.prototype["_initialize"] = function _initialize() {
   if (obj.isLibdiscoreInitialized()) {
     const _window = window;

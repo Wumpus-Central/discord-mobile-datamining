@@ -42,6 +42,14 @@ export const DynamicBadgeTooltip = function DynamicBadgeTooltip(tooltipPosition)
   const callback1 = React.useCallback(() => {
     callback((arg0) => !arg0);
   }, []);
-  obj = { ref, onPress: callback1, hitSlop: closure_5, accessibilityRole: "button", accessibilityLabel, accessibilityHint: stringResult, children };
+  obj = {
+    ref,
+    onPress: callback1,
+    hitSlop: closure_5,
+    accessibilityRole: "button",
+    accessibilityLabel,
+    accessibilityHint: stringResult,
+    children,
+  };
   return callback(str(first[5]).PressableOpacity, obj);
 };

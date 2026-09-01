@@ -10,7 +10,7 @@ require = arg1;
 let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", NORMAL: 1, [1]: "NORMAL", LARGE_TILTED: 2, [2]: "LARGE_TILTED" };
 class GiftCustomizationBanner$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , ];
+    items = [, , , , , , , , , ,];
     items[0] = { no: 1, name: "asset_url", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "desktop_body", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "mobile_body", kind: "scalar", T: 9 };
@@ -19,8 +19,8 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "gradient",
       kind: "message",
       T() {
-            return callback(8461).Gradient;
-          }
+        return callback(8461).Gradient;
+      },
     };
     items[4] = { no: 5, name: "background_asset_url", kind: "scalar", T: 9 };
     items[5] = {
@@ -28,33 +28,37 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(8463).ThemeAwareAsset;
-          }
+        return callback(8463).ThemeAwareAsset;
+      },
     };
     items[6] = {
       no: 7,
       name: "background_asset",
       kind: "message",
       T() {
-            return callback(8463).ThemeAwareAsset;
-          }
+        return callback(8463).ThemeAwareAsset;
+      },
     };
     items[7] = {
       no: 8,
       name: "mobile_background_asset",
       kind: "message",
       T() {
-            return callback(8463).ThemeAwareAsset;
-          }
+        return callback(8463).ThemeAwareAsset;
+      },
     };
     items[8] = {
       no: 9,
       name: "asset_variant",
       kind: "enum",
       T() {
-            const items = ["discord_protos.premium_marketing.v1.GiftCustomizationBanner.AssetVariant", closure_3, "ASSET_VARIANT_"];
-            return items;
-          }
+        const items = [
+          "discord_protos.premium_marketing.v1.GiftCustomizationBanner.AssetVariant",
+          closure_3,
+          "ASSET_VARIANT_",
+        ];
+        return items;
+      },
     };
     obj = { no: 10, name: "desktop_body_localized", kind: "message", T: null };
     class T {
@@ -69,8 +73,8 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "mobile_body_localized",
       kind: "message",
       T() {
-            return callback(8453).LocalizedString;
-          }
+        return callback(8453).LocalizedString;
+      },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.GiftCustomizationBanner", items, T);
     // ThrowIfThisInitialized (0x7c)
@@ -118,8 +122,16 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
   if (assetUrl.gradient) {
     const Gradient = create2.Gradient;
     const tagResult3 = tag.tag(4, _mod1307.WireType.LengthDelimited);
-    const joined = Gradient.internalBinaryWrite(assetUrl.gradient, tag.tag(4, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = Gradient.internalBinaryWrite(assetUrl.gradient, tag.tag(4, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = Gradient.internalBinaryWrite(
+      assetUrl.gradient,
+      tag.tag(4, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult = Gradient.internalBinaryWrite(
+      assetUrl.gradient,
+      tag.tag(4, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if ("" !== assetUrl.backgroundAssetUrl) {
     tag.tag(5, _mod1307.WireType.LengthDelimited).string(assetUrl.backgroundAssetUrl);
@@ -128,20 +140,44 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
   if (assetUrl.asset) {
     const ThemeAwareAsset = create3.ThemeAwareAsset;
     const tagResult5 = tag.tag(6, _mod1307.WireType.LengthDelimited);
-    const joined1 = ThemeAwareAsset.internalBinaryWrite(assetUrl.asset, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = ThemeAwareAsset.internalBinaryWrite(assetUrl.asset, tag.tag(6, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = ThemeAwareAsset.internalBinaryWrite(
+      assetUrl.asset,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult1 = ThemeAwareAsset.internalBinaryWrite(
+      assetUrl.asset,
+      tag.tag(6, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (assetUrl.backgroundAsset) {
     const ThemeAwareAsset2 = create3.ThemeAwareAsset;
     const tagResult6 = tag.tag(7, _mod1307.WireType.LengthDelimited);
-    const joined2 = ThemeAwareAsset2.internalBinaryWrite(assetUrl.backgroundAsset, tag.tag(7, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = ThemeAwareAsset2.internalBinaryWrite(assetUrl.backgroundAsset, tag.tag(7, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined2 = ThemeAwareAsset2.internalBinaryWrite(
+      assetUrl.backgroundAsset,
+      tag.tag(7, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult2 = ThemeAwareAsset2.internalBinaryWrite(
+      assetUrl.backgroundAsset,
+      tag.tag(7, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (assetUrl.mobileBackgroundAsset) {
     const ThemeAwareAsset3 = create3.ThemeAwareAsset;
     const tagResult7 = tag.tag(8, _mod1307.WireType.LengthDelimited);
-    const joined3 = ThemeAwareAsset3.internalBinaryWrite(assetUrl.mobileBackgroundAsset, tag.tag(8, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = ThemeAwareAsset3.internalBinaryWrite(assetUrl.mobileBackgroundAsset, tag.tag(8, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined3 = ThemeAwareAsset3.internalBinaryWrite(
+      assetUrl.mobileBackgroundAsset,
+      tag.tag(8, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult3 = ThemeAwareAsset3.internalBinaryWrite(
+      assetUrl.mobileBackgroundAsset,
+      tag.tag(8, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (0 !== assetUrl.assetVariant) {
     tag.tag(9, _mod1307.WireType.Varint).int32(assetUrl.assetVariant);
@@ -150,14 +186,30 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
   if (assetUrl.desktopBodyLocalized) {
     const LocalizedString = create.LocalizedString;
     const tagResult9 = tag.tag(10, _mod1307.WireType.LengthDelimited);
-    const joined4 = LocalizedString.internalBinaryWrite(assetUrl.desktopBodyLocalized, tag.tag(10, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult4 = LocalizedString.internalBinaryWrite(assetUrl.desktopBodyLocalized, tag.tag(10, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined4 = LocalizedString.internalBinaryWrite(
+      assetUrl.desktopBodyLocalized,
+      tag.tag(10, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult4 = LocalizedString.internalBinaryWrite(
+      assetUrl.desktopBodyLocalized,
+      tag.tag(10, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   if (assetUrl.mobileBodyLocalized) {
     const LocalizedString2 = create.LocalizedString;
     const tagResult10 = tag.tag(11, _mod1307.WireType.LengthDelimited);
-    const joined5 = LocalizedString2.internalBinaryWrite(assetUrl.mobileBodyLocalized, tag.tag(11, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult5 = LocalizedString2.internalBinaryWrite(assetUrl.mobileBodyLocalized, tag.tag(11, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined5 = LocalizedString2.internalBinaryWrite(
+      assetUrl.mobileBodyLocalized,
+      tag.tag(11, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult5 = LocalizedString2.internalBinaryWrite(
+      assetUrl.mobileBodyLocalized,
+      tag.tag(11, _mod1307.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -179,7 +231,7 @@ let items = [
     kind: "message",
     T() {
       return callback(8461).Gradient;
-    }
+    },
   },
   { no: 5, name: "background_asset_url", kind: "scalar", T: 9 },
   {
@@ -188,7 +240,7 @@ let items = [
     kind: "message",
     T() {
       return callback(8463).ThemeAwareAsset;
-    }
+    },
   },
   {
     no: 7,
@@ -196,7 +248,7 @@ let items = [
     kind: "message",
     T() {
       return callback(8463).ThemeAwareAsset;
-    }
+    },
   },
   {
     no: 8,
@@ -204,19 +256,22 @@ let items = [
     kind: "message",
     T() {
       return callback(8463).ThemeAwareAsset;
-    }
+    },
   },
   {
     no: 9,
     name: "asset_variant",
     kind: "enum",
     T() {
-      const items = ["discord_protos.premium_marketing.v1.GiftCustomizationBanner.AssetVariant", closure_3, "ASSET_VARIANT_"];
+      const items = [
+        "discord_protos.premium_marketing.v1.GiftCustomizationBanner.AssetVariant",
+        closure_3,
+        "ASSET_VARIANT_",
+      ];
       return items;
-    }
+    },
   },
-,
-
+  ,
 ];
 obj = { no: 10, name: "desktop_body_localized", kind: "message", T: null };
 class T {
@@ -232,11 +287,23 @@ items[10] = {
   kind: "message",
   T() {
     return callback(8453).LocalizedString;
-  }
+  },
 };
-prototype = new prototype("discord_protos.premium_marketing.v1.GiftCustomizationBanner", items, tmp, T, GiftCustomizationBanner$Type, prototype, items, arg1, dependencyMap);
+prototype = new prototype(
+  "discord_protos.premium_marketing.v1.GiftCustomizationBanner",
+  items,
+  tmp,
+  T,
+  GiftCustomizationBanner$Type,
+  prototype,
+  items,
+  arg1,
+  dependencyMap,
+);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_customization_banner.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_customization_banner.tsx",
+);
 
 export const GiftCustomizationBanner_AssetVariant = obj;
 export const GiftCustomizationBanner = prototype;

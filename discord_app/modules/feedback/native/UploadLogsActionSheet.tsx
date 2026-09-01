@@ -37,7 +37,7 @@ export default function UploadLogsActionSheet(arg0) {
   obj1 = { variant: "text-sm/normal", color: "text-muted", style: tmp.body, children: null };
   const intl2 = getSystemLocale.intl;
   obj1[3] = intl2.string(getSystemLocale.t["ZvRR/t"]);
-  const items = [callback(Text.Text, obj1), , , ];
+  const items = [callback(Text.Text, obj1), , ,];
   let obj2 = { text: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj2[0] = intl3.string(getSystemLocale.t.EbwFfR);
@@ -72,4 +72,4 @@ export default function UploadLogsActionSheet(arg0) {
   obj[1] = items;
   obj[1] = callback2(View, obj);
   return callback(Background.BottomSheet, obj);
-};
+}

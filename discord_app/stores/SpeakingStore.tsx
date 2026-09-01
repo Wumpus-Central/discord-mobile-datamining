@@ -55,8 +55,7 @@ let c13 = null;
 let c14 = null;
 let c15 = false;
 const Store = initializeDefault.Store;
-class SpeakingStore extends Store {
-}
+class SpeakingStore extends Store {}
 const prototype = SpeakingStore.prototype;
 prototype["initialize"] = function initialize() {
   this.mustEmitChanges((type) => {
@@ -312,7 +311,7 @@ const speakingStore = new SpeakingStore(dispatcherDefault, {
         if (since == null) {
           since = null;
         }
-        if ((num2 & tmp.VOICE) === tmp.VOICE !== (num & tmp.VOICE) === tmp.VOICE) {
+        if ((((num2 & tmp.VOICE) === tmp.VOICE) !== (num & tmp.VOICE)) === tmp.VOICE) {
           let timestamp = null;
           if (tmp18) {
             const _Date = Date;
@@ -414,7 +413,7 @@ const speakingStore = new SpeakingStore(dispatcherDefault, {
   },
   PUSH_TO_TALK_STATE_CHANGE: function handlePushToTalkStateChange(isActive) {
     isActive = isActive.isActive;
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("stores/SpeakingStore.tsx");
 

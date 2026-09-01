@@ -18,18 +18,21 @@ class RTCLatencyTestManager extends tmp3 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       POST_CONNECTION_OPEN() {
-            return applyArgumentsResult._handleConnectionOpen();
-          }
+        return applyArgumentsResult._handleConnectionOpen();
+      },
     };
     applyArgumentsResult._handleTestRegionsResponse = function _handleTestRegionsResponse(body) {
       const mapped = body.map((region) => region.region);
       if (closure_4.shouldPerformLatencyTest(mapped)) {
         mediaEngine = mediaEngine.getMediaEngine();
         const rankRtcRegionsResult = mediaEngine.rankRtcRegions(body);
-        mediaEngine.rankRtcRegions(body).then((url) => {
-          closure_1_8.verbose("RTC region latency test completed, ranked regions are: ", url);
-          const result = mapped(closure_1_2[6]).completeRTCLatencyTest(url, mapped);
-        }).catch((arg0) => logger.warn(arg0));
+        mediaEngine
+          .rankRtcRegions(body)
+          .then((url) => {
+            closure_1_8.verbose("RTC region latency test completed, ranked regions are: ", url);
+            const result = mapped(closure_1_2[6]).completeRTCLatencyTest(url, mapped);
+          })
+          .catch((arg0) => logger.warn(arg0));
         const nextPromise = mediaEngine.rankRtcRegions(body).then((url) => {
           closure_1_8.verbose("RTC region latency test completed, ranked regions are: ", url);
           const result = mapped(closure_1_2[6]).completeRTCLatencyTest(url, mapped);
@@ -46,8 +49,13 @@ class RTCLatencyTestManager extends tmp3 {
       }
       const rTCLatencyTestRegions = applyArgumentsResult(closure_1_2[6]).fetchRTCLatencyTestRegions(num);
       obj = applyArgumentsResult(closure_1_2[6]);
-      rTCLatencyTestRegions.then((body) => closure_0._handleTestRegionsResponse(body.body)).catch((arg0) => logger.warn(arg0));
-      applyArgumentsResult.refetchTimeout = setTimeout(applyArgumentsResult._fetchAndScheduleRefetch, 360 * closure_1_1(closure_1_2[3]).Millis.MINUTE);
+      rTCLatencyTestRegions
+        .then((body) => closure_0._handleTestRegionsResponse(body.body))
+        .catch((arg0) => logger.warn(arg0));
+      applyArgumentsResult.refetchTimeout = setTimeout(
+        applyArgumentsResult._fetchAndScheduleRefetch,
+        360 * closure_1_1(closure_1_2[3]).Millis.MINUTE,
+      );
     };
     applyArgumentsResult._handleConnectionOpen = function _handleConnectionOpen() {
       if (null != window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT) {

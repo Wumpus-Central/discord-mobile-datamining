@@ -12,8 +12,19 @@ const require = arg1;
 let c3 = importAllResult;
 ({ ExpressionPickerViewType: c5, ExpressionPickerOrder: closure_6, PADDING_HORIZONTAL } = ExpressionPickerViewType);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let obj = { expressionPickerContainer: null, expressionPickerContent: null, segmentedControl: null, segmentedControlUnpadded: null };
-obj = { flex: 1, overflow: "hidden", backgroundColor: ThemesDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, position: "relative", paddingHorizontal: PADDING_HORIZONTAL };
+let obj = {
+  expressionPickerContainer: null,
+  expressionPickerContent: null,
+  segmentedControl: null,
+  segmentedControlUnpadded: null,
+};
+obj = {
+  flex: 1,
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT,
+  position: "relative",
+  paddingHorizontal: PADDING_HORIZONTAL,
+};
 obj[0] = obj;
 obj[1] = { flex: 1 };
 createCacheKey = { paddingTop: 2 * PADDING_HORIZONTAL, paddingHorizontal: 0 };
@@ -37,7 +48,10 @@ const memoResult = importAllResult.memo(function ExpressionPicker(expressionType
   ({ initialGifQuery, stickerFormats } = expressionType);
   const tmp = callback();
   importDefault = memo.useRef(false);
-  const tmp4 = importDefault(expressionPickerViewType[8])({ expressionType: expressionType.expressionType, expressionPickerTabs: visibleTabs });
+  const tmp4 = importDefault(expressionPickerViewType[8])({
+    expressionType: expressionType.expressionType,
+    expressionPickerTabs: visibleTabs,
+  });
   expressionPickerViewType = tmp4.expressionPickerViewType;
   const prop = tmp4.expressionPickerTabStrings;
   const items = [channel];
@@ -51,9 +65,12 @@ const memoResult = importAllResult.memo(function ExpressionPicker(expressionType
     pageWidth: 0,
     defaultIndex: tmp4.expressionPickerSelectedIndex,
     onSetActiveIndex(arg0) {
-      channel(expressionPickerViewType[11]).setKeyboardContext(channel(expressionPickerViewType[12]).KeyboardTypes.EXPRESSION, table[arg0]);
+      channel(expressionPickerViewType[11]).setKeyboardContext(
+        channel(expressionPickerViewType[12]).KeyboardTypes.EXPRESSION,
+        table[arg0],
+      );
     },
-    items: prop.map((id) => ({ id, label: id, page: null }))
+    items: prop.map((id) => ({ id, label: id, page: null })),
   };
   const items2 = [expressionPickerViewType];
   const segmentedControlState = obj.useSegmentedControlState(obj);
@@ -89,7 +106,7 @@ const memoResult = importAllResult.memo(function ExpressionPicker(expressionType
   } else {
     obj1 = {};
   }
-  const items3 = [tmp.expressionPickerContainer, ];
+  const items3 = [tmp.expressionPickerContainer];
   let tmp16 = null != height;
   if (tmp16) {
     const obj2 = { height: null };
@@ -100,11 +117,23 @@ const memoResult = importAllResult.memo(function ExpressionPicker(expressionType
   items3[1] = tmp16;
   const tmp14 = closure_10;
   tmp7Result = channel(expressionPickerViewType[16]);
-  const items4 = [closure_9(View, { style: inPortalKeyboard ? tmp.segmentedControl : tmp.segmentedControlUnpadded, children: closure_9(channel(expressionPickerViewType[17]).SegmentedControl, { state: segmentedControlState }) }), ];
+  const items4 = [
+    closure_9(View, {
+      style: inPortalKeyboard ? tmp.segmentedControl : tmp.segmentedControlUnpadded,
+      children: closure_9(channel(expressionPickerViewType[17]).SegmentedControl, { state: segmentedControlState }),
+    }),
+  ];
   const obj5 = { style: items5, children: null };
   items5 = [tmp.expressionPickerContent, obj1];
   if (expressionPickerViewType === constants.EMOJI) {
-    const obj6 = { bottomSheetIndex: null, bottomSheetRef: null, channel: null, onPressEmoji: null, onBackspace: null, inPortalKeyboard: null };
+    const obj6 = {
+      bottomSheetIndex: null,
+      bottomSheetRef: null,
+      channel: null,
+      onPressEmoji: null,
+      onBackspace: null,
+      inPortalKeyboard: null,
+    };
     obj6[0] = bottomSheetIndex;
     obj6[1] = bottomSheetRef;
     obj6[2] = channel;
@@ -113,7 +142,14 @@ const memoResult = importAllResult.memo(function ExpressionPicker(expressionType
     obj6[5] = inPortalKeyboard;
     let tmp17Result = tmp17(tmp2(tmp3[18]), obj6);
   } else if (expressionPickerViewType === tmp11.GIF) {
-    const obj7 = { bottomSheetRef: null, channelId: null, guildId: null, hideFavorites: null, initialQuery: null, onPressGIF: null };
+    const obj7 = {
+      bottomSheetRef: null,
+      channelId: null,
+      guildId: null,
+      hideFavorites: null,
+      initialQuery: null,
+      onPressGIF: null,
+    };
     obj7[0] = bottomSheetRef;
     ({ id: obj11[1], guild_id: obj11[2] } = channel);
     obj7[3] = flag;
@@ -123,7 +159,14 @@ const memoResult = importAllResult.memo(function ExpressionPicker(expressionType
   } else {
     tmp17Result = null;
     if (expressionPickerViewType === tmp11.STICKER) {
-      const obj8 = { bottomSheetRef: null, bottomSheetIndex: null, channel: null, onPressSticker: null, stickerFormats: null, inPortalKeyboard: null };
+      const obj8 = {
+        bottomSheetRef: null,
+        bottomSheetIndex: null,
+        channel: null,
+        onPressSticker: null,
+        stickerFormats: null,
+        inPortalKeyboard: null,
+      };
       obj8[0] = bottomSheetRef;
       obj8[1] = bottomSheetIndex;
       obj8[2] = channel;

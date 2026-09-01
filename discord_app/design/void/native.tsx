@@ -140,7 +140,8 @@ export const RoleDot = RoleDot.RoleDot;
 export const generateBoxShadowStyle = generateBoxShadowStyle.generateBoxShadowStyle;
 export const EIGHT_DP_ELEVATION_SHADOW_PARAMS = generateBoxShadowStyle.EIGHT_DP_ELEVATION_SHADOW_PARAMS;
 export const FOUR_DP_ELEVATION_SHADOW_PARAMS = generateBoxShadowStyle.FOUR_DP_ELEVATION_SHADOW_PARAMS;
-export const EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS = generateBoxShadowStyle.EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS;
+export const EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS =
+  generateBoxShadowStyle.EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS;
 export const NO_ELEVATION_SHADOW_PARAMS = generateBoxShadowStyle.NO_ELEVATION_SHADOW_PARAMS;
 export const NitroWheel = NitroWheelDefault;
 export const EmptyState = EmptyStateDefault;

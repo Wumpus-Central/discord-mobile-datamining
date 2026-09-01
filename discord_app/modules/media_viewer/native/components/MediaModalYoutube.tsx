@@ -139,8 +139,24 @@ const memoResult = importAllResult.memo((visible) => {
       }
     }
     tmp2Result = tmp2(500);
-    let tmp15 = tmp2Result.isAndroid() ? { nestedScrollEnabled: true, overScrollMode: "never", domStorageEnabled: true, mixedContentMode: "compatibility" } : {};
-    obj = { ref: null, style: null, source: null, baseURL: null, playerState: null, onDataReceived: null, javaScriptEnabled: true, javaScriptCanOpenWindowsAutomatically: true };
+    let tmp15 = tmp2Result.isAndroid()
+      ? {
+          nestedScrollEnabled: true,
+          overScrollMode: "never",
+          domStorageEnabled: true,
+          mixedContentMode: "compatibility",
+        }
+      : {};
+    obj = {
+      ref: null,
+      style: null,
+      source: null,
+      baseURL: null,
+      playerState: null,
+      onDataReceived: null,
+      javaScriptEnabled: true,
+      javaScriptCanOpenWindowsAutomatically: true,
+    };
     obj[0] = ref;
     obj[1] = visible.style;
     let str2 = "";
@@ -161,7 +177,20 @@ const memoResult = importAllResult.memo((visible) => {
     obj1 = { html: null, baseUrl: null };
     const _HermesInternal4 = HermesInternal;
     const _HermesInternal5 = HermesInternal;
-    obj1[0] = "\n<html>\n  <head>\n    <meta name=\"viewport\" content=\"initial-scale=1\">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n    </style>\n    <script>" + "\nconst tag = document.createElement('script');\ntag.setAttribute('src', \"https://www.youtube.com/iframe_api\");\ndocument.head.appendChild(tag);\n\nfunction onYouTubeIframeAPIReady() {\n  window.player = new YT.Player('player', {\n    height:     '100%',\n    width:      '100%',\n    videoId:    '" + youtubeVideoIdFromURI.videoId + "',\n    playerVars: {\n      'playsinline': 1,\n      'fs': 0,\n      'pageType': " + closure_5 + ",\n      " + str2 + "\n      " + combined + "\n      " + str3 + "\n    },\n    events: {\n      'onReady': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onReady', value: window.player.getPlayerState()})\n        );\n      },\n      'onError': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onError', value: e.data})\n        );\n      },\n      'onStateChange': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onStateChange', value: e.data})\n        );\n      }\n    }\n  });\n}\n" + "</script>\n  </head>\n  <body>\n    <div id=\"player\"></div>\n  </body>\n</html>\n";
+    obj1[0] =
+      '\n<html>\n  <head>\n    <meta name="viewport" content="initial-scale=1">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n    </style>\n    <script>' +
+      "\nconst tag = document.createElement('script');\ntag.setAttribute('src', \"https://www.youtube.com/iframe_api\");\ndocument.head.appendChild(tag);\n\nfunction onYouTubeIframeAPIReady() {\n  window.player = new YT.Player('player', {\n    height:     '100%',\n    width:      '100%',\n    videoId:    '" +
+      youtubeVideoIdFromURI.videoId +
+      "',\n    playerVars: {\n      'playsinline': 1,\n      'fs': 0,\n      'pageType': " +
+      closure_5 +
+      ",\n      " +
+      str2 +
+      "\n      " +
+      combined +
+      "\n      " +
+      str3 +
+      "\n    },\n    events: {\n      'onReady': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onReady', value: window.player.getPlayerState()})\n        );\n      },\n      'onError': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onError', value: e.data})\n        );\n      },\n      'onStateChange': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onStateChange', value: e.data})\n        );\n      }\n    }\n  });\n}\n" +
+      '</script>\n  </head>\n  <body>\n    <div id="player"></div>\n  </body>\n</html>\n';
     obj1[1] = closure_7;
     obj[2] = obj1;
     obj[3] = closure_7;

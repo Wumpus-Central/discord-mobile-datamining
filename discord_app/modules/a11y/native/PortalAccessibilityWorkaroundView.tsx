@@ -23,4 +23,4 @@ export default function PortalAccessibilityWorkaroundView(arg0) {
   const merged1 = Object.assign(obj);
   obj.collapsable = false;
   return <_default />;
-};
+}

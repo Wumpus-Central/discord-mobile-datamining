@@ -6,7 +6,9 @@ import BoostedGuildTiers from "../../constants/GuildPowerupsConstants.tsx";
 
 const require = arg1;
 ({ BoostPurchaseIntent: closure_6, GuildPowerupType: error } = BoostedGuildTiers);
-let result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx",
+);
 
 export default function useGuildPowerupOnActivate(arg0, arg1) {
   const _require = arg0;
@@ -32,7 +34,9 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
           } else {
             const diff = tmp14.cost - tmp15;
             const callback = diff;
-            let availableGuildBoostSlots = callback(onToggle[9]).getAvailableGuildBoostSlots(analyticsLocations.boostSlots);
+            let availableGuildBoostSlots = callback(onToggle[9]).getAvailableGuildBoostSlots(
+              analyticsLocations.boostSlots,
+            );
             if (tmp14.type === handleMobileWebRedirectCheckout.LEVEL) {
               PERK = shouldUseMobileWebRedirectCheckout.LEVEL;
             } else {
@@ -56,7 +60,14 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
               handleMobileWebRedirectCheckout(analyticsLocations, tmp.id);
             } else {
               tmp17Result = tmp17(tmp18[13]);
-              obj = { source: null, analyticsLocations: null, guildId: null, onBack: null, onPaymentSuccess: null, onPaymentDismiss: null };
+              obj = {
+                source: null,
+                analyticsLocations: null,
+                guildId: null,
+                onBack: null,
+                onPaymentSuccess: null,
+                onPaymentDismiss: null,
+              };
               obj[0] = { page: "Guild Powerups", section: "Powerup Activation" };
               obj[1] = analyticsLocations;
               obj[2] = tmp.id;
@@ -91,8 +102,16 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
       }
     }, items1),
     isLoading,
-    error
+    error,
   };
-  items1 = [onToggle, arg1, tmp3, stateFromStores, analyticsLocations, shouldUseMobileWebRedirectCheckout, handleMobileWebRedirectCheckout];
+  items1 = [
+    onToggle,
+    arg1,
+    tmp3,
+    stateFromStores,
+    analyticsLocations,
+    shouldUseMobileWebRedirectCheckout,
+    handleMobileWebRedirectCheckout,
+  ];
   return obj;
-};
+}

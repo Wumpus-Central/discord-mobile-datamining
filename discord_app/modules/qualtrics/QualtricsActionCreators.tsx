@@ -25,7 +25,7 @@ function _fetchSurveyDetails() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -133,7 +133,7 @@ function _submitSurveyResponse() {
     c8 = 0;
     c9 = 0;
     c6 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c9 === 2) {
         c9 = 3;
         HermesBuiltin.throwTypeError();
@@ -363,7 +363,7 @@ function _fireSurveyAction() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -393,14 +393,16 @@ function _fireSurveyAction() {
               closure_4 = tmp3;
               closure_3 = tmp5;
               let lib;
-              if ((function shouldFireSurveyAction(closure_0) {
-                let result = c5.shouldAllowSurveyAction();
-                if (result) {
-                  const _Math = Math;
-                  result = callback(_undefined[10]).SURVEY_ACTION_SAMPLE_PERCENTS[closure_0] >= 100 * Math.random();
-                }
-                return result;
-              })(lib)) {
+              if (
+                (function shouldFireSurveyAction(closure_0) {
+                  let result = c5.shouldAllowSurveyAction();
+                  if (result) {
+                    const _Math = Math;
+                    result = callback(_undefined[10]).SURVEY_ACTION_SAMPLE_PERCENTS[closure_0] >= 100 * Math.random();
+                  }
+                  return result;
+                })(lib)
+              ) {
                 obj1 = { action_type: null };
                 obj1[0] = tmp29;
                 if (null != tmp30) {

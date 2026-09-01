@@ -30,7 +30,12 @@ let closure_12 = importAllResult.memo((stateFromStores) => {
     }
   }, []);
   const callback1 = ref.useCallback((nativeEvent) => {
-    const obj = { x: nativeEvent.nativeEvent.layout.x, y: nativeEvent.nativeEvent.layout.y, width: nativeEvent.nativeEvent.layout.width, height: null };
+    const obj = {
+      x: nativeEvent.nativeEvent.layout.x,
+      y: nativeEvent.nativeEvent.layout.y,
+      width: nativeEvent.nativeEvent.layout.width,
+      height: null,
+    };
     height = ref.current;
     if (height == null) {
       height = nativeEvent.nativeEvent.layout.height;
@@ -62,12 +67,15 @@ let closure_12 = importAllResult.memo((stateFromStores) => {
   if (hovering) {
     hovering = renderActiveDivider();
   }
-  const items = [hovering, ];
+  const items = [hovering];
   obj = null;
   if (hideContent) {
     obj = { height: 0.01, opacity: 0 };
   }
-  items[1] = closure_7(closure_3, { style: obj, children: ref.cloneElement(renderRow(item, index, active), { sortHandlers: { onLongPress: callback, onPressOut } }) });
+  items[1] = closure_7(closure_3, {
+    style: obj,
+    children: ref.cloneElement(renderRow(item, index, active), { sortHandlers: { onLongPress: callback, onPressOut } }),
+  });
   obj[2] = items;
   return closure_8(closure_3, obj);
 });
@@ -78,7 +86,23 @@ let closure_13 = importAllResult.memo((listPageY) => {
   const items = [frameHeight, listPageY, wrapperPageY];
   ({ sortRowStyle, renderRow } = listPageY);
   const obj = { style: null, children: null };
-  const items1 = [wrapperPageY.useMemo(() => ({ position: "absolute", left: 0, right: 0, opacity: 0.25, overflow: "hidden", backgroundColor: "transparent", height: frameHeight, marginTop: listPageY - wrapperPageY }), items), sortRowStyle, pan.getLayout()];
+  const items1 = [
+    wrapperPageY.useMemo(
+      () => ({
+        position: "absolute",
+        left: 0,
+        right: 0,
+        opacity: 0.25,
+        overflow: "hidden",
+        backgroundColor: "transparent",
+        height: frameHeight,
+        marginTop: listPageY - wrapperPageY,
+      }),
+      items,
+    ),
+    sortRowStyle,
+    pan.getLayout(),
+  ];
   obj[0] = items1;
   obj[1] = renderRow(rowData.item, rowData.index, true);
   return callback(RN.View, obj);
@@ -113,7 +137,16 @@ class SortableListView extends Component {
       } else {
         const rowData = active.rowData;
         const index = rowData.index;
-        obj = { pan: null, rowData: null, shouldDisplayHovering: null, wrapperLayout: null, frameHeight: null, listPageY: null, wrapperPageY: null, renderRow: null };
+        obj = {
+          pan: null,
+          rowData: null,
+          shouldDisplayHovering: null,
+          wrapperLayout: null,
+          frameHeight: null,
+          listPageY: null,
+          wrapperPageY: null,
+          renderRow: null,
+        };
         obj[0] = tmp3;
         obj[1] = obj.getMemoedRowData(index, rowData.item);
         obj[2] = tmp2 === index;
@@ -188,7 +221,20 @@ class SortableListView extends Component {
       if (tmp3) {
         active = { active: true };
       }
-      obj = { index, disabled: disableSorting, active, hideContent: null, hovering: null, onPressOut: null, onRowActive: null, onRowLayout: null, pan: null, renderActiveDivider: null, renderRow: null, rowData: null };
+      obj = {
+        index,
+        disabled: disableSorting,
+        active,
+        hideContent: null,
+        hovering: null,
+        onPressOut: null,
+        onRowActive: null,
+        onRowLayout: null,
+        pan: null,
+        renderActiveDivider: null,
+        renderRow: null,
+        rowData: null,
+      };
       const active3 = obj.state.active;
       let index1;
       if (active3 != null) {
@@ -371,89 +417,89 @@ class SortableListView extends Component {
     closure_0 = Animated.event(items, { useNativeDriver: false });
     obj1 = {
       onStartShouldSetPanResponder() {
-            return true;
-          },
+        return true;
+      },
       onMoveShouldSetPanResponderCapture(arg0, vy) {
-            const absolute = Math.abs(vy.vy);
-            const absolute1 = Math.abs(vy.vx);
-            if (absolute <= absolute1) {
-              return tmp3;
-            } else {
-              const active = absolute1.state.active;
-              throw active;
-            }
-          },
+        const absolute = Math.abs(vy.vy);
+        const absolute1 = Math.abs(vy.vx);
+        if (absolute <= absolute1) {
+          return tmp3;
+        } else {
+          const active = absolute1.state.active;
+          throw active;
+        }
+      },
       onPanResponderMove(arg0, arg1) {
-            tmp2.moveY = tmp.moveY;
-            lib(arg0, tmp);
-          },
+        tmp2.moveY = tmp.moveY;
+        lib(arg0, tmp);
+      },
       onPanResponderGrant() {
-            tmp2.moved = true;
-            const pan = tmp.state.pan;
-            pan.setOffset(closure_1_11);
-            const pan2 = tmp.state.pan;
-            pan2.setValue(closure_1_11);
-            const props = tmp.props;
-            const onMoveStart = props.onMoveStart;
-            if (onMoveStart != null) {
-              onMoveStart();
-            }
-          },
+        tmp2.moved = true;
+        const pan = tmp.state.pan;
+        pan.setOffset(closure_1_11);
+        const pan2 = tmp.state.pan;
+        pan2.setValue(closure_1_11);
+        const props = tmp.props;
+        const onMoveStart = props.onMoveStart;
+        if (onMoveStart != null) {
+          onMoveStart();
+        }
+      },
       onPanResponderTerminate() {
-            const obj = { active: null, hovering: false, hoverIndex: closure_1_10 };
-            obj.setState(obj);
-          },
+        const obj = { active: null, hovering: false, hoverIndex: closure_1_10 };
+        obj.setState(obj);
+      },
       onPanResponderRelease() {
-            tmp.moved = false;
-            const props = obj.props;
-            const onMoveEnd = props.onMoveEnd;
-            if (onMoveEnd != null) {
-              onMoveEnd();
+        tmp.moved = false;
+        const props = obj.props;
+        const onMoveEnd = props.onMoveEnd;
+        if (onMoveEnd != null) {
+          onMoveEnd();
+        }
+        if (null == obj.state.active) {
+          if (obj.state.hovering) {
+            obj = { hovering: false, hoverIndex: null };
+            obj[1] = closure_1_10;
+            obj.setState(obj);
+          }
+          obj.moveY = null;
+        } else {
+          const index = obj.state.active.rowData.index;
+          if (false === obj.state.hovering) {
+            obj = { active: null, hoverIndex: null };
+            obj[1] = closure_1_10;
+            return obj.setState(obj);
+          } else {
+            const hoverIndex = obj.state.hoverIndex;
+            let diff = hoverIndex;
+            if (hoverIndex > index) {
+              diff = hoverIndex - 1;
             }
-            if (null == obj.state.active) {
-              if (obj.state.hovering) {
-                obj = { hovering: false, hoverIndex: null };
-                obj[1] = closure_1_10;
-                obj.setState(obj);
-              }
-              obj.moveY = null;
-            } else {
-              const index = obj.state.active.rowData.index;
-              if (false === obj.state.hovering) {
-                obj = { active: null, hoverIndex: null };
-                obj[1] = closure_1_10;
-                return obj.setState(obj);
-              } else {
-                const hoverIndex = obj.state.hoverIndex;
-                let diff = hoverIndex;
-                if (hoverIndex > index) {
-                  diff = hoverIndex - 1;
-                }
-                obj1 = lib(5596);
-                const result = obj1.DeprecatedLayoutAnimation({ duration: 0 });
-                const props2 = obj.props;
-                const onRowMoved = props2.onRowMoved;
-                if (onRowMoved != null) {
-                  obj1 = { row: null, from: null, to: null };
-                  obj1[0] = obj.state.active.rowData;
-                  obj1[1] = index;
-                  obj1[2] = diff;
-                  onRowMoved(obj1);
-                }
-                const obj2 = { active: null, hovering: false, hoverIndex: null };
-                obj2[2] = closure_1_10;
-                obj.setState(obj2);
-                const _Math = Math;
-                const bound = Math.max(0, obj.scrollContainerHeight - obj.listLayout.height + tmp16);
-                if (obj.scrollValue > bound) {
-                  const scrollResponder = obj.scrollResponder;
-                  const obj3 = { y: null };
-                  obj3[0] = bound;
-                  scrollResponder.scrollTo(obj3);
-                }
-              }
+            obj1 = lib(5596);
+            const result = obj1.DeprecatedLayoutAnimation({ duration: 0 });
+            const props2 = obj.props;
+            const onRowMoved = props2.onRowMoved;
+            if (onRowMoved != null) {
+              obj1 = { row: null, from: null, to: null };
+              obj1[0] = obj.state.active.rowData;
+              obj1[1] = index;
+              obj1[2] = diff;
+              onRowMoved(obj1);
+            }
+            const obj2 = { active: null, hovering: false, hoverIndex: null };
+            obj2[2] = closure_1_10;
+            obj.setState(obj2);
+            const _Math = Math;
+            const bound = Math.max(0, obj.scrollContainerHeight - obj.listLayout.height + tmp16);
+            if (obj.scrollValue > bound) {
+              const scrollResponder = obj.scrollResponder;
+              const obj3 = { y: null };
+              obj3[0] = bound;
+              scrollResponder.scrollTo(obj3);
             }
           }
+        }
+      },
     };
     tmp2._panResponder = PanResponder.create(obj1);
     return tmp2;
@@ -505,7 +551,8 @@ prototype["render"] = function render() {
   let obj = { ref: this._wrapperRef, style: items, children: null };
   items = [props.wrapperStyles, { flex: 1 }];
   obj = {};
-  ({ contentContainerStyle, header, footer, data, scrollEnabled, keyboardShouldPersistTaps, scrollEventThrottle } = props);
+  ({ contentContainerStyle, header, footer, data, scrollEnabled, keyboardShouldPersistTaps, scrollEventThrottle } =
+    props);
   const merged = Object.assign(this._panResponder.panHandlers);
   obj.ref = this._listRef;
   obj.keyboardShouldPersistTaps = keyboardShouldPersistTaps;
@@ -514,7 +561,11 @@ prototype["render"] = function render() {
   obj.ListHeaderComponent = header;
   obj.ListFooterComponent = footer;
   obj.data = data;
-  ({ handleScroll: obj2.onScroll, handleContentSizeChange: obj2.onContentSizeChange, handleLayout: obj2.onLayout } = this);
+  ({
+    handleScroll: obj2.onScroll,
+    handleContentSizeChange: obj2.onContentSizeChange,
+    handleLayout: obj2.onLayout,
+  } = this);
   let tmp6 = null == this.state.active;
   if (tmp6) {
     tmp6 = false !== scrollEnabled;

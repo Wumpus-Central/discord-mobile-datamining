@@ -15,7 +15,16 @@ let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles(() => {
   let obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
-  obj = { position: "absolute", minWidth: Button.BADGE_SIZE, height: Button.BADGE_SIZE, top: 10, left: 8, flexShrink: 0, flexGrow: 1, zIndex: 100 };
+  obj = {
+    position: "absolute",
+    minWidth: Button.BADGE_SIZE,
+    height: Button.BADGE_SIZE,
+    top: 10,
+    left: 8,
+    flexShrink: 0,
+    flexGrow: 1,
+    zIndex: 100,
+  };
   obj[0] = obj;
   obj = { backgroundColor: ThemesDefault.colors.PANEL_BG };
   obj[1] = obj;
@@ -96,7 +105,7 @@ const forwardRefResult = importAllResult.forwardRef((navigation, ref) => {
   obj.style = tmp2.actionButtonPressable;
   obj1 = { source: tmp9(tmp4[14]), style: obj2 };
   obj2 = { tintColor: tmp2.actionButtonIcon.tintColor };
-  const items3 = [closure_9(closure_5, obj1), ];
+  const items3 = [closure_9(closure_5, obj1)];
   let tmp8Result = null;
   if (stateFromStores > 0) {
     const obj3 = { style: null, children: null };
@@ -114,6 +123,8 @@ const forwardRefResult = importAllResult.forwardRef((navigation, ref) => {
   obj5[0] = closure_9(navigation(stateFromStores[12]).PressableOpacity, obj);
   return closure_9(onPress(stateFromStores[11]), obj5);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorBackIcon.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorBackIcon.tsx",
+);
 
 export const PressableNavigatorBackIcon = forwardRefResult;

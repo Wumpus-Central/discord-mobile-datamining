@@ -13,13 +13,13 @@ obj = {
   },
   parent: null,
   IconComponent: UserCircleIcon.UserCircleIcon,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.ACCOUNT,
   getComponent() {
     return PasswordlessUpsell /* PasswordlessUpsell */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountSetting.tsx");

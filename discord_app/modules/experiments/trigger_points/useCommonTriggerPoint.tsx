@@ -11,11 +11,14 @@ export const useCommonTriggerPoint = function useCommonTriggerPoint(OpenNitroTri
   const _require = OpenNitroTriggerPoint;
   let items = [closure_4];
   const obj = initialize;
-  const items1 = [OpenNitroTriggerPoint, , ];
-  [arr2[1], arr2[2]] = callback(require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
-    const items = [authStore.getAllUserExperimentDescriptors(), authStore.getGuildExperiments()];
-    return items;
-  }), 2);
+  const items1 = [OpenNitroTriggerPoint, ,];
+  [arr2[1], arr2[2]] = callback(
+    require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
+      const items = [authStore.getAllUserExperimentDescriptors(), authStore.getGuildExperiments()];
+      return items;
+    }),
+    2,
+  );
   const effect = React.useEffect(() => {
     OpenNitroTriggerPoint.trigger();
   }, items1);

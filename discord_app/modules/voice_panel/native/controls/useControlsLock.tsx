@@ -10,4 +10,4 @@ export default function useControlsLock(arg0) {
   const items = [first];
   const layoutEffect = first.useLayoutEffect(() => () => closure_2.unlock(), items);
   return first;
-};
+}

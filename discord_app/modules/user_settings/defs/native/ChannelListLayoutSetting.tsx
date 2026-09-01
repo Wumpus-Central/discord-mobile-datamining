@@ -25,7 +25,7 @@ const radio = createToggle.createRadio({
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t.T7G4Y0);
     obj[1] = ChannelListLayoutTypes.ChannelListLayoutTypes.COZY;
-    const items = [obj, ];
+    const items = [obj];
     obj = { label: null, value: null };
     const intl2 = getSystemLocale.intl;
     obj[0] = intl2.string(getSystemLocale.t["7iegX4"]);
@@ -33,7 +33,7 @@ const radio = createToggle.createRadio({
     items[1] = obj;
     return items;
   },
-  usePredicate: useChannelListLayoutPredicate
+  usePredicate: useChannelListLayoutPredicate,
 });
 let obj = {
   useTitle() {
@@ -51,7 +51,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t.T7G4Y0);
     obj[1] = ChannelListLayoutTypes.ChannelListLayoutTypes.COZY;
-    const items = [obj, ];
+    const items = [obj];
     obj = { label: null, value: null };
     const intl2 = getSystemLocale.intl;
     obj[0] = intl2.string(getSystemLocale.t["7iegX4"]);
@@ -59,7 +59,7 @@ let obj = {
     items[1] = obj;
     return items;
   },
-  usePredicate: useChannelListLayoutPredicate
+  usePredicate: useChannelListLayoutPredicate,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ChannelListLayoutSetting.tsx");
 

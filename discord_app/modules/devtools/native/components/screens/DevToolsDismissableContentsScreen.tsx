@@ -33,7 +33,14 @@ function DismissableContentsEmpty() {
 }
 let c4 = importAllResult;
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-let obj = { container: null, contentContainer: null, headerSection: null, search: null, sectionHeader: null, emptyState: null };
+let obj = {
+  container: null,
+  contentContainer: null,
+  headerSection: null,
+  search: null,
+  sectionHeader: null,
+  emptyState: null,
+};
 obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj[0] = obj;
 createCacheKey = { padding: ThemesDefault.space.PX_16 };
@@ -49,41 +56,126 @@ let closure_10 = createCacheKey.createStyles(obj);
 let closure_11 = importAllResult.memo((content) => {
   const label = content.content;
   ({ start, end } = content);
-  ({ isDismissed, handleToggleDismissState } = useToggleDismissibleContentDismissStateDefault(DismissibleContent.DismissibleContent[label]));
+  ({ isDismissed, handleToggleDismissState } = useToggleDismissibleContentDismissStateDefault(
+    DismissibleContent.DismissibleContent[label],
+  ));
   return callback2(TableSwitchRow.TableSwitchRow, { start, end, onValueChange, value, label });
 });
 let closure_12 = importAllResult.memo((arg0) => {
-  ({ dailyCapOverridden, newUserMinAgeRequiredOverridden, forceBountiesSwipeUpNux, initialSearchQuery, onForceBountiesSwipeUpNuxChange, onSearchChange } = arg0);
+  ({
+    dailyCapOverridden,
+    newUserMinAgeRequiredOverridden,
+    forceBountiesSwipeUpNux,
+    initialSearchQuery,
+    onForceBountiesSwipeUpNuxChange,
+    onSearchChange,
+  } = arg0);
   const tmp = callback4();
   let obj = { children: null };
   obj = { style: tmp.headerSection, children: null };
   obj = { title: "Global Overrides", hasIcons: false, children: null };
-  const items = [callback2(TableSwitchRow.TableSwitchRow, { onValueChange: handleDCShownToUser.overrideDismissibleContentFramework, value: dailyCapOverridden, label: "Daily limit", subLabel: "When enabled, bypass the daily limit of dismissible content shown" }), , ];
-  obj1 = { onValueChange: handleDCShownToUser.overrideDismissibleContentFramework, value: dailyCapOverridden, label: "Daily limit", subLabel: "When enabled, bypass the daily limit of dismissible content shown" };
-  items[1] = callback2(TableSwitchRow.TableSwitchRow, { onValueChange: handleDCShownToUser.overrideNewUserMinAgeRequired, value: newUserMinAgeRequiredOverridden, label: "New user account minimum age", subLabel: "When enabled, bypass the minimum age requirement for new user accounts" });
-  items[2] = callback2(TableSwitchRow.TableSwitchRow, { onValueChange: onForceBountiesSwipeUpNuxChange, value: forceBountiesSwipeUpNux, label: "Force bounties swipe-up NUX", subLabel: "When enabled, treat bounties swipe-up NUX as shown so scroll affordances always appear. Reopen the bounties modal after toggling." });
+  const items = [
+    callback2(TableSwitchRow.TableSwitchRow, {
+      onValueChange: handleDCShownToUser.overrideDismissibleContentFramework,
+      value: dailyCapOverridden,
+      label: "Daily limit",
+      subLabel: "When enabled, bypass the daily limit of dismissible content shown",
+    }),
+    ,
+  ];
+  obj1 = {
+    onValueChange: handleDCShownToUser.overrideDismissibleContentFramework,
+    value: dailyCapOverridden,
+    label: "Daily limit",
+    subLabel: "When enabled, bypass the daily limit of dismissible content shown",
+  };
+  items[1] = callback2(TableSwitchRow.TableSwitchRow, {
+    onValueChange: handleDCShownToUser.overrideNewUserMinAgeRequired,
+    value: newUserMinAgeRequiredOverridden,
+    label: "New user account minimum age",
+    subLabel: "When enabled, bypass the minimum age requirement for new user accounts",
+  });
+  items[2] = callback2(TableSwitchRow.TableSwitchRow, {
+    onValueChange: onForceBountiesSwipeUpNuxChange,
+    value: forceBountiesSwipeUpNux,
+    label: "Force bounties swipe-up NUX",
+    subLabel:
+      "When enabled, treat bounties swipe-up NUX as shown so scroll affordances always appear. Reopen the bounties modal after toggling.",
+  });
   obj[2] = items;
   obj[1] = callback3(TableRowGroupTitle.TableRowGroup, obj);
-  const items1 = [callback2(View, obj), , , ];
+  const items1 = [callback2(View, obj), , ,];
   const obj3 = { style: tmp.headerSection, children: null };
   const obj4 = { title: "Bulk actions", hasIcons: true, children: null };
-  const obj2 = { onValueChange: handleDCShownToUser.overrideNewUserMinAgeRequired, value: newUserMinAgeRequiredOverridden, label: "New user account minimum age", subLabel: "When enabled, bypass the minimum age requirement for new user accounts" };
-  const items2 = [callback2(TableRowInner.TableRow, { label: "Clear all dismissed dismissible contents", onPress: updateUserGuildSettings.clearDismissedContents, icon: callback2(TrashIcon.TrashIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) }), , ];
-  const obj5 = { label: "Clear all dismissed dismissible contents", onPress: updateUserGuildSettings.clearDismissedContents, icon: callback2(TrashIcon.TrashIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) };
-  items2[1] = callback2(TableRowInner.TableRow, { label: "Clear all guild dismissed dismissible contents", onPress: updateUserGuildSettings.clearGuildDismissedContents, icon: callback2(TrashIcon.TrashIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) });
-  const obj6 = { label: "Clear all guild dismissed dismissible contents", onPress: updateUserGuildSettings.clearGuildDismissedContents, icon: callback2(TrashIcon.TrashIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) };
-  items2[2] = callback2(TableRowInner.TableRow, { label: "Dismiss all dismissible contents", onPress: updateUserGuildSettings.checkAllDismissedContents, icon: callback2(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) });
+  const obj2 = {
+    onValueChange: handleDCShownToUser.overrideNewUserMinAgeRequired,
+    value: newUserMinAgeRequiredOverridden,
+    label: "New user account minimum age",
+    subLabel: "When enabled, bypass the minimum age requirement for new user accounts",
+  };
+  const items2 = [
+    callback2(TableRowInner.TableRow, {
+      label: "Clear all dismissed dismissible contents",
+      onPress: updateUserGuildSettings.clearDismissedContents,
+      icon: callback2(TrashIcon.TrashIcon, {}),
+      trailing: callback2(TableRowArrow.TableRowArrow, {}),
+    }),
+    ,
+  ];
+  const obj5 = {
+    label: "Clear all dismissed dismissible contents",
+    onPress: updateUserGuildSettings.clearDismissedContents,
+    icon: callback2(TrashIcon.TrashIcon, {}),
+    trailing: callback2(TableRowArrow.TableRowArrow, {}),
+  };
+  items2[1] = callback2(TableRowInner.TableRow, {
+    label: "Clear all guild dismissed dismissible contents",
+    onPress: updateUserGuildSettings.clearGuildDismissedContents,
+    icon: callback2(TrashIcon.TrashIcon, {}),
+    trailing: callback2(TableRowArrow.TableRowArrow, {}),
+  });
+  const obj6 = {
+    label: "Clear all guild dismissed dismissible contents",
+    onPress: updateUserGuildSettings.clearGuildDismissedContents,
+    icon: callback2(TrashIcon.TrashIcon, {}),
+    trailing: callback2(TableRowArrow.TableRowArrow, {}),
+  };
+  items2[2] = callback2(TableRowInner.TableRow, {
+    label: "Dismiss all dismissible contents",
+    onPress: updateUserGuildSettings.checkAllDismissedContents,
+    icon: callback2(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}),
+    trailing: callback2(TableRowArrow.TableRowArrow, {}),
+  });
   obj4[2] = items2;
   obj3[1] = callback3(TableRowGroupTitle.TableRowGroup, obj4);
   items1[1] = callback2(View, obj3);
-  const obj7 = { label: "Dismiss all dismissible contents", onPress: updateUserGuildSettings.checkAllDismissedContents, icon: callback2(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) };
-  items1[2] = callback2(View, { style: tmp.search, children: callback2(SearchField.SearchField, { size: "md", defaultValue: initialSearchQuery, onChange: onSearchChange }) });
-  items1[3] = callback2(Text.Text, { style: tmp.sectionHeader, variant: "text-sm/semibold", color: "text-default", children: "Dismissible Contents" });
+  const obj7 = {
+    label: "Dismiss all dismissible contents",
+    onPress: updateUserGuildSettings.checkAllDismissedContents,
+    icon: callback2(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}),
+    trailing: callback2(TableRowArrow.TableRowArrow, {}),
+  };
+  items1[2] = callback2(View, {
+    style: tmp.search,
+    children: callback2(SearchField.SearchField, {
+      size: "md",
+      defaultValue: initialSearchQuery,
+      onChange: onSearchChange,
+    }),
+  });
+  items1[3] = callback2(Text.Text, {
+    style: tmp.sectionHeader,
+    variant: "text-sm/semibold",
+    color: "text-default",
+    children: "Dismissible Contents",
+  });
   obj[0] = items1;
   return callback3(closure_9, obj);
 });
 let obj5 = { marginVertical: ThemesDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDismissableContentsScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsDismissableContentsScreen.tsx",
+);
 
 export default function DevToolsDismissableContentsScreen() {
   const tmp = callback4();
@@ -93,50 +185,59 @@ export default function DevToolsDismissableContentsScreen() {
   let tmp2 = useSafeAreaInsetsDefault();
   [dependencyMap, tmp5] = callback(obj.useLocalStorageState("devtools-dc-search", ""), 2);
   callback = tmp5;
-  first = callback(first.useState(() => {
-    let str = closure_2;
-    if (closure_2 == null) {
-      str = "";
-    }
-    return str;
-  }), 1)[0];
-  const tmp7 = callback(first.useState(() => {
-    let str = closure_2;
-    if (closure_2 == null) {
-      str = "";
-    }
-    const items = [];
-    for (const key10013 in ref(closure_1_2[7]).DismissibleContent) {
-      let tmp9 = key10013;
-      let isNaNResult = tmp;
-      if (!tmp) {
-        let tmp2 = ref;
-        let tmp3 = closure_1_2;
-        let tmp4 = ref(closure_1_2[20]);
-        let formatted = str.toLowerCase();
-        isNaNResult = tmp4(formatted, key10013.toLowerCase());
+  first = callback(
+    first.useState(() => {
+      let str = closure_2;
+      if (closure_2 == null) {
+        str = "";
       }
-      if (isNaNResult) {
-        let _isNaN = isNaN;
-        let _Number = Number;
-        isNaNResult = isNaN(Number(key10013));
+      return str;
+    }),
+    1,
+  )[0];
+  const tmp7 = callback(
+    first.useState(() => {
+      let str = closure_2;
+      if (closure_2 == null) {
+        str = "";
       }
-      if (!isNaNResult) {
+      const items = [];
+      for (const key10013 in ref(closure_1_2[7]).DismissibleContent) {
+        let tmp9 = key10013;
+        let isNaNResult = tmp;
+        if (!tmp) {
+          let tmp2 = ref;
+          let tmp3 = closure_1_2;
+          let tmp4 = ref(closure_1_2[20]);
+          let formatted = str.toLowerCase();
+          isNaNResult = tmp4(formatted, key10013.toLowerCase());
+        }
+        if (isNaNResult) {
+          let _isNaN = isNaN;
+          let _Number = Number;
+          isNaNResult = isNaN(Number(key10013));
+        }
+        if (!isNaNResult) {
+          continue;
+        } else {
+          let arr = items.push(key10013);
+          continue;
+        }
         continue;
-      } else {
-        let arr = items.push(key10013);
-        continue;
       }
-      continue;
-    }
-    const sorted = items.sort((localeCompare) => localeCompare.localeCompare(arg1));
-    return items;
-  }), 2);
+      const sorted = items.sort((localeCompare) => localeCompare.localeCompare(arg1));
+      return items;
+    }),
+    2,
+  );
   const first1 = tmp7[0];
   closure_6 = tmp7[1];
   obj1 = ref(589);
   let items = [closure_6];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ dailyCapOverridden: closure_6.dailyCapOverridden, newUserMinAgeRequiredOverridden: closure_6.newUserMinAgeRequiredOverridden }));
+  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({
+    dailyCapOverridden: closure_6.dailyCapOverridden,
+    newUserMinAgeRequiredOverridden: closure_6.newUserMinAgeRequiredOverridden,
+  }));
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
   const newUserMinAgeRequiredOverridden = stateFromStoresObject.newUserMinAgeRequiredOverridden;
   let tmp4 = callback(obj.useLocalStorageState("devtools-dc-search", ""), 2);
@@ -199,14 +300,42 @@ export default function DevToolsDismissableContentsScreen() {
     closure_1.current = nativeEvent.nativeEvent.contentOffset.y;
   }, []);
   const items4 = [first1.length];
-  const memo = first.useMemo(() => dailyCapOverridden(callback1, { dailyCapOverridden, newUserMinAgeRequiredOverridden, forceBountiesSwipeUpNux: true === first2, initialSearchQuery: first, onForceBountiesSwipeUpNuxChange: callback, onSearchChange: callback2 }), items3);
+  const memo = first.useMemo(
+    () =>
+      dailyCapOverridden(callback1, {
+        dailyCapOverridden,
+        newUserMinAgeRequiredOverridden,
+        forceBountiesSwipeUpNux: true === first2,
+        initialSearchQuery: first,
+        onForceBountiesSwipeUpNuxChange: callback,
+        onSearchChange: callback2,
+      }),
+    items3,
+  );
   obj = { style: tmp.container, children: null };
   callback4 = first.useCallback((content) => {
     const index = content.index;
-    return dailyCapOverridden(callback, { content: content.item, start: 0 === index, end: index === first1.length - 1 });
+    return dailyCapOverridden(callback, {
+      content: content.item,
+      start: 0 === index,
+      end: index === first1.length - 1,
+    });
   }, items4);
-  obj = { ref, data: first1, contentContainerStyle: null, keyboardShouldPersistTaps: "handled", keyboardDismissMode: "on-drag", automaticallyAdjustKeyboardInsets: true, ListHeaderComponent: null, ListEmptyComponent: null, keyExtractor: null, renderItem: null, onScroll: null, scrollEventThrottle: 16 };
-  const items5 = [tmp.contentContainer, ];
+  obj = {
+    ref,
+    data: first1,
+    contentContainerStyle: null,
+    keyboardShouldPersistTaps: "handled",
+    keyboardDismissMode: "on-drag",
+    automaticallyAdjustKeyboardInsets: true,
+    ListHeaderComponent: null,
+    ListEmptyComponent: null,
+    keyExtractor: null,
+    renderItem: null,
+    onScroll: null,
+    scrollEventThrottle: 16,
+  };
+  const items5 = [tmp.contentContainer];
   obj1 = { paddingBottom: tmp2.bottom + ThemesDefault.space.PX_16 };
   items5[1] = obj1;
   obj[2] = items5;
@@ -219,4 +348,4 @@ export default function DevToolsDismissableContentsScreen() {
   obj[10] = callback3;
   obj[1] = dailyCapOverridden(ref(8105).FlashList, obj);
   return dailyCapOverridden(first1, obj);
-};
+}

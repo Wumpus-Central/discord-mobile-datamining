@@ -52,16 +52,20 @@ export const useQuestStatusChanged = function useQuestStatusChanged(adContentIds
   const adCreativeType = adContentIds.adCreativeType;
   const items = [closure_4];
   const items1 = [adContentIds, adCreativeType];
-  stateFromStores = adContentIds(stateFromStores[3]).useStateFromStores(items, () => {
-    let quest = null;
-    if (adCreativeType === adContentIds(stateFromStores[2]).AdCreativeType.QUEST) {
-      quest = null;
-      if (1 === adContentIds.length) {
-        quest = closure_1_4.getQuest(tmp2[0]);
+  stateFromStores = adContentIds(stateFromStores[3]).useStateFromStores(
+    items,
+    () => {
+      let quest = null;
+      if (adCreativeType === adContentIds(stateFromStores[2]).AdCreativeType.QUEST) {
+        quest = null;
+        if (1 === adContentIds.length) {
+          quest = closure_1_4.getQuest(tmp2[0]);
+        }
       }
-    }
-    return quest;
-  }, items1);
+      return quest;
+    },
+    items1,
+  );
   const items2 = [stateFromStores];
   const memo = React.useMemo(() => {
     let questStatus = null;

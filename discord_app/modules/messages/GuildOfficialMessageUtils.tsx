@@ -17,13 +17,17 @@ function useCanManageGuildOfficialMessages(arg0, arg1, location) {
   let obj = initialize;
   const items = [closure_3];
   const items1 = [arg0];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    let guild = null;
-    if (null != closure_0) {
-      guild = closure_1_3.getGuild(tmp);
-    }
-    return guild;
-  }, items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let guild = null;
+      if (null != closure_0) {
+        guild = closure_1_3.getGuild(tmp);
+      }
+      return guild;
+    },
+    items1,
+  );
   obj = { guildId: arg0, location };
   let enabled = null != stateFromStores;
   if (enabled) {
@@ -39,14 +43,23 @@ function useCanManageGuildOfficialMessages(arg0, arg1, location) {
   const items2 = [closure_4];
   const items3 = [arg1];
   if (enabled) {
-    enabled = tmp2Result.useStateFromStores(items2, () => closure_1_4.can(closure_1_9.MANAGE_OFFICIAL_MESSAGES, closure_0), items3);
+    enabled = tmp2Result.useStateFromStores(
+      items2,
+      () => closure_1_4.can(closure_1_9.MANAGE_OFFICIAL_MESSAGES, closure_0),
+      items3,
+    );
   }
   return enabled;
 }
 ({ ChannelTypes: closure_6, GuildFeatures: error, MessageFlags: closure_8, Permissions: c9 } = ME);
 const result = require("set").fileFinishedImporting("modules/messages/GuildOfficialMessageUtils.tsx");
 
-export const getAccessibleGuildOfficialTextColor = function getAccessibleGuildOfficialTextColor(officialMessageColor, merged, arg2, arg3) {
+export const getAccessibleGuildOfficialTextColor = function getAccessibleGuildOfficialTextColor(
+  officialMessageColor,
+  merged,
+  arg2,
+  arg3,
+) {
   let num = arg2;
   if (arg2 === undefined) {
     num = 1;
@@ -84,7 +97,10 @@ export function showGuildOfficialMessageTextColor(officialMessageStyle) {
   }
   return tmp;
 }
-export const isGuildOfficialMessagesEnabled = function isGuildOfficialMessagesEnabled(guild, GuildSettingsModalLanding) {
+export const isGuildOfficialMessagesEnabled = function isGuildOfficialMessagesEnabled(
+  guild,
+  GuildSettingsModalLanding,
+) {
   let enabled = null != guild;
   if (enabled) {
     const features = guild.features;
@@ -104,13 +120,17 @@ export const useIsGuildOfficialMessagesEnabled = function useIsGuildOfficialMess
   let obj = initialize;
   const items = [closure_3];
   const items1 = [id];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    let guild = null;
-    if (null != closure_0) {
-      guild = closure_1_3.getGuild(tmp);
-    }
-    return guild;
-  }, items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let guild = null;
+      if (null != closure_0) {
+        guild = closure_1_3.getGuild(tmp);
+      }
+      return guild;
+    },
+    items1,
+  );
   obj = { guildId: id, location: useGuildActionRows };
   let enabled = null != stateFromStores;
   if (enabled) {
@@ -141,7 +161,11 @@ export const canManageGuildOfficialMessages = function canManageGuildOfficialMes
   return enabled;
 };
 export { useCanManageGuildOfficialMessages };
-export const useCanToggleGuildOfficialMessages = function useCanToggleGuildOfficialMessages(message, channel, LongPressMessageActionSheet) {
+export const useCanToggleGuildOfficialMessages = function useCanToggleGuildOfficialMessages(
+  message,
+  channel,
+  LongPressMessageActionSheet,
+) {
   const guild_id = channel.guild_id;
   const tmpResult = useCanManageGuildOfficialMessages(guild_id, channel, LongPressMessageActionSheet);
   let tmp3 = !tmpResult;
@@ -167,7 +191,11 @@ export const useCanToggleGuildOfficialMessages = function useCanToggleGuildOffic
     }
   }
 };
-export const canSendGuildOfficialMessages = function canSendGuildOfficialMessages(throwTypeErrorResult, throwTypeErrorResult2, _sendMessage) {
+export const canSendGuildOfficialMessages = function canSendGuildOfficialMessages(
+  throwTypeErrorResult,
+  throwTypeErrorResult2,
+  _sendMessage,
+) {
   let enabled = null != throwTypeErrorResult;
   if (enabled) {
     const features = throwTypeErrorResult.features;
@@ -186,7 +214,8 @@ export const canSendGuildOfficialMessages = function canSendGuildOfficialMessage
   if (enabled) {
     let isActiveChannelOrUnarchivableThread = null != throwTypeErrorResult2 && !throwTypeErrorResult2.isPrivate();
     if (isActiveChannelOrUnarchivableThread) {
-      isActiveChannelOrUnarchivableThread = useCanUnarchiveThread.getIsActiveChannelOrUnarchivableThread(throwTypeErrorResult2);
+      isActiveChannelOrUnarchivableThread =
+        useCanUnarchiveThread.getIsActiveChannelOrUnarchivableThread(throwTypeErrorResult2);
       const obj3 = useCanUnarchiveThread;
     }
     if (isActiveChannelOrUnarchivableThread) {

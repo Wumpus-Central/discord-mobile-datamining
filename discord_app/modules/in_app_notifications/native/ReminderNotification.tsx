@@ -22,8 +22,11 @@ function NotificationAvatar(arg0) {
   const tmp = callback3();
   obj = { style: tmp.avatarContainer, children: null };
   obj = { user, guildId, size: Button.AvatarSizes.NORMAL, cutout: obj };
-  const items = [callback(Button.Avatar, obj), ];
-  obj = { style: tmp.cutoutIconContainer, children: callback(ClockIcon.ClockIcon, { size: "xs", color: ThemesDefault.colors.ICON_SUBTLE }) };
+  const items = [callback(Button.Avatar, obj)];
+  obj = {
+    style: tmp.cutoutIconContainer,
+    children: callback(ClockIcon.ClockIcon, { size: "xs", color: ThemesDefault.colors.ICON_SUBTLE }),
+  };
   items[1] = callback(View, obj);
   obj[1] = items;
   return callback2(View, obj);
@@ -53,10 +56,18 @@ function NotificationBody(channel) {
     obj[2] = stateFromStores;
     tmp10 = callback(LocationTextDefault, obj);
   }
-  const items2 = [tmp10, ];
+  const items2 = [tmp10];
   if (!hasPreviewableMedia) {
     if (null == message.poll) {
-      obj = { channel: null, message: null, color: "text-default", layout: null, variant: null, muted: false, lineClamp: null };
+      obj = {
+        channel: null,
+        message: null,
+        color: "text-default",
+        layout: null,
+        variant: null,
+        muted: false,
+        lineClamp: null,
+      };
       obj[0] = channel;
       obj[1] = message;
       obj[3] = tmp(4171).ChannelListLayoutTypes.COZY;
@@ -73,9 +84,17 @@ function NotificationBody(channel) {
   tmp14 = callback(NativeMessagePreviewContentDefault, obj2);
 }
 let c3 = importAllResult;
-({ IN_APP_NOTIFICATION_MAX_HEIGHT: error, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_8, RIGHT_ACCESSORY_LEFT_MARGIN } = set);
+({
+  IN_APP_NOTIFICATION_MAX_HEIGHT: error,
+  NOTIFICATION_PREVIEW_LINE_CLAMP: closure_8,
+  RIGHT_ACCESSORY_LEFT_MARGIN,
+} = set);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-let closure_13 = createCacheKey.createStyles({ cutoutIconContainer: { position: "absolute", right: 0, bottom: 0 }, avatarContainer: { position: "relative" }, rightAccessoryContainer: { marginLeft: RIGHT_ACCESSORY_LEFT_MARGIN } });
+let closure_13 = createCacheKey.createStyles({
+  cutoutIconContainer: { position: "absolute", right: 0, bottom: 0 },
+  avatarContainer: { position: "relative" },
+  rightAccessoryContainer: { marginLeft: RIGHT_ACCESSORY_LEFT_MARGIN },
+});
 let obj = { direction: require("Button").CutoutDirection.BOTTOM_RIGHT, radius: 10, inset: -2 };
 let closure_16 = importAllResult.memo((message) => {
   message = message.message;
@@ -115,6 +134,13 @@ export default importAllResult.memo(function ReminderNotification(notification) 
     obj = { message_id: savedMessage.saveData.messageId, message_author_id: author.id, notification_type: "IN_APP" };
     closure_1_1(closure_1_2[24]).track(closure_1_9.FOR_LATER_REMINDER_NOTIFICATION_CLICKED, obj);
   }, items);
-  obj = { icon: callback(NotificationAvatar, obj), header: memo, onPress: callback, notification, rightAccessory: callback(closure_16, { message }), children: callback(NotificationBody, { channel, message }) };
+  obj = {
+    icon: callback(NotificationAvatar, obj),
+    header: memo,
+    onPress: callback,
+    notification,
+    rightAccessory: callback(closure_16, { message }),
+    children: callback(NotificationBody, { channel, message }),
+  };
   return callback(notification(10255).NotificationPressable, obj);
 });

@@ -58,14 +58,18 @@ function getCommandOptionComponents(option) {
               obj[1] = id;
               channel(closure_2_3[20])(obj);
             },
-            children: null
+            children: null,
           };
           const items = [closure_1_21, channel(closure_1_3[21]).getUserTag(user, { decoration: "never" })];
           obj[2] = items;
           return closure_1_23(user(closure_1_3[18]).LegacyText, obj, "optionValue-" + user.name);
         }
         function getCommandValueText(intl) {
-          return closure_1_22(iter(closure_1_3[22]).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: intl }, "optionValue-" + iter.name);
+          return closure_1_22(
+            iter(closure_1_3[22]).Text,
+            { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: intl },
+            "optionValue-" + iter.name,
+          );
         }
         const type = iter.type;
         if (tmp6(1955).ApplicationCommandOptionType.USER === type) {
@@ -91,7 +95,11 @@ function getCommandOptionComponents(option) {
         } else {
           function getRoleComponent(role) {
             const items = [closure_1_21, role.name];
-            return closure_1_23(iter(closure_1_3[18]).LegacyText, { style: styles.commandOptionMentionText, children: items }, "optionValue-" + iter.name);
+            return closure_1_23(
+              iter(closure_1_3[18]).LegacyText,
+              { style: styles.commandOptionMentionText, children: items },
+              "optionValue-" + iter.name,
+            );
           }
           if (tmp6(1955).ApplicationCommandOptionType.ROLE === type) {
             const value = iter.value;
@@ -168,7 +176,13 @@ function getCommandOptionComponents(option) {
       return items;
     }
   }
-  items.push(callback(React.Fragment, { children: callback(iter(1297).LegacyText, { children: combined }, "optionKey-" + iter.name) }, text));
+  items.push(
+    callback(
+      React.Fragment,
+      { children: callback(iter(1297).LegacyText, { children: combined }, "optionKey-" + iter.name) },
+      text,
+    ),
+  );
   if (null != iter.options) {
     let options;
     if (commandOptionSpec != null) {
@@ -183,7 +197,16 @@ function getCommandOptionComponents(option) {
     while (iter2 !== undefined) {
       let tmp42 = items;
       let tmp43 = getCommandOptionComponents;
-      let obj2 = { option: null, channel: null, guild: null, messageId: null, parentOptionName: null, commandOptionSpec: null, styles: null, analyticsLocations: null };
+      let obj2 = {
+        option: null,
+        channel: null,
+        guild: null,
+        messageId: null,
+        parentOptionName: null,
+        commandOptionSpec: null,
+        styles: null,
+        analyticsLocations: null,
+      };
       obj2[0] = nextResult;
       obj2[1] = channel;
       obj2[2] = guild;
@@ -195,10 +218,12 @@ function getCommandOptionComponents(option) {
       items = items.concat(getCommandOptionComponents(obj2));
       continue;
     }
-    fromEntriesResult = Object.fromEntries(options.map((name) => {
-      const items = [name.name, name];
-      return items;
-    }));
+    fromEntriesResult = Object.fromEntries(
+      options.map((name) => {
+        const items = [name.name, name];
+        return items;
+      }),
+    );
   }
   return items;
 }
@@ -342,16 +367,20 @@ function CommandContentContainer(channelId) {
   let obj = channelId(data[26]);
   let items = [analyticsLocations, guild];
   const items1 = [channelId];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    channel = analyticsLocations.getChannel(channelId);
-    const obj = { channel, guild: null };
-    let guild_id;
-    if (channel != null) {
-      guild_id = channel.guild_id;
-    }
-    obj[1] = guild.getGuild(guild_id);
-    return obj;
-  }, items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => {
+      channel = analyticsLocations.getChannel(channelId);
+      const obj = { channel, guild: null };
+      let guild_id;
+      if (channel != null) {
+        guild_id = channel.guild_id;
+      }
+      obj[1] = guild.getGuild(guild_id);
+      return obj;
+    },
+    items1,
+  );
   channel = stateFromStoresObject.channel;
   guild = stateFromStoresObject.guild;
   let application_command = data.application_command;
@@ -372,7 +401,12 @@ function CommandContentContainer(channelId) {
   let tmp7 = author(data[27])(obj);
   processColorStringsArray = channelId(data[29]).useProcessColorStringsArray(author.colorStrings);
   const tmp4Result1 = channelId(data[29]);
-  closure_14 = channelId(data[29]).useIsRoleStyleAndRoleColorsEligibleForERC(guildId, user.id, stateFromStores, processColorStringsArray);
+  closure_14 = channelId(data[29]).useIsRoleStyleAndRoleColorsEligibleForERC(
+    guildId,
+    user.id,
+    stateFromStores,
+    processColorStringsArray,
+  );
   const intl = tmp4(tmp3[24]).intl;
   obj = {
     userHook() {
@@ -385,7 +419,7 @@ function CommandContentContainer(channelId) {
       if (color == null) {
         color = closure_7.commandText.color;
       }
-      const items = [{ color }, ];
+      const items = [{ color }];
       let tmp6 = null != closure_12;
       if (tmp6) {
         obj = { fontFamily: null };
@@ -414,9 +448,9 @@ function CommandContentContainer(channelId) {
       const items = [closure_1_22(tmp, obj, "icon-" + avatarSource.id), ` ${closure_2.username}`];
       obj[2] = items;
       return closure_1_23(channelId(data[22]).Text, obj, "application");
-    }
+    },
   };
-  const items3 = [channel, guild, messageId, , , , , , ];
+  const items3 = [channel, guild, messageId, , , , , ,];
   ({ name: arr4[3], options: arr4[4], application_command: arr4[5] } = data);
   items3[6] = name_localized;
   items3[7] = tmp;
@@ -441,7 +475,16 @@ function CommandContentContainer(channelId) {
       while (iter !== undefined) {
         let tmp7 = combined;
         let tmp8 = closure_1_26;
-        obj = { option: null, channel: null, guild: null, messageId: null, parentOptionName: "", commandOptionSpec: null, styles: null, analyticsLocations: null };
+        obj = {
+          option: null,
+          channel: null,
+          guild: null,
+          messageId: null,
+          parentOptionName: "",
+          commandOptionSpec: null,
+          styles: null,
+          analyticsLocations: null,
+        };
         obj[0] = nextResult;
         let tmp9 = channel;
         obj[1] = channel;
@@ -457,16 +500,34 @@ function CommandContentContainer(channelId) {
         combined = combined.concat(closure_1_26(obj));
         continue;
       }
-      fromEntriesResult = Object.fromEntries(options.map((name) => {
-        const items = [name.name, name];
-        return items;
-      }));
+      fromEntriesResult = Object.fromEntries(
+        options.map((name) => {
+          const items = [name.name, name];
+          return items;
+        }),
+      );
     }
     return combined;
   }, items3);
   obj1 = { children: null };
   const formatResult = intl.format(channelId(data[24]).t["sj/RT9"], obj);
-  const items4 = [callback(channelId(data[22]).Text, { style: tmp.commandText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: intl.format(channelId(data[24]).t["sj/RT9"], obj) }, "commandName-" + data.name), callback(channelId(data[22]).Text, { style: tmp.commandOptionText, variant: "text-md/medium", color: "text-default", children: memo }, "commandOption-" + data.name)];
+  const items4 = [
+    callback(
+      channelId(data[22]).Text,
+      {
+        style: tmp.commandText,
+        variant: "text-md/medium",
+        color: "mobile-text-heading-primary",
+        children: intl.format(channelId(data[24]).t["sj/RT9"], obj),
+      },
+      "commandName-" + data.name,
+    ),
+    callback(
+      channelId(data[22]).Text,
+      { style: tmp.commandOptionText, variant: "text-md/medium", color: "text-default", children: memo },
+      "commandOption-" + data.name,
+    ),
+  ];
   obj1[0] = items4;
   return callback2(channelId(data[32]).Card, obj1);
 }
@@ -485,16 +546,20 @@ function CommandActionsContainer(channelId) {
   let obj = channelId(channel[26]);
   let items = [closure_8, closure_10];
   let items1 = [channelId];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    channel = closure_1_8.getChannel(channelId);
-    const obj = { channel, guild: null };
-    let guild_id;
-    if (channel != null) {
-      guild_id = channel.guild_id;
-    }
-    obj[1] = closure_1_10.getGuild(guild_id);
-    return obj;
-  }, items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => {
+      channel = closure_1_8.getChannel(channelId);
+      const obj = { channel, guild: null };
+      let guild_id;
+      if (channel != null) {
+        guild_id = channel.guild_id;
+      }
+      obj[1] = closure_1_10.getGuild(guild_id);
+      return obj;
+    },
+    items1,
+  );
   channel = stateFromStoresObject.channel;
   guild = stateFromStoresObject.guild;
   let items2 = [data, channel, guild];
@@ -577,13 +642,19 @@ function CommandActionsContainer(channelId) {
       obj.hideActionSheet();
       if (null != data.options) {
         if (tmp3.options.length > 0) {
-          const items = [channelId(tmp[17]).ApplicationCommandOptionType.SUB_COMMAND, channelId(tmp[17]).ApplicationCommandOptionType.SUB_COMMAND_GROUP];
+          const items = [
+            channelId(tmp[17]).ApplicationCommandOptionType.SUB_COMMAND,
+            channelId(tmp[17]).ApplicationCommandOptionType.SUB_COMMAND_GROUP,
+          ];
           if (items.includes(tmp3.options[0].type)) {
             const items1 = [tmp3.options[0].name];
             let options = tmp3.options[0].options;
             let hasItem = null != options && options.length > 0;
             if (hasItem) {
-              const items2 = [tmp4(tmp[17]).ApplicationCommandOptionType.SUB_COMMAND, tmp4(tmp[17]).ApplicationCommandOptionType.SUB_COMMAND_GROUP];
+              const items2 = [
+                tmp4(tmp[17]).ApplicationCommandOptionType.SUB_COMMAND,
+                tmp4(tmp[17]).ApplicationCommandOptionType.SUB_COMMAND_GROUP,
+              ];
               hasItem = items2.includes(options[0].type);
             }
             if (hasItem) {
@@ -634,7 +705,7 @@ function CommandActionsContainer(channelId) {
     let obj2 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
     const intl3 = tmp2(tmp3[24]).intl;
     obj2[2] = intl3.string(tmp2(tmp3[24]).t["3eF5/L"]);
-    const items4 = [callback(tmp2(tmp3[22]).Text, obj2), ];
+    const items4 = [callback(tmp2(tmp3[22]).Text, obj2)];
     let obj3 = { hasIcons: false, children: null };
     obj3[1] = items3.map((children) => callback2(guild.Fragment, { children }, arg1));
     items4[1] = callback(tmp2(tmp3[40]).TableRowGroup, obj3);
@@ -647,13 +718,23 @@ function CommandActionsContainer(channelId) {
 ({ MessageTypes: closure_16, WHITESPACE_RE: closure_17 } = ME);
 ({ CHANNEL_SENTINEL: closure_19, COMMAND_SENTINEL: closure_20, MENTION_SENTINEL: closure_21 } = regExp);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
-createCacheKey = { container: { paddingVertical: 8, paddingHorizontal: 16, gap: 16 }, activityIndicator: { padding: 16 }, applicationIcon: { width: 18, height: 18, borderRadius: 9, alignSelf: "center" }, applicationNameText: { textAlignVertical: "center" }, commandOptionText: { marginTop: 12 }, commandOptionMentionText: null, commandText: null };
+createCacheKey = {
+  container: { paddingVertical: 8, paddingHorizontal: 16, gap: 16 },
+  activityIndicator: { padding: 16 },
+  applicationIcon: { width: 18, height: 18, borderRadius: 9, alignSelf: "center" },
+  applicationNameText: { textAlignVertical: "center" },
+  commandOptionText: { marginTop: 12 },
+  commandOptionMentionText: null,
+  commandText: null,
+};
 createCacheKey = { color: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[5] = createCacheKey;
 createCacheKey[6] = { fontSize: 16, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 let closure_25 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { fontSize: 16, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-let result = require("set").fileFinishedImporting("modules/application_commands/native/ExecutedApplicationCommandPopout.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/application_commands/native/ExecutedApplicationCommandPopout.tsx",
+);
 
 export default function ExecutedCommandPopout(channelId) {
   channelId = channelId.channelId;
@@ -664,7 +745,7 @@ export default function ExecutedCommandPopout(channelId) {
   let obj = channelId(589);
   const items = [closure_11];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_11.getMessage(channelId, messageId));
-  const items1 = [channelId, messageId, ];
+  const items1 = [channelId, messageId];
   let interactionData;
   if (stateFromStores != null) {
     interactionData = stateFromStores.interactionData;
@@ -703,7 +784,16 @@ export default function ExecutedCommandPopout(channelId) {
     interactionData1 = stateFromStores.interactionData;
   }
   if (null != interactionData1) {
-    obj1 = { guildId: null, user: null, channelId: null, messageId: null, author: null, applicationUser: null, data: null, messageType: null };
+    obj1 = {
+      guildId: null,
+      user: null,
+      channelId: null,
+      messageId: null,
+      author: null,
+      applicationUser: null,
+      data: null,
+      messageType: null,
+    };
     obj1[0] = guildId;
     obj1[1] = user;
     obj1[2] = channelId;
@@ -716,7 +806,7 @@ export default function ExecutedCommandPopout(channelId) {
     }
     obj1[6] = interactionData2;
     obj1[7] = messageType;
-    const items2 = [tmp9(CommandContentContainer, obj1), ];
+    const items2 = [tmp9(CommandContentContainer, obj1)];
     const obj2 = { channelId: null, chatInputRef: null, data: null };
     obj2[0] = channelId;
     obj2[1] = chatInputRef;
@@ -741,4 +831,4 @@ export default function ExecutedCommandPopout(channelId) {
   obj[2] = tmp9Result;
   obj[1] = closure_22(channelId(5622).BottomSheet, obj);
   return closure_22(channelId(5953).AnalyticsLocationProvider, obj);
-};
+}

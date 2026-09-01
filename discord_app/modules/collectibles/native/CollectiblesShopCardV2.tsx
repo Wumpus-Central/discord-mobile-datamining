@@ -75,7 +75,10 @@ function CollectiblesShopCardInternalV2(product) {
     obj = { key: "WISHLIST_ERROR", content: c5 };
     obj.open(obj);
   }, items1);
-  trackShopCardClick = require(selectedProduct[17]).useTrackShopCardClick({ product, analyticsLocations: importDefault(tmp3[16])().analyticsLocations });
+  trackShopCardClick = require(selectedProduct[17]).useTrackShopCardClick({
+    product,
+    analyticsLocations: importDefault(tmp3[16])().analyticsLocations,
+  });
   const tmp2Result1 = require(selectedProduct[17]);
   obj1 = { userId: currentUser.id, skuId: selectedProduct.skuId, onAddSuccess: callback, onError: callback1 };
   const wishlistButtonState = require(selectedProduct[18]).useWishlistButtonState(obj1);
@@ -118,10 +121,14 @@ function CollectiblesShopCardInternalV2(product) {
     }
   }, items3);
   const tmp2Result2 = require(selectedProduct[18]);
-  const isProfileFramesEarlyAccessPhase = require(selectedProduct[19]).useIsProfileFramesEarlyAccessPhase("CollectiblesShopCardV2");
+  const isProfileFramesEarlyAccessPhase = require(selectedProduct[19]).useIsProfileFramesEarlyAccessPhase(
+    "CollectiblesShopCardV2",
+  );
   const tmp2Result3 = require(selectedProduct[19]);
   const items4 = [c5];
-  let stateFromStores = require(selectedProduct[20]).useStateFromStores(items4, () => product(selectedProduct[21]).isThemeDark(_undefined.theme));
+  let stateFromStores = require(selectedProduct[20]).useStateFromStores(items4, () =>
+    product(selectedProduct[21]).isThemeDark(_undefined.theme),
+  );
   const tmp2Result4 = require(selectedProduct[20]);
   const items5 = [trackShopCardClick];
   if (unpublishedAt == null) {
@@ -147,7 +154,7 @@ function CollectiblesShopCardInternalV2(product) {
     accessibilityRole: "button",
     accessibilityActions: memo,
     onAccessibilityAction: callback2,
-    children: null
+    children: null,
   };
   items6 = [tmp.card, obj, cardStyle];
   tmp2Result5 = require(selectedProduct[20]);
@@ -163,9 +170,17 @@ function CollectiblesShopCardInternalV2(product) {
     if (null != null) {
       const obj3 = { style: null, children: null };
       obj3[0] = tmp.topRowOverlay;
-      const items7 = [null, ];
+      const items7 = [null];
       if (!tmp17) {
-        const obj4 = { style: null, isWishlisted: null, onPress: null, busy: null, disabled: null, accessibilityHidden: true, onTrackPress: null };
+        const obj4 = {
+          style: null,
+          isWishlisted: null,
+          onPress: null,
+          busy: null,
+          disabled: null,
+          accessibilityHidden: true,
+          onTrackPress: null,
+        };
         obj4[0] = tmp.wishlistButton;
         obj4[1] = isWishlisted;
         obj4[2] = handleToggle;
@@ -181,8 +196,16 @@ function CollectiblesShopCardInternalV2(product) {
     } else {
       tmp25Result = null;
     }
-    const items8 = [tmp25Result, , ];
-    const obj5 = { solidBackground: null, product: null, isPurchased: null, isDisabled: null, disableBundleStaticBackground: null, muteBundleStaticBackground: null, cardWidth: null };
+    const items8 = [tmp25Result, ,];
+    const obj5 = {
+      solidBackground: null,
+      product: null,
+      isPurchased: null,
+      isDisabled: null,
+      disableBundleStaticBackground: null,
+      muteBundleStaticBackground: null,
+      cardWidth: null,
+    };
     obj5[0] = solidBackground;
     obj5[1] = product;
     if (!tmp16) {
@@ -194,7 +217,13 @@ function CollectiblesShopCardInternalV2(product) {
     obj5[5] = muteBundleStaticBackground;
     obj5[6] = cardWidth;
     items8[1] = callback(tmp9(tmp3[32]), obj5);
-    const obj6 = { product: null, collectibleProductState: null, preferVCPrice: null, isDisabled: null, hidePrice: null };
+    const obj6 = {
+      product: null,
+      collectibleProductState: null,
+      preferVCPrice: null,
+      isDisabled: null,
+      hidePrice: null,
+    };
     obj6[0] = product;
     obj6[1] = collectibleProductState;
     obj6[2] = preferVCPrice;
@@ -204,7 +233,7 @@ function CollectiblesShopCardInternalV2(product) {
     obj2[7] = items8;
     return tmp25(tmp2(tmp3[22]).PressableOpacity, obj2);
   } else if (tmp28) {
-    const items9 = [tmp.badgePill, ];
+    const items9 = [tmp.badgePill];
     obj7 = { style: null, accessibilityLabel: null, children: null };
     items9[1] = stateFromStores ? tmp.badgePillDarkMode : tmp.badgePillLightMode;
     obj7[0] = items9;
@@ -221,7 +250,7 @@ function CollectiblesShopCardInternalV2(product) {
     let tmp34Result = tmp36(showWishlistNUXActionSheet, obj7);
     const tmp37 = showWishlistNUXActionSheet;
   } else if (null != badgeOverride) {
-    const items10 = [tmp.badgePill, ];
+    const items10 = [tmp.badgePill];
     const obj9 = { style: null, children: null };
     items10[1] = stateFromStores ? tmp.badgePillDarkMode : tmp.badgePillLightMode;
     obj9[0] = items10;
@@ -229,7 +258,14 @@ function CollectiblesShopCardInternalV2(product) {
     if (stateFromStores) {
       str2 = "text-overlay-dark";
     }
-    const obj10 = { variant: "text-xs/bold", color: null, allowFontScaling: false, style: null, lineClamp: 1, children: null };
+    const obj10 = {
+      variant: "text-xs/bold",
+      color: null,
+      allowFontScaling: false,
+      style: null,
+      lineClamp: 1,
+      children: null,
+    };
     obj10[1] = str2;
     obj10[3] = tmp.badgeOverrideText;
     obj10[5] = badgeOverride;
@@ -277,7 +313,17 @@ function CollectiblesShopCardV2Inner(product) {
   let isPartiallyOwnedBundle;
   closure_6 = undefined;
   let result1;
-  ({ unpublishedAt, solidBackground, preferVCPrice, cardWidth, cardStyle, hideWishlistButton, hidePrice, disableBundleStaticBackground, muteBundleStaticBackground } = product);
+  ({
+    unpublishedAt,
+    solidBackground,
+    preferVCPrice,
+    cardWidth,
+    cardStyle,
+    hideWishlistButton,
+    hidePrice,
+    disableBundleStaticBackground,
+    muteBundleStaticBackground,
+  } = product);
   let obj = require(analyticsLocations[8]);
   defaultVariantIndex = obj.useDefaultVariantIndex(product);
   const selectedProduct = require(analyticsLocations[9]).getSelectedProduct(product, defaultVariantIndex);
@@ -290,12 +336,19 @@ function CollectiblesShopCardV2Inner(product) {
   const callback = collectiblesAnalyticsContext.useCallback(() => {
     let obj = defaultVariantIndex(analyticsLocations[35]);
     obj.hideActionSheet();
-    obj = { product: closure_0, initialVariantIndex: defaultVariantIndex, analyticsLocations, shopAnalyticsContext: collectiblesAnalyticsContext };
+    obj = {
+      product: closure_0,
+      initialVariantIndex: defaultVariantIndex,
+      analyticsLocations,
+      shopAnalyticsContext: collectiblesAnalyticsContext,
+    };
     const result = product(analyticsLocations[36]).openProductDetailsActionSheet(obj);
   }, items);
   const obj3 = require(analyticsLocations[34]);
   const obj4 = collectiblesAnalyticsContext;
-  const isShopCardImpressionMobileEnabled = require(analyticsLocations[37]).useIsShopCardImpressionMobileEnabled("CollectiblesShopCardV2");
+  const isShopCardImpressionMobileEnabled = require(analyticsLocations[37]).useIsShopCardImpressionMobileEnabled(
+    "CollectiblesShopCardV2",
+  );
   const obj5 = require(analyticsLocations[37]);
   const obj6 = require(analyticsLocations[38]);
   const currentUser = require(analyticsLocations[11]).useCurrentUser();
@@ -345,7 +398,22 @@ function CollectiblesShopCardV2Inner(product) {
       return null;
     }
   }
-  obj = { product, onPress: null, collectibleProductState: null, unpublishedAt: null, solidBackground: null, preferVCPrice: null, isDisabled: null, cardWidth: null, cardStyle: null, hideWishlistButton: null, hidePrice: null, isShopCardImpressionEnabled: null, disableBundleStaticBackground: null, muteBundleStaticBackground: null };
+  obj = {
+    product,
+    onPress: null,
+    collectibleProductState: null,
+    unpublishedAt: null,
+    solidBackground: null,
+    preferVCPrice: null,
+    isDisabled: null,
+    cardWidth: null,
+    cardStyle: null,
+    hideWishlistButton: null,
+    hidePrice: null,
+    isShopCardImpressionEnabled: null,
+    disableBundleStaticBackground: null,
+    muteBundleStaticBackground: null,
+  };
   if (onPress == null) {
     onPress = callback;
   }
@@ -380,12 +448,46 @@ let num = 170;
 if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
-let obj = { card: null, topRowOverlay: null, badge: null, badgePill: null, badgeOverrideText: null, badgePillDarkMode: null, badgePillLightMode: null, wishlistButton: null };
-obj = { position: "relative", height: num, width: 150, display: "flex", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+let obj = {
+  card: null,
+  topRowOverlay: null,
+  badge: null,
+  badgePill: null,
+  badgeOverrideText: null,
+  badgePillDarkMode: null,
+  badgePillLightMode: null,
+  wishlistButton: null,
+};
+obj = {
+  position: "relative",
+  height: num,
+  width: 150,
+  display: "flex",
+  borderWidth: 1,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+};
 obj[0] = obj;
-obj[1] = { position: "absolute", top: 6, left: 6, right: 6, zIndex: 2, display: "flex", flexDirection: "row", gap: 4, justifyContent: "space-between", alignItems: "flex-start" };
+obj[1] = {
+  position: "absolute",
+  top: 6,
+  left: 6,
+  right: 6,
+  zIndex: 2,
+  display: "flex",
+  flexDirection: "row",
+  gap: 4,
+  justifyContent: "space-between",
+  alignItems: "flex-start",
+};
 obj[2] = { flexShrink: 1 };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_4, paddingVertical: 1.5, borderRadius: ThemesDefault.radii.round, flexShrink: 1 };
+createCacheKey = {
+  paddingHorizontal: ThemesDefault.space.PX_4,
+  paddingVertical: 1.5,
+  borderRadius: ThemesDefault.radii.round,
+  flexShrink: 1,
+};
 obj[3] = createCacheKey;
 obj[4] = { textTransform: "uppercase" };
 obj[5] = { backgroundColor: ThemesDefault.colors.WHITE };

@@ -9,7 +9,9 @@ const result = set.fileFinishedImporting("modules/soundboard/useGuildIdsToFetchS
 
 export const useGuildIdsToFetchSoundsFor = function useGuildIdsToFetchSoundsFor() {
   const items = [closure_3];
-  stateFromStoresArray = stateFromStoresArray(stateFromStores[3]).useStateFromStoresArray(items, () => guildIds.getGuildIds());
+  stateFromStoresArray = stateFromStoresArray(stateFromStores[3]).useStateFromStoresArray(items, () =>
+    guildIds.getGuildIds(),
+  );
   const obj = stateFromStoresArray(stateFromStores[3]);
   const items1 = [closure_4];
   stateFromStores = stateFromStoresArray(stateFromStores[3]).useStateFromStores(items1, () => sounds.getSounds());

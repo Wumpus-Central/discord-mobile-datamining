@@ -11,16 +11,27 @@ import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 let c3 = importAllResult;
-({ YOU_BAR_SPRING_CONFIG: closure_6, YOU_BAR_LARGE_AVATAR_NAME_MARGIN: error, YOU_BAR_SMALL_AVATAR_NAME_MARGIN: closure_8 } = CONNECTION_BANNER_HEIGHT);
+({
+  YOU_BAR_SPRING_CONFIG: closure_6,
+  YOU_BAR_LARGE_AVATAR_NAME_MARGIN: error,
+  YOU_BAR_SMALL_AVATAR_NAME_MARGIN: closure_8,
+} = CONNECTION_BANNER_HEIGHT);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let obj = { youButton: null, userText: null, placeholder: null };
 obj = { flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.modules.mobile.YOU_BAR_BORDER_RADIUS };
 obj[0] = obj;
 obj[1] = { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.round, height: 16, width: 80 };
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: ThemesDefault.radii.round,
+  height: 16,
+  width: 80,
+};
 obj[2] = createCacheKey;
 let closure_11 = createCacheKey.createStyles(obj);
-let closure_12 = { code: "function YouBarUserTsx1(){const{nameMargin}=this.__closure;return{marginLeft:nameMargin.get()};}" };
+let closure_12 = {
+  code: "function YouBarUserTsx1(){const{nameMargin}=this.__closure;return{marginLeft:nameMargin.get()};}",
+};
 const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
   isQuestRendered = isQuestRendered.isQuestRendered;
   let _require;
@@ -34,7 +45,9 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
   sharedValue = obj1.useSharedValue(isQuestRendered ? closure_8 : closure_7);
   const items1 = [!isQuestRendered, sharedValue];
   const effect = importAllResult.useEffect(() => {
-    const result = sharedValue.set(callback(closure_1_2[9]).withSpring(callback ? closure_1_7 : closure_1_8, closure_1_6));
+    const result = sharedValue.set(
+      callback(closure_1_2[9]).withSpring(callback ? closure_1_7 : closure_1_8, closure_1_6),
+    );
   }, items1);
   class S {
     constructor() {
@@ -55,7 +68,7 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
       obj = { isLargeAvatar: null, onPress: null };
       obj[0] = tmp5;
       obj[1] = isQuestRendered.onAvatarPress;
-      const items2 = [callback(tmp9(15975), obj), ];
+      const items2 = [callback(tmp9(15975), obj)];
       obj1 = { style: null, children: null };
       const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj1[0] = items3;
@@ -70,7 +83,7 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
   }
   obj3 = { style: items4, children: null };
   items4 = [tmp.youButton];
-  const items5 = [callback(sharedValue(15974), { isLarge: !isQuestRendered }), ];
+  const items5 = [callback(sharedValue(15974), { isLarge: !isQuestRendered })];
   const tmp2 = _require;
   const tmp2Result = ReanimatedRexport;
   const items6 = [tmp.userText, animatedStyle, { flexShrink: 1 }];

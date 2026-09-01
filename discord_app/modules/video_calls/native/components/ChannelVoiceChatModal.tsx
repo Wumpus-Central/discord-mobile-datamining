@@ -22,11 +22,21 @@ export default function ChannelVoiceChatModal(channel) {
     str = "";
   }
   const tmp5 = _modDef10661;
-  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5046).StageIcon, { size: "sm" })} render={function render() {
-    let guild_id = channel.guild_id;
-    if (guild_id == null) {
-      guild_id = null;
-    }
-    return closure_1_4(closure_1_1(closure_1_2[6]).Provider, { value: guild_id, children: closure_1_4(closure_1_1(closure_1_2[7]), { channel, inModal: true }) });
-  }} />;
-};
+  return (
+    <tmp5
+      screenKey="StageVoiceChat"
+      title={str}
+      titleIcon={jsx(channel(5046).StageIcon, { size: "sm" })}
+      render={function render() {
+        let guild_id = channel.guild_id;
+        if (guild_id == null) {
+          guild_id = null;
+        }
+        return closure_1_4(closure_1_1(closure_1_2[6]).Provider, {
+          value: guild_id,
+          children: closure_1_4(closure_1_1(closure_1_2[7]), { channel, inModal: true }),
+        });
+      }}
+    />
+  );
+}

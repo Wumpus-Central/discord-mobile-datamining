@@ -8,13 +8,23 @@ import importDefaultResult from "../../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 createCacheKey = { pressableWrapper: null };
-createCacheKey = { justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.modules.button.BORDER_RADIUS_LG };
+createCacheKey = {
+  justifyContent: "center",
+  alignItems: "center",
+  borderRadius: ThemesDefault.modules.button.BORDER_RADIUS_LG,
+};
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let closure_7 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").Pressable);
-let closure_8 = { code: "function VoicePanelAnimatedButtonWrapperTsx1(values){const{offsetFromCenter,withSpring,MODE_CHANGE_PHYSICS,withTiming}=this.__closure;offsetFromCenter.set(values.windowWidth/2-values.targetGlobalOriginX-values.targetWidth/2);return{initialValues:{originX:values.targetOriginX+offsetFromCenter.get(),opacity:0,transform:[{scale:0.5}]},animations:{originX:withSpring(values.targetOriginX,MODE_CHANGE_PHYSICS),opacity:withTiming(1,{duration:100}),transform:[{scale:withSpring(1,MODE_CHANGE_PHYSICS)}]}};}" };
-let closure_9 = { code: "function VoicePanelAnimatedButtonWrapperTsx2(values){const{withSpring,offsetFromCenter,MODE_CHANGE_PHYSICS,withTiming}=this.__closure;return{initialValues:{originX:values.currentOriginX,opacity:1,transform:[{scale:1}]},animations:{originX:withSpring(values.currentOriginX+offsetFromCenter.get(),MODE_CHANGE_PHYSICS),opacity:withTiming(0,{duration:100}),transform:[{scale:withSpring(0.5,MODE_CHANGE_PHYSICS)}]}};}" };
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelAnimatedButtonWrapper.tsx");
+let closure_8 = {
+  code: "function VoicePanelAnimatedButtonWrapperTsx1(values){const{offsetFromCenter,withSpring,MODE_CHANGE_PHYSICS,withTiming}=this.__closure;offsetFromCenter.set(values.windowWidth/2-values.targetGlobalOriginX-values.targetWidth/2);return{initialValues:{originX:values.targetOriginX+offsetFromCenter.get(),opacity:0,transform:[{scale:0.5}]},animations:{originX:withSpring(values.targetOriginX,MODE_CHANGE_PHYSICS),opacity:withTiming(1,{duration:100}),transform:[{scale:withSpring(1,MODE_CHANGE_PHYSICS)}]}};}",
+};
+let closure_9 = {
+  code: "function VoicePanelAnimatedButtonWrapperTsx2(values){const{withSpring,offsetFromCenter,MODE_CHANGE_PHYSICS,withTiming}=this.__closure;return{initialValues:{originX:values.currentOriginX,opacity:1,transform:[{scale:1}]},animations:{originX:withSpring(values.currentOriginX+offsetFromCenter.get(),MODE_CHANGE_PHYSICS),opacity:withTiming(0,{duration:100}),transform:[{scale:withSpring(0.5,MODE_CHANGE_PHYSICS)}]}};}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/voice_panel/native/controls/buttons/VoicePanelAnimatedButtonWrapper.tsx",
+);
 
 export default function AnimatedButtonWrapper(onPressOut) {
   ({ props, onPressIn } = onPressOut);
@@ -65,12 +75,18 @@ export default function AnimatedButtonWrapper(onPressOut) {
     let obj = onPressIn(style[8]);
     if (!obj.isAndroid()) {
       const fn = function t(windowWidth) {
-        const result = store.set(windowWidth.windowWidth / 2 - windowWidth.targetGlobalOriginX - windowWidth.targetWidth / 2);
+        const result = store.set(
+          windowWidth.windowWidth / 2 - windowWidth.targetGlobalOriginX - windowWidth.targetWidth / 2,
+        );
         let obj = { initialValues: null, animations: null };
         obj = { originX: windowWidth.targetOriginX + store.get(), opacity: 0, transform: items };
         items = [{ scale: 0.5 }];
         obj[0] = obj;
-        obj = { originX: closure_1_0(closure_1_2[9]).withSpring(windowWidth.targetOriginX, closure_1_4), opacity: null, transform: null };
+        obj = {
+          originX: closure_1_0(closure_1_2[9]).withSpring(windowWidth.targetOriginX, closure_1_4),
+          opacity: null,
+          transform: null,
+        };
         const obj4 = closure_1_0(closure_1_2[9]);
         obj[1] = closure_1_0(closure_1_2[10]).withTiming(1, { duration: 100 });
         obj1 = { scale: null };
@@ -100,7 +116,11 @@ export default function AnimatedButtonWrapper(onPressOut) {
         obj = { initialValues: obj, animations: null };
         obj = { originX: currentOriginX.currentOriginX, opacity: 1, transform: items };
         items = [{ scale: 1 }];
-        obj = { originX: closure_1_0(closure_1_2[9]).withSpring(currentOriginX.currentOriginX + closure_8.get(), closure_1_4), opacity: null, transform: null };
+        obj = {
+          originX: closure_1_0(closure_1_2[9]).withSpring(currentOriginX.currentOriginX + closure_8.get(), closure_1_4),
+          opacity: null,
+          transform: null,
+        };
         const obj4 = closure_1_0(closure_1_2[9]);
         obj[1] = closure_1_0(closure_1_2[10]).withTiming(0, { duration: 100 });
         obj1 = { scale: null };
@@ -134,4 +154,4 @@ export default function AnimatedButtonWrapper(onPressOut) {
   obj.style = memo3;
   obj.children = children;
   return <height entering={memo1} exiting={memo2} onPress={onPress} onLongPress={onLongPress} disabled={disabled} />;
-};
+}

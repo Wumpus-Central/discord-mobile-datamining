@@ -13,7 +13,14 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { row: null };
-createCacheKey = { position: "absolute", top: ThemesDefault.space.PX_16, left: ThemesDefault.space.PX_16, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  position: "absolute",
+  top: ThemesDefault.space.PX_16,
+  left: ThemesDefault.space.PX_16,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+};
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/lurker_mode/native/ServerPreviewBannerControls.tsx");
@@ -23,10 +30,17 @@ export default function ServerPreviewBannerControls() {
   const callback = React.useCallback(() => {
     callback(table[6]).transitionToGuild(closure_5);
   }, []);
-  obj = { size: "md", variant: "secondary-overlay", icon: registerAssetDefault, onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
+  obj = {
+    size: "md",
+    variant: "secondary-overlay",
+    icon: registerAssetDefault,
+    onPress: callback,
+    accessibilityLabel: null,
+    maxFontSizeMultiplier: 1.5,
+  };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t["13/7kX"]);
   const items = [callback(IconButton.IconButton, obj), callback(ServerPreviewPillDefault, {})];
   obj[1] = items;
   return callback2(View, obj);
-};
+}

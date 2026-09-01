@@ -10,7 +10,7 @@ import { StatusTypes } from "../../../../discord_common/js/shared/Constants.tsx"
 let require = arg1;
 function _reportSessionMeaningfullyOnline() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const callback = tmp3;
     c3 = 1;
     const HTTP = closure_1_0(closure_1_2[6]).HTTP;
@@ -65,20 +65,20 @@ class FriendOnlineTimerManager extends tmp2 {
     applyArgumentsResult.timerId = null;
     applyArgumentsResult.actions = {
       POST_CONNECTION_OPEN() {
-            return applyArgumentsResult.start();
-          },
+        return applyArgumentsResult.start();
+      },
       CONNECTION_RESUMED() {
-            return applyArgumentsResult.start();
-          },
+        return applyArgumentsResult.start();
+      },
       CONNECTION_CLOSED() {
-            return applyArgumentsResult.clear();
-          },
+        return applyArgumentsResult.clear();
+      },
       CONNECTION_INTERRUPTED() {
-            return applyArgumentsResult.clear();
-          },
+        return applyArgumentsResult.clear();
+      },
       SELF_PRESENCE_STORE_UPDATE() {
-            return applyArgumentsResult.start();
-          }
+        return applyArgumentsResult.start();
+      },
     };
     applyArgumentsResult.start = function start() {
       const NotifyFriendsOnComeOnline = applyArgumentsResult(closure_1_2[10]).NotifyFriendsOnComeOnline;
@@ -90,7 +90,7 @@ class FriendOnlineTimerManager extends tmp2 {
         setting = null == applyArgumentsResult.timerId;
       }
       if (setting) {
-        let items = [, ];
+        let items = [,];
         ({ ONLINE: arr[0], STREAMING: arr[1] } = closure_1_7);
         setting = items.includes(closure_1_4.getStatus());
       }
@@ -98,7 +98,7 @@ class FriendOnlineTimerManager extends tmp2 {
         const _setTimeout = setTimeout;
         applyArgumentsResult.timerId = setTimeout(() => {
           closure_0.timerId = null;
-          const items = [, ];
+          const items = [,];
           ({ ONLINE: arr[0], STREAMING: arr[1] } = closure_1_7);
           let hasItem = items.includes(closure_1_4.getStatus());
           if (hasItem) {
@@ -130,9 +130,7 @@ class FriendOnlineTimerManager extends tmp2 {
   }
 }
 const prototype = FriendOnlineTimerManager.prototype;
-prototype["_initialize"] = function _initialize() {
-
-};
+prototype["_initialize"] = function _initialize() {};
 prototype["_terminate"] = function _terminate() {
   this.clear();
 };

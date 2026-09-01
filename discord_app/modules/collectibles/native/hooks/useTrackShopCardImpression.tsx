@@ -14,7 +14,8 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
   const _require = product;
   importDefault = selectedProduct;
   dependencyMap = flag2;
-  const collectiblesAnalyticsContext = require("../../CollectiblesAnalyticsContext.tsx").useCollectiblesAnalyticsContext();
+  const collectiblesAnalyticsContext =
+    require("../../CollectiblesAnalyticsContext.tsx").useCollectiblesAnalyticsContext();
   const analyticsLocations = contextDefault().analyticsLocations;
   const size = useWindowDimensionsDefault();
   const width = size.width;
@@ -37,7 +38,7 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
   const effect = collectiblesAnalyticsContext.useEffect(() => {
     closure_11.current = { windowWidth: width, windowHeight: height };
   }, items);
-  const items1 = [canUseCollectiblesResult, , , , , , ];
+  const items1 = [canUseCollectiblesResult, , , , , ,];
   let sessionId;
   if (collectiblesAnalyticsContext != null) {
     sessionId = collectiblesAnalyticsContext.sessionId;
@@ -72,14 +73,29 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
     }
     let strikeThroughPriceAmountForCollectiblesProduct;
     if (null != product) {
-      strikeThroughPriceAmountForCollectiblesProduct = product(7299).getStrikeThroughPriceAmountForCollectiblesProduct(tmp, closure_7, true);
+      strikeThroughPriceAmountForCollectiblesProduct = product(7299).getStrikeThroughPriceAmountForCollectiblesProduct(
+        tmp,
+        closure_7,
+        true,
+      );
       const obj2 = product(7299);
     }
     let sessionId;
     if (collectiblesAnalyticsContext != null) {
       sessionId = tmp10.sessionId;
     }
-    obj = { collectibles_shop_session_id: sessionId, sku_id: tmp.skuId, display_price: null, display_price_currency: null, display_price_strikethrough: null, position: null, page_category: null, page_section: null, category_position: null, type: "product" };
+    obj = {
+      collectibles_shop_session_id: sessionId,
+      sku_id: tmp.skuId,
+      display_price: null,
+      display_price_currency: null,
+      display_price_strikethrough: null,
+      position: null,
+      page_category: null,
+      page_section: null,
+      category_position: null,
+      type: "product",
+    };
     let amount;
     if (priceForCollectiblesProduct != null) {
       amount = priceForCollectiblesProduct.amount;
@@ -114,7 +130,7 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
     obj[8] = categoryPosition;
     selectedProduct(698).track(analyticsLocations.COLLECTIBLES_TILE_IMPRESSION, obj);
   }, items1);
-  const items2 = [product, selectedProduct, , , , , ];
+  const items2 = [product, selectedProduct, , , , ,];
   let cardId;
   if (collectiblesAnalyticsContext != null) {
     cardId = collectiblesAnalyticsContext.cardId;
@@ -135,7 +151,15 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
   const callback1 = obj5.useCallback(() => {
     let obj = product(8892);
     obj = { name: product(503).ImpressionNames.SHOP_CARD, type: product(503).ImpressionTypes.VIEW, properties: null };
-    obj = { sku_id: selectedProduct.skuId, card_id: null, shop_session_id: null, position_in_section: null, product_sku_ids: null, location_stack: null, discount_source: null };
+    obj = {
+      sku_id: selectedProduct.skuId,
+      card_id: null,
+      shop_session_id: null,
+      position_in_section: null,
+      product_sku_ids: null,
+      location_stack: null,
+      discount_source: null,
+    };
     let cardId;
     if (collectiblesAnalyticsContext != null) {
       cardId = tmp3.cardId;

@@ -25,7 +25,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     setChannelPanelFullscreen: null,
     setChannelPanelOpen: null,
     isChannelOpen: null,
-    setChannelPanelPIP: null
+    setChannelPanelPIP: null,
   };
   let set = new Set();
   obj[4] = new Set();

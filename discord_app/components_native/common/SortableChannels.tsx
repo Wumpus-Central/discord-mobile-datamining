@@ -93,7 +93,7 @@ Row.prototype["render"] = function render() {
       }
     }
   }
-  const items1 = [tmp8, importAllResult.cloneElement(renderItem(rowData.data), tmp3), ];
+  const items1 = [tmp8, importAllResult.cloneElement(renderItem(rowData.data), tmp3)];
   let tmp9 = null;
   if (isAfter) {
     tmp9 = null;
@@ -129,7 +129,16 @@ class SortRow extends Component2 {
       }
       tmp4 = tmp3;
       obj = { style: null };
-      obj = { position: "absolute", left: 0, right: 0, opacity: null, height: null, overflow: "hidden", backgroundColor: "transparent", marginTop: null };
+      obj = {
+        position: "absolute",
+        left: 0,
+        right: 0,
+        opacity: null,
+        height: null,
+        overflow: "hidden",
+        backgroundColor: "transparent",
+        marginTop: null,
+      };
       obj[3] = num;
       obj[4] = layout.frameHeight;
       obj[7] = layout.pageY - global.list.wrapperLayout.pageY;
@@ -142,7 +151,7 @@ class SortRow extends Component2 {
 SortRow.prototype["render"] = function render() {
   const props = this.props;
   const obj = { style: null, children: null };
-  const items = [this.state.style, props.sortRowStyle, ];
+  const items = [this.state.style, props.sortRowStyle];
   const pan = props.list.state.pan;
   ({ rowData, renderItem } = props);
   items[2] = pan.getLayout();
@@ -634,7 +643,7 @@ prototype["createPanResponder"] = function createPanResponder(arg0, arg1, valueX
           obj.moveY = 0;
         }
       }
-    }
+    },
   };
   return closure_5.create(obj);
 };
@@ -659,7 +668,12 @@ prototype["render"] = function render() {
   ({ active, panResponder } = this.state);
   const merged = Object.assign(this.props);
   const merged1 = Object.assign(panResponder.panHandlers);
-  ({ setListRef: obj2.ref, handleScroll: obj2.onScroll, handleContentSizeChange: obj2.onContentSizeChange, handleListLayout: obj2.onLayout } = this);
+  ({
+    setListRef: obj2.ref,
+    handleScroll: obj2.onScroll,
+    handleContentSizeChange: obj2.onContentSizeChange,
+    handleListLayout: obj2.onLayout,
+  } = this);
   let tmp7 = null == active;
   if (tmp7) {
     tmp7 = false !== this.props.scrollEnabled;

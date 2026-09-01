@@ -17,7 +17,8 @@ export default function useGiftingPromotionAssetsReady(asset, asset2) {
   if (asset2 != null) {
     asset1 = asset2.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl1 = useThemeAndReducedMotionAwareAssetUrl.useThemeAndReducedMotionAwareAssetUrl(asset1);
+  const themeAndReducedMotionAwareAssetUrl1 =
+    useThemeAndReducedMotionAwareAssetUrl.useThemeAndReducedMotionAwareAssetUrl(asset1);
   const status2 = usePreloadedAssetDefault(themeAndReducedMotionAwareAssetUrl1).status;
   let tmp8 = "skipped" === status;
   if (!tmp8) {
@@ -30,4 +31,4 @@ export default function useGiftingPromotionAssetsReady(asset, asset2) {
   }
   obj[1] = tmp9;
   return obj;
-};
+}

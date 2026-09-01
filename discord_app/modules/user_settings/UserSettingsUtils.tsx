@@ -28,9 +28,12 @@ let obj = {
     const textDecoder = new TextDecoder("utf-8");
     const binaryReader = new _mod1307.BinaryReader(buf, textDecoder);
     return binaryReader;
-  }
+  },
 };
-obj = { [PRELOADED_USER_SETTINGS]: require("create").PreloadedUserSettings, [FRECENCY_AND_FAVORITES_SETTINGS]: require("create").FrecencyUserSettings };
+obj = {
+  [PRELOADED_USER_SETTINGS]: require("create").PreloadedUserSettings,
+  [FRECENCY_AND_FAVORITES_SETTINGS]: require("create").FrecencyUserSettings,
+};
 ({ PRELOADED_USER_SETTINGS, FRECENCY_AND_FAVORITES_SETTINGS } = require("MAX_FAVORITES").UserSettingsTypes);
 const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsUtils.tsx");
 
@@ -126,7 +129,11 @@ export const mutateUserChannelSettings = function mutateUserChannelSettings(guil
   }
   return arg3(guilds.guilds[tmp3].channels[id]);
 };
-export const mutateUserChannelSettingsInternal = function mutateUserChannelSettingsInternal(channels, closure_0, f71535) {
+export const mutateUserChannelSettingsInternal = function mutateUserChannelSettingsInternal(
+  channels,
+  closure_0,
+  f71535,
+) {
   if (!(closure_0 in channels.channels)) {
     const ChannelSettings = create.ChannelSettings;
     channels.channels[closure_0] = ChannelSettings.create();
@@ -197,10 +204,12 @@ export const serializeUsageHistory = function serializeUsageHistory(usageHistory
   let tmp = entries;
   if (entries.length > closure_13) {
     obj = applyDefault;
-    const reversed = obj.sortBy(entries, (arg0) => {
-      [, tmp] = arg0;
-      return tmp.recentUses[tmp.recentUses.length - 1];
-    }).reverse();
+    const reversed = obj
+      .sortBy(entries, (arg0) => {
+        [, tmp] = arg0;
+        return tmp.recentUses[tmp.recentUses.length - 1];
+      })
+      .reverse();
     tmp = reversed;
     if (reversed.length > closure_13) {
       do {

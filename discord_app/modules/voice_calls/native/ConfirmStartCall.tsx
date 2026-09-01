@@ -17,7 +17,7 @@ function ConfirmStartCall(onConfirm) {
   const intl3 = getSystemLocale.intl;
   obj[1] = intl3.string(getSystemLocale.t.rimG2R);
   obj[2] = onConfirm.onConfirm;
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
+  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm")];
   obj1 = { variant: "secondary", text: null };
   const intl4 = getSystemLocale.intl;
   obj1[1] = intl4.string(getSystemLocale.t["ETE/oC"]);

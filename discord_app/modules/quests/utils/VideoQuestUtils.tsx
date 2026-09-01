@@ -53,40 +53,41 @@ export const getVideoOrientation = function getVideoOrientation(assets) {
   }
   str = portrait;
 };
-export const getVideoQuestProgressRemainingAccessibilityLabel = function getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, arg1) {
-  if (arg1) {
-    const intl5 = tmp(1236).intl;
-    return intl5.string(tmp(1236).t["ij5E/5"]);
-  } else {
-    const remainingTaskTime = tmp(7469).getRemainingTaskTime(questTaskDetails);
-    ({ minutes, seconds } = remainingTaskTime);
-    if (minutes > 0) {
-      if (seconds > 0) {
-        const intl3 = tmp(1236).intl;
-        let obj = { minutes: null, seconds: null };
-        obj[0] = minutes;
-        obj[1] = seconds;
-        let formatToPlainStringResult = intl3.formatToPlainString(tmp(1236).t["lW/66D"], obj);
-      }
-      const intl4 = tmp(1236).intl;
-      obj = { remainingTime: null };
-      obj[0] = formatToPlainStringResult;
-      return intl4.formatToPlainString(tmp(1236).t.nzYZrt, obj);
-    }
-    if (minutes > 0) {
-      const intl2 = tmp(1236).intl;
-      obj1 = { count: null };
-      obj1[0] = minutes;
-      formatToPlainStringResult = intl2.formatToPlainString(tmp(1236).t["SxnF/O"], obj1);
+export const getVideoQuestProgressRemainingAccessibilityLabel =
+  function getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, arg1) {
+    if (arg1) {
+      const intl5 = tmp(1236).intl;
+      return intl5.string(tmp(1236).t["ij5E/5"]);
     } else {
-      const intl = tmp(1236).intl;
-      const obj2 = { count: null };
-      obj2[0] = seconds;
-      formatToPlainStringResult = intl.formatToPlainString(tmp(1236).t["0BZpdi"], obj2);
+      const remainingTaskTime = tmp(7469).getRemainingTaskTime(questTaskDetails);
+      ({ minutes, seconds } = remainingTaskTime);
+      if (minutes > 0) {
+        if (seconds > 0) {
+          const intl3 = tmp(1236).intl;
+          let obj = { minutes: null, seconds: null };
+          obj[0] = minutes;
+          obj[1] = seconds;
+          let formatToPlainStringResult = intl3.formatToPlainString(tmp(1236).t["lW/66D"], obj);
+        }
+        const intl4 = tmp(1236).intl;
+        obj = { remainingTime: null };
+        obj[0] = formatToPlainStringResult;
+        return intl4.formatToPlainString(tmp(1236).t.nzYZrt, obj);
+      }
+      if (minutes > 0) {
+        const intl2 = tmp(1236).intl;
+        obj1 = { count: null };
+        obj1[0] = minutes;
+        formatToPlainStringResult = intl2.formatToPlainString(tmp(1236).t["SxnF/O"], obj1);
+      } else {
+        const intl = tmp(1236).intl;
+        const obj2 = { count: null };
+        obj2[0] = seconds;
+        formatToPlainStringResult = intl.formatToPlainString(tmp(1236).t["0BZpdi"], obj2);
+      }
+      const tmpResult = tmp(7469);
     }
-    const tmpResult = tmp(7469);
-  }
-};
+  };
 export const formatVideoProgressRatio = function formatVideoProgressRatio(bound, current) {
   let num = 0;
   if (bound > 0) {
@@ -96,7 +97,7 @@ export const formatVideoProgressRatio = function formatVideoProgressRatio(bound,
       if (bound < current) {
         const _Math = Math;
         const _Math2 = Math;
-        num3 = Math.min(1, Math.round(bound / current * 100) / 100);
+        num3 = Math.min(1, Math.round((bound / current) * 100) / 100);
       }
       num = num3;
     }
@@ -170,7 +171,7 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
         if (maxTimestampSec < duration) {
           const _Math = Math;
           const _Math2 = Math;
-          num4 = Math.min(1, Math.round(maxTimestampSec / duration * 100) / 100);
+          num4 = Math.min(1, Math.round((maxTimestampSec / duration) * 100) / 100);
         }
         num2 = num4;
       }

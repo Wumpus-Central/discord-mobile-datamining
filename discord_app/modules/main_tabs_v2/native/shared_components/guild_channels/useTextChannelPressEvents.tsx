@@ -3,12 +3,14 @@ import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../../../stores/ChannelStore.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/useTextChannelPressEvents.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/guild_channels/useTextChannelPressEvents.tsx",
+);
 
 export const useTextChannelPressEvents = function useTextChannelPressEvents(channel, flag2) {
   closure_0 = channel;
   closure_1 = flag2;
-  const items = [, , ];
+  const items = [, ,];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   items[2] = flag2;
   const items1 = [channel];
@@ -35,6 +37,6 @@ export const useTextChannelPressEvents = function useTextChannelPressEvents(chan
         const obj3 = channel(closure_1_2[6]);
       }
     }, items1),
-    unstable_pressDelay: 32
+    unstable_pressDelay: 32,
   };
 };

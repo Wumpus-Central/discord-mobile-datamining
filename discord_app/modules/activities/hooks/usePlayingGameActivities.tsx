@@ -30,4 +30,4 @@ export default function usePlayingGameActivities(arg0, arg1) {
   });
   const items1 = [stateFromStores];
   return stateFromStores.useMemo(() => stateFromStores.filter(callback(flag[5])), items1);
-};
+}

@@ -17,22 +17,29 @@ export default function shouldShowEndStageModal(isGuildStageVoice) {
         let isSpeakerResult = moderator.isSpeaker(id, isGuildStageVoice.id);
         if (isSpeakerResult) {
           mutableParticipants = mutableParticipants.getMutableParticipants(isGuildStageVoice.id);
-          let tmp7 = null == mutableParticipants.find((user) => {
-            let isModeratorResult = user.user.id !== id;
-            if (isModeratorResult) {
-              isModeratorResult = closure_1_4.isModerator(user.user.id, isGuildStageVoice.id);
-            }
-            return isModeratorResult;
-          });
-          if (!tmp7) {
-            const mutableParticipants1 = obj2.getMutableParticipants(isGuildStageVoice.id, _require(id[4]).StageChannelParticipantNamedIndex.SPEAKER);
-            tmp7 = null == mutableParticipants1.find((user) => {
+          let tmp7 =
+            null ==
+            mutableParticipants.find((user) => {
               let isModeratorResult = user.user.id !== id;
               if (isModeratorResult) {
                 isModeratorResult = closure_1_4.isModerator(user.user.id, isGuildStageVoice.id);
               }
               return isModeratorResult;
             });
+          if (!tmp7) {
+            const mutableParticipants1 = obj2.getMutableParticipants(
+              isGuildStageVoice.id,
+              _require(id[4]).StageChannelParticipantNamedIndex.SPEAKER,
+            );
+            tmp7 =
+              null ==
+              mutableParticipants1.find((user) => {
+                let isModeratorResult = user.user.id !== id;
+                if (isModeratorResult) {
+                  isModeratorResult = closure_1_4.isModerator(user.user.id, isGuildStageVoice.id);
+                }
+                return isModeratorResult;
+              });
           }
           isSpeakerResult = tmp7;
           obj2 = mutableParticipants;
@@ -46,4 +53,4 @@ export default function shouldShowEndStageModal(isGuildStageVoice) {
   } else {
     return false;
   }
-};
+}

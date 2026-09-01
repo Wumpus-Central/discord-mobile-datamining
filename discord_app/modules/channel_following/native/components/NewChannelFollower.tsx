@@ -25,17 +25,49 @@ function canFollowIntoChannel(channel) {
 ({ View: c5, ImageBackground: closure_6 } = get_ActivityIndicator);
 ({ AbortCodes: map1, ChannelTypes: closure_14, Permissions: closure_15 } = ME);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-createCacheKey = { container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 24 }, header: { flex: 1, flexDirection: "row", justifyContent: "center", alignItems: "center", height: 96 }, headerGuildIcon: { width: 40, marginRight: 16 }, headerChannelContainer: null, headerChannel: null, headerChannelIcon: null, ctaHeader: null, ctaSubhead: null, channelIcon: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, height: 32 };
+createCacheKey = {
+  container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 24 },
+  header: { flex: 1, flexDirection: "row", justifyContent: "center", alignItems: "center", height: 96 },
+  headerGuildIcon: { width: 40, marginRight: 16 },
+  headerChannelContainer: null,
+  headerChannel: null,
+  headerChannelIcon: null,
+  ctaHeader: null,
+  ctaSubhead: null,
+  channelIcon: null,
+};
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  height: 32,
+};
 createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { flex: 1, flexDirection: "row", minWidth: 160, paddingHorizontal: 8, paddingVertical: 6, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
+createCacheKey[4] = {
+  flex: 1,
+  flexDirection: "row",
+  minWidth: 160,
+  paddingHorizontal: 8,
+  paddingVertical: 6,
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED,
+};
 createCacheKey[5] = { height: 20, width: 20, marginRight: 8, opacity: 0.6 };
 createCacheKey[6] = { flex: 1, textAlign: "center", marginBottom: 8 };
 createCacheKey[7] = { flex: 1, textAlign: "center", marginBottom: 8 };
 createCacheKey[8] = { height: 16, width: 16, opacity: 0.6 };
 let closure_18 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flex: 1, flexDirection: "row", minWidth: 160, paddingHorizontal: 8, paddingVertical: 6, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
-const result = require("set").fileFinishedImporting("modules/channel_following/native/components/NewChannelFollower.tsx");
+let obj1 = {
+  flex: 1,
+  flexDirection: "row",
+  minWidth: 160,
+  paddingHorizontal: 8,
+  paddingVertical: 6,
+  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED,
+};
+const result = require("set").fileFinishedImporting(
+  "modules/channel_following/native/components/NewChannelFollower.tsx",
+);
 
 export default function NewChannelFollower(targetChannelId) {
   ({ sourceGuildId: require, sourceChannelId: importDefault, targetGuildId } = targetChannelId);
@@ -56,11 +88,17 @@ export default function NewChannelFollower(targetChannelId) {
   const tmp3 = targetChannelId(React.useState(null), 2);
   obj1 = require(targetGuildId[14]);
   const items = [closure_10];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ sourceGuild: store.getGuild(closure_0), targetGuild: store.getGuild(targetGuildId) }));
+  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({
+    sourceGuild: store.getGuild(closure_0),
+    targetGuild: store.getGuild(targetGuildId),
+  }));
   ({ targetGuild, sourceGuild } = stateFromStoresObject);
   let obj2 = require(targetGuildId[14]);
   const items1 = [c7];
-  const stateFromStoresObject1 = obj2.useStateFromStoresObject(items1, () => ({ sourceChannel: _undefined.getChannel(closure_1), targetChannel: _undefined.getChannel(targetChannelId) }));
+  const stateFromStoresObject1 = obj2.useStateFromStoresObject(items1, () => ({
+    sourceChannel: _undefined.getChannel(closure_1),
+    targetChannel: _undefined.getChannel(targetChannelId),
+  }));
   ({ sourceChannel, targetChannel } = stateFromStoresObject1);
   const tmp9 = importDefault(targetGuildId[13])();
   const tmp13 = importDefault(targetGuildId[15])(targetChannel);
@@ -83,7 +121,7 @@ export default function NewChannelFollower(targetChannelId) {
   obj = { source: tmp8Result, style: tmp.header, children: null };
   obj1 = { style: tmp.header, children: null };
   obj2 = { style: tmp.headerGuildIcon, guild: sourceGuild };
-  const items2 = [callback(importDefault(targetGuildId[22]), obj2), ];
+  const items2 = [callback(importDefault(targetGuildId[22]), obj2)];
   const obj3 = { style: tmp.headerChannelContainer, children: null };
   const obj4 = { style: tmp.headerChannel, children: null };
   const obj5 = { size: require(targetGuildId[23]).Icon.Sizes.CUSTOM, source: null, style: null };
@@ -94,18 +132,30 @@ export default function NewChannelFollower(targetChannelId) {
   }
   obj5[1] = channelIcon;
   obj5[2] = tmp.headerChannelIcon;
-  const items3 = [callback(require(targetGuildId[23]).Icon, obj5), callback(require(targetGuildId[25]).Text, { lineClamp: 1, variant: "text-sm/medium", children: importDefault(targetGuildId[15])(sourceChannel) })];
+  const items3 = [
+    callback(require(targetGuildId[23]).Icon, obj5),
+    callback(require(targetGuildId[25]).Text, {
+      lineClamp: 1,
+      variant: "text-sm/medium",
+      children: importDefault(targetGuildId[15])(sourceChannel),
+    }),
+  ];
   obj4[1] = items3;
   obj3[1] = closure_17(closure_5, obj4);
   items2[1] = callback(closure_5, obj3);
   obj1[1] = items2;
   obj[2] = closure_17(closure_5, obj1);
-  const items4 = [callback(closure_6, obj), ];
+  const items4 = [callback(closure_6, obj)];
   const obj6 = { style: tmp.container, children: null };
-  const obj7 = { style: tmp.ctaHeader, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj7 = {
+    style: tmp.ctaHeader,
+    variant: "heading-lg/semibold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   let intl = tmp5(tmp6[26]).intl;
   obj7[3] = intl.string(require(targetGuildId[26]).t.mvPFbA);
-  const items5 = [callback(require(targetGuildId[25]).Text, obj7), , , , , ];
+  const items5 = [callback(require(targetGuildId[25]).Text, obj7), , , , ,];
   const obj8 = { style: tmp.ctaSubhead, variant: "text-sm/medium", color: "text-default", children: null };
   let intl2 = tmp5(tmp6[26]).intl;
   obj8[3] = intl2.string(require(targetGuildId[26]).t.kbpkxJ);
@@ -161,10 +211,14 @@ export default function NewChannelFollower(targetChannelId) {
     obj[4] = function onClose() {
       callback(closure_2, closure_3);
     };
-    obj.openLazy(closure_1_0(targetGuildId[32])(targetGuildId[31], targetGuildId.paths), "NewChannelFollowerGuildPicker", obj);
+    obj.openLazy(
+      closure_1_0(targetGuildId[32])(targetGuildId[31], targetGuildId.paths),
+      "NewChannelFollowerGuildPicker",
+      obj,
+    );
   };
   obj9[2] = callback(require(targetGuildId[29]).TableRow, obj10);
-  const items6 = [callback(require(targetGuildId[28]).TableRowGroup, obj9), ];
+  const items6 = [callback(require(targetGuildId[28]).TableRowGroup, obj9)];
   const obj12 = { title: null, hasIcons: true, children: null };
   const intl5 = tmp5(tmp6[26]).intl;
   obj12[0] = intl5.string(require(targetGuildId[26]).t.PDn2fR);
@@ -187,7 +241,14 @@ export default function NewChannelFollower(targetChannelId) {
   obj13[2] = tmp18Result;
   obj13[4] = function onPress() {
     if (null != targetGuildId) {
-      const obj = { guildId: null, selectedChannel: null, channelType: null, filterFn: null, onSelect: null, onClose: null };
+      const obj = {
+        guildId: null,
+        selectedChannel: null,
+        channelType: null,
+        filterFn: null,
+        onSelect: null,
+        onClose: null,
+      };
       obj[0] = tmp;
       let tmp5 = targetChannel;
       if (targetChannel == null) {
@@ -246,7 +307,7 @@ export default function NewChannelFollower(targetChannelId) {
       const nextPromise = channelFollower.then(closure_5);
     }
   };
-  const items7 = [callback(require(targetGuildId[36]).Button, obj20), ];
+  const items7 = [callback(require(targetGuildId[36]).Button, obj20)];
   const obj21 = { text: null, variant: "secondary", onPress: null };
   const intl9 = tmp5(tmp6[26]).intl;
   obj21[0] = intl9.string(require(targetGuildId[26]).t["ETE/oC"]);
@@ -257,7 +318,13 @@ export default function NewChannelFollower(targetChannelId) {
   obj6[1] = items5;
   items4[1] = closure_17(closure_5, obj6);
   obj18[0] = items4;
-  const items8 = [closure_17(require(targetGuildId[21]).BottomSheetScrollView, obj18), callback(require(targetGuildId[38]).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetRef.bottomSheetClose })];
+  const items8 = [
+    closure_17(require(targetGuildId[21]).BottomSheetScrollView, obj18),
+    callback(require(targetGuildId[38]).ActionSheetHeaderBar, {
+      variant: "floating",
+      onPress: bottomSheetRef.bottomSheetClose,
+    }),
+  ];
   obj[4] = items8;
   return closure_17(require(targetGuildId[20]).BottomSheet, obj);
-};
+}

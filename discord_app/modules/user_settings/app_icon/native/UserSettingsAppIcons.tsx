@@ -14,7 +14,9 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 const require = arg1;
 ({ UpsellTypes: closure_6, AnalyticsPages: error } = ME);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles({ upsellButtonContainer: { padding: 0, position: "absolute", bottom: 56, width: 350, alignSelf: "center" } });
+let closure_12 = createCacheKey.createStyles({
+  upsellButtonContainer: { padding: 0, position: "absolute", bottom: 56, width: 350, alignSelf: "center" },
+});
 const memoResult = importAllResult.memo(() => {
   function _onSelect() {
     const self = this;
@@ -22,7 +24,7 @@ const memoResult = importAllResult.memo(() => {
       closure_0 = arg0;
       c2 = 0;
       c1 = 0;
-      return (function*(arg0) {
+      return (function* (arg0) {
         if (v0 === 2) {
           v0 = 3;
           HermesBuiltin.throwTypeError();
@@ -147,17 +149,21 @@ const memoResult = importAllResult.memo(() => {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    }
+    },
   };
   obj[0] = callback(obj, obj1);
-  const children = [callback(stateFromStores(8363).Form, obj), ];
+  const children = [callback(stateFromStores(8363).Form, obj)];
   let tmp9Result = !isPremiumResult;
   if (!isPremiumResult) {
     let obj3 = { style: null, children: null };
     obj3[0] = tmp.upsellButtonContainer;
     let obj4 = { onPress: null, text: null };
     obj4[0] = function onPress() {
-      obj = { analyticsLocation: obj, analyticsLocations, premiumFeatureCardOrder: stateFromStores(isPremiumResult[18]).PremiumFeatureCardOrder.TIER_2_LEADING };
+      obj = {
+        analyticsLocation: obj,
+        analyticsLocations,
+        premiumFeatureCardOrder: stateFromStores(isPremiumResult[18]).PremiumFeatureCardOrder.TIER_2_LEADING,
+      };
       callback(isPremiumResult[17])(obj);
     };
     const intl = tmp2(1236).intl;

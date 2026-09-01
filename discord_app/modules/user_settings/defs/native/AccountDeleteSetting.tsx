@@ -14,7 +14,7 @@ const pressable = createToggle.createPressable({
   variant: "danger",
   onPress: function handlePress() {
     handleDisableAccountDefault(true);
-  }
+  },
 });
 const obj = {
   useTitle() {
@@ -25,7 +25,7 @@ const obj = {
   variant: "danger",
   onPress: function handlePress() {
     handleDisableAccountDefault(true);
-  }
+  },
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountDeleteSetting.tsx");
 

@@ -16,7 +16,7 @@ obj = {
       tmp2 = transformUserDefault(user);
     }
     return tmp2;
-  }
+  },
 };
 items = [RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE];
 obj[RPCCommands.GET_USER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_USER, obj);

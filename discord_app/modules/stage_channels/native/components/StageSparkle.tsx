@@ -31,7 +31,7 @@ function StageSparkleInner(style) {
     tmp10 = importDefault;
   }
   obj[1] = tmp6Result;
-  const items1 = [closure_4(View, obj), ];
+  const items1 = [closure_4(View, obj)];
   const obj2 = { style: tmp3.sparkles, source: tmp10(8680) };
   items1[1] = closure_4(tmp10(5493), obj2);
   obj[1] = items1;
@@ -39,8 +39,20 @@ function StageSparkleInner(style) {
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { width: 88, height: 88, alignItems: "center", justifyContent: "center" }, iconContainer: null, iconStyle: null, sparkles: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 28, height: 56, width: 56, alignItems: "center", justifyContent: "center" };
+createCacheKey = {
+  container: { width: 88, height: 88, alignItems: "center", justifyContent: "center" },
+  iconContainer: null,
+  iconStyle: null,
+  sparkles: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: 28,
+  height: 56,
+  width: 56,
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, height: 32, width: 32 };
 createCacheKey[3] = { position: "absolute", top: 0 };
@@ -64,4 +76,4 @@ export default function StageSparkle(theme) {
     tmp7 = callback(StageSparkleInner, obj);
   }
   return tmp7;
-};
+}

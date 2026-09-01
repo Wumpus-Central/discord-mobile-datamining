@@ -11,19 +11,33 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: null, buttonContainer: null, header: null, body: null, image: null, video: null };
-createCacheKey = { display: "flex", flexDirection: "column", alignItems: "center", paddingVertical: 12, paddingHorizontal: 20, borderRadius: ThemesDefault.radii.lg };
+createCacheKey = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  paddingVertical: 12,
+  paddingHorizontal: 20,
+  borderRadius: ThemesDefault.radii.lg,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24, width: 335, height: 48 };
 let obj1 = { marginTop: ThemesDefault.space.PX_24, width: 335, height: 48 };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_8, textAlign: "center" };
 createCacheKey[3] = { textAlign: "center" };
 let obj2 = { marginBottom: ThemesDefault.space.PX_8, textAlign: "center" };
-createCacheKey[4] = { height: 188, width: 335, borderRadius: ThemesDefault.radii.md, marginBottom: ThemesDefault.space.PX_24 };
+createCacheKey[4] = {
+  height: 188,
+  width: 335,
+  borderRadius: ThemesDefault.radii.md,
+  marginBottom: ThemesDefault.space.PX_24,
+};
 const obj3 = { height: 188, width: 335, borderRadius: ThemesDefault.radii.md, marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[5] = { borderRadius: ThemesDefault.radii.md, marginBottom: ThemesDefault.space.PX_24 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { borderRadius: ThemesDefault.radii.md, marginBottom: ThemesDefault.space.PX_24 };
-const result = require("set").fileFinishedImporting("modules/premium/promotions/native/PremiumMarketingMomentActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/promotions/native/PremiumMarketingMomentActionSheet.tsx",
+);
 
 export default function PremiumMarketingMomentActionSheet(component_id) {
   const markAsDismissed = component_id.markAsDismissed;
@@ -50,7 +64,7 @@ export default function PremiumMarketingMomentActionSheet(component_id) {
   if (button != null) {
     buttonAction = button.buttonAction;
   }
-  const items2 = [buttonAction, , , ];
+  const items2 = [buttonAction, , ,];
   let button2 = bottomSheetData.button;
   let value;
   if (button2 != null) {
@@ -90,7 +104,12 @@ export default function PremiumMarketingMomentActionSheet(component_id) {
   let tmp5Result = tmp5(tmp3[12]);
   obj[0] = markAsDismissed(promotionId[13]).ImpressionTypes.HALFSHEET;
   obj[1] = markAsDismissed(promotionId[13]).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
-  obj = { component_type: tmp2(tmp3[14]).MarketingComponentType.MOBILE_BOTTOM_SHEET, component_id: component_id.componentId, dismissible_content: bottomSheetData.dismissibleContent, promotion_id: promotionId };
+  obj = {
+    component_type: tmp2(tmp3[14]).MarketingComponentType.MOBILE_BOTTOM_SHEET,
+    component_id: component_id.componentId,
+    dismissible_content: bottomSheetData.dismissibleContent,
+    promotion_id: promotionId,
+  };
   obj[2] = obj;
   tmp5Result(obj);
   let tmp2Result = tmp2(tmp3[15]);
@@ -115,15 +134,26 @@ export default function PremiumMarketingMomentActionSheet(component_id) {
     obj6[1] = tmp.image;
     tmp14Result = tmp14(tmp5(tmp3[19]), obj6);
   }
-  const items5 = [tmp14Result, , , ];
+  const items5 = [tmp14Result, , ,];
   const items6 = [tmp.header];
-  items5[1] = closure_8(markAsDismissed(promotionId[20]).Text, { style: items6, color: "mobile-text-heading-primary", variant: "heading-lg/extrabold", children: bottomSheetData.header });
+  items5[1] = closure_8(markAsDismissed(promotionId[20]).Text, {
+    style: items6,
+    color: "mobile-text-heading-primary",
+    variant: "heading-lg/extrabold",
+    children: bottomSheetData.header,
+  });
   const obj9 = { style: items7, color: "text-default", variant: "text-sm/normal", children: null };
   items7 = [tmp.body];
-  const items8 = [bottomSheetData.body, " ", ];
+  const items8 = [bottomSheetData.body, " "];
   tmp14Result = null != helpArticleLinkProps;
   if (tmp14Result) {
-    const obj10 = { color: "text-link", variant: "text-sm/normal", accessibilityRole: "link", onPress: null, children: null };
+    const obj10 = {
+      color: "text-link",
+      variant: "text-sm/normal",
+      accessibilityRole: "link",
+      onPress: null,
+      children: null,
+    };
     obj10[3] = function onPress() {
       return bottomSheetData(promotionId[21]).openURL(helpArticleLinkProps.url);
     };
@@ -150,4 +180,4 @@ export default function PremiumMarketingMomentActionSheet(component_id) {
   obj2[1] = items5;
   obj1[1] = closure_9(callback, obj2);
   return closure_8(markAsDismissed(promotionId[16]).BottomSheet, obj1);
-};
+}

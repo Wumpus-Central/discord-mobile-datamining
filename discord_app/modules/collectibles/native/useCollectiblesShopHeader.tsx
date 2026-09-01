@@ -16,8 +16,15 @@ require = arg1;
 function CollectiblesShopHeaderTitle(currentScreen) {
   const tmp = callback2();
   let obj = { style: tmp.headerTitleContainer, children: null };
-  const items = [callback(ShopIcon.ShopIcon, { size: "md", color: "icon-strong" }), ];
-  obj = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, lineClamp: 1, style: tmp.headerTitle, children: null };
+  const items = [callback(ShopIcon.ShopIcon, { size: "md", color: "icon-strong" })];
+  obj = {
+    variant: "redesign/heading-18/bold",
+    color: "mobile-text-heading-primary",
+    maxFontSizeMultiplier: 2,
+    lineClamp: 1,
+    style: tmp.headerTitle,
+    children: null,
+  };
   if (currentScreen.currentScreen === constants.ORBS) {
     const intl2 = tmp5(1236).intl;
     let stringResult = intl2.string(tmp5(1236).t.ElYQFS);
@@ -61,7 +68,7 @@ function CollectiblesShopHeaderRight(currentScreen) {
       CheckmarkSmallIcon = tmp(tmp2[18]).CheckmarkSmallIcon;
     }
     obj[2] = CheckmarkSmallIcon;
-    let items = [obj, , ];
+    let items = [obj, ,];
     obj = { label: null, action: null, trailingIndicator: null };
     const intl2 = tmp(tmp2[12]).intl;
     obj[0] = intl2.string(currentScreen(balance[12]).t.RSyoZu);
@@ -100,7 +107,7 @@ function CollectiblesShopHeaderRight(currentScreen) {
     items[2] = obj;
     return items;
   }, items1);
-  const items3 = [currentScreen, ];
+  const items3 = [currentScreen];
   let id;
   const callback = React.useCallback(() => {
     let obj = stateFromStores(balance[19]);
@@ -114,7 +121,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
       obj.track(closure_1_7.ORB_BALANCE_ACTION_SHEET_ACTION, obj);
       closure_1_1(closure_1_2[19]).hideActionSheet();
       const obj3 = closure_1_1(closure_1_2[19]);
-      obj = { mergeExistingRoutes: true, filter: closure_1_8.VIRTUAL_CURRENCY, fromContent: closure_1_0(closure_1_2[24]).QuestContent.ORBS_BALANCE_MENU };
+      obj = {
+        mergeExistingRoutes: true,
+        filter: closure_1_8.VIRTUAL_CURRENCY,
+        fromContent: closure_1_0(closure_1_2[24]).QuestContent.ORBS_BALANCE_MENU,
+      };
       closure_1_0(closure_1_2[23]).openQuestHome(obj);
     };
     obj[1] = obj;
@@ -129,7 +140,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     };
     obj[2] = obj1;
     obj[3] = stateFromStores(balance[17]).COLLECTIBLES_SHOP;
-    obj.openLazy(() => callback(paths[21])(paths[20], paths.paths).then((arg0) => arg0.default), "BalanceWidgetActionSheet", obj);
+    obj.openLazy(
+      () => callback(paths[21])(paths[20], paths.paths).then((arg0) => arg0.default),
+      "BalanceWidgetActionSheet",
+      obj,
+    );
   }, items2);
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -170,7 +185,7 @@ function CollectiblesShopHeaderRight(currentScreen) {
     tmp13Result = tmp13(tmp2Result.BalanceWidgetPill, obj1);
     tmp16 = tmp13;
   }
-  const items4 = [tmp13Result, , ];
+  const items4 = [tmp13Result, ,];
   let tmp16Result = null != stateFromStores;
   if (tmp16Result) {
     obj2 = { accessibilityLabel: null, variant: "tertiary", size: "sm", icon: null, onPress: null };
@@ -201,12 +216,31 @@ function CollectiblesShopHeaderRight(currentScreen) {
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { headerTitleContainer: null, headerTitle: null, headerRightContainer: null };
-createCacheKey = { width: "100%", flexDirection: "row", alignItems: "center", marginTop: ThemesDefault.space.PX_8, paddingLeft: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
+createCacheKey = {
+  width: "100%",
+  flexDirection: "row",
+  alignItems: "center",
+  marginTop: ThemesDefault.space.PX_8,
+  paddingLeft: ThemesDefault.space.PX_8,
+  gap: ThemesDefault.space.PX_8,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexShrink: 1 };
-createCacheKey[2] = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8 };
+createCacheKey[2] = {
+  flexDirection: "row",
+  justifyContent: "flex-end",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_8,
+};
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8 };
+let obj1 = {
+  flexDirection: "row",
+  justifyContent: "flex-end",
+  alignItems: "center",
+  gap: ThemesDefault.space.PX_8,
+  marginTop: ThemesDefault.space.PX_8,
+};
 let result = require("set").fileFinishedImporting("modules/collectibles/native/useCollectiblesShopHeader.tsx");
 
 export default function useCollectiblesShopHeader() {
@@ -225,7 +259,7 @@ export default function useCollectiblesShopHeader() {
       },
       headerRight() {
         return closure_1_10(closure_1_14, { currentScreen: closure_0 });
-      }
+      },
     });
   }, items);
-};
+}

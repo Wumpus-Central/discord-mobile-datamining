@@ -160,10 +160,10 @@ function computeFavoritesState(favoriteChannels) {
     },
     isEmpty() {
       return 0 === items.length;
-    }
+    },
   };
   Object.defineProperty(obj, "channelList", {
-    get: function() {
+    get: function () {
       if (null == closure_6) {
         let self = this;
         self = this;
@@ -187,20 +187,40 @@ function computeFavoritesState(favoriteChannels) {
           if (!tmp4) {
             if (!tmp7) {
               if (closure_1) {
-                let activeJoinedUnreadThreadsForParent = closure_2_6.getActiveJoinedUnreadThreadsForParent(isPrivate.guild_id, isPrivate.id);
+                let activeJoinedUnreadThreadsForParent = closure_2_6.getActiveJoinedUnreadThreadsForParent(
+                  isPrivate.guild_id,
+                  isPrivate.id,
+                );
               }
               if (activeJoinedUnreadThreadsForParent == null) {
                 activeJoinedUnreadThreadsForParent = {};
               }
               const obj3 = items(closure_2_2[20]);
-              const threadIds = obj3.computeThreadIds(isPrivate, activeJoinedUnreadThreadsForParent, obj, closure_1_3, closure_1);
+              const threadIds = obj3.computeThreadIds(
+                isPrivate,
+                activeJoinedUnreadThreadsForParent,
+                obj,
+                closure_1_3,
+                closure_1,
+              );
               const isCollapsedResult = closure_2_13.isCollapsed(isPrivate.id);
               if (isPrivate.isThread()) {
                 let isMutedResult = closure_2_7.isMuted(isPrivate.id);
               } else {
                 isMutedResult = closure_2_17.isChannelMuted(isPrivate.guild_id, isPrivate.id);
               }
-              obj = { id: null, record: null, category: null, position: null, threadIds: null, threadCount: null, isCollapsed: null, isMuted: null, isFirstVoiceChannel: false, subtitle: null };
+              obj = {
+                id: null,
+                record: null,
+                category: null,
+                position: null,
+                threadIds: null,
+                threadCount: null,
+                isCollapsed: null,
+                isMuted: null,
+                isFirstVoiceChannel: false,
+                subtitle: null,
+              };
               obj[0] = isPrivate.id;
               obj[1] = isPrivate;
               obj[2] = self;
@@ -247,19 +267,24 @@ function computeFavoritesState(favoriteChannels) {
               return obj;
             }
           }
-          activeJoinedUnreadThreadsForParent = closure_2_6.getActiveJoinedRelevantThreadsForParent(isPrivate.guild_id, isPrivate.id);
+          activeJoinedUnreadThreadsForParent = closure_2_6.getActiveJoinedRelevantThreadsForParent(
+            isPrivate.guild_id,
+            isPrivate.id,
+          );
         });
         const found = mapped.filter(favoriteChannels(1471).isNotNullish);
         const arr = _undefined(12)(items);
-        closure_6 = found.sortBy((arg0) => {
-          ({ record, position } = arg0);
-          if (record.isGuildVocal()) {
-            let sum = position + 10000;
-          } else {
-            sum = position;
-          }
-          return sum;
-        }).value();
+        closure_6 = found
+          .sortBy((arg0) => {
+            ({ record, position } = arg0);
+            if (record.isGuildVocal()) {
+              let sum = position + 10000;
+            } else {
+              sum = position;
+            }
+            return sum;
+          })
+          .value();
         const iter = found.sortBy((arg0) => {
           ({ record, position } = arg0);
           if (record.isGuildVocal()) {
@@ -272,7 +297,7 @@ function computeFavoritesState(favoriteChannels) {
       }
       return closure_6;
     },
-    set: undefined
+    set: undefined,
   });
   const favoritesCategories = favoriteChannels(10307).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
@@ -289,7 +314,17 @@ function computeFavoritesState(favoriteChannels) {
         items = [];
       }
       c1 = null;
-      obj = { isMuted: null, isCollapsed: null, record: null, id: null, position: null, getChannelRecords: null, getShownChannelIds: null, getShownChannelAndThreadIds: null, isEmpty: null };
+      obj = {
+        isMuted: null,
+        isCollapsed: null,
+        record: null,
+        id: null,
+        position: null,
+        getChannelRecords: null,
+        getShownChannelIds: null,
+        getShownChannelAndThreadIds: null,
+        isEmpty: null,
+      };
       obj[0] = closure_1_17.isChannelMuted(closure_1_20, id);
       obj[1] = collapsed.isCollapsed(id);
       obj[2] = categoryRecord;
@@ -315,95 +350,119 @@ function computeFavoritesState(favoriteChannels) {
         return 0 === items.length;
       };
       Object.defineProperty(obj, "channelList", {
-        get: function() {
-            if (null == closure_1) {
-              let self = this;
-              self = this;
-              ({ isCollapsed: closure_1, isMuted: closure_2 } = this);
-              const mapped = _null(closure_1_2[24])(self).map((isPrivate) => {
-                if (!isPrivate.isPrivate()) {
-                  if (!closure_2_14.can(closure_2_23.VIEW_CHANNEL, isPrivate)) {
-                    return null;
-                  }
+        get: function () {
+          if (null == closure_1) {
+            let self = this;
+            self = this;
+            ({ isCollapsed: closure_1, isMuted: closure_2 } = this);
+            const mapped = _null(closure_1_2[24])(self).map((isPrivate) => {
+              if (!isPrivate.isPrivate()) {
+                if (!closure_2_14.can(closure_2_23.VIEW_CHANNEL, isPrivate)) {
+                  return null;
                 }
-                obj = closure_1_2;
-                let tmp4 = null != closure_1_2;
-                if (tmp4) {
-                  let tmp5 = obj.id === isPrivate.id;
-                  if (!tmp5) {
-                    tmp5 = closure_1_3 === isPrivate.id;
-                  }
-                  tmp4 = tmp5;
+              }
+              obj = closure_1_2;
+              let tmp4 = null != closure_1_2;
+              if (tmp4) {
+                let tmp5 = obj.id === isPrivate.id;
+                if (!tmp5) {
+                  tmp5 = closure_1_3 === isPrivate.id;
                 }
-                const tmp7 = null != obj && obj.isThread() && obj.parent_id === isPrivate.id;
-                if (!tmp4) {
-                  if (!tmp7) {
-                    if (closure_1) {
-                      let activeJoinedUnreadThreadsForParent = closure_2_6.getActiveJoinedUnreadThreadsForParent(isPrivate.guild_id, isPrivate.id);
-                    }
-                    if (activeJoinedUnreadThreadsForParent == null) {
-                      activeJoinedUnreadThreadsForParent = {};
-                    }
-                    const obj3 = items(closure_2_2[20]);
-                    const threadIds = obj3.computeThreadIds(isPrivate, activeJoinedUnreadThreadsForParent, obj, closure_1_3, closure_1);
-                    const isCollapsedResult = closure_2_13.isCollapsed(isPrivate.id);
-                    if (isPrivate.isThread()) {
-                      let isMutedResult = closure_2_7.isMuted(isPrivate.id);
-                    } else {
-                      isMutedResult = closure_2_17.isChannelMuted(isPrivate.guild_id, isPrivate.id);
-                    }
-                    obj = { id: null, record: null, category: null, position: null, threadIds: null, threadCount: null, isCollapsed: null, isMuted: null, isFirstVoiceChannel: false, subtitle: null };
-                    obj[0] = isPrivate.id;
-                    obj[1] = isPrivate;
-                    obj[2] = self;
-                    obj[3] = self[isPrivate.id].order;
-                    obj[4] = threadIds;
-                    obj[5] = callback(closure_2_2[24]).size(threadIds);
-                    obj[6] = isCollapsedResult;
-                    obj[7] = isMutedResult;
-                    const obj5 = callback(closure_2_2[24]);
-                    const tmp10 = items;
-                    const tmp13 = closure_1;
-                    const tmp28 = callback;
-                    obj[9] = items(closure_2_2[20]).computeSubtitle(isPrivate, isCollapsedResult, false);
-                    if (!tmp4) {
-                      if (!tmp7) {
-                        if (tmp28Result.isEmpty(activeJoinedUnreadThreadsForParent)) {
-                          if (closure_2_15.getMentionCount(isPrivate.id) <= 0) {
-                            if (tmp13) {
-                              if (isMutedResult) {
-                                return null;
-                              }
+                tmp4 = tmp5;
+              }
+              const tmp7 = null != obj && obj.isThread() && obj.parent_id === isPrivate.id;
+              if (!tmp4) {
+                if (!tmp7) {
+                  if (closure_1) {
+                    let activeJoinedUnreadThreadsForParent = closure_2_6.getActiveJoinedUnreadThreadsForParent(
+                      isPrivate.guild_id,
+                      isPrivate.id,
+                    );
+                  }
+                  if (activeJoinedUnreadThreadsForParent == null) {
+                    activeJoinedUnreadThreadsForParent = {};
+                  }
+                  const obj3 = items(closure_2_2[20]);
+                  const threadIds = obj3.computeThreadIds(
+                    isPrivate,
+                    activeJoinedUnreadThreadsForParent,
+                    obj,
+                    closure_1_3,
+                    closure_1,
+                  );
+                  const isCollapsedResult = closure_2_13.isCollapsed(isPrivate.id);
+                  if (isPrivate.isThread()) {
+                    let isMutedResult = closure_2_7.isMuted(isPrivate.id);
+                  } else {
+                    isMutedResult = closure_2_17.isChannelMuted(isPrivate.guild_id, isPrivate.id);
+                  }
+                  obj = {
+                    id: null,
+                    record: null,
+                    category: null,
+                    position: null,
+                    threadIds: null,
+                    threadCount: null,
+                    isCollapsed: null,
+                    isMuted: null,
+                    isFirstVoiceChannel: false,
+                    subtitle: null,
+                  };
+                  obj[0] = isPrivate.id;
+                  obj[1] = isPrivate;
+                  obj[2] = self;
+                  obj[3] = self[isPrivate.id].order;
+                  obj[4] = threadIds;
+                  obj[5] = callback(closure_2_2[24]).size(threadIds);
+                  obj[6] = isCollapsedResult;
+                  obj[7] = isMutedResult;
+                  const obj5 = callback(closure_2_2[24]);
+                  const tmp10 = items;
+                  const tmp13 = closure_1;
+                  const tmp28 = callback;
+                  obj[9] = items(closure_2_2[20]).computeSubtitle(isPrivate, isCollapsedResult, false);
+                  if (!tmp4) {
+                    if (!tmp7) {
+                      if (tmp28Result.isEmpty(activeJoinedUnreadThreadsForParent)) {
+                        if (closure_2_15.getMentionCount(isPrivate.id) <= 0) {
+                          if (tmp13) {
+                            if (isMutedResult) {
+                              return null;
                             }
-                            if (closure_1) {
-                              if (!isMutedResult) {
-                                if (!closure_2) {
-                                  if (!closure_2_10(isPrivate.type)) {
-                                    if (closure_2_9(isPrivate.type)) {
-                                      if (false === obj8.hasUnread(isPrivate.id)) {
-                                        return null;
-                                      }
+                          }
+                          if (closure_1) {
+                            if (!isMutedResult) {
+                              if (!closure_2) {
+                                if (!closure_2_10(isPrivate.type)) {
+                                  if (closure_2_9(isPrivate.type)) {
+                                    if (false === obj8.hasUnread(isPrivate.id)) {
+                                      return null;
                                     }
                                   }
                                 }
                               }
-                              return null;
                             }
-                            return obj;
+                            return null;
                           }
-                          obj8 = closure_2_15;
+                          return obj;
                         }
-                        tmp28Result = tmp28(tmp11[24]);
+                        obj8 = closure_2_15;
                       }
+                      tmp28Result = tmp28(tmp11[24]);
                     }
-                    return obj;
                   }
+                  return obj;
                 }
-                activeJoinedUnreadThreadsForParent = closure_2_6.getActiveJoinedRelevantThreadsForParent(isPrivate.guild_id, isPrivate.id);
-              });
-              const found = mapped.filter(items(closure_1_2[25]).isNotNullish);
-              const arr = _null(closure_1_2[24])(self);
-              closure_1 = found.sortBy((arg0) => {
+              }
+              activeJoinedUnreadThreadsForParent = closure_2_6.getActiveJoinedRelevantThreadsForParent(
+                isPrivate.guild_id,
+                isPrivate.id,
+              );
+            });
+            const found = mapped.filter(items(closure_1_2[25]).isNotNullish);
+            const arr = _null(closure_1_2[24])(self);
+            closure_1 = found
+              .sortBy((arg0) => {
                 ({ record, position } = arg0);
                 if (record.isGuildVocal()) {
                   let sum = position + 10000;
@@ -411,20 +470,21 @@ function computeFavoritesState(favoriteChannels) {
                   sum = position;
                 }
                 return sum;
-              }).value();
-              const iter = found.sortBy((arg0) => {
-                ({ record, position } = arg0);
-                if (record.isGuildVocal()) {
-                  let sum = position + 10000;
-                } else {
-                  sum = position;
-                }
-                return sum;
-              });
-            }
-            return closure_1;
-          },
-        set: undefined
+              })
+              .value();
+            const iter = found.sortBy((arg0) => {
+              ({ record, position } = arg0);
+              if (record.isGuildVocal()) {
+                let sum = position + 10000;
+              } else {
+                sum = position;
+              }
+              return sum;
+            });
+          }
+          return closure_1;
+        },
+        set: undefined,
       });
       return obj;
     }
@@ -458,7 +518,7 @@ function computeFavoritesState(favoriteChannels) {
     },
     getRow() {
       return null;
-    }
+    },
   };
   items2 = [];
   if (flag) {
@@ -477,7 +537,7 @@ function computeFavoritesState(favoriteChannels) {
         tmp = null;
       }
       return tmp;
-    }
+    },
   };
   return {
     id: closure_20,
@@ -624,12 +684,25 @@ function computeFavoritesState(favoriteChannels) {
     },
     getChannels() {
       return [];
-    }
+    },
   };
 }
 ({ THREAD_CHANNEL_TYPES: closure_8, isGuildReadableType: c9, isVoiceChannel: c10 } = createChannelRecord);
 ({ FAVORITES_RAW_GUILD_ID: closure_20, MAX_FAVORITE_CHANNELS: closure_21 } = require("date"));
-let items = [importDefaultResult, importDefaultResult11, importDefaultResult1, importDefaultResult2, importDefaultResult3, importDefaultResult4, importDefaultResult5, importDefaultResult6, importDefaultResult7, importDefaultResult8, importDefaultResult9, importDefaultResult10];
+let items = [
+  importDefaultResult,
+  importDefaultResult11,
+  importDefaultResult1,
+  importDefaultResult2,
+  importDefaultResult3,
+  importDefaultResult4,
+  importDefaultResult5,
+  importDefaultResult6,
+  importDefaultResult7,
+  importDefaultResult8,
+  importDefaultResult9,
+  importDefaultResult10,
+];
 const result = require("set").fileFinishedImporting("modules/favorites/FavoritesGuildChannelList.tsx");
 
 export const useFavoritesGuildChannelList = function useFavoritesGuildChannelList(arg0) {
@@ -646,7 +719,10 @@ export const useFavoritesGuildChannelList = function useFavoritesGuildChannelLis
   dependencyMap = undefined;
   let callback;
   hasAccess = require("FavoritesHooks.tsx").useFavoritesAccess("FavoritesGuildChannelList").hasAccess;
-  const tmp3 = callback(React.useState(() => closure_1_26(undefined, { withSuggestionsNotice: c0 })), 2);
+  const tmp3 = callback(
+    React.useState(() => closure_1_26(undefined, { withSuggestionsNotice: c0 })),
+    2,
+  );
   dependencyMap = tmp3[1];
   const isConnectedResult = importDefaultResult1.isConnected();
   callback = isConnectedResult;
@@ -688,7 +764,9 @@ export const useFavoritesGuildChannelList = function useFavoritesGuildChannelLis
     hasAccess = getMissingFavoriteThreadIds({ limit: 1, includeLoading: true }).length > 0;
   }
   let flag2 = false;
-  if (memo.getSections().length <= require("../guild_sidebar/ChannelListState.tsx").SECTION_INDEX_FIRST_NAMED_CATEGORY) {
+  if (
+    memo.getSections().length <= require("../guild_sidebar/ChannelListState.tsx").SECTION_INDEX_FIRST_NAMED_CATEGORY
+  ) {
     _require = false;
     memo.forEachShownChannel(() => {
       c0 = true;

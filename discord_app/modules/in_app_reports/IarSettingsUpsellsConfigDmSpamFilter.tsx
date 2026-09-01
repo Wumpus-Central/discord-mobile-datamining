@@ -22,7 +22,7 @@ const obj = {
   eligibleReportSubtypes: null,
   eligibleChannelTypes: null,
   onApply: null,
-  predicate: null
+  predicate: null,
 };
 const items = [ReportNames.ReportSubType.SUB_SPAM];
 obj[3] = items;

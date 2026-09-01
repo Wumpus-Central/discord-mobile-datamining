@@ -23,8 +23,10 @@ export const PressableScale = PressableScale.PressableScale;
 export const PressableScaleProps = PressableScale.PressableScaleProps;
 export const CollapsibleFloatingActionButton = CollapsableButton.CollapsibleFloatingActionButton;
 export const CollapsibleFloatingActionButtonProps = CollapsableButton.CollapsibleFloatingActionButtonProps;
-export const useCollapsibleFloatingActionButtonState = useCollapsibleFloatingActionButtonState.useCollapsibleFloatingActionButtonState;
-export const useCollapsibleFloatingActionButtonScroll = useCollapsibleFloatingActionButtonState.useCollapsibleFloatingActionButtonScroll;
+export const useCollapsibleFloatingActionButtonState =
+  useCollapsibleFloatingActionButtonState.useCollapsibleFloatingActionButtonState;
+export const useCollapsibleFloatingActionButtonScroll =
+  useCollapsibleFloatingActionButtonState.useCollapsibleFloatingActionButtonScroll;
 export const BackgroundBlurView = BackgroundBlurView.BackgroundBlurView;
 export const BackgroundBlurFill = BlurTheme.BackgroundBlurFill;
 export const BackgroundBlurFillAnimated = BlurTheme.BackgroundBlurFillAnimated;

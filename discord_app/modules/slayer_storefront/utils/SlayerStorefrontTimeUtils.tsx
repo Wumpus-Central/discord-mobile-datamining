@@ -61,7 +61,10 @@ export { getLimitedOfferTimeLeft };
 export { formatLimitedOfferTimeLeft };
 export const useTickingFormattedLimitedOfferTimeLeft = function useTickingFormattedLimitedOfferTimeLeft(endDate) {
   closure_0 = endDate;
-  const tmp = callback(React.useState(() => closure_1_6(closure_0)), 2);
+  const tmp = callback(
+    React.useState(() => closure_1_6(closure_0)),
+    2,
+  );
   importDefault = tmp[1];
   useIntervalDefault(() => {
     callback(closure_1_6(closure_0));

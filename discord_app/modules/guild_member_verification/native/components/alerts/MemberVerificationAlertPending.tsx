@@ -4,7 +4,9 @@ import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertPending.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/alerts/MemberVerificationAlertPending.tsx",
+);
 
 export default function MemberVerificationAlertPending(guildId) {
   guildId = guildId.guildId;
@@ -31,7 +33,7 @@ export default function MemberVerificationAlertPending(guildId) {
   const intl3 = guildId(1236).intl;
   obj[1] = intl3.string(guildId(1236).t.f293OM);
   obj[2] = onClose;
-  const items1 = [callback(guildId(4928).Button, obj), ];
+  const items1 = [callback(guildId(4928).Button, obj)];
   obj1 = { text: null, variant: "destructive", onPress: null };
   const intl4 = guildId(1236).intl;
   obj1[0] = intl4.string(guildId(1236).t.mqtdmQ);
@@ -40,4 +42,4 @@ export default function MemberVerificationAlertPending(guildId) {
   obj[0] = items1;
   obj.buttons = callback2(closure_5, obj);
   return callback(onClose(7657), obj);
-};
+}

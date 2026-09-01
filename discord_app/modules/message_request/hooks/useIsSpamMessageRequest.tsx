@@ -8,5 +8,9 @@ export const useIsSpamMessageRequest = function useIsSpamMessageRequest(id) {
   const _require = id;
   const items = [closure_2];
   const items1 = [id];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.isSpam(closure_0), items1);
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items,
+    () => closure_1_2.isSpam(closure_0),
+    items1,
+  );
 };

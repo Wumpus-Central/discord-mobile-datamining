@@ -24,7 +24,9 @@ function DevToolsContentSortButtons(arg0) {
   let obj = { style: tmp.sortingIcons, children: null };
   obj = {
     onPress() {
-      const result = closure_1_0(closure_1_2[14]).triggerHapticFeedback(closure_1_0(closure_1_2[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
+      const result = closure_1_0(closure_1_2[14]).triggerHapticFeedback(
+        closure_1_0(closure_1_2[14]).HapticFeedbackTypes.IMPACT_MEDIUM,
+      );
       const obj = closure_1_0(closure_1_2[14]);
       closure_1_0(closure_1_2[11]).updateSortOrder(closure_0, "up");
     },
@@ -32,19 +34,21 @@ function DevToolsContentSortButtons(arg0) {
     style: null,
     accessibilityRole: "button",
     accessibilityLabel: "Shift up",
-    children: null
+    children: null,
   };
-  const items = [tmp.button, ];
+  const items = [tmp.button];
   if (start) {
     start = tmp.disabledButton;
   }
   items[1] = start;
   obj[2] = items;
   obj[5] = closure_10(ArrowSmallUpIcon.ArrowSmallUpIcon, {});
-  const items1 = [closure_10(PressableBase.PressableOpacity, obj), ];
+  const items1 = [closure_10(PressableBase.PressableOpacity, obj)];
   obj = {
     onPress() {
-      const result = closure_1_0(closure_1_2[14]).triggerHapticFeedback(closure_1_0(closure_1_2[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
+      const result = closure_1_0(closure_1_2[14]).triggerHapticFeedback(
+        closure_1_0(closure_1_2[14]).HapticFeedbackTypes.IMPACT_MEDIUM,
+      );
       const obj = closure_1_0(closure_1_2[14]);
       closure_1_0(closure_1_2[11]).updateSortOrder(closure_0, "down");
     },
@@ -52,9 +56,9 @@ function DevToolsContentSortButtons(arg0) {
     style: null,
     accessibilityRole: "button",
     accessibilityLabel: "Shift down",
-    children: null
+    children: null,
   };
-  const items2 = [tmp.button, ];
+  const items2 = [tmp.button];
   if (end) {
     end = tmp.disabledButton;
   }
@@ -73,7 +77,14 @@ obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: Them
 obj[0] = obj;
 createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_8 };
 obj[1] = createCacheKey;
-obj[2] = { backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center" };
+obj[2] = {
+  backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
+  width: ThemesDefault.space.PX_32,
+  height: ThemesDefault.space.PX_32,
+  borderRadius: ThemesDefault.radii.round,
+  justifyContent: "center",
+  alignItems: "center",
+};
 obj[3] = { opacity: 0.5 };
 let closure_12 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((arg0) => {
@@ -83,7 +94,14 @@ const memoResult = importAllResult.memo((arg0) => {
   obj[2] = items;
   return callback3(Text.Text, obj);
 });
-const obj2 = { backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center" };
+const obj2 = {
+  backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
+  width: ThemesDefault.space.PX_32,
+  height: ThemesDefault.space.PX_32,
+  borderRadius: ThemesDefault.radii.round,
+  justifyContent: "center",
+  alignItems: "center",
+};
 const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
   let _require;
   importDefault = undefined;
@@ -112,10 +130,18 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
   });
   let tmp4 = useSafeAreaInsetsDefault();
   const items1 = [closure_8];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length,
+  );
   const obj3 = initialize;
   const items2 = [closure_9];
-  importDefault = stateFromStores + require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => Object.keys(clientOverrides.getClientOverrides()).length);
+  importDefault =
+    stateFromStores +
+    require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+      items2,
+      () => Object.keys(clientOverrides.getClientOverrides()).length,
+    );
   const obj4 = initialize;
   importDefault = getSortedDevToolsScreensDefault().map((arg0) => {
     [tmp] = arg0;
@@ -144,8 +170,16 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
     title,
     hasIcons: true,
     children: arr5.map((arg0, arg1) => {
-      [tmp, ] = arg0;
-      let obj = { label: tmp2, subLabel: table[arg1], icon: closure_1_10(callback(_undefined[20]).TableRow.Icon, { IconComponent: tmp3 }), arrow: !_undefined, trailing: null, onLongPress: null, onPress: null };
+      [tmp] = arg0;
+      let obj = {
+        label: tmp2,
+        subLabel: table[arg1],
+        icon: closure_1_10(callback(_undefined[20]).TableRow.Icon, { IconComponent: tmp3 }),
+        arrow: !_undefined,
+        trailing: null,
+        onLongPress: null,
+        onPress: null,
+      };
       let tmp4Result;
       if (_undefined) {
         obj = { screenKey: null, start: null, end: null };
@@ -168,7 +202,9 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
         }
         obj[1] = str2;
         obj.open(obj);
-        const result = closure_1_0(closure_1_2[14]).triggerHapticFeedback(closure_1_0(tmp[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
+        const result = closure_1_0(closure_1_2[14]).triggerHapticFeedback(
+          closure_1_0(tmp[14]).HapticFeedbackTypes.IMPACT_MEDIUM,
+        );
         callback2((arg0) => !arg0);
       };
       obj[6] = function onPress() {
@@ -185,9 +221,12 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
         }
       };
       return closure_1_10(callback(_undefined[20]).TableRow, obj, tmp);
-    })
+    }),
   };
-  const tmp8 = callback2(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, obj);
+  const tmp8 = callback2(
+    require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup,
+    obj,
+  );
   let tmp7Result = tmp8;
   if (!embedded) {
     obj = { style: null, contentContainerStyle: null, children: null };

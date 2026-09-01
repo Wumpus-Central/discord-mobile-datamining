@@ -10,10 +10,18 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 noopAll;
-({ AnalyticEvents: error, BoostedGuildTiers: closure_8, GuildFeatures: c9, MAX_STAGE_VIDEO_USER_LIMIT_TIER2: c10, MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED: unpackModuleId } = ME);
+({
+  AnalyticEvents: error,
+  BoostedGuildTiers: closure_8,
+  GuildFeatures: c9,
+  MAX_STAGE_VIDEO_USER_LIMIT_TIER2: c10,
+  MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED: unpackModuleId,
+} = ME);
 ({ BoostingUpsellAction: closure_12, PremiumUpsellTypes: map1 } = GuildFeatures);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/sheets/StageBoostingActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/sheets/StageBoostingActionSheet.tsx",
+);
 
 export default function StageBoostingActionSheet(channel) {
   channel = channel.channel;
@@ -54,7 +62,11 @@ export default function StageBoostingActionSheet(channel) {
   let tmpResult = tmp(589);
   const items3 = [closure_5];
   const items4 = [channel];
-  stateFromStores2 = tmpResult.useStateFromStores(items3, () => closure_1_5.can(channel(1395).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel), items4);
+  stateFromStores2 = tmpResult.useStateFromStores(
+    items3,
+    () => closure_1_5.can(channel(1395).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel),
+    items4,
+  );
   if (hasItem) {
     let premiumTier1;
     if (stateFromStores != null) {
@@ -94,7 +106,12 @@ export default function StageBoostingActionSheet(channel) {
     function handleClose() {
       let obj = stateFromStores2(4445);
       obj.hideActionSheet(closure_1_6);
-      obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.DISMISS };
+      obj = {
+        guild_id: channel.guild_id,
+        type: closure_1_13.VIDEO_STAGE_LIMIT,
+        is_moderator: stateFromStores2,
+        action: closure_1_12.DISMISS,
+      };
       stateFromStores2(698).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
     }
     tmpResult = tmp(5374);
@@ -103,7 +120,12 @@ export default function StageBoostingActionSheet(channel) {
     closure_3 = tmp(5374).useStageParticipantsCount(channel.id, tmp(5368).StageChannelParticipantNamedIndex.AUDIENCE);
     stateFromStores2(4945)(() => {
       let obj = stateFromStores2(698);
-      obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, listener_count: dependencyMap + closure_3 };
+      obj = {
+        guild_id: channel.guild_id,
+        type: closure_1_13.VIDEO_STAGE_LIMIT,
+        is_moderator: stateFromStores2,
+        listener_count: dependencyMap + closure_3,
+      };
       obj.track(closure_1_7.BOOSTING_UPSELL_VIEWED, obj);
     });
     if (tmp9) {
@@ -115,15 +137,25 @@ export default function StageBoostingActionSheet(channel) {
       obj[4] = function onPress() {
         let obj = stateFromStores2(4445);
         obj.hideActionSheet(closure_1_6);
-        obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.DISMISS };
+        obj = {
+          guild_id: channel.guild_id,
+          type: closure_1_13.VIDEO_STAGE_LIMIT,
+          is_moderator: stateFromStores2,
+          action: closure_1_12.DISMISS,
+        };
         stateFromStores2(698).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
         const obj2 = stateFromStores2(698);
         channel(5377).openApplyBoostModal(channel.guild_id);
         const obj4 = channel(5377);
-        obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.BOOST };
+        obj = {
+          guild_id: channel.guild_id,
+          type: closure_1_13.VIDEO_STAGE_LIMIT,
+          is_moderator: stateFromStores2,
+          action: closure_1_12.BOOST,
+        };
         stateFromStores2(698).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
       };
-      const items5 = [callback(tmp(4928).Button, obj), ];
+      const items5 = [callback(tmp(4928).Button, obj)];
       obj1 = { variant: "secondary", size: "lg", text: null, onPress: null };
       const intl7 = tmp(1236).intl;
       obj1[2] = intl7.string(tmp(1236).t.f3Pet9);
@@ -163,4 +195,4 @@ export default function StageBoostingActionSheet(channel) {
     obj4[3] = tmp23Result;
     return tmp23(tmp(10313).PromoSheet, obj4);
   }
-};
+}

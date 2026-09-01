@@ -119,7 +119,16 @@ function computeGuildMediaState(closure_0) {
       }
       continue;
     }
-    obj = { skipMutedVcs: callback(13360).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"), currentUserId: id.getId(), selectedVoiceChannelId: voiceChannelId, selectedVoiceGuildId: null, selectedVoiceChannelHasVideo: null, isSelectedVoiceChannelStage: null, blockedOrIgnoredUserIds: null, streamChannelIdsByGuild: null };
+    obj = {
+      skipMutedVcs: callback(13360).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"),
+      currentUserId: id.getId(),
+      selectedVoiceChannelId: voiceChannelId,
+      selectedVoiceGuildId: null,
+      selectedVoiceChannelHasVideo: null,
+      isSelectedVoiceChannelStage: null,
+      blockedOrIgnoredUserIds: null,
+      streamChannelIdsByGuild: null,
+    };
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
@@ -151,11 +160,21 @@ function computeGuildMediaState(closure_0) {
   }
   embeddedActivitiesForGuild = embeddedActivitiesForGuild.getEmbeddedActivitiesForGuild(closure_0);
   if (tmp2.selectedVoiceGuildId === closure_0) {
-    let obj = { audio: true, video: null, screenshare: null, liveStage: null, activeEvent: null, activity: null, isCurrentUserConnected: true };
+    let obj = {
+      audio: true,
+      video: null,
+      screenshare: null,
+      liveStage: null,
+      activeEvent: null,
+      activity: null,
+      isCurrentUserConnected: true,
+    };
     obj[1] = tmp2.selectedVoiceChannelHasVideo;
     obj[2] = null != activeStreamForUser.getActiveStreamForUser(tmp2.currentUserId, closure_0);
     obj[3] = tmp2.isSelectedVoiceChannelStage;
-    const guildActiveEvent = require("../guild_scheduled_events/useGuildScheduledEvents.tsx").getGuildActiveEvent(closure_0);
+    const guildActiveEvent = require("../guild_scheduled_events/useGuildScheduledEvents.tsx").getGuildActiveEvent(
+      closure_0,
+    );
     let channel_id;
     if (guildActiveEvent != null) {
       channel_id = guildActiveEvent.channel_id;
@@ -269,7 +288,15 @@ function computeGuildMediaState(closure_0) {
             return tmp2;
           });
         }
-        obj = { audio: null, video: null, screenshare: null, liveStage: null, activeEvent: null, activity: null, isCurrentUserConnected: false };
+        obj = {
+          audio: null,
+          video: null,
+          screenshare: null,
+          liveStage: null,
+          activeEvent: null,
+          activity: null,
+          isCurrentUserConnected: false,
+        };
         obj[0] = flag2;
         obj[1] = flag;
         obj[2] = someResult;
@@ -294,19 +321,52 @@ function handleGuildCreateOrDelete(guild) {
   return flag;
 }
 ({ BasicPermissions: closure_17, ME: closure_18 } = ME);
-let closure_19 = Object.freeze({ audio: false, video: false, screenshare: false, liveStage: false, activeEvent: false, activity: false, isCurrentUserConnected: false });
+let closure_19 = Object.freeze({
+  audio: false,
+  video: false,
+  screenshare: false,
+  liveStage: false,
+  activeEvent: false,
+  activity: false,
+  isCurrentUserConnected: false,
+});
 let map = new Map();
 let c21 = 0;
 let c22 = 0;
 let c23 = null;
 let c24 = -1;
 const Store = initializeDefault.Store;
-class GuildMediaStateStore extends Store {
-}
+class GuildMediaStateStore extends Store {}
 const prototype = GuildMediaStateStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4, closure_8, closure_9, closure_10, closure_3, closure_5, closure_11, closure_12, closure_13, closure_14, closure_6, closure_15, closure_16);
-  const items = [closure_4, closure_8, closure_10, closure_3, closure_5, closure_11, closure_12, closure_13, closure_14, closure_6, closure_15];
+  this.waitFor(
+    closure_4,
+    closure_8,
+    closure_9,
+    closure_10,
+    closure_3,
+    closure_5,
+    closure_11,
+    closure_12,
+    closure_13,
+    closure_14,
+    closure_6,
+    closure_15,
+    closure_16,
+  );
+  const items = [
+    closure_4,
+    closure_8,
+    closure_10,
+    closure_3,
+    closure_5,
+    closure_11,
+    closure_12,
+    closure_13,
+    closure_14,
+    closure_6,
+    closure_15,
+  ];
   this.syncWith(items, markAllStale);
 };
 prototype["getGuildMediaState"] = function getGuildMediaState(closure_0) {
@@ -365,7 +425,7 @@ const guildMediaStateStore = new GuildMediaStateStore(dispatcherDefault, {
       }
     }
     return flag;
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/guilds_bar/GuildMediaStateStore.tsx");
 

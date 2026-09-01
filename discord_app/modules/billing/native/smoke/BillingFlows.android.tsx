@@ -10,5 +10,5 @@ const result = set.fileFinishedImporting("modules/billing/native/smoke/BillingFl
 export default {
   RunAllFlows() {
     return <View />;
-  }
+  },
 };

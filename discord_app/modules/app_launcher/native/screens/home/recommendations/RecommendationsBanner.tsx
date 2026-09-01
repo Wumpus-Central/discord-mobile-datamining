@@ -15,7 +15,10 @@ import createCacheKey from "../../../../../../design/components/Styles/native/cr
 const require = arg1;
 let c3 = importAllResult;
 ({ BANNER_HEIGHT: closure_6, EMPTY_STRING_SNOWFLAKE_ID: error } = ME);
-let closure_9 = createCacheKey.createStyles({ imageContainer: { width: "100%", height: "100%" }, image: { width: "100%", height: "100%" } });
+let closure_9 = createCacheKey.createStyles({
+  imageContainer: { width: "100%", height: "100%" },
+  image: { width: "100%", height: "100%" },
+});
 let closure_10 = importAllResult.memo((applicationId) => {
   let heroMediaDimensions;
   importDefault = undefined;
@@ -28,7 +31,12 @@ let closure_10 = importAllResult.memo((applicationId) => {
   let items = [heroMediaDimensions, tmp4];
   const memo = importAllResult.useMemo(() => {
     obj = { imageStyle: obj, imageSource: null };
-    obj = { backgroundColor: "black", height: heroMediaDimensions.height, width: heroMediaDimensions.width, transform: items };
+    obj = {
+      backgroundColor: "black",
+      height: heroMediaDimensions.height,
+      width: heroMediaDimensions.width,
+      transform: items,
+    };
     obj = { translateY: (closure_1_6 - heroMediaDimensions.height) / 2 };
     items = [obj];
     let tmp2;
@@ -75,7 +83,12 @@ const memoResult = importAllResult.memo(function RecommendationBanner(arg0) {
   ({ applicationEmbedded, applicationIcon } = arg0);
   const tmp = callback();
   let obj = getAvatarURLDefault;
-  const applicationIconSource = obj.getApplicationIconSource({ id: applicationId, icon: applicationIcon, bot: applicationBot, botIconFirst: true });
+  const applicationIconSource = obj.getApplicationIconSource({
+    id: applicationId,
+    icon: applicationIcon,
+    bot: applicationBot,
+    botIconFirst: true,
+  });
   hasFetchedColorsDefault;
   if (typeof applicationIconSource !== "number") {
     let uri;
@@ -110,6 +123,8 @@ const memoResult = importAllResult.memo(function RecommendationBanner(arg0) {
   }
   return tmp11;
 });
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/recommendations/RecommendationsBanner.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/app_launcher/native/screens/home/recommendations/RecommendationsBanner.tsx",
+);
 
 export default memoResult;

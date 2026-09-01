@@ -16,19 +16,58 @@ function HeaderAndFooterSpacing() {
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 const sum = 100 + require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_HEIGHT;
-createCacheKey = { categoryContainer: null, categoryHeader: null, categoryHeaderBorderDark: null, categoryHeaderBorderLight: null, imageBackground: null, viewAllIcon: null };
+createCacheKey = {
+  categoryContainer: null,
+  categoryHeader: null,
+  categoryHeaderBorderDark: null,
+  categoryHeaderBorderLight: null,
+  imageBackground: null,
+  viewAllIcon: null,
+};
 createCacheKey = { marginTop: ThemesDefault.space.PX_16, marginBottom: 24, height: sum };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", flexDirection: "row", justifyContent: "flex-end", alignItems: "center", marginBottom: 16, marginHorizontal: 16, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 1, height: 84, padding: 20 };
-let obj1 = { display: "flex", flexDirection: "row", justifyContent: "flex-end", alignItems: "center", marginBottom: 16, marginHorizontal: 16, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 1, height: 84, padding: 20 };
+createCacheKey[1] = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "flex-end",
+  alignItems: "center",
+  marginBottom: 16,
+  marginHorizontal: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+  borderWidth: 1,
+  height: 84,
+  padding: 20,
+};
+let obj1 = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "flex-end",
+  alignItems: "center",
+  marginBottom: 16,
+  marginHorizontal: 16,
+  borderRadius: ThemesDefault.radii.sm,
+  overflow: "hidden",
+  borderWidth: 1,
+  height: 84,
+  padding: 20,
+};
 createCacheKey[2] = { borderColor: ThemesDefault.unsafe_rawColors.PRIMARY_660 };
 let obj2 = { borderColor: ThemesDefault.unsafe_rawColors.PRIMARY_660 };
 createCacheKey[3] = { borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[4] = { top: 0, bottom: 0, left: 0, right: 0, position: "absolute" };
 let obj3 = { borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, padding: 6, borderRadius: ThemesDefault.radii.round };
+createCacheKey[5] = {
+  backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
+  padding: 6,
+  borderRadius: ThemesDefault.radii.round,
+};
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, padding: 6, borderRadius: ThemesDefault.radii.round };
+let obj4 = {
+  backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
+  padding: 6,
+  borderRadius: ThemesDefault.radii.round,
+};
 let result = require("set").fileFinishedImporting("modules/collectibles/native/ShopCategory.tsx");
 
 export const CATEGORY_CONTAINER_HEIGHT = sum;
@@ -72,10 +111,22 @@ export const ShopCategory = function ShopCategory(category) {
   if (tmp9) {
     tmp9 = productIndex > 0;
   }
-  obj = { shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: tmp4(15413).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId };
+  obj = {
+    shouldScroll: tmp9,
+    initialScrollIndex: productIndex,
+    flashListRef: ref,
+    afterMs: tmp4(15413).INITIAL_SCROLL_DELAY_MS,
+    resetKey: category.storeListingId,
+  };
   const scrollToInitialIndexOnce = obj6.useScrollToInitialIndexOnce(obj);
   collectiblesAnalyticsContext = category(8890).useCollectiblesAnalyticsContext();
-  const items1 = [initialProductSkuId, initialVariantIndex, filteredAndSortedProducts, analyticsLocations, collectiblesAnalyticsContext];
+  const items1 = [
+    initialProductSkuId,
+    initialVariantIndex,
+    filteredAndSortedProducts,
+    analyticsLocations,
+    collectiblesAnalyticsContext,
+  ];
   const effect = obj4.useEffect(() => {
     let found = null;
     if (null != initialProductSkuId) {
@@ -104,8 +155,18 @@ export const ShopCategory = function ShopCategory(category) {
   }, items2);
   obj1 = { newValue: { categoryPosition: index }, children: null };
   let obj2 = { style: tmp3.categoryContainer, children: null };
-  const items3 = [tmp3.categoryHeader, ];
-  obj3 = { style: items3, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, activeOpacity: 0.8, androidRippleConfig: null, hitSlop: 8, onPress: null, children: null };
+  const items3 = [tmp3.categoryHeader];
+  obj3 = {
+    style: items3,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    activeOpacity: 0.8,
+    androidRippleConfig: null,
+    hitSlop: 8,
+    onPress: null,
+    children: null,
+  };
   items3[1] = isDarkTheme ? tmp3.categoryHeaderBorderDark : tmp3.categoryHeaderBorderLight;
   const intl = tmp4(1236).intl;
   obj4 = { category: category.name };
@@ -139,12 +200,30 @@ export const ShopCategory = function ShopCategory(category) {
     obj6[2] = tmp3.imageBackground;
     tmp14Result = tmp14(tmp(5493), obj6);
   }
-  const items4 = [tmp14Result, ];
+  const items4 = [tmp14Result];
   const tmp4Result = category(8890);
-  items4[1] = ref(filteredAndSortedProducts, { style: tmp3.viewAllIcon, children: ref(category(6003).ChevronSmallRightIcon, { size: "sm", color: "white" }) });
+  items4[1] = ref(filteredAndSortedProducts, {
+    style: tmp3.viewAllIcon,
+    children: ref(category(6003).ChevronSmallRightIcon, { size: "sm", color: "white" }),
+  });
   obj3[8] = items4;
-  const items5 = [collectiblesAnalyticsContext(category(5068).PressableOpacity, obj3, category.storeListingId), ];
-  const obj9 = { ref, horizontal: true, accessibilityLabel: null, accessibilityRole: "list", data: null, renderItem: null, drawDistance: 150, decelerationRate: "fast", snapToInterval: null, showsHorizontalScrollIndicator: false, ListHeaderComponent: null, ListFooterComponent: null, ItemSeparatorComponent: null, initialScrollIndex: null };
+  const items5 = [collectiblesAnalyticsContext(category(5068).PressableOpacity, obj3, category.storeListingId)];
+  const obj9 = {
+    ref,
+    horizontal: true,
+    accessibilityLabel: null,
+    accessibilityRole: "list",
+    data: null,
+    renderItem: null,
+    drawDistance: 150,
+    decelerationRate: "fast",
+    snapToInterval: null,
+    showsHorizontalScrollIndicator: false,
+    ListHeaderComponent: null,
+    ListFooterComponent: null,
+    ItemSeparatorComponent: null,
+    initialScrollIndex: null,
+  };
   const intl3 = tmp4(1236).intl;
   obj9[2] = intl3.formatToPlainString(category(1236).t.FNtLb3, { category: category.name });
   obj9[4] = filteredAndSortedProducts;

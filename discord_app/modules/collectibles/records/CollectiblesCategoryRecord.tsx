@@ -9,7 +9,12 @@ let prototype;
 prototype = function CollectiblesCategoryRecord(products) {
   const tmp4 = new prototype(products, tmp3, tmp2, tmp);
   // ThrowIfThisInitialized (0x7c)
-  ({ products: tmp4.products, heroRanking: tmp4.heroRanking, unpublishedAt: tmp4.unpublishedAt, isOrbsExclusive } = products);
+  ({
+    products: tmp4.products,
+    heroRanking: tmp4.heroRanking,
+    unpublishedAt: tmp4.unpublishedAt,
+    isOrbsExclusive,
+  } = products);
   if (isOrbsExclusive == null) {
     const _Array = Array;
     let isArray = Array.isArray(products.products);
@@ -23,15 +28,45 @@ prototype = function CollectiblesCategoryRecord(products) {
     isOrbsExclusive = isArray;
   }
   tmp4.isOrbsExclusive = isOrbsExclusive;
-  ({ heroBannerUrl: tmp4.heroBannerUrl, heroBannerAnimatedUrl: tmp4.heroBannerAnimatedUrl, heroRiveUrl: tmp4.heroRiveUrl, heroLogoUrl: tmp4.heroLogoUrl, catalogBannerUrl: tmp4.catalogBannerUrl, catalogBannerAnimatedUrl: tmp4.catalogBannerAnimatedUrl, catalogBannerRiveUrl: tmp4.catalogBannerRiveUrl, featuredBlockUrl: tmp4.featuredBlockUrl, logoUrl: tmp4.logoUrl, pdpBgUrl: tmp4.pdpBgUrl, mobileBannerUrl: tmp4.mobileBannerUrl, mobileBgUrl: tmp4.mobileBgUrl, heroLogoDisplayConfig: tmp4.heroLogoDisplayConfig, heroBannerDisplayConfig: tmp4.heroBannerDisplayConfig } = products);
+  ({
+    heroBannerUrl: tmp4.heroBannerUrl,
+    heroBannerAnimatedUrl: tmp4.heroBannerAnimatedUrl,
+    heroRiveUrl: tmp4.heroRiveUrl,
+    heroLogoUrl: tmp4.heroLogoUrl,
+    catalogBannerUrl: tmp4.catalogBannerUrl,
+    catalogBannerAnimatedUrl: tmp4.catalogBannerAnimatedUrl,
+    catalogBannerRiveUrl: tmp4.catalogBannerRiveUrl,
+    featuredBlockUrl: tmp4.featuredBlockUrl,
+    logoUrl: tmp4.logoUrl,
+    pdpBgUrl: tmp4.pdpBgUrl,
+    mobileBannerUrl: tmp4.mobileBannerUrl,
+    mobileBgUrl: tmp4.mobileBgUrl,
+    heroLogoDisplayConfig: tmp4.heroLogoDisplayConfig,
+    heroBannerDisplayConfig: tmp4.heroBannerDisplayConfig,
+  } = products);
   return tmp4;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["fromServer"] = function fromServer(arg0) {
   ({ products, unpublished_at } = arg0);
   let date = null;
-  ({ hero_ranking, hero_logo_display_config, hero_banner_display_config, hero_banner_url, hero_banner_animated_url, hero_rive_url, hero_logo_url, catalog_banner_url, catalog_banner_animated_url, catalog_banner_rive_url, featured_block_url, logo_url, pdp_bg_url, mobile_banner_url, mobile_bg_url } = arg0);
+  ({
+    hero_ranking,
+    hero_logo_display_config,
+    hero_banner_display_config,
+    hero_banner_url,
+    hero_banner_animated_url,
+    hero_rive_url,
+    hero_logo_url,
+    catalog_banner_url,
+    catalog_banner_animated_url,
+    catalog_banner_rive_url,
+    featured_block_url,
+    logo_url,
+    pdp_bg_url,
+    mobile_banner_url,
+    mobile_bg_url,
+  } = arg0);
   const obj = {};
   const merged = Object.assign(super.fromServer(Object.assign(arg0, Object.create(null))));
   obj.products = products.reduce((arr) => {
@@ -85,7 +120,9 @@ prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionR
         }
         const tmp2 = callback;
         const tmp3 = table;
-        tmp4 = type === callback(table[2]).CollectiblesItemType.VARIANTS_GROUP || type === callback(table[2]).CollectiblesItemType.EXTERNAL_SKU;
+        tmp4 =
+          type === callback(table[2]).CollectiblesItemType.VARIANTS_GROUP ||
+          type === callback(table[2]).CollectiblesItemType.EXTERNAL_SKU;
       }
       return arr;
     }, []),
@@ -103,7 +140,7 @@ prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionR
     mobileBannerUrl: id.mobileBannerUrl,
     mobileBgUrl: id.mobileBgUrl,
     heroLogoDisplayConfig: id.heroLogoDisplayConfig,
-    heroBannerDisplayConfig: id.heroDisplayConfig
+    heroBannerDisplayConfig: id.heroDisplayConfig,
   });
 };
 let result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesCategoryRecord.tsx");

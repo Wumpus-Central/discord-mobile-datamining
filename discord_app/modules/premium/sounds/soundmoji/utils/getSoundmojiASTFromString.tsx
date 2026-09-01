@@ -8,7 +8,9 @@ import closure_4 from "../../../../../stores/MessageStore.tsx";
 import { MessageStates } from "../../../../../Constants.tsx";
 
 require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx",
+);
 
 export default function getSoundmojiASTFromString(soundId, guildId) {
   ({ channelId, messageId, soundboardSounds } = guildId);
@@ -58,7 +60,17 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
     if (name == null) {
       name = tmp2;
     }
-    obj = { type: "soundboard", soundId: null, guildId: null, messageId: null, channelId: null, content: null, emojiId: null, emojiName: null, emojiSrc: null };
+    obj = {
+      type: "soundboard",
+      soundId: null,
+      guildId: null,
+      messageId: null,
+      channelId: null,
+      content: null,
+      emojiId: null,
+      emojiName: null,
+      emojiSrc: null,
+    };
     obj[1] = tmp2;
     obj[2] = tmp;
     ({ messageId: obj2[3], channelId: obj2[4] } = guildId);
@@ -92,7 +104,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
     return obj;
   }
   const tmp3 = require;
-};
+}
 export const soundmojiRawFormatRegex = /^<sound:(\d+):(\d+)>/;
 export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId, channelId, messageId, soundId, arg4) {
   if (obj.getSoundmojiRenderingExperiment({ location: "getSoundmojiASTFromString" })) {

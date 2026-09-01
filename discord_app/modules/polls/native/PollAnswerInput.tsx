@@ -71,7 +71,15 @@ function ImageInput(openImageInputActionSheet) {
   if (!tmp6) {
     tmp8 = openImageInputActionSheet;
   }
-  let obj = { accessibilityRole: "button", accessibilityLabel: memo, onPress: openExpressionPicker, onLongPress: tmp8, onLayout: null, style: null, children: null };
+  let obj = {
+    accessibilityRole: "button",
+    accessibilityLabel: memo,
+    onPress: openExpressionPicker,
+    onLongPress: tmp8,
+    onLayout: null,
+    style: null,
+    children: null,
+  };
   let tmp11;
   if (null == imageSize) {
     tmp11 = callback;
@@ -94,8 +102,24 @@ function ImageInput(openImageInputActionSheet) {
 ({ Keyboard: c4, TouchableOpacity: c5, View: closure_6 } = get_ActivityIndicator);
 ({ MAX_POLL_ANSWER_LENGTH: c9, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: c10 } = POLL_ATTACHMENT_FOLDER);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { defaultContainer: { flexDirection: "row", alignItems: "center" }, defaultImageAndTextContainer: null, cannotRemove: null, defaultImageContainer: null, pollAnswerTextInput: null, defaultRemoveButtonContainer: null, uploadContainer: null, errorInput: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.lg, flex: 1, overflow: "hidden" };
+createCacheKey = {
+  defaultContainer: { flexDirection: "row", alignItems: "center" },
+  defaultImageAndTextContainer: null,
+  cannotRemove: null,
+  defaultImageContainer: null,
+  pollAnswerTextInput: null,
+  defaultRemoveButtonContainer: null,
+  uploadContainer: null,
+  errorInput: null,
+};
+createCacheKey = {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  borderRadius: ThemesDefault.radii.lg,
+  flex: 1,
+  overflow: "hidden",
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginRight: 30 };
 createCacheKey[3] = { width: 60, height: 48, justifyContent: "center", alignItems: "center" };
@@ -112,7 +136,14 @@ export default function PollAnswerInput(answer) {
   answer = answer.answer;
   const index = answer.index;
   const channelId = answer.channelId;
-  ({ onAnswerTextChange: closure_3, onAnswerEmojiSelect: closure_4, canRemoveAnswer, onRemoveAnswer: closure_5, onRemoveAnswerImage: closure_6, error } = answer);
+  ({
+    onAnswerTextChange: closure_3,
+    onAnswerEmojiSelect: closure_4,
+    canRemoveAnswer,
+    onRemoveAnswer: closure_5,
+    onRemoveAnswerImage: closure_6,
+    error,
+  } = answer);
   let localCreationAnswerId;
   function openExpressionPicker() {
     const channel = localCreationAnswerId.getChannel(channelId);
@@ -140,14 +171,14 @@ export default function PollAnswerInput(answer) {
   if (tmp6Result) {
     tmp6Result = error.length > 0;
   }
-  const items = [tmp.defaultContainer, ];
+  const items = [tmp.defaultContainer];
   let cannotRemove = !canRemoveAnswer;
   if (!canRemoveAnswer) {
     cannotRemove = tmp.cannotRemove;
   }
   let obj = { style: items, children: null };
   items[1] = cannotRemove;
-  const items1 = [tmp.defaultImageAndTextContainer, ];
+  const items1 = [tmp.defaultImageAndTextContainer];
   let errorInput = tmp6Result;
   if (tmp6Result) {
     errorInput = tmp.errorInput;
@@ -161,16 +192,41 @@ export default function PollAnswerInput(answer) {
     openExpressionPicker,
     openImageInputActionSheet() {
       let obj = index(channelId[16]);
-      obj = { channelId, index, answer, onSaveAltText: handleSaveAltText, onRemoveAnswerImage: closure_6, openExpressionPicker };
+      obj = {
+        channelId,
+        index,
+        answer,
+        onSaveAltText: handleSaveAltText,
+        onRemoveAnswerImage: closure_6,
+        openExpressionPicker,
+      };
       obj.openLazy(answer(channelId[18])(channelId[17], channelId.paths), closure_1_10, obj);
     },
     iconSrc: index(channelId[19]),
     containerStyle: tmp.defaultImageContainer,
     imageSize: 48,
-    answerIndex: index
+    answerIndex: index,
   };
-  const items2 = [callback(ImageInput, obj), ];
-  obj1 = { ref: inputRef, textAlignVertical: "center", showTopContainer: false, showBorder: false, placeholder: null, onChange: null, onSubmitEditing: null, blurOnSubmit: false, style: null, textContentType: "none", accessibilityLabel: null, accessibilityHint: null, maxLength: null, returnKeyType: "next", required: true, autoCorrect: true, "aria-invalid": null };
+  const items2 = [callback(ImageInput, obj)];
+  obj1 = {
+    ref: inputRef,
+    textAlignVertical: "center",
+    showTopContainer: false,
+    showBorder: false,
+    placeholder: null,
+    onChange: null,
+    onSubmitEditing: null,
+    blurOnSubmit: false,
+    style: null,
+    textContentType: "none",
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    maxLength: null,
+    returnKeyType: "next",
+    required: true,
+    autoCorrect: true,
+    "aria-invalid": null,
+  };
   const intl = answer(channelId[10]).intl;
   obj1[4] = intl.string(answer(channelId[10]).t.NNHVlv);
   obj1[5] = function onChange(text) {
@@ -192,7 +248,7 @@ export default function PollAnswerInput(answer) {
   obj1[16] = error;
   items2[1] = callback(answer(channelId[20]).FormInput, obj1);
   obj[1] = items2;
-  const items3 = [closure_13(closure_6, obj), ];
+  const items3 = [closure_13(closure_6, obj)];
   if (canRemoveAnswer) {
     const obj4 = { onPress: null, accessibilityRole: "button", style: null, accessibilityLabel: null, children: null };
     obj4[0] = function onPress() {
@@ -212,7 +268,7 @@ export default function PollAnswerInput(answer) {
   }
   items3[1] = canRemoveAnswer;
   obj[1] = items3;
-  const children = [closure_13(closure_6, obj), ];
+  const children = [closure_13(closure_6, obj)];
   if (tmp6Result) {
     const obj7 = { message: null };
     obj7[0] = error;
@@ -220,4 +276,4 @@ export default function PollAnswerInput(answer) {
   }
   children[1] = tmp6Result;
   return closure_13(closure_14, { children });
-};
+}

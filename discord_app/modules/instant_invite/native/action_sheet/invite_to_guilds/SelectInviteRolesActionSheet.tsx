@@ -8,8 +8,14 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ list: { flex: 1 }, label: { flexDirection: "row", alignItems: "center" }, roleDot: { marginEnd: 8 } });
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/action_sheet/invite_to_guilds/SelectInviteRolesActionSheet.tsx");
+let closure_10 = createCacheKey.createStyles({
+  list: { flex: 1 },
+  label: { flexDirection: "row", alignItems: "center" },
+  roleDot: { marginEnd: 8 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/instant_invite/native/action_sheet/invite_to_guilds/SelectInviteRolesActionSheet.tsx",
+);
 
 export default function SelectInviteRolesActionSheet(assignableRoles) {
   assignableRoles = assignableRoles.assignableRoles;
@@ -28,7 +34,10 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
     set = new Set(set.map((id) => id.id));
     return selectedRoleIds.filter((arg0) => set.has(arg0));
   }, items);
-  const tmp3 = callback(memo.useState(() => new Set(memo)), 2);
+  const tmp3 = callback(
+    memo.useState(() => new Set(memo)),
+    2,
+  );
   first = tmp3[0];
   closure_6 = tmp3[1];
   let obj = assignableRoles(onSave[6]);
@@ -72,7 +81,7 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
       ({ colorString: obj2[1], colorStrings: obj2[2] } = tmp);
       tmp5Result = tmp5(tmp6(tmp7[12]).RoleDot, obj);
     }
-    const items = [tmp5Result, ];
+    const items = [tmp5Result];
     let tmp13;
     if (null != assignableRoles[arg1].colorString) {
       if ("username" === stateFromStores) {
@@ -89,8 +98,10 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
     obj1[1] = function onPress() {
       return closure_1_8(id.id);
     };
-    obj1[2] = stateFromStores(assignableRoles(onSave[11]).FormRow.Checkbox, { selected: first.has(assignableRoles[arg1].id) });
-    const children = [stateFromStores(assignableRoles(onSave[11]).FormRow, obj1), ];
+    obj1[2] = stateFromStores(assignableRoles(onSave[11]).FormRow.Checkbox, {
+      selected: first.has(assignableRoles[arg1].id),
+    });
+    const children = [stateFromStores(assignableRoles(onSave[11]).FormRow, obj1)];
     tmp5Result = !tmp14;
     if (arg1 !== diff) {
       tmp5Result = tmp5(tmp6(tmp7[11]).FormDivider, {});
@@ -111,5 +122,10 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
   const tmp11 = stateFromStores(assignableRoles(onSave[14]).PressableOpacity, obj);
   const tmp12 = stateFromStores(assignableRoles(onSave[16]).BottomSheetTitleHeader, obj1);
   const items4 = [assignableRoles.length];
-  return stateFromStores(assignableRoles(onSave[17]).ActionSheet, { scrollable: true, header: stateFromStores(assignableRoles(onSave[16]).BottomSheetTitleHeader, obj1), startExpanded: true, children: stateFromStores(selectedRoleIds(onSave[18]), obj3) });
-};
+  return stateFromStores(assignableRoles(onSave[17]).ActionSheet, {
+    scrollable: true,
+    header: stateFromStores(assignableRoles(onSave[16]).BottomSheetTitleHeader, obj1),
+    startExpanded: true,
+    children: stateFromStores(selectedRoleIds(onSave[18]), obj3),
+  });
+}

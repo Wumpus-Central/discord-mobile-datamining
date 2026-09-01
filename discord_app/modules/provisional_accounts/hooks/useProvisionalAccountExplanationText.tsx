@@ -4,9 +4,13 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import { HelpdeskArticles } from "../../../Constants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx",
+);
 
-export const useProvisionalAccountExplanationText = function useProvisionalAccountExplanationText(renderApplicationName) {
+export const useProvisionalAccountExplanationText = function useProvisionalAccountExplanationText(
+  renderApplicationName,
+) {
   renderApplicationName = renderApplicationName.renderApplicationName;
   importDefault = undefined;
   const tmp = useProvisionalAccountApplicationDefault(renderApplicationName.userId);

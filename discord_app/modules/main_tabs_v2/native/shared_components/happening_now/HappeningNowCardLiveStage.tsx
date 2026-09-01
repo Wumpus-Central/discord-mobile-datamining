@@ -88,9 +88,12 @@ class HappeningNowLiveStageContent {
     }
     obj3 = { style: tmp.content, children: null };
     obj4 = { lineClamp: 3, children: stage.topic };
-    items2 = [, ];
+    items2 = [,];
     items2[0] = jsx(require("HAPPENING_NOW_CARD_MARGIN_RIGHT").HappeningNowCardHeader, obj4);
-    items2[1] = jsx(require("HAPPENING_NOW_CARD_MARGIN_RIGHT").HappeningNowCardSubtitle, { lineClamp: 1, children: tmp10Result });
+    items2[1] = jsx(require("HAPPENING_NOW_CARD_MARGIN_RIGHT").HappeningNowCardSubtitle, {
+      lineClamp: 1,
+      children: tmp10Result,
+    });
     obj3[1] = items2;
     return jsxs(View, obj3);
   }
@@ -204,17 +207,69 @@ function getUsersSubtitle(arg0) {
   }
 }
 let c3 = importAllResult;
-({ HappeningNowCardTrackingType: c5, HAPPENING_NOW_CONTENT_HEIGHT, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, HAPPENING_NOW_STAGE_PREVIEW_WIDTH } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
+({
+  HappeningNowCardTrackingType: c5,
+  HAPPENING_NOW_CONTENT_HEIGHT,
+  HAPPENING_NOW_STAGE_PREVIEW_HEIGHT,
+  HAPPENING_NOW_STAGE_PREVIEW_WIDTH,
+} = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { content: { flexShrink: 1, gap: 2 }, stagePreviewContainer: { marginRight: 12, flexDirection: "column", justifyContent: "space-between", height: "100%", width: HAPPENING_NOW_STAGE_PREVIEW_WIDTH }, stagePreviewBackground: null, stagePreviewBackgroundNoAudience: null, avatarStackContainer: null };
-obj = { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800, borderRadius: ThemesDefault.radii.sm, alignItems: "center", paddingTop: 6 };
+let obj = {
+  content: { flexShrink: 1, gap: 2 },
+  stagePreviewContainer: {
+    marginRight: 12,
+    flexDirection: "column",
+    justifyContent: "space-between",
+    height: "100%",
+    width: HAPPENING_NOW_STAGE_PREVIEW_WIDTH,
+  },
+  stagePreviewBackground: null,
+  stagePreviewBackgroundNoAudience: null,
+  avatarStackContainer: null,
+};
+obj = {
+  height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT,
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800,
+  borderRadius: ThemesDefault.radii.sm,
+  alignItems: "center",
+  paddingTop: 6,
+};
 obj[2] = obj;
-createCacheKey = { height: HAPPENING_NOW_CONTENT_HEIGHT, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800, borderRadius: ThemesDefault.radii.sm, justifyContent: "center", alignItems: "center" };
+createCacheKey = {
+  height: HAPPENING_NOW_CONTENT_HEIGHT,
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800,
+  borderRadius: ThemesDefault.radii.sm,
+  justifyContent: "center",
+  alignItems: "center",
+};
 obj[3] = createCacheKey;
-obj[4] = { backgroundColor: ThemesDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: ThemesDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
+obj[4] = {
+  backgroundColor: ThemesDefault.colors.STAGE_CARD_PILL_BG,
+  padding: 2,
+  borderRadius: ThemesDefault.radii.xl,
+  position: "absolute",
+  alignSelf: "center",
+  bottom: 0,
+};
 let closure_9 = createCacheKey.createStyles(obj);
-let closure_11 = { LISTENING: 0, [0]: "LISTENING", WATCHING: 1, [1]: "WATCHING", ON_STAGE: 2, [2]: "ON_STAGE", SHARING: 3, [3]: "SHARING" };
-let obj2 = { backgroundColor: ThemesDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: ThemesDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
+let closure_11 = {
+  LISTENING: 0,
+  [0]: "LISTENING",
+  WATCHING: 1,
+  [1]: "WATCHING",
+  ON_STAGE: 2,
+  [2]: "ON_STAGE",
+  SHARING: 3,
+  [3]: "SHARING",
+};
+let obj2 = {
+  backgroundColor: ThemesDefault.colors.STAGE_CARD_PILL_BG,
+  padding: 2,
+  borderRadius: ThemesDefault.radii.xl,
+  position: "absolute",
+  alignSelf: "center",
+  bottom: 0,
+};
 const memoResult = importAllResult.memo((arg0) => {
   ({ stage, index } = arg0);
   ({ fullwidth, renderingContext, panelVariant } = arg0);
@@ -241,7 +296,15 @@ const memoResult = importAllResult.memo((arg0) => {
   obj1 = index(guild_id[11]);
   const stream = obj1.useCallActivityData(channel_id).stream;
   if (null != stream) {
-    obj = { index: null, userId: null, guildId: null, stream: null, fullwidth: null, renderingContext: null, panelVariant: null };
+    obj = {
+      index: null,
+      userId: null,
+      guildId: null,
+      stream: null,
+      fullwidth: null,
+      renderingContext: null,
+      panelVariant: null,
+    };
     obj[0] = index;
     obj[1] = stream.ownerId;
     obj[2] = guild_id;
@@ -274,7 +337,7 @@ const memoResult = importAllResult.memo((arg0) => {
       tmp7Result = tmp7(tmp3(tmp4[15]).Avatar, obj3);
     }
     obj2[1] = tmp7Result;
-    const items1 = [callback(View, obj2), ];
+    const items1 = [callback(View, obj2)];
     tmp7Result = null;
     if (audienceCount > 0) {
       const obj4 = { style: null, children: null };
@@ -294,7 +357,7 @@ const memoResult = importAllResult.memo((arg0) => {
     }
     items1[1] = tmp7Result;
     obj1[1] = items1;
-    const items2 = [closure_8(View, obj1), ];
+    const items2 = [closure_8(View, obj1)];
     const obj6 = { stage: null, renderingContext: null, guildId: null };
     obj6[0] = stage;
     obj6[1] = renderingContext;
@@ -311,7 +374,9 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   return tmp16Result;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardLiveStage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardLiveStage.tsx",
+);
 
 export default memoResult;
 export { HappeningNowLiveStageContent };

@@ -27,14 +27,21 @@ function getGuildMemberSecondarySortBy(arg0) {
   return arg0.sort;
 }
 let closure_4 = Date.now();
-let obj = { NEW_GUILD_MEMBER: "NEW_GUILD_MEMBER", CURRENT_GUILD_MEMBER: "CURRENT_GUILD_MEMBER", INCLUDED_IN_SEARCH_RESULTS: "INCLUDED_IN_SEARCH_RESULTS" };
+let obj = {
+  NEW_GUILD_MEMBER: "NEW_GUILD_MEMBER",
+  CURRENT_GUILD_MEMBER: "CURRENT_GUILD_MEMBER",
+  INCLUDED_IN_SEARCH_RESULTS: "INCLUDED_IN_SEARCH_RESULTS",
+};
 let result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx");
 class GuildMemberSafetyMembers {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     obj[0] = Date.now();
     obj.guildId = global;
-    secondaryIndexMap = new require("version").SecondaryIndexMap(getGuildMemberSecondaryIndexes, getGuildMemberSecondarySortBy);
+    secondaryIndexMap = new require("version").SecondaryIndexMap(
+      getGuildMemberSecondaryIndexes,
+      getGuildMemberSecondarySortBy,
+    );
     obj._membersMap = secondaryIndexMap;
     return obj;
   }
@@ -43,7 +50,10 @@ const prototype = GuildMemberSafetyMembers.prototype;
 prototype["reset"] = function reset() {
   const _membersMap = this._membersMap;
   _membersMap.clear();
-  const secondaryIndexMap = new version.SecondaryIndexMap(getGuildMemberSecondaryIndexes, getGuildMemberSecondarySortBy);
+  const secondaryIndexMap = new version.SecondaryIndexMap(
+    getGuildMemberSecondaryIndexes,
+    getGuildMemberSecondarySortBy,
+  );
   this._membersMap = secondaryIndexMap;
   const result = this.resetNewMemberTimestamp();
 };
@@ -57,8 +67,26 @@ prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchStat
   }
   const joinedAtTimestamp = getJoinedAtDateFormatter.getJoinedAtTimestamp(trueMember.joinedAt);
   const result = this._computeMemberSupplementals(trueMember.userId, trueMember.unusualDMActivityUntil);
-  ({ hasUnusualDmActivity, hasUnusualAccountActivity, sourceInviteCode, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId } = result);
-  obj = { hasUnusualDmActivity, hasUnusualAccountActivity, sourceInviteCode, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId };
+  ({
+    hasUnusualDmActivity,
+    hasUnusualAccountActivity,
+    sourceInviteCode,
+    joinSourceType,
+    inviterId,
+    integrationType,
+    joinSourceApplicationId,
+    joinSourceChannelId,
+  } = result);
+  obj = {
+    hasUnusualDmActivity,
+    hasUnusualAccountActivity,
+    sourceInviteCode,
+    joinSourceType,
+    inviterId,
+    integrationType,
+    joinSourceApplicationId,
+    joinSourceChannelId,
+  };
   user = user.getUser(trueMember.userId);
   const merged = Object.assign(trueMember);
   obj.isCurrentGuildMemberByTimestamp = joinedAtTimestamp <= this.newMemberTimestamp;
@@ -85,7 +113,16 @@ prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(
   if (sourceInviteCode == null) {
     sourceInviteCode = null;
   }
-  obj = { sourceInviteCode, joinSourceType: null, inviterId: null, integrationType: null, joinSourceApplicationId: null, joinSourceChannelId: null, hasUnusualDmActivity: null, hasUnusualAccountActivity: null };
+  obj = {
+    sourceInviteCode,
+    joinSourceType: null,
+    inviterId: null,
+    integrationType: null,
+    joinSourceApplicationId: null,
+    joinSourceChannelId: null,
+    hasUnusualDmActivity: null,
+    hasUnusualAccountActivity: null,
+  };
   let joinSourceType = obj.joinSourceType;
   if (joinSourceType == null) {
     joinSourceType = null;
@@ -141,7 +178,16 @@ prototype["updateMember"] = function updateMember(userId) {
       unusualDMActivityUntil = obj.unusualDMActivityUntil;
     }
     const result = self._computeMemberSupplementals(obj.userId, unusualDMActivityUntil);
-    ({ sourceInviteCode, hasUnusualDmActivity, hasUnusualAccountActivity, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId } = result);
+    ({
+      sourceInviteCode,
+      hasUnusualDmActivity,
+      hasUnusualAccountActivity,
+      joinSourceType,
+      inviterId,
+      integrationType,
+      joinSourceApplicationId,
+      joinSourceChannelId,
+    } = result);
     if (obj.sourceInviteCode !== sourceInviteCode) {
       obj.sourceInviteCode = sourceInviteCode;
     }
@@ -210,7 +256,7 @@ Object.defineProperty(prototype, "version", {
   get: function version() {
     return this._membersMap.version;
   },
-  set: undefined
+  set: undefined,
 });
 
 export const MemberSafetySecondaryIndex = obj;

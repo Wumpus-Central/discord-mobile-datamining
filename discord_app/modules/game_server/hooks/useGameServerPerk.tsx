@@ -12,7 +12,9 @@ export default function useGameServerPerk(guildId) {
   const gameServerEnabled = _require(stateFromStores[4]).useGameServerEnabled(guildId, "useGameServerPerk");
   let obj = _require(stateFromStores[4]);
   const items = [gameName2];
-  stateFromStores = _require(stateFromStores[5]).useStateFromStores(items, () => gameName2.getLowestGameCostForGuild(closure_0));
+  stateFromStores = _require(stateFromStores[5]).useStateFromStores(items, () =>
+    gameName2.getLowestGameCostForGuild(closure_0),
+  );
   const tmp3 = gameServerEnabled(stateFromStores[6])();
   const gameName = tmp3.gameName;
   gameName2 = tmp3.gameName2;
@@ -22,7 +24,16 @@ export default function useGameServerPerk(guildId) {
     if (gameServerEnabled) {
       tmp = null;
       if (null != stateFromStores) {
-        let obj = { skuId: null, title: null, description: null, cost: null, dependencies: null, type: null, animatedImageUrl: null, staticImageUrl: null };
+        let obj = {
+          skuId: null,
+          title: null,
+          description: null,
+          cost: null,
+          dependencies: null,
+          type: null,
+          animatedImageUrl: null,
+          staticImageUrl: null,
+        };
         obj[0] = closure_1_5;
         const intl = guildId(stateFromStores[7]).intl;
         obj[1] = intl.string(gameServerEnabled(stateFromStores[8])["B3OfL/"]);
@@ -41,4 +52,4 @@ export default function useGameServerPerk(guildId) {
     }
     return tmp;
   }, items1);
-};
+}

@@ -43,7 +43,13 @@ export const generateTotpSecret = function generateTotpSecret() {
   const str2 = encodeDefault.encode(randomValues).toString("utf8");
   const str3 = encodeDefault.encode(randomValues).toString("utf8").replace(/=/g, "");
   const str4 = encodeDefault.encode(randomValues).toString("utf8").replace(/=/g, "").toLowerCase();
-  return encodeDefault.encode(randomValues).toString("utf8").replace(/=/g, "").toLowerCase().replace(/(\w{4})/g, "$1 ").trim();
+  return encodeDefault
+    .encode(randomValues)
+    .toString("utf8")
+    .replace(/=/g, "")
+    .toLowerCase()
+    .replace(/(\w{4})/g, "$1 ")
+    .trim();
 };
 export { encodeTotpSecret };
 export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
@@ -54,7 +60,16 @@ export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
   const encodeURIResult = encodeURI(str);
   const encodeURIResult1 = encodeURI(arg0);
   const formatted = str.replace(/[\s._-]+/g, "").toUpperCase();
-  return "otpauth://totp/" + encodeURIResult + ":" + encodeURIResult1 + "?secret=" + formatted + "&issuer=" + encodeURIComponent(str);
+  return (
+    "otpauth://totp/" +
+    encodeURIResult +
+    ":" +
+    encodeURIResult1 +
+    "?secret=" +
+    formatted +
+    "&issuer=" +
+    encodeURIComponent(str)
+  );
 };
 export const captureWebAuthnException = function captureWebAuthnException(closure_1, tags) {
   let obj = _modDef1208;

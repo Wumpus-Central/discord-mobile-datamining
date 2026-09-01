@@ -29,14 +29,18 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   }, items);
   const items1 = [stateFromStores(6084)];
   const items2 = [tmp2];
-  stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
-    let product = null;
-    if (null != c0) {
-      product = stateFromStores(closure_1_2[3]).getProduct(tmp);
-      const obj = stateFromStores(closure_1_2[3]);
-    }
-    return product;
-  }, items2);
+  stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items1,
+    () => {
+      let product = null;
+      if (null != c0) {
+        product = stateFromStores(closure_1_2[3]).getProduct(tmp);
+        const obj = stateFromStores(closure_1_2[3]);
+      }
+      return product;
+    },
+    items2,
+  );
   const items3 = [stateFromStores];
   return React.useMemo(() => {
     let priceString;

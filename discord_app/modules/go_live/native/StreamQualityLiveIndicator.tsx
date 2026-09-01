@@ -11,16 +11,50 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ PremiumTypes: closure_6, PremiumUpsellTypes: error } = GuildFeatures);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { liveIndicator: { flexDirection: "row", alignItems: "center", height: 18 }, liveTag: null, qualityTag: null, qualityTagText: null, reducedQualityTagText: null, nitroWheel: null };
-createCacheKey = { borderBottomLeftRadius: ThemesDefault.radii.none, borderTopLeftRadius: ThemesDefault.radii.none, height: 18, textAlign: "center" };
+createCacheKey = {
+  liveIndicator: { flexDirection: "row", alignItems: "center", height: 18 },
+  liveTag: null,
+  qualityTag: null,
+  qualityTagText: null,
+  reducedQualityTagText: null,
+  nitroWheel: null,
+};
+createCacheKey = {
+  borderBottomLeftRadius: ThemesDefault.radii.none,
+  borderTopLeftRadius: ThemesDefault.radii.none,
+  height: 18,
+  textAlign: "center",
+};
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { borderBottomLeftRadius: ThemesDefault.radii.sm, borderTopLeftRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800, opacity: 0.8, paddingLeft: 8, paddingRight: 4, flexDirection: "row", alignItems: "center", height: 18 };
+createCacheKey[2] = {
+  borderBottomLeftRadius: ThemesDefault.radii.sm,
+  borderTopLeftRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800,
+  opacity: 0.8,
+  paddingLeft: 8,
+  paddingRight: 4,
+  flexDirection: "row",
+  alignItems: "center",
+  height: 18,
+};
 createCacheKey[3] = { color: "#fff", textAlign: "center", fontWeight: "700" };
-let obj1 = { borderBottomLeftRadius: ThemesDefault.radii.sm, borderTopLeftRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800, opacity: 0.8, paddingLeft: 8, paddingRight: 4, flexDirection: "row", alignItems: "center", height: 18 };
+let obj1 = {
+  borderBottomLeftRadius: ThemesDefault.radii.sm,
+  borderTopLeftRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800,
+  opacity: 0.8,
+  paddingLeft: 8,
+  paddingRight: 4,
+  flexDirection: "row",
+  alignItems: "center",
+  height: 18,
+};
 createCacheKey[4] = { color: ThemesDefault.unsafe_rawColors.PRIMARY_300 };
 createCacheKey[5] = { width: 20, marginLeft: -4 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let closure_12 = { code: "function StreamQualityLiveIndicatorTsx1(){const{withTiming,reveal,STANDARD_EASING}=this.__closure;return{opacity:withTiming(reveal?1:0,{easing:STANDARD_EASING,duration:250})};}" };
+let closure_12 = {
+  code: "function StreamQualityLiveIndicatorTsx1(){const{withTiming,reveal,STANDARD_EASING}=this.__closure;return{opacity:withTiming(reveal?1:0,{easing:STANDARD_EASING,duration:250})};}",
+};
 let obj2 = { color: ThemesDefault.unsafe_rawColors.PRIMARY_300 };
 const result = require("set").fileFinishedImporting("modules/go_live/native/StreamQualityLiveIndicator.tsx");
 
@@ -94,7 +128,11 @@ export default function StreamQualityLiveIndicator(arg0) {
       }, items);
       const items1 = [_location, analyticsLocations];
       callback = obj.useCallback(() => {
-        const obj = { analyticsLocation: _location, analyticsLocations, premiumFeatureCardOrder: _undefined(reveal[18]).PremiumFeatureCardOrder.TIER_0_LEADING };
+        const obj = {
+          analyticsLocation: _location,
+          analyticsLocations,
+          premiumFeatureCardOrder: _undefined(reveal[18]).PremiumFeatureCardOrder.TIER_0_LEADING,
+        };
         _undefined2(reveal[17])(obj);
       }, items1);
       let tmp5Result = tmp5(tmp4[19]);
@@ -143,8 +181,8 @@ export default function StreamQualityLiveIndicator(arg0) {
           tmp21Result = tmp21(tmp5(tmp4[21]), obj3);
           const tmp5Result3 = tmp5(tmp4[21]);
         }
-        const items4 = [tmp21Result, ];
-        const items5 = [tmp2.qualityTagText, ];
+        const items4 = [tmp21Result];
+        const items5 = [tmp2.qualityTagText];
         let prop = null;
         if (tmp8) {
           prop = tmp2.reducedQualityTagText;
@@ -159,7 +197,7 @@ export default function StreamQualityLiveIndicator(arg0) {
         obj4[1] = "" + resolutionText + " " + tmp3(tmp4[14]).getFPSText(maxQuality.maxFrameRate);
         items4[1] = closure_9(tmp3(tmp4[13]).LegacyText, obj4);
         obj2[1] = items4;
-        const items6 = [closure_10(tmp23, obj2), ];
+        const items6 = [closure_10(tmp23, obj2)];
         const obj5 = { style: null };
         obj5[0] = tmp2.liveTag;
         items6[1] = closure_9(tmp3(tmp4[13]).LiveTag, obj5);
@@ -177,4 +215,4 @@ export default function StreamQualityLiveIndicator(arg0) {
     flag = false;
     _require = tmp;
   }
-};
+}

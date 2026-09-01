@@ -4,8 +4,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 
 let c0 = true;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class ConversationVisibilityStore extends DeviceSettingsStore {
-}
+class ConversationVisibilityStore extends DeviceSettingsStore {}
 const prototype = ConversationVisibilityStore.prototype;
 prototype["initialize"] = function initialize(highlightingEnabled) {
   let flag;
@@ -30,7 +29,7 @@ ConversationVisibilityStore.persistKey = "ConversationVisibilityStore";
 const conversationVisibilityStore = new ConversationVisibilityStore(dispatcherDefault, {
   CONVERSATIONS_TOGGLE_HIGHLIGHTING: function handleToggleHighlighting() {
     closure_0 = !closure_0;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/conversations/ConversationVisibilityStore.tsx");
 

@@ -70,7 +70,15 @@ export const parseEmbedDescriptionMarkup = function parseEmbedDescriptionMarkup(
       continue;
     }
   }
-  const obj = { channelId, allowGameMentions: true, allowLinks: true, allowEmojiLinks: true, allowHeading: null, allowList: null, previewLinkTarget: null };
+  const obj = {
+    channelId,
+    allowGameMentions: true,
+    allowLinks: true,
+    allowEmojiLinks: true,
+    allowHeading: null,
+    allowList: null,
+    previewLinkTarget: null,
+  };
   let tmp8 = !isField;
   if (!isField) {
     tmp8 = showListsAndHeaders;
@@ -82,7 +90,15 @@ export const parseEmbedDescriptionMarkup = function parseEmbedDescriptionMarkup(
   const result = importDefaultResult.set(combined, parseToASTResult);
   return parseToASTResult;
 };
-export const parseMessageMarkup = function parseMessageMarkup(message, message2, forceHideSimpleEmbedContent, isInlineReplyPreview, arg4, result, result2) {
+export const parseMessageMarkup = function parseMessageMarkup(
+  message,
+  message2,
+  forceHideSimpleEmbedContent,
+  isInlineReplyPreview,
+  arg4,
+  result,
+  result2,
+) {
   let flag = isInlineReplyPreview;
   if (isInlineReplyPreview === undefined) {
     flag = false;
@@ -107,7 +123,16 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
     }
   }
   if (message.type !== MessageTypes.CHANGELOG) {
-    obj = { contentMessage: null, hideSimpleEmbedContent: null, formatInline: null, allowGameMentions: true, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
+    obj = {
+      contentMessage: null,
+      hideSimpleEmbedContent: null,
+      formatInline: null,
+      allowGameMentions: true,
+      allowHeading: null,
+      allowList: null,
+      allowLinks: null,
+      previewLinkTarget: null,
+    };
     obj[0] = message2;
     obj[1] = forceHideSimpleEmbedContent;
     obj[2] = flag;
@@ -130,7 +155,14 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
     const obj3 = getInitialParserState;
   }
   const obj6 = get_defaultRulesDefault;
-  obj1 = { hideSimpleEmbedContent: forceHideSimpleEmbedContent, formatInline: flag, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
+  obj1 = {
+    hideSimpleEmbedContent: forceHideSimpleEmbedContent,
+    formatInline: flag,
+    allowHeading: null,
+    allowList: null,
+    allowLinks: null,
+    previewLinkTarget: null,
+  };
   flag = flag2;
   const obj7 = LHeading;
   if (!flag2) {
@@ -140,7 +172,12 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
   if (!flag2) {
     flag2 = obj;
   }
-  obj = { content: obj6.astParserFor(LHeading.changelogRules(message.changelogId, true))(message.content, false, obj1), isInlineReplyPreview: false, hasSpoilerEmbeds: false, hasBailedAst: false };
+  obj = {
+    content: obj6.astParserFor(LHeading.changelogRules(message.changelogId, true))(message.content, false, obj1),
+    isInlineReplyPreview: false,
+    hasSpoilerEmbeds: false,
+    hasBailedAst: false,
+  };
   obj1[3] = flag2;
   obj1[4] = flag3;
   obj1[5] = flag3;

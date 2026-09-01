@@ -13,7 +13,15 @@ require = arg1;
 ({ View: obj1, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let obj = { container: null, cancelText: null, cancelIcon: null, flex: null };
-obj = { flexDirection: "row", alignItems: "center", height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, paddingHorizontal: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: ThemesDefault.colors.BORDER_STRONG };
+obj = {
+  flexDirection: "row",
+  alignItems: "center",
+  height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderBottomWidth: StyleSheet.hairlineWidth,
+  borderColor: ThemesDefault.colors.BORDER_STRONG,
+};
 obj[0] = obj;
 createCacheKey = { paddingLeft: ThemesDefault.space.PX_16 };
 obj[1] = createCacheKey;
@@ -35,7 +43,13 @@ const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
     obj[0] = tmp2.cancelIcon;
     let tmp3Result = tmp3(tmp4(5499).ArrowLargeLeftIcon, obj);
   } else {
-    obj = { style: null, maxFontSizeMultiplier: 2, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+    obj = {
+      style: null,
+      maxFontSizeMultiplier: 2,
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
     obj[0] = tmp2.cancelText;
     const intl2 = tmp4(1236).intl;
     obj[4] = intl2.string(tmp4(1236).t["ETE/oC"]);
@@ -49,7 +63,7 @@ const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
   if (tmp4Result.isAndroid()) {
     tmp10 = tmp3Result;
   }
-  const items = [tmp10, , ];
+  const items = [tmp10, ,];
   const obj2 = { style: tmp2.flex, children: null };
   const obj3 = { children: null };
   const merged1 = Object.assign(merged);

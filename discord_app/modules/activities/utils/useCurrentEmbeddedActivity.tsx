@@ -8,4 +8,4 @@ const result = require("set").fileFinishedImporting("modules/activities/utils/us
 export default function useCurrentEmbeddedActivity() {
   const items = [closure_2];
   return initialize.useStateFromStores(items, () => currentEmbeddedActivity.getCurrentEmbeddedActivity());
-};
+}

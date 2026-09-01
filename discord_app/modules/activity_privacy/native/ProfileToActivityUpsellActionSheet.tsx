@@ -3,13 +3,18 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/activity_privacy/native/ProfileToActivityUpsellActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/activity_privacy/native/ProfileToActivityUpsellActionSheet.tsx",
+);
 
 export default function ProfileToActivityUpsellActionSheet(direction) {
   direction = direction.direction;
   const affectedGuildIds = direction.affectedGuildIds;
   const mappedActivityValue = direction.mappedActivityValue;
-  const profileToActivityUpsellStrings = direction(mappedActivityValue[2]).getProfileToActivityUpsellStrings(direction === direction(mappedActivityValue[2]).ChangeDirection.RESTRICTING, direction.settingName);
+  const profileToActivityUpsellStrings = direction(mappedActivityValue[2]).getProfileToActivityUpsellStrings(
+    direction === direction(mappedActivityValue[2]).ChangeDirection.RESTRICTING,
+    direction.settingName,
+  );
   const items = [mappedActivityValue, direction, affectedGuildIds];
   ({ title, subtitle, confirmText, toastContent } = profileToActivityUpsellStrings);
   const onConfirm = React.useCallback(() => {
@@ -20,5 +25,14 @@ export default function ProfileToActivityUpsellActionSheet(direction) {
   const onCardPress = React.useCallback(() => {
     affectedGuildIds(mappedActivityValue[4]).hideActionSheet();
   }, []);
-  return jsx(affectedGuildIds(mappedActivityValue[5]), { direction, affectedGuildIds, title, subtitle, confirmText, toastContent, onConfirm, onCardPress });
-};
+  return jsx(affectedGuildIds(mappedActivityValue[5]), {
+    direction,
+    affectedGuildIds,
+    title,
+    subtitle,
+    confirmText,
+    toastContent,
+    onConfirm,
+    onCardPress,
+  });
+}

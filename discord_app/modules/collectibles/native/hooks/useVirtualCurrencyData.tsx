@@ -22,7 +22,7 @@ export const useVirtualCurrencyData = function useVirtualCurrencyData(product, c
         }
       }
       return tmp2;
-    }, items)
+    }, items),
   };
   return obj;
 };

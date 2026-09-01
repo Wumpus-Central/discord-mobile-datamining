@@ -16,7 +16,12 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 function FamilyCenterLoading() {
   const tmp = callback3();
-  return callback2(Stack.Stack, { justify: "center", align: "center", style: callback3().loadingContainer, children: callback2(closure_6, {}) });
+  return callback2(Stack.Stack, {
+    justify: "center",
+    align: "center",
+    style: callback3().loadingContainer,
+    children: callback2(closure_6, {}),
+  });
 }
 function FamilyCenter() {
   const tmp = callback3();
@@ -28,7 +33,10 @@ function FamilyCenter() {
   const selectedTeenId = obj1.useSelectedTeenId();
   let obj2 = familyCenterInitialized(647);
   items = [closure_7];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => ({ familyCenterInitialized: closure_7.getIsInitialized(), isLoading: closure_7.isLoading() }));
+  const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => ({
+    familyCenterInitialized: closure_7.getIsInitialized(),
+    isLoading: closure_7.isLoading(),
+  }));
   familyCenterInitialized = stateFromStoresObject.familyCenterInitialized;
   isLoading = stateFromStoresObject.isLoading;
   dependencyMap = tmp10;
@@ -45,7 +53,7 @@ function FamilyCenter() {
   obj[0] = intl.string(isLoading(2369).bdBmqy);
   obj[1] = FamilyCenterSubPages.ACTIVITY;
   obj[2] = callback2(isLoading(14478), {});
-  const items1 = [obj, ];
+  const items1 = [obj];
   obj1 = { label: null, id: null, page: null };
   const intl2 = familyCenterInitialized(1236).intl;
   obj1[0] = intl2.string(isLoading(2369)["gVWG+6"]);
@@ -70,7 +78,13 @@ function FamilyCenter() {
       if (dependencyMap) {
         ({ ageGroup, numOfAcceptedRequests, selectedTab, selectedTeenId } = ref.current);
         let obj = isLoading(698);
-        obj = { is_considered_adult: null, num_of_accepted_links: null, selected_teen_id: null, initial_page: null, source: null };
+        obj = {
+          is_considered_adult: null,
+          num_of_accepted_links: null,
+          selected_teen_id: null,
+          initial_page: null,
+          source: null,
+        };
         obj[0] = "adult" === ageGroup;
         obj[1] = numOfAcceptedRequests;
         obj[2] = selectedTeenId;
@@ -87,7 +101,10 @@ function FamilyCenter() {
   isLoading(4945)(() => {
     let obj = familyCenterInitialized(4298);
     obj = { dismissAction: closure_1_11.AUTO, forceTrack: true };
-    const result = obj.UNSAFE_markDismissibleContentAsDismissed(familyCenterInitialized(1373).DismissibleContent.FAMILY_CENTER_NEW_BADGE, obj);
+    const result = obj.UNSAFE_markDismissibleContentAsDismissed(
+      familyCenterInitialized(1373).DismissibleContent.FAMILY_CENTER_NEW_BADGE,
+      obj,
+    );
     let canRefetchResult = !isLoading;
     if (!isLoading) {
       canRefetchResult = closure_1_7.canRefetch();
@@ -108,7 +125,12 @@ function FamilyCenter() {
   obj3 = { value: tmp3(isLoading(5973).FAMILY_CENTER).analyticsLocations, children: null };
   let obj4 = { style: tmp.container, onLayout: callback, children: null };
   const tmp11 = callback(obj2.useState(0), 2);
-  const items3 = [callback2(closure_5, { style: tmp.segmentedControlContainer, children: callback2(familyCenterInitialized(9762).SegmentedControl, { state: segmentedControlState }) }), ];
+  const items3 = [
+    callback2(closure_5, {
+      style: tmp.segmentedControlContainer,
+      children: callback2(familyCenterInitialized(9762).SegmentedControl, { state: segmentedControlState }),
+    }),
+  ];
   let obj6 = { style: tmp.container, children: null };
   if (isLoading) {
     let tmp14Result = tmp14(FamilyCenterLoading, {});
@@ -126,17 +148,23 @@ function FamilyCenter() {
   tmp14Result = tmp14(tmp4(5953).AnalyticsLocationProvider, obj3);
 }
 ({ View: c5, ActivityIndicator: closure_6 } = get_ActivityIndicator);
-({ FamilyCenterPageLocationAnalyticsIds: closure_12, FamilyCenterSubPageAnalyticsIds: map1, FamilyCenterSubPages } = items);
+({
+  FamilyCenterPageLocationAnalyticsIds: closure_12,
+  FamilyCenterSubPageAnalyticsIds: map1,
+  FamilyCenterSubPages,
+} = items);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-items = [, ];
+items = [,];
 ({ ACTIVITY: arr[0], REQUESTS: arr[1] } = FamilyCenterSubPages);
 createCacheKey = { container: { display: "flex", flex: 1 }, segmentedControlContainer: null, loadingContainer: null };
 createCacheKey = { paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { minHeight: "100%" };
 let closure_19 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/user_settings/family_center/native/UserSettingsFamilyCenter.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/user_settings/family_center/native/UserSettingsFamilyCenter.tsx",
+);
 
 export default function FamilyCenterContainer() {
   return callback2(FamilyCenter, {});
-};
+}

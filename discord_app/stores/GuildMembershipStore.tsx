@@ -11,18 +11,18 @@ class GuildMembershipStore extends Store {
     tmp2 = require("dispatcher");
     obj = {
       CACHE_LOADED(arg0) {
-            return obj.handleCacheLoaded(arg0);
-          },
+        return obj.handleCacheLoaded(arg0);
+      },
       CACHE_LOADED_LAZY(arg0) {
-            return obj.handleCacheLoadedLazy(arg0);
-          },
+        return obj.handleCacheLoadedLazy(arg0);
+      },
       CONNECTION_OPEN(arg0) {
-            return obj.handleConnectionOpen(arg0);
-          },
+        return obj.handleConnectionOpen(arg0);
+      },
       GUILD_CREATE(arg0) {
-            return obj.handleGuildCreate(arg0);
-          },
-      GUILD_DELETE: null
+        return obj.handleGuildCreate(arg0);
+      },
+      GUILD_DELETE: null,
     };
     class GUILD_DELETE {
       constructor(arg0) {
@@ -89,9 +89,21 @@ let obj = {
   },
   GUILD_DELETE(arg0) {
     return obj.handleGuildDelete(arg0);
-  }
+  },
 };
-tmp = new tmp(importDefaultResult, obj, require("dispatcher").DispatchBand.Early, GuildMembershipStore, tmp, importDefaultResult, obj, new.target, undefined, handleGuildDelete, globalThis);
+tmp = new tmp(
+  importDefaultResult,
+  obj,
+  require("dispatcher").DispatchBand.Early,
+  GuildMembershipStore,
+  tmp,
+  importDefaultResult,
+  obj,
+  new.target,
+  undefined,
+  handleGuildDelete,
+  globalThis,
+);
 // ThrowIfThisInitialized (0x7c)
 closure_0 = tmp;
 let set = new Set();

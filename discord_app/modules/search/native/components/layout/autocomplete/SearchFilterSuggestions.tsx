@@ -30,7 +30,17 @@ function SearchFilterPrefixRow(text) {
     onPress(closure_0);
   }, items2);
   const merged1 = Object.assign(merged);
-  return jsx(require(onPress[8]).TableRow, { icon: memo, onPress: callback, label: jsx(require(onPress[9]).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: text }), subLabel: memo1 });
+  return jsx(require(onPress[8]).TableRow, {
+    icon: memo,
+    onPress: callback,
+    label: jsx(require(onPress[9]).Text, {
+      lineClamp: 1,
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      children: text,
+    }),
+    subLabel: memo1,
+  });
 }
 function getSuggestionsKey(arr) {
   const mapped = arr.map((text) => text.text);
@@ -55,11 +65,21 @@ function AnimatedEnterExitContainer(children) {
         const obj = closure_1_0(closure_1_2[10]);
       }
     };
-    obj = { state, TransitionStates: state(sharedValue[13]).TransitionStates, runOnJS: state(sharedValue[10]).runOnJS, cleanUp };
+    obj = {
+      state,
+      TransitionStates: state(sharedValue[13]).TransitionStates,
+      runOnJS: state(sharedValue[10]).runOnJS,
+      cleanUp,
+    };
     fn.__closure = obj;
     fn.__workletHash = 10696166249954;
     fn.__initData = closure_1_12;
-    obj[0] = state(sharedValue[11]).withSpring(value, state(sharedValue[12]).springStandard, "respect-motion-settings", fn);
+    obj[0] = state(sharedValue[11]).withSpring(
+      value,
+      state(sharedValue[12]).springStandard,
+      "respect-motion-settings",
+      fn,
+    );
     const obj2 = state(sharedValue[11]);
     let tmp = state;
     const tmp2 = sharedValue;
@@ -72,7 +92,15 @@ function AnimatedEnterExitContainer(children) {
     obj[1] = items;
     return obj;
   };
-  obj = { withSpring: state(sharedValue[11]).withSpring, opacity: sharedValue, springStandard: state(sharedValue[12]).springStandard, state, TransitionStates: state(sharedValue[13]).TransitionStates, runOnJS: state(sharedValue[10]).runOnJS, cleanUp };
+  obj = {
+    withSpring: state(sharedValue[11]).withSpring,
+    opacity: sharedValue,
+    springStandard: state(sharedValue[12]).springStandard,
+    state,
+    TransitionStates: state(sharedValue[13]).TransitionStates,
+    runOnJS: state(sharedValue[10]).runOnJS,
+    cleanUp,
+  };
   fn.__closure = obj;
   fn.__workletHash = 334512108462;
   fn.__initData = closure_11;
@@ -89,15 +117,28 @@ function AnimatedEnterExitContainer(children) {
 }
 let c4 = importAllResult;
 let obj = { card: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: ThemesDefault.radii.lg, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
+obj = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  borderRadius: ThemesDefault.radii.lg,
+  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderWidth: 1,
+};
 let merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 obj[0] = obj;
 let closure_8 = createCacheKey.createStyles(obj);
-let closure_11 = { code: "function SearchFilterSuggestionsTsx1(){const{withSpring,opacity,springStandard,state,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withSpring(opacity.get(),springStandard,'respect-motion-settings',function(finished){if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}),transform:[{translateY:withSpring(opacity.get()===1?0:-15,springStandard)}]};}" };
-let closure_12 = { code: "function SearchFilterSuggestionsTsx2(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}" };
+let closure_11 = {
+  code: "function SearchFilterSuggestionsTsx1(){const{withSpring,opacity,springStandard,state,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withSpring(opacity.get(),springStandard,'respect-motion-settings',function(finished){if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}),transform:[{translateY:withSpring(opacity.get()===1?0:-15,springStandard)}]};}",
+};
+let closure_12 = {
+  code: "function SearchFilterSuggestionsTsx2(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}",
+};
 let closure_14 = [];
-let closure_15 = { code: "function SearchFilterSuggestionsTsx3(){const{dismissed}=this.__closure;return dismissed.get();}" };
-let closure_16 = { code: "function SearchFilterSuggestionsTsx4(isDismissed){const{runOnJS,setSuggestions,EMPTY_SEARCH_FILTER_ROWS}=this.__closure;if(isDismissed){runOnJS(setSuggestions)(EMPTY_SEARCH_FILTER_ROWS);}}" };
+let closure_15 = {
+  code: "function SearchFilterSuggestionsTsx3(){const{dismissed}=this.__closure;return dismissed.get();}",
+};
+let closure_16 = {
+  code: "function SearchFilterSuggestionsTsx4(isDismissed){const{runOnJS,setSuggestions,EMPTY_SEARCH_FILTER_ROWS}=this.__closure;if(isDismissed){runOnJS(setSuggestions)(EMPTY_SEARCH_FILTER_ROWS);}}",
+};
 const memoResult = importAllResult.memo(function SearchFilterSuggestions(searchContext) {
   searchContext = searchContext.searchContext;
   const onLayoutMeasure = searchContext.onLayoutMeasure;
@@ -118,44 +159,59 @@ const memoResult = importAllResult.memo(function SearchFilterSuggestions(searchC
   first = tmp3[0];
   jsx = tmp5;
   let items = [validFilterTokens, searchContext, tmp3[1]];
-  const effect = importAllResult.useEffect(() => onLayoutMeasure(containerStyle[15]).subscribeSearchQueryState(searchContext, (getTextInputValue) => ({ textInputValue: getTextInputValue.getTextInputValue(), isAutocompleteVisible: getTextInputValue.isAutocompleteVisible() }), (arg0) => {
-    ({ textInputValue, isAutocompleteVisible } = arg0);
-    if ("" !== textInputValue.trim()) {
-      if (!isAutocompleteVisible) {
-        const searchFilterSuggestions = closure_1_0(closure_1_2[7]).getSearchFilterSuggestions(textInputValue);
-        if (0 !== searchFilterSuggestions.length) {
-          closure_1 = [];
-          const item = searchFilterSuggestions.forEach((token) => {
-            token = token.token;
-            if (closure_1_5.has(token)) {
-              const obj = { text: null, searchTokenType: null, start: null, end: null, onPress: null };
-              obj[0] = token.text;
-              obj[1] = token;
-              obj[2] = 0 === arg1;
-              obj[3] = arg1 === searchFilterSuggestions.length - 1;
-              obj[4] = closure_2_0(closure_2_2[7]).getSearchTokenPressHandler(searchFilterSuggestions, token, closure_2_6.SEARCH_INPUT_DROPDOWN);
-              arr = arr.push(obj);
-              const obj2 = closure_2_0(closure_2_2[7]);
+  const effect = importAllResult.useEffect(
+    () =>
+      onLayoutMeasure(containerStyle[15]).subscribeSearchQueryState(
+        searchContext,
+        (getTextInputValue) => ({
+          textInputValue: getTextInputValue.getTextInputValue(),
+          isAutocompleteVisible: getTextInputValue.isAutocompleteVisible(),
+        }),
+        (arg0) => {
+          ({ textInputValue, isAutocompleteVisible } = arg0);
+          if ("" !== textInputValue.trim()) {
+            if (!isAutocompleteVisible) {
+              const searchFilterSuggestions = closure_1_0(closure_1_2[7]).getSearchFilterSuggestions(textInputValue);
+              if (0 !== searchFilterSuggestions.length) {
+                closure_1 = [];
+                const item = searchFilterSuggestions.forEach((token) => {
+                  token = token.token;
+                  if (closure_1_5.has(token)) {
+                    const obj = { text: null, searchTokenType: null, start: null, end: null, onPress: null };
+                    obj[0] = token.text;
+                    obj[1] = token;
+                    obj[2] = 0 === arg1;
+                    obj[3] = arg1 === searchFilterSuggestions.length - 1;
+                    obj[4] = closure_2_0(closure_2_2[7]).getSearchTokenPressHandler(
+                      searchFilterSuggestions,
+                      token,
+                      closure_2_6.SEARCH_INPUT_DROPDOWN,
+                    );
+                    arr = arr.push(obj);
+                    const obj2 = closure_2_0(closure_2_2[7]);
+                  }
+                });
+                callback((arr) => {
+                  const mapped = arr.map((text) => text.text);
+                  let tmp2 = arr;
+                  const joined = mapped.join(" ");
+                  const mapped1 = arr.map((text) => text.text);
+                  if (joined === mapped1.join(" ")) {
+                    tmp2 = arr;
+                  }
+                  return tmp2;
+                });
+              } else {
+                callback(closure_1_14);
+              }
+              let obj = closure_1_0(closure_1_2[7]);
             }
-          });
-          callback((arr) => {
-            const mapped = arr.map((text) => text.text);
-            let tmp2 = arr;
-            const joined = mapped.join(" ");
-            const mapped1 = arr.map((text) => text.text);
-            if (joined === mapped1.join(" ")) {
-              tmp2 = arr;
-            }
-            return tmp2;
-          });
-        } else {
+          }
           callback(closure_1_14);
-        }
-        let obj = closure_1_0(closure_1_2[7]);
-      }
-    }
-    callback(closure_1_14);
-  }), items);
+        },
+      ),
+    items,
+  );
   const fn = function b() {
     return dismissed.get();
   };
@@ -175,7 +231,11 @@ const memoResult = importAllResult.memo(function SearchFilterSuggestions(searchC
       return;
     }
   }
-  obj = { runOnJS: searchContext(containerStyle[10]).runOnJS, setSuggestions: tmp5, EMPTY_SEARCH_FILTER_ROWS: closure_14 };
+  obj = {
+    runOnJS: searchContext(containerStyle[10]).runOnJS,
+    setSuggestions: tmp5,
+    EMPTY_SEARCH_FILTER_ROWS: closure_14,
+  };
   E.__closure = obj;
   E.__workletHash = 8991360021943;
   E.__initData = closure_16;
@@ -218,14 +278,20 @@ const memoResult = importAllResult.memo(function SearchFilterSuggestions(searchC
       children: arr.map((text) => {
         const merged = Object.assign(text);
         return callback(closure_9, {}, text.text);
-      })
+      }),
     };
     obj[2] = callback(validFilterTokens, obj);
     return callback(closure_1_13, obj, arg0);
   }, items4);
   obj = { items: memo1, renderItem: callback1, getItemKey: callback };
-  return jsx(searchContext(containerStyle[13]).TransitionGroup, { items: memo1, renderItem: callback1, getItemKey: callback });
+  return jsx(searchContext(containerStyle[13]).TransitionGroup, {
+    items: memo1,
+    renderItem: callback1,
+    getItemKey: callback,
+  });
 });
-let result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterSuggestions.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/search/native/components/layout/autocomplete/SearchFilterSuggestions.tsx",
+);
 
 export default memoResult;

@@ -44,9 +44,15 @@ export default function UserProfileYourFriendsCard(arg0) {
     return userAffinities.map((otherUserId) => otherUserId.otherUserId);
   });
   const items1 = [closure_7];
-  stateFromStoresArray1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
+  stateFromStoresArray1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+    items1,
+    () => friendIDs.getFriendIDs(),
+  );
   const obj2 = initialize;
-  gameRelationshipsByType = require("../../game_relationships/GameRelationshipStoreHooks.tsx").useGameRelationshipsByType(RelationshipTypes.FRIEND);
+  gameRelationshipsByType =
+    require("../../game_relationships/GameRelationshipStoreHooks.tsx").useGameRelationshipsByType(
+      RelationshipTypes.FRIEND,
+    );
   const effect = stateFromStoresArray1.useEffect(() => {
     const userAffinitiesV2 = lib(9939).fetchUserAffinitiesV2();
   }, []);
@@ -54,7 +60,9 @@ export default function UserProfileYourFriendsCard(arg0) {
   const effect1 = stateFromStoresArray1.useEffect(() => {
     const obj = first(12);
     const tmp = first;
-    const found = first(12).chain(stateFromStoresArray).filter((arg0) => closure_4.includes(arg0));
+    const found = first(12)
+      .chain(stateFromStoresArray)
+      .filter((arg0) => closure_4.includes(arg0));
     const chainResult = first(12).chain(stateFromStoresArray);
     const mapped = found.take(5).map(closure_1_8.getUser);
     const takeResult = found.take(5);
@@ -65,10 +73,15 @@ export default function UserProfileYourFriendsCard(arg0) {
       dependencyMap(valueResult);
     } else {
       const tmpResult = tmp(12);
-      const mapped1 = tmp(12).chain(gameRelationshipsByType).map((id) => id.id);
+      const mapped1 = tmp(12)
+        .chain(gameRelationshipsByType)
+        .map((id) => id.id);
       const chainResult1 = tmp(12).chain(gameRelationshipsByType);
       const uniqResult = mapped1.uniq();
-      const mapped2 = mapped1.uniq().take(5 - valueResult.length).map(tmp3.getUser);
+      const mapped2 = mapped1
+        .uniq()
+        .take(5 - valueResult.length)
+        .map(tmp3.getUser);
       const takeResult1 = mapped1.uniq().take(5 - valueResult.length);
       valueResult = mapped2.filter(tmp4(1471).isNotNullish).value();
       const items = [];
@@ -77,7 +90,7 @@ export default function UserProfileYourFriendsCard(arg0) {
       const iter2 = mapped2.filter(tmp4(1471).isNotNullish);
     }
   }, items2);
-  const items3 = [first, , ];
+  const items3 = [first, ,];
   ({ avatars: arr4[1], facepile: arr4[2] } = tmp);
   const memo = stateFromStoresArray1.useMemo(() => {
     let obj = { style: lib.facepile, children: null };
@@ -96,21 +109,42 @@ export default function UserProfileYourFriendsCard(arg0) {
         obj[3] = tmp3;
         obj[1] = closure_1_10(closure_1_0(closure_1_2[8]).CutoutableAvatarImage, obj);
         return closure_1_10(closure_1_5, obj, id.id);
-      })
+      }),
     };
     obj[1] = closure_1_10(gameRelationshipsByType, obj);
     return closure_1_10(gameRelationshipsByType, obj);
   }, items3);
-  obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, activeOpacity: 0.8, children: null };
+  obj = {
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    onPress: null,
+    style: null,
+    activeOpacity: 0.8,
+    children: null,
+  };
   const intl = require("../../../intl/index.native.tsx").intl;
   obj[1] = intl.string(require("../../../intl/index.native.tsx").t.TdEu5X);
   obj[2] = navigateToFriends;
   const items4 = [style, tmp.pressable];
   obj[3] = items4;
-  obj = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", style: tmp.label, children: null };
+  obj = {
+    accessibilityRole: "header",
+    variant: "text-sm/semibold",
+    color: "text-default",
+    style: tmp.label,
+    children: null,
+  };
   const intl2 = require("../../../intl/index.native.tsx").intl;
   obj[4] = intl2.string(require("../../../intl/index.native.tsx").t.TdEu5X);
-  const items5 = [callback(require("../../../design/components/Text/native/Text.tsx").Text, obj), memo, callback(require("../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx").ChevronSmallRightIcon, { size: "sm" })];
+  const items5 = [
+    callback(require("../../../design/components/Text/native/Text.tsx").Text, obj),
+    memo,
+    callback(
+      require("../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx")
+        .ChevronSmallRightIcon,
+      { size: "sm" },
+    ),
+  ];
   obj[5] = items5;
   return callback2(require("../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj);
-};
+}

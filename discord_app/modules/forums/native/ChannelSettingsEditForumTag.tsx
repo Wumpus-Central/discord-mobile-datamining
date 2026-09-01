@@ -12,7 +12,16 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ EMOJI_URL_BASE_SIZE: closure_8, EmojiIntention: c9 } = set);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { container: null, sections: null, hint: null, emojiIconWrapper: null, imageEmoji: null, textEmoji: null, nameInput: null, saveButton: null };
+createCacheKey = {
+  container: null,
+  sections: null,
+  hint: null,
+  emojiIconWrapper: null,
+  imageEmoji: null,
+  textEmoji: null,
+  nameInput: null,
+  saveButton: null,
+};
 createCacheKey = { display: "flex", flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: 12, paddingTop: ThemesDefault.space.PX_16 };
@@ -155,11 +164,16 @@ export default function ChannelSettingsEditForumTag(channelId) {
         } else {
           children = string(t.zeVg5d);
         }
-        return closure_1_10(closure_1_0(closure_1_2[11]).Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children });
-      }
+        return closure_1_10(closure_1_0(closure_1_2[11]).Text, {
+          variant: "redesign/heading-18/bold",
+          color: "mobile-text-heading-primary",
+          accessibilityRole: "header",
+          children,
+        });
+      },
     });
   }, items3);
-  const items4 = [null == tag, navigation, channelId, ];
+  const items4 = [null == tag, navigation, channelId];
   let id1;
   if (tag != null) {
     id1 = tag.id;
@@ -235,14 +249,23 @@ export default function ChannelSettingsEditForumTag(channelId) {
       obj = { onPressEmoji: handlePressEmoji, pickerIntention: flag.COMMUNITY_CONTENT, channel: closure_11 };
       const result = obj.openEmojiPickerActionSheet(obj);
     },
-    children: null
+    children: null,
   };
   if (null != first) {
     if (null == first.name) {
       let obj3 = { icon: null, label: null, trailing: null };
       obj2[3] = tmp27Result1;
       obj3[0] = tmp27(tmp30, obj2);
-      const obj4 = { maxLength: 20, style: null, value: null, autoCorrect: false, autoCapitalize: "none", returnKeyType: "done", onChangeText: null, placeholder: null };
+      const obj4 = {
+        maxLength: 20,
+        style: null,
+        value: null,
+        autoCorrect: false,
+        autoCapitalize: "none",
+        returnKeyType: "done",
+        onChangeText: null,
+        placeholder: null,
+      };
       obj4[1] = tmp.nameInput;
       obj4[2] = first1;
       obj4[6] = function onChangeText(arg0) {
@@ -266,7 +289,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
       const obj7 = { hasIcons: true, children: null };
       obj3[2] = tmp27Result;
       obj7[1] = tmp27(tmp3(5599).TableRow, obj3);
-      const items6 = [tmp27(tmp3(5992).TableRowGroup, obj7), ];
+      const items6 = [tmp27(tmp3(5992).TableRowGroup, obj7)];
       const obj8 = { style: null, children: null };
       obj8[0] = tmp.hint;
       const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
@@ -275,7 +298,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
       obj8[1] = tmp27(tmp3(4474).Text, obj9);
       items6[1] = tmp27(tmp28, obj8);
       obj6[0] = items6;
-      const items7 = [tmp29(tmp28, obj6), , ];
+      const items7 = [tmp29(tmp28, obj6), ,];
       const obj10 = { label: null, value: null, onValueChange: null };
       let intl3 = tmp3(1236).intl;
       obj10[0] = intl3.string(tmp3(1236).t["rMH+rt"]);
@@ -356,4 +379,4 @@ export default function ChannelSettingsEditForumTag(channelId) {
     const tmp32 = tag(5585);
   }
   tmp27Result1 = tmp27(tmp3(8228).ReactionIcon, {});
-};
+}

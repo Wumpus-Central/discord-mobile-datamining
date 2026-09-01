@@ -2,7 +2,12 @@
 import set2 from "../../../../_runtime/00002_set.js";
 import DesktopSources from "Constants.tsx";
 
-({ defaultVideoQualityOptions: c0, VIDEO_QUALITY_FRAMERATE: closure_1, VIDEO_QUALITY_FRAMERATE_MUTED_2: obj1, VIDEO_QUALITY_FRAMERATE_MUTED: c3 } = DesktopSources);
+({
+  defaultVideoQualityOptions: c0,
+  VIDEO_QUALITY_FRAMERATE: closure_1,
+  VIDEO_QUALITY_FRAMERATE_MUTED_2: obj1,
+  VIDEO_QUALITY_FRAMERATE_MUTED: c3,
+} = DesktopSources);
 let MediaSinkWantsLadder;
 class MediaSinkWantsLadder {
   constructor() {
@@ -90,7 +95,7 @@ MediaSinkWantsLadder["calculateLadder"] = function calculateLadder(pixelBudget) 
   const items = [];
   let num = 1;
   do {
-    let result = 16 * num / 9;
+    let result = (16 * num) / 9;
     let tmp2 = num;
     if (set.has(result % 16)) {
       if (set.has(num % 16)) {
@@ -144,7 +149,9 @@ MediaSinkWantsLadder["calculateLadder"] = function calculateLadder(pixelBudget) 
       obj[3] = MediaSinkWantsLadder.getMutedFramerate(num2);
       let tmp18 = closure_1;
       obj[4] = closure_1;
-      {}[num2] = obj;
+      {
+      }
+      [num2] = obj;
       diff = num2 - 10;
       tmp5 = width;
     }

@@ -2,7 +2,9 @@
 import closure_2 from "../../../../_runtime/00019_noop.js";
 import { AnalyticEvents } from "../../../Constants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildAddModalOpened.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/favorites/analytics/useTrackFavoritesGuildAddModalOpened.tsx",
+);
 
 export default function useTrackFavoritesGuildAddModalOpened(arg0) {
   closure_0 = arg0;
@@ -12,4 +14,4 @@ export default function useTrackFavoritesGuildAddModalOpened(arg0) {
     obj = { source: callback };
     obj.track(closure_1_3.FAVORITES_GUILD_ADD_MODAL_OPENED, obj);
   }, items);
-};
+}

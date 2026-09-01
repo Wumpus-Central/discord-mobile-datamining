@@ -50,8 +50,7 @@ class RouteManager {
       } else {
         try {
           tmp8(pathname, REPLACE);
-        } catch (err) {
-        }
+        } catch (err) {}
       }
     };
     obj.handleKeybindRouteChange = function handleKeybindRouteChange(path) {
@@ -213,8 +212,7 @@ set.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
   } else {
     try {
       tmp8(pathname, REPLACE);
-    } catch (err) {
-    }
+    } catch (err) {}
   }
 };
 set.handleKeybindRouteChange = function handleKeybindRouteChange(path) {

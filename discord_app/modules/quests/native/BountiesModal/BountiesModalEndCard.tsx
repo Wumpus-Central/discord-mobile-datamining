@@ -10,7 +10,19 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles(() => {
-  let obj = { container: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center" }, backdropTint: null, backdropGradient: null };
+  let obj = {
+    container: {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    backdropTint: null,
+    backdropGradient: null,
+  };
   obj = {};
   const merged = Object.assign(closure_3.absoluteFillObject);
   obj.backgroundColor = "rgba(241, 251, 169, 0.15)";
@@ -20,7 +32,9 @@ let closure_7 = createCacheKey.createStyles(() => {
   obj[2] = obj;
   return obj;
 });
-let closure_8 = { code: "function BountiesModalEndCardTsx1(){const{withTiming,visible,timingStandard}=this.__closure;return{opacity:withTiming(visible?1:0,timingStandard)};}" };
+let closure_8 = {
+  code: "function BountiesModalEndCardTsx1(){const{withTiming,visible,timingStandard}=this.__closure;return{opacity:withTiming(visible?1:0,timingStandard)};}",
+};
 const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalEndCard.tsx");
 
 export default function BountiesModalEndCard(visible) {
@@ -47,7 +61,7 @@ export default function BountiesModalEndCard(visible) {
     obj[0] = items;
     obj = { style: null };
     obj[0] = tmp.backdropTint;
-    const items1 = [callback(closure_4, obj), , ];
+    const items1 = [callback(closure_4, obj), ,];
     obj1 = { colors: null, locations: null, style: null };
     obj1[0] = ["rgba(0, 0, 0, 0.60)", "rgba(0, 0, 0, 1)"];
     obj1[1] = [0, 0.841];
@@ -61,4 +75,4 @@ export default function BountiesModalEndCard(visible) {
     visible = callback2(_modDef4217.View, obj);
   }
   return visible;
-};
+}

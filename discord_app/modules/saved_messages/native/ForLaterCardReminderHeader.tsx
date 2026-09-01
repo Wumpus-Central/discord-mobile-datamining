@@ -23,7 +23,12 @@ export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(sa
     obj[1] = tmp5;
     obj[2] = tmp6;
     obj[3] = actions;
-    tmp7 = jsx(tmp(11784).ForLaterCardStatusHeader, { IconComponent: null, label: null, isCritical: null, actions: null });
+    tmp7 = jsx(tmp(11784).ForLaterCardStatusHeader, {
+      IconComponent: null,
+      label: null,
+      isCritical: null,
+      actions: null,
+    });
   }
   return tmp7;
 };

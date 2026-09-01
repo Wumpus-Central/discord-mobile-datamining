@@ -3,9 +3,15 @@ import closure_2 from "../../stores/GuildStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
 
 const require = arg1;
-let items = [, , ];
-({ ROLE_SUBSCRIPTIONS_ENABLED: arr[0], CREATOR_MONETIZABLE: arr[1], CREATOR_MONETIZABLE_PROVISIONAL: arr[2] } = GuildFeatures);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsExperimentUtils.tsx");
+let items = [, ,];
+({
+  ROLE_SUBSCRIPTIONS_ENABLED: arr[0],
+  CREATOR_MONETIZABLE: arr[1],
+  CREATOR_MONETIZABLE_PROVISIONAL: arr[2],
+} = GuildFeatures);
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/GuildRoleSubscriptionsExperimentUtils.tsx",
+);
 
 export const hasEnabledMonetization = function hasEnabledMonetization(arg0) {
   closure_0 = arg0;

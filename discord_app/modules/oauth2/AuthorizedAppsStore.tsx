@@ -35,8 +35,7 @@ let NOT_FETCHED = obj.NOT_FETCHED;
 const map1 = new Map();
 let c12 = 0;
 const Store = initializeDefault.Store;
-class AuthorizedAppsStore extends Store {
-}
+class AuthorizedAppsStore extends Store {}
 const prototype = AuthorizedAppsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_4, closure_5);
@@ -168,7 +167,7 @@ obj = {
     NOT_FETCHED = obj.NOT_FETCHED;
     map1.clear();
     closure_12 = closure_12 + 1;
-  }
+  },
 };
 const authorizedAppsStore = new AuthorizedAppsStore(dispatcherDefault, obj);
 let result = require("set").fileFinishedImporting("modules/oauth2/AuthorizedAppsStore.tsx");

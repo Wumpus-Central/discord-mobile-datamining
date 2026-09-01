@@ -51,18 +51,43 @@ function ColorBox(hue) {
   return callback2(tmp5, obj1);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { justifyContent: "center", alignItems: "center", position: "relative" }, selector: null, colorBox: null, colorBoxInner: null };
-createCacheKey = { top: 0, left: 0, position: "absolute", width: 24, height: 24, borderRadius: ThemesDefault.radii.md, borderWidth: 2 };
+createCacheKey = {
+  container: { justifyContent: "center", alignItems: "center", position: "relative" },
+  selector: null,
+  colorBox: null,
+  colorBoxInner: null,
+};
+createCacheKey = {
+  top: 0,
+  left: 0,
+  position: "absolute",
+  width: 24,
+  height: 24,
+  borderRadius: ThemesDefault.radii.md,
+  borderWidth: 2,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { overflow: "hidden", borderRadius: ThemesDefault.radii.xs };
 createCacheKey[3] = { minHeight: 240, minWidth: 240 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let closure_9 = { code: "function SaturationValueColorPickerTsx1(){const{hslToRgbWorklet,hue}=this.__closure;return hslToRgbWorklet({h:hue.get(),s:1,l:0.5});}" };
-let closure_10 = { code: "function SaturationValueColorPickerTsx2(result,previous){const{runOnJS,setColor}=this.__closure;if(result!==previous)runOnJS(setColor)(\"rgb(\"+result[0]+\", \"+result[1]+\", \"+result[2]+\")\");}" };
-let closure_12 = { code: "function SaturationValueColorPickerTsx3(event){const{saturation,normalizeValue,width,value,height,onPanUpdate,runOnJS}=this.__closure;saturation.set(normalizeValue(event.x/width));value.set(1-normalizeValue(event.y/height));onPanUpdate!=null&&runOnJS(onPanUpdate)();}" };
-let closure_13 = { code: "function SaturationValueColorPickerTsx4(event){const{saturation,normalizeValue,width,value,height,onPanUpdate,runOnJS}=this.__closure;saturation.set(normalizeValue(event.x/width));value.set(1-normalizeValue(event.y/height));onPanUpdate!=null&&runOnJS(onPanUpdate)();}" };
-let closure_14 = { code: "function SaturationValueColorPickerTsx5(){const{onPanFinalize,runOnJS}=this.__closure;onPanFinalize!=null&&runOnJS(onPanFinalize)();}" };
-let closure_15 = { code: "function SaturationValueColorPickerTsx6(){const{hsvToRgbWorklet,hue,saturation,value,colorBoxWidth,colorBoxHeight}=this.__closure;const rgb=hsvToRgbWorklet({h:hue.get(),s:saturation.get(),v:value.get()});const bgRgb=hsvToRgbWorklet({h:hue.get(),s:0,v:Math.round(1-value.get())});return{backgroundColor:\"rgb(\"+rgb[0]+\", \"+rgb[1]+\", \"+rgb[2]+\")\",transform:[{translateX:colorBoxWidth*saturation.get()},{translateY:colorBoxHeight*(1-value.get())}],borderColor:\"rgb(\"+bgRgb[0]+\", \"+bgRgb[1]+\", \"+bgRgb[2]+\")\"};}" };
+let closure_9 = {
+  code: "function SaturationValueColorPickerTsx1(){const{hslToRgbWorklet,hue}=this.__closure;return hslToRgbWorklet({h:hue.get(),s:1,l:0.5});}",
+};
+let closure_10 = {
+  code: 'function SaturationValueColorPickerTsx2(result,previous){const{runOnJS,setColor}=this.__closure;if(result!==previous)runOnJS(setColor)("rgb("+result[0]+", "+result[1]+", "+result[2]+")");}',
+};
+let closure_12 = {
+  code: "function SaturationValueColorPickerTsx3(event){const{saturation,normalizeValue,width,value,height,onPanUpdate,runOnJS}=this.__closure;saturation.set(normalizeValue(event.x/width));value.set(1-normalizeValue(event.y/height));onPanUpdate!=null&&runOnJS(onPanUpdate)();}",
+};
+let closure_13 = {
+  code: "function SaturationValueColorPickerTsx4(event){const{saturation,normalizeValue,width,value,height,onPanUpdate,runOnJS}=this.__closure;saturation.set(normalizeValue(event.x/width));value.set(1-normalizeValue(event.y/height));onPanUpdate!=null&&runOnJS(onPanUpdate)();}",
+};
+let closure_14 = {
+  code: "function SaturationValueColorPickerTsx5(){const{onPanFinalize,runOnJS}=this.__closure;onPanFinalize!=null&&runOnJS(onPanFinalize)();}",
+};
+let closure_15 = {
+  code: 'function SaturationValueColorPickerTsx6(){const{hsvToRgbWorklet,hue,saturation,value,colorBoxWidth,colorBoxHeight}=this.__closure;const rgb=hsvToRgbWorklet({h:hue.get(),s:saturation.get(),v:value.get()});const bgRgb=hsvToRgbWorklet({h:hue.get(),s:0,v:Math.round(1-value.get())});return{backgroundColor:"rgb("+rgb[0]+", "+rgb[1]+", "+rgb[2]+")",transform:[{translateX:colorBoxWidth*saturation.get()},{translateY:colorBoxHeight*(1-value.get())}],borderColor:"rgb("+bgRgb[0]+", "+bgRgb[1]+", "+bgRgb[2]+")"};}',
+};
 let obj1 = { overflow: "hidden", borderRadius: ThemesDefault.radii.xs };
 let result = require("set").fileFinishedImporting("modules/color_picker/native/SaturationValueColorPicker.tsx");
 
@@ -106,7 +131,15 @@ export default function SaturationValueColorPicker(hue) {
       const tmpResult = tmp(tmp2[6]);
     }
   };
-  obj = { saturation, normalizeValue: saturation(first[7]).normalizeValue, width: first, value, height: first1, onPanUpdate, runOnJS: saturation(first[6]).runOnJS };
+  obj = {
+    saturation,
+    normalizeValue: saturation(first[7]).normalizeValue,
+    width: first,
+    value,
+    height: first1,
+    onPanUpdate,
+    runOnJS: saturation(first[6]).runOnJS,
+  };
   fn.__closure = obj;
   fn.__workletHash = 1039948278130;
   fn.__initData = closure_12;
@@ -122,7 +155,15 @@ export default function SaturationValueColorPicker(hue) {
       const tmpResult = tmp(tmp2[6]);
     }
   };
-  fn2.__closure = { saturation, normalizeValue: saturation(first[7]).normalizeValue, width: first, value, height: first1, onPanUpdate, runOnJS: saturation(first[6]).runOnJS };
+  fn2.__closure = {
+    saturation,
+    normalizeValue: saturation(first[7]).normalizeValue,
+    width: first,
+    value,
+    height: first1,
+    onPanUpdate,
+    runOnJS: saturation(first[6]).runOnJS,
+  };
   fn2.__workletHash = 3656850328181;
   fn2.__initData = closure_13;
   obj[1] = fn2;
@@ -132,7 +173,15 @@ export default function SaturationValueColorPicker(hue) {
       const obj = saturation(first[6]);
     }
   };
-  obj1 = { saturation, normalizeValue: saturation(first[7]).normalizeValue, width: first, value, height: first1, onPanUpdate, runOnJS: saturation(first[6]).runOnJS };
+  obj1 = {
+    saturation,
+    normalizeValue: saturation(first[7]).normalizeValue,
+    width: first,
+    value,
+    height: first1,
+    onPanUpdate,
+    runOnJS: saturation(first[6]).runOnJS,
+  };
   fn3.__closure = { onPanFinalize, runOnJS: saturation(first[6]).runOnJS };
   fn3.__workletHash = 12553589408812;
   fn3.__initData = closure_14;
@@ -146,15 +195,28 @@ export default function SaturationValueColorPicker(hue) {
     let obj2 = saturation(first[7]);
     obj = { h: saturation.get(), s: 0, v: Math.round(1 - first.get()) };
     const hsvToRgbWorkletResult1 = obj2.hsvToRgbWorklet(obj);
-    obj1 = { backgroundColor: "rgb(" + hsvToRgbWorkletResult[0] + ", " + hsvToRgbWorkletResult[1] + ", " + hsvToRgbWorkletResult[2] + ")", transform: null, borderColor: null };
+    obj1 = {
+      backgroundColor:
+        "rgb(" + hsvToRgbWorkletResult[0] + ", " + hsvToRgbWorkletResult[1] + ", " + hsvToRgbWorkletResult[2] + ")",
+      transform: null,
+      borderColor: null,
+    };
     obj2 = { translateX: first1 * saturation.get() };
     const items = [obj2, { translateY: onPanFinalize * (1 - first.get()) }];
     obj1[1] = items;
-    obj1[2] = "rgb(" + hsvToRgbWorkletResult1[0] + ", " + hsvToRgbWorkletResult1[1] + ", " + hsvToRgbWorkletResult1[2] + ")";
+    obj1[2] =
+      "rgb(" + hsvToRgbWorkletResult1[0] + ", " + hsvToRgbWorkletResult1[1] + ", " + hsvToRgbWorkletResult1[2] + ")";
     return obj1;
   };
   let obj2 = { onPanFinalize, runOnJS: saturation(first[6]).runOnJS };
-  fn4.__closure = { hsvToRgbWorklet: saturation(first[7]).hsvToRgbWorklet, hue, saturation, value, colorBoxWidth: first, colorBoxHeight: first1 };
+  fn4.__closure = {
+    hsvToRgbWorklet: saturation(first[7]).hsvToRgbWorklet,
+    hue,
+    saturation,
+    value,
+    colorBoxWidth: first,
+    colorBoxHeight: first1,
+  };
   fn4.__workletHash = 15029576157619;
   fn4.__initData = closure_15;
   const animatedStyle = obj5.useAnimatedStyle(fn4);
@@ -169,14 +231,29 @@ export default function SaturationValueColorPicker(hue) {
   }, []);
   let result = first2 / 2;
   const obj4 = { style: null, children: null };
-  const items1 = [tmp.container, style, onPanUpdate.useMemo(() => ({ height: onPanFinalize + first2, width: first1 + first2 }), items)];
+  const items1 = [
+    tmp.container,
+    style,
+    onPanUpdate.useMemo(() => ({ height: onPanFinalize + first2, width: first1 + first2 }), items),
+  ];
   obj4[0] = items1;
   obj5 = { gesture: panGesture, children: null };
-  const obj3 = { hsvToRgbWorklet: saturation(first[7]).hsvToRgbWorklet, hue, saturation, value, colorBoxWidth: first, colorBoxHeight: first1 };
-  obj5[1] = callback2(onPanFinalize, { onLayout: callback, hitSlop: { top: result, bottom: result, left: result, right: result }, children: callback2(ColorBox, { hue, colorBoxStyle, colorBoxInnerStyle }) });
-  const items2 = [callback2(saturation(first[9]).GestureDetector, obj5), ];
+  const obj3 = {
+    hsvToRgbWorklet: saturation(first[7]).hsvToRgbWorklet,
+    hue,
+    saturation,
+    value,
+    colorBoxWidth: first,
+    colorBoxHeight: first1,
+  };
+  obj5[1] = callback2(onPanFinalize, {
+    onLayout: callback,
+    hitSlop: { top: result, bottom: result, left: result, right: result },
+    children: callback2(ColorBox, { hue, colorBoxStyle, colorBoxInnerStyle }),
+  });
+  const items2 = [callback2(saturation(first[9]).GestureDetector, obj5)];
   const items3 = [tmp.selector, animatedStyle, selectorStyle];
   items2[1] = callback2(saturation(first[6]).View, { onLayout: callback1, pointerEvents: "box-none", style: items3 });
   obj4[1] = items2;
   return first2(onPanFinalize, obj4);
-};
+}

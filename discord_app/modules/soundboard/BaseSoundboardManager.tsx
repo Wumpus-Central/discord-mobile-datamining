@@ -9,12 +9,8 @@ class BaseSoundboardManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
-    applyArgumentsResult._playSound = function _playSound() {
-
-    };
-    applyArgumentsResult._stopAndClearSounds = function _stopAndClearSounds() {
-
-    };
+    applyArgumentsResult._playSound = function _playSound() {};
+    applyArgumentsResult._stopAndClearSounds = function _stopAndClearSounds() {};
     applyArgumentsResult._handleToggleSelfDeafened = function _handleToggleSelfDeafened() {
       if (closure_1_3.isDeaf()) {
         applyArgumentsResult._stopAndClearSounds();
@@ -42,7 +38,10 @@ const prototype = BaseSoundboardManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const subscription = dispatcherDefault.subscribe("VOICE_CHANNEL_EFFECT_SEND", this._handleSoundboardSoundReceived);
   const obj = dispatcherDefault;
-  const subscription1 = dispatcherDefault.subscribe("GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", this._handleSoundboardSoundPlayLocally);
+  const subscription1 = dispatcherDefault.subscribe(
+    "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY",
+    this._handleSoundboardSoundPlayLocally,
+  );
   const obj2 = dispatcherDefault;
   const subscription2 = dispatcherDefault.subscribe("VOICE_CHANNEL_SELECT", this._handleVoiceChannelSelect);
   const obj3 = dispatcherDefault;

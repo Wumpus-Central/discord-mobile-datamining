@@ -22,16 +22,48 @@ import hexToRgba from "../../../../utils/ColorUtils.tsx";
 const require = arg1;
 let c4 = importAllResult;
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-let obj = { container: null, imageBackground: null, autoDisabledVideoWrapper: null, autoDisabledVideo: null, autoDisabledVideoTextWrapper: null, statusWrapper: null, labelText: null };
-obj = { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.BLACK };
+let obj = {
+  container: null,
+  imageBackground: null,
+  autoDisabledVideoWrapper: null,
+  autoDisabledVideo: null,
+  autoDisabledVideoTextWrapper: null,
+  statusWrapper: null,
+  labelText: null,
+};
+obj = {
+  flex: 1,
+  width: "100%",
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+  backgroundColor: ThemesDefault.colors.BLACK,
+};
 obj[0] = obj;
 obj[1] = { flex: 1, justifyContent: "center", alignItems: "center", alignSelf: "stretch" };
 obj[2] = { width: "100%", flexDirection: "row", justifyContent: "center" };
 createCacheKey = { backgroundColor: null, alignItems: "center", height: 24 };
 createCacheKey[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj[3] = createCacheKey;
-obj[4] = { borderRadius: ThemesDefault.radii.sm, flexDirection: "row", justifyContent: "space-evenly", paddingHorizontal: 8, paddingVertical: 4, alignItems: "center" };
-let obj3 = { position: "absolute", bottom: 8, right: 8, backgroundColor: null, borderRadius: null, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
+obj[4] = {
+  borderRadius: ThemesDefault.radii.sm,
+  flexDirection: "row",
+  justifyContent: "space-evenly",
+  paddingHorizontal: 8,
+  paddingVertical: 4,
+  alignItems: "center",
+};
+let obj3 = {
+  position: "absolute",
+  bottom: 8,
+  right: 8,
+  backgroundColor: null,
+  borderRadius: null,
+  width: 24,
+  height: 24,
+  justifyContent: "center",
+  alignItems: "center",
+};
 obj3[3] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj3[4] = ThemesDefault.radii.md;
 obj[5] = obj3;
@@ -51,31 +83,47 @@ let closure_18 = importAllResult.memo((guildId) => {
   let obj = hasVideo(id[14]);
   let items = [closure_8];
   let items1 = [hasVideo, id];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    let tmp = hasVideo;
-    if (hasVideo) {
-      tmp = id === closure_1_8.getId();
-    }
-    return tmp;
-  }, items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      let tmp = hasVideo;
+      if (hasVideo) {
+        tmp = id === closure_1_8.getId();
+      }
+      return tmp;
+    },
+    items1,
+  );
   const items2 = [closure_10];
   const items3 = [id];
-  callback = callback(hasVideo(id[14]).useStateFromStoresArray(items2, () => {
-    const items = [closure_1_10.isLocalVideoAutoDisabled(id)];
-    return items;
-  }, items3), 1)[0];
+  callback = callback(
+    hasVideo(id[14]).useStateFromStoresArray(
+      items2,
+      () => {
+        const items = [closure_1_10.isLocalVideoAutoDisabled(id)];
+        return items;
+      },
+      items3,
+    ),
+    1,
+  )[0];
   const obj2 = hasVideo(id[14]);
   let tmp2 = hasVideo;
   const items4 = [closure_10];
   const items5 = [id];
-  const tmp5 = hasVideo(id[14]).useStateFromStores(items4, () => {
-    if (null != id) {
-      let NONE = closure_1_10.getVideoToggleState(tmp, closure_1_13.DEFAULT);
-    } else {
-      NONE = closure_1_11.NONE;
-    }
-    return NONE;
-  }, items5) === VideoToggleState.AUTO_PROBING;
+  const tmp5 =
+    hasVideo(id[14]).useStateFromStores(
+      items4,
+      () => {
+        if (null != id) {
+          let NONE = closure_1_10.getVideoToggleState(tmp, closure_1_13.DEFAULT);
+        } else {
+          NONE = closure_1_11.NONE;
+        }
+        return NONE;
+      },
+      items5,
+    ) === VideoToggleState.AUTO_PROBING;
   closure_4 = tmp5;
   if (!ringing) {
     if (hasVideo) {
@@ -94,7 +142,15 @@ let closure_18 = importAllResult.memo((guildId) => {
       return tmp6Result;
     }
   }
-  obj = { style: tmp.imageBackground, url: null, user: null, guildId: null, speaking: null, size: null, renderVideoDetails: null };
+  obj = {
+    style: tmp.imageBackground,
+    url: null,
+    user: null,
+    guildId: null,
+    speaking: null,
+    size: null,
+    renderVideoDetails: null,
+  };
   const obj3 = hasVideo(id[14]);
   obj[1] = user.getAvatarURL(guildId, 128);
   obj[2] = user;
@@ -106,13 +162,13 @@ let closure_18 = importAllResult.memo((guildId) => {
       let obj = { style: null, children: null };
       obj[0] = lib.autoDisabledVideoWrapper;
       obj = { style: null, children: null };
-      const items = [, ];
+      const items = [,];
       ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = lib);
       obj[0] = items;
       obj = { source: null, size: null, disableColor: true };
       obj[0] = lib(id[17]);
       obj[1] = hasVideo(id[16]).Icon.Sizes.SMALL;
-      const items1 = [closure_1_14(hasVideo(id[16]).Icon, obj), ];
+      const items1 = [closure_1_14(hasVideo(id[16]).Icon, obj)];
       obj1 = { variant: "text-sm/normal", color: "text-default", style: null, children: null };
       obj1[2] = lib.labelText;
       const intl = hasVideo(id[19]).intl;
@@ -136,10 +192,21 @@ let closure_19 = importAllResult.memo((userId) => {
   let obj = userId(589);
   let items = [closure_10];
   const items1 = [userId];
-  const tmp4 = callback(obj.useStateFromStoresArray(items, () => {
-    const items = [closure_1_10.isLocalMute(userId), closure_1_10.isLocalVideoDisabled(userId), closure_1_10.isLocalVideoAutoDisabled(userId)];
-    return items;
-  }, items1), 3);
+  const tmp4 = callback(
+    obj.useStateFromStoresArray(
+      items,
+      () => {
+        const items = [
+          closure_1_10.isLocalMute(userId),
+          closure_1_10.isLocalVideoDisabled(userId),
+          closure_1_10.isLocalVideoAutoDisabled(userId),
+        ];
+        return items;
+      },
+      items1,
+    ),
+    3,
+  );
   let tmp5 = tmp4[1];
   if (tmp4[0]) {
     let tmp6 = registerAssetDefault;
@@ -163,10 +230,10 @@ let closure_19 = importAllResult.memo((userId) => {
       obj[1] = callback2(tmp2(1297).Icon, obj);
       tmp14 = callback2(View, obj);
     }
-    const items3 = [tmp14, ];
+    const items3 = [tmp14];
     let tmp19Result = null;
     if (null != tmp6) {
-      const items4 = [tmp.statusWrapper, style, ];
+      const items4 = [tmp.statusWrapper, style];
       obj1 = null;
       if (tmp5) {
         obj1 = { right: 38 };
@@ -194,7 +261,14 @@ let closure_19 = importAllResult.memo((userId) => {
   }
   return tmp11Result;
 });
-let obj2 = { borderRadius: ThemesDefault.radii.sm, flexDirection: "row", justifyContent: "space-evenly", paddingHorizontal: 8, paddingVertical: 4, alignItems: "center" };
+let obj2 = {
+  borderRadius: ThemesDefault.radii.sm,
+  flexDirection: "row",
+  justifyContent: "space-evenly",
+  paddingHorizontal: 8,
+  paddingVertical: 4,
+  alignItems: "center",
+};
 let result = require("set").fileFinishedImporting("modules/video_calls/native/components/UserTile.tsx");
 
 export default function UserTile(participant) {
@@ -265,13 +339,20 @@ export default function UserTile(participant) {
   obj1 = participant(tmp8[14]);
   const items3 = [closure_10];
   const items4 = [user.id, participant.type];
-  const stateFromStores = obj1.useStateFromStores(items3, () => {
-    let isLocalVideoDisabledResult = null != user.id;
-    if (isLocalVideoDisabledResult) {
-      isLocalVideoDisabledResult = closure_1_10.isLocalVideoDisabled(tmp.id, onSingleTap(onDoubleTap[28])(participant.type));
-    }
-    return isLocalVideoDisabledResult;
-  }, items4);
+  const stateFromStores = obj1.useStateFromStores(
+    items3,
+    () => {
+      let isLocalVideoDisabledResult = null != user.id;
+      if (isLocalVideoDisabledResult) {
+        isLocalVideoDisabledResult = closure_1_10.isLocalVideoDisabled(
+          tmp.id,
+          onSingleTap(onDoubleTap[28])(participant.type),
+        );
+      }
+      return isLocalVideoDisabledResult;
+    },
+    items4,
+  );
   let obj2 = participant(tmp8[29]);
   const voiceChatNavigationContext = obj2.useVoiceChatNavigationContext();
   let swipeDismissRef;
@@ -309,7 +390,17 @@ export default function UserTile(participant) {
   obj[0] = Gesture2.Simultaneous(result, tmp21);
   obj = { style: items6, children: null };
   items6 = [tmp3.container, style];
-  obj1 = { guildId: guild_id, hasVideo: null, streamId: null, user: null, resizeMode: null, ringing: null, speaking: null, avatarSize: null, gestureEnabled: null };
+  obj1 = {
+    guildId: guild_id,
+    hasVideo: null,
+    streamId: null,
+    user: null,
+    resizeMode: null,
+    ringing: null,
+    speaking: null,
+    avatarSize: null,
+    gestureEnabled: null,
+  };
   if (tmp14) {
     tmp14 = !stateFromStores;
   }
@@ -321,7 +412,7 @@ export default function UserTile(participant) {
   obj1[6] = tmp9;
   obj1[7] = participant.avatarSize;
   obj1[8] = gestureEnabled;
-  const items7 = [closure_14(closure_18, obj1), , ];
+  const items7 = [closure_14(closure_18, obj1), ,];
   let tmp23Result = null;
   if (null != id) {
     tmp23Result = null;
@@ -341,4 +432,4 @@ export default function UserTile(participant) {
   obj[1] = items7;
   obj[1] = closure_15(id, obj);
   return closure_14(participant(onDoubleTap[31]).GestureDetector, obj);
-};
+}

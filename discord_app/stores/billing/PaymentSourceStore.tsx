@@ -21,26 +21,25 @@ let closure_1 = {};
 let c2 = null;
 let c3 = false;
 const Store = initializeDefault.Store;
-class PaymentSourceStore extends Store {
-}
+class PaymentSourceStore extends Store {}
 const prototype = PaymentSourceStore.prototype;
 Object.defineProperty(prototype, "paymentSources", {
   get: function paymentSources() {
     return closure_1;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "paymentSourceIds", {
   get: function paymentSourceIds() {
     return Object.keys(closure_1);
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "defaultPaymentSourceId", {
   get: function defaultPaymentSourceId() {
     return c2;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "defaultPaymentSource", {
   get: function defaultPaymentSource() {
@@ -50,13 +49,13 @@ Object.defineProperty(prototype, "defaultPaymentSource", {
     }
     return tmp;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasFetchedPaymentSources", {
   get: function hasFetchedPaymentSources() {
     return c3;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getDefaultBillingCountryCode"] = function getDefaultBillingCountryCode() {
   const defaultPaymentSource = this.defaultPaymentSource;
@@ -115,7 +114,7 @@ const paymentSourceStore = new PaymentSourceStore(dispatcherDefault, {
     closure_1 = {};
     c2 = null;
     c3 = false;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/billing/PaymentSourceStore.tsx");
 

@@ -19,8 +19,13 @@ import { LinearTransition, Easing } from "../../../reanimated/ReanimatedRexport.
 
 const require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ setRegistrationErrors: unpackModuleId, updateRegistrationOptions: closure_12, useRegistrationUIStore: map1 } = useRegistrationUIStore);
-({ RegisterTransitionSteps: closure_14, RegistrationTransitionActionTypes: closure_15 } = RegistrationTransitionActionTypes);
+({
+  setRegistrationErrors: unpackModuleId,
+  updateRegistrationOptions: closure_12,
+  useRegistrationUIStore: map1,
+} = useRegistrationUIStore);
+({ RegisterTransitionSteps: closure_14, RegistrationTransitionActionTypes: closure_15 } =
+  RegistrationTransitionActionTypes);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, password: null, button: null, errors: null, page: null };
@@ -38,13 +43,15 @@ let closure_19 = createCacheKey.createStyles((arg0) => {
 });
 createCacheKey = { layout: null };
 createCacheKey[0] = require("../../../../../_runtime/00300_get_BatchedBridge.js");
-const easingResult = LinearTransition.easing(Easing.inOut(require("../../../reanimated/ReanimatedRexport.tsx").Easing.quad));
+const easingResult = LinearTransition.easing(
+  Easing.inOut(require("../../../reanimated/ReanimatedRexport.tsx").Easing.quad),
+);
 let result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterAccountInformation.tsx");
 
 export default function RegisterAccountInformation() {
   function _handleSubmit() {
     const self = this;
-    const tmp = ref(function*() {
+    const tmp = ref(function* () {
       if (v02 === 2) {
         v02 = 3;
         HermesBuiltin.throwTypeError();
@@ -176,10 +183,21 @@ export default function RegisterAccountInformation() {
   const ref = React.useRef(null);
   let obj3 = context(15560);
   const passwordRegistrationStep = obj3.usePasswordRegistrationStep();
-  ({ password, validatePassword: closure_4, setPassword, passwordScore, preventSubmitPassword } = passwordRegistrationStep);
+  ({
+    password,
+    validatePassword: closure_4,
+    setPassword,
+    passwordScore,
+    preventSubmitPassword,
+  } = passwordRegistrationStep);
   let obj4 = context(15562);
   const usernameRegistrationStep = obj4.useUsernameRegistrationStep(AuthStates.REGISTER_ACCOUNT_INFORMATION);
-  ({ transitionToNextStepOrSubmit: closure_5, username, preventSubmitUsername, validateUsername: closure_6 } = usernameRegistrationStep);
+  ({
+    transitionToNextStepOrSubmit: closure_5,
+    username,
+    preventSubmitUsername,
+    validateUsername: closure_6,
+  } = usernameRegistrationStep);
   obj = {};
   ({ usernameStatus, setUsername } = usernameRegistrationStep);
   const merged = Object.assign(tmp7);
@@ -192,7 +210,9 @@ export default function RegisterAccountInformation() {
   obj.invite = code;
   let tmp5Result = tmp5(589);
   const items2 = [result];
-  const stateFromStores1 = tmp5Result.useStateFromStores(items2, () => authenticationConsentRequired.getAuthenticationConsentRequired());
+  const stateFromStores1 = tmp5Result.useStateFromStores(items2, () =>
+    authenticationConsentRequired.getAuthenticationConsentRequired(),
+  );
   tmp5Result = tmp5(15545);
   obj = { isConsentRequired: true === stateFromStores1 };
   result = tmp5Result.hasAllRegistrationFieldsCompleted(obj, obj);
@@ -233,11 +253,28 @@ export default function RegisterAccountInformation() {
   const intl2 = tmp5(1236).intl;
   obj1[0] = intl2.string(context(1236).t.jec90v);
   obj2 = { contentContainerStyle: { flexGrow: 1 }, keyboardShouldPersistTaps: "handled", children: null };
-  obj3 = { style: tmp4.container, children: callback3(tmp5(15563).RegisterUsernameInput, { username, setUsername, onSubmitEditing: callback, usernameStatus, submitBehavior: "submit", autoFocus: true }) };
-  const items4 = [callback3(closure_6, obj3), , ];
+  obj3 = {
+    style: tmp4.container,
+    children: callback3(tmp5(15563).RegisterUsernameInput, {
+      username,
+      setUsername,
+      onSubmitEditing: callback,
+      usernameStatus,
+      submitBehavior: "submit",
+      autoFocus: true,
+    }),
+  };
+  const items4 = [callback3(closure_6, obj3), ,];
   obj4 = { style: tmp4.password };
   const merged1 = Object.assign(createCacheKey);
-  let obj5 = { ref, password, onPasswordChange: setPassword, onSubmitEditing: handleSubmit, passwordScore, returnKeyType: null };
+  let obj5 = {
+    ref,
+    password,
+    onPasswordChange: setPassword,
+    onSubmitEditing: handleSubmit,
+    passwordScore,
+    returnKeyType: null,
+  };
   let str = "next";
   if (result) {
     str = "done";
@@ -255,7 +292,7 @@ export default function RegisterAccountInformation() {
     preventSubmitUsername = preventSubmitPassword;
   }
   obj7[4] = preventSubmitUsername;
-  const items5 = [callback3(context(4928).Button, obj7), ];
+  const items5 = [callback3(context(4928).Button, obj7)];
   let tmp27Result = null;
   if (null != tmp11.message) {
     tmp27Result = null;
@@ -280,4 +317,4 @@ export default function RegisterAccountInformation() {
     tmp27Result1 = tmp27(tmp(6049), obj9);
   }
   return tmp27Result1;
-};
+}

@@ -9,7 +9,12 @@ let c0 = importAllResult;
 ({ StyleSheet, View: closure_1 } = get_ActivityIndicator);
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 let obj = { divider: null };
-obj = { marginLeft: 0, height: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: -1 * StyleSheet.hairlineWidth };
+obj = {
+  marginLeft: 0,
+  height: StyleSheet.hairlineWidth,
+  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  marginTop: -1 * StyleSheet.hairlineWidth,
+};
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((arg0, arg1) => {
@@ -21,7 +26,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, arg1) => {
     obj[0] = tmp.divider;
     tmp4 = callback(tmp3, obj);
   }
-  const items = [tmp4, ];
+  const items = [tmp4];
   const Children = arg1.Children;
   items[1] = Children.map(children, (icon) => {
     let cloneElementResult = icon;

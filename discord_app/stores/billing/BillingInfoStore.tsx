@@ -30,8 +30,7 @@ let c12 = null;
 let c13 = false;
 let c14 = false;
 const Store = initializeDefault.Store;
-class BillingInfoStore extends Store {
-}
+class BillingInfoStore extends Store {}
 const prototype = BillingInfoStore.prototype;
 Object.defineProperty(prototype, "isBusy", {
   get: function isBusy() {
@@ -47,91 +46,91 @@ Object.defineProperty(prototype, "isBusy", {
     }
     return tmp;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isUpdatingPaymentSource", {
   get: function isUpdatingPaymentSource() {
     return c7;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isRemovingPaymentSource", {
   get: function isRemovingPaymentSource() {
     return c8;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isSyncing", {
   get: function isSyncing() {
     return this.isPaymentSourceFetching || this.isSubscriptionFetching;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isSubscriptionFetching", {
   get: function isSubscriptionFetching() {
     return c9;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isPaymentSourceFetching", {
   get: function isPaymentSourceFetching() {
     return null != closure_0;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "editSourceError", {
   get: function editSourceError() {
     return c11;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "removeSourceError", {
   get: function removeSourceError() {
     return c12;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "ipCountryCodeLoaded", {
   get: function ipCountryCodeLoaded() {
     return undefined !== closure_1;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "ipCountryCode", {
   get: function ipCountryCode() {
     return closure_1;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "ipCountryCodeRequest", {
   get: function ipCountryCodeRequest() {
     return closure_2;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "ipLocationLoaded", {
   get: function ipLocationLoaded() {
     return undefined !== closure_3;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "ipLocation", {
   get: function ipLocation() {
     return closure_3;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "ipLocationRequest", {
   get: function ipLocationRequest() {
     return closure_4;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "ipLocationHasError", {
   get: function ipLocationHasError() {
     return c14;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "ipCountryCodeWithFallback", {
   get: function ipCountryCodeWithFallback() {
@@ -141,19 +140,19 @@ Object.defineProperty(prototype, "ipCountryCodeWithFallback", {
     }
     return tmp;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "ipCountryCodeHasError", {
   get: function ipCountryCodeHasError() {
     return c13;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "paymentSourcesFetchRequest", {
   get: function paymentSourcesFetchRequest() {
     return closure_0;
   },
-  set: undefined
+  set: undefined,
 });
 BillingInfoStore.displayName = "BillingInfoStore";
 const billingInfoStore = new BillingInfoStore(dispatcherDefault, {
@@ -238,7 +237,7 @@ const billingInfoStore = new BillingInfoStore(dispatcherDefault, {
   },
   CONNECTION_OPEN: function handleConnectionOpen(countryCode) {
     countryCode = countryCode.countryCode;
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/billing/BillingInfoStore.tsx");
 

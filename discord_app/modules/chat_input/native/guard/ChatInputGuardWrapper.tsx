@@ -28,42 +28,61 @@ export default function ChatInputGuardWrapper(channel) {
   const tmp3 = stateFromStores;
   let obj = channel(stateFromStores[12]);
   const items = [closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => channel(stateFromStores[13]).guildHasVerificationGate(closure_1_6.getGuild(guildId)));
+  stateFromStores = obj.useStateFromStores(items, () =>
+    channel(stateFromStores[13]).guildHasVerificationGate(closure_1_6.getGuild(guildId)),
+  );
   obj1 = channel(stateFromStores[12]);
   const items1 = [closure_7];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_7.getCheck(guildId));
   notClaimed = stateFromStores1.notClaimed;
   verificationRole = stateFromStores1.verificationRole;
-  ({ notPhoneVerified, notEmailVerified, newMember, newAccount, memberDeadline, accountDeadline, missingVerificationRole } = stateFromStores1);
+  ({
+    notPhoneVerified,
+    notEmailVerified,
+    newMember,
+    newAccount,
+    memberDeadline,
+    accountDeadline,
+    missingVerificationRole,
+  } = stateFromStores1);
   let obj2 = channel(stateFromStores[12]);
   const items2 = [closure_9, closure_5];
   const items3 = [guildId, stateFromStores, notClaimed];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items2, () => {
-    const currentUser = closure_1_9.getCurrentUser();
-    let member = null;
-    if (null != currentUser) {
-      member = null;
-      if (null != guildId) {
-        member = closure_1_5.getMember(tmp3, currentUser.id);
+  const stateFromStoresObject = obj2.useStateFromStoresObject(
+    items2,
+    () => {
+      const currentUser = closure_1_9.getCurrentUser();
+      let member = null;
+      if (null != currentUser) {
+        member = null;
+        if (null != guildId) {
+          member = closure_1_5.getMember(tmp3, currentUser.id);
+        }
       }
-    }
-    const obj = { user: currentUser, showMemberVerificationModal: null, communicationDisabledGuildMember: null, automodUserProfileQuarantined: null };
-    let isPending;
-    if (member != null) {
-      isPending = member.isPending;
-    }
-    obj[1] = (true === isPending || notClaimed) && stateFromStores;
-    let tmp8;
-    if (obj2.isMemberCommunicationDisabled(member)) {
-      tmp8 = member;
-    }
-    obj[2] = tmp8;
-    obj2 = channel(stateFromStores[14]);
-    const tmp6 = channel;
-    const tmp7 = stateFromStores;
-    obj[3] = channel(stateFromStores[15]).hasAutomodQuarantinedProfile(member);
-    return obj;
-  }, items3);
+      const obj = {
+        user: currentUser,
+        showMemberVerificationModal: null,
+        communicationDisabledGuildMember: null,
+        automodUserProfileQuarantined: null,
+      };
+      let isPending;
+      if (member != null) {
+        isPending = member.isPending;
+      }
+      obj[1] = (true === isPending || notClaimed) && stateFromStores;
+      let tmp8;
+      if (obj2.isMemberCommunicationDisabled(member)) {
+        tmp8 = member;
+      }
+      obj[2] = tmp8;
+      obj2 = channel(stateFromStores[14]);
+      const tmp6 = channel;
+      const tmp7 = stateFromStores;
+      obj[3] = channel(stateFromStores[15]).hasAutomodQuarantinedProfile(member);
+      return obj;
+    },
+    items3,
+  );
   const communicationDisabledGuildMember = stateFromStoresObject.communicationDisabledGuildMember;
   ({ user, showMemberVerificationModal, automodUserProfileQuarantined } = stateFromStoresObject);
   let tmp9 = channel.type === constants.GUILD_ANNOUNCEMENT;
@@ -80,25 +99,37 @@ export default function ChatInputGuardWrapper(channel) {
   const isForumPostResult = channel.isForumPost();
   const items4 = [closure_8];
   const items5 = [channel];
-  const stateFromStores2 = channel(tmp3[12]).useStateFromStores(items4, () => {
-    let isDMResult = channel.isDM();
-    if (isDMResult) {
-      isDMResult = closure_1_8.isBlocked(channel.getRecipientId());
-    }
-    return isDMResult;
-  }, items5);
+  const stateFromStores2 = channel(tmp3[12]).useStateFromStores(
+    items4,
+    () => {
+      let isDMResult = channel.isDM();
+      if (isDMResult) {
+        isDMResult = closure_1_8.isBlocked(channel.getRecipientId());
+      }
+      return isDMResult;
+    },
+    items5,
+  );
   const tmp2Result1 = channel(tmp3[12]);
   const items6 = [notClaimed];
   const items7 = [guildId];
-  const stateFromStores3 = channel(tmp3[12]).useStateFromStores(items6, () => {
-    let isLurkingResult = null != guildId;
-    if (isLurkingResult) {
-      isLurkingResult = notClaimed.isLurking(tmp);
-    }
-    return isLurkingResult;
-  }, items7);
+  const stateFromStores3 = channel(tmp3[12]).useStateFromStores(
+    items6,
+    () => {
+      let isLurkingResult = null != guildId;
+      if (isLurkingResult) {
+        isLurkingResult = notClaimed.isLurking(tmp);
+      }
+      return isLurkingResult;
+    },
+    items7,
+  );
   const tmp2Result2 = channel(tmp3[12]);
-  ({ showLinkedLobbyApplicationLoadingIndicator, requiredLinkedLobbyApplication, shouldRelaunchLinkedLobbyApplication } = guildId(tmp3[20])(channel.linkedLobby));
+  ({
+    showLinkedLobbyApplicationLoadingIndicator,
+    requiredLinkedLobbyApplication,
+    shouldRelaunchLinkedLobbyApplication,
+  } = guildId(tmp3[20])(channel.linkedLobby));
   guildId(tmp3[21])(channel.id);
   if (tmp11) {
     obj = { channel: null };
@@ -152,7 +183,9 @@ export default function ChatInputGuardWrapper(channel) {
               const obj4 = guildId(stateFromStores[23]);
             }
           };
-          tmp21Result = <tmp7Result type="button-action" message={null} buttonPrimaryText={null} buttonPrimaryOnPress={null} />;
+          tmp21Result = (
+            <tmp7Result type="button-action" message={null} buttonPrimaryText={null} buttonPrimaryOnPress={null} />
+          );
           tmp23 = jsx;
         } else if (showMemberVerificationModal) {
           const obj5 = { guildId: null };
@@ -181,7 +214,12 @@ export default function ChatInputGuardWrapper(channel) {
                 tmp23 = jsx;
                 const tmp7Result1 = tmp7(tmp3[33]);
               } else if (notPhoneVerified) {
-                const obj9 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
+                const obj9 = {
+                  type: "button-action",
+                  message: null,
+                  buttonPrimaryText: null,
+                  buttonPrimaryOnPress: null,
+                };
                 const intl9 = tmp2(tmp3[35]).intl;
                 obj9[1] = intl9.string(tmp2(tmp3[35]).t["2dThMM"]);
                 const intl10 = tmp2(tmp3[35]).intl;
@@ -193,13 +231,27 @@ export default function ChatInputGuardWrapper(channel) {
                   obj = { reason: null };
                   const obj3 = guildId(stateFromStores[24]);
                   obj[0] = channel(stateFromStores[27]).ChangePhoneReason.GUILD_PHONE_REQUIRED;
-                  obj3.pushLazy(channel(stateFromStores[26])(stateFromStores[25], stateFromStores.paths), obj, closure_14);
+                  obj3.pushLazy(
+                    channel(stateFromStores[26])(stateFromStores[25], stateFromStores.paths),
+                    obj,
+                    closure_14,
+                  );
                 };
-                tmp21Result = jsx(tmp7(tmp3[33]), { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
+                tmp21Result = jsx(tmp7(tmp3[33]), {
+                  type: "button-action",
+                  message: null,
+                  buttonPrimaryText: null,
+                  buttonPrimaryOnPress: null,
+                });
                 tmp23 = jsx;
                 const tmp7Result2 = tmp7(tmp3[33]);
               } else if (notEmailVerified) {
-                const obj10 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
+                const obj10 = {
+                  type: "button-action",
+                  message: null,
+                  buttonPrimaryText: null,
+                  buttonPrimaryOnPress: null,
+                };
                 const intl7 = tmp2(tmp3[35]).intl;
                 obj10[1] = intl7.string(tmp2(tmp3[35]).t.FkGPS5);
                 const intl8 = tmp2(tmp3[35]).intl;
@@ -210,7 +262,12 @@ export default function ChatInputGuardWrapper(channel) {
                   obj.trackWithMetadata(constants2.TEXT_AREA_CTA_CLICKED, obj);
                   guildId(stateFromStores[28]).open();
                 };
-                tmp21Result = jsx(tmp7(tmp3[33]), { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
+                tmp21Result = jsx(tmp7(tmp3[33]), {
+                  type: "button-action",
+                  message: null,
+                  buttonPrimaryText: null,
+                  buttonPrimaryOnPress: null,
+                });
                 tmp23 = jsx;
                 const tmp7Result3 = tmp7(tmp3[33]);
               } else if (newMember) {
@@ -221,7 +278,12 @@ export default function ChatInputGuardWrapper(channel) {
                 obj12[0] = constants2.MEMBER_AGE;
                 obj11[2] = intl6.formatToPlainString(tmp2(tmp3[35]).t.IH7RMF, obj12);
                 obj11[3] = memberDeadline;
-                tmp21Result = jsx(tmp7(tmp3[33]), { type: "simple-action", icon: null, message: null, countdown: null });
+                tmp21Result = jsx(tmp7(tmp3[33]), {
+                  type: "simple-action",
+                  icon: null,
+                  message: null,
+                  countdown: null,
+                });
                 tmp23 = jsx;
                 const tmp7Result4 = tmp7(tmp3[33]);
               } else if (newAccount) {
@@ -232,7 +294,12 @@ export default function ChatInputGuardWrapper(channel) {
                 obj14[0] = constants2.ACCOUNT_AGE;
                 obj13[2] = intl5.formatToPlainString(tmp2(tmp3[35]).t["2JA2GH"], obj14);
                 obj13[3] = accountDeadline;
-                tmp21Result = jsx(tmp7(tmp3[33]), { type: "simple-action", icon: null, message: null, countdown: null });
+                tmp21Result = jsx(tmp7(tmp3[33]), {
+                  type: "simple-action",
+                  icon: null,
+                  message: null,
+                  countdown: null,
+                });
                 tmp23 = jsx;
                 const tmp7Result5 = tmp7(tmp3[33]);
               } else {
@@ -244,7 +311,12 @@ export default function ChatInputGuardWrapper(channel) {
                     obj15[0] = "@" + verificationRole.name;
                     const formatResult = intl3.format(tmp2(tmp3[35]).t.HbivnU, obj15);
                     if (null === verificationRole.tags.guild_connections) {
-                      const obj16 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
+                      const obj16 = {
+                        type: "button-action",
+                        message: null,
+                        buttonPrimaryText: null,
+                        buttonPrimaryOnPress: null,
+                      };
                       obj16[1] = formatResult;
                       const intl4 = tmp2(tmp3[35]).intl;
                       obj16[2] = intl4.string(tmp2(tmp3[35]).t["6Ge2LG"]);
@@ -254,7 +326,10 @@ export default function ChatInputGuardWrapper(channel) {
                           tmp2 = null != guildId;
                         }
                         if (tmp2) {
-                          const result = channel(stateFromStores[29]).openGuildRoleConnectionsConnectAccountModal(verificationRole, guildId);
+                          const result = channel(stateFromStores[29]).openGuildRoleConnectionsConnectAccountModal(
+                            verificationRole,
+                            guildId,
+                          );
                           const obj = channel(stateFromStores[29]);
                         }
                       };
@@ -273,13 +348,21 @@ export default function ChatInputGuardWrapper(channel) {
                     if (!isForumPostResult) {
                       if (!verificationRole(channel.type)) {
                         if (canCreateThreads) {
-                          const obj18 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
+                          const obj18 = {
+                            type: "button-action",
+                            message: null,
+                            buttonPrimaryText: null,
+                            buttonPrimaryOnPress: null,
+                          };
                           const intl = tmp2(tmp3[35]).intl;
                           obj18[1] = intl.string(tmp2(tmp3[35]).t.Yi2xuY);
                           const intl2 = tmp2(tmp3[35]).intl;
                           obj18[2] = intl2.string(tmp2(tmp3[35]).t.rBIGBL);
                           obj18[3] = function handleCreateThread() {
-                            const result = channel(stateFromStores[30]).navigateToThreadCreation(channel, "chat input guard");
+                            const result = channel(stateFromStores[30]).navigateToThreadCreation(
+                              channel,
+                              "chat input guard",
+                            );
                           };
                           tmp21Result = tmp21(tmp7(tmp3[33]), obj18);
                           tmp23 = tmp21;
@@ -299,11 +382,19 @@ export default function ChatInputGuardWrapper(channel) {
               }
             }
           }
-          const obj20 = { showLinkedLobbyApplicationLoadingIndicator: null, requiredLinkedLobbyApplication: null, shouldRelaunchLinkedLobbyApplication: null };
+          const obj20 = {
+            showLinkedLobbyApplicationLoadingIndicator: null,
+            requiredLinkedLobbyApplication: null,
+            shouldRelaunchLinkedLobbyApplication: null,
+          };
           obj20[0] = showLinkedLobbyApplicationLoadingIndicator;
           obj20[1] = requiredLinkedLobbyApplication;
           obj20[2] = shouldRelaunchLinkedLobbyApplication;
-          tmp21Result = jsx(tmp7(tmp3[40]), { showLinkedLobbyApplicationLoadingIndicator: null, requiredLinkedLobbyApplication: null, shouldRelaunchLinkedLobbyApplication: null });
+          tmp21Result = jsx(tmp7(tmp3[40]), {
+            showLinkedLobbyApplicationLoadingIndicator: null,
+            requiredLinkedLobbyApplication: null,
+            shouldRelaunchLinkedLobbyApplication: null,
+          });
           tmp23 = jsx;
         }
       }
@@ -314,5 +405,10 @@ export default function ChatInputGuardWrapper(channel) {
     tmp21Result = jsx(tmp7(tmp3[38]), { channel: null, isReadonlyAnnouncementsChannel: null });
     tmp23 = jsx;
   }
-  return tmp23(channel(tmp3[33]).ChatInputGuardContainer, { screenIndex, channelId: channel.id, onJumpToPresent, children: tmp21Result });
-};
+  return tmp23(channel(tmp3[33]).ChatInputGuardContainer, {
+    screenIndex,
+    channelId: channel.id,
+    onJumpToPresent,
+    children: tmp21Result,
+  });
+}

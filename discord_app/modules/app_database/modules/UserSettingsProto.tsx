@@ -13,17 +13,17 @@ class UserSettingsProto {
     closure_0 = obj;
     obj.actions = {
       CONNECTION_OPEN() {
-            return obj.throttledOnChange();
-          },
+        return obj.throttledOnChange();
+      },
       USER_SETTINGS_PROTO_UPDATE() {
-            return obj.throttledOnChange();
-          },
+        return obj.throttledOnChange();
+      },
       USER_SETTINGS_PROTO_ENQUEUE_UPDATE() {
-            return obj.throttledOnChange();
-          },
+        return obj.throttledOnChange();
+      },
       USER_SETTINGS_PROTO_UPDATE_EDIT_INFO() {
-            return obj.throttledOnChange();
-          }
+        return obj.throttledOnChange();
+      },
     };
     obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
       id = id.getId();
@@ -64,7 +64,7 @@ class UserSettingsProto {
 const prototype = UserSettingsProto.prototype;
 prototype["getAll"] = function getAll(arg0) {
   closure_0 = arg0;
-  return callback(function*() {
+  return callback(function* () {
     if (c7 === 2) {
       c7 = 3;
       HermesBuiltin.throwTypeError();
@@ -177,9 +177,7 @@ prototype["getAll"] = function getAll(arg0) {
     }
   })();
 };
-prototype["resetInMemoryState"] = function resetInMemoryState() {
-
-};
+prototype["resetInMemoryState"] = function resetInMemoryState() {};
 obj = Object.create(UserSettingsProto.prototype);
 obj.actions = {
   CONNECTION_OPEN() {
@@ -193,7 +191,7 @@ obj.actions = {
   },
   USER_SETTINGS_PROTO_UPDATE_EDIT_INFO() {
     return obj.throttledOnChange();
-  }
+  },
 };
 obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
   id = id.getId();

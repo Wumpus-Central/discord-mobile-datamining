@@ -25,7 +25,7 @@ createToggle = {
     }
   },
   withArrow: true,
-  usePredicate: useBugReporterExperimentSettingPredicate
+  usePredicate: useBugReporterExperimentSettingPredicate,
 };
 createToggle = createToggle.createPressable(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/BugReporterSetting.tsx");

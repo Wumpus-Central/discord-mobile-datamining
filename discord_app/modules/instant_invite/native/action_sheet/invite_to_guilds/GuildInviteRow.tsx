@@ -35,13 +35,29 @@ const memoResult = importAllResult.memo(function GuildInviteRow(arg0) {
   obj[2] = intl.format(require(guild[9]).t.zRl6XR, { count: row.memberCount });
   let tmp9 = tmp === InviteSendStates.SENDING;
   obj1 = { count: row.memberCount };
-  const tmp7 = <View variant="text-xs/medium" color="text-default">{null}</View>;
+  const tmp7 = (
+    <View variant="text-xs/medium" color="text-default">
+      {null}
+    </View>
+  );
   if (!tmp9) {
     tmp9 = tmp === InviteSendStates.SENT;
   }
   const tmp8 = jsx(require(guild[8]).Text, { variant: "text-xs/medium", color: "text-default", children: null });
-  return tmp2(tmp6(tmp3[10]).TableRow, { icon: tmp7, label: guild.name, trailing: tmp4, subLabel: jsx(require(guild[8]).Text, { variant: "text-xs/medium", color: "text-default", children: null }), onPress: handlePress, disabled: tmp9, accessibilityState: { disabled: tmp9 }, start, end });
+  return tmp2(tmp6(tmp3[10]).TableRow, {
+    icon: tmp7,
+    label: guild.name,
+    trailing: tmp4,
+    subLabel: jsx(require(guild[8]).Text, { variant: "text-xs/medium", color: "text-default", children: null }),
+    onPress: handlePress,
+    disabled: tmp9,
+    accessibilityState: { disabled: tmp9 },
+    start,
+    end,
+  });
 });
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/action_sheet/invite_to_guilds/GuildInviteRow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/instant_invite/native/action_sheet/invite_to_guilds/GuildInviteRow.tsx",
+);
 
 export default memoResult;

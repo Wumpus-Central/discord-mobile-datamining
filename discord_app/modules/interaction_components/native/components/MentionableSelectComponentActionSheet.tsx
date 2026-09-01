@@ -14,14 +14,28 @@ const require = arg1;
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { name: null, discriminator: null, roleCountContainer: null, roleCountText: null };
-createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
+createCacheKey = {
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  fontFamily: Fonts.PRIMARY_MEDIUM,
+  fontSize: 12,
+  lineHeight: 16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { color: ThemesDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
-createCacheKey[2] = { display: "flex", flexDirection: "row", flexGrow: 1, alignItems: "center", justifyContent: "flex-end", marginRight: 12 };
+createCacheKey[2] = {
+  display: "flex",
+  flexDirection: "row",
+  flexGrow: 1,
+  alignItems: "center",
+  justifyContent: "flex-end",
+  marginRight: 12,
+};
 createCacheKey[3] = { paddingRight: 4 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { color: ThemesDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/components/MentionableSelectComponentActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/interaction_components/native/components/MentionableSelectComponentActionSheet.tsx",
+);
 
 export default function MentionableSelectComponentActionSheet(selectionActionComponent) {
   selectionActionComponent = selectionActionComponent.selectionActionComponent;
@@ -39,8 +53,17 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
   }
   closure_5 = channelId(guildId[10])(id, selectionActionComponent(tmp3[11]).MIN_REREQUEST_TIME);
   let items = [selectionActionComponent, channelId];
-  const callback = React.useCallback((arg0) => selectionActionComponent(guildId[11]).queryMentionables(selectionActionComponent.type, arg0, channelId), items);
-  let tmp7 = channelId(guildId[12])({ selectActionComponent: selectionActionComponent, containerId, guildId, queryOptions: callback, onSubmit });
+  const callback = React.useCallback(
+    (arg0) => selectionActionComponent(guildId[11]).queryMentionables(selectionActionComponent.type, arg0, channelId),
+    items,
+  );
+  let tmp7 = channelId(guildId[12])({
+    selectActionComponent: selectionActionComponent,
+    containerId,
+    guildId,
+    queryOptions: callback,
+    onSubmit,
+  });
   const selectedOptions = tmp7.selectedOptions;
   const items1 = [guild, guildId];
   ({ options, isSelected, onPressOptionItem, submitSelection, setQuery } = tmp7);
@@ -187,6 +210,6 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
       }
     },
     channelId,
-    allowEmpty
+    allowEmpty,
   });
-};
+}

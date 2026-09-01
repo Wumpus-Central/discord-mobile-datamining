@@ -49,7 +49,11 @@ function GuildPowerupsCoachmark(arg0) {
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null };
-createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL,
+  marginHorizontal: 8,
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsChannelRow.tsx");
@@ -100,8 +104,19 @@ export default function GuildPowerupsChannelRow(guildId) {
     popout1 = tmp5.popout;
   }
   obj[2] = popout1;
-  const items1 = [closure_5(GuildPowerupsCoachmark, obj), ];
-  obj1 = { onPress: callback, style: tmp.container, accessible: true, mode: DEFAULT, unread: true === showUnread, accessibilityLabel: null, accessibilityState: null, name: null, icon: null, channelInfo: null };
+  const items1 = [closure_5(GuildPowerupsCoachmark, obj)];
+  obj1 = {
+    onPress: callback,
+    style: tmp.container,
+    accessible: true,
+    mode: DEFAULT,
+    unread: true === showUnread,
+    accessibilityLabel: null,
+    accessibilityState: null,
+    name: null,
+    icon: null,
+    channelInfo: null,
+  };
   const tmp17 = closure_6;
   const tmp18 = View;
   const tmp19 = GuildPowerupsCoachmark;
@@ -134,4 +149,4 @@ export default function GuildPowerupsChannelRow(guildId) {
   obj[2] = items1;
   obj5[1] = tmp17(tmp18, obj);
   return closure_5(tmp14(5940).LayerScope, obj5);
-};
+}

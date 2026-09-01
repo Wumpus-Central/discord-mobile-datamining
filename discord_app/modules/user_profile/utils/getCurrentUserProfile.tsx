@@ -14,4 +14,4 @@ export default function getCurrentUserProfile(guildId) {
   } else {
     guildMemberProfile = authStore.getUserProfile(id.id);
   }
-};
+}

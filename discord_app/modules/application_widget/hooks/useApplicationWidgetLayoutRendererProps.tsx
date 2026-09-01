@@ -8,7 +8,9 @@ import closure_8 from "../../user_settings/LocaleStore.tsx";
 
 const require = arg1;
 let closure_9 = [];
-const result = require("set").fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetLayoutRendererProps.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/application_widget/hooks/useApplicationWidgetLayoutRendererProps.tsx",
+);
 
 export default function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
   const _require = arg0;
@@ -16,7 +18,9 @@ export default function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
   let obj = _require(stateFromStores[5]);
   const userApplicationIdentities = obj.useUserApplicationIdentities(arg0);
   let items = [closure_6];
-  stateFromStores = _require(stateFromStores[6]).useStateFromStores(items, () => closure_1_6.getUserIdentityByApplication(closure_0, closure_1));
+  stateFromStores = _require(stateFromStores[6]).useStateFromStores(items, () =>
+    closure_1_6.getUserIdentityByApplication(closure_0, closure_1),
+  );
   const obj2 = _require(stateFromStores[6]);
   const tmp4 = closure_6;
   const items1 = [closure_8];
@@ -41,7 +45,10 @@ export default function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
   }, items3);
   let tmpResult = tmp(tmp2[6]);
   const items4 = [tmp4];
-  const stateFromStores2 = tmpResult.useStateFromStores(items4, () => closure_1_6.getFetchState(closure_0) !== closure_1_7.FETCHED);
+  const stateFromStores2 = tmpResult.useStateFromStores(
+    items4,
+    () => closure_1_6.getFetchState(closure_0) !== closure_1_7.FETCHED,
+  );
   tmpResult = tmp(tmp2[6]);
   const items5 = [closure_5];
   stateFromStores3 = tmpResult.useStateFromStores(items5, () => closure_1_5.getAssets(closure_1));
@@ -57,7 +64,10 @@ export default function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
   }, items6);
   obj = { locale: stateFromStores1, surfaceConfigs: null, isLoading: null, hasIdentity: null, resolutionContext: null };
   let surfaces;
-  const callback = obj4.useCallback((metadata) => callback(stateFromStores[10]).getApplicationAssetUrl(closure_1, metadata, metadata.metadata.width), items7);
+  const callback = obj4.useCallback(
+    (metadata) => callback(stateFromStores[10]).getApplicationAssetUrl(closure_1, metadata, metadata.metadata.width),
+    items7,
+  );
   if (first != null) {
     surfaces = first.surfaces;
   }
@@ -70,4 +80,4 @@ export default function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
   obj = { data: memo1, applicationAssets: memo2, getApplicationAssetUrl: callback, localizedStrings: closure_9 };
   obj[4] = obj;
   return obj;
-};
+}

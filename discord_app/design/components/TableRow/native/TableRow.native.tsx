@@ -36,7 +36,17 @@ class TableRow {
     tmp2Result = require("map");
     tmp7 = jsx;
     token = tmp2Result.useToken(require("Themes").modules.mobile.TABLE_ROW_BORDER_RADIUS);
-    obj = { radius: token, shadow: "none", border: "none", variant: "muted", start: null, end: null, onPress: null, disabled: null, style: null };
+    obj = {
+      radius: token,
+      shadow: "none",
+      border: "none",
+      variant: "muted",
+      start: null,
+      end: null,
+      onPress: null,
+      disabled: null,
+      style: null,
+    };
     tmp8 = !context;
     if (!context) {
       flag2 = true;
@@ -48,7 +58,20 @@ class TableRow {
     obj[7] = disabled;
     obj[8] = closure_9;
     merged1 = Object.assign(merged);
-    obj.children = tmp7(TableRowInner, { height, label, subLabel, icon, trailing, arrow, disabled, labelLineClamp, subLabelLineClamp, variant, draggable, dragHandlePressableProps });
+    obj.children = tmp7(TableRowInner, {
+      height,
+      label,
+      subLabel,
+      icon,
+      trailing,
+      arrow,
+      disabled,
+      labelLineClamp,
+      subLabelLineClamp,
+      variant,
+      draggable,
+      dragHandlePressableProps,
+    });
     tmp7Result = tmp7(require("PressableCard").InternalCard, obj);
     tmp11 = tmp7Result;
     if (!context) {
@@ -57,7 +80,7 @@ class TableRow {
         tmp12 = jsxs;
         tmp13 = Fragment;
         obj1 = { children: null };
-        items = [, ];
+        items = [,];
         items[0] = tmp7Result;
         obj2 = { adjustSpacingForIcon: null };
         obj2[0] = null != icon;
@@ -110,7 +133,7 @@ class TableRowInner {
     tmp11 = jsxs;
     tmp12 = View;
     obj = { style: items, children: null };
-    items = [, ];
+    items = [,];
     items[0] = tmp8.row;
     items[1] = { borderRadius, height };
     token1 = tmp4Result1.useToken(require("Themes").modules.mobile.TABLE_ROW_LABEL_COLOR);
@@ -126,7 +149,7 @@ class TableRowInner {
       obj1.children = jsx(require("DragIcon").DragIcon, obj2);
       flag = jsx(Pressable, obj1);
     }
-    items1 = [, , , , ];
+    items1 = [, , , ,];
     items1[0] = flag;
     tmp18 = null != icon;
     if (tmp18) {
@@ -154,7 +177,7 @@ class TableRowInner {
       obj6[4] = label;
       tmp21Result = tmp21(require("Text").Text, obj6);
     }
-    items2 = [, ];
+    items2 = [,];
     items2[0] = tmp21Result;
     tmp22 = null != subLabel;
     if (tmp22) {
@@ -176,13 +199,13 @@ class TableRowInner {
     }
     items2[1] = tmp22;
     obj5[1] = items2;
-    items3 = [, ];
+    items3 = [,];
     items3[0] = tmp11(tmp12, obj5);
     tmp25 = null != tmp;
     if (tmp25) {
       tmp26 = jsx;
       obj8 = { style: null, children: null };
-      items4 = [, ];
+      items4 = [,];
       ({ trailing: arr5[0], trailingText: arr5[1] } = tmp8);
       obj8[0] = items4;
       obj8[1] = tmp;
@@ -213,13 +236,33 @@ class TableRowInner {
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = { padding: 0 };
 let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2) => {
-  let obj = { padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
+  let obj = {
+    padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+    minHeight: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT,
+    flexDirection: "row",
+    alignItems: "center",
+    opacity: null,
+    borderRadius: null,
+  };
   let num = 1;
   if (arg0) {
     num = 0.5;
   }
-  obj = { row: obj, iconContainer: null, trailing: null, content: null, labels: num, trailingText: tmp(712).radii.md, dragHandle: null };
-  obj = { minWidth: tmp(712).modules.mobile.TABLE_ROW_ICON_SIZE, marginEnd: tmp(712).modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
+  obj = {
+    row: obj,
+    iconContainer: null,
+    trailing: null,
+    content: null,
+    labels: num,
+    trailingText: tmp(712).radii.md,
+    dragHandle: null,
+  };
+  obj = {
+    minWidth: tmp(712).modules.mobile.TABLE_ROW_ICON_SIZE,
+    marginEnd: tmp(712).modules.mobile.TABLE_ROW_PADDING,
+    alignItems: "center",
+    justifyContent: "center",
+  };
   obj[1] = obj;
   obj[2] = { marginStart: 18 };
   let str = "row";

@@ -12,7 +12,7 @@ let obj = {
   sendForward(closure_0, alsoForwardToChannelId, closure_1) {
     closure_1 = alsoForwardToChannelId;
     closure_2 = closure_1;
-    return callback(function*() {
+    return callback(function* () {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -173,8 +173,10 @@ let obj = {
   sendForwards(closure_1_8, c1, arg2) {
     closure_0 = closure_1_8;
     importDefault = arg2;
-    return allSettledDefault(c1.map((alsoForwardToChannelId) => closure_1_9.sendForward(closure_0, alsoForwardToChannelId, closure_1)));
-  }
+    return allSettledDefault(
+      c1.map((alsoForwardToChannelId) => closure_1_9.sendForward(closure_0, alsoForwardToChannelId, closure_1)),
+    );
+  },
 };
 let result = require("set").fileFinishedImporting("modules/forwarding/ForwardActionCreators.tsx");
 

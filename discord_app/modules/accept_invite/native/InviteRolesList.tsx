@@ -6,7 +6,9 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ rolesRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 4 } });
+let closure_7 = createCacheKey.createStyles({
+  rolesRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 4 },
+});
 const result = require("set").fileFinishedImporting("modules/accept_invite/native/InviteRolesList.tsx");
 
 export default function InviteRolesList(invite) {
@@ -38,7 +40,7 @@ export default function InviteRolesList(invite) {
       obj = { variant: "text-sm/semibold", color: "text-default", children: null };
       const intl = guild(1236).intl;
       obj[2] = intl.string(guild(1236).t.stcSfI);
-      const items1 = [callback(guild(4474).Text, obj), ];
+      const items1 = [callback(guild(4474).Text, obj)];
       obj = { style: null, children: null };
       obj[0] = tmp.rolesRow;
       obj[1] = memo.map((id) => closure_1_5(roles(closure_1_2[8]), { role: id, guildId: guild.id }, id.id));
@@ -48,4 +50,4 @@ export default function InviteRolesList(invite) {
     }
   }
   return tmp2;
-};
+}

@@ -61,30 +61,32 @@ export const useIsGameInvitePostVoiceEnabled = function useIsGameInvitePostVoice
   const obj = useAvailableTags;
   const items = [closure_6];
   const obj3 = initialize;
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let tmp = null != closure_0;
-    if (tmp) {
-      const isForumPostResult = obj.isForumPost();
-      let tmp3 = !isForumPostResult;
-      if (isForumPostResult) {
-        tmp3 = null == obj.parent_id;
-      }
-      let tmp4 = !tmp3;
-      if (!tmp3) {
-        channel = closure_1_6.getChannel(obj.parent_id);
-        let flag;
-        if (channel != null) {
-          flag = channel.isGameInvitesChannel();
+  return (
+    require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+      let tmp = null != closure_0;
+      if (tmp) {
+        const isForumPostResult = obj.isForumPost();
+        let tmp3 = !isForumPostResult;
+        if (isForumPostResult) {
+          tmp3 = null == obj.parent_id;
         }
-        if (flag == null) {
-          flag = false;
+        let tmp4 = !tmp3;
+        if (!tmp3) {
+          channel = closure_1_6.getChannel(obj.parent_id);
+          let flag;
+          if (channel != null) {
+            flag = channel.isGameInvitesChannel();
+          }
+          if (flag == null) {
+            flag = false;
+          }
+          tmp4 = flag;
         }
-        tmp4 = flag;
+        tmp = tmp4;
       }
-      tmp = tmp4;
-    }
-    return tmp;
-  }) && !appliedTags.some((name) => name.name === closure_11);
+      return tmp;
+    }) && !appliedTags.some((name) => name.name === closure_11)
+  );
 };
 export const useFirstMessage = function useFirstMessage(stateFromStores, enabled) {
   let obj = loadForumPostData;
@@ -126,37 +128,41 @@ export const useSubscribeToGameInvitePostAuthors = function useSubscribeToGameIn
   dependencyMap = isGameInvitesChannelResult;
   let items = [closure_6];
   const items1 = [isGameInvitesChannelResult, arg1];
-  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
-    if (closure_2) {
-      const _Set = Set;
-      const set = new Set();
-      const items = [];
-      const tmp7 = dependencyMap[Symbol.iterator]();
-      while (tmp7 !== undefined) {
-        let tmp12 = closure_1_6;
-        let channel = closure_1_6.getChannel(tmp10);
-        let ownerId;
-        if (channel != null) {
-          ownerId = channel.ownerId;
+  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+    items,
+    () => {
+      if (closure_2) {
+        const _Set = Set;
+        const set = new Set();
+        const items = [];
+        const tmp7 = dependencyMap[Symbol.iterator]();
+        while (tmp7 !== undefined) {
+          let tmp12 = closure_1_6;
+          let channel = closure_1_6.getChannel(tmp10);
+          let ownerId;
+          if (channel != null) {
+            ownerId = channel.ownerId;
+          }
+          let tmp15 = ownerId;
+          let hasItem = null == ownerId;
+          if (!hasItem) {
+            let tmp17 = ownerId;
+            hasItem = set.has(tmp15);
+          }
+          if (!hasItem) {
+            let tmp18 = ownerId;
+            let addResult = set.add(tmp15);
+            let arr = items.push(tmp15);
+          }
+          continue;
         }
-        let tmp15 = ownerId;
-        let hasItem = null == ownerId;
-        if (!hasItem) {
-          let tmp17 = ownerId;
-          hasItem = set.has(tmp15);
-        }
-        if (!hasItem) {
-          let tmp18 = ownerId;
-          let addResult = set.add(tmp15);
-          let arr = items.push(tmp15);
-        }
-        continue;
+        return items;
+      } else {
+        return [];
       }
-      return items;
-    } else {
-      return [];
-    }
-  }, items1);
+    },
+    items1,
+  );
   const items2 = [stateFromStoresArray, isGameInvitesChannel.guild_id, isGameInvitesChannelResult];
   let obj = initialize;
   const tmp3 = useMemo(() => {
@@ -169,7 +175,10 @@ export const useSubscribeToGameInvitePostAuthors = function useSubscribeToGameIn
     }
     return tmp;
   }, items2);
-  const subscribeGuildMembers = require("../../lib/guild/subscribeGuildMembers.tsx").useSubscribeGuildMembers(tmp3, "GameInvitesChannelPostAuthors");
+  const subscribeGuildMembers = require("../../lib/guild/subscribeGuildMembers.tsx").useSubscribeGuildMembers(
+    tmp3,
+    "GameInvitesChannelPostAuthors",
+  );
 };
 export const canInviteToActivity = function canInviteToActivity(type) {
   let tmp = type.type === constants2.PLAYING;
@@ -200,7 +209,11 @@ export const useGameInviteVoiceChatState = function useGameInviteVoiceChatState(
   obj[2] = tmp3;
   return obj;
 };
-export const useGameInvitesActiveAndArchivedThreads = function useGameInvitesActiveAndArchivedThreads(channel, forumActiveThreadIds, threadIds) {
+export const useGameInvitesActiveAndArchivedThreads = function useGameInvitesActiveAndArchivedThreads(
+  channel,
+  forumActiveThreadIds,
+  threadIds,
+) {
   closure_0 = forumActiveThreadIds;
   closure_1 = threadIds;
   const isGameInvitesChannelResult = channel.isGameInvitesChannel();

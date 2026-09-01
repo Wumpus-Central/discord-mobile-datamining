@@ -30,11 +30,20 @@ class Content {
     tmp4 = require("FormHeader");
     intl = require("getSystemLocale").intl;
     obj1[1] = intl.string(require("getSystemLocale").t["3S8gA7"]);
-    items = [, , , , ];
+    items = [, , , ,];
     items[0] = jsx(tmp4, obj1);
     obj2 = { style: tmp.paddedContainer, children: null };
-    obj3 = { style: tmp.coverPhoto, image: cover, imageUploadSize: UPLOAD_BANNER_SIZE.width, previewShape: require("pickImage").PreviewShape.SQUIRCLE, setImage: setCover, disabled: roleSubscriptionSettingsDisabled, standalone: true, size: 114 };
-    items1 = [, ];
+    obj3 = {
+      style: tmp.coverPhoto,
+      image: cover,
+      imageUploadSize: UPLOAD_BANNER_SIZE.width,
+      previewShape: require("pickImage").PreviewShape.SQUIRCLE,
+      setImage: setCover,
+      disabled: roleSubscriptionSettingsDisabled,
+      standalone: true,
+      size: 114,
+    };
+    items1 = [,];
     items1[0] = jsx(require("pickImage").ImagePickerIcon, obj3);
     obj4 = { style: tmp.coverDescription, variant: "text-sm/medium", color: "text-default", children: null };
     intl2 = require("getSystemLocale").intl;
@@ -49,7 +58,17 @@ class Content {
     intl3 = require("getSystemLocale").intl;
     obj6[1] = intl3.string(require("getSystemLocale").t["74JctW"]);
     items[3] = jsx(tmp5, obj6);
-    obj7 = { style: tmp2.textInput, showTopContainer: false, multiline: true, maxLength: closure_7, numberOfLines: 3, value: description, placeholder: null, onChange: null, disabled: null };
+    obj7 = {
+      style: tmp2.textInput,
+      showTopContainer: false,
+      multiline: true,
+      maxLength: closure_7,
+      numberOfLines: 3,
+      value: description,
+      placeholder: null,
+      onChange: null,
+      disabled: null,
+    };
     intl4 = require("getSystemLocale").intl;
     obj7[6] = intl4.string(require("getSystemLocale").t["3YHwoG"]);
     obj7[7] = setDescription;
@@ -60,10 +79,17 @@ class Content {
   }
 }
 noopAll;
-({ GuildRoleSubscriptionsTierScenes: closure_6, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: error } = MAX_SUBSCRIPTION_TIERS);
+({ GuildRoleSubscriptionsTierScenes: closure_6, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: error } =
+  MAX_SUBSCRIPTION_TIERS);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles({ coverPhoto: { height: 114, width: "100%" }, coverDescription: { marginTop: 16 }, paddedContainer: { paddingHorizontal: 16 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx");
+let closure_12 = createCacheKey.createStyles({
+  coverPhoto: { height: 114, width: "100%" },
+  coverDescription: { marginTop: 16 },
+  paddedContainer: { paddingHorizontal: 16 },
+});
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx",
+);
 
 export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   [tmp2, tmp3] = callback(closure_5.useGroupCoverState(), 2);
@@ -90,5 +116,5 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   obj.setDescription = tmp4[1];
   obj.children = callback2(Content, obj);
   return callback2(HeaderDefault, obj);
-};
+}
 export { Content };

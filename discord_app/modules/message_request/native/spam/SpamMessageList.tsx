@@ -43,8 +43,20 @@ function PendingSpamMessageRequestRow(isLastRow) {
     }
   }, items);
   obj1 = require(str[12]);
-  const messageRequestActions = obj1.useMessageRequestActions({ user: str, onAcceptSuccess: callback1, onError: callback });
-  ({ rejectMessageRequest: c6, isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected, markAsNotSpam: c7 } = messageRequestActions);
+  const messageRequestActions = obj1.useMessageRequestActions({
+    user: str,
+    onAcceptSuccess: callback1,
+    onError: callback,
+  });
+  ({
+    rejectMessageRequest: c6,
+    isAcceptLoading,
+    isRejectLoading,
+    isUserProfileLoading,
+    isOptimisticAccepted,
+    isOptimisticRejected,
+    markAsNotSpam: c7,
+  } = messageRequestActions);
   let tmp7 = isAcceptLoading;
   if (!isAcceptLoading) {
     tmp7 = isRejectLoading;
@@ -64,11 +76,18 @@ function PendingSpamMessageRequestRow(isLastRow) {
     obj.track(_undefined2.MESSAGE_REQUEST_PREVIEW_VIEWED, obj);
     callback();
   }
-  obj = { onPress: handleSelectRow, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, style: null, children: null };
+  obj = {
+    onPress: handleSelectRow,
+    accessibilityRole: "button",
+    accessibilityActions: null,
+    onAccessibilityAction: null,
+    style: null,
+    children: null,
+  };
   obj = { name: constants.ACCEPT_SPAM_MESSAGE, label: null };
   let intl = tmp2(tmp3[6]).intl;
   obj[1] = intl.string(require(str[6]).t.apePSa);
-  const items1 = [obj, , ];
+  const items1 = [obj, ,];
   obj1 = { name: constants.IGNORE_SPAM_MESSAGE, label: null };
   const intl2 = tmp2(tmp3[6]).intl;
   obj1[1] = intl2.string(require(str[6]).t.MWOV9D);
@@ -95,18 +114,27 @@ function PendingSpamMessageRequestRow(isLastRow) {
   };
   obj[4] = tmp.pressableRow;
   const obj3 = { style: tmp.rowContainer, children: null };
-  const items2 = [callback(hasSingleMessageRequest(str[15]), { channel: messageRequest.channel, otherUser: messageRequest.user }), ];
+  const items2 = [
+    callback(hasSingleMessageRequest(str[15]), { channel: messageRequest.channel, otherUser: messageRequest.user }),
+  ];
   const obj5 = { style: tmp.actionContainer, children: null };
   const intl4 = tmp2(tmp3[6]).intl;
   str = undefined;
   if (str != null) {
     str = str.toString();
   }
-  const obj6 = { accessibilityRole: "button", accessibilityLabel: intl4.formatToPlainString(require(str[6]).t["6p0yBo"], { name: str }), onPress: handleAcceptMessageRequest, disabled: tmp7, style: items3, children: null };
+  const obj6 = {
+    accessibilityRole: "button",
+    accessibilityLabel: intl4.formatToPlainString(require(str[6]).t["6p0yBo"], { name: str }),
+    onPress: handleAcceptMessageRequest,
+    disabled: tmp7,
+    style: items3,
+    children: null,
+  };
   handleAcceptMessageRequest = function handleAcceptMessageRequest() {
     _undefined2(channel, closure_5);
   };
-  items3 = [, ];
+  items3 = [,];
   ({ actionButton: arr4[0], acceptButton: arr4[1] } = tmp);
   if (!isAcceptLoading) {
     if (!isUserProfileLoading) {
@@ -117,13 +145,20 @@ function PendingSpamMessageRequestRow(isLastRow) {
         let tmp10Result = tmp10(tmp2(tmp3[16]).Icon, obj7);
       }
       obj6[5] = tmp10Result;
-      const items4 = [tmp10(tmp2(tmp3[14]).PressableOpacity, obj6), ];
+      const items4 = [tmp10(tmp2(tmp3[14]).PressableOpacity, obj6)];
       const intl5 = tmp2(tmp3[6]).intl;
       let str1;
       if (str != null) {
         str1 = str.toString();
       }
-      const obj8 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, disabled: null, style: null, children: null };
+      const obj8 = {
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        onPress: null,
+        disabled: null,
+        style: null,
+        children: null,
+      };
       const obj9 = { name: null };
       obj9[0] = str1;
       function handleRejectMessageRequest() {
@@ -145,7 +180,7 @@ function PendingSpamMessageRequestRow(isLastRow) {
         obj5[1] = items4;
         items2[1] = tmp8(tmp9, obj5);
         obj3[1] = items2;
-        const items5 = [tmp8(tmp9, obj3), ];
+        const items5 = [tmp8(tmp9, obj3)];
         let tmp10Result1 = null;
         if (!isLastRow.isLastRow) {
           tmp10Result1 = tmp10(tmp2(tmp3[19]).FormDivider, { iconPush: true, outer: true });
@@ -163,21 +198,72 @@ function PendingSpamMessageRequestRow(isLastRow) {
 }
 ({ ActivityIndicator: c4, View: c5, FlatList: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { sectionContainer: null, rowContainer: null, actionContainer: null, actionButton: null, acceptButton: null, pressableRow: null, activityIndicator: null, list: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", justifyContent: "space-between", marginTop: 6, marginBottom: 10 };
+createCacheKey = {
+  sectionContainer: null,
+  rowContainer: null,
+  actionContainer: null,
+  actionButton: null,
+  acceptButton: null,
+  pressableRow: null,
+  activityIndicator: null,
+  list: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  flexDirection: "row",
+  justifyContent: "space-between",
+  marginTop: 6,
+  marginBottom: 10,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 14, marginBottom: 12 };
+createCacheKey[1] = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  marginTop: 14,
+  marginBottom: 12,
+};
 createCacheKey[2] = { flexDirection: "row", alignItems: "flex-start", height: "100%" };
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
+createCacheKey[3] = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  borderRadius: ThemesDefault.radii.lg,
+  alignItems: "center",
+  justifyContent: "center",
+  height: 32,
+  width: 32,
+};
 createCacheKey[4] = { marginRight: 16 };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
+let obj1 = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  borderRadius: ThemesDefault.radii.lg,
+  alignItems: "center",
+  justifyContent: "center",
+  height: 32,
+  width: 32,
+};
 createCacheKey[5] = { borderRadius: ThemesDefault.radii.md };
 createCacheKey[6] = { height: 16, width: 16 };
 let obj2 = { borderRadius: ThemesDefault.radii.md };
-createCacheKey[7] = { flex: 1, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey[7] = {
+  flex: 1,
+  paddingHorizontal: 16,
+  alignSelf: "stretch",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let closure_11 = { ACCEPT_SPAM_MESSAGE: "accept-spam-message-request", IGNORE_SPAM_MESSAGE: "ignore-spam-message-request", PREVIEW_SPAM_MESSAGE: "preview-spam-message-request" };
-let obj3 = { flex: 1, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let closure_11 = {
+  ACCEPT_SPAM_MESSAGE: "accept-spam-message-request",
+  IGNORE_SPAM_MESSAGE: "ignore-spam-message-request",
+  PREVIEW_SPAM_MESSAGE: "preview-spam-message-request",
+};
+let obj3 = {
+  flex: 1,
+  paddingHorizontal: 16,
+  alignSelf: "stretch",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+};
 const result = require("set").fileFinishedImporting("modules/message_request/native/spam/SpamMessageList.tsx");
 
 export default function SpamMessageList(goToMessageRequestPreview) {
@@ -209,7 +295,7 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   } else {
     const items = ["header-section"];
     HermesBuiltin.arraySpread(arr, 1);
-    const items1 = [tmp.list, ];
+    const items1 = [tmp.list];
     let num = 0;
     if (tmp4Result.isAndroid()) {
       num = bottom;
@@ -236,7 +322,12 @@ export default function SpamMessageList(goToMessageRequestPreview) {
         obj[1] = closure_1_8(goToMessageRequestPreview(4474).Text, obj);
         let tmp11Result = closure_1_8(closure_1_5, obj);
       } else {
-        obj1 = { messageRequest: null, goToMessageRequestPreview: null, isLastRow: null, hasSingleMessageRequest: null };
+        obj1 = {
+          messageRequest: null,
+          goToMessageRequestPreview: null,
+          isLastRow: null,
+          hasSingleMessageRequest: null,
+        };
         obj1[0] = item;
         obj1[1] = function goToMessageRequestPreview() {
           return item(item.channel.id);
@@ -257,4 +348,4 @@ export default function SpamMessageList(goToMessageRequestPreview) {
     return callback(closure_6, obj);
   }
   const tmp2 = importDefault;
-};
+}

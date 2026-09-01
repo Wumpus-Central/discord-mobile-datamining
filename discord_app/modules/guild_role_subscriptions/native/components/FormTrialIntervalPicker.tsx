@@ -6,7 +6,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 noopAll;
 const GuildRoleSubscriptionTrialIntervalSelect = "GuildRoleSubscriptionTrialIntervalSelect";
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormTrialIntervalPicker.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/FormTrialIntervalPicker.tsx",
+);
 
 export default function FormTrialIntervalPicker(disabled) {
   const interval = disabled.interval;
@@ -39,7 +41,7 @@ export default function FormTrialIntervalPicker(disabled) {
       obj[3] = tmp3;
       obj.openLazy(interval(closure_1_2[7])(closure_1_2[6], closure_1_2.paths), closure_1_4, obj);
     },
-    disabled: disabled.disabled
+    disabled: disabled.disabled,
   };
   return jsx(LockedIconDefault, {
     label: stringResult,
@@ -62,6 +64,6 @@ export default function FormTrialIntervalPicker(disabled) {
       obj[3] = tmp3;
       obj.openLazy(interval(closure_1_2[7])(closure_1_2[6], closure_1_2.paths), closure_1_4, obj);
     },
-    disabled: disabled.disabled
+    disabled: disabled.disabled,
   });
-};
+}

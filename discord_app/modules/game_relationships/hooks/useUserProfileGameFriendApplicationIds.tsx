@@ -5,7 +5,9 @@ import closure_4 from "../../../stores/UserStore.tsx";
 
 const require = arg1;
 let closure_5 = [];
-const result = require("set").fileFinishedImporting("modules/game_relationships/hooks/useUserProfileGameFriendApplicationIds.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/game_relationships/hooks/useUserProfileGameFriendApplicationIds.tsx",
+);
 
 export const useUserProfileGameFriendApplicationIds = function useUserProfileGameFriendApplicationIds(userId) {
   userId = userId.userId;

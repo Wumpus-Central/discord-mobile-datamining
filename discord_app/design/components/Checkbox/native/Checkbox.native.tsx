@@ -6,7 +6,10 @@ import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 ({ Pressable: obj1, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ textContainer: { flex: 1 }, labelContainer: { minHeight: 24, justifyContent: "center" } });
+let closure_6 = createCacheKey.createStyles({
+  textContainer: { flex: 1 },
+  labelContainer: { minHeight: 24, justifyContent: "center" },
+});
 const result = set.fileFinishedImporting("design/components/Checkbox/native/Checkbox.native.tsx");
 
 export const Checkbox = function Checkbox(onToggle) {
@@ -15,7 +18,13 @@ export const Checkbox = function Checkbox(onToggle) {
   const tmp = callback();
   let obj = checked(onToggle[3]);
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked });
-  obj = { accessibilityRole: checkboxA11yNative.accessibilityRole, accessibilityLabel: null, accessibilityState: null, onPress: null, children: null };
+  obj = {
+    accessibilityRole: checkboxA11yNative.accessibilityRole,
+    accessibilityLabel: null,
+    accessibilityState: null,
+    onPress: null,
+    children: null,
+  };
   let str = "";
   let str2 = "";
   if (required) {
@@ -33,10 +42,10 @@ export const Checkbox = function Checkbox(onToggle) {
   obj[3] = function onPress() {
     return onToggle(!checked);
   };
-  const items = [closure_4(checked(onToggle[6]).FormCheckbox, { checked }), ];
+  const items = [closure_4(checked(onToggle[6]).FormCheckbox, { checked })];
   obj = { style: tmp.textContainer, children: null };
   obj1 = { style: tmp.labelContainer, children: null };
-  const items1 = [label, ];
+  const items1 = [label];
   if (required) {
     const obj2 = { variant: "text-md/bold", color: "text-feedback-critical", "aria-label": null, children: null };
     const intl2 = tmp2(tmp3[4]).intl;
@@ -46,7 +55,7 @@ export const Checkbox = function Checkbox(onToggle) {
   }
   items1[1] = required;
   obj1[1] = closure_5(checked(onToggle[7]).Text, { variant: "text-md/medium", children: items1 });
-  const items2 = [closure_4(closure_3, obj1), ];
+  const items2 = [closure_4(closure_3, obj1)];
   let tmp5Result = null != description;
   if (tmp5Result) {
     const obj3 = { variant: "text-sm/normal", color: "text-subtle", children: null };

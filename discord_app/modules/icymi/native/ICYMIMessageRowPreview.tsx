@@ -29,7 +29,24 @@ function ICYMIMessageRowPreview(pointerEvents) {
   const items = [setting, setting1, setting2, messageOptions];
   const memo = setting.useMemo(() => {
     let obj = new messageOptions(seeMoreLabelColor[11])();
-    obj = { renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay: false, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
+    obj = {
+      renderEmbeds: setting,
+      inlineEmbedMedia: setting1,
+      inlineAttachmentMedia: setting2,
+      renderReactions: false,
+      animateEmoji: false,
+      gifAutoPlay: false,
+      renderReplies: false,
+      renderCodedLinks: false,
+      renderGiftCode: false,
+      renderActivityInviteEmbed: false,
+      renderThreadEmbeds: false,
+      renderForumPostActions: false,
+      ignoreMentioned: true,
+      enableSwipeActions: false,
+      renderExecutedCommands: false,
+      useAlternateEmbedColors: true,
+    };
     const merged = Object.assign(messageOptions);
     obj.setOptions(obj);
     return obj;
@@ -51,7 +68,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     message,
     rowGenerator: memo,
     messageSizeCacheRef,
-    maxHeight
+    maxHeight,
   };
   return setting2(messageOptions(8779), obj);
 }
@@ -64,27 +81,35 @@ const memoResult = importAllResult.memo((message) => {
   memo = importAllResult.useMemo(() => {
     const result = message.set("content", null);
     const embeds = result.embeds;
-    const result1 = result.set("embeds", embeds.filter((type) => {
-      type = type.type;
-      return type === constants.IMAGE || type === constants.GIFV;
-    }));
+    const result1 = result.set(
+      "embeds",
+      embeds.filter((type) => {
+        type = type.type;
+        return type === constants.IMAGE || type === constants.GIFV;
+      }),
+    );
     const attachments = result1.attachments;
-    const result2 = result1.set("attachments", attachments.filter((filename) => callback(table[3]).isMediaAttachment(filename)));
+    const result2 = result1.set(
+      "attachments",
+      attachments.filter((filename) => callback(table[3]).isMediaAttachment(filename)),
+    );
     return result2.set("editedTimestamp", null);
   }, items);
-  const items1 = [memo, , ];
+  const items1 = [memo, ,];
   ({ muted: arr2[1], lineClamp: arr2[2] } = merged);
   let obj = {};
-  const merged1 = Object.assign(importAllResult.useMemo(() => {
-    const obj = { message: memo, layout: message(memo[4]).ChannelListLayoutTypes.COZY, muted: null, lineClamp: null };
-    let flag = merged.muted;
-    if (flag == null) {
-      flag = false;
-    }
-    obj[2] = flag;
-    obj[3] = merged.lineClamp;
-    return obj;
-  }, items1));
+  const merged1 = Object.assign(
+    importAllResult.useMemo(() => {
+      const obj = { message: memo, layout: message(memo[4]).ChannelListLayoutTypes.COZY, muted: null, lineClamp: null };
+      let flag = merged.muted;
+      if (flag == null) {
+        flag = false;
+      }
+      obj[2] = flag;
+      obj[3] = merged.lineClamp;
+      return obj;
+    }, items1),
+  );
   obj = {};
   const merged2 = Object.assign(message(memo[5]).DEFAULT_OPTIONS);
   obj.ignoreMentioned = true;
@@ -120,19 +145,21 @@ const memoResult1 = importAllResult.memo((message) => {
     const result2 = result1.set("attachments", found1.slice(0, 1));
     return result2.set("editedTimestamp", null);
   }, items);
-  const items1 = [memo, , ];
+  const items1 = [memo, ,];
   ({ muted: arr2[1], lineClamp: arr2[2] } = merged);
   let obj = {};
-  const merged1 = Object.assign(importAllResult.useMemo(() => {
-    const obj = { message: memo, layout: message(memo[4]).ChannelListLayoutTypes.COZY, muted: null, lineClamp: null };
-    let flag = merged.muted;
-    if (flag == null) {
-      flag = false;
-    }
-    obj[2] = flag;
-    obj[3] = merged.lineClamp;
-    return obj;
-  }, items1));
+  const merged1 = Object.assign(
+    importAllResult.useMemo(() => {
+      const obj = { message: memo, layout: message(memo[4]).ChannelListLayoutTypes.COZY, muted: null, lineClamp: null };
+      let flag = merged.muted;
+      if (flag == null) {
+        flag = false;
+      }
+      obj[2] = flag;
+      obj[3] = merged.lineClamp;
+      return obj;
+    }, items1),
+  );
   obj = {};
   const merged2 = Object.assign(message(memo[5]).DEFAULT_OPTIONS);
   obj.ignoreMentioned = true;
@@ -148,10 +175,16 @@ const memoResult1 = importAllResult.memo((message) => {
 const memoResult2 = importAllResult.memo((message) => {
   message = message.message;
   const merged = Object.assign(message, Object.create(null));
-  const items = [message, , , ];
+  const items = [message, , ,];
   ({ lineClamp: arr[1], muted: arr[2], pointerEvents: arr[3] } = merged);
   const memo = importAllResult.useMemo(() => {
-    const obj = { message, lineClamp: merged.lineClamp, layout: message(closure_1_2[4]).ChannelListLayoutTypes.COZY, muted: null, pointerEvents: null };
+    const obj = {
+      message,
+      lineClamp: merged.lineClamp,
+      layout: message(closure_1_2[4]).ChannelListLayoutTypes.COZY,
+      muted: null,
+      pointerEvents: null,
+    };
     let flag = merged.muted;
     if (flag == null) {
       flag = false;

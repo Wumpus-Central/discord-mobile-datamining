@@ -98,16 +98,42 @@ function AcceptInviteCardComponent(invite) {
 }
 ({ ActivityIndicator: c5, ImageBackground: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { parentContainer: null, imageStyle: null, cardContainer: null, cardContent: null, resolvingContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
+createCacheKey = {
+  parentContainer: null,
+  imageStyle: null,
+  cardContainer: null,
+  cardContent: null,
+  resolvingContainer: null,
+};
+createCacheKey = {
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  alignItems: "center",
+  justifyContent: "center",
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginVertical: 0, resizeMode: "cover" };
-createCacheKey[2] = { position: "absolute", flex: 1, width: "90%", alignItems: "center", justifyContent: "center", padding: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[2] = {
+  position: "absolute",
+  flex: 1,
+  width: "90%",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey[3] = { padding: 16, flex: 1, justifyContent: "center", alignItems: "center", width: "100%" };
 createCacheKey[4] = { padding: 64 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let closure_12 = { LOADING: 0, [0]: "LOADING", DETAILS: 1, [1]: "DETAILS", ERROR: 2, [2]: "ERROR" };
-const obj1 = { position: "absolute", flex: 1, width: "90%", alignItems: "center", justifyContent: "center", padding: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+const obj1 = {
+  position: "absolute",
+  flex: 1,
+  width: "90%",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: 0,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 let result = require("set").fileFinishedImporting("modules/accept_invite/native/AcceptInvite.tsx");
 
 export default function AcceptInvite(invite) {
@@ -136,7 +162,9 @@ export default function AcceptInvite(invite) {
   }
   obj = { style: items, children: null };
   items = [tmp2.parentContainer, { height, width }];
-  const items1 = [callback2(closure_6, { source: guildSplashSource, imageStyle: tmp2.imageStyle, style: { height, width } }), ];
+  const items1 = [
+    callback2(closure_6, { source: guildSplashSource, imageStyle: tmp2.imageStyle, style: { height, width } }),
+  ];
   const obj2 = { style: tmp2.cardContainer, children: null };
   obj3 = { style: tmp2.cardContent, children: null };
   const merged1 = Object.assign(merged);
@@ -145,4 +173,4 @@ export default function AcceptInvite(invite) {
   items1[1] = callback2(PressableCard.Card, obj2);
   obj[1] = items1;
   return callback3(closure_7, obj);
-};
+}

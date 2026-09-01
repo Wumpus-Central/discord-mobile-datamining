@@ -4,7 +4,12 @@ import GAME_WIDGET_LIMITS_BY_TYPE from "../../../discord_common/js/shared/shared
 import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
 import findGameWidget from "WidgetUtils.tsx";
 
-const items = [WidgetType.WidgetType.CURRENT_GAMES, WidgetType.WidgetType.FAVORITE_GAMES, WidgetType.WidgetType.WANT_TO_PLAY_GAMES, WidgetType.WidgetType.PLAYED_GAMES];
+const items = [
+  WidgetType.WidgetType.CURRENT_GAMES,
+  WidgetType.WidgetType.FAVORITE_GAMES,
+  WidgetType.WidgetType.WANT_TO_PLAY_GAMES,
+  WidgetType.WidgetType.PLAYED_GAMES,
+];
 let BaseGameWidget;
 class BaseGameWidget {
   constructor(arg0) {
@@ -19,7 +24,10 @@ class BaseGameWidget {
 const prototype = BaseGameWidget.prototype;
 prototype["toSubmission"] = function toSubmission() {
   let obj = { id: this.id, data: null };
-  obj = { type: this.type, games: games.map((gameId) => ({ game_id: gameId.gameId, comment: gameId.comment, tags: gameId.tags })) };
+  obj = {
+    type: this.type,
+    games: games.map((gameId) => ({ game_id: gameId.gameId, comment: gameId.comment, tags: gameId.tags })),
+  };
   games = this.games;
   obj[1] = obj;
   return obj;

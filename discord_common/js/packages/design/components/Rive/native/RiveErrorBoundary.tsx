@@ -34,6 +34,8 @@ prototype["render"] = function render() {
   return children;
 };
 RiveErrorBoundary.contextType = require("context").ManaContext;
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/RiveErrorBoundary.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/design/components/Rive/native/RiveErrorBoundary.tsx",
+);
 
 export { RiveErrorBoundary };

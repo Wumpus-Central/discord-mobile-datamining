@@ -45,20 +45,31 @@ function HideMutedChannelsOption(guild) {
 function BrowseChannelsOption(guild) {
   guild = guild.guild;
   let obj = guild(4298);
-  const result = obj.useIsDismissibleContentDismissed_UNSAFE(guild(1373).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX);
+  const result = obj.useIsDismissibleContentDismissed_UNSAFE(
+    guild(1373).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX,
+  );
   const tmp2 = useGuildOnboardingAvailableDefault(guild);
   const items = [closure_11];
-  const stateFromStores = guild(589).useStateFromStores(items, () => closure_1_11.hasUnread(guild.id, closure_1_20.GUILD_ONBOARDING_QUESTION));
+  const stateFromStores = guild(589).useStateFromStores(items, () =>
+    closure_1_11.hasUnread(guild.id, closure_1_20.GUILD_ONBOARDING_QUESTION),
+  );
   const obj2 = guild(589);
   const items1 = [closure_5];
   const items2 = [guild.id];
-  const stateFromStores1 = guild(589).useStateFromStores(items1, () => closure_1_5.getNewChannelIds(guild.id).size > guild(closure_1_2[24]).MAX_NEW_CHANNELS_TO_SHOW);
+  const stateFromStores1 = guild(589).useStateFromStores(
+    items1,
+    () => closure_1_5.getNewChannelIds(guild.id).size > guild(closure_1_2[24]).MAX_NEW_CHANNELS_TO_SHOW,
+  );
   const features = guild.features;
   const callback = React.useCallback(() => {
     let obj = closure_1_1(closure_1_2[25]);
     obj.hideActionSheet();
     obj = { guildId: guild.id };
-    closure_1_1(closure_1_2[26]).pushLazy(guild(closure_1_2[28])(closure_1_2[27], closure_1_2.paths), obj, closure_1_18);
+    closure_1_1(closure_1_2[26]).pushLazy(
+      guild(closure_1_2[28])(closure_1_2[27], closure_1_2.paths),
+      obj,
+      closure_1_18,
+    );
   }, items2);
   if (!features.has(constants.COMMUNITY)) {
     return null;
@@ -91,7 +102,10 @@ function ChangeIdentityOption(arg0) {
   const tmp = callback4();
   let obj = getNicknameDefault;
   const nickname = obj.getNickname(guild.id, undefined, user);
-  _require = useOpenProfileSettingsDefault({ guild, analyticsLocations: contextDefault(QUICK_SWITCHERDefault.GUILD_SETTINGS).analyticsLocations });
+  _require = useOpenProfileSettingsDefault({
+    guild,
+    analyticsLocations: contextDefault(QUICK_SWITCHERDefault.GUILD_SETTINGS).analyticsLocations,
+  });
   const intl = require("../../../../intl/index.native.tsx").intl;
   const features = guild.features;
   const hasItem = features.has(constants.HUB);
@@ -108,7 +122,7 @@ function ChangeIdentityOption(arg0) {
       obj1[1] = tmp.guildServerAvatar;
       obj1[2] = user;
       obj1[3] = guild.id;
-      const items = [tmp6(tmp7(1297).Avatar, obj1), ];
+      const items = [tmp6(tmp7(1297).Avatar, obj1)];
       const obj2 = { user: null, nick: null, usernameStyle: null, discriminatorStyle: null, nicknameStyle: null };
       obj2[0] = user;
       obj2[1] = nickname;
@@ -123,7 +137,10 @@ function ChangeIdentityOption(arg0) {
     closure_1_1(closure_1_2[25]).hideActionSheet();
     callback();
   };
-  return closure_21(require("../../../../design/components/Sheet/native/ActionSheetRow.native.tsx").ActionSheetRow, obj);
+  return closure_21(
+    require("../../../../design/components/Sheet/native/ActionSheetRow.native.tsx").ActionSheetRow,
+    obj,
+  );
 }
 function GuildThemePreferenceOption(guild) {
   guild = guild.guild;
@@ -131,7 +148,11 @@ function GuildThemePreferenceOption(guild) {
   const items = [closure_6];
   const items1 = [guild.id];
   [][0] = guild.id;
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.resolveGuildThemeSourcePreference(guild.id), items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => closure_1_6.resolveGuildThemeSourcePreference(guild.id),
+    items1,
+  );
   let tmp6 = null;
   if (tmp2) {
     obj = { label: null, value: null, onValueChange: null };
@@ -169,7 +190,7 @@ function ServerTagOption(guild) {
     obj2[1] = guildTagBadgeUrl;
     obj2[2] = GuildTagBadgeSize.SIZE_16;
     obj1[2] = closure_21(tmp2(9007).BaseGuildTagChiplet, obj2);
-    const items = [closure_21(View, obj1), ];
+    const items = [closure_21(View, obj1)];
     const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1236).intl;
     obj3[2] = intl.string(tmp2(1236).t["2QmKZ2"]);
@@ -233,16 +254,33 @@ class NotificationAction {
   }
 }
 ({ isGuildOwner: error, getGuildIconURL: closure_8 } = GuildNSFWContentLevel);
-({ ChannelTypes: closure_14, GuildFeatures: closure_15, AnalyticsSections: closure_16, AVATAR_MAX_SIZE: closure_17, Fonts } = ME);
+({
+  ChannelTypes: closure_14,
+  GuildFeatures: closure_15,
+  AnalyticsSections: closure_16,
+  AVATAR_MAX_SIZE: closure_17,
+  Fonts,
+} = ME);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
-createCacheKey = { guildServerAvatar: { marginRight: 4 }, identityName: null, identitySublabel: null, serverTagLabel: null };
-createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
+createCacheKey = {
+  guildServerAvatar: { marginRight: 4 },
+  identityName: null,
+  identitySublabel: null,
+  serverTagLabel: null,
+};
+createCacheKey = {
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  fontFamily: Fonts.PRIMARY_MEDIUM,
+  fontSize: 12,
+};
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flexDirection: "row" };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center", columnGap: ThemesDefault.space.PX_8 };
 let closure_23 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { flexDirection: "row", alignItems: "center", columnGap: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetActions.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_action_sheet/native/components/GuildActionSheetActions.tsx",
+);
 
 export { RestrictedGuildPrivacyOption };
 export { NotificationAction };
@@ -253,12 +291,20 @@ export const GuildUnreadAction = function GuildUnreadAction(guild) {
   let obj = guild(stateFromStores1[17]);
   let items = [closure_9];
   const items1 = [guild];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_9.getGuildHasUnreadIgnoreMuted(guild.id), items1);
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => closure_1_9.getGuildHasUnreadIgnoreMuted(guild.id),
+    items1,
+  );
   obj1 = guild(stateFromStores1[47]);
   const shouldUseNewNotificationSystem = obj1.useShouldUseNewNotificationSystem("GuildUnreadAction");
   const items2 = [guild.id];
   closure_1 = React.useCallback(() => {
-    const result = callback(stateFromStores1[46]).updateGuildNotificationSettings(guild.id, { muted: false }, guild(stateFromStores1[48]).NotificationLabels.Unmuted);
+    const result = callback(stateFromStores1[46]).updateGuildNotificationSettings(
+      guild.id,
+      { muted: false },
+      guild(stateFromStores1[48]).NotificationLabels.Unmuted,
+    );
   }, items2);
   const items3 = [closure_12];
   stateFromStores1 = guild(stateFromStores1[17]).useStateFromStores(items3, () => closure_1_12.isMuted(guild.id));
@@ -271,7 +317,7 @@ export const GuildUnreadAction = function GuildUnreadAction(guild) {
     callback(stateFromStores1[49])(items, closure_1_16.GUILD_POPOUT);
   };
   obj[2] = !stateFromStores;
-  const items4 = [callback2(guild(stateFromStores1[18]).ActionSheetRow, obj), , ];
+  const items4 = [callback2(guild(stateFromStores1[18]).ActionSheetRow, obj), ,];
   if (!shouldUseNewNotificationSystem) {
     items4[1] = shouldUseNewNotificationSystem;
     const features = guild.features;
@@ -306,7 +352,11 @@ export const GuildUnreadAction = function GuildUnreadAction(guild) {
         const obj2 = callback(stateFromStores1[25]);
         obj = { guildId: null };
         obj[0] = guild.id;
-        obj2.openLazy(guild(stateFromStores1[28])(stateFromStores1[50], stateFromStores1.paths), "muteSettings" + guild.id, obj);
+        obj2.openLazy(
+          guild(stateFromStores1[28])(stateFromStores1[50], stateFromStores1.paths),
+          "muteSettings" + guild.id,
+          obj,
+        );
         const tmp5 = guild(stateFromStores1[28])(stateFromStores1[50], stateFromStores1.paths);
       }
     };
@@ -319,7 +369,9 @@ export const GuildActionSheetPrimaryActions = function GuildActionSheetPrimaryAc
   obj1 = guild(589);
   const items = [closure_10];
   const items1 = [];
-  const stateFromStores = obj1.useStateFromStores(items, () => guild(closure_1_2[53]).isVerifiedRolesChannelVisible(closure_1_10.getSortedRoles(guild.id)));
+  const stateFromStores = obj1.useStateFromStores(items, () =>
+    guild(closure_1_2[53]).isVerifiedRolesChannelVisible(closure_1_10.getSortedRoles(guild.id)),
+  );
   if (obj.useGuildActionSheetPermissions(guild).canManageChannels) {
     obj = { label: null, onPress: null };
     const intl = tmp(1236).intl;
@@ -360,9 +412,7 @@ export const GuildActionSheetPrimaryActions = function GuildActionSheetPrimaryAc
       obj.hideActionSheet();
       obj = {
         guildId: guild.id,
-        onClose() {
-
-        }
+        onClose() {},
       };
       const result = guild(closure_1_2[56]).openGuildRoleConnectionsModal(obj);
     };
@@ -528,7 +578,11 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
       obj.hideActionSheet();
       obj = { source: guild(closure_1_2[67]).GuildIncidentActionSources.GUILD_PROFILE };
       obj = { guild, analyticsData: obj };
-      closure_1_1(closure_1_2[25]).openLazy(guild(closure_1_2[28])(closure_1_2[68], closure_1_2.paths), "GuildIncidentActionsActionSheet", obj);
+      closure_1_1(closure_1_2[25]).openLazy(
+        guild(closure_1_2[28])(closure_1_2[68], closure_1_2.paths),
+        "GuildIncidentActionsActionSheet",
+        obj,
+      );
     };
     t = items.push(tmp8(tmp3(5991).ActionSheetRow, obj4));
   }

@@ -18,7 +18,16 @@ let closure_12 = createCacheKey.createStyles(() => {
   let obj = { pressable: null, selectedBorder: null, rowSelected: null };
   obj = { flex: 1, borderRadius: getLayoutStyleDefault().container.borderRadius, marginBottom: 1 };
   obj[0] = obj;
-  obj = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, borderRadius: ThemesDefault.radii.md };
+  obj = {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    borderWidth: 1,
+    borderColor: ThemesDefault.colors.BORDER_MUTED,
+    borderRadius: ThemesDefault.radii.md,
+  };
   obj[1] = obj;
   obj[2] = { borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
   return obj;
@@ -48,7 +57,9 @@ const memoResult = importAllResult.memo(function TextChannel(subtitle) {
   obj1 = channel(6116);
   let obj2 = channel(589);
   const items = [closure_5];
-  const stateFromStores = obj2.useStateFromStores(items, () => closure_1_5.getNewThreadCount(channel.guild_id, channel.id));
+  const stateFromStores = obj2.useStateFromStores(items, () =>
+    closure_1_5.getNewThreadCount(channel.guild_id, channel.id),
+  );
   let obj3 = channel(589);
   const items1 = [closure_7];
   const stateFromStores1 = obj3.useStateFromStores(items1, () => closure_1_7.getChannel(channel.parent_id));
@@ -93,7 +104,7 @@ const memoResult = importAllResult.memo(function TextChannel(subtitle) {
       return tmp;
     }, items3);
     tmp8Result = tmp8(16559);
-    const items4 = [tmp5.pressable, ];
+    const items4 = [tmp5.pressable];
     let rowSelected;
     if (selected) {
       rowSelected = tmp5.rowSelected;
@@ -119,8 +130,25 @@ const memoResult = importAllResult.memo(function TextChannel(subtitle) {
       obj3[0] = tmp5.selectedBorder;
       selected = callback(View, obj3);
     }
-    const items5 = [selected, ];
-    const obj4 = { channel: null, channelCategoryName: null, subtitle: null, hasActiveThreads: null, unreadBadge: null, mentionBadge: null, unread: null, resolvedUnreadSetting: null, mentionCount: null, muted: null, channelName: null, fontScale: null, isSubscriptionGated: null, needSubscriptionToAccess: null, showGuildBadgeIcon: null, end: null };
+    const items5 = [selected];
+    const obj4 = {
+      channel: null,
+      channelCategoryName: null,
+      subtitle: null,
+      hasActiveThreads: null,
+      unreadBadge: null,
+      mentionBadge: null,
+      unread: null,
+      resolvedUnreadSetting: null,
+      mentionCount: null,
+      muted: null,
+      channelName: null,
+      fontScale: null,
+      isSubscriptionGated: null,
+      needSubscriptionToAccess: null,
+      showGuildBadgeIcon: null,
+      end: null,
+    };
     obj4[0] = channel;
     obj4[1] = tmp9;
     obj4[2] = result;
@@ -135,7 +163,14 @@ const memoResult = importAllResult.memo(function TextChannel(subtitle) {
     if (newChannel) {
       newChannel = optInEnabled;
     }
-    const obj6 = { newChannel: null, mentionCount: null, isMentionLowImportance: null, postsWithUnreadsCount: null, newPostCount: null, locale: null };
+    const obj6 = {
+      newChannel: null,
+      mentionCount: null,
+      isMentionLowImportance: null,
+      postsWithUnreadsCount: null,
+      newPostCount: null,
+      locale: null,
+    };
     obj6[0] = newChannel;
     obj6[1] = mentionCount;
     obj6[2] = isMentionLowImportance;
@@ -180,7 +215,12 @@ const memoResult = importAllResult.memo(function TextChannel(subtitle) {
     return tmp8Result(tmp26(tmp2(5068).PressableHighlight, obj));
   }
   const tmp18 = arr4(4960)(channel.id);
-  result = channel(16569).renderChannelSubtitle({ subtitle: subtitle.subtitle, muted: flag, channelId: channel.id, guildId: channel.guild_id });
+  result = channel(16569).renderChannelSubtitle({
+    subtitle: subtitle.subtitle,
+    muted: flag,
+    channelId: channel.id,
+    guildId: channel.guild_id,
+  });
 });
 let result = require("set").fileFinishedImporting("modules/launchpad/native/shared/TextChannel.tsx");
 

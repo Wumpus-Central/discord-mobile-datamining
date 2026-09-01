@@ -15,7 +15,7 @@ export default function useIsSpatialAudioAvailable(location) {
     enabled = obj3.useStateFromStores(items, () => closure_3.supports(constants.SPATIAL_AUDIO));
   }
   return enabled;
-};
+}
 export const isSpatialAudioAvailable = function isSpatialAudioAvailable(RTCConnectionStore) {
   let obj = apexExperimentDefault;
   obj = { location: RTCConnectionStore };

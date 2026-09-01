@@ -21,7 +21,7 @@ function OrbCheckoutModalContent(orbBalance) {
     obj[0] = orbRedemptionError.message;
     tmp6 = callback5(tmp(12563).OrbCheckoutErrorCard, obj);
   }
-  const items = [tmp6, , ];
+  const items = [tmp6, ,];
   if (product == null) {
     product = null;
   }
@@ -33,7 +33,10 @@ function OrbCheckoutModalContent(orbBalance) {
 }
 function OrbCheckoutModalFooter(onPress) {
   const obj = { children: null };
-  const items = [callback5(OrbCheckoutErrorCard.OrbCheckoutLegalFinePrint, {}), callback5(OrbCheckoutErrorCard.OrbCheckoutPurchaseButton, { onPress: onPress.onPress })];
+  const items = [
+    callback5(OrbCheckoutErrorCard.OrbCheckoutLegalFinePrint, {}),
+    callback5(OrbCheckoutErrorCard.OrbCheckoutPurchaseButton, { onPress: onPress.onPress }),
+  ];
   obj[0] = items;
   return callback6(Stack.Stack, obj);
 }
@@ -70,7 +73,14 @@ function OrbCheckoutModalScreen(startTime) {
   callback = orbProductContext;
   const items = [loadId, skuId, analyticsLocations, orbProductContext];
   const tmp5 = callback4(() => {
-    let obj = { load_id: dependencyMap, application_id: startTime(10917).get1PShopApplicationIdForSKU(skuId), location_stack: virtualCurrencyBalance, sku_id: skuId, currency: closure_1_9.DISCORD_ORB, payment_gateway: closure_1_10.VIRTUAL_CURRENCY };
+    let obj = {
+      load_id: dependencyMap,
+      application_id: startTime(10917).get1PShopApplicationIdForSKU(skuId),
+      location_stack: virtualCurrencyBalance,
+      sku_id: skuId,
+      currency: closure_1_9.DISCORD_ORB,
+      payment_gateway: closure_1_10.VIRTUAL_CURRENCY,
+    };
     let tmp2 = null != closure_4;
     if (tmp2) {
       const orbPriceAmount = tmp.orbPriceAmount;
@@ -156,7 +166,7 @@ function OrbCheckoutModalScreen(startTime) {
   const tmp6 = callback3;
   obj = { children: null };
   obj = { children: callback5(OrbCheckoutModalContent, { orbBalance: current }) };
-  const items5 = [callback5(startTime(8693).ModalContent, obj), ];
+  const items5 = [callback5(startTime(8693).ModalContent, obj)];
   obj1 = {
     children: callback5(OrbCheckoutModalFooter, {
       onPress: callback3(() => {
@@ -167,8 +177,8 @@ function OrbCheckoutModalScreen(startTime) {
           let arr = closure_1_1(closure_1_2[12]);
           arr = arr.pop();
         });
-      }, items4)
-    })
+      }, items4),
+    }),
   };
   items5[1] = callback5(startTime(11499).ModalFooter, obj1);
   obj[0] = items5;
@@ -197,7 +207,15 @@ export default function _default(skuId) {
   const callback = current.useCallback(() => {
     const timestamp = Date.now();
     let obj = closure_1_1(analyticsLocations[10]);
-    obj = { load_id: current, application_id: skuId(analyticsLocations[8]).get1PShopApplicationIdForSKU(skuId), location_stack: analyticsLocations, payment_gateway: closure_1_10.VIRTUAL_CURRENCY, sku_id: skuId, currency: closure_1_9.DISCORD_ORB, duration_ms: timestamp - current2 };
+    obj = {
+      load_id: current,
+      application_id: skuId(analyticsLocations[8]).get1PShopApplicationIdForSKU(skuId),
+      location_stack: analyticsLocations,
+      payment_gateway: closure_1_10.VIRTUAL_CURRENCY,
+      sku_id: skuId,
+      currency: closure_1_9.DISCORD_ORB,
+      duration_ms: timestamp - current2,
+    };
     obj.track(closure_1_8.PAYMENT_FLOW_CANCELED, obj);
     let arr = closure_1_1(analyticsLocations[12]);
     arr = arr.pop();
@@ -205,7 +223,10 @@ export default function _default(skuId) {
   const intl = skuId(analyticsLocations[18]).intl;
   obj[0] = intl.string(skuId(analyticsLocations[18]).t.q9EGps);
   const intl2 = skuId(analyticsLocations[18]).intl;
-  obj[2] = skuId(analyticsLocations[19]).getHeaderTextButton(intl2.string(skuId(analyticsLocations[18]).t["ETE/oC"]), callback);
+  obj[2] = skuId(analyticsLocations[19]).getHeaderTextButton(
+    intl2.string(skuId(analyticsLocations[18]).t["ETE/oC"]),
+    callback,
+  );
   obj[3] = function render() {
     let obj = { skuId, loadId: current, onCheckoutSuccess: closure_1, analyticsLocations, children: null };
     obj = { startTime: current2 };
@@ -213,5 +234,9 @@ export default function _default(skuId) {
     return closure_1_11(skuId(analyticsLocations[4]).OrbCheckoutModalContextProvider, obj);
   };
   obj[constants.MAIN] = obj;
-  return callback5(skuId(analyticsLocations[20]).Modal, { screens: obj, initialRouteName: constants.MAIN, headerTitleAlign: "center" });
-};
+  return callback5(skuId(analyticsLocations[20]).Modal, {
+    screens: obj,
+    initialRouteName: constants.MAIN,
+    headerTitleAlign: "center",
+  });
+}

@@ -141,8 +141,7 @@ let closure_23 = importDefaultResult.debounce(() => {
   guildSettingsModalChannelsStoreClass.emitChange();
 }, 500);
 const Store = initializeDefault.Store;
-class GuildSettingsModalChannelsStoreClass extends Store {
-}
+class GuildSettingsModalChannelsStoreClass extends Store {}
 const prototype = GuildSettingsModalChannelsStoreClass.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_9, closure_10);
@@ -190,25 +189,25 @@ Object.defineProperty(prototype, "channels", {
   get: function channels(c0) {
     return c15;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "order", {
   get: function order() {
     return c14;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "sortingType", {
   get: function sortingType(arg0) {
     return c17;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "channelList", {
   get: function channelList() {
     return c18;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getLocalChannel"] = function getLocalChannel(id) {
   return table[id];
@@ -275,7 +274,7 @@ const guildSettingsModalChannelsStoreClass = new GuildSettingsModalChannelsStore
       }
     });
     buildSortedChannels();
-  }
+  },
 });
 let obj = {
   GUILD_SETTINGS_MODAL_CHANNELS_TERMINATE: function handleTerminate() {
@@ -338,7 +337,7 @@ let obj = {
       }
     });
     buildSortedChannels();
-  }
+  },
 };
 const result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsModalChannelsStore.tsx");
 

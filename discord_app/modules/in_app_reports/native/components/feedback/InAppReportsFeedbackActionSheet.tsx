@@ -10,13 +10,26 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/feedback/InAppReportsFeedbackActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/in_app_reports/native/components/feedback/InAppReportsFeedbackActionSheet.tsx",
+);
 
 export default function InAppReportsFeedbackActionSheet(arg0) {
   ({ reportId: require, reportType: importDefault } = arg0);
   let obj = newGetEnglishMessageText;
   const result = obj.improperGetEnglishIntlMessageText("CALL_FEEDBACK_OPTION_OTHER");
-  obj = { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null };
+  obj = {
+    headerLabel: null,
+    showHeaderCloseButton: true,
+    hideDontShowAgainCheckbox: true,
+    ratingsBodyLabel: null,
+    reasonsHeaderLabel: null,
+    reasons: null,
+    feedbackReasons: null,
+    otherKey: null,
+    trackOpen: null,
+    trackReport: null,
+  };
   const tmp = getInAppReportsFeedbackOptionsDefault();
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.MP5lDj);
@@ -63,5 +76,16 @@ export default function InAppReportsFeedbackActionSheet(arg0) {
       const obj4 = closure_1_0(tmp2[11]);
     }
   };
-  return jsx(closeActionSheetDefault, { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null });
-};
+  return jsx(closeActionSheetDefault, {
+    headerLabel: null,
+    showHeaderCloseButton: true,
+    hideDontShowAgainCheckbox: true,
+    ratingsBodyLabel: null,
+    reasonsHeaderLabel: null,
+    reasons: null,
+    feedbackReasons: null,
+    otherKey: null,
+    trackOpen: null,
+    trackReport: null,
+  });
+}

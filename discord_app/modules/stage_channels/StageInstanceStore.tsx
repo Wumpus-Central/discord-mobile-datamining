@@ -25,8 +25,7 @@ let closure_0 = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventPrivacyLevel;
 let closure_1 = {};
 let closure_2 = {};
 const Store = initializeDefault.Store;
-class StageInstanceStore extends Store {
-}
+class StageInstanceStore extends Store {}
 const prototype = StageInstanceStore.prototype;
 prototype["getStageInstanceByChannel"] = function getStageInstanceByChannel(id) {
   if (null != id) {
@@ -143,7 +142,7 @@ const stageInstanceStore = new StageInstanceStore(dispatcherDefault, {
   LOGOUT: function handleLogout() {
     closure_2 = {};
     closure_1 = {};
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/stage_channels/StageInstanceStore.tsx");
 

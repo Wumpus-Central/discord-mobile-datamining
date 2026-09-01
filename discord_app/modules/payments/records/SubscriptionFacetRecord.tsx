@@ -28,8 +28,7 @@ prototype = function SubscriptionFacetRecord(subscriptionId) {
   tmp.resetBillingCycle = flag;
   return tmp;
 }.prototype;
-class prototype extends tmp2 {
-}
+class prototype extends tmp2 {}
 prototype["createFromServer"] = function createFromServer(subscription_id) {
   let tmp = null;
   if (null != subscription_id) {
@@ -40,7 +39,13 @@ prototype["createFromServer"] = function createFromServer(subscription_id) {
     const subscription_preview = subscription_id.subscription_preview;
     let tmp4 = null;
     if (null != subscription_preview) {
-      let obj = { currency: null, countryCode: null, subscriptionTrialId: null, renewalInfo: null, subscriptionType: null };
+      let obj = {
+        currency: null,
+        countryCode: null,
+        subscriptionTrialId: null,
+        renewalInfo: null,
+        subscriptionType: null,
+      };
       ({ currency: obj[0], country_code: obj[1], subscription_trial_id } = subscription_preview);
       if (subscription_trial_id == null) {
         subscription_trial_id = null;
@@ -54,7 +59,10 @@ prototype["createFromServer"] = function createFromServer(subscription_id) {
         if (renewal_line_items == null) {
           renewal_line_items = [];
         }
-        renewal_info = renewal_line_items.map((refOrderLineItemId) => ({ refOrderLineItemId: refOrderLineItemId.ref_order_line_item_id, price: refOrderLineItemId.price }));
+        renewal_info = renewal_line_items.map((refOrderLineItemId) => ({
+          refOrderLineItemId: refOrderLineItemId.ref_order_line_item_id,
+          price: refOrderLineItemId.price,
+        }));
         obj[2] = renewal_info;
         tmp5 = obj;
       }
@@ -77,7 +85,16 @@ prototype["createFromServer"] = function createFromServer(subscription_id) {
     if (typeof prototype !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const tmp13 = new prototype("Trying to call a non-function", renewal_line_items, tmp6, renewal_info, obj, tmp5, prototype, new.target);
+    const tmp13 = new prototype(
+      "Trying to call a non-function",
+      renewal_line_items,
+      tmp6,
+      renewal_info,
+      obj,
+      tmp5,
+      prototype,
+      new.target,
+    );
     // ThrowIfThisInitialized (0x7c)
     if (subscription_id == null) {
       subscription_id = null;

@@ -19,7 +19,7 @@ const toggle = createToggle.createToggle({
     const items = [intl.string(getSystemLocale.t.XpBObB)];
     return items;
   },
-  usePredicate: useIsAllowGameFriendDMsSettingVisible.useIsAllowGameFriendDMsSettingVisible
+  usePredicate: useIsAllowGameFriendDMsSettingVisible.useIsAllowGameFriendDMsSettingVisible,
 });
 const obj = {
   useTitle() {
@@ -34,7 +34,7 @@ const obj = {
     const items = [intl.string(getSystemLocale.t.XpBObB)];
     return items;
   },
-  usePredicate: useIsAllowGameFriendDMsSettingVisible.useIsAllowGameFriendDMsSettingVisible
+  usePredicate: useIsAllowGameFriendDMsSettingVisible.useIsAllowGameFriendDMsSettingVisible,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AllowGameFriendDMsSetting.tsx");
 

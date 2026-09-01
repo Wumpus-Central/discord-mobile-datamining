@@ -32,4 +32,4 @@ export default function useGuildsBarGuildMediaState(arg0) {
   }
   const obj = _require(stateFromStores[5]);
   obj2 = React;
-};
+}

@@ -39,7 +39,17 @@ export const calculateAnalyticsMetadata = function calculateAnalyticsMetadata(an
     obj = {};
   }
   ({ offset, limit, results } = obj);
-  obj1 = { search_type: SearchTypes.GIF, load_id: analyticsID, limit, offset, page: null, total_results: null, page_results: null, num_modifiers: null, modifiers: null };
+  obj1 = {
+    search_type: SearchTypes.GIF,
+    load_id: analyticsID,
+    limit,
+    offset,
+    page: null,
+    total_results: null,
+    page_results: null,
+    num_modifiers: null,
+    modifiers: null,
+  };
   let num2 = 1;
   if (null != limit) {
     num2 = 1;

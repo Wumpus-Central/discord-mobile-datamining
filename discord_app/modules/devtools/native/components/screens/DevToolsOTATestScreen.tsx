@@ -14,19 +14,38 @@ function OtaVerificationActionSheet(result) {
   let _require;
   const tmp = callback4();
   _require = tmp;
-  let obj = { header: callback2(require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx").BottomSheetTitleHeader, { title: "OTA Verification Result" }), children: null };
+  let obj = {
+    header: callback2(
+      require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx").BottomSheetTitleHeader,
+      { title: "OTA Verification Result" },
+    ),
+    children: null,
+  };
   obj = { style: tmp.verificationLine, children: null };
-  const items = [callback2(require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-md/bold", children: "Has OTA Applied" }), ];
+  const items = [
+    callback2(require("../../../../../design/components/Text/native/Text.tsx").Text, {
+      variant: "heading-md/bold",
+      children: "Has OTA Applied",
+    }),
+  ];
   let str = "No";
   let str2 = "No";
   if (result.hasOtaApplied) {
     str2 = "Yes";
   }
-  items[1] = callback2(require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", children: str2 });
+  items[1] = callback2(require("../../../../../design/components/Text/native/Text.tsx").Text, {
+    variant: "text-md/normal",
+    children: str2,
+  });
   obj[1] = items;
-  const items1 = [closure_9(closure_7, obj), , , , ];
+  const items1 = [closure_9(closure_7, obj), , , ,];
   obj = { style: tmp.verificationLine, children: null };
-  const items2 = [callback2(require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-md/bold", children: "Has Local Copy" }), ];
+  const items2 = [
+    callback2(require("../../../../../design/components/Text/native/Text.tsx").Text, {
+      variant: "heading-md/bold",
+      children: "Has Local Copy",
+    }),
+  ];
   let str3 = "--";
   if (null != result.hasLocalCopy) {
     let str4 = str;
@@ -35,23 +54,34 @@ function OtaVerificationActionSheet(result) {
     }
     str3 = str4;
   }
-  items2[1] = callback2(require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", children: str3 });
+  items2[1] = callback2(require("../../../../../design/components/Text/native/Text.tsx").Text, {
+    variant: "text-md/normal",
+    children: str3,
+  });
   obj[1] = items2;
   items1[1] = closure_9(closure_7, obj);
   obj1 = { style: tmp.verificationLine, children: null };
-  const items3 = [callback2(require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-md/bold", children: "OTA is Valid" }), ];
+  const items3 = [
+    callback2(require("../../../../../design/components/Text/native/Text.tsx").Text, {
+      variant: "heading-md/bold",
+      children: "OTA is Valid",
+    }),
+  ];
   if (result.isValid) {
     str = "Yes";
   }
-  items3[1] = callback2(require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", children: str });
+  items3[1] = callback2(require("../../../../../design/components/Text/native/Text.tsx").Text, {
+    variant: "text-md/normal",
+    children: str,
+  });
   obj1[1] = items3;
   items1[2] = closure_9(closure_7, obj1);
   let tmp2Result = null;
   if (null !== result.totalFileCount) {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.verificationLine;
-    const items4 = [tmp5(tmp3(4474).Text, { variant: "heading-md/bold", children: "File Counts" }), ];
-    const items5 = [result.totalFileCount, " files. ", , , , ];
+    const items4 = [tmp5(tmp3(4474).Text, { variant: "heading-md/bold", children: "File Counts" })];
+    const items5 = [result.totalFileCount, " files. ", , , ,];
     const successes = result.successes;
     let length;
     if (successes != null) {
@@ -77,9 +107,15 @@ function OtaVerificationActionSheet(result) {
   if (result.failures.length > 0) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.verificationLine;
-    const items6 = [tmp5(tmp3(4474).Text, { variant: "heading-md/bold", children: "Failures" }), ];
+    const items6 = [tmp5(tmp3(4474).Text, { variant: "heading-md/bold", children: "Failures" })];
     const failures1 = result.failures;
-    items6[1] = failures1.map((children) => closure_1_8(lib(closure_1_2[10]).Text, { variant: "text-md/normal", style: lib.verificationFailure, children }, children));
+    items6[1] = failures1.map((children) =>
+      closure_1_8(
+        lib(closure_1_2[10]).Text,
+        { variant: "text-md/normal", style: lib.verificationFailure, children },
+        children,
+      ),
+    );
     obj4[1] = items6;
     tmp2Result = tmp2(tmp6, obj4);
   }
@@ -98,12 +134,14 @@ createCacheKey[2] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVerti
 createCacheKey[3] = { fontFamily: require("sum").Fonts.CODE_NORMAL };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsOTATestScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsOTATestScreen.tsx",
+);
 
 export default function DevToolsOTATestScreen() {
   function _verifyFiles() {
     const self = this;
-    const tmp = closure_1_3(function*() {
+    const tmp = closure_1_3(function* () {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -209,11 +247,11 @@ export default function DevToolsOTATestScreen() {
       subLabel: first,
       onPress: function copyRootPath() {
         first(closure_1_2[17]).copy(first);
-      }
-    })
+      },
+    }),
   ];
   obj[2] = items;
-  const items1 = [callback3(first(5992).TableRowGroup, obj), , , ];
+  const items1 = [callback3(first(5992).TableRowGroup, obj), , ,];
   let str;
   if (tmp5 != null) {
     str = tmp5.source;
@@ -226,11 +264,17 @@ export default function DevToolsOTATestScreen() {
     subLabel: first,
     onPress: function copyRootPath() {
       first(closure_1_2[17]).copy(first);
-    }
+    },
   };
   const tmp13 = _verifyFiles;
   const tmp9 = callback(React.useState(false), 2);
-  const items2 = [callback2(first(5599).TableRow, { label: "Manifest Source", subLabel: str, icon: callback2(first(15161).WrenchIcon, {}) }), ];
+  const items2 = [
+    callback2(first(5599).TableRow, {
+      label: "Manifest Source",
+      subLabel: str,
+      icon: callback2(first(15161).WrenchIcon, {}),
+    }),
+  ];
   let obj3 = { icon: callback2(first(7819).PaperIcon, {}), label: null };
   let str2 = "{}";
   if (null != tmp5) {
@@ -251,7 +295,7 @@ export default function DevToolsOTATestScreen() {
     str3 = "No";
   }
   obj5[2] = str3;
-  const items3 = [callback2(first(5599).TableRow, obj5), ];
+  const items3 = [callback2(first(5599).TableRow, obj5)];
   let tmp12Result = null != tmp7;
   if (tmp12Result) {
     const obj6 = { icon: null, label: null };
@@ -261,16 +305,30 @@ export default function DevToolsOTATestScreen() {
     tmp12Result = tmp12(tmp15(5599).TableRow, obj6);
   }
   items3[1] = tmp12Result;
-  items1[2] = callback3(first(5992).TableRowGroup, { title: "Build Override Cookie", hasIcons: true, children: items3 });
+  items1[2] = callback3(first(5992).TableRowGroup, {
+    title: "Build Override Cookie",
+    hasIcons: true,
+    children: items3,
+  });
   let obj2 = { label: "Manifest Source", subLabel: str, icon: callback2(first(15161).WrenchIcon, {}) };
-  const items4 = [callback2(first(5599).TableRow, { label: "Check for Update & Reload", icon: callback2(first(4427).DownloadIcon, {}), onPress: BundleUpdaterManagerDefault.checkForUpdateAndReload }), ];
+  const items4 = [
+    callback2(first(5599).TableRow, {
+      label: "Check for Update & Reload",
+      icon: callback2(first(4427).DownloadIcon, {}),
+      onPress: BundleUpdaterManagerDefault.checkForUpdateAndReload,
+    }),
+  ];
   let str4 = "Verify content hashes for all app files";
   if (tmp10) {
     str4 = "Verification in progress";
   }
   const obj8 = { spacing: 16, children: null };
   const obj9 = { title: "Actions", hasIcons: true, children: null };
-  const obj7 = { label: "Check for Update & Reload", icon: callback2(first(4427).DownloadIcon, {}), onPress: BundleUpdaterManagerDefault.checkForUpdateAndReload };
+  const obj7 = {
+    label: "Check for Update & Reload",
+    icon: callback2(first(4427).DownloadIcon, {}),
+    onPress: BundleUpdaterManagerDefault.checkForUpdateAndReload,
+  };
   items4[1] = callback2(first(5599).TableRow, {
     label: "Verify OTA Files",
     subLabel: str4,
@@ -285,11 +343,11 @@ export default function DevToolsOTATestScreen() {
       }
       return applyArgumentsResult;
     },
-    disabled: tmp10
+    disabled: tmp10,
   });
   obj9[2] = items4;
   items1[3] = callback3(first(5992).TableRowGroup, obj9);
   obj8[1] = items1;
   obj[2] = callback3(first(4926).Stack, obj8);
   return callback2(tmp13, obj);
-};
+}

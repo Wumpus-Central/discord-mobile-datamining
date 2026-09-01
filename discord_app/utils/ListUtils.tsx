@@ -25,7 +25,11 @@ export const getListSummaryLabel = function getListSummaryLabel(names, length) {
   } else if (3 === length) {
     const intl2 = getSystemLocale.intl;
     [obj2[0], obj2[1], obj2[2]] = first;
-    formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t["/KSOKY"], { first: null, second: null, third: null });
+    formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t["/KSOKY"], {
+      first: null,
+      second: null,
+      third: null,
+    });
     obj1 = { first: null, second: null, third: null };
   } else {
     const intl = getSystemLocale.intl;

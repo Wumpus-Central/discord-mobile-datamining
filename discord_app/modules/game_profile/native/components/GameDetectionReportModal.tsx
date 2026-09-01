@@ -84,7 +84,14 @@ function ReportContent(applicationId) {
   const items1 = [memo, applicationId, str, first1, str2, callback];
   const callback1 = str.useCallback(() => {
     let obj = applicationId(first[7]);
-    obj = { viewId: memo, applicationId, suggestedGameName: null, suggestedGameApplicationId: null, feedback: null, submitted: true };
+    obj = {
+      viewId: memo,
+      applicationId,
+      suggestedGameName: null,
+      suggestedGameApplicationId: null,
+      feedback: null,
+      submitted: true,
+    };
     let trimmed;
     if ("" !== str.trim()) {
       trimmed = str.trim();
@@ -121,7 +128,7 @@ function ReportContent(applicationId) {
     obj1 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl4 = tmp2(tmp3[10]).intl;
     obj1[2] = intl4.string(tmp2(tmp3[10]).t.IQHicr);
-    const items3 = [tmp15(tmp2(tmp3[14]).Text, obj1), ];
+    const items3 = [tmp15(tmp2(tmp3[14]).Text, obj1)];
     let obj2 = { value: "Array", onChange: false, hasIcons: null, children: 500 };
     obj2[1] = function onChange(arg0) {
       closure_0 = arg0;
@@ -136,7 +143,7 @@ function ReportContent(applicationId) {
     const obj3 = { value: "wrong_game_shown", label: null };
     const intl5 = tmp2(tmp3[10]).intl;
     obj3[1] = intl5.string(tmp2(tmp3[10]).t.TZgkxY);
-    const items4 = [tmp15(tmp2(tmp3[16]).TableRadioRow, obj3), ];
+    const items4 = [tmp15(tmp2(tmp3[16]).TableRadioRow, obj3)];
     const obj4 = { value: "other_feedback", label: null };
     const intl6 = tmp2(tmp3[10]).intl;
     obj4[1] = intl6.string(tmp2(tmp3[10]).t.tdDpJj);
@@ -151,7 +158,7 @@ function ReportContent(applicationId) {
     const obj6 = { variant: "text-sm/normal", color: "text-muted", children: null };
     let intl = tmp2(tmp3[10]).intl;
     obj6[2] = intl.string(tmp2(tmp3[10]).t["79o/iq"]);
-    const items5 = [tmp15(tmp2(tmp3[14]).Text, obj6), , ];
+    const items5 = [tmp15(tmp2(tmp3[14]).Text, obj6), ,];
     const obj7 = { value: null, onChange: null, placeholder: null };
     obj7[0] = str;
     obj7[1] = function onChange(arg0) {
@@ -182,13 +189,15 @@ function ReportContent(applicationId) {
           callback(found.name);
         }
       };
-      obj8[3] = memo1.map((id) => callback2(applicationId(first[16]).TableRadioRow, { value: id.id, label: id.name }, "" + id.id + "-" + arg1));
+      obj8[3] = memo1.map((id) =>
+        callback2(applicationId(first[16]).TableRadioRow, { value: id.id, label: id.name }, "" + id.id + "-" + arg1),
+      );
       tmp15Result = tmp15(tmp2(tmp3[15]).TableRadioGroup, obj8);
     }
     const obj9 = { children: null };
     items5[2] = tmp15Result;
     obj5[1] = items5;
-    const items6 = [str2(first1, obj5), ];
+    const items6 = [str2(first1, obj5)];
     const obj10 = { style: null, children: null };
     obj10[0] = tmp.submitContainer;
     const obj11 = { variant: "primary", size: "md", text: null, disabled: null, onPress: null };
@@ -208,7 +217,7 @@ function ReportContent(applicationId) {
     const obj14 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl7 = tmp2(tmp3[10]).intl;
     obj14[2] = intl7.string(tmp2(tmp3[10]).t.IblYEw);
-    const items7 = [tmp15(tmp2(tmp3[14]).Text, obj14), ];
+    const items7 = [tmp15(tmp2(tmp3[14]).Text, obj14)];
     const obj15 = { value: null, onChange: null, placeholder: null, maxLength: 300 };
     obj15[0] = str2;
     obj15[1] = tmp10[1];
@@ -216,7 +225,7 @@ function ReportContent(applicationId) {
     obj15[2] = intl8.string(tmp2(tmp3[10]).t.aiPKV4);
     items7[1] = tmp15(tmp2(tmp3[19]).TextArea, obj15);
     obj13[1] = items7;
-    const items8 = [str2(first1, obj13), ];
+    const items8 = [str2(first1, obj13)];
     const obj16 = { style: null, children: null };
     obj16[0] = tmp.submitContainer;
     const obj17 = { variant: "primary", size: "md", text: null, disabled: null, onPress: null };
@@ -244,18 +253,23 @@ createCacheKey[2] = { padding: ThemesDefault.space.PX_16 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 const REPORT = "REPORT";
 let obj2 = { padding: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameDetectionReportModal.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/game_profile/native/components/GameDetectionReportModal.tsx",
+);
 
 export default function GameDetectionReportModal(applicationId) {
-  const screens = React.useMemo(() => ({
-    [closure_13]: {
-      render(arg0) {
-        const merged = Object.assign(arg0);
-        return callback(closure_12, {});
-      }
-    }
-  }), []);
+  const screens = React.useMemo(
+    () => ({
+      [closure_13]: {
+        render(arg0) {
+          const merged = Object.assign(arg0);
+          return callback(closure_12, {});
+        },
+      },
+    }),
+    [],
+  );
   const initialRouteStack = [{ name: REPORT, params: { applicationId: applicationId.applicationId } }];
   return callback2(NavigationStack.Navigator, { screens, initialRouteStack });
-};
+}
 export const MODAL_KEY = "game-detection-report";

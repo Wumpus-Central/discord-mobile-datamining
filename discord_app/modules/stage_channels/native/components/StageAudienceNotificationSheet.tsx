@@ -30,8 +30,25 @@ function BulletIcon(source) {
 }
 noopAll;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: { padding: 16 }, header: { alignItems: "center", paddingVertical: 16 }, headerImage: {}, headerTitle: { marginTop: 16, marginBottom: 8 }, headerBulletIconContainer: null, headerBulletIconComponent: null, headerBulletList: null, headerBullet: null, startButton: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", height: 40, width: 40, borderRadius: 20, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = {
+  container: { padding: 16 },
+  header: { alignItems: "center", paddingVertical: 16 },
+  headerImage: {},
+  headerTitle: { marginTop: 16, marginBottom: 8 },
+  headerBulletIconContainer: null,
+  headerBulletIconComponent: null,
+  headerBulletList: null,
+  headerBullet: null,
+  startButton: null,
+};
+createCacheKey = {
+  alignItems: "center",
+  justifyContent: "center",
+  height: 40,
+  width: 40,
+  borderRadius: 20,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[6] = { flexDirection: "column", alignItems: "flex-start" };
@@ -39,7 +56,9 @@ createCacheKey[7] = { lineHeight: 20 };
 createCacheKey[8] = { marginTop: 0 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageAudienceNotificationSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/stage_channels/native/components/StageAudienceNotificationSheet.tsx",
+);
 
 export default function StageAudienceNotificationSheet(channelId) {
   channelId = channelId.channelId;
@@ -58,8 +77,14 @@ export default function StageAudienceNotificationSheet(channelId) {
   const tmp8 = ScrollHandlingActionSheetDefault;
   obj1[0] = registerAssetDefault;
   obj1[1] = tmp.headerImage;
-  const items1 = [callback(preloadDefault, obj1), , ];
-  const obj2 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const items1 = [callback(preloadDefault, obj1), ,];
+  const obj2 = {
+    style: tmp.headerTitle,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = tmp2(1236).intl;
   obj2[4] = intl.string(channelId(1236).t.UVuXCs);
   items1[1] = callback(channelId(4474).Text, obj2);
@@ -71,7 +96,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl2 = tmp2(1236).intl;
   obj6[3] = intl2.string(channelId(1236).t.sBDfo6);
   obj4[1] = callback(channelId(4474).Text, obj6);
-  const items2 = [callback(channelId(8363).FormRow, obj4), , , ];
+  const items2 = [callback(channelId(8363).FormRow, obj4), , ,];
   const obj7 = { leading: null, label: null };
   const obj5 = { source: registerAssetDefault2 };
   const tmp12 = BulletIcon;
@@ -107,7 +132,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   obj3[1] = items2;
   items1[2] = closure_8(View, obj3);
   obj[1] = items1;
-  const items3 = [closure_8(View, obj), ];
+  const items3 = [closure_8(View, obj)];
   const obj17 = { style: tmp.startButton, children: null };
   const obj18 = { text: null, onPress: null };
   const intl5 = tmp2(1236).intl;
@@ -118,4 +143,4 @@ export default function StageAudienceNotificationSheet(channelId) {
   obj[1] = items3;
   obj16[0] = closure_8(View, obj);
   return callback(tmp8, obj16);
-};
+}

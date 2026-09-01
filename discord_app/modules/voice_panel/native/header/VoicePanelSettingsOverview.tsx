@@ -61,8 +61,14 @@ class VoicePanelSettingsOverviewHeader {
     obj1 = { style: tmp.channelTitleWrapper, children: null };
     tmp13 = jsx;
     tmp12 = require("set");
-    obj2 = { style: tmp.channelTitle, variant: "heading-lg/bold", lineClamp: 1, accessibilityRole: "header", children: tmp7 };
-    items3 = [, ];
+    obj2 = {
+      style: tmp.channelTitle,
+      variant: "heading-lg/bold",
+      lineClamp: 1,
+      accessibilityRole: "header",
+      children: tmp7,
+    };
+    items3 = [,];
     items3[0] = jsx(require("Text").Text, obj2);
     if (isCallSecureFramesVerified) {
       obj3 = { style: null, size: "xs", accessibilityLabel: null };
@@ -73,15 +79,20 @@ class VoicePanelSettingsOverviewHeader {
     }
     items3[1] = isCallSecureFramesVerified;
     obj1[1] = items3;
-    items4 = [, , ];
+    items4 = [, ,];
     items4[0] = tmp10(tmp12, obj1);
-    obj4 = { style: tmp.channelSubtitle, variant: "text-sm/medium", accessibilityRole: "summary", children: stateFromStores };
+    obj4 = {
+      style: tmp.channelSubtitle,
+      variant: "text-sm/medium",
+      accessibilityRole: "summary",
+      children: stateFromStores,
+    };
     items4[1] = tmp13(require("Text").Text, obj4);
     if (isSecureFramesUIEnabled) {
       obj5 = { style: null, children: null };
       obj5[0] = tmp.secureFrames;
       tmp6Result = require("set");
-      items5 = [, ];
+      items5 = [,];
       items5[0] = tmp13(require("LockIcon").LockIcon, { size: "xxs", color: "status-positive" });
       obj6 = { variant: "text-xs/medium", color: "status-positive", children: null };
       intl2 = require("getSystemLocale").intl;
@@ -126,7 +137,9 @@ function ShareActivityLogsButton() {
 function ActivityDebugToggle() {
   let obj = initialize;
   const items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => showActivitiesDebugOverlay.getShowActivitiesDebugOverlay());
+  const stateFromStores = obj.useStateFromStores(items, () =>
+    showActivitiesDebugOverlay.getShowActivitiesDebugOverlay(),
+  );
   const callback = importAllResult.useCallback((visible) => {
     let obj = callback(table[35]);
     obj = { type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible };
@@ -146,8 +159,23 @@ function ActivityDebugToggle() {
 let c3 = importAllResult;
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = ME);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-let obj = { headerContainer: { alignItems: "center" }, channelTitleWrapper: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: 8 }, channelTitle: { textAlign: "center" }, channelSubtitle: { marginTop: 4, marginHorizontal: 16, textAlign: "center" }, secureFrames: null, secureFramesIcon: null };
-obj = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, marginTop: 8, padding: 4, gap: 4 };
+let obj = {
+  headerContainer: { alignItems: "center" },
+  channelTitleWrapper: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: 8 },
+  channelTitle: { textAlign: "center" },
+  channelSubtitle: { marginTop: 4, marginHorizontal: 16, textAlign: "center" },
+  secureFrames: null,
+  secureFramesIcon: null,
+};
+obj = {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: ThemesDefault.radii.sm,
+  marginTop: 8,
+  padding: 4,
+  gap: 4,
+};
 obj[4] = obj;
 obj[5] = { marginStart: 4 };
 let closure_21 = createCacheKey.createStyles(obj);
@@ -168,38 +196,44 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   const setting = DeveloperMode.useSetting();
   obj1 = guildId(stateFromStores[16]);
   const items1 = [closure_12];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_12.getVoiceStatesForChannelAlt(channelId, guildId));
+  stateFromStores1 = obj1.useStateFromStores(items1, () =>
+    closure_1_12.getVoiceStatesForChannelAlt(channelId, guildId),
+  );
   let obj2 = guildId(stateFromStores[16]);
   const items2 = [closure_11];
   const items3 = [stateFromStores, stateFromStores1];
-  const stateFromStoresArray = obj2.useStateFromStoresArray(items2, () => {
-    if (null != stateFromStores) {
-      if (obj.isPrivate()) {
-        const _Set = Set;
-        const set = new Set(stateFromStores1.map((user) => user.user.id));
-        const items = [];
-        const recipients = obj.recipients;
-        for (const item10020 of recipients) {
-          let tmp9 = closure_1_11;
-          let tmp8 = item10020;
-          let user = closure_1_11.getUser(item10020);
-          let hasItem = null == user;
-          let tmp11 = user;
-          if (!hasItem) {
-            let tmp13 = item10020;
-            hasItem = set.has(tmp8);
+  const stateFromStoresArray = obj2.useStateFromStoresArray(
+    items2,
+    () => {
+      if (null != stateFromStores) {
+        if (obj.isPrivate()) {
+          const _Set = Set;
+          const set = new Set(stateFromStores1.map((user) => user.user.id));
+          const items = [];
+          const recipients = obj.recipients;
+          for (const item10020 of recipients) {
+            let tmp9 = closure_1_11;
+            let tmp8 = item10020;
+            let user = closure_1_11.getUser(item10020);
+            let hasItem = null == user;
+            let tmp11 = user;
+            if (!hasItem) {
+              let tmp13 = item10020;
+              hasItem = set.has(tmp8);
+            }
+            if (!hasItem) {
+              let tmp14 = user;
+              let arr = items.push(tmp11);
+            }
+            continue;
           }
-          if (!hasItem) {
-            let tmp14 = user;
-            let arr = items.push(tmp11);
-          }
-          continue;
+          return items;
         }
-        return items;
       }
-    }
-    return [];
-  }, items3);
+      return [];
+    },
+    items3,
+  );
   let obj3 = guildId(stateFromStores[16]);
   const items4 = [closure_9];
   const stateFromStores2 = obj3.useStateFromStores(items4, () => selfDeaf.isSelfDeaf());
@@ -257,11 +291,19 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   const isStreamRTCConnectionEmpty = obj7.useIsStreamRTCConnectionEmpty(stateFromStores4);
   let obj8 = guildId(stateFromStores[16]);
   const items12 = [stateFromStores3];
-  const stateFromStores5 = obj8.useStateFromStores(items12, () => null != stateFromStores3.getCurrentEmbeddedActivity(), []);
+  const stateFromStores5 = obj8.useStateFromStores(
+    items12,
+    () => null != stateFromStores3.getCurrentEmbeddedActivity(),
+    [],
+  );
   let obj9 = guildId(stateFromStores[16]);
   const items13 = [closure_10];
   const items14 = [channelId];
-  const stateFromStores6 = obj9.useStateFromStores(items13, () => closure_1_10.canWithPartialContext(closure_1_14.MANAGE_CHANNELS, { channelId }), items14);
+  const stateFromStores6 = obj9.useStateFromStores(
+    items13,
+    () => closure_1_10.canWithPartialContext(closure_1_14.MANAGE_CHANNELS, { channelId }),
+    items14,
+  );
   let obj10 = guildId(stateFromStores[48]);
   const canInviteMembers = obj10.useCanInviteMembers(channelId);
   let obj11 = guildId(stateFromStores[49]);
@@ -269,7 +311,7 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   const inviteMembersCallback = obj11.useInviteMembersCallback(channelId);
   let obj12 = guildId(stateFromStores[19]);
   isSecureFramesUIEnabled = obj12.useIsSecureFramesUIEnabled({ channelId });
-  const children = [callback(VoicePanelSettingsOverviewHeader, { guildId, channelId }), , , , , ];
+  const children = [callback(VoicePanelSettingsOverviewHeader, { guildId, channelId }), , , , ,];
   let tmp26Result = null;
   if (tmp22) {
     obj = { hasIcons: false, children: null };
@@ -309,7 +351,7 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   const intl4 = tmp(tmp2[24]).intl;
   obj3[3] = intl4.string(tmp(tmp2[24]).t["16SG+O"]);
   obj3[4] = callback(tmp(tmp2[34]).TableRowArrow, {});
-  const items16 = [callback(tmp(tmp2[30]).TableRow, obj3), , , , ];
+  const items16 = [callback(tmp(tmp2[30]).TableRow, obj3), , , ,];
   obj5 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   obj6 = { IconComponent: tmp(tmp2[55]).HeadphonesSlashIcon, source: tmp17(tmp2[56]) };
   obj5[0] = callback(tmp(tmp2[31]).TableRowIcon, obj6);
@@ -403,11 +445,25 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
     const items17 = [
       tmp26Result3,
       stateFromStores1.map((user) => {
-          const obj = { user: user.user, selfStream: user.voiceState.selfStream, nick, channelId, guildId, showSecureFramesUI: isSecureFramesUIEnabled, showGameActivity: true };
-          nick = user.nick;
-          return closure_1_18(guildId(stateFromStores[51]).MemberRowItem, obj, user.user.id);
-        }),
-      stateFromStoresArray.map((id) => closure_1_18(guildId(stateFromStores[51]).MemberRowItem, { user: id, channelId, guildId, notConnected: true, showRing: true }, id.id))
+        const obj = {
+          user: user.user,
+          selfStream: user.voiceState.selfStream,
+          nick,
+          channelId,
+          guildId,
+          showSecureFramesUI: isSecureFramesUIEnabled,
+          showGameActivity: true,
+        };
+        nick = user.nick;
+        return closure_1_18(guildId(stateFromStores[51]).MemberRowItem, obj, user.user.id);
+      }),
+      stateFromStoresArray.map((id) =>
+        closure_1_18(
+          guildId(stateFromStores[51]).MemberRowItem,
+          { user: id, channelId, guildId, notConnected: true, showRing: true },
+          id.id,
+        ),
+      ),
     ];
     obj13[2] = items17;
     tmp24Result = tmp24(tmp(tmp2[51]).VoicePanelFormSection, obj13);

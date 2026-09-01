@@ -13,13 +13,13 @@ obj = {
   },
   parent: null,
   IconComponent: CircleInformationIcon.CircleInformationIcon,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.CHANGE_LOG,
   getComponent() {
     return ChangeLogScreen.ChangeLogScreen;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ChangeLogSetting.tsx");

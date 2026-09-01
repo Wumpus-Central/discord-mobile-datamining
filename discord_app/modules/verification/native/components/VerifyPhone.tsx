@@ -30,7 +30,7 @@ export default function VerifyPhone(phone) {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, token) {
+    return (function* (arg0, token) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -128,7 +128,7 @@ export default function VerifyPhone(phone) {
     })();
   });
   const items = [onCodeEnteredIntercept, onVerified, phone];
-  callback = callback.useCallback(function() {
+  callback = callback.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -143,7 +143,7 @@ export default function VerifyPhone(phone) {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -199,7 +199,7 @@ export default function VerifyPhone(phone) {
     })();
   });
   const items1 = [callback];
-  const callback1 = callback.useCallback(function() {
+  const callback1 = callback.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -210,7 +210,17 @@ export default function VerifyPhone(phone) {
     return applyArgumentsResult;
   }, items1);
   onCodeEnteredIntercept(onVerified[5])(callback1);
-  let obj = { title: null, description: null, error: null, backgroundStyle: null, loading: null, onCodeEntered: null, codeType: null, disabled: null, disableKeyboardAvoidingView: null };
+  let obj = {
+    title: null,
+    description: null,
+    error: null,
+    backgroundStyle: null,
+    loading: null,
+    onCodeEntered: null,
+    codeType: null,
+    disabled: null,
+    disableKeyboardAvoidingView: null,
+  };
   const intl = _require(onVerified[7]).intl;
   obj[0] = intl.string(_require(onVerified[7]).t.Xclkxp);
   const intl2 = _require(onVerified[7]).intl;
@@ -225,5 +235,15 @@ export default function VerifyPhone(phone) {
   obj[6] = _require(onVerified[6]).CodeType.NUMERIC;
   obj[7] = tmp2[0];
   obj[8] = disableKeyboardAvoidingView;
-  return jsx(onCodeEnteredIntercept(onVerified[6]), { title: null, description: null, error: null, backgroundStyle: null, loading: null, onCodeEntered: null, codeType: null, disabled: null, disableKeyboardAvoidingView: null });
-};
+  return jsx(onCodeEnteredIntercept(onVerified[6]), {
+    title: null,
+    description: null,
+    error: null,
+    backgroundStyle: null,
+    loading: null,
+    onCodeEntered: null,
+    codeType: null,
+    disabled: null,
+    disableKeyboardAvoidingView: null,
+  });
+}

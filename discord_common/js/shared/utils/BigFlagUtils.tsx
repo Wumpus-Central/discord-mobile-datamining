@@ -81,7 +81,7 @@ HighLow["fromBit"] = function fromBit(arg0) {
     let tmp3 = num;
     let num2 = 0;
     if (num === rounded) {
-      num2 = 1 << arg0 - 16 * rounded;
+      num2 = 1 << (arg0 - 16 * rounded);
     }
     ArrayResult[3 - num] = num2;
     num = num + 1;
@@ -105,7 +105,7 @@ HighLow["asUintN"] = function asUintN(arg0, flags) {
       const _Math = Math;
       const bound = Math.min(arg0 - num4, 16);
       const _Math2 = Math;
-      const tmp4 = num5 | (parts[parts.length - Math.floor(Math, num4 / 16) - 1] & (1 << bound) - 1) << num4;
+      const tmp4 = num5 | ((parts[parts.length - Math.floor(Math, num4 / 16) - 1] & ((1 << bound) - 1)) << num4);
       const sum = num4 + bound;
       num = tmp4;
       while (sum < arg0) {
@@ -266,121 +266,133 @@ if (tmp2) {
 }
 if (tmp3) {
   const _BigInt2 = BigInt;
-  BigInt.prototype.toJSON = function() {
+  BigInt.prototype.toJSON = function () {
     return this.toString();
   };
 }
 let closure_4 = {};
-let tmp6 = tmp2 ? ((arg0) => BigInt(arg0)) : ((num) => {
-  let tmp = num;
-  if (!(num instanceof HighLow)) {
-    let str = num;
-    if (typeof num === "number") {
-      str = num.toString();
-    }
-    if (null == table[str]) {
-      tmp3[str] = HighLow.fromString(str);
-    }
-    tmp = tmp3[str];
-  }
-  return tmp;
-});
+let tmp6 = tmp2
+  ? (arg0) => BigInt(arg0)
+  : (num) => {
+      let tmp = num;
+      if (!(num instanceof HighLow)) {
+        let str = num;
+        if (typeof num === "number") {
+          str = num.toString();
+        }
+        if (null == table[str]) {
+          tmp3[str] = HighLow.fromString(str);
+        }
+        tmp = tmp3[str];
+      }
+      return tmp;
+    };
 let closure_5 = tmp6Result;
-const tmp8 = tmp2 ? (() => {
-  let tmp = arg0;
-  if (arg0 === undefined) {
-    tmp = closure_5;
-  }
-  let tmp2 = arg1;
-  if (arg1 === undefined) {
-    tmp2 = closure_5;
-  }
-  return tmp & tmp2;
-}) : (() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = closure_5;
-  }
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    tmp = closure_5;
-  }
-  return obj.and(tmp);
-});
-let closure_6 = tmp8;
-let closure_7 = tmp2 ? (() => {
-  let tmp = arg0;
-  if (arg0 === undefined) {
-    tmp = closure_5;
-  }
-  let tmp2 = arg1;
-  if (arg1 === undefined) {
-    tmp2 = closure_5;
-  }
-  return tmp | tmp2;
-}) : (() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = closure_5;
-  }
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    tmp = closure_5;
-  }
-  return obj.or(tmp);
-});
-let closure_8 = tmp2 ? (() => {
-  let tmp = arg0;
-  if (arg0 === undefined) {
-    tmp = closure_5;
-  }
-  let tmp2 = arg1;
-  if (arg1 === undefined) {
-    tmp2 = closure_5;
-  }
-  return tmp ^ tmp2;
-}) : (() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = closure_5;
-  }
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    tmp = closure_5;
-  }
-  return obj.xor(tmp);
-});
-let tmp10 = tmp2 ? ((arg0, arg1) => arg0 === arg1) : ((equals) => {
-  if (null != equals) {
-    if (null != arg1) {
-      let equalsResult = equals.equals(arg1);
+const tmp8 = tmp2
+  ? () => {
+      let tmp = arg0;
+      if (arg0 === undefined) {
+        tmp = closure_5;
+      }
+      let tmp2 = arg1;
+      if (arg1 === undefined) {
+        tmp2 = closure_5;
+      }
+      return tmp & tmp2;
     }
-    return equalsResult;
-  }
-  equalsResult = equals == arg1;
-});
+  : () => {
+      let obj = arg0;
+      if (arg0 === undefined) {
+        obj = closure_5;
+      }
+      let tmp = arg1;
+      if (arg1 === undefined) {
+        tmp = closure_5;
+      }
+      return obj.and(tmp);
+    };
+let closure_6 = tmp8;
+let closure_7 = tmp2
+  ? () => {
+      let tmp = arg0;
+      if (arg0 === undefined) {
+        tmp = closure_5;
+      }
+      let tmp2 = arg1;
+      if (arg1 === undefined) {
+        tmp2 = closure_5;
+      }
+      return tmp | tmp2;
+    }
+  : () => {
+      let obj = arg0;
+      if (arg0 === undefined) {
+        obj = closure_5;
+      }
+      let tmp = arg1;
+      if (arg1 === undefined) {
+        tmp = closure_5;
+      }
+      return obj.or(tmp);
+    };
+let closure_8 = tmp2
+  ? () => {
+      let tmp = arg0;
+      if (arg0 === undefined) {
+        tmp = closure_5;
+      }
+      let tmp2 = arg1;
+      if (arg1 === undefined) {
+        tmp2 = closure_5;
+      }
+      return tmp ^ tmp2;
+    }
+  : () => {
+      let obj = arg0;
+      if (arg0 === undefined) {
+        obj = closure_5;
+      }
+      let tmp = arg1;
+      if (arg1 === undefined) {
+        tmp = closure_5;
+      }
+      return obj.xor(tmp);
+    };
+let tmp10 = tmp2
+  ? (arg0, arg1) => arg0 === arg1
+  : (equals) => {
+      if (null != equals) {
+        if (null != arg1) {
+          let equalsResult = equals.equals(arg1);
+        }
+        return equalsResult;
+      }
+      equalsResult = equals == arg1;
+    };
 let closure_9 = tmp10;
-const tmp11 = tmp2 ? ((arg0) => BigInt(1) << BigInt(arg0)) : ((arg0) => HighLow.fromBit(arg0));
+const tmp11 = tmp2 ? (arg0) => BigInt(1) << BigInt(arg0) : (arg0) => HighLow.fromBit(arg0);
 let closure_10 = tmp11;
 let result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/BigFlagUtils.tsx");
 
-export const isBigFlag = tmp2 ? ((arg0) => typeof arg0 === "bigint") : ((arg0) => arg0 instanceof HighLow);
+export const isBigFlag = tmp2 ? (arg0) => typeof arg0 === "bigint" : (arg0) => arg0 instanceof HighLow;
 export const deserialize = tmp6;
 export const EMPTY_FLAG = tmp6Result;
 export const filter = tmp8;
-export const invert = tmp2 ? (() => {
-  let tmp = arg0;
-  if (arg0 === undefined) {
-    tmp = closure_5;
-  }
-  return ~tmp;
-}) : (() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = closure_5;
-  }
-  return obj.not();
-});
+export const invert = tmp2
+  ? () => {
+      let tmp = arg0;
+      if (arg0 === undefined) {
+        tmp = closure_5;
+      }
+      return ~tmp;
+    }
+  : () => {
+      let obj = arg0;
+      if (arg0 === undefined) {
+        obj = closure_5;
+      }
+      return obj.not();
+    };
 export const equals = tmp10;
 export const combine = function combine() {
   let length;
@@ -420,7 +432,9 @@ export const remove = function remove(arg0, arg1) {
   return tmp;
 };
 export const getFlag = tmp11;
-export const asUintN = tmp2 ? ((arg0, flags) => Number(BigInt.asUintN(arg0, flags))) : ((arg0, flags) => HighLow.asUintN(arg0, flags));
+export const asUintN = tmp2
+  ? (arg0, flags) => Number(BigInt.asUintN(arg0, flags))
+  : (arg0, flags) => HighLow.asUintN(arg0, flags);
 export const getBrandedFlag = function getBrandedFlag(arg0) {
   return callback6(arg0);
 };

@@ -9,7 +9,9 @@ import items from "../MemberVerificationConstants.tsx";
 
 ({ MEMBER_VERIFICATION_TYPE: c3, IN_APP_MEMBER_VERIFICATION_MODAL_KEY: c4 } = items);
 const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx");
+const result = set.fileFinishedImporting(
+  "modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx",
+);
 
 export default {
   openMemberVerificationModal(guildId, connect) {
@@ -33,5 +35,5 @@ export default {
       obj.track(AnalyticEvents.MODAL_DISMISSED, obj);
     }
     _modDef4723.popWithKey(closure_4);
-  }
+  },
 };

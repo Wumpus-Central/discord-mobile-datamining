@@ -16,9 +16,13 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   let callback1;
   ({ targetRef, channelType } = arg0);
   const items = [callback1];
-  stateFromStores = stateFromStores(markPopoverAsDismissed[7]).useStateFromStores(items, () => callback1.hasStoredFavorites());
+  stateFromStores = stateFromStores(markPopoverAsDismissed[7]).useStateFromStores(items, () =>
+    callback1.hasStoredFavorites(),
+  );
   let obj = stateFromStores(markPopoverAsDismissed[7]);
-  const favoritesMenuItemPopoverDismissibleContent = stateFromStores(markPopoverAsDismissed[5]).useFavoritesMenuItemPopoverDismissibleContent(set.has(channelType));
+  const favoritesMenuItemPopoverDismissibleContent = stateFromStores(
+    markPopoverAsDismissed[5],
+  ).useFavoritesMenuItemPopoverDismissibleContent(set.has(channelType));
   shouldShowPopover = favoritesMenuItemPopoverDismissibleContent.shouldShowPopover;
   markPopoverAsDismissed = favoritesMenuItemPopoverDismissibleContent.markPopoverAsDismissed;
   const items1 = [markPopoverAsDismissed];
@@ -31,7 +35,16 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, callback, callback1];
   const memo = callback.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "unknown_error", onButtonPress: 0 };
+    const obj = {
+      visible: shouldShowPopover,
+      position: "bottom",
+      title: null,
+      description: null,
+      onDismiss: null,
+      renderImgComponent: "r",
+      buttonLabel: "unknown_error",
+      onButtonPress: 0,
+    };
     const intl = stateFromStores(markPopoverAsDismissed[8]).intl;
     const tmp4 = shouldShowPopover(markPopoverAsDismissed[9]);
     if (stateFromStores) {
@@ -52,7 +65,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   const coachmark = stateFromStores(markPopoverAsDismissed[10]).useCoachmark(targetRef, memo);
   return null;
 }
-let items = [, , ];
+let items = [, ,];
 ({ GUILD_TEXT: arr[0], GUILD_ANNOUNCEMENT: arr[1], GUILD_FORUM: arr[2] } = require("ME").ChannelTypes);
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx");
@@ -68,4 +81,4 @@ export default function FavoritesGuildCoachmarkMenuItem(arg0) {
     tmp3 = jsx(Layer.LayerScope, {});
   }
   return tmp3;
-};
+}

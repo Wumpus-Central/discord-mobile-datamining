@@ -5,11 +5,15 @@ import closure_2 from "GameAutocompleteStore.tsx";
 import importDefaultResult from "../../../../_runtime/00636_debounce.js";
 
 require = arg1;
-let closure_3 = importDefaultResult((arg0) => {
-  const useGameAutocomplete = fetchStore.useGameAutocomplete;
-  const items = [arg0];
-  const many = useGameAutocomplete.fetchMany(items);
-}, require("fetchStore").GAME_AUTOCOMPLETE_DEBOUNCE_MS, { leading: true, maxWait: require("fetchStore").GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS });
+let closure_3 = importDefaultResult(
+  (arg0) => {
+    const useGameAutocomplete = fetchStore.useGameAutocomplete;
+    const items = [arg0];
+    const many = useGameAutocomplete.fetchMany(items);
+  },
+  require("fetchStore").GAME_AUTOCOMPLETE_DEBOUNCE_MS,
+  { leading: true, maxWait: require("fetchStore").GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS },
+);
 const obj = { leading: true, maxWait: require("fetchStore").GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS };
 let result = require("set").fileFinishedImporting("modules/games/autocomplete/queryGamesAutocomplete.tsx");
 

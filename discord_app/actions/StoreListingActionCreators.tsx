@@ -61,7 +61,7 @@ export const fetchAllStoreListingsForApplication = function fetchAllStoreListing
         const merged = Object.assign(arg0);
         obj.published = true;
         return obj;
-      })
+      }),
     };
     body = body.body;
     obj.dispatch(obj);
@@ -91,20 +91,22 @@ export const fetchStoreListingForSku = function fetchStoreListingForSku(skuId) {
   obj[1] = tmp7(530).rejectWithMigratedError();
   const result1 = obj4.httpGetWithCountryCodeQuery(obj);
   const tmp7Result = tmp7(530);
-  return result1.then((body) => {
-    const dispatch = result(closure_1_2[6]).dispatch;
-    if (closure_1) {
-      let obj = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: null };
-      obj[1] = body.body;
-      dispatch(obj);
-    } else {
-      obj = { type: "STORE_LISTING_FETCH_SUCCESS", storeListing: null };
-      obj[1] = body.body;
-      dispatch(obj);
-    }
-  }).catch(() => {
-    let obj = result(closure_1_2[6]);
-    obj = { type: "SKU_FETCH_FAIL", skuId: closure_0 };
-    obj.dispatch(obj);
-  });
+  return result1
+    .then((body) => {
+      const dispatch = result(closure_1_2[6]).dispatch;
+      if (closure_1) {
+        let obj = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: null };
+        obj[1] = body.body;
+        dispatch(obj);
+      } else {
+        obj = { type: "STORE_LISTING_FETCH_SUCCESS", storeListing: null };
+        obj[1] = body.body;
+        dispatch(obj);
+      }
+    })
+    .catch(() => {
+      let obj = result(closure_1_2[6]);
+      obj = { type: "SKU_FETCH_FAIL", skuId: closure_0 };
+      obj.dispatch(obj);
+    });
 };

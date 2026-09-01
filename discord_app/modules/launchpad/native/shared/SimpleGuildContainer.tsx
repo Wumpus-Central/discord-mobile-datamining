@@ -56,11 +56,19 @@ let closure_13 = importAllResult.memo((arg0) => {
   }
   return tmp2;
 });
-let closure_14 = { code: "function SimpleGuildContainerTsx1(){const{targetRadius}=this.__closure;return targetRadius;}" };
+let closure_14 = {
+  code: "function SimpleGuildContainerTsx1(){const{targetRadius}=this.__closure;return targetRadius;}",
+};
 let closure_15 = { code: "function SimpleGuildContainerTsx2(){const{selected}=this.__closure;return selected?1:0;}" };
-let closure_16 = { code: "function SimpleGuildContainerTsx3(){const{withSpring,toRadius,springConfig,GUILD_SIZE,iconBackground}=this.__closure;return{borderRadius:withSpring(toRadius.get(),springConfig),width:GUILD_SIZE,height:GUILD_SIZE,overflow:'hidden',backgroundColor:iconBackground.color};}" };
-let closure_17 = { code: "function SimpleGuildContainerTsx4(){const{withSpring,toRadius,springConfig,interpolate,toStrokeWidth,borderColor,GUILD_SIZE}=this.__closure;return{borderRadius:withSpring(toRadius.get()+2,springConfig),borderWidth:withSpring(interpolate(toStrokeWidth.get(),[0,1],[0,2]),springConfig),borderColor:borderColor,position:'absolute',top:-2,left:-2,width:GUILD_SIZE+4,height:GUILD_SIZE+4};}" };
-let closure_18 = { code: "function SimpleGuildContainerTsx5(){const{withSpring,toRadius,springConfig,interpolate,toStrokeWidth,backgroundColor,GUILD_SIZE}=this.__closure;return{borderRadius:withSpring(toRadius.get(),springConfig),borderWidth:withSpring(interpolate(toStrokeWidth.get(),[0,1],[0,3]),springConfig),borderColor:backgroundColor,position:'absolute',top:0,left:0,width:GUILD_SIZE,height:GUILD_SIZE};}" };
+let closure_16 = {
+  code: "function SimpleGuildContainerTsx3(){const{withSpring,toRadius,springConfig,GUILD_SIZE,iconBackground}=this.__closure;return{borderRadius:withSpring(toRadius.get(),springConfig),width:GUILD_SIZE,height:GUILD_SIZE,overflow:'hidden',backgroundColor:iconBackground.color};}",
+};
+let closure_17 = {
+  code: "function SimpleGuildContainerTsx4(){const{withSpring,toRadius,springConfig,interpolate,toStrokeWidth,borderColor,GUILD_SIZE}=this.__closure;return{borderRadius:withSpring(toRadius.get()+2,springConfig),borderWidth:withSpring(interpolate(toStrokeWidth.get(),[0,1],[0,2]),springConfig),borderColor:borderColor,position:'absolute',top:-2,left:-2,width:GUILD_SIZE+4,height:GUILD_SIZE+4};}",
+};
+let closure_18 = {
+  code: "function SimpleGuildContainerTsx5(){const{withSpring,toRadius,springConfig,interpolate,toStrokeWidth,backgroundColor,GUILD_SIZE}=this.__closure;return{borderRadius:withSpring(toRadius.get(),springConfig),borderWidth:withSpring(interpolate(toStrokeWidth.get(),[0,1],[0,3]),springConfig),borderColor:backgroundColor,position:'absolute',top:0,left:0,width:GUILD_SIZE,height:GUILD_SIZE};}",
+};
 const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/SimpleGuildContainer.tsx");
 
 export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
@@ -98,7 +106,7 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
   let obj = selected(borderRadius[8]);
   token = obj.useToken(num(borderRadius[6]).colors.BACKGROUND_BRAND);
   obj1 = badge;
-  let items = [selected, flag2, , , , , , , ];
+  let items = [selected, flag2, , , , , , ,];
   let source;
   if (activityIndicatorState != null) {
     source = activityIndicatorState.source;
@@ -116,7 +124,19 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
     if (!selected) {
       return null;
     } else if (flag2) {
-      let obj = { style: null, cutoutTopRightSize: null, cutoutTopRightInsetX: 8, cutoutTopRightInsetY: 8, cutoutBottomRightSize: null, cutoutBottomRightInsetX: 6, cutoutBottomRightInsetY: 7, imageSize: null, imageBackgroundColor: null, imageBorderRadius: null, clipInnerAmount: null };
+      let obj = {
+        style: null,
+        cutoutTopRightSize: null,
+        cutoutTopRightInsetX: 8,
+        cutoutTopRightInsetY: 8,
+        cutoutBottomRightSize: null,
+        cutoutBottomRightInsetX: 6,
+        cutoutBottomRightInsetY: 7,
+        imageSize: null,
+        imageBackgroundColor: null,
+        imageBorderRadius: null,
+        clipInnerAmount: null,
+      };
       obj[0] = { position: "absolute", top: -2, left: -2 };
       let source;
       if (activityIndicatorState != tmp) {
@@ -147,15 +167,33 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
     } else {
       obj = { children: null };
       obj = { style: null };
-      obj1 = { borderRadius: null, borderWidth: 2, borderColor: null, position: "absolute", top: -2, left: -2, width: null, height: null };
+      obj1 = {
+        borderRadius: null,
+        borderWidth: 2,
+        borderColor: null,
+        position: "absolute",
+        top: -2,
+        left: -2,
+        width: null,
+        height: null,
+      };
       obj1[0] = borderRadius + 2;
       obj1[2] = token;
       obj1[6] = 2 + 4;
       obj1[7] = 2 + 4;
       obj[0] = obj1;
-      const items = [flag2(backgroundColor, obj), ];
+      const items = [flag2(backgroundColor, obj)];
       const obj2 = { style: null };
-      const obj3 = { borderRadius: null, borderWidth: 3, borderColor: null, position: "absolute", top: 0, left: 0, width: null, height: null };
+      const obj3 = {
+        borderRadius: null,
+        borderWidth: 3,
+        borderColor: null,
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: null,
+        height: null,
+      };
       obj3[0] = borderRadius;
       obj3[2] = backgroundColor;
       obj3[6] = 2;
@@ -166,7 +204,16 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
       tmp13Result = iconStroke(activityIndicatorState, obj);
     }
   }, items);
-  obj = { style, accessible: true, accessibilityState: { selected }, accessibilityRole: "button", accessibilityLabel, accessibilityActions: items2, onAccessibilityAction, children: null };
+  obj = {
+    style,
+    accessible: true,
+    accessibilityState: { selected },
+    accessibilityRole: "button",
+    accessibilityLabel,
+    accessibilityActions: items2,
+    onAccessibilityAction,
+    children: null,
+  };
   items2 = [{ name: "activate" }];
   obj = { ref: guildIconRef, onLayout, style: null, children: null };
   obj1 = { borderRadius, overflow: "hidden", backgroundColor: null };
@@ -195,7 +242,13 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
   obj1[2] = str;
   obj[2] = obj1;
   obj[3] = children;
-  const items3 = [flag2(backgroundColor, obj), memo1, memo, flag2(closure_13, { backgroundColor, guildId, activityIndicatorState }), flag2(closure_12, { backgroundColor, badge, unread })];
+  const items3 = [
+    flag2(backgroundColor, obj),
+    memo1,
+    memo,
+    flag2(closure_13, { backgroundColor, guildId, activityIndicatorState }),
+    flag2(closure_12, { backgroundColor, badge, unread }),
+  ];
   obj[7] = items3;
   return iconStroke(backgroundColor, obj);
 };
@@ -208,7 +261,18 @@ export const SimpleGuildContainerAnimated = function SimpleGuildContainerAnimate
   let derivedValue;
   let derivedValue1;
   let BRAND_500;
-  ({ guildIconRef, guildId, children, badge, unread, activityIndicatorState, accessibilityLabel, onAccessibilityAction, onLayout, onLongPress } = arg0);
+  ({
+    guildIconRef,
+    guildId,
+    children,
+    badge,
+    unread,
+    activityIndicatorState,
+    accessibilityLabel,
+    onAccessibilityAction,
+    onLayout,
+    onLongPress,
+  } = arg0);
   iconBackground = backgroundColor(iconBackground[7])().iconBackground;
   if (selected) {
     borderRadius = tmp(tmp2[6]).radii.lg;
@@ -249,7 +313,13 @@ export const SimpleGuildContainerAnimated = function SimpleGuildContainerAnimate
       return obj;
     }
   }
-  obj = { withSpring: selected(tmp2[11]).withSpring, toRadius: derivedValue, springConfig: closure_10, GUILD_SIZE: c9, iconBackground };
+  obj = {
+    withSpring: selected(tmp2[11]).withSpring,
+    toRadius: derivedValue,
+    springConfig: closure_10,
+    GUILD_SIZE: c9,
+    iconBackground,
+  };
   H.__closure = obj;
   H.__workletHash = 11339684212259;
   H.__initData = closure_16;
@@ -257,21 +327,50 @@ export const SimpleGuildContainerAnimated = function SimpleGuildContainerAnimate
   BRAND_500 = tmp(tmp2[6]).unsafe_rawColors.BRAND_500;
   let obj4 = selected(tmp2[10]);
   const fn2 = function j() {
-    const obj = { borderRadius: selected(iconBackground[11]).withSpring(derivedValue.get() + 2, closure_1_10), borderWidth: null, borderColor: null, position: "absolute", top: -2, left: -2, width: 52, height: 52 };
+    const obj = {
+      borderRadius: selected(iconBackground[11]).withSpring(derivedValue.get() + 2, closure_1_10),
+      borderWidth: null,
+      borderColor: null,
+      position: "absolute",
+      top: -2,
+      left: -2,
+      width: 52,
+      height: 52,
+    };
     const obj2 = selected(iconBackground[11]);
     const obj3 = selected(iconBackground[11]);
-    obj[1] = obj3.withSpring(selected(iconBackground[10]).interpolate(derivedValue1.get(), [0, 1], [0, 2]), closure_1_10);
+    obj[1] = obj3.withSpring(
+      selected(iconBackground[10]).interpolate(derivedValue1.get(), [0, 1], [0, 2]),
+      closure_1_10,
+    );
     obj[2] = BRAND_500;
     return obj;
   };
-  obj = { withSpring: selected(tmp2[11]).withSpring, toRadius: derivedValue, springConfig: closure_10, interpolate: selected(tmp2[10]).interpolate, toStrokeWidth: derivedValue1, borderColor: BRAND_500, GUILD_SIZE: c9 };
+  obj = {
+    withSpring: selected(tmp2[11]).withSpring,
+    toRadius: derivedValue,
+    springConfig: closure_10,
+    interpolate: selected(tmp2[10]).interpolate,
+    toStrokeWidth: derivedValue1,
+    borderColor: BRAND_500,
+    GUILD_SIZE: c9,
+  };
   fn2.__closure = obj;
   fn2.__workletHash = 1481885125958;
   fn2.__initData = closure_17;
   const animatedStyle1 = obj4.useAnimatedStyle(fn2);
   class M {
     constructor() {
-      obj = { borderRadius: null, borderWidth: null, borderColor: null, position: "absolute", top: 0, left: 0, width: null, height: null };
+      obj = {
+        borderRadius: null,
+        borderWidth: null,
+        borderColor: null,
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: null,
+        height: null,
+      };
       obj2 = selected(iconBackground[11]);
       obj[0] = obj2.withSpring(closure_4.get(), closure_1_10);
       obj3 = selected(iconBackground[11]);
@@ -283,17 +382,43 @@ export const SimpleGuildContainerAnimated = function SimpleGuildContainerAnimate
       return obj;
     }
   }
-  obj1 = { withSpring: selected(tmp2[11]).withSpring, toRadius: derivedValue, springConfig: closure_10, interpolate: selected(tmp2[10]).interpolate, toStrokeWidth: derivedValue1, backgroundColor, GUILD_SIZE: c9 };
+  obj1 = {
+    withSpring: selected(tmp2[11]).withSpring,
+    toRadius: derivedValue,
+    springConfig: closure_10,
+    interpolate: selected(tmp2[10]).interpolate,
+    toStrokeWidth: derivedValue1,
+    backgroundColor,
+    GUILD_SIZE: c9,
+  };
   M.__closure = obj1;
   M.__workletHash = 11592745547551;
   M.__initData = closure_18;
   obj2 = { children: null };
   const animatedStyle2 = selected(iconBackground[10]).useAnimatedStyle(M);
-  const items = [BRAND_500(backgroundColor(iconBackground[10]).View, { style: animatedStyle, children }), BRAND_500(backgroundColor(iconBackground[10]).View, { style: animatedStyle2 }), BRAND_500(backgroundColor(iconBackground[10]).View, { style: animatedStyle1 }), BRAND_500(closure_13, { backgroundColor, guildId, activityIndicatorState }), BRAND_500(closure_12, { backgroundColor, badge, unread })];
+  const items = [
+    BRAND_500(backgroundColor(iconBackground[10]).View, { style: animatedStyle, children }),
+    BRAND_500(backgroundColor(iconBackground[10]).View, { style: animatedStyle2 }),
+    BRAND_500(backgroundColor(iconBackground[10]).View, { style: animatedStyle1 }),
+    BRAND_500(closure_13, { backgroundColor, guildId, activityIndicatorState }),
+    BRAND_500(closure_12, { backgroundColor, badge, unread }),
+  ];
   obj2[0] = items;
   const tmp10 = callback2(closure_7, obj2);
   if (null != onPress) {
-    let obj3 = { ref: null, style: null, onPress: null, onLongPress: null, accessibilityRole: "button", accessible: true, accessibilityLabel: null, accessibilityState: null, onAccessibilityAction: null, onLayout: null, children: null };
+    let obj3 = {
+      ref: null,
+      style: null,
+      onPress: null,
+      onLongPress: null,
+      accessibilityRole: "button",
+      accessible: true,
+      accessibilityLabel: null,
+      accessibilityState: null,
+      onAccessibilityAction: null,
+      onLayout: null,
+      children: null,
+    };
     obj3[0] = guildIconRef;
     obj3[1] = style;
     obj3[2] = onPress;

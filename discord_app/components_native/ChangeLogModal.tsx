@@ -45,7 +45,7 @@ class ChangeLogScreen {
         return navigation.goBack();
       };
     }
-    items = [, ];
+    items = [,];
     items[0] = changelog;
     items[1] = navigation;
     effect = closure_3.useEffect(() => {
@@ -71,7 +71,7 @@ class ChangeLogScreen {
         navigation.setOptions(obj);
       }
     }, items);
-    items1 = [, ];
+    items1 = [,];
     items1[0] = loaded;
     items1[1] = changelog;
     effect1 = closure_3.useEffect(() => {
@@ -132,31 +132,65 @@ function hideChangeLog() {
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
-createCacheKey = { video: { alignSelf: "center" }, videoWrapper: { marginBottom: 8 }, videoSpecial: null, videoOverlay: null, playButton: null, playIcon: null, empty: null };
+createCacheKey = {
+  video: { alignSelf: "center" },
+  videoWrapper: { marginBottom: 8 },
+  videoSpecial: null,
+  videoOverlay: null,
+  playButton: null,
+  playIcon: null,
+  empty: null,
+};
 createCacheKey = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { position: "absolute", width: "100%", height: "100%" };
-createCacheKey[4] = { position: "absolute", top: "50%", left: "50%", marginLeft: -28, marginTop: -28, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: 56, height: 56 };
+createCacheKey[4] = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  marginLeft: -28,
+  marginTop: -28,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  width: 56,
+  height: 56,
+};
 createCacheKey[5] = { width: 21, height: 21 };
 createCacheKey[6] = { width: "100%", height: 240, alignItems: "center", paddingTop: 48 };
 let closure_10 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 let obj2 = { bulletPoint: null, listItem: null, listText: null, listItemContent: null };
-let obj1 = { position: "absolute", top: "50%", left: "50%", marginLeft: -28, marginTop: -28, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: 56, height: 56 };
-obj2[0] = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
+let obj1 = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  marginLeft: -28,
+  marginTop: -28,
+  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  width: 56,
+  height: 56,
+};
+obj2[0] = {
+  width: 7,
+  height: 7,
+  borderRadius: 3.5,
+  marginRight: 13,
+  marginTop: 7,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+};
 obj2[1] = { flexDirection: "row", marginLeft: 4, marginBottom: 8 };
 createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
 obj2[2] = createCacheKey;
 obj2[3] = { flexDirection: "column", flex: 1 };
 let closure_11 = createCacheKey.createLegacyClassComponentStyles(obj2);
 const PureComponent = importAllResult.PureComponent;
-class ListItem extends PureComponent {
-}
+class ListItem extends PureComponent {}
 ListItem.prototype["render"] = function render() {
   const children = this.props.children;
   const tmp = callback3(this.context);
   let obj = { style: tmp.listItem, children: null };
   obj = { style: tmp.bulletPoint };
-  const items = [callback(View, obj), ];
+  const items = [callback(View, obj)];
   obj = { style: tmp.listText, children: null };
   let childrenResult = children;
   if (typeof children === "function") {
@@ -180,7 +214,13 @@ class ChangeLog extends PureComponent2 {
     applyArgumentsResult.maxScrolledPercentage = 0;
     applyArgumentsResult.state = { ytVideoReady: false };
     applyArgumentsResult.handleScroll = function handleScroll(contentOffset) {
-      applyArgumentsResult.maxScrolledPercentage = Math.min(Math.max(applyArgumentsResult.maxScrolledPercentage, (contentOffset.contentOffset.y + contentOffset.layoutMeasurement.height) / contentOffset.contentSize.height), 1);
+      applyArgumentsResult.maxScrolledPercentage = Math.min(
+        Math.max(
+          applyArgumentsResult.maxScrolledPercentage,
+          (contentOffset.contentOffset.y + contentOffset.layoutMeasurement.height) / contentOffset.contentSize.height,
+        ),
+        1,
+      );
     };
     applyArgumentsResult.playVideo = function playVideo() {
       let obj = applyArgumentsResult;
@@ -202,7 +242,13 @@ class ChangeLog extends PureComponent2 {
       obj.track(closure_1_5.CHANGE_LOG_VIDEO_INTERACTED);
       const current = obj.ref.current;
       if (null != current) {
-        obj1 = { initialSources: null, disableDownload: true, shareable: false, analyticsSource: "Change Log", originViewOrOriginLayout: null };
+        obj1 = {
+          initialSources: null,
+          disableDownload: true,
+          shareable: false,
+          analyticsSource: "Change Log",
+          originViewOrOriginLayout: null,
+        };
         const obj2 = {};
         const merged = Object.assign(obj);
         obj2.width = width;
@@ -275,7 +321,7 @@ prototype["renderVideo"] = function renderVideo() {
       obj1[3] = function onReady() {
         return self.setState({ ytVideoReady: true });
       };
-      const items = [callback(_modDef15142, obj1), ];
+      const items = [callback(_modDef15142, obj1)];
       let tmp6Result = null;
       if (!tmp2) {
         const obj2 = { style: null, source: null };
@@ -302,19 +348,43 @@ prototype["renderVideo"] = function renderVideo() {
   }
   const obj4 = { style: tmp.videoWrapper, onAccessibilityEscape: onClose, children: null };
   const obj5 = { ref: self.ref, style: tmp.videoSpecial, children: null };
-  const obj6 = { style: tmp.video, src: obj, width: props.width, height, paused: true, canOpenFullscreen: true, unmutedOnFullScreen: true, accessibilityLabel: null, onPress: null };
+  const obj6 = {
+    style: tmp.video,
+    src: obj,
+    width: props.width,
+    height,
+    paused: true,
+    canOpenFullscreen: true,
+    unmutedOnFullScreen: true,
+    accessibilityLabel: null,
+    onPress: null,
+  };
   const intl = self(1236).intl;
   obj6[7] = intl.string(self(1236).t.zHeo07);
   obj6[8] = function onPress() {
     self.track(closure_1_5.CHANGE_LOG_VIDEO_INTERACTED);
   };
-  const items1 = [callback(VideoComponentDefault, obj6), ];
+  const items1 = [callback(VideoComponentDefault, obj6)];
   let tmp12Result = null;
   if (null != video) {
-    const obj7 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: null, onPress: null, children: null };
+    const obj7 = {
+      accessibilityLabel: "Play Video",
+      accessibilityRole: "button",
+      style: null,
+      onPress: null,
+      children: null,
+    };
     obj7[2] = tmp.videoOverlay;
     obj7[3] = self.playVideo;
-    const obj8 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: null, onPress: null, style: null, iconSize: null, iconStyle: null };
+    const obj8 = {
+      accessibilityLabel: "Play Video",
+      accessibilityRole: "button",
+      source: null,
+      onPress: null,
+      style: null,
+      iconSize: null,
+      iconStyle: null,
+    };
     obj8[2] = tmp15(10389);
     obj8[3] = self.playVideo;
     obj8[4] = tmp.playButton;
@@ -337,7 +407,14 @@ prototype["render"] = function render() {
   return callback(LHeadingDefault, obj);
 };
 ChangeLog.contextType = require("ManaContext").ThemeContext;
-let obj3 = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
+let obj3 = {
+  width: 7,
+  height: 7,
+  borderRadius: 3.5,
+  marginRight: 13,
+  marginTop: 7,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+};
 let result = require("set").fileFinishedImporting("components_native/ChangeLogModal.tsx");
 
 export default function ChangelogModal() {
@@ -348,12 +425,12 @@ export default function ChangelogModal() {
       headerLeft: callback(table[22]).getHeaderCloseButton(closure_14),
       render() {
         return callback(closure_13, { onClose: closure_14 });
-      }
+      },
     };
     obj[0] = obj;
     return obj;
   }, []);
   return callback(NavigationStack.Navigator, { screens, initialRouteName: "CHANGELOG" });
-};
+}
 export { ListItem };
 export { ChangeLogScreen };

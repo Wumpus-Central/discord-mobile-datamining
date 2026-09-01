@@ -27,8 +27,21 @@ export default function ShowAllRow(users) {
   obj = { style: tmp.labelContainer, children: null };
   obj = { size: Button.AvatarSizes.XSMALL_20, "aria-label": "", children: null };
   const substr = users.slice(0, 2);
-  obj[2] = substr.map((getAvatarSource) => callback2(callback(1297).Avatar, { source: getAvatarSource.getAvatarSource(null, false, callback(1297).AVATAR_SIZE_MAP[callback(undefined, 1297).AvatarSizes.XSMALL]), size: callback(1297).AvatarSizes.XSMALL_20 }, arg1));
-  const items = [callback(AvatarDuoPile.AvatarDuoPile, obj), ];
+  obj[2] = substr.map((getAvatarSource) =>
+    callback2(
+      callback(1297).Avatar,
+      {
+        source: getAvatarSource.getAvatarSource(
+          null,
+          false,
+          callback(1297).AVATAR_SIZE_MAP[callback(undefined, 1297).AvatarSizes.XSMALL],
+        ),
+        size: callback(1297).AvatarSizes.XSMALL_20,
+      },
+      arg1,
+    ),
+  );
+  const items = [callback(AvatarDuoPile.AvatarDuoPile, obj)];
   obj1 = { style: tmp.showAllText, variant: "text-md/semibold", color: "text-brand", children: null };
   const intl = getSystemLocale.intl;
   obj1[3] = intl.format(getSystemLocale.t.NrzztX, { count });
@@ -37,4 +50,4 @@ export default function ShowAllRow(users) {
   obj[3] = callback2(View, obj);
   obj[4] = callback(TableRowInner.TableRow.Arrow, {});
   return callback(TableRowInner.TableRow, obj);
-};
+}

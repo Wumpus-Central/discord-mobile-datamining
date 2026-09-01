@@ -17,7 +17,9 @@ createCacheKey = { paddingTop: ThemesDefault.space.PX_8, paddingHorizontal: Them
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "column" };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildScheduledEventDetailsActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/GuildScheduledEventDetailsActionSheet.tsx",
+);
 
 export default function GuildScheduledEventDetailsActionSheet(eventId) {
   eventId = eventId.eventId;
@@ -37,13 +39,17 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
   obj1 = eventId(stateFromStores[12]);
   let items = [c7];
   const items1 = [eventId, event];
-  stateFromStores = obj1.useStateFromStores(items, () => {
-    let guildScheduledEvent = _undefined3.getGuildScheduledEvent(eventId);
-    if (guildScheduledEvent == null) {
-      guildScheduledEvent = event;
-    }
-    return guildScheduledEvent;
-  }, items1);
+  stateFromStores = obj1.useStateFromStores(
+    items,
+    () => {
+      let guildScheduledEvent = _undefined3.getGuildScheduledEvent(eventId);
+      if (guildScheduledEvent == null) {
+        guildScheduledEvent = event;
+      }
+      return guildScheduledEvent;
+    },
+    items1,
+  );
   let obj2 = eventId(stateFromStores[12]);
   const items2 = [c6];
   let id;
@@ -86,17 +92,20 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
     }
     return tmp4;
   }, items3);
-  let tmp5Result = tmp5(tmp2(tmp3[15])(() => {
-    let id;
-    if (stateFromStores != null) {
-      id = tmp.id;
-    }
-    let guild_id;
-    if (stateFromStores != null) {
-      guild_id = tmp.guild_id;
-    }
-    return event(stateFromStores[16]).getGuildEventUsers(id, null, guild_id);
-  }), 2);
+  let tmp5Result = tmp5(
+    tmp2(tmp3[15])(() => {
+      let id;
+      if (stateFromStores != null) {
+        id = tmp.id;
+      }
+      let guild_id;
+      if (stateFromStores != null) {
+        guild_id = tmp.guild_id;
+      }
+      return event(stateFromStores[16]).getGuildEventUsers(id, null, guild_id);
+    }),
+    2,
+  );
   [c5, tmp18] = tmp5Result;
   ({ loading, error } = tmp18);
   tmp5Result = tmp5(obj.useState(0), 2);
@@ -109,9 +118,7 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
   }, []);
   items4 = [];
   items4[0] = items4.EVENT_INFO;
-  const callback1 = obj.useCallback(() => {
-
-  }, []);
+  const callback1 = obj.useCallback(() => {}, []);
   if (stateFromStores1) {
     items4.push(tmp25.RSVP_LIST);
   }
@@ -143,7 +150,7 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
         id = intl.string(eventId(stateFromStores[9]).t.iW6Xuo);
       }
       return { id, label: id, page: null };
-    })
+    }),
   };
   if (null == stateFromStores) {
     return null;
@@ -153,7 +160,7 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
     obj[1] = callback1;
     obj1 = { event: null };
     obj1[0] = stateFromStores;
-    const items5 = [callback2(tmp8(tmp3[19]).GuildEventCardImageHeader, obj1), ];
+    const items5 = [callback2(tmp8(tmp3[19]).GuildEventCardImageHeader, obj1)];
     let tmp35Result = null;
     if (items4.length > 1) {
       obj2 = { style: null, children: null };
@@ -172,7 +179,14 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
     obj5[3] = closure_11(c5, obj);
     if (tmp31 === tmp25.EVENT_INFO) {
       const obj6 = { children: null };
-      const obj7 = { guildEvent: null, safeBottomPadding: null, onCloseActionSheet: null, onLayout: null, recurrenceId: null, onRecurrencePress: null };
+      const obj7 = {
+        guildEvent: null,
+        safeBottomPadding: null,
+        onCloseActionSheet: null,
+        onLayout: null,
+        recurrenceId: null,
+        onRecurrencePress: null,
+      };
       obj7[0] = stateFromStores;
       obj7[1] = bottom;
       obj7[2] = onCloseActionSheet;
@@ -182,7 +196,14 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
       obj6[0] = tmp35(tmp2(tmp3[23]), obj7);
       tmp35Result = tmp35(tmp8(tmp3[22]).BottomSheetScrollView, obj6);
     } else {
-      const obj8 = { userListItems: null, guildId: null, loading: null, error: null, contentHeight: null, safeBottomPadding: null };
+      const obj8 = {
+        userListItems: null,
+        guildId: null,
+        loading: null,
+        error: null,
+        contentHeight: null,
+        safeBottomPadding: null,
+      };
       obj8[0] = memo;
       obj8[1] = stateFromStores.guild_id;
       obj8[2] = loading;
@@ -196,4 +217,4 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
     return callback2(tmp8(tmp3[10]).AnalyticsLocationProvider, obj4);
   }
   const tmp5Result1 = callback(obj.useState(0), 2);
-};
+}

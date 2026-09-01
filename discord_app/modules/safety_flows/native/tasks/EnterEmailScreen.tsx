@@ -22,7 +22,25 @@ export default function EnterEmailScreen() {
   obj[2] = function onAction() {
     arr = arr.push(arr(closure_1_2[7]).SafetyFlowScreens.VERIFY_EMAIL);
   };
-  obj = { children: jsx(require("../../../../design/components/TextInput/native/TextInput.native.tsx").TextInput, { label: "Email", value: tmp2, onChange: tmp3 }) };
-  obj[3] = jsx(require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, { children: jsx(require("../../../../design/components/TextInput/native/TextInput.native.tsx").TextInput, { label: "Email", value: tmp2, onChange: tmp3 }) });
-  return jsx(SafetyFlowTaskScreenDefault, { children: jsx(require("../../../../design/components/TextInput/native/TextInput.native.tsx").TextInput, { label: "Email", value: tmp2, onChange: tmp3 }) });
-};
+  obj = {
+    children: jsx(require("../../../../design/components/TextInput/native/TextInput.native.tsx").TextInput, {
+      label: "Email",
+      value: tmp2,
+      onChange: tmp3,
+    }),
+  };
+  obj[3] = jsx(require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, {
+    children: jsx(require("../../../../design/components/TextInput/native/TextInput.native.tsx").TextInput, {
+      label: "Email",
+      value: tmp2,
+      onChange: tmp3,
+    }),
+  });
+  return jsx(SafetyFlowTaskScreenDefault, {
+    children: jsx(require("../../../../design/components/TextInput/native/TextInput.native.tsx").TextInput, {
+      label: "Email",
+      value: tmp2,
+      onChange: tmp3,
+    }),
+  });
+}

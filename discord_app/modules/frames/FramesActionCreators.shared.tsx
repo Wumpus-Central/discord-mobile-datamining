@@ -15,7 +15,7 @@ function _launchFrame() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -262,7 +262,7 @@ function _refreshProxyTicket() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -301,7 +301,12 @@ function _refreshProxyTicket() {
                 return { value: false, done: true };
               } else {
                 applicationId = frame.applicationId;
-                obj1 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: true };
+                obj1 = {
+                  type: "FRAME_SET_PROXY_TICKET_REFRESHING",
+                  applicationId: null,
+                  frameId: null,
+                  refreshing: true,
+                };
                 obj1[1] = applicationId;
                 obj1[2] = tmp78;
                 closure_1_1(closure_1_2[5]).dispatch(obj1);
@@ -318,7 +323,12 @@ function _refreshProxyTicket() {
           } else if (1 === tmp9) {
             frame = 0;
             let obj10 = applicationId(709);
-            let obj3 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
+            let obj3 = {
+              type: "FRAME_SET_PROXY_TICKET_REFRESHING",
+              applicationId: null,
+              frameId: null,
+              refreshing: false,
+            };
             obj3[1] = applicationId;
             obj3[2] = callback;
             obj10.dispatch(obj3);
@@ -340,7 +350,12 @@ function _refreshProxyTicket() {
             } else if (arg0 === 2) {
               frame = 0;
               let obj5 = applicationId(709);
-              obj5 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
+              obj5 = {
+                type: "FRAME_SET_PROXY_TICKET_REFRESHING",
+                applicationId: null,
+                frameId: null,
+                refreshing: false,
+              };
               obj5[1] = applicationId;
               obj5[2] = callback;
               obj5.dispatch(obj5);
@@ -353,7 +368,12 @@ function _refreshProxyTicket() {
               closure_3.showLaunchErrorModal(frame.message);
               frame = 0;
               obj3 = applicationId(709);
-              const obj7 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
+              const obj7 = {
+                type: "FRAME_SET_PROXY_TICKET_REFRESHING",
+                applicationId: null,
+                frameId: null,
+                refreshing: false,
+              };
               obj7[1] = applicationId;
               obj7[2] = callback;
               obj3.dispatch(obj7);
@@ -383,7 +403,12 @@ function _refreshProxyTicket() {
             applicationId(709).dispatch(obj10);
             frame = 0;
             const obj16 = applicationId(709);
-            const obj11 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
+            const obj11 = {
+              type: "FRAME_SET_PROXY_TICKET_REFRESHING",
+              applicationId: null,
+              frameId: null,
+              refreshing: false,
+            };
             obj11[1] = applicationId;
             obj11[2] = callback;
             applicationId(709).dispatch(obj11);
@@ -413,7 +438,13 @@ function _refreshProxyTicket() {
   }
   return applyArgumentsResult;
 }
-({ FrameIntent: c5, FrameLayoutModes: closure_6, getChannelIdForSurface: error, getFrameIntentForSurface: closure_8, makeFrameId: c9 } = FrameLayoutModes);
+({
+  FrameIntent: c5,
+  FrameLayoutModes: closure_6,
+  getChannelIdForSurface: error,
+  getFrameIntentForSurface: closure_8,
+  makeFrameId: c9,
+} = FrameLayoutModes);
 let result = require("set").fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 
 export const launchFrame = function launchFrame(closure_0) {
@@ -430,7 +461,10 @@ export { clearMainFrameSlot };
 export { demoteMainFrame };
 export { promoteFrame };
 export { updateFrameLayoutMode };
-export const setFramePrefersPictureInPictureOnNavigateAway = function setFramePrefersPictureInPictureOnNavigateAway(frameId, enabled) {
+export const setFramePrefersPictureInPictureOnNavigateAway = function setFramePrefersPictureInPictureOnNavigateAway(
+  frameId,
+  enabled,
+) {
   let obj = dispatcherDefault;
   obj = { type: "FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY", frameId, enabled };
   obj.dispatch(obj);

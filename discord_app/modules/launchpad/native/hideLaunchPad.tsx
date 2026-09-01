@@ -9,4 +9,4 @@ const result = set.fileFinishedImporting("modules/launchpad/native/hideLaunchPad
 export default function hideLaunchPad() {
   const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
   ComponentDispatch.dispatch(ComponentActions.LAUNCH_PAD_HIDE);
-};
+}

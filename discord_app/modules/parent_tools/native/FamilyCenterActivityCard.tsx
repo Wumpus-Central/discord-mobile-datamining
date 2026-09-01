@@ -37,7 +37,10 @@ function FamilyCenterActivityCardPrefaceText() {
   const intl = getSystemLocale.intl;
   obj = { activeLinks: activeLinkUserIds.length };
   const intl2 = getSystemLocale.intl;
-  const ageSpecificText = obj3.useAgeSpecificText(intl.formatToPlainString(messagesProxyDefault.tazvHQ, obj), intl2.string(messagesProxyDefault.KrLnkE));
+  const ageSpecificText = obj3.useAgeSpecificText(
+    intl.formatToPlainString(messagesProxyDefault.tazvHQ, obj),
+    intl2.string(messagesProxyDefault.KrLnkE),
+  );
   obj = { style: tmp.container, children: null };
   let tmp12 = null;
   if (!tmp4) {
@@ -47,7 +50,7 @@ function FamilyCenterActivityCardPrefaceText() {
     obj1[2] = tmp.icon;
     tmp12 = callback(tmp5(1297).Icon, obj1);
   }
-  const items = [tmp12, , ];
+  const items = [tmp12, ,];
   obj2 = { style: tmp.text, variant: "text-xs/semibold", color: "text-subtle", children: null };
   let tmp15 = ageSpecificText;
   if (activeLinkUserIds.length > 1) {
@@ -62,13 +65,18 @@ function FamilyCenterActivityCardPrefaceText() {
     onPress() {
       callback2(paths[17]).pushLazy(callback(paths[19])(paths[18], paths.paths));
     },
-    children: null
+    children: null,
   };
   const formatToPlainStringResult = intl.formatToPlainString(messagesProxyDefault.tazvHQ, obj);
   const tmp10 = closure_9;
   const tmp11 = View;
   const tmp2Result = renderDefault;
-  obj3[1] = callback(Button.Icon, { color: tmp.icon.color, source: registerAssetDefault, size: Button.Icon.Sizes.EXTRA_SMALL, style: tmp.icon });
+  obj3[1] = callback(Button.Icon, {
+    color: tmp.icon.color,
+    source: registerAssetDefault,
+    size: Button.Icon.Sizes.EXTRA_SMALL,
+    style: tmp.icon,
+  });
   items[2] = callback(tmp2Result, obj3);
   obj[1] = items;
   return tmp10(tmp11, obj);
@@ -132,24 +140,30 @@ class FamilyCenterActivityCardAccountSelect {
     obj3 = require("useFamilyCenterActions");
     obj = {
       onSuccess() {
-            return selectedTeenUser(selectTeenUser[24]).hideActionSheet(closure_10);
-          },
+        return selectedTeenUser(selectTeenUser[24]).hideActionSheet(closure_10);
+      },
       onError() {
-            const intl = activeLinkUsers(selectTeenUser[11]).intl;
-            return activeLinkUsers(selectTeenUser[25]).presentFailedToast(intl.string(selectedTeenUser(selectTeenUser[12]).Wu8BK2));
-          }
+        const intl = activeLinkUsers(selectTeenUser[11]).intl;
+        return activeLinkUsers(selectTeenUser[25]).presentFailedToast(
+          intl.string(selectedTeenUser(selectTeenUser[12]).Wu8BK2),
+        );
+      },
     };
     selectTeenUser = obj3.useFamilyCenterActions(obj).selectTeenUser;
     items = [];
     items[0] = activeLinkUsers;
-    closure_3 = closure_3.useMemo(() => activeLinkUsers.map((id) => {
-      const obj = { label: null, value: null };
-      const name = callback(4322).getName(id);
-      const obj2 = callback(4322);
-      obj[0] = "" + name + " (" + callback(4322).getUserTag(id) + ")";
-      obj[1] = id.id;
-      return obj;
-    }), items);
+    closure_3 = closure_3.useMemo(
+      () =>
+        activeLinkUsers.map((id) => {
+          const obj = { label: null, value: null };
+          const name = callback(4322).getName(id);
+          const obj2 = callback(4322);
+          obj[0] = "" + name + " (" + callback(4322).getUserTag(id) + ")";
+          obj[1] = id.id;
+          return obj;
+        }),
+      items,
+    );
     tmp6 = null;
     if (undefined !== selectedTeenUser) {
       tmp7 = jsx;
@@ -183,7 +197,11 @@ class FamilyCenterActivityCardAccountSelect {
             });
           };
           obj[3] = tmp.id;
-          obj.openLazy(activeLinkUsers(selectTeenUser[19])(selectTeenUser[27], selectTeenUser.paths), closure_1_10, obj);
+          obj.openLazy(
+            activeLinkUsers(selectTeenUser[19])(selectTeenUser[27], selectTeenUser.paths),
+            closure_1_10,
+            obj,
+          );
           const tmp5 = activeLinkUsers(selectTeenUser[19])(selectTeenUser[27], selectTeenUser.paths);
         }
       };
@@ -191,7 +209,7 @@ class FamilyCenterActivityCardAccountSelect {
       obj3 = { user: null, inSelector: true };
       obj3[0] = selectedTeenUser;
       tmp11 = require("render");
-      items1 = [, ];
+      items1 = [,];
       items1[0] = jsx(closure_15, obj3);
       obj4 = { style: null, size: null, source: null };
       obj4[0] = tmp.icon;
@@ -215,12 +233,42 @@ obj[1] = obj;
 createCacheKey = { marginHorizontal: ThemesDefault.space.PX_4 };
 obj[2] = createCacheKey;
 let closure_11 = createCacheKey.createStyles(obj);
-let obj2 = { header: { display: "flex", flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_12, flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopLeftRadius: ThemesDefault.radii.md, borderTopRightRadius: ThemesDefault.radii.md }, avatar: null, avatarContainer: null, userHeader: null, nonSelectorHeader: null };
-let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_12, flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopLeftRadius: ThemesDefault.radii.md, borderTopRightRadius: ThemesDefault.radii.md };
-obj2[1] = { borderRadius: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj2 = {
+  header: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    padding: ThemesDefault.space.PX_12,
+    flex: 1,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+    borderTopLeftRadius: ThemesDefault.radii.md,
+    borderTopRightRadius: ThemesDefault.radii.md,
+  },
+  avatar: null,
+  avatarContainer: null,
+  userHeader: null,
+  nonSelectorHeader: null,
+};
+let obj3 = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  padding: ThemesDefault.space.PX_12,
+  flex: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  borderTopLeftRadius: ThemesDefault.radii.md,
+  borderTopRightRadius: ThemesDefault.radii.md,
+};
+obj2[1] = {
+  borderRadius: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 createCacheKey = { marginRight: ThemesDefault.space.PX_12, alignItems: "flex-start" };
 obj2[2] = createCacheKey;
-let obj4 = { borderRadius: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj4 = {
+  borderRadius: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
 obj2[3] = { display: "flex", flexDirection: "column", width: "100%", paddingRight: ThemesDefault.space.PX_16 };
 const obj6 = { display: "flex", flexDirection: "column", width: "100%", paddingRight: ThemesDefault.space.PX_16 };
 obj2[4] = { flex: 1, paddingRight: ThemesDefault.space.PX_16 };
@@ -238,10 +286,17 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.avatarContainer, children: callback(tmp4(1297).Avatar, obj) };
-  obj = { avatarStyle: tmp.avatar, user, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: user.avatarDecoration, size: 406.685 };
+  obj = {
+    avatarStyle: tmp.avatar,
+    user,
+    guildId: "HermesInternal",
+    disablePlaceholder: null,
+    avatarDecoration: user.avatarDecoration,
+    size: 406.685,
+  };
   obj[5] = NORMAL;
-  const items = [callback(View, obj), ];
-  const items1 = [tmp.userHeader, ];
+  const items = [callback(View, obj)];
+  const items1 = [tmp.userHeader];
   let nonSelectorHeader;
   if (!inSelector) {
     nonSelectorHeader = tmp.nonSelectorHeader;
@@ -258,25 +313,75 @@ memoResult.displayName = "FamilyCenterActivityCardAccount";
 const obj8 = { touch: null, icon: null };
 const obj7 = { flex: 1, paddingRight: ThemesDefault.space.PX_16 };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
-obj8[0] = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST };
-const obj9 = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+obj8[0] = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "flex-start",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+};
+const obj9 = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "flex-start",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+};
 items = [{ rotate: "90deg" }];
-obj8[1] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: ThemesDefault.space.PX_24, height: ThemesDefault.space.PX_24, transform: items, marginHorizontal: ThemesDefault.space.PX_8 };
+obj8[1] = {
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  width: ThemesDefault.space.PX_24,
+  height: ThemesDefault.space.PX_24,
+  transform: items,
+  marginHorizontal: ThemesDefault.space.PX_8,
+};
 let closure_17 = createCacheKey.createStyles(obj8);
-const obj11 = { card: null, preface: null, container: null, content: null, totals: null, first: null, other: null, activities: null, settingsControls: null };
+const obj11 = {
+  card: null,
+  preface: null,
+  container: null,
+  content: null,
+  totals: null,
+  first: null,
+  other: null,
+  activities: null,
+  settingsControls: null,
+};
 createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
 obj11[0] = createCacheKey;
-const obj10 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: ThemesDefault.space.PX_24, height: ThemesDefault.space.PX_24, transform: items, marginHorizontal: ThemesDefault.space.PX_8 };
+const obj10 = {
+  color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  width: ThemesDefault.space.PX_24,
+  height: ThemesDefault.space.PX_24,
+  transform: items,
+  marginHorizontal: ThemesDefault.space.PX_8,
+};
 obj11[1] = { display: "flex", marginBottom: ThemesDefault.space.PX_12 };
 const obj13 = { display: "flex", marginBottom: ThemesDefault.space.PX_12 };
 obj11[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md };
 const obj14 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md };
-obj11[3] = { padding: ThemesDefault.space.PX_16, display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_32 };
-createCacheKey = { display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", gap: ThemesDefault.space.PX_8 };
+obj11[3] = {
+  padding: ThemesDefault.space.PX_16,
+  display: "flex",
+  flexDirection: "column",
+  gap: ThemesDefault.space.PX_32,
+};
+createCacheKey = {
+  display: "flex",
+  flexDirection: "row",
+  flexWrap: "wrap",
+  justifyContent: "space-between",
+  gap: ThemesDefault.space.PX_8,
+};
 obj11[4] = createCacheKey;
 obj11[5] = { width: "100%" };
 obj11[6] = { width: "48.5%" };
-const obj15 = { padding: ThemesDefault.space.PX_16, display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_32 };
+const obj15 = {
+  padding: ThemesDefault.space.PX_16,
+  display: "flex",
+  flexDirection: "column",
+  gap: ThemesDefault.space.PX_32,
+};
 obj11[7] = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_32 };
 const obj17 = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_32 };
 obj11[8] = { marginTop: ThemesDefault.space.PX_24 };
@@ -299,10 +404,10 @@ export default function FamilyCenterActivityCard() {
     obj = { style: null, children: null };
     obj[0] = tmp.preface;
     obj[1] = callback(FamilyCenterActivityCardPrefaceText, {});
-    const items = [callback(View, obj), , ];
+    const items = [callback(View, obj), ,];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.container;
-    const items1 = [callback(FamilyCenterActivityCardHeader, {}), ];
+    const items1 = [callback(FamilyCenterActivityCardHeader, {})];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.content;
     const obj3 = { style: null, children: null };
@@ -312,21 +417,25 @@ export default function FamilyCenterActivityCard() {
       return tmp !== constants.GIFTS;
     });
     obj3[1] = found.map((arg0, arg1) => {
-      [tmp, ] = arg0;
+      [tmp] = arg0;
       if (0 === arg1) {
         let other = closure_0.first;
       } else {
         other = closure_0.other;
       }
-      return closure_1_8(closure_1_4, { style: other, children: closure_1_8(closure_1_1(closure_1_2[31]), { displayType: tmp }) }, "total-" + tmp);
+      return closure_1_8(
+        closure_1_4,
+        { style: other, children: closure_1_8(closure_1_1(closure_1_2[31]), { displayType: tmp }) },
+        "total-" + tmp,
+      );
     });
-    const items2 = [callback(View, obj3), callback(FamilyCenterTopActivityDefault, {}), ];
+    const items2 = [callback(View, obj3), callback(FamilyCenterTopActivityDefault, {})];
     let tmp11Result = null;
     if (tmp6) {
       const obj4 = { style: null, children: null };
       obj4[0] = tmp.activities;
       obj4[1] = sortedActivityTypeConfigs.map((arg0) => {
-        [tmp, ] = arg0;
+        [tmp] = arg0;
         return callback2(callback(table[33]), { displayType }, "section-" + displayType);
       });
       tmp11Result = tmp11(tmp10, obj4);
@@ -344,7 +453,7 @@ export default function FamilyCenterActivityCard() {
     return closure_9(View, obj);
   }
   tmp2 = _require;
-};
+}
 export const FamilyCenterActivityCardAccount = memoResult;
 export { FamilyCenterActivityCardHeader };
 export { FamilyCenterActivityCardAccountSelect };

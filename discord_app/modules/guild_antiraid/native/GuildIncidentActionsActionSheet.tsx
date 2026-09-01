@@ -14,25 +14,36 @@ function DurationSelectionActionSheet(onClose) {
   obj = { title: null };
   const intl = onClose(1236).intl;
   obj[0] = intl.string(onClose(1236).t.vKYZzc);
-  const items = [callback2(onClose(5621).BottomSheetTitleHeader, obj), ];
+  const items = [callback2(onClose(5621).BottomSheetTitleHeader, obj)];
   obj = {
     hasIcons: false,
     children: getTimeframes().map((label) => {
       closure_0 = label;
-      return closure_1_14(onClose(closure_1_2[10]).ActionSheetRow, {
-        label: label.label,
-        onPress() {
-          closure_2_9(label.value);
-          label();
-        }
-      }, label.value);
-    })
+      return closure_1_14(
+        onClose(closure_1_2[10]).ActionSheetRow,
+        {
+          label: label.label,
+          onPress() {
+            closure_2_9(label.value);
+            label();
+          },
+        },
+        label.value,
+      );
+    }),
   };
   items[1] = callback2(onClose(5991).ActionSheetRow.Group, obj);
   obj[0] = items;
   return callback3(onClose(5989).ActionSheet, obj);
 }
-({ resetGuildIncidentsActionSheetStore: c5, setInitialTime: closure_6, setPauseDms: error, setPauseInvites: closure_8, setTime: c9, useGuildIncidentsActionSheetStore: c10 } = useGuildIncidentsActionSheetStore);
+({
+  resetGuildIncidentsActionSheetStore: c5,
+  setInitialTime: closure_6,
+  setPauseDms: error,
+  setPauseInvites: closure_8,
+  setTime: c9,
+  useGuildIncidentsActionSheetStore: c10,
+} = useGuildIncidentsActionSheetStore);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = createCacheKey.createStyles({ beta: { marginLeft: -12 } });
@@ -78,7 +89,7 @@ class GuildIncidentActionsActionSheet {
       tmp10 = GuildFeatures;
       hasItem = features.has(GuildFeatures.INVITES_DISABLED);
     }
-    items1 = [, ];
+    items1 = [,];
     items1[0] = hasDMsDisabledResult;
     items1[1] = hasInvitesDisabledResult;
     effect = pauseInvites.useEffect(() => {
@@ -115,7 +126,16 @@ class GuildIncidentActionsActionSheet {
     if (memo == null) {
       str = "";
     }
-    obj3 = { trailing: tmp15(require("TableRowInner").TableRow.TrailingText, { text: str }), label: null, arrow: true, onPress: null, start: true, end: true, accessibilityLabel: null, accessibilityHint: null };
+    obj3 = {
+      trailing: tmp15(require("TableRowInner").TableRow.TrailingText, { text: str }),
+      label: null,
+      arrow: true,
+      onPress: null,
+      start: true,
+      end: true,
+      accessibilityLabel: null,
+      accessibilityHint: null,
+    };
     intl2 = require("getSystemLocale").intl;
     obj3[1] = intl2.string(require("getSystemLocale").t.vKYZzc);
     obj3[3] = function onPress() {
@@ -127,7 +147,7 @@ class GuildIncidentActionsActionSheet {
     intl3 = require("getSystemLocale").intl;
     obj3[6] = intl3.string(require("getSystemLocale").t.vKYZzc);
     obj3[7] = memo;
-    items4 = [, , , ];
+    items4 = [, , ,];
     items4[0] = tmp15(require("TableRowInner").TableRow, obj3);
     obj4 = { label: null, subLabel: null, value: null, onValueChange: null, disabled: null };
     intl4 = require("getSystemLocale").intl;
@@ -143,7 +163,7 @@ class GuildIncidentActionsActionSheet {
       onDurationSelectorClose(!pauseInvites);
     };
     obj4[4] = hasItem;
-    items5 = [, ];
+    items5 = [,];
     items5[0] = tmp15(require("TableSwitchRow").TableSwitchRow, obj4);
     if (hasItem) {
       obj5 = { icon: null, label: null };
@@ -170,47 +190,55 @@ class GuildIncidentActionsActionSheet {
     items4[2] = tmp15(require("TableSwitchRow").TableSwitchRow, obj7);
     obj8 = {
       onPress() {
-            let obj = guild(time[22]);
-            const result = obj.setGuildIncidentActions(guild.id, pauseInvites, pauseDms, time);
-            obj1 = analyticsData(time[13]);
-            obj1.hideActionSheet("GuildIncidentActionsActionSheet");
-            _undefined();
-            ({ source, alertType, messageId } = analyticsData);
-            obj = { guild_id: guild.id, source, raid_alert_id: messageId, raid_alert_type: alertType, intervention_type_enabled: null, intervention_type_disabled: null, duration: null };
-            const obj3 = analyticsData(time[23]);
-            const tmp = guild;
-            const tmp3 = guild;
-            const tmp4 = pauseInvites;
-            const tmp5 = pauseDms;
-            const tmp7 = analyticsData;
-            obj[4] = guild(time[12]).getEnabledInterventions(pauseInvites, pauseDms);
-            const obj5 = guild(time[12]);
-            obj[5] = guild(time[12]).getDisabledInterventions(pauseInvites, pauseDms);
-            obj[6] = 60 * time;
-            obj3.track(closure_1_12.GUILD_RAID_INTERVENTION_STATE_CHANGE, obj);
-            let tmp11 = !_undefined;
-            if (!_undefined) {
-              tmp11 = !c6;
-            }
-            if (!tmp11) {
-              tmp11 = tmp4;
-            }
-            if (!tmp11) {
-              tmp11 = tmp5;
-            }
-            if (!tmp11) {
-              obj = { content: null, key: "GuildRaidLockdownFeedbackActionSheet" };
-              obj1 = { guildId: null };
-              obj1[0] = tmp3.id;
-              obj[0] = closure_1_14(tmp7(tmp2[24]), obj1);
-              tmp(tmp2[13]).showActionSheet(obj);
-              const tmpResult = tmp(tmp2[13]);
-            }
-          },
+        let obj = guild(time[22]);
+        const result = obj.setGuildIncidentActions(guild.id, pauseInvites, pauseDms, time);
+        obj1 = analyticsData(time[13]);
+        obj1.hideActionSheet("GuildIncidentActionsActionSheet");
+        _undefined();
+        ({ source, alertType, messageId } = analyticsData);
+        obj = {
+          guild_id: guild.id,
+          source,
+          raid_alert_id: messageId,
+          raid_alert_type: alertType,
+          intervention_type_enabled: null,
+          intervention_type_disabled: null,
+          duration: null,
+        };
+        const obj3 = analyticsData(time[23]);
+        const tmp = guild;
+        const tmp3 = guild;
+        const tmp4 = pauseInvites;
+        const tmp5 = pauseDms;
+        const tmp7 = analyticsData;
+        obj[4] = guild(time[12]).getEnabledInterventions(pauseInvites, pauseDms);
+        const obj5 = guild(time[12]);
+        obj[5] = guild(time[12]).getDisabledInterventions(pauseInvites, pauseDms);
+        obj[6] = 60 * time;
+        obj3.track(closure_1_12.GUILD_RAID_INTERVENTION_STATE_CHANGE, obj);
+        let tmp11 = !_undefined;
+        if (!_undefined) {
+          tmp11 = !c6;
+        }
+        if (!tmp11) {
+          tmp11 = tmp4;
+        }
+        if (!tmp11) {
+          tmp11 = tmp5;
+        }
+        if (!tmp11) {
+          obj = { content: null, key: "GuildRaidLockdownFeedbackActionSheet" };
+          obj1 = { guildId: null };
+          obj1[0] = tmp3.id;
+          obj[0] = closure_1_14(tmp7(tmp2[24]), obj1);
+          tmp(tmp2[13]).showActionSheet(obj);
+          const tmpResult = tmp(tmp2[13]);
+        }
+      },
       text: null,
       variant: "primary",
       size: "md",
-      disabled: null
+      disabled: null,
     };
     intl9 = require("getSystemLocale").intl;
     obj8[1] = intl9.string(require("getSystemLocale").t["R3BPH+"]);
@@ -221,7 +249,7 @@ class GuildIncidentActionsActionSheet {
       analyticsData(time[13]).hideActionSheet("GuildIncidentActionsActionSheet");
       _undefined();
     };
-    items6 = [, ];
+    items6 = [,];
     items6[0] = tmp15(require("Button").Button, obj8);
     obj10 = { onPress: handleClose, text: null, variant: "secondary", size: "md" };
     intl10 = require("getSystemLocale").intl;

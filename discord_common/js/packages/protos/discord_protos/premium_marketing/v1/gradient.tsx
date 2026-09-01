@@ -6,7 +6,7 @@ import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 require = arg1;
 class Gradient$Type extends MessageType {
   constructor() {
-    items = [, ];
+    items = [,];
     items[0] = { no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 };
     items[1] = { no: 2, name: "angle", kind: "scalar", T: 2 };
     tmp = new tmp("discord_protos.premium_marketing.v1.Gradient", items, new.target);
@@ -106,9 +106,22 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(colors, tag, wri
   }
   return tag;
 };
-let items = [{ no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 }, { no: 2, name: "angle", kind: "scalar", T: 2 }];
-prototype = new prototype("discord_protos.premium_marketing.v1.Gradient", items, tmp, Gradient$Type, prototype, items, arg1);
+let items = [
+  { no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 },
+  { no: 2, name: "angle", kind: "scalar", T: 2 },
+];
+prototype = new prototype(
+  "discord_protos.premium_marketing.v1.Gradient",
+  items,
+  tmp,
+  Gradient$Type,
+  prototype,
+  items,
+  arg1,
+);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gradient.tsx");
+let result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gradient.tsx",
+);
 
 export const Gradient = prototype;

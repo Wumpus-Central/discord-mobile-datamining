@@ -58,7 +58,7 @@ function SelfStreamCard(sharedCoords) {
     obj[0] = tmp.blackBackground;
     tmp9 = callback(stream(tmp4[22]), obj);
   }
-  const items1 = [tmp9, , ];
+  const items1 = [tmp9, ,];
   obj1 = { style: animatedStyle, variant: null, color: "text-overlay-light", children: null };
   let str = "text-sm/semibold";
   if (isFocused) {
@@ -75,7 +75,7 @@ function SelfStreamCard(sharedCoords) {
     obj3[0] = tmp.selfStreamFocusedSubtitle;
     const intl2 = tmp3(tmp4[23]).intl;
     obj3[3] = intl2.string(tmp3(tmp4[23]).t.dKeLGt);
-    const items2 = [tmp11(tmp3(tmp4[15]).Text, obj3), ];
+    const items2 = [tmp11(tmp3(tmp4[15]).Text, obj3)];
     const obj4 = { size: "lg", variant: "primary-overlay", onPress: null, text: null };
     obj4[2] = callback;
     const intl3 = tmp3(tmp4[23]).intl;
@@ -142,7 +142,17 @@ function SpeakingIndicator(id) {
     obj[1] = id(speaking[37]).withSpring(num2, closure_1_12, str);
     return obj;
   };
-  obj = { mode, VoicePanelModes: closure_10, focused, id, withSpring: id(speaking[37]).withSpring, computeCardBorderRadius: isSelf(speaking[41]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS: closure_12 };
+  obj = {
+    mode,
+    VoicePanelModes: closure_10,
+    focused,
+    id,
+    withSpring: id(speaking[37]).withSpring,
+    computeCardBorderRadius: isSelf(speaking[41]),
+    isSelf,
+    defaultBorderRadius: token,
+    SPEAKING_PHYSICS: closure_12,
+  };
   fn.__closure = obj;
   fn.__workletHash = 5111620492405;
   fn.__initData = closure_38;
@@ -195,7 +205,21 @@ function SpeakingIndicator(id) {
     obj[1] = id(speaking[37]).withSpring(num2, closure_1_12, str);
     return obj;
   };
-  obj = { mode, VoicePanelModes: closure_10, focused, id, withSpring: id(speaking[37]).withSpring, computeCardBorderRadius: isSelf(speaking[41]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS: closure_12, speaking, roundToNearestPixel: isSelf(speaking[42]), SPEAKING_BORDER_SIZE: 3, SPEAKING_INSET: 2 };
+  obj = {
+    mode,
+    VoicePanelModes: closure_10,
+    focused,
+    id,
+    withSpring: id(speaking[37]).withSpring,
+    computeCardBorderRadius: isSelf(speaking[41]),
+    isSelf,
+    defaultBorderRadius: token,
+    SPEAKING_PHYSICS: closure_12,
+    speaking,
+    roundToNearestPixel: isSelf(speaking[42]),
+    SPEAKING_BORDER_SIZE: 3,
+    SPEAKING_INSET: 2,
+  };
   fn2.__closure = obj;
   fn2.__workletHash = 13144186988728;
   fn2.__initData = closure_39;
@@ -249,7 +273,19 @@ function SpeakingIndicator(id) {
     obj[1] = id(speaking[37]).withSpring(num2, closure_1_12, str);
     return obj;
   };
-  obj1 = { mode, VoicePanelModes: closure_10, focused, id, withSpring: id(speaking[37]).withSpring, computeCardBorderRadius: isSelf(speaking[41]), isSelf, defaultBorderRadius: token, SPEAKING_PHYSICS: closure_12, speaking, SPEAKING_BORDER_SIZE: 3 };
+  obj1 = {
+    mode,
+    VoicePanelModes: closure_10,
+    focused,
+    id,
+    withSpring: id(speaking[37]).withSpring,
+    computeCardBorderRadius: isSelf(speaking[41]),
+    isSelf,
+    defaultBorderRadius: token,
+    SPEAKING_PHYSICS: closure_12,
+    speaking,
+    SPEAKING_BORDER_SIZE: 3,
+  };
   fn3.__closure = obj1;
   fn3.__workletHash = 2850608131549;
   fn3.__initData = closure_40;
@@ -258,7 +294,7 @@ function SpeakingIndicator(id) {
   items = [tmp2.speakingIndicatorWrapper, animatedStyle];
   const obj6 = id(speaking[14]);
   const items1 = [tmp2.speakingIndicatorUnderlay, animatedStyle1];
-  const items2 = [callback(isSelf(speaking[38]), { style: items1, layout }), ];
+  const items2 = [callback(isSelf(speaking[38]), { style: items1, layout })];
   const items3 = [tmp2.speakingIndicatorGreenBar, animatedStyle2];
   items2[1] = callback(isSelf(speaking[38]), { style: items3, layout });
   obj2[3] = items2;
@@ -504,7 +540,16 @@ function AnimatedWrapper(children) {
       return;
     }
   }
-  obj1 = { cheapWorkletShallowEqual: tmp5(tmp2[43]).cheapWorkletShallowEqual, VoicePanelModes: tmp9, TransitionStates: tmp5(tmp2[44]).TransitionStates, sharedVisible, isScrollVisible, runOnJS: tmp5(tmp2[14]).runOnJS, cleanUp, id };
+  obj1 = {
+    cheapWorkletShallowEqual: tmp5(tmp2[43]).cheapWorkletShallowEqual,
+    VoicePanelModes: tmp9,
+    TransitionStates: tmp5(tmp2[44]).TransitionStates,
+    sharedVisible,
+    isScrollVisible,
+    runOnJS: tmp5(tmp2[14]).runOnJS,
+    cleanUp,
+    id,
+  };
   P.__closure = obj1;
   P.__workletHash = 17099686269568;
   P.__initData = closure_46;
@@ -535,7 +580,16 @@ function AnimatedWrapper(children) {
         tmp11 = transitionState;
         tmp9 = closure_24.showSecondaryPIP ? obj.containerHeight : obj.height;
         obj3 = id(transitionState[48]);
-        obj = { pipX: null, pipY: null, width: null, height: null, windowDimensions: null, safeArea: null, bottomAvoidanceRegion: null, topAvoidanceRegion: null };
+        obj = {
+          pipX: null,
+          pipY: null,
+          width: null,
+          height: null,
+          windowDimensions: null,
+          safeArea: null,
+          bottomAvoidanceRegion: null,
+          topAvoidanceRegion: null,
+        };
         tmp12 = wrapperDimensions;
         obj[0] = wrapperDimensions.get().pipX;
         obj[1] = wrapperDimensions.get().pipY;
@@ -695,7 +749,13 @@ function AnimatedWrapper(children) {
             obj = closure_1_0(closure_1_2[14]);
           }
         };
-        obj4 = { sharedVisible: null, sharedTransitionState: null, TransitionStates: null, runOnJS: null, cleanUp: null };
+        obj4 = {
+          sharedVisible: null,
+          sharedTransitionState: null,
+          TransitionStates: null,
+          runOnJS: null,
+          cleanUp: null,
+        };
         obj4[0] = obj6;
         tmp44 = closure_30;
         obj4[1] = closure_30;
@@ -731,7 +791,7 @@ function AnimatedWrapper(children) {
         }
         obj5 = { translateX: null };
         obj5[0] = withSpringResult;
-        items = [, , ];
+        items = [, ,];
         items[0] = obj5;
         withSpringResult1 = value2;
         if (!gestureActive) {
@@ -763,7 +823,44 @@ function AnimatedWrapper(children) {
       return;
     }
   }
-  obj2 = { coords, focused, id, isPIP: tmp20, pipState: pIPState, getClampedPIPPosition: tmp5(tmp2[48]).getClampedPIPPosition, wrapperDimensions, windowDimensions, safeArea, pipAvoidanceSpecs, derivedScrollValue: derivedValue1, xOffset: derivedValue2, calculateContentCenterOffset: tmp(tmp2[49]), contentDimensions, sharedTransitionState: sharedValue, TransitionStates: tmp5(tmp2[44]).TransitionStates, zIndexOverride: derivedValue, computeCardBorderRadius: tmp(tmp2[41]), mode, isSelf, defaultBorderRadius: token, sharedVisible, isRTCConnected, CONNECTING_OPACITY: derivedValue1, wrapperOffset, withDelay: tmp5(tmp2[14]).withDelay, withTiming: tmp5(tmp2[36]).withTiming, ZINDEX_TIMING: derivedValue, OPACITY_TIMING: id2, isScrollVisible, runOnJS: tmp5(tmp2[14]).runOnJS, cleanUp, withSpring: tmp5(tmp2[37]).withSpring, layoutPhysics, CARD_SCALE_PHYSICS: isSelf, SCALE_PHYSICS: c19 };
+  obj2 = {
+    coords,
+    focused,
+    id,
+    isPIP: tmp20,
+    pipState: pIPState,
+    getClampedPIPPosition: tmp5(tmp2[48]).getClampedPIPPosition,
+    wrapperDimensions,
+    windowDimensions,
+    safeArea,
+    pipAvoidanceSpecs,
+    derivedScrollValue: derivedValue1,
+    xOffset: derivedValue2,
+    calculateContentCenterOffset: tmp(tmp2[49]),
+    contentDimensions,
+    sharedTransitionState: sharedValue,
+    TransitionStates: tmp5(tmp2[44]).TransitionStates,
+    zIndexOverride: derivedValue,
+    computeCardBorderRadius: tmp(tmp2[41]),
+    mode,
+    isSelf,
+    defaultBorderRadius: token,
+    sharedVisible,
+    isRTCConnected,
+    CONNECTING_OPACITY: derivedValue1,
+    wrapperOffset,
+    withDelay: tmp5(tmp2[14]).withDelay,
+    withTiming: tmp5(tmp2[36]).withTiming,
+    ZINDEX_TIMING: derivedValue,
+    OPACITY_TIMING: id2,
+    isScrollVisible,
+    runOnJS: tmp5(tmp2[14]).runOnJS,
+    cleanUp,
+    withSpring: tmp5(tmp2[37]).withSpring,
+    layoutPhysics,
+    CARD_SCALE_PHYSICS: isSelf,
+    SCALE_PHYSICS: c19,
+  };
   A.__closure = obj2;
   A.__workletHash = 9934021851336;
   A.__initData = closure_52;
@@ -778,7 +875,7 @@ function AnimatedWrapper(children) {
       }
     },
     onDoubleTap: null,
-    onLongPress: null
+    onLongPress: null,
   };
   const tmp5Result6 = id(transitionState[14]);
   let tmpResult = importDefault(transitionState[50]);
@@ -801,7 +898,13 @@ function AnimatedWrapper(children) {
   obj3[2] = fn5;
   let fn6;
   if (null != id2) {
-    fn6 = () => lib(transitionState[51])({ userId: id2, channelId: sharedValue, isVoiceContext: true, sourceAnalyticsLocations: sharedVisible });
+    fn6 = () =>
+      lib(transitionState[51])({
+        userId: id2,
+        channelId: sharedValue,
+        isVoiceContext: true,
+        sourceAnalyticsLocations: sharedVisible,
+      });
   }
   obj3[3] = fn6;
   const items1 = [pIPState.mode === pipAvoidanceSpecs.IN_APP, panelCardStillInPIP];
@@ -810,9 +913,19 @@ function AnimatedWrapper(children) {
     const result = panelCardStillInPIP.set(closure_31);
   }, items1);
   function be(currentOriginX) {
-    obj = { originX: currentOriginX.currentOriginX, originY: currentOriginX.currentOriginY, width: currentOriginX.currentWidth, height: currentOriginX.currentHeight };
+    obj = {
+      originX: currentOriginX.currentOriginX,
+      originY: currentOriginX.currentOriginY,
+      width: currentOriginX.currentWidth,
+      height: currentOriginX.currentHeight,
+    };
     obj = { animations: null, initialValues: null, callback: null };
-    obj = { originX: id(transitionState[37]).withSpring(currentOriginX.targetOriginX, focused, "animate-always"), originY: null, width: null, height: null };
+    obj = {
+      originX: id(transitionState[37]).withSpring(currentOriginX.targetOriginX, focused, "animate-always"),
+      originY: null,
+      width: null,
+      height: null,
+    };
     const obj4 = id(transitionState[37]);
     obj[1] = id(transitionState[37]).withSpring(currentOriginX.targetOriginY, focused, "animate-always");
     const obj5 = id(transitionState[37]);
@@ -841,10 +954,23 @@ function AnimatedWrapper(children) {
   const callback1 = obj.useCallback(be, items2);
   let obj4 = { withSpring: id(transitionState[37]).withSpring, layoutPhysics, wrapperOffset };
   const items3 = [tmp3.positionWrapper, animatedStyle];
-  return windowDimensions(id(transitionState[52]).GestureDetector, { gesture: tmpResultResult, children: windowDimensions(importDefault(transitionState[38]), { style: items3, layout: callback1, children: children.children }) });
+  return windowDimensions(id(transitionState[52]).GestureDetector, {
+    gesture: tmpResultResult,
+    children: windowDimensions(importDefault(transitionState[38]), {
+      style: items3,
+      layout: callback1,
+      children: children.children,
+    }),
+  });
 }
 let c4 = importAllResult;
-({ VoicePanelCTACard: c9, VoicePanelModes: c10, MODE_CHANGE_PHYSICS: unpackModuleId, SPEAKING_PHYSICS: closure_12, VoicePanelCardItemType: map1 } = VoicePanelModes);
+({
+  VoicePanelCTACard: c9,
+  VoicePanelModes: c10,
+  MODE_CHANGE_PHYSICS: unpackModuleId,
+  SPEAKING_PHYSICS: closure_12,
+  VoicePanelCardItemType: map1,
+} = VoicePanelModes);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
 let closure_23 = importDefaultResult.createAnimatedComponent(require("Text").Text);
 let closure_24 = importDefaultResult.createAnimatedComponent(LinearGradientDefault);
@@ -855,19 +981,63 @@ obj.stiffness = 150;
 let closure_26 = { duration: 200 };
 let closure_27 = { duration: 0 };
 let c28 = 0.75;
-obj = { positionWrapper: null, userRoundedCard: null, nonUserRoundedCard: null, blackBackground: null, selfStreamFocusedSubtitle: null, avatarImageMaskStyles: null, avatarPlaceholder: null, image: null, speakingIndicatorWrapper: null, speakingIndicatorUnderlay: null, speakingIndicatorGreenBar: null };
+obj = {
+  positionWrapper: null,
+  userRoundedCard: null,
+  nonUserRoundedCard: null,
+  blackBackground: null,
+  selfStreamFocusedSubtitle: null,
+  avatarImageMaskStyles: null,
+  avatarPlaceholder: null,
+  image: null,
+  speakingIndicatorWrapper: null,
+  speakingIndicatorUnderlay: null,
+  speakingIndicatorGreenBar: null,
+};
 const importDefaultResult1 = importDefaultResult;
 obj[0] = { position: "absolute", top: 0, left: 0, overflow: "hidden", backgroundColor: ThemesDefault.colors.BLACK };
 let obj1 = { position: "absolute", top: 0, left: 0, overflow: "hidden", backgroundColor: ThemesDefault.colors.BLACK };
-obj[1] = { position: "absolute", top: -4, left: -4, bottom: -4, right: -4, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800 };
-let obj2 = { position: "absolute", top: -4, left: -4, bottom: -4, right: -4, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800 };
-obj[2] = { position: "absolute", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
+obj[1] = {
+  position: "absolute",
+  top: -4,
+  left: -4,
+  bottom: -4,
+  right: -4,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800,
+};
+let obj2 = {
+  position: "absolute",
+  top: -4,
+  left: -4,
+  bottom: -4,
+  right: -4,
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800,
+};
+obj[2] = {
+  position: "absolute",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "100%",
+  height: "100%",
+  backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND,
+};
 createCacheKey = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.backgroundColor = "black";
 obj[3] = createCacheKey;
 obj[4] = { textAlign: "center", marginTop: 4, marginBottom: 40 };
-let obj3 = { position: "absolute", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
+let obj3 = {
+  position: "absolute",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "100%",
+  height: "100%",
+  backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND,
+};
 obj[5] = { position: "relative", borderRadius: ThemesDefault.radii.round, overflow: "hidden" };
 let obj5 = { position: "relative", borderRadius: ThemesDefault.radii.round, overflow: "hidden" };
 obj[6] = { width: tmp4, height: tmp4, borderRadius: ThemesDefault.radii.round, backgroundColor: "rgba(0,0,0,0.3)" };
@@ -885,9 +1055,15 @@ const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 obj9.borderColor = ThemesDefault.unsafe_rawColors.GREEN_360;
 obj[10] = obj9;
 let closure_29 = createCacheKey.createStyles(obj);
-let closure_30 = { code: "function VoicePanelCardTsx1(){const{isFocused,sharedCoords}=this.__closure;return{textAlign:'center',paddingHorizontal:16,paddingVertical:isFocused?0:16,width:isFocused?'auto':sharedCoords.get().width};}" };
-let closure_32 = { code: "function VoicePanelCardTsx2(){const{focused,id}=this.__closure;var _focused$get;return((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;}" };
-let closure_33 = { code: "function VoicePanelCardTsx3(isFocused,lastIsFocused){const{runOnJS,setIsFocused}=this.__closure;if(isFocused!==lastIsFocused){runOnJS(setIsFocused)(isFocused);}}" };
+let closure_30 = {
+  code: "function VoicePanelCardTsx1(){const{isFocused,sharedCoords}=this.__closure;return{textAlign:'center',paddingHorizontal:16,paddingVertical:isFocused?0:16,width:isFocused?'auto':sharedCoords.get().width};}",
+};
+let closure_32 = {
+  code: "function VoicePanelCardTsx2(){const{focused,id}=this.__closure;var _focused$get;return((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;}",
+};
+let closure_33 = {
+  code: "function VoicePanelCardTsx3(isFocused,lastIsFocused){const{runOnJS,setIsFocused}=this.__closure;if(isFocused!==lastIsFocused){runOnJS(setIsFocused)(isFocused);}}",
+};
 let closure_34 = importAllResult.memo((id) => {
   id = id.id;
   const userId = id.userId;
@@ -904,7 +1080,14 @@ let closure_34 = importAllResult.memo((id) => {
   obj = id(streamGuildId[26]);
   const items = [c6];
   const items1 = [userId, streamGuildId];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ stream: _undefined.getStreamForUser(userId, streamGuildId), activeStream: _undefined.getActiveStreamForUser(userId, streamGuildId) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(
+    items,
+    () => ({
+      stream: _undefined.getStreamForUser(userId, streamGuildId),
+      activeStream: _undefined.getActiveStreamForUser(userId, streamGuildId),
+    }),
+    items1,
+  );
   stream = stateFromStoresObject.stream;
   const activeStream = stateFromStoresObject.activeStream;
   const items2 = [stream, setFocused];
@@ -992,7 +1175,18 @@ let closure_34 = importAllResult.memo((id) => {
               tmp15 = callback(tmp4(tmp2[31]).StreamTextOverlay, obj4);
             }
           }
-          const obj6 = { layout: null, id: null, streamId: null, userId: null, streamKey: null, isScrollVisible: null, videoSpinnerContext: null, sharedCoords: null, isCamera: false, paused: null };
+          const obj6 = {
+            layout: null,
+            id: null,
+            streamId: null,
+            userId: null,
+            streamKey: null,
+            isScrollVisible: null,
+            videoSpinnerContext: null,
+            sharedCoords: null,
+            isCamera: false,
+            paused: null,
+          };
           obj6[0] = layout;
           obj6[1] = id;
           tmpResult = tmp(tmp2[32]);
@@ -1023,8 +1217,12 @@ let closure_34 = importAllResult.memo((id) => {
   }
   const tmp11 = userId(streamGuildId[27]);
 });
-let closure_35 = { code: "function VoicePanelCardTsx4(){const{withTiming,isRinging,CONNECTING_OPACITY,solidBackgroundColor}=this.__closure;return{opacity:withTiming(isRinging?CONNECTING_OPACITY:1,{duration:100},'animate-always'),backgroundColor:solidBackgroundColor};}" };
-let closure_36 = { code: "function VoicePanelCardTsx5(){const{withSpring,mode,VoicePanelModes,layoutPhysics}=this.__closure;return{transform:[{scale:withSpring(mode.get()===VoicePanelModes.PIP?64/80:1,layoutPhysics)}]};}" };
+let closure_35 = {
+  code: "function VoicePanelCardTsx4(){const{withTiming,isRinging,CONNECTING_OPACITY,solidBackgroundColor}=this.__closure;return{opacity:withTiming(isRinging?CONNECTING_OPACITY:1,{duration:100},'animate-always'),backgroundColor:solidBackgroundColor};}",
+};
+let closure_36 = {
+  code: "function VoicePanelCardTsx5(){const{withSpring,mode,VoicePanelModes,layoutPhysics}=this.__closure;return{transform:[{scale:withSpring(mode.get()===VoicePanelModes.PIP?64/80:1,layoutPhysics)}]};}",
+};
 let closure_37 = importAllResult.memo(function AnimatedUserCardInner(isRinging) {
   isRinging = isRinging.isRinging;
   ({ layout, avatarURI, avatarDecoration, layoutPhysics } = isRinging);
@@ -1091,7 +1289,7 @@ let closure_37 = importAllResult.memo(function AnimatedUserCardInner(isRinging) 
     obj2[4] = layout;
     tmp12 = callback(closure_24, obj2);
   }
-  const items1 = [tmp12, ];
+  const items1 = [tmp12];
   if (null == cachedSourceFromURI) {
     const obj3 = { style: null };
     obj3[0] = tmp.avatarPlaceholder;
@@ -1125,12 +1323,21 @@ let closure_37 = importAllResult.memo(function AnimatedUserCardInner(isRinging) 
   obj1[2] = items1;
   return closure_22(tmp2Result, obj1);
 });
-let closure_38 = { code: "function VoicePanelCardTsx6(){const{mode,VoicePanelModes,focused,id,withSpring,computeCardBorderRadius,isSelf,defaultBorderRadius,SPEAKING_PHYSICS}=this.__closure;var _focused$get,_focused$get2;const disable=mode.get()!==VoicePanelModes.PIP&&((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;return{opacity:disable?0:1,borderRadius:withSpring(disable?0:computeCardBorderRadius({id:id,mode:mode.get(),focused:(_focused$get2=focused.get())===null||_focused$get2===void 0?void 0:_focused$get2.id,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius}),SPEAKING_PHYSICS,!disable?'animate-always':'animate-never')};}" };
-let closure_39 = { code: "function VoicePanelCardTsx7(){const{mode,VoicePanelModes,focused,id,withSpring,computeCardBorderRadius,isSelf,defaultBorderRadius,SPEAKING_PHYSICS,speaking,roundToNearestPixel,SPEAKING_BORDER_SIZE,SPEAKING_INSET}=this.__closure;var _focused$get,_focused$get2;const disable=mode.get()===VoicePanelModes.PIP||((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;return{borderRadius:withSpring(!disable?computeCardBorderRadius({id:id,mode:mode.get(),focused:(_focused$get2=focused.get())===null||_focused$get2===void 0?void 0:_focused$get2.id,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius}):0,SPEAKING_PHYSICS,!disable?'animate-always':'animate-never'),borderWidth:withSpring(!disable&&speaking.get()?roundToNearestPixel(SPEAKING_BORDER_SIZE+SPEAKING_INSET):0,SPEAKING_PHYSICS,!disable?'animate-always':'animate-never')};}" };
-let closure_40 = { code: "function VoicePanelCardTsx8(){const{mode,VoicePanelModes,focused,id,withSpring,computeCardBorderRadius,isSelf,defaultBorderRadius,SPEAKING_PHYSICS,speaking,SPEAKING_BORDER_SIZE}=this.__closure;var _focused$get,_focused$get2;const disable=mode.get()===VoicePanelModes.PIP||((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;return{borderRadius:withSpring(!disable?computeCardBorderRadius({id:id,mode:mode.get(),focused:(_focused$get2=focused.get())===null||_focused$get2===void 0?void 0:_focused$get2.id,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius}):0,SPEAKING_PHYSICS,!disable?'animate-always':'animate-never'),borderWidth:withSpring(!disable&&speaking.get()?SPEAKING_BORDER_SIZE:0,SPEAKING_PHYSICS,!disable?'animate-always':'animate-never')};}" };
+let closure_38 = {
+  code: "function VoicePanelCardTsx6(){const{mode,VoicePanelModes,focused,id,withSpring,computeCardBorderRadius,isSelf,defaultBorderRadius,SPEAKING_PHYSICS}=this.__closure;var _focused$get,_focused$get2;const disable=mode.get()!==VoicePanelModes.PIP&&((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;return{opacity:disable?0:1,borderRadius:withSpring(disable?0:computeCardBorderRadius({id:id,mode:mode.get(),focused:(_focused$get2=focused.get())===null||_focused$get2===void 0?void 0:_focused$get2.id,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius}),SPEAKING_PHYSICS,!disable?'animate-always':'animate-never')};}",
+};
+let closure_39 = {
+  code: "function VoicePanelCardTsx7(){const{mode,VoicePanelModes,focused,id,withSpring,computeCardBorderRadius,isSelf,defaultBorderRadius,SPEAKING_PHYSICS,speaking,roundToNearestPixel,SPEAKING_BORDER_SIZE,SPEAKING_INSET}=this.__closure;var _focused$get,_focused$get2;const disable=mode.get()===VoicePanelModes.PIP||((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;return{borderRadius:withSpring(!disable?computeCardBorderRadius({id:id,mode:mode.get(),focused:(_focused$get2=focused.get())===null||_focused$get2===void 0?void 0:_focused$get2.id,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius}):0,SPEAKING_PHYSICS,!disable?'animate-always':'animate-never'),borderWidth:withSpring(!disable&&speaking.get()?roundToNearestPixel(SPEAKING_BORDER_SIZE+SPEAKING_INSET):0,SPEAKING_PHYSICS,!disable?'animate-always':'animate-never')};}",
+};
+let closure_40 = {
+  code: "function VoicePanelCardTsx8(){const{mode,VoicePanelModes,focused,id,withSpring,computeCardBorderRadius,isSelf,defaultBorderRadius,SPEAKING_PHYSICS,speaking,SPEAKING_BORDER_SIZE}=this.__closure;var _focused$get,_focused$get2;const disable=mode.get()===VoicePanelModes.PIP||((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;return{borderRadius:withSpring(!disable?computeCardBorderRadius({id:id,mode:mode.get(),focused:(_focused$get2=focused.get())===null||_focused$get2===void 0?void 0:_focused$get2.id,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius}):0,SPEAKING_PHYSICS,!disable?'animate-always':'animate-never'),borderWidth:withSpring(!disable&&speaking.get()?SPEAKING_BORDER_SIZE:0,SPEAKING_PHYSICS,!disable?'animate-always':'animate-never')};}",
+};
 let closure_42 = importAllResult.memo((id) => {
   closure_0 = id;
-  const tmp = id(importAllResult.useState(() => closure_1_8.isSpeaking(id.id)), 2);
+  const tmp = id(
+    importAllResult.useState(() => closure_1_8.isSpeaking(id.id)),
+    2,
+  );
   const first = tmp[0];
   closure_2 = tmp[1];
   id = id.id;
@@ -1156,10 +1363,18 @@ let closure_42 = importAllResult.memo((id) => {
   }
   return tmp4;
 });
-let closure_43 = { code: "function VoicePanelCardTsx9(){const{focused}=this.__closure;var _focused$get;return(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id;}" };
-let closure_44 = { code: "function VoicePanelCardTsx10(focusedId,previous){const{runOnJS,handleFocusedParticipantChange}=this.__closure;if(focusedId===previous)return;runOnJS(handleFocusedParticipantChange)(focusedId);}" };
-let closure_45 = { code: "function VoicePanelCardTsx11(){const{mode,focused,sharedTransitionState}=this.__closure;return{mode:mode.get(),focused:focused.get(),transitionState:sharedTransitionState.get()};}" };
-let closure_46 = { code: "function VoicePanelCardTsx12(props,previous){const{cheapWorkletShallowEqual,VoicePanelModes,TransitionStates,sharedVisible,isScrollVisible,runOnJS,cleanUp,id}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,focused:focused,transitionState:transitionState}=props;const isPIPMode=mode===VoicePanelModes.PIP;const manuallyFocusedId=focused===null||focused===void 0?void 0:focused.id;if(previous==null&&transitionState!==TransitionStates.YEETED){sharedVisible.set(1);}else if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1&&isScrollVisible.get()){sharedVisible.set(0);}else{runOnJS(cleanUp)();}}else if((previous===null||previous===void 0?void 0:previous.transitionState)===TransitionStates.YEETED){sharedVisible.set(1);}else if(!isPIPMode){if(manuallyFocusedId==null){sharedVisible.set(1);}else{if(manuallyFocusedId!==id){sharedVisible.set(0);}else{sharedVisible.set(1);}}}}" };
+let closure_43 = {
+  code: "function VoicePanelCardTsx9(){const{focused}=this.__closure;var _focused$get;return(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id;}",
+};
+let closure_44 = {
+  code: "function VoicePanelCardTsx10(focusedId,previous){const{runOnJS,handleFocusedParticipantChange}=this.__closure;if(focusedId===previous)return;runOnJS(handleFocusedParticipantChange)(focusedId);}",
+};
+let closure_45 = {
+  code: "function VoicePanelCardTsx11(){const{mode,focused,sharedTransitionState}=this.__closure;return{mode:mode.get(),focused:focused.get(),transitionState:sharedTransitionState.get()};}",
+};
+let closure_46 = {
+  code: "function VoicePanelCardTsx12(props,previous){const{cheapWorkletShallowEqual,VoicePanelModes,TransitionStates,sharedVisible,isScrollVisible,runOnJS,cleanUp,id}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,focused:focused,transitionState:transitionState}=props;const isPIPMode=mode===VoicePanelModes.PIP;const manuallyFocusedId=focused===null||focused===void 0?void 0:focused.id;if(previous==null&&transitionState!==TransitionStates.YEETED){sharedVisible.set(1);}else if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1&&isScrollVisible.get()){sharedVisible.set(0);}else{runOnJS(cleanUp)();}}else if((previous===null||previous===void 0?void 0:previous.transitionState)===TransitionStates.YEETED){sharedVisible.set(1);}else if(!isPIPMode){if(manuallyFocusedId==null){sharedVisible.set(1);}else{if(manuallyFocusedId!==id){sharedVisible.set(0);}else{sharedVisible.set(1);}}}}",
+};
 let closure_47 = { isSelf: false, hasVideo: false, user: { id: "r" } };
 function layoutTransitionFunction(originX, SUBTLE_SPRING) {
   let flag = arg2;
@@ -1172,7 +1387,12 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
   if (flag) {
     str2 = "animate-never";
   }
-  obj = { originX: obj.withSpring(originX.targetOriginX, SUBTLE_SPRING, str2), originY: null, width: null, height: null };
+  obj = {
+    originX: obj.withSpring(originX.targetOriginX, SUBTLE_SPRING, str2),
+    originY: null,
+    width: null,
+    height: null,
+  };
   let tmpResult = tmp(4927);
   let str3 = str;
   if (flag) {
@@ -1191,21 +1411,44 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
   obj = { animations: null, initialValues: null };
   obj[3] = CONFIG_NEVER_ANIMATE.withSpring(originX.targetHeight, SUBTLE_SPRING, str);
   obj[0] = obj;
-  obj[1] = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
+  obj[1] = {
+    originX: originX.currentOriginX,
+    originY: originX.currentOriginY,
+    width: originX.currentWidth,
+    height: originX.currentHeight,
+  };
   return obj;
 }
 let obj6 = { width: tmp4, height: tmp4, borderRadius: ThemesDefault.radii.round, backgroundColor: "rgba(0,0,0,0.3)" };
 layoutTransitionFunction.__closure = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring };
 layoutTransitionFunction.__workletHash = 4871152530917;
-layoutTransitionFunction.__initData = { code: "function layoutTransitionFunction_VoicePanelCardTsx13(values,physics,disableAnimation=false){const{withSpring}=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,physics,!disableAnimation?'animate-always':'animate-never'),originY:withSpring(values.targetOriginY,physics,!disableAnimation?'animate-always':'animate-never'),width:withSpring(values.targetWidth,physics,!disableAnimation?'animate-always':'animate-never'),height:withSpring(values.targetHeight,physics,!disableAnimation?'animate-always':'animate-never')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};}" };
-let closure_49 = { code: "function VoicePanelCardTsx14(){const{id,pipState,mode,VoicePanelModes}=this.__closure;if(id===pipState.id&&mode.get()===VoicePanelModes.PIP){return true;}return false;}" };
-let closure_50 = { code: "function VoicePanelCardTsx15(){const{focused,id,mode,VoicePanelModes,scrollPosition}=this.__closure;var _focused$get;return((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id||mode.get()===VoicePanelModes.PIP?scrollPosition.get():0;}" };
-let closure_51 = { code: "function VoicePanelCardTsx16(){const{connected,EDGE_GUTTER,safeArea,windowDimensions,contentDimensions,wrapperDimensions}=this.__closure;return connected.get()?Math.max(EDGE_GUTTER,safeArea.get().left,(windowDimensions.get().width-contentDimensions.get().width)/2):wrapperDimensions.get().drawerWidth/2;}" };
-let closure_52 = { code: "function VoicePanelCardTsx17(){const{coords,focused,id,isPIP,pipState,getClampedPIPPosition,wrapperDimensions,windowDimensions,safeArea,pipAvoidanceSpecs,derivedScrollValue,xOffset,calculateContentCenterOffset,contentDimensions,sharedTransitionState,TransitionStates,zIndexOverride,computeCardBorderRadius,mode,isSelf,defaultBorderRadius,sharedVisible,isRTCConnected,CONNECTING_OPACITY,wrapperOffset,withDelay,withTiming,ZINDEX_TIMING,OPACITY_TIMING,isScrollVisible,runOnJS,cleanUp,withSpring,layoutPhysics,CARD_SCALE_PHYSICS,SCALE_PHYSICS}=this.__closure;var _focused$get,_focused$get2,_focused$get3,_focused$get4;let{zIndex:zIndex,width:width,height:height,x:x,y:y}=coords.get();const isFocused=((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;if(isPIP){width=pipState.width;height=pipState.height;const pipHeight=!pipState.showSecondaryPIP?pipState.height:pipState.containerHeight;const pipPosition=getClampedPIPPosition({pipX:wrapperDimensions.get().pipX,pipY:wrapperDimensions.get().pipY,width:width,height:pipHeight,windowDimensions:windowDimensions.get(),safeArea:safeArea.get(),bottomAvoidanceRegion:pipAvoidanceSpecs.get().bottom,topAvoidanceRegion:pipAvoidanceSpecs.get().top});x=pipPosition.x;y=derivedScrollValue.get()+pipPosition.y;}else if(focused.get()!=null){if(isFocused){zIndex=1;width=windowDimensions.get().width;height=windowDimensions.get().height;x=0;y=derivedScrollValue.get();}else{zIndex=0;}}else{x+=xOffset.get();y+=calculateContentCenterOffset({contentHeight:contentDimensions.get().height,windowHeight:windowDimensions.get().height,safeArea:safeArea.get()});if(sharedTransitionState.get()===TransitionStates.YEETED){y+=height/4;}}if(zIndexOverride.get()){zIndex=9001;}const borderRadius=computeCardBorderRadius({id:id,mode:mode.get(),focused:(_focused$get2=focused.get())===null||_focused$get2===void 0?void 0:_focused$get2.id,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius});const opacity=sharedVisible.get()===0&&((_focused$get3=focused.get())===null||_focused$get3===void 0?void 0:_focused$get3.id)!==id?0:!isFocused&&!isRTCConnected?CONNECTING_OPACITY:1;const gestureActive=wrapperOffset.get().gestureActive;const scaleTarget=sharedVisible.get()===1||((_focused$get4=focused.get())===null||_focused$get4===void 0?void 0:_focused$get4.id)===id?1:0.8;return{zIndex:withDelay(zIndexOverride.get()?0:100,withTiming(zIndex,ZINDEX_TIMING)),opacity:withTiming(opacity,OPACITY_TIMING,isScrollVisible.get()?'animate-always':'animate-never',function(finished){if(finished&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}}),width:width,height:height,transform:[{translateX:gestureActive?x:withSpring(x,layoutPhysics,'animate-always')},{translateY:gestureActive?y:withSpring(y,layoutPhysics,'animate-always')},{scale:withSpring(scaleTarget,CARD_SCALE_PHYSICS)}],borderRadius:withSpring(borderRadius,SCALE_PHYSICS)};}" };
-let closure_53 = { code: "function VoicePanelCardTsx18(finished){const{sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}}" };
-let closure_54 = { code: "function VoicePanelCardTsx19(values){const{withSpring,layoutPhysics,wrapperOffset}=this.__closure;const initialValues={originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight};return{animations:{originX:withSpring(values.targetOriginX,layoutPhysics,'animate-always'),originY:withSpring(values.targetOriginY,layoutPhysics,'animate-always'),width:withSpring(values.targetWidth,layoutPhysics,'animate-always'),height:withSpring(values.targetHeight,layoutPhysics,'animate-always')},initialValues:initialValues,callback:function(){const _wrapperOffset=wrapperOffset.get();if(!_wrapperOffset.gestureActive&&_wrapperOffset.y!==0){wrapperOffset.set({gestureActive:false,x:0,y:0});}}};}" };
-let closure_56 = { code: "function VoicePanelCardTsx20(){const{EDGE_GUTTER,coords,scrollPosition,windowDimensions}=this.__closure;const yPos=EDGE_GUTTER+coords.get().y;return yPos>scrollPosition.get()-coords.get().height&&yPos<scrollPosition.get()+windowDimensions.get().height;}" };
-let closure_57 = { code: "function layoutTransition_VoicePanelCardTsx21(values,disableAnimation=false){const{layoutTransitionFunction,physics}=this.__closure;return layoutTransitionFunction(values,physics,disableAnimation);}" };
+layoutTransitionFunction.__initData = {
+  code: "function layoutTransitionFunction_VoicePanelCardTsx13(values,physics,disableAnimation=false){const{withSpring}=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,physics,!disableAnimation?'animate-always':'animate-never'),originY:withSpring(values.targetOriginY,physics,!disableAnimation?'animate-always':'animate-never'),width:withSpring(values.targetWidth,physics,!disableAnimation?'animate-always':'animate-never'),height:withSpring(values.targetHeight,physics,!disableAnimation?'animate-always':'animate-never')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};}",
+};
+let closure_49 = {
+  code: "function VoicePanelCardTsx14(){const{id,pipState,mode,VoicePanelModes}=this.__closure;if(id===pipState.id&&mode.get()===VoicePanelModes.PIP){return true;}return false;}",
+};
+let closure_50 = {
+  code: "function VoicePanelCardTsx15(){const{focused,id,mode,VoicePanelModes,scrollPosition}=this.__closure;var _focused$get;return((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id||mode.get()===VoicePanelModes.PIP?scrollPosition.get():0;}",
+};
+let closure_51 = {
+  code: "function VoicePanelCardTsx16(){const{connected,EDGE_GUTTER,safeArea,windowDimensions,contentDimensions,wrapperDimensions}=this.__closure;return connected.get()?Math.max(EDGE_GUTTER,safeArea.get().left,(windowDimensions.get().width-contentDimensions.get().width)/2):wrapperDimensions.get().drawerWidth/2;}",
+};
+let closure_52 = {
+  code: "function VoicePanelCardTsx17(){const{coords,focused,id,isPIP,pipState,getClampedPIPPosition,wrapperDimensions,windowDimensions,safeArea,pipAvoidanceSpecs,derivedScrollValue,xOffset,calculateContentCenterOffset,contentDimensions,sharedTransitionState,TransitionStates,zIndexOverride,computeCardBorderRadius,mode,isSelf,defaultBorderRadius,sharedVisible,isRTCConnected,CONNECTING_OPACITY,wrapperOffset,withDelay,withTiming,ZINDEX_TIMING,OPACITY_TIMING,isScrollVisible,runOnJS,cleanUp,withSpring,layoutPhysics,CARD_SCALE_PHYSICS,SCALE_PHYSICS}=this.__closure;var _focused$get,_focused$get2,_focused$get3,_focused$get4;let{zIndex:zIndex,width:width,height:height,x:x,y:y}=coords.get();const isFocused=((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;if(isPIP){width=pipState.width;height=pipState.height;const pipHeight=!pipState.showSecondaryPIP?pipState.height:pipState.containerHeight;const pipPosition=getClampedPIPPosition({pipX:wrapperDimensions.get().pipX,pipY:wrapperDimensions.get().pipY,width:width,height:pipHeight,windowDimensions:windowDimensions.get(),safeArea:safeArea.get(),bottomAvoidanceRegion:pipAvoidanceSpecs.get().bottom,topAvoidanceRegion:pipAvoidanceSpecs.get().top});x=pipPosition.x;y=derivedScrollValue.get()+pipPosition.y;}else if(focused.get()!=null){if(isFocused){zIndex=1;width=windowDimensions.get().width;height=windowDimensions.get().height;x=0;y=derivedScrollValue.get();}else{zIndex=0;}}else{x+=xOffset.get();y+=calculateContentCenterOffset({contentHeight:contentDimensions.get().height,windowHeight:windowDimensions.get().height,safeArea:safeArea.get()});if(sharedTransitionState.get()===TransitionStates.YEETED){y+=height/4;}}if(zIndexOverride.get()){zIndex=9001;}const borderRadius=computeCardBorderRadius({id:id,mode:mode.get(),focused:(_focused$get2=focused.get())===null||_focused$get2===void 0?void 0:_focused$get2.id,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius});const opacity=sharedVisible.get()===0&&((_focused$get3=focused.get())===null||_focused$get3===void 0?void 0:_focused$get3.id)!==id?0:!isFocused&&!isRTCConnected?CONNECTING_OPACITY:1;const gestureActive=wrapperOffset.get().gestureActive;const scaleTarget=sharedVisible.get()===1||((_focused$get4=focused.get())===null||_focused$get4===void 0?void 0:_focused$get4.id)===id?1:0.8;return{zIndex:withDelay(zIndexOverride.get()?0:100,withTiming(zIndex,ZINDEX_TIMING)),opacity:withTiming(opacity,OPACITY_TIMING,isScrollVisible.get()?'animate-always':'animate-never',function(finished){if(finished&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}}),width:width,height:height,transform:[{translateX:gestureActive?x:withSpring(x,layoutPhysics,'animate-always')},{translateY:gestureActive?y:withSpring(y,layoutPhysics,'animate-always')},{scale:withSpring(scaleTarget,CARD_SCALE_PHYSICS)}],borderRadius:withSpring(borderRadius,SCALE_PHYSICS)};}",
+};
+let closure_53 = {
+  code: "function VoicePanelCardTsx18(finished){const{sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}}",
+};
+let closure_54 = {
+  code: "function VoicePanelCardTsx19(values){const{withSpring,layoutPhysics,wrapperOffset}=this.__closure;const initialValues={originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight};return{animations:{originX:withSpring(values.targetOriginX,layoutPhysics,'animate-always'),originY:withSpring(values.targetOriginY,layoutPhysics,'animate-always'),width:withSpring(values.targetWidth,layoutPhysics,'animate-always'),height:withSpring(values.targetHeight,layoutPhysics,'animate-always')},initialValues:initialValues,callback:function(){const _wrapperOffset=wrapperOffset.get();if(!_wrapperOffset.gestureActive&&_wrapperOffset.y!==0){wrapperOffset.set({gestureActive:false,x:0,y:0});}}};}",
+};
+let closure_56 = {
+  code: "function VoicePanelCardTsx20(){const{EDGE_GUTTER,coords,scrollPosition,windowDimensions}=this.__closure;const yPos=EDGE_GUTTER+coords.get().y;return yPos>scrollPosition.get()-coords.get().height&&yPos<scrollPosition.get()+windowDimensions.get().height;}",
+};
+let closure_57 = {
+  code: "function layoutTransition_VoicePanelCardTsx21(values,disableAnimation=false){const{layoutTransitionFunction,physics}=this.__closure;return layoutTransitionFunction(values,physics,disableAnimation);}",
+};
 let obj10 = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring };
 const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
   ({ item, transitionState } = cleanUp);
@@ -1306,7 +1549,11 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
   L.__initData = closure_56;
   const derivedValue = scrollPosition(id2[14]).useDerivedValue(L);
   const memo = obj.useMemo(() => {
-    const physics = { mass: closure_11.mass, damping: windowDimensions(id2[55])(closure_11.damping - 2, closure_11.damping + 2), stiffness: windowDimensions(id2[55])(closure_11.stiffness - 20, closure_11.stiffness + 20) };
+    const physics = {
+      mass: closure_11.mass,
+      damping: windowDimensions(id2[55])(closure_11.damping - 2, closure_11.damping + 2),
+      stiffness: windowDimensions(id2[55])(closure_11.stiffness - 20, closure_11.stiffness + 20),
+    };
     function layoutTransition(arg0) {
       let flag = arg1;
       if (arg1 === undefined) {
@@ -1329,7 +1576,17 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       tmp26Result = callback(tmp(tmp2[57]), {});
       tmp25 = callback;
     }
-    obj = { cleanUp: null, coords: null, id: null, isRTCConnected: null, isScrollVisible: null, layoutPhysics: null, transitionState: null, sharedVisible: null, children: null };
+    obj = {
+      cleanUp: null,
+      coords: null,
+      id: null,
+      isRTCConnected: null,
+      isScrollVisible: null,
+      layoutPhysics: null,
+      transitionState: null,
+      sharedVisible: null,
+      children: null,
+    };
     obj[0] = cleanUp.cleanUp;
     obj[1] = cardLayoutCoordsSubscription;
     obj[2] = id;
@@ -1338,7 +1595,7 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
     obj[5] = physics;
     obj[6] = transitionState;
     obj[7] = sharedValue;
-    const items2 = [tmp26Result, , ];
+    const items2 = [tmp26Result, ,];
     let tmp25Result = null != tmp4;
     if (tmp25Result) {
       obj1 = { isRinging: null, participant: null, label: null, layout: null, speaking: null };
@@ -1378,7 +1635,17 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
           if (tmp4.canRenderVideo) {
             if (null == tmpResultResult) {
               let tmp28 = callback;
-              const obj3 = { id: null, userId: null, streamId: null, isScrollVisible: null, videoSpinnerContext: null, sharedCoords: null, isCamera: true, focusOnReady: null, layout: null };
+              const obj3 = {
+                id: null,
+                userId: null,
+                streamId: null,
+                isScrollVisible: null,
+                videoSpinnerContext: null,
+                sharedCoords: null,
+                isCamera: true,
+                focusOnReady: null,
+                layout: null,
+              };
               obj3[0] = id3;
               obj3[1] = user.id;
               if (streamId == null) {
@@ -1414,7 +1681,15 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
           }
         }
       }
-      const obj5 = { isRinging: null, avatarURI: null, avatarDecoration: null, layout: null, layoutPhysics: null, userId: null, guildId: null };
+      const obj5 = {
+        isRinging: null,
+        avatarURI: null,
+        avatarDecoration: null,
+        layout: null,
+        layoutPhysics: null,
+        userId: null,
+        guildId: null,
+      };
       obj5[0] = tmp8;
       obj5[1] = user.getAvatarURL(guildId, 80, false);
       const userAvatarDecoration = tmp4.userAvatarDecoration;
@@ -1427,7 +1702,17 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       tmp26Result = tmp26(closure_37, obj5);
       const tmp27 = closure_37;
     } else if (tmp11.STREAM === type2) {
-      const obj6 = { userId: null, id: null, streamGuildId: null, streamId: null, userNick: null, isSelf: null, sharedCoords: null, isScrollVisible: null, layout: null };
+      const obj6 = {
+        userId: null,
+        id: null,
+        streamGuildId: null,
+        streamId: null,
+        userNick: null,
+        isSelf: null,
+        sharedCoords: null,
+        isScrollVisible: null,
+        layout: null,
+      };
       obj6[0] = tmp4.user.id;
       ({ id: obj10[1], streamGuildId: obj10[2], streamId: obj10[3], userNick: obj10[4] } = tmp4);
       obj6[5] = isSelf;

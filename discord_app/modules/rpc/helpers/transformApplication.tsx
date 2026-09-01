@@ -5,4 +5,4 @@ const result = set.fileFinishedImporting("modules/rpc/helpers/transformApplicati
 
 export default function transformApplication(name) {
   return { name: name.name, id: name.id, icon: name.icon, cover_image: name.coverImage, type: name.type };
-};
+}

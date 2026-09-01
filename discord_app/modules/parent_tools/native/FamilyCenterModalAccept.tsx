@@ -30,27 +30,27 @@ function FamilyCenterModalAcceptScreen(otherUser) {
   obj = { children: null };
   obj1 = { style: tmp.header, children: null };
   const obj2 = { otherUser, iconSrc: acceptLinkRequest(4422), iconStyles: tmp.icon };
-  const items1 = [callback(acceptLinkRequest(14528), obj2), , ];
+  const items1 = [callback(acceptLinkRequest(14528), obj2), ,];
   const obj3 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
   let intl = otherUser(1236).intl;
   obj3[2] = intl.string(acceptLinkRequest(2369).rlNJwZ);
   items1[1] = callback(otherUser(4474).Text, obj3);
   items1[2] = callback(acceptLinkRequest(14498), { user: otherUser });
   obj1[1] = items1;
-  const items2 = [callback2(View, obj1), callback(acceptLinkRequest(11491), {}), ];
+  const items2 = [callback2(View, obj1), callback(acceptLinkRequest(11491), {})];
   const obj4 = { style: tmp.disclaimer, variant: "text-xs/normal", color: "text-default", children: null };
   const intl2 = otherUser(1236).intl;
   obj4[3] = intl2.format(acceptLinkRequest(2369).snlFqR, { username: otherUser.username });
   items2[2] = callback(otherUser(4474).Text, obj4);
   obj[0] = items2;
-  const items3 = [callback2(otherUser(8693).ModalContent, obj), ];
+  const items3 = [callback2(otherUser(8693).ModalContent, obj)];
   const obj6 = { children: null };
   const obj7 = { children: null };
   const obj8 = { variant: "primary", disabled: isAcceptLoading, loading: isAcceptLoading, text: null, onPress: null };
   const intl3 = otherUser(1236).intl;
   obj8[3] = intl3.string(acceptLinkRequest(2369)["wI/jo3"]);
   obj8[4] = callback2;
-  const items4 = [callback(otherUser(4928).Button, obj8), ];
+  const items4 = [callback(otherUser(4928).Button, obj8)];
   const obj9 = { variant: "tertiary", text: null, onPress: null };
   const intl4 = otherUser(1236).intl;
   obj9[1] = intl4.string(otherUser(1236).t["ETE/oC"]);
@@ -64,7 +64,12 @@ function FamilyCenterModalAcceptScreen(otherUser) {
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { header: null, headerText: null, icon: null, disclaimer: null };
-createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginBottom: ThemesDefault.space.PX_16,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
 let obj1 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
@@ -89,7 +94,7 @@ export default function FamilyCenterModalAccept(otherUser) {
       },
       render() {
         return closure_1_5(closure_1_8, { otherUser: closure_0 });
-      }
+      },
     };
     obj[0] = obj;
     return obj;
@@ -98,4 +103,4 @@ export default function FamilyCenterModalAccept(otherUser) {
   const intl = otherUser(1236).intl;
   obj[2] = intl.string(otherUser(1236).t["13/7kX"]);
   return callback(otherUser(11501).Modal, obj);
-};
+}

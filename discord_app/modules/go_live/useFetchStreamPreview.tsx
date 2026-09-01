@@ -28,27 +28,33 @@ export default function useFetchStreamPreview(arg0, arg1, arg2) {
   });
   const obj2 = initialize;
   const items2 = [stateFromStores];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => stateFromStores.getVoiceChannelId() === closure_1);
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    items2,
+    () => stateFromStores.getVoiceChannelId() === closure_1,
+  );
   const obj3 = initialize;
   const items3 = [closure_3];
-  const stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items3, () => {
-    let isPreviewLoading = !store;
-    let shouldFetchPreviewResult = isPreviewLoading;
-    if (!store) {
-      shouldFetchPreviewResult = store.shouldFetchPreview(closure_0, closure_1, closure_2);
-    }
-    const obj = { shouldFetchPreview: shouldFetchPreviewResult, previewUrl: null, isLoading: null };
-    let previewURL = null;
-    if (!store) {
-      previewURL = store.getPreviewURL(closure_0, closure_1, closure_2);
-    }
-    obj[1] = previewURL;
-    if (!store) {
-      isPreviewLoading = store.getIsPreviewLoading(closure_0, closure_1, closure_2);
-    }
-    obj[2] = isPreviewLoading;
-    return obj;
-  });
+  const stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(
+    items3,
+    () => {
+      let isPreviewLoading = !store;
+      let shouldFetchPreviewResult = isPreviewLoading;
+      if (!store) {
+        shouldFetchPreviewResult = store.shouldFetchPreview(closure_0, closure_1, closure_2);
+      }
+      const obj = { shouldFetchPreview: shouldFetchPreviewResult, previewUrl: null, isLoading: null };
+      let previewURL = null;
+      if (!store) {
+        previewURL = store.getPreviewURL(closure_0, closure_1, closure_2);
+      }
+      obj[1] = previewURL;
+      if (!store) {
+        isPreviewLoading = store.getIsPreviewLoading(closure_0, closure_1, closure_2);
+      }
+      obj[2] = isPreviewLoading;
+      return obj;
+    },
+  );
   shouldFetchPreview = stateFromStoresObject.shouldFetchPreview;
   ({ previewUrl, isLoading } = stateFromStoresObject);
   if (!stateFromStores) {
@@ -77,4 +83,4 @@ export default function useFetchStreamPreview(arg0, arg1, arg2) {
     return obj;
   }
   obj = { previewUrl: "PX_16", isLoading: null };
-};
+}

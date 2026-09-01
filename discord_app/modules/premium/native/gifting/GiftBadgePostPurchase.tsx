@@ -39,7 +39,7 @@ function PostPurchaseFooter(onSendGift) {
   const intl = onSendGift(1236).intl;
   obj[3] = intl.string(messagesProxyDefault.g86YiI);
   obj[4] = callback;
-  const items1 = [callback4(onSendGift(4928).Button, obj), ];
+  const items1 = [callback4(onSendGift(4928).Button, obj)];
   obj1 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1236).intl;
   obj1[2] = intl2.string(messagesProxyDefault["sa/cfM"]);
@@ -53,10 +53,27 @@ function InProgressScreen(arg0) {
   const tmp = callback6(useSafeAreaInsetsDefault().bottom);
   let obj = { style: tmp.screenContainer, children: null };
   obj = { style: tmp.content, children: null };
-  obj = { style: tmp.progressWrapper, children: callback4(GiftingBadgeProgressBarDefault, { progress, currentTier, nextTier, iconSize: 48, title: progressBarTitle }) };
-  const items = [callback4(View, obj), ];
+  obj = {
+    style: tmp.progressWrapper,
+    children: callback4(GiftingBadgeProgressBarDefault, {
+      progress,
+      currentTier,
+      nextTier,
+      iconSize: 48,
+      title: progressBarTitle,
+    }),
+  };
+  const items = [callback4(View, obj)];
   obj1 = { style: tmp.messageSection, children: null };
-  const items1 = [callback4(Text.Text, { variant: "heading-xxl/bold", style: tmp.centerText, children: title }), callback4(Text.Text, { variant: "text-md/medium", color: "text-subtle", style: tmp.centerText, children: description })];
+  const items1 = [
+    callback4(Text.Text, { variant: "heading-xxl/bold", style: tmp.centerText, children: title }),
+    callback4(Text.Text, {
+      variant: "text-md/medium",
+      color: "text-subtle",
+      style: tmp.centerText,
+      children: description,
+    }),
+  ];
   obj1[1] = items1;
   items[1] = callback5(View, obj1);
   obj[1] = items;
@@ -81,9 +98,16 @@ function LevelUpScreen(arg0) {
     tmp7Result = tmp7(tmp(10522), obj1);
   }
   obj[1] = tmp7Result;
-  const items = [closure_10(View, obj), ];
+  const items = [closure_10(View, obj)];
   const obj2 = { style: tmp3.levelUpBody, children: null };
-  const items1 = [closure_10(GiftingBadgeLevelUpProgressDefault, { progress: simulatedProgress, currentTier, newTier, style: tmp3.levelUpProgress }), ];
+  const items1 = [
+    closure_10(GiftingBadgeLevelUpProgressDefault, {
+      progress: simulatedProgress,
+      currentTier,
+      newTier,
+      style: tmp3.levelUpProgress,
+    }),
+  ];
   const obj4 = { style: tmp3.messageSection, children: null };
   const obj5 = { variant: "heading-xxl/bold", style: tmp3.centerText, children: null };
   const intl = getSystemLocale.intl;
@@ -92,7 +116,7 @@ function LevelUpScreen(arg0) {
     str = "";
   }
   obj5[2] = intl.format(messagesProxyDefault.k8MmO8, { tierName: str });
-  const items2 = [closure_10(Text.Text, obj5), ];
+  const items2 = [closure_10(Text.Text, obj5)];
   tmp7Result = null != nextTier && null != giftsToNextTier;
   if (tmp7Result) {
     tmp7Result = giftsToNextTier > 0;
@@ -121,23 +145,52 @@ function LevelUpScreen(arg0) {
   obj[1] = items3;
   return closure_11(View, obj);
 }
-({ getRemainingGiftsToNextTier: closure_6, getTierForProgress: error, getNextTierForProgress: closure_8 } = getTierForProgress);
+({
+  getRemainingGiftsToNextTier: closure_6,
+  getTierForProgress: error,
+  getNextTierForProgress: closure_8,
+} = getTierForProgress);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((arg0) => {
-  let obj = { screenContainer: { flex: 1 }, content: null, progressWrapper: null, messageSection: null, centerText: null, levelUpIconWrapper: null, levelUpBody: null, levelUpProgress: null, footer: null };
+  let obj = {
+    screenContainer: { flex: 1 },
+    content: null,
+    progressWrapper: null,
+    messageSection: null,
+    centerText: null,
+    levelUpIconWrapper: null,
+    levelUpBody: null,
+    levelUpProgress: null,
+    footer: null,
+  };
   obj = { flex: 1, alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_16 };
   obj[1] = obj;
   obj = { padding: ThemesDefault.space.PX_16, width: "100%", marginBottom: ThemesDefault.space.PX_24 };
   obj[2] = obj;
-  obj[3] = { gap: ThemesDefault.space.PX_12, alignItems: "center", width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
+  obj[3] = {
+    gap: ThemesDefault.space.PX_12,
+    alignItems: "center",
+    width: "100%",
+    paddingHorizontal: ThemesDefault.space.PX_16,
+  };
   obj[4] = { textAlign: "center" };
-  obj1 = { gap: ThemesDefault.space.PX_12, alignItems: "center", width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
+  obj1 = {
+    gap: ThemesDefault.space.PX_12,
+    alignItems: "center",
+    width: "100%",
+    paddingHorizontal: ThemesDefault.space.PX_16,
+  };
   obj[5] = { paddingVertical: 26, paddingHorizontal: 74, marginBottom: ThemesDefault.space.PX_48 };
   const obj2 = { paddingVertical: 26, paddingHorizontal: 74, marginBottom: ThemesDefault.space.PX_48 };
   obj[6] = { gap: ThemesDefault.space.PX_12, alignItems: "center", width: "100%" };
   obj[7] = { maxWidth: 260 };
   const obj3 = { gap: ThemesDefault.space.PX_12, alignItems: "center", width: "100%" };
-  obj[8] = { width: "100%", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 + arg0 };
+  obj[8] = {
+    width: "100%",
+    gap: ThemesDefault.space.PX_12,
+    paddingHorizontal: ThemesDefault.space.PX_16,
+    paddingBottom: ThemesDefault.space.PX_16 + arg0,
+  };
   return obj;
 });
 let result = require("set").fileFinishedImporting("modules/premium/native/gifting/GiftBadgePostPurchase.tsx");
@@ -147,7 +200,10 @@ export default function GiftBadgePostPurchase(arg0) {
   const effect = React.useEffect(() => {
     let obj = callback(4298);
     obj = { dismissAction: constants.INDIRECT_ACTION };
-    const result = obj.UNSAFE_markDismissibleContentAsDismissed(callback(1373).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK, obj);
+    const result = obj.UNSAFE_markDismissibleContentAsDismissed(
+      callback(1373).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
+      obj,
+    );
   }, []);
   let obj = initialize;
   const items = [closure_5];
@@ -177,7 +233,14 @@ export default function GiftBadgePostPurchase(arg0) {
     const tmp10 = callback(stateFromStores, sum);
     if (key !== key1) {
       if (null != tmp26) {
-        obj = { simulatedProgress: null, currentTier: null, newTier: null, nextTier: null, giftsToNextTier: null, onSendGift: null };
+        obj = {
+          simulatedProgress: null,
+          currentTier: null,
+          newTier: null,
+          nextTier: null,
+          giftsToNextTier: null,
+          onSendGift: null,
+        };
         obj[0] = sum;
         obj[1] = tmp24;
         obj[2] = tmp26;
@@ -197,7 +260,15 @@ export default function GiftBadgePostPurchase(arg0) {
       if (str2 == null) {
         str2 = "";
       }
-      obj = { title: null, description: null, progressBarTitle: null, progress: null, currentTier: null, nextTier: null, onSendGift: null };
+      obj = {
+        title: null,
+        description: null,
+        progressBarTitle: null,
+        progress: null,
+        currentTier: null,
+        nextTier: null,
+        onSendGift: null,
+      };
       obj1 = { nextTier: null };
       obj1[0] = str2;
       obj[0] = intl2.formatToPlainString(messagesProxyDefault.KjdBPz, obj1);
@@ -213,7 +284,15 @@ export default function GiftBadgePostPurchase(arg0) {
       const tmp18 = tmp26;
       const tmp19 = tmp8;
     } else {
-      obj2 = { title: null, description: null, progressBarTitle: null, progress: null, currentTier: null, nextTier: null, onSendGift: null };
+      obj2 = {
+        title: null,
+        description: null,
+        progressBarTitle: null,
+        progress: null,
+        currentTier: null,
+        nextTier: null,
+        onSendGift: null,
+      };
       const intl5 = tmp2(1236).intl;
       obj2[0] = intl5.string(messagesProxyDefault["/rBQud"]);
       const intl6 = tmp2(1236).intl;
@@ -246,4 +325,4 @@ export default function GiftBadgePostPurchase(arg0) {
     const tmp11 = callback4;
     const tmp12 = InProgressScreen;
   }
-};
+}

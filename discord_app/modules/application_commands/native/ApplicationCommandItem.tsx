@@ -10,8 +10,20 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  let obj = { applicationCommandItem: null, highlightedApplicationCommandItem: null, applicationCommandIcon: null, applicationCommandDescriptionWrapper: null, applicationCommandSectionName: null };
-  obj = { flexDirection: "row", paddingVertical: 8, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) };
+  let obj = {
+    applicationCommandItem: null,
+    highlightedApplicationCommandItem: null,
+    applicationCommandIcon: null,
+    applicationCommandDescriptionWrapper: null,
+    applicationCommandSectionName: null,
+  };
+  obj = {
+    flexDirection: "row",
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    alignItems: "center",
+    height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT),
+  };
   obj[0] = obj;
   obj = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
   obj[1] = obj;
@@ -49,7 +61,10 @@ export default function ApplicationCommandItem(highlighted) {
     }
   });
   const items1 = [section, stateFromStores];
-  const memo = React.useMemo(() => section(stateFromStores[9]).getApplicationCommandsIconSource(section, stateFromStores), items1);
+  const memo = React.useMemo(
+    () => section(stateFromStores[9]).getApplicationCommandsIconSource(section, stateFromStores),
+    items1,
+  );
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;
@@ -77,12 +92,30 @@ export default function ApplicationCommandItem(highlighted) {
     obj2[1] = memo;
     showIcon = callback(importDefault(tmp2[12]), obj2);
   }
-  const items2 = [showIcon, , ];
+  const items2 = [showIcon, ,];
   const obj3 = { style: tmp3.applicationCommandDescriptionWrapper, children: null };
-  const items3 = [callback(section(stateFromStores[13]).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), callback(section(stateFromStores[13]).Text, { lineClamp: 1, variant: "text-xs/medium", color: "text-default", children: command.displayDescription })];
+  const items3 = [
+    callback(section(stateFromStores[13]).Text, {
+      lineClamp: 1,
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      children: `/ ${command.displayName}`,
+    }),
+    callback(section(stateFromStores[13]).Text, {
+      lineClamp: 1,
+      variant: "text-xs/medium",
+      color: "text-default",
+      children: command.displayDescription,
+    }),
+  ];
   obj3[1] = items3;
   items2[1] = closure_8(View, obj3);
-  items2[2] = callback(section(stateFromStores[13]).Text, { style: tmp3.applicationCommandSectionName, variant: "eyebrow", color: "text-muted", children: name });
+  items2[2] = callback(section(stateFromStores[13]).Text, {
+    style: tmp3.applicationCommandSectionName,
+    variant: "eyebrow",
+    color: "text-muted",
+    children: name,
+  });
   obj[4] = items2;
   return closure_8(section(stateFromStores[10]).PressableOpacity, obj);
-};
+}

@@ -14,7 +14,7 @@ const require = arg1;
 function UnmuteOptions(channel) {
   channel = channel.channel;
   const navigation = channel.navigation;
-  const items = [, , ];
+  const items = [, ,];
   ({ guild_id: arr[0], id: arr[1] } = channel);
   items[2] = navigation;
   let obj = { style: callback3().options, children: null };
@@ -36,7 +36,7 @@ function UnmuteOptions(channel) {
   obj1[2] = intl.format(channel(1236).t["eC+9rj"], obj2);
   obj[1] = callback(channel(4474).Text, obj1);
   obj[2] = callback;
-  const items1 = [callback(channel(5599).TableRow, obj), ];
+  const items1 = [callback(channel(5599).TableRow, obj)];
   const obj3 = { muteConfig: channel.muteConfig, type: null };
   const obj6 = channel(4674);
   const tmp6 = navigation(10229);
@@ -105,7 +105,7 @@ function MuteOptions(channel) {
           }
         }
       },
-      muteDurationSeconds
+      muteDurationSeconds,
     };
     let result = obj.handleMuteSettingPress(obj);
   }, items);
@@ -114,15 +114,19 @@ function MuteOptions(channel) {
     style: callback3().options,
     children: memo.map((arg0, arg1) => {
       ({ label, duration: channel } = arg0);
-      return closure_1_10(channel(navigation[14]).TableRow, {
-        label,
-        onPress() {
-          return closure_1_4(closure_0);
+      return closure_1_10(
+        channel(navigation[14]).TableRow,
+        {
+          label,
+          onPress() {
+            return closure_1_4(closure_0);
+          },
+          start: 0 === arg1,
+          end: arg1 === memo.length - 1,
         },
-        start: 0 === arg1,
-        end: arg1 === memo.length - 1
-      }, label);
-    })
+        label,
+      );
+    }),
   });
 }
 function NotificationSettingsButton(guildMessageNotifications) {
@@ -142,13 +146,19 @@ function NotificationSettingsButton(guildMessageNotifications) {
       navigation.navigate(closure_1_9.NOTIFICATIONS);
     }
   }, items);
-  const memo = importAllResult.useMemo(() => channel(navigation[13]).getMessageNotificationsText(messageNotifications), items1);
+  const memo = importAllResult.useMemo(
+    () => channel(navigation[13]).getMessageNotificationsText(messageNotifications),
+    items1,
+  );
   obj = { label: null, onPress: null, trailing: null, disabled: null, start: true, end: true };
   const intl = channel(navigation[18]).intl;
   obj[0] = intl.string(channel(navigation[18]).t.h850Ss);
   obj[1] = callback;
   obj = { style: tmp.trailing, children: null };
-  const items2 = [callback(channel(navigation[17]).Text, { variant: "text-md/medium", color: "text-muted", children: memo }), callback(channel(navigation[14]).TableRow.Arrow, {})];
+  const items2 = [
+    callback(channel(navigation[17]).Text, { variant: "text-md/medium", color: "text-muted", children: memo }),
+    callback(channel(navigation[14]).TableRow.Arrow, {}),
+  ];
   obj[1] = items2;
   obj[2] = callback2(View, obj);
   let tmp11 = isMuted;
@@ -157,7 +167,17 @@ function NotificationSettingsButton(guildMessageNotifications) {
   }
   obj1 = { children: null };
   obj[3] = tmp11;
-  const items3 = [callback(channel(navigation[14]).TableRow, obj), callback(View, { style: tmp.hint, children: callback(channel(navigation[23]).MuteSettingsHint, { isMuted, isGuildMuted, guildMessageNotifications: guildMessageNotifications.guildMessageNotifications }) })];
+  const items3 = [
+    callback(channel(navigation[14]).TableRow, obj),
+    callback(View, {
+      style: tmp.hint,
+      children: callback(channel(navigation[23]).MuteSettingsHint, {
+        isMuted,
+        isGuildMuted,
+        guildMessageNotifications: guildMessageNotifications.guildMessageNotifications,
+      }),
+    }),
+  ];
   obj1[0] = items3;
   return callback2(closure_12, obj1);
 }
@@ -190,16 +210,22 @@ const memoResult = importAllResult.memo(() => {
     return closure_1_6.getGuild(guild_id);
   });
   const items2 = [stateFromStores, stateFromStores1];
-  closure_4 = stateFromStores1.useMemo(() => navigation(stateFromStores[13]).getMuteSettingLabel(stateFromStores, stateFromStores1), items2);
+  closure_4 = stateFromStores1.useMemo(
+    () => navigation(stateFromStores[13]).getMuteSettingLabel(stateFromStores, stateFromStores1),
+    items2,
+  );
   const items3 = [stateFromStores, stateFromStores1];
-  closure_5 = stateFromStores1.useMemo(() => navigation(stateFromStores[13]).getMuteSettingSublabel(stateFromStores, stateFromStores1), items3);
+  closure_5 = stateFromStores1.useMemo(
+    () => navigation(stateFromStores[13]).getMuteSettingSublabel(stateFromStores, stateFromStores1),
+    items3,
+  );
   const layoutEffect = stateFromStores1.useLayoutEffect(() => {
     navigation.setOptions({
       title: "" + closure_4 + " (" + closure_5 + ")",
       headerTitle() {
         return closure_1_10(closure_1_0(closure_1_2[26]).GenericHeaderTitle, { title: closure_4, subtitle: closure_5 });
       },
-      headerTitleAlign: "center"
+      headerTitleAlign: "center",
     });
   });
   const items4 = [channelId];
@@ -209,7 +235,7 @@ const memoResult = importAllResult.memo(() => {
   let tmp9Result = null;
   if (null != stateFromStores) {
     obj = { style: null, children: null };
-    const items5 = [tmp.container, ];
+    const items5 = [tmp.container];
     obj = { paddingBottom: null };
     obj[0] = tmp7;
     items5[1] = obj;
@@ -230,11 +256,17 @@ const memoResult = importAllResult.memo(() => {
       tmp11Result = tmp11(MuteOptions, obj2);
       tmp14 = tmp11;
     }
-    const items6 = [tmp11Result, ];
+    const items6 = [tmp11Result];
     const isPrivateResult = stateFromStores.isPrivate();
     let tmp14Result = !isPrivateResult;
     if (!isPrivateResult) {
-      const obj3 = { isMuted: null, isGuildMuted: null, channel: null, messageNotifications: null, guildMessageNotifications: null };
+      const obj3 = {
+        isMuted: null,
+        isGuildMuted: null,
+        channel: null,
+        messageNotifications: null,
+        guildMessageNotifications: null,
+      };
       obj3[0] = muted;
       obj3[1] = guildMuted;
       obj3[2] = stateFromStores;
@@ -250,6 +282,8 @@ const memoResult = importAllResult.memo(() => {
   }
   return tmp9Result;
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsScreen.tsx",
+);
 
 export default memoResult;

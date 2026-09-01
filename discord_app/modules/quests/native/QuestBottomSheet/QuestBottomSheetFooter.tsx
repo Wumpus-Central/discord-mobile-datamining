@@ -39,7 +39,10 @@ function useQuestRewardClaimHandler(quest) {
   const progressState = obj.useProgressState(quest);
   const items = [quest.config];
   let result = quest(QUEST_BOTTOM_SHEET[12]).hasCollectiblesQuestReward(quest.config);
-  const memo = sourceQuestContent.useMemo(() => quest(QUEST_BOTTOM_SHEET[13]).getDefaultReward(quest.config).skuId, items);
+  const memo = sourceQuestContent.useMemo(
+    () => quest(QUEST_BOTTOM_SHEET[13]).getDefaultReward(quest.config).skuId,
+    items,
+  );
   const obj2 = quest(QUEST_BOTTOM_SHEET[12]);
   let tmp8 = null;
   if (progressState === quest(QUEST_BOTTOM_SHEET[11]).QuestProgressState.COMPLETED) {
@@ -54,7 +57,10 @@ function useQuestRewardClaimHandler(quest) {
   isFetching = fetchCollectiblesProduct.isFetching;
   let tmp3Result = tmp3(tmp4[15]);
   const items1 = [stateFromStores];
-  const stateFromStoresObject = tmp3Result.useStateFromStoresObject(items1, () => ({ isFetchingRewardCode: stateFromStores.isFetchingRewardCode(quest.id), isClaimingReward: stateFromStores.isClaimingReward(quest.id) }));
+  const stateFromStoresObject = tmp3Result.useStateFromStoresObject(items1, () => ({
+    isFetchingRewardCode: stateFromStores.isFetchingRewardCode(quest.id),
+    isClaimingReward: stateFromStores.isClaimingReward(quest.id),
+  }));
   isFetchingRewardCode = stateFromStoresObject.isFetchingRewardCode;
   tmp3Result = tmp3(tmp4[15]);
   const items2 = [isFetchingRewardCode];
@@ -118,9 +124,18 @@ function useQuestRewardClaimHandler(quest) {
     isClaiming: stateFromStoresObject.isClaimingReward,
     claim: obj3.useCallback(() => {
       let obj = quest(QUEST_BOTTOM_SHEET[18]);
-      obj = { quest, product: c5, hideActionSheet: flag, questContent: QUEST_BOTTOM_SHEET, currentUserHasVerifiedEmailOrPhone: stateFromStores, currentUserHasVerifiedEmail: stateFromStores1, onSuccess, sourceQuestContent };
+      obj = {
+        quest,
+        product: c5,
+        hideActionSheet: flag,
+        questContent: QUEST_BOTTOM_SHEET,
+        currentUserHasVerifiedEmailOrPhone: stateFromStores,
+        currentUserHasVerifiedEmail: stateFromStores1,
+        onSuccess,
+        sourceQuestContent,
+      };
       return obj.handleRewardClaimThenView(obj);
-    }, items6)
+    }, items6),
   };
   items6 = [quest, product, stateFromStores, stateFromStores1, flag, QUEST_BOTTOM_SHEET, onSuccess, sourceQuestContent];
   return obj;
@@ -128,7 +143,14 @@ function useQuestRewardClaimHandler(quest) {
 function WatchTaskButton(arg0) {
   ({ questId, sourceQuestContent, taskDetails, disabled, onPressDisabled } = arg0);
   let obj = useWatchTaskPressHandler;
-  obj = { grow: true, size: "lg", onPress: obj.useWatchTaskPressHandler({ questId, sourceQuestContent }), disabled, onPressDisabled, text: null };
+  obj = {
+    grow: true,
+    size: "lg",
+    onPress: obj.useWatchTaskPressHandler({ questId, sourceQuestContent }),
+    disabled,
+    onPressDisabled,
+    text: null,
+  };
   const watchTaskPressHandler = obj.useWatchTaskPressHandler({ questId, sourceQuestContent });
   obj[5] = formatWatchRemainingDurationShort.getVideoQuestWatchCtaText(taskDetails);
   return callback2(Button.Button, obj);
@@ -159,8 +181,21 @@ function DefibButton(arg0) {
     iconPosition: "end",
     onPress(arg0) {
       let obj = closure_1_0(closure_1_2[33]);
-      if (obj.shouldMigrateToAdAnalyticsInterface(closure_1_0(closure_1_2[33]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_footer")) {
-        obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null };
+      if (
+        obj.shouldMigrateToAdAnalyticsInterface(
+          closure_1_0(closure_1_2[33]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+          "quest_bottom_sheet_footer",
+        )
+      ) {
+        obj = {
+          type: null,
+          adCreativeType: null,
+          adCreativeId: null,
+          questContentCTA: null,
+          surfaceId: null,
+          sourceQuestContent: null,
+          impressionId: null,
+        };
         obj[0] = tmp(tmp2[35]).AdUserActionType.CLICK_INTERNAL;
         obj[1] = tmp(tmp2[36]).AdCreativeType.QUEST;
         obj[2] = closure_0;
@@ -182,7 +217,7 @@ function DefibButton(arg0) {
         tmp11(arg0);
       }
     },
-    text: null
+    text: null,
   };
   const intl = getSystemLocale.intl;
   obj[9] = intl.string(getSystemLocale.t.nPThNb);
@@ -204,8 +239,21 @@ function ClaimButton(arg0) {
     loading,
     onPress() {
       let obj = closure_1_0(closure_1_2[33]);
-      if (obj.shouldMigrateToAdAnalyticsInterface(closure_1_0(closure_1_2[33]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_footer")) {
-        obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null };
+      if (
+        obj.shouldMigrateToAdAnalyticsInterface(
+          closure_1_0(closure_1_2[33]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+          "quest_bottom_sheet_footer",
+        )
+      ) {
+        obj = {
+          type: null,
+          adCreativeType: null,
+          adCreativeId: null,
+          questContentCTA: null,
+          surfaceId: null,
+          sourceQuestContent: null,
+          impressionId: null,
+        };
         obj[0] = tmp(tmp2[35]).AdUserActionType.CLICK_INTERNAL;
         obj[1] = tmp(tmp2[36]).AdCreativeType.QUEST;
         obj[2] = closure_0;
@@ -225,7 +273,7 @@ function ClaimButton(arg0) {
       }
       callback();
     },
-    text: null
+    text: null,
   };
   const intl = getSystemLocale.intl;
   obj[6] = intl.string(getSystemLocale.t.cfY4PE);
@@ -284,19 +332,25 @@ function AnimatedFooter(arg0) {
   tmp5Result = tmp5(tmp3[40]);
   const fn2 = function y() {
     const obj = { width: null, alignSelf: "flex-end" };
-    const items = [width - 2 * closure_1_12, ];
+    const items = [width - 2 * closure_1_12];
     const value = sharedValue.get();
     const diff = width - 2.5 * closure_1_12;
     items[1] = diff - callback(stateFromStores[42]).LARGE_BUTTON_HEIGHT;
     obj[0] = callback(stateFromStores[40]).interpolate(value, [0, 1], items);
     return obj;
   };
-  obj = { interpolate: tmp5(tmp3[40]).interpolate, animation: sharedValue, windowWidth: width, H_PADDING_PX: PX_16, ICON_SIZE_PX: tmp5(tmp3[42]).LARGE_BUTTON_HEIGHT };
+  obj = {
+    interpolate: tmp5(tmp3[40]).interpolate,
+    animation: sharedValue,
+    windowWidth: width,
+    H_PADDING_PX: PX_16,
+    ICON_SIZE_PX: tmp5(tmp3[42]).LARGE_BUTTON_HEIGHT,
+  };
   fn2.__closure = obj;
   fn2.__workletHash = 9095621288509;
   fn2.__initData = closure_20;
   const animatedStyle1 = tmp5Result.useAnimatedStyle(fn2);
-  const items2 = [callback3().container, , ];
+  const items2 = [callback3().container, ,];
   if (withSafeArea) {
     obj1 = { paddingBottom: null };
     obj1[0] = tmp11;
@@ -305,7 +359,10 @@ function AnimatedFooter(arg0) {
   const obj2 = { style: items2, onLayout, children: null };
   items2[1] = withSafeArea;
   items2[2] = style;
-  const items3 = [callback2(width(stateFromStores[40]).View, { style: animatedStyle, children: backButton }), callback2(width(stateFromStores[40]).View, { style: animatedStyle1, children: ctaButton })];
+  const items3 = [
+    callback2(width(stateFromStores[40]).View, { style: animatedStyle, children: backButton }),
+    callback2(width(stateFromStores[40]).View, { style: animatedStyle1, children: ctaButton }),
+  ];
   obj2[2] = items3;
   return closure_11(View, obj2);
 }
@@ -315,8 +372,12 @@ createCacheKey = { container: null };
 createCacheKey = { display: "flex", flexGrow: 1, flexShrink: 1, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let closure_19 = { code: "function QuestBottomSheetFooterTsx1(){const{animation,H_PADDING_PX}=this.__closure;return{opacity:animation.get(),position:'absolute',top:0,left:0,transform:[{translateX:H_PADDING_PX}]};}" };
-let closure_20 = { code: "function QuestBottomSheetFooterTsx2(){const{interpolate,animation,windowWidth,H_PADDING_PX,ICON_SIZE_PX}=this.__closure;return{width:interpolate(animation.get(),[0,1],[windowWidth-H_PADDING_PX*2,windowWidth-H_PADDING_PX*2.5-ICON_SIZE_PX]),alignSelf:'flex-end'};}" };
+let closure_19 = {
+  code: "function QuestBottomSheetFooterTsx1(){const{animation,H_PADDING_PX}=this.__closure;return{opacity:animation.get(),position:'absolute',top:0,left:0,transform:[{translateX:H_PADDING_PX}]};}",
+};
+let closure_20 = {
+  code: "function QuestBottomSheetFooterTsx2(){const{interpolate,animation,windowWidth,H_PADDING_PX,ICON_SIZE_PX}=this.__closure;return{width:interpolate(animation.get(),[0,1],[windowWidth-H_PADDING_PX*2,windowWidth-H_PADDING_PX*2.5-ICON_SIZE_PX]),alignSelf:'flex-end'};}",
+};
 let result = require("set").fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetFooter.tsx");
 
 export default function QuestBottomSheetFooter(quest) {
@@ -339,10 +400,12 @@ export default function QuestBottomSheetFooter(quest) {
   const items = [quest, xboxAndPlaystationAccounts];
   const memo = React.useMemo(() => {
     const obj = quest(closure_1_2[22]);
-    return quest(closure_1_2[22]).supportedConsoles(quest).filter((arg0) => {
-      closure_0 = arg0;
-      return null != closure_1.find((type) => type.type === closure_0);
-    });
+    return quest(closure_1_2[22])
+      .supportedConsoles(quest)
+      .filter((arg0) => {
+        closure_0 = arg0;
+        return null != closure_1.find((type) => type.type === closure_0);
+      });
   }, items);
   let obj4 = quest(14692);
   const hasWatchVideoOnMobileTasks = obj4.useHasWatchVideoOnMobileTasks(quest.config);
@@ -424,7 +487,10 @@ export default function QuestBottomSheetFooter(quest) {
           const merged2 = Object.assign(tmp23);
           tmp40Result = tmp40(tmp2(4928).Button, obj5);
         } else {
-          if (callback(obj2.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] === tmp2(5390).TaskPlatformScreen.CONSOLE) {
+          if (
+            callback(obj2.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] ===
+            tmp2(5390).TaskPlatformScreen.CONSOLE
+          ) {
             if (!isQuestProgressing) {
               obj6 = { questId: null, loading: null, disabled: null, onPress: null, sourceQuestContent: null };
               obj6[0] = quest.id;
@@ -466,5 +532,5 @@ export default function QuestBottomSheetFooter(quest) {
     const tmp41 = AnimatedFooter;
   }
   return tmp40Result2;
-};
+}
 export { useQuestRewardClaimHandler };

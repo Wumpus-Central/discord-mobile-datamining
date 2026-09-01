@@ -7,7 +7,9 @@ import { SafetyWarningTypes } from "../../../ChannelSafetyWarningsStore.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/stranger_danger/native/components/StrangerDangerMoreTipsModalActionItems.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/self_mod/stranger_danger/native/components/StrangerDangerMoreTipsModalActionItems.tsx",
+);
 
 export default function StrangerDangerMoreTipsModalActionItems(channelId) {
   channelId = channelId.channelId;
@@ -29,7 +31,11 @@ export default function StrangerDangerMoreTipsModalActionItems(channelId) {
   memo = stateFromStores.useMemo(() => warningId(senderId[7]).getName(stateFromStores), items2);
   const items3 = [memo];
   const items4 = [senderId];
-  const stateFromStoresObject = channelId(senderId[6]).useStateFromStoresObject(items3, () => ({ isIgnored: memo.isIgnored(senderId), isBlocked: memo.isBlocked(senderId) }), items4);
+  const stateFromStoresObject = channelId(senderId[6]).useStateFromStoresObject(
+    items3,
+    () => ({ isIgnored: memo.isIgnored(senderId), isBlocked: memo.isBlocked(senderId) }),
+    items4,
+  );
   isBlocked = stateFromStoresObject.isBlocked;
   const tmp4 = onBlockPressed(stateFromStores.useState(stateFromStoresObject.isIgnored), 2);
   first = tmp4[0];
@@ -37,7 +43,13 @@ export default function StrangerDangerMoreTipsModalActionItems(channelId) {
   const items5 = [channelId, warningId, senderId, tmp4[1]];
   callback = stateFromStores.useCallback(() => {
     let obj = channelId(senderId[8]);
-    obj = { channelId, warningId, senderId, warningType: first.STRANGER_DANGER, cta: channelId(senderId[8]).CtaEventTypes.USER_MODAL_IGNORE };
+    obj = {
+      channelId,
+      warningId,
+      senderId,
+      warningType: first.STRANGER_DANGER,
+      cta: channelId(senderId[8]).CtaEventTypes.USER_MODAL_IGNORE,
+    };
     obj.trackCtaEvent(obj);
     warningId(senderId[9]).ignoreUser(senderId, "mobile_stranger_danger_more", channelId);
     callback(true);
@@ -45,7 +57,13 @@ export default function StrangerDangerMoreTipsModalActionItems(channelId) {
   const items6 = [channelId, warningId, senderId, tmp4[1]];
   callback1 = stateFromStores.useCallback(() => {
     let obj = channelId(senderId[8]);
-    obj = { channelId, warningId, senderId, warningType: first.STRANGER_DANGER, cta: channelId(senderId[8]).CtaEventTypes.USER_MODAL_UNIGNORE };
+    obj = {
+      channelId,
+      warningId,
+      senderId,
+      warningType: first.STRANGER_DANGER,
+      cta: channelId(senderId[8]).CtaEventTypes.USER_MODAL_UNIGNORE,
+    };
     obj.trackCtaEvent(obj);
     warningId(senderId[9]).unignoreUser(senderId, "mobile_stranger_danger_more", channelId);
     callback(false);
@@ -81,7 +99,7 @@ export default function StrangerDangerMoreTipsModalActionItems(channelId) {
     }
     obj[3] = closure_8(EyeSlashIcon, {});
     obj[4] = isBlocked;
-    const items = [obj, ];
+    const items = [obj];
     const intl3 = channelId(senderId[10]).intl;
     const formatToPlainString2 = intl3.formatToPlainString;
     const t2 = channelId(senderId[10]).t;
@@ -94,7 +112,14 @@ export default function StrangerDangerMoreTipsModalActionItems(channelId) {
       obj2[0] = tmp2;
       formatToPlainString2Result = formatToPlainString2(t2["gc/wxc"], obj2);
     }
-    const obj3 = { title: formatToPlainString2Result, description: null, onClick: null, icon: null, variant: "danger", disabled: null };
+    const obj3 = {
+      title: formatToPlainString2Result,
+      description: null,
+      onClick: null,
+      icon: null,
+      variant: "danger",
+      disabled: null,
+    };
     let stringResult1;
     if (!isBlocked) {
       const intl4 = channelId(senderId[10]).intl;
@@ -115,7 +140,7 @@ export default function StrangerDangerMoreTipsModalActionItems(channelId) {
       const merged = Object.assign(arg0);
       obj[0] = callback(warningId(senderId[15]), obj);
       return callback(stateFromStores.Fragment, obj, arg1);
-    })
+    }),
   };
   return jsx(channelId(senderId[14]).TableRowGroup, {
     hasIcons: true,
@@ -125,6 +150,6 @@ export default function StrangerDangerMoreTipsModalActionItems(channelId) {
       const merged = Object.assign(arg0);
       obj[0] = callback(warningId(senderId[15]), obj);
       return callback(stateFromStores.Fragment, obj, arg1);
-    })
+    }),
   });
-};
+}

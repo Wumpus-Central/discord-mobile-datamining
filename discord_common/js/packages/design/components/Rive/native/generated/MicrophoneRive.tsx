@@ -6,14 +6,30 @@ import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
-let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
+let closure_3 = [
+  "fallback",
+  "artboard",
+  "stateMachine",
+  "defaultViewModelInstance",
+  "dataBinding",
+  "onDataBindingChange",
+];
 let c5 = importAllResult;
-let closure_7 = { "Icon Microphone": { reducedMotion: "boolean", fill: "color", on: "boolean" }, "Animation Main": { reducedMotion: "boolean", fill: "color", on: "boolean" } };
+let closure_7 = {
+  "Icon Microphone": { reducedMotion: "boolean", fill: "color", on: "boolean" },
+  "Animation Main": { reducedMotion: "boolean", fill: "color", on: "boolean" },
+};
 let closure_8 = { "Icon Microphone": ["Off", "On"], "Animation Main": ["Off", "On"] };
 let closure_9 = {
   "Icon Microphone": function IconMicrophoneBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     const tmp = require;
     let fill;
@@ -39,7 +55,13 @@ let closure_9 = {
   },
   "Animation Main": function AnimationMainBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding(
+      "reducedMotion",
+      instance,
+      reducedMotionEnabled.reducedMotionEnabled,
+      undefined,
+      playIfNeeded,
+    );
     const obj = BaseRive;
     const tmp = require;
     let fill;
@@ -62,7 +84,7 @@ let closure_9 = {
     }
     const booleanBinding1 = BaseRive.useBooleanBinding("on", instance, on, on1, playIfNeeded);
     return null;
-  }
+  },
 };
 let closure_10 = importAllResult.forwardRef(function MicrophoneRiveInner(defaultViewModelInstance, ref) {
   ({ fallback, artboard } = defaultViewModelInstance);
@@ -91,7 +113,16 @@ let closure_10 = importAllResult.forwardRef(function MicrophoneRiveInner(default
   }, items);
   const tmp = callback(defaultViewModelInstance, closure_3);
   let merged = Object.assign(tmp);
-  return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: dataBinding(onDataBindingChange[4]), artboard: str, artboardProperties: closure_7, artboardViewModelInstances: closure_8, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
+  return jsx(str(onDataBindingChange[3]).BaseRive, {
+    ref,
+    src: dataBinding(onDataBindingChange[4]),
+    artboard: str,
+    artboardProperties: closure_7,
+    artboardViewModelInstances: closure_8,
+    defaultViewModelInstance: str2,
+    stateMachine: defaultViewModelInstance.stateMachine,
+    renderDataBinding: callback,
+  });
 });
 const forwardRefResult = importAllResult.forwardRef(function MicrophoneRiveWithBoundary(fallback, ref) {
   let obj = { fallback: fallback.fallback, children: null };
@@ -100,6 +131,8 @@ const forwardRefResult = importAllResult.forwardRef(function MicrophoneRiveWithB
   obj[1] = <closure_10 ref={arg1} />;
   return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/MicrophoneRive.tsx");
+const result = require("set").fileFinishedImporting(
+  "../discord_common/js/packages/design/components/Rive/native/generated/MicrophoneRive.tsx",
+);
 
 export const MicrophoneRive = forwardRefResult;

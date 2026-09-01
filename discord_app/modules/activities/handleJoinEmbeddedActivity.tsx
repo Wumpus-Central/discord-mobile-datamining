@@ -15,7 +15,7 @@ function _handleJoinEmbeddedActivityInternal() {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (application === 2) {
         application = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -59,7 +59,18 @@ function _handleJoinEmbeddedActivityInternal() {
                 let currentEmbeddedActivity;
                 c9 = undefined;
                 throwTypeErrorResult = callback;
-                ({ applicationId: c0, activityChannelId: c1, locationObject: c2, analyticsLocations: c3, componentId: c4, sectionName: c5, source: c6, inviterUserId: c7, customId: c8, referrerId: c9 } = callback);
+                ({
+                  applicationId: c0,
+                  activityChannelId: c1,
+                  locationObject: c2,
+                  analyticsLocations: c3,
+                  componentId: c4,
+                  sectionName: c5,
+                  source: c6,
+                  inviterUserId: c7,
+                  customId: c8,
+                  referrerId: c9,
+                } = callback);
                 closure_10 = undefined;
                 let _private;
                 let guildId;
@@ -127,7 +138,9 @@ function _handleJoinEmbeddedActivityInternal() {
                         if (null != currentEmbeddedActivity2) {
                           if (currentEmbeddedActivity2.applicationId === callback) {
                             let obj13 = callback(4111);
-                            const embeddedActivityLocationChannelId = obj13.getEmbeddedActivityLocationChannelId(currentEmbeddedActivity2.location);
+                            const embeddedActivityLocationChannelId = obj13.getEmbeddedActivityLocationChannelId(
+                              currentEmbeddedActivity2.location,
+                            );
                             if (embeddedActivityLocationChannelId === store.getVoiceChannelId()) {
                               throwTypeErrorResult = callback2;
                               throwTypeErrorResult = dependencyMap;
@@ -176,7 +189,14 @@ function _handleJoinEmbeddedActivityInternal() {
                 closure_16 = arg1;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                const obj6 = { applicationId: null, application: null, channel: null, currentEmbeddedApplication: null, embeddedActivitiesManager: null, user: null };
+                const obj6 = {
+                  applicationId: null,
+                  application: null,
+                  channel: null,
+                  currentEmbeddedApplication: null,
+                  embeddedActivitiesManager: null,
+                  user: null,
+                };
                 throwTypeErrorResult = callback;
                 obj6[0] = callback;
                 throwTypeErrorResult = closure_16;
@@ -266,7 +286,20 @@ function _handleJoinEmbeddedActivityInternal() {
                 const result = obj4.maybeDisconnectFromCurrentActivity(currentEmbeddedActivity2.location);
               }
               obj5 = callback(9469);
-              obj13 = { channelId: null, applicationId: null, isStart: false, embeddedActivitiesManager: null, analyticsLocations: null, locationObject: null, componentId: null, sectionName: null, source: null, inviterUserId: null, customId: null, referrerId: null };
+              obj13 = {
+                channelId: null,
+                applicationId: null,
+                isStart: false,
+                embeddedActivitiesManager: null,
+                analyticsLocations: null,
+                locationObject: null,
+                componentId: null,
+                sectionName: null,
+                source: null,
+                inviterUserId: null,
+                customId: null,
+                referrerId: null,
+              };
               obj13[0] = callback2;
               obj13[1] = callback;
               obj13[3] = closure_10;
@@ -308,14 +341,18 @@ let result = require("set").fileFinishedImporting("modules/activities/handleJoin
 export default function handleJoinEmbeddedActivity(arg0) {
   const _require = arg0;
   const obj = shouldOpenActivityInPopoutWindow;
-  return obj.wrapPreemptiveActivityPopout(require("ActivityPopoutUtils.native.tsx").shouldOpenActivityInPopoutWindow(), () => (function handleJoinEmbeddedActivityInternal(closure_0) {
-    const self = this;
-    const apply = closure_10.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  })(closure_0));
-};
+  return obj.wrapPreemptiveActivityPopout(
+    require("ActivityPopoutUtils.native.tsx").shouldOpenActivityInPopoutWindow(),
+    () =>
+      (function handleJoinEmbeddedActivityInternal(closure_0) {
+        const self = this;
+        const apply = closure_10.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      })(closure_0),
+  );
+}

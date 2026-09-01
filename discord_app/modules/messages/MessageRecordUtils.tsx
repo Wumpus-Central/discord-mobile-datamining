@@ -40,7 +40,9 @@ function createMinimalMessageRecord(timestamp) {
     let items = [];
   } else {
     const embeds = timestamp.embeds;
-    const mapped = embeds.map((footer) => message2(closure_1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
+    const mapped = embeds.map((footer) =>
+      message2(closure_1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer),
+    );
     items = require("../../utils/EmbedUtils.tsx").mergeEmbedsOnURL(mapped);
     const obj2 = getEffectiveVideoProvider;
   }
@@ -160,7 +162,13 @@ function createMessageRecord(message, message) {
   obj.mentionChannels = mention_channels;
   obj.messageReference = message.message_reference;
   let tmp9Result = tmp9(4751);
-  obj1 = { userId: store.getId(), channelId: message.channel_id, mentionEveryone: null, mentionUsers: null, mentionRoles: null };
+  obj1 = {
+    userId: store.getId(),
+    channelId: message.channel_id,
+    mentionEveryone: null,
+    mentionUsers: null,
+    mentionRoles: null,
+  };
   let flag = message.mention_everyone;
   if (flag == null) {
     flag = false;
@@ -235,7 +243,11 @@ function createMessageRecord(message, message) {
       interactionData = message.interaction_data;
     }
     obj.interactionData = interactionData;
-    ({ interaction_metadata: obj7.interactionMetadata, role_subscription_data: obj7.roleSubscriptionData, purchase_notification: obj7.purchaseNotification } = message);
+    ({
+      interaction_metadata: obj7.interactionMetadata,
+      role_subscription_data: obj7.roleSubscriptionData,
+      purchase_notification: obj7.purchaseNotification,
+    } = message);
     let tmp50;
     if (null != message.poll) {
       tmp50 = transformMessagePollDefault(message.poll);
@@ -258,7 +270,15 @@ function createMessageRecord(message, message) {
     if (results != null) {
       const answer_counts = results.answer_counts;
       mapped1 = answer_counts.map((me_vote) => {
-        obj = { count_details: obj, me_vote: me_vote.me_voted, emoji: null, me: false, me_burst: false, count: null, burst_count: 0 };
+        obj = {
+          count_details: obj,
+          me_vote: me_vote.me_voted,
+          emoji: null,
+          me: false,
+          me_burst: false,
+          count: null,
+          burst_count: 0,
+        };
         obj = { vote: me_vote.count };
         obj = { id: str.toString(), name: "", animated: false };
         obj[2] = obj;
@@ -386,7 +406,10 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         }
         let result8 = result7;
         if (null != message2.components) {
-          result8 = result7.set("components", require("../interaction_components/InteractionComponentUtils.tsx").transformComponents(message2.components));
+          result8 = result7.set(
+            "components",
+            require("../interaction_components/InteractionComponentUtils.tsx").transformComponents(message2.components),
+          );
           const obj14 = flattenComponents;
         }
         let result9 = result8;
@@ -402,7 +425,10 @@ export const updateMessageRecord = function updateMessageRecord(message, message
           let result11 = result10;
           if (null != message2.mentions) {
             const mentions = message2.mentions;
-            result11 = result10.set("mentions", mentions.map((id) => id.id));
+            result11 = result10.set(
+              "mentions",
+              mentions.map((id) => id.id),
+            );
             flag = true;
           }
           let result12 = result11;
@@ -484,7 +510,9 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         let items3 = [];
       } else {
         const embeds = message2.embeds;
-        const mapped = embeds.map((footer) => message2(closure_1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
+        const mapped = embeds.map((footer) =>
+          message2(closure_1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer),
+        );
         items3 = require("../../utils/EmbedUtils.tsx").mergeEmbedsOnURL(mapped);
         const obj9 = getEffectiveVideoProvider;
       }

@@ -4,7 +4,9 @@ import closure_4 from "../../../stores/UserStore.tsx";
 import closure_5 from "../FavoriteStore.tsx";
 
 const require = arg1;
-let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx",
+);
 
 export default function useFavoritesGuildAutoAddedThreadsAction() {
   let obj = hasAccess(10307);
@@ -40,4 +42,4 @@ export default function useFavoritesGuildAutoAddedThreadsAction() {
   obj[3] = intl2.string(stateFromStores(3179).g2vHYJ);
   obj[4] = callback;
   return obj;
-};
+}

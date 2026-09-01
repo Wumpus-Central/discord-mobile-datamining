@@ -82,7 +82,7 @@ export default function useHeroColors(pendingAvatarSrc) {
     obj[1] = first(tmp[7]).int2hex(tmp13);
     return obj;
   }, items2);
-};
+}
 export const getHeroColors = function getHeroColors(game_name) {
   let obj = num(8043);
   const fallbackHeroColor = obj.getFallbackHeroColor(theme.theme, closure_5.saturation);

@@ -55,7 +55,7 @@ const tooltipStore = new TooltipStore(dispatcherDefault, {
       }
     }
     return false;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/tooltip/TooltipStore.tsx");
 

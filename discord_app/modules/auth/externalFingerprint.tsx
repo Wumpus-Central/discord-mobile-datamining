@@ -18,4 +18,4 @@ export default function externalFingerprint(arg0) {
     }
     const obj2 = keysSorter;
   }
-};
+}

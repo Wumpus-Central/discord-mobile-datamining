@@ -45,7 +45,7 @@ function FamilyCenterActivitySectionHeader(displayType) {
     obj = { variant: "text-sm/semibold", style: null, children: null };
     obj[1] = tmp.header;
     obj[2] = sectionHeaderResult;
-    const items = [callback2(tmp3(4474).Text, obj), ];
+    const items = [callback2(tmp3(4474).Text, obj)];
     let tmp14Result = null;
     if (null !== tmp10) {
       obj = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
@@ -68,12 +68,42 @@ createCacheKey = { marginBottom: ThemesDefault.space.PX_4 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_8 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { container: { display: "flex" }, loadMoreContainer: { display: "flex", flexDirection: "row", flex: 1, alignItems: "center", justifyContent: "center", width: "100%" }, loadMore: null, loadMoreButton: null };
+let obj2 = {
+  container: { display: "flex" },
+  loadMoreContainer: {
+    display: "flex",
+    flexDirection: "row",
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+  },
+  loadMore: null,
+  loadMoreButton: null,
+};
 let obj1 = { marginBottom: ThemesDefault.space.PX_8 };
-obj2[2] = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderBottomRightRadius: ThemesDefault.radii.sm, borderBottomLeftRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, width: "60%" };
+obj2[2] = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  borderBottomRightRadius: ThemesDefault.radii.sm,
+  borderBottomLeftRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  width: "60%",
+};
 obj2[3] = { paddingVertical: 4 };
 let closure_13 = createCacheKey.createStyles(obj2);
-let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderBottomRightRadius: ThemesDefault.radii.sm, borderBottomLeftRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, width: "60%" };
+let obj3 = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  borderBottomRightRadius: ThemesDefault.radii.sm,
+  borderBottomLeftRadius: ThemesDefault.radii.sm,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  width: "60%",
+};
 const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivitySection.tsx");
 
 export default function FamilyCenterActivitySection(displayType) {
@@ -104,7 +134,10 @@ export default function FamilyCenterActivitySection(displayType) {
     obj[0] = loadMoreButton.container;
     obj1 = { displayType: null };
     obj1[0] = displayType;
-    const items1 = [callback2(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => callback(loadMore(14506), { action }, action.event_id)), ];
+    const items1 = [
+      callback2(FamilyCenterActivitySectionHeader, obj1),
+      substr.map((action) => callback(loadMore(14506), { action }, action.event_id)),
+    ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
       obj[1] = items1;
@@ -121,7 +154,13 @@ export default function FamilyCenterActivitySection(displayType) {
         obj3[1] = tmp17(closure_5, obj4);
         let tmp17Result = tmp17(tmp16, obj3);
       } else {
-        const obj5 = { style: null, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
+        const obj5 = {
+          style: null,
+          accessibilityLabel: null,
+          accessibilityRole: "button",
+          onPress: null,
+          children: null,
+        };
         obj5[0] = loadMoreButton.loadMore;
         obj5[1] = formatToPlainStringResult;
         obj5[3] = tmp7;
@@ -136,4 +175,4 @@ export default function FamilyCenterActivitySection(displayType) {
     }
     tmp15 = closure_10;
   }
-};
+}

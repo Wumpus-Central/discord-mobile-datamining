@@ -27,4 +27,4 @@ export default function dedupeEmojisByNameOrId(arg0) {
     continue;
   }
   return map;
-};
+}

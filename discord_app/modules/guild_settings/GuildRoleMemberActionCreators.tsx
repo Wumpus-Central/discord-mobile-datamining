@@ -12,7 +12,7 @@ function _fetchMemberCountsFromBackend() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       dependencyMap = tmp3;
       c4 = 1;
       obj1 = { type: "GUILD_ROLE_MEMBER_COUNT_FETCH_START", guildId: null };
@@ -60,7 +60,7 @@ function _fetchMemberCounts() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -161,7 +161,10 @@ export const requestMembersForRole = function requestMembersForRole(closure_0, c
   const result = store.set(combined, true);
   const _require = closure_0;
   const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-  const obj = { url: Endpoints.GUILD_ROLE_MEMBER_IDS(closure_0, callback), rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+  const obj = {
+    url: Endpoints.GUILD_ROLE_MEMBER_IDS(closure_0, callback),
+    rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+  };
   const value = HTTP.get(obj);
   resolved = value.then((body) => {
     const membersById = closure_1_1(closure_1_2[6]).requestMembersById(closure_0, body.body, false);

@@ -9,14 +9,20 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const require = arg1;
 ({ GuildFeatures: c4, Routes: c5 } = ME);
 createCacheKey = { container: null, badge: null, badgeText: null };
-createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+createCacheKey = {
+  marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL,
+  marginHorizontal: 8,
+  borderRadius: ThemesDefault.radii.md,
+};
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_DEFAULT };
 const obj1 = { backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_DEFAULT };
 createCacheKey[2] = { color: ThemesDefault.colors.BADGE_TEXT_DEFAULT };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { color: ThemesDefault.colors.BADGE_TEXT_DEFAULT };
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/GuildMemberDashChannelRow.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_member_verification/native/components/GuildMemberDashChannelRow.tsx",
+);
 
 export default function GuildMemberDashChannelRow(arg0) {
   ({ guild, selected } = arg0);
@@ -47,7 +53,17 @@ export default function GuildMemberDashChannelRow(arg0) {
   }, items1);
   const ChannelModes = tmp2(11948).ChannelModes;
   const tmp7 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
-  obj = { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null };
+  obj = {
+    onPress: callback,
+    style: tmp.container,
+    accessible: true,
+    accessibilityLabel: null,
+    accessibilityState: null,
+    mode: null,
+    name: null,
+    icon: null,
+    channelInfo: null,
+  };
   const intl = tmp2(1236).intl;
   obj[3] = intl.string(id(1236).t["9Oq93m"]);
   obj[4] = { selected };
@@ -68,4 +84,4 @@ export default function GuildMemberDashChannelRow(arg0) {
   }
   obj[8] = tmp8Result;
   return <tmp9 name={null} mode={null} />;
-};
+}

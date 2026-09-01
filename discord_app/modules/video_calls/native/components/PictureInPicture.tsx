@@ -23,12 +23,24 @@ obj[1] = createCacheKey;
 obj[2] = Button.generateBoxShadowStyle(require("Button").EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 let closure_9 = createCacheKey.createStyles(obj);
 function getSpringAnimationConfig(velocity) {
-  return { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity };
+  return {
+    mass: 0.2,
+    damping: 7.5,
+    stiffness: 100,
+    restDisplacementThreshold: 0.1,
+    restSpeedThreshold: 0.1,
+    overshootClamping: true,
+    velocity,
+  };
 }
 getSpringAnimationConfig.__closure = {};
 getSpringAnimationConfig.__workletHash = 6627401186753;
-getSpringAnimationConfig.__initData = { code: "function getSpringAnimationConfig_PictureInPictureTsx1(velocity){return{mass:0.2,damping:7.5,stiffness:100,restDisplacementThreshold:0.1,restSpeedThreshold:0.1,overshootClamping:true,velocity:velocity};}" };
-let closure_11 = { code: "function PictureInPictureTsx2(){const{insets,withSpring,getSpringAnimationConfig}=this.__closure;return{marginTop:insets.top,marginBottom:withSpring(insets.bottom,getSpringAnimationConfig())};}" };
+getSpringAnimationConfig.__initData = {
+  code: "function getSpringAnimationConfig_PictureInPictureTsx1(velocity){return{mass:0.2,damping:7.5,stiffness:100,restDisplacementThreshold:0.1,restSpeedThreshold:0.1,overshootClamping:true,velocity:velocity};}",
+};
+let closure_11 = {
+  code: "function PictureInPictureTsx2(){const{insets,withSpring,getSpringAnimationConfig}=this.__closure;return{marginTop:insets.top,marginBottom:withSpring(insets.bottom,getSpringAnimationConfig())};}",
+};
 const memoResult = importAllResult.memo((preferredPosition) => {
   ({ children, style } = preferredPosition);
   if (preferredPosition.preferredPosition === undefined) {
@@ -54,7 +66,15 @@ const memoResult = importAllResult.memo((preferredPosition) => {
     if (typeof closure_1_10 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    obj[1] = insets(ref[13]).withSpring(insets.bottom, { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity: undefined });
+    obj[1] = insets(ref[13]).withSpring(insets.bottom, {
+      mass: 0.2,
+      damping: 7.5,
+      stiffness: 100,
+      restDisplacementThreshold: 0.1,
+      restSpeedThreshold: 0.1,
+      overshootClamping: true,
+      velocity: undefined,
+    });
     return obj;
   };
   obj = { insets, withSpring: insets(ref[13]).withSpring, getSpringAnimationConfig };
@@ -66,7 +86,14 @@ const memoResult = importAllResult.memo((preferredPosition) => {
   const isViewingActivity = obj5.useIsViewingActivity({ channelId: channel.id });
   obj1 = { channelId: channel.id };
   const tmp8 = callback(importAllResult.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 }), 2);
-  obj2 = { width: size.width, height: size.height, containerWidth: size2.width, containerHeight: size2.height, snapToCorners: !isViewingActivity, onPress: null };
+  obj2 = {
+    width: size.width,
+    height: size.height,
+    containerWidth: size2.width,
+    containerHeight: size2.height,
+    snapToCorners: !isViewingActivity,
+    onPress: null,
+  };
   let tmp11;
   if (isViewingActivity) {
     tmp11 = toggleFocus;
@@ -89,10 +116,10 @@ const memoResult = importAllResult.memo((preferredPosition) => {
         });
       }
     },
-    children: null
+    children: null,
   };
   obj5 = { gesture, children: null };
-  const items1 = [draggableGridItemStyles, ];
+  const items1 = [draggableGridItemStyles];
   const obj8 = insets(ref[15]);
   let elevationShadow;
   if (tmp3Result.isIOS()) {
@@ -102,14 +129,23 @@ const memoResult = importAllResult.memo((preferredPosition) => {
   items1[1] = elevationShadow;
   obj5[1] = jsx(importDefault(ref[12]).View, { style: items1, children: <closure_5>{children}</closure_5> });
   obj4[4] = jsx(insets(ref[16]).GestureDetector, { gesture, children: null });
-  obj3[2] = <closure_5 ref={ref} style={tmp2.pipInnerContainer} pointerEvents="box-none" onLayout={function onLayout() {
-    if (null != ref.current) {
-      const current = ref.current;
-      current.measure((arg0, arg1, width, height, pageX, pageY) => {
-        callback({ x: arg0, y: arg1, width, height, pageX, pageY });
-      });
-    }
-  }}>{null}</closure_5>;
+  obj3[2] = (
+    <closure_5
+      ref={ref}
+      style={tmp2.pipInnerContainer}
+      pointerEvents="box-none"
+      onLayout={function onLayout() {
+        if (null != ref.current) {
+          const current = ref.current;
+          current.measure((arg0, arg1, width, height, pageX, pageY) => {
+            callback({ x: arg0, y: arg1, width, height, pageX, pageY });
+          });
+        }
+      }}
+    >
+      {null}
+    </closure_5>
+  );
   return jsx(importDefault(ref[12]).View, { style: items, pointerEvents: "box-none", children: null });
 });
 const result = require("set").fileFinishedImporting("modules/video_calls/native/components/PictureInPicture.tsx");

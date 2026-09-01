@@ -13,7 +13,9 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 0 };
 createCacheKey[2] = { justifyContent: "flex-start" };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/EditProfileThemeActionSheet.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/user_settings/profiles/native/EditProfileThemeActionSheet.tsx",
+);
 
 export default function EditProfileThemeActionSheet(onResetTheme) {
   onResetTheme = onResetTheme.onResetTheme;
@@ -25,7 +27,7 @@ export default function EditProfileThemeActionSheet(onResetTheme) {
   obj = { style: tmp.nitroWheel };
   obj[1] = callback(onResetTheme(1297).NitroWheel, obj);
   ({ titleWrapper: obj2[2], titleContainer: obj2[3] } = tmp);
-  const items = [callback(onResetTheme(5621).BottomSheetTitleHeader, obj), ];
+  const items = [callback(onResetTheme(5621).BottomSheetTitleHeader, obj)];
   obj1 = { hasIcons: false, children: null };
   const obj2 = { label: null, subLabel: null, onPress: null };
   const intl2 = onResetTheme(1236).intl;
@@ -40,4 +42,4 @@ export default function EditProfileThemeActionSheet(onResetTheme) {
   items[1] = callback(onResetTheme(5992).TableRowGroup, obj1);
   obj[0] = items;
   return callback2(onResetTheme(5989).ActionSheet, obj);
-};
+}

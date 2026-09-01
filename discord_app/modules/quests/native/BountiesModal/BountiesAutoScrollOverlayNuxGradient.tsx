@@ -7,8 +7,12 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 const BRAND_500 = ThemesDefault.unsafe_rawColors.BRAND_500;
-let closure_8 = { code: "function BountiesAutoScrollOverlayNuxGradientTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
-let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesAutoScrollOverlayNuxGradient.tsx");
+let closure_8 = {
+  code: "function BountiesAutoScrollOverlayNuxGradientTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
+};
+let result = require("set").fileFinishedImporting(
+  "modules/quests/native/BountiesModal/BountiesAutoScrollOverlayNuxGradient.tsx",
+);
 
 export default function BountiesAutoScrollOverlayNuxGradient(active) {
   active = active.active;
@@ -39,9 +43,15 @@ export default function BountiesAutoScrollOverlayNuxGradient(active) {
   obj[2] = [0, 1];
   obj[3] = { x: 0.5, y: 1 };
   obj[4] = { x: 0.5, y: 0 };
-  const items3 = [callback(sharedValue(4940), obj), ];
-  obj1 = { style: StyleSheet.absoluteFillObject, colors: ["rgba(0,0,0,0.4)", "rgba(0,0,0,0)"], locations: [0, 0.5], start: { x: 0.5, y: 1 }, end: { x: 0.5, y: 0 } };
+  const items3 = [callback(sharedValue(4940), obj)];
+  obj1 = {
+    style: StyleSheet.absoluteFillObject,
+    colors: ["rgba(0,0,0,0.4)", "rgba(0,0,0,0)"],
+    locations: [0, 0.5],
+    start: { x: 0.5, y: 1 },
+    end: { x: 0.5, y: 0 },
+  };
   items3[1] = callback(sharedValue(4940), obj1);
   obj[2] = items3;
   return callback2(sharedValue(4217).View, obj);
-};
+}

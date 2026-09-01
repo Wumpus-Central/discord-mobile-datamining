@@ -14,17 +14,27 @@ import set from "../../utils/PlatformUtils.tsx";
 require = arg1;
 noopAll;
 createCacheKey = { container: null, containerIOS: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.round, position: "absolute", right: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_RIGHT_SPACING };
+createCacheKey = {
+  borderRadius: ThemesDefault.radii.round,
+  position: "absolute",
+  right: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_RIGHT_SPACING,
+};
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { bottom: "100%", marginBottom: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING, pointerEvents: "box-none" };
+createCacheKey[1] = {
+  bottom: "100%",
+  marginBottom: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING,
+  pointerEvents: "box-none",
+};
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let closure_10 = set.isIOS() ? (() => null) : ((arg0) => {
-  let obj = map;
-  obj = { bottom: null };
-  const token = obj.useToken(ThemesDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
-  obj[0] = callback2(arg0) + token;
-  return obj;
-});
+let closure_10 = set.isIOS()
+  ? () => null
+  : (arg0) => {
+      let obj = map;
+      obj = { bottom: null };
+      const token = obj.useToken(ThemesDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
+      obj[0] = callback2(arg0) + token;
+      return obj;
+    };
 const result = set.fileFinishedImporting("components_native/chat/JumpToPresentButton.tsx");
 
 export default function JumpToPresentButton(channelId) {
@@ -56,7 +66,10 @@ export default function JumpToPresentButton(channelId) {
   const isVoicePanelOpen = channelId(9651).useIsVoicePanelOpen(channelId);
   const obj3 = channelId(9651);
   const items1 = [closure_7];
-  const stateFromStores = channelId(589).useStateFromStores(items1, () => null != closure_1_7.getMessages(channelId).jumpReturnTargetId);
+  const stateFromStores = channelId(589).useStateFromStores(
+    items1,
+    () => null != closure_1_7.getMessages(channelId).jumpReturnTargetId,
+  );
   if (!tmp5) {
     return null;
   }
@@ -86,4 +99,4 @@ export default function JumpToPresentButton(channelId) {
   }
   obj[1] = tmp11Result;
   return <View style={items2}>{null}</View>;
-};
+}

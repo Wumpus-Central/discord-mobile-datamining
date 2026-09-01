@@ -13,13 +13,13 @@ obj = {
   parent: null,
   IconComponent: PaintPaletteIcon.PaintPaletteIcon,
   usePredicate: useDesignSystemsSettingPredicate.useDesignSystemsSettingPredicate,
-  screen: obj
+  screen: obj,
 };
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM,
   getComponent() {
     return SettingsDesignSystemsScreen /* SettingsDesignSystemsScreen */.default;
-  }
+  },
 };
 const route = createToggle.createRoute(obj);
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsSetting.tsx");

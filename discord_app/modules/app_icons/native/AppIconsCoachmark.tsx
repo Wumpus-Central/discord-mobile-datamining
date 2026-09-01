@@ -13,7 +13,15 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 const require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, info: null, image: null, nitroWheel: null, titleContainer: null, subtitle: null, footer: null };
+createCacheKey = {
+  container: null,
+  info: null,
+  image: null,
+  nitroWheel: null,
+  titleContainer: null,
+  subtitle: null,
+  footer: null,
+};
 createCacheKey = { padding: ThemesDefault.space.PX_16, paddingBottom: 0 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center" };
@@ -45,14 +53,21 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
       return markAsDismissed(closure_1_7.DISMISS);
     },
     contentStyles: tmp.container,
-    children: null
+    children: null,
   };
   obj = { style: tmp.info, children: null };
   obj1 = { source: registerAssetDefault2, style: tmp.image };
-  const items2 = [callback(closure_4, obj1), , ];
+  const items2 = [callback(closure_4, obj1), ,];
   const obj2 = { style: tmp.titleContainer, children: null };
   const isPremiumResult = obj1.isPremium(stateFromStores);
-  const items3 = [callback(markAsDismissed(1297).Icon, { source: registerAssetDefault, size: markAsDismissed(1297).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true }), ];
+  const items3 = [
+    callback(markAsDismissed(1297).Icon, {
+      source: registerAssetDefault,
+      size: markAsDismissed(1297).IconSizes.MEDIUM,
+      style: tmp.nitroWheel,
+      disableColor: true,
+    }),
+  ];
   const obj4 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1236).intl;
   obj4[2] = intl.string(markAsDismissed(1236).t.EfA4Cq);
@@ -71,7 +86,7 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   obj5[3] = stringResult;
   items2[2] = callback(markAsDismissed(4474).Text, obj5);
   obj[1] = items2;
-  const items4 = [callback2(closure_5, obj), ];
+  const items4 = [callback2(closure_5, obj)];
   const obj6 = { style: tmp.footer, children: null };
   const obj7 = { text: null, onPress: null };
   const intl3 = tmp2(1236).intl;
@@ -85,7 +100,7 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
     const tmp = closure_1_2;
     const result = markAsDismissed(closure_1_2[17]).navigateToAppIconSettings();
   };
-  const items5 = [callback(markAsDismissed(4928).Button, obj7), ];
+  const items5 = [callback(markAsDismissed(4928).Button, obj7)];
   const obj8 = { variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(1236).intl;
   obj8[1] = intl4.string(markAsDismissed(1236).t.iSrIIZ);
@@ -95,4 +110,4 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   items4[1] = callback2(closure_5, obj6);
   obj[2] = items4;
   return callback2(markAsDismissed(5622).BottomSheet, obj);
-};
+}

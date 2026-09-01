@@ -11,8 +11,7 @@ let closure_5 = {};
 let closure_6 = {};
 let c7 = null;
 const Store = initializeDefault.Store;
-class GameProfileStore extends Store {
-}
+class GameProfileStore extends Store {}
 const prototype = GameProfileStore.prototype;
 prototype["getSimilarGames"] = function getSimilarGames(arg0) {
   return table[arg0];
@@ -117,7 +116,7 @@ const gameProfileStore = new GameProfileStore(dispatcherDefault, {
       }
     }
     return false;
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/game_profile/GameProfileStore.tsx");
 

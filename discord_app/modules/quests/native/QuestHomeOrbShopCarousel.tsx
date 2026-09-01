@@ -48,13 +48,32 @@ function QuestHomeOrbShopCarouselPlaceholder(cardWidth) {
   const listEdgeSpacing = cardWidth.listEdgeSpacing;
   const items = [cardWidth, cardHeight];
   ({ listStyle, cardStride } = cardWidth);
-  const callback = React.useCallback(() => closure_1_8(cardHeight(listEdgeSpacing[13]), { width: cardWidth, height: cardHeight }), items);
+  const callback = React.useCallback(
+    () => closure_1_8(cardHeight(listEdgeSpacing[13]), { width: cardWidth, height: cardHeight }),
+    items,
+  );
   const items1 = [listEdgeSpacing];
   const callback1 = React.useCallback((arg0) => "placeholder-" + arg0, []);
   const items2 = [listEdgeSpacing];
   const callback2 = React.useCallback(() => closure_1_8(closure_1_13, { width: listEdgeSpacing }), items1);
   const callback3 = React.useCallback(() => closure_1_8(closure_1_13, { width: listEdgeSpacing }), items2);
-  const obj = { horizontal: true, accessibilityRole: "list", accessibilityLabel: null, accessibilityState: null, data: null, keyExtractor: null, renderItem: null, style: null, contentContainerStyle: null, decelerationRate: "fast", snapToInterval: null, showsHorizontalScrollIndicator: false, ListHeaderComponent: null, ListFooterComponent: null, ItemSeparatorComponent: null };
+  const obj = {
+    horizontal: true,
+    accessibilityRole: "list",
+    accessibilityLabel: null,
+    accessibilityState: null,
+    data: null,
+    keyExtractor: null,
+    renderItem: null,
+    style: null,
+    contentContainerStyle: null,
+    decelerationRate: "fast",
+    snapToInterval: null,
+    showsHorizontalScrollIndicator: false,
+    ListHeaderComponent: null,
+    ListFooterComponent: null,
+    ItemSeparatorComponent: null,
+  };
   const intl = cardWidth(listEdgeSpacing[12]).intl;
   obj[2] = intl.string(cardWidth(listEdgeSpacing[12]).t.hVV8Wi);
   obj[3] = { busy: true };
@@ -74,7 +93,10 @@ function QuestHomeOrbShopCarouselPlaceholder(cardWidth) {
 const PX_20 = ThemesDefault.space.PX_20;
 const PX_12 = ThemesDefault.space.PX_12;
 let closure_12 = { backgroundColor: "transparent" };
-let closure_15 = Array.from({ length: require("MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL").MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+let closure_15 = Array.from(
+  { length: require("MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL").MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL },
+  (arg0, arg1) => arg1,
+);
 let closure_16 = createCacheKey.createStyles(() => {
   let obj = { embeddedRoot: null, standaloneRoot: null, headerMediaRoot: null };
   obj = { paddingBottom: ThemesDefault.space.PX_24 };
@@ -136,7 +158,10 @@ export default function QuestHomeOrbShopCarousel(showOrbShopPlaceholderCarousel)
   const items1 = [listEdgeSpacing];
   const items2 = [listEdgeSpacing];
   callback = COLLECTIBLES_SHOP_CARD_WIDTH.useCallback(() => callback(closure_1_13, { width: listEdgeSpacing }), items1);
-  const callback1 = COLLECTIBLES_SHOP_CARD_WIDTH.useCallback(() => callback(closure_1_13, { width: listEdgeSpacing }), items2);
+  const callback1 = COLLECTIBLES_SHOP_CARD_WIDTH.useCallback(
+    () => callback(closure_1_13, { width: listEdgeSpacing }),
+    items2,
+  );
   const tmp10 = listEdgeSpacing(COLLECTIBLES_SHOP_CARD_WIDTH.useState(0), 2);
   first = tmp10[0];
   callback = tmp10[1];
@@ -192,7 +217,12 @@ export default function QuestHomeOrbShopCarousel(showOrbShopPlaceholderCarousel)
   const callback3 = obj.useCallback((arg0) => {
     ({ item, index } = arg0);
     let obj = { newValue: { tilePosition: index, pageSection: "quest_home_orb_shop" }, children: null };
-    obj = { product: item, cardWidth: COLLECTIBLES_SHOP_CARD_WIDTH, cardHeight: COLLECTIBLES_SHOP_CARD_HEIGHT, hideCardDetails: flag3 };
+    obj = {
+      product: item,
+      cardWidth: COLLECTIBLES_SHOP_CARD_WIDTH,
+      cardHeight: COLLECTIBLES_SHOP_CARD_HEIGHT,
+      hideCardDetails: flag3,
+    };
     obj[1] = callback(flag(flag3[15]), obj);
     return callback(obtainableOrbRewards(flag3[19]).CollectiblesAnalyticsProvider, obj);
   }, items5);
@@ -211,7 +241,7 @@ export default function QuestHomeOrbShopCarousel(showOrbShopPlaceholderCarousel)
       obj[1] = listEdgeSpacing;
       tmp21 = callback(QuestHomeOrbShopCarouselHeading, obj);
     }
-    const items6 = [tmp21, , ];
+    const items6 = [tmp21, ,];
     obj1 = { style: null, children: null };
     obj1[0] = memo;
     if (flag) {
@@ -223,7 +253,23 @@ export default function QuestHomeOrbShopCarousel(showOrbShopPlaceholderCarousel)
       obj2[4] = listEdgeSpacing;
       let tmp24Result = tmp24(QuestHomeOrbShopCarouselPlaceholder, obj2);
     } else {
-      const obj3 = { horizontal: true, accessibilityRole: "list", accessibilityLabel: null, data: null, keyExtractor: null, renderItem: null, style: null, contentContainerStyle: null, decelerationRate: "fast", snapToInterval: null, showsHorizontalScrollIndicator: false, ListHeaderComponent: null, ListFooterComponent: null, ItemSeparatorComponent: null, onMomentumScrollEnd: null };
+      const obj3 = {
+        horizontal: true,
+        accessibilityRole: "list",
+        accessibilityLabel: null,
+        data: null,
+        keyExtractor: null,
+        renderItem: null,
+        style: null,
+        contentContainerStyle: null,
+        decelerationRate: "fast",
+        snapToInterval: null,
+        showsHorizontalScrollIndicator: false,
+        ListHeaderComponent: null,
+        ListFooterComponent: null,
+        ItemSeparatorComponent: null,
+        onMomentumScrollEnd: null,
+      };
       const intl = tmp5(tmp4[12]).intl;
       obj3[2] = intl.string(tmp5(tmp4[12]).t.hVV8Wi);
       obj3[3] = orbShopProducts;
@@ -253,7 +299,7 @@ export default function QuestHomeOrbShopCarousel(showOrbShopPlaceholderCarousel)
   } else {
     return null;
   }
-};
+}
 export const useQuestHomeOrbShopCarouselData = function useQuestHomeOrbShopCarouselData(arg0) {
   let orbAmount;
   ({ enabled, sortType } = arg0);
@@ -276,6 +322,10 @@ export const useQuestHomeOrbShopCarouselData = function useQuestHomeOrbShopCarou
   });
   const obj2 = orbAmount(589);
   const popularOrbShopProducts = orbAmount(14671).usePopularOrbShopProducts({ enabled, sortType });
-  obj = { products: popularOrbShopProducts.products, obtainableOrbRewards: stateFromStores, showPlaceholderCarousel: popularOrbShopProducts.showPlaceholderCarousel };
+  obj = {
+    products: popularOrbShopProducts.products,
+    obtainableOrbRewards: stateFromStores,
+    showPlaceholderCarousel: popularOrbShopProducts.showPlaceholderCarousel,
+  };
   return obj;
 };

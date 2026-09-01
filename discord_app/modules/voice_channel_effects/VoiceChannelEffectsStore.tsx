@@ -21,14 +21,13 @@ let closure_10 = apply.debounce(() => {
   closure_7 = [];
 }, 500);
 const Store = initializeDefault.Store;
-class VoiceChannelEffectsStore extends Store {
-}
+class VoiceChannelEffectsStore extends Store {}
 const prototype = VoiceChannelEffectsStore.prototype;
 Object.defineProperty(prototype, "recentlyUsedEmojis", {
   get: function recentlyUsedEmojis() {
     return closure_5;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isOnCooldown", {
   get: function isOnCooldown() {
@@ -40,13 +39,13 @@ Object.defineProperty(prototype, "isOnCooldown", {
     }
     return tmp;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "effectCooldownEndTime", {
   get: function effectCooldownEndTime() {
     return closure_3;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getEffectForUserId"] = function getEffectForUserId(arg0) {
   return dependencyMap[arg0];
@@ -103,7 +102,7 @@ const voiceChannelEffectsStore = new VoiceChannelEffectsStore(dispatcherDefault,
   },
   VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: function handleTimestampUpdate(cooldownEndsAtMs) {
     const date = new Date(Date.now() + cooldownEndsAtMs.cooldownEndsAtMs);
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsStore.tsx");
 

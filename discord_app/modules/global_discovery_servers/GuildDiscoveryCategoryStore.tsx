@@ -7,14 +7,18 @@ import getSystemLocale from "../../intl/index.native.tsx";
 import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import DEFAULT_DISCOVERY_CATEGORY_ID from "GlobalDiscoveryServersConstants.tsx";
 
-({ DEFAULT_DISCOVERY_CATEGORY_ID: c3, OTHER_DISCOVERY_CATEGORY_ID: c4, DISCOVERY_ALL_CATEGORIES_ID: c5, DISCOVERY_SIDEBAR_CATEGORIES: closure_6 } = DEFAULT_DISCOVERY_CATEGORY_ID);
+({
+  DEFAULT_DISCOVERY_CATEGORY_ID: c3,
+  OTHER_DISCOVERY_CATEGORY_ID: c4,
+  DISCOVERY_ALL_CATEGORIES_ID: c5,
+  DISCOVERY_SIDEBAR_CATEGORIES: closure_6,
+} = DEFAULT_DISCOVERY_CATEGORY_ID);
 let c7 = null;
 let closure_8 = [];
 let closure_9 = [];
 let closure_10 = {};
 const Store = initializeDefault.Store;
-class GuildDiscoveryCategoryStore extends Store {
-}
+class GuildDiscoveryCategoryStore extends Store {}
 const prototype = GuildDiscoveryCategoryStore.prototype;
 prototype["getPrimaryCategories"] = function getPrimaryCategories() {
   return closure_8;
@@ -103,20 +107,23 @@ const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(dispatcherDe
       closure_10[categoryId] = name;
     }
     const locale = categories.locale;
-  }
+  },
 });
 const result = set.fileFinishedImporting("modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx");
 
 export default guildDiscoveryCategoryStore;
 export const areDiscoveryCategoriesEqual = function areDiscoveryCategoriesEqual(arr, arr2) {
   const mapped = arr.map((arg0) => {
-    const items = [, ];
+    const items = [,];
     ({ categoryId: arr[0], name: arr[1] } = arg0);
     return items;
   });
-  return applyDefault.isEqual(mapped, arr2.map((arg0) => {
-    const items = [, ];
-    ({ categoryId: arr[0], name: arr[1] } = arg0);
-    return items;
-  }));
+  return applyDefault.isEqual(
+    mapped,
+    arr2.map((arg0) => {
+      const items = [,];
+      ({ categoryId: arr[0], name: arr[1] } = arg0);
+      return items;
+    }),
+  );
 };

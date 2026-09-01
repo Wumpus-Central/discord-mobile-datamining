@@ -15,8 +15,26 @@ import hexToRgba from "../../utils/ColorUtils.tsx";
 
 const require = arg1;
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { sensitivity: { position: "relative", height: 20 }, sensitivityBar: { position: "absolute", top: 7, left: 0, right: 0, bottom: 7, flexDirection: "row" }, sensitivityFill: null, sensitivityCommon: null, sensitivityMin: null, sensitivityMax: null, sensitivityDefault: null, sensitivitySpeaking: null, sensitivitySlider: null };
-createCacheKey = { position: "absolute", backgroundColor: ThemesDefault.unsafe_rawColors.WHITE, opacity: 0.5, top: 7, left: 0, right: 0, bottom: 7 };
+createCacheKey = {
+  sensitivity: { position: "relative", height: 20 },
+  sensitivityBar: { position: "absolute", top: 7, left: 0, right: 0, bottom: 7, flexDirection: "row" },
+  sensitivityFill: null,
+  sensitivityCommon: null,
+  sensitivityMin: null,
+  sensitivityMax: null,
+  sensitivityDefault: null,
+  sensitivitySpeaking: null,
+  sensitivitySlider: null,
+};
+createCacheKey = {
+  position: "absolute",
+  backgroundColor: ThemesDefault.unsafe_rawColors.WHITE,
+  opacity: 0.5,
+  top: 7,
+  left: 0,
+  right: 0,
+  bottom: 7,
+};
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { height: 6, borderRadius: 3 };
 createCacheKey[4] = { backgroundColor: ThemesDefault.unsafe_rawColors.YELLOW_300 };
@@ -94,7 +112,7 @@ export default function VoiceSensitivity(auto) {
   const effect2 = stateFromStores.useEffect(() => {
     function _listenOnlyIfWeHavePermission() {
       const self = this;
-      const tmp = callback(function*() {
+      const tmp = callback(function* () {
         if (c2 === 2) {
           c2 = 3;
           HermesBuiltin.throwTypeError();
@@ -225,7 +243,19 @@ export default function VoiceSensitivity(auto) {
     }
   }, items4);
   if (auto) {
-    obj = { accessible: true, role: "meter", "aria-label": null, "aria-valuenow": null, "aria-valuemin": 0, "aria-valuemax": 100, "aria-valuetext": null, onAccessibilityFocus: null, onAccessibilityBlur: null, style: null, children: null };
+    obj = {
+      accessible: true,
+      role: "meter",
+      "aria-label": null,
+      "aria-valuenow": null,
+      "aria-valuemin": 0,
+      "aria-valuemax": 100,
+      "aria-valuetext": null,
+      onAccessibilityFocus: null,
+      onAccessibilityBlur: null,
+      style: null,
+      children: null,
+    };
     const intl2 = tmp10(tmp9[18]).intl;
     obj[2] = intl2.string(tmp10(tmp9[18]).t.yZcOjo);
     let num = 0;
@@ -262,7 +292,7 @@ export default function VoiceSensitivity(auto) {
     obj2[0] = items5;
     obj1[1] = callback(first1, obj2);
     obj[10] = callback(first1, obj1);
-    const items6 = [callback(tmp10(tmp9[19]).AccessibilityFocusView, obj), ];
+    const items6 = [callback(tmp10(tmp9[19]).AccessibilityFocusView, obj)];
     const obj3 = { inset: true, children: null };
     const intl4 = tmp10(tmp9[18]).intl;
     obj3[1] = intl4.string(tmp10(tmp9[18]).t.W3K5Im);
@@ -276,16 +306,16 @@ export default function VoiceSensitivity(auto) {
     obj5[0] = tmp.sensitivityBar;
     const obj6 = { ref: null, style: null };
     obj6[0] = ref;
-    const items7 = [, , ];
+    const items7 = [, ,];
     ({ sensitivityCommon: arr6[0], sensitivityMin: arr6[1] } = tmp);
     const obj7 = { flex: null };
     obj7[0] = tmp17;
     items7[2] = obj7;
     obj6[1] = items7;
-    const items8 = [callback(first1, obj6), ];
+    const items8 = [callback(first1, obj6)];
     const obj8 = { ref: null, style: null };
     obj8[0] = ref1;
-    const items9 = [, , ];
+    const items9 = [, ,];
     ({ sensitivityCommon: arr8[0], sensitivityMax: arr8[1] } = tmp);
     const obj9 = { flex: null };
     obj9[0] = 1 - tmp17;
@@ -293,16 +323,27 @@ export default function VoiceSensitivity(auto) {
     obj8[1] = items9;
     items8[1] = callback(first1, obj8);
     obj5[1] = items8;
-    const items10 = [callback(first1, obj5), , ];
+    const items10 = [callback(first1, obj5), ,];
     const obj10 = { ref: null, style: null };
     obj10[0] = ref2;
-    const items11 = [tmp.sensitivityFill, ];
+    const items11 = [tmp.sensitivityFill];
     const obj11 = { left: null };
     obj11[0] = tmp18[0];
     items11[1] = obj11;
     obj10[1] = items11;
     items10[1] = callback(first1, obj10);
-    const obj12 = { style: null, value: null, minimumValue: 0, maximumValue: 100, minimumTrackTintColor: "transparent", maximumTrackTintColor: "transparent", accessibilityLabel: null, onValueChange: null, onSlidingComplete: null, onResponderGrant: null };
+    const obj12 = {
+      style: null,
+      value: null,
+      minimumValue: 0,
+      maximumValue: 100,
+      minimumTrackTintColor: "transparent",
+      maximumTrackTintColor: "transparent",
+      accessibilityLabel: null,
+      onValueChange: null,
+      onSlidingComplete: null,
+      onResponderGrant: null,
+    };
     obj12[0] = tmp.sensitivitySlider;
     obj12[1] = sum;
     let intl = tmp10(tmp9[18]).intl;
@@ -325,4 +366,4 @@ export default function VoiceSensitivity(auto) {
     return tmp25(tmp26, obj4);
   }
   const tmp16 = width(stateFromStores.useState(first2 / 100), 2);
-};
+}

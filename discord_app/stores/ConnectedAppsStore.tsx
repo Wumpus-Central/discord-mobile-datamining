@@ -4,8 +4,7 @@ import dispatcherDefault from "../Dispatcher.tsx";
 
 let closure_2 = {};
 const Store = initializeDefault.Store;
-class ConnectedAppsStore extends Store {
-}
+class ConnectedAppsStore extends Store {}
 const prototype = ConnectedAppsStore.prototype;
 prototype["isConnected"] = function isConnected(arg0) {
   return null != dependencyMap[arg0];
@@ -24,7 +23,7 @@ Object.defineProperty(prototype, "connections", {
   get: function connections() {
     return require("../../_runtime/00012_apply.js").values(closure_2);
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getApplication"] = function getApplication(arg0) {
   return dependencyMap[arg0];
@@ -45,7 +44,15 @@ const connectedAppsStore = new ConnectedAppsStore(dispatcherDefault, {
     } else {
       const id = application.id;
       if (null == dependencyMap[id]) {
-        const obj = { count: 0, id: null, parentId: null, name: null, icon: null, coverImage: null, authenticated: false };
+        const obj = {
+          count: 0,
+          id: null,
+          parentId: null,
+          name: null,
+          icon: null,
+          coverImage: null,
+          authenticated: false,
+        };
         ({ id: obj[1], parentId: obj[2], name: obj[3], icon: obj[4], coverImage: obj[5] } = application);
         dependencyMap[id] = obj;
       }
@@ -75,7 +82,7 @@ const connectedAppsStore = new ConnectedAppsStore(dispatcherDefault, {
         delete tmp2[tmp];
       }
     }
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("stores/ConnectedAppsStore.tsx");
 

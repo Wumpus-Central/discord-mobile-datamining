@@ -46,7 +46,11 @@ function maybePresentModal(daysRemaining) {
   if (tmp5) {
     const obj = { daysRemaining: null };
     obj[0] = daysRemaining;
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(17046, dependencyMap.paths), "ParentalConsentWarningModal", obj);
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+      asyncRequireImpl(17046, dependencyMap.paths),
+      "ParentalConsentWarningModal",
+      obj,
+    );
     const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
   }
 }
@@ -119,12 +123,11 @@ let prototype = function ParentalConsentWarningManager() {
     LOGOUT() {
       c3 = undefined;
       callback(17048).resetFetchState();
-    }
+    },
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp3 {
-}
+class prototype extends tmp3 {}
 prototype = new prototype();
 const result = require("set").fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningManager.tsx");
 

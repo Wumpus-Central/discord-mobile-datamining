@@ -9,9 +9,14 @@ import closure_4 from "../../../../../stores/AuthenticationStore.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
-createCacheKey = { iconTintColor: ThemesDefault.colors.ICON_STRONG, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
+createCacheKey = {
+  iconTintColor: ThemesDefault.colors.ICON_STRONG,
+  iconDividerColor: ThemesDefault.colors.ICON_STRONG,
+};
 let closure_5 = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ReferralSystemMessage.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/messages/native/renderer/system_messages/ReferralSystemMessage.tsx",
+);
 
 export const createReferralSystemMessage = function createReferralSystemMessage(message) {
   ({ message, theme } = message);
@@ -27,7 +32,12 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
     }
     if (referrerId === id) {
       const obj3 = createReferralTrialEmbedRedeemable;
-      const referralTrialEmbedRedeemable = obj3.createReferralTrialEmbedRedeemable(message, theme, id, relevantUserTrialOffer);
+      const referralTrialEmbedRedeemable = obj3.createReferralTrialEmbedRedeemable(
+        message,
+        theme,
+        id,
+        relevantUserTrialOffer,
+      );
       if (null == referralTrialEmbedRedeemable) {
         return null;
       } else {
@@ -42,7 +52,12 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
       tmp8 = require;
     } else {
       const obj6 = createReferralTrialEmbedRedesign;
-      const referralTrialEmbedRedesign = obj6.createReferralTrialEmbedRedesign(message, theme, id, relevantUserTrialOffer);
+      const referralTrialEmbedRedesign = obj6.createReferralTrialEmbedRedesign(
+        message,
+        theme,
+        id,
+        relevantUserTrialOffer,
+      );
       if (null == referralTrialEmbedRedesign) {
         return null;
       } else {

@@ -41,21 +41,43 @@ function ConnectedNotificationSettings(guildId) {
   let obj = guildId(1499);
   const navigation = obj.useNavigation();
   const items = [closure_14, closure_11, closure_9, closure_10];
-  const stateFromStoresObject = guildId(589).useStateFromStoresObject(items, () => ({ guild: closure_1_11.getGuild(guildId), suppressEveryone: closure_1_14.isSuppressEveryoneEnabled(guildId), suppressRoles: closure_1_14.isSuppressRolesEnabled(guildId), mobilePush: closure_1_14.isMobilePushEnabled(guildId), muteEvents: closure_1_14.isMuteScheduledEventsEnabled(guildId), muted: closure_1_14.isMuted(guildId), muteConfig: closure_1_14.getMuteConfig(guildId), messageNotifications: closure_1_14.getMessageNotifications(guildId), channelOverrides: closure_1_14.getChannelOverrides(guildId), categories: closure_1_9.getCategories(guildId), guildMemberCount: closure_1_10.getMemberCount(guildId), notifyHighlights: closure_1_14.getNotifyHighlights(guildId) }));
+  const stateFromStoresObject = guildId(589).useStateFromStoresObject(items, () => ({
+    guild: closure_1_11.getGuild(guildId),
+    suppressEveryone: closure_1_14.isSuppressEveryoneEnabled(guildId),
+    suppressRoles: closure_1_14.isSuppressRolesEnabled(guildId),
+    mobilePush: closure_1_14.isMobilePushEnabled(guildId),
+    muteEvents: closure_1_14.isMuteScheduledEventsEnabled(guildId),
+    muted: closure_1_14.isMuted(guildId),
+    muteConfig: closure_1_14.getMuteConfig(guildId),
+    messageNotifications: closure_1_14.getMessageNotifications(guildId),
+    channelOverrides: closure_1_14.getChannelOverrides(guildId),
+    categories: closure_1_9.getCategories(guildId),
+    guildMemberCount: closure_1_10.getMemberCount(guildId),
+    notifyHighlights: closure_1_14.getNotifyHighlights(guildId),
+  }));
   categories = stateFromStoresObject.categories;
   const obj2 = guildId(589);
   const items1 = [categories];
-  const memo = importAllResult.useMemo(() => categories(closure_1_2[49])(categories._categories, categories, (channel) => {
-    const type = channel.channel.type;
-    let tmp = callback(type);
-    if (!tmp) {
-      tmp = type === constants.GUILD_CATEGORY;
-    }
-    return tmp;
-  }), items1);
+  const memo = importAllResult.useMemo(
+    () =>
+      categories(closure_1_2[49])(categories._categories, categories, (channel) => {
+        const type = channel.channel.type;
+        let tmp = callback(type);
+        if (!tmp) {
+          tmp = type === constants.GUILD_CATEGORY;
+        }
+        return tmp;
+      }),
+    items1,
+  );
   const tmp3 = callback(stateFromStoresObject, closure_3);
   obj = { children: null };
-  obj = { guildId, channels: memo, navigation, shouldUseNewNotificationSystem: guildId(10230).useShouldUseNewNotificationSystem("NotificationSettingsModalNative") };
+  obj = {
+    guildId,
+    channels: memo,
+    navigation,
+    shouldUseNewNotificationSystem: guildId(10230).useShouldUseNewNotificationSystem("NotificationSettingsModalNative"),
+  };
   const merged = Object.assign(tmp3);
   const items2 = [callback2(NotificationSettings, obj), callback2(guildId(5939).NavScrim, {})];
   obj[0] = items2;
@@ -63,7 +85,18 @@ function ConnectedNotificationSettings(guildId) {
 }
 let closure_3 = ["categories"];
 let c5 = importAllResult;
-({ AnalyticEvents: closure_16, UserNotificationSettings: closure_17, ChannelTypes: closure_18, NotificationSettingsSections: closure_19, SettingsPaneTypes: closure_20, MAX_MEMBERS_NOTIFY_ALL_MESSAGES: closure_21, GuildFeatures: closure_22, HighlightSettings: closure_23, HelpdeskArticles: closure_24, EMPTY_STRING_SNOWFLAKE_ID: closure_25 } = ME);
+({
+  AnalyticEvents: closure_16,
+  UserNotificationSettings: closure_17,
+  ChannelTypes: closure_18,
+  NotificationSettingsSections: closure_19,
+  SettingsPaneTypes: closure_20,
+  MAX_MEMBERS_NOTIFY_ALL_MESSAGES: closure_21,
+  GuildFeatures: closure_22,
+  HighlightSettings: closure_23,
+  HelpdeskArticles: closure_24,
+  EMPTY_STRING_SNOWFLAKE_ID: closure_25,
+} = ME);
 ({ jsx: closure_26, jsxs: closure_27, Fragment: closure_28 } = jsxProd);
 createCacheKey = { highlightsLearnMore: null, separator: null, formStack: null };
 createCacheKey = { fontSize: 12, color: ThemesDefault.unsafe_rawColors.BLUE_345, marginTop: 4 };
@@ -90,7 +123,11 @@ class NotificationSettings extends PureComponent {
         const _HermesInternal = HermesInternal;
         obj = { guildId: null };
         obj[0] = guildId;
-        tmpResult.openLazy(applyArgumentsResult(closure_1_2[20])(closure_1_2[19], closure_1_2.paths), "muteSettings" + guildId, obj);
+        tmpResult.openLazy(
+          applyArgumentsResult(closure_1_2[20])(closure_1_2[19], closure_1_2.paths),
+          "muteSettings" + guildId,
+          obj,
+        );
         const tmp7 = applyArgumentsResult(closure_1_2[20])(closure_1_2[19], closure_1_2.paths);
       }
     };
@@ -103,7 +140,11 @@ class NotificationSettings extends PureComponent {
       let obj = closure_1_1(closure_1_2[21]);
       obj = { message_notifications };
       const NotificationLabel = applyArgumentsResult(closure_1_2[22]).NotificationLabel;
-      const result = obj.updateGuildNotificationSettings(applyArgumentsResult.props.guildId, obj, NotificationLabel.notifications(message_notifications));
+      const result = obj.updateGuildNotificationSettings(
+        applyArgumentsResult.props.guildId,
+        obj,
+        NotificationLabel.notifications(message_notifications),
+      );
     };
     applyArgumentsResult.handleAddOverride = function handleAddOverride() {
       const props = applyArgumentsResult.props;
@@ -133,7 +174,7 @@ prototype["renderServerSettings"] = function renderServerSettings() {
     obj = { children: null };
     obj1 = { guildId: null };
     obj1[0] = self.props.guildId;
-    const items = [callback2(NotificationSettingsPresets.NotificationSettingsGuildPresets, obj1), , ];
+    const items = [callback2(NotificationSettingsPresets.NotificationSettingsGuildPresets, obj1), ,];
     const obj2 = { style: null, guildId: null };
     obj2[0] = { marginTop: 24 };
     obj2[1] = self.props.guildId;
@@ -143,7 +184,7 @@ prototype["renderServerSettings"] = function renderServerSettings() {
     obj3[1] = self.props.guildId;
     items[2] = callback2(NotificationSettingsMessageUnread.NotificationSettingsGuildMessageUnread, obj3);
     obj[0] = items;
-    const items1 = [tmp2(View, obj), ];
+    const items1 = [tmp2(View, obj)];
     const obj4 = { style: null };
     obj4[0] = tmp.separator;
     items1[1] = callback2(View, obj4);
@@ -169,7 +210,7 @@ prototype["renderServerSettings"] = function renderServerSettings() {
       }
     }
     obj5[3] = stringResult;
-    const items2 = [callback2(TableRadioRow.TableRadioRow, obj5), , ];
+    const items2 = [callback2(TableRadioRow.TableRadioRow, obj5), ,];
     const obj6 = { label: null, value: null, disabled: null };
     const intl4 = tmp3(1236).intl;
     obj6[0] = intl4.format(getSystemLocale.t.L2hmYy, {});
@@ -202,7 +243,7 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     const NotificationLabel = closure_1_0(closure_1_2[22]).NotificationLabel;
     self.handleToggleChange("suppress_everyone", arg0, NotificationLabel.suppressEveryone(arg0));
   };
-  const items = [closure_26(TableSwitchRow.TableSwitchRow, obj), , ];
+  const items = [closure_26(TableSwitchRow.TableSwitchRow, obj), ,];
   obj = { label: null, value: null, onValueChange: null };
   const intl2 = tmp5(1236).intl;
   obj[0] = intl2.string(getSystemLocale.t["O/QdoD"]);
@@ -233,7 +274,7 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
   };
   items[2] = closure_26(TableSwitchRow.TableSwitchRow, obj);
   obj2[1] = items;
-  const items1 = [closure_27(TableRowGroupTitle.TableRowGroup, obj2), , ];
+  const items1 = [closure_27(TableRowGroupTitle.TableRowGroup, obj2), ,];
   const obj3 = { variant: "text-sm/medium", color: "text-muted", style: { marginTop: 8 }, children: null };
   const intl4 = tmp5(1236).intl;
   obj3[3] = intl4.string(getSystemLocale.t["Vw/Xn8"]);
@@ -245,13 +286,13 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
       const obj = self(4190);
       return obj.openURL(self(1995).getArticleURL(constants.HIGHLIGHTS));
     },
-    children: null
+    children: null,
   };
   const intl5 = tmp5(1236).intl;
   obj4[3] = intl5.string(getSystemLocale.t.PRBn9K);
   items1[2] = closure_26(Button.LegacyText, obj4);
   obj1[0] = items1;
-  const items2 = [closure_27(View, obj1), ];
+  const items2 = [closure_27(View, obj1)];
   const obj5 = { label: null, value: null, onValueChange: null };
   const intl6 = tmp5(1236).intl;
   obj5[0] = intl6.string(getSystemLocale.t.ONG3Yz);
@@ -263,7 +304,7 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     const NotificationLabel = closure_1_0(closure_1_2[22]).NotificationLabel;
     self.handleToggleChange("mute_scheduled_events", arg0, NotificationLabel.mutedEvents(arg0));
   };
-  const items3 = [closure_26(TableSwitchRow.TableSwitchRow, obj5), ];
+  const items3 = [closure_26(TableSwitchRow.TableSwitchRow, obj5)];
   const obj6 = { disabled: muted, label: null, value: null, onValueChange: null };
   const intl7 = tmp5(1236).intl;
   obj6[1] = intl7.string(getSystemLocale.t.h1DL66);
@@ -335,7 +376,7 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     obj2[1] = self.handleMutePress;
     obj2[2] = !muted;
     obj1[2] = callback2(tmp7(5599).TableRow, obj2);
-    const items = [callback2(tmp7(5992).TableRowGroup, obj1, "mute"), ];
+    const items = [callback2(tmp7(5992).TableRowGroup, obj1, "mute")];
     let tmp10Result = null;
     if (muted) {
       const obj3 = { muteConfig: null, type: null };
@@ -360,7 +401,7 @@ prototype["renderChannels"] = function renderChannels() {
   obj[1] = intl2.string(self(1236).t.quib7R);
   obj[2] = this.handleAddOverride;
   obj[2] = callback2(self(5599).TableRow, obj);
-  const items = [callback2(self(5992).TableRowGroup, obj, "override-header"), ];
+  const items = [callback2(self(5992).TableRowGroup, obj, "override-header")];
   obj1 = { hasIcons: true, children: null };
   const overriddenChannels = this.getOverriddenChannels();
   obj1[1] = overriddenChannels.map((parent_id) => self.renderChannel(parent_id));
@@ -397,7 +438,9 @@ prototype["renderChannel"] = function renderChannel(parent_id) {
       let tmp4Result = tmp4(4704);
       tmp4Result = tmp4(4704);
       const unreadSetting = closure_14.resolveUnreadSetting(parent_id);
-      stringResult = tmp4Result.presetName(tmp4Result.presetFromSettings(unreadSetting, closure_14.resolvedMessageNotifications(parent_id)));
+      stringResult = tmp4Result.presetName(
+        tmp4Result.presetFromSettings(unreadSetting, closure_14.resolvedMessageNotifications(parent_id)),
+      );
     }
     obj = { icon: null, label: null, onPress: null, subLabel: null, trailing: null, arrow: true };
     obj = { IconComponent: null };
@@ -421,7 +464,11 @@ prototype["renderChannel"] = function renderChannel(parent_id) {
       tmp10Result = tmp10(tmp4(5599).TableRow.TrailingText, obj1);
     }
     obj[4] = tmp10Result;
-    return callback2(require("../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, obj, parent_id.id);
+    return callback2(
+      require("../../../design/components/TableRow/native/TableRow.native.tsx").TableRow,
+      obj,
+      parent_id.id,
+    );
   }
 };
 prototype["render"] = function render() {
@@ -446,7 +493,12 @@ prototype["render"] = function render() {
     obj = { spacing: null, style: null, children: null };
     obj[0] = ThemesDefault.space.PX_24;
     obj[1] = tmp.formStack;
-    const items = [self.renderMuteSection(), self.renderServerSettings(), self.renderNotificationOptions(), self.renderChannels()];
+    const items = [
+      self.renderMuteSection(),
+      self.renderServerSettings(),
+      self.renderNotificationOptions(),
+      self.renderChannels(),
+    ];
     obj[2] = items;
     obj[1] = callback3(tmp5(4926).Stack, obj);
     tmp4Result = tmp4(Form, obj);
@@ -457,7 +509,11 @@ prototype["getOverriddenChannels"] = function getOverriddenChannels() {
   const props = this.props;
   const channels = props.channels;
   let obj = set(10230);
-  obj = { ignoreNotificationSetting: false, ignoreMute: this.props.shouldUseNewNotificationSystem, ignoreUnreadSetting: !this.props.shouldUseNewNotificationSystem };
+  obj = {
+    ignoreNotificationSetting: false,
+    ignoreMute: this.props.shouldUseNewNotificationSystem,
+    ignoreUnreadSetting: !this.props.shouldUseNewNotificationSystem,
+  };
   set = new Set(obj.filterOverrides(props.channelOverrides, obj));
   const mapped = channels.map((channel) => {
     channel = channel.channel;
@@ -471,7 +527,9 @@ prototype["getOverriddenChannels"] = function getOverriddenChannels() {
 };
 NotificationSettings.contextType = require("ManaContext").ThemeContext;
 let obj2 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-let result = require("set").fileFinishedImporting("modules/notification_settings/native/NotificationSettingsModal.native.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/notification_settings/native/NotificationSettingsModal.native.tsx",
+);
 
 export default function NotificationSettingsModal() {
   let obj = initialize;
@@ -515,5 +573,5 @@ export default function NotificationSettingsModal() {
   const items1 = [obj];
   obj[1] = items1;
   return closure_26(NavigationStack.Navigator, obj);
-};
+}
 export { NotificationSettings };

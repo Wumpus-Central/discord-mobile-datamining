@@ -16,7 +16,9 @@ obj.display = "flex";
 obj.zIndex = 1;
 obj[0] = obj;
 let closure_8 = createCacheKey.createStyles(obj);
-let closure_9 = { code: "function QuestDockContentExpandedTsx1(){const{expandedHeight,QUEST_DOCK_EXPANDED_HEIGHT,windowDimensions,withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS,questDockWrapperSpecs}=this.__closure;return{height:expandedHeight==='content'?undefined:QUEST_DOCK_EXPANDED_HEIGHT,width:windowDimensions.get().width,opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS),transform:[{translateX:withSpring((questDockWrapperSpecs.get().width-windowDimensions.get().width)/2,QUEST_DOCK_MODE_CHANGE_PHYSICS)}]};}" };
+let closure_9 = {
+  code: "function QuestDockContentExpandedTsx1(){const{expandedHeight,QUEST_DOCK_EXPANDED_HEIGHT,windowDimensions,withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS,questDockWrapperSpecs}=this.__closure;return{height:expandedHeight==='content'?undefined:QUEST_DOCK_EXPANDED_HEIGHT,width:windowDimensions.get().width,opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS),transform:[{translateX:withSpring((questDockWrapperSpecs.get().width-windowDimensions.get().width)/2,QUEST_DOCK_MODE_CHANGE_PHYSICS)}]};}",
+};
 const memoResult = importAllResult.memo(function QuestDockContentExpanded(children) {
   const expandedHeight = children.expandedHeight;
   const context = windowDimensions.useContext(expandedHeight(questDockWrapperSpecs[6]).QuestDockGestureContext);
@@ -40,12 +42,24 @@ const memoResult = importAllResult.memo(function QuestDockContentExpanded(childr
     const obj3 = expandedHeight(questDockWrapperSpecs[8]);
     const tmp2 = expandedHeight;
     const tmp3 = questDockWrapperSpecs;
-    obj[0] = expandedHeight(questDockWrapperSpecs[8]).withSpring((questDockWrapperSpecs.get().width - obj2.get().width) / 2, closure_1_5);
+    obj[0] = expandedHeight(questDockWrapperSpecs[8]).withSpring(
+      (questDockWrapperSpecs.get().width - obj2.get().width) / 2,
+      closure_1_5,
+    );
     const items = [obj];
     obj[3] = items;
     return obj;
   };
-  obj = { expandedHeight, QUEST_DOCK_EXPANDED_HEIGHT: closure_6, windowDimensions, withSpring: expandedHeight(questDockWrapperSpecs[8]).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5, questDockWrapperSpecs };
+  obj = {
+    expandedHeight,
+    QUEST_DOCK_EXPANDED_HEIGHT: closure_6,
+    windowDimensions,
+    withSpring: expandedHeight(questDockWrapperSpecs[8]).withSpring,
+    activeQuestDockMode,
+    QuestDockMode,
+    QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5,
+    questDockWrapperSpecs,
+  };
   fn.__closure = obj;
   fn.__workletHash = 2568599305841;
   fn.__initData = closure_9;

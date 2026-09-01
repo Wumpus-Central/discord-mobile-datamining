@@ -30,8 +30,14 @@ export default function TypingSubtitle(arg0) {
     obj[2] = subtitleStyles.channelIcon;
     tmp7 = callback(channelIconComponentWithGuild, obj);
   }
-  const items = [tmp7, ];
-  obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
+  const items = [tmp7];
+  obj1 = {
+    variant: "text-xs/medium",
+    color: "text-muted",
+    lineClamp: 1,
+    style: subtitleStyles.subtitleText,
+    children: null,
+  };
   let tmp5Result = null;
   if (null != channelName) {
     const obj2 = { variant: "text-xs/medium", children: null };
@@ -44,4 +50,4 @@ export default function TypingSubtitle(arg0) {
   items[1] = closure_4(Text.Text, obj1);
   obj[1] = items;
   return closure_4(View, obj);
-};
+}

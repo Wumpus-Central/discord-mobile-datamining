@@ -27,7 +27,7 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -130,7 +130,7 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
       }
     })();
   });
-  callback = React.useCallback(function() {
+  callback = React.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

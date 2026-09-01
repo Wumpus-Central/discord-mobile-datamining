@@ -26,7 +26,19 @@ function SingleCodeInput(loading) {
   const setCode = loading.setCode;
   const tmp2 = callback4();
   obj = { style: tmp2.singleInputWrapper, children: null };
-  obj = { errorMessage: error, value: code, autoCapitalize: "characters", maxLength: count, accessibilityLabel: null, textContentType: "oneTimeCode", keyboardType: null, onChange: null, isDisabled: null, isClearable: true, autoFocus: true };
+  obj = {
+    errorMessage: error,
+    value: code,
+    autoCapitalize: "characters",
+    maxLength: count,
+    accessibilityLabel: null,
+    textContentType: "oneTimeCode",
+    keyboardType: null,
+    onChange: null,
+    isDisabled: null,
+    isClearable: true,
+    autoFocus: true,
+  };
   const intl = NUMERIC(code[8]).intl;
   obj[4] = intl.string(NUMERIC(code[8]).t["ysthA+"]);
   let str = "default";
@@ -38,7 +50,7 @@ function SingleCodeInput(loading) {
     setCode(str.replace(NUMERIC === closure_1_9.NUMERIC ? /\D/g : /[^A-Z0-9]/g, ""));
   };
   obj[8] = disabled;
-  const items = [closure_7(NUMERIC(code[7]).TextInput, obj), ];
+  const items = [closure_7(NUMERIC(code[7]).TextInput, obj)];
   obj = { style: tmp2.singleInputButton, children: null };
   obj1 = { loading: flag, variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
   const intl2 = tmp6(tmp7[8]).intl;
@@ -68,15 +80,48 @@ function CodeFieldInner(loading) {
   }
   ({ actions, footer, backgroundStyle, disabled } = loading);
   const tmp2 = callback4();
-  obj = { style: items, contentContainerStyle: tmp2.backgroundFlex, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
+  obj = {
+    style: items,
+    contentContainerStyle: tmp2.backgroundFlex,
+    keyboardShouldPersistTaps: "handled",
+    alwaysBounceVertical: false,
+    children: null,
+  };
   items = [tmp2.background, backgroundStyle];
   obj = { style: tmp2.container, children: null };
   [tmp4, tmp5] = callback(React.useState(""), 2);
-  obj = { style: tmp2.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-  const items1 = [callback2(Text.Text, obj), callback2(Text.Text, { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description }), , ];
+  obj = {
+    style: tmp2.title,
+    accessibilityRole: "header",
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: title,
+  };
+  const items1 = [
+    callback2(Text.Text, obj),
+    callback2(Text.Text, {
+      style: tmp2.subtitle,
+      variant: "text-sm/medium",
+      color: "text-default",
+      children: description,
+    }),
+    ,
+  ];
   obj1 = { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description };
   const tmp3 = callback(React.useState(""), 2);
-  items1[2] = callback2(closure_5, { style: tmp2.inputContainer, children: callback2(SingleCodeInput, { loading: flag, error, count: num, onCodeEntered, codeType: NUMERIC, disabled, code: tmp4, setCode: tmp5 }) });
+  items1[2] = callback2(closure_5, {
+    style: tmp2.inputContainer,
+    children: callback2(SingleCodeInput, {
+      loading: flag,
+      error,
+      count: num,
+      onCodeEntered,
+      codeType: NUMERIC,
+      disabled,
+      code: tmp4,
+      setCode: tmp5,
+    }),
+  });
   items1[3] = actions;
   obj[1] = items1;
   const items2 = [callback3(closure_5, obj), callback2(_modDef6049, { children: footer })];
@@ -86,7 +131,22 @@ function CodeFieldInner(loading) {
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let obj = { NUMERIC: "numeric", ALPHANUMERIC: "alphanumeric" };
-obj = { viewWrapper: { flex: 1 }, background: null, backgroundFlex: null, container: null, title: null, subtitle: null, inputContainer: null, codeContainer: null, spacer: null, inputWrapper: null, inputWrapperError: null, input: null, singleInputWrapper: null, singleInputButton: null };
+obj = {
+  viewWrapper: { flex: 1 },
+  background: null,
+  backgroundFlex: null,
+  container: null,
+  title: null,
+  subtitle: null,
+  inputContainer: null,
+  codeContainer: null,
+  spacer: null,
+  inputWrapper: null,
+  inputWrapperError: null,
+  input: null,
+  singleInputWrapper: null,
+  singleInputButton: null,
+};
 obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj[1] = obj;
 obj[2] = { flex: 1, justifyContent: "space-between" };
@@ -96,7 +156,13 @@ obj[5] = { marginTop: 8, lineHeight: 18, textAlign: "center" };
 obj[6] = { marginTop: 20, width: "100%", alignItems: "center" };
 obj[7] = { maxWidth: 336, width: "100%", flexDirection: "row", justifyContent: "space-around" };
 obj[8] = { width: 4 };
-createCacheKey = { borderWidth: 1, borderRadius: 5, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = {
+  borderWidth: 1,
+  borderRadius: 5,
+  alignItems: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
 obj[9] = createCacheKey;
 obj[10] = { borderColor: ThemesDefault.unsafe_rawColors.RED_400 };
 obj[11] = { textAlign: "center" };
@@ -121,7 +187,7 @@ export default function CodeField(disableKeyboardAvoidingView) {
     const tmp5 = _modDef6049;
   }
   return tmp2Result;
-};
+}
 export const CodeType = obj;
 export const CodeBlocks = function CodeBlocks(onCodeEntered) {
   onCodeEntered = onCodeEntered.onCodeEntered;
@@ -165,7 +231,7 @@ export const CodeBlocks = function CodeBlocks(onCodeEntered) {
       let arr = items1.push(callback2(closure_5, obj, "spacer"));
     }
     let tmp12 = callback2;
-    let items2 = [tmp3.inputWrapper, ];
+    let items2 = [tmp3.inputWrapper];
     let inputWrapperError = null;
     let tmp13 = closure_5;
     if (tmp) {
@@ -176,7 +242,18 @@ export const CodeBlocks = function CodeBlocks(onCodeEntered) {
     obj[0] = items2;
     let tmp15 = num2;
     let tmp16 = first;
-    obj1 = { ref: null, style: null, keyboardType: null, autoFocus: null, value: null, onKeyPress: null, onChangeText: null, selection: null, autoCapitalize: "characters", autoCorrect: false };
+    obj1 = {
+      ref: null,
+      style: null,
+      keyboardType: null,
+      autoFocus: null,
+      value: null,
+      onKeyPress: null,
+      onChangeText: null,
+      selection: null,
+      autoCapitalize: "characters",
+      autoCorrect: false,
+    };
     obj1[0] = function ref(arg0) {
       ref.current[num2] = arg0;
     };

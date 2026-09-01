@@ -78,19 +78,27 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
   if (tmp16) {
     tmp16 = null != onRatingPress;
   }
-  const items = [tmp.statCard, ];
+  const items = [tmp.statCard];
   if (expanded) {
     expanded = tmp.statCardExpanded;
   }
   items[1] = expanded;
-  const items1 = [stat.label, " ", ];
+  const items1 = [stat.label, " "];
   let str9 = "";
   if (null != ratingCount) {
     const _HermesInternal4 = HermesInternal;
     str9 = "(" + ratingCount + ")";
   }
   items1[2] = str9;
-  const items2 = [closure_7(Text.Text, { variant: "text-xs/semibold", color: "text-subtle", children: items1 }), callback(Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 1, children: tmp6.primaryText }), ];
+  const items2 = [
+    closure_7(Text.Text, { variant: "text-xs/semibold", color: "text-subtle", children: items1 }),
+    callback(Text.Text, {
+      variant: "text-md/semibold",
+      color: "text-default",
+      lineClamp: 1,
+      children: tmp6.primaryText,
+    }),
+  ];
   let tmp23Result = null != secondaryContent || null != secondaryText;
   if (tmp23Result) {
     const obj3 = { style: null, children: null };
@@ -107,7 +115,15 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
   items2[2] = tmp23Result;
   const tmp18Result = closure_7(closure_8, { children: items2 });
   if (tmp16) {
-    const obj5 = { style: null, onPress: null, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, children: null };
+    const obj5 = {
+      style: null,
+      onPress: null,
+      accessible: true,
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      accessibilityHint: null,
+      children: null,
+    };
     obj5[0] = items;
     obj5[1] = onRatingPress;
     obj5[4] = accessibilityLabel;
@@ -133,20 +149,57 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
 noopAll;
 ({ Pressable: c3, ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-createCacheKey = { carousel: null, carouselContent: null, statCard: null, statCardExpanded: null, expandedCarouselContent: null, secondaryRow: null };
+createCacheKey = {
+  carousel: null,
+  carouselContent: null,
+  statCard: null,
+  statCardExpanded: null,
+  expandedCarouselContent: null,
+  secondaryRow: null,
+};
 createCacheKey = { marginHorizontal: -ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { gap: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_16, paddingRight: ThemesDefault.space.PX_16 };
-let obj1 = { gap: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_16, paddingRight: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { width: 130, height: 92, borderRadius: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
+createCacheKey[1] = {
+  gap: ThemesDefault.space.PX_16,
+  paddingLeft: ThemesDefault.space.PX_16,
+  paddingRight: ThemesDefault.space.PX_16,
+};
+let obj1 = {
+  gap: ThemesDefault.space.PX_16,
+  paddingLeft: ThemesDefault.space.PX_16,
+  paddingRight: ThemesDefault.space.PX_16,
+};
+createCacheKey[2] = {
+  width: 130,
+  height: 92,
+  borderRadius: ThemesDefault.space.PX_16,
+  backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_12,
+  gap: ThemesDefault.space.PX_8,
+};
 createCacheKey[3] = { flex: 1, minWidth: 0 };
-let obj2 = { width: 130, height: 92, borderRadius: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
-createCacheKey[4] = { flexDirection: "row", gap: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj2 = {
+  width: 130,
+  height: 92,
+  borderRadius: ThemesDefault.space.PX_16,
+  backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingVertical: ThemesDefault.space.PX_12,
+  gap: ThemesDefault.space.PX_8,
+};
+createCacheKey[4] = {
+  flexDirection: "row",
+  gap: ThemesDefault.space.PX_16,
+  paddingHorizontal: ThemesDefault.space.PX_16,
+};
 let obj3 = { flexDirection: "row", gap: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { height: ThemesDefault.space.PX_16, justifyContent: "center" };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { height: ThemesDefault.space.PX_16, justifyContent: "center" };
-let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatsCarousel.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/quests/native/AppStoreOverlay/AppStoreOverlayStatsCarousel.tsx",
+);
 
 export default function AppStoreOverlayStatsCarousel(arg0) {
   ({ stats, onRatingPress: require } = arg0);
@@ -174,7 +227,14 @@ export default function AppStoreOverlayStatsCarousel(arg0) {
   } else {
     obj = { gesture: null, children: null };
     obj[0] = tmp4;
-    obj1 = { horizontal: true, nestedScrollEnabled: true, showsHorizontalScrollIndicator: false, style: null, contentContainerStyle: null, children: null };
+    obj1 = {
+      horizontal: true,
+      nestedScrollEnabled: true,
+      showsHorizontalScrollIndicator: false,
+      style: null,
+      contentContainerStyle: null,
+      children: null,
+    };
     ({ carousel: obj2[3], carouselContent: obj2[4] } = map);
     obj1[5] = stats.map((stat) => {
       const obj = { stat, onRatingPress: null };
@@ -188,4 +248,4 @@ export default function AppStoreOverlayStatsCarousel(arg0) {
     obj[1] = tmp10(closure_4, obj1);
     tmp10Result = tmp10(LegacyBaseButton.GestureDetector, obj);
   }
-};
+}

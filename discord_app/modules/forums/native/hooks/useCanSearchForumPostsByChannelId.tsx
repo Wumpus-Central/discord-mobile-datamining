@@ -4,7 +4,9 @@ import closure_3 from "../../../../stores/PermissionStore.tsx";
 import { Permissions } from "../../../../Constants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/forums/native/hooks/useCanSearchForumPostsByChannelId.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/forums/native/hooks/useCanSearchForumPostsByChannelId.tsx",
+);
 
 export const useCanSearchForumPostsByChannelId = function useCanSearchForumPostsByChannelId(channelId) {
   const _require = channelId;

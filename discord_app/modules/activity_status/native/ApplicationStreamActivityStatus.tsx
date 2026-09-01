@@ -8,7 +8,9 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 noopAll;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/activity_status/native/ApplicationStreamActivityStatus.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/activity_status/native/ApplicationStreamActivityStatus.tsx",
+);
 
 export default function ApplicationStreamActivityStatus(hideText) {
   ({ game, hideIcon } = hideText);
@@ -56,7 +58,7 @@ export default function ApplicationStreamActivityStatus(hideText) {
     tmp12 = callback(ActivityStatusIconDefault, obj);
     const tmp15 = ActivityStatusIconDefault;
   }
-  const children = [tmp12, ];
+  const children = [tmp12];
   let tmp16 = !flag;
   if (!flag) {
     obj = { style: null, maxFontSizeMultiplier: null, children: null };
@@ -67,4 +69,4 @@ export default function ApplicationStreamActivityStatus(hideText) {
   }
   children[1] = tmp16;
   return closure_5(closure_4, { children });
-};
+}

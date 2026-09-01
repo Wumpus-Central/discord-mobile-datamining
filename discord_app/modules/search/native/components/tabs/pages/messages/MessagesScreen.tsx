@@ -6,7 +6,14 @@ import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 let c3 = importAllResult;
-({ SEARCH_FILTERS_BY_TAB: c5, SearchFilter: closure_6, SEARCH_PINNED_MESSAGES_LINE_CLAMP: error, SEARCH_MESSAGES_DEFAULT_LINE_CLAMP: closure_8, MESSAGE_PLACEHOLDER_ITEM_SIZE: c9, SearchListItemTypes: c10 } = MessageEmbedTypes);
+({
+  SEARCH_FILTERS_BY_TAB: c5,
+  SearchFilter: closure_6,
+  SEARCH_PINNED_MESSAGES_LINE_CLAMP: error,
+  SEARCH_MESSAGES_DEFAULT_LINE_CLAMP: closure_8,
+  MESSAGE_PLACEHOLDER_ITEM_SIZE: c9,
+  SearchListItemTypes: c10,
+} = MessageEmbedTypes);
 const memoResult = importAllResult.memo(function MessagesScreen(isFocused) {
   const searchContext = isFocused.searchContext;
   const tab = isFocused.tab;
@@ -22,7 +29,11 @@ const memoResult = importAllResult.memo(function MessagesScreen(isFocused) {
   searchMessages = obj.useSearchMessages(searchContext, tab);
   let items = [callback];
   const items1 = [searchContext];
-  stateFromStores = searchContext(stateFromStores[5]).useStateFromStores(items, () => callback.getSearchResultsQuery(searchContext), items1);
+  stateFromStores = searchContext(stateFromStores[5]).useStateFromStores(
+    items,
+    () => callback.getSearchResultsQuery(searchContext),
+    items1,
+  );
   const obj2 = searchContext(stateFromStores[5]);
   onPressMessageItem = searchContext(stateFromStores[6]).useOnPressMessageItem({ searchContext });
   const items2 = [onPressMessageItem, searchContext];
@@ -56,7 +67,7 @@ const memoResult = importAllResult.memo(function MessagesScreen(isFocused) {
             return closure_1_4(arg0, closure_0);
           },
           lineClamp: closure_1_6,
-          messageSizeCacheRef: closure_1_5
+          messageSizeCacheRef: closure_1_5,
         };
         obj[1] = obj;
         items.push(obj);
@@ -77,13 +88,33 @@ const memoResult = importAllResult.memo(function MessagesScreen(isFocused) {
   }, items4);
   tmpResult = tmp(tmp2[11]);
   const contentContainerStyles = tmpResult.useContentContainerStyles();
-  obj = { data: memo1, searchContext, tab, isFocused: isFocused.isFocused, contentContainerStyle: contentContainerStyles.messagesContentContainer, ItemSeparatorComponent: null, isFirstPageLoading: null, isNextPageLoading: null };
+  obj = {
+    data: memo1,
+    searchContext,
+    tab,
+    isFocused: isFocused.isFocused,
+    contentContainerStyle: contentContainerStyles.messagesContentContainer,
+    ItemSeparatorComponent: null,
+    isFirstPageLoading: null,
+    isNextPageLoading: null,
+  };
   const obj3 = searchContext(stateFromStores[6]);
   obj[5] = searchContext(stateFromStores[12]).MessageVerticalSeparator;
   obj[6] = isFirstPageLoading;
   obj[7] = isNextPageLoading;
-  return jsx(searchMessages(stateFromStores[7]), { data: memo1, searchContext, tab, isFocused: isFocused.isFocused, contentContainerStyle: contentContainerStyles.messagesContentContainer, ItemSeparatorComponent: null, isFirstPageLoading: null, isNextPageLoading: null });
+  return jsx(searchMessages(stateFromStores[7]), {
+    data: memo1,
+    searchContext,
+    tab,
+    isFocused: isFocused.isFocused,
+    contentContainerStyle: contentContainerStyles.messagesContentContainer,
+    ItemSeparatorComponent: null,
+    isFirstPageLoading: null,
+    isNextPageLoading: null,
+  });
 });
-let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/MessagesScreen.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/search/native/components/tabs/pages/messages/MessagesScreen.tsx",
+);
 
 export default memoResult;

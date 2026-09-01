@@ -111,27 +111,89 @@ let closure_19 = importDefaultResult.createAnimatedComponent(require("Button").I
 let closure_20 = importDefaultResult.createAnimatedComponent(Pressable);
 let c21 = 28;
 let closure_22 = createCacheKey.createStyles(() => {
-  let obj = { labelPositionContainer: { position: "absolute", left: 8, right: 8, bottom: 8, justifyContent: "center", alignItems: "center", marginHorizontal: 8 }, labelOuterContainer: null, initialIcons: null, icon: null, iconWithoutBackground: null, iconContainer: null, speakerMuteIcon: null, floatingContainer: null, floatingText: null, ringingIconContainer: null, ringingIcon: null, secureFramesIcon: null };
-  obj = { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", borderRadius: ThemesDefault.radii.sm, overflow: "hidden", paddingHorizontal: 8, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, height: c21, gap: 4 };
+  let obj = {
+    labelPositionContainer: {
+      position: "absolute",
+      left: 8,
+      right: 8,
+      bottom: 8,
+      justifyContent: "center",
+      alignItems: "center",
+      marginHorizontal: 8,
+    },
+    labelOuterContainer: null,
+    initialIcons: null,
+    icon: null,
+    iconWithoutBackground: null,
+    iconContainer: null,
+    speakerMuteIcon: null,
+    floatingContainer: null,
+    floatingText: null,
+    ringingIconContainer: null,
+    ringingIcon: null,
+    secureFramesIcon: null,
+  };
+  obj = {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    borderRadius: ThemesDefault.radii.sm,
+    overflow: "hidden",
+    paddingHorizontal: 8,
+    backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
+    height: c21,
+    gap: 4,
+  };
   obj[1] = obj;
   obj[2] = { display: "flex", flexDirection: "row", marginStart: -4, marginEnd: -4 };
   obj = { width: 12, height: 12, tintColor: ThemesDefault.colors.WHITE };
   obj[3] = obj;
   obj[4] = { width: 16, height: 16, tintColor: ThemesDefault.colors.WHITE };
   obj1 = { width: 16, height: 16, tintColor: ThemesDefault.colors.WHITE };
-  obj[5] = { width: 20, height: 20, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
+  obj[5] = {
+    width: 20,
+    height: 20,
+    borderRadius: ThemesDefault.radii.round,
+    alignItems: "center",
+    justifyContent: "center",
+  };
   obj[6] = { marginRight: 4 };
   obj[7] = { flexDirection: "row", alignItems: "center", gap: 4, overflow: "hidden", flexShrink: 1 };
   obj[8] = { overflow: "hidden", paddingStart: 4, paddingEnd: 4, flexShrink: 1, lineHeight: 14 };
-  const obj2 = { width: 20, height: 20, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
-  obj[9] = { position: "absolute", top: 8, right: 8, padding: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-  const obj3 = { position: "absolute", top: 8, right: 8, padding: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+  const obj2 = {
+    width: 20,
+    height: 20,
+    borderRadius: ThemesDefault.radii.round,
+    alignItems: "center",
+    justifyContent: "center",
+  };
+  obj[9] = {
+    position: "absolute",
+    top: 8,
+    right: 8,
+    padding: 6,
+    borderRadius: ThemesDefault.radii.round,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  };
+  const obj3 = {
+    position: "absolute",
+    top: 8,
+    right: 8,
+    padding: 6,
+    borderRadius: ThemesDefault.radii.round,
+    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  };
   obj[10] = { tintColor: ThemesDefault.colors.STATUS_POSITIVE };
   obj[11] = { marginEnd: -2 };
   return obj;
 });
-let closure_23 = { code: "function VoicePanelCardFloatingControlsTsx1(){const{controlsSpecs,VoicePanelControlsModes,GAP}=this.__closure;const hidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;return{marginLeft:hidden?2:GAP,marginRight:hidden?2:0};}" };
-let closure_26 = { code: "function VoicePanelCardFloatingControlsTsx2(){const{controlsHidden,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const hidden=controlsHidden.get();return{position:'absolute',top:hidden?-(FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING*2):VOICE_PANEL_CARD_INNER_PADDING,left:VOICE_PANEL_CARD_INNER_PADDING,opacity:withSpring(hidden?0:1,MODE_CHANGE_PHYSICS),zIndex:1};}" };
+let closure_23 = {
+  code: "function VoicePanelCardFloatingControlsTsx1(){const{controlsSpecs,VoicePanelControlsModes,GAP}=this.__closure;const hidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;return{marginLeft:hidden?2:GAP,marginRight:hidden?2:0};}",
+};
+let closure_26 = {
+  code: "function VoicePanelCardFloatingControlsTsx2(){const{controlsHidden,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const hidden=controlsHidden.get();return{position:'absolute',top:hidden?-(FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING*2):VOICE_PANEL_CARD_INNER_PADDING,left:VOICE_PANEL_CARD_INNER_PADDING,opacity:withSpring(hidden?0:1,MODE_CHANGE_PHYSICS),zIndex:1};}",
+};
 let closure_27 = importAllResult.memo((participant) => {
   participant = participant.participant;
   let controlsHidden = participant;
@@ -155,7 +217,13 @@ let closure_27 = importAllResult.memo((participant) => {
     obj[3] = controlsHidden(closure_1_2[28]).withSpring(num2, closure_1_9);
     return obj;
   };
-  obj = { controlsHidden, FLOATING_BAR_HEIGHT: c21, VOICE_PANEL_CARD_INNER_PADDING: closure_12, withSpring: controlsHidden(4927).withSpring, MODE_CHANGE_PHYSICS: closure_9 };
+  obj = {
+    controlsHidden,
+    FLOATING_BAR_HEIGHT: c21,
+    VOICE_PANEL_CARD_INNER_PADDING: closure_12,
+    withSpring: controlsHidden(4927).withSpring,
+    MODE_CHANGE_PHYSICS: closure_9,
+  };
   fn.__closure = obj;
   fn.__workletHash = 4080439075039;
   fn.__initData = closure_26;
@@ -201,7 +269,9 @@ let closure_27 = importAllResult.memo((participant) => {
   obj[4] = stringResult;
   return tmp3(tmp4, obj);
 });
-let closure_28 = { code: "function VoicePanelCardFloatingControlsTsx3(){const{controlsHidden,mode,VoicePanelModes,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const hidden=controlsHidden.get()||mode.get()===VoicePanelModes.PIP;return{position:'absolute',top:hidden?-(FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING*2):VOICE_PANEL_CARD_INNER_PADDING,right:VOICE_PANEL_CARD_INNER_PADDING,opacity:withSpring(hidden?0:1,MODE_CHANGE_PHYSICS),zIndex:1};}" };
+let closure_28 = {
+  code: "function VoicePanelCardFloatingControlsTsx3(){const{controlsHidden,mode,VoicePanelModes,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const hidden=controlsHidden.get()||mode.get()===VoicePanelModes.PIP;return{position:'absolute',top:hidden?-(FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING*2):VOICE_PANEL_CARD_INNER_PADDING,right:VOICE_PANEL_CARD_INNER_PADDING,opacity:withSpring(hidden?0:1,MODE_CHANGE_PHYSICS),zIndex:1};}",
+};
 let closure_29 = importAllResult.memo((participantId) => {
   participantId = participantId.participantId;
   const controlsHidden = participantId.controlsHidden;
@@ -235,7 +305,15 @@ let closure_29 = importAllResult.memo((participantId) => {
     obj[3] = participantId(setFocused[28]).withSpring(num2, closure_1_9);
     return obj;
   };
-  obj = { controlsHidden, mode, VoicePanelModes: closure_10, FLOATING_BAR_HEIGHT: c21, VOICE_PANEL_CARD_INNER_PADDING: closure_12, withSpring: participantId(setFocused[28]).withSpring, MODE_CHANGE_PHYSICS: closure_9 };
+  obj = {
+    controlsHidden,
+    mode,
+    VoicePanelModes: closure_10,
+    FLOATING_BAR_HEIGHT: c21,
+    VOICE_PANEL_CARD_INNER_PADDING: closure_12,
+    withSpring: participantId(setFocused[28]).withSpring,
+    MODE_CHANGE_PHYSICS: closure_9,
+  };
   fn.__closure = obj;
   fn.__workletHash = 12421495364262;
   fn.__initData = closure_28;
@@ -252,16 +330,34 @@ let closure_29 = importAllResult.memo((participantId) => {
     const intl = tmp5(tmp2[26]).intl;
     stringResult = intl.string(tmp5(tmp2[26]).t["77cRN4"]);
   }
-  obj1 = { icon: controlsHidden(setFocused[35]), onPress: callback, style: animatedStyle, layout, accessibilityLabel: stringResult };
+  obj1 = {
+    icon: controlsHidden(setFocused[35]),
+    onPress: callback,
+    style: animatedStyle,
+    layout,
+    accessibilityLabel: stringResult,
+  };
   return callback(controlsHidden(setFocused[33]), obj1);
 });
 let closure_30 = { mass: 0.1, stiffness: 400, overshootClamping: true };
-let closure_31 = { code: "function VoicePanelCardFloatingControlsTsx4(){const{flip}=this.__closure;return flip.get();}" };
-let closure_32 = { code: "function VoicePanelCardFloatingControlsTsx5(flipped){const{angle,withSpring,getRandomNumberInRange,RING_PHYSICS,flip}=this.__closure;if(flipped){angle.set(withSpring(getRandomNumberInRange(45-10,45+10),RING_PHYSICS,'respect-motion-settings',function(finished){if(!finished)return;flip.set(!flip.get());}));}else{angle.set(withSpring(getRandomNumberInRange(0-10,0+10),RING_PHYSICS,'respect-motion-settings',function(finished){if(!finished)return;flip.set(!flip.get());}));}}" };
-let closure_33 = { code: "function VoicePanelCardFloatingControlsTsx6(finished){const{flip}=this.__closure;if(!finished)return;flip.set(!flip.get());}" };
-let closure_34 = { code: "function VoicePanelCardFloatingControlsTsx7(finished){const{flip}=this.__closure;if(!finished)return;flip.set(!flip.get());}" };
-let closure_35 = { code: "function VoicePanelCardFloatingControlsTsx8(){const{controlsHidden,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING}=this.__closure;return{top:controlsHidden.get()?-(FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING*2):0};}" };
-let closure_36 = { code: "function VoicePanelCardFloatingControlsTsx9(){const{angle}=this.__closure;return{transform:[{rotate:angle.get()+\"deg\"}]};}" };
+let closure_31 = {
+  code: "function VoicePanelCardFloatingControlsTsx4(){const{flip}=this.__closure;return flip.get();}",
+};
+let closure_32 = {
+  code: "function VoicePanelCardFloatingControlsTsx5(flipped){const{angle,withSpring,getRandomNumberInRange,RING_PHYSICS,flip}=this.__closure;if(flipped){angle.set(withSpring(getRandomNumberInRange(45-10,45+10),RING_PHYSICS,'respect-motion-settings',function(finished){if(!finished)return;flip.set(!flip.get());}));}else{angle.set(withSpring(getRandomNumberInRange(0-10,0+10),RING_PHYSICS,'respect-motion-settings',function(finished){if(!finished)return;flip.set(!flip.get());}));}}",
+};
+let closure_33 = {
+  code: "function VoicePanelCardFloatingControlsTsx6(finished){const{flip}=this.__closure;if(!finished)return;flip.set(!flip.get());}",
+};
+let closure_34 = {
+  code: "function VoicePanelCardFloatingControlsTsx7(finished){const{flip}=this.__closure;if(!finished)return;flip.set(!flip.get());}",
+};
+let closure_35 = {
+  code: "function VoicePanelCardFloatingControlsTsx8(){const{controlsHidden,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING}=this.__closure;return{top:controlsHidden.get()?-(FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING*2):0};}",
+};
+let closure_36 = {
+  code: 'function VoicePanelCardFloatingControlsTsx9(){const{angle}=this.__closure;return{transform:[{rotate:angle.get()+"deg"}]};}',
+};
 let closure_37 = importAllResult.memo((controlsHidden) => {
   controlsHidden = controlsHidden.controlsHidden;
   let sharedValue;
@@ -311,7 +407,13 @@ let closure_37 = importAllResult.memo((controlsHidden) => {
       const result1 = set(withSpring(tmp3(-10, 10), closure_1_30, "respect-motion-settings", fn));
     }
   };
-  obj = { angle: sharedValue1, withSpring: controlsHidden(sharedValue1[28]).withSpring, getRandomNumberInRange: sharedValue(sharedValue1[37]), RING_PHYSICS: closure_30, flip: sharedValue };
+  obj = {
+    angle: sharedValue1,
+    withSpring: controlsHidden(sharedValue1[28]).withSpring,
+    getRandomNumberInRange: sharedValue(sharedValue1[37]),
+    RING_PHYSICS: closure_30,
+    flip: sharedValue,
+  };
   fn2.__closure = obj;
   fn2.__workletHash = 15646860695268;
   fn2.__initData = closure_32;
@@ -360,7 +462,12 @@ let closure_37 = importAllResult.memo((controlsHidden) => {
   obj1[1] = closure_16(sharedValue(sharedValue1[38]), obj2);
   return closure_16(tmp12, obj1);
 });
-let closure_38 = importAllResult.memo((controlsHidden) => callback(ManaContext.ThemeContextProvider, { theme: ThemeTypes.LIGHT, children: callback(closure_37, { controlsHidden: controlsHidden.controlsHidden }) }));
+let closure_38 = importAllResult.memo((controlsHidden) =>
+  callback(ManaContext.ThemeContextProvider, {
+    theme: ThemeTypes.LIGHT,
+    children: callback(closure_37, { controlsHidden: controlsHidden.controlsHidden }),
+  }),
+);
 let closure_39 = importAllResult.memo((arg0) => {
   ({ userId, textColor } = arg0);
   let showGameTag;
@@ -415,11 +522,21 @@ let closure_39 = importAllResult.memo((arg0) => {
   }
   tmp12 = callback(tmp(9007), { userId, textColor });
 });
-let closure_40 = { code: "function VoicePanelCardFloatingControlsTsx10(){const{hasHiddenVisibleIcon,focused,connected,mode,VoicePanelModes,controlsHidden}=this.__closure;const showIcon=hasHiddenVisibleIcon&&focused.get()==null;return!connected.get()||mode.get()===VoicePanelModes.PIP||!showIcon&&controlsHidden.get();}" };
-let closure_41 = { code: "function VoicePanelCardFloatingControlsTsx11(){const{isPillHidden}=this.__closure;return isPillHidden.get();}" };
-let closure_42 = { code: "function VoicePanelCardFloatingControlsTsx12(hidden){const{pillOpacity,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;pillOpacity.set(withSpring(hidden?0:1,MODE_CHANGE_PHYSICS));}" };
-let closure_43 = { code: "function VoicePanelCardFloatingControlsTsx13(){const{pillOpacity,isPillHidden,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING}=this.__closure;return{opacity:pillOpacity.get(),top:isPillHidden.get()?FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING:0,height:FLOATING_BAR_HEIGHT,pointerEvents:isPillHidden.get()?'none':'auto'};}" };
-let closure_44 = { code: "function VoicePanelCardFloatingControlsTsx14(){const{connected,isScreenReaderEnabled,controlsSpecs,VoicePanelControlsModes,hasIcon,GAP}=this.__closure;const hidden=!connected.get()||!isScreenReaderEnabled&&controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN&&hasIcon;const shouldCollapseWidth=hidden&&hasIcon;return{width:shouldCollapseWidth?0:'auto',marginRight:hidden?-GAP:0};}" };
+let closure_40 = {
+  code: "function VoicePanelCardFloatingControlsTsx10(){const{hasHiddenVisibleIcon,focused,connected,mode,VoicePanelModes,controlsHidden}=this.__closure;const showIcon=hasHiddenVisibleIcon&&focused.get()==null;return!connected.get()||mode.get()===VoicePanelModes.PIP||!showIcon&&controlsHidden.get();}",
+};
+let closure_41 = {
+  code: "function VoicePanelCardFloatingControlsTsx11(){const{isPillHidden}=this.__closure;return isPillHidden.get();}",
+};
+let closure_42 = {
+  code: "function VoicePanelCardFloatingControlsTsx12(hidden){const{pillOpacity,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;pillOpacity.set(withSpring(hidden?0:1,MODE_CHANGE_PHYSICS));}",
+};
+let closure_43 = {
+  code: "function VoicePanelCardFloatingControlsTsx13(){const{pillOpacity,isPillHidden,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING}=this.__closure;return{opacity:pillOpacity.get(),top:isPillHidden.get()?FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING:0,height:FLOATING_BAR_HEIGHT,pointerEvents:isPillHidden.get()?'none':'auto'};}",
+};
+let closure_44 = {
+  code: "function VoicePanelCardFloatingControlsTsx14(){const{connected,isScreenReaderEnabled,controlsSpecs,VoicePanelControlsModes,hasIcon,GAP}=this.__closure;const hidden=!connected.get()||!isScreenReaderEnabled&&controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN&&hasIcon;const shouldCollapseWidth=hidden&&hasIcon;return{width:shouldCollapseWidth?0:'auto',marginRight:hidden?-GAP:0};}",
+};
 let closure_45 = importAllResult.memo((controlsHidden) => {
   controlsHidden = controlsHidden.controlsHidden;
   ({ label, layout, participant } = controlsHidden);
@@ -471,10 +588,15 @@ let closure_45 = importAllResult.memo((controlsHidden) => {
   }
   const tmpResultResult = tmpResult(participant.type, id1, guildId, channelId);
   const tmp12 = channelId(controlsSpecs[53])({ userId: id, guildId });
-  const displayNameStylesFont = controlsHidden(controlsSpecs[54]).useDisplayNameStylesFont({ displayNameStyles: tmp12 });
+  const displayNameStylesFont = controlsHidden(controlsSpecs[54]).useDisplayNameStylesFont({
+    displayNameStyles: tmp12,
+  });
   let num = 1;
   closure_9 = tmp14;
-  const tmp15 = tmpResultResult.filter((type) => type.type !== controlsHidden(controlsSpecs[21]).VoicePanelCardUserStateIconType.STREAM_ICON).length >= 1;
+  const tmp15 =
+    tmpResultResult.filter(
+      (type) => type.type !== controlsHidden(controlsSpecs[21]).VoicePanelCardUserStateIconType.STREAM_ICON,
+    ).length >= 1;
   closure_10 = tmp15;
   const tmp4Result1 = controlsHidden(controlsSpecs[54]);
   const fn = function c() {
@@ -546,7 +668,12 @@ let closure_45 = importAllResult.memo((controlsHidden) => {
       return obj;
     }
   }
-  obj1 = { pillOpacity: sharedValue, isPillHidden: derivedValue, FLOATING_BAR_HEIGHT: c21, VOICE_PANEL_CARD_INNER_PADDING: sharedValue };
+  obj1 = {
+    pillOpacity: sharedValue,
+    isPillHidden: derivedValue,
+    FLOATING_BAR_HEIGHT: c21,
+    VOICE_PANEL_CARD_INNER_PADDING: sharedValue,
+  };
   Q.__closure = obj1;
   Q.__workletHash = 12355778282621;
   Q.__initData = closure_43;
@@ -580,7 +707,14 @@ let closure_45 = importAllResult.memo((controlsHidden) => {
     obj[1] = num2;
     return obj;
   };
-  obj2 = { connected, isScreenReaderEnabled, controlsSpecs, VoicePanelControlsModes: derivedValue, hasIcon: tmp14, GAP: 4 };
+  obj2 = {
+    connected,
+    isScreenReaderEnabled,
+    controlsSpecs,
+    VoicePanelControlsModes: derivedValue,
+    hasIcon: tmp14,
+    GAP: 4,
+  };
   fn4.__closure = obj2;
   fn4.__workletHash = 10013340978870;
   fn4.__initData = closure_44;
@@ -602,27 +736,42 @@ let closure_45 = importAllResult.memo((controlsHidden) => {
     tmp20Result = tmp20(tmp(tmp2[24]), obj5);
     const tmpResult1 = tmp(tmp2[24]);
   }
-  const items3 = [tmp20Result, ];
+  const items3 = [tmp20Result];
   const obj6 = { style: items4, layout, children: null };
   items4 = [tmp6.floatingContainer, animatedStyle1];
   const tmp23 = closure_20;
   const tmp4Result6 = controlsHidden(controlsSpecs[12]);
-  const items5 = [tmp6.floatingText, ];
+  const items5 = [tmp6.floatingText];
   let tmp28 = null != displayNameStylesFont;
   if (tmp28) {
     const obj7 = { fontFamily: null };
     obj7[0] = displayNameStylesFont;
     tmp28 = obj7;
   }
-  const obj8 = { variant: "heading-sm/semibold", color: "text-overlay-light", lineClamp: 1, style: items5, ellipsizeMode: "tail", accessibilityLabel: null, children: null };
+  const obj8 = {
+    variant: "heading-sm/semibold",
+    color: "text-overlay-light",
+    lineClamp: 1,
+    style: items5,
+    ellipsizeMode: "tail",
+    accessibilityLabel: null,
+    children: null,
+  };
   items5[1] = tmp28;
-  if (null != tmpResultResult.find((type) => type.type === controlsHidden(controlsSpecs[21]).VoicePanelCardUserStateIconType.STREAM_ICON)) {
+  if (
+    null !=
+    tmpResultResult.find(
+      (type) => type.type === controlsHidden(controlsSpecs[21]).VoicePanelCardUserStateIconType.STREAM_ICON,
+    )
+  ) {
     const intl3 = tmp4(tmp2[26]).intl;
     const obj9 = { username: null };
     obj9[0] = label;
     let formatToPlainStringResult = intl3.formatToPlainString(tmp4(tmp2[26]).t.I0mOAs, obj9);
   } else {
-    const found = tmpResultResult.find((type) => type.type === controlsHidden(controlsSpecs[21]).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON);
+    const found = tmpResultResult.find(
+      (type) => type.type === controlsHidden(controlsSpecs[21]).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON,
+    );
     formatToPlainStringResult = label;
     if (null != found) {
       const muteDeafenIconState = found.muteDeafenIconState;
@@ -642,7 +791,7 @@ let closure_45 = importAllResult.memo((controlsHidden) => {
   }
   obj8[5] = formatToPlainStringResult;
   obj8[6] = label;
-  const items6 = [closure_16(controlsHidden(controlsSpecs[55]).Text, obj8), , ];
+  const items6 = [closure_16(controlsHidden(controlsSpecs[55]).Text, obj8), ,];
   tmp20Result = participant.type === constants.USER;
   if (tmp20Result) {
     const obj12 = { userId: null, guildId: null, textColor: "text-overlay-light" };
@@ -665,7 +814,9 @@ let closure_45 = importAllResult.memo((controlsHidden) => {
   obj3[3] = closure_17(tmp23, obj4);
   return closure_16(tmpResult, obj3);
 });
-let closure_46 = { code: "function VoicePanelCardFloatingControlsTsx15(){const{controlsSpecs,VoicePanelControlsModes,focused,mode,VoicePanelModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN||focused.get()!=null||mode.get()===VoicePanelModes.PIP;}" };
+let closure_46 = {
+  code: "function VoicePanelCardFloatingControlsTsx15(){const{controlsSpecs,VoicePanelControlsModes,focused,mode,VoicePanelModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN||focused.get()!=null||mode.get()===VoicePanelModes.PIP;}",
+};
 const importDefaultResult1 = importDefaultResult;
 const memoResult = importAllResult.memo(function FloatingControls(arg0) {
   ({ label, participant } = arg0);
@@ -742,7 +893,7 @@ const memoResult = importAllResult.memo(function FloatingControls(arg0) {
     obj1[0] = derivedValue;
     isRinging = callback(closure_38, obj1);
   }
-  const children = [isRinging, , , ];
+  const children = [isRinging, , ,];
   let tmp17 = stateFromStores;
   if (stateFromStores) {
     tmp17 = stateFromStores1;
@@ -760,7 +911,13 @@ const memoResult = importAllResult.memo(function FloatingControls(arg0) {
     stateFromStores = tmp8;
   }
   if (stateFromStores) {
-    const obj3 = { controlsHidden: null, participantId: null, targetName: null, isActivityParticipant: null, layout: null };
+    const obj3 = {
+      controlsHidden: null,
+      participantId: null,
+      targetName: null,
+      isActivityParticipant: null,
+      layout: null,
+    };
     obj3[0] = derivedValue;
     obj3[1] = participant.id;
     obj3[2] = label;

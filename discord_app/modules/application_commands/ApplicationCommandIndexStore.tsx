@@ -98,7 +98,7 @@ function _getOrFetchApplicationCommandIndexForTarget() {
     closure_0 = arg0;
     c6 = 0;
     c7 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -223,7 +223,7 @@ function _updateIndexAndFetchApplicationCommandIndex() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();
@@ -259,7 +259,10 @@ function _updateIndexAndFetchApplicationCommandIndex() {
               obj2[2] = future.promise;
               obj1[0] = obj2;
               closure_1_30(callback, obj1, true);
-              const applicationCommandIndex = callback(closure_1_3[15]).fetchApplicationCommandIndex(callback, abortController);
+              const applicationCommandIndex = callback(closure_1_3[15]).fetchApplicationCommandIndex(
+                callback,
+                abortController,
+              );
               const obj7 = callback(closure_1_3[15]);
               c2 = 1;
               c1 = 1;
@@ -378,44 +381,47 @@ function handleFetchSuccess(arg0, flag) {
       const obj5 = showTooManyUserGuildsAlertDefault;
     }
     const application_commands = index.application_commands;
-    const applicationCommands = id(7266).buildApplicationCommands(application_commands.map((description_default) => {
-      const obj = {};
-      const merged = Object.assign(description_default);
-      let str = description_default.description_default;
-      if (str == null) {
-        str = description_default.description;
-      }
-      if (str == null) {
-        str = "";
-      }
-      obj.description = str;
-      ({ dm_permission: obj.dm_permission, name_default } = description_default);
-      if (name_default == null) {
-        name_default = description_default.name;
-      }
-      obj.name = name_default;
-      const options = description_default.options;
-      let mapped;
-      if (options != null) {
-        mapped = options.map(closure_1_44);
-      }
-      if (mapped == null) {
-        mapped = [];
-      }
-      obj.options = mapped;
-      let tmp4;
-      if (null != description_default.permissions) {
-        tmp4 = closure_1_46(description_default.permissions, id);
-      }
-      obj.permissions = tmp4;
-      if (description_default.description !== description_default.description_default) {
-        obj.description_localized = description_default.description;
-      }
-      if (description_default.name !== description_default.name_default) {
-        obj.name_localized = description_default.name;
-      }
-      return obj;
-    }), true);
+    const applicationCommands = id(7266).buildApplicationCommands(
+      application_commands.map((description_default) => {
+        const obj = {};
+        const merged = Object.assign(description_default);
+        let str = description_default.description_default;
+        if (str == null) {
+          str = description_default.description;
+        }
+        if (str == null) {
+          str = "";
+        }
+        obj.description = str;
+        ({ dm_permission: obj.dm_permission, name_default } = description_default);
+        if (name_default == null) {
+          name_default = description_default.name;
+        }
+        obj.name = name_default;
+        const options = description_default.options;
+        let mapped;
+        if (options != null) {
+          mapped = options.map(closure_1_44);
+        }
+        if (mapped == null) {
+          mapped = [];
+        }
+        obj.options = mapped;
+        let tmp4;
+        if (null != description_default.permissions) {
+          tmp4 = closure_1_46(description_default.permissions, id);
+        }
+        obj.permissions = tmp4;
+        if (description_default.description !== description_default.description_default) {
+          obj.description_localized = description_default.description;
+        }
+        if (description_default.name !== description_default.name_default) {
+          obj.name_localized = description_default.name;
+        }
+        return obj;
+      }),
+      true,
+    );
     const iter = applicationCommands[Symbol.iterator]();
     const nextResult1 = iter.next();
     while (iter !== undefined) {
@@ -472,7 +478,10 @@ function updateGuildBotMembers(guildId, members) {
       if (user.bot) {
         if (null != closure_0.sectionIdsByBotId[user.id]) {
           callback(closure_1_3[19])(null != closure_0.sections[tmp2], "Bot has no matching index section");
-          callback(closure_1_3[19])(null != closure_0.sections[tmp2].descriptor.application, "Bot's index section has no application info");
+          callback(closure_1_3[19])(
+            null != closure_0.sections[tmp2].descriptor.application,
+            "Bot's index section has no application info",
+          );
           let obj = result(closure_1_3[16]);
           obj = {};
           const merged = Object.assign(tmp4.descriptor.application);
@@ -691,7 +700,9 @@ function useQueryState(type, commandTypes, allowFetch) {
   dependencyMap = tmp14[1];
   const obj5 = applicationId(589);
   const items6 = [applicationCommandIndexStore];
-  stateFromStores2 = applicationId(589).useStateFromStores(items6, () => closure_1_37.getApplicationState(applicationId));
+  stateFromStores2 = applicationId(589).useStateFromStores(items6, () =>
+    closure_1_37.getApplicationState(applicationId),
+  );
   const items7 = [allowFetch3, applicationId, stateFromStores2, first2];
   const effect2 = stateFromStoresObject1.useEffect(() => {
     if (first2) {
@@ -729,17 +740,38 @@ function useQueryState(type, commandTypes, allowFetch) {
       dependencyMap(false);
     }
   }, items7);
-  const items8 = [permissionContext, , , , , , , , , , , , , , ];
+  const items8 = [permissionContext, , , , , , , , , , , , , ,];
   ({ text: arr9[1], builtIns: arr9[2] } = commandTypes);
   items8[3] = false !== commandTypes.applicationCommands;
-  ({ scoreMethod: arr9[4], allowEmptySections: arr9[5], sortOptions: arr9[6], allowApplicationState: arr9[7], applicationId: arr9[8], installOnDemand: arr9[9] } = allowFetch);
+  ({
+    scoreMethod: arr9[4],
+    allowEmptySections: arr9[5],
+    sortOptions: arr9[6],
+    allowApplicationState: arr9[7],
+    applicationId: arr9[8],
+    installOnDemand: arr9[9],
+  } = allowFetch);
   items8[10] = stateFromStoresObject;
   items8[11] = stateFromStoresObject1;
   items8[12] = type;
   items8[13] = stateFromStores;
   items8[14] = stateFromStores1;
   return stateFromStoresObject1.useMemo(() => {
-    const obj = { permissionContext: closure_3, text: allowFetch3.text, allowApplicationCommands: stateFromStores2, builtIns: allowFetch3.builtIns, scoreMethod: first2.scoreMethod, allowEmptySections: first2.allowEmptySections, contextState: stateFromStoresObject, userState: stateFromStoresObject1, launcherContext: applicationId, applicationStates: null, sortOptions: null, singleApplicationId: null, installOnDemand: null };
+    const obj = {
+      permissionContext: closure_3,
+      text: allowFetch3.text,
+      allowApplicationCommands: stateFromStores2,
+      builtIns: allowFetch3.builtIns,
+      scoreMethod: first2.scoreMethod,
+      allowEmptySections: first2.allowEmptySections,
+      contextState: stateFromStoresObject,
+      userState: stateFromStoresObject1,
+      launcherContext: applicationId,
+      applicationStates: null,
+      sortOptions: null,
+      singleApplicationId: null,
+      installOnDemand: null,
+    };
     if (first2.allowApplicationState) {
       let map = stateFromStores;
     } else {
@@ -794,7 +826,14 @@ function queryIndex(allowApplicationCommands) {
     builtInCommands = [];
   }
   const items = [];
-  obj = { permissionContext, query: formatted, splitQuery: parts, allowEmptySections, scoreMethod: NONE, installOnDemand: flag2 };
+  obj = {
+    permissionContext,
+    query: formatted,
+    splitQuery: parts,
+    allowEmptySections,
+    scoreMethod: NONE,
+    installOnDemand: flag2,
+  };
   let result = contextState.result;
   let sections;
   if (result != null) {
@@ -1062,7 +1101,12 @@ function queryIndex(allowApplicationCommands) {
       return collator.compare(score.displayName, score2.displayName);
     });
   }
-  obj1 = { commands: flatMapResult, descriptors: items.map((section) => section.section), sectionedCommands: items, loading: null };
+  obj1 = {
+    commands: flatMapResult,
+    descriptors: items.map((section) => section.section),
+    sectionedCommands: items,
+    loading: null,
+  };
   let fetching;
   if (contextState != null) {
     fetching = contextState.fetchState.fetching;
@@ -1100,7 +1144,13 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
   let allowedForUser = null;
   if (null != guild_id) {
     let obj = computeAllowedForUserAll;
-    allowedForUser = obj.computeAllowedForUser(descriptor.permissions, context.guild_id, userId, roleIds, isImpersonating);
+    allowedForUser = obj.computeAllowedForUser(
+      descriptor.permissions,
+      context.guild_id,
+      userId,
+      roleIds,
+      isImpersonating,
+    );
   }
   let guild_id1;
   if (context != null) {
@@ -1108,7 +1158,11 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
   }
   let allowedForChannel = null;
   if (null != guild_id1) {
-    allowedForChannel = computeAllowedForUserAll.computeAllowedForChannel(descriptor.permissions, context, context.guild_id);
+    allowedForChannel = computeAllowedForUserAll.computeAllowedForChannel(
+      descriptor.permissions,
+      context,
+      context.guild_id,
+    );
     const obj2 = computeAllowedForUserAll;
   }
   const items = [];
@@ -1120,7 +1174,13 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
     let tmp18 = dependencyMap;
     let tmp19 = dependencyMap;
     let obj3 = computeAllowedForUserAll;
-    obj = { applicationAllowedForUser: null, applicationAllowedForChannel: null, commandBotId: null, isGuildInstalled: null, isUserInstalled: null };
+    obj = {
+      applicationAllowedForUser: null,
+      applicationAllowedForChannel: null,
+      commandBotId: null,
+      isGuildInstalled: null,
+      isUserInstalled: null,
+    };
     obj[0] = allowedForUser;
     obj[1] = allowedForChannel;
     obj[2] = descriptor.botId;
@@ -1223,7 +1283,14 @@ function shouldFetch(result) {
   return tmp3;
 }
 function toApplication(description) {
-  return { description: description.description, icon: description.icon, id: description.id, name: description.name, bot: description.bot, flags: description.flags };
+  return {
+    description: description.description,
+    icon: description.icon,
+    id: description.id,
+    name: description.name,
+    bot: description.bot,
+    flags: description.flags,
+  };
 }
 function toServerOption(choices) {
   const obj = {};
@@ -1471,7 +1538,11 @@ let closure_20 = Symbol("currentUser");
 const SymbolResult = Symbol("stale");
 const SymbolResult1 = Symbol("current");
 let closure_23 = Object.freeze({ descriptors: [], commands: [], sectionedCommands: [], loading: true });
-let closure_24 = Object.freeze({ serverVersion: SymbolResult1, fetchState: { fetching: false }, result: { sections: {}, sectionIdsByBotId: {}, version: SymbolResult1 } });
+let closure_24 = Object.freeze({
+  serverVersion: SymbolResult1,
+  fetchState: { fetching: false },
+  result: { sections: {}, sectionIdsByBotId: {}, version: SymbolResult1 },
+});
 let closure_25 = Object.freeze({ serverVersion: SymbolResult, fetchState: { fetching: false } });
 let closure_26 = { sensitivity: "accent", numeric: true };
 let c27 = false;
@@ -1771,7 +1842,20 @@ prototype["query"] = function query(type, commandTypes, applicationId) {
         const tmp8Result2 = tmp8(8150);
       }
     }
-    const obj3 = { permissionContext: null, text: null, allowApplicationCommands: null, builtIns: null, scoreMethod: null, allowEmptySections: null, contextState: null, userState: null, applicationStates: null, sortOptions: null, singleApplicationId: null, installOnDemand: null };
+    const obj3 = {
+      permissionContext: null,
+      text: null,
+      allowApplicationCommands: null,
+      builtIns: null,
+      scoreMethod: null,
+      allowEmptySections: null,
+      contextState: null,
+      userState: null,
+      applicationStates: null,
+      sortOptions: null,
+      singleApplicationId: null,
+      installOnDemand: null,
+    };
     obj3[0] = permissionContext;
     obj3[1] = commandTypes.text;
     obj3[2] = false !== commandTypes.applicationCommands;
@@ -1999,10 +2083,40 @@ const applicationCommandIndexStore = new ApplicationCommandIndexStore(dispatcher
       continue;
     }
     return flag;
-  }
+  },
 });
-let closure_38 = Object.freeze({ applications: { useFrecency: false, useScore: false }, commands: { useFrecency: true, useScore: true } });
-let closure_47 = { COMMAND_NAME_STARTS_WITH: 0, [0]: "COMMAND_NAME_STARTS_WITH", STARTS_WITH_COMMAND_NAME: 1, [1]: "STARTS_WITH_COMMAND_NAME", COMMAND_NAME_CONTAINS: 2, [2]: "COMMAND_NAME_CONTAINS", STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME: 3, [3]: "STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME", OPTION_NAME_CONTAINS: 4, [4]: "OPTION_NAME_CONTAINS", SECTION_NAME_STARTS_WITH: 5, [5]: "SECTION_NAME_STARTS_WITH", SECTION_NAME_CONTAINS: 6, [6]: "SECTION_NAME_CONTAINS", COMMAND_DESCRIPTION_CONTAINS: 7, [7]: "COMMAND_DESCRIPTION_CONTAINS", SECTION_DESCRIPTION_CONTAINS: 8, [8]: "SECTION_DESCRIPTION_CONTAINS", COMMAND_NAME_FUZZY_MATCHES: 9, [9]: "COMMAND_NAME_FUZZY_MATCHES", OPTION_NAME_FUZZY_MATCHES: 10, [10]: "OPTION_NAME_FUZZY_MATCHES", SECTION_NAME_FUZZY_MATCHES: 11, [11]: "SECTION_NAME_FUZZY_MATCHES", COMMAND_DESCRIPTION_FUZZY_MATCHES: 12, [12]: "COMMAND_DESCRIPTION_FUZZY_MATCHES" };
+let closure_38 = Object.freeze({
+  applications: { useFrecency: false, useScore: false },
+  commands: { useFrecency: true, useScore: true },
+});
+let closure_47 = {
+  COMMAND_NAME_STARTS_WITH: 0,
+  [0]: "COMMAND_NAME_STARTS_WITH",
+  STARTS_WITH_COMMAND_NAME: 1,
+  [1]: "STARTS_WITH_COMMAND_NAME",
+  COMMAND_NAME_CONTAINS: 2,
+  [2]: "COMMAND_NAME_CONTAINS",
+  STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME: 3,
+  [3]: "STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME",
+  OPTION_NAME_CONTAINS: 4,
+  [4]: "OPTION_NAME_CONTAINS",
+  SECTION_NAME_STARTS_WITH: 5,
+  [5]: "SECTION_NAME_STARTS_WITH",
+  SECTION_NAME_CONTAINS: 6,
+  [6]: "SECTION_NAME_CONTAINS",
+  COMMAND_DESCRIPTION_CONTAINS: 7,
+  [7]: "COMMAND_DESCRIPTION_CONTAINS",
+  SECTION_DESCRIPTION_CONTAINS: 8,
+  [8]: "SECTION_DESCRIPTION_CONTAINS",
+  COMMAND_NAME_FUZZY_MATCHES: 9,
+  [9]: "COMMAND_NAME_FUZZY_MATCHES",
+  OPTION_NAME_FUZZY_MATCHES: 10,
+  [10]: "OPTION_NAME_FUZZY_MATCHES",
+  SECTION_NAME_FUZZY_MATCHES: 11,
+  [11]: "SECTION_NAME_FUZZY_MATCHES",
+  COMMAND_DESCRIPTION_FUZZY_MATCHES: 12,
+  [12]: "COMMAND_DESCRIPTION_FUZZY_MATCHES",
+};
 let obj = {
   LOGOUT: handleReset,
   CONNECTION_OPEN: function handleConnectionOpen() {
@@ -2191,7 +2305,7 @@ let obj = {
       continue;
     }
     return flag;
-  }
+  },
 };
 let tmp4 = new timestampDefault("ApplicationCommandIndexStore");
 let result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandIndexStore.tsx");
@@ -2335,13 +2449,16 @@ export const useGuildIndexState = function useGuildIndexState(arg0, arg1) {
   const first = tmp[0];
   dependencyMap = tmp[1];
   const items = [applicationCommandIndexStore];
-  stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
-    let tmp = closure_1_37.indices[closure_0];
-    if (tmp == null) {
-      tmp = closure_1_25;
-    }
-    return tmp;
-  });
+  stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(
+    items,
+    () => {
+      let tmp = closure_1_37.indices[closure_0];
+      if (tmp == null) {
+        tmp = closure_1_25;
+      }
+      return tmp;
+    },
+  );
   const items1 = [stateFromStoresObject, arg1, arg0, first];
   const effect = React.useEffect(() => {
     let tmp = first;
@@ -2393,7 +2510,10 @@ export const useUserIndexState = function useUserIndexState(arg0, arg1) {
   const first = tmp[0];
   dependencyMap = tmp[1];
   const items = [applicationCommandIndexStore];
-  stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => authStore.getUserState());
+  stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(
+    items,
+    () => authStore.getUserState(),
+  );
   const items1 = [stateFromStoresObject, arg1, arg0, first];
   const effect = React.useEffect(() => {
     if (first2) {

@@ -6,7 +6,13 @@ const result = set.fileFinishedImporting("modules/errors/VideoStreamReadyActionC
 
 export const videoStreamTimedOut = function videoStreamTimedOut(current, closure_1, closure_6, closure_2) {
   let obj = dispatcherDefault;
-  obj = { type: "VIDEO_STREAM_READY_TIMEOUT", videoStreamId: current, mediaContext: closure_6, userId: closure_1, streamKey: closure_2 };
+  obj = {
+    type: "VIDEO_STREAM_READY_TIMEOUT",
+    videoStreamId: current,
+    mediaContext: closure_6,
+    userId: closure_1,
+    streamKey: closure_2,
+  };
   obj.dispatch(obj);
 };
 export const clearVideoStreamTimeout = function clearVideoStreamTimeout(DEFAULT, closure_0) {

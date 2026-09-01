@@ -13,4 +13,4 @@ export default function useShouldShowPremiumProfileFrameEA(location) {
     isProfileFramesEnabled = tmp5 === apexExperiment2.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
   }
   return isProfileFramesEnabled;
-};
+}

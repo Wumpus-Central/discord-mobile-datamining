@@ -34,5 +34,5 @@ export default function useFormattedExpirationLabel(expiry) {
   if (null != expiry) {
     return formatExpirationLabel(expiry);
   }
-};
+}
 export { formatExpirationLabel };

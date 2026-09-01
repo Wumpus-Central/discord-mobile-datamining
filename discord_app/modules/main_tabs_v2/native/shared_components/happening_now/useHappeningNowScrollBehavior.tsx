@@ -2,7 +2,9 @@
 import closure_0 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_1 from "../../../../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useHappeningNowScrollBehavior.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/useHappeningNowScrollBehavior.tsx",
+);
 
 export default function useHappeningNowScrollBehavior(arg0, arg1) {
   const callback = arg0;
@@ -15,10 +17,10 @@ export default function useHappeningNowScrollBehavior(arg0, arg1) {
       callback2(nativeEvent.nativeEvent.contentOffset.x < closure_0);
       callback(nativeEvent.nativeEvent.contentOffset.x, nativeEvent.nativeEvent.layoutMeasurement.width);
     }, items),
-    tmp[0]
+    tmp[0],
   ];
   return items1;
-};
+}
 export const useHappeningNowScrollSnapping = function useHappeningNowScrollSnapping(listRef) {
   const current = listRef.current;
   let num;

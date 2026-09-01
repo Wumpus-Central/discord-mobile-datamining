@@ -5,7 +5,9 @@ import closure_4 from "../../../records/ApplicationRecord.tsx";
 import { ApplicationTypes } from "../../applications/ApplicationConstants.tsx";
 
 const require = arg1;
-const result = require("set").fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizationApp.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/application_account_linking/hooks/useAuthorizationApp.tsx",
+);
 
 export const getAuthorizationApp = function getAuthorizationApp(type) {
   if (null == type) {

@@ -39,7 +39,12 @@ function RoleCreateScene() {
     let obj = {
       headerLeft: navigation(first[24]).getHeaderCloseButton(() => {
         let obj = closure_1_1(closure_1_3[14]);
-        obj = { flow_type: closure_1_19.GUILD_ROLE_CREATION_MODAL, from_step: closure_1_26[closure_1_25.STEP_DISPLAY], to_step: closure_1_26.FLOW_DISMISSED, skip: false };
+        obj = {
+          flow_type: closure_1_19.GUILD_ROLE_CREATION_MODAL,
+          from_step: closure_1_26[closure_1_25.STEP_DISPLAY],
+          to_step: closure_1_26.FLOW_DISMISSED,
+          skip: false,
+        };
         const merged = Object.assign(closure_1_0(closure_1_3[15]).collectGuildAnalyticsMetadata(id.id));
         obj.track(closure_1_18.USER_FLOW_TRANSITION, obj);
         const obj3 = closure_1_0(closure_1_3[15]);
@@ -47,7 +52,7 @@ function RoleCreateScene() {
       }),
       headerTitle() {
         return callback(closure_27, { step: constants.STEP_DISPLAY });
-      }
+      },
     };
     navigation.setOptions(obj);
   }, items1);
@@ -56,79 +61,82 @@ function RoleCreateScene() {
   }, []);
   const items2 = [first, stateFromStores.id, str, navigation];
   const items3 = [first, callback];
-  const callback1 = callback.useCallback(callback(function*() {
-    closure_1 = tmp3;
-    closure_0 = tmp3;
-    c2 = 1;
-    closure_1_5(true);
-    if (dependencyMap === closure_1_17) {
-      const num5 = 0;
-    }
-    yield closure_1_1(5457).createRole(closure_1_1.id, c2, num5);
-    if (1 === tmp7) {
-      c2 = 0;
-      callback(false);
-      obj1 = closure_1_0(4193);
-      const result = obj1.roleCreateFailedToast();
-      c4 = 3;
-    } else if (arg0 === 1) {
-      c4 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      const result1 = closure_1_12.addConditionalChangeListener(() => {
-        let obj = closure_1_12;
-        const props = closure_1_12.getProps();
-        ({ guild, selectedRoleId } = props);
-        if (null != guild) {
-          if (null != selectedRoleId) {
-            const role = closure_1_10.getRole(guild.id, selectedRoleId);
-          }
-        }
-        if (null != selectedRoleId) {
-          if (null != role) {
-            if (null != guild) {
-              tmp3(4193).roleCreatedToast();
-              const obj5 = tmp3(4193);
-              const tmp13 = tmp3;
-              tmp3(17190).setRoleJustCreated(true);
-              let STEP_MEMBERS = closure_1_25.STEP_PERMISSIONS;
-              const guild2 = obj.getProps().guild;
-              tmp32(38)(null != guild2, "shouldSkipPermissions: Guild cannot be null");
-              const currentUser = closure_1_11.getCurrentUser();
-              const tmp23 = closure_1_9(guild2, currentUser);
-              const obj6 = tmp3(17190);
-              const tmp18 = tmp32;
-              obj = { permission: null, user: null, context: null };
-              obj[0] = closure_1_20.ADMINISTRATOR;
-              obj[1] = currentUser;
-              obj[2] = guild2;
-              let tmp4 = !tmp23;
-              if (!tmp23) {
-                tmp4 = !obj7.can(obj);
-              }
-              if (tmp4) {
-                STEP_MEMBERS = tmp17.STEP_MEMBERS;
-              }
-              tmp3.push(STEP_MEMBERS);
-              obj7 = v0(4126);
-              obj = { flow_type: null, from_step: null, to_step: null, skip: false };
-              obj[0] = closure_1_19.GUILD_ROLE_CREATION_MODAL;
-              obj[1] = closure_1_26[closure_1_25.STEP_DISPLAY];
-              obj[2] = closure_1_26[STEP_MEMBERS];
-              const tmp18Result = tmp18(698);
-              const merged = Object.assign(tmp13(4700).collectGuildAnalyticsMetadata(guild.id));
-              tmp18Result.track(closure_1_18.USER_FLOW_TRANSITION, obj);
-              return false;
+  const callback1 = callback.useCallback(
+    callback(function* () {
+      closure_1 = tmp3;
+      closure_0 = tmp3;
+      c2 = 1;
+      closure_1_5(true);
+      if (dependencyMap === closure_1_17) {
+        const num5 = 0;
+      }
+      yield closure_1_1(5457).createRole(closure_1_1.id, c2, num5);
+      if (1 === tmp7) {
+        c2 = 0;
+        callback(false);
+        obj1 = closure_1_0(4193);
+        const result = obj1.roleCreateFailedToast();
+        c4 = 3;
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        const result1 = closure_1_12.addConditionalChangeListener(() => {
+          let obj = closure_1_12;
+          const props = closure_1_12.getProps();
+          ({ guild, selectedRoleId } = props);
+          if (null != guild) {
+            if (null != selectedRoleId) {
+              const role = closure_1_10.getRole(guild.id, selectedRoleId);
             }
           }
-        }
-        return true;
-      });
+          if (null != selectedRoleId) {
+            if (null != role) {
+              if (null != guild) {
+                tmp3(4193).roleCreatedToast();
+                const obj5 = tmp3(4193);
+                const tmp13 = tmp3;
+                tmp3(17190).setRoleJustCreated(true);
+                let STEP_MEMBERS = closure_1_25.STEP_PERMISSIONS;
+                const guild2 = obj.getProps().guild;
+                tmp32(38)(null != guild2, "shouldSkipPermissions: Guild cannot be null");
+                const currentUser = closure_1_11.getCurrentUser();
+                const tmp23 = closure_1_9(guild2, currentUser);
+                const obj6 = tmp3(17190);
+                const tmp18 = tmp32;
+                obj = { permission: null, user: null, context: null };
+                obj[0] = closure_1_20.ADMINISTRATOR;
+                obj[1] = currentUser;
+                obj[2] = guild2;
+                let tmp4 = !tmp23;
+                if (!tmp23) {
+                  tmp4 = !obj7.can(obj);
+                }
+                if (tmp4) {
+                  STEP_MEMBERS = tmp17.STEP_MEMBERS;
+                }
+                tmp3.push(STEP_MEMBERS);
+                obj7 = v0(4126);
+                obj = { flow_type: null, from_step: null, to_step: null, skip: false };
+                obj[0] = closure_1_19.GUILD_ROLE_CREATION_MODAL;
+                obj[1] = closure_1_26[closure_1_25.STEP_DISPLAY];
+                obj[2] = closure_1_26[STEP_MEMBERS];
+                const tmp18Result = tmp18(698);
+                const merged = Object.assign(tmp13(4700).collectGuildAnalyticsMetadata(guild.id));
+                tmp18Result.track(closure_1_18.USER_FLOW_TRANSITION, obj);
+                return false;
+              }
+            }
+          }
+          return true;
+        });
+        c2 = 0;
+      }
       c2 = 0;
-    }
-    c2 = 0;
-    return arg1;
-  }), items2);
+      return arg1;
+    }),
+    items2,
+  );
   obj = { title: null, subtitle: null, children: null };
   callback2 = callback.useCallback(() => {
     closure_1_8.dismiss();
@@ -141,7 +149,16 @@ function RoleCreateScene() {
   const intl3 = navigation(first[17]).intl;
   obj[1] = intl3.string(navigation(first[17]).t["JubQz/"]);
   obj = { spacing: stateFromStores(first[13]).space.PX_24, style: tmp.sceneInner, children: null };
-  obj1 = { label: null, description: null, required: true, value: null, onChange: null, maxLength: null, autoFocus: true, autoComplete: "off" };
+  obj1 = {
+    label: null,
+    description: null,
+    required: true,
+    value: null,
+    onChange: null,
+    maxLength: null,
+    autoFocus: true,
+    autoComplete: "off",
+  };
   const intl4 = navigation(first[17]).intl;
   obj1[0] = intl4.string(navigation(first[17]).t.dLbkBk);
   const intl5 = navigation(first[17]).intl;
@@ -149,7 +166,7 @@ function RoleCreateScene() {
   obj1[3] = str;
   obj1[4] = tmp7[1];
   obj1[5] = closure_16;
-  const items4 = [callback3(navigation(first[32]).TextInput, obj1), ];
+  const items4 = [callback3(navigation(first[32]).TextInput, obj1)];
   const obj2 = { helperText: null, hasIcons: false, children: null };
   const intl6 = navigation(first[17]).intl;
   obj2[0] = intl6.string(navigation(first[17]).t["9TMIgc"]);
@@ -158,7 +175,7 @@ function RoleCreateScene() {
   obj3[0] = intl7.string(navigation(first[17]).t["5NC5YW"]);
   obj3[1] = callback2;
   obj4 = { style: tmp.colorTrailing, children: null };
-  const items5 = [callback3(stateFromStores(first[35]), { color: first, style: tmp.colorBlock }), ];
+  const items5 = [callback3(stateFromStores(first[35]), { color: first, style: tmp.colorBlock })];
   let obj6 = { variant: "text-sm/medium", children: null };
   let obj5 = { color: first, style: tmp.colorBlock };
   const tmp10 = callback2(callback.useState(false), 2);
@@ -172,8 +189,8 @@ function RoleCreateScene() {
   obj2[2] = callback3(navigation(first[34]).TableRow, obj3);
   items4[1] = callback3(navigation(first[33]).TableRowGroup, obj2);
   obj[2] = items4;
-  const items6 = [callback4(navigation(first[31]).Stack, obj), ];
-  const items7 = [tmp.nextButton, ];
+  const items6 = [callback4(navigation(first[31]).Stack, obj)];
+  const items7 = [tmp.nextButton];
   if (nextButtonFloating) {
     nextButtonFloating = tmp.nextButtonFloating;
   }
@@ -218,7 +235,12 @@ function RolePermissionTemplate() {
     let obj = {
       headerLeft: guild(callback[24]).getHeaderCloseButton(() => {
         let obj = closure_1_1(closure_1_3[14]);
-        obj = { flow_type: closure_1_19.GUILD_ROLE_CREATION_MODAL, from_step: closure_1_26[closure_1_25.STEP_PERMISSIONS], to_step: closure_1_26.FLOW_DISMISSED, skip: false };
+        obj = {
+          flow_type: closure_1_19.GUILD_ROLE_CREATION_MODAL,
+          from_step: closure_1_26[closure_1_25.STEP_PERMISSIONS],
+          to_step: closure_1_26.FLOW_DISMISSED,
+          skip: false,
+        };
         const merged = Object.assign(closure_1_0(closure_1_3[15]).collectGuildAnalyticsMetadata(id.id));
         obj.track(closure_1_18.USER_FLOW_TRANSITION, obj);
         const obj3 = closure_1_0(closure_1_3[15]);
@@ -226,7 +248,7 @@ function RolePermissionTemplate() {
       }),
       headerTitle() {
         return callback(closure_27, { step: constants.STEP_PERMISSIONS });
-      }
+      },
     };
     guild.setOptions(obj);
   }, items2);
@@ -235,7 +257,12 @@ function RolePermissionTemplate() {
     let obj = stateFromStores(callback[25]);
     const result = obj.updateRolePermissions(guild.id, stateFromStores.id, arg0);
     guild.push(closure_1_25.STEP_MEMBERS);
-    obj = { flow_type: closure_1_19.GUILD_ROLE_CREATION_MODAL, from_step: closure_1_26[closure_1_25.STEP_PERMISSIONS], to_step: closure_1_26[closure_1_25.STEP_MEMBERS], skip: false };
+    obj = {
+      flow_type: closure_1_19.GUILD_ROLE_CREATION_MODAL,
+      from_step: closure_1_26[closure_1_25.STEP_PERMISSIONS],
+      to_step: closure_1_26[closure_1_25.STEP_MEMBERS],
+      skip: false,
+    };
     const obj2 = stateFromStores(callback[14]);
     const merged = Object.assign(guild(callback[15]).collectGuildAnalyticsMetadata(guild.id));
     obj2.track(closure_1_18.USER_FLOW_TRANSITION, obj);
@@ -250,7 +277,7 @@ function RolePermissionTemplate() {
   const intl2 = guild(callback[17]).intl;
   obj[2] = intl2.string(guild(callback[17]).t.G529Hk);
   obj = { onSelect: callback, location: constants.GUILD_ROLE_CREATION_MODAL, guildId: guild.id };
-  const items5 = [callback3(stateFromStores(callback[38]), obj), ];
+  const items5 = [callback3(stateFromStores(callback[38]), obj)];
   obj1 = { style: callback5().sceneFooter, children: null };
   obj2 = { text: null, onPress: null };
   const intl3 = guild(callback[17]).intl;
@@ -289,7 +316,12 @@ function RoleMembers() {
     let obj = {
       headerLeft: guild(first[24]).getHeaderCloseButton(() => {
         let obj = closure_1_1(closure_1_3[14]);
-        obj = { flow_type: closure_1_19.GUILD_ROLE_CREATION_MODAL, from_step: closure_1_26[closure_1_25.STEP_MEMBERS], to_step: closure_1_26.FLOW_DISMISSED, skip: false };
+        obj = {
+          flow_type: closure_1_19.GUILD_ROLE_CREATION_MODAL,
+          from_step: closure_1_26[closure_1_25.STEP_MEMBERS],
+          to_step: closure_1_26.FLOW_DISMISSED,
+          skip: false,
+        };
         const merged = Object.assign(closure_1_0(closure_1_3[15]).collectGuildAnalyticsMetadata(id.id));
         obj.track(closure_1_18.USER_FLOW_TRANSITION, obj);
         const obj3 = closure_1_0(closure_1_3[15]);
@@ -297,7 +329,7 @@ function RoleMembers() {
       }),
       headerTitle() {
         return callback(closure_27, { step: constants.STEP_MEMBERS });
-      }
+      },
     };
     return guild.setOptions(obj);
   }, items2);
@@ -323,7 +355,12 @@ function RoleMembers() {
       obj.bulkAddMemberRoles(guild.id, stateFromStores.id, keys);
       callback(false);
     }
-    obj = { flow_type: closure_1_19.GUILD_ROLE_CREATION_MODAL, from_step: closure_1_26[closure_1_25.STEP_MEMBERS], to_step: closure_1_26.FLOW_COMPLETED, skip: false };
+    obj = {
+      flow_type: closure_1_19.GUILD_ROLE_CREATION_MODAL,
+      from_step: closure_1_26[closure_1_25.STEP_MEMBERS],
+      to_step: closure_1_26.FLOW_COMPLETED,
+      skip: false,
+    };
     const obj2 = stateFromStores(first[14]);
     const merged = Object.assign(guild(first[15]).collectGuildAnalyticsMetadata(guild.id));
     obj2.track(closure_1_18.USER_FLOW_TRANSITION, obj);
@@ -337,9 +374,17 @@ function RoleMembers() {
   const intl2 = guild(first[17]).intl;
   obj = { numMembers: closure_15 };
   obj[2] = intl2.formatToPlainString(guild(first[17]).t.yZW3oh, obj);
-  obj1 = { autoFocusSearch: false, guild, members: guildMembers, pendingAdditions: first, role: stateFromStores, setPendingAdditions: tmp13[1], maxCount: closure_15 };
-  const items6 = [callback3(guild(first[41]).AddMembersBody, obj1), ];
-  const items7 = [tmp.nextButton, ];
+  obj1 = {
+    autoFocusSearch: false,
+    guild,
+    members: guildMembers,
+    pendingAdditions: first,
+    role: stateFromStores,
+    setPendingAdditions: tmp13[1],
+    maxCount: closure_15,
+  };
+  const items6 = [callback3(guild(first[41]).AddMembersBody, obj1)];
+  const items7 = [tmp.nextButton];
   if (nextButtonFloating) {
     nextButtonFloating = tmp.nextButtonFloating;
   }
@@ -401,13 +446,13 @@ function ModalScene(hasSkipButton) {
     obj2 = { ref: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj2[0] = ref;
     obj2[3] = title;
-    const items3 = [callback3(tmp3(tmp2[16]).Heading, obj2), ];
+    const items3 = [callback3(tmp3(tmp2[16]).Heading, obj2)];
     let obj3 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj3[0] = tmp.sceneSubtitle;
     obj3[3] = subtitle;
     items3[1] = callback3(tmp3(tmp2[16]).Text, obj3);
     obj1[1] = items3;
-    const items4 = [callback4(closure_7, obj1), , ];
+    const items4 = [callback4(closure_7, obj1), ,];
     obj4 = { style: null, children: null };
     obj4[0] = tmp.sceneContent;
     obj4[1] = children;
@@ -431,10 +476,30 @@ function ModalScene(hasSkipButton) {
 }
 ({ View: error, Keyboard: closure_8 } = get_ActivityIndicator);
 ({ PermissionTemplates: map1, DEFAULT_TEMPLATE_TYPE: closure_14, MAX_BULK_ROLE_MEMBERS_ADD: closure_15 } = title);
-({ MAX_ROLE_LENGTH: closure_16, DEFAULT_ROLE_COLOR: closure_17, AnalyticEvents: closure_18, AnalyticsSections: closure_19, Permissions: closure_20 } = ME);
+({
+  MAX_ROLE_LENGTH: closure_16,
+  DEFAULT_ROLE_COLOR: closure_17,
+  AnalyticEvents: closure_18,
+  AnalyticsSections: closure_19,
+  Permissions: closure_20,
+} = ME);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
-let closure_23 = { titleContainer: { flexDirection: "row", justifyContent: "center", alignContent: "center", width: "100%" }, title: { textAlign: "center", flex: 1 } };
-let obj = { container: null, sceneHeader: null, sceneSubtitle: null, sceneContent: null, sceneInner: null, colorTrailing: null, colorBlock: null, sceneFooter: null, nextButton: null, nextButtonFloating: null };
+let closure_23 = {
+  titleContainer: { flexDirection: "row", justifyContent: "center", alignContent: "center", width: "100%" },
+  title: { textAlign: "center", flex: 1 },
+};
+let obj = {
+  container: null,
+  sceneHeader: null,
+  sceneSubtitle: null,
+  sceneContent: null,
+  sceneInner: null,
+  colorTrailing: null,
+  colorBlock: null,
+  sceneFooter: null,
+  nextButton: null,
+  nextButtonFloating: null,
+};
 obj = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flexGrow: 1, paddingBottom: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 obj[1] = { alignItems: "center", marginBottom: 8, marginHorizontal: 16 };
@@ -450,12 +515,25 @@ let obj2 = { paddingBottom: 8, paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[9] = { paddingVertical: 0, paddingTop: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 let closure_24 = createCacheKey.createStyles(obj);
 let obj4 = { STEP_DISPLAY: "STEP_DISPLAY", STEP_PERMISSIONS: "STEP_PERMISSIONS", STEP_MEMBERS: "STEP_MEMBERS" };
-let closure_26 = { [obj4.STEP_DISPLAY]: "Role Display", [obj4.STEP_PERMISSIONS]: "Role Permissions", [obj4.STEP_MEMBERS]: "Role Members", FLOW_INITIALIZED: "Flow Initialized", FLOW_DISMISSED: "Flow Dismissed", FLOW_COMPLETED: "Flow Completed" };
+let closure_26 = {
+  [obj4.STEP_DISPLAY]: "Role Display",
+  [obj4.STEP_PERMISSIONS]: "Role Permissions",
+  [obj4.STEP_MEMBERS]: "Role Members",
+  FLOW_INITIALIZED: "Flow Initialized",
+  FLOW_DISMISSED: "Flow Dismissed",
+  FLOW_COMPLETED: "Flow Completed",
+};
 let closure_27 = importAllResult.memo((step) => {
   const keys = Object.keys(obj4);
   let obj = { style: closure_23.titleContainer, children: null };
   const sum = keys.indexOf(step.step) + 1;
-  obj = { style: closure_23.title, accessibilityRole: "header", variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
+  obj = {
+    style: closure_23.title,
+    accessibilityRole: "header",
+    variant: "heading-md/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = getSystemLocale.intl;
   obj[4] = intl.format(getSystemLocale.t["8v/u0i"], { number: sum, total: keys.length });
   obj[1] = callback3(Text.Text, obj);
@@ -466,41 +544,43 @@ let closure_32 = {
     fullscreen: true,
     render() {
       return callback3(RoleCreateScene, {});
-    }
+    },
   },
   [obj4.STEP_PERMISSIONS]: {
     fullscreen: true,
     render() {
       return callback3(RolePermissionTemplate, {});
-    }
+    },
   },
   [obj4.STEP_MEMBERS]: {
     fullscreen: true,
     render() {
       return callback3(RoleMembers, {});
-    }
-  }
+    },
+  },
 };
 let obj3 = { paddingVertical: 0, paddingTop: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 let obj5 = {
   fullscreen: true,
   render() {
     return callback3(RoleCreateScene, {});
-  }
+  },
 };
 let obj6 = {
   fullscreen: true,
   render() {
     return callback3(RolePermissionTemplate, {});
-  }
+  },
 };
 let obj7 = {
   fullscreen: true,
   render() {
     return callback3(RoleMembers, {});
-  }
+  },
 };
-let result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleCreateModal.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/guild_settings/roles/native/GuildSettingsRoleCreateModal.tsx",
+);
 
 export default function GuildSettingsRoleCreateModal() {
   let obj = stateFromStores(589);
@@ -509,10 +589,15 @@ export default function GuildSettingsRoleCreateModal() {
   _modDef38(null != stateFromStores, "useGuildSettingsStoreGuild: Guild cannot be null");
   useMountLayoutEffectDefault(() => {
     let obj = closure_1_1(closure_1_3[14]);
-    obj = { flow_type: closure_1_19.GUILD_ROLE_CREATION_MODAL, from_step: closure_1_26.FLOW_INITIALIZED, to_step: closure_1_26[closure_1_25.STEP_DISPLAY], skip: false };
+    obj = {
+      flow_type: closure_1_19.GUILD_ROLE_CREATION_MODAL,
+      from_step: closure_1_26.FLOW_INITIALIZED,
+      to_step: closure_1_26[closure_1_25.STEP_DISPLAY],
+      skip: false,
+    };
     const merged = Object.assign(stateFromStores(closure_1_3[15]).collectGuildAnalyticsMetadata(stateFromStores.id));
     obj.track(closure_1_18.USER_FLOW_TRANSITION, obj);
   });
   obj = { screens: closure_32, initialRouteName: obj4.STEP_DISPLAY };
   return callback3(stateFromStores(6008).Navigator, obj);
-};
+}

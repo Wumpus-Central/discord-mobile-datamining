@@ -225,5 +225,10 @@ const result = require("set").fileFinishedImporting("../discord_common/js/packag
 
 export const INVALID_FORM_BODY_ERROR_CODE = 50035;
 export const ROOT_FORM_ERRORS_KEY = "__root_errors";
-export const CaptchaTypes = { HCAPTCHA: "hcaptcha", RECAPTCHA: "recaptcha", RECAPTCHA_ENTERPRISE: "recaptcha_enterprise", TURNSTILE: "turnstile" };
+export const CaptchaTypes = {
+  HCAPTCHA: "hcaptcha",
+  RECAPTCHA: "recaptcha",
+  RECAPTCHA_ENTERPRISE: "recaptcha_enterprise",
+  TURNSTILE: "turnstile",
+};
 export { APIError };

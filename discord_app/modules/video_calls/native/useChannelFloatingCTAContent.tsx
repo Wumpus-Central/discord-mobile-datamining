@@ -20,7 +20,9 @@ export default function useChannelFloatingCTAContent(arg0) {
   importDefault = tmp2;
   const obj = _require(stateFromStores[3]);
   const items1 = [closure_4];
-  const stateFromStores1 = _require(stateFromStores[3]).useStateFromStores(items1, () => anyLocalVideoAutoDisabled.isAnyLocalVideoAutoDisabled());
+  const stateFromStores1 = _require(stateFromStores[3]).useStateFromStores(items1, () =>
+    anyLocalVideoAutoDisabled.isAnyLocalVideoAutoDisabled(),
+  );
   const items2 = [stateFromStores1, tmp2, stateFromStores];
   return stateFromStores1.useMemo(() => {
     const items = [];
@@ -35,4 +37,4 @@ export default function useChannelFloatingCTAContent(arg0) {
     }
     return items;
   }, items2);
-};
+}

@@ -20,7 +20,9 @@ export default function useFilteredGuilds(isGuildIncluded) {
   stateFromStores1 = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items1, () => guilds.getGuilds());
   const obj2 = isGuildIncluded(stateFromStores1[4]);
   const items2 = [closure_6];
-  stateFromStores2 = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items2, () => currentUser.getCurrentUser());
+  stateFromStores2 = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items2, () =>
+    currentUser.getCurrentUser(),
+  );
   obj = {
     options: stateFromStores2.useMemo(() => {
       if (null == stateFromStores2) {
@@ -41,7 +43,7 @@ export default function useFilteredGuilds(isGuildIncluded) {
       }
       return items;
     }, items3),
-    selectedGuild: null
+    selectedGuild: null,
   };
   items3 = [stateFromStores, stateFromStores1, stateFromStores2, isGuildIncluded];
   let tmp4;
@@ -50,4 +52,4 @@ export default function useFilteredGuilds(isGuildIncluded) {
   }
   obj[1] = tmp4;
   return obj;
-};
+}

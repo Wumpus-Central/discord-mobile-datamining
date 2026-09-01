@@ -30,7 +30,22 @@ function collectForumAnalyticsMetadata(sessionId) {
         tmp2 = channel.topic.trim().length > 0;
         const str = channel.topic;
       }
-      const obj = { forum_channel_has_guidelines: null, forum_channel_default_emoji_reaction_id: null, forum_channel_default_emoji_reaction_name: null, forum_channel_available_tag_ids: null, forum_channel_tag_required: null, forum_channel_can_create_post: null, forum_channel_filter_tag_ids: null, forum_channel_sort_order: null, forum_channel_session_id: null, forum_channel_layout: null, forum_channel_default_sort_order: null, forum_channel_tag_setting: null, forum_channel_default_layout: null, forum_channel_is_moderator_report_channel: null };
+      const obj = {
+        forum_channel_has_guidelines: null,
+        forum_channel_default_emoji_reaction_id: null,
+        forum_channel_default_emoji_reaction_name: null,
+        forum_channel_available_tag_ids: null,
+        forum_channel_tag_required: null,
+        forum_channel_can_create_post: null,
+        forum_channel_filter_tag_ids: null,
+        forum_channel_sort_order: null,
+        forum_channel_session_id: null,
+        forum_channel_layout: null,
+        forum_channel_default_sort_order: null,
+        forum_channel_tag_setting: null,
+        forum_channel_default_layout: null,
+        forum_channel_is_moderator_report_channel: null,
+      };
       obj[0] = tmp2;
       const defaultReactionEmoji = channel.defaultReactionEmoji;
       let emojiId;

@@ -13,7 +13,7 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: explicitContentFromProto.StreamNotificationsEnabled.useSetting,
-  onValueChange: onGoLiveNotificationSettingsChanged.onGoLiveNotificationSettingsChanged
+  onValueChange: onGoLiveNotificationSettingsChanged.onGoLiveNotificationSettingsChanged,
 });
 const obj = {
   useTitle() {
@@ -22,7 +22,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: explicitContentFromProto.StreamNotificationsEnabled.useSetting,
-  onValueChange: onGoLiveNotificationSettingsChanged.onGoLiveNotificationSettingsChanged
+  onValueChange: onGoLiveNotificationSettingsChanged.onGoLiveNotificationSettingsChanged,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/FriendStreamNotificationsSetting.tsx");
 

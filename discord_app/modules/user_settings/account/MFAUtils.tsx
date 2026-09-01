@@ -9,7 +9,11 @@ import ME from "../../../Constants.tsx";
 
 require = arg1;
 ({ GuildFeatures: c5, Permissions: closure_6, UserFlags: error } = ME);
-let obj = { AVAILABLE: "available", UNAVAILABLE_NO_CRYPTO: "unavailable_no_crypto", UNAVAILABLE_UNVERIFIED: "unavailable_unverified" };
+let obj = {
+  AVAILABLE: "available",
+  UNAVAILABLE_NO_CRYPTO: "unavailable_no_crypto",
+  UNAVAILABLE_UNVERIFIED: "unavailable_unverified",
+};
 const result = require("set").fileFinishedImporting("modules/user_settings/account/MFAUtils.tsx");
 
 export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(stateFromStores) {
@@ -103,14 +107,16 @@ export const use2FARemoveDisableReason = function use2FARemoveDisableReason() {
       }
     } else {
       const guildsArray = closure_1_2.getGuildsArray();
-      if (!guildsArray.some((features) => {
-        features = features.features;
-        let hasItem = features.has(constants.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
-        if (hasItem) {
-          hasItem = closure_3.can(constants2.ADMINISTRATOR, features);
-        }
-        return hasItem;
-      })) {
+      if (
+        !guildsArray.some((features) => {
+          features = features.features;
+          let hasItem = features.has(constants.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
+          if (hasItem) {
+            hasItem = closure_3.can(constants2.ADMINISTRATOR, features);
+          }
+          return hasItem;
+        })
+      ) {
         return null;
       } else {
         const intl = flag(closure_1_1[4]).intl;

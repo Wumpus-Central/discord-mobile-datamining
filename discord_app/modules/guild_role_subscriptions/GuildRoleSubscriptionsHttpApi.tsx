@@ -13,7 +13,7 @@ function _updateGuildRoleSubscriptionGroupListing() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -104,7 +104,7 @@ function _createGuildRoleSubscriptionGroupListing() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -195,7 +195,7 @@ function _deleteGuildRoleSubscriptionGroupListing() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -284,7 +284,7 @@ function _createGuildRoleSubscriptionListing() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -400,7 +400,7 @@ function _updateGuildRoleSubscriptionListing() {
     c8 = 0;
     c9 = 0;
     c7 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (c9 === 2) {
         c9 = 3;
         HermesBuiltin.throwTypeError();
@@ -514,7 +514,7 @@ function _getGuildRoleSubscriptionGroupListingsForGuild() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -627,7 +627,7 @@ function _getGuildRoleSubscriptionsSettings() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       const HTTP = callback(530).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_3.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(callback);
@@ -654,7 +654,7 @@ function _updateGuildRoleSubscriptionsSettings() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -744,7 +744,7 @@ function _getPriceTiers() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -839,7 +839,7 @@ function _getGuildRoleSubscriptionGroupListing() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -952,7 +952,7 @@ function _getGuildRoleSubscriptionGroupForSubscriptionPlan() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -1043,7 +1043,7 @@ function _deleteGuildRoleSubscriptionListing() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -1132,7 +1132,7 @@ function _archiveGuildRoleSubscriptionListing() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -1221,7 +1221,7 @@ function _getGuildRoleSubscriptionTrials() {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -1312,7 +1312,7 @@ function _updateGuildRoleSubscriptionsTrial() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -1404,7 +1404,7 @@ function _getGuildRoleSubscriptionTrialEligibility() {
     c7 = 0;
     c8 = 0;
     c6 = 0;
-    return (function*(arg0, body) {
+    return (function* (arg0, body) {
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -1494,7 +1494,7 @@ function _getGuildMonetizationRestrictions() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    const iter = (function*(arg0, body) {
+    const iter = (function* (arg0, body) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -1606,7 +1606,7 @@ function _fetchHighlightedCreatorGuildDetails() {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -1696,9 +1696,15 @@ function _fetchHighlightedCreatorGuildDetails() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsHttpApi.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/guild_role_subscriptions/GuildRoleSubscriptionsHttpApi.tsx",
+);
 
-export const updateGuildRoleSubscriptionGroupListing = function updateGuildRoleSubscriptionGroupListing(closure_0, closure_1, closure_2) {
+export const updateGuildRoleSubscriptionGroupListing = function updateGuildRoleSubscriptionGroupListing(
+  closure_0,
+  closure_1,
+  closure_2,
+) {
   const self = this;
   const apply = _updateGuildRoleSubscriptionGroupListing.apply;
   if (typeof apply === "unknown") {
@@ -1708,7 +1714,10 @@ export const updateGuildRoleSubscriptionGroupListing = function updateGuildRoleS
   }
   return applyArgumentsResult;
 };
-export const createGuildRoleSubscriptionGroupListing = function createGuildRoleSubscriptionGroupListing(closure_0, closure_1) {
+export const createGuildRoleSubscriptionGroupListing = function createGuildRoleSubscriptionGroupListing(
+  closure_0,
+  closure_1,
+) {
   const self = this;
   const apply = _createGuildRoleSubscriptionGroupListing.apply;
   if (typeof apply === "unknown") {
@@ -1718,7 +1727,10 @@ export const createGuildRoleSubscriptionGroupListing = function createGuildRoleS
   }
   return applyArgumentsResult;
 };
-export const deleteGuildRoleSubscriptionGroupListing = function deleteGuildRoleSubscriptionGroupListing(closure_0, closure_1) {
+export const deleteGuildRoleSubscriptionGroupListing = function deleteGuildRoleSubscriptionGroupListing(
+  closure_0,
+  closure_1,
+) {
   const self = this;
   const apply = _deleteGuildRoleSubscriptionGroupListing.apply;
   if (typeof apply === "unknown") {
@@ -1748,7 +1760,10 @@ export const updateGuildRoleSubscriptionListing = function updateGuildRoleSubscr
   }
   return applyArgumentsResult;
 };
-export const getGuildRoleSubscriptionGroupListingsForGuild = function getGuildRoleSubscriptionGroupListingsForGuild(closure_0, arg1) {
+export const getGuildRoleSubscriptionGroupListingsForGuild = function getGuildRoleSubscriptionGroupListingsForGuild(
+  closure_0,
+  arg1,
+) {
   const self = this;
   const apply = _getGuildRoleSubscriptionGroupListingsForGuild.apply;
   if (typeof apply === "unknown") {
@@ -1768,7 +1783,10 @@ export const getGuildRoleSubscriptionsSettings = function getGuildRoleSubscripti
   }
   return applyArgumentsResult;
 };
-export const updateGuildRoleSubscriptionsSettings = function updateGuildRoleSubscriptionsSettings(closure_0, closure_1) {
+export const updateGuildRoleSubscriptionsSettings = function updateGuildRoleSubscriptionsSettings(
+  closure_0,
+  closure_1,
+) {
   const self = this;
   const apply = _updateGuildRoleSubscriptionsSettings.apply;
   if (typeof apply === "unknown") {
@@ -1788,7 +1806,11 @@ export const getPriceTiers = function getPriceTiers(closure_1_0) {
   }
   return applyArgumentsResult;
 };
-export const getGuildRoleSubscriptionGroupListing = function getGuildRoleSubscriptionGroupListing(closure_0, closure_1, arg2) {
+export const getGuildRoleSubscriptionGroupListing = function getGuildRoleSubscriptionGroupListing(
+  closure_0,
+  closure_1,
+  arg2,
+) {
   const self = this;
   const apply = _getGuildRoleSubscriptionGroupListing.apply;
   if (typeof apply === "unknown") {
@@ -1798,17 +1820,22 @@ export const getGuildRoleSubscriptionGroupListing = function getGuildRoleSubscri
   }
   return applyArgumentsResult;
 };
-export const getGuildRoleSubscriptionGroupForSubscriptionPlan = function getGuildRoleSubscriptionGroupForSubscriptionPlan(closure_0) {
-  const self = this;
-  const apply = _getGuildRoleSubscriptionGroupForSubscriptionPlan.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
-export const deleteGuildRoleSubscriptionListing = function deleteGuildRoleSubscriptionListing(closure_0, closure_1, closure_2) {
+export const getGuildRoleSubscriptionGroupForSubscriptionPlan =
+  function getGuildRoleSubscriptionGroupForSubscriptionPlan(closure_0) {
+    const self = this;
+    const apply = _getGuildRoleSubscriptionGroupForSubscriptionPlan.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
+export const deleteGuildRoleSubscriptionListing = function deleteGuildRoleSubscriptionListing(
+  closure_0,
+  closure_1,
+  closure_2,
+) {
   const self = this;
   const apply = _deleteGuildRoleSubscriptionListing.apply;
   if (typeof apply === "unknown") {
@@ -1818,7 +1845,11 @@ export const deleteGuildRoleSubscriptionListing = function deleteGuildRoleSubscr
   }
   return applyArgumentsResult;
 };
-export const archiveGuildRoleSubscriptionListing = function archiveGuildRoleSubscriptionListing(closure_0, closure_1, closure_2) {
+export const archiveGuildRoleSubscriptionListing = function archiveGuildRoleSubscriptionListing(
+  closure_0,
+  closure_1,
+  closure_2,
+) {
   const self = this;
   const apply = _archiveGuildRoleSubscriptionListing.apply;
   if (typeof apply === "unknown") {
@@ -1838,7 +1869,11 @@ export const getGuildRoleSubscriptionTrials = function getGuildRoleSubscriptionT
   }
   return applyArgumentsResult;
 };
-export const updateGuildRoleSubscriptionsTrial = function updateGuildRoleSubscriptionsTrial(closure_0, closure_1, closure_2) {
+export const updateGuildRoleSubscriptionsTrial = function updateGuildRoleSubscriptionsTrial(
+  closure_0,
+  closure_1,
+  closure_2,
+) {
   const self = this;
   const apply = _updateGuildRoleSubscriptionsTrial.apply;
   if (typeof apply === "unknown") {

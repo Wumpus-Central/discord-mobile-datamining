@@ -28,8 +28,7 @@ function handleLoadThreadsSuccess(arg0) {
 }
 let closure_5 = {};
 const Store = initializeDefault.Store;
-class ForumPostRecentMessageStore extends Store {
-}
+class ForumPostRecentMessageStore extends Store {}
 const prototype = ForumPostRecentMessageStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_3, closure_4);
@@ -179,7 +178,7 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(dispatcherDe
     }
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: handleLoadThreadsSuccess,
-  LOAD_THREADS_SUCCESS: handleLoadThreadsSuccess
+  LOAD_THREADS_SUCCESS: handleLoadThreadsSuccess,
 });
 const result = require("set").fileFinishedImporting("modules/forums/ForumPostRecentMessageStore.tsx");
 

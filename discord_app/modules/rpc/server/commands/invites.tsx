@@ -11,13 +11,16 @@ const require = arg1;
 let obj = {};
 obj = { scope: null, handler: null };
 obj = {};
-const items = [require("set").OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, require("set").OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
+const items = [
+  require("set").OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE,
+  require("set").OAuth2Scopes.ACTIVITIES_INVITES_WRITE,
+];
 obj[require("RPC_SCOPE_CONFIG").RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function handler(arg0) {
   ({ socket: require, args } = arg0);
   ({ user_id: dependencyMap, content: closure_2 } = args);
-  return callback(function*() {
+  return callback(function* () {
     if (connectedActivityLocation === 2) {
       connectedActivityLocation = 3;
       HermesBuiltin.throwTypeError();
@@ -56,7 +59,10 @@ obj[1] = function handler(arg0) {
               if (null == connectedActivityLocation) {
                 const obj2 = { errorCode: null };
                 obj2[0] = closure_1_6.NO_ELIGIBLE_ACTIVITY;
-                const rPCError1 = new closure_1_0(9504).RPCError(obj2, "No eligible activity for application. Ensure an activity was set using setActivity.");
+                const rPCError1 = new closure_1_0(9504).RPCError(
+                  obj2,
+                  "No eligible activity for application. Ensure an activity was set using setActivity.",
+                );
                 throw rPCError1;
               } else {
                 const kind = connectedActivityLocation.kind;
@@ -85,7 +91,14 @@ obj[1] = function handler(arg0) {
                   }
                   c2 = 1;
                   obj5 = closure_1_0(9469);
-                  const obj6 = { channelId: null, applicationId: null, userId: null, prefixedContent: null, location: "RPC_ACTIVITY_INVITE_USER", inviteAnalyticsMetadata: null };
+                  const obj6 = {
+                    channelId: null,
+                    applicationId: null,
+                    userId: null,
+                    prefixedContent: null,
+                    location: "RPC_ACTIVITY_INVITE_USER",
+                    inviteAnalyticsMetadata: null,
+                  };
                   obj6[0] = channel.id;
                   obj6[1] = id;
                   obj6[2] = dependencyMap;

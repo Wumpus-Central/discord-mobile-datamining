@@ -7,7 +7,9 @@ import context from "../../../index.native.tsx";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ placeholderWebView: { width: 2, height: 2, position: "absolute", opacity: 0 } });
+let closure_6 = createCacheKey.createStyles({
+  placeholderWebView: { width: 2, height: 2, position: "absolute", opacity: 0 },
+});
 const result = require("set").fileFinishedImporting("modules/activities/native/WebViewContext.tsx");
 
 export const WebViewContext = context;
@@ -24,7 +26,7 @@ export const WebViewContextProvider = function WebViewContextProvider(children) 
         callback(_nativeTag._nativeTag);
       }
     }, items),
-    pointerEvents: "none"
+    pointerEvents: "none",
   };
   const items1 = [callback2(View, obj), children.children];
   obj[1] = items1;

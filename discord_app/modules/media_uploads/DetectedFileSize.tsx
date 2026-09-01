@@ -8,7 +8,7 @@ function _getDetectedFileSize() {
     c2 = 0;
     c1 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (c1 === 2) {
         c1 = 3;
         HermesBuiltin.throwTypeError();

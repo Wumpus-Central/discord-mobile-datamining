@@ -68,7 +68,7 @@ class Badge {
     items = [];
     items[0] = closure_5;
     stateFromStores = tmpResult.useStateFromStores(items, () => items2.locale);
-    items1 = [, , , , , ];
+    items1 = [, , , , ,];
     items1[0] = items2;
     items1[1] = style;
     items1[2] = flag2;
@@ -78,7 +78,15 @@ class Badge {
     if (value > 0) {
       tmp7 = jsx;
       tmp8 = c4;
-      obj = { pointerEvents: "none", style: null, accessible: null, accessibilityLabel: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+      obj = {
+        pointerEvents: "none",
+        style: null,
+        accessible: null,
+        accessibilityLabel: null,
+        accessibilityElementsHidden: null,
+        importantForAccessibility: null,
+        children: null,
+      };
       obj[1] = tmp5;
       obj[2] = accessible;
       obj[3] = accessibilityLabel;
@@ -93,14 +101,21 @@ class Badge {
       }
       if (flag) {
         obj1 = { style: null };
-        items2 = [, ];
+        items2 = [,];
         items2[0] = items2.noCount;
         items2[1] = dotStyle;
         obj1[0] = items2;
         tmp7Result1 = tmp7(tmp8, obj1);
       } else if (flag5) {
-        obj2 = { variant: "experimental/body-xs/semibold", color: "none", style: null, lineClamp: 1, allowFontScaling: false, children: null };
-        items3 = [, ];
+        obj2 = {
+          variant: "experimental/body-xs/semibold",
+          color: "none",
+          style: null,
+          lineClamp: 1,
+          allowFontScaling: false,
+          children: null,
+        };
+        items3 = [,];
         items3[0] = items2.experimentalBadgeText;
         items3[1] = textStyle;
         obj2[2] = items3;
@@ -112,7 +127,7 @@ class Badge {
       } else {
         tmp10 = style;
         obj3 = { style: null, numberOfLines: 1, allowFontScaling: false, children: null };
-        items4 = [, ];
+        items4 = [,];
         items4[0] = items2.badgeText;
         items4[1] = textStyle;
         obj3[0] = items4;
@@ -132,10 +147,41 @@ class Badge {
 }
 ({ BADGE_MASK_SIZE: closure_6, BADGE_MASK_UNREAD_SIZE: error, BADGE_PADDING, BADGE_SIZE } = PX_16);
 const BADGE_SIZE_UNREAD = PX_16.BADGE_SIZE_UNREAD;
-createCacheKey = { badgeMask: createCacheKey, badge: null, badgeText: null, experimentalBadgeText: null, noCount: null, unread: null, mention: null, lowImportanceMention: null, eventsMentionBadge: null };
-createCacheKey = { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 };
-createCacheKey[1] = { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: ThemesDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" };
-let obj2 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: ThemesDefault.colors.WHITE, fontSize: 12, lineHeight: null, fontFamily: null, textAlign: "center", textAlignVertical: null };
+createCacheKey = {
+  badgeMask: createCacheKey,
+  badge: null,
+  badgeText: null,
+  experimentalBadgeText: null,
+  noCount: null,
+  unread: null,
+  mention: null,
+  lowImportanceMention: null,
+  eventsMentionBadge: null,
+};
+createCacheKey = {
+  position: "absolute",
+  bottom: -BADGE_PADDING,
+  right: -BADGE_PADDING,
+  padding: BADGE_PADDING,
+  zIndex: 1,
+};
+createCacheKey[1] = {
+  paddingLeft: BADGE_PADDING,
+  paddingRight: BADGE_PADDING,
+  borderRadius: ThemesDefault.space.PX_8,
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+};
+let obj2 = {
+  minWidth: BADGE_SIZE - 2 * BADGE_PADDING,
+  color: ThemesDefault.colors.WHITE,
+  fontSize: 12,
+  lineHeight: null,
+  fontFamily: null,
+  textAlign: "center",
+  textAlignVertical: null,
+};
 set = set.isAndroid();
 const space = ThemesDefault.space;
 obj2[3] = set ? space.PX_12 : space.PX_16;
@@ -159,7 +205,14 @@ obj3.textAlign = "center";
 createCacheKey[3] = obj3;
 set = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: ThemesDefault.colors.WHITE };
 createCacheKey[4] = set;
-let obj1 = { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: ThemesDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" };
+let obj1 = {
+  paddingLeft: BADGE_PADDING,
+  paddingRight: BADGE_PADDING,
+  borderRadius: ThemesDefault.space.PX_8,
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+};
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
 set = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
 createCacheKey[6] = set;
@@ -176,7 +229,17 @@ export const MaskedBadge = function MaskedBadge(maskStyle) {
   const value = maskStyle.value;
   importDefault = value;
   let flag = maskStyle.unreadIndicator;
-  ({ style, dotStyle, textStyle, maxValue, accessibilityLabel, accessibilityElementsHidden, importantForAccessibility, onLayout, hideCount } = maskStyle);
+  ({
+    style,
+    dotStyle,
+    textStyle,
+    maxValue,
+    accessibilityLabel,
+    accessibilityElementsHidden,
+    importantForAccessibility,
+    onLayout,
+    hideCount,
+  } = maskStyle);
   if (flag === undefined) {
     flag = false;
   }
@@ -188,7 +251,19 @@ export const MaskedBadge = function MaskedBadge(maskStyle) {
     let obj = { pointerEvents: "none", style: null, onLayout: null, children: null };
     obj[1] = tmp2;
     obj[2] = onLayout;
-    obj = { style: null, textStyle: null, dotStyle: null, value: null, maxValue: null, hideCount: null, unreadIndicator: null, accessibilityLabel: null, accessibilityElementsHidden: null, importantForAccessibility: null, isMentionLowImportance: null };
+    obj = {
+      style: null,
+      textStyle: null,
+      dotStyle: null,
+      value: null,
+      maxValue: null,
+      hideCount: null,
+      unreadIndicator: null,
+      accessibilityLabel: null,
+      accessibilityElementsHidden: null,
+      importantForAccessibility: null,
+      isMentionLowImportance: null,
+    };
     obj[0] = style;
     obj[1] = textStyle;
     obj[2] = dotStyle;
@@ -200,8 +275,36 @@ export const MaskedBadge = function MaskedBadge(maskStyle) {
     obj[8] = accessibilityElementsHidden;
     obj[9] = importantForAccessibility;
     obj[10] = maskStyle.isMentionLowImportance;
-    obj[3] = <Badge style={null} textStyle={null} dotStyle={null} value={null} maxValue={null} hideCount={null} unreadIndicator={null} accessibilityLabel={null} accessibilityElementsHidden={null} importantForAccessibility={null} isMentionLowImportance={null} />;
-    let tmp3 = <View style={null} textStyle={null} dotStyle={null} value={null} maxValue={null} hideCount={null} unreadIndicator={null} accessibilityLabel={null} accessibilityElementsHidden={null} importantForAccessibility={null} isMentionLowImportance={null} />;
+    obj[3] = (
+      <Badge
+        style={null}
+        textStyle={null}
+        dotStyle={null}
+        value={null}
+        maxValue={null}
+        hideCount={null}
+        unreadIndicator={null}
+        accessibilityLabel={null}
+        accessibilityElementsHidden={null}
+        importantForAccessibility={null}
+        isMentionLowImportance={null}
+      />
+    );
+    let tmp3 = (
+      <View
+        style={null}
+        textStyle={null}
+        dotStyle={null}
+        value={null}
+        maxValue={null}
+        hideCount={null}
+        unreadIndicator={null}
+        accessibilityLabel={null}
+        accessibilityElementsHidden={null}
+        importantForAccessibility={null}
+        isMentionLowImportance={null}
+      />
+    );
   } else {
     tmp3 = null;
   }

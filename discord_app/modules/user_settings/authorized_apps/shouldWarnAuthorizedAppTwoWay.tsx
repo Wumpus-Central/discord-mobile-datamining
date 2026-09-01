@@ -11,7 +11,7 @@ export default function isAuthorizedAppTwoWay(arg0) {
     hasItem = PLAYSTATION_APPLICATION_IDS.has(arg0);
   }
   return hasItem;
-};
+}
 export const useShouldWarnAuthorizedAppTwoWay = function useShouldWarnAuthorizedAppTwoWay(id) {
   let hasItem = set2.ConsoleOAuthApplications.XBOX_APPLICATION_ID === id;
   if (!hasItem) {

@@ -21,10 +21,13 @@ const pressable = createToggle.createPressable({
     return intl.string(messagesProxyDefault.Gn0SAj);
   },
   onPress() {
-    useAlertStore.openAlert(SettingsAgeGroupResetAlert.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(SettingsAgeGroupResetAlert.default, {}));
+    useAlertStore.openAlert(
+      SettingsAgeGroupResetAlert.SETTINGS_AGE_GROUP_RESET_ALERT_ID,
+      jsx(SettingsAgeGroupResetAlert.default, {}),
+    );
   },
   withArrow: true,
-  usePredicate: useAgeVerificationRunner.useShowAssignedAgeGroupSettings
+  usePredicate: useAgeVerificationRunner.useShowAssignedAgeGroupSettings,
 });
 const obj = {
   useTitle() {
@@ -37,10 +40,13 @@ const obj = {
     return intl.string(messagesProxyDefault.Gn0SAj);
   },
   onPress() {
-    useAlertStore.openAlert(SettingsAgeGroupResetAlert.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(SettingsAgeGroupResetAlert.default, {}));
+    useAlertStore.openAlert(
+      SettingsAgeGroupResetAlert.SETTINGS_AGE_GROUP_RESET_ALERT_ID,
+      jsx(SettingsAgeGroupResetAlert.default, {}),
+    );
   },
   withArrow: true,
-  usePredicate: useAgeVerificationRunner.useShowAssignedAgeGroupSettings
+  usePredicate: useAgeVerificationRunner.useShowAssignedAgeGroupSettings,
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupResetSetting.tsx");
 

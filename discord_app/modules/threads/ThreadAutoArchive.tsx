@@ -11,7 +11,7 @@ function getAutoArchiveOptions() {
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.cs8A1c);
   obj[2] = setDefault.Minutes.HOUR;
-  const items = [obj, , , ];
+  const items = [obj, , ,];
   obj = { id: "24hours", label: null, value: null };
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.zFKbrF);

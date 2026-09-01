@@ -9,7 +9,12 @@ function handleConnectionOpen(unavailableGuilds) {
   set = new Set(unavailableGuilds.unavailableGuilds);
   if (unavailableGuilds.unavailableGuilds.length > 0) {
     const _HermesInternal = HermesInternal;
-    logger.warn("" + unavailableGuilds.unavailableGuilds.length + " guilds are unavailable on connection open: " + unavailableGuilds.unavailableGuilds);
+    logger.warn(
+      "" +
+        unavailableGuilds.unavailableGuilds.length +
+        " guilds are unavailable on connection open: " +
+        unavailableGuilds.unavailableGuilds,
+    );
   }
 }
 function handleGuild(guild) {
@@ -24,8 +29,7 @@ function handleGuild(guild) {
 let closure_1 = new timestampDefault("GuildAvailabilityStore");
 let set = new Set();
 const Store = initializeDefault.Store;
-class GuildAvailabilityStore extends Store {
-}
+class GuildAvailabilityStore extends Store {}
 const prototype = GuildAvailabilityStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_0);
@@ -41,19 +45,19 @@ Object.defineProperty(prototype, "totalGuilds", {
   get: function totalGuilds() {
     return store.getGuildCount() + set.size;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "totalUnavailableGuilds", {
   get: function totalUnavailableGuilds() {
     return set.size;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "unavailableGuilds", {
   get: function unavailableGuilds() {
     return Array.from(set);
   },
-  set: undefined
+  set: undefined,
 });
 GuildAvailabilityStore.displayName = "GuildAvailabilityStore";
 const guildAvailabilityStore = new GuildAvailabilityStore(dispatcherDefault, {
@@ -86,7 +90,7 @@ const guildAvailabilityStore = new GuildAvailabilityStore(dispatcherDefault, {
     } else {
       return false;
     }
-  }
+  },
 });
 const result = set.fileFinishedImporting("stores/GuildAvailabilityStore.tsx");
 

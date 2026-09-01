@@ -44,7 +44,16 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
   if (shouldObscureSpoiler) {
     tmp7 = hasFlagResult;
   }
-  const obj2 = { isSpoiler: tmp7, spoiler: null, obscure: null, obscureDescription: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null };
+  const obj2 = {
+    isSpoiler: tmp7,
+    spoiler: null,
+    obscure: null,
+    obscureDescription: null,
+    obscureAwaitingScan: null,
+    verifyAge: null,
+    obscureHideControls: null,
+    obscureIsOpaque: null,
+  };
   let str = "";
   let str2 = "";
   if (shouldObscureSpoiler) {
@@ -62,7 +71,10 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
     str = intl2.string(tmp(1236).t.SpxcUR);
   }
   obj2[3] = str;
-  obj2[4] = tmpResult.isMediaScanPending({ type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: obj }, enabledContentHarmTypeFlags);
+  obj2[4] = tmpResult.isMediaScanPending(
+    { type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: obj },
+    enabledContentHarmTypeFlags,
+  );
   shouldAgeVerify = tmp5;
   if (mediaObscuredReasonFromBitmask.length > 0) {
     shouldAgeVerify = shouldAgeVerify.shouldAgeVerify;
@@ -94,7 +106,16 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
     tmpResult = tmp(4733);
     isVerifiedTeenResult = tmpResult.isVerifiedTeen();
   }
-  obj1 = { isSpoiler: isSpoilered, spoilerDescription: null, isObscured: null, obscureDescription: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null };
+  obj1 = {
+    isSpoiler: isSpoilered,
+    spoilerDescription: null,
+    isObscured: null,
+    obscureDescription: null,
+    obscureAwaitingScan: null,
+    verifyAge: null,
+    obscureHideControls: null,
+    obscureIsOpaque: null,
+  };
   if (!isSpoilered) {
     obj1[1] = null;
     obj1[2] = tmp4;

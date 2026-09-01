@@ -17,7 +17,7 @@ export default {
     if (arg1 === undefined) {
       num = 1500;
     }
-    return callback(function*() {
+    return callback(function* () {
       closure_1 = tmp3;
       closure_1_1(closure_1_2[3]).dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
       c3 = 1;
@@ -77,7 +77,7 @@ export default {
     if (closure_3 === undefined) {
       flag2 = false;
     }
-    return flag2(function*() {
+    return flag2(function* () {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -179,7 +179,13 @@ export default {
               obj8[3] = closure_3;
               obj5.track(constants.POMELO_ERRORS, obj8);
               obj7 = aPIError(closure_1_2[3]);
-              const obj9 = { username: null, type: "UNIQUE_USERNAME_ATTEMPT_FAILURE", error: null, statusCode: null, retryAfter: null };
+              const obj9 = {
+                username: null,
+                type: "UNIQUE_USERNAME_ATTEMPT_FAILURE",
+                error: null,
+                statusCode: null,
+                retryAfter: null,
+              };
               obj9[0] = closure_0;
               let tmp49;
               if (null != aPIError.status) {
@@ -230,5 +236,5 @@ export default {
         }
       }
     })();
-  }
+  },
 };

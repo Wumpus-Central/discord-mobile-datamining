@@ -70,7 +70,11 @@ function UserCalloutAvatars(userIds) {
   let obj = userIds(589);
   const items = [closure_7];
   const items1 = [userIds];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => userIds.map((arg0) => user.getUser(arg0)), items1);
+  const stateFromStoresArray = obj.useStateFromStoresArray(
+    items,
+    () => userIds.map((arg0) => user.getUser(arg0)),
+    items1,
+  );
   let found = stateFromStoresArray.filter(userIds(1471).isNotNullish);
   if (1 === userIds.length) {
     if (null != closure_7.getUser(userIds[0])) {
@@ -97,7 +101,7 @@ function BlockedUserInGDMDescription(arg0) {
     if (tmp2) {
       let obj = { children: null };
       const intl5 = getSystemLocale.intl;
-      const items = [intl5.string(getSystemLocale.t.xbRNI3), "\n", ];
+      const items = [intl5.string(getSystemLocale.t.xbRNI3), "\n"];
       const intl6 = getSystemLocale.intl;
       items[2] = intl6.string(getSystemLocale.t["Bp2/ni"]);
       obj[0] = items;
@@ -110,7 +114,7 @@ function BlockedUserInGDMDescription(arg0) {
     const intl3 = getSystemLocale.intl;
     obj1 = { n: null };
     obj1[0] = numOfBlockedUsers;
-    const items1 = [intl3.format(getSystemLocale.t.iKtixW, obj1), "\n", ];
+    const items1 = [intl3.format(getSystemLocale.t.iKtixW, obj1), "\n"];
     const intl4 = getSystemLocale.intl;
     items1[2] = intl4.string(getSystemLocale.t.SN1hrl);
     obj[0] = items1;
@@ -122,7 +126,7 @@ function BlockedUserInGDMDescription(arg0) {
       const intl = getSystemLocale.intl;
       const obj2 = { n: null };
       obj2[0] = numOfIgnoredUsers;
-      const items2 = [intl.format(getSystemLocale.t["6IRwua"], obj2), "\n", ];
+      const items2 = [intl.format(getSystemLocale.t["6IRwua"], obj2), "\n"];
       const intl2 = getSystemLocale.intl;
       items2[2] = intl2.string(getSystemLocale.t["6AKLRt"]);
       obj[0] = items2;
@@ -133,7 +137,15 @@ function BlockedUserInGDMDescription(arg0) {
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ BlockWarningEngagements: closure_8, GdmWarningMedium: c9 } = GdmWarningMedium);
 ({ jsx: unpackModuleId, Fragment: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { container: null, headerImage: null, title: null, description: null, tableGroup: null, buttons: null, icon: null };
+createCacheKey = {
+  container: null,
+  headerImage: null,
+  title: null,
+  description: null,
+  tableGroup: null,
+  buttons: null,
+  icon: null,
+};
 createCacheKey = { paddingTop: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8, textAlign: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignSelf: "center", width: 73, height: 86 };
@@ -144,7 +156,9 @@ createCacheKey[5] = { gap: 8 };
 createCacheKey[6] = { display: "flex", justifyContent: "center", alignItems: "center", minWidth: 32 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { paddingVertical: ThemesDefault.space.PX_24 };
-let result = require("set").fileFinishedImporting("modules/shared_space_warnings/native/BlockedUserInGdmActionSheet.tsx");
+let result = require("set").fileFinishedImporting(
+  "modules/shared_space_warnings/native/BlockedUserInGdmActionSheet.tsx",
+);
 
 export default function BlockedUserInGdmActionSheet(channelId) {
   channelId = channelId.channelId;
@@ -156,14 +170,19 @@ export default function BlockedUserInGdmActionSheet(channelId) {
   const items = [channelId, blockedUserIds, ignoredUserIds];
   const effect = React.useEffect(() => {
     let obj = blockedUserIds(ignoredUserIds[19]);
-    obj = { channel_id: channelId, warning_medium: closure_1_9.ACTION_SHEET, ignored_user_ids: ignoredUserIds, blocked_user_ids: blockedUserIds };
+    obj = {
+      channel_id: channelId,
+      warning_medium: closure_1_9.ACTION_SHEET,
+      ignored_user_ids: ignoredUserIds,
+      blocked_user_ids: blockedUserIds,
+    };
     obj.track(closure_1_10.GDM_BLOCKED_USER_WARNING_VIEWED, obj);
   }, items);
   channel = channel.getChannel(channelId);
   let obj = { icon: callback(channelId(ignoredUserIds[17]).CircleCheckIcon, {}), label: null };
   const intl = channelId(ignoredUserIds[11]).intl;
   obj[1] = intl.string(channelId(ignoredUserIds[11]).t.RIMw54);
-  const items1 = [obj, ];
+  const items1 = [obj];
   obj = { icon: callback(channelId(ignoredUserIds[18]).CircleInformationIcon, {}), label: null };
   const intl2 = channelId(ignoredUserIds[11]).intl;
   obj[1] = intl2.string(channelId(ignoredUserIds[11]).t.bejNWN);
@@ -202,13 +221,13 @@ export default function BlockedUserInGdmActionSheet(channelId) {
     const obj5 = { source: null, style: null };
     obj5[0] = blockedUserIds(tmp8[21]);
     obj5[1] = tmp.headerImage;
-    const items3 = [tmp6(closure_4, obj5), , , ];
+    const items3 = [tmp6(closure_4, obj5), , ,];
     const obj6 = { children: null };
     const obj7 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: null, children: null };
     obj7[2] = tmp.title;
     const intl3 = tmp7(tmp8[11]).intl;
     obj7[3] = intl3.string(tmp7(tmp8[11]).t["mwJJ+f"]);
-    const items4 = [tmp6(tmp7(tmp8[9]).Text, obj7), ];
+    const items4 = [tmp6(tmp7(tmp8[9]).Text, obj7)];
     const obj8 = { variant: "text-md/medium", color: "text-default", style: null, children: null };
     obj8[2] = tmp.description;
     const obj9 = { numOfBlockedUsers: null, numOfIgnoredUsers: null };
@@ -241,19 +260,31 @@ export default function BlockedUserInGdmActionSheet(channelId) {
       const obj2 = channelId(ignoredUserIds[26]);
       blockedUserIds(ignoredUserIds[27]).closePrivateChannel(channelId, true, true);
       const obj3 = blockedUserIds(ignoredUserIds[27]);
-      obj = { action: closure_1_8.CLICK_TO_LEAVE, channel_id: channelId, warning_medium: closure_1_9.ACTION_SHEET, ignored_user_ids: ignoredUserIds, blocked_user_ids: blockedUserIds };
+      obj = {
+        action: closure_1_8.CLICK_TO_LEAVE,
+        channel_id: channelId,
+        warning_medium: closure_1_9.ACTION_SHEET,
+        ignored_user_ids: ignoredUserIds,
+        blocked_user_ids: blockedUserIds,
+      };
       blockedUserIds(ignoredUserIds[19]).track(closure_1_10.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, obj);
     };
     const intl4 = tmp7(tmp8[11]).intl;
     obj13[2] = intl4.string(tmp7(tmp8[11]).t.I4q1kA);
-    const items5 = [tmp6(tmp7(tmp8[24]).Button, obj13), ];
+    const items5 = [tmp6(tmp7(tmp8[24]).Button, obj13)];
     const obj14 = { size: "lg", variant: "secondary", onPress: null, text: null };
     obj14[2] = function onPress() {
       let obj = blockedUserIds(ignoredUserIds[25]);
       obj.hideActionSheet();
       const result = channelId(ignoredUserIds[26]).dismissGdmBlockedUserWarning(channelId);
       const obj2 = channelId(ignoredUserIds[26]);
-      obj = { action: closure_1_8.CLICK_TO_STAY, channel_id: channelId, warning_medium: closure_1_9.ACTION_SHEET, ignored_user_ids: ignoredUserIds, blocked_user_ids: blockedUserIds };
+      obj = {
+        action: closure_1_8.CLICK_TO_STAY,
+        channel_id: channelId,
+        warning_medium: closure_1_9.ACTION_SHEET,
+        ignored_user_ids: ignoredUserIds,
+        blocked_user_ids: blockedUserIds,
+      };
       blockedUserIds(ignoredUserIds[19]).track(closure_1_10.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, obj);
     };
     const intl5 = tmp7(tmp8[11]).intl;
@@ -280,7 +311,12 @@ export default function BlockedUserInGdmActionSheet(channelId) {
   }
   const obj16 = { icon: callback(UserCalloutAvatars, obj15), label: null };
   obj15[1] = guild_id2;
-  const obj17 = { calledOutUserIds: substr1, totalUsers: blockedUserIds.length > 0 ? blockedUserIds.length : ignoredUserIds.length, channelId, guildId: null };
+  const obj17 = {
+    calledOutUserIds: substr1,
+    totalUsers: blockedUserIds.length > 0 ? blockedUserIds.length : ignoredUserIds.length,
+    channelId,
+    guildId: null,
+  };
   let guild_id3;
   if (channel != null) {
     guild_id3 = channel.guild_id;
@@ -288,5 +324,5 @@ export default function BlockedUserInGdmActionSheet(channelId) {
   obj17[3] = guild_id3;
   obj16[1] = getUserCalloutRowText(obj17);
   items1.unshift(obj16);
-};
+}
 export { getUserCalloutRowText };

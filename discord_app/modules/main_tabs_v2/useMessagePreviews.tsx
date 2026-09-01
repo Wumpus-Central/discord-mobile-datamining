@@ -62,7 +62,7 @@ export default function useMessagePreview(guild_id) {
     disabled = tmp6;
   }
   return useLatestChannelMessageDefault(guild_id, disabled);
-};
+}
 export const useMessagePreviewSetting = function useMessagePreviewSetting(arg0) {
   const _require = arg0;
   const items = [closure_3];

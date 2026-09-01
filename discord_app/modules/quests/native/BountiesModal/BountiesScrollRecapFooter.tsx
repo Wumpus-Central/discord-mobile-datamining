@@ -29,18 +29,42 @@ let closure_7 = createCacheKey.createStyles(() => {
   obj[4] = { marginTop: num };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollRecapFooter.tsx");
+const result = require("set").fileFinishedImporting(
+  "modules/quests/native/BountiesModal/BountiesScrollRecapFooter.tsx",
+);
 
 export const BountiesScrollRecapFooter = function BountiesScrollRecapFooter(orbAmount) {
   orbAmount = orbAmount.orbAmount;
   const tmp = callback3();
   const intl = getSystemLocale.intl;
   const stringResult = intl.string(getSystemLocale.t.d6Rrn6);
-  let obj = { style: tmp.container, pointerEvents: "none", accessible: true, accessibilityRole: "text", accessibilityLabel: "" + stringResult + ", +" + orbAmount, children: null };
-  obj = { variant: "text-xs/bold", color: "text-brand", style: tmp.headerLabel, accessible: false, children: stringResult };
-  const items = [callback(Text.Text, obj), ];
+  let obj = {
+    style: tmp.container,
+    pointerEvents: "none",
+    accessible: true,
+    accessibilityRole: "text",
+    accessibilityLabel: "" + stringResult + ", +" + orbAmount,
+    children: null,
+  };
+  obj = {
+    variant: "text-xs/bold",
+    color: "text-brand",
+    style: tmp.headerLabel,
+    accessible: false,
+    children: stringResult,
+  };
+  const items = [callback(Text.Text, obj)];
   obj = { style: tmp.orbRow, accessible: false, importantForAccessibility: "no-hide-descendants", children: null };
-  const items1 = [callback(OrbsIcon.OrbsIcon, { size: "sm", color: "icon-strong", accessible: false }), callback(Text.Text, { variant: "display-sm", color: "text-strong", accessible: false, style: tmp.orbAmount, children: "+" + orbAmount })];
+  const items1 = [
+    callback(OrbsIcon.OrbsIcon, { size: "sm", color: "icon-strong", accessible: false }),
+    callback(Text.Text, {
+      variant: "display-sm",
+      color: "text-strong",
+      accessible: false,
+      style: tmp.orbAmount,
+      children: "+" + orbAmount,
+    }),
+  ];
   obj[3] = items1;
   items[1] = callback2(View, obj);
   obj[5] = items;
@@ -55,6 +79,11 @@ export const BountiesScrollRecapFooterGradient = function BountiesScrollRecapFoo
   if (stateFromStores) {
     str = "halt";
   }
-  obj[1] = closure_5(ManaContext.BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
+  obj[1] = closure_5(ManaContext.BountiesScrollGradientRive, {
+    stateMachine: "State Machine 1",
+    fit: "fill",
+    alignment: "bottom-center",
+    withReducedMotion: str,
+  });
   return closure_5(View, obj);
 };

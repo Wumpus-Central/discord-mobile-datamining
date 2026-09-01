@@ -255,7 +255,9 @@ function handleSetRecentMentionsFilters(arg0) {
   }
 }
 function handleRelationshipUpdate() {
-  const obj = { deletedMessages: applyDefault.filter(closure_18, (message) => closure_8.isBlockedOrIgnoredForMessage(message)) };
+  const obj = {
+    deletedMessages: applyDefault.filter(closure_18, (message) => closure_8.isBlockedOrIgnoredForMessage(message)),
+  };
   ({ addedMessages, deletedMessages } = obj);
   if (null != addedMessages) {
     const item = addedMessages.forEach((getChannelId) => {
@@ -311,7 +313,12 @@ function handleDeleteChannel(channel) {
   }
 }
 const RecentMentionsFilters = ME.RecentMentionsFilters;
-({ ChannelTypes: map1, MessageTypesSets: closure_14, UserNotificationSettings: closure_15, ChannelTypesSets: closure_16 } = ME);
+({
+  ChannelTypes: map1,
+  MessageTypesSets: closure_14,
+  UserNotificationSettings: closure_15,
+  ChannelTypesSets: closure_16,
+} = ME);
 const recentMentionFilterSettings = "recentMentionFilterSettings";
 let closure_18 = [];
 let closure_19 = {};
@@ -324,8 +331,7 @@ let c24 = false;
 let c25 = 0;
 let c26 = false;
 const Store = initializeDefault.Store;
-class RecentMentionsStore extends Store {
-}
+class RecentMentionsStore extends Store {}
 const prototype = RecentMentionsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_4, closure_5, closure_6, closure_7, closure_8, closure_9, closure_10, closure_11);
@@ -334,13 +340,13 @@ Object.defineProperty(prototype, "hasLoadedEver", {
   get: function hasLoadedEver() {
     return c24;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "lastLoaded", {
   get: function lastLoaded() {
     return c25;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getMentions"] = function getMentions() {
   if (c24) {
@@ -365,43 +371,43 @@ Object.defineProperty(prototype, "loading", {
   get: function loading() {
     return c21;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasMore", {
   get: function hasMore() {
     return c22;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "guildFilter", {
   get: function guildFilter() {
     return closure_23.guildFilter;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "everyoneFilter", {
   get: function everyoneFilter(arg0) {
     return closure_23.everyoneFilter;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "roleFilter", {
   get: function roleFilter(arg0) {
     return closure_23.roleFilter;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "mentionsAreStale", {
   get: function mentionsAreStale() {
     return c26;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "mentionCountByChannel", {
   get: function mentionCountByChannel() {
     return closure_19;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getMentionCountForChannel"] = function getMentionCountForChannel(arg0) {
   let num = table[arg0];
@@ -631,7 +637,7 @@ obj = {
   RELATIONSHIP_UPDATE: handleRelationshipUpdate,
   SET_RECENT_MENTIONS_STALE: function handleSetRecentMentionsStale() {
     c26 = true;
-  }
+  },
 };
 const recentMentionsStore = new RecentMentionsStore(dispatcherDefault, obj);
 let result = require("set").fileFinishedImporting("modules/inbox/RecentMentionsStore.tsx");

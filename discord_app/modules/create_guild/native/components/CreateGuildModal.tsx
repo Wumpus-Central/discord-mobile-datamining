@@ -58,7 +58,7 @@ export default function CreateGuildModal(channel) {
           return null;
         },
         headerLeft: null,
-        render: null
+        render: null,
       };
       let obj2 = channel(onSuccess[12]);
       obj[4] = obj2.getHeaderCloseButton(initialState(onSuccess[10]).closeCreateGuildModal);
@@ -75,7 +75,7 @@ export default function CreateGuildModal(channel) {
         },
         render(guildTemplate) {
           return callback3(callback2(12250), { guildTemplate: guildTemplate.guildTemplate, trigger: constants.IN_APP });
-        }
+        },
       };
       obj[closure_1_6.CREATION_INTENT] = obj;
       obj[closure_1_6.CREATE_SERVER] = {
@@ -111,7 +111,7 @@ export default function CreateGuildModal(channel) {
           const intl = callback(1236).intl;
           obj.customTitle = intl.string(callback(1236).t["5HZu07"]);
           return callback3(callback2(11900), obj);
-        }
+        },
       };
       obj2 = {
         impressionName: channel(onSuccess[11]).ImpressionNames.GUILD_ADD_GUILD_INVITE,
@@ -133,9 +133,9 @@ export default function CreateGuildModal(channel) {
               if (null != closure_1_1) {
                 tmp2(tmp);
               }
-            }
+            },
           });
-        }
+        },
       };
       obj[closure_1_6.GUILD_INVITE] = obj2;
       obj1 = {
@@ -171,7 +171,7 @@ export default function CreateGuildModal(channel) {
           const intl = callback(1236).intl;
           obj.customTitle = intl.string(callback(1236).t["5HZu07"]);
           return callback3(callback2(11900), obj);
-        }
+        },
       };
       let tmp2 = channel;
       const tmp3 = onSuccess;
@@ -179,35 +179,39 @@ export default function CreateGuildModal(channel) {
         impressionName: channel(onSuccess[11]).ImpressionNames.GUILD_ADD_JOIN,
         impressionProperties: closure_1_11,
         fullscreen: true,
-        headerTitle: isWindowSmall ? (() => {
-          obj = { title: null };
-          const intl = callback(1236).intl;
-          obj[0] = intl.string(callback(1236).t.jlfuFW);
-          return callback3(callback(7607).GenericHeaderTitle, obj);
-        }) : (() => null),
+        headerTitle: isWindowSmall
+          ? () => {
+              obj = { title: null };
+              const intl = callback(1236).intl;
+              obj[0] = intl.string(callback(1236).t.jlfuFW);
+              return callback3(callback(7607).GenericHeaderTitle, obj);
+            }
+          : () => null,
         render(arg0) {
           obj = { initialRoute: closure_0 };
           const merged = Object.assign(arg0);
           obj.onClose = callback2(closure_1_2[10]).closeCreateGuildModal;
           return closure_1_10(callback2(closure_1_2[19]), obj);
-        }
+        },
       };
       const obj3 = {
         impressionName: channel(onSuccess[11]).ImpressionNames.GUILD_ADD_JOIN,
         impressionProperties: closure_1_11,
         fullscreen: true,
-        headerTitle: isWindowSmall ? (() => {
-          obj = { title: null };
-          const intl = callback(1236).intl;
-          obj[0] = intl.string(callback(1236).t.jlfuFW);
-          return callback3(callback(7607).GenericHeaderTitle, obj);
-        }) : (() => null),
+        headerTitle: isWindowSmall
+          ? () => {
+              obj = { title: null };
+              const intl = callback(1236).intl;
+              obj[0] = intl.string(callback(1236).t.jlfuFW);
+              return callback3(callback(7607).GenericHeaderTitle, obj);
+            }
+          : () => null,
         render(arg0) {
           obj = { initialRoute: closure_0 };
           const merged = Object.assign(arg0);
           obj.onClose = callback2(closure_1_2[10]).closeCreateGuildModal;
           return closure_1_10(callback2(closure_1_2[19]), obj);
-        }
+        },
       };
       obj[closure_1_6.ACCEPT_INVITE] = {
         impressionName: tmp2(tmp3[11]).ImpressionNames.GUILD_ADD_ACCEPT_INVITE,
@@ -222,9 +226,17 @@ export default function CreateGuildModal(channel) {
         render(code) {
           obj = { code: code.code, onPressClose: callback2(12246).closeCreateGuildModal };
           return callback3(callback2(12254), obj);
-        }
+        },
       };
-      const obj5 = { impressionName: "Array", impressionProperties: true, fullscreen: true, ignoreKeyboard: null, headerTitle: null, headerLeft: null, render: true };
+      const obj5 = {
+        impressionName: "Array",
+        impressionProperties: true,
+        fullscreen: true,
+        ignoreKeyboard: null,
+        headerTitle: null,
+        headerLeft: null,
+        render: true,
+      };
       obj5[1] = closure_1_11;
       obj5[4] = function headerTitle() {
         return null;
@@ -240,7 +252,7 @@ export default function CreateGuildModal(channel) {
     }, items1),
     initialRouteStack: memo,
     headerBackTitle: null,
-    onWillFocus: null
+    onWillFocus: null,
   };
   items1 = [initialState, isWindowSmall, onSuccess];
   let intl = channel(onSuccess[16]).intl;
@@ -259,7 +271,7 @@ export default function CreateGuildModal(channel) {
           return null;
         },
         headerLeft: null,
-        render: null
+        render: null,
       };
       let obj2 = channel(onSuccess[12]);
       obj[4] = obj2.getHeaderCloseButton(initialState(onSuccess[10]).closeCreateGuildModal);
@@ -276,7 +288,7 @@ export default function CreateGuildModal(channel) {
         },
         render(guildTemplate) {
           return callback3(callback2(12250), { guildTemplate: guildTemplate.guildTemplate, trigger: constants.IN_APP });
-        }
+        },
       };
       obj[closure_1_6.CREATION_INTENT] = obj;
       obj[closure_1_6.CREATE_SERVER] = {
@@ -312,7 +324,7 @@ export default function CreateGuildModal(channel) {
           const intl = callback(1236).intl;
           obj.customTitle = intl.string(callback(1236).t["5HZu07"]);
           return callback3(callback2(11900), obj);
-        }
+        },
       };
       obj2 = {
         impressionName: channel(onSuccess[11]).ImpressionNames.GUILD_ADD_GUILD_INVITE,
@@ -334,9 +346,9 @@ export default function CreateGuildModal(channel) {
               if (null != closure_1_1) {
                 tmp2(tmp);
               }
-            }
+            },
           });
-        }
+        },
       };
       obj[closure_1_6.GUILD_INVITE] = obj2;
       obj1 = {
@@ -372,7 +384,7 @@ export default function CreateGuildModal(channel) {
           const intl = callback(1236).intl;
           obj.customTitle = intl.string(callback(1236).t["5HZu07"]);
           return callback3(callback2(11900), obj);
-        }
+        },
       };
       let tmp2 = channel;
       const tmp3 = onSuccess;
@@ -380,35 +392,39 @@ export default function CreateGuildModal(channel) {
         impressionName: channel(onSuccess[11]).ImpressionNames.GUILD_ADD_JOIN,
         impressionProperties: closure_1_11,
         fullscreen: true,
-        headerTitle: isWindowSmall ? (() => {
-          obj = { title: null };
-          const intl = callback(1236).intl;
-          obj[0] = intl.string(callback(1236).t.jlfuFW);
-          return callback3(callback(7607).GenericHeaderTitle, obj);
-        }) : (() => null),
+        headerTitle: isWindowSmall
+          ? () => {
+              obj = { title: null };
+              const intl = callback(1236).intl;
+              obj[0] = intl.string(callback(1236).t.jlfuFW);
+              return callback3(callback(7607).GenericHeaderTitle, obj);
+            }
+          : () => null,
         render(arg0) {
           obj = { initialRoute: closure_0 };
           const merged = Object.assign(arg0);
           obj.onClose = callback2(closure_1_2[10]).closeCreateGuildModal;
           return closure_1_10(callback2(closure_1_2[19]), obj);
-        }
+        },
       };
       const obj3 = {
         impressionName: channel(onSuccess[11]).ImpressionNames.GUILD_ADD_JOIN,
         impressionProperties: closure_1_11,
         fullscreen: true,
-        headerTitle: isWindowSmall ? (() => {
-          obj = { title: null };
-          const intl = callback(1236).intl;
-          obj[0] = intl.string(callback(1236).t.jlfuFW);
-          return callback3(callback(7607).GenericHeaderTitle, obj);
-        }) : (() => null),
+        headerTitle: isWindowSmall
+          ? () => {
+              obj = { title: null };
+              const intl = callback(1236).intl;
+              obj[0] = intl.string(callback(1236).t.jlfuFW);
+              return callback3(callback(7607).GenericHeaderTitle, obj);
+            }
+          : () => null,
         render(arg0) {
           obj = { initialRoute: closure_0 };
           const merged = Object.assign(arg0);
           obj.onClose = callback2(closure_1_2[10]).closeCreateGuildModal;
           return closure_1_10(callback2(closure_1_2[19]), obj);
-        }
+        },
       };
       obj[closure_1_6.ACCEPT_INVITE] = {
         impressionName: tmp2(tmp3[11]).ImpressionNames.GUILD_ADD_ACCEPT_INVITE,
@@ -423,9 +439,17 @@ export default function CreateGuildModal(channel) {
         render(code) {
           obj = { code: code.code, onPressClose: callback2(12246).closeCreateGuildModal };
           return callback3(callback2(12254), obj);
-        }
+        },
       };
-      const obj5 = { impressionName: "Array", impressionProperties: true, fullscreen: true, ignoreKeyboard: null, headerTitle: null, headerLeft: null, render: true };
+      const obj5 = {
+        impressionName: "Array",
+        impressionProperties: true,
+        fullscreen: true,
+        ignoreKeyboard: null,
+        headerTitle: null,
+        headerLeft: null,
+        render: true,
+      };
       obj5[1] = closure_1_11;
       obj5[4] = function headerTitle() {
         return null;
@@ -441,6 +465,6 @@ export default function CreateGuildModal(channel) {
     }, items1),
     initialRouteStack: memo,
     headerBackTitle: null,
-    onWillFocus: null
+    onWillFocus: null,
   });
-};
+}

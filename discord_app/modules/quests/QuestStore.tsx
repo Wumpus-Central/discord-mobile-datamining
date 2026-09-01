@@ -157,38 +157,37 @@ let map1 = new Map();
 let c36 = 864000000;
 initializeState();
 const Store = initializeDefault.Store;
-class QuestStore extends Store {
-}
+class QuestStore extends Store {}
 const prototype = QuestStore.prototype;
 Object.defineProperty(prototype, "quests", {
   get: function quests() {
     return closure_7;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "excludedQuests", {
   get: function excludedQuests() {
     return closure_8;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "claimedQuests", {
   get: function claimedQuests() {
     return closure_9;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isFetchingCurrentQuests", {
   get: function isFetchingCurrentQuests() {
     return closure_3;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isFetchingClaimedQuests", {
   get: function isFetchingClaimedQuests() {
     return closure_4;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isFetchingQuestPreview"] = function isFetchingQuestPreview(closure_0) {
   return set6.has(closure_0);
@@ -197,7 +196,7 @@ Object.defineProperty(prototype, "lastFetchedCurrentQuests", {
   get: function lastFetchedCurrentQuests(isEligibleForQuests, arg1) {
     return closure_10;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getQuestPreviewOverride"] = function getQuestPreviewOverride(QUEST_BAR_MOBILE) {
   let value = closure_21.get(QUEST_BAR_MOBILE);
@@ -211,19 +210,19 @@ Object.defineProperty(prototype, "questEnrollmentBlockedUntil", {
   get: function questEnrollmentBlockedUntil() {
     return closure_25;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "questAccessSuspendedUntil", {
   get: function questAccessSuspendedUntil() {
     return closure_26;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isQuestAccessSuspended", {
   get: function isQuestAccessSuspended() {
     return null != closure_26;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["getFetchQuestPreviewError"] = function getFetchQuestPreviewError(arg0) {
   return map1.get(arg0);
@@ -298,7 +297,7 @@ Object.defineProperty(prototype, "isFetchingEarnedQuestToDeliver", {
   get: function isFetchingEarnedQuestToDeliver() {
     return closure_5;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isFetchingEarnedQuestToDeliverByPlacement"] = function isFetchingEarnedQuestToDeliverByPlacement(prop) {
   let flag;
@@ -314,7 +313,7 @@ Object.defineProperty(prototype, "earnedQuestForPlacement", {
   get: function earnedQuestForPlacement() {
     return closure_23;
   },
-  set: undefined
+  set: undefined,
 });
 QuestStore.displayName = "QuestStore";
 const questStore = new QuestStore(dispatcherDefault, {
@@ -446,11 +445,14 @@ const questStore = new QuestStore(dispatcherDefault, {
         if (diff <= closure_36) {
           const _setTimeout = setTimeout;
           const _Math = Math;
-          timeout = setTimeout(() => {
-            c34 = null;
-            c26 = null;
-            closure_40.emitChange();
-          }, Math.max(diff, 0));
+          timeout = setTimeout(
+            () => {
+              c34 = null;
+              c26 = null;
+              closure_40.emitChange();
+            },
+            Math.max(diff, 0),
+          );
         }
       }
     })();
@@ -1315,7 +1317,7 @@ const questStore = new QuestStore(dispatcherDefault, {
       const _Date = Date;
       date = new Date(quest_enrollment_blocked_until);
     }
-  }
+  },
 });
 let result = require("set").fileFinishedImporting("modules/quests/QuestStore.tsx");
 

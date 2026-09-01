@@ -50,9 +50,11 @@ export default function AppShare(targetUserId) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
         const obj = closure_1_0(closure_1_2[13]);
-        closure_1_0(closure_1_2[13]).switchAccount(closure_0, false, closure_1_9.SHARE_EXTENSION).then(() => {
-          callback(true);
-        });
+        closure_1_0(closure_1_2[13])
+          .switchAccount(closure_0, false, closure_1_9.SHARE_EXTENSION)
+          .then(() => {
+            callback(true);
+          });
       }, 18);
     }
   }, items1);
@@ -93,7 +95,10 @@ export default function AppShare(targetUserId) {
       }
       return str;
     });
-    stateFromStores(7220).trackAppUIViewed("share", { share_num_attachments: stateFromStores.attachments.length, share_attachment_mimetypes: mapped });
+    stateFromStores(7220).trackAppUIViewed("share", {
+      share_num_attachments: stateFromStores.attachments.length,
+      share_attachment_mimetypes: mapped,
+    });
   });
   obj = { appEntryKey: share, children: null };
   if (first) {
@@ -110,7 +115,7 @@ export default function AppShare(targetUserId) {
     tmp19(tmp14Result, obj);
     tmp9Result = tmp9(1624);
   } else {
-    const items5 = [tmp19(tmp9(6047).SceneLoadingIndicator, {}), , , ];
+    const items5 = [tmp19(tmp9(6047).SceneLoadingIndicator, {}), , ,];
     obj1 = { appEntryKey: null };
     obj1[0] = tmp18;
     items5[1] = tmp19(tmp9(16488).ActionSheetContainer, obj1);
@@ -119,4 +124,4 @@ export default function AppShare(targetUserId) {
     obj[1] = items5;
     return closure_11(tmp17, obj);
   }
-};
+}

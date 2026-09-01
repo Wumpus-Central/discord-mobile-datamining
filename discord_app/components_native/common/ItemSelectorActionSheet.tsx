@@ -25,13 +25,22 @@ export default function ItemSelectorActionSheet(arg0) {
   }
   obj1 = { scrollable: true, header: closure_3(items(5621).BottomSheetTitleHeader, obj), children: null };
   obj[1] = tmp6Result;
-  const obj2 = { contentContainerStyle: { paddingHorizontal: token, paddingBottom: useSafeAreaInsetsDefault().bottom + ThemesDefault.space.PX_16 }, children: null };
-  items = [body, ];
+  const obj2 = {
+    contentContainerStyle: {
+      paddingHorizontal: token,
+      paddingBottom: useSafeAreaInsetsDefault().bottom + ThemesDefault.space.PX_16,
+    },
+    children: null,
+  };
+  items = [body];
   let num = -1;
   if (findIndexResult >= 0) {
     num = findIndexResult;
   }
-  const obj3 = { paddingHorizontal: token, paddingBottom: useSafeAreaInsetsDefault().bottom + ThemesDefault.space.PX_16 };
+  const obj3 = {
+    paddingHorizontal: token,
+    paddingBottom: useSafeAreaInsetsDefault().bottom + ThemesDefault.space.PX_16,
+  };
   const tmp3 = importDefault;
   const tmp8 = closure_4;
   items[1] = closure_3(items(7692).TableRadioGroup, {
@@ -43,9 +52,9 @@ export default function ItemSelectorActionSheet(arg0) {
         dependencyMap(iter.value);
       }
     },
-    children: items.map((label, value) => callback(items(7693).TableRadioRow, { label: label.label, value }, value))
+    children: items.map((label, value) => callback(items(7693).TableRadioRow, { label: label.label, value }, value)),
   });
   obj2[1] = items;
   obj1[2] = tmp8(items(5624).BottomSheetScrollView, obj2);
   return closure_3(items(5622).BottomSheet, obj1);
-};
+}

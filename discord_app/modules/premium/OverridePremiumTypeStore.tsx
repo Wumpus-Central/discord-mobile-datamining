@@ -35,10 +35,14 @@ function setActualFromUser(user) {
 }
 const UNSELECTED_CREATED_AT_DATE = GuildFeatures.UNSELECTED_CREATED_AT_DATE;
 const UNSELECTED_PREMIUM_TYPE_OVERRIDE = GuildFeatures.UNSELECTED_PREMIUM_TYPE_OVERRIDE;
-let closure_4 = { premiumTypeOverride: UNSELECTED_PREMIUM_TYPE_OVERRIDE, premiumTypeActual: UNSELECTED_PREMIUM_TYPE_OVERRIDE, createdAtOverride: UNSELECTED_CREATED_AT_DATE, perksActual: null };
+let closure_4 = {
+  premiumTypeOverride: UNSELECTED_PREMIUM_TYPE_OVERRIDE,
+  premiumTypeActual: UNSELECTED_PREMIUM_TYPE_OVERRIDE,
+  createdAtOverride: UNSELECTED_CREATED_AT_DATE,
+  perksActual: null,
+};
 const PersistedStore = initializeDefault.PersistedStore;
-class OverridePremiumTypeStore extends PersistedStore {
-}
+class OverridePremiumTypeStore extends PersistedStore {}
 const prototype = OverridePremiumTypeStore.prototype;
 prototype["initialize"] = function initialize(premiumTypeActual) {
   if (null != premiumTypeActual) {
@@ -91,7 +95,7 @@ Object.defineProperty(prototype, "premiumType", {
   get: function premiumType() {
     return closure_4.premiumTypeOverride;
   },
-  set: undefined
+  set: undefined,
 });
 OverridePremiumTypeStore.displayName = "OverridePremiumTypeStore";
 OverridePremiumTypeStore.persistKey = "OverridePremiumTypeStore";
@@ -107,7 +111,7 @@ const items = [
       obj.createdAtOverride = UNSELECTED_CREATED_AT_DATE;
       return obj;
     }
-  }
+  },
 ];
 OverridePremiumTypeStore.migrations = items;
 const overridePremiumTypeStore = new OverridePremiumTypeStore(dispatcherDefault, {
@@ -118,7 +122,7 @@ const overridePremiumTypeStore = new OverridePremiumTypeStore(dispatcherDefault,
     closure_4.createdAtOverride = createdAt.createdAt;
   },
   CURRENT_USER_UPDATE: setActualFromUser,
-  CONNECTION_OPEN: setActualFromUser
+  CONNECTION_OPEN: setActualFromUser,
 });
 const result = set.fileFinishedImporting("modules/premium/OverridePremiumTypeStore.tsx");
 

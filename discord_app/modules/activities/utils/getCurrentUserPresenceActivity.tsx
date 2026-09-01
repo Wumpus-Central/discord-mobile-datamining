@@ -18,4 +18,4 @@ export default function getCurrentUserPresenceActivity(getApplicationActivity, g
     tmp = applicationActivity;
   }
   return tmp;
-};
+}

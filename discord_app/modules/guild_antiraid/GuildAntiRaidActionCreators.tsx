@@ -14,7 +14,7 @@ function _setGuildRaidAlerts() {
     closure_1 = arg1;
     c3 = 0;
     c2 = 0;
-    return (function*(arg0, arg1) {
+    return (function* (arg0, arg1) {
       if (table === 2) {
         table = 3;
         HermesBuiltin.throwTypeError();
@@ -101,7 +101,7 @@ function _setGuildIncidentActions() {
     closure_3 = arg3;
     c6 = 0;
     c5 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
+    return (function* (arg0, arg1, arg2, arg3) {
       let tmp5 = callback2;
       if (!callback2) {
         tmp5 = tmp26;
@@ -158,7 +158,7 @@ function _handleResolveRaid() {
     closure_2 = arg2;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function* (arg0, arg1, arg2) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -249,7 +249,7 @@ function _handleReportRaid() {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
-    return (function*(arg0) {
+    return (function* (arg0) {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();

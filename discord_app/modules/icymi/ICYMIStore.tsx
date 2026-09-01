@@ -63,10 +63,11 @@ function injectRecommendedGuildsRow() {
   items = items.filter((type) => type.type !== callback(8619).ICYMIItemTypes.RECOMMENDED_GUILDS);
   if (0 !== length.length) {
     const guildsArray = store2.getGuildsArray();
-    const tmp24 = guildsArray.filter((features) => {
-      features = features.features;
-      return features.has(constants.COMMUNITY);
-    }).length >= 5;
+    const tmp24 =
+      guildsArray.filter((features) => {
+        features = features.features;
+        return features.has(constants.COMMUNITY);
+      }).length >= 5;
     const readTimestamp = store3.getReadTimestamp("recommendedGuilds");
     if (tmp24) {
       if (null != readTimestamp) {
@@ -391,7 +392,13 @@ function reload(arg0) {
   }
   if (tmp14) {
     const ICYMIAnalytics = tmp7(tmp8[23]).ICYMIAnalytics;
-    let obj = { newTrackingProps: null, hasNewContent: null, unreadFeedItems: null, readFeedItems: null, homeSessionId: "gravity" };
+    let obj = {
+      newTrackingProps: null,
+      hasNewContent: null,
+      unreadFeedItems: null,
+      readFeedItems: null,
+      homeSessionId: "gravity",
+    };
     obj[0] = closure_32;
     obj[1] = c40;
     obj[2] = found;
@@ -660,7 +667,11 @@ function handleAck(channelId) {
     HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(items7, 0));
   }
 }
-({ eventScheduledToStartWithin: closure_6, isGuildEventEnded: error, isGuildScheduledEventActive: closure_8 } = scheduledEventSort);
+({
+  eventScheduledToStartWithin: closure_6,
+  isGuildEventEnded: error,
+  isGuildScheduledEventActive: closure_8,
+} = scheduledEventSort);
 ({ ChannelTypes: closure_21, GuildFeatures: closure_22, Permissions: closure_23 } = ME);
 const DAY = setDefault.Millis.DAY;
 let closure_26 = 3 * setDefault.Millis.DAY;
@@ -695,11 +706,25 @@ let c54 = false;
 let c55 = 0;
 let c56 = 0;
 const PersistedStore = initializeDefault.PersistedStore;
-class ICYMIStore extends PersistedStore {
-}
+class ICYMIStore extends PersistedStore {}
 const prototype = ICYMIStore.prototype;
 prototype["initialize"] = function initialize(dehydratedItems) {
-  this.waitFor(closure_10, closure_11, closure_4, closure_5, closure_12, closure_9, closure_13, closure_19, closure_20, closure_14, closure_15, closure_16, closure_17, closure_18);
+  this.waitFor(
+    closure_10,
+    closure_11,
+    closure_4,
+    closure_5,
+    closure_12,
+    closure_9,
+    closure_13,
+    closure_19,
+    closure_20,
+    closure_14,
+    closure_15,
+    closure_16,
+    closure_17,
+    closure_18,
+  );
   if (null != dehydratedItems) {
     dehydratedItems = dehydratedItems.dehydratedItems;
     if (dehydratedItems == null) {
@@ -874,7 +899,15 @@ prototype["getIndexInHydratedFeed"] = function getIndexInHydratedFeed(id) {
   findIndexResult = items1.findIndex((type) => type.type === id(table[19]).ICYMIItemTypes.RECOMMENDED_GUILDS);
 };
 prototype["getState"] = function getState() {
-  return { dehydratedItems: closure_27, numOpens: c44, customGuildScores: closure_36, customChannelScoresByGuild: closure_37, lastOpened: c29, lastJoinedRecommendedGuild: c49, lastTakenICYMISurvey: c56 };
+  return {
+    dehydratedItems: closure_27,
+    numOpens: c44,
+    customGuildScores: closure_36,
+    customChannelScoresByGuild: closure_37,
+    lastOpened: c29,
+    lastJoinedRecommendedGuild: c49,
+    lastTakenICYMISurvey: c56,
+  };
 };
 ICYMIStore.displayName = "ICYMIStore";
 ICYMIStore.persistKey = "ICYMIStore";
@@ -1050,7 +1083,11 @@ const iCYMIStore = new ICYMIStore(dispatcherDefault, {
       return type;
     });
     finalizeNewDehydratedItemsContent();
-    let obj = { load_id: loadId, load_time_millis: Date.now() - startTime, feed_item_ids: closure_30.map((id) => id.id) };
+    let obj = {
+      load_id: loadId,
+      load_time_millis: Date.now() - startTime,
+      feed_item_ids: closure_30.map((id) => id.id),
+    };
     const items1 = [];
     set1 = items1;
     const items2 = [];
@@ -1111,7 +1148,13 @@ const iCYMIStore = new ICYMIStore(dispatcherDefault, {
             const tmpResult = tmp(tmp2[18]);
           }
           const ICYMIAnalytics = tmp(tmp2[23]).ICYMIAnalytics;
-          obj = { newTrackingProps: null, hasNewContent: null, unreadFeedItems: null, readFeedItems: null, homeSessionId: null };
+          obj = {
+            newTrackingProps: null,
+            hasNewContent: null,
+            unreadFeedItems: null,
+            readFeedItems: null,
+            homeSessionId: null,
+          };
           obj[0] = obj;
           obj[1] = c40;
           obj[2] = arr9;
@@ -1356,7 +1399,7 @@ const iCYMIStore = new ICYMIStore(dispatcherDefault, {
     if (null != attachments) {
       tmp2 = null;
       if (0 !== attachments.length) {
-        let items = [tmp, ];
+        let items = [tmp];
         const items1 = [];
         HermesBuiltin.arraySpread(attachments, 0);
         items[1] = items1;
@@ -1370,7 +1413,7 @@ const iCYMIStore = new ICYMIStore(dispatcherDefault, {
   },
   ICYMI_TAKE_SURVEY: function handleTakeSurvey(takenAt) {
     takenAt = takenAt.takenAt;
-  }
+  },
 });
 let result = set.fileFinishedImporting("modules/icymi/ICYMIStore.tsx");
 

@@ -25,5 +25,13 @@ export default function ForumPostTitle(arg0) {
     str = "mobile-text-heading-primary";
   }
   const tmp = callback();
-  return jsx(Text.Text, { variant: "text-md/semibold", color: str, lineClamp, ellipsizeMode, style: callback().title, onTextLayout, children: title });
-};
+  return jsx(Text.Text, {
+    variant: "text-md/semibold",
+    color: str,
+    lineClamp,
+    ellipsizeMode,
+    style: callback().title,
+    onTextLayout,
+    children: title,
+  });
+}

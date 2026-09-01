@@ -37,7 +37,9 @@ export const getAvatarSource = function getAvatarSource(getAvatarURL) {
   } else {
     let userAvatarURL = arg2;
     if (undefined === arg2) {
-      let memoizedImageSourceResult = useDominantRGBFromImage.memoizedImageSource(getAvatarURL.getAvatarURL(arg1, 80, !arg3));
+      let memoizedImageSourceResult = useDominantRGBFromImage.memoizedImageSource(
+        getAvatarURL.getAvatarURL(arg1, 80, !arg3),
+      );
       const obj4 = useDominantRGBFromImage;
       const tmp2 = !arg3;
     } else {

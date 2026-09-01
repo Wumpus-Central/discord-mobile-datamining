@@ -54,7 +54,16 @@ export const getSectionFooterConfig = function getSectionFooterConfig(guildChann
       tmpResult = tmp(1912);
     }
   }
-  const obj = { hasDivider: tmp6, canHaveVoiceSummary: !(section === computeSubtitle.SECTION_INDEX_GUILD_ACTIONS || section === computeSubtitle.SECTION_INDEX_FAVORITES || section === computeSubtitle.SECTION_INDEX_UNCATEGORIZED_CHANNELS || section === guildChannels.recentsSectionNumber || section === guildChannels.voiceChannelsSectionNumber) };
+  const obj = {
+    hasDivider: tmp6,
+    canHaveVoiceSummary: !(
+      section === computeSubtitle.SECTION_INDEX_GUILD_ACTIONS ||
+      section === computeSubtitle.SECTION_INDEX_FAVORITES ||
+      section === computeSubtitle.SECTION_INDEX_UNCATEGORIZED_CHANNELS ||
+      section === guildChannels.recentsSectionNumber ||
+      section === guildChannels.voiceChannelsSectionNumber
+    ),
+  };
   return obj;
 };
 export const getSectionFooterActiveVoiceChannels = function getSectionFooterActiveVoiceChannels(arg0) {

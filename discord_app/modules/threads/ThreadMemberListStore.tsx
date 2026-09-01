@@ -97,9 +97,11 @@ prototype["rebuild"] = function rebuild(items) {
   });
   const sorted = mapped.sort((userId, userId2) => self(table[9]).compare(userId.userId, userId2.userId));
   const tmp7Result = self(12)(Array.from(self.allUserIds));
-  const item = sorted.sortBy((displayName) => displayName.displayName).forEach((userId) => {
-    self.addUser(userId.userId, userId.sectionId, userId.displayName, userId.canViewChannel, true);
-  });
+  const item = sorted
+    .sortBy((displayName) => displayName.displayName)
+    .forEach((userId) => {
+      self.addUser(userId.userId, userId.sectionId, userId.displayName, userId.canViewChannel, true);
+    });
 };
 prototype["updateMultipleUserIds"] = function updateMultipleUserIds(mapped, guildId) {
   let self = this;
@@ -248,7 +250,7 @@ prototype["findOldState"] = function findOldState(id) {
     if (!(arg0 in tmp3.usersById)) {
       continue;
     } else {
-      let items = [key10004, , ];
+      let items = [key10004, ,];
       ({ displayName: arr[1], canViewChannel: arr[2] } = tmp3.usersById[arg0]);
       return items;
     }
@@ -304,7 +306,7 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
     nick = nameFromUserDefault.getName(user);
     const obj3 = nameFromUserDefault;
   }
-  const items = [str, , ];
+  const items = [str, ,];
   let formatted;
   if (nick != null) {
     formatted = nick.toLowerCase();
@@ -314,8 +316,7 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
   return items;
 };
 const Store = initializeDefault.Store;
-class ThreadMemberListStore extends Store {
-}
+class ThreadMemberListStore extends Store {}
 const prototype2 = ThreadMemberListStore.prototype;
 prototype2["initialize"] = function initialize() {
   this.waitFor(closure_5, closure_6, closure_7, closure_8, closure_9, closure_10);
@@ -623,7 +624,7 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
       }
       return flag;
     }, false);
-  }
+  },
 });
 const result = require("set").fileFinishedImporting("modules/threads/ThreadMemberListStore.tsx");
 

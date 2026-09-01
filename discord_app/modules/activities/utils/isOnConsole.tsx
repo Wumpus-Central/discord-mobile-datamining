@@ -7,4 +7,4 @@ const result = set.fileFinishedImporting("modules/activities/utils/isOnConsole.t
 
 export default function isOnConsole(arg0) {
   return isOnXboxDefault(arg0) || isOnPlayStationDefault(arg0);
-};
+}

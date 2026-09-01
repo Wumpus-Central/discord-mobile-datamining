@@ -57,13 +57,13 @@ createToggle = {
       return true;
     }, items);
   },
-  screen: createToggle
+  screen: createToggle,
 };
 createToggle = {
   route: require("ME").UserSettingsSections.ACCESSIBILITY,
   getComponent() {
     return SettingsAccessibilityScreen /* SettingsAccessibilityScreen */.default;
-  }
+  },
 };
 createToggle = createToggle.createRoute(createToggle);
 const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccessibilitySetting.tsx");

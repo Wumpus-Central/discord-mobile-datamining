@@ -34,7 +34,7 @@ function _fetchUserOffer() {
     c12 = 0;
     c13 = 0;
     c11 = 0;
-    const iter = (function*(arg0) {
+    const iter = (function* (arg0) {
       if (c13 === 2) {
         c13 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -235,11 +235,15 @@ function _fetchUserOffer() {
               let result = null == trial_id;
               if (result) {
                 obj1 = callback(obj1[12]);
-                result = obj1.UNSAFE_isDismissibleContentDismissed(callback(obj1[13]).DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING);
+                result = obj1.UNSAFE_isDismissibleContentDismissed(
+                  callback(obj1[13]).DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING,
+                );
               }
               if (result) {
                 obj2 = callback(obj1[14]);
-                const result1 = obj2.removeDismissedContent(callback(obj1[13]).DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING);
+                const result1 = obj2.removeDismissedContent(
+                  callback(obj1[13]).DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING,
+                );
               }
               obj3 = flag(obj1[7]);
               let fromServer = null;
@@ -249,7 +253,12 @@ function _fetchUserOffer() {
                   fromServer = offerId.createFromServer(trial_id);
                 }
               }
-              obj11 = { type: "BILLING_USER_OFFER_FETCH_SUCCESS", userTrialOffer: null, userDiscountOffer: null, shouldTriggerOffer: null };
+              obj11 = {
+                type: "BILLING_USER_OFFER_FETCH_SUCCESS",
+                userTrialOffer: null,
+                userDiscountOffer: null,
+                shouldTriggerOffer: null,
+              };
               obj11[1] = fromServer;
               let fromServer1 = null;
               if (null != v0) {
@@ -295,7 +304,7 @@ function _fetchUserOffer() {
 }
 function _fetchExistingChurnDiscountOffer() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     dependencyMap = tmp3;
     closure_1_1(closure_1_2[7]).dispatch({ type: "BILLING_USER_OFFER_FETCH_START" });
     c4 = 1;
@@ -336,7 +345,7 @@ function _fetchExistingChurnDiscountOffer() {
 }
 function _fetchChurnDiscountOffer() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = callback(function* () {
     const table = tmp3;
     closure_0 = null;
     c4 = 1;
@@ -425,44 +434,71 @@ export const acknowledgeUserOffer = function acknowledgeUserOffer(hasAcknowledge
     }
   }
   const HTTP = sendRequest.HTTP;
-  let obj = { url: constants.USER_OFFER_ACKNOWLEDGED, body: { user_trial_offer_id: id, user_discount_offer_id: id1 }, oldFormErrors: true, rejectWithError: false };
-  const postResult = HTTP.post({ url: constants.USER_OFFER_ACKNOWLEDGED, body: { user_trial_offer_id: id, user_discount_offer_id: id1 }, oldFormErrors: true, rejectWithError: false });
-  return HTTP.post({ url: constants.USER_OFFER_ACKNOWLEDGED, body: { user_trial_offer_id: id, user_discount_offer_id: id1 }, oldFormErrors: true, rejectWithError: false }).then((body) => {
-    let user_discount = body.body.user_discount;
-    if (user_discount == null) {
-      user_discount = null;
-    }
-    let user_discount_offer = body.body.user_discount_offer;
-    if (user_discount_offer == null) {
-      user_discount_offer = null;
-    }
-    let user_trial_offer = body.body.user_trial_offer;
-    if (user_trial_offer == null) {
-      user_trial_offer = null;
-    }
-    let obj = callback(709);
-    let fromServer = null;
-    if (null != user_trial_offer) {
-      fromServer = closure_5.createFromServer(user_trial_offer);
-    }
-    obj = { type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS", userTrialOffer: fromServer, userDiscount: null, userDiscountOffer: null };
-    let fromServer1 = null;
-    if (null != user_discount) {
-      fromServer1 = closure_4.createFromServer(user_discount);
-    }
-    obj[2] = fromServer1;
-    let fromServer2 = null;
-    if (null != user_discount_offer) {
-      fromServer2 = closure_4.createFromServer(user_discount_offer);
-    }
-    obj[3] = fromServer2;
-    obj.dispatch(obj);
-  }).catch((status) => {
-    if (404 === status.status) {
-      callback(709).dispatch({ type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS", userTrialOffer: null, userDiscount: null, userDiscountOffer: null });
-      const obj = callback(709);
-    }
+  let obj = {
+    url: constants.USER_OFFER_ACKNOWLEDGED,
+    body: { user_trial_offer_id: id, user_discount_offer_id: id1 },
+    oldFormErrors: true,
+    rejectWithError: false,
+  };
+  const postResult = HTTP.post({
+    url: constants.USER_OFFER_ACKNOWLEDGED,
+    body: { user_trial_offer_id: id, user_discount_offer_id: id1 },
+    oldFormErrors: true,
+    rejectWithError: false,
   });
+  return HTTP.post({
+    url: constants.USER_OFFER_ACKNOWLEDGED,
+    body: { user_trial_offer_id: id, user_discount_offer_id: id1 },
+    oldFormErrors: true,
+    rejectWithError: false,
+  })
+    .then((body) => {
+      let user_discount = body.body.user_discount;
+      if (user_discount == null) {
+        user_discount = null;
+      }
+      let user_discount_offer = body.body.user_discount_offer;
+      if (user_discount_offer == null) {
+        user_discount_offer = null;
+      }
+      let user_trial_offer = body.body.user_trial_offer;
+      if (user_trial_offer == null) {
+        user_trial_offer = null;
+      }
+      let obj = callback(709);
+      let fromServer = null;
+      if (null != user_trial_offer) {
+        fromServer = closure_5.createFromServer(user_trial_offer);
+      }
+      obj = {
+        type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
+        userTrialOffer: fromServer,
+        userDiscount: null,
+        userDiscountOffer: null,
+      };
+      let fromServer1 = null;
+      if (null != user_discount) {
+        fromServer1 = closure_4.createFromServer(user_discount);
+      }
+      obj[2] = fromServer1;
+      let fromServer2 = null;
+      if (null != user_discount_offer) {
+        fromServer2 = closure_4.createFromServer(user_discount_offer);
+      }
+      obj[3] = fromServer2;
+      obj.dispatch(obj);
+    })
+    .catch((status) => {
+      if (404 === status.status) {
+        callback(709).dispatch({
+          type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
+          userTrialOffer: null,
+          userDiscount: null,
+          userDiscountOffer: null,
+        });
+        const obj = callback(709);
+      }
+    });
 };
 export const triggerUserOffer = function triggerUserOffer(arg0, arg1, arg2) {
   let _JSON = arg0;
@@ -488,7 +524,13 @@ export const triggerUserOffer = function triggerUserOffer(arg0, arg1, arg2) {
       }
       postResultResult = postResult(500);
     }
-    obj = { payment_gateway: null, trigger_type: null, trigger_location_stack: null, trigger_metadata: null, trigger_uptime_app: null };
+    obj = {
+      payment_gateway: null,
+      trigger_type: null,
+      trigger_location_stack: null,
+      trigger_metadata: null,
+      trigger_uptime_app: null,
+    };
     obj[0] = GOOGLE;
     obj[1] = _JSON;
     obj[2] = arg1;
@@ -514,7 +556,14 @@ export const triggerUserOffer = function triggerUserOffer(arg0, arg1, arg2) {
         user_discount_offer = offer2.user_discount_offer;
       }
       let obj = closure_1_1(closure_1_2[7]);
-      obj = { type: "BILLING_USER_OFFER_TRIGGER_SUCCESS", triggerType: closure_0, retryAfter: body.retry_after, triggerSuccess: body.trigger_success, userTrialOffer: null, userDiscountOffer: null };
+      obj = {
+        type: "BILLING_USER_OFFER_TRIGGER_SUCCESS",
+        triggerType: closure_0,
+        retryAfter: body.retry_after,
+        triggerSuccess: body.trigger_success,
+        userTrialOffer: null,
+        userDiscountOffer: null,
+      };
       let fromServer = null;
       if (null != user_trial_offer) {
         fromServer = closure_1_5.createFromServer(user_trial_offer);

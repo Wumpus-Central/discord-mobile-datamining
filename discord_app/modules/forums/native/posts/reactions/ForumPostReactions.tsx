@@ -10,7 +10,12 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ reactionButtonContainer: { marginEnd: 8 }, actionBarReaction: { marginEnd: 4 }, container: { flexDirection: "row" }, mostCommonContainer: { marginLeft: "auto" } });
+let closure_6 = createCacheKey.createStyles({
+  reactionButtonContainer: { marginEnd: 8 },
+  actionBarReaction: { marginEnd: 4 },
+  container: { flexDirection: "row" },
+  mostCommonContainer: { marginLeft: "auto" },
+});
 const result = require("set").fileFinishedImporting("modules/forums/native/posts/reactions/ForumPostReactions.tsx");
 
 export const MaxForumPostReactions = function MaxForumPostReactions(thread) {
@@ -26,7 +31,13 @@ export const MaxForumPostReactions = function MaxForumPostReactions(thread) {
     num = 0;
   }
   let obj = thread(7628);
-  obj = { containerWidth: containerWidth - num, reactionEmojiWidth: 46, digitWidth: 7.5, message: firstMessage, parentChannel };
+  obj = {
+    containerWidth: containerWidth - num,
+    reactionEmojiWidth: 46,
+    digitWidth: 7.5,
+    message: firstMessage,
+    parentChannel,
+  };
   const maxPossibleForumPostReactions = obj.useMaxPossibleForumPostReactions(obj);
   ({ reactions, additionalReactionCount } = maxPossibleForumPostReactions);
   if (0 !== reactions.length) {
@@ -35,16 +46,15 @@ export const MaxForumPostReactions = function MaxForumPostReactions(thread) {
     obj[0] = items;
     const items1 = [
       reactions.map((emoji) => {
-          const obj = { containerStyle: items, thread, reaction: emoji, animateCount: false };
-          items = [obj.reactionButtonContainer, reactionContainerStyle];
-          let name = emoji.emoji.id;
-          if (name == null) {
-            name = emoji.emoji.name;
-          }
-          return closure_1_4(thread(obj[6]).ForumPostReactionButton, obj, name);
-        }),
-  ,
-
+        const obj = { containerStyle: items, thread, reaction: emoji, animateCount: false };
+        items = [obj.reactionButtonContainer, reactionContainerStyle];
+        let name = emoji.emoji.id;
+        if (name == null) {
+          name = emoji.emoji.name;
+        }
+        return closure_1_4(thread(obj[6]).ForumPostReactionButton, obj, name);
+      }),
+      ,
     ];
     let tmp8 = additionalReactionCount > 0;
     if (tmp8) {
@@ -95,15 +105,18 @@ export const ForumPostActionBarReactions = function ForumPostActionBarReactions(
     obj[0] = items;
     const items1 = [
       reactions.map((emoji) => {
-          const items = [actionBarReaction.actionBarReaction, reactionContainerStyle];
-          let name = emoji.emoji.id;
-          if (name == null) {
-            name = emoji.emoji.name;
-          }
-          return closure_1_4(thread(actionBarReaction[6]).ForumPostReactionButton, { containerStyle: items, thread, reaction: emoji, animateCount: false }, name);
-        }),
-  ,
-
+        const items = [actionBarReaction.actionBarReaction, reactionContainerStyle];
+        let name = emoji.emoji.id;
+        if (name == null) {
+          name = emoji.emoji.name;
+        }
+        return closure_1_4(
+          thread(actionBarReaction[6]).ForumPostReactionButton,
+          { containerStyle: items, thread, reaction: emoji, animateCount: false },
+          name,
+        );
+      }),
+      ,
     ];
     let tmp8 = additionalNonUniqueReactionCount > 0;
     if (tmp8) {
@@ -143,7 +156,13 @@ export const MostCommonForumPostReaction = function MostCommonForumPostReaction(
   if (null != first) {
     if (!disableReactionUpdates) {
       if (!disableReactionCreates) {
-        obj = { containerStyle: null, thread: null, reaction: null, locationAnalyticsObject: null, animateCount: false };
+        obj = {
+          containerStyle: null,
+          thread: null,
+          reaction: null,
+          locationAnalyticsObject: null,
+          animateCount: false,
+        };
         obj[0] = tmp.mostCommonContainer;
         obj[1] = thread;
         obj[2] = first;

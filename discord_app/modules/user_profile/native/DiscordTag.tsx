@@ -34,7 +34,7 @@ export default function DiscordTag(arg0) {
     if (null != user) {
       obj = { variant: "text-md/semibold", style: null, lineClamp: 1, maxFontSizeMultiplier: 2, children: null };
       obj[1] = usernameStyle;
-      const items = [user.toString(), ];
+      const items = [user.toString()];
       const hasUniqueUsernameResult = user.hasUniqueUsername();
       tmp2Result = !hasUniqueUsernameResult;
       if (!hasUniqueUsernameResult) {
@@ -50,7 +50,7 @@ export default function DiscordTag(arg0) {
       tmp4 = require;
     }
   }
-  const items2 = [tmp2Result, ];
+  const items2 = [tmp2Result];
   let bot;
   if (user != null) {
     bot = user.bot;
@@ -69,4 +69,4 @@ export default function DiscordTag(arg0) {
   items2[1] = tmp13;
   obj[1] = items2;
   return closure_5(View, obj);
-};
+}

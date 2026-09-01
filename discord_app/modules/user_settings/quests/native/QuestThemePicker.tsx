@@ -39,7 +39,7 @@ class QuestThemePicker {
     items3 = [];
     items3[0] = allMobileThemes;
     memo = closure_3.useMemo(() => {
-      const items = [, , ];
+      const items = [, ,];
       ({ LIGHT: arr[0], DARKER: arr[1], MIDNIGHT: arr[2] } = token2);
       return allMobileThemes.filter((type) => {
         let hasItem = type.type === items(closure_1_2[13]).ClientThemeType.STANDARD_BACKGROUND_THEME;
@@ -62,7 +62,7 @@ class QuestThemePicker {
     obj6 = require("map");
     token2 = obj6.useToken(require("Themes").colors.BACKGROUND_BASE_LOW, closure_9.MIDNIGHT);
     closure_9 = token2;
-    items4 = [, , , ];
+    items4 = [, , ,];
     items4[0] = memo;
     items4[1] = token;
     items4[2] = token1;
@@ -80,7 +80,7 @@ class QuestThemePicker {
         return obj;
       });
     }, items4);
-    items5 = [, ];
+    items5 = [,];
     items5[0] = analyticsLocations;
     items5[1] = isSynced;
     callback = closure_3.useCallback((arg0) => {
@@ -101,7 +101,7 @@ class QuestThemePicker {
         callback(tmp.current);
       }
     }, items6);
-    items7 = [, ];
+    items7 = [,];
     items7[0] = memo1.map((backgroundColor) => {
       const lib = backgroundColor;
       let obj = {
@@ -109,15 +109,15 @@ class QuestThemePicker {
         onPress() {
           return closure_1_10(backgroundColor.theme);
         },
-        children: null
+        children: null,
       };
-      const items = [lib.themeCircle, { backgroundColor: backgroundColor.color }, ];
+      const items = [lib.themeCircle, { backgroundColor: backgroundColor.color }];
       let themeCircleSelected = stateFromStores === backgroundColor.theme;
       if (themeCircleSelected) {
         themeCircleSelected = tmp3.themeCircleSelected;
       }
       items[2] = themeCircleSelected;
-      const items1 = [callback(isSynced, { style: items }), ];
+      const items1 = [callback(isSynced, { style: items })];
       obj = { variant: "text-xs/medium", color: "text-muted", style: tmp3.themeLabel, children: backgroundColor.name };
       items1[1] = callback(lib(allMobileThemes[17]).Text, obj);
       obj[2] = items1;
@@ -125,7 +125,7 @@ class QuestThemePicker {
     });
     obj2 = { style: tmp.resetButton, onPress: callback1, children: null };
     obj3 = { style: tmp.resetIcon, children: closure_10(require("RefreshIcon").RefreshIcon, { size: "sm" }) };
-    items8 = [, ];
+    items8 = [,];
     items8[0] = closure_10(isSynced, obj3);
     obj4 = { variant: "text-xs/medium", color: "text-muted", style: tmp.themeLabel, children: null };
     intl = require("getSystemLocale").intl;
@@ -140,23 +140,60 @@ class QuestThemePicker {
 }
 ({ View: c4, TouchableOpacity: c5 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { themeSection: null, themeSelector: null, themeOption: null, themeCircle: null, themeCircleSelected: null, themeLabel: null, resetButton: null, resetIcon: null };
+createCacheKey = {
+  themeSection: null,
+  themeSelector: null,
+  themeOption: null,
+  themeCircle: null,
+  themeCircleSelected: null,
+  themeLabel: null,
+  resetButton: null,
+  resetIcon: null,
+};
 createCacheKey = { marginBottom: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", gap: ThemesDefault.space.PX_12 };
 let obj1 = { flexDirection: "row", gap: ThemesDefault.space.PX_12 };
 createCacheKey[2] = { alignItems: "center", gap: ThemesDefault.space.PX_4 };
 let obj2 = { alignItems: "center", gap: ThemesDefault.space.PX_4 };
-createCacheKey[3] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round, borderWidth: 2, borderColor: "transparent" };
-let obj3 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round, borderWidth: 2, borderColor: "transparent" };
+createCacheKey[3] = {
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.round,
+  borderWidth: 2,
+  borderColor: "transparent",
+};
+let obj3 = {
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.round,
+  borderWidth: 2,
+  borderColor: "transparent",
+};
 createCacheKey[4] = { borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
 createCacheKey[5] = { fontSize: 11 };
 const obj4 = { borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
 createCacheKey[6] = { alignItems: "center", gap: ThemesDefault.space.PX_4 };
 let obj5 = { alignItems: "center", gap: ThemesDefault.space.PX_4 };
-createCacheKey[7] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round, borderWidth: 2, borderColor: "transparent", justifyContent: "center", alignItems: "center" };
+createCacheKey[7] = {
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.round,
+  borderWidth: 2,
+  borderColor: "transparent",
+  justifyContent: "center",
+  alignItems: "center",
+};
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const obj6 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round, borderWidth: 2, borderColor: "transparent", justifyContent: "center", alignItems: "center" };
+const obj6 = {
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.round,
+  borderWidth: 2,
+  borderColor: "transparent",
+  justifyContent: "center",
+  alignItems: "center",
+};
 const result = require("set").fileFinishedImporting("modules/user_settings/quests/native/QuestThemePicker.tsx");
 
 export default QuestThemePicker;
